@@ -1,30 +1,30 @@
 export const id = 47;
 export const ids = [47];
 export const modules = {
-  4492: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => SD
+  4347: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => cU
     });
-    var ID = cD(16),
-      pD = cD(20),
-      iD = cD(1284),
-      fD = cD(2727);
-    const bD = 3e4,
-      QD = 1e3;
+    var tU = gU(21),
+      pU = gU(24),
+      EU = gU(1287),
+      PU = gU(2624);
+    const TU = 3e4,
+      qU = 1e3;
 
-    function wD() {
-      return "visible" === document.visibilityState && "inGame" === ID.d.get("gameState") && (0, iD.r)()
+    function KU() {
+      return "visible" === document.visibilityState && "inGame" === tU.b.get("gameState") && (0, EU.r)()
     }
 
-    function SD(DD, CD) {
-      (0, fD.q)() || function(DD, CD, cD) {
-        let ID = 0;
-        const pD = setInterval((() => {
-          CD() && (ID += QD, ID >= DD && (clearInterval(pD), cD()))
-        }), QD)
-      }(bD, wD, (() => {
-        CD().then((() => {
-          DD(`saved for the player after ${bD/1e3} s of play`), (0, fD.w)(), pD.i.Uo("chat", {
+    function cU(UU, RU) {
+      (0, PU.n)() || function(UU, RU, gU) {
+        let tU = 0;
+        const pU = setInterval((() => {
+          RU() && (tU += qU, tU >= UU && (clearInterval(pU), gU()))
+        }), qU)
+      }(TU, KU, (() => {
+        RU().then((() => {
+          UU(`saved for the player after ${TU/1e3} s of play`), (0, PU.t)(), pU.p.yh("chat", {
             content: [{
               str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
               style: {
@@ -36,61 +36,61 @@ export const modules = {
       }))
     }
   },
-  4483: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      installRenderDebug: () => Bc,
-      renderDebugPlayable: () => Mc,
-      startRenderDebug: () => yc,
-      waitForDraw: () => tc
+  4345: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      installRenderDebug: () => Gg,
+      renderDebugPlayable: () => ug,
+      startRenderDebug: () => jg,
+      waitForDraw: () => Cg
     });
-    var ID = cD(1793),
-      pD = cD(4492),
-      iD = cD(2727);
-    const fD = ["+x", "-x", "+y", "-y", "+z", "-z", "dir6", "dir7"];
+    var tU = gU(1698),
+      pU = gU(4347),
+      EU = gU(2624);
+    const PU = ["+x", "-x", "+y", "-y", "+z", "-z", "dir6", "dir7"];
 
-    function bD(DD) {
-      return 7 & DD
+    function TU(UU) {
+      return 7 & UU
     }
 
-    function QD(DD) {
-      return DD >>> 11 & 1
+    function qU(UU) {
+      return UU >>> 11 & 1
     }
 
-    function wD(DD) {
-      return [1 + (DD >>> 18 & 63), 1 + (DD >>> 24 & 63)]
+    function KU(UU) {
+      return [1 + (UU >>> 18 & 63), 1 + (UU >>> 24 & 63)]
     }
 
-    function SD(DD, CD) {
-      const [cD, , ID] = DD, pD = bD(ID), iD = function(DD, CD, cD) {
-        return CD + (1 === (22 >>> DD & 1) ? 4 - cD : cD) & 3
-      }(pD, QD(ID), CD), fD = pD >>> 1, [SD, BD] = wD(cD), yD = 1 === iD || 2 === iD ? SD : 0, MD = iD >= 2 ? BD : 0, tD = [63 & cD, cD >>> 6 & 63, cD >>> 12 & 63];
-      return tD[2 === fD ? 0 : 2] += yD, tD[1 === fD ? 0 : 1] += MD, tD
+    function cU(UU, RU) {
+      const [gU, , tU] = UU, pU = TU(tU), EU = function(UU, RU, gU) {
+        return RU + (1 === (22 >>> UU & 1) ? 4 - gU : gU) & 3
+      }(pU, qU(tU), RU), PU = pU >>> 1, [cU, GU] = KU(gU), jU = 1 === EU || 2 === EU ? cU : 0, uU = EU >= 2 ? GU : 0, CU = [63 & gU, gU >>> 6 & 63, gU >>> 12 & 63];
+      return CU[2 === PU ? 0 : 2] += jU, CU[1 === PU ? 0 : 1] += uU, CU
     }
 
-    function BD(DD) {
-      const CD = Math.max(...wD(DD[0]));
-      return 1 === CD ? "1" : CD <= 4 ? "2-4" : CD <= 16 ? "5-16" : "17-64"
+    function GU(UU) {
+      const RU = Math.max(...KU(UU[0]));
+      return 1 === RU ? "1" : RU <= 4 ? "2-4" : RU <= 16 ? "5-16" : "17-64"
     }
-    const yD = 16;
+    const jU = 16;
 
-    function MD(DD) {
-      let CD = 2166136261;
-      for (let cD = 0; cD < DD.length; cD++) CD = Math.imul(CD ^ DD[cD], 16777619);
-      return CD >>> 0
+    function uU(UU) {
+      let RU = 2166136261;
+      for (let gU = 0; gU < UU.length; gU++) RU = Math.imul(RU ^ UU[gU], 16777619);
+      return RU >>> 0
     }
 
-    function tD(DD, CD) {
-      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 12;
-      const ID = Math.max(0, CD - cD),
-        pD = Math.min(DD.length, CD + cD),
-        iD = [];
-      for (let fD = ID; fD < pD; fD++) {
-        const cD = DD[fD].toString(16).padStart(2, "0");
-        iD.push(fD === CD ? `[${cD}]` : cD)
+    function CU(UU, RU) {
+      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 12;
+      const tU = Math.max(0, RU - gU),
+        pU = Math.min(UU.length, RU + gU),
+        EU = [];
+      for (let PU = tU; PU < pU; PU++) {
+        const gU = UU[PU].toString(16).padStart(2, "0");
+        EU.push(PU === RU ? `[${gU}]` : gU)
       }
-      return iD.join(" ")
+      return EU.join(" ")
     }
-    const ZD = {
+    const hU = {
         NO_ERROR: 0,
         POINTS: 0,
         ARRAY_BUFFER: 34962,
@@ -168,437 +168,437 @@ export const modules = {
         FLOAT_MAT3: 35675,
         FLOAT_MAT4: 35676
       },
-      oD = "_vs2fs_location0",
-      vD = 0,
-      ND = 4,
-      gD = 6,
-      XD = [0, 1, 2, 0, 2, 3],
-      mD = 2048,
-      nD = 4,
-      OD = 256,
-      PD = 64,
-      HD = 268435456,
-      UD = 65536,
-      xD = /^#version [^\n]*\/\/ program (\S+)$/m;
+      QU = "_vs2fs_location0",
+      eU = 0,
+      WU = 4,
+      fU = 6,
+      xU = [0, 1, 2, 0, 2, 3],
+      mU = 2048,
+      IU = 4,
+      JU = 256,
+      wU = 64,
+      nU = 268435456,
+      bU = 65536,
+      oU = /^#version [^\n]*\/\/ program (\S+)$/m;
 
-    function qD(DD) {
-      return null === DD.name ? `#${DD.id}` : `#${DD.id} ${DD.name}`
+    function ZU(UU) {
+      return null === UU.name ? `#${UU.id}` : `#${UU.id} ${UU.name}`
     }
-    const JD = [],
-      KD = new WeakMap,
-      aD = new WeakMap,
-      VD = {
+    const aU = [],
+      YU = new WeakMap,
+      BU = new WeakMap,
+      VU = {
         context: null,
         inProbe: !1,
         pendingCheck: null,
         shadowBytes: 0,
         uncopied: 0
       };
-    let zD = 1;
-    const jD = new WeakMap;
+    let rU = 1;
+    const XU = new WeakMap;
 
-    function lD(DD) {
-      if (null === DD) return 0;
-      let CD = jD.get(DD);
-      return void 0 === CD && (CD = zD++, jD.set(DD, CD)), CD
+    function vU(UU) {
+      if (null === UU) return 0;
+      let RU = XU.get(UU);
+      return void 0 === RU && (RU = rU++, XU.set(UU, RU)), RU
     }
-    class LD {
-      constructor(DD, CD) {
-        this.print = DD, this.now = CD, this.shown = 0, this.Lb = 0, this.sections = 0, this.second = -1 / 0, this.inSecond = 0, this.uM = [], this.dropped = 0
+    class dU {
+      constructor(UU, RU) {
+        this.print = UU, this.now = RU, this.shown = 0, this.WT = 0, this.sections = 0, this.second = -1 / 0, this.inSecond = 0, this.xu = [], this.dropped = 0
       }
-      line(DD) {
-        const CD = this.now();
-        if (CD - this.second >= 1e3 && (this.second = CD, this.inSecond = 0), this.shown >= 400 || this.inSecond >= 20) return this.Lb++, void this.store(DD);
-        this.shown++, this.inSecond++, this.print(400 === this.shown ? `${DD} (the last line here: the rest go to bloxdDebug.save())` : DD)
+      line(UU) {
+        const RU = this.now();
+        if (RU - this.second >= 1e3 && (this.second = RU, this.inSecond = 0), this.shown >= 400 || this.inSecond >= 20) return this.WT++, void this.store(UU);
+        this.shown++, this.inSecond++, this.print(400 === this.shown ? `${UU} (the last line here: the rest go to bloxdDebug.save())` : UU)
       }
-      keep(DD) {
-        this.sections++, this.store(DD)
+      keep(UU) {
+        this.sections++, this.store(UU)
       }
-      store(DD) {
-        this.uM.push(`${new Date(Date.now()).toISOString()} ${DD}`), this.uM.length > 2e4 && (this.uM.shift(), this.dropped++)
+      store(UU) {
+        this.xu.push(`${new Date(Date.now()).toISOString()} ${UU}`), this.xu.length > 2e4 && (this.xu.shift(), this.dropped++)
       }
       dump() {
-        return [`${this.shown} lines logged (above); kept here: ${this.Lb} lines past the console's budget, ${this.sections} sections; ${this.dropped} oldest dropped`, ...this.uM].join("\n")
+        return [`${this.shown} lines logged (above); kept here: ${this.WT} lines past the console's budget, ${this.sections} sections; ${this.dropped} oldest dropped`, ...this.xu].join("\n")
       }
     }
-    let TD = null;
+    let HU = null;
 
-    function GD() {
-      if (null === TD) {
-        const DD = new LD((DD => {
-          (0, iD.j)("render", DD)
+    function SU() {
+      if (null === HU) {
+        const UU = new dU((UU => {
+          (0, EU.h)("render", UU)
         }), (() => performance.now()));
-        (0, iD.h)("render", (() => DD.dump())), TD = DD
+        (0, EU.g)("render", (() => UU.dump())), HU = UU
       }
-      return TD
+      return HU
     }
 
-    function RD(DD) {
-      GD().line(DD)
+    function sU(UU) {
+      SU().line(UU)
     }
 
-    function kD(DD) {
-      GD().keep(DD)
+    function yU(UU) {
+      SU().keep(UU)
     }
 
-    function dD(DD) {
-      let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4096;
-      return DD.length <= CD ? DD : `${DD.slice(0,CD)}... (${DD.length-CD} more characters)`
+    function kU(UU) {
+      let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4096;
+      return UU.length <= RU ? UU : `${UU.slice(0,RU)}... (${UU.length-RU} more characters)`
     }
 
-    function YD(DD, CD, cD, ID, pD, iD) {
-      const fD = VD.pendingCheck;
-      if (null === fD) return;
-      const bD = "undefined" !== typeof WebGL2RenderingContext && DD instanceof WebGL2RenderingContext,
-        QD = {
-          gl: DD,
-          program: cD,
-          call: ID,
-          df: pD,
-          instances: iD,
+    function FU(UU, RU, gU, tU, pU, EU) {
+      const PU = VU.pendingCheck;
+      if (null === PU) return;
+      const TU = "undefined" !== typeof WebGL2RenderingContext && UU instanceof WebGL2RenderingContext,
+        qU = {
+          gl: UU,
+          program: gU,
+          call: tU,
+          hu: pU,
+          instances: EU,
           attributes: [],
           group: -1,
           chunk: "",
           pages: []
         };
-      if (fD.draws.push(QD), bD) try {
-        const ID = function(DD) {
-          const CD = [],
-            cD = new Map,
-            ID = Math.min(16, DD.getParameter(ZD.MAX_VERTEX_ATTRIBS));
-          for (let pD = 0; pD < ID; pD++) {
-            if (!DD.getVertexAttrib(pD, ZD.VERTEX_ATTRIB_ARRAY_ENABLED)) continue;
-            const ID = DD.getVertexAttrib(pD, ZD.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING),
-              iD = DD.getVertexAttribOffset(pD, ZD.VERTEX_ATTRIB_ARRAY_POINTER),
-              fD = DD.getVertexAttrib(pD, ZD.VERTEX_ATTRIB_ARRAY_STRIDE),
-              bD = DD.getVertexAttrib(pD, ZD.VERTEX_ATTRIB_ARRAY_SIZE),
-              QD = DD.getVertexAttrib(pD, ZD.VERTEX_ATTRIB_ARRAY_TYPE),
-              wD = "VERTEX_ATTRIB_ARRAY_INTEGER" in DD && DD.getVertexAttrib(pD, ZD.VERTEX_ATTRIB_ARRAY_INTEGER),
-              SD = "VERTEX_ATTRIB_ARRAY_DIVISOR" in DD ? DD.getVertexAttrib(pD, ZD.VERTEX_ATTRIB_ARRAY_DIVISOR) : 0;
-            cD.set(pD, {
-              buffer: ID,
-              offset: iD,
-              stride: fD
-            }), CD.push(`@${pD} buf#${lD(ID)} +${iD} stride ${fD} ${bD}x0x${QD.toString(16)}${wD?" int":""} div ${SD}`)
+      if (PU.draws.push(qU), TU) try {
+        const tU = function(UU) {
+          const RU = [],
+            gU = new Map,
+            tU = Math.min(16, UU.getParameter(hU.MAX_VERTEX_ATTRIBS));
+          for (let pU = 0; pU < tU; pU++) {
+            if (!UU.getVertexAttrib(pU, hU.VERTEX_ATTRIB_ARRAY_ENABLED)) continue;
+            const tU = UU.getVertexAttrib(pU, hU.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING),
+              EU = UU.getVertexAttribOffset(pU, hU.VERTEX_ATTRIB_ARRAY_POINTER),
+              PU = UU.getVertexAttrib(pU, hU.VERTEX_ATTRIB_ARRAY_STRIDE),
+              TU = UU.getVertexAttrib(pU, hU.VERTEX_ATTRIB_ARRAY_SIZE),
+              qU = UU.getVertexAttrib(pU, hU.VERTEX_ATTRIB_ARRAY_TYPE),
+              KU = "VERTEX_ATTRIB_ARRAY_INTEGER" in UU && UU.getVertexAttrib(pU, hU.VERTEX_ATTRIB_ARRAY_INTEGER),
+              cU = "VERTEX_ATTRIB_ARRAY_DIVISOR" in UU ? UU.getVertexAttrib(pU, hU.VERTEX_ATTRIB_ARRAY_DIVISOR) : 0;
+            gU.set(pU, {
+              buffer: tU,
+              offset: EU,
+              stride: PU
+            }), RU.push(`@${pU} buf#${vU(tU)} +${EU} stride ${PU} ${TU}x0x${qU.toString(16)}${KU?" int":""} div ${cU}`)
           }
           return {
-            lines: CD,
-            byLocation: cD
+            lines: RU,
+            byLocation: gU
           }
-        }(DD);
-        if (QD.attributes = ID.lines, "inst" === cD.terrain) {
+        }(UU);
+        if (qU.attributes = tU.lines, "inst" === gU.terrain) {
           const {
-            group: pD,
-            chunk: bD
-          } = function(DD, CD, cD) {
-            const ID = CD.get(gD),
-              pD = DD.getVertexAttrib(gD, ZD.CURRENT_VERTEX_ATTRIB),
-              iD = ID ? `+${ID.offset}` : pD ? Array.from(pD).slice(0, 3).join(",") : "?";
-            let fD = cD.groups.get(iD);
-            return void 0 === fD && (fD = cD.groups.size, cD.groups.set(iD, fD)), {
-              group: fD,
-              chunk: iD
+            group: pU,
+            chunk: TU
+          } = function(UU, RU, gU) {
+            const tU = RU.get(fU),
+              pU = UU.getVertexAttrib(fU, hU.CURRENT_VERTEX_ATTRIB),
+              EU = tU ? `+${tU.offset}` : pU ? Array.from(pU).slice(0, 3).join(",") : "?";
+            let PU = gU.groups.get(EU);
+            return void 0 === PU && (PU = gU.groups.size, gU.groups.set(EU, PU)), {
+              group: PU,
+              chunk: EU
             }
-          }(DD, ID.byLocation, fD);
-          QD.group = pD, QD.chunk = bD;
-          for (const DD of [vD, ND]) {
-            var wD;
-            const CD = null === (wD = ID.byLocation.get(DD)) || void 0 === wD ? void 0 : wD.buffer;
-            CD && QD.pages.push({
+          }(UU, tU.byLocation, PU);
+          qU.group = pU, qU.chunk = TU;
+          for (const UU of [eU, WU]) {
+            var KU;
+            const RU = null === (KU = tU.byLocation.get(UU)) || void 0 === KU ? void 0 : KU.buffer;
+            RU && qU.pages.push({
               kind: "buf",
-              buffer: CD
+              buffer: RU
             })
-          }! function(DD, CD, cD, ID, pD, iD, fD) {
-            const bD = ID.get(vD),
-              QD = fD.parts.get(iD);
-            if (void 0 === QD && fD.parts.size >= nD) return;
-            const wD = Math.min(pD, PD, OD - (null !== QD && void 0 !== QD ? QD : 0));
-            if (null === bD || void 0 === bD || !bD.buffer || wD <= 0) return;
-            const SD = WD(DD, CD, cD);
-            if (!SD) return;
-            const BD = bD.stride || 12,
-              yD = hD(DD, bD.buffer, bD.offset, (wD - 1) * BD + 12),
-              MD = new DataView(yD.buffer),
-              tD = function(DD, CD) {
-                const cD = function(DD) {
-                    const CD = FD.get(DD);
-                    if (void 0 !== CD && (null === CD || DD.isProgram(CD))) return CD;
-                    VD.inProbe = !0;
-                    let cD = null;
+          }! function(UU, RU, gU, tU, pU, EU, PU) {
+            const TU = tU.get(eU),
+              qU = PU.parts.get(EU);
+            if (void 0 === qU && PU.parts.size >= IU) return;
+            const KU = Math.min(pU, wU, JU - (null !== qU && void 0 !== qU ? qU : 0));
+            if (null === TU || void 0 === TU || !TU.buffer || KU <= 0) return;
+            const cU = iU(UU, RU, gU);
+            if (!cU) return;
+            const GU = TU.stride || 12,
+              jU = LU(UU, TU.buffer, TU.offset, (KU - 1) * GU + 12),
+              uU = new DataView(jU.buffer),
+              CU = function(UU, RU) {
+                const gU = function(UU) {
+                    const RU = OU.get(UU);
+                    if (void 0 !== RU && (null === RU || UU.isProgram(RU))) return RU;
+                    VU.inProbe = !0;
+                    let gU = null;
                     try {
-                      cD = sD(DD, rD, AD, "fed", "the record feed")
+                      gU = AU(UU, NU, lU, "fed", "the record feed")
                     } finally {
-                      VD.inProbe = !1
+                      VU.inProbe = !1
                     }
-                    return FD.set(DD, cD), cD
-                  }(DD),
-                  ID = cD ? uD(DD, cD, CD, (() => {
-                    DD.drawArraysInstanced(ZD.POINTS, 0, 1, CD)
+                    return OU.set(UU, gU), gU
+                  }(UU),
+                  tU = gU ? DU(UU, gU, RU, (() => {
+                    UU.drawArraysInstanced(hU.POINTS, 0, 1, RU)
                   }), "decode probe input (the record feed)") : null;
-                return ID ? new Uint32Array(ID.buffer) : null
-              }(DD, wD);
-            tD || fD.fed.failed++;
-            const oD = uD(DD, SD, 4 * wD, (() => {
-              DD.drawArraysInstanced(ZD.POINTS, 0, 4, wD)
+                return tU ? new Uint32Array(tU.buffer) : null
+              }(UU, KU);
+            CU || PU.fed.failed++;
+            const QU = DU(UU, cU, 4 * KU, (() => {
+              UU.drawArraysInstanced(hU.POINTS, 0, 4, KU)
             }));
-            if (!oD) return;
-            fD.parts.set(iD, (null !== QD && void 0 !== QD ? QD : 0) + wD);
-            for (let ZD = 0; ZD < wD; ZD++) {
-              const DD = ZD * BD,
-                CD = [MD.getUint32(DD, !0), MD.getUint32(DD + 4, !0), MD.getUint32(DD + 8, !0)],
-                cD = tD ? [tD[3 * ZD], tD[3 * ZD + 1], tD[3 * ZD + 2]] : CD;
-              tD && (fD.fed.records++, cD.some(((DD, cD) => DD !== CD[cD])) && (fD.fed.differing++, fD.fed.first.length < 8 && fD.fed.first.push(`part ${iD} instance ${ZD}: fed ${cD.map(pC).join(" ")} buffer ${CD.map(pC).join(" ")}`)));
-              for (let ID = 0; ID < 4; ID++) {
-                const DD = 3 * (4 * ZD + ID);
-                fD.vertices.push({
-                  record: cD,
-                  slot: ID,
-                  group: iD,
-                  gpu: [oD[DD], oD[DD + 1], oD[DD + 2]]
+            if (!QU) return;
+            PU.parts.set(EU, (null !== qU && void 0 !== qU ? qU : 0) + KU);
+            for (let hU = 0; hU < KU; hU++) {
+              const UU = hU * GU,
+                RU = [uU.getUint32(UU, !0), uU.getUint32(UU + 4, !0), uU.getUint32(UU + 8, !0)],
+                gU = CU ? [CU[3 * hU], CU[3 * hU + 1], CU[3 * hU + 2]] : RU;
+              CU && (PU.fed.records++, gU.some(((UU, gU) => UU !== RU[gU])) && (PU.fed.differing++, PU.fed.first.length < 8 && PU.fed.first.push(`part ${EU} instance ${hU}: fed ${gU.map(pR).join(" ")} buffer ${RU.map(pR).join(" ")}`)));
+              for (let tU = 0; tU < 4; tU++) {
+                const UU = 3 * (4 * hU + tU);
+                PU.vertices.push({
+                  record: gU,
+                  slot: tU,
+                  group: EU,
+                  gpu: [QU[UU], QU[UU + 1], QU[UU + 2]]
                 })
               }
             }
-          }(DD, CD, cD, ID.byLocation, iD, pD, fD)
+          }(UU, RU, gU, tU.byLocation, EU, pU, PU)
         } else {
-          const ID = DC(DD, CD, 16),
-            iD = DC(DD, CD, 8);
-          for (const DD of [ID, iD]) DD && QD.pages.push({
+          const tU = UR(UU, RU, 16),
+            EU = UR(UU, RU, 8);
+          for (const UU of [tU, EU]) UU && qU.pages.push({
             kind: "tex",
-            texture: DD
+            texture: UU
           });
-          ID && function(DD, CD, cD, ID, pD, iD) {
-            if (iD.parts.size >= nD) return;
-            const fD = WD(DD, CD, cD);
-            if (!fD) return;
-            let bD = 6 * OD;
-            const QD = [];
-            for (const [MD, tD] of pD) {
-              const DD = Math.min(tD, bD, Math.max(6, 6 * Math.floor(OD / pD.length)));
-              DD > 0 && (QD.push([MD, DD]), bD -= DD)
+          tU && function(UU, RU, gU, tU, pU, EU) {
+            if (EU.parts.size >= IU) return;
+            const PU = iU(UU, RU, gU);
+            if (!PU) return;
+            let TU = 6 * JU;
+            const qU = [];
+            for (const [uU, CU] of pU) {
+              const UU = Math.min(CU, TU, Math.max(6, 6 * Math.floor(JU / pU.length)));
+              UU > 0 && (qU.push([uU, UU]), TU -= UU)
             }
-            const wD = QD.reduce(((DD, CD) => {
-                let [, cD] = CD;
-                return DD + cD
+            const KU = qU.reduce(((UU, RU) => {
+                let [, gU] = RU;
+                return UU + gU
               }), 0),
-              SD = uD(DD, fD, wD, (() => {
-                for (const [CD, cD] of QD) DD.drawArrays(ZD.POINTS, CD, cD)
+              cU = DU(UU, PU, KU, (() => {
+                for (const [RU, gU] of qU) UU.drawArrays(hU.POINTS, RU, gU)
               }));
-            if (!SD) return;
-            let BD = 0;
-            for (const [MD, tD] of QD) {
-              const CD = Math.floor(MD / 6),
-                cD = Math.floor((MD + tD - 1) / 6) - CD + 1,
-                pD = CC(DD, ID, mD, CD, cD);
-              for (let DD = MD; DD < MD + tD; DD++, BD++) {
-                var yD;
-                const cD = 4 * (Math.floor(DD / 6) - CD),
-                  ID = [pD[cD], pD[cD + 1], pD[cD + 2]];
-                iD.parts.set(pD[cD + 3], (null !== (yD = iD.parts.get(pD[cD + 3])) && void 0 !== yD ? yD : 0) + (DD % 6 === 0 ? 1 : 0)), iD.vertices.push({
-                  record: ID,
-                  slot: XD[DD % 6],
-                  group: pD[cD + 3],
-                  gpu: [SD[3 * BD], SD[3 * BD + 1], SD[3 * BD + 2]]
+            if (!cU) return;
+            let GU = 0;
+            for (const [uU, CU] of qU) {
+              const RU = Math.floor(uU / 6),
+                gU = Math.floor((uU + CU - 1) / 6) - RU + 1,
+                pU = RR(UU, tU, mU, RU, gU);
+              for (let UU = uU; UU < uU + CU; UU++, GU++) {
+                var jU;
+                const gU = 4 * (Math.floor(UU / 6) - RU),
+                  tU = [pU[gU], pU[gU + 1], pU[gU + 2]];
+                EU.parts.set(pU[gU + 3], (null !== (jU = EU.parts.get(pU[gU + 3])) && void 0 !== jU ? jU : 0) + (UU % 6 === 0 ? 1 : 0)), EU.vertices.push({
+                  record: tU,
+                  slot: xU[UU % 6],
+                  group: pU[gU + 3],
+                  gpu: [cU[3 * GU], cU[3 * GU + 1], cU[3 * GU + 2]]
                 })
               }
             }
-          }(DD, CD, cD, ID, pD, fD)
+          }(UU, RU, gU, tU, pU, PU)
         }
-      } catch (SD) {
-        RD(`decode probe failed on program ${qD(cD)}: ${String(SD)}`)
+      } catch (cU) {
+        sU(`decode probe failed on program ${ZU(gU)}: ${String(cU)}`)
       }
     }
 
-    function WD(DD, CD, cD) {
-      if (void 0 !== cD.probe) return cD.probe && ED(DD, CD, cD.probe), cD.probe;
-      cD.probe = null, VD.inProbe = !0;
+    function iU(UU, RU, gU) {
+      if (void 0 !== gU.probe) return gU.probe && zU(UU, RU, gU.probe), gU.probe;
+      gU.probe = null, VU.inProbe = !0;
       try {
-        cD.probe = function(DD, CD) {
-          return sD(DD, CD.vertex, CD.fragment, oD, `program ${qD(CD)}'s twin`)
-        }(DD, cD)
+        gU.probe = function(UU, RU) {
+          return AU(UU, RU.vertex, RU.fragment, QU, `program ${ZU(RU)}'s twin`)
+        }(UU, gU)
       } finally {
-        VD.inProbe = !1
+        VU.inProbe = !1
       }
-      return cD.probe && ED(DD, CD, cD.probe), cD.probe
+      return gU.probe && zU(UU, RU, gU.probe), gU.probe
     }
 
-    function sD(DD, CD, cD, ID, pD) {
-      const iD = [DD.createShader(ZD.VERTEX_SHADER), DD.createShader(ZD.FRAGMENT_SHADER)],
-        fD = DD.createProgram();
-      if (!fD || !iD[0] || !iD[1]) return null;
-      DD.shaderSource(iD[0], CD), DD.shaderSource(iD[1], cD);
-      for (const QD of iD) DD.compileShader(QD), DD.attachShader(fD, QD);
-      DD.transformFeedbackVaryings(fD, [ID], ZD.INTERLEAVED_ATTRIBS), DD.linkProgram(fD);
-      for (const QD of iD) DD.deleteShader(QD);
-      var bD;
-      return DD.getProgramParameter(fD, ZD.LINK_STATUS) ? fD : (RD(`decode probe: ${pD} failed to link: ${dD(null!==(bD=DD.getProgramInfoLog(fD))&&void 0!==bD?bD:"",300)}`), DD.deleteProgram(fD), null)
+    function AU(UU, RU, gU, tU, pU) {
+      const EU = [UU.createShader(hU.VERTEX_SHADER), UU.createShader(hU.FRAGMENT_SHADER)],
+        PU = UU.createProgram();
+      if (!PU || !EU[0] || !EU[1]) return null;
+      UU.shaderSource(EU[0], RU), UU.shaderSource(EU[1], gU);
+      for (const qU of EU) UU.compileShader(qU), UU.attachShader(PU, qU);
+      UU.transformFeedbackVaryings(PU, [tU], hU.INTERLEAVED_ATTRIBS), UU.linkProgram(PU);
+      for (const qU of EU) UU.deleteShader(qU);
+      var TU;
+      return UU.getProgramParameter(PU, hU.LINK_STATUS) ? PU : (sU(`decode probe: ${pU} failed to link: ${kU(null!==(TU=UU.getProgramInfoLog(PU))&&void 0!==TU?TU:"",300)}`), UU.deleteProgram(PU), null)
     }
 
-    function ED(DD, CD, cD) {
-      const ID = DD.getProgramParameter(CD, ZD.ACTIVE_UNIFORM_BLOCKS);
-      for (let bD = 0; bD < ID; bD++) {
-        const ID = DD.getActiveUniformBlockName(CD, bD),
-          pD = null === ID ? ZD.INVALID_INDEX : DD.getUniformBlockIndex(cD, ID);
-        pD !== ZD.INVALID_INDEX && DD.uniformBlockBinding(cD, pD, DD.getActiveUniformBlockParameter(CD, bD, ZD.UNIFORM_BLOCK_BINDING))
+    function zU(UU, RU, gU) {
+      const tU = UU.getProgramParameter(RU, hU.ACTIVE_UNIFORM_BLOCKS);
+      for (let TU = 0; TU < tU; TU++) {
+        const tU = UU.getActiveUniformBlockName(RU, TU),
+          pU = null === tU ? hU.INVALID_INDEX : UU.getUniformBlockIndex(gU, tU);
+        pU !== hU.INVALID_INDEX && UU.uniformBlockBinding(gU, pU, UU.getActiveUniformBlockParameter(RU, TU, hU.UNIFORM_BLOCK_BINDING))
       }
-      const pD = DD.getParameter(ZD.CURRENT_PROGRAM);
-      DD.useProgram(cD);
-      const iD = DD.getProgramParameter(CD, ZD.ACTIVE_UNIFORMS),
-        fD = DD.getActiveUniforms(CD, [...Array(iD).keys()], ZD.UNIFORM_BLOCK_INDEX);
-      for (let bD = 0; bD < iD; bD++) {
-        const ID = DD.getActiveUniform(CD, bD);
-        if (!ID || -1 !== fD[bD]) continue;
-        const pD = ID.name.replace(/\[0\]$/, "");
-        for (let iD = 0; iD < ID.size; iD++) {
-          const fD = ID.size > 1 ? `${pD}[${iD}]` : ID.name,
-            bD = DD.getUniformLocation(CD, fD),
-            QD = DD.getUniformLocation(cD, fD);
-          bD && QD && eD(DD, QD, ID.type, DD.getUniform(CD, bD))
+      const pU = UU.getParameter(hU.CURRENT_PROGRAM);
+      UU.useProgram(gU);
+      const EU = UU.getProgramParameter(RU, hU.ACTIVE_UNIFORMS),
+        PU = UU.getActiveUniforms(RU, [...Array(EU).keys()], hU.UNIFORM_BLOCK_INDEX);
+      for (let TU = 0; TU < EU; TU++) {
+        const tU = UU.getActiveUniform(RU, TU);
+        if (!tU || -1 !== PU[TU]) continue;
+        const pU = tU.name.replace(/\[0\]$/, "");
+        for (let EU = 0; EU < tU.size; EU++) {
+          const PU = tU.size > 1 ? `${pU}[${EU}]` : tU.name,
+            TU = UU.getUniformLocation(RU, PU),
+            qU = UU.getUniformLocation(gU, PU);
+          TU && qU && MU(UU, qU, tU.type, UU.getUniform(RU, TU))
         }
       }
-      DD.useProgram(pD)
+      UU.useProgram(pU)
     }
 
-    function eD(DD, CD, cD, ID) {
-      const pD = ArrayBuffer.isView(ID) ? Array.from(ID) : [Number(ID)];
-      switch (cD) {
-        case ZD.FLOAT:
-          return void DD.uniform1f(CD, pD[0]);
-        case ZD.FLOAT_VEC2:
-          return void DD.uniform2fv(CD, pD);
-        case ZD.FLOAT_VEC3:
-          return void DD.uniform3fv(CD, pD);
-        case ZD.FLOAT_VEC4:
-          return void DD.uniform4fv(CD, pD);
-        case ZD.FLOAT_MAT3:
-          return void DD.uniformMatrix3fv(CD, !1, pD);
-        case ZD.FLOAT_MAT4:
-          return void DD.uniformMatrix4fv(CD, !1, pD);
-        case ZD.UNSIGNED_INT:
-          return void DD.uniform1ui(CD, pD[0]);
-        case ZD.UNSIGNED_INT_VEC2:
-          return void DD.uniform2uiv(CD, pD);
-        case ZD.UNSIGNED_INT_VEC3:
-          return void DD.uniform3uiv(CD, pD);
-        case ZD.UNSIGNED_INT_VEC4:
-          return void DD.uniform4uiv(CD, pD);
-        case ZD.INT_VEC2:
-          return void DD.uniform2iv(CD, pD);
-        case ZD.INT_VEC3:
-          return void DD.uniform3iv(CD, pD);
-        case ZD.INT_VEC4:
-          return void DD.uniform4iv(CD, pD);
+    function MU(UU, RU, gU, tU) {
+      const pU = ArrayBuffer.isView(tU) ? Array.from(tU) : [Number(tU)];
+      switch (gU) {
+        case hU.FLOAT:
+          return void UU.uniform1f(RU, pU[0]);
+        case hU.FLOAT_VEC2:
+          return void UU.uniform2fv(RU, pU);
+        case hU.FLOAT_VEC3:
+          return void UU.uniform3fv(RU, pU);
+        case hU.FLOAT_VEC4:
+          return void UU.uniform4fv(RU, pU);
+        case hU.FLOAT_MAT3:
+          return void UU.uniformMatrix3fv(RU, !1, pU);
+        case hU.FLOAT_MAT4:
+          return void UU.uniformMatrix4fv(RU, !1, pU);
+        case hU.UNSIGNED_INT:
+          return void UU.uniform1ui(RU, pU[0]);
+        case hU.UNSIGNED_INT_VEC2:
+          return void UU.uniform2uiv(RU, pU);
+        case hU.UNSIGNED_INT_VEC3:
+          return void UU.uniform3uiv(RU, pU);
+        case hU.UNSIGNED_INT_VEC4:
+          return void UU.uniform4uiv(RU, pU);
+        case hU.INT_VEC2:
+          return void UU.uniform2iv(RU, pU);
+        case hU.INT_VEC3:
+          return void UU.uniform3iv(RU, pU);
+        case hU.INT_VEC4:
+          return void UU.uniform4iv(RU, pU);
         default:
-          DD.uniform1i(CD, pD[0])
+          UU.uniform1i(RU, pU[0])
       }
     }
 
-    function uD(DD, CD, cD, ID) {
-      let pD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "decode probe";
-      const iD = DD.getParameter(ZD.CURRENT_PROGRAM),
-        fD = DD.getParameter(ZD.TRANSFORM_FEEDBACK_BINDING),
-        bD = DD.getParameter(ZD.TRANSFORM_FEEDBACK_BUFFER_BINDING),
-        QD = DD.getParameter(ZD.COPY_READ_BUFFER_BINDING),
-        wD = DD.isEnabled(ZD.RASTERIZER_DISCARD),
-        SD = DD.createTransformFeedback(),
-        BD = DD.createBuffer();
-      VD.inProbe = !0;
+    function DU(UU, RU, gU, tU) {
+      let pU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "decode probe";
+      const EU = UU.getParameter(hU.CURRENT_PROGRAM),
+        PU = UU.getParameter(hU.TRANSFORM_FEEDBACK_BINDING),
+        TU = UU.getParameter(hU.TRANSFORM_FEEDBACK_BUFFER_BINDING),
+        qU = UU.getParameter(hU.COPY_READ_BUFFER_BINDING),
+        KU = UU.isEnabled(hU.RASTERIZER_DISCARD),
+        cU = UU.createTransformFeedback(),
+        GU = UU.createBuffer();
+      VU.inProbe = !0;
       try {
-        const iD = DD.getError();
-        iD !== ZD.NO_ERROR && RD(`GL error 0x${iD.toString(16)} pending before the decode probe (the renderer's)`), DD.useProgram(CD), DD.bindTransformFeedback(ZD.TRANSFORM_FEEDBACK, SD), DD.bindBuffer(ZD.TRANSFORM_FEEDBACK_BUFFER, BD), DD.bufferData(ZD.TRANSFORM_FEEDBACK_BUFFER, 12 * cD, ZD.STREAM_READ), DD.bindBufferBase(ZD.TRANSFORM_FEEDBACK_BUFFER, 0, BD), DD.enable(ZD.RASTERIZER_DISCARD), DD.beginTransformFeedback(ZD.POINTS), ID(), DD.endTransformFeedback(), DD.bindBufferBase(ZD.TRANSFORM_FEEDBACK_BUFFER, 0, null);
-        const fD = DD.getError();
-        if (fD !== ZD.NO_ERROR) return RD(`${pD}: GL error 0x${fD.toString(16)} on the feedback draw`), null;
-        const bD = new Float32Array(3 * cD);
-        return DD.bindBuffer(ZD.COPY_READ_BUFFER, BD), DD.getBufferSubData(ZD.COPY_READ_BUFFER, 0, bD), bD
+        const EU = UU.getError();
+        EU !== hU.NO_ERROR && sU(`GL error 0x${EU.toString(16)} pending before the decode probe (the renderer's)`), UU.useProgram(RU), UU.bindTransformFeedback(hU.TRANSFORM_FEEDBACK, cU), UU.bindBuffer(hU.TRANSFORM_FEEDBACK_BUFFER, GU), UU.bufferData(hU.TRANSFORM_FEEDBACK_BUFFER, 12 * gU, hU.STREAM_READ), UU.bindBufferBase(hU.TRANSFORM_FEEDBACK_BUFFER, 0, GU), UU.enable(hU.RASTERIZER_DISCARD), UU.beginTransformFeedback(hU.POINTS), tU(), UU.endTransformFeedback(), UU.bindBufferBase(hU.TRANSFORM_FEEDBACK_BUFFER, 0, null);
+        const PU = UU.getError();
+        if (PU !== hU.NO_ERROR) return sU(`${pU}: GL error 0x${PU.toString(16)} on the feedback draw`), null;
+        const TU = new Float32Array(3 * gU);
+        return UU.bindBuffer(hU.COPY_READ_BUFFER, GU), UU.getBufferSubData(hU.COPY_READ_BUFFER, 0, TU), TU
       } finally {
-        wD || DD.disable(ZD.RASTERIZER_DISCARD), DD.bindTransformFeedback(ZD.TRANSFORM_FEEDBACK, fD), DD.bindBuffer(ZD.TRANSFORM_FEEDBACK_BUFFER, bD), DD.bindBuffer(ZD.COPY_READ_BUFFER, QD), DD.deleteTransformFeedback(SD), DD.deleteBuffer(BD), DD.useProgram(iD), VD.inProbe = !1
+        KU || UU.disable(hU.RASTERIZER_DISCARD), UU.bindTransformFeedback(hU.TRANSFORM_FEEDBACK, PU), UU.bindBuffer(hU.TRANSFORM_FEEDBACK_BUFFER, TU), UU.bindBuffer(hU.COPY_READ_BUFFER, qU), UU.deleteTransformFeedback(cU), UU.deleteBuffer(GU), UU.useProgram(EU), VU.inProbe = !1
       }
     }
 
-    function hD(DD, CD, cD, ID) {
-      const pD = DD.getParameter(ZD.COPY_READ_BUFFER_BINDING),
-        iD = new Uint8Array(ID);
-      return DD.bindBuffer(ZD.COPY_READ_BUFFER, CD), DD.getBufferSubData(ZD.COPY_READ_BUFFER, cD, iD), DD.bindBuffer(ZD.COPY_READ_BUFFER, pD), iD
+    function LU(UU, RU, gU, tU) {
+      const pU = UU.getParameter(hU.COPY_READ_BUFFER_BINDING),
+        EU = new Uint8Array(tU);
+      return UU.bindBuffer(hU.COPY_READ_BUFFER, RU), UU.getBufferSubData(hU.COPY_READ_BUFFER, gU, EU), UU.bindBuffer(hU.COPY_READ_BUFFER, pU), EU
     }
-    const rD = `#version 300 es\nlayout(location = ${vD}) in uvec3 record;\nflat out uvec3 fed;\nvoid main() {\n\tfed = record;\n\tgl_Position = vec4(0.0);\n\tgl_PointSize = 1.0;\n}\n`,
-      AD = "#version 300 es\nprecision highp float;\nout vec4 color;\nvoid main() {\n\tcolor = vec4(0.0);\n}\n",
-      FD = new WeakMap;
+    const NU = `#version 300 es\nlayout(location = ${eU}) in uvec3 record;\nflat out uvec3 fed;\nvoid main() {\n\tfed = record;\n\tgl_Position = vec4(0.0);\n\tgl_PointSize = 1.0;\n}\n`,
+      lU = "#version 300 es\nprecision highp float;\nout vec4 color;\nvoid main() {\n\tcolor = vec4(0.0);\n}\n",
+      OU = new WeakMap;
 
-    function DC(DD, CD, cD) {
-      const ID = DD.getProgramParameter(CD, ZD.ACTIVE_UNIFORMS),
-        pD = DD.getParameter(ZD.ACTIVE_TEXTURE);
+    function UR(UU, RU, gU) {
+      const tU = UU.getProgramParameter(RU, hU.ACTIVE_UNIFORMS),
+        pU = UU.getParameter(hU.ACTIVE_TEXTURE);
       try {
-        for (let pD = 0; pD < ID; pD++) {
-          const ID = DD.getActiveUniform(CD, pD);
-          if ((null === ID || void 0 === ID ? void 0 : ID.type) !== ZD.UNSIGNED_INT_SAMPLER_2D) continue;
-          const iD = DD.getUniformLocation(CD, ID.name),
-            fD = iD ? DD.getUniform(CD, iD) : -1;
-          if (fD < 0) continue;
-          DD.activeTexture(ZD.TEXTURE0 + fD);
-          const bD = DD.getParameter(ZD.TEXTURE_BINDING_2D);
-          if (bD && aD.get(bD) === cD) return bD
+        for (let pU = 0; pU < tU; pU++) {
+          const tU = UU.getActiveUniform(RU, pU);
+          if ((null === tU || void 0 === tU ? void 0 : tU.type) !== hU.UNSIGNED_INT_SAMPLER_2D) continue;
+          const EU = UU.getUniformLocation(RU, tU.name),
+            PU = EU ? UU.getUniform(RU, EU) : -1;
+          if (PU < 0) continue;
+          UU.activeTexture(hU.TEXTURE0 + PU);
+          const TU = UU.getParameter(hU.TEXTURE_BINDING_2D);
+          if (TU && BU.get(TU) === gU) return TU
         }
         return null
       } finally {
-        DD.activeTexture(pD)
+        UU.activeTexture(pU)
       }
     }
 
-    function CC(DD, CD, cD, ID, pD) {
-      const iD = new Uint32Array(4 * pD),
-        fD = DD.getParameter(ZD.READ_FRAMEBUFFER_BINDING),
-        bD = DD.createFramebuffer();
-      DD.bindFramebuffer(ZD.READ_FRAMEBUFFER, bD), DD.framebufferTexture2D(ZD.READ_FRAMEBUFFER, ZD.COLOR_ATTACHMENT0, ZD.TEXTURE_2D, CD, 0);
+    function RR(UU, RU, gU, tU, pU) {
+      const EU = new Uint32Array(4 * pU),
+        PU = UU.getParameter(hU.READ_FRAMEBUFFER_BINDING),
+        TU = UU.createFramebuffer();
+      UU.bindFramebuffer(hU.READ_FRAMEBUFFER, TU), UU.framebufferTexture2D(hU.READ_FRAMEBUFFER, hU.COLOR_ATTACHMENT0, hU.TEXTURE_2D, RU, 0);
       try {
-        let CD = 0;
-        for (; CD < pD;) {
-          const fD = ID + CD,
-            bD = fD % cD,
-            QD = Math.min(pD - CD, cD - bD);
-          DD.readPixels(bD, Math.floor(fD / cD), QD, 1, ZD.RGBA_INTEGER, ZD.UNSIGNED_INT, iD.subarray(4 * CD, 4 * (CD + QD))), CD += QD
+        let RU = 0;
+        for (; RU < pU;) {
+          const PU = tU + RU,
+            TU = PU % gU,
+            qU = Math.min(pU - RU, gU - TU);
+          UU.readPixels(TU, Math.floor(PU / gU), qU, 1, hU.RGBA_INTEGER, hU.UNSIGNED_INT, EU.subarray(4 * RU, 4 * (RU + qU))), RU += qU
         }
       } finally {
-        DD.bindFramebuffer(ZD.READ_FRAMEBUFFER, fD), DD.deleteFramebuffer(bD)
+        UU.bindFramebuffer(hU.READ_FRAMEBUFFER, PU), UU.deleteFramebuffer(TU)
       }
-      return iD
+      return EU
     }
 
-    function cC(DD, CD, cD) {
-      let ID = 0,
-        pD = 0;
-      for (let QD = 0; QD < CD.bytes.length; QD += UD) {
-        ID++;
-        const DD = Math.min(QD + UD, CD.bytes.length);
-        MD(CD.bytes.subarray(QD, DD)) !== MD(cD.subarray(QD, DD)) && pD++
+    function gR(UU, RU, gU) {
+      let tU = 0,
+        pU = 0;
+      for (let qU = 0; qU < RU.bytes.length; qU += bU) {
+        tU++;
+        const UU = Math.min(qU + bU, RU.bytes.length);
+        uU(RU.bytes.subarray(qU, UU)) !== uU(gU.subarray(qU, UU)) && pU++
       }
-      const iD = `${DD} ${CD.bytes.length} B cpu ${MD(CD.bytes).toString(16)} gpu ${MD(cD).toString(16)}, ${pD}/${ID} blocks differ${CD.missed?`, ${CD.missed} GPU-side writes uncopied`:""}`;
-      if (0 === pD) return iD;
+      const EU = `${UU} ${RU.bytes.length} B cpu ${uU(RU.bytes).toString(16)} gpu ${uU(gU).toString(16)}, ${pU}/${tU} blocks differ${RU.missed?`, ${RU.missed} GPU-side writes uncopied`:""}`;
+      if (0 === pU) return EU;
       const {
-        count: fD,
-        offsets: bD
-      } = function(DD, CD) {
-        let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 8;
-        const ID = Math.min(DD.length, CD.length);
-        let pD = Math.abs(DD.length - CD.length);
-        const iD = [];
-        for (let fD = 0; fD < ID; fD++) DD[fD] !== CD[fD] && (pD++, iD.length < cD && iD.push(fD));
+        count: PU,
+        offsets: TU
+      } = function(UU, RU) {
+        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 8;
+        const tU = Math.min(UU.length, RU.length);
+        let pU = Math.abs(UU.length - RU.length);
+        const EU = [];
+        for (let PU = 0; PU < tU; PU++) UU[PU] !== RU[PU] && (pU++, EU.length < gU && EU.push(PU));
         return {
-          count: pD,
-          offsets: iD
+          count: pU,
+          offsets: EU
         }
-      }(CD.bytes, cD);
-      return kD([`${iD}: ${fD} bytes differ`, ...bD.map((DD => `  +${DD}: cpu ${tD(CD.bytes,DD)} | gpu ${tD(cD,DD)}`))].join("\n")), `${iD}: ${fD} bytes differ, first at ${bD.join(", ")} (context in the saved file)`
+      }(RU.bytes, gU);
+      return yU([`${EU}: ${PU} bytes differ`, ...TU.map((UU => `  +${UU}: cpu ${CU(RU.bytes,UU)} | gpu ${CU(gU,UU)}`))].join("\n")), `${EU}: ${PU} bytes differ, first at ${TU.join(", ")} (context in the saved file)`
     }
 
-    function IC(DD) {
-      if (0 === DD.vertices.length) return void RD(`decode probe (${DD.reason}): no terrain draw probed (${DD.draws.length} seen)`);
-      const CD = function(DD) {
-          const CD = new Map;
-          for (const ID of DD) {
-            const DD = CD.get(ID.group);
-            DD ? DD.push(ID) : CD.set(ID.group, [ID])
+    function tR(UU) {
+      if (0 === UU.vertices.length) return void sU(`decode probe (${UU.reason}): no terrain draw probed (${UU.draws.length} seen)`);
+      const RU = function(UU) {
+          const RU = new Map;
+          for (const tU of UU) {
+            const UU = RU.get(tU.group);
+            UU ? UU.push(tU) : RU.set(tU.group, [tU])
           }
-          const cD = {
-            vertices: DD.length,
+          const gU = {
+            vertices: UU.length,
             mismatches: 0,
             byDirection: new Array(8).fill(0),
             byDiagonal: [0, 0],
@@ -606,67 +606,67 @@ export const modules = {
             translations: new Map,
             first: []
           };
-          for (const [ID, pD] of CD) {
-            const DD = new Map,
-              CD = pD.map((CD => {
-                const cD = SD(CD.record, CD.slot),
-                  ID = [CD.gpu[0] - cD[0], CD.gpu[1] - cD[1], CD.gpu[2] - cD[2]],
-                  pD = ID.map((DD => Math.round(64 * DD))).join(","),
-                  iD = DD.get(pD);
-                return iD ? iD.count++ : DD.set(pD, {
+          for (const [tU, pU] of RU) {
+            const UU = new Map,
+              RU = pU.map((RU => {
+                const gU = cU(RU.record, RU.slot),
+                  tU = [RU.gpu[0] - gU[0], RU.gpu[1] - gU[1], RU.gpu[2] - gU[2]],
+                  pU = tU.map((UU => Math.round(64 * UU))).join(","),
+                  EU = UU.get(pU);
+                return EU ? EU.count++ : UU.set(pU, {
                   count: 1,
-                  offset: ID
-                }), cD
+                  offset: tU
+                }), gU
               }));
-            let iD = [0, 0, 0],
-              fD = 0;
-            for (const cD of DD.values()) cD.count > fD && (fD = cD.count, iD = cD.offset);
-            cD.translations.set(ID, iD), pD.forEach(((DD, ID) => {
-              var pD;
-              const fD = [CD[ID][0] + iD[0], CD[ID][1] + iD[1], CD[ID][2] + iD[2]];
-              if (fD.every(((CD, cD) => {
-                  return ID = DD.gpu[cD], pD = CD, Math.abs(ID - pD) <= Math.max(.001, 1e-6 * Math.abs(pD));
-                  var ID, pD
+            let EU = [0, 0, 0],
+              PU = 0;
+            for (const gU of UU.values()) gU.count > PU && (PU = gU.count, EU = gU.offset);
+            gU.translations.set(tU, EU), pU.forEach(((UU, tU) => {
+              var pU;
+              const PU = [RU[tU][0] + EU[0], RU[tU][1] + EU[1], RU[tU][2] + EU[2]];
+              if (PU.every(((RU, gU) => {
+                  return tU = UU.gpu[gU], pU = RU, Math.abs(tU - pU) <= Math.max(.001, 1e-6 * Math.abs(pU));
+                  var tU, pU
                 }))) return;
-              cD.mismatches++, cD.byDirection[bD(DD.record[2])]++, cD.byDiagonal[QD(DD.record[2])]++;
-              const wD = BD(DD.record);
-              cD.byBand[wD] = (null !== (pD = cD.byBand[wD]) && void 0 !== pD ? pD : 0) + 1, cD.first.length < yD && cD.first.push({
-                ...DD,
-                expected: fD
+              gU.mismatches++, gU.byDirection[TU(UU.record[2])]++, gU.byDiagonal[qU(UU.record[2])]++;
+              const KU = GU(UU.record);
+              gU.byBand[KU] = (null !== (pU = gU.byBand[KU]) && void 0 !== pU ? pU : 0) + 1, gU.first.length < jU && gU.first.push({
+                ...UU,
+                expected: PU
               })
             }))
           }
-          return cD
-        }(DD.vertices),
-        cD = CD.byDirection.map(((DD, CD) => DD ? `${fD[CD]} ${DD}` : "")).filter(Boolean).join(" "),
-        ID = Object.entries(CD.byBand).map((DD => {
-          let [CD, cD] = DD;
-          return `${CD}: ${cD}`
+          return gU
+        }(UU.vertices),
+        gU = RU.byDirection.map(((UU, RU) => UU ? `${PU[RU]} ${UU}` : "")).filter(Boolean).join(" "),
+        tU = Object.entries(RU.byBand).map((UU => {
+          let [RU, gU] = UU;
+          return `${RU}: ${gU}`
         })).join(" ");
-      if (RD(`decode probe (${DD.reason}): ${CD.mismatches}/${CD.vertices} vertices differ from the CPU decode over ${DD.parts.size} parts, in the probe's own transform feedback draw (the frame's draws can still differ)` + (CD.mismatches ? ` by direction [${cD}] diagonal [0: ${CD.byDiagonal[0]} 1: ${CD.byDiagonal[1]}] extent [${ID}]` : "")), DD.fed.records > 0 || DD.fed.failed > 0) {
-        RD(`decode probe input: ${DD.fed.differing}/${DD.fed.records} instanced records the vertex input fed differ from the buffer's readback` + (DD.fed.differing ? " (H2: the GPU's vertex copy differs, unless the feed's own integer pass-through is the fault)" : "") + (DD.fed.failed ? `; the feed failed on ${DD.fed.failed} draws, whose decode is held to the buffer's readback` : ""));
-        for (const CD of DD.fed.first) RD(`  ${CD}`)
+      if (sU(`decode probe (${UU.reason}): ${RU.mismatches}/${RU.vertices} vertices differ from the CPU decode over ${UU.parts.size} parts, in the probe's own transform feedback draw (the frame's draws can still differ)` + (RU.mismatches ? ` by direction [${gU}] diagonal [0: ${RU.byDiagonal[0]} 1: ${RU.byDiagonal[1]}] extent [${tU}]` : "")), UU.fed.records > 0 || UU.fed.failed > 0) {
+        sU(`decode probe input: ${UU.fed.differing}/${UU.fed.records} instanced records the vertex input fed differ from the buffer's readback` + (UU.fed.differing ? " (H2: the GPU's vertex copy differs, unless the feed's own integer pass-through is the fault)" : "") + (UU.fed.failed ? `; the feed failed on ${UU.fed.failed} draws, whose decode is held to the buffer's readback` : ""));
+        for (const RU of UU.fed.first) sU(`  ${RU}`)
       }
-      for (const pD of CD.first) {
-        const [DD, CD, cD] = pD.record;
-        RD(`  mismatch part ${pD.group} r0 ${DD.toString(16)} r1 ${CD.toString(16)} r2 ${cD.toString(16)} slot ${pD.slot} (${fD[bD(cD)]}): expected ${pD.expected.map(iC).join(",")} gpu ${pD.gpu.map(iC).join(",")}`)
+      for (const pU of RU.first) {
+        const [UU, RU, gU] = pU.record;
+        sU(`  mismatch part ${pU.group} r0 ${UU.toString(16)} r1 ${RU.toString(16)} r2 ${gU.toString(16)} slot ${pU.slot} (${PU[TU(gU)]}): expected ${pU.expected.map(ER).join(",")} gpu ${pU.gpu.map(ER).join(",")}`)
       }
-      kD(`decode probe translations: ${[...CD.translations].map((DD=>{let[CD,cD]=DD;return`${CD}: ${cD.map(iC).join(",")}`})).join("; ")}`)
+      yU(`decode probe translations: ${[...RU.translations].map((UU=>{let[RU,gU]=UU;return`${RU}: ${gU.map(ER).join(",")}`})).join("; ")}`)
     }
 
-    function pC(DD) {
-      return DD.toString(16)
+    function pR(UU) {
+      return UU.toString(16)
     }
 
-    function iC(DD) {
-      return Number.isInteger(DD) ? String(DD) : DD.toFixed(3)
+    function ER(UU) {
+      return Number.isInteger(UU) ? String(UU) : UU.toFixed(3)
     }
 
-    function fC(DD) {
-      return null !== VD.pendingCheck ? Promise.resolve() : new Promise((CD => {
-        let cD = !1;
-        const ID = {
-          reason: DD,
+    function PR(UU) {
+      return null !== VU.pendingCheck ? Promise.resolve() : new Promise((RU => {
+        let gU = !1;
+        const tU = {
+          reason: UU,
           terrainDraws: 0,
           draws: [],
           vertices: [],
@@ -679,85 +679,85 @@ export const modules = {
             failed: 0
           }
         };
-        VD.pendingCheck = ID;
-        const pD = () => {
-            VD.pendingCheck = null;
+        VU.pendingCheck = tU;
+        const pU = () => {
+            VU.pendingCheck = null;
             try {
-              ! function(DD) {
-                RD(`draw ranges (${DD.reason}): ${DD.terrainDraws} terrain draws in the frame, the first ${DD.draws.length} here`);
-                for (const CD of DD.draws) {
-                  const DD = CD.df.slice(0, 8).map((DD => {
-                      let [CD, cD] = DD;
-                      return `${CD}+${cD}`
+              ! function(UU) {
+                sU(`draw ranges (${UU.reason}): ${UU.terrainDraws} terrain draws in the frame, the first ${UU.draws.length} here`);
+                for (const RU of UU.draws) {
+                  const UU = RU.hu.slice(0, 8).map((UU => {
+                      let [RU, gU] = UU;
+                      return `${RU}+${gU}`
                     })).join(" "),
-                    cD = CD.df.length > 8 ? ` (+${CD.df.length-8} ranges)` : "";
-                  RD(`  ${qD(CD.program)} ${CD.program.terrain} ${CD.call} ${DD}${cD} x${CD.instances}${CD.group>=0?` part ${CD.group} chunk ${CD.chunk}`:""} | ${CD.attributes.join(" | ")}`)
+                    gU = RU.hu.length > 8 ? ` (+${RU.hu.length-8} ranges)` : "";
+                  sU(`  ${ZU(RU.program)} ${RU.program.terrain} ${RU.call} ${UU}${gU} x${RU.instances}${RU.group>=0?` part ${RU.group} chunk ${RU.chunk}`:""} | ${RU.attributes.join(" | ")}`)
                 }
-              }(ID), IC(ID);
-              ID.draws.some((DD => "undefined" !== typeof WebGL2RenderingContext && DD.gl instanceof WebGL2RenderingContext)) || 0 === ID.draws.length ? function(DD) {
-                const CD = [],
-                  cD = new Map;
-                for (const ID of DD)
-                  if ("undefined" !== typeof WebGL2RenderingContext && ID.gl instanceof WebGL2RenderingContext)
-                    for (const DD of ID.pages) cD.set("buf" === DD.kind ? DD.buffer : DD.texture, {
-                      page: DD,
-                      gl: ID.gl
+              }(tU), tR(tU);
+              tU.draws.some((UU => "undefined" !== typeof WebGL2RenderingContext && UU.gl instanceof WebGL2RenderingContext)) || 0 === tU.draws.length ? function(UU) {
+                const RU = [],
+                  gU = new Map;
+                for (const tU of UU)
+                  if ("undefined" !== typeof WebGL2RenderingContext && tU.gl instanceof WebGL2RenderingContext)
+                    for (const UU of tU.pages) gU.set("buf" === UU.kind ? UU.buffer : UU.texture, {
+                      page: UU,
+                      gl: tU.gl
                     });
-                for (const [ID, {
-                    page: pD,
-                    gl: iD
-                  }] of cD) {
-                  const DD = KD.get(ID);
-                  if (!DD) {
-                    CD.push(`${pD.kind}#${lD(ID)}: no CPU copy (${VD.uncopied} pages over the copy budget)`);
+                for (const [tU, {
+                    page: pU,
+                    gl: EU
+                  }] of gU) {
+                  const UU = YU.get(tU);
+                  if (!UU) {
+                    RU.push(`${pU.kind}#${vU(tU)}: no CPU copy (${VU.uncopied} pages over the copy budget)`);
                     continue
                   }
-                  if ("buf" === pD.kind) {
-                    CD.push(cC(`buf#${DD.id}`, DD, hD(iD, pD.buffer, 0, DD.bytes.length)));
+                  if ("buf" === pU.kind) {
+                    RU.push(gR(`buf#${UU.id}`, UU, LU(EU, pU.buffer, 0, UU.bytes.length)));
                     continue
                   }
-                  const cD = CC(iD, pD.texture, DD.width, 0, DD.width * DD.height),
-                    fD = 16 === DD.texelBytes ? new Uint8Array(cD.buffer) : new Uint8Array(new Uint16Array(cD).buffer);
-                  CD.push(cC(`tex#${DD.id} (${16===DD.texelBytes?"records":"light"})`, DD, fD))
+                  const gU = RR(EU, pU.texture, UU.width, 0, UU.width * UU.height),
+                    PU = 16 === UU.texelBytes ? new Uint8Array(gU.buffer) : new Uint8Array(new Uint16Array(gU).buffer);
+                  RU.push(gR(`tex#${UU.id} (${16===UU.texelBytes?"records":"light"})`, UU, PU))
                 }
-                for (const ID of CD) RD(`page readback ${ID}`)
-              }(ID.draws) : RD("page readback: none on WebGL1 (no buffer readback)")
-            } catch (DD) {
-              RD(`check failed: ${String(DD)}`)
+                for (const tU of RU) sU(`page readback ${tU}`)
+              }(tU.draws) : sU("page readback: none on WebGL1 (no buffer readback)")
+            } catch (UU) {
+              sU(`check failed: ${String(UU)}`)
             }
-            CD()
+            RU()
           },
-          iD = () => {
-            if (ID.draws.length > 0 && !cD) return cD = !0, void setTimeout(pD, 0);
-            cD || requestAnimationFrame(iD)
+          EU = () => {
+            if (tU.draws.length > 0 && !gU) return gU = !0, void setTimeout(pU, 0);
+            gU || requestAnimationFrame(EU)
           };
-        requestAnimationFrame(iD), setTimeout((() => {
-          cD || (cD = !0, pD())
+        requestAnimationFrame(EU), setTimeout((() => {
+          gU || (gU = !0, pU())
         }), 5e3)
       }))
     }
-    var bC = cD(4495);
-    const QC = 20,
-      wC = 24,
-      SC = Reflect.apply;
+    var TR = gU(4352);
+    const qR = 20,
+      KR = 24,
+      cR = Reflect.apply;
 
-    function BC(DD, CD, cD) {
-      if (!DD) return;
-      const ID = DD[CD];
-      if ("function" === typeof ID) {
-        const pD = cD(ID);
-        DD[CD] = pD, (0, bC.x)(pD, ID)
+    function GR(UU, RU, gU) {
+      if (!UU) return;
+      const tU = UU[RU];
+      if ("function" === typeof tU) {
+        const pU = gU(tU);
+        UU[RU] = pU, (0, TR.B)(pU, tU)
       }
     }
-    let yC = !1;
-    const MC = new WeakMap,
-      tC = new WeakMap,
-      ZC = new WeakMap,
-      oC = {
+    let jR = !1;
+    const uR = new WeakMap,
+      CR = new WeakMap,
+      hR = new WeakMap,
+      QR = {
         gl: 0,
         lost: 0
       };
-    let vC = {
+    let eR = {
         inst: {
           draws: 0,
           faces: 0
@@ -771,307 +771,307 @@ export const modules = {
           faces: 0
         }
       },
-      NC = {
+      WR = {
         buffer: 0,
         texture: 0
       },
-      gC = 0;
+      fR = 0;
 
-    function XC(DD) {
-      let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      if (DD instanceof ArrayBuffer) return new Uint8Array(DD, CD, cD || void 0);
-      if (!ArrayBuffer.isView(DD)) return null;
-      const ID = "BYTES_PER_ELEMENT" in DD ? DD.BYTES_PER_ELEMENT : 1,
-        pD = DD.byteOffset + CD * ID,
-        iD = cD ? cD * ID : DD.byteLength - CD * ID;
-      return new Uint8Array(DD.buffer, pD, Math.max(0, iD))
+    function xR(UU) {
+      let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      if (UU instanceof ArrayBuffer) return new Uint8Array(UU, RU, gU || void 0);
+      if (!ArrayBuffer.isView(UU)) return null;
+      const tU = "BYTES_PER_ELEMENT" in UU ? UU.BYTES_PER_ELEMENT : 1,
+        pU = UU.byteOffset + RU * tU,
+        EU = gU ? gU * tU : UU.byteLength - RU * tU;
+      return new Uint8Array(UU.buffer, pU, Math.max(0, EU))
     }
 
-    function mC(DD, CD) {
-      const cD = function(DD) {
-        switch (DD) {
-          case ZD.ARRAY_BUFFER:
-            return ZD.ARRAY_BUFFER_BINDING;
-          case ZD.ELEMENT_ARRAY_BUFFER:
-            return ZD.ELEMENT_ARRAY_BUFFER_BINDING;
-          case ZD.COPY_READ_BUFFER:
-            return ZD.COPY_READ_BUFFER_BINDING;
-          case ZD.COPY_WRITE_BUFFER:
-            return ZD.COPY_WRITE_BUFFER_BINDING;
-          case ZD.UNIFORM_BUFFER:
-            return ZD.UNIFORM_BUFFER_BINDING;
-          case ZD.PIXEL_UNPACK_BUFFER:
-            return ZD.PIXEL_UNPACK_BUFFER_BINDING;
-          case ZD.TRANSFORM_FEEDBACK_BUFFER:
-            return ZD.TRANSFORM_FEEDBACK_BUFFER_BINDING;
+    function mR(UU, RU) {
+      const gU = function(UU) {
+        switch (UU) {
+          case hU.ARRAY_BUFFER:
+            return hU.ARRAY_BUFFER_BINDING;
+          case hU.ELEMENT_ARRAY_BUFFER:
+            return hU.ELEMENT_ARRAY_BUFFER_BINDING;
+          case hU.COPY_READ_BUFFER:
+            return hU.COPY_READ_BUFFER_BINDING;
+          case hU.COPY_WRITE_BUFFER:
+            return hU.COPY_WRITE_BUFFER_BINDING;
+          case hU.UNIFORM_BUFFER:
+            return hU.UNIFORM_BUFFER_BINDING;
+          case hU.PIXEL_UNPACK_BUFFER:
+            return hU.PIXEL_UNPACK_BUFFER_BINDING;
+          case hU.TRANSFORM_FEEDBACK_BUFFER:
+            return hU.TRANSFORM_FEEDBACK_BUFFER_BINDING;
           default:
             return 0
         }
-      }(CD);
-      return cD ? DD.getParameter(cD) : null
+      }(RU);
+      return gU ? UU.getParameter(gU) : null
     }
 
-    function nC(DD) {
-      const CD = KD.get(DD);
-      CD && (VD.shadowBytes -= CD.bytes.length, KD.delete(DD))
+    function IR(UU) {
+      const RU = YU.get(UU);
+      RU && (VU.shadowBytes -= RU.bytes.length, YU.delete(UU))
     }
 
-    function OC(DD, CD) {
-      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-        pD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-      nC(DD), VD.shadowBytes + CD > HD ? VD.uncopied++ : (VD.shadowBytes += CD, KD.set(DD, {
-        id: lD(DD),
-        bytes: new Uint8Array(CD),
-        width: cD,
-        height: ID,
-        texelBytes: pD,
+    function JR(UU, RU) {
+      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+        pU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
+      IR(UU), VU.shadowBytes + RU > nU ? VU.uncopied++ : (VU.shadowBytes += RU, YU.set(UU, {
+        id: vU(UU),
+        bytes: new Uint8Array(RU),
+        width: gU,
+        height: tU,
+        texelBytes: pU,
         missed: 0
       }))
     }
 
-    function PC(DD, CD) {
-      for (const cD of ["deleteBuffer", "deleteTexture"]) BC(DD, cD, (DD => function() {
-        for (var CD = arguments.length, cD = new Array(CD), ID = 0; ID < CD; ID++) cD[ID] = arguments[ID];
-        return cD[0] && nC(cD[0]), SC(DD, this, cD)
+    function wR(UU, RU) {
+      for (const gU of ["deleteBuffer", "deleteTexture"]) GR(UU, gU, (UU => function() {
+        for (var RU = arguments.length, gU = new Array(RU), tU = 0; tU < RU; tU++) gU[tU] = arguments[tU];
+        return gU[0] && IR(gU[0]), cR(UU, this, gU)
       }));
-      BC(DD, "shaderSource", (DD => function() {
-        for (var CD = arguments.length, cD = new Array(CD), ID = 0; ID < CD; ID++) cD[ID] = arguments[ID];
-        return cD[0] && "string" === typeof cD[1] && MC.set(cD[0], cD[1]), SC(DD, this, cD)
-      })), BC(DD, "attachShader", (DD => function() {
-        for (var CD, cD = arguments.length, ID = new Array(cD), pD = 0; pD < cD; pD++) ID[pD] = arguments[pD];
-        const iD = ID[0],
-          fD = null !== (CD = tC.get(iD)) && void 0 !== CD ? CD : [];
-        return fD.push(ID[1]), tC.set(iD, fD), SC(DD, this, ID)
-      })), BC(DD, "linkProgram", (DD => function() {
-        for (var CD = arguments.length, cD = new Array(CD), ID = 0; ID < CD; ID++) cD[ID] = arguments[ID];
-        const pD = SC(DD, this, cD);
-        return VD.inProbe || function(DD, CD) {
-          var cD, ID, pD;
-          "undefined" !== typeof HTMLCanvasElement && DD.canvas instanceof HTMLCanvasElement && function(DD) {
-            if (KC.has(DD)) return;
-            KC.add(DD);
-            for (const CD of ["webglcontextlost", "webglcontextrestored", "webglcontextcreationerror"]) DD.addEventListener(CD, (DD => {
-              oC.lost < QC && (oC.lost++, RD(`${CD}${"statusMessage"in DD?`: ${String(DD.statusMessage)}`:""}`))
+      GR(UU, "shaderSource", (UU => function() {
+        for (var RU = arguments.length, gU = new Array(RU), tU = 0; tU < RU; tU++) gU[tU] = arguments[tU];
+        return gU[0] && "string" === typeof gU[1] && uR.set(gU[0], gU[1]), cR(UU, this, gU)
+      })), GR(UU, "attachShader", (UU => function() {
+        for (var RU, gU = arguments.length, tU = new Array(gU), pU = 0; pU < gU; pU++) tU[pU] = arguments[pU];
+        const EU = tU[0],
+          PU = null !== (RU = CR.get(EU)) && void 0 !== RU ? RU : [];
+        return PU.push(tU[1]), CR.set(EU, PU), cR(UU, this, tU)
+      })), GR(UU, "linkProgram", (UU => function() {
+        for (var RU = arguments.length, gU = new Array(RU), tU = 0; tU < RU; tU++) gU[tU] = arguments[tU];
+        const pU = cR(UU, this, gU);
+        return VU.inProbe || function(UU, RU) {
+          var gU, tU, pU;
+          "undefined" !== typeof HTMLCanvasElement && UU.canvas instanceof HTMLCanvasElement && function(UU) {
+            if (YR.has(UU)) return;
+            YR.add(UU);
+            for (const RU of ["webglcontextlost", "webglcontextrestored", "webglcontextcreationerror"]) UU.addEventListener(RU, (UU => {
+              QR.lost < qR && (QR.lost++, sU(`${RU}${"statusMessage"in UU?`: ${String(UU.statusMessage)}`:""}`))
             }))
-          }(DD.canvas);
-          VD.context ??= DD;
-          const iD = null !== (cD = tC.get(CD)) && void 0 !== cD ? cD : [];
-          let fD = "",
-            bD = "";
-          for (const SD of iD) {
-            var QD;
-            const DD = null !== (QD = MC.get(SD)) && void 0 !== QD ? QD : "";
-            /\bgl_Position\b/.test(DD) ? fD = DD : bD = DD
+          }(UU.canvas);
+          VU.context ??= UU;
+          const EU = null !== (gU = CR.get(RU)) && void 0 !== gU ? gU : [];
+          let PU = "",
+            TU = "";
+          for (const cU of EU) {
+            var qU;
+            const UU = null !== (qU = uR.get(cU)) && void 0 !== qU ? qU : "";
+            /\bgl_Position\b/.test(UU) ? PU = UU : TU = UU
           }
-          const wD = {
-            id: lD(CD),
-            name: null !== (ID = null === (pD = xD.exec(fD)) || void 0 === pD ? void 0 : pD[1]) && void 0 !== ID ? ID : null,
-            gl: DD,
-            vertex: fD,
-            fragment: bD,
-            terrain: UC(fD),
+          const KU = {
+            id: vU(RU),
+            name: null !== (tU = null === (pU = oU.exec(PU)) || void 0 === pU ? void 0 : pU[1]) && void 0 !== tU ? tU : null,
+            gl: UU,
+            vertex: PU,
+            fragment: TU,
+            terrain: bR(PU),
             checked: !1,
             firstDraw: !1
           };
-          if (ZC.set(CD, wD), JD.push([CD, wD]), null !== wD.terrain) {
-            const CD = iD.map((CD => {
-              var cD;
-              return null !== (cD = DD.getShaderInfoLog(CD)) && void 0 !== cD ? cD : ""
-            })).filter((DD => "" !== DD.trim()));
-            CD.length > 0 && kD(`program ${qD(wD)} (${wD.terrain}) shader logs:\n${dD(CD.join("\n"))}`)
+          if (hR.set(RU, KU), aU.push([RU, KU]), null !== KU.terrain) {
+            const RU = EU.map((RU => {
+              var gU;
+              return null !== (gU = UU.getShaderInfoLog(RU)) && void 0 !== gU ? gU : ""
+            })).filter((UU => "" !== UU.trim()));
+            RU.length > 0 && yU(`program ${ZU(KU)} (${KU.terrain}) shader logs:\n${kU(RU.join("\n"))}`)
           }
-        }(this, cD[0]), pD
-      })), BC(DD, "bufferData", (DD => function() {
-        for (var CD = arguments.length, cD = new Array(CD), ID = 0; ID < CD; ID++) cD[ID] = arguments[ID];
-        const pD = SC(DD, this, cD);
-        if (!VD.inProbe) {
-          const DD = mC(this, cD[0]);
-          if (DD) {
-            var iD, fD, bD;
-            const CD = "number" === typeof cD[1] ? null : XC(cD[1], null !== (iD = cD[3]) && void 0 !== iD ? iD : 0, null !== (fD = cD[4]) && void 0 !== fD ? fD : 0);
-            var QD;
-            if (OC(DD, "number" === typeof cD[1] ? cD[1] : null !== (bD = null === CD || void 0 === CD ? void 0 : CD.length) && void 0 !== bD ? bD : 0), CD) null === (QD = KD.get(DD)) || void 0 === QD || QD.bytes.set(CD)
-          }
-        }
-        return pD
-      })), BC(DD, "bufferSubData", (DD => function() {
-        for (var CD = arguments.length, cD = new Array(CD), ID = 0; ID < CD; ID++) cD[ID] = arguments[ID];
-        const pD = SC(DD, this, cD);
-        if (!VD.inProbe) {
-          var iD, fD;
-          const DD = mC(this, cD[0]),
-            CD = DD ? KD.get(DD) : void 0,
-            ID = XC(cD[2], null !== (iD = cD[3]) && void 0 !== iD ? iD : 0, null !== (fD = cD[4]) && void 0 !== fD ? fD : 0);
-          if (CD && ID) {
-            const DD = cD[1];
-            CD.bytes.set(ID.subarray(0, Math.max(0, CD.bytes.length - DD)), DD), HC("buffer", CD, DD, ID.length)
+        }(this, gU[0]), pU
+      })), GR(UU, "bufferData", (UU => function() {
+        for (var RU = arguments.length, gU = new Array(RU), tU = 0; tU < RU; tU++) gU[tU] = arguments[tU];
+        const pU = cR(UU, this, gU);
+        if (!VU.inProbe) {
+          const UU = mR(this, gU[0]);
+          if (UU) {
+            var EU, PU, TU;
+            const RU = "number" === typeof gU[1] ? null : xR(gU[1], null !== (EU = gU[3]) && void 0 !== EU ? EU : 0, null !== (PU = gU[4]) && void 0 !== PU ? PU : 0);
+            var qU;
+            if (JR(UU, "number" === typeof gU[1] ? gU[1] : null !== (TU = null === RU || void 0 === RU ? void 0 : RU.length) && void 0 !== TU ? TU : 0), RU) null === (qU = YU.get(UU)) || void 0 === qU || qU.bytes.set(RU)
           }
         }
-        return pD
-      })), CD && (BC(DD, "copyBufferSubData", (DD => function() {
-        for (var CD = arguments.length, cD = new Array(CD), ID = 0; ID < CD; ID++) cD[ID] = arguments[ID];
-        const pD = SC(DD, this, cD);
-        if (!VD.inProbe) {
-          const [DD, CD, ID, pD, iD] = cD, fD = mC(this, DD), bD = mC(this, CD), QD = fD ? KD.get(fD) : void 0, wD = bD ? KD.get(bD) : void 0;
-          wD && (QD ? wD.bytes.set(QD.bytes.slice(ID, ID + iD), pD) : wD.missed++)
-        }
-        return pD
-      })), BC(DD, "texStorage2D", (DD => function() {
-        for (var CD = arguments.length, cD = new Array(CD), ID = 0; ID < CD; ID++) cD[ID] = arguments[ID];
-        const pD = SC(DD, this, cD),
-          [, , iD, fD, bD] = cD;
-        if (!VD.inProbe && (iD === ZD.RGBA32UI || iD === ZD.RGBA16UI)) {
-          const DD = this.getParameter(ZD.TEXTURE_BINDING_2D),
-            CD = iD === ZD.RGBA32UI ? 16 : 8;
-          DD && (aD.set(DD, CD), OC(DD, fD * bD * CD, fD, bD, CD))
-        }
-        return pD
-      })), BC(DD, "texSubImage2D", (DD => function() {
-        for (var CD = arguments.length, cD = new Array(CD), ID = 0; ID < CD; ID++) cD[ID] = arguments[ID];
-        const pD = SC(DD, this, cD);
-        return !VD.inProbe && cD.length >= 9 && cD[0] === ZD.TEXTURE_2D && 0 === cD[1] && function(DD, CD) {
-          var cD;
-          const ID = DD.getParameter(ZD.TEXTURE_BINDING_2D),
-            pD = ID ? KD.get(ID) : void 0;
-          if (!pD) return;
-          const [, , iD, fD, bD, QD] = CD;
-          let wD = XC(CD[8], null !== (cD = CD[9]) && void 0 !== cD ? cD : 0);
-          if (null === wD && "number" === typeof CD[8]) {
-            const cD = mC(DD, ZD.PIXEL_UNPACK_BUFFER),
-              ID = cD ? KD.get(cD) : void 0;
-            wD = ID ? ID.bytes.subarray(CD[8]) : null
+        return pU
+      })), GR(UU, "bufferSubData", (UU => function() {
+        for (var RU = arguments.length, gU = new Array(RU), tU = 0; tU < RU; tU++) gU[tU] = arguments[tU];
+        const pU = cR(UU, this, gU);
+        if (!VU.inProbe) {
+          var EU, PU;
+          const UU = mR(this, gU[0]),
+            RU = UU ? YU.get(UU) : void 0,
+            tU = xR(gU[2], null !== (EU = gU[3]) && void 0 !== EU ? EU : 0, null !== (PU = gU[4]) && void 0 !== PU ? PU : 0);
+          if (RU && tU) {
+            const UU = gU[1];
+            RU.bytes.set(tU.subarray(0, Math.max(0, RU.bytes.length - UU)), UU), nR("buffer", RU, UU, tU.length)
           }
-          if (null === wD) return void pD.missed++;
-          const SD = DD.getParameter(ZD.UNPACK_ROW_LENGTH) || bD,
-            BD = DD.getParameter(ZD.UNPACK_SKIP_ROWS),
-            yD = DD.getParameter(ZD.UNPACK_SKIP_PIXELS),
-            MD = pD.texelBytes;
-          for (let tD = 0; tD < QD; tD++) {
-            const DD = ((BD + tD) * SD + yD) * MD,
-              CD = ((fD + tD) * pD.width + iD) * MD;
-            pD.bytes.set(wD.subarray(DD, DD + bD * MD), CD)
+        }
+        return pU
+      })), RU && (GR(UU, "copyBufferSubData", (UU => function() {
+        for (var RU = arguments.length, gU = new Array(RU), tU = 0; tU < RU; tU++) gU[tU] = arguments[tU];
+        const pU = cR(UU, this, gU);
+        if (!VU.inProbe) {
+          const [UU, RU, tU, pU, EU] = gU, PU = mR(this, UU), TU = mR(this, RU), qU = PU ? YU.get(PU) : void 0, KU = TU ? YU.get(TU) : void 0;
+          KU && (qU ? KU.bytes.set(qU.bytes.slice(tU, tU + EU), pU) : KU.missed++)
+        }
+        return pU
+      })), GR(UU, "texStorage2D", (UU => function() {
+        for (var RU = arguments.length, gU = new Array(RU), tU = 0; tU < RU; tU++) gU[tU] = arguments[tU];
+        const pU = cR(UU, this, gU),
+          [, , EU, PU, TU] = gU;
+        if (!VU.inProbe && (EU === hU.RGBA32UI || EU === hU.RGBA16UI)) {
+          const UU = this.getParameter(hU.TEXTURE_BINDING_2D),
+            RU = EU === hU.RGBA32UI ? 16 : 8;
+          UU && (BU.set(UU, RU), JR(UU, PU * TU * RU, PU, TU, RU))
+        }
+        return pU
+      })), GR(UU, "texSubImage2D", (UU => function() {
+        for (var RU = arguments.length, gU = new Array(RU), tU = 0; tU < RU; tU++) gU[tU] = arguments[tU];
+        const pU = cR(UU, this, gU);
+        return !VU.inProbe && gU.length >= 9 && gU[0] === hU.TEXTURE_2D && 0 === gU[1] && function(UU, RU) {
+          var gU;
+          const tU = UU.getParameter(hU.TEXTURE_BINDING_2D),
+            pU = tU ? YU.get(tU) : void 0;
+          if (!pU) return;
+          const [, , EU, PU, TU, qU] = RU;
+          let KU = xR(RU[8], null !== (gU = RU[9]) && void 0 !== gU ? gU : 0);
+          if (null === KU && "number" === typeof RU[8]) {
+            const gU = mR(UU, hU.PIXEL_UNPACK_BUFFER),
+              tU = gU ? YU.get(gU) : void 0;
+            KU = tU ? tU.bytes.subarray(RU[8]) : null
           }
-          HC("texture", pD, (fD * pD.width + iD) * MD, bD * QD * MD)
-        }(this, cD), pD
-      })), BC(DD, "copyTexSubImage2D", (DD => function() {
-        for (var CD = arguments.length, cD = new Array(CD), ID = 0; ID < CD; ID++) cD[ID] = arguments[ID];
-        const pD = cD[0] === ZD.TEXTURE_2D ? this.getParameter(ZD.TEXTURE_BINDING_2D) : null,
-          iD = pD ? KD.get(pD) : void 0;
-        return iD && iD.missed++, SC(DD, this, cD)
+          if (null === KU) return void pU.missed++;
+          const cU = UU.getParameter(hU.UNPACK_ROW_LENGTH) || TU,
+            GU = UU.getParameter(hU.UNPACK_SKIP_ROWS),
+            jU = UU.getParameter(hU.UNPACK_SKIP_PIXELS),
+            uU = pU.texelBytes;
+          for (let CU = 0; CU < qU; CU++) {
+            const UU = ((GU + CU) * cU + jU) * uU,
+              RU = ((PU + CU) * pU.width + EU) * uU;
+            pU.bytes.set(KU.subarray(UU, UU + TU * uU), RU)
+          }
+          nR("texture", pU, (PU * pU.width + EU) * uU, TU * qU * uU)
+        }(this, gU), pU
+      })), GR(UU, "copyTexSubImage2D", (UU => function() {
+        for (var RU = arguments.length, gU = new Array(RU), tU = 0; tU < RU; tU++) gU[tU] = arguments[tU];
+        const pU = gU[0] === hU.TEXTURE_2D ? this.getParameter(hU.TEXTURE_BINDING_2D) : null,
+          EU = pU ? YU.get(pU) : void 0;
+        return EU && EU.missed++, cR(UU, this, gU)
       })));
-      for (const cD of ["drawArrays", "drawElements", "drawArraysInstanced", "drawElementsInstanced"]) BC(DD, cD, (DD => function() {
-        for (var CD = arguments.length, ID = new Array(CD), pD = 0; pD < CD; pD++) ID[pD] = arguments[pD];
-        const iD = SC(DD, this, ID);
-        return VD.inProbe || qC(this, cD, ID), iD
+      for (const gU of ["drawArrays", "drawElements", "drawArraysInstanced", "drawElementsInstanced"]) GR(UU, gU, (UU => function() {
+        for (var RU = arguments.length, tU = new Array(RU), pU = 0; pU < RU; pU++) tU[pU] = arguments[pU];
+        const EU = cR(UU, this, tU);
+        return VU.inProbe || ZR(this, gU, tU), EU
       }));
-      BC(DD, "getExtension", (DD => function() {
-        for (var CD = arguments.length, cD = new Array(CD), ID = 0; ID < CD; ID++) cD[ID] = arguments[ID];
-        const pD = SC(DD, this, cD);
-        return pD && "object" === typeof pD && function(DD, CD, cD) {
-          const ID = {
+      GR(UU, "getExtension", (UU => function() {
+        for (var RU = arguments.length, gU = new Array(RU), tU = 0; tU < RU; tU++) gU[tU] = arguments[tU];
+        const pU = cR(UU, this, gU);
+        return pU && "object" === typeof pU && function(UU, RU, gU) {
+          const tU = {
             WEBGL_multi_draw: ["multiDrawArraysWEBGL", "multiDrawElementsWEBGL", "multiDrawArraysInstancedWEBGL", "multiDrawElementsInstancedWEBGL"],
             ANGLE_instanced_arrays: ["drawArraysInstancedANGLE", "drawElementsInstancedANGLE"]
           };
-          if (!(CD in ID) || cD.bloxdRenderDebug) return;
-          cD.bloxdRenderDebug = !0;
-          for (const pD of ID[CD]) {
-            const CD = cD[pD];
-            "function" === typeof CD && (cD[pD] = function() {
-              for (var ID = arguments.length, iD = new Array(ID), fD = 0; fD < ID; fD++) iD[fD] = arguments[fD];
-              const bD = SC(CD, cD, iD);
-              return VD.inProbe || qC(DD, pD, iD), bD
+          if (!(RU in tU) || gU.bloxdRenderDebug) return;
+          gU.bloxdRenderDebug = !0;
+          for (const pU of tU[RU]) {
+            const RU = gU[pU];
+            "function" === typeof RU && (gU[pU] = function() {
+              for (var tU = arguments.length, EU = new Array(tU), PU = 0; PU < tU; PU++) EU[PU] = arguments[PU];
+              const TU = cR(RU, gU, EU);
+              return VU.inProbe || ZR(UU, pU, EU), TU
             })
           }
-        }(this, cD[0], pD), pD
+        }(this, gU[0], pU), pU
       }))
     }
 
-    function HC(DD, CD, cD, ID) {
-      NC[DD] += ID, gC < 32 && CD.bytes.length >= 1 << 20 && (gC++, kD(`upload ${DD} #${CD.id} +${cD} ${ID} B`))
+    function nR(UU, RU, gU, tU) {
+      WR[UU] += tU, fR < 32 && RU.bytes.length >= 1 << 20 && (fR++, yU(`upload ${UU} #${RU.id} +${gU} ${tU} B`))
     }
 
-    function UC(DD) {
-      if (!DD.includes("decodeQuad")) return null;
-      return !/^\s*#version 300 es/.test(DD) || /in uvec3 _p2vs_location0\b/.test(DD) ? "inst" : "tex"
+    function bR(UU) {
+      if (!UU.includes("decodeQuad")) return null;
+      return !/^\s*#version 300 es/.test(UU) || /in uvec3 _p2vs_location0\b/.test(UU) ? "inst" : "tex"
     }
 
-    function xC(DD, CD, cD) {
-      var ID;
-      if (cD.checked) return;
-      cD.checked = !0;
-      const pD = DD.getProgramParameter(CD, ZD.LINK_STATUS),
-        iD = (null !== (ID = DD.getProgramInfoLog(CD)) && void 0 !== ID ? ID : "").trim();
-      var fD;
-      null === cD.terrain && pD || (RD(`program ${qD(cD)} ${null!==(fD=cD.terrain)&&void 0!==fD?fD:"other"} link ${pD?"ok":"FAILED"}${iD?`: ${dD(iD,300)}`:""}`), iD && kD(`program ${qD(cD)} link log:\n${dD(iD)}`))
+    function oR(UU, RU, gU) {
+      var tU;
+      if (gU.checked) return;
+      gU.checked = !0;
+      const pU = UU.getProgramParameter(RU, hU.LINK_STATUS),
+        EU = (null !== (tU = UU.getProgramInfoLog(RU)) && void 0 !== tU ? tU : "").trim();
+      var PU;
+      null === gU.terrain && pU || (sU(`program ${ZU(gU)} ${null!==(PU=gU.terrain)&&void 0!==PU?PU:"other"} link ${pU?"ok":"FAILED"}${EU?`: ${kU(EU,300)}`:""}`), EU && yU(`program ${ZU(gU)} link log:\n${kU(EU)}`))
     }
 
-    function qC(DD, CD, cD) {
-      var ID;
-      const pD = DD.getParameter(ZD.CURRENT_PROGRAM),
-        iD = pD ? ZC.get(pD) : void 0;
-      if (!pD || !iD) return;
-      const fD = null !== (ID = iD.terrain) && void 0 !== ID ? ID : "other",
+    function ZR(UU, RU, gU) {
+      var tU;
+      const pU = UU.getParameter(hU.CURRENT_PROGRAM),
+        EU = pU ? hR.get(pU) : void 0;
+      if (!pU || !EU) return;
+      const PU = null !== (tU = EU.terrain) && void 0 !== tU ? tU : "other",
         {
-          df: bD,
-          instances: QD
-        } = function(DD, CD) {
-          switch (DD) {
+          hu: TU,
+          instances: qU
+        } = function(UU, RU) {
+          switch (UU) {
             case "drawArrays":
               return {
-                df: [
-                  [CD[1], CD[2]]
+                hu: [
+                  [RU[1], RU[2]]
                 ], instances: 1
               };
             case "drawArraysInstanced":
             case "drawArraysInstancedANGLE":
               return {
-                df: [
-                  [CD[1], CD[2]]
-                ], instances: CD[3]
+                hu: [
+                  [RU[1], RU[2]]
+                ], instances: RU[3]
               };
             case "drawElements":
               return {
-                df: [
-                  [0, CD[1]]
+                hu: [
+                  [0, RU[1]]
                 ], instances: 1
               };
             case "drawElementsInstanced":
             case "drawElementsInstancedANGLE":
               return {
-                df: [
-                  [0, CD[1]]
-                ], instances: CD[4]
+                hu: [
+                  [0, RU[1]]
+                ], instances: RU[4]
               };
             case "multiDrawArraysWEBGL": {
-              const DD = CD[1],
-                cD = CD[3],
-                ID = CD[2],
-                pD = CD[4],
-                iD = [];
-              for (let fD = 0; fD < CD[5]; fD++) iD.push([DD[ID + fD], cD[pD + fD]]);
+              const UU = RU[1],
+                gU = RU[3],
+                tU = RU[2],
+                pU = RU[4],
+                EU = [];
+              for (let PU = 0; PU < RU[5]; PU++) EU.push([UU[tU + PU], gU[pU + PU]]);
               return {
-                df: iD,
+                hu: EU,
                 instances: 1
               }
             }
             default:
               return {
-                df: [], instances: 0
+                hu: [], instances: 0
               }
           }
-        }(CD, cD),
-        wD = "inst" === iD.terrain ? QD : bD.reduce(((DD, CD) => {
-          let [, cD] = CD;
-          return DD + cD
+        }(RU, gU),
+        KU = "inst" === EU.terrain ? qU : TU.reduce(((UU, RU) => {
+          let [, gU] = RU;
+          return UU + gU
         }), 0) / 6;
-      if (vC[fD].draws++, vC[fD].faces += wD, null === iD.terrain) return;
-      if (VD.context = DD, !iD.firstDraw) {
-        iD.firstDraw = !0, xC(DD, pD, iD), JC || (JC = !0, RD(function(DD) {
-          var CD;
-          const cD = DD.getParameter(ZD.DEPTH_FUNC),
-            ID = {
+      if (eR[PU].draws++, eR[PU].faces += KU, null === EU.terrain) return;
+      if (VU.context = UU, !EU.firstDraw) {
+        EU.firstDraw = !0, oR(UU, pU, EU), aR || (aR = !0, sU(function(UU) {
+          var RU;
+          const gU = UU.getParameter(hU.DEPTH_FUNC),
+            tU = {
               513: "less",
               514: "equal",
               515: "lequal",
@@ -1079,321 +1079,321 @@ export const modules = {
               518: "gequal",
               519: "always"
             };
-          let pD = "default framebuffer";
-          if ("DRAW_FRAMEBUFFER" in DD && DD.getParameter(ZD.DRAW_FRAMEBUFFER_BINDING)) {
-            const CD = DD;
-            pD = CD.getFramebufferAttachmentParameter(ZD.DRAW_FRAMEBUFFER, ZD.DEPTH_ATTACHMENT, ZD.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE) ? `depth ${String(CD.getFramebufferAttachmentParameter(ZD.DRAW_FRAMEBUFFER,ZD.DEPTH_ATTACHMENT,ZD.FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE))} bits type 0x${Number(CD.getFramebufferAttachmentParameter(ZD.DRAW_FRAMEBUFFER,ZD.DEPTH_ATTACHMENT,ZD.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE)).toString(16)}` : "no depth attachment"
+          let pU = "default framebuffer";
+          if ("DRAW_FRAMEBUFFER" in UU && UU.getParameter(hU.DRAW_FRAMEBUFFER_BINDING)) {
+            const RU = UU;
+            pU = RU.getFramebufferAttachmentParameter(hU.DRAW_FRAMEBUFFER, hU.DEPTH_ATTACHMENT, hU.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE) ? `depth ${String(RU.getFramebufferAttachmentParameter(hU.DRAW_FRAMEBUFFER,hU.DEPTH_ATTACHMENT,hU.FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE))} bits type 0x${Number(RU.getFramebufferAttachmentParameter(hU.DRAW_FRAMEBUFFER,hU.DEPTH_ATTACHMENT,hU.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE)).toString(16)}` : "no depth attachment"
           }
-          const iD = DD.getParameter(ZD.DEPTH_CLEAR_VALUE);
-          return `depth ${null!==(CD=ID[cD])&&void 0!==CD?CD:`0x${cD.toString(16)}`} clear ${iD}${516===cD||518===cD?" (reverse-Z)":""}, samples ${String(DD.getParameter(ZD.SAMPLES))}, ${pD}`
-        }(DD)));
-        const cD = DD.getError();
-        cD !== ZD.NO_ERROR && oC.gl < QC && (oC.gl++, RD(`GL error 0x${cD.toString(16)} after program ${qD(iD)}'s first terrain draw (${CD})`))
+          const EU = UU.getParameter(hU.DEPTH_CLEAR_VALUE);
+          return `depth ${null!==(RU=tU[gU])&&void 0!==RU?RU:`0x${gU.toString(16)}`} clear ${EU}${516===gU||518===gU?" (reverse-Z)":""}, samples ${String(UU.getParameter(hU.SAMPLES))}, ${pU}`
+        }(UU)));
+        const gU = UU.getError();
+        gU !== hU.NO_ERROR && QR.gl < qR && (QR.gl++, sU(`GL error 0x${gU.toString(16)} after program ${ZU(EU)}'s first terrain draw (${RU})`))
       }
-      const SD = VD.pendingCheck;
-      null !== SD && (SD.terrainDraws++, SD.draws.length < wC && YD(DD, pD, iD, CD, bD, QD))
+      const cU = VU.pendingCheck;
+      null !== cU && (cU.terrainDraws++, cU.draws.length < KR && FU(UU, pU, EU, RU, TU, qU))
     }
-    let JC = !1;
-    const KC = new WeakSet;
-    var aC = cD(4310),
-      VC = cD(4498);
-    const zC = ["maxStorageBuffersPerShaderStage", "maxStorageBufferBindingSize", "maxBufferSize", "maxUniformBufferBindingSize", "minUniformBufferOffsetAlignment", "maxTextureDimension2D", "maxTextureArrayLayers", "maxVertexBuffers", "maxVertexAttributes", "maxVertexBufferArrayStride", "maxBindGroups", "maxColorAttachmentBytesPerSample"];
-    let jC = !1;
-    const lC = new WeakSet,
-      LC = new WeakMap,
-      TC = new WeakMap,
-      GC = {
+    let aR = !1;
+    const YR = new WeakSet;
+    var BR = gU(4179),
+      VR = gU(4356);
+    const rR = ["maxStorageBuffersPerShaderStage", "maxStorageBufferBindingSize", "maxBufferSize", "maxUniformBufferBindingSize", "minUniformBufferOffsetAlignment", "maxTextureDimension2D", "maxTextureArrayLayers", "maxVertexBuffers", "maxVertexAttributes", "maxVertexBufferArrayStride", "maxBindGroups", "maxColorAttachmentBytesPerSample"];
+    let XR = !1;
+    const vR = new WeakSet,
+      dR = new WeakMap,
+      HR = new WeakMap,
+      SR = {
         uncaptured: 0,
         compile: 0,
         rejected: 0
       };
-    let RC = 0,
-      kC = !1,
-      dC = null,
-      YC = {
+    let sR = 0,
+      yR = !1,
+      kR = null,
+      FR = {
         draws: 0,
         faces: 0
       };
 
-    function WC(DD) {
-      const CD = globalThis[DD];
-      return null === CD || void 0 === CD ? void 0 : CD.prototype
+    function iR(UU) {
+      const RU = globalThis[UU];
+      return null === RU || void 0 === RU ? void 0 : RU.prototype
     }
 
-    function sC(DD) {
-      return DD && "function" === typeof DD[Symbol.iterator] ? [...DD].sort().join(" ") : ""
+    function AR(UU) {
+      return UU && "function" === typeof UU[Symbol.iterator] ? [...UU].sort().join(" ") : ""
     }
 
-    function EC(DD, CD) {
-      const cD = null !== DD && void 0 !== DD ? DD : {},
-        ID = null !== CD && void 0 !== CD ? CD : Object.keys(Object.getPrototypeOf(cD)).concat(Object.keys(cD));
-      return [...new Set(ID)].filter((DD => "number" === typeof cD[DD])).map((DD => `${DD} ${String(cD[DD])}`)).join(", ")
+    function zR(UU, RU) {
+      const gU = null !== UU && void 0 !== UU ? UU : {},
+        tU = null !== RU && void 0 !== RU ? RU : Object.keys(Object.getPrototypeOf(gU)).concat(Object.keys(gU));
+      return [...new Set(tU)].filter((UU => "number" === typeof gU[UU])).map((UU => `${UU} ${String(gU[UU])}`)).join(", ")
     }
 
-    function eC(DD, CD) {
-      var cD;
-      const ID = null !== (cD = CD.vertex) && void 0 !== cD ? cD : {};
-      if (ID.module && lC.has(ID.module)) {
-        var pD;
-        const cD = String(null !== (pD = ID.entryPoint) && void 0 !== pD ? pD : "");
-        if (cD.startsWith("vs_packed") && LC.set(DD, cD), !kC) {
-          var iD, fD, bD, QD, wD;
-          kC = !0;
-          const DD = null !== (iD = CD.depthStencil) && void 0 !== iD ? iD : {},
-            ID = null !== (fD = CD.multisample) && void 0 !== fD ? fD : {},
-            pD = String(null !== (bD = DD.depthCompare) && void 0 !== bD ? bD : "");
-          RD(`WebGPU terrain pipeline ${cD}: depth ${String(null!==(QD=DD.format)&&void 0!==QD?QD:"none")} ${pD}${pD.startsWith("greater")?" (reverse-Z)":""}, MSAA ${String(null!==(wD=ID.count)&&void 0!==wD?wD:1)}`)
+    function MR(UU, RU) {
+      var gU;
+      const tU = null !== (gU = RU.vertex) && void 0 !== gU ? gU : {};
+      if (tU.module && vR.has(tU.module)) {
+        var pU;
+        const gU = String(null !== (pU = tU.entryPoint) && void 0 !== pU ? pU : "");
+        if (gU.startsWith("vs_packed") && dR.set(UU, gU), !yR) {
+          var EU, PU, TU, qU, KU;
+          yR = !0;
+          const UU = null !== (EU = RU.depthStencil) && void 0 !== EU ? EU : {},
+            tU = null !== (PU = RU.multisample) && void 0 !== PU ? PU : {},
+            pU = String(null !== (TU = UU.depthCompare) && void 0 !== TU ? TU : "");
+          sU(`WebGPU terrain pipeline ${gU}: depth ${String(null!==(qU=UU.format)&&void 0!==qU?qU:"none")} ${pU}${pU.startsWith("greater")?" (reverse-Z)":""}, MSAA ${String(null!==(KU=tU.count)&&void 0!==KU?KU:1)}`)
         }
       }
     }
 
-    function uC(DD) {
-      BC(DD, "setPipeline", (DD => function() {
-        for (var CD = arguments.length, cD = new Array(CD), ID = 0; ID < CD; ID++) cD[ID] = arguments[ID];
-        return TC.set(this, cD[0]), SC(DD, this, cD)
+    function DR(UU) {
+      GR(UU, "setPipeline", (UU => function() {
+        for (var RU = arguments.length, gU = new Array(RU), tU = 0; tU < RU; tU++) gU[tU] = arguments[tU];
+        return HR.set(this, gU[0]), cR(UU, this, gU)
       }));
-      for (const CD of ["draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect"]) BC(DD, CD, (DD => function() {
-        const cD = TC.get(this),
-          ID = cD ? LC.get(cD) : void 0;
-        for (var pD = arguments.length, iD = new Array(pD), fD = 0; fD < pD; fD++) iD[fD] = arguments[fD];
-        return void 0 !== ID && hC(CD, ID, iD), SC(DD, this, iD)
+      for (const RU of ["draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect"]) GR(UU, RU, (UU => function() {
+        const gU = HR.get(this),
+          tU = gU ? dR.get(gU) : void 0;
+        for (var pU = arguments.length, EU = new Array(pU), PU = 0; PU < pU; PU++) EU[PU] = arguments[PU];
+        return void 0 !== tU && LR(RU, tU, EU), cR(UU, this, EU)
       }))
     }
 
-    function hC(DD, CD, cD) {
-      var ID;
-      (YC.draws++, "draw" === DD || "drawIndexed" === DD) && (YC.faces += cD[0] * (null !== (ID = cD[1]) && void 0 !== ID ? ID : 1) / 6);
-      if (null !== dC && dC.length < wC) {
-        const ID = ("draw" === DD ? ["vertices", "instances", "firstVertex", "firstInstance"] : "drawIndexed" === DD ? ["indices", "instances", "firstIndex", "baseVertex", "firstInstance"] : ["indirectOffset"]).map(((CD, ID) => {
-          const pD = DD.endsWith("Indirect") ? cD[1] : cD[ID];
-          return `${CD} ${String(null!==pD&&void 0!==pD?pD:"instances"===CD?1:0)}`
+    function LR(UU, RU, gU) {
+      var tU;
+      (FR.draws++, "draw" === UU || "drawIndexed" === UU) && (FR.faces += gU[0] * (null !== (tU = gU[1]) && void 0 !== tU ? tU : 1) / 6);
+      if (null !== kR && kR.length < KR) {
+        const tU = ("draw" === UU ? ["vertices", "instances", "firstVertex", "firstInstance"] : "drawIndexed" === UU ? ["indices", "instances", "firstIndex", "baseVertex", "firstInstance"] : ["indirectOffset"]).map(((RU, tU) => {
+          const pU = UU.endsWith("Indirect") ? gU[1] : gU[tU];
+          return `${RU} ${String(null!==pU&&void 0!==pU?pU:"instances"===RU?1:0)}`
         }));
-        dC.push(`  ${CD} ${DD} ${ID.join(" ")}`)
+        kR.push(`  ${RU} ${UU} ${tU.join(" ")}`)
       }
     }
 
-    function rC() {
-      if (jC || "undefined" === typeof navigator || !("gpu" in navigator)) return;
-      jC = !0, BC(WC("GPU"), "requestAdapter", (DD => function() {
-        for (var CD = arguments.length, cD = new Array(CD), ID = 0; ID < CD; ID++) cD[ID] = arguments[ID];
-        return SC(DD, this, cD).then((DD => {
-          var CD;
-          DD ? function(DD) {
-            var CD;
-            const cD = null !== (CD = DD.info) && void 0 !== CD ? CD : {};
-            RD(`WebGPU adapter ${["vendor","architecture","device","description"].map((DD=>{var CD;return`${DD} "${String(null!==(CD=cD[DD])&&void 0!==CD?CD:"")}"`})).join(" ")}${DD.isFallbackAdapter?" (fallback)":""}`), RD(`WebGPU adapter features ${sC(DD.features)}`), RD(`WebGPU adapter limits ${EC(DD.limits,zC)}`), kD(`WebGPU adapter all limits ${EC(DD.limits,null)}`)
-          }(DD) : RD(`WebGPU requestAdapter(${JSON.stringify(null!==(CD=cD[0])&&void 0!==CD?CD:{})}) gave none`);
-          return DD
+    function NR() {
+      if (XR || "undefined" === typeof navigator || !("gpu" in navigator)) return;
+      XR = !0, GR(iR("GPU"), "requestAdapter", (UU => function() {
+        for (var RU = arguments.length, gU = new Array(RU), tU = 0; tU < RU; tU++) gU[tU] = arguments[tU];
+        return cR(UU, this, gU).then((UU => {
+          var RU;
+          UU ? function(UU) {
+            var RU;
+            const gU = null !== (RU = UU.info) && void 0 !== RU ? RU : {};
+            sU(`WebGPU adapter ${["vendor","architecture","device","description"].map((UU=>{var RU;return`${UU} "${String(null!==(RU=gU[UU])&&void 0!==RU?RU:"")}"`})).join(" ")}${UU.isFallbackAdapter?" (fallback)":""}`), sU(`WebGPU adapter features ${AR(UU.features)}`), sU(`WebGPU adapter limits ${zR(UU.limits,rR)}`), yU(`WebGPU adapter all limits ${zR(UU.limits,null)}`)
+          }(UU) : sU(`WebGPU requestAdapter(${JSON.stringify(null!==(RU=gU[0])&&void 0!==RU?RU:{})}) gave none`);
+          return UU
         }))
-      })), BC(WC("GPUAdapter"), "requestDevice", (DD => function() {
-        for (var CD = arguments.length, cD = new Array(CD), ID = 0; ID < CD; ID++) cD[ID] = arguments[ID];
-        return SC(DD, this, cD).then((DD => (function(DD) {
-          RD(`WebGPU device features ${sC(DD.features)}`), RD(`WebGPU device limits ${EC(DD.limits,zC)}`), DD.addEventListener("uncapturederror", (DD => {
-            if (GC.uncaptured < QC) {
-              var CD, cD, ID;
-              GC.uncaptured++;
-              const pD = DD.error;
-              RD(`WebGPU uncaptured ${null!==(CD=null===pD||void 0===pD||null===(cD=pD.constructor)||void 0===cD?void 0:cD.name)&&void 0!==CD?CD:"error"}: ${dD(String(null!==(ID=null===pD||void 0===pD?void 0:pD.message)&&void 0!==ID?ID:""),600)}`)
+      })), GR(iR("GPUAdapter"), "requestDevice", (UU => function() {
+        for (var RU = arguments.length, gU = new Array(RU), tU = 0; tU < RU; tU++) gU[tU] = arguments[tU];
+        return cR(UU, this, gU).then((UU => (function(UU) {
+          sU(`WebGPU device features ${AR(UU.features)}`), sU(`WebGPU device limits ${zR(UU.limits,rR)}`), UU.addEventListener("uncapturederror", (UU => {
+            if (SR.uncaptured < qR) {
+              var RU, gU, tU;
+              SR.uncaptured++;
+              const pU = UU.error;
+              sU(`WebGPU uncaptured ${null!==(RU=null===pU||void 0===pU||null===(gU=pU.constructor)||void 0===gU?void 0:gU.name)&&void 0!==RU?RU:"error"}: ${kU(String(null!==(tU=null===pU||void 0===pU?void 0:pU.message)&&void 0!==tU?tU:""),600)}`)
             }
           }));
-          const CD = DD.lost;
-          null === CD || void 0 === CD || CD.then((DD => {
-            var CD;
-            RD(`WebGPU device lost (${String(DD.reason)}): ${dD(String(null!==(CD=DD.message)&&void 0!==CD?CD:""),600)}`)
+          const RU = UU.lost;
+          null === RU || void 0 === RU || RU.then((UU => {
+            var RU;
+            sU(`WebGPU device lost (${String(UU.reason)}): ${kU(String(null!==(RU=UU.message)&&void 0!==RU?RU:""),600)}`)
           }))
-        }(DD), DD)), (DD => {
-          throw RD(`WebGPU requestDevice failed: ${String(DD)}`), DD
+        }(UU), UU)), (UU => {
+          throw sU(`WebGPU requestDevice failed: ${String(UU)}`), UU
         }))
       }));
-      const DD = WC("GPUDevice");
-      BC(DD, "createShaderModule", (DD => function() {
-        for (var CD, cD, ID = arguments.length, pD = new Array(ID), iD = 0; iD < ID; iD++) pD[iD] = arguments[iD];
-        const fD = SC(DD, this, pD);
-        return function(DD, CD) {
-          const cD = CD.includes("decodeQuad");
-          cD && lC.add(DD);
-          const ID = DD.getCompilationInfo;
-          null === ID || void 0 === ID || ID.call(DD).then((DD => {
-            if (0 === DD.messages.length && !cD) return;
-            const CD = {};
-            for (const cD of DD.messages) {
-              var ID;
-              CD[String(cD.type)] = (null !== (ID = CD[String(cD.type)]) && void 0 !== ID ? ID : 0) + 1
+      const UU = iR("GPUDevice");
+      GR(UU, "createShaderModule", (UU => function() {
+        for (var RU, gU, tU = arguments.length, pU = new Array(tU), EU = 0; EU < tU; EU++) pU[EU] = arguments[EU];
+        const PU = cR(UU, this, pU);
+        return function(UU, RU) {
+          const gU = RU.includes("decodeQuad");
+          gU && vR.add(UU);
+          const tU = UU.getCompilationInfo;
+          null === tU || void 0 === tU || tU.call(UU).then((UU => {
+            if (0 === UU.messages.length && !gU) return;
+            const RU = {};
+            for (const gU of UU.messages) {
+              var tU;
+              RU[String(gU.type)] = (null !== (tU = RU[String(gU.type)]) && void 0 !== tU ? tU : 0) + 1
             }
-            const pD = DD.messages.map((DD => `${String(DD.type)} ${String(DD.lineNum)}:${String(DD.linePos)} ${String(DD.message)}`)).join("\n");
-            GC.compile < QC && (GC.compile++, RD(`WebGPU ${cD?"terrain ":""}shader module compiled: ${JSON.stringify(CD)}${pD?` first: ${dD(pD.split("\n")[0],300)}`:""}`)), pD && kD(`WebGPU shader module messages:\n${dD(pD)}`)
+            const pU = UU.messages.map((UU => `${String(UU.type)} ${String(UU.lineNum)}:${String(UU.linePos)} ${String(UU.message)}`)).join("\n");
+            SR.compile < qR && (SR.compile++, sU(`WebGPU ${gU?"terrain ":""}shader module compiled: ${JSON.stringify(RU)}${pU?` first: ${kU(pU.split("\n")[0],300)}`:""}`)), pU && yU(`WebGPU shader module messages:\n${kU(pU)}`)
           }))
-        }(fD, String(null !== (CD = (null !== (cD = pD[0]) && void 0 !== cD ? cD : {}).code) && void 0 !== CD ? CD : "")), fD
-      })), BC(DD, "createRenderPipeline", (DD => function() {
-        for (var CD, cD = arguments.length, ID = new Array(cD), pD = 0; pD < cD; pD++) ID[pD] = arguments[pD];
-        const iD = SC(DD, this, ID);
-        return eC(iD, null !== (CD = ID[0]) && void 0 !== CD ? CD : {}), iD
-      })), BC(DD, "createRenderPipelineAsync", (DD => function() {
-        for (var CD = arguments.length, cD = new Array(CD), ID = 0; ID < CD; ID++) cD[ID] = arguments[ID];
-        return SC(DD, this, cD).then((DD => {
-          var CD;
-          return eC(DD, null !== (CD = cD[0]) && void 0 !== CD ? CD : {}), DD
-        }), (DD => {
-          var CD;
-          throw function(DD, CD) {
-            var cD, ID, pD;
-            if (GC.rejected >= QC) return;
-            GC.rejected++;
+        }(PU, String(null !== (RU = (null !== (gU = pU[0]) && void 0 !== gU ? gU : {}).code) && void 0 !== RU ? RU : "")), PU
+      })), GR(UU, "createRenderPipeline", (UU => function() {
+        for (var RU, gU = arguments.length, tU = new Array(gU), pU = 0; pU < gU; pU++) tU[pU] = arguments[pU];
+        const EU = cR(UU, this, tU);
+        return MR(EU, null !== (RU = tU[0]) && void 0 !== RU ? RU : {}), EU
+      })), GR(UU, "createRenderPipelineAsync", (UU => function() {
+        for (var RU = arguments.length, gU = new Array(RU), tU = 0; tU < RU; tU++) gU[tU] = arguments[tU];
+        return cR(UU, this, gU).then((UU => {
+          var RU;
+          return MR(UU, null !== (RU = gU[0]) && void 0 !== RU ? RU : {}), UU
+        }), (UU => {
+          var RU;
+          throw function(UU, RU) {
+            var gU, tU, pU;
+            if (SR.rejected >= qR) return;
+            SR.rejected++;
             const {
-              reason: iD,
-              message: fD
-            } = null !== CD && void 0 !== CD ? CD : {}, bD = String(null !== (cD = (null !== (ID = DD.vertex) && void 0 !== ID ? ID : {}).entryPoint) && void 0 !== cD ? cD : "");
-            RD(`WebGPU pipeline "${String(null!==(pD=DD.label)&&void 0!==pD?pD:"")}" ${bD} rejected (${String(null!==iD&&void 0!==iD?iD:"no reason")}): ${dD(String(null!==fD&&void 0!==fD?fD:CD),600)}`)
-          }(null !== (CD = cD[0]) && void 0 !== CD ? CD : {}, DD), DD
+              reason: EU,
+              message: PU
+            } = null !== RU && void 0 !== RU ? RU : {}, TU = String(null !== (gU = (null !== (tU = UU.vertex) && void 0 !== tU ? tU : {}).entryPoint) && void 0 !== gU ? gU : "");
+            sU(`WebGPU pipeline "${String(null!==(pU=UU.label)&&void 0!==pU?pU:"")}" ${TU} rejected (${String(null!==EU&&void 0!==EU?EU:"no reason")}): ${kU(String(null!==PU&&void 0!==PU?PU:RU),600)}`)
+          }(null !== (RU = gU[0]) && void 0 !== RU ? RU : {}, UU), UU
         }))
-      })), BC(WC("GPUCanvasContext"), "configure", (DD => function() {
-        for (var CD, cD = arguments.length, ID = new Array(cD), pD = 0; pD < cD; pD++) ID[pD] = arguments[pD];
-        const iD = null !== (CD = ID[0]) && void 0 !== CD ? CD : {};
-        var fD, bD;
-        RC++ < 3 && RD(`WebGPU canvas ${String(iD.format)} ${String(null!==(fD=iD.colorSpace)&&void 0!==fD?fD:"srgb")} alpha ${String(null!==(bD=iD.alphaMode)&&void 0!==bD?bD:"opaque")}`);
-        return SC(DD, this, ID)
-      })), uC(WC("GPURenderPassEncoder")), uC(WC("GPURenderBundleEncoder"))
+      })), GR(iR("GPUCanvasContext"), "configure", (UU => function() {
+        for (var RU, gU = arguments.length, tU = new Array(gU), pU = 0; pU < gU; pU++) tU[pU] = arguments[pU];
+        const EU = null !== (RU = tU[0]) && void 0 !== RU ? RU : {};
+        var PU, TU;
+        sR++ < 3 && sU(`WebGPU canvas ${String(EU.format)} ${String(null!==(PU=EU.colorSpace)&&void 0!==PU?PU:"srgb")} alpha ${String(null!==(TU=EU.alphaMode)&&void 0!==TU?TU:"opaque")}`);
+        return cR(UU, this, tU)
+      })), DR(iR("GPURenderPassEncoder")), DR(iR("GPURenderBundleEncoder"))
     }
-    const AC = 1e4,
-      FC = 6e4,
-      Dc = 5e3,
-      Cc = 3e3,
-      cc = 100;
-    let Ic = null,
-      pc = !1,
-      ic = {
-        ...aC.b
+    const lR = 1e4,
+      OR = 6e4,
+      Ug = 5e3,
+      Rg = 3e3,
+      gg = 100;
+    let tg = null,
+      pg = !1,
+      Eg = {
+        ...BR.d
       },
-      fc = !1,
-      bc = null,
-      Qc = 0,
-      wc = () => {};
-    const Sc = new Promise((DD => {
-      wc = DD
+      Pg = !1,
+      Tg = null,
+      qg = 0,
+      Kg = () => {};
+    const cg = new Promise((UU => {
+      Kg = UU
     }));
 
-    function Bc() {
-      var DD;
-      pc || (pc = !0, ic = Object.assign(window.bloxdRenderDebug ??= {
-        ...aC.b
+    function Gg() {
+      var UU;
+      pg || (pg = !0, Eg = Object.assign(window.bloxdRenderDebug ??= {
+        ...BR.d
       }, {
-        faceCull: "0" === (0, iD.n)("faceCull") ? "0" : "1",
-        adrenoProbe: null !== (DD = (0, iD.n)("adrenoProbe")) && void 0 !== DD ? DD : ""
-      }), RD("quality steps off while the topic is on (util/weakGpu.ts): no stepped MSAA or scale, no weak-GPU tier"), yC || "undefined" === typeof window || (yC = !0, "undefined" !== typeof WebGL2RenderingContext && PC(WebGL2RenderingContext.prototype, !0), "undefined" !== typeof WebGLRenderingContext && PC(WebGLRenderingContext.prototype, !1)), rC(), (0, iD.b)("renderProbe", (() => {
-        vc("console")
-      })), Zc(), setInterval(gc, Dc))
+        faceCull: "0" === (0, EU.j)("faceCull") ? "0" : "1",
+        adrenoProbe: null !== (UU = (0, EU.j)("adrenoProbe")) && void 0 !== UU ? UU : ""
+      }), sU("quality steps off while the topic is on (util/weakGpu.ts): no stepped MSAA or scale, no weak-GPU tier"), jR || "undefined" === typeof window || (jR = !0, "undefined" !== typeof WebGL2RenderingContext && wR(WebGL2RenderingContext.prototype, !0), "undefined" !== typeof WebGLRenderingContext && wR(WebGLRenderingContext.prototype, !1)), NR(), (0, EU.b)("renderProbe", (() => {
+        eg("console")
+      })), hg(), setInterval(fg, Ug))
     }
 
-    function yc(DD) {
-      var CD, cD;
-      Bc(), Ic = null !== (CD = null === DD || void 0 === DD ? void 0 : DD.backend) && void 0 !== CD ? CD : null;
-      const ID = `, renderer param ${null!==(cD=(0,iD.n)("renderer"))&&void 0!==cD?cD:"none"}, faceCull ${"0"===ic.faceCull?"off (whole parts)":"on"}, adrenoProbe ${ic.adrenoProbe||"none"}`;
-      RD(`${(0,VC.e)(DD)}${null===DD?"":ID}`)
+    function jg(UU) {
+      var RU, gU;
+      Gg(), tg = null !== (RU = null === UU || void 0 === UU ? void 0 : UU.backend) && void 0 !== RU ? RU : null;
+      const tU = `, renderer param ${null!==(gU=(0,EU.j)("renderer"))&&void 0!==gU?gU:"none"}, faceCull ${"0"===Eg.faceCull?"off (whole parts)":"on"}, adrenoProbe ${Eg.adrenoProbe||"none"}`;
+      sU(`${(0,VR.e)(UU)}${null===UU?"":tU}`)
     }
 
-    function Mc() {
-      const DD = performance.now(),
-        CD = tc(Sc, AC, FC).then((CD => vc(`${Math.round((performance.now()-DD)/1e3)} s after playable${CD?"":", no terrain drawn yet"}`)));
-      (0, pD.d)(RD, (async () => {
-        await CD, await bc
+    function ug() {
+      const UU = performance.now(),
+        RU = Cg(cg, lR, OR).then((RU => eg(`${Math.round((performance.now()-UU)/1e3)} s after playable${RU?"":", no terrain drawn yet"}`)));
+      (0, pU.e)(sU, (async () => {
+        await RU, await Tg
       }))
     }
-    async function tc(DD, CD, cD) {
-      const pD = (0, ID.d)(cD).then((() => !1));
-      return await (0, ID.d)(CD), Promise.race([DD.then((() => !0)), pD])
+    async function Cg(UU, RU, gU) {
+      const pU = (0, tU.b)(gU).then((() => !1));
+      return await (0, tU.b)(RU), Promise.race([UU.then((() => !0)), pU])
     }
 
-    function Zc() {
+    function hg() {
       requestAnimationFrame((() => {
-        Qc++, Zc()
+        qg++, hg()
       }))
     }
 
-    function oc() {
-      var DD, CD, cD;
-      if (fc) return;
-      (fc = !0, RD(`renderer caps ${null!==(DD=ic.caps)&&void 0!==DD?DD:"(not noted)"}; terrain fetch ${null!==(CD=ic.fetch)&&void 0!==CD?CD:"(not noted)"}`), ic.adrenoProbe) && RD(`adrenoProbe ${ic.adrenoProbe} asked; in force (storage fetch only): ${null!==(cD=ic.probe)&&void 0!==cD?cD:"(not noted)"}`);
-      const ID = VD.context;
-      if (ID) {
-        for (const DD of function(DD) {
-            var CD;
-            const cD = [],
-              ID = DD.getExtension("WEBGL_debug_renderer_info"),
-              pD = ID ? DD.getParameter(ID.UNMASKED_VENDOR_WEBGL) : "(masked)",
-              iD = ID ? DD.getParameter(ID.UNMASKED_RENDERER_WEBGL) : "(masked)";
-            cD.push(`GL ${String(DD.getParameter(DD.VERSION))} | ${String(DD.getParameter(DD.SHADING_LANGUAGE_VERSION))} | ${String(DD.getParameter(DD.VENDOR))} / ${String(DD.getParameter(DD.RENDERER))}`), cD.push(`GL unmasked ${pD} / ${iD}`);
-            const fD = [
-              ["MAX_TEXTURE_SIZE", DD.MAX_TEXTURE_SIZE],
-              ["MAX_VERTEX_ATTRIBS", DD.MAX_VERTEX_ATTRIBS],
-              ["MAX_VERTEX_UNIFORM_VECTORS", DD.MAX_VERTEX_UNIFORM_VECTORS],
-              ["MAX_VERTEX_TEXTURE_IMAGE_UNITS", DD.MAX_VERTEX_TEXTURE_IMAGE_UNITS],
-              ["MAX_COMBINED_TEXTURE_IMAGE_UNITS", DD.MAX_COMBINED_TEXTURE_IMAGE_UNITS],
-              ["MAX_VARYING_VECTORS", DD.MAX_VARYING_VECTORS],
-              ["MAX_RENDERBUFFER_SIZE", DD.MAX_RENDERBUFFER_SIZE]
+    function Qg() {
+      var UU, RU, gU;
+      if (Pg) return;
+      (Pg = !0, sU(`renderer caps ${null!==(UU=Eg.caps)&&void 0!==UU?UU:"(not noted)"}; terrain fetch ${null!==(RU=Eg.fetch)&&void 0!==RU?RU:"(not noted)"}`), Eg.adrenoProbe) && sU(`adrenoProbe ${Eg.adrenoProbe} asked; in force (storage fetch only): ${null!==(gU=Eg.probe)&&void 0!==gU?gU:"(not noted)"}`);
+      const tU = VU.context;
+      if (tU) {
+        for (const UU of function(UU) {
+            var RU;
+            const gU = [],
+              tU = UU.getExtension("WEBGL_debug_renderer_info"),
+              pU = tU ? UU.getParameter(tU.UNMASKED_VENDOR_WEBGL) : "(masked)",
+              EU = tU ? UU.getParameter(tU.UNMASKED_RENDERER_WEBGL) : "(masked)";
+            gU.push(`GL ${String(UU.getParameter(UU.VERSION))} | ${String(UU.getParameter(UU.SHADING_LANGUAGE_VERSION))} | ${String(UU.getParameter(UU.VENDOR))} / ${String(UU.getParameter(UU.RENDERER))}`), gU.push(`GL unmasked ${pU} / ${EU}`);
+            const PU = [
+              ["MAX_TEXTURE_SIZE", UU.MAX_TEXTURE_SIZE],
+              ["MAX_VERTEX_ATTRIBS", UU.MAX_VERTEX_ATTRIBS],
+              ["MAX_VERTEX_UNIFORM_VECTORS", UU.MAX_VERTEX_UNIFORM_VECTORS],
+              ["MAX_VERTEX_TEXTURE_IMAGE_UNITS", UU.MAX_VERTEX_TEXTURE_IMAGE_UNITS],
+              ["MAX_COMBINED_TEXTURE_IMAGE_UNITS", UU.MAX_COMBINED_TEXTURE_IMAGE_UNITS],
+              ["MAX_VARYING_VECTORS", UU.MAX_VARYING_VECTORS],
+              ["MAX_RENDERBUFFER_SIZE", UU.MAX_RENDERBUFFER_SIZE]
             ];
-            "MAX_UNIFORM_BLOCK_SIZE" in DD && fD.push(["MAX_UNIFORM_BLOCK_SIZE", DD.MAX_UNIFORM_BLOCK_SIZE], ["MAX_VERTEX_UNIFORM_BLOCKS", DD.MAX_VERTEX_UNIFORM_BLOCKS], ["MAX_SAMPLES", DD.MAX_SAMPLES], ["MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS", DD.MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS]), cD.push(`GL limits ${fD.map((CD=>{let[cD,ID]=CD;return`${cD} ${String(DD.getParameter(ID))}`})).join(", ")}`);
-            const bD = (CD, cD) => {
-              const ID = DD.getShaderPrecisionFormat(CD, DD.HIGH_FLOAT),
-                pD = DD.getShaderPrecisionFormat(CD, DD.HIGH_INT);
-              return `${cD} highp float ${ID?`${ID.rangeMin}/${ID.rangeMax}/${ID.precision}`:"?"} int ${pD?`${pD.rangeMin}/${pD.rangeMax}/${pD.precision}`:"?"}`
+            "MAX_UNIFORM_BLOCK_SIZE" in UU && PU.push(["MAX_UNIFORM_BLOCK_SIZE", UU.MAX_UNIFORM_BLOCK_SIZE], ["MAX_VERTEX_UNIFORM_BLOCKS", UU.MAX_VERTEX_UNIFORM_BLOCKS], ["MAX_SAMPLES", UU.MAX_SAMPLES], ["MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS", UU.MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS]), gU.push(`GL limits ${PU.map((RU=>{let[gU,tU]=RU;return`${gU} ${String(UU.getParameter(tU))}`})).join(", ")}`);
+            const TU = (RU, gU) => {
+              const tU = UU.getShaderPrecisionFormat(RU, UU.HIGH_FLOAT),
+                pU = UU.getShaderPrecisionFormat(RU, UU.HIGH_INT);
+              return `${gU} highp float ${tU?`${tU.rangeMin}/${tU.rangeMax}/${tU.precision}`:"?"} int ${pU?`${pU.rangeMin}/${pU.rangeMax}/${pU.precision}`:"?"}`
             };
-            cD.push(`GL precision ${bD(DD.VERTEX_SHADER,"VS")}, ${bD(DD.FRAGMENT_SHADER,"FS")}`);
-            const QD = DD.getContextAttributes();
-            return cD.push(`GL context ${JSON.stringify(QD)} drawingBuffer ${DD.drawingBufferWidth}x${DD.drawingBufferHeight}${"drawingBufferFormat"in DD?` format 0x${Number(DD.drawingBufferFormat).toString(16)}`:""}${"drawingBufferColorSpace"in DD?` ${String(DD.drawingBufferColorSpace)}`:""}`), cD.push(`GL extensions ${(null!==(CD=DD.getSupportedExtensions())&&void 0!==CD?CD:[]).join(" ")}`), cD
-          }(ID)) RD(DD);
+            gU.push(`GL precision ${TU(UU.VERTEX_SHADER,"VS")}, ${TU(UU.FRAGMENT_SHADER,"FS")}`);
+            const qU = UU.getContextAttributes();
+            return gU.push(`GL context ${JSON.stringify(qU)} drawingBuffer ${UU.drawingBufferWidth}x${UU.drawingBufferHeight}${"drawingBufferFormat"in UU?` format 0x${Number(UU.drawingBufferFormat).toString(16)}`:""}${"drawingBufferColorSpace"in UU?` ${String(UU.drawingBufferColorSpace)}`:""}`), gU.push(`GL extensions ${(null!==(RU=UU.getSupportedExtensions())&&void 0!==RU?RU:[]).join(" ")}`), gU
+          }(tU)) sU(UU);
         ! function() {
-          if (!VD.context) return;
-          let DD = 0,
-            CD = 0;
-          for (const [cD, ID] of JD) !ID.gl.isContextLost() && ID.gl.isProgram(cD) && (CD++, xC(ID.gl, cD, ID), null !== ID.terrain && DD++);
-          RD(`programs: ${CD} live of ${JD.length} linked, ${DD} packed terrain; CPU page copies ${Math.round(VD.shadowBytes/1048576)} MiB (${VD.uncopied} over budget)`)
+          if (!VU.context) return;
+          let UU = 0,
+            RU = 0;
+          for (const [gU, tU] of aU) !tU.gl.isContextLost() && tU.gl.isProgram(gU) && (RU++, oR(tU.gl, gU, tU), null !== tU.terrain && UU++);
+          sU(`programs: ${RU} live of ${aU.length} linked, ${UU} packed terrain; CPU page copies ${Math.round(VU.shadowBytes/1048576)} MiB (${VU.uncopied} over budget)`)
         }()
       }
     }
 
-    function vc(DD) {
-      return bc ??= async function(DD) {
-        oc(), "webgpu" === Ic ? (Nc(), "1" === ic.slotCheck && RD("slot check: the last request is still unanswered, so the next answer reads the slots as they were then"), ic.slotCheck = "1", await
-          function(DD) {
-            if (null !== dC) return Promise.resolve();
-            const CD = [];
-            return dC = CD, new Promise((cD => {
+    function eg(UU) {
+      return Tg ??= async function(UU) {
+        Qg(), "webgpu" === tg ? (Wg(), "1" === Eg.slotCheck && sU("slot check: the last request is still unanswered, so the next answer reads the slots as they were then"), Eg.slotCheck = "1", await
+          function(UU) {
+            if (null !== kR) return Promise.resolve();
+            const RU = [];
+            return kR = RU, new Promise((gU => {
               setTimeout((() => {
-                dC = null, RD(`WebGPU draw ranges (${DD}): ${CD.length} terrain draws recorded in a second (first ${wC}; bundles replay without new ones)`);
-                for (const DD of CD) RD(DD);
-                cD()
+                kR = null, sU(`WebGPU draw ranges (${UU}): ${RU.length} terrain draws recorded in a second (first ${KR}; bundles replay without new ones)`);
+                for (const UU of RU) sU(UU);
+                gU()
               }), 1e3)
             }))
-          }(DD), await async function() {
-            for (let DD = 0;
-              "1" === ic.slotCheck && DD < Cc; DD += cc) await (0, ID.d)(cc);
-            if ("1" === ic.slotCheck) return void RD(`slot check: no answer in ${Cc} ms (only the storage fetch has one; a later answer logs on its own)`);
-            Nc()
-          }()) : await fC(DD);
-        RD(`check (${DD}) done: bloxdDebug.save() downloads it all`)
-      }(DD).catch((CD => {
-        RD(`check (${DD}) failed: ${String(CD)}`)
+          }(UU), await async function() {
+            for (let UU = 0;
+              "1" === Eg.slotCheck && UU < Rg; UU += gg) await (0, tU.b)(gg);
+            if ("1" === Eg.slotCheck) return void sU(`slot check: no answer in ${Rg} ms (only the storage fetch has one; a later answer logs on its own)`);
+            Wg()
+          }()) : await PR(UU);
+        sU(`check (${UU}) done: bloxdDebug.save() downloads it all`)
+      }(UU).catch((RU => {
+        sU(`check (${UU}) failed: ${String(RU)}`)
       })).finally((() => {
-        bc = null
-      })), bc
+        Tg = null
+      })), Tg
     }
 
-    function Nc() {
-      void 0 !== ic.slotCheck && "1" !== ic.slotCheck && (RD(ic.slotCheck), delete ic.slotCheck)
+    function Wg() {
+      void 0 !== Eg.slotCheck && "1" !== Eg.slotCheck && (sU(Eg.slotCheck), delete Eg.slotCheck)
     }
 
-    function gc() {
-      const DD = DD => Qc ? (DD / Qc).toFixed(1) : "0",
-        CD = function() {
-          const DD = YC;
-          return YC = {
+    function fg() {
+      const UU = UU => qg ? (UU / qg).toFixed(1) : "0",
+        RU = function() {
+          const UU = FR;
+          return FR = {
             draws: 0,
             faces: 0
-          }, DD
+          }, UU
         }(),
-        cD = function() {
-          const DD = vC;
-          return vC = {
+        gU = function() {
+          const UU = eR;
+          return eR = {
             inst: {
               draws: 0,
               faces: 0
@@ -1406,30 +1406,30 @@ export const modules = {
               draws: 0,
               faces: 0
             }
-          }, DD
+          }, UU
         }(),
-        ID = function() {
-          const DD = NC;
-          return NC = {
+        tU = function() {
+          const UU = WR;
+          return WR = {
             buffer: 0,
             texture: 0
-          }, DD
+          }, UU
         }();
-      Nc(), ("webgpu" === Ic ? CD.draws : cD.inst.draws + cD.tex.draws) > 0 && wc();
-      const pD = "webgpu" === Ic ? [`terrain ${DD(CD.draws)} draws ${DD(CD.faces)} faces a frame (bundles' replays uncounted)`] : ["inst", "tex", "other"].filter((DD => cD[DD].draws > 0)).map((CD => `${CD} ${DD(cD[CD].draws)} draws ${DD(cD[CD].faces)} faces a frame`));
-      RD(`${Qc} frames: ${pD.join(", ")||"no draws"}; uploaded ${Math.round(ID.buffer/1024)} KiB to buffers, ${Math.round(ID.texture/1024)} KiB to data textures`), Qc = 0
+      Wg(), ("webgpu" === tg ? RU.draws : gU.inst.draws + gU.tex.draws) > 0 && Kg();
+      const pU = "webgpu" === tg ? [`terrain ${UU(RU.draws)} draws ${UU(RU.faces)} faces a frame (bundles' replays uncounted)`] : ["inst", "tex", "other"].filter((UU => gU[UU].draws > 0)).map((RU => `${RU} ${UU(gU[RU].draws)} draws ${UU(gU[RU].faces)} faces a frame`));
+      sU(`${qg} frames: ${pU.join(", ")||"no draws"}; uploaded ${Math.round(tU.buffer/1024)} KiB to buffers, ${Math.round(tU.texture/1024)} KiB to data textures`), qg = 0
     }
   },
-  4498: (DD, CD, cD) => {
-    function ID(DD) {
-      if (null === DD) return "backend: none picked (no renderer build)";
-      const CD = DD.adapter ? `${DD.adapter.vendor}/${DD.adapter.architecture}` : "none";
-      return `backend ${DD.backend}: reason ${DD.reason}, source ${DD.source}, adapter ${CD}`
+  4356: (UU, RU, gU) => {
+    function tU(UU) {
+      if (null === UU) return "backend: none picked (no renderer build)";
+      const RU = UU.adapter ? `${UU.adapter.vendor}/${UU.adapter.architecture}` : "none";
+      return `backend ${UU.backend}: reason ${UU.reason}, source ${UU.source}, adapter ${RU}`
     }
-    cD.d(CD, {
-      e: () => ID
+    gU.d(RU, {
+      e: () => tU
     })
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

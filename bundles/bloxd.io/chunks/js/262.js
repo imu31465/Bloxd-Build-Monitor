@@ -1,255 +1,255 @@
 export const id = 262;
 export const ids = [262];
 export const modules = {
-  40083: (DD, CD, cD) => {
-    function ID(DD, CD, cD) {
-      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(DD, CD).getContext("2d", cD);
-      const ID = document.createElement("canvas");
-      return ID.width = DD, ID.height = CD, ID.getContext("2d", cD)
+  40376: (UU, RU, gU) => {
+    function tU(UU, RU, gU) {
+      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(UU, RU).getContext("2d", gU);
+      const tU = document.createElement("canvas");
+      return tU.width = UU, tU.height = RU, tU.getContext("2d", gU)
     }
 
-    function pD(DD, CD) {
-      return DD.getContext("2d", CD)
+    function pU(UU, RU) {
+      return UU.getContext("2d", RU)
     }
-    cD.d(CD, {
-      e: () => pD,
-      h: () => ID
+    gU.d(RU, {
+      e: () => pU,
+      g: () => tU
     })
   },
-  40003: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => gD,
-      e: () => tD,
-      g: () => WD,
-      k: () => xD,
-      o: () => JD,
-      p: () => KD,
-      s: () => ND,
-      w: () => oD,
-      y: () => vD,
-      A: () => UD,
-      B: () => RD,
-      C: () => nD,
-      G: () => lD,
-      H: () => YD,
-      I: () => aD,
-      M: () => zD
+  40295: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => fU,
+      f: () => CU,
+      j: () => iU,
+      l: () => oU,
+      o: () => aU,
+      r: () => YU,
+      s: () => WU,
+      v: () => QU,
+      w: () => eU,
+      y: () => bU,
+      C: () => sU,
+      F: () => IU,
+      I: () => vU,
+      K: () => FU,
+      M: () => BU,
+      N: () => rU
     });
-    var ID = cD(4581),
-      pD = cD(39730),
-      iD = (cD(39875), cD(11));
-    class fD {
-      constructor(DD, CD) {
-        this.memory = DD, this.access = CD, this.cursor = 0, this.dropped = 0, this.buffer = null, this.ptr = 0, this.LB = 0, this.u32 = new iD.n(0), this.f32 = new iD.h(0), this.u8 = new iD.e(0), this.dataView = new iD.j(new ArrayBuffer(0)), this.refresh()
+    var tU = gU(4449),
+      pU = gU(40022),
+      EU = (gU(40186), gU(10));
+    class PU {
+      constructor(UU, RU) {
+        this.memory = UU, this.access = RU, this.cursor = 0, this.dropped = 0, this.buffer = null, this.ptr = 0, this.hG = 0, this.u32 = new EU.l(0), this.f32 = new EU.g(0), this.u8 = new EU.d(0), this.dataView = new EU.i(new ArrayBuffer(0)), this.refresh()
       }
       refresh() {
-        this.ptr = this.access.ptr(), this.LB = this.access.LB(), this.buffer = (0, iD.I)(this.memory()), this.u32 = new iD.n(this.buffer, this.ptr, this.LB >>> 2), this.f32 = new iD.h(this.buffer, this.ptr, this.LB >>> 2), this.u8 = new iD.e(this.buffer, this.ptr, this.LB), this.dataView = new iD.j(this.buffer, this.ptr, this.LB)
+        this.ptr = this.access.ptr(), this.hG = this.access.hG(), this.buffer = (0, EU.G)(this.memory()), this.u32 = new EU.l(this.buffer, this.ptr, this.hG >>> 2), this.f32 = new EU.g(this.buffer, this.ptr, this.hG >>> 2), this.u8 = new EU.d(this.buffer, this.ptr, this.hG), this.dataView = new EU.i(this.buffer, this.ptr, this.hG)
       }
       ensureViews() {
-        (0, iD.I)(this.memory()) !== this.buffer && this.refresh()
+        (0, EU.G)(this.memory()) !== this.buffer && this.refresh()
       }
       get view() {
         return this.ensureViews(), this.dataView
       }
-      room(DD) {
-        return !!this.fits(DD) || (this.dropped++, !1)
+      room(UU) {
+        return !!this.fits(UU) || (this.dropped++, !1)
       }
-      fits(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.cursor;
+      fits(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.cursor;
         this.ensureViews();
-        const cD = CD + DD;
-        return cD <= this.LB || cD <= ID.Dc && 0 !== this.access.reserve(cD) && (this.refresh(), cD <= this.LB)
+        const gU = RU + UU;
+        return gU <= this.hG || gU <= tU.Jc && 0 !== this.access.reserve(gU) && (this.refresh(), gU <= this.hG)
       }
-      consume(DD) {
-        const CD = this.cursor - DD;
-        CD > 0 && DD > 0 && (this.ensureViews(), this.u8.copyWithin(0, DD, this.cursor)), this.cursor = CD > 0 ? CD : 0
+      consume(UU) {
+        const RU = this.cursor - UU;
+        RU > 0 && UU > 0 && (this.ensureViews(), this.u8.copyWithin(0, UU, this.cursor)), this.cursor = RU > 0 ? RU : 0
       }
-      writeRecord(DD, CD, cD, pD, iD) {
-        if (!this.room(ID.pb)) return !1;
-        const fD = this.cursor >>> 2;
-        return this.u32[fD] = 65535 & DD | (65535 & CD) << 16, this.f32[fD + 1] = cD, this.f32[fD + 2] = pD, this.u32[fD + 3] = iD >>> 0, this.cursor += ID.pb, !0
+      writeRecord(UU, RU, gU, pU, EU) {
+        if (!this.room(tU.sb)) return !1;
+        const PU = this.cursor >>> 2;
+        return this.u32[PU] = 65535 & UU | (65535 & RU) << 16, this.f32[PU + 1] = gU, this.f32[PU + 2] = pU, this.u32[PU + 3] = EU >>> 0, this.cursor += tU.sb, !0
       }
-      writeOptions(DD, CD) {
-        const cD = CD.byteLength,
-          pD = ID.pb + (0, ID.je)(cD);
-        if (!this.fits(pD)) return !1;
-        const iD = this.cursor,
-          fD = iD >>> 2;
-        this.u32[fD] = ID.tb.Options, this.u32[fD + 1] = cD, this.u32[fD + 2] = 0, this.u32[fD + 3] = DD >>> 0;
-        const bD = iD + ID.pb;
-        return this.u8.set(CD, bD), this.u8.fill(0, bD + cD, iD + pD), this.cursor += pD, !0
+      writeOptions(UU, RU) {
+        const gU = RU.byteLength,
+          pU = tU.sb + (0, tU.te)(gU);
+        if (!this.fits(pU)) return !1;
+        const EU = this.cursor,
+          PU = EU >>> 2;
+        this.u32[PU] = tU.vb.Options, this.u32[PU + 1] = gU, this.u32[PU + 2] = 0, this.u32[PU + 3] = UU >>> 0;
+        const TU = EU + tU.sb;
+        return this.u8.set(RU, TU), this.u8.fill(0, TU + gU, EU + pU), this.cursor += pU, !0
       }
-      writeWorkerRecord(DD, CD, cD, pD, iD, fD) {
-        const bD = fD.byteLength,
-          QD = ID.Bd + (0, ID.je)(bD);
-        if (bD > ID.yd) return this.dropped++, !1;
-        if (!this.room(QD)) return !1;
-        const wD = this.cursor,
-          SD = wD >>> 2;
-        this.u32[SD] = DD >>> 0, this.u32[SD + 1] = 65535 & CD | (65535 & cD) << 16, this.u32[SD + 2] = pD >>> 0, this.u32[SD + 3] = iD >>> 0, this.u32[SD + 4] = bD;
-        const BD = wD + ID.Bd;
-        return this.u8.set(fD, BD), this.u8.fill(0, BD + bD, wD + QD), this.cursor += QD, !0
+      writeWorkerRecord(UU, RU, gU, pU, EU, PU) {
+        const TU = PU.byteLength,
+          qU = tU.Od + (0, tU.te)(TU);
+        if (TU > tU.Ld) return this.dropped++, !1;
+        if (!this.room(qU)) return !1;
+        const KU = this.cursor,
+          cU = KU >>> 2;
+        this.u32[cU] = UU >>> 0, this.u32[cU + 1] = 65535 & RU | (65535 & gU) << 16, this.u32[cU + 2] = pU >>> 0, this.u32[cU + 3] = EU >>> 0, this.u32[cU + 4] = TU;
+        const GU = KU + tU.Od;
+        return this.u8.set(PU, GU), this.u8.fill(0, GU + TU, KU + qU), this.cursor += qU, !0
       }
       written() {
         return this.ensureViews(), this.u8.subarray(0, this.cursor)
       }
-      writeFrame(DD, CD) {
-        return this.writeNet(ID.Ub.Frame, DD, CD)
+      writeFrame(UU, RU) {
+        return this.writeNet(tU.Wb.Frame, UU, RU)
       }
-      writeOpen(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.writeNet(ID.Ub.Open, DD, QD(CD))
+      writeOpen(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.writeNet(tU.Wb.Open, UU, qU(RU))
       }
-      writeClose(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.writeNet(ID.Ub.Close, DD, QD(CD))
+      writeClose(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.writeNet(tU.Wb.Close, UU, qU(RU))
       }
-      writeNet(DD, CD, cD) {
-        const pD = cD.byteLength,
-          iD = ID.Rb + (0, ID.je)(pD);
-        if (pD > ID.Lb) return this.dropped++, !1;
-        if (!this.room(iD)) return !1;
-        const fD = this.cursor;
-        this.u32[fD >>> 2] = pD, this.u32[1 + (fD >>> 2)] = (0, ID.he)(DD, CD);
-        const bD = fD + ID.Rb;
-        return this.u8.set(cD, bD), this.u8.fill(0, bD + pD, fD + iD), this.cursor += iD, !0
+      writeNet(UU, RU, gU) {
+        const pU = gU.byteLength,
+          EU = tU.Tb + (0, tU.te)(pU);
+        if (pU > tU.Ob) return this.dropped++, !1;
+        if (!this.room(EU)) return !1;
+        const PU = this.cursor;
+        this.u32[PU >>> 2] = pU, this.u32[1 + (PU >>> 2)] = (0, tU.me)(UU, RU);
+        const TU = PU + tU.Tb;
+        return this.u8.set(gU, TU), this.u8.fill(0, TU + pU, PU + EU), this.cursor += EU, !0
       }
-      VM(DD, CD, cD) {
-        const pD = ID.w + (0, ID.je)(cD);
-        if (!this.room(pD)) return -1;
-        const iD = this.cursor;
-        this.u32[iD >>> 2] = 65535 & DD | (65535 & CD) << 16, this.u32[1 + (iD >>> 2)] = cD;
-        const fD = iD + ID.w;
-        return this.u8.fill(0, fD, iD + pD), this.cursor += pD, fD
+      pu(UU, RU, gU) {
+        const pU = tU.p + (0, tU.te)(gU);
+        if (!this.room(pU)) return -1;
+        const EU = this.cursor;
+        this.u32[EU >>> 2] = 65535 & UU | (65535 & RU) << 16, this.u32[1 + (EU >>> 2)] = gU;
+        const PU = EU + tU.p;
+        return this.u8.fill(0, PU, EU + pU), this.cursor += pU, PU
       }
-      growForCmd(DD) {
-        return this.fits(ID.w + (0, ID.je)(DD), 0)
+      growForCmd(UU) {
+        return this.fits(tU.p + (0, tU.te)(UU), 0)
       }
-      writeCmd(DD, CD, cD) {
-        const ID = this.VM(DD, CD, cD.byteLength);
-        return !(ID < 0) && (this.u8.set(cD, ID), !0)
+      writeCmd(UU, RU, gU) {
+        const tU = this.pu(UU, RU, gU.byteLength);
+        return !(tU < 0) && (this.u8.set(gU, tU), !0)
       }
-      copyWritten(DD, CD) {
-        return this.ensureViews(), this.u8.slice(DD, DD + CD)
+      copyWritten(UU, RU) {
+        return this.ensureViews(), this.u8.slice(UU, UU + RU)
       }
     }
-    const bD = new iD.e(0);
+    const TU = new EU.d(0);
 
-    function QD(DD) {
-      if (0 === DD) return bD;
-      const CD = new iD.e(ID.Nb);
-      for (let cD = 0; cD < ID.Nb; cD++) CD[cD] = DD >>> 8 * cD & 255;
-      return CD
+    function qU(UU) {
+      if (0 === UU) return TU;
+      const RU = new EU.d(tU.Pb);
+      for (let gU = 0; gU < tU.Pb; gU++) RU[gU] = UU >>> 8 * gU & 255;
+      return RU
     }
-    class wD {
-      constructor(DD, CD) {
-        this.input = void 0, this.net = void 0, this.worker = void 0, this.cmd = void 0, this.input = new fD(CD, {
-          ptr: () => DD.rB(),
-          LB: () => DD.fiD(),
-          reserve: CD => DD.NiD(CD)
-        }), this.net = new fD(CD, {
-          ptr: () => DD.ZiD(),
-          LB: () => DD.tiD(),
-          reserve: CD => DD.giD(CD)
-        }), this.worker = new fD(CD, {
-          ptr: () => DD.YiD(),
-          LB: () => DD.diD(),
-          reserve: CD => DD.miD(CD)
-        }), this.cmd = new fD(CD, {
-          ptr: () => DD.rpD(),
-          LB: () => DD.upD(),
-          reserve: CD => DD.hpD(CD)
+    class KU {
+      constructor(UU, RU) {
+        this.input = void 0, this.net = void 0, this.worker = void 0, this.cmd = void 0, this.input = new PU(RU, {
+          ptr: () => UU.ZG(),
+          hG: () => UU.cEU(),
+          reserve: RU => UU.mEU(RU)
+        }), this.net = new PU(RU, {
+          ptr: () => UU.WEU(),
+          hG: () => UU.eEU(),
+          reserve: RU => UU.IEU(RU)
+        }), this.worker = new PU(RU, {
+          ptr: () => UU.iEU(),
+          hG: () => UU.FEU(),
+          reserve: RU => UU.JEU(RU)
+        }), this.cmd = new PU(RU, {
+          ptr: () => UU.REU(),
+          hG: () => UU.OpU(),
+          reserve: RU => UU.UEU(RU)
         })
       }
-      reset(DD) {
-        this.input.cursor = 0, this.worker.cursor = 0, this.cmd.consume(DD)
+      reset(UU) {
+        this.input.cursor = 0, this.worker.cursor = 0, this.cmd.consume(UU)
       }
     }
-    var SD = cD(39872),
-      BD = cD(2343),
-      yD = cD(4575),
-      MD = cD(40012);
-    const tD = "coreFrame",
-      ZD = "fatalStatus",
-      oD = "otherCall",
-      vD = "coreRings",
-      ND = "netIn",
-      gD = "abi",
-      XD = "netOut",
-      mD = "workerOut",
-      nD = "worldgenHost",
-      OD = "eventWalker",
-      PD = "netEvent",
-      HD = "envEvent",
-      UD = "sharedTables",
-      xD = "inputAction",
-      qD = new Set([OD, PD, HD, xD, UD]),
-      JD = "wasmMemory",
-      KD = "meshHost";
+    var cU = gU(35889),
+      GU = gU(2241),
+      jU = gU(4446),
+      uU = gU(40300);
+    const CU = "coreFrame",
+      hU = "fatalStatus",
+      QU = "otherCall",
+      eU = "coreRings",
+      WU = "netIn",
+      fU = "abi",
+      xU = "netOut",
+      mU = "workerOut",
+      IU = "worldgenHost",
+      JU = "eventWalker",
+      wU = "netEvent",
+      nU = "envEvent",
+      bU = "sharedTables",
+      oU = "inputAction",
+      ZU = new Set([JU, wU, nU, oU, bU]),
+      aU = "wasmMemory",
+      YU = "meshHost";
 
-    function aD(DD, CD) {
-      DD.forEachWorkerOut(((cD, pD, iD) => {
-        if ((0, ID.Yd)(cD)) try {
-          var fD;
-          null === (fD = CD.worldgen) || void 0 === fD || fD.take(cD, iD)
-        } catch (QD) {
-          DD.crash(nD, QD)
+    function BU(UU, RU) {
+      UU.forEachWorkerOut(((gU, pU, EU) => {
+        if ((0, tU.fe)(gU)) try {
+          var PU;
+          null === (PU = RU.worldgen) || void 0 === PU || PU.take(gU, EU)
+        } catch (qU) {
+          UU.crash(IU, qU)
         } else try {
-          var bD;
-          null === (bD = CD.mesh) || void 0 === bD || bD.take(cD, pD, iD)
-        } catch (QD) {
-          DD.crash(KD, QD)
+          var TU;
+          null === (TU = RU.mesh) || void 0 === TU || TU.take(gU, pU, EU)
+        } catch (qU) {
+          UU.crash(YU, qU)
         }
       }))
     }
-    const VD = 1048576;
+    const VU = 1048576;
 
-    function zD(DD, CD) {
-      let cD = !1;
-      const ID = () => {
-        cD = !1, CD()
+    function rU(UU, RU) {
+      let gU = !1;
+      const tU = () => {
+        gU = !1, RU()
       };
       return () => {
-        !cD && DD.cursor >= VD && (cD = !0, queueMicrotask(ID))
+        !gU && UU.cursor >= VU && (gU = !0, queueMicrotask(tU))
       }
     }
-    const jD = new Set([ZD, oD, nD, KD]);
+    const XU = new Set([hU, QU, IU, YU]);
 
-    function lD(DD) {
-      return qD.has(DD.site) ? DD.error instanceof WebAssembly.RuntimeError || (0, pD.n)(DD.error) : !jD.has(DD.site) && DD.error instanceof Error
+    function vU(UU) {
+      return ZU.has(UU.site) ? UU.error instanceof WebAssembly.RuntimeError || (0, pU.k)(UU.error) : !XU.has(UU.site) && UU.error instanceof Error
     }
-    const LD = "events",
-      TD = [],
-      GD = "debugLog",
-      RD = "terrainTextures",
-      kD = "sunShadowTextures",
-      dD = new TextDecoder;
+    const dU = "events",
+      HU = [],
+      SU = "debugLog",
+      sU = "terrainTextures",
+      yU = "sunShadowTextures",
+      kU = new TextDecoder;
 
-    function YD(DD, CD) {
+    function FU(UU, RU) {
       const {
-        site: cD,
-        error: pD,
-        header: iD
-      } = DD, fD = iD ? (0, ID.Sd)(iD.lastError) : "noFrame", bD = `CORE-${cD===ZD?fD:cD}`, QD = null === pD || void 0 === pD ? "" : ` ${(0,SD.h)(pD)}`, wD = {
-        site: cD,
-        wasmBuild: CD.wasm,
-        clientVersion: CD.client
+        site: gU,
+        error: pU,
+        header: EU
+      } = UU, PU = EU ? (0, tU.de)(EU.lastError) : "noFrame", TU = `CORE-${gU===hU?PU:gU}`, qU = null === pU || void 0 === pU ? "" : ` ${(0,cU.j)(pU)}`, KU = {
+        site: gU,
+        wasmBuild: RU.wasm,
+        clientVersion: RU.client
       };
-      return iD && (wD.status = String(iD.status), wD.lastError = fD, wD.lastErrorCode = String(iD.lastError), wD.lastErrorDetail = String(iD.lastErrorDetail), wD.errorCount = String(iD.errorCount), wD.frameIndex = String(iD.frameIndex), wD.tickIndex = String(iD.tickIndex)), {
-        code: bD,
-        message: `core ${cD}, last error ${fD};${QD}`,
-        details: wD
+      return EU && (KU.status = String(EU.status), KU.lastError = PU, KU.lastErrorCode = String(EU.lastError), KU.lastErrorDetail = String(EU.lastErrorDetail), KU.errorCount = String(EU.errorCount), KU.frameIndex = String(EU.frameIndex), KU.tickIndex = String(EU.tickIndex)), {
+        code: TU,
+        message: `core ${gU}, last error ${PU};${qU}`,
+        details: KU
       }
     }
-    class WD {
-      constructor(DD, CD, cD) {
-        this.core = DD, this.memory = CD, this.handlers = cD, this.rings = void 0, this.lastHeader = null, this.lastFrameKind = "none", this.stopped = !1, this.netKept = 0, this.keptFrames = 0, this.headerBuffer = null, this.header = new Uint32Array(0), this.unsentUiPrefs = null, this.eventWalker = null, this.netOffsets = [], this.frameEvents = {
+    class iU {
+      constructor(UU, RU, gU) {
+        this.core = UU, this.memory = RU, this.handlers = gU, this.rings = void 0, this.lastHeader = null, this.lastFrameKind = "none", this.stopped = !1, this.netKept = 0, this.keptFrames = 0, this.headerBuffer = null, this.header = new Uint32Array(0), this.unsentUiPrefs = null, this.eventWalker = null, this.netOffsets = [], this.frameEvents = {
           ptr: 0,
           len: 0,
-          net: TD,
+          net: HU,
           netOffsets: this.netOffsets,
           kind: "none"
-        }, this.unsentEnvPrefs = null, this.unsentLookPrefs = null, this.envEvents = [], this.graceEvents = [], this.unsentOptions = [], this.optionsDropped = 0, this.drawsHeld = !1, this.gameHost = null, this.rings = new wD(DD, CD)
+        }, this.unsentEnvPrefs = null, this.unsentLookPrefs = null, this.envEvents = [], this.graceEvents = [], this.unsentOptions = [], this.optionsDropped = 0, this.drawsHeld = !1, this.gameHost = null, this.rings = new KU(UU, RU)
       }
       get netKeptFrames() {
         return this.keptFrames
@@ -260,448 +260,448 @@ export const modules = {
       hasPendingCommands() {
         return this.rings.cmd.cursor > 0
       }
-      framePaces(DD) {
+      framePaces(UU) {
         if (this.stopped || this.drawsHeld) return !1;
         try {
-          return this.core.IiD(DD)
-        } catch (CD) {
-          return this.crash(tD, CD), !1
+          return this.core.TEU(UU)
+        } catch (RU) {
+          return this.crash(CU, RU), !1
         }
       }
       get isStopped() {
         return this.stopped
       }
-      frame(DD, CD) {
-        var cD;
-        let iD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      frame(UU, RU) {
+        var gU;
+        let EU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         if (this.stopped) return !1;
         if (!this.writePendingInput()) return !1;
         const {
-          input: fD,
-          net: bD,
-          worker: QD,
-          cmd: wD
-        } = this.rings, SD = bD.cursor, BD = CD && !this.drawsHeld;
-        let oD = ID.M.Fatal;
-        const vD = wD.cursor;
-        let gD = null;
+          input: PU,
+          net: TU,
+          worker: qU,
+          cmd: KU
+        } = this.rings, cU = TU.cursor, GU = RU && !this.drawsHeld;
+        let QU = tU.P.Fatal;
+        const eU = KU.cursor;
+        let fU = null;
         try {
-          const CD = (BD ? ID.ab.Draws : 0) | (iD ? ID.ab.NetAll : 0);
-          oD = (0, MD.g)((() => this.core.frame(DD, fD.cursor, bD.cursor, QD.cursor, CD, vD)))
-        } catch (jD) {
-          gD = {
-            error: jD
+          const RU = (GU ? tU.cb.Draws : 0) | (EU ? tU.cb.NetAll : 0);
+          QU = (0, uU.d)((() => this.core.frame(UU, PU.cursor, TU.cursor, qU.cursor, RU, eU)))
+        } catch (XU) {
+          fU = {
+            error: XU
           }
         }
-        const XD = null === (cD = this.gameHost) || void 0 === cD ? void 0 : cD.takeFault();
-        this.rings.reset(this.stopped || null !== gD || void 0 !== XD ? wD.cursor : vD);
-        const mD = null === gD && void 0 === XD ? this.headerView() : null,
-          nD = null === mD ? null : (0, ID.le)(mD);
-        null !== nD && (this.lastHeader = nD);
-        const HD = null !== nD && oD !== ID.M.Fatal,
-          UD = HD && null !== mD ? mD[ID.hb.NetInKept] : 0,
-          xD = HD && UD <= SD && UD % 4 === 0 ? UD : null;
-        var qD, JD;
-        null !== nD && null !== xD && oD === ID.M.Errors && (null === (qD = (JD = this.handlers).onErrors) || void 0 === qD || qD.call(JD, nD));
-        const KD = null === xD ? TD : this.readEvents(SD);
-        if (bD.consume(SD - (null !== xD && void 0 !== xD ? xD : 0)), this.netKept = null !== xD && void 0 !== xD ? xD : 0, this.keptFrames = this.netKept > 0 ? this.keptFrames + 1 : 0, null !== gD) return this.crash(tD, void 0 === XD || XD instanceof pD.e ? gD.error : XD), !1;
-        if (void 0 !== XD || null === nD) return this.crashOn(tD, XD), !1;
-        const aD = this.headerView()[ID.hb.FrameDraw];
-        if (this.lastFrameKind = (0, yD.c)(BD, aD), oD === ID.M.Fatal) return this.crash(ZD, null), !1;
-        if (null === xD) return this.crash(ND, `the core kept ${UD} of ${SD} net-in bytes`), !1;
+        const xU = null === (gU = this.gameHost) || void 0 === gU ? void 0 : gU.takeFault();
+        this.rings.reset(this.stopped || null !== fU || void 0 !== xU ? KU.cursor : eU);
+        const mU = null === fU && void 0 === xU ? this.headerView() : null,
+          IU = null === mU ? null : (0, tU.we)(mU);
+        null !== IU && (this.lastHeader = IU);
+        const nU = null !== IU && QU !== tU.P.Fatal,
+          bU = nU && null !== mU ? mU[tU.jb.NetInKept] : 0,
+          oU = nU && bU <= cU && bU % 4 === 0 ? bU : null;
+        var ZU, aU;
+        null !== IU && null !== oU && QU === tU.P.Errors && (null === (ZU = (aU = this.handlers).onErrors) || void 0 === ZU || ZU.call(aU, IU));
+        const YU = null === oU ? HU : this.readEvents(cU);
+        if (TU.consume(cU - (null !== oU && void 0 !== oU ? oU : 0)), this.netKept = null !== oU && void 0 !== oU ? oU : 0, this.keptFrames = this.netKept > 0 ? this.keptFrames + 1 : 0, null !== fU) return this.crash(CU, void 0 === xU || xU instanceof pU.d ? fU.error : xU), !1;
+        if (void 0 !== xU || null === IU) return this.crashOn(CU, xU), !1;
+        const BU = this.headerView()[tU.jb.FrameDraw];
+        if (this.lastFrameKind = (0, jU.f)(GU, BU), QU === tU.P.Fatal) return this.crash(hU, null), !1;
+        if (null === oU) return this.crash(WU, `the core kept ${bU} of ${cU} net-in bytes`), !1;
         if (this.eventWalker) {
           if (this.stopped) return !1;
-          const DD = this.frameEvents,
-            CD = this.headerView();
-          DD.ptr = CD[ID.hb.EventsPtr], DD.len = CD[ID.hb.EventsLen], DD.net = KD, DD.kind = this.lastFrameKind;
+          const UU = this.frameEvents,
+            RU = this.headerView();
+          UU.ptr = RU[tU.jb.EventsPtr], UU.len = RU[tU.jb.EventsLen], UU.net = YU, UU.kind = this.lastFrameKind;
           try {
-            this.eventWalker(DD)
-          } catch (jD) {
-            return this.crashOn(OD, jD), !1
+            this.eventWalker(UU)
+          } catch (XU) {
+            return this.crashOn(JU, XU), !1
           }
           return this.handEnvEvents()
         }
-        for (const ID of KD) {
+        for (const tU of YU) {
           if (this.stopped) return !1;
           try {
-            var VD, zD;
-            null === (VD = (zD = this.handlers).onNetEvent) || void 0 === VD || VD.call(zD, ID)
-          } catch (jD) {
-            return this.crashOn(PD, jD), !1
+            var VU, rU;
+            null === (VU = (rU = this.handlers).onNetEvent) || void 0 === VU || VU.call(rU, tU)
+          } catch (XU) {
+            return this.crashOn(wU, XU), !1
           }
         }
         return this.handEnvEvents()
       }
       handEnvEvents() {
-        for (const iD of this.graceEvents) {
+        for (const EU of this.graceEvents) {
           if (this.stopped) return !1;
           try {
-            var DD, CD;
-            null === (DD = (CD = this.handlers).onReconnectGrace) || void 0 === DD || DD.call(CD, iD)
-          } catch (pD) {
-            return this.crashOn(PD, pD), !1
+            var UU, RU;
+            null === (UU = (RU = this.handlers).onReconnectGrace) || void 0 === UU || UU.call(RU, EU)
+          } catch (pU) {
+            return this.crashOn(wU, pU), !1
           }
         }
-        for (const iD of this.envEvents) {
+        for (const EU of this.envEvents) {
           if (this.stopped) return !1;
           try {
-            var cD, ID;
-            null === (cD = (ID = this.handlers).onEnvEvent) || void 0 === cD || cD.call(ID, iD)
-          } catch (pD) {
-            return this.crashOn(HD, pD), !1
+            var gU, tU;
+            null === (gU = (tU = this.handlers).onEnvEvent) || void 0 === gU || gU.call(tU, EU)
+          } catch (pU) {
+            return this.crashOn(nU, pU), !1
           }
         }
         return !this.stopped
       }
-      setEventWalker(DD) {
-        this.eventWalker = DD
+      setEventWalker(UU) {
+        this.eventWalker = UU
       }
       writePendingInput() {
         if (this.stopped) return !1;
         const {
-          input: DD
+          input: UU
         } = this.rings;
         try {
-          const CD = this.unsentUiPrefs;
-          CD && DD.writeRecord(ID.tb.UiPrefs, 0, CD.nametagCutDistance, 0, (0, ID.oe)(CD)) && (this.unsentUiPrefs = null);
-          const cD = this.unsentEnvPrefs;
-          cD && DD.writeRecord(ID.tb.EnvPrefs, (0, ID.Wd)(cD), cD.fogChunks, 0, 0) && (this.unsentEnvPrefs = null);
-          const pD = this.unsentLookPrefs;
-          pD && DD.writeRecord(ID.tb.Sensitivity, 0, pD.mouse, pD.touch, (0, BD.k)(pD.fovPercent)) && (this.unsentLookPrefs = null);
-          let iD = 0;
+          const RU = this.unsentUiPrefs;
+          RU && UU.writeRecord(tU.vb.UiPrefs, 0, RU.nametagCutDistance, 0, (0, tU.ze)(RU)) && (this.unsentUiPrefs = null);
+          const gU = this.unsentEnvPrefs;
+          gU && UU.writeRecord(tU.vb.EnvPrefs, (0, tU.ee)(gU), gU.fogChunks, 0, 0) && (this.unsentEnvPrefs = null);
+          const pU = this.unsentLookPrefs;
+          pU && UU.writeRecord(tU.vb.Sensitivity, 0, pU.mouse, pU.touch, (0, GU.m)(pU.fovPercent)) && (this.unsentLookPrefs = null);
+          let EU = 0;
           for (const {
-              aux: ID,
-              payload: fD
+              aux: tU,
+              payload: PU
             }
             of this.unsentOptions) {
-            if (!DD.writeOptions(ID, fD)) {
-              if (DD.cursor > 0) break;
+            if (!UU.writeOptions(tU, PU)) {
+              if (UU.cursor > 0) break;
               this.optionsDropped++
             }
-            iD++
+            EU++
           }
-          iD > 0 && this.unsentOptions.splice(0, iD)
-        } catch (CD) {
-          return this.crash(vD, CD), !1
+          EU > 0 && this.unsentOptions.splice(0, EU)
+        } catch (RU) {
+          return this.crash(eU, RU), !1
         }
         return !0
       }
-      setHoldDraws(DD) {
-        this.drawsHeld = DD
+      setHoldDraws(UU) {
+        this.drawsHeld = UU
       }
-      setUiPrefs(DD) {
+      setUiPrefs(UU) {
         this.unsentUiPrefs = {
-          ...DD
+          ...UU
         }
       }
-      setEnvPrefs(DD) {
+      setEnvPrefs(UU) {
         this.unsentEnvPrefs = {
-          ...DD
+          ...UU
         }
       }
-      setLookPrefs(DD) {
+      setLookPrefs(UU) {
         this.unsentLookPrefs = {
-          ...DD
+          ...UU
         }
       }
-      queueOptions(DD, CD) {
-        return !this.isStopped && (CD.byteLength > ID.Zb.PayloadMaxBytes ? (this.optionsDropped++, !1) : (this.unsentOptions.push({
-          aux: DD,
-          payload: CD
+      queueOptions(UU, RU) {
+        return !this.isStopped && (RU.byteLength > tU.ac.PayloadMaxBytes ? (this.optionsDropped++, !1) : (this.unsentOptions.push({
+          aux: UU,
+          payload: RU
         }), !0))
       }
-      setChunkCap(DD) {
-        return this.callCore("setChunkCap", null, (CD => CD.qiD(DD)))
+      setChunkCap(UU) {
+        return this.callCore("setChunkCap", null, (RU => RU.aEU(UU)))
       }
-      shedMemory(DD) {
-        const CD = this.callCore("shedMemory", null, (CD => CD.liD(DD)));
-        return 0 === CD ? null : CD
+      shedMemory(UU) {
+        const RU = this.callCore("shedMemory", null, (RU => RU.dEU(UU)));
+        return 0 === RU ? null : RU
       }
       addDistanceInUse() {
-        const DD = this.callCore("addDistanceInUse", null, (DD => DD.YpD()));
-        return 0 === DD ? null : DD
+        const UU = this.callCore("addDistanceInUse", null, (UU => UU.MpU()));
+        return 0 === UU ? null : UU
       }
-      setChunkAddDistance(DD, CD) {
-        return this.callCore("setChunkAddDistance", !1, (cD => cD.xiD(DD, CD)))
+      setChunkAddDistance(UU, RU) {
+        return this.callCore("setChunkAddDistance", !1, (gU => gU.ZEU(UU, RU)))
       }
-      setGameHost(DD) {
-        return this.callCore("setGameHost", !1, (CD => (CD.ciD(DD), this.gameHost = DD, !0)))
+      setGameHost(UU) {
+        return this.callCore("setGameHost", !1, (RU => (RU.PEU(UU), this.gameHost = UU, !0)))
       }
-      setAntiCheatProbes(DD) {
-        return this.callCore("setAntiCheatProbes", !1, (CD => CD.HiD(DD)))
+      setAntiCheatProbes(UU) {
+        return this.callCore("setAntiCheatProbes", !1, (RU => RU.bEU(UU)))
       }
-      setAmbientOcclusion(DD) {
-        this.callCore("setAmbientOcclusion", void 0, (CD => {
-          CD.OiD(DD)
+      setAmbientOcclusion(UU) {
+        this.callCore("setAmbientOcclusion", void 0, (RU => {
+          RU.nEU(UU)
         }))
       }
-      setPoseLod(DD) {
-        this.callCore("setPoseLod", void 0, (CD => {
-          CD.KiD(DD)
+      setPoseLod(UU) {
+        this.callCore("setPoseLod", void 0, (RU => {
+          RU.BEU(UU)
         }))
       }
-      setDebugLog(DD, CD) {
-        this.callCore(GD, void 0, (cD => {
-          cD.zo(DD, CD)
+      setDebugLog(UU, RU) {
+        this.callCore(SU, void 0, (gU => {
+          gU.hQ(UU, RU)
         }))
       }
-      takeDebugLog(DD) {
-        return this.callCore(GD, [], (CD => CD.jo(DD)))
+      takeDebugLog(UU) {
+        return this.callCore(SU, [], (RU => RU.QQ(UU)))
       }
-      setTextureLayers(DD) {
-        return this.callCore("setTextureLayers", !1, (CD => CD.jiD(DD)))
+      setTextureLayers(UU) {
+        return this.callCore("setTextureLayers", !1, (RU => RU.vEU(UU)))
       }
-      setBlockColours(DD) {
+      setBlockColours(UU) {
         let {
-          blocks: CD,
-          counts: cD,
-          values: ID
-        } = DD;
-        return this.callCore("setBlockColours", !1, (DD => DD.ScD(CD, cD, ID)))
+          blocks: RU,
+          counts: gU,
+          values: tU
+        } = UU;
+        return this.callCore("setBlockColours", !1, (UU => UU.ngU(RU, gU, tU)))
       }
       terrainTextureNames() {
-        return this.callCore(RD, [], (DD => DD.kiD()))
+        return this.callCore(sU, [], (UU => UU.kEU()))
       }
-      setTerrainTextures(DD, CD, cD, ID) {
-        return this.callCore(RD, !1, (pD => pD.ziD(DD, cD, CD, ID)))
+      setTerrainTextures(UU, RU, gU, tU) {
+        return this.callCore(sU, !1, (pU => pU.XEU(UU, gU, RU, tU)))
       }
-      setShaderPack(DD, CD, cD, ID, pD, iD) {
-        return this.callCore("setShaderPack", !1, (fD => {
-          var bD, QD;
-          return null !== (bD = null === (QD = fD.UcD) || void 0 === QD ? void 0 : QD.call(fD, DD, CD, cD, ID, pD, iD)) && void 0 !== bD && bD
+      setShaderPack(UU, RU, gU, tU, pU, EU) {
+        return this.callCore("setShaderPack", !1, (PU => {
+          var TU, qU;
+          return null !== (TU = null === (qU = PU.SgU) || void 0 === qU ? void 0 : qU.call(PU, UU, RU, gU, tU, pU, EU)) && void 0 !== TU && TU
         }))
       }
       sunShadowWantedTextures() {
-        return this.callCore(kD, null, (DD => {
-          var CD, cD;
-          return null !== (CD = null === (cD = DD.LiD) || void 0 === cD ? void 0 : cD.call(DD)) && void 0 !== CD ? CD : null
+        return this.callCore(yU, null, (UU => {
+          var RU, gU;
+          return null !== (RU = null === (gU = UU.HEU) || void 0 === gU ? void 0 : gU.call(UU)) && void 0 !== RU ? RU : null
         }))
       }
-      setSunShadowTexture(DD, CD, cD, ID, pD) {
-        this.callCore(kD, void 0, (iD => {
-          var fD;
-          null === (fD = iD.ViD) || void 0 === fD || fD.call(iD, DD, CD, cD, ID, pD)
+      setSunShadowTexture(UU, RU, gU, tU, pU) {
+        this.callCore(yU, void 0, (EU => {
+          var PU;
+          null === (PU = EU.rEU) || void 0 === PU || PU.call(EU, UU, RU, gU, tU, pU)
         }))
       }
       takeSunShadowWarnings() {
-        return this.callCore(kD, [], (DD => {
-          var CD, cD;
-          return null !== (CD = null === (cD = DD.GiD) || void 0 === cD ? void 0 : cD.call(DD)) && void 0 !== CD ? CD : []
+        return this.callCore(yU, [], (UU => {
+          var RU, gU;
+          return null !== (RU = null === (gU = UU.sEU) || void 0 === gU ? void 0 : gU.call(UU)) && void 0 !== RU ? RU : []
         }))
       }
       sunShadowsHeld() {
-        return this.callCore(kD, null, (DD => {
-          var CD, cD;
-          return null !== (CD = null === (cD = DD.TiD) || void 0 === cD ? void 0 : cD.call(DD)) && void 0 !== CD ? CD : null
+        return this.callCore(yU, null, (UU => {
+          var RU, gU;
+          return null !== (RU = null === (gU = UU.SEU) || void 0 === gU ? void 0 : gU.call(UU)) && void 0 !== RU ? RU : null
         }))
       }
-      callCore(DD, CD, cD) {
-        if (this.stopped) return CD;
+      callCore(UU, RU, gU) {
+        if (this.stopped) return RU;
         try {
-          return cD(this.core)
-        } catch (ID) {
-          return this.crash(DD, ID), CD
+          return gU(this.core)
+        } catch (tU) {
+          return this.crash(UU, tU), RU
         }
       }
-      readEvents(DD) {
+      readEvents(UU) {
         this.netOffsets.length = 0;
-        const CD = this.headerView(),
-          cD = CD[ID.hb.EventsPtr],
-          pD = CD[ID.hb.EventsLen];
-        if (this.envEvents.length = 0, this.graceEvents.length = 0, 0 === pD) return TD;
-        const iD = [],
-          fD = this.memory().buffer;
-        if (cD % 4 !== 0 || cD + pD > fD.byteLength) return this.crash(LD, `events of ${pD} bytes at ${cD} outside ${fD.byteLength} bytes of memory`), TD;
-        const bD = new DataView(fD, cD, pD),
-          QD = this.rings.net,
-          wD = (CD, cD) => CD + cD <= DD ? QD.copyWritten(CD, cD) : null;
-        let SD = 0;
-        for (; SD < pD;) {
-          const DD = SD + ID.R,
-            CD = DD <= pD ? bD.getUint32(SD, !0) : -1,
-            QD = CD >>> 16;
-          if (CD < 0 || QD > pD - DD) return this.crash(LD, `event record at ${SD} overruns its ${pD} bytes`), TD;
-          const HD = 65535 & CD,
-            UD = CD => bD.getUint32(DD + 4 * CD, !0);
-          if (HD === ID.U.RawMessage) {
-            const DD = QD >= ID.Fc.BYTES ? 65535 & UD(1) : -1,
-              CD = DD === ID.Fc.STRING_TYPE,
-              cD = QD === (CD ? ID.Fc.STRING_TYPE_BYTES : ID.Fc.BYTES) ? wD(UD(2), UD(3)) : null,
-              pD = CD && cD ? wD(UD(4), UD(5)) : null;
-            if (!cD || CD && !pD) return this.crash(LD, `RawMessage at ${SD} of ${QD} bytes names bytes outside net-in`), TD;
-            this.netOffsets.push(SD), iD.push({
+        const RU = this.headerView(),
+          gU = RU[tU.jb.EventsPtr],
+          pU = RU[tU.jb.EventsLen];
+        if (this.envEvents.length = 0, this.graceEvents.length = 0, 0 === pU) return HU;
+        const EU = [],
+          PU = this.memory().buffer;
+        if (gU % 4 !== 0 || gU + pU > PU.byteLength) return this.crash(dU, `events of ${pU} bytes at ${gU} outside ${PU.byteLength} bytes of memory`), HU;
+        const TU = new DataView(PU, gU, pU),
+          qU = this.rings.net,
+          KU = (RU, gU) => RU + gU <= UU ? qU.copyWritten(RU, gU) : null;
+        let cU = 0;
+        for (; cU < pU;) {
+          const UU = cU + tU.V,
+            RU = UU <= pU ? TU.getUint32(cU, !0) : -1,
+            qU = RU >>> 16;
+          if (RU < 0 || qU > pU - UU) return this.crash(dU, `event record at ${cU} overruns its ${pU} bytes`), HU;
+          const nU = 65535 & RU,
+            bU = RU => TU.getUint32(UU + 4 * RU, !0);
+          if (nU === tU.Z.RawMessage) {
+            const UU = qU >= tU.Nc.BYTES ? 65535 & bU(1) : -1,
+              RU = UU === tU.Nc.STRING_TYPE,
+              gU = qU === (RU ? tU.Nc.STRING_TYPE_BYTES : tU.Nc.BYTES) ? KU(bU(2), bU(3)) : null,
+              pU = RU && gU ? KU(bU(4), bU(5)) : null;
+            if (!gU || RU && !pU) return this.crash(dU, `RawMessage at ${cU} of ${qU} bytes names bytes outside net-in`), HU;
+            this.netOffsets.push(cU), EU.push({
               type: "message",
-              conn: UD(0),
-              Rf: DD,
-              payloadKind: UD(1) >>> 16,
-              payload: cD,
-              stringType: pD ? dD.decode(pD) : null
+              conn: bU(0),
+              aP: UU,
+              payloadKind: bU(1) >>> 16,
+              payload: gU,
+              stringType: pU ? kU.decode(pU) : null
             })
-          } else if (HD === ID.U.CoreErrors) {
-            var BD, yD;
-            const DD = QD >= 4 ? UD(0) : -1;
-            if (DD < 0 || DD > ID.H.PAIRS_MAX || QD !== 4 * (ID.H.FIXED_WORDS + ID.H.PAIR_WORDS * DD)) return this.crash(LD, `CoreErrors at ${SD} of ${QD} bytes`), TD;
-            const CD = [];
-            for (let cD = 0; cD < DD; cD++) CD.push({
-              code: UD(1 + 2 * cD),
-              detail: UD(2 + 2 * cD)
+          } else if (nU === tU.Z.CoreErrors) {
+            var GU, jU;
+            const UU = qU >= 4 ? bU(0) : -1;
+            if (UU < 0 || UU > tU.J.PAIRS_MAX || qU !== 4 * (tU.J.FIXED_WORDS + tU.J.PAIR_WORDS * UU)) return this.crash(dU, `CoreErrors at ${cU} of ${qU} bytes`), HU;
+            const RU = [];
+            for (let gU = 0; gU < UU; gU++) RU.push({
+              code: bU(1 + 2 * gU),
+              detail: bU(2 + 2 * gU)
             });
-            null === (BD = (yD = this.handlers).onCoreErrors) || void 0 === BD || BD.call(yD, CD, UD(1 + 2 * DD))
-          } else if (HD === ID.U.RenderReload) {
-            var MD, tD;
-            if (QD !== ID.Pc.BYTES) return this.crash(LD, `RenderReload at ${SD} of ${QD} bytes`), TD;
-            null === (MD = (tD = this.handlers).onRenderReload) || void 0 === MD || MD.call(tD, UD(0), UD(1), UD(2))
-          } else if (HD === ID.U.Images) {
-            var ZD, oD;
-            null === (ZD = (oD = this.handlers).onImages) || void 0 === ZD || ZD.call(oD, new Uint8Array(fD.slice(cD + DD, cD + DD + QD)))
-          } else if (HD === ID.U.ModelRequests)
-            for (let cD = 0; cD < QD >>> 2; cD++) {
-              var vD, ND;
-              null === (vD = (ND = this.handlers).onModelRequest) || void 0 === vD || vD.call(ND, UD(cD))
-            } else if (HD === ID.U.ModelTaken) {
-              var gD, XD;
-              if (QD < 4) return this.crash(LD, `ModelTaken at ${SD} of ${QD} bytes`), TD;
-              const DD = new Uint32Array((QD >>> 2) - 1);
-              for (let CD = 0; CD < DD.length; CD++) DD[CD] = UD(1 + CD);
-              null === (gD = (XD = this.handlers).onModelTaken) || void 0 === gD || gD.call(XD, UD(0), DD)
-            } else if (HD === ID.U.TerrainTexturesWanted) {
-            var mD, nD;
-            if (0 !== QD) return this.crash(LD, `TerrainTexturesWanted at ${SD} of ${QD} bytes`), TD;
-            null === (mD = (nD = this.handlers).onTerrainTexturesWanted) || void 0 === mD || mD.call(nD)
-          } else if (HD === ID.U.KeepAliveDue) {
-            var OD, PD;
-            if (QD > ID.xb) return this.crash(LD, `KeepAliveDue at ${SD} of ${QD} bytes`), TD;
-            null === (OD = (PD = this.handlers).onKeepAlive) || void 0 === OD || OD.call(PD, new Uint8Array(fD, cD + DD, QD).slice())
-          } else if (HD === ID.U.ConnectionState) {
-            if (QD !== ID.x) return this.crash(LD, `ConnectionState at ${SD} of ${QD} bytes`), TD;
-            this.netOffsets.push(SD), iD.push({
+            null === (GU = (jU = this.handlers).onCoreErrors) || void 0 === GU || GU.call(jU, RU, bU(1 + 2 * UU))
+          } else if (nU === tU.Z.RenderReload) {
+            var uU, CU;
+            if (qU !== tU.Uc.BYTES) return this.crash(dU, `RenderReload at ${cU} of ${qU} bytes`), HU;
+            null === (uU = (CU = this.handlers).onRenderReload) || void 0 === uU || uU.call(CU, bU(0), bU(1), bU(2))
+          } else if (nU === tU.Z.Images) {
+            var hU, QU;
+            null === (hU = (QU = this.handlers).onImages) || void 0 === hU || hU.call(QU, new Uint8Array(PU.slice(gU + UU, gU + UU + qU)))
+          } else if (nU === tU.Z.ModelRequests)
+            for (let gU = 0; gU < qU >>> 2; gU++) {
+              var eU, WU;
+              null === (eU = (WU = this.handlers).onModelRequest) || void 0 === eU || eU.call(WU, bU(gU))
+            } else if (nU === tU.Z.ModelTaken) {
+              var fU, xU;
+              if (qU < 4) return this.crash(dU, `ModelTaken at ${cU} of ${qU} bytes`), HU;
+              const UU = new Uint32Array((qU >>> 2) - 1);
+              for (let RU = 0; RU < UU.length; RU++) UU[RU] = bU(1 + RU);
+              null === (fU = (xU = this.handlers).onModelTaken) || void 0 === fU || fU.call(xU, bU(0), UU)
+            } else if (nU === tU.Z.TerrainTexturesWanted) {
+            var mU, IU;
+            if (0 !== qU) return this.crash(dU, `TerrainTexturesWanted at ${cU} of ${qU} bytes`), HU;
+            null === (mU = (IU = this.handlers).onTerrainTexturesWanted) || void 0 === mU || mU.call(IU)
+          } else if (nU === tU.Z.KeepAliveDue) {
+            var JU, wU;
+            if (qU > tU.Db) return this.crash(dU, `KeepAliveDue at ${cU} of ${qU} bytes`), HU;
+            null === (JU = (wU = this.handlers).onKeepAlive) || void 0 === JU || JU.call(wU, new Uint8Array(PU, gU + UU, qU).slice())
+          } else if (nU === tU.Z.ConnectionState) {
+            if (qU !== tU.s) return this.crash(dU, `ConnectionState at ${cU} of ${qU} bytes`), HU;
+            this.netOffsets.push(cU), EU.push({
               type: "connection",
-              conn: UD(0),
-              phase: UD(1),
-              code: 0 | UD(2)
+              conn: bU(0),
+              phase: bU(1),
+              code: 0 | bU(2)
             })
-          } else if (HD === ID.U.EnvLighting || HD === ID.U.SkyImages) {
-            if (QD !== (HD === ID.U.EnvLighting ? ID.Q : ID.hd)) return this.crash(LD, `event ${HD} at ${SD} of ${QD} bytes`), TD;
+          } else if (nU === tU.Z.EnvLighting || nU === tU.Z.SkyImages) {
+            if (qU !== (nU === tU.Z.EnvLighting ? tU.U : tU.md)) return this.crash(dU, `event ${nU} at ${cU} of ${qU} bytes`), HU;
             this.envEvents.push({
-              kind: HD,
-              payload: new Uint8Array(fD.slice(cD + DD, cD + DD + QD))
+              kind: nU,
+              payload: new Uint8Array(PU.slice(gU + UU, gU + UU + qU))
             })
-          } else if (HD === ID.U.ReconnectGrace) {
-            if (QD !== ID.nc) return this.crash(LD, `ReconnectGrace at ${SD} of ${QD} bytes`), TD;
-            const DD = UD(2);
+          } else if (nU === tU.Z.ReconnectGrace) {
+            if (qU !== tU.uc) return this.crash(dU, `ReconnectGrace at ${cU} of ${qU} bytes`), HU;
+            const UU = bU(2);
             this.graceEvents.push({
-              conn: UD(0),
-              graceMs: UD(1),
-              sessionBased: 0 !== (DD & ID.Gc.SessionBased),
-              replayOffer: 0 !== (DD & ID.Gc.ReplayOffer)
+              conn: bU(0),
+              graceMs: bU(1),
+              sessionBased: 0 !== (UU & tU.Oc.SessionBased),
+              replayOffer: 0 !== (UU & tU.Oc.ReplayOffer)
             })
           }
-          SD = DD + (0, ID.je)(QD)
+          cU = UU + (0, tU.te)(qU)
         }
-        return iD
+        return EU
       }
-      forEachNetOut(DD) {
-        this.forEachOut(XD, "net-out", ID.hb.NetOutPtr, ID.hb.NetOutLen, ID.Rb, 0, ((CD, cD, pD, iD) => {
-          const fD = (0, ID.de)(cD);
-          fD === ID.Ub.Frame ? DD((0, ID.$d)(cD), pD) : this.crash(XD, `net-out record at ${iD} is kind ${fD}, not a frame`)
+      forEachNetOut(UU) {
+        this.forEachOut(xU, "net-out", tU.jb.NetOutPtr, tU.jb.NetOutLen, tU.Tb, 0, ((RU, gU, pU, EU) => {
+          const PU = (0, tU.ke)(gU);
+          PU === tU.Wb.Frame ? UU((0, tU.ie)(gU), pU) : this.crash(xU, `net-out record at ${EU} is kind ${PU}, not a frame`)
         }))
       }
-      forEachWorkerOut(DD) {
-        this.forEachOut(mD, "worker-out", ID.hb.WorkerOutPtr, ID.hb.WorkerOutLen, ID.xd, 4, ((CD, cD, pD, iD) => {
-          const fD = 255 & CD,
-            bD = fD === ID.Kd.Init ? this.initOf(pD, iD) : pD;
-          null !== bD && DD(fD, CD >>> 8 & 16777215, bD)
+      forEachWorkerOut(UU) {
+        this.forEachOut(mU, "worker-out", tU.jb.WorkerOutPtr, tU.jb.WorkerOutLen, tU.Id, 4, ((RU, gU, pU, EU) => {
+          const PU = 255 & RU,
+            TU = PU === tU.Xd.Init ? this.initOf(pU, EU) : pU;
+          null !== TU && UU(PU, RU >>> 8 & 16777215, TU)
         }))
       }
-      initOf(DD, CD) {
-        const cD = this.memory().buffer;
-        if (DD.byteLength !== ID.kb) return this.crash(mD, `worker-out Init record at ${CD} is ${DD.byteLength} bytes, not a view`), null;
-        const pD = new DataView(DD.buffer, DD.byteOffset, ID.kb),
-          iD = pD.getUint32(0, !0),
-          fD = pD.getUint32(4, !0);
-        return iD + fD > cD.byteLength ? (this.crash(mD, `worker-out Init record at ${CD} names ${fD} bytes at ${iD} outside ${cD.byteLength} bytes of memory`), null) : new Uint8Array(cD, iD, fD)
+      initOf(UU, RU) {
+        const gU = this.memory().buffer;
+        if (UU.byteLength !== tU.kb) return this.crash(mU, `worker-out Init record at ${RU} is ${UU.byteLength} bytes, not a view`), null;
+        const pU = new DataView(UU.buffer, UU.byteOffset, tU.kb),
+          EU = pU.getUint32(0, !0),
+          PU = pU.getUint32(4, !0);
+        return EU + PU > gU.byteLength ? (this.crash(mU, `worker-out Init record at ${RU} names ${PU} bytes at ${EU} outside ${gU.byteLength} bytes of memory`), null) : new Uint8Array(gU, EU, PU)
       }
-      forEachOut(DD, CD, cD, pD, iD, fD, bD) {
+      forEachOut(UU, RU, gU, pU, EU, PU, TU) {
         if (this.stopped || null === this.lastHeader) return;
-        const QD = this.headerView(),
-          wD = QD[cD],
-          SD = QD[pD];
-        if (0 === SD) return;
-        const BD = this.memory().buffer;
-        if (wD % 4 !== 0 || wD + SD > BD.byteLength) return void this.crash(DD, `${CD} of ${SD} bytes at ${wD} outside ${BD.byteLength} bytes of memory`);
-        const yD = new DataView(BD, wD, SD);
-        let MD = 0;
-        for (; MD < SD;) {
-          const cD = MD + iD,
-            pD = cD <= SD ? yD.getUint32(MD + fD, !0) : -1;
-          if (pD < 0 || pD > SD - cD) return void this.crash(DD, `${CD} record at ${MD} overruns its ${SD} bytes`);
-          if (bD(yD.getUint32(MD, !0), yD.getUint32(MD + 4, !0), new Uint8Array(BD, wD + cD, pD), MD), this.stopped) return;
-          MD = cD + (0, ID.je)(pD)
+        const qU = this.headerView(),
+          KU = qU[gU],
+          cU = qU[pU];
+        if (0 === cU) return;
+        const GU = this.memory().buffer;
+        if (KU % 4 !== 0 || KU + cU > GU.byteLength) return void this.crash(UU, `${RU} of ${cU} bytes at ${KU} outside ${GU.byteLength} bytes of memory`);
+        const jU = new DataView(GU, KU, cU);
+        let uU = 0;
+        for (; uU < cU;) {
+          const gU = uU + EU,
+            pU = gU <= cU ? jU.getUint32(uU + PU, !0) : -1;
+          if (pU < 0 || pU > cU - gU) return void this.crash(UU, `${RU} record at ${uU} overruns its ${cU} bytes`);
+          if (TU(jU.getUint32(uU, !0), jU.getUint32(uU + 4, !0), new Uint8Array(GU, KU + gU, pU), uU), this.stopped) return;
+          uU = gU + (0, tU.te)(pU)
         }
       }
-      forEachEvent(DD) {
+      forEachEvent(UU) {
         if (this.stopped || null === this.lastHeader) return;
-        const CD = this.headerView(),
-          cD = CD[ID.hb.EventsPtr],
-          pD = CD[ID.hb.EventsLen];
-        if (0 === pD) return;
-        const iD = this.memory().buffer;
-        if (cD % 4 !== 0 || cD + pD > iD.byteLength) return void this.crash(LD, `events of ${pD} bytes at ${cD} outside ${iD.byteLength} bytes of memory`);
-        const fD = new DataView(iD, cD, pD);
-        let bD = 0;
-        for (; bD < pD;) {
-          const CD = bD + ID.R,
-            cD = CD <= pD ? fD.getUint32(bD, !0) : -1,
-            iD = cD >>> 16;
-          if (cD < 0 || iD > pD - CD) return void this.crash(LD, `event record at ${bD} overruns its ${pD} bytes`);
-          DD(65535 & cD, fD, CD, iD), bD = CD + (0, ID.je)(iD)
+        const RU = this.headerView(),
+          gU = RU[tU.jb.EventsPtr],
+          pU = RU[tU.jb.EventsLen];
+        if (0 === pU) return;
+        const EU = this.memory().buffer;
+        if (gU % 4 !== 0 || gU + pU > EU.byteLength) return void this.crash(dU, `events of ${pU} bytes at ${gU} outside ${EU.byteLength} bytes of memory`);
+        const PU = new DataView(EU, gU, pU);
+        let TU = 0;
+        for (; TU < pU;) {
+          const RU = TU + tU.V,
+            gU = RU <= pU ? PU.getUint32(TU, !0) : -1,
+            EU = gU >>> 16;
+          if (gU < 0 || EU > pU - RU) return void this.crash(dU, `event record at ${TU} overruns its ${pU} bytes`);
+          UU(65535 & gU, PU, RU, EU), TU = RU + (0, tU.te)(EU)
         }
       }
-      crashOn(DD, CD) {
-        CD instanceof pD.e ? this.crash(LD, CD.message) : this.crash(DD, CD)
+      crashOn(UU, RU) {
+        RU instanceof pU.d ? this.crash(dU, RU.message) : this.crash(UU, RU)
       }
-      crash(DD, CD) {
+      crash(UU, RU) {
         this.stopped || (this.stopped = !0, this.handlers.onCrash({
-          site: DD,
-          error: CD,
+          site: UU,
+          error: RU,
           header: this.lastHeader
         }))
       }
-      headerWord(DD) {
-        return this.stopped || null === this.lastHeader ? 0 : this.headerView()[DD]
+      headerWord(UU) {
+        return this.stopped || null === this.lastHeader ? 0 : this.headerView()[UU]
       }
       headerView() {
-        const DD = this.memory().buffer;
-        return DD !== this.headerBuffer && (this.headerBuffer = DD, this.header = new Uint32Array(DD, this.core.zM(), ID.db)), this.header
+        const UU = this.memory().buffer;
+        return UU !== this.headerBuffer && (this.headerBuffer = UU, this.header = new Uint32Array(UU, this.core.Eu(), tU.ib)), this.header
       }
     }
   },
-  40012: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => fD,
-      g: () => iD
+  40300: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => PU,
+      d: () => EU
     });
-    var ID = cD(4495);
-    let pD = null;
+    var tU = gU(4352);
+    let pU = null;
 
-    function iD(DD) {
-      pD = {
+    function EU(UU) {
+      pU = {
         scanned: !1
       };
       try {
-        return DD()
+        return UU()
       } finally {
-        pD = null
+        pU = null
       }
     }
 
-    function fD() {
-      const DD = pD;
-      if (null === DD) return (0, ID.f)();
-      const CD = (0, ID.f)(!DD.scanned);
-      return DD.scanned = !0, CD
+    function PU() {
+      const UU = pU;
+      if (null === UU) return (0, tU.h)();
+      const RU = (0, tU.h)(!UU.scanned);
+      return UU.scanned = !0, RU
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

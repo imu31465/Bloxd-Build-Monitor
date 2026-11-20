@@ -1,156 +1,156 @@
 export const id = 199;
 export const ids = [199];
 export const modules = {
-  39715: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => QD,
-      g: () => bD,
-      k: () => fD
+  39994: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => qU,
+      e: () => TU,
+      f: () => PU
     });
-    var ID = cD(39718),
-      pD = cD(4581),
-      iD = cD(39725);
+    var tU = gU(40003),
+      pU = gU(4449),
+      EU = gU(40007);
 
-    function fD(DD) {
-      return DD.payloadKind === pD.ic.Msgpack ? (0, ID.c)(DD.payload) : void 0
+    function PU(UU) {
+      return UU.payloadKind === pU.kc.Msgpack ? (0, tU.b)(UU.payload) : void 0
     }
 
-    function bD(DD, CD) {
-      if (CD.payloadKind === pD.ic.Bytes || CD.payloadKind === pD.ic.MsgpackBin) return (0, iD.e)(DD, CD.payload)
+    function TU(UU, RU) {
+      if (RU.payloadKind === pU.kc.Bytes || RU.payloadKind === pU.kc.MsgpackBin) return (0, EU.c)(UU, RU.payload)
     }
 
-    function QD(DD) {
-      return null !== DD && "object" === typeof DD
+    function qU(UU) {
+      return null !== UU && "object" === typeof UU
     }
   },
-  39727: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => BD,
-      i: () => yD,
-      j: () => MD,
-      l: () => SD,
-      o: () => oD
+  40016: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => GU,
+      f: () => jU,
+      g: () => uU,
+      h: () => cU,
+      k: () => QU
     });
-    var ID = cD(4581),
-      pD = cD(39730);
-    const iD = new Map,
-      fD = new Set,
-      bD = new Set;
-    let QD = 0,
-      wD = 0;
+    var tU = gU(4449),
+      pU = gU(40022);
+    const EU = new Map,
+      PU = new Set,
+      TU = new Set;
+    let qU = 0,
+      KU = 0;
 
-    function SD(DD, CD) {
-      let cD = iD.get(DD);
-      return cD || (cD = new Set, iD.set(DD, cD)), cD.add(CD), () => {
-        cD.delete(CD)
+    function cU(UU, RU) {
+      let gU = EU.get(UU);
+      return gU || (gU = new Set, EU.set(UU, gU)), gU.add(RU), () => {
+        gU.delete(RU)
       }
     }
 
-    function BD() {
-      return 0 !== QD
+    function GU() {
+      return 0 !== qU
     }
 
-    function yD(DD) {
-      return fD.add(DD), () => {
-        fD.delete(DD)
+    function jU(UU) {
+      return PU.add(UU), () => {
+        PU.delete(UU)
       }
     }
 
-    function MD(DD) {
-      return bD.add(DD), () => {
-        bD.delete(DD)
+    function uU(UU) {
+      return TU.add(UU), () => {
+        TU.delete(UU)
       }
     }
-    const tD = "A raw message listener threw";
+    const CU = "A raw message listener threw";
 
-    function ZD(DD) {
-      let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : fD;
-      for (const ID of CD) try {
-        ID()
-      } catch (cD) {
-        DD ? (0, pD.o)(cD, tD) : console.error(tD, cD)
+    function hU(UU) {
+      let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : PU;
+      for (const tU of RU) try {
+        tU()
+      } catch (gU) {
+        UU ? (0, pU.o)(gU, CU) : console.error(CU, gU)
       }
     }
-    const oD = {
-      fire: function(DD) {
-        if ("connection" === DD.type) {
-          const CD = DD.phase === ID.E.Activated && DD.conn !== QD && DD.conn > wD,
-            cD = (DD.phase === ID.E.Left || DD.phase === ID.E.Closed) && DD.conn === QD;
-          return void(CD || cD ? (QD = CD ? DD.conn : 0, ZD(!0)) : DD.phase === ID.E.Resumed && 0 !== QD && DD.conn > wD && (QD = DD.conn, ZD(!0, bD)))
+    const QU = {
+      fire: function(UU) {
+        if ("connection" === UU.type) {
+          const RU = UU.phase === tU.F.Activated && UU.conn !== qU && UU.conn > KU,
+            gU = (UU.phase === tU.F.Left || UU.phase === tU.F.Closed) && UU.conn === qU;
+          return void(RU || gU ? (qU = RU ? UU.conn : 0, hU(!0)) : UU.phase === tU.F.Resumed && 0 !== qU && UU.conn > KU && (qU = UU.conn, hU(!0, TU)))
         }
-        const CD = iD.get(DD.Rf);
-        if (CD && DD.conn === QD && 0 !== QD)
-          for (const ID of CD) try {
-            ID(DD)
-          } catch (cD) {
-            (0, pD.o)(cD, tD)
+        const RU = EU.get(UU.aP);
+        if (RU && UU.conn === qU && 0 !== qU)
+          for (const tU of RU) try {
+            tU(UU)
+          } catch (gU) {
+            (0, pU.o)(gU, CU)
           }
       },
-      close: function(DD) {
-        wD = Math.max(wD, DD, QD), 0 !== QD && (QD = 0, ZD(!1))
+      close: function(UU) {
+        KU = Math.max(KU, UU, qU), 0 !== qU && (qU = 0, hU(!1))
       }
     }
   },
-  39709: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => wD,
-      e: () => QD,
-      f: () => bD
+  39984: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => KU,
+      d: () => qU,
+      e: () => TU
     });
-    var ID = cD(1266),
-      pD = cD(39680);
-    const iD = new TextDecoder,
-      fD = new TextEncoder;
+    var tU = gU(1271),
+      pU = gU(39955);
+    const EU = new TextDecoder,
+      PU = new TextEncoder;
 
-    function bD(DD, CD) {
-      const cD = DD.queries.entityName(CD);
-      if (cD === pD.ad) return;
-      const fD = DD.memoryData(DD.scratch(), 4 + cD, 4, "entity_name's answer");
-      if (!fD) return;
-      const bD = fD.getUint32(0, !0),
-        QD = iD.decode(new Uint8Array(fD.buffer, fD.byteOffset + 4, cD));
-      return (0, ID.d)(QD, !1, bD === pD.he ? null : bD)
+    function TU(UU, RU) {
+      const gU = UU.queries.entityName(RU);
+      if (gU === pU.Mc) return;
+      const PU = UU.memoryData(UU.scratch(), 4 + gU, 4, "entity_name's answer");
+      if (!PU) return;
+      const TU = PU.getUint32(0, !0),
+        qU = EU.decode(new Uint8Array(PU.buffer, PU.byteOffset + 4, gU));
+      return (0, tU.c)(qU, !1, TU === pU.ae ? null : TU)
     }
 
-    function QD(DD, CD, cD) {
-      const ID = fD.encode(cD);
-      if (ID.length > pD.Lb) return !1;
-      const iD = DD.memoryView(Uint8Array, DD.scratch(), ID.length, "has_effect's name");
-      return !!iD && (iD.set(ID), 1 === DD.queries.hasEffect(CD, ID.length))
+    function qU(UU, RU, gU) {
+      const tU = PU.encode(gU);
+      if (tU.length > pU.Bb) return !1;
+      const EU = UU.memoryView(Uint8Array, UU.scratch(), tU.length, "has_effect's name");
+      return !!EU && (EU.set(tU), 1 === UU.queries.hasEffect(RU, tU.length))
     }
 
-    function wD(DD, CD, cD, ID) {
-      const fD = DD.queries.blockData(CD, cD, ID);
-      if (fD === pD.ad) return;
-      const bD = DD.memoryView(Uint8Array, DD.scratch(), fD, "block_data's answer");
-      return bD ? JSON.parse(iD.decode(bD)) : void 0
+    function KU(UU, RU, gU, tU) {
+      const PU = UU.queries.blockData(RU, gU, tU);
+      if (PU === pU.Mc) return;
+      const TU = UU.memoryView(Uint8Array, UU.scratch(), PU, "block_data's answer");
+      return TU ? JSON.parse(EU.decode(TU)) : void 0
     }
   },
-  39718: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => pD,
-      g: () => SD
+  40003: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => pU,
+      d: () => cU
     });
-    const ID = new TextDecoder;
+    const tU = new TextDecoder;
 
-    function pD(DD) {
-      const CD = new iD(DD),
-        cD = CD.value();
-      if (CD.at !== DD.length) throw new Error(`msgpack: ${DD.length-CD.at} bytes after the value`);
-      return cD
+    function pU(UU) {
+      const RU = new EU(UU),
+        gU = RU.value();
+      if (RU.at !== UU.length) throw new Error(`msgpack: ${UU.length-RU.at} bytes after the value`);
+      return gU
     }
-    class iD {
-      constructor(DD) {
-        this.bytes = DD, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(DD.buffer, DD.byteOffset, DD.byteLength)
+    class EU {
+      constructor(UU) {
+        this.bytes = UU, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(UU.buffer, UU.byteOffset, UU.byteLength)
       }
       value() {
-        const DD = this.u8();
-        if (DD <= 127) return DD;
-        if (DD >= 224) return DD - 256;
-        if (DD >= 128 && DD <= 143) return this.map(15 & DD);
-        if (DD >= 144 && DD <= 159) return this.array(15 & DD);
-        if (DD >= 160 && DD <= 191) return this.str(31 & DD);
-        switch (DD) {
+        const UU = this.u8();
+        if (UU <= 127) return UU;
+        if (UU >= 224) return UU - 256;
+        if (UU >= 128 && UU <= 143) return this.map(15 & UU);
+        if (UU >= 144 && UU <= 159) return this.array(15 & UU);
+        if (UU >= 160 && UU <= 191) return this.str(31 & UU);
+        switch (UU) {
           case 192:
             return null;
           case 194:
@@ -214,13 +214,13 @@ export const modules = {
           case 223:
             return this.map(this.u32());
           default:
-            throw new Error(`msgpack: unknown byte 0x${DD.toString(16)} at ${this.at-1}`)
+            throw new Error(`msgpack: unknown byte 0x${UU.toString(16)} at ${this.at-1}`)
         }
       }
-      take(DD) {
-        const CD = this.at;
-        if (CD + DD > this.bytes.length) throw new Error(`msgpack: ${DD} bytes past the end at ${CD}`);
-        return this.at = CD + DD, CD
+      take(UU) {
+        const RU = this.at;
+        if (RU + UU > this.bytes.length) throw new Error(`msgpack: ${UU} bytes past the end at ${RU}`);
+        return this.at = RU + UU, RU
       }
       u8() {
         return this.view.getUint8(this.take(1))
@@ -231,945 +231,945 @@ export const modules = {
       u32() {
         return this.view.getUint32(this.take(4), !1)
       }
-      int64(DD) {
-        const CD = this.take(8);
-        return DD ? this.view.getBigInt64(CD, !1) : this.view.getBigUint64(CD, !1)
+      int64(UU) {
+        const RU = this.take(8);
+        return UU ? this.view.getBigInt64(RU, !1) : this.view.getBigUint64(RU, !1)
       }
-      str(DD) {
-        const CD = this.take(DD),
-          cD = this.bytes;
-        if (DD < 16) {
-          let pD = "";
-          for (let iD = CD; iD < CD + DD; iD++) {
-            const fD = cD[iD];
-            if (fD >= 128) return ID.decode(cD.subarray(CD, CD + DD));
-            pD += String.fromCharCode(fD)
+      str(UU) {
+        const RU = this.take(UU),
+          gU = this.bytes;
+        if (UU < 16) {
+          let pU = "";
+          for (let EU = RU; EU < RU + UU; EU++) {
+            const PU = gU[EU];
+            if (PU >= 128) return tU.decode(gU.subarray(RU, RU + UU));
+            pU += String.fromCharCode(PU)
           }
-          return pD
+          return pU
         }
-        return ID.decode(cD.subarray(CD, CD + DD))
+        return tU.decode(gU.subarray(RU, RU + UU))
       }
-      bin(DD) {
-        const CD = this.take(DD);
-        return this.bytes.subarray(CD, CD + DD)
+      bin(UU) {
+        const RU = this.take(UU);
+        return this.bytes.subarray(RU, RU + UU)
       }
       enter() {
         if (++this.depth > 512) throw new Error("msgpack: nested too deep")
       }
-      array(DD) {
+      array(UU) {
         this.enter();
-        const CD = [];
-        for (let cD = 0; cD < DD; cD++) CD.push(this.value());
-        return this.depth--, CD
+        const RU = [];
+        for (let gU = 0; gU < UU; gU++) RU.push(this.value());
+        return this.depth--, RU
       }
-      map(DD) {
+      map(UU) {
         this.enter();
-        const CD = {};
-        for (let cD = 0; cD < DD; cD++) {
-          const DD = this.value(),
-            cD = this.value();
-          CD["__proto__" === DD ? "__proto_" : String(DD)] = cD
+        const RU = {};
+        for (let gU = 0; gU < UU; gU++) {
+          const UU = this.value(),
+            gU = this.value();
+          RU["__proto__" === UU ? "__proto_" : String(UU)] = gU
         }
-        return this.depth--, CD
+        return this.depth--, RU
       }
-      ext(DD) {
-        const CD = this.view.getInt8(this.take(1)),
-          cD = this.take(DD);
-        if (0 !== CD) {
-          if (-1 === CD) {
-            if (1 === DD) return new Date(NaN);
-            if (4 === DD) return new Date(1e3 * this.view.getUint32(cD, !1));
-            if (8 === DD) {
-              const DD = this.view.getUint32(cD, !1),
-                CD = DD >>> 2,
-                ID = 4294967296 * (3 & DD) + this.view.getUint32(cD + 4, !1);
-              return new Date(1e3 * ID + CD / 1e6)
+      ext(UU) {
+        const RU = this.view.getInt8(this.take(1)),
+          gU = this.take(UU);
+        if (0 !== RU) {
+          if (-1 === RU) {
+            if (1 === UU) return new Date(NaN);
+            if (4 === UU) return new Date(1e3 * this.view.getUint32(gU, !1));
+            if (8 === UU) {
+              const UU = this.view.getUint32(gU, !1),
+                RU = UU >>> 2,
+                tU = 4294967296 * (3 & UU) + this.view.getUint32(gU + 4, !1);
+              return new Date(1e3 * tU + RU / 1e6)
             }
-            if (12 === DD) {
-              const DD = this.view.getUint32(cD, !1),
-                CD = 4294967296 * this.view.getInt32(cD + 4, !1) + this.view.getUint32(cD + 8, !1);
-              return new Date(1e3 * CD + DD / 1e6)
+            if (12 === UU) {
+              const UU = this.view.getUint32(gU, !1),
+                RU = 4294967296 * this.view.getInt32(gU + 4, !1) + this.view.getUint32(gU + 8, !1);
+              return new Date(1e3 * RU + UU / 1e6)
             }
           }
-          throw new Error(`msgpack: ext type ${CD} of ${DD} bytes`)
+          throw new Error(`msgpack: ext type ${RU} of ${UU} bytes`)
         }
       }
     }
-    const fD = new TextEncoder,
-      bD = -(2n ** 63n),
-      QD = 2n ** 63n - 1n,
-      wD = 2n ** 64n - 1n;
+    const PU = new TextEncoder,
+      TU = -(2n ** 63n),
+      qU = 2n ** 63n - 1n,
+      KU = 2n ** 64n - 1n;
 
-    function SD(DD) {
-      const CD = new BD;
-      return CD.value(DD, 0), CD.bytes()
+    function cU(UU) {
+      const RU = new GU;
+      return RU.value(UU, 0), RU.bytes()
     }
-    class BD {
+    class GU {
       constructor() {
         this.buf = new Uint8Array(64), this.view = new DataView(this.buf.buffer), this.at = 0
       }
       bytes() {
         return this.buf.subarray(0, this.at)
       }
-      value(DD, CD) {
-        if (CD > 512) throw new Error("msgpack: nested too deep");
-        switch (typeof DD) {
+      value(UU, RU) {
+        if (RU > 512) throw new Error("msgpack: nested too deep");
+        switch (typeof UU) {
           case "undefined":
             return this.u8(212), this.u8(0), void this.u8(0);
           case "boolean":
-            return void this.u8(DD ? 195 : 194);
+            return void this.u8(UU ? 195 : 194);
           case "number":
-            return void this.number(DD);
+            return void this.number(UU);
           case "bigint":
-            return void this.bigint(DD);
+            return void this.bigint(UU);
           case "string":
-            return void this.string(DD);
+            return void this.string(UU);
           case "object":
-            if (null === DD) this.u8(192);
-            else if (DD instanceof Uint8Array) this.head(DD.length, 196, -1, 197, 198), this.room(DD.length), this.buf.set(DD, this.at), this.at += DD.length;
-            else if (Array.isArray(DD)) {
-              this.head(DD.length, 220, 144, 220, 221);
-              for (const cD of DD) this.value(cD, CD + 1)
+            if (null === UU) this.u8(192);
+            else if (UU instanceof Uint8Array) this.head(UU.length, 196, -1, 197, 198), this.room(UU.length), this.buf.set(UU, this.at), this.at += UU.length;
+            else if (Array.isArray(UU)) {
+              this.head(UU.length, 220, 144, 220, 221);
+              for (const gU of UU) this.value(gU, RU + 1)
             } else {
-              var cD, ID;
-              if (Object.getPrototypeOf(DD) !== Object.prototype && null !== Object.getPrototypeOf(DD)) throw new Error(`msgpack: can't encode a ${null!==(cD=null===(ID=DD.constructor)||void 0===ID?void 0:ID.name)&&void 0!==cD?cD:"object"}`);
+              var gU, tU;
+              if (Object.getPrototypeOf(UU) !== Object.prototype && null !== Object.getPrototypeOf(UU)) throw new Error(`msgpack: can't encode a ${null!==(gU=null===(tU=UU.constructor)||void 0===tU?void 0:tU.name)&&void 0!==gU?gU:"object"}`);
               {
-                const cD = Object.keys(DD);
-                this.head(cD.length, 222, 128, 222, 223);
-                for (const ID of cD) this.string(ID), this.value(DD[ID], CD + 1)
+                const gU = Object.keys(UU);
+                this.head(gU.length, 222, 128, 222, 223);
+                for (const tU of gU) this.string(tU), this.value(UU[tU], RU + 1)
               }
             }
             return;
           default:
-            throw new Error("msgpack: can't encode a " + typeof DD)
+            throw new Error("msgpack: can't encode a " + typeof UU)
         }
       }
-      number(DD) {
-        Number.isInteger(DD) && DD >= -2147483648 && DD <= 4294967295 ? DD >= 0 ? DD < 128 ? this.u8(DD) : DD < 256 ? (this.u8(204), this.u8(DD)) : DD < 65536 ? (this.u8(205), this.u16(DD)) : (this.u8(206), this.u32(DD)) : DD >= -32 ? this.u8(DD + 256) : DD >= -128 ? (this.u8(208), this.u8(DD + 256)) : DD >= -32768 ? (this.u8(209), this.u16(DD + 65536)) : (this.u8(210), this.u32(DD >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, DD, !1), this.at += 8)
+      number(UU) {
+        Number.isInteger(UU) && UU >= -2147483648 && UU <= 4294967295 ? UU >= 0 ? UU < 128 ? this.u8(UU) : UU < 256 ? (this.u8(204), this.u8(UU)) : UU < 65536 ? (this.u8(205), this.u16(UU)) : (this.u8(206), this.u32(UU)) : UU >= -32 ? this.u8(UU + 256) : UU >= -128 ? (this.u8(208), this.u8(UU + 256)) : UU >= -32768 ? (this.u8(209), this.u16(UU + 65536)) : (this.u8(210), this.u32(UU >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, UU, !1), this.at += 8)
       }
-      bigint(DD) {
-        const CD = DD >= bD && DD <= QD;
-        if (!CD && (DD < 0n || DD > wD)) throw new Error("msgpack: a BigInt past 64 bits");
-        this.u8(CD ? 211 : 207), this.room(8), CD ? this.view.setBigInt64(this.at, DD, !1) : this.view.setBigUint64(this.at, DD, !1), this.at += 8
+      bigint(UU) {
+        const RU = UU >= TU && UU <= qU;
+        if (!RU && (UU < 0n || UU > KU)) throw new Error("msgpack: a BigInt past 64 bits");
+        this.u8(RU ? 211 : 207), this.room(8), RU ? this.view.setBigInt64(this.at, UU, !1) : this.view.setBigUint64(this.at, UU, !1), this.at += 8
       }
-      string(DD) {
-        const CD = fD.encode(DD);
-        this.head(CD.length, 217, 160, 218, 219), this.room(CD.length), this.buf.set(CD, this.at), this.at += CD.length
+      string(UU) {
+        const RU = PU.encode(UU);
+        this.head(RU.length, 217, 160, 218, 219), this.room(RU.length), this.buf.set(RU, this.at), this.at += RU.length
       }
-      head(DD, CD, cD, ID, pD) {
-        cD >= 0 && DD < (160 === cD ? 32 : 16) ? this.u8(cD | DD) : CD !== ID && DD < 256 ? (this.u8(CD), this.u8(DD)) : DD < 65536 ? (this.u8(ID), this.u16(DD)) : (this.u8(pD), this.u32(DD))
+      head(UU, RU, gU, tU, pU) {
+        gU >= 0 && UU < (160 === gU ? 32 : 16) ? this.u8(gU | UU) : RU !== tU && UU < 256 ? (this.u8(RU), this.u8(UU)) : UU < 65536 ? (this.u8(tU), this.u16(UU)) : (this.u8(pU), this.u32(UU))
       }
-      room(DD) {
-        if (this.at + DD <= this.buf.length) return;
-        let CD = 2 * this.buf.length;
-        for (; CD < this.at + DD;) CD *= 2;
-        const cD = new Uint8Array(CD);
-        cD.set(this.buf.subarray(0, this.at)), this.buf = cD, this.view = new DataView(cD.buffer)
+      room(UU) {
+        if (this.at + UU <= this.buf.length) return;
+        let RU = 2 * this.buf.length;
+        for (; RU < this.at + UU;) RU *= 2;
+        const gU = new Uint8Array(RU);
+        gU.set(this.buf.subarray(0, this.at)), this.buf = gU, this.view = new DataView(gU.buffer)
       }
-      u8(DD) {
-        this.room(1), this.buf[this.at++] = DD
+      u8(UU) {
+        this.room(1), this.buf[this.at++] = UU
       }
-      u16(DD) {
-        this.room(2), this.view.setUint16(this.at, DD, !1), this.at += 2
+      u16(UU) {
+        this.room(2), this.view.setUint16(this.at, UU, !1), this.at += 2
       }
-      u32(DD) {
-        this.room(4), this.view.setUint32(this.at, DD, !1), this.at += 4
+      u32(UU) {
+        this.room(4), this.view.setUint32(this.at, UU, !1), this.at += 4
       }
     }
   },
-  39725: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => fD
+  40007: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => PU
     });
-    var ID = cD(39711);
-    const pD = new TextDecoder("utf-8", {
+    var tU = gU(39991);
+    const pU = new TextDecoder("utf-8", {
       ignoreBOM: !0
     });
-    class iD {
-      constructor(DD) {
-        this.buf = DD, this.at = 0, this.view = null
+    class EU {
+      constructor(UU) {
+        this.buf = UU, this.at = 0, this.view = null
       }
       bool() {
         return 0 !== this.u8()
       }
       long() {
-        let DD = this.u8(),
-          CD = 127 & DD,
-          cD = 128;
-        for (; 128 & DD;) {
-          if (cD > 2 ** 63) throw new RangeError("avro: varint too long");
-          DD = this.u8(), CD += (127 & DD) * cD, cD *= 128
+        let UU = this.u8(),
+          RU = 127 & UU,
+          gU = 128;
+        for (; 128 & UU;) {
+          if (gU > 2 ** 63) throw new RangeError("avro: varint too long");
+          UU = this.u8(), RU += (127 & UU) * gU, gU *= 128
         }
-        return CD % 2 === 1 ? -(CD + 1) / 2 : CD / 2
+        return RU % 2 === 1 ? -(RU + 1) / 2 : RU / 2
       }
       float() {
-        const DD = this.take(4);
-        return this.floats().getFloat32(DD, !0)
+        const UU = this.take(4);
+        return this.floats().getFloat32(UU, !0)
       }
       double() {
-        const DD = this.take(8);
-        return this.floats().getFloat64(DD, !0)
+        const UU = this.take(8);
+        return this.floats().getFloat64(UU, !0)
       }
       str() {
-        const DD = this.size(),
-          CD = this.take(DD),
-          cD = CD + DD;
-        if (DD <= 32) {
-          let DD = "";
-          for (let ID = CD; ID < cD; ID++) {
-            const iD = this.buf[ID];
-            if (iD >= 128) return pD.decode(this.buf.subarray(CD, cD));
-            DD += String.fromCharCode(iD)
+        const UU = this.size(),
+          RU = this.take(UU),
+          gU = RU + UU;
+        if (UU <= 32) {
+          let UU = "";
+          for (let tU = RU; tU < gU; tU++) {
+            const EU = this.buf[tU];
+            if (EU >= 128) return pU.decode(this.buf.subarray(RU, gU));
+            UU += String.fromCharCode(EU)
           }
-          return DD
+          return UU
         }
-        return pD.decode(this.buf.subarray(CD, cD))
+        return pU.decode(this.buf.subarray(RU, gU))
       }
       bytes() {
         return this.fixed(this.size())
       }
-      fixed(DD) {
-        const CD = this.take(DD);
-        return this.buf.slice(CD, CD + DD)
+      fixed(UU) {
+        const RU = this.take(UU);
+        return this.buf.slice(RU, RU + UU)
       }
-      index(DD) {
-        const CD = this.long();
-        if (!(CD >= 0 && CD < DD)) throw new RangeError(`avro: index ${CD} of ${DD}`);
-        return CD
+      index(UU) {
+        const RU = this.long();
+        if (!(RU >= 0 && RU < UU)) throw new RangeError(`avro: index ${RU} of ${UU}`);
+        return RU
       }
-      Tt(DD) {
-        const CD = [];
-        for (let cD = this.long(); 0 !== cD; cD = this.long()) {
-          cD = this.block(cD);
-          for (let ID = 0; ID < cD; ID++) CD.push(DD(this))
+      EC(UU) {
+        const RU = [];
+        for (let gU = this.long(); 0 !== gU; gU = this.long()) {
+          gU = this.block(gU);
+          for (let tU = 0; tU < gU; tU++) RU.push(UU(this))
         }
-        return CD
+        return RU
       }
-      map(DD) {
-        const CD = {};
-        for (let cD = this.long(); 0 !== cD; cD = this.long()) {
-          cD = this.block(cD);
-          for (let ID = 0; ID < cD; ID++) {
-            CD[this.str()] = DD(this)
+      map(UU) {
+        const RU = {};
+        for (let gU = this.long(); 0 !== gU; gU = this.long()) {
+          gU = this.block(gU);
+          for (let tU = 0; tU < gU; tU++) {
+            RU[this.str()] = UU(this)
           }
         }
-        return CD
+        return RU
       }
       end() {
         if (this.at !== this.buf.length) throw new RangeError(`avro: ${this.buf.length-this.at} bytes after the value`)
       }
-      block(DD) {
-        let CD = DD;
-        if (CD < 0 && (CD = -CD, this.long()), CD > this.buf.length - this.at) throw new RangeError(`avro: block of ${CD} items in ${this.buf.length-this.at} bytes`);
-        return CD
+      block(UU) {
+        let RU = UU;
+        if (RU < 0 && (RU = -RU, this.long()), RU > this.buf.length - this.at) throw new RangeError(`avro: block of ${RU} items in ${this.buf.length-this.at} bytes`);
+        return RU
       }
       floats() {
         return this.view ??= new DataView(this.buf.buffer, this.buf.byteOffset, this.buf.byteLength), this.view
       }
       size() {
-        const DD = this.long();
-        if (DD < 0) throw new RangeError(`avro: length ${DD}`);
-        return DD
+        const UU = this.long();
+        if (UU < 0) throw new RangeError(`avro: length ${UU}`);
+        return UU
       }
       u8() {
-        const DD = this.buf[this.at];
-        if (void 0 === DD) throw new RangeError("avro: truncated");
-        return this.at++, DD
+        const UU = this.buf[this.at];
+        if (void 0 === UU) throw new RangeError("avro: truncated");
+        return this.at++, UU
       }
-      take(DD) {
-        const CD = this.at;
-        if (DD > this.buf.length - CD) throw new RangeError("avro: truncated");
-        return this.at = CD + DD, CD
+      take(UU) {
+        const RU = this.at;
+        if (UU > this.buf.length - RU) throw new RangeError("avro: truncated");
+        return this.at = RU + UU, RU
       }
     }
 
-    function fD(DD, CD) {
-      const cD = new iD(CD),
-        pD = (0, ID.qb)(DD, cD);
-      return cD.end(), pD
+    function PU(UU, RU) {
+      const gU = new EU(RU),
+        pU = (0, tU.ob)(UU, gU);
+      return gU.end(), pU
     }
   },
-  39711: (DD, CD, cD) => {
-    cD.d(CD, {
-      B: () => XD,
-      F: () => yD,
-      J: () => wD,
-      K: () => fD,
-      L: () => xD,
-      M: () => pD,
-      P: () => bD,
-      Q: () => MD,
-      U: () => HD,
-      X: () => PD,
-      _: () => nD,
-      bb: () => SD,
-      cb: () => BD,
-      d: () => mD,
-      fb: () => UD,
-      h: () => oD,
-      hb: () => tD,
-      l: () => vD,
-      lb: () => gD,
-      nb: () => ZD,
-      ob: () => QD,
-      p: () => ND,
-      qb: () => qD,
-      t: () => OD,
-      x: () => ID,
-      y: () => iD
+  39991: (UU, RU, gU) => {
+    gU.d(RU, {
+      $: () => cU,
+      B: () => jU,
+      C: () => KU,
+      D: () => PU,
+      H: () => oU,
+      K: () => pU,
+      N: () => TU,
+      Q: () => uU,
+      S: () => nU,
+      W: () => wU,
+      X: () => IU,
+      ab: () => GU,
+      b: () => mU,
+      db: () => bU,
+      f: () => QU,
+      fb: () => CU,
+      i: () => eU,
+      ib: () => fU,
+      l: () => WU,
+      lb: () => hU,
+      nb: () => qU,
+      ob: () => ZU,
+      p: () => JU,
+      t: () => tU,
+      v: () => EU,
+      y: () => xU
     });
-    const ID = 2,
-      pD = 12,
-      iD = 27,
-      fD = 40,
-      bD = 52,
-      QD = 59,
-      wD = 63,
-      SD = 83,
-      BD = 84,
-      yD = 89,
-      MD = 91,
-      tD = 93,
-      ZD = 94,
-      oD = 95,
-      vD = 97,
-      ND = 101,
-      gD = 102,
-      XD = 73,
-      mD = 16,
-      nD = 86,
-      OD = 60,
-      PD = 17,
-      HD = 56,
-      UD = 100,
-      xD = 81;
+    const tU = 2,
+      pU = 12,
+      EU = 27,
+      PU = 40,
+      TU = 52,
+      qU = 59,
+      KU = 63,
+      cU = 83,
+      GU = 84,
+      jU = 89,
+      uU = 91,
+      CU = 93,
+      hU = 94,
+      QU = 95,
+      eU = 97,
+      WU = 101,
+      fU = 102,
+      xU = 73,
+      mU = 16,
+      IU = 86,
+      JU = 60,
+      wU = 17,
+      nU = 56,
+      bU = 100,
+      oU = 81;
 
-    function qD(DD, CD) {
-      switch (DD) {
-        case ID:
-          return function(DD) {
+    function ZU(UU, RU) {
+      switch (UU) {
+        case tU:
+          return function(UU) {
             return {
-              Vi: uD(DD),
-              zi: DD.float(),
-              ji: DD.long()
+              VE: DU(UU),
+              rE: UU.float(),
+              XE: UU.long()
             }
-          }(CD);
-        case pD:
-          return function(DD) {
+          }(RU);
+        case pU:
+          return function(UU) {
             return {
-              DD: zD(DD),
-              CD: zD(DD)
+              UU: rU(UU),
+              RU: rU(UU)
             }
-          }(CD);
-        case iD:
-          return function(DD) {
+          }(RU);
+        case EU:
+          return function(UU) {
             return {
-              wC: DD.bool(),
-              SC: zD(DD)
+              qR: UU.bool(),
+              KR: rU(UU)
             }
-          }(CD);
-        case fD:
-          return CD.str();
-        case bD:
-          return function(DD) {
+          }(RU);
+        case PU:
+          return RU.str();
+        case TU:
+          return function(UU) {
             return {
-              id: DD.long(),
-              UD: fC(DD)
+              id: UU.long(),
+              nU: PR(UU)
             }
-          }(CD);
-        case QD:
-        case wD:
-          return CD.str();
-        case SD:
-        case BD:
-          return CD.long();
-        case yD:
-          return function(DD) {
+          }(RU);
+        case qU:
+        case KU:
+          return RU.str();
+        case cU:
+        case GU:
+          return RU.long();
+        case jU:
+          return function(UU) {
             return {
-              pI: DD.long(),
-              iI: DD.bool(),
-              fI: DD.float()
+              Og: UU.long(),
+              Ut: UU.bool(),
+              Rt: UU.float()
             }
-          }(CD);
-        case MD:
-          return CD.long();
-        case tD:
-          return function(DD) {
+          }(RU);
+        case uU:
+          return RU.long();
+        case CU:
+          return function(UU) {
             return {
-              rC: DD.bool(),
-              AC: wC(DD)
+              DR: UU.bool(),
+              LR: KR(UU)
             }
-          }(CD);
-        case ZD:
-          return function(DD) {
+          }(RU);
+        case hU:
+          return function(UU) {
             return {
-              id: DD.str(),
-              position: QC(DD),
-              rp: SC(DD),
-              style: RD(DD),
-              Fp: DD.bool()
+              id: UU.str(),
+              position: qR(UU),
+              gE: cR(UU),
+              style: sU(UU),
+              pE: UU.bool()
             }
-          }(CD);
-        case oD:
-          return function(DD) {
+          }(RU);
+        case QU:
+          return function(UU) {
             return {
-              id: zD(DD)
+              id: rU(UU)
             }
-          }(CD);
-        case vD:
-          return function(DD) {
+          }(RU);
+        case eU:
+          return function(UU) {
             return {
-              tC: DD.long(),
-              ZC: DD.str(),
-              oC: pC(DD),
-              vC: pC(DD),
-              NC: zD(DD),
-              gC: zD(DD),
-              XC: zD(DD),
-              mC: zD(DD),
-              nC: zD(DD),
-              OC: pC(DD),
-              PC: pC(DD),
-              HC: zD(DD),
-              UC: zD(DD),
-              xC: zD(DD)
+              uR: UU.long(),
+              CR: UU.str(),
+              hR: pR(UU),
+              QR: pR(UU),
+              eR: rU(UU),
+              WR: rU(UU),
+              fR: rU(UU),
+              xR: rU(UU),
+              mR: rU(UU),
+              IR: pR(UU),
+              JR: pR(UU),
+              wR: rU(UU),
+              nR: rU(UU),
+              bR: rU(UU)
             }
-          }(CD);
-        case ND:
-          return CD.str();
-        case gD:
-          return CD.long();
-        case XD:
-          return function(DD) {
+          }(RU);
+        case WU:
+          return RU.str();
+        case fU:
+          return RU.long();
+        case xU:
+          return function(UU) {
             return {
-              Yc: DD.long(),
-              Wc: DD.str(),
-              sc: DD.float()
+              sg: UU.long(),
+              yg: UU.str(),
+              kg: UU.float()
             }
-          }(CD);
-        case mD:
-          return function(DD) {
+          }(RU);
+        case mU:
+          return function(UU) {
             return {
-              ki: DD.bool(),
-              Yi: zD(DD),
-              Wi: DD.str(),
-              si: yC(DD),
-              Ei: yC(DD),
-              ui: DD.bool(),
-              Ai: DD.long(),
-              Fi: MC(DD)
+              yE: UU.bool(),
+              kE: rU(UU),
+              FE: UU.str(),
+              iE: jR(UU),
+              AE: jR(UU),
+              zE: UU.bool(),
+              ME: UU.long(),
+              DE: uR(UU)
             }
-          }(CD);
-        case nD:
-          return function(DD) {
+          }(RU);
+        case IU:
+          return function(UU) {
             return {
-              np: zD(DD)
+              ap: rU(UU)
             }
-          }(CD);
-        case OD:
-          return function(DD) {
+          }(RU);
+        case JU:
+          return function(UU) {
             return {
-              IC: DD.str(),
-              pC: DD.str(),
-              iC: tC(DD),
-              fC: DD.str(),
-              bC: AD(DD),
-              QC: DD.float()
+              gR: UU.str(),
+              tR: UU.str(),
+              pR: CR(UU),
+              ER: UU.str(),
+              PR: lU(UU),
+              TR: UU.float()
             }
-          }(CD);
-        case PD:
-          return function(DD) {
+          }(RU);
+        case wU:
+          return function(UU) {
             return {
-              IC: DD.str(),
-              pC: DD.str(),
-              iC: tC(DD)
+              gR: UU.str(),
+              tR: UU.str(),
+              pR: CR(UU)
             }
-          }(CD);
-        case HD:
-          return function(DD) {
-            return DD.Tt(ZC)
-          }(CD);
-        case UD:
-          return function(DD) {
+          }(RU);
+        case nU:
+          return function(UU) {
+            return UU.EC(hR)
+          }(RU);
+        case bU:
+          return function(UU) {
             return {
-              bI: vC(DD),
-              yI: YD(DD)
+              gt: eR(UU),
+              qt: FU(UU)
             }
-          }(CD);
-        case xD:
-          return function(DD) {
+          }(RU);
+        case oU:
+          return function(UU) {
             return {
-              MI: DD.bool(),
-              tI: zD(DD),
-              ZI: gC(DD),
-              vI: jC(DD)
+              Kt: UU.bool(),
+              ct: rU(UU),
+              Gt: fR(UU),
+              ut: XR(UU)
             }
-          }(CD);
+          }(RU);
         default:
-          throw new Error(`no reader for to-client message ${DD}`)
+          throw new Error(`no reader for to-client message ${UU}`)
       }
     }
 
-    function JD(DD) {
+    function aU(UU) {
       return {
-        entityName: DD.str()
+        entityName: UU.str()
       }
     }
 
-    function KD(DD) {
-      const CD = DD.index(4);
-      return 0 === CD ? DD.str() : 1 === CD ? DD.long() : 2 === CD ? DD.bool() : JD(DD)
+    function YU(UU) {
+      const RU = UU.index(4);
+      return 0 === RU ? UU.str() : 1 === RU ? UU.long() : 2 === RU ? UU.bool() : aU(UU)
     }
 
-    function aD(DD) {
-      return 0 === DD.index(2) ? null : function(DD) {
-        return DD.map(KD)
-      }(DD)
+    function BU(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
+        return UU.map(YU)
+      }(UU)
     }
 
-    function VD(DD) {
+    function VU(UU) {
       return {
-        translationKey: DD.str(),
-        params: aD(DD)
+        translationKey: UU.str(),
+        params: BU(UU)
       }
     }
 
-    function zD(DD) {
-      return 0 === DD.index(2) ? null : DD.str()
+    function rU(UU) {
+      return 0 === UU.index(2) ? null : UU.str()
     }
 
-    function jD(DD) {
-      return 0 === DD.index(2) ? null : function(DD) {
+    function XU(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
         return {
-          color: zD(DD),
-          colour: zD(DD),
-          fontSize: zD(DD)
+          color: rU(UU),
+          colour: rU(UU),
+          fontSize: rU(UU)
         }
-      }(DD)
+      }(UU)
     }
 
-    function lD(DD) {
+    function vU(UU) {
       return {
-        icon: DD.str(),
-        style: jD(DD)
+        icon: UU.str(),
+        style: XU(UU)
       }
     }
 
-    function LD(DD) {
-      const CD = DD.index(3);
-      return 0 === CD ? {
-        string: DD.str()
-      } : 1 === CD ? {
-        styledEntityName: JD(DD)
+    function dU(UU) {
+      const RU = UU.index(3);
+      return 0 === RU ? {
+        string: UU.str()
+      } : 1 === RU ? {
+        styledEntityName: aU(UU)
       } : {
-        styledTranslatedText: VD(DD)
+        styledTranslatedText: VU(UU)
       }
     }
 
-    function TD(DD) {
-      const CD = DD.index(3);
-      return 0 === CD ? null : 1 === CD ? DD.str() : DD.long()
+    function HU(UU) {
+      const RU = UU.index(3);
+      return 0 === RU ? null : 1 === RU ? UU.str() : UU.long()
     }
 
-    function GD(DD) {
-      return 0 === DD.index(2) ? null : DD.float()
+    function SU(UU) {
+      return 0 === UU.index(2) ? null : UU.float()
     }
 
-    function RD(DD) {
-      return 0 === DD.index(2) ? null : function(DD) {
+    function sU(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
         return {
-          color: zD(DD),
-          colour: zD(DD),
-          fontWeight: TD(DD),
-          fontStyle: zD(DD),
-          fontSize: zD(DD),
-          opacity: GD(DD)
+          color: rU(UU),
+          colour: rU(UU),
+          fontWeight: HU(UU),
+          fontStyle: rU(UU),
+          fontSize: rU(UU),
+          opacity: SU(UU)
         }
-      }(DD)
+      }(UU)
     }
 
-    function kD(DD) {
+    function yU(UU) {
       return {
-        str: LD(DD),
-        style: RD(DD),
-        clickableUrl: zD(DD)
+        str: dU(UU),
+        style: sU(UU),
+        clickableUrl: rU(UU)
       }
     }
 
-    function dD(DD) {
-      return DD.str()
+    function kU(UU) {
+      return UU.str()
     }
 
-    function YD(DD) {
-      return DD.Tt(dD)
+    function FU(UU) {
+      return UU.EC(kU)
     }
 
-    function WD(DD) {
-      return 0 === DD.index(2) ? null : YD(DD)
+    function iU(UU) {
+      return 0 === UU.index(2) ? null : FU(UU)
     }
 
-    function sD(DD) {
+    function AU(UU) {
       return {
-        type: DD.str(),
-        progress: DD.float(),
-        width: zD(DD),
-        height: zD(DD),
-        colours: WD(DD),
-        backgroundColour: zD(DD)
+        type: UU.str(),
+        progress: UU.float(),
+        width: rU(UU),
+        height: rU(UU),
+        colours: iU(UU),
+        backgroundColour: rU(UU)
       }
     }
 
-    function ED(DD) {
+    function zU(UU) {
       return {
-        type: DD.str(),
-        action: DD.str(),
-        style: RD(DD)
+        type: UU.str(),
+        action: UU.str(),
+        style: sU(UU)
       }
     }
 
-    function eD(DD) {
-      const CD = DD.index(7);
-      return 0 === CD ? {
-        string: DD.str()
-      } : 1 === CD ? {
-        entityName: JD(DD)
-      } : 2 === CD ? {
-        translatedText: VD(DD)
-      } : 3 === CD ? {
-        styledIcon: lD(DD)
-      } : 4 === CD ? {
-        jD: kD(DD)
-      } : 5 === CD ? {
-        styledProgressBar: sD(DD)
+    function MU(UU) {
+      const RU = UU.index(7);
+      return 0 === RU ? {
+        string: UU.str()
+      } : 1 === RU ? {
+        entityName: aU(UU)
+      } : 2 === RU ? {
+        translatedText: VU(UU)
+      } : 3 === RU ? {
+        styledIcon: vU(UU)
+      } : 4 === RU ? {
+        rU: yU(UU)
+      } : 5 === RU ? {
+        styledProgressBar: AU(UU)
       } : {
-        styledKeyBinding: ED(DD)
+        styledKeyBinding: zU(UU)
       }
     }
 
-    function uD(DD) {
-      return DD.Tt(eD)
+    function DU(UU) {
+      return UU.EC(MU)
     }
-    const hD = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
+    const LU = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
 
-    function rD(DD) {
-      return hD[DD.index(5)]
-    }
-
-    function AD(DD) {
-      return 0 === DD.index(2) ? null : DD.double()
+    function NU(UU) {
+      return LU[UU.index(5)]
     }
 
-    function FD(DD) {
-      return 0 === DD.index(2) ? null : function(DD) {
+    function lU(UU) {
+      return 0 === UU.index(2) ? null : UU.double()
+    }
+
+    function OU(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
         return {
-          KD: AD(DD),
-          aD: DD.double(),
-          VD: DD.double(),
-          zD: DD.bool(),
-          description: uD(DD),
-          LD: DD.str(),
-          scale: AD(DD),
-          rotation: AD(DD)
+          aU: lU(UU),
+          YU: UU.double(),
+          BU: UU.double(),
+          VU: UU.bool(),
+          description: DU(UU),
+          vU: UU.str(),
+          scale: lU(UU),
+          rotation: lU(UU)
         }
-      }(DD)
+      }(UU)
     }
 
-    function DC(DD) {
-      return 0 === DD.index(2) ? null : DD.bool()
+    function UR(UU) {
+      return 0 === UU.index(2) ? null : UU.bool()
     }
 
-    function CC(DD) {
-      return 0 === DD.index(2) ? null : function(DD) {
+    function RR(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
         return {
-          GD: DD.double(),
-          icon: DD.str(),
-          label: uD(DD),
-          RD: DD.bool(),
-          scale: AD(DD),
-          rotation: AD(DD),
-          kD: DC(DD)
+          HU: UU.double(),
+          icon: UU.str(),
+          label: DU(UU),
+          SU: UU.bool(),
+          scale: lU(UU),
+          rotation: lU(UU),
+          sU: UR(UU)
         }
-      }(DD)
+      }(UU)
     }
 
-    function cC(DD) {
-      return 0 === DD.index(2) ? null : function(DD) {
+    function gR(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
         return {
-          KD: AD(DD),
-          YD: DD.double(),
-          WD: DD.double(),
-          sD: DD.double(),
-          gravity: DD.double(),
-          ED: DD.double(),
-          eD: DD.double(),
-          uD: DD.double(),
-          zD: DD.bool(),
-          description: uD(DD),
-          icon: zD(DD)
+          aU: lU(UU),
+          kU: UU.double(),
+          FU: UU.double(),
+          iU: UU.double(),
+          gravity: UU.double(),
+          AU: UU.double(),
+          zU: UU.double(),
+          MU: UU.double(),
+          VU: UU.bool(),
+          description: DU(UU),
+          icon: rU(UU)
         }
-      }(DD)
+      }(UU)
     }
 
-    function IC(DD) {
-      return 0 === DD.index(2) ? null : function(DD) {
+    function tR(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
         return {
-          speed: DD.double(),
-          rD: DD.double(),
-          label: uD(DD),
-          icon: zD(DD),
-          scale: AD(DD),
-          rotation: AD(DD)
+          speed: UU.double(),
+          LU: UU.double(),
+          label: DU(UU),
+          icon: rU(UU),
+          scale: lU(UU),
+          rotation: lU(UU)
         }
-      }(DD)
+      }(UU)
     }
 
-    function pC(DD) {
-      return 0 === DD.index(2) ? null : DD.long()
+    function pR(UU) {
+      return 0 === UU.index(2) ? null : UU.long()
     }
 
-    function iC(DD) {
-      return 0 === DD.index(2) ? null : function(DD) {
+    function ER(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
         return {
-          FD: DD.long(),
-          DC: DD.double(),
-          CC: DD.double(),
-          cC: pC(DD),
-          label: uD(DD),
-          icon: zD(DD)
+          lU: UU.long(),
+          OU: UU.double(),
+          UR: UU.double(),
+          RR: pR(UU),
+          label: DU(UU),
+          icon: rU(UU)
         }
-      }(DD)
+      }(UU)
     }
 
-    function fC(DD) {
+    function PR(UU) {
       return {
-        type: rD(DD),
-        progressBar: FD(DD),
-        timedClick: CC(DD),
-        gravityBar: cC(DD),
-        precisionBar: IC(DD),
-        rhythmClick: iC(DD)
+        type: NU(UU),
+        progressBar: OU(UU),
+        timedClick: RR(UU),
+        gravityBar: gR(UU),
+        precisionBar: tR(UU),
+        rhythmClick: ER(UU)
       }
     }
 
-    function bC(DD) {
-      return DD.float()
+    function TR(UU) {
+      return UU.float()
     }
 
-    function QC(DD) {
-      return DD.Tt(bC)
+    function qR(UU) {
+      return UU.EC(TR)
     }
 
-    function wC(DD) {
-      return 0 === DD.index(2) ? null : QC(DD)
+    function KR(UU) {
+      return 0 === UU.index(2) ? null : qR(UU)
     }
 
-    function SC(DD) {
-      return 0 === DD.index(2) ? null : uD(DD)
+    function cR(UU) {
+      return 0 === UU.index(2) ? null : DU(UU)
     }
 
-    function BC(DD) {
-      return DD.long()
+    function GR(UU) {
+      return UU.long()
     }
 
-    function yC(DD) {
-      return 0 === DD.index(2) ? null : function(DD) {
-        return DD.Tt(BC)
-      }(DD)
+    function jR(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
+        return UU.EC(GR)
+      }(UU)
     }
 
-    function MC(DD) {
-      return 0 === DD.index(2) ? null : function(DD) {
+    function uR(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
         return {
-          Pc: DD.str(),
-          Kc: DD.long()
+          xg: UU.str(),
+          bg: UU.long()
         }
-      }(DD)
+      }(UU)
     }
 
-    function tC(DD) {
-      const CD = DD.index(3);
-      return 0 === CD ? null : 1 === CD ? DD.str() : VD(DD)
+    function CR(UU) {
+      const RU = UU.index(3);
+      return 0 === RU ? null : 1 === RU ? UU.str() : VU(UU)
     }
 
-    function ZC(DD) {
+    function hR(UU) {
       return {
-        Tc: DD.str(),
-        Gc: DD.str(),
-        Rc: DD.str()
+        rg: UU.str(),
+        Xg: UU.str(),
+        vg: UU.str()
       }
     }
 
-    function oC(DD) {
+    function QR(UU) {
       return {
-        QI: DD.str(),
-        wI: zD(DD),
-        SI: zD(DD),
-        BI: YD(DD)
+        tt: UU.str(),
+        Et: rU(UU),
+        Pt: rU(UU),
+        Tt: FU(UU)
       }
     }
 
-    function vC(DD) {
-      return DD.Tt(oC)
+    function eR(UU) {
+      return UU.EC(QR)
     }
 
-    function NC(DD) {
+    function WR(UU) {
       return {
-        oI: DD.str(),
-        x: DD.long(),
-        y: DD.long(),
-        z: DD.long()
+        jt: UU.str(),
+        x: UU.long(),
+        y: UU.long(),
+        z: UU.long()
       }
     }
 
-    function gC(DD) {
-      return DD.Tt(NC)
+    function fR(UU) {
+      return UU.EC(WR)
     }
 
-    function XC(DD) {
-      return 0 === DD.index(2) ? null : function(DD) {
+    function xR(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
         return {
-          GI: DD.float(),
-          RI: DD.long(),
-          kI: DD.long()
+          kt: UU.float(),
+          Ft: UU.long(),
+          zt: UU.long()
         }
-      }(DD)
+      }(UU)
     }
 
-    function mC(DD) {
+    function mR(UU) {
       return {
-        blockName: DD.str(),
-        KI: DD.bool(),
-        aI: DD.bool(),
-        VI: DD.bool(),
-        zI: DD.float(),
-        jI: DD.float(),
-        lI: DD.long(),
-        LI: XC(DD)
+        blockName: UU.str(),
+        Vt: UU.bool(),
+        rt: UU.bool(),
+        Xt: UU.bool(),
+        vt: UU.float(),
+        dt: UU.float(),
+        Ht: UU.long(),
+        St: xR(UU)
       }
     }
 
-    function nC(DD) {
-      return 0 === DD.index(2) ? null : function(DD) {
-        return DD.Tt(mC)
-      }(DD)
+    function IR(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
+        return UU.EC(mR)
+      }(UU)
     }
 
-    function OC(DD) {
+    function JR(UU) {
       return {
-        xI: DD.str(),
-        qI: nC(DD)
+        Zt: UU.str(),
+        Yt: IR(UU)
       }
     }
 
-    function PC(DD) {
+    function wR(UU) {
       return {
-        blockName: DD.str(),
-        frequency: DD.float()
+        blockName: UU.str(),
+        frequency: UU.float()
       }
     }
 
-    function HC(DD) {
-      return DD.Tt(PC)
+    function nR(UU) {
+      return UU.EC(wR)
     }
 
-    function UC(DD) {
+    function bR(UU) {
       return {
-        WI: DD.str(),
-        sI: DD.str(),
-        frequency: DD.float(),
-        EI: HC(DD)
+        Lt: UU.str(),
+        Nt: UU.str(),
+        frequency: UU.float(),
+        lt: nR(UU)
       }
     }
 
-    function xC(DD) {
-      return DD.Tt(UC)
+    function oR(UU) {
+      return UU.EC(bR)
     }
 
-    function qC(DD) {
+    function ZR(UU) {
       return {
-        blockName: DD.str(),
-        radius: DD.long(),
-        rI: DD.long(),
-        XI: DD.long(),
-        mI: DD.long(),
-        AI: DD.float()
+        blockName: UU.str(),
+        radius: UU.long(),
+        tp: UU.long(),
+        et: UU.long(),
+        Wt: UU.long(),
+        Ep: UU.float()
       }
     }
 
-    function JC(DD) {
-      return DD.Tt(qC)
+    function aR(UU) {
+      return UU.EC(ZR)
     }
 
-    function KC(DD) {
+    function YR(UU) {
       return {
-        XI: DD.long(),
-        mI: DD.long(),
-        nI: DD.long(),
-        OI: DD.bool(),
-        HI: OC(DD),
-        dI: xC(DD),
-        uI: JC(DD)
+        et: UU.long(),
+        Wt: UU.long(),
+        ft: UU.long(),
+        xt: UU.bool(),
+        Jt: JR(UU),
+        Mt: oR(UU),
+        Up: aR(UU)
       }
     }
 
-    function aC(DD) {
-      return DD.Tt(KC)
+    function BR(UU) {
+      return UU.EC(YR)
     }
 
-    function VC(DD) {
-      return 0 === DD.index(2) ? null : function(DD) {
+    function VR(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
         return {
-          name: DD.str(),
-          cp: zD(DD)
+          name: UU.str(),
+          Kp: rU(UU)
         }
-      }(DD)
+      }(UU)
     }
 
-    function zC(DD) {
-      return 0 === DD.index(2) ? null : function(DD) {
+    function rR(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
         return {
-          terrain: VC(DD),
-          Ip: JC(DD)
+          terrain: VR(UU),
+          cp: aR(UU)
         }
-      }(DD)
+      }(UU)
     }
 
-    function jC(DD) {
-      return 0 === DD.index(2) ? null : function(DD) {
+    function XR(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
         return {
-          layers: aC(DD),
-          FI: zC(DD)
+          layers: BR(UU),
+          Pp: rR(UU)
         }
-      }(DD)
+      }(UU)
     }
   },
-  39701: (DD, CD, cD) => {
-    cD.d(CD, {
-      D: () => HD,
-      G: () => OD,
-      I: () => JD,
-      M: () => XD,
-      P: () => mD,
-      Q: () => oD,
-      U: () => UD,
-      Y: () => aD,
-      ab: () => tD,
-      e: () => pD,
-      eb: () => zD,
-      i: () => VD,
-      ib: () => ND,
-      kb: () => vD,
-      m: () => KD,
-      ob: () => gD,
-      p: () => MD,
-      q: () => ZD,
-      rb: () => nD,
-      u: () => qD,
-      y: () => PD,
-      z: () => xD
+  39974: (UU, RU, gU) => {
+    gU.d(RU, {
+      $: () => WU,
+      A: () => nU,
+      D: () => JU,
+      H: () => aU,
+      K: () => xU,
+      O: () => mU,
+      Q: () => QU,
+      T: () => bU,
+      W: () => BU,
+      Z: () => CU,
+      _: () => rU,
+      db: () => eU,
+      e: () => pU,
+      fb: () => fU,
+      g: () => VU,
+      gb: () => IU,
+      h: () => YU,
+      k: () => uU,
+      o: () => hU,
+      r: () => ZU,
+      t: () => wU,
+      x: () => oU
     });
-    var ID = cD(2782);
-    const pD = {
+    var tU = gU(2683);
+    const pU = {
       Chat: 49,
       UiRequestResponded: 91,
       CodeCollab: 89,
@@ -1197,160 +1197,160 @@ export const modules = {
       UpdateNameTag: 53
     };
 
-    function iD(DD, CD) {
-      return !ArrayBuffer.isView(DD) || DD instanceof DataView ? Array.isArray(DD) ? DD.map((DD => CD(DD))) : DD : Array.from(DD, (DD => CD(DD)))
+    function EU(UU, RU) {
+      return !ArrayBuffer.isView(UU) || UU instanceof DataView ? Array.isArray(UU) ? UU.map((UU => RU(UU))) : UU : Array.from(UU, (UU => RU(UU)))
     }
 
-    function fD(DD) {
-      if ("string" !== typeof DD) return DD;
-      for (let CD = 0; CD < DD.length; CD++) {
-        const cD = DD.charCodeAt(CD);
-        if (cD >= 55296 && cD <= 57343) return QD.decode(bD.encode(DD))
+    function PU(UU) {
+      if ("string" !== typeof UU) return UU;
+      for (let RU = 0; RU < UU.length; RU++) {
+        const gU = UU.charCodeAt(RU);
+        if (gU >= 55296 && gU <= 57343) return qU.decode(TU.encode(UU))
       }
-      return DD
+      return UU
     }
-    const bD = new TextEncoder,
-      QD = new TextDecoder;
+    const TU = new TextEncoder,
+      qU = new TextDecoder;
 
-    function wD(DD) {
-      return DD
+    function KU(UU) {
+      return UU
     }
-    let SD;
+    let cU;
 
-    function BD(DD) {
-      return null === DD || "object" !== typeof DD ? DD : [fD(DD.wf), fD(DD.Sf)]
-    }
-
-    function yD(DD) {
-      return null === DD || "object" !== typeof DD ? DD : [iD(DD.si, wD), iD(DD.Lw, wD)]
+    function GU(UU) {
+      return null === UU || "object" !== typeof UU ? UU : [PU(UU.gP), PU(UU.tP)]
     }
 
-    function MD(DD) {
-      return null === (CD = DD) || "object" !== typeof CD ? CD : [fD(CD.Rf), fD(CD.kf)];
-      var CD
+    function jU(UU) {
+      return null === UU || "object" !== typeof UU ? UU : [EU(UU.iE, KU), EU(UU.CK, KU)]
     }
 
-    function tD(DD) {
-      return null === (CD = DD) || "object" !== typeof CD ? CD : [CD.id, CD.gf];
-      var CD
+    function uU(UU) {
+      return null === (RU = UU) || "object" !== typeof RU ? RU : [PU(RU.aP), PU(RU.YP)];
+      var RU
     }
 
-    function ZD(DD) {
-      return null === (CD = DD) || "object" !== typeof CD ? CD : [CD.tC, fD(CD.ZC), CD.oC, fD(CD.gC), CD.OC, CD.PC, CD.Lf, fD(CD.Tf), fD(CD.Gf)];
-      var CD
+    function CU(UU) {
+      return null === (RU = UU) || "object" !== typeof RU ? RU : [RU.id, RU.GP];
+      var RU
     }
 
-    function oD(DD) {
-      return null === (CD = DD) || "object" !== typeof CD ? CD : [iD(CD.PS, wD), CD.HS];
-      var CD
+    function hU(UU) {
+      return null === (RU = UU) || "object" !== typeof RU ? RU : [RU.uR, PU(RU.CR), RU.hR, PU(RU.WR), RU.IR, RU.JR, RU.bP, PU(RU.oP), PU(RU.ZP)];
+      var RU
     }
 
-    function vD(DD) {
-      return null === (CD = DD) || "object" !== typeof CD ? CD : [iD(CD.Kb, (DD => fD(DD))), fD(CD.Vb), CD.zb];
-      var CD
+    function QU(UU) {
+      return null === (RU = UU) || "object" !== typeof RU ? RU : [EU(RU.Rc, KU), RU.gc];
+      var RU
     }
 
-    function ND(DD) {
-      return null === (CD = DD) || "object" !== typeof CD ? CD : [iD(CD.Xf, wD), fD(CD.mf), CD.Pf];
-      var CD
+    function eU(UU) {
+      return null === (RU = UU) || "object" !== typeof RU ? RU : [EU(RU.CT, (UU => PU(UU))), PU(RU.hT), RU.QT];
+      var RU
     }
 
-    function gD(DD) {
-      return null === (CD = DD) || "object" !== typeof CD ? CD : [fD(CD.Gc), fD(CD.Rc)];
-      var CD
+    function WU(UU) {
+      return null === (RU = UU) || "object" !== typeof RU ? RU : [EU(RU.jP, KU), PU(RU.uP), RU.CP];
+      var RU
     }
 
-    function XD(DD) {
-      return null === (CD = DD) || "object" !== typeof CD ? CD : [fD(CD.Pb)];
-      var CD
+    function fU(UU) {
+      return null === (RU = UU) || "object" !== typeof RU ? RU : [PU(RU.Xg), PU(RU.vg)];
+      var RU
     }
 
-    function mD(DD) {
-      return fD(DD)
+    function xU(UU) {
+      return null === (RU = UU) || "object" !== typeof RU ? RU : [PU(RU.qT)];
+      var RU
     }
 
-    function nD(DD) {
-      return null === (CD = DD) || "object" !== typeof CD ? CD : [fD(CD.cB), fD(CD.IB), fD(CD.wf), fD(CD.Sf)];
-      var CD
+    function mU(UU) {
+      return PU(UU)
     }
 
-    function OD(DD) {
-      return BD(DD)
+    function IU(UU) {
+      return null === (RU = UU) || "object" !== typeof RU ? RU : [PU(RU.Vc), PU(RU.Xc), PU(RU.gP), PU(RU.tP)];
+      var RU
     }
 
-    function PD(DD) {
-      return BD(DD)
+    function JU(UU) {
+      return GU(UU)
     }
 
-    function HD(DD) {
-      return null === (CD = DD) || "object" !== typeof CD ? CD : [fD(CD.Yf)];
-      var CD
+    function wU(UU) {
+      return GU(UU)
     }
 
-    function UD(DD) {
-      return DD
+    function nU(UU) {
+      return null === (RU = UU) || "object" !== typeof RU ? RU : [PU(RU.BP)];
+      var RU
     }
 
-    function xD(DD) {
-      return null === (CD = DD) || "object" !== typeof CD ? CD : [fD(CD.Mf), fD(CD.tf)];
-      var CD
+    function bU(UU) {
+      return UU
     }
 
-    function qD(DD) {
-      return fD(DD)
+    function oU(UU) {
+      return null === (RU = UU) || "object" !== typeof RU ? RU : [PU(RU.PP), PU(RU.TP)];
+      var RU
     }
 
-    function JD(DD) {
-      return yD(DD)
+    function ZU(UU) {
+      return PU(UU)
     }
 
-    function KD(DD) {
-      return yD(DD)
+    function aU(UU) {
+      return jU(UU)
     }
 
-    function aD(DD) {
-      return null === (CD = DD) || "object" !== typeof CD ? CD : [fD(CD.qb)];
-      var CD
+    function YU(UU) {
+      return jU(UU)
     }
 
-    function VD(DD) {
-      return (SD ??= (0, ID.i)().map((DD => DD.name)), SD).map((CD => {
-        return "string" === typeof(cD = DD[CD]) ? fD(cD) : iD(cD, wD);
-        var cD
+    function BU(UU) {
+      return null === (RU = UU) || "object" !== typeof RU ? RU : [PU(RU.jT)];
+      var RU
+    }
+
+    function VU(UU) {
+      return (cU ??= (0, tU.e)().map((UU => UU.name)), cU).map((RU => {
+        return "string" === typeof(gU = UU[RU]) ? PU(gU) : EU(gU, KU);
+        var gU
       }))
     }
 
-    function zD(DD) {
-      return null === (CD = DD) || "object" !== typeof CD ? CD : [CD.Gb, CD.Rb, CD.kb];
-      var CD
+    function rU(UU) {
+      return null === (RU = UU) || "object" !== typeof RU ? RU : [RU.xT, RU.mT, RU.IT];
+      var RU
     }
   },
-  9237: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => pD,
-      g: () => iD
+  9155: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => pU,
+      f: () => EU
     });
-    var ID = cD(9189);
-    const pD = "Air",
-      iD = Object.freeze(new ID.d(pD, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var tU = gU(9121);
+    const pU = "Air",
+      EU = Object.freeze(new tU.h(pU, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  38540: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => iD,
-      d: () => bD
+  38766: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => EU,
+      f: () => TU
     });
-    var ID = cD(326),
-      pD = cD(4264);
-    const iD = new Set(pD.k),
-      fD = new Map;
+    var tU = gU(311),
+      pU = gU(4122);
+    const EU = new Set(pU.i),
+      PU = new Map;
 
-    function bD(DD, CD) {
-      let cD = fD.get(CD);
-      void 0 === cD && (cD = new Map, fD.set(CD, cD));
-      let pD = cD.get(DD);
-      return void 0 === pD && (pD = `${DD}${(0,ID.z)(CD)}`, cD.set(DD, pD)), pD
+    function TU(UU, RU) {
+      let gU = PU.get(RU);
+      void 0 === gU && (gU = new Map, PU.set(RU, gU));
+      let pU = gU.get(UU);
+      return void 0 === pU && (pU = `${UU}${(0,tU.A)(RU)}`, gU.set(UU, pU)), pU
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

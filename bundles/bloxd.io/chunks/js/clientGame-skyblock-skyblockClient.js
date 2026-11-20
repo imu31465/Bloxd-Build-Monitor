@@ -1,597 +1,597 @@
 export const id = 25;
 export const ids = [25];
 export const modules = {
-  35994: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => MD,
-      e: () => tD,
-      f: () => yD,
-      h: () => BD
+  36187: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => uU,
+      e: () => CU,
+      h: () => jU,
+      l: () => GU
     });
-    var ID = cD(9041),
-      pD = cD(35996),
-      iD = cD(36002),
-      fD = cD(8394),
-      bD = cD(1440),
-      QD = cD(53),
-      wD = cD(62),
-      SD = cD(1093);
+    var tU = gU(8982),
+      pU = gU(36191),
+      EU = gU(36197),
+      PU = gU(8340),
+      TU = gU(1410),
+      qU = gU(56),
+      KU = gU(74),
+      cU = gU(1090);
 
-    function BD() {
-      var DD;
-      return (0, bD.g)(pD.b, (0, pD.o)()), (0, SD.jsx)(SD.Fragment, {
-        children: null === (DD = (0, pD.o)()) || void 0 === DD ? void 0 : DD.content
+    function GU() {
+      var UU;
+      return (0, TU.h)(pU.e, (0, pU.t)()), (0, cU.jsx)(cU.Fragment, {
+        children: null === (UU = (0, pU.t)()) || void 0 === UU ? void 0 : UU.content
       })
     }
 
-    function yD(DD) {
-      var CD;
+    function jU(UU) {
+      var RU;
       let {
-        show: cD
-      } = DD;
-      (0, bD.g)(pD.b, (0, pD.o)());
-      const wD = null === (CD = (0, pD.o)()) || void 0 === CD ? void 0 : CD.menu;
-      return (0, QD.useEffect)((() => {
-        var DD;
-        cD || (null === wD || void 0 === wD || null === (DD = wD.onClose) || void 0 === DD || DD.call(wD), (0, iD.q)())
-      }), [cD, wD]), (0, QD.useEffect)((() => cD ? (0, fD.i)(iD.B, iD.e) : void 0), [cD]), (0, SD.jsx)(ID.c, {
-        showing: cD,
+        show: gU
+      } = UU;
+      (0, TU.h)(pU.e, (0, pU.t)());
+      const KU = null === (RU = (0, pU.t)()) || void 0 === RU ? void 0 : RU.menu;
+      return (0, qU.useEffect)((() => {
+        var UU;
+        gU || (null === KU || void 0 === KU || null === (UU = KU.onClose) || void 0 === UU || UU.call(KU), (0, EU.q)())
+      }), [gU, KU]), (0, qU.useEffect)((() => gU ? (0, PU.f)(EU.w, EU.e) : void 0), [gU]), (0, cU.jsx)(tU.d, {
+        showing: gU,
         globallyUniqueKey: "clientGameMenu",
-        children: null === wD || void 0 === wD ? void 0 : wD.content
+        children: null === KU || void 0 === KU ? void 0 : KU.content
       })
     }
 
-    function MD(DD) {
+    function uU(UU) {
       let {
-        placement: CD = "bottom"
-      } = DD;
-      return (0, SD.jsx)("div", {
-        id: `clientGameHud-${CD}`,
+        placement: RU = "bottom"
+      } = UU;
+      return (0, cU.jsx)("div", {
+        id: `clientGameHud-${RU}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function tD(DD) {
+    function CU(UU) {
       let {
-        children: CD,
-        placement: cD = "bottom"
-      } = DD;
-      const [ID, pD] = (0, QD.useState)(null);
-      return (0, QD.useEffect)((() => {
-        pD(document.getElementById(`clientGameHud-${cD}`))
-      }), [cD]), ID ? (0, wD.createPortal)(CD, ID) : null
+        children: RU,
+        placement: gU = "bottom"
+      } = UU;
+      const [tU, pU] = (0, qU.useState)(null);
+      return (0, qU.useEffect)((() => {
+        pU(document.getElementById(`clientGameHud-${gU}`))
+      }), [gU]), tU ? (0, KU.createPortal)(RU, tU) : null
     }
   },
-  4599: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => oD,
-      e: () => vD
+  4487: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => QU,
+      e: () => eU
     });
-    var ID = cD(1049),
-      pD = cD.n(ID),
-      iD = cD(53),
-      fD = cD(1192),
-      bD = cD(4606),
-      QD = cD(1872),
-      wD = cD(2358),
-      SD = cD(4608),
-      BD = cD(1093);
-    const yD = new WeakMap;
-    let MD = 0;
+    var tU = gU(1037),
+      pU = gU.n(tU),
+      EU = gU(56),
+      PU = gU(1181),
+      TU = gU(4495),
+      qU = gU(1777),
+      KU = gU(2254),
+      cU = gU(4501),
+      GU = gU(1090);
+    const jU = new WeakMap;
+    let uU = 0;
 
-    function tD(DD) {
-      let CD = yD.get(DD);
-      return void 0 === CD && (CD = MD++, yD.set(DD, CD)), CD
+    function CU(UU) {
+      let RU = jU.get(UU);
+      return void 0 === RU && (RU = uU++, jU.set(UU, RU)), RU
     }
 
-    function ZD(DD) {
+    function hU(UU) {
       let {
-        piece: CD
-      } = DD;
-      return "space" === CD.kind ? (0, BD.jsx)(BD.Fragment, {
-        children: CD.text
-      }) : (0, BD.jsx)("span", {
+        piece: RU
+      } = UU;
+      return "space" === RU.kind ? (0, GU.jsx)(GU.Fragment, {
+        children: RU.text
+      }) : (0, GU.jsx)("span", {
         className: "DialogueWord",
         style: {
-          "--word-delay": `${CD.delayMs}ms`
+          "--word-delay": `${RU.delayMs}ms`
         },
-        children: (0, BD.jsx)(bD.b, {
-          text: "icon" === CD.kind ? `[[${CD.icon}]]` : CD.text
+        children: (0, GU.jsx)(TU.c, {
+          text: "icon" === RU.kind ? `[[${RU.icon}]]` : RU.text
         })
       })
     }
 
-    function oD(DD) {
+    function QU(UU) {
       let {
-        display: CD
-      } = DD;
+        display: RU
+      } = UU;
       const {
-        selectedLanguage: cD
-      } = (0, fD.F)(), ID = (0, iD.useMemo)((() => (0, SD.d)((0, SD.e)(CD).plan.pieces)), [CD, cD.code]);
-      return (0, BD.jsxs)("div", {
-        className: pD()("Dialogue", {
-          DialogueAnimateIn: !1 !== CD.animateIn
+        selectedLanguage: gU
+      } = (0, PU.B)(), tU = (0, EU.useMemo)((() => (0, cU.b)((0, cU.c)(RU).plan.pieces)), [RU, gU.code]);
+      return (0, GU.jsxs)("div", {
+        className: pU()("Dialogue", {
+          DialogueAnimateIn: !1 !== RU.animateIn
         }),
-        children: [CD.speakerName && (0, BD.jsx)(QD.c, {
-          text: CD.speakerName,
+        children: [RU.speakerName && (0, GU.jsx)(qU.e, {
+          text: RU.speakerName,
           className: "DialogueSpeaker"
-        }), (0, BD.jsx)("p", {
+        }), (0, GU.jsx)("p", {
           className: "DialogueLine",
-          children: ID.map(((DD, CD) => 1 === DD.length && "space" === DD[0].kind ? DD[0].text : (0, BD.jsx)("span", {
+          children: tU.map(((UU, RU) => 1 === UU.length && "space" === UU[0].kind ? UU[0].text : (0, GU.jsx)("span", {
             className: "DialogueGlue",
-            children: DD.map(((DD, CD) => (0, BD.jsx)(ZD, {
-              piece: DD
-            }, CD)))
-          }, CD)))
+            children: UU.map(((UU, RU) => (0, GU.jsx)(hU, {
+              piece: UU
+            }, RU)))
+          }, RU)))
         })]
       })
     }
-    const vD = (0, iD.memo)((function() {
-      const DD = (0, wD.h)("dialogue");
-      return (0, BD.jsx)("div", {
+    const eU = (0, EU.memo)((function() {
+      const UU = (0, KU.g)("dialogue");
+      return (0, GU.jsx)("div", {
         className: "DialogueAnchor",
         "data-camera-keeper": "",
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: DD && (0, BD.jsx)(oD, {
-          display: DD
-        }, tD(DD))
+        children: UU && (0, GU.jsx)(QU, {
+          display: UU
+        }, CU(UU))
       })
     }))
   },
-  4606: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => bD
+  4495: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => TU
     });
-    var ID = cD(53),
-      pD = cD(312),
-      iD = cD(1893),
-      fD = cD(1093);
+    var tU = gU(56),
+      pU = gU(299),
+      EU = gU(1790),
+      PU = gU(1090);
 
-    function bD(DD) {
+    function TU(UU) {
       let {
-        text: CD
-      } = DD;
-      const cD = [];
-      let bD = "";
-      return (0, pD.bc)(CD).forEach(((DD, CD) => {
-        if ("string" === typeof DD || !(0, iD.g)(DD.icon)) return void(bD += "string" === typeof DD ? DD : DD.icon);
-        const pD = Math.max(0, bD.trimEnd().search(/\S{1,12}$/));
-        cD.push((0, fD.jsxs)(ID.Fragment, {
-          children: [bD.slice(0, pD), (0, fD.jsxs)("span", {
+        text: RU
+      } = UU;
+      const gU = [];
+      let TU = "";
+      return (0, pU.dc)(RU).forEach(((UU, RU) => {
+        if ("string" === typeof UU || !(0, EU.f)(UU.icon)) return void(TU += "string" === typeof UU ? UU : UU.icon);
+        const pU = Math.max(0, TU.trimEnd().search(/\S{1,12}$/));
+        gU.push((0, PU.jsxs)(tU.Fragment, {
+          children: [TU.slice(0, pU), (0, PU.jsxs)("span", {
             className: "InlineIconTextGlue",
-            children: [bD.slice(pD), (0, fD.jsx)("span", {
+            children: [TU.slice(pU), (0, PU.jsx)("span", {
               className: "InlineIconTextIcon",
               role: "img",
-              "aria-label": DD.icon,
-              children: (0, fD.jsx)(iD.d, {
-                itemName: DD.icon,
+              "aria-label": UU.icon,
+              children: (0, PU.jsx)(EU.c, {
+                itemName: UU.icon,
                 amount: 0
               })
             })]
           })]
-        }, CD)), bD = ""
-      })), cD.push(bD), (0, fD.jsx)(fD.Fragment, {
-        children: cD
+        }, RU)), TU = ""
+      })), gU.push(TU), (0, PU.jsx)(PU.Fragment, {
+        children: gU
       })
     }
   },
-  9041: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => iD
+  8982: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => EU
     });
-    var ID = cD(4329),
-      pD = cD(4337);
+    var tU = gU(4200),
+      pU = gU(4206);
 
-    function iD(DD) {
+    function EU(UU) {
       let {
-        children: CD,
-        showing: cD,
-        globallyUniqueKey: iD,
-        alwaysMountChildren: fD = !1,
-        doGameplayStartStopOnShow: bD = !0,
-        keepsMovement: QD = !1
-      } = DD;
-      return (0, pD.e)(!0, cD, iD, QD), (0, ID.b)(bD, cD), cD || fD ? CD : null
+        children: RU,
+        showing: gU,
+        globallyUniqueKey: EU,
+        alwaysMountChildren: PU = !1,
+        doGameplayStartStopOnShow: TU = !0,
+        keepsMovement: qU = !1
+      } = UU;
+      return (0, pU.e)(!0, gU, EU, qU), (0, tU.c)(TU, gU), gU || PU ? RU : null
     }
   },
-  4608: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => zD,
-      e: () => VD
+  4501: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => rU,
+      c: () => VU
     });
-    var ID = cD(4615),
-      pD = cD(312);
-    const iD = 120,
-      fD = 260,
-      bD = 1.15,
-      QD = 1.2,
-      wD = 2,
-      SD = 1.08,
-      BD = .8,
-      yD = .95,
-      MD = 8,
-      tD = "[\"')\\]\u300d\u300f\uff09]*",
-      ZD = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${tD}$`),
-      oD = new RegExp(`[?\uff1f]${tD}$`),
-      vD = new RegExp(`[!\uff01]${tD}$`),
-      ND = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      gD = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      XD = new RegExp(`[${gD}]`),
-      mD = new RegExp(`[${gD}]|[^${gD}]+`, "g"),
-      nD = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var tU = gU(4503),
+      pU = gU(299);
+    const EU = 120,
+      PU = 260,
+      TU = 1.15,
+      qU = 1.2,
+      KU = 2,
+      cU = 1.08,
+      GU = .8,
+      jU = .95,
+      uU = 8,
+      CU = "[\"')\\]\u300d\u300f\uff09]*",
+      hU = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${CU}$`),
+      QU = new RegExp(`[?\uff1f]${CU}$`),
+      eU = new RegExp(`[!\uff01]${CU}$`),
+      WU = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      fU = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      xU = new RegExp(`[${fU}]`),
+      mU = new RegExp(`[${fU}]|[^${fU}]+`, "g"),
+      IU = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function OD(DD) {
-      let CD = 2166136261;
-      for (let cD = 0; cD < DD.length; cD++) CD ^= DD.charCodeAt(cD), CD = Math.imul(CD, 16777619);
-      return (CD >>> 0) / 4294967295 * 2 - 1
+    function JU(UU) {
+      let RU = 2166136261;
+      for (let gU = 0; gU < UU.length; gU++) RU ^= UU.charCodeAt(gU), RU = Math.imul(RU, 16777619);
+      return (RU >>> 0) / 4294967295 * 2 - 1
     }
 
-    function PD(DD) {
-      var CD;
-      if (XD.test(DD)) return 1;
-      const cD = DD.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        ID = cD.replace(/[^0-9]/g, "");
-      if (ID.length > 0 && !/\p{L}/u.test(cD)) return Math.min(ID.length, 4);
-      const pD = null !== (CD = cD.match(nD)) && void 0 !== CD ? CD : [];
-      if (0 === pD.length) {
-        var iD, fD;
-        const DD = null !== (iD = null === (fD = cD.match(/\p{L}/gu)) || void 0 === fD ? void 0 : fD.length) && void 0 !== iD ? iD : 0;
-        return 0 === DD ? 0 : Math.min(Math.max(1, Math.round(DD / 2.5)), MD)
+    function wU(UU) {
+      var RU;
+      if (xU.test(UU)) return 1;
+      const gU = UU.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        tU = gU.replace(/[^0-9]/g, "");
+      if (tU.length > 0 && !/\p{L}/u.test(gU)) return Math.min(tU.length, 4);
+      const pU = null !== (RU = gU.match(IU)) && void 0 !== RU ? RU : [];
+      if (0 === pU.length) {
+        var EU, PU;
+        const UU = null !== (EU = null === (PU = gU.match(/\p{L}/gu)) || void 0 === PU ? void 0 : PU.length) && void 0 !== EU ? EU : 0;
+        return 0 === UU ? 0 : Math.min(Math.max(1, Math.round(UU / 2.5)), uU)
       }
-      const bD = cD.replace(/[^\p{L}]/gu, ""),
-        QD = pD.length > 1 && "e" === pD.at(-1) && bD.endsWith("e") && !bD.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(DD.replace(/[^\p{L}]/gu, ""));
-      return Math.min(pD.length - (QD ? 1 : 0), MD)
+      const TU = gU.replace(/[^\p{L}]/gu, ""),
+        qU = pU.length > 1 && "e" === pU.at(-1) && TU.endsWith("e") && !TU.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(UU.replace(/[^\p{L}]/gu, ""));
+      return Math.min(pU.length - (qU ? 1 : 0), uU)
     }
 
-    function HD(DD) {
-      return DD.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function nU(UU) {
+      return UU.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function UD(DD) {
-      const CD = DD.replace(/[^\p{L}]/gu, "");
-      return CD.length >= 2 && CD === CD.toUpperCase() && CD !== CD.toLowerCase()
+    function bU(UU) {
+      const RU = UU.replace(/[^\p{L}]/gu, "");
+      return RU.length >= 2 && RU === RU.toUpperCase() && RU !== RU.toLowerCase()
     }
 
-    function xD(DD, CD) {
-      var cD;
-      const MD = CD && (0, ID.l)(CD),
-        tD = null !== (cD = null === MD || void 0 === MD ? void 0 : MD.syllableMs) && void 0 !== cD ? cD : ID.d,
-        gD = function(DD) {
-          const CD = [];
-          for (const ID of (0, pD.bc)(DD))
-            if ("string" === typeof ID)
-              for (const DD of ID.split(/(\s+)/)) {
-                if ("" === DD) continue;
-                if (/^\s+$/.test(DD)) {
-                  CD.push({
+    function oU(UU, RU) {
+      var gU;
+      const uU = RU && (0, tU.k)(RU),
+        CU = null !== (gU = null === uU || void 0 === uU ? void 0 : uU.syllableMs) && void 0 !== gU ? gU : tU.c,
+        fU = function(UU) {
+          const RU = [];
+          for (const tU of (0, pU.dc)(UU))
+            if ("string" === typeof tU)
+              for (const UU of tU.split(/(\s+)/)) {
+                if ("" === UU) continue;
+                if (/^\s+$/.test(UU)) {
+                  RU.push({
                     kind: "space",
-                    text: DD
+                    text: UU
                   });
                   continue
                 }
-                if (!XD.test(DD)) {
-                  CD.push({
+                if (!xU.test(UU)) {
+                  RU.push({
                     kind: "word",
-                    text: DD,
+                    text: UU,
                     delayMs: 0
                   });
                   continue
                 }
-                let ID = !0;
-                for (const pD of null !== (cD = DD.match(mD)) && void 0 !== cD ? cD : []) {
-                  var cD;
-                  const DD = CD.at(-1);
-                  ID || "word" !== (null === DD || void 0 === DD ? void 0 : DD.kind) || XD.test(pD) || /[\p{L}\p{N}]/u.test(pD) ? (ID || CD.push({
+                let tU = !0;
+                for (const pU of null !== (gU = UU.match(mU)) && void 0 !== gU ? gU : []) {
+                  var gU;
+                  const UU = RU.at(-1);
+                  tU || "word" !== (null === UU || void 0 === UU ? void 0 : UU.kind) || xU.test(pU) || /[\p{L}\p{N}]/u.test(pU) ? (tU || RU.push({
                     kind: "space",
                     text: "\u200b"
-                  }), CD.push({
+                  }), RU.push({
                     kind: "word",
-                    text: pD,
+                    text: pU,
                     delayMs: 0
-                  }), ID = !1) : DD.text += pD
+                  }), tU = !1) : UU.text += pU
                 }
-              } else CD.push({
+              } else RU.push({
                 kind: "icon",
-                text: ID.icon,
+                text: tU.icon,
                 delayMs: 0
               });
-          return CD
-        }(DD),
-        nD = [];
-      let xD = [];
-      for (const ID of gD) "space" !== ID.kind && (xD.push(ID), ZD.test(ID.text) && (nD.push(xD), xD = []));
-      nD.push(xD);
-      const qD = [];
-      let JD = 0;
-      for (const ID of nD) {
-        var KD, aD;
-        const DD = null !== (KD = null === (aD = ID.at(-1)) || void 0 === aD ? void 0 : aD.text) && void 0 !== KD ? KD : "",
-          CD = oD.test(DD),
-          cD = vD.test(DD),
-          pD = ID.map((DD => "word" === DD.kind ? PD(DD.text) : 1)),
-          gD = pD.findLastIndex((DD => DD > 0));
-        for (const [oD, vD] of ID.entries()) {
-          const DD = "word" === vD.kind,
-            ID = pD[oD];
-          vD.delayMs = JD;
-          for (let pD = 0; MD && pD < ID; pD++) {
+          return RU
+        }(UU),
+        IU = [];
+      let oU = [];
+      for (const tU of fU) "space" !== tU.kind && (oU.push(tU), hU.test(tU.text) && (IU.push(oU), oU = []));
+      IU.push(oU);
+      const ZU = [];
+      let aU = 0;
+      for (const tU of IU) {
+        var YU, BU;
+        const UU = null !== (YU = null === (BU = tU.at(-1)) || void 0 === BU ? void 0 : BU.text) && void 0 !== YU ? YU : "",
+          RU = QU.test(UU),
+          gU = eU.test(UU),
+          pU = tU.map((UU => "word" === UU.kind ? wU(UU.text) : 1)),
+          fU = pU.findLastIndex((UU => UU > 0));
+        for (const [QU, eU] of tU.entries()) {
+          const UU = "word" === eU.kind,
+            tU = pU[QU];
+          eU.delayMs = aU;
+          for (let pU = 0; uU && pU < tU; pU++) {
             const {
-              intonation: iD
-            } = MD;
-            let fD = gD > 0 ? -iD.declineSemitones * (oD / gD) : 0;
-            fD += OD(`${HD(vD.text)}|${pD}`) * iD.variationSemitones;
-            const ZD = Math.min(1, iD.variationSemitones);
-            let ND = MD.glideSemitones,
-              XD = 1;
-            cD && (fD += iD.exclaimLiftSemitones, XD *= bD), CD && oD === gD && (fD += iD.questionRiseSemitones * (ID > 1 ? .5 + .5 * pD / (ID - 1) : 1), pD === ID - 1 && (ND = Math.abs(ND) + iD.questionRiseSemitones / 2)), DD && UD(vD.text) && (fD += wD * ZD, XD *= QD), ID > 1 && 0 === pD && (fD += BD * ZD, XD *= SD), qD.push({
-              atMs: JD + pD * tD,
-              semitones: fD,
-              glideSemitones: ND,
-              durationMs: pD < ID - 1 ? Math.min(MD.durationMs, tD * yD) : MD.durationMs,
-              level: XD
+              intonation: EU
+            } = uU;
+            let PU = fU > 0 ? -EU.declineSemitones * (QU / fU) : 0;
+            PU += JU(`${nU(eU.text)}|${pU}`) * EU.variationSemitones;
+            const hU = Math.min(1, EU.variationSemitones);
+            let WU = uU.glideSemitones,
+              xU = 1;
+            gU && (PU += EU.exclaimLiftSemitones, xU *= TU), RU && QU === fU && (PU += EU.questionRiseSemitones * (tU > 1 ? .5 + .5 * pU / (tU - 1) : 1), pU === tU - 1 && (WU = Math.abs(WU) + EU.questionRiseSemitones / 2)), UU && bU(eU.text) && (PU += KU * hU, xU *= qU), tU > 1 && 0 === pU && (PU += GU * hU, xU *= cU), ZU.push({
+              atMs: aU + pU * CU,
+              semitones: PU,
+              glideSemitones: WU,
+              durationMs: pU < tU - 1 ? Math.min(uU.durationMs, CU * jU) : uU.durationMs,
+              level: xU
             })
           }
-          JD += ID * tD + (ZD.test(vD.text) ? fD : ND.test(vD.text) ? iD : 0)
+          aU += tU * CU + (hU.test(eU.text) ? PU : WU.test(eU.text) ? EU : 0)
         }
       }
       return {
-        pieces: gD.map((DD => "space" === DD.kind ? DD : "icon" === DD.kind ? {
+        pieces: fU.map((UU => "space" === UU.kind ? UU : "icon" === UU.kind ? {
           kind: "icon",
-          icon: DD.text,
-          delayMs: DD.delayMs
+          icon: UU.text,
+          delayMs: UU.delayMs
         } : {
           kind: "word",
-          text: DD.text,
-          delayMs: DD.delayMs
+          text: UU.text,
+          delayMs: UU.delayMs
         })),
-        blips: qD
+        blips: ZU
       }
     }
-    var qD = cD(1192),
-      JD = cD(1250),
-      KD = cD(1913);
+    var ZU = gU(1181),
+      aU = gU(1249),
+      YU = gU(1802);
 
-    function aD(DD) {
-      if ("string" === typeof DD) return DD;
-      const CD = JD.e.get().getCurrentLanguageCode();
-      return (0, qD.s)(CD, DD.translationKey, (0, qD.o)(DD.params, KD.c.shown))
+    function BU(UU) {
+      if ("string" === typeof UU) return UU;
+      const RU = aU.g.get().getCurrentLanguageCode();
+      return (0, ZU.s)(RU, UU.translationKey, (0, ZU.r)(UU.params, YU.b.shown))
     }
 
-    function VD(DD) {
-      const CD = void 0 === DD.voice ? null : (0, ID.p)(DD.voice),
-        cD = CD && (0, ID.l)(CD);
+    function VU(UU) {
+      const RU = void 0 === UU.voice ? null : (0, tU.n)(UU.voice),
+        gU = RU && (0, tU.k)(RU);
       return {
-        plan: xD(aD(DD.line), cD),
-        synth: cD
+        plan: oU(BU(UU.line), gU),
+        synth: gU
       }
     }
 
-    function zD(DD) {
-      const CD = [];
-      let cD = [];
-      for (const [pD, iD] of DD.entries()) {
-        var ID;
-        "space" === iD.kind && (" " !== iD.text || "icon" !== (null === (ID = DD[pD + 1]) || void 0 === ID ? void 0 : ID.kind)) ? (cD.length > 0 && CD.push(cD), CD.push([iD]), cD = []) : cD.push(iD)
+    function rU(UU) {
+      const RU = [];
+      let gU = [];
+      for (const [pU, EU] of UU.entries()) {
+        var tU;
+        "space" === EU.kind && (" " !== EU.text || "icon" !== (null === (tU = UU[pU + 1]) || void 0 === tU ? void 0 : tU.kind)) ? (gU.length > 0 && RU.push(gU), RU.push([EU]), gU = []) : gU.push(EU)
       }
-      return cD.length > 0 && CD.push(cD), CD
+      return gU.length > 0 && RU.push(gU), RU
     }
   },
-  8394: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => iD,
-      i: () => pD
+  8340: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => EU,
+      f: () => pU
     });
-    let ID = null;
-    const pD = function(DD) {
-        const CD = {
-          cycle: DD,
+    let tU = null;
+    const pU = function(UU) {
+        const RU = {
+          cycle: UU,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return ID = CD, () => {
-          ID === CD && (ID = null)
+        return tU = RU, () => {
+          tU === RU && (tU = null)
         }
       },
-      iD = () => {
-        var DD;
-        return null !== (DD = ID) && void 0 !== DD && DD.canCycle() ? ID.cycle : null
+      EU = () => {
+        var UU;
+        return null !== (UU = tU) && void 0 !== UU && UU.canCycle() ? tU.cycle : null
       }
   },
-  36002: (DD, CD, cD) => {
-    cD.d(CD, {
-      B: () => tD,
-      C: () => ND,
-      b: () => iD,
-      e: () => ZD,
-      i: () => oD,
-      l: () => bD,
-      p: () => yD,
-      q: () => vD,
-      t: () => BD,
-      x: () => gD
+  36197: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => EU,
+      e: () => hU,
+      g: () => QU,
+      j: () => TU,
+      n: () => jU,
+      q: () => eU,
+      r: () => GU,
+      t: () => fU,
+      w: () => CU,
+      x: () => WU
     });
-    var ID = cD(16),
-      pD = cD(20);
-    const iD = "clientGameInventoryButtonsChanged",
-      fD = new Map;
+    var tU = gU(21),
+      pU = gU(24);
+    const EU = "clientGameInventoryButtonsChanged",
+      PU = new Map;
 
-    function bD() {
-      return [...fD.values()].sort(((DD, CD) => {
-        var cD, ID;
-        return (null !== (cD = DD.order) && void 0 !== cD ? cD : 0) - (null !== (ID = CD.order) && void 0 !== ID ? ID : 0)
+    function TU() {
+      return [...PU.values()].sort(((UU, RU) => {
+        var gU, tU;
+        return (null !== (gU = UU.order) && void 0 !== gU ? gU : 0) - (null !== (tU = RU.order) && void 0 !== tU ? tU : 0)
       }))
     }
-    let QD = null;
+    let qU = null;
 
-    function wD(DD) {
-      QD = DD
+    function KU(UU) {
+      qU = UU
     }
-    let SD = !1;
+    let cU = !1;
 
-    function BD(DD) {
-      SD = !0;
+    function GU(UU) {
+      cU = !0;
       try {
-        DD.onClick()
+        UU.onClick()
       } finally {
-        SD = !1
+        cU = !1
       }
-      DD.panel && "clientGame" === ID.d.get("openInGameMenuName") && wD(DD.id)
+      UU.panel && "clientGame" === tU.b.get("openInGameMenuName") && KU(UU.id)
     }
 
-    function yD() {
-      return SD
+    function jU() {
+      return cU
     }
 
-    function MD() {
-      return bD().filter((DD => DD.panel && !DD.disabled))
+    function uU() {
+      return TU().filter((UU => UU.panel && !UU.disabled))
     }
 
-    function tD(DD) {
-      const CD = MD(),
-        cD = CD.findIndex((DD => DD.id === QD));
-      return !(cD < 0 || CD.length < 2) && (BD(CD[(cD + DD + CD.length) % CD.length]), !0)
+    function CU(UU) {
+      const RU = uU(),
+        gU = RU.findIndex((UU => UU.id === qU));
+      return !(gU < 0 || RU.length < 2) && (GU(RU[(gU + UU + RU.length) % RU.length]), !0)
     }
 
-    function ZD() {
-      return null !== QD && MD().length > 1
+    function hU() {
+      return null !== qU && uU().length > 1
     }
 
-    function oD() {
-      wD(null)
+    function QU() {
+      KU(null)
     }
 
-    function vD() {
-      "inventory" !== ID.d.get("openInGameMenuName") && wD(null)
+    function eU() {
+      "inventory" !== tU.b.get("openInGameMenuName") && KU(null)
     }
 
-    function ND() {
-      const DD = QD;
-      return wD(null), DD
+    function WU() {
+      const UU = qU;
+      return KU(null), UU
     }
 
-    function gD(DD) {
-      return fD.set(DD.id, DD), pD.i.Uo(iD, bD(), !0), () => {
-        fD.get(DD.id) === DD && (fD.delete(DD.id), pD.i.Uo(iD, bD()))
+    function fU(UU) {
+      return PU.set(UU.id, UU), pU.p.yh(EU, TU(), !0), () => {
+        PU.get(UU.id) === UU && (PU.delete(UU.id), pU.p.yh(EU, TU()))
       }
     }
   },
-  35996: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => bD,
-      e: () => oD,
-      i: () => vD,
-      m: () => yD,
-      o: () => wD,
-      s: () => ZD,
-      u: () => MD,
-      v: () => SD
+  36191: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => TU,
+      h: () => QU,
+      l: () => eU,
+      p: () => jU,
+      t: () => KU,
+      w: () => hU,
+      x: () => uU,
+      y: () => cU
     });
-    var ID = cD(16),
-      pD = cD(20),
-      iD = cD(1284),
-      fD = cD(36002);
-    const bD = "clientGameUiChanged";
-    let QD = null;
+    var tU = gU(21),
+      pU = gU(24),
+      EU = gU(1287),
+      PU = gU(36197);
+    const TU = "clientGameUiChanged";
+    let qU = null;
 
-    function wD() {
-      return QD
+    function KU() {
+      return qU
     }
 
-    function SD(DD, CD) {
-      const cD = {
-        content: DD,
-        menu: CD
+    function cU(UU, RU) {
+      const gU = {
+        content: UU,
+        menu: RU
       };
-      return QD = cD, pD.i.Uo(bD, QD, !0), () => {
-        QD === cD && (QD = null, tD = !1, oD(), pD.i.Uo(bD, null))
+      return qU = gU, pU.p.yh(TU, qU, !0), () => {
+        qU === gU && (qU = null, CU = !1, QU(), pU.p.yh(TU, null))
       }
     }
-    let BD = null;
+    let GU = null;
 
-    function yD() {
-      return BD
+    function jU() {
+      return GU
     }
 
-    function MD(DD) {
-      return BD = DD, () => {
-        BD === DD && (BD = null)
+    function uU(UU) {
+      return GU = UU, () => {
+        GU === UU && (GU = null)
       }
     }
-    let tD = !1;
+    let CU = !1;
 
-    function ZD() {
-      const DD = ID.d.get("openInGameMenuName");
-      "clientGame" !== DD && (tD = "inventory" === DD), (0, fD.p)() || (0, fD.i)(), (0, iD.p)(iD.e), ID.d.set({
+    function hU() {
+      const UU = tU.b.get("openInGameMenuName");
+      "clientGame" !== UU && (CU = "inventory" === UU), (0, PU.n)() || (0, PU.g)(), (0, EU.o)(EU.c), tU.b.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function oD() {
-      ND(!1)
+    function QU() {
+      WU(!1)
     }
 
-    function vD() {
-      ND(tD)
+    function eU() {
+      WU(CU)
     }
 
-    function ND(DD) {
-      "clientGame" === ID.d.get("openInGameMenuName") && ID.d.set({
-        openInGameMenuName: DD ? "inventory" : null
-      }), DD || (0, fD.i)(), tD = !1
+    function WU(UU) {
+      "clientGame" === tU.b.get("openInGameMenuName") && tU.b.set({
+        openInGameMenuName: UU ? "inventory" : null
+      }), UU || (0, PU.g)(), CU = !1
     }
   },
-  37885: (DD, CD, cD) => {
-    function ID(DD, CD, cD) {
-      const ID = new Set,
-        pD = new ResizeObserver(cD),
-        iD = () => {
-          const CD = new Set(document.querySelectorAll(DD));
-          let iD = !1;
-          for (const DD of ID) CD.has(DD) || (pD.unobserve(DD), ID.delete(DD), iD = !0);
-          for (const DD of CD) ID.has(DD) || (pD.observe(DD), fD.observe(DD, {
+  38061: (UU, RU, gU) => {
+    function tU(UU, RU, gU) {
+      const tU = new Set,
+        pU = new ResizeObserver(gU),
+        EU = () => {
+          const RU = new Set(document.querySelectorAll(UU));
+          let EU = !1;
+          for (const UU of tU) RU.has(UU) || (pU.unobserve(UU), tU.delete(UU), EU = !0);
+          for (const UU of RU) tU.has(UU) || (pU.observe(UU), PU.observe(UU, {
             attributes: !0,
             attributeFilter: ["class", "style"]
-          }), ID.add(DD));
-          iD && cD()
+          }), tU.add(UU));
+          EU && gU()
         },
-        fD = new MutationObserver((CD => {
-          CD.some((DD => "attributes" === DD.type)) && cD(), CD.some((CD => function(DD, CD, cD) {
-            if ("childList" !== DD.type) return !1;
-            for (const ID of DD.addedNodes)
-              if (ID instanceof Element && (ID.matches(CD) || ID.querySelector(CD))) return !0;
-            for (const ID of DD.removedNodes)
-              if (ID instanceof Element)
-                for (const DD of cD)
-                  if (ID.contains(DD)) return !0;
+        PU = new MutationObserver((RU => {
+          RU.some((UU => "attributes" === UU.type)) && gU(), RU.some((RU => function(UU, RU, gU) {
+            if ("childList" !== UU.type) return !1;
+            for (const tU of UU.addedNodes)
+              if (tU instanceof Element && (tU.matches(RU) || tU.querySelector(RU))) return !0;
+            for (const tU of UU.removedNodes)
+              if (tU instanceof Element)
+                for (const UU of gU)
+                  if (tU.contains(UU)) return !0;
             return !1
-          }(CD, DD, ID))) && iD()
+          }(RU, UU, tU))) && EU()
         }));
-      fD.observe(document.body, {
+      PU.observe(document.body, {
         childList: !0,
         subtree: !0
       });
-      for (const bD of CD) pD.observe(bD);
-      return window.addEventListener("resize", cD), iD(), cD(), () => {
-        pD.disconnect(), fD.disconnect(), window.removeEventListener("resize", cD)
+      for (const TU of RU) pU.observe(TU);
+      return window.addEventListener("resize", gU), EU(), gU(), () => {
+        pU.disconnect(), PU.disconnect(), window.removeEventListener("resize", gU)
       }
     }
-    cD.d(CD, {
-      d: () => ID
+    gU.d(RU, {
+      b: () => tU
     })
   },
-  8583: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => bD,
-      d: () => QD
+  8512: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => TU,
+      d: () => qU
     });
-    var ID = cD(16),
-      pD = cD(1317),
-      iD = cD(90);
-    const fD = {
+    var tU = gU(21),
+      pU = gU(1316),
+      EU = gU(96);
+    const PU = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -634,350 +634,350 @@ export const modules = {
       }
     };
 
-    function bD() {
-      return (0, iD.isMobile)() && "function" === typeof navigator.vibrate
+    function TU() {
+      return (0, EU.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const QD = new class {
-      constructor(DD) {
-        this.deps = DD, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const qU = new class {
+      constructor(UU) {
+        this.deps = UU, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(DD, CD) {
-        var cD;
+      play(UU, RU) {
+        var gU;
         if (!this.deps.enabled()) return;
-        const ID = fD[DD],
-          pD = null !== CD && void 0 !== CD ? CD : ID.pattern;
-        if (null === pD) return void console.warn("No vibration pattern for", DD);
-        const iD = this.deps.now();
-        iD - this.lastAnyAt < 40 && ID.priority < this.playingPriority || iD - (null !== (cD = this.lastAt.get(DD)) && void 0 !== cD ? cD : -1 / 0) < ID.minGapMs || iD < this.playingUntil && ID.priority < this.playingPriority || (this.lastAt.set(DD, iD), this.lastAnyAt = iD, this.playingUntil = iD + pD.reduce(((DD, CD) => DD + CD), 0), this.playingPriority = ID.priority, this.deps.vibrate(pD))
+        const tU = PU[UU],
+          pU = null !== RU && void 0 !== RU ? RU : tU.pattern;
+        if (null === pU) return void console.warn("No vibration pattern for", UU);
+        const EU = this.deps.now();
+        EU - this.lastAnyAt < 40 && tU.priority < this.playingPriority || EU - (null !== (gU = this.lastAt.get(UU)) && void 0 !== gU ? gU : -1 / 0) < tU.minGapMs || EU < this.playingUntil && tU.priority < this.playingPriority || (this.lastAt.set(UU, EU), this.lastAnyAt = EU, this.playingUntil = EU + pU.reduce(((UU, RU) => UU + RU), 0), this.playingPriority = tU.priority, this.deps.vibrate(pU))
       }
     }({
-      vibrate: DD => {
-        navigator.vibrate([...DD])
+      vibrate: UU => {
+        navigator.vibrate([...UU])
       },
       now: () => performance.now(),
-      enabled: () => bD() && ID.d.get("isTouchScreen") && ID.d.get("clientEscMenuOptions").vibration && !(0, pD.c)()
+      enabled: () => TU() && tU.b.get("isTouchScreen") && tU.b.get("clientEscMenuOptions").vibration && !(0, pU.h)()
     })
   },
-  36517: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => bD,
-      f: () => fD
+  36664: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => TU,
+      f: () => PU
     });
-    var ID = cD(36501),
-      pD = cD(326),
-      iD = cD(1865);
+    var tU = gU(36651),
+      pU = gU(311),
+      EU = gU(1771);
 
-    function fD(DD) {
-      if ("mi" in DD) return nD.createAnimationScript(DD);
-      return new wD(DD).createAnimationScript()
+    function PU(UU) {
+      if ("xE" in UU) return IU.createAnimationScript(UU);
+      return new KU(UU).createAnimationScript()
     }
 
-    function bD(DD, CD, cD, pD) {
-      const iD = DD.mi <= 0 ? 1 : CD + cD * Math.max(0, pD) / DD.mi;
-      return DD.ni === ID.h.LoopOnLastFrame ? iD % 1 : DD.ni === ID.h.NoLoop && iD >= 1 ? null : Math.min(1, iD)
+    function TU(UU, RU, gU, pU) {
+      const EU = UU.xE <= 0 ? 1 : RU + gU * Math.max(0, pU) / UU.xE;
+      return UU.mE === tU.k.LoopOnLastFrame ? EU % 1 : UU.mE === tU.k.NoLoop && EU >= 1 ? null : Math.min(1, EU)
     }
-    class QD {
-      createAnimationScript(DD) {
+    class qU {
+      createAnimationScript(UU) {
         const {
-          mi: CD,
-          loop: cD,
-          Oi: ID
-        } = DD;
+          xE: RU,
+          loop: gU,
+          IE: tU
+        } = UU;
         return {
-          mi: Math.round(CD),
-          ni: this.createLoopMode(null !== cD && void 0 !== cD && cD),
-          Oi: this.createNodeSkeletonAnimationScript(null !== ID && void 0 !== ID ? ID : null)
+          xE: Math.round(RU),
+          mE: this.createLoopMode(null !== gU && void 0 !== gU && gU),
+          IE: this.createNodeSkeletonAnimationScript(null !== tU && void 0 !== tU ? tU : null)
         }
       }
-      createLoopMode(DD) {
-        switch (DD) {
+      createLoopMode(UU) {
+        switch (UU) {
           case !1:
-            return ID.h.NoLoop;
+            return tU.k.NoLoop;
           case !0:
-            return ID.h.LoopOnLastFrame;
+            return tU.k.LoopOnLastFrame;
           case "hold-on-last-frame":
-            return ID.h.HoldOnLastFrame
+            return tU.k.HoldOnLastFrame
         }
-        throw new Error(`Invalid loop mode schema: ${DD}`)
+        throw new Error(`Invalid loop mode schema: ${UU}`)
       }
-      createNodeSkeletonAnimationScript(DD) {
-        if (null === DD) return null;
-        const CD = {};
-        for (const cD in DD) {
-          const ID = DD[cD];
-          CD[cD] = this.createNodeAnimationScript(ID)
+      createNodeSkeletonAnimationScript(UU) {
+        if (null === UU) return null;
+        const RU = {};
+        for (const gU in UU) {
+          const tU = UU[gU];
+          RU[gU] = this.createNodeAnimationScript(tU)
         }
-        return CD
+        return RU
       }
-      createNodeAnimationScript(DD) {
+      createNodeAnimationScript(UU) {
         const {
-          timeline: CD
-        } = DD, cD = CD.filter((DD => Number.isFinite(DD.timeFraction)));
-        return cD.sort(((DD, CD) => DD.timeFraction - CD.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(cD, "rotation", yD),
-          position: this.createTimelineFromKeyframes(cD, "position", tD)
+          timeline: RU
+        } = UU, gU = RU.filter((UU => Number.isFinite(UU.timeFraction)));
+        return gU.sort(((UU, RU) => UU.timeFraction - RU.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(gU, "rotation", jU),
+          position: this.createTimelineFromKeyframes(gU, "position", CU)
         }
       }
-      createTimelineFromKeyframes(DD, CD, cD) {
-        const ID = [];
-        for (const QD of DD) {
-          const DD = QD[CD];
-          if (DD) {
-            const CD = this.createAnimationFrameWithoutPrecomputes(QD.timeFraction, DD);
-            SD(CD) && ID.push(CD)
+      createTimelineFromKeyframes(UU, RU, gU) {
+        const tU = [];
+        for (const qU of UU) {
+          const UU = qU[RU];
+          if (UU) {
+            const RU = this.createAnimationFrameWithoutPrecomputes(qU.timeFraction, UU);
+            cU(RU) && tU.push(RU)
           }
         }
-        const pD = [];
-        for (let QD = 0; QD < ID.length; QD++) {
-          var iD, fD, bD;
-          const DD = ID[QD],
-            CD = null !== (iD = ID[QD - 1]) && void 0 !== iD ? iD : DD,
-            wD = null !== (fD = ID[QD + 1]) && void 0 !== fD ? fD : DD,
-            SD = null !== (bD = ID[QD + 2]) && void 0 !== bD ? bD : wD;
-          pD.push({
-            ...DD,
-            ...cD(CD.post, CD.timeFraction, DD.post, DD.timeFraction, wD.pre, wD.timeFraction, SD.pre, SD.timeFraction)
+        const pU = [];
+        for (let qU = 0; qU < tU.length; qU++) {
+          var EU, PU, TU;
+          const UU = tU[qU],
+            RU = null !== (EU = tU[qU - 1]) && void 0 !== EU ? EU : UU,
+            KU = null !== (PU = tU[qU + 1]) && void 0 !== PU ? PU : UU,
+            cU = null !== (TU = tU[qU + 2]) && void 0 !== TU ? TU : KU;
+          pU.push({
+            ...UU,
+            ...gU(RU.post, RU.timeFraction, UU.post, UU.timeFraction, KU.pre, KU.timeFraction, cU.pre, cU.timeFraction)
           })
         }
-        return pD
+        return pU
       }
-      createAnimationFrameWithoutPrecomputes(DD, CD) {
-        let cD, ID, pD = null;
-        var iD;
-        if ("object" === typeof CD && "point" in CD) pD = null !== (iD = CD.Ui) && void 0 !== iD ? iD : null, cD = CD.point, ID = CD.point;
-        else if ("object" === typeof CD && "pre" in CD) {
-          var fD;
-          pD = null !== (fD = CD.Ui) && void 0 !== fD ? fD : null, cD = CD.pre, ID = CD.post
-        } else cD = CD, ID = CD;
+      createAnimationFrameWithoutPrecomputes(UU, RU) {
+        let gU, tU, pU = null;
+        var EU;
+        if ("object" === typeof RU && "point" in RU) pU = null !== (EU = RU.nE) && void 0 !== EU ? EU : null, gU = RU.point, tU = RU.point;
+        else if ("object" === typeof RU && "pre" in RU) {
+          var PU;
+          pU = null !== (PU = RU.nE) && void 0 !== PU ? PU : null, gU = RU.pre, tU = RU.post
+        } else gU = RU, tU = RU;
         return {
-          timeFraction: DD,
-          Ui: this.createLerpMode(pD),
-          pre: cD,
-          post: ID
+          timeFraction: UU,
+          nE: this.createLerpMode(pU),
+          pre: gU,
+          post: tU
         }
       }
-      createLerpMode(DD) {
-        return null === DD ? ID.e.Linear : QD.LERP_MODE_SCHEMA_MAPPING[DD]
+      createLerpMode(UU) {
+        return null === UU ? tU.h.Linear : qU.LERP_MODE_SCHEMA_MAPPING[UU]
       }
     }
-    QD.LERP_MODE_SCHEMA_MAPPING = {
-      linear: ID.e.Linear,
-      "catmull-rom-spline": ID.e.CatmullRomSpline
+    qU.LERP_MODE_SCHEMA_MAPPING = {
+      linear: tU.h.Linear,
+      "catmull-rom-spline": tU.h.CatmullRomSpline
     };
-    class wD {
-      constructor(DD) {
-        this.animationSchema = DD
+    class KU {
+      constructor(UU) {
+        this.animationSchema = UU
       }
       createAnimationScript() {
         const {
-          animation_length: DD,
-          loop: CD,
-          bones: cD
+          animation_length: UU,
+          loop: RU,
+          bones: gU
         } = this.animationSchema;
         return {
-          mi: Math.round(1e3 * DD),
-          ni: this.createLoopMode(null !== CD && void 0 !== CD && CD),
-          Oi: this.createNodeSkeletonAnimationScript(null !== cD && void 0 !== cD ? cD : null)
+          xE: Math.round(1e3 * UU),
+          mE: this.createLoopMode(null !== RU && void 0 !== RU && RU),
+          IE: this.createNodeSkeletonAnimationScript(null !== gU && void 0 !== gU ? gU : null)
         }
       }
-      createLoopMode(DD) {
-        switch (DD) {
+      createLoopMode(UU) {
+        switch (UU) {
           case !1:
-            return ID.h.NoLoop;
+            return tU.k.NoLoop;
           case !0:
-            return ID.h.LoopOnLastFrame;
+            return tU.k.LoopOnLastFrame;
           case "hold_on_last_frame":
-            return ID.h.HoldOnLastFrame
+            return tU.k.HoldOnLastFrame
         }
-        throw new Error(`Invalid Blockbench loop mode schema: ${DD}`)
+        throw new Error(`Invalid Blockbench loop mode schema: ${UU}`)
       }
-      createNodeSkeletonAnimationScript(DD) {
-        if (null === DD) return null;
-        const CD = {};
-        for (const cD in DD) {
-          const ID = DD[cD];
-          CD[cD] = this.createNodeAnimationScript(ID)
+      createNodeSkeletonAnimationScript(UU) {
+        if (null === UU) return null;
+        const RU = {};
+        for (const gU in UU) {
+          const tU = UU[gU];
+          RU[gU] = this.createNodeAnimationScript(tU)
         }
-        return CD
+        return RU
       }
-      createNodeAnimationScript(DD) {
+      createNodeAnimationScript(UU) {
         const {
-          rotation: CD,
-          position: cD
-        } = DD;
+          rotation: RU,
+          position: gU
+        } = UU;
         return {
-          rotation: this.createAnimationTimeline(null !== CD && void 0 !== CD ? CD : null, oD, yD, !0),
-          position: this.createAnimationTimeline(null !== cD && void 0 !== cD ? cD : null, ND, tD, !1)
+          rotation: this.createAnimationTimeline(null !== RU && void 0 !== RU ? RU : null, QU, jU, !0),
+          position: this.createAnimationTimeline(null !== gU && void 0 !== gU ? gU : null, WU, CU, !1)
         }
       }
-      createAnimationTimeline(DD, CD, cD, ID) {
-        if (null === DD) return [];
-        if (Array.isArray(DD)) {
-          DD = {
-            "0.0": DD
+      createAnimationTimeline(UU, RU, gU, tU) {
+        if (null === UU) return [];
+        if (Array.isArray(UU)) {
+          UU = {
+            "0.0": UU
           }
         }
-        const pD = Object.entries(DD).map((DD => {
-          let [cD, ID] = DD;
-          const pD = Number(cD) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(pD, ID, CD)
-        })).filter(SD);
-        pD.sort(((DD, CD) => DD.timeFraction - CD.timeFraction)), ID && function(DD) {
-          for (let CD = 1; CD < DD.length; CD++) {
-            const cD = DD[CD - 1].post,
-              ID = DD[CD],
-              pD = gD(ID.pre),
-              iD = gD(ID.post),
-              fD = mD(cD, ID.pre);
-            mD(cD, pD) < fD && (DD[CD] = {
-              ...ID,
-              pre: pD,
-              post: iD
+        const pU = Object.entries(UU).map((UU => {
+          let [gU, tU] = UU;
+          const pU = Number(gU) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(pU, tU, RU)
+        })).filter(cU);
+        pU.sort(((UU, RU) => UU.timeFraction - RU.timeFraction)), tU && function(UU) {
+          for (let RU = 1; RU < UU.length; RU++) {
+            const gU = UU[RU - 1].post,
+              tU = UU[RU],
+              pU = fU(tU.pre),
+              EU = fU(tU.post),
+              PU = mU(gU, tU.pre);
+            mU(gU, pU) < PU && (UU[RU] = {
+              ...tU,
+              pre: pU,
+              post: EU
             })
           }
-        }(pD);
-        const iD = [];
-        for (let wD = 0; wD < pD.length; wD++) {
-          var fD, bD, QD;
-          const DD = pD[wD],
-            CD = null !== (fD = pD[wD - 1]) && void 0 !== fD ? fD : DD,
-            ID = null !== (bD = pD[wD + 1]) && void 0 !== bD ? bD : DD,
-            SD = null !== (QD = pD[wD + 2]) && void 0 !== QD ? QD : ID;
-          iD.push({
-            ...DD,
-            ...cD(CD.post, CD.timeFraction, DD.post, DD.timeFraction, ID.pre, ID.timeFraction, SD.pre, SD.timeFraction)
+        }(pU);
+        const EU = [];
+        for (let KU = 0; KU < pU.length; KU++) {
+          var PU, TU, qU;
+          const UU = pU[KU],
+            RU = null !== (PU = pU[KU - 1]) && void 0 !== PU ? PU : UU,
+            tU = null !== (TU = pU[KU + 1]) && void 0 !== TU ? TU : UU,
+            cU = null !== (qU = pU[KU + 2]) && void 0 !== qU ? qU : tU;
+          EU.push({
+            ...UU,
+            ...gU(RU.post, RU.timeFraction, UU.post, UU.timeFraction, tU.pre, tU.timeFraction, cU.pre, cU.timeFraction)
           })
         }
-        return iD
+        return EU
       }
-      createAnimationFrameWithoutPrecomputes(DD, CD, cD) {
-        let ID, pD, iD = null;
-        if ("object" === typeof CD && "post" in CD) {
-          var fD;
-          iD = null !== (fD = CD.lerp_mode) && void 0 !== fD ? fD : null, pD = ZD(CD.post, cD), ID = CD.pre ? ZD(CD.pre, cD) : pD
+      createAnimationFrameWithoutPrecomputes(UU, RU, gU) {
+        let tU, pU, EU = null;
+        if ("object" === typeof RU && "post" in RU) {
+          var PU;
+          EU = null !== (PU = RU.lerp_mode) && void 0 !== PU ? PU : null, pU = hU(RU.post, gU), tU = RU.pre ? hU(RU.pre, gU) : pU
         } else {
-          const DD = ZD(CD, cD);
-          pD = DD, ID = DD
+          const UU = hU(RU, gU);
+          pU = UU, tU = UU
         }
         return {
-          timeFraction: DD,
-          Ui: this.createLerpMode(iD),
-          pre: ID,
-          post: pD
+          timeFraction: UU,
+          nE: this.createLerpMode(EU),
+          pre: tU,
+          post: pU
         }
       }
-      createLerpMode(DD) {
-        return null === DD ? ID.e.Linear : wD.LERP_MODE_SCHEMA_MAPPING[DD]
+      createLerpMode(UU) {
+        return null === UU ? tU.h.Linear : KU.LERP_MODE_SCHEMA_MAPPING[UU]
       }
     }
 
-    function SD(DD) {
-      return Number.isFinite(DD.timeFraction) && BD(DD.pre) && BD(DD.post)
+    function cU(UU) {
+      return Number.isFinite(UU.timeFraction) && GU(UU.pre) && GU(UU.post)
     }
 
-    function BD(DD) {
-      return Number.isFinite(DD[0]) && Number.isFinite(DD[1]) && Number.isFinite(DD[2])
+    function GU(UU) {
+      return Number.isFinite(UU[0]) && Number.isFinite(UU[1]) && Number.isFinite(UU[2])
     }
 
-    function yD(DD, CD, cD, ID, pD, iD, fD, bD) {
-      const QD = iD - CD,
-        wD = iD - ID,
-        SD = bD - ID,
-        BD = [null, null, null];
-      for (let yD = 0; yD < BD.length; yD++) BD[yD] = MD(DD[yD], cD[yD], pD[yD], fD[yD], QD, SD);
+    function jU(UU, RU, gU, tU, pU, EU, PU, TU) {
+      const qU = EU - RU,
+        KU = EU - tU,
+        cU = TU - tU,
+        GU = [null, null, null];
+      for (let jU = 0; jU < GU.length; jU++) GU[jU] = uU(UU[jU], gU[jU], pU[jU], PU[jU], qU, cU);
       return {
-        xi: wD,
-        qi: BD
+        bE: KU,
+        oE: GU
       }
     }
 
-    function MD(DD, CD, cD, ID, iD, fD) {
+    function uU(UU, RU, gU, tU, EU, PU) {
       return {
-        Ki: pD.e.computeShortestRotation(DD, cD) / iD,
-        ai: pD.e.computeShortestRotation(CD, ID) / fD,
-        delta: pD.e.computeShortestRotation(CD, cD)
+        aE: pU.c.computeShortestRotation(UU, gU) / EU,
+        YE: pU.c.computeShortestRotation(RU, tU) / PU,
+        delta: pU.c.computeShortestRotation(RU, gU)
       }
     }
 
-    function tD(DD, CD, cD, ID, pD, iD, fD, bD) {
-      const QD = iD - CD,
-        wD = iD - ID,
-        SD = bD - ID,
-        BD = [null, null, null];
-      for (let yD = 0; yD < BD.length; yD++) BD[yD] = {
-        Ki: (pD[yD] - DD[yD]) / QD,
-        ai: (fD[yD] - cD[yD]) / SD,
-        delta: pD[yD] - cD[yD]
+    function CU(UU, RU, gU, tU, pU, EU, PU, TU) {
+      const qU = EU - RU,
+        KU = EU - tU,
+        cU = TU - tU,
+        GU = [null, null, null];
+      for (let jU = 0; jU < GU.length; jU++) GU[jU] = {
+        aE: (pU[jU] - UU[jU]) / qU,
+        YE: (PU[jU] - gU[jU]) / cU,
+        delta: pU[jU] - gU[jU]
       };
       return {
-        xi: wD,
-        qi: BD
+        bE: KU,
+        oE: GU
       }
     }
 
-    function ZD(DD, CD) {
-      return null === CD ? DD : CD(DD)
+    function hU(UU, RU) {
+      return null === RU ? UU : RU(UU)
     }
 
-    function oD(DD) {
-      const [CD, cD, ID] = DD, fD = -(0, iD.o)(CD), bD = -(0, iD.o)(cD), QD = (0, iD.o)(ID), wD = pD.e.quaternionFromEulerZYX(fD, bD, QD);
-      return pD.e.eulerYXZFromQuaternion(wD)
+    function QU(UU) {
+      const [RU, gU, tU] = UU, PU = -(0, EU.j)(RU), TU = -(0, EU.j)(gU), qU = (0, EU.j)(tU), KU = pU.c.quaternionFromEulerZYX(PU, TU, qU);
+      return pU.c.eulerYXZFromQuaternion(KU)
     }
-    wD.LERP_MODE_SCHEMA_MAPPING = {
-      linear: ID.e.Linear,
-      catmullrom: ID.e.CatmullRomSpline
+    KU.LERP_MODE_SCHEMA_MAPPING = {
+      linear: tU.h.Linear,
+      catmullrom: tU.h.CatmullRomSpline
     };
-    const vD = 1 / 16;
+    const eU = 1 / 16;
 
-    function ND(DD) {
-      return [-DD[0] * vD, DD[1] * vD, DD[2] * vD]
+    function WU(UU) {
+      return [-UU[0] * eU, UU[1] * eU, UU[2] * eU]
     }
 
-    function gD(DD) {
-      const [CD, cD, ID] = DD;
-      return [CD >= 0 ? Math.PI - CD : -Math.PI - CD, XD(cD + Math.PI), XD(ID + Math.PI)]
+    function fU(UU) {
+      const [RU, gU, tU] = UU;
+      return [RU >= 0 ? Math.PI - RU : -Math.PI - RU, xU(gU + Math.PI), xU(tU + Math.PI)]
     }
 
-    function XD(DD) {
-      return pD.e.mod(DD + Math.PI, 2 * Math.PI) - Math.PI
+    function xU(UU) {
+      return pU.c.mod(UU + Math.PI, 2 * Math.PI) - Math.PI
     }
 
-    function mD(DD, CD) {
-      return Math.abs(pD.e.computeShortestRotation(DD[0], CD[0])) + Math.abs(pD.e.computeShortestRotation(DD[1], CD[1])) + Math.abs(pD.e.computeShortestRotation(DD[2], CD[2]))
+    function mU(UU, RU) {
+      return Math.abs(pU.c.computeShortestRotation(UU[0], RU[0])) + Math.abs(pU.c.computeShortestRotation(UU[1], RU[1])) + Math.abs(pU.c.computeShortestRotation(UU[2], RU[2]))
     }
-    const nD = new QD
+    const IU = new qU
   },
-  36501: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => fD,
-      d: () => iD,
-      e: () => ID,
-      h: () => pD
+  36651: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => PU,
+      f: () => EU,
+      h: () => tU,
+      k: () => pU
     });
-    let ID = function(DD) {
-        return DD[DD.Linear = 0] = "Linear", DD[DD.CatmullRomSpline = 1] = "CatmullRomSpline", DD
+    let tU = function(UU) {
+        return UU[UU.Linear = 0] = "Linear", UU[UU.CatmullRomSpline = 1] = "CatmullRomSpline", UU
       }({}),
-      pD = function(DD) {
-        return DD[DD.NoLoop = 0] = "NoLoop", DD[DD.LoopOnLastFrame = 1] = "LoopOnLastFrame", DD[DD.HoldOnLastFrame = 2] = "HoldOnLastFrame", DD
+      pU = function(UU) {
+        return UU[UU.NoLoop = 0] = "NoLoop", UU[UU.LoopOnLastFrame = 1] = "LoopOnLastFrame", UU[UU.HoldOnLastFrame = 2] = "HoldOnLastFrame", UU
       }({}),
-      iD = function(DD) {
-        return DD[DD.Movement = 0] = "Movement", DD[DD.Action = 1] = "Action", DD[DD.Emote = 2] = "Emote", DD[DD.Custom = 3] = "Custom", DD
+      EU = function(UU) {
+        return UU[UU.Movement = 0] = "Movement", UU[UU.Action = 1] = "Action", UU[UU.Emote = 2] = "Emote", UU[UU.Custom = 3] = "Custom", UU
       }({}),
-      fD = function(DD) {
-        return DD[DD.Start = 0] = "Start", DD[DD.Stop = 1] = "Stop", DD
+      PU = function(UU) {
+        return UU[UU.Start = 0] = "Start", UU[UU.Stop = 1] = "Stop", UU
       }({})
   },
-  4615: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => pD,
-      h: () => ID,
-      k: () => iD,
-      l: () => QD,
-      p: () => fD
+  4503: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => pU,
+      f: () => tU,
+      j: () => EU,
+      k: () => qU,
+      n: () => PU
     });
-    const ID = ["sine", "triangle", "square", "sawtooth"],
-      pD = 55,
-      iD = {
+    const tU = ["sine", "triangle", "square", "sawtooth"],
+      pU = 55,
+      EU = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -1116,39 +1116,39 @@ export const modules = {
         }
       };
 
-    function fD(DD) {
-      return "string" !== typeof DD ? DD : Object.hasOwn(iD, DD) ? iD[DD] : null
+    function PU(UU) {
+      return "string" !== typeof UU ? UU : Object.hasOwn(EU, UU) ? EU[UU] : null
     }
 
-    function bD(DD, CD, cD) {
-      return Math.min(cD, Math.max(CD, DD))
+    function TU(UU, RU, gU) {
+      return Math.min(gU, Math.max(RU, UU))
     }
 
-    function QD(DD) {
-      const CD = bD(DD.durationMs, 10, 500),
-        cD = bD(DD.attackMs, 0, CD),
+    function qU(UU) {
+      const RU = TU(UU.durationMs, 10, 500),
+        gU = TU(UU.attackMs, 0, RU),
         {
-          intonation: pD
-        } = DD;
+          intonation: pU
+        } = UU;
       return {
-        waveform: ID.includes(DD.waveform) ? DD.waveform : "sine",
-        pitchHz: bD(DD.pitchHz, 20, 4e3),
-        glideSemitones: bD(DD.glideSemitones, -24, 24),
-        durationMs: CD,
-        attackMs: cD,
-        releaseMs: bD(DD.releaseMs, 0, CD - cD),
-        lowpassHz: null === DD.lowpassHz ? null : bD(DD.lowpassHz, 20, 2e4),
-        volume: bD(DD.volume, 0, 2),
+        waveform: tU.includes(UU.waveform) ? UU.waveform : "sine",
+        pitchHz: TU(UU.pitchHz, 20, 4e3),
+        glideSemitones: TU(UU.glideSemitones, -24, 24),
+        durationMs: RU,
+        attackMs: gU,
+        releaseMs: TU(UU.releaseMs, 0, RU - gU),
+        lowpassHz: null === UU.lowpassHz ? null : TU(UU.lowpassHz, 20, 2e4),
+        volume: TU(UU.volume, 0, 2),
         intonation: {
-          variationSemitones: bD(pD.variationSemitones, 0, 6),
-          declineSemitones: bD(pD.declineSemitones, 0, 12),
-          questionRiseSemitones: bD(pD.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: bD(pD.exclaimLiftSemitones, 0, 12)
+          variationSemitones: TU(pU.variationSemitones, 0, 6),
+          declineSemitones: TU(pU.declineSemitones, 0, 12),
+          questionRiseSemitones: TU(pU.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: TU(pU.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: bD(DD.syllableMs, 25, 200)
+        syllableMs: TU(UU.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

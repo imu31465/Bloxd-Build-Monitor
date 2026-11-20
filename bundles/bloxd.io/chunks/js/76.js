@@ -1,99 +1,99 @@
 export const id = 76;
 export const ids = [76];
 export const modules = {
-  4515: DD => {
-    function CD(DD) {
-      return DD instanceof Map ? DD.clear = DD.delete = DD.set = function() {
+  4373: UU => {
+    function RU(UU) {
+      return UU instanceof Map ? UU.clear = UU.delete = UU.set = function() {
         throw new Error("map is read-only")
-      } : DD instanceof Set && (DD.add = DD.clear = DD.delete = function() {
+      } : UU instanceof Set && (UU.add = UU.clear = UU.delete = function() {
         throw new Error("set is read-only")
-      }), Object.freeze(DD), Object.getOwnPropertyNames(DD).forEach((cD => {
-        const ID = DD[cD],
-          pD = typeof ID;
-        "object" !== pD && "function" !== pD || Object.isFrozen(ID) || CD(ID)
-      })), DD
+      }), Object.freeze(UU), Object.getOwnPropertyNames(UU).forEach((gU => {
+        const tU = UU[gU],
+          pU = typeof tU;
+        "object" !== pU && "function" !== pU || Object.isFrozen(tU) || RU(tU)
+      })), UU
     }
-    class cD {
-      constructor(DD) {
-        void 0 === DD.data && (DD.data = {}), this.data = DD.data, this.isMatchIgnored = !1
+    class gU {
+      constructor(UU) {
+        void 0 === UU.data && (UU.data = {}), this.data = UU.data, this.isMatchIgnored = !1
       }
       ignoreMatch() {
         this.isMatchIgnored = !0
       }
     }
 
-    function ID(DD) {
-      return DD.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
+    function tU(UU) {
+      return UU.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
     }
 
-    function pD(DD) {
-      const CD = Object.create(null);
-      for (const iD in DD) CD[iD] = DD[iD];
-      for (var cD = arguments.length, ID = new Array(cD > 1 ? cD - 1 : 0), pD = 1; pD < cD; pD++) ID[pD - 1] = arguments[pD];
-      return ID.forEach((function(DD) {
-        for (const cD in DD) CD[cD] = DD[cD]
-      })), CD
+    function pU(UU) {
+      const RU = Object.create(null);
+      for (const EU in UU) RU[EU] = UU[EU];
+      for (var gU = arguments.length, tU = new Array(gU > 1 ? gU - 1 : 0), pU = 1; pU < gU; pU++) tU[pU - 1] = arguments[pU];
+      return tU.forEach((function(UU) {
+        for (const gU in UU) RU[gU] = UU[gU]
+      })), RU
     }
-    const iD = DD => !!DD.scope;
-    class fD {
-      constructor(DD, CD) {
-        this.buffer = "", this.classPrefix = CD.classPrefix, DD.walk(this)
+    const EU = UU => !!UU.scope;
+    class PU {
+      constructor(UU, RU) {
+        this.buffer = "", this.classPrefix = RU.classPrefix, UU.walk(this)
       }
-      addText(DD) {
-        this.buffer += ID(DD)
+      addText(UU) {
+        this.buffer += tU(UU)
       }
-      openNode(DD) {
-        if (!iD(DD)) return;
-        const CD = ((DD, CD) => {
+      openNode(UU) {
+        if (!EU(UU)) return;
+        const RU = ((UU, RU) => {
           let {
-            prefix: cD
-          } = CD;
-          if (DD.startsWith("language:")) return DD.replace("language:", "language-");
-          if (DD.includes(".")) {
-            const CD = DD.split(".");
-            return [`${cD}${CD.shift()}`, ...CD.map(((DD, CD) => `${DD}${"_".repeat(CD+1)}`))].join(" ")
+            prefix: gU
+          } = RU;
+          if (UU.startsWith("language:")) return UU.replace("language:", "language-");
+          if (UU.includes(".")) {
+            const RU = UU.split(".");
+            return [`${gU}${RU.shift()}`, ...RU.map(((UU, RU) => `${UU}${"_".repeat(RU+1)}`))].join(" ")
           }
-          return `${cD}${DD}`
-        })(DD.scope, {
+          return `${gU}${UU}`
+        })(UU.scope, {
           prefix: this.classPrefix
         });
-        this.span(CD)
+        this.span(RU)
       }
-      closeNode(DD) {
-        iD(DD) && (this.buffer += "</span>")
+      closeNode(UU) {
+        EU(UU) && (this.buffer += "</span>")
       }
       value() {
         return this.buffer
       }
-      span(DD) {
-        this.buffer += `<span class="${DD}">`
+      span(UU) {
+        this.buffer += `<span class="${UU}">`
       }
     }
-    const bD = function() {
-      let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const CD = {
+    const TU = function() {
+      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const RU = {
         children: []
       };
-      return Object.assign(CD, DD), CD
+      return Object.assign(RU, UU), RU
     };
-    class QD {
+    class qU {
       constructor() {
-        this.EX = bD(), this.stack = [this.EX]
+        this.vx = TU(), this.stack = [this.vx]
       }
       get top() {
         return this.stack[this.stack.length - 1]
       }
       get root() {
-        return this.EX
+        return this.vx
       }
-      add(DD) {
-        this.top.children.push(DD)
+      add(UU) {
+        this.top.children.push(UU)
       }
-      openNode(DD) {
-        const CD = bD({
-          scope: DD
+      openNode(UU) {
+        const RU = TU({
+          scope: UU
         });
-        this.add(CD), this.stack.push(CD)
+        this.add(RU), this.stack.push(RU)
       }
       closeNode() {
         if (this.stack.length > 1) return this.stack.pop()
@@ -102,391 +102,391 @@ export const modules = {
         for (; this.closeNode(););
       }
       toJSON() {
-        return JSON.stringify(this.EX, null, 4)
+        return JSON.stringify(this.vx, null, 4)
       }
-      walk(DD) {
-        return this.constructor._walk(DD, this.EX)
+      walk(UU) {
+        return this.constructor._walk(UU, this.vx)
       }
-      static _walk(DD, CD) {
-        return "string" === typeof CD ? DD.addText(CD) : CD.children && (DD.openNode(CD), CD.children.forEach((CD => this._walk(DD, CD))), DD.closeNode(CD)), DD
+      static _walk(UU, RU) {
+        return "string" === typeof RU ? UU.addText(RU) : RU.children && (UU.openNode(RU), RU.children.forEach((RU => this._walk(UU, RU))), UU.closeNode(RU)), UU
       }
-      static _collapse(DD) {
-        "string" !== typeof DD && DD.children && (DD.children.every((DD => "string" === typeof DD)) ? DD.children = [DD.children.join("")] : DD.children.forEach((DD => {
-          QD._collapse(DD)
+      static _collapse(UU) {
+        "string" !== typeof UU && UU.children && (UU.children.every((UU => "string" === typeof UU)) ? UU.children = [UU.children.join("")] : UU.children.forEach((UU => {
+          qU._collapse(UU)
         })))
       }
     }
-    class wD extends QD {
-      constructor(DD) {
-        super(), this.options = DD
+    class KU extends qU {
+      constructor(UU) {
+        super(), this.options = UU
       }
-      addText(DD) {
-        "" !== DD && this.add(DD)
+      addText(UU) {
+        "" !== UU && this.add(UU)
       }
-      startScope(DD) {
-        this.openNode(DD)
+      startScope(UU) {
+        this.openNode(UU)
       }
       endScope() {
         this.closeNode()
       }
-      __addSublanguage(DD, CD) {
-        const cD = DD.root;
-        CD && (cD.scope = `language:${CD}`), this.add(cD)
+      __addSublanguage(UU, RU) {
+        const gU = UU.root;
+        RU && (gU.scope = `language:${RU}`), this.add(gU)
       }
       toHTML() {
-        return new fD(this, this.options).value()
+        return new PU(this, this.options).value()
       }
       finalize() {
         return this.closeAllNodes(), !0
       }
     }
 
-    function SD(DD) {
-      return DD ? "string" === typeof DD ? DD : DD.source : null
+    function cU(UU) {
+      return UU ? "string" === typeof UU ? UU : UU.source : null
     }
 
-    function BD(DD) {
-      return tD("(?=", DD, ")")
+    function GU(UU) {
+      return CU("(?=", UU, ")")
     }
 
-    function yD(DD) {
-      return tD("(?:", DD, ")*")
+    function jU(UU) {
+      return CU("(?:", UU, ")*")
     }
 
-    function MD(DD) {
-      return tD("(?:", DD, ")?")
+    function uU(UU) {
+      return CU("(?:", UU, ")?")
     }
 
-    function tD() {
-      for (var DD = arguments.length, CD = new Array(DD), cD = 0; cD < DD; cD++) CD[cD] = arguments[cD];
-      return CD.map((DD => SD(DD))).join("")
+    function CU() {
+      for (var UU = arguments.length, RU = new Array(UU), gU = 0; gU < UU; gU++) RU[gU] = arguments[gU];
+      return RU.map((UU => cU(UU))).join("")
     }
 
-    function ZD() {
-      for (var DD = arguments.length, CD = new Array(DD), cD = 0; cD < DD; cD++) CD[cD] = arguments[cD];
-      const ID = function(DD) {
-        const CD = DD[DD.length - 1];
-        return "object" === typeof CD && CD.constructor === Object ? (DD.splice(DD.length - 1, 1), CD) : {}
-      }(CD);
-      return "(" + (ID.capture ? "" : "?:") + CD.map((DD => SD(DD))).join("|") + ")"
+    function hU() {
+      for (var UU = arguments.length, RU = new Array(UU), gU = 0; gU < UU; gU++) RU[gU] = arguments[gU];
+      const tU = function(UU) {
+        const RU = UU[UU.length - 1];
+        return "object" === typeof RU && RU.constructor === Object ? (UU.splice(UU.length - 1, 1), RU) : {}
+      }(RU);
+      return "(" + (tU.capture ? "" : "?:") + RU.map((UU => cU(UU))).join("|") + ")"
     }
 
-    function oD(DD) {
-      return new RegExp(DD.toString() + "|").exec("").length - 1
+    function QU(UU) {
+      return new RegExp(UU.toString() + "|").exec("").length - 1
     }
-    const vD = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
+    const eU = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
 
-    function ND(DD, CD) {
+    function WU(UU, RU) {
       let {
-        joinWith: cD
-      } = CD, ID = 0;
-      return DD.map((DD => {
-        ID += 1;
-        const CD = ID;
-        let cD = SD(DD),
-          pD = "";
-        for (; cD.length > 0;) {
-          const DD = vD.exec(cD);
-          if (!DD) {
-            pD += cD;
+        joinWith: gU
+      } = RU, tU = 0;
+      return UU.map((UU => {
+        tU += 1;
+        const RU = tU;
+        let gU = cU(UU),
+          pU = "";
+        for (; gU.length > 0;) {
+          const UU = eU.exec(gU);
+          if (!UU) {
+            pU += gU;
             break
           }
-          pD += cD.substring(0, DD.index), cD = cD.substring(DD.index + DD[0].length), "\\" === DD[0][0] && DD[1] ? pD += "\\" + String(Number(DD[1]) + CD) : (pD += DD[0], "(" === DD[0] && ID++)
+          pU += gU.substring(0, UU.index), gU = gU.substring(UU.index + UU[0].length), "\\" === UU[0][0] && UU[1] ? pU += "\\" + String(Number(UU[1]) + RU) : (pU += UU[0], "(" === UU[0] && tU++)
         }
-        return pD
-      })).map((DD => `(${DD})`)).join(cD)
+        return pU
+      })).map((UU => `(${UU})`)).join(gU)
     }
-    const gD = "[a-zA-Z]\\w*",
-      XD = "[a-zA-Z_]\\w*",
-      mD = "\\b\\d+(\\.\\d+)?",
-      nD = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
-      OD = "\\b(0b[01]+)",
-      PD = {
-        VM: "\\\\[\\s\\S]",
+    const fU = "[a-zA-Z]\\w*",
+      xU = "[a-zA-Z_]\\w*",
+      mU = "\\b\\d+(\\.\\d+)?",
+      IU = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
+      JU = "\\b(0b[01]+)",
+      wU = {
+        pu: "\\\\[\\s\\S]",
         relevance: 0
       },
-      HD = {
+      nU = {
         scope: "string",
-        VM: "'",
+        pu: "'",
         end: "'",
         illegal: "\\n",
-        contains: [PD]
+        contains: [wU]
       },
-      UD = {
+      bU = {
         scope: "string",
-        VM: '"',
+        pu: '"',
         end: '"',
         illegal: "\\n",
-        contains: [PD]
+        contains: [wU]
       },
-      xD = function(DD, CD) {
-        const cD = pD({
+      oU = function(UU, RU) {
+        const gU = pU({
           scope: "comment",
-          VM: DD,
-          end: CD,
+          pu: UU,
+          end: RU,
           contains: []
         }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {});
-        cD.contains.push({
+        gU.contains.push({
           scope: "doctag",
-          VM: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
+          pu: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
           end: /(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):/,
           excludeBegin: !0,
           relevance: 0
         });
-        const ID = ZD("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
-        return cD.contains.push({
-          VM: tD(/[ ]+/, "(", ID, /[.]?[:]?([.][ ]|[ ])/, "){3}")
-        }), cD
+        const tU = hU("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
+        return gU.contains.push({
+          pu: CU(/[ ]+/, "(", tU, /[.]?[:]?([.][ ]|[ ])/, "){3}")
+        }), gU
       },
-      qD = xD("//", "$"),
-      JD = xD("/\\*", "\\*/"),
-      KD = xD("#", "$"),
-      aD = {
+      ZU = oU("//", "$"),
+      aU = oU("/\\*", "\\*/"),
+      YU = oU("#", "$"),
+      BU = {
         scope: "number",
-        VM: mD,
+        pu: mU,
         relevance: 0
       },
-      VD = {
+      VU = {
         scope: "number",
-        VM: nD,
+        pu: IU,
         relevance: 0
       },
-      zD = {
+      rU = {
         scope: "number",
-        VM: OD,
+        pu: JU,
         relevance: 0
       },
-      jD = {
+      XU = {
         scope: "regexp",
-        VM: /\/(?=[^/\n]*\/)/,
+        pu: /\/(?=[^/\n]*\/)/,
         end: /\/[gimuy]*/,
-        contains: [PD, {
-          VM: /\[/,
+        contains: [wU, {
+          pu: /\[/,
           end: /\]/,
           relevance: 0,
-          contains: [PD]
+          contains: [wU]
         }]
       },
-      lD = {
+      vU = {
         scope: "title",
-        VM: gD,
+        pu: fU,
         relevance: 0
       },
-      LD = {
+      dU = {
         scope: "title",
-        VM: XD,
+        pu: xU,
         relevance: 0
       },
-      TD = {
-        VM: "\\.\\s*" + XD,
+      HU = {
+        pu: "\\.\\s*" + xU,
         relevance: 0
       };
-    var GD = Object.freeze({
+    var SU = Object.freeze({
       __proto__: null,
-      APOS_STRING_MODE: HD,
-      BACKSLASH_ESCAPE: PD,
-      BINARY_NUMBER_MODE: zD,
-      BINARY_NUMBER_RE: OD,
-      COMMENT: xD,
-      C_BLOCK_COMMENT_MODE: JD,
-      C_LINE_COMMENT_MODE: qD,
-      C_NUMBER_MODE: VD,
-      C_NUMBER_RE: nD,
-      END_SAME_AS_BEGIN: function(DD) {
-        return Object.assign(DD, {
-          "on:begin": (DD, CD) => {
-            CD.data._beginMatch = DD[1]
+      APOS_STRING_MODE: nU,
+      BACKSLASH_ESCAPE: wU,
+      BINARY_NUMBER_MODE: rU,
+      BINARY_NUMBER_RE: JU,
+      COMMENT: oU,
+      C_BLOCK_COMMENT_MODE: aU,
+      C_LINE_COMMENT_MODE: ZU,
+      C_NUMBER_MODE: VU,
+      C_NUMBER_RE: IU,
+      END_SAME_AS_BEGIN: function(UU) {
+        return Object.assign(UU, {
+          "on:begin": (UU, RU) => {
+            RU.data._beginMatch = UU[1]
           },
-          "on:end": (DD, CD) => {
-            CD.data._beginMatch !== DD[1] && CD.ignoreMatch()
+          "on:end": (UU, RU) => {
+            RU.data._beginMatch !== UU[1] && RU.ignoreMatch()
           }
         })
       },
-      HASH_COMMENT_MODE: KD,
-      IDENT_RE: gD,
+      HASH_COMMENT_MODE: YU,
+      IDENT_RE: fU,
       MATCH_NOTHING_RE: /\b\B/,
-      METHOD_GUARD: TD,
-      NUMBER_MODE: aD,
-      NUMBER_RE: mD,
+      METHOD_GUARD: HU,
+      NUMBER_MODE: BU,
+      NUMBER_RE: mU,
       PHRASAL_WORDS_MODE: {
-        VM: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
+        pu: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
       },
-      QUOTE_STRING_MODE: UD,
-      REGEXP_MODE: jD,
+      QUOTE_STRING_MODE: bU,
+      REGEXP_MODE: XU,
       RE_STARTERS_RE: "!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~",
       SHEBANG: function() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        const CD = /^#![ ]*\//;
-        return DD.binary && (DD.VM = tD(CD, /.*\b/, DD.binary, /\b.*/)), pD({
+        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        const RU = /^#![ ]*\//;
+        return UU.binary && (UU.pu = CU(RU, /.*\b/, UU.binary, /\b.*/)), pU({
           scope: "meta",
-          VM: CD,
+          pu: RU,
           end: /$/,
           relevance: 0,
-          "on:begin": (DD, CD) => {
-            0 !== DD.index && CD.ignoreMatch()
+          "on:begin": (UU, RU) => {
+            0 !== UU.index && RU.ignoreMatch()
           }
-        }, DD)
+        }, UU)
       },
-      TITLE_MODE: lD,
-      UNDERSCORE_IDENT_RE: XD,
-      UNDERSCORE_TITLE_MODE: LD
+      TITLE_MODE: vU,
+      UNDERSCORE_IDENT_RE: xU,
+      UNDERSCORE_TITLE_MODE: dU
     });
 
-    function RD(DD, CD) {
-      "." === DD.input[DD.index - 1] && CD.ignoreMatch()
+    function sU(UU, RU) {
+      "." === UU.input[UU.index - 1] && RU.ignoreMatch()
     }
 
-    function kD(DD, CD) {
-      void 0 !== DD.className && (DD.scope = DD.className, delete DD.className)
+    function yU(UU, RU) {
+      void 0 !== UU.className && (UU.scope = UU.className, delete UU.className)
     }
 
-    function dD(DD, CD) {
-      CD && DD.beginKeywords && (DD.VM = "\\b(" + DD.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", DD.__beforeBegin = RD, DD.keywords = DD.keywords || DD.beginKeywords, delete DD.beginKeywords, void 0 === DD.relevance && (DD.relevance = 0))
+    function kU(UU, RU) {
+      RU && UU.beginKeywords && (UU.pu = "\\b(" + UU.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", UU.__beforeBegin = sU, UU.keywords = UU.keywords || UU.beginKeywords, delete UU.beginKeywords, void 0 === UU.relevance && (UU.relevance = 0))
     }
 
-    function YD(DD, CD) {
-      Array.isArray(DD.illegal) && (DD.illegal = ZD(...DD.illegal))
+    function FU(UU, RU) {
+      Array.isArray(UU.illegal) && (UU.illegal = hU(...UU.illegal))
     }
 
-    function WD(DD, CD) {
-      if (DD.match) {
-        if (DD.VM || DD.end) throw new Error("begin & end are not supported with match");
-        DD.VM = DD.match, delete DD.match
+    function iU(UU, RU) {
+      if (UU.match) {
+        if (UU.pu || UU.end) throw new Error("begin & end are not supported with match");
+        UU.pu = UU.match, delete UU.match
       }
     }
 
-    function sD(DD, CD) {
-      void 0 === DD.relevance && (DD.relevance = 1)
+    function AU(UU, RU) {
+      void 0 === UU.relevance && (UU.relevance = 1)
     }
-    const ED = (DD, CD) => {
-        if (!DD.beforeMatch) return;
-        if (DD.starts) throw new Error("beforeMatch cannot be used with starts");
-        const cD = Object.assign({}, DD);
-        Object.keys(DD).forEach((CD => {
-          delete DD[CD]
-        })), DD.keywords = cD.keywords, DD.VM = tD(cD.beforeMatch, BD(cD.VM)), DD.starts = {
+    const zU = (UU, RU) => {
+        if (!UU.beforeMatch) return;
+        if (UU.starts) throw new Error("beforeMatch cannot be used with starts");
+        const gU = Object.assign({}, UU);
+        Object.keys(UU).forEach((RU => {
+          delete UU[RU]
+        })), UU.keywords = gU.keywords, UU.pu = CU(gU.beforeMatch, GU(gU.pu)), UU.starts = {
           relevance: 0,
-          contains: [Object.assign(cD, {
+          contains: [Object.assign(gU, {
             endsParent: !0
           })]
-        }, DD.relevance = 0, delete cD.beforeMatch
+        }, UU.relevance = 0, delete gU.beforeMatch
       },
-      eD = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
+      MU = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
 
-    function uD(DD, CD) {
-      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
-      const ID = Object.create(null);
-      return "string" === typeof DD ? pD(cD, DD.split(" ")) : Array.isArray(DD) ? pD(cD, DD) : Object.keys(DD).forEach((function(cD) {
-        Object.assign(ID, uD(DD[cD], CD, cD))
-      })), ID;
+    function DU(UU, RU) {
+      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
+      const tU = Object.create(null);
+      return "string" === typeof UU ? pU(gU, UU.split(" ")) : Array.isArray(UU) ? pU(gU, UU) : Object.keys(UU).forEach((function(gU) {
+        Object.assign(tU, DU(UU[gU], RU, gU))
+      })), tU;
 
-      function pD(DD, cD) {
-        CD && (cD = cD.map((DD => DD.toLowerCase()))), cD.forEach((function(CD) {
-          const cD = CD.split("|");
-          ID[cD[0]] = [DD, hD(cD[0], cD[1])]
+      function pU(UU, gU) {
+        RU && (gU = gU.map((UU => UU.toLowerCase()))), gU.forEach((function(RU) {
+          const gU = RU.split("|");
+          tU[gU[0]] = [UU, LU(gU[0], gU[1])]
         }))
       }
     }
 
-    function hD(DD, CD) {
-      return CD ? Number(CD) : function(DD) {
-        return eD.includes(DD.toLowerCase())
-      }(DD) ? 0 : 1
+    function LU(UU, RU) {
+      return RU ? Number(RU) : function(UU) {
+        return MU.includes(UU.toLowerCase())
+      }(UU) ? 0 : 1
     }
-    const rD = {},
-      AD = DD => {
-        console.error(DD)
+    const NU = {},
+      lU = UU => {
+        console.error(UU)
       },
-      FD = function(DD) {
-        for (var CD = arguments.length, cD = new Array(CD > 1 ? CD - 1 : 0), ID = 1; ID < CD; ID++) cD[ID - 1] = arguments[ID];
-        console.log(`WARN: ${DD}`, ...cD)
+      OU = function(UU) {
+        for (var RU = arguments.length, gU = new Array(RU > 1 ? RU - 1 : 0), tU = 1; tU < RU; tU++) gU[tU - 1] = arguments[tU];
+        console.log(`WARN: ${UU}`, ...gU)
       },
-      DC = (DD, CD) => {
-        rD[`${DD}/${CD}`] || (console.log(`Deprecated as of ${DD}. ${CD}`), rD[`${DD}/${CD}`] = !0)
+      UR = (UU, RU) => {
+        NU[`${UU}/${RU}`] || (console.log(`Deprecated as of ${UU}. ${RU}`), NU[`${UU}/${RU}`] = !0)
       },
-      CC = new Error;
+      RR = new Error;
 
-    function cC(DD, CD, cD) {
+    function gR(UU, RU, gU) {
       let {
-        key: ID
-      } = cD, pD = 0;
-      const iD = DD[ID],
-        fD = {},
-        bD = {};
-      for (let QD = 1; QD <= CD.length; QD++) bD[QD + pD] = iD[QD], fD[QD + pD] = !0, pD += oD(CD[QD - 1]);
-      DD[ID] = bD, DD[ID]._emit = fD, DD[ID]._multi = !0
+        key: tU
+      } = gU, pU = 0;
+      const EU = UU[tU],
+        PU = {},
+        TU = {};
+      for (let qU = 1; qU <= RU.length; qU++) TU[qU + pU] = EU[qU], PU[qU + pU] = !0, pU += QU(RU[qU - 1]);
+      UU[tU] = TU, UU[tU]._emit = PU, UU[tU]._multi = !0
     }
 
-    function IC(DD) {
-      ! function(DD) {
-        DD.scope && "object" === typeof DD.scope && null !== DD.scope && (DD.beginScope = DD.scope, delete DD.scope)
-      }(DD), "string" === typeof DD.beginScope && (DD.beginScope = {
-          _wrap: DD.beginScope
-        }), "string" === typeof DD.endScope && (DD.endScope = {
-          _wrap: DD.endScope
+    function tR(UU) {
+      ! function(UU) {
+        UU.scope && "object" === typeof UU.scope && null !== UU.scope && (UU.beginScope = UU.scope, delete UU.scope)
+      }(UU), "string" === typeof UU.beginScope && (UU.beginScope = {
+          _wrap: UU.beginScope
+        }), "string" === typeof UU.endScope && (UU.endScope = {
+          _wrap: UU.endScope
         }),
-        function(DD) {
-          if (Array.isArray(DD.VM)) {
-            if (DD.skip || DD.excludeBegin || DD.returnBegin) throw AD("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), CC;
-            if ("object" !== typeof DD.beginScope || null === DD.beginScope) throw AD("beginScope must be object"), CC;
-            cC(DD, DD.VM, {
+        function(UU) {
+          if (Array.isArray(UU.pu)) {
+            if (UU.skip || UU.excludeBegin || UU.returnBegin) throw lU("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), RR;
+            if ("object" !== typeof UU.beginScope || null === UU.beginScope) throw lU("beginScope must be object"), RR;
+            gR(UU, UU.pu, {
               key: "beginScope"
-            }), DD.VM = ND(DD.VM, {
+            }), UU.pu = WU(UU.pu, {
               joinWith: ""
             })
           }
-        }(DD),
-        function(DD) {
-          if (Array.isArray(DD.end)) {
-            if (DD.skip || DD.excludeEnd || DD.returnEnd) throw AD("skip, excludeEnd, returnEnd not compatible with endScope: {}"), CC;
-            if ("object" !== typeof DD.endScope || null === DD.endScope) throw AD("endScope must be object"), CC;
-            cC(DD, DD.end, {
+        }(UU),
+        function(UU) {
+          if (Array.isArray(UU.end)) {
+            if (UU.skip || UU.excludeEnd || UU.returnEnd) throw lU("skip, excludeEnd, returnEnd not compatible with endScope: {}"), RR;
+            if ("object" !== typeof UU.endScope || null === UU.endScope) throw lU("endScope must be object"), RR;
+            gR(UU, UU.end, {
               key: "endScope"
-            }), DD.end = ND(DD.end, {
+            }), UU.end = WU(UU.end, {
               joinWith: ""
             })
           }
-        }(DD)
+        }(UU)
     }
 
-    function pC(DD) {
-      function CD(CD, cD) {
-        return new RegExp(SD(CD), "m" + (DD.case_insensitive ? "i" : "") + (DD.unicodeRegex ? "u" : "") + (cD ? "g" : ""))
+    function pR(UU) {
+      function RU(RU, gU) {
+        return new RegExp(cU(RU), "m" + (UU.case_insensitive ? "i" : "") + (UU.unicodeRegex ? "u" : "") + (gU ? "g" : ""))
       }
-      class cD {
+      class gU {
         constructor() {
           this.matchIndexes = {}, this.regexes = [], this.matchAt = 1, this.position = 0
         }
-        addRule(DD, CD) {
-          CD.position = this.position++, this.matchIndexes[this.matchAt] = CD, this.regexes.push([CD, DD]), this.matchAt += oD(DD) + 1
+        addRule(UU, RU) {
+          RU.position = this.position++, this.matchIndexes[this.matchAt] = RU, this.regexes.push([RU, UU]), this.matchAt += QU(UU) + 1
         }
         compile() {
           0 === this.regexes.length && (this.exec = () => null);
-          const DD = this.regexes.map((DD => DD[1]));
-          this.matcherRe = CD(ND(DD, {
+          const UU = this.regexes.map((UU => UU[1]));
+          this.matcherRe = RU(WU(UU, {
             joinWith: "|"
           }), !0), this.lastIndex = 0
         }
-        exec(DD) {
+        exec(UU) {
           this.matcherRe.lastIndex = this.lastIndex;
-          const CD = this.matcherRe.exec(DD);
-          if (!CD) return null;
-          const cD = CD.findIndex(((DD, CD) => CD > 0 && void 0 !== DD)),
-            ID = this.matchIndexes[cD];
-          return CD.splice(0, cD), Object.assign(CD, ID)
+          const RU = this.matcherRe.exec(UU);
+          if (!RU) return null;
+          const gU = RU.findIndex(((UU, RU) => RU > 0 && void 0 !== UU)),
+            tU = this.matchIndexes[gU];
+          return RU.splice(0, gU), Object.assign(RU, tU)
         }
       }
-      class ID {
+      class tU {
         constructor() {
           this.rules = [], this.multiRegexes = [], this.count = 0, this.lastIndex = 0, this.regexIndex = 0
         }
-        getMatcher(DD) {
-          if (this.multiRegexes[DD]) return this.multiRegexes[DD];
-          const CD = new cD;
-          return this.rules.slice(DD).forEach((DD => {
-            let [cD, ID] = DD;
-            return CD.addRule(cD, ID)
-          })), CD.compile(), this.multiRegexes[DD] = CD, CD
+        getMatcher(UU) {
+          if (this.multiRegexes[UU]) return this.multiRegexes[UU];
+          const RU = new gU;
+          return this.rules.slice(UU).forEach((UU => {
+            let [gU, tU] = UU;
+            return RU.addRule(gU, tU)
+          })), RU.compile(), this.multiRegexes[UU] = RU, RU
         }
         resumingScanAtSamePosition() {
           return 0 !== this.regexIndex
@@ -494,81 +494,81 @@ export const modules = {
         considerAll() {
           this.regexIndex = 0
         }
-        addRule(DD, CD) {
-          this.rules.push([DD, CD]), "VM" === CD.type && this.count++
+        addRule(UU, RU) {
+          this.rules.push([UU, RU]), "pu" === RU.type && this.count++
         }
-        exec(DD) {
-          const CD = this.getMatcher(this.regexIndex);
-          CD.lastIndex = this.lastIndex;
-          let cD = CD.exec(DD);
+        exec(UU) {
+          const RU = this.getMatcher(this.regexIndex);
+          RU.lastIndex = this.lastIndex;
+          let gU = RU.exec(UU);
           if (this.resumingScanAtSamePosition())
-            if (cD && cD.index === this.lastIndex);
+            if (gU && gU.index === this.lastIndex);
             else {
-              const CD = this.getMatcher(0);
-              CD.lastIndex = this.lastIndex + 1, cD = CD.exec(DD)
-            } return cD && (this.regexIndex += cD.position + 1, this.regexIndex === this.count && this.considerAll()), cD
+              const RU = this.getMatcher(0);
+              RU.lastIndex = this.lastIndex + 1, gU = RU.exec(UU)
+            } return gU && (this.regexIndex += gU.position + 1, this.regexIndex === this.count && this.considerAll()), gU
         }
       }
-      if (DD.compilerExtensions || (DD.compilerExtensions = []), DD.contains && DD.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
-      return DD.classNameAliases = pD(DD.classNameAliases || {}),
-        function cD(iD, fD) {
-          const bD = iD;
-          if (iD.isCompiled) return bD;
-          [kD, WD, IC, ED].forEach((DD => DD(iD, fD))), DD.compilerExtensions.forEach((DD => DD(iD, fD))), iD.__beforeBegin = null, [dD, YD, sD].forEach((DD => DD(iD, fD))), iD.isCompiled = !0;
-          let QD = null;
-          return "object" === typeof iD.keywords && iD.keywords.$pattern && (iD.keywords = Object.assign({}, iD.keywords), QD = iD.keywords.$pattern, delete iD.keywords.$pattern), QD = QD || /\w+/, iD.keywords && (iD.keywords = uD(iD.keywords, DD.case_insensitive)), bD.keywordPatternRe = CD(QD, !0), fD && (iD.VM || (iD.VM = /\B|\b/), bD.beginRe = CD(bD.VM), iD.end || iD.endsWithParent || (iD.end = /\B|\b/), iD.end && (bD.endRe = CD(bD.end)), bD.terminatorEnd = SD(bD.end) || "", iD.endsWithParent && fD.terminatorEnd && (bD.terminatorEnd += (iD.end ? "|" : "") + fD.terminatorEnd)), iD.illegal && (bD.illegalRe = CD(iD.illegal)), iD.contains || (iD.contains = []), iD.contains = [].concat(...iD.contains.map((function(DD) {
-            return function(DD) {
-              DD.variants && !DD.cachedVariants && (DD.cachedVariants = DD.variants.map((function(CD) {
-                return pD(DD, {
+      if (UU.compilerExtensions || (UU.compilerExtensions = []), UU.contains && UU.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
+      return UU.classNameAliases = pU(UU.classNameAliases || {}),
+        function gU(EU, PU) {
+          const TU = EU;
+          if (EU.isCompiled) return TU;
+          [yU, iU, tR, zU].forEach((UU => UU(EU, PU))), UU.compilerExtensions.forEach((UU => UU(EU, PU))), EU.__beforeBegin = null, [kU, FU, AU].forEach((UU => UU(EU, PU))), EU.isCompiled = !0;
+          let qU = null;
+          return "object" === typeof EU.keywords && EU.keywords.$pattern && (EU.keywords = Object.assign({}, EU.keywords), qU = EU.keywords.$pattern, delete EU.keywords.$pattern), qU = qU || /\w+/, EU.keywords && (EU.keywords = DU(EU.keywords, UU.case_insensitive)), TU.keywordPatternRe = RU(qU, !0), PU && (EU.pu || (EU.pu = /\B|\b/), TU.beginRe = RU(TU.pu), EU.end || EU.endsWithParent || (EU.end = /\B|\b/), EU.end && (TU.endRe = RU(TU.end)), TU.terminatorEnd = cU(TU.end) || "", EU.endsWithParent && PU.terminatorEnd && (TU.terminatorEnd += (EU.end ? "|" : "") + PU.terminatorEnd)), EU.illegal && (TU.illegalRe = RU(EU.illegal)), EU.contains || (EU.contains = []), EU.contains = [].concat(...EU.contains.map((function(UU) {
+            return function(UU) {
+              UU.variants && !UU.cachedVariants && (UU.cachedVariants = UU.variants.map((function(RU) {
+                return pU(UU, {
                   variants: null
-                }, CD)
+                }, RU)
               })));
-              if (DD.cachedVariants) return DD.cachedVariants;
-              if (iC(DD)) return pD(DD, {
-                starts: DD.starts ? pD(DD.starts) : null
+              if (UU.cachedVariants) return UU.cachedVariants;
+              if (ER(UU)) return pU(UU, {
+                starts: UU.starts ? pU(UU.starts) : null
               });
-              if (Object.isFrozen(DD)) return pD(DD);
-              return DD
-            }("self" === DD ? iD : DD)
-          }))), iD.contains.forEach((function(DD) {
-            cD(DD, bD)
-          })), iD.starts && cD(iD.starts, fD), bD.matcher = function(DD) {
-            const CD = new ID;
-            return DD.contains.forEach((DD => CD.addRule(DD.VM, {
-              rule: DD,
-              type: "VM"
-            }))), DD.terminatorEnd && CD.addRule(DD.terminatorEnd, {
+              if (Object.isFrozen(UU)) return pU(UU);
+              return UU
+            }("self" === UU ? EU : UU)
+          }))), EU.contains.forEach((function(UU) {
+            gU(UU, TU)
+          })), EU.starts && gU(EU.starts, PU), TU.matcher = function(UU) {
+            const RU = new tU;
+            return UU.contains.forEach((UU => RU.addRule(UU.pu, {
+              rule: UU,
+              type: "pu"
+            }))), UU.terminatorEnd && RU.addRule(UU.terminatorEnd, {
               type: "end"
-            }), DD.illegal && CD.addRule(DD.illegal, {
+            }), UU.illegal && RU.addRule(UU.illegal, {
               type: "illegal"
-            }), CD
-          }(bD), bD
-        }(DD)
+            }), RU
+          }(TU), TU
+        }(UU)
     }
 
-    function iC(DD) {
-      return !!DD && (DD.endsWithParent || iC(DD.starts))
+    function ER(UU) {
+      return !!UU && (UU.endsWithParent || ER(UU.starts))
     }
-    class fC extends Error {
-      constructor(DD, CD) {
-        super(DD), this.name = "HTMLInjectionError", this.html = CD
+    class PR extends Error {
+      constructor(UU, RU) {
+        super(UU), this.name = "HTMLInjectionError", this.html = RU
       }
     }
-    const bC = ID,
-      QC = pD,
-      wC = Symbol("nomatch"),
-      SC = function(DD) {
-        const ID = Object.create(null),
-          pD = Object.create(null),
-          iD = [];
-        let fD = !0;
-        const bD = "Could not find the language '{}', did you forget to load/include a language module?",
-          QD = {
+    const TR = tU,
+      qR = pU,
+      KR = Symbol("nomatch"),
+      cR = function(UU) {
+        const tU = Object.create(null),
+          pU = Object.create(null),
+          EU = [];
+        let PU = !0;
+        const TU = "Could not find the language '{}', did you forget to load/include a language module?",
+          qU = {
             disableAutodetect: !0,
             name: "Plain text",
             contains: []
           };
-        let SD = {
+        let cU = {
           ignoreUnescapedHTML: !1,
           throwUnescapedHTML: !1,
           noHighlightRe: /^(no-?highlight)$/i,
@@ -576,575 +576,575 @@ export const modules = {
           classPrefix: "hljs-",
           cssSelector: "pre code",
           languages: null,
-          __emitter: wD
+          __emitter: KU
         };
 
-        function oD(DD) {
-          return SD.noHighlightRe.test(DD)
+        function QU(UU) {
+          return cU.noHighlightRe.test(UU)
         }
 
-        function vD(DD, CD, cD) {
-          let ID = "",
-            pD = "";
-          "object" === typeof CD ? (ID = DD, cD = CD.ignoreIllegals, pD = CD.language) : (DC("10.7.0", "highlight(lang, code, ...args) has been deprecated."), DC("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), pD = DD, ID = CD), void 0 === cD && (cD = !0);
-          const iD = {
-            code: ID,
-            language: pD
+        function eU(UU, RU, gU) {
+          let tU = "",
+            pU = "";
+          "object" === typeof RU ? (tU = UU, gU = RU.ignoreIllegals, pU = RU.language) : (UR("10.7.0", "highlight(lang, code, ...args) has been deprecated."), UR("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), pU = UU, tU = RU), void 0 === gU && (gU = !0);
+          const EU = {
+            code: tU,
+            language: pU
           };
-          UD("before:highlight", iD);
-          const fD = iD.result ? iD.result : ND(iD.language, iD.code, cD);
-          return fD.code = iD.code, UD("after:highlight", fD), fD
+          bU("before:highlight", EU);
+          const PU = EU.result ? EU.result : WU(EU.language, EU.code, gU);
+          return PU.code = EU.code, bU("after:highlight", PU), PU
         }
 
-        function ND(DD, CD, pD, iD) {
-          const QD = Object.create(null);
+        function WU(UU, RU, pU, EU) {
+          const qU = Object.create(null);
 
-          function wD() {
-            if (!UD.keywords) return void qD.addText(JD);
-            let DD = 0;
-            UD.keywordPatternRe.lastIndex = 0;
-            let CD = UD.keywordPatternRe.exec(JD),
-              cD = "";
-            for (; CD;) {
-              cD += JD.substring(DD, CD.index);
-              const pD = nD.case_insensitive ? CD[0].toLowerCase() : CD[0],
-                iD = (ID = pD, UD.keywords[ID]);
-              if (iD) {
-                const [DD, ID] = iD;
-                if (qD.addText(cD), cD = "", QD[pD] = (QD[pD] || 0) + 1, QD[pD] <= 7 && (KD += ID), DD.startsWith("_")) cD += CD[0];
+          function KU() {
+            if (!bU.keywords) return void ZU.addText(aU);
+            let UU = 0;
+            bU.keywordPatternRe.lastIndex = 0;
+            let RU = bU.keywordPatternRe.exec(aU),
+              gU = "";
+            for (; RU;) {
+              gU += aU.substring(UU, RU.index);
+              const pU = IU.case_insensitive ? RU[0].toLowerCase() : RU[0],
+                EU = (tU = pU, bU.keywords[tU]);
+              if (EU) {
+                const [UU, tU] = EU;
+                if (ZU.addText(gU), gU = "", qU[pU] = (qU[pU] || 0) + 1, qU[pU] <= 7 && (YU += tU), UU.startsWith("_")) gU += RU[0];
                 else {
-                  const cD = nD.classNameAliases[DD] || DD;
-                  yD(CD[0], cD)
+                  const gU = IU.classNameAliases[UU] || UU;
+                  jU(RU[0], gU)
                 }
-              } else cD += CD[0];
-              DD = UD.keywordPatternRe.lastIndex, CD = UD.keywordPatternRe.exec(JD)
+              } else gU += RU[0];
+              UU = bU.keywordPatternRe.lastIndex, RU = bU.keywordPatternRe.exec(aU)
             }
-            var ID;
-            cD += JD.substring(DD), qD.addText(cD)
+            var tU;
+            gU += aU.substring(UU), ZU.addText(gU)
           }
 
-          function BD() {
-            null != UD.subLanguage ? function() {
-              if ("" === JD) return;
-              let DD = null;
-              if ("string" === typeof UD.subLanguage) {
-                if (!ID[UD.subLanguage]) return void qD.addText(JD);
-                DD = ND(UD.subLanguage, JD, !0, xD[UD.subLanguage]), xD[UD.subLanguage] = DD._top
-              } else DD = gD(JD, UD.subLanguage.length ? UD.subLanguage : null);
-              UD.relevance > 0 && (KD += DD.relevance), qD.__addSublanguage(DD._emitter, DD.language)
-            }() : wD(), JD = ""
+          function GU() {
+            null != bU.subLanguage ? function() {
+              if ("" === aU) return;
+              let UU = null;
+              if ("string" === typeof bU.subLanguage) {
+                if (!tU[bU.subLanguage]) return void ZU.addText(aU);
+                UU = WU(bU.subLanguage, aU, !0, oU[bU.subLanguage]), oU[bU.subLanguage] = UU._top
+              } else UU = fU(aU, bU.subLanguage.length ? bU.subLanguage : null);
+              bU.relevance > 0 && (YU += UU.relevance), ZU.__addSublanguage(UU._emitter, UU.language)
+            }() : KU(), aU = ""
           }
 
-          function yD(DD, CD) {
-            "" !== DD && (qD.startScope(CD), qD.addText(DD), qD.endScope())
+          function jU(UU, RU) {
+            "" !== UU && (ZU.startScope(RU), ZU.addText(UU), ZU.endScope())
           }
 
-          function MD(DD, CD) {
-            let cD = 1;
-            const ID = CD.length - 1;
-            for (; cD <= ID;) {
-              if (!DD._emit[cD]) {
-                cD++;
+          function uU(UU, RU) {
+            let gU = 1;
+            const tU = RU.length - 1;
+            for (; gU <= tU;) {
+              if (!UU._emit[gU]) {
+                gU++;
                 continue
               }
-              const ID = nD.classNameAliases[DD[cD]] || DD[cD],
-                pD = CD[cD];
-              ID ? yD(pD, ID) : (JD = pD, wD(), JD = ""), cD++
+              const tU = IU.classNameAliases[UU[gU]] || UU[gU],
+                pU = RU[gU];
+              tU ? jU(pU, tU) : (aU = pU, KU(), aU = ""), gU++
             }
           }
 
-          function tD(DD, CD) {
-            return DD.scope && "string" === typeof DD.scope && qD.openNode(nD.classNameAliases[DD.scope] || DD.scope), DD.beginScope && (DD.beginScope._wrap ? (yD(JD, nD.classNameAliases[DD.beginScope._wrap] || DD.beginScope._wrap), JD = "") : DD.beginScope._multi && (MD(DD.beginScope, CD), JD = "")), UD = Object.create(DD, {
+          function CU(UU, RU) {
+            return UU.scope && "string" === typeof UU.scope && ZU.openNode(IU.classNameAliases[UU.scope] || UU.scope), UU.beginScope && (UU.beginScope._wrap ? (jU(aU, IU.classNameAliases[UU.beginScope._wrap] || UU.beginScope._wrap), aU = "") : UU.beginScope._multi && (uU(UU.beginScope, RU), aU = "")), bU = Object.create(UU, {
               parent: {
-                value: UD
+                value: bU
               }
-            }), UD
+            }), bU
           }
 
-          function ZD(DD, CD, ID) {
-            let pD = function(DD, CD) {
-              const cD = DD && DD.exec(CD);
-              return cD && 0 === cD.index
-            }(DD.endRe, ID);
-            if (pD) {
-              if (DD["on:end"]) {
-                const ID = new cD(DD);
-                DD["on:end"](CD, ID), ID.isMatchIgnored && (pD = !1)
+          function hU(UU, RU, tU) {
+            let pU = function(UU, RU) {
+              const gU = UU && UU.exec(RU);
+              return gU && 0 === gU.index
+            }(UU.endRe, tU);
+            if (pU) {
+              if (UU["on:end"]) {
+                const tU = new gU(UU);
+                UU["on:end"](RU, tU), tU.isMatchIgnored && (pU = !1)
               }
-              if (pD) {
-                for (; DD.endsParent && DD.parent;) DD = DD.parent;
-                return DD
+              if (pU) {
+                for (; UU.endsParent && UU.parent;) UU = UU.parent;
+                return UU
               }
             }
-            if (DD.endsWithParent) return ZD(DD.parent, CD, ID)
+            if (UU.endsWithParent) return hU(UU.parent, RU, tU)
           }
 
-          function oD(DD) {
-            return 0 === UD.matcher.regexIndex ? (JD += DD[0], 1) : (zD = !0, 0)
+          function QU(UU) {
+            return 0 === bU.matcher.regexIndex ? (aU += UU[0], 1) : (rU = !0, 0)
           }
 
-          function vD(DD) {
-            const cD = DD[0],
-              ID = CD.substring(DD.index),
-              pD = ZD(UD, DD, ID);
-            if (!pD) return wC;
-            const iD = UD;
-            UD.endScope && UD.endScope._wrap ? (BD(), yD(cD, UD.endScope._wrap)) : UD.endScope && UD.endScope._multi ? (BD(), MD(UD.endScope, DD)) : iD.skip ? JD += cD : (iD.returnEnd || iD.excludeEnd || (JD += cD), BD(), iD.excludeEnd && (JD = cD));
+          function eU(UU) {
+            const gU = UU[0],
+              tU = RU.substring(UU.index),
+              pU = hU(bU, UU, tU);
+            if (!pU) return KR;
+            const EU = bU;
+            bU.endScope && bU.endScope._wrap ? (GU(), jU(gU, bU.endScope._wrap)) : bU.endScope && bU.endScope._multi ? (GU(), uU(bU.endScope, UU)) : EU.skip ? aU += gU : (EU.returnEnd || EU.excludeEnd || (aU += gU), GU(), EU.excludeEnd && (aU = gU));
             do {
-              UD.scope && qD.closeNode(), UD.skip || UD.subLanguage || (KD += UD.relevance), UD = UD.parent
-            } while (UD !== pD.parent);
-            return pD.starts && tD(pD.starts, DD), iD.returnEnd ? 0 : cD.length
+              bU.scope && ZU.closeNode(), bU.skip || bU.subLanguage || (YU += bU.relevance), bU = bU.parent
+            } while (bU !== pU.parent);
+            return pU.starts && CU(pU.starts, UU), EU.returnEnd ? 0 : gU.length
           }
-          let XD = {};
+          let xU = {};
 
-          function mD(ID, iD) {
-            const bD = iD && iD[0];
-            if (JD += ID, null == bD) return BD(), 0;
-            if ("VM" === XD.type && "end" === iD.type && XD.index === iD.index && "" === bD) {
-              if (JD += CD.slice(iD.index, iD.index + 1), !fD) {
-                const CD = new Error(`0 width match regex (${DD})`);
-                throw CD.languageName = DD, CD.badRule = XD.rule, CD
+          function mU(tU, EU) {
+            const TU = EU && EU[0];
+            if (aU += tU, null == TU) return GU(), 0;
+            if ("pu" === xU.type && "end" === EU.type && xU.index === EU.index && "" === TU) {
+              if (aU += RU.slice(EU.index, EU.index + 1), !PU) {
+                const RU = new Error(`0 width match regex (${UU})`);
+                throw RU.languageName = UU, RU.badRule = xU.rule, RU
               }
               return 1
             }
-            if (XD = iD, "VM" === iD.type) return function(DD) {
-              const CD = DD[0],
-                ID = DD.rule,
-                pD = new cD(ID),
-                iD = [ID.__beforeBegin, ID["on:begin"]];
-              for (const cD of iD)
-                if (cD && (cD(DD, pD), pD.isMatchIgnored)) return oD(CD);
-              return ID.skip ? JD += CD : (ID.excludeBegin && (JD += CD), BD(), ID.returnBegin || ID.excludeBegin || (JD = CD)), tD(ID, DD), ID.returnBegin ? 0 : CD.length
-            }(iD);
-            if ("illegal" === iD.type && !pD) {
-              const DD = new Error('Illegal lexeme "' + bD + '" for mode "' + (UD.scope || "<unnamed>") + '"');
-              throw DD.mode = UD, DD
+            if (xU = EU, "pu" === EU.type) return function(UU) {
+              const RU = UU[0],
+                tU = UU.rule,
+                pU = new gU(tU),
+                EU = [tU.__beforeBegin, tU["on:begin"]];
+              for (const gU of EU)
+                if (gU && (gU(UU, pU), pU.isMatchIgnored)) return QU(RU);
+              return tU.skip ? aU += RU : (tU.excludeBegin && (aU += RU), GU(), tU.returnBegin || tU.excludeBegin || (aU = RU)), CU(tU, UU), tU.returnBegin ? 0 : RU.length
+            }(EU);
+            if ("illegal" === EU.type && !pU) {
+              const UU = new Error('Illegal lexeme "' + TU + '" for mode "' + (bU.scope || "<unnamed>") + '"');
+              throw UU.mode = bU, UU
             }
-            if ("end" === iD.type) {
-              const DD = vD(iD);
-              if (DD !== wC) return DD
+            if ("end" === EU.type) {
+              const UU = eU(EU);
+              if (UU !== KR) return UU
             }
-            if ("illegal" === iD.type && "" === bD) return JD += "\n", 1;
-            if (VD > 1e5 && VD > 3 * iD.index) {
+            if ("illegal" === EU.type && "" === TU) return aU += "\n", 1;
+            if (VU > 1e5 && VU > 3 * EU.index) {
               throw new Error("potential infinite loop, way more iterations than matches")
             }
-            return JD += bD, bD.length
+            return aU += TU, TU.length
           }
-          const nD = OD(DD);
-          if (!nD) throw AD(bD.replace("{}", DD)), new Error('Unknown language: "' + DD + '"');
-          const PD = pC(nD);
-          let HD = "",
-            UD = iD || PD;
-          const xD = {},
-            qD = new SD.__emitter(SD);
+          const IU = JU(UU);
+          if (!IU) throw lU(TU.replace("{}", UU)), new Error('Unknown language: "' + UU + '"');
+          const wU = pR(IU);
+          let nU = "",
+            bU = EU || wU;
+          const oU = {},
+            ZU = new cU.__emitter(cU);
           ! function() {
-            const DD = [];
-            for (let CD = UD; CD !== nD; CD = CD.parent) CD.scope && DD.unshift(CD.scope);
-            DD.forEach((DD => qD.openNode(DD)))
+            const UU = [];
+            for (let RU = bU; RU !== IU; RU = RU.parent) RU.scope && UU.unshift(RU.scope);
+            UU.forEach((UU => ZU.openNode(UU)))
           }();
-          let JD = "",
-            KD = 0,
-            aD = 0,
-            VD = 0,
-            zD = !1;
+          let aU = "",
+            YU = 0,
+            BU = 0,
+            VU = 0,
+            rU = !1;
           try {
-            if (nD.__emitTokens) nD.__emitTokens(CD, qD);
+            if (IU.__emitTokens) IU.__emitTokens(RU, ZU);
             else {
-              for (UD.matcher.considerAll();;) {
-                VD++, zD ? zD = !1 : UD.matcher.considerAll(), UD.matcher.lastIndex = aD;
-                const DD = UD.matcher.exec(CD);
-                if (!DD) break;
-                const cD = mD(CD.substring(aD, DD.index), DD);
-                aD = DD.index + cD
+              for (bU.matcher.considerAll();;) {
+                VU++, rU ? rU = !1 : bU.matcher.considerAll(), bU.matcher.lastIndex = BU;
+                const UU = bU.matcher.exec(RU);
+                if (!UU) break;
+                const gU = mU(RU.substring(BU, UU.index), UU);
+                BU = UU.index + gU
               }
-              mD(CD.substring(aD))
+              mU(RU.substring(BU))
             }
-            return qD.finalize(), HD = qD.toHTML(), {
-              language: DD,
-              value: HD,
-              relevance: KD,
+            return ZU.finalize(), nU = ZU.toHTML(), {
+              language: UU,
+              value: nU,
+              relevance: YU,
               illegal: !1,
-              _emitter: qD,
-              _top: UD
+              _emitter: ZU,
+              _top: bU
             }
-          } catch (jD) {
-            if (jD.message && jD.message.includes("Illegal")) return {
-              language: DD,
-              value: bC(CD),
+          } catch (XU) {
+            if (XU.message && XU.message.includes("Illegal")) return {
+              language: UU,
+              value: TR(RU),
               illegal: !0,
               relevance: 0,
               _illegalBy: {
-                message: jD.message,
-                index: aD,
-                context: CD.slice(aD - 100, aD + 100),
-                mode: jD.mode,
-                resultSoFar: HD
+                message: XU.message,
+                index: BU,
+                context: RU.slice(BU - 100, BU + 100),
+                mode: XU.mode,
+                resultSoFar: nU
               },
-              _emitter: qD
+              _emitter: ZU
             };
-            if (fD) return {
-              language: DD,
-              value: bC(CD),
+            if (PU) return {
+              language: UU,
+              value: TR(RU),
               illegal: !1,
               relevance: 0,
-              errorRaised: jD,
-              _emitter: qD,
-              _top: UD
+              errorRaised: XU,
+              _emitter: ZU,
+              _top: bU
             };
-            throw jD
+            throw XU
           }
         }
 
-        function gD(DD, CD) {
-          CD = CD || SD.languages || Object.keys(ID);
-          const cD = function(DD) {
-              const CD = {
-                value: bC(DD),
+        function fU(UU, RU) {
+          RU = RU || cU.languages || Object.keys(tU);
+          const gU = function(UU) {
+              const RU = {
+                value: TR(UU),
                 illegal: !1,
                 relevance: 0,
-                _top: QD,
-                _emitter: new SD.__emitter(SD)
+                _top: qU,
+                _emitter: new cU.__emitter(cU)
               };
-              return CD._emitter.addText(DD), CD
-            }(DD),
-            pD = CD.filter(OD).filter(HD).map((CD => ND(CD, DD, !1)));
-          pD.unshift(cD);
-          const iD = pD.sort(((DD, CD) => {
-              if (DD.relevance !== CD.relevance) return CD.relevance - DD.relevance;
-              if (DD.language && CD.language) {
-                if (OD(DD.language).supersetOf === CD.language) return 1;
-                if (OD(CD.language).supersetOf === DD.language) return -1
+              return RU._emitter.addText(UU), RU
+            }(UU),
+            pU = RU.filter(JU).filter(nU).map((RU => WU(RU, UU, !1)));
+          pU.unshift(gU);
+          const EU = pU.sort(((UU, RU) => {
+              if (UU.relevance !== RU.relevance) return RU.relevance - UU.relevance;
+              if (UU.language && RU.language) {
+                if (JU(UU.language).supersetOf === RU.language) return 1;
+                if (JU(RU.language).supersetOf === UU.language) return -1
               }
               return 0
             })),
-            [fD, bD] = iD,
-            wD = fD;
-          return wD.secondBest = bD, wD
+            [PU, TU] = EU,
+            KU = PU;
+          return KU.secondBest = TU, KU
         }
 
-        function XD(DD) {
-          let CD = null;
-          const cD = function(DD) {
-            let CD = DD.className + " ";
-            CD += DD.parentNode ? DD.parentNode.className : "";
-            const cD = SD.languageDetectRe.exec(CD);
-            if (cD) {
-              const CD = OD(cD[1]);
-              return CD || (FD(bD.replace("{}", cD[1])), FD("Falling back to no-highlight mode for this block.", DD)), CD ? cD[1] : "no-highlight"
+        function xU(UU) {
+          let RU = null;
+          const gU = function(UU) {
+            let RU = UU.className + " ";
+            RU += UU.parentNode ? UU.parentNode.className : "";
+            const gU = cU.languageDetectRe.exec(RU);
+            if (gU) {
+              const RU = JU(gU[1]);
+              return RU || (OU(TU.replace("{}", gU[1])), OU("Falling back to no-highlight mode for this block.", UU)), RU ? gU[1] : "no-highlight"
             }
-            return CD.split(/\s+/).find((DD => oD(DD) || OD(DD)))
-          }(DD);
-          if (oD(cD)) return;
-          if (UD("before:highlightElement", {
-              el: DD,
-              language: cD
-            }), DD.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", DD);
-          if (DD.children.length > 0 && (SD.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(DD)), SD.throwUnescapedHTML)) {
-            throw new fC("One of your code blocks includes unescaped HTML.", DD.innerHTML)
+            return RU.split(/\s+/).find((UU => QU(UU) || JU(UU)))
+          }(UU);
+          if (QU(gU)) return;
+          if (bU("before:highlightElement", {
+              el: UU,
+              language: gU
+            }), UU.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", UU);
+          if (UU.children.length > 0 && (cU.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(UU)), cU.throwUnescapedHTML)) {
+            throw new PR("One of your code blocks includes unescaped HTML.", UU.innerHTML)
           }
-          CD = DD;
-          const ID = CD.textContent,
-            iD = cD ? vD(ID, {
-              language: cD,
+          RU = UU;
+          const tU = RU.textContent,
+            EU = gU ? eU(tU, {
+              language: gU,
               ignoreIllegals: !0
-            }) : gD(ID);
-          DD.innerHTML = iD.value, DD.dataset.highlighted = "yes",
-            function(DD, CD, cD) {
-              const ID = CD && pD[CD] || cD;
-              DD.classList.add("hljs"), DD.classList.add(`language-${ID}`)
-            }(DD, cD, iD.language), DD.result = {
-              language: iD.language,
-              re: iD.relevance,
-              relevance: iD.relevance
-            }, iD.secondBest && (DD.secondBest = {
-              language: iD.secondBest.language,
-              relevance: iD.secondBest.relevance
-            }), UD("after:highlightElement", {
-              el: DD,
-              result: iD,
-              text: ID
+            }) : fU(tU);
+          UU.innerHTML = EU.value, UU.dataset.highlighted = "yes",
+            function(UU, RU, gU) {
+              const tU = RU && pU[RU] || gU;
+              UU.classList.add("hljs"), UU.classList.add(`language-${tU}`)
+            }(UU, gU, EU.language), UU.result = {
+              language: EU.language,
+              re: EU.relevance,
+              relevance: EU.relevance
+            }, EU.secondBest && (UU.secondBest = {
+              language: EU.secondBest.language,
+              relevance: EU.secondBest.relevance
+            }), bU("after:highlightElement", {
+              el: UU,
+              result: EU,
+              text: tU
             })
         }
-        let mD = !1;
+        let mU = !1;
 
-        function nD() {
-          if ("loading" === document.readyState) return mD || window.addEventListener("DOMContentLoaded", (function() {
-            nD()
-          }), !1), void(mD = !0);
-          document.querySelectorAll(SD.cssSelector).forEach(XD)
+        function IU() {
+          if ("loading" === document.readyState) return mU || window.addEventListener("DOMContentLoaded", (function() {
+            IU()
+          }), !1), void(mU = !0);
+          document.querySelectorAll(cU.cssSelector).forEach(xU)
         }
 
-        function OD(DD) {
-          return DD = (DD || "").toLowerCase(), ID[DD] || ID[pD[DD]]
+        function JU(UU) {
+          return UU = (UU || "").toLowerCase(), tU[UU] || tU[pU[UU]]
         }
 
-        function PD(DD, CD) {
+        function wU(UU, RU) {
           let {
-            languageName: cD
-          } = CD;
-          "string" === typeof DD && (DD = [DD]), DD.forEach((DD => {
-            pD[DD.toLowerCase()] = cD
+            languageName: gU
+          } = RU;
+          "string" === typeof UU && (UU = [UU]), UU.forEach((UU => {
+            pU[UU.toLowerCase()] = gU
           }))
         }
 
-        function HD(DD) {
-          const CD = OD(DD);
-          return CD && !CD.disableAutodetect
+        function nU(UU) {
+          const RU = JU(UU);
+          return RU && !RU.disableAutodetect
         }
 
-        function UD(DD, CD) {
-          const cD = DD;
-          iD.forEach((function(DD) {
-            DD[cD] && DD[cD](CD)
+        function bU(UU, RU) {
+          const gU = UU;
+          EU.forEach((function(UU) {
+            UU[gU] && UU[gU](RU)
           }))
         }
-        Object.assign(DD, {
-          highlight: vD,
-          highlightAuto: gD,
-          highlightAll: nD,
-          highlightElement: XD,
-          highlightBlock: function(DD) {
-            return DC("10.7.0", "highlightBlock will be removed entirely in v12.0"), DC("10.7.0", "Please use highlightElement now."), XD(DD)
+        Object.assign(UU, {
+          highlight: eU,
+          highlightAuto: fU,
+          highlightAll: IU,
+          highlightElement: xU,
+          highlightBlock: function(UU) {
+            return UR("10.7.0", "highlightBlock will be removed entirely in v12.0"), UR("10.7.0", "Please use highlightElement now."), xU(UU)
           },
-          configure: function(DD) {
-            SD = QC(SD, DD)
+          configure: function(UU) {
+            cU = qR(cU, UU)
           },
           initHighlighting: () => {
-            nD(), DC("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
+            IU(), UR("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
           },
           initHighlightingOnLoad: function() {
-            nD(), DC("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
+            IU(), UR("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
           },
-          registerLanguage: function(CD, cD) {
-            let pD = null;
+          registerLanguage: function(RU, gU) {
+            let pU = null;
             try {
-              pD = cD(DD)
-            } catch (iD) {
-              if (AD("Language definition for '{}' could not be registered.".replace("{}", CD)), !fD) throw iD;
-              AD(iD), pD = QD
+              pU = gU(UU)
+            } catch (EU) {
+              if (lU("Language definition for '{}' could not be registered.".replace("{}", RU)), !PU) throw EU;
+              lU(EU), pU = qU
             }
-            pD.name || (pD.name = CD), ID[CD] = pD, pD.rawDefinition = cD.bind(null, DD), pD.aliases && PD(pD.aliases, {
-              languageName: CD
+            pU.name || (pU.name = RU), tU[RU] = pU, pU.rawDefinition = gU.bind(null, UU), pU.aliases && wU(pU.aliases, {
+              languageName: RU
             })
           },
-          unregisterLanguage: function(DD) {
-            delete ID[DD];
-            for (const CD of Object.keys(pD)) pD[CD] === DD && delete pD[CD]
+          unregisterLanguage: function(UU) {
+            delete tU[UU];
+            for (const RU of Object.keys(pU)) pU[RU] === UU && delete pU[RU]
           },
           listLanguages: function() {
-            return Object.keys(ID)
+            return Object.keys(tU)
           },
-          getLanguage: OD,
-          registerAliases: PD,
-          autoDetection: HD,
-          inherit: QC,
-          addPlugin: function(DD) {
-            ! function(DD) {
-              DD["before:highlightBlock"] && !DD["before:highlightElement"] && (DD["before:highlightElement"] = CD => {
-                DD["before:highlightBlock"](Object.assign({
-                  block: CD.el
-                }, CD))
-              }), DD["after:highlightBlock"] && !DD["after:highlightElement"] && (DD["after:highlightElement"] = CD => {
-                DD["after:highlightBlock"](Object.assign({
-                  block: CD.el
-                }, CD))
+          getLanguage: JU,
+          registerAliases: wU,
+          autoDetection: nU,
+          inherit: qR,
+          addPlugin: function(UU) {
+            ! function(UU) {
+              UU["before:highlightBlock"] && !UU["before:highlightElement"] && (UU["before:highlightElement"] = RU => {
+                UU["before:highlightBlock"](Object.assign({
+                  block: RU.el
+                }, RU))
+              }), UU["after:highlightBlock"] && !UU["after:highlightElement"] && (UU["after:highlightElement"] = RU => {
+                UU["after:highlightBlock"](Object.assign({
+                  block: RU.el
+                }, RU))
               })
-            }(DD), iD.push(DD)
+            }(UU), EU.push(UU)
           },
-          removePlugin: function(DD) {
-            const CD = iD.indexOf(DD); - 1 !== CD && iD.splice(CD, 1)
+          removePlugin: function(UU) {
+            const RU = EU.indexOf(UU); - 1 !== RU && EU.splice(RU, 1)
           }
-        }), DD.debugMode = function() {
-          fD = !1
-        }, DD.safeMode = function() {
-          fD = !0
-        }, DD.versionString = "11.11.1", DD.regex = {
-          concat: tD,
-          lookahead: BD,
-          either: ZD,
-          optional: MD,
-          anyNumberOfTimes: yD
+        }), UU.debugMode = function() {
+          PU = !1
+        }, UU.safeMode = function() {
+          PU = !0
+        }, UU.versionString = "11.11.1", UU.regex = {
+          concat: CU,
+          lookahead: GU,
+          either: hU,
+          optional: uU,
+          anyNumberOfTimes: jU
         };
-        for (const cD in GD) "object" === typeof GD[cD] && CD(GD[cD]);
-        return Object.assign(DD, GD), DD
+        for (const gU in SU) "object" === typeof SU[gU] && RU(SU[gU]);
+        return Object.assign(UU, SU), UU
       },
-      BC = SC({});
-    BC.newInstance = () => SC({}), DD.exports = BC, BC.HighlightJS = BC, BC.default = BC
+      GR = cR({});
+    GR.newInstance = () => cR({}), UU.exports = GR, GR.HighlightJS = GR, GR.default = GR
   },
-  4512: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => ID
+  4365: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => tU
     });
-    const ID = cD(4515)
+    const tU = gU(4373)
   },
-  4524: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => BD
+  4378: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => GU
     });
-    const ID = "[A-Za-z$_][0-9A-Za-z$_]*",
-      pD = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
-      iD = ["true", "false", "null", "undefined", "NaN", "Infinity"],
-      fD = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
-      bD = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
-      QD = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
-      wD = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
-      SD = [].concat(QD, fD, bD);
+    const tU = "[A-Za-z$_][0-9A-Za-z$_]*",
+      pU = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      EU = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      PU = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      TU = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      qU = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      KU = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      cU = [].concat(qU, PU, TU);
 
-    function BD(DD) {
-      const CD = DD.regex,
-        cD = ID,
-        BD = "<>",
-        yD = "</>",
-        MD = {
-          VM: /<[A-Za-z0-9\\._:-]+/,
+    function GU(UU) {
+      const RU = UU.regex,
+        gU = tU,
+        GU = "<>",
+        jU = "</>",
+        uU = {
+          pu: /<[A-Za-z0-9\\._:-]+/,
           end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
-          isTrulyOpeningTag: (DD, CD) => {
-            const cD = DD[0].length + DD.index,
-              ID = DD.input[cD];
-            if ("<" === ID || "," === ID) return void CD.ignoreMatch();
-            let pD;
-            ">" === ID && (((DD, CD) => {
+          isTrulyOpeningTag: (UU, RU) => {
+            const gU = UU[0].length + UU.index,
+              tU = UU.input[gU];
+            if ("<" === tU || "," === tU) return void RU.ignoreMatch();
+            let pU;
+            ">" === tU && (((UU, RU) => {
               let {
-                after: cD
-              } = CD;
-              const ID = "</" + DD[0].slice(1);
-              return -1 !== DD.input.indexOf(ID, cD)
-            })(DD, {
-              after: cD
-            }) || CD.ignoreMatch());
-            const iD = DD.input.substring(cD);
-            ((pD = iD.match(/^\s*=/)) || (pD = iD.match(/^\s+extends\s+/)) && 0 === pD.index) && CD.ignoreMatch()
+                after: gU
+              } = RU;
+              const tU = "</" + UU[0].slice(1);
+              return -1 !== UU.input.indexOf(tU, gU)
+            })(UU, {
+              after: gU
+            }) || RU.ignoreMatch());
+            const EU = UU.input.substring(gU);
+            ((pU = EU.match(/^\s*=/)) || (pU = EU.match(/^\s+extends\s+/)) && 0 === pU.index) && RU.ignoreMatch()
           }
         },
-        tD = {
-          $pattern: ID,
-          keyword: pD,
-          literal: iD,
-          built_in: SD,
-          "variable.language": wD
+        CU = {
+          $pattern: tU,
+          keyword: pU,
+          literal: EU,
+          built_in: cU,
+          "variable.language": KU
         },
-        ZD = "[0-9](_?[0-9])*",
-        oD = `\\.(${ZD})`,
-        vD = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
-        ND = {
+        hU = "[0-9](_?[0-9])*",
+        QU = `\\.(${hU})`,
+        eU = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        WU = {
           className: "number",
           variants: [{
-            VM: `(\\b(${vD})((${oD})|\\.)?|(${oD}))[eE][+-]?(${ZD})\\b`
+            pu: `(\\b(${eU})((${QU})|\\.)?|(${QU}))[eE][+-]?(${hU})\\b`
           }, {
-            VM: `\\b(${vD})\\b((${oD})\\b|\\.)?|(${oD})\\b`
+            pu: `\\b(${eU})\\b((${QU})\\b|\\.)?|(${QU})\\b`
           }, {
-            VM: "\\b(0|[1-9](_?[0-9])*)n\\b"
+            pu: "\\b(0|[1-9](_?[0-9])*)n\\b"
           }, {
-            VM: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+            pu: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
           }, {
-            VM: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+            pu: "\\b0[bB][0-1](_?[0-1])*n?\\b"
           }, {
-            VM: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+            pu: "\\b0[oO][0-7](_?[0-7])*n?\\b"
           }, {
-            VM: "\\b0[0-7]+n?\\b"
+            pu: "\\b0[0-7]+n?\\b"
           }],
           relevance: 0
         },
-        gD = {
+        fU = {
           className: "subst",
-          VM: "\\$\\{",
+          pu: "\\$\\{",
           end: "\\}",
-          keywords: tD,
+          keywords: CU,
           contains: []
         },
-        XD = {
-          VM: ".?html`",
+        xU = {
+          pu: ".?html`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [DD.BACKSLASH_ESCAPE, gD],
+            contains: [UU.BACKSLASH_ESCAPE, fU],
             subLanguage: "xml"
           }
         },
-        mD = {
-          VM: ".?css`",
+        mU = {
+          pu: ".?css`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [DD.BACKSLASH_ESCAPE, gD],
+            contains: [UU.BACKSLASH_ESCAPE, fU],
             subLanguage: "css"
           }
         },
-        nD = {
-          VM: ".?gql`",
+        IU = {
+          pu: ".?gql`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [DD.BACKSLASH_ESCAPE, gD],
+            contains: [UU.BACKSLASH_ESCAPE, fU],
             subLanguage: "graphql"
           }
         },
-        OD = {
+        JU = {
           className: "string",
-          VM: "`",
+          pu: "`",
           end: "`",
-          contains: [DD.BACKSLASH_ESCAPE, gD]
+          contains: [UU.BACKSLASH_ESCAPE, fU]
         },
-        PD = {
+        wU = {
           className: "comment",
-          variants: [DD.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+          variants: [UU.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
             relevance: 0,
             contains: [{
-              VM: "(?=@[A-Za-z]+)",
+              pu: "(?=@[A-Za-z]+)",
               relevance: 0,
               contains: [{
                 className: "doctag",
-                VM: "@[A-Za-z]+"
+                pu: "@[A-Za-z]+"
               }, {
                 className: "type",
-                VM: "\\{",
+                pu: "\\{",
                 end: "\\}",
                 excludeEnd: !0,
                 excludeBegin: !0,
                 relevance: 0
               }, {
                 className: "variable",
-                VM: cD + "(?=\\s*(-)|$)",
+                pu: gU + "(?=\\s*(-)|$)",
                 endsParent: !0,
                 relevance: 0
               }, {
-                VM: /(?=[^\n])\s/,
+                pu: /(?=[^\n])\s/,
                 relevance: 0
               }]
             }]
-          }), DD.C_BLOCK_COMMENT_MODE, DD.C_LINE_COMMENT_MODE]
+          }), UU.C_BLOCK_COMMENT_MODE, UU.C_LINE_COMMENT_MODE]
         },
-        HD = [DD.APOS_STRING_MODE, DD.QUOTE_STRING_MODE, XD, mD, nD, OD, {
+        nU = [UU.APOS_STRING_MODE, UU.QUOTE_STRING_MODE, xU, mU, IU, JU, {
           match: /\$\d+/
-        }, ND];
-      gD.contains = HD.concat({
-        VM: /\{/,
+        }, WU];
+      fU.contains = nU.concat({
+        pu: /\{/,
         end: /\}/,
-        keywords: tD,
-        contains: ["self"].concat(HD)
+        keywords: CU,
+        contains: ["self"].concat(nU)
       });
-      const UD = [].concat(PD, gD.contains),
-        xD = UD.concat([{
-          VM: /(\s*)\(/,
+      const bU = [].concat(wU, fU.contains),
+        oU = bU.concat([{
+          pu: /(\s*)\(/,
           end: /\)/,
-          keywords: tD,
-          contains: ["self"].concat(UD)
+          keywords: CU,
+          contains: ["self"].concat(bU)
         }]),
-        qD = {
+        ZU = {
           className: "params",
-          VM: /(\s*)\(/,
+          pu: /(\s*)\(/,
           end: /\)/,
           excludeBegin: !0,
           excludeEnd: !0,
-          keywords: tD,
-          contains: xD
+          keywords: CU,
+          contains: oU
         },
-        JD = {
+        aU = {
           variants: [{
-            match: [/class/, /\s+/, cD, /\s+/, /extends/, /\s+/, CD.concat(cD, "(", CD.concat(/\./, cD), ")*")],
+            match: [/class/, /\s+/, gU, /\s+/, /extends/, /\s+/, RU.concat(gU, "(", RU.concat(/\./, gU), ")*")],
             scope: {
               1: "keyword",
               3: "title.class",
@@ -1152,24 +1152,24 @@ export const modules = {
               7: "title.class.inherited"
             }
           }, {
-            match: [/class/, /\s+/, cD],
+            match: [/class/, /\s+/, gU],
             scope: {
               1: "keyword",
               3: "title.class"
             }
           }]
         },
-        KD = {
+        YU = {
           relevance: 0,
-          match: CD.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          match: RU.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
           className: "title.class",
           keywords: {
-            _: [...fD, ...bD]
+            _: [...PU, ...TU]
           }
         },
-        aD = {
+        BU = {
           variants: [{
-            match: [/function/, /\s+/, cD, /(?=\s*\()/]
+            match: [/function/, /\s+/, gU, /(?=\s*\()/]
           }, {
             match: [/function/, /\s*(?=\()/]
           }],
@@ -1178,53 +1178,53 @@ export const modules = {
             3: "title.function"
           },
           label: "func.def",
-          contains: [qD],
+          contains: [ZU],
           illegal: /%/
         };
-      const VD = {
-        match: CD.concat(/\b/, (zD = [...QD, "super", "import"].map((DD => `${DD}\\s*\\(`)), CD.concat("(?!", zD.join("|"), ")")), cD, CD.lookahead(/\s*\(/)),
+      const VU = {
+        match: RU.concat(/\b/, (rU = [...qU, "super", "import"].map((UU => `${UU}\\s*\\(`)), RU.concat("(?!", rU.join("|"), ")")), gU, RU.lookahead(/\s*\(/)),
         className: "title.function",
         relevance: 0
       };
-      var zD;
-      const jD = {
-          VM: CD.concat(/\./, CD.lookahead(CD.concat(cD, /(?![0-9A-Za-z$_(])/))),
-          end: cD,
+      var rU;
+      const XU = {
+          pu: RU.concat(/\./, RU.lookahead(RU.concat(gU, /(?![0-9A-Za-z$_(])/))),
+          end: gU,
           excludeBegin: !0,
           keywords: "prototype",
           className: "property",
           relevance: 0
         },
-        lD = {
-          match: [/get|set/, /\s+/, cD, /(?=\()/],
+        vU = {
+          match: [/get|set/, /\s+/, gU, /(?=\()/],
           className: {
             1: "keyword",
             3: "title.function"
           },
           contains: [{
-            VM: /\(\)/
-          }, qD]
+            pu: /\(\)/
+          }, ZU]
         },
-        LD = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + DD.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        TD = {
-          match: [/const|var|let/, /\s+/, cD, /\s*/, /=\s*/, /(async\s*)?/, CD.lookahead(LD)],
+        dU = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + UU.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        HU = {
+          match: [/const|var|let/, /\s+/, gU, /\s*/, /=\s*/, /(async\s*)?/, RU.lookahead(dU)],
           keywords: "async",
           className: {
             1: "keyword",
             3: "title.function"
           },
-          contains: [qD]
+          contains: [ZU]
         };
       return {
         name: "JavaScript",
         aliases: ["js", "jsx", "mjs", "cjs"],
-        keywords: tD,
+        keywords: CU,
         exports: {
-          PARAMS_CONTAINS: xD,
-          CLASS_REFERENCE: KD
+          PARAMS_CONTAINS: oU,
+          CLASS_REFERENCE: YU
         },
         illegal: /#(?![$_A-z])/,
-        contains: [DD.SHEBANG({
+        contains: [UU.SHEBANG({
           label: "shebang",
           binary: "node",
           relevance: 5
@@ -1232,265 +1232,265 @@ export const modules = {
           label: "use_strict",
           className: "meta",
           relevance: 10,
-          VM: /^\s*['"]use (strict|asm)['"]/
-        }, DD.APOS_STRING_MODE, DD.QUOTE_STRING_MODE, XD, mD, nD, OD, PD, {
+          pu: /^\s*['"]use (strict|asm)['"]/
+        }, UU.APOS_STRING_MODE, UU.QUOTE_STRING_MODE, xU, mU, IU, JU, wU, {
           match: /\$\d+/
-        }, ND, KD, {
+        }, WU, YU, {
           scope: "attr",
-          match: cD + CD.lookahead(":"),
+          match: gU + RU.lookahead(":"),
           relevance: 0
-        }, TD, {
-          VM: "(" + DD.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+        }, HU, {
+          pu: "(" + UU.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
           keywords: "return throw case",
           relevance: 0,
-          contains: [PD, DD.REGEXP_MODE, {
+          contains: [wU, UU.REGEXP_MODE, {
             className: "function",
-            VM: LD,
+            pu: dU,
             returnBegin: !0,
             end: "\\s*=>",
             contains: [{
               className: "params",
               variants: [{
-                VM: DD.UNDERSCORE_IDENT_RE,
+                pu: UU.UNDERSCORE_IDENT_RE,
                 relevance: 0
               }, {
                 className: null,
-                VM: /\(\s*\)/,
+                pu: /\(\s*\)/,
                 skip: !0
               }, {
-                VM: /(\s*)\(/,
+                pu: /(\s*)\(/,
                 end: /\)/,
                 excludeBegin: !0,
                 excludeEnd: !0,
-                keywords: tD,
-                contains: xD
+                keywords: CU,
+                contains: oU
               }]
             }]
           }, {
-            VM: /,/,
+            pu: /,/,
             relevance: 0
           }, {
             match: /\s+/,
             relevance: 0
           }, {
             variants: [{
-              VM: BD,
-              end: yD
+              pu: GU,
+              end: jU
             }, {
               match: /<[A-Za-z0-9\\._:-]+\s*\/>/
             }, {
-              VM: MD.VM,
-              "on:begin": MD.isTrulyOpeningTag,
-              end: MD.end
+              pu: uU.pu,
+              "on:begin": uU.isTrulyOpeningTag,
+              end: uU.end
             }],
             subLanguage: "xml",
             contains: [{
-              VM: MD.VM,
-              end: MD.end,
+              pu: uU.pu,
+              end: uU.end,
               skip: !0,
               contains: ["self"]
             }]
           }]
-        }, aD, {
+        }, BU, {
           beginKeywords: "while if switch catch for"
         }, {
-          VM: "\\b(?!function)" + DD.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          pu: "\\b(?!function)" + UU.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
           returnBegin: !0,
           label: "func.def",
-          contains: [qD, DD.inherit(DD.TITLE_MODE, {
-            VM: cD,
+          contains: [ZU, UU.inherit(UU.TITLE_MODE, {
+            pu: gU,
             className: "title.function"
           })]
         }, {
           match: /\.\.\./,
           relevance: 0
-        }, jD, {
-          match: "\\$" + cD,
+        }, XU, {
+          match: "\\$" + gU,
           relevance: 0
         }, {
           match: [/\bconstructor(?=\s*\()/],
           className: {
             1: "title.function"
           },
-          contains: [qD]
-        }, VD, {
+          contains: [ZU]
+        }, VU, {
           relevance: 0,
           match: /\b[A-Z][A-Z_0-9]+\b/,
           className: "variable.constant"
-        }, JD, lD, {
+        }, aU, vU, {
           match: /\$[(.]/
         }]
       }
     }
   },
-  4526: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => yD
+  4387: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => jU
     });
-    const ID = "[A-Za-z$_][0-9A-Za-z$_]*",
-      pD = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
-      iD = ["true", "false", "null", "undefined", "NaN", "Infinity"],
-      fD = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
-      bD = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
-      QD = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
-      wD = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
-      SD = [].concat(QD, fD, bD);
+    const tU = "[A-Za-z$_][0-9A-Za-z$_]*",
+      pU = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      EU = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      PU = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      TU = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      qU = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      KU = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      cU = [].concat(qU, PU, TU);
 
-    function BD(DD) {
-      const CD = DD.regex,
-        cD = ID,
-        BD = "<>",
-        yD = "</>",
-        MD = {
-          VM: /<[A-Za-z0-9\\._:-]+/,
+    function GU(UU) {
+      const RU = UU.regex,
+        gU = tU,
+        GU = "<>",
+        jU = "</>",
+        uU = {
+          pu: /<[A-Za-z0-9\\._:-]+/,
           end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
-          isTrulyOpeningTag: (DD, CD) => {
-            const cD = DD[0].length + DD.index,
-              ID = DD.input[cD];
-            if ("<" === ID || "," === ID) return void CD.ignoreMatch();
-            let pD;
-            ">" === ID && (((DD, CD) => {
+          isTrulyOpeningTag: (UU, RU) => {
+            const gU = UU[0].length + UU.index,
+              tU = UU.input[gU];
+            if ("<" === tU || "," === tU) return void RU.ignoreMatch();
+            let pU;
+            ">" === tU && (((UU, RU) => {
               let {
-                after: cD
-              } = CD;
-              const ID = "</" + DD[0].slice(1);
-              return -1 !== DD.input.indexOf(ID, cD)
-            })(DD, {
-              after: cD
-            }) || CD.ignoreMatch());
-            const iD = DD.input.substring(cD);
-            ((pD = iD.match(/^\s*=/)) || (pD = iD.match(/^\s+extends\s+/)) && 0 === pD.index) && CD.ignoreMatch()
+                after: gU
+              } = RU;
+              const tU = "</" + UU[0].slice(1);
+              return -1 !== UU.input.indexOf(tU, gU)
+            })(UU, {
+              after: gU
+            }) || RU.ignoreMatch());
+            const EU = UU.input.substring(gU);
+            ((pU = EU.match(/^\s*=/)) || (pU = EU.match(/^\s+extends\s+/)) && 0 === pU.index) && RU.ignoreMatch()
           }
         },
-        tD = {
-          $pattern: ID,
-          keyword: pD,
-          literal: iD,
-          built_in: SD,
-          "variable.language": wD
+        CU = {
+          $pattern: tU,
+          keyword: pU,
+          literal: EU,
+          built_in: cU,
+          "variable.language": KU
         },
-        ZD = "[0-9](_?[0-9])*",
-        oD = `\\.(${ZD})`,
-        vD = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
-        ND = {
+        hU = "[0-9](_?[0-9])*",
+        QU = `\\.(${hU})`,
+        eU = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        WU = {
           className: "number",
           variants: [{
-            VM: `(\\b(${vD})((${oD})|\\.)?|(${oD}))[eE][+-]?(${ZD})\\b`
+            pu: `(\\b(${eU})((${QU})|\\.)?|(${QU}))[eE][+-]?(${hU})\\b`
           }, {
-            VM: `\\b(${vD})\\b((${oD})\\b|\\.)?|(${oD})\\b`
+            pu: `\\b(${eU})\\b((${QU})\\b|\\.)?|(${QU})\\b`
           }, {
-            VM: "\\b(0|[1-9](_?[0-9])*)n\\b"
+            pu: "\\b(0|[1-9](_?[0-9])*)n\\b"
           }, {
-            VM: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+            pu: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
           }, {
-            VM: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+            pu: "\\b0[bB][0-1](_?[0-1])*n?\\b"
           }, {
-            VM: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+            pu: "\\b0[oO][0-7](_?[0-7])*n?\\b"
           }, {
-            VM: "\\b0[0-7]+n?\\b"
+            pu: "\\b0[0-7]+n?\\b"
           }],
           relevance: 0
         },
-        gD = {
+        fU = {
           className: "subst",
-          VM: "\\$\\{",
+          pu: "\\$\\{",
           end: "\\}",
-          keywords: tD,
+          keywords: CU,
           contains: []
         },
-        XD = {
-          VM: ".?html`",
+        xU = {
+          pu: ".?html`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [DD.BACKSLASH_ESCAPE, gD],
+            contains: [UU.BACKSLASH_ESCAPE, fU],
             subLanguage: "xml"
           }
         },
-        mD = {
-          VM: ".?css`",
+        mU = {
+          pu: ".?css`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [DD.BACKSLASH_ESCAPE, gD],
+            contains: [UU.BACKSLASH_ESCAPE, fU],
             subLanguage: "css"
           }
         },
-        nD = {
-          VM: ".?gql`",
+        IU = {
+          pu: ".?gql`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [DD.BACKSLASH_ESCAPE, gD],
+            contains: [UU.BACKSLASH_ESCAPE, fU],
             subLanguage: "graphql"
           }
         },
-        OD = {
+        JU = {
           className: "string",
-          VM: "`",
+          pu: "`",
           end: "`",
-          contains: [DD.BACKSLASH_ESCAPE, gD]
+          contains: [UU.BACKSLASH_ESCAPE, fU]
         },
-        PD = {
+        wU = {
           className: "comment",
-          variants: [DD.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+          variants: [UU.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
             relevance: 0,
             contains: [{
-              VM: "(?=@[A-Za-z]+)",
+              pu: "(?=@[A-Za-z]+)",
               relevance: 0,
               contains: [{
                 className: "doctag",
-                VM: "@[A-Za-z]+"
+                pu: "@[A-Za-z]+"
               }, {
                 className: "type",
-                VM: "\\{",
+                pu: "\\{",
                 end: "\\}",
                 excludeEnd: !0,
                 excludeBegin: !0,
                 relevance: 0
               }, {
                 className: "variable",
-                VM: cD + "(?=\\s*(-)|$)",
+                pu: gU + "(?=\\s*(-)|$)",
                 endsParent: !0,
                 relevance: 0
               }, {
-                VM: /(?=[^\n])\s/,
+                pu: /(?=[^\n])\s/,
                 relevance: 0
               }]
             }]
-          }), DD.C_BLOCK_COMMENT_MODE, DD.C_LINE_COMMENT_MODE]
+          }), UU.C_BLOCK_COMMENT_MODE, UU.C_LINE_COMMENT_MODE]
         },
-        HD = [DD.APOS_STRING_MODE, DD.QUOTE_STRING_MODE, XD, mD, nD, OD, {
+        nU = [UU.APOS_STRING_MODE, UU.QUOTE_STRING_MODE, xU, mU, IU, JU, {
           match: /\$\d+/
-        }, ND];
-      gD.contains = HD.concat({
-        VM: /\{/,
+        }, WU];
+      fU.contains = nU.concat({
+        pu: /\{/,
         end: /\}/,
-        keywords: tD,
-        contains: ["self"].concat(HD)
+        keywords: CU,
+        contains: ["self"].concat(nU)
       });
-      const UD = [].concat(PD, gD.contains),
-        xD = UD.concat([{
-          VM: /(\s*)\(/,
+      const bU = [].concat(wU, fU.contains),
+        oU = bU.concat([{
+          pu: /(\s*)\(/,
           end: /\)/,
-          keywords: tD,
-          contains: ["self"].concat(UD)
+          keywords: CU,
+          contains: ["self"].concat(bU)
         }]),
-        qD = {
+        ZU = {
           className: "params",
-          VM: /(\s*)\(/,
+          pu: /(\s*)\(/,
           end: /\)/,
           excludeBegin: !0,
           excludeEnd: !0,
-          keywords: tD,
-          contains: xD
+          keywords: CU,
+          contains: oU
         },
-        JD = {
+        aU = {
           variants: [{
-            match: [/class/, /\s+/, cD, /\s+/, /extends/, /\s+/, CD.concat(cD, "(", CD.concat(/\./, cD), ")*")],
+            match: [/class/, /\s+/, gU, /\s+/, /extends/, /\s+/, RU.concat(gU, "(", RU.concat(/\./, gU), ")*")],
             scope: {
               1: "keyword",
               3: "title.class",
@@ -1498,24 +1498,24 @@ export const modules = {
               7: "title.class.inherited"
             }
           }, {
-            match: [/class/, /\s+/, cD],
+            match: [/class/, /\s+/, gU],
             scope: {
               1: "keyword",
               3: "title.class"
             }
           }]
         },
-        KD = {
+        YU = {
           relevance: 0,
-          match: CD.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          match: RU.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
           className: "title.class",
           keywords: {
-            _: [...fD, ...bD]
+            _: [...PU, ...TU]
           }
         },
-        aD = {
+        BU = {
           variants: [{
-            match: [/function/, /\s+/, cD, /(?=\s*\()/]
+            match: [/function/, /\s+/, gU, /(?=\s*\()/]
           }, {
             match: [/function/, /\s*(?=\()/]
           }],
@@ -1524,53 +1524,53 @@ export const modules = {
             3: "title.function"
           },
           label: "func.def",
-          contains: [qD],
+          contains: [ZU],
           illegal: /%/
         };
-      const VD = {
-        match: CD.concat(/\b/, (zD = [...QD, "super", "import"].map((DD => `${DD}\\s*\\(`)), CD.concat("(?!", zD.join("|"), ")")), cD, CD.lookahead(/\s*\(/)),
+      const VU = {
+        match: RU.concat(/\b/, (rU = [...qU, "super", "import"].map((UU => `${UU}\\s*\\(`)), RU.concat("(?!", rU.join("|"), ")")), gU, RU.lookahead(/\s*\(/)),
         className: "title.function",
         relevance: 0
       };
-      var zD;
-      const jD = {
-          VM: CD.concat(/\./, CD.lookahead(CD.concat(cD, /(?![0-9A-Za-z$_(])/))),
-          end: cD,
+      var rU;
+      const XU = {
+          pu: RU.concat(/\./, RU.lookahead(RU.concat(gU, /(?![0-9A-Za-z$_(])/))),
+          end: gU,
           excludeBegin: !0,
           keywords: "prototype",
           className: "property",
           relevance: 0
         },
-        lD = {
-          match: [/get|set/, /\s+/, cD, /(?=\()/],
+        vU = {
+          match: [/get|set/, /\s+/, gU, /(?=\()/],
           className: {
             1: "keyword",
             3: "title.function"
           },
           contains: [{
-            VM: /\(\)/
-          }, qD]
+            pu: /\(\)/
+          }, ZU]
         },
-        LD = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + DD.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        TD = {
-          match: [/const|var|let/, /\s+/, cD, /\s*/, /=\s*/, /(async\s*)?/, CD.lookahead(LD)],
+        dU = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + UU.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        HU = {
+          match: [/const|var|let/, /\s+/, gU, /\s*/, /=\s*/, /(async\s*)?/, RU.lookahead(dU)],
           keywords: "async",
           className: {
             1: "keyword",
             3: "title.function"
           },
-          contains: [qD]
+          contains: [ZU]
         };
       return {
         name: "JavaScript",
         aliases: ["js", "jsx", "mjs", "cjs"],
-        keywords: tD,
+        keywords: CU,
         exports: {
-          PARAMS_CONTAINS: xD,
-          CLASS_REFERENCE: KD
+          PARAMS_CONTAINS: oU,
+          CLASS_REFERENCE: YU
         },
         illegal: /#(?![$_A-z])/,
-        contains: [DD.SHEBANG({
+        contains: [UU.SHEBANG({
           label: "shebang",
           binary: "node",
           relevance: 5
@@ -1578,151 +1578,151 @@ export const modules = {
           label: "use_strict",
           className: "meta",
           relevance: 10,
-          VM: /^\s*['"]use (strict|asm)['"]/
-        }, DD.APOS_STRING_MODE, DD.QUOTE_STRING_MODE, XD, mD, nD, OD, PD, {
+          pu: /^\s*['"]use (strict|asm)['"]/
+        }, UU.APOS_STRING_MODE, UU.QUOTE_STRING_MODE, xU, mU, IU, JU, wU, {
           match: /\$\d+/
-        }, ND, KD, {
+        }, WU, YU, {
           scope: "attr",
-          match: cD + CD.lookahead(":"),
+          match: gU + RU.lookahead(":"),
           relevance: 0
-        }, TD, {
-          VM: "(" + DD.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+        }, HU, {
+          pu: "(" + UU.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
           keywords: "return throw case",
           relevance: 0,
-          contains: [PD, DD.REGEXP_MODE, {
+          contains: [wU, UU.REGEXP_MODE, {
             className: "function",
-            VM: LD,
+            pu: dU,
             returnBegin: !0,
             end: "\\s*=>",
             contains: [{
               className: "params",
               variants: [{
-                VM: DD.UNDERSCORE_IDENT_RE,
+                pu: UU.UNDERSCORE_IDENT_RE,
                 relevance: 0
               }, {
                 className: null,
-                VM: /\(\s*\)/,
+                pu: /\(\s*\)/,
                 skip: !0
               }, {
-                VM: /(\s*)\(/,
+                pu: /(\s*)\(/,
                 end: /\)/,
                 excludeBegin: !0,
                 excludeEnd: !0,
-                keywords: tD,
-                contains: xD
+                keywords: CU,
+                contains: oU
               }]
             }]
           }, {
-            VM: /,/,
+            pu: /,/,
             relevance: 0
           }, {
             match: /\s+/,
             relevance: 0
           }, {
             variants: [{
-              VM: BD,
-              end: yD
+              pu: GU,
+              end: jU
             }, {
               match: /<[A-Za-z0-9\\._:-]+\s*\/>/
             }, {
-              VM: MD.VM,
-              "on:begin": MD.isTrulyOpeningTag,
-              end: MD.end
+              pu: uU.pu,
+              "on:begin": uU.isTrulyOpeningTag,
+              end: uU.end
             }],
             subLanguage: "xml",
             contains: [{
-              VM: MD.VM,
-              end: MD.end,
+              pu: uU.pu,
+              end: uU.end,
               skip: !0,
               contains: ["self"]
             }]
           }]
-        }, aD, {
+        }, BU, {
           beginKeywords: "while if switch catch for"
         }, {
-          VM: "\\b(?!function)" + DD.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          pu: "\\b(?!function)" + UU.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
           returnBegin: !0,
           label: "func.def",
-          contains: [qD, DD.inherit(DD.TITLE_MODE, {
-            VM: cD,
+          contains: [ZU, UU.inherit(UU.TITLE_MODE, {
+            pu: gU,
             className: "title.function"
           })]
         }, {
           match: /\.\.\./,
           relevance: 0
-        }, jD, {
-          match: "\\$" + cD,
+        }, XU, {
+          match: "\\$" + gU,
           relevance: 0
         }, {
           match: [/\bconstructor(?=\s*\()/],
           className: {
             1: "title.function"
           },
-          contains: [qD]
-        }, VD, {
+          contains: [ZU]
+        }, VU, {
           relevance: 0,
           match: /\b[A-Z][A-Z_0-9]+\b/,
           className: "variable.constant"
-        }, JD, lD, {
+        }, aU, vU, {
           match: /\$[(.]/
         }]
       }
     }
 
-    function yD(DD) {
-      const CD = DD.regex,
-        cD = BD(DD),
-        fD = ID,
-        bD = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
-        QD = {
-          VM: [/namespace/, /\s+/, DD.IDENT_RE],
+    function jU(UU) {
+      const RU = UU.regex,
+        gU = GU(UU),
+        PU = tU,
+        TU = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
+        qU = {
+          pu: [/namespace/, /\s+/, UU.IDENT_RE],
           beginScope: {
             1: "keyword",
             3: "title.class"
           }
         },
-        yD = {
+        jU = {
           beginKeywords: "interface",
           end: /\{/,
           excludeEnd: !0,
           keywords: {
             keyword: "interface extends",
-            built_in: bD
+            built_in: TU
           },
-          contains: [cD.exports.CLASS_REFERENCE]
+          contains: [gU.exports.CLASS_REFERENCE]
         },
-        MD = {
-          $pattern: ID,
-          keyword: pD.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
-          literal: iD,
-          built_in: SD.concat(bD),
-          "variable.language": wD
+        uU = {
+          $pattern: tU,
+          keyword: pU.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
+          literal: EU,
+          built_in: cU.concat(TU),
+          "variable.language": KU
         },
-        tD = {
+        CU = {
           className: "meta",
-          VM: "@" + fD
+          pu: "@" + PU
         },
-        ZD = (DD, CD, cD) => {
-          const ID = DD.contains.findIndex((DD => DD.label === CD));
-          if (-1 === ID) throw new Error("can not find mode to replace");
-          DD.contains.splice(ID, 1, cD)
+        hU = (UU, RU, gU) => {
+          const tU = UU.contains.findIndex((UU => UU.label === RU));
+          if (-1 === tU) throw new Error("can not find mode to replace");
+          UU.contains.splice(tU, 1, gU)
         };
-      Object.assign(cD.keywords, MD), cD.exports.PARAMS_CONTAINS.push(tD);
-      const oD = cD.contains.find((DD => "attr" === DD.scope)),
-        vD = Object.assign({}, oD, {
-          match: CD.concat(fD, CD.lookahead(/\s*\?:/))
+      Object.assign(gU.keywords, uU), gU.exports.PARAMS_CONTAINS.push(CU);
+      const QU = gU.contains.find((UU => "attr" === UU.scope)),
+        eU = Object.assign({}, QU, {
+          match: RU.concat(PU, RU.lookahead(/\s*\?:/))
         });
-      cD.exports.PARAMS_CONTAINS.push([cD.exports.CLASS_REFERENCE, oD, vD]), cD.contains = cD.contains.concat([tD, QD, yD, vD]), ZD(cD, "shebang", DD.SHEBANG()), ZD(cD, "use_strict", {
+      gU.exports.PARAMS_CONTAINS.push([gU.exports.CLASS_REFERENCE, QU, eU]), gU.contains = gU.contains.concat([CU, qU, jU, eU]), hU(gU, "shebang", UU.SHEBANG()), hU(gU, "use_strict", {
         className: "meta",
         relevance: 10,
-        VM: /^\s*['"]use strict['"]/
+        pu: /^\s*['"]use strict['"]/
       });
-      return cD.contains.find((DD => "func.def" === DD.label)).relevance = 0, Object.assign(cD, {
+      return gU.contains.find((UU => "func.def" === UU.label)).relevance = 0, Object.assign(gU, {
         name: "TypeScript",
         aliases: ["ts", "tsx", "mts", "cts"]
-      }), cD
+      }), gU
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

@@ -1,285 +1,285 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var DD = __webpack_require__.u,
-        CD = __webpack_require__.e,
-        cD = {},
-        ID = {};
-      __webpack_require__.u = function(CD) {
-        return DD(CD) + (cD.hasOwnProperty(CD) ? "?" + cD[CD] : "")
-      }, __webpack_require__.e = function(pD) {
-        return CD(pD).catch((function(CD) {
-          var iD = ID.hasOwnProperty(pD) ? ID[pD] : 4;
-          if (iD < 1) {
-            var fD = DD(pD);
-            throw CD.message = "Loading chunk " + pD + " failed after 4 retries.\n(" + fD + ")", CD.request = fD, cD[pD] = "cache-bust=" + Date.now(), setTimeout((function() {
-              delete ID[pD]
-            }), 0), CD
+      var UU = __webpack_require__.u,
+        RU = __webpack_require__.e,
+        gU = {},
+        tU = {};
+      __webpack_require__.u = function(RU) {
+        return UU(RU) + (gU.hasOwnProperty(RU) ? "?" + gU[RU] : "")
+      }, __webpack_require__.e = function(pU) {
+        return RU(pU).catch((function(RU) {
+          var EU = tU.hasOwnProperty(pU) ? tU[pU] : 4;
+          if (EU < 1) {
+            var PU = UU(pU);
+            throw RU.message = "Loading chunk " + pU + " failed after 4 retries.\n(" + PU + ")", RU.request = PU, gU[pU] = "cache-bust=" + Date.now(), setTimeout((function() {
+              delete tU[pU]
+            }), 0), RU
           }
-          return new Promise((function(DD) {
-            var CD = 4 - iD + 1;
+          return new Promise((function(UU) {
+            var RU = 4 - EU + 1;
             setTimeout((function() {
-              var CD = "cache-bust=" + Date.now();
-              cD[pD] = CD, ID[pD] = iD - 1, DD(__webpack_require__.e(pD))
-            }), function(DD) {
-              return 500 * Math.pow(2, DD)
-            }(CD))
+              var RU = "cache-bust=" + Date.now();
+              gU[pU] = RU, tU[pU] = EU - 1, UU(__webpack_require__.e(pU))
+            }), function(UU) {
+              return 500 * Math.pow(2, UU)
+            }(RU))
           }))
         }))
       }
     }
   })();
-  const DD = [15, 15, 15],
-    CD = {
+  const UU = [15, 15, 15],
+    RU = {
       top: 1,
       left: .85,
       right: .7
     };
 
-  function cD(CD, cD, ID) {
-    let pD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : DD => 0 !== CD[4 * DD + 3];
-    const iD = (DD, CD) => DD < 0 || CD < 0 || DD >= cD || CD >= cD || !pD(CD * cD + DD),
-      fD = [];
-    for (let DD = 0; DD < cD; DD++)
-      for (let CD = 0; CD < cD; CD++)
-        if (!iD(CD, DD)) DD: for (let pD = -ID; pD <= ID; pD++) {
-          const bD = ID - Math.abs(pD);
-          for (let ID = -bD; ID <= bD; ID++)
-            if (iD(CD + ID, DD + pD)) {
-              fD.push(DD * cD + CD);
-              break DD
+  function gU(RU, gU, tU) {
+    let pU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : UU => 0 !== RU[4 * UU + 3];
+    const EU = (UU, RU) => UU < 0 || RU < 0 || UU >= gU || RU >= gU || !pU(RU * gU + UU),
+      PU = [];
+    for (let UU = 0; UU < gU; UU++)
+      for (let RU = 0; RU < gU; RU++)
+        if (!EU(RU, UU)) UU: for (let pU = -tU; pU <= tU; pU++) {
+          const TU = tU - Math.abs(pU);
+          for (let tU = -TU; tU <= TU; tU++)
+            if (EU(RU + tU, UU + pU)) {
+              PU.push(UU * gU + RU);
+              break UU
             }
         }
-    for (const bD of fD) CD.set(DD, 4 * bD), CD[4 * bD + 3] = 255
+    for (const TU of PU) RU.set(UU, 4 * TU), RU[4 * TU + 3] = 255
   }
-  const ID = Math.SQRT1_2,
-    pD = Math.sqrt(3) / 2,
-    iD = {
+  const tU = Math.SQRT1_2,
+    pU = Math.sqrt(3) / 2,
+    EU = {
       boxes: [
         [0, 0, 0, 1, 1, 1]
       ],
       cropFaces: !1
     },
-    fD = {
+    PU = {
       boxes: [
         [0, 0, 0, 1, .5, 1]
       ],
       cropFaces: !1
     },
-    bD = {
+    TU = {
       boxes: [
         [0, 0, 0, 1, .5, 1],
         [0, .5, 0, .5, 1, 1]
       ],
       cropFaces: !0
     };
-  const QD = 1e-6;
+  const qU = 1e-6;
 
-  function wD(DD, CD, cD, ID) {
+  function KU(UU, RU, gU, tU) {
     let {
-      origin: pD,
-      across: iD,
-      down: fD,
-      texture: bD,
-      rect: [wD, SD, BD, yD],
-      shade: MD
-    } = ID;
-    const tD = iD.x * fD.y - iD.y * fD.x;
-    if (Math.abs(tD) < 1e-9) return;
-    const ZD = [pD.x, pD.x + iD.x, pD.x + fD.x, pD.x + iD.x + fD.x],
-      oD = [pD.y, pD.y + iD.y, pD.y + fD.y, pD.y + iD.y + fD.y],
-      vD = Math.max(0, Math.floor(Math.min(...ZD))),
-      ND = Math.min(cD - 1, Math.ceil(Math.max(...ZD))),
-      gD = Math.max(0, Math.floor(Math.min(...oD))),
-      XD = Math.min(cD - 1, Math.ceil(Math.max(...oD)));
-    for (let mD = gD; mD <= XD; mD++)
-      for (let ID = vD; ID <= ND; ID++) {
-        const ZD = ID + .5 - pD.x,
-          oD = mD + .5 - pD.y,
-          vD = (ZD * fD.y - oD * fD.x) / tD,
-          ND = (iD.x * oD - iD.y * ZD) / tD;
-        if (vD < -QD || vD > 1 + QD || ND < -QD || ND > 1 + QD) continue;
-        const gD = mD * cD + ID;
-        CD[gD] = 1;
-        const XD = wD + Math.min(Math.max(vD, 0), 1) * (BD - wD),
-          nD = SD + Math.min(Math.max(ND, 0), 1) * (yD - SD),
-          OD = Math.min(bD.width - 1, Math.floor(XD * bD.width)),
-          PD = 4 * (Math.min(bD.height - 1, Math.floor(nD * bD.height)) * bD.width + OD),
-          HD = bD.pixels[PD + 3] / 255;
-        if (0 === HD) continue;
-        const UD = 4 * gD,
-          xD = DD[UD + 3] / 255 * (1 - HD),
-          qD = HD + xD;
-        for (let CD = 0; CD < 3; CD++) DD[UD + CD] = (bD.pixels[PD + CD] * MD * HD + DD[UD + CD] * xD) / qD;
-        DD[UD + 3] = 255 * qD
+      origin: pU,
+      across: EU,
+      down: PU,
+      texture: TU,
+      rect: [KU, cU, GU, jU],
+      shade: uU
+    } = tU;
+    const CU = EU.x * PU.y - EU.y * PU.x;
+    if (Math.abs(CU) < 1e-9) return;
+    const hU = [pU.x, pU.x + EU.x, pU.x + PU.x, pU.x + EU.x + PU.x],
+      QU = [pU.y, pU.y + EU.y, pU.y + PU.y, pU.y + EU.y + PU.y],
+      eU = Math.max(0, Math.floor(Math.min(...hU))),
+      WU = Math.min(gU - 1, Math.ceil(Math.max(...hU))),
+      fU = Math.max(0, Math.floor(Math.min(...QU))),
+      xU = Math.min(gU - 1, Math.ceil(Math.max(...QU)));
+    for (let mU = fU; mU <= xU; mU++)
+      for (let tU = eU; tU <= WU; tU++) {
+        const hU = tU + .5 - pU.x,
+          QU = mU + .5 - pU.y,
+          eU = (hU * PU.y - QU * PU.x) / CU,
+          WU = (EU.x * QU - EU.y * hU) / CU;
+        if (eU < -qU || eU > 1 + qU || WU < -qU || WU > 1 + qU) continue;
+        const fU = mU * gU + tU;
+        RU[fU] = 1;
+        const xU = KU + Math.min(Math.max(eU, 0), 1) * (GU - KU),
+          IU = cU + Math.min(Math.max(WU, 0), 1) * (jU - cU),
+          JU = Math.min(TU.width - 1, Math.floor(xU * TU.width)),
+          wU = 4 * (Math.min(TU.height - 1, Math.floor(IU * TU.height)) * TU.width + JU),
+          nU = TU.pixels[wU + 3] / 255;
+        if (0 === nU) continue;
+        const bU = 4 * fU,
+          oU = UU[bU + 3] / 255 * (1 - nU),
+          ZU = nU + oU;
+        for (let RU = 0; RU < 3; RU++) UU[bU + RU] = (TU.pixels[wU + RU] * uU * nU + UU[bU + RU] * oU) / ZU;
+        UU[bU + 3] = 255 * ZU
       }
   }
 
-  function SD(DD, CD, cD) {
-    const ID = DD.get(CD);
-    if (void 0 === ID) throw new Error(`no ${cD} was sent for ${CD.slice(0,100)}`);
-    return ID
+  function cU(UU, RU, gU) {
+    const tU = UU.get(RU);
+    if (void 0 === tU) throw new Error(`no ${gU} was sent for ${RU.slice(0,100)}`);
+    return tU
   }
-  const BD = {
-      pixelsOf(DD) {
-        const CD = new OffscreenCanvas(DD.width, DD.height),
-          cD = CD.getContext("2d");
-        if (!cD) throw new Error("no 2D context");
-        return cD.drawImage(DD, 0, 0), DD.close(), {
-          width: CD.width,
-          height: CD.height,
-          pixels: cD.getImageData(0, 0, CD.width, CD.height).data
+  const GU = {
+      pixelsOf(UU) {
+        const RU = new OffscreenCanvas(UU.width, UU.height),
+          gU = RU.getContext("2d");
+        if (!gU) throw new Error("no 2D context");
+        return gU.drawImage(UU, 0, 0), UU.close(), {
+          width: RU.width,
+          height: RU.height,
+          pixels: gU.getImageData(0, 0, RU.width, RU.height).data
         }
       },
-      async encode(DD, CD) {
-        const cD = new OffscreenCanvas(CD, CD),
-          ID = cD.getContext("2d");
-        if (!ID) throw new Error("no 2D context");
-        ID.putImageData(new ImageData(DD, CD, CD), 0, 0);
-        const pD = await cD.convertToBlob();
-        return new Promise(((DD, CD) => {
-          const cD = new FileReader;
-          cD.onload = () => {
-            DD(cD.result)
-          }, cD.onerror = () => {
-            var DD;
-            CD(null !== (DD = cD.error) && void 0 !== DD ? DD : new Error("the icon did not encode"))
-          }, cD.readAsDataURL(pD)
+      async encode(UU, RU) {
+        const gU = new OffscreenCanvas(RU, RU),
+          tU = gU.getContext("2d");
+        if (!tU) throw new Error("no 2D context");
+        tU.putImageData(new ImageData(UU, RU, RU), 0, 0);
+        const pU = await gU.convertToBlob();
+        return new Promise(((UU, RU) => {
+          const gU = new FileReader;
+          gU.onload = () => {
+            UU(gU.result)
+          }, gU.onerror = () => {
+            var UU;
+            RU(null !== (UU = gU.error) && void 0 !== UU ? UU : new Error("the icon did not encode"))
+          }, gU.readAsDataURL(pU)
         }))
       }
     },
-    yD = globalThis.WorkerGlobalScope;
-  void 0 !== yD && globalThis instanceof yD && function(DD, QD) {
-    const BD = new Map,
-      yD = new Map,
-      MD = (CD, cD, ID) => {
+    jU = globalThis.WorkerGlobalScope;
+  void 0 !== jU && globalThis instanceof jU && function(UU, qU) {
+    const GU = new Map,
+      jU = new Map,
+      uU = (RU, gU, tU) => {
         (async () => {
           try {
-            DD.postMessage({
+            UU.postMessage({
               type: "drawn",
-              id: CD,
-              url: await QD.encode(ID(), cD)
+              id: RU,
+              url: await qU.encode(tU(), gU)
             })
-          } catch (pD) {
-            DD.postMessage({
+          } catch (pU) {
+            UU.postMessage({
               type: "failed",
-              message: String(pD)
+              message: String(pU)
             })
           }
         })()
       };
-    DD.onmessage = DD => {
+    UU.onmessage = UU => {
       let {
-        data: tD
-      } = DD;
-      if ("texture" === tD.type) BD.set(tD.url, QD.pixelsOf(tD.bitmap));
-      else if ("model" === tD.type) yD.set(tD.name, {
-        geometry: tD.geometry,
-        texture: QD.pixelsOf(tD.bitmap)
+        data: CU
+      } = UU;
+      if ("texture" === CU.type) GU.set(CU.url, qU.pixelsOf(CU.bitmap));
+      else if ("model" === CU.type) jU.set(CU.name, {
+        geometry: CU.geometry,
+        texture: qU.pixelsOf(CU.bitmap)
       });
-      else if ("draw" === tD.type) {
+      else if ("draw" === CU.type) {
         const {
-          id: DD,
-          top: QD,
-          left: yD,
-          right: ZD,
-          itemType: oD,
-          size: vD,
-          outlineWidth: ND
-        } = tD;
-        MD(DD, vD, (() => function(DD, iD, fD, bD) {
-          const QD = .6 * fD,
-            SD = QD * ID,
-            BD = QD * ID * .5,
-            yD = QD * pD,
-            MD = Math.max(...iD.boxes.map((DD => DD[4]))),
-            tD = SD / 2 + (fD - SD) / 2,
-            ZD = BD + (fD - BD - BD - MD * yD) / 2,
-            oD = (DD, CD, cD) => ({
-              x: tD + (DD - cD) * SD,
-              y: ZD - BD + (DD + cD) * BD + (MD - CD) * yD
+          id: UU,
+          top: qU,
+          left: jU,
+          right: hU,
+          itemType: QU,
+          size: eU,
+          outlineWidth: WU
+        } = CU;
+        uU(UU, eU, (() => function(UU, EU, PU, TU) {
+          const qU = .6 * PU,
+            cU = qU * tU,
+            GU = qU * tU * .5,
+            jU = qU * pU,
+            uU = Math.max(...EU.boxes.map((UU => UU[4]))),
+            CU = cU / 2 + (PU - cU) / 2,
+            hU = GU + (PU - GU - GU - uU * jU) / 2,
+            QU = (UU, RU, gU) => ({
+              x: CU + (UU - gU) * cU,
+              y: hU - GU + (UU + gU) * GU + (uU - RU) * jU
             }),
-            vD = (DD, CD, cD, ID, pD, fD) => ({
-              origin: DD,
+            eU = (UU, RU, gU, tU, pU, PU) => ({
+              origin: UU,
               across: {
-                x: CD.x - DD.x,
-                y: CD.y - DD.y
+                x: RU.x - UU.x,
+                y: RU.y - UU.y
               },
               down: {
-                x: cD.x - DD.x,
-                y: cD.y - DD.y
+                x: gU.x - UU.x,
+                y: gU.y - UU.y
               },
-              texture: ID,
-              rect: iD.cropFaces ? pD : [0, 0, 1, 1],
-              shade: fD
+              texture: tU,
+              rect: EU.cropFaces ? pU : [0, 0, 1, 1],
+              shade: PU
             }),
-            ND = new Uint8ClampedArray(fD * fD * 4),
-            gD = new Uint8Array(fD * fD),
-            XD = CD;
-          for (const [CD, cD, ID, pD, mD, nD] of iD.boxes) {
-            const iD = vD(oD(pD, mD, nD), oD(pD, mD, ID), oD(pD, cD, nD), DD.right, [1 - nD, 1 - mD, 1 - ID, 1 - cD], XD.right),
-              bD = vD(oD(CD, mD, nD), oD(pD, mD, nD), oD(CD, cD, nD), DD.left, [CD, 1 - mD, pD, 1 - cD], XD.left),
-              QD = vD(oD(CD, mD, ID), oD(pD, mD, ID), oD(CD, mD, nD), DD.top, [CD, ID, pD, nD], XD.top);
-            for (const DD of [iD, bD, QD]) wD(ND, gD, fD, DD)
+            WU = new Uint8ClampedArray(PU * PU * 4),
+            fU = new Uint8Array(PU * PU),
+            xU = RU;
+          for (const [RU, gU, tU, pU, mU, IU] of EU.boxes) {
+            const EU = eU(QU(pU, mU, IU), QU(pU, mU, tU), QU(pU, gU, IU), UU.right, [1 - IU, 1 - mU, 1 - tU, 1 - gU], xU.right),
+              TU = eU(QU(RU, mU, IU), QU(pU, mU, IU), QU(RU, gU, IU), UU.left, [RU, 1 - mU, pU, 1 - gU], xU.left),
+              qU = eU(QU(RU, mU, tU), QU(pU, mU, tU), QU(RU, mU, IU), UU.top, [RU, tU, pU, IU], xU.top);
+            for (const UU of [EU, TU, qU]) KU(WU, fU, PU, UU)
           }
-          return cD(ND, fD, bD, (DD => 1 === gD[DD])), ND
+          return gU(WU, PU, TU, (UU => 1 === fU[UU])), WU
         }({
-          top: SD(BD, QD, "texture"),
-          left: SD(BD, yD, "texture"),
-          right: SD(BD, ZD, "texture")
-        }, function(DD) {
-          return "SlabBlock" === DD ? fD : "StairsBlock" === DD ? bD : iD
-        }(oD), vD, ND)))
+          top: cU(GU, qU, "texture"),
+          left: cU(GU, jU, "texture"),
+          right: cU(GU, hU, "texture")
+        }, function(UU) {
+          return "SlabBlock" === UU ? PU : "StairsBlock" === UU ? TU : EU
+        }(QU), eU, WU)))
       } else {
         const {
-          id: DD,
-          name: CD,
-          size: ID,
-          outlineWidth: pD
-        } = tD;
-        MD(DD, ID, (() => {
+          id: UU,
+          name: RU,
+          size: tU,
+          outlineWidth: pU
+        } = CU;
+        uU(UU, tU, (() => {
           const {
-            geometry: DD,
-            texture: iD
-          } = SD(yD, CD, "model");
-          return function(DD, CD, ID, pD) {
+            geometry: UU,
+            texture: EU
+          } = cU(jU, RU, "model");
+          return function(UU, RU, tU, pU) {
             const {
-              vertices: iD,
-              uvs: fD,
-              indices: bD,
-              shades: QD
-            } = DD, wD = .03125 * ID, SD = ID - 2 * wD, BD = new Float32Array(iD.length);
-            for (let cD = 0; cD < iD.length; cD += 3) BD[cD] = wD + iD[cD] * SD, BD[cD + 1] = wD + iD[cD + 1] * SD, BD[cD + 2] = iD[cD + 2];
-            const yD = new Float32Array(ID * ID).fill(-1 / 0),
-              MD = new Uint8ClampedArray(ID * ID * 4),
-              tD = 255 * DD.alphaCutoff;
-            for (let cD = 0; cD < bD.length; cD += 3) {
-              const [DD, pD, iD] = [bD[cD], bD[cD + 1], bD[cD + 2]], [wD, SD, ZD] = [3 * DD, 3 * pD, 3 * iD], [oD, vD, ND, gD, XD, mD] = [BD[wD], BD[wD + 1], BD[SD], BD[SD + 1], BD[ZD], BD[ZD + 1]], nD = (ND - oD) * (mD - vD) - (XD - oD) * (gD - vD);
-              if (Math.abs(nD) < 1e-9) continue;
-              const OD = QD[cD / 3],
-                [PD, HD, UD, xD, qD, JD] = [fD[2 * DD], fD[2 * DD + 1], fD[2 * pD], fD[2 * pD + 1], fD[2 * iD], fD[2 * iD + 1]],
-                KD = Math.max(0, Math.floor(Math.min(oD, ND, XD))),
-                aD = Math.min(ID - 1, Math.ceil(Math.max(oD, ND, XD))),
-                VD = Math.max(0, Math.floor(Math.min(vD, gD, mD))),
-                zD = Math.min(ID - 1, Math.ceil(Math.max(vD, gD, mD)));
-              for (let cD = VD; cD <= zD; cD++)
-                for (let DD = KD; DD <= aD; DD++) {
-                  const [pD, iD] = [DD + .5, cD + .5], fD = ((pD - oD) * (mD - vD) - (XD - oD) * (iD - vD)) / nD, bD = ((ND - oD) * (iD - vD) - (pD - oD) * (gD - vD)) / nD, QD = 1 - fD - bD;
-                  if (QD < 0 || fD < 0 || bD < 0) continue;
-                  const KD = QD * BD[wD + 2] + fD * BD[SD + 2] + bD * BD[ZD + 2],
-                    aD = cD * ID + DD;
-                  if (KD <= yD[aD]) continue;
-                  const VD = Math.max(0, Math.min(CD.width - 1, Math.floor((QD * PD + fD * UD + bD * qD) * CD.width))),
-                    zD = 4 * (Math.max(0, Math.min(CD.height - 1, Math.floor((QD * HD + fD * xD + bD * JD) * CD.height))) * CD.width + VD);
-                  CD.pixels[zD + 3] < tD || (yD[aD] = KD, MD[4 * aD] = CD.pixels[zD] * OD, MD[4 * aD + 1] = CD.pixels[zD + 1] * OD, MD[4 * aD + 2] = CD.pixels[zD + 2] * OD, MD[4 * aD + 3] = 255)
+              vertices: EU,
+              uvs: PU,
+              indices: TU,
+              shades: qU
+            } = UU, KU = .03125 * tU, cU = tU - 2 * KU, GU = new Float32Array(EU.length);
+            for (let gU = 0; gU < EU.length; gU += 3) GU[gU] = KU + EU[gU] * cU, GU[gU + 1] = KU + EU[gU + 1] * cU, GU[gU + 2] = EU[gU + 2];
+            const jU = new Float32Array(tU * tU).fill(-1 / 0),
+              uU = new Uint8ClampedArray(tU * tU * 4),
+              CU = 255 * UU.alphaCutoff;
+            for (let gU = 0; gU < TU.length; gU += 3) {
+              const [UU, pU, EU] = [TU[gU], TU[gU + 1], TU[gU + 2]], [KU, cU, hU] = [3 * UU, 3 * pU, 3 * EU], [QU, eU, WU, fU, xU, mU] = [GU[KU], GU[KU + 1], GU[cU], GU[cU + 1], GU[hU], GU[hU + 1]], IU = (WU - QU) * (mU - eU) - (xU - QU) * (fU - eU);
+              if (Math.abs(IU) < 1e-9) continue;
+              const JU = qU[gU / 3],
+                [wU, nU, bU, oU, ZU, aU] = [PU[2 * UU], PU[2 * UU + 1], PU[2 * pU], PU[2 * pU + 1], PU[2 * EU], PU[2 * EU + 1]],
+                YU = Math.max(0, Math.floor(Math.min(QU, WU, xU))),
+                BU = Math.min(tU - 1, Math.ceil(Math.max(QU, WU, xU))),
+                VU = Math.max(0, Math.floor(Math.min(eU, fU, mU))),
+                rU = Math.min(tU - 1, Math.ceil(Math.max(eU, fU, mU)));
+              for (let gU = VU; gU <= rU; gU++)
+                for (let UU = YU; UU <= BU; UU++) {
+                  const [pU, EU] = [UU + .5, gU + .5], PU = ((pU - QU) * (mU - eU) - (xU - QU) * (EU - eU)) / IU, TU = ((WU - QU) * (EU - eU) - (pU - QU) * (fU - eU)) / IU, qU = 1 - PU - TU;
+                  if (qU < 0 || PU < 0 || TU < 0) continue;
+                  const YU = qU * GU[KU + 2] + PU * GU[cU + 2] + TU * GU[hU + 2],
+                    BU = gU * tU + UU;
+                  if (YU <= jU[BU]) continue;
+                  const VU = Math.max(0, Math.min(RU.width - 1, Math.floor((qU * wU + PU * bU + TU * ZU) * RU.width))),
+                    rU = 4 * (Math.max(0, Math.min(RU.height - 1, Math.floor((qU * nU + PU * oU + TU * aU) * RU.height))) * RU.width + VU);
+                  RU.pixels[rU + 3] < CU || (jU[BU] = YU, uU[4 * BU] = RU.pixels[rU] * JU, uU[4 * BU + 1] = RU.pixels[rU + 1] * JU, uU[4 * BU + 2] = RU.pixels[rU + 2] * JU, uU[4 * BU + 3] = 255)
                 }
             }
-            return cD(MD, ID, pD), MD
-          }(DD, iD, ID, pD)
+            return gU(uU, tU, pU), uU
+          }(UU, EU, tU, pU)
         }))
       }
-    }, DD.postMessage({
+    }, UU.postMessage({
       type: "started"
     })
-  }(globalThis, BD)
+  }(globalThis, GU)
 })();

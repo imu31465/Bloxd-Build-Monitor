@@ -1,62 +1,62 @@
 export const id = 350;
 export const ids = [350];
 export const modules = {
-  60483: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      applyLightFoOffset: () => fD,
-      getFloatingOriginOffset: () => pD,
-      lightFoVersion: () => iD,
-      wrapRenderableForFO: () => bD
+  60619: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      applyLightFoOffset: () => PU,
+      getFloatingOriginOffset: () => pU,
+      lightFoVersion: () => EU,
+      wrapRenderableForFO: () => TU
     });
-    var ID = cD(40830);
+    var tU = gU(41092);
 
-    function pD(DD) {
-      const CD = DD.camera;
-      if (!CD) return {
+    function pU(UU) {
+      const RU = UU.camera;
+      if (!RU) return {
         x: 0,
         y: 0,
         z: 0
       };
-      const cD = CD.worldMatrix;
+      const gU = RU.worldMatrix;
       return {
-        x: cD[12],
-        y: cD[13],
-        z: cD[14]
+        x: gU[12],
+        y: gU[13],
+        z: gU[14]
       }
     }
 
-    function iD(DD) {
-      return DD.camera ? DD.camera.worldMatrixVersion : 0
+    function EU(UU) {
+      return UU.camera ? UU.camera.worldMatrixVersion : 0
     }
 
-    function fD(DD, CD) {
-      const cD = CD.camera?.worldMatrix;
-      if (!cD) return;
-      const pD = cD[12],
-        iD = cD[13],
-        fD = cD[14];
-      let bD = 0;
-      for (const QD of CD.lights) {
-        if (bD >= ID.b) break;
-        if (!QD._writeLightUbo) continue;
-        const CD = 4 + 16 * bD,
-          cD = DD[CD + 3];
-        if (0 === cD || 2 === cD) {
-          const cD = QD.worldMatrix;
-          DD[CD] = cD[12] - pD, DD[CD + 1] = cD[13] - iD, DD[CD + 2] = cD[14] - fD
+    function PU(UU, RU) {
+      const gU = RU.camera?.worldMatrix;
+      if (!gU) return;
+      const pU = gU[12],
+        EU = gU[13],
+        PU = gU[14];
+      let TU = 0;
+      for (const qU of RU.lights) {
+        if (TU >= tU.b) break;
+        if (!qU._writeLightUbo) continue;
+        const RU = 4 + 16 * TU,
+          gU = UU[RU + 3];
+        if (0 === gU || 2 === gU) {
+          const gU = qU.worldMatrix;
+          UU[RU] = gU[12] - pU, UU[RU + 1] = gU[13] - EU, UU[RU + 2] = gU[14] - PU
         }
-        bD++
+        TU++
       }
     }
 
-    function bD(DD, CD, cD) {
-      let ID = -1;
+    function TU(UU, RU, gU) {
+      let tU = -1;
       return () => {
-        const pD = CD.camera ? CD.camera.worldMatrixVersion : -1;
-        pD !== ID && (cD(), ID = pD), DD()
+        const pU = RU.camera ? RU.camera.worldMatrixVersion : -1;
+        pU !== tU && (gU(), tU = pU), UU()
       }
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

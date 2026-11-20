@@ -1,72 +1,72 @@
 export const id = 65;
 export const ids = [65];
 export const modules = {
-  35843: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      noteJsEngine: () => TD,
-      noteJsJoin: () => kD,
-      noteWasmJoin: () => dD,
-      noteWasmPick: () => GD,
-      noteWebGpuLoss: () => YD,
-      startWebGpuLossDebug: () => LD
+  36001: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      noteJsEngine: () => HU,
+      noteJsJoin: () => yU,
+      noteWasmJoin: () => kU,
+      noteWasmPick: () => SU,
+      noteWebGpuLoss: () => FU,
+      startWebGpuLossDebug: () => dU
     });
-    var ID = cD(312),
-      pD = cD(16),
-      iD = cD(2660),
-      fD = cD(3255),
-      bD = cD(646),
-      QD = cD(300),
-      wD = cD(90),
-      SD = cD(101),
-      BD = cD(2668),
-      yD = cD(36),
-      MD = cD(110),
-      tD = cD(298),
-      ZD = cD(2727),
-      oD = cD(326),
-      vD = cD(8950);
-    const ND = 40,
-      gD = 160;
+    var tU = gU(299),
+      pU = gU(21),
+      EU = gU(2569),
+      PU = gU(3151),
+      TU = gU(603),
+      qU = gU(279),
+      KU = gU(96),
+      cU = gU(109),
+      GU = gU(2577),
+      jU = gU(34),
+      uU = gU(122),
+      CU = gU(274),
+      hU = gU(2624),
+      QU = gU(311),
+      eU = gU(8902);
+    const WU = 40,
+      fU = 160;
 
-    function XD(DD, CD) {
-      return `"${(DD.length>CD?`${DD.slice(0,CD)}...`:DD).replace(/[^ -~]|["\\]/g,"?")}"`
+    function xU(UU, RU) {
+      return `"${(UU.length>RU?`${UU.slice(0,RU)}...`:UU).replace(/[^ -~]|["\\]/g,"?")}"`
     }
 
-    function mD(DD) {
-      return DD ? "yes" : "no"
+    function mU(UU) {
+      return UU ? "yes" : "no"
     }
 
-    function nD(DD) {
-      var CD;
-      const cD = DD.storedRenderer;
-      return [`loss holds ${mD(DD.lossHolds)}`, `stops packs ${mD(DD.lossStopsPack)}`, `any loss ${mD(DD.anyLoss)}`, `old intel ${mD(DD.oldIntelDriver)}`, `default off for packs ${mD(DD.defaultOffForPacks)}`, `default off reason ${null!==(CD=DD.defaultOffReason)&&void 0!==CD?CD:"none"}`, `setting ${DD.setting?"on":"off"} (stored ${null===DD.settingStored?"unset":DD.settingStored?"on":"off"})`, `renderer url ${null===DD.urlRenderer?"none":XD(DD.urlRenderer,12)}, stored ${null===cD||void 0===cD?"none":XD(String(cD),12)}`, `hidden-loss arm ${DD.hiddenLossArm}`].join(", ")
+    function IU(UU) {
+      var RU;
+      const gU = UU.storedRenderer;
+      return [`loss holds ${mU(UU.lossHolds)}`, `stops packs ${mU(UU.lossStopsPack)}`, `any loss ${mU(UU.anyLoss)}`, `old intel ${mU(UU.oldIntelDriver)}`, `default off for packs ${mU(UU.defaultOffForPacks)}`, `default off reason ${null!==(RU=UU.defaultOffReason)&&void 0!==RU?RU:"none"}`, `setting ${UU.setting?"on":"off"} (stored ${null===UU.settingStored?"unset":UU.settingStored?"on":"off"})`, `renderer url ${null===UU.urlRenderer?"none":xU(UU.urlRenderer,12)}, stored ${null===gU||void 0===gU?"none":xU(String(gU),12)}`, `hidden-loss arm ${UU.hiddenLossArm}`].join(", ")
     }
 
-    function OD(DD) {
-      if (null === DD) return "no renderer settled";
+    function JU(UU) {
+      if (null === UU) return "no renderer settled";
       const {
-        requested: CD,
-        choice: cD,
-        source: ID,
-        fallbackReason: pD
-      } = DD;
-      return `renderer requested ${CD}, runs ${cD}, from ${ID}${null===pD?"":`, fell back: ${XD(pD,80)}`}`
+        requested: RU,
+        choice: gU,
+        source: tU,
+        fallbackReason: pU
+      } = UU;
+      return `renderer requested ${RU}, runs ${gU}, from ${tU}${null===pU?"":`, fell back: ${xU(pU,80)}`}`
     }
 
-    function PD(DD, CD) {
-      return DD ? `stopping packs: iOS, ${null!==CD&&void 0!==CD?CD:1} losses in a row within a day` : "stopping packs"
+    function wU(UU, RU) {
+      return UU ? `stopping packs: iOS, ${null!==RU&&void 0!==RU?RU:1} losses in a row within a day` : "stopping packs"
     }
 
-    function HD(DD) {
-      var CD, cD, ID;
-      return `pick (wasm): backend ${null!==(CD=DD.backend)&&void 0!==CD?CD:"none"}, webgpu fallback ${null!==(cD=DD.reason)&&void 0!==cD?cD:"none"}, from ${null!==(ID=DD.source)&&void 0!==ID?ID:"none"}, storage pull breaks ${mD(DD.storagePullBreaks)}; packs run ${mD("webgpu"===DD.backend&&!DD.storagePullBreaks)}, else ${DD.noWebGpu}`
+    function nU(UU) {
+      var RU, gU, tU;
+      return `pick (wasm): backend ${null!==(RU=UU.backend)&&void 0!==RU?RU:"none"}, webgpu fallback ${null!==(gU=UU.reason)&&void 0!==gU?gU:"none"}, from ${null!==(tU=UU.source)&&void 0!==tU?tU:"none"}, storage pull breaks ${mU(UU.storagePullBreaks)}; packs run ${mU("webgpu"===UU.backend&&!UU.storagePullBreaks)}, else ${UU.noWebGpu}`
     }
 
-    function UD(DD, CD, cD) {
-      return `pack ${null===DD?"(name not read)":XD(DD,ND)} ${CD}${null===cD?"":`, ${cD} variants`}`
+    function bU(UU, RU, gU) {
+      return `pack ${null===UU?"(name not read)":xU(UU,WU)} ${RU}${null===gU?"":`, ${gU} variants`}`
     }
-    const xD = "shaderPack:failedWebGpuOff",
-      qD = new class {
+    const oU = "shaderPack:failedWebGpuOff",
+      ZU = new class {
         constructor() {
           this.joins = 0, this.losses = 0, this.noPackSaid = !1
         }
@@ -74,162 +74,162 @@ export const modules = {
           return this.joins++, this.joins <= 5 ? "detail" : this.joins <= 30 ? "outcome" : 31 === this.joins ? "cap" : "none"
         }
         noPack() {
-          const DD = !this.noPackSaid;
-          return this.noPackSaid = !0, DD
+          const UU = !this.noPackSaid;
+          return this.noPackSaid = !0, UU
         }
         loss() {
           return this.losses++, this.losses <= 10 ? "line" : 11 === this.losses ? "cap" : "none"
         }
       };
-    let JD = null,
-      KD = null,
-      aD = 0;
+    let aU = null,
+      YU = null,
+      BU = 0;
 
-    function VD(DD) {
-      (0, ZD.j)("webgpuloss", DD)
+    function VU(UU) {
+      (0, hU.h)("webgpuloss", UU)
     }
 
-    function zD() {
+    function rU() {
       return {
-        lossHolds: (0, tD.s)(),
-        lossStopsPack: (0, tD.x)(),
-        anyLoss: (0, tD.f)(),
-        oldIntelDriver: !0 === yD.h.getItem(MD.M),
-        defaultOffForPacks: pD.d.isWebGpuDefaultOff(),
-        defaultOffReason: pD.d.webGpuDefaultOffReason(),
-        settingStored: yD.h.getItem(ID.jc),
-        setting: pD.d.get("clientEscMenuOptions").useWebGpu,
-        urlRenderer: SD.currentUrl.getSearchParam(BD.d),
-        storedRenderer: yD.h.getItem(BD.f),
-        hiddenLossArm: QD.b.webgpu_hidden_loss_v1
+        lossHolds: (0, CU.t)(),
+        lossStopsPack: (0, CU.x)(),
+        anyLoss: (0, CU.c)(),
+        oldIntelDriver: !0 === jU.k.getItem(uU.N),
+        defaultOffForPacks: pU.b.isWebGpuDefaultOff(),
+        defaultOffReason: pU.b.webGpuDefaultOffReason(),
+        settingStored: jU.k.getItem(tU.gc),
+        setting: pU.b.get("clientEscMenuOptions").useWebGpu,
+        urlRenderer: cU.currentUrl.getSearchParam(GU.e),
+        storedRenderer: jU.k.getItem(GU.i),
+        hiddenLossArm: qU.c.webgpu_hidden_loss_v1
       }
     }
 
-    function jD(DD) {
-      return function(DD, CD, cD) {
-        if (null === DD || void 0 === DD) return "none";
-        if ("object" !== typeof DD) return `unreadable (${typeof DD})`;
-        const ID = DD,
-          pD = "number" === typeof ID.at ? ID.at : null;
-        return ["browser " + (CD ? "this one" : "another"), null === pD ? "no time" : `set ${((cD-pD)/oD.k).toFixed(1)} h ago`, `losses ${"number"===typeof ID.losses?ID.losses:"unset (1)"}${null!==pD&&cD-pD<oD.i?", the last within a day":""}`, `hidden-only ${"number"===typeof ID.hiddenLosses?ID.hiddenLosses:"no"}`, `first page ${"hidden"===ID.firstPage||"visible"===ID.firstPage?ID.firstPage:"unset (visible)"}`].join(", ")
-      }(DD, function(DD) {
+    function XU(UU) {
+      return function(UU, RU, gU) {
+        if (null === UU || void 0 === UU) return "none";
+        if ("object" !== typeof UU) return `unreadable (${typeof UU})`;
+        const tU = UU,
+          pU = "number" === typeof tU.at ? tU.at : null;
+        return ["browser " + (RU ? "this one" : "another"), null === pU ? "no time" : `set ${((gU-pU)/QU.i).toFixed(1)} h ago`, `losses ${"number"===typeof tU.losses?tU.losses:"unset (1)"}${null!==pU&&gU-pU<QU.f?", the last within a day":""}`, `hidden-only ${"number"===typeof tU.hiddenLosses?tU.hiddenLosses:"no"}`, `first page ${"hidden"===tU.firstPage||"visible"===tU.firstPage?tU.firstPage:"unset (visible)"}`].join(", ")
+      }(UU, function(UU) {
         try {
-          return "object" === typeof DD && null !== DD && DD.browser === (0, tD.e)()
+          return "object" === typeof UU && null !== UU && UU.browser === (0, CU.b)()
         } catch {
           return !1
         }
-      }(DD), Date.now())
+      }(UU), Date.now())
     }
 
-    function lD() {
-      const DD = (0, tD.m)().now;
-      return "number" === typeof(null === DD || void 0 === DD ? void 0 : DD.losses) ? DD.losses : null
+    function vU() {
+      const UU = (0, CU.k)().now;
+      return "number" === typeof(null === UU || void 0 === UU ? void 0 : UU.losses) ? UU.losses : null
     }
 
-    function LD() {
+    function dU() {
       const {
-        atLoad: DD,
-        now: CD,
-        unreported: cD
-      } = (0, tD.m)(), ID = JSON.stringify(DD) === JSON.stringify(CD) ? "uM" : `now ${jD(CD)}`;
-      VD(`load (${bD.q?"wasm":"js"}, os ${(0,wD.getOperatingSystem)()}): stored loss ${jD(DD)}; ${ID}; unreported ${function(DD){if(null===DD||void 0===DD||"object"!==typeof DD)return"none";const{hidden:CD,visible:cD}=DD;return`
+        atLoad: UU,
+        now: RU,
+        unreported: gU
+      } = (0, CU.k)(), tU = JSON.stringify(UU) === JSON.stringify(RU) ? "xu" : `now ${XU(RU)}`;
+      VU(`load (${TU.u?"wasm":"js"}, os ${(0,KU.getOperatingSystem)()}): stored loss ${XU(UU)}; ${tU}; unreported ${function(UU){if(null===UU||void 0===UU||"object"!==typeof UU)return"none";const{hidden:RU,visible:gU}=UU;return`
         hidden $ {
-          "number" === typeof CD ? CD : 0
+          "number" === typeof RU ? RU : 0
         }, visible $ {
-          "number" === typeof cD ? cD : 0
+          "number" === typeof gU ? gU : 0
         }
-        `}(cD)}; webgpu_loss_page ${tD.u}`), VD(`load: ${nD(zD())}; pack expected ${(0,fD.g)(wD.featureFlags.settings.canUseShaderPacks)?"yes":"no"}; WebGPU API ${"gpu"in navigator?"yes":"no"}`)
+        `}(gU)}; webgpu_loss_page ${CU.u}`), VU(`load: ${IU(rU())}; pack expected ${(0,PU.f)(KU.featureFlags.settings.canUseShaderPacks)?"yes":"no"}; WebGPU API ${"gpu"in navigator?"yes":"no"}`)
     }
 
-    function TD(DD) {
-      JD = DD, VD(function(DD, CD, cD) {
-        const ID = DD.setting ? "the setting is on" : (0, vD.e)(DD.packActive, DD.defaultOffForPacks) ? "the pack forces it" : DD.packActive ? "the pack can't force it: default off for packs" : "no active pack, setting off";
-        return `engine (js): useWebGpu ${mD(DD.useWebGpu)} (${ID}); ${OD(CD)}; webgpu fallback ${null!==cD&&void 0!==cD?cD:"unset"}`
-      }(DD, (0, iD.j)(), (0, wD.getWebGpuFallbackReason)()))
+    function HU(UU) {
+      aU = UU, VU(function(UU, RU, gU) {
+        const tU = UU.setting ? "the setting is on" : (0, eU.c)(UU.packActive, UU.defaultOffForPacks) ? "the pack forces it" : UU.packActive ? "the pack can't force it: default off for packs" : "no active pack, setting off";
+        return `engine (js): useWebGpu ${mU(UU.useWebGpu)} (${tU}); ${JU(RU)}; webgpu fallback ${null!==gU&&void 0!==gU?gU:"unset"}`
+      }(UU, (0, EU.l)(), (0, KU.getWebGpuFallbackReason)()))
     }
 
-    function GD(DD) {
-      KD = DD, VD(HD(DD))
+    function SU(UU) {
+      YU = UU, VU(nU(UU))
     }
-    async function RD(DD, CD, ID, pD) {
-      const iD = ++aD,
-        fD = await async function(DD) {
-          var CD, ID;
+    async function sU(UU, RU, tU, pU) {
+      const EU = ++BU,
+        PU = await async function(UU) {
+          var RU, tU;
           const [{
-            shaderPackPage: pD,
-            harnessShaderPackMode: iD
+            shaderPackPage: pU,
+            harnessShaderPackMode: EU
           }, {
-            getShaderPackPolicy: fD
+            getShaderPackPolicy: PU
           }, {
-            packRunsIn: bD
-          }] = await Promise.all([cD.e(129).then((() => cD(38527))), cD.e(89).then((() => cD(40329))), cD.e(133).then((() => cD(40338)))]), QD = await pD.load();
-          if ("none" === QD.status) return null;
-          const wD = null !== (CD = iD()) && void 0 !== CD ? CD : fD(DD),
-            SD = "active" === QD.status ? QD.pack.variants : QD.variants,
-            BD = bD(SD, wD);
+            packRunsIn: TU
+          }] = await Promise.all([gU.e(129).then((() => gU(38747))), gU.e(89).then((() => gU(40658))), gU.e(133).then((() => gU(40664)))]), qU = await pU.load();
+          if ("none" === qU.status) return null;
+          const KU = null !== (RU = EU()) && void 0 !== RU ? RU : PU(UU),
+            cU = "active" === qU.status ? qU.pack.variants : qU.variants,
+            GU = TU(cU, KU);
           return {
-            text: `${"active"===QD.status?UD(QD.pack.name,"active",SD.length):UD(null,`blocked (${QD.messageKey})`,null!==(ID=null===SD||void 0===SD?void 0:SD.length)&&void 0!==ID?ID:null)}; game policy ${wD}, runs in it ${BD?"yes":"no"}`,
-            runs: BD
+            text: `${"active"===qU.status?bU(qU.pack.name,"active",cU.length):bU(null,`blocked (${qU.messageKey})`,null!==(tU=null===cU||void 0===cU?void 0:cU.length)&&void 0!==tU?tU:null)}; game policy ${KU}, runs in it ${GU?"yes":"no"}`,
+            runs: GU
           }
-        }(DD);
-      if (null === fD) return void(qD.noPack() && VD(`join ${iD}: no shader pack on this page (further joins without one not logged)`));
-      const bD = qD.join();
-      if ("none" === bD) return;
-      if ("cap" === bD) return void VD(`join ${iD}: further joins not logged`);
-      const QD = function(DD) {
-          switch (DD.status) {
+        }(UU);
+      if (null === PU) return void(ZU.noPack() && VU(`join ${EU}: no shader pack on this page (further joins without one not logged)`));
+      const TU = ZU.join();
+      if ("none" === TU) return;
+      if ("cap" === TU) return void VU(`join ${EU}: further joins not logged`);
+      const qU = function(UU) {
+          switch (UU.status) {
             case "ok":
-              return void 0 === DD.couldntRun ? "joined" : `joined without the pack: ${DD.couldntRun}`;
-            case "tc":
-              return "tc";
+              return void 0 === UU.couldntRun ? "joined" : `joined without the pack: ${UU.couldntRun}`;
+            case "cg":
+              return "cg";
             case "failed":
-              return `failed: ${DD.messageKey}`
+              return `failed: ${UU.messageKey}`
           }
-        }(CD),
-        wD = ("ok" === CD.status ? CD.couldntRun : "failed" === CD.status ? CD.messageKey : void 0) === xD ? `; cause: ${pD()}` : "";
-      "outcome" !== bD ? (VD(`join ${iD}: ${fD.text}`), fD.runs && (VD(`join ${iD}: needs WebGPU; ${ID()}`), VD(`join ${iD}: ${nD(zD())}`)), VD(`join ${iD}: ${QD}${wD}`)) : VD(`join ${iD}: ${QD}${wD}`)
+        }(RU),
+        KU = ("ok" === RU.status ? RU.couldntRun : "failed" === RU.status ? RU.messageKey : void 0) === oU ? `; cause: ${pU()}` : "";
+      "outcome" !== TU ? (VU(`join ${EU}: ${PU.text}`), PU.runs && (VU(`join ${EU}: needs WebGPU; ${tU()}`), VU(`join ${EU}: ${IU(rU())}`)), VU(`join ${EU}: ${qU}${KU}`)) : VU(`join ${EU}: ${qU}${KU}`)
     }
 
-    function kD(DD, CD, cD) {
-      var ID;
-      const pD = null !== (ID = null === CD || void 0 === CD ? void 0 : CD.isRunning()) && void 0 !== ID && ID;
-      return RD(DD, cD, (() => `Lite runtime ${null===CD?"no":"yes, running "+(pD?"yes":"no")}; ${OD((0,iD.j)())}`), (() => {
-        return DD = JD, CD = zD(), cD = "ios" === (0, wD.getOperatingSystem)(), ID = lD(), null === DD ? "engine choice not seen" : DD.packActive ? (0, vD.e)(DD.packActive, DD.defaultOffForPacks) ? "the pack forced WebGPU, yet nothing asked for a renderer: unexpected" : CD.lossStopsPack ? `a loss ${PD(cD,ID)}` : "old Intel driver verdict, worded off as a loss is stored" : "no active pack when the engine was built, so nothing forced WebGPU; worded off as a loss is stored" + (CD.lossStopsPack ? "" : " (one that doesn't stop packs)");
-        var DD, CD, cD, ID
+    function yU(UU, RU, gU) {
+      var tU;
+      const pU = null !== (tU = null === RU || void 0 === RU ? void 0 : RU.isRunning()) && void 0 !== tU && tU;
+      return sU(UU, gU, (() => `Lite runtime ${null===RU?"no":"yes, running "+(pU?"yes":"no")}; ${JU((0,EU.l)())}`), (() => {
+        return UU = aU, RU = rU(), gU = "ios" === (0, KU.getOperatingSystem)(), tU = vU(), null === UU ? "engine choice not seen" : UU.packActive ? (0, eU.c)(UU.packActive, UU.defaultOffForPacks) ? "the pack forced WebGPU, yet nothing asked for a renderer: unexpected" : RU.lossStopsPack ? `a loss ${wU(gU,tU)}` : "old Intel driver verdict, worded off as a loss is stored" : "no active pack when the engine was built, so nothing forced WebGPU; worded off as a loss is stored" + (RU.lossStopsPack ? "" : " (one that doesn't stop packs)");
+        var UU, RU, gU, tU
       }))
     }
 
-    function dD(DD, CD, cD) {
-      return RD(DD, null !== CD ? {
+    function kU(UU, RU, gU) {
+      return sU(UU, null !== RU ? {
         status: "failed",
-        messageKey: CD
+        messageKey: RU
       } : {
         status: "ok",
-        couldntRun: null !== cD && void 0 !== cD ? cD : void 0
-      }, (() => null === KD ? "pick not seen" : HD(KD)), (() => function(DD, CD, cD, ID) {
-        var pD, iD, fD, bD;
-        return null === DD ? "pick not seen" : "off_after_loss" === DD.reason ? `off after a loss, ${"pack"===DD.source?PD(cD,ID):`from ${null!==(bD=DD.source)&&void 0!==bD?bD:"none"}`}` : "not_requested" === DD.reason ? `not requested, from ${null!==(fD=DD.source)&&void 0!==fD?fD:"none"} (setting ${CD.setting?"on":"off"})` : `${null!==(pD=DD.reason)&&void 0!==pD?pD:"none"}, from ${null!==(iD=DD.source)&&void 0!==iD?iD:"none"}`
-      }(KD, zD(), "ios" === (0, wD.getOperatingSystem)(), lD())))
+        couldntRun: null !== gU && void 0 !== gU ? gU : void 0
+      }, (() => null === YU ? "pick not seen" : nU(YU)), (() => function(UU, RU, gU, tU) {
+        var pU, EU, PU, TU;
+        return null === UU ? "pick not seen" : "off_after_loss" === UU.reason ? `off after a loss, ${"pack"===UU.source?wU(gU,tU):`from ${null!==(TU=UU.source)&&void 0!==TU?TU:"none"}`}` : "not_requested" === UU.reason ? `not requested, from ${null!==(PU=UU.source)&&void 0!==PU?PU:"none"} (setting ${RU.setting?"on":"off"})` : `${null!==(pU=UU.reason)&&void 0!==pU?pU:"none"}, from ${null!==(EU=UU.source)&&void 0!==EU?EU:"none"}`
+      }(YU, rU(), "ios" === (0, KU.getOperatingSystem)(), vU())))
     }
 
-    function YD(DD, CD, cD) {
-      const ID = qD.loss();
-      if ("none" === ID) return;
-      if ("cap" === ID) return void VD("further losses not logged");
-      const pD = zD();
-      VD(function(DD, CD, cD, ID) {
-        return `loss (${DD}): ${CD}${null===cD?"":` ${XD(cD,gD)}`}; ${ID}`
-      }(DD, CD, cD, `stored ${jD((0,tD.m)().now)}; holds ${pD.lossHolds?"yes":"no"}, stops packs ${pD.lossStopsPack?"yes":"no"}`))
+    function FU(UU, RU, gU) {
+      const tU = ZU.loss();
+      if ("none" === tU) return;
+      if ("cap" === tU) return void VU("further losses not logged");
+      const pU = rU();
+      VU(function(UU, RU, gU, tU) {
+        return `loss (${UU}): ${RU}${null===gU?"":` ${xU(gU,fU)}`}; ${tU}`
+      }(UU, RU, gU, `stored ${XU((0,CU.k)().now)}; holds ${pU.lossHolds?"yes":"no"}, stops packs ${pU.lossStopsPack?"yes":"no"}`))
     }
   },
-  8950: (DD, CD, cD) => {
-    function ID(DD, CD) {
-      return DD && !CD
+  8902: (UU, RU, gU) => {
+    function tU(UU, RU) {
+      return UU && !RU
     }
-    cD.d(CD, {
-      e: () => ID
+    gU.d(RU, {
+      c: () => tU
     })
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

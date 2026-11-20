@@ -1,36 +1,36 @@
 export const id = 198;
 export const ids = [198];
 export const modules = {
-  39608: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      FORMER_BLOCK_IMAGE_NAMES: () => ID.b,
-      textureAnimationData: () => pD.u,
-      textureNameToIndex: () => pD.y
+  39871: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      FORMER_BLOCK_IMAGE_NAMES: () => tU.d,
+      textureAnimationData: () => pU.r,
+      textureNameToIndex: () => pU.v
     });
-    var ID = cD(38101),
-      pD = cD(9141)
+    var tU = gU(38278),
+      pU = gU(9078)
   },
-  9237: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => pD,
-      g: () => iD
+  9155: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => pU,
+      f: () => EU
     });
-    var ID = cD(9189);
-    const pD = "Air",
-      iD = Object.freeze(new ID.d(pD, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var tU = gU(9121);
+    const pU = "Air",
+      EU = Object.freeze(new tU.h(pU, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  38101: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => ID,
-      d: () => pD
+  38278: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => tU,
+      g: () => pU
     });
-    const ID = new Map(["graphite", "football", "torch", "torch_blue", "torch_cyan", "torch_green", "torch_orange", "torch_purple", "torch_red"].map((DD => [DD, `${DD}_block`])));
+    const tU = new Map(["graphite", "football", "torch", "torch_blue", "torch_cyan", "torch_green", "torch_orange", "torch_purple", "torch_red"].map((UU => [UU, `${UU}_block`])));
 
-    function pD(DD) {
-      var CD;
-      return null !== (CD = ID.get(DD)) && void 0 !== CD ? CD : DD
+    function pU(UU) {
+      var RU;
+      return null !== (RU = tU.get(UU)) && void 0 !== RU ? RU : UU
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

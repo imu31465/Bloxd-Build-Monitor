@@ -1,255 +1,255 @@
 export const id = 104;
 export const ids = [104];
 export const modules = {
-  35782: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => QD
+  35955: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => qU
     });
-    var ID = cD(1049),
-      pD = cD.n(ID),
-      iD = cD(53),
-      fD = cD(4374),
-      bD = cD(1093);
+    var tU = gU(1037),
+      pU = gU.n(tU),
+      EU = gU(56),
+      PU = gU(4237),
+      TU = gU(1090);
 
-    function QD(DD) {
+    function qU(UU) {
       let {
-        locked: CD,
-        children: cD
-      } = DD;
-      const ID = (0, iD.useRef)(null),
-        QD = (0, fD.b)(ID, "y");
-      return (0, bD.jsx)("div", {
-        ref: ID,
-        className: pD()("CreateCustomLobbyBody", {
-          CreateCustomLobbyBodyMoreAbove: QD.before,
-          CreateCustomLobbyBodyMoreBelow: QD.after
+        locked: RU,
+        children: gU
+      } = UU;
+      const tU = (0, EU.useRef)(null),
+        qU = (0, PU.e)(tU, "y");
+      return (0, TU.jsx)("div", {
+        ref: tU,
+        className: pU()("CreateCustomLobbyBody", {
+          CreateCustomLobbyBodyMoreAbove: qU.before,
+          CreateCustomLobbyBodyMoreBelow: qU.after
         }),
-        "data-pad-ignore": CD || void 0,
-        children: cD
+        "data-pad-ignore": RU || void 0,
+        children: gU
       })
     }
   },
-  35858: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      showFirstWorldSetupPopup: () => ZD
+  36012: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      showFirstWorldSetupPopup: () => hU
     });
-    cD(4720), cD(35762);
-    var ID = cD(4431),
-      pD = cD(53),
-      iD = cD(4388),
-      fD = cD(1192),
-      bD = cD(1340),
-      QD = cD(35782),
-      wD = cD(4727),
-      SD = cD(1442),
-      BD = cD(3306),
-      yD = cD(35775),
-      MD = cD(4416),
-      tD = cD(1093);
+    gU(4604), gU(35938);
+    var tU = gU(4293),
+      pU = gU(56),
+      EU = gU(4248),
+      PU = gU(1181),
+      TU = gU(1333),
+      qU = gU(35955),
+      KU = gU(4608),
+      cU = gU(1412),
+      GU = gU(3182),
+      jU = gU(35949),
+      uU = gU(4282),
+      CU = gU(1090);
 
-    function ZD(DD) {
-      const CD = {
+    function hU(UU) {
+      const RU = {
         requested: !1,
         closed: !1
       };
-      bD.NotificationProvider.showCustomPopup({
-        body: cD => (0, tD.jsx)(oD, {
-          flow: CD,
-          close: cD,
-          ...DD
+      TU.NotificationProvider.showCustomPopup({
+        body: gU => (0, CU.jsx)(QU, {
+          flow: RU,
+          close: gU,
+          ...UU
         }),
         middleScreenPopupClassName: "CreateCustomLobbyPopup",
         onClose: () => {
-          CD.closed = !0, CD.requested || (0, MD.g)()
+          RU.closed = !0, RU.requested || (0, uU.c)()
         }
       })
     }
 
-    function oD(DD) {
+    function QU(UU) {
       let {
-        flow: CD,
-        close: cD,
-        onCreating: bD,
-        onCreated: ZD,
-        onFailedClosed: oD,
-        join: vD
-      } = DD;
+        flow: RU,
+        close: gU,
+        onCreating: TU,
+        onCreated: hU,
+        onFailedClosed: QU,
+        join: eU
+      } = UU;
       const {
-        t: ND
-      } = (0, fD.F)(), [gD, XD] = (0, pD.useState)(ID.r), [mD, nD] = (0, pD.useState)(!1), [OD, PD] = (0, pD.useState)(""), HD = (0, BD.d)();
-      (0, pD.useEffect)((() => {
-        (0, MD.n)()
+        t: WU
+      } = (0, PU.B)(), [fU, xU] = (0, pU.useState)(tU.t), [mU, IU] = (0, pU.useState)(!1), [JU, wU] = (0, pU.useState)(""), nU = (0, GU.b)();
+      (0, pU.useEffect)((() => {
+        (0, uU.i)()
       }), []);
-      const UD = DD => ({
-        isEnabled: () => gD.plugins[DD],
-        lH: CD => {
-          (0, MD.h)({
-            plugin: DD,
-            enabled: CD
-          }), XD({
-            ...gD,
+      const bU = UU => ({
+        isEnabled: () => fU.plugins[UU],
+        GJ: RU => {
+          (0, uU.d)({
+            plugin: UU,
+            enabled: RU
+          }), xU({
+            ...fU,
             plugins: {
-              ...gD.plugins,
-              [DD]: CD
+              ...fU.plugins,
+              [UU]: RU
             }
           })
         }
       });
-      return (0, tD.jsxs)("div", {
+      return (0, CU.jsxs)("div", {
         className: "CreateCustomLobby",
-        children: [(0, tD.jsx)("div", {
+        children: [(0, CU.jsx)("div", {
           className: "CreateCustomLobbyTitleContainer",
-          children: (0, tD.jsx)("div", {
+          children: (0, CU.jsx)("div", {
             className: "CreateCustomLobbyTitle",
-            children: ND("homePage:myWorld")
+            children: WU("homePage:myWorld")
           })
-        }), (0, tD.jsx)(QD.c, {
-          locked: mD,
-          children: (0, tD.jsxs)("div", {
+        }), (0, CU.jsx)(qU.d, {
+          locked: mU,
+          children: (0, CU.jsxs)("div", {
             className: "CreateCustomLobbyFields",
-            children: [(0, tD.jsx)(yD.d, {
-              value: gD.defaultGamemode,
-              onChange: DD => {
-                (0, ID.u)(DD) && DD !== gD.defaultGamemode && ((0, MD.h)({
-                  defaultGamemode: DD
-                }), XD({
-                  ...gD,
-                  defaultGamemode: DD
+            children: [(0, CU.jsx)(jU.d, {
+              value: fU.defaultGamemode,
+              onChange: UU => {
+                (0, tU.u)(UU) && UU !== fU.defaultGamemode && ((0, uU.d)({
+                  defaultGamemode: UU
+                }), xU({
+                  ...fU,
+                  defaultGamemode: UU
                 }))
               },
               showAll: !1,
-              disabled: mD
-            }), (0, tD.jsx)(yD.f, {
-              mapTypes: ID.i,
-              value: gD.mapType,
-              onChange: DD => {
-                (0, ID.w)(DD) && DD !== gD.mapType && ((0, MD.h)({
-                  mapType: DD
-                }), XD({
-                  ...gD,
-                  mapType: DD
+              disabled: mU
+            }), (0, CU.jsx)(jU.e, {
+              mapTypes: tU.f,
+              value: fU.mapType,
+              onChange: UU => {
+                (0, tU.w)(UU) && UU !== fU.mapType && ((0, uU.d)({
+                  mapType: UU
+                }), xU({
+                  ...fU,
+                  mapType: UU
                 }))
               },
               showAll: !1,
-              disabled: mD
-            }), (0, tD.jsx)(wD.e, {
+              disabled: mU
+            }), (0, CU.jsx)(KU.c, {
               callbacks: {
-                dayNight: UD("dayNight"),
-                fallDamage: UD("fallDamage"),
-                survivalGuns: UD("survivalGuns")
+                dayNight: bU("dayNight"),
+                fallDamage: bU("fallDamage"),
+                survivalGuns: bU("survivalGuns")
               },
-              disabled: mD,
+              disabled: mU,
               advancedMode: !1
             })]
           })
-        }), (0, tD.jsxs)("div", {
+        }), (0, CU.jsxs)("div", {
           className: "CreateCustomLobbyFooter",
-          children: [(0, tD.jsx)(SD.o, {
+          children: [(0, CU.jsx)(cU.j, {
             className: "CreateCustomLobbyButton",
             padDefaultFocus: !0,
-            loading: mD,
+            loading: mU,
             onClick: () => {
-              CD.requested = !0, nD(!0), bD(!0), PD(""), (0, MD.k)(gD), iD.b.createPersonalWorld(gD).then((DD => {
-                bD(!1);
-                const ID = ZD(DD);
-                !CD.closed && HD.current ? (cD(), vD(DD)) : ID || (0, MD.g)()
-              }), (DD => {
-                if (console.error("Failed to create personal world:", DD), bD(!1), CD.requested = !1, CD.closed || !HD.current) return (0, MD.g)(), void oD(DD);
-                PD(DD.message), nD(!1)
+              RU.requested = !0, IU(!0), TU(!0), wU(""), (0, uU.g)(fU), EU.e.createPersonalWorld(fU).then((UU => {
+                TU(!1);
+                const tU = hU(UU);
+                !RU.closed && nU.current ? (gU(), eU(UU)) : tU || (0, uU.c)()
+              }), (UU => {
+                if (console.error("Failed to create personal world:", UU), TU(!1), RU.requested = !1, RU.closed || !nU.current) return (0, uU.c)(), void QU(UU);
+                wU(UU.message), IU(!1)
               }))
             },
-            children: ND("general:play")
-          }), OD && (0, tD.jsx)("div", {
+            children: WU("general:play")
+          }), JU && (0, CU.jsx)("div", {
             className: "CreateCustomLobbyError AnimFadeInScaleUp",
-            children: OD
+            children: JU
           })]
         })]
       })
     }
   },
-  4727: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => wD
+  4608: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => KU
     });
-    var ID = cD(1049),
-      pD = cD.n(ID),
-      iD = cD(4431),
-      fD = cD(1192),
-      bD = cD(1093);
-    const QD = [...iD.j, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
+    var tU = gU(1037),
+      pU = gU.n(tU),
+      EU = gU(4293),
+      PU = gU(1181),
+      TU = gU(1090);
+    const qU = [...EU.i, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
 
-    function wD(DD) {
+    function KU(UU) {
       const {
-        disabled: CD,
-        hideWrapper: cD
-      } = DD, {
-        t: ID
-      } = (0, fD.F)(), wD = DD.advancedMode ? QD.map((CD => [CD, DD.callbacks[CD]])) : iD.j.map((CD => [CD, DD.callbacks[CD]])), BD = (0, bD.jsx)("div", {
-        className: pD()("PluginsGrid", {
-          SectionBody: !cD
+        disabled: RU,
+        hideWrapper: gU
+      } = UU, {
+        t: tU
+      } = (0, PU.B)(), KU = UU.advancedMode ? qU.map((RU => [RU, UU.callbacks[RU]])) : EU.i.map((RU => [RU, UU.callbacks[RU]])), GU = (0, TU.jsx)("div", {
+        className: pU()("PluginsGrid", {
+          SectionBody: !gU
         }),
-        children: wD.map((DD => {
-          let [cD, ID] = DD;
-          return (0, bD.jsx)(SD, {
-            plugin: cD,
-            callbacks: ID,
-            disabled: CD
-          }, cD)
+        children: KU.map((UU => {
+          let [gU, tU] = UU;
+          return (0, TU.jsx)(cU, {
+            plugin: gU,
+            callbacks: tU,
+            disabled: RU
+          }, gU)
         }))
       });
-      return cD ? BD : (0, bD.jsxs)("div", {
+      return gU ? GU : (0, TU.jsxs)("div", {
         className: "BloxdForm",
-        children: [(0, bD.jsx)("div", {
+        children: [(0, TU.jsx)("div", {
           className: "SectionTitle",
-          children: ID("worldBuilder:pluginsSection")
-        }), BD]
+          children: tU("worldBuilder:pluginsSection")
+        }), GU]
       })
     }
 
-    function SD(DD) {
+    function cU(UU) {
       let {
-        plugin: CD,
+        plugin: RU,
         callbacks: {
-          isEnabled: cD,
-          lH: ID
+          isEnabled: gU,
+          GJ: tU
         },
-        disabled: iD
-      } = DD;
+        disabled: EU
+      } = UU;
       const {
-        t: QD
-      } = (0, fD.F)(), wD = cD();
-      return (0, bD.jsxs)("div", {
-        className: pD()("PluginCard", {
-          PluginCardEnabled: wD,
-          PluginCardDisabledForm: iD
+        t: qU
+      } = (0, PU.B)(), KU = gU();
+      return (0, TU.jsxs)("div", {
+        className: pU()("PluginCard", {
+          PluginCardEnabled: KU,
+          PluginCardDisabledForm: EU
         }),
         "data-pad-focusable": !0,
-        "aria-disabled": iD || void 0,
+        "aria-disabled": EU || void 0,
         onClick: () => {
-          iD || ID(!wD)
+          EU || tU(!KU)
         },
-        children: [(0, bD.jsx)("div", {
+        children: [(0, TU.jsx)("div", {
           className: "PluginCardIcon",
-          children: (0, bD.jsx)("img", {
-            src: `/textures/games/classic/customGames/${CD}.png`,
-            alt: CD
+          children: (0, TU.jsx)("img", {
+            src: `/textures/games/classic/customGames/${RU}.png`,
+            alt: RU
           })
-        }), (0, bD.jsxs)("div", {
+        }), (0, TU.jsxs)("div", {
           className: "PluginCardBody",
-          children: [(0, bD.jsx)("div", {
+          children: [(0, TU.jsx)("div", {
             className: "PluginCardTitle",
-            children: QD(BD[CD])
-          }), (0, bD.jsx)("div", {
+            children: qU(GU[RU])
+          }), (0, TU.jsx)("div", {
             className: "PluginCardDescription",
-            children: QD(yD[CD])
+            children: qU(jU[RU])
           })]
-        }), (0, bD.jsx)("span", {
+        }), (0, TU.jsx)("span", {
           className: "PluginCardToggleLabel",
-          children: QD(wD ? "general:on" : "general:off")
+          children: qU(KU ? "general:on" : "general:off")
         })]
       })
     }
-    const BD = {
+    const GU = {
         fallDamage: "classic:enableFallDamage",
         tpRequests: "classic:enableTpRequests",
         spawnProtection: "classic:enableSpawnProtection",
@@ -258,7 +258,7 @@ export const modules = {
         survivalGuns: "classic:enableSurvivalGuns",
         dayNight: "classic:enableDayNight"
       },
-      yD = {
+      jU = {
         fallDamage: "classic:enableFallDamageDescription",
         tpRequests: "classic:enableTpRequestsDescription",
         spawnProtection: "classic:enableSpawnProtectionDescription",
@@ -268,97 +268,97 @@ export const modules = {
         dayNight: "classic:enableDayNightDescription"
       }
   },
-  35775: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => wD,
-      f: () => SD
+  35949: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => KU,
+      e: () => cU
     });
-    cD(53);
-    var ID = cD(1049),
-      pD = cD.n(ID),
-      iD = cD(4431),
-      fD = cD(312),
-      bD = cD(1192),
-      QD = cD(1093);
+    gU(56);
+    var tU = gU(1037),
+      pU = gU.n(tU),
+      EU = gU(4293),
+      PU = gU(299),
+      TU = gU(1181),
+      qU = gU(1090);
 
-    function wD(DD) {
+    function KU(UU) {
       let {
-        value: CD,
-        onChange: cD,
-        showAll: ID,
-        disabled: wD = !1
-      } = DD;
+        value: RU,
+        onChange: gU,
+        showAll: tU,
+        disabled: KU = !1
+      } = UU;
       const {
-        t: SD
-      } = (0, bD.F)();
-      return (0, QD.jsxs)("div", {
-        className: pD()("BloxdForm GamemodeForm", {
-          BasicOptions: !ID
+        t: cU
+      } = (0, TU.B)();
+      return (0, qU.jsxs)("div", {
+        className: pU()("BloxdForm GamemodeForm", {
+          BasicOptions: !tU
         }),
-        children: [(0, QD.jsx)("div", {
+        children: [(0, qU.jsx)("div", {
           className: "SectionTitle",
-          children: SD("classic:defaultGamemode")
-        }), (0, QD.jsx)("div", {
+          children: cU("classic:defaultGamemode")
+        }), (0, qU.jsx)("div", {
           className: "SectionBody",
-          children: iD.C.map((DD => ID || (0, iD.u)(DD) ? (0, QD.jsx)("button", {
+          children: EU.C.map((UU => tU || (0, EU.u)(UU) ? (0, qU.jsx)("button", {
             type: "button",
-            className: pD()("WorldGamemode", {
-              Selected: CD === DD
+            className: pU()("WorldGamemode", {
+              Selected: RU === UU
             }),
-            disabled: wD,
+            disabled: KU,
             onClick: () => {
-              cD(DD)
+              gU(UU)
             },
             style: {
-              "--background-image": `url(${fD.u[DD]})`
+              "--background-image": `url(${PU.v[UU]})`
             },
-            children: fD.s[DD]
-          }, DD) : null))
+            children: PU.r[UU]
+          }, UU) : null))
         })]
       })
     }
 
-    function SD(DD) {
+    function cU(UU) {
       let {
-        mapTypes: CD,
-        value: cD,
-        onChange: ID,
-        showAll: wD,
-        disabled: SD = !1,
-        children: BD
-      } = DD;
+        mapTypes: RU,
+        value: gU,
+        onChange: tU,
+        showAll: KU,
+        disabled: cU = !1,
+        children: GU
+      } = UU;
       const {
-        t: yD
-      } = (0, bD.F)();
-      return (0, QD.jsxs)("div", {
-        className: pD()("BloxdForm MapTypeForm", {
-          BasicOptions: !wD
+        t: jU
+      } = (0, TU.B)();
+      return (0, qU.jsxs)("div", {
+        className: pU()("BloxdForm MapTypeForm", {
+          BasicOptions: !KU
         }),
-        children: [(0, QD.jsx)("div", {
+        children: [(0, qU.jsx)("div", {
           className: "SectionTitle",
-          children: yD("customLobby:mapType")
-        }), (0, QD.jsx)("div", {
+          children: jU("customLobby:mapType")
+        }), (0, qU.jsx)("div", {
           className: "SectionBody",
-          children: CD.map((DD => wD || (0, iD.w)(DD) ? (0, QD.jsx)("button", {
+          children: RU.map((UU => KU || (0, EU.w)(UU) ? (0, qU.jsx)("button", {
             type: "button",
-            className: pD()("MapType", {
-              Selected: cD === DD
+            className: pU()("MapType", {
+              Selected: gU === UU
             }),
-            disabled: SD,
+            disabled: cU,
             onClick: () => {
-              ID(DD)
+              tU(UU)
             },
             style: {
-              "--background-image": `url(${fD.p[DD]})`
+              "--background-image": `url(${PU.m[UU]})`
             },
-            children: fD.m[DD]
-          }, DD) : null))
-        }), BD]
+            children: PU.l[UU]
+          }, UU) : null))
+        }), GU]
       })
     }
   },
-  4720: () => {},
-  35762: () => {}
+  4604: () => {},
+  35938: () => {}
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

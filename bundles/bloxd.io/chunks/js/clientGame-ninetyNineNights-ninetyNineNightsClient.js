@@ -1,23 +1,23 @@
 export const id = 20;
 export const ids = [20];
 export const modules = {
-  38752: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      default: () => pD
+  38975: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      default: () => pU
     });
-    var ID = cD(20);
-    const pD = function(DD, CD, cD) {
-      let pD;
+    var tU = gU(24);
+    const pU = function(UU, RU, gU) {
+      let pU;
       return {
-        onCreate: DD => {
-          pD = DD
+        onCreate: UU => {
+          pU = UU
         },
-        onPlayerClick: (DD, CD, cD, iD, fD, bD) => {
-          CD || "Workbench" !== pD.getMetaInfo(bD).rootName || ID.i.Uo("toggleMenu", "inventory|Workbench")
+        onPlayerClick: (UU, RU, gU, EU, PU, TU) => {
+          RU || "Workbench" !== pU.getMetaInfo(TU).rootName || tU.p.yh("toggleMenu", "inventory|Workbench")
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

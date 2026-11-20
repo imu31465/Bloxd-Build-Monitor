@@ -1,62 +1,62 @@
 export const id = 190;
 export const ids = [49, 190];
 export const modules = {
-  38009: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => pD,
-      f: () => iD
+  38186: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => pU,
+      e: () => EU
     });
-    const ID = new WeakMap;
+    const tU = new WeakMap;
 
-    function pD(DD, CD) {
-      return ID.set(DD, CD), DD
+    function pU(UU, RU) {
+      return tU.set(UU, RU), UU
     }
 
-    function iD(DD) {
-      var CD;
-      return null !== (CD = ID.get(DD)) && void 0 !== CD ? CD : null
+    function EU(UU) {
+      var RU;
+      return null !== (RU = tU.get(UU)) && void 0 !== RU ? RU : null
     }
   },
-  37907: (DD, CD, cD) => {
-    function ID(DD, CD, cD) {
-      var ID;
+  38083: (UU, RU, gU) => {
+    function tU(UU, RU, gU) {
+      var tU;
       const {
-        width: pD,
-        height: iD
-      } = cD, fD = null !== (ID = DD.text) && void 0 !== ID ? ID : DD, bD = (fD.x / 100 - .5) * pD, QD = (fD.y / 100 - .5) * iD, wD = pD / 2 - CD.x;
-      if (null !== DD.text && Math.abs(bD) <= wD && QD >= CD.top - iD / 2 && QD <= iD / 2 - CD.bottom) return {
-        x: fD.x,
-        y: fD.y
+        width: pU,
+        height: EU
+      } = gU, PU = null !== (tU = UU.text) && void 0 !== tU ? tU : UU, TU = (PU.x / 100 - .5) * pU, qU = (PU.y / 100 - .5) * EU, KU = pU / 2 - RU.x;
+      if (null !== UU.text && Math.abs(TU) <= KU && qU >= RU.top - EU / 2 && qU <= EU / 2 - RU.bottom) return {
+        x: PU.x,
+        y: PU.y
       };
-      const SD = Math.min(0 === bD ? 1 / 0 : wD / Math.abs(bD), QD > 0 ? (iD / 2 - CD.bottom) / QD : QD < 0 ? (CD.top - iD / 2) / QD : 1 / 0);
-      return !Number.isFinite(SD) || SD < 0 ? {
+      const cU = Math.min(0 === TU ? 1 / 0 : KU / Math.abs(TU), qU > 0 ? (EU / 2 - RU.bottom) / qU : qU < 0 ? (RU.top - EU / 2) / qU : 1 / 0);
+      return !Number.isFinite(cU) || cU < 0 ? {
         x: 50,
         y: 50
       } : {
-        x: 50 + bD * SD / pD * 100,
-        y: 50 + QD * SD / iD * 100
+        x: 50 + TU * cU / pU * 100,
+        y: 50 + qU * cU / EU * 100
       }
     }
-    cD.d(CD, {
-      e: () => ID
+    gU.d(RU, {
+      e: () => tU
     })
   },
-  37919: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => fD
+  38092: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => PU
     });
-    const ID = 4,
-      pD = 12e3,
-      iD = 1e3;
-    class fD {
+    const tU = 4,
+      pU = 12e3,
+      EU = 1e3;
+    class PU {
       constructor() {
         let {
-          limit: DD = ID,
-          windowMs: CD = pD,
-          spacingMs: cD = iD,
-          now: fD = Date.now
+          limit: UU = tU,
+          windowMs: RU = pU,
+          spacingMs: gU = EU,
+          now: PU = Date.now
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = DD, this.windowMs = CD, this.spacingMs = cD, this.now = fD
+        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = UU, this.windowMs = RU, this.spacingMs = gU, this.now = PU
       }
       isPacing() {
         return !this.canSendPriority() || this.isPriorityWaiting()
@@ -65,61 +65,61 @@ export const modules = {
         return this.prune(), this.sent.length < this.limit && this.now() - this.lastSentAt >= this.spacingMs
       }
       tryStart() {
-        for (const DD of this.priority) DD.flush();
+        for (const UU of this.priority) UU.flush();
         return !this.isPacing() && (this.start(), !0)
       }
       start() {
         this.prune();
-        const DD = this.now();
-        this.sent.push(DD), this.lastSentAt = DD, this.schedule(), this.notify()
+        const UU = this.now();
+        this.sent.push(UU), this.lastSentAt = UU, this.schedule(), this.notify()
       }
-      addPriority(DD) {
-        return this.priority.add(DD), () => {
-          this.priority.delete(DD)
+      addPriority(UU) {
+        return this.priority.add(UU), () => {
+          this.priority.delete(UU)
         }
       }
-      subscribe(DD) {
-        return this.listeners.add(DD), () => {
-          this.listeners.delete(DD)
+      subscribe(UU) {
+        return this.listeners.add(UU), () => {
+          this.listeners.delete(UU)
         }
       }
       dispose() {
         this.clearTimer(), this.sent = [], this.listeners.clear(), this.priority.clear()
       }
       isPriorityWaiting() {
-        for (const DD of this.priority)
-          if (DD.waiting()) return !0;
+        for (const UU of this.priority)
+          if (UU.waiting()) return !0;
         return !1
       }
       prune() {
-        const DD = this.now() - this.windowMs;
-        for (; this.sent.length > 0 && this.sent[0] <= DD;) this.sent.shift()
+        const UU = this.now() - this.windowMs;
+        for (; this.sent.length > 0 && this.sent[0] <= UU;) this.sent.shift()
       }
       schedule() {
         this.clearTimer();
-        const DD = this.now(),
-          CD = this.lastSentAt + this.spacingMs,
-          cD = Math.min(CD > DD ? CD : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
-        cD !== 1 / 0 && (this.timer = setTimeout((() => {
+        const UU = this.now(),
+          RU = this.lastSentAt + this.spacingMs,
+          gU = Math.min(RU > UU ? RU : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
+        gU !== 1 / 0 && (this.timer = setTimeout((() => {
           this.timer = null, this.prune(), this.schedule(), this.notify()
-        }), Math.max(0, cD - DD)))
+        }), Math.max(0, gU - UU)))
       }
       notify() {
-        for (const DD of this.listeners) DD()
+        for (const UU of this.listeners) UU()
       }
       clearTimer() {
         null !== this.timer && (clearTimeout(this.timer), this.timer = null)
       }
     }
   },
-  37899: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => ID
+  38076: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => tU
     });
-    class ID {
-      constructor(DD, CD, cD) {
-        this.Uo = DD, this.beforeOpen = CD, this.afterClose = cD, this.open = !1, this.Lt = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
-          this.isEnabled() && !this.Lt && (this.open = !0, this.beforeOpen(this), this.emit())
+    class tU {
+      constructor(UU, RU, gU) {
+        this.yh = UU, this.beforeOpen = RU, this.afterClose = gU, this.open = !1, this.pC = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
+          this.isEnabled() && !this.pC && (this.open = !0, this.beforeOpen(this), this.emit())
         }, this.close = () => {
           this.closePanel(!1)
         }, this.dismiss = () => {
@@ -132,197 +132,197 @@ export const modules = {
       showOrRefresh() {
         this.open ? this.emit() : this.show()
       }
-      closePanel(DD) {
-        this.open = !1, this.onClosed(), this.emit(), this.afterClose(DD)
+      closePanel(UU) {
+        this.open = !1, this.onClosed(), this.emit(), this.afterClose(UU)
       }
       onClosed() {}
       dispose() {
-        this.open = !1, this.emit(), this.Lt = !0
+        this.open = !1, this.emit(), this.pC = !0
       }
       isEnabled() {
         return !0
       }
       emit() {
-        this.Lt || (this.snapshot = this.buildSnapshot(), this.Uo(this.snapshot))
+        this.pC || (this.snapshot = this.buildSnapshot(), this.yh(this.snapshot))
       }
     }
   },
-  38013: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      SkyblockEntityFacing: () => bD,
-      needsSkyblockEntityFacing: () => fD
+  38190: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      SkyblockEntityFacing: () => TU,
+      needsSkyblockEntityFacing: () => PU
     });
-    var ID = cD(618),
-      pD = cD(4081),
-      iD = cD(38017);
+    var tU = gU(572),
+      pU = gU(3937),
+      EU = gU(38198);
 
-    function fD(DD, CD) {
-      if (DD.metaInfo === ID.e || "Iron Guardian" === DD.type || "Gold Guardian" === DD.type) return !0;
-      if ("Pig" === DD.type) return "sitting" === DD.pose;
-      if ("Person" !== DD.meshKind || void 0 === DD.meshOpts) return !1;
-      let cD = null === CD || void 0 === CD ? void 0 : CD.get(DD.meshOpts);
-      if (void 0 === cD) {
-        var iD, fD;
-        const ID = (0, pD.d)(DD);
-        cD = !1, "pig_napoleon" === (null === ID || void 0 === ID || null === (iD = ID.opts.textures) || void 0 === iD ? void 0 : iD.head) ? cD = !0 : "npc_pig_head" === (null === ID || void 0 === ID || null === (fD = ID.opts.textures) || void 0 === fD ? void 0 : fD.head) && (cD = "sitting" === ID.opts.pose || "sitting"), CD && (CD.size >= 256 && CD.clear(), CD.set(DD.meshOpts, cD))
+    function PU(UU, RU) {
+      if (UU.metaInfo === tU.c || "Iron Guardian" === UU.type || "Gold Guardian" === UU.type) return !0;
+      if ("Pig" === UU.type) return "sitting" === UU.pose;
+      if ("Person" !== UU.meshKind || void 0 === UU.meshOpts) return !1;
+      let gU = null === RU || void 0 === RU ? void 0 : RU.get(UU.meshOpts);
+      if (void 0 === gU) {
+        var EU, PU;
+        const tU = (0, pU.j)(UU);
+        gU = !1, "pig_napoleon" === (null === tU || void 0 === tU || null === (EU = tU.opts.textures) || void 0 === EU ? void 0 : EU.head) ? gU = !0 : "npc_pig_head" === (null === tU || void 0 === tU || null === (PU = tU.opts.textures) || void 0 === PU ? void 0 : PU.head) && (gU = "sitting" === tU.opts.pose || "sitting"), RU && (RU.size >= 256 && RU.clear(), RU.set(UU.meshOpts, gU))
       }
-      return "sitting" === cD ? "sitting" === DD.pose : cD
-    }(0, iD.f)("skyblock", ((DD, CD) => {
-      CD.setFacingTolerance(fD(DD) ? 0 : null)
+      return "sitting" === gU ? "sitting" === UU.pose : gU
+    }(0, EU.d)("skyblock", ((UU, RU) => {
+      RU.setFacingTolerance(PU(UU) ? 0 : null)
     }));
-    class bD {
-      constructor(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        this.api = DD, this.alsoVisit = CD, this.facing = new Set, this.nextFacing = new Set, this.meshFacingCache = new Map, this.visit = DD => {
-          var CD;
-          const cD = this.api.getEntityInfo(DD);
-          cD && (fD(cD, this.meshFacingCache) && (this.api.setFacingTolerance(DD, 0), this.nextFacing.add(DD)), null === (CD = this.alsoVisit) || void 0 === CD || CD.call(this, DD, cD))
+    class TU {
+      constructor(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        this.api = UU, this.alsoVisit = RU, this.facing = new Set, this.nextFacing = new Set, this.meshFacingCache = new Map, this.visit = UU => {
+          var RU;
+          const gU = this.api.getEntityInfo(UU);
+          gU && (PU(gU, this.meshFacingCache) && (this.api.setFacingTolerance(UU, 0), this.nextFacing.add(UU)), null === (RU = this.alsoVisit) || void 0 === RU || RU.call(this, UU, gU))
         }
       }
-      wy() {
+      HG() {
         const {
-          api: DD
-        } = this, CD = this.nextFacing;
-        DD.forEachEntity(this.visit);
-        for (const cD of this.facing) CD.has(cD) || DD.setFacingTolerance(cD, null);
-        this.facing.clear(), this.nextFacing = this.facing, this.facing = CD
+          api: UU
+        } = this, RU = this.nextFacing;
+        UU.forEachEntity(this.visit);
+        for (const gU of this.facing) RU.has(gU) || UU.setFacingTolerance(gU, null);
+        this.facing.clear(), this.nextFacing = this.facing, this.facing = RU
       }
       dispose() {
-        for (const DD of this.facing) this.api.setFacingTolerance(DD, null);
+        for (const UU of this.facing) this.api.setFacingTolerance(UU, null);
         this.facing.clear(), this.meshFacingCache.clear()
       }
     }
   },
-  37894: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      default: () => BQ
+  38073: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      default: () => qq
     });
-    const ID = "island";
-    var pD = cD(326);
-    const iD = (0, pD.Ab)([0, 0, -1]),
-      fD = [{
+    const tU = "island";
+    var pU = gU(311);
+    const EU = (0, pU.Ib)([0, 0, -1]),
+      PU = [{
         name: "S",
-        bearing: (0, pD.Ab)([0, 0, 1])
+        bearing: (0, pU.Ib)([0, 0, 1])
       }, {
         name: "E",
-        bearing: (0, pD.Ab)([-1, 0, 0])
+        bearing: (0, pU.Ib)([-1, 0, 0])
       }, {
         name: "N",
-        bearing: iD
+        bearing: EU
       }, {
         name: "W",
-        bearing: (0, pD.Ab)([1, 0, 0])
+        bearing: (0, pU.Ib)([1, 0, 0])
       }];
 
-    function bD(DD, CD, cD) {
-      return [100 * (cD.mapMaxX - DD) / (cD.mapMaxX - cD.mapMinX), 100 * (CD - cD.mapMinZ) / (cD.mapMaxZ - cD.mapMinZ)]
+    function TU(UU, RU, gU) {
+      return [100 * (gU.mapMaxX - UU) / (gU.mapMaxX - gU.mapMinX), 100 * (RU - gU.mapMinZ) / (gU.mapMaxZ - gU.mapMinZ)]
     }
 
-    function QD(DD, CD, cD) {
-      const pD = "local" === CD,
-        iD = DD.background,
-        fD = CD => iD ? bD(CD[0] - DD.mapOrigin[0], CD[2] - DD.mapOrigin[2], iD.bounds) : [50, 50],
-        QD = (DD.insideDungeon ? [] : DD.landmarks).map((DD => {
-          var CD, ID;
+    function qU(UU, RU, gU) {
+      const pU = "local" === RU,
+        EU = UU.background,
+        PU = RU => EU ? TU(RU[0] - UU.mapOrigin[0], RU[2] - UU.mapOrigin[2], EU.bounds) : [50, 50],
+        qU = (UU.insideDungeon ? [] : UU.landmarks).map((UU => {
+          var RU, tU;
           return {
-            id: DD.id,
-            name: cD(DD.visited && DD.nameKey ? null !== (CD = DD.mapLabelKey) && void 0 !== CD ? CD : DD.nameKey : "skyblockGame:mapUnknown"),
-            icon: DD.visited && null !== (ID = DD.icon) && void 0 !== ID ? ID : "unknown",
-            visited: DD.visited,
+            id: UU.id,
+            name: gU(UU.visited && UU.nameKey ? null !== (RU = UU.mapLabelKey) && void 0 !== RU ? RU : UU.nameKey : "skyblockGame:mapUnknown"),
+            icon: UU.visited && null !== (tU = UU.icon) && void 0 !== tU ? tU : "unknown",
+            visited: UU.visited,
             current: !1,
-            position: fD(DD.position),
+            position: PU(UU.position),
             travelKind: "landmark",
-            travelId: DD.id
+            travelId: UU.id
           }
         })),
-        SD = DD.zones.map((CD => {
-          var ID;
+        cU = UU.zones.map((RU => {
+          var tU;
           return {
-            id: CD.id,
-            name: cD(CD.visited && CD.nameKey ? CD.nameKey : "skyblockGame:mapUnknown"),
-            icon: CD.visited && null !== (ID = CD.icon) && void 0 !== ID ? ID : "unknown",
-            visited: CD.visited,
-            current: CD.id === DD.zoneId,
-            position: CD.position,
-            thumbnail: CD.visited ? CD.id : void 0,
+            id: RU.id,
+            name: gU(RU.visited && RU.nameKey ? RU.nameKey : "skyblockGame:mapUnknown"),
+            icon: RU.visited && null !== (tU = RU.icon) && void 0 !== tU ? tU : "unknown",
+            visited: RU.visited,
+            current: RU.id === UU.zoneId,
+            position: RU.position,
+            thumbnail: RU.visited ? RU.id : void 0,
             travelKind: "zone",
-            travelId: CD.id
+            travelId: RU.id
           }
         })),
-        BD = DD.insideDungeon || !iD ? [] : DD.portals.map((DD => {
-          var CD;
+        GU = UU.insideDungeon || !EU ? [] : UU.portals.map((UU => {
+          var RU;
           return {
-            id: DD.id,
-            name: cD(null !== (CD = DD.nameKey) && void 0 !== CD ? CD : "skyblockGame:mapUnknown"),
-            icon: DD.visited ? "dungeons" === DD.destination ? "portal_orange" : "portal" : "unknown",
-            visited: DD.visited,
+            id: UU.id,
+            name: gU(null !== (RU = UU.nameKey) && void 0 !== RU ? RU : "skyblockGame:mapUnknown"),
+            icon: UU.visited ? "dungeons" === UU.destination ? "portal_orange" : "portal" : "unknown",
+            visited: UU.visited,
             current: !1,
-            position: fD(DD.position),
-            colour: DD.colour,
+            position: PU(UU.position),
+            colour: UU.colour,
             travelKind: "zone",
-            travelId: DD.destination
+            travelId: UU.destination
           }
         })),
-        yD = pD ? QD : SD,
-        MD = yD.filter((DD => DD.visited)).length,
-        tD = iD ? (iD.bounds.mapMaxX - iD.bounds.mapMinX) / (iD.bounds.mapMaxZ - iD.bounds.mapMinZ) : 2,
-        ZD = iD ? JSON.stringify([iD.bounds, DD.mapOrigin]) : "";
+        jU = pU ? qU : cU,
+        uU = jU.filter((UU => UU.visited)).length,
+        CU = EU ? (EU.bounds.mapMaxX - EU.bounds.mapMinX) / (EU.bounds.mapMaxZ - EU.bounds.mapMinZ) : 2,
+        hU = EU ? JSON.stringify([EU.bounds, UU.mapOrigin]) : "";
       return {
-        local: pD,
-        points: yD,
-        portals: pD ? BD : [],
-        progress: yD.length ? cD("skyblockGame:mapDiscovered", {
-          current: String(MD),
-          total: String(yD.length)
+        local: pU,
+        points: jU,
+        portals: pU ? GU : [],
+        progress: jU.length ? gU("skyblockGame:mapDiscovered", {
+          current: String(uU),
+          total: String(jU.length)
         }) : null,
-        percent: yD.length ? 100 * MD / yD.length : 0,
-        canTravel: [...yD, ...pD ? BD : []].some((DD => DD.visited && !DD.current)),
-        noLandmarks: pD && !DD.insideDungeon && 0 === QD.length,
-        background: iD ? {
-          imageKey: iD.imageKey,
-          fallbackImageKey: DD.zoneId,
-          geometryKey: ZD,
-          label: cD(iD.labelKey),
-          colour: iD.backgroundColour,
-          ratio: tD
+        percent: jU.length ? 100 * uU / jU.length : 0,
+        canTravel: [...jU, ...pU ? GU : []].some((UU => UU.visited && !UU.current)),
+        noLandmarks: pU && !UU.insideDungeon && 0 === qU.length,
+        background: EU ? {
+          imageKey: EU.imageKey,
+          fallbackImageKey: UU.zoneId,
+          geometryKey: hU,
+          label: gU(EU.labelKey),
+          colour: EU.backgroundColour,
+          ratio: CU
         } : null,
-        connections: wD(DD.zones),
-        minimap: iD ? {
-          imageKey: iD.imageKey,
-          fallbackImageKey: DD.zoneId,
-          geometryKey: ZD,
-          label: cD(iD.labelKey),
-          colour: iD.backgroundColour,
-          caption: cD(DD.zoneId === ID ? "skyblockGame:zoneIsland" : iD.labelKey),
-          width: (iD.bounds.mapMaxX - iD.bounds.mapMinX) / iD.minimapSpan * 100 + "%",
-          height: (iD.bounds.mapMaxZ - iD.bounds.mapMinZ) / iD.minimapSpan * 100 + "%",
-          markers: [...QD, ...BD]
+        connections: KU(UU.zones),
+        minimap: EU ? {
+          imageKey: EU.imageKey,
+          fallbackImageKey: UU.zoneId,
+          geometryKey: hU,
+          label: gU(EU.labelKey),
+          colour: EU.backgroundColour,
+          caption: gU(UU.zoneId === tU ? "skyblockGame:zoneIsland" : EU.labelKey),
+          width: (EU.bounds.mapMaxX - EU.bounds.mapMinX) / EU.minimapSpan * 100 + "%",
+          height: (EU.bounds.mapMaxZ - EU.bounds.mapMinZ) / EU.minimapSpan * 100 + "%",
+          markers: [...qU, ...GU]
         } : null
       }
     }
 
-    function wD(DD) {
-      const CD = new Set;
-      return DD.flatMap((cD => cD.connections.flatMap((ID => {
-        const pD = DD.find((DD => DD.id === ID)),
-          iD = [cD.id, ID].sort().join("|");
-        return !pD || CD.has(iD) ? [] : (CD.add(iD), [{
-          id: `${cD.id}-${ID}`,
-          start: cD.position,
-          end: pD.position,
-          explored: cD.visited && pD.visited
+    function KU(UU) {
+      const RU = new Set;
+      return UU.flatMap((gU => gU.connections.flatMap((tU => {
+        const pU = UU.find((UU => UU.id === tU)),
+          EU = [gU.id, tU].sort().join("|");
+        return !pU || RU.has(EU) ? [] : (RU.add(EU), [{
+          id: `${gU.id}-${tU}`,
+          start: gU.position,
+          end: pU.position,
+          explored: gU.visited && pU.visited
         }])
       }))))
     }
-    var SD = cD(37899);
-    class BD extends SD.d {}
-    const yD = "skyblockMapView";
-    class MD extends BD {
-      constructor(DD, CD, cD) {
-        let ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
-          pD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
-          iD = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
-        super(DD, ID, pD), this.requestTravel = CD, this.translate = cD, this.now = iD, this.entities = [], this.map = null, this.tab = "local", this.pending = null, this.nextRequestId = 0, this.feedbackKey = "", this.snapshot = {
+    var cU = gU(38076);
+    class GU extends cU.b {}
+    const jU = "skyblockMapView";
+    class uU extends GU {
+      constructor(UU, RU, gU) {
+        let tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
+          pU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
+          EU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
+        super(UU, tU, pU), this.requestTravel = RU, this.translate = gU, this.now = EU, this.entities = [], this.map = null, this.tab = "local", this.pending = null, this.nextRequestId = 0, this.feedbackKey = "", this.snapshot = {
           presentation: null,
           enabled: !1,
           open: !1,
@@ -332,25 +332,25 @@ export const modules = {
           feedback: ""
         }, this.showLocal = () => {
           this.selectTab("local"), this.show()
-        }, this.selectTab = DD => {
-          this.tab = DD, this.feedbackKey = "", this.emit()
-        }, this.travel = (DD, CD) => {
-          if (!this.map || this.pending || this.Lt) return;
-          const cD = ("zone" === DD ? this.map.zones : this.map.landmarks).find((DD => DD.id === CD));
-          if (cD) {
+        }, this.selectTab = UU => {
+          this.tab = UU, this.feedbackKey = "", this.emit()
+        }, this.travel = (UU, RU) => {
+          if (!this.map || this.pending || this.pC) return;
+          const gU = ("zone" === UU ? this.map.zones : this.map.landmarks).find((UU => UU.id === RU));
+          if (gU) {
             if (this.map.insideDungeon) this.feedbackKey = "skyblockGame:mapDungeonTravelDisabled";
-            else if ("fastTravelEnabled" in cD && !cD.fastTravelEnabled) this.feedbackKey = "skyblockGame:mapLandmarkTravelDisabled";
-            else if (cD.visited)
-              if ("zone" === DD && CD === this.map.zoneId) this.feedbackKey = "skyblockGame:mapAlreadyHere";
+            else if ("fastTravelEnabled" in gU && !gU.fastTravelEnabled) this.feedbackKey = "skyblockGame:mapLandmarkTravelDisabled";
+            else if (gU.visited)
+              if ("zone" === UU && RU === this.map.zoneId) this.feedbackKey = "skyblockGame:mapAlreadyHere";
               else {
-                const cD = ++this.nextRequestId;
+                const gU = ++this.nextRequestId;
                 this.pending = {
-                  requestId: cD,
+                  requestId: gU,
                   expiresAt: this.now() + 1e4
                 }, this.feedbackKey = "skyblockGame:mapTravelling", this.requestTravel({
-                  kind: DD,
-                  id: CD,
-                  requestId: cD
+                  kind: UU,
+                  id: RU,
+                  requestId: gU
                 })
               }
             else this.feedbackKey = "skyblockGame:mapVisitFirst";
@@ -361,28 +361,28 @@ export const modules = {
       getEntities() {
         return this.entities
       }
-      setTranslator(DD) {
-        this.translate = DD, this.emit()
+      setTranslator(UU) {
+        this.translate = UU, this.emit()
       }
-      kt(DD) {
-        var CD;
-        if (!this.Lt)
-          if ("entities" !== DD.kind)
-            if ("open" !== DD.kind) {
-              var cD, ID;
-              if ("snapshot" === DD.kind)(null === (cD = DD.snapshot) || void 0 === cD ? void 0 : cD.zoneId) !== (null === (ID = this.map) || void 0 === ID ? void 0 : ID.zoneId) && (this.pending = null, this.feedbackKey = ""), this.map = DD.snapshot, !this.map && this.open && this.close();
-              else if ("travelQueued" === DD.kind) {
-                var pD;
-                DD.requestId === (null === (pD = this.pending) || void 0 === pD ? void 0 : pD.requestId) && (this.pending.expiresAt = 1 / 0, this.close())
-              } else if (DD.requestId === (null === (CD = this.pending) || void 0 === CD ? void 0 : CD.requestId)) {
-                var iD;
-                this.pending = null, this.feedbackKey = null !== (iD = DD.errorKey) && void 0 !== iD ? iD : "", null === DD.errorKey && this.close()
+      qC(UU) {
+        var RU;
+        if (!this.pC)
+          if ("entities" !== UU.kind)
+            if ("open" !== UU.kind) {
+              var gU, tU;
+              if ("snapshot" === UU.kind)(null === (gU = UU.snapshot) || void 0 === gU ? void 0 : gU.zoneId) !== (null === (tU = this.map) || void 0 === tU ? void 0 : tU.zoneId) && (this.pending = null, this.feedbackKey = ""), this.map = UU.snapshot, !this.map && this.open && this.close();
+              else if ("travelQueued" === UU.kind) {
+                var pU;
+                UU.requestId === (null === (pU = this.pending) || void 0 === pU ? void 0 : pU.requestId) && (this.pending.expiresAt = 1 / 0, this.close())
+              } else if (UU.requestId === (null === (RU = this.pending) || void 0 === RU ? void 0 : RU.requestId)) {
+                var EU;
+                this.pending = null, this.feedbackKey = null !== (EU = UU.errorKey) && void 0 !== EU ? EU : "", null === UU.errorKey && this.close()
               }
               this.emit()
             } else this.show();
-        else this.entities = DD.entities
+        else this.entities = UU.entities
       }
-      wy() {
+      HG() {
         this.pending && this.now() >= this.pending.expiresAt && (this.pending = null, this.feedbackKey = "skyblockGame:mapTravelTimeout", this.emit())
       }
       dispose() {
@@ -393,7 +393,7 @@ export const modules = {
       }
       buildSnapshot() {
         return {
-          presentation: this.map ? QD(this.map, this.tab, this.translate) : null,
+          presentation: this.map ? qU(this.map, this.tab, this.translate) : null,
           enabled: this.isEnabled(),
           open: this.open,
           tab: this.tab,
@@ -403,183 +403,183 @@ export const modules = {
         }
       }
     }
-    const tD = 67.5 * Math.PI / 180;
+    const CU = 67.5 * Math.PI / 180;
 
-    function ZD(DD, CD) {
-      const cD = Math.abs(DD);
-      if (cD > tD || CD.trackHalfWidth <= 0) return null;
-      const ID = CD.trackHalfWidth,
-        pD = CD.screenHalfWidth / (CD.tanHalfFovX * Math.max(.5, Math.cos(CD.pitch))),
-        iD = Math.min(Math.atan(.6 * ID / pD), .75 * tD),
-        fD = pD * Math.tan(iD);
-      let bD;
-      if (cD <= iD) bD = pD * Math.tan(cD);
+    function hU(UU, RU) {
+      const gU = Math.abs(UU);
+      if (gU > CU || RU.trackHalfWidth <= 0) return null;
+      const tU = RU.trackHalfWidth,
+        pU = RU.screenHalfWidth / (RU.tanHalfFovX * Math.max(.5, Math.cos(RU.pitch))),
+        EU = Math.min(Math.atan(.6 * tU / pU), .75 * CU),
+        PU = pU * Math.tan(EU);
+      let TU;
+      if (gU <= EU) TU = pU * Math.tan(gU);
       else {
-        const DD = tD - iD,
-          CD = Math.max(0, pD * DD / (Math.cos(iD) ** 2 * (ID - fD)) - 1),
-          QD = (cD - iD) / DD;
-        bD = fD + (ID - fD) * (1 + CD) * QD / (1 + CD * QD)
+        const UU = CU - EU,
+          RU = Math.max(0, pU * UU / (Math.cos(EU) ** 2 * (tU - PU)) - 1),
+          qU = (gU - EU) / UU;
+        TU = PU + (tU - PU) * (1 + RU) * qU / (1 + RU * qU)
       }
-      return 50 + Math.sign(DD) * bD * 50 / ID
+      return 50 + Math.sign(UU) * TU * 50 / tU
     }
-    class oD {
-      constructor(DD, CD) {
-        this.map = DD, this.visited = CD, this.id = void 0, this.enabled = !0, this.range = 96, this.limit = 40, this.id = CD ? "landmarks" : "unknownLandmarks"
+    class QU {
+      constructor(UU, RU) {
+        this.map = UU, this.visited = RU, this.id = void 0, this.enabled = !0, this.range = 96, this.limit = 40, this.id = RU ? "landmarks" : "unknownLandmarks"
       }
       getPoints() {
-        const DD = this.map.getSnapshot().map;
-        return !DD || DD.insideDungeon ? [] : DD.landmarks.filter((DD => DD.visited === this.visited)).map((DD => {
-          var CD, cD;
+        const UU = this.map.getSnapshot().map;
+        return !UU || UU.insideDungeon ? [] : UU.landmarks.filter((UU => UU.visited === this.visited)).map((UU => {
+          var RU, gU;
           return {
-            id: `landmark:${DD.id}`,
-            position: DD.position,
-            icon: null !== (CD = DD.icon) && void 0 !== CD ? CD : "unknown",
-            nameKey: null !== (cD = DD.nameKey) && void 0 !== cD ? cD : "skyblockGame:compassUnknown",
+            id: `landmark:${UU.id}`,
+            position: UU.position,
+            icon: null !== (RU = UU.icon) && void 0 !== RU ? RU : "unknown",
+            nameKey: null !== (gU = UU.nameKey) && void 0 !== gU ? gU : "skyblockGame:compassUnknown",
             kind: this.visited ? "landmark" : "unknown"
           }
         }))
       }
     }
-    class vD {
-      constructor(DD, CD, cD, ID) {
-        this.map = DD, this.kind = CD, this.position = cD, this.alive = ID, this.id = void 0, this.enabled = !0, this.range = void 0, this.limit = void 0, this.id = CD, this.range = "enemy" === CD ? 48 : 64, this.limit = 12
+    class eU {
+      constructor(UU, RU, gU, tU) {
+        this.map = UU, this.kind = RU, this.position = gU, this.alive = tU, this.id = void 0, this.enabled = !0, this.range = void 0, this.limit = void 0, this.id = RU, this.range = "enemy" === RU ? 48 : 64, this.limit = 12
       }
-      FX(DD) {
-        if ("enemy" !== this.kind || this.alive(DD.yi)) return this.position(DD.yi)
+      Hx(UU) {
+        if ("enemy" !== this.kind || this.alive(UU.uE)) return this.position(UU.uE)
       }
       getPoints() {
-        const DD = [];
-        for (const ID of this.map.getEntities()) {
-          if (ID.kind !== this.kind || "enemy" === this.kind && !this.alive(ID.compassEntityId)) continue;
-          const pD = this.position(ID.compassEntityId);
-          var CD, cD;
-          if (pD) DD.push({
-            id: `${this.kind}:${ID.compassEntityId}`,
-            yi: ID.compassEntityId,
+        const UU = [];
+        for (const tU of this.map.getEntities()) {
+          if (tU.kind !== this.kind || "enemy" === this.kind && !this.alive(tU.compassEntityId)) continue;
+          const pU = this.position(tU.compassEntityId);
+          var RU, gU;
+          if (pU) UU.push({
+            id: `${this.kind}:${tU.compassEntityId}`,
+            uE: tU.compassEntityId,
             kind: this.kind,
-            icon: null !== (CD = ID.icon) && void 0 !== CD ? CD : ID.npcSkin ? `npc_${ID.npcSkin}` : this.kind,
-            displayName: ID.displayName,
-            position: pD,
-            nameKey: null !== (cD = ID.nameKey) && void 0 !== cD ? cD : "enemy" === this.kind ? "skyblockGame:compassEnemy" : "skyblockGame:compassNpc"
+            icon: null !== (RU = tU.icon) && void 0 !== RU ? RU : tU.npcSkin ? `npc_${tU.npcSkin}` : this.kind,
+            displayName: tU.displayName,
+            position: pU,
+            nameKey: null !== (gU = tU.nameKey) && void 0 !== gU ? gU : "enemy" === this.kind ? "skyblockGame:compassEnemy" : "skyblockGame:compassNpc"
           })
         }
-        return DD
+        return UU
       }
     }
-    class ND {
-      constructor(DD) {
-        this.map = DD, this.id = "portals", this.enabled = !0, this.range = 96, this.limit = 12
+    class WU {
+      constructor(UU) {
+        this.map = UU, this.id = "portals", this.enabled = !0, this.range = 96, this.limit = 12
       }
       getPoints() {
-        const DD = this.map.getSnapshot().map;
-        return !DD || DD.insideDungeon ? [] : DD.portals.map((DD => {
-          var CD;
+        const UU = this.map.getSnapshot().map;
+        return !UU || UU.insideDungeon ? [] : UU.portals.map((UU => {
+          var RU;
           return {
-            id: "portal:" + DD.id,
+            id: "portal:" + UU.id,
             kind: "portal",
-            position: DD.position,
-            nameKey: null !== (CD = DD.nameKey) && void 0 !== CD ? CD : "skyblockGame:compassUnvisitedZone",
-            icon: DD.visited ? "dungeons" === DD.destination ? "portal_orange" : "portal" : "unknown",
-            colour: DD.colour
+            position: UU.position,
+            nameKey: null !== (RU = UU.nameKey) && void 0 !== RU ? RU : "skyblockGame:compassUnvisitedZone",
+            icon: UU.visited ? "dungeons" === UU.destination ? "portal_orange" : "portal" : "unknown",
+            colour: UU.colour
           }
         }))
       }
     }
-    class gD {
-      constructor(DD) {
-        this.target = DD, this.id = "quest", this.enabled = !0, this.range = 1 / 0, this.limit = 1
+    class fU {
+      constructor(UU) {
+        this.target = UU, this.id = "quest", this.enabled = !0, this.range = 1 / 0, this.limit = 1
       }
       getPoints() {
-        const DD = this.target();
-        return DD ? [{
+        const UU = this.target();
+        return UU ? [{
           id: "quest",
           kind: "quest",
           icon: "quest",
-          position: DD.position,
-          nameKey: DD.nameKey
+          position: UU.position,
+          nameKey: UU.nameKey
         }] : []
       }
     }
 
-    function XD(DD, CD, cD) {
-      let ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : DD.position;
-      const iD = ID[0] - CD[0],
-        fD = ID[2] - CD[2];
+    function xU(UU, RU, gU) {
+      let tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : UU.position;
+      const EU = tU[0] - RU[0],
+        PU = tU[2] - RU[2];
       return {
-        ...DD,
-        position: ID,
-        offset: pD.e.computeShortestRotation(cD, (0, pD.Ab)([iD, 0, fD])),
-        distance: Math.hypot(iD, ID[1] - CD[1], fD)
+        ...UU,
+        position: tU,
+        offset: pU.c.computeShortestRotation(gU, (0, pU.Ib)([EU, 0, PU])),
+        distance: Math.hypot(EU, tU[1] - RU[1], PU)
       }
     }
-    let mD;
+    let mU;
 
-    function nD(DD, CD) {
-      var cD;
-      return (null === (cD = mD) || void 0 === cD ? void 0 : cD.locale) !== CD && (mD = {
-        locale: CD,
-        near: new Intl.NumberFormat(CD, {
+    function IU(UU, RU) {
+      var gU;
+      return (null === (gU = mU) || void 0 === gU ? void 0 : gU.locale) !== RU && (mU = {
+        locale: RU,
+        near: new Intl.NumberFormat(RU, {
           minimumFractionDigits: 1,
           maximumFractionDigits: 1
         }),
-        far: new Intl.NumberFormat(CD, {
+        far: new Intl.NumberFormat(RU, {
           minimumFractionDigits: 0,
           maximumFractionDigits: 0
         })
-      }), (DD < 10 ? mD.near : mD.far).format(DD)
+      }), (UU < 10 ? mU.near : mU.far).format(UU)
     }
-    class OD {
+    class JU {
       constructor() {
         this.providers = new Map, this.candidates = [], this.refreshAt = 0
       }
-      register(DD) {
-        return this.providers.set(DD.id, DD), this.refreshAt = 0, () => {
-          this.providers.get(DD.id) === DD && (this.providers.delete(DD.id), this.refreshAt = 0)
+      register(UU) {
+        return this.providers.set(UU.id, UU), this.refreshAt = 0, () => {
+          this.providers.get(UU.id) === UU && (this.providers.delete(UU.id), this.refreshAt = 0)
         }
       }
-      frame(DD, CD, cD) {
-        if (cD >= this.refreshAt) {
-          this.refreshAt = cD + 200, this.candidates = [];
-          for (const CD of this.providers.values()) {
-            if (!CD.enabled) continue;
-            const cD = CD.getPoints().map((CD => {
-              const cD = CD.position;
+      frame(UU, RU, gU) {
+        if (gU >= this.refreshAt) {
+          this.refreshAt = gU + 200, this.candidates = [];
+          for (const RU of this.providers.values()) {
+            if (!RU.enabled) continue;
+            const gU = RU.getPoints().map((RU => {
+              const gU = RU.position;
               return {
-                point: CD,
-                distance: Math.hypot(cD[0] - DD[0], cD[1] - DD[1], cD[2] - DD[2])
+                point: RU,
+                distance: Math.hypot(gU[0] - UU[0], gU[1] - UU[1], gU[2] - UU[2])
               }
-            })).filter((DD => DD.distance <= CD.range)).sort(((DD, CD) => DD.distance - CD.distance)).slice(0, CD.limit);
+            })).filter((UU => UU.distance <= RU.range)).sort(((UU, RU) => UU.distance - RU.distance)).slice(0, RU.limit);
             for (const {
-                point: DD
+                point: UU
               }
-              of cD) this.candidates.push({
-              provider: CD,
-              point: DD
+              of gU) this.candidates.push({
+              provider: RU,
+              point: UU
             })
           }
         }
-        const ID = [];
+        const tU = [];
         for (const {
-            point: pD,
-            provider: iD
+            point: pU,
+            provider: EU
           }
           of this.candidates) {
-          if (!iD.enabled) continue;
-          const cD = iD.FX ? iD.FX(pD) : pD.position;
-          if (cD) {
-            const iD = XD(pD, DD, CD, cD);
-            Math.abs(iD.offset) <= tD && ID.push(iD)
+          if (!EU.enabled) continue;
+          const gU = EU.Hx ? EU.Hx(pU) : pU.position;
+          if (gU) {
+            const EU = xU(pU, UU, RU, gU);
+            Math.abs(EU.offset) <= CU && tU.push(EU)
           }
         }
-        return ID
+        return tU
       }
       dispose() {
         this.providers.clear(), this.candidates = []
       }
     }
-    var PD = cD(36002),
-      HD = cD(53);
-    const UD = [{
+    var wU = gU(36197),
+      nU = gU(56);
+    const bU = [{
         dailyRewardCoins: 1e3,
         dailyRewardItems: []
       }, {
@@ -610,41 +610,41 @@ export const modules = {
           dailyRewardItemAmount: 1
         }]
       }],
-      xD = UD.length;
+      oU = bU.length;
 
-    function qD(DD) {
-      return DD >= xD ? 1 : DD + 1
+    function ZU(UU) {
+      return UU >= oU ? 1 : UU + 1
     }
-    const JD = "skyblockQuests",
-      KD = Object.freeze({
+    const aU = "skyblockQuests",
+      YU = Object.freeze({
         easy: "skyblockGame:difficultyEasy",
         medium: "skyblockGame:difficultyMedium",
         hard: "skyblockGame:difficultyHard",
         insane: "skyblockGame:difficultyInsane"
       }),
-      aD = Object.freeze({
+      BU = Object.freeze({
         easy: "#77b326",
         medium: "#eac03d",
         hard: "#df7622",
         insane: "#e74d4d"
       });
 
-    function VD(DD) {
-      let CD = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      const cD = Math.max(0, Math.floor(DD)),
-        ID = Math.floor(cD % 1e3 / 100),
-        pD = Math.floor(cD / 1e3),
-        iD = pD % 60,
-        fD = Math.floor(pD / 60),
-        bD = fD % 60,
-        QD = Math.floor(fD / 60),
-        wD = DD => DD < 10 ? `0${DD}` : String(DD),
-        SD = CD ? `.${ID}` : "";
-      return QD > 0 ? `${QD}:${wD(bD)}:${wD(iD)}${SD}` : `${bD}:${wD(iD)}${SD}`
+    function VU(UU) {
+      let RU = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      const gU = Math.max(0, Math.floor(UU)),
+        tU = Math.floor(gU % 1e3 / 100),
+        pU = Math.floor(gU / 1e3),
+        EU = pU % 60,
+        PU = Math.floor(pU / 60),
+        TU = PU % 60,
+        qU = Math.floor(PU / 60),
+        KU = UU => UU < 10 ? `0${UU}` : String(UU),
+        cU = RU ? `.${tU}` : "";
+      return qU > 0 ? `${qU}:${KU(TU)}:${KU(EU)}${cU}` : `${TU}:${KU(EU)}${cU}`
     }
-    const zD = "devquests",
-      jD = "none",
-      lD = {
+    const rU = "devquests",
+      XU = "none",
+      vU = {
         hub: {
           farming_1: {
             min: [4, 16, 90],
@@ -682,8 +682,8 @@ export const modules = {
           }
         }
       },
-      LD = "Compressed Messy Stone",
-      TD = {
+      dU = "Compressed Messy Stone",
+      HU = {
         "Grass Block": "Useless Soil",
         "Pine Grass Block": "Useless Soil",
         "Jungle Grass Block": "Useless Soil",
@@ -696,120 +696,120 @@ export const modules = {
         Sand: "Sandstone",
         Gravel: "Smooth Andesite"
       },
-      GD = ["Stone", "Diorite", "Andesite", "Granite"],
-      RD = new Set(GD),
-      kD = (Object.keys(TD), {
+      SU = ["Stone", "Diorite", "Andesite", "Granite"],
+      sU = new Set(SU),
+      yU = (Object.keys(HU), {
         "Pure Coal Ore": "Coal Ore",
         "Pure Iron Ore": "Iron Ore",
         "Pure Gold Ore": "Gold Ore",
         "Pure Diamond Ore": "Diamond Ore",
         "Pure Moonstone Ore": "Moonstone Ore"
       });
-    const dD = ["Magmasteel Helmet", "Magmasteel Chestplate", "Magmasteel Gauntlets", "Magmasteel Leggings", "Magmasteel Boots"];
+    const kU = ["Magmasteel Helmet", "Magmasteel Chestplate", "Magmasteel Gauntlets", "Magmasteel Leggings", "Magmasteel Boots"];
 
-    function YD(DD, CD) {
-      const cD = Math.floor(5 * DD / (2 * CD + 1));
-      return Math.min(4, Math.max(0, cD))
+    function FU(UU, RU) {
+      const gU = Math.floor(5 * UU / (2 * RU + 1));
+      return Math.min(4, Math.max(0, gU))
     }
-    var WD = cD(1240);
-    var sD = cD(35788);
-    var ED = cD(35996),
-      eD = cD(20),
-      uD = cD(8583);
-    const hD = ["foraging", "combat", "mining", "farming", "fishing", "exploration"],
-      rD = 1e3;
+    var iU = gU(1238);
+    var AU = gU(35963);
+    var zU = gU(36191),
+      MU = gU(24),
+      DU = gU(8512);
+    const LU = ["foraging", "combat", "mining", "farming", "fishing", "exploration"],
+      NU = 1e3;
 
-    function AD(DD) {
-      return Math.max(0, DD)
-    }
-
-    function FD(DD) {
-      return 1 + .01 * AD(DD)
+    function lU(UU) {
+      return Math.max(0, UU)
     }
 
-    function DC(DD) {
-      return 1 + .005 * AD(DD)
+    function OU(UU) {
+      return 1 + .01 * lU(UU)
     }
 
-    function CC(DD) {
-      return 1 + .005 * AD(DD)
+    function UR(UU) {
+      return 1 + .005 * lU(UU)
     }
 
-    function cC(DD) {
-      return .01 * AD(DD)
+    function RR(UU) {
+      return 1 + .005 * lU(UU)
     }
 
-    function IC(DD) {
-      return 150 / (150 + AD(DD))
+    function gR(UU) {
+      return .01 * lU(UU)
     }
 
-    function pC(DD) {
-      return 1 + .002 * AD(DD)
+    function tR(UU) {
+      return 150 / (150 + lU(UU))
     }
 
-    function iC(DD) {
-      return Math.round(10 * DD) / 10
+    function pR(UU) {
+      return 1 + .002 * lU(UU)
     }
 
-    function fC(DD, CD) {
-      switch (DD) {
+    function ER(UU) {
+      return Math.round(10 * UU) / 10
+    }
+
+    function PR(UU, RU) {
+      switch (UU) {
         case "foraging":
           return {
-            translationKey: "skyblockGame:foragingBenefit", percent: iC(100 * (DC(CD) - 1))
+            translationKey: "skyblockGame:foragingBenefit", percent: ER(100 * (UR(RU) - 1))
           };
         case "combat":
           return {
-            translationKey: "skyblockGame:combatBenefit", percent: iC(100 * (FD(CD) - 1))
+            translationKey: "skyblockGame:combatBenefit", percent: ER(100 * (OU(RU) - 1))
           };
         case "mining":
           return {
-            translationKey: "skyblockGame:miningBenefit", percent: iC(100 * (CC(CD) - 1))
+            translationKey: "skyblockGame:miningBenefit", percent: ER(100 * (RR(RU) - 1))
           };
         case "farming":
           return {
-            translationKey: "skyblockGame:farmingBenefit", percent: iC(100 * cC(CD))
+            translationKey: "skyblockGame:farmingBenefit", percent: ER(100 * gR(RU))
           };
         case "fishing":
           return {
-            translationKey: "skyblockGame:fishingBenefit", percent: iC(100 * (1 - IC(CD)))
+            translationKey: "skyblockGame:fishingBenefit", percent: ER(100 * (1 - tR(RU)))
           };
         case "exploration":
           return {
-            translationKey: "skyblockGame:explorationBenefit", percent: iC(100 * (pC(CD) - 1))
+            translationKey: "skyblockGame:explorationBenefit", percent: ER(100 * (pR(RU) - 1))
           }
       }
     }
 
-    function bC(DD) {
-      return "farming" === DD ? 200 : 100
+    function TR(UU) {
+      return "farming" === UU ? 200 : 100
     }
 
-    function QC(DD, CD) {
-      if (!Number.isSafeInteger(DD) || DD < 0) throw new Error("Skill XP must be a non-negative safe integer");
-      const cD = bC(CD),
-        ID = DD => function(DD, CD) {
-          return bC(DD) * CD * (CD + 1) / 2
-        }(CD, DD);
-      let pD = Math.min(rD, Math.floor((Math.sqrt(8 * DD / cD + 1) - 1) / 2));
-      return pD < rD && ID(pD + 1) <= DD ? pD++ : ID(pD) > DD && pD--, {
-        totalXp: DD,
-        level: pD,
-        xpIntoLevel: DD - ID(pD),
-        xpForNextLevel: pD === rD ? null : cD * (pD + 1)
+    function qR(UU, RU) {
+      if (!Number.isSafeInteger(UU) || UU < 0) throw new Error("Skill XP must be a non-negative safe integer");
+      const gU = TR(RU),
+        tU = UU => function(UU, RU) {
+          return TR(UU) * RU * (RU + 1) / 2
+        }(RU, UU);
+      let pU = Math.min(NU, Math.floor((Math.sqrt(8 * UU / gU + 1) - 1) / 2));
+      return pU < NU && tU(pU + 1) <= UU ? pU++ : tU(pU) > UU && pU--, {
+        totalXp: UU,
+        level: pU,
+        xpIntoLevel: UU - tU(pU),
+        xpForNextLevel: pU === NU ? null : gU * (pU + 1)
       }
     }
-    const wC = new Set(["Apple Block", "Plum Block", "Coconut Block", "Pear Block", "Cherry Block", "Mango Block", "Banana Block"]);
+    const KR = new Set(["Apple Block", "Plum Block", "Coconut Block", "Pear Block", "Cherry Block", "Mango Block", "Banana Block"]);
 
-    function SC(DD) {
-      return wC.has(DD)
+    function cR(UU) {
+      return KR.has(UU)
     }
-    const BC = new Set(pD.pb);
+    const GR = new Set(pU.wb);
 
-    function yC(DD) {
-      return BC.has(DD)
+    function jR(UU) {
+      return GR.has(UU)
     }
     new Set(["Watermelon", "Melon", "Wheat|FreshlyGrown", "Rice|FreshlyGrown", "Corn Plant|FreshlyGrown", "Chili Pepper Plant|FreshlyGrown", "Chili Pepper Plant|Lava|FreshlyGrown", "Tomato Plant|FreshlyGrown", "Tomato Plant|Top|FreshlyGrown", "Carrot Plant|FreshlyGrown", "Potato Plant|FreshlyGrown", "Sugar Cane Plant|FreshlyGrown", "Sugar Cane Plant|Top|FreshlyGrown", "Coffee Plant|FreshlyGrown", "Lettuce Plant|FreshlyGrown", "Cauliflower Plant|FreshlyGrown", "Parsnip Plant|FreshlyGrown", "Red Cabbage Plant|FreshlyGrown", "Beetroot Plant|FreshlyGrown"]);
-    const MC = {
+    const uR = {
         "Maple Log": 10,
         "Pine Log": 10,
         "Plum Log": 10,
@@ -822,7 +822,7 @@ export const modules = {
         "Spectral Log": 10,
         "Mango Log": 10
       },
-      tC = {
+      CR = {
         Stone: 2,
         Diorite: 18,
         Granite: 18,
@@ -835,14 +835,14 @@ export const modules = {
         "Block of Coal": 15,
         "Block of Gold": 30
       },
-      ZC = {
-        ...tC,
-        ...Object.fromEntries(Object.entries(kD).map((DD => {
-          let [CD, cD] = DD;
-          return [CD, 9 * tC[cD]]
+      hR = {
+        ...CR,
+        ...Object.fromEntries(Object.entries(yU).map((UU => {
+          let [RU, gU] = UU;
+          return [RU, 9 * CR[gU]]
         })))
       },
-      oC = {
+      QR = {
         Watermelon: 10,
         Melon: 10,
         "Wheat|FreshlyGrown": 10,
@@ -863,7 +863,7 @@ export const modules = {
         "Red Cabbage Plant|FreshlyGrown": 10,
         "Beetroot Plant|FreshlyGrown": 10
       },
-      vC = {
+      eR = {
         Wheatfish: 25,
         Darter: 25,
         "Sunset Minnow": 25,
@@ -927,7 +927,7 @@ export const modules = {
         "Pearlescent Moonfish": 300,
         "Game Dev Fish": 50
       };
-    const NC = {
+    const WR = {
         foraging: "Iron Axe",
         combat: "Iron Sword",
         mining: "Iron Pickaxe",
@@ -935,7 +935,7 @@ export const modules = {
         fishing: "Rusty Rod",
         exploration: "Compass"
       },
-      gC = {
+      fR = {
         foraging: [80, 220, 100],
         combat: [240, 70, 70],
         mining: [60, 220, 240],
@@ -944,112 +944,112 @@ export const modules = {
         exploration: [255, 180, 70]
       };
 
-    function XC(DD) {
-      return `rgb(${gC[DD].join(", ")})`
+    function xR(UU) {
+      return `rgb(${fR[UU].join(", ")})`
     }
 
-    function mC(DD, CD, cD) {
-      if (!cD) return DD(CD);
-      const ID = {};
-      for (const [pD, iD] of Object.entries(cD)) ID[pD] = "string" === typeof iD ? iD : DD(iD.translationKey);
-      return DD(CD, ID)
+    function mR(UU, RU, gU) {
+      if (!gU) return UU(RU);
+      const tU = {};
+      for (const [pU, EU] of Object.entries(gU)) tU[pU] = "string" === typeof EU ? EU : UU(EU.translationKey);
+      return UU(RU, tU)
     }
-    class nC {
-      constructor(DD, CD) {
-        this.now = DD, this.getJournal = CD, this.pending = [], this.current = null, this.followUp = null, this.shownAt = 0, this.expiresAt = 0, this.token = 0, this.Lb = !1, this.onShown = () => {}
+    class IR {
+      constructor(UU, RU) {
+        this.now = UU, this.getJournal = RU, this.pending = [], this.current = null, this.followUp = null, this.shownAt = 0, this.expiresAt = 0, this.token = 0, this.WT = !1, this.onShown = () => {}
       }
-      enqueue(DD) {
-        const CD = OC(DD);
-        if (CD) this.pending.push(DD);
+      enqueue(UU) {
+        const RU = JR(UU);
+        if (RU) this.pending.push(UU);
         else {
-          const CD = this.pending.findIndex(OC);
-          this.pending.splice(-1 === CD ? this.pending.length : CD, 0, DD)
+          const RU = this.pending.findIndex(JR);
+          this.pending.splice(-1 === RU ? this.pending.length : RU, 0, UU)
         }
-        return (null === this.current || null !== this.followUp && !CD) && (this.advance(), !0)
+        return (null === this.current || null !== this.followUp && !RU) && (this.advance(), !0)
       }
-      setHeld(DD) {
-        return this.Lb = DD, !DD && null === this.current && this.pending.length > 0 && (this.advance(), !0)
+      setHeld(UU) {
+        return this.WT = UU, !UU && null === this.current && this.pending.length > 0 && (this.advance(), !0)
       }
-      wy() {
-        const DD = this.getJournal(),
-          CD = this.followUp;
-        if (null !== this.current && this.now() >= this.expiresAt) return this.showFollowUp(null === CD ? this.findFollowUp(this.current) : null), !0;
-        if ("explore" === (null === CD || void 0 === CD ? void 0 : CD.kind) && DD && DD.active.length > 0) return this.showFollowUp(this.findFollowUp(this.current)), !0;
-        if ("step" === (null === CD || void 0 === CD ? void 0 : CD.kind)) {
-          const DD = this.findFollowUp(this.current);
-          if ("step" !== (null === DD || void 0 === DD ? void 0 : DD.kind) || DD.questId !== CD.questId || DD.step.id !== CD.step.id) return this.showFollowUp(DD, this.expiresAt), !0
+      HG() {
+        const UU = this.getJournal(),
+          RU = this.followUp;
+        if (null !== this.current && this.now() >= this.expiresAt) return this.showFollowUp(null === RU ? this.findFollowUp(this.current) : null), !0;
+        if ("explore" === (null === RU || void 0 === RU ? void 0 : RU.kind) && UU && UU.active.length > 0) return this.showFollowUp(this.findFollowUp(this.current)), !0;
+        if ("step" === (null === RU || void 0 === RU ? void 0 : RU.kind)) {
+          const UU = this.findFollowUp(this.current);
+          if ("step" !== (null === UU || void 0 === UU ? void 0 : UU.kind) || UU.questId !== RU.questId || UU.step.id !== RU.step.id) return this.showFollowUp(UU, this.expiresAt), !0
         }
         return !1
       }
       clear() {
         this.pending = [], this.current = null, this.followUp = null, this.expiresAt = 0
       }
-      getView(DD, CD, cD) {
-        var ID, pD, iD, fD;
+      getView(UU, RU, gU) {
+        var tU, pU, EU, PU;
         if (null === this.current) return null;
-        if ("skillLevel" === this.current.questCompletionKind) return this.getSkillLevelView(this.current, DD, cD);
-        if ("landmark" === this.current.questCompletionKind) return this.getLandmarkView(this.current, DD);
-        if ("npcNote" === this.current.questCompletionKind) return this.getNpcNoteView(this.current, DD, CD);
+        if ("skillLevel" === this.current.questCompletionKind) return this.getSkillLevelView(this.current, UU, gU);
+        if ("landmark" === this.current.questCompletionKind) return this.getLandmarkView(this.current, UU);
+        if ("npcNote" === this.current.questCompletionKind) return this.getNpcNoteView(this.current, UU, RU);
         const {
-          questCompletionKind: bD,
-          questCompletionNameKey: QD
-        } = this.current, wD = "step" === this.current.questCompletionKind ? this.current.questCompletionNameParams : void 0, SD = "quest" === this.current.questCompletionKind ? this.current.questCompletionCoins : 0, BD = "step" === (null === (ID = this.followUp) || void 0 === ID ? void 0 : ID.kind) ? this.followUp : null, yD = "explore" === (null === (pD = this.followUp) || void 0 === pD ? void 0 : pD.kind);
-        let MD;
-        return MD = yD ? DD("skyblockGame:questExploreTitle") : null !== BD ? "quest" === bD ? DD("skyblockGame:questNextQuestTitle", {
-          quest: DD(BD.questNameKey)
-        }) : DD("skyblockGame:questNextStepTitle") : DD("started" === bD ? "skyblockGame:questStartedTitle" : "quest" === bD ? "skyblockGame:questCompletedTitle" : "skyblockGame:subquestCompletedTitle"), {
+          questCompletionKind: TU,
+          questCompletionNameKey: qU
+        } = this.current, KU = "step" === this.current.questCompletionKind ? this.current.questCompletionNameParams : void 0, cU = "quest" === this.current.questCompletionKind ? this.current.questCompletionCoins : 0, GU = "step" === (null === (tU = this.followUp) || void 0 === tU ? void 0 : tU.kind) ? this.followUp : null, jU = "explore" === (null === (pU = this.followUp) || void 0 === pU ? void 0 : pU.kind);
+        let uU;
+        return uU = jU ? UU("skyblockGame:questExploreTitle") : null !== GU ? "quest" === TU ? UU("skyblockGame:questNextQuestTitle", {
+          quest: UU(GU.questNameKey)
+        }) : UU("skyblockGame:questNextStepTitle") : UU("started" === TU ? "skyblockGame:questStartedTitle" : "quest" === TU ? "skyblockGame:questCompletedTitle" : "skyblockGame:subquestCompletedTitle"), {
           token: this.token,
-          kind: null === this.followUp ? bD : "step",
+          kind: null === this.followUp ? TU : "step",
           phase: null === this.followUp ? "completion" : "next",
-          title: MD,
-          name: yD ? CD("skyblockGame:questExploreName") : null !== BD ? mC(CD, BD.step.nameKey, BD.step.nameParams) : mC(CD, QD, wD),
-          description: yD ? CD("skyblockGame:questExploreDescription") : null === BD ? null : mC(CD, BD.step.descriptionKey, BD.step.descriptionParams),
-          reward: null === this.followUp && SD > 0 ? CD("skyblockGame:questCoinRewardSuffix", {
-            amount: SD.toLocaleString(cD)
+          title: uU,
+          name: jU ? RU("skyblockGame:questExploreName") : null !== GU ? mR(RU, GU.step.nameKey, GU.step.nameParams) : mR(RU, qU, KU),
+          description: jU ? RU("skyblockGame:questExploreDescription") : null === GU ? null : mR(RU, GU.step.descriptionKey, GU.step.descriptionParams),
+          reward: null === this.followUp && cU > 0 ? RU("skyblockGame:questCoinRewardSuffix", {
+            amount: cU.toLocaleString(gU)
           }) : null,
-          iconItem: null !== (iD = null === BD || void 0 === BD ? void 0 : BD.step.questIconItem) && void 0 !== iD ? iD : null,
+          iconItem: null !== (EU = null === GU || void 0 === GU ? void 0 : GU.step.questIconItem) && void 0 !== EU ? EU : null,
           accent: null,
           durationMs: this.expiresAt - this.shownAt,
-          waypointNameKey: null !== BD && (null === (fD = this.getJournal()) || void 0 === fD ? void 0 : fD.trackedQuestId) === BD.questId ? BD.step.nameKey : null
+          waypointNameKey: null !== GU && (null === (PU = this.getJournal()) || void 0 === PU ? void 0 : PU.trackedQuestId) === GU.questId ? GU.step.nameKey : null
         }
       }
-      getSkillLevelView(DD, CD, cD) {
+      getSkillLevelView(UU, RU, gU) {
         let {
-          skill: ID,
-          beforeLevel: pD,
-          level: iD
-        } = DD;
-        const fD = fC(ID, pD),
-          bD = fC(ID, iD);
+          skill: tU,
+          beforeLevel: pU,
+          level: EU
+        } = UU;
+        const PU = PR(tU, pU),
+          TU = PR(tU, EU);
         return {
           token: this.token,
           kind: "skillLevel",
           phase: "completion",
-          title: CD(`skyblockGame:${ID}`),
-          name: CD("skyblockGame:skillLevelUp", {
-            to: iD.toLocaleString(cD)
+          title: RU(`skyblockGame:${tU}`),
+          name: RU("skyblockGame:skillLevelUp", {
+            to: EU.toLocaleString(gU)
           }),
-          description: fD.percent === bD.percent ? null : CD(`${bD.translationKey}Change`, {
-            before: fD.percent.toLocaleString(cD),
-            after: bD.percent.toLocaleString(cD)
+          description: PU.percent === TU.percent ? null : RU(`${TU.translationKey}Change`, {
+            before: PU.percent.toLocaleString(gU),
+            after: TU.percent.toLocaleString(gU)
           }),
           reward: null,
-          iconItem: NC[ID],
-          accent: XC(ID),
+          iconItem: WR[tU],
+          accent: xR(tU),
           durationMs: this.expiresAt - this.shownAt,
           waypointNameKey: null
         }
       }
-      getLandmarkView(DD, CD) {
+      getLandmarkView(UU, RU) {
         let {
-          landmarkNameKey: cD
-        } = DD;
+          landmarkNameKey: gU
+        } = UU;
         return {
           token: this.token,
           kind: "landmark",
           phase: "completion",
-          title: CD("skyblockGame:landmarkDiscovered"),
-          name: CD(cD),
+          title: RU("skyblockGame:landmarkDiscovered"),
+          name: RU(gU),
           description: null,
           reward: null,
           iconItem: null,
@@ -1058,36 +1058,36 @@ export const modules = {
           waypointNameKey: null
         }
       }
-      getNpcNoteView(DD, CD, cD) {
+      getNpcNoteView(UU, RU, gU) {
         let {
-          titleKey: ID,
-          textKey: pD,
-          params: iD = {},
-          nameKeys: fD = {},
-          iconItem: bD = null
-        } = DD;
-        const QD = {
-          ...iD
+          titleKey: tU,
+          textKey: pU,
+          params: EU = {},
+          nameKeys: PU = {},
+          iconItem: TU = null
+        } = UU;
+        const qU = {
+          ...EU
         };
-        for (const [wD, SD] of Object.entries(fD)) QD[wD] = CD(SD);
+        for (const [KU, cU] of Object.entries(PU)) qU[KU] = RU(cU);
         return {
           token: this.token,
           kind: "npcNote",
           phase: "completion",
-          title: CD(ID),
-          name: cD(pD, QD),
+          title: RU(tU),
+          name: gU(pU, qU),
           description: null,
           reward: null,
-          iconItem: bD,
+          iconItem: TU,
           accent: null,
           durationMs: this.expiresAt - this.shownAt,
           waypointNameKey: null
         }
       }
       durationMs() {
-        var DD;
+        var UU;
         if (null !== this.followUp) return 5600;
-        switch (null === (DD = this.current) || void 0 === DD ? void 0 : DD.questCompletionKind) {
+        switch (null === (UU = this.current) || void 0 === UU ? void 0 : UU.questCompletionKind) {
           case "quest":
             return 4800;
           case "started":
@@ -1102,89 +1102,89 @@ export const modules = {
             return 2400
         }
       }
-      showFollowUp(DD, CD) {
-        null === DD || this.Lb ? this.advance() : (this.followUp = DD, this.token++, this.shownAt = this.now(), this.expiresAt = null !== CD && void 0 !== CD ? CD : this.shownAt + this.durationMs())
+      showFollowUp(UU, RU) {
+        null === UU || this.WT ? this.advance() : (this.followUp = UU, this.token++, this.shownAt = this.now(), this.expiresAt = null !== RU && void 0 !== RU ? RU : this.shownAt + this.durationMs())
       }
-      findFollowUp(DD) {
-        var CD;
-        const cD = this.getJournal();
-        if (!cD || this.hasPendingQuestPopup() || OC(DD)) return null;
-        const ID = "started" === DD.questCompletionKind ? cD.active.some((CD => CD.id === DD.questCompletionQuestId)) : "quest" === DD.questCompletionKind ? cD.completed.some((CD => CD.id === DD.questCompletionQuestId)) : [...cD.active, ...cD.completed].some((CD => CD.id === DD.questCompletionQuestId && CD.subquests.some((CD => CD.id === DD.questCompletionStepId && "completed" === CD.status))));
-        if (!ID) return null;
-        if ("quest" === DD.questCompletionKind && 0 === cD.active.length && !this.hasPendingQuestPopup()) return {
+      findFollowUp(UU) {
+        var RU;
+        const gU = this.getJournal();
+        if (!gU || this.hasPendingQuestPopup() || JR(UU)) return null;
+        const tU = "started" === UU.questCompletionKind ? gU.active.some((RU => RU.id === UU.questCompletionQuestId)) : "quest" === UU.questCompletionKind ? gU.completed.some((RU => RU.id === UU.questCompletionQuestId)) : [...gU.active, ...gU.completed].some((RU => RU.id === UU.questCompletionQuestId && RU.subquests.some((RU => RU.id === UU.questCompletionStepId && "completed" === RU.status))));
+        if (!tU) return null;
+        if ("quest" === UU.questCompletionKind && 0 === gU.active.length && !this.hasPendingQuestPopup()) return {
           kind: "explore"
         };
-        const pD = cD.active.find((DD => DD.id === cD.trackedQuestId)),
-          iD = null !== (CD = null === pD || void 0 === pD ? void 0 : pD.subquests.find((DD => "ready" === DD.status))) && void 0 !== CD ? CD : null === pD || void 0 === pD ? void 0 : pD.subquests.find((DD => "active" === DD.status));
-        return iD ? {
+        const pU = gU.active.find((UU => UU.id === gU.trackedQuestId)),
+          EU = null !== (RU = null === pU || void 0 === pU ? void 0 : pU.subquests.find((UU => "ready" === UU.status))) && void 0 !== RU ? RU : null === pU || void 0 === pU ? void 0 : pU.subquests.find((UU => "active" === UU.status));
+        return EU ? {
           kind: "step",
-          questId: pD.id,
-          questNameKey: pD.nameKey,
-          step: iD
+          questId: pU.id,
+          questNameKey: pU.nameKey,
+          step: EU
         } : null
       }
       hasPendingQuestPopup() {
-        return this.pending.some((DD => !OC(DD)))
+        return this.pending.some((UU => !JR(UU)))
       }
       advance() {
-        var DD;
-        this.current = this.Lb ? null : null !== (DD = this.pending.shift()) && void 0 !== DD ? DD : null, this.followUp = null, null !== this.current && (this.token++, this.shownAt = this.now(), this.expiresAt = this.shownAt + this.durationMs(), this.onShown(this.current.questCompletionKind))
+        var UU;
+        this.current = this.WT ? null : null !== (UU = this.pending.shift()) && void 0 !== UU ? UU : null, this.followUp = null, null !== this.current && (this.token++, this.shownAt = this.now(), this.expiresAt = this.shownAt + this.durationMs(), this.onShown(this.current.questCompletionKind))
       }
     }
 
-    function OC(DD) {
-      return PC(DD.questCompletionKind)
+    function JR(UU) {
+      return wR(UU.questCompletionKind)
     }
 
-    function PC(DD) {
-      return "skillLevel" === DD || "landmark" === DD || "npcNote" === DD
+    function wR(UU) {
+      return "skillLevel" === UU || "landmark" === UU || "npcNote" === UU
     }
-    var HC = cD(37907);
-    const UC = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAP0lEQVR4nGNgoAD8h2L8Cqz6T4IxLsVwyZwTb+CYAZ9imCI5Gx+cisEK73/7jYLRFcKtxqcIwzPE+BymgXwAABikVOyJwpyoAAAAAElFTkSuQmCC",
-      xC = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUUlEQVR4nGNgIAP8x4FRwH8w+OqOim+LYyiGSLzQR8G/DipgKgy2Vvqfc+INmEZm4zQRphCniTA3wRXeFseuECQIwlfbmMEYxsfqc2KChyAAANDbei83hMJpAAAAAElFTkSuQmCC",
-      qC = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVElEQVR4nGNgIAP8x4FRwH8QePfuFQq+dO44hmKwxOMHN1Hw4b3bMRW6unv/zznxBkwjs3GaCFOI00SYm2AKQWysCkGCILxm6TwwhvGx+pyY4CEIAG45h2BiJfmeAAAAAElFTkSuQmCC",
-      JC = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIAP8x4FRwP9sF+X/XVEGKDjbRRlDMVjww44uFHyyKw5TIUjC2n4BXBGIjVMh0SaSpHBBkC0Y41IIVkxM8BAEAGLKe3rsiWx2AAAAAElFTkSuQmCC",
-      KC = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAW0lEQVR4nGNgIAP8J0bs//M750GCKPg5Qgyh8OT2Vf870vxR8MntqzAVysnL/wcBmCIQAIlhVQjCMIUwPobCjAC7/+XZSSgYJIZVoZGWKlwRiI1NISwosGHSAAAPvV+9cOwRMQAAAABJRU5ErkJggg==";
-    var aC = cD(37912);
-    const VC = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAT0lEQVR4nGNgIAP8h2JcfDD4X2lg/D9RRhQmCWbnq6piKAYrRMf52BSCTHAU54QrArGRbEA18ev3X3CFIDZOq2GmwkzDqxAdY/U5DkwaAACgalVtqFSm5wAAAABJRU5ErkJggg==",
-      zC = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAf0lEQVR4nO3VsQkEIRCG0ek/MbwWbMXk4u1kOBi4bWANhA0U3oM/9zOZCAAAAAAm8lf/Nza+1+NiNym4BKfgEjxOCR6Th7ZPX9rsI2I3Q/AluAnugvOU4Fw8M6vnKnaTgkvwEFyC8/TgtniWZovdpOAS3AR3we2UYAAAAIDYxQ2IeNNWBgNQ/AAAAABJRU5ErkJggg==";
-    const jC = cD.p + "static/media/quest_search.b4f00072d5f134fdf189ecb8a48edc99.svg";
-    const lC = cD.p + "static/media/quest_talk.7d2326c7bdb6bc060cc0cde294f4fa89.svg",
-      LC = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAANklEQVR4nGNgIBP8R8NYwX8QuH7nGRwzYFEMVwQzDcSetXgHdsXEKIIrJkYRusn4FVHdRJwAALfWRnO5uwepAAAAAElFTkSuQmCC";
-    var TC = cD(18288),
-      GC = cD(20299),
-      RC = cD(22679),
-      kC = cD(24196),
-      dC = cD(25869);
-    const YC = {
+    var nR = gU(38083);
+    const bR = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAP0lEQVR4nGNgoAD8h2L8Cqz6T4IxLsVwyZwTb+CYAZ9imCI5Gx+cisEK73/7jYLRFcKtxqcIwzPE+BymgXwAABikVOyJwpyoAAAAAElFTkSuQmCC",
+      oR = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUUlEQVR4nGNgIAP8x4FRwH8w+OqOim+LYyiGSLzQR8G/DipgKgy2Vvqfc+INmEZm4zQRphCniTA3wRXeFseuECQIwlfbmMEYxsfqc2KChyAAANDbei83hMJpAAAAAElFTkSuQmCC",
+      ZR = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVElEQVR4nGNgIAP8x4FRwH8QePfuFQq+dO44hmKwxOMHN1Hw4b3bMRW6unv/zznxBkwjs3GaCFOI00SYm2AKQWysCkGCILxm6TwwhvGx+pyY4CEIAG45h2BiJfmeAAAAAElFTkSuQmCC",
+      aR = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIAP8x4FRwP9sF+X/XVEGKDjbRRlDMVjww44uFHyyKw5TIUjC2n4BXBGIjVMh0SaSpHBBkC0Y41IIVkxM8BAEAGLKe3rsiWx2AAAAAElFTkSuQmCC",
+      YR = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAW0lEQVR4nGNgIAP8J0bs//M750GCKPg5Qgyh8OT2Vf870vxR8MntqzAVysnL/wcBmCIQAIlhVQjCMIUwPobCjAC7/+XZSSgYJIZVoZGWKlwRiI1NISwosGHSAAAPvV+9cOwRMQAAAABJRU5ErkJggg==";
+    var BR = gU(38090);
+    const VR = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAT0lEQVR4nGNgIAP8h2JcfDD4X2lg/D9RRhQmCWbnq6piKAYrRMf52BSCTHAU54QrArGRbEA18ev3X3CFIDZOq2GmwkzDqxAdY/U5DkwaAACgalVtqFSm5wAAAABJRU5ErkJggg==",
+      rR = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAf0lEQVR4nO3VsQkEIRCG0ek/MbwWbMXk4u1kOBi4bWANhA0U3oM/9zOZCAAAAAAm8lf/Nza+1+NiNym4BKfgEjxOCR6Th7ZPX9rsI2I3Q/AluAnugvOU4Fw8M6vnKnaTgkvwEFyC8/TgtniWZovdpOAS3AR3we2UYAAAAIDYxQ2IeNNWBgNQ/AAAAABJRU5ErkJggg==";
+    const XR = gU.p + "static/media/quest_search.b4f00072d5f134fdf189ecb8a48edc99.svg";
+    const vR = gU.p + "static/media/quest_talk.7d2326c7bdb6bc060cc0cde294f4fa89.svg",
+      dR = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAANklEQVR4nGNgIBP8R8NYwX8QuH7nGRwzYFEMVwQzDcSetXgHdsXEKIIrJkYRusn4FVHdRJwAALfWRnO5uwepAAAAAElFTkSuQmCC";
+    var HR = gU(18285),
+      SR = gU(20283),
+      sR = gU(22656),
+      yR = gU(24216),
+      kR = gU(25936);
+    const FR = {
       ashen_fort: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUElEQVR4nGNgIAP8R6PR2RCBzRu2/kemQbirvQ/GRlUIwyAFIJyUkIFbobyUHhjjVAiSgCmM1p9HWCFI0YKYD/gVgjDMapAibAphQYENkwYAeH1pEdiBhHAAAAAASUVORK5CYII=",
       auction: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAR0lEQVR4nGNgoAD8h2K84P+kApf/vw4qEFT8H6SoJsr8/5quIMKKg62VwIrxmfx/apEbWBKkCOQMbArhimB8YhThBUQpIggAQqYxE90Y9BMAAAAASUVORK5CYII=",
       bank: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAR0lEQVR4nGNgIBP8R8NYwX8w+OoOwbfFcSr+/+ugAhi/X8zz/0gVD1aFCNNui6Ow0RWDBWGmIbPJVwhzFwgjs7G6EwcmDQAAuONyKxIgH/AAAAAASUVORK5CYII=",
-      carrot: TC,
+      carrot: HR,
       castle: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVUlEQVR4nGNgoAD8R8I4wf+pRW7/n2nrgzEDDsX/YQrxmfr/yIHdYAkQDWNP6uvDUAxXAMIgBSCcm5mJqRAkAVIUbK0ExgQV1kSZgzEuhXDPYMGkAQC0sV3YpEV43gAAAABJRU5ErkJggg==",
       cinderfall: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAATUlEQVR4nGNgoAD8h2K84P//N/5gjE/x/78dLHCFIDYuxWDJxqys/362tjgVwhXBFOJS/P+yCROKImNNbbAYhkJ000AKQRir9TgwaQAA9pxTDDdv+r4AAAAASUVORK5CYII=",
-      combat_1: GC,
-      cow: KC,
+      combat_1: SR,
+      cow: YR,
       craft: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAPklEQVR4nGNgIAH8JxIz/L+2JA2Mp6VZYGUzwBSCBPFhBphCYq0GKy7w0kARwCGGIgjHhBTiNxHdLTjECAMAZEReU1MzQpcAAAAASUVORK5CYII=",
       dungeons: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQUlEQVR4nGNgIBP8R8NYwf++KbPhOKewHKtiuAJ5KT0wBinEphis6L+1AVwhiA0Sw6oQpgiGKVdIjBvBinFg0gAAOOVdfOFyr7kAAAAASUVORK5CYII=",
       emberwatch: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAATElEQVR4nGNgoAD8h2L8Cv6/8f//t4PlPy4N/48c2A2WACm6bMIEZk/q68NQDFYIwyAFIJybmYnbVJCJ+BTBFRIyjSSFcJ8TE0Q4AQDqiVfWwMcDkgAAAABJRU5ErkJggg==",
       enemy: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAU0lEQVR4nGNgIBP8R8NYwf///W3/n3r4wjEDFsUYikB4s4o2hmKwhDY3L1wRiI1ToQgLK1whiI1TIQjnCYqBMUgRNoVgxSAJmCIQjdfnxAQPXgAAraZYPXKBMfkAAAAASUVORK5CYII=",
-      farm: cD(25882),
+      farm: gU(25955),
       farming_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAR0lEQVR4nGNgoAD8h2K84P+nbP//87SU8Cr+D1J0w1H///9LXjgV/4cpQsbYFIMlPjw+hILxKqyJMv8fbK1EuUKwYhyYNAAAbaVgzAUMTa8AAAAASUVORK5CYII=",
-      fishing: UC,
-      fishing_1: UC,
+      fishing: bR,
+      fishing_1: bR,
       forest: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIBP8R8NYwf+c/TZgbN+jA8YMWBRjKAJhg3JlDMUoikAKQFgxWgi7qcQogiuuiTL/H2ythFcRSQrBiolRhBMAAJ9tQRoOB1rEAAAAAElFTkSuQmCC",
-      guardian_gold: xC,
-      guardian_iron: qC,
+      guardian_gold: oR,
+      guardian_iron: ZR,
       hub: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAWElEQVR4nGNgoAL4T5SirGUf/uNTDJa0r78GxjpRK7Aq/v8p2x8s8eHxIThGVwhWdMNR//88LSWwgv+XvLArhJlwcnMXfhNBgjVR5nCFIDY2hXCPYMGkAQDGNGSEX91FFwAAAABJRU5ErkJggg==",
       island: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUElEQVR4nGNgoAD8h2K84L//OlcwxqcYrECvyQKOGXAohkn870pxgLMxFC17FgfGOfut4Ni7Xwe74u60ADDO8rIC03jdCVIEwkT5nBhFOAEAI1k9HXZqyYAAAAAASUVORK5CYII=",
-      melon: RC,
-      mines: kC,
-      mining_1: kC,
-      npc: JC,
+      melon: sR,
+      mines: yR,
+      mining_1: yR,
+      npc: aR,
       npc_beaver_lumberjack: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASUlEQVR4nGNgIAP8h2JcfDD4XxQVCMYwBSB2nJsbhmKwhJKyMlwDiI1TYUVyMFgBCIPYeBX+/3zt/6vbJ6moEBljUwhWjAOTBgAZSmJ9XCb2zAAAAABJRU5ErkJggg==",
       npc_chef: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAW0lEQVR4nGNgIBP8R8NYwf+v33/B8f1nH7AqRlEEU3gfi+L/RVGB/y/feQlXAGKDxLAqlJDX//9pfycYg9g4FYIUxLm5gfHJvgz8Cl9vaQFjkEIQxuohHJg0AACncHuimGgHPgAAAABJRU5ErkJggg==",
-      npc_cow: KC,
+      npc_cow: YR,
       npc_draugr_warper: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAb0lEQVR4nGNgIBIwIrH/41PDCFPU+/IzVlXF4rxgdSwwgUV33oFpXh42MP35yy+sVv///x9is8GxR2D6gpUcRAEjxGYmZF2nvv/BygYBuNUwk0BASoKHIe38M+wKQZLIAMa/iOZGsDuxehtVDWEAAHwCHXf9ctZjAAAAAElFTkSuQmCC",
       npc_dwarf_blue_hair: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUElEQVR4nGNgIBP8R8NYwf//51lRMAMWxf/TM0r+/z/AjoLTM0owFENMeSCBirGY+l+r/SpY8OGmBjBGFkNR6DD9FVwRDIPEyFYIVowDkwYAEBZzAwnUgyIAAAAASUVORK5CYII=",
       npc_dwarf_braided_hair: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIBP8R8NYwX9deRUUzIBFMYYiXIr/h5rqYMUYCr9+/wUWjLE2AGNkMRSF6Q6mcEUwDBLDUIiuCNlkDA/hwKQBAPnYUUW1+JaKAAAAAElFTkSuQmCC",
@@ -1201,13 +1201,13 @@ export const modules = {
       npc_forge_mother: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAXklEQVR4nGNgIAP8x4FRwP+vzy+AJSKd7MEYWQxF4avbJ8EYphDGx1D49fsvTBOhYigKfS0s/l9dPAsFg8SwKpyYkAVXBGLjVPj/POv//x+0Ifg8K1aFYMXEBA9BAACWKnGnkFHGrQAAAABJRU5ErkJggg==",
       npc_goblin_goggles: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAgklEQVR4nGNkQAX/0fiMGAyQIhMPGxRVZ3YcgathwqUIBKBi/2Gq//tMzWDw4HBkwAZ2/NjPsCV7Btzq/1+//2LQ1dFkSMgoBQssmNHNcPnKdQZuTjawgXCFTd0zsJpYV5oBVsgCEzj+7wRWhTAA8wwcPNt2A4zRAUrw4DAMWQ1hAADlHCXxWLGl2AAAAABJRU5ErkJggg==",
       npc_goblin_mad_scientist: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAV0lEQVR4nGNgIBP8R8NYwX/PzoT/qpZGYAxiY1P8//8DCayYAU3x/7OXboEFkRXAxFAUfv3+67+SsvL//+dZwRjEBolhKIQpQMcYCkGOx4axeggHJg0AAFKzbFf/ov6kAAAAAElFTkSuQmCC",
-      npc_gold_guardian: xC,
+      npc_gold_guardian: oR,
       npc_gold_watermelon_stag: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAWElEQVR4nGNgIAP8R6KR2Sjg/5sH4f9hNDKbAZ9ifIoYQIKfV6nAFSKxURVt8jH7f1+R9//ZVH8wBrFBYuiKwZIgiS27w8AYxAaJ4TQVWSEuN4IVo2HSAQCFHFiN1+WGFAAAAABJRU5ErkJggg==",
       npc_head_8_0: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAdElEQVR4nGNgIBIwIrH/41PDCFO06sIzMMNbQ5Jh643ncFVhBlJgdXCFSnJqDBJiMgwvXj1BMe7eo1tghSzIgrPqMlAU+eXUwNlMyBINs7gYZJTkwBjERgYoCud0iGBlYygEgStrdoAxVq/DPIQhi6mGMAAAMzccpadovTMAAAAASUVORK5CYII=",
       npc_human_archer: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAc0lEQVR4nGNkQID/DNgBI5wAKTqwtAOrKofoCrA6FmTBvinLUBQV5UTB2SgKf//5i8N2BoTVX7//YuC2VmfwZOYCC2z/+43h69GbDNycbGB1cIWHXBywmmS35wBYIRNOu9AA3I1ffnzFqxBmNdh6ItQQBgAsaRzpv2C9aQAAAABJRU5ErkJggg==",
       npc_human_desert_guard: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAfklEQVR4nGNkQID/DNgBI5wAKfpxdztWVRzKnmB1LDCBdReZGUSEhVAUvXn7Ds6GKwSB23MnoigUDIiFs5lgDH9PB4Zll+7DJUBskBiKQ0FunBoXy/D9xw8UEzk5OBiyFy1GdSPHpTMM+rw8KApvfv6CaTUhALMabD0RaggDACCpH2oXfV//AAAAAElFTkSuQmCC",
       npc_human_sentry: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYUlEQVR4nGNgIBIwIrH/41PDCFOkqamJVdX169fB6liQBXNMTVAUTTl9BkPj/6/ff4Gs/j81LhaMkcVQrO4JC2Xg5OBA0f39xw+GklWrUa2edvYcTh+DABNeWSRAdPAQDQAzViKkGPwLjwAAAABJRU5ErkJggg==",
-      npc_iron_guardian: qC,
+      npc_iron_guardian: ZR,
       npc_jackal_priest: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAdklEQVR4nGNgQID/UIyVzwQT1NTUZBAWFoYrALFBYjDFjDCF/zdyMGADjP4/wBQLTODVVXkGh8UwCyDgQOw/BgaGmyhWg8GZcxexsjEUmhjpM3z79g2MQWxkALcaBP79/cvAwc4OZyO8gGYiPoDQghqGuNQQBgAoCCX1U3QMRQAAAABJRU5ErkJggg==",
       npc_minotaur: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAaklEQVR4nGNgIAP8R6KR2Sjg/9fnF8AKMgJ8wBhZDEXhq9snwRimEMbHUPj1+6//DBYBCBMtAiBi6ApBkhMTsv5fXTwLjEHsODc37Ar/n2eFKwSxcSp8sGHO//8ftMEYxMamEKwYByYNAABmXHNFjN9ucgAAAABJRU5ErkJggg==",
       npc_minotaur_elder: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAg0lEQVR4nGNgIBIwIrH/41PDBFP09fkFMKMuJxWMQQAq9h9ZIcPXLz8ZXt0+CTcGxAaJwQBcIbeMIYOYqjlcAsQGiaG78X9ZajxDvJ01iuMWHjrK0DV7IVgd3EQQ2LMX4k50NgiwIHPy8mczMCiqgdlaOrcYyqdFYVgN9x0WgKyGMAAArq0oYNR0jFIAAAAASUVORK5CYII=",
@@ -1224,43 +1224,43 @@ export const modules = {
       npc_smuglyn: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAASklEQVR42mNgIAP8x4FRFWlqamLF6IrBgj1hoSgYq8Kv33/9txBi/z81LhaMQWyQGIbC5VmZcEUwDBLDUIiuCIRB1pOtkOjgIQgAhutlSTAZTWcAAAAASUVORK5CYII=",
       npc_tentacle_boy: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAiElEQVR4nGNkQID/DNgBI5wAKXJw8Wb48vkjhqozJ4+A1bHABKI0arEad+akBdzY/ybmNgw/f/3CqpCdjQ1sKthEM4scHM5DsZ7hf23T3v9fv//6z8srAmaj80FqmGC6JMSkUExB54Ot1ubgYSgoXQkWuHXrKpiG8UFyMAA3HkbjEIMoRqMxxABOskezGUlSqQAAAABJRU5ErkJggg==",
       npc_tentacle_girl: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAgklEQVR4nGNgwA3+QzEYMOGQ/H9viS7Dp4N+MDEGFmRFO8PqGYTFRBjevnrDwMCwjuHN4/twSRZsikD07U1BUKnLKArBQExYAIxh7OvX78DlUNzoMbEWKxtDYb11MFY2htXPPr5nOH7mApiW4hdECxAkX/fbJIGDYqV3MYwND0eiAQAf4TQGGrZ+tQAAAABJRU5ErkJggg==",
-      npc_tentacle_guy: aC,
+      npc_tentacle_guy: BR,
       npc_tentacle_guy_fisherman: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVElEQVR4nGNgIBP8R8NYwX9XD7//JuY2cMyARTFcUtfQDIxxKf4fHFaFgRPjWzAVVpXP/K+krAymYWycCrMzeuEKQWycCmE0jI1NIVgxEo3MJg0AAIJsWIj/ilEbAAAAAElFTkSuQmCC",
       npc_wolf_in_suit: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVUlEQVR4nGNgIAP8h2JcfDD47+0X/N/a1gEmCWY7u3piKAYrRMfOuBQqKSvDFYHYOBV+/f4LbCUIg9g4FYIUgEwCYbxu/P/5GtxEEBubQrBiHJg0AAB07Vx5G7sqWQAAAABJRU5ErkJggg==",
-      npc_wolf_security: VC,
+      npc_wolf_security: VR,
       player: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQElEQVR4nGNgoAD8h2K84D8M4FP8/9HLz3CFIDYuxUQpBEugK8SmGCy4cttpmASYjVUhkiJ8YhAJbO7GGT64AACb2mXTEt92cwAAAABJRU5ErkJggg==",
       portal: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAU0lEQVR4nGNgIAP8x4FRwP9YmzYwtlOJAWMYG10xWOL7zz9wfPLcDdwKQZL901eAMUixrowDpkKQbphJMFPxKoSZCMI4FYIkQBiZjdXnxAQPQQAAOtFywhRvXJwAAAAASUVORK5CYII=",
       portal_orange: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVUlEQVR4nGNgIAP8x4FRwP9YmzYwtlOJAWMYG10xWOLzJAs4/tSkglshSPJjldT/D4UCYMW6Mg6YCkG6YSbBTMWrEGQiDONUCJIAYWQ2Vp8TEzwEAQAA6GVEbqZ9DwAAAABJRU5ErkJggg==",
       quest: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAMElEQVR4nGNgoAD8h2K84P//Xwf+/35tSFDxf+or/P3a8P/nVSrEuZMoRVQ3EScAAIINMAfVJxmxAAAAAElFTkSuQmCC",
-      quest_search: jC,
-      quest_talk: lC,
+      quest_search: XR,
+      quest_talk: vR,
       scorched_flats: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUUlEQVR4nGNgIBP8R8NYwf8HT+6jYAYsisES/vIicEUg9t4TuzAUY5gGUoRNIVwxSBJGY1W0wF0LjKuMFcAYxsewGiYJchtMAzaFYMU4MGkAADMzb36mUd86AAAAAElFTkSuQmCC",
       scorp_pit: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgoAD8R8I4wf//l6rA+MUCG5yK/z/T1kc27T8uxeiCWBXCrUQ2cUOCHHYTQRIgU2BuxKYQxUSYApwmIgmi08QDAPP+Ttl2n8EbAAAAAElFTkSuQmCC",
       shooting_gallery: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIBP8x4IxwP9n2vpw/P+SFxijK4ZIIoGaKHP8CkE0WNH///83q2jjVwhj41WIDLAphCsGScIwLl+DFRMKGoIAAPFdcuGHeG5wAAAAAElFTkSuQmCC",
       smelt: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAP0lEQVR4nGNgIBH8J4DB4P+8efPwYgaoYjCnoKAAK56HTSG6lXgV/n5t+P9zhQphhSBFeBUS4xmwYmKChygAADFjjqm4UTd5AAAAAElFTkSuQmCC",
       talk: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAANElEQVR4nGNgIBH8x4Ph4D8+wICkGC6Ai2Yg2cRdx67hxBjuhGnA5xkUk3FJYphKSBFBAACXuoGa4rCq3AAAAABJRU5ErkJggg==",
       tower_of_doom: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAPUlEQVR4nGNgIAP8J0bsf1VBG0gQBduaucHYmAr/X/L6/9/aAKdCBpjiqKAkMMaliPoKwYrQFeJUjAOTBgBhWEzjnMiaVwAAAABJRU5ErkJggg==",
-      unknown: LC,
-      watermelon: dC
+      unknown: dR,
+      watermelon: kR
     };
 
-    function WC(DD, CD) {
-      const cD = document.createElement("img");
-      return cD.className = CD, cD.src = DD, cD.alt = "", cD.draggable = !1, cD
+    function iR(UU, RU) {
+      const gU = document.createElement("img");
+      return gU.className = RU, gU.src = UU, gU.alt = "", gU.draggable = !1, gU
     }
 
-    function sC(DD) {
-      var CD;
-      const cD = null !== (CD = YC[DD]) && void 0 !== CD ? CD : DD.startsWith("npc_") ? JC : LC;
-      if ("portal" !== DD) return WC(cD, "SkyblockMapIcon");
-      const ID = document.createElement("span");
-      ID.className = "SkyblockMapIcon Portal";
-      const pD = document.createElement("span");
-      return pD.className = "SkyblockMapIconTint", pD.style.maskImage = pD.style.webkitMaskImage = `url("${zC}")`, ID.append(WC(cD, "SkyblockMapIconLayer"), pD, WC(zC, "SkyblockMapIconLayer SkyblockMapIconShade")), ID
+    function AR(UU) {
+      var RU;
+      const gU = null !== (RU = FR[UU]) && void 0 !== RU ? RU : UU.startsWith("npc_") ? aR : dR;
+      if ("portal" !== UU) return iR(gU, "SkyblockMapIcon");
+      const tU = document.createElement("span");
+      tU.className = "SkyblockMapIcon Portal";
+      const pU = document.createElement("span");
+      return pU.className = "SkyblockMapIconTint", pU.style.maskImage = pU.style.webkitMaskImage = `url("${rR}")`, tU.append(iR(gU, "SkyblockMapIconLayer"), pU, iR(rR, "SkyblockMapIconLayer SkyblockMapIconShade")), tU
     }
-    var EC = cD(37885),
-      eC = cD(4095);
-    const uC = [{
+    var zR = gU(38061),
+      MR = gU(3942);
+    const DR = [{
       lobes: [3, 4],
       amount: [.04, .055]
     }, {
@@ -1268,52 +1268,52 @@ export const modules = {
       amount: [.025, .035]
     }];
 
-    function hC(DD) {
-      const CD = new eC.f(DD);
+    function LR(UU) {
+      const RU = new MR.m(UU);
       return {
         radius: 45,
         squareness: 3,
-        wobbles: uC.map((DD => {
+        wobbles: DR.map((UU => {
           let {
-            lobes: cD,
-            amount: ID
-          } = DD;
+            lobes: gU,
+            amount: tU
+          } = UU;
           return {
-            lobes: cD[Math.floor(CD.next() * cD.length)],
-            amount: ID[0] + CD.next() * (ID[1] - ID[0]),
-            phase: 2 * CD.next() * Math.PI
+            lobes: gU[Math.floor(RU.next() * gU.length)],
+            amount: tU[0] + RU.next() * (tU[1] - tU[0]),
+            phase: 2 * RU.next() * Math.PI
           }
         })),
         samples: 160
       }
     }
 
-    function rC(DD) {
+    function NR(UU) {
       let {
-        radius: CD,
-        squareness: cD,
-        wobbles: ID,
-        samples: pD
-      } = DD;
-      const iD = [];
-      for (let fD = 0; fD < pD; fD++) {
-        const DD = 2 * Math.PI * fD / pD,
-          bD = Math.cos(DD),
-          QD = Math.sin(DD),
-          wD = CD * (Math.abs(bD) ** cD + Math.abs(QD) ** cD) ** (-1 / cD) * ID.reduce(((CD, cD) => {
+        radius: RU,
+        squareness: gU,
+        wobbles: tU,
+        samples: pU
+      } = UU;
+      const EU = [];
+      for (let PU = 0; PU < pU; PU++) {
+        const UU = 2 * Math.PI * PU / pU,
+          TU = Math.cos(UU),
+          qU = Math.sin(UU),
+          KU = RU * (Math.abs(TU) ** gU + Math.abs(qU) ** gU) ** (-1 / gU) * tU.reduce(((RU, gU) => {
             let {
-              lobes: ID,
-              amount: pD,
-              phase: iD
-            } = cD;
-            return CD + pD * Math.sin(ID * DD + iD)
+              lobes: tU,
+              amount: pU,
+              phase: EU
+            } = gU;
+            return RU + pU * Math.sin(tU * UU + EU)
           }), 1);
-        iD.push(`${(50+wD*bD).toFixed(2)} ${(50+wD*QD).toFixed(2)}`)
+        EU.push(`${(50+KU*TU).toFixed(2)} ${(50+KU*qU).toFixed(2)}`)
       }
-      return `M${iD.join("L")}Z`
+      return `M${EU.join("L")}Z`
     }
-    const AC = ".InGameHeaderContainer, .TopRightElementsLeft > *, .TopRightElementsRight > *, .MiddleTextTopContainer";
-    class FC {
+    const lR = ".InGameHeaderContainer, .TopRightElementsLeft > *, .TopRightElementsRight > *, .MiddleTextTopContainer";
+    class OR {
       constructor() {
         this.compassSpacing = 1, this.compassSize = {
           trackHalfWidth: 0,
@@ -1334,598 +1334,598 @@ export const modules = {
         }, this.viewport = {
           width: 0,
           height: 0
-        }, this.stopLayout = null, this.stopWaypoint = null, this.stopWaypointOrigin = null, this.waypointOriginToken = null, this.waypointLaunch = null, this.markers = new Map, this.cardinals = [], this.frame = null, this.Lt = !1, this.mountCompass = DD => {
-          var CD;
-          if (null === (CD = this.stopLayout) || void 0 === CD || CD.call(this), this.stopLayout = null, this.markers.clear(), this.cardinals = [], this.compass = null, !DD || this.Lt) return;
-          const cD = DD.querySelector(".SkyblockCompassTrack");
+        }, this.stopLayout = null, this.stopWaypoint = null, this.stopWaypointOrigin = null, this.waypointOriginToken = null, this.waypointLaunch = null, this.markers = new Map, this.cardinals = [], this.frame = null, this.pC = !1, this.mountCompass = UU => {
+          var RU;
+          if (null === (RU = this.stopLayout) || void 0 === RU || RU.call(this), this.stopLayout = null, this.markers.clear(), this.cardinals = [], this.compass = null, !UU || this.pC) return;
+          const gU = UU.querySelector(".SkyblockCompassTrack");
           this.compass = {
-            root: DD,
-            track: cD,
-            label: DD.querySelector(".SkyblockCompassLabel")
-          }, cD.replaceChildren();
-          for (let pD = 0; pD < 4; pD++) {
-            const DD = document.createElement("span");
-            DD.className = "SkyblockCompassCardinal", cD.appendChild(DD), this.cardinals.push(DD)
+            root: UU,
+            track: gU,
+            label: UU.querySelector(".SkyblockCompassLabel")
+          }, gU.replaceChildren();
+          for (let pU = 0; pU < 4; pU++) {
+            const UU = document.createElement("span");
+            UU.className = "SkyblockCompassCardinal", gU.appendChild(UU), this.cardinals.push(UU)
           }
-          const ID = (0, EC.d)(AC, [DD], this.layout);
+          const tU = (0, zR.b)(lR, [UU], this.layout);
           this.stopLayout = () => {
-            ID(), cD.replaceChildren()
+            tU(), gU.replaceChildren()
           }, this.render(this.frame)
-        }, this.mountTerrain = DD => {
-          this.terrain = this.Lt ? null : DD, this.render(this.frame)
-        }, this.mountMinimapSearchArea = DD => {
-          this.mountSearchArea("minimap", DD)
-        }, this.mountMapSearchArea = DD => {
-          this.mountSearchArea("map", DD)
-        }, this.mountPlayer = DD => {
-          this.player = this.Lt ? null : DD, this.render(this.frame)
-        }, this.mountWaypoint = DD => {
-          var CD, cD;
-          if (null === (CD = this.stopWaypoint) || void 0 === CD || CD.call(this), this.stopWaypoint = null, this.waypoint = null, this.markerIcon = null, !DD || this.Lt) return;
-          const ID = DD.querySelector(".SkyblockQuestWaypointMarker");
-          ID.replaceChildren(sC("quest")), this.markerIcon = "quest", this.waypoint = {
-            root: DD,
-            marker: ID,
-            clip: DD.querySelector(".SkyblockQuestWaypointTextClip"),
-            text: DD.querySelector(".SkyblockQuestWaypointText"),
-            label: DD.querySelector(".SkyblockQuestWaypointLabel"),
-            distance: DD.querySelector(".SkyblockQuestWaypointDistance"),
-            hint: DD.querySelector(".SkyblockQuestWaypointHint")
+        }, this.mountTerrain = UU => {
+          this.terrain = this.pC ? null : UU, this.render(this.frame)
+        }, this.mountMinimapSearchArea = UU => {
+          this.mountSearchArea("minimap", UU)
+        }, this.mountMapSearchArea = UU => {
+          this.mountSearchArea("map", UU)
+        }, this.mountPlayer = UU => {
+          this.player = this.pC ? null : UU, this.render(this.frame)
+        }, this.mountWaypoint = UU => {
+          var RU, gU;
+          if (null === (RU = this.stopWaypoint) || void 0 === RU || RU.call(this), this.stopWaypoint = null, this.waypoint = null, this.markerIcon = null, !UU || this.pC) return;
+          const tU = UU.querySelector(".SkyblockQuestWaypointMarker");
+          tU.replaceChildren(AR("quest")), this.markerIcon = "quest", this.waypoint = {
+            root: UU,
+            marker: tU,
+            clip: UU.querySelector(".SkyblockQuestWaypointTextClip"),
+            text: UU.querySelector(".SkyblockQuestWaypointText"),
+            label: UU.querySelector(".SkyblockQuestWaypointLabel"),
+            distance: UU.querySelector(".SkyblockQuestWaypointDistance"),
+            hint: UU.querySelector(".SkyblockQuestWaypointHint")
           };
-          const pD = () => {
+          const pU = () => {
               this.waypointMarkerSize = {
-                width: ID.offsetWidth,
-                height: ID.offsetHeight
+                width: tU.offsetWidth,
+                height: tU.offsetHeight
               }, this.waypointInset = {
-                x: ID.offsetWidth / 2 + 8,
-                top: ID.offsetHeight + 8,
+                x: tU.offsetWidth / 2 + 8,
+                top: tU.offsetHeight + 8,
                 bottom: 8
               }
             },
-            iD = new ResizeObserver((() => {
-              pD(), this.render(this.frame)
+            EU = new ResizeObserver((() => {
+              pU(), this.render(this.frame)
             }));
-          iD.observe(ID, {
+          EU.observe(tU, {
             box: "border-box"
           });
-          const fD = () => {
+          const PU = () => {
             this.viewport = {
               width: window.innerWidth,
               height: window.innerHeight
             }
           };
-          window.addEventListener("resize", fD), null === (cD = window.visualViewport) || void 0 === cD || cD.addEventListener("resize", fD), this.stopWaypoint = () => {
-            var DD;
-            iD.disconnect(), window.removeEventListener("resize", fD), null === (DD = window.visualViewport) || void 0 === DD || DD.removeEventListener("resize", fD)
-          }, fD(), pD(), this.render(this.frame)
-        }, this.mountWaypointOrigin = DD => {
-          var CD;
-          if (null === (CD = this.stopWaypointOrigin) || void 0 === CD || CD.call(this), this.stopWaypointOrigin = null, this.waypointLaunch = null, this.waypointOriginToken = DD && !this.Lt ? Number(DD.dataset.notificationToken) : null, DD && !this.Lt && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-            const CD = {
-              nameKey: DD.dataset.waypointNameKey,
+          window.addEventListener("resize", PU), null === (gU = window.visualViewport) || void 0 === gU || gU.addEventListener("resize", PU), this.stopWaypoint = () => {
+            var UU;
+            EU.disconnect(), window.removeEventListener("resize", PU), null === (UU = window.visualViewport) || void 0 === UU || UU.removeEventListener("resize", PU)
+          }, PU(), pU(), this.render(this.frame)
+        }, this.mountWaypointOrigin = UU => {
+          var RU;
+          if (null === (RU = this.stopWaypointOrigin) || void 0 === RU || RU.call(this), this.stopWaypointOrigin = null, this.waypointLaunch = null, this.waypointOriginToken = UU && !this.pC ? Number(UU.dataset.notificationToken) : null, UU && !this.pC && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            const RU = {
+              nameKey: UU.dataset.waypointNameKey,
               x: 0,
               y: 0,
               startedAt: null
             };
-            this.waypointLaunch = CD;
-            const cD = () => {
-                const cD = DD.getBoundingClientRect();
-                CD.x = (cD.left + cD.width / 2) / window.innerWidth * 100, CD.y = (cD.top + cD.height / 2) / window.innerHeight * 100
+            this.waypointLaunch = RU;
+            const gU = () => {
+                const gU = UU.getBoundingClientRect();
+                RU.x = (gU.left + gU.width / 2) / window.innerWidth * 100, RU.y = (gU.top + gU.height / 2) / window.innerHeight * 100
               },
-              ID = new ResizeObserver(cD);
-            ID.observe(DD.parentElement), ID.observe(DD), window.addEventListener("resize", cD), this.stopWaypointOrigin = () => {
-              ID.disconnect(), window.removeEventListener("resize", cD)
-            }, cD()
+              tU = new ResizeObserver(gU);
+            tU.observe(UU.parentElement), tU.observe(UU), window.addEventListener("resize", gU), this.stopWaypointOrigin = () => {
+              tU.disconnect(), window.removeEventListener("resize", gU)
+            }, gU()
           }
           this.render(this.frame)
         }, this.layout = () => {
           if (!this.compass) return;
-          const DD = this.compass.root,
-            CD = getComputedStyle(DD),
-            cD = getComputedStyle(document.documentElement),
-            ID = parseFloat(cD.fontSize),
-            pD = parseFloat(CD.getPropertyValue("--compass-icon-size")) * ID,
-            iD = "1" === CD.getPropertyValue("--compass-fit-top").trim(),
-            fD = iD ? 1 : 8,
-            bD = Array.from(document.querySelectorAll(AC), (DD => {
-              var CD;
-              return (null !== (CD = DD.querySelector(".MiddleTextTop")) && void 0 !== CD ? CD : DD).getBoundingClientRect()
-            })).filter((DD => DD.width > 0 && DD.height > 0));
-          let QD = (parseFloat(cD.getPropertyValue("--notchTop")) || 0) + fD,
-            wD = "";
-          if (iD) {
-            const CD = window.innerWidth / 2,
-              cD = DD.getBoundingClientRect().height,
-              iD = [QD, ...bD.map((DD => Math.max(QD, DD.bottom + fD)))].sort(((DD, CD) => DD - CD));
-            for (const DD of iD) {
-              let iD = CD - 8;
-              for (const ID of bD) ID.bottom + fD <= DD || ID.top >= DD + cD + fD || (iD = Math.min(iD, ID.right <= CD ? CD - ID.right - 8 : ID.left - CD - 8));
-              const SD = 2 * iD - pD;
-              if (SD >= 16 * ID) {
-                wD = `${SD}px`, QD = DD;
+          const UU = this.compass.root,
+            RU = getComputedStyle(UU),
+            gU = getComputedStyle(document.documentElement),
+            tU = parseFloat(gU.fontSize),
+            pU = parseFloat(RU.getPropertyValue("--compass-icon-size")) * tU,
+            EU = "1" === RU.getPropertyValue("--compass-fit-top").trim(),
+            PU = EU ? 1 : 8,
+            TU = Array.from(document.querySelectorAll(lR), (UU => {
+              var RU;
+              return (null !== (RU = UU.querySelector(".MiddleTextTop")) && void 0 !== RU ? RU : UU).getBoundingClientRect()
+            })).filter((UU => UU.width > 0 && UU.height > 0));
+          let qU = (parseFloat(gU.getPropertyValue("--notchTop")) || 0) + PU,
+            KU = "";
+          if (EU) {
+            const RU = window.innerWidth / 2,
+              gU = UU.getBoundingClientRect().height,
+              EU = [qU, ...TU.map((UU => Math.max(qU, UU.bottom + PU)))].sort(((UU, RU) => UU - RU));
+            for (const UU of EU) {
+              let EU = RU - 8;
+              for (const tU of TU) tU.bottom + PU <= UU || tU.top >= UU + gU + PU || (EU = Math.min(EU, tU.right <= RU ? RU - tU.right - 8 : tU.left - RU - 8));
+              const cU = 2 * EU - pU;
+              if (cU >= 16 * tU) {
+                KU = `${cU}px`, qU = UU;
                 break
               }
             }
           }
-          DD.style.maxWidth !== wD && (DD.style.maxWidth = wD);
-          const SD = DD.getBoundingClientRect(),
-            BD = this.compassSize.trackHalfWidth;
-          if (SD.width > 0) {
-            const DD = this.compass.track.getBoundingClientRect();
+          UU.style.maxWidth !== KU && (UU.style.maxWidth = KU);
+          const cU = UU.getBoundingClientRect(),
+            GU = this.compassSize.trackHalfWidth;
+          if (cU.width > 0) {
+            const UU = this.compass.track.getBoundingClientRect();
             this.compassSize = {
-              trackHalfWidth: DD.width / 2,
+              trackHalfWidth: UU.width / 2,
               screenHalfWidth: window.innerWidth / 2
-            }, this.compassSpacing = 4 * pD / DD.width
+            }, this.compassSpacing = 4 * pU / UU.width
           }
-          if (!wD)
-            for (const yD of bD) yD.right > SD.left - 8 && yD.left < SD.right + 8 && (QD = Math.max(QD, yD.bottom + fD));
-          DD.style.top = `${QD}px`, this.compassSize.trackHalfWidth !== BD && this.render(this.frame)
+          if (!KU)
+            for (const jU of TU) jU.right > cU.left - 8 && jU.left < cU.right + 8 && (qU = Math.max(qU, jU.bottom + PU));
+          UU.style.top = `${qU}px`, this.compassSize.trackHalfWidth !== GU && this.render(this.frame)
         }
       }
-      mountSearchArea(DD, CD) {
-        this.searchAreas[DD] = this.Lt ? null : CD, this.render(this.frame)
+      mountSearchArea(UU, RU) {
+        this.searchAreas[UU] = this.pC ? null : RU, this.render(this.frame)
       }
-      render(DD) {
-        if (this.Lt) return;
-        if (this.frame = DD, this.compass && (Dc(this.compass.root, !DD), DD)) {
-          const CD = this.compassSize.trackHalfWidth / 50;
-          DD.compass.cardinals.forEach(((DD, cD) => {
-            const ID = this.cardinals[cD];
-            ID.textContent !== DD.name && (ID.textContent = DD.name), Dc(ID, DD.hidden), ID.style.translate = DD.left * CD + "px"
+      render(UU) {
+        if (this.pC) return;
+        if (this.frame = UU, this.compass && (Ug(this.compass.root, !UU), UU)) {
+          const RU = this.compassSize.trackHalfWidth / 50;
+          UU.compass.cardinals.forEach(((UU, gU) => {
+            const tU = this.cardinals[gU];
+            tU.textContent !== UU.name && (tU.textContent = UU.name), Ug(tU, UU.hidden), tU.style.translate = UU.left * RU + "px"
           }));
-          const cD = new Set;
-          DD.compass.markers.forEach(((ID, pD) => {
-            var iD;
-            cD.add(ID.id);
-            let fD = this.markers.get(ID.id);
-            fD || (fD = document.createElement("span"), fD.className = "SkyblockCompassMarker", this.markers.set(ID.id, fD), this.compass.track.appendChild(fD)), fD.dataset.icon !== ID.icon && (fD.dataset.icon = ID.icon, fD.replaceChildren(sC(ID.icon))), fD.style.color = null !== (iD = ID.colour) && void 0 !== iD ? iD : "", fD.style.translate = ID.left * CD + "px", fD.style.zIndex = String(DD.compass.markers.length - pD), fD.title !== ID.name && (fD.title = ID.name)
+          const gU = new Set;
+          UU.compass.markers.forEach(((tU, pU) => {
+            var EU;
+            gU.add(tU.id);
+            let PU = this.markers.get(tU.id);
+            PU || (PU = document.createElement("span"), PU.className = "SkyblockCompassMarker", this.markers.set(tU.id, PU), this.compass.track.appendChild(PU)), PU.dataset.icon !== tU.icon && (PU.dataset.icon = tU.icon, PU.replaceChildren(AR(tU.icon))), PU.style.color = null !== (EU = tU.colour) && void 0 !== EU ? EU : "", PU.style.translate = tU.left * RU + "px", PU.style.zIndex = String(UU.compass.markers.length - pU), PU.title !== tU.name && (PU.title = tU.name)
           }));
-          for (const [DD, ID] of this.markers) cD.has(DD) || (ID.remove(), this.markers.delete(DD));
-          this.compass.label.textContent !== DD.compass.label && (this.compass.label.textContent = DD.compass.label)
+          for (const [UU, tU] of this.markers) gU.has(UU) || (tU.remove(), this.markers.delete(UU));
+          this.compass.label.textContent !== UU.compass.label && (this.compass.label.textContent = UU.compass.label)
         }
-        this.terrain && (Dc(this.terrain, !(null !== DD && void 0 !== DD && DD.minimap)), null !== DD && void 0 !== DD && DD.minimap && (this.terrain.style.transform = DD.minimap.transform, this.terrain.style.setProperty("--minimap-icon-rotation", DD.minimap.iconRotation)));
-        const CD = null === DD || void 0 === DD ? void 0 : DD.searchArea;
-        for (const cD of [this.searchAreas.minimap, this.searchAreas.map])
-          if (cD && (Dc(cD, !CD), CD)) {
-            if (this.searchAreaPath.seed !== CD.shapeSeed && (this.searchAreaPath = {
-                seed: CD.shapeSeed,
-                d: rC(hC(CD.shapeSeed))
-              }), cD.dataset.shapeSeed !== CD.shapeSeed) {
-              cD.dataset.shapeSeed = CD.shapeSeed;
-              for (const DD of cD.querySelectorAll("path")) DD.setAttribute("d", this.searchAreaPath.d)
+        this.terrain && (Ug(this.terrain, !(null !== UU && void 0 !== UU && UU.minimap)), null !== UU && void 0 !== UU && UU.minimap && (this.terrain.style.transform = UU.minimap.transform, this.terrain.style.setProperty("--minimap-icon-rotation", UU.minimap.iconRotation)));
+        const RU = null === UU || void 0 === UU ? void 0 : UU.searchArea;
+        for (const gU of [this.searchAreas.minimap, this.searchAreas.map])
+          if (gU && (Ug(gU, !RU), RU)) {
+            if (this.searchAreaPath.seed !== RU.shapeSeed && (this.searchAreaPath = {
+                seed: RU.shapeSeed,
+                d: NR(LR(RU.shapeSeed))
+              }), gU.dataset.shapeSeed !== RU.shapeSeed) {
+              gU.dataset.shapeSeed = RU.shapeSeed;
+              for (const UU of gU.querySelectorAll("path")) UU.setAttribute("d", this.searchAreaPath.d)
             }
-            cD.style.left = `${CD.left}%`, cD.style.top = `${CD.top}%`, cD.style.width = `${CD.width}%`, cD.style.height = `${CD.height}%`
-          } if (this.player && (Dc(this.player, !(null !== DD && void 0 !== DD && DD.player) || DD.player.hidden), null !== DD && void 0 !== DD && DD.player && (this.player.style.left = `${DD.player.left}%`, this.player.style.top = `${DD.player.top}%`, this.player.style.setProperty("--map-player-rotation", DD.player.rotation))), this.waypoint) {
+            gU.style.left = `${RU.left}%`, gU.style.top = `${RU.top}%`, gU.style.width = `${RU.width}%`, gU.style.height = `${RU.height}%`
+          } if (this.player && (Ug(this.player, !(null !== UU && void 0 !== UU && UU.player) || UU.player.hidden), null !== UU && void 0 !== UU && UU.player && (this.player.style.left = `${UU.player.left}%`, this.player.style.top = `${UU.player.top}%`, this.player.style.setProperty("--map-player-rotation", UU.player.rotation))), this.waypoint) {
           const {
-            root: CD,
-            marker: cD,
-            clip: ID,
-            text: pD,
-            label: iD,
-            distance: fD,
-            hint: bD
-          } = this.waypoint, QD = !(null !== DD && void 0 !== DD && DD.waypoint) || null !== DD.waypoint.popupToken && DD.waypoint.popupToken !== this.waypointOriginToken;
-          Dc(CD, QD);
-          let wD = 1;
-          const SD = this.waypointLaunch;
-          if (!QD && SD && DD.waypoint.nameKey === SD.nameKey) {
-            const DD = performance.now();
-            SD.startedAt ??= DD, wD = Math.min(1, Math.max(0, (DD - SD.startedAt - 450) / 1e3)), cD.style.opacity = String(Math.min(1, (DD - SD.startedAt) / 150)), 1 === wD && (this.waypointLaunch = null)
-          } else cD.style.opacity = "", SD && null !== SD.startedAt && (this.waypointLaunch = null);
-          if (CD.classList.toggle("Launching", wD < 1), null !== DD && void 0 !== DD && DD.waypoint) {
-            const CD = this.waypointInset,
-              QD = "quest_talk" === DD.waypoint.markerIcon ? function(DD, CD, cD) {
-                if (!DD.text || null === DD.blockHeight || 0 === DD.nearness) return DD;
-                const ID = DD.blockHeight / 100 * cD.height,
-                  pD = -DD.nearness * (Cc * ID + CD.width / 2),
-                  iD = DD.nearness * (cc * ID + CD.height / 2);
+            root: RU,
+            marker: gU,
+            clip: tU,
+            text: pU,
+            label: EU,
+            distance: PU,
+            hint: TU
+          } = this.waypoint, qU = !(null !== UU && void 0 !== UU && UU.waypoint) || null !== UU.waypoint.popupToken && UU.waypoint.popupToken !== this.waypointOriginToken;
+          Ug(RU, qU);
+          let KU = 1;
+          const cU = this.waypointLaunch;
+          if (!qU && cU && UU.waypoint.nameKey === cU.nameKey) {
+            const UU = performance.now();
+            cU.startedAt ??= UU, KU = Math.min(1, Math.max(0, (UU - cU.startedAt - 450) / 1e3)), gU.style.opacity = String(Math.min(1, (UU - cU.startedAt) / 150)), 1 === KU && (this.waypointLaunch = null)
+          } else gU.style.opacity = "", cU && null !== cU.startedAt && (this.waypointLaunch = null);
+          if (RU.classList.toggle("Launching", KU < 1), null !== UU && void 0 !== UU && UU.waypoint) {
+            const RU = this.waypointInset,
+              qU = "quest_talk" === UU.waypoint.markerIcon ? function(UU, RU, gU) {
+                if (!UU.text || null === UU.blockHeight || 0 === UU.nearness) return UU;
+                const tU = UU.blockHeight / 100 * gU.height,
+                  pU = -UU.nearness * (Rg * tU + RU.width / 2),
+                  EU = UU.nearness * (gg * tU + RU.height / 2);
                 return {
-                  ...DD,
+                  ...UU,
                   text: {
-                    x: DD.text.x + pD / cD.width * 100,
-                    y: DD.text.y + iD / cD.height * 100
+                    x: UU.text.x + pU / gU.width * 100,
+                    y: UU.text.y + EU / gU.height * 100
                   }
                 }
-              }(DD.waypoint, this.waypointMarkerSize, this.viewport) : DD.waypoint,
-              BD = (0, HC.e)(QD, CD, this.viewport),
-              yD = wD * wD * (3 - 2 * wD),
-              MD = wD < 1 ? SD.x + (BD.x - SD.x) * yD : BD.x,
-              tD = wD < 1 ? SD.y + (BD.y - SD.y) * yD : BD.y;
-            cD.style.translate = `${MD}vw ${tD}vh`, ID.style.clipPath = `inset(${CD.top}px ${CD.x}px ${CD.bottom}px)`, Dc(pD, wD < 1 || !DD.waypoint.text), pD.style.opacity = String(1 - DD.waypoint.nearness), DD.waypoint.text && (pD.style.translate = `${DD.waypoint.text.x}vw ${DD.waypoint.text.y}vh`), iD.textContent !== DD.waypoint.name && (iD.textContent = DD.waypoint.name), this.markerIcon !== DD.waypoint.markerIcon && (this.markerIcon = DD.waypoint.markerIcon, cD.replaceChildren(sC(this.markerIcon))), fD.textContent !== DD.waypoint.distance && (fD.textContent = DD.waypoint.distance), Dc(bD, null === DD.waypoint.hint), null !== DD.waypoint.hint && bD.textContent !== DD.waypoint.hint && (bD.textContent = DD.waypoint.hint)
+              }(UU.waypoint, this.waypointMarkerSize, this.viewport) : UU.waypoint,
+              GU = (0, nR.e)(qU, RU, this.viewport),
+              jU = KU * KU * (3 - 2 * KU),
+              uU = KU < 1 ? cU.x + (GU.x - cU.x) * jU : GU.x,
+              CU = KU < 1 ? cU.y + (GU.y - cU.y) * jU : GU.y;
+            gU.style.translate = `${uU}vw ${CU}vh`, tU.style.clipPath = `inset(${RU.top}px ${RU.x}px ${RU.bottom}px)`, Ug(pU, KU < 1 || !UU.waypoint.text), pU.style.opacity = String(1 - UU.waypoint.nearness), UU.waypoint.text && (pU.style.translate = `${UU.waypoint.text.x}vw ${UU.waypoint.text.y}vh`), EU.textContent !== UU.waypoint.name && (EU.textContent = UU.waypoint.name), this.markerIcon !== UU.waypoint.markerIcon && (this.markerIcon = UU.waypoint.markerIcon, gU.replaceChildren(AR(this.markerIcon))), PU.textContent !== UU.waypoint.distance && (PU.textContent = UU.waypoint.distance), Ug(TU, null === UU.waypoint.hint), null !== UU.waypoint.hint && TU.textContent !== UU.waypoint.hint && (TU.textContent = UU.waypoint.hint)
           }
         }
       }
       dispose() {
-        var DD, CD;
-        this.mountWaypointOrigin(null), this.render(null), null === (DD = this.stopLayout) || void 0 === DD || DD.call(this), this.stopLayout = null, null === (CD = this.stopWaypoint) || void 0 === CD || CD.call(this), this.stopWaypoint = null, this.compass = null, this.terrain = null, this.searchAreas = {
+        var UU, RU;
+        this.mountWaypointOrigin(null), this.render(null), null === (UU = this.stopLayout) || void 0 === UU || UU.call(this), this.stopLayout = null, null === (RU = this.stopWaypoint) || void 0 === RU || RU.call(this), this.stopWaypoint = null, this.compass = null, this.terrain = null, this.searchAreas = {
           minimap: null,
           map: null
-        }, this.player = null, this.waypoint = null, this.markers.clear(), this.cardinals = [], this.Lt = !0
+        }, this.player = null, this.waypoint = null, this.markers.clear(), this.cardinals = [], this.pC = !0
       }
     }
 
-    function Dc(DD, CD) {
-      DD.hidden !== CD && (DD.hidden = CD)
+    function Ug(UU, RU) {
+      UU.hidden !== RU && (UU.hidden = RU)
     }
-    const Cc = .55,
-      cc = .6;
-    const Ic = {
+    const Rg = .55,
+      gg = .6;
+    const tg = {
       talk: "quest_talk",
       search: "quest_search"
     };
-    class pc {
-      constructor(DD, CD, cD, ID) {
-        this.map = DD, this.quests = CD, this.compass = cD, this.display = new FC, this.translate = void 0, this.locale = "en-GB", this.metresFormat = new Intl.NumberFormat(this.locale), this.Lt = !1, this.snapshot = null, this.texts = new Map, this.translate = ID
+    class pg {
+      constructor(UU, RU, gU, tU) {
+        this.map = UU, this.quests = RU, this.compass = gU, this.display = new OR, this.translate = void 0, this.locale = "en-GB", this.metresFormat = new Intl.NumberFormat(this.locale), this.pC = !1, this.snapshot = null, this.texts = new Map, this.translate = tU
       }
-      setTranslator(DD, CD) {
-        this.translate = DD, this.locale = CD, this.metresFormat = new Intl.NumberFormat(CD), this.texts.clear()
+      setTranslator(UU, RU) {
+        this.translate = UU, this.locale = RU, this.metresFormat = new Intl.NumberFormat(RU), this.texts.clear()
       }
-      translateCached(DD, CD) {
-        const cD = void 0 === CD ? DD : `${DD} ${CD}`;
-        let ID = this.texts.get(cD);
-        return void 0 === ID && (this.texts.size >= 500 && this.texts.clear(), ID = this.translate(DD, void 0 === CD ? void 0 : {
-          distance: CD
-        }), this.texts.set(cD, ID)), ID
+      translateCached(UU, RU) {
+        const gU = void 0 === RU ? UU : `${UU} ${RU}`;
+        let tU = this.texts.get(gU);
+        return void 0 === tU && (this.texts.size >= 500 && this.texts.clear(), tU = this.translate(UU, void 0 === RU ? void 0 : {
+          distance: RU
+        }), this.texts.set(gU, tU)), tU
       }
       getSnapshot() {
         return this.snapshot
       }
-      afterRender(DD, CD, cD) {
-        if (this.Lt) return;
-        if (!DD) return this.snapshot = null, void this.display.render(null);
-        const ID = this.map.getSnapshot().map,
-          QD = cD.cameraHeading,
-          wD = {
+      afterRender(UU, RU, gU) {
+        if (this.pC) return;
+        if (!UU) return this.snapshot = null, void this.display.render(null);
+        const tU = this.map.getSnapshot().map,
+          qU = gU.cameraHeading,
+          KU = {
             ...this.display.compassSize,
-            tanHalfFovX: cD.tanHalfFovX,
-            pitch: cD.cameraPitch
+            tanHalfFovX: gU.tanHalfFovX,
+            pitch: gU.cameraPitch
           },
-          SD = [];
-        if (ID)
-          for (const pD of this.compass.frame(DD, QD, CD)) {
-            const DD = ZD(pD.offset, wD);
-            null !== DD && SD.push({
-              ...pD,
-              left: DD
+          cU = [];
+        if (tU)
+          for (const pU of this.compass.frame(UU, qU, RU)) {
+            const UU = hU(pU.offset, KU);
+            null !== UU && cU.push({
+              ...pU,
+              left: UU
             })
           }
-        const BD = function(DD, CD) {
-            const cD = [],
-              ID = DD => "quest" === DD.kind ? DD.distance - 1 : DD.distance,
-              pD = [...DD].sort(((DD, CD) => ID(DD) - ID(CD) || DD.id.localeCompare(CD.id)));
-            for (const iD of pD) {
-              let DD = !1;
-              if ("quest" !== iD.kind)
-                for (const ID of cD)
-                  if (Math.abs(ID.left - iD.left) < CD) {
-                    DD = !0;
+        const GU = function(UU, RU) {
+            const gU = [],
+              tU = UU => "quest" === UU.kind ? UU.distance - 1 : UU.distance,
+              pU = [...UU].sort(((UU, RU) => tU(UU) - tU(RU) || UU.id.localeCompare(RU.id)));
+            for (const EU of pU) {
+              let UU = !1;
+              if ("quest" !== EU.kind)
+                for (const tU of gU)
+                  if (Math.abs(tU.left - EU.left) < RU) {
+                    UU = !0;
                     break
-                  } DD || cD.push(iD)
+                  } UU || gU.push(EU)
             }
-            return cD
-          }(SD, this.display.compassSpacing),
-          yD = function(DD) {
-            let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 36,
-              cD = null;
-            for (const ID of DD) Math.abs(ID.offset) <= CD && (!cD || ID.distance < cD.distance || ID.distance === cD.distance && Math.abs(ID.offset) < Math.abs(cD.offset)) && (cD = ID);
-            return cD
-          }(BD),
-          MD = DD => {
-            var CD;
-            return null !== (CD = DD.displayName) && void 0 !== CD ? CD : this.translateCached(DD.nameKey)
+            return gU
+          }(cU, this.display.compassSpacing),
+          jU = function(UU) {
+            let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 36,
+              gU = null;
+            for (const tU of UU) Math.abs(tU.offset) <= RU && (!gU || tU.distance < gU.distance || tU.distance === gU.distance && Math.abs(tU.offset) < Math.abs(gU.offset)) && (gU = tU);
+            return gU
+          }(GU),
+          uU = UU => {
+            var RU;
+            return null !== (RU = UU.displayName) && void 0 !== RU ? RU : this.translateCached(UU.nameKey)
           },
-          tD = {
+          CU = {
             compass: {
-              markers: BD.map((DD => ({
-                id: DD.id,
-                icon: DD.icon,
-                colour: DD.colour,
-                name: MD(DD),
-                left: DD.left
+              markers: GU.map((UU => ({
+                id: UU.id,
+                icon: UU.icon,
+                colour: UU.colour,
+                name: uU(UU),
+                left: UU.left
               }))),
-              cardinals: fD.map((DD => {
+              cardinals: PU.map((UU => {
                 let {
-                  name: CD,
-                  bearing: cD
-                } = DD;
-                const ID = ZD(pD.e.computeShortestRotation(QD, cD), wD);
+                  name: RU,
+                  bearing: gU
+                } = UU;
+                const tU = hU(pU.c.computeShortestRotation(qU, gU), KU);
                 return {
-                  name: CD,
-                  left: null !== ID && void 0 !== ID ? ID : 0,
-                  hidden: null === ID
+                  name: RU,
+                  left: null !== tU && void 0 !== tU ? tU : 0,
+                  hidden: null === tU
                 }
               })),
-              label: yD ? `${MD(yD)} \xb7 ${this.translateCached("skyblockGame:waypointDistance",nD(yD.distance,this.locale))}` : ""
+              label: jU ? `${uU(jU)} \xb7 ${this.translateCached("skyblockGame:waypointDistance",IU(jU.distance,this.locale))}` : ""
             },
             minimap: null,
             searchArea: null,
             player: null,
             waypoint: null
           };
-        if (null !== ID && void 0 !== ID && ID.background) {
-          const CD = DD[0] - ID.mapOrigin[0],
-            cD = DD[2] - ID.mapOrigin[2],
+        if (null !== tU && void 0 !== tU && tU.background) {
+          const RU = UU[0] - tU.mapOrigin[0],
+            gU = UU[2] - tU.mapOrigin[2],
             {
-              rotation: pD,
-              transform: fD
-            } = function(DD, CD, cD, ID) {
-              const [pD, fD] = bD(DD, CD, ID), QD = iD - cD;
+              rotation: pU,
+              transform: PU
+            } = function(UU, RU, gU, tU) {
+              const [pU, PU] = TU(UU, RU, tU), qU = EU - gU;
               return {
-                rotation: QD,
-                transform: `rotate(${QD}rad) translate(-${pD}%, -${fD}%)`
+                rotation: qU,
+                transform: `rotate(${qU}rad) translate(-${pU}%, -${PU}%)`
               }
-            }(CD, cD, QD, ID.background.bounds);
-          tD.minimap = {
-            transform: fD,
-            iconRotation: -pD + "rad"
+            }(RU, gU, qU, tU.background.bounds);
+          CU.minimap = {
+            transform: PU,
+            iconRotation: -pU + "rad"
           };
-          const [wD, SD] = bD(CD, cD, ID.background.bounds);
-          tD.player = {
-            left: wD,
-            top: SD,
-            hidden: wD < 0 || SD < 0 || wD > 100 || SD > 100,
-            rotation: -pD + "rad"
+          const [KU, cU] = TU(RU, gU, tU.background.bounds);
+          CU.player = {
+            left: KU,
+            top: cU,
+            hidden: KU < 0 || cU < 0 || KU > 100 || cU > 100,
+            rotation: -pU + "rad"
           }
         }
         const {
-          waypoint: oD
+          waypoint: QU
         } = this.quests.getSnapshot();
-        if ("search" === (null === oD || void 0 === oD ? void 0 : oD.questMarkerIcon) && null !== ID && void 0 !== ID && ID.background) {
+        if ("search" === (null === QU || void 0 === QU ? void 0 : QU.questMarkerIcon) && null !== tU && void 0 !== tU && tU.background) {
           const {
-            bounds: DD
-          } = ID.background, [CD, cD] = bD(oD.position[0] - ID.mapOrigin[0], oD.position[2] - ID.mapOrigin[2], DD);
-          tD.searchArea = {
-            left: CD,
-            top: cD,
-            width: 6400 / (DD.mapMaxX - DD.mapMinX),
-            height: 6400 / (DD.mapMaxZ - DD.mapMinZ),
-            shapeSeed: oD.nameKey
+            bounds: UU
+          } = tU.background, [RU, gU] = TU(QU.position[0] - tU.mapOrigin[0], QU.position[2] - tU.mapOrigin[2], UU);
+          CU.searchArea = {
+            left: RU,
+            top: gU,
+            width: 6400 / (UU.mapMaxX - UU.mapMinX),
+            height: 6400 / (UU.mapMaxZ - UU.mapMinZ),
+            shapeSeed: QU.nameKey
           }
         }
-        const vD = this.quests.getNotificationSnapshot(),
-          ND = "completion" === (null === vD || void 0 === vD ? void 0 : vD.phase) && !PC(vD.kind);
-        if (oD && !ND) {
-          const CD = Math.hypot(...oD.position.map(((CD, cD) => CD - DD[cD]))),
-            ID = Math.round(CD),
-            pD = "talk" === oD.questMarkerIcon ? Math.min(1, Math.max(0, (10 - CD) / 5)) : 0,
-            iD = cD.projectWorldPosToViewport(oD.position),
-            fD = iD && cD.projectWorldPosToViewport([oD.position[0], oD.position[1] - 1, oD.position[2]]);
-          tD.waypoint = {
-            ...cD.projectWorldPosToScreenPos(oD.position),
-            text: iD,
-            nearness: pD * pD * (3 - 2 * pD),
-            blockHeight: iD && fD ? fD.y - iD.y : null,
-            name: this.translateCached(oD.nameKey),
-            nameKey: oD.nameKey,
-            markerIcon: oD.questMarkerIcon ? Ic[oD.questMarkerIcon] : "quest",
-            popupToken: (null === vD || void 0 === vD ? void 0 : vD.waypointNameKey) === oD.nameKey ? vD.token : null,
-            distance: this.translateCached("skyblockGame:waypointDistance", this.metresFormat.format(ID)),
-            hint: "search" === oD.questMarkerIcon && Math.hypot(oD.position[0] - DD[0], oD.position[2] - DD[2]) <= 32 ? this.translateCached("skyblockGame:waypointSearchHint") : null
+        const eU = this.quests.getNotificationSnapshot(),
+          WU = "completion" === (null === eU || void 0 === eU ? void 0 : eU.phase) && !wR(eU.kind);
+        if (QU && !WU) {
+          const RU = Math.hypot(...QU.position.map(((RU, gU) => RU - UU[gU]))),
+            tU = Math.round(RU),
+            pU = "talk" === QU.questMarkerIcon ? Math.min(1, Math.max(0, (10 - RU) / 5)) : 0,
+            EU = gU.projectWorldPosToViewport(QU.position),
+            PU = EU && gU.projectWorldPosToViewport([QU.position[0], QU.position[1] - 1, QU.position[2]]);
+          CU.waypoint = {
+            ...gU.projectWorldPosToScreenPos(QU.position),
+            text: EU,
+            nearness: pU * pU * (3 - 2 * pU),
+            blockHeight: EU && PU ? PU.y - EU.y : null,
+            name: this.translateCached(QU.nameKey),
+            nameKey: QU.nameKey,
+            markerIcon: QU.questMarkerIcon ? tg[QU.questMarkerIcon] : "quest",
+            popupToken: (null === eU || void 0 === eU ? void 0 : eU.waypointNameKey) === QU.nameKey ? eU.token : null,
+            distance: this.translateCached("skyblockGame:waypointDistance", this.metresFormat.format(tU)),
+            hint: "search" === QU.questMarkerIcon && Math.hypot(QU.position[0] - UU[0], QU.position[2] - UU[2]) <= 32 ? this.translateCached("skyblockGame:waypointSearchHint") : null
           }
         }
-        this.snapshot = tD, this.display.render(tD)
+        this.snapshot = CU, this.display.render(CU)
       }
       dispose() {
-        this.Lt = !0, this.snapshot = null, this.display.dispose()
+        this.pC = !0, this.snapshot = null, this.display.dispose()
       }
     }
-    const ic = "skyblockSkillsView";
-    class fc extends BD {
-      constructor(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now,
-          cD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : DD => DD,
-          ID = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "en-GB",
-          pD = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : DD => DD;
-        super(DD, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {}), this.now = CD, this.translate = cD, this.locale = ID, this.itemName = pD, this.progress = null, this.selected = "foraging", this.pending = new Map, this.recent = null, this.nextLevelUpToken = 0, this.onLevelUp = () => {}, this.skillText = new Map, this.sourceText = new Map, this.snapshot = {
+    const Eg = "skyblockSkillsView";
+    class Pg extends GU {
+      constructor(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now,
+          gU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : UU => UU,
+          tU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "en-GB",
+          pU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : UU => UU;
+        super(UU, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {}), this.now = RU, this.translate = gU, this.locale = tU, this.itemName = pU, this.progress = null, this.selected = "foraging", this.pending = new Map, this.recent = null, this.nextLevelUpToken = 0, this.onLevelUp = () => {}, this.skillText = new Map, this.sourceText = new Map, this.snapshot = {
           enabled: !1,
           open: !1,
           skills: [],
           detail: null,
           overallLevel: null,
           hud: null
-        }, this.select = DD => {
-          this.selected = DD, this.emit()
+        }, this.select = UU => {
+          this.selected = UU, this.emit()
         }
       }
-      setTranslator(DD, CD, cD) {
-        this.translate = DD, this.locale = CD, this.itemName = cD, this.skillText.clear(), this.sourceText.clear(), this.emit()
+      setTranslator(UU, RU, gU) {
+        this.translate = UU, this.locale = RU, this.itemName = gU, this.skillText.clear(), this.sourceText.clear(), this.emit()
       }
-      text(DD) {
-        let CD = this.skillText.get(DD);
-        return CD || (CD = {
-          label: this.translate(`skyblockGame:${DD}`),
-          description: this.translate(`skyblockGame:${DD}Description`)
-        }, this.skillText.set(DD, CD)), CD
+      text(UU) {
+        let RU = this.skillText.get(UU);
+        return RU || (RU = {
+          label: this.translate(`skyblockGame:${UU}`),
+          description: this.translate(`skyblockGame:${UU}Description`)
+        }, this.skillText.set(UU, RU)), RU
       }
-      sources(DD) {
-        if ("mining" === DD || "fishing" === DD) return this.buildSources(DD);
-        let CD = this.sourceText.get(DD);
-        return CD || (CD = this.buildSources(DD), this.sourceText.set(DD, CD)), CD
+      sources(UU) {
+        if ("mining" === UU || "fishing" === UU) return this.buildSources(UU);
+        let RU = this.sourceText.get(UU);
+        return RU || (RU = this.buildSources(UU), this.sourceText.set(UU, RU)), RU
       }
-      buildSources(DD) {
-        const CD = this.translate;
-        return "exploration" === DD ? [CD("skyblockGame:explorationZoneSource", {
+      buildSources(UU) {
+        const RU = this.translate;
+        return "exploration" === UU ? [RU("skyblockGame:explorationZoneSource", {
           xp: this.number(100)
-        }), CD("skyblockGame:explorationLandmarkSource", {
+        }), RU("skyblockGame:explorationLandmarkSource", {
           xp: this.number(50)
-        })] : "foraging" === DD ? [CD("skyblockGame:logSource", {
-          xp: this.number(MC["Maple Log"])
-        })] : "combat" === DD ? [CD("skyblockGame:creatureKillSource"), CD("skyblockGame:noEnvironmentalXp")] : "farming" === DD ? [CD("skyblockGame:cropSource", {
-          xp: this.number(oC["Wheat|FreshlyGrown"])
-        }), CD("skyblockGame:terrainFarmingSource", {
+        })] : "foraging" === UU ? [RU("skyblockGame:logSource", {
+          xp: this.number(uR["Maple Log"])
+        })] : "combat" === UU ? [RU("skyblockGame:creatureKillSource"), RU("skyblockGame:noEnvironmentalXp")] : "farming" === UU ? [RU("skyblockGame:cropSource", {
+          xp: this.number(QR["Wheat|FreshlyGrown"])
+        }), RU("skyblockGame:terrainFarmingSource", {
           xp: this.number(2)
-        }), CD("skyblockGame:noYoungCropXp")] : Object.entries("mining" === DD ? ZC : vC).map((DD => {
-          let [cD, ID] = DD;
-          return CD("skyblockGame:itemXpSource", {
-            item: this.itemName(cD),
-            xp: this.number(ID)
+        }), RU("skyblockGame:noYoungCropXp")] : Object.entries("mining" === UU ? hR : eR).map((UU => {
+          let [gU, tU] = UU;
+          return RU("skyblockGame:itemXpSource", {
+            item: this.itemName(gU),
+            xp: this.number(tU)
           })
         }))
       }
-      number(DD) {
-        return DD.toLocaleString(this.locale)
+      number(UU) {
+        return UU.toLocaleString(this.locale)
       }
-      benefit(DD, CD) {
-        const cD = fC(DD, CD);
-        return this.translate(cD.translationKey, {
-          bonus: this.number(cD.percent)
+      benefit(UU, RU) {
+        const gU = PR(UU, RU);
+        return this.translate(gU.translationKey, {
+          bonus: this.number(gU.percent)
         })
       }
-      kt(DD) {
-        if (!this.Lt) {
-          if ("snapshot" === DD.kind) this.progress = DD.progress, this.pending.clear(), this.recent = null;
-          else if ("award" === DD.kind && this.progress) {
+      qC(UU) {
+        if (!this.pC) {
+          if ("snapshot" === UU.kind) this.progress = UU.progress, this.pending.clear(), this.recent = null;
+          else if ("award" === UU.kind && this.progress) {
             const {
-              award: CD
-            } = DD;
+              award: RU
+            } = UU;
             this.progress = {
               ...this.progress,
-              [CD.skill]: CD.after
+              [RU.skill]: RU.after
             };
-            for (const [DD, ID] of this.pending) ID.skill === CD.skill && this.pending.delete(DD);
-            const cD = CD.after.level > CD.before.level;
-            this.recordGain(CD.skill, CD.amount, cD ? ++this.nextLevelUpToken : null), cD && this.onLevelUp({
+            for (const [UU, tU] of this.pending) tU.skill === RU.skill && this.pending.delete(UU);
+            const gU = RU.after.level > RU.before.level;
+            this.recordGain(RU.skill, RU.amount, gU ? ++this.nextLevelUpToken : null), gU && this.onLevelUp({
               questCompletionKind: "skillLevel",
-              skill: CD.skill,
-              beforeLevel: CD.before.level,
-              level: CD.after.level
+              skill: RU.skill,
+              beforeLevel: RU.before.level,
+              level: RU.after.level
             })
           } else {
-            if ("rejectBlock" === DD.kind) return void this.rejectBlock(DD.position);
-            if ("open" === DD.kind) return void this.show()
+            if ("rejectBlock" === UU.kind) return void this.rejectBlock(UU.position);
+            if ("open" === UU.kind) return void this.show()
           }
           this.emit()
         }
       }
-      predictBlock(DD, CD, cD) {
-        if (!this.progress || this.Lt || cD) return;
-        const ID = function(DD, CD) {
-          const cD = DD.split("|")[0];
-          return "Air" === CD || CD === `Barkless ${DD}` ? Object.hasOwn(MC, cD) ? {
+      predictBlock(UU, RU, gU) {
+        if (!this.progress || this.pC || gU) return;
+        const tU = function(UU, RU) {
+          const gU = UU.split("|")[0];
+          return "Air" === RU || RU === `Barkless ${UU}` ? Object.hasOwn(uR, gU) ? {
             skill: "foraging",
-            amount: MC[cD]
-          } : "Air" !== CD ? null : Object.hasOwn(ZC, DD) ? {
+            amount: uR[gU]
+          } : "Air" !== RU ? null : Object.hasOwn(hR, UU) ? {
             skill: "mining",
-            amount: ZC[DD]
-          } : SC(DD) ? {
+            amount: hR[UU]
+          } : cR(UU) ? {
             skill: "farming",
             amount: 10
-          } : yC(DD) ? {
+          } : jR(UU) ? {
             skill: "foraging",
             amount: 2
-          } : Object.hasOwn(oC, DD) ? {
+          } : Object.hasOwn(QR, UU) ? {
             skill: "farming",
-            amount: oC[DD]
-          } : Object.hasOwn(TD, DD) ? {
+            amount: QR[UU]
+          } : Object.hasOwn(HU, UU) ? {
             skill: "farming",
             amount: 2
           } : null : null
-        }(CD, "Air");
-        if (!ID) return;
-        const pD = DD.join(",");
-        if (this.pending.has(pD)) return;
-        const iD = this.predictedProgress(ID.skill).totalXp + ID.amount;
-        Number.isSafeInteger(iD) && (this.pending.set(pD, {
-          ...ID,
+        }(RU, "Air");
+        if (!tU) return;
+        const pU = UU.join(",");
+        if (this.pending.has(pU)) return;
+        const EU = this.predictedProgress(tU.skill).totalXp + tU.amount;
+        Number.isSafeInteger(EU) && (this.pending.set(pU, {
+          ...tU,
           expires: this.now() + 2e3
-        }), this.recordGain(ID.skill, 0), this.emit())
+        }), this.recordGain(tU.skill, 0), this.emit())
       }
-      rejectBlock(DD) {
-        this.pending.delete(DD.join(",")) && this.emit()
+      rejectBlock(UU) {
+        this.pending.delete(UU.join(",")) && this.emit()
       }
-      wy() {
-        if (this.Lt) return;
-        let DD = !1;
-        for (const [CD, cD] of this.pending) cD.expires <= this.now() && (this.pending.delete(CD), DD = !0);
-        this.recent && this.recent.expires <= this.now() && (this.recent = null, DD = !0), DD && this.emit()
+      HG() {
+        if (this.pC) return;
+        let UU = !1;
+        for (const [RU, gU] of this.pending) gU.expires <= this.now() && (this.pending.delete(RU), UU = !0);
+        this.recent && this.recent.expires <= this.now() && (this.recent = null, UU = !0), UU && this.emit()
       }
       dispose() {
         this.progress = null, this.pending.clear(), this.recent = null, super.dispose()
       }
-      recordGain(DD, CD) {
-        var cD, ID;
-        let pD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        const iD = (null === (cD = this.recent) || void 0 === cD ? void 0 : cD.skill) === DD && this.recent.expires > this.now() ? this.recent.confirmed : 0,
-          fD = (null === (ID = this.recent) || void 0 === ID ? void 0 : ID.skill) === DD && this.recent.expires > this.now() ? this.recent.levelUpToken : null;
+      recordGain(UU, RU) {
+        var gU, tU;
+        let pU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        const EU = (null === (gU = this.recent) || void 0 === gU ? void 0 : gU.skill) === UU && this.recent.expires > this.now() ? this.recent.confirmed : 0,
+          PU = (null === (tU = this.recent) || void 0 === tU ? void 0 : tU.skill) === UU && this.recent.expires > this.now() ? this.recent.levelUpToken : null;
         this.recent = {
-          skill: DD,
-          confirmed: iD + CD,
+          skill: UU,
+          confirmed: EU + RU,
           expires: this.now() + 3e3,
-          levelUpToken: null !== pD && void 0 !== pD ? pD : fD
+          levelUpToken: null !== pU && void 0 !== pU ? pU : PU
         }
       }
-      pendingXp(DD) {
-        let CD = 0;
-        for (const cD of this.pending.values()) cD.skill === DD && (CD += cD.amount);
-        return CD
+      pendingXp(UU) {
+        let RU = 0;
+        for (const gU of this.pending.values()) gU.skill === UU && (RU += gU.amount);
+        return RU
       }
-      predictedProgress(DD) {
-        const CD = this.progress[DD],
-          cD = this.pendingXp(DD);
-        return cD ? QC(CD.totalXp + cD, DD) : CD
+      predictedProgress(UU) {
+        const RU = this.progress[UU],
+          gU = this.pendingXp(UU);
+        return gU ? qR(RU.totalXp + gU, UU) : RU
       }
       isEnabled() {
         return null !== this.progress
       }
       buildSnapshot() {
-        var DD, CD, cD;
-        const ID = this.progress ? hD.map((DD => {
-            const CD = this.predictedProgress(DD);
+        var UU, RU, gU;
+        const tU = this.progress ? LU.map((UU => {
+            const RU = this.predictedProgress(UU);
             return {
-              ...this.text(DD),
-              icon: NC[DD],
-              benefit: this.benefit(DD, CD.level),
-              sources: this.sources(DD),
-              id: DD,
-              selected: DD === this.selected,
+              ...this.text(UU),
+              icon: WR[UU],
+              benefit: this.benefit(UU, RU.level),
+              sources: this.sources(UU),
+              id: UU,
+              selected: UU === this.selected,
               level: this.translate("skyblockGame:level", {
-                level: this.number(CD.level)
+                level: this.number(RU.level)
               }),
-              xp: null === CD.xpForNextLevel ? this.translate("skyblockGame:max") : this.translate("skyblockGame:xpProgress", {
-                current: this.number(CD.xpIntoLevel),
-                target: this.number(CD.xpForNextLevel)
+              xp: null === RU.xpForNextLevel ? this.translate("skyblockGame:max") : this.translate("skyblockGame:xpProgress", {
+                current: this.number(RU.xpIntoLevel),
+                target: this.number(RU.xpForNextLevel)
               }),
-              percent: null === CD.xpForNextLevel ? 100 : Math.min(100, CD.xpIntoLevel / CD.xpForNextLevel * 100)
+              percent: null === RU.xpForNextLevel ? 100 : Math.min(100, RU.xpIntoLevel / RU.xpForNextLevel * 100)
             }
           })) : [],
-          pD = ID.find((DD => {
-            var CD;
-            return DD.id === (null === (CD = this.recent) || void 0 === CD ? void 0 : CD.skill)
+          pU = tU.find((UU => {
+            var RU;
+            return UU.id === (null === (RU = this.recent) || void 0 === RU ? void 0 : RU.skill)
           })),
-          iD = this.recent ? this.recent.confirmed + this.pendingXp(this.recent.skill) : 0;
+          EU = this.recent ? this.recent.confirmed + this.pendingXp(this.recent.skill) : 0;
         return {
           enabled: this.isEnabled(),
           open: this.open,
-          skills: ID,
-          detail: null !== (DD = ID.find((DD => DD.selected))) && void 0 !== DD ? DD : null,
-          overallLevel: this.progress ? hD.reduce(((DD, CD) => DD + this.predictedProgress(CD).level), 0) : null,
-          hud: pD && iD > 0 ? {
-            skill: pD,
+          skills: tU,
+          detail: null !== (UU = tU.find((UU => UU.selected))) && void 0 !== UU ? UU : null,
+          overallLevel: this.progress ? LU.reduce(((UU, RU) => UU + this.predictedProgress(RU).level), 0) : null,
+          hud: pU && EU > 0 ? {
+            skill: pU,
             gain: this.translate("skyblockGame:xpGain", {
-              xp: this.number(iD)
+              xp: this.number(EU)
             }),
-            levelUpToken: null !== (CD = null === (cD = this.recent) || void 0 === cD ? void 0 : cD.levelUpToken) && void 0 !== CD ? CD : null,
-            colour: XC(pD.id)
+            levelUpToken: null !== (RU = null === (gU = this.recent) || void 0 === gU ? void 0 : gU.levelUpToken) && void 0 !== RU ? RU : null,
+            colour: xR(pU.id)
           } : null
         }
       }
     }
-    const bc = Math.max(1600, 600, 950) + 400,
-      Qc = {
+    const Tg = Math.max(1600, 600, 950) + 400,
+      qg = {
         "--quest-step-flash": "1600ms",
         "--quest-step-pop": "600ms",
         "--quest-step-unlock": "500ms",
         "--quest-step-unlock-delay": "450ms"
       },
-      wc = "skyblockQuestsView",
-      Sc = "skyblockQuestNotificationView";
-    class Bc extends BD {
-      constructor(DD, CD, cD) {
-        let ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
-          pD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now,
-          iD = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : "en-GB",
-          fD = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : () => {};
-        super(DD, ID, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {}), this.requestTracking = CD, this.translate = cD, this.now = pD, this.locale = iD, this.publishNotification = fD, this.notifications = void 0, this.notificationSnapshot = null, this.authoritative = null, this.receivedAt = 0, this.selected = null, this.completedExpanded = !1, this.trackAvailableAt = 0, this.waitingForTrack = !1, this.compassTarget = null, this.waypoint = null, this.trackedSteps = null, this.trackedStepPulse = 0, this.trackedChange = null, this.onTrackedStepFinished = () => {}, this.onViewDialogue = null, this.translateWithIcons = null, this.snapshot = {
+      Kg = "skyblockQuestsView",
+      cg = "skyblockQuestNotificationView";
+    class Gg extends GU {
+      constructor(UU, RU, gU) {
+        let tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
+          pU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now,
+          EU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : "en-GB",
+          PU = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : () => {};
+        super(UU, tU, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {}), this.requestTracking = RU, this.translate = gU, this.now = pU, this.locale = EU, this.publishNotification = PU, this.notifications = void 0, this.notificationSnapshot = null, this.authoritative = null, this.receivedAt = 0, this.selected = null, this.completedExpanded = !1, this.trackAvailableAt = 0, this.waitingForTrack = !1, this.compassTarget = null, this.waypoint = null, this.trackedSteps = null, this.trackedStepPulse = 0, this.trackedChange = null, this.onTrackedStepFinished = () => {}, this.onViewDialogue = null, this.translateWithIcons = null, this.snapshot = {
           enabled: !1,
           open: !1,
           active: [],
@@ -1937,189 +1937,189 @@ export const modules = {
           waypoint: null,
           compassTarget: null
         }, this.getNotificationSnapshot = () => this.notificationSnapshot, this.showTracked = () => {
-          var DD, CD;
-          this.selected = null !== (DD = null === (CD = this.authoritative) || void 0 === CD ? void 0 : CD.trackedQuestId) && void 0 !== DD ? DD : null, this.show()
-        }, this.select = DD => {
-          this.selected = DD, this.emit()
+          var UU, RU;
+          this.selected = null !== (UU = null === (RU = this.authoritative) || void 0 === RU ? void 0 : RU.trackedQuestId) && void 0 !== UU ? UU : null, this.show()
+        }, this.select = UU => {
+          this.selected = UU, this.emit()
         }, this.toggleCompleted = () => {
           this.completedExpanded = !this.completedExpanded, this.emit()
         }, this.trackSelected = () => {
-          const DD = this.snapshot.detail;
-          !this.Lt && null !== DD && void 0 !== DD && DD.canTrack && this.now() >= this.trackAvailableAt && (this.trackAvailableAt = this.now() + 2500, this.waitingForTrack = !0, this.requestTracking(DD.id), this.emit())
+          const UU = this.snapshot.detail;
+          !this.pC && null !== UU && void 0 !== UU && UU.canTrack && this.now() >= this.trackAvailableAt && (this.trackAvailableAt = this.now() + 2500, this.waitingForTrack = !0, this.requestTracking(UU.id), this.emit())
         }, this.viewDialogue = () => {
-          const DD = this.snapshot.detail;
-          var CD;
-          DD && (null === (CD = this.onViewDialogue) || void 0 === CD || CD.call(this, DD.id))
-        }, this.notifications = new nC(pD, (() => this.authoritative))
+          const UU = this.snapshot.detail;
+          var RU;
+          UU && (null === (RU = this.onViewDialogue) || void 0 === RU || RU.call(this, UU.id))
+        }, this.notifications = new IR(pU, (() => this.authoritative))
       }
       getTrackedQuestId() {
-        var DD, CD;
-        return null !== (DD = null === (CD = this.authoritative) || void 0 === CD ? void 0 : CD.trackedQuestId) && void 0 !== DD ? DD : null
+        var UU, RU;
+        return null !== (UU = null === (RU = this.authoritative) || void 0 === RU ? void 0 : RU.trackedQuestId) && void 0 !== UU ? UU : null
       }
-      notify(DD) {
-        !this.Lt && this.notifications.enqueue(DD) && this.emitNotification()
+      notify(UU) {
+        !this.pC && this.notifications.enqueue(UU) && this.emitNotification()
       }
-      setNotificationsHeld(DD) {
-        (this.notifications.setHeld(DD) || DD) && this.emitNotification()
+      setNotificationsHeld(UU) {
+        (this.notifications.setHeld(UU) || UU) && this.emitNotification()
       }
-      wy() {
-        var DD, CD;
-        if (this.Lt) return;
-        this.notifications.wy() && this.emitNotification();
-        let cD = !1;
-        this.trackAvailableAt && this.now() >= this.trackAvailableAt && (this.trackAvailableAt = 0, this.waitingForTrack = !1, cD = !0), this.trackedChange && this.now() >= this.trackedChange.expiresAt && (this.trackedChange = null, cD = !0);
-        const ID = yc(this.authoritative);
-        null !== ID && void 0 !== ID && null !== (DD = ID.questClock) && void 0 !== DD && DD.running && this.clockText(ID) !== (null === (CD = this.snapshot.tracked) || void 0 === CD ? void 0 : CD.clock) && (cD = !0), cD && this.emit()
+      HG() {
+        var UU, RU;
+        if (this.pC) return;
+        this.notifications.HG() && this.emitNotification();
+        let gU = !1;
+        this.trackAvailableAt && this.now() >= this.trackAvailableAt && (this.trackAvailableAt = 0, this.waitingForTrack = !1, gU = !0), this.trackedChange && this.now() >= this.trackedChange.expiresAt && (this.trackedChange = null, gU = !0);
+        const tU = jg(this.authoritative);
+        null !== tU && void 0 !== tU && null !== (UU = tU.questClock) && void 0 !== UU && UU.running && this.clockText(tU) !== (null === (RU = this.snapshot.tracked) || void 0 === RU ? void 0 : RU.clock) && (gU = !0), gU && this.emit()
       }
-      setTranslator(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
-        this.translate = DD, this.locale = CD, this.emitNotification(), this.emit()
+      setTranslator(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
+        this.translate = UU, this.locale = RU, this.emitNotification(), this.emit()
       }
-      kt(DD) {
-        if (!this.Lt)
-          if ("completion" === DD.kind) this.notify(DD.questCompletion);
-          else if ("landmark" === DD.kind) this.notify({
+      qC(UU) {
+        if (!this.pC)
+          if ("completion" === UU.kind) this.notify(UU.questCompletion);
+          else if ("landmark" === UU.kind) this.notify({
           questCompletionKind: "landmark",
-          landmarkNameKey: DD.landmarkDiscoveredNameKey
+          landmarkNameKey: UU.landmarkDiscoveredNameKey
         });
-        else if ("npcNote" === DD.kind) {
-          var CD, cD, ID;
+        else if ("npcNote" === UU.kind) {
+          var RU, gU, tU;
           this.notify({
             questCompletionKind: "npcNote",
-            titleKey: DD.npcNoteTitleKey,
-            textKey: DD.npcNoteTextKey,
-            params: null !== (CD = DD.npcNoteParams) && void 0 !== CD ? CD : {},
-            nameKeys: null !== (cD = DD.npcNoteNameKeys) && void 0 !== cD ? cD : {},
-            iconItem: null !== (ID = DD.npcNoteIconItem) && void 0 !== ID ? ID : null
+            titleKey: UU.npcNoteTitleKey,
+            textKey: UU.npcNoteTextKey,
+            params: null !== (RU = UU.npcNoteParams) && void 0 !== RU ? RU : {},
+            nameKeys: null !== (gU = UU.npcNoteNameKeys) && void 0 !== gU ? gU : {},
+            iconItem: null !== (tU = UU.npcNoteIconItem) && void 0 !== tU ? tU : null
           })
-        } else if ("open" === DD.kind) this.show();
-        else if ("guidance" === DD.kind) this.waypoint = DD.waypoint, this.compassTarget = DD.compassTarget, this.snapshot = {
+        } else if ("open" === UU.kind) this.show();
+        else if ("guidance" === UU.kind) this.waypoint = UU.waypoint, this.compassTarget = UU.compassTarget, this.snapshot = {
           ...this.snapshot,
           waypoint: this.waypoint,
           compassTarget: this.compassTarget
         };
-        else if ("snapshot" === DD.kind) {
-          this.authoritative = DD.snapshot, this.notifications.wy() && this.emitNotification(), this.receivedAt = this.now(), this.waitingForTrack = !1;
-          const CD = this.trackedStepPulse;
-          this.updateTrackedStepPulse(DD.snapshot), this.emit(), this.trackedStepPulse > CD && this.onTrackedStepFinished()
+        else if ("snapshot" === UU.kind) {
+          this.authoritative = UU.snapshot, this.notifications.HG() && this.emitNotification(), this.receivedAt = this.now(), this.waitingForTrack = !1;
+          const RU = this.trackedStepPulse;
+          this.updateTrackedStepPulse(UU.snapshot), this.emit(), this.trackedStepPulse > RU && this.onTrackedStepFinished()
         }
       }
       dispose() {
         this.notifications.clear(), this.emitNotification(), this.authoritative = null, this.selected = null, this.completedExpanded = !1, this.trackAvailableAt = 0, this.waitingForTrack = !1, this.waypoint = null, this.compassTarget = null, this.trackedSteps = null, this.trackedStepPulse = 0, this.trackedChange = null, super.dispose()
       }
       emitNotification() {
-        this.Lt || (this.notificationSnapshot = this.notifications.getView(this.translate, this.questTextTranslator(), this.locale), this.publishNotification(this.notificationSnapshot))
+        this.pC || (this.notificationSnapshot = this.notifications.getView(this.translate, this.questTextTranslator(), this.locale), this.publishNotification(this.notificationSnapshot))
       }
       questTextTranslator() {
-        var DD;
-        return null !== (DD = this.translateWithIcons) && void 0 !== DD ? DD : this.translate
+        var UU;
+        return null !== (UU = this.translateWithIcons) && void 0 !== UU ? UU : this.translate
       }
-      clockText(DD) {
-        const CD = DD.questClock;
-        if (!CD) return null;
-        const cD = CD.elapsedMs + (CD.running ? this.now() - this.receivedAt : 0);
-        return void 0 === CD.countdownFromMs ? VD(cD, !1) : VD(1e3 * Math.ceil(Math.max(0, CD.countdownFromMs - cD) / 1e3), !1)
+      clockText(UU) {
+        const RU = UU.questClock;
+        if (!RU) return null;
+        const gU = RU.elapsedMs + (RU.running ? this.now() - this.receivedAt : 0);
+        return void 0 === RU.countdownFromMs ? VU(gU, !1) : VU(1e3 * Math.ceil(Math.max(0, RU.countdownFromMs - gU) / 1e3), !1)
       }
-      updateTrackedStepPulse(DD) {
-        var CD, cD, ID;
-        const pD = yc(DD);
-        if (!pD) return this.trackedSteps = null, this.trackedStepPulse = 0, void(this.trackedChange = null);
-        const iD = DD => pD.subquests.filter((CD => DD(CD.status))).map((DD => DD.id)),
-          fD = iD((DD => "completed" === DD || "skipped" === DD)),
-          bD = iD((DD => "locked" !== DD)),
-          QD = (null === (CD = this.trackedSteps) || void 0 === CD ? void 0 : CD.questId) === pD.id && pD.progress >= this.trackedSteps.progress ? this.trackedSteps : null;
-        if (QD) {
-          const DD = fD.filter((DD => !QD.finished.has(DD))),
-            CD = iD((DD => "active" === DD || "ready" === DD)).filter((DD => !QD.unlocked.has(DD)));
-          DD.length > 0 && this.trackedStepPulse++, (DD.length > 0 || CD.length > 0) && (this.trackedChange = {
-            finished: new Set(DD),
-            unlocked: new Set(CD),
-            expiresAt: this.now() + bc
+      updateTrackedStepPulse(UU) {
+        var RU, gU, tU;
+        const pU = jg(UU);
+        if (!pU) return this.trackedSteps = null, this.trackedStepPulse = 0, void(this.trackedChange = null);
+        const EU = UU => pU.subquests.filter((RU => UU(RU.status))).map((UU => UU.id)),
+          PU = EU((UU => "completed" === UU || "skipped" === UU)),
+          TU = EU((UU => "locked" !== UU)),
+          qU = (null === (RU = this.trackedSteps) || void 0 === RU ? void 0 : RU.questId) === pU.id && pU.progress >= this.trackedSteps.progress ? this.trackedSteps : null;
+        if (qU) {
+          const UU = PU.filter((UU => !qU.finished.has(UU))),
+            RU = EU((UU => "active" === UU || "ready" === UU)).filter((UU => !qU.unlocked.has(UU)));
+          UU.length > 0 && this.trackedStepPulse++, (UU.length > 0 || RU.length > 0) && (this.trackedChange = {
+            finished: new Set(UU),
+            unlocked: new Set(RU),
+            expiresAt: this.now() + Tg
           })
         } else {
-          var wD;
-          this.trackedStepPulse = (null === (wD = this.trackedSteps) || void 0 === wD ? void 0 : wD.questId) === pD.id ? this.trackedStepPulse : 0, this.trackedChange = null
+          var KU;
+          this.trackedStepPulse = (null === (KU = this.trackedSteps) || void 0 === KU ? void 0 : KU.questId) === pU.id ? this.trackedStepPulse : 0, this.trackedChange = null
         }
         this.trackedSteps = {
-          questId: pD.id,
-          progress: pD.progress,
-          finished: new Set([...null !== (cD = null === QD || void 0 === QD ? void 0 : QD.finished) && void 0 !== cD ? cD : [], ...fD]),
-          unlocked: new Set([...null !== (ID = null === QD || void 0 === QD ? void 0 : QD.unlocked) && void 0 !== ID ? ID : [], ...bD])
+          questId: pU.id,
+          progress: pU.progress,
+          finished: new Set([...null !== (gU = null === qU || void 0 === qU ? void 0 : qU.finished) && void 0 !== gU ? gU : [], ...PU]),
+          unlocked: new Set([...null !== (tU = null === qU || void 0 === qU ? void 0 : qU.unlocked) && void 0 !== tU ? tU : [], ...TU])
         }
       }
-      entry(DD, CD) {
-        var cD, ID;
-        const pD = DD.id === (null === (cD = this.authoritative) || void 0 === cD ? void 0 : cD.trackedQuestId),
-          iD = this.now() < this.trackAvailableAt,
-          fD = this.questTextTranslator(),
-          bD = DD.subquests.map((CD => {
-            var cD, ID, iD, bD, QD, wD;
-            const SD = null !== (cD = CD.handInNpcName) && void 0 !== cD ? cD : DD.giverName,
-              BD = this.translate("skyblockGame:progress", {
-                current: CD.progress.toLocaleString(this.locale),
-                target: CD.target.toLocaleString(this.locale)
+      entry(UU, RU) {
+        var gU, tU;
+        const pU = UU.id === (null === (gU = this.authoritative) || void 0 === gU ? void 0 : gU.trackedQuestId),
+          EU = this.now() < this.trackAvailableAt,
+          PU = this.questTextTranslator(),
+          TU = UU.subquests.map((RU => {
+            var gU, tU, EU, TU, qU, KU;
+            const cU = null !== (gU = RU.handInNpcName) && void 0 !== gU ? gU : UU.giverName,
+              GU = this.translate("skyblockGame:progress", {
+                current: RU.progress.toLocaleString(this.locale),
+                target: RU.target.toLocaleString(this.locale)
               }),
-              yD = {
+              jU = {
                 active: null,
                 locked: "skyblockGame:subquestLocked",
-                ready: SD ? "skyblockGame:subquestReady" : "skyblockGame:subquestReadyNoNpc",
+                ready: cU ? "skyblockGame:subquestReady" : "skyblockGame:subquestReadyNoNpc",
                 completed: "skyblockGame:completed",
                 skipped: "skyblockGame:subquestSkipped"
-              } [CD.status],
-              MD = "active" === CD.status || "ready" === CD.status;
+              } [RU.status],
+              uU = "active" === RU.status || "ready" === RU.status;
             return {
-              id: CD.id,
-              name: mC(fD, CD.nameKey, CD.nameParams),
-              description: mC(fD, CD.descriptionKey, CD.descriptionParams),
-              progress: BD,
-              status: CD.status,
-              statusLabel: yD ? this.translate(yD, {
-                npc: SD
-              }) : BD,
-              iconItem: MD && null !== (ID = CD.questIconItem) && void 0 !== ID ? ID : null,
-              barPercent: "active" === CD.status && CD.showsProgressBar ? Math.min(100, 100 * CD.progress / CD.target) : null,
-              justFinished: pD && null !== (iD = null === (bD = this.trackedChange) || void 0 === bD ? void 0 : bD.finished.has(CD.id)) && void 0 !== iD && iD,
-              justUnlocked: pD && null !== (QD = null === (wD = this.trackedChange) || void 0 === wD ? void 0 : wD.unlocked.has(CD.id)) && void 0 !== QD && QD
+              id: RU.id,
+              name: mR(PU, RU.nameKey, RU.nameParams),
+              description: mR(PU, RU.descriptionKey, RU.descriptionParams),
+              progress: GU,
+              status: RU.status,
+              statusLabel: jU ? this.translate(jU, {
+                npc: cU
+              }) : GU,
+              iconItem: uU && null !== (tU = RU.questIconItem) && void 0 !== tU ? tU : null,
+              barPercent: "active" === RU.status && RU.showsProgressBar ? Math.min(100, 100 * RU.progress / RU.target) : null,
+              justFinished: pU && null !== (EU = null === (TU = this.trackedChange) || void 0 === TU ? void 0 : TU.finished.has(RU.id)) && void 0 !== EU && EU,
+              justUnlocked: pU && null !== (qU = null === (KU = this.trackedChange) || void 0 === KU ? void 0 : KU.unlocked.has(RU.id)) && void 0 !== qU && qU
             }
           }));
         return {
-          id: DD.id,
-          name: mC(fD, DD.nameKey, DD.nameParams),
-          description: mC(fD, DD.descriptionKey, DD.descriptionParams),
-          progress: CD ? this.translate("skyblockGame:completed") : this.translate("skyblockGame:stepsProgress", {
-            current: DD.progress.toLocaleString(this.locale),
-            target: DD.target.toLocaleString(this.locale)
+          id: UU.id,
+          name: mR(PU, UU.nameKey, UU.nameParams),
+          description: mR(PU, UU.descriptionKey, UU.descriptionParams),
+          progress: RU ? this.translate("skyblockGame:completed") : this.translate("skyblockGame:stepsProgress", {
+            current: UU.progress.toLocaleString(this.locale),
+            target: UU.target.toLocaleString(this.locale)
           }),
-          completed: CD,
-          tracked: pD,
-          selected: DD.id === this.selected,
-          canTrack: !CD && !pD && !iD,
-          trackLabel: this.translate(pD ? "skyblockGame:trackingQuest" : this.waitingForTrack ? "skyblockGame:updating" : iD ? "skyblockGame:pleaseWait" : "skyblockGame:trackQuest"),
-          canViewDialogue: null !== this.onViewDialogue && "dungeon_run" !== DD.id,
-          subquests: bD,
-          focusStep: null !== (ID = bD.find((DD => null !== DD.barPercent))) && void 0 !== ID ? ID : null,
-          clock: this.clockText(DD)
+          completed: RU,
+          tracked: pU,
+          selected: UU.id === this.selected,
+          canTrack: !RU && !pU && !EU,
+          trackLabel: this.translate(pU ? "skyblockGame:trackingQuest" : this.waitingForTrack ? "skyblockGame:updating" : EU ? "skyblockGame:pleaseWait" : "skyblockGame:trackQuest"),
+          canViewDialogue: null !== this.onViewDialogue && "dungeon_run" !== UU.id,
+          subquests: TU,
+          focusStep: null !== (tU = TU.find((UU => null !== UU.barPercent))) && void 0 !== tU ? tU : null,
+          clock: this.clockText(UU)
         }
       }
       isEnabled() {
         return null !== this.authoritative
       }
       buildSnapshot() {
-        var DD, CD, cD, ID, pD, iD, fD, bD, QD, wD;
-        const SD = [...null !== (DD = null === (CD = this.authoritative) || void 0 === CD ? void 0 : CD.active) && void 0 !== DD ? DD : [], ...null !== (cD = null === (ID = this.authoritative) || void 0 === ID ? void 0 : ID.completed) && void 0 !== cD ? cD : []];
-        var BD, yD, MD, tD;
-        SD.some((DD => DD.id === this.selected)) || (this.selected = null !== (BD = null !== (yD = null === (MD = this.authoritative) || void 0 === MD ? void 0 : MD.trackedQuestId) && void 0 !== yD ? yD : null === (tD = SD[0]) || void 0 === tD ? void 0 : tD.id) && void 0 !== BD ? BD : null);
-        const ZD = null !== (pD = null === (iD = this.authoritative) || void 0 === iD ? void 0 : iD.active.map((DD => this.entry(DD, !1)))) && void 0 !== pD ? pD : [];
-        ZD.sort(((DD, CD) => Number(CD.tracked) - Number(DD.tracked)));
-        const oD = null !== (fD = null === (bD = this.authoritative) || void 0 === bD ? void 0 : bD.completed.map((DD => this.entry(DD, !0)))) && void 0 !== fD ? fD : [];
+        var UU, RU, gU, tU, pU, EU, PU, TU, qU, KU;
+        const cU = [...null !== (UU = null === (RU = this.authoritative) || void 0 === RU ? void 0 : RU.active) && void 0 !== UU ? UU : [], ...null !== (gU = null === (tU = this.authoritative) || void 0 === tU ? void 0 : tU.completed) && void 0 !== gU ? gU : []];
+        var GU, jU, uU, CU;
+        cU.some((UU => UU.id === this.selected)) || (this.selected = null !== (GU = null !== (jU = null === (uU = this.authoritative) || void 0 === uU ? void 0 : uU.trackedQuestId) && void 0 !== jU ? jU : null === (CU = cU[0]) || void 0 === CU ? void 0 : CU.id) && void 0 !== GU ? GU : null);
+        const hU = null !== (pU = null === (EU = this.authoritative) || void 0 === EU ? void 0 : EU.active.map((UU => this.entry(UU, !1)))) && void 0 !== pU ? pU : [];
+        hU.sort(((UU, RU) => Number(RU.tracked) - Number(UU.tracked)));
+        const QU = null !== (PU = null === (TU = this.authoritative) || void 0 === TU ? void 0 : TU.completed.map((UU => this.entry(UU, !0)))) && void 0 !== PU ? PU : [];
         return {
           enabled: this.isEnabled(),
           open: this.open,
-          active: ZD,
-          completed: oD,
+          active: hU,
+          completed: QU,
           completedExpanded: this.completedExpanded,
-          detail: null !== (QD = [...ZD, ...oD].find((DD => DD.selected))) && void 0 !== QD ? QD : null,
-          tracked: null !== (wD = ZD.find((DD => DD.tracked))) && void 0 !== wD ? wD : null,
+          detail: null !== (qU = [...hU, ...QU].find((UU => UU.selected))) && void 0 !== qU ? qU : null,
+          tracked: null !== (KU = hU.find((UU => UU.tracked))) && void 0 !== KU ? KU : null,
           trackedStepPulse: this.trackedStepPulse,
           waypoint: this.waypoint,
           compassTarget: this.compassTarget
@@ -2127,40 +2127,40 @@ export const modules = {
       }
     }
 
-    function yc(DD) {
-      var CD;
-      return null !== (CD = null === DD || void 0 === DD ? void 0 : DD.active.find((CD => CD.id === DD.trackedQuestId))) && void 0 !== CD ? CD : null
+    function jg(UU) {
+      var RU;
+      return null !== (RU = null === UU || void 0 === UU ? void 0 : UU.active.find((RU => RU.id === UU.trackedQuestId))) && void 0 !== RU ? RU : null
     }
-    const Mc = "skyblockDungeonsView";
-    class tc extends BD {
-      constructor(DD, CD) {
-        let cD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "en-GB",
-          ID = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {};
-        super(DD, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {}), this.translate = CD, this.locale = cD, this.requestEnter = ID, this.authoritative = null, this.selected = null, this.pickerDungeonId = null, this.pageIndex = 0, this.snapshot = {
+    const ug = "skyblockDungeonsView";
+    class Cg extends GU {
+      constructor(UU, RU) {
+        let gU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "en-GB",
+          tU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {};
+        super(UU, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {}), this.translate = RU, this.locale = gU, this.requestEnter = tU, this.authoritative = null, this.selected = null, this.pickerDungeonId = null, this.pageIndex = 0, this.snapshot = {
           enabled: !1,
           open: !1,
           dungeons: [],
           detail: null,
           picker: null
-        }, this.select = DD => {
-          this.selected = DD, this.emit()
+        }, this.select = UU => {
+          this.selected = UU, this.emit()
         }, this.previous = () => {
           this.turnTo(this.pageIndex - 1)
         }, this.next = () => {
           this.turnTo(this.pageIndex + 1)
         }, this.enter = () => {
-          const DD = this.pickerEntry(),
-            CD = null === DD || void 0 === DD ? void 0 : DD.difficulties[this.pageIndex];
-          void 0 !== CD && null !== CD.unlockedBoss && (this.close(), this.requestEnter(DD.id, CD.difficulty))
+          const UU = this.pickerEntry(),
+            RU = null === UU || void 0 === UU ? void 0 : UU.difficulties[this.pageIndex];
+          void 0 !== RU && null !== RU.unlockedBoss && (this.close(), this.requestEnter(UU.id, RU.difficulty))
         }
       }
-      setTranslator(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
-        this.translate = DD, this.locale = CD, this.emit()
+      setTranslator(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
+        this.translate = UU, this.locale = RU, this.emit()
       }
-      kt(DD) {
-        var CD, cD;
-        if (!this.Lt) return "open" === DD.kind ? (this.pickerDungeonId = null, void this.show()) : void("choose" !== DD.kind ? "snapshot" === DD.kind && (this.authoritative = DD.snapshot, this.pageIndex = Math.min(this.pageIndex, Math.max(0, (null !== (CD = null === (cD = this.pickerEntry()) || void 0 === cD ? void 0 : cD.difficulties.length) && void 0 !== CD ? CD : 1) - 1)), null === DD.snapshot && this.open ? this.close() : this.emit()) : this.choose(DD.chooseDungeonId))
+      qC(UU) {
+        var RU, gU;
+        if (!this.pC) return "open" === UU.kind ? (this.pickerDungeonId = null, void this.show()) : void("choose" !== UU.kind ? "snapshot" === UU.kind && (this.authoritative = UU.snapshot, this.pageIndex = Math.min(this.pageIndex, Math.max(0, (null !== (RU = null === (gU = this.pickerEntry()) || void 0 === gU ? void 0 : gU.difficulties.length) && void 0 !== RU ? RU : 1) - 1)), null === UU.snapshot && this.open ? this.close() : this.emit()) : this.choose(UU.chooseDungeonId))
       }
       dispose() {
         this.authoritative = null, this.selected = null, this.pickerDungeonId = null, super.dispose()
@@ -2168,133 +2168,133 @@ export const modules = {
       onClosed() {
         this.pickerDungeonId = null
       }
-      choose(DD) {
-        var CD;
-        const cD = null === (CD = this.authoritative) || void 0 === CD ? void 0 : CD.dungeons.find((CD => CD.id === DD));
-        void 0 !== cD ? this.open && this.pickerDungeonId === DD || (this.pickerDungeonId = DD, this.pageIndex = Math.max(0, cD.difficulties.findLastIndex((DD => null !== DD.unlockedBoss))), this.showOrRefresh()) : console.warn(`Skyblock dungeons: asked to choose a boss in unknown dungeon ${DD}`)
+      choose(UU) {
+        var RU;
+        const gU = null === (RU = this.authoritative) || void 0 === RU ? void 0 : RU.dungeons.find((RU => RU.id === UU));
+        void 0 !== gU ? this.open && this.pickerDungeonId === UU || (this.pickerDungeonId = UU, this.pageIndex = Math.max(0, gU.difficulties.findLastIndex((UU => null !== UU.unlockedBoss))), this.showOrRefresh()) : console.warn(`Skyblock dungeons: asked to choose a boss in unknown dungeon ${UU}`)
       }
-      turnTo(DD) {
-        var CD, cD;
-        const ID = null !== (CD = null === (cD = this.pickerEntry()) || void 0 === cD ? void 0 : cD.difficulties.length) && void 0 !== CD ? CD : 0;
-        DD < 0 || DD >= ID || DD === this.pageIndex || (this.pageIndex = DD, this.emit())
+      turnTo(UU) {
+        var RU, gU;
+        const tU = null !== (RU = null === (gU = this.pickerEntry()) || void 0 === gU ? void 0 : gU.difficulties.length) && void 0 !== RU ? RU : 0;
+        UU < 0 || UU >= tU || UU === this.pageIndex || (this.pageIndex = UU, this.emit())
       }
       pickerEntry() {
-        var DD, CD;
-        return null !== (DD = null === (CD = this.authoritative) || void 0 === CD ? void 0 : CD.dungeons.find((DD => DD.id === this.pickerDungeonId))) && void 0 !== DD ? DD : null
+        var UU, RU;
+        return null !== (UU = null === (RU = this.authoritative) || void 0 === RU ? void 0 : RU.dungeons.find((UU => UU.id === this.pickerDungeonId))) && void 0 !== UU ? UU : null
       }
-      difficulty(DD) {
-        const CD = DD.completions > 0,
-          cD = null === DD.bestMs ? null : VD(DD.bestMs);
+      difficulty(UU) {
+        const RU = UU.completions > 0,
+          gU = null === UU.bestMs ? null : VU(UU.bestMs);
         return {
-          difficulty: DD.difficulty,
-          label: this.translate(KD[DD.difficulty]),
-          colour: aD[DD.difficulty],
-          beaten: CD,
-          bestTime: cD,
-          completions: DD.completions,
-          summary: CD ? [null === cD ? null : this.translate("skyblockGame:dungeonBestTime", {
-            time: cD
+          difficulty: UU.difficulty,
+          label: this.translate(YU[UU.difficulty]),
+          colour: BU[UU.difficulty],
+          beaten: RU,
+          bestTime: gU,
+          completions: UU.completions,
+          summary: RU ? [null === gU ? null : this.translate("skyblockGame:dungeonBestTime", {
+            time: gU
           }), this.translate("skyblockGame:dungeonCompletions", {
-            completions: DD.completions.toLocaleString(this.locale)
-          })].filter((DD => null !== DD)).join(" \xb7 ") : this.translate("skyblockGame:dungeonNotCompleted")
+            completions: UU.completions.toLocaleString(this.locale)
+          })].filter((UU => null !== UU)).join(" \xb7 ") : this.translate("skyblockGame:dungeonNotCompleted")
         }
       }
-      entry(DD) {
-        const CD = DD.difficulties.map((DD => this.difficulty(DD))),
-          cD = CD.filter((DD => DD.beaten)).length;
+      entry(UU) {
+        const RU = UU.difficulties.map((UU => this.difficulty(UU))),
+          gU = RU.filter((UU => UU.beaten)).length;
         return {
-          id: DD.id,
-          name: this.translate(DD.nameKey),
-          selected: DD.id === this.selected,
-          beatenSummary: `${cD} / ${CD.length}`,
-          difficulties: CD
+          id: UU.id,
+          name: this.translate(UU.nameKey),
+          selected: UU.id === this.selected,
+          beatenSummary: `${gU} / ${RU.length}`,
+          difficulties: RU
         }
       }
       picker() {
-        const DD = this.pickerEntry();
-        if (null === DD || 0 === DD.difficulties.length) return null;
-        const CD = DD.difficulties.map(((CD, cD) => {
-          var ID, pD, iD, fD;
-          const bD = CD.unlockedBoss,
-            QD = null === bD ? this.lockedHint(DD, cD) : null;
+        const UU = this.pickerEntry();
+        if (null === UU || 0 === UU.difficulties.length) return null;
+        const RU = UU.difficulties.map(((RU, gU) => {
+          var tU, pU, EU, PU;
+          const TU = RU.unlockedBoss,
+            qU = null === TU ? this.lockedHint(UU, gU) : null;
           return {
-            ...this.difficulty(CD),
-            unlocked: null !== bD,
-            bossName: null === bD ? null : this.translate(bD.bossNameKey),
-            bossMobType: null !== (ID = null === bD || void 0 === bD ? void 0 : bD.bossMobType) && void 0 !== ID ? ID : null,
-            bossMobVariation: null !== (pD = null === bD || void 0 === bD ? void 0 : bD.bossMobVariation) && void 0 !== pD ? pD : null,
-            lockedHint: null !== (iD = null === QD || void 0 === QD ? void 0 : QD.text) && void 0 !== iD ? iD : null,
-            lockedHintHighlight: null !== (fD = null === QD || void 0 === QD ? void 0 : QD.highlight) && void 0 !== fD ? fD : null,
-            current: cD === this.pageIndex
+            ...this.difficulty(RU),
+            unlocked: null !== TU,
+            bossName: null === TU ? null : this.translate(TU.bossNameKey),
+            bossMobType: null !== (tU = null === TU || void 0 === TU ? void 0 : TU.bossMobType) && void 0 !== tU ? tU : null,
+            bossMobVariation: null !== (pU = null === TU || void 0 === TU ? void 0 : TU.bossMobVariation) && void 0 !== pU ? pU : null,
+            lockedHint: null !== (EU = null === qU || void 0 === qU ? void 0 : qU.text) && void 0 !== EU ? EU : null,
+            lockedHintHighlight: null !== (PU = null === qU || void 0 === qU ? void 0 : qU.highlight) && void 0 !== PU ? PU : null,
+            current: gU === this.pageIndex
           }
         }));
         return {
-          dungeonName: this.translate(DD.nameKey),
-          pages: CD,
-          page: CD[this.pageIndex],
+          dungeonName: this.translate(UU.nameKey),
+          pages: RU,
+          page: RU[this.pageIndex],
           canPrevious: this.pageIndex > 0,
-          canNext: this.pageIndex < CD.length - 1
+          canNext: this.pageIndex < RU.length - 1
         }
       }
-      lockedHint(DD, CD) {
-        var cD, ID, pD;
-        if (0 === CD && "number" === typeof DD.combatLevelLock) {
-          const CD = this.translate("skyblockGame:dungeonBossLockedCombatLevel", {
-            level: DD.combatLevelLock
+      lockedHint(UU, RU) {
+        var gU, tU, pU;
+        if (0 === RU && "number" === typeof UU.combatLevelLock) {
+          const RU = this.translate("skyblockGame:dungeonBossLockedCombatLevel", {
+            level: UU.combatLevelLock
           });
           return this.hintHighlighting("skyblockGame:dungeonBossLockedCombat", {}, "skill", {
-            name: CD,
-            colour: XC("combat"),
-            icon: NC.combat
+            name: RU,
+            colour: xR("combat"),
+            icon: WR.combat
           })
         }
-        const iD = null !== (cD = null === (ID = this.authoritative) || void 0 === ID ? void 0 : ID.dungeons) && void 0 !== cD ? cD : [],
-          fD = CD > 0 ? DD : null !== (pD = iD[iD.indexOf(DD) - 1]) && void 0 !== pD ? pD : null,
-          bD = CD > 0 ? DD.difficulties[CD - 1] : null === fD || void 0 === fD ? void 0 : fD.difficulties[0];
-        if (null === fD || void 0 === bD) return null;
-        const QD = this.translate(fD.nameKey);
-        if (null === bD.unlockedBoss) return fD === DD ? this.hintNamingDifficulty("skyblockGame:dungeonBossLockedUnseen", {}, bD.difficulty) : this.hintNamingDifficulty("skyblockGame:dungeonBossLockedUnseenElsewhere", {
-          dungeon: QD
-        }, bD.difficulty);
-        const wD = this.translate(bD.unlockedBoss.bossNameKey);
-        return fD === DD ? this.hintNamingDifficulty("skyblockGame:dungeonBossLocked", {
-          boss: wD
-        }, bD.difficulty) : {
+        const EU = null !== (gU = null === (tU = this.authoritative) || void 0 === tU ? void 0 : tU.dungeons) && void 0 !== gU ? gU : [],
+          PU = RU > 0 ? UU : null !== (pU = EU[EU.indexOf(UU) - 1]) && void 0 !== pU ? pU : null,
+          TU = RU > 0 ? UU.difficulties[RU - 1] : null === PU || void 0 === PU ? void 0 : PU.difficulties[0];
+        if (null === PU || void 0 === TU) return null;
+        const qU = this.translate(PU.nameKey);
+        if (null === TU.unlockedBoss) return PU === UU ? this.hintNamingDifficulty("skyblockGame:dungeonBossLockedUnseen", {}, TU.difficulty) : this.hintNamingDifficulty("skyblockGame:dungeonBossLockedUnseenElsewhere", {
+          dungeon: qU
+        }, TU.difficulty);
+        const KU = this.translate(TU.unlockedBoss.bossNameKey);
+        return PU === UU ? this.hintNamingDifficulty("skyblockGame:dungeonBossLocked", {
+          boss: KU
+        }, TU.difficulty) : {
           text: this.translate("skyblockGame:dungeonBossLockedElsewhere", {
-            boss: wD,
-            dungeon: QD
+            boss: KU,
+            dungeon: qU
           }),
           highlight: null
         }
       }
-      hintNamingDifficulty(DD, CD, cD) {
-        return this.hintHighlighting(DD, CD, "difficulty", {
-          name: this.translate(KD[cD]),
-          colour: aD[cD],
+      hintNamingDifficulty(UU, RU, gU) {
+        return this.hintHighlighting(UU, RU, "difficulty", {
+          name: this.translate(YU[gU]),
+          colour: BU[gU],
           icon: null
         })
       }
-      hintHighlighting(DD, CD, cD, ID) {
+      hintHighlighting(UU, RU, gU, tU) {
         let {
-          name: pD,
-          colour: iD,
-          icon: fD
-        } = ID;
-        const bD = this.translate(DD, {
-          ...CD,
-          [cD]: "\x01"
+          name: pU,
+          colour: EU,
+          icon: PU
+        } = tU;
+        const TU = this.translate(UU, {
+          ...RU,
+          [gU]: "\x01"
         }).split("\x01");
         return {
-          text: this.translate(DD, {
-            ...CD,
-            [cD]: pD
+          text: this.translate(UU, {
+            ...RU,
+            [gU]: pU
           }),
-          highlight: 2 === bD.length ? {
-            before: bD[0],
-            name: pD,
-            after: bD[1],
-            colour: iD,
-            icon: fD
+          highlight: 2 === TU.length ? {
+            before: TU[0],
+            name: pU,
+            after: TU[1],
+            colour: EU,
+            icon: PU
           } : null
         }
       }
@@ -2302,49 +2302,49 @@ export const modules = {
         return null !== this.authoritative
       }
       buildSnapshot() {
-        var DD, CD, cD;
-        const ID = null !== (DD = null === (CD = this.authoritative) || void 0 === CD ? void 0 : CD.dungeons) && void 0 !== DD ? DD : [];
-        var pD, iD;
-        ID.some((DD => DD.id === this.selected)) || (this.selected = null !== (pD = null === (iD = ID[0]) || void 0 === iD ? void 0 : iD.id) && void 0 !== pD ? pD : null);
-        const fD = ID.map((DD => this.entry(DD)));
+        var UU, RU, gU;
+        const tU = null !== (UU = null === (RU = this.authoritative) || void 0 === RU ? void 0 : RU.dungeons) && void 0 !== UU ? UU : [];
+        var pU, EU;
+        tU.some((UU => UU.id === this.selected)) || (this.selected = null !== (pU = null === (EU = tU[0]) || void 0 === EU ? void 0 : EU.id) && void 0 !== pU ? pU : null);
+        const PU = tU.map((UU => this.entry(UU)));
         return {
           enabled: this.isEnabled(),
           open: this.open,
-          dungeons: fD,
-          detail: null !== (cD = fD.find((DD => DD.selected))) && void 0 !== cD ? cD : null,
+          dungeons: PU,
+          detail: null !== (gU = PU.find((UU => UU.selected))) && void 0 !== gU ? gU : null,
           picker: null === this.pickerDungeonId ? null : this.picker()
         }
       }
     }
-    const Zc = ["mining", "farming", "foraging", "fishing", "combat"],
-      oc = [25, 50, 100, 200, 400, 750, 1250, 2e3, 3e3],
-      vc = [20, 40, 80, 150, 300, 500, 800, 1200, 2e3];
+    const hg = ["mining", "farming", "foraging", "fishing", "combat"],
+      Qg = [25, 50, 100, 200, 400, 750, 1250, 2e3, 3e3],
+      eg = [20, 40, 80, 150, 300, 500, 800, 1200, 2e3];
 
-    function Nc() {
-      for (var DD = arguments.length, CD = new Array(DD), cD = 0; cD < DD; cD++) CD[cD] = arguments[cD];
-      return CD.map(((DD, CD) => ({
-        amount: DD,
-        coins: oc[CD],
-        xp: vc[CD]
+    function Wg() {
+      for (var UU = arguments.length, RU = new Array(UU), gU = 0; gU < UU; gU++) RU[gU] = arguments[gU];
+      return RU.map(((UU, RU) => ({
+        amount: UU,
+        coins: Qg[RU],
+        xp: eg[RU]
       })))
     }
-    const gc = Nc(100, 250, 500, 1e3, 2500, 5e3, 1e4, 25e3, 5e4),
-      Xc = Nc(50, 100, 250, 1e3, 2500, 5e3, 1e4, 25e3),
-      mc = Nc(50, 100, 250, 500, 1e3, 2500, 5e3),
-      nc = Nc(25, 50, 100, 250, 500, 1e3),
-      Oc = Nc(10, 25, 50, 100, 250, 500, 1e3),
-      Pc = Nc(1, 5, 10, 25, 50);
+    const fg = Wg(100, 250, 500, 1e3, 2500, 5e3, 1e4, 25e3, 5e4),
+      xg = Wg(50, 100, 250, 1e3, 2500, 5e3, 1e4, 25e3),
+      mg = Wg(50, 100, 250, 500, 1e3, 2500, 5e3),
+      Ig = Wg(25, 50, 100, 250, 500, 1e3),
+      Jg = Wg(10, 25, 50, 100, 250, 500, 1e3),
+      wg = Wg(1, 5, 10, 25, 50);
 
-    function Hc(DD, CD) {
+    function ng(UU, RU) {
       return {
-        id: DD,
+        id: UU,
         category: "fishing",
-        item: CD,
-        drops: [CD],
-        tiers: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Oc
+        item: RU,
+        drops: [RU],
+        tiers: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Jg
       }
     }
-    const Uc = [{
+    const bg = [{
         id: "coal",
         category: "mining",
         item: "Coal",
@@ -2353,7 +2353,7 @@ export const modules = {
           "Pure Coal Ore": 9,
           "Block of Coal": 3
         },
-        tiers: Xc
+        tiers: xg
       }, {
         id: "iron",
         category: "mining",
@@ -2362,7 +2362,7 @@ export const modules = {
           "Iron Ore": 1,
           "Pure Iron Ore": 9
         },
-        tiers: mc
+        tiers: mg
       }, {
         id: "gold",
         category: "mining",
@@ -2371,7 +2371,7 @@ export const modules = {
           "Gold Ore": 1,
           "Pure Gold Ore": 9
         },
-        tiers: mc
+        tiers: mg
       }, {
         id: "diamond",
         category: "mining",
@@ -2380,7 +2380,7 @@ export const modules = {
           "Diamond Ore": 1,
           "Pure Diamond Ore": 9
         },
-        tiers: nc
+        tiers: Ig
       }, {
         id: "moonstone",
         category: "mining",
@@ -2389,7 +2389,7 @@ export const modules = {
           "Moonstone Ore": 1,
           "Pure Moonstone Ore": 9
         },
-        tiers: nc
+        tiers: Ig
       }, {
         id: "stone",
         category: "mining",
@@ -2397,7 +2397,7 @@ export const modules = {
         blocks: {
           Stone: 1
         },
-        tiers: Xc
+        tiers: xg
       }, {
         id: "wheat",
         category: "farming",
@@ -2405,7 +2405,7 @@ export const modules = {
         blocks: {
           "Wheat|FreshlyGrown": 1
         },
-        tiers: gc
+        tiers: fg
       }, {
         id: "carrot",
         category: "farming",
@@ -2413,7 +2413,7 @@ export const modules = {
         blocks: {
           "Carrot Plant|FreshlyGrown": 1
         },
-        tiers: gc
+        tiers: fg
       }, {
         id: "potato",
         category: "farming",
@@ -2421,7 +2421,7 @@ export const modules = {
         blocks: {
           "Potato Plant|FreshlyGrown": 1
         },
-        tiers: gc
+        tiers: fg
       }, {
         id: "beetroot",
         category: "farming",
@@ -2429,7 +2429,7 @@ export const modules = {
         blocks: {
           "Beetroot Plant|FreshlyGrown": 1
         },
-        tiers: mc
+        tiers: mg
       }, {
         id: "melon",
         category: "farming",
@@ -2437,7 +2437,7 @@ export const modules = {
         blocks: {
           Melon: 1
         },
-        tiers: Xc
+        tiers: xg
       }, {
         id: "watermelon",
         category: "farming",
@@ -2445,7 +2445,7 @@ export const modules = {
         blocks: {
           Watermelon: 1
         },
-        tiers: Xc
+        tiers: xg
       }, {
         id: "maple_log",
         category: "foraging",
@@ -2453,7 +2453,7 @@ export const modules = {
         blocks: {
           "Maple Log": 1
         },
-        tiers: Xc
+        tiers: xg
       }, {
         id: "pear_log",
         category: "foraging",
@@ -2461,7 +2461,7 @@ export const modules = {
         blocks: {
           "Pear Log": 1
         },
-        tiers: mc
+        tiers: mg
       }, {
         id: "palm_log",
         category: "foraging",
@@ -2469,78 +2469,78 @@ export const modules = {
         blocks: {
           "Palm Log": 1
         },
-        tiers: mc
-      }, Hc("wheatfish", "Wheatfish"), Hc("darter", "Darter"), Hc("sunset_minnow", "Sunset Minnow"), Hc("root_flounder", "Root Flounder"), Hc("greenfin_loach", "Greenfin Loach"), Hc("red_strongfish", "Red Strongfish"), Hc("green_strongfish", "Green Strongfish"), Hc("boomerang_fish", "Boomerang Fish"), Hc("seahorse", "Seahorse"), Hc("spined_stickleback", "Spined Stickleback"), Hc("moon_strongfish", "Moon Strongfish"), Hc("boulder_bass", "Boulder Bass"), Hc("grass_snapper", "Grass Snapper"), Hc("crystal_wheatfish", "Crystalized Wheatfish", Pc), Hc("moonstone_pupfish", "Moonstone Pupfish", Pc), Hc("reedglass_minnow", "Reedglass Minnow"), Hc("mangrove_herring", "Mangrove Herring"), Hc("mudline_perch", "Mudline Perch"), Hc("coastal_mullet", "Coastal Mullet"), Hc("reef_sardine", "Reef Sardine"), Hc("root_perch", "Root Perch"), Hc("driftwood_catfish", "Driftwood Catfish"), Hc("aether_minnow", "Aether Minnow"), Hc("needlefish", "Tri-Pointed Needlefish"), Hc("threadfin_bream", "Threadfin Bream"), Hc("mudbelly_tilapia", "Mudbelly Tilapia"), Hc("rotslab_eel", "Rotslab Eel"), Hc("polarflash_electron", "Polarflash Electron"), Hc("mireback_carp", "Mireback Carp"), Hc("blackwater_bream", "Blackwater Bream"), Hc("stone_grouper", "Stone Grouper"), Hc("shadeback_ray", "Shadeback Ray"), Hc("glacial_silverfish", "Glacial Silverfish"), Hc("hatchetfish", "Hatchetfish"), Hc("moonlit_boomerang", "Moonlit Boomerang Fish"), Hc("murkborne_ray", "Murkborne Ray"), Hc("bamboo_catfish", "Bamboo Catfish"), Hc("mossback_arapaima", "Mossback Arapaima"), Hc("murk_stingray", "Murk Stingray"), Hc("channel_sawfish", "Channel Sawfish"), Hc("boned_sturgeon", "Boned Sturgeon"), Hc("oarfish", "Oarfish"), Hc("snakehead", "Snakehead", Pc), Hc("eldertide_leviathan", "Eldertide Leviathan", Pc), Hc("pithead", "Pithead"), Hc("electric_eel", "Electric Eel"), Hc("shadow_darter", "Shadow Darter"), Hc("abyss_carp", "Abyss Carp"), Hc("nomai_moray", "Nomai Moray"), Hc("silver_dragonfish", "Silver Dragonfish"), Hc("giant_moray", "Giant Moray"), Hc("coelacanth", "Coelacanth", Pc), Hc("frost_herring", "Frost Herring"), Hc("permafrost_halibut", "Permafrost Halibut"), Hc("glacial_lanternfish", "Glacial Lanternfish"), Hc("frozen_grenadier", "Frozen Grenadier"), Hc("blackfin_icefish", "Blackfin Icefish"), Hc("moonfish", "Moonfish"), Hc("alpha_strongfish", "Alpha Moon Strongfish"), Hc("deep_lanternfish", "Deepwater Lanternfish", Pc), Hc("pearlescent_moonfish", "Pearlescent Moonfish", Pc), {
+        tiers: mg
+      }, ng("wheatfish", "Wheatfish"), ng("darter", "Darter"), ng("sunset_minnow", "Sunset Minnow"), ng("root_flounder", "Root Flounder"), ng("greenfin_loach", "Greenfin Loach"), ng("red_strongfish", "Red Strongfish"), ng("green_strongfish", "Green Strongfish"), ng("boomerang_fish", "Boomerang Fish"), ng("seahorse", "Seahorse"), ng("spined_stickleback", "Spined Stickleback"), ng("moon_strongfish", "Moon Strongfish"), ng("boulder_bass", "Boulder Bass"), ng("grass_snapper", "Grass Snapper"), ng("crystal_wheatfish", "Crystalized Wheatfish", wg), ng("moonstone_pupfish", "Moonstone Pupfish", wg), ng("reedglass_minnow", "Reedglass Minnow"), ng("mangrove_herring", "Mangrove Herring"), ng("mudline_perch", "Mudline Perch"), ng("coastal_mullet", "Coastal Mullet"), ng("reef_sardine", "Reef Sardine"), ng("root_perch", "Root Perch"), ng("driftwood_catfish", "Driftwood Catfish"), ng("aether_minnow", "Aether Minnow"), ng("needlefish", "Tri-Pointed Needlefish"), ng("threadfin_bream", "Threadfin Bream"), ng("mudbelly_tilapia", "Mudbelly Tilapia"), ng("rotslab_eel", "Rotslab Eel"), ng("polarflash_electron", "Polarflash Electron"), ng("mireback_carp", "Mireback Carp"), ng("blackwater_bream", "Blackwater Bream"), ng("stone_grouper", "Stone Grouper"), ng("shadeback_ray", "Shadeback Ray"), ng("glacial_silverfish", "Glacial Silverfish"), ng("hatchetfish", "Hatchetfish"), ng("moonlit_boomerang", "Moonlit Boomerang Fish"), ng("murkborne_ray", "Murkborne Ray"), ng("bamboo_catfish", "Bamboo Catfish"), ng("mossback_arapaima", "Mossback Arapaima"), ng("murk_stingray", "Murk Stingray"), ng("channel_sawfish", "Channel Sawfish"), ng("boned_sturgeon", "Boned Sturgeon"), ng("oarfish", "Oarfish"), ng("snakehead", "Snakehead", wg), ng("eldertide_leviathan", "Eldertide Leviathan", wg), ng("pithead", "Pithead"), ng("electric_eel", "Electric Eel"), ng("shadow_darter", "Shadow Darter"), ng("abyss_carp", "Abyss Carp"), ng("nomai_moray", "Nomai Moray"), ng("silver_dragonfish", "Silver Dragonfish"), ng("giant_moray", "Giant Moray"), ng("coelacanth", "Coelacanth", wg), ng("frost_herring", "Frost Herring"), ng("permafrost_halibut", "Permafrost Halibut"), ng("glacial_lanternfish", "Glacial Lanternfish"), ng("frozen_grenadier", "Frozen Grenadier"), ng("blackfin_icefish", "Blackfin Icefish"), ng("moonfish", "Moonfish"), ng("alpha_strongfish", "Alpha Moon Strongfish"), ng("deep_lanternfish", "Deepwater Lanternfish", wg), ng("pearlescent_moonfish", "Pearlescent Moonfish", wg), {
         id: "rotten_flesh",
         category: "combat",
         item: "Rotten Flesh",
         drops: ["Rotten Flesh"],
-        tiers: Xc
+        tiers: xg
       }, {
         id: "rotten_brain",
         category: "combat",
         item: "Rotten Brain",
         drops: ["Rotten Brain"],
-        tiers: nc
+        tiers: Ig
       }, {
         id: "iron_fragment",
         category: "combat",
         item: "Iron Fragment",
         drops: ["Iron Fragment"],
-        tiers: nc
+        tiers: Ig
       }],
-      xc = (new Map(Uc.map((DD => [DD.id, DD]))), new Map),
-      qc = new Map;
-    for (const yQ of Uc) {
-      for (const [DD, CD] of Object.entries(null !== (Jc = yQ.blocks) && void 0 !== Jc ? Jc : {})) {
-        var Jc;
-        xc.set(DD, {
-          collection: yQ,
-          amount: CD
+      og = (new Map(bg.map((UU => [UU.id, UU]))), new Map),
+      Zg = new Map;
+    for (const Kq of bg) {
+      for (const [UU, RU] of Object.entries(null !== (ag = Kq.blocks) && void 0 !== ag ? ag : {})) {
+        var ag;
+        og.set(UU, {
+          collection: Kq,
+          amount: RU
         })
       }
-      for (const DD of null !== (Kc = yQ.drops) && void 0 !== Kc ? Kc : []) {
-        var Kc;
-        qc.set(DD, yQ)
+      for (const UU of null !== (Yg = Kq.drops) && void 0 !== Yg ? Yg : []) {
+        var Yg;
+        Zg.set(UU, Kq)
       }
     }
 
-    function ac(DD, CD) {
-      let cD = 0;
-      for (; cD < DD.tiers.length && CD >= DD.tiers[cD].amount;) cD++;
-      return cD
+    function Bg(UU, RU) {
+      let gU = 0;
+      for (; gU < UU.tiers.length && RU >= UU.tiers[gU].amount;) gU++;
+      return gU
     }
-    const Vc = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
+    const Vg = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
 
-    function zc(DD) {
-      return Vc[DD - 1]
+    function rg(UU) {
+      return Vg[UU - 1]
     }
-    const jc = "skyblockCollectionsView";
-    class lc extends BD {
-      constructor(DD, CD) {
-        let cD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "en-GB",
-          ID = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : DD => DD;
-        super(DD, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {}), this.translate = CD, this.locale = cD, this.itemName = ID, this.counts = null, this.category = "mining", this.selected = Uc[0].id, this.snapshot = {
+    const Xg = "skyblockCollectionsView";
+    class vg extends GU {
+      constructor(UU, RU) {
+        let gU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "en-GB",
+          tU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : UU => UU;
+        super(UU, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {}), this.translate = RU, this.locale = gU, this.itemName = tU, this.counts = null, this.category = "mining", this.selected = bg[0].id, this.snapshot = {
           enabled: !1,
           open: !1,
           categories: [],
           collections: [],
           detail: null,
           tiersUnlocked: ""
-        }, this.selectCategory = DD => {
-          this.category = DD, this.selected = this.inCategory(DD)[0].id, this.emit()
-        }, this.select = DD => {
-          this.selected = DD, this.emit()
+        }, this.selectCategory = UU => {
+          this.category = UU, this.selected = this.inCategory(UU)[0].id, this.emit()
+        }, this.select = UU => {
+          this.selected = UU, this.emit()
         }
       }
-      setTranslator(DD, CD, cD) {
-        this.translate = DD, this.locale = CD, this.itemName = cD, this.emit()
+      setTranslator(UU, RU, gU) {
+        this.translate = UU, this.locale = RU, this.itemName = gU, this.emit()
       }
-      kt(DD) {
-        if (!this.Lt)
-          if ("collOpen" !== DD.kind) {
-            (DD.collFull || null === this.counts) && (this.counts = new Map);
-            for (const [CD, cD] of DD.collCounts) this.counts.set(CD, cD);
+      qC(UU) {
+        if (!this.pC)
+          if ("collOpen" !== UU.kind) {
+            (UU.collFull || null === this.counts) && (this.counts = new Map);
+            for (const [RU, gU] of UU.collCounts) this.counts.set(RU, gU);
             this.emit()
           } else this.show()
       }
@@ -2551,7 +2551,7 @@ export const modules = {
         return null !== this.counts
       }
       buildSnapshot() {
-        var DD;
+        var UU;
         if (null === this.counts) return {
           enabled: !1,
           open: this.open,
@@ -2560,297 +2560,297 @@ export const modules = {
           detail: null,
           tiersUnlocked: ""
         };
-        const CD = this.inCategory(this.category).map((DD => this.collectionView(DD))),
-          cD = Uc.reduce(((DD, CD) => DD + this.tierOf(CD)), 0);
+        const RU = this.inCategory(this.category).map((UU => this.collectionView(UU))),
+          gU = bg.reduce(((UU, RU) => UU + this.tierOf(RU)), 0);
         return {
           enabled: !0,
           open: this.open,
-          categories: Zc.map((DD => this.categoryView(DD))),
-          collections: CD,
-          detail: null !== (DD = CD.find((DD => DD.selected))) && void 0 !== DD ? DD : null,
+          categories: hg.map((UU => this.categoryView(UU))),
+          collections: RU,
+          detail: null !== (UU = RU.find((UU => UU.selected))) && void 0 !== UU ? UU : null,
           tiersUnlocked: this.translate("skyblockGame:collectionTiersUnlocked", {
-            count: this.number(cD)
+            count: this.number(gU)
           })
         }
       }
-      categoryView(DD) {
-        const CD = this.inCategory(DD),
-          cD = CD.reduce(((DD, CD) => DD + this.tierOf(CD)), 0),
-          ID = CD.reduce(((DD, CD) => DD + CD.tiers.length), 0);
+      categoryView(UU) {
+        const RU = this.inCategory(UU),
+          gU = RU.reduce(((UU, RU) => UU + this.tierOf(RU)), 0),
+          tU = RU.reduce(((UU, RU) => UU + RU.tiers.length), 0);
         return {
-          id: DD,
-          label: this.translate(`skyblockGame:${DD}`),
-          icon: NC[DD],
+          id: UU,
+          label: this.translate(`skyblockGame:${UU}`),
+          icon: WR[UU],
           tiers: this.translate("skyblockGame:collectionProgress", {
-            current: this.number(cD),
-            target: this.number(ID)
+            current: this.number(gU),
+            target: this.number(tU)
           }),
-          selected: DD === this.category
+          selected: UU === this.category
         }
       }
-      collectionView(DD) {
-        var CD, cD;
-        const ID = null !== (CD = this.counts.get(DD.id)) && void 0 !== CD ? CD : 0,
-          pD = ac(DD, ID),
-          iD = null !== (cD = DD.tiers[pD]) && void 0 !== cD ? cD : null,
-          fD = 0 === pD ? 0 : DD.tiers[pD - 1].amount;
+      collectionView(UU) {
+        var RU, gU;
+        const tU = null !== (RU = this.counts.get(UU.id)) && void 0 !== RU ? RU : 0,
+          pU = Bg(UU, tU),
+          EU = null !== (gU = UU.tiers[pU]) && void 0 !== gU ? gU : null,
+          PU = 0 === pU ? 0 : UU.tiers[pU - 1].amount;
         return {
-          id: DD.id,
-          name: this.itemName(DD.item),
-          icon: DD.item,
-          selected: DD.id === this.selected,
-          locked: 0 === ID,
+          id: UU.id,
+          name: this.itemName(UU.item),
+          icon: UU.item,
+          selected: UU.id === this.selected,
+          locked: 0 === tU,
           count: this.translate("skyblockGame:collectionCount", {
-            count: this.number(ID)
+            count: this.number(tU)
           }),
-          tier: 0 === pD ? this.translate("skyblockGame:collectionNoTier") : this.tierLabel(pD),
-          percent: null === iD ? 100 : Math.min(100, (ID - fD) / (iD.amount - fD) * 100),
-          progress: null === iD ? this.translate("skyblockGame:max") : this.translate("skyblockGame:collectionProgress", {
-            current: this.number(ID),
-            target: this.number(iD.amount)
+          tier: 0 === pU ? this.translate("skyblockGame:collectionNoTier") : this.tierLabel(pU),
+          percent: null === EU ? 100 : Math.min(100, (tU - PU) / (EU.amount - PU) * 100),
+          progress: null === EU ? this.translate("skyblockGame:max") : this.translate("skyblockGame:collectionProgress", {
+            current: this.number(tU),
+            target: this.number(EU.amount)
           }),
-          nextReward: null === iD ? null : this.reward(DD, iD.coins, iD.xp)
+          nextReward: null === EU ? null : this.reward(UU, EU.coins, EU.xp)
         }
       }
-      reward(DD, CD, cD) {
+      reward(UU, RU, gU) {
         return this.translate("skyblockGame:collectionReward", {
-          coins: this.number(CD),
-          xp: this.number(cD),
-          skill: this.translate(`skyblockGame:${DD.category}`)
+          coins: this.number(RU),
+          xp: this.number(gU),
+          skill: this.translate(`skyblockGame:${UU.category}`)
         })
       }
-      tierLabel(DD) {
+      tierLabel(UU) {
         return this.translate("skyblockGame:collectionTier", {
-          tier: zc(DD)
+          tier: rg(UU)
         })
       }
-      tierOf(DD) {
-        var CD;
-        return ac(DD, null !== (CD = this.counts.get(DD.id)) && void 0 !== CD ? CD : 0)
+      tierOf(UU) {
+        var RU;
+        return Bg(UU, null !== (RU = this.counts.get(UU.id)) && void 0 !== RU ? RU : 0)
       }
-      inCategory(DD) {
-        return Uc.filter((CD => CD.category === DD))
+      inCategory(UU) {
+        return bg.filter((RU => RU.category === UU))
       }
-      number(DD) {
-        return DD.toLocaleString(this.locale)
+      number(UU) {
+        return UU.toLocaleString(this.locale)
       }
     }
-    const Lc = "skyblockPortalTransitView",
-      Tc = "skyblockPortalArrival";
-    class Gc {
-      constructor(DD, CD) {
-        let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now;
-        this.Uo = DD, this.storage = CD, this.now = cD, this.view = null, this.token = 0, this.hideTimer = null
+    const dg = "skyblockPortalTransitView",
+      Hg = "skyblockPortalArrival";
+    class Sg {
+      constructor(UU, RU) {
+        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now;
+        this.yh = UU, this.storage = RU, this.now = gU, this.view = null, this.token = 0, this.hideTimer = null
       }
       getSnapshot() {
         return this.view
       }
-      kt(DD) {
-        const CD = {
-          zoneNameKey: DD.transitZoneNameKey,
-          variation: DD.transitZoneVariation,
-          colour: DD.transitColour,
+      qC(UU) {
+        const RU = {
+          zoneNameKey: UU.transitZoneNameKey,
+          variation: UU.transitZoneVariation,
+          colour: UU.transitColour,
           departedAt: this.now()
         };
-        this.storage.setItem(Tc, CD), this.show("departure", CD.zoneNameKey, CD.colour, DD.transitDurationMs, DD.transitDurationMs + 1500, (() => {
-          this.storage.removeItem(Tc)
+        this.storage.setItem(Hg, RU), this.show("departure", RU.zoneNameKey, RU.colour, UU.transitDurationMs, UU.transitDurationMs + 1500, (() => {
+          this.storage.removeItem(Hg)
         }))
       }
-      resumeArrival(DD) {
-        const CD = this.storage.getItem(Tc);
-        this.storage.removeItem(Tc), null === CD || CD.variation !== DD || this.now() - CD.departedAt > 3e4 || this.show("arrival", CD.zoneNameKey, CD.colour, 3200, 2e4)
+      resumeArrival(UU) {
+        const RU = this.storage.getItem(Hg);
+        this.storage.removeItem(Hg), null === RU || RU.variation !== UU || this.now() - RU.departedAt > 3e4 || this.show("arrival", RU.zoneNameKey, RU.colour, 3200, 2e4)
       }
-      finishArrival(DD) {
-        var CD;
-        "arrival" === (null === (CD = this.view) || void 0 === CD ? void 0 : CD.phase) && this.view.token === DD && (this.clearTimer(), this.view = null, this.Uo(null))
+      finishArrival(UU) {
+        var RU;
+        "arrival" === (null === (RU = this.view) || void 0 === RU ? void 0 : RU.phase) && this.view.token === UU && (this.clearTimer(), this.view = null, this.yh(null))
       }
       dispose() {
         this.clearTimer()
       }
-      show(DD, CD, cD, ID, pD, iD) {
+      show(UU, RU, gU, tU, pU, EU) {
         this.clearTimer(), this.view = {
           token: ++this.token,
-          phase: DD,
-          zoneNameKey: CD,
-          colour: cD,
-          durationMs: ID
-        }, this.Uo(this.view), this.hideTimer = setTimeout((() => {
-          this.hideTimer = null, this.view = null, this.Uo(null), null === iD || void 0 === iD || iD()
-        }), pD)
+          phase: UU,
+          zoneNameKey: RU,
+          colour: gU,
+          durationMs: tU
+        }, this.yh(this.view), this.hideTimer = setTimeout((() => {
+          this.hideTimer = null, this.view = null, this.yh(null), null === EU || void 0 === EU || EU()
+        }), pU)
       }
       clearTimer() {
         null !== this.hideTimer && (clearTimeout(this.hideTimer), this.hideTimer = null)
       }
     }
-    const Rc = "skyblockDailyRewardView",
-      kc = "skyblockDailyRewardCoin";
-    class dc {
-      constructor(DD, CD, cD, ID) {
-        let pD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
-          iD = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {},
-          fD = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {},
-          bD = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : () => {},
-          QD = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : performance.now.bind(performance);
-        this.Uo = DD, this.isBusy = CD, this.holdQuestPopups = cD, this.onHeldCoinsChanged = ID, this.onCoinLanded = pD, this.onStarted = iD, this.onFinished = fD, this.onItemLanded = bD, this.now = QD, this.Lb = [], this.queue = [], this.playing = null, this.token = 0
+    const sg = "skyblockDailyRewardView",
+      yg = "skyblockDailyRewardCoin";
+    class kg {
+      constructor(UU, RU, gU, tU) {
+        let pU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
+          EU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {},
+          PU = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {},
+          TU = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : () => {},
+          qU = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : performance.now.bind(performance);
+        this.yh = UU, this.isBusy = RU, this.holdQuestPopups = gU, this.onHeldCoinsChanged = tU, this.onCoinLanded = pU, this.onStarted = EU, this.onFinished = PU, this.onItemLanded = TU, this.now = qU, this.WT = [], this.queue = [], this.playing = null, this.token = 0
       }
       getSnapshot() {
-        var DD, CD;
-        return null !== (DD = null === (CD = this.playing) || void 0 === CD ? void 0 : CD.view) && void 0 !== DD ? DD : null
+        var UU, RU;
+        return null !== (UU = null === (RU = this.playing) || void 0 === RU ? void 0 : RU.view) && void 0 !== UU ? UU : null
       }
       getHeldCoins() {
-        var DD, CD;
-        let cD = 0;
-        for (const ID of this.Lb) cD += ID.coins;
-        return cD - (null !== (DD = null === (CD = this.playing) || void 0 === CD ? void 0 : CD.released) && void 0 !== DD ? DD : 0)
+        var UU, RU;
+        let gU = 0;
+        for (const tU of this.WT) gU += tU.coins;
+        return gU - (null !== (UU = null === (RU = this.playing) || void 0 === RU ? void 0 : RU.released) && void 0 !== UU ? UU : 0)
       }
-      kt(DD) {
-        "dailyRewardClaimed" !== DD.kind ? (this.queue.push(DD), this.wy()) : this.Lb.push({
-          coins: DD.dailyRewardCoins,
+      qC(UU) {
+        "dailyRewardClaimed" !== UU.kind ? (this.queue.push(UU), this.HG()) : this.WT.push({
+          coins: UU.dailyRewardCoins,
           receivedAt: this.now()
         })
       }
-      wy() {
-        const DD = this.now();
-        if (null === this.playing) return this.releaseUnshown(DD), void this.startNext(DD);
-        const CD = this.playing,
-          cD = DD - CD.startedAt,
-          ID = CD.view.flyingCoins,
-          pD = function(DD, CD) {
-            let cD = 0;
-            for (; cD < CD && Wc(cD, CD) <= DD;) cD++;
-            return cD
-          }(cD, ID);
-        if (pD !== CD.landed) {
-          for (let DD = pD - CD.landed > 2 ? pD - 1 : CD.landed; DD < pD; DD++) this.onCoinLanded(DD, ID);
-          CD.landed = pD, CD.released = Math.round(CD.view.coins * pD / ID), this.onHeldCoinsChanged()
+      HG() {
+        const UU = this.now();
+        if (null === this.playing) return this.releaseUnshown(UU), void this.startNext(UU);
+        const RU = this.playing,
+          gU = UU - RU.startedAt,
+          tU = RU.view.flyingCoins,
+          pU = function(UU, RU) {
+            let gU = 0;
+            for (; gU < RU && ig(gU, RU) <= UU;) gU++;
+            return gU
+          }(gU, tU);
+        if (pU !== RU.landed) {
+          for (let UU = pU - RU.landed > 2 ? pU - 1 : RU.landed; UU < pU; UU++) this.onCoinLanded(UU, tU);
+          RU.landed = pU, RU.released = Math.round(RU.view.coins * pU / tU), this.onHeldCoinsChanged()
         }
-        for (; CD.itemsLanded < CD.view.items.length && 2e3 + 160 * CD.itemsLanded + 630 <= cD;) this.onItemLanded(CD.itemsLanded), CD.itemsLanded++;
-        cD >= CD.view.durationMs && (this.finish(), this.startNext(DD))
+        for (; RU.itemsLanded < RU.view.items.length && 2e3 + 160 * RU.itemsLanded + 630 <= gU;) this.onItemLanded(RU.itemsLanded), RU.itemsLanded++;
+        gU >= RU.view.durationMs && (this.finish(), this.startNext(UU))
       }
       dispose() {
-        null !== this.playing && this.holdQuestPopups(!1), this.playing = null, this.queue = [], this.Lb = [], this.Uo(null)
+        null !== this.playing && this.holdQuestPopups(!1), this.playing = null, this.queue = [], this.WT = [], this.yh(null)
       }
-      startNext(DD) {
+      startNext(UU) {
         if (0 === this.queue.length || this.isBusy()) return;
-        const CD = this.queue.shift();
+        const RU = this.queue.shift();
         this.token++;
-        const cD = {
+        const gU = {
           token: this.token,
-          day: CD.dailyRewardDay,
-          coins: CD.dailyRewardCoins,
-          items: CD.dailyRewardItems,
+          day: RU.dailyRewardDay,
+          coins: RU.dailyRewardCoins,
+          items: RU.dailyRewardItems,
           durationMs: 5e3,
-          flyingCoins: CD.dailyRewardDay === xD ? 24 : 14
+          flyingCoins: RU.dailyRewardDay === oU ? 24 : 14
         };
         this.playing = {
-          view: cD,
-          startedAt: DD,
+          view: gU,
+          startedAt: UU,
           landed: 0,
           released: 0,
           itemsLanded: 0
-        }, this.holdQuestPopups(!0), this.Uo(cD), this.onStarted(cD)
+        }, this.holdQuestPopups(!0), this.yh(gU), this.onStarted(gU)
       }
       finish() {
-        this.Lb.shift(), this.playing = null, this.holdQuestPopups(!1), this.Uo(null), this.onHeldCoinsChanged(), this.onFinished()
+        this.WT.shift(), this.playing = null, this.holdQuestPopups(!1), this.yh(null), this.onHeldCoinsChanged(), this.onFinished()
       }
-      releaseUnshown(DD) {
-        if (this.queue.length > 0 || 0 === this.Lb.length) return;
-        const CD = this.Lb.length;
-        this.Lb = this.Lb.filter((CD => DD - CD.receivedAt < 6e4)), this.Lb.length !== CD && this.onHeldCoinsChanged()
+      releaseUnshown(UU) {
+        if (this.queue.length > 0 || 0 === this.WT.length) return;
+        const RU = this.WT.length;
+        this.WT = this.WT.filter((RU => UU - RU.receivedAt < 6e4)), this.WT.length !== RU && this.onHeldCoinsChanged()
       }
     }
 
-    function Yc(DD, CD) {
-      return 450 + 715 * DD / (CD - 1)
+    function Fg(UU, RU) {
+      return 450 + 715 * UU / (RU - 1)
     }
 
-    function Wc(DD, CD) {
-      return Yc(DD, CD) + 650
+    function ig(UU, RU) {
+      return Fg(UU, RU) + 650
     }
-    const sc = "skyblockMailboxView";
-    class Ec {
-      constructor(DD, CD) {
-        let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {},
-          ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : performance.now.bind(performance);
-        this.Uo = DD, this.isBusy = CD, this.onStarted = cD, this.now = ID, this.waiting = [], this.playing = null, this.token = 0, this.itemName = DD => DD
+    const Ag = "skyblockMailboxView";
+    class zg {
+      constructor(UU, RU) {
+        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {},
+          tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : performance.now.bind(performance);
+        this.yh = UU, this.isBusy = RU, this.onStarted = gU, this.now = tU, this.waiting = [], this.playing = null, this.token = 0, this.itemName = UU => UU
       }
       getSnapshot() {
-        var DD, CD;
-        return null !== (DD = null === (CD = this.playing) || void 0 === CD ? void 0 : CD.view) && void 0 !== DD ? DD : null
+        var UU, RU;
+        return null !== (UU = null === (RU = this.playing) || void 0 === RU ? void 0 : RU.view) && void 0 !== UU ? UU : null
       }
-      setItemName(DD) {
-        this.itemName = DD
+      setItemName(UU) {
+        this.itemName = UU
       }
-      kt(DD) {
-        this.waiting.push(...DD.mailLetters), this.wy()
+      qC(UU) {
+        this.waiting.push(...UU.mailLetters), this.HG()
       }
-      wy() {
-        const DD = this.now();
-        null !== this.playing && DD - this.playing.startedAt >= this.playing.view.durationMs && (this.playing = null, this.Uo(null)), null === this.playing && this.waiting.length > 0 && !this.isBusy() && this.start(DD)
+      HG() {
+        const UU = this.now();
+        null !== this.playing && UU - this.playing.startedAt >= this.playing.view.durationMs && (this.playing = null, this.yh(null)), null === this.playing && this.waiting.length > 0 && !this.isBusy() && this.start(UU)
       }
       dispose() {
-        this.playing = null, this.waiting = [], this.Uo(null)
+        this.playing = null, this.waiting = [], this.yh(null)
       }
-      start(DD) {
-        const CD = this.waiting.slice(0, 3);
+      start(UU) {
+        const RU = this.waiting.slice(0, 3);
         this.token++;
-        const cD = {
+        const gU = {
           token: this.token,
-          letters: CD.map((DD => this.toView(DD))),
-          more: this.waiting.length - CD.length,
-          durationMs: 4500 + 700 * CD.length
+          letters: RU.map((UU => this.toView(UU))),
+          more: this.waiting.length - RU.length,
+          durationMs: 4500 + 700 * RU.length
         };
         this.waiting = [], this.playing = {
-          view: cD,
-          startedAt: DD
-        }, this.Uo(cD), this.onStarted(cD)
+          view: gU,
+          startedAt: UU
+        }, this.yh(gU), this.onStarted(gU)
       }
-      toView(DD) {
+      toView(UU) {
         return {
-          coins: DD.mailCoins,
-          items: DD.mailItems.map((DD => {
-            var CD;
+          coins: UU.mailCoins,
+          items: UU.mailItems.map((UU => {
+            var RU;
             return {
-              itemName: DD.mailItemName,
-              amount: DD.mailItemAmount,
-              label: null !== (CD = DD.mailItemLabel) && void 0 !== CD ? CD : this.itemName(DD.mailItemName)
+              itemName: UU.mailItemName,
+              amount: UU.mailItemAmount,
+              label: null !== (RU = UU.mailItemLabel) && void 0 !== RU ? RU : this.itemName(UU.mailItemName)
             }
           })),
-          reasonKey: DD.mailReasonKey,
-          reasonParams: DD.mailReasonParams
+          reasonKey: UU.mailReasonKey,
+          reasonParams: UU.mailReasonParams
         }
       }
     }
-    const ec = "skyblockQuestGraphView",
-      uc = "skyblockDevQuestJump";
+    const Mg = "skyblockQuestGraphView",
+      Dg = "skyblockDevQuestJump";
 
-    function hc(DD) {
-      if (0 === DD.length) return "";
-      const CD = [`M ${DD[0].x} ${DD[0].y}`];
-      for (let ID = 1; ID < DD.length - 1; ID++) {
-        const cD = DD[ID + 1];
-        CD.push(`Q ${DD[ID].x} ${DD[ID].y} ${(DD[ID].x+cD.x)/2} ${(DD[ID].y+cD.y)/2}`)
+    function Lg(UU) {
+      if (0 === UU.length) return "";
+      const RU = [`M ${UU[0].x} ${UU[0].y}`];
+      for (let tU = 1; tU < UU.length - 1; tU++) {
+        const gU = UU[tU + 1];
+        RU.push(`Q ${UU[tU].x} ${UU[tU].y} ${(UU[tU].x+gU.x)/2} ${(UU[tU].y+gU.y)/2}`)
       }
-      const cD = DD[DD.length - 1];
-      return CD.push(`L ${cD.x} ${cD.y}`), CD.join(" ")
+      const gU = UU[UU.length - 1];
+      return RU.push(`L ${gU.x} ${gU.y}`), RU.join(" ")
     }
 
-    function rc(DD, CD) {
-      return DD < CD ? `${DD}|${CD}` : `${CD}|${DD}`
+    function Ng(UU, RU) {
+      return UU < RU ? `${UU}|${RU}` : `${RU}|${UU}`
     }
-    class Ac extends BD {
-      constructor(DD, CD) {
-        let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {},
-          ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
-          pD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
-          iD = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {},
-          fD = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : {
+    class lg extends GU {
+      constructor(UU, RU) {
+        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {},
+          tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
+          pU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
+          EU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {},
+          PU = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : {
             getItem: () => null,
             setItem: () => {},
             removeItem: () => {}
           },
-          bD = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Date.now;
-        super(DD, cD, ID), this.translate = CD, this.requestJump = pD, this.requestArrive = iD, this.storage = fD, this.now = bD, this.layout = null, this.hoveredId = null, this.graphCount = 0, this.snapshot = {
+          TU = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Date.now;
+        super(UU, gU, tU), this.translate = RU, this.requestJump = pU, this.requestArrive = EU, this.storage = PU, this.now = TU, this.layout = null, this.hoveredId = null, this.graphCount = 0, this.snapshot = {
           enabled: !1,
           open: !1,
           width: 0,
@@ -2858,89 +2858,89 @@ export const modules = {
           nodes: [],
           edges: [],
           planning: !1
-        }, this.hover = DD => {
-          DD !== this.hoveredId && (this.hoveredId = DD, this.emit())
-        }, this.jump = DD => {
-          this.close(), this.requestJump(DD)
+        }, this.hover = UU => {
+          UU !== this.hoveredId && (this.hoveredId = UU, this.emit())
+        }, this.jump = UU => {
+          this.close(), this.requestJump(UU)
         }
       }
-      kt(DD) {
-        if (!this.Lt)
-          if ("graph" !== DD.kind) {
-            if ("jumping" === DD.kind) {
-              const CD = {
-                questId: DD.graphQuestId,
-                variation: DD.graphVariation,
-                completes: DD.graphCompletesOnArrival,
+      qC(UU) {
+        if (!this.pC)
+          if ("graph" !== UU.kind) {
+            if ("jumping" === UU.kind) {
+              const RU = {
+                questId: UU.graphQuestId,
+                variation: UU.graphVariation,
+                completes: UU.graphCompletesOnArrival,
                 departedAt: this.now()
               };
-              this.storage.setItem(uc, CD)
+              this.storage.setItem(Dg, RU)
             }
           } else {
-            const CD = ++this.graphCount;
-            cD.e(111).then((() => cD(6171))).then((cD => {
+            const RU = ++this.graphCount;
+            gU.e(111).then((() => gU(6123))).then((gU => {
               let {
-                default: ID
-              } = cD;
-              this.Lt || CD !== this.graphCount || (this.layout = function(DD, CD, cD) {
-                var ID, pD;
-                const iD = new DD.graphlib.Graph;
-                iD.setGraph({
+                default: tU
+              } = gU;
+              this.pC || RU !== this.graphCount || (this.layout = function(UU, RU, gU) {
+                var tU, pU;
+                const EU = new UU.graphlib.Graph;
+                EU.setGraph({
                   rankdir: "LR",
                   ranksep: 70,
                   nodesep: 14,
                   marginx: 24,
                   marginy: 24
-                }), iD.setDefaultEdgeLabel((() => ({})));
-                const fD = new Set;
-                for (const SD of CD) fD.add(SD.graphQuestId), iD.setNode(SD.graphQuestId, {
+                }), EU.setDefaultEdgeLabel((() => ({})));
+                const PU = new Set;
+                for (const cU of RU) PU.add(cU.graphQuestId), EU.setNode(cU.graphQuestId, {
                   width: 190,
                   height: 52
                 });
-                const bD = cD.filter((DD => fD.has(DD.graphFromId) && fD.has(DD.graphToId) && DD.graphFromId !== DD.graphToId)),
-                  QD = new Map;
-                for (const SD of [...bD].sort(((DD, CD) => Number("awaits" === DD.graphEdgeKind) - Number("awaits" === CD.graphEdgeKind)))) {
-                  const DD = rc(SD.graphFromId, SD.graphToId);
-                  QD.has(DD) || (QD.set(DD, SD), iD.setEdge(SD.graphFromId, SD.graphToId))
+                const TU = gU.filter((UU => PU.has(UU.graphFromId) && PU.has(UU.graphToId) && UU.graphFromId !== UU.graphToId)),
+                  qU = new Map;
+                for (const cU of [...TU].sort(((UU, RU) => Number("awaits" === UU.graphEdgeKind) - Number("awaits" === RU.graphEdgeKind)))) {
+                  const UU = Ng(cU.graphFromId, cU.graphToId);
+                  qU.has(UU) || (qU.set(UU, cU), EU.setEdge(cU.graphFromId, cU.graphToId))
                 }
-                DD.layout(iD);
-                const wD = iD.graph();
+                UU.layout(EU);
+                const KU = EU.graph();
                 return {
-                  width: Math.ceil(null !== (ID = wD.width) && void 0 !== ID ? ID : 0),
-                  height: Math.ceil(null !== (pD = wD.height) && void 0 !== pD ? pD : 0),
-                  nodes: CD.map((DD => {
-                    var CD, cD;
-                    const ID = iD.node(DD.graphQuestId);
+                  width: Math.ceil(null !== (tU = KU.width) && void 0 !== tU ? tU : 0),
+                  height: Math.ceil(null !== (pU = KU.height) && void 0 !== pU ? pU : 0),
+                  nodes: RU.map((UU => {
+                    var RU, gU;
+                    const tU = EU.node(UU.graphQuestId);
                     return {
-                      node: DD,
-                      left: (null !== (CD = ID.x) && void 0 !== CD ? CD : 0) - 95,
-                      top: (null !== (cD = ID.y) && void 0 !== cD ? cD : 0) - 26
+                      node: UU,
+                      left: (null !== (RU = tU.x) && void 0 !== RU ? RU : 0) - 95,
+                      top: (null !== (gU = tU.y) && void 0 !== gU ? gU : 0) - 26
                     }
                   })),
-                  edges: bD.map((DD => {
-                    var CD;
-                    const cD = QD.get(rc(DD.graphFromId, DD.graphToId)),
-                      ID = null !== (CD = iD.edge(cD.graphFromId, cD.graphToId).points) && void 0 !== CD ? CD : [];
+                  edges: TU.map((UU => {
+                    var RU;
+                    const gU = qU.get(Ng(UU.graphFromId, UU.graphToId)),
+                      tU = null !== (RU = EU.edge(gU.graphFromId, gU.graphToId).points) && void 0 !== RU ? RU : [];
                     return {
-                      edge: DD,
-                      key: `${DD.graphFromId}|${DD.graphToId}|${DD.graphEdgeKind}`,
-                      path: hc(cD.graphFromId === DD.graphFromId ? ID : [...ID].reverse())
+                      edge: UU,
+                      key: `${UU.graphFromId}|${UU.graphToId}|${UU.graphEdgeKind}`,
+                      path: Lg(gU.graphFromId === UU.graphFromId ? tU : [...tU].reverse())
                     }
                   })),
-                  plans: new Map(CD.map((DD => [DD.graphQuestId, new Set([DD.graphQuestId, ...DD.graphPlanIds])])))
+                  plans: new Map(RU.map((UU => [UU.graphQuestId, new Set([UU.graphQuestId, ...UU.graphPlanIds])])))
                 }
-              }(ID, DD.graphNodes, DD.graphEdges), this.show())
-            })).catch((DD => {
-              console.error("The quest graph could not be laid out", DD)
+              }(tU, UU.graphNodes, UU.graphEdges), this.show())
+            })).catch((UU => {
+              console.error("The quest graph could not be laid out", UU)
             }))
           }
       }
-      resumeJump(DD) {
-        const CD = this.storage.getItem(uc);
-        this.storage.removeItem(uc), null === CD || CD.variation !== DD || this.now() - CD.departedAt > 6e4 || this.requestArrive(CD.questId, CD.completes)
+      resumeJump(UU) {
+        const RU = this.storage.getItem(Dg);
+        this.storage.removeItem(Dg), null === RU || RU.variation !== UU || this.now() - RU.departedAt > 6e4 || this.requestArrive(RU.questId, RU.completes)
       }
-      setTranslator(DD) {
-        this.translate = DD, this.emit()
+      setTranslator(UU) {
+        this.translate = UU, this.emit()
       }
       dispose() {
         this.layout = null, this.hoveredId = null, super.dispose()
@@ -2952,12 +2952,12 @@ export const modules = {
         return null !== this.layout
       }
       getPlan() {
-        var DD, CD;
-        return null !== (DD = null === this.hoveredId || null === (CD = this.layout) || void 0 === CD ? void 0 : CD.plans.get(this.hoveredId)) && void 0 !== DD ? DD : new Set
+        var UU, RU;
+        return null !== (UU = null === this.hoveredId || null === (RU = this.layout) || void 0 === RU ? void 0 : RU.plans.get(this.hoveredId)) && void 0 !== UU ? UU : new Set
       }
       buildSnapshot() {
-        const DD = this.layout;
-        if (null === DD) return {
+        const UU = this.layout;
+        if (null === UU) return {
           enabled: !1,
           open: this.open,
           width: 0,
@@ -2966,229 +2966,229 @@ export const modules = {
           edges: [],
           planning: !1
         };
-        const CD = this.getPlan();
+        const RU = this.getPlan();
         return {
           enabled: !0,
           open: this.open,
-          width: DD.width,
-          height: DD.height,
-          nodes: DD.nodes.map((DD => {
+          width: UU.width,
+          height: UU.height,
+          nodes: UU.nodes.map((UU => {
             let {
-              node: cD,
-              left: ID,
-              top: pD
-            } = DD;
+              node: gU,
+              left: tU,
+              top: pU
+            } = UU;
             return {
-              id: cD.graphQuestId,
-              name: this.translate(cD.graphNameKey),
-              detail: null === cD.graphGiverName ? cD.graphZoneId : `${cD.graphGiverName} \xb7 ${cD.graphZoneId}`,
-              state: cD.graphState,
-              left: ID,
-              top: pD,
-              inPlan: CD.has(cD.graphQuestId),
-              hovered: cD.graphQuestId === this.hoveredId
+              id: gU.graphQuestId,
+              name: this.translate(gU.graphNameKey),
+              detail: null === gU.graphGiverName ? gU.graphZoneId : `${gU.graphGiverName} \xb7 ${gU.graphZoneId}`,
+              state: gU.graphState,
+              left: tU,
+              top: pU,
+              inPlan: RU.has(gU.graphQuestId),
+              hovered: gU.graphQuestId === this.hoveredId
             }
           })),
-          edges: DD.edges.map((DD => {
+          edges: UU.edges.map((UU => {
             let {
-              edge: cD,
-              key: ID,
-              path: pD
-            } = DD;
+              edge: gU,
+              key: tU,
+              path: pU
+            } = UU;
             return {
-              key: ID,
-              kind: cD.graphEdgeKind,
-              path: pD,
-              inPlan: CD.has(cD.graphFromId) && CD.has(cD.graphToId)
+              key: tU,
+              kind: gU.graphEdgeKind,
+              path: pU,
+              inPlan: RU.has(gU.graphFromId) && RU.has(gU.graphToId)
             }
           })),
-          planning: CD.size > 0
+          planning: RU.size > 0
         }
       }
     }
-    var Fc = cD(36415);
-    const DI = 250,
-      CI = 2150,
-      cI = -2.8,
-      II = 2.2,
-      pI = -27,
-      iI = {
+    var Og = gU(36569);
+    const Ut = 250,
+      Rt = 2150,
+      gt = -2.8,
+      tt = 2.2,
+      pt = -27,
+      Et = {
         zeta: .34,
         period: .7,
         lead: .1,
         rush: .04
       },
-      fI = {
+      Pt = {
         zeta: .45,
         period: .55,
         delay: .12,
         to: 1.25
       },
-      bI = Math.round(50 + 1e3 * (fI.delay + fI.period / 2)),
-      QI = "\u16a0\u16a2\u16a6\u16a8\u16b1\u16b2\u16b7\u16b9\u16ba\u16be\u16c1\u16c3\u16c7\u16c8\u16c9\u16ca\u16cf\u16d2\u16d6\u16d7\u16da\u16dc\u16de\u16df",
-      wI = Array.from({
+      Tt = Math.round(50 + 1e3 * (Pt.delay + Pt.period / 2)),
+      qt = "\u16a0\u16a2\u16a6\u16a8\u16b1\u16b2\u16b7\u16b9\u16ba\u16be\u16c1\u16c3\u16c7\u16c8\u16c9\u16ca\u16cf\u16d2\u16d6\u16d7\u16da\u16dc\u16de\u16df",
+      Kt = Array.from({
         length: 26
-      }, ((DD, CD) => {
-        const cD = 2.39996 * CD,
-          ID = .5 + .618034 * CD % 1 * .23,
-          pD = CD % 3 !== 2;
+      }, ((UU, RU) => {
+        const gU = 2.39996 * RU,
+          tU = .5 + .618034 * RU % 1 * .23,
+          pU = RU % 3 !== 2;
         return {
-          rune: pD ? QI[7 * CD % 24] : "",
+          rune: pU ? qt[7 * RU % 24] : "",
           style: {
-            "--from-x": `calc(var(--sword-size) * ${(Math.cos(cD)*ID).toFixed(3)})`,
-            "--from-y": `calc(var(--sword-size) * ${(Math.sin(cD)*ID).toFixed(3)})`,
-            "--spin": 40 * (CD % 5 - 2) + "deg",
-            "--size": (pD ? 1 + CD % 4 * .2 : .3 + CD % 2 * .15) + "rem",
-            "--duration": `${(1.8+7*CD%5*.35).toFixed(2)}s`,
-            "--delay": `${(-.83*CD%3).toFixed(2)}s`
+            "--from-x": `calc(var(--sword-size) * ${(Math.cos(gU)*tU).toFixed(3)})`,
+            "--from-y": `calc(var(--sword-size) * ${(Math.sin(gU)*tU).toFixed(3)})`,
+            "--spin": 40 * (RU % 5 - 2) + "deg",
+            "--size": (pU ? 1 + RU % 4 * .2 : .3 + RU % 2 * .15) + "rem",
+            "--duration": `${(1.8+7*RU%5*.35).toFixed(2)}s`,
+            "--delay": `${(-.83*RU%3).toFixed(2)}s`
           }
         }
       }));
 
-    function SI(DD, CD) {
+    function ct(UU, RU) {
       return Array.from({
-        length: 30 + 3 * DD + (CD ? 10 : 0)
-      }, ((DD, CD) => {
-        const cD = CD < 4,
-          ID = cD ? "#fff" : Math.random() < .25 ? "#ff922b" : "#ffe08a",
-          pD = cD ? 7 + 3 * Math.random() : 3.5 + 5 * Math.random(),
-          iD = cD ? 2.2 : .6 + Math.random(),
-          fD = cD ? .3 : Math.random() < .5 ? .16 : .24,
-          bD = cD ? 600 + 100 * Math.random() : 280 + 280 * Math.random();
+        length: 30 + 3 * UU + (RU ? 10 : 0)
+      }, ((UU, RU) => {
+        const gU = RU < 4,
+          tU = gU ? "#fff" : Math.random() < .25 ? "#ff922b" : "#ffe08a",
+          pU = gU ? 7 + 3 * Math.random() : 3.5 + 5 * Math.random(),
+          EU = gU ? 2.2 : .6 + Math.random(),
+          PU = gU ? .3 : Math.random() < .5 ? .16 : .24,
+          TU = gU ? 600 + 100 * Math.random() : 280 + 280 * Math.random();
         return {
-          "--c": ID,
+          "--c": tU,
           "--angle": `${Math.round(220*(Math.random()-.5)+15)}deg`,
-          "--distance": `${pD.toFixed(2)}rem`,
-          "--length": `${iD.toFixed(2)}rem`,
-          "--width": `${fD}rem`,
-          "--duration": `${Math.round(bD)}ms`,
+          "--distance": `${pU.toFixed(2)}rem`,
+          "--length": `${EU.toFixed(2)}rem`,
+          "--width": `${PU}rem`,
+          "--duration": `${Math.round(TU)}ms`,
           "--delay": `${Math.round(40*Math.random())}ms`,
           "--fall": `${(1+Math.random()).toFixed(2)}rem`
         }
       }))
     }
 
-    function BI(DD) {
+    function Gt(UU) {
       let {
-        zeta: CD,
-        period: cD
-      } = DD;
-      const ID = 2 * Math.PI / cD;
+        zeta: RU,
+        period: gU
+      } = UU;
+      const tU = 2 * Math.PI / gU;
       return {
-        w: ID,
-        decay: CD * ID / Math.sqrt(1 - CD * CD)
+        w: tU,
+        decay: RU * tU / Math.sqrt(1 - RU * RU)
       }
     }
-    let yI = !1;
+    let jt = !1;
 
-    function MI() {
-      if (yI) return;
-      yI = !0;
-      const DD = document.createElement("style");
-      DD.textContent = function() {
-        const DD = BI(iI),
-          CD = BI(fI),
-          cD = CD => Math.exp(-DD.decay * CD) * Math.sin(DD.w * CD),
-          ID = cD(Math.atan(DD.w / DD.decay) / DD.w),
-          pD = .25,
-          iD = 2.15,
-          fD = Math.round(215),
-          bD = [];
-        for (let QD = 0; QD <= fD; QD++) {
-          const DD = QD / fD * iD;
-          let wD = Math.sin(Math.min(DD, pD) / pD * Math.PI / 2) ** 2,
-            SD = 0,
-            BD = 1,
-            yD = 1 - .2 * wD,
-            MD = 1;
-          if (DD >= pD) {
-            const fD = DD - pD,
-              bD = Math.max(0, fD - .05);
-            wD = Math.exp(-bD / .05), SD = cD(bD + iI.lead * (1 - Math.exp(-bD / iI.rush))) / ID;
-            const QD = bD - fI.delay,
-              tD = QD <= 0 ? 0 : 1 - Math.exp(-CD.decay * QD) * (Math.cos(CD.w * QD) + CD.decay / CD.w * Math.sin(CD.w * QD)),
-              ZD = Math.max(0, (DD - 1.77) / (iD - 1.77));
-            BD = (1 + (fI.to - 1) * tD) * (1 + .08 * ZD), yD = 1.1 + 1.5 * Math.exp(-fD / .07) + .3 * Math.exp(-(((1e3 * fD - bI) / 100) ** 2)) + .8 * ZD, MD = 1 - ZD ** 1.5
+    function ut() {
+      if (jt) return;
+      jt = !0;
+      const UU = document.createElement("style");
+      UU.textContent = function() {
+        const UU = Gt(Et),
+          RU = Gt(Pt),
+          gU = RU => Math.exp(-UU.decay * RU) * Math.sin(UU.w * RU),
+          tU = gU(Math.atan(UU.w / UU.decay) / UU.w),
+          pU = .25,
+          EU = 2.15,
+          PU = Math.round(215),
+          TU = [];
+        for (let qU = 0; qU <= PU; qU++) {
+          const UU = qU / PU * EU;
+          let KU = Math.sin(Math.min(UU, pU) / pU * Math.PI / 2) ** 2,
+            cU = 0,
+            GU = 1,
+            jU = 1 - .2 * KU,
+            uU = 1;
+          if (UU >= pU) {
+            const PU = UU - pU,
+              TU = Math.max(0, PU - .05);
+            KU = Math.exp(-TU / .05), cU = gU(TU + Et.lead * (1 - Math.exp(-TU / Et.rush))) / tU;
+            const qU = TU - Pt.delay,
+              CU = qU <= 0 ? 0 : 1 - Math.exp(-RU.decay * qU) * (Math.cos(RU.w * qU) + RU.decay / RU.w * Math.sin(RU.w * qU)),
+              hU = Math.max(0, (UU - 1.77) / (EU - 1.77));
+            GU = (1 + (Pt.to - 1) * CU) * (1 + .08 * hU), jU = 1.1 + 1.5 * Math.exp(-PU / .07) + .3 * Math.exp(-(((1e3 * PU - Tt) / 100) ** 2)) + .8 * hU, uU = 1 - hU ** 1.5
           }
-          const tD = .15 * wD + cI * SD,
-            ZD = -.1 * wD + II * SD,
-            oD = 3 * wD + pI * SD;
-          bD.push(`${(QD/fD*100).toFixed(3)}% { opacity: ${MD.toFixed(3)}; transform: translate(${tD.toFixed(3)}rem, ${ZD.toFixed(3)}rem) rotate(${oD.toFixed(2)}deg) scale(${BD.toFixed(3)}); filter: brightness(${yD.toFixed(2)}) drop-shadow(0 0 0.8rem color-mix(in srgb, var(--tier) 55%, transparent)); }`)
+          const CU = .15 * KU + gt * cU,
+            hU = -.1 * KU + tt * cU,
+            QU = 3 * KU + pt * cU;
+          TU.push(`${(qU/PU*100).toFixed(3)}% { opacity: ${uU.toFixed(3)}; transform: translate(${CU.toFixed(3)}rem, ${hU.toFixed(3)}rem) rotate(${QU.toFixed(2)}deg) scale(${GU.toFixed(3)}); filter: brightness(${jU.toFixed(2)}) drop-shadow(0 0 0.8rem color-mix(in srgb, var(--tier) 55%, transparent)); }`)
         }
-        return `@keyframes SkyblockForgeSwordBurst { ${bD.join(" ")} }`
-      }(), document.head.append(DD)
+        return `@keyframes SkyblockForgeSwordBurst { ${TU.join(" ")} }`
+      }(), document.head.append(UU)
     }
-    const tI = "skyblockForgeView",
-      ZI = {
+    const Ct = "skyblockForgeView",
+      ht = {
         Blade: "skyblockGame:forgeSlotBlade",
         Guard: "skyblockGame:forgeSlotGuard",
         Handle: "skyblockGame:forgeSlotHandle"
       };
-    class oI extends BD {
-      constructor(DD, CD, cD, ID, pD) {
-        super(DD, cD, ID), this.translate = CD, this.requestForge = pD, this.snapshot = void 0, this.owned = {}, this.coal = 0, this.received = !1, this.awaitingReply = !1, this.pacing = null, this.replyTimeout = null, this.status = null, this.forging = null, this.forgeId = 0, this.arriving = null, this.selected = {
+    class Qt extends GU {
+      constructor(UU, RU, gU, tU, pU) {
+        super(UU, gU, tU), this.translate = RU, this.requestForge = pU, this.snapshot = void 0, this.owned = {}, this.coal = 0, this.received = !1, this.awaitingReply = !1, this.pacing = null, this.replyTimeout = null, this.status = null, this.forging = null, this.forgeId = 0, this.arriving = null, this.selected = {
           Blade: null,
           Guard: null,
           Handle: null
-        }, this.onForgeStarted = null, this.onPartSelected = null, this.select = (DD, CD) => {
-          var cD, ID;
-          null !== this.forging || (null !== (cD = this.owned[(0, Fc.t)(CD, DD)]) && void 0 !== cD ? cD : 0) <= 0 || (this.selected[DD] = this.selected[DD] === CD ? null : CD, this.status = null, null === (ID = this.onPartSelected) || void 0 === ID || ID.call(this), this.emit())
-        }, this.forge = DD => {
-          var CD, cD;
-          const ID = this.selectedParts();
-          if (null === ID || this.isPending() || !this.open) return;
-          const pD = (0, Fc.p)(ID);
-          if (null === pD || pD.coalCost > this.coal) return;
-          const iD = this.preview(pD),
-            fD = null !== (CD = null === (cD = this.onForgeStarted) || void 0 === cD ? void 0 : cD.call(this, iD.tier, iD.named, DD)) && void 0 !== CD ? CD : () => {};
-          if (this.dropArrival(), DD) {
-            const DD = {
+        }, this.onForgeStarted = null, this.onPartSelected = null, this.select = (UU, RU) => {
+          var gU, tU;
+          null !== this.forging || (null !== (gU = this.owned[(0, Og.m)(RU, UU)]) && void 0 !== gU ? gU : 0) <= 0 || (this.selected[UU] = this.selected[UU] === RU ? null : RU, this.status = null, null === (tU = this.onPartSelected) || void 0 === tU || tU.call(this), this.emit())
+        }, this.forge = UU => {
+          var RU, gU;
+          const tU = this.selectedParts();
+          if (null === tU || this.isPending() || !this.open) return;
+          const pU = (0, Og.j)(tU);
+          if (null === pU || pU.coalCost > this.coal) return;
+          const EU = this.preview(pU),
+            PU = null !== (RU = null === (gU = this.onForgeStarted) || void 0 === gU ? void 0 : gU.call(this, EU.tier, EU.named, UU)) && void 0 !== RU ? RU : () => {};
+          if (this.dropArrival(), UU) {
+            const UU = {
               id: ++this.forgeId,
-              preview: iD,
+              preview: EU,
               timers: [],
-              stopSounds: fD,
+              stopSounds: PU,
               landed: !1,
               reply: null
             };
-            DD.timers.push(setTimeout((() => {
-              DD.landed = !0, null !== DD.reply && (this.apply(DD.reply), DD.reply = null, this.emit())
-            }), DI), setTimeout((() => {
-              this.finishForge(DD)
-            }), CI)), this.forging = DD
+            UU.timers.push(setTimeout((() => {
+              UU.landed = !0, null !== UU.reply && (this.apply(UU.reply), UU.reply = null, this.emit())
+            }), Ut), setTimeout((() => {
+              this.finishForge(UU)
+            }), Rt)), this.forging = UU
           }
           this.awaitingReply = !0, this.pacing = setTimeout((() => {
             this.pacing = null, this.emit()
           }), 2500), this.replyTimeout = setTimeout((() => {
             this.replyTimeout = null, this.awaitingReply = !1, this.emit()
-          }), 8e3), this.emit(), this.requestForge(ID)
+          }), 8e3), this.emit(), this.requestForge(tU)
         }, this.snapshot = this.buildSnapshot()
       }
-      kt(DD) {
-        if (this.received = !0, this.awaitingReply = !1, this.clearReplyTimeout(), "open" === DD.forgeMessageKind) return this.dropForge(), this.apply(DD), this.status = null, void this.show();
-        const CD = this.forging;
-        if (null !== CD && null !== DD.forgeRefusalKey) this.dropForge();
-        else if (null !== CD && !CD.landed) return void(CD.reply = DD);
-        this.apply(DD), this.emit()
+      qC(UU) {
+        if (this.received = !0, this.awaitingReply = !1, this.clearReplyTimeout(), "open" === UU.forgeMessageKind) return this.dropForge(), this.apply(UU), this.status = null, void this.show();
+        const RU = this.forging;
+        if (null !== RU && null !== UU.forgeRefusalKey) this.dropForge();
+        else if (null !== RU && !RU.landed) return void(RU.reply = UU);
+        this.apply(UU), this.emit()
       }
-      apply(DD) {
-        if (this.owned = DD.forgeOwnedParts, this.coal = DD.forgeCoalOwned, this.keepSelectionOwned("open" === DD.forgeMessageKind), null !== DD.forgeForgedSwordId) {
-          var CD;
-          const cD = (0, Fc.p)(DD.forgeForgedSwordId);
+      apply(UU) {
+        if (this.owned = UU.forgeOwnedParts, this.coal = UU.forgeCoalOwned, this.keepSelectionOwned("open" === UU.forgeMessageKind), null !== UU.forgeForgedSwordId) {
+          var RU;
+          const gU = (0, Og.j)(UU.forgeForgedSwordId);
           this.status = {
             tone: "forged",
             key: "skyblockGame:forgeForged",
             params: {
-              sword: null !== (CD = null === cD || void 0 === cD ? void 0 : cD.displayName) && void 0 !== CD ? CD : ""
+              sword: null !== (RU = null === gU || void 0 === gU ? void 0 : gU.displayName) && void 0 !== RU ? RU : ""
             }
           }
-        } else null !== DD.forgeRefusalKey && (this.status = {
+        } else null !== UU.forgeRefusalKey && (this.status = {
           tone: "refused",
-          key: DD.forgeRefusalKey,
+          key: UU.forgeRefusalKey,
           params: {}
         })
       }
-      setTranslator(DD) {
-        this.translate = DD, this.emit()
+      setTranslator(UU) {
+        this.translate = UU, this.emit()
       }
       isEnabled() {
         return this.received
@@ -3196,25 +3196,25 @@ export const modules = {
       onClosed() {
         this.dropForge(), this.dropArrival(), this.status = null, this.awaitingReply = !1, this.clearReplyTimeout()
       }
-      finishForge(DD) {
-        var CD;
+      finishForge(UU) {
+        var RU;
         this.forging = null;
-        const cD = this.selectedParts(),
-          ID = setTimeout((() => {
+        const gU = this.selectedParts(),
+          tU = setTimeout((() => {
             this.arriving = null, this.emit()
           }), 400);
         this.arriving = {
-          id: DD.id,
-          sameSword: null !== cD && (null === (CD = (0, Fc.p)(cD)) || void 0 === CD ? void 0 : CD.displayName) === DD.preview.name,
-          timer: ID
+          id: UU.id,
+          sameSword: null !== gU && (null === (RU = (0, Og.j)(gU)) || void 0 === RU ? void 0 : RU.displayName) === UU.preview.name,
+          timer: tU
         }, this.emit()
       }
       dropForge() {
-        const DD = this.forging;
-        if (null !== DD) {
+        const UU = this.forging;
+        if (null !== UU) {
           this.forging = null;
-          for (const CD of DD.timers) clearTimeout(CD);
-          DD.stopSounds(), null !== DD.reply && this.apply(DD.reply)
+          for (const RU of UU.timers) clearTimeout(RU);
+          UU.stopSounds(), null !== UU.reply && this.apply(UU.reply)
         }
       }
       dropArrival() {
@@ -3227,23 +3227,23 @@ export const modules = {
         null !== this.replyTimeout && (clearTimeout(this.replyTimeout), this.replyTimeout = null)
       }
       buildSnapshot() {
-        var DD, CD, cD;
-        const ID = this.selectedParts(),
-          pD = null === ID ? null : (0, Fc.p)(ID),
-          iD = null !== (DD = null === (CD = this.forging) || void 0 === CD ? void 0 : CD.preview) && void 0 !== DD ? DD : null === pD ? null : this.preview(pD);
+        var UU, RU, gU;
+        const tU = this.selectedParts(),
+          pU = null === tU ? null : (0, Og.j)(tU),
+          EU = null !== (UU = null === (RU = this.forging) || void 0 === RU ? void 0 : RU.preview) && void 0 !== UU ? UU : null === pU ? null : this.preview(pU);
         return {
           enabled: this.received,
           open: this.open,
-          slots: Fc.n.map((DD => ({
-            kind: DD,
-            label: this.translate(ZI[DD]),
-            parts: this.partsFor(DD)
+          slots: Og.i.map((UU => ({
+            kind: UU,
+            label: this.translate(ht[UU]),
+            parts: this.partsFor(UU)
           }))),
           coalOwned: this.coal,
-          preview: iD,
-          unformedSword: Fc.l[null !== (cD = this.selected.Blade) && void 0 !== cD ? cD : "Iron"].baseSword,
-          anyParts: Object.values(this.owned).some((DD => DD > 0)),
-          canForge: null !== iD && !iD.coalShort && !this.isPending(),
+          preview: EU,
+          unformedSword: Og.h[null !== (gU = this.selected.Blade) && void 0 !== gU ? gU : "Iron"].baseSword,
+          anyParts: Object.values(this.owned).some((UU => UU > 0)),
+          canForge: null !== EU && !EU.coalShort && !this.isPending(),
           status: null === this.status ? null : {
             tone: this.status.tone,
             text: this.translate(this.status.key, this.status.params)
@@ -3258,145 +3258,145 @@ export const modules = {
           }
         }
       }
-      preview(DD) {
+      preview(UU) {
         return {
-          name: DD.displayName,
-          lore: DD.lore,
-          baseSword: DD.baseSword,
-          enchantmentTier: DD.enchantmentTier,
-          tier: Number(DD.enchantmentTier.slice(-1)),
-          named: DD.named,
-          stats: this.stats(DD),
-          effects: DD.effects,
-          coalCost: DD.coalCost,
-          coalShort: null === this.forging && DD.coalCost > this.coal
+          name: UU.displayName,
+          lore: UU.lore,
+          baseSword: UU.baseSword,
+          enchantmentTier: UU.enchantmentTier,
+          tier: Number(UU.enchantmentTier.slice(-1)),
+          named: UU.named,
+          stats: this.stats(UU),
+          effects: UU.effects,
+          coalCost: UU.coalCost,
+          coalShort: null === this.forging && UU.coalCost > this.coal
         }
       }
-      partsFor(DD) {
-        const CD = [];
-        for (const ID of Fc.h) {
-          var cD;
-          const pD = (0, Fc.t)(ID, DD),
-            iD = null !== (cD = this.owned[pD]) && void 0 !== cD ? cD : 0;
-          iD > 0 && CD.push({
-            material: ID,
-            itemName: pD,
-            owned: iD,
-            selected: this.selected[DD] === ID,
+      partsFor(UU) {
+        const RU = [];
+        for (const tU of Og.f) {
+          var gU;
+          const pU = (0, Og.m)(tU, UU),
+            EU = null !== (gU = this.owned[pU]) && void 0 !== gU ? gU : 0;
+          EU > 0 && RU.push({
+            material: tU,
+            itemName: pU,
+            owned: EU,
+            selected: this.selected[UU] === tU,
             placeholder: !1
           })
         }
-        if (0 === CD.length) {
-          const cD = Fc.h[0];
-          CD.push({
-            material: cD,
-            itemName: (0, Fc.t)(cD, DD),
+        if (0 === RU.length) {
+          const gU = Og.f[0];
+          RU.push({
+            material: gU,
+            itemName: (0, Og.m)(gU, UU),
             owned: 0,
             selected: !1,
             placeholder: !0
           })
         }
-        return CD
+        return RU
       }
-      stats(DD) {
-        const CD = [{
+      stats(UU) {
+        const RU = [{
           label: this.translate("skyblockGame:forgeStatPower"),
-          value: `\xd7${DD.powerMultiplier.toFixed(2)}`,
-          better: DD.powerMultiplier > 1
+          value: `\xd7${UU.powerMultiplier.toFixed(2)}`,
+          better: UU.powerMultiplier > 1
         }, {
           label: this.translate("skyblockGame:forgeStatDamage"),
-          value: `\xd7${DD.damageMultiplier.toFixed(2)}`,
-          better: DD.damageMultiplier > 1
+          value: `\xd7${UU.damageMultiplier.toFixed(2)}`,
+          better: UU.damageMultiplier > 1
         }, {
           label: this.translate("skyblockGame:forgeStatSpeed"),
-          value: `\xd7${(1/DD.cooldownMultiplier).toFixed(2)}`,
-          better: DD.cooldownMultiplier < 1
+          value: `\xd7${(1/UU.cooldownMultiplier).toFixed(2)}`,
+          better: UU.cooldownMultiplier < 1
         }, {
           label: this.translate("skyblockGame:forgeStatKnockback"),
-          value: `\xd7${DD.knockbackMultiplier.toFixed(2)}`,
-          better: DD.knockbackMultiplier > 1
+          value: `\xd7${UU.knockbackMultiplier.toFixed(2)}`,
+          better: UU.knockbackMultiplier > 1
         }];
-        return DD.reachBonus > 0 && CD.push({
+        return UU.reachBonus > 0 && RU.push({
           label: this.translate("skyblockGame:forgeStatReach"),
-          value: `+${DD.reachBonus.toFixed(1)}`,
+          value: `+${UU.reachBonus.toFixed(1)}`,
           better: !0
-        }), DD.damageReduction > 0 && CD.push({
+        }), UU.damageReduction > 0 && RU.push({
           label: this.translate("skyblockGame:forgeStatDefence"),
-          value: `${Math.round(100*DD.damageReduction)}%`,
+          value: `${Math.round(100*UU.damageReduction)}%`,
           better: !0
-        }), CD
+        }), RU
       }
       selectedParts() {
         const {
-          Blade: DD,
-          Guard: CD,
-          Handle: cD
+          Blade: UU,
+          Guard: RU,
+          Handle: gU
         } = this.selected;
-        return null === DD || null === CD || null === cD ? null : {
-          blade: DD,
-          guard: CD,
-          handle: cD
+        return null === UU || null === RU || null === gU ? null : {
+          blade: UU,
+          guard: RU,
+          handle: gU
         }
       }
-      keepSelectionOwned(DD) {
-        for (const cD of Fc.n) {
-          var CD;
-          const ID = this.selected[cD];
-          if (null !== ID && (null !== (CD = this.owned[(0, Fc.t)(ID, cD)]) && void 0 !== CD ? CD : 0) > 0) continue;
-          if (!DD) {
-            this.selected[cD] = null;
+      keepSelectionOwned(UU) {
+        for (const gU of Og.i) {
+          var RU;
+          const tU = this.selected[gU];
+          if (null !== tU && (null !== (RU = this.owned[(0, Og.m)(tU, gU)]) && void 0 !== RU ? RU : 0) > 0) continue;
+          if (!UU) {
+            this.selected[gU] = null;
             continue
           }
-          const pD = [...Fc.h].reverse().find((DD => {
-            var CD;
-            return (null !== (CD = this.owned[(0, Fc.t)(DD, cD)]) && void 0 !== CD ? CD : 0) > 0
+          const pU = [...Og.f].reverse().find((UU => {
+            var RU;
+            return (null !== (RU = this.owned[(0, Og.m)(UU, gU)]) && void 0 !== RU ? RU : 0) > 0
           }));
-          this.selected[cD] = null !== pD && void 0 !== pD ? pD : null
+          this.selected[gU] = null !== pU && void 0 !== pU ? pU : null
         }
       }
       dispose() {
         this.received = !1, this.dropForge(), this.dropArrival(), this.clearReplyTimeout(), null !== this.pacing && (clearTimeout(this.pacing), this.pacing = null), super.dispose()
       }
     }
-    const vI = "skyblockSmugglerView",
-      NI = {
+    const et = "skyblockSmugglerView",
+      Wt = {
         "Red Firecracker Pebble": "skyblockGame:mortarStrike",
         "Purple Firecracker Pebble": "skyblockGame:interdimensionalStrike"
       };
-    class gI extends BD {
-      constructor(DD, CD, cD, ID, pD) {
-        let iD = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
-        super(DD, cD, ID), this.translate = CD, this.requestBuy = pD, this.now = iD, this.snapshot = void 0, this.day = 0, this.deals = [], this.rivets = 0, this.crests = 0, this.soldOut = new Set, this.rotatesAtMs = 0, this.received = !1, this.awaitingReply = !1, this.pacing = null, this.replyTimeout = null, this.countdown = null, this.status = null, this.boughtSlot = null, this.boughtCount = 0, this.itemName = DD => DD, this.onBought = null, this.buy = DD => {
-          const CD = this.deals[DD];
-          void 0 !== CD && !this.isPending() && this.open && !this.soldOut.has(DD) && this.canAfford(CD) && (this.awaitingReply = !0, this.pacing = setTimeout((() => {
+    class ft extends GU {
+      constructor(UU, RU, gU, tU, pU) {
+        let EU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
+        super(UU, gU, tU), this.translate = RU, this.requestBuy = pU, this.now = EU, this.snapshot = void 0, this.day = 0, this.deals = [], this.rivets = 0, this.crests = 0, this.soldOut = new Set, this.rotatesAtMs = 0, this.received = !1, this.awaitingReply = !1, this.pacing = null, this.replyTimeout = null, this.countdown = null, this.status = null, this.boughtSlot = null, this.boughtCount = 0, this.itemName = UU => UU, this.onBought = null, this.buy = UU => {
+          const RU = this.deals[UU];
+          void 0 !== RU && !this.isPending() && this.open && !this.soldOut.has(UU) && this.canAfford(RU) && (this.awaitingReply = !0, this.pacing = setTimeout((() => {
             this.pacing = null, this.emit()
           }), 2500), this.replyTimeout = setTimeout((() => {
             this.replyTimeout = null, this.awaitingReply = !1, this.emit()
-          }), 8e3), this.emit(), this.requestBuy(this.day, DD))
+          }), 8e3), this.emit(), this.requestBuy(this.day, UU))
         }, this.snapshot = this.buildSnapshot()
       }
-      kt(DD) {
-        if (this.received = !0, this.day = DD.smugglerDay, this.deals = DD.smugglerDeals, this.rivets = DD.smugglerRivetsOwned, this.crests = DD.smugglerCrestsOwned, this.soldOut = new Set(DD.smugglerSoldOutSlots), this.rotatesAtMs = this.now() + DD.smugglerRotatesInMs, this.awaitingReply = !1, this.clearReplyTimeout(), "open" === DD.smugglerMessageKind) return this.status = null, this.boughtSlot = null, this.show(), void this.startCountdown();
-        if (this.boughtSlot = DD.smugglerBoughtSlot, null !== DD.smugglerBoughtSlot) {
-          var CD, cD;
-          const ID = this.deals[DD.smugglerBoughtSlot];
+      qC(UU) {
+        if (this.received = !0, this.day = UU.smugglerDay, this.deals = UU.smugglerDeals, this.rivets = UU.smugglerRivetsOwned, this.crests = UU.smugglerCrestsOwned, this.soldOut = new Set(UU.smugglerSoldOutSlots), this.rotatesAtMs = this.now() + UU.smugglerRotatesInMs, this.awaitingReply = !1, this.clearReplyTimeout(), "open" === UU.smugglerMessageKind) return this.status = null, this.boughtSlot = null, this.show(), void this.startCountdown();
+        if (this.boughtSlot = UU.smugglerBoughtSlot, null !== UU.smugglerBoughtSlot) {
+          var RU, gU;
+          const tU = this.deals[UU.smugglerBoughtSlot];
           this.status = {
             tone: "bought",
             key: "skyblockGame:smugglerBought",
             params: {
-              item: void 0 === ID ? "" : this.dealName(ID),
-              amount: String(null !== (CD = null === ID || void 0 === ID ? void 0 : ID.smugglerDealAmount) && void 0 !== CD ? CD : 0)
+              item: void 0 === tU ? "" : this.dealName(tU),
+              amount: String(null !== (RU = null === tU || void 0 === tU ? void 0 : tU.smugglerDealAmount) && void 0 !== RU ? RU : 0)
             }
-          }, this.boughtCount++, null === (cD = this.onBought) || void 0 === cD || cD.call(this)
-        } else null !== DD.smugglerRefusalKey && (this.status = {
+          }, this.boughtCount++, null === (gU = this.onBought) || void 0 === gU || gU.call(this)
+        } else null !== UU.smugglerRefusalKey && (this.status = {
           tone: "refused",
-          key: DD.smugglerRefusalKey,
+          key: UU.smugglerRefusalKey,
           params: {}
         });
         this.emit()
       }
-      setTranslator(DD, CD, cD) {
-        this.translate = DD, void 0 !== cD && (this.itemName = cD), this.emit()
+      setTranslator(UU, RU, gU) {
+        this.translate = UU, void 0 !== gU && (this.itemName = gU), this.emit()
       }
       isEnabled() {
         return this.received
@@ -3404,13 +3404,13 @@ export const modules = {
       onClosed() {
         this.status = null, this.boughtSlot = null, this.awaitingReply = !1, this.clearReplyTimeout(), this.stopCountdown(), this.boughtCount = 0
       }
-      dealName(DD) {
-        if (null !== DD.smugglerDealUniqueName) return DD.smugglerDealUniqueName;
-        const CD = NI[DD.smugglerDealItem];
-        return void 0 === CD ? this.itemName(DD.smugglerDealItem) : this.translate(CD)
+      dealName(UU) {
+        if (null !== UU.smugglerDealUniqueName) return UU.smugglerDealUniqueName;
+        const RU = Wt[UU.smugglerDealItem];
+        return void 0 === RU ? this.itemName(UU.smugglerDealItem) : this.translate(RU)
       }
-      canAfford(DD) {
-        return DD.smugglerDealRivets <= this.rivets && DD.smugglerDealCrests <= this.crests
+      canAfford(UU) {
+        return UU.smugglerDealRivets <= this.rivets && UU.smugglerDealCrests <= this.crests
       }
       isPending() {
         return this.awaitingReply || null !== this.pacing
@@ -3427,29 +3427,29 @@ export const modules = {
         null !== this.replyTimeout && (clearTimeout(this.replyTimeout), this.replyTimeout = null)
       }
       rotatesText() {
-        const DD = Math.ceil((this.rotatesAtMs - this.now()) / 6e4);
-        return DD <= 0 ? this.translate("skyblockGame:smugglerRotatesSoon") : DD < 60 ? this.translate("skyblockGame:smugglerRotatesMinutes", {
-          minutes: String(DD)
+        const UU = Math.ceil((this.rotatesAtMs - this.now()) / 6e4);
+        return UU <= 0 ? this.translate("skyblockGame:smugglerRotatesSoon") : UU < 60 ? this.translate("skyblockGame:smugglerRotatesMinutes", {
+          minutes: String(UU)
         }) : this.translate("skyblockGame:smugglerRotatesHours", {
-          hours: String(Math.floor(DD / 60)),
-          minutes: String(DD % 60)
+          hours: String(Math.floor(UU / 60)),
+          minutes: String(UU % 60)
         })
       }
       buildSnapshot() {
         return {
           enabled: this.received,
           open: this.open,
-          deals: this.deals.map(((DD, CD) => ({
-            slot: CD,
-            itemName: DD.smugglerDealItem,
-            displayName: this.dealName(DD),
-            enchantmentTier: DD.smugglerDealEnchantmentTier,
-            amount: DD.smugglerDealAmount,
-            rivets: DD.smugglerDealRivets,
-            crests: DD.smugglerDealCrests,
-            affordable: this.canAfford(DD),
-            soldOut: this.soldOut.has(CD),
-            justBought: this.boughtSlot === CD
+          deals: this.deals.map(((UU, RU) => ({
+            slot: RU,
+            itemName: UU.smugglerDealItem,
+            displayName: this.dealName(UU),
+            enchantmentTier: UU.smugglerDealEnchantmentTier,
+            amount: UU.smugglerDealAmount,
+            rivets: UU.smugglerDealRivets,
+            crests: UU.smugglerDealCrests,
+            affordable: this.canAfford(UU),
+            soldOut: this.soldOut.has(RU),
+            justBought: this.boughtSlot === RU
           }))),
           rivetsOwned: this.rivets,
           crestsOwned: this.crests,
@@ -3466,56 +3466,56 @@ export const modules = {
         this.received = !1, this.clearReplyTimeout(), this.stopCountdown(), null !== this.pacing && (clearTimeout(this.pacing), this.pacing = null), super.dispose()
       }
     }
-    const XI = "skyblockPassageView",
-      mI = {
+    const xt = "skyblockPassageView",
+      mt = {
         new: "skyblockGame:passagePhaseNew",
         waxing: "skyblockGame:passagePhaseWaxing",
         full: "skyblockGame:passagePhaseFull",
         waning: "skyblockGame:passagePhaseWaning"
       };
 
-    function nI(DD, CD) {
-      return DD(mI[CD])
+    function It(UU, RU) {
+      return UU(mt[RU])
     }
 
-    function OI(DD, CD, cD, ID) {
-      const pD = Math.ceil((cD - ID) / 864e5),
-        iD = nI(DD, CD);
-      return pD > 1 ? DD("skyblockGame:passageNextDays", {
-        phase: iD,
-        days: String(pD)
-      }) : DD("skyblockGame:passageNextSoon", {
-        phase: iD
+    function Jt(UU, RU, gU, tU) {
+      const pU = Math.ceil((gU - tU) / 864e5),
+        EU = It(UU, RU);
+      return pU > 1 ? UU("skyblockGame:passageNextDays", {
+        phase: EU,
+        days: String(pU)
+      }) : UU("skyblockGame:passageNextSoon", {
+        phase: EU
       })
     }
-    class PI extends BD {
-      constructor(DD, CD, cD, ID) {
-        let pD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now;
-        super(DD, cD, ID), this.translate = CD, this.now = pD, this.snapshot = void 0, this.message = null, this.receivedAtMs = 0, this.itemName = DD => DD, this.toggle = () => {
+    class wt extends GU {
+      constructor(UU, RU, gU, tU) {
+        let pU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now;
+        super(UU, gU, tU), this.translate = RU, this.now = pU, this.snapshot = void 0, this.message = null, this.receivedAtMs = 0, this.itemName = UU => UU, this.toggle = () => {
           this.open ? this.dismiss() : this.show()
         }, this.snapshot = this.buildSnapshot()
       }
-      kt(DD) {
-        this.message = DD, this.receivedAtMs = this.now(), this.emit()
+      qC(UU) {
+        this.message = UU, this.receivedAtMs = this.now(), this.emit()
       }
-      setTranslator(DD, CD, cD) {
-        this.translate = DD, void 0 !== cD && (this.itemName = cD), this.emit()
+      setTranslator(UU, RU, gU) {
+        this.translate = UU, void 0 !== gU && (this.itemName = gU), this.emit()
       }
       isEnabled() {
         return null !== this.message
       }
-      describe(DD) {
+      describe(UU) {
         return {
-          itemName: DD.passageFish,
-          displayName: this.itemName(DD.passageFish),
+          itemName: UU.passageFish,
+          displayName: this.itemName(UU.passageFish),
           where: this.translate("skyblockGame:passageInWater", {
-            water: this.translate(DD.passageFishWaterKey)
+            water: this.translate(UU.passageFishWaterKey)
           })
         }
       }
       buildSnapshot() {
-        const DD = this.message;
-        return null === DD ? {
+        const UU = this.message;
+        return null === UU ? {
           enabled: !1,
           open: !1,
           phase: "new",
@@ -3527,43 +3527,43 @@ export const modules = {
         } : {
           enabled: !0,
           open: this.open,
-          phase: DD.passagePhase,
-          phaseName: nI(this.translate, DD.passagePhase),
-          visitors: DD.passageVisitors.map((DD => this.describe(DD))),
-          resting: this.describe(DD.passageResting),
-          nextPhase: DD.passageNextPhase,
-          next: OI(this.translate, DD.passageNextPhase, DD.passageTurnsInMs, this.now() - this.receivedAtMs)
+          phase: UU.passagePhase,
+          phaseName: It(this.translate, UU.passagePhase),
+          visitors: UU.passageVisitors.map((UU => this.describe(UU))),
+          resting: this.describe(UU.passageResting),
+          nextPhase: UU.passageNextPhase,
+          next: Jt(this.translate, UU.passageNextPhase, UU.passageTurnsInMs, this.now() - this.receivedAtMs)
         }
       }
       dispose() {
         this.message = null, super.dispose()
       }
     }
-    var HI = cD(37919);
-    const UI = "skyblockKeepersChairView";
-    class xI extends BD {
-      constructor(DD, CD, cD, ID, pD) {
-        let iD = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now,
-          fD = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : new HI.d;
-        super(DD, cD, ID), this.translate = CD, this.requestAim = pD, this.now = iD, this.pacer = fD, this.snapshot = void 0, this.islands = [], this.favoured = null, this.received = !1, this.awaitingReply = !1, this.unsubscribePacer = void 0, this.replyTimeout = null, this.status = null, this.aimedCount = 0, this.passage = null, this.passageReceivedAtMs = 0, this.atChair = !0, this.itemName = DD => DD, this.aim = DD => {
-          !this.awaitingReply && this.open && this.atChair && DD !== this.favoured && (null === DD || this.islands.some((CD => CD.keepersChairIslandId === DD && CD.keepersChairIslandRelit))) && this.pacer.tryStart() && (this.awaitingReply = !0, this.replyTimeout = setTimeout((() => {
+    var nt = gU(38092);
+    const bt = "skyblockKeepersChairView";
+    class ot extends GU {
+      constructor(UU, RU, gU, tU, pU) {
+        let EU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now,
+          PU = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : new nt.d;
+        super(UU, gU, tU), this.translate = RU, this.requestAim = pU, this.now = EU, this.pacer = PU, this.snapshot = void 0, this.islands = [], this.favoured = null, this.received = !1, this.awaitingReply = !1, this.unsubscribePacer = void 0, this.replyTimeout = null, this.status = null, this.aimedCount = 0, this.passage = null, this.passageReceivedAtMs = 0, this.atChair = !0, this.itemName = UU => UU, this.aim = UU => {
+          !this.awaitingReply && this.open && this.atChair && UU !== this.favoured && (null === UU || this.islands.some((RU => RU.keepersChairIslandId === UU && RU.keepersChairIslandRelit))) && this.pacer.tryStart() && (this.awaitingReply = !0, this.replyTimeout = setTimeout((() => {
             this.replyTimeout = null, this.awaitingReply = !1, this.emit()
-          }), 8e3), this.emit(), this.requestAim(null !== DD && void 0 !== DD ? DD : "none"))
-        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = fD.subscribe((() => {
+          }), 8e3), this.emit(), this.requestAim(null !== UU && void 0 !== UU ? UU : "none"))
+        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = PU.subscribe((() => {
           this.emit()
         }))
       }
-      kt(DD) {
-        var CD, cD;
+      qC(UU) {
+        var RU, gU;
         this.received = !0;
-        const ID = this.favoured,
-          pD = this.atChair;
-        var iD;
-        return this.islands = DD.keepersChairIslands, this.favoured = DD.keepersChairFavoured, this.passage = null !== (CD = DD.keepersChairPassage) && void 0 !== CD ? CD : null, this.passageReceivedAtMs = this.now(), this.atChair = null === (cD = DD.keepersChairAtChair) || void 0 === cD || cD, "place" === DD.keepersChairMessageKind ? (!pD && this.atChair && "refused" === (null === (iD = this.status) || void 0 === iD ? void 0 : iD.tone) && (this.status = null), void this.emit()) : (this.awaitingReply = !1, this.clearReplyTimeout(), "open" === DD.keepersChairMessageKind ? (this.status = null, void this.show()) : void(this.open ? (null !== DD.keepersChairRefusalKey ? this.status = {
+        const tU = this.favoured,
+          pU = this.atChair;
+        var EU;
+        return this.islands = UU.keepersChairIslands, this.favoured = UU.keepersChairFavoured, this.passage = null !== (RU = UU.keepersChairPassage) && void 0 !== RU ? RU : null, this.passageReceivedAtMs = this.now(), this.atChair = null === (gU = UU.keepersChairAtChair) || void 0 === gU || gU, "place" === UU.keepersChairMessageKind ? (!pU && this.atChair && "refused" === (null === (EU = this.status) || void 0 === EU ? void 0 : EU.tone) && (this.status = null), void this.emit()) : (this.awaitingReply = !1, this.clearReplyTimeout(), "open" === UU.keepersChairMessageKind ? (this.status = null, void this.show()) : void(this.open ? (null !== UU.keepersChairRefusalKey ? this.status = {
           tone: "refused",
-          key: DD.keepersChairRefusalKey,
+          key: UU.keepersChairRefusalKey,
           island: null
-        } : this.favoured !== ID && (this.status = null === this.favoured ? {
+        } : this.favoured !== tU && (this.status = null === this.favoured ? {
           tone: "aimed",
           key: "skyblockGame:keepersChairRestedStatus",
           island: null
@@ -3576,11 +3576,11 @@ export const modules = {
       isAtChair() {
         return this.atChair
       }
-      receivePassage(DD) {
-        this.received && (this.passage = DD, this.passageReceivedAtMs = this.now(), this.emit())
+      receivePassage(UU) {
+        this.received && (this.passage = UU, this.passageReceivedAtMs = this.now(), this.emit())
       }
-      setTranslator(DD, CD, cD) {
-        this.translate = DD, void 0 !== cD && (this.itemName = cD), this.emit()
+      setTranslator(UU, RU, gU) {
+        this.translate = UU, void 0 !== gU && (this.itemName = gU), this.emit()
       }
       isEnabled() {
         return this.received
@@ -3594,47 +3594,47 @@ export const modules = {
       clearReplyTimeout() {
         null !== this.replyTimeout && (clearTimeout(this.replyTimeout), this.replyTimeout = null)
       }
-      islandName(DD) {
-        const CD = this.islands.find((CD => CD.keepersChairIslandId === DD));
-        return void 0 === CD ? DD : this.translate(CD.keepersChairIslandNameKey)
+      islandName(UU) {
+        const RU = this.islands.find((RU => RU.keepersChairIslandId === UU));
+        return void 0 === RU ? UU : this.translate(RU.keepersChairIslandNameKey)
       }
       buildSnapshot() {
-        const DD = this.atChair ? this.status : {
+        const UU = this.atChair ? this.status : {
             tone: "refused",
             key: "skyblockGame:keepersChairTooFar",
             island: null
           },
-          CD = this.passage;
+          RU = this.passage;
         return {
           enabled: this.received,
           open: this.open,
-          islands: this.islands.map((DD => {
-            const CD = DD.keepersChairFeaturedFish;
+          islands: this.islands.map((UU => {
+            const RU = UU.keepersChairFeaturedFish;
             return {
-              id: DD.keepersChairIslandId,
-              name: this.translate(DD.keepersChairIslandNameKey),
-              relit: DD.keepersChairIslandRelit,
-              featuredFish: null === CD ? null : {
-                itemName: CD,
-                displayName: this.itemName(CD)
+              id: UU.keepersChairIslandId,
+              name: this.translate(UU.keepersChairIslandNameKey),
+              relit: UU.keepersChairIslandRelit,
+              featuredFish: null === RU ? null : {
+                itemName: RU,
+                displayName: this.itemName(RU)
               },
-              favoured: DD.keepersChairIslandId === this.favoured
+              favoured: UU.keepersChairIslandId === this.favoured
             }
           })),
           aimed: null !== this.favoured,
           canAim: this.atChair && !this.isPending(),
-          status: null === DD ? null : {
-            tone: DD.tone,
-            text: this.translate(DD.key, null === DD.island ? void 0 : {
-              island: this.islandName(DD.island)
+          status: null === UU ? null : {
+            tone: UU.tone,
+            text: this.translate(UU.key, null === UU.island ? void 0 : {
+              island: this.islandName(UU.island)
             })
           },
           aimedCount: this.aimedCount,
-          almanac: null === CD ? null : {
-            phase: CD.keepersChairPassagePhase,
-            phaseName: nI(this.translate, CD.keepersChairPassagePhase),
-            nextPhase: CD.keepersChairPassageNextPhase,
-            next: OI(this.translate, CD.keepersChairPassageNextPhase, CD.keepersChairPassageTurnsInMs, this.now() - this.passageReceivedAtMs)
+          almanac: null === RU ? null : {
+            phase: RU.keepersChairPassagePhase,
+            phaseName: It(this.translate, RU.keepersChairPassagePhase),
+            nextPhase: RU.keepersChairPassageNextPhase,
+            next: Jt(this.translate, RU.keepersChairPassageNextPhase, RU.keepersChairPassageTurnsInMs, this.now() - this.passageReceivedAtMs)
           }
         }
       }
@@ -3642,63 +3642,63 @@ export const modules = {
         this.received = !1, this.passage = null, this.atChair = !0, this.clearReplyTimeout(), this.unsubscribePacer(), super.dispose()
       }
     }
-    const qI = "skyblockReachLogView",
-      JI = ["skyblockGame:reachLogBronze", "skyblockGame:reachLogSilver", "skyblockGame:reachLogGold"],
-      KI = "Caught Fish",
-      aI = [1, 2, 4];
+    const Zt = "skyblockReachLogView",
+      Yt = ["skyblockGame:reachLogBronze", "skyblockGame:reachLogSilver", "skyblockGame:reachLogGold"],
+      Bt = "Caught Fish",
+      Vt = [1, 2, 4];
 
-    function VI(DD, CD) {
-      return DD.map((DD => ({
-        ...DD,
-        reachLogPageFish: DD.reachLogPageFish.map((DD => ({
-          ...DD,
-          reachLogFishFresh: CD(DD)
+    function rt(UU, RU) {
+      return UU.map((UU => ({
+        ...UU,
+        reachLogPageFish: UU.reachLogPageFish.map((UU => ({
+          ...UU,
+          reachLogFishFresh: RU(UU)
         })))
       })))
     }
-    class zI extends BD {
-      constructor(DD, CD, cD, ID, pD) {
-        let iD = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : new HI.d;
-        super(DD, cD, ID), this.translate = CD, this.requestOpen = pD, this.pacer = iD, this.snapshot = void 0, this.pages = [], this.pagesCurrent = !1, this.serverFresh = 0, this.passagePhase = null, this.heldFresh = new Set, this.shown = !1, this.received = !1, this.selected = null, this.letGoShown = !1, this.awaitingReply = !1, this.replyTimeout = null, this.newsToken = 0, this.news = !1, this.pageViews = null, this.newsTimeout = null, this.unsubscribePacer = void 0, this.itemName = DD => DD, this.ask = () => {
+    class Xt extends GU {
+      constructor(UU, RU, gU, tU, pU) {
+        let EU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : new nt.d;
+        super(UU, gU, tU), this.translate = RU, this.requestOpen = pU, this.pacer = EU, this.snapshot = void 0, this.pages = [], this.pagesCurrent = !1, this.serverFresh = 0, this.passagePhase = null, this.heldFresh = new Set, this.shown = !1, this.received = !1, this.selected = null, this.letGoShown = !1, this.awaitingReply = !1, this.replyTimeout = null, this.newsToken = 0, this.news = !1, this.pageViews = null, this.newsTimeout = null, this.unsubscribePacer = void 0, this.itemName = UU => UU, this.ask = () => {
           !this.received || this.open || this.awaitingReply || (this.pagesCurrent && 0 === this.serverFresh ? this.showPages() : this.pacer.tryStart() && (this.awaitingReply = !0, this.replyTimeout = setTimeout((() => {
             this.replyTimeout = null, this.awaitingReply = !1, this.emit()
           }), 8e3), this.emit(), this.requestOpen()))
-        }, this.selectPage = DD => {
-          this.pages.some((CD => CD.reachLogIslandId === DD)) && (this.selected = DD, this.emit())
-        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = iD.subscribe((() => {
+        }, this.selectPage = UU => {
+          this.pages.some((RU => RU.reachLogIslandId === UU)) && (this.selected = UU, this.emit())
+        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = EU.subscribe((() => {
           this.emit()
         }))
       }
-      kt(DD) {
-        if (this.received = !0, "status" === DD.reachLogMessageKind) return !0 === DD.reachLogNews && this.markNews(), this.serverFresh = DD.reachLogFreshCount, this.pagesCurrent = !1, void this.emit();
-        const CD = this.awaitingReply;
-        if (this.awaitingReply = !1, this.clearReplyTimeout(), "unavailable" !== DD.reachLogMessageKind)
-          if (this.pageViews = null, this.pages = VI(DD.reachLogPages, (DD => DD.reachLogFishFresh || this.heldFresh.has(DD.reachLogFishItem))), this.letGoShown = DD.reachLogLetGoRibbonShown, this.pagesCurrent = !0, this.serverFresh = 0, CD) this.showPages();
+      qC(UU) {
+        if (this.received = !0, "status" === UU.reachLogMessageKind) return !0 === UU.reachLogNews && this.markNews(), this.serverFresh = UU.reachLogFreshCount, this.pagesCurrent = !1, void this.emit();
+        const RU = this.awaitingReply;
+        if (this.awaitingReply = !1, this.clearReplyTimeout(), "unavailable" !== UU.reachLogMessageKind)
+          if (this.pageViews = null, this.pages = rt(UU.reachLogPages, (UU => UU.reachLogFishFresh || this.heldFresh.has(UU.reachLogFishItem))), this.letGoShown = UU.reachLogLetGoRibbonShown, this.pagesCurrent = !0, this.serverFresh = 0, RU) this.showPages();
           else {
-            for (const DD of this.pages)
-              for (const CD of DD.reachLogPageFish) CD.reachLogFishFresh && this.heldFresh.add(CD.reachLogFishItem);
+            for (const UU of this.pages)
+              for (const RU of UU.reachLogPageFish) RU.reachLogFishFresh && this.heldFresh.add(RU.reachLogFishItem);
             this.emit()
           }
         else this.emit()
       }
-      setTranslator(DD, CD, cD) {
-        this.translate = DD, this.pageViews = null, void 0 !== cD && (this.itemName = cD), this.emit()
+      setTranslator(UU, RU, gU) {
+        this.translate = UU, this.pageViews = null, void 0 !== gU && (this.itemName = gU), this.emit()
       }
       isEnabled() {
         return this.received
       }
       onClosed() {
-        this.shown && (this.shown = !1, this.pageViews = null, this.pages = VI(this.pages, (() => !1)))
+        this.shown && (this.shown = !1, this.pageViews = null, this.pages = rt(this.pages, (() => !1)))
       }
       showPages() {
         this.heldFresh.clear(), this.selected = this.pickPage(), this.show(), this.shown = this.isOpen()
       }
       pickPage() {
-        var DD, CD, cD, ID;
-        const pD = this.pages.find((DD => DD.reachLogPageFish.some((DD => DD.reachLogFishFresh))));
-        if (void 0 !== pD) return pD.reachLogIslandId;
-        if (null !== this.selected && this.pages.some((DD => DD.reachLogIslandId === this.selected))) return this.selected;
-        return null !== (DD = null !== (CD = null === (cD = this.pages.filter((DD => DD.reachLogIslandAwake)).at(-1)) || void 0 === cD ? void 0 : cD.reachLogIslandId) && void 0 !== CD ? CD : null === (ID = this.pages[0]) || void 0 === ID ? void 0 : ID.reachLogIslandId) && void 0 !== DD ? DD : null
+        var UU, RU, gU, tU;
+        const pU = this.pages.find((UU => UU.reachLogPageFish.some((UU => UU.reachLogFishFresh))));
+        if (void 0 !== pU) return pU.reachLogIslandId;
+        if (null !== this.selected && this.pages.some((UU => UU.reachLogIslandId === this.selected))) return this.selected;
+        return null !== (UU = null !== (RU = null === (gU = this.pages.filter((UU => UU.reachLogIslandAwake)).at(-1)) || void 0 === gU ? void 0 : gU.reachLogIslandId) && void 0 !== RU ? RU : null === (tU = this.pages[0]) || void 0 === tU ? void 0 : tU.reachLogIslandId) && void 0 !== UU ? UU : null
       }
       markNews() {
         this.newsToken++, this.news = !0, this.clearNewsTimeout(), this.newsTimeout = setTimeout((() => {
@@ -3725,119 +3725,119 @@ export const modules = {
         }
       }
       buildPages() {
-        return this.pages.map((DD => {
-          var CD;
+        return this.pages.map((UU => {
+          var RU;
           return {
-            id: DD.reachLogIslandId,
-            name: this.translate(DD.reachLogIslandNameKey),
-            awake: DD.reachLogIslandAwake,
-            gold: DD.reachLogPageGold,
-            caught: DD.reachLogPageFish.filter((DD => DD.reachLogFishCaught && !DD.reachLogFishVisitor)).length,
-            total: DD.reachLogPageFish.filter((DD => !DD.reachLogFishVisitor)).length,
-            fish: DD.reachLogPageFish.map((DD => {
-              const CD = DD.reachLogFishBestKg;
+            id: UU.reachLogIslandId,
+            name: this.translate(UU.reachLogIslandNameKey),
+            awake: UU.reachLogIslandAwake,
+            gold: UU.reachLogPageGold,
+            caught: UU.reachLogPageFish.filter((UU => UU.reachLogFishCaught && !UU.reachLogFishVisitor)).length,
+            total: UU.reachLogPageFish.filter((UU => !UU.reachLogFishVisitor)).length,
+            fish: UU.reachLogPageFish.map((UU => {
+              const RU = UU.reachLogFishBestKg;
               return {
-                itemName: DD.reachLogFishItem,
-                name: DD.reachLogFishCaught ? this.itemName(DD.reachLogFishItem) : this.translate("skyblockGame:reachLogUnknownFish"),
-                caught: DD.reachLogFishCaught,
+                itemName: UU.reachLogFishItem,
+                name: UU.reachLogFishCaught ? this.itemName(UU.reachLogFishItem) : this.translate("skyblockGame:reachLogUnknownFish"),
+                caught: UU.reachLogFishCaught,
                 chance: this.translate("skyblockGame:reachLogChance", {
-                  count: Math.max(1, Math.round(1 / DD.reachLogFishChance))
+                  count: Math.max(1, Math.round(1 / UU.reachLogFishChance))
                 }),
-                best: DD.reachLogFishCaught ? null === CD ? this.translate("skyblockGame:reachLogNoSize") : this.translate("skyblockGame:reachLogBest", {
-                  kg: CD.toFixed(1)
+                best: UU.reachLogFishCaught ? null === RU ? this.translate("skyblockGame:reachLogNoSize") : this.translate("skyblockGame:reachLogBest", {
+                  kg: RU.toFixed(1)
                 }) : this.translate("skyblockGame:reachLogNotCaught"),
-                marks: DD.reachLogFishMarks,
-                ribbons: aI.map((CD => 0 !== (DD.reachLogFishRibbons & CD))),
-                glimmer: 0 !== (8 & DD.reachLogFishRibbons),
-                halo: 0 !== (32 & DD.reachLogFishRibbons),
-                fresh: DD.reachLogFishFresh,
-                visitor: DD.reachLogFishVisitor
+                marks: UU.reachLogFishMarks,
+                ribbons: Vt.map((RU => 0 !== (UU.reachLogFishRibbons & RU))),
+                glimmer: 0 !== (8 & UU.reachLogFishRibbons),
+                halo: 0 !== (32 & UU.reachLogFishRibbons),
+                fresh: UU.reachLogFishFresh,
+                visitor: UU.reachLogFishVisitor
               }
             })),
-            returner: this.buildReturner(null !== (CD = DD.reachLogPageReturner) && void 0 !== CD ? CD : null)
+            returner: this.buildReturner(null !== (RU = UU.reachLogPageReturner) && void 0 !== RU ? RU : null)
           }
         }))
       }
-      buildReturner(DD) {
-        return null === DD ? null : {
-          itemName: DD.reachLogReturnerFishItem,
-          line: this.translate(DD.reachLogReturnerLineKey, {
-            name: this.translate(DD.reachLogReturnerNameKey),
-            trinket: this.translate(DD.reachLogReturnerTrinketKey)
+      buildReturner(UU) {
+        return null === UU ? null : {
+          itemName: UU.reachLogReturnerFishItem,
+          line: this.translate(UU.reachLogReturnerLineKey, {
+            name: this.translate(UU.reachLogReturnerNameKey),
+            trinket: this.translate(UU.reachLogReturnerTrinketKey)
           }),
-          back: DD.reachLogReturnerBack
+          back: UU.reachLogReturnerBack
         }
       }
-      receivePassagePhase(DD) {
-        null !== this.passagePhase && this.passagePhase !== DD && (this.pagesCurrent = !1), this.passagePhase = DD
+      receivePassagePhase(UU) {
+        null !== this.passagePhase && this.passagePhase !== UU && (this.pagesCurrent = !1), this.passagePhase = UU
       }
       dispose() {
         this.received = !1, this.pagesCurrent = !1, this.passagePhase = null, this.heldFresh.clear(), this.clearReplyTimeout(), this.clearNewsTimeout(), this.unsubscribePacer(), super.dispose()
       }
     }
-    const jI = "skyblockLampLightView";
-    class lI {
-      constructor(DD, CD, cD, ID) {
-        this.Uo = DD, this.translate = CD, this.requestCommand = cD, this.pacer = ID, this.snapshot = void 0, this.message = null, this.shop = null, this.situation = "open", this.awaitingTag = null, this.awaitingOff = !1, this.offQueued = !1, this.offTag = null, this.lastTag = 0, this.replyTimeout = null, this.offTimeout = null, this.refusalKey = null, this.gainedCount = 0, this.lastGained = 0, this.atChair = !0, this.sparkle = null, this.locale = "en", this.Lt = !1, this.unsubscribePacer = void 0, this.removePriority = void 0, this.getSnapshot = () => this.snapshot, this.setRelease = DD => {
-          DD ? this.send("release on") : this.awaitingOff || (this.awaitingOff = !0, this.offQueued = !0, this.sendQueuedOff(), this.emit())
-        }, this.buy = DD => {
-          this.send(`buy ${DD}`)
-        }, this.socket = DD => {
-          this.send(`socket ${null!==DD&&void 0!==DD?DD:jD}`)
-        }, this.wearTint = DD => {
-          this.send(`tint ${null!==DD&&void 0!==DD?DD:jD}`)
-        }, this.setSituation = DD => {
-          this.situation = DD, this.emit()
-        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = ID.subscribe((() => {
+    const vt = "skyblockLampLightView";
+    class dt {
+      constructor(UU, RU, gU, tU) {
+        this.yh = UU, this.translate = RU, this.requestCommand = gU, this.pacer = tU, this.snapshot = void 0, this.message = null, this.shop = null, this.situation = "open", this.awaitingTag = null, this.awaitingOff = !1, this.offQueued = !1, this.offTag = null, this.lastTag = 0, this.replyTimeout = null, this.offTimeout = null, this.refusalKey = null, this.gainedCount = 0, this.lastGained = 0, this.atChair = !0, this.sparkle = null, this.locale = "en", this.pC = !1, this.unsubscribePacer = void 0, this.removePriority = void 0, this.getSnapshot = () => this.snapshot, this.setRelease = UU => {
+          UU ? this.send("release on") : this.awaitingOff || (this.awaitingOff = !0, this.offQueued = !0, this.sendQueuedOff(), this.emit())
+        }, this.buy = UU => {
+          this.send(`buy ${UU}`)
+        }, this.socket = UU => {
+          this.send(`socket ${null!==UU&&void 0!==UU?UU:XU}`)
+        }, this.wearTint = UU => {
+          this.send(`tint ${null!==UU&&void 0!==UU?UU:XU}`)
+        }, this.setSituation = UU => {
+          this.situation = UU, this.emit()
+        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = tU.subscribe((() => {
           this.sendQueuedOff(), this.emit()
-        })), this.removePriority = ID.addPriority({
+        })), this.removePriority = tU.addPriority({
           waiting: () => this.offQueued,
           flush: () => {
             this.sendQueuedOff()
           }
         })
       }
-      kt(DD) {
-        if (this.message = DD, null !== DD.lampLightShop && (this.shop = DD.lampLightShop), "open" === DD.lampLightKind && (this.refusalKey = null), "reply" === DD.lampLightKind) {
-          var CD;
-          const pD = null !== (CD = DD.lampLightReplyTag) && void 0 !== CD ? CD : null,
-            iD = null !== pD && pD === this.offTag;
-          var cD, ID;
-          if (iD ? this.settleOff() : null !== pD && pD !== this.awaitingTag || this.settleReply(), this.refusalKey = DD.lampLightRefusalKey, null !== DD.lampLightBought && !iD) this.sparkle = {
-            id: DD.lampLightBought,
-            count: (null !== (cD = null === (ID = this.sparkle) || void 0 === ID ? void 0 : ID.count) && void 0 !== cD ? cD : 0) + 1
+      qC(UU) {
+        if (this.message = UU, null !== UU.lampLightShop && (this.shop = UU.lampLightShop), "open" === UU.lampLightKind && (this.refusalKey = null), "reply" === UU.lampLightKind) {
+          var RU;
+          const pU = null !== (RU = UU.lampLightReplyTag) && void 0 !== RU ? RU : null,
+            EU = null !== pU && pU === this.offTag;
+          var gU, tU;
+          if (EU ? this.settleOff() : null !== pU && pU !== this.awaitingTag || this.settleReply(), this.refusalKey = UU.lampLightRefusalKey, null !== UU.lampLightBought && !EU) this.sparkle = {
+            id: UU.lampLightBought,
+            count: (null !== (gU = null === (tU = this.sparkle) || void 0 === tU ? void 0 : tU.count) && void 0 !== gU ? gU : 0) + 1
           }
         }
-        DD.lampLightReleasing || (this.settleOff(), this.gainedCount = 0), "released" === DD.lampLightKind && (this.lastGained = DD.lampLightGained, this.gainedCount++), this.emit()
+        UU.lampLightReleasing || (this.settleOff(), this.gainedCount = 0), "released" === UU.lampLightKind && (this.lastGained = UU.lampLightGained, this.gainedCount++), this.emit()
       }
-      setAtChair(DD) {
-        DD !== this.atChair && (this.atChair = DD, DD && (this.refusalKey = null), this.emit())
+      setAtChair(UU) {
+        UU !== this.atChair && (this.atChair = UU, UU && (this.refusalKey = null), this.emit())
       }
-      setTranslator(DD, CD) {
-        this.translate = DD, this.locale = null !== CD && void 0 !== CD ? CD : this.locale, this.emit()
+      setTranslator(UU, RU) {
+        this.translate = UU, this.locale = null !== RU && void 0 !== RU ? RU : this.locale, this.emit()
       }
       onChairClosed() {
         this.refusalKey = null, this.emit()
       }
       dispose() {
-        this.clearReplyTimeout(), this.settleOff(), this.unsubscribePacer(), this.removePriority(), this.message = null, this.shop = null, this.emit(), this.Lt = !0
+        this.clearReplyTimeout(), this.settleOff(), this.unsubscribePacer(), this.removePriority(), this.message = null, this.shop = null, this.emit(), this.pC = !0
       }
-      send(DD) {
-        var CD;
-        if (null !== this.awaitingTag || "ready" !== (null === (CD = this.message) || void 0 === CD ? void 0 : CD.lampLightStatus) || !this.atChair) return;
+      send(UU) {
+        var RU;
+        if (null !== this.awaitingTag || "ready" !== (null === (RU = this.message) || void 0 === RU ? void 0 : RU.lampLightStatus) || !this.atChair) return;
         if (this.sendQueuedOff(), this.offQueued || !this.pacer.tryStart()) return;
-        const cD = this.nextTag();
-        this.awaitingTag = cD, this.replyTimeout = setTimeout((() => {
+        const gU = this.nextTag();
+        this.awaitingTag = gU, this.replyTimeout = setTimeout((() => {
           this.replyTimeout = null, this.awaitingTag = null, this.emit()
-        }), 8e3), this.requestCommand(`lamplight-${DD} ${cD}`), this.emit()
+        }), 8e3), this.requestCommand(`lamplight-${UU} ${gU}`), this.emit()
       }
       sendQueuedOff() {
         if (!this.offQueued || !this.pacer.canSendPriority()) return;
         this.offQueued = !1;
-        const DD = this.nextTag();
-        this.offTag = DD, this.pacer.start(), this.offTimeout = setTimeout((() => {
+        const UU = this.nextTag();
+        this.offTag = UU, this.pacer.start(), this.offTimeout = setTimeout((() => {
           this.offTimeout = null, this.awaitingOff = !1, this.offTag = null, this.emit()
-        }), 8e3), this.requestCommand(`lamplight-release off ${DD}`)
+        }), 8e3), this.requestCommand(`lamplight-release off ${UU}`)
       }
       nextTag() {
         return this.lastTag = this.lastTag % 999999 + 1, this.lastTag
@@ -3855,427 +3855,427 @@ export const modules = {
         null !== this.replyTimeout && (clearTimeout(this.replyTimeout), this.replyTimeout = null)
       }
       emit() {
-        this.Lt || (this.snapshot = this.buildSnapshot(), this.Uo(this.snapshot))
+        this.pC || (this.snapshot = this.buildSnapshot(), this.yh(this.snapshot))
       }
-      formatLight(DD) {
-        return Math.floor(DD).toLocaleString(this.locale)
+      formatLight(UU) {
+        return Math.floor(UU).toLocaleString(this.locale)
       }
-      formatPercent(DD) {
-        const CD = 100 * DD;
-        return CD >= 10 ? Math.round(CD).toLocaleString(this.locale) : CD.toLocaleString(this.locale, {
+      formatPercent(UU) {
+        const RU = 100 * UU;
+        return RU >= 10 ? Math.round(RU).toLocaleString(this.locale) : RU.toLocaleString(this.locale, {
           maximumFractionDigits: 1
         })
       }
-      formatOdds(DD, CD) {
-        if ("bite" === DD) return this.translate("skyblockGame:lampLightBite", {
-          seconds: (CD.lampLightBiteMs / 1e3).toLocaleString(this.locale, {
+      formatOdds(UU, RU) {
+        if ("bite" === UU) return this.translate("skyblockGame:lampLightBite", {
+          seconds: (RU.lampLightBiteMs / 1e3).toLocaleString(this.locale, {
             maximumFractionDigits: 1
           })
         });
-        if ("rare" === DD) return this.translate("skyblockGame:lampLightRare", {
-          percent: this.formatPercent(CD.lampLightRareChance)
+        if ("rare" === UU) return this.translate("skyblockGame:lampLightRare", {
+          percent: this.formatPercent(RU.lampLightRareChance)
         });
-        if ("notice" === DD) return null === CD.lampLightNoticeChance ? null : this.translate("skyblockGame:lampLightNotice", {
-          percent: this.formatPercent(CD.lampLightNoticeChance)
+        if ("notice" === UU) return null === RU.lampLightNoticeChance ? null : this.translate("skyblockGame:lampLightNotice", {
+          percent: this.formatPercent(RU.lampLightNoticeChance)
         });
-        const cD = "meter" === DD ? CD.lampLightMeterCatches : CD.lampLightBloomCatches;
-        return null === cD ? null : this.translate("meter" === DD ? "skyblockGame:lampLightMeter" : "skyblockGame:lampLightBloomLasts", {
-          catches: String(Math.round(cD))
+        const gU = "meter" === UU ? RU.lampLightMeterCatches : RU.lampLightBloomCatches;
+        return null === gU ? null : this.translate("meter" === UU ? "skyblockGame:lampLightMeter" : "skyblockGame:lampLightBloomLasts", {
+          catches: String(Math.round(gU))
         })
       }
-      oddsLines(DD, CD) {
-        const cD = (DD, CD) => {
-            var cD;
-            return null !== (cD = {
-              bite: CD.lampLightBiteMs,
-              rare: CD.lampLightRareChance,
-              meter: CD.lampLightMeterCatches,
-              bloom: CD.lampLightBloomCatches,
-              notice: CD.lampLightNoticeChance
-            } [DD]) && void 0 !== cD ? cD : 0
+      oddsLines(UU, RU) {
+        const gU = (UU, RU) => {
+            var gU;
+            return null !== (gU = {
+              bite: RU.lampLightBiteMs,
+              rare: RU.lampLightRareChance,
+              meter: RU.lampLightMeterCatches,
+              bloom: RU.lampLightBloomCatches,
+              notice: RU.lampLightNoticeChance
+            } [UU]) && void 0 !== gU ? gU : 0
           },
-          ID = {
+          tU = {
             bite: !0,
             rare: !1,
             meter: !0,
             bloom: !1,
             notice: !1
           },
-          pD = [];
-        for (const iD of ["bite", "rare", "meter", "bloom", "notice"]) {
-          const fD = this.formatOdds(iD, DD),
-            bD = this.formatOdds(iD, CD);
-          if (null === fD || null === bD || "bite" !== iD && "rare" !== iD && fD === bD) continue;
-          const QD = cD(iD, CD) - cD(iD, DD),
-            wD = ID[iD] ? QD < 0 : QD > 0;
-          pD.push({
-            label: iD,
-            before: fD,
-            after: bD,
-            tone: fD === bD ? "same" : wD ? "better" : "worse"
+          pU = [];
+        for (const EU of ["bite", "rare", "meter", "bloom", "notice"]) {
+          const PU = this.formatOdds(EU, UU),
+            TU = this.formatOdds(EU, RU);
+          if (null === PU || null === TU || "bite" !== EU && "rare" !== EU && PU === TU) continue;
+          const qU = gU(EU, RU) - gU(EU, UU),
+            KU = tU[EU] ? qU < 0 : qU > 0;
+          pU.push({
+            label: EU,
+            before: PU,
+            after: TU,
+            tone: PU === TU ? "same" : KU ? "better" : "worse"
           })
         }
-        return pD
+        return pU
       }
-      charmView(DD, CD, cD) {
-        const ID = DD.lampLightCharmId.charAt(0).toUpperCase() + DD.lampLightCharmId.slice(1),
-          pD = "bloom" === this.situation;
+      charmView(UU, RU, gU) {
+        const tU = UU.lampLightCharmId.charAt(0).toUpperCase() + UU.lampLightCharmId.slice(1),
+          pU = "bloom" === this.situation;
         return {
-          id: DD.lampLightCharmId,
-          name: this.translate(`skyblockGame:lampLightCharm${ID}`),
-          effect: this.translate(`skyblockGame:lampLightCharm${ID}Effect`),
+          id: UU.lampLightCharmId,
+          name: this.translate(`skyblockGame:lampLightCharm${tU}`),
+          effect: this.translate(`skyblockGame:lampLightCharm${tU}Effect`),
           cost: this.translate("skyblockGame:lampLightCost", {
-            light: this.formatLight(DD.lampLightCharmCost)
+            light: this.formatLight(UU.lampLightCharmCost)
           }),
-          owned: DD.lampLightCharmOwned,
-          affordable: cD >= DD.lampLightCharmCost,
-          socketed: CD.lampLightSocketed === DD.lampLightCharmId,
-          lines: this.oddsLines(pD ? CD.lampLightBareBloom : CD.lampLightBareOpen, pD ? DD.lampLightCharmBloom : DD.lampLightCharmOpen)
+          owned: UU.lampLightCharmOwned,
+          affordable: gU >= UU.lampLightCharmCost,
+          socketed: RU.lampLightSocketed === UU.lampLightCharmId,
+          lines: this.oddsLines(pU ? RU.lampLightBareBloom : RU.lampLightBareOpen, pU ? UU.lampLightCharmBloom : UU.lampLightCharmOpen)
         }
       }
       buildSnapshot() {
-        var DD, CD, cD, ID;
-        const pD = this.message,
-          iD = "ready" === (null === pD || void 0 === pD ? void 0 : pD.lampLightStatus) ? this.shop : null,
-          fD = null !== (DD = null === pD || void 0 === pD ? void 0 : pD.lampLightBalance) && void 0 !== DD ? DD : 0,
-          bD = this.atChair,
-          QD = "loading" === (null === pD || void 0 === pD ? void 0 : pD.lampLightStatus) ? "skyblockGame:lampLightLoading" : "unreadable" === (null === pD || void 0 === pD ? void 0 : pD.lampLightStatus) ? "skyblockGame:lampLightUnreadable" : null,
-          wD = "ready" !== (null === pD || void 0 === pD ? void 0 : pD.lampLightStatus) || bD ? null !== (CD = this.refusalKey) && void 0 !== CD ? CD : QD : "skyblockGame:lampLightTooFar";
+        var UU, RU, gU, tU;
+        const pU = this.message,
+          EU = "ready" === (null === pU || void 0 === pU ? void 0 : pU.lampLightStatus) ? this.shop : null,
+          PU = null !== (UU = null === pU || void 0 === pU ? void 0 : pU.lampLightBalance) && void 0 !== UU ? UU : 0,
+          TU = this.atChair,
+          qU = "loading" === (null === pU || void 0 === pU ? void 0 : pU.lampLightStatus) ? "skyblockGame:lampLightLoading" : "unreadable" === (null === pU || void 0 === pU ? void 0 : pU.lampLightStatus) ? "skyblockGame:lampLightUnreadable" : null,
+          KU = "ready" !== (null === pU || void 0 === pU ? void 0 : pU.lampLightStatus) || TU ? null !== (RU = this.refusalKey) && void 0 !== RU ? RU : qU : "skyblockGame:lampLightTooFar";
         return {
-          enabled: null !== pD && "locked" !== pD.lampLightStatus,
-          status: null !== (cD = null === pD || void 0 === pD ? void 0 : pD.lampLightStatus) && void 0 !== cD ? cD : "loading",
+          enabled: null !== pU && "locked" !== pU.lampLightStatus,
+          status: null !== (gU = null === pU || void 0 === pU ? void 0 : pU.lampLightStatus) && void 0 !== gU ? gU : "loading",
           balance: this.translate("skyblockGame:lampLightBalance", {
-            light: this.formatLight(fD)
+            light: this.formatLight(PU)
           }),
-          releasing: null !== (ID = null === pD || void 0 === pD ? void 0 : pD.lampLightReleasing) && void 0 !== ID && ID,
-          gained: null === pD || 0 === this.gainedCount ? null : {
+          releasing: null !== (tU = null === pU || void 0 === pU ? void 0 : pU.lampLightReleasing) && void 0 !== tU && tU,
+          gained: null === pU || 0 === this.gainedCount ? null : {
             text: this.translate("skyblockGame:lampLightGained", {
               light: this.formatLight(this.lastGained)
             }),
             count: this.gainedCount
           },
-          canCommand: "ready" === (null === pD || void 0 === pD ? void 0 : pD.lampLightStatus) && bD && !this.isPending(),
+          canCommand: "ready" === (null === pU || void 0 === pU ? void 0 : pU.lampLightStatus) && TU && !this.isPending(),
           situation: this.situation,
-          shop: null === iD ? null : {
+          shop: null === EU ? null : {
             oddsFor: this.translate("skyblockGame:lampLightOddsFor", {
-              rod: iD.lampLightOddsRod,
-              island: this.translate(iD.lampLightIslandNameKey)
+              rod: EU.lampLightOddsRod,
+              island: this.translate(EU.lampLightIslandNameKey)
             }),
-            heldRod: null !== iD.lampLightHeldRod,
-            charms: iD.lampLightCharms.map((DD => this.charmView(DD, iD, fD))),
-            tints: iD.lampLightTints.map((DD => {
-              const CD = DD.lampLightTintId,
-                [cD, ID, pD] = DD.lampLightTintColour;
+            heldRod: null !== EU.lampLightHeldRod,
+            charms: EU.lampLightCharms.map((UU => this.charmView(UU, EU, PU))),
+            tints: EU.lampLightTints.map((UU => {
+              const RU = UU.lampLightTintId,
+                [gU, tU, pU] = UU.lampLightTintColour;
               return {
-                id: CD,
-                name: this.translate(`skyblockGame:lampLightTint${CD.charAt(0).toUpperCase()}${CD.slice(1)}`),
+                id: RU,
+                name: this.translate(`skyblockGame:lampLightTint${RU.charAt(0).toUpperCase()}${RU.slice(1)}`),
                 cost: this.translate("skyblockGame:lampLightCost", {
-                  light: this.formatLight(DD.lampLightTintCost)
+                  light: this.formatLight(UU.lampLightTintCost)
                 }),
-                owned: DD.lampLightTintOwned,
-                affordable: fD >= DD.lampLightTintCost,
-                wearing: iD.lampLightTint === CD,
-                colour: `rgb(${cD}, ${ID}, ${pD})`
+                owned: UU.lampLightTintOwned,
+                affordable: PU >= UU.lampLightTintCost,
+                wearing: EU.lampLightTint === RU,
+                colour: `rgb(${gU}, ${tU}, ${pU})`
               }
             })),
-            wearingIslandColours: null === iD.lampLightTint
+            wearingIslandColours: null === EU.lampLightTint
           },
-          notice: null === wD ? null : this.translate(wD),
+          notice: null === KU ? null : this.translate(KU),
           sparkle: this.sparkle
         }
       }
     }
-    const LI = "skyblockMagmawardView";
-    class TI {
-      constructor(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.Uo = DD, this.now = CD, this.snapshot = null, this.pulseToken = 0, this.pulseAt = -1 / 0, this.flareToken = 0, this.flareAt = -1 / 0, this.setLitToken = 0, this.setLitAt = -1 / 0, this.wornTokens = dD.map((() => 0)), this.wornAt = dD.map((() => -1 / 0))
+    const Ht = "skyblockMagmawardView";
+    class St {
+      constructor(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.yh = UU, this.now = RU, this.snapshot = null, this.pulseToken = 0, this.pulseAt = -1 / 0, this.flareToken = 0, this.flareAt = -1 / 0, this.setLitToken = 0, this.setLitAt = -1 / 0, this.wornTokens = kU.map((() => 0)), this.wornAt = kU.map((() => -1 / 0))
       }
       getSnapshot() {
         return this.snapshot
       }
-      kt(DD) {
-        var CD, cD;
-        const ID = dD.map(((CD, cD) => !0 === DD.magmawardPiecesWorn[cD]));
-        if (!ID.includes(!0)) return this.snapshot = null, void this.Uo(null);
-        const pD = this.now(),
-          iD = this.snapshot;
-        null === iD && (this.wornTokens.fill(0), this.wornAt.fill(-1 / 0), this.setLitAt = -1 / 0);
-        const fD = DD.magmawardFuelCarried,
-          bD = !ID.includes(!1);
-        let QD = null !== (CD = null === iD || void 0 === iD ? void 0 : iD.pulse) && void 0 !== CD ? CD : null,
-          wD = null !== (cD = null === iD || void 0 === iD ? void 0 : iD.flare) && void 0 !== cD ? cD : null;
-        DD.magmawardFuelBurned ? (QD = "burn", wD = "burn", this.pulseToken++, this.flareToken++, this.pulseAt = pD, this.flareAt = pD) : null !== iD && fD > iD.fuel && (QD = "gain", this.pulseToken++, this.pulseAt = pD), bD && null !== iD && !iD.fullSet && (wD = "fullSet", this.flareToken++, this.setLitToken++, this.flareAt = pD, this.setLitAt = pD);
-        const SD = dD.map(((DD, CD) => (ID[CD] && null !== iD && !iD.pieces[CD].worn && (this.wornTokens[CD]++, this.wornAt[CD] = pD), {
-          itemName: DD,
-          worn: ID[CD],
-          wornToken: this.wornTokens[CD],
-          justWorn: ID[CD] && this.isPlaying(this.wornAt[CD], pD)
+      qC(UU) {
+        var RU, gU;
+        const tU = kU.map(((RU, gU) => !0 === UU.magmawardPiecesWorn[gU]));
+        if (!tU.includes(!0)) return this.snapshot = null, void this.yh(null);
+        const pU = this.now(),
+          EU = this.snapshot;
+        null === EU && (this.wornTokens.fill(0), this.wornAt.fill(-1 / 0), this.setLitAt = -1 / 0);
+        const PU = UU.magmawardFuelCarried,
+          TU = !tU.includes(!1);
+        let qU = null !== (RU = null === EU || void 0 === EU ? void 0 : EU.pulse) && void 0 !== RU ? RU : null,
+          KU = null !== (gU = null === EU || void 0 === EU ? void 0 : EU.flare) && void 0 !== gU ? gU : null;
+        UU.magmawardFuelBurned ? (qU = "burn", KU = "burn", this.pulseToken++, this.flareToken++, this.pulseAt = pU, this.flareAt = pU) : null !== EU && PU > EU.fuel && (qU = "gain", this.pulseToken++, this.pulseAt = pU), TU && null !== EU && !EU.fullSet && (KU = "fullSet", this.flareToken++, this.setLitToken++, this.flareAt = pU, this.setLitAt = pU);
+        const cU = kU.map(((UU, RU) => (tU[RU] && null !== EU && !EU.pieces[RU].worn && (this.wornTokens[RU]++, this.wornAt[RU] = pU), {
+          itemName: UU,
+          worn: tU[RU],
+          wornToken: this.wornTokens[RU],
+          justWorn: tU[RU] && this.isPlaying(this.wornAt[RU], pU)
         })));
         this.snapshot = {
-          pieces: SD,
-          wornCount: ID.filter(Boolean).length,
-          fullSet: bD,
-          fuel: fD,
-          fuelState: fD <= 0 ? "empty" : fD <= 3 ? "low" : "ok",
-          pulse: this.isPlaying(this.pulseAt, pD) ? QD : null,
+          pieces: cU,
+          wornCount: tU.filter(Boolean).length,
+          fullSet: TU,
+          fuel: PU,
+          fuelState: PU <= 0 ? "empty" : PU <= 3 ? "low" : "ok",
+          pulse: this.isPlaying(this.pulseAt, pU) ? qU : null,
           pulseToken: this.pulseToken,
-          flare: this.isPlaying(this.flareAt, pD) ? wD : null,
+          flare: this.isPlaying(this.flareAt, pU) ? KU : null,
           flareToken: this.flareToken,
-          setLit: bD && this.isPlaying(this.setLitAt, pD),
+          setLit: TU && this.isPlaying(this.setLitAt, pU),
           setLitToken: this.setLitToken
-        }, this.Uo(this.snapshot)
+        }, this.yh(this.snapshot)
       }
       dispose() {
-        this.snapshot = null, this.Uo(null)
+        this.snapshot = null, this.yh(null)
       }
-      isPlaying(DD, CD) {
-        return CD - DD < 1200
+      isPlaying(UU, RU) {
+        return RU - UU < 1200
       }
     }
-    const GI = "skyblockGlowtideView";
-    class RI {
-      constructor(DD) {
-        this.Uo = DD, this.bloom = null, this.snapshot = null, this.inRangeToken = 0, this.arrow = null, this.arrowTurn = NaN, this.mountArrow = DD => {
-          this.arrow = DD, this.arrowTurn = NaN
+    const st = "skyblockGlowtideView";
+    class yt {
+      constructor(UU) {
+        this.yh = UU, this.bloom = null, this.snapshot = null, this.inRangeToken = 0, this.arrow = null, this.arrowTurn = NaN, this.mountArrow = UU => {
+          this.arrow = UU, this.arrowTurn = NaN
         }
       }
       getSnapshot() {
         return this.snapshot
       }
-      kt(DD) {
-        this.bloom = DD.glowtideBloom, null === this.bloom && null !== this.snapshot && (this.snapshot = null, this.Uo(null))
+      qC(UU) {
+        this.bloom = UU.glowtideBloom, null === this.bloom && null !== this.snapshot && (this.snapshot = null, this.yh(null))
       }
-      afterRender(DD, CD) {
-        const cD = this.bloom;
-        if (null === cD || null === DD) return;
-        const ID = cD.glowtideBloomX - DD[0],
-          iD = cD.glowtideBloomZ - DD[2],
-          fD = Math.hypot(ID, iD),
-          bD = this.snapshot,
-          QD = null !== bD && void 0 !== bD && bD.inRange ? 1 : 0,
-          wD = fD <= 12.5 + QD && DD[1] - cD.glowtideBloomY <= 10 + QD;
-        !wD || null !== bD && void 0 !== bD && bD.inRange || this.inRangeToken++;
-        const SD = {
-          colour: cD.glowtideBloomColour,
-          inRange: wD,
-          distance: Math.round(fD),
+      afterRender(UU, RU) {
+        const gU = this.bloom;
+        if (null === gU || null === UU) return;
+        const tU = gU.glowtideBloomX - UU[0],
+          EU = gU.glowtideBloomZ - UU[2],
+          PU = Math.hypot(tU, EU),
+          TU = this.snapshot,
+          qU = null !== TU && void 0 !== TU && TU.inRange ? 1 : 0,
+          KU = PU <= 12.5 + qU && UU[1] - gU.glowtideBloomY <= 10 + qU;
+        !KU || null !== TU && void 0 !== TU && TU.inRange || this.inRangeToken++;
+        const cU = {
+          colour: gU.glowtideBloomColour,
+          inRange: KU,
+          distance: Math.round(PU),
           inRangeToken: this.inRangeToken
         };
-        (null === bD || SD.colour !== bD.colour || SD.inRange !== bD.inRange || !wD && SD.distance !== bD.distance) && (this.snapshot = SD, this.Uo(SD));
-        const BD = pD.e.computeShortestRotation(CD, (0, pD.Ab)([ID, 0, iD]));
-        null === this.arrow || Math.abs(BD - this.arrowTurn) < .01 || (this.arrow.style.transform = `rotate(${BD}rad)`, this.arrowTurn = BD)
+        (null === TU || cU.colour !== TU.colour || cU.inRange !== TU.inRange || !KU && cU.distance !== TU.distance) && (this.snapshot = cU, this.yh(cU));
+        const GU = pU.c.computeShortestRotation(RU, (0, pU.Ib)([tU, 0, EU]));
+        null === this.arrow || Math.abs(GU - this.arrowTurn) < .01 || (this.arrow.style.transform = `rotate(${GU}rad)`, this.arrowTurn = GU)
       }
       dispose() {
-        this.bloom = null, this.arrow = null, this.snapshot = null, this.Uo(null)
+        this.bloom = null, this.arrow = null, this.snapshot = null, this.yh(null)
       }
     }
-    const kI = "skyblockGlowMeterView";
-    class dI {
-      constructor(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.Uo = DD, this.now = CD, this.snapshot = null, this.fullToken = 0, this.fullAt = -1 / 0, this.burstToken = 0, this.burstAt = -1 / 0, this.gainToken = 0, this.gainAt = -1 / 0
+    const kt = "skyblockGlowMeterView";
+    class Ft {
+      constructor(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.yh = UU, this.now = RU, this.snapshot = null, this.fullToken = 0, this.fullAt = -1 / 0, this.burstToken = 0, this.burstAt = -1 / 0, this.gainToken = 0, this.gainAt = -1 / 0
       }
       getSnapshot() {
         return this.snapshot
       }
-      kt(DD) {
-        const CD = this.now(),
+      qC(UU) {
+        const RU = this.now(),
           {
-            glowMeterFill: cD,
-            glowMeterCapacity: ID
-          } = DD,
-          pD = cD >= ID,
-          iD = this.snapshot;
-        null !== iD && (pD && !iD.full && (this.fullToken++, this.fullAt = CD), iD.full && !pD ? (this.burstToken++, this.burstAt = CD) : cD > iD.fill && (this.gainToken++, this.gainAt = CD)), this.snapshot = {
-          fill: cD,
-          LB: ID,
-          ratio: Math.min(1, Math.max(0, cD / ID)),
-          full: pD,
-          rares: DD.glowMeterRares,
-          ready: pD && this.isPlaying(this.fullAt, CD),
+            glowMeterFill: gU,
+            glowMeterCapacity: tU
+          } = UU,
+          pU = gU >= tU,
+          EU = this.snapshot;
+        null !== EU && (pU && !EU.full && (this.fullToken++, this.fullAt = RU), EU.full && !pU ? (this.burstToken++, this.burstAt = RU) : gU > EU.fill && (this.gainToken++, this.gainAt = RU)), this.snapshot = {
+          fill: gU,
+          hG: tU,
+          ratio: Math.min(1, Math.max(0, gU / tU)),
+          full: pU,
+          rares: UU.glowMeterRares,
+          ready: pU && this.isPlaying(this.fullAt, RU),
           fullToken: this.fullToken,
-          burst: this.isPlaying(this.burstAt, CD),
+          burst: this.isPlaying(this.burstAt, RU),
           burstToken: this.burstToken,
-          gained: this.isPlaying(this.gainAt, CD),
+          gained: this.isPlaying(this.gainAt, RU),
           gainToken: this.gainToken
-        }, this.Uo(this.snapshot)
+        }, this.yh(this.snapshot)
       }
       dispose() {
-        this.snapshot = null, this.Uo(null)
+        this.snapshot = null, this.yh(null)
       }
-      isPlaying(DD, CD) {
-        return CD - DD < 2e3
+      isPlaying(UU, RU) {
+        return RU - UU < 2e3
       }
     }
-    const YI = "skyblockHushWaitView";
-    class WI {
-      constructor(DD) {
-        this.Uo = DD, this.snapshot = null, this.token = 0, this.timers = []
+    const it = "skyblockHushWaitView";
+    class At {
+      constructor(UU) {
+        this.yh = UU, this.snapshot = null, this.token = 0, this.timers = []
       }
       getSnapshot() {
         return this.snapshot
       }
-      kt(DD) {
+      qC(UU) {
         let {
-          hushWaitMs: CD,
-          hushWaitTotalMs: cD,
-          hushWaitLines: ID
-        } = DD;
-        if (this.clearTimers(), this.token++, 0 === ID.length) return console.warn("Skyblock: a Hush wait message came without a line"), void this.show(null);
-        if (CD <= 0) return this.show({
+          hushWaitMs: RU,
+          hushWaitTotalMs: gU,
+          hushWaitLines: tU
+        } = UU;
+        if (this.clearTimers(), this.token++, 0 === tU.length) return console.warn("Skyblock: a Hush wait message came without a line"), void this.show(null);
+        if (RU <= 0) return this.show({
           token: this.token,
           phase: "abandoned",
           waitMs: 3500,
           elapsedMs: 0,
-          line: ID[0],
+          line: tU[0],
           lineIndex: 0
         }), void this.later(3500, (() => {
           this.show(null)
         }));
-        const pD = Math.max(null !== cD && void 0 !== cD ? cD : CD, CD),
-          iD = pD - CD,
-          fD = DD => pD * DD / ID.length,
-          bD = DD => {
+        const pU = Math.max(null !== gU && void 0 !== gU ? gU : RU, RU),
+          EU = pU - RU,
+          PU = UU => pU * UU / tU.length,
+          TU = UU => {
             this.show({
               token: this.token,
               phase: "waiting",
-              waitMs: pD,
-              elapsedMs: iD,
-              line: ID[DD],
-              lineIndex: DD
+              waitMs: pU,
+              elapsedMs: EU,
+              line: tU[UU],
+              lineIndex: UU
             })
           };
-        let QD = 0;
-        for (; QD + 1 < ID.length && fD(QD + 1) <= iD;) QD++;
-        bD(QD);
-        for (let wD = QD + 1; wD < ID.length; wD++) this.later(fD(wD) - iD, (() => {
-          bD(wD)
+        let qU = 0;
+        for (; qU + 1 < tU.length && PU(qU + 1) <= EU;) qU++;
+        TU(qU);
+        for (let KU = qU + 1; KU < tU.length; KU++) this.later(PU(KU) - EU, (() => {
+          TU(KU)
         }));
-        this.later(CD, (() => {
+        this.later(RU, (() => {
           this.show(null)
         }))
       }
       dispose() {
         this.clearTimers(), this.show(null)
       }
-      show(DD) {
-        this.snapshot = DD, this.Uo(DD)
+      show(UU) {
+        this.snapshot = UU, this.yh(UU)
       }
-      later(DD, CD) {
-        this.timers.push(setTimeout(CD, DD))
+      later(UU, RU) {
+        this.timers.push(setTimeout(RU, UU))
       }
       clearTimers() {
-        for (const DD of this.timers) clearTimeout(DD);
+        for (const UU of this.timers) clearTimeout(UU);
         this.timers = []
       }
     }
-    const sI = "skyblockTideChartsView",
-      EI = 36e5,
-      eI = 864e5;
+    const zt = "skyblockTideChartsView",
+      Mt = 36e5,
+      Dt = 864e5;
 
-    function uI(DD, CD, cD) {
-      const [ID, pD, iD, fD] = DD.tideChartArea, bD = Math.floor(CD), QD = Math.floor(cD);
-      return bD >= ID && bD <= iD && QD >= pD && QD <= fD
+    function Lt(UU, RU, gU) {
+      const [tU, pU, EU, PU] = UU.tideChartArea, TU = Math.floor(RU), qU = Math.floor(gU);
+      return TU >= tU && TU <= EU && qU >= pU && qU <= PU
     }
 
-    function hI(DD, CD, cD) {
-      const [ID, pD, iD, fD] = DD.tideChartWater;
-      return function(DD, CD, cD, ID, pD, iD) {
-        const fD = 4 - YD(Math.floor(pD) - (DD - cD), cD);
-        return 5 * YD(Math.floor(iD) - (CD - ID), ID) + fD
-      }(ID, pD, iD, fD, CD, cD)
+    function Nt(UU, RU, gU) {
+      const [tU, pU, EU, PU] = UU.tideChartWater;
+      return function(UU, RU, gU, tU, pU, EU) {
+        const PU = 4 - FU(Math.floor(pU) - (UU - gU), gU);
+        return 5 * FU(Math.floor(EU) - (RU - tU), tU) + PU
+      }(tU, pU, EU, PU, RU, gU)
     }
 
-    function rI(DD, CD, cD) {
-      const ID = DD.tideCharts;
-      for (let pD = 0; pD < ID.length; pD++)
-        if (uI(ID[pD], CD, cD)) return ID[pD];
+    function lt(UU, RU, gU) {
+      const tU = UU.tideCharts;
+      for (let pU = 0; pU < tU.length; pU++)
+        if (Lt(tU[pU], RU, gU)) return tU[pU];
       return null
     }
 
-    function AI(DD, CD, cD) {
-      const ID = Math.max(0, CD - cD);
-      return ID > eI ? DD("skyblockGame:tideChartsTurnDays", {
-        days: String(Math.ceil(ID / eI))
-      }) : ID > EI ? DD("skyblockGame:tideChartsTurnHours", {
-        hours: String(Math.ceil(ID / EI))
-      }) : DD("skyblockGame:tideChartsTurnSoon")
+    function Ot(UU, RU, gU) {
+      const tU = Math.max(0, RU - gU);
+      return tU > Dt ? UU("skyblockGame:tideChartsTurnDays", {
+        days: String(Math.ceil(tU / Dt))
+      }) : tU > Mt ? UU("skyblockGame:tideChartsTurnHours", {
+        hours: String(Math.ceil(tU / Mt))
+      }) : UU("skyblockGame:tideChartsTurnSoon")
     }
-    class FI extends BD {
-      constructor(DD, CD, cD, ID) {
-        let pD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now;
-        super(DD, cD, ID), this.translate = CD, this.now = pD, this.snapshot = void 0, this.message = null, this.receivedAtMs = 0, this.hereIsland = null, this.hereCell = -1, this.lastX = Number.NaN, this.lastZ = Number.NaN, this.picked = null, this.lastIsland = null, this.pulse = {
+    class Up extends GU {
+      constructor(UU, RU, gU, tU) {
+        let pU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now;
+        super(UU, gU, tU), this.translate = RU, this.now = pU, this.snapshot = void 0, this.message = null, this.receivedAtMs = 0, this.hereIsland = null, this.hereCell = -1, this.lastX = Number.NaN, this.lastZ = Number.NaN, this.picked = null, this.lastIsland = null, this.pulse = {
           island: "",
           cells: 0,
           token: 0,
           atMs: 0
         }, this.cast = null, this.castToken = 0, this.turnsCheckedAtMs = 0, this.toggle = () => {
           this.open ? this.dismiss() : (this.picked = null, this.show())
-        }, this.MM = DD => {
-          this.picked = DD, this.emit()
+        }, this.Hj = UU => {
+          this.picked = UU, this.emit()
         }, this.snapshot = this.buildSnapshot()
       }
-      kt(DD) {
-        const CD = this.message;
-        if (null !== CD)
-          for (const ID of DD.tideCharts) {
-            var cD;
-            const DD = CD.tideCharts.find((DD => DD.tideChartIsland === ID.tideChartIsland)),
-              pD = ID.tideChartLit & ~(null !== (cD = null === DD || void 0 === DD ? void 0 : DD.tideChartLit) && void 0 !== cD ? cD : 0);
-            void 0 !== DD && 0 !== pD && (this.pulse = {
-              island: ID.tideChartIsland,
-              cells: pD,
+      qC(UU) {
+        const RU = this.message;
+        if (null !== RU)
+          for (const tU of UU.tideCharts) {
+            var gU;
+            const UU = RU.tideCharts.find((UU => UU.tideChartIsland === tU.tideChartIsland)),
+              pU = tU.tideChartLit & ~(null !== (gU = null === UU || void 0 === UU ? void 0 : UU.tideChartLit) && void 0 !== gU ? gU : 0);
+            void 0 !== UU && 0 !== pU && (this.pulse = {
+              island: tU.tideChartIsland,
+              cells: pU,
               token: this.pulse.token + 1,
               atMs: this.now()
             })
           }
-        this.message = DD, this.receivedAtMs = this.now(), this.locate(this.lastX, this.lastZ), this.emit()
+        this.message = UU, this.receivedAtMs = this.now(), this.locate(this.lastX, this.lastZ), this.emit()
       }
-      locate(DD, CD) {
-        var cD;
-        const ID = null === this.message || Number.isNaN(DD) ? null : rI(this.message, DD, CD),
-          pD = null !== (cD = null === ID || void 0 === ID ? void 0 : ID.tideChartIsland) && void 0 !== cD ? cD : null,
-          iD = null === ID ? -1 : function(DD, CD, cD) {
-            const [ID, pD, iD, fD] = DD.tideChartWater;
-            return function(DD, CD, cD, ID, pD, iD, fD) {
-              return ((pD - DD) / (cD + fD)) ** 2 + ((iD - CD) / (ID + fD)) ** 2 <= 1
-            }(ID, pD, iD, fD, CD, cD, 2) ? hI(DD, CD, cD) : -1
-          }(ID, DD, CD);
-        return (pD !== this.hereIsland || iD !== this.hereCell) && (this.hereIsland = pD, this.hereCell = iD, null !== pD && (this.lastIsland = pD), !0)
+      locate(UU, RU) {
+        var gU;
+        const tU = null === this.message || Number.isNaN(UU) ? null : lt(this.message, UU, RU),
+          pU = null !== (gU = null === tU || void 0 === tU ? void 0 : tU.tideChartIsland) && void 0 !== gU ? gU : null,
+          EU = null === tU ? -1 : function(UU, RU, gU) {
+            const [tU, pU, EU, PU] = UU.tideChartWater;
+            return function(UU, RU, gU, tU, pU, EU, PU) {
+              return ((pU - UU) / (gU + PU)) ** 2 + ((EU - RU) / (tU + PU)) ** 2 <= 1
+            }(tU, pU, EU, PU, RU, gU, 2) ? Nt(UU, RU, gU) : -1
+          }(tU, UU, RU);
+        return (pU !== this.hereIsland || EU !== this.hereCell) && (this.hereIsland = pU, this.hereCell = EU, null !== pU && (this.lastIsland = pU), !0)
       }
-      afterRender(DD) {
+      afterRender(UU) {
         if (null === this.message) return;
-        this.lastX = null === DD ? Number.NaN : DD[0], this.lastZ = null === DD ? Number.NaN : DD[2];
-        const CD = this.locate(this.lastX, this.lastZ),
-          cD = this.expirePulses();
-        (CD || cD || this.turnsChanged()) && this.emit()
+        this.lastX = null === UU ? Number.NaN : UU[0], this.lastZ = null === UU ? Number.NaN : UU[2];
+        const RU = this.locate(this.lastX, this.lastZ),
+          gU = this.expirePulses();
+        (RU || gU || this.turnsChanged()) && this.emit()
       }
       turnsChanged() {
-        const DD = this.now();
-        return !(!this.open || DD - this.turnsCheckedAtMs < 3e4 || null === this.message) && (this.turnsCheckedAtMs = DD, AI(this.translate, this.message.tideChartTurnsInMs, DD - this.receivedAtMs) !== this.snapshot.turnsText)
+        const UU = this.now();
+        return !(!this.open || UU - this.turnsCheckedAtMs < 3e4 || null === this.message) && (this.turnsCheckedAtMs = UU, Ot(this.translate, this.message.tideChartTurnsInMs, UU - this.receivedAtMs) !== this.snapshot.turnsText)
       }
-      castLanded(DD, CD) {
-        const cD = null === this.message ? null : rI(this.message, DD, CD);
-        if (null === cD) return;
-        const ID = hI(cD, DD, CD);
-        0 === (cD.tideChartPreBlank & 1 << ID) && (this.cast = {
-          island: cD.tideChartIsland,
-          cell: ID,
+      castLanded(UU, RU) {
+        const gU = null === this.message ? null : lt(this.message, UU, RU);
+        if (null === gU) return;
+        const tU = Nt(gU, UU, RU);
+        0 === (gU.tideChartPreBlank & 1 << tU) && (this.cast = {
+          island: gU.tideChartIsland,
+          cell: tU,
           token: ++this.castToken,
           atMs: this.now()
         }, this.emit())
       }
       expirePulses() {
-        const DD = this.now();
-        let CD = !1;
-        return 0 !== this.pulse.cells && DD - this.pulse.atMs >= 1500 && (this.pulse = {
+        const UU = this.now();
+        let RU = !1;
+        return 0 !== this.pulse.cells && UU - this.pulse.atMs >= 1500 && (this.pulse = {
           ...this.pulse,
           cells: 0
-        }, CD = !0), null !== this.cast && DD - this.cast.atMs >= 1500 && (this.cast = null, CD = !0), CD
+        }, RU = !0), null !== this.cast && UU - this.cast.atMs >= 1500 && (this.cast = null, RU = !0), RU
       }
-      setTranslator(DD) {
-        this.translate = DD, this.emit()
+      setTranslator(UU) {
+        this.translate = UU, this.emit()
       }
       isEnabled() {
         return null !== this.message && this.message.tideCharts.length > 0
@@ -4283,62 +4283,62 @@ export const modules = {
       onClosed() {
         this.picked = null
       }
-      findChart(DD, CD) {
-        var cD;
-        return null !== (cD = DD.tideCharts.find((DD => DD.tideChartIsland === CD))) && void 0 !== cD ? cD : null
+      findChart(UU, RU) {
+        var gU;
+        return null !== (gU = UU.tideCharts.find((UU => UU.tideChartIsland === RU))) && void 0 !== gU ? gU : null
       }
-      describe(DD) {
-        var CD, cD, ID;
-        const pD = DD.tideChartIsland,
-          iD = [];
-        for (let MD = 0; MD < 25; MD++) {
-          const CD = 1 << MD;
-          0 !== (DD.tideChartLit & CD) ? iD.push("lit") : 0 !== (DD.tideChartClear & CD) ? iD.push("clear") : 0 !== (DD.tideChartPreBlank & CD) ? iD.push("shore") : iD.push("water")
+      describe(UU) {
+        var RU, gU, tU;
+        const pU = UU.tideChartIsland,
+          EU = [];
+        for (let uU = 0; uU < 25; uU++) {
+          const RU = 1 << uU;
+          0 !== (UU.tideChartLit & RU) ? EU.push("lit") : 0 !== (UU.tideChartClear & RU) ? EU.push("clear") : 0 !== (UU.tideChartPreBlank & RU) ? EU.push("shore") : EU.push("water")
         }
-        const fD = function(DD) {
-            let CD = 0;
-            for (let cD = DD >>> 0; 0 !== cD; cD &= cD - 1) CD++;
-            return CD
-          }(DD.tideChartLit),
-          bD = DD.tideChartInkCount,
-          QD = this.translate(DD.tideChartIslandNameKey),
-          wD = this.translate("skyblockGame:tideChartsLit", {
-            lit: String(fD),
-            ink: String(bD)
+        const PU = function(UU) {
+            let RU = 0;
+            for (let gU = UU >>> 0; 0 !== gU; gU &= gU - 1) RU++;
+            return RU
+          }(UU.tideChartLit),
+          TU = UU.tideChartInkCount,
+          qU = this.translate(UU.tideChartIslandNameKey),
+          KU = this.translate("skyblockGame:tideChartsLit", {
+            lit: String(PU),
+            ink: String(TU)
           }),
-          SD = null === DD.tideChartPictureNameKey ? null : this.translate(DD.tideChartPictureNameKey),
-          BD = this.hereIsland === pD && -1 !== this.hereCell ? this.hereCell : null,
-          yD = [`${QD}: ${wD}.`];
-        if (null !== SD && yD.push(this.translate("skyblockGame:tideChartsPictureRevealed", {
-            picture: SD
-          })), null !== BD) {
-          const DD = Math.floor(BD / 5) + 1,
-            CD = BD % 5 + 1;
-          yD.push(this.translate("skyblockGame:tideChartsHereCell", {
-            row: String(DD),
-            column: String(CD)
+          cU = null === UU.tideChartPictureNameKey ? null : this.translate(UU.tideChartPictureNameKey),
+          GU = this.hereIsland === pU && -1 !== this.hereCell ? this.hereCell : null,
+          jU = [`${qU}: ${KU}.`];
+        if (null !== cU && jU.push(this.translate("skyblockGame:tideChartsPictureRevealed", {
+            picture: cU
+          })), null !== GU) {
+          const UU = Math.floor(GU / 5) + 1,
+            RU = GU % 5 + 1;
+          jU.push(this.translate("skyblockGame:tideChartsHereCell", {
+            row: String(UU),
+            column: String(RU)
           }))
         }
         return {
-          island: pD,
-          islandName: QD,
-          cells: iD,
-          hereCell: BD,
-          lit: fD,
-          ink: bD,
-          litText: wD,
-          pictureName: SD,
-          gridLabel: yD.join(" "),
-          pulseCells: this.pulse.island === pD ? this.pulse.cells : 0,
+          island: pU,
+          islandName: qU,
+          cells: EU,
+          hereCell: GU,
+          lit: PU,
+          ink: TU,
+          litText: KU,
+          pictureName: cU,
+          gridLabel: jU.join(" "),
+          pulseCells: this.pulse.island === pU ? this.pulse.cells : 0,
           pulseToken: this.pulse.token,
-          castCell: (null === (CD = this.cast) || void 0 === CD ? void 0 : CD.island) === pD ? this.cast.cell : null,
-          castToken: null !== (cD = null === (ID = this.cast) || void 0 === ID ? void 0 : ID.token) && void 0 !== cD ? cD : 0
+          castCell: (null === (RU = this.cast) || void 0 === RU ? void 0 : RU.island) === pU ? this.cast.cell : null,
+          castToken: null !== (gU = null === (tU = this.cast) || void 0 === tU ? void 0 : tU.token) && void 0 !== gU ? gU : 0
         }
       }
       buildSnapshot() {
-        var DD, CD, cD;
-        const ID = this.message;
-        if (null === ID || 0 === ID.tideCharts.length) return {
+        var UU, RU, gU;
+        const tU = this.message;
+        if (null === tU || 0 === tU.tideCharts.length) return {
           enabled: !1,
           open: !1,
           chip: null,
@@ -4347,22 +4347,22 @@ export const modules = {
           bookText: "",
           tabs: []
         };
-        const pD = this.findChart(ID, this.hereIsland),
-          iD = null !== (DD = null !== (CD = null !== (cD = this.findChart(ID, this.open ? this.picked : null)) && void 0 !== cD ? cD : pD) && void 0 !== CD ? CD : this.findChart(ID, this.lastIsland)) && void 0 !== DD ? DD : ID.tideCharts[0],
-          fD = null === pD ? null : this.describe(pD);
+        const pU = this.findChart(tU, this.hereIsland),
+          EU = null !== (UU = null !== (RU = null !== (gU = this.findChart(tU, this.open ? this.picked : null)) && void 0 !== gU ? gU : pU) && void 0 !== RU ? RU : this.findChart(tU, this.lastIsland)) && void 0 !== UU ? UU : tU.tideCharts[0],
+          PU = null === pU ? null : this.describe(pU);
         return this.turnsCheckedAtMs = this.now(), {
           enabled: !0,
           open: this.open,
-          chip: fD,
-          card: iD === pD ? fD : this.describe(iD),
-          turnsText: AI(this.translate, ID.tideChartTurnsInMs, this.now() - this.receivedAtMs),
+          chip: PU,
+          card: EU === pU ? PU : this.describe(EU),
+          turnsText: Ot(this.translate, tU.tideChartTurnsInMs, this.now() - this.receivedAtMs),
           bookText: this.translate("skyblockGame:tideChartsBook", {
-            count: String(ID.tideChartBookCount)
+            count: String(tU.tideChartBookCount)
           }),
-          tabs: ID.tideCharts.map((DD => ({
-            island: DD.tideChartIsland,
-            name: this.translate(DD.tideChartIslandNameKey),
-            selected: DD.tideChartIsland === iD.tideChartIsland
+          tabs: tU.tideCharts.map((UU => ({
+            island: UU.tideChartIsland,
+            name: this.translate(UU.tideChartIslandNameKey),
+            selected: UU.tideChartIsland === EU.tideChartIsland
           })))
         }
       }
@@ -4370,173 +4370,173 @@ export const modules = {
         this.message = null, this.hereIsland = null, this.hereCell = -1, this.cast = null, super.dispose()
       }
     }
-    const Dp = "skyblockRegularsView",
-      Cp = {
+    const Rp = "skyblockRegularsView",
+      gp = {
         goal: "skyblockGame:regularsGiftTint",
         given: "skyblockGame:regularsGiftTint",
         owed: "skyblockGame:regularsGiftTintOwed"
       },
-      cp = {
+      tp = {
         goal: "skyblockGame:regularsCharmGoal",
         given: "skyblockGame:regularsCharmGiven",
         owed: "skyblockGame:regularsCharmOwed"
       };
 
-    function Ip(DD, CD) {
-      return "given" === DD ? CD.given : "owed" === DD ? CD.owed : CD.goal
+    function pp(UU, RU) {
+      return "given" === UU ? RU.given : "owed" === UU ? RU.owed : RU.goal
     }
-    class pp extends BD {
-      constructor(DD, CD, cD, ID) {
-        super(DD, cD, ID), this.translate = CD, this.snapshot = void 0, this.message = null, this.selected = "", this.openedFromReachLog = !1, this.itemName = DD => DD, this.openIsland = DD => {
-          this.selected = DD, this.openedFromReachLog = !0, this.show()
-        }, this.selectIsland = DD => {
-          this.selected = DD, this.emit()
+    class Ep extends GU {
+      constructor(UU, RU, gU, tU) {
+        super(UU, gU, tU), this.translate = RU, this.snapshot = void 0, this.message = null, this.selected = "", this.openedFromReachLog = !1, this.itemName = UU => UU, this.openIsland = UU => {
+          this.selected = UU, this.openedFromReachLog = !0, this.show()
+        }, this.selectIsland = UU => {
+          this.selected = UU, this.emit()
         }, this.snapshot = this.buildSnapshot()
       }
-      kt(DD) {
-        this.message = DD, this.emit()
+      qC(UU) {
+        this.message = UU, this.emit()
       }
       isOverReachLog() {
         return this.open && this.openedFromReachLog
       }
       takeReturnToReachLog() {
-        const DD = this.openedFromReachLog;
-        return this.openedFromReachLog = !1, DD
+        const UU = this.openedFromReachLog;
+        return this.openedFromReachLog = !1, UU
       }
-      setTranslator(DD, CD, cD) {
-        this.translate = DD, void 0 !== cD && (this.itemName = cD), this.emit()
+      setTranslator(UU, RU, gU) {
+        this.translate = UU, void 0 !== gU && (this.itemName = gU), this.emit()
       }
       isEnabled() {
         return null !== this.message
       }
-      describeGift(DD, CD, cD) {
+      describeGift(UU, RU, gU) {
         return {
-          text: this.translate(Ip(DD, CD), cD),
-          given: "given" === DD
+          text: this.translate(pp(UU, RU), gU),
+          given: "given" === UU
         }
       }
-      describeRegular(DD, CD) {
-        const cD = this.translate,
-          ID = null !== DD.regularKg,
-          pD = DD.regularMeetings,
-          iD = ID ? 0 === pD ? cD("skyblockGame:regularsNotMet") : 1 === pD ? cD("skyblockGame:regularsMeetingsOne") : cD("skyblockGame:regularsMeetings", {
-            count: pD
+      describeRegular(UU, RU) {
+        const gU = this.translate,
+          tU = null !== UU.regularKg,
+          pU = UU.regularMeetings,
+          EU = tU ? 0 === pU ? gU("skyblockGame:regularsNotMet") : 1 === pU ? gU("skyblockGame:regularsMeetingsOne") : gU("skyblockGame:regularsMeetings", {
+            count: pU
           }) : "";
         return {
-          id: DD.regularId,
-          name: cD(DD.regularNameKey),
-          line: cD(DD.regularLineKey),
-          itemName: DD.regularFishItem,
-          fishName: this.itemName(DD.regularFishItem),
-          tagged: ID,
-          size: null === DD.regularKg ? cD("skyblockGame:regularsNotTagged") : cD("skyblockGame:regularsSize", {
-            kg: DD.regularKg.toFixed(1)
+          id: UU.regularId,
+          name: gU(UU.regularNameKey),
+          line: gU(UU.regularLineKey),
+          itemName: UU.regularFishItem,
+          fishName: this.itemName(UU.regularFishItem),
+          tagged: tU,
+          size: null === UU.regularKg ? gU("skyblockGame:regularsNotTagged") : gU("skyblockGame:regularsSize", {
+            kg: UU.regularKg.toFixed(1)
           }),
-          meetings: iD,
-          chance: cD("skyblockGame:regularsChance", {
-            count: DD.regularOneInCasts
+          meetings: EU,
+          chance: gU("skyblockGame:regularsChance", {
+            count: UU.regularOneInCasts
           }),
-          resting: DD.regularRestingToday,
+          resting: UU.regularRestingToday,
           gifts: [{
-            text: cD("skyblockGame:regularsGiftFlare"),
-            given: pD >= 3
-          }, this.describeGift(DD.regularTintGift, Cp, {
-            tint: cD(DD.regularTintNameKey)
+            text: gU("skyblockGame:regularsGiftFlare"),
+            given: pU >= 3
+          }, this.describeGift(UU.regularTintGift, gp, {
+            tint: gU(UU.regularTintNameKey)
           })],
-          history: [...DD.regularHistory].reverse().map((DD => {
-            const ID = DD.regularMeetingKg.toFixed(1),
-              pD = CD - DD.regularMeetingDay;
-            return pD <= 0 ? cD("skyblockGame:regularsToday", {
-              kg: ID
-            }) : cD("skyblockGame:regularsDaysAgo", {
-              days: pD,
-              kg: ID
+          history: [...UU.regularHistory].reverse().map((UU => {
+            const tU = UU.regularMeetingKg.toFixed(1),
+              pU = RU - UU.regularMeetingDay;
+            return pU <= 0 ? gU("skyblockGame:regularsToday", {
+              kg: tU
+            }) : gU("skyblockGame:regularsDaysAgo", {
+              days: pU,
+              kg: tU
             })
           }))
         }
       }
-      describeIsland(DD, CD) {
+      describeIsland(UU, RU) {
         return {
-          id: DD.regularsIslandId,
-          name: this.translate(DD.regularsIslandNameKey),
-          charm: this.describeGift(DD.regularsCharmGift, cp, {
-            charm: this.translate(DD.regularsCharmNameKey)
+          id: UU.regularsIslandId,
+          name: this.translate(UU.regularsIslandNameKey),
+          charm: this.describeGift(UU.regularsCharmGift, tp, {
+            charm: this.translate(UU.regularsCharmNameKey)
           }),
-          regulars: DD.regularsList.map((DD => this.describeRegular(DD, CD)))
+          regulars: UU.regularsList.map((UU => this.describeRegular(UU, RU)))
         }
       }
       buildSnapshot() {
-        var DD, CD, cD, ID;
-        const pD = this.message;
-        if (null === pD) return {
+        var UU, RU, gU, tU;
+        const pU = this.message;
+        if (null === pU) return {
           enabled: !1,
           open: !1,
           selected: "",
           islands: []
         };
-        const iD = pD.regularsIslands.map((DD => this.describeIsland(DD, pD.regularsToday))),
-          fD = null !== (DD = null !== (CD = null === (cD = iD.find((DD => DD.id === this.selected))) || void 0 === cD ? void 0 : cD.id) && void 0 !== CD ? CD : null === (ID = iD[0]) || void 0 === ID ? void 0 : ID.id) && void 0 !== DD ? DD : "";
+        const EU = pU.regularsIslands.map((UU => this.describeIsland(UU, pU.regularsToday))),
+          PU = null !== (UU = null !== (RU = null === (gU = EU.find((UU => UU.id === this.selected))) || void 0 === gU ? void 0 : gU.id) && void 0 !== RU ? RU : null === (tU = EU[0]) || void 0 === tU ? void 0 : tU.id) && void 0 !== UU ? UU : "";
         return {
           enabled: !0,
           open: this.open,
-          selected: fD,
-          islands: iD
+          selected: PU,
+          islands: EU
         }
       }
       dispose() {
         this.message = null, super.dispose()
       }
     }
-    const ip = "skyblockHiddenWatersView";
-    class fp {
-      constructor(DD) {
-        this.Uo = DD, this.snapshot = null
+    const Pp = "skyblockHiddenWatersView";
+    class Tp {
+      constructor(UU) {
+        this.yh = UU, this.snapshot = null
       }
       getSnapshot() {
         return this.snapshot
       }
-      kt(DD) {
-        this.snapshot = function(DD) {
-          const [CD, cD] = DD.hiddenWatersMapSize, ID = (DD, ID) => ({
-            left: 1 - DD / CD,
-            top: ID / cD
-          }), pD = new Map;
-          for (const [fD, bD] of DD.hiddenWatersGlimpses) {
-            var iD;
-            const DD = null !== (iD = pD.get(fD)) && void 0 !== iD ? iD : [];
-            DD.push(bD), pD.set(fD, DD)
+      qC(UU) {
+        this.snapshot = function(UU) {
+          const [RU, gU] = UU.hiddenWatersMapSize, tU = (UU, tU) => ({
+            left: 1 - UU / RU,
+            top: tU / gU
+          }), pU = new Map;
+          for (const [PU, TU] of UU.hiddenWatersGlimpses) {
+            var EU;
+            const UU = null !== (EU = pU.get(PU)) && void 0 !== EU ? EU : [];
+            UU.push(TU), pU.set(PU, UU)
           }
           return {
-            found: DD.hiddenWatersFound,
-            total: DD.hiddenWatersTotal,
-            aspect: cD / CD,
-            pins: DD.hiddenWatersPins.map((DD => {
-              let [CD, cD] = DD;
-              return ID(CD, cD)
+            found: UU.hiddenWatersFound,
+            total: UU.hiddenWatersTotal,
+            aspect: gU / RU,
+            pins: UU.hiddenWatersPins.map((UU => {
+              let [RU, gU] = UU;
+              return tU(RU, gU)
             })),
-            islands: DD.hiddenWatersIslands.map((DD => {
-              let [pD, iD, fD, bD] = DD;
+            islands: UU.hiddenWatersIslands.map((UU => {
+              let [pU, EU, PU, TU] = UU;
               const {
-                left: QD,
-                top: wD
-              } = ID(fD + 1, iD);
+                left: qU,
+                top: KU
+              } = tU(PU + 1, EU);
               return {
-                left: QD,
-                top: wD,
-                width: (fD + 1 - pD) / CD,
-                height: (bD + 1 - iD) / cD
+                left: qU,
+                top: KU,
+                width: (PU + 1 - pU) / RU,
+                height: (TU + 1 - EU) / gU
               }
             })),
-            glimpses: pD
+            glimpses: pU
           }
-        }(DD), this.Uo(this.snapshot)
+        }(UU), this.yh(this.snapshot)
       }
     }
-    const bp = "skyblockDialogueView";
-    class Qp extends BD {
-      constructor(DD, CD, cD, ID, pD) {
-        let iD = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
-        super(DD, cD, ID), this.translate = CD, this.requestDialogue = pD, this.now = iD, this.snapshot = void 0, this.enabled = !1, this.scripts = [], this.speakers = new Map, this.received = !1, this.selection = {
+    const qp = "skyblockDialogueView";
+    class Kp extends GU {
+      constructor(UU, RU, gU, tU, pU) {
+        let EU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
+        super(UU, gU, tU), this.translate = RU, this.requestDialogue = pU, this.now = EU, this.snapshot = void 0, this.enabled = !1, this.scripts = [], this.speakers = new Map, this.received = !1, this.selection = {
           kind: "character",
           npcId: null
         }, this.requestAvailableAt = 0, this.showCharacters = () => {
@@ -4544,122 +4544,122 @@ export const modules = {
             kind: "character",
             npcId: "character" === this.selection.kind ? this.selection.npcId : null
           }, this.request(), this.show()
-        }, this.showQuest = DD => {
+        }, this.showQuest = UU => {
           this.selection = {
             kind: "quest",
-            questId: DD
+            questId: UU
           }, this.request(), this.show()
-        }, this.selectCharacter = DD => {
+        }, this.selectCharacter = UU => {
           this.selection = {
             kind: "character",
-            npcId: DD
+            npcId: UU
           }, this.emit()
         }, this.snapshot = this.buildSnapshot()
       }
-      kt(DD) {
-        this.received = !0, this.scripts = DD.questDialogueScripts, this.speakers = new Map(DD.questDialogueSpeakers.map((DD => [DD.dialogueSpeakerId, DD]))), this.emit()
+      qC(UU) {
+        this.received = !0, this.scripts = UU.questDialogueScripts, this.speakers = new Map(UU.questDialogueSpeakers.map((UU => [UU.dialogueSpeakerId, UU]))), this.emit()
       }
-      setTranslator(DD) {
-        this.translate = DD, this.emit()
+      setTranslator(UU) {
+        this.translate = UU, this.emit()
       }
       isEnabled() {
         return this.enabled
       }
       request() {
-        const DD = this.now();
-        DD >= this.requestAvailableAt && (this.requestAvailableAt = DD + 3e3, this.requestDialogue())
+        const UU = this.now();
+        UU >= this.requestAvailableAt && (this.requestAvailableAt = UU + 3e3, this.requestDialogue())
       }
       buildSnapshot() {
-        var DD;
-        const CD = {
+        var UU;
+        const RU = {
           enabled: this.enabled,
           open: this.open,
           loading: !this.received,
           completedLabel: this.translate("skyblockDialogue:completed")
         };
         if (!this.open) return {
-          ...CD,
+          ...RU,
           characters: [],
           questFocus: null,
           conversations: []
         };
-        const cD = this.selection;
-        if ("quest" === cD.kind) {
-          const DD = this.scripts.find((DD => DD.dialogueQuestId === cD.questId));
+        const gU = this.selection;
+        if ("quest" === gU.kind) {
+          const UU = this.scripts.find((UU => UU.dialogueQuestId === gU.questId));
           return {
-            ...CD,
+            ...RU,
             characters: [],
-            questFocus: cD.questId,
-            conversations: DD ? [this.conversation(DD)] : []
+            questFocus: gU.questId,
+            conversations: UU ? [this.conversation(UU)] : []
           }
         }
-        const ID = [];
-        for (let iD = this.scripts.length - 1; iD >= 0; iD--) {
-          const DD = this.scripts[iD].dialogueLines;
-          for (let CD = DD.length - 1; CD >= 0; CD--) ID.includes(DD[CD].dialogueSpeakerId) || ID.push(DD[CD].dialogueSpeakerId)
+        const tU = [];
+        for (let EU = this.scripts.length - 1; EU >= 0; EU--) {
+          const UU = this.scripts[EU].dialogueLines;
+          for (let RU = UU.length - 1; RU >= 0; RU--) tU.includes(UU[RU].dialogueSpeakerId) || tU.push(UU[RU].dialogueSpeakerId)
         }
-        const pD = null !== cD.npcId && ID.includes(cD.npcId) ? cD.npcId : null !== (DD = ID[0]) && void 0 !== DD ? DD : null;
+        const pU = null !== gU.npcId && tU.includes(gU.npcId) ? gU.npcId : null !== (UU = tU[0]) && void 0 !== UU ? UU : null;
         return {
-          ...CD,
-          characters: ID.map((DD => {
-            var CD, cD;
+          ...RU,
+          characters: tU.map((UU => {
+            var RU, gU;
             return {
-              id: DD,
-              styling: null !== (CD = null === (cD = this.speakers.get(DD)) || void 0 === cD ? void 0 : cD.dialogueSpeakerStyling) && void 0 !== CD ? CD : DD,
-              selected: DD === pD
+              id: UU,
+              styling: null !== (RU = null === (gU = this.speakers.get(UU)) || void 0 === gU ? void 0 : gU.dialogueSpeakerStyling) && void 0 !== RU ? RU : UU,
+              selected: UU === pU
             }
           })),
           questFocus: null,
-          conversations: this.scripts.filter((DD => DD.dialogueLines.some((DD => DD.dialogueSpeakerId === pD)))).map((DD => this.conversation(DD))).reverse()
+          conversations: this.scripts.filter((UU => UU.dialogueLines.some((UU => UU.dialogueSpeakerId === pU)))).map((UU => this.conversation(UU))).reverse()
         }
       }
-      conversation(DD) {
-        let CD = null;
+      conversation(UU) {
+        let RU = null;
         return {
-          questId: DD.dialogueQuestId,
-          questName: this.translate(DD.dialogueQuestNameKey),
-          completed: DD.dialogueQuestCompleted,
-          lines: DD.dialogueLines.map(((DD, cD) => {
-            var ID;
-            const pD = DD.dialogueSpeakerId === CD || null === (ID = this.speakers.get(DD.dialogueSpeakerId)) || void 0 === ID ? void 0 : ID.dialogueSpeakerStyling;
-            return CD = DD.dialogueSpeakerId, {
-              key: cD,
+          questId: UU.dialogueQuestId,
+          questName: this.translate(UU.dialogueQuestNameKey),
+          completed: UU.dialogueQuestCompleted,
+          lines: UU.dialogueLines.map(((UU, gU) => {
+            var tU;
+            const pU = UU.dialogueSpeakerId === RU || null === (tU = this.speakers.get(UU.dialogueSpeakerId)) || void 0 === tU ? void 0 : tU.dialogueSpeakerStyling;
+            return RU = UU.dialogueSpeakerId, {
+              key: gU,
               display: {
                 line: {
-                  translationKey: DD.dialogueLineKey,
-                  params: this.params(DD.dialogueLineParams)
+                  translationKey: UU.dialogueLineKey,
+                  params: this.params(UU.dialogueLineParams)
                 },
-                speakerName: pD,
+                speakerName: pU,
                 animateIn: !1
               }
             }
           }))
         }
       }
-      params(DD) {
-        if (void 0 !== DD) return Object.fromEntries(Object.entries(DD).map((DD => {
-          let [CD, cD] = DD;
-          return [CD, "string" === typeof cD ? cD : this.translate(cD.translationKey)]
+      params(UU) {
+        if (void 0 !== UU) return Object.fromEntries(Object.entries(UU).map((UU => {
+          let [RU, gU] = UU;
+          return [RU, "string" === typeof gU ? gU : this.translate(gU.translationKey)]
         })))
       }
     }
-    var wp = cD(611),
-      Sp = cD(1266),
-      Bp = cD(90);
-    const yp = "skyblockAutographsView";
+    var cp = gU(562),
+      Gp = gU(1271),
+      jp = gU(96);
+    const Cp = "skyblockAutographsView";
 
-    function Mp(DD) {
-      const CD = wp.h[DD];
+    function hp(UU) {
+      const RU = cp.h[UU];
       return {
-        label: CD.chatTag.map((DD => DD.str)).join(""),
-        icon: CD.icon,
-        colour: CD.mainRGB
+        label: RU.chatTag.map((UU => UU.str)).join(""),
+        icon: RU.icon,
+        colour: RU.mainRGB
       }
     }
-    class tp extends BD {
-      constructor(DD) {
-        let CD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "en-GB";
-        super(DD, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => {}, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}), this.locale = CD, this.signatures = null, this.snapshot = {
+    class Qp extends GU {
+      constructor(UU) {
+        let RU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "en-GB";
+        super(UU, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => {}, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}), this.locale = RU, this.signatures = null, this.snapshot = {
           enabled: !1,
           open: !1,
           entries: [],
@@ -4667,12 +4667,12 @@ export const modules = {
           rankTotal: 0
         }
       }
-      kt(DD) {
-        this.signatures = DD.autographSignatures, DD.autographOpen ? this.show() : this.emit()
+      qC(UU) {
+        this.signatures = UU.autographSignatures, UU.autographOpen ? this.show() : this.emit()
       }
-      setTranslator(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
-        this.locale = CD, this.emit()
+      setTranslator(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
+        this.locale = RU, this.emit()
       }
       dispose() {
         this.signatures = null, super.dispose()
@@ -4681,256 +4681,256 @@ export const modules = {
         return null !== this.signatures
       }
       buildSnapshot() {
-        var DD;
-        const CD = null !== (DD = this.signatures) && void 0 !== DD ? DD : [],
-          cD = new Intl.DateTimeFormat(this.locale, {
+        var UU;
+        const RU = null !== (UU = this.signatures) && void 0 !== UU ? UU : [],
+          gU = new Intl.DateTimeFormat(this.locale, {
             dateStyle: "medium"
           }),
-          ID = [...CD].sort(((DD, CD) => Number(null !== CD.autographRank) - Number(null !== DD.autographRank) || CD.autographSignedAtMs - DD.autographSignedAtMs)).map((DD => ({
-            key: `${DD.autographSignedAtMs}|${DD.autographSignerName}`,
-            name: (0, Sp.d)(DD.autographSignerName, !Bp.featureFlags.canSeeRealPlayerNames),
-            rank: null === DD.autographRank ? null : Mp(DD.autographRank),
-            signedOn: cD.format(DD.autographSignedAtMs)
+          tU = [...RU].sort(((UU, RU) => Number(null !== RU.autographRank) - Number(null !== UU.autographRank) || RU.autographSignedAtMs - UU.autographSignedAtMs)).map((UU => ({
+            key: `${UU.autographSignedAtMs}|${UU.autographSignerName}`,
+            name: (0, Gp.c)(UU.autographSignerName, !jp.featureFlags.canSeeRealPlayerNames),
+            rank: null === UU.autographRank ? null : hp(UU.autographRank),
+            signedOn: gU.format(UU.autographSignedAtMs)
           })));
         return {
           enabled: this.isEnabled(),
           open: this.open,
-          entries: ID,
-          total: ID.length,
-          rankTotal: ID.filter((DD => null !== DD.rank)).length
+          entries: tU,
+          total: tU.length,
+          rankTotal: tU.filter((UU => null !== UU.rank)).length
         }
       }
     }
-    const Zp = "skyblockHudView",
-      op = () => {},
-      vp = {
+    const ep = "skyblockHudView",
+      Wp = () => {},
+      fp = {
         getItem: () => null,
-        setItem: op,
-        removeItem: op
+        setItem: Wp,
+        removeItem: Wp
       };
-    class Np {
-      constructor(DD) {
+    class xp {
+      constructor(UU) {
         let {
-          translate: CD,
-          translateWithIcons: cD,
-          setMenuOpen: ID = op,
-          dismissMenu: pD = () => {
-            ID(!1)
+          translate: RU,
+          translateWithIcons: gU,
+          setMenuOpen: tU = Wp,
+          dismissMenu: pU = () => {
+            tU(!1)
           },
-          publishSkills: iD = op,
-          publishQuests: fD = op,
-          publishQuestNotification: bD = op,
-          publishDungeons: QD = op,
-          publishCollections: wD = op,
-          publishMap: SD = op,
-          publishHud: BD = op,
-          publishPortalTransit: yD = op,
-          publishDailyReward: tD = op,
-          publishMailbox: ZD = op,
-          publishQuestGraph: oD = op,
-          publishForge: vD = op,
-          publishSmuggler: ND = op,
-          publishKeepersChair: gD = op,
-          publishReachLog: XD = op,
-          publishLampLight: mD = op,
-          publishMagmaward: nD = op,
-          publishGlowtide: PD = op,
-          publishGlowMeter: HD = op,
-          publishHushWait: UD = op,
-          publishPassage: xD = op,
-          publishTideCharts: qD = op,
-          publishRegulars: JD = op,
-          publishHiddenWaters: KD = op,
-          publishDialogue: aD = op,
-          publishAutographs: VD = op,
-          isLoadingScreenUp: zD = () => !1,
-          onDailyRewardCoinLanded: jD = op,
-          onDailyRewardStarted: lD = op,
-          onDailyRewardFinished: LD = op,
-          onDailyRewardItemLanded: TD = op,
-          onMailboxStarted: GD = op,
-          journeyStorage: RD = vp,
-          requestTracking: kD = op,
-          requestTravel: dD = op,
-          requestDungeonEnter: YD = op,
-          requestQuestJump: WD = op,
-          requestQuestArrive: sD = op,
-          requestForge: ED = op,
-          requestSmuggle: eD = op,
-          requestKeepersChairAim: uD = op,
-          requestReachLogOpen: hD = op,
-          requestLampLight: rD = op,
-          requestDialogue: AD = op
-        } = DD;
-        this.navigation = void 0, this.map = void 0, this.compass = new OD, this.skills = void 0, this.quests = void 0, this.dungeons = void 0, this.collections = void 0, this.questGraph = void 0, this.forge = void 0, this.smuggler = void 0, this.keepersChair = void 0, this.reachLog = void 0, this.lampLight = void 0, this.commandPacer = new HI.d, this.passage = void 0, this.tideCharts = void 0, this.regulars = void 0, this.hiddenWaters = void 0, this.autographs = void 0, this.portalTransit = void 0, this.dailyReward = void 0, this.mailbox = void 0, this.magmaward = void 0, this.glowtide = void 0, this.glowMeter = void 0, this.hushWait = void 0, this.dialogue = void 0, this.panels = void 0, this.setMenuOpen = void 0, this.hudSnapshot = null, this.openingPanel = null, this.publishHud = void 0, this.resolveItemName = DD => DD, this.close = () => {
-          for (const DD of this.panels) DD.close()
-        }, this.setMenuOpen = ID, this.publishHud = BD, this.portalTransit = new Gc(yD, RD), this.magmaward = new TI(nD), this.glowtide = new RI(PD), this.glowMeter = new dI(HD), this.hushWait = new WI(UD), this.dailyReward = new dc(tD, (() => zD() || null !== this.portalTransit.getSnapshot() || null !== this.quests.getNotificationSnapshot() || null !== this.mailbox.getSnapshot()), (DD => {
-          this.quests.setNotificationsHeld(DD)
+          publishSkills: EU = Wp,
+          publishQuests: PU = Wp,
+          publishQuestNotification: TU = Wp,
+          publishDungeons: qU = Wp,
+          publishCollections: KU = Wp,
+          publishMap: cU = Wp,
+          publishHud: GU = Wp,
+          publishPortalTransit: jU = Wp,
+          publishDailyReward: CU = Wp,
+          publishMailbox: hU = Wp,
+          publishQuestGraph: QU = Wp,
+          publishForge: eU = Wp,
+          publishSmuggler: WU = Wp,
+          publishKeepersChair: fU = Wp,
+          publishReachLog: xU = Wp,
+          publishLampLight: mU = Wp,
+          publishMagmaward: IU = Wp,
+          publishGlowtide: wU = Wp,
+          publishGlowMeter: nU = Wp,
+          publishHushWait: bU = Wp,
+          publishPassage: oU = Wp,
+          publishTideCharts: ZU = Wp,
+          publishRegulars: aU = Wp,
+          publishHiddenWaters: YU = Wp,
+          publishDialogue: BU = Wp,
+          publishAutographs: VU = Wp,
+          isLoadingScreenUp: rU = () => !1,
+          onDailyRewardCoinLanded: XU = Wp,
+          onDailyRewardStarted: vU = Wp,
+          onDailyRewardFinished: dU = Wp,
+          onDailyRewardItemLanded: HU = Wp,
+          onMailboxStarted: SU = Wp,
+          journeyStorage: sU = fp,
+          requestTracking: yU = Wp,
+          requestTravel: kU = Wp,
+          requestDungeonEnter: FU = Wp,
+          requestQuestJump: iU = Wp,
+          requestQuestArrive: AU = Wp,
+          requestForge: zU = Wp,
+          requestSmuggle: MU = Wp,
+          requestKeepersChairAim: DU = Wp,
+          requestReachLogOpen: LU = Wp,
+          requestLampLight: NU = Wp,
+          requestDialogue: lU = Wp
+        } = UU;
+        this.navigation = void 0, this.map = void 0, this.compass = new JU, this.skills = void 0, this.quests = void 0, this.dungeons = void 0, this.collections = void 0, this.questGraph = void 0, this.forge = void 0, this.smuggler = void 0, this.keepersChair = void 0, this.reachLog = void 0, this.lampLight = void 0, this.commandPacer = new nt.d, this.passage = void 0, this.tideCharts = void 0, this.regulars = void 0, this.hiddenWaters = void 0, this.autographs = void 0, this.portalTransit = void 0, this.dailyReward = void 0, this.mailbox = void 0, this.magmaward = void 0, this.glowtide = void 0, this.glowMeter = void 0, this.hushWait = void 0, this.dialogue = void 0, this.panels = void 0, this.setMenuOpen = void 0, this.hudSnapshot = null, this.openingPanel = null, this.publishHud = void 0, this.resolveItemName = UU => UU, this.close = () => {
+          for (const UU of this.panels) UU.close()
+        }, this.setMenuOpen = tU, this.publishHud = GU, this.portalTransit = new Sg(jU, sU), this.magmaward = new St(IU), this.glowtide = new yt(wU), this.glowMeter = new Ft(nU), this.hushWait = new At(bU), this.dailyReward = new kg(CU, (() => rU() || null !== this.portalTransit.getSnapshot() || null !== this.quests.getNotificationSnapshot() || null !== this.mailbox.getSnapshot()), (UU => {
+          this.quests.setNotificationsHeld(UU)
         }), (() => {
           null !== this.hudSnapshot && this.publishHud(this.getHudSnapshot())
-        }), jD, lD, LD, TD);
-        const FD = DD => {
-          this.panels.some((DD => DD.isOpen())) || (DD ? pD() : this.setMenuOpen(!1))
+        }), XU, vU, dU, HU);
+        const OU = UU => {
+          this.panels.some((UU => UU.isOpen())) || (UU ? pU() : this.setMenuOpen(!1))
         };
-        this.skills = new fc(iD, Date.now, (() => {
+        this.skills = new Pg(EU, Date.now, (() => {
           this.beforePanelOpen(this.skills)
-        }), CD, void 0, void 0, FD), this.quests = new Bc(fD, kD, CD, (() => {
+        }), RU, void 0, void 0, OU), this.quests = new Gg(PU, yU, RU, (() => {
           this.beforePanelOpen(this.quests)
-        }), void 0, void 0, FD, bD), this.dungeons = new tc(QD, CD, (() => {
+        }), void 0, void 0, OU, TU), this.dungeons = new Cg(qU, RU, (() => {
           this.beforePanelOpen(this.dungeons)
-        }), void 0, FD, YD), this.collections = new lc(wD, CD, (() => {
+        }), void 0, OU, FU), this.collections = new vg(KU, RU, (() => {
           this.beforePanelOpen(this.collections)
-        }), FD), this.map = new MD(SD, dD, CD, (() => {
+        }), OU), this.map = new uU(cU, kU, RU, (() => {
           this.beforePanelOpen(this.map)
-        }), FD), this.questGraph = new Ac(oD, CD, (() => {
+        }), OU), this.questGraph = new lg(QU, RU, (() => {
           this.beforePanelOpen(this.questGraph)
-        }), FD, WD, sD, RD), this.forge = new oI(vD, CD, (() => {
+        }), OU, iU, AU, sU), this.forge = new Qt(eU, RU, (() => {
           this.beforePanelOpen(this.forge)
-        }), FD, ED), this.smuggler = new gI(ND, CD, (() => {
+        }), OU, zU), this.smuggler = new ft(WU, RU, (() => {
           this.beforePanelOpen(this.smuggler)
-        }), FD, eD), this.lampLight = new lI(mD, CD, rD, this.commandPacer), this.keepersChair = new xI(gD, CD, (() => {
+        }), OU, MU), this.lampLight = new dt(mU, RU, NU, this.commandPacer), this.keepersChair = new ot(fU, RU, (() => {
           this.beforePanelOpen(this.keepersChair)
-        }), (DD => {
-          this.lampLight.onChairClosed(), FD(DD)
-        }), uD, Date.now, this.commandPacer), this.reachLog = new zI(XD, CD, (() => {
+        }), (UU => {
+          this.lampLight.onChairClosed(), OU(UU)
+        }), DU, Date.now, this.commandPacer), this.reachLog = new Xt(xU, RU, (() => {
           this.beforePanelOpen(this.reachLog)
-        }), FD, hD, this.commandPacer), this.passage = new PI(xD, CD, (() => {
+        }), OU, LU, this.commandPacer), this.passage = new wt(oU, RU, (() => {
           this.beforePanelOpen(this.passage)
-        }), FD), this.tideCharts = new FI(qD, CD, (() => {
+        }), OU), this.tideCharts = new Up(ZU, RU, (() => {
           this.beforePanelOpen(this.tideCharts)
-        }), FD), this.regulars = new pp(JD, CD, (() => {
+        }), OU), this.regulars = new Ep(aU, RU, (() => {
           this.beforePanelOpen(this.regulars)
-        }), (DD => {
-          this.regulars.takeReturnToReachLog() && !DD && null === this.openingPanel && this.reachLog.isOpen() && this.reachLog.close(), FD(DD)
-        })), this.hiddenWaters = new fp(KD), this.dialogue = new Qp(aD, CD, (() => {
+        }), (UU => {
+          this.regulars.takeReturnToReachLog() && !UU && null === this.openingPanel && this.reachLog.isOpen() && this.reachLog.close(), OU(UU)
+        })), this.hiddenWaters = new Tp(YU), this.dialogue = new Kp(BU, RU, (() => {
           this.beforePanelOpen(this.dialogue)
-        }), FD, AD), this.autographs = new tp(VD, (() => {
+        }), OU, lU), this.autographs = new Qp(VU, (() => {
           this.beforePanelOpen(this.autographs)
-        }), FD), this.mailbox = new Ec(ZD, (() => zD() || null !== this.portalTransit.getSnapshot() || null !== this.dailyReward.getSnapshot()), GD), this.quests.translateWithIcons = null !== cD && void 0 !== cD ? cD : null, this.skills.onLevelUp = DD => {
-          this.quests.notify(DD)
-        }, this.panels = [this.map, this.skills, this.quests, this.dungeons, this.collections, this.questGraph, this.forge, this.smuggler, this.keepersChair, this.reachLog, this.passage, this.tideCharts, this.regulars, this.dialogue, this.autographs], this.navigation = new pc(this.map, this.quests, this.compass, CD)
+        }), OU), this.mailbox = new zg(hU, (() => rU() || null !== this.portalTransit.getSnapshot() || null !== this.dailyReward.getSnapshot()), SU), this.quests.translateWithIcons = null !== gU && void 0 !== gU ? gU : null, this.skills.onLevelUp = UU => {
+          this.quests.notify(UU)
+        }, this.panels = [this.map, this.skills, this.quests, this.dungeons, this.collections, this.questGraph, this.forge, this.smuggler, this.keepersChair, this.reachLog, this.passage, this.tideCharts, this.regulars, this.dialogue, this.autographs], this.navigation = new pg(this.map, this.quests, this.compass, RU)
       }
       getHudSnapshot() {
-        const DD = this.hudSnapshot,
-          CD = this.dailyReward.getHeldCoins();
-        return null === DD || CD <= 0 || !("hudPurseCoins" in DD) ? DD : {
-          ...DD,
-          hudPurseCoins: Math.max(0, DD.hudPurseCoins - CD)
+        const UU = this.hudSnapshot,
+          RU = this.dailyReward.getHeldCoins();
+        return null === UU || RU <= 0 || !("hudPurseCoins" in UU) ? UU : {
+          ...UU,
+          hudPurseCoins: Math.max(0, UU.hudPurseCoins - RU)
         }
       }
-      receiveHud(DD) {
-        this.hudSnapshot = DD, this.publishHud(this.getHudSnapshot())
+      receiveHud(UU) {
+        this.hudSnapshot = UU, this.publishHud(this.getHudSnapshot())
       }
-      beforePanelOpen(DD) {
+      beforePanelOpen(UU) {
         this.setMenuOpen(!0);
-        const CD = DD === this.regulars && this.regulars.isOverReachLog();
-        this.openingPanel = DD;
-        for (const cD of this.panels) cD === DD || CD && cD === this.reachLog || cD.close();
+        const RU = UU === this.regulars && this.regulars.isOverReachLog();
+        this.openingPanel = UU;
+        for (const gU of this.panels) gU === UU || RU && gU === this.reachLog || gU.close();
         this.openingPanel = null
       }
-      setTranslator(DD, CD, cD) {
-        let ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : CD => this.resolveItemName(CD, DD);
-        this.quests.translateWithIcons = null !== cD && void 0 !== cD ? cD : null, this.navigation.setTranslator(DD, CD), this.lampLight.setTranslator(DD, CD), this.mailbox.setItemName(ID);
-        for (const pD of this.panels) pD.setTranslator(DD, CD, ID)
+      setTranslator(UU, RU, gU) {
+        let tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : RU => this.resolveItemName(RU, UU);
+        this.quests.translateWithIcons = null !== gU && void 0 !== gU ? gU : null, this.navigation.setTranslator(UU, RU), this.lampLight.setTranslator(UU, RU), this.mailbox.setItemName(tU);
+        for (const pU of this.panels) pU.setTranslator(UU, RU, tU)
       }
       dispose() {
         this.navigation.dispose(), this.compass.dispose(), this.portalTransit.dispose(), this.dailyReward.dispose(), this.mailbox.dispose(), this.magmaward.dispose(), this.glowtide.dispose(), this.glowMeter.dispose(), this.hushWait.dispose(), this.lampLight.dispose(), this.commandPacer.dispose();
-        for (const DD of this.panels) DD.dispose()
+        for (const UU of this.panels) UU.dispose()
       }
     }
-    var gp = cD(1049),
-      Xp = cD.n(gp),
-      mp = cD(16),
-      np = cD(35994),
-      Op = cD(3200),
-      Pp = cD(1893),
-      Hp = cD(1872),
-      Up = cD(9065),
-      xp = cD(1192),
-      qp = cD(1440),
-      Jp = cD(1093);
+    var mp = gU(1037),
+      Ip = gU.n(mp),
+      Jp = gU(21),
+      wp = gU(36187),
+      np = gU(3108),
+      bp = gU(1790),
+      op = gU(1777),
+      Zp = gU(9012),
+      ap = gU(1181),
+      Yp = gU(1410),
+      Bp = gU(1090);
 
-    function Kp(DD) {
+    function Vp(UU) {
       let {
-        controller: CD,
-        minimap: cD,
-        children: ID
-      } = DD;
-      const iD = (0, qp.g)(Zp, CD.getHudSnapshot()),
-        [fD, bD] = (0, HD.useState)(CD.skills.getSnapshot().overallLevel);
-      (0, qp.f)(ic, (DD => {
-        bD(DD.overallLevel)
+        controller: RU,
+        minimap: gU,
+        children: tU
+      } = UU;
+      const EU = (0, Yp.h)(ep, RU.getHudSnapshot()),
+        [PU, TU] = (0, nU.useState)(RU.skills.getSnapshot().overallLevel);
+      (0, Yp.e)(Eg, (UU => {
+        TU(UU.overallLevel)
       }));
-      const QD = (0, HD.useRef)(null);
-      (0, qp.f)(kc, (DD => {
-        ! function(DD, CD) {
-          if (null === DD || "function" !== typeof DD.animate) return;
-          const cD = CD ? 1.35 : 1.15;
-          DD.animate([{
+      const qU = (0, nU.useRef)(null);
+      (0, Yp.e)(yg, (UU => {
+        ! function(UU, RU) {
+          if (null === UU || "function" !== typeof UU.animate) return;
+          const gU = RU ? 1.35 : 1.15;
+          UU.animate([{
             transform: "scale(1)"
           }, {
-            transform: `scale(${cD})`
+            transform: `scale(${gU})`
           }, {
             transform: "scale(1)"
           }], {
-            duration: CD ? 320 : 160,
+            duration: RU ? 320 : 160,
             easing: "ease-out"
-          }), DD.classList.toggle("Receiving", !CD), CD && (DD.classList.remove("Shine"), DD.offsetWidth, DD.classList.add("Shine"))
-        }(QD.current, DD)
+          }), UU.classList.toggle("Receiving", !RU), RU && (UU.classList.remove("Shine"), UU.offsetWidth, UU.classList.add("Shine"))
+        }(qU.current, UU)
       }));
       const {
-        t: wD
-      } = (0, xp.F)(), {
-        isTouchScreen: SD
-      } = (0, mp.o)(["isTouchScreen"]), [BD, yD] = (0, HD.useState)(null);
-      return (0, Op.j)(BD, ".SkyblockRightHud"), null !== iD || cD ? (0, Jp.jsx)(np.e, {
+        t: KU
+      } = (0, ap.B)(), {
+        isTouchScreen: cU
+      } = (0, Jp.l)(["isTouchScreen"]), [GU, jU] = (0, nU.useState)(null);
+      return (0, np.g)(GU, ".SkyblockRightHud"), null !== EU || gU ? (0, Bp.jsx)(wp.e, {
         placement: "topRight",
-        children: (0, Jp.jsxs)("div", {
-          className: Xp()("SkyblockRightHud", {
-            TouchScreen: SD
+        children: (0, Bp.jsxs)("div", {
+          className: Ip()("SkyblockRightHud", {
+            TouchScreen: cU
           }),
-          children: [cD, null !== iD && (0, Jp.jsxs)("div", {
-            ref: yD,
+          children: [gU, null !== EU && (0, Bp.jsxs)("div", {
+            ref: jU,
             className: "SkyblockRightHudCard",
-            children: ["hudHelpText" in iD ? (0, Jp.jsx)("div", {
+            children: ["hudHelpText" in EU ? (0, Bp.jsx)("div", {
               className: "SkyblockHudHelp",
-              children: iD.hudHelpText
-            }) : (0, Jp.jsxs)(Jp.Fragment, {
-              children: [(0, Jp.jsxs)("div", {
+              children: EU.hudHelpText
+            }) : (0, Bp.jsxs)(Bp.Fragment, {
+              children: [(0, Bp.jsxs)("div", {
                 className: "SkyblockHudStatus",
-                children: [(0, Jp.jsxs)("span", {
+                children: [(0, Bp.jsxs)("span", {
                   className: "SkyblockHudIdentity",
-                  children: [(0, Jp.jsx)("strong", {
+                  children: [(0, Bp.jsx)("strong", {
                     style: {
-                      color: pD.J.cyanUiText
+                      color: pU.N.cyanUiText
                     },
-                    children: wD(iD.hudZoneNameKey)
-                  }), null !== fD && (0, Jp.jsx)("span", {
+                    children: KU(EU.hudZoneNameKey)
+                  }), null !== PU && (0, Bp.jsx)("span", {
                     style: {
-                      color: pD.J.goldUiText
+                      color: pU.N.goldUiText
                     },
-                    children: wD("skyblockGame:level", {
-                      level: (0, Up.g)(fD)
+                    children: KU("skyblockGame:level", {
+                      level: (0, Zp.d)(PU)
                     })
                   })]
-                }), (0, Jp.jsxs)("span", {
+                }), (0, Bp.jsxs)("span", {
                   className: "SkyblockHudCoins",
-                  ref: QD,
-                  children: [(0, Jp.jsx)("span", {
+                  ref: qU,
+                  children: [(0, Bp.jsx)("span", {
                     "aria-hidden": "true",
-                    children: (0, Jp.jsx)(Pp.d, {
+                    children: (0, Bp.jsx)(bp.c, {
                       itemName: "Gold Coin",
                       amount: 0
                     })
-                  }), (0, Up.g)(iD.hudPurseCoins)]
+                  }), (0, Zp.d)(EU.hudPurseCoins)]
                 })]
-              }), iD.hudClockText.length > 0 && (0, Jp.jsx)("div", {
+              }), EU.hudClockText.length > 0 && (0, Bp.jsx)("div", {
                 className: "SkyblockHudClock",
-                children: (0, Jp.jsx)(Hp.c, {
-                  text: iD.hudClockText
+                children: (0, Bp.jsx)(op.e, {
+                  text: EU.hudClockText
                 })
               })]
-            }), ID, "hudZoneNameKey" in iD && (0, Jp.jsx)("div", {
+            }), tU, "hudZoneNameKey" in EU && (0, Bp.jsx)("div", {
               className: "SkyblockHudAddress",
               children: "www.bloxd.io"
             })]
@@ -4939,817 +4939,817 @@ export const modules = {
       }) : null
     }
 
-    function ap(DD) {
+    function rp(UU) {
       let {
-        icon: CD
-      } = DD;
-      const cD = (0, HD.useCallback)((DD => {
-        null === DD || void 0 === DD || DD.replaceChildren(sC(CD))
-      }), [CD]);
-      return (0, Jp.jsx)("span", {
+        icon: RU
+      } = UU;
+      const gU = (0, nU.useCallback)((UU => {
+        null === UU || void 0 === UU || UU.replaceChildren(AR(RU))
+      }), [RU]);
+      return (0, Bp.jsx)("span", {
         className: "SkyblockMapIconSlot",
-        ref: cD
+        ref: gU
       })
     }
 
-    function Vp(DD) {
+    function Xp(UU) {
       let {
-        controller: CD
-      } = DD;
+        controller: RU
+      } = UU;
       const {
-        t: cD
-      } = (0, xp.F)();
-      return (0, Jp.jsx)("div", {
+        t: gU
+      } = (0, ap.B)();
+      return (0, Bp.jsx)("div", {
         className: "SkyblockMapPlayer",
-        ref: CD.display.mountPlayer,
-        title: cD("skyblockGame:mapYouAreHere"),
-        children: (0, Jp.jsx)(ap, {
+        ref: RU.display.mountPlayer,
+        title: gU("skyblockGame:mapYouAreHere"),
+        children: (0, Bp.jsx)(rp, {
           icon: "player"
         })
       })
     }
-    const zp = cD(37926),
-      jp = Object.fromEntries(zp.keys().map((DD => [DD.replace(/^\.\/(.*)\.png$/, "$1"), zp(DD)])));
+    const vp = gU(38101),
+      dp = Object.fromEntries(vp.keys().map((UU => [UU.replace(/^\.\/(.*)\.png$/, "$1"), vp(UU)])));
 
-    function lp(DD, CD) {
-      var cD;
-      return null !== (cD = jp[DD]) && void 0 !== cD ? cD : jp[CD]
+    function Hp(UU, RU) {
+      var gU;
+      return null !== (gU = dp[UU]) && void 0 !== gU ? gU : dp[RU]
     }
 
-    function Lp(DD) {
+    function Sp(UU) {
       let {
-        imageKey: CD,
-        fallbackImageKey: cD,
-        geometryKey: ID,
-        alt: pD,
-        className: iD
-      } = DD;
-      const [fD, bD] = (0, HD.useState)((() => function(DD, CD) {
+        imageKey: RU,
+        fallbackImageKey: gU,
+        geometryKey: tU,
+        alt: pU,
+        className: EU
+      } = UU;
+      const [PU, TU] = (0, nU.useState)((() => function(UU, RU) {
         return [{
           id: 0,
-          imageKey: DD,
-          geometryKey: CD,
+          imageKey: UU,
+          geometryKey: RU,
           phase: "shown"
         }]
-      }(CD, ID))), QD = function(DD, CD, cD) {
-        const ID = DD[DD.length - 1];
-        if (ID.imageKey === CD && ID.geometryKey === cD) return DD;
-        const pD = {
-          id: ID.id + 1,
-          imageKey: CD,
-          geometryKey: cD,
+      }(RU, tU))), qU = function(UU, RU, gU) {
+        const tU = UU[UU.length - 1];
+        if (tU.imageKey === RU && tU.geometryKey === gU) return UU;
+        const pU = {
+          id: tU.id + 1,
+          imageKey: RU,
+          geometryKey: gU,
           phase: "entering"
         };
-        return ID.geometryKey === cD ? [{
-          ...ID,
+        return tU.geometryKey === gU ? [{
+          ...tU,
           phase: "leaving"
-        }, pD] : [pD]
-      }(fD, CD, ID);
-      return QD !== fD && bD(QD), (0, Jp.jsx)(Jp.Fragment, {
-        children: QD.map((DD => (0, Jp.jsx)("img", {
-          className: Xp()("SkyblockMapTerrainImage", iD, {
-            Entering: "entering" === DD.phase,
-            Leaving: "leaving" === DD.phase
+        }, pU] : [pU]
+      }(PU, RU, tU);
+      return qU !== PU && TU(qU), (0, Bp.jsx)(Bp.Fragment, {
+        children: qU.map((UU => (0, Bp.jsx)("img", {
+          className: Ip()("SkyblockMapTerrainImage", EU, {
+            Entering: "entering" === UU.phase,
+            Leaving: "leaving" === UU.phase
           }),
-          src: lp(DD.imageKey, cD),
-          alt: "leaving" === DD.phase ? "" : pD,
+          src: Hp(UU.imageKey, gU),
+          alt: "leaving" === UU.phase ? "" : pU,
           onAnimationEnd: () => {
-            bD((CD => function(DD, CD) {
-              return DD.flatMap((DD => DD.id !== CD ? [DD] : "leaving" === DD.phase ? [] : [{
-                ...DD,
+            TU((RU => function(UU, RU) {
+              return UU.flatMap((UU => UU.id !== RU ? [UU] : "leaving" === UU.phase ? [] : [{
+                ...UU,
                 phase: "shown"
               }]))
-            }(CD, DD.id)))
+            }(RU, UU.id)))
           }
-        }, DD.id)))
+        }, UU.id)))
       })
     }
-    var Tp = cD(4325),
-      Gp = cD(1442);
+    var sp = gU(4195),
+      yp = gU(1412);
 
-    function Rp(DD) {
-      if ("Tab" !== DD.key) return;
-      const CD = Array.from(DD.currentTarget.querySelectorAll('[role="button"][tabindex="0"], button:not(:disabled)')),
-        cD = CD.indexOf(document.activeElement);
-      var ID;
-      if (DD.shiftKey && cD <= 0) DD.preventDefault(), null === (ID = CD.at(-1)) || void 0 === ID || ID.focus();
-      else if (!DD.shiftKey && (-1 === cD || cD === CD.length - 1)) {
-        var pD;
-        DD.preventDefault(), null === (pD = CD[0]) || void 0 === pD || pD.focus()
+    function kp(UU) {
+      if ("Tab" !== UU.key) return;
+      const RU = Array.from(UU.currentTarget.querySelectorAll('[role="button"][tabindex="0"], button:not(:disabled)')),
+        gU = RU.indexOf(document.activeElement);
+      var tU;
+      if (UU.shiftKey && gU <= 0) UU.preventDefault(), null === (tU = RU.at(-1)) || void 0 === tU || tU.focus();
+      else if (!UU.shiftKey && (-1 === gU || gU === RU.length - 1)) {
+        var pU;
+        UU.preventDefault(), null === (pU = RU[0]) || void 0 === pU || pU.focus()
       }
     }
 
-    function kp() {
-      const DD = (0, HD.useRef)(null);
-      return (0, HD.useCallback)((CD => {
-        var cD;
-        CD ? (DD.current = document.activeElement, CD.focus()) : null === (cD = DD.current) || void 0 === cD || cD.focus()
+    function Fp() {
+      const UU = (0, nU.useRef)(null);
+      return (0, nU.useCallback)((RU => {
+        var gU;
+        RU ? (UU.current = document.activeElement, RU.focus()) : null === (gU = UU.current) || void 0 === gU || gU.focus()
       }), [])
     }
 
-    function dp(DD) {
+    function ip(UU) {
       let {
-        percent: CD,
-        label: cD,
-        levelUpToken: ID,
-        colour: pD
-      } = DD;
-      return (0, Jp.jsxs)("div", {
+        percent: RU,
+        label: gU,
+        levelUpToken: tU,
+        colour: pU
+      } = UU;
+      return (0, Bp.jsxs)("div", {
         className: "SkillProgressBar",
         role: "progressbar",
-        "aria-label": cD,
+        "aria-label": gU,
         "aria-valuemin": 0,
         "aria-valuemax": 100,
-        "aria-valuenow": CD,
-        "aria-valuetext": cD,
-        children: [(0, Jp.jsx)("div", {
+        "aria-valuenow": RU,
+        "aria-valuetext": gU,
+        children: [(0, Bp.jsx)("div", {
           className: "SkillProgressBarFill",
           style: {
-            transform: `scaleX(${CD/100})`
+            transform: `scaleX(${RU/100})`
           }
-        }), null !== ID && void 0 !== ID && (0, Jp.jsx)("div", {
+        }), null !== tU && void 0 !== tU && (0, Bp.jsx)("div", {
           className: "SkillProgressBarLevelUp",
           style: {
-            "--skill-colour": pD
+            "--skill-colour": pU
           }
-        }, ID)]
+        }, tU)]
       })
     }
 
-    function Yp(DD) {
+    function Ap(UU) {
       let {
-        mount: CD
-      } = DD;
-      return (0, Jp.jsx)("div", {
+        mount: RU
+      } = UU;
+      return (0, Bp.jsx)("div", {
         className: "SkyblockSearchArea",
-        ref: CD,
+        ref: RU,
         hidden: !0,
-        children: (0, Jp.jsxs)("svg", {
+        children: (0, Bp.jsxs)("svg", {
           viewBox: "0 0 100 100",
           preserveAspectRatio: "none",
-          children: [(0, Jp.jsx)("path", {
+          children: [(0, Bp.jsx)("path", {
             className: "SkyblockSearchAreaShadow"
-          }), (0, Jp.jsx)("path", {
+          }), (0, Bp.jsx)("path", {
             className: "SkyblockSearchAreaDashes"
           })]
         })
       })
     }
 
-    function Wp(DD, CD, cD, ID) {
-      (0, HD.useLayoutEffect)((() => {
-        const pD = DD.current;
-        if (!cD || null === CD || void 0 === CD || !CD.local || !pD) return;
-        const iD = Array.from(pD.querySelectorAll(".SkyblockMapNode")),
-          fD = [...CD.points, ...CD.portals],
-          bD = () => {
-            const DD = pD.clientWidth,
-              cD = pD.clientHeight,
-              bD = iD.map(((pD, iD) => {
-                const bD = fD[iD];
+    function zp(UU, RU, gU, tU) {
+      (0, nU.useLayoutEffect)((() => {
+        const pU = UU.current;
+        if (!gU || null === RU || void 0 === RU || !RU.local || !pU) return;
+        const EU = Array.from(pU.querySelectorAll(".SkyblockMapNode")),
+          PU = [...RU.points, ...RU.portals],
+          TU = () => {
+            const UU = pU.clientWidth,
+              gU = pU.clientHeight,
+              TU = EU.map(((pU, EU) => {
+                const TU = PU[EU];
                 return {
-                  id: bD.id,
-                  portal: iD >= CD.points.length,
-                  x: bD.position[0] * DD / 100,
-                  y: bD.position[1] * cD / 100,
-                  width: pD.offsetWidth / ID,
-                  height: pD.offsetHeight / ID
+                  id: TU.id,
+                  portal: EU >= RU.points.length,
+                  x: TU.position[0] * UU / 100,
+                  y: TU.position[1] * gU / 100,
+                  width: pU.offsetWidth / tU,
+                  height: pU.offsetHeight / tU
                 }
               })),
-              QD = new Map(fD.map(((DD, CD) => [DD.id, iD[CD]])));
-            for (const CD of function(DD, CD, cD) {
-                const ID = [],
-                  pD = [...DD].sort(((DD, CD) => Number(CD.portal) - Number(DD.portal) || DD.id.localeCompare(CD.id)));
-                for (const iD of pD) {
-                  const DD = DD => Math.max(iD.width / 2, Math.min(CD - iD.width / 2, DD)),
-                    pD = DD => Math.max(iD.height / 2, Math.min(cD - iD.height / 2, DD)),
-                    fD = [DD(iD.x)],
-                    bD = [pD(iD.y)];
-                  for (const CD of ID) fD.push(DD(CD.x - (CD.width + iD.width) / 2 - 4), DD(CD.x + (CD.width + iD.width) / 2 + 4)), bD.push(pD(CD.y - (CD.height + iD.height) / 2 - 4), pD(CD.y + (CD.height + iD.height) / 2 + 4));
-                  let QD = {
-                      ...iD,
-                      x: fD[0],
-                      y: bD[0]
+              qU = new Map(PU.map(((UU, RU) => [UU.id, EU[RU]])));
+            for (const RU of function(UU, RU, gU) {
+                const tU = [],
+                  pU = [...UU].sort(((UU, RU) => Number(RU.portal) - Number(UU.portal) || UU.id.localeCompare(RU.id)));
+                for (const EU of pU) {
+                  const UU = UU => Math.max(EU.width / 2, Math.min(RU - EU.width / 2, UU)),
+                    pU = UU => Math.max(EU.height / 2, Math.min(gU - EU.height / 2, UU)),
+                    PU = [UU(EU.x)],
+                    TU = [pU(EU.y)];
+                  for (const RU of tU) PU.push(UU(RU.x - (RU.width + EU.width) / 2 - 4), UU(RU.x + (RU.width + EU.width) / 2 + 4)), TU.push(pU(RU.y - (RU.height + EU.height) / 2 - 4), pU(RU.y + (RU.height + EU.height) / 2 + 4));
+                  let qU = {
+                      ...EU,
+                      x: PU[0],
+                      y: TU[0]
                     },
-                    wD = 1 / 0,
-                    SD = 1 / 0;
-                  for (const CD of new Set(fD))
-                    for (const DD of new Set(bD)) {
-                      let cD = 0;
-                      for (const fD of ID) cD += Math.max(0, (iD.width + fD.width) / 2 + 4 - Math.abs(CD - fD.x)) * Math.max(0, (iD.height + fD.height) / 2 + 4 - Math.abs(DD - fD.y));
-                      const pD = (CD - iD.x) ** 2 + (DD - iD.y) ** 2;
-                      (cD < wD || cD === wD && pD < SD) && (QD = {
-                        ...iD,
-                        x: CD,
-                        y: DD
-                      }, wD = cD, SD = pD)
+                    KU = 1 / 0,
+                    cU = 1 / 0;
+                  for (const RU of new Set(PU))
+                    for (const UU of new Set(TU)) {
+                      let gU = 0;
+                      for (const PU of tU) gU += Math.max(0, (EU.width + PU.width) / 2 + 4 - Math.abs(RU - PU.x)) * Math.max(0, (EU.height + PU.height) / 2 + 4 - Math.abs(UU - PU.y));
+                      const pU = (RU - EU.x) ** 2 + (UU - EU.y) ** 2;
+                      (gU < KU || gU === KU && pU < cU) && (qU = {
+                        ...EU,
+                        x: RU,
+                        y: UU
+                      }, KU = gU, cU = pU)
                     }
-                  ID.push(QD)
+                  tU.push(qU)
                 }
-                return ID
-              }(bD, DD, cD)) {
-              const DD = QD.get(CD.id);
-              DD.style.left = `${CD.x}px`, DD.style.top = `${CD.y}px`
+                return tU
+              }(TU, UU, gU)) {
+              const UU = qU.get(RU.id);
+              UU.style.left = `${RU.x}px`, UU.style.top = `${RU.y}px`
             }
           };
-        bD();
-        const QD = new ResizeObserver(bD);
-        QD.observe(pD);
-        for (const DD of iD) QD.observe(DD);
+        TU();
+        const qU = new ResizeObserver(TU);
+        qU.observe(pU);
+        for (const UU of EU) qU.observe(UU);
         return () => {
-          QD.disconnect()
+          qU.disconnect()
         }
-      }), [DD, CD, cD, ID])
+      }), [UU, RU, gU, tU])
     }
-    const sp = {
+    const Mp = {
         zoom: 1,
         x: 0,
         y: 0
       },
-      Ep = {
+      Dp = {
         x0: 0,
         y0: 0,
         x1: 1,
         y1: 1
       };
 
-    function ep(DD, CD, cD) {
-      return Math.min(cD, Math.max(CD, DD))
+    function Lp(UU, RU, gU) {
+      return Math.min(gU, Math.max(RU, UU))
     }
 
-    function hp(DD, CD, cD) {
-      const ID = Math.min(1, cD * CD / DD),
-        pD = Math.min(1, DD / (cD * CD));
+    function Np(UU, RU, gU) {
+      const tU = Math.min(1, gU * RU / UU),
+        pU = Math.min(1, UU / (gU * RU));
       return {
-        x0: (1 - ID) / 2,
-        y0: (1 - pD) / 2,
-        x1: (1 + ID) / 2,
-        y1: (1 + pD) / 2
+        x0: (1 - tU) / 2,
+        y0: (1 - pU) / 2,
+        x1: (1 + tU) / 2,
+        y1: (1 + pU) / 2
       }
     }
 
-    function rp(DD, CD, cD, ID) {
-      const pD = CD * (ID - cD);
-      if (pD <= 1) return .5 - CD * (cD + ID) / 2;
-      const iD = .45 * Math.min(1, pD - 1);
-      return ep(DD, 1 - CD * ID - iD, iD - CD * cD)
+    function lp(UU, RU, gU, tU) {
+      const pU = RU * (tU - gU);
+      if (pU <= 1) return .5 - RU * (gU + tU) / 2;
+      const EU = .45 * Math.min(1, pU - 1);
+      return Lp(UU, 1 - RU * tU - EU, EU - RU * gU)
     }
 
-    function Ap(DD, CD) {
-      const cD = ep(DD.zoom, 1, 12);
+    function Op(UU, RU) {
+      const gU = Lp(UU.zoom, 1, 12);
       return {
-        zoom: cD,
-        x: rp(DD.x, cD, CD.x0, CD.x1),
-        y: rp(DD.y, cD, CD.y0, CD.y1)
+        zoom: gU,
+        x: lp(UU.x, gU, RU.x0, RU.x1),
+        y: lp(UU.y, gU, RU.y0, RU.y1)
       }
     }
 
-    function Fp(DD, CD, cD, ID) {
-      let pD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Ep;
-      const iD = ep(DD.zoom * CD, 1, 12),
-        fD = iD / DD.zoom;
-      return Ap({
-        zoom: iD,
-        x: cD - (cD - DD.x) * fD,
-        y: ID - (ID - DD.y) * fD
-      }, pD)
+    function UE(UU, RU, gU, tU) {
+      let pU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Dp;
+      const EU = Lp(UU.zoom * RU, 1, 12),
+        PU = EU / UU.zoom;
+      return Op({
+        zoom: EU,
+        x: gU - (gU - UU.x) * PU,
+        y: tU - (tU - UU.y) * PU
+      }, pU)
     }
 
-    function Di(DD, CD, cD, ID) {
-      const [pD, iD] = (0, HD.useState)(sp);
-      (0, HD.useEffect)((() => {
-        iD(sp)
-      }), [cD]), (0, HD.useEffect)((() => {
-        const cD = DD.current;
-        if (!CD || !cD) return;
-        const pD = () => hp(cD.clientWidth, cD.clientHeight, ID),
-          fD = DD => {
-            const CD = cD.getBoundingClientRect();
+    function RE(UU, RU, gU, tU) {
+      const [pU, EU] = (0, nU.useState)(Mp);
+      (0, nU.useEffect)((() => {
+        EU(Mp)
+      }), [gU]), (0, nU.useEffect)((() => {
+        const gU = UU.current;
+        if (!RU || !gU) return;
+        const pU = () => Np(gU.clientWidth, gU.clientHeight, tU),
+          PU = UU => {
+            const RU = gU.getBoundingClientRect();
             return {
-              x: (DD.clientX - CD.left) / CD.width,
-              y: (DD.clientY - CD.top) / CD.height
+              x: (UU.clientX - RU.left) / RU.width,
+              y: (UU.clientY - RU.top) / RU.height
             }
           },
-          bD = new Map;
-        let QD = {
+          TU = new Map;
+        let qU = {
             x: 0,
             y: 0
           },
-          wD = !1,
-          SD = 0;
-        const BD = DD => {
-            DD.preventDefault();
-            const CD = DD.deltaMode === WheelEvent.DOM_DELTA_LINE ? 16 * DD.deltaY : DD.deltaY,
-              cD = fD(DD);
-            iD((DD => Fp(DD, Math.exp(.0015 * -CD), cD.x, cD.y, pD())))
+          KU = !1,
+          cU = 0;
+        const GU = UU => {
+            UU.preventDefault();
+            const RU = UU.deltaMode === WheelEvent.DOM_DELTA_LINE ? 16 * UU.deltaY : UU.deltaY,
+              gU = PU(UU);
+            EU((UU => UE(UU, Math.exp(.0015 * -RU), gU.x, gU.y, pU())))
           },
-          yD = DD => {
-            "mouse" === DD.pointerType && 0 !== DD.button || (bD.set(DD.pointerId, fD(DD)), 1 === bD.size && (QD = {
-              x: DD.clientX,
-              y: DD.clientY
-            }, wD = !1), SD = 0)
+          jU = UU => {
+            "mouse" === UU.pointerType && 0 !== UU.button || (TU.set(UU.pointerId, PU(UU)), 1 === TU.size && (qU = {
+              x: UU.clientX,
+              y: UU.clientY
+            }, KU = !1), cU = 0)
           },
-          MD = DD => {
-            const CD = bD.get(DD.pointerId);
-            if (!CD) return;
-            const ID = fD(DD);
-            if (bD.set(DD.pointerId, ID), 2 === bD.size) {
-              const [DD, CD] = [...bD.values()], cD = Math.hypot(DD.x - CD.x, DD.y - CD.y);
-              if (SD > 0) {
-                const ID = cD / SD;
-                iD((cD => Fp(cD, ID, (DD.x + CD.x) / 2, (DD.y + CD.y) / 2, pD())))
+          uU = UU => {
+            const RU = TU.get(UU.pointerId);
+            if (!RU) return;
+            const tU = PU(UU);
+            if (TU.set(UU.pointerId, tU), 2 === TU.size) {
+              const [UU, RU] = [...TU.values()], gU = Math.hypot(UU.x - RU.x, UU.y - RU.y);
+              if (cU > 0) {
+                const tU = gU / cU;
+                EU((gU => UE(gU, tU, (UU.x + RU.x) / 2, (UU.y + RU.y) / 2, pU())))
               }
-              return SD = cD, void(wD = !0)
-            }!wD && Math.hypot(DD.clientX - QD.x, DD.clientY - QD.y) < 4 || (wD || (wD = !0, cD.setPointerCapture(DD.pointerId)), iD((DD => function(DD, CD, cD) {
-              let ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Ep;
-              return Ap({
-                zoom: DD.zoom,
-                x: DD.x + CD,
-                y: DD.y + cD
-              }, ID)
-            }(DD, ID.x - CD.x, ID.y - CD.y, pD()))))
+              return cU = gU, void(KU = !0)
+            }!KU && Math.hypot(UU.clientX - qU.x, UU.clientY - qU.y) < 4 || (KU || (KU = !0, gU.setPointerCapture(UU.pointerId)), EU((UU => function(UU, RU, gU) {
+              let tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Dp;
+              return Op({
+                zoom: UU.zoom,
+                x: UU.x + RU,
+                y: UU.y + gU
+              }, tU)
+            }(UU, tU.x - RU.x, tU.y - RU.y, pU()))))
           },
-          tD = DD => {
-            bD.delete(DD.pointerId), SD = 0
+          CU = UU => {
+            TU.delete(UU.pointerId), cU = 0
           },
-          ZD = DD => {
-            wD && (DD.stopPropagation(), DD.preventDefault(), wD = !1)
+          hU = UU => {
+            KU && (UU.stopPropagation(), UU.preventDefault(), KU = !1)
           },
-          oD = new ResizeObserver((() => {
-            iD((DD => Ap(DD, pD())))
+          QU = new ResizeObserver((() => {
+            EU((UU => Op(UU, pU())))
           }));
-        return oD.observe(cD), cD.addEventListener("wheel", BD, {
+        return QU.observe(gU), gU.addEventListener("wheel", GU, {
           passive: !1
-        }), cD.addEventListener("pointerdown", yD), cD.addEventListener("pointermove", MD), cD.addEventListener("pointerup", tD), cD.addEventListener("pointercancel", tD), cD.addEventListener("click", ZD, !0), () => {
-          oD.disconnect(), cD.removeEventListener("wheel", BD), cD.removeEventListener("pointerdown", yD), cD.removeEventListener("pointermove", MD), cD.removeEventListener("pointerup", tD), cD.removeEventListener("pointercancel", tD), cD.removeEventListener("click", ZD, !0)
+        }), gU.addEventListener("pointerdown", jU), gU.addEventListener("pointermove", uU), gU.addEventListener("pointerup", CU), gU.addEventListener("pointercancel", CU), gU.addEventListener("click", hU, !0), () => {
+          QU.disconnect(), gU.removeEventListener("wheel", GU), gU.removeEventListener("pointerdown", jU), gU.removeEventListener("pointermove", uU), gU.removeEventListener("pointerup", CU), gU.removeEventListener("pointercancel", CU), gU.removeEventListener("click", hU, !0)
         }
-      }), [DD, CD, cD, ID]);
+      }), [UU, RU, gU, tU]);
       return {
-        view: pD,
-        zoomBy: CD => {
-          const cD = DD.current;
-          cD && iD((DD => Fp(DD, CD, .5, .5, hp(cD.clientWidth, cD.clientHeight, ID))))
+        view: pU,
+        zoomBy: RU => {
+          const gU = UU.current;
+          gU && EU((UU => UE(UU, RU, .5, .5, Np(gU.clientWidth, gU.clientHeight, tU))))
         }
       }
     }
 
-    function Ci(DD) {
-      var CD, cD, ID, pD;
+    function gE(UU) {
+      var RU, gU, tU, pU;
       let {
-        controller: iD,
-        navigation: fD
-      } = DD;
-      const bD = (0, qp.g)(yD, iD.getSnapshot()),
+        controller: EU,
+        navigation: PU
+      } = UU;
+      const TU = (0, Yp.h)(jU, EU.getSnapshot()),
         {
-          t: QD
-        } = (0, xp.F)(),
-        wD = kp(),
-        SD = bD.presentation,
-        BD = (0, HD.useRef)(null),
-        MD = (0, HD.useRef)(null),
-        tD = Boolean(bD.open && (null === SD || void 0 === SD ? void 0 : SD.local) && SD.background),
-        ZD = Di(BD, tD, `${bD.open}|${bD.tab}|${null===SD||void 0===SD||null===(CD=SD.background)||void 0===CD?void 0:CD.geometryKey}`, null !== (cD = null === SD || void 0 === SD || null === (ID = SD.background) || void 0 === ID ? void 0 : ID.ratio) && void 0 !== cD ? cD : 2);
-      if (Wp(MD, SD, bD.open, ZD.view.zoom), !SD || !bD.open) return null;
-      const oD = SD.local ? SD.background : null,
-        vD = {
-          "--map-ratio": String(null !== (pD = null === oD || void 0 === oD ? void 0 : oD.ratio) && void 0 !== pD ? pD : 2),
-          backgroundColor: null === oD || void 0 === oD ? void 0 : oD.colour
+          t: qU
+        } = (0, ap.B)(),
+        KU = Fp(),
+        cU = TU.presentation,
+        GU = (0, nU.useRef)(null),
+        uU = (0, nU.useRef)(null),
+        CU = Boolean(TU.open && (null === cU || void 0 === cU ? void 0 : cU.local) && cU.background),
+        hU = RE(GU, CU, `${TU.open}|${TU.tab}|${null===cU||void 0===cU||null===(RU=cU.background)||void 0===RU?void 0:RU.geometryKey}`, null !== (gU = null === cU || void 0 === cU || null === (tU = cU.background) || void 0 === tU ? void 0 : tU.ratio) && void 0 !== gU ? gU : 2);
+      if (zp(uU, cU, TU.open, hU.view.zoom), !cU || !TU.open) return null;
+      const QU = cU.local ? cU.background : null,
+        eU = {
+          "--map-ratio": String(null !== (pU = null === QU || void 0 === QU ? void 0 : QU.ratio) && void 0 !== pU ? pU : 2),
+          backgroundColor: null === QU || void 0 === QU ? void 0 : QU.colour
         },
-        ND = {
-          "--map-zoom": String(ZD.view.zoom),
-          transform: `translate(${100*ZD.view.x}%, ${100*ZD.view.y}%) scale(${ZD.view.zoom})`
+        WU = {
+          "--map-zoom": String(hU.view.zoom),
+          transform: `translate(${100*hU.view.x}%, ${100*hU.view.y}%) scale(${hU.view.zoom})`
         };
-      return (0, Jp.jsx)(Tp.e, {
-        show: bD.open,
-        close: iD.dismiss,
+      return (0, Bp.jsx)(sp.d, {
+        show: TU.open,
+        close: EU.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, Jp.jsxs)("section", {
+        children: (0, Bp.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockMapPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockMapTitle",
           tabIndex: -1,
-          ref: wD,
-          onKeyDown: Rp,
-          children: [(0, Jp.jsxs)("header", {
+          ref: KU,
+          onKeyDown: kp,
+          children: [(0, Bp.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, Jp.jsxs)("div", {
+            children: [(0, Bp.jsxs)("div", {
               className: "SkyblockMapTitle",
-              children: [(0, Jp.jsx)("h2", {
+              children: [(0, Bp.jsx)("h2", {
                 id: "skyblockMapTitle",
-                children: QD("skyblockGame:map")
-              }), SD.minimap && (0, Jp.jsx)("p", {
-                children: SD.minimap.caption
+                children: qU("skyblockGame:map")
+              }), cU.minimap && (0, Bp.jsx)("p", {
+                children: cU.minimap.caption
               })]
-            }), (0, Jp.jsx)("div", {
+            }), (0, Bp.jsx)("div", {
               className: "SkyblockMapTabs",
               "data-pad-tabs": "1",
-              children: ["local", "world"].map((DD => (0, Jp.jsx)("button", {
+              children: ["local", "world"].map((UU => (0, Bp.jsx)("button", {
                 type: "button",
                 "data-pad-tab": !0,
-                "data-pad-selected": DD === bD.tab ? "true" : void 0,
-                className: Xp()({
-                  Selected: DD === bD.tab
+                "data-pad-selected": UU === TU.tab ? "true" : void 0,
+                className: Ip()({
+                  Selected: UU === TU.tab
                 }),
-                "aria-pressed": DD === bD.tab,
+                "aria-pressed": UU === TU.tab,
                 onClick: () => {
-                  iD.selectTab(DD)
+                  EU.selectTab(UU)
                 },
-                children: QD("local" === DD ? "skyblockGame:mapLocal" : "skyblockGame:mapWorld")
-              }, DD)))
-            }), (0, Jp.jsx)(Gp.l, {
+                children: qU("local" === UU ? "skyblockGame:mapLocal" : "skyblockGame:mapWorld")
+              }, UU)))
+            }), (0, Bp.jsx)(yp.h, {
               padIgnore: !0,
-              onClick: iD.dismiss
+              onClick: EU.dismiss
             })]
-          }), (0, Jp.jsx)("div", {
+          }), (0, Bp.jsx)("div", {
             className: "SkyblockMapBody",
-            children: (0, Jp.jsxs)("div", {
-              ref: BD,
-              className: Xp()("SkyblockMapCanvas", {
-                Local: SD.local,
-                Overview: !SD.local,
-                Zoomed: ZD.view.zoom > 1
+            children: (0, Bp.jsxs)("div", {
+              ref: GU,
+              className: Ip()("SkyblockMapCanvas", {
+                Local: cU.local,
+                Overview: !cU.local,
+                Zoomed: hU.view.zoom > 1
               }),
-              style: vD,
-              children: [(0, Jp.jsx)("div", {
+              style: eU,
+              children: [(0, Bp.jsx)("div", {
                 className: "SkyblockMapZoomLayer",
-                style: tD ? ND : void 0,
-                children: (0, Jp.jsxs)("div", {
+                style: CU ? WU : void 0,
+                children: (0, Bp.jsxs)("div", {
                   className: "SkyblockMapArea",
-                  ref: MD,
-                  children: [oD && (0, Jp.jsx)(Lp, {
+                  ref: uU,
+                  children: [QU && (0, Bp.jsx)(Sp, {
                     className: "SkyblockMapTerrain",
-                    imageKey: oD.imageKey,
-                    fallbackImageKey: oD.fallbackImageKey,
-                    geometryKey: oD.geometryKey,
-                    alt: oD.label
-                  }), SD.local && (0, Jp.jsx)(Yp, {
-                    mount: fD.display.mountMapSearchArea
-                  }), !SD.local && (0, Jp.jsx)("svg", {
+                    imageKey: QU.imageKey,
+                    fallbackImageKey: QU.fallbackImageKey,
+                    geometryKey: QU.geometryKey,
+                    alt: QU.label
+                  }), cU.local && (0, Bp.jsx)(Ap, {
+                    mount: PU.display.mountMapSearchArea
+                  }), !cU.local && (0, Bp.jsx)("svg", {
                     className: "SkyblockMapConnections",
                     viewBox: "0 0 100 100",
                     preserveAspectRatio: "none",
                     "aria-hidden": "true",
-                    children: SD.connections.map((DD => (0, Jp.jsx)("line", {
-                      className: Xp()({
-                        Explored: DD.explored
+                    children: cU.connections.map((UU => (0, Bp.jsx)("line", {
+                      className: Ip()({
+                        Explored: UU.explored
                       }),
-                      x1: DD.start[0],
-                      y1: DD.start[1],
-                      x2: DD.end[0],
-                      y2: DD.end[1]
-                    }, DD.id)))
-                  }), SD.points.map((DD => {
-                    const CD = !SD.local && DD.thumbnail ? jp[DD.thumbnail] : void 0;
-                    return (0, Jp.jsxs)("div", {
-                      className: Xp()("SkyblockMapNode", {
-                        Current: DD.current
+                      x1: UU.start[0],
+                      y1: UU.start[1],
+                      x2: UU.end[0],
+                      y2: UU.end[1]
+                    }, UU.id)))
+                  }), cU.points.map((UU => {
+                    const RU = !cU.local && UU.thumbnail ? dp[UU.thumbnail] : void 0;
+                    return (0, Bp.jsxs)("div", {
+                      className: Ip()("SkyblockMapNode", {
+                        Current: UU.current
                       }),
                       style: {
-                        left: `${DD.position[0]}%`,
-                        top: `${DD.position[1]}%`
+                        left: `${UU.position[0]}%`,
+                        top: `${UU.position[1]}%`
                       },
-                      children: [(0, Jp.jsxs)(Gp.i, {
-                        className: Xp()("SkyblockMapPin", {
-                          Unknown: !DD.visited,
-                          Current: DD.current
+                      children: [(0, Bp.jsxs)(yp.e, {
+                        className: Ip()("SkyblockMapPin", {
+                          Unknown: !UU.visited,
+                          Current: UU.current
                         }),
-                        disabled: bD.pending,
+                        disabled: TU.pending,
                         onClick: () => {
-                          iD.travel(DD.travelKind, DD.travelId)
+                          EU.travel(UU.travelKind, UU.travelId)
                         },
-                        children: [CD && (0, Jp.jsx)("img", {
+                        children: [RU && (0, Bp.jsx)("img", {
                           className: "SkyblockMapZoneThumbnail",
-                          src: CD,
+                          src: RU,
                           alt: ""
-                        }), !CD && (0, Jp.jsx)("span", {
+                        }), !RU && (0, Bp.jsx)("span", {
                           className: "SkyblockMapPinSymbol",
                           "aria-hidden": "true",
-                          children: (0, Jp.jsx)(ap, {
-                            icon: DD.icon
+                          children: (0, Bp.jsx)(rp, {
+                            icon: UU.icon
                           })
-                        }), (0, Jp.jsx)("span", {
+                        }), (0, Bp.jsx)("span", {
                           className: "SkyblockMapPinName",
-                          children: DD.name
+                          children: UU.name
                         })]
-                      }), DD.current && (0, Jp.jsx)("span", {
-                        className: Xp()("SkyblockMapHereBadge", {
-                          Above: DD.position[1] > 50
+                      }), UU.current && (0, Bp.jsx)("span", {
+                        className: Ip()("SkyblockMapHereBadge", {
+                          Above: UU.position[1] > 50
                         }),
-                        children: QD("skyblockGame:mapYouAreHere")
+                        children: qU("skyblockGame:mapYouAreHere")
                       })]
-                    }, DD.id)
-                  })), SD.portals.map((DD => (0, Jp.jsx)("div", {
+                    }, UU.id)
+                  })), cU.portals.map((UU => (0, Bp.jsx)("div", {
                     className: "SkyblockMapNode",
                     style: {
-                      left: `clamp(3rem, ${DD.position[0]}%, calc(100% - 3rem))`,
-                      top: `clamp(2rem, ${DD.position[1]}%, calc(100% - 2rem))`
+                      left: `clamp(3rem, ${UU.position[0]}%, calc(100% - 3rem))`,
+                      top: `clamp(2rem, ${UU.position[1]}%, calc(100% - 2rem))`
                     },
-                    children: (0, Jp.jsxs)(Gp.i, {
+                    children: (0, Bp.jsxs)(yp.e, {
                       className: "SkyblockMapPin",
-                      disabled: bD.pending,
+                      disabled: TU.pending,
                       onClick: () => {
-                        iD.travel(DD.travelKind, DD.travelId)
+                        EU.travel(UU.travelKind, UU.travelId)
                       },
-                      children: [(0, Jp.jsx)("span", {
+                      children: [(0, Bp.jsx)("span", {
                         className: "SkyblockMapPinSymbol",
                         style: {
-                          color: DD.colour
+                          color: UU.colour
                         },
                         "aria-hidden": "true",
-                        children: (0, Jp.jsx)(ap, {
-                          icon: DD.icon
+                        children: (0, Bp.jsx)(rp, {
+                          icon: UU.icon
                         })
-                      }), (0, Jp.jsx)("span", {
+                      }), (0, Bp.jsx)("span", {
                         className: "SkyblockMapPinName",
-                        children: DD.name
+                        children: UU.name
                       })]
                     })
-                  }, DD.id))), SD.local && (0, Jp.jsx)(Vp, {
-                    controller: fD
+                  }, UU.id))), cU.local && (0, Bp.jsx)(Xp, {
+                    controller: PU
                   })]
                 })
-              }), tD && (0, Jp.jsxs)("div", {
+              }), CU && (0, Bp.jsxs)("div", {
                 className: "SkyblockMapZoomControls",
-                children: [(0, Jp.jsx)("button", {
+                children: [(0, Bp.jsx)("button", {
                   type: "button",
-                  "aria-label": QD("skyblockGame:mapZoomIn"),
-                  disabled: ZD.view.zoom >= 12,
+                  "aria-label": qU("skyblockGame:mapZoomIn"),
+                  disabled: hU.view.zoom >= 12,
                   onClick: () => {
-                    ZD.zoomBy(1.5)
+                    hU.zoomBy(1.5)
                   },
                   children: "+"
-                }), (0, Jp.jsx)("button", {
+                }), (0, Bp.jsx)("button", {
                   type: "button",
-                  "aria-label": QD("skyblockGame:mapZoomOut"),
-                  disabled: ZD.view.zoom <= 1,
+                  "aria-label": qU("skyblockGame:mapZoomOut"),
+                  disabled: hU.view.zoom <= 1,
                   onClick: () => {
-                    ZD.zoomBy(1 / 1.5)
+                    hU.zoomBy(1 / 1.5)
                   },
                   children: "\u2212"
                 })]
-              }), (0, Jp.jsx)("div", {
+              }), (0, Bp.jsx)("div", {
                 className: "SkyblockMapFeedback",
                 role: "status",
                 "aria-live": "polite",
-                children: bD.feedback
+                children: TU.feedback
               })]
             })
-          }), (0, Jp.jsxs)("footer", {
+          }), (0, Bp.jsxs)("footer", {
             className: "SkyblockMapFooter",
-            children: [SD.progress && (0, Jp.jsxs)("div", {
+            children: [cU.progress && (0, Bp.jsxs)("div", {
               className: "SkyblockMapProgress",
-              children: [(0, Jp.jsx)("span", {
-                children: SD.progress
-              }), (0, Jp.jsx)(dp, {
-                percent: SD.percent,
-                label: SD.progress
+              children: [(0, Bp.jsx)("span", {
+                children: cU.progress
+              }), (0, Bp.jsx)(ip, {
+                percent: cU.percent,
+                label: cU.progress
               })]
-            }), SD.noLandmarks && (0, Jp.jsx)("span", {
-              children: QD("skyblockGame:mapNoLandmarks")
-            }), SD.canTravel && (0, Jp.jsx)("span", {
+            }), cU.noLandmarks && (0, Bp.jsx)("span", {
+              children: qU("skyblockGame:mapNoLandmarks")
+            }), cU.canTravel && (0, Bp.jsx)("span", {
               className: "SkyblockMapHint",
-              children: QD("skyblockGame:mapTravelHint")
+              children: qU("skyblockGame:mapTravelHint")
             })]
           })]
         })
       })
     }
 
-    function ci(DD) {
+    function tE(UU) {
       let {
-        view: CD,
-        controller: cD,
-        navigation: ID
-      } = DD;
+        view: RU,
+        controller: gU,
+        navigation: tU
+      } = UU;
       const {
-        t: pD
-      } = (0, xp.F)(), {
-        isTouchScreen: iD
-      } = (0, mp.o)(["isTouchScreen"]);
-      return (0, Jp.jsxs)("aside", {
+        t: pU
+      } = (0, ap.B)(), {
+        isTouchScreen: EU
+      } = (0, Jp.l)(["isTouchScreen"]);
+      return (0, Bp.jsxs)("aside", {
         className: "SkyblockMinimap",
-        "aria-label": pD("skyblockGame:mapLocal"),
-        children: [iD && (0, Jp.jsx)(Gp.i, {
+        "aria-label": pU("skyblockGame:mapLocal"),
+        children: [EU && (0, Bp.jsx)(yp.e, {
           className: "SkyblockMinimapOpen",
-          onClick: cD.showLocal,
-          children: pD("skyblockGame:map")
-        }), (0, Jp.jsxs)("div", {
+          onClick: gU.showLocal,
+          children: pU("skyblockGame:map")
+        }), (0, Bp.jsxs)("div", {
           className: "SkyblockMinimapFrame",
           style: {
-            backgroundColor: CD.colour
+            backgroundColor: RU.colour
           },
-          children: [(0, Jp.jsxs)("div", {
+          children: [(0, Bp.jsxs)("div", {
             className: "SkyblockMinimapTerrain",
-            ref: ID.display.mountTerrain,
+            ref: tU.display.mountTerrain,
             style: {
-              width: CD.width,
-              height: CD.height
+              width: RU.width,
+              height: RU.height
             },
-            children: [(0, Jp.jsx)(Lp, {
-              imageKey: CD.imageKey,
-              fallbackImageKey: CD.fallbackImageKey,
-              geometryKey: CD.geometryKey,
-              alt: CD.label
-            }), (0, Jp.jsx)(Yp, {
-              mount: ID.display.mountMinimapSearchArea
-            }), CD.markers.map((DD => (0, Jp.jsx)("span", {
+            children: [(0, Bp.jsx)(Sp, {
+              imageKey: RU.imageKey,
+              fallbackImageKey: RU.fallbackImageKey,
+              geometryKey: RU.geometryKey,
+              alt: RU.label
+            }), (0, Bp.jsx)(Ap, {
+              mount: tU.display.mountMinimapSearchArea
+            }), RU.markers.map((UU => (0, Bp.jsx)("span", {
               className: "SkyblockMinimapLandmark",
               style: {
-                left: `${DD.position[0]}%`,
-                top: `${DD.position[1]}%`,
-                color: DD.colour
+                left: `${UU.position[0]}%`,
+                top: `${UU.position[1]}%`,
+                color: UU.colour
               },
-              title: DD.name,
-              children: (0, Jp.jsx)(ap, {
-                icon: DD.icon
+              title: UU.name,
+              children: (0, Bp.jsx)(rp, {
+                icon: UU.icon
               })
-            }, DD.id)))]
-          }), (0, Jp.jsx)("div", {
+            }, UU.id)))]
+          }), (0, Bp.jsx)("div", {
             className: "SkyblockMinimapPlayer",
-            title: pD("skyblockGame:mapYouAreHere"),
-            children: (0, Jp.jsx)(ap, {
+            title: pU("skyblockGame:mapYouAreHere"),
+            children: (0, Bp.jsx)(rp, {
               icon: "player"
             })
           })]
-        }), (0, Jp.jsx)("div", {
+        }), (0, Bp.jsx)("div", {
           className: "SkyblockMinimapCaption",
-          children: CD.caption
+          children: RU.caption
         })]
       })
     }
 
-    function Ii(DD) {
+    function pE(UU) {
       let {
-        controller: CD
-      } = DD;
-      return (0, Jp.jsxs)("div", {
+        controller: RU
+      } = UU;
+      return (0, Bp.jsxs)("div", {
         className: "SkyblockCompass",
-        ref: CD.display.mountCompass,
-        children: [(0, Jp.jsx)("span", {
+        ref: RU.display.mountCompass,
+        children: [(0, Bp.jsx)("span", {
           className: "SkyblockCompassArrow",
           "aria-hidden": "true",
           children: "\u25bc"
-        }), (0, Jp.jsx)("div", {
+        }), (0, Bp.jsx)("div", {
           className: "SkyblockCompassTrack",
           "aria-hidden": "true"
-        }), (0, Jp.jsx)("div", {
+        }), (0, Bp.jsx)("div", {
           className: "SkyblockCompassLabel"
         })]
       })
     }
 
-    function ii(DD) {
+    function EE(UU) {
       let {
-        controller: CD,
-        surface: cD
-      } = DD;
+        controller: RU,
+        surface: gU
+      } = UU;
       const {
-        t: ID
-      } = (0, xp.F)(), pD = (0, qp.g)(ic, CD.getSnapshot()), iD = kp();
-      return pD.enabled ? (0, Jp.jsxs)(Jp.Fragment, {
-        children: ["hud" === cD && (0, Jp.jsx)(np.e, {
+        t: tU
+      } = (0, ap.B)(), pU = (0, Yp.h)(Eg, RU.getSnapshot()), EU = Fp();
+      return pU.enabled ? (0, Bp.jsxs)(Bp.Fragment, {
+        children: ["hud" === gU && (0, Bp.jsx)(wp.e, {
           placement: "statBars",
-          children: pD.hud && (0, Jp.jsxs)("div", {
+          children: pU.hud && (0, Bp.jsxs)("div", {
             className: "SkyblockSkillsHudCompact",
             style: {
-              "--skill-colour": pD.hud.colour
+              "--skill-colour": pU.hud.colour
             },
-            children: [(0, Jp.jsx)(dp, {
-              percent: pD.hud.skill.percent,
-              label: pD.hud.skill.xp,
-              levelUpToken: pD.hud.levelUpToken,
-              colour: pD.hud.colour
-            }), (0, Jp.jsxs)("div", {
+            children: [(0, Bp.jsx)(ip, {
+              percent: pU.hud.skill.percent,
+              label: pU.hud.skill.xp,
+              levelUpToken: pU.hud.levelUpToken,
+              colour: pU.hud.colour
+            }), (0, Bp.jsxs)("div", {
               className: "SkyblockSkillsHudCompactText SmallTextBold",
-              children: [(0, Jp.jsxs)("span", {
-                children: [pD.hud.skill.label, " \xb7 ", pD.hud.skill.level]
-              }), (0, Jp.jsx)("span", {
-                children: pD.hud.gain
+              children: [(0, Bp.jsxs)("span", {
+                children: [pU.hud.skill.label, " \xb7 ", pU.hud.skill.level]
+              }), (0, Bp.jsx)("span", {
+                children: pU.hud.gain
               })]
             })]
           })
-        }), "hud" === cD && (0, Jp.jsx)(np.e, {
-          children: pD.hud && (0, Jp.jsxs)("div", {
+        }), "hud" === gU && (0, Bp.jsx)(wp.e, {
+          children: pU.hud && (0, Bp.jsxs)("div", {
             className: "SkyblockSkillsHud",
-            children: [(0, Jp.jsxs)("div", {
+            children: [(0, Bp.jsxs)("div", {
               className: "SkyblockSkillsHudHeading",
-              children: [(0, Jp.jsx)("strong", {
-                children: pD.hud.skill.label
-              }), (0, Jp.jsx)("span", {
-                children: pD.hud.gain
+              children: [(0, Bp.jsx)("strong", {
+                children: pU.hud.skill.label
+              }), (0, Bp.jsx)("span", {
+                children: pU.hud.gain
               })]
-            }), (0, Jp.jsx)(dp, {
-              percent: pD.hud.skill.percent,
-              label: pD.hud.skill.xp,
-              levelUpToken: pD.hud.levelUpToken,
-              colour: pD.hud.colour
-            }), (0, Jp.jsxs)("div", {
+            }), (0, Bp.jsx)(ip, {
+              percent: pU.hud.skill.percent,
+              label: pU.hud.skill.xp,
+              levelUpToken: pU.hud.levelUpToken,
+              colour: pU.hud.colour
+            }), (0, Bp.jsxs)("div", {
               className: "SkyblockSkillsHudProgress",
-              children: [(0, Jp.jsx)("span", {
-                children: pD.hud.skill.level
-              }), (0, Jp.jsx)("span", {
-                children: pD.hud.skill.xp
+              children: [(0, Bp.jsx)("span", {
+                children: pU.hud.skill.level
+              }), (0, Bp.jsx)("span", {
+                children: pU.hud.skill.xp
               })]
             })]
           })
-        }), "menu" === cD && (0, Jp.jsx)(Tp.e, {
-          show: pD.open,
-          close: CD.dismiss,
+        }), "menu" === gU && (0, Bp.jsx)(sp.d, {
+          show: pU.open,
+          close: RU.dismiss,
           togglePointerLock: !1,
           className: "SkyblockSkillsOverlay",
-          children: (0, Jp.jsxs)("section", {
+          children: (0, Bp.jsxs)("section", {
             className: "SkyblockSkillsPanel",
             role: "dialog",
             "aria-modal": "true",
             "aria-labelledby": "skyblockSkillsTitle",
             tabIndex: -1,
-            ref: iD,
-            onKeyDown: Rp,
-            children: [(0, Jp.jsxs)("header", {
+            ref: EU,
+            onKeyDown: kp,
+            children: [(0, Bp.jsxs)("header", {
               className: "SkyblockSkillsHeader",
-              children: [(0, Jp.jsxs)("div", {
-                children: [(0, Jp.jsx)("h2", {
+              children: [(0, Bp.jsxs)("div", {
+                children: [(0, Bp.jsx)("h2", {
                   id: "skyblockSkillsTitle",
-                  children: ID("skyblockGame:skills")
-                }), (0, Jp.jsx)("p", {
-                  children: ID("skyblockGame:skillsIntro")
+                  children: tU("skyblockGame:skills")
+                }), (0, Bp.jsx)("p", {
+                  children: tU("skyblockGame:skillsIntro")
                 })]
-              }), (0, Jp.jsx)(Gp.l, {
+              }), (0, Bp.jsx)(yp.h, {
                 padIgnore: !0,
-                onClick: CD.dismiss
+                onClick: RU.dismiss
               })]
-            }), (0, Jp.jsxs)("div", {
+            }), (0, Bp.jsxs)("div", {
               className: "SkyblockSkillsBody",
-              children: [(0, Jp.jsx)("div", {
+              children: [(0, Bp.jsx)("div", {
                 className: "SkyblockSkillsList",
                 "data-pad-select-on-focus": !0,
-                children: pD.skills.map((DD => (0, Jp.jsxs)(Gp.i, {
-                  className: Xp()("SkyblockSkillCard", {
-                    Selected: DD.selected
+                children: pU.skills.map((UU => (0, Bp.jsxs)(yp.e, {
+                  className: Ip()("SkyblockSkillCard", {
+                    Selected: UU.selected
                   }),
-                  ariaPressed: DD.selected,
+                  ariaPressed: UU.selected,
                   onClick: () => {
-                    CD.select(DD.id)
+                    RU.select(UU.id)
                   },
-                  children: [(0, Jp.jsx)("div", {
+                  children: [(0, Bp.jsx)("div", {
                     className: "SkyblockSkillIcon",
-                    children: (0, Jp.jsx)(Pp.d, {
-                      itemName: DD.icon,
+                    children: (0, Bp.jsx)(bp.c, {
+                      itemName: UU.icon,
                       amount: 0
                     })
-                  }), (0, Jp.jsxs)("div", {
+                  }), (0, Bp.jsxs)("div", {
                     className: "SkyblockSkillSummary",
-                    children: [(0, Jp.jsxs)("div", {
+                    children: [(0, Bp.jsxs)("div", {
                       className: "SkyblockSkillTitle",
-                      children: [(0, Jp.jsx)("strong", {
-                        children: DD.label
-                      }), (0, Jp.jsx)("span", {
-                        children: DD.level
+                      children: [(0, Bp.jsx)("strong", {
+                        children: UU.label
+                      }), (0, Bp.jsx)("span", {
+                        children: UU.level
                       })]
-                    }), (0, Jp.jsx)(dp, {
-                      percent: DD.percent,
-                      label: `${DD.label}: ${DD.xp}`
-                    }), (0, Jp.jsx)("span", {
+                    }), (0, Bp.jsx)(ip, {
+                      percent: UU.percent,
+                      label: `${UU.label}: ${UU.xp}`
+                    }), (0, Bp.jsx)("span", {
                       className: "SkyblockSkillXp",
-                      children: DD.xp
+                      children: UU.xp
                     })]
                   })]
-                }, DD.id)))
-              }), pD.detail && (0, Jp.jsxs)("div", {
+                }, UU.id)))
+              }), pU.detail && (0, Bp.jsxs)("div", {
                 className: "SkyblockSkillDetail",
-                children: [(0, Jp.jsx)("div", {
+                children: [(0, Bp.jsx)("div", {
                   className: "SkyblockSkillDetailIcon",
-                  children: (0, Jp.jsx)(Pp.d, {
-                    itemName: pD.detail.icon,
+                  children: (0, Bp.jsx)(bp.c, {
+                    itemName: pU.detail.icon,
                     amount: 0
                   })
-                }), (0, Jp.jsx)("h3", {
-                  children: pD.detail.label
-                }), (0, Jp.jsx)("strong", {
+                }), (0, Bp.jsx)("h3", {
+                  children: pU.detail.label
+                }), (0, Bp.jsx)("strong", {
                   className: "SkyblockSkillDetailLevel",
-                  children: pD.detail.level
-                }), (0, Jp.jsx)("p", {
-                  children: pD.detail.description
-                }), (0, Jp.jsxs)("div", {
+                  children: pU.detail.level
+                }), (0, Bp.jsx)("p", {
+                  children: pU.detail.description
+                }), (0, Bp.jsxs)("div", {
                   className: "SkyblockSkillBenefit",
-                  children: [(0, Jp.jsx)("strong", {
-                    children: ID("skyblockGame:currentBenefit")
-                  }), (0, Jp.jsx)("span", {
-                    children: pD.detail.benefit
+                  children: [(0, Bp.jsx)("strong", {
+                    children: tU("skyblockGame:currentBenefit")
+                  }), (0, Bp.jsx)("span", {
+                    children: pU.detail.benefit
                   })]
-                }), (0, Jp.jsx)(dp, {
-                  percent: pD.detail.percent,
-                  label: pD.detail.xp
-                }), (0, Jp.jsx)("p", {
-                  children: pD.detail.xp
-                }), (0, Jp.jsx)("h4", {
-                  children: ID("skyblockGame:earnXp")
-                }), (0, Jp.jsx)("ul", {
-                  children: pD.detail.sources.map((DD => (0, Jp.jsx)("li", {
-                    children: DD
-                  }, DD)))
+                }), (0, Bp.jsx)(ip, {
+                  percent: pU.detail.percent,
+                  label: pU.detail.xp
+                }), (0, Bp.jsx)("p", {
+                  children: pU.detail.xp
+                }), (0, Bp.jsx)("h4", {
+                  children: tU("skyblockGame:earnXp")
+                }), (0, Bp.jsx)("ul", {
+                  children: pU.detail.sources.map((UU => (0, Bp.jsx)("li", {
+                    children: UU
+                  }, UU)))
                 })]
               })]
             })]
@@ -5757,274 +5757,274 @@ export const modules = {
         })]
       }) : null
     }
-    var fi = cD(1356),
-      bi = cD(4606),
-      Qi = cD(312);
+    var PE = gU(1344),
+      TE = gU(4495),
+      qE = gU(299);
 
-    function wi(DD) {
+    function KE(UU) {
       let {
-        item: CD
-      } = DD;
-      return (0, Jp.jsx)("span", {
+        item: RU
+      } = UU;
+      return (0, Bp.jsx)("span", {
         className: "SkyblockQuestStepIcon",
         "aria-hidden": "true",
-        children: (0, Jp.jsx)(Pp.d, {
-          itemName: CD,
+        children: (0, Bp.jsx)(bp.c, {
+          itemName: RU,
           amount: 0
         })
       })
     }
 
-    function Si(DD) {
+    function cE(UU) {
       let {
-        name: CD,
-        percent: cD,
-        progress: ID
-      } = DD;
-      return (0, Jp.jsxs)("span", {
+        name: RU,
+        percent: gU,
+        progress: tU
+      } = UU;
+      return (0, Bp.jsxs)("span", {
         className: "SkyblockQuestStepBar",
-        children: [(0, Jp.jsx)(dp, {
-          percent: cD,
-          label: `${(0,Qi.qb)(CD)}: ${ID}`
-        }), (0, Jp.jsx)("span", {
+        children: [(0, Bp.jsx)(ip, {
+          percent: gU,
+          label: `${(0,qE.tb)(RU)}: ${tU}`
+        }), (0, Bp.jsx)("span", {
           className: "SkyblockQuestStepBarLabel",
-          children: ID
+          children: tU
         })]
       })
     }
 
-    function Bi(DD) {
+    function GE(UU) {
       let {
-        subquests: CD,
-        showDescriptions: cD = !1
-      } = DD;
-      return (0, Jp.jsx)("ul", {
+        subquests: RU,
+        showDescriptions: gU = !1
+      } = UU;
+      return (0, Bp.jsx)("ul", {
         className: "SkyblockQuestChecklist",
-        children: CD.map((DD => {
-          const CD = cD && "completed" === DD.status,
-            ID = (0, Jp.jsxs)("li", {
-              className: Xp()("SkyblockQuestStep", DD.status, {
-                JustFinished: DD.justFinished,
-                JustUnlocked: DD.justUnlocked
+        children: RU.map((UU => {
+          const RU = gU && "completed" === UU.status,
+            tU = (0, Bp.jsxs)("li", {
+              className: Ip()("SkyblockQuestStep", UU.status, {
+                JustFinished: UU.justFinished,
+                JustUnlocked: UU.justUnlocked
               }),
-              tabIndex: CD ? 0 : void 0,
-              children: [null !== DD.iconItem && (0, Jp.jsx)(wi, {
-                item: DD.iconItem
-              }), null === DD.iconItem && (0, Jp.jsx)("span", {
+              tabIndex: RU ? 0 : void 0,
+              children: [null !== UU.iconItem && (0, Bp.jsx)(KE, {
+                item: UU.iconItem
+              }), null === UU.iconItem && (0, Bp.jsx)("span", {
                 className: "SkyblockQuestStepMark",
                 "aria-hidden": "true",
-                children: "completed" === DD.status ? "\u2713" : "skipped" === DD.status ? "\u2212" : "\u25cb"
-              }), (0, Jp.jsxs)("span", {
+                children: "completed" === UU.status ? "\u2713" : "skipped" === UU.status ? "\u2212" : "\u25cb"
+              }), (0, Bp.jsxs)("span", {
                 className: "SkyblockQuestStepBody",
-                children: [(0, Jp.jsx)("strong", {
-                  children: (0, Jp.jsx)(bi.b, {
-                    text: DD.name
+                children: [(0, Bp.jsx)("strong", {
+                  children: (0, Bp.jsx)(TE.c, {
+                    text: UU.name
                   })
-                }), cD && !CD && (0, Jp.jsx)("span", {
-                  children: (0, Jp.jsx)(bi.b, {
-                    text: DD.description
+                }), gU && !RU && (0, Bp.jsx)("span", {
+                  children: (0, Bp.jsx)(TE.c, {
+                    text: UU.description
                   })
-                }), null !== DD.barPercent && (0, Jp.jsx)(Si, {
-                  name: DD.name,
-                  percent: DD.barPercent,
-                  progress: DD.progress
-                }), null === DD.barPercent && !CD && (0, Jp.jsx)("span", {
+                }), null !== UU.barPercent && (0, Bp.jsx)(cE, {
+                  name: UU.name,
+                  percent: UU.barPercent,
+                  progress: UU.progress
+                }), null === UU.barPercent && !RU && (0, Bp.jsx)("span", {
                   className: "SkyblockQuestStepStatus",
-                  children: DD.statusLabel
+                  children: UU.statusLabel
                 })]
               })]
-            }, DD.id);
-          return CD ? (0, Jp.jsx)(fi.f, {
+            }, UU.id);
+          return RU ? (0, Bp.jsx)(PE.g, {
             delayShow: 200,
-            tooltipInner: (0, Jp.jsxs)("div", {
+            tooltipInner: (0, Bp.jsxs)("div", {
               className: "SkyblockQuestStepTooltip",
-              children: [(0, Jp.jsx)("span", {
-                children: (0, Jp.jsx)(bi.b, {
-                  text: DD.description
+              children: [(0, Bp.jsx)("span", {
+                children: (0, Bp.jsx)(TE.c, {
+                  text: UU.description
                 })
-              }), (0, Jp.jsx)("strong", {
-                children: DD.statusLabel
+              }), (0, Bp.jsx)("strong", {
+                children: UU.statusLabel
               })]
             }),
-            children: ID
-          }, DD.id) : ID
+            children: tU
+          }, UU.id) : tU
         }))
       })
     }
 
-    function yi(DD) {
+    function jE(UU) {
       let {
-        quest: CD,
-        select: cD
-      } = DD;
+        quest: RU,
+        select: gU
+      } = UU;
       const {
-        t: ID
-      } = (0, xp.F)(), pD = CD.focusStep;
-      return (0, Jp.jsxs)(Gp.i, {
-        className: Xp()("SkyblockQuestCard", {
-          Selected: CD.selected,
-          Tracked: CD.tracked
+        t: tU
+      } = (0, ap.B)(), pU = RU.focusStep;
+      return (0, Bp.jsxs)(yp.e, {
+        className: Ip()("SkyblockQuestCard", {
+          Selected: RU.selected,
+          Tracked: RU.tracked
         }),
         onClick: () => {
-          cD(CD.id)
+          gU(RU.id)
         },
-        children: [(0, Jp.jsxs)("div", {
+        children: [(0, Bp.jsxs)("div", {
           className: "SkyblockQuestCardTitle",
-          children: [(0, Jp.jsx)("strong", {
-            children: (0, Jp.jsx)(bi.b, {
-              text: CD.name
+          children: [(0, Bp.jsx)("strong", {
+            children: (0, Bp.jsx)(TE.c, {
+              text: RU.name
             })
-          }), CD.tracked && (0, Jp.jsx)("span", {
+          }), RU.tracked && (0, Bp.jsx)("span", {
             className: "SkyblockQuestTrackingBadge",
-            children: ID("skyblockGame:currentQuest")
+            children: tU("skyblockGame:currentQuest")
           })]
-        }), pD && (0, Jp.jsxs)("div", {
+        }), pU && (0, Bp.jsxs)("div", {
           className: "SkyblockQuestCardStep",
-          children: [null !== pD.iconItem && (0, Jp.jsx)(wi, {
-            item: pD.iconItem
-          }), (0, Jp.jsx)(Si, {
-            name: pD.name,
-            percent: pD.barPercent,
-            progress: pD.progress
+          children: [null !== pU.iconItem && (0, Bp.jsx)(KE, {
+            item: pU.iconItem
+          }), (0, Bp.jsx)(cE, {
+            name: pU.name,
+            percent: pU.barPercent,
+            progress: pU.progress
           })]
-        }), (0, Jp.jsx)("span", {
+        }), (0, Bp.jsx)("span", {
           className: "SkyblockQuestProgress",
-          children: CD.progress
+          children: RU.progress
         })]
       })
     }
 
-    function Mi(DD) {
+    function uE(UU) {
       let {
-        controller: CD,
-        surface: cD
-      } = DD;
-      const ID = (0, qp.g)(wc, CD.getSnapshot()),
+        controller: RU,
+        surface: gU
+      } = UU;
+      const tU = (0, Yp.h)(Kg, RU.getSnapshot()),
         {
-          t: pD
-        } = (0, xp.F)(),
-        iD = kp();
-      return ID.enabled ? (0, Jp.jsxs)(Jp.Fragment, {
-        children: ["hud" === cD && (0, Jp.jsx)(Jp.Fragment, {
-          children: ID.tracked && (0, Jp.jsx)("div", {
+          t: pU
+        } = (0, ap.B)(),
+        EU = Fp();
+      return tU.enabled ? (0, Bp.jsxs)(Bp.Fragment, {
+        children: ["hud" === gU && (0, Bp.jsx)(Bp.Fragment, {
+          children: tU.tracked && (0, Bp.jsx)("div", {
             className: "SkyblockQuestTracker",
-            style: Qc,
-            children: (0, Jp.jsxs)("div", {
+            style: qg,
+            children: (0, Bp.jsxs)("div", {
               className: "SkyblockQuestTrackerBody",
-              children: [ID.trackedStepPulse > 0 && (0, Jp.jsx)("span", {
+              children: [tU.trackedStepPulse > 0 && (0, Bp.jsx)("span", {
                 className: "SkyblockQuestTrackerPulse",
                 "aria-hidden": "true"
-              }, ID.trackedStepPulse), (0, Jp.jsx)("span", {
+              }, tU.trackedStepPulse), (0, Bp.jsx)("span", {
                 className: "SkyblockQuestEyebrow",
-                children: pD("skyblockGame:currentQuest")
-              }), (0, Jp.jsxs)("span", {
+                children: pU("skyblockGame:currentQuest")
+              }), (0, Bp.jsxs)("span", {
                 className: "SkyblockQuestTrackerTitle",
-                children: [(0, Jp.jsx)("strong", {
-                  children: (0, Jp.jsx)(bi.b, {
-                    text: ID.tracked.name
+                children: [(0, Bp.jsx)("strong", {
+                  children: (0, Bp.jsx)(TE.c, {
+                    text: tU.tracked.name
                   })
-                }), null !== ID.tracked.clock && (0, Jp.jsx)("span", {
+                }), null !== tU.tracked.clock && (0, Bp.jsx)("span", {
                   className: "SkyblockQuestClock",
-                  children: ID.tracked.clock
+                  children: tU.tracked.clock
                 })]
-              }), (0, Jp.jsx)(Bi, {
-                subquests: ID.tracked.subquests
+              }), (0, Bp.jsx)(GE, {
+                subquests: tU.tracked.subquests
               })]
             })
           })
-        }), "menu" === cD && (0, Jp.jsx)(Tp.e, {
-          show: ID.open,
-          close: CD.dismiss,
+        }), "menu" === gU && (0, Bp.jsx)(sp.d, {
+          show: tU.open,
+          close: RU.dismiss,
           togglePointerLock: !1,
           className: "SkyblockSkillsOverlay",
-          children: (0, Jp.jsxs)("section", {
+          children: (0, Bp.jsxs)("section", {
             className: "SkyblockSkillsPanel SkyblockQuestsPanel",
             role: "dialog",
             "aria-modal": "true",
             "aria-labelledby": "skyblockQuestsTitle",
             tabIndex: -1,
-            ref: iD,
-            onKeyDown: Rp,
-            children: [(0, Jp.jsxs)("header", {
+            ref: EU,
+            onKeyDown: kp,
+            children: [(0, Bp.jsxs)("header", {
               className: "SkyblockSkillsHeader",
-              children: [(0, Jp.jsx)("div", {
-                children: (0, Jp.jsx)("h2", {
+              children: [(0, Bp.jsx)("div", {
+                children: (0, Bp.jsx)("h2", {
                   id: "skyblockQuestsTitle",
-                  children: pD("skyblockGame:quests")
+                  children: pU("skyblockGame:quests")
                 })
-              }), (0, Jp.jsx)(Gp.l, {
+              }), (0, Bp.jsx)(yp.h, {
                 padIgnore: !0,
-                onClick: CD.dismiss
+                onClick: RU.dismiss
               })]
-            }), (0, Jp.jsxs)("div", {
+            }), (0, Bp.jsxs)("div", {
               className: "SkyblockSkillsBody SkyblockQuestsBody",
-              children: [(0, Jp.jsxs)("div", {
+              children: [(0, Bp.jsxs)("div", {
                 className: "SkyblockQuestList",
-                children: [(0, Jp.jsx)("h3", {
-                  children: pD("skyblockGame:current")
-                }), 0 === ID.active.length && (0, Jp.jsx)("p", {
+                children: [(0, Bp.jsx)("h3", {
+                  children: pU("skyblockGame:current")
+                }), 0 === tU.active.length && (0, Bp.jsx)("p", {
                   className: "SkyblockQuestEmpty",
-                  children: pD("skyblockGame:noActiveQuests")
-                }), ID.active.map((DD => (0, Jp.jsx)(yi, {
-                  quest: DD,
-                  select: CD.select
-                }, DD.id))), (0, Jp.jsx)("h3", {
-                  children: (0, Jp.jsxs)("button", {
+                  children: pU("skyblockGame:noActiveQuests")
+                }), tU.active.map((UU => (0, Bp.jsx)(jE, {
+                  quest: UU,
+                  select: RU.select
+                }, UU.id))), (0, Bp.jsx)("h3", {
+                  children: (0, Bp.jsxs)("button", {
                     type: "button",
-                    className: Xp()("SkyblockQuestSectionToggle", {
-                      Expanded: ID.completedExpanded
+                    className: Ip()("SkyblockQuestSectionToggle", {
+                      Expanded: tU.completedExpanded
                     }),
-                    "aria-expanded": ID.completedExpanded,
-                    onClick: CD.toggleCompleted,
-                    children: [(0, Jp.jsx)("span", {
+                    "aria-expanded": tU.completedExpanded,
+                    onClick: RU.toggleCompleted,
+                    children: [(0, Bp.jsx)("span", {
                       className: "SkyblockQuestSectionCaret",
                       "aria-hidden": "true"
-                    }), pD("skyblockGame:completed"), (0, Jp.jsx)("span", {
+                    }), pU("skyblockGame:completed"), (0, Bp.jsx)("span", {
                       className: "SkyblockQuestSectionCount",
-                      children: ID.completed.length
+                      children: tU.completed.length
                     })]
                   })
-                }), ID.completedExpanded && 0 === ID.completed.length && (0, Jp.jsx)("p", {
+                }), tU.completedExpanded && 0 === tU.completed.length && (0, Bp.jsx)("p", {
                   className: "SkyblockQuestEmpty",
-                  children: pD("skyblockGame:noCompletedQuests")
-                }), ID.completedExpanded && ID.completed.map((DD => (0, Jp.jsx)(yi, {
-                  quest: DD,
-                  select: CD.select
-                }, DD.id)))]
-              }), ID.detail && (0, Jp.jsxs)("div", {
+                  children: pU("skyblockGame:noCompletedQuests")
+                }), tU.completedExpanded && tU.completed.map((UU => (0, Bp.jsx)(jE, {
+                  quest: UU,
+                  select: RU.select
+                }, UU.id)))]
+              }), tU.detail && (0, Bp.jsxs)("div", {
                 className: "SkyblockQuestDetail",
-                children: [ID.detail.completed && (0, Jp.jsx)("span", {
+                children: [tU.detail.completed && (0, Bp.jsx)("span", {
                   className: "SkyblockQuestEyebrow",
-                  children: pD("skyblockGame:completedQuest")
-                }), (0, Jp.jsx)("h3", {
-                  children: (0, Jp.jsx)(bi.b, {
-                    text: ID.detail.name
+                  children: pU("skyblockGame:completedQuest")
+                }), (0, Bp.jsx)("h3", {
+                  children: (0, Bp.jsx)(TE.c, {
+                    text: tU.detail.name
                   })
-                }), (0, Jp.jsx)("p", {
+                }), (0, Bp.jsx)("p", {
                   className: "SkyblockQuestDescription",
-                  children: (0, Jp.jsx)(bi.b, {
-                    text: ID.detail.description
+                  children: (0, Bp.jsx)(TE.c, {
+                    text: tU.detail.description
                   })
-                }), (0, Jp.jsxs)("p", {
+                }), (0, Bp.jsxs)("p", {
                   className: "SkyblockQuestProgress",
-                  children: [ID.detail.progress, null !== ID.detail.clock && (0, Jp.jsx)("span", {
+                  children: [tU.detail.progress, null !== tU.detail.clock && (0, Bp.jsx)("span", {
                     className: "SkyblockQuestClock",
-                    children: ID.detail.clock
+                    children: tU.detail.clock
                   })]
-                }), (0, Jp.jsx)(Bi, {
-                  subquests: ID.detail.subquests,
+                }), (0, Bp.jsx)(GE, {
+                  subquests: tU.detail.subquests,
                   showDescriptions: !0
-                }), ID.detail.tracked && (0, Jp.jsx)("p", {
+                }), tU.detail.tracked && (0, Bp.jsx)("p", {
                   className: "SkyblockQuestTrackingStatus",
-                  children: ID.detail.trackLabel
-                }), !ID.detail.completed && !ID.detail.tracked && (0, Jp.jsx)(Gp.o, {
-                  onClick: CD.trackSelected,
-                  disabled: !ID.detail.canTrack,
-                  children: ID.detail.trackLabel
-                }), ID.detail.canViewDialogue && (0, Jp.jsx)(Gp.i, {
+                  children: tU.detail.trackLabel
+                }), !tU.detail.completed && !tU.detail.tracked && (0, Bp.jsx)(yp.j, {
+                  onClick: RU.trackSelected,
+                  disabled: !tU.detail.canTrack,
+                  children: tU.detail.trackLabel
+                }), tU.detail.canViewDialogue && (0, Bp.jsx)(yp.e, {
                   className: "SkyblockQuestViewDialogue",
-                  onClick: CD.viewDialogue,
-                  children: pD("skyblockDialogue:viewDialogue")
+                  onClick: RU.viewDialogue,
+                  children: pU("skyblockDialogue:viewDialogue")
                 })]
               })]
             })]
@@ -6032,35 +6032,35 @@ export const modules = {
         })]
       }) : null
     }
-    var ti = cD(1064),
-      Zi = cD(2482);
+    var CE = gU(1049),
+      hE = gU(2401);
 
-    function oi(DD, CD, cD, ID, pD) {
-      const iD = DD => "linear" === pD ? DD : {
-          Ui: pD,
-          point: DD
+    function QE(UU, RU, gU, tU, pU) {
+      const EU = UU => "linear" === pU ? UU : {
+          nE: pU,
+          point: UU
         },
-        fD = {};
-      for (const [bD, QD] of ID)
-        for (const [CD, cD] of Object.entries(DD(bD, QD, iD))) fD[CD] ??= {
+        PU = {};
+      for (const [TU, qU] of tU)
+        for (const [RU, gU] of Object.entries(UU(TU, qU, EU))) PU[RU] ??= {
           timeline: []
-        }, fD[CD].timeline.push(cD);
+        }, PU[RU].timeline.push(gU);
       return {
-        mi: CD,
-        loop: cD,
-        Oi: fD
+        xE: RU,
+        loop: gU,
+        IE: PU
       }
     }
-    const vi = .547,
-      Ni = .022,
-      gi = {
+    const eE = .547,
+      WE = .022,
+      fE = {
         drop: -.03,
         torso: -.28,
         nod: -.4,
         arms: -2.85,
         spread: .18
       },
-      Xi = {
+      xE = {
         drop: .22,
         torso: .7,
         nod: -.25,
@@ -6069,167 +6069,167 @@ export const modules = {
         spread: .12
       };
 
-    function mi(DD, CD, cD) {
+    function mE(UU, RU, gU) {
       const {
-        drop: ID = 0,
-        shift: pD = 0,
-        torso: iD = 0,
-        nod: fD = 0,
-        tilt: bD = 0,
-        legs: QD = [0, 0],
-        arms: wD = 0,
-        spread: SD = 0
-      } = CD, BD = vi * Math.cos(iD) - Ni * Math.sin(iD), yD = vi * Math.sin(iD) + Ni * Math.cos(iD), MD = cD([0, -ID, pD]);
+        drop: tU = 0,
+        shift: pU = 0,
+        torso: EU = 0,
+        nod: PU = 0,
+        tilt: TU = 0,
+        legs: qU = [0, 0],
+        arms: KU = 0,
+        spread: cU = 0
+      } = RU, GU = eE * Math.cos(EU) - WE * Math.sin(EU), jU = eE * Math.sin(EU) + WE * Math.cos(EU), uU = gU([0, -tU, pU]);
       return {
         LowerBody: {
-          timeFraction: DD,
-          position: MD,
-          rotation: cD([0, 0, 0])
+          timeFraction: UU,
+          position: uU,
+          rotation: gU([0, 0, 0])
         },
         UpperBody: {
-          timeFraction: DD,
-          position: MD,
-          rotation: cD([iD, 0, bD])
+          timeFraction: UU,
+          position: uU,
+          rotation: gU([EU, 0, TU])
         },
         HeadMesh: {
-          timeFraction: DD,
-          position: cD([0, BD - vi - ID, yD - Ni + pD]),
-          rotation: cD([iD + fD, 0, bD])
+          timeFraction: UU,
+          position: gU([0, GU - eE - tU, jU - WE + pU]),
+          rotation: gU([EU + PU, 0, TU])
         },
         LegLeftMesh: {
-          timeFraction: DD,
-          rotation: cD([QD[0], 0, 0])
+          timeFraction: UU,
+          rotation: gU([qU[0], 0, 0])
         },
         LegRightMesh: {
-          timeFraction: DD,
-          rotation: cD([QD[1], 0, 0])
+          timeFraction: UU,
+          rotation: gU([qU[1], 0, 0])
         },
         ArmLeftMesh: {
-          timeFraction: DD,
-          rotation: cD([wD, 0, SD])
+          timeFraction: UU,
+          rotation: gU([KU, 0, cU])
         },
         ArmRightMesh: {
-          timeFraction: DD,
-          rotation: cD([wD, 0, -SD])
+          timeFraction: UU,
+          rotation: gU([KU, 0, -cU])
         }
       }
     }
 
-    function ni(DD, CD, cD) {
-      return oi(mi, DD, CD, cD, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
+    function IE(UU, RU, gU) {
+      return QE(mE, UU, RU, gU, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
     }
 
-    function Oi(DD) {
-      return "number" === typeof DD ? [DD, DD] : DD
+    function JE(UU) {
+      return "number" === typeof UU ? [UU, UU] : UU
     }
 
-    function Pi(DD, CD, cD) {
+    function wE(UU, RU, gU) {
       const {
-        rise: ID = 0,
-        shift: pD = 0,
-        torso: iD = 0,
-        twist: fD = 0,
-        tilt: bD = 0,
-        nod: QD = 0,
-        cock: wD = 0,
-        arms: SD = 0,
-        spread: BD = 0
-      } = CD, [yD, MD] = Oi(SD), [tD, ZD] = Oi(BD);
+        rise: tU = 0,
+        shift: pU = 0,
+        torso: EU = 0,
+        twist: PU = 0,
+        tilt: TU = 0,
+        nod: qU = 0,
+        cock: KU = 0,
+        arms: cU = 0,
+        spread: GU = 0
+      } = RU, [jU, uU] = JE(cU), [CU, hU] = JE(GU);
       return {
         TorsoNode: {
-          timeFraction: DD,
-          position: cD([0, ID, pD]),
-          rotation: cD([iD, fD, bD])
+          timeFraction: UU,
+          position: gU([0, tU, pU]),
+          rotation: gU([EU, PU, TU])
         },
         HeadMesh: {
-          timeFraction: DD,
-          rotation: cD([QD, 0, wD])
+          timeFraction: UU,
+          rotation: gU([qU, 0, KU])
         },
         ArmLeftMesh: {
-          timeFraction: DD,
-          rotation: cD([yD, 0, tD])
+          timeFraction: UU,
+          rotation: gU([jU, 0, CU])
         },
         ArmRightMesh: {
-          timeFraction: DD,
-          rotation: cD([MD, 0, -ZD])
+          timeFraction: UU,
+          rotation: gU([uU, 0, -hU])
         }
       }
     }
-    const Hi = [1.0625, -1, 0];
+    const nE = [1.0625, -1, 0];
 
-    function Ui(DD) {
-      return "number" === typeof DD ? [DD, DD] : DD
+    function bE(UU) {
+      return "number" === typeof UU ? [UU, UU] : UU
     }
 
-    function xi(DD, CD, cD) {
+    function oE(UU, RU, gU) {
       const {
-        drop: ID = 0,
-        shift: pD = 0,
-        torso: iD = 0,
-        tilt: fD = 0,
-        nod: bD = 0,
-        cock: QD = 0,
-        legs: wD = [0, 0],
-        arms: SD = 0,
-        spread: BD = 0
-      } = CD, [yD, MD] = Ui(SD), [tD, ZD] = Ui(BD), oD = -iD, vD = -fD, [ND, gD, XD] = function(DD, CD) {
-        const [cD, ID, pD] = [-Hi[0], Hi[1], -Hi[2]], iD = cD * Math.cos(CD) - ID * Math.sin(CD), fD = cD * Math.sin(CD) + ID * Math.cos(CD);
-        return [iD - cD, -(fD * Math.cos(DD) - pD * Math.sin(DD) - ID), fD * Math.sin(DD) + pD * Math.cos(DD) - pD]
-      }(oD, vD), mD = cD([0, -ID, pD]);
+        drop: tU = 0,
+        shift: pU = 0,
+        torso: EU = 0,
+        tilt: PU = 0,
+        nod: TU = 0,
+        cock: qU = 0,
+        legs: KU = [0, 0],
+        arms: cU = 0,
+        spread: GU = 0
+      } = RU, [jU, uU] = bE(cU), [CU, hU] = bE(GU), QU = -EU, eU = -PU, [WU, fU, xU] = function(UU, RU) {
+        const [gU, tU, pU] = [-nE[0], nE[1], -nE[2]], EU = gU * Math.cos(RU) - tU * Math.sin(RU), PU = gU * Math.sin(RU) + tU * Math.cos(RU);
+        return [EU - gU, -(PU * Math.cos(UU) - pU * Math.sin(UU) - tU), PU * Math.sin(UU) + pU * Math.cos(UU) - pU]
+      }(QU, eU), mU = gU([0, -tU, pU]);
       return {
         TorsoNode: {
-          timeFraction: DD,
-          position: cD([ND, gD - ID, XD + pD]),
-          rotation: cD([oD, 0, vD])
+          timeFraction: UU,
+          position: gU([WU, fU - tU, xU + pU]),
+          rotation: gU([QU, 0, eU])
         },
         HeadMesh: {
-          timeFraction: DD,
-          rotation: cD([-bD, 0, -QD])
+          timeFraction: UU,
+          rotation: gU([-TU, 0, -qU])
         },
         ArmLeftMesh: {
-          timeFraction: DD,
-          rotation: cD([-yD, 0, -tD])
+          timeFraction: UU,
+          rotation: gU([-jU, 0, -CU])
         },
         ArmRightMesh: {
-          timeFraction: DD,
-          rotation: cD([-MD, 0, ZD])
+          timeFraction: UU,
+          rotation: gU([-uU, 0, hU])
         },
         LegLeftMesh: {
-          timeFraction: DD,
-          position: mD,
-          rotation: cD([-wD[0], 0, 0])
+          timeFraction: UU,
+          position: mU,
+          rotation: gU([-KU[0], 0, 0])
         },
         LegRightMesh: {
-          timeFraction: DD,
-          position: mD,
-          rotation: cD([-wD[1], 0, 0])
+          timeFraction: UU,
+          position: mU,
+          rotation: gU([-KU[1], 0, 0])
         }
       }
     }
-    var qi = cD(36517),
-      Ji = cD(37839),
-      Ki = cD(38009);
+    var ZE = gU(36664),
+      aE = gU(38027),
+      YE = gU(38186);
 
-    function ai(DD, CD, cD) {
-      var ID, pD;
-      const iD = function() {
-          let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-          return DD + ((arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0) - DD) * cD
+    function BE(UU, RU, gU) {
+      var tU, pU;
+      const EU = function() {
+          let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+          return UU + ((arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0) - UU) * gU
         },
-        [fD, bD] = null !== (ID = DD.legs) && void 0 !== ID ? ID : [0, 0],
-        [QD, wD] = null !== (pD = CD.legs) && void 0 !== pD ? pD : [0, 0];
+        [PU, TU] = null !== (tU = UU.legs) && void 0 !== tU ? tU : [0, 0],
+        [qU, KU] = null !== (pU = RU.legs) && void 0 !== pU ? pU : [0, 0];
       return {
-        drop: iD(DD.drop, CD.drop),
-        shift: iD(DD.shift, CD.shift),
-        torso: iD(DD.torso, CD.torso),
-        nod: iD(DD.nod, CD.nod),
-        tilt: iD(DD.tilt, CD.tilt),
-        legs: [iD(fD, QD), iD(bD, wD)],
-        arms: iD(DD.arms, CD.arms),
-        spread: iD(DD.spread, CD.spread)
+        drop: EU(UU.drop, RU.drop),
+        shift: EU(UU.shift, RU.shift),
+        torso: EU(UU.torso, RU.torso),
+        nod: EU(UU.nod, RU.nod),
+        tilt: EU(UU.tilt, RU.tilt),
+        legs: [EU(PU, qU), EU(TU, KU)],
+        arms: EU(UU.arms, RU.arms),
+        spread: EU(UU.spread, RU.spread)
       }
     }
-    const Vi = {
+    const VE = {
         drop: .1,
         torso: .22,
         nod: -.32,
@@ -6237,44 +6237,44 @@ export const modules = {
         arms: -.75,
         spread: .32
       },
-      zi = ni(4400, !0, [
-        [0, Vi],
+      rE = IE(4400, !0, [
+        [0, VE],
         [.16, {
-          ...Vi,
+          ...VE,
           drop: .06,
           torso: .16,
           arms: -.85
         }],
-        [.3, Vi],
+        [.3, VE],
         [.44, {
-          ...Vi,
+          ...VE,
           drop: .06,
           torso: .16,
           arms: -.85
         }],
-        [.56, ai(Vi, gi, .7)],
-        [.66, ai(Vi, gi, .78)],
-        [.74, ai(Vi, Xi, .65)],
+        [.56, BE(VE, fE, .7)],
+        [.66, BE(VE, fE, .78)],
+        [.74, BE(VE, xE, .65)],
         [.86, {
-          ...Vi,
+          ...VE,
           drop: .14
         }],
-        [1, Vi]
+        [1, VE]
       ], "catmull-rom-spline"),
-      ji = {
-        ...Vi,
+      XE = {
+        ...VE,
         drop: .14,
         torso: .3,
         spread: .4
       },
-      li = {
+      vE = {
         rise: .15,
         torso: .15,
         nod: -.25,
         arms: -.6,
         spread: .35
       },
-      Li = {
+      dE = {
         drop: .06,
         torso: .18,
         nod: -.25,
@@ -6282,62 +6282,62 @@ export const modules = {
         arms: -.45,
         spread: .45
       },
-      Ti = {
-        caveGolem: zi,
-        magmaGolem: ni(3600, !0, [
-          [0, ji],
+      HE = {
+        caveGolem: rE,
+        magmaGolem: IE(3600, !0, [
+          [0, XE],
           [.12, {
-            ...ji,
+            ...XE,
             tilt: .08,
             drop: .11
           }],
           [.26, {
-            ...ji,
+            ...XE,
             tilt: -.08
           }],
           [.4, {
-            ...ji,
+            ...XE,
             tilt: .06,
             drop: .11
           }],
-          [.52, ai(ji, gi, .9)],
-          [.62, ai(ji, Xi, .8)],
-          [.7, ai(ji, Xi, .45)],
-          [.78, ai(ji, Xi, .85)],
+          [.52, BE(XE, fE, .9)],
+          [.62, BE(XE, xE, .8)],
+          [.7, BE(XE, xE, .45)],
+          [.78, BE(XE, xE, .85)],
           [.9, {
-            ...ji,
+            ...XE,
             drop: .17
           }],
-          [1, ji]
+          [1, XE]
         ], "catmull-rom-spline"),
-        frostWraith: function(DD, CD, cD) {
-          return oi(Pi, DD, CD, cD, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
+        frostWraith: function(UU, RU, gU) {
+          return QE(wE, UU, RU, gU, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
         }(4800, !0, [
-          [0, li],
+          [0, vE],
           [.14, {
-            ...li,
+            ...vE,
             rise: .25,
             tilt: .06
           }],
           [.28, {
-            ...li,
+            ...vE,
             rise: .12,
             tilt: -.04
           }],
           [.42, {
-            ...li,
+            ...vE,
             rise: .24,
             tilt: .04
           }],
           [.54, {
-            ...li,
+            ...vE,
             rise: .22,
             twist: .2,
             arms: [-.3, -1.6],
             spread: [.4, .05]
           }],
           [.64, {
-            ...li,
+            ...vE,
             rise: .26,
             twist: .2,
             torso: .05,
@@ -6345,7 +6345,7 @@ export const modules = {
             spread: [.4, .05]
           }],
           [.72, {
-            ...li,
+            ...vE,
             rise: .1,
             twist: .22,
             torso: .35,
@@ -6354,26 +6354,26 @@ export const modules = {
             spread: [.4, -.05]
           }],
           [.86, {
-            ...li,
+            ...vE,
             rise: .16,
             tilt: -.04
           }],
-          [1, li]
+          [1, vE]
         ], "catmull-rom-spline"),
-        tikiTerror: function(DD, CD, cD) {
-          return oi(xi, DD, CD, cD, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
+        tikiTerror: function(UU, RU, gU) {
+          return QE(oE, UU, RU, gU, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
         }(4400, !0, [
-          [0, Li],
+          [0, dE],
           [.16, {
-            ...Li,
+            ...dE,
             drop: .02,
             torso: .12,
             arms: -.55,
             spread: .52
           }],
-          [.3, Li],
+          [.3, dE],
           [.44, {
-            ...Li,
+            ...dE,
             drop: .02,
             torso: .12,
             arms: -.55,
@@ -6406,271 +6406,271 @@ export const modules = {
             spread: 1.1
           }],
           [.86, {
-            ...Li,
+            ...dE,
             drop: .1
           }],
-          [1, Li]
+          [1, dE]
         ], "catmull-rom-spline")
       },
-      Gi = {
+      SE = {
         golem: "caveGolem",
         wraith: "frostWraith",
         tiki: "tikiTerror"
       },
-      Ri = {
+      sE = {
         "Cave Golem": "caveGolem",
         "Magma Golem": "magmaGolem"
       },
-      ki = Object.fromEntries(Object.entries(Ti).map((DD => {
-        let [CD, cD] = DD;
-        return [CD, (0, Ki.e)((0, qi.f)(cD), CD)]
+      yE = Object.fromEntries(Object.entries(HE).map((UU => {
+        let [RU, gU] = UU;
+        return [RU, (0, YE.d)((0, ZE.f)(gU), RU)]
       })));
 
-    function di(DD) {
-      const CD = function(DD) {
-        var CD;
-        const cD = (0, Ji.c)(DD).poseRig;
-        return null !== (CD = Ri[DD]) && void 0 !== CD ? CD : void 0 === cD ? null : Gi[cD]
-      }(DD);
-      return null === CD ? null : ki[CD]
+    function kE(UU) {
+      const RU = function(UU) {
+        var RU;
+        const gU = (0, aE.d)(UU).poseRig;
+        return null !== (RU = sE[UU]) && void 0 !== RU ? RU : void 0 === gU ? null : SE[gU]
+      }(UU);
+      return null === RU ? null : yE[RU]
     }
 
-    function Yi(DD) {
+    function FE(UU) {
       return {
-        "--difficulty-colour": DD
+        "--difficulty-colour": UU
       }
     }
-    const Wi = (0, HD.lazy)((() => (0, Zi.c)(cD.e(192).then((() => cD(40574))), (DD => DD.MobPreview))));
+    const iE = (0, nU.lazy)((() => (0, hE.e)(gU.e(192).then((() => gU(40902))), (UU => UU.MobPreview))));
 
-    function si(DD) {
-      var CD, cD, ID;
+    function AE(UU) {
+      var RU, gU, tU;
       let {
-        picker: pD,
-        controller: iD
-      } = DD;
+        picker: pU,
+        controller: EU
+      } = UU;
       const {
-        t: fD
-      } = (0, xp.F)(), bD = kp(), {
-        page: QD
-      } = pD;
-      return (0, Jp.jsxs)("section", {
+        t: PU
+      } = (0, ap.B)(), TU = Fp(), {
+        page: qU
+      } = pU;
+      return (0, Bp.jsxs)("section", {
         className: "SkyblockSkillsPanel SkyblockBossPicker",
         role: "dialog",
         "aria-modal": "true",
         "aria-labelledby": "skyblockBossPickerTitle",
         tabIndex: -1,
-        ref: bD,
-        onKeyDown: DD => {
-          "ArrowLeft" === DD.key ? (DD.preventDefault(), DD.stopPropagation(), iD.previous()) : "ArrowRight" === DD.key ? (DD.preventDefault(), DD.stopPropagation(), iD.next()) : Rp(DD)
+        ref: TU,
+        onKeyDown: UU => {
+          "ArrowLeft" === UU.key ? (UU.preventDefault(), UU.stopPropagation(), EU.previous()) : "ArrowRight" === UU.key ? (UU.preventDefault(), UU.stopPropagation(), EU.next()) : kp(UU)
         },
-        style: Yi(QD.colour),
-        children: [(0, Jp.jsxs)("header", {
+        style: FE(qU.colour),
+        children: [(0, Bp.jsxs)("header", {
           className: "SkyblockSkillsHeader",
-          children: [(0, Jp.jsx)("h2", {
+          children: [(0, Bp.jsx)("h2", {
             id: "skyblockBossPickerTitle",
-            children: pD.dungeonName
-          }), (0, Jp.jsx)(Gp.l, {
+            children: pU.dungeonName
+          }), (0, Bp.jsx)(yp.h, {
             padIgnore: !0,
-            onClick: iD.dismiss
+            onClick: EU.dismiss
           })]
-        }), (0, Jp.jsxs)("div", {
+        }), (0, Bp.jsxs)("div", {
           className: "SkyblockBossPickerBody",
-          children: [(0, Jp.jsxs)("div", {
+          children: [(0, Bp.jsxs)("div", {
             className: "SkyblockBossPickerStage",
-            children: [(0, Jp.jsx)(Gp.i, {
+            children: [(0, Bp.jsx)(yp.e, {
               className: "SkyblockBossPickerTurn Previous",
-              disabled: !pD.canPrevious,
-              onClick: iD.previous,
-              children: (0, Jp.jsx)("span", {
+              disabled: !pU.canPrevious,
+              onClick: EU.previous,
+              children: (0, Bp.jsx)("span", {
                 className: "SkyblockBossPickerChevron",
-                children: (0, Jp.jsx)(ti.c, {
+                children: (0, Bp.jsx)(CE.c, {
                   name: "angle-up"
                 })
               })
-            }), (0, Jp.jsxs)("div", {
-              className: Xp()("SkyblockBossPickerBoss", {
-                Locked: !QD.unlocked
+            }), (0, Bp.jsxs)("div", {
+              className: Ip()("SkyblockBossPickerBoss", {
+                Locked: !qU.unlocked
               }),
-              children: [null !== QD.bossMobType && (0, Jp.jsx)(HD.Suspense, {
-                fallback: (0, Jp.jsx)("div", {
+              children: [null !== qU.bossMobType && (0, Bp.jsx)(nU.Suspense, {
+                fallback: (0, Bp.jsx)("div", {
                   className: "SkyblockBossPickerModel"
                 }),
-                children: (0, Jp.jsx)(Wi, {
+                children: (0, Bp.jsx)(iE, {
                   className: "SkyblockBossPickerModel",
-                  mobType: QD.bossMobType,
-                  variation: QD.bossMobVariation,
-                  animation: null !== (CD = di(QD.bossMobType)) && void 0 !== CD ? CD : void 0
+                  mobType: qU.bossMobType,
+                  variation: qU.bossMobVariation,
+                  animation: null !== (RU = kE(qU.bossMobType)) && void 0 !== RU ? RU : void 0
                 })
-              }), null === QD.bossMobType && (0, Jp.jsx)("div", {
+              }), null === qU.bossMobType && (0, Bp.jsx)("div", {
                 className: "SkyblockBossPickerModel SkyblockBossPickerUnknown",
                 "aria-hidden": "true",
                 children: "?"
               })]
-            }), (0, Jp.jsx)(Gp.i, {
+            }), (0, Bp.jsx)(yp.e, {
               className: "SkyblockBossPickerTurn Next",
-              disabled: !pD.canNext,
-              onClick: iD.next,
-              children: (0, Jp.jsx)("span", {
+              disabled: !pU.canNext,
+              onClick: EU.next,
+              children: (0, Bp.jsx)("span", {
                 className: "SkyblockBossPickerChevron",
-                children: (0, Jp.jsx)(ti.c, {
+                children: (0, Bp.jsx)(CE.c, {
                   name: "angle-up"
                 })
               })
             })]
-          }), (0, Jp.jsxs)("div", {
+          }), (0, Bp.jsxs)("div", {
             className: "SkyblockBossPickerCaption",
-            children: [(0, Jp.jsxs)("span", {
+            children: [(0, Bp.jsxs)("span", {
               className: "SkyblockBossPickerDifficulty",
-              children: [QD.beaten && (0, Jp.jsx)("span", {
+              children: [qU.beaten && (0, Bp.jsx)("span", {
                 "aria-hidden": "true",
                 children: "\u2713 "
-              }), QD.label]
-            }), (0, Jp.jsx)("strong", {
+              }), qU.label]
+            }), (0, Bp.jsx)("strong", {
               className: "SkyblockBossPickerName",
-              children: null !== (cD = QD.bossName) && void 0 !== cD ? cD : "???"
-            }), (0, Jp.jsxs)("span", {
-              className: Xp()("SkyblockBossPickerRecord", {
-                Locked: null !== QD.lockedHint
+              children: null !== (gU = qU.bossName) && void 0 !== gU ? gU : "???"
+            }), (0, Bp.jsxs)("span", {
+              className: Ip()("SkyblockBossPickerRecord", {
+                Locked: null !== qU.lockedHint
               }),
-              children: [null !== QD.lockedHintHighlight && (0, Jp.jsxs)(Jp.Fragment, {
-                children: [QD.lockedHintHighlight.before, (0, Jp.jsxs)("span", {
+              children: [null !== qU.lockedHintHighlight && (0, Bp.jsxs)(Bp.Fragment, {
+                children: [qU.lockedHintHighlight.before, (0, Bp.jsxs)("span", {
                   className: "SkyblockDifficulty",
-                  style: Yi(QD.lockedHintHighlight.colour),
-                  children: [null !== QD.lockedHintHighlight.icon && (0, Jp.jsx)("span", {
+                  style: FE(qU.lockedHintHighlight.colour),
+                  children: [null !== qU.lockedHintHighlight.icon && (0, Bp.jsx)("span", {
                     className: "SkyblockBossPickerHintIcon",
                     "aria-hidden": "true",
-                    children: (0, Jp.jsx)(Pp.d, {
-                      itemName: QD.lockedHintHighlight.icon,
+                    children: (0, Bp.jsx)(bp.c, {
+                      itemName: qU.lockedHintHighlight.icon,
                       amount: 0
                     })
-                  }), QD.lockedHintHighlight.name]
-                }), QD.lockedHintHighlight.after]
-              }), null === QD.lockedHintHighlight && (null !== (ID = QD.lockedHint) && void 0 !== ID ? ID : QD.summary)]
+                  }), qU.lockedHintHighlight.name]
+                }), qU.lockedHintHighlight.after]
+              }), null === qU.lockedHintHighlight && (null !== (tU = qU.lockedHint) && void 0 !== tU ? tU : qU.summary)]
             })]
-          }), (0, Jp.jsx)("div", {
+          }), (0, Bp.jsx)("div", {
             className: "SkyblockBossPickerDots",
             "aria-hidden": "true",
-            children: pD.pages.map((DD => (0, Jp.jsx)("span", {
-              className: Xp()("SkyblockBossPickerDot", {
-                Current: DD.current,
-                Locked: !DD.unlocked
+            children: pU.pages.map((UU => (0, Bp.jsx)("span", {
+              className: Ip()("SkyblockBossPickerDot", {
+                Current: UU.current,
+                Locked: !UU.unlocked
               }),
-              style: Yi(DD.colour)
-            }, DD.difficulty)))
-          }), (0, Jp.jsx)(Gp.r, {
+              style: FE(UU.colour)
+            }, UU.difficulty)))
+          }), (0, Bp.jsx)(yp.p, {
             className: "SkyblockBossPickerFight",
-            disabled: !QD.unlocked,
-            onClick: iD.enter,
-            children: fD("skyblockGame:dungeonFight")
+            disabled: !qU.unlocked,
+            onClick: EU.enter,
+            children: PU("skyblockGame:dungeonFight")
           })]
         })]
       })
     }
 
-    function Ei(DD) {
+    function zE(UU) {
       let {
-        dungeon: CD,
-        select: cD
-      } = DD;
-      return (0, Jp.jsxs)(Gp.i, {
-        className: Xp()("SkyblockDungeonCard", {
-          Selected: CD.selected
+        dungeon: RU,
+        select: gU
+      } = UU;
+      return (0, Bp.jsxs)(yp.e, {
+        className: Ip()("SkyblockDungeonCard", {
+          Selected: RU.selected
         }),
         onClick: () => {
-          cD(CD.id)
+          gU(RU.id)
         },
-        children: [(0, Jp.jsxs)("div", {
+        children: [(0, Bp.jsxs)("div", {
           className: "SkyblockDungeonCardTitle",
-          children: [(0, Jp.jsx)("strong", {
-            children: CD.name
-          }), (0, Jp.jsx)("span", {
-            children: CD.beatenSummary
+          children: [(0, Bp.jsx)("strong", {
+            children: RU.name
+          }), (0, Bp.jsx)("span", {
+            children: RU.beatenSummary
           })]
-        }), (0, Jp.jsx)("div", {
+        }), (0, Bp.jsx)("div", {
           className: "SkyblockDungeonChips",
-          children: CD.difficulties.map((DD => (0, Jp.jsxs)("span", {
-            className: Xp()("SkyblockDungeonChip", "SkyblockDifficulty", {
-              Beaten: DD.beaten
+          children: RU.difficulties.map((UU => (0, Bp.jsxs)("span", {
+            className: Ip()("SkyblockDungeonChip", "SkyblockDifficulty", {
+              Beaten: UU.beaten
             }),
-            style: Yi(DD.colour),
-            title: DD.summary,
-            children: [DD.beaten && (0, Jp.jsx)("span", {
+            style: FE(UU.colour),
+            title: UU.summary,
+            children: [UU.beaten && (0, Bp.jsx)("span", {
               "aria-hidden": "true",
               children: "\u2713 "
-            }), DD.label]
-          }, DD.difficulty)))
+            }), UU.label]
+          }, UU.difficulty)))
         })]
       })
     }
 
-    function ei(DD) {
+    function ME(UU) {
       let {
-        controller: CD
-      } = DD;
-      const cD = (0, qp.g)(Mc, CD.getSnapshot()),
+        controller: RU
+      } = UU;
+      const gU = (0, Yp.h)(ug, RU.getSnapshot()),
         {
-          t: ID
-        } = (0, xp.F)(),
-        pD = kp();
-      return cD.enabled ? (0, Jp.jsxs)(Tp.e, {
-        show: cD.open,
-        close: CD.dismiss,
+          t: tU
+        } = (0, ap.B)(),
+        pU = Fp();
+      return gU.enabled ? (0, Bp.jsxs)(sp.d, {
+        show: gU.open,
+        close: RU.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: [cD.picker && (0, Jp.jsx)(si, {
-          picker: cD.picker,
-          controller: CD
-        }), !cD.picker && (0, Jp.jsxs)("section", {
+        children: [gU.picker && (0, Bp.jsx)(AE, {
+          picker: gU.picker,
+          controller: RU
+        }), !gU.picker && (0, Bp.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockDungeonsPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockDungeonsTitle",
           tabIndex: -1,
-          ref: pD,
-          onKeyDown: Rp,
-          children: [(0, Jp.jsxs)("header", {
+          ref: pU,
+          onKeyDown: kp,
+          children: [(0, Bp.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, Jp.jsxs)("div", {
-              children: [(0, Jp.jsx)("h2", {
+            children: [(0, Bp.jsxs)("div", {
+              children: [(0, Bp.jsx)("h2", {
                 id: "skyblockDungeonsTitle",
-                children: ID("skyblockGame:dungeons")
-              }), (0, Jp.jsx)("p", {
-                children: ID("skyblockGame:dungeonsIntro")
+                children: tU("skyblockGame:dungeons")
+              }), (0, Bp.jsx)("p", {
+                children: tU("skyblockGame:dungeonsIntro")
               })]
-            }), (0, Jp.jsx)(Gp.l, {
+            }), (0, Bp.jsx)(yp.h, {
               padIgnore: !0,
-              onClick: CD.dismiss
+              onClick: RU.dismiss
             })]
-          }), (0, Jp.jsxs)("div", {
+          }), (0, Bp.jsxs)("div", {
             className: "SkyblockSkillsBody SkyblockDungeonsBody",
-            children: [(0, Jp.jsx)("div", {
+            children: [(0, Bp.jsx)("div", {
               className: "SkyblockDungeonList",
-              children: cD.dungeons.map((DD => (0, Jp.jsx)(Ei, {
-                dungeon: DD,
-                select: CD.select
-              }, DD.id)))
-            }), cD.detail && (0, Jp.jsxs)("div", {
+              children: gU.dungeons.map((UU => (0, Bp.jsx)(zE, {
+                dungeon: UU,
+                select: RU.select
+              }, UU.id)))
+            }), gU.detail && (0, Bp.jsxs)("div", {
               className: "SkyblockDungeonDetail",
-              children: [(0, Jp.jsx)("h3", {
-                children: cD.detail.name
-              }), (0, Jp.jsx)("ul", {
+              children: [(0, Bp.jsx)("h3", {
+                children: gU.detail.name
+              }), (0, Bp.jsx)("ul", {
                 className: "SkyblockDungeonRecords",
-                children: cD.detail.difficulties.map((DD => (0, Jp.jsxs)("li", {
-                  className: Xp()("SkyblockDungeonRecord", {
-                    Beaten: DD.beaten
+                children: gU.detail.difficulties.map((UU => (0, Bp.jsxs)("li", {
+                  className: Ip()("SkyblockDungeonRecord", {
+                    Beaten: UU.beaten
                   }),
-                  children: [(0, Jp.jsxs)("span", {
+                  children: [(0, Bp.jsxs)("span", {
                     className: "SkyblockDungeonRecordName SkyblockDifficulty",
-                    style: Yi(DD.colour),
-                    children: [DD.beaten && (0, Jp.jsx)("span", {
+                    style: FE(UU.colour),
+                    children: [UU.beaten && (0, Bp.jsx)("span", {
                       "aria-hidden": "true",
                       children: "\u2713 "
-                    }), DD.label]
-                  }), (0, Jp.jsx)("span", {
+                    }), UU.label]
+                  }), (0, Bp.jsx)("span", {
                     className: "SkyblockDungeonRecordSummary",
-                    children: DD.summary
+                    children: UU.summary
                   })]
-                }, DD.difficulty)))
+                }, UU.difficulty)))
               })]
             })]
           })]
@@ -6678,236 +6678,236 @@ export const modules = {
       }) : null
     }
 
-    function ui(DD) {
+    function DE(UU) {
       let {
-        collection: CD,
-        select: cD
-      } = DD;
-      return (0, Jp.jsxs)(Gp.i, {
-        className: Xp()("SkyblockSkillCard", "SkyblockCollectionCard", {
-          Selected: CD.selected,
-          Locked: CD.locked
+        collection: RU,
+        select: gU
+      } = UU;
+      return (0, Bp.jsxs)(yp.e, {
+        className: Ip()("SkyblockSkillCard", "SkyblockCollectionCard", {
+          Selected: RU.selected,
+          Locked: RU.locked
         }),
-        ariaPressed: CD.selected,
+        ariaPressed: RU.selected,
         onClick: () => {
-          cD(CD.id)
+          gU(RU.id)
         },
-        children: [(0, Jp.jsx)("div", {
+        children: [(0, Bp.jsx)("div", {
           className: "SkyblockSkillIcon",
-          children: (0, Jp.jsx)(Pp.d, {
-            itemName: CD.icon,
+          children: (0, Bp.jsx)(bp.c, {
+            itemName: RU.icon,
             amount: 0
           })
-        }), (0, Jp.jsxs)("div", {
+        }), (0, Bp.jsxs)("div", {
           className: "SkyblockSkillSummary",
-          children: [(0, Jp.jsxs)("div", {
+          children: [(0, Bp.jsxs)("div", {
             className: "SkyblockSkillTitle",
-            children: [(0, Jp.jsx)("strong", {
-              children: CD.name
-            }), (0, Jp.jsx)("span", {
-              children: CD.tier
+            children: [(0, Bp.jsx)("strong", {
+              children: RU.name
+            }), (0, Bp.jsx)("span", {
+              children: RU.tier
             })]
-          }), (0, Jp.jsx)(dp, {
-            percent: CD.percent,
-            label: `${CD.name}: ${CD.progress}`
-          }), (0, Jp.jsx)("span", {
+          }), (0, Bp.jsx)(ip, {
+            percent: RU.percent,
+            label: `${RU.name}: ${RU.progress}`
+          }), (0, Bp.jsx)("span", {
             className: "SkyblockSkillXp",
-            children: CD.progress
+            children: RU.progress
           })]
         })]
       })
     }
 
-    function ri(DD) {
+    function LE(UU) {
       let {
-        collection: CD
-      } = DD;
+        collection: RU
+      } = UU;
       const {
-        t: cD
-      } = (0, xp.F)();
-      return (0, Jp.jsxs)("div", {
+        t: gU
+      } = (0, ap.B)();
+      return (0, Bp.jsxs)("div", {
         className: "SkyblockSkillDetail SkyblockCollectionDetail",
-        children: [(0, Jp.jsx)("div", {
+        children: [(0, Bp.jsx)("div", {
           className: "SkyblockSkillDetailIcon",
-          children: (0, Jp.jsx)(Pp.d, {
-            itemName: CD.icon,
+          children: (0, Bp.jsx)(bp.c, {
+            itemName: RU.icon,
             amount: 0
           })
-        }), (0, Jp.jsx)("h3", {
-          children: CD.name
-        }), (0, Jp.jsx)("strong", {
+        }), (0, Bp.jsx)("h3", {
+          children: RU.name
+        }), (0, Bp.jsx)("strong", {
           className: "SkyblockSkillDetailLevel",
-          children: CD.tier
-        }), (0, Jp.jsx)("p", {
-          children: CD.locked ? cD("skyblockGame:collectionLocked") : CD.count
-        }), null !== CD.nextReward && (0, Jp.jsxs)("div", {
+          children: RU.tier
+        }), (0, Bp.jsx)("p", {
+          children: RU.locked ? gU("skyblockGame:collectionLocked") : RU.count
+        }), null !== RU.nextReward && (0, Bp.jsxs)("div", {
           className: "SkyblockSkillBenefit",
-          children: [(0, Jp.jsx)("strong", {
-            children: cD("skyblockGame:collectionNextReward")
-          }), (0, Jp.jsx)("span", {
-            children: CD.nextReward
+          children: [(0, Bp.jsx)("strong", {
+            children: gU("skyblockGame:collectionNextReward")
+          }), (0, Bp.jsx)("span", {
+            children: RU.nextReward
           })]
-        }), (0, Jp.jsx)(dp, {
-          percent: CD.percent,
-          label: CD.progress
-        }), (0, Jp.jsx)("p", {
-          children: CD.progress
+        }), (0, Bp.jsx)(ip, {
+          percent: RU.percent,
+          label: RU.progress
+        }), (0, Bp.jsx)("p", {
+          children: RU.progress
         })]
       })
     }
 
-    function Ai(DD) {
+    function NE(UU) {
       let {
-        controller: CD
-      } = DD;
-      const cD = (0, qp.g)(jc, CD.getSnapshot()),
+        controller: RU
+      } = UU;
+      const gU = (0, Yp.h)(Xg, RU.getSnapshot()),
         {
-          t: ID
-        } = (0, xp.F)(),
-        pD = kp();
-      return cD.enabled ? (0, Jp.jsx)(Tp.e, {
-        show: cD.open,
-        close: CD.dismiss,
+          t: tU
+        } = (0, ap.B)(),
+        pU = Fp();
+      return gU.enabled ? (0, Bp.jsx)(sp.d, {
+        show: gU.open,
+        close: RU.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, Jp.jsxs)("section", {
+        children: (0, Bp.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockCollectionsPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockCollectionsTitle",
           tabIndex: -1,
-          ref: pD,
-          onKeyDown: Rp,
-          children: [(0, Jp.jsxs)("header", {
+          ref: pU,
+          onKeyDown: kp,
+          children: [(0, Bp.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, Jp.jsxs)("div", {
-              children: [(0, Jp.jsx)("h2", {
+            children: [(0, Bp.jsxs)("div", {
+              children: [(0, Bp.jsx)("h2", {
                 id: "skyblockCollectionsTitle",
-                children: ID("skyblockGame:collections")
-              }), (0, Jp.jsxs)("p", {
-                children: [ID("skyblockGame:collectionsIntro"), " ", cD.tiersUnlocked]
+                children: tU("skyblockGame:collections")
+              }), (0, Bp.jsxs)("p", {
+                children: [tU("skyblockGame:collectionsIntro"), " ", gU.tiersUnlocked]
               })]
-            }), (0, Jp.jsx)(Gp.l, {
+            }), (0, Bp.jsx)(yp.h, {
               padIgnore: !0,
-              onClick: CD.dismiss
+              onClick: RU.dismiss
             })]
-          }), (0, Jp.jsx)("div", {
+          }), (0, Bp.jsx)("div", {
             className: "SkyblockCollectionCategories",
             "data-pad-tabs": "1",
-            children: cD.categories.map((DD => (0, Jp.jsxs)(Gp.i, {
-              className: Xp()("SkyblockCollectionCategory", {
-                Selected: DD.selected
+            children: gU.categories.map((UU => (0, Bp.jsxs)(yp.e, {
+              className: Ip()("SkyblockCollectionCategory", {
+                Selected: UU.selected
               }),
-              ariaPressed: DD.selected,
-              padTabSelected: DD.selected,
+              ariaPressed: UU.selected,
+              padTabSelected: UU.selected,
               onClick: () => {
-                CD.selectCategory(DD.id)
+                RU.selectCategory(UU.id)
               },
-              children: [(0, Jp.jsx)("span", {
+              children: [(0, Bp.jsx)("span", {
                 className: "SkyblockCollectionCategoryIcon",
-                children: (0, Jp.jsx)(Pp.d, {
-                  itemName: DD.icon,
+                children: (0, Bp.jsx)(bp.c, {
+                  itemName: UU.icon,
                   amount: 0
                 })
-              }), (0, Jp.jsxs)("span", {
+              }), (0, Bp.jsxs)("span", {
                 className: "SkyblockCollectionCategoryText",
-                children: [(0, Jp.jsx)("strong", {
-                  children: DD.label
-                }), (0, Jp.jsx)("span", {
-                  children: DD.tiers
+                children: [(0, Bp.jsx)("strong", {
+                  children: UU.label
+                }), (0, Bp.jsx)("span", {
+                  children: UU.tiers
                 })]
               })]
-            }, DD.id)))
-          }), (0, Jp.jsxs)("div", {
+            }, UU.id)))
+          }), (0, Bp.jsxs)("div", {
             className: "SkyblockSkillsBody",
-            children: [(0, Jp.jsx)("div", {
+            children: [(0, Bp.jsx)("div", {
               className: "SkyblockSkillsList",
               "data-pad-select-on-focus": !0,
-              children: cD.collections.map((DD => (0, Jp.jsx)(ui, {
-                collection: DD,
-                select: CD.select
-              }, DD.id)))
-            }), cD.detail && (0, Jp.jsx)(ri, {
-              collection: cD.detail
+              children: gU.collections.map((UU => (0, Bp.jsx)(DE, {
+                collection: UU,
+                select: RU.select
+              }, UU.id)))
+            }), gU.detail && (0, Bp.jsx)(LE, {
+              collection: gU.detail
             })]
           })]
         })
       }) : null
     }
-    const Fi = ["completed", "active", "available", "locked"],
-      Df = ["prerequisite", "acceptFirst", "sends", "awaits"];
+    const lE = ["completed", "active", "available", "locked"],
+      OE = ["prerequisite", "acceptFirst", "sends", "awaits"];
 
-    function Cf(DD) {
+    function UP(UU) {
       let {
-        controller: CD
-      } = DD;
-      const cD = (0, qp.g)(ec, CD.getSnapshot()),
+        controller: RU
+      } = UU;
+      const gU = (0, Yp.h)(Mg, RU.getSnapshot()),
         {
-          t: ID
-        } = (0, xp.F)(),
-        pD = kp();
-      return cD.enabled ? (0, Jp.jsx)(Tp.e, {
-        show: cD.open,
-        close: CD.dismiss,
+          t: tU
+        } = (0, ap.B)(),
+        pU = Fp();
+      return gU.enabled ? (0, Bp.jsx)(sp.d, {
+        show: gU.open,
+        close: RU.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, Jp.jsxs)("section", {
+        children: (0, Bp.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockQuestGraphPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockQuestGraphTitle",
           tabIndex: -1,
-          ref: pD,
-          onKeyDown: Rp,
-          children: [(0, Jp.jsxs)("header", {
+          ref: pU,
+          onKeyDown: kp,
+          children: [(0, Bp.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, Jp.jsxs)("div", {
-              children: [(0, Jp.jsx)("h2", {
+            children: [(0, Bp.jsxs)("div", {
+              children: [(0, Bp.jsx)("h2", {
                 id: "skyblockQuestGraphTitle",
-                children: ID("skyblockDevQuests:title")
-              }), (0, Jp.jsx)("p", {
-                children: ID("skyblockDevQuests:intro")
+                children: tU("skyblockDevQuests:title")
+              }), (0, Bp.jsx)("p", {
+                children: tU("skyblockDevQuests:intro")
               })]
-            }), (0, Jp.jsx)(Gp.l, {
-              onClick: CD.dismiss
+            }), (0, Bp.jsx)(yp.h, {
+              onClick: RU.dismiss
             })]
-          }), (0, Jp.jsxs)("div", {
+          }), (0, Bp.jsxs)("div", {
             className: "SkyblockQuestGraphLegend",
-            children: [Fi.map((DD => (0, Jp.jsx)("span", {
-              className: Xp()("SkyblockQuestGraphLegendState", DD),
-              children: ID(`skyblockDevQuests:state_${DD}`)
-            }, DD))), Df.map((DD => (0, Jp.jsxs)("span", {
+            children: [lE.map((UU => (0, Bp.jsx)("span", {
+              className: Ip()("SkyblockQuestGraphLegendState", UU),
+              children: tU(`skyblockDevQuests:state_${UU}`)
+            }, UU))), OE.map((UU => (0, Bp.jsxs)("span", {
               className: "SkyblockQuestGraphLegendEdge",
-              children: [(0, Jp.jsx)("svg", {
+              children: [(0, Bp.jsx)("svg", {
                 width: "28",
                 height: "8",
                 "aria-hidden": "true",
-                children: (0, Jp.jsx)("line", {
-                  className: Xp()("SkyblockQuestGraphEdge", DD),
+                children: (0, Bp.jsx)("line", {
+                  className: Ip()("SkyblockQuestGraphEdge", UU),
                   x1: "0",
                   y1: "4",
                   x2: "28",
                   y2: "4"
                 })
-              }), ID(`skyblockDevQuests:edge_${DD}`)]
-            }, DD)))]
-          }), (0, Jp.jsx)("div", {
+              }), tU(`skyblockDevQuests:edge_${UU}`)]
+            }, UU)))]
+          }), (0, Bp.jsx)("div", {
             className: "SkyblockQuestGraphScroll",
-            children: (0, Jp.jsxs)("div", {
-              className: Xp()("SkyblockQuestGraphCanvas", {
-                Planning: cD.planning
+            children: (0, Bp.jsxs)("div", {
+              className: Ip()("SkyblockQuestGraphCanvas", {
+                Planning: gU.planning
               }),
               style: {
-                width: cD.width,
-                height: cD.height
+                width: gU.width,
+                height: gU.height
               },
-              children: [(0, Jp.jsxs)("svg", {
+              children: [(0, Bp.jsxs)("svg", {
                 className: "SkyblockQuestGraphEdges",
-                width: cD.width,
-                height: cD.height,
+                width: gU.width,
+                height: gU.height,
                 "aria-hidden": "true",
-                children: [(0, Jp.jsx)("defs", {
-                  children: (0, Jp.jsx)("marker", {
+                children: [(0, Bp.jsx)("defs", {
+                  children: (0, Bp.jsx)("marker", {
                     id: "skyblockQuestGraphArrow",
                     viewBox: "0 0 8 8",
                     refX: "7",
@@ -6915,699 +6915,699 @@ export const modules = {
                     markerWidth: "6",
                     markerHeight: "6",
                     orient: "auto-start-reverse",
-                    children: (0, Jp.jsx)("path", {
+                    children: (0, Bp.jsx)("path", {
                       className: "SkyblockQuestGraphArrow",
                       d: "M 0 0 L 8 4 L 0 8 z"
                     })
                   })
-                }), cD.edges.map((DD => (0, Jp.jsx)("path", {
-                  className: Xp()("SkyblockQuestGraphEdge", DD.kind, {
-                    InPlan: DD.inPlan
+                }), gU.edges.map((UU => (0, Bp.jsx)("path", {
+                  className: Ip()("SkyblockQuestGraphEdge", UU.kind, {
+                    InPlan: UU.inPlan
                   }),
-                  d: DD.path,
+                  d: UU.path,
                   markerEnd: "url(#skyblockQuestGraphArrow)"
-                }, DD.key)))]
-              }), cD.nodes.map((DD => (0, Jp.jsxs)("button", {
+                }, UU.key)))]
+              }), gU.nodes.map((UU => (0, Bp.jsxs)("button", {
                 type: "button",
-                className: Xp()("SkyblockQuestGraphNode", DD.state, {
-                  InPlan: DD.inPlan,
-                  Hovered: DD.hovered
+                className: Ip()("SkyblockQuestGraphNode", UU.state, {
+                  InPlan: UU.inPlan,
+                  Hovered: UU.hovered
                 }),
                 style: {
-                  left: DD.left,
-                  top: DD.top,
+                  left: UU.left,
+                  top: UU.top,
                   width: 190,
                   height: 52
                 },
-                title: DD.id,
+                title: UU.id,
                 onMouseEnter: () => {
-                  CD.hover(DD.id)
+                  RU.hover(UU.id)
                 },
                 onMouseLeave: () => {
-                  CD.hover(null)
+                  RU.hover(null)
                 },
                 onFocus: () => {
-                  CD.hover(DD.id)
+                  RU.hover(UU.id)
                 },
                 onBlur: () => {
-                  CD.hover(null)
+                  RU.hover(null)
                 },
                 onClick: () => {
-                  CD.jump(DD.id)
+                  RU.jump(UU.id)
                 },
-                children: [(0, Jp.jsx)("strong", {
-                  children: DD.name
-                }), (0, Jp.jsx)("span", {
-                  children: DD.detail
+                children: [(0, Bp.jsx)("strong", {
+                  children: UU.name
+                }), (0, Bp.jsx)("span", {
+                  children: UU.detail
                 })]
-              }, DD.id)))]
+              }, UU.id)))]
             })
           })]
         })
       }) : null
     }
-    const If = ["skyblockGame:forgeStatPower", "skyblockGame:forgeStatDamage", "skyblockGame:forgeStatSpeed", "skyblockGame:forgeStatKnockback"],
-      pf = {
+    const RP = ["skyblockGame:forgeStatPower", "skyblockGame:forgeStatDamage", "skyblockGame:forgeStatSpeed", "skyblockGame:forgeStatKnockback"],
+      gP = {
         "--impact": "250ms",
         "--hold": "50ms",
-        "--pop-at": `${bI}ms`,
+        "--pop-at": `${Tt}ms`,
         "--forge-duration": "2150ms"
       },
-      ff = Array.from({
+      tP = Array.from({
         length: 18
-      }, ((DD, CD) => ({
-        "--ember-left": `${(4+92*(.618034*CD%1)).toFixed(1)}%`,
-        "--ember-size": 3 + CD % 3 * 2 + "px",
-        "--ember-drift": 14 * (CD % 5 - 2) + "px",
-        "--ember-duration": `${(5.5+7*CD%5*.9).toFixed(1)}s`,
-        "--ember-delay": `${(-1.37*CD%8).toFixed(2)}s`
+      }, ((UU, RU) => ({
+        "--ember-left": `${(4+92*(.618034*RU%1)).toFixed(1)}%`,
+        "--ember-size": 3 + RU % 3 * 2 + "px",
+        "--ember-drift": 14 * (RU % 5 - 2) + "px",
+        "--ember-duration": `${(5.5+7*RU%5*.9).toFixed(1)}s`,
+        "--ember-delay": `${(-1.37*RU%8).toFixed(2)}s`
       })));
 
-    function bf(DD) {
-      if (DD.style.removeProperty("--part-size"), null === DD.parentElement || "wrap" === getComputedStyle(DD.parentElement).flexWrap) return;
-      const CD = [...DD.children],
-        cD = getComputedStyle(DD),
-        ID = parseFloat(cD.getPropertyValue("--part-size")) * parseFloat(getComputedStyle(document.documentElement).fontSize),
-        pD = (DD.clientHeight - parseFloat(cD.rowGap) * (CD.length - 1)) / CD.length,
-        iD = CD.map((DD => {
-          const CD = getComputedStyle(DD),
-            cD = DD.querySelector("h3"),
-            iD = DD.querySelector(".SkyblockForgeParts");
-          if (null === cD || null === iD) return ID;
-          const fD = pD - parseFloat(CD.paddingTop) - parseFloat(CD.paddingBottom) - cD.offsetHeight - parseFloat(getComputedStyle(cD).marginBottom),
-            bD = parseFloat(getComputedStyle(iD).columnGap),
-            QD = iD.children.length;
-          let wD = 0;
-          for (let ID = 1; ID <= QD; ID++) {
-            const DD = Math.ceil(QD / ID);
-            wD = Math.max(wD, Math.min((iD.clientWidth - bD * (ID - 1)) / ID, (fD - bD * (DD - 1)) / DD))
+    function pP(UU) {
+      if (UU.style.removeProperty("--part-size"), null === UU.parentElement || "wrap" === getComputedStyle(UU.parentElement).flexWrap) return;
+      const RU = [...UU.children],
+        gU = getComputedStyle(UU),
+        tU = parseFloat(gU.getPropertyValue("--part-size")) * parseFloat(getComputedStyle(document.documentElement).fontSize),
+        pU = (UU.clientHeight - parseFloat(gU.rowGap) * (RU.length - 1)) / RU.length,
+        EU = RU.map((UU => {
+          const RU = getComputedStyle(UU),
+            gU = UU.querySelector("h3"),
+            EU = UU.querySelector(".SkyblockForgeParts");
+          if (null === gU || null === EU) return tU;
+          const PU = pU - parseFloat(RU.paddingTop) - parseFloat(RU.paddingBottom) - gU.offsetHeight - parseFloat(getComputedStyle(gU).marginBottom),
+            TU = parseFloat(getComputedStyle(EU).columnGap),
+            qU = EU.children.length;
+          let KU = 0;
+          for (let tU = 1; tU <= qU; tU++) {
+            const UU = Math.ceil(qU / tU);
+            KU = Math.max(KU, Math.min((EU.clientWidth - TU * (tU - 1)) / tU, (PU - TU * (UU - 1)) / UU))
           }
-          return wD
+          return KU
         }));
-      DD.style.setProperty("--part-size", `${Math.floor(Math.max(ID,Math.min(...iD)))}px`)
+      UU.style.setProperty("--part-size", `${Math.floor(Math.max(tU,Math.min(...EU)))}px`)
     }
 
-    function Qf(DD) {
-      var CD, cD, ID, iD, fD;
+    function EP(UU) {
+      var RU, gU, tU, EU, PU;
       let {
-        controller: bD
-      } = DD;
-      const QD = (0, qp.g)(tI, bD.getSnapshot()),
+        controller: TU
+      } = UU;
+      const qU = (0, Yp.h)(Ct, TU.getSnapshot()),
         {
-          t: wD
-        } = (0, xp.F)(),
-        SD = kp(),
-        BD = function() {
-          const DD = (0, HD.useRef)(null),
-            CD = (0, HD.useRef)(null);
-          return (0, HD.useLayoutEffect)((() => {
-            null !== DD.current && bf(DD.current)
-          })), (0, HD.useCallback)((cD => {
-            var ID;
-            null === (ID = CD.current) || void 0 === ID || ID.disconnect(), CD.current = null, DD.current = cD, null !== cD && (CD.current = new ResizeObserver((() => {
-              bf(cD)
-            })), CD.current.observe(cD))
+          t: KU
+        } = (0, ap.B)(),
+        cU = Fp(),
+        GU = function() {
+          const UU = (0, nU.useRef)(null),
+            RU = (0, nU.useRef)(null);
+          return (0, nU.useLayoutEffect)((() => {
+            null !== UU.current && pP(UU.current)
+          })), (0, nU.useCallback)((gU => {
+            var tU;
+            null === (tU = RU.current) || void 0 === tU || tU.disconnect(), RU.current = null, UU.current = gU, null !== gU && (RU.current = new ResizeObserver((() => {
+              pP(gU)
+            })), RU.current.observe(gU))
           }), [])
         }(),
-        yD = function(DD) {
-          const CD = (0, HD.useRef)(null);
-          return (0, HD.useLayoutEffect)((() => {
-            const DD = CD.current;
-            if (null !== DD) {
-              DD.style.removeProperty("font-size");
-              for (let CD = 1.7; CD > 1.1 && DD.scrollWidth > DD.clientWidth; CD -= .1) DD.style.fontSize = CD - .1 + "rem"
+        jU = function(UU) {
+          const RU = (0, nU.useRef)(null);
+          return (0, nU.useLayoutEffect)((() => {
+            const UU = RU.current;
+            if (null !== UU) {
+              UU.style.removeProperty("font-size");
+              for (let RU = 1.7; RU > 1.1 && UU.scrollWidth > UU.clientWidth; RU -= .1) UU.style.fontSize = RU - .1 + "rem"
             }
-          }), [DD]), (0, HD.useCallback)((DD => {
-            CD.current = DD
+          }), [UU]), (0, nU.useCallback)((UU => {
+            RU.current = UU
           }), [])
-        }(null === (CD = QD.preview) || void 0 === CD ? void 0 : CD.name),
-        MD = (0, HD.useRef)(null),
-        tD = (0, HD.useRef)({}),
-        ZD = QD.forging,
-        oD = null !== (cD = null === ZD || void 0 === ZD ? void 0 : ZD.preview.tier) && void 0 !== cD ? cD : 0,
-        vD = null !== (ID = null === ZD || void 0 === ZD ? void 0 : ZD.preview.named) && void 0 !== ID && ID,
-        ND = (0, HD.useMemo)((() => {
-          return null === ZD ? null : {
-            flames: (DD = oD, CD = vD, Array.from({
-              length: 26 + 6 * DD + (CD ? 20 : 0)
-            }, ((DD, CD) => {
-              const cD = CD < 6,
-                ID = Math.random() * Math.PI * 2,
-                pD = cD ? 5 + 3 * Math.random() : 6 + Math.random() ** 1.3 * 8,
-                iD = Math.cos(ID) * pD,
-                fD = Math.sin(ID) * pD - 2 - 3 * Math.random(),
-                bD = Math.random(),
-                [QD, wD, SD] = cD ? ["var(--ember-glow)", .8 + .2 * Math.random(), 1100 + 200 * Math.random()] : bD < .15 ? ["#fff6c2", .3 + .2 * Math.random(), 350 + 150 * Math.random()] : bD < .45 ? ["var(--tier)", .35 + .45 * Math.random(), 500 + 300 * Math.random()] : [bD < .7 ? "var(--ember)" : "var(--ember-glow)", .35 + .5 * Math.random(), 500 + 300 * Math.random()];
+        }(null === (RU = qU.preview) || void 0 === RU ? void 0 : RU.name),
+        uU = (0, nU.useRef)(null),
+        CU = (0, nU.useRef)({}),
+        hU = qU.forging,
+        QU = null !== (gU = null === hU || void 0 === hU ? void 0 : hU.preview.tier) && void 0 !== gU ? gU : 0,
+        eU = null !== (tU = null === hU || void 0 === hU ? void 0 : hU.preview.named) && void 0 !== tU && tU,
+        WU = (0, nU.useMemo)((() => {
+          return null === hU ? null : {
+            flames: (UU = QU, RU = eU, Array.from({
+              length: 26 + 6 * UU + (RU ? 20 : 0)
+            }, ((UU, RU) => {
+              const gU = RU < 6,
+                tU = Math.random() * Math.PI * 2,
+                pU = gU ? 5 + 3 * Math.random() : 6 + Math.random() ** 1.3 * 8,
+                EU = Math.cos(tU) * pU,
+                PU = Math.sin(tU) * pU - 2 - 3 * Math.random(),
+                TU = Math.random(),
+                [qU, KU, cU] = gU ? ["var(--ember-glow)", .8 + .2 * Math.random(), 1100 + 200 * Math.random()] : TU < .15 ? ["#fff6c2", .3 + .2 * Math.random(), 350 + 150 * Math.random()] : TU < .45 ? ["var(--tier)", .35 + .45 * Math.random(), 500 + 300 * Math.random()] : [TU < .7 ? "var(--ember)" : "var(--ember-glow)", .35 + .5 * Math.random(), 500 + 300 * Math.random()];
               return {
-                "--c": QD,
-                "--x0": `${(.15*iD).toFixed(2)}rem`,
-                "--y0": `${(.15*fD).toFixed(2)}rem`,
-                "--x": `${iD.toFixed(2)}rem`,
-                "--y": `${fD.toFixed(2)}rem`,
+                "--c": qU,
+                "--x0": `${(.15*EU).toFixed(2)}rem`,
+                "--y0": `${(.15*PU).toFixed(2)}rem`,
+                "--x": `${EU.toFixed(2)}rem`,
+                "--y": `${PU.toFixed(2)}rem`,
                 "--spin": `${Math.round(360*(Math.random()-.5))}deg`,
-                "--size": `${wD.toFixed(2)}rem`,
-                "--duration": `${Math.round(SD)}ms`,
+                "--size": `${KU.toFixed(2)}rem`,
+                "--duration": `${Math.round(cU)}ms`,
                 "--delay": `${Math.round(80*Math.random())}ms`
               }
             }))),
-            sparks: SI(oD, vD)
+            sparks: ct(QU, eU)
           };
-          var DD, CD
-        }), [null === ZD || void 0 === ZD ? void 0 : ZD.id]);
-      if (!QD.enabled) return null;
-      const gD = QD.preview,
-        XD = QD.arriving,
-        mD = null !== XD && !XD.sameSword,
-        nD = null !== gD && (0, Jp.jsx)(Pp.d, {
-          itemName: gD.baseSword,
+          var UU, RU
+        }), [null === hU || void 0 === hU ? void 0 : hU.id]);
+      if (!qU.enabled) return null;
+      const fU = qU.preview,
+        xU = qU.arriving,
+        mU = null !== xU && !xU.sameSword,
+        IU = null !== fU && (0, Bp.jsx)(bp.c, {
+          itemName: fU.baseSword,
           amount: 0,
-          enchantmentTier: gD.enchantmentTier
+          enchantmentTier: fU.enchantmentTier
         });
-      return (0, Jp.jsx)(Tp.e, {
-        show: QD.open,
-        close: bD.dismiss,
+      return (0, Bp.jsx)(sp.d, {
+        show: qU.open,
+        close: TU.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, Jp.jsxs)("section", {
+        children: (0, Bp.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockForgePanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockForgeTitle",
           tabIndex: -1,
-          ref: SD,
-          onKeyDown: Rp,
-          children: [(0, Jp.jsx)("div", {
+          ref: cU,
+          onKeyDown: kp,
+          children: [(0, Bp.jsx)("div", {
             className: "SkyblockForgeEmbers",
             "aria-hidden": "true",
-            children: ff.map(((DD, CD) => (0, Jp.jsx)("span", {
-              style: DD
-            }, CD)))
-          }), (0, Jp.jsxs)("header", {
+            children: tP.map(((UU, RU) => (0, Bp.jsx)("span", {
+              style: UU
+            }, RU)))
+          }), (0, Bp.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, Jp.jsxs)("div", {
-              children: [(0, Jp.jsx)("h2", {
+            children: [(0, Bp.jsxs)("div", {
+              children: [(0, Bp.jsx)("h2", {
                 id: "skyblockForgeTitle",
-                children: wD("skyblockGame:forgeTitle")
-              }), (0, Jp.jsx)("p", {
-                children: wD("skyblockGame:forgeIntro")
+                children: KU("skyblockGame:forgeTitle")
+              }), (0, Bp.jsx)("p", {
+                children: KU("skyblockGame:forgeIntro")
               })]
-            }), (0, Jp.jsx)(Gp.l, {
-              onClick: bD.dismiss
+            }), (0, Bp.jsx)(yp.h, {
+              onClick: TU.dismiss
             })]
-          }), (0, Jp.jsxs)("div", {
+          }), (0, Bp.jsxs)("div", {
             className: "SkyblockForgeBody",
-            children: [(0, Jp.jsx)("div", {
-              ref: BD,
-              className: Xp()("SkyblockForgeSlots", {
-                Locked: null !== ZD
+            children: [(0, Bp.jsx)("div", {
+              ref: GU,
+              className: Ip()("SkyblockForgeSlots", {
+                Locked: null !== hU
               }),
-              children: QD.slots.map((DD => (0, Jp.jsxs)("div", {
+              children: qU.slots.map((UU => (0, Bp.jsxs)("div", {
                 className: "SkyblockForgeSlot",
-                children: [(0, Jp.jsx)("h3", {
-                  children: DD.label
-                }), (0, Jp.jsx)("div", {
+                children: [(0, Bp.jsx)("h3", {
+                  children: UU.label
+                }), (0, Bp.jsx)("div", {
                   className: "SkyblockForgeParts",
-                  children: DD.parts.map((CD => (0, Jp.jsx)("button", {
+                  children: UU.parts.map((RU => (0, Bp.jsx)("button", {
                     type: "button",
-                    className: Xp()("SkyblockForgePart", {
-                      Selected: CD.selected,
-                      Missing: CD.placeholder
+                    className: Ip()("SkyblockForgePart", {
+                      Selected: RU.selected,
+                      Missing: RU.placeholder
                     }),
-                    disabled: CD.placeholder,
-                    title: CD.placeholder ? wD("skyblockGame:forgePickParts") : CD.itemName,
-                    "aria-pressed": CD.selected,
+                    disabled: RU.placeholder,
+                    title: RU.placeholder ? KU("skyblockGame:forgePickParts") : RU.itemName,
+                    "aria-pressed": RU.selected,
                     onClick: () => {
-                      bD.select(DD.kind, CD.material)
+                      TU.select(UU.kind, RU.material)
                     },
-                    children: (0, Jp.jsx)(Pp.d, {
-                      itemName: CD.itemName,
-                      amount: CD.owned
+                    children: (0, Bp.jsx)(bp.c, {
+                      itemName: RU.itemName,
+                      amount: RU.owned
                     })
-                  }, CD.material)))
+                  }, RU.material)))
                 })]
-              }, DD.kind)))
-            }), (0, Jp.jsxs)("div", {
-              className: Xp()("SkyblockForgeAnvil", {
-                Named: null === gD || void 0 === gD ? void 0 : gD.named
+              }, UU.kind)))
+            }), (0, Bp.jsxs)("div", {
+              className: Ip()("SkyblockForgeAnvil", {
+                Named: null === fU || void 0 === fU ? void 0 : fU.named
               }),
               style: {
-                "--tier": null === gD ? "transparent" : pD.lb[gD.enchantmentTier]
+                "--tier": null === fU ? "transparent" : pU.sb[fU.enchantmentTier]
               },
-              children: [(0, Jp.jsxs)("div", {
-                className: Xp()("SkyblockForgeAltar", {
-                  Forging: null !== ZD
+              children: [(0, Bp.jsxs)("div", {
+                className: Ip()("SkyblockForgeAltar", {
+                  Forging: null !== hU
                 }),
-                style: null === ZD ? void 0 : pf,
-                children: [(0, Jp.jsxs)("div", {
-                  className: Xp()("SkyblockForgeMount", {
-                    Arrive: null !== XD
+                style: null === hU ? void 0 : gP,
+                children: [(0, Bp.jsxs)("div", {
+                  className: Ip()("SkyblockForgeMount", {
+                    Arrive: null !== xU
                   }),
-                  children: [null === gD && (0, Jp.jsx)("div", {
+                  children: [null === fU && (0, Bp.jsx)("div", {
                     className: "SkyblockForgeSword Unformed",
-                    children: (0, Jp.jsx)(Pp.d, {
-                      itemName: QD.unformedSword,
+                    children: (0, Bp.jsx)(bp.c, {
+                      itemName: qU.unformedSword,
                       amount: 0
                     })
-                  }), null !== gD && (0, Jp.jsx)("div", {
+                  }), null !== fU && (0, Bp.jsx)("div", {
                     className: "SkyblockForgeGlow"
-                  }), null !== gD && null === ZD && (0, Jp.jsx)("div", {
-                    ref: MD,
+                  }), null !== fU && null === hU && (0, Bp.jsx)("div", {
+                    ref: uU,
                     className: "SkyblockForgeFloat",
-                    children: (0, Jp.jsx)("div", {
+                    children: (0, Bp.jsx)("div", {
                       className: "SkyblockForgeSword",
-                      children: nD
+                      children: IU
                     })
-                  }), null !== gD && (0, Jp.jsx)("div", {
+                  }), null !== fU && (0, Bp.jsx)("div", {
                     className: "SkyblockForgeAura",
                     "aria-hidden": "true",
-                    children: wI.map(((DD, CD) => (0, Jp.jsx)("span", {
-                      className: Xp()({
-                        Rune: "" !== DD.rune
+                    children: Kt.map(((UU, RU) => (0, Bp.jsx)("span", {
+                      className: Ip()({
+                        Rune: "" !== UU.rune
                       }),
-                      style: DD.style,
-                      children: DD.rune
-                    }, CD)))
-                  }), null !== ZD && null !== ND && (0, Jp.jsxs)(Jp.Fragment, {
-                    children: [(0, Jp.jsx)("div", {
+                      style: UU.style,
+                      children: UU.rune
+                    }, RU)))
+                  }), null !== hU && null !== WU && (0, Bp.jsxs)(Bp.Fragment, {
+                    children: [(0, Bp.jsx)("div", {
                       className: "SkyblockForgeFlash"
-                    }), (0, Jp.jsx)("div", {
+                    }), (0, Bp.jsx)("div", {
                       className: "SkyblockForgeFlames",
-                      children: ND.flames.map(((DD, CD) => (0, Jp.jsx)("span", {
-                        style: DD
-                      }, CD)))
-                    }), (0, Jp.jsx)("div", {
+                      children: WU.flames.map(((UU, RU) => (0, Bp.jsx)("span", {
+                        style: UU
+                      }, RU)))
+                    }), (0, Bp.jsx)("div", {
                       className: "SkyblockForgeSettle",
-                      style: tD.current,
-                      children: (0, Jp.jsx)("div", {
+                      style: CU.current,
+                      children: (0, Bp.jsx)("div", {
                         className: "SkyblockForgeSword",
-                        children: nD
+                        children: IU
                       })
-                    }), (0, Jp.jsx)("div", {
+                    }), (0, Bp.jsx)("div", {
                       className: "SkyblockForgeHitFlash"
-                    }), (0, Jp.jsx)("div", {
+                    }), (0, Bp.jsx)("div", {
                       className: "SkyblockForgeShock"
-                    }), (oD >= 4 || vD) && (0, Jp.jsx)("div", {
+                    }), (QU >= 4 || eU) && (0, Bp.jsx)("div", {
                       className: "SkyblockForgeShock Echo"
-                    }), (0, Jp.jsx)("div", {
+                    }), (0, Bp.jsx)("div", {
                       className: "SkyblockForgeSparks",
-                      children: ND.sparks.map(((DD, CD) => (0, Jp.jsx)("span", {
-                        style: DD
-                      }, CD)))
-                    }), (0, Jp.jsx)("div", {
+                      children: WU.sparks.map(((UU, RU) => (0, Bp.jsx)("span", {
+                        style: UU
+                      }, RU)))
+                    }), (0, Bp.jsx)("div", {
                       className: "SkyblockForgeSwing"
                     })]
                   })]
-                }), (0, Jp.jsx)("p", {
-                  className: Xp()("SkyblockForgeStatus", null === (iD = QD.status) || void 0 === iD ? void 0 : iD.tone),
-                  children: null === (fD = QD.status) || void 0 === fD ? void 0 : fD.text
+                }), (0, Bp.jsx)("p", {
+                  className: Ip()("SkyblockForgeStatus", null === (EU = qU.status) || void 0 === EU ? void 0 : EU.tone),
+                  children: null === (PU = qU.status) || void 0 === PU ? void 0 : PU.text
                 })]
-              }), null === gD && (0, Jp.jsx)("p", {
-                className: Xp()("SkyblockForgeName Waiting", {
-                  ArriveText: mD
+              }), null === fU && (0, Bp.jsx)("p", {
+                className: Ip()("SkyblockForgeName Waiting", {
+                  ArriveText: mU
                 }),
-                children: wD(QD.anyParts ? "skyblockGame:forgePickToPreview" : "skyblockGame:forgePickParts")
-              }), null !== gD && (0, Jp.jsx)("h3", {
-                ref: yD,
-                className: Xp()("SkyblockForgeName", {
-                  ArriveText: mD
+                children: KU(qU.anyParts ? "skyblockGame:forgePickToPreview" : "skyblockGame:forgePickParts")
+              }), null !== fU && (0, Bp.jsx)("h3", {
+                ref: jU,
+                className: Ip()("SkyblockForgeName", {
+                  ArriveText: mU
                 }),
-                title: gD.name,
-                children: gD.name
-              }), (null === gD || void 0 === gD ? void 0 : gD.named) && (0, Jp.jsx)("span", {
+                title: fU.name,
+                children: fU.name
+              }), (null === fU || void 0 === fU ? void 0 : fU.named) && (0, Bp.jsx)("span", {
                 className: "SkyblockForgeSecret",
-                children: wD("skyblockGame:forgeSecret")
-              }), (0, Jp.jsxs)(Gp.r, {
+                children: KU("skyblockGame:forgeSecret")
+              }), (0, Bp.jsxs)(yp.p, {
                 className: "SkyblockForgeButton",
-                disabled: !QD.canForge,
-                title: null === gD ? void 0 : wD("skyblockGame:forgeCoalOwned", {
-                  owned: String(QD.coalOwned)
+                disabled: !qU.canForge,
+                title: null === fU ? void 0 : KU("skyblockGame:forgeCoalOwned", {
+                  owned: String(qU.coalOwned)
                 }),
                 onClick: () => {
-                  tD.current = function(DD) {
-                    const CD = null === DD ? "none" : getComputedStyle(DD).transform,
-                      cD = new DOMMatrixReadOnly("none" === CD ? void 0 : CD);
+                  CU.current = function(UU) {
+                    const RU = null === UU ? "none" : getComputedStyle(UU).transform,
+                      gU = new DOMMatrixReadOnly("none" === RU ? void 0 : RU);
                     return {
-                      "--settle-y": `${cD.f.toFixed(2)}px`,
-                      "--settle-turn": `${(180*Math.atan2(cD.b,cD.a)/Math.PI).toFixed(2)}deg`
+                      "--settle-y": `${gU.f.toFixed(2)}px`,
+                      "--settle-turn": `${(180*Math.atan2(gU.b,gU.a)/Math.PI).toFixed(2)}deg`
                     }
-                  }(MD.current), MI(), bD.forge(!window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+                  }(uU.current), ut(), TU.forge(!window.matchMedia("(prefers-reduced-motion: reduce)").matches)
                 },
-                children: [wD("skyblockGame:forgeButton"), null !== gD && (0, Jp.jsxs)("span", {
-                  className: Xp()("SkyblockForgeCost", {
-                    Short: gD.coalShort
+                children: [KU("skyblockGame:forgeButton"), null !== fU && (0, Bp.jsxs)("span", {
+                  className: Ip()("SkyblockForgeCost", {
+                    Short: fU.coalShort
                   }),
-                  children: [(0, Jp.jsx)("span", {
+                  children: [(0, Bp.jsx)("span", {
                     className: "SkyblockForgeCoal",
-                    children: (0, Jp.jsx)(Pp.d, {
-                      itemName: Fc.d,
+                    children: (0, Bp.jsx)(bp.c, {
+                      itemName: Og.e,
                       amount: 0
                     })
-                  }), gD.coalCost]
+                  }), fU.coalCost]
                 })]
               })]
-            }), (0, Jp.jsxs)("div", {
-              className: Xp()("SkyblockForgeDetails", {
-                Named: null === gD || void 0 === gD ? void 0 : gD.named
+            }), (0, Bp.jsxs)("div", {
+              className: Ip()("SkyblockForgeDetails", {
+                Named: null === fU || void 0 === fU ? void 0 : fU.named
               }),
-              children: [(0, Jp.jsx)("p", {
-                className: Xp()("SkyblockForgeLore", {
-                  ArriveText: mD
+              children: [(0, Bp.jsx)("p", {
+                className: Ip()("SkyblockForgeLore", {
+                  ArriveText: mU
                 }),
-                title: null === gD || void 0 === gD ? void 0 : gD.lore,
-                children: null === gD || void 0 === gD ? void 0 : gD.lore
-              }), (0, Jp.jsxs)("dl", {
-                className: Xp()("SkyblockForgeStats", {
-                  ArriveText: mD
+                title: null === fU || void 0 === fU ? void 0 : fU.lore,
+                children: null === fU || void 0 === fU ? void 0 : fU.lore
+              }), (0, Bp.jsxs)("dl", {
+                className: Ip()("SkyblockForgeStats", {
+                  ArriveText: mU
                 }),
-                children: [null === gD && If.map((DD => (0, Jp.jsxs)("div", {
+                children: [null === fU && RP.map((UU => (0, Bp.jsxs)("div", {
                   className: "SkyblockForgeStat Empty",
-                  children: [(0, Jp.jsx)("dt", {
-                    children: wD(DD)
-                  }), (0, Jp.jsx)("dd", {
+                  children: [(0, Bp.jsx)("dt", {
+                    children: KU(UU)
+                  }), (0, Bp.jsx)("dd", {
                     children: "\u2013"
                   })]
-                }, DD))), null === gD || void 0 === gD ? void 0 : gD.stats.map((DD => (0, Jp.jsxs)("div", {
-                  className: Xp()("SkyblockForgeStat", {
-                    Better: DD.better
+                }, UU))), null === fU || void 0 === fU ? void 0 : fU.stats.map((UU => (0, Bp.jsxs)("div", {
+                  className: Ip()("SkyblockForgeStat", {
+                    Better: UU.better
                   }),
-                  children: [(0, Jp.jsx)("dt", {
-                    children: DD.label
-                  }), (0, Jp.jsx)("dd", {
-                    children: DD.value
+                  children: [(0, Bp.jsx)("dt", {
+                    children: UU.label
+                  }), (0, Bp.jsx)("dd", {
+                    children: UU.value
                   })]
-                }, DD.label)))]
-              }), (0, Jp.jsx)("ul", {
-                className: Xp()("SkyblockForgeEffects", {
-                  ArriveText: mD
+                }, UU.label)))]
+              }), (0, Bp.jsx)("ul", {
+                className: Ip()("SkyblockForgeEffects", {
+                  ArriveText: mU
                 }),
-                children: null === gD || void 0 === gD ? void 0 : gD.effects.map((DD => (0, Jp.jsx)("li", {
-                  children: DD
-                }, DD)))
+                children: null === fU || void 0 === fU ? void 0 : fU.effects.map((UU => (0, Bp.jsx)("li", {
+                  children: UU
+                }, UU)))
               })]
             })]
           })]
         })
       })
     }
-    const wf = "Doom Rivet",
-      Sf = "Doom Crest";
+    const PP = "Doom Rivet",
+      TP = "Doom Crest";
 
-    function Bf(DD) {
+    function qP(UU) {
       let {
-        itemName: CD,
-        amount: cD,
-        owned: ID
-      } = DD;
-      return (0, Jp.jsxs)("span", {
-        className: Xp()("SkyblockSmugglerPrice", {
-          Short: cD > ID
+        itemName: RU,
+        amount: gU,
+        owned: tU
+      } = UU;
+      return (0, Bp.jsxs)("span", {
+        className: Ip()("SkyblockSmugglerPrice", {
+          Short: gU > tU
         }),
-        children: [(0, Jp.jsx)("span", {
+        children: [(0, Bp.jsx)("span", {
           className: "SkyblockSmugglerPriceIcon",
-          children: (0, Jp.jsx)(Pp.d, {
-            itemName: CD,
+          children: (0, Bp.jsx)(bp.c, {
+            itemName: RU,
             amount: 0
           })
-        }), (0, Jp.jsx)("span", {
-          children: cD
+        }), (0, Bp.jsx)("span", {
+          children: gU
         })]
       })
     }
 
-    function yf(DD) {
-      return DD.justBought ? "skyblockGame:smugglerJustBought" : DD.soldOut ? "skyblockGame:smugglerSoldOut" : "skyblockGame:smugglerBuy"
+    function KP(UU) {
+      return UU.justBought ? "skyblockGame:smugglerJustBought" : UU.soldOut ? "skyblockGame:smugglerSoldOut" : "skyblockGame:smugglerBuy"
     }
 
-    function Mf(DD) {
+    function cP(UU) {
       let {
-        deal: CD,
-        view: cD,
-        buy: ID
-      } = DD;
+        deal: RU,
+        view: gU,
+        buy: tU
+      } = UU;
       const {
-        t: pD
-      } = (0, xp.F)();
-      return (0, Jp.jsxs)("div", {
-        className: Xp()("SkyblockSmugglerPocket", {
-          Bought: CD.justBought,
-          Unaffordable: !CD.affordable,
-          SoldOut: CD.soldOut && !CD.justBought
+        t: pU
+      } = (0, ap.B)();
+      return (0, Bp.jsxs)("div", {
+        className: Ip()("SkyblockSmugglerPocket", {
+          Bought: RU.justBought,
+          Unaffordable: !RU.affordable,
+          SoldOut: RU.soldOut && !RU.justBought
         }),
-        children: [(0, Jp.jsx)("span", {
+        children: [(0, Bp.jsx)("span", {
           className: "SkyblockSmugglerBuckle",
           "aria-hidden": "true"
-        }), (0, Jp.jsxs)("div", {
+        }), (0, Bp.jsxs)("div", {
           className: "SkyblockSmugglerGoods",
-          children: [(0, Jp.jsx)(Pp.d, {
-            itemName: CD.itemName,
+          children: [(0, Bp.jsx)(bp.c, {
+            itemName: RU.itemName,
             amount: 0,
-            enchantmentTier: CD.enchantmentTier
-          }), CD.amount > 1 && (0, Jp.jsx)("span", {
+            enchantmentTier: RU.enchantmentTier
+          }), RU.amount > 1 && (0, Bp.jsx)("span", {
             className: "SkyblockSmugglerAmount",
-            children: pD("skyblockGame:smugglerAmount", {
-              amount: CD.amount
+            children: pU("skyblockGame:smugglerAmount", {
+              amount: RU.amount
             })
           })]
-        }), (0, Jp.jsx)("h3", {
-          children: CD.displayName
-        }), (0, Jp.jsxs)("div", {
+        }), (0, Bp.jsx)("h3", {
+          children: RU.displayName
+        }), (0, Bp.jsxs)("div", {
           className: "SkyblockSmugglerDeal",
-          children: [(0, Jp.jsxs)("div", {
+          children: [(0, Bp.jsxs)("div", {
             className: "SkyblockSmugglerPrices",
-            children: [CD.rivets > 0 && (0, Jp.jsx)(Bf, {
-              itemName: wf,
-              amount: CD.rivets,
-              owned: cD.rivetsOwned
-            }), CD.crests > 0 && (0, Jp.jsx)(Bf, {
-              itemName: Sf,
-              amount: CD.crests,
-              owned: cD.crestsOwned
+            children: [RU.rivets > 0 && (0, Bp.jsx)(qP, {
+              itemName: PP,
+              amount: RU.rivets,
+              owned: gU.rivetsOwned
+            }), RU.crests > 0 && (0, Bp.jsx)(qP, {
+              itemName: TP,
+              amount: RU.crests,
+              owned: gU.crestsOwned
             })]
-          }), (0, Jp.jsx)(Gp.i, {
+          }), (0, Bp.jsx)(yp.e, {
             className: "SkyblockSmugglerBuy",
-            disabled: CD.soldOut || !CD.affordable || cD.pending,
+            disabled: RU.soldOut || !RU.affordable || gU.pending,
             onClick: () => {
-              ID(CD.slot)
+              tU(RU.slot)
             },
-            children: pD(yf(CD))
+            children: pU(KP(RU))
           })]
         })]
-      }, CD.justBought ? cD.boughtCount : 0)
+      }, RU.justBought ? gU.boughtCount : 0)
     }
 
-    function tf(DD) {
+    function GP(UU) {
       let {
-        controller: CD
-      } = DD;
-      const cD = (0, qp.g)(vI, CD.getSnapshot()),
+        controller: RU
+      } = UU;
+      const gU = (0, Yp.h)(et, RU.getSnapshot()),
         {
-          t: ID
-        } = (0, xp.F)(),
-        pD = kp();
-      return cD.enabled ? (0, Jp.jsx)(Tp.e, {
-        show: cD.open,
-        close: CD.dismiss,
+          t: tU
+        } = (0, ap.B)(),
+        pU = Fp();
+      return gU.enabled ? (0, Bp.jsx)(sp.d, {
+        show: gU.open,
+        close: RU.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, Jp.jsxs)("section", {
+        children: (0, Bp.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockSmugglerPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockSmugglerTitle",
           tabIndex: -1,
-          ref: pD,
-          onKeyDown: Rp,
-          children: [(0, Jp.jsx)("span", {
+          ref: pU,
+          onKeyDown: kp,
+          children: [(0, Bp.jsx)("span", {
             className: "SkyblockSmugglerStrap Left",
             "aria-hidden": "true"
-          }), (0, Jp.jsx)("span", {
+          }), (0, Bp.jsx)("span", {
             className: "SkyblockSmugglerStrap Right",
             "aria-hidden": "true"
-          }), (0, Jp.jsxs)("header", {
+          }), (0, Bp.jsxs)("header", {
             className: "SkyblockSmugglerFlap",
-            children: [(0, Jp.jsxs)("div", {
-              children: [(0, Jp.jsx)("h2", {
+            children: [(0, Bp.jsxs)("div", {
+              children: [(0, Bp.jsx)("h2", {
                 id: "skyblockSmugglerTitle",
-                children: ID("skyblockGame:smugglerTitle")
-              }), (0, Jp.jsx)("p", {
-                children: ID("skyblockGame:smugglerIntro")
+                children: tU("skyblockGame:smugglerTitle")
+              }), (0, Bp.jsx)("p", {
+                children: tU("skyblockGame:smugglerIntro")
               })]
-            }), (0, Jp.jsxs)("div", {
+            }), (0, Bp.jsxs)("div", {
               className: "SkyblockSmugglerFlapActions",
-              children: [(0, Jp.jsxs)("div", {
+              children: [(0, Bp.jsxs)("div", {
                 className: "SkyblockSmugglerWallet",
-                children: [(0, Jp.jsx)(Bf, {
-                  itemName: wf,
-                  amount: cD.rivetsOwned,
-                  owned: cD.rivetsOwned
-                }), (0, Jp.jsx)(Bf, {
-                  itemName: Sf,
-                  amount: cD.crestsOwned,
-                  owned: cD.crestsOwned
+                children: [(0, Bp.jsx)(qP, {
+                  itemName: PP,
+                  amount: gU.rivetsOwned,
+                  owned: gU.rivetsOwned
+                }), (0, Bp.jsx)(qP, {
+                  itemName: TP,
+                  amount: gU.crestsOwned,
+                  owned: gU.crestsOwned
                 })]
-              }), (0, Jp.jsx)(Gp.l, {
-                onClick: CD.dismiss
+              }), (0, Bp.jsx)(yp.h, {
+                onClick: RU.dismiss
               })]
             })]
-          }), (0, Jp.jsx)("div", {
+          }), (0, Bp.jsx)("div", {
             className: "SkyblockSmugglerPockets",
-            children: cD.deals.map((DD => (0, Jp.jsx)(Mf, {
-              deal: DD,
-              view: cD,
-              buy: CD.buy
-            }, DD.slot)))
-          }), (0, Jp.jsxs)("footer", {
+            children: gU.deals.map((UU => (0, Bp.jsx)(cP, {
+              deal: UU,
+              view: gU,
+              buy: RU.buy
+            }, UU.slot)))
+          }), (0, Bp.jsxs)("footer", {
             className: "SkyblockSmugglerBedroll",
-            children: [(0, Jp.jsx)("span", {
+            children: [(0, Bp.jsx)("span", {
               className: "SkyblockSmugglerRotates",
-              children: cD.rotatesText
-            }), null !== cD.status && (0, Jp.jsx)("span", {
-              className: Xp()("SkyblockSmugglerStatus", cD.status.tone),
-              children: cD.status.text
+              children: gU.rotatesText
+            }), null !== gU.status && (0, Bp.jsx)("span", {
+              className: Ip()("SkyblockSmugglerStatus", gU.status.tone),
+              children: gU.status.text
             })]
           })]
         })
       }) : null
     }
 
-    function Zf(DD) {
+    function jP(UU) {
       let {
-        phase: CD,
-        className: cD
-      } = DD;
-      return (0, Jp.jsx)("span", {
-        className: Xp()("SkyblockMoon", `Moon-${CD}`, cD),
+        phase: RU,
+        className: gU
+      } = UU;
+      return (0, Bp.jsx)("span", {
+        className: Ip()("SkyblockMoon", `Moon-${RU}`, gU),
         "aria-hidden": "true"
       })
     }
 
-    function of(DD) {
+    function uP(UU) {
       let {
-        controller: CD
-      } = DD;
-      const cD = (0, qp.g)(XI, CD.getSnapshot()),
+        controller: RU
+      } = UU;
+      const gU = (0, Yp.h)(xt, RU.getSnapshot()),
         {
-          t: ID
-        } = (0, xp.F)();
-      return cD.enabled ? (0, Jp.jsx)(np.e, {
+          t: tU
+        } = (0, ap.B)();
+      return gU.enabled ? (0, Bp.jsx)(wp.e, {
         placement: "statBars",
-        children: (0, Jp.jsx)("button", {
+        children: (0, Bp.jsx)("button", {
           type: "button",
           tabIndex: -1,
-          className: Xp()("SkyblockPassageChip", cD.open && "Open"),
-          "aria-label": ID("skyblockGame:passageChipLabel", {
-            phase: cD.phaseName
+          className: Ip()("SkyblockPassageChip", gU.open && "Open"),
+          "aria-label": tU("skyblockGame:passageChipLabel", {
+            phase: gU.phaseName
           }),
-          title: ID("skyblockGame:passageChipLabel", {
-            phase: cD.phaseName
+          title: tU("skyblockGame:passageChipLabel", {
+            phase: gU.phaseName
           }),
-          onMouseDown: DD => {
-            DD.preventDefault()
+          onMouseDown: UU => {
+            UU.preventDefault()
           },
-          onClick: CD.toggle,
-          children: (0, Jp.jsx)(Zf, {
-            phase: cD.phase
-          }, cD.phase)
+          onClick: RU.toggle,
+          children: (0, Bp.jsx)(jP, {
+            phase: gU.phase
+          }, gU.phase)
         })
       }) : null
     }
 
-    function vf(DD) {
+    function CP(UU) {
       let {
-        fish: CD
-      } = DD;
-      return (0, Jp.jsxs)("li", {
+        fish: RU
+      } = UU;
+      return (0, Bp.jsxs)("li", {
         className: "SkyblockPassageFish",
-        children: [(0, Jp.jsx)("span", {
+        children: [(0, Bp.jsx)("span", {
           className: "SkyblockPassageFishIcon",
-          children: (0, Jp.jsx)(Pp.d, {
-            itemName: CD.itemName,
+          children: (0, Bp.jsx)(bp.c, {
+            itemName: RU.itemName,
             amount: 0
           })
-        }), (0, Jp.jsxs)("span", {
+        }), (0, Bp.jsxs)("span", {
           className: "SkyblockPassageFishText",
-          children: [(0, Jp.jsx)("span", {
+          children: [(0, Bp.jsx)("span", {
             className: "SkyblockPassageFishName",
-            children: CD.displayName
-          }), (0, Jp.jsx)("span", {
+            children: RU.displayName
+          }), (0, Bp.jsx)("span", {
             className: "SkyblockPassageFishWhere",
-            children: CD.where
+            children: RU.where
           })]
         })]
       })
     }
 
-    function Nf(DD) {
+    function hP(UU) {
       let {
-        controller: CD
-      } = DD;
-      const cD = (0, qp.g)(XI, CD.getSnapshot()),
+        controller: RU
+      } = UU;
+      const gU = (0, Yp.h)(xt, RU.getSnapshot()),
         {
-          t: ID
-        } = (0, xp.F)(),
-        pD = kp();
-      return cD.enabled ? (0, Jp.jsx)(Tp.e, {
-        show: cD.open,
-        close: CD.dismiss,
+          t: tU
+        } = (0, ap.B)(),
+        pU = Fp();
+      return gU.enabled ? (0, Bp.jsx)(sp.d, {
+        show: gU.open,
+        close: RU.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, Jp.jsxs)("section", {
+        children: (0, Bp.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockPassagePanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockPassageTitle",
           tabIndex: -1,
-          ref: pD,
-          onKeyDown: Rp,
-          children: [(0, Jp.jsxs)("header", {
+          ref: pU,
+          onKeyDown: kp,
+          children: [(0, Bp.jsxs)("header", {
             className: "SkyblockPassageHeader",
-            children: [(0, Jp.jsx)(Zf, {
-              phase: cD.phase,
+            children: [(0, Bp.jsx)(jP, {
+              phase: gU.phase,
               className: "SkyblockPassageHeaderMoon"
-            }), (0, Jp.jsxs)("div", {
-              children: [(0, Jp.jsx)("h2", {
+            }), (0, Bp.jsxs)("div", {
+              children: [(0, Bp.jsx)("h2", {
                 id: "skyblockPassageTitle",
-                children: ID("skyblockGame:passageTitle")
-              }), (0, Jp.jsx)("p", {
+                children: tU("skyblockGame:passageTitle")
+              }), (0, Bp.jsx)("p", {
                 className: "SkyblockPassagePhase",
-                children: cD.phaseName
+                children: gU.phaseName
               })]
-            }), (0, Jp.jsx)(Gp.l, {
+            }), (0, Bp.jsx)(yp.h, {
               padIgnore: !0,
-              onClick: CD.dismiss
+              onClick: RU.dismiss
             })]
-          }), (0, Jp.jsx)("p", {
+          }), (0, Bp.jsx)("p", {
             className: "SkyblockPassageIntro",
-            children: ID("skyblockGame:passageIntro")
-          }), (0, Jp.jsxs)("div", {
+            children: tU("skyblockGame:passageIntro")
+          }), (0, Bp.jsxs)("div", {
             className: "SkyblockPassageBody",
-            children: [(0, Jp.jsxs)("section", {
+            children: [(0, Bp.jsxs)("section", {
               className: "SkyblockPassageColumn",
-              children: [(0, Jp.jsx)("h3", {
-                children: ID("skyblockGame:passageVisiting")
-              }), (0, Jp.jsx)("ul", {
+              children: [(0, Bp.jsx)("h3", {
+                children: tU("skyblockGame:passageVisiting")
+              }), (0, Bp.jsx)("ul", {
                 className: "SkyblockPassageList",
-                children: cD.visitors.map((DD => (0, Jp.jsx)(vf, {
-                  fish: DD
-                }, DD.itemName)))
+                children: gU.visitors.map((UU => (0, Bp.jsx)(CP, {
+                  fish: UU
+                }, UU.itemName)))
               })]
-            }), (0, Jp.jsxs)("section", {
+            }), (0, Bp.jsxs)("section", {
               className: "SkyblockPassageColumn",
-              children: [null !== cD.resting && (0, Jp.jsxs)(Jp.Fragment, {
-                children: [(0, Jp.jsx)("h3", {
-                  children: ID("skyblockGame:passageResting")
-                }), (0, Jp.jsx)("ul", {
+              children: [null !== gU.resting && (0, Bp.jsxs)(Bp.Fragment, {
+                children: [(0, Bp.jsx)("h3", {
+                  children: tU("skyblockGame:passageResting")
+                }), (0, Bp.jsx)("ul", {
                   className: "SkyblockPassageList Resting",
-                  children: (0, Jp.jsx)(vf, {
-                    fish: cD.resting
+                  children: (0, Bp.jsx)(CP, {
+                    fish: gU.resting
                   })
                 })]
-              }), (0, Jp.jsxs)("p", {
+              }), (0, Bp.jsxs)("p", {
                 className: "SkyblockPassageNext",
-                children: [(0, Jp.jsx)(Zf, {
-                  phase: cD.nextPhase
-                }), (0, Jp.jsx)("span", {
-                  children: cD.next
+                children: [(0, Bp.jsx)(jP, {
+                  phase: gU.nextPhase
+                }), (0, Bp.jsx)("span", {
+                  children: gU.next
                 })]
               })]
             })]
@@ -7616,664 +7616,664 @@ export const modules = {
       }) : null
     }
 
-    function gf() {
-      return (0, Jp.jsx)("span", {
+    function QP() {
+      return (0, Bp.jsx)("span", {
         className: "SkyblockLampLightSparkle",
         "aria-hidden": "true",
-        children: [0, 1, 2, 3, 4, 5].map((DD => (0, Jp.jsx)("i", {
+        children: [0, 1, 2, 3, 4, 5].map((UU => (0, Bp.jsx)("i", {
           style: {
-            "--sparkle-index": DD
+            "--sparkle-index": UU
           }
-        }, DD)))
+        }, UU)))
       })
     }
 
-    function Xf(DD) {
-      var CD;
+    function eP(UU) {
+      var RU;
       let {
-        charm: cD,
-        view: ID,
-        controller: pD
-      } = DD;
+        charm: gU,
+        view: tU,
+        controller: pU
+      } = UU;
       const {
-        t: iD
-      } = (0, xp.F)(), fD = ID.shop, bD = (null === (CD = ID.sparkle) || void 0 === CD ? void 0 : CD.id) === cD.id;
-      return (0, Jp.jsxs)("li", {
-        className: Xp()("SkyblockLampLightCharm", cD.owned && "Owned", cD.socketed && "Socketed"),
-        children: [bD && (0, Jp.jsx)(gf, {}, ID.sparkle.count), (0, Jp.jsx)("h4", {
-          children: cD.name
-        }), (0, Jp.jsx)("p", {
+        t: EU
+      } = (0, ap.B)(), PU = tU.shop, TU = (null === (RU = tU.sparkle) || void 0 === RU ? void 0 : RU.id) === gU.id;
+      return (0, Bp.jsxs)("li", {
+        className: Ip()("SkyblockLampLightCharm", gU.owned && "Owned", gU.socketed && "Socketed"),
+        children: [TU && (0, Bp.jsx)(QP, {}, tU.sparkle.count), (0, Bp.jsx)("h4", {
+          children: gU.name
+        }), (0, Bp.jsx)("p", {
           className: "SkyblockLampLightEffect",
-          children: cD.effect
-        }), (0, Jp.jsx)("ul", {
+          children: gU.effect
+        }), (0, Bp.jsx)("ul", {
           className: "SkyblockLampLightOdds",
-          children: cD.lines.map((DD => (0, Jp.jsxs)("li", {
-            className: Xp()("SkyblockLampLightOddsLine", "better" === DD.tone ? "Better" : "worse" === DD.tone ? "Worse" : "Same"),
-            children: [(0, Jp.jsx)("span", {
+          children: gU.lines.map((UU => (0, Bp.jsxs)("li", {
+            className: Ip()("SkyblockLampLightOddsLine", "better" === UU.tone ? "Better" : "worse" === UU.tone ? "Worse" : "Same"),
+            children: [(0, Bp.jsx)("span", {
               className: "Before",
-              children: DD.before
-            }), (0, Jp.jsx)("span", {
+              children: UU.before
+            }), (0, Bp.jsx)("span", {
               className: "Arrow",
               children: "\u2192"
-            }), (0, Jp.jsx)("span", {
+            }), (0, Bp.jsx)("span", {
               className: "After",
-              children: DD.after
+              children: UU.after
             })]
-          }, DD.label)))
-        }), (0, Jp.jsx)("div", {
+          }, UU.label)))
+        }), (0, Bp.jsx)("div", {
           className: "SkyblockLampLightCharmAction",
-          children: cD.owned ? cD.socketed ? (0, Jp.jsxs)(Jp.Fragment, {
-            children: [(0, Jp.jsx)("span", {
+          children: gU.owned ? gU.socketed ? (0, Bp.jsxs)(Bp.Fragment, {
+            children: [(0, Bp.jsx)("span", {
               className: "SkyblockLampLightBadge",
-              children: iD("skyblockGame:lampLightSocketed")
-            }), (0, Jp.jsx)(Gp.P, {
-              disabled: !ID.canCommand,
-              ariaLabel: iD("skyblockGame:lampLightRemoveLabel", {
-                charm: cD.name
+              children: EU("skyblockGame:lampLightSocketed")
+            }), (0, Bp.jsx)(yp.M, {
+              disabled: !tU.canCommand,
+              ariaLabel: EU("skyblockGame:lampLightRemoveLabel", {
+                charm: gU.name
               }),
               onClick: () => {
-                pD.socket(null)
+                pU.socket(null)
               },
-              children: iD("skyblockGame:lampLightRemove")
+              children: EU("skyblockGame:lampLightRemove")
             })]
-          }) : (0, Jp.jsx)(Gp.i, {
-            disabled: !ID.canCommand || !fD.heldRod,
-            ariaLabel: iD("skyblockGame:lampLightSocketLabel", {
-              charm: cD.name
+          }) : (0, Bp.jsx)(yp.e, {
+            disabled: !tU.canCommand || !PU.heldRod,
+            ariaLabel: EU("skyblockGame:lampLightSocketLabel", {
+              charm: gU.name
             }),
             onClick: () => {
-              pD.socket(cD.id)
+              pU.socket(gU.id)
             },
-            children: iD("skyblockGame:lampLightSocket")
-          }) : (0, Jp.jsx)(Gp.i, {
-            disabled: !ID.canCommand || !cD.affordable,
-            ariaLabel: iD("skyblockGame:lampLightBuyLabel", {
-              item: cD.name,
-              cost: cD.cost
+            children: EU("skyblockGame:lampLightSocket")
+          }) : (0, Bp.jsx)(yp.e, {
+            disabled: !tU.canCommand || !gU.affordable,
+            ariaLabel: EU("skyblockGame:lampLightBuyLabel", {
+              item: gU.name,
+              cost: gU.cost
             }),
             onClick: () => {
-              pD.buy(cD.id)
+              pU.buy(gU.id)
             },
-            children: cD.cost
+            children: gU.cost
           })
         })]
       })
     }
 
-    function mf(DD) {
-      var CD;
+    function WP(UU) {
+      var RU;
       let {
-        tint: cD,
-        view: ID,
-        controller: pD
-      } = DD;
+        tint: gU,
+        view: tU,
+        controller: pU
+      } = UU;
       const {
-        t: iD
-      } = (0, xp.F)();
-      return (0, Jp.jsxs)("li", {
-        className: Xp()("SkyblockLampLightTint", cD.wearing && "Wearing"),
+        t: EU
+      } = (0, ap.B)();
+      return (0, Bp.jsxs)("li", {
+        className: Ip()("SkyblockLampLightTint", gU.wearing && "Wearing"),
         style: {
-          "--tint-colour": cD.colour
+          "--tint-colour": gU.colour
         },
-        children: [(null === (CD = ID.sparkle) || void 0 === CD ? void 0 : CD.id) === cD.id && (0, Jp.jsx)(gf, {}, ID.sparkle.count), (0, Jp.jsx)("span", {
+        children: [(null === (RU = tU.sparkle) || void 0 === RU ? void 0 : RU.id) === gU.id && (0, Bp.jsx)(QP, {}, tU.sparkle.count), (0, Bp.jsx)("span", {
           className: "SkyblockLampLightSwatch",
           "aria-hidden": "true"
-        }), (0, Jp.jsx)("span", {
+        }), (0, Bp.jsx)("span", {
           className: "SkyblockLampLightTintName",
-          children: cD.name
-        }), cD.wearing ? (0, Jp.jsx)("span", {
+          children: gU.name
+        }), gU.wearing ? (0, Bp.jsx)("span", {
           className: "SkyblockLampLightBadge",
-          children: iD("skyblockGame:lampLightWearing")
-        }) : (0, Jp.jsx)(Gp.i, {
-          disabled: !ID.canCommand || !cD.owned && !cD.affordable,
-          ariaLabel: cD.owned ? iD("skyblockGame:lampLightWearLabel", {
-            tint: cD.name
-          }) : iD("skyblockGame:lampLightBuyLabel", {
-            item: cD.name,
-            cost: cD.cost
+          children: EU("skyblockGame:lampLightWearing")
+        }) : (0, Bp.jsx)(yp.e, {
+          disabled: !tU.canCommand || !gU.owned && !gU.affordable,
+          ariaLabel: gU.owned ? EU("skyblockGame:lampLightWearLabel", {
+            tint: gU.name
+          }) : EU("skyblockGame:lampLightBuyLabel", {
+            item: gU.name,
+            cost: gU.cost
           }),
           onClick: () => {
-            cD.owned ? pD.wearTint(cD.id) : pD.buy(cD.id)
+            gU.owned ? pU.wearTint(gU.id) : pU.buy(gU.id)
           },
-          children: cD.owned ? iD("skyblockGame:lampLightWear") : cD.cost
+          children: gU.owned ? EU("skyblockGame:lampLightWear") : gU.cost
         })]
       })
     }
 
-    function nf(DD) {
+    function fP(UU) {
       let {
-        controller: CD
-      } = DD;
-      const cD = (0, qp.g)(jI, CD.getSnapshot()),
+        controller: RU
+      } = UU;
+      const gU = (0, Yp.h)(vt, RU.getSnapshot()),
         {
-          t: ID
-        } = (0, xp.F)(),
-        pD = cD.shop;
-      return (0, Jp.jsxs)("div", {
+          t: tU
+        } = (0, ap.B)(),
+        pU = gU.shop;
+      return (0, Bp.jsxs)("div", {
         className: "SkyblockLampLightTab",
-        children: [(0, Jp.jsxs)("div", {
+        children: [(0, Bp.jsxs)("div", {
           className: "SkyblockLampLightTop",
-          children: [(0, Jp.jsx)("span", {
+          children: [(0, Bp.jsx)("span", {
             className: "SkyblockLampLightBalance",
-            children: cD.balance
-          }), (0, Jp.jsxs)("button", {
+            children: gU.balance
+          }), (0, Bp.jsxs)("button", {
             type: "button",
             role: "switch",
-            "aria-checked": cD.releasing,
-            className: Xp()("SkyblockLampLightSwitch", cD.releasing && "On"),
-            disabled: cD.releasing ? "ready" !== cD.status : !cD.canCommand,
+            "aria-checked": gU.releasing,
+            className: Ip()("SkyblockLampLightSwitch", gU.releasing && "On"),
+            disabled: gU.releasing ? "ready" !== gU.status : !gU.canCommand,
             onClick: () => {
-              CD.setRelease(!cD.releasing)
+              RU.setRelease(!gU.releasing)
             },
-            children: [(0, Jp.jsx)("span", {
+            children: [(0, Bp.jsx)("span", {
               className: "SkyblockLampLightSwitchTrack",
               "aria-hidden": "true",
-              children: (0, Jp.jsx)("span", {
+              children: (0, Bp.jsx)("span", {
                 className: "SkyblockLampLightSwitchKnob"
               })
-            }), ID("skyblockGame:lampLightRelease")]
-          }), (0, Jp.jsx)("span", {
+            }), tU("skyblockGame:lampLightRelease")]
+          }), (0, Bp.jsx)("span", {
             className: "SkyblockLampLightHint",
-            children: ID("skyblockGame:lampLightReleaseHint")
+            children: tU("skyblockGame:lampLightReleaseHint")
           })]
-        }), null !== cD.notice && (0, Jp.jsx)("p", {
+        }), null !== gU.notice && (0, Bp.jsx)("p", {
           className: "SkyblockLampLightNotice",
           role: "status",
-          children: cD.notice
-        }), null !== pD && (0, Jp.jsxs)(Jp.Fragment, {
-          children: [(0, Jp.jsxs)("div", {
+          children: gU.notice
+        }), null !== pU && (0, Bp.jsxs)(Bp.Fragment, {
+          children: [(0, Bp.jsxs)("div", {
             className: "SkyblockLampLightSectionHead",
-            children: [(0, Jp.jsx)("h3", {
-              children: ID("skyblockGame:lampLightCharms")
-            }), (0, Jp.jsx)("span", {
+            children: [(0, Bp.jsx)("h3", {
+              children: tU("skyblockGame:lampLightCharms")
+            }), (0, Bp.jsx)("span", {
               className: "SkyblockLampLightOddsFor",
-              children: pD.oddsFor
-            }), (0, Jp.jsx)("div", {
+              children: pU.oddsFor
+            }), (0, Bp.jsx)("div", {
               className: "SkyblockLampLightSituations",
               role: "group",
-              children: ["open", "bloom"].map((DD => (0, Jp.jsx)("button", {
+              children: ["open", "bloom"].map((UU => (0, Bp.jsx)("button", {
                 type: "button",
-                "aria-pressed": cD.situation === DD,
-                className: Xp()("SkyblockLampLightSituation", cD.situation === DD && "Selected"),
+                "aria-pressed": gU.situation === UU,
+                className: Ip()("SkyblockLampLightSituation", gU.situation === UU && "Selected"),
                 onClick: () => {
-                  CD.setSituation(DD)
+                  RU.setSituation(UU)
                 },
-                children: ID("open" === DD ? "skyblockGame:lampLightOpenWater" : "skyblockGame:lampLightInBloom")
-              }, DD)))
+                children: tU("open" === UU ? "skyblockGame:lampLightOpenWater" : "skyblockGame:lampLightInBloom")
+              }, UU)))
             })]
-          }), !pD.heldRod && (0, Jp.jsx)("p", {
+          }), !pU.heldRod && (0, Bp.jsx)("p", {
             className: "SkyblockLampLightHoldRod",
-            children: ID("skyblockGame:lampLightHoldRod")
-          }), (0, Jp.jsx)("ul", {
+            children: tU("skyblockGame:lampLightHoldRod")
+          }), (0, Bp.jsx)("ul", {
             className: "SkyblockLampLightCharms",
-            children: pD.charms.map((DD => (0, Jp.jsx)(Xf, {
-              charm: DD,
-              view: cD,
-              controller: CD
-            }, DD.id)))
-          }), (0, Jp.jsx)("div", {
+            children: pU.charms.map((UU => (0, Bp.jsx)(eP, {
+              charm: UU,
+              view: gU,
+              controller: RU
+            }, UU.id)))
+          }), (0, Bp.jsx)("div", {
             className: "SkyblockLampLightSectionHead",
-            children: (0, Jp.jsx)("h3", {
-              children: ID("skyblockGame:lampLightTints")
+            children: (0, Bp.jsx)("h3", {
+              children: tU("skyblockGame:lampLightTints")
             })
-          }), (0, Jp.jsxs)("ul", {
+          }), (0, Bp.jsxs)("ul", {
             className: "SkyblockLampLightTints",
-            children: [(0, Jp.jsxs)("li", {
-              className: Xp()("SkyblockLampLightTint", "Islands", pD.wearingIslandColours && "Wearing"),
-              children: [(0, Jp.jsx)("span", {
+            children: [(0, Bp.jsxs)("li", {
+              className: Ip()("SkyblockLampLightTint", "Islands", pU.wearingIslandColours && "Wearing"),
+              children: [(0, Bp.jsx)("span", {
                 className: "SkyblockLampLightSwatch",
                 "aria-hidden": "true"
-              }), (0, Jp.jsx)("span", {
+              }), (0, Bp.jsx)("span", {
                 className: "SkyblockLampLightTintName",
-                children: ID("skyblockGame:lampLightIslandColours")
-              }), pD.wearingIslandColours ? (0, Jp.jsx)("span", {
+                children: tU("skyblockGame:lampLightIslandColours")
+              }), pU.wearingIslandColours ? (0, Bp.jsx)("span", {
                 className: "SkyblockLampLightBadge",
-                children: ID("skyblockGame:lampLightWearing")
-              }) : (0, Jp.jsx)(Gp.i, {
-                disabled: !cD.canCommand,
-                ariaLabel: ID("skyblockGame:lampLightWearLabel", {
-                  tint: ID("skyblockGame:lampLightIslandColours")
+                children: tU("skyblockGame:lampLightWearing")
+              }) : (0, Bp.jsx)(yp.e, {
+                disabled: !gU.canCommand,
+                ariaLabel: tU("skyblockGame:lampLightWearLabel", {
+                  tint: tU("skyblockGame:lampLightIslandColours")
                 }),
                 onClick: () => {
-                  CD.wearTint(null)
+                  RU.wearTint(null)
                 },
-                children: ID("skyblockGame:lampLightWear")
+                children: tU("skyblockGame:lampLightWear")
               })]
-            }), pD.tints.map((DD => (0, Jp.jsx)(mf, {
-              tint: DD,
-              view: cD,
-              controller: CD
-            }, DD.id)))]
+            }), pU.tints.map((UU => (0, Bp.jsx)(WP, {
+              tint: UU,
+              view: gU,
+              controller: RU
+            }, UU.id)))]
           })]
         })]
       })
     }
 
-    function Of(DD) {
+    function xP(UU) {
       let {
-        controller: CD
-      } = DD;
-      const cD = (0, qp.g)(jI, CD.getSnapshot()),
+        controller: RU
+      } = UU;
+      const gU = (0, Yp.h)(vt, RU.getSnapshot()),
         {
-          t: ID
-        } = (0, xp.F)();
-      return cD.releasing ? (0, Jp.jsx)(np.e, {
-        children: (0, Jp.jsxs)("button", {
+          t: tU
+        } = (0, ap.B)();
+      return gU.releasing ? (0, Bp.jsx)(wp.e, {
+        children: (0, Bp.jsxs)("button", {
           type: "button",
           className: "SkyblockLampLightPill",
           onClick: () => {
-            CD.setRelease(!1)
+            RU.setRelease(!1)
           },
-          children: [(0, Jp.jsx)("span", {
+          children: [(0, Bp.jsx)("span", {
             className: "SkyblockLampLightPillOrb",
             "aria-hidden": "true"
-          }), (0, Jp.jsxs)("span", {
+          }), (0, Bp.jsxs)("span", {
             className: "SkyblockLampLightPillText SmallTextBold",
-            children: [ID("skyblockGame:lampLightReleasing"), " \xb7 ", cD.balance]
-          }), (0, Jp.jsx)("span", {
+            children: [tU("skyblockGame:lampLightReleasing"), " \xb7 ", gU.balance]
+          }), (0, Bp.jsx)("span", {
             className: "SkyblockLampLightPillStop SmallTextBold",
-            children: ID("skyblockGame:lampLightKeepCatches")
-          }), null !== cD.gained && (0, Jp.jsx)("span", {
+            children: tU("skyblockGame:lampLightKeepCatches")
+          }), null !== gU.gained && (0, Bp.jsx)("span", {
             className: "SkyblockLampLightPillGain SmallTextBold",
             "aria-hidden": "true",
-            children: cD.gained.text
-          }, cD.gained.count)]
+            children: gU.gained.text
+          }, gU.gained.count)]
         })
       }) : null
     }
 
-    function Pf(DD) {
+    function mP(UU) {
       let {
-        island: CD,
-        view: cD,
-        aim: ID
-      } = DD;
+        island: RU,
+        view: gU,
+        aim: tU
+      } = UU;
       const {
-        t: pD
-      } = (0, xp.F)(), iD = CD.featuredFish;
-      return (0, Jp.jsxs)("li", {
-        className: Xp()("SkyblockKeepersChairIsland", `Island-${CD.id}`, CD.favoured && "Aimed", !CD.relit && "Dark"),
-        children: [(0, Jp.jsx)("h3", {
-          children: CD.name
-        }), CD.relit && null !== iD ? (0, Jp.jsxs)("div", {
+        t: pU
+      } = (0, ap.B)(), EU = RU.featuredFish;
+      return (0, Bp.jsxs)("li", {
+        className: Ip()("SkyblockKeepersChairIsland", `Island-${RU.id}`, RU.favoured && "Aimed", !RU.relit && "Dark"),
+        children: [(0, Bp.jsx)("h3", {
+          children: RU.name
+        }), RU.relit && null !== EU ? (0, Bp.jsxs)("div", {
           className: "SkyblockKeepersChairNotice",
-          children: [(0, Jp.jsx)("span", {
+          children: [(0, Bp.jsx)("span", {
             className: "SkyblockKeepersChairNoticeLabel",
-            children: pD("skyblockGame:keepersChairTideNotice")
-          }), (0, Jp.jsx)("span", {
+            children: pU("skyblockGame:keepersChairTideNotice")
+          }), (0, Bp.jsx)("span", {
             className: "SkyblockKeepersChairFish",
-            children: (0, Jp.jsx)(Pp.d, {
-              itemName: iD.itemName,
+            children: (0, Bp.jsx)(bp.c, {
+              itemName: EU.itemName,
               amount: 0
             })
-          }), (0, Jp.jsx)("span", {
+          }), (0, Bp.jsx)("span", {
             className: "SkyblockKeepersChairFishName",
-            children: iD.displayName
+            children: EU.displayName
           })]
-        }) : (0, Jp.jsx)("div", {
+        }) : (0, Bp.jsx)("div", {
           className: "SkyblockKeepersChairNotice",
-          children: (0, Jp.jsx)("span", {
+          children: (0, Bp.jsx)("span", {
             className: "SkyblockKeepersChairDarkLens",
-            children: pD("skyblockGame:keepersChairDark")
+            children: pU("skyblockGame:keepersChairDark")
           })
-        }), CD.relit && (CD.favoured ? (0, Jp.jsx)("span", {
+        }), RU.relit && (RU.favoured ? (0, Bp.jsx)("span", {
           className: "SkyblockKeepersChairAimedBadge",
-          children: pD("skyblockGame:keepersChairAimed")
-        }) : (0, Jp.jsx)(Gp.i, {
+          children: pU("skyblockGame:keepersChairAimed")
+        }) : (0, Bp.jsx)(yp.e, {
           className: "SkyblockKeepersChairAim",
-          disabled: !cD.canAim,
-          ariaLabel: pD("skyblockGame:keepersChairAimLabel", {
-            island: CD.name
+          disabled: !gU.canAim,
+          ariaLabel: pU("skyblockGame:keepersChairAimLabel", {
+            island: RU.name
           }),
           onClick: () => {
-            ID(CD.id)
+            tU(RU.id)
           },
-          children: pD("skyblockGame:keepersChairAim")
+          children: pU("skyblockGame:keepersChairAim")
         }))]
-      }, CD.favoured ? cD.aimedCount : 0)
+      }, RU.favoured ? gU.aimedCount : 0)
     }
 
-    function Hf(DD) {
+    function IP(UU) {
       let {
-        controller: CD,
-        lampLight: cD
-      } = DD;
-      const ID = (0, qp.g)(UI, CD.getSnapshot()),
-        pD = (0, qp.g)(jI, cD.getSnapshot()),
-        [iD, fD] = (0, HD.useState)("lamp"),
+        controller: RU,
+        lampLight: gU
+      } = UU;
+      const tU = (0, Yp.h)(bt, RU.getSnapshot()),
+        pU = (0, Yp.h)(vt, gU.getSnapshot()),
+        [EU, PU] = (0, nU.useState)("lamp"),
         {
-          t: bD
-        } = (0, xp.F)(),
-        QD = kp();
-      if (!ID.enabled) return null;
-      const wD = "light" === iD && pD.enabled;
-      return (0, Jp.jsx)(Tp.e, {
-        show: ID.open,
-        close: CD.dismiss,
+          t: TU
+        } = (0, ap.B)(),
+        qU = Fp();
+      if (!tU.enabled) return null;
+      const KU = "light" === EU && pU.enabled;
+      return (0, Bp.jsx)(sp.d, {
+        show: tU.open,
+        close: RU.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, Jp.jsxs)("section", {
-          className: Xp()("SkyblockSkillsPanel", "SkyblockKeepersChairPanel", wD && "OnLampLight"),
+        children: (0, Bp.jsxs)("section", {
+          className: Ip()("SkyblockSkillsPanel", "SkyblockKeepersChairPanel", KU && "OnLampLight"),
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockKeepersChairTitle",
           tabIndex: -1,
-          ref: QD,
-          onKeyDown: Rp,
-          children: [(0, Jp.jsxs)("header", {
+          ref: qU,
+          onKeyDown: kp,
+          children: [(0, Bp.jsxs)("header", {
             className: "SkyblockKeepersChairHeader",
-            children: [(0, Jp.jsxs)("div", {
-              children: [(0, Jp.jsx)("h2", {
+            children: [(0, Bp.jsxs)("div", {
+              children: [(0, Bp.jsx)("h2", {
                 id: "skyblockKeepersChairTitle",
-                children: bD("skyblockGame:keepersChairTitle")
-              }), (0, Jp.jsx)("p", {
-                children: bD(wD ? "skyblockGame:keeperWickLampLightWelcome" : "skyblockGame:keeperWickKeepersChairWelcome")
+                children: TU("skyblockGame:keepersChairTitle")
+              }), (0, Bp.jsx)("p", {
+                children: TU(KU ? "skyblockGame:keeperWickLampLightWelcome" : "skyblockGame:keeperWickKeepersChairWelcome")
               })]
-            }), (0, Jp.jsx)(Gp.l, {
+            }), (0, Bp.jsx)(yp.h, {
               padIgnore: !0,
-              ariaLabel: bD("skyblockGame:keepersChairClose"),
-              onClick: CD.dismiss
+              ariaLabel: TU("skyblockGame:keepersChairClose"),
+              onClick: RU.dismiss
             })]
-          }), pD.enabled && (0, Jp.jsx)("div", {
+          }), pU.enabled && (0, Bp.jsx)("div", {
             className: "SkyblockKeepersChairTabs",
             role: "tablist",
             "data-pad-tabs": "1",
-            children: ["lamp", "light"].map((DD => (0, Jp.jsxs)("button", {
+            children: ["lamp", "light"].map((UU => (0, Bp.jsxs)("button", {
               type: "button",
               role: "tab",
-              "aria-selected": "light" === DD === wD,
+              "aria-selected": "light" === UU === KU,
               "data-pad-tab": !0,
-              "data-pad-selected": "light" === DD === wD ? "true" : void 0,
-              className: Xp()("SkyblockKeepersChairTab", "light" === DD === wD && "Selected"),
+              "data-pad-selected": "light" === UU === KU ? "true" : void 0,
+              className: Ip()("SkyblockKeepersChairTab", "light" === UU === KU && "Selected"),
               onClick: () => {
-                fD(DD)
+                PU(UU)
               },
-              children: [bD("lamp" === DD ? "skyblockGame:lampLightChairTab" : "skyblockGame:lampLightTab"), "light" === DD && (0, Jp.jsx)("span", {
+              children: [TU("lamp" === UU ? "skyblockGame:lampLightChairTab" : "skyblockGame:lampLightTab"), "light" === UU && (0, Bp.jsx)("span", {
                 className: "SkyblockKeepersChairTabBalance",
-                children: pD.balance
+                children: pU.balance
               })]
-            }, DD)))
-          }), wD ? (0, Jp.jsx)(nf, {
-            controller: cD
-          }) : (0, Jp.jsx)(Uf, {
-            view: ID,
-            controller: CD
+            }, UU)))
+          }), KU ? (0, Bp.jsx)(fP, {
+            controller: gU
+          }) : (0, Bp.jsx)(JP, {
+            view: tU,
+            controller: RU
           })]
         })
       })
     }
 
-    function Uf(DD) {
+    function JP(UU) {
       let {
-        view: CD,
-        controller: cD
-      } = DD;
+        view: RU,
+        controller: gU
+      } = UU;
       const {
-        t: ID
-      } = (0, xp.F)();
-      return (0, Jp.jsxs)(Jp.Fragment, {
-        children: [(0, Jp.jsx)("ul", {
+        t: tU
+      } = (0, ap.B)();
+      return (0, Bp.jsxs)(Bp.Fragment, {
+        children: [(0, Bp.jsx)("ul", {
           className: "SkyblockKeepersChairIslands",
-          children: CD.islands.map((DD => (0, Jp.jsx)(Pf, {
-            island: DD,
-            view: CD,
-            aim: cD.aim
-          }, DD.id)))
-        }), null !== CD.almanac && (0, Jp.jsxs)("div", {
+          children: RU.islands.map((UU => (0, Bp.jsx)(mP, {
+            island: UU,
+            view: RU,
+            aim: gU.aim
+          }, UU.id)))
+        }), null !== RU.almanac && (0, Bp.jsxs)("div", {
           className: "SkyblockKeepersChairAlmanac",
-          children: [(0, Jp.jsx)("span", {
+          children: [(0, Bp.jsx)("span", {
             className: "SkyblockKeepersChairAlmanacLabel",
-            children: ID("skyblockGame:passageTitle")
-          }), (0, Jp.jsxs)("span", {
+            children: tU("skyblockGame:passageTitle")
+          }), (0, Bp.jsxs)("span", {
             className: "SkyblockKeepersChairAlmanacWeek",
-            children: [(0, Jp.jsx)(Zf, {
-              phase: CD.almanac.phase
-            }), CD.almanac.phaseName]
-          }), (0, Jp.jsxs)("span", {
+            children: [(0, Bp.jsx)(jP, {
+              phase: RU.almanac.phase
+            }), RU.almanac.phaseName]
+          }), (0, Bp.jsxs)("span", {
             className: "SkyblockKeepersChairAlmanacWeek Next",
-            children: [(0, Jp.jsx)(Zf, {
-              phase: CD.almanac.nextPhase
-            }), CD.almanac.next]
+            children: [(0, Bp.jsx)(jP, {
+              phase: RU.almanac.nextPhase
+            }), RU.almanac.next]
           })]
-        }), (0, Jp.jsxs)("footer", {
+        }), (0, Bp.jsxs)("footer", {
           className: "SkyblockKeepersChairFooter",
-          children: [(0, Jp.jsx)("span", {
+          children: [(0, Bp.jsx)("span", {
             className: "SkyblockKeepersChairFavour",
-            children: ID("skyblockGame:keepersChairFavour")
-          }), CD.aimed && (0, Jp.jsx)(Gp.P, {
+            children: tU("skyblockGame:keepersChairFavour")
+          }), RU.aimed && (0, Bp.jsx)(yp.M, {
             className: "SkyblockKeepersChairRest",
-            disabled: !CD.canAim,
+            disabled: !RU.canAim,
             onClick: () => {
-              cD.aim(null)
+              gU.aim(null)
             },
-            children: ID("skyblockGame:keepersChairRest")
+            children: tU("skyblockGame:keepersChairRest")
           })]
-        }), null !== CD.status && (0, Jp.jsx)("p", {
-          className: Xp()("SkyblockKeepersChairStatus", "refused" === CD.status.tone ? "Refused" : "Shines"),
+        }), null !== RU.status && (0, Bp.jsx)("p", {
+          className: Ip()("SkyblockKeepersChairStatus", "refused" === RU.status.tone ? "Refused" : "Shines"),
           role: "status",
-          children: CD.status.text
+          children: RU.status.text
         })]
       })
     }
 
-    function xf(DD) {
+    function wP(UU) {
       let {
-        controller: CD
-      } = DD;
+        controller: RU
+      } = UU;
       const {
-        t: cD
-      } = (0, xp.F)(), ID = (0, qp.g)(qI, CD.getSnapshot());
-      if (!ID.enabled) return null;
-      const pD = ID.freshCount > 0 ? cD("skyblockGame:reachLogOpenNews", {
-        count: ID.freshCount
-      }) : cD("skyblockGame:reachLogOpen");
-      return (0, Jp.jsx)(np.e, {
+        t: gU
+      } = (0, ap.B)(), tU = (0, Yp.h)(Zt, RU.getSnapshot());
+      if (!tU.enabled) return null;
+      const pU = tU.freshCount > 0 ? gU("skyblockGame:reachLogOpenNews", {
+        count: tU.freshCount
+      }) : gU("skyblockGame:reachLogOpen");
+      return (0, Bp.jsx)(wp.e, {
         placement: "statBars",
-        children: (0, Jp.jsxs)("button", {
+        children: (0, Bp.jsxs)("button", {
           type: "button",
-          className: Xp()("SkyblockReachLogButton", ID.freshCount > 0 && "HasNews", ID.pending && "Pending"),
-          "aria-label": pD,
-          title: pD,
-          onClick: CD.ask,
-          children: [ID.news && (0, Jp.jsx)("span", {
+          className: Ip()("SkyblockReachLogButton", tU.freshCount > 0 && "HasNews", tU.pending && "Pending"),
+          "aria-label": pU,
+          title: pU,
+          onClick: RU.ask,
+          children: [tU.news && (0, Bp.jsx)("span", {
             className: "SkyblockReachLogPulse",
             "aria-hidden": "true"
-          }, `pulse:${ID.newsToken}`), (0, Jp.jsx)("span", {
-            className: Xp()("SkyblockReachLogIcon", ID.news && "Jump"),
+          }, `pulse:${tU.newsToken}`), (0, Bp.jsx)("span", {
+            className: Ip()("SkyblockReachLogIcon", tU.news && "Jump"),
             "aria-hidden": "true",
-            children: (0, Jp.jsx)(Pp.d, {
-              itemName: KI,
+            children: (0, Bp.jsx)(bp.c, {
+              itemName: Bt,
               amount: 0
             })
-          }, `icon:${ID.newsToken}`), ID.freshCount > 0 && (0, Jp.jsx)("span", {
+          }, `icon:${tU.newsToken}`), tU.freshCount > 0 && (0, Bp.jsx)("span", {
             className: "SkyblockReachLogBadge",
-            children: ID.freshCount
+            children: tU.freshCount
           })]
         })
       })
     }
 
-    function qf(DD) {
+    function nP(UU) {
       let {
-        gift: CD
-      } = DD;
-      return (0, Jp.jsx)("li", {
-        className: Xp()("SkyblockRegularsGift", CD.given && "Given"),
-        children: CD.text
+        gift: RU
+      } = UU;
+      return (0, Bp.jsx)("li", {
+        className: Ip()("SkyblockRegularsGift", RU.given && "Given"),
+        children: RU.text
       })
     }
 
-    function Jf(DD) {
+    function bP(UU) {
       let {
-        regular: CD
-      } = DD;
+        regular: RU
+      } = UU;
       const {
-        t: cD
-      } = (0, xp.F)();
-      return (0, Jp.jsxs)("li", {
-        className: Xp()("SkyblockRegularsCard", CD.tagged ? "Tagged" : "Untagged", CD.resting && "Resting"),
-        children: [(0, Jp.jsxs)("div", {
+        t: gU
+      } = (0, ap.B)();
+      return (0, Bp.jsxs)("li", {
+        className: Ip()("SkyblockRegularsCard", RU.tagged ? "Tagged" : "Untagged", RU.resting && "Resting"),
+        children: [(0, Bp.jsxs)("div", {
           className: "SkyblockRegularsCardTop",
-          children: [(0, Jp.jsx)("span", {
+          children: [(0, Bp.jsx)("span", {
             className: "SkyblockRegularsIcon",
-            title: CD.fishName,
-            children: (0, Jp.jsx)(Pp.d, {
-              itemName: CD.itemName,
+            title: RU.fishName,
+            children: (0, Bp.jsx)(bp.c, {
+              itemName: RU.itemName,
               amount: 0
             })
-          }), (0, Jp.jsxs)("div", {
+          }), (0, Bp.jsxs)("div", {
             className: "SkyblockRegularsNames",
-            children: [(0, Jp.jsx)("h3", {
-              children: CD.name
-            }), (0, Jp.jsx)("span", {
+            children: [(0, Bp.jsx)("h3", {
+              children: RU.name
+            }), (0, Bp.jsx)("span", {
               className: "SkyblockRegularsFish",
-              children: CD.fishName
+              children: RU.fishName
             })]
           })]
-        }), (0, Jp.jsx)("p", {
+        }), (0, Bp.jsx)("p", {
           className: "SkyblockRegularsLine",
-          children: CD.line
-        }), (0, Jp.jsxs)("p", {
+          children: RU.line
+        }), (0, Bp.jsxs)("p", {
           className: "SkyblockRegularsStats",
-          children: [(0, Jp.jsx)("span", {
+          children: [(0, Bp.jsx)("span", {
             className: "SkyblockRegularsSize",
-            children: CD.size
-          }), CD.tagged && (0, Jp.jsx)("span", {
+            children: RU.size
+          }), RU.tagged && (0, Bp.jsx)("span", {
             className: "SkyblockRegularsMeetings",
-            children: CD.resting ? cD("skyblockGame:regularsResting") : CD.meetings
+            children: RU.resting ? gU("skyblockGame:regularsResting") : RU.meetings
           })]
-        }), (0, Jp.jsx)("p", {
+        }), (0, Bp.jsx)("p", {
           className: "SkyblockRegularsChance",
-          children: CD.chance
-        }), (0, Jp.jsx)("ul", {
+          children: RU.chance
+        }), (0, Bp.jsx)("ul", {
           className: "SkyblockRegularsGifts",
-          children: CD.gifts.map((DD => (0, Jp.jsx)(qf, {
-            gift: DD
-          }, DD.text)))
-        }), CD.history.length > 0 && (0, Jp.jsx)("ul", {
+          children: RU.gifts.map((UU => (0, Bp.jsx)(nP, {
+            gift: UU
+          }, UU.text)))
+        }), RU.history.length > 0 && (0, Bp.jsx)("ul", {
           className: "SkyblockRegularsHistory",
-          children: CD.history.map(((DD, CD) => (0, Jp.jsx)("li", {
-            children: DD
-          }, CD)))
+          children: RU.history.map(((UU, RU) => (0, Bp.jsx)("li", {
+            children: UU
+          }, RU)))
         })]
       })
     }
 
-    function Kf(DD) {
+    function oP(UU) {
       let {
-        controller: CD,
-        island: cD
-      } = DD;
+        controller: RU,
+        island: gU
+      } = UU;
       const {
-        t: ID
-      } = (0, xp.F)(), pD = (0, qp.g)(Dp, CD.getSnapshot()), iD = pD.islands.find((DD => DD.id === cD));
-      if (!pD.enabled || void 0 === iD) return null;
-      const fD = ID("skyblockGame:regularsOpen");
-      return (0, Jp.jsxs)("button", {
+        t: tU
+      } = (0, ap.B)(), pU = (0, Yp.h)(Rp, RU.getSnapshot()), EU = pU.islands.find((UU => UU.id === gU));
+      if (!pU.enabled || void 0 === EU) return null;
+      const PU = tU("skyblockGame:regularsOpen");
+      return (0, Bp.jsxs)("button", {
         type: "button",
         className: "SkyblockRegularsStrip",
-        "aria-label": fD,
-        title: fD,
+        "aria-label": PU,
+        title: PU,
         onClick: () => {
-          CD.openIsland(cD)
+          RU.openIsland(gU)
         },
-        children: [(0, Jp.jsx)("span", {
+        children: [(0, Bp.jsx)("span", {
           className: "SkyblockRegularsStripTitle",
-          children: ID("skyblockGame:regularsTitle")
-        }), iD.regulars.map((DD => (0, Jp.jsx)("span", {
-          className: Xp()("SkyblockRegularsStripIcon", DD.tagged && "Tagged"),
-          title: DD.name,
-          children: (0, Jp.jsx)(Pp.d, {
-            itemName: DD.itemName,
+          children: tU("skyblockGame:regularsTitle")
+        }), EU.regulars.map((UU => (0, Bp.jsx)("span", {
+          className: Ip()("SkyblockRegularsStripIcon", UU.tagged && "Tagged"),
+          title: UU.name,
+          children: (0, Bp.jsx)(bp.c, {
+            itemName: UU.itemName,
             amount: 0
           })
-        }, DD.id)))]
+        }, UU.id)))]
       })
     }
 
-    function af(DD) {
-      var CD;
+    function ZP(UU) {
+      var RU;
       let {
-        controller: cD
-      } = DD;
-      const ID = (0, qp.g)(Dp, cD.getSnapshot()),
+        controller: gU
+      } = UU;
+      const tU = (0, Yp.h)(Rp, gU.getSnapshot()),
         {
-          t: pD
-        } = (0, xp.F)(),
-        iD = kp();
-      if (!ID.enabled) return null;
-      const fD = null !== (CD = ID.islands.find((DD => DD.id === ID.selected))) && void 0 !== CD ? CD : null;
-      return (0, Jp.jsx)(Tp.e, {
-        show: ID.open,
-        close: cD.dismiss,
+          t: pU
+        } = (0, ap.B)(),
+        EU = Fp();
+      if (!tU.enabled) return null;
+      const PU = null !== (RU = tU.islands.find((UU => UU.id === tU.selected))) && void 0 !== RU ? RU : null;
+      return (0, Bp.jsx)(sp.d, {
+        show: tU.open,
+        close: gU.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, Jp.jsxs)("section", {
+        children: (0, Bp.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockReachLogPanel SkyblockRegularsPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockRegularsTitle",
           tabIndex: -1,
-          ref: iD,
-          onKeyDown: Rp,
-          children: [(0, Jp.jsxs)("header", {
+          ref: EU,
+          onKeyDown: kp,
+          children: [(0, Bp.jsxs)("header", {
             className: "SkyblockReachLogHeader",
-            children: [(0, Jp.jsxs)("div", {
-              children: [(0, Jp.jsx)("h2", {
+            children: [(0, Bp.jsxs)("div", {
+              children: [(0, Bp.jsx)("h2", {
                 id: "skyblockRegularsTitle",
-                children: pD("skyblockGame:regularsTitle")
-              }), (0, Jp.jsx)("p", {
-                children: pD("skyblockGame:pimRegularsLedgerWelcome")
+                children: pU("skyblockGame:regularsTitle")
+              }), (0, Bp.jsx)("p", {
+                children: pU("skyblockGame:pimRegularsLedgerWelcome")
               })]
-            }), (0, Jp.jsx)(Gp.l, {
+            }), (0, Bp.jsx)(yp.h, {
               padIgnore: !0,
-              onClick: cD.dismiss
+              onClick: gU.dismiss
             })]
-          }), (0, Jp.jsx)("nav", {
+          }), (0, Bp.jsx)("nav", {
             className: "SkyblockReachLogTabs",
             role: "tablist",
             "data-pad-tabs": "1",
-            children: ID.islands.map((DD => {
-              const CD = DD.id === ID.selected;
-              return (0, Jp.jsx)("button", {
+            children: tU.islands.map((UU => {
+              const RU = UU.id === tU.selected;
+              return (0, Bp.jsx)("button", {
                 type: "button",
                 role: "tab",
-                "aria-selected": CD,
+                "aria-selected": RU,
                 "data-pad-tab": !0,
-                "data-pad-selected": CD ? "true" : void 0,
-                className: Xp()("SkyblockReachLogTab", `Island-${DD.id}`, CD && "Selected", DD.charm.given && "GoldPage"),
+                "data-pad-selected": RU ? "true" : void 0,
+                className: Ip()("SkyblockReachLogTab", `Island-${UU.id}`, RU && "Selected", UU.charm.given && "GoldPage"),
                 onClick: () => {
-                  cD.selectIsland(DD.id)
+                  gU.selectIsland(UU.id)
                 },
-                children: (0, Jp.jsx)("span", {
+                children: (0, Bp.jsx)("span", {
                   className: "SkyblockReachLogTabName",
-                  children: DD.name
+                  children: UU.name
                 })
-              }, DD.id)
+              }, UU.id)
             }))
-          }), (0, Jp.jsxs)("div", {
-            className: Xp()("SkyblockRegularsPage", null !== fD && `Island-${fD.id}`),
+          }), (0, Bp.jsxs)("div", {
+            className: Ip()("SkyblockRegularsPage", null !== PU && `Island-${PU.id}`),
             role: "tabpanel",
-            children: [(0, Jp.jsx)("p", {
+            children: [(0, Bp.jsx)("p", {
               className: "SkyblockRegularsHow",
-              children: pD("skyblockGame:regularsHow")
-            }), null !== fD && (0, Jp.jsx)("ul", {
+              children: pU("skyblockGame:regularsHow")
+            }), null !== PU && (0, Bp.jsx)("ul", {
               className: "SkyblockRegularsGrid",
-              children: fD.regulars.map((DD => (0, Jp.jsx)(Jf, {
-                regular: DD
-              }, DD.id)))
+              children: PU.regulars.map((UU => (0, Bp.jsx)(bP, {
+                regular: UU
+              }, UU.id)))
             })]
-          }), null !== fD && (0, Jp.jsx)("footer", {
+          }), null !== PU && (0, Bp.jsx)("footer", {
             className: "SkyblockRegularsFooter",
-            children: (0, Jp.jsx)("span", {
-              className: Xp()("SkyblockRegularsCharm", fD.charm.given && "Given"),
-              children: fD.charm.text
+            children: (0, Bp.jsx)("span", {
+              className: Ip()("SkyblockRegularsCharm", PU.charm.given && "Given"),
+              children: PU.charm.text
             })
           })]
         })
       })
     }
-    const Vf = [{
+    const aP = [{
         "--left": "12%",
         "--tilt": "14deg",
         "--duration": "11s",
@@ -8284,120 +8284,120 @@ export const modules = {
         "--duration": "14s",
         "--delay": "-9s"
       }],
-      zf = Array.from({
+      YP = Array.from({
         length: 6
-      }, ((DD, CD) => ({
-        "--x": `${(88*(.618034*CD%1)).toFixed(1)}%`,
-        "--y": `${(10+37*CD%70).toFixed(1)}%`,
-        "--size": 7 + CD % 3 * 3 + "rem",
-        "--drift-x": 3 * (CD % 3 - 1) + "rem",
-        "--drift-y": 2 * (CD % 2 === 0 ? -1 : 1) + "rem",
-        "--duration": 14 + CD % 4 * 3 + "s",
-        "--delay": 2.5 * -CD + "s"
+      }, ((UU, RU) => ({
+        "--x": `${(88*(.618034*RU%1)).toFixed(1)}%`,
+        "--y": `${(10+37*RU%70).toFixed(1)}%`,
+        "--size": 7 + RU % 3 * 3 + "rem",
+        "--drift-x": 3 * (RU % 3 - 1) + "rem",
+        "--drift-y": 2 * (RU % 2 === 0 ? -1 : 1) + "rem",
+        "--duration": 14 + RU % 4 * 3 + "s",
+        "--delay": 2.5 * -RU + "s"
       }))),
-      jf = Array.from({
+      BP = Array.from({
         length: 14
-      }, ((DD, CD) => ({
-        "--left": `${(3+94*((.618034*CD+.3)%1)).toFixed(1)}%`,
-        "--size": 4 + CD % 4 * 2 + "px",
-        "--sway": CD % 3 * 3 + 3 + "px",
-        "--duration": `${(8+7*CD%6*1.1).toFixed(1)}s`,
-        "--delay": `${(-1.73*CD%12).toFixed(2)}s`
+      }, ((UU, RU) => ({
+        "--left": `${(3+94*((.618034*RU+.3)%1)).toFixed(1)}%`,
+        "--size": 4 + RU % 4 * 2 + "px",
+        "--sway": RU % 3 * 3 + 3 + "px",
+        "--duration": `${(8+7*RU%6*1.1).toFixed(1)}s`,
+        "--delay": `${(-1.73*RU%12).toFixed(2)}s`
       }))),
-      lf = (0, HD.memo)((function(DD) {
+      VP = (0, nU.memo)((function(UU) {
         let {
-          island: CD
-        } = DD;
-        return (0, Jp.jsxs)("div", {
-          className: Xp()("SkyblockReachLogDepths", null !== CD && `Island-${CD}`),
+          island: RU
+        } = UU;
+        return (0, Bp.jsxs)("div", {
+          className: Ip()("SkyblockReachLogDepths", null !== RU && `Island-${RU}`),
           "aria-hidden": "true",
-          children: [Vf.map(((DD, CD) => (0, Jp.jsx)("span", {
+          children: [aP.map(((UU, RU) => (0, Bp.jsx)("span", {
             className: "SkyblockReachLogShaft",
-            style: DD
-          }, `shaft${CD}`))), zf.map(((DD, CD) => (0, Jp.jsx)("span", {
-            className: Xp()("SkyblockReachLogMote", CD % 2 === 1 && "Violet"),
-            style: DD
-          }, `mote${CD}`))), jf.map(((DD, CD) => (0, Jp.jsx)("span", {
+            style: UU
+          }, `shaft${RU}`))), YP.map(((UU, RU) => (0, Bp.jsx)("span", {
+            className: Ip()("SkyblockReachLogMote", RU % 2 === 1 && "Violet"),
+            style: UU
+          }, `mote${RU}`))), BP.map(((UU, RU) => (0, Bp.jsx)("span", {
             className: "SkyblockReachLogBubble",
-            style: DD
-          }, `bubble${CD}`)))]
+            style: UU
+          }, `bubble${RU}`)))]
         })
       })),
-      Lf = 100;
+      rP = 100;
 
-    function Tf(DD) {
+    function XP(UU) {
       let {
-        view: CD
-      } = DD;
+        view: RU
+      } = UU;
       const {
-        t: cD
-      } = (0, xp.F)();
-      if (null === CD || 0 === CD.total) return null;
-      const ID = Lf * CD.aspect,
-        pD = cD("skyblockGame:hiddenWatersCount", {
-          found: CD.found,
-          total: CD.total
+        t: gU
+      } = (0, ap.B)();
+      if (null === RU || 0 === RU.total) return null;
+      const tU = rP * RU.aspect,
+        pU = gU("skyblockGame:hiddenWatersCount", {
+          found: RU.found,
+          total: RU.total
         });
-      return (0, Jp.jsxs)("div", {
+      return (0, Bp.jsxs)("div", {
         className: "SkyblockHiddenWatersStrip",
-        title: `${cD("skyblockGame:hiddenWatersTitle")}: ${pD}`,
-        children: [(0, Jp.jsxs)("svg", {
+        title: `${gU("skyblockGame:hiddenWatersTitle")}: ${pU}`,
+        children: [(0, Bp.jsxs)("svg", {
           className: "SkyblockHiddenWatersOutline",
-          viewBox: `0 0 100 ${ID}`,
+          viewBox: `0 0 100 ${tU}`,
           "aria-hidden": "true",
-          children: [CD.islands.map(((DD, CD) => (0, Jp.jsx)("ellipse", {
+          children: [RU.islands.map(((UU, RU) => (0, Bp.jsx)("ellipse", {
             className: "SkyblockHiddenWatersIsland",
-            cx: (DD.left + DD.width / 2) * Lf,
-            cy: (DD.top + DD.height / 2) * ID,
-            rx: DD.width / 2 * Lf,
-            ry: DD.height / 2 * ID
-          }, CD))), CD.pins.map(((DD, CD) => (0, Jp.jsx)("circle", {
+            cx: (UU.left + UU.width / 2) * rP,
+            cy: (UU.top + UU.height / 2) * tU,
+            rx: UU.width / 2 * rP,
+            ry: UU.height / 2 * tU
+          }, RU))), RU.pins.map(((UU, RU) => (0, Bp.jsx)("circle", {
             className: "SkyblockHiddenWatersPin",
-            cx: DD.left * Lf,
-            cy: DD.top * ID,
+            cx: UU.left * rP,
+            cy: UU.top * tU,
             r: 13
-          }, CD)))]
-        }), (0, Jp.jsxs)("span", {
+          }, RU)))]
+        }), (0, Bp.jsxs)("span", {
           className: "SkyblockHiddenWatersText",
-          children: [(0, Jp.jsx)("span", {
+          children: [(0, Bp.jsx)("span", {
             className: "SkyblockHiddenWatersTitle",
-            children: cD("skyblockGame:hiddenWatersTitle")
-          }), (0, Jp.jsx)("span", {
-            className: CD.found === CD.total ? "SkyblockHiddenWatersCount AllFound" : "SkyblockHiddenWatersCount",
-            children: pD
+            children: gU("skyblockGame:hiddenWatersTitle")
+          }), (0, Bp.jsx)("span", {
+            className: RU.found === RU.total ? "SkyblockHiddenWatersCount AllFound" : "SkyblockHiddenWatersCount",
+            children: pU
           })]
         })]
       })
     }
 
-    function Gf(DD) {
+    function vP(UU) {
       let {
-        view: CD,
-        island: cD
-      } = DD;
+        view: RU,
+        island: gU
+      } = UU;
       const {
-        t: ID
-      } = (0, xp.F)(), pD = null === CD || void 0 === CD ? void 0 : CD.glimpses.get(cD);
-      return void 0 === pD || 0 === pD.length ? null : (0, Jp.jsxs)("div", {
+        t: tU
+      } = (0, ap.B)(), pU = null === RU || void 0 === RU ? void 0 : RU.glimpses.get(gU);
+      return void 0 === pU || 0 === pU.length ? null : (0, Bp.jsxs)("div", {
         className: "SkyblockHiddenWatersGlimpses",
-        children: [(0, Jp.jsx)("span", {
+        children: [(0, Bp.jsx)("span", {
           className: "SkyblockHiddenWatersGlimpsesTitle",
-          children: ID("skyblockGame:hiddenWatersGlimpsed")
-        }), (0, Jp.jsx)("span", {
+          children: tU("skyblockGame:hiddenWatersGlimpsed")
+        }), (0, Bp.jsx)("span", {
           className: "SkyblockHiddenWatersGlimpsesRow",
-          children: pD.map((DD => (0, Jp.jsx)("span", {
+          children: pU.map((UU => (0, Bp.jsx)("span", {
             className: "SkyblockHiddenWatersSilhouette",
             "aria-hidden": "true",
-            children: (0, Jp.jsx)(Pp.d, {
-              itemName: DD,
+            children: (0, Bp.jsx)(bp.c, {
+              itemName: UU,
               amount: 0
             })
-          }, DD)))
+          }, UU)))
         })]
       })
     }
-    const Rf = ["Bronze", "Silver", "Gold"],
-      kf = [{
+    const dP = ["Bronze", "Silver", "Gold"],
+      HP = [{
         className: "Bloom",
         titleKey: "skyblockGame:reachLogRibbonBloomTitle",
         legendKey: "skyblockGame:reachLogLegendBloom"
@@ -8410,481 +8410,481 @@ export const modules = {
         titleKey: "skyblockGame:reachLogRibbonLetGoTitle",
         legendKey: "skyblockGame:reachLogLegendLetGo"
       }],
-      df = kf.slice(0, 2);
+      SP = HP.slice(0, 2);
 
-    function Yf(DD) {
-      return DD ? kf : df
+    function sP(UU) {
+      return UU ? HP : SP
     }
 
-    function Wf(DD) {
+    function yP(UU) {
       let {
-        fish: CD,
-        letGoShown: cD
-      } = DD;
+        fish: RU,
+        letGoShown: gU
+      } = UU;
       const {
-        t: ID
-      } = (0, xp.F)();
-      return (0, Jp.jsxs)("span", {
+        t: tU
+      } = (0, ap.B)();
+      return (0, Bp.jsxs)("span", {
         className: "SkyblockReachLogMarks",
-        children: [Rf.map(((DD, cD) => {
-          const pD = cD < CD.marks;
-          return (0, Jp.jsx)("span", {
-            className: Xp()("SkyblockReachLogPip", DD, pD && "Earned", pD && CD.fresh && cD === CD.marks - 1 && "Newest"),
-            title: ID(JI[cD])
-          }, DD)
-        })), (0, Jp.jsx)("span", {
+        children: [dP.map(((UU, gU) => {
+          const pU = gU < RU.marks;
+          return (0, Bp.jsx)("span", {
+            className: Ip()("SkyblockReachLogPip", UU, pU && "Earned", pU && RU.fresh && gU === RU.marks - 1 && "Newest"),
+            title: tU(Yt[gU])
+          }, UU)
+        })), (0, Bp.jsx)("span", {
           className: "SkyblockReachLogDivider"
-        }), Yf(cD).map(((DD, cD) => (0, Jp.jsx)("span", {
-          className: Xp()("SkyblockReachLogRibbon", DD.className, !0 === CD.ribbons[cD] && "Earned"),
-          title: ID(DD.titleKey)
-        }, DD.className)))]
+        }), sP(gU).map(((UU, gU) => (0, Bp.jsx)("span", {
+          className: Ip()("SkyblockReachLogRibbon", UU.className, !0 === RU.ribbons[gU] && "Earned"),
+          title: tU(UU.titleKey)
+        }, UU.className)))]
       })
     }
 
-    function sf(DD) {
+    function kP(UU) {
       let {
-        letGoShown: CD,
-        haloShown: cD
-      } = DD;
+        letGoShown: RU,
+        haloShown: gU
+      } = UU;
       const {
-        t: ID
-      } = (0, xp.F)();
-      return (0, Jp.jsxs)("span", {
+        t: tU
+      } = (0, ap.B)();
+      return (0, Bp.jsxs)("span", {
         className: "SkyblockReachLogLegend",
-        children: [(0, Jp.jsxs)("span", {
+        children: [(0, Bp.jsxs)("span", {
           className: "SkyblockReachLogLegendItem",
-          title: ID("skyblockGame:reachLogMarks"),
-          children: [(0, Jp.jsx)("span", {
+          title: tU("skyblockGame:reachLogMarks"),
+          children: [(0, Bp.jsx)("span", {
             className: "SkyblockReachLogPip Gold Earned"
-          }), ID("skyblockGame:reachLogLegendMarks")]
-        }), Yf(CD).map((DD => (0, Jp.jsxs)("span", {
+          }), tU("skyblockGame:reachLogLegendMarks")]
+        }), sP(RU).map((UU => (0, Bp.jsxs)("span", {
           className: "SkyblockReachLogLegendItem",
-          title: ID(DD.titleKey),
-          children: [(0, Jp.jsx)("span", {
-            className: Xp()("SkyblockReachLogRibbon", DD.className, "Earned")
-          }), ID(DD.legendKey)]
-        }, DD.className))), (0, Jp.jsxs)("span", {
+          title: tU(UU.titleKey),
+          children: [(0, Bp.jsx)("span", {
+            className: Ip()("SkyblockReachLogRibbon", UU.className, "Earned")
+          }), tU(UU.legendKey)]
+        }, UU.className))), (0, Bp.jsxs)("span", {
           className: "SkyblockReachLogLegendItem",
-          title: ID("skyblockGame:reachLogGlimmerTitle"),
-          children: [(0, Jp.jsx)("span", {
+          title: tU("skyblockGame:reachLogGlimmerTitle"),
+          children: [(0, Bp.jsx)("span", {
             className: "SkyblockReachLogGlimmer"
-          }), ID("skyblockGame:reachLogLegendGlimmer")]
-        }), cD && (0, Jp.jsxs)("span", {
+          }), tU("skyblockGame:reachLogLegendGlimmer")]
+        }), gU && (0, Bp.jsxs)("span", {
           className: "SkyblockReachLogLegendItem",
-          title: ID("skyblockGame:reachLogHaloTitle"),
-          children: [(0, Jp.jsx)("span", {
+          title: tU("skyblockGame:reachLogHaloTitle"),
+          children: [(0, Bp.jsx)("span", {
             className: "SkyblockReachLogHalo"
-          }), ID("skyblockGame:reachLogLegendHalo")]
+          }), tU("skyblockGame:reachLogLegendHalo")]
         })]
       })
     }
 
-    function Ef(DD) {
+    function FP(UU) {
       let {
-        returner: CD
-      } = DD;
-      return (0, Jp.jsxs)("div", {
-        className: Xp()("SkyblockReachLogReturner", CD.back && "Back"),
-        children: [(0, Jp.jsx)("span", {
+        returner: RU
+      } = UU;
+      return (0, Bp.jsxs)("div", {
+        className: Ip()("SkyblockReachLogReturner", RU.back && "Back"),
+        children: [(0, Bp.jsx)("span", {
           className: "SkyblockReachLogReturnerIcon",
           "aria-hidden": "true",
-          children: (0, Jp.jsx)(Pp.d, {
-            itemName: CD.itemName,
+          children: (0, Bp.jsx)(bp.c, {
+            itemName: RU.itemName,
             amount: 0
           })
-        }), (0, Jp.jsx)("span", {
+        }), (0, Bp.jsx)("span", {
           className: "SkyblockReachLogReturnerLine",
-          children: CD.line
+          children: RU.line
         })]
       })
     }
 
-    function ef(DD) {
+    function iP(UU) {
       let {
-        fish: CD,
-        letGoShown: cD
-      } = DD;
+        fish: RU,
+        letGoShown: gU
+      } = UU;
       const {
-        t: ID
-      } = (0, xp.F)();
-      return (0, Jp.jsxs)("li", {
-        className: Xp()("SkyblockReachLogCard", CD.caught ? "Caught" : "Unknown", CD.marks >= 3 && "GoldCard", CD.fresh && "Fresh", CD.visitor && "Visitor"),
-        children: [CD.visitor && (0, Jp.jsx)("span", {
+        t: tU
+      } = (0, ap.B)();
+      return (0, Bp.jsxs)("li", {
+        className: Ip()("SkyblockReachLogCard", RU.caught ? "Caught" : "Unknown", RU.marks >= 3 && "GoldCard", RU.fresh && "Fresh", RU.visitor && "Visitor"),
+        children: [RU.visitor && (0, Bp.jsx)("span", {
           className: "SkyblockReachLogVisitorTag",
-          children: ID("skyblockGame:reachLogVisitor")
-        }), CD.fresh && Array.from({
+          children: tU("skyblockGame:reachLogVisitor")
+        }), RU.fresh && Array.from({
           length: 4
-        }, ((DD, CD) => (0, Jp.jsx)("span", {
+        }, ((UU, RU) => (0, Bp.jsx)("span", {
           className: "SkyblockReachLogSparkle"
-        }, CD))), (0, Jp.jsxs)("span", {
+        }, RU))), (0, Bp.jsxs)("span", {
           className: "SkyblockReachLogFishIcon",
           "aria-hidden": "true",
-          children: [CD.halo && (0, Jp.jsx)("span", {
+          children: [RU.halo && (0, Bp.jsx)("span", {
             className: "SkyblockReachLogHalo",
-            title: ID("skyblockGame:reachLogHaloTitle")
-          }), (0, Jp.jsx)(Pp.d, {
-            itemName: CD.itemName,
+            title: tU("skyblockGame:reachLogHaloTitle")
+          }), (0, Bp.jsx)(bp.c, {
+            itemName: RU.itemName,
             amount: 0
-          }), CD.glimmer && (0, Jp.jsx)("span", {
+          }), RU.glimmer && (0, Bp.jsx)("span", {
             className: "SkyblockReachLogGlimmer",
-            title: ID("skyblockGame:reachLogGlimmerTitle")
+            title: tU("skyblockGame:reachLogGlimmerTitle")
           })]
-        }), (0, Jp.jsx)("span", {
+        }), (0, Bp.jsx)("span", {
           className: "SkyblockReachLogFishName",
-          children: CD.name
-        }), (0, Jp.jsx)("span", {
+          children: RU.name
+        }), (0, Bp.jsx)("span", {
           className: "SkyblockReachLogFishChance",
-          children: CD.chance
-        }), (0, Jp.jsx)("span", {
+          children: RU.chance
+        }), (0, Bp.jsx)("span", {
           className: "SkyblockReachLogFishBest",
-          children: CD.best
-        }), (0, Jp.jsx)(Wf, {
-          fish: CD,
-          letGoShown: cD
+          children: RU.best
+        }), (0, Bp.jsx)(yP, {
+          fish: RU,
+          letGoShown: gU
         })]
       })
     }
 
-    function uf(DD) {
+    function AP(UU) {
       let {
-        page: CD,
-        letGoShown: cD,
-        hiddenWaters: ID
-      } = DD;
+        page: RU,
+        letGoShown: gU,
+        hiddenWaters: tU
+      } = UU;
       const {
-        t: pD
-      } = (0, xp.F)();
-      return CD.awake ? (0, Jp.jsx)("ul", {
+        t: pU
+      } = (0, ap.B)();
+      return RU.awake ? (0, Bp.jsx)("ul", {
         className: "SkyblockReachLogGrid",
-        children: CD.fish.map((DD => (0, Jp.jsx)(ef, {
-          fish: DD,
-          letGoShown: cD
-        }, DD.itemName)))
-      }) : (0, Jp.jsxs)(Jp.Fragment, {
-        children: [(0, Jp.jsx)("p", {
+        children: RU.fish.map((UU => (0, Bp.jsx)(iP, {
+          fish: UU,
+          letGoShown: gU
+        }, UU.itemName)))
+      }) : (0, Bp.jsxs)(Bp.Fragment, {
+        children: [(0, Bp.jsx)("p", {
           className: "SkyblockReachLogAsleep",
-          children: pD("skyblockGame:reachLogAsleep")
-        }), (0, Jp.jsx)(Gf, {
-          view: ID,
-          island: CD.id
+          children: pU("skyblockGame:reachLogAsleep")
+        }), (0, Bp.jsx)(vP, {
+          view: tU,
+          island: RU.id
         })]
       })
     }
 
-    function hf(DD) {
-      var CD, cD;
+    function zP(UU) {
+      var RU, gU;
       let {
-        controller: ID,
-        regulars: pD,
-        hiddenWaters: iD
-      } = DD;
-      const fD = (0, qp.g)(qI, ID.getSnapshot()),
-        bD = function(DD) {
-          return (0, qp.g)(ip, DD.getSnapshot())
-        }(iD),
-        QD = (0, qp.g)(Dp, pD.getSnapshot()),
+        controller: tU,
+        regulars: pU,
+        hiddenWaters: EU
+      } = UU;
+      const PU = (0, Yp.h)(Zt, tU.getSnapshot()),
+        TU = function(UU) {
+          return (0, Yp.h)(Pp, UU.getSnapshot())
+        }(EU),
+        qU = (0, Yp.h)(Rp, pU.getSnapshot()),
         {
-          t: wD
-        } = (0, xp.F)(),
-        SD = kp();
-      if (!fD.enabled) return null;
-      const BD = null !== (CD = fD.pages.find((DD => DD.id === fD.selected))) && void 0 !== CD ? CD : null;
-      return (0, Jp.jsx)(Tp.e, {
-        show: fD.open,
-        close: ID.dismiss,
+          t: KU
+        } = (0, ap.B)(),
+        cU = Fp();
+      if (!PU.enabled) return null;
+      const GU = null !== (RU = PU.pages.find((UU => UU.id === PU.selected))) && void 0 !== RU ? RU : null;
+      return (0, Bp.jsx)(sp.d, {
+        show: PU.open,
+        close: tU.dismiss,
         togglePointerLock: !1,
-        className: Xp()("SkyblockSkillsOverlay", QD.open && "SkyblockReachLogUnderLedger"),
-        children: (0, Jp.jsxs)("section", {
+        className: Ip()("SkyblockSkillsOverlay", qU.open && "SkyblockReachLogUnderLedger"),
+        children: (0, Bp.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockReachLogPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockReachLogTitle",
           tabIndex: -1,
-          ref: SD,
-          onKeyDown: Rp,
-          children: [(0, Jp.jsx)(lf, {
-            island: null !== (cD = null === BD || void 0 === BD ? void 0 : BD.id) && void 0 !== cD ? cD : null
-          }), (0, Jp.jsxs)("header", {
+          ref: cU,
+          onKeyDown: kp,
+          children: [(0, Bp.jsx)(VP, {
+            island: null !== (gU = null === GU || void 0 === GU ? void 0 : GU.id) && void 0 !== gU ? gU : null
+          }), (0, Bp.jsxs)("header", {
             className: "SkyblockReachLogHeader",
-            children: [(0, Jp.jsxs)("div", {
-              children: [(0, Jp.jsx)("h2", {
+            children: [(0, Bp.jsxs)("div", {
+              children: [(0, Bp.jsx)("h2", {
                 id: "skyblockReachLogTitle",
-                children: wD("skyblockGame:reachLogTitle")
-              }), (0, Jp.jsx)("p", {
-                children: wD("skyblockGame:keeperWickReachLogWelcome")
+                children: KU("skyblockGame:reachLogTitle")
+              }), (0, Bp.jsx)("p", {
+                children: KU("skyblockGame:keeperWickReachLogWelcome")
               })]
-            }), (0, Jp.jsx)(Tf, {
-              view: bD
-            }), (0, Jp.jsx)(Gp.l, {
+            }), (0, Bp.jsx)(XP, {
+              view: TU
+            }), (0, Bp.jsx)(yp.h, {
               padIgnore: !0,
-              onClick: ID.dismiss
+              onClick: tU.dismiss
             })]
-          }), (0, Jp.jsx)("nav", {
+          }), (0, Bp.jsx)("nav", {
             className: "SkyblockReachLogTabs",
             role: "tablist",
             "data-pad-tabs": "1",
-            children: fD.pages.map((DD => {
-              const CD = DD.id === fD.selected,
-                cD = DD.fish.some((DD => DD.fresh));
-              return (0, Jp.jsxs)("button", {
+            children: PU.pages.map((UU => {
+              const RU = UU.id === PU.selected,
+                gU = UU.fish.some((UU => UU.fresh));
+              return (0, Bp.jsxs)("button", {
                 type: "button",
                 role: "tab",
-                "aria-selected": CD,
+                "aria-selected": RU,
                 "data-pad-tab": !0,
-                "data-pad-selected": CD ? "true" : void 0,
-                className: Xp()("SkyblockReachLogTab", `Island-${DD.id}`, CD && "Selected", !DD.awake && "Asleep", DD.gold && "GoldPage", cD && "HasNews"),
+                "data-pad-selected": RU ? "true" : void 0,
+                className: Ip()("SkyblockReachLogTab", `Island-${UU.id}`, RU && "Selected", !UU.awake && "Asleep", UU.gold && "GoldPage", gU && "HasNews"),
                 onClick: () => {
-                  ID.selectPage(DD.id)
+                  tU.selectPage(UU.id)
                 },
-                children: [(0, Jp.jsx)("span", {
+                children: [(0, Bp.jsx)("span", {
                   className: "SkyblockReachLogTabName",
-                  children: DD.name
-                }), DD.awake && (0, Jp.jsx)("span", {
+                  children: UU.name
+                }), UU.awake && (0, Bp.jsx)("span", {
                   className: "SkyblockReachLogTabCount",
-                  children: wD("skyblockGame:reachLogCaughtCount", {
-                    caught: DD.caught,
-                    total: DD.total
+                  children: KU("skyblockGame:reachLogCaughtCount", {
+                    caught: UU.caught,
+                    total: UU.total
                   })
                 })]
-              }, DD.id)
+              }, UU.id)
             }))
-          }), (0, Jp.jsxs)("div", {
-            className: Xp()("SkyblockReachLogPage", null !== BD && `Island-${BD.id}`),
+          }), (0, Bp.jsxs)("div", {
+            className: Ip()("SkyblockReachLogPage", null !== GU && `Island-${GU.id}`),
             role: "tabpanel",
-            children: [null !== BD && (0, Jp.jsx)(uf, {
-              page: BD,
-              letGoShown: fD.letGoShown,
-              hiddenWaters: bD
-            }), !0 === (null === BD || void 0 === BD ? void 0 : BD.awake) && null !== BD.returner && (0, Jp.jsx)(Ef, {
-              returner: BD.returner
-            }), !0 === (null === BD || void 0 === BD ? void 0 : BD.awake) && (0, Jp.jsx)(Kf, {
-              controller: pD,
-              island: BD.id
+            children: [null !== GU && (0, Bp.jsx)(AP, {
+              page: GU,
+              letGoShown: PU.letGoShown,
+              hiddenWaters: TU
+            }), !0 === (null === GU || void 0 === GU ? void 0 : GU.awake) && null !== GU.returner && (0, Bp.jsx)(FP, {
+              returner: GU.returner
+            }), !0 === (null === GU || void 0 === GU ? void 0 : GU.awake) && (0, Bp.jsx)(oP, {
+              controller: pU,
+              island: GU.id
             })]
-          }), (0, Jp.jsx)("footer", {
-            className: Xp()("SkyblockReachLogFooter", null !== BD && `Island-${BD.id}`, !0 === (null === BD || void 0 === BD ? void 0 : BD.gold) && "GoldPage"),
-            children: !0 === (null === BD || void 0 === BD ? void 0 : BD.gold) ? (0, Jp.jsx)("span", {
+          }), (0, Bp.jsx)("footer", {
+            className: Ip()("SkyblockReachLogFooter", null !== GU && `Island-${GU.id}`, !0 === (null === GU || void 0 === GU ? void 0 : GU.gold) && "GoldPage"),
+            children: !0 === (null === GU || void 0 === GU ? void 0 : GU.gold) ? (0, Bp.jsx)("span", {
               className: "SkyblockReachLogGoldLine",
-              children: wD("skyblockGame:keeperWickReachLogPageGold")
-            }) : (0, Jp.jsxs)(Jp.Fragment, {
-              children: [(0, Jp.jsx)(sf, {
-                letGoShown: fD.letGoShown,
-                haloShown: !0 === (null === BD || void 0 === BD ? void 0 : BD.fish.some((DD => DD.halo)))
-              }), (0, Jp.jsx)("span", {
+              children: KU("skyblockGame:keeperWickReachLogPageGold")
+            }) : (0, Bp.jsxs)(Bp.Fragment, {
+              children: [(0, Bp.jsx)(kP, {
+                letGoShown: PU.letGoShown,
+                haloShown: !0 === (null === GU || void 0 === GU ? void 0 : GU.fish.some((UU => UU.halo)))
+              }), (0, Bp.jsx)("span", {
                 className: "SkyblockReachLogReward",
-                children: wD("skyblockGame:reachLogPageReward")
+                children: KU("skyblockGame:reachLogPageReward")
               })]
             })
           })]
         })
       })
     }
-    var rf = cD(4599);
+    var MP = gU(4487);
 
-    function Af(DD) {
+    function DP(UU) {
       let {
-        conversation: CD,
-        completedLabel: cD
-      } = DD;
-      return (0, Jp.jsxs)("article", {
+        conversation: RU,
+        completedLabel: gU
+      } = UU;
+      return (0, Bp.jsxs)("article", {
         className: "SkyblockDialogueConversation",
-        children: [(0, Jp.jsxs)("header", {
-          children: [(0, Jp.jsx)("h3", {
-            children: CD.questName
-          }), CD.completed && (0, Jp.jsx)("span", {
+        children: [(0, Bp.jsxs)("header", {
+          children: [(0, Bp.jsx)("h3", {
+            children: RU.questName
+          }), RU.completed && (0, Bp.jsx)("span", {
             className: "SkyblockDialogueCompleted",
-            children: cD
+            children: gU
           })]
-        }), CD.lines.map((DD => (0, Jp.jsx)(rf.c, {
-          display: DD.display
-        }, DD.key)))]
+        }), RU.lines.map((UU => (0, Bp.jsx)(MP.d, {
+          display: UU.display
+        }, UU.key)))]
       })
     }
 
-    function Ff(DD) {
+    function LP(UU) {
       let {
-        controller: CD
-      } = DD;
+        controller: RU
+      } = UU;
       const {
-        t: cD
-      } = (0, xp.F)(), ID = (0, qp.g)(bp, CD.getSnapshot()), pD = kp();
-      if (!ID.enabled) return null;
-      const iD = !ID.loading && 0 === ID.conversations.length;
-      return (0, Jp.jsx)(Tp.e, {
-        show: ID.open,
-        close: CD.dismiss,
+        t: gU
+      } = (0, ap.B)(), tU = (0, Yp.h)(qp, RU.getSnapshot()), pU = Fp();
+      if (!tU.enabled) return null;
+      const EU = !tU.loading && 0 === tU.conversations.length;
+      return (0, Bp.jsx)(sp.d, {
+        show: tU.open,
+        close: RU.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, Jp.jsxs)("section", {
+        children: (0, Bp.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockDialoguePanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockDialogueTitle",
           tabIndex: -1,
-          ref: pD,
-          onKeyDown: Rp,
-          children: [(0, Jp.jsxs)("header", {
+          ref: pU,
+          onKeyDown: kp,
+          children: [(0, Bp.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, Jp.jsxs)("div", {
-              children: [(0, Jp.jsx)("h2", {
+            children: [(0, Bp.jsxs)("div", {
+              children: [(0, Bp.jsx)("h2", {
                 id: "skyblockDialogueTitle",
-                children: cD("skyblockDialogue:title")
-              }), (0, Jp.jsx)("p", {
-                children: cD("skyblockDialogue:intro")
+                children: gU("skyblockDialogue:title")
+              }), (0, Bp.jsx)("p", {
+                children: gU("skyblockDialogue:intro")
               })]
-            }), (0, Jp.jsx)(Gp.l, {
+            }), (0, Bp.jsx)(yp.h, {
               padIgnore: !0,
-              onClick: CD.dismiss
+              onClick: RU.dismiss
             })]
-          }), (0, Jp.jsxs)("div", {
-            className: Xp()("SkyblockDialogueBody", {
-              SingleColumn: null !== ID.questFocus || 0 === ID.characters.length
+          }), (0, Bp.jsxs)("div", {
+            className: Ip()("SkyblockDialogueBody", {
+              SingleColumn: null !== tU.questFocus || 0 === tU.characters.length
             }),
-            children: [null === ID.questFocus && ID.characters.length > 0 && (0, Jp.jsx)("nav", {
+            children: [null === tU.questFocus && tU.characters.length > 0 && (0, Bp.jsx)("nav", {
               className: "SkyblockDialogueCharacters",
-              children: ID.characters.map((DD => (0, Jp.jsx)(Gp.i, {
-                className: Xp()("SkyblockDialogueCharacter", {
-                  Selected: DD.selected
+              children: tU.characters.map((UU => (0, Bp.jsx)(yp.e, {
+                className: Ip()("SkyblockDialogueCharacter", {
+                  Selected: UU.selected
                 }),
                 onClick: () => {
-                  CD.selectCharacter(DD.id)
+                  RU.selectCharacter(UU.id)
                 },
-                children: (0, Jp.jsx)(Hp.c, {
-                  text: DD.styling
+                children: (0, Bp.jsx)(op.e, {
+                  text: UU.styling
                 })
-              }, DD.id)))
-            }), (0, Jp.jsxs)("div", {
+              }, UU.id)))
+            }), (0, Bp.jsxs)("div", {
               className: "SkyblockDialogueConversations",
-              children: [null !== ID.questFocus && (0, Jp.jsx)(Gp.i, {
+              children: [null !== tU.questFocus && (0, Bp.jsx)(yp.e, {
                 className: "SkyblockDialogueBack",
-                onClick: CD.showCharacters,
-                children: cD("skyblockDialogue:allCharacters")
-              }), ID.loading && (0, Jp.jsx)("p", {
+                onClick: RU.showCharacters,
+                children: gU("skyblockDialogue:allCharacters")
+              }), tU.loading && (0, Bp.jsx)("p", {
                 className: "SkyblockDialogueEmpty",
-                children: cD("skyblockDialogue:loading")
-              }), iD && (0, Jp.jsx)("p", {
+                children: gU("skyblockDialogue:loading")
+              }), EU && (0, Bp.jsx)("p", {
                 className: "SkyblockDialogueEmpty",
-                children: cD(null === ID.questFocus ? "skyblockDialogue:empty" : "skyblockDialogue:questEmpty")
-              }), ID.conversations.map((DD => (0, Jp.jsx)(Af, {
-                conversation: DD,
-                completedLabel: ID.completedLabel
-              }, DD.questId)))]
+                children: gU(null === tU.questFocus ? "skyblockDialogue:empty" : "skyblockDialogue:questEmpty")
+              }), tU.conversations.map((UU => (0, Bp.jsx)(DP, {
+                conversation: UU,
+                completedLabel: tU.completedLabel
+              }, UU.questId)))]
             })]
           })]
         })
       })
     }
 
-    function Db(DD) {
+    function NP(UU) {
       let {
-        controller: CD
-      } = DD;
-      const cD = (0, qp.g)(yp, CD.getSnapshot()),
+        controller: RU
+      } = UU;
+      const gU = (0, Yp.h)(Cp, RU.getSnapshot()),
         {
-          t: ID
-        } = (0, xp.F)(),
-        pD = kp();
-      return cD.enabled ? (0, Jp.jsx)(Tp.e, {
-        show: cD.open,
-        close: CD.dismiss,
+          t: tU
+        } = (0, ap.B)(),
+        pU = Fp();
+      return gU.enabled ? (0, Bp.jsx)(sp.d, {
+        show: gU.open,
+        close: RU.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, Jp.jsxs)("section", {
+        children: (0, Bp.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockAutographsPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockAutographsTitle",
           tabIndex: -1,
-          ref: pD,
-          onKeyDown: Rp,
-          children: [(0, Jp.jsxs)("header", {
+          ref: pU,
+          onKeyDown: kp,
+          children: [(0, Bp.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, Jp.jsxs)("div", {
-              children: [(0, Jp.jsx)("h2", {
+            children: [(0, Bp.jsxs)("div", {
+              children: [(0, Bp.jsx)("h2", {
                 id: "skyblockAutographsTitle",
-                children: ID("skyblockGame:autographBook")
-              }), (0, Jp.jsx)("p", {
-                children: ID("skyblockGame:autographBookIntro")
+                children: tU("skyblockGame:autographBook")
+              }), (0, Bp.jsx)("p", {
+                children: tU("skyblockGame:autographBookIntro")
               })]
-            }), (0, Jp.jsx)(Gp.l, {
+            }), (0, Bp.jsx)(yp.h, {
               padIgnore: !0,
-              onClick: CD.dismiss
+              onClick: RU.dismiss
             })]
-          }), (0, Jp.jsxs)("div", {
+          }), (0, Bp.jsxs)("div", {
             className: "SkyblockAutographsBody",
-            children: [(0, Jp.jsxs)("div", {
+            children: [(0, Bp.jsxs)("div", {
               className: "SkyblockAutographTotals",
-              children: [(0, Jp.jsxs)("div", {
+              children: [(0, Bp.jsxs)("div", {
                 className: "SkyblockAutographTotal",
-                children: [(0, Jp.jsx)("strong", {
-                  children: cD.total
-                }), (0, Jp.jsx)("span", {
-                  children: ID("skyblockGame:autographTotal")
+                children: [(0, Bp.jsx)("strong", {
+                  children: gU.total
+                }), (0, Bp.jsx)("span", {
+                  children: tU("skyblockGame:autographTotal")
                 })]
-              }), (0, Jp.jsxs)("div", {
+              }), (0, Bp.jsxs)("div", {
                 className: "SkyblockAutographTotal Ranked",
-                children: [(0, Jp.jsx)("strong", {
-                  children: cD.rankTotal
-                }), (0, Jp.jsx)("span", {
-                  children: ID("skyblockGame:autographRankTotal")
+                children: [(0, Bp.jsx)("strong", {
+                  children: gU.rankTotal
+                }), (0, Bp.jsx)("span", {
+                  children: tU("skyblockGame:autographRankTotal")
                 })]
               })]
-            }), 0 === cD.entries.length ? (0, Jp.jsx)("p", {
+            }), 0 === gU.entries.length ? (0, Bp.jsx)("p", {
               className: "SkyblockAutographsEmpty",
-              children: ID("skyblockGame:autographBookEmpty")
-            }) : (0, Jp.jsx)("ul", {
+              children: tU("skyblockGame:autographBookEmpty")
+            }) : (0, Bp.jsx)("ul", {
               className: "SkyblockAutographList",
-              children: cD.entries.map((DD => (0, Jp.jsxs)("li", {
-                className: Xp()("SkyblockAutograph", {
-                  Ranked: null !== DD.rank
+              children: gU.entries.map((UU => (0, Bp.jsxs)("li", {
+                className: Ip()("SkyblockAutograph", {
+                  Ranked: null !== UU.rank
                 }),
-                style: null === DD.rank ? void 0 : {
-                  color: DD.rank.colour
+                style: null === UU.rank ? void 0 : {
+                  color: UU.rank.colour
                 },
-                children: [null !== DD.rank && (0, Jp.jsx)(ti.c, {
+                children: [null !== UU.rank && (0, Bp.jsx)(CE.c, {
                   className: "SkyblockAutographRankIcon",
-                  name: DD.rank.icon,
-                  kit: (0, ti.g)(DD.rank.icon)
-                }), (0, Jp.jsxs)("div", {
+                  name: UU.rank.icon,
+                  kit: (0, CE.g)(UU.rank.icon)
+                }), (0, Bp.jsxs)("div", {
                   className: "SkyblockAutographText",
-                  children: [(0, Jp.jsx)("span", {
+                  children: [(0, Bp.jsx)("span", {
                     className: "SkyblockAutographName",
-                    children: DD.name
-                  }), (0, Jp.jsxs)("span", {
+                    children: UU.name
+                  }), (0, Bp.jsxs)("span", {
                     className: "SkyblockAutographDetails",
-                    children: [null !== DD.rank && (0, Jp.jsx)("span", {
+                    children: [null !== UU.rank && (0, Bp.jsx)("span", {
                       className: "SkyblockAutographRank",
-                      children: DD.rank.label
-                    }), (0, Jp.jsx)("span", {
+                      children: UU.rank.label
+                    }), (0, Bp.jsx)("span", {
                       className: "SkyblockAutographDate",
-                      children: DD.signedOn
+                      children: UU.signedOn
                     })]
                   })]
                 })]
-              }, DD.key)))
+              }, UU.key)))
             })]
           })]
         })
       }) : null
     }
-    const Cb = (0, HD.memo)((function(DD) {
+    const lP = (0, nU.memo)((function(UU) {
         let {
-          controller: CD
-        } = DD;
-        return (0, Jp.jsxs)("div", {
+          controller: RU
+        } = UU;
+        return (0, Bp.jsxs)("div", {
           className: "SkyblockQuestWaypoint",
-          ref: CD.display.mountWaypoint,
-          children: [(0, Jp.jsx)("div", {
+          ref: RU.display.mountWaypoint,
+          children: [(0, Bp.jsx)("div", {
             className: "SkyblockQuestWaypointMarker"
-          }), (0, Jp.jsx)("div", {
+          }), (0, Bp.jsx)("div", {
             className: "SkyblockQuestWaypointTextClip",
-            children: (0, Jp.jsxs)("div", {
+            children: (0, Bp.jsxs)("div", {
               className: "SkyblockQuestWaypointText",
-              children: [(0, Jp.jsx)("span", {
+              children: [(0, Bp.jsx)("span", {
                 className: "SkyblockQuestWaypointLabel"
-              }), (0, Jp.jsx)("span", {
+              }), (0, Bp.jsx)("span", {
                 className: "SkyblockQuestWaypointDistance"
-              }), (0, Jp.jsx)("span", {
+              }), (0, Bp.jsx)("span", {
                 className: "SkyblockQuestWaypointHint",
                 hidden: !0
               })]
@@ -8892,7 +8892,7 @@ export const modules = {
           })]
         })
       })),
-      cb = {
+      OP = {
         started: "!",
         quest: "\u2605",
         step: "\u2713",
@@ -8901,631 +8901,631 @@ export const modules = {
         npcNote: "\u2709\ufe0e"
       };
 
-    function Ib(DD) {
-      return "next" === DD.phase ? "\u2192" : cb[DD.kind]
+    function UT(UU) {
+      return "next" === UU.phase ? "\u2192" : OP[UU.kind]
     }
-    const pb = (0, HD.memo)((function(DD) {
+    const RT = (0, nU.memo)((function(UU) {
       let {
-        controller: CD,
-        display: cD
-      } = DD;
-      const ID = (0, qp.g)(Sc, CD.getNotificationSnapshot()),
-        [pD, iD] = (0, HD.useState)(!1);
-      return (0, qp.f)("qteStateUpdated", (DD => {
-        iD(DD.isActive)
-      })), (0, Jp.jsxs)("div", {
-        className: "SkyblockQuestNotificationAnchor" + (pD ? " UnderQte" : ""),
+        controller: RU,
+        display: gU
+      } = UU;
+      const tU = (0, Yp.h)(cg, RU.getNotificationSnapshot()),
+        [pU, EU] = (0, nU.useState)(!1);
+      return (0, Yp.e)("qteStateUpdated", (UU => {
+        EU(UU.isActive)
+      })), (0, Bp.jsxs)("div", {
+        className: "SkyblockQuestNotificationAnchor" + (pU ? " UnderQte" : ""),
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: [ID && (0, Jp.jsxs)("div", {
-          className: `SkyblockQuestNotification ${ID.kind} ${ID.phase}`,
+        children: [tU && (0, Bp.jsxs)("div", {
+          className: `SkyblockQuestNotification ${tU.kind} ${tU.phase}`,
           style: {
-            "--quest-notification-duration": `${ID.durationMs}ms`,
-            ...ID.accent && {
-              "--quest-notification-accent": ID.accent
+            "--quest-notification-duration": `${tU.durationMs}ms`,
+            ...tU.accent && {
+              "--quest-notification-accent": tU.accent
             }
           },
-          children: [(0, Jp.jsxs)("div", {
-            className: "SkyblockQuestNotificationSymbols" + (ID.iconItem ? " WithIcon" : ""),
+          children: [(0, Bp.jsxs)("div", {
+            className: "SkyblockQuestNotificationSymbols" + (tU.iconItem ? " WithIcon" : ""),
             "aria-hidden": "true",
-            children: [(0, Jp.jsx)("span", {
+            children: [(0, Bp.jsx)("span", {
               className: "SkyblockQuestNotificationMark",
-              children: Ib(ID)
-            }), ID.iconItem && (0, Jp.jsx)("span", {
+              children: UT(tU)
+            }), tU.iconItem && (0, Bp.jsx)("span", {
               className: "SkyblockQuestNotificationIcon",
-              children: (0, Jp.jsx)(Pp.d, {
-                itemName: ID.iconItem,
+              children: (0, Bp.jsx)(bp.c, {
+                itemName: tU.iconItem,
                 amount: 0
               })
             })]
-          }), (0, Jp.jsxs)("div", {
+          }), (0, Bp.jsxs)("div", {
             className: "SkyblockQuestNotificationText",
-            children: [(0, Jp.jsx)("span", {
+            children: [(0, Bp.jsx)("span", {
               className: "SkyblockQuestNotificationTitle",
-              children: ID.title
-            }), (0, Jp.jsx)("strong", {
+              children: tU.title
+            }), (0, Bp.jsx)("strong", {
               className: "SkyblockQuestNotificationName",
-              children: (0, Jp.jsx)(bi.b, {
-                text: ID.name
+              children: (0, Bp.jsx)(TE.c, {
+                text: tU.name
               })
-            }), ID.description && (0, Jp.jsx)("span", {
+            }), tU.description && (0, Bp.jsx)("span", {
               className: "SkyblockQuestNotificationDescription",
-              children: (0, Jp.jsx)(bi.b, {
-                text: ID.description
+              children: (0, Bp.jsx)(TE.c, {
+                text: tU.description
               })
-            }), ID.reward && (0, Jp.jsx)("span", {
+            }), tU.reward && (0, Bp.jsx)("span", {
               className: "SkyblockQuestNotificationReward",
-              children: (0, Jp.jsx)(bi.b, {
-                text: ID.reward
+              children: (0, Bp.jsx)(TE.c, {
+                text: tU.reward
               })
             })]
           })]
-        }, ID.token), (null === ID || void 0 === ID ? void 0 : ID.waypointNameKey) && (0, Jp.jsx)("div", {
+        }, tU.token), (null === tU || void 0 === tU ? void 0 : tU.waypointNameKey) && (0, Bp.jsx)("div", {
           className: "SkyblockQuestNotificationWaypointOrigin",
-          "data-waypoint-name-key": ID.waypointNameKey,
-          "data-notification-token": ID.token,
-          ref: cD.mountWaypointOrigin,
+          "data-waypoint-name-key": tU.waypointNameKey,
+          "data-notification-token": tU.token,
+          ref: gU.mountWaypointOrigin,
           "aria-hidden": "true"
-        }, `waypoint-${ID.token}`)]
+        }, `waypoint-${tU.token}`)]
       })
     }));
 
-    function ib(DD) {
-      const CD = parseInt(DD.replace("#", ""), 16);
-      return `${CD>>16&255}, ${CD>>8&255}, ${255&CD}`
+    function gT(UU) {
+      const RU = parseInt(UU.replace("#", ""), 16);
+      return `${RU>>16&255}, ${RU>>8&255}, ${255&RU}`
     }
-    const fb = (0, HD.memo)((function(DD) {
+    const tT = (0, nU.memo)((function(UU) {
       let {
-        controller: CD
-      } = DD;
+        controller: RU
+      } = UU;
       const {
-        t: cD
-      } = (0, xp.F)(), ID = (0, qp.g)(Lc, CD.getSnapshot());
-      if (!ID) return null;
-      const pD = "arrival" === ID.phase;
-      return (0, Jp.jsxs)("div", {
-        className: Xp()("SkyblockPortalTransit", {
-          Departure: !pD,
-          Arrival: pD
+        t: gU
+      } = (0, ap.B)(), tU = (0, Yp.h)(dg, RU.getSnapshot());
+      if (!tU) return null;
+      const pU = "arrival" === tU.phase;
+      return (0, Bp.jsxs)("div", {
+        className: Ip()("SkyblockPortalTransit", {
+          Departure: !pU,
+          Arrival: pU
         }),
         style: {
-          "--portal-rgb": ib(ID.colour),
-          "--portal-duration": `${ID.durationMs}ms`
+          "--portal-rgb": gT(tU.colour),
+          "--portal-duration": `${tU.durationMs}ms`
         },
         role: "status",
         "aria-live": "polite",
-        children: [(0, Jp.jsx)("div", {
+        children: [(0, Bp.jsx)("div", {
           className: "SkyblockPortalTransitVeil",
           "aria-hidden": "true"
-        }), (0, Jp.jsx)("div", {
+        }), (0, Bp.jsx)("div", {
           className: "SkyblockPortalTransitRim",
           "aria-hidden": "true",
           onAnimationEnd: () => {
-            CD.finishArrival(ID.token)
+            RU.finishArrival(tU.token)
           }
-        }), (0, Jp.jsxs)("div", {
+        }), (0, Bp.jsxs)("div", {
           className: "SkyblockPortalTransitTitle",
-          children: [(0, Jp.jsx)("div", {
+          children: [(0, Bp.jsx)("div", {
             className: "SkyblockPortalTransitBand",
             "aria-hidden": "true"
-          }), !pD && (0, Jp.jsx)("span", {
+          }), !pU && (0, Bp.jsx)("span", {
             className: "SkyblockPortalTransitEyebrow",
-            children: cD("skyblockGame:portalTransitHeading")
-          }), (0, Jp.jsx)("strong", {
+            children: gU("skyblockGame:portalTransitHeading")
+          }), (0, Bp.jsx)("strong", {
             className: "SkyblockPortalTransitZone",
-            children: cD(ID.zoneNameKey)
+            children: gU(tU.zoneNameKey)
           })]
         })]
-      }, ID.token)
+      }, tU.token)
     }));
 
-    function bb() {
+    function pT() {
       return window.matchMedia("(prefers-reduced-motion: reduce)").matches
     }
 
-    function Qb() {
-      const DD = document.querySelector(".SkyblockHudCoins"),
-        CD = null === DD || void 0 === DD ? void 0 : DD.getBoundingClientRect();
-      return CD && CD.width > 0 ? {
-        x: CD.left + Math.min(CD.width, 24) / 2,
-        y: CD.top + CD.height / 2
+    function ET() {
+      const UU = document.querySelector(".SkyblockHudCoins"),
+        RU = null === UU || void 0 === UU ? void 0 : UU.getBoundingClientRect();
+      return RU && RU.width > 0 ? {
+        x: RU.left + Math.min(RU.width, 24) / 2,
+        y: RU.top + RU.height / 2
       } : {
         x: window.innerWidth - 48,
         y: 48
       }
     }
 
-    function wb(DD) {
+    function PT(UU) {
       return {
-        x: DD.left + DD.width / 2,
-        y: DD.top + DD.height / 2
+        x: UU.left + UU.width / 2,
+        y: UU.top + UU.height / 2
       }
     }
 
-    function Sb() {
-      var DD;
-      const CD = null === (DD = document.querySelector(".HotBar")) || void 0 === DD ? void 0 : DD.getBoundingClientRect();
-      return CD && CD.width > 0 ? wb(CD) : {
+    function TT() {
+      var UU;
+      const RU = null === (UU = document.querySelector(".HotBar")) || void 0 === UU ? void 0 : UU.getBoundingClientRect();
+      return RU && RU.width > 0 ? PT(RU) : {
         x: window.innerWidth / 2,
         y: window.innerHeight - 40
       }
     }
 
-    function Bb(DD) {
+    function qT(UU) {
       let {
-        items: CD,
-        origins: cD,
-        target: ID
-      } = DD;
-      return (0, Jp.jsx)("div", {
+        items: RU,
+        origins: gU,
+        target: tU
+      } = UU;
+      return (0, Bp.jsx)("div", {
         className: "SkyblockDailyRewardFlyingItems",
-        children: CD.map(((DD, CD) => {
-          const pD = cD[CD];
-          return (0, Jp.jsx)("span", {
+        children: RU.map(((UU, RU) => {
+          const pU = gU[RU];
+          return (0, Bp.jsx)("span", {
             className: "SkyblockDailyRewardFlyingItem",
             style: {
-              left: `${pD.x}px`,
-              top: `${pD.y}px`,
-              "--item-dx": ID.x - pD.x + "px",
-              "--item-dy": ID.y - pD.y + "px",
-              "--item-delay": 2e3 + 160 * CD + "ms",
+              left: `${pU.x}px`,
+              top: `${pU.y}px`,
+              "--item-dx": tU.x - pU.x + "px",
+              "--item-dy": tU.y - pU.y + "px",
+              "--item-delay": 2e3 + 160 * RU + "ms",
               "--item-flight": "700ms"
             },
-            children: (0, Jp.jsx)(Pp.d, {
-              itemName: DD.dailyRewardItemName,
+            children: (0, Bp.jsx)(bp.c, {
+              itemName: UU.dailyRewardItemName,
               amount: 0
             })
-          }, DD.dailyRewardItemName)
+          }, UU.dailyRewardItemName)
         }))
       })
     }
 
-    function yb(DD, CD) {
-      const cD = -Math.PI / 2 + 1.25 * (DD / (CD - 1) * 2 - 1),
-        ID = 70 + DD % 3 * 22;
+    function KT(UU, RU) {
+      const gU = -Math.PI / 2 + 1.25 * (UU / (RU - 1) * 2 - 1),
+        tU = 70 + UU % 3 * 22;
       return {
-        x: Math.cos(cD) * ID,
-        y: Math.sin(cD) * ID * .7
+        x: Math.cos(gU) * tU,
+        y: Math.sin(gU) * tU * .7
       }
     }
 
-    function Mb(DD) {
+    function cT(UU) {
       let {
-        origin: CD,
-        target: cD,
-        count: ID
-      } = DD;
-      const pD = [];
-      for (let iD = 0; iD < ID; iD++) {
-        const DD = yb(iD, ID);
-        pD.push((0, Jp.jsx)("span", {
+        origin: RU,
+        target: gU,
+        count: tU
+      } = UU;
+      const pU = [];
+      for (let EU = 0; EU < tU; EU++) {
+        const UU = KT(EU, tU);
+        pU.push((0, Bp.jsx)("span", {
           className: "SkyblockDailyRewardCoin",
           style: {
-            left: `${CD.x}px`,
-            top: `${CD.y}px`,
-            "--coin-bx": `${DD.x}px`,
-            "--coin-by": `${DD.y}px`,
-            "--coin-dx": cD.x - CD.x + "px",
-            "--coin-dy": cD.y - CD.y + "px",
-            "--coin-delay": `${Yc(iD,ID)}ms`,
+            left: `${RU.x}px`,
+            top: `${RU.y}px`,
+            "--coin-bx": `${UU.x}px`,
+            "--coin-by": `${UU.y}px`,
+            "--coin-dx": gU.x - RU.x + "px",
+            "--coin-dy": gU.y - RU.y + "px",
+            "--coin-delay": `${Fg(EU,tU)}ms`,
             "--coin-flight": "650ms"
           },
-          children: (0, Jp.jsx)(Pp.d, {
+          children: (0, Bp.jsx)(bp.c, {
             itemName: "Gold Coin",
             amount: 0
           })
-        }, iD))
+        }, EU))
       }
-      return (0, Jp.jsx)("div", {
+      return (0, Bp.jsx)("div", {
         className: "SkyblockDailyRewardCoins",
-        children: pD
+        children: pU
       })
     }
 
-    function tb(DD) {
+    function GT(UU) {
       let {
-        day: CD
-      } = DD;
-      const cD = UD[CD - 1];
-      return (0, Jp.jsxs)(Jp.Fragment, {
-        children: [(0, Jp.jsxs)("span", {
+        day: RU
+      } = UU;
+      const gU = bU[RU - 1];
+      return (0, Bp.jsxs)(Bp.Fragment, {
+        children: [(0, Bp.jsxs)("span", {
           className: "SkyblockDailyRewardFooterReward",
-          children: [(0, Jp.jsx)(Pp.d, {
+          children: [(0, Bp.jsx)(bp.c, {
             itemName: "Gold Coin",
             amount: 0
-          }), (0, Up.g)(cD.dailyRewardCoins)]
-        }), cD.dailyRewardItems.map((DD => (0, Jp.jsxs)("span", {
+          }), (0, Zp.d)(gU.dailyRewardCoins)]
+        }), gU.dailyRewardItems.map((UU => (0, Bp.jsxs)("span", {
           className: "SkyblockDailyRewardFooterReward",
-          children: [(0, Jp.jsx)(Pp.d, {
-            itemName: DD.dailyRewardItemName,
+          children: [(0, Bp.jsx)(bp.c, {
+            itemName: UU.dailyRewardItemName,
             amount: 0
-          }), "\xd7", DD.dailyRewardItemAmount]
-        }, DD.dailyRewardItemName)))]
+          }), "\xd7", UU.dailyRewardItemAmount]
+        }, UU.dailyRewardItemName)))]
       })
     }
 
-    function Zb(DD) {
+    function jT(UU) {
       let {
-        day: CD
-      } = DD;
-      const cD = qD(CD);
-      return (0, Jp.jsx)("ol", {
+        day: RU
+      } = UU;
+      const gU = ZU(RU);
+      return (0, Bp.jsx)("ol", {
         className: "SkyblockDailyRewardStrip",
-        children: UD.map(((DD, ID) => {
-          const pD = ID + 1;
-          return (0, Jp.jsxs)("li", {
-            className: Xp()("SkyblockDailyRewardTile", {
-              Claimed: pD < CD && pD !== cD,
-              Today: pD === CD,
-              Tomorrow: pD === cD,
-              Jackpot: pD === xD
+        children: bU.map(((UU, tU) => {
+          const pU = tU + 1;
+          return (0, Bp.jsxs)("li", {
+            className: Ip()("SkyblockDailyRewardTile", {
+              Claimed: pU < RU && pU !== gU,
+              Today: pU === RU,
+              Tomorrow: pU === gU,
+              Jackpot: pU === oU
             }),
-            children: [(0, Jp.jsx)("span", {
+            children: [(0, Bp.jsx)("span", {
               className: "SkyblockDailyRewardTileDay",
-              children: pD
-            }), (0, Jp.jsxs)("span", {
+              children: pU
+            }), (0, Bp.jsxs)("span", {
               className: "SkyblockDailyRewardTileReward SkyblockDailyRewardTileCoins",
-              children: [(0, Jp.jsx)(Pp.d, {
+              children: [(0, Bp.jsx)(bp.c, {
                 itemName: "Gold Coin",
                 amount: 0
-              }), (0, Up.g)(DD.dailyRewardCoins)]
-            }), DD.dailyRewardItems.map((DD => (0, Jp.jsxs)("span", {
+              }), (0, Zp.d)(UU.dailyRewardCoins)]
+            }), UU.dailyRewardItems.map((UU => (0, Bp.jsxs)("span", {
               className: "SkyblockDailyRewardTileReward",
-              children: [(0, Jp.jsx)(Pp.d, {
-                itemName: DD.dailyRewardItemName,
+              children: [(0, Bp.jsx)(bp.c, {
+                itemName: UU.dailyRewardItemName,
                 amount: 0
-              }), "\xd7", DD.dailyRewardItemAmount]
-            }, DD.dailyRewardItemName)))]
-          }, pD)
+              }), "\xd7", UU.dailyRewardItemAmount]
+            }, UU.dailyRewardItemName)))]
+          }, pU)
         }))
       })
     }
 
-    function ob(DD) {
+    function uT(UU) {
       let {
-        view: CD
-      } = DD;
+        view: RU
+      } = UU;
       const {
-        t: cD
-      } = (0, xp.F)(), ID = (0, HD.useRef)(null), pD = (0, HD.useRef)(null), [iD, fD] = (0, HD.useState)(null);
-      (0, HD.useLayoutEffect)((() => {
-        var DD;
-        const CD = null === (DD = ID.current) || void 0 === DD ? void 0 : DD.getBoundingClientRect();
-        if (CD) {
-          var cD, iD;
-          const DD = Array.from(null !== (cD = null === (iD = pD.current) || void 0 === iD ? void 0 : iD.children) && void 0 !== cD ? cD : [], (DD => wb(DD.getBoundingClientRect())));
-          fD({
-            origin: wb(CD),
-            target: Qb(),
-            itemOrigins: DD,
-            itemTarget: Sb()
+        t: gU
+      } = (0, ap.B)(), tU = (0, nU.useRef)(null), pU = (0, nU.useRef)(null), [EU, PU] = (0, nU.useState)(null);
+      (0, nU.useLayoutEffect)((() => {
+        var UU;
+        const RU = null === (UU = tU.current) || void 0 === UU ? void 0 : UU.getBoundingClientRect();
+        if (RU) {
+          var gU, EU;
+          const UU = Array.from(null !== (gU = null === (EU = pU.current) || void 0 === EU ? void 0 : EU.children) && void 0 !== gU ? gU : [], (UU => PT(UU.getBoundingClientRect())));
+          PU({
+            origin: PT(RU),
+            target: ET(),
+            itemOrigins: UU,
+            itemTarget: TT()
           })
         }
       }), []);
-      const bD = qD(CD.day),
-        QD = function(DD, CD) {
-          const [cD, ID] = (0, HD.useState)((() => bb() ? DD : 0));
-          return (0, HD.useEffect)((() => {
-            if (bb()) return;
-            const cD = performance.now();
-            let pD = 0;
-            const iD = fD => {
-              const bD = Math.min(Math.max((fD - cD) / CD, 0), 1);
-              ID(Math.round(DD * (1 - (1 - bD) ** 3))), bD < 1 && (pD = requestAnimationFrame(iD))
+      const TU = ZU(RU.day),
+        qU = function(UU, RU) {
+          const [gU, tU] = (0, nU.useState)((() => pT() ? UU : 0));
+          return (0, nU.useEffect)((() => {
+            if (pT()) return;
+            const gU = performance.now();
+            let pU = 0;
+            const EU = PU => {
+              const TU = Math.min(Math.max((PU - gU) / RU, 0), 1);
+              tU(Math.round(UU * (1 - (1 - TU) ** 3))), TU < 1 && (pU = requestAnimationFrame(EU))
             };
-            return pD = requestAnimationFrame(iD), () => {
-              cancelAnimationFrame(pD)
+            return pU = requestAnimationFrame(EU), () => {
+              cancelAnimationFrame(pU)
             }
-          }), [DD, CD]), cD
-        }(CD.coins, 450);
-      return (0, Jp.jsxs)("div", {
-        className: Xp()("SkyblockDailyReward", {
-          Jackpot: CD.day === xD
+          }), [UU, RU]), gU
+        }(RU.coins, 450);
+      return (0, Bp.jsxs)("div", {
+        className: Ip()("SkyblockDailyReward", {
+          Jackpot: RU.day === oU
         }),
         style: {
-          "--daily-duration": `${CD.durationMs}ms`
+          "--daily-duration": `${RU.durationMs}ms`
         },
         role: "status",
         "aria-live": "polite",
-        children: [(0, Jp.jsx)("div", {
+        children: [(0, Bp.jsx)("div", {
           className: "SkyblockDailyRewardGlow",
           "aria-hidden": "true"
-        }), (0, Jp.jsxs)("div", {
+        }), (0, Bp.jsxs)("div", {
           className: "SkyblockDailyRewardCard",
-          children: [(0, Jp.jsxs)("div", {
+          children: [(0, Bp.jsxs)("div", {
             className: "SkyblockDailyRewardHeading",
-            children: [(0, Jp.jsx)("span", {
+            children: [(0, Bp.jsx)("span", {
               className: "SkyblockDailyRewardTitle",
-              children: cD("skyblockGame:dailyRewardTitle")
-            }), (0, Jp.jsx)("span", {
+              children: gU("skyblockGame:dailyRewardTitle")
+            }), (0, Bp.jsx)("span", {
               className: "SkyblockDailyRewardDay",
-              children: cD("skyblockGame:dailyRewardDay", {
-                day: String(CD.day)
+              children: gU("skyblockGame:dailyRewardDay", {
+                day: String(RU.day)
               })
             })]
-          }), (0, Jp.jsxs)("div", {
+          }), (0, Bp.jsxs)("div", {
             className: "SkyblockDailyRewardAmount",
-            ref: ID,
-            children: [(0, Jp.jsx)(Pp.d, {
+            ref: tU,
+            children: [(0, Bp.jsx)(bp.c, {
               itemName: "Gold Coin",
               amount: 0
-            }), (0, Jp.jsxs)("span", {
-              children: ["+", (0, Up.g)(QD)]
+            }), (0, Bp.jsxs)("span", {
+              children: ["+", (0, Zp.d)(qU)]
             })]
-          }), CD.items.length > 0 && (0, Jp.jsx)("div", {
+          }), RU.items.length > 0 && (0, Bp.jsx)("div", {
             className: "SkyblockDailyRewardItems",
-            ref: pD,
-            children: CD.items.map((DD => (0, Jp.jsxs)("span", {
+            ref: pU,
+            children: RU.items.map((UU => (0, Bp.jsxs)("span", {
               className: "SkyblockDailyRewardItem",
-              children: [(0, Jp.jsx)(Pp.d, {
-                itemName: DD.dailyRewardItemName,
+              children: [(0, Bp.jsx)(bp.c, {
+                itemName: UU.dailyRewardItemName,
                 amount: 0
-              }), "\xd7", DD.dailyRewardItemAmount]
-            }, DD.dailyRewardItemName)))
-          }), (0, Jp.jsx)(Zb, {
-            day: CD.day
-          }), (0, Jp.jsxs)("div", {
+              }), "\xd7", UU.dailyRewardItemAmount]
+            }, UU.dailyRewardItemName)))
+          }), (0, Bp.jsx)(jT, {
+            day: RU.day
+          }), (0, Bp.jsxs)("div", {
             className: "SkyblockDailyRewardFooter",
-            children: [cD("skyblockGame:dailyRewardComeBack"), (0, Jp.jsx)(tb, {
-              day: bD
+            children: [gU("skyblockGame:dailyRewardComeBack"), (0, Bp.jsx)(GT, {
+              day: TU
             })]
           })]
-        }), null !== iD && (0, Jp.jsx)(Mb, {
-          origin: iD.origin,
-          target: iD.target,
-          count: CD.flyingCoins
-        }), null !== iD && iD.itemOrigins.length === CD.items.length && (0, Jp.jsx)(Bb, {
-          items: CD.items,
-          origins: iD.itemOrigins,
-          target: iD.itemTarget
+        }), null !== EU && (0, Bp.jsx)(cT, {
+          origin: EU.origin,
+          target: EU.target,
+          count: RU.flyingCoins
+        }), null !== EU && EU.itemOrigins.length === RU.items.length && (0, Bp.jsx)(qT, {
+          items: RU.items,
+          origins: EU.itemOrigins,
+          target: EU.itemTarget
         })]
       })
     }
-    const vb = (0, HD.memo)((function(DD) {
+    const CT = (0, nU.memo)((function(UU) {
         let {
-          controller: CD
-        } = DD;
-        const cD = (0, qp.g)(Rc, CD.getSnapshot());
-        return cD ? (0, Jp.jsx)(ob, {
-          view: cD
-        }, cD.token) : null
+          controller: RU
+        } = UU;
+        const gU = (0, Yp.h)(sg, RU.getSnapshot());
+        return gU ? (0, Bp.jsx)(uT, {
+          view: gU
+        }, gU.token) : null
       })),
-      Nb = "Gold Coin";
+      hT = "Gold Coin";
 
-    function gb(DD) {
-      return 650 + 220 * DD
+    function QT(UU) {
+      return 650 + 220 * UU
     }
 
-    function Xb(DD) {
+    function eT(UU) {
       return {
-        "--letter-delay": `${gb(DD)}ms`,
-        "--letter-land": `${gb(DD)+300}ms`
+        "--letter-delay": `${QT(UU)}ms`,
+        "--letter-land": `${QT(UU)+300}ms`
       }
     }
 
-    function mb(DD) {
+    function WT(UU) {
       let {
-        letterCount: CD
-      } = DD;
-      return (0, Jp.jsxs)("div", {
+        letterCount: RU
+      } = UU;
+      return (0, Bp.jsxs)("div", {
         className: "SkyblockMailboxArt",
         "aria-hidden": "true",
-        children: [(0, Jp.jsx)("img", {
+        children: [(0, Bp.jsx)("img", {
           className: "SkyblockMailboxFrame",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAPUlEQVR4nGNgGBTgPxbMgKHoU7Y/Cr7hqI9VMVji8yqV//8veYHxPC0l7ApBEugYp/UgXBNljteN6BrIBwC4hzWhsgbVSgAAAABJRU5ErkJggg==",
           alt: ""
-        }), (0, Jp.jsx)("img", {
+        }), (0, Bp.jsx)("img", {
           className: "SkyblockMailboxFrame SkyblockMailboxFrameFlag",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAATElEQVR4nGNgIBP8h2L8iv5f8gJjQor/f16lAlOEU/H/T9n+YIUgGoRvOOpjVQyWACkE0SA8T0sJu0KQBDrGaT0I10SZ43UjugbyAQAsw0ABFINz6QAAAABJRU5ErkJggg==",
           alt: ""
-        }), (0, Jp.jsx)("img", {
+        }), (0, Bp.jsx)("img", {
           className: "SkyblockMailboxFrame SkyblockMailboxFrameOpen",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAW0lEQVR4nGNgIBP8h2L8iv5f8gJjQor/f16lAlOEjBlQFH3K9gcrBNEgHGyt9P//rwMYiv/fcNQHKwTRIPzh8SEwxlA4T0sJBYNMBJmM1XoQrokyx+tGdA3kAwD3jUzPjfodhAAAAABJRU5ErkJggg==",
           alt: ""
         }), Array.from({
-          length: CD
-        }, ((DD, CD) => (0, Jp.jsx)("img", {
+          length: RU
+        }, ((UU, RU) => (0, Bp.jsx)("img", {
           className: "SkyblockMailboxFlyingLetter",
-          style: Xb(CD),
+          style: eT(RU),
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAP0lEQVR4nGNgoCX4jwOjgP//fx1AwZ+y/f/fcNTHUPz/w+NDKBikaJ6WEnaFa7qCwBhZA0ETcSkEKybGM9QDAOtbYxX7UuH5AAAAAElFTkSuQmCC",
           alt: ""
-        }, CD)))]
+        }, RU)))]
       })
     }
 
-    function nb(DD) {
-      var CD, cD, ID;
+    function fT(UU) {
+      var RU, gU, tU;
       let {
-        letter: pD,
-        index: iD
-      } = DD;
+        letter: pU,
+        index: EU
+      } = UU;
       const {
-        t: fD
-      } = (0, xp.F)(), bD = null !== (CD = null === (cD = pD.items[0]) || void 0 === cD ? void 0 : cD.itemName) && void 0 !== CD ? CD : Nb;
-      return (0, Jp.jsxs)("li", {
+        t: PU
+      } = (0, ap.B)(), TU = null !== (RU = null === (gU = pU.items[0]) || void 0 === gU ? void 0 : gU.itemName) && void 0 !== RU ? RU : hT;
+      return (0, Bp.jsxs)("li", {
         className: "SkyblockMailboxLetter",
-        style: Xb(iD),
-        children: [(0, Jp.jsx)("div", {
+        style: eT(EU),
+        children: [(0, Bp.jsx)("div", {
           className: "SkyblockMailboxStamp",
           "aria-hidden": "true",
-          children: (0, Jp.jsx)(Pp.d, {
-            itemName: bD,
+          children: (0, Bp.jsx)(bp.c, {
+            itemName: TU,
             amount: 0
           })
-        }), (0, Jp.jsx)("div", {
+        }), (0, Bp.jsx)("div", {
           className: "SkyblockMailboxReason",
-          children: fD(pD.reasonKey, null !== (ID = pD.reasonParams) && void 0 !== ID ? ID : void 0)
-        }), (0, Jp.jsxs)("div", {
+          children: PU(pU.reasonKey, null !== (tU = pU.reasonParams) && void 0 !== tU ? tU : void 0)
+        }), (0, Bp.jsxs)("div", {
           className: "SkyblockMailboxContents",
-          children: [pD.coins > 0 && (0, Jp.jsxs)("span", {
+          children: [pU.coins > 0 && (0, Bp.jsxs)("span", {
             className: "SkyblockMailboxGift SkyblockMailboxCoins",
-            children: [(0, Jp.jsx)(Pp.d, {
-              itemName: Nb,
+            children: [(0, Bp.jsx)(bp.c, {
+              itemName: hT,
               amount: 0
-            }), "+", (0, Up.g)(pD.coins)]
-          }), pD.items.map(((DD, CD) => (0, Jp.jsxs)("span", {
+            }), "+", (0, Zp.d)(pU.coins)]
+          }), pU.items.map(((UU, RU) => (0, Bp.jsxs)("span", {
             className: "SkyblockMailboxGift",
-            children: [(0, Jp.jsx)(Pp.d, {
-              itemName: DD.itemName,
+            children: [(0, Bp.jsx)(bp.c, {
+              itemName: UU.itemName,
               amount: 0
-            }), DD.label, " \xd7", DD.amount]
-          }, CD)))]
+            }), UU.label, " \xd7", UU.amount]
+          }, RU)))]
         })]
       })
     }
 
-    function Ob(DD) {
+    function xT(UU) {
       let {
-        view: CD
-      } = DD;
+        view: RU
+      } = UU;
       const {
-        t: cD
-      } = (0, xp.F)();
-      return (0, Jp.jsx)("div", {
+        t: gU
+      } = (0, ap.B)();
+      return (0, Bp.jsx)("div", {
         className: "SkyblockMailbox",
         style: {
-          "--mail-duration": `${CD.durationMs}ms`,
+          "--mail-duration": `${RU.durationMs}ms`,
           "--flag-up": "300ms",
           "--door-open": "500ms",
-          "--more-land": `${gb(CD.letters.length)+300}ms`
+          "--more-land": `${QT(RU.letters.length)+300}ms`
         },
         role: "status",
         "aria-live": "polite",
-        children: (0, Jp.jsxs)("div", {
+        children: (0, Bp.jsxs)("div", {
           className: "SkyblockMailboxCard",
-          children: [(0, Jp.jsxs)("div", {
+          children: [(0, Bp.jsxs)("div", {
             className: "SkyblockMailboxHeading",
-            children: [(0, Jp.jsx)(mb, {
-              letterCount: CD.letters.length
-            }), (0, Jp.jsx)("span", {
+            children: [(0, Bp.jsx)(WT, {
+              letterCount: RU.letters.length
+            }), (0, Bp.jsx)("span", {
               className: "SkyblockMailboxTitle",
-              children: cD("skyblockGame:mailboxTitle")
+              children: gU("skyblockGame:mailboxTitle")
             })]
-          }), (0, Jp.jsx)("ol", {
+          }), (0, Bp.jsx)("ol", {
             className: "SkyblockMailboxLetters",
-            children: CD.letters.map(((DD, CD) => (0, Jp.jsx)(nb, {
-              letter: DD,
-              index: CD
-            }, CD)))
-          }), CD.more > 0 && (0, Jp.jsx)("div", {
+            children: RU.letters.map(((UU, RU) => (0, Bp.jsx)(fT, {
+              letter: UU,
+              index: RU
+            }, RU)))
+          }), RU.more > 0 && (0, Bp.jsx)("div", {
             className: "SkyblockMailboxMore",
-            children: cD("skyblockGame:mailboxMore", {
-              count: String(CD.more)
+            children: gU("skyblockGame:mailboxMore", {
+              count: String(RU.more)
             })
           })]
         })
       })
     }
-    const Pb = (0, HD.memo)((function(DD) {
+    const mT = (0, nU.memo)((function(UU) {
       let {
-        controller: CD
-      } = DD;
-      const cD = (0, qp.g)(sc, CD.getSnapshot());
-      return cD ? (0, Jp.jsx)(Ob, {
-        view: cD
-      }, cD.token) : null
+        controller: RU
+      } = UU;
+      const gU = (0, Yp.h)(Ag, RU.getSnapshot());
+      return gU ? (0, Bp.jsx)(xT, {
+        view: gU
+      }, gU.token) : null
     }));
 
-    function Hb(DD) {
+    function IT(UU) {
       let {
-        controller: CD
-      } = DD;
+        controller: RU
+      } = UU;
       const {
-        t: cD
-      } = (0, xp.F)(), ID = (0, qp.g)(LI, CD.getSnapshot());
-      if (null === ID) return null;
-      const pD = ID.fullSet ? "empty" === ID.fuelState ? {
-        text: cD("skyblockGame:magmawardHudNoFuel"),
+        t: gU
+      } = (0, ap.B)(), tU = (0, Yp.h)(Ht, RU.getSnapshot());
+      if (null === tU) return null;
+      const pU = tU.fullSet ? "empty" === tU.fuelState ? {
+        text: gU("skyblockGame:magmawardHudNoFuel"),
         tone: "empty"
       } : null : {
-        text: cD("skyblockGame:magmawardHudFullSet", {
-          worn: String(ID.wornCount)
+        text: gU("skyblockGame:magmawardHudFullSet", {
+          worn: String(tU.wornCount)
         }),
         tone: "partial"
       };
-      return (0, Jp.jsx)(np.e, {
+      return (0, Bp.jsx)(wp.e, {
         placement: "statBars",
-        children: (0, Jp.jsxs)("div", {
-          className: Xp()("SkyblockMagmawardHud", `SkyblockMagmawardHud-${ID.fuelState}`, {
-            "SkyblockMagmawardHud-partial": !ID.fullSet,
-            "SkyblockMagmawardHud-armed": ID.fullSet && "empty" !== ID.fuelState
+        children: (0, Bp.jsxs)("div", {
+          className: Ip()("SkyblockMagmawardHud", `SkyblockMagmawardHud-${tU.fuelState}`, {
+            "SkyblockMagmawardHud-partial": !tU.fullSet,
+            "SkyblockMagmawardHud-armed": tU.fullSet && "empty" !== tU.fuelState
           }),
-          children: [null !== ID.flare && (0, Jp.jsx)("div", {
-            className: `SkyblockMagmawardFlare SkyblockMagmawardFlare-${ID.flare}`
-          }, `flare:${ID.flareToken}`), (0, Jp.jsx)("div", {
-            className: Xp()("SkyblockMagmawardPieces", {
-              SkyblockMagmawardPiecesComplete: ID.setLit
+          children: [null !== tU.flare && (0, Bp.jsx)("div", {
+            className: `SkyblockMagmawardFlare SkyblockMagmawardFlare-${tU.flare}`
+          }, `flare:${tU.flareToken}`), (0, Bp.jsx)("div", {
+            className: Ip()("SkyblockMagmawardPieces", {
+              SkyblockMagmawardPiecesComplete: tU.setLit
             }),
-            children: ID.pieces.map(((DD, CD) => (0, Jp.jsx)("div", {
-              className: Xp()("SkyblockMagmawardPiece", {
-                SkyblockMagmawardPieceWorn: DD.worn,
-                SkyblockMagmawardPieceJustWorn: DD.justWorn
+            children: tU.pieces.map(((UU, RU) => (0, Bp.jsx)("div", {
+              className: Ip()("SkyblockMagmawardPiece", {
+                SkyblockMagmawardPieceWorn: UU.worn,
+                SkyblockMagmawardPieceJustWorn: UU.justWorn
               }),
-              children: (0, Jp.jsx)(Pp.d, {
-                itemName: DD.itemName,
+              children: (0, Bp.jsx)(bp.c, {
+                itemName: UU.itemName,
                 amount: 0
               })
-            }, `${CD}:${DD.wornToken}`)))
-          }, `pieces:${ID.setLitToken}`), (0, Jp.jsxs)("div", {
+            }, `${RU}:${UU.wornToken}`)))
+          }, `pieces:${tU.setLitToken}`), (0, Bp.jsxs)("div", {
             className: "SkyblockMagmawardFuel",
-            children: [(0, Jp.jsx)("div", {
+            children: [(0, Bp.jsx)("div", {
               className: "SkyblockMagmawardLowGlow"
-            }), (0, Jp.jsxs)("div", {
-              className: Xp()("SkyblockMagmawardFuelCounter", ID.pulse && `SkyblockMagmawardFuelCounter-${ID.pulse}`),
-              children: [(0, Jp.jsx)("div", {
+            }), (0, Bp.jsxs)("div", {
+              className: Ip()("SkyblockMagmawardFuelCounter", tU.pulse && `SkyblockMagmawardFuelCounter-${tU.pulse}`),
+              children: [(0, Bp.jsx)("div", {
                 className: "SkyblockMagmawardFuelIcon",
-                children: (0, Jp.jsx)(Pp.d, {
+                children: (0, Bp.jsx)(bp.c, {
                   itemName: "Magmaward Fuel",
                   amount: 0
                 })
-              }), (0, Jp.jsx)("span", {
+              }), (0, Bp.jsx)("span", {
                 className: "SkyblockMagmawardFuelCount SmallTextBold",
-                children: ID.fuel
+                children: tU.fuel
               })]
-            }, `counter:${ID.pulseToken}`), "burn" === ID.pulse && (0, Jp.jsx)("span", {
+            }, `counter:${tU.pulseToken}`), "burn" === tU.pulse && (0, Bp.jsx)("span", {
               className: "SkyblockMagmawardEmber SmallTextBold",
               children: "-1"
-            }, `ember:${ID.pulseToken}`)]
-          }), pD && (0, Jp.jsx)("div", {
-            className: `SkyblockMagmawardCaption SkyblockMagmawardCaption-${pD.tone} SmallTextBold`,
-            children: pD.text
+            }, `ember:${tU.pulseToken}`)]
+          }), pU && (0, Bp.jsx)("div", {
+            className: `SkyblockMagmawardCaption SkyblockMagmawardCaption-${pU.tone} SmallTextBold`,
+            children: pU.text
           })]
         })
       })
     }
 
-    function Ub(DD) {
+    function JT(UU) {
       let {
-        controller: CD
-      } = DD;
+        controller: RU
+      } = UU;
       const {
-        t: cD,
-        selectedLanguage: ID
-      } = (0, xp.F)(), pD = (0, qp.g)(GI, CD.getSnapshot());
-      return null === pD ? null : (0, Jp.jsx)(np.e, {
+        t: gU,
+        selectedLanguage: tU
+      } = (0, ap.B)(), pU = (0, Yp.h)(st, RU.getSnapshot());
+      return null === pU ? null : (0, Bp.jsx)(wp.e, {
         placement: "statBars",
-        children: (0, Jp.jsxs)("div", {
-          className: Xp()("SkyblockGlowtideChip", {
-            SkyblockGlowtideChipInRange: pD.inRange
+        children: (0, Bp.jsxs)("div", {
+          className: Ip()("SkyblockGlowtideChip", {
+            SkyblockGlowtideChipInRange: pU.inRange
           }),
           style: {
-            "--glowtide-colour": pD.colour
+            "--glowtide-colour": pU.colour
           },
-          "aria-label": cD("skyblockGame:glowtideChipLabel"),
-          children: [(0, Jp.jsx)("div", {
+          "aria-label": gU("skyblockGame:glowtideChipLabel"),
+          children: [(0, Bp.jsx)("div", {
             className: "SkyblockGlowtideChipOrb"
-          }), pD.inRange ? (0, Jp.jsx)("span", {
+          }), pU.inRange ? (0, Bp.jsx)("span", {
             className: "SkyblockGlowtideChipCall SmallTextBold",
-            children: cD("skyblockGame:glowtideChipInRange")
-          }, `call:${pD.inRangeToken}`) : (0, Jp.jsxs)(Jp.Fragment, {
-            children: [(0, Jp.jsx)("div", {
-              ref: CD.mountArrow,
+            children: gU("skyblockGame:glowtideChipInRange")
+          }, `call:${pU.inRangeToken}`) : (0, Bp.jsxs)(Bp.Fragment, {
+            children: [(0, Bp.jsx)("div", {
+              ref: RU.mountArrow,
               className: "SkyblockGlowtideChipArrow"
-            }), (0, Jp.jsx)("span", {
+            }), (0, Bp.jsx)("span", {
               className: "SkyblockGlowtideChipDistance SmallTextBold",
-              children: cD("skyblockGame:waypointDistance", {
-                distance: nD(pD.distance, ID.code)
+              children: gU("skyblockGame:waypointDistance", {
+                distance: IU(pU.distance, tU.code)
               })
             })]
           })]
@@ -9533,266 +9533,266 @@ export const modules = {
       })
     }
 
-    function xb(DD) {
+    function wT(UU) {
       let {
-        controller: CD
-      } = DD;
+        controller: RU
+      } = UU;
       const {
-        t: cD
-      } = (0, xp.F)(), ID = (0, qp.g)(kI, CD.getSnapshot());
-      return null === ID ? null : (0, Jp.jsx)(np.e, {
+        t: gU
+      } = (0, ap.B)(), tU = (0, Yp.h)(kt, RU.getSnapshot());
+      return null === tU ? null : (0, Bp.jsx)(wp.e, {
         placement: "statBars",
-        children: (0, Jp.jsxs)("div", {
-          className: Xp()("SkyblockGlowMeter", {
-            SkyblockGlowMeterFull: ID.full
+        children: (0, Bp.jsxs)("div", {
+          className: Ip()("SkyblockGlowMeter", {
+            SkyblockGlowMeterFull: tU.full
           }),
-          "aria-label": cD("skyblockGame:glowMeterLabel", {
-            fill: String(ID.fill),
-            LB: String(ID.LB)
+          "aria-label": gU("skyblockGame:glowMeterLabel", {
+            fill: String(tU.fill),
+            hG: String(tU.hG)
           }),
-          children: [ID.burst && (0, Jp.jsx)("div", {
+          children: [tU.burst && (0, Bp.jsx)("div", {
             className: "SkyblockGlowMeterBurst"
-          }, `burst:${ID.burstToken}`), (0, Jp.jsxs)("div", {
+          }, `burst:${tU.burstToken}`), (0, Bp.jsxs)("div", {
             className: "SkyblockGlowMeterVial",
-            children: [(0, Jp.jsx)("div", {
+            children: [(0, Bp.jsx)("div", {
               className: "SkyblockGlowMeterLiquid",
               style: {
-                transform: `scaleX(${ID.ratio})`
+                transform: `scaleX(${tU.ratio})`
               }
-            }), ID.gained && (0, Jp.jsx)("div", {
+            }), tU.gained && (0, Bp.jsx)("div", {
               className: "SkyblockGlowMeterGlint"
-            }, `gain:${ID.gainToken}`), ID.full && Array.from({
+            }, `gain:${tU.gainToken}`), tU.full && Array.from({
               length: 5
-            }, ((DD, CD) => (0, Jp.jsx)("span", {
+            }, ((UU, RU) => (0, Bp.jsx)("span", {
               className: "SkyblockGlowMeterSparkle"
-            }, CD)))]
-          }), ID.full && ID.rares.map((DD => (0, Jp.jsx)("div", {
+            }, RU)))]
+          }), tU.full && tU.rares.map((UU => (0, Bp.jsx)("div", {
             className: "SkyblockGlowMeterRare",
-            children: (0, Jp.jsx)(Pp.d, {
-              itemName: DD,
+            children: (0, Bp.jsx)(bp.c, {
+              itemName: UU,
               amount: 0
             })
-          }, DD))), ID.ready && (0, Jp.jsx)("div", {
+          }, UU))), tU.ready && (0, Bp.jsx)("div", {
             className: "SkyblockGlowMeterReady SmallTextBold",
-            children: (0, Jp.jsx)("span", {
-              children: cD("skyblockGame:glowMeterReady")
+            children: (0, Bp.jsx)("span", {
+              children: gU("skyblockGame:glowMeterReady")
             })
-          }, `ready:${ID.fullToken}`)]
+          }, `ready:${tU.fullToken}`)]
         })
       })
     }
 
-    function qb(DD) {
+    function nT(UU) {
       let {
-        controller: CD
-      } = DD;
+        controller: RU
+      } = UU;
       const {
-        t: cD
-      } = (0, xp.F)(), ID = (0, qp.g)(YI, CD.getSnapshot());
-      if (null === ID) return null;
-      const pD = "waiting" === ID.phase,
-        iD = {
-          animationDuration: `${ID.waitMs}ms`,
-          animationDelay: -ID.elapsedMs + "ms"
+        t: gU
+      } = (0, ap.B)(), tU = (0, Yp.h)(it, RU.getSnapshot());
+      if (null === tU) return null;
+      const pU = "waiting" === tU.phase,
+        EU = {
+          animationDuration: `${tU.waitMs}ms`,
+          animationDelay: -tU.elapsedMs + "ms"
         },
-        fD = pD ? void 0 : {
-          animationDuration: `${ID.waitMs}ms`
+        PU = pU ? void 0 : {
+          animationDuration: `${tU.waitMs}ms`
         };
-      return (0, Jp.jsxs)("div", {
-        className: pD ? "SkyblockHushWait" : "SkyblockHushWait SkyblockHushWaitAbandoned",
-        children: [pD && (0, Jp.jsxs)("div", {
+      return (0, Bp.jsxs)("div", {
+        className: pU ? "SkyblockHushWait" : "SkyblockHushWait SkyblockHushWaitAbandoned",
+        children: [pU && (0, Bp.jsxs)("div", {
           className: "SkyblockHushWaitRing",
           children: [Array.from({
             length: 3
-          }, ((DD, CD) => (0, Jp.jsx)("span", {
+          }, ((UU, RU) => (0, Bp.jsx)("span", {
             className: "SkyblockHushWaitRipple"
-          }, CD))), (0, Jp.jsx)("span", {
+          }, RU))), (0, Bp.jsx)("span", {
             className: "SkyblockHushWaitClosing",
-            style: iD
-          }), (0, Jp.jsxs)("svg", {
+            style: EU
+          }), (0, Bp.jsxs)("svg", {
             className: "SkyblockHushWaitProgress",
             viewBox: "0 0 100 100",
-            children: [(0, Jp.jsx)("circle", {
+            children: [(0, Bp.jsx)("circle", {
               className: "SkyblockHushWaitTrack",
               cx: "50",
               cy: "50",
               r: 46
-            }), (0, Jp.jsx)("circle", {
+            }), (0, Bp.jsx)("circle", {
               className: "SkyblockHushWaitArc",
               cx: "50",
               cy: "50",
               r: 46,
               pathLength: 100,
-              style: iD
+              style: EU
             })]
-          }), (0, Jp.jsx)("span", {
+          }), (0, Bp.jsx)("span", {
             className: "SkyblockHushWaitMoon"
           })]
-        }), (0, Jp.jsx)("div", {
+        }), (0, Bp.jsx)("div", {
           className: "SkyblockHushWaitLine SmallTextBold",
-          style: fD,
-          children: cD(ID.line)
-        }, ID.lineIndex)]
-      }, ID.token)
+          style: PU,
+          children: gU(tU.line)
+        }, tU.lineIndex)]
+      }, tU.token)
     }
 
-    function Jb(DD) {
+    function bT(UU) {
       let {
-        chart: CD,
-        showHere: cD,
-        className: ID
-      } = DD;
-      return (0, Jp.jsx)("div", {
-        className: Xp()("SkyblockTideChartGrid", ID, null !== CD.pictureName && "Complete"),
+        chart: RU,
+        showHere: gU,
+        className: tU
+      } = UU;
+      return (0, Bp.jsx)("div", {
+        className: Ip()("SkyblockTideChartGrid", tU, null !== RU.pictureName && "Complete"),
         "aria-hidden": "true",
-        children: CD.cells.map(((DD, ID) => {
-          const pD = 0 !== (CD.pulseCells & 1 << ID),
-            iD = CD.castCell === ID;
-          return (0, Jp.jsx)("span", {
-            className: Xp()("SkyblockTideChartCell", `Cell-${DD}`, pD && "Pulse", iD && "Cast", cD && CD.hereCell === ID && "Here")
-          }, `${ID}:${pD?`p${CD.pulseToken}`:""}:${iD?`c${CD.castToken}`:""}`)
+        children: RU.cells.map(((UU, tU) => {
+          const pU = 0 !== (RU.pulseCells & 1 << tU),
+            EU = RU.castCell === tU;
+          return (0, Bp.jsx)("span", {
+            className: Ip()("SkyblockTideChartCell", `Cell-${UU}`, pU && "Pulse", EU && "Cast", gU && RU.hereCell === tU && "Here")
+          }, `${tU}:${pU?`p${RU.pulseToken}`:""}:${EU?`c${RU.castToken}`:""}`)
         }))
       })
     }
 
-    function Kb(DD) {
+    function oT(UU) {
       let {
-        controller: CD
-      } = DD;
-      const cD = (0, qp.g)(sI, CD.getSnapshot()),
+        controller: RU
+      } = UU;
+      const gU = (0, Yp.h)(zt, RU.getSnapshot()),
         {
-          t: ID
-        } = (0, xp.F)(),
-        pD = cD.chip;
-      if (!cD.enabled || null === pD) return null;
-      const iD = ID("skyblockGame:tideChartsChipLabel", {
-        island: pD.islandName,
-        lit: String(pD.lit),
-        ink: String(pD.ink)
+          t: tU
+        } = (0, ap.B)(),
+        pU = gU.chip;
+      if (!gU.enabled || null === pU) return null;
+      const EU = tU("skyblockGame:tideChartsChipLabel", {
+        island: pU.islandName,
+        lit: String(pU.lit),
+        ink: String(pU.ink)
       });
-      return (0, Jp.jsx)(np.e, {
+      return (0, Bp.jsx)(wp.e, {
         placement: "statBars",
-        children: (0, Jp.jsxs)("button", {
+        children: (0, Bp.jsxs)("button", {
           type: "button",
           tabIndex: -1,
-          className: Xp()("SkyblockTideChartsChip", cD.open && "Open", null !== pD.pictureName && "Complete"),
-          "aria-label": iD,
-          title: iD,
-          onMouseDown: DD => {
-            DD.preventDefault()
+          className: Ip()("SkyblockTideChartsChip", gU.open && "Open", null !== pU.pictureName && "Complete"),
+          "aria-label": EU,
+          title: EU,
+          onMouseDown: UU => {
+            UU.preventDefault()
           },
-          onClick: CD.toggle,
-          children: [(0, Jp.jsx)(Jb, {
-            chart: pD,
+          onClick: RU.toggle,
+          children: [(0, Bp.jsx)(bT, {
+            chart: pU,
             showHere: !1,
             className: "Mini"
-          }), (0, Jp.jsxs)("span", {
+          }), (0, Bp.jsxs)("span", {
             className: "SkyblockTideChartsChipCount SmallTextBold",
-            children: [pD.lit, "/", pD.ink]
+            children: [pU.lit, "/", pU.ink]
           })]
         })
       })
     }
 
-    function ab(DD) {
+    function ZT(UU) {
       let {
-        controller: CD
-      } = DD;
-      const cD = (0, qp.g)(sI, CD.getSnapshot()),
+        controller: RU
+      } = UU;
+      const gU = (0, Yp.h)(zt, RU.getSnapshot()),
         {
-          t: ID
-        } = (0, xp.F)(),
-        pD = kp(),
-        iD = cD.card;
-      return cD.enabled && null !== iD ? (0, Jp.jsx)(Tp.e, {
-        show: cD.open,
-        close: CD.dismiss,
+          t: tU
+        } = (0, ap.B)(),
+        pU = Fp(),
+        EU = gU.card;
+      return gU.enabled && null !== EU ? (0, Bp.jsx)(sp.d, {
+        show: gU.open,
+        close: RU.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, Jp.jsxs)("section", {
+        children: (0, Bp.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockTideChartsPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockTideChartsTitle",
           tabIndex: -1,
-          ref: pD,
-          onKeyDown: Rp,
-          children: [(0, Jp.jsxs)("header", {
+          ref: pU,
+          onKeyDown: kp,
+          children: [(0, Bp.jsxs)("header", {
             className: "SkyblockTideChartsHeader",
-            children: [(0, Jp.jsxs)("div", {
-              children: [(0, Jp.jsx)("h2", {
+            children: [(0, Bp.jsxs)("div", {
+              children: [(0, Bp.jsx)("h2", {
                 id: "skyblockTideChartsTitle",
-                children: ID("skyblockGame:tideChartsTitle")
-              }), (0, Jp.jsx)("p", {
+                children: tU("skyblockGame:tideChartsTitle")
+              }), (0, Bp.jsx)("p", {
                 className: "SkyblockTideChartsIntro",
-                children: ID("skyblockGame:tideChartsIntro")
+                children: tU("skyblockGame:tideChartsIntro")
               })]
-            }), (0, Jp.jsx)(Gp.l, {
+            }), (0, Bp.jsx)(yp.h, {
               padIgnore: !0,
-              ariaLabel: ID("skyblockGame:tideChartsClose"),
-              onClick: CD.dismiss
+              ariaLabel: tU("skyblockGame:tideChartsClose"),
+              onClick: RU.dismiss
             })]
-          }), cD.tabs.length > 1 && (0, Jp.jsx)("div", {
+          }), gU.tabs.length > 1 && (0, Bp.jsx)("div", {
             className: "SkyblockTideChartsTabs",
             role: "group",
-            "aria-label": ID("skyblockGame:tideChartsIslands"),
-            children: cD.tabs.map((DD => (0, Jp.jsx)("button", {
+            "aria-label": tU("skyblockGame:tideChartsIslands"),
+            children: gU.tabs.map((UU => (0, Bp.jsx)("button", {
               type: "button",
-              className: Xp()("SkyblockTideChartsTab", DD.selected && "Selected"),
-              "aria-pressed": DD.selected,
+              className: Ip()("SkyblockTideChartsTab", UU.selected && "Selected"),
+              "aria-pressed": UU.selected,
               onClick: () => {
-                CD.MM(DD.island)
+                RU.Hj(UU.island)
               },
-              children: DD.name
-            }, DD.island)))
-          }), (0, Jp.jsxs)("div", {
+              children: UU.name
+            }, UU.island)))
+          }), (0, Bp.jsxs)("div", {
             className: "SkyblockTideChartsBody",
-            children: [(0, Jp.jsx)("div", {
+            children: [(0, Bp.jsx)("div", {
               className: "SkyblockTideChartsMap",
               role: "img",
-              "aria-label": iD.gridLabel,
-              children: (0, Jp.jsx)(Jb, {
-                chart: iD,
+              "aria-label": EU.gridLabel,
+              children: (0, Bp.jsx)(bT, {
+                chart: EU,
                 showHere: !0,
                 className: "Large"
               })
-            }), (0, Jp.jsxs)("div", {
+            }), (0, Bp.jsxs)("div", {
               className: "SkyblockTideChartsInfo",
-              children: [(0, Jp.jsx)("h3", {
-                children: iD.islandName
-              }), (0, Jp.jsx)("p", {
+              children: [(0, Bp.jsx)("h3", {
+                children: EU.islandName
+              }), (0, Bp.jsx)("p", {
                 className: "SkyblockTideChartsLit",
-                children: iD.litText
-              }), null === iD.pictureName ? (0, Jp.jsx)("p", {
+                children: EU.litText
+              }), null === EU.pictureName ? (0, Bp.jsx)("p", {
                 className: "SkyblockTideChartsPicture",
-                children: ID("skyblockGame:tideChartsPictureHidden")
-              }) : (0, Jp.jsx)("p", {
+                children: tU("skyblockGame:tideChartsPictureHidden")
+              }) : (0, Bp.jsx)("p", {
                 className: "SkyblockTideChartsPicture Revealed",
-                children: ID("skyblockGame:tideChartsPictureRevealed", {
-                  picture: iD.pictureName
+                children: tU("skyblockGame:tideChartsPictureRevealed", {
+                  picture: EU.pictureName
                 })
-              }, iD.pictureName), (0, Jp.jsxs)("ul", {
+              }, EU.pictureName), (0, Bp.jsxs)("ul", {
                 className: "SkyblockTideChartsLegend",
                 "aria-hidden": "true",
-                children: [(0, Jp.jsxs)("li", {
-                  children: [(0, Jp.jsx)("span", {
+                children: [(0, Bp.jsxs)("li", {
+                  children: [(0, Bp.jsx)("span", {
                     className: "SkyblockTideChartCell Cell-lit"
-                  }), ID("skyblockGame:tideChartsLegendLit")]
-                }), (0, Jp.jsxs)("li", {
-                  children: [(0, Jp.jsx)("span", {
+                  }), tU("skyblockGame:tideChartsLegendLit")]
+                }), (0, Bp.jsxs)("li", {
+                  children: [(0, Bp.jsx)("span", {
                     className: "SkyblockTideChartCell Cell-clear"
-                  }), ID("skyblockGame:tideChartsLegendClear")]
-                }), null !== iD.hereCell && (0, Jp.jsxs)("li", {
-                  children: [(0, Jp.jsx)("span", {
+                  }), tU("skyblockGame:tideChartsLegendClear")]
+                }), null !== EU.hereCell && (0, Bp.jsxs)("li", {
+                  children: [(0, Bp.jsx)("span", {
                     className: "SkyblockTideChartCell Cell-water Here"
-                  }), ID("skyblockGame:tideChartsLegendHere")]
+                  }), tU("skyblockGame:tideChartsLegendHere")]
                 })]
-              }), (0, Jp.jsxs)("p", {
+              }), (0, Bp.jsxs)("p", {
                 className: "SkyblockTideChartsFooter",
-                children: [(0, Jp.jsx)("span", {
-                  children: cD.turnsText
-                }), (0, Jp.jsx)("span", {
-                  children: cD.bookText
+                children: [(0, Bp.jsx)("span", {
+                  children: gU.turnsText
+                }), (0, Bp.jsx)("span", {
+                  children: gU.bookText
                 })]
               })]
             })]
@@ -9801,153 +9801,153 @@ export const modules = {
       }) : null
     }
 
-    function Vb(DD) {
-      var CD;
+    function aT(UU) {
+      var RU;
       let {
-        controller: cD
-      } = DD;
+        controller: gU
+      } = UU;
       const {
-        selectedLanguage: ID
-      } = (0, xp.F)(), pD = ID.code;
-      (0, HD.useEffect)((() => {
-        cD.setTranslator(((DD, CD) => (0, xp.y)(pD, DD, CD)), pD, ((DD, CD) => (0, xp.s)(pD, DD, CD)))
-      }), [cD, pD]);
-      const iD = (0, qp.g)(yD, cD.map.getSnapshot()),
+        selectedLanguage: tU
+      } = (0, ap.B)(), pU = tU.code;
+      (0, nU.useEffect)((() => {
+        gU.setTranslator(((UU, RU) => (0, ap.x)(pU, UU, RU)), pU, ((UU, RU) => (0, ap.s)(pU, UU, RU)))
+      }), [gU, pU]);
+      const EU = (0, Yp.h)(jU, gU.map.getSnapshot()),
         {
-          openInGameMenuName: fD
-        } = (0, mp.o)(["openInGameMenuName"]);
-      return (0, Jp.jsxs)(Jp.Fragment, {
-        children: [(0, Jp.jsx)(pb, {
-          controller: cD.quests,
-          display: cD.navigation.display
-        }), iD.enabled && !fD && (0, Jp.jsx)(Ii, {
-          controller: cD.navigation
-        }), (0, Jp.jsx)(Kp, {
-          controller: cD,
-          minimap: iD.enabled && (null === (CD = iD.presentation) || void 0 === CD ? void 0 : CD.minimap) && (0, Jp.jsx)(ci, {
-            view: iD.presentation.minimap,
-            navigation: cD.navigation,
-            controller: cD.map
+          openInGameMenuName: PU
+        } = (0, Jp.l)(["openInGameMenuName"]);
+      return (0, Bp.jsxs)(Bp.Fragment, {
+        children: [(0, Bp.jsx)(RT, {
+          controller: gU.quests,
+          display: gU.navigation.display
+        }), EU.enabled && !PU && (0, Bp.jsx)(pE, {
+          controller: gU.navigation
+        }), (0, Bp.jsx)(Vp, {
+          controller: gU,
+          minimap: EU.enabled && (null === (RU = EU.presentation) || void 0 === RU ? void 0 : RU.minimap) && (0, Bp.jsx)(tE, {
+            view: EU.presentation.minimap,
+            navigation: gU.navigation,
+            controller: gU.map
           }),
-          children: (0, Jp.jsx)(Mi, {
-            controller: cD.quests,
+          children: (0, Bp.jsx)(uE, {
+            controller: gU.quests,
             surface: "hud"
           })
-        }), (0, Jp.jsx)(Cb, {
-          controller: cD.navigation
-        }), (0, Jp.jsx)(fb, {
-          controller: cD.portalTransit
-        }), (0, Jp.jsx)(vb, {
-          controller: cD.dailyReward
-        }), (0, Jp.jsx)(Pb, {
-          controller: cD.mailbox
-        }), (0, Jp.jsx)(Hb, {
-          controller: cD.magmaward
-        }), (0, Jp.jsx)(Ub, {
-          controller: cD.glowtide
-        }), (0, Jp.jsx)(of, {
-          controller: cD.passage
-        }), (0, Jp.jsx)(Kb, {
-          controller: cD.tideCharts
-        }), (0, Jp.jsx)(xb, {
-          controller: cD.glowMeter
-        }), (0, Jp.jsx)(xf, {
-          controller: cD.reachLog
-        }), (0, Jp.jsx)(qb, {
-          controller: cD.hushWait
-        }), (0, Jp.jsx)(Of, {
-          controller: cD.lampLight
-        }), (0, Jp.jsx)(ii, {
-          controller: cD.skills,
+        }), (0, Bp.jsx)(lP, {
+          controller: gU.navigation
+        }), (0, Bp.jsx)(tT, {
+          controller: gU.portalTransit
+        }), (0, Bp.jsx)(CT, {
+          controller: gU.dailyReward
+        }), (0, Bp.jsx)(mT, {
+          controller: gU.mailbox
+        }), (0, Bp.jsx)(IT, {
+          controller: gU.magmaward
+        }), (0, Bp.jsx)(JT, {
+          controller: gU.glowtide
+        }), (0, Bp.jsx)(uP, {
+          controller: gU.passage
+        }), (0, Bp.jsx)(oT, {
+          controller: gU.tideCharts
+        }), (0, Bp.jsx)(wT, {
+          controller: gU.glowMeter
+        }), (0, Bp.jsx)(wP, {
+          controller: gU.reachLog
+        }), (0, Bp.jsx)(nT, {
+          controller: gU.hushWait
+        }), (0, Bp.jsx)(xP, {
+          controller: gU.lampLight
+        }), (0, Bp.jsx)(EE, {
+          controller: gU.skills,
           surface: "hud"
         })]
       })
     }
 
-    function zb(DD) {
+    function YT(UU) {
       let {
-        controller: CD
-      } = DD;
-      return (0, Jp.jsxs)(Jp.Fragment, {
-        children: [(0, Jp.jsx)(Ci, {
-          controller: CD.map,
-          navigation: CD.navigation
-        }), (0, Jp.jsx)(ii, {
-          controller: CD.skills,
+        controller: RU
+      } = UU;
+      return (0, Bp.jsxs)(Bp.Fragment, {
+        children: [(0, Bp.jsx)(gE, {
+          controller: RU.map,
+          navigation: RU.navigation
+        }), (0, Bp.jsx)(EE, {
+          controller: RU.skills,
           surface: "menu"
-        }), (0, Jp.jsx)(Mi, {
-          controller: CD.quests,
+        }), (0, Bp.jsx)(uE, {
+          controller: RU.quests,
           surface: "menu"
-        }), (0, Jp.jsx)(ei, {
-          controller: CD.dungeons
-        }), (0, Jp.jsx)(Ai, {
-          controller: CD.collections
-        }), (0, Jp.jsx)(Cf, {
-          controller: CD.questGraph
-        }), (0, Jp.jsx)(Qf, {
-          controller: CD.forge
-        }), (0, Jp.jsx)(tf, {
-          controller: CD.smuggler
-        }), (0, Jp.jsx)(Hf, {
-          controller: CD.keepersChair,
-          lampLight: CD.lampLight
-        }), (0, Jp.jsx)(hf, {
-          controller: CD.reachLog,
-          regulars: CD.regulars,
-          hiddenWaters: CD.hiddenWaters
-        }), (0, Jp.jsx)(af, {
-          controller: CD.regulars
-        }), (0, Jp.jsx)(Nf, {
-          controller: CD.passage
-        }), (0, Jp.jsx)(ab, {
-          controller: CD.tideCharts
-        }), (0, Jp.jsx)(Ff, {
-          controller: CD.dialogue
-        }), (0, Jp.jsx)(Db, {
-          controller: CD.autographs
+        }), (0, Bp.jsx)(ME, {
+          controller: RU.dungeons
+        }), (0, Bp.jsx)(NE, {
+          controller: RU.collections
+        }), (0, Bp.jsx)(UP, {
+          controller: RU.questGraph
+        }), (0, Bp.jsx)(EP, {
+          controller: RU.forge
+        }), (0, Bp.jsx)(GP, {
+          controller: RU.smuggler
+        }), (0, Bp.jsx)(IP, {
+          controller: RU.keepersChair,
+          lampLight: RU.lampLight
+        }), (0, Bp.jsx)(zP, {
+          controller: RU.reachLog,
+          regulars: RU.regulars,
+          hiddenWaters: RU.hiddenWaters
+        }), (0, Bp.jsx)(ZP, {
+          controller: RU.regulars
+        }), (0, Bp.jsx)(hP, {
+          controller: RU.passage
+        }), (0, Bp.jsx)(ZT, {
+          controller: RU.tideCharts
+        }), (0, Bp.jsx)(LP, {
+          controller: RU.dialogue
+        }), (0, Bp.jsx)(NP, {
+          controller: RU.autographs
         })]
       })
     }
-    var jb = cD(36122);
-    const lb = DI + bI;
+    var BT = gU(36311);
+    const VT = Ut + Tt;
 
-    function Lb(DD, CD, cD, ID, pD) {
-      const iD = [],
-        fD = [],
-        bD = cD => {
-          const ID = DD.playSound(CD, cD.sound, cD.volume, cD.rate);
-          ID && (fD.push(ID), void 0 !== cD.cutAfter && iD.push(setTimeout((() => {
-            ID.fade(ID.getVolume(), 0, 300)
-          }), cD.cutAfter)))
+    function rT(UU, RU, gU, tU, pU) {
+      const EU = [],
+        PU = [],
+        TU = gU => {
+          const tU = UU.playSound(RU, gU.sound, gU.volume, gU.rate);
+          tU && (PU.push(tU), void 0 !== gU.cutAfter && EU.push(setTimeout((() => {
+            tU.fade(tU.getVolume(), 0, 300)
+          }), gU.cutAfter)))
         };
-      for (const QD of function(DD, CD) {
-          const cD = [{
+      for (const qU of function(UU, RU) {
+          const gU = [{
             sound: "rpgKnifeSlice1",
-            beat: DI,
+            beat: Ut,
             lead: 260,
             volume: .5,
             rate: 1
           }, {
             sound: "sweep6",
-            beat: DI,
+            beat: Ut,
             lead: 140,
             volume: .35,
             rate: .85
           }, {
             sound: "rpgMetalPot1",
-            beat: DI,
+            beat: Ut,
             lead: 100,
             volume: 1,
             rate: .78 + .04 * Math.random()
           }, {
             sound: "hit1",
-            beat: DI,
+            beat: Ut,
             lead: 0,
             volume: .8,
             rate: .7
           }, {
             sound: "lowDrum1",
-            beat: DI,
+            beat: Ut,
             lead: 60,
             volume: .6,
             rate: 1
@@ -9958,7 +9958,7 @@ export const modules = {
             volume: .3,
             rate: 1.3
           }, {
-            sound: (0, jb.c)("firecracker"),
+            sound: (0, BT.d)("firecracker"),
             beat: 420,
             lead: 160,
             volume: .25,
@@ -9966,109 +9966,109 @@ export const modules = {
             cutAfter: 500
           }, {
             sound: "fireBurn",
-            beat: lb + 150,
+            beat: VT + 150,
             lead: 400,
             volume: .6,
             rate: 1.2
           }, {
-            sound: (0, jb.c)("bigDrumSwish"),
-            beat: lb + 80,
+            sound: (0, BT.d)("bigDrumSwish"),
+            beat: VT + 80,
             lead: 480,
             volume: .35,
             rate: 1,
             cutAfter: 1400
           }, {
             sound: "magicAccent2",
-            beat: lb + 60,
+            beat: VT + 60,
             lead: 180,
-            volume: .5 + .06 * DD,
-            rate: .82 + .07 * DD
+            volume: .5 + .06 * UU,
+            rate: .82 + .07 * UU
           }];
-          return DD >= 4 && cD.push({
+          return UU >= 4 && gU.push({
             sound: "exp_levelup",
-            beat: lb + 120,
+            beat: VT + 120,
             lead: 60,
             volume: .35,
             rate: 1
-          }), CD && cD.push({
+          }), RU && gU.push({
             sound: "trumpetFlare",
-            beat: lb + 40,
+            beat: VT + 40,
             lead: 20,
             volume: .8,
             rate: 1
-          }), cD.push({
+          }), gU.push({
             sound: "harp_pling",
-            beat: CI,
+            beat: Rt,
             lead: 40,
             volume: .2,
             rate: 1.5
-          }), cD
-        }(cD, ID)) pD ? iD.push(setTimeout((() => {
-        bD(QD)
-      }), Math.max(0, QD.beat - QD.lead / QD.rate))) : QD.beat !== DI && "magicAccent2" !== QD.sound && "trumpetFlare" !== QD.sound || bD(QD);
+          }), gU
+        }(gU, tU)) pU ? EU.push(setTimeout((() => {
+        TU(qU)
+      }), Math.max(0, qU.beat - qU.lead / qU.rate))) : qU.beat !== Ut && "magicAccent2" !== qU.sound && "trumpetFlare" !== qU.sound || TU(qU);
       return () => {
-        for (const DD of iD) clearTimeout(DD);
-        for (const DD of fD) DD.fade(DD.getVolume(), 0, 120)
+        for (const UU of EU) clearTimeout(UU);
+        for (const UU of PU) UU.fade(UU.getVolume(), 0, 120)
       }
     }
-    class Tb {
-      constructor(DD) {
-        this.deps = DD, this.pending = new Map, this.localHook = null
+    class XT {
+      constructor(UU) {
+        this.deps = UU, this.pending = new Map, this.localHook = null
       }
-      hookWaiting(DD, CD) {
-        this.pending.delete(DD);
-        const cD = this.deps.now();
-        if (null === CD) {
-          var ID;
-          if ((null === (ID = this.localHook) || void 0 === ID ? void 0 : ID.hookId) === DD) {
-            const DD = cD >= this.localHook.biteAtMs - 300;
-            this.localHook = null, this.deps.onLocalWaitEnded(DD)
+      hookWaiting(UU, RU) {
+        this.pending.delete(UU);
+        const gU = this.deps.now();
+        if (null === RU) {
+          var tU;
+          if ((null === (tU = this.localHook) || void 0 === tU ? void 0 : tU.hookId) === UU) {
+            const UU = gU >= this.localHook.biteAtMs - 300;
+            this.localHook = null, this.deps.onLocalWaitEnded(UU)
           }
           return
         }
-        const pD = cD + CD;
-        this.settle(DD, pD) || (this.pending.size >= 16 && this.pending.delete(this.pending.keys().next().value), this.pending.set(DD, {
-          untilMs: cD + 1e3,
-          biteAtMs: pD
+        const pU = gU + RU;
+        this.settle(UU, pU) || (this.pending.size >= 16 && this.pending.delete(this.pending.keys().next().value), this.pending.set(UU, {
+          untilMs: gU + 1e3,
+          biteAtMs: pU
         }))
       }
       getLocalHook() {
-        var DD, CD;
-        return null !== (DD = null === (CD = this.localHook) || void 0 === CD ? void 0 : CD.hookId) && void 0 !== DD ? DD : null
+        var UU, RU;
+        return null !== (UU = null === (RU = this.localHook) || void 0 === RU ? void 0 : RU.hookId) && void 0 !== UU ? UU : null
       }
       afterRender() {
         if (0 === this.pending.size) return;
-        const DD = this.deps.now();
-        for (const [CD, {
-            untilMs: cD,
-            biteAtMs: ID
-          }] of this.pending)(this.settle(CD, ID) || DD > cD) && this.pending.delete(CD)
+        const UU = this.deps.now();
+        for (const [RU, {
+            untilMs: gU,
+            biteAtMs: tU
+          }] of this.pending)(this.settle(RU, tU) || UU > gU) && this.pending.delete(RU)
       }
       dispose() {
         this.pending.clear(), this.localHook = null
       }
-      settle(DD, CD) {
-        const cD = this.deps.getLineOwner(DD);
-        if (null === cD) return !1;
-        if (!this.deps.isLocalPlayer(cD)) return !0;
+      settle(UU, RU) {
+        const gU = this.deps.getLineOwner(UU);
+        if (null === gU) return !1;
+        if (!this.deps.isLocalPlayer(gU)) return !0;
         if (this.localHook = {
-            hookId: DD,
-            biteAtMs: CD
+            hookId: UU,
+            biteAtMs: RU
           }, !this.deps.isHushWaiting()) {
-          const [CD, cD] = this.deps.getHookPosition(DD);
-          this.deps.onCastLanded(CD, cD)
+          const [RU, gU] = this.deps.getHookPosition(UU);
+          this.deps.onCastLanded(RU, gU)
         }
         return this.deps.onLocalHookSettled(), !0
       }
     }
-    var Gb = cD(4081);
-    const Rb = {
+    var vT = gU(3937);
+    const dT = {
         0: [15],
         1: [40, 60, 40],
         2: [40, 60, 40, 60, 60],
         3: [30, 50, 30, 50, 90]
       },
-      kb = {
+      HT = {
         1: {
           count: 24,
           rise: 2.5,
@@ -10085,16 +10085,16 @@ export const modules = {
           colour: [206, 145, 206]
         }
       };
-    class db {
-      constructor(DD) {
-        this.deps = DD, this.tell = null
+    class ST {
+      constructor(UU) {
+        this.deps = UU, this.tell = null
       }
-      receiveTell(DD) {
+      receiveTell(UU) {
         let {
-          biteTellTier: CD
-        } = DD;
+          biteTellTier: RU
+        } = UU;
         this.tell = {
-          tier: CD,
+          tier: RU,
           atMs: this.deps.now(),
           burst: !1
         }, this.burstAtHook()
@@ -10102,35 +10102,35 @@ export const modules = {
       onLocalHookSettled() {
         null !== this.tell && this.deps.now() - this.tell.atMs <= 500 && this.burstAtHook()
       }
-      onLocalWaitEnded(DD) {
-        const CD = this.tell;
-        if (this.tell = null, !DD) return;
-        const cD = null !== CD && this.deps.now() - CD.atMs <= 3e3 ? CD.tier : 0;
-        this.deps.vibrate(Rb[cD])
+      onLocalWaitEnded(UU) {
+        const RU = this.tell;
+        if (this.tell = null, !UU) return;
+        const gU = null !== RU && this.deps.now() - RU.atMs <= 3e3 ? RU.tier : 0;
+        this.deps.vibrate(dT[gU])
       }
       burstAtHook() {
-        const DD = this.tell,
-          CD = this.deps.getLocalHookPosition();
-        null === DD || DD.burst || null === CD || (DD.burst = !0, this.deps.playParticles(function(DD, CD) {
-          let [cD, ID, pD] = CD;
+        const UU = this.tell,
+          RU = this.deps.getLocalHookPosition();
+        null === UU || UU.burst || null === RU || (UU.burst = !0, this.deps.playParticles(function(UU, RU) {
+          let [gU, tU, pU] = RU;
           const {
-            count: iD,
-            rise: fD,
-            colour: bD
-          } = kb[DD], [QD, wD, SD] = bD;
+            count: EU,
+            rise: PU,
+            colour: TU
+          } = HT[UU], [qU, KU, cU] = TU;
           return {
             texture: "glint",
-            pos1: [cD - .3, ID, pD - .3],
-            pos2: [cD + .3, ID + .2, pD + .3],
-            dir1: [-.6, fD, -.6],
-            dir2: [.6, 1.4 * fD, .6],
+            pos1: [gU - .3, tU, pU - .3],
+            pos2: [gU + .3, tU + .2, pU + .3],
+            dir1: [-.6, PU, -.6],
+            dir2: [.6, 1.4 * PU, .6],
             minLifeTime: .5,
             maxLifeTime: .9,
             minEmitPower: 1,
             maxEmitPower: 1.6,
             minSize: .12,
             maxSize: .3,
-            manualEmitCount: iD,
+            manualEmitCount: EU,
             gravity: [0, -4, 0],
             velocityGradients: [{
               timeFraction: 0,
@@ -10143,38 +10143,38 @@ export const modules = {
             }],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [QD, wD, SD, 1],
+              minColor: [qU, KU, cU, 1],
               maxColor: [255, 255, 255, 1]
             }, {
               timeFraction: 1,
-              minColor: [QD, wD, SD, 0],
-              maxColor: [QD, wD, SD, 0]
+              minColor: [qU, KU, cU, 0],
+              maxColor: [qU, KU, cU, 0]
             }],
-            blendMode: Gb.c.Add,
+            blendMode: vT.g.Add,
             hideDist: 48
           }
-        }(DD.tier, CD)))
+        }(UU.tier, RU)))
       }
     }
-    var Yb = cD(1250),
-      Wb = cD(1913),
-      sb = cD(36);
+    var sT = gU(1249),
+      yT = gU(1802),
+      kT = gU(34);
 
-    function Eb(DD, CD) {
+    function FT(UU, RU) {
       return [{
         timeFraction: 0,
-        minColor: [255 * DD[0], 255 * DD[1], 255 * DD[2], 1],
-        maxColor: [255 * CD[0], 255 * CD[1], 255 * CD[2], 1]
+        minColor: [255 * UU[0], 255 * UU[1], 255 * UU[2], 1],
+        maxColor: [255 * RU[0], 255 * RU[1], 255 * RU[2], 1]
       }, {
         timeFraction: 1,
         minColor: [0, 0, 0, 1]
       }]
     }
-    const eb = [0, 0, 0],
-      ub = {
+    const iT = [0, 0, 0],
+      AT = {
         texture: "glint",
         mipmaps: !1,
-        LB: 24,
+        hG: 24,
         minLifeTime: .18,
         maxLifeTime: .35,
         minSize: .07,
@@ -10182,23 +10182,23 @@ export const modules = {
         minEmitPower: 0,
         maxEmitPower: 0,
         emitRate: 12,
-        dir1: eb,
-        dir2: eb,
-        blendMode: Gb.c.OneOne
+        dir1: iT,
+        dir2: iT,
+        blendMode: vT.g.OneOne
       },
-      hb = {
-        ...ub,
-        colorGradients: Eb([1, .88, .38], [1, .65, .15])
+      zT = {
+        ...AT,
+        colorGradients: FT([1, .88, .38], [1, .65, .15])
       },
-      rb = {
-        ...ub,
-        colorGradients: Eb([.55, .95, 1], [.9, 1, 1])
+      MT = {
+        ...AT,
+        colorGradients: FT([.55, .95, 1], [.9, 1, 1])
       },
-      Ab = [.5, .5, .5],
-      Fb = {
+      DT = [.5, .5, .5],
+      LT = {
         texture: "glint",
         mipmaps: !1,
-        LB: 24,
+        hG: 24,
         minLifeTime: .2,
         maxLifeTime: .4,
         minSize: .12,
@@ -10206,24 +10206,24 @@ export const modules = {
         minEmitPower: .5,
         maxEmitPower: 1.5,
         emitRate: 0,
-        colorGradients: Eb([1, .12, .12], [1, .35, .2]),
-        blendMode: Gb.c.OneOne
+        colorGradients: FT([1, .12, .12], [1, .35, .2]),
+        blendMode: vT.g.OneOne
       };
-    class DQ {
+    class NT {
       constructor() {
         this.drops = new Map
       }
-      kt(DD, CD) {
-        if ("overflowFlash" === CD.kind) {
-          const [cD, ID, pD] = CD.position, iD = DD.createParticles(Fb, {
-            pos: [cD, ID, pD],
-            half: Ab
+      qC(UU, RU) {
+        if ("overflowFlash" === RU.kind) {
+          const [gU, tU, pU] = RU.position, EU = UU.createParticles(LT, {
+            pos: [gU, tU, pU],
+            half: DT
           });
-          return iD.emit(18), void iD.stop()
+          return EU.emit(18), void EU.stop()
         }
-        this.drops.has(CD.itemId) || this.drops.set(CD.itemId, {
-          owner: CD.owner,
-          cosmetic: CD.cosmetic,
+        this.drops.has(RU.itemId) || this.drops.set(RU.itemId, {
+          owner: RU.owner,
+          cosmetic: RU.cosmetic,
           pickupDelayCleared: !1,
           seen: !1,
           markedAt: performance.now(),
@@ -10232,105 +10232,105 @@ export const modules = {
           particles: null
         })
       }
-      wy(DD) {
+      HG(UU) {
         if (0 === this.drops.size) return;
-        const CD = performance.now(),
-          cD = DD.getCameraPosition();
-        let ID = 0;
-        for (const iD of this.drops.values()) null !== iD.particles && ID++;
-        for (const [iD, fD] of this.drops) {
-          const bD = DD.getPositionView(iD);
-          if (null === bD) {
-            var pD;
-            if (fD.seen || CD - fD.markedAt > 5e3) null !== fD.particles && ID--, null === (pD = fD.particles) || void 0 === pD || pD.stop(), this.drops.delete(iD);
+        const RU = performance.now(),
+          gU = UU.getCameraPosition();
+        let tU = 0;
+        for (const EU of this.drops.values()) null !== EU.particles && tU++;
+        for (const [EU, PU] of this.drops) {
+          const TU = UU.getPositionView(EU);
+          if (null === TU) {
+            var pU;
+            if (PU.seen || RU - PU.markedAt > 5e3) null !== PU.particles && tU--, null === (pU = PU.particles) || void 0 === pU || pU.stop(), this.drops.delete(EU);
             continue
           }
-          fD.cosmetic || !DD.isLocalPlayer(fD.owner) || fD.pickupDelayCleared || (DD.clearPickupDelay(iD), fD.pickupDelayCleared = !0);
-          const QD = fD.lastPosition,
-            wD = fD.seen && (bD[0] - QD[0]) ** 2 + (bD[1] - QD[1]) ** 2 + (bD[2] - QD[2]) ** 2 > 4e-4,
-            SD = (bD[0] - cD[0]) ** 2 + (bD[1] - cD[1]) ** 2 + (bD[2] - cD[2]) ** 2 < 2025;
-          fD.seen = !0, QD[0] = bD[0], QD[1] = bD[1], QD[2] = bD[2], wD && (fD.lastMovingAt = CD), null !== fD.particles && (!SD || CD - fD.lastMovingAt > 500) && (fD.particles.stop(), fD.particles = null, ID--), wD && SD && null === fD.particles && ID < 32 && (fD.particles = DD.createParticles(fD.cosmetic ? rb : hb, {
-            pos: bD
-          }), ID++), null !== fD.particles && (fD.particles.moveTo(bD), fD.particles.setEmitRate(wD ? 12 : 0)), !wD && null === fD.particles && CD - Math.max(fD.lastMovingAt, fD.markedAt) > 2e3 && this.drops.delete(iD)
+          PU.cosmetic || !UU.isLocalPlayer(PU.owner) || PU.pickupDelayCleared || (UU.clearPickupDelay(EU), PU.pickupDelayCleared = !0);
+          const qU = PU.lastPosition,
+            KU = PU.seen && (TU[0] - qU[0]) ** 2 + (TU[1] - qU[1]) ** 2 + (TU[2] - qU[2]) ** 2 > 4e-4,
+            cU = (TU[0] - gU[0]) ** 2 + (TU[1] - gU[1]) ** 2 + (TU[2] - gU[2]) ** 2 < 2025;
+          PU.seen = !0, qU[0] = TU[0], qU[1] = TU[1], qU[2] = TU[2], KU && (PU.lastMovingAt = RU), null !== PU.particles && (!cU || RU - PU.lastMovingAt > 500) && (PU.particles.stop(), PU.particles = null, tU--), KU && cU && null === PU.particles && tU < 32 && (PU.particles = UU.createParticles(PU.cosmetic ? MT : zT, {
+            pos: TU
+          }), tU++), null !== PU.particles && (PU.particles.moveTo(TU), PU.particles.setEmitRate(KU ? 12 : 0)), !KU && null === PU.particles && RU - Math.max(PU.lastMovingAt, PU.markedAt) > 2e3 && this.drops.delete(EU)
         }
       }
       dispose() {
-        for (const CD of this.drops.values()) {
-          var DD;
-          null === (DD = CD.particles) || void 0 === DD || DD.stop()
+        for (const RU of this.drops.values()) {
+          var UU;
+          null === (UU = RU.particles) || void 0 === UU || UU.stop()
         }
         this.drops.clear()
       }
     }
-    var CQ = cD(194);
-    const cQ = CQ.h.XN * CQ.h.playerEyeToHeightRatio;
-    class IQ {
-      constructor(DD) {
-        this.host = DD, this.lava = [], this.loop = null, this.nextUpdateAt = 0
+    var lT = gU(189);
+    const OT = lT.e.FW * lT.e.playerEyeToHeightRatio;
+    class Uq {
+      constructor(UU) {
+        this.host = UU, this.lava = [], this.loop = null, this.nextUpdateAt = 0
       }
-      kt(DD) {
-        this.lava = DD, this.nextUpdateAt = 0
+      qC(UU) {
+        this.lava = UU, this.nextUpdateAt = 0
       }
-      wy() {
-        var DD;
-        const CD = this.host.now();
-        if (CD < this.nextUpdateAt) return;
-        this.nextUpdateAt = CD + 250;
-        const cD = this.host.playerPosition(),
-          ID = cD && this.findNearest([cD[0], cD[1] + cQ, cD[2]]);
-        if (!ID || ID.distance >= 40) return void this.stop();
-        const pD = .5 * Math.min(1, (40 - ID.distance) / 8);
-        this.loop ? this.loop.setRelativeVolume(pD) : this.loop = this.host.play("lavaFlow", pD, ID.position, 40 + cQ, 9, !0), null === (DD = this.loop) || void 0 === DD || DD.setPosition(ID.position)
+      HG() {
+        var UU;
+        const RU = this.host.now();
+        if (RU < this.nextUpdateAt) return;
+        this.nextUpdateAt = RU + 250;
+        const gU = this.host.playerPosition(),
+          tU = gU && this.findNearest([gU[0], gU[1] + OT, gU[2]]);
+        if (!tU || tU.distance >= 40) return void this.stop();
+        const pU = .5 * Math.min(1, (40 - tU.distance) / 8);
+        this.loop ? this.loop.setRelativeVolume(pU) : this.loop = this.host.play("lavaFlow", pU, tU.position, 40 + OT, 9, !0), null === (UU = this.loop) || void 0 === UU || UU.setPosition(tU.position)
       }
       dispose() {
         this.stop(), this.lava = []
       }
       stop() {
-        var DD;
-        null === (DD = this.loop) || void 0 === DD || DD.stop(), this.loop = null
+        var UU;
+        null === (UU = this.loop) || void 0 === UU || UU.stop(), this.loop = null
       }
-      findNearest(DD) {
-        let CD = -1,
-          cD = 1 / 0;
-        for (let ID = 0; ID < this.lava.length; ID += 3) {
-          const pD = this.lava[ID] - DD[0],
-            iD = this.lava[ID + 1] - DD[1],
-            fD = this.lava[ID + 2] - DD[2],
-            bD = pD * pD + iD * iD + fD * fD;
-          bD < cD && (cD = bD, CD = ID)
+      findNearest(UU) {
+        let RU = -1,
+          gU = 1 / 0;
+        for (let tU = 0; tU < this.lava.length; tU += 3) {
+          const pU = this.lava[tU] - UU[0],
+            EU = this.lava[tU + 1] - UU[1],
+            PU = this.lava[tU + 2] - UU[2],
+            TU = pU * pU + EU * EU + PU * PU;
+          TU < gU && (gU = TU, RU = tU)
         }
-        return CD < 0 ? null : {
-          position: [this.lava[CD], this.lava[CD + 1], this.lava[CD + 2]],
-          distance: Math.sqrt(cD)
+        return RU < 0 ? null : {
+          position: [this.lava[RU], this.lava[RU + 1], this.lava[RU + 2]],
+          distance: Math.sqrt(gU)
         }
       }
     }
-    var pQ = cD(1886),
-      iQ = cD(38013);
-    const fQ = {
+    var Rq = gU(1786),
+      gq = gU(38190);
+    const tq = {
       "Grey Portal": "Gray"
     };
-    for (const yQ of pD.Gc) fQ[`${yQ} Portal`] = yQ;
-    const bQ = Object.keys(fQ),
-      QQ = Object.fromEntries(bQ.map((DD => [DD, (0, pD.V)(pD.J[`${(0,pD.le)(fQ[DD])}Team`])])));
-    Object.fromEntries(bQ.map((DD => [DD, pD.J[`${(0,pD.le)(fQ[DD])}UiText`]])));
-    class wQ {
-      constructor(DD, CD) {
-        this.presentation = DD, this.portal = CD, this.unlocked = void 0
+    for (const Kq of pU.Gc) tq[`${Kq} Portal`] = Kq;
+    const pq = Object.keys(tq),
+      Eq = Object.fromEntries(pq.map((UU => [UU, (0, pU.ab)(pU.N[`${(0,pU.Ne)(tq[UU])}Team`])])));
+    Object.fromEntries(pq.map((UU => [UU, pU.N[`${(0,pU.Ne)(tq[UU])}UiText`]])));
+    class Pq {
+      constructor(UU, RU) {
+        this.presentation = UU, this.portal = RU, this.unlocked = void 0
       }
-      kt(DD) {
-        const CD = !1 === this.unlocked && DD;
-        this.unlocked = DD, this.wy();
+      qC(UU) {
+        const RU = !1 === this.unlocked && UU;
+        this.unlocked = UU, this.HG();
         const {
-          min: cD,
-          max: ID,
-          unlockedBlock: pD
+          min: gU,
+          max: tU,
+          unlockedBlock: pU
         } = this.portal;
-        if (CD && this.presentation.hasChunk(...cD)) {
-          const [DD, CD, iD] = QQ[pD];
+        if (RU && this.presentation.hasChunk(...gU)) {
+          const [UU, RU, EU] = Eq[pU];
           this.presentation.playParticles({
-            pos1: [...cD],
-            pos2: ID.map((DD => DD + 1)),
+            pos1: [...gU],
+            pos2: tU.map((UU => UU + 1)),
             dir1: [-1, 0, -1],
             dir2: [1, 1, 1],
             texture: "glint",
@@ -10345,8 +10345,8 @@ export const modules = {
             gravity: [0, .5, 0],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [DD, CD, iD, 1],
-              maxColor: [Math.min(255, DD + 55), Math.min(255, CD + 55), Math.min(255, iD + 90), 1]
+              minColor: [UU, RU, EU, 1],
+              maxColor: [Math.min(255, UU + 55), Math.min(255, RU + 55), Math.min(255, EU + 90), 1]
             }],
             velocityGradients: [{
               timeFraction: 0,
@@ -10357,312 +10357,312 @@ export const modules = {
           })
         }
       }
-      wy() {
-        var DD;
-        const CD = this.unlocked ? this.portal.unlockedBlock : null !== (DD = this.portal.lockedBlock) && void 0 !== DD ? DD : "Light Gray Portal",
+      HG() {
+        var UU;
+        const RU = this.unlocked ? this.portal.unlockedBlock : null !== (UU = this.portal.lockedBlock) && void 0 !== UU ? UU : "Light Gray Portal",
           {
-            min: cD,
-            max: ID
+            min: gU,
+            max: tU
           } = this.portal;
-        for (let pD = cD[0]; pD <= ID[0]; pD++)
-          for (let DD = cD[1]; DD <= ID[1]; DD++)
-            for (let iD = cD[2]; iD <= ID[2]; iD++) this.presentation.hasChunk(pD, DD, iD) && this.presentation.hN(pD, DD, iD) !== CD && this.presentation.Hx(pD, DD, iD, CD)
+        for (let pU = gU[0]; pU <= tU[0]; pU++)
+          for (let UU = gU[1]; UU <= tU[1]; UU++)
+            for (let EU = gU[2]; EU <= tU[2]; EU++) this.presentation.hasChunk(pU, UU, EU) && this.presentation.Zx(pU, UU, EU) !== RU && this.presentation.mw(pU, UU, EU, RU)
       }
     }
-    const SQ = {
+    const Tq = {
         farming_1: {
-          raises: DD => "NPC" === DD.type && "chef" === DD.variation,
+          raises: UU => "NPC" === UU.type && "chef" === UU.variation,
           rise: .4
         },
         fishing_1: {
-          raises: DD => "Draugr Warper" === DD.type,
+          raises: UU => "Draugr Warper" === UU.type,
           rise: .4
         }
       },
-      BQ = (DD, CD, cD, iD) => {
+      qq = (UU, RU, gU, EU) => {
         let {
-          localPlayerId: fD
-        } = iD;
-        const bD = new Np({
-          translate: (DD, CD) => (0, xp.y)(Yb.e.get().getCurrentLanguageCode(), DD, CD),
-          translateWithIcons: (DD, CD) => (0, xp.s)(Yb.e.get().getCurrentLanguageCode(), DD, CD),
-          setMenuOpen: DD => {
-            DD ? (0, ED.s)() : (0, ED.e)()
+          localPlayerId: PU
+        } = EU;
+        const TU = new xp({
+          translate: (UU, RU) => (0, ap.x)(sT.g.get().getCurrentLanguageCode(), UU, RU),
+          translateWithIcons: (UU, RU) => (0, ap.s)(sT.g.get().getCurrentLanguageCode(), UU, RU),
+          setMenuOpen: UU => {
+            UU ? (0, zU.w)() : (0, zU.h)()
           },
-          dismissMenu: ED.i,
-          publishSkills: DD => {
-            eD.i.Uo(ic, DD, !0)
+          dismissMenu: zU.l,
+          publishSkills: UU => {
+            MU.p.yh(Eg, UU, !0)
           },
-          publishQuests: DD => {
-            eD.i.Uo(wc, DD, !0)
+          publishQuests: UU => {
+            MU.p.yh(Kg, UU, !0)
           },
-          publishQuestNotification: DD => {
-            eD.i.Uo(Sc, DD, !0)
+          publishQuestNotification: UU => {
+            MU.p.yh(cg, UU, !0)
           },
-          publishDungeons: DD => {
-            eD.i.Uo(Mc, DD, !0)
+          publishDungeons: UU => {
+            MU.p.yh(ug, UU, !0)
           },
-          publishCollections: DD => {
-            eD.i.Uo(jc, DD, !0)
+          publishCollections: UU => {
+            MU.p.yh(Xg, UU, !0)
           },
-          publishMap: DD => {
-            eD.i.Uo(yD, DD, !0)
+          publishMap: UU => {
+            MU.p.yh(jU, UU, !0)
           },
-          publishHud: DD => {
-            eD.i.Uo(Zp, DD, !0)
+          publishHud: UU => {
+            MU.p.yh(ep, UU, !0)
           },
-          publishPortalTransit: DD => {
-            eD.i.Uo(Lc, DD, !0)
+          publishPortalTransit: UU => {
+            MU.p.yh(dg, UU, !0)
           },
-          isLoadingScreenUp: () => mp.d.get("loadingOverlayVisible"),
-          publishDailyReward: DD => {
-            eD.i.Uo(Rc, DD, !0)
+          isLoadingScreenUp: () => Jp.b.get("loadingOverlayVisible"),
+          publishDailyReward: UU => {
+            MU.p.yh(sg, UU, !0)
           },
-          publishMailbox: DD => {
-            eD.i.Uo(sc, DD, !0)
+          publishMailbox: UU => {
+            MU.p.yh(Ag, UU, !0)
           },
-          publishQuestGraph: DD => {
-            eD.i.Uo(ec, DD, !0)
+          publishQuestGraph: UU => {
+            MU.p.yh(Mg, UU, !0)
           },
-          publishForge: DD => {
-            eD.i.Uo(tI, DD, !0)
+          publishForge: UU => {
+            MU.p.yh(Ct, UU, !0)
           },
-          publishSmuggler: DD => {
-            eD.i.Uo(vI, DD, !0)
+          publishSmuggler: UU => {
+            MU.p.yh(et, UU, !0)
           },
-          publishKeepersChair: DD => {
-            eD.i.Uo(UI, DD, !0)
+          publishKeepersChair: UU => {
+            MU.p.yh(bt, UU, !0)
           },
-          publishReachLog: DD => {
-            eD.i.Uo(qI, DD, !0)
+          publishReachLog: UU => {
+            MU.p.yh(Zt, UU, !0)
           },
-          publishLampLight: DD => {
-            eD.i.Uo(jI, DD, !0)
+          publishLampLight: UU => {
+            MU.p.yh(vt, UU, !0)
           },
-          publishMagmaward: DD => {
-            eD.i.Uo(LI, DD, !0)
+          publishMagmaward: UU => {
+            MU.p.yh(Ht, UU, !0)
           },
-          publishGlowtide: DD => {
-            eD.i.Uo(GI, DD, !0)
+          publishGlowtide: UU => {
+            MU.p.yh(st, UU, !0)
           },
-          publishGlowMeter: DD => {
-            eD.i.Uo(kI, DD, !0)
+          publishGlowMeter: UU => {
+            MU.p.yh(kt, UU, !0)
           },
-          publishHushWait: DD => {
-            eD.i.Uo(YI, DD, !0)
+          publishHushWait: UU => {
+            MU.p.yh(it, UU, !0)
           },
-          publishPassage: DD => {
-            eD.i.Uo(XI, DD, !0)
+          publishPassage: UU => {
+            MU.p.yh(xt, UU, !0)
           },
-          publishTideCharts: DD => {
-            eD.i.Uo(sI, DD, !0)
+          publishTideCharts: UU => {
+            MU.p.yh(zt, UU, !0)
           },
-          publishRegulars: DD => {
-            eD.i.Uo(Dp, DD, !0)
+          publishRegulars: UU => {
+            MU.p.yh(Rp, UU, !0)
           },
-          publishHiddenWaters: DD => {
-            eD.i.Uo(ip, DD, !0)
+          publishHiddenWaters: UU => {
+            MU.p.yh(Pp, UU, !0)
           },
-          publishDialogue: DD => {
-            eD.i.Uo(bp, DD, !0)
+          publishDialogue: UU => {
+            MU.p.yh(qp, UU, !0)
           },
-          publishAutographs: DD => {
-            eD.i.Uo(yp, DD, !0)
+          publishAutographs: UU => {
+            MU.p.yh(Cp, UU, !0)
           },
-          onDailyRewardStarted: DD => {
-            aD.playSound(fD, DD.day === xD ? "trumpetFlare" : "chestOpen", .8, 1)
+          onDailyRewardStarted: UU => {
+            BU.playSound(PU, UU.day === oU ? "trumpetFlare" : "chestOpen", .8, 1)
           },
-          onDailyRewardCoinLanded: (DD, CD) => {
-            aD.playSound(fD, "exp_collect", .35, 1 + .6 * DD / (CD - 1)), eD.i.Uo(kc, DD === CD - 1)
+          onDailyRewardCoinLanded: (UU, RU) => {
+            BU.playSound(PU, "exp_collect", .35, 1 + .6 * UU / (RU - 1)), MU.p.yh(yg, UU === RU - 1)
           },
-          onDailyRewardItemLanded: DD => {
-            aD.playSound(fD, "pickUp", .6, 1 + .15 * DD)
+          onDailyRewardItemLanded: UU => {
+            BU.playSound(PU, "pickUp", .6, 1 + .15 * UU)
           },
           onMailboxStarted: () => {
-            aD.playSound(fD, "rpgMetalClick", .6, 1), aD.playSound(fD, "rpgBookFlip1", .7, 1)
+            BU.playSound(PU, "rpgMetalClick", .6, 1), BU.playSound(PU, "rpgBookFlip1", .7, 1)
           },
           onDailyRewardFinished: () => {
-            aD.sendCommand("skyblockDailyRewardDone")
+            BU.sendCommand("skyblockDailyRewardDone")
           },
-          journeyStorage: sb.j,
-          requestTracking: DD => {
-            aD.sendCommand(`quests track ${DD}`)
+          journeyStorage: kT.l,
+          requestTracking: UU => {
+            BU.sendCommand(`quests track ${UU}`)
           },
-          requestDungeonEnter: (DD, CD) => {
-            aD.sendCommand(`dungeonEnter ${DD} ${CD}`)
+          requestDungeonEnter: (UU, RU) => {
+            BU.sendCommand(`dungeonEnter ${UU} ${RU}`)
           },
-          requestQuestJump: DD => {
-            aD.sendCommand(`${zD} jump ${DD}`)
+          requestQuestJump: UU => {
+            BU.sendCommand(`${rU} jump ${UU}`)
           },
-          requestQuestArrive: (DD, CD) => {
-            const cD = `${zD} arrive ${DD}`;
-            aD.sendCommand(CD ? `${cD} complete` : cD)
+          requestQuestArrive: (UU, RU) => {
+            const gU = `${rU} arrive ${UU}`;
+            BU.sendCommand(RU ? `${gU} complete` : gU)
           },
-          requestForge: DD => {
+          requestForge: UU => {
             let {
-              blade: CD,
-              guard: cD,
-              handle: ID
-            } = DD;
-            aD.sendCommand(`forge ${CD} ${cD} ${ID}`)
+              blade: RU,
+              guard: gU,
+              handle: tU
+            } = UU;
+            BU.sendCommand(`forge ${RU} ${gU} ${tU}`)
           },
           requestDialogue: () => {
-            aD.sendCommand("quests dialogue")
+            BU.sendCommand("quests dialogue")
           },
-          requestSmuggle: (DD, CD) => {
-            aD.sendCommand(`smuggle ${DD} ${CD}`)
+          requestSmuggle: (UU, RU) => {
+            BU.sendCommand(`smuggle ${UU} ${RU}`)
           },
-          requestKeepersChairAim: DD => {
-            aD.sendCommand(`keeperschair-aim ${DD}`)
+          requestKeepersChairAim: UU => {
+            BU.sendCommand(`keeperschair-aim ${UU}`)
           },
           requestReachLogOpen: () => {
-            aD.sendCommand("reachlog-open")
+            BU.sendCommand("reachlog-open")
           },
-          requestLampLight: DD => {
-            aD.sendCommand(`${DD}`)
+          requestLampLight: UU => {
+            BU.sendCommand(`${UU}`)
           },
-          requestTravel: DD => {
-            aD.sendCommand(`map travel ${DD.kind} ${DD.id} ${DD.requestId}`)
+          requestTravel: UU => {
+            BU.sendCommand(`map travel ${UU.kind} ${UU.id} ${UU.requestId}`)
           }
         });
-        let QD, wD, SD, BD, MD, tD, ZD, XD, mD, nD, OD, UD, qD;
-        const KD = new DQ;
-        let aD, VD = null;
-        const jD = SQ[null !== cD && void 0 !== cD ? cD : ""],
-          GD = (DD, CD) => {
-            null !== jD && void 0 !== jD && jD.raises(CD) && aD.setNametagOffset(DD, jD.rise)
+        let qU, KU, cU, GU, uU, CU, hU, xU, mU, IU, JU, bU, ZU;
+        const YU = new NT;
+        let BU, VU = null;
+        const XU = Tq[null !== gU && void 0 !== gU ? gU : ""],
+          SU = (UU, RU) => {
+            null !== XU && void 0 !== XU && XU.raises(RU) && BU.setNametagOffset(UU, XU.rise)
           },
-          dD = new db({
+          kU = new ST({
             getLocalHookPosition: () => {
-              const DD = YD.getLocalHook();
-              return null !== DD && aD.checkValid(DD) ? aD.FX(DD) : null
+              const UU = FU.getLocalHook();
+              return null !== UU && BU.checkValid(UU) ? BU.Hx(UU) : null
             },
-            playParticles: DD => {
-              aD.playParticleEffect(DD)
+            playParticles: UU => {
+              BU.playParticleEffect(UU)
             },
-            vibrate: DD => {
-              uD.d.play("fishBite", DD)
+            vibrate: UU => {
+              DU.d.play("fishBite", UU)
             },
             now: () => performance.now()
           }),
-          YD = new Tb({
-            getLineOwner: DD => aD.checkValid(DD) ? aD.getLineOwner(DD) : null,
-            isLocalPlayer: DD => aD.isLocalPlayer(DD),
-            getHookPosition: DD => {
-              const [CD, , cD] = aD.FX(DD);
-              return [CD, cD]
+          FU = new XT({
+            getLineOwner: UU => BU.checkValid(UU) ? BU.getLineOwner(UU) : null,
+            isLocalPlayer: UU => BU.isLocalPlayer(UU),
+            getHookPosition: UU => {
+              const [RU, , gU] = BU.Hx(UU);
+              return [RU, gU]
             },
             isHushWaiting: () => {
-              var DD;
-              return "waiting" === (null === (DD = bD.hushWait.getSnapshot()) || void 0 === DD ? void 0 : DD.phase)
+              var UU;
+              return "waiting" === (null === (UU = TU.hushWait.getSnapshot()) || void 0 === UU ? void 0 : UU.phase)
             },
-            onCastLanded: (DD, CD) => {
-              bD.tideCharts.castLanded(DD, CD)
+            onCastLanded: (UU, RU) => {
+              TU.tideCharts.castLanded(UU, RU)
             },
             onLocalHookSettled: () => {
-              dD.onLocalHookSettled()
+              kU.onLocalHookSettled()
             },
-            onLocalWaitEnded: DD => {
-              dD.onLocalWaitEnded(DD)
+            onLocalWaitEnded: UU => {
+              kU.onLocalWaitEnded(UU)
             },
             now: () => performance.now()
           }),
-          hD = new IQ({
+          LU = new Uq({
             now: () => performance.now(),
-            playerPosition: () => aD.checkValid(fD) ? aD.FX(fD) : null,
-            play: (DD, CD, cD, ID, pD, iD) => aD.playSound(fD, DD, CD, 1, {
-              xp: cD,
-              maxHearDist: ID,
-              refDistance: pD
-            }, iD)
+            playerPosition: () => BU.checkValid(PU) ? BU.Hx(PU) : null,
+            play: (UU, RU, gU, tU, pU, EU) => BU.playSound(PU, UU, RU, 1, {
+              Xp: gU,
+              maxHearDist: tU,
+              refDistance: pU
+            }, EU)
           }),
-          rD = new Map;
-        let AD;
+          NU = new Map;
+        let lU;
         return {
-          onCreate: DD => {
-            if (aD = DD, VD = new iQ.SkyblockEntityFacing(DD, jD ? GD : null), bD.portalTransit.resumeArrival(null !== cD && void 0 !== cD ? cD : null), (null !== cD && void 0 !== cD ? cD : ID) === ID) {
-              let DD = -1 / 0;
-              AD = eD.i.subscribe("toggleMenu", (CD => {
-                const cD = performance.now();
-                "inventory|Workbench" !== CD || "cross_to_hub" !== bD.quests.getTrackedQuestId() || cD - DD < 1e4 || (DD = cD, aD.sendCommand("skyblockWorkbenchOpened"))
+          onCreate: UU => {
+            if (BU = UU, VU = new gq.SkyblockEntityFacing(UU, XU ? SU : null), TU.portalTransit.resumeArrival(null !== gU && void 0 !== gU ? gU : null), (null !== gU && void 0 !== gU ? gU : tU) === tU) {
+              let UU = -1 / 0;
+              lU = MU.p.subscribe("toggleMenu", (RU => {
+                const gU = performance.now();
+                "inventory|Workbench" !== RU || "cross_to_hub" !== TU.quests.getTrackedQuestId() || gU - UU < 1e4 || (UU = gU, BU.sendCommand("skyblockWorkbenchOpened"))
               }))
             }
-            for (const [ID, pD] of Object.entries(null !== (CD = lD[null !== cD && void 0 !== cD ? cD : ""]) && void 0 !== CD ? CD : {})) {
-              var CD;
-              rD.set(ID, new wQ({
-                hasChunk: (CD, cD, ID) => DD.isBlockInLoadedChunk(CD, cD, ID),
-                hN: (CD, cD, ID) => DD.blockIdToBlockName(DD.getBlockId(CD, cD, ID)),
-                Hx: (CD, cD, ID, pD) => {
-                  DD.Hx(CD, cD, ID, pD)
+            for (const [tU, pU] of Object.entries(null !== (RU = vU[null !== gU && void 0 !== gU ? gU : ""]) && void 0 !== RU ? RU : {})) {
+              var RU;
+              NU.set(tU, new Pq({
+                hasChunk: (RU, gU, tU) => UU.isBlockInLoadedChunk(RU, gU, tU),
+                Zx: (RU, gU, tU) => UU.blockIdToBlockName(UU.getBlockId(RU, gU, tU)),
+                mw: (RU, gU, tU, pU) => {
+                  UU.mw(RU, gU, tU, pU)
                 },
-                playParticles: CD => {
-                  DD.playParticleEffect(CD)
+                playParticles: RU => {
+                  UU.playParticleEffect(RU)
                 }
-              }, pD))
+              }, pU))
             }
-            qD = (0, pQ.e)((DD => function(DD) {
-              return Object.hasOwn(YC, DD) || DD.startsWith("npc_")
-            }(DD) ? sC(DD) : null)), bD.resolveItemName = (CD, cD) => {
-              const ID = DD.getItemStat(fD, CD, "displayName");
-              return ID && "object" === typeof ID && "translationKey" in ID ? cD(ID.translationKey, (0, xp.o)(ID.params, Wb.c.shown)) : "string" === typeof ID ? cD(ID) : CD
-            }, bD.quests.notifications.onShown = DD => {
-              "quest" === DD ? aD.playSound(fD, "magicAccent1", 1, 1) : "skillLevel" === DD ? aD.playSound(fD, "magicAccent1", 1, .6) : "landmark" === DD ? aD.playSound(fD, "trumpetFlare", 1, .6) : "npcNote" === DD ? aD.playSound(fD, "magicAccent2", .8, 1.1) : "started" === DD ? aD.playSound(fD, (0, jb.c)("bigDrumSwish"), 1, 1) : aD.playSound(fD, (0, jb.c)("rpgHandleSmallLeather"), 1, 1)
-            }, bD.forge.onPartSelected = () => {
-              aD.playSound(fD, "rpgMetalClick", .6, .9 + .2 * Math.random())
-            }, bD.forge.onForgeStarted = (CD, cD, ID) => Lb(DD, fD, CD, cD, ID), bD.smuggler.onBought = () => {
-              aD.playSound(fD, (0, jb.c)("rpgHandleSmallLeather"), 1, 1), aD.playSound(fD, "chestOpen", .6, 1)
-            }, bD.compass.register(new oD(bD.map, !0)), bD.compass.register(new oD(bD.map, !1)), bD.compass.register(new ND(bD.map)), bD.compass.register(new gD((() => bD.quests.getSnapshot().compassTarget)));
-            for (const cD of ["enemy", "npc"]) bD.compass.register(new vD(bD.map, cD, (CD => DD.checkValid(CD) ? DD.FX(CD) : void 0), (CD => DD.isAlive(CD))))
+            ZU = (0, Rq.h)((UU => function(UU) {
+              return Object.hasOwn(FR, UU) || UU.startsWith("npc_")
+            }(UU) ? AR(UU) : null)), TU.resolveItemName = (RU, gU) => {
+              const tU = UU.getItemStat(PU, RU, "displayName");
+              return tU && "object" === typeof tU && "translationKey" in tU ? gU(tU.translationKey, (0, ap.r)(tU.params, yT.b.shown)) : "string" === typeof tU ? gU(tU) : RU
+            }, TU.quests.notifications.onShown = UU => {
+              "quest" === UU ? BU.playSound(PU, "magicAccent1", 1, 1) : "skillLevel" === UU ? BU.playSound(PU, "magicAccent1", 1, .6) : "landmark" === UU ? BU.playSound(PU, "trumpetFlare", 1, .6) : "npcNote" === UU ? BU.playSound(PU, "magicAccent2", .8, 1.1) : "started" === UU ? BU.playSound(PU, (0, BT.d)("bigDrumSwish"), 1, 1) : BU.playSound(PU, (0, BT.d)("rpgHandleSmallLeather"), 1, 1)
+            }, TU.forge.onPartSelected = () => {
+              BU.playSound(PU, "rpgMetalClick", .6, .9 + .2 * Math.random())
+            }, TU.forge.onForgeStarted = (RU, gU, tU) => rT(UU, PU, RU, gU, tU), TU.smuggler.onBought = () => {
+              BU.playSound(PU, (0, BT.d)("rpgHandleSmallLeather"), 1, 1), BU.playSound(PU, "chestOpen", .6, 1)
+            }, TU.compass.register(new QU(TU.map, !0)), TU.compass.register(new QU(TU.map, !1)), TU.compass.register(new WU(TU.map)), TU.compass.register(new fU((() => TU.quests.getSnapshot().compassTarget)));
+            for (const gU of ["enemy", "npc"]) TU.compass.register(new eU(TU.map, gU, (RU => UU.checkValid(RU) ? UU.Hx(RU) : void 0), (RU => UU.isAlive(RU))))
           },
-          onAfterRender: (DD, CD) => {
-            const cD = aD.checkValid(fD) ? aD.FX(fD) : null;
-            bD.navigation.afterRender(cD, performance.now(), CD), bD.glowtide.afterRender(cD, CD.cameraHeading), bD.tideCharts.afterRender(cD), YD.afterRender()
+          onAfterRender: (UU, RU) => {
+            const gU = BU.checkValid(PU) ? BU.Hx(PU) : null;
+            TU.navigation.afterRender(gU, performance.now(), RU), TU.glowtide.afterRender(gU, RU.cameraHeading), TU.tideCharts.afterRender(gU), FU.afterRender()
           },
           onClose: () => {
-            var DD, CD, cD, ID, pD, iD, fD, yD, tD, oD, vD, ND, gD, PD, HD;
-            AD && eD.i.unsubscribe(AD), null === (DD = qD) || void 0 === DD || DD(), KD.dispose(), hD.dispose(), null === (CD = VD) || void 0 === CD || CD.dispose(), YD.dispose(), bD.dispose(), null === (cD = QD) || void 0 === cD || cD(), null === (ID = wD) || void 0 === ID || ID(), null === (pD = SD) || void 0 === pD || pD(), null === (iD = BD) || void 0 === iD || iD(), null === (fD = MD) || void 0 === fD || fD(), null === (yD = ZD) || void 0 === yD || yD(), null === (tD = undefined) || void 0 === tD || tD(), null === (oD = XD) || void 0 === oD || oD(), null === (vD = mD) || void 0 === vD || vD(), null === (ND = nD) || void 0 === ND || ND(), null === (gD = OD) || void 0 === gD || gD(), null === (PD = undefined) || void 0 === PD || PD(), null === (HD = UD) || void 0 === HD || HD()
+            var UU, RU, gU, tU, pU, EU, PU, jU, CU, QU, eU, WU, fU, wU, nU;
+            lU && MU.p.unsubscribe(lU), null === (UU = ZU) || void 0 === UU || UU(), YU.dispose(), LU.dispose(), null === (RU = VU) || void 0 === RU || RU.dispose(), FU.dispose(), TU.dispose(), null === (gU = qU) || void 0 === gU || gU(), null === (tU = KU) || void 0 === tU || tU(), null === (pU = cU) || void 0 === pU || pU(), null === (EU = GU) || void 0 === EU || EU(), null === (PU = uU) || void 0 === PU || PU(), null === (jU = hU) || void 0 === jU || jU(), null === (CU = undefined) || void 0 === CU || CU(), null === (QU = xU) || void 0 === QU || QU(), null === (eU = mU) || void 0 === eU || eU(), null === (WU = IU) || void 0 === WU || WU(), null === (fU = JU) || void 0 === fU || fU(), null === (wU = undefined) || void 0 === wU || wU(), null === (nU = bU) || void 0 === nU || nU()
           },
-          onPlayerChangeBlock: (DD, CD, ID, iD, QD, wD) => {
-            if (DD === fD && "Air" === wD) {
-              const DD = aD.getClientOption(fD, "creative");
-              bD.skills.predictBlock([CD, ID, iD], QD, DD);
-              const wD = function(DD, CD) {
-                  if ("hub" === CD || "farming_1" === CD || "mining_1" === CD) return !RD.has(DD) || "hub" !== CD && "mining_1" !== CD ? Object.hasOwn(TD, DD) ? TD[DD] : void 0 : LD
-                }(QD, cD),
-                SD = ("hub" === cD || "mining_1" === cD) && (pD.qd.some((DD => DD === QD)) || Object.hasOwn(kD, QD) || "mining_1" === cD && "Block of Coal" === QD);
-              DD || void 0 === wD && !SD || aD.Hx(CD, ID, iD, null !== wD && void 0 !== wD ? wD : LD)
+          onPlayerChangeBlock: (UU, RU, tU, EU, qU, KU) => {
+            if (UU === PU && "Air" === KU) {
+              const UU = BU.getClientOption(PU, "creative");
+              TU.skills.predictBlock([RU, tU, EU], qU, UU);
+              const KU = function(UU, RU) {
+                  if ("hub" === RU || "farming_1" === RU || "mining_1" === RU) return !sU.has(UU) || "hub" !== RU && "mining_1" !== RU ? Object.hasOwn(HU, UU) ? HU[UU] : void 0 : dU
+                }(qU, gU),
+                cU = ("hub" === gU || "mining_1" === gU) && (pU.yd.some((UU => UU === qU)) || Object.hasOwn(yU, qU) || "mining_1" === gU && "Block of Coal" === qU);
+              UU || void 0 === KU && !cU || BU.mw(RU, tU, EU, null !== KU && void 0 !== KU ? KU : dU)
             }
           },
-          onPlayerAttackEntity: (DD, CD) => {
-            if (DD !== fD || "Player" !== aD.getEntityType(CD)) return;
-            const [cD, ID, pD] = aD.FX(CD);
-            aD.burstParticlePreset("critical", [cD, ID + 1, pD], 10)
+          onPlayerAttackEntity: (UU, RU) => {
+            if (UU !== PU || "Player" !== BU.getEntityType(RU)) return;
+            const [gU, tU, pU] = BU.Hx(RU);
+            BU.burstParticlePreset("critical", [gU, tU + 1, pU], 10)
           },
-          onChangeBlockFail: DD => {
+          onChangeBlockFail: UU => {
             for (const {
-                Ti: CD
+                HE: RU
               }
-              of DD) bD.skills.rejectBlock(CD)
+              of UU) TU.skills.rejectBlock(RU)
           },
-          onReceivedMessageFromServer: (DD, CD) => {
-            if ("skyblockGatedPortal" === DD) {
-              var cD;
-              const [DD, ID] = CD;
-              return void(null === (cD = rD.get(DD)) || void 0 === cD || cD.kt(ID))
+          onReceivedMessageFromServer: (UU, RU) => {
+            if ("skyblockGatedPortal" === UU) {
+              var gU;
+              const [UU, tU] = RU;
+              return void(null === (gU = NU.get(UU)) || void 0 === gU || gU.qC(tU))
             }
-            if ("skyblockDailyReward" === DD) return void bD.dailyReward.kt(CD);
-            if ("skyblockMailbox" === DD) return void bD.mailbox.kt(CD);
-            if ("skyblockPortalTransit" === DD) return void bD.portalTransit.kt(CD);
-            if ("skyblockLoot" === DD) return void KD.kt(aD, CD);
-            if ("skyblockLava" === DD) return void hD.kt(CD);
-            if ("skyblockForge" === DD) return void bD.forge.kt(CD);
-            if ("skyblockMagmaward" === DD) return void bD.magmaward.kt(CD);
-            if ("skyblockGlowtide" === DD) return void bD.glowtide.kt(CD);
-            if ("skyblockGlowMeter" === DD) return void bD.glowMeter.kt(CD);
-            if ("skyblockHushWait" === DD) return void bD.hushWait.kt(CD);
-            if ("skyblockPassage" === DD) {
-              const DD = CD;
-              return bD.passage.kt(DD), bD.reachLog.receivePassagePhase(DD.passagePhase), nD ??= (0, PD.x)({
+            if ("skyblockDailyReward" === UU) return void TU.dailyReward.qC(RU);
+            if ("skyblockMailbox" === UU) return void TU.mailbox.qC(RU);
+            if ("skyblockPortalTransit" === UU) return void TU.portalTransit.qC(RU);
+            if ("skyblockLoot" === UU) return void YU.qC(BU, RU);
+            if ("skyblockLava" === UU) return void LU.qC(RU);
+            if ("skyblockForge" === UU) return void TU.forge.qC(RU);
+            if ("skyblockMagmaward" === UU) return void TU.magmaward.qC(RU);
+            if ("skyblockGlowtide" === UU) return void TU.glowtide.qC(RU);
+            if ("skyblockGlowMeter" === UU) return void TU.glowMeter.qC(RU);
+            if ("skyblockHushWait" === UU) return void TU.hushWait.qC(RU);
+            if ("skyblockPassage" === UU) {
+              const UU = RU;
+              return TU.passage.qC(UU), TU.reachLog.receivePassagePhase(UU.passagePhase), IU ??= (0, wU.t)({
                 id: "skyblockPassage",
                 order: 5,
                 labelKey: "skyblockGame:passageButton",
@@ -10671,16 +10671,16 @@ export const modules = {
                   name: "Moonfish"
                 },
                 panel: !0,
-                onClick: bD.passage.show
-              }), void bD.keepersChair.receivePassage({
-                keepersChairPassagePhase: DD.passagePhase,
-                keepersChairPassageNextPhase: DD.passageNextPhase,
-                keepersChairPassageTurnsInMs: DD.passageTurnsInMs
+                onClick: TU.passage.show
+              }), void TU.keepersChair.receivePassage({
+                keepersChairPassagePhase: UU.passagePhase,
+                keepersChairPassageNextPhase: UU.passageNextPhase,
+                keepersChairPassageTurnsInMs: UU.passageTurnsInMs
               })
             }
-            if ("skyblockTideCharts" === DD) {
-              const DD = CD;
-              return bD.tideCharts.kt(DD), void(DD.tideCharts.length > 0 && (OD ??= (0, PD.x)({
+            if ("skyblockTideCharts" === UU) {
+              const UU = RU;
+              return TU.tideCharts.qC(UU), void(UU.tideCharts.length > 0 && (JU ??= (0, wU.t)({
                 id: "skyblockTideCharts",
                 order: 8,
                 labelKey: "skyblockGame:tideChartsTitle",
@@ -10689,24 +10689,24 @@ export const modules = {
                   name: "Chunk Map"
                 },
                 panel: !0,
-                onClick: bD.tideCharts.show
+                onClick: TU.tideCharts.show
               })))
             }
-            if (DD === WD.w) {
-              var ID;
+            if (UU === iU.w) {
+              var tU;
               const {
-                hookId: DD,
-                waiting: cD
-              } = CD;
-              return void YD.hookWaiting(DD, null !== (ID = null === cD || void 0 === cD ? void 0 : cD.remainingMs) && void 0 !== ID ? ID : null)
+                hookId: UU,
+                waiting: gU
+              } = RU;
+              return void FU.hookWaiting(UU, null !== (tU = null === gU || void 0 === gU ? void 0 : gU.remainingMs) && void 0 !== tU ? tU : null)
             }
-            if ("skyblockBiteTell" === DD) return void dD.receiveTell(CD);
-            if ("skyblockSmuggler" === DD) return void bD.smuggler.kt(CD);
-            if ("skyblockKeepersChair" === DD) return bD.keepersChair.kt(CD), void bD.lampLight.setAtChair(bD.keepersChair.isAtChair());
-            if ("skyblockLampLight" === DD) {
-              const DD = CD;
-              var pD;
-              if (bD.lampLight.kt(DD), DD.lampLightReleasing) mD ??= (0, PD.x)({
+            if ("skyblockBiteTell" === UU) return void kU.receiveTell(RU);
+            if ("skyblockSmuggler" === UU) return void TU.smuggler.qC(RU);
+            if ("skyblockKeepersChair" === UU) return TU.keepersChair.qC(RU), void TU.lampLight.setAtChair(TU.keepersChair.isAtChair());
+            if ("skyblockLampLight" === UU) {
+              const UU = RU;
+              var pU;
+              if (TU.lampLight.qC(UU), UU.lampLightReleasing) mU ??= (0, wU.t)({
                 id: "skyblockLampLightKeepCatches",
                 order: 7,
                 labelKey: "skyblockGame:lampLightKeepCatches",
@@ -10715,42 +10715,42 @@ export const modules = {
                   name: "Bucket"
                 },
                 onClick: () => {
-                  bD.lampLight.setRelease(!1)
+                  TU.lampLight.setRelease(!1)
                 }
               });
-              else null === (pD = mD) || void 0 === pD || pD(), mD = void 0;
+              else null === (pU = mU) || void 0 === pU || pU(), mU = void 0;
               return
             }
-            if ("skyblockRegulars" === DD) return void bD.regulars.kt(CD);
-            if ("skyblockHiddenWaters" === DD) return void bD.hiddenWaters.kt(CD);
-            if ("skyblockReachLog" === DD) return bD.reachLog.kt(CD), void(XD ??= (0, PD.x)({
+            if ("skyblockRegulars" === UU) return void TU.regulars.qC(RU);
+            if ("skyblockHiddenWaters" === UU) return void TU.hiddenWaters.qC(RU);
+            if ("skyblockReachLog" === UU) return TU.reachLog.qC(RU), void(xU ??= (0, wU.t)({
               id: "skyblockReachLog",
               order: 6,
               labelKey: "skyblockGame:reachLogTitle",
               icon: {
                 kind: "item",
-                name: KI
+                name: Bt
               },
-              onClick: bD.reachLog.ask
+              onClick: TU.reachLog.ask
             }));
-            if ("skyblockBurrowDoor" === DD) {
-              for (const [DD, cD, ID, pD] of CD) aD.Hx(DD, cD, ID, pD);
+            if ("skyblockBurrowDoor" === UU) {
+              for (const [UU, gU, tU, pU] of RU) BU.mw(UU, gU, tU, pU);
               return
             }
-            if ("skyblockHud" === DD) bD.receiveHud(CD);
-            else if ("skyblockMap" === DD) bD.map.kt(CD);
-            else if (DD === sD.e) bD.skills.kt(CD);
-            else if (DD === JD && "dialogue" === CD.kind) bD.dialogue.kt(CD);
-            else if (DD === JD) bD.quests.kt(CD);
-            else if ("skyblockDungeons" === DD) bD.dungeons.kt(CD);
-            else if ("sbCollections" === DD) bD.collections.kt(CD);
-            else if ("skyblockQuestGraph" === DD) bD.questGraph.kt(CD);
+            if ("skyblockHud" === UU) TU.receiveHud(RU);
+            else if ("skyblockMap" === UU) TU.map.qC(RU);
+            else if (UU === AU.f) TU.skills.qC(RU);
+            else if (UU === aU && "dialogue" === RU.kind) TU.dialogue.qC(RU);
+            else if (UU === aU) TU.quests.qC(RU);
+            else if ("skyblockDungeons" === UU) TU.dungeons.qC(RU);
+            else if ("sbCollections" === UU) TU.collections.qC(RU);
+            else if ("skyblockQuestGraph" === UU) TU.questGraph.qC(RU);
             else {
-              if ("skyblockAutographs" !== DD) return;
-              bD.autographs.kt(CD)
+              if ("skyblockAutographs" !== UU) return;
+              TU.autographs.qC(RU)
             }
-            if (!wD && bD.map.getSnapshot().enabled) {
-              const DD = (0, PD.x)({
+            if (!KU && TU.map.getSnapshot().enabled) {
+              const UU = (0, wU.t)({
                   id: "skyblockMap",
                   order: 3,
                   labelKey: "skyblockGame:map",
@@ -10759,13 +10759,13 @@ export const modules = {
                     name: "Compass"
                   },
                   panel: !0,
-                  onClick: bD.map.show
+                  onClick: TU.map.show
                 }),
-                CD = (0, ED.u)(bD.map.show);
-              wD = () => {
-                DD(), CD()
+                RU = (0, zU.x)(TU.map.show);
+              KU = () => {
+                UU(), RU()
               }
-            }!SD && bD.skills.getSnapshot().enabled && (SD = (0, PD.x)({
+            }!cU && TU.skills.getSnapshot().enabled && (cU = (0, wU.t)({
               id: "skyblockSkills",
               order: 0,
               labelKey: "skyblockGame:skills",
@@ -10774,8 +10774,8 @@ export const modules = {
                 name: "Iron Sword"
               },
               panel: !0,
-              onClick: bD.skills.show
-            })), !ZD && bD.collections.getSnapshot().enabled && (ZD = (0, PD.x)({
+              onClick: TU.skills.show
+            })), !hU && TU.collections.getSnapshot().enabled && (hU = (0, wU.t)({
               id: "skyblockCollections",
               order: 2.5,
               labelKey: "skyblockGame:collections",
@@ -10784,8 +10784,8 @@ export const modules = {
                 name: "Coal"
               },
               panel: !0,
-              onClick: bD.collections.show
-            })), !BD && bD.quests.getSnapshot().enabled && (BD = (0, PD.x)({
+              onClick: TU.collections.show
+            })), !GU && TU.quests.getSnapshot().enabled && (GU = (0, wU.t)({
               id: "skyblockQuests",
               order: 1,
               labelKey: "skyblockGame:quests",
@@ -10794,8 +10794,8 @@ export const modules = {
                 name: "Book"
               },
               panel: !0,
-              onClick: bD.quests.show
-            })), !UD && bD.autographs.getSnapshot().enabled && (UD = (0, PD.x)({
+              onClick: TU.quests.show
+            })), !bU && TU.autographs.getSnapshot().enabled && (bU = (0, wU.t)({
               id: "skyblockAutographs",
               order: 5,
               labelKey: "skyblockGame:autographs",
@@ -10804,53 +10804,53 @@ export const modules = {
                 name: "Name Tag"
               },
               panel: !0,
-              onClick: bD.autographs.show
+              onClick: TU.autographs.show
             }));
-            const iD = bD.dungeons.getSnapshot().enabled;
-            var fD;
-            (SD || BD || iD) && tD !== iD && (tD = iD, null === (fD = MD) || void 0 === fD || fD(), MD = (0, PD.x)({
+            const EU = TU.dungeons.getSnapshot().enabled;
+            var PU;
+            (cU || GU || EU) && CU !== EU && (CU = EU, null === (PU = uU) || void 0 === PU || PU(), uU = (0, wU.t)({
               id: "skyblockDungeons",
               order: 2,
               labelKey: "skyblockGame:dungeons",
               icon: {
                 kind: "image",
-                src: VC
+                src: VR
               },
-              disabled: !iD,
+              disabled: !EU,
               panel: !0,
-              onClick: bD.dungeons.show
+              onClick: TU.dungeons.show
             }));
-            QD || (QD = (0, ED.v)((0, HD.createElement)(Vb, {
-              controller: bD
+            qU || (qU = (0, zU.y)((0, nU.createElement)(aT, {
+              controller: TU
             }), {
-              content: (0, HD.createElement)(zb, {
-                controller: bD
+              content: (0, nU.createElement)(YT, {
+                controller: TU
               }),
-              onClose: bD.close
+              onClose: TU.close
             }))
           },
-          wy: () => {
-            var DD;
-            for (const CD of rD.values()) CD.wy();
-            KD.wy(aD), hD.wy(), null === (DD = VD) || void 0 === DD || DD.wy(), bD.skills.wy(), bD.quests.wy(), bD.dailyReward.wy(), bD.mailbox.wy(), bD.map.wy()
+          HG: () => {
+            var UU;
+            for (const RU of NU.values()) RU.HG();
+            YU.HG(BU), LU.HG(), null === (UU = VU) || void 0 === UU || UU.HG(), TU.skills.HG(), TU.quests.HG(), TU.dailyReward.HG(), TU.mailbox.HG(), TU.map.HG()
           }
         }
       }
   },
-  35788: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => pD,
-      e: () => ID
+  35963: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => pU,
+      f: () => tU
     });
-    const ID = "skyblockSkills",
-      pD = "skills_test_gym"
+    const tU = "skyblockSkills",
+      pU = "skills_test_gym"
   },
-  9065: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => pD,
-      g: () => fD
+  9012: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => pU,
+      d: () => PU
     });
-    const ID = [{
+    const tU = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -11032,164 +11032,164 @@ export const modules = {
       suffix: "K"
     }];
 
-    function pD(DD) {
-      let CD, cD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof DD) {
-        if (!Number.isFinite(DD)) return "0";
-        if (Math.abs(DD) < 100) {
-          const CD = DD < 0 ? "-" : "",
-            cD = Math.abs(DD);
-          return cD >= 10 ? `${CD}${cD.toFixed(1).replace(/\.0$/,"")}` : `${CD}${cD.toFixed(2).replace(/\.?0+$/,"")}`
+    function pU(UU) {
+      let RU, gU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof UU) {
+        if (!Number.isFinite(UU)) return "0";
+        if (Math.abs(UU) < 100) {
+          const RU = UU < 0 ? "-" : "",
+            gU = Math.abs(UU);
+          return gU >= 10 ? `${RU}${gU.toFixed(1).replace(/\.0$/,"")}` : `${RU}${gU.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        CD = BigInt(Math.floor(DD))
-      } else CD = DD;
-      const pD = CD < 0n ? -CD : CD,
-        iD = CD < 0n ? "-" : "",
-        fD = pD.toString();
-      if (fD.length <= cD) return `${iD}${fD}`;
-      const bD = 3 * Math.floor((fD.length - 1) / 3);
-      if (bD < 3) return `${iD}${fD}`;
-      if (bD > 3 * ID.length) {
-        const DD = fD[0],
-          CD = fD.slice(1, 3).replace(/0+$/, "");
-        return `${iD}${CD?`${DD}.${CD}`:DD}e${fD.length-1}`
+        RU = BigInt(Math.floor(UU))
+      } else RU = UU;
+      const pU = RU < 0n ? -RU : RU,
+        EU = RU < 0n ? "-" : "",
+        PU = pU.toString();
+      if (PU.length <= gU) return `${EU}${PU}`;
+      const TU = 3 * Math.floor((PU.length - 1) / 3);
+      if (TU < 3) return `${EU}${PU}`;
+      if (TU > 3 * tU.length) {
+        const UU = PU[0],
+          RU = PU.slice(1, 3).replace(/0+$/, "");
+        return `${EU}${RU?`${UU}.${RU}`:UU}e${PU.length-1}`
       }
       const {
-        threshold: QD,
-        suffix: wD
-      } = ID[ID.length - bD / 3], SD = pD / QD, BD = Number(1000n * (pD % QD) / QD), yD = Number(SD) + BD / 1e3;
-      let MD;
-      return MD = yD >= 100 ? Math.floor(yD).toString() : yD >= 10 ? yD.toFixed(1).replace(/\.0$/, "") : yD.toFixed(2).replace(/\.?0+$/, ""), `${iD}${MD}${wD}`
+        threshold: qU,
+        suffix: KU
+      } = tU[tU.length - TU / 3], cU = pU / qU, GU = Number(1000n * (pU % qU) / qU), jU = Number(cU) + GU / 1e3;
+      let uU;
+      return uU = jU >= 100 ? Math.floor(jU).toString() : jU >= 10 ? jU.toFixed(1).replace(/\.0$/, "") : jU.toFixed(2).replace(/\.?0+$/, ""), `${EU}${uU}${KU}`
     }
-    const iD = ID.map((DD => {
+    const EU = tU.map((UU => {
       let {
-        threshold: CD,
-        suffix: cD
-      } = DD;
+        threshold: RU,
+        suffix: gU
+      } = UU;
       return {
-        threshold: Number(CD),
-        suffix: cD
+        threshold: Number(RU),
+        suffix: gU
       }
-    })).filter((DD => {
+    })).filter((UU => {
       let {
-        threshold: CD
-      } = DD;
-      return Number.isFinite(CD)
+        threshold: RU
+      } = UU;
+      return Number.isFinite(RU)
     }));
 
-    function fD(DD) {
-      const CD = Math.abs(DD),
-        cD = DD < 0 ? "-" : "";
+    function PU(UU) {
+      const RU = Math.abs(UU),
+        gU = UU < 0 ? "-" : "";
       for (const {
-          threshold: ID,
-          suffix: pD
+          threshold: tU,
+          suffix: pU
         }
-        of iD)
-        if (CD >= ID) {
-          const DD = CD / ID;
-          if (DD >= 1e3) return `${cD}${CD.toExponential(2).replace("e+","e")}`;
-          let iD;
-          return iD = DD >= 100 ? Math.floor(DD).toString() : DD >= 10 ? DD.toFixed(1).replace(/\.0$/, "") : DD.toFixed(2).replace(/\.?0+$/, ""), `${cD}${iD}${pD}`
-        } return `${cD}${CD}`
+        of EU)
+        if (RU >= tU) {
+          const UU = RU / tU;
+          if (UU >= 1e3) return `${gU}${RU.toExponential(2).replace("e+","e")}`;
+          let EU;
+          return EU = UU >= 100 ? Math.floor(UU).toString() : UU >= 10 ? UU.toFixed(1).replace(/\.0$/, "") : UU.toFixed(2).replace(/\.?0+$/, ""), `${gU}${EU}${pU}`
+        } return `${gU}${RU}`
     }
   },
-  37926: (DD, CD, cD) => {
-    var ID = {
-      "./combat_1.png": 37933,
-      "./dungeon_crumbling_crypt.png": 37937,
-      "./dungeon_frozen_hollow.png": 37941,
-      "./dungeon_wildwood_grove.png": 37950,
-      "./dungeons.png": 37959,
-      "./farming_1.png": 37964,
-      "./fishing_1.png": 37966,
-      "./hub.png": 37971,
-      "./island.png": 37978,
-      "./mining_1.png": 37984,
-      "./mining_1_bridge.png": 37992,
-      "./mining_1_gallery.png": 37996,
-      "./mining_1_hollow.png": 37998,
-      "./mining_1_village.png": 38e3
+  38101: (UU, RU, gU) => {
+    var tU = {
+      "./combat_1.png": 38110,
+      "./dungeon_crumbling_crypt.png": 38114,
+      "./dungeon_frozen_hollow.png": 38119,
+      "./dungeon_wildwood_grove.png": 38123,
+      "./dungeons.png": 38131,
+      "./farming_1.png": 38138,
+      "./fishing_1.png": 38145,
+      "./hub.png": 38148,
+      "./island.png": 38156,
+      "./mining_1.png": 38159,
+      "./mining_1_bridge.png": 38162,
+      "./mining_1_gallery.png": 38166,
+      "./mining_1_hollow.png": 38173,
+      "./mining_1_village.png": 38179
     };
 
-    function pD(DD) {
-      var CD = iD(DD);
-      return cD(CD)
+    function pU(UU) {
+      var RU = EU(UU);
+      return gU(RU)
     }
 
-    function iD(DD) {
-      if (!cD.o(ID, DD)) {
-        var CD = new Error("Cannot find module '" + DD + "'");
-        throw CD.code = "MODULE_NOT_FOUND", CD
+    function EU(UU) {
+      if (!gU.o(tU, UU)) {
+        var RU = new Error("Cannot find module '" + UU + "'");
+        throw RU.code = "MODULE_NOT_FOUND", RU
       }
-      return ID[DD]
+      return tU[UU]
     }
-    pD.keys = function() {
-      return Object.keys(ID)
-    }, pD.resolve = iD, DD.exports = pD, pD.id = 37926
+    pU.keys = function() {
+      return Object.keys(tU)
+    }, pU.resolve = EU, UU.exports = pU, pU.id = 38101
   },
-  37933: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/combat_1.72ac23641446e4f80923.png"
+  38110: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/combat_1.72ac23641446e4f80923.png"
   },
-  37937: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/dungeon_crumbling_crypt.39389aef74bd36e64180.png"
+  38114: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/dungeon_crumbling_crypt.39389aef74bd36e64180.png"
   },
-  37941: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/dungeon_frozen_hollow.042bf06d2cfd2c68c7e6.png"
+  38119: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/dungeon_frozen_hollow.042bf06d2cfd2c68c7e6.png"
   },
-  37950: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/dungeon_wildwood_grove.d5115bf7a4d3fc811ff4.png"
+  38123: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/dungeon_wildwood_grove.d5115bf7a4d3fc811ff4.png"
   },
-  37959: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/dungeons.6836b40c30687755a545.png"
+  38131: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/dungeons.6836b40c30687755a545.png"
   },
-  37964: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/farming_1.08302e28e41bf98474fe.png"
+  38138: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/farming_1.08302e28e41bf98474fe.png"
   },
-  37966: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/fishing_1.c63e97744abce5bb9af7.png"
+  38145: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/fishing_1.c63e97744abce5bb9af7.png"
   },
-  37971: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/hub.8b20a64678134496251d.png"
+  38148: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/hub.8b20a64678134496251d.png"
   },
-  37978: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/island.113e20c7bd7db93fe1ce.png"
+  38156: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/island.113e20c7bd7db93fe1ce.png"
   },
-  37984: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/mining_1.68cac4bdadc5ef809ae5.png"
+  38159: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/mining_1.68cac4bdadc5ef809ae5.png"
   },
-  37992: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/mining_1_bridge.56ff82ba845db0b52726.png"
+  38162: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/mining_1_bridge.56ff82ba845db0b52726.png"
   },
-  37996: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/mining_1_gallery.4e799e6329dbc66249ce.png"
+  38166: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/mining_1_gallery.4e799e6329dbc66249ce.png"
   },
-  37998: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/mining_1_hollow.82ed2e9c753519918230.png"
+  38173: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/mining_1_hollow.82ed2e9c753519918230.png"
   },
-  38e3: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/mining_1_village.c2a625c1c4541a1fbe65.png"
+  38179: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/mining_1_village.c2a625c1c4541a1fbe65.png"
   },
-  18288: DD => {
-    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAFT2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iCiAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgZXhpZjpQaXhlbFhEaW1lbnNpb249IjEwIgogICBleGlmOlBpeGVsWURpbWVuc2lvbj0iMTAiCiAgIGV4aWY6Q29sb3JTcGFjZT0iMSIKICAgdGlmZjpJbWFnZVdpZHRoPSIxMCIKICAgdGlmZjpJbWFnZUxlbmd0aD0iMTAiCiAgIHRpZmY6UmVzb2x1dGlvblVuaXQ9IjIiCiAgIHRpZmY6WFJlc29sdXRpb249IjcyLzEiCiAgIHRpZmY6WVJlc29sdXRpb249IjcyLzEiCiAgIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiCiAgIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIKICAgeG1wOk1vZGlmeURhdGU9IjIwMjUtMDktMTFUMDY6MDg6MTMtMDQ6MDAiCiAgIHhtcDpNZXRhZGF0YURhdGU9IjIwMjUtMDktMTFUMDY6MDg6MTMtMDQ6MDAiPgogICA8ZGM6dGl0bGU+CiAgICA8cmRmOkFsdD4KICAgICA8cmRmOmxpIHhtbDpsYW5nPSJ4LWRlZmF1bHQiPlBsYW5rczwvcmRmOmxpPgogICAgPC9yZGY6QWx0PgogICA8L2RjOnRpdGxlPgogICA8eG1wTU06SGlzdG9yeT4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJwcm9kdWNlZCIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWZmaW5pdHkgRGVzaWduZXIgMS4xMC42IgogICAgICBzdEV2dDp3aGVuPSIyMDI1LTA5LTExVDA2OjA4OjEzLTA0OjAwIi8+CiAgICA8L3JkZjpTZXE+CiAgIDwveG1wTU06SGlzdG9yeT4KICA8L3JkZjpEZXNjcmlwdGlvbj4KIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+Cjw/eHBhY2tldCBlbmQ9InIiPz5RDOytAAABgWlDQ1BzUkdCIElFQzYxOTY2LTIuMQAAKJF1kbtLA0EQhz9PxTcRtLAQDKJWKlEhaGOR4AvUIp7gq0kul0RI4nEXkWAr2AoKoo2vQv8CbQVrQVAUQay1VbTRcM7lAhExs8zOt7/dGXZnQVGTWsqq8EEqnTFDYwHv3PyCt+qVGuqoRaEtrFnG1MyoSkn7vKfMibc9Tq3S5/61uqhuaVBWLTysGWZGeFx4ci1jOLwj3KwlwlHhM+FuUy4ofOfoEZdfHI67/O2wqYaCoDQKe+O/OPKLtYSZEpaX05FKrmqF+zgvqdfTszMS28VbsQgxRgAvE4wQxE8fQzL76aGfXllRIt+Xz59mRXI1mQ2ymCwTJ0GGblFXpbouMSa6LiNJ1un/375asYF+t3p9ACqfbfu9E6q2Ibdl219Htp07hvInuEwX81cOYfBD9K2i1nEAng04vypqkV242ISWRyNshvNSubgSi8HbKTTMQ9MN1C66PSvsc/IA6rp81TXs7UOXnPcs/QAlUWfIbV2y+QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAG9JREFUGJVjYKAQ/IdiOGDEpqh6jiYDAwMDQ2vKdbgaJnzG5nSqwEzHUPj/1WJThpZPDxg+vv2N212vFpv+/9/H+f9yFi/MjXB3wtz4/38fJwMDAwPDlTssDLrTPmO4nwXGuHIHwsSmCMVELGLkAQBi0iUZsdoC/wAAAABJRU5ErkJggg=="
+  18285: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAFT2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iCiAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgZXhpZjpQaXhlbFhEaW1lbnNpb249IjEwIgogICBleGlmOlBpeGVsWURpbWVuc2lvbj0iMTAiCiAgIGV4aWY6Q29sb3JTcGFjZT0iMSIKICAgdGlmZjpJbWFnZVdpZHRoPSIxMCIKICAgdGlmZjpJbWFnZUxlbmd0aD0iMTAiCiAgIHRpZmY6UmVzb2x1dGlvblVuaXQ9IjIiCiAgIHRpZmY6WFJlc29sdXRpb249IjcyLzEiCiAgIHRpZmY6WVJlc29sdXRpb249IjcyLzEiCiAgIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiCiAgIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIKICAgeG1wOk1vZGlmeURhdGU9IjIwMjUtMDktMTFUMDY6MDg6MTMtMDQ6MDAiCiAgIHhtcDpNZXRhZGF0YURhdGU9IjIwMjUtMDktMTFUMDY6MDg6MTMtMDQ6MDAiPgogICA8ZGM6dGl0bGU+CiAgICA8cmRmOkFsdD4KICAgICA8cmRmOmxpIHhtbDpsYW5nPSJ4LWRlZmF1bHQiPlBsYW5rczwvcmRmOmxpPgogICAgPC9yZGY6QWx0PgogICA8L2RjOnRpdGxlPgogICA8eG1wTU06SGlzdG9yeT4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJwcm9kdWNlZCIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWZmaW5pdHkgRGVzaWduZXIgMS4xMC42IgogICAgICBzdEV2dDp3aGVuPSIyMDI1LTA5LTExVDA2OjA4OjEzLTA0OjAwIi8+CiAgICA8L3JkZjpTZXE+CiAgIDwveG1wTU06SGlzdG9yeT4KICA8L3JkZjpEZXNjcmlwdGlvbj4KIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+Cjw/eHBhY2tldCBlbmQ9InIiPz5RDOytAAABgWlDQ1BzUkdCIElFQzYxOTY2LTIuMQAAKJF1kbtLA0EQhz9PxTcRtLAQDKJWKlEhaGOR4AvUIp7gq0kul0RI4nEXkWAr2AoKoo2vQv8CbQVrQVAUQay1VbTRcM7lAhExs8zOt7/dGXZnQVGTWsqq8EEqnTFDYwHv3PyCt+qVGuqoRaEtrFnG1MyoSkn7vKfMibc9Tq3S5/61uqhuaVBWLTysGWZGeFx4ci1jOLwj3KwlwlHhM+FuUy4ofOfoEZdfHI67/O2wqYaCoDQKe+O/OPKLtYSZEpaX05FKrmqF+zgvqdfTszMS28VbsQgxRgAvE4wQxE8fQzL76aGfXllRIt+Xz59mRXI1mQ2ymCwTJ0GGblFXpbouMSa6LiNJ1un/375asYF+t3p9ACqfbfu9E6q2Ibdl219Htp07hvInuEwX81cOYfBD9K2i1nEAng04vypqkV242ISWRyNshvNSubgSi8HbKTTMQ9MN1C66PSvsc/IA6rp81TXs7UOXnPcs/QAlUWfIbV2y+QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAG9JREFUGJVjYKAQ/IdiOGDEpqh6jiYDAwMDQ2vKdbgaJnzG5nSqwEzHUPj/1WJThpZPDxg+vv2N212vFpv+/9/H+f9yFi/MjXB3wtz4/38fJwMDAwPDlTssDLrTPmO4nwXGuHIHwsSmCMVELGLkAQBi0iUZsdoC/wAAAABJRU5ErkJggg=="
   },
-  20299: DD => {
-    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAABgWlDQ1BzUkdCIElFQzYxOTY2LTIuMQAAKJF1kc8rRFEUxz9miMYIsbCweGlYDflREymLmRgKizHKYPPmmTejZsbrvZFkq2wVJTZ+LfgL2CprpYiUbFkTG/ScZ6Zmkjm3c8/nfu89p3vPBVc0rWWsym7IZHNmJBxUZmKzSvUzNbTSyCAeVbOMiamRKGXt444KJ950OrXKn/vXahcSlgYVNcJDmmHmhEeFx1dyhsPbws1aSl0QPhX2m3JB4VtHj+f5xeFknr8cNqORELgahJVkCcdLWEuZGWF5Ob5Melkr3Md5iTeRnZ6S2CbeikWEMEEUxhgmRIAeBmQO0EkvXbKiTH73b/4kS5KryWywiskiSVLk8Iu6LNUTEnXREzLSrDr9/9tXS+/rzVf3BqHqybbf2qF6C743bfvz0La/j8D9CBfZYv7SAfS/i75Z1Hz7UL8OZ5dFLb4D5xvQ8mCopvorucVdug6vJ1AXg6Zr8Mzle1bY5/geomvyVVewuwcdcr5+/gejEmgBy3n7uAAAAGRJREFUGJWVkDEOgCAMRZ+Eu5iQeBtu6MpRnNkYuUZhULQwKP7lN+n7bVOY1HJ5+eJsq8q+AiA5ARCDALAdpxsdk5yIQYhBcL5rPWCDmka4j73oBscJzptug9UpDWsIfrxn9kQqJZUnE6phAjUAAAAASUVORK5CYII="
+  20283: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAABgWlDQ1BzUkdCIElFQzYxOTY2LTIuMQAAKJF1kc8rRFEUxz9miMYIsbCweGlYDflREymLmRgKizHKYPPmmTejZsbrvZFkq2wVJTZ+LfgL2CprpYiUbFkTG/ScZ6Zmkjm3c8/nfu89p3vPBVc0rWWsym7IZHNmJBxUZmKzSvUzNbTSyCAeVbOMiamRKGXt444KJ950OrXKn/vXahcSlgYVNcJDmmHmhEeFx1dyhsPbws1aSl0QPhX2m3JB4VtHj+f5xeFknr8cNqORELgahJVkCcdLWEuZGWF5Ob5Melkr3Md5iTeRnZ6S2CbeikWEMEEUxhgmRIAeBmQO0EkvXbKiTH73b/4kS5KryWywiskiSVLk8Iu6LNUTEnXREzLSrDr9/9tXS+/rzVf3BqHqybbf2qF6C743bfvz0La/j8D9CBfZYv7SAfS/i75Z1Hz7UL8OZ5dFLb4D5xvQ8mCopvorucVdug6vJ1AXg6Zr8Mzle1bY5/geomvyVVewuwcdcr5+/gejEmgBy3n7uAAAAGRJREFUGJWVkDEOgCAMRZ+Eu5iQeBtu6MpRnNkYuUZhULQwKP7lN+n7bVOY1HJ5+eJsq8q+AiA5ARCDALAdpxsdk5yIQYhBcL5rPWCDmka4j73oBscJzptug9UpDWsIfrxn9kQqJZUnE6phAjUAAAAASUVORK5CYII="
   },
-  22679: DD => {
-    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGtJREFUGJVjYKAC+A/FDAwMDAxMuBR9fr6D4esduAasCv9/fr6D4cX7yyiC6Ar/f36+g4GBgYFBQlAXp0K4InTTGBgYGBjRrYOZxPTVg4FbBUUNROHXO6iYgYHhv3eYEHafImMXfz6siggCADC+M1RlDaxOAAAAAElFTkSuQmCC"
+  22656: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGtJREFUGJVjYKAC+A/FDAwMDAxMuBR9fr6D4esduAasCv9/fr6D4cX7yyiC6Ar/f36+g4GBgYFBQlAXp0K4InTTGBgYGBjRrYOZxPTVg4FbBUUNROHXO6iYgYHhv3eYEHafImMXfz6siggCADC+M1RlDaxOAAAAAElFTkSuQmCC"
   },
-  24196: DD => {
-    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE9JREFUGJVjYCASMKLx/+OSR1b4/z9PMqqqL3OxGcbwHxl3MXj9/8+T/B+LLQgNNVHm/6E24FT4f2qRG9xUXAqRFTHgUoiuCNnNWD1COQAAFWcvZJ927BwAAAAASUVORK5CYII="
+  24216: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE9JREFUGJVjYCASMKLx/+OSR1b4/z9PMqqqL3OxGcbwHxl3MXj9/8+T/B+LLQgNNVHm/6E24FT4f2qRG9xUXAqRFTHgUoiuCNnNWD1COQAAFWcvZJ927BwAAAAASUVORK5CYII="
   },
-  25869: DD => {
-    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAH1JREFUGJVjYKAC+A/FDAwMDAxMuBSdyDdkWLzBGKYBq8L/J+wNGR4se4IiiK7w/wl7QwYGBgYGBS0ZnArhih5cQzUNWeH/E/mGcAUKWjIMtwuZGGIDzjIwMDAwwgkGBob/UIfDQWzAWQbvMCHGraveYXoCGbv482HxJxEAAJssJtLET2YfAAAAAElFTkSuQmCC"
+  25936: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAH1JREFUGJVjYKAC+A/FDAwMDAxMuBSdyDdkWLzBGKYBq8L/J+wNGR4se4IiiK7w/wl7QwYGBgYGBS0ZnArhih5cQzUNWeH/E/mGcAUKWjIMtwuZGGIDzjIwMDAwwgkGBob/UIfDQWzAWQbvMCHGraveYXoCGbv482HxJxEAAJssJtLET2YfAAAAAElFTkSuQmCC"
   },
-  25882: DD => {
-    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAItJREFUGJVjYKAA/Ifh3nJb/Arv7E79X+Mp+p+BgeH/1EYX7Ir299n8v7M79f/+PhuYyQwMDAwMTOgqZXU1GR5fvs4gq6vJcGd3KswpDCzoCmGKHl++zrB3901UybBACwYGBob/NZ6icLfBMFSOgRHJbQwMDAwMjkVHGMICLRiRDVq1/gTCE+gmkA0A4Aw5D/wQUU0AAAAASUVORK5CYII="
+  25955: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAItJREFUGJVjYKAA/Ifh3nJb/Arv7E79X+Mp+p+BgeH/1EYX7Ir299n8v7M79f/+PhuYyQwMDAwMTOgqZXU1GR5fvs4gq6vJcGd3KswpDCzoCmGKHl++zrB3901UybBACwYGBob/NZ6icLfBMFSOgRHJbQwMDAwMjkVHGMICLRiRDVq1/gTCE+gmkA0A4Aw5D/wQUU0AAAAASUVORK5CYII="
   },
-  37912: DD => {
-    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
+  38090: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

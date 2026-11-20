@@ -1,312 +1,312 @@
 export const id = 202;
 export const ids = [202];
 export const modules = {
-  35700: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      WasmTextureWorker: () => ND
+  35868: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      WasmTextureWorker: () => WU
     });
-    var ID = cD(613),
-      pD = cD(2974),
-      iD = cD(35708),
-      fD = cD.n(iD);
+    var tU = gU(567),
+      pU = gU(2880),
+      EU = gU(35875),
+      PU = gU.n(EU);
 
-    function bD() {
-      return fD()('(()=>{var DD={d:(CD,cD)=>{for(var ID in cD)DD.o(cD,ID)&&!DD.o(CD,ID)&&Object.defineProperty(CD,ID,{enumerable:!0,get:cD[ID]})},o:(DD,CD)=>Object.prototype.hasOwnProperty.call(DD,CD),r:DD=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(DD,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(DD,"__esModule",{value:!0})}},CD={};DD.r(CD),DD.d(CD,{ID:()=>cD,NB:()=>ID,default:()=>KD,initSync:()=>JD,gB:()=>pD});class cD{__destroy_into_raw(){const DD=this.__wbg_ptr;return this.__wbg_ptr=0,fD.unregister(this),DD}free(){const DD=this.__destroy_into_raw();UD.IbPQ(DD,0)}GC(DD){const CD=function(DD,CD){const cD=CD(1*DD.length,1)>>>0;return tD().set(DD,cD/1),xD=DD.length,cD}(DD,UD.vUW6),cD=xD;return UD.Uae4(this.__wbg_ptr,CD,cD)>>>0}cc(){const DD=UD.l3Q0(this.__wbg_ptr);var CD=bD(DD[0],DD[1]).slice();return UD.f3Hz(DD[0],4*DD[1],4),CD}op(){let DD,CD;try{const cD=UD.IAeM(this.__wbg_ptr);return DD=cD[0],CD=cD[1],SD(cD[0],cD[1])}finally{UD.f3Hz(DD,CD,1)}}di(){return UD.pylr(this.__wbg_ptr)>>>0}If(){return UD.wtqq(this.__wbg_ptr)>>>0}mb(){let DD,CD;try{const cD=UD.ZWzU(this.__wbg_ptr);return DD=cD[0],CD=cD[1],SD(cD[0],cD[1])}finally{UD.f3Hz(DD,CD,1)}}hb(){const DD=UD.PTzR(this.__wbg_ptr);var CD=bD(DD[0],DD[1]).slice();return UD.f3Hz(DD[0],4*DD[1],4),CD}rb(){const DD=UD.xsJa(this.__wbg_ptr);var CD,cD,ID=(CD=DD[0],cD=DD[1],CD>>>=0,wD().subarray(CD/8,CD/8+cD)).slice();return UD.f3Hz(DD[0],8*DD[1],8),ID}hw(){return UD.Otaj(this.__wbg_ptr)>>>0}MB(DD){const CD=UD.cveC(this.__wbg_ptr,DD);if(CD[1])throw gD(CD[0])}KB(){UD.h2br(this.__wbg_ptr)}oy(){UD.oswu(this.__wbg_ptr)}AS(){const DD=UD.Cja8(this.__wbg_ptr);if(DD[1])throw gD(DD[0])}It(){return UD.O6Zs(this.__wbg_ptr)>>>0}By(){const DD=UD.BMUu(this.__wbg_ptr);if(DD[1])throw gD(DD[0])}bt(DD,CD){const cD=UD.f6GU(this.__wbg_ptr,DD,CD);if(cD[1])throw gD(cD[0])}wt(DD){let CD,cD;try{const iD=UD.VcLA(this.__wbg_ptr,DD);var ID=iD[0],pD=iD[1];if(iD[3])throw ID=0,pD=0,gD(iD[2]);return CD=ID,cD=pD,SD(ID,pD)}finally{UD.f3Hz(CD,cD,1)}}nt(DD){return UD.atE8(this.__wbg_ptr,DD)>>>0}st(DD){return UD.v6DV(this.__wbg_ptr,DD)>>>0}IS(){const DD=UD.nRuC(this.__wbg_ptr);var CD=bD(DD[0],DD[1]).slice();return UD.f3Hz(DD[0],4*DD[1],4),CD}ht(){return 0!==UD.T4Fn(this.__wbg_ptr)}constructor(DD,CD,cD,ID,pD,iD){const bD=ND(DD,UD.vUW6,UD.hsSu),QD=xD,SD=vD(CD,UD.vUW6),BD=xD,yD=function(DD,CD){const cD=CD(8*DD.length,8)>>>0;return wD().set(DD,cD/8),xD=DD.length,cD}(cD,UD.vUW6),MD=xD,tD=vD(ID,UD.vUW6),ZD=xD,oD=vD(pD,UD.vUW6),XD=xD,mD=UD.a1C0(bD,QD,SD,BD,yD,MD,tD,ZD,oD,XD,iD);if(mD[2])throw gD(mD[1]);return this.__wbg_ptr=mD[0],fD.register(this,this.__wbg_ptr,this),this}At(){let DD,CD;try{const cD=UD.ZZEs(this.__wbg_ptr);return DD=cD[0],CD=cD[1],SD(cD[0],cD[1])}finally{UD.f3Hz(DD,CD,1)}}nZ(DD,CD){const cD=ND(DD,UD.vUW6,UD.hsSu),ID=xD,pD=vD(CD,UD.vUW6),iD=xD,fD=UD.pQU7(this.__wbg_ptr,cD,ID,pD,iD);if(fD[1])throw gD(fD[0])}co(){return UD.Ce0o(this.__wbg_ptr)>>>0}io(){return UD.v959(this.__wbg_ptr)>>>0}uy(){return UD.OEpD(this.__wbg_ptr)>>>0}TS(){return UD.KTJZ(this.__wbg_ptr)>>>0}warnings(){let DD,CD;try{const cD=UD.gXEv(this.__wbg_ptr);return DD=cD[0],CD=cD[1],SD(cD[0],cD[1])}finally{UD.f3Hz(DD,CD,1)}}}function ID(DD,CD){const cD=ND(DD,UD.vUW6,UD.hsSu),ID=xD,pD=UD.l9if(cD,ID,CD);if(pD[1])throw gD(pD[0])}function pD(){UD.hb6k()}function iD(){return{__proto__:null,LmwJ:{__proto__:null,akgA:function(DD,CD){return function(DD){oD===ZD.length&&ZD.push(ZD.length+1);const CD=oD;return oD=ZD[CD],ZD[CD]=DD,CD}(Error(SD(DD,CD)))},CJqo:function(DD,CD){throw new Error(SD(DD,CD))},Qd9b:function(DD,CD){console.error(SD(DD,CD))}}}}Symbol.dispose&&(cD.prototype[Symbol.dispose]=cD.prototype.free);const fD="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((DD=>UD.IbPQ(DD,1)));function bD(DD,CD){return DD>>>=0,yD().subarray(DD/4,DD/4+CD)}let QD=null;function wD(){return null!==QD&&0!==QD.byteLength||(QD=new Float64Array(UD.memory.buffer)),QD}function SD(DD,CD){return function(DD,CD){nD+=CD,nD>=mD&&(XD=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0}),XD.decode(),nD=CD);return XD.decode(tD().subarray(DD,DD+CD))}(DD>>>0,CD)}let BD=null;function yD(){return null!==BD&&0!==BD.byteLength||(BD=new Uint32Array(UD.memory.buffer)),BD}let MD=null;function tD(){return null!==MD&&0!==MD.byteLength||(MD=new Uint8Array(UD.memory.buffer)),MD}let ZD=new Array(1024).fill(void 0);ZD.push(void 0,null,!0,!1);let oD=ZD.length;function vD(DD,CD){const cD=CD(4*DD.length,4)>>>0;return yD().set(DD,cD/4),xD=DD.length,cD}function ND(DD,CD,cD){if(void 0===cD){const cD=OD.encode(DD),ID=CD(cD.length,1)>>>0;return tD().subarray(ID,ID+cD.length).set(cD),xD=cD.length,ID}let ID=DD.length,pD=CD(ID,1)>>>0;const iD=tD();let fD=0;for(;fD<ID;fD++){const CD=DD.charCodeAt(fD);if(CD>127)break;iD[pD+fD]=CD}if(fD!==ID){0!==fD&&(DD=DD.slice(fD)),pD=cD(pD,ID,ID=fD+3*DD.length,1)>>>0;const CD=tD().subarray(pD+fD,pD+ID);fD+=OD.encodeInto(DD,CD).written,pD=cD(pD,ID,fD,1)>>>0}return xD=fD,pD}function gD(DD){const CD=function(DD){return ZD[DD]}(DD);return function(DD){DD<1028||(ZD[DD]=oD,oD=DD)}(DD),CD}let XD=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0});XD.decode();const mD=2146435072;let nD=0;const OD=new TextEncoder;"encodeInto"in OD||(OD.encodeInto=function(DD,CD){const cD=OD.encode(DD);return CD.set(cD),{read:DD.length,written:cD.length}});let PD,HD,UD,xD=0;function qD(DD,CD){return HD=DD,UD=DD.exports,PD=CD,QD=null,BD=null,MD=null,UD.PD9Q(),UD}function JD(DD){if(void 0!==UD)return UD;void 0!==DD&&(Object.getPrototypeOf(DD)===Object.prototype?({module:DD}=DD):console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));const CD=iD();DD instanceof WebAssembly.Module||(DD=new WebAssembly.Module(DD));return qD(new WebAssembly.Instance(DD,CD),DD)}async function KD(DD){if(void 0!==UD)return UD;void 0!==DD&&(Object.getPrototypeOf(DD)===Object.prototype?({module_or_path:DD}=DD):console.warn("using deprecated parameters for the initialization function; pass a single object instead"));const CD=iD();("string"===typeof DD||"function"===typeof Request&&DD instanceof Request||"function"===typeof URL&&DD instanceof URL)&&(DD=fetch(DD));const{instance:cD,module:ID}=await async function(DD,CD){if("function"===typeof Response&&DD instanceof Response){if(!DD.ok)throw new Error(`failed to fetch Wasm: ${DD.status} ${DD.statusText} fetching \'${DD.url}\'`);if("function"===typeof WebAssembly.instantiateStreaming)try{return await WebAssembly.instantiateStreaming(DD,CD)}catch(cD){if(!function(DD){switch(DD){case"basic":case"cors":case"default":return!0}return!1}(DD.type)||"application/wasm"===DD.headers.get("Content-Type"))throw cD;console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\\n",cD)}const ID=await DD.arrayBuffer();return await WebAssembly.instantiate(ID,CD)}{const cD=await WebAssembly.instantiate(DD,CD);return cD instanceof WebAssembly.Instance?{instance:cD,module:DD}:cD}}(await DD,CD);return qD(cD,ID)}let aD=null,VD=null;function zD(DD){if(null!==VD)throw VD;if(null===aD)try{const{memory:cD}=JD({module:DD});aD={wasm:CD,memory:cD}}catch(cD){throw VD=function(DD,CD){return new Error(`${DD}: ${CD instanceof Error?`${CD.name}: ${CD.message}`:String(CD)}`,{cause:CD})}("instantiate",cD),VD}return aD}function jD(DD){return DD instanceof Error?DD.message:String(DD)}const lD=0,LD=1,TD=2,GD=3,RD=4;Error;function kD(DD){return`the texture module didn\'t load (${jD(DD)})`}function dD(DD){return""===DD?[]:DD.split("\\0")}const YD=self;let WD=null,sD=null,ED=lD,eD=0;function uD(DD){const CD=performance.now();var cD,ID;(DD!==ED||CD-eD>=1e3)&&(ED=DD,eD=CD,YD.postMessage({type:"progress",stage:DD,wasmBytes:null!==(cD=null===(ID=sD)||void 0===ID?void 0:ID.buffer.byteLength)&&void 0!==cD?cD:0}))}const{FileReaderSync:hD}=self;function rD(DD){return(new hD).readAsDataURL(new Blob([DD],{type:"image/png"}))}function AD(DD,CD){YD.postMessage({type:"sheet",sheet:DD,pixels:CD},[CD.buffer])}function FD(DD){let CD;uD(LD);try{CD=zD(DD.module)}catch(fD){return void YD.postMessage({type:"failed",reason:kD(fD),moduleLoad:!0})}sD=CD.memory,uD(TD);const{assets:cD,layerCap:ID,warnings:pD,generator:iD}=function(DD,CD,cD,ID,pD,iD,fD){var bD;const{wasm:QD,memory:wD}=DD,{strings:SD,blocks:BD,numbers:yD,index:MD,armour:tD}=CD,ZD=new QD.ID(SD,BD,yD,MD,tD,cD),oD=ID.sources.map((DD=>(null===iD||void 0===iD||iD(TD),ZD.GC(DD)))),vD=new Uint32Array(2*ID.sourceOfName.length);for(const[xD,qD]of ID.sourceOfName.entries())vD[2*xD]=xD,vD[2*xD+1]=oD[qD];ZD.nZ(ID.names,vD),null===iD||void 0===iD||iD(GD),ZD.bt(pD,null!==(bD=null===fD||void 0===fD?void 0:fD.layers)&&void 0!==bD?bD:0),null===iD||void 0===iD||iD(RD);const ND={};for(const[xD,qD]of dD(ZD.At()).entries())null===iD||void 0===iD||iD(RD),ND[qD]=ZD.wt(xD);const gD={},XD=ZD.cc(),mD=new Map;for(const[xD,qD]of dD(ZD.op()).entries()){const DD=XD[xD];mD.has(DD)||(null===iD||void 0===iD||iD(RD),mD.set(DD,ZD.wt(DD))),gD[qD]=mD.get(DD)}ZD.KB();const nD=Array.from(ZD.IS()),OD=[],PD=[],HD=(DD,CD)=>new Uint8ClampedArray(wD.buffer,DD,CD).slice();if(fD){for(let DD=0;DD<nD.length;DD++)null===iD||void 0===iD||iD(RD),ZD.MB(DD),ZD.AS(),OD.push(fD.dataUrl(new Uint8Array(wD.buffer,ZD.uy(),ZD.io()))),fD.onSheet(DD,HD(ZD.TS(),ZD.co()));ZD.oy()}const UD=ZD.It();for(let xD=UD;xD<UD+ZD.If();xD++)null===iD||void 0===iD||iD(RD),OD.push(ZD.wt(xD)),PD.push(HD(ZD.st(xD),ZD.nt(xD)));return{assets:{rotatedBlockTextures:ND,animatedBlockTextures:gD,blockAtlasArr:OD,blockAtlasPixels:PD,armourAtlas:ZD.wt(ZD.di()),imagesPerAtlas:nD,blockAtlasWidth:ZD.hw()},layerCap:ZD.ht()?pD:0,warnings:ZD.warnings(),generator:ZD}}(CD,DD.inputs,DD.isDefaultPack,{sources:DD.sources,names:DD.names,sourceOfName:DD.sourceOfName},DD.maxLayerWidth,uD,DD.sheetLayers>0?{layers:DD.sheetLayers,onSheet:AD,dataUrl:rD}:void 0);WD=iD,YD.postMessage({type:"required",assets:cD,layerCap:ID,warnings:pD},cD.blockAtlasPixels.map((DD=>DD.buffer)))}self.onmessageerror=()=>{YD.postMessage({type:"failed",reason:"the request couldn\'t be deserialised"})},self.onmessage=DD=>{let{data:CD}=DD;try{"required"===CD.type?FD(CD):function(){if(!WD)throw new Error("No required assets to follow");const{colours:DD,warnings:CD}=function(DD){return DD.By(),{colours:{blocks:DD.mb(),counts:DD.hb(),values:DD.rb()},warnings:DD.warnings()}}(WD);YD.postMessage({type:"optional",...DD,warnings:CD},[DD.counts.buffer,DD.values.buffer])}()}catch(cD){const DD=jD(cD),CD=cD instanceof WebAssembly.RuntimeError?`wasm trapped (${DD})`:DD;YD.postMessage({type:"failed",reason:CD,stack:cD instanceof Error?cD.stack:void 0})}}})();', "Worker", void 0, cD.p + "generation.worker.f4bfa9b3.worker.js")
+    function TU() {
+      return PU()('(()=>{var UU={d:(RU,gU)=>{for(var tU in gU)UU.o(gU,tU)&&!UU.o(RU,tU)&&Object.defineProperty(RU,tU,{enumerable:!0,get:gU[tU]})},o:(UU,RU)=>Object.prototype.hasOwnProperty.call(UU,RU),r:UU=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(UU,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(UU,"__esModule",{value:!0})}},RU={};UU.r(RU),UU.d(RU,{OR:()=>gU,Nc:()=>tU,default:()=>YU,initSync:()=>aU,lc:()=>pU});class gU{__destroy_into_raw(){const UU=this.__wbg_ptr;return this.__wbg_ptr=0,PU.unregister(this),UU}free(){const UU=this.__destroy_into_raw();bU.S9Qw(UU,0)}dg(UU){const RU=function(UU,RU){const gU=RU(1*UU.length,1)>>>0;return CU().set(UU,gU/1),oU=UU.length,gU}(UU,bU.Y3R2),gU=oU;return bU.FlkZ(this.__wbg_ptr,RU,gU)>>>0}It(){const UU=bU.Ft5J(this.__wbg_ptr);var RU=TU(UU[0],UU[1]).slice();return bU.DQYN(UU[0],4*UU[1],4),RU}st(){let UU,RU;try{const gU=bU.K0Ig(this.__wbg_ptr);return UU=gU[0],RU=gU[1],cU(gU[0],gU[1])}finally{bU.DQYN(UU,RU,1)}}At(){return bU.TA5Y(this.__wbg_ptr)>>>0}op(){return bU.TCuc(this.__wbg_ptr)>>>0}BE(){let UU,RU;try{const gU=bU.OuQm(this.__wbg_ptr);return UU=gU[0],RU=gU[1],cU(gU[0],gU[1])}finally{bU.DQYN(UU,RU,1)}}cc(){const UU=bU.Xfwh(this.__wbg_ptr);var RU=TU(UU[0],UU[1]).slice();return bU.DQYN(UU[0],4*UU[1],4),RU}dj(){const UU=bU.TXs2(this.__wbg_ptr);var RU,gU,tU=(RU=UU[0],gU=UU[1],RU>>>=0,KU().subarray(RU/8,RU/8+gU)).slice();return bU.DQYN(UU[0],8*UU[1],8),tU}su(){return bU.IvYq(this.__wbg_ptr)>>>0}Ah(UU){const RU=bU.Eyos(this.__wbg_ptr,UU);if(RU[1])throw fU(RU[0])}zh(){bU.IfA4(this.__wbg_ptr)}Dh(){bU.uE71(this.__wbg_ptr)}wh(){const UU=bU.NflU(this.__wbg_ptr);if(UU[1])throw fU(UU[0])}Nh(){return bU.d4Hz(this.__wbg_ptr)>>>0}Mh(){const UU=bU.pj1V(this.__wbg_ptr);if(UU[1])throw fU(UU[0])}Oh(UU,RU){const gU=bU.HxnF(this.__wbg_ptr,UU,RU);if(gU[1])throw fU(gU[0])}UQ(UU){let RU,gU;try{const EU=bU.owpT(this.__wbg_ptr,UU);var tU=EU[0],pU=EU[1];if(EU[3])throw tU=0,pU=0,fU(EU[2]);return RU=tU,gU=pU,cU(tU,pU)}finally{bU.DQYN(RU,gU,1)}}RQ(UU){return bU.KrJK(this.__wbg_ptr,UU)>>>0}gQ(UU){return bU.iREK(this.__wbg_ptr,UU)>>>0}GC(){const UU=bU.HpxQ(this.__wbg_ptr);var RU=TU(UU[0],UU[1]).slice();return bU.DQYN(UU[0],4*UU[1],4),RU}tQ(){return 0!==bU.KrL3(this.__wbg_ptr)}constructor(UU,RU,gU,tU,pU,EU){const TU=WU(UU,bU.Y3R2,bU.ovsy),qU=oU,cU=eU(RU,bU.Y3R2),GU=oU,jU=function(UU,RU){const gU=RU(8*UU.length,8)>>>0;return KU().set(UU,gU/8),oU=UU.length,gU}(gU,bU.Y3R2),uU=oU,CU=eU(tU,bU.Y3R2),hU=oU,QU=eU(pU,bU.Y3R2),xU=oU,mU=bU.Ui9r(TU,qU,cU,GU,jU,uU,CU,hU,QU,xU,EU);if(mU[2])throw fU(mU[1]);return this.__wbg_ptr=mU[0],PU.register(this,this.__wbg_ptr,this),this}pQ(){let UU,RU;try{const gU=bU.qZYH(this.__wbg_ptr);return UU=gU[0],RU=gU[1],cU(gU[0],gU[1])}finally{bU.DQYN(UU,RU,1)}}EQ(UU,RU){const gU=WU(UU,bU.Y3R2,bU.ovsy),tU=oU,pU=eU(RU,bU.Y3R2),EU=oU,PU=bU.qVZ3(this.__wbg_ptr,gU,tU,pU,EU);if(PU[1])throw fU(PU[0])}PQ(){return bU.RWk2(this.__wbg_ptr)>>>0}TQ(){return bU.S2EJ(this.__wbg_ptr)>>>0}Lh(){return bU.HuB4(this.__wbg_ptr)>>>0}th(){return bU.ZbUJ(this.__wbg_ptr)>>>0}warnings(){let UU,RU;try{const gU=bU.LDo8(this.__wbg_ptr);return UU=gU[0],RU=gU[1],cU(gU[0],gU[1])}finally{bU.DQYN(UU,RU,1)}}}function tU(UU,RU){const gU=WU(UU,bU.Y3R2,bU.ovsy),tU=oU,pU=bU.ziQk(gU,tU,RU);if(pU[1])throw fU(pU[0])}function pU(){bU.DRWH()}function EU(){return{__proto__:null,lYxD:{__proto__:null,DYVR:function(UU,RU){return function(UU){QU===hU.length&&hU.push(hU.length+1);const RU=QU;return QU=hU[RU],hU[RU]=UU,RU}(Error(cU(UU,RU)))},KCSX:function(UU,RU){throw new Error(cU(UU,RU))},ko81:function(UU,RU){console.error(cU(UU,RU))}}}}Symbol.dispose&&(gU.prototype[Symbol.dispose]=gU.prototype.free);const PU="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((UU=>bU.S9Qw(UU,1)));function TU(UU,RU){return UU>>>=0,jU().subarray(UU/4,UU/4+RU)}let qU=null;function KU(){return null!==qU&&0!==qU.byteLength||(qU=new Float64Array(bU.memory.buffer)),qU}function cU(UU,RU){return function(UU,RU){IU+=RU,IU>=mU&&(xU=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0}),xU.decode(),IU=RU);return xU.decode(CU().subarray(UU,UU+RU))}(UU>>>0,RU)}let GU=null;function jU(){return null!==GU&&0!==GU.byteLength||(GU=new Uint32Array(bU.memory.buffer)),GU}let uU=null;function CU(){return null!==uU&&0!==uU.byteLength||(uU=new Uint8Array(bU.memory.buffer)),uU}let hU=new Array(1024).fill(void 0);hU.push(void 0,null,!0,!1);let QU=hU.length;function eU(UU,RU){const gU=RU(4*UU.length,4)>>>0;return jU().set(UU,gU/4),oU=UU.length,gU}function WU(UU,RU,gU){if(void 0===gU){const gU=JU.encode(UU),tU=RU(gU.length,1)>>>0;return CU().subarray(tU,tU+gU.length).set(gU),oU=gU.length,tU}let tU=UU.length,pU=RU(tU,1)>>>0;const EU=CU();let PU=0;for(;PU<tU;PU++){const RU=UU.charCodeAt(PU);if(RU>127)break;EU[pU+PU]=RU}if(PU!==tU){0!==PU&&(UU=UU.slice(PU)),pU=gU(pU,tU,tU=PU+3*UU.length,1)>>>0;const RU=CU().subarray(pU+PU,pU+tU);PU+=JU.encodeInto(UU,RU).written,pU=gU(pU,tU,PU,1)>>>0}return oU=PU,pU}function fU(UU){const RU=function(UU){return hU[UU]}(UU);return function(UU){UU<1028||(hU[UU]=QU,QU=UU)}(UU),RU}let xU=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0});xU.decode();const mU=2146435072;let IU=0;const JU=new TextEncoder;"encodeInto"in JU||(JU.encodeInto=function(UU,RU){const gU=JU.encode(UU);return RU.set(gU),{read:UU.length,written:gU.length}});let wU,nU,bU,oU=0;function ZU(UU,RU){return nU=UU,bU=UU.exports,wU=RU,qU=null,GU=null,uU=null,bU.pde0(),bU}function aU(UU){if(void 0!==bU)return bU;void 0!==UU&&(Object.getPrototypeOf(UU)===Object.prototype?({module:UU}=UU):console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));const RU=EU();UU instanceof WebAssembly.Module||(UU=new WebAssembly.Module(UU));return ZU(new WebAssembly.Instance(UU,RU),UU)}async function YU(UU){if(void 0!==bU)return bU;void 0!==UU&&(Object.getPrototypeOf(UU)===Object.prototype?({module_or_path:UU}=UU):console.warn("using deprecated parameters for the initialization function; pass a single object instead"));const RU=EU();("string"===typeof UU||"function"===typeof Request&&UU instanceof Request||"function"===typeof URL&&UU instanceof URL)&&(UU=fetch(UU));const{instance:gU,module:tU}=await async function(UU,RU){if("function"===typeof Response&&UU instanceof Response){if(!UU.ok)throw new Error(`failed to fetch Wasm: ${UU.status} ${UU.statusText} fetching \'${UU.url}\'`);if("function"===typeof WebAssembly.instantiateStreaming)try{return await WebAssembly.instantiateStreaming(UU,RU)}catch(gU){if(!function(UU){switch(UU){case"basic":case"cors":case"default":return!0}return!1}(UU.type)||"application/wasm"===UU.headers.get("Content-Type"))throw gU;console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\\n",gU)}const tU=await UU.arrayBuffer();return await WebAssembly.instantiate(tU,RU)}{const gU=await WebAssembly.instantiate(UU,RU);return gU instanceof WebAssembly.Instance?{instance:gU,module:UU}:gU}}(await UU,RU);return ZU(gU,tU)}let BU=null,VU=null;function rU(UU){if(null!==VU)throw VU;if(null===BU)try{const{memory:gU}=aU({module:UU});BU={wasm:RU,memory:gU}}catch(gU){throw VU=function(UU,RU){return new Error(`${UU}: ${RU instanceof Error?`${RU.name}: ${RU.message}`:String(RU)}`,{cause:RU})}("instantiate",gU),VU}return BU}function XU(UU){return UU instanceof Error?UU.message:String(UU)}const vU=0,dU=1,HU=2,SU=3,sU=4;Error;function yU(UU){return`the texture module didn\'t load (${XU(UU)})`}function kU(UU){return""===UU?[]:UU.split("\\0")}const FU=self;let iU=null,AU=null,zU=vU,MU=0;function DU(UU){const RU=performance.now();var gU,tU;(UU!==zU||RU-MU>=1e3)&&(zU=UU,MU=RU,FU.postMessage({type:"progress",stage:UU,wasmBytes:null!==(gU=null===(tU=AU)||void 0===tU?void 0:tU.buffer.byteLength)&&void 0!==gU?gU:0}))}const{FileReaderSync:LU}=self;function NU(UU){return(new LU).readAsDataURL(new Blob([UU],{type:"image/png"}))}function lU(UU,RU){FU.postMessage({type:"sheet",sheet:UU,pixels:RU},[RU.buffer])}function OU(UU){let RU;DU(dU);try{RU=rU(UU.module)}catch(PU){return void FU.postMessage({type:"failed",reason:yU(PU),moduleLoad:!0})}AU=RU.memory,DU(HU);const{assets:gU,layerCap:tU,warnings:pU,generator:EU}=function(UU,RU,gU,tU,pU,EU,PU){var TU;const{wasm:qU,memory:KU}=UU,{strings:cU,blocks:GU,numbers:jU,index:uU,armour:CU}=RU,hU=new qU.OR(cU,GU,jU,uU,CU,gU),QU=tU.sources.map((UU=>(null===EU||void 0===EU||EU(HU),hU.dg(UU)))),eU=new Uint32Array(2*tU.sourceOfName.length);for(const[oU,ZU]of tU.sourceOfName.entries())eU[2*oU]=oU,eU[2*oU+1]=QU[ZU];hU.EQ(tU.names,eU),null===EU||void 0===EU||EU(SU),hU.Oh(pU,null!==(TU=null===PU||void 0===PU?void 0:PU.layers)&&void 0!==TU?TU:0),null===EU||void 0===EU||EU(sU);const WU={};for(const[oU,ZU]of kU(hU.pQ()).entries())null===EU||void 0===EU||EU(sU),WU[ZU]=hU.UQ(oU);const fU={},xU=hU.It(),mU=new Map;for(const[oU,ZU]of kU(hU.st()).entries()){const UU=xU[oU];mU.has(UU)||(null===EU||void 0===EU||EU(sU),mU.set(UU,hU.UQ(UU))),fU[ZU]=mU.get(UU)}hU.zh();const IU=Array.from(hU.GC()),JU=[],wU=[],nU=(UU,RU)=>new Uint8ClampedArray(KU.buffer,UU,RU).slice();if(PU){for(let UU=0;UU<IU.length;UU++)null===EU||void 0===EU||EU(sU),hU.Ah(UU),hU.wh(),JU.push(PU.dataUrl(new Uint8Array(KU.buffer,hU.Lh(),hU.TQ()))),PU.onSheet(UU,nU(hU.th(),hU.PQ()));hU.Dh()}const bU=hU.Nh();for(let oU=bU;oU<bU+hU.op();oU++)null===EU||void 0===EU||EU(sU),JU.push(hU.UQ(oU)),wU.push(nU(hU.gQ(oU),hU.RQ(oU)));return{assets:{rotatedBlockTextures:WU,animatedBlockTextures:fU,blockAtlasArr:JU,blockAtlasPixels:wU,armourAtlas:hU.UQ(hU.At()),imagesPerAtlas:IU,blockAtlasWidth:hU.su()},layerCap:hU.tQ()?pU:0,warnings:hU.warnings(),generator:hU}}(RU,UU.inputs,UU.isDefaultPack,{sources:UU.sources,names:UU.names,sourceOfName:UU.sourceOfName},UU.maxLayerWidth,DU,UU.sheetLayers>0?{layers:UU.sheetLayers,onSheet:lU,dataUrl:NU}:void 0);iU=EU,FU.postMessage({type:"required",assets:gU,layerCap:tU,warnings:pU},gU.blockAtlasPixels.map((UU=>UU.buffer)))}self.onmessageerror=()=>{FU.postMessage({type:"failed",reason:"the request couldn\'t be deserialised"})},self.onmessage=UU=>{let{data:RU}=UU;try{"required"===RU.type?OU(RU):function(){if(!iU)throw new Error("No required assets to follow");const{colours:UU,warnings:RU}=function(UU){return UU.Mh(),{colours:{blocks:UU.BE(),counts:UU.cc(),values:UU.dj()},warnings:UU.warnings()}}(iU);FU.postMessage({type:"optional",...UU,warnings:RU},[UU.counts.buffer,UU.values.buffer])}()}catch(gU){const UU=XU(gU),RU=gU instanceof WebAssembly.RuntimeError?`wasm trapped (${UU})`:UU;FU.postMessage({type:"failed",reason:RU,stack:gU instanceof Error?gU.stack:void 0})}}})();', "Worker", void 0, gU.p + "generation.worker.e823f491.worker.js")
     }
-    var QD = cD(35710),
-      wD = cD(3026),
-      SD = cD(3053),
-      BD = cD(3044),
-      yD = cD(2998);
+    var qU = gU(35877),
+      KU = gU(2923),
+      cU = gU(2951),
+      GU = gU(2945),
+      jU = gU(2897);
 
-    function MD(DD) {
-      return "" === DD ? [] : DD.split("\0")
-    }
-
-    function tD(DD) {
-      if ("" !== DD)
-        for (const CD of DD.split("\n")) console.error(CD)
+    function uU(UU) {
+      return "" === UU ? [] : UU.split("\0")
     }
 
-    function ZD(DD, CD) {
-      return async function(DD, CD) {
-        const cD = Object.keys(DD),
-          ID = [],
-          pD = new Map,
-          iD = new Uint32Array(cD.length);
-        for (const [fD, bD] of cD.entries()) {
+    function CU(UU) {
+      if ("" !== UU)
+        for (const RU of UU.split("\n")) console.error(RU)
+    }
+
+    function hU(UU, RU) {
+      return async function(UU, RU) {
+        const gU = Object.keys(UU),
+          tU = [],
+          pU = new Map,
+          EU = new Uint32Array(gU.length);
+        for (const [PU, TU] of gU.entries()) {
           const {
-            url: CD
-          } = DD[bD];
-          pD.has(CD) || (pD.set(CD, ID.length), ID.push(CD)), iD[fD] = pD.get(CD)
+            url: RU
+          } = UU[TU];
+          pU.has(RU) || (pU.set(RU, tU.length), tU.push(RU)), EU[PU] = pU.get(RU)
         }
         return {
-          sources: await CD(ID),
-          names: cD.join("\0"),
-          sourceOfName: iD
+          sources: await RU(tU),
+          names: gU.join("\0"),
+          sourceOfName: EU
         }
-      }(DD, (async DD => {
-        const cD = await async function(DD, CD) {
-          const cD = new AbortController,
-            ID = () => {
-              cD.abort()
+      }(UU, (async UU => {
+        const gU = await async function(UU, RU) {
+          const gU = new AbortController,
+            tU = () => {
+              gU.abort()
             };
-          CD.addEventListener("abort", ID);
+          RU.addEventListener("abort", tU);
           try {
-            const CD = await Promise.all(DD.map((async DD => {
+            const RU = await Promise.all(UU.map((async UU => {
               try {
-                const CD = await fetch(DD, {
-                  signal: cD.signal
+                const RU = await fetch(UU, {
+                  signal: gU.signal
                 });
-                if (!CD.ok) throw new Error(`HTTP ${CD.status}`);
-                return [DD, await CD.blob()]
-              } catch (CD) {
-                throw cD.abort(), new SD.o(SD.l.Fetch, `fetching ${DD} failed: ${(0,BD.e)(CD)}`)
+                if (!RU.ok) throw new Error(`HTTP ${RU.status}`);
+                return [UU, await RU.blob()]
+              } catch (RU) {
+                throw gU.abort(), new cU.h(cU.f.Fetch, `fetching ${UU} failed: ${(0,GU.e)(RU)}`)
               }
             })));
-            return new Map(CD)
+            return new Map(RU)
           } finally {
-            CD.removeEventListener("abort", ID)
+            RU.removeEventListener("abort", tU)
           }
-        }(DD.filter((DD => !DD.startsWith("data:"))), CD);
-        return Promise.all(DD.map((DD => {
-          var CD;
-          return (0, yD.f)(null !== (CD = cD.get(DD)) && void 0 !== CD ? CD : DD)
+        }(UU.filter((UU => !UU.startsWith("data:"))), RU);
+        return Promise.all(UU.map((UU => {
+          var RU;
+          return (0, jU.f)(null !== (RU = gU.get(UU)) && void 0 !== RU ? RU : UU)
         })))
       }))
     }
 
-    function oD(DD, CD) {
-      let cD;
-      return DD instanceof SD.o ? cD = DD : (cD = new SD.o(CD ? SD.l.Optional : SD.l.Error, (0, BD.e)(DD)), DD instanceof Error && (cD.stack = `${cD.name}: ${cD.message}\n${DD.stack}`)), cD.code !== SD.l.Fetch && cD.code !== SD.l.Error && (0, wD.f)(cD.message), cD
+    function QU(UU, RU) {
+      let gU;
+      return UU instanceof cU.h ? gU = UU : (gU = new cU.h(RU ? cU.f.Optional : cU.f.Error, (0, GU.e)(UU)), UU instanceof Error && (gU.stack = `${gU.name}: ${gU.message}\n${UU.stack}`)), gU.code !== cU.f.Fetch && gU.code !== cU.f.Error && (0, KU.h)(gU.message), gU
     }
 
-    function vD(DD) {
-      return DD.message ? new Error(`the texture worker failed: ${DD.message}`) : new SD.o(SD.l.Load, "the texture worker failed to start")
+    function eU(UU) {
+      return UU.message ? new Error(`the texture worker failed: ${UU.message}`) : new cU.h(cU.f.Load, "the texture worker failed to start")
     }
-    class ND {
-      constructor(DD) {
-        this.worker = DD, this.failure = void 0, this.abandonStep = null, DD.addEventListener("error", (DD => {
-          DD.preventDefault(), this.failure ??= vD(DD)
+    class WU {
+      constructor(UU) {
+        this.worker = UU, this.failure = void 0, this.abandonStep = null, UU.addEventListener("error", (UU => {
+          UU.preventDefault(), this.failure ??= eU(UU)
         }))
       }
-      static async generateRequired(DD, CD, cD, iD) {
-        let fD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : SD.e,
-          wD = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-        const yD = (0, QD.n)();
-        if (null !== yD) throw oD(new SD.o(SD.l.Load, yD), !1);
-        let MD;
-        const vD = new AbortController;
+      static async generateRequired(UU, RU, gU, EU) {
+        let PU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : cU.c,
+          KU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        const jU = (0, qU.m)();
+        if (null !== jU) throw QU(new cU.h(cU.f.Load, jU), !1);
+        let uU;
+        const eU = new AbortController;
         try {
-          MD = new ND(function() {
+          uU = new WU(function() {
             try {
-              return new bD
-            } catch (DD) {
-              throw new SD.o(SD.l.Load, `the texture worker failed to start: ${(0,BD.e)(DD)}`)
+              return new TU
+            } catch (UU) {
+              throw new cU.h(cU.f.Load, `the texture worker failed to start: ${(0,GU.e)(UU)}`)
             }
           }());
-          const yD = (0, QD.d)().catch((DD => {
-              throw new SD.o(SD.l.Load, function(DD) {
-                return `the texture module didn't load (${(0,BD.e)(DD)})`
-              }(DD))
+          const jU = (0, qU.e)().catch((UU => {
+              throw new cU.h(cU.f.Load, function(UU) {
+                return `the texture module didn't load (${(0,GU.e)(UU)})`
+              }(UU))
             })),
-            oD = (async () => {
-              const iD = function(DD, CD, cD) {
-                const ID = [],
-                  pD = new Map,
-                  iD = DD => {
-                    let CD = pD.get(DD);
-                    return void 0 === CD && (CD = ID.length, ID.push(DD), pD.set(DD, CD)), CD
+            QU = (async () => {
+              const EU = function(UU, RU, gU) {
+                const tU = [],
+                  pU = new Map,
+                  EU = UU => {
+                    let RU = pU.get(UU);
+                    return void 0 === RU && (RU = tU.length, tU.push(UU), pU.set(UU, RU)), RU
                   },
-                  fD = [],
-                  bD = [],
-                  QD = new Map,
-                  wD = (DD, CD) => {
-                    const cD = "object" === typeof DD && null !== DD && "animTextures" in DD ? DD.animTextures : void 0;
-                    if (!Array.isArray(cD) || !cD.every((DD => "string" === typeof DD))) throw new Error(`Block ${CD} has textureInfo the encoding doesn't cover`);
-                    fD.push(cD.length, ...cD.map(iD))
+                  PU = [],
+                  TU = [],
+                  qU = new Map,
+                  KU = (UU, RU) => {
+                    const gU = "object" === typeof UU && null !== UU && "animTextures" in UU ? UU.animTextures : void 0;
+                    if (!Array.isArray(gU) || !gU.every((UU => "string" === typeof UU))) throw new Error(`Block ${RU} has textureInfo the encoding doesn't cover`);
+                    PU.push(gU.length, ...gU.map(EU))
                   };
-                let SD = 0;
-                for (const MD in DD) {
-                  const CD = DD[MD];
-                  fD.push(iD(MD));
-                  const cD = (CD.transTex ? 1 : 0) | (CD.HM ? 2 : 0) | (CD.particlesIgnoreBlack ? 4 : 0),
-                    ID = "string" === typeof CD.itemTexture ? iD(CD.itemTexture) : 4294967295,
-                    pD = `${cD},${ID}`,
-                    BD = CD.textureInfo,
-                    yD = QD.get(BD);
-                  if ((null === yD || void 0 === yD ? void 0 : yD.fields) !== pD)
-                    if (QD.set(BD, {
-                        entry: SD++,
-                        fields: pD
-                      }), fD.push(1, cD, ID), "string" === typeof BD) fD.push(1, iD(BD));
-                    else if (Array.isArray(BD)) {
-                    fD.push(3, BD.length);
-                    for (const DD of BD) "string" === typeof DD ? fD.push(0, iD(DD)) : "number" === typeof DD ? (fD.push(2, bD.length), bD.push(DD)) : (fD.push(1), wD(DD, MD))
-                  } else BD ? (fD.push(2), wD(BD, MD)) : fD.push(0);
-                  else fD.push(0, yD.entry), SD++
+                let cU = 0;
+                for (const uU in UU) {
+                  const RU = UU[uU];
+                  PU.push(EU(uU));
+                  const gU = (RU.transTex ? 1 : 0) | (RU.Nj ? 2 : 0) | (RU.particlesIgnoreBlack ? 4 : 0),
+                    tU = "string" === typeof RU.itemTexture ? EU(RU.itemTexture) : 4294967295,
+                    pU = `${gU},${tU}`,
+                    GU = RU.textureInfo,
+                    jU = qU.get(GU);
+                  if ((null === jU || void 0 === jU ? void 0 : jU.fields) !== pU)
+                    if (qU.set(GU, {
+                        entry: cU++,
+                        fields: pU
+                      }), PU.push(1, gU, tU), "string" === typeof GU) PU.push(1, EU(GU));
+                    else if (Array.isArray(GU)) {
+                    PU.push(3, GU.length);
+                    for (const UU of GU) "string" === typeof UU ? PU.push(0, EU(UU)) : "number" === typeof UU ? (PU.push(2, TU.length), TU.push(UU)) : (PU.push(1), KU(UU, uU))
+                  } else GU ? (PU.push(2), KU(GU, uU)) : PU.push(0);
+                  else PU.push(0, jU.entry), cU++
                 }
-                const BD = [];
-                for (const MD in CD) BD.push(iD(MD), CD[MD]);
-                const yD = new Uint32Array(cD.map(iD));
+                const GU = [];
+                for (const uU in RU) GU.push(EU(uU), RU[uU]);
+                const jU = new Uint32Array(gU.map(EU));
                 return {
-                  strings: ID.join("\0"),
-                  blocks: new Uint32Array(fD),
-                  numbers: new Float64Array(bD),
-                  index: new Uint32Array(BD),
-                  armour: yD
+                  strings: tU.join("\0"),
+                  blocks: new Uint32Array(PU),
+                  numbers: new Float64Array(TU),
+                  index: new Uint32Array(GU),
+                  armour: jU
                 }
-              }(DD, CD, ID.e.map(pD.i));
+              }(UU, RU, tU.i.map(pU.j));
               return {
-                inputs: iD,
-                sources: await ZD(cD, vD.signal)
+                inputs: EU,
+                sources: await hU(gU, eU.signal)
               }
             })(),
-            [gD, {
-              inputs: XD,
-              sources: mD
-            }] = await Promise.all([yD, oD]),
-            nD = [XD.blocks.buffer, XD.numbers.buffer, XD.index.buffer, XD.armour.buffer, mD.sourceOfName.buffer];
-          for (const DD of mD.sources) nD.push(DD.buffer);
-          const OD = [],
+            [fU, {
+              inputs: xU,
+              sources: mU
+            }] = await Promise.all([jU, QU]),
+            IU = [xU.blocks.buffer, xU.numbers.buffer, xU.index.buffer, xU.armour.buffer, mU.sourceOfName.buffer];
+          for (const UU of mU.sources) IU.push(UU.buffer);
+          const JU = [],
             {
-              assets: PD,
-              layerCap: HD,
-              warnings: UD
-            } = await MD.request({
+              assets: wU,
+              layerCap: nU,
+              warnings: bU
+            } = await uU.request({
               type: "required",
-              module: gD,
-              inputs: XD,
-              isDefaultPack: iD,
-              maxLayerWidth: fD,
-              sheetLayers: wD,
-              ...mD
-            }, nD, ((DD, CD) => {
-              OD[DD] = CD
+              module: fU,
+              inputs: xU,
+              isDefaultPack: EU,
+              maxLayerWidth: PU,
+              sheetLayers: KU,
+              ...mU
+            }, IU, ((UU, RU) => {
+              JU[UU] = RU
             }));
-          return wD > 0 && (PD.blockAtlasPixels = function(DD, CD) {
-            const cD = [];
-            for (let ID = 0; ID < CD; ID++) {
-              const pD = DD[ID];
-              if (void 0 === pD) throw new Error(`the texture worker's sheet ${ID} of ${CD} didn't arrive`);
-              cD.push(pD)
+          return KU > 0 && (wU.blockAtlasPixels = function(UU, RU) {
+            const gU = [];
+            for (let tU = 0; tU < RU; tU++) {
+              const pU = UU[tU];
+              if (void 0 === pU) throw new Error(`the texture worker's sheet ${tU} of ${RU} didn't arrive`);
+              gU.push(pU)
             }
-            return cD
-          }(OD, PD.imagesPerAtlas.length)), tD(UD), {
-            assets: PD,
-            layerCap: HD,
-            worker: MD
+            return gU
+          }(JU, wU.imagesPerAtlas.length)), CU(bU), {
+            assets: wU,
+            layerCap: nU,
+            worker: uU
           }
-        } catch (XD) {
-          var gD;
-          throw vD.abort(), null === (gD = MD) || void 0 === gD || gD.terminate(), oD(XD, !1)
+        } catch (xU) {
+          var fU;
+          throw eU.abort(), null === (fU = uU) || void 0 === fU || fU.terminate(), QU(xU, !1)
         }
       }
       async generateOptional() {
-        let DD;
+        let UU;
         try {
-          DD = await this.request({
+          UU = await this.request({
             type: "optional"
           }, [])
-        } catch (CD) {
-          throw oD(CD, !0)
+        } catch (RU) {
+          throw QU(RU, !0)
         } finally {
           this.terminate()
         }
-        return tD(DD.warnings),
-          function(DD) {
+        return CU(UU.warnings),
+          function(UU) {
             let {
-              blocks: CD,
-              counts: cD,
-              values: ID
-            } = DD;
-            const pD = {};
-            let iD = 0;
-            for (const [fD, bD] of MD(CD).entries()) {
-              const DD = [];
-              for (let CD = 0; CD < cD[fD]; CD++, iD += 3) DD.push([ID[iD], ID[iD + 1], ID[iD + 2]]);
-              pD[bD] = DD
+              blocks: RU,
+              counts: gU,
+              values: tU
+            } = UU;
+            const pU = {};
+            let EU = 0;
+            for (const [PU, TU] of uU(RU).entries()) {
+              const UU = [];
+              for (let RU = 0; RU < gU[PU]; RU++, EU += 3) UU.push([tU[EU], tU[EU + 1], tU[EU + 2]]);
+              pU[TU] = UU
             }
-            return pD
-          }(DD)
+            return pU
+          }(UU)
       }
       terminate() {
-        var DD;
-        this.worker.terminate(), null === (DD = this.abandonStep) || void 0 === DD || DD.call(this)
+        var UU;
+        this.worker.terminate(), null === (UU = this.abandonStep) || void 0 === UU || UU.call(this)
       }
-      request(DD, CD, cD) {
-        return new Promise(((ID, pD) => {
-          if (void 0 !== this.failure) return void pD(this.failure);
-          let iD = SD.p.None,
-            fD = 0,
-            bD = null;
-          const QD = () => {
-            var DD;
-            null === (DD = bD) || void 0 === DD || DD.stop(), this.abandonStep = null, this.worker.onmessage = null, this.worker.onerror = null, this.worker.onmessageerror = null
+      request(UU, RU, gU) {
+        return new Promise(((tU, pU) => {
+          if (void 0 !== this.failure) return void pU(this.failure);
+          let EU = cU.l.None,
+            PU = 0,
+            TU = null;
+          const qU = () => {
+            var UU;
+            null === (UU = TU) || void 0 === UU || UU.stop(), this.abandonStep = null, this.worker.onmessage = null, this.worker.onerror = null, this.worker.onmessageerror = null
           };
           this.abandonStep = () => {
-            QD(), pD(new Error("the texture worker was terminated"))
-          }, this.worker.onmessage = CD => {
+            qU(), pU(new Error("the texture worker was terminated"))
+          }, this.worker.onmessage = RU => {
             let {
-              data: wD
-            } = CD;
-            var BD;
-            if ("progress" === wD.type) return iD = wD.stage, fD = wD.wasmBytes, void(null === (BD = bD) || void 0 === BD || BD.restart(iD === SD.p.Generating ? SD.h : SD.k));
-            "sheet" === wD.type && cD ? cD(wD.sheet, wD.pixels) : (QD(), "failed" === wD.type ? pD(wD.moduleLoad ? new SD.o(SD.l.Load, wD.reason) : function(DD, CD) {
+              data: KU
+            } = RU;
+            var GU;
+            if ("progress" === KU.type) return EU = KU.stage, PU = KU.wasmBytes, void(null === (GU = TU) || void 0 === GU || GU.restart(EU === cU.l.Generating ? cU.d : cU.e));
+            "sheet" === KU.type && gU ? gU(KU.sheet, KU.pixels) : (qU(), "failed" === KU.type ? pU(KU.moduleLoad ? new cU.h(cU.f.Load, KU.reason) : function(UU, RU) {
               let {
-                reason: cD,
-                stack: ID
-              } = DD;
-              const pD = new Error(gD(cD, CD));
-              void 0 !== ID && (pD.stack = ID);
-              return pD
-            }(wD, fD)) : wD.type !== DD.type ? pD(new Error(`the texture worker answered ${wD.type} to ${DD.type}`)) : ID(wD))
-          }, this.worker.onerror = DD => {
-            QD(), pD(vD(DD))
+                reason: gU,
+                stack: tU
+              } = UU;
+              const pU = new Error(fU(gU, RU));
+              void 0 !== tU && (pU.stack = tU);
+              return pU
+            }(KU, PU)) : KU.type !== UU.type ? pU(new Error(`the texture worker answered ${KU.type} to ${UU.type}`)) : tU(KU))
+          }, this.worker.onerror = UU => {
+            qU(), pU(eU(UU))
           }, this.worker.onmessageerror = () => {
-            QD(), pD(new Error("the texture worker's answer couldn't be read"))
+            qU(), pU(new Error("the texture worker's answer couldn't be read"))
           };
           try {
-            this.worker.postMessage(DD, CD), bD = (0, SD.t)((() => {
-              QD();
-              const CD = new SD.o("required" === DD.type ? `${SD.l.Stalled}${iD}` : SD.l.Optional, gD("the texture worker stopped responding", fD));
-              pD(CD)
+            this.worker.postMessage(UU, RU), TU = (0, cU.n)((() => {
+              qU();
+              const RU = new cU.h("required" === UU.type ? `${cU.f.Stalled}${EU}` : cU.f.Optional, fU("the texture worker stopped responding", PU));
+              pU(RU)
             }))
-          } catch (wD) {
-            QD(), pD(wD)
+          } catch (KU) {
+            qU(), pU(KU)
           }
         }))
       }
     }
 
-    function gD(DD, CD) {
-      return CD > 0 ? `${DD}, its module's memory ${Math.round(CD/2**20)} MiB` : DD
+    function fU(UU, RU) {
+      return RU > 0 ? `${UU}, its module's memory ${Math.round(RU/2**20)} MiB` : UU
     }
   },
-  35708: DD => {
-    DD.exports = function(DD, CD, cD, ID) {
-      var pD = self || window;
+  35875: UU => {
+    UU.exports = function(UU, RU, gU, tU) {
+      var pU = self || window;
       try {
         try {
-          var iD;
+          var EU;
           try {
-            iD = new pD.Blob([DD])
-          } catch (wD) {
-            (iD = new(pD.BlobBuilder || pD.WebKitBlobBuilder || pD.MozBlobBuilder || pD.MSBlobBuilder)).append(DD), iD = iD.getBlob()
+            EU = new pU.Blob([UU])
+          } catch (KU) {
+            (EU = new(pU.BlobBuilder || pU.WebKitBlobBuilder || pU.MozBlobBuilder || pU.MSBlobBuilder)).append(UU), EU = EU.getBlob()
           }
-          var fD = pD.URL || pD.webkitURL,
-            bD = fD.createObjectURL(iD),
-            QD = new pD[CD](bD, cD);
-          return fD.revokeObjectURL(bD), QD
-        } catch (wD) {
-          return new pD[CD]("data:application/javascript,".concat(encodeURIComponent(DD)), cD)
+          var PU = pU.URL || pU.webkitURL,
+            TU = PU.createObjectURL(EU),
+            qU = new pU[RU](TU, gU);
+          return PU.revokeObjectURL(TU), qU
+        } catch (KU) {
+          return new pU[RU]("data:application/javascript,".concat(encodeURIComponent(UU)), gU)
         }
-      } catch (wD) {
-        if (!ID) throw Error("Inline worker is not supported");
-        return new pD[CD](ID, cD)
+      } catch (KU) {
+        if (!tU) throw Error("Inline worker is not supported");
+        return new pU[RU](tU, gU)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

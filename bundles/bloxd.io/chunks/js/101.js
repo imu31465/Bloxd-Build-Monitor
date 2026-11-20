@@ -1,162 +1,162 @@
 export const id = 101;
 export const ids = [101];
 export const modules = {
-  4677: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => yD
+  4569: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => jU
     });
-    var ID = cD(1049),
-      pD = cD.n(ID),
-      iD = cD(1064),
-      fD = cD(1328),
-      bD = cD(3314),
-      QD = cD(120),
-      wD = cD(3346),
-      SD = cD(3342),
-      BD = cD(1093);
+    var tU = gU(1037),
+      pU = gU.n(tU),
+      EU = gU(1049),
+      PU = gU(1326),
+      TU = gU(3194),
+      qU = gU(135),
+      KU = gU(3232),
+      cU = gU(3223),
+      GU = gU(1090);
 
-    function yD(DD) {
+    function jU(UU) {
       let {
-        game: CD
-      } = DD;
-      const cD = (0, QD.i)() ? "large" : "small",
-        ID = (0, wD.f)(CD, cD),
-        yD = (0, bD.f)(ID),
-        MD = void 0 !== yD.blurhash;
-      return (0, BD.jsxs)("div", {
+        game: RU
+      } = UU;
+      const gU = (0, qU.l)() ? "large" : "small",
+        tU = (0, KU.f)(RU, gU),
+        jU = (0, TU.h)(tU),
+        uU = void 0 !== jU.blurhash;
+      return (0, GU.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [yD.isLoading && !MD && (0, BD.jsx)(fD.e, {
+        children: [jU.isLoading && !uU && (0, GU.jsx)(PU.d, {
           loaderType: "Secondary"
-        }), !yD.failed && (null !== yD.src || MD) && (0, BD.jsx)("div", {
-          className: pD()("SchematicImage", SD.h, {
-            SchematicImageFadeIn: yD.fadeIn && !MD
+        }), !jU.failed && (null !== jU.src || uU) && (0, GU.jsx)("div", {
+          className: pU()("SchematicImage", cU.h, {
+            SchematicImageFadeIn: jU.fadeIn && !uU
           }),
-          style: (0, SD.d)(yD),
-          children: (0, BD.jsx)(SD.b, {
-            image: yD
+          style: (0, cU.e)(jU),
+          children: (0, GU.jsx)(cU.c, {
+            image: jU
           })
-        }), yD.failed && (0, BD.jsx)("div", {
+        }), jU.failed && (0, GU.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, BD.jsx)(iD.c, {
+          children: (0, GU.jsx)(EU.c, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  4808: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => MD
+  4706: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => uU
     });
-    var ID = cD(53),
-      pD = cD(1049),
-      iD = cD.n(pD),
-      fD = cD(4734),
-      bD = cD(1328),
-      QD = cD(1192),
-      wD = cD(2948),
-      SD = cD(3095),
-      BD = cD(1064),
-      yD = cD(1093);
+    var tU = gU(56),
+      pU = gU(1037),
+      EU = gU.n(pU),
+      PU = gU(4623),
+      TU = gU(1326),
+      qU = gU(1181),
+      KU = gU(2842),
+      cU = gU(2977),
+      GU = gU(1049),
+      jU = gU(1090);
 
-    function MD(DD) {
+    function uU(UU) {
       let {
-        folderName: CD,
-        onTexturePackUpdated: pD,
-        disabled: MD = !1,
-        maxFileSizeMb: tD,
-        packOwner: ZD
-      } = DD;
+        folderName: RU,
+        onTexturePackUpdated: pU,
+        disabled: uU = !1,
+        maxFileSizeMb: CU,
+        packOwner: hU
+      } = UU;
       const {
-        t: oD
-      } = (0, QD.F)(), [vD, ND] = (0, ID.useState)(!1), [gD, XD] = (0, ID.useState)(null), [mD, nD] = (0, ID.useState)(null), OD = (0, ID.useRef)(null);
+        t: QU
+      } = (0, qU.B)(), [eU, WU] = (0, tU.useState)(!1), [fU, xU] = (0, tU.useState)(null), [mU, IU] = (0, tU.useState)(null), JU = (0, tU.useRef)(null);
       const {
-        getRootProps: PD,
-        getInputProps: HD,
-        isDragActive: UD
-      } = (0, fD.b)({
-        onDrop: async function(DD) {
-          ND(!0);
+        getRootProps: wU,
+        getInputProps: nU,
+        isDragActive: bU
+      } = (0, PU.e)({
+        onDrop: async function(UU) {
+          WU(!0);
           try {
-            const CD = await (0, wD.w)(DD);
-            if ("customGame" === ZD && (0, SD.n)(CD)) return void XD(oD(SD.c));
-            if (void 0 !== tD) {
-              const DD = JSON.stringify(CD).length / 1048576;
-              if (DD > tD) return void XD(`File size is too large. Max size is ${tD}MB. Current size is ${DD}MB.`)
+            const RU = await (0, KU.p)(UU);
+            if ("customGame" === hU && (0, cU.j)(RU)) return void xU(QU(cU.d));
+            if (void 0 !== CU) {
+              const UU = JSON.stringify(RU).length / 1048576;
+              if (UU > CU) return void xU(`File size is too large. Max size is ${CU}MB. Current size is ${UU}MB.`)
             }
-            XD(null), nD(null), pD(CD), OD.current = CD,
-              function(DD, CD) {
-                const ID = DD.modelOverrides;
-                ID && Promise.all([cD.e(195), cD.e(194)]).then((() => cD(9113))).then((cD => {
+            xU(null), IU(null), pU(RU), JU.current = RU,
+              function(UU, RU) {
+                const tU = UU.modelOverrides;
+                tU && Promise.all([gU.e(195), gU.e(194)]).then((() => gU(9057))).then((gU => {
                   let {
-                    packDisplayName: pD,
-                    refusedPackModels: iD,
-                    packModelSummary: fD
-                  } = cD;
-                  const bD = pD(DD.metaData);
-                  CD(fD(bD, iD(bD, ID, !1)))
-                })).catch((DD => {
-                  console.error("Checking the texture pack's models failed:", DD)
+                    packDisplayName: pU,
+                    refusedPackModels: EU,
+                    packModelSummary: PU
+                  } = gU;
+                  const TU = pU(UU.metaData);
+                  RU(PU(TU, EU(TU, tU, !1)))
+                })).catch((UU => {
+                  console.error("Checking the texture pack's models failed:", UU)
                 }))
-              }(CD, (DD => {
-                OD.current === CD && nD(DD)
+              }(RU, (UU => {
+                JU.current === RU && IU(UU)
               }))
           } catch {
-            XD("Invalid Texture Pack Folder")
+            xU("Invalid Texture Pack Folder")
           } finally {
-            ND(!1)
+            WU(!1)
           }
         },
         useFsAccessApi: !1,
-        disabled: MD
+        disabled: uU
       });
-      return (0, yD.jsxs)("div", {
+      return (0, jU.jsxs)("div", {
         className: "CustomTexturePackContainer",
-        children: [(0, yD.jsxs)("div", {
+        children: [(0, jU.jsxs)("div", {
           className: "CustomTextureWarning",
-          children: [oD("settingsMenu:customTextureWarning"), ".", (0, yD.jsx)("br", {}), oD("settingsMenu:viewDocumentation"), ":", " ", (0, yD.jsx)("a", {
+          children: [QU("settingsMenu:customTextureWarning"), ".", (0, jU.jsx)("br", {}), QU("settingsMenu:viewDocumentation"), ":", " ", (0, jU.jsx)("a", {
             href: "https://github.com/Bloxdy/texturePacks",
             target: "_blank",
             rel: "noreferrer",
             children: "github.com/Bloxdy/texturePacks"
           })]
-        }), gD && (0, yD.jsxs)("div", {
+        }), fU && (0, jU.jsxs)("div", {
           className: "CustomTextureError",
-          children: [oD("general:error"), ": ", gD]
-        }), mD && (0, yD.jsx)("div", {
+          children: [QU("general:error"), ": ", fU]
+        }), mU && (0, jU.jsx)("div", {
           className: "CustomTextureError",
-          children: mD
-        }), (0, yD.jsxs)("div", {
-          ...PD({
-            className: iD()("CustomTextureFolderUpload", {
-              ActiveDrag: UD,
-              Disabled: MD
+          children: mU
+        }), (0, jU.jsxs)("div", {
+          ...wU({
+            className: EU()("CustomTextureFolderUpload", {
+              ActiveDrag: bU,
+              Disabled: uU
             })
           }),
-          children: [(0, yD.jsx)("input", {
-            ...HD({
+          children: [(0, jU.jsx)("input", {
+            ...nU({
               webkitdirectory: "true"
             })
-          }), vD && (0, yD.jsx)("div", {
+          }), eU && (0, jU.jsx)("div", {
             className: "CustomTextureFolderUploadLoading",
-            children: (0, yD.jsx)(bD.e, {})
-          }), !vD && !UD && CD && (0, yD.jsxs)(yD.Fragment, {
-            children: [(0, yD.jsx)("div", {
+            children: (0, jU.jsx)(TU.d, {})
+          }), !eU && !bU && RU && (0, jU.jsxs)(jU.Fragment, {
+            children: [(0, jU.jsx)("div", {
               className: "CustomTextureFolderUploadIcon Active",
-              children: (0, yD.jsx)(BD.c, {
+              children: (0, jU.jsx)(GU.c, {
                 name: "folder-image"
               })
-            }), (0, yD.jsx)("div", {
+            }), (0, jU.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions Active",
-              children: CD
+              children: RU
             })]
-          }), !vD && (UD || !CD) && (0, yD.jsxs)(yD.Fragment, {
-            children: [(0, yD.jsx)("div", {
+          }), !eU && (bU || !RU) && (0, jU.jsxs)(jU.Fragment, {
+            children: [(0, jU.jsx)("div", {
               className: "CustomTextureFolderUploadIcon",
-              children: (0, yD.jsx)(BD.c, {
+              children: (0, jU.jsx)(GU.c, {
                 name: "up-from-bracket"
               })
-            }), (0, yD.jsx)("div", {
+            }), (0, jU.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions",
               children: "Drag and drop a Texture Pack folder here"
             })]
@@ -165,310 +165,310 @@ export const modules = {
       })
     }
   },
-  4770: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => tD,
-      g: () => gD,
-      i: () => ZD,
-      j: () => ND
+  4670: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => CU,
+      d: () => fU,
+      h: () => hU,
+      l: () => WU
     });
-    var ID = cD(53),
-      pD = cD(4774),
-      iD = cD(4182),
-      fD = cD(1356),
-      bD = cD(4799),
-      QD = cD(1049),
-      wD = cD.n(QD),
-      SD = cD(1340),
-      BD = cD(1701),
-      yD = cD(4806),
-      MD = cD(1093);
+    var tU = gU(56),
+      pU = gU(4679),
+      EU = gU(4040),
+      PU = gU(1344),
+      TU = gU(4693),
+      qU = gU(1037),
+      KU = gU.n(qU),
+      cU = gU(1333),
+      GU = gU(1637),
+      jU = gU(4701),
+      uU = gU(1090);
 
-    function tD(DD) {
+    function CU(UU) {
       let {
-        label: CD,
-        onClick: cD,
-        checked: ID,
-        circleInfoText: pD,
-        className: bD,
-        disabled: QD,
-        note: SD
-      } = DD;
-      return (0, MD.jsxs)("div", {
-        "aria-disabled": QD || void 0,
+        label: RU,
+        onClick: gU,
+        checked: tU,
+        circleInfoText: pU,
+        className: TU,
+        disabled: qU,
+        note: cU
+      } = UU;
+      return (0, uU.jsxs)("div", {
+        "aria-disabled": qU || void 0,
         "data-pad-focusable": !0,
-        className: wD()("SettingBox CheckboxContainer", {
-          [bD]: bD,
-          SettingBoxDisabled: QD
+        className: KU()("SettingBox CheckboxContainer", {
+          [TU]: TU,
+          SettingBoxDisabled: qU
         }),
         onClick: () => {
-          QD || cD(!ID)
+          qU || gU(!tU)
         },
-        children: [(0, MD.jsxs)("div", {
+        children: [(0, uU.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, MD.jsx)("label", {
+          children: [(0, uU.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, MD.jsx)(iD.e, {
+            children: (0, uU.jsx)(EU.d, {
               className: "SettingsCheckbox",
-              checked: ID,
-              disabled: QD,
+              checked: tU,
+              disabled: qU,
               onChange: () => {}
             })
-          }), (0, MD.jsxs)("div", {
+          }), (0, uU.jsxs)("div", {
             className: "CheckboxText",
-            children: [CD, pD && (0, MD.jsx)("span", {
-              onClick: DD => DD.stopPropagation(),
-              children: (0, MD.jsx)(fD.d, {
+            children: [RU, pU && (0, uU.jsx)("span", {
+              onClick: UU => UU.stopPropagation(),
+              children: (0, uU.jsx)(PU.d, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: pD
+                hoverInfo: pU
               })
             })]
           })]
-        }), SD && (0, MD.jsx)("div", {
+        }), cU && (0, uU.jsx)("div", {
           className: "SettingNote",
-          children: SD
+          children: cU
         })]
       })
     }
 
-    function ZD(DD) {
+    function hU(UU) {
       let {
-        name: CD,
-        onChange: cD,
-        min: pD,
-        max: iD,
-        step: bD,
-        initValue: QD,
-        circleInfoText: SD,
-        format: BD,
-        className: yD,
-        padStep: tD,
-        disabled: ZD = !1,
-        selectableMax: oD,
-        cappedNote: ND,
-        onChangeComplete: gD
-      } = DD;
-      const [XD, mD] = (0, ID.useState)(QD), nD = (0, ID.useRef)(QD);
-      (0, ID.useEffect)((() => {
-        nD.current = QD, mD(QD)
-      }), [QD]);
-      const OD = void 0 !== oD && oD < iD,
-        PD = OD ? {
-          "--slider-selectable": (oD - pD) / (iD - pD)
+        name: RU,
+        onChange: gU,
+        min: pU,
+        max: EU,
+        step: TU,
+        initValue: qU,
+        circleInfoText: cU,
+        format: GU,
+        className: jU,
+        padStep: CU,
+        disabled: hU = !1,
+        selectableMax: QU,
+        cappedNote: WU,
+        onChangeComplete: fU
+      } = UU;
+      const [xU, mU] = (0, tU.useState)(qU), IU = (0, tU.useRef)(qU);
+      (0, tU.useEffect)((() => {
+        IU.current = qU, mU(qU)
+      }), [qU]);
+      const JU = void 0 !== QU && QU < EU,
+        wU = JU ? {
+          "--slider-selectable": (QU - pU) / (EU - pU)
         } : void 0;
-      return (0, MD.jsxs)("div", {
-        className: wD()("SettingBox SettingsSliderDiv", {
-          [yD]: yD,
-          SettingBoxDisabled: ZD,
-          SliderCapped: OD
+      return (0, uU.jsxs)("div", {
+        className: KU()("SettingBox SettingsSliderDiv", {
+          [jU]: jU,
+          SettingBoxDisabled: hU,
+          SliderCapped: JU
         }),
-        style: PD,
-        children: [(0, MD.jsxs)("div", {
+        style: wU,
+        children: [(0, uU.jsxs)("div", {
           className: "SliderText",
-          children: [`${CD}: ${BD?BD(XD):XD}`, SD && (0, MD.jsx)(fD.d, {
+          children: [`${RU}: ${GU?GU(xU):xU}`, cU && (0, uU.jsx)(PU.d, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: SD
+            hoverInfo: cU
           })]
-        }), (0, MD.jsx)("div", {
+        }), (0, uU.jsx)("div", {
           className: "SliderDiv",
-          children: (0, MD.jsx)(vD, {
-            value: XD,
-            min: pD,
-            max: iD,
-            step: bD,
-            onChange: DD => {
-              if (OD && DD >= oD && XD === oD) return;
-              const CD = OD ? Math.min(DD, oD) : DD;
-              nD.current = CD, mD(CD), cD(CD)
+          children: (0, uU.jsx)(eU, {
+            value: xU,
+            min: pU,
+            max: EU,
+            step: TU,
+            onChange: UU => {
+              if (JU && UU >= QU && xU === QU) return;
+              const RU = JU ? Math.min(UU, QU) : UU;
+              IU.current = RU, mU(RU), gU(RU)
             },
-            onChangeComplete: gD && (() => {
-              gD(nD.current)
+            onChangeComplete: fU && (() => {
+              fU(IU.current)
             }),
-            format: BD,
-            padStep: tD,
-            disabled: ZD
+            format: GU,
+            padStep: CU,
+            disabled: hU
           })
-        }), OD && ND && (0, MD.jsx)("div", {
+        }), JU && WU && (0, uU.jsx)("div", {
           className: "SettingNote",
-          children: ND
+          children: WU
         })]
       })
     }
-    const oD = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const QU = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function vD(DD) {
-      var CD;
+    function eU(UU) {
+      var RU;
       let {
-        value: cD,
-        min: iD,
-        max: fD,
-        step: bD,
-        onChange: QD,
-        orientation: wD,
-        reverse: SD,
-        setIsChanging: BD,
-        tooltip: tD,
-        labels: ZD,
-        handleLabel: vD,
-        format: ND,
-        onChangeStart: gD,
-        onChangeComplete: XD,
-        padStep: mD,
-        disabled: nD = !1
-      } = DD;
-      const OD = (0, ID.useRef)(null),
-        PD = (0, ID.useRef)(null);
-      (0, ID.useLayoutEffect)((() => {
-        var DD, CD, cD;
-        const ID = null !== (DD = null === (CD = OD.current) || void 0 === CD ? void 0 : CD.querySelector(".rangeslider")) && void 0 !== DD ? DD : null;
-        null === ID || void 0 === ID || ID.setAttribute("data-pad-slider", ""), null === ID || void 0 === ID || ID.setAttribute("data-pad-focusable", ""), null === ID || void 0 === ID || null === (cD = ID.querySelector(".rangeslider__handle")) || void 0 === cD || cD.setAttribute("data-pad-slider-handle", ""), PD.current = ID
-      }), []), (0, ID.useLayoutEffect)((() => {
-        var DD, CD;
-        nD ? null === (DD = PD.current) || void 0 === DD || DD.setAttribute("aria-disabled", "true") : null === (CD = PD.current) || void 0 === CD || CD.removeAttribute("aria-disabled")
-      }), [nD]);
-      const HD = (null !== (CD = String(bD).split(".")[1]) && void 0 !== CD ? CD : "").length,
-        UD = DD => {
-          const CD = Number((Math.round((DD - iD) / bD) * bD + iD).toFixed(HD));
-          return Math.min(fD, Math.max(iD, CD))
+        value: gU,
+        min: EU,
+        max: PU,
+        step: TU,
+        onChange: qU,
+        orientation: KU,
+        reverse: cU,
+        setIsChanging: GU,
+        tooltip: CU,
+        labels: hU,
+        handleLabel: eU,
+        format: WU,
+        onChangeStart: fU,
+        onChangeComplete: xU,
+        padStep: mU,
+        disabled: IU = !1
+      } = UU;
+      const JU = (0, tU.useRef)(null),
+        wU = (0, tU.useRef)(null);
+      (0, tU.useLayoutEffect)((() => {
+        var UU, RU, gU;
+        const tU = null !== (UU = null === (RU = JU.current) || void 0 === RU ? void 0 : RU.querySelector(".rangeslider")) && void 0 !== UU ? UU : null;
+        null === tU || void 0 === tU || tU.setAttribute("data-pad-slider", ""), null === tU || void 0 === tU || tU.setAttribute("data-pad-focusable", ""), null === tU || void 0 === tU || null === (gU = tU.querySelector(".rangeslider__handle")) || void 0 === gU || gU.setAttribute("data-pad-slider-handle", ""), wU.current = tU
+      }), []), (0, tU.useLayoutEffect)((() => {
+        var UU, RU;
+        IU ? null === (UU = wU.current) || void 0 === UU || UU.setAttribute("aria-disabled", "true") : null === (RU = wU.current) || void 0 === RU || RU.removeAttribute("aria-disabled")
+      }), [IU]);
+      const nU = (null !== (RU = String(TU).split(".")[1]) && void 0 !== RU ? RU : "").length,
+        bU = UU => {
+          const RU = Number((Math.round((UU - EU) / TU) * TU + EU).toFixed(nU));
+          return Math.min(PU, Math.max(EU, RU))
         },
-        xD = (0, ID.useRef)(XD);
-      xD.current = XD, (0, ID.useEffect)((() => {
-        const DD = OD.current;
-        if (!DD) return;
-        const CD = DD => {
-          var CD;
-          oD.has(DD.key) && (null === (CD = xD.current) || void 0 === CD || CD.call(xD))
+        oU = (0, tU.useRef)(xU);
+      oU.current = xU, (0, tU.useEffect)((() => {
+        const UU = JU.current;
+        if (!UU) return;
+        const RU = UU => {
+          var RU;
+          QU.has(UU.key) && (null === (RU = oU.current) || void 0 === RU || RU.call(oU))
         };
-        return DD.addEventListener("keyup", CD), () => {
-          DD.removeEventListener("keyup", CD)
+        return UU.addEventListener("keyup", RU), () => {
+          UU.removeEventListener("keyup", RU)
         }
       }), []);
-      const qD = (0, ID.useRef)(!1);
-      return (0, yD.g)(PD, {
-        adjust: DD => {
-          if (nD) return;
-          const CD = null !== mD && void 0 !== mD ? mD : Math.max(bD, Math.round((fD - iD) / 20 / bD) * bD),
-            ID = UD(cD + DD * CD * (SD ? -1 : 1));
-          ID !== cD && (null === gD || void 0 === gD || gD(), QD(ID), null === XD || void 0 === XD || XD())
+      const ZU = (0, tU.useRef)(!1);
+      return (0, jU.e)(wU, {
+        adjust: UU => {
+          if (IU) return;
+          const RU = null !== mU && void 0 !== mU ? mU : Math.max(TU, Math.round((PU - EU) / 20 / TU) * TU),
+            tU = bU(gU + UU * RU * (cU ? -1 : 1));
+          tU !== gU && (null === fU || void 0 === fU || fU(), qU(tU), null === xU || void 0 === xU || xU())
         },
-        setFraction: DD => {
-          if (nD) return;
-          const CD = UD(iD + (SD ? 1 - DD : DD) * (fD - iD));
-          CD !== cD && (qD.current || (qD.current = !0, null === gD || void 0 === gD || gD()), QD(CD))
+        setFraction: UU => {
+          if (IU) return;
+          const RU = bU(EU + (cU ? 1 - UU : UU) * (PU - EU));
+          RU !== gU && (ZU.current || (ZU.current = !0, null === fU || void 0 === fU || fU()), qU(RU))
         },
         endDrag: () => {
-          qD.current && (qD.current = !1, null === XD || void 0 === XD || XD())
+          ZU.current && (ZU.current = !1, null === xU || void 0 === xU || xU())
         }
-      }), (0, MD.jsx)("div", {
-        ref: OD,
+      }), (0, uU.jsx)("div", {
+        ref: JU,
         style: {
           display: "contents"
         },
-        children: (0, MD.jsx)(pD.e, {
-          value: cD,
-          min: iD,
-          max: fD,
-          step: bD,
-          onChange: QD,
-          orientation: wD,
-          reverse: SD,
-          tooltip: tD,
-          labels: ZD,
-          handleLabel: vD,
-          format: ND,
+        children: (0, uU.jsx)(pU.d, {
+          value: gU,
+          min: EU,
+          max: PU,
+          step: TU,
+          onChange: qU,
+          orientation: KU,
+          reverse: cU,
+          tooltip: CU,
+          labels: hU,
+          handleLabel: eU,
+          format: WU,
           onChangeStart: () => {
-            null === gD || void 0 === gD || gD(), null === BD || void 0 === BD || BD(!0)
+            null === fU || void 0 === fU || fU(), null === GU || void 0 === GU || GU(!0)
           },
           onChangeComplete: () => {
-            null === BD || void 0 === BD || BD(!1), null === XD || void 0 === XD || XD()
+            null === GU || void 0 === GU || GU(!1), null === xU || void 0 === xU || xU()
           }
         })
       })
     }
-    async function ND() {
-      let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-      const CD = SD.NotificationProvider.showPromptPopup({
+    async function WU() {
+      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+      const RU = cU.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
         confirmTooltip: "",
         cancelText: "general:cancel",
         cancelTooltip: "",
-        unlockPointerKey: DD
+        unlockPointerKey: UU
       });
-      !0 === await CD.getResult() && (0, BD.reloadBloxd)()
+      !0 === await RU.getResult() && (0, GU.reloadBloxd)()
     }
 
-    function gD(DD) {
+    function fU(UU) {
       let {
-        label: CD,
-        options: cD,
-        value: ID,
-        onChange: pD,
-        circleInfoText: iD
-      } = DD;
-      return (0, MD.jsxs)("div", {
+        label: RU,
+        options: gU,
+        value: tU,
+        onChange: pU,
+        circleInfoText: EU
+      } = UU;
+      return (0, uU.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, MD.jsxs)("div", {
+        children: [(0, uU.jsxs)("div", {
           className: "SliderText",
-          children: [CD, iD && (0, MD.jsx)(fD.d, {
+          children: [RU, EU && (0, uU.jsx)(PU.d, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: iD
+            hoverInfo: EU
           })]
-        }), (0, MD.jsx)(bD.b, {
-          ariaLabel: CD,
-          options: cD,
-          value: ID,
-          onChange: pD
+        }), (0, uU.jsx)(TU.d, {
+          ariaLabel: RU,
+          options: gU,
+          value: tU,
+          onChange: pU
         })]
       })
     }
   },
-  4767: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => vD,
-      f: () => ND
+  4663: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => eU,
+      h: () => WU
     });
-    var ID = cD(2948),
-      pD = cD(2952),
-      iD = cD(53),
-      fD = cD(1049),
-      bD = cD.n(fD),
-      QD = cD(1328),
-      wD = cD(2946),
-      SD = cD(1340),
-      BD = cD(4770),
-      yD = cD(4808),
-      MD = cD(646),
-      tD = cD(4811),
-      ZD = cD(1093);
+    var tU = gU(2842),
+      pU = gU(2850),
+      EU = gU(56),
+      PU = gU(1037),
+      TU = gU.n(PU),
+      qU = gU(1326),
+      KU = gU(2840),
+      cU = gU(1333),
+      GU = gU(4670),
+      jU = gU(4706),
+      uU = gU(603),
+      CU = gU(4711),
+      hU = gU(1090);
 
-    function oD() {
-      (0, BD.j)("texturePackPickReload")
+    function QU() {
+      (0, GU.l)("texturePackPickReload")
     }
 
-    function vD(DD) {
-      var CD;
+    function eU(UU) {
+      var RU;
       let {
-        setApplySettingsCallback: cD
-      } = DD;
-      const [, fD] = (0, iD.useReducer)((DD => DD + 1), 0), bD = (0, iD.useRef)(!1), QD = (0, iD.useRef)(null);
+        setApplySettingsCallback: gU
+      } = UU;
+      const [, PU] = (0, EU.useReducer)((UU => UU + 1), 0), TU = (0, EU.useRef)(!1), qU = (0, EU.useRef)(null);
 
-      function vD(DD, CD) {
-        wD.e.setFromJson(DD, "player");
-        const ID = wD.e.saveTexturePack();
-        if (MD.q) {
-          const DD = wD.e.toJson();
-          ID.then((CD => {
-            CD && (0, tD.e)(DD, oD)
+      function eU(UU, RU) {
+        KU.e.setFromJson(UU, "player");
+        const tU = KU.e.saveTexturePack();
+        if (uU.u) {
+          const UU = KU.e.toJson();
+          tU.then((RU => {
+            RU && (0, CU.h)(UU, QU)
           }))
-        } else bD.current ||= CD, QD.current !== wD.e.getId() || wD.e.getId() === pD.r.CUSTOM && bD.current ? cD((() => BD.j)) : cD(null);
-        fD()
+        } else TU.current ||= RU, qU.current !== KU.e.getId() || KU.e.getId() === pU.s.CUSTOM && TU.current ? gU((() => GU.l)) : gU(null);
+        PU()
       }
-      async function gD(DD) {
-        if (wD.e.getId() !== DD.metaData.id) {
-          if (wD.e.getId() === pD.r.CUSTOM && wD.e.getFromFolderName()) {
-            const DD = SD.NotificationProvider.showPromptPopup({
+      async function fU(UU) {
+        if (KU.e.getId() !== UU.metaData.id) {
+          if (KU.e.getId() === pU.s.CUSTOM && KU.e.getFromFolderName()) {
+            const UU = cU.NotificationProvider.showPromptPopup({
               title: "settingsMenu:loseChangesTitle",
               subtitle: "settingsMenu:loseChangesSubtitle",
               confirmText: "general:continue",
@@ -477,29 +477,29 @@ export const modules = {
               cancelText: "general:cancel",
               cancelTooltip: ""
             });
-            if (!0 !== await DD.getResult()) return
+            if (!0 !== await UU.getResult()) return
           }
-          vD(DD, !1)
+          eU(UU, !1)
         }
-      }(0, iD.useEffect)((() => {
-        QD.current = wD.e.getId()
+      }(0, EU.useEffect)((() => {
+        qU.current = KU.e.getId()
       }), []);
-      const XD = ID.e,
-        mD = [XD, ...Object.values(pD.r).filter((DD => DD !== XD))];
-      return (0, ZD.jsx)(ZD.Fragment, {
-        children: (0, ZD.jsxs)("div", {
+      const xU = tU.d,
+        mU = [xU, ...Object.values(pU.s).filter((UU => UU !== xU))];
+      return (0, hU.jsx)(hU.Fragment, {
+        children: (0, hU.jsxs)("div", {
           className: "TexturePackCategory SettingsMenuRightInner",
-          children: [(0, ZD.jsx)("div", {
+          children: [(0, hU.jsx)("div", {
             className: "TexturePackList",
-            children: mD.map((DD => (0, ZD.jsx)(ND, {
-              id: DD,
-              isSelected: DD === wD.e.getId(),
-              setSelected: gD
-            }, DD)))
-          }), wD.e.getId() === pD.r.CUSTOM && (0, ZD.jsx)(yD.d, {
-            folderName: null !== (CD = wD.e.getFromFolderName()) && void 0 !== CD ? CD : null,
-            onTexturePackUpdated: function(DD) {
-              vD(DD, !0)
+            children: mU.map((UU => (0, hU.jsx)(WU, {
+              id: UU,
+              isSelected: UU === KU.e.getId(),
+              setSelected: fU
+            }, UU)))
+          }), KU.e.getId() === pU.s.CUSTOM && (0, hU.jsx)(jU.d, {
+            folderName: null !== (RU = KU.e.getFromFolderName()) && void 0 !== RU ? RU : null,
+            onTexturePackUpdated: function(UU) {
+              eU(UU, !0)
             },
             packOwner: "player"
           })]
@@ -507,163 +507,163 @@ export const modules = {
       })
     }
 
-    function ND(DD) {
+    function WU(UU) {
       let {
-        id: CD,
-        isSelected: cD,
-        setSelected: fD,
-        disabled: wD = !1
-      } = DD;
-      const [SD, BD] = (0, iD.useState)(!0), [yD, MD] = (0, iD.useState)(""), [tD, oD] = (0, iD.useState)(""), [vD, ND] = (0, iD.useState)(""), gD = (0, iD.useRef)({});
-      return (0, iD.useEffect)((() => {
-        (0, ID.t)(CD).then((DD => {
-          var CD;
-          DD && (gD.current = DD, BD(!1), MD(gD.current.metaData.name), oD(gD.current.metaData.author), ND(null !== (CD = gD.current.metaData.previewImage) && void 0 !== CD ? CD : ""))
-        })).catch((DD => {
-          console.warn(`Failed to fetch texture pack ${CD}`, DD)
+        id: RU,
+        isSelected: gU,
+        setSelected: PU,
+        disabled: KU = !1
+      } = UU;
+      const [cU, GU] = (0, EU.useState)(!0), [jU, uU] = (0, EU.useState)(""), [CU, QU] = (0, EU.useState)(""), [eU, WU] = (0, EU.useState)(""), fU = (0, EU.useRef)({});
+      return (0, EU.useEffect)((() => {
+        (0, tU.n)(RU).then((UU => {
+          var RU;
+          UU && (fU.current = UU, GU(!1), uU(fU.current.metaData.name), QU(fU.current.metaData.author), WU(null !== (RU = fU.current.metaData.previewImage) && void 0 !== RU ? RU : ""))
+        })).catch((UU => {
+          console.warn(`Failed to fetch texture pack ${RU}`, UU)
         }))
-      }), [CD]), (0, ZD.jsxs)("div", {
+      }), [RU]), (0, hU.jsxs)("div", {
         "data-pad-focusable": !0,
-        "aria-disabled": wD || void 0,
-        className: bD()("TexturePack", {
-          Selected: cD,
-          Custom: CD === pD.r.CUSTOM,
-          Disabled: wD
+        "aria-disabled": KU || void 0,
+        className: TU()("TexturePack", {
+          Selected: gU,
+          Custom: RU === pU.s.CUSTOM,
+          Disabled: KU
         }),
         onClick: () => {
-          SD || wD || fD(gD.current)
+          cU || KU || PU(fU.current)
         },
-        children: [(0, ZD.jsx)("div", {
+        children: [(0, hU.jsx)("div", {
           className: "TexturePackBg",
           style: {
-            backgroundImage: vD ? `url(${vD})` : void 0
+            backgroundImage: eU ? `url(${eU})` : void 0
           }
-        }), SD && (0, ZD.jsx)("div", {
+        }), cU && (0, hU.jsx)("div", {
           className: "TexturePackName",
-          children: (0, ZD.jsx)(QD.e, {})
-        }), !SD && yD && (0, ZD.jsx)("div", {
+          children: (0, hU.jsx)(qU.d, {})
+        }), !cU && jU && (0, hU.jsx)("div", {
           className: "TexturePackName",
-          children: yD
-        }), !SD && tD && (0, ZD.jsx)("div", {
+          children: jU
+        }), !cU && CU && (0, hU.jsx)("div", {
           className: "TexturePackAuthor",
-          children: tD
+          children: CU
         })]
       })
     }
   },
-  4799: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => fD
+  4693: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => PU
     });
-    var ID = cD(1049),
-      pD = cD.n(ID),
-      iD = cD(1093);
+    var tU = gU(1037),
+      pU = gU.n(tU),
+      EU = gU(1090);
 
-    function fD(DD) {
+    function PU(UU) {
       let {
-        options: CD,
-        value: cD,
-        onChange: ID,
-        ariaLabel: fD,
-        className: bD,
-        reselectable: QD = !1,
-        keepsFocus: wD = !1
-      } = DD;
-      return (0, iD.jsx)("div", {
-        className: pD()("SegmentedToggle", bD),
+        options: RU,
+        value: gU,
+        onChange: tU,
+        ariaLabel: PU,
+        className: TU,
+        reselectable: qU = !1,
+        keepsFocus: KU = !1
+      } = UU;
+      return (0, EU.jsx)("div", {
+        className: pU()("SegmentedToggle", TU),
         role: "group",
-        "aria-label": fD,
-        children: CD.map((DD => {
-          const CD = DD.value === cD;
-          return (0, iD.jsx)("button", {
+        "aria-label": PU,
+        children: RU.map((UU => {
+          const RU = UU.value === gU;
+          return (0, EU.jsx)("button", {
             type: "button",
-            "aria-pressed": CD,
-            "aria-label": DD.ariaLabel,
-            title: DD.ariaLabel,
-            className: pD()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: CD
+            "aria-pressed": RU,
+            "aria-label": UU.ariaLabel,
+            title: UU.ariaLabel,
+            className: pU()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: RU
             }),
-            onMouseDown: wD ? DD => {
-              DD.preventDefault()
+            onMouseDown: KU ? UU => {
+              UU.preventDefault()
             } : void 0,
             onClick: () => {
-              CD && !QD || ID(DD.value)
+              RU && !qU || tU(UU.value)
             },
-            children: DD.label
-          }, DD.value)
+            children: UU.label
+          }, UU.value)
         }))
       })
     }
   },
-  4806: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => iD,
-      g: () => fD
+  4701: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => EU,
+      e: () => PU
     });
-    var ID = cD(53);
-    const pD = new WeakMap,
-      iD = DD => {
-        var CD;
-        const cD = DD.closest("[data-pad-slider]");
-        return cD && null !== (CD = pD.get(cD)) && void 0 !== CD ? CD : null
+    var tU = gU(56);
+    const pU = new WeakMap,
+      EU = UU => {
+        var RU;
+        const gU = UU.closest("[data-pad-slider]");
+        return gU && null !== (RU = pU.get(gU)) && void 0 !== RU ? RU : null
       },
-      fD = (DD, CD) => {
-        const cD = (0, ID.useRef)(CD);
-        cD.current = CD, (0, ID.useEffect)((() => {
-          if (DD.current) return ((DD, CD) => (pD.set(DD, CD), () => {
-            pD.get(DD) === CD && pD.delete(DD)
-          }))(DD.current, {
-            adjust: DD => {
-              cD.current.adjust(DD)
+      PU = (UU, RU) => {
+        const gU = (0, tU.useRef)(RU);
+        gU.current = RU, (0, tU.useEffect)((() => {
+          if (UU.current) return ((UU, RU) => (pU.set(UU, RU), () => {
+            pU.get(UU) === RU && pU.delete(UU)
+          }))(UU.current, {
+            adjust: UU => {
+              gU.current.adjust(UU)
             },
-            setFraction: DD => {
-              cD.current.setFraction(DD)
+            setFraction: UU => {
+              gU.current.setFraction(UU)
             },
             endDrag: () => {
-              cD.current.endDrag()
+              gU.current.endDrag()
             }
           })
-        }), [DD])
+        }), [UU])
       }
   },
-  4811: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => bD,
-      e: () => fD
+  4711: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => TU,
+      h: () => PU
     });
-    var ID = cD(2952),
-      pD = cD(4819);
-    let iD = null;
+    var tU = gU(2850),
+      pU = gU(4717);
+    let EU = null;
 
-    function fD(DD, CD) {
-      iD = {
-        pack: DD.metaData.id === ID.e ? null : DD,
-        prompt: CD
+    function PU(UU, RU) {
+      EU = {
+        pack: UU.metaData.id === tU.d ? null : UU,
+        prompt: RU
       }
     }
 
-    function bD(DD, CD) {
-      const cD = iD;
-      null !== cD && (0, pD.c)(cD.pack, DD) && (iD = null, CD && cD.prompt())
+    function TU(UU, RU) {
+      const gU = EU;
+      null !== gU && (0, pU.b)(gU.pack, UU) && (EU = null, RU && gU.prompt())
     }
   },
-  4819: (DD, CD, cD) => {
-    function ID(DD, CD) {
-      return pD(DD, CD)
+  4717: (UU, RU, gU) => {
+    function tU(UU, RU) {
+      return pU(UU, RU)
     }
 
-    function pD(DD, CD) {
-      if (DD === CD) return !0;
-      if ("object" !== typeof DD || "object" !== typeof CD || null === DD || null === CD || Array.isArray(DD) !== Array.isArray(CD)) return !1;
-      const cD = DD,
-        ID = CD,
-        iD = Object.keys(cD);
-      return iD.length === Object.keys(ID).length && iD.every((DD => Object.prototype.hasOwnProperty.call(ID, DD) && pD(cD[DD], ID[DD])))
+    function pU(UU, RU) {
+      if (UU === RU) return !0;
+      if ("object" !== typeof UU || "object" !== typeof RU || null === UU || null === RU || Array.isArray(UU) !== Array.isArray(RU)) return !1;
+      const gU = UU,
+        tU = RU,
+        EU = Object.keys(gU);
+      return EU.length === Object.keys(tU).length && EU.every((UU => Object.prototype.hasOwnProperty.call(tU, UU) && pU(gU[UU], tU[UU])))
     }
-    cD.d(CD, {
-      c: () => ID
+    gU.d(RU, {
+      b: () => tU
     })
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

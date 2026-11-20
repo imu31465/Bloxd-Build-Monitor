@@ -1,68 +1,68 @@
 export const id = 341;
 export const ids = [341];
 export const modules = {
-  41705: (DD, CD, cD) => {
-    function ID(DD) {
-      return Math.floor(DD / 8)
+  41880: (UU, RU, gU) => {
+    function tU(UU) {
+      return Math.floor(UU / 8)
     }
 
-    function pD(DD) {
-      return 1 << DD % 8
+    function pU(UU) {
+      return 1 << UU % 8
     }
-    cD.d(CD, {
-      OptimizeIndices: () => fD
+    gU.d(RU, {
+      OptimizeIndices: () => PU
     });
-    class iD {
-      constructor(DD) {
-        this.size = DD, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
+    class EU {
+      constructor(UU) {
+        this.size = UU, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
       }
-      get(DD) {
-        if (DD >= this.size) throw new RangeError("Bit index out of range");
-        const CD = ID(DD),
-          cD = pD(DD);
-        return 0 !== (this._byteArray[CD] & cD)
+      get(UU) {
+        if (UU >= this.size) throw new RangeError("Bit index out of range");
+        const RU = tU(UU),
+          gU = pU(UU);
+        return 0 !== (this._byteArray[RU] & gU)
       }
-      set(DD, CD) {
-        if (DD >= this.size) throw new RangeError("Bit index out of range");
-        const cD = ID(DD),
-          iD = pD(DD);
-        CD ? this._byteArray[cD] |= iD : this._byteArray[cD] &= ~iD
+      set(UU, RU) {
+        if (UU >= this.size) throw new RangeError("Bit index out of range");
+        const gU = tU(UU),
+          EU = pU(UU);
+        RU ? this._byteArray[gU] |= EU : this._byteArray[gU] &= ~EU
       }
     }
 
-    function fD(DD) {
-      const CD = [],
-        cD = DD.length / 3;
-      for (let iD = 0; iD < cD; iD++) CD.push([DD[3 * iD], DD[3 * iD + 1], DD[3 * iD + 2]]);
-      const ID = new Map;
-      for (let iD = 0; iD < CD.length; iD++) {
-        const DD = CD[iD];
-        for (const CD of DD) {
-          let DD = ID.get(CD);
-          DD || ID.set(CD, DD = []), DD.push(iD)
+    function PU(UU) {
+      const RU = [],
+        gU = UU.length / 3;
+      for (let EU = 0; EU < gU; EU++) RU.push([UU[3 * EU], UU[3 * EU + 1], UU[3 * EU + 2]]);
+      const tU = new Map;
+      for (let EU = 0; EU < RU.length; EU++) {
+        const UU = RU[EU];
+        for (const RU of UU) {
+          let UU = tU.get(RU);
+          UU || tU.set(RU, UU = []), UU.push(EU)
         }
       }
-      const pD = new iD(cD),
-        fD = [],
-        bD = DD => {
-          const cD = [DD];
-          for (; cD.length > 0;) {
-            const DD = cD.pop();
-            if (!pD.get(DD)) {
-              pD.set(DD, !0), fD.push(CD[DD]);
-              for (const iD of CD[DD]) {
-                const DD = ID.get(iD);
-                if (!DD) return;
-                for (const CD of DD) pD.get(CD) || cD.push(CD)
+      const pU = new EU(gU),
+        PU = [],
+        TU = UU => {
+          const gU = [UU];
+          for (; gU.length > 0;) {
+            const UU = gU.pop();
+            if (!pU.get(UU)) {
+              pU.set(UU, !0), PU.push(RU[UU]);
+              for (const EU of RU[UU]) {
+                const UU = tU.get(EU);
+                if (!UU) return;
+                for (const RU of UU) pU.get(RU) || gU.push(RU)
               }
             }
           }
         };
-      for (let iD = 0; iD < cD; iD++) pD.get(iD) || bD(iD);
-      let QD = 0;
-      for (const iD of fD) DD[QD++] = iD[0], DD[QD++] = iD[1], DD[QD++] = iD[2]
+      for (let EU = 0; EU < gU; EU++) pU.get(EU) || TU(EU);
+      let qU = 0;
+      for (const EU of PU) UU[qU++] = EU[0], UU[qU++] = EU[1], UU[qU++] = EU[2]
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

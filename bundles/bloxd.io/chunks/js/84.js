@@ -1,257 +1,257 @@
 export const id = 84;
 export const ids = [84];
 export const modules = {
-  39650: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      startWasmPadGameplay: () => LD
+  39915: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      startWasmPadGameplay: () => dU
     });
-    cD(39652);
-    var ID = cD(39661),
-      pD = cD(39674),
-      iD = cD(1928),
-      fD = cD(39680),
-      bD = cD(4585),
-      QD = cD(4571),
-      wD = cD(39688),
-      SD = cD(39692),
-      BD = cD(4590),
-      yD = cD(39752),
-      MD = cD(2343),
-      tD = cD(8555),
-      ZD = cD(39668),
-      oD = cD(8534);
-    const vD = DD => {
-        const CD = BD.c.indexOf(DD);
-        if (CD < 0) throw new Error(`No core action "${DD}"`);
-        return CD
+    gU(39924);
+    var tU = gU(39928),
+      pU = gU(39942),
+      EU = gU(1821),
+      PU = gU(39955),
+      TU = gU(4456),
+      qU = gU(4443),
+      KU = gU(39962),
+      cU = gU(39971),
+      GU = gU(4469),
+      jU = gU(40049),
+      uU = gU(2241),
+      CU = gU(8480),
+      hU = gU(39934),
+      QU = gU(8457);
+    const eU = UU => {
+        const RU = GU.e.indexOf(UU);
+        if (RU < 0) throw new Error(`No core action "${UU}"`);
+        return RU
       },
-      ND = vD("primary-fire"),
-      gD = vD("alt-fire"),
-      XD = vD("mid-fire"),
-      mD = vD("jump"),
-      nD = vD("ReloadGun"),
-      OD = vD("SwapCameraZoom"),
-      PD = vD("TouchAction1"),
-      HD = {
-        SpecialAction1: vD("SpecialAction1"),
-        SpecialAction2: vD("SpecialAction2")
+      WU = eU("primary-fire"),
+      fU = eU("alt-fire"),
+      xU = eU("mid-fire"),
+      mU = eU("jump"),
+      IU = eU("ReloadGun"),
+      JU = eU("SwapCameraZoom"),
+      wU = eU("TouchAction1"),
+      nU = {
+        SpecialAction1: eU("SpecialAction1"),
+        SpecialAction2: eU("SpecialAction2")
       },
-      UD = (DD, CD) => {
-        (0, MD.t)(bD.E.PadAction, DD, 0, 0, (0, MD.r)(CD, performance.now()))
+      bU = (UU, RU) => {
+        (0, uU.x)(TU.B.PadAction, UU, 0, 0, (0, uU.t)(RU, performance.now()))
       },
-      xD = DD => {
-        UD(DD, fD.Kd.Down)
+      oU = UU => {
+        bU(UU, PU.Ed.Down)
       },
-      qD = DD => {
-        UD(DD, 0)
+      ZU = UU => {
+        bU(UU, 0)
       },
-      JD = DD => {
-        xD(DD), qD(DD)
+      aU = UU => {
+        oU(UU), ZU(UU)
       },
-      KD = () => {
-        const DD = (0, SD.g)();
-        return null !== DD && void 0 !== DD && DD.isCoreRunning ? DD : null
+      YU = () => {
+        const UU = (0, cU.i)();
+        return null !== UU && void 0 !== UU && UU.isCoreRunning ? UU : null
       },
-      aD = DD => fD.s.playerFlags(DD.api.apiView, 0),
-      VD = DD => null !== DD && fD.s.targetBlockId(DD.api.apiView, 0) !== fD.qd,
-      zD = () => {
-        const DD = (0, tD.c)(),
-          CD = new ZD.c;
-        let cD = !1;
-        const ID = (DD, CD) => {
-            (0, MD.t)(bD.E.PadLook, fD.Sd.Rate, DD, CD, 0)
+      BU = UU => PU.w.playerFlags(UU.api.apiView, 0),
+      VU = UU => null !== UU && PU.w.targetBlockId(UU.api.apiView, 0) !== PU.fd,
+      rU = () => {
+        const UU = (0, CU.c)(),
+          RU = new hU.d;
+        let gU = !1;
+        const tU = (UU, RU) => {
+            (0, uU.x)(TU.B.PadLook, PU.Kd.Rate, UU, RU, 0)
           },
-          pD = () => {
-            cD = !1, CD.reset(), ID(0, 0)
+          pU = () => {
+            gU = !1, RU.reset(), tU(0, 0)
           };
         return {
-          update: (pD, iD, QD) => {
-            cD || (DD.discardPending(), cD = !0);
-            const wD = (0, ZD.t)(CD, pD, iD, QD, performance.now());
-            ID(wD.yawRadPerSec, wD.pitchRadPerSec);
-            const SD = DD.drainLookDelta();
-            0 === SD.Qq && 0 === SD.wq || (0, MD.t)(bD.E.PadLook, fD.Sd.Gyro, SD.Qq, SD.wq, 0)
+          update: (pU, EU, qU) => {
+            gU || (UU.discardPending(), gU = !0);
+            const KU = (0, hU.p)(RU, pU, EU, qU, performance.now());
+            tU(KU.yawRadPerSec, KU.pitchRadPerSec);
+            const cU = UU.drainLookDelta();
+            0 === cU.Xw && 0 === cU.Ow || (0, uU.x)(TU.B.PadLook, PU.Kd.Gyro, cU.Xw, cU.Ow, 0)
           },
-          release: pD,
-          uninstall: pD
+          release: pU,
+          uninstall: pU
         }
       },
-      jD = () => {
-        const DD = KD();
-        return null !== DD && 0 !== (aD(DD) & fD.Zd.PadSneakToggled)
+      XU = () => {
+        const UU = YU();
+        return null !== UU && 0 !== (BU(UU) & PU.Pd.PadSneakToggled)
       },
-      lD = () => {
-        const DD = (DD => {
-          const CD = DD => function() {
-            return (0, yD.b)(), DD(...arguments)
+      vU = () => {
+        const UU = (UU => {
+          const RU = UU => function() {
+            return (0, jU.d)(), UU(...arguments)
           };
           return {
-            primaryFireDown: CD((() => (xD(ND), 0))),
-            primaryFireUp: CD((() => {
-              qD(ND)
+            primaryFireDown: RU((() => (oU(WU), 0))),
+            primaryFireUp: RU((() => {
+              ZU(WU)
             })),
-            altFireDown: CD((() => (xD(gD), 0))),
-            altFireUp: CD((() => {
-              qD(gD)
+            altFireDown: RU((() => (oU(fU), 0))),
+            altFireUp: RU((() => {
+              ZU(fU)
             })),
-            jumpDown: CD((() => {
-              JD(mD)
+            jumpDown: RU((() => {
+              aU(mU)
             })),
-            specialActionDown: CD((DD => {
-              xD(HD[DD])
+            specialActionDown: RU((UU => {
+              oU(nU[UU])
             })),
-            specialActionUp: CD((DD => {
-              qD(HD[DD])
+            specialActionUp: RU((UU => {
+              ZU(nU[UU])
             })),
-            reloadGun: CD((() => {
-              JD(nD)
+            reloadGun: RU((() => {
+              aU(IU)
             })),
-            dropItem: CD((DD => {
-              UD(fD.Md.Drop, fD.Kd.Down | (DD ? fD.Kd.Stack : 0))
+            dropItem: RU((UU => {
+              bU(PU.Fd.Drop, PU.Ed.Down | (UU ? PU.Ed.Stack : 0))
             })),
-            swapCameraZoom: CD((() => {
-              JD(OD)
+            swapCameraZoom: RU((() => {
+              aU(JU)
             })),
-            pickBlock: CD((() => (JD(XD), VD(DD()))))
+            pickBlock: RU((() => (aU(xU), VU(UU()))))
           }
-        })(KD);
-        let CD = !1,
-          cD = null;
-        const ID = () => {
-          var DD;
-          null === (DD = cD) || void 0 === DD || DD(), cD = null
+        })(YU);
+        let RU = !1,
+          gU = null;
+        const tU = () => {
+          var UU;
+          null === (UU = gU) || void 0 === UU || UU(), gU = null
         };
         return {
-          bodies: () => DD,
-          look: zD(),
-          move: (DD, cD) => {
-            var pD;
-            ID();
+          bodies: () => UU,
+          look: rU(),
+          move: (UU, gU) => {
+            var pU;
+            tU();
             const {
-              bits: iD,
-              flips: bD
-            } = (DD => {
-              if (null === DD) return {
-                bits: fD.Od.Peek,
+              bits: EU,
+              flips: TU
+            } = (UU => {
+              if (null === UU) return {
+                bits: PU.Hd.Peek,
                 flips: 0
               };
-              const CD = DD.sneakHeld ? fD.Od.SneakHeld : 0;
-              return "hold" === DD.mode ? {
-                bits: CD | fD.Od.SneakHoldMode,
-                flips: DD.sneakTogglePressed ? 1 : 0
+              const RU = UU.sneakHeld ? PU.Hd.SneakHeld : 0;
+              return "hold" === UU.mode ? {
+                bits: RU | PU.Hd.SneakHoldMode,
+                flips: UU.sneakTogglePressed ? 1 : 0
               } : {
-                bits: CD,
-                flips: DD.sneakPressed || DD.sneakTogglePressed ? 1 : 0
+                bits: RU,
+                flips: UU.sneakPressed || UU.sneakTogglePressed ? 1 : 0
               }
-            })(cD);
-            null !== (pD = KD()) && void 0 !== pD && pD.padMove(DD.x, DD.y, DD.magnitude, DD.headingOffset, (DD => fD.Od.Active | (DD.jumpHeld ? fD.Od.JumpHeld : 0) | (DD.jumpPressed ? fD.Od.JumpPressed : 0) | (DD.running ? fD.Od.Running : 0) | (DD.sprintHeld ? fD.Od.SprintHeld : 0))(DD) | iD, bD) && (CD = !0), (0, oD.g)(jD())
+            })(gU);
+            null !== (pU = YU()) && void 0 !== pU && pU.padMove(UU.x, UU.y, UU.magnitude, UU.headingOffset, (UU => PU.Hd.Active | (UU.jumpHeld ? PU.Hd.JumpHeld : 0) | (UU.jumpPressed ? PU.Hd.JumpPressed : 0) | (UU.running ? PU.Hd.Running : 0) | (UU.sprintHeld ? PU.Hd.SprintHeld : 0))(UU) | EU, TU) && (RU = !0), (0, QU.h)(XU())
           },
           stopMoving: () => {
-            var DD;
-            CD && (CD = !(null !== (DD = KD()) && void 0 !== DD && DD.padMove(0, 0, 0, 0, 0, 0)), ID(), cD = (0, QD.w)((() => {
-              ID(), (0, oD.g)(jD())
+            var UU;
+            RU && (RU = !(null !== (UU = YU()) && void 0 !== UU && UU.padMove(0, 0, 0, 0, 0, 0)), tU(), gU = (0, qU.x)((() => {
+              tU(), (0, QU.h)(XU())
             })))
           },
-          uninstall: ID,
-          deviceChanged: DD => {
-            var cD;
-            "touch" === DD ? ((0, oD.g)(!1), null !== (cD = KD()) && void 0 !== cD && cD.padMove(0, 0, 0, 0, fD.Od.EndToggle, 0) && (CD = !1)) : "gamepad" === DD && (0, oD.g)(jD())
+          uninstall: tU,
+          deviceChanged: UU => {
+            var gU;
+            "touch" === UU ? ((0, QU.h)(!1), null !== (gU = YU()) && void 0 !== gU && gU.padMove(0, 0, 0, 0, PU.Hd.EndToggle, 0) && (RU = !1)) : "gamepad" === UU && (0, QU.h)(XU())
           },
-          hasPlayer: () => null !== KD(),
+          hasPlayer: () => null !== YU(),
           isPlayerDead: () => {
-            var DD;
-            return !1 === (null === (DD = KD()) || void 0 === DD ? void 0 : DD.localPlayerAlive())
+            var UU;
+            return !1 === (null === (UU = YU()) || void 0 === UU ? void 0 : UU.localPlayerAlive())
           },
           isReplayMode: () => {
-            const DD = KD();
-            return null !== DD && 0 !== (aD(DD) & fD.Zd.Replay)
+            const UU = YU();
+            return null !== UU && 0 !== (BU(UU) & PU.Pd.Replay)
           },
           isFreeCameraOn: () => {
-            const DD = KD();
-            return null !== DD && 0 !== (aD(DD) & fD.Zd.FreeCam)
+            const UU = YU();
+            return null !== UU && 0 !== (BU(UU) & PU.Pd.FreeCam)
           },
-          targetsBlock: () => VD(KD()),
+          targetsBlock: () => VU(YU()),
           selectedSlotEmpty: () => {
-            var DD;
-            return !(null !== (DD = KD()) && void 0 !== DD && DD.items.Lb())
+            var UU;
+            return !(null !== (UU = YU()) && void 0 !== UU && UU.items.WT())
           },
-          pickBlockAllowed: () => !!iD.d.get("creative") && !!iD.d.get("canPickBlocks"),
-          scrollHotbar: DD => {
-            UD(fD.Md.Hotbar, fD.Kd.Down | (DD > 0 ? fD.Kd.Next : 0))
+          pickBlockAllowed: () => !!EU.b.get("creative") && !!EU.b.get("canPickBlocks"),
+          scrollHotbar: UU => {
+            bU(PU.Fd.Hotbar, PU.Ed.Down | (UU > 0 ? PU.Ed.Next : 0))
           },
-          hasFullInventory: wD.m,
-          hasLobbyLeaderboard: () => !!iD.d.get("lobbyLeaderboardInfo"),
+          hasFullInventory: KU.n,
+          hasLobbyLeaderboard: () => !!EU.b.get("lobbyLeaderboardInfo"),
           contextActionInputs: () => {
-            var DD, CD, cD, ID;
-            const pD = KD();
+            var UU, RU, gU, tU;
+            const pU = YU();
             return {
-              holdingGun: !1 !== (null === pD || void 0 === pD ? void 0 : pD.localPlayerAlive()) && "Gun" === (null === pD || void 0 === pD || null === (DD = pD.items.Lb()) || void 0 === DD || null === (CD = DD.typeObj) || void 0 === CD ? void 0 : CD.type),
-              customButtons: null !== (cD = iD.d.get("customButtons")) && void 0 !== cD ? cD : null,
-              touchscreenActionButton: null !== (ID = iD.d.get("touchscreenActionButton")) && void 0 !== ID ? ID : null
+              holdingGun: !1 !== (null === pU || void 0 === pU ? void 0 : pU.localPlayerAlive()) && "Gun" === (null === pU || void 0 === pU || null === (UU = pU.items.WT()) || void 0 === UU || null === (RU = UU.typeObj) || void 0 === RU ? void 0 : RU.type),
+              customButtons: null !== (gU = EU.b.get("customButtons")) && void 0 !== gU ? gU : null,
+              touchscreenActionButton: null !== (tU = EU.b.get("touchscreenActionButton")) && void 0 !== tU ? tU : null
             }
           },
-          pressTouchButton: DD => {
-            DD ? xD(PD) : qD(PD)
+          pressTouchButton: UU => {
+            UU ? oU(wU) : ZU(wU)
           }
         }
       },
-      LD = () => {
-        const DD = (0, pD.d)(lD()),
-          CD = (0, ID.b)(),
-          cD = null;
+      dU = () => {
+        const UU = (0, pU.d)(vU()),
+          RU = (0, tU.e)(),
+          gU = null;
         return () => {
-          DD(), CD(), null === cD || void 0 === cD || cD()
+          UU(), RU(), null === gU || void 0 === gU || gU()
         }
       }
   },
-  4585: (DD, CD, cD) => {
-    cD.d(CD, {
-      $: () => HD,
-      A: () => iD,
-      Bb: () => nD,
-      E: () => tD,
-      Eb: () => mD,
-      F: () => sD,
-      Hb: () => KD,
-      I: () => wD,
-      Lb: () => TD,
-      M: () => ZD,
-      Ob: () => VD,
-      Q: () => QD,
-      Sb: () => jD,
-      T: () => yD,
-      Wb: () => lD,
-      X: () => BD,
-      Xb: () => gD,
-      Y: () => OD,
-      Zb: () => XD,
-      _b: () => RD,
-      cc: () => pD,
-      db: () => UD,
-      dc: () => WD,
-      e: () => YD,
-      eb: () => PD,
-      g: () => dD,
-      hb: () => xD,
-      j: () => SD,
-      k: () => ND,
-      kb: () => GD,
-      l: () => kD,
-      lb: () => LD,
-      o: () => vD,
-      pb: () => zD,
-      qb: () => qD,
-      r: () => oD,
-      rb: () => aD,
-      s: () => fD,
-      tb: () => JD,
-      v: () => bD,
-      xb: () => MD,
-      y: () => ID
+  4456: (UU, RU, gU) => {
+    gU.d(RU, {
+      $: () => oU,
+      A: () => EU,
+      B: () => CU,
+      Db: () => mU,
+      F: () => AU,
+      G: () => KU,
+      Gb: () => YU,
+      Hb: () => HU,
+      J: () => hU,
+      L: () => qU,
+      Lb: () => VU,
+      M: () => jU,
+      N: () => GU,
+      Ob: () => XU,
+      R: () => JU,
+      Rb: () => vU,
+      S: () => nU,
+      Tb: () => fU,
+      V: () => bU,
+      X: () => wU,
+      Xb: () => xU,
+      Zb: () => sU,
+      b: () => FU,
+      bc: () => pU,
+      db: () => SU,
+      dc: () => iU,
+      e: () => kU,
+      g: () => cU,
+      hb: () => dU,
+      j: () => WU,
+      kb: () => rU,
+      n: () => yU,
+      nb: () => ZU,
+      p: () => eU,
+      pb: () => BU,
+      s: () => QU,
+      tb: () => aU,
+      v: () => PU,
+      w: () => TU,
+      wb: () => uU,
+      x: () => tU,
+      zb: () => IU
     });
-    const ID = 32,
-      pD = 33.333333333333336,
-      iD = {
+    const tU = 32,
+      pU = 33.333333333333336,
+      EU = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -285,18 +285,18 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      fD = {
+      PU = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      bD = {
+      TU = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      QD = {
+      qU = {
         AheadMask: 15,
         Joining: 64,
         Tiered: 128,
@@ -304,20 +304,20 @@ export const modules = {
         SwitchesShift: 20,
         CountMask: 4095
       },
-      wD = {
+      KU = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      SD = {
+      cU = {
         Look: 0,
         Remesh: 1
       },
-      BD = 8,
-      yD = 1,
-      MD = {
+      GU = 8,
+      jU = 1,
+      uU = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -326,7 +326,7 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      tD = {
+      CU = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -354,12 +354,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      ZD = {
+      hU = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      oD = {
+      QU = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -411,7 +411,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      vD = {
+      eU = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -421,10 +421,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      ND = 4,
-      gD = 4,
-      XD = 65535,
-      mD = {
+      WU = 4,
+      fU = 4,
+      xU = 65535,
+      mU = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -437,7 +437,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      nD = {
+      IU = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -445,12 +445,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      OD = 88,
-      PD = 0,
-      HD = 24,
-      UD = 48,
-      xD = 80,
-      qD = {
+      JU = 88,
+      wU = 0,
+      nU = 24,
+      bU = 48,
+      oU = 80,
+      ZU = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -461,18 +461,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      JD = {
+      aU = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      KD = {
+      YU = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      aD = {
+      BU = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -490,34 +490,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      VD = {
+      VU = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      zD = 65535,
-      jD = {
+      rU = 65535,
+      XU = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      lD = {
+      vU = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      LD = 2,
-      TD = {
+      dU = 2,
+      HU = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      GD = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      RD = {
+      SU = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      sU = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -529,7 +529,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      kD = {
+      yU = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -556,7 +556,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      dD = {
+      kU = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -714,8 +714,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      YD = 8,
-      WD = {
+      FU = 8,
+      iU = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -740,289 +740,289 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      sD = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      AU = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   },
-  4571: (DD, CD, cD) => {
-    cD.d(CD, {
-      B: () => qD,
-      E: () => ND,
-      I: () => fD,
-      K: () => bD,
-      N: () => HD,
-      e: () => PD,
-      f: () => XD,
-      h: () => KD,
-      i: () => JD,
-      j: () => vD,
-      m: () => nD,
-      q: () => gD,
-      t: () => mD,
-      w: () => UD,
-      z: () => xD
+  4443: (UU, RU, gU) => {
+    gU.d(RU, {
+      B: () => oU,
+      D: () => ZU,
+      F: () => WU,
+      G: () => PU,
+      J: () => TU,
+      L: () => nU,
+      c: () => wU,
+      e: () => xU,
+      i: () => YU,
+      l: () => aU,
+      n: () => eU,
+      o: () => IU,
+      s: () => fU,
+      u: () => mU,
+      x: () => bU
     });
-    var ID = cD(4575);
-    const pD = {
+    var tU = gU(4446);
+    const pU = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let iD = pD;
+    let EU = pU;
 
-    function fD(DD) {
-      iD = null !== DD && void 0 !== DD ? DD : pD
+    function PU(UU) {
+      EU = null !== UU && void 0 !== UU ? UU : pU
     }
 
-    function bD() {
-      return iD
+    function TU() {
+      return EU
     }
-    const QD = new Set,
-      wD = new Set;
-    let SD = -1;
-    const BD = new Set,
-      yD = new Set;
-    let MD = 0,
-      tD = 0;
-    const ZD = new Set,
-      oD = new Set;
+    const qU = new Set,
+      KU = new Set;
+    let cU = -1;
+    const GU = new Set,
+      jU = new Set;
+    let uU = 0,
+      CU = 0;
+    const hU = new Set,
+      QU = new Set;
 
-    function vD(DD) {
-      return QD.add(DD), () => {
-        QD.delete(DD)
+    function eU(UU) {
+      return qU.add(UU), () => {
+        qU.delete(UU)
       }
     }
 
-    function ND(DD, CD) {
-      for (const ID of QD) try {
-        ID(DD)
-      } catch (cD) {
-        CD(cD)
+    function WU(UU, RU) {
+      for (const tU of qU) try {
+        tU(UU)
+      } catch (gU) {
+        RU(gU)
       }
     }
 
-    function gD(DD) {
-      return wD.add(DD), () => {
-        wD.delete(DD)
+    function fU(UU) {
+      return KU.add(UU), () => {
+        KU.delete(UU)
       }
     }
 
-    function XD(DD, CD) {
-      const cD = SD < 0 ? 0 : DD - SD;
-      SD = DD;
-      for (const pD of wD) try {
-        pD(cD)
-      } catch (ID) {
-        CD(ID)
+    function xU(UU, RU) {
+      const gU = cU < 0 ? 0 : UU - cU;
+      cU = UU;
+      for (const pU of KU) try {
+        pU(gU)
+      } catch (tU) {
+        RU(tU)
       }
     }
 
-    function mD(DD) {
-      return BD.add(DD), () => {
-        BD.delete(DD)
+    function mU(UU) {
+      return GU.add(UU), () => {
+        GU.delete(UU)
       }
     }
 
-    function nD(DD) {
-      return yD.add(DD), () => {
-        yD.delete(DD)
+    function IU(UU) {
+      return jU.add(UU), () => {
+        jU.delete(UU)
       }
     }
-    let OD = 0;
+    let JU = 0;
 
-    function PD(DD) {
-      OD += DD
+    function wU(UU) {
+      JU += UU
     }
 
-    function HD() {
-      const DD = OD;
-      return OD = 0, DD
+    function nU() {
+      const UU = JU;
+      return JU = 0, UU
     }
 
-    function UD(DD) {
-      return ZD.add(DD), () => {
-        ZD.delete(DD)
-      }
-    }
-
-    function xD(DD) {
-      return oD.add(DD), () => {
-        oD.delete(DD)
+    function bU(UU) {
+      return hU.add(UU), () => {
+        hU.delete(UU)
       }
     }
 
-    function qD() {
-      MD = 0, tD = 0, SD = -1
+    function oU(UU) {
+      return QU.add(UU), () => {
+        QU.delete(UU)
+      }
     }
 
-    function JD(DD, CD) {
-      if ("paced" === DD) return tD += CD, null;
-      if ("drawn" !== DD && "skipped" !== DD) return null;
-      const cD = CD + tD;
-      return tD = 0, cD
+    function ZU() {
+      uU = 0, CU = 0, cU = -1
     }
 
-    function KD(DD, CD, cD, pD) {
-      const iD = (0, ID.e)(CD),
-        fD = DD > 0 ? performance.now() : 0;
-      for (let ID = 0; ID < DD; ID++)
-        for (const DD of ZD) try {
-          DD()
-        } catch (bD) {
-          pD(bD)
+    function aU(UU, RU) {
+      if ("paced" === UU) return CU += RU, null;
+      if ("drawn" !== UU && "skipped" !== UU) return null;
+      const gU = RU + CU;
+      return CU = 0, gU
+    }
+
+    function YU(UU, RU, gU, pU) {
+      const EU = (0, tU.j)(RU),
+        PU = UU > 0 ? performance.now() : 0;
+      for (let tU = 0; tU < UU; tU++)
+        for (const UU of hU) try {
+          UU()
+        } catch (TU) {
+          pU(TU)
         }
-      if (DD > 0 && PD(performance.now() - fD), null !== cD) {
-        for (const DD of BD) try {
-          DD(cD)
-        } catch (bD) {
-          pD(bD)
+      if (UU > 0 && wU(performance.now() - PU), null !== gU) {
+        for (const UU of GU) try {
+          UU(gU)
+        } catch (TU) {
+          pU(TU)
         }
-        MD += cD
+        uU += gU
       }
-      if ("drawn" === CD) {
-        const DD = MD;
-        MD = 0;
-        for (const CD of yD) try {
-          CD(DD)
-        } catch (bD) {
-          pD(bD)
+      if ("drawn" === RU) {
+        const UU = uU;
+        uU = 0;
+        for (const RU of jU) try {
+          RU(UU)
+        } catch (TU) {
+          pU(TU)
         }
       }
-      for (const ID of oD) try {
-        ID(DD, iD)
-      } catch (bD) {
-        pD(bD)
+      for (const tU of QU) try {
+        tU(UU, EU)
+      } catch (TU) {
+        pU(TU)
       }
     }
   },
-  4581: (DD, CD, cD) => {
-    cD.d(CD, {
-      $d: () => jD,
-      A: () => qD,
-      Ac: () => ID.pb,
-      B: () => fD,
-      Bd: () => TD,
-      Cb: () => CC,
-      D: () => aD,
-      Dc: () => MC,
-      Dd: () => WD,
-      E: () => yC,
-      Fb: () => pD.g,
-      Fc: () => wC,
-      Gc: () => IC,
-      Gd: () => dD,
-      H: () => rD,
-      Hc: () => ID.qb,
-      Ib: () => PD,
-      Kc: () => ID.rb,
-      Kd: () => ED,
-      L: () => ID.g,
-      Lb: () => LD,
-      M: () => wD,
-      Nb: () => JD,
-      Nc: () => ID.tb,
-      Nd: () => sD,
-      O: () => ID.j,
-      Pc: () => AD,
-      Q: () => ID.k,
-      Qc: () => ID.Bb,
-      R: () => uD,
-      Rb: () => xD,
-      Rd: () => fC,
-      Sd: () => tC,
-      Tc: () => ID.Eb,
-      U: () => ID.r,
-      Ub: () => ID.M,
-      Uc: () => ID.Hb,
-      Wd: () => XD,
-      X: () => ID.s,
-      Xb: () => KD,
-      Xc: () => ID.Ob,
-      Y: () => ID.v,
-      Yc: () => ID.Sb,
-      Yd: () => eD,
-      Zb: () => mD,
-      ab: () => BD,
-      ad: () => ID.Wb,
-      bb: () => ND,
-      bc: () => iC,
-      db: () => ID.y,
-      de: () => zD,
-      e: () => DC,
-      ed: () => UD,
-      fc: () => gD,
-      h: () => ZD,
-      hb: () => ID.A,
-      hd: () => ID.Xb,
-      he: () => VD,
-      ic: () => SC,
-      id: () => ID.Zb,
-      ie: () => QD,
-      jc: () => pD.o,
-      je: () => lD,
-      k: () => tD,
-      kb: () => RD,
-      kc: () => vD,
-      kd: () => ID.cc,
-      lb: () => pC,
-      le: () => ZC,
-      n: () => QC,
-      nc: () => cC,
-      nd: () => iD,
-      oe: () => MD,
-      pb: () => SD,
-      pd: () => oD,
-      q: () => HD,
-      qc: () => ID.Y,
-      s: () => OD,
-      sc: () => ID.$,
-      tb: () => ID.E,
-      td: () => bC,
-      vb: () => YD,
-      vc: () => ID.db,
-      w: () => ID.e,
-      wc: () => ID.eb,
-      x: () => BC,
-      xb: () => hD,
-      xd: () => GD,
-      yc: () => ID.hb,
-      yd: () => kD,
-      zb: () => FD
+  4449: (UU, RU, gU) => {
+    gU.d(RU, {
+      B: () => BU,
+      Bc: () => tU.V,
+      Bd: () => QU,
+      Cc: () => tU.X,
+      Db: () => LU,
+      Ec: () => tU.$,
+      F: () => jR,
+      Fd: () => TR,
+      Gb: () => OU,
+      Hc: () => tU.kb,
+      Id: () => SU,
+      J: () => NU,
+      Jc: () => uR,
+      Kb: () => RR,
+      L: () => tU.e,
+      Lb: () => pU.d,
+      Ld: () => yU,
+      Mb: () => wU,
+      Nc: () => KR,
+      Ob: () => dU,
+      Oc: () => tR,
+      Od: () => HU,
+      P: () => KU,
+      Pb: () => aU,
+      Pc: () => tU.nb,
+      Pd: () => iU,
+      R: () => tU.g,
+      Rc: () => tU.pb,
+      Sc: () => tU.tb,
+      Tb: () => oU,
+      U: () => tU.j,
+      Uc: () => lU,
+      V: () => DU,
+      Vd: () => kU,
+      Wb: () => tU.J,
+      Wc: () => tU.zb,
+      Xd: () => zU,
+      Z: () => tU.s,
+      Zb: () => YU,
+      Zc: () => tU.Db,
+      _: () => tU.v,
+      _d: () => AU,
+      ab: () => tU.w,
+      ac: () => mU,
+      ae: () => PR,
+      b: () => UR,
+      bd: () => tU.Gb,
+      c: () => hU,
+      cb: () => GU,
+      de: () => CR,
+      ec: () => ER,
+      ee: () => xU,
+      f: () => CU,
+      fb: () => WU,
+      fd: () => tU.Lb,
+      fe: () => MU,
+      g: () => qR,
+      gc: () => fU,
+      hd: () => tU.Ob,
+      ib: () => tU.x,
+      ie: () => XU,
+      j: () => nU,
+      jb: () => tU.A,
+      kb: () => sU,
+      kc: () => cR,
+      kd: () => tU.Rb,
+      ke: () => rU,
+      ld: () => bU,
+      m: () => JU,
+      md: () => tU.Tb,
+      me: () => VU,
+      ob: () => pR,
+      oc: () => pU.i,
+      p: () => tU.b,
+      pe: () => qU,
+      qc: () => eU,
+      qd: () => tU.Xb,
+      s: () => GR,
+      sb: () => cU,
+      te: () => vU,
+      uc: () => gR,
+      ud: () => tU.bc,
+      vb: () => tU.B,
+      w: () => ZU,
+      wc: () => tU.R,
+      we: () => hR,
+      x: () => PU,
+      xd: () => EU,
+      zb: () => FU,
+      zc: () => tU.S,
+      ze: () => uU
     });
-    var ID = cD(4585),
-      pD = cD(2338);
-    const iD = Math.round(1e3 / ID.cc),
-      fD = 4,
-      bD = 2;
+    var tU = gU(4456),
+      pU = gU(2233);
+    const EU = Math.round(1e3 / tU.bc),
+      PU = 4,
+      TU = 2;
 
-    function QD() {
-      return crypto.getRandomValues(new Uint32Array(bD))
+    function qU() {
+      return crypto.getRandomValues(new Uint32Array(TU))
     }
-    const wD = {
+    const KU = {
         Ok: 0,
         Errors: 1,
         Fatal: 2
       },
-      SD = 16,
-      BD = {
+      cU = 16,
+      GU = {
         Draws: 1,
         NetAll: 2
       },
-      yD = {
+      jU = {
         ShowFog: 1,
         Lighting: 2,
         ChunkFade: 4
       };
 
-    function MD(DD) {
-      return (DD.nametagsHidden ? nD.NametagsHidden : 0) | (DD.crouchToggle ? nD.CrouchToggle : 0) | (DD.bhopDisabled ? nD.BhopDisabled : 0) | (DD.disableBobbing ? nD.DisableBobbing : 0) | (DD.ezTowering ? nD.EzTowering : 0) | (DD.ezBridging ? nD.EzBridging : 0) | (DD.showChunkBorders ? nD.ShowChunkBorders : 0)
+    function uU(UU) {
+      return (UU.nametagsHidden ? IU.NametagsHidden : 0) | (UU.crouchToggle ? IU.CrouchToggle : 0) | (UU.bhopDisabled ? IU.BhopDisabled : 0) | (UU.disableBobbing ? IU.DisableBobbing : 0) | (UU.ezTowering ? IU.EzTowering : 0) | (UU.ezBridging ? IU.EzBridging : 0) | (UU.showChunkBorders ? IU.ShowChunkBorders : 0)
     }
-    const tD = {
+    const CU = {
         Flags: 0,
         PhysicsVersion: 1,
         InbuiltOverwritten: 2,
         AltComplete: 3,
         ProbeUsedProp: 4
       },
-      ZD = {
+      hU = {
         Ready: 1,
         SendFnReplaced: 2,
         Butto: 4,
@@ -1030,7 +1030,7 @@ export const modules = {
         CheckFuncHit: 128,
         OriginStackHit: 256
       },
-      oD = {
+      QU = {
         None: 0,
         Untrusted: 2,
         FewProperties: 3,
@@ -1039,7 +1039,7 @@ export const modules = {
         En: 6,
         Fr: 7
       },
-      vD = {
+      eU = {
         StackCheck: 0,
         ConfirmMesh: 1,
         IndexPassReplaced: 2,
@@ -1048,20 +1048,20 @@ export const modules = {
         Held: 6,
         PlayerKilledSubs: 7
       },
-      ND = 5,
-      gD = 4294967295;
+      WU = 5,
+      fU = 4294967295;
 
-    function XD(DD) {
-      return (DD.showFog ? yD.ShowFog : 0) | (DD.lighting ? yD.Lighting : 0) | (DD.chunkFade ? yD.ChunkFade : 0)
+    function xU(UU) {
+      return (UU.showFog ? jU.ShowFog : 0) | (UU.lighting ? jU.Lighting : 0) | (UU.chunkFade ? jU.ChunkFade : 0)
     }
-    const mD = {
+    const mU = {
         ResetFirst: 1,
         AdStart: 2,
         PreventMovement: 4,
         AdEnd: 8,
         PayloadMaxBytes: 1 << 20
       },
-      nD = {
+      IU = {
         NametagsHidden: 1,
         CrouchToggle: 2,
         BhopDisabled: 4,
@@ -1071,50 +1071,50 @@ export const modules = {
         ShowChunkBorders: 64,
         All: 127
       },
-      OD = {
+      JU = {
         Release: 1,
         KeepTouches: 2
       },
-      PD = {
+      wU = {
         Point: 1,
         Stamped: 2
       },
-      HD = {
+      nU = {
         Add: 1,
         Clear: 2
       },
-      UD = 1,
-      xD = 8,
-      qD = 16777215,
-      JD = 4,
-      KD = {
+      bU = 1,
+      oU = 8,
+      ZU = 16777215,
+      aU = 4,
+      YU = {
         Resume: 1
       },
-      aD = {
+      BU = {
         Held: 1
       };
 
-    function VD(DD, CD) {
-      return (DD | CD << 8) >>> 0
+    function VU(UU, RU) {
+      return (UU | RU << 8) >>> 0
     }
 
-    function zD(DD) {
-      return 255 & DD
+    function rU(UU) {
+      return 255 & UU
     }
 
-    function jD(DD) {
-      return DD >>> 8
+    function XU(UU) {
+      return UU >>> 8
     }
 
-    function lD(DD) {
-      return DD + 3 & -4
+    function vU(UU) {
+      return UU + 3 & -4
     }
-    const LD = 16777216,
-      TD = 20;
-    const GD = 8,
-      RD = 8,
-      kD = 16777216,
-      dD = {
+    const dU = 16777216,
+      HU = 20;
+    const SU = 8,
+      sU = 8,
+      yU = 16777216,
+      kU = {
         JobResult: 1,
         WorkerStarted: 2,
         WorkerLost: 3,
@@ -1122,19 +1122,19 @@ export const modules = {
         WorldgenStarted: 5,
         WorldgenLost: 6
       },
-      YD = {
+      FU = {
         Ok: 0,
         Refused: 1,
         Trapped: 2,
         NotHeld: 3,
         HeapRefused: 4
       },
-      WD = 16,
-      sD = {
+      iU = 16,
+      AU = {
         Lost: 0,
         Gone: 1
       },
-      ED = {
+      zU = {
         Init: 1,
         Mesh: 2,
         WorldgenSeed: 3,
@@ -1142,18 +1142,18 @@ export const modules = {
         Retire: 5
       };
 
-    function eD(DD) {
-      return DD === ED.WorldgenSeed || DD === ED.Generate
+    function MU(UU) {
+      return UU === zU.WorldgenSeed || UU === zU.Generate
     }
-    const uD = 4,
-      hD = 99,
-      rD = {
+    const DU = 4,
+      LU = 99,
+      NU = {
         PAIRS_MAX: 16,
         FIXED_WORDS: 2,
         PAIR_WORDS: 2,
         WORDS_MAX: 34
       },
-      AD = {
+      lU = {
         BYTES: 12,
         WEBGPU: 1,
         GL: 2,
@@ -1161,40 +1161,40 @@ export const modules = {
         LOST: 0,
         PIPELINE_FAILED: 1
       },
-      FD = 12,
-      DC = 16,
-      CC = 4,
-      cC = 12,
-      IC = {
+      OU = 12,
+      UR = 16,
+      RR = 4,
+      gR = 12,
+      tR = {
         SessionBased: 1,
         ReplayOffer: 2
       },
-      pC = 4,
-      iC = 8,
-      fC = 8,
-      bC = {
+      pR = 4,
+      ER = 8,
+      PR = 8,
+      TR = {
         HEAD_BYTES: 28,
         UPDATE: 1,
         REMOVE: 2
       },
-      QC = {
+      qR = {
         Crit: 1,
         HitSelf: 2
       },
-      wC = {
+      KR = {
         BYTES: 16,
         STRING_TYPE_BYTES: 24,
         STRING_TYPE: 65535,
         ERROR: 65534
       },
-      SC = {
+      cR = {
         None: 0,
         Bytes: 1,
         Msgpack: 2,
         MsgpackBin: 3
       },
-      BC = 12,
-      yC = {
+      GR = 12,
+      jR = {
         Activated: 1,
         Error: 2,
         Left: 3,
@@ -1203,65 +1203,65 @@ export const modules = {
         Resumed: 6,
         ResumeRefused: 7
       },
-      MC = 67108864;
+      uR = 67108864;
 
-    function tC(DD) {
-      for (const [CD, cD] of Object.entries(ID.g))
-        if (cD === DD) return CD;
-      return `Unknown${DD}`
+    function CR(UU) {
+      for (const [RU, gU] of Object.entries(tU.e))
+        if (gU === UU) return RU;
+      return `Unknown${UU}`
     }
 
-    function ZC(DD) {
+    function hR(UU) {
       return {
-        status: DD[ID.A.Status],
-        lastError: DD[ID.A.LastError],
-        lastErrorDetail: DD[ID.A.LastErrorDetail],
-        errorCount: DD[ID.A.ErrorCount],
-        frameIndex: DD[ID.A.FrameIndex],
-        tickIndex: DD[ID.A.TickIndex],
-        renderPending: DD[ID.A.RenderPending],
-        firstView: DD[ID.A.FirstView],
-        chunksCancelled: DD[ID.A.ChunksCancelled]
+        status: UU[tU.A.Status],
+        lastError: UU[tU.A.LastError],
+        lastErrorDetail: UU[tU.A.LastErrorDetail],
+        errorCount: UU[tU.A.ErrorCount],
+        frameIndex: UU[tU.A.FrameIndex],
+        tickIndex: UU[tU.A.TickIndex],
+        renderPending: UU[tU.A.RenderPending],
+        firstView: UU[tU.A.FirstView],
+        chunksCancelled: UU[tU.A.ChunksCancelled]
       }
     }
   },
-  4575: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => fD,
-      c: () => iD,
-      e: () => pD
+  4446: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => PU,
+      f: () => EU,
+      j: () => pU
     });
-    var ID = cD(4581);
+    var tU = gU(4449);
 
-    function pD(DD) {
-      return "none" !== DD
+    function pU(UU) {
+      return "none" !== UU
     }
 
-    function iD(DD, CD) {
-      if (!DD) return "none";
-      switch (CD) {
-        case ID.Y.Drawn:
+    function EU(UU, RU) {
+      if (!UU) return "none";
+      switch (RU) {
+        case tU.ab.Drawn:
           return "drawn";
-        case ID.Y.Paced:
+        case tU.ab.Paced:
           return "paced";
         default:
           return "skipped"
       }
     }
 
-    function fD(DD) {
-      return "drawn" === DD
+    function PU(UU) {
+      return "drawn" === UU
     }
   },
-  4590: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => pD,
-      e: () => iD,
-      f: () => fD,
-      j: () => ID,
-      m: () => bD
+  4469: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => pU,
+      g: () => EU,
+      j: () => PU,
+      n: () => tU,
+      r: () => TU
     });
-    const ID = {
+    const tU = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -1458,8 +1458,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      pD = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      iD = {
+      pU = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      EU = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -1522,160 +1522,160 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      fD = {
+      PU = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      bD = [16]
+      TU = [16]
   },
-  39752: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => fD,
-      c: () => iD,
-      g: () => pD
+  40049: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => PU,
+      f: () => EU,
+      j: () => pU
     });
-    let ID = null;
+    let tU = null;
 
-    function pD(DD) {
-      ID = DD
+    function pU(UU) {
+      tU = UU
     }
 
-    function iD(DD) {
-      ID === DD && (ID = null)
+    function EU(UU) {
+      tU === UU && (tU = null)
     }
 
-    function fD() {
-      var DD;
-      null === (DD = ID) || void 0 === DD || DD()
+    function PU() {
+      var UU;
+      null === (UU = tU) || void 0 === UU || UU()
     }
   },
-  4592: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => bD,
-      g: () => fD,
-      k: () => wD
+  4477: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => TU,
+      e: () => PU,
+      f: () => KU
     });
-    var ID = cD(2338),
-      pD = cD(2343);
-    const iD = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var tU = gU(2233),
+      pU = gU(2241);
+    const EU = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function fD(DD) {
-      return DD instanceof HTMLElement && (!!(DD.isContentEditable || DD instanceof HTMLTextAreaElement || DD instanceof HTMLSelectElement) || DD instanceof HTMLInputElement && !iD.has(DD.type))
+    function PU(UU) {
+      return UU instanceof HTMLElement && (!!(UU.isContentEditable || UU instanceof HTMLTextAreaElement || UU instanceof HTMLSelectElement) || UU instanceof HTMLInputElement && !EU.has(UU.type))
     }
 
-    function bD(DD) {
-      let CD = null;
-      const cD = cD => {
-          const pD = fD(cD);
-          pD !== CD && (CD = pD, DD(ID.k.UiCapture, ID.C.Keyboard, 0, 0, pD ? ID.C.Keyboard : 0))
+    function TU(UU) {
+      let RU = null;
+      const gU = gU => {
+          const pU = PU(gU);
+          pU !== RU && (RU = pU, UU(tU.h.UiCapture, tU.z.Keyboard, 0, 0, pU ? tU.z.Keyboard : 0))
         },
-        pD = DD => {
-          cD(DD.target)
+        pU = UU => {
+          gU(UU.target)
         },
-        iD = DD => {
-          cD(DD.relatedTarget)
+        EU = UU => {
+          gU(UU.relatedTarget)
         },
-        bD = () => {
-          cD(document.activeElement)
+        TU = () => {
+          gU(document.activeElement)
         },
-        QD = {
+        qU = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", pD, QD), document.addEventListener("focusout", iD, QD), document.addEventListener("keydown", bD, QD), cD(document.activeElement), () => {
-        document.removeEventListener("focusin", pD, QD), document.removeEventListener("focusout", iD, QD), document.removeEventListener("keydown", bD, QD)
+      return document.addEventListener("focusin", pU, qU), document.addEventListener("focusout", EU, qU), document.addEventListener("keydown", TU, qU), gU(document.activeElement), () => {
+        document.removeEventListener("focusin", pU, qU), document.removeEventListener("focusout", EU, qU), document.removeEventListener("keydown", TU, qU)
       }
     }
-    const QD = new Map;
+    const qU = new Map;
 
-    function wD(DD, CD) {
-      var cD;
-      let ID = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      QD.set(ID, (null !== (cD = QD.get(ID)) && void 0 !== cD ? cD : 0) & ~DD | CD & DD);
-      let iD = 0;
-      for (const pD of QD.values()) iD |= pD;
-      return (0, pD.y)(DD, iD & DD)
+    function KU(UU, RU) {
+      var gU;
+      let tU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      qU.set(tU, (null !== (gU = qU.get(tU)) && void 0 !== gU ? gU : 0) & ~UU | RU & UU);
+      let EU = 0;
+      for (const pU of qU.values()) EU |= pU;
+      return (0, pU.H)(UU, EU & UU)
     }
   },
-  36300: (DD, CD, cD) => {
-    function ID(DD) {
-      return DD.includes("Leaf Bed")
+  36470: (UU, RU, gU) => {
+    function tU(UU) {
+      return UU.includes("Leaf Bed")
     }
 
-    function pD(DD) {
-      return / Bed(?: Head)?(?:\||$)/.test(DD) && !ID(DD)
+    function pU(UU) {
+      return / Bed(?: Head)?(?:\||$)/.test(UU) && !tU(UU)
     }
 
-    function iD(DD) {
-      return DD.includes(" Strongbed")
+    function EU(UU) {
+      return UU.includes(" Strongbed")
     }
 
-    function fD(DD) {
-      return ID(DD) || pD(DD) || iD(DD)
+    function PU(UU) {
+      return tU(UU) || pU(UU) || EU(UU)
     }
-    cD.d(CD, {
-      b: () => fD,
-      e: () => ID,
-      h: () => iD,
-      i: () => pD
+    gU.d(RU, {
+      d: () => PU,
+      e: () => tU,
+      i: () => EU,
+      m: () => pU
     })
   },
-  36292: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => wD
+  36467: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => KU
     });
-    var ID = cD(36300),
-      pD = cD(9141);
-    const iD = [],
-      fD = [],
-      bD = [],
-      QD = [];
-    for (const SD of Object.keys(pD.n))(0, ID.e)(SD) ? iD.push(SD) : (0, ID.i)(SD) && fD.push(SD), (0, ID.h)(SD) && bD.push(SD), (SD.includes(" Bed Head") || SD.includes(" Strongbed Head")) && QD.push(SD);
-    const wD = {
-      leafBeds: iD,
-      woolBeds: fD,
-      strongBeds: bD,
-      beds: [...iD, ...fD, ...bD],
-      bedHeads: QD,
+    var tU = gU(36470),
+      pU = gU(9078);
+    const EU = [],
+      PU = [],
+      TU = [],
+      qU = [];
+    for (const cU of Object.keys(pU.k))(0, tU.e)(cU) ? EU.push(cU) : (0, tU.m)(cU) && PU.push(cU), (0, tU.i)(cU) && TU.push(cU), (cU.includes(" Bed Head") || cU.includes(" Strongbed Head")) && qU.push(cU);
+    const KU = {
+      leafBeds: EU,
+      woolBeds: PU,
+      strongBeds: TU,
+      beds: [...EU, ...PU, ...TU],
+      bedHeads: qU,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  6212: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => fD,
-      e: () => pD,
-      i: () => QD,
-      l: () => iD,
-      n: () => wD,
-      p: () => ID,
-      q: () => bD
+  6152: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => PU,
+      h: () => pU,
+      l: () => qU,
+      p: () => EU,
+      r: () => KU,
+      u: () => tU,
+      y: () => TU
     });
-    let ID = function(DD) {
-        return DD[DD.DEFAULT = 0] = "DEFAULT", DD[DD.BOAT = 1] = "BOAT", DD[DD.GLIDER = 2] = "GLIDER", DD[DD.BALLOON = 3] = "BALLOON", DD[DD.SLEEPING = 4] = "SLEEPING", DD[DD.RIDING_MOB = 5] = "RIDING_MOB", DD[DD.CAR = 6] = "CAR", DD[DD.HOVERCRAFT = 7] = "HOVERCRAFT", DD
+    let tU = function(UU) {
+        return UU[UU.DEFAULT = 0] = "DEFAULT", UU[UU.BOAT = 1] = "BOAT", UU[UU.GLIDER = 2] = "GLIDER", UU[UU.BALLOON = 3] = "BALLOON", UU[UU.SLEEPING = 4] = "SLEEPING", UU[UU.RIDING_MOB = 5] = "RIDING_MOB", UU[UU.CAR = 6] = "CAR", UU[UU.HOVERCRAFT = 7] = "HOVERCRAFT", UU
       }({}),
-      pD = function(DD) {
-        return DD[DD.WOOD = 0] = "WOOD", DD[DD.OBSIDIAN = 1] = "OBSIDIAN", DD[DD.SPEED = 2] = "SPEED", DD
+      pU = function(UU) {
+        return UU[UU.WOOD = 0] = "WOOD", UU[UU.OBSIDIAN = 1] = "OBSIDIAN", UU[UU.SPEED = 2] = "SPEED", UU
       }({}),
-      iD = function(DD) {
-        return DD[DD.WOOD = 0] = "WOOD", DD[DD.IRON = 1] = "IRON", DD[DD.GOLD = 2] = "GOLD", DD[DD.DIAMOND = 3] = "DIAMOND", DD
+      EU = function(UU) {
+        return UU[UU.WOOD = 0] = "WOOD", UU[UU.IRON = 1] = "IRON", UU[UU.GOLD = 2] = "GOLD", UU[UU.DIAMOND = 3] = "DIAMOND", UU
       }({}),
-      fD = function(DD) {
-        return DD[DD.YELLOW = 0] = "YELLOW", DD[DD.WHITE = 1] = "WHITE", DD[DD.RED = 2] = "RED", DD[DD.PURPLE = 3] = "PURPLE", DD[DD.PINK = 4] = "PINK", DD[DD.ORANGE = 5] = "ORANGE", DD[DD.MAGENTA = 6] = "MAGENTA", DD[DD.LIME = 7] = "LIME", DD[DD.LIGHT_GRAY = 8] = "LIGHT_GRAY", DD[DD.LIGHT_BLUE = 9] = "LIGHT_BLUE", DD[DD.GREEN = 10] = "GREEN", DD[DD.GRAY = 11] = "GRAY", DD[DD.CYAN = 12] = "CYAN", DD[DD.BROWN = 13] = "BROWN", DD[DD.BLUE = 14] = "BLUE", DD[DD.BLACK = 15] = "BLACK", DD
+      PU = function(UU) {
+        return UU[UU.YELLOW = 0] = "YELLOW", UU[UU.WHITE = 1] = "WHITE", UU[UU.RED = 2] = "RED", UU[UU.PURPLE = 3] = "PURPLE", UU[UU.PINK = 4] = "PINK", UU[UU.ORANGE = 5] = "ORANGE", UU[UU.MAGENTA = 6] = "MAGENTA", UU[UU.LIME = 7] = "LIME", UU[UU.LIGHT_GRAY = 8] = "LIGHT_GRAY", UU[UU.LIGHT_BLUE = 9] = "LIGHT_BLUE", UU[UU.GREEN = 10] = "GREEN", UU[UU.GRAY = 11] = "GRAY", UU[UU.CYAN = 12] = "CYAN", UU[UU.BROWN = 13] = "BROWN", UU[UU.BLUE = 14] = "BLUE", UU[UU.BLACK = 15] = "BLACK", UU
       }({}),
-      bD = function(DD) {
-        return DD[DD.ROTATION_1 = 0] = "ROTATION_1", DD[DD.ROTATION_2 = 1] = "ROTATION_2", DD[DD.ROTATION_3 = 2] = "ROTATION_3", DD[DD.ROTATION_4 = 3] = "ROTATION_4", DD
+      TU = function(UU) {
+        return UU[UU.ROTATION_1 = 0] = "ROTATION_1", UU[UU.ROTATION_2 = 1] = "ROTATION_2", UU[UU.ROTATION_3 = 2] = "ROTATION_3", UU[UU.ROTATION_4 = 3] = "ROTATION_4", UU
       }({}),
-      QD = function(DD) {
-        return DD[DD.KART = 0] = "KART", DD[DD.OFF_ROADER = 1] = "OFF_ROADER", DD[DD.CAR = 2] = "CAR", DD[DD.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", DD[DD.ARMORED_CAR = 4] = "ARMORED_CAR", DD[DD.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", DD[DD.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", DD[DD.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", DD
+      qU = function(UU) {
+        return UU[UU.KART = 0] = "KART", UU[UU.OFF_ROADER = 1] = "OFF_ROADER", UU[UU.CAR = 2] = "CAR", UU[UU.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", UU[UU.ARMORED_CAR = 4] = "ARMORED_CAR", UU[UU.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", UU[UU.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", UU[UU.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", UU
       }({});
-    ID.DEFAULT, ID.BOAT, pD.SPEED, ID.GLIDER, iD.DIAMOND, ID.BALLOON, fD.BLACK, ID.SLEEPING, bD.ROTATION_4, ID.RIDING_MOB, ID.CAR, QD.MOONSTONE_MINING_DRILL, ID.HOVERCRAFT;
-    let wD = function(DD) {
-      return DD[DD.NORMAL = 0] = "NORMAL", DD[DD.GLIDING = 1] = "GLIDING", DD[DD.FLOATING = 2] = "FLOATING", DD
+    tU.DEFAULT, tU.BOAT, pU.SPEED, tU.GLIDER, EU.DIAMOND, tU.BALLOON, PU.BLACK, tU.SLEEPING, TU.ROTATION_4, tU.RIDING_MOB, tU.CAR, qU.MOONSTONE_MINING_DRILL, tU.HOVERCRAFT;
+    let KU = function(UU) {
+      return UU[UU.NORMAL = 0] = "NORMAL", UU[UU.GLIDING = 1] = "GLIDING", UU[UU.FLOATING = 2] = "FLOATING", UU
     }({})
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

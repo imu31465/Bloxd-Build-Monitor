@@ -1,559 +1,559 @@
 export const id = 230;
 export const ids = [230];
 export const modules = {
-  40148: (DD, CD, cD) => {
-    cD.d(CD, {
-      noaDevTools: () => BD
+  40455: (UU, RU, gU) => {
+    gU.d(RU, {
+      noaDevTools: () => GU
     });
-    var ID = cD(36930),
-      pD = cD(36917),
-      iD = cD(2642),
-      fD = cD(1701);
+    var tU = gU(37067),
+      pU = gU(37046),
+      EU = gU(2551),
+      PU = gU(1637);
 
-    function bD(DD) {
+    function TU(UU) {
       const {
-        XZ: CD
-      } = DD, cD = CD.engine, ID = {
-        width: cD.getRenderWidth(),
-        height: cD.getRenderHeight()
+        SC: RU
+      } = UU, gU = RU.engine, tU = {
+        width: gU.getRenderWidth(),
+        height: gU.getRenderHeight()
       };
       return {
-        canvas: cD.getRenderingCanvas(),
-        maxTextureSize: cD.getCaps().maxTextureSize,
-        drawing: () => !DD.fn,
-        resize: (DD, CD) => {
-          cD.setSize(DD, CD)
+        canvas: gU.getRenderingCanvas(),
+        maxTextureSize: gU.getCaps().maxTextureSize,
+        drawing: () => !UU.pI,
+        resize: (UU, RU) => {
+          gU.setSize(UU, RU)
         },
         restoreSize: () => {
-          cD.setSize(ID.width, ID.height), CD.resize()
+          gU.setSize(tU.width, tU.height), RU.resize()
         },
-        onFrameDrawn: CD => (DD.on("afterRender", CD), () => {
-          DD.off("afterRender", CD)
+        onFrameDrawn: RU => (UU.on("afterRender", RU), () => {
+          UU.off("afterRender", RU)
         })
       }
     }
-    var QD = cD(40122),
-      wD = cD(8925);
+    var qU = gU(40437),
+      KU = gU(8880);
 
-    function SD(DD, CD) {
+    function cU(UU, RU) {
       let {
-        width: wD,
-        height: SD,
-        colouring: BD
-      } = CD;
-      const yD = "normals" === BD,
-        MD = "depth" === BD;
-      return new Promise((CD => {
+        width: KU,
+        height: cU,
+        colouring: GU
+      } = RU;
+      const jU = "normals" === GU,
+        uU = "depth" === GU;
+      return new Promise((RU => {
         try {
-          const tD = (0, iD.i)();
-          if (tD.XZ.mZ) return "screenshot" !== DD || null !== BD ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void CD()) : void(0, QD.d)(bD(tD), wD, SD).finally(CD);
-          const ZD = tD.XZ.engine,
-            oD = tD.XZ.hq(),
-            vD = wD,
-            ND = SD;
-          Promise.all([Promise.all([cD.e(244), cD.e(245), cD.e(227)]).then((() => cD(60375))), Promise.all([cD.e(226), cD.e(225), cD.e(244), cD.e(245), cD.e(242), cD.e(246), cD.e(249), cD.e(301), cD.e(231)]).then((() => cD(60379))), Promise.all([cD.e(226), cD.e(225), cD.e(244), cD.e(245), cD.e(242), cD.e(252), cD.e(246), cD.e(254), cD.e(233)]).then((() => cD(60383))), cD.e(344).then((() => cD(60391))), Promise.all([cD.e(225), cD.e(221)]).then((() => cD(36440))), cD.e(243).then((() => cD(60393))), cD.e(228).then((() => cD(60399)))]).then((iD => {
+          const CU = (0, EU.g)();
+          if (CU.SC.sC) return "screenshot" !== UU || null !== GU ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void RU()) : void(0, qU.e)(TU(CU), KU, cU).finally(RU);
+          const hU = CU.SC.engine,
+            QU = CU.SC.aZ(),
+            eU = KU,
+            WU = cU;
+          Promise.all([Promise.all([gU.e(244), gU.e(245), gU.e(227)]).then((() => gU(60528))), Promise.all([gU.e(226), gU.e(225), gU.e(244), gU.e(245), gU.e(242), gU.e(246), gU.e(249), gU.e(301), gU.e(231)]).then((() => gU(60532))), Promise.all([gU.e(226), gU.e(225), gU.e(244), gU.e(245), gU.e(242), gU.e(252), gU.e(246), gU.e(254), gU.e(233)]).then((() => gU(60535))), gU.e(344).then((() => gU(60537))), Promise.all([gU.e(225), gU.e(221)]).then((() => gU(36593))), gU.e(243).then((() => gU(60543))), gU.e(228).then((() => gU(60545)))]).then((EU => {
             const {
-              CreateScreenshotUsingRenderTarget: bD
-            } = iD[1], {
-              ShaderMaterial: QD
-            } = iD[2], {
-              ShaderLanguage: wD
-            } = iD[3], {
-              cZ: SD
-            } = iD[4], {
-              registerDevtoolsShader: BD
-            } = iD[6], tD = wD.GLSL, gD = new Map, XD = oD.meshes.filter((DD => DD.material));
-            let mD = !1,
-              nD = null;
+              CreateScreenshotUsingRenderTarget: TU
+            } = EU[1], {
+              ShaderMaterial: qU
+            } = EU[2], {
+              ShaderLanguage: KU
+            } = EU[3], {
+              xC: cU
+            } = EU[4], {
+              registerDevtoolsShader: GU
+            } = EU[6], CU = KU.GLSL, fU = new Map, xU = QU.meshes.filter((UU => UU.material));
+            let mU = !1,
+              IU = null;
 
-            function OD() {
-              var DD;
-              mD && (mD = !1, (0, ID.e)(oD.meshes, !1)), null === (DD = nD) || void 0 === DD || DD(), nD = null, XD.forEach((DD => {
-                const CD = gD.get(DD);
-                CD && (DD.material = CD)
+            function JU() {
+              var UU;
+              mU && (mU = !1, (0, tU.f)(QU.meshes, !1)), null === (UU = IU) || void 0 === UU || UU(), IU = null, xU.forEach((UU => {
+                const RU = fU.get(UU);
+                RU && (UU.material = RU)
               }))
             }
-            if (yD) {
-              const DD = [],
-                CD = [];
-              XD.forEach((cD => {
-                const ID = cD.name.toLowerCase(),
-                  pD = cD.VJ().boundingBox.center,
-                  iD = oD.activeCamera.position.subtract(pD).length();
-                ID.includes("sky") || ID.includes("background") || ID.includes("environment") || iD > 1e3 ? CD.push(cD) : DD.push(cD)
-              })), BD("devtoolsNormal", tD);
-              const cD = new QD("normalMaterial", oD, "devtoolsNormal", {
+            if (jU) {
+              const UU = [],
+                RU = [];
+              xU.forEach((gU => {
+                const tU = gU.name.toLowerCase(),
+                  pU = gU.lY().boundingBox.center,
+                  EU = QU.activeCamera.position.subtract(pU).length();
+                tU.includes("sky") || tU.includes("background") || tU.includes("environment") || EU > 1e3 ? RU.push(gU) : UU.push(gU)
+              })), GU("devtoolsNormal", CU);
+              const gU = new qU("normalMaterial", QU, "devtoolsNormal", {
                 attributes: ["position", "normal"],
                 uniforms: ["worldViewProjection", "world"],
-                shaderLanguage: tD
+                shaderLanguage: CU
               });
-              BD("devtoolsWhite", tD);
-              const ID = new QD("whiteMaterial", oD, "devtoolsWhite", {
+              GU("devtoolsWhite", CU);
+              const tU = new qU("whiteMaterial", QU, "devtoolsWhite", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection"],
-                shaderLanguage: tD
+                shaderLanguage: CU
               });
-              DD.forEach((DD => {
-                gD.set(DD, DD.material), DD.material = cD
-              })), CD.forEach((DD => {
-                gD.set(DD, DD.material), DD.material = ID
+              UU.forEach((UU => {
+                fU.set(UU, UU.material), UU.material = gU
+              })), RU.forEach((UU => {
+                fU.set(UU, UU.material), UU.material = tU
               }))
-            } else if (MD) {
-              BD("devtoolsDepth", tD);
-              const DD = oD.activeCamera.position;
-              let CD = 0,
-                cD = 1 / 0;
-              XD.forEach((ID => {
-                const pD = ID.name.toLowerCase();
-                if (pD.includes("sky") || pD.includes("background") || pD.includes("environment")) return;
-                const iD = ID.VJ().boundingBox.center,
-                  fD = SD.TransformCoordinates(iD, ID.getWorldMatrix()),
-                  bD = DD.subtract(fD).length();
-                bD > 1e3 || (CD = Math.max(CD, bD), cD = Math.min(cD, bD))
+            } else if (uU) {
+              GU("devtoolsDepth", CU);
+              const UU = QU.activeCamera.position;
+              let RU = 0,
+                gU = 1 / 0;
+              xU.forEach((tU => {
+                const pU = tU.name.toLowerCase();
+                if (pU.includes("sky") || pU.includes("background") || pU.includes("environment")) return;
+                const EU = tU.lY().boundingBox.center,
+                  PU = cU.TransformCoordinates(EU, tU.getWorldMatrix()),
+                  TU = UU.subtract(PU).length();
+                TU > 1e3 || (RU = Math.max(RU, TU), gU = Math.min(gU, TU))
               }));
-              const ID = CD - cD;
-              CD += .1 * ID, cD = Math.max(0, cD - .1 * ID), console.log(`Depth range: min=${cD.toFixed(2)}, max=${CD.toFixed(2)}, range=${ID.toFixed(2)}`), ID < 1 && (CD = cD + 10);
-              const pD = new QD("depthMaterial", oD, "devtoolsDepth", {
+              const tU = RU - gU;
+              RU += .1 * tU, gU = Math.max(0, gU - .1 * tU), console.log(`Depth range: min=${gU.toFixed(2)}, max=${RU.toFixed(2)}, range=${tU.toFixed(2)}`), tU < 1 && (RU = gU + 10);
+              const pU = new qU("depthMaterial", QU, "devtoolsDepth", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection", "world", "cameraPosition", "maxDepth", "minDepth"],
-                shaderLanguage: tD
+                shaderLanguage: CU
               });
-              pD.setVector3("cameraPosition", DD), pD.setFloat("maxDepth", CD), pD.setFloat("minDepth", cD), XD.forEach((DD => {
-                gD.set(DD, DD.material), DD.material = pD
+              pU.setVector3("cameraPosition", UU), pU.setFloat("maxDepth", RU), pU.setFloat("minDepth", gU), xU.forEach((UU => {
+                fU.set(UU, UU.material), UU.material = pU
               }))
             }
-            if ((0, ID.e)(oD.meshes, !0), mD = !0, "glb" === DD && (nD = (0, pD.b)(oD.meshes)), "screenshot" === DD) {
-              let DD = `bloxd-screenshot-${vD}x${ND}-${Date.now()}.png`;
-              yD ? DD = `bloxd-screenshot-normals-${vD}x${ND}-${Date.now()}.png` : MD && (DD = `bloxd-screenshot-depth-${vD}x${ND}-${Date.now()}.png`), bD(ZD, oD.activeCamera, {
-                width: vD,
-                height: ND
-              }, (function(cD) {
-                OD(), fetch(cD).then((function(DD) {
-                  return DD.blob()
-                })).then((function(cD) {
-                  (0, fD.downloadBlob)(cD, DD), CD()
-                })).catch((function(DD) {
-                  console.error("Error processing screenshot:", DD), CD()
+            if ((0, tU.f)(QU.meshes, !0), mU = !0, "glb" === UU && (IU = (0, pU.d)(QU.meshes)), "screenshot" === UU) {
+              let UU = `bloxd-screenshot-${eU}x${WU}-${Date.now()}.png`;
+              jU ? UU = `bloxd-screenshot-normals-${eU}x${WU}-${Date.now()}.png` : uU && (UU = `bloxd-screenshot-depth-${eU}x${WU}-${Date.now()}.png`), TU(hU, QU.activeCamera, {
+                width: eU,
+                height: WU
+              }, (function(gU) {
+                JU(), fetch(gU).then((function(UU) {
+                  return UU.blob()
+                })).then((function(gU) {
+                  (0, PU.downloadBlob)(gU, UU), RU()
+                })).catch((function(UU) {
+                  console.error("Error processing screenshot:", UU), RU()
                 }))
               }), "image/png", void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, (function() {
-                console.error("Screenshot timed out"), OD(), CD()
+                console.error("Screenshot timed out"), JU(), RU()
               }))
             } else {
-              let DD = "wo";
-              yD ? DD = "scene-normals" : MD && (DD = "scene-depth"), yD || MD ? setTimeout((() => {
+              let UU = "Zh";
+              jU ? UU = "scene-normals" : uU && (UU = "scene-depth"), jU || uU ? setTimeout((() => {
                 (async function() {
                   const {
-                    StandardMaterial: DD
-                  } = await Promise.all([cD.e(226), cD.e(225), cD.e(244), cD.e(245), cD.e(242), cD.e(252), cD.e(251), cD.e(232)]).then((() => cD(39396))), {
-                    Color3: CD
-                  } = await Promise.all([cD.e(226), cD.e(229)]).then((() => cD(36613))), ID = [], pD = [];
-                  if (XD.forEach((DD => {
-                      const CD = DD.name.toLowerCase(),
-                        cD = DD.VJ().boundingBox.center,
-                        iD = oD.activeCamera.position.subtract(cD).length();
-                      CD.includes("sky") || CD.includes("background") || CD.includes("environment") || iD > 1e3 ? pD.push(DD) : ID.push(DD)
-                    })), yD) ID.forEach(((cD, ID) => {
-                    const pD = cD.getVerticesData("normal");
-                    if (pD) {
-                      const iD = [];
-                      for (let DD = 0; DD < pD.length; DD += 3) {
-                        const CD = Math.abs(pD[DD]),
-                          cD = Math.abs(pD[DD + 1]),
-                          ID = Math.abs(pD[DD + 2]);
-                        iD.push(CD, cD, ID, 1)
+                    StandardMaterial: UU
+                  } = await Promise.all([gU.e(226), gU.e(225), gU.e(244), gU.e(245), gU.e(242), gU.e(252), gU.e(251), gU.e(232)]).then((() => gU(39648))), {
+                    Color3: RU
+                  } = await Promise.all([gU.e(226), gU.e(229)]).then((() => gU(36754))), tU = [], pU = [];
+                  if (xU.forEach((UU => {
+                      const RU = UU.name.toLowerCase(),
+                        gU = UU.lY().boundingBox.center,
+                        EU = QU.activeCamera.position.subtract(gU).length();
+                      RU.includes("sky") || RU.includes("background") || RU.includes("environment") || EU > 1e3 ? pU.push(UU) : tU.push(UU)
+                    })), jU) tU.forEach(((gU, tU) => {
+                    const pU = gU.getVerticesData("normal");
+                    if (pU) {
+                      const EU = [];
+                      for (let UU = 0; UU < pU.length; UU += 3) {
+                        const RU = Math.abs(pU[UU]),
+                          gU = Math.abs(pU[UU + 1]),
+                          tU = Math.abs(pU[UU + 2]);
+                        EU.push(RU, gU, tU, 1)
                       }
-                      cD.setVerticesData("color", iD);
-                      const fD = new DD(`vertexColorMat_${ID}`, oD);
-                      fD.disableLighting = !0, fD.emissiveColor = new CD(1, 1, 1), fD.specularColor = new CD(0, 0, 0), cD.material = fD
+                      gU.setVerticesData("color", EU);
+                      const PU = new UU(`vertexColorMat_${tU}`, QU);
+                      PU.disableLighting = !0, PU.emissiveColor = new RU(1, 1, 1), PU.specularColor = new RU(0, 0, 0), gU.material = PU
                     }
-                  })), pD.forEach(((cD, ID) => {
-                    const pD = cD.getVerticesData("position");
-                    if (pD) {
-                      const iD = [],
-                        fD = pD.length / 3;
-                      for (let DD = 0; DD < fD; DD++) iD.push(1, 1, 1, 1);
-                      cD.setVerticesData("color", iD);
-                      const bD = new DD(`whiteMat_${ID}`, oD);
-                      bD.disableLighting = !0, bD.emissiveColor = new CD(1, 1, 1), bD.specularColor = new CD(0, 0, 0), cD.material = bD
+                  })), pU.forEach(((gU, tU) => {
+                    const pU = gU.getVerticesData("position");
+                    if (pU) {
+                      const EU = [],
+                        PU = pU.length / 3;
+                      for (let UU = 0; UU < PU; UU++) EU.push(1, 1, 1, 1);
+                      gU.setVerticesData("color", EU);
+                      const TU = new UU(`whiteMat_${tU}`, QU);
+                      TU.disableLighting = !0, TU.emissiveColor = new RU(1, 1, 1), TU.specularColor = new RU(0, 0, 0), gU.material = TU
                     }
                   }));
-                  else if (MD) {
-                    const cD = oD.activeCamera.position;
-                    let pD = 0,
-                      iD = 1 / 0;
-                    ID.forEach((DD => {
-                      const CD = DD.VJ().boundingBox.center,
-                        ID = SD.TransformCoordinates(CD, DD.getWorldMatrix()),
-                        fD = cD.subtract(ID).length();
-                      pD = Math.max(pD, fD), iD = Math.min(iD, fD)
+                  else if (uU) {
+                    const gU = QU.activeCamera.position;
+                    let pU = 0,
+                      EU = 1 / 0;
+                    tU.forEach((UU => {
+                      const RU = UU.lY().boundingBox.center,
+                        tU = cU.TransformCoordinates(RU, UU.getWorldMatrix()),
+                        PU = gU.subtract(tU).length();
+                      pU = Math.max(pU, PU), EU = Math.min(EU, PU)
                     }));
-                    const fD = pD - iD;
-                    pD += .1 * fD, iD = Math.max(0, iD - .1 * fD), fD < 1 && (pD = iD + 10), XD.forEach(((ID, fD) => {
-                      const bD = ID.name.toLowerCase(),
-                        QD = ID.VJ().boundingBox.center,
-                        wD = SD.TransformCoordinates(QD, ID.getWorldMatrix()),
-                        BD = cD.subtract(wD).length();
-                      if (!(bD.includes("sky") || bD.includes("background") || bD.includes("environment") || BD > 1e3)) {
-                        const cD = 1 - Math.min(Math.max((BD - iD) / (pD - iD), 0), 1),
-                          bD = new DD(`depthMat_${fD}`, oD);
-                        bD.diffuseColor = new CD(cD, cD, cD), bD.specularColor = new CD(0, 0, 0), ID.material = bD
+                    const PU = pU - EU;
+                    pU += .1 * PU, EU = Math.max(0, EU - .1 * PU), PU < 1 && (pU = EU + 10), xU.forEach(((tU, PU) => {
+                      const TU = tU.name.toLowerCase(),
+                        qU = tU.lY().boundingBox.center,
+                        KU = cU.TransformCoordinates(qU, tU.getWorldMatrix()),
+                        GU = gU.subtract(KU).length();
+                      if (!(TU.includes("sky") || TU.includes("background") || TU.includes("environment") || GU > 1e3)) {
+                        const gU = 1 - Math.min(Math.max((GU - EU) / (pU - EU), 0), 1),
+                          TU = new UU(`depthMat_${PU}`, QU);
+                        TU.diffuseColor = new RU(gU, gU, gU), TU.specularColor = new RU(0, 0, 0), tU.material = TU
                       }
                     }))
                   }
-                })().then((() => Promise.all([cD.e(226), cD.e(225), cD.e(244), cD.e(245), cD.e(242), cD.e(252), cD.e(246), cD.e(251), cD.e(249), cD.e(241), cD.e(254), cD.e(264), cD.e(301), cD.e(236), cD.e(253), cD.e(224)]).then((() => cD(60406))))).then((CD => CD.GLTF2Export.GLBAsync(oD, DD))).then((DD => {
-                  OD(), DD.downloadFiles(), CD()
-                })).catch((DD => {
-                  console.error("Error exporting GLB:", DD), OD(), CD()
+                })().then((() => Promise.all([gU.e(226), gU.e(225), gU.e(244), gU.e(245), gU.e(242), gU.e(252), gU.e(246), gU.e(251), gU.e(249), gU.e(241), gU.e(254), gU.e(264), gU.e(301), gU.e(236), gU.e(253), gU.e(224)]).then((() => gU(60548))))).then((RU => RU.GLTF2Export.GLBAsync(QU, UU))).then((UU => {
+                  JU(), UU.downloadFiles(), RU()
+                })).catch((UU => {
+                  console.error("Error exporting GLB:", UU), JU(), RU()
                 }))
-              }), 100) : Promise.all([cD.e(226), cD.e(225), cD.e(244), cD.e(245), cD.e(242), cD.e(252), cD.e(246), cD.e(251), cD.e(249), cD.e(241), cD.e(254), cD.e(264), cD.e(301), cD.e(236), cD.e(253), cD.e(224)]).then((() => cD(60406))).then((cD => {
-                cD.GLTF2Export.GLBAsync(oD, DD).then((DD => {
-                  OD(), DD.downloadFiles(), CD()
-                })).catch((DD => {
-                  console.error("Error exporting GLB:", DD), OD(), CD()
+              }), 100) : Promise.all([gU.e(226), gU.e(225), gU.e(244), gU.e(245), gU.e(242), gU.e(252), gU.e(246), gU.e(251), gU.e(249), gU.e(241), gU.e(254), gU.e(264), gU.e(301), gU.e(236), gU.e(253), gU.e(224)]).then((() => gU(60548))).then((gU => {
+                gU.GLTF2Export.GLBAsync(QU, UU).then((UU => {
+                  JU(), UU.downloadFiles(), RU()
+                })).catch((UU => {
+                  console.error("Error exporting GLB:", UU), JU(), RU()
                 }))
-              })).catch((DD => {
-                console.error("Error importing serializers:", DD), OD(), CD()
+              })).catch((UU => {
+                console.error("Error importing serializers:", UU), JU(), RU()
               }))
             }
-          })).catch((DD => {
-            console.error("Error downloading the scene:", DD), CD()
+          })).catch((UU => {
+            console.error("Error downloading the scene:", UU), RU()
           }))
-        } catch (tD) {
-          console.error("Error taking screenshot:", tD), CD()
+        } catch (CU) {
+          console.error("Error taking screenshot:", CU), RU()
         }
       }))
     }
-    const BD = new class {
+    const GU = new class {
       constructor() {
-        this.tools = wD.ALL_DEV_TOOLS
+        this.tools = KU.ALL_DEV_TOOLS
       }
-      downloadScene(DD, CD) {
-        return SD(DD, CD)
+      downloadScene(UU, RU) {
+        return cU(UU, RU)
       }
-      async setAmbientLightIntensity(DD) {
+      async setAmbientLightIntensity(UU) {
         const {
-          Color3: CD
-        } = await Promise.all([cD.e(226), cD.e(229)]).then((() => cD(36613)));
-        (0, iD.i)().XZ.hq().ambientColor = CD.FromArray([DD, DD, DD])
+          Color3: RU
+        } = await Promise.all([gU.e(226), gU.e(229)]).then((() => gU(36754)));
+        (0, EU.g)().SC.aZ().ambientColor = RU.FromArray([UU, UU, UU])
       }
     }
   },
-  40122: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => QD
+  40437: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => qU
     });
-    var ID = cD(1728);
-    const pD = 33177600,
-      iD = 3e4;
-    let fD = !1;
+    var tU = gU(1648);
+    const pU = 33177600,
+      EU = 3e4;
+    let PU = !1;
 
-    function bD(DD, CD, cD) {
-      if (!DD.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
-      if (fD) return Promise.reject(new Error("A screenshot is already being taken"));
-      fD = !0;
-      const ID = function(DD, CD, cD) {
-        const ID = Math.max(1, DD),
-          iD = Math.max(1, CD),
-          fD = Math.min(1, cD / Math.max(ID, iD), Math.sqrt(pD / (ID * iD)));
+    function TU(UU, RU, gU) {
+      if (!UU.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
+      if (PU) return Promise.reject(new Error("A screenshot is already being taken"));
+      PU = !0;
+      const tU = function(UU, RU, gU) {
+        const tU = Math.max(1, UU),
+          EU = Math.max(1, RU),
+          PU = Math.min(1, gU / Math.max(tU, EU), Math.sqrt(pU / (tU * EU)));
         return {
-          width: Math.max(1, Math.floor(ID * fD)),
-          height: Math.max(1, Math.floor(iD * fD))
+          width: Math.max(1, Math.floor(tU * PU)),
+          height: Math.max(1, Math.floor(EU * PU))
         }
-      }(CD, cD, DD.maxTextureSize);
-      return DD.resize(ID.width, ID.height), new Promise(((CD, cD) => {
-        let ID, pD = 2,
-          bD = null;
-        const QD = () => {
-          var CD;
-          fD = !1, null === (CD = bD) || void 0 === CD || CD(), clearTimeout(ID), DD.restoreSize()
+      }(RU, gU, UU.maxTextureSize);
+      return UU.resize(tU.width, tU.height), new Promise(((RU, gU) => {
+        let tU, pU = 2,
+          TU = null;
+        const qU = () => {
+          var RU;
+          PU = !1, null === (RU = TU) || void 0 === RU || RU(), clearTimeout(tU), UU.restoreSize()
         };
-        ID = setTimeout((() => {
-          QD(), cD(new Error("No frame was drawn to capture"))
-        }), iD), bD = DD.onFrameDrawn((() => {
-          if (pD--, pD > 0) return;
+        tU = setTimeout((() => {
+          qU(), gU(new Error("No frame was drawn to capture"))
+        }), EU), TU = UU.onFrameDrawn((() => {
+          if (pU--, pU > 0) return;
           const {
-            canvas: ID
-          } = DD, iD = {
-            width: ID.width,
-            height: ID.height
+            canvas: tU
+          } = UU, EU = {
+            width: tU.width,
+            height: tU.height
           };
           try {
-            ID.toBlob((DD => {
-              DD ? CD({
-                blob: DD,
-                ...iD
-              }) : cD(new Error("The canvas gave no image"))
+            tU.toBlob((UU => {
+              UU ? RU({
+                blob: UU,
+                ...EU
+              }) : gU(new Error("The canvas gave no image"))
             }), "image/png")
-          } catch (fD) {
-            cD(fD)
+          } catch (PU) {
+            gU(PU)
           } finally {
-            QD()
+            qU()
           }
         }))
       }))
     }
-    async function QD(DD, CD, cD) {
+    async function qU(UU, RU, gU) {
       try {
-        const pD = await bD(DD, CD, cD);
-        (0, ID.c)(pD.blob, `bloxd-screenshot-${pD.width}x${pD.height}-${Date.now()}.png`)
-      } catch (pD) {
-        console.error("Error taking screenshot:", pD)
+        const pU = await TU(UU, RU, gU);
+        (0, tU.d)(pU.blob, `bloxd-screenshot-${pU.width}x${pU.height}-${Date.now()}.png`)
+      } catch (pU) {
+        console.error("Error taking screenshot:", pU)
       }
     }
   },
-  36930: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => wD,
-      e: () => bD,
-      i: () => fD
+  37067: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => KU,
+      f: () => TU,
+      g: () => PU
     });
-    var ID = cD(36924),
-      pD = cD(36939);
-    let iD = 0;
+    var tU = gU(37062),
+      pU = gU(37075);
+    let EU = 0;
 
-    function fD(DD, CD) {
-      const cD = DD;
-      cD._noaFaceGroups = null !== CD && void 0 !== CD ? CD : null, cD._noaFaceEpoch = -1, cD._noaFaceMask = -1, cD._noaFaceCount = -1, cD._noaFaceMaterial = null;
-      const ID = DD.IH;
-      ID && 1 === ID.length && (ID[0].indexStart = 0, ID[0].indexCount = DD.getTotalIndices())
+    function PU(UU, RU) {
+      const gU = UU;
+      gU._noaFaceGroups = null !== RU && void 0 !== RU ? RU : null, gU._noaFaceEpoch = -1, gU._noaFaceMask = -1, gU._noaFaceCount = -1, gU._noaFaceMaterial = null;
+      const tU = UU.ZI;
+      tU && 1 === tU.length && (tU[0].indexStart = 0, tU[0].indexCount = UU.getTotalIndices())
     }
 
-    function bD(DD, CD) {
-      if (CD) {
-        iD++;
-        for (const CD of DD) {
-          const DD = CD._noaFaceGroups;
-          DD && fD(CD, DD)
+    function TU(UU, RU) {
+      if (RU) {
+        EU++;
+        for (const RU of UU) {
+          const UU = RU._noaFaceGroups;
+          UU && PU(RU, UU)
         }
-      } else iD = Math.max(0, iD - 1)
+      } else EU = Math.max(0, EU - 1)
     }
 
-    function QD(DD, CD, cD) {
-      let pD = -1,
-        iD = 0;
-      for (let fD = 0; fD < ID.e; fD++) {
-        const cD = DD[fD],
-          bD = DD[fD + 1];
-        bD > cD && CD & 1 << ID.b[fD] && (pD < 0 && (pD = cD), iD = bD)
+    function qU(UU, RU, gU) {
+      let pU = -1,
+        EU = 0;
+      for (let PU = 0; PU < tU.i; PU++) {
+        const gU = UU[PU],
+          TU = UU[PU + 1];
+        TU > gU && RU & 1 << tU.e[PU] && (pU < 0 && (pU = gU), EU = TU)
       }
-      return pD < 0 ? (cD[0] = 0, cD[1] = 0, 0) : (cD[0] = pD, cD[1] = iD - pD, iD - pD)
+      return pU < 0 ? (gU[0] = 0, gU[1] = 0, 0) : (gU[0] = pU, gU[1] = EU - pU, EU - pU)
     }
-    class wD {
-      constructor(DD, CD) {
-        this.Wt = DD, this.engine = CD, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
+    class KU {
+      constructor(UU, RU) {
+        this.jC = UU, this.engine = RU, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
       }
-      apply(DD, CD) {
-        if (!CD) return;
-        const cD = CD.getProjectionMatrix().m,
-          fD = 0 === iD && 0 === cD[15],
-          bD = CD.globalPosition,
+      apply(UU, RU) {
+        if (!RU) return;
+        const gU = RU.getProjectionMatrix().m,
+          PU = 0 === EU && 0 === gU[15],
+          TU = RU.globalPosition,
           {
-            engine: wD
+            engine: KU
           } = this,
-          SD = fD ? (0, pD.d)(cD, wD.getRenderWidth(), wD.getRenderHeight()) : 0;
-        bD.x === this.eyeX && bD.y === this.eyeY && bD.z === this.eyeZ && SD === this.focalPx && fD === this.culling || (this.epoch++, this.eyeX = bD.x, this.eyeY = bD.y, this.eyeZ = bD.z, this.focalPx = SD, this.culling = fD);
+          cU = PU ? (0, pU.c)(gU, KU.getRenderWidth(), KU.getRenderHeight()) : 0;
+        TU.x === this.eyeX && TU.y === this.eyeY && TU.z === this.eyeZ && cU === this.focalPx && PU === this.culling || (this.epoch++, this.eyeX = TU.x, this.eyeY = TU.y, this.eyeZ = TU.z, this.focalPx = cU, this.culling = PU);
         const {
-          epoch: BD,
-          range: yD
-        } = this, MD = this.Wt / 2, tD = MD * Math.sqrt(3), ZD = DD.data, oD = DD.length;
-        let vD = 0;
-        for (let iD = 0; iD < oD; iD++) {
-          const DD = ZD[iD],
-            CD = DD._noaFaceGroups;
-          if (CD && (DD._noaFaceEpoch !== BD || DD._noaFaceMaterial !== DD.material)) {
-            DD._noaFaceEpoch = BD, DD._noaFaceMaterial = DD.material;
-            const cD = DD.IH,
-              iD = cD && 1 === cD.length ? cD[0] : null;
-            let wD = -1;
-            if (fD && iD && (0, ID.t)(DD.material)) {
-              const cD = DD.position,
-                ID = bD.x - cD.x,
-                iD = bD.y - cD.y,
-                fD = bD.z - cD.z,
-                QD = ID - MD,
-                BD = iD - MD,
-                yD = fD - MD,
-                ZD = Math.sqrt(QD * QD + BD * BD + yD * yD) + tD;
-              wD = (0, pD.h)(CD, ID, iD, fD, (0, pD.e)(ZD, SD))
+          epoch: GU,
+          range: jU
+        } = this, uU = this.jC / 2, CU = uU * Math.sqrt(3), hU = UU.data, QU = UU.length;
+        let eU = 0;
+        for (let EU = 0; EU < QU; EU++) {
+          const UU = hU[EU],
+            RU = UU._noaFaceGroups;
+          if (RU && (UU._noaFaceEpoch !== GU || UU._noaFaceMaterial !== UU.material)) {
+            UU._noaFaceEpoch = GU, UU._noaFaceMaterial = UU.material;
+            const gU = UU.ZI,
+              EU = gU && 1 === gU.length ? gU[0] : null;
+            let KU = -1;
+            if (PU && EU && (0, tU.u)(UU.material)) {
+              const gU = UU.position,
+                tU = TU.x - gU.x,
+                EU = TU.y - gU.y,
+                PU = TU.z - gU.z,
+                qU = tU - uU,
+                GU = EU - uU,
+                jU = PU - uU,
+                hU = Math.sqrt(qU * qU + GU * GU + jU * jU) + CU;
+              KU = (0, pU.i)(RU, tU, EU, PU, (0, pU.f)(hU, cU))
             }
-            if (iD && wD !== DD._noaFaceMask) {
-              DD._noaFaceMask = wD;
-              let cD = 0,
-                pD = CD[ID.e]; - 1 !== wD && (pD = QD(CD, wD, yD), cD = yD[0]), DD._noaFaceCount = pD, iD.indexStart = 6 * cD, iD.indexCount = 6 * pD, iD.setBoundingInfo(DD.VJ())
+            if (EU && KU !== UU._noaFaceMask) {
+              UU._noaFaceMask = KU;
+              let gU = 0,
+                pU = RU[tU.i]; - 1 !== KU && (pU = qU(RU, KU, jU), gU = jU[0]), UU._noaFaceCount = pU, EU.indexStart = 6 * gU, EU.indexCount = 6 * pU, EU.setBoundingInfo(UU.lY())
             }
           }
-          CD && 0 === DD._noaFaceCount || (ZD[vD++] = DD)
+          RU && 0 === UU._noaFaceCount || (hU[eU++] = UU)
         }
-        DD.length = vD
+        UU.length = eU
       }
     }
   },
-  36917: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => QD,
-      d: () => bD
+  37046: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => qU,
+      g: () => TU
     });
-    const ID = new WeakSet;
-    let pD = 0;
-    const iD = new Set;
+    const tU = new WeakSet;
+    let pU = 0;
+    const EU = new Set;
 
-    function fD(DD, CD) {
-      DD._data = CD
+    function PU(UU, RU) {
+      UU._data = RU
     }
 
-    function bD(DD) {
-      var CD, cD;
-      (null !== (CD = null === (cD = DD.getBuffer()) || void 0 === cD ? void 0 : cD.LB) && void 0 !== CD ? CD : 0) > 0 && (ID.add(DD), 0 === pD ? fD(DD, null) : iD.add(DD))
+    function TU(UU) {
+      var RU, gU;
+      (null !== (RU = null === (gU = UU.getBuffer()) || void 0 === gU ? void 0 : gU.hG) && void 0 !== RU ? RU : 0) > 0 && (tU.add(UU), 0 === pU ? PU(UU, null) : EU.add(UU))
     }
 
-    function QD(DD) {
-      pD++;
-      for (const cD of function(DD) {
-          const CD = new Set;
-          for (const pD of DD) {
-            const DD = pD.geometry;
-            for (const pD of Object.values(null !== (cD = null === DD || void 0 === DD ? void 0 : DD.getVertexBuffers()) && void 0 !== cD ? cD : {})) {
-              var cD;
-              const DD = pD.getWrapperBuffer();
-              ID.has(DD) && CD.add(DD)
+    function qU(UU) {
+      pU++;
+      for (const gU of function(UU) {
+          const RU = new Set;
+          for (const pU of UU) {
+            const UU = pU.geometry;
+            for (const pU of Object.values(null !== (gU = null === UU || void 0 === UU ? void 0 : UU.getVertexBuffers()) && void 0 !== gU ? gU : {})) {
+              var gU;
+              const UU = pU.getWrapperBuffer();
+              tU.has(UU) && RU.add(UU)
             }
           }
-          return CD
-        }(DD)) cD.getData() || wD(cD), iD.add(cD);
-      let CD = !0;
+          return RU
+        }(UU)) gU.getData() || KU(gU), EU.add(gU);
+      let RU = !0;
       return () => {
-        if (CD && (CD = !1, pD--, 0 === pD)) {
-          for (const DD of iD) fD(DD, null);
-          iD.clear()
+        if (RU && (RU = !1, pU--, 0 === pU)) {
+          for (const UU of EU) PU(UU, null);
+          EU.clear()
         }
       }
     }
 
-    function wD(DD) {
-      const CD = DD.getBuffer();
-      if (!CD || !(CD.LB > 0)) return;
-      const cD = DD._engine,
-        ID = new Uint8Array(CD.LB);
-      cD.bindArrayBuffer(CD), cD._gl.getBufferSubData(cD._gl.ARRAY_BUFFER, 0, ID), cD._resetVertexBufferBinding(), fD(DD, ID)
+    function KU(UU) {
+      const RU = UU.getBuffer();
+      if (!RU || !(RU.hG > 0)) return;
+      const gU = UU._engine,
+        tU = new Uint8Array(RU.hG);
+      gU.bindArrayBuffer(RU), gU._gl.getBufferSubData(gU._gl.ARRAY_BUFFER, 0, tU), gU._resetVertexBufferBinding(), PU(UU, tU)
     }
   },
-  36924: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => fD,
-      e: () => iD,
-      g: () => QD,
-      k: () => ID,
-      l: () => bD,
-      p: () => pD,
-      t: () => wD
+  37062: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => PU,
+      i: () => EU,
+      l: () => qU,
+      n: () => tU,
+      o: () => TU,
+      q: () => pU,
+      u: () => KU
     });
-    const ID = 6,
-      pD = [0, 2, 4, 1, 3, 5, 0, 2],
-      iD = 6,
-      fD = [1, 0, 3, 2, 5, 4];
-    for (let SD = iD; SD < pD.length; SD++)
-      if (pD[SD] !== pD[SD - iD]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
-    const bD = pD.length + 1,
-      QD = (() => {
-        const DD = [];
-        for (let CD = 0; CD < iD; CD++) DD[pD[CD]] = CD;
-        return DD
+    const tU = 6,
+      pU = [0, 2, 4, 1, 3, 5, 0, 2],
+      EU = 6,
+      PU = [1, 0, 3, 2, 5, 4];
+    for (let cU = EU; cU < pU.length; cU++)
+      if (pU[cU] !== pU[cU - EU]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
+    const TU = pU.length + 1,
+      qU = (() => {
+        const UU = [];
+        for (let RU = 0; RU < EU; RU++) UU[pU[RU]] = RU;
+        return UU
       })();
 
-    function wD(DD) {
-      return !!DD && DD.backFaceCulling && (0 === DD.transparencyMode || 1 === DD.transparencyMode)
+    function KU(UU) {
+      return !!UU && UU.backFaceCulling && (0 === UU.transparencyMode || 1 === UU.transparencyMode)
     }
   },
-  36939: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => bD,
-      e: () => QD,
-      f: () => SD,
-      h: () => wD,
-      k: () => tD
+  37075: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => TU,
+      f: () => qU,
+      h: () => cU,
+      i: () => KU,
+      k: () => CU
     });
-    var ID = cD(36924);
-    const pD = 1 / 16,
-      iD = 1 / 64,
-      fD = 2048;
-    ID.k;
+    var tU = gU(37062);
+    const pU = 1 / 16,
+      EU = 1 / 64,
+      PU = 2048;
+    tU.n;
 
-    function bD(DD, CD, cD) {
-      return Math.min(Math.abs(DD[0] * CD), Math.abs(DD[5] * cD)) / 2
+    function TU(UU, RU, gU) {
+      return Math.min(Math.abs(UU[0] * RU), Math.abs(UU[5] * gU)) / 2
     }
 
-    function QD(DD, CD) {
-      return pD + iD * DD * DD / CD
+    function qU(UU, RU) {
+      return pU + EU * UU * UU / RU
     }
 
-    function wD(DD, CD, cD, pD, iD) {
-      const fD = ID.l;
-      return SD(DD[fD], DD[fD + 1], DD[fD + 2], DD[fD + 3], DD[fD + 4], DD[fD + 5], CD, cD, pD, iD)
+    function KU(UU, RU, gU, pU, EU) {
+      const PU = tU.o;
+      return cU(UU[PU], UU[PU + 1], UU[PU + 2], UU[PU + 3], UU[PU + 4], UU[PU + 5], RU, gU, pU, EU)
     }
 
-    function SD(DD, CD, cD, ID, pD, iD, fD, bD, QD, wD) {
-      return (fD <= DD - wD ? 0 : 1) | (fD >= CD + wD ? 0 : 2) | (bD <= cD - wD ? 0 : 4) | (bD >= ID + wD ? 0 : 8) | (QD <= pD - wD ? 0 : 16) | (QD >= iD + wD ? 0 : 32)
+    function cU(UU, RU, gU, tU, pU, EU, PU, TU, qU, KU) {
+      return (PU <= UU - KU ? 0 : 1) | (PU >= RU + KU ? 0 : 2) | (TU <= gU - KU ? 0 : 4) | (TU >= tU + KU ? 0 : 8) | (qU <= pU - KU ? 0 : 16) | (qU >= EU + KU ? 0 : 32)
     }
-    const BD = (() => {
-        const DD = [];
-        for (let CD = 0; CD < ID.p.length; CD++) {
-          let cD = 0;
-          for (let pD = CD + 1; pD <= ID.p.length; pD++) {
-            const iD = 1 << ID.p[pD - 1];
-            if (cD & iD) break;
-            cD |= iD, DD.push({
-              start: CD,
-              end: pD,
-              Ci: cD
+    const GU = (() => {
+        const UU = [];
+        for (let RU = 0; RU < tU.q.length; RU++) {
+          let gU = 0;
+          for (let pU = RU + 1; pU <= tU.q.length; pU++) {
+            const EU = 1 << tU.q[pU - 1];
+            if (gU & EU) break;
+            gU |= EU, UU.push({
+              start: RU,
+              end: pU,
+              PE: gU
             })
           }
         }
-        return DD
+        return UU
       })(),
-      yD = [];
+      jU = [];
 
-    function MD(DD, CD) {
-      const cD = ID.g[CD];
-      return DD[cD + 1] - DD[cD]
+    function uU(UU, RU) {
+      const gU = tU.l[RU];
+      return UU[gU + 1] - UU[gU]
     }
 
-    function tD(DD, CD, cD) {
-      let pD = 0;
-      for (let fD = 0; fD < ID.k; fD++) MD(DD, fD) > 0 && (pD |= 1 << fD);
-      if (0 === (CD &= pD)) return 0;
-      if (CD === pD) return cD[0] = 0, cD[1] = DD[ID.e], 1;
-      let iD = null,
-        bD = 1 / 0;
-      for (const wD of function(DD) {
-          let CD = yD[DD];
-          if (CD) return CD;
-          const cD = new Map,
-            ID = (DD, CD) => {
-              const ID = 4 * DD + CD.length / 2;
-              cD.has(ID) || cD.set(ID, {
-                Ci: DD,
-                windows: CD
+    function CU(UU, RU, gU) {
+      let pU = 0;
+      for (let PU = 0; PU < tU.n; PU++) uU(UU, PU) > 0 && (pU |= 1 << PU);
+      if (0 === (RU &= pU)) return 0;
+      if (RU === pU) return gU[0] = 0, gU[1] = UU[tU.i], 1;
+      let EU = null,
+        TU = 1 / 0;
+      for (const KU of function(UU) {
+          let RU = jU[UU];
+          if (RU) return RU;
+          const gU = new Map,
+            tU = (UU, RU) => {
+              const tU = 4 * UU + RU.length / 2;
+              gU.has(tU) || gU.set(tU, {
+                PE: UU,
+                windows: RU
               })
             };
-          for (const iD of BD)
-            if ((iD.Ci & DD) === DD && ID(iD.Ci, [iD.start, iD.end]), 0 !== (iD.Ci & DD))
-              for (const CD of BD) CD.start < iD.end || 0 !== (iD.Ci & CD.Ci) || 0 === (CD.Ci & DD) || ((iD.Ci | CD.Ci) & DD) !== DD || ID(iD.Ci | CD.Ci, [iD.start, iD.end, CD.start, CD.end]);
-          const pD = [...cD.values()];
-          return CD = pD.filter((DD => !pD.some((CD => CD !== DD && (CD.Ci & DD.Ci) === CD.Ci && CD.windows.length <= DD.windows.length)))), yD[DD] = CD, CD
-        }(CD)) {
-        let cD = (wD.windows.length / 2 - 1) * fD;
-        const QD = wD.Ci & ~CD & pD;
-        for (let CD = 0; CD < ID.k; CD++) QD & 1 << CD && (cD += MD(DD, CD));
-        cD < bD && (iD = wD, bD = cD)
+          for (const EU of GU)
+            if ((EU.PE & UU) === UU && tU(EU.PE, [EU.start, EU.end]), 0 !== (EU.PE & UU))
+              for (const RU of GU) RU.start < EU.end || 0 !== (EU.PE & RU.PE) || 0 === (RU.PE & UU) || ((EU.PE | RU.PE) & UU) !== UU || tU(EU.PE | RU.PE, [EU.start, EU.end, RU.start, RU.end]);
+          const pU = [...gU.values()];
+          return RU = pU.filter((UU => !pU.some((RU => RU !== UU && (RU.PE & UU.PE) === RU.PE && RU.windows.length <= UU.windows.length)))), jU[UU] = RU, RU
+        }(RU)) {
+        let gU = (KU.windows.length / 2 - 1) * PU;
+        const qU = KU.PE & ~RU & pU;
+        for (let RU = 0; RU < tU.n; RU++) qU & 1 << RU && (gU += uU(UU, RU));
+        gU < TU && (EU = KU, TU = gU)
       }
-      const QD = iD.windows;
-      for (let ID = 0; ID < QD.length; ID += 2) {
-        const CD = DD[QD[ID]];
-        cD[ID] = CD, cD[ID + 1] = DD[QD[ID + 1]] - CD
+      const qU = EU.windows;
+      for (let tU = 0; tU < qU.length; tU += 2) {
+        const RU = UU[qU[tU]];
+        gU[tU] = RU, gU[tU + 1] = UU[qU[tU + 1]] - RU
       }
-      return QD.length / 2
+      return qU.length / 2
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

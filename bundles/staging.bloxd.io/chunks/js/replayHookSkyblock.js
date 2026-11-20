@@ -1,52 +1,52 @@
 export const id = 49;
 export const ids = [49];
 export const modules = {
-  38013: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      SkyblockEntityFacing: () => bD,
-      needsSkyblockEntityFacing: () => fD
+  38190: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      SkyblockEntityFacing: () => TU,
+      needsSkyblockEntityFacing: () => PU
     });
-    var ID = cD(618),
-      pD = cD(4081),
-      iD = cD(38017);
+    var tU = gU(572),
+      pU = gU(3937),
+      EU = gU(38198);
 
-    function fD(DD, CD) {
-      if (DD.metaInfo === ID.e || "Iron Guardian" === DD.type || "Gold Guardian" === DD.type) return !0;
-      if ("Pig" === DD.type) return "sitting" === DD.pose;
-      if ("Person" !== DD.meshKind || void 0 === DD.meshOpts) return !1;
-      let cD = null === CD || void 0 === CD ? void 0 : CD.get(DD.meshOpts);
-      if (void 0 === cD) {
-        var iD, fD;
-        const ID = (0, pD.d)(DD);
-        cD = !1, "pig_napoleon" === (null === ID || void 0 === ID || null === (iD = ID.opts.textures) || void 0 === iD ? void 0 : iD.head) ? cD = !0 : "npc_pig_head" === (null === ID || void 0 === ID || null === (fD = ID.opts.textures) || void 0 === fD ? void 0 : fD.head) && (cD = "sitting" === ID.opts.pose || "sitting"), CD && (CD.size >= 256 && CD.clear(), CD.set(DD.meshOpts, cD))
+    function PU(UU, RU) {
+      if (UU.metaInfo === tU.c || "Iron Guardian" === UU.type || "Gold Guardian" === UU.type) return !0;
+      if ("Pig" === UU.type) return "sitting" === UU.pose;
+      if ("Person" !== UU.meshKind || void 0 === UU.meshOpts) return !1;
+      let gU = null === RU || void 0 === RU ? void 0 : RU.get(UU.meshOpts);
+      if (void 0 === gU) {
+        var EU, PU;
+        const tU = (0, pU.j)(UU);
+        gU = !1, "pig_napoleon" === (null === tU || void 0 === tU || null === (EU = tU.opts.textures) || void 0 === EU ? void 0 : EU.head) ? gU = !0 : "npc_pig_head" === (null === tU || void 0 === tU || null === (PU = tU.opts.textures) || void 0 === PU ? void 0 : PU.head) && (gU = "sitting" === tU.opts.pose || "sitting"), RU && (RU.size >= 256 && RU.clear(), RU.set(UU.meshOpts, gU))
       }
-      return "sitting" === cD ? "sitting" === DD.pose : cD
-    }(0, iD.f)("skyblock", ((DD, CD) => {
-      CD.setFacingTolerance(fD(DD) ? 0 : null)
+      return "sitting" === gU ? "sitting" === UU.pose : gU
+    }(0, EU.d)("skyblock", ((UU, RU) => {
+      RU.setFacingTolerance(PU(UU) ? 0 : null)
     }));
-    class bD {
-      constructor(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        this.api = DD, this.alsoVisit = CD, this.facing = new Set, this.nextFacing = new Set, this.meshFacingCache = new Map, this.visit = DD => {
-          var CD;
-          const cD = this.api.getEntityInfo(DD);
-          cD && (fD(cD, this.meshFacingCache) && (this.api.setFacingTolerance(DD, 0), this.nextFacing.add(DD)), null === (CD = this.alsoVisit) || void 0 === CD || CD.call(this, DD, cD))
+    class TU {
+      constructor(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        this.api = UU, this.alsoVisit = RU, this.facing = new Set, this.nextFacing = new Set, this.meshFacingCache = new Map, this.visit = UU => {
+          var RU;
+          const gU = this.api.getEntityInfo(UU);
+          gU && (PU(gU, this.meshFacingCache) && (this.api.setFacingTolerance(UU, 0), this.nextFacing.add(UU)), null === (RU = this.alsoVisit) || void 0 === RU || RU.call(this, UU, gU))
         }
       }
-      wy() {
+      HG() {
         const {
-          api: DD
-        } = this, CD = this.nextFacing;
-        DD.forEachEntity(this.visit);
-        for (const cD of this.facing) CD.has(cD) || DD.setFacingTolerance(cD, null);
-        this.facing.clear(), this.nextFacing = this.facing, this.facing = CD
+          api: UU
+        } = this, RU = this.nextFacing;
+        UU.forEachEntity(this.visit);
+        for (const gU of this.facing) RU.has(gU) || UU.setFacingTolerance(gU, null);
+        this.facing.clear(), this.nextFacing = this.facing, this.facing = RU
       }
       dispose() {
-        for (const DD of this.facing) this.api.setFacingTolerance(DD, null);
+        for (const UU of this.facing) this.api.setFacingTolerance(UU, null);
         this.facing.clear(), this.meshFacingCache.clear()
       }
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

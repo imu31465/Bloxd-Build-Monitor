@@ -1,76 +1,76 @@
 export const id = 9;
 export const ids = [9];
 export const modules = {
-  38569: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      default: () => pD
+  38799: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      default: () => pU
     });
-    var ID = cD(37425);
-    const pD = function(DD, CD, cD) {
-      let pD;
+    var tU = gU(37578);
+    const pU = function(UU, RU, gU) {
+      let pU;
       return {
         plugins: {
-          placeAgainstBeds: (0, ID.d)()
+          placeAgainstBeds: (0, tU.d)()
         },
-        onCreate: DD => {
-          pD = DD
+        onCreate: UU => {
+          pU = UU
         },
-        onPlayerAltAction: (DD, CD, cD, ID, iD, fD) => {
-          ((DD, CD) => {
-            if (!CD || "Mesh" !== pD.getEntityType(CD)) return;
-            const cD = pD.getEntityName(CD);
-            "Upgrades" === cD ? pD.openShop(DD, !1, "Upgrades") : "Items" === cD && pD.openShop(DD, !1, "Recommended")
-          })(DD, fD)
+        onPlayerAltAction: (UU, RU, gU, tU, EU, PU) => {
+          ((UU, RU) => {
+            if (!RU || "Mesh" !== pU.getEntityType(RU)) return;
+            const gU = pU.getEntityName(RU);
+            "Upgrades" === gU ? pU.openShop(UU, !1, "Upgrades") : "Items" === gU && pU.openShop(UU, !1, "Recommended")
+          })(UU, PU)
         }
       }
     }
   },
-  37425: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => bD
+  37578: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => TU
     });
-    var ID = cD(326),
-      pD = cD(36300),
-      iD = cD(4279);
-    const fD = ["Leaf Bed", "_Leaf Bed Head", ...ID.Gc.flatMap((DD => [`${DD} Bed`, `_${DD} Bed Head`, `${DD} Strongbed`, `_${DD} Strongbed Head`]))];
+    var tU = gU(311),
+      pU = gU(36470),
+      EU = gU(4147);
+    const PU = ["Leaf Bed", "_Leaf Bed Head", ...tU.Gc.flatMap((UU => [`${UU} Bed`, `_${UU} Bed Head`, `${UU} Strongbed`, `_${UU} Strongbed Head`]))];
 
-    function bD() {
-      let DD;
+    function TU() {
+      let UU;
       return {
-        onCreate(CD) {
-          DD = CD
+        onCreate(RU) {
+          UU = RU
         },
-        altVetoBlocks: fD,
-        onPlayerAttemptAltAction(CD, cD, ID, fD, bD, QD) {
-          var wD;
-          if ((0, pD.b)(DD.getMetaInfo(bD).rootName) && !DD.isEntityInteractable(QD) && (0, iD.e)(null === (wD = DD.FDD(CD)) || void 0 === wD ? void 0 : wD.typeObj.type)) return "preventAction"
+        altVetoBlocks: PU,
+        onPlayerAttemptAltAction(RU, gU, tU, PU, TU, qU) {
+          var KU;
+          if ((0, pU.d)(UU.getMetaInfo(TU).rootName) && !UU.isEntityInteractable(qU) && (0, EU.d)(null === (KU = UU.QRU(RU)) || void 0 === KU ? void 0 : KU.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  36300: (DD, CD, cD) => {
-    function ID(DD) {
-      return DD.includes("Leaf Bed")
+  36470: (UU, RU, gU) => {
+    function tU(UU) {
+      return UU.includes("Leaf Bed")
     }
 
-    function pD(DD) {
-      return / Bed(?: Head)?(?:\||$)/.test(DD) && !ID(DD)
+    function pU(UU) {
+      return / Bed(?: Head)?(?:\||$)/.test(UU) && !tU(UU)
     }
 
-    function iD(DD) {
-      return DD.includes(" Strongbed")
+    function EU(UU) {
+      return UU.includes(" Strongbed")
     }
 
-    function fD(DD) {
-      return ID(DD) || pD(DD) || iD(DD)
+    function PU(UU) {
+      return tU(UU) || pU(UU) || EU(UU)
     }
-    cD.d(CD, {
-      b: () => fD,
-      e: () => ID,
-      h: () => iD,
-      i: () => pD
+    gU.d(RU, {
+      d: () => PU,
+      e: () => tU,
+      i: () => EU,
+      m: () => pU
     })
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

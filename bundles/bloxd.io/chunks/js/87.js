@@ -1,54 +1,54 @@
 export const id = 87;
 export const ids = [87];
 export const modules = {
-  4585: (DD, CD, cD) => {
-    cD.d(CD, {
-      $: () => HD,
-      A: () => iD,
-      Bb: () => nD,
-      E: () => tD,
-      Eb: () => mD,
-      F: () => sD,
-      Hb: () => KD,
-      I: () => wD,
-      Lb: () => TD,
-      M: () => ZD,
-      Ob: () => VD,
-      Q: () => QD,
-      Sb: () => jD,
-      T: () => yD,
-      Wb: () => lD,
-      X: () => BD,
-      Xb: () => gD,
-      Y: () => OD,
-      Zb: () => XD,
-      _b: () => RD,
-      cc: () => pD,
-      db: () => UD,
-      dc: () => WD,
-      e: () => YD,
-      eb: () => PD,
-      g: () => dD,
-      hb: () => xD,
-      j: () => SD,
-      k: () => ND,
-      kb: () => GD,
-      l: () => kD,
-      lb: () => LD,
-      o: () => vD,
-      pb: () => zD,
-      qb: () => qD,
-      r: () => oD,
-      rb: () => aD,
-      s: () => fD,
-      tb: () => JD,
-      v: () => bD,
-      xb: () => MD,
-      y: () => ID
+  4456: (UU, RU, gU) => {
+    gU.d(RU, {
+      $: () => oU,
+      A: () => EU,
+      B: () => CU,
+      Db: () => mU,
+      F: () => AU,
+      G: () => KU,
+      Gb: () => YU,
+      Hb: () => HU,
+      J: () => hU,
+      L: () => qU,
+      Lb: () => VU,
+      M: () => jU,
+      N: () => GU,
+      Ob: () => XU,
+      R: () => JU,
+      Rb: () => vU,
+      S: () => nU,
+      Tb: () => fU,
+      V: () => bU,
+      X: () => wU,
+      Xb: () => xU,
+      Zb: () => sU,
+      b: () => FU,
+      bc: () => pU,
+      db: () => SU,
+      dc: () => iU,
+      e: () => kU,
+      g: () => cU,
+      hb: () => dU,
+      j: () => WU,
+      kb: () => rU,
+      n: () => yU,
+      nb: () => ZU,
+      p: () => eU,
+      pb: () => BU,
+      s: () => QU,
+      tb: () => aU,
+      v: () => PU,
+      w: () => TU,
+      wb: () => uU,
+      x: () => tU,
+      zb: () => IU
     });
-    const ID = 32,
-      pD = 33.333333333333336,
-      iD = {
+    const tU = 32,
+      pU = 33.333333333333336,
+      EU = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -82,18 +82,18 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      fD = {
+      PU = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      bD = {
+      TU = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      QD = {
+      qU = {
         AheadMask: 15,
         Joining: 64,
         Tiered: 128,
@@ -101,20 +101,20 @@ export const modules = {
         SwitchesShift: 20,
         CountMask: 4095
       },
-      wD = {
+      KU = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      SD = {
+      cU = {
         Look: 0,
         Remesh: 1
       },
-      BD = 8,
-      yD = 1,
-      MD = {
+      GU = 8,
+      jU = 1,
+      uU = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -123,7 +123,7 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      tD = {
+      CU = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -151,12 +151,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      ZD = {
+      hU = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      oD = {
+      QU = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -208,7 +208,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      vD = {
+      eU = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -218,10 +218,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      ND = 4,
-      gD = 4,
-      XD = 65535,
-      mD = {
+      WU = 4,
+      fU = 4,
+      xU = 65535,
+      mU = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -234,7 +234,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      nD = {
+      IU = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -242,12 +242,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      OD = 88,
-      PD = 0,
-      HD = 24,
-      UD = 48,
-      xD = 80,
-      qD = {
+      JU = 88,
+      wU = 0,
+      nU = 24,
+      bU = 48,
+      oU = 80,
+      ZU = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -258,18 +258,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      JD = {
+      aU = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      KD = {
+      YU = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      aD = {
+      BU = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -287,34 +287,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      VD = {
+      VU = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      zD = 65535,
-      jD = {
+      rU = 65535,
+      XU = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      lD = {
+      vU = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      LD = 2,
-      TD = {
+      dU = 2,
+      HU = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      GD = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      RD = {
+      SU = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      sU = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -326,7 +326,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      kD = {
+      yU = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -353,7 +353,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      dD = {
+      kU = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -511,8 +511,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      YD = 8,
-      WD = {
+      FU = 8,
+      iU = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -537,147 +537,147 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      sD = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      AU = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   },
-  39877: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => bD
+  40190: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => TU
     });
-    const ID = 1 << 20,
-      pD = 1 << 21,
-      iD = 1024,
-      fD = 2048;
+    const tU = 1 << 20,
+      pU = 1 << 21,
+      EU = 1024,
+      PU = 2048;
 
-    function bD(DD, CD, cD) {
-      const bD = DD + ID,
-        QD = CD + iD,
-        wD = cD + ID;
-      return bD < 0 || bD >= pD || wD < 0 || wD >= pD || QD < 0 || QD >= fD ? -1 : (bD * pD + wD) * fD + QD
+    function TU(UU, RU, gU) {
+      const TU = UU + tU,
+        qU = RU + EU,
+        KU = gU + tU;
+      return TU < 0 || TU >= pU || KU < 0 || KU >= pU || qU < 0 || qU >= PU ? -1 : (TU * pU + KU) * PU + qU
     }
   },
-  39875: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => ID,
-      g: () => fD,
-      k: () => pD,
-      m: () => iD,
-      o: () => SD,
-      p: () => wD,
-      s: () => QD,
-      v: () => bD
+  40186: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => tU,
+      d: () => PU,
+      e: () => pU,
+      g: () => EU,
+      j: () => cU,
+      m: () => KU,
+      p: () => qU,
+      s: () => TU
     });
-    cD(3260);
-    cD(39877);
+    gU(3153);
+    gU(40190);
 
-    function ID(DD) {}
+    function tU(UU) {}
 
-    function pD(DD) {}
+    function pU(UU) {}
 
-    function iD(DD) {}
+    function EU(UU) {}
 
-    function fD(DD) {}
+    function PU(UU) {}
 
-    function bD(DD) {}
+    function TU(UU) {}
 
-    function QD(DD, CD, cD) {}
+    function qU(UU, RU, gU) {}
 
-    function wD(DD) {}
+    function KU(UU) {}
 
-    function SD(DD) {}
+    function cU(UU) {}
   },
-  39852: (DD, CD, cD) => {
-    cD.d(CD, {
-      B: () => GD,
-      F: () => YD,
-      H: () => DC,
-      L: () => kD,
-      P: () => RD,
-      T: () => ED,
-      W: () => sD,
-      Z: () => cC,
-      _: () => hD,
-      c: () => CC,
-      cb: () => xD,
-      g: () => fC,
-      i: () => uD,
-      k: () => FD,
-      o: () => WD,
-      p: () => AD,
-      s: () => rD,
-      v: () => iC,
-      x: () => TD
+  40166: (UU, RU, gU) => {
+    gU.d(RU, {
+      B: () => FU,
+      E: () => UR,
+      I: () => yU,
+      L: () => sU,
+      M: () => zU,
+      O: () => AU,
+      S: () => gR,
+      W: () => LU,
+      X: () => oU,
+      c: () => RR,
+      e: () => PR,
+      f: () => DU,
+      h: () => OU,
+      k: () => iU,
+      o: () => lU,
+      q: () => NU,
+      t: () => ER,
+      w: () => HU,
+      y: () => SU
     });
-    var ID = cD(312),
-      pD = cD(280),
-      iD = cD(288),
-      fD = cD(16),
-      bD = cD(2727),
-      QD = cD(684),
-      wD = cD(4314),
-      SD = cD(2668),
-      BD = cD(3255),
-      yD = cD(90),
-      MD = cD(309),
-      tD = cD(36),
-      ZD = cD(298),
-      oD = cD(110),
-      vD = cD(639),
-      ND = cD(116),
-      gD = cD(114),
-      XD = cD(4585),
-      mD = cD(39860),
-      nD = cD(1763),
-      OD = cD(39866);
-    const PD = "bloxd-webgpuOffAfterLoss",
-      HD = "context:webgl",
-      UD = "probe:threw";
+    var tU = gU(299),
+      pU = gU(260),
+      EU = gU(263),
+      PU = gU(21),
+      TU = gU(2624),
+      qU = gU(641),
+      KU = gU(4183),
+      cU = gU(2577),
+      GU = gU(3151),
+      jU = gU(96),
+      uU = gU(291),
+      CU = gU(34),
+      hU = gU(274),
+      QU = gU(122),
+      eU = gU(594),
+      WU = gU(131),
+      fU = gU(124),
+      xU = gU(4456),
+      mU = gU(40172),
+      IU = gU(1675),
+      JU = gU(40177);
+    const wU = "bloxd-webgpuOffAfterLoss",
+      nU = "context:webgl",
+      bU = "probe:threw";
 
-    function xD(DD) {
-      let CD;
+    function oU(UU) {
+      let RU;
       try {
-        CD = DD.getContext("webgl", {
-          powerPreference: ND.d
+        RU = UU.getContext("webgl", {
+          powerPreference: WU.c
         })
       } catch {
-        CD = null
+        RU = null
       }
-      if (null === CD) return null;
-      let cD = null;
+      if (null === RU) return null;
+      let gU = null;
       try {
-        const DD = CD.getParameter(CD.MAX_TEXTURE_SIZE);
-        cD = "number" === typeof DD && DD > 0 ? DD : null
+        const UU = RU.getParameter(RU.MAX_TEXTURE_SIZE);
+        gU = "number" === typeof UU && UU > 0 ? UU : null
       } catch {
-        cD = null
+        gU = null
       }
       try {
-        var ID;
-        null === (ID = CD.getExtension("WEBGL_lose_context")) || void 0 === ID || ID.loseContext()
+        var tU;
+        null === (tU = RU.getExtension("WEBGL_lose_context")) || void 0 === tU || tU.loseContext()
       } catch {}
-      return cD
+      return gU
     }
-    const qD = new Set(["android_arm", "chromeos_other", "windows_intel_low"]),
-      JD = "mali_valhall",
-      KD = new Set(["nvidia_pre_turing"]);
+    const ZU = new Set(["android_arm", "chromeos_other", "windows_intel_low"]),
+      aU = "mali_valhall",
+      YU = new Set(["nvidia_pre_turing"]);
 
-    function aD(DD) {
-      return function(DD) {
+    function BU(UU) {
+      return function(UU) {
         try {
-          return DD()
+          return UU()
         } catch {
           return null
         }
       }((() => {
-        var CD, cD, ID, fD;
-        const bD = null !== (CD = null === (cD = DD.info) || void 0 === cD ? void 0 : cD.vendor) && void 0 !== CD ? CD : "";
-        return "windows" === (0, yD.getOperatingSystem)() && "" !== bD && "intel" !== (0, yD.normaliseGpuVendor)(bD) ? null : ((0, yD.seedGpuVendor)(bD), QD = (0, pD.e)(), wD = (0, iD.f)(bD, null !== (ID = null === (fD = DD.info) || void 0 === fD ? void 0 : fD.architecture) && void 0 !== ID ? ID : ""), qD.has(QD) ? "android_arm" === QD && wD === JD ? "webgpu_default" : "webgl_default" : null);
-        var QD, wD
+        var RU, gU, tU, PU;
+        const TU = null !== (RU = null === (gU = UU.info) || void 0 === gU ? void 0 : gU.vendor) && void 0 !== RU ? RU : "";
+        return "windows" === (0, jU.getOperatingSystem)() && "" !== TU && "intel" !== (0, jU.normaliseGpuVendor)(TU) ? null : ((0, jU.seedGpuVendor)(TU), qU = (0, pU.j)(), KU = (0, EU.g)(TU, null !== (tU = null === (PU = UU.info) || void 0 === PU ? void 0 : PU.architecture) && void 0 !== tU ? tU : ""), ZU.has(qU) ? "android_arm" === qU && KU === aU ? "webgpu_default" : "webgl_default" : null);
+        var qU, KU
       }))
     }
 
-    function VD() {
-      var DD;
+    function VU() {
+      var UU;
       return {
-        gpu: null !== (DD = navigator.gpu) && void 0 !== DD ? DD : null,
+        gpu: null !== (UU = navigator.gpu) && void 0 !== UU ? UU : null,
         webgl2: () => {
           try {
             return null !== document.createElement("canvas").getContext("webgl2")
@@ -685,317 +685,317 @@ export const modules = {
             return !1
           }
         },
-        webgl1: () => function(DD) {
-          let CD, cD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mD.e;
+        webgl1: () => function(UU) {
+          let RU, gU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mU.c;
           try {
-            CD = DD.getContext("webgl")
+            RU = UU.getContext("webgl")
           } catch {
-            CD = null
+            RU = null
           }
-          if (null === CD) return [HD];
-          const ID = [];
+          if (null === RU) return [nU];
+          const tU = [];
           try {
-            for (const pD of cD.extensions) null === CD.getExtension(pD) && ID.push(pD);
-            for (const [pD, iD] of Object.entries(cD.limits)) {
-              const DD = CD[pD],
-                cD = "number" === typeof DD ? CD.getParameter(DD) : null;
-              ("number" !== typeof cD || cD < iD) && ID.push(`limit:${pD}`)
+            for (const pU of gU.extensions) null === RU.getExtension(pU) && tU.push(pU);
+            for (const [pU, EU] of Object.entries(gU.limits)) {
+              const UU = RU[pU],
+                gU = "number" === typeof UU ? RU.getParameter(UU) : null;
+              ("number" !== typeof gU || gU < EU) && tU.push(`limit:${pU}`)
             }
-            const DD = CD.getShaderPrecisionFormat(CD.VERTEX_SHADER, CD.HIGH_FLOAT);
-            (null === DD || DD.precision < cD.vertexHighFloatBits) && ID.push("precision:vertex_high_float")
+            const UU = RU.getShaderPrecisionFormat(RU.VERTEX_SHADER, RU.HIGH_FLOAT);
+            (null === UU || UU.precision < gU.vertexHighFloatBits) && tU.push("precision:vertex_high_float")
           } catch {
-            ID.push(UD)
+            tU.push(bU)
           }
           try {
-            var pD;
-            null === (pD = CD.getExtension("WEBGL_lose_context")) || void 0 === pD || pD.loseContext()
+            var pU;
+            null === (pU = RU.getExtension("WEBGL_lose_context")) || void 0 === pU || pU.loseContext()
           } catch {}
-          return ID
+          return tU
         }(document.createElement("canvas")),
-        offAfterLoss: DD => zD((() => DD ? (0, ZD.x)() : fD.d.isWebGpuOffAfterLoss())),
-        oldIntelDriver: DD => zD((() => (0, oD.e)(DD))),
-        intelGen9: DD => zD((() => (0, oD.l)(DD))),
-        gpuClassWebGlArm: aD,
-        storeGpuClassVerdict: DD => {
-          tD.h.setItem(oD.G, DD)
+        offAfterLoss: UU => rU((() => UU ? (0, hU.x)() : PU.b.isWebGpuOffAfterLoss())),
+        oldIntelDriver: UU => rU((() => (0, QU.i)(UU))),
+        intelGen9: UU => rU((() => (0, QU.p)(UU))),
+        gpuClassWebGlArm: BU,
+        storeGpuClassVerdict: UU => {
+          CU.k.setItem(QU.F, UU)
         },
-        gpuClassOnWebGl: DD => (0, vD.e)(DD),
+        gpuClassOnWebGl: UU => (0, eU.b)(UU),
         override: () => function() {
-          if ((0, bD.o)("render") && "webgl1" === (0, bD.n)("renderer")) return "webgl1";
-          const DD = [() => new URLSearchParams(window.location.search).get(SD.d), () => tD.h.getItem(SD.f), () => {
-            const DD = localStorage.getItem(PD);
-            return null !== DD && localStorage.removeItem(PD), "1" === DD ? "webgl2" : null
+          if ((0, TU.l)("render") && "webgl1" === (0, TU.j)("renderer")) return "webgl1";
+          const UU = [() => new URLSearchParams(window.location.search).get(cU.e), () => CU.k.getItem(cU.i), () => {
+            const UU = localStorage.getItem(wU);
+            return null !== UU && localStorage.removeItem(wU), "1" === UU ? "webgl2" : null
           }];
-          for (const CD of DD) {
-            let DD = null;
+          for (const RU of UU) {
+            let UU = null;
             try {
-              DD = jD(CD())
+              UU = XU(RU())
             } catch {}
-            if (null !== DD) return DD
+            if (null !== UU) return UU
           }
           return null
         }(),
-        claimed: () => jD((0, QD.m)()),
+        claimed: () => XU((0, qU.k)()),
         webGpuSetting: () => {
-          const DD = tD.h.getItem(ID.jc);
-          return "boolean" === typeof DD ? DD : null
+          const UU = CU.k.getItem(tU.gc);
+          return "boolean" === typeof UU ? UU : null
         },
-        heldBack: () => vD.h,
-        storeHoldbackSpared: DD => {
-          tD.h.setItem(oD.C, DD)
+        heldBack: () => eU.f,
+        storeHoldbackSpared: UU => {
+          CU.k.setItem(QU.D, UU)
         },
-        intelGen9OnWebGl: () => vD.j,
-        gt: () => zD((() => (0, BD.g)(yD.featureFlags.settings.canUseShaderPacks))),
-        windows: () => zD((() => "windows" === (0, yD.getOperatingSystem)()))
+        intelGen9OnWebGl: () => eU.i,
+        Fu: () => rU((() => (0, GU.f)(jU.featureFlags.settings.canUseShaderPacks))),
+        windows: () => rU((() => "windows" === (0, jU.getOperatingSystem)()))
       }
     }
 
-    function zD(DD) {
+    function rU(UU) {
       try {
-        return DD()
+        return UU()
       } catch {
         return !1
       }
     }
 
-    function jD(DD) {
-      return "lite" === DD ? "webgpu" : "webgl2" === DD || "babylon" === DD ? "webgl" : null
+    function XU(UU) {
+      return "lite" === UU ? "webgpu" : "webgl2" === UU || "babylon" === UU ? "webgl" : null
     }
-    async function lD() {
-      let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : VD();
-      const CD = await async function(DD) {
-        const CD = function(DD) {
-            const CD = DD.override(),
-              cD = DD.webGpuSetting(),
-              ID = null === CD && !0 !== cD && DD.gt(),
-              pD = null !== CD || null !== cD || ID ? null : DD.claimed(),
-              iD = null !== CD ? "override" : !0 === cD ? "setting" : ID ? "pack" : !1 === cD ? "setting" : null !== pD ? "claim" : "default",
-              fD = function(DD) {
-                return "override" === DD || "setting" === DD
-              }(iD);
-            if ("webgl" === CD || "webgl1" === CD || "webgl" === pD || "setting" === iD && !1 === cD) return {
-              source: iD,
-              asked: fD,
+    async function vU() {
+      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : VU();
+      const RU = await async function(UU) {
+        const RU = function(UU) {
+            const RU = UU.override(),
+              gU = UU.webGpuSetting(),
+              tU = null === RU && !0 !== gU && UU.Fu(),
+              pU = null !== RU || null !== gU || tU ? null : UU.claimed(),
+              EU = null !== RU ? "override" : !0 === gU ? "setting" : tU ? "pack" : !1 === gU ? "setting" : null !== pU ? "claim" : "default",
+              PU = function(UU) {
+                return "override" === UU || "setting" === UU
+              }(EU);
+            if ("webgl" === RU || "webgl1" === RU || "webgl" === pU || "setting" === EU && !1 === gU) return {
+              source: EU,
+              asked: PU,
               refused: "not_requested"
             };
-            if (!DD.gpu) return {
-              source: iD,
-              asked: fD,
+            if (!UU.gpu) return {
+              source: EU,
+              asked: PU,
               refused: "no_webgpu_api"
             };
-            const bD = "default" === iD && DD.heldBack();
-            if (bD && !DD.windows()) return {
-              source: iD,
-              asked: fD,
+            const TU = "default" === EU && UU.heldBack();
+            if (TU && !UU.windows()) return {
+              source: EU,
+              asked: PU,
               refused: "webgl_holdback"
             };
-            if (!fD && DD.offAfterLoss("pack" === iD)) return {
-              source: iD,
-              asked: fD,
-              refused: bD ? "webgl_holdback" : "off_after_loss"
+            if (!PU && UU.offAfterLoss("pack" === EU)) return {
+              source: EU,
+              asked: PU,
+              refused: TU ? "webgl_holdback" : "off_after_loss"
             };
             return {
-              source: iD,
-              asked: fD,
-              heldBack: bD,
-              gpu: DD.gpu
+              source: EU,
+              asked: PU,
+              heldBack: TU,
+              gpu: UU.gpu
             }
-          }(DD),
+          }(UU),
           {
-            source: cD
-          } = CD,
-          ID = !CD.asked,
-          pD = "gpu" in CD && CD.heldBack,
-          fD = function(DD) {
-            return pD && "none" !== DD ? {
+            source: gU
+          } = RU,
+          tU = !RU.asked,
+          pU = "gpu" in RU && RU.heldBack,
+          PU = function(UU) {
+            return pU && "none" !== UU ? {
               reason: "webgl_holdback",
               adapter: null,
-              source: cD
+              source: gU
             } : {
-              reason: DD,
+              reason: UU,
               adapter: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-              source: cD
+              source: gU
             }
           };
-        if (!("gpu" in CD)) return fD(CD.refused);
-        let bD;
+        if (!("gpu" in RU)) return PU(RU.refused);
+        let TU;
         try {
-          bD = await (0, nD.k)((0, gD.h)(CD.gpu), IC, `requestAdapter didn't settle in ${IC/1e3} s`)
+          TU = await (0, IU.i)((0, fU.j)(RU.gpu), tR, `requestAdapter didn't settle in ${tR/1e3} s`)
         } catch {
-          return fD("adapter_error")
+          return PU("adapter_error")
         }
-        if ("string" === typeof bD) return fD(bD);
-        const QD = (0, gD.b)(bD);
-        if ((0, gD.c)(bD)) return fD("software_adapter", QD);
-        const wD = DD.windows() && function(DD) {
-          return KD.has((0, iD.f)(DD.vendor, DD.architecture))
-        }(QD);
-        if (DD.storeHoldbackSpared(wD), pD && !wD) return fD("webgl_holdback");
-        const SD = DD.intelGen9(bD),
-          BD = SD ? null : DD.gpuClassWebGlArm(bD);
-        if (DD.storeGpuClassVerdict(null !== BD && void 0 !== BD && BD), ID && DD.oldIntelDriver(bD)) return fD("old_intel_driver", QD);
-        if ("default" === cD && DD.intelGen9OnWebGl() && SD) return fD("intel_gen9", QD);
-        if ("default" === cD && null !== BD && DD.gpuClassOnWebGl(BD)) return fD("gpu_class_webgl", QD);
-        return fD("none", QD)
-      }(DD);
-      if ("none" === CD.reason) return {
+        if ("string" === typeof TU) return PU(TU);
+        const qU = (0, fU.d)(TU);
+        if ((0, fU.f)(TU)) return PU("software_adapter", qU);
+        const KU = UU.windows() && function(UU) {
+          return YU.has((0, EU.g)(UU.vendor, UU.architecture))
+        }(qU);
+        if (UU.storeHoldbackSpared(KU), pU && !KU) return PU("webgl_holdback");
+        const cU = UU.intelGen9(TU),
+          GU = cU ? null : UU.gpuClassWebGlArm(TU);
+        if (UU.storeGpuClassVerdict(null !== GU && void 0 !== GU && GU), tU && UU.oldIntelDriver(TU)) return PU("old_intel_driver", qU);
+        if ("default" === gU && UU.intelGen9OnWebGl() && cU) return PU("intel_gen9", qU);
+        if ("default" === gU && null !== GU && UU.gpuClassOnWebGl(GU)) return PU("gpu_class_webgl", qU);
+        return PU("none", qU)
+      }(UU);
+      if ("none" === RU.reason) return {
         backend: "webgpu",
-        ...CD
+        ...RU
       };
-      if ("webgl1" !== DD.override() && DD.webgl2()) return {
+      if ("webgl1" !== UU.override() && UU.webgl2()) return {
         backend: "webgl",
-        ...CD
+        ...RU
       };
-      const cD = DD.webgl1();
-      return 0 === cD.length ? {
+      const gU = UU.webgl1();
+      return 0 === gU.length ? {
         backend: "webgl1",
-        ...CD
+        ...RU
       } : {
-        missing: cD
+        missing: gU
       }
     }
-    let LD = !1;
-    async function TD(DD) {
-      let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : VD();
-      if (null === DD) return null;
-      const cD = await lD(CD);
-      return LD = !("missing" in cD) && "webgpu" === cD.backend && "claim" === cD.source, "missing" in cD ? cD : {
-        ...cD,
-        load: DD[cD.backend]
+    let dU = !1;
+    async function HU(UU) {
+      let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : VU();
+      if (null === UU) return null;
+      const gU = await vU(RU);
+      return dU = !("missing" in gU) && "webgpu" === gU.backend && "claim" === gU.source, "missing" in gU ? gU : {
+        ...gU,
+        load: UU[gU.backend]
       }
     }
-    async function GD(DD, CD) {
-      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : VD().gpu,
-        ID = arguments.length > 3 ? arguments[3] : void 0;
-      if ("webgpu" !== DD.backend) return !1;
-      const pD = dD(CD, "indirectDraws", "off", "on");
-      if (null !== pD) return pD;
-      if (null !== DD.adapter && (0, oD.n)(DD.adapter, ID)) return !0;
-      if (null === cD) return !1;
+    async function SU(UU, RU) {
+      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : VU().gpu,
+        tU = arguments.length > 3 ? arguments[3] : void 0;
+      if ("webgpu" !== UU.backend) return !1;
+      const pU = kU(RU, "indirectDraws", "off", "on");
+      if (null !== pU) return pU;
+      if (null !== UU.adapter && (0, QU.q)(UU.adapter, tU)) return !0;
+      if (null === gU) return !1;
       try {
-        var iD;
-        const DD = await (0, nD.k)(cD.requestAdapter({
+        var EU;
+        const UU = await (0, IU.i)(gU.requestAdapter({
           powerPreference: "low-power"
-        }), IC, `the low-power requestAdapter didn't settle in ${IC/1e3} s`);
-        return (0, oD.n)(null !== (iD = null === DD || void 0 === DD ? void 0 : DD.info) && void 0 !== iD ? iD : {}, ID)
-      } catch (fD) {
-        return fD instanceof nD.e
+        }), tR, `the low-power requestAdapter didn't settle in ${tR/1e3} s`);
+        return (0, QU.q)(null !== (EU = null === UU || void 0 === UU ? void 0 : UU.info) && void 0 !== EU ? EU : {}, tU)
+      } catch (PU) {
+        return PU instanceof IU.f
       }
     }
 
-    function RD(DD, CD, cD) {
-      if ("webgpu" !== DD.backend) return !1;
-      const ID = dD(CD, "terrainFetch", "texture", "storage");
-      return null !== ID ? ID : null !== DD.adapter && (0, oD.g)(DD.adapter, cD)
+    function sU(UU, RU, gU) {
+      if ("webgpu" !== UU.backend) return !1;
+      const tU = kU(RU, "terrainFetch", "texture", "storage");
+      return null !== tU ? tU : null !== UU.adapter && (0, QU.l)(UU.adapter, gU)
     }
 
-    function kD(DD, CD, cD) {
-      if ("webgpu" !== DD.backend) return !1;
-      const ID = dD(CD, "sceneDepth", "off", "on");
-      return null !== ID ? ID : null !== DD.adapter && (0, oD.k)(DD.adapter, cD)
+    function yU(UU, RU, gU) {
+      if ("webgpu" !== UU.backend) return !1;
+      const tU = kU(RU, "sceneDepth", "off", "on");
+      return null !== tU ? tU : null !== UU.adapter && (0, QU.n)(UU.adapter, gU)
     }
 
-    function dD(DD, CD, cD, ID) {
-      const pD = new URLSearchParams(DD).get(CD),
-        iD = null !== pD && void 0 !== pD ? pD : (0, QD.f)(CD);
-      return iD !== cD && iD !== ID ? null : (LD ||= null === pD, iD === cD)
+    function kU(UU, RU, gU, tU) {
+      const pU = new URLSearchParams(UU).get(RU),
+        EU = null !== pU && void 0 !== pU ? pU : (0, qU.g)(RU);
+      return EU !== gU && EU !== tU ? null : (dU ||= null === pU, EU === gU)
     }
 
-    function YD(DD, CD) {
-      return "webgl" === DD.backend && (0, iD.m)(CD)
+    function FU(UU, RU) {
+      return "webgl" === UU.backend && (0, EU.p)(RU)
     }
 
-    function WD(DD) {
-      return null !== DD && "missing" in DD
+    function iU(UU) {
+      return null !== UU && "missing" in UU
     }
 
-    function sD(DD) {
-      let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : fD.d;
+    function AU(UU) {
+      let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : PU.b;
       try {
-        const cD = "start_failed" === DD || "pipeline_failed" === DD,
-          ID = CD.turnOffWebGpuAfterDeviceLoss(cD ? "visible" : (0, ZD.j)((0, MD.g)()));
-        return !LD || ID && !CD.isWebGpuOffAfterLoss() || (0, QD.t)("webgpuLoss"), CD.isWebGpuOffAfterLoss() && "webgpu" === jD(tD.h.getItem(SD.f)) && tD.h.removeItem(SD.f), (0, bD.o)("webgpuloss") && (0, wD.b)((CD => {
-          CD.noteWebGpuLoss("wasm", ID ? DD : `${DD}, which storage didn't keep`, null)
-        })), ID
+        const gU = "start_failed" === UU || "pipeline_failed" === UU,
+          tU = RU.turnOffWebGpuAfterDeviceLoss(gU ? "visible" : (0, hU.g)((0, uU.j)()));
+        return !dU || tU && !RU.isWebGpuOffAfterLoss() || (0, qU.t)("webgpuLoss"), RU.isWebGpuOffAfterLoss() && "webgpu" === XU(CU.k.getItem(cU.i)) && CU.k.removeItem(cU.i), (0, TU.l)("webgpuloss") && (0, KU.b)((RU => {
+          RU.noteWebGpuLoss("wasm", tU ? UU : `${UU}, which storage didn't keep`, null)
+        })), tU
       } catch {
         return !1
       }
     }
 
-    function ED(DD) {
-      return (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : !hD()) ? sD(DD) ? null : "storage won't keep WebGPU off" : "the URL asks for WebGPU"
+    function zU(UU) {
+      return (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : !LU()) ? AU(UU) ? null : "storage won't keep WebGPU off" : "the URL asks for WebGPU"
     }
-    const eD = "framePacing";
+    const MU = "framePacing";
 
-    function uD(DD) {
-      const CD = new URLSearchParams(DD).get(eD);
-      return null !== CD && /^\d{1,9}$/.test(CD) ? Number(CD) : void 0
+    function DU(UU) {
+      const RU = new URLSearchParams(UU).get(MU);
+      return null !== RU && /^\d{1,9}$/.test(RU) ? Number(RU) : void 0
     }
 
-    function hD() {
-      let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.location.search;
+    function LU() {
+      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.location.search;
       try {
-        return "webgpu" === jD(new URLSearchParams(DD).get(SD.d))
+        return "webgpu" === XU(new URLSearchParams(UU).get(cU.e))
       } catch {
         return !1
       }
     }
 
-    function rD(DD) {
-      return !!AD(DD) || DD instanceof Error && !(DD instanceof WebAssembly.RuntimeError) && DD.message.startsWith(`${XD.g.RenderSurfaceUnusable}:`)
+    function NU(UU) {
+      return !!lU(UU) || UU instanceof Error && !(UU instanceof WebAssembly.RuntimeError) && UU.message.startsWith(`${xU.e.RenderSurfaceUnusable}:`)
     }
 
-    function AD(DD) {
+    function lU(UU) {
       const {
-        name: CD,
-        message: cD
-      } = null !== DD && void 0 !== DD ? DD : {};
-      return "InvalidStateError" === CD && "string" === typeof cD && cD.startsWith("GPUDevice.")
+        name: RU,
+        message: gU
+      } = null !== UU && void 0 !== UU ? UU : {};
+      return "InvalidStateError" === RU && "string" === typeof gU && gU.startsWith("GPUDevice.")
     }
 
-    function FD(DD) {
-      const CD = DD;
-      return "function" === typeof CD.bcD && "function" === typeof CD.QcD ? CD : null
+    function OU(UU) {
+      const RU = UU;
+      return "function" === typeof RU.JgU && "function" === typeof RU.wgU ? RU : null
     }
 
-    function DC(DD) {
-      return "function" === typeof DD.ocD ? DD : null
+    function UR(UU) {
+      return "function" === typeof UU.BgU ? UU : null
     }
-    const CC = "openRenderer";
+    const RR = "openRenderer";
 
-    function cC(DD) {
-      const CD = null === DD || void 0 === DD ? void 0 : DD.dpD();
-      return void 0 === CD ? void 0 : new Error(CD)
+    function gR(UU) {
+      const RU = null === UU || void 0 === UU ? void 0 : UU.zpU();
+      return void 0 === RU ? void 0 : new Error(RU)
     }
-    const IC = 5e3,
-      pC = 15e3;
+    const tR = 5e3,
+      pR = 15e3;
 
-    function iC(DD, CD, cD, ID, pD, iD) {
-      return (0, nD.k)(function(DD, CD, cD, ID, pD, iD) {
-        return (0, OD.e)(DD, CD, (() => DD.ocD(cD, ID, pD, iD.indirectHangs, iD.storagePullBreaks, iD.splitPassBreaks, iD.framesAhead, iD.instancedTerrainSlow)))
-      }(DD, CD, cD, ID, pD, iD), pC, `${XD.g.RenderSurfaceUnusable}: the renderer didn't open in ${pC/1e3} s`, bC)
+    function ER(UU, RU, gU, tU, pU, EU) {
+      return (0, IU.i)(function(UU, RU, gU, tU, pU, EU) {
+        return (0, JU.g)(UU, RU, (() => UU.BgU(gU, tU, pU, EU.indirectHangs, EU.storagePullBreaks, EU.splitPassBreaks, EU.framesAhead, EU.instancedTerrainSlow)))
+      }(UU, RU, gU, tU, pU, EU), pR, `${xU.e.RenderSurfaceUnusable}: the renderer didn't open in ${pR/1e3} s`, TR)
     }
-    async function fC(DD, CD, cD, ID, pD, iD) {
-      if ("function" !== typeof DD.aiD) throw new Error("this core has no set_renderer");
-      const fD = await iC(CD, CC, cD, pD, ID, iD);
+    async function PR(UU, RU, gU, tU, pU, EU) {
+      if ("function" !== typeof UU.VEU) throw new Error("this core has no set_renderer");
+      const PU = await ER(RU, RR, gU, pU, tU, EU);
       try {
-        DD.aiD(fD)
-      } catch (bD) {
-        throw bC(fD), bD
+        UU.VEU(PU)
+      } catch (TU) {
+        throw TR(PU), TU
       }
     }
 
-    function bC(DD) {
+    function TR(UU) {
       try {
-        DD.free()
+        UU.free()
       } catch {}
     }
   },
-  39860: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => ID
+  40172: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => tU
     });
-    const ID = {
+    const tU = {
       extensions: ["ANGLE_instanced_arrays", "OES_vertex_array_object", "OES_element_index_uint", "OES_standard_derivatives"],
       limits: {
         MAX_VERTEX_ATTRIBS: 16,
@@ -1008,389 +1008,361 @@ export const modules = {
       vertexHighFloatBits: 23
     }
   },
-  39883: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => QD,
-      g: () => bD
+  40193: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => qU,
+      g: () => TU
     });
-    var ID = cD(706),
-      pD = cD(710);
+    var tU = gU(657),
+      pU = gU(663);
 
-    function iD(DD, CD) {
-      const cD = null === CD ? void 0 : ID.d.get(CD);
-      return "all" === cD || "webgl" === cD && "webgpu" !== DD.backend ? CD : null
+    function EU(UU, RU) {
+      const gU = null === RU ? void 0 : tU.b.get(RU);
+      return "all" === gU || "webgl" === gU && "webgpu" !== UU.backend ? RU : null
     }
 
-    function fD(DD) {
-      return "software_adapter" === DD.reason ? null : DD.adapter
+    function PU(UU) {
+      return "software_adapter" === UU.reason ? null : UU.adapter
     }
 
-    function bD(DD, CD) {
-      const cD = (0, ID.p)();
-      return null === cD ? null : (0, ID.f)(fD(DD), cD, CD ? ID.k : ID.g)
+    function TU(UU, RU) {
+      const gU = (0, tU.s)();
+      return null === gU ? null : (0, tU.f)(PU(UU), gU, RU ? tU.l : tU.i)
     }
 
-    function QD(DD, CD) {
-      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : pD.m;
-      const ID = iD(DD, CD);
-      return null !== ID && "webgl" === DD.backend && cD(ID) ? null : ID
+    function qU(UU, RU) {
+      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : pU.j;
+      const tU = EU(UU, RU);
+      return null !== tU && "webgl" === UU.backend && gU(tU) ? null : tU
     }
   },
-  39866: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => pD,
-      e: () => SD,
-      g: () => fD,
-      j: () => QD
+  40177: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => pU,
+      g: () => cU,
+      j: () => PU,
+      k: () => qU
     });
-    var ID = cD(39872);
-    class pD extends Error {
-      constructor(DD, CD) {
-        let cD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        super(`${DD}: the module trapped${cD?" in an earlier call":""}: ${String(CD)}`, {
-          cause: CD
-        }), this.site = DD, this.trap = CD, this.earlier = cD, this.name = "ModuleTrapError", CD instanceof Error && void 0 !== CD.stack && (this.stack = `${this.name}: ${this.message}\n${CD.stack}`)
+    var tU = gU(35889);
+    class pU extends Error {
+      constructor(UU, RU) {
+        let gU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        super(`${UU}: the module trapped${gU?" in an earlier call":""}: ${String(RU)}`, {
+          cause: RU
+        }), this.site = UU, this.trap = RU, this.earlier = gU, this.name = "ModuleTrapError", RU instanceof Error && void 0 !== RU.stack && (this.stack = `${this.name}: ${this.message}\n${RU.stack}`)
       }
     }
-    const iD = new WeakMap;
+    const EU = new WeakMap;
 
-    function fD(DD) {
-      return iD.has(DD)
+    function PU(UU) {
+      return EU.has(UU)
     }
 
-    function bD(DD, CD) {
-      iD.has(DD) || iD.set(DD, CD)
+    function TU(UU, RU) {
+      EU.has(UU) || EU.set(UU, RU)
     }
 
-    function QD(DD, CD) {
-      return !!(0, ID.e)(CD) && (bD(DD, CD), !0)
+    function qU(UU, RU) {
+      return !!(0, tU.h)(RU) && (TU(UU, RU), !0)
     }
-    const wD = [
-      ["error", DD => DD.error],
-      ["unhandledrejection", DD => DD.reason]
+    const KU = [
+      ["error", UU => UU.error],
+      ["unhandledrejection", UU => UU.reason]
     ];
 
-    function SD(DD, CD, cD) {
-      let fD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "function" === typeof globalThis.addEventListener ? globalThis : null;
-      return iD.has(DD) ? Promise.reject(new pD(CD, iD.get(DD), !0)) : new Promise(((iD, QD) => {
-        const SD = cD => {
-            bD(DD, cD), MD(), QD(new pD(CD, cD))
+    function cU(UU, RU, gU) {
+      let PU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "function" === typeof globalThis.addEventListener ? globalThis : null;
+      return EU.has(UU) ? Promise.reject(new pU(RU, EU.get(UU), !0)) : new Promise(((EU, qU) => {
+        const cU = gU => {
+            TU(UU, gU), uU(), qU(new pU(RU, gU))
           },
-          BD = DD => {
-            DD instanceof WebAssembly.RuntimeError ? SD(DD) : (MD(), QD(DD))
+          GU = UU => {
+            UU instanceof WebAssembly.RuntimeError ? cU(UU) : (uU(), qU(UU))
           },
-          yD = wD.map((DD => {
-            let [CD, cD] = DD;
-            return [CD, DD => {
-              const CD = cD(DD);
-              (0, ID.e)(CD) && SD(CD)
+          jU = KU.map((UU => {
+            let [RU, gU] = UU;
+            return [RU, UU => {
+              const RU = gU(UU);
+              (0, tU.h)(RU) && cU(RU)
             }]
           })),
-          MD = () => {
-            for (const [DD, CD] of yD) null === fD || void 0 === fD || fD.removeEventListener(DD, CD)
+          uU = () => {
+            for (const [UU, RU] of jU) null === PU || void 0 === PU || PU.removeEventListener(UU, RU)
           };
-        for (const [DD, CD] of yD) null === fD || void 0 === fD || fD.addEventListener(DD, CD);
-        let tD;
+        for (const [UU, RU] of jU) null === PU || void 0 === PU || PU.addEventListener(UU, RU);
+        let CU;
         try {
-          tD = cD()
-        } catch (ZD) {
-          return void BD(ZD)
+          CU = gU()
+        } catch (hU) {
+          return void GU(hU)
         }
-        tD.then((DD => {
-          MD(), iD(DD)
-        }), BD)
+        CU.then((UU => {
+          uU(), EU(UU)
+        }), GU)
       }))
     }
   },
-  39890: (DD, CD, cD) => {
-    cD.d(CD, {
-      B: () => RD,
-      F: () => GD,
-      G: () => VD,
-      I: () => PD,
-      M: () => KD,
-      N: () => aD,
-      R: () => jD,
-      S: () => JD,
-      e: () => OD,
-      g: () => XD,
-      j: () => lD,
-      k: () => zD,
-      o: () => gD,
-      p: () => nD,
-      s: () => vD,
-      u: () => UD,
-      y: () => qD
+  40201: (UU, RU, gU) => {
+    gU.d(RU, {
+      A: () => sU,
+      D: () => SU,
+      H: () => VU,
+      I: () => wU,
+      L: () => YU,
+      P: () => BU,
+      S: () => XU,
+      V: () => aU,
+      b: () => JU,
+      f: () => xU,
+      h: () => vU,
+      j: () => rU,
+      m: () => fU,
+      o: () => IU,
+      r: () => eU,
+      v: () => bU,
+      z: () => ZU
     });
-    var ID = cD(208),
-      pD = cD(288),
-      iD = cD(16),
-      fD = cD(309),
-      bD = cD(36),
-      QD = cD(39852),
-      wD = cD(39883),
-      SD = cD(39896),
-      BD = (cD(39875), cD(39900)),
-      yD = cD(39908);
-    const MD = "wasmJoinBuild";
-    let tD = null,
-      ZD = null,
-      oD = null;
+    var tU = gU(201),
+      pU = gU(263),
+      EU = gU(21),
+      PU = gU(291),
+      TU = gU(34),
+      qU = gU(40166),
+      KU = gU(40193),
+      cU = gU(40203),
+      GU = (gU(40186), gU(40207)),
+      jU = gU(40210);
+    const uU = "wasmJoinBuild";
+    let CU = null,
+      hU = null,
+      QU = null;
 
-    function vD(DD) {
-      oD = DD
+    function eU(UU) {
+      QU = UU
     }
-    let ND = !1;
+    let WU = !1;
 
-    function gD() {
-      ND = !0
-    }
-
-    function XD() {
-      return ND
-    }
-    let mD = !1;
-
-    function nD() {
-      mD = !0
+    function fU() {
+      WU = !0
     }
 
-    function OD() {
-      return mD
+    function xU() {
+      return WU
+    }
+    let mU = !1;
+
+    function IU() {
+      mU = !0
     }
 
-    function PD() {
-      return oD
-    }
-    let HD = null;
-
-    function UD(DD) {
-      HD = DD, (0, fD.c)(DD)
-    }
-    const xD = "wasmClientRenderLost";
-
-    function qD() {
-      bD.j.setItem(xD, !0)
+    function JU() {
+      return mU
     }
 
-    function JD() {
-      return !0 === bD.j.getItem(xD)
+    function wU() {
+      return QU
+    }
+    let nU = null;
+
+    function bU(UU) {
+      nU = UU, (0, PU.e)(UU)
+    }
+    const oU = "wasmClientRenderLost";
+
+    function ZU() {
+      TU.l.setItem(oU, !0)
     }
 
-    function KD() {
-      return HD
+    function aU() {
+      return !0 === TU.l.getItem(oU)
     }
 
-    function aD() {
-      return null === tD && (bD.h.removeItem("wasmLastPick"), bD.h.removeItem("wasmGuessVerdict"), (0, fD.j)(), tD = (0, QD.x)(SD.d).then((DD => (null === DD || (0, QD.o)(DD) || (ZD = BD.d[DD.backend], iD.d.followGameGpu("webgpu" === DD.backend ? DD.adapter : null), "webgpu" === DD.backend && (0, yD.h)()), DD)))), tD
+    function YU() {
+      return nU
     }
 
-    function VD() {
-      return ZD
+    function BU() {
+      return null === CU && (TU.k.removeItem("wasmLastPick"), TU.k.removeItem("wasmGuessVerdict"), (0, PU.l)(), CU = (0, qU.w)(cU.f).then((UU => (null === UU || (0, qU.k)(UU) || (hU = GU.e[UU.backend], EU.b.followGameGpu("webgpu" === UU.backend ? UU.adapter : null), "webgpu" === UU.backend && (0, jU.g)()), UU)))), CU
     }
 
-    function zD(DD) {
-      return DD ? DD.load() : Promise.resolve().then((function() {
-        var DD = new Error("Cannot find module '@bloxd/wasm/client'");
-        throw DD.code = "MODULE_NOT_FOUND", DD
-      })).then((DD => DD.bloxdWasmClient))
+    function VU() {
+      return hU
     }
 
-    function jD(DD) {
-      bD.h.setItem(MD, DD)
+    function rU(UU) {
+      return UU ? UU.load() : Promise.resolve().then((function() {
+        var UU = new Error("Cannot find module '@bloxd/wasm/client'");
+        throw UU.code = "MODULE_NOT_FOUND", UU
+      })).then((UU => UU.bloxdWasmClient))
     }
-    async function lD() {
-      if (null === SD.d) return zD(null);
-      const DD = bD.h.getItem(MD);
-      let CD = "none" === DD ? null : "webgl";
-      return null !== DD && "none" !== DD && ("string" === typeof DD && void 0 !== (0, ID.c)(SD.d, DD) ? CD = DD : console.warn(`[bloxd-wasm-client] the last join's build, ${JSON.stringify(DD)}, is none of this client's: guessing WebGL2's`)), null === CD ? null : SD.d[CD]()
-    }
-    let LD = null,
-      TD = null;
 
-    function GD() {
-      return LD ??= aD().then((async DD => {
-        var CD;
-        const cD = null !== DD && !(0, QD.o)(DD),
-          ID = {
-            indirectHangs: cD && await (0, QD.B)(DD, window.location.search),
-            storagePullBreaks: cD && (0, QD.P)(DD, window.location.search),
-            splitPassBreaks: cD && (0, QD.L)(DD, window.location.search),
-            framesAhead: (0, QD.i)(window.location.search),
-            instancedTerrainSlow: cD && (0, QD.F)(DD, null !== (CD = (0, wD.g)(DD, !1)) && void 0 !== CD ? CD : (0, pD.e)())
+    function XU(UU) {
+      TU.k.setItem(uU, UU)
+    }
+    async function vU() {
+      if (null === cU.f) return rU(null);
+      const UU = TU.k.getItem(uU);
+      let RU = "none" === UU ? null : "webgl";
+      return null !== UU && "none" !== UU && ("string" === typeof UU && void 0 !== (0, tU.b)(cU.f, UU) ? RU = UU : console.warn(`[bloxd-wasm-client] the last join's build, ${JSON.stringify(UU)}, is none of this client's: guessing WebGL2's`)), null === RU ? null : cU.f[RU]()
+    }
+    let dU = null,
+      HU = null;
+
+    function SU() {
+      return dU ??= BU().then((async UU => {
+        var RU;
+        const gU = null !== UU && !(0, qU.k)(UU),
+          tU = {
+            indirectHangs: gU && await (0, qU.y)(UU, window.location.search),
+            storagePullBreaks: gU && (0, qU.L)(UU, window.location.search),
+            splitPassBreaks: gU && (0, qU.I)(UU, window.location.search),
+            framesAhead: (0, qU.f)(window.location.search),
+            instancedTerrainSlow: gU && (0, qU.B)(UU, null !== (RU = (0, KU.g)(UU, !1)) && void 0 !== RU ? RU : (0, pU.c)())
           };
-        return TD = ID.indirectHangs, ID
-      })), LD
+        return HU = tU.indirectHangs, tU
+      })), dU
     }
 
-    function RD() {
-      return TD
+    function sU() {
+      return HU
     }
   },
-  39900: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => ID
+  40207: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => tU
     });
-    const ID = {
+    const tU = {
       webgpu: "rust_webgpu",
       webgl: "rust_webgl2",
       webgl1: "rust_webgl1"
     }
   },
-  39896: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => pD,
-      d: () => ID
+  40203: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => pU,
+      f: () => tU
     });
-    const ID = {
-        webgpu: async () => (await cD.e(8).then((() => cD(42391)))).bloxdWasmWebgpu,
-        webgl: async () => (await cD.e(6).then((() => cD(42405)))).bloxdWasmWebgl,
-        webgl1: async () => (await cD.e(7).then((() => cD(42417)))).bloxdWasmWebgl1
+    const tU = {
+        webgpu: async () => (await gU.e(8).then((() => gU(42571)))).bloxdWasmWebgpu,
+        webgl: async () => (await gU.e(6).then((() => gU(42587)))).bloxdWasmWebgl,
+        webgl1: async () => (await gU.e(7).then((() => gU(42592)))).bloxdWasmWebgl1
       },
-      pD = async () => (await cD.e(5).then((() => cD(42427)))).compileAnimationPackInWasm
+      pU = async () => (await gU.e(5).then((() => gU(42606)))).compileAnimationPackInWasm
   },
-  39913: (DD, CD, cD) => {
-    function ID() {
-      return cD(39921)
+  40218: (UU, RU, gU) => {
+    function tU() {
+      return gU(40226)
     }
 
-    function pD() {
-      return cD(39929)
+    function pU() {
+      return gU(40235)
     }
 
-    function iD(DD) {
-      return ["pl", "ru", "tr", "uk", "vi"].includes(DD)
+    function EU(UU) {
+      return ["pl", "ru", "tr", "uk", "vi"].includes(UU)
     }
-    cD.d(CD, {
-      b: () => iD,
-      d: () => ID,
-      e: () => pD
+    gU.d(RU, {
+      e: () => EU,
+      f: () => tU,
+      g: () => pU
     })
   },
-  39872: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => pD,
-      h: () => fD
+  40210: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => TU,
+      g: () => qU
     });
-    const ID = /wasm-function\[\d+\]|wasm:\/\/|\[wasm code\]/;
+    var tU = gU(96);
+    const pU = "webgpuPipeline";
 
-    function pD(DD) {
-      if (DD instanceof WebAssembly.RuntimeError) return !0;
-      const CD = DD instanceof Error ? DD.stack : void 0;
-      return "string" === typeof CD && ID.test(CD)
+    function EU(UU) {
+      return UU.split(".").slice(0, 2).join("_").replace(/[^0-9_]/g, "")
     }
-    const iD = 500;
+    let PU = null;
 
-    function fD(DD) {
-      let CD = "[object Object]";
-      try {
-        CD = String(DD)
-      } catch {}
-      if ("[object Object]" !== CD) return CD;
-      try {
-        var cD, ID;
-        return null !== (cD = null === (ID = JSON.stringify(DD)) || void 0 === ID ? void 0 : ID.slice(0, iD)) && void 0 !== cD ? cD : CD
-      } catch {
-        return CD
+    function TU() {
+      if (null === PU) try {
+        UU = (0, tU.getBrowserName)(), RU = (0, tU.getBrowserVersion)(), gU = (0, tU.getOperatingSystem)(), pU = (0, tU.getOperatingSystemVersion)(), PU = `${UU.toLowerCase().replace(/[^a-z0-9]/g,"")}_${void 0===RU?"unknown":EU(RU)}-${gU}${void 0===pU?"":`_${EU(pU)}`}`
+      } catch (TU) {
+        console.warn("The user agent couldn't be read for its browser code", TU), PU = "unknown"
       }
-    }
-  },
-  39908: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => bD,
-      h: () => QD
-    });
-    var ID = cD(90);
-    const pD = "webgpuPipeline";
-
-    function iD(DD) {
-      return DD.split(".").slice(0, 2).join("_").replace(/[^0-9_]/g, "")
-    }
-    let fD = null;
-
-    function bD() {
-      if (null === fD) try {
-        DD = (0, ID.getBrowserName)(), CD = (0, ID.getBrowserVersion)(), cD = (0, ID.getOperatingSystem)(), pD = (0, ID.getOperatingSystemVersion)(), fD = `${DD.toLowerCase().replace(/[^a-z0-9]/g,"")}_${void 0===CD?"unknown":iD(CD)}-${cD}${void 0===pD?"":`_${iD(pD)}`}`
-      } catch (bD) {
-        console.warn("The user agent couldn't be read for its browser code", bD), fD = "unknown"
-      }
-      var DD, CD, cD, pD;
-      return fD
+      var UU, RU, gU, pU;
+      return PU
     }
 
-    function QD() {
-      let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GPUDevice.prototype;
-      const CD = `WGPU-${bD()}`,
-        ID = (DD, ID) => {
+    function qU() {
+      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GPUDevice.prototype;
+      const RU = `WGPU-${TU()}`,
+        tU = (UU, tU) => {
           const {
-            reason: iD,
-            message: fD
-          } = ID, bD = {
-            pipeline: null !== DD && void 0 !== DD ? DD : "",
-            reason: String(iD),
-            browserMessage: String(fD)
+            reason: EU,
+            message: PU
+          } = tU, TU = {
+            pipeline: null !== UU && void 0 !== UU ? UU : "",
+            reason: String(EU),
+            browserMessage: String(PU)
           };
-          Promise.all([cD.e(262), cD.e(86)]).then((() => cD(40032))).then((DD => {
+          Promise.all([gU.e(262), gU.e(86)]).then((() => gU(40319))).then((UU => {
             let {
-              reportCrash: cD
-            } = DD;
-            cD({
+              reportCrash: gU
+            } = UU;
+            gU({
               kind: "coreError",
-              code: CD,
-              site: pD,
+              code: RU,
+              site: pU,
               fatal: !1,
-              message: `${bD.pipeline} ${bD.reason}: ${bD.browserMessage}`,
-              details: bD,
-              error: ID
+              message: `${TU.pipeline} ${TU.reason}: ${TU.browserMessage}`,
+              details: TU,
+              error: tU
             })
-          })).catch((DD => {
-            console.warn("A rejected WebGPU pipeline compile couldn't be reported", DD)
+          })).catch((UU => {
+            console.warn("A rejected WebGPU pipeline compile couldn't be reported", UU)
           }))
         },
-        iD = DD.createRenderPipelineAsync;
-      DD.createRenderPipelineAsync = function(DD) {
-        return iD.call(this, DD).catch((CD => {
-          throw ID(DD.label, CD), CD
+        EU = UU.createRenderPipelineAsync;
+      UU.createRenderPipelineAsync = function(UU) {
+        return EU.call(this, UU).catch((RU => {
+          throw tU(UU.label, RU), RU
         }))
       };
-      const fD = DD.createComputePipelineAsync;
-      DD.createComputePipelineAsync = function(DD) {
-        return fD.call(this, DD).catch((CD => {
-          throw ID(DD.label, CD), CD
+      const PU = UU.createComputePipelineAsync;
+      UU.createComputePipelineAsync = function(UU) {
+        return PU.call(this, UU).catch((RU => {
+          throw tU(UU.label, RU), RU
         }))
       }
     }
   },
-  39846: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/bloxd_wasm_models_bg.9870a613252fde5d8186.wasm"
+  40158: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/bloxd_wasm_models_bg.8c4fc469aca40ce98e8d.wasm"
   },
-  39839: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/bloxd_wasm_workers_bg.150cf40a95a9ef218c83.wasm"
+  40153: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/bloxd_wasm_workers_bg.5fef21cdf91bff05701f.wasm"
   },
-  39921: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
+  40226: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
   },
-  39929: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
+  40235: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
   },
-  39834: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => pD,
-      e: () => ID
+  40150: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => pU,
+      d: () => tU
     });
-    const ID = {
+    const tU = {
       name: "bloxd_wasm_workers",
       url: function() {
-        return new cD.U(cD(39839))
+        return new gU.U(gU(40153))
       }
     };
-    const pD = {
+    const pU = {
       name: "bloxd_wasm_models",
       url: function() {
-        return new cD.U(cD(39846))
+        return new gU.U(gU(40158))
       }
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

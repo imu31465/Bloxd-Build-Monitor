@@ -1,272 +1,272 @@
 export const id = 75;
 export const ids = [75, 91];
 export const modules = {
-    4599: (DD, CD, cD) => {
-      cD.d(CD, {
-        c: () => oD,
-        e: () => vD
+    4487: (UU, RU, gU) => {
+      gU.d(RU, {
+        d: () => QU,
+        e: () => eU
       });
-      var ID = cD(1049),
-        pD = cD.n(ID),
-        iD = cD(53),
-        fD = cD(1192),
-        bD = cD(4606),
-        QD = cD(1872),
-        wD = cD(2358),
-        SD = cD(4608),
-        BD = cD(1093);
-      const yD = new WeakMap;
-      let MD = 0;
+      var tU = gU(1037),
+        pU = gU.n(tU),
+        EU = gU(56),
+        PU = gU(1181),
+        TU = gU(4495),
+        qU = gU(1777),
+        KU = gU(2254),
+        cU = gU(4501),
+        GU = gU(1090);
+      const jU = new WeakMap;
+      let uU = 0;
 
-      function tD(DD) {
-        let CD = yD.get(DD);
-        return void 0 === CD && (CD = MD++, yD.set(DD, CD)), CD
+      function CU(UU) {
+        let RU = jU.get(UU);
+        return void 0 === RU && (RU = uU++, jU.set(UU, RU)), RU
       }
 
-      function ZD(DD) {
+      function hU(UU) {
         let {
-          piece: CD
-        } = DD;
-        return "space" === CD.kind ? (0, BD.jsx)(BD.Fragment, {
-          children: CD.text
-        }) : (0, BD.jsx)("span", {
+          piece: RU
+        } = UU;
+        return "space" === RU.kind ? (0, GU.jsx)(GU.Fragment, {
+          children: RU.text
+        }) : (0, GU.jsx)("span", {
           className: "DialogueWord",
           style: {
-            "--word-delay": `${CD.delayMs}ms`
+            "--word-delay": `${RU.delayMs}ms`
           },
-          children: (0, BD.jsx)(bD.b, {
-            text: "icon" === CD.kind ? `[[${CD.icon}]]` : CD.text
+          children: (0, GU.jsx)(TU.c, {
+            text: "icon" === RU.kind ? `[[${RU.icon}]]` : RU.text
           })
         })
       }
 
-      function oD(DD) {
+      function QU(UU) {
         let {
-          display: CD
-        } = DD;
+          display: RU
+        } = UU;
         const {
-          selectedLanguage: cD
-        } = (0, fD.F)(), ID = (0, iD.useMemo)((() => (0, SD.d)((0, SD.e)(CD).plan.pieces)), [CD, cD.code]);
-        return (0, BD.jsxs)("div", {
-          className: pD()("Dialogue", {
-            DialogueAnimateIn: !1 !== CD.animateIn
+          selectedLanguage: gU
+        } = (0, PU.B)(), tU = (0, EU.useMemo)((() => (0, cU.b)((0, cU.c)(RU).plan.pieces)), [RU, gU.code]);
+        return (0, GU.jsxs)("div", {
+          className: pU()("Dialogue", {
+            DialogueAnimateIn: !1 !== RU.animateIn
           }),
-          children: [CD.speakerName && (0, BD.jsx)(QD.c, {
-            text: CD.speakerName,
+          children: [RU.speakerName && (0, GU.jsx)(qU.e, {
+            text: RU.speakerName,
             className: "DialogueSpeaker"
-          }), (0, BD.jsx)("p", {
+          }), (0, GU.jsx)("p", {
             className: "DialogueLine",
-            children: ID.map(((DD, CD) => 1 === DD.length && "space" === DD[0].kind ? DD[0].text : (0, BD.jsx)("span", {
+            children: tU.map(((UU, RU) => 1 === UU.length && "space" === UU[0].kind ? UU[0].text : (0, GU.jsx)("span", {
               className: "DialogueGlue",
-              children: DD.map(((DD, CD) => (0, BD.jsx)(ZD, {
-                piece: DD
-              }, CD)))
-            }, CD)))
+              children: UU.map(((UU, RU) => (0, GU.jsx)(hU, {
+                piece: UU
+              }, RU)))
+            }, RU)))
           })]
         })
       }
-      const vD = (0, iD.memo)((function() {
-        const DD = (0, wD.h)("dialogue");
-        return (0, BD.jsx)("div", {
+      const eU = (0, EU.memo)((function() {
+        const UU = (0, KU.g)("dialogue");
+        return (0, GU.jsx)("div", {
           className: "DialogueAnchor",
           "data-camera-keeper": "",
           role: "status",
           "aria-live": "polite",
           "aria-atomic": "true",
-          children: DD && (0, BD.jsx)(oD, {
-            display: DD
-          }, tD(DD))
+          children: UU && (0, GU.jsx)(QU, {
+            display: UU
+          }, CU(UU))
         })
       }))
     },
-    4504: (DD, CD, cD) => {
-        cD.r(CD), cD.d(CD, {
-          default: () => Cf
+    4360: (UU, RU, gU) => {
+        gU.r(RU), gU.d(RU, {
+          default: () => UP
         });
-        var ID = cD(53),
-          pD = cD(1049),
-          iD = cD.n(pD),
-          fD = cD(1510),
-          bD = cD(1517),
-          QD = cD(16),
-          wD = cD(62),
-          SD = cD(4512),
-          BD = cD(4524),
-          yD = cD(4526),
-          MD = cD(4175),
-          tD = cD(1093);
-        const ZD = "/textures/docs/icons";
+        var tU = gU(56),
+          pU = gU(1037),
+          EU = gU.n(pU),
+          PU = gU(1479),
+          TU = gU(1481),
+          qU = gU(21),
+          KU = gU(74),
+          cU = gU(4365),
+          GU = gU(4378),
+          jU = gU(4387),
+          uU = gU(4037),
+          CU = gU(1090);
+        const hU = "/textures/docs/icons";
 
-        function oD(DD) {
+        function QU(UU) {
           let {
-            name: CD,
-            isTinted: cD,
-            className: ID,
-            style: pD
-          } = DD;
-          const fD = `${ZD}/${CD}.png`;
-          return cD ? (0, tD.jsxs)("span", {
-            className: iD()("DocsPixelIcon", "Tinted", ID),
+            name: RU,
+            isTinted: gU,
+            className: tU,
+            style: pU
+          } = UU;
+          const PU = `${hU}/${RU}.png`;
+          return gU ? (0, CU.jsxs)("span", {
+            className: EU()("DocsPixelIcon", "Tinted", tU),
             "aria-hidden": "true",
-            style: pD,
-            children: [(0, tD.jsx)("span", {
+            style: pU,
+            children: [(0, CU.jsx)("span", {
               className: "DocsPixelIconTint",
               style: {
-                maskImage: `url("${fD}")`,
-                WebkitMaskImage: `url("${fD}")`
+                maskImage: `url("${PU}")`,
+                WebkitMaskImage: `url("${PU}")`
               }
-            }), (0, tD.jsx)("img", {
-              src: fD,
+            }), (0, CU.jsx)("img", {
+              src: PU,
               alt: ""
             })]
-          }) : (0, tD.jsx)("img", {
-            className: iD()("DocsPixelIcon", ID),
-            src: fD,
+          }) : (0, CU.jsx)("img", {
+            className: EU()("DocsPixelIcon", tU),
+            src: PU,
             alt: "",
             "aria-hidden": "true",
-            style: pD
+            style: pU
           })
         }
-        const vD = 1500;
+        const eU = 1500;
 
-        function ND() {
-          const [DD, CD] = (0, ID.useState)(null);
-          (0, ID.useEffect)((() => {
-            if (null === DD) return;
-            const cD = setTimeout((() => {
-              CD(null)
-            }), vD);
+        function WU() {
+          const [UU, RU] = (0, tU.useState)(null);
+          (0, tU.useEffect)((() => {
+            if (null === UU) return;
+            const gU = setTimeout((() => {
+              RU(null)
+            }), eU);
             return () => {
-              clearTimeout(cD)
+              clearTimeout(gU)
             }
-          }), [DD]);
-          return [DD, DD => {
-            (0, MD.c)(DD).then((() => {
-              CD({
-                text: DD,
+          }), [UU]);
+          return [UU, UU => {
+            (0, uU.e)(UU).then((() => {
+              RU({
+                text: UU,
                 failed: !1
               })
-            }), (cD => {
-              console.error("Could not copy to the clipboard", cD), CD({
-                text: DD,
+            }), (gU => {
+              console.error("Could not copy to the clipboard", gU), RU({
+                text: UU,
                 failed: !0
               })
             }))
           }]
         }
 
-        function gD(DD) {
+        function fU(UU) {
           let {
-            text: CD,
-            label: cD,
-            className: ID
-          } = DD;
-          const [pD, fD] = ND(), bD = !1 === (null === pD || void 0 === pD ? void 0 : pD.failed);
-          return (0, tD.jsxs)("button", {
+            text: RU,
+            label: gU,
+            className: tU
+          } = UU;
+          const [pU, PU] = WU(), TU = !1 === (null === pU || void 0 === pU ? void 0 : pU.failed);
+          return (0, CU.jsxs)("button", {
             type: "button",
-            className: iD()("DocsCopyButton", ID, {
-              Copied: bD
+            className: EU()("DocsCopyButton", tU, {
+              Copied: TU
             }),
-            title: `Copy ${CD.length>40?"to clipboard":CD}`,
-            "aria-label": cD ? void 0 : `Copy ${CD}`,
-            onClick: DD => {
-              DD.stopPropagation(), fD(CD)
+            title: `Copy ${RU.length>40?"to clipboard":RU}`,
+            "aria-label": gU ? void 0 : `Copy ${RU}`,
+            onClick: UU => {
+              UU.stopPropagation(), PU(RU)
             },
-            children: [(0, tD.jsx)(oD, {
-              name: bD ? "check" : "copy"
-            }), cD && (0, tD.jsx)("span", {
-              children: bD ? "Copied" : null !== pD && void 0 !== pD && pD.failed ? "Copy failed" : cD
+            children: [(0, CU.jsx)(QU, {
+              name: TU ? "check" : "copy"
+            }), gU && (0, CU.jsx)("span", {
+              children: TU ? "Copied" : null !== pU && void 0 !== pU && pU.failed ? "Copy failed" : gU
             })]
           })
         }
-        SD.c.registerLanguage("javascript", BD.e), SD.c.registerLanguage("typescript", yD.d);
-        const XD = {
+        cU.d.registerLanguage("javascript", GU.b), cU.d.registerLanguage("typescript", jU.c);
+        const xU = {
             js: "javascript",
             ts: "typescript",
             javascript: "javascript",
             typescript: "typescript"
           },
-          mD = {
+          mU = {
             javascript: "JavaScript",
             typescript: "TypeScript"
           },
-          nD = 24;
+          IU = 24;
 
-        function OD(DD) {
+        function JU(UU) {
           let {
-            code: CD,
-            lang: cD,
-            compact: pD = !1
-          } = DD;
-          const fD = (0, ID.useMemo)((() => function(DD, CD) {
-              const cD = XD[CD];
-              return cD ? SD.c.highlight(DD, {
-                language: cD
-              }).value : DD.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-            }(CD, cD)), [CD, cD]),
-            bD = CD.split("\n").length,
-            QD = !pD && bD > nD + 6,
-            [wD, BD] = (0, ID.useState)(!1),
-            yD = XD[cD];
-          return (0, tD.jsxs)("div", {
-            className: iD()("DocsCodeBlock", {
-              Compact: pD,
-              Collapsed: QD && !wD
+            code: RU,
+            lang: gU,
+            compact: pU = !1
+          } = UU;
+          const PU = (0, tU.useMemo)((() => function(UU, RU) {
+              const gU = xU[RU];
+              return gU ? cU.d.highlight(UU, {
+                language: gU
+              }).value : UU.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+            }(RU, gU)), [RU, gU]),
+            TU = RU.split("\n").length,
+            qU = !pU && TU > IU + 6,
+            [KU, GU] = (0, tU.useState)(!1),
+            jU = xU[gU];
+          return (0, CU.jsxs)("div", {
+            className: EU()("DocsCodeBlock", {
+              Compact: pU,
+              Collapsed: qU && !KU
             }),
-            children: [!pD && (0, tD.jsxs)("div", {
+            children: [!pU && (0, CU.jsxs)("div", {
               className: "DocsCodeBlockHeader",
-              children: [(0, tD.jsx)("span", {
+              children: [(0, CU.jsx)("span", {
                 className: "DocsCodeBlockLanguage",
-                children: yD ? mD[yD] : "Text"
-              }), (0, tD.jsx)(gD, {
-                text: CD,
+                children: jU ? mU[jU] : "Text"
+              }), (0, CU.jsx)(fU, {
+                text: RU,
                 label: "Copy"
               })]
-            }), (0, tD.jsx)("pre", {
-              children: (0, tD.jsx)("code", {
+            }), (0, CU.jsx)("pre", {
+              children: (0, CU.jsx)("code", {
                 className: "hljs",
                 dangerouslySetInnerHTML: {
-                  __html: fD
+                  __html: PU
                 }
               })
-            }), QD && (0, tD.jsxs)("button", {
+            }), qU && (0, CU.jsxs)("button", {
               type: "button",
               className: "DocsCodeBlockExpand",
-              "aria-expanded": wD,
+              "aria-expanded": KU,
               onClick: () => {
-                BD(!wD)
+                GU(!KU)
               },
-              children: [(0, tD.jsx)(oD, {
-                name: wD ? "chevron-up" : "chevron-down"
-              }), wD ? "Show less" : `Show all ${bD} lines`]
+              children: [(0, CU.jsx)(QU, {
+                name: KU ? "chevron-up" : "chevron-down"
+              }), KU ? "Show less" : `Show all ${TU} lines`]
             })]
           })
         }
-        var PD = cD(4534);
-        var HD = cD(4537);
-        const UD = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
+        var wU = gU(4396);
+        var nU = gU(4405);
+        const bU = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
 
-        function xD(DD) {
-          const CD = new Map;
-          let cD, ID = [],
-            pD = !1;
-          const iD = () => {
-            cD && CD.set(cD.name, cD.lines.join("\n").trimEnd())
+        function oU(UU) {
+          const RU = new Map;
+          let gU, tU = [],
+            pU = !1;
+          const EU = () => {
+            gU && RU.set(gU.name, gU.lines.join("\n").trimEnd())
           };
-          for (const fD of DD.split("\n")) {
-            const DD = fD.match(UD);
-            pD || fD.startsWith("/*") ? (pD || (iD(), cD = void 0), ID.push(fD), pD = !fD.includes("*/")) : DD ? (iD(), cD = {
-              name: DD[1],
-              lines: [...ID, fD]
-            }, ID = []) : cD && (fD.startsWith(" ") || fD.startsWith("\t") || /^[}\])|]/.test(fD)) ? cD.lines.push(fD) : cD && "" !== fD.trim() && (iD(), cD = void 0)
+          for (const PU of UU.split("\n")) {
+            const UU = PU.match(bU);
+            pU || PU.startsWith("/*") ? (pU || (EU(), gU = void 0), tU.push(PU), pU = !PU.includes("*/")) : UU ? (EU(), gU = {
+              name: UU[1],
+              lines: [...tU, PU]
+            }, tU = []) : gU && (PU.startsWith(" ") || PU.startsWith("\t") || /^[}\])|]/.test(PU)) ? gU.lines.push(PU) : gU && "" !== PU.trim() && (EU(), gU = void 0)
           }
-          return iD(), CD
+          return EU(), RU
         }
 
-        function qD(DD) {
-          return "methods" === DD || "callbacks" === DD || "settings" === DD
+        function ZU(UU) {
+          return "methods" === UU || "callbacks" === UU || "settings" === UU
         }
-        const JD = {
+        const aU = {
             readme: {
               icon: "code-block",
               summary: "Code blocks, boards and World Code, and the globals your code can use.",
@@ -302,25 +302,25 @@ export const modules = {
               icon: "player",
               summary: "Per-player options such as speed, health and camera.",
               layout: "settings",
-              setterSnippet: (DD, CD) => `api.setClientOption(playerId, "${DD}", ${CD})`
+              setterSnippet: (UU, RU) => `api.setClientOption(playerId, "${UU}", ${RU})`
             },
             entitySettings: {
               icon: "eye",
               summary: "How one player sees and interacts with another entity.",
               layout: "settings",
-              setterSnippet: (DD, CD) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${DD}", ${CD})`
+              setterSnippet: (UU, RU) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${UU}", ${RU})`
             },
             mobSettings: {
               icon: "mob",
               summary: "Health, movement, combat and AI settings for mobs.",
               layout: "settings",
-              setterSnippet: (DD, CD) => `api.setMobSetting(mobId, "${DD}", ${CD})`
+              setterSnippet: (UU, RU) => `api.setMobSetting(mobId, "${UU}", ${RU})`
             },
             vehicleSettings: {
               icon: "car",
               summary: "Movement, physics and camera settings for vehicles.",
               layout: "settings",
-              setterSnippet: (DD, CD) => `api.setVehicleSetting(vehicleId, "${DD}", ${CD})`
+              setterSnippet: (UU, RU) => `api.setVehicleSetting(vehicleId, "${UU}", ${RU})`
             },
             meshEntities: {
               icon: "mesh",
@@ -377,7 +377,7 @@ export const modules = {
               gallery: "items"
             }
           },
-          KD = {
+          YU = {
             Variations: {
               icon: "layers",
               summary: "Alternate versions of a custom game, and matchmaking players between them."
@@ -404,20 +404,20 @@ export const modules = {
             }
           };
 
-        function aD(DD) {
-          return DD.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
+        function BU(UU) {
+          return UU.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
         }
 
-        function VD(DD) {
-          let CD = !1;
-          return DD.split("\n").map((DD => (DD.startsWith("```") && (CD = !CD), !CD && /^#{3,} /.test(DD) ? DD.slice(1) : DD))).join("\n")
+        function VU(UU) {
+          let RU = !1;
+          return UU.split("\n").map((UU => (UU.startsWith("```") && (RU = !RU), !RU && /^#{3,} /.test(UU) ? UU.slice(1) : UU))).join("\n")
         }
 
-        function zD(DD) {
-          return "readme" === DD ? "getting-started" : aD(DD)
+        function rU(UU) {
+          return "readme" === UU ? "getting-started" : BU(UU)
         }
-        const jD = "## Glossary of Referenced Types";
-        const lD = [{
+        const XU = "## Glossary of Referenced Types";
+        const vU = [{
             id: "welcome",
             slug: "",
             title: "Welcome",
@@ -425,28 +425,28 @@ export const modules = {
             summary: "Run JavaScript in Bloxd, from a single block to a whole custom game.",
             layout: "article",
             markdown: "# Welcome to the Bloxd Code API\n\nWrite JavaScript that runs inside Bloxd: make a block launch players into the sky, give your world its own shop, or build a whole custom game with rounds, teams and a winner.\n\n## New to coding in Bloxd?\n\nStart with [Getting started](#readme), which explains code blocks, boards and World Code, and where each one runs. Then copy something from [Snippets](#snippets) into a code block and change it to see what happens.\n\n## Building a game\n\n[Callbacks](#callbacks) let your World Code react to players joining, chatting, breaking blocks and more. The [How-Tos](#howTo) walk through bigger features step by step, from plugins to a complete team game.\n\n## Looking something up\n\nThe [API Reference](#apiReference) lists every method on `api`. Settings for players, entities, mobs and vehicles each have their own page, and the Assets pages list every block, item, sound, particle, icon and skin name you can use. Press Ctrl K, or \u2318 K on a Mac, to search all of it.\n\n## What's new\n\nThe [Changelog](#changelog) lists what has changed in the Code API, newest first.\n\n## Get help\n\nAsk questions, report problems and suggest features on [our Discord](https://discord.gg/playbloxd)."
-          }, ...HD.c.flatMap((DD => {
-            const CD = {
-              id: DD.id,
-              slug: zD(DD.id),
-              title: DD.title,
-              markdown: DD.content,
-              ...JD[DD.id]
+          }, ...nU.e.flatMap((UU => {
+            const RU = {
+              id: UU.id,
+              slug: rU(UU.id),
+              title: UU.title,
+              markdown: UU.content,
+              ...aU[UU.id]
             };
-            if ("readme" === DD.id) return function(DD) {
-              const CD = DD.markdown.indexOf(jD),
-                cD = DD.markdown.indexOf("\n```", CD),
-                ID = DD.markdown.indexOf("\n```", cD + 1);
-              if (-1 === CD || -1 === cD || -1 === ID) throw new Error(`Getting started has no "${jD}" section with a code block`);
-              const pD = DD.markdown.slice(CD + 31, cD).trim(),
-                iD = [...xD(DD.markdown.slice(DD.markdown.indexOf("\n", cD + 1) + 1, ID))].map((DD => {
-                  let [CD, cD] = DD;
-                  return `## ${CD}\n\n\`\`\`ts\n${cD}\n\`\`\`\n`
+            if ("readme" === UU.id) return function(UU) {
+              const RU = UU.markdown.indexOf(XU),
+                gU = UU.markdown.indexOf("\n```", RU),
+                tU = UU.markdown.indexOf("\n```", gU + 1);
+              if (-1 === RU || -1 === gU || -1 === tU) throw new Error(`Getting started has no "${XU}" section with a code block`);
+              const pU = UU.markdown.slice(RU + 31, gU).trim(),
+                EU = [...oU(UU.markdown.slice(UU.markdown.indexOf("\n", gU + 1) + 1, tU))].map((UU => {
+                  let [RU, gU] = UU;
+                  return `## ${RU}\n\n\`\`\`ts\n${gU}\n\`\`\`\n`
                 })),
-                fD = DD.markdown.slice(DD.markdown.indexOf("\n", ID + 1) + 1);
+                PU = UU.markdown.slice(UU.markdown.indexOf("\n", tU + 1) + 1);
               return [{
-                ...DD,
-                markdown: `${DD.markdown.slice(0,CD)}${fD}`
+                ...UU,
+                markdown: `${UU.markdown.slice(0,RU)}${PU}`
               }, {
                 id: "types",
                 slug: "types",
@@ -454,57 +454,57 @@ export const modules = {
                 icon: "tag",
                 summary: "The types the API Reference's parameters and return values refer to.",
                 layout: "article",
-                markdown: `# Types\n\n${pD}\n\n${iD.join("\n")}`
+                markdown: `# Types\n\n${pU}\n\n${EU.join("\n")}`
               }]
-            }(CD);
-            if ("howTo" === DD.id) {
+            }(RU);
+            if ("howTo" === UU.id) {
               const {
-                parent: DD,
-                guides: cD
-              } = function(DD) {
-                const [CD, ...cD] = DD.markdown.split(/^(?=## )/m), ID = [CD], pD = [];
-                for (const fD of cD) {
-                  var iD;
-                  const CD = fD.indexOf("\n"),
-                    cD = fD.slice(3, CD).trim(),
-                    bD = fD.slice(CD + 1);
-                  if (!bD.includes("```")) {
-                    ID.push(fD);
+                parent: UU,
+                guides: gU
+              } = function(UU) {
+                const [RU, ...gU] = UU.markdown.split(/^(?=## )/m), tU = [RU], pU = [];
+                for (const PU of gU) {
+                  var EU;
+                  const RU = PU.indexOf("\n"),
+                    gU = PU.slice(3, RU).trim(),
+                    TU = PU.slice(RU + 1);
+                  if (!TU.includes("```")) {
+                    tU.push(PU);
                     continue
                   }
-                  const QD = null !== (iD = KD[cD]) && void 0 !== iD ? iD : {
+                  const qU = null !== (EU = YU[gU]) && void 0 !== EU ? EU : {
                     icon: "lightbulb",
-                    summary: `How to use ${cD.toLowerCase()} in World Code.`
+                    summary: `How to use ${gU.toLowerCase()} in World Code.`
                   };
-                  pD.push({
-                    id: `${DD.id}${cD.split(/[^A-Za-z0-9]+/).map((DD=>DD.charAt(0).toUpperCase()+DD.slice(1))).join("")}`,
-                    slug: `${DD.slug}-${aD(cD)}`,
-                    title: cD,
+                  pU.push({
+                    id: `${UU.id}${gU.split(/[^A-Za-z0-9]+/).map((UU=>UU.charAt(0).toUpperCase()+UU.slice(1))).join("")}`,
+                    slug: `${UU.slug}-${BU(gU)}`,
+                    title: gU,
                     layout: "article",
-                    sourceAnchor: (0, PD.u)(cD),
-                    markdown: `# ${cD}\n\n${VD(bD)}`,
-                    ...QD
+                    sourceAnchor: (0, wU.n)(gU),
+                    markdown: `# ${gU}\n\n${VU(TU)}`,
+                    ...qU
                   })
                 }
                 return {
                   parent: {
-                    ...DD,
-                    markdown: ID.join(""),
-                    childPageIds: pD.map((DD => DD.id))
+                    ...UU,
+                    markdown: tU.join(""),
+                    childPageIds: pU.map((UU => UU.id))
                   },
-                  guides: pD
+                  guides: pU
                 }
-              }(CD);
-              return [DD, ...cD]
+              }(RU);
+              return [UU, ...gU]
             }
-            return [CD]
+            return [RU]
           }))],
-          LD = [{
+          dU = [{
             title: "Get started",
             pageIds: ["welcome", "readme", "snippets", "changelog"]
           }, {
             title: "How-Tos",
-            pageIds: ["howTo", ...lD.filter((DD => void 0 !== DD.sourceAnchor)).map((DD => DD.id))]
+            pageIds: ["howTo", ...vU.filter((UU => void 0 !== UU.sourceAnchor)).map((UU => UU.id))]
           }, {
             title: "Reference",
             pageIds: ["apiReference", "callbacks", "clientOptions", "types"]
@@ -519,42 +519,42 @@ export const modules = {
             pageIds: ["particles", "sounds", "icons", "skins", "blockNames", "itemNames"]
           }];
 
-        function TD(DD) {
-          return lD.find((CD => CD.id === DD))
+        function HU(UU) {
+          return vU.find((RU => RU.id === UU))
         }
-        const GD = new Map;
+        const SU = new Map;
 
-        function RD(DD) {
-          let CD = GD.get(DD.id);
-          return CD || (CD = (0, PD.B)(DD.markdown, "changelog" === DD.layout ? 3 : 2), GD.set(DD.id, CD)), CD
-        }
-
-        function kD(DD, CD) {
-          return RD(DD).sections.some((DD => DD.heading.anchor === CD || DD.blocks.some((DD => "heading" === DD.kind && DD.anchor === CD))))
+        function sU(UU) {
+          let RU = SU.get(UU.id);
+          return RU || (RU = (0, wU.q)(UU.markdown, "changelog" === UU.layout ? 3 : 2), SU.set(UU.id, RU)), RU
         }
 
-        function dD(DD) {
-          const [CD, ...cD] = DD.replace(/^#/, "").split("-"), ID = lD.find((DD => DD.id === CD));
-          if (!ID) return null;
-          const pD = cD.length > 0 ? (0, PD.u)(cD.join("-")) : "";
-          for (const fD of null !== (iD = ID.childPageIds) && void 0 !== iD ? iD : []) {
-            var iD;
-            const DD = TD(fD);
-            if (DD.sourceAnchor === pD) return {
-              page: DD,
+        function yU(UU, RU) {
+          return sU(UU).sections.some((UU => UU.heading.anchor === RU || UU.blocks.some((UU => "heading" === UU.kind && UU.anchor === RU))))
+        }
+
+        function kU(UU) {
+          const [RU, ...gU] = UU.replace(/^#/, "").split("-"), tU = vU.find((UU => UU.id === RU));
+          if (!tU) return null;
+          const pU = gU.length > 0 ? (0, wU.n)(gU.join("-")) : "";
+          for (const PU of null !== (EU = tU.childPageIds) && void 0 !== EU ? EU : []) {
+            var EU;
+            const UU = HU(PU);
+            if (UU.sourceAnchor === pU) return {
+              page: UU,
               anchor: ""
             };
-            if (kD(DD, pD)) return {
-              page: DD,
-              anchor: pD
+            if (yU(UU, pU)) return {
+              page: UU,
+              anchor: pU
             }
           }
           return {
-            page: ID,
-            anchor: pD
+            page: tU,
+            anchor: pU
           }
         }
-        const YD = {
+        const FU = {
           Examples: {
             pageId: "snippets",
             anchor: ""
@@ -569,182 +569,182 @@ export const modules = {
           }
         };
 
-        function WD(DD, CD) {
-          let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const ID = CD.slug ? `${DD}/${CD.slug}` : DD;
-          return cD ? `${ID}#${cD}` : ID
+        function iU(UU, RU) {
+          let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const tU = RU.slug ? `${UU}/${RU.slug}` : UU;
+          return gU ? `${tU}#${gU}` : tU
         }
-        var sD = cD(4550);
-        const ED = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
-          eD = new Set(["GameApi", "Console", "_TypeOf"]),
-          uD = 4;
+        var AU = gU(4417);
+        const zU = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
+          MU = new Set(["GameApi", "Console", "_TypeOf"]),
+          DU = 4;
 
-        function hD(DD) {
-          let CD = DD.length;
-          for (; CD > 0 && "" === DD[CD - 1].trim();) CD--;
-          return DD.slice(0, CD)
+        function LU(UU) {
+          let RU = UU.length;
+          for (; RU > 0 && "" === UU[RU - 1].trim();) RU--;
+          return UU.slice(0, RU)
         }
 
-        function rD(DD) {
-          var CD;
-          const cD = hD(DD);
-          if (null === (CD = cD.at(-1)) || void 0 === CD || !CD.trimEnd().endsWith("*/")) return {
-            lines: cD,
+        function NU(UU) {
+          var RU;
+          const gU = LU(UU);
+          if (null === (RU = gU.at(-1)) || void 0 === RU || !RU.trimEnd().endsWith("*/")) return {
+            lines: gU,
             doc: ""
           };
-          const ID = cD.findLastIndex((DD => DD.startsWith("/**")));
-          return -1 === ID ? {
-            lines: cD,
+          const tU = gU.findLastIndex((UU => UU.startsWith("/**")));
+          return -1 === tU ? {
+            lines: gU,
             doc: ""
           } : {
-            lines: hD(cD.slice(0, ID)),
-            doc: cD.slice(ID).join("\n")
+            lines: LU(gU.slice(0, tU)),
+            doc: gU.slice(tU).join("\n")
           }
         }
 
-        function AD(DD) {
-          var CD;
-          const cD = DD.split("\n"),
-            ID = cD.flatMap(((DD, CD) => ED.test(DD) ? [CD] : []));
-          let pD = rD(cD.slice(0, null !== (CD = ID[0]) && void 0 !== CD ? CD : cD.length)).doc;
-          return ID.map(((DD, CD) => {
-            var iD;
-            const fD = rD(cD.slice(DD, null !== (iD = ID[CD + 1]) && void 0 !== iD ? iD : cD.length)),
-              bD = {
-                name: cD[DD].match(ED)[1],
-                doc: pD,
-                lines: fD.lines
+        function lU(UU) {
+          var RU;
+          const gU = UU.split("\n"),
+            tU = gU.flatMap(((UU, RU) => zU.test(UU) ? [RU] : []));
+          let pU = NU(gU.slice(0, null !== (RU = tU[0]) && void 0 !== RU ? RU : gU.length)).doc;
+          return tU.map(((UU, RU) => {
+            var EU;
+            const PU = NU(gU.slice(UU, null !== (EU = tU[RU + 1]) && void 0 !== EU ? EU : gU.length)),
+              TU = {
+                name: gU[UU].match(zU)[1],
+                doc: pU,
+                lines: PU.lines
               };
-            return pD = fD.doc, bD
+            return pU = PU.doc, TU
           }))
         }
 
-        function FD(DD) {
-          var CD;
-          const cD = DD.match(/^readonly \[([\s\S]*)\]$/);
-          return cD ? null !== (CD = cD[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== CD ? CD : [] : null
+        function OU(UU) {
+          var RU;
+          const gU = UU.match(/^readonly \[([\s\S]*)\]$/);
+          return gU ? null !== (RU = gU[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== RU ? RU : [] : null
         }
 
-        function DC(DD) {
-          if (!DD.startsWith("{") || !DD.endsWith("}")) return null;
-          const CD = {
+        function UR(UU) {
+          if (!UU.startsWith("{") || !UU.endsWith("}")) return null;
+          const RU = {
               keys: [],
               values: []
             },
-            cD = DD => {
-              const cD = DD.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
-              cD && (CD.keys.push(cD[1].startsWith('"') ? cD[1] : `"${cD[1]}"`), CD.values.push(cD[2].trim()))
+            gU = UU => {
+              const gU = UU.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
+              gU && (RU.keys.push(gU[1].startsWith('"') ? gU[1] : `"${gU[1]}"`), RU.values.push(gU[2].trim()))
             };
-          let ID = 0,
-            pD = "";
-          for (const iD of DD.slice(1, -1)) "{[(".includes(iD) ? ID++ : "}])".includes(iD) && ID--, ";" === iD && 0 === ID ? (cD(pD), pD = "") : pD += iD;
-          return cD(pD), CD
+          let tU = 0,
+            pU = "";
+          for (const EU of UU.slice(1, -1)) "{[(".includes(EU) ? tU++ : "}])".includes(EU) && tU--, ";" === EU && 0 === tU ? (gU(pU), pU = "") : pU += EU;
+          return gU(pU), RU
         }
 
-        function CC(DD) {
-          return DD.length > uD ? `\n\t| ${DD.join("\n\t| ")}` : DD.join(" | ")
+        function RR(UU) {
+          return UU.length > DU ? `\n\t| ${UU.join("\n\t| ")}` : UU.join(" | ")
         }
 
-        function cC(DD, CD) {
-          const cD = function(DD, CD) {
-            return DD.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((DD, cD) => {
-              var ID;
-              const pD = null === (ID = CD.get(cD)) || void 0 === ID ? void 0 : ID.object;
-              return pD ? CC(pD.values) : DD
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((DD, cD) => {
-              var ID, pD;
-              const iD = null === (ID = CD.get(cD)) || void 0 === ID || null === (pD = ID.object) || void 0 === pD ? void 0 : pD.values.map(FD);
-              return null !== iD && void 0 !== iD && iD.every((DD => null !== DD)) ? CC([...new Set(iD.flat())]) : DD
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((DD, cD) => {
-              var ID;
-              const pD = null === (ID = CD.get(cD)) || void 0 === ID ? void 0 : ID.members;
-              return pD ? CC(pD) : DD
-            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((DD, cD) => {
-              var ID;
-              const pD = null === (ID = CD.get(cD)) || void 0 === ID ? void 0 : ID.object;
-              return pD ? CC(pD.keys) : DD
-            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((DD, cD) => {
-              var ID, pD;
-              return null !== (ID = null === (pD = CD.get(cD)) || void 0 === pD ? void 0 : pD.text) && void 0 !== ID ? ID : DD
+        function gR(UU, RU) {
+          const gU = function(UU, RU) {
+            return UU.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((UU, gU) => {
+              var tU;
+              const pU = null === (tU = RU.get(gU)) || void 0 === tU ? void 0 : tU.object;
+              return pU ? RR(pU.values) : UU
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((UU, gU) => {
+              var tU, pU;
+              const EU = null === (tU = RU.get(gU)) || void 0 === tU || null === (pU = tU.object) || void 0 === pU ? void 0 : pU.values.map(OU);
+              return null !== EU && void 0 !== EU && EU.every((UU => null !== UU)) ? RR([...new Set(EU.flat())]) : UU
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((UU, gU) => {
+              var tU;
+              const pU = null === (tU = RU.get(gU)) || void 0 === tU ? void 0 : tU.members;
+              return pU ? RR(pU) : UU
+            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((UU, gU) => {
+              var tU;
+              const pU = null === (tU = RU.get(gU)) || void 0 === tU ? void 0 : tU.object;
+              return pU ? RR(pU.keys) : UU
+            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((UU, gU) => {
+              var tU, pU;
+              return null !== (tU = null === (pU = RU.get(gU)) || void 0 === pU ? void 0 : pU.text) && void 0 !== tU ? tU : UU
             }))
-          }(DD.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), CD);
-          return [DD.doc, cD].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
+          }(UU.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), RU);
+          return [UU.doc, gU].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
         }
 
-        function IC(DD) {
-          const CD = AD(DD),
-            cD = function(DD) {
-              const CD = new Map,
-                cD = DD.find((DD => "_TypeOf" === DD.name));
-              let ID = null;
-              const pD = () => {
-                if (ID) {
-                  const DD = ID.lines.join("\n");
-                  CD.set(ID.name, {
-                    text: DD,
-                    members: FD(DD),
-                    object: DC(DD)
+        function tR(UU) {
+          const RU = lU(UU),
+            gU = function(UU) {
+              const RU = new Map,
+                gU = UU.find((UU => "_TypeOf" === UU.name));
+              let tU = null;
+              const pU = () => {
+                if (tU) {
+                  const UU = tU.lines.join("\n");
+                  RU.set(tU.name, {
+                    text: UU,
+                    members: OU(UU),
+                    object: UR(UU)
                   })
                 }
               };
-              for (const iD of cD.lines.slice(1, -1)) {
-                const DD = iD.match(/^\t([\w$]+): (.+)$/);
-                DD ? (pD(), ID = {
-                  name: DD[1],
-                  lines: [DD[2]]
-                }) : ID && ID.lines.push(iD.replace(/^\t/, ""))
+              for (const EU of gU.lines.slice(1, -1)) {
+                const UU = EU.match(/^\t([\w$]+): (.+)$/);
+                UU ? (pU(), tU = {
+                  name: UU[1],
+                  lines: [UU[2]]
+                }) : tU && tU.lines.push(EU.replace(/^\t/, ""))
               }
-              return pD(), CD
-            }(CD),
-            ID = new Map;
-          for (const pD of CD) eD.has(pD.name) || ID.has(pD.name) || ID.set(pD.name, cC(pD, cD));
-          return ID
+              return pU(), RU
+            }(RU),
+            tU = new Map;
+          for (const pU of RU) MU.has(pU.name) || tU.has(pU.name) || tU.set(pU.name, gR(pU, gU));
+          return tU
         }
-        let pC, iC, fC;
+        let pR, ER, PR;
 
-        function bC() {
-          return iC ??= function(DD) {
-            const CD = AD(DD).find((DD => "GameApi" === DD.name)),
-              cD = new Map,
-              ID = CD.lines;
-            for (let iD = 0; iD < ID.length; iD++) {
-              var pD;
-              if (!ID[iD].trimStart().startsWith("/**")) continue;
-              const DD = iD;
-              for (; iD < ID.length && !ID[iD].includes("*/");) iD++;
-              const CD = null === (pD = ID[iD + 1]) || void 0 === pD ? void 0 : pD.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
-              if (!CD) continue;
-              let fD = null;
-              const bD = [];
-              let QD = "description",
-                wD = !1;
-              for (const cD of ID.slice(DD, iD + 1).join("\n").split("\n").map((DD => DD.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
-                const DD = cD.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
-                DD ? (fD = DD[1].trim(), QD = "deprecation") : cD.startsWith("@") ? (QD = "otherTag", wD = !0) : "" === cD.trim() ? wD || (QD = "description", bD.push(cD)) : "deprecation" !== QD || /^[A-Z]/.test(cD.trim()) ? "otherTag" !== QD && (QD = "description", bD.push(cD)) : fD = `${fD} ${cD.trim()}`.trim()
+        function TR() {
+          return ER ??= function(UU) {
+            const RU = lU(UU).find((UU => "GameApi" === UU.name)),
+              gU = new Map,
+              tU = RU.lines;
+            for (let EU = 0; EU < tU.length; EU++) {
+              var pU;
+              if (!tU[EU].trimStart().startsWith("/**")) continue;
+              const UU = EU;
+              for (; EU < tU.length && !tU[EU].includes("*/");) EU++;
+              const RU = null === (pU = tU[EU + 1]) || void 0 === pU ? void 0 : pU.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
+              if (!RU) continue;
+              let PU = null;
+              const TU = [];
+              let qU = "description",
+                KU = !1;
+              for (const gU of tU.slice(UU, EU + 1).join("\n").split("\n").map((UU => UU.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
+                const UU = gU.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
+                UU ? (PU = UU[1].trim(), qU = "deprecation") : gU.startsWith("@") ? (qU = "otherTag", KU = !0) : "" === gU.trim() ? KU || (qU = "description", TU.push(gU)) : "deprecation" !== qU || /^[A-Z]/.test(gU.trim()) ? "otherTag" !== qU && (qU = "description", TU.push(gU)) : PU = `${PU} ${gU.trim()}`.trim()
               }
-              cD.set(CD[1], {
-                deprecation: fD,
-                description: bD.join("\n").trim()
+              gU.set(RU[1], {
+                deprecation: PU,
+                description: TU.join("\n").trim()
               })
             }
-            return cD
-          }(sD.default), iC
+            return gU
+          }(AU.default), ER
         }
 
-        function QC() {
-          if (!fC) {
-            fC = new Map;
-            for (const DD of lD) {
-              const CD = (0, PD.y)(RD(DD)).flatMap((DD => DD.blocks));
-              for (const DD of (0, PD.l)(CD))
-                if ("ts" === DD.lang || "typescript" === DD.lang)
-                  for (const [CD, cD] of xD(DD.code)) fC.set(CD, cD)
+        function qR() {
+          if (!PR) {
+            PR = new Map;
+            for (const UU of vU) {
+              const RU = (0, wU.o)(sU(UU)).flatMap((UU => UU.blocks));
+              for (const UU of (0, wU.k)(RU))
+                if ("ts" === UU.lang || "typescript" === UU.lang)
+                  for (const [RU, gU] of oU(UU.code)) PR.set(RU, gU)
             }
-            for (const [DD, CD] of(pC ??= IC(sD.default), pC)) fC.has(DD) || fC.set(DD, CD)
+            for (const [UU, RU] of(pR ??= tR(AU.default), pR)) PR.has(UU) || PR.set(UU, RU)
           }
-          return fC
+          return PR
         }
-        const wC = {
+        const KR = {
           BlockName: "blockNames",
           BlockNameOrId: "blockNames",
           ItemName: "itemNames",
@@ -761,332 +761,332 @@ export const modules = {
           VehicleSetting: "vehicleSettings",
           SettableVehicleSetting: "vehicleSettings"
         };
-        let SC;
+        let cR;
 
-        function BC() {
-          if (!SC) {
-            SC = new Map;
-            for (const DD of lD)
-              if (qD(DD.layout))
-                for (const CD of RD(DD).sections) SC.has(CD.heading.text) || SC.set(CD.heading.text, {
-                  pageId: DD.id,
-                  anchor: CD.heading.anchor
+        function GR() {
+          if (!cR) {
+            cR = new Map;
+            for (const UU of vU)
+              if (ZU(UU.layout))
+                for (const RU of sU(UU).sections) cR.has(RU.heading.text) || cR.set(RU.heading.text, {
+                  pageId: UU.id,
+                  anchor: RU.heading.anchor
                 })
           }
-          return SC
+          return cR
         }
 
-        function yC(DD) {
-          const CD = DD.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
-          return CD ? BC().get(CD[1]) : void 0
+        function jR(UU) {
+          const RU = UU.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
+          return RU ? GR().get(RU[1]) : void 0
         }
-        const MC = (0, ID.createContext)("/docs"),
-          tC = (0, ID.createContext)(null),
-          ZC = (0, ID.createContext)(!1),
-          oC = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
+        const uR = (0, tU.createContext)("/docs"),
+          CR = (0, tU.createContext)(null),
+          hR = (0, tU.createContext)(!1),
+          QR = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
 
-        function vC(DD) {
-          const CD = DD.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
-          return CD ? CD[1] : null
+        function eR(UU) {
+          const RU = UU.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
+          return RU ? RU[1] : null
         }
 
-        function NC(DD) {
+        function WR(UU) {
           let {
-            colour: CD
-          } = DD;
-          return (0, tD.jsx)("span", {
+            colour: RU
+          } = UU;
+          return (0, CU.jsx)("span", {
             className: "DocsColourSwatch",
             style: {
-              background: CD
+              background: RU
             },
             "aria-hidden": "true"
           })
         }
 
-        function gC(DD) {
-          const CD = [];
-          let cD = 0;
-          for (const ID of DD.matchAll(oC)) CD.push(DD.slice(cD, ID.index), (0, tD.jsx)(NC, {
-            colour: ID[0]
-          }), ID[0]), cD = ID.index + ID[0].length;
-          return CD.push(DD.slice(cD)), CD
+        function fR(UU) {
+          const RU = [];
+          let gU = 0;
+          for (const tU of UU.matchAll(QR)) RU.push(UU.slice(gU, tU.index), (0, CU.jsx)(WR, {
+            colour: tU[0]
+          }), tU[0]), gU = tU.index + tU[0].length;
+          return RU.push(UU.slice(gU)), RU
         }
 
-        function XC(DD) {
+        function xR(UU) {
           let {
-            href: CD,
-            children: cD
-          } = DD;
-          const pD = (0, ID.useContext)(MC);
-          if (CD.startsWith("#")) {
-            const DD = dD(CD);
-            if (DD) return (0, tD.jsx)(fD.d, {
-              to: WD(pD, DD.page, DD.anchor),
-              children: (0, tD.jsx)(ZC.Provider, {
+            href: RU,
+            children: gU
+          } = UU;
+          const pU = (0, tU.useContext)(uR);
+          if (RU.startsWith("#")) {
+            const UU = kU(RU);
+            if (UU) return (0, CU.jsx)(PU.c, {
+              to: iU(pU, UU.page, UU.anchor),
+              children: (0, CU.jsx)(hR.Provider, {
                 value: !0,
-                children: cD
+                children: gU
               })
             })
           }
-          return (0, tD.jsx)("a", {
-            href: CD,
+          return (0, CU.jsx)("a", {
+            href: RU,
             target: "_blank",
             rel: "noopener noreferrer",
-            children: (0, tD.jsx)(ZC.Provider, {
+            children: (0, CU.jsx)(hR.Provider, {
               value: !0,
-              children: cD
+              children: gU
             })
           })
         }
 
-        function mC(DD) {
+        function mR(UU) {
           let {
-            code: CD
-          } = DD;
-          const cD = (0, ID.useContext)(MC);
-          if ((0, ID.useContext)(ZC)) return (0, tD.jsx)("code", {
+            code: RU
+          } = UU;
+          const gU = (0, tU.useContext)(uR);
+          if ((0, tU.useContext)(hR)) return (0, CU.jsx)("code", {
             className: "DocsInlineCode",
-            children: CD
+            children: RU
           });
-          if (QC().has(CD)) return (0, tD.jsx)(HC, {
-            type: CD
+          if (qR().has(RU)) return (0, CU.jsx)(nR, {
+            type: RU
           });
-          const pD = yC(CD);
-          if (pD) return (0, tD.jsx)(fD.d, {
+          const pU = jR(RU);
+          if (pU) return (0, CU.jsx)(PU.c, {
             className: "DocsInlineCode DocsSymbolLink",
-            to: WD(cD, TD(pD.pageId), pD.anchor),
-            children: CD
+            to: iU(gU, HU(pU.pageId), pU.anchor),
+            children: RU
           });
-          const iD = vC(CD);
-          return (0, tD.jsxs)("code", {
+          const EU = eR(RU);
+          return (0, CU.jsxs)("code", {
             className: "DocsInlineCode",
-            children: [iD && (0, tD.jsx)(NC, {
-              colour: iD
-            }), CD]
+            children: [EU && (0, CU.jsx)(WR, {
+              colour: EU
+            }), RU]
           })
         }
 
-        function nC(DD) {
+        function IR(UU) {
           let {
-            text: CD
-          } = DD;
-          const cD = [];
-          let pD = 0;
-          for (const ID of CD.matchAll(PD.i)) {
-            ID.index > pD && cD.push(...gC(CD.slice(pD, ID.index)));
-            const [, DD, iD, fD, bD, QD] = ID;
-            DD ? cD.push((0, tD.jsx)(mC, {
-              code: (0, PD.o)(DD, iD)
-            })) : fD ? cD.push((0, tD.jsx)("strong", {
-              children: (0, tD.jsx)(nC, {
-                text: fD
+            text: RU
+          } = UU;
+          const gU = [];
+          let pU = 0;
+          for (const tU of RU.matchAll(wU.g)) {
+            tU.index > pU && gU.push(...fR(RU.slice(pU, tU.index)));
+            const [, UU, EU, PU, TU, qU] = tU;
+            UU ? gU.push((0, CU.jsx)(mR, {
+              code: (0, wU.l)(UU, EU)
+            })) : PU ? gU.push((0, CU.jsx)("strong", {
+              children: (0, CU.jsx)(IR, {
+                text: PU
               })
-            })) : cD.push((0, tD.jsx)(XC, {
-              href: QD,
-              children: (0, tD.jsx)(nC, {
-                text: bD
+            })) : gU.push((0, CU.jsx)(xR, {
+              href: qU,
+              children: (0, CU.jsx)(IR, {
+                text: TU
               })
-            })), pD = ID.index + ID[0].length
+            })), pU = tU.index + tU[0].length
           }
-          return pD < CD.length && cD.push(...gC(CD.slice(pD))), (0, tD.jsx)(tD.Fragment, {
-            children: cD.map(((DD, CD) => (0, tD.jsx)(ID.Fragment, {
-              children: DD
-            }, CD)))
+          return pU < RU.length && gU.push(...fR(RU.slice(pU))), (0, CU.jsx)(CU.Fragment, {
+            children: gU.map(((UU, RU) => (0, CU.jsx)(tU.Fragment, {
+              children: UU
+            }, RU)))
           })
         }
-        const OC = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
-          PC = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
+        const JR = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
+          wR = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
 
-        function HC(DD) {
+        function nR(UU) {
           let {
-            type: CD
-          } = DD;
-          const cD = QC(),
-            pD = [];
-          for (const ID of CD.trim().matchAll(OC)) {
-            const [DD, CD, iD, fD, bD] = ID;
-            CD ? pD.push((0, tD.jsx)("span", {
+            type: RU
+          } = UU;
+          const gU = qR(),
+            pU = [];
+          for (const tU of RU.trim().matchAll(JR)) {
+            const [UU, RU, EU, PU, TU] = tU;
+            RU ? pU.push((0, CU.jsx)("span", {
               className: "DocsTypeString",
-              children: DD
-            })) : iD && cD.has(iD) ? pD.push((0, tD.jsx)(KC, {
-              name: iD,
-              definition: cD.get(iD)
-            })) : iD ? pD.push((0, tD.jsx)("span", {
-              className: PC.has(iD) ? "DocsTypeKeyword" : "DocsTypeName",
-              children: DD
-            })) : fD ? pD.push((0, tD.jsx)("span", {
+              children: UU
+            })) : EU && gU.has(EU) ? pU.push((0, CU.jsx)(YR, {
+              name: EU,
+              definition: gU.get(EU)
+            })) : EU ? pU.push((0, CU.jsx)("span", {
+              className: wR.has(EU) ? "DocsTypeKeyword" : "DocsTypeName",
+              children: UU
+            })) : PU ? pU.push((0, CU.jsx)("span", {
               className: "DocsTypeNumber",
-              children: DD
-            })) : bD ? pD.push(" ") : pD.push((0, tD.jsx)("span", {
+              children: UU
+            })) : TU ? pU.push(" ") : pU.push((0, CU.jsx)("span", {
               className: "DocsTypePunctuation",
-              children: DD
+              children: UU
             }))
           }
-          return (0, tD.jsx)("code", {
+          return (0, CU.jsx)("code", {
             className: "DocsInlineCode DocsTypeText",
-            children: pD.map(((DD, CD) => (0, tD.jsx)(ID.Fragment, {
-              children: DD
-            }, CD)))
+            children: pU.map(((UU, RU) => (0, CU.jsx)(tU.Fragment, {
+              children: UU
+            }, RU)))
           })
         }
-        const UC = 480,
-          xC = 6,
-          qC = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
-        let JC = 0;
+        const bR = 480,
+          oR = 6,
+          ZR = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
+        let aR = 0;
 
-        function KC(DD) {
+        function YR(UU) {
           let {
-            name: CD,
-            definition: cD
-          } = DD;
-          const pD = (0, ID.useContext)(MC),
-            iD = wC[CD],
-            bD = (0, ID.useRef)(null),
-            QD = (0, ID.useRef)(null),
-            SD = (0, ID.useRef)(null),
-            [BD, yD] = (0, ID.useState)(!1),
-            [MD, ZD] = (0, ID.useState)(null),
-            vD = (0, ID.useRef)(),
-            ND = (0, ID.useContext)(tC),
-            [gD] = (0, ID.useState)((() => "DocsTypePopover-" + JC++)),
-            XD = () => {
-              clearTimeout(vD.current), yD(!0)
+            name: RU,
+            definition: gU
+          } = UU;
+          const pU = (0, tU.useContext)(uR),
+            EU = KR[RU],
+            TU = (0, tU.useRef)(null),
+            qU = (0, tU.useRef)(null),
+            cU = (0, tU.useRef)(null),
+            [GU, jU] = (0, tU.useState)(!1),
+            [uU, hU] = (0, tU.useState)(null),
+            eU = (0, tU.useRef)(),
+            WU = (0, tU.useContext)(CR),
+            [fU] = (0, tU.useState)((() => "DocsTypePopover-" + aR++)),
+            xU = () => {
+              clearTimeout(eU.current), jU(!0)
             },
-            mD = () => {
-              clearTimeout(vD.current), vD.current = setTimeout((() => {
-                yD(!1)
+            mU = () => {
+              clearTimeout(eU.current), eU.current = setTimeout((() => {
+                jU(!1)
               }), 120)
             };
-          return (0, ID.useEffect)((() => {
-            if (!BD) return;
-            const DD = DD => {
-              if ("Escape" === DD.key) {
-                var CD, cD;
-                if (null !== (CD = QD.current) && void 0 !== CD && CD.contains(document.activeElement)) null === (cD = bD.current) || void 0 === cD || cD.focus();
-                yD(!1)
+          return (0, tU.useEffect)((() => {
+            if (!GU) return;
+            const UU = UU => {
+              if ("Escape" === UU.key) {
+                var RU, gU;
+                if (null !== (RU = qU.current) && void 0 !== RU && RU.contains(document.activeElement)) null === (gU = TU.current) || void 0 === gU || gU.focus();
+                jU(!1)
               }
             };
-            return document.addEventListener("keydown", DD), () => {
-              document.removeEventListener("keydown", DD)
+            return document.addEventListener("keydown", UU), () => {
+              document.removeEventListener("keydown", UU)
             }
-          }), [BD]), (0, ID.useEffect)((() => () => {
-            clearTimeout(vD.current)
-          }), []), (0, ID.useLayoutEffect)((() => {
-            if (!BD || !bD.current || !QD.current) return void ZD(null);
-            const DD = bD.current.getBoundingClientRect(),
-              CD = QD.current.offsetHeight,
-              cD = Math.min(UC, window.innerWidth - 32),
-              ID = Math.min(Math.max(16, DD.left), window.innerWidth - cD - 16),
-              pD = DD.bottom + xC + CD < window.innerHeight;
-            ZD({
-              left: ID,
-              top: pD ? DD.bottom + xC : Math.max(16, DD.top - xC - CD)
+          }), [GU]), (0, tU.useEffect)((() => () => {
+            clearTimeout(eU.current)
+          }), []), (0, tU.useLayoutEffect)((() => {
+            if (!GU || !TU.current || !qU.current) return void hU(null);
+            const UU = TU.current.getBoundingClientRect(),
+              RU = qU.current.offsetHeight,
+              gU = Math.min(bR, window.innerWidth - 32),
+              tU = Math.min(Math.max(16, UU.left), window.innerWidth - gU - 16),
+              pU = UU.bottom + oR + RU < window.innerHeight;
+            hU({
+              left: tU,
+              top: pU ? UU.bottom + oR : Math.max(16, UU.top - oR - RU)
             })
-          }), [BD]), (0, tD.jsxs)(tD.Fragment, {
-            children: [(0, tD.jsx)("button", {
+          }), [GU]), (0, CU.jsxs)(CU.Fragment, {
+            children: [(0, CU.jsx)("button", {
               type: "button",
-              ref: bD,
+              ref: TU,
               className: "DocsTypeLink",
-              "aria-expanded": BD,
-              "aria-describedby": BD ? gD : void 0,
-              onMouseEnter: XD,
-              onMouseLeave: mD,
-              onFocus: XD,
-              onBlur: mD,
-              onKeyDown: DD => {
-                "Tab" === DD.key && !DD.shiftKey && SD.current && (DD.preventDefault(), SD.current.focus())
+              "aria-expanded": GU,
+              "aria-describedby": GU ? fU : void 0,
+              onMouseEnter: xU,
+              onMouseLeave: mU,
+              onFocus: xU,
+              onBlur: mU,
+              onKeyDown: UU => {
+                "Tab" === UU.key && !UU.shiftKey && cU.current && (UU.preventDefault(), cU.current.focus())
               },
-              onClick: XD,
-              children: CD
-            }), BD && (0, wD.createPortal)((0, tD.jsxs)("span", {
-              ref: QD,
-              id: gD,
+              onClick: xU,
+              children: RU
+            }), GU && (0, KU.createPortal)((0, CU.jsxs)("span", {
+              ref: qU,
+              id: fU,
               className: "DocsTypePopover",
               role: "tooltip",
-              style: MD ? {
-                left: MD.left,
-                top: MD.top,
-                maxWidth: UC
+              style: uU ? {
+                left: uU.left,
+                top: uU.top,
+                maxWidth: bR
               } : {
                 visibility: "hidden"
               },
-              onMouseEnter: XD,
-              onMouseLeave: mD,
-              onFocus: XD,
-              onBlur: mD,
-              children: [(0, tD.jsxs)("span", {
+              onMouseEnter: xU,
+              onMouseLeave: mU,
+              onFocus: xU,
+              onBlur: mU,
+              children: [(0, CU.jsxs)("span", {
                 className: "DocsTypePopoverHeader",
-                children: [(0, tD.jsx)("span", {
+                children: [(0, CU.jsx)("span", {
                   className: "DocsTypePopoverTitle",
-                  children: CD
-                }), iD && (0, tD.jsxs)(fD.d, {
-                  ref: SD,
+                  children: RU
+                }), EU && (0, CU.jsxs)(PU.c, {
+                  ref: cU,
                   className: "DocsTypePopoverLink",
-                  to: WD(pD, TD(iD)),
+                  to: iU(pU, HU(EU)),
                   onClick: () => {
-                    yD(!1)
+                    jU(!1)
                   },
-                  onKeyDown: DD => {
-                    if ("Tab" === DD.key) {
-                      var CD;
-                      if (DD.preventDefault(), DD.shiftKey || !bD.current || ! function(DD, CD) {
-                          const cD = [...document.querySelectorAll(qC)],
-                            ID = cD.slice(cD.indexOf(DD) + 1).find((DD => DD.getClientRects().length > 0 && !(null !== CD && void 0 !== CD && CD.contains(DD))));
-                          return null === ID || void 0 === ID || ID.focus(), void 0 !== ID
-                        }(bD.current, QD.current)) null === (CD = bD.current) || void 0 === CD || CD.focus();
-                      DD.shiftKey || yD(!1)
+                  onKeyDown: UU => {
+                    if ("Tab" === UU.key) {
+                      var RU;
+                      if (UU.preventDefault(), UU.shiftKey || !TU.current || ! function(UU, RU) {
+                          const gU = [...document.querySelectorAll(ZR)],
+                            tU = gU.slice(gU.indexOf(UU) + 1).find((UU => UU.getClientRects().length > 0 && !(null !== RU && void 0 !== RU && RU.contains(UU))));
+                          return null === tU || void 0 === tU || tU.focus(), void 0 !== tU
+                        }(TU.current, qU.current)) null === (RU = TU.current) || void 0 === RU || RU.focus();
+                      UU.shiftKey || jU(!1)
                     }
                   },
-                  children: [TD(iD).title, (0, tD.jsx)(oD, {
+                  children: [HU(EU).title, (0, CU.jsx)(QU, {
                     name: "arrow-right"
                   })]
                 })]
-              }), (0, tD.jsx)(OD, {
+              }), (0, CU.jsx)(JU, {
                 lang: "ts",
-                code: cD,
+                code: gU,
                 compact: !0
               })]
-            }), null !== ND && void 0 !== ND ? ND : document.body)]
+            }), null !== WU && void 0 !== WU ? WU : document.body)]
           })
         }
-        var aC = cD(194),
-          VC = cD(4557),
-          zC = cD(4560),
-          jC = cD(4562);
-        const lC = {
+        var BR = gU(189),
+          VR = gU(4422),
+          rR = gU(4430),
+          XR = gU(4438);
+        const vR = {
           progressBar: {
-            KD: 30,
-            aD: .075,
-            VD: 5,
-            zD: !1,
+            aU: 30,
+            YU: .075,
+            BU: 5,
+            VU: !1,
             description: [{
               str: "Click repeatedly to complete!"
             }],
-            LD: "fa-solid fa-computer-mouse",
+            vU: "fa-solid fa-computer-mouse",
             scale: 3,
             rotation: 15
           },
           timedClick: {
-            GD: 3e3,
+            HU: 3e3,
             icon: "fa-solid fa-computer-mouse",
             label: [{
               str: "Click to complete the QTE!"
             }],
-            RD: !0,
+            SU: !0,
             scale: 3,
             rotation: 15,
-            kD: !1
+            sU: !1
           },
           gravityBar: {
-            KD: 30,
-            YD: .25,
-            WD: 3,
-            sD: .8,
+            aU: 30,
+            kU: .25,
+            FU: 3,
+            iU: .8,
             gravity: 1,
-            ED: 1.5,
-            eD: 8,
-            uD: 4,
-            zD: !1,
+            AU: 1.5,
+            zU: 8,
+            MU: 4,
+            VU: !1,
             description: [{
               str: "Hold to catch!"
             }],
@@ -1094,7 +1094,7 @@ export const modules = {
           },
           precisionBar: {
             speed: .5,
-            rD: .15,
+            LU: .15,
             label: [{
               str: "Click when the marker is within the green zone."
             }],
@@ -1103,30 +1103,30 @@ export const modules = {
             rotation: 0
           },
           rhythmClick: {
-            FD: 5,
-            DC: 1200,
-            CC: .15,
-            cC: 3,
+            lU: 5,
+            OU: 1200,
+            UR: .15,
+            RR: 3,
             label: [{
               str: "Click when the circles align!"
             }],
             icon: ""
           }
         };
-        var LC = cD(312),
-          TC = cD(1969);
+        var dR = gU(299),
+          HR = gU(1849);
 
-        function GC(DD) {
-          return DD.startsWith("fa-")
+        function SR(UU) {
+          return UU.startsWith("fa-")
         }
-        const RC = {
+        const sR = {
             text: "Text",
             icon: "Icon",
             progressBar: "Progress bar",
             keyBinding: "Key binding",
             other: "Other"
           },
-          kC = {
+          yR = {
             text: "Text",
             icon: {
               icon: "Pixelated Heart"
@@ -1141,10 +1141,10 @@ export const modules = {
             }
           };
 
-        function dC(DD) {
-          return "string" === typeof DD ? "text" : "entityName" in DD || "translationKey" in DD ? "other" : (0, LC.wb)(DD) ? "progressBar" : (0, LC.sb)(DD) ? "keyBinding" : "icon" in DD ? "icon" : "str" in DD && "string" === typeof DD.str ? "text" : "other"
+        function kR(UU) {
+          return "string" === typeof UU ? "text" : "entityName" in UU || "translationKey" in UU ? "other" : (0, dR.vb)(UU) ? "progressBar" : (0, dR.ub)(UU) ? "keyBinding" : "icon" in UU ? "icon" : "str" in UU && "string" === typeof UU.str ? "text" : "other"
         }
-        const YC = [{
+        const FR = [{
             path: ["style", "color"],
             label: "Colour",
             field: {
@@ -1182,7 +1182,7 @@ export const modules = {
             },
             defaultText: "1"
           }],
-          WC = {
+          iR = {
             text: [{
               path: ["str"],
               label: "Text",
@@ -1191,7 +1191,7 @@ export const modules = {
                 multiline: !0
               },
               isRequired: !0
-            }, ...YC],
+            }, ...FR],
             icon: [{
               path: ["icon"],
               label: "Icon",
@@ -1262,360 +1262,360 @@ export const modules = {
               label: "Action",
               field: {
                 kind: "choice",
-                options: TC.k
+                options: HR.k
               },
               isRequired: !0
-            }, ...YC],
+            }, ...FR],
             other: []
           };
 
-        function sC(DD) {
-          return "string" === typeof DD ? {
-            str: DD
-          } : DD
+        function AR(UU) {
+          return "string" === typeof UU ? {
+            str: UU
+          } : UU
         }
 
-        function EC(DD, CD) {
-          let cD = sC(DD);
-          for (const ID of CD) cD = cD && "object" === typeof cD ? cD[ID] : void 0;
-          return cD
+        function zR(UU, RU) {
+          let gU = AR(UU);
+          for (const tU of RU) gU = gU && "object" === typeof gU ? gU[tU] : void 0;
+          return gU
         }
 
-        function eC(DD, CD, cD) {
-          const ID = (DD, pD) => {
-            var iD;
-            const fD = CD[pD],
-              bD = {
-                ...DD
+        function MR(UU, RU, gU) {
+          const tU = (UU, pU) => {
+            var EU;
+            const PU = RU[pU],
+              TU = {
+                ...UU
               };
-            if (pD === CD.length - 1) return void 0 === cD ? delete bD[fD] : bD[fD] = cD, bD;
-            const QD = ID(null !== (iD = DD[fD]) && void 0 !== iD ? iD : {}, pD + 1);
-            return 0 === Object.keys(QD).length ? delete bD[fD] : bD[fD] = QD, bD
+            if (pU === RU.length - 1) return void 0 === gU ? delete TU[PU] : TU[PU] = gU, TU;
+            const qU = tU(null !== (EU = UU[PU]) && void 0 !== EU ? EU : {}, pU + 1);
+            return 0 === Object.keys(qU).length ? delete TU[PU] : TU[PU] = qU, TU
           };
-          return function(DD) {
-            const CD = Object.keys(DD);
-            return "string" === typeof DD.str && 1 === CD.length ? DD.str : DD
-          }(ID(sC(DD), 0))
+          return function(UU) {
+            const RU = Object.keys(UU);
+            return "string" === typeof UU.str && 1 === RU.length ? UU.str : UU
+          }(tU(AR(UU), 0))
         }
 
-        function uC(DD, CD) {
-          const cD = dC(DD),
-            ID = WC[cD].find((DD => DD.path.join(".") === CD.join("."))),
-            pD = null !== ID && void 0 !== ID && ID.isRequired && "other" !== cD ? EC(kC[cD], CD) : void 0;
-          return eC(DD, CD, pD)
+        function DR(UU, RU) {
+          const gU = kR(UU),
+            tU = iR[gU].find((UU => UU.path.join(".") === RU.join("."))),
+            pU = null !== tU && void 0 !== tU && tU.isRequired && "other" !== gU ? zR(yR[gU], RU) : void 0;
+          return MR(UU, RU, pU)
         }
 
-        function hC(DD) {
-          switch (dC(DD)) {
+        function LR(UU) {
+          switch (kR(UU)) {
             case "text":
-              return String(EC(DD, ["str"]));
+              return String(zR(UU, ["str"]));
             case "icon":
-              return String(EC(DD, ["icon"]));
+              return String(zR(UU, ["icon"]));
             case "progressBar":
-              return `${Math.round(100*Number(EC(DD,["progress"])))}%`;
+              return `${Math.round(100*Number(zR(UU,["progress"])))}%`;
             case "keyBinding":
-              return String(EC(DD, ["action"]));
+              return String(zR(UU, ["action"]));
             case "other":
-              return JSON.stringify(DD)
+              return JSON.stringify(UU)
           }
         }
-        const rC = /^[A-Za-z_$][\w$]*$/;
+        const NR = /^[A-Za-z_$][\w$]*$/;
 
-        function AC(DD) {
-          if (Array.isArray(DD)) return `[${DD.map(AC).join(", ")}]`;
-          if (DD && "object" === typeof DD) {
-            const CD = Object.entries(DD).map((DD => {
-              let [CD, cD] = DD;
-              return `${rC.test(CD)?CD:JSON.stringify(CD)}: ${AC(cD)}`
+        function lR(UU) {
+          if (Array.isArray(UU)) return `[${UU.map(lR).join(", ")}]`;
+          if (UU && "object" === typeof UU) {
+            const RU = Object.entries(UU).map((UU => {
+              let [RU, gU] = UU;
+              return `${NR.test(RU)?RU:JSON.stringify(RU)}: ${lR(gU)}`
             }));
-            return 0 === CD.length ? "{}" : `{ ${CD.join(", ")} }`
+            return 0 === RU.length ? "{}" : `{ ${RU.join(", ")} }`
           }
-          return JSON.stringify(DD)
+          return JSON.stringify(UU)
         }
 
-        function FC(DD) {
-          const CD = DD.map(AC),
-            cD = `[${CD.join(", ")}]`;
-          return cD.length <= 60 ? cD : `[\n${CD.map((DD=>`    ${DD},`)).join("\n")}\n]`
+        function OR(UU) {
+          const RU = UU.map(lR),
+            gU = `[${RU.join(", ")}]`;
+          return gU.length <= 60 ? gU : `[\n${RU.map((UU=>`    ${UU},`)).join("\n")}\n]`
         }
-        const Dc = {
+        const Ug = {
           "\n": "\\n",
           "\r": "\\r",
           "\t": "\\t"
         };
 
-        function Cc(DD) {
-          let CD = "";
-          for (let pD = 0; pD < DD.length; pD++) {
-            const iD = DD[pD];
-            if ("\\" === iD) {
-              var cD;
-              const ID = null !== (cD = DD[pD + 1]) && void 0 !== cD ? cD : "";
-              CD += "'" === ID ? "'" : iD + ID, pD++
-            } else if ('"' === iD) CD += '\\"';
+        function Rg(UU) {
+          let RU = "";
+          for (let pU = 0; pU < UU.length; pU++) {
+            const EU = UU[pU];
+            if ("\\" === EU) {
+              var gU;
+              const tU = null !== (gU = UU[pU + 1]) && void 0 !== gU ? gU : "";
+              RU += "'" === tU ? "'" : EU + tU, pU++
+            } else if ('"' === EU) RU += '\\"';
             else {
-              var ID;
-              CD += null !== (ID = Dc[iD]) && void 0 !== ID ? ID : iD
+              var tU;
+              RU += null !== (tU = Ug[EU]) && void 0 !== tU ? tU : EU
             }
           }
-          return `"${CD}"`
+          return `"${RU}"`
         }
 
-        function cc(DD) {
-          if ("string" === typeof DD) return !0;
-          if (!DD || "object" !== typeof DD || Array.isArray(DD)) return !1;
-          const CD = DD;
-          return "ProgressBar" === CD.type ? "number" === typeof CD.progress : "StyledKeyBinding" === CD.type ? TC.k.includes(CD.action) : "string" === typeof CD.icon || "string" === typeof CD.str || "string" === typeof CD.entityName || "string" === typeof CD.translationKey
+        function gg(UU) {
+          if ("string" === typeof UU) return !0;
+          if (!UU || "object" !== typeof UU || Array.isArray(UU)) return !1;
+          const RU = UU;
+          return "ProgressBar" === RU.type ? "number" === typeof RU.progress : "StyledKeyBinding" === RU.type ? HR.k.includes(RU.action) : "string" === typeof RU.icon || "string" === typeof RU.str || "string" === typeof RU.entityName || "string" === typeof RU.translationKey
         }
 
-        function Ic(DD) {
-          let CD;
+        function tg(UU) {
+          let RU;
           try {
-            CD = function(DD) {
-              let CD = "",
-                cD = "",
-                ID = 0;
-              const pD = () => {
-                CD += cD.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), cD = ""
+            RU = function(UU) {
+              let RU = "",
+                gU = "",
+                tU = 0;
+              const pU = () => {
+                RU += gU.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), gU = ""
               };
-              for (; ID < DD.length;) {
-                const iD = DD.slice(ID).search(/["'`]|\/\//);
-                if (-1 === iD) {
-                  cD += DD.slice(ID);
+              for (; tU < UU.length;) {
+                const EU = UU.slice(tU).search(/["'`]|\/\//);
+                if (-1 === EU) {
+                  gU += UU.slice(tU);
                   break
                 }
-                cD += DD.slice(ID, ID + iD);
-                const fD = ID + iD,
-                  bD = DD[fD];
-                if ("/" === bD) {
-                  const CD = DD.indexOf("\n", fD);
-                  ID = -1 === CD ? DD.length : CD;
+                gU += UU.slice(tU, tU + EU);
+                const PU = tU + EU,
+                  TU = UU[PU];
+                if ("/" === TU) {
+                  const RU = UU.indexOf("\n", PU);
+                  tU = -1 === RU ? UU.length : RU;
                   continue
                 }
-                if (pD(), "`" === bD) throw new Error("Use quotes rather than template strings.");
-                let QD = fD + 1;
-                for (; QD < DD.length && DD[QD] !== bD;) QD += "\\" === DD[QD] ? 2 : 1;
-                if (QD >= DD.length) throw new Error("A string is missing its closing quote.");
-                const wD = DD.slice(fD + 1, QD);
-                CD += Cc(wD), ID = QD + 1
+                if (pU(), "`" === TU) throw new Error("Use quotes rather than template strings.");
+                let qU = PU + 1;
+                for (; qU < UU.length && UU[qU] !== TU;) qU += "\\" === UU[qU] ? 2 : 1;
+                if (qU >= UU.length) throw new Error("A string is missing its closing quote.");
+                const KU = UU.slice(PU + 1, qU);
+                RU += Rg(KU), tU = qU + 1
               }
-              return pD(), JSON.parse(CD)
-            }(DD.trim())
-          } catch (ID) {
+              return pU(), JSON.parse(RU)
+            }(UU.trim())
+          } catch (tU) {
             return {
               parts: null,
-              error: ID instanceof SyntaxError ? "This isn't a valid array yet." : ID.message
+              error: tU instanceof SyntaxError ? "This isn't a valid array yet." : tU.message
             }
           }
-          if (!Array.isArray(CD)) return {
+          if (!Array.isArray(RU)) return {
             parts: null,
             error: 'Styled text is an array, e.g. ["Hello ", { str: "world" }]'
           };
-          const cD = CD.findIndex((DD => !cc(DD)));
-          return -1 !== cD ? {
+          const gU = RU.findIndex((UU => !gg(UU)));
+          return -1 !== gU ? {
             parts: null,
-            error: `Part ${cD+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
+            error: `Part ${gU+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
           } : {
-            parts: CD,
+            parts: RU,
             error: null
           }
         }
-        const pc = 1 / aC.h.clientTicksPerSecond,
-          ic = 700,
-          fc = {
+        const pg = 1 / BR.e.clientTicksPerSecond,
+          Eg = 700,
+          Pg = {
             type: null,
             parameters: null,
             state: null,
             isActive: !1
           },
-          bc = {
-            progressBar: lC.progressBar.LD,
-            timedClick: lC.timedClick.icon,
-            gravityBar: lC.gravityBar.icon,
-            precisionBar: lC.precisionBar.icon,
-            rhythmClick: lC.rhythmClick.icon
+          Tg = {
+            progressBar: vR.progressBar.vU,
+            timedClick: vR.timedClick.icon,
+            gravityBar: vR.gravityBar.icon,
+            precisionBar: vR.precisionBar.icon,
+            rhythmClick: vR.rhythmClick.icon
           };
 
-        function Qc(DD) {
+        function qg(UU) {
           let {
-            type: CD
-          } = DD;
-          const [cD, pD] = (0, ID.useState)("ready"), [fD, bD] = (0, ID.useState)(1), [QD, wD] = (0, ID.useState)(!0), SD = (0, ID.useRef)(null), BD = (0, ID.useRef)(null), yD = (0, ID.useRef)(null), MD = (0, ID.useRef)(new Set), ZD = (0, ID.useRef)(!1), vD = bc[CD], ND = (0, ID.useMemo)((() => ({
+            type: RU
+          } = UU;
+          const [gU, pU] = (0, tU.useState)("ready"), [PU, TU] = (0, tU.useState)(1), [qU, KU] = (0, tU.useState)(!0), cU = (0, tU.useRef)(null), GU = (0, tU.useRef)(null), jU = (0, tU.useRef)(null), uU = (0, tU.useRef)(new Set), hU = (0, tU.useRef)(!1), eU = Tg[RU], WU = (0, tU.useMemo)((() => ({
             getState: () => {
-              var DD, CD;
-              return null !== (DD = null === (CD = yD.current) || void 0 === CD ? void 0 : CD.getState()) && void 0 !== DD ? DD : fc
+              var UU, RU;
+              return null !== (UU = null === (RU = jU.current) || void 0 === RU ? void 0 : RU.getState()) && void 0 !== UU ? UU : Pg
             },
-            onFrame: DD => (MD.current.add(DD), () => {
-              MD.current.delete(DD)
+            onFrame: UU => (uU.current.add(UU), () => {
+              uU.current.delete(UU)
             })
           })), []);
-          (0, ID.useEffect)((() => {
-            const DD = SD.current,
-              CD = BD.current;
-            if (!DD || !CD) return;
-            const cD = new ResizeObserver((() => {
-              bD(DD.clientWidth / Math.max(1, CD.offsetWidth))
+          (0, tU.useEffect)((() => {
+            const UU = cU.current,
+              RU = GU.current;
+            if (!UU || !RU) return;
+            const gU = new ResizeObserver((() => {
+              TU(UU.clientWidth / Math.max(1, RU.offsetWidth))
             }));
-            return cD.observe(DD), () => {
-              cD.disconnect()
+            return gU.observe(UU), () => {
+              gU.disconnect()
             }
-          }), []), (0, ID.useEffect)((() => {
-            var DD;
-            if ("playing" !== cD) return;
-            let ID = !1;
-            const iD = new jC.f[CD](lC[CD], (DD => {
-              ID = !0, wD(!1), pD(DD ? "succeeded" : "failed")
+          }), []), (0, tU.useEffect)((() => {
+            var UU;
+            if ("playing" !== gU) return;
+            let tU = !1;
+            const EU = new XR.d[RU](vR[RU], (UU => {
+              tU = !0, KU(!1), pU(UU ? "succeeded" : "failed")
             }), (() => {}));
-            yD.current = iD;
-            let fD = 0,
-              bD = performance.now(),
-              QD = requestAnimationFrame((function DD(CD) {
-                for (fD += Math.min(.25, (CD - bD) / 1e3), bD = CD; fD >= pc && !ID;) fD -= pc, iD.handleTick(pc);
-                for (const cD of MD.current) cD();
-                ID || (QD = requestAnimationFrame(DD))
+            jU.current = EU;
+            let PU = 0,
+              TU = performance.now(),
+              qU = requestAnimationFrame((function UU(RU) {
+                for (PU += Math.min(.25, (RU - TU) / 1e3), TU = RU; PU >= pg && !tU;) PU -= pg, EU.handleTick(pg);
+                for (const gU of uU.current) gU();
+                tU || (qU = requestAnimationFrame(UU))
               }));
-            return null === (DD = SD.current) || void 0 === DD || DD.focus({
+            return null === (UU = cU.current) || void 0 === UU || UU.focus({
               preventScroll: !0
             }), () => {
-              cancelAnimationFrame(QD), iD.tearDown(), yD.current = null, ZD.current = !1
+              cancelAnimationFrame(qU), EU.tearDown(), jU.current = null, hU.current = !1
             }
-          }), [cD, CD]), (0, ID.useEffect)((() => {
-            if (QD) return;
-            const DD = setTimeout((() => {
-              wD(!0)
-            }), ic);
+          }), [gU, RU]), (0, tU.useEffect)((() => {
+            if (qU) return;
+            const UU = setTimeout((() => {
+              KU(!0)
+            }), Eg);
             return () => {
-              clearTimeout(DD)
+              clearTimeout(UU)
             }
-          }), [QD]);
-          const gD = DD => {
-            var CD;
-            "playing" === cD && ZD.current !== DD && (ZD.current = DD, null === (CD = yD.current) || void 0 === CD || CD.handleMouseInput(DD))
+          }), [qU]);
+          const fU = UU => {
+            var RU;
+            "playing" === gU && hU.current !== UU && (hU.current = UU, null === (RU = jU.current) || void 0 === RU || RU.handleMouseInput(UU))
           };
-          return (0, tD.jsxs)("div", {
+          return (0, CU.jsxs)("div", {
             className: "DocsQteDemo",
-            children: [(0, tD.jsxs)("div", {
-              ref: SD,
-              className: iD()("DocsQteStage", {
-                Playing: "playing" === cD
+            children: [(0, CU.jsxs)("div", {
+              ref: cU,
+              className: EU()("DocsQteStage", {
+                Playing: "playing" === gU
               }),
-              tabIndex: "playing" === cD ? 0 : -1,
-              role: "playing" === cD ? "button" : void 0,
-              "aria-label": "playing" === cD ? `${CD} quick time event: click or press Space` : void 0,
-              onPointerDown: DD => {
-                0 === DD.button && gD(!0)
+              tabIndex: "playing" === gU ? 0 : -1,
+              role: "playing" === gU ? "button" : void 0,
+              "aria-label": "playing" === gU ? `${RU} quick time event: click or press Space` : void 0,
+              onPointerDown: UU => {
+                0 === UU.button && fU(!0)
               },
               onPointerUp: () => {
-                gD(!1)
+                fU(!1)
               },
               onPointerLeave: () => {
-                gD(!1)
+                fU(!1)
               },
               onPointerCancel: () => {
-                gD(!1)
+                fU(!1)
               },
-              onKeyDown: DD => {
-                "playing" !== cD || " " !== DD.key && "Enter" !== DD.key || (DD.preventDefault(), gD(!0))
+              onKeyDown: UU => {
+                "playing" !== gU || " " !== UU.key && "Enter" !== UU.key || (UU.preventDefault(), fU(!0))
               },
-              onKeyUp: DD => {
-                "playing" !== cD || " " !== DD.key && "Enter" !== DD.key || gD(!1)
+              onKeyUp: UU => {
+                "playing" !== gU || " " !== UU.key && "Enter" !== UU.key || fU(!1)
               },
-              children: [(0, tD.jsx)("div", {
-                ref: BD,
+              children: [(0, CU.jsx)("div", {
+                ref: GU,
                 className: "DocsQteScreen",
                 style: {
-                  transform: `scale(${fD})`
+                  transform: `scale(${PU})`
                 },
-                children: "playing" === cD && (0, tD.jsx)(zC.c.Provider, {
-                  value: ND,
-                  children: (0, tD.jsx)(VC.b, {
+                children: "playing" === gU && (0, CU.jsx)(rR.e.Provider, {
+                  value: WU,
+                  children: (0, CU.jsx)(VR.b, {
                     qte: {
-                      type: CD,
-                      parameters: lC[CD]
+                      type: RU,
+                      parameters: vR[RU]
                     }
                   })
                 })
-              }), "playing" !== cD && (0, tD.jsxs)("div", {
+              }), "playing" !== gU && (0, CU.jsxs)("div", {
                 className: "DocsQteOverlay",
-                children: ["ready" !== cD && (0, tD.jsxs)("div", {
-                  className: iD()("DocsQteResult", "succeeded" === cD ? "Succeeded" : "Failed"),
-                  children: [(0, tD.jsx)(oD, {
-                    name: "succeeded" === cD ? "check" : "cross",
+                children: ["ready" !== gU && (0, CU.jsxs)("div", {
+                  className: EU()("DocsQteResult", "succeeded" === gU ? "Succeeded" : "Failed"),
+                  children: [(0, CU.jsx)(QU, {
+                    name: "succeeded" === gU ? "check" : "cross",
                     isTinted: !0
-                  }), (0, tD.jsx)("span", {
-                    children: "succeeded" === cD ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
+                  }), (0, CU.jsx)("span", {
+                    children: "succeeded" === gU ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
                   })]
-                }), (0, tD.jsxs)("button", {
+                }), (0, CU.jsxs)("button", {
                   type: "button",
                   className: "DocsQtePlay",
-                  disabled: !QD,
+                  disabled: !qU,
                   onClick: () => {
-                    pD("playing")
+                    pU("playing")
                   },
-                  children: [(0, tD.jsx)(oD, {
-                    name: "ready" === cD ? "play" : "replay"
-                  }), (0, tD.jsx)("span", {
-                    children: "ready" === cD ? `Try ${CD}` : "Play again"
+                  children: [(0, CU.jsx)(QU, {
+                    name: "ready" === gU ? "play" : "replay"
+                  }), (0, CU.jsx)("span", {
+                    children: "ready" === gU ? `Try ${RU}` : "Play again"
                   })]
                 })]
               })]
-            }), vD && !GC(vD) && (0, tD.jsxs)("p", {
+            }), eU && !SR(eU) && (0, CU.jsxs)("p", {
               className: "DocsQteCaption",
-              children: ["The ", (0, tD.jsx)("code", {
-                children: vD
+              children: ["The ", (0, CU.jsx)("code", {
+                children: eU
               }), " icon is a Bloxd item, so it shows in game only."]
             })]
           })
         }
 
-        function wc(DD) {
+        function Kg(UU) {
           let {
-            level: CD,
-            text: cD,
-            anchor: ID,
-            className: pD
-          } = DD;
-          const fD = `h${Math.min(CD,6)}`;
-          return (0, tD.jsxs)(fD, {
-                id: ID,
-                className: iD()("DocsHeading", pD),
-                children: [(0, tD.jsx)(nC, {
-                      text: cD
-                    }), (0, tD.jsx)("a", {
+            level: RU,
+            text: gU,
+            anchor: tU,
+            className: pU
+          } = UU;
+          const PU = `h${Math.min(RU,6)}`;
+          return (0, CU.jsxs)(PU, {
+                id: tU,
+                className: EU()("DocsHeading", pU),
+                children: [(0, CU.jsx)(IR, {
+                      text: gU
+                    }), (0, CU.jsx)("a", {
                         className: "DocsHeadingAnchor",
-                        href: `#${ID}`,
-                        "aria-label": `Link to ${cD.replace(/`/g,"")}`,children:"#"})]})}function Sc(DD){let{items:CD,ordered:cD}=DD;const ID=cD?"ol":"ul";return(0,tD.jsx)(ID,{className:"DocsList",children:CD.map(((DD,CD)=>(0,tD.jsxs)("li",{children:[(0,tD.jsx)(nC,{text:DD.text}),DD.children.length>0&&(0,tD.jsx)(Sc,{items:DD.children,ordered:cD})]},CD)))})}function Bc(DD){const CD=DD[0],cD="paragraph"===(null===CD||void 0===CD?void 0:CD.kind)?CD.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(cD)?"warning":/^\*\*(tip|prefer)/.test(cD)?"tip":"note"}function yc(DD){let{block:CD}=DD;switch(CD.kind){case"heading":return(0,tD.jsx)(wc,{level:CD.level,text:CD.text,anchor:CD.anchor});case"paragraph":return(0,tD.jsx)("p",{children:(0,tD.jsx)(nC,{text:CD.text})});case"code":{const DD="ts"===CD.lang?function(DD){const CD=DD.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return CD&&Object.hasOwn(lC,CD[1])?CD[1]:null}(CD.code):null;return(0,tD.jsxs)(tD.Fragment,{children:[(0,tD.jsx)(OD,{code:CD.code,lang:CD.lang}),DD&&(0,tD.jsx)(Qc,{type:DD})]})}case"table":return(0,tD.jsx)("div",{className:"DocsTableScroll",children:(0,tD.jsxs)("table",{className:"DocsTable",children:[(0,tD.jsx)("thead",{children:(0,tD.jsx)("tr",{children:CD.header.map(((DD,CD)=>(0,tD.jsx)("th",{children:(0,tD.jsx)(nC,{text:DD})},CD)))})}),(0,tD.jsx)("tbody",{children:CD.rows.map(((DD,CD)=>(0,tD.jsx)("tr",{children:DD.map(((DD,CD)=>(0,tD.jsx)("td",{children:(0,tD.jsx)(nC,{text:DD})},CD)))},CD)))})]})});case"list":return(0,tD.jsx)(Sc,{items:CD.items,ordered:CD.ordered});case"quote":return(0,tD.jsx)("aside",{className:iD()("DocsCallout",Bc(CD.blocks)),children:(0,tD.jsx)(Mc,{blocks:CD.blocks})});case"rule":return(0,tD.jsx)("hr",{className:"DocsRule"})}}function Mc(DD){let{blocks:CD}=DD;return(0,tD.jsx)(tD.Fragment,{children:CD.map(((DD,CD)=>(0,tD.jsx)(yc,{block:DD},CD)))})}var tc=cD(4543),Zc=cD(4548);function oc(DD){return"blocks"===DD||"items"===DD}const vc=new Map;function Nc(DD){let CD=vc.get(DD);return CD||(CD=function(DD){const CD={entries:[],legend:[],notes:[],examples:[]};let cD=!1;for(const iD of DD.split(/\r?\n/).slice(1)){if(iD.startsWith("#")){const DD=iD.replace(/^# ?/,""),ID=DD.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);ID?CD.legend.push({code:ID[1],meaning:ID[2],usage:ID[3].trim()}):/^Examples:/.test(DD.trim())?cD=!0:cD&&DD.trim()?CD.examples.push(DD.trim()):DD.trim()&&!/^\s/.test(DD)&&CD.notes.push(DD.trim());continue}const DD=iD.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var ID,pD;DD&&CD.entries.push({name:DD[1],variants:null!==(ID=null===(pD=DD[2])||void 0===pD?void 0:pD.split(","))&&void 0!==ID?ID:[]})}return CD}("blocks"===DD?tc:Zc),vc.set(DD,CD)),CD}function gc(DD){let{className:CD,value:cD,placeholder:ID,label:pD,onChange:iD,count:fD,children:bD}=DD;return(0,tD.jsxs)("div",{className:CD,children:[(0,tD.jsx)(oD,{name:"magnifying-glass"}),(0,tD.jsx)("input",{type:"search",value:cD,placeholder:ID,"aria-label":pD,onChange:DD=>{iD(DD.target.value)}}),bD,fD&&(0,tD.jsxs)("span",{className:"DocsFilterCount",children:[fD.visible," of ",fD.total]})]})}var Xc=cD(1064);function mc(DD){const CD=DD.trim().match(/^(` {
+                        href: `#${tU}`,
+                        "aria-label": `Link to ${gU.replace(/`/g,"")}`,children:"#"})]})}function cg(UU){let{items:RU,ordered:gU}=UU;const tU=gU?"ol":"ul";return(0,CU.jsx)(tU,{className:"DocsList",children:RU.map(((UU,RU)=>(0,CU.jsxs)("li",{children:[(0,CU.jsx)(IR,{text:UU.text}),UU.children.length>0&&(0,CU.jsx)(cg,{items:UU.children,ordered:gU})]},RU)))})}function Gg(UU){const RU=UU[0],gU="paragraph"===(null===RU||void 0===RU?void 0:RU.kind)?RU.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(gU)?"warning":/^\*\*(tip|prefer)/.test(gU)?"tip":"note"}function jg(UU){let{block:RU}=UU;switch(RU.kind){case"heading":return(0,CU.jsx)(Kg,{level:RU.level,text:RU.text,anchor:RU.anchor});case"paragraph":return(0,CU.jsx)("p",{children:(0,CU.jsx)(IR,{text:RU.text})});case"code":{const UU="ts"===RU.lang?function(UU){const RU=UU.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return RU&&Object.hasOwn(vR,RU[1])?RU[1]:null}(RU.code):null;return(0,CU.jsxs)(CU.Fragment,{children:[(0,CU.jsx)(JU,{code:RU.code,lang:RU.lang}),UU&&(0,CU.jsx)(qg,{type:UU})]})}case"table":return(0,CU.jsx)("div",{className:"DocsTableScroll",children:(0,CU.jsxs)("table",{className:"DocsTable",children:[(0,CU.jsx)("thead",{children:(0,CU.jsx)("tr",{children:RU.header.map(((UU,RU)=>(0,CU.jsx)("th",{children:(0,CU.jsx)(IR,{text:UU})},RU)))})}),(0,CU.jsx)("tbody",{children:RU.rows.map(((UU,RU)=>(0,CU.jsx)("tr",{children:UU.map(((UU,RU)=>(0,CU.jsx)("td",{children:(0,CU.jsx)(IR,{text:UU})},RU)))},RU)))})]})});case"list":return(0,CU.jsx)(cg,{items:RU.items,ordered:RU.ordered});case"quote":return(0,CU.jsx)("aside",{className:EU()("DocsCallout",Gg(RU.blocks)),children:(0,CU.jsx)(ug,{blocks:RU.blocks})});case"rule":return(0,CU.jsx)("hr",{className:"DocsRule"})}}function ug(UU){let{blocks:RU}=UU;return(0,CU.jsx)(CU.Fragment,{children:RU.map(((UU,RU)=>(0,CU.jsx)(jg,{block:UU},RU)))})}var Cg=gU(4408),hg=gU(4412);function Qg(UU){return"blocks"===UU||"items"===UU}const eg=new Map;function Wg(UU){let RU=eg.get(UU);return RU||(RU=function(UU){const RU={entries:[],legend:[],notes:[],examples:[]};let gU=!1;for(const EU of UU.split(/\r?\n/).slice(1)){if(EU.startsWith("#")){const UU=EU.replace(/^# ?/,""),tU=UU.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);tU?RU.legend.push({code:tU[1],meaning:tU[2],usage:tU[3].trim()}):/^Examples:/.test(UU.trim())?gU=!0:gU&&UU.trim()?RU.examples.push(UU.trim()):UU.trim()&&!/^\s/.test(UU)&&RU.notes.push(UU.trim());continue}const UU=EU.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var tU,pU;UU&&RU.entries.push({name:UU[1],variants:null!==(tU=null===(pU=UU[2])||void 0===pU?void 0:pU.split(","))&&void 0!==tU?tU:[]})}return RU}("blocks"===UU?Cg:hg),eg.set(UU,RU)),RU}function fg(UU){let{className:RU,value:gU,placeholder:tU,label:pU,onChange:EU,count:PU,children:TU}=UU;return(0,CU.jsxs)("div",{className:RU,children:[(0,CU.jsx)(QU,{name:"magnifying-glass"}),(0,CU.jsx)("input",{type:"search",value:gU,placeholder:tU,"aria-label":pU,onChange:UU=>{EU(UU.target.value)}}),TU,PU&&(0,CU.jsxs)("span",{className:"DocsFilterCount",children:[PU.visible," of ",PU.total]})]})}var xg=gU(1049);function mg(UU){const RU=UU.trim().match(/^(` {
                           1,
                           2
-                        })\ s * ([ ^ `]+?)\s*\1$/);return CD?CD[2]:null}function nc(DD){return"paragraph"===DD.kind&&""===DD.text.trim()}function Oc(DD){const CD={name:DD.heading.text,description:[],params:[],returns:null};let cD="description";for(const pD of DD.blocks)if(!nc(pD))if("heading"===pD.kind&&/^Parameters:?$/.test(pD.text))cD="params";else if("heading"===pD.kind&&/^Returns:?$/.test(pD.text))cD="returns",CD.returns={type:"",description:[]};else if("params"!==cD||"table"!==pD.kind){if("returns"===cD&&"paragraph"===pD.kind&&""===CD.returns.type){const DD=mc(pD.text);if(null!==DD){CD.returns.type=DD.replaceAll("\\|","|");continue}}"returns"===cD?CD.returns.description.push(pD):CD.description.push(pD)}else for(const[DD,cD,iD]of pD.rows){var ID;CD.params.push({name:DD,type:null!==(ID=mc(cD))&&void 0!==ID?ID:cD,description:null!==iD&&void 0!==iD?iD:""})}return CD}const Pc=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function Hc(DD){return DD.filter((DD=>!nc(DD)))}const Uc=/^[\w][\w .'&!:()-]*$/,xc=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function qc(DD){var CD;if("code"===DD.kind&&"text"===DD.lang){const CD=DD.code.split("\n").map((DD=>DD.trim())).filter(Boolean);return CD.length>0&&CD.every((DD=>Uc.test(DD)))?CD.map((DD=>({name:DD}))):null}return"paragraph"===DD.kind&&xc.test(DD.text.trim())?[...DD.text.matchAll(/`([ ^ `]+)` / g)].flatMap((DD => DD[1].split(/,\s*/).map((DD => ({
-                              name: DD.trim()
-                            }))))): "table" === DD.kind && null !== (CD = DD.header[0]) && void 0 !== CD && CD.startsWith("Song") ? DD.rows.map((DD => {
-                              let [CD, cD] = DD;
+                        })\ s * ([ ^ `]+?)\s*\1$/);return RU?RU[2]:null}function Ig(UU){return"paragraph"===UU.kind&&""===UU.text.trim()}function Jg(UU){const RU={name:UU.heading.text,description:[],params:[],returns:null};let gU="description";for(const pU of UU.blocks)if(!Ig(pU))if("heading"===pU.kind&&/^Parameters:?$/.test(pU.text))gU="params";else if("heading"===pU.kind&&/^Returns:?$/.test(pU.text))gU="returns",RU.returns={type:"",description:[]};else if("params"!==gU||"table"!==pU.kind){if("returns"===gU&&"paragraph"===pU.kind&&""===RU.returns.type){const UU=mg(pU.text);if(null!==UU){RU.returns.type=UU.replaceAll("\\|","|");continue}}"returns"===gU?RU.returns.description.push(pU):RU.description.push(pU)}else for(const[UU,gU,EU]of pU.rows){var tU;RU.params.push({name:UU,type:null!==(tU=mg(gU))&&void 0!==tU?tU:gU,description:null!==EU&&void 0!==EU?EU:""})}return RU}const wg=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function ng(UU){return UU.filter((UU=>!Ig(UU)))}const bg=/^[\w][\w .'&!:()-]*$/,og=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function Zg(UU){var RU;if("code"===UU.kind&&"text"===UU.lang){const RU=UU.code.split("\n").map((UU=>UU.trim())).filter(Boolean);return RU.length>0&&RU.every((UU=>bg.test(UU)))?RU.map((UU=>({name:UU}))):null}return"paragraph"===UU.kind&&og.test(UU.text.trim())?[...UU.text.matchAll(/`([ ^ `]+)` / g)].flatMap((UU => UU[1].split(/,\s*/).map((UU => ({
+                              name: UU.trim()
+                            }))))): "table" === UU.kind && null !== (RU = UU.header[0]) && void 0 !== RU && RU.startsWith("Song") ? UU.rows.map((UU => {
+                              let [RU, gU] = UU;
                               return {
-                                name: CD.replace(/`/g, ""),
-                                caption: cD
+                                name: RU.replace(/`/g, ""),
+                                caption: gU
                               }
                             })) : null
                           }
 
-                          function Jc(DD) {
-                            const CD = [];
-                            for (const cD of DD) {
-                              const DD = qc(cD),
-                                ID = CD.at(-1),
-                                pD = "table" === cD.kind;
-                              DD ? "names" === (null === ID || void 0 === ID ? void 0 : ID.kind) && ID.isSongs === pD ? ID.names.push(...DD) : CD.push({
+                          function ag(UU) {
+                            const RU = [];
+                            for (const gU of UU) {
+                              const UU = Zg(gU),
+                                tU = RU.at(-1),
+                                pU = "table" === gU.kind;
+                              UU ? "names" === (null === tU || void 0 === tU ? void 0 : tU.kind) && tU.isSongs === pU ? tU.names.push(...UU) : RU.push({
                                 kind: "names",
-                                names: DD,
-                                isSongs: pD
-                              }) : CD.push({
+                                names: UU,
+                                isSongs: pU
+                              }) : RU.push({
                                 kind: "block",
-                                block: cD
+                                block: gU
                               })
                             }
-                            return CD
+                            return RU
                           }
-                          const Kc = {
+                          const Yg = {
                             icons: "icon",
                             particles: "particle",
                             sounds: "sound",
@@ -1624,58 +1624,58 @@ export const modules = {
                             items: "item"
                           };
 
-                          function ac(DD, CD) {
-                            return `${Kc[DD]}-${(0,PD.u)(CD)}`
+                          function Bg(UU, RU) {
+                            return `${Yg[UU]}-${(0,wU.n)(RU)}`
                           }
-                          const Vc = new WeakMap;
+                          const Vg = new WeakMap;
 
-                          function zc(DD, CD, cD) {
-                            let ID = Vc.get(CD);
-                            if (!ID) {
-                              ID = new Map;
-                              const cD = new Set;
-                              for (const pD of (0, PD.y)(CD)) {
-                                const CD = Jc(Hc(pD.blocks)).map((CD => {
-                                  if ("block" === CD.kind) return CD;
+                          function rg(UU, RU, gU) {
+                            let tU = Vg.get(RU);
+                            if (!tU) {
+                              tU = new Map;
+                              const gU = new Set;
+                              for (const pU of (0, wU.o)(RU)) {
+                                const RU = ag(ng(pU.blocks)).map((RU => {
+                                  if ("block" === RU.kind) return RU;
                                   return {
                                     kind: "names",
-                                    names: CD.names.map((CD => {
-                                      var ID, iD;
-                                      const fD = ac(DD, CD.name);
-                                      let bD = fD;
-                                      for (let DD = 2; cD.has(bD); DD++) bD = `${fD}-${DD}`;
-                                      return cD.add(bD), {
-                                        ...CD,
-                                        anchor: bD,
-                                        heading: null !== (ID = null === (iD = pD.heading) || void 0 === iD ? void 0 : iD.text) && void 0 !== ID ? ID : ""
+                                    names: RU.names.map((RU => {
+                                      var tU, EU;
+                                      const PU = Bg(UU, RU.name);
+                                      let TU = PU;
+                                      for (let UU = 2; gU.has(TU); UU++) TU = `${PU}-${UU}`;
+                                      return gU.add(TU), {
+                                        ...RU,
+                                        anchor: TU,
+                                        heading: null !== (tU = null === (EU = pU.heading) || void 0 === EU ? void 0 : EU.text) && void 0 !== tU ? tU : ""
                                       }
                                     })),
-                                    isSongs: CD.isSongs
+                                    isSongs: RU.isSongs
                                   }
                                 }));
-                                ID.set(pD.blocks, CD)
+                                tU.set(pU.blocks, RU)
                               }
-                              Vc.set(CD, ID)
+                              Vg.set(RU, tU)
                             }
-                            const pD = ID.get(cD);
-                            if (!pD) throw new Error("Gallery blocks must be the page's intro or one of its sections");
-                            return pD
+                            const pU = tU.get(gU);
+                            if (!pU) throw new Error("Gallery blocks must be the page's intro or one of its sections");
+                            return pU
                           }
-                          const jc = "/textures/docs/skinPreviews",
-                            lc = [{
+                          const Xg = "/textures/docs/skinPreviews",
+                            vg = [{
                               heading: "NPC Skins",
                               prefix: "npc"
                             }, {
                               heading: "Poses",
                               prefix: "pose"
                             }];
-                          var Lc = cD(4068),
-                            Tc = cD(4081);
+                          var dg = gU(3924),
+                            Hg = gU(3937);
 
-                          function Gc(DD) {
-                            return Object.hasOwn(Lc.i, DD) ? Lc.i[DD] : null
+                          function Sg(UU) {
+                            return Object.hasOwn(dg.g, UU) ? dg.g[UU] : null
                           }
-                          const Rc = {
+                          const sg = {
                             dir1: [-1, -1, -1],
                             dir2: [1, 1, 1],
                             texture: "bubble",
@@ -1697,453 +1697,453 @@ export const modules = {
                               factor: 1,
                               factor2: 1
                             }],
-                            blendMode: Tc.c.Standard
+                            blendMode: Hg.g.Standard
                           };
 
-                          function kc(DD, CD, cD) {
-                            return CD + (cD - CD) * DD()
+                          function yg(UU, RU, gU) {
+                            return RU + (gU - RU) * UU()
                           }
 
-                          function dc(DD, CD, cD) {
-                            return DD + (CD - DD) * cD
+                          function kg(UU, RU, gU) {
+                            return UU + (RU - UU) * gU
                           }
 
-                          function Yc(DD) {
-                            return DD.length > 0 && "timeFraction" in DD[0]
+                          function Fg(UU) {
+                            return UU.length > 0 && "timeFraction" in UU[0]
                           }
 
-                          function Wc(DD, CD) {
-                            if (0 === DD.colorGradients.length) return [{
+                          function ig(UU, RU) {
+                            if (0 === UU.colorGradients.length) return [{
                               at: 0,
                               colour: [1, 1, 1, 1]
                             }];
-                            if (!Yc(DD.colorGradients)) {
-                              const cD = DD.colorGradients,
+                            if (!Fg(UU.colorGradients)) {
+                              const gU = UU.colorGradients,
                                 {
-                                  color: ID
-                                } = cD[Math.floor(CD() * cD.length) % cD.length];
+                                  color: tU
+                                } = gU[Math.floor(RU() * gU.length) % gU.length];
                               return [{
                                 at: 0,
-                                colour: [ID[0] / 255, ID[1] / 255, ID[2] / 255, 1]
+                                colour: [tU[0] / 255, tU[1] / 255, tU[2] / 255, 1]
                               }]
                             }
-                            return [...DD.colorGradients].sort(((DD, CD) => DD.timeFraction - CD.timeFraction)).map((DD => {
-                              var cD, ID, pD;
-                              const iD = DD.minColor,
-                                fD = null !== (cD = DD.maxColor) && void 0 !== cD ? cD : iD,
-                                bD = CD(),
-                                QD = [dc(iD[0], fD[0], bD) / 255, dc(iD[1], fD[1], bD) / 255, dc(iD[2], fD[2], bD) / 255, dc(null !== (ID = iD[3]) && void 0 !== ID ? ID : 1, null !== (pD = fD[3]) && void 0 !== pD ? pD : 1, bD)];
+                            return [...UU.colorGradients].sort(((UU, RU) => UU.timeFraction - RU.timeFraction)).map((UU => {
+                              var gU, tU, pU;
+                              const EU = UU.minColor,
+                                PU = null !== (gU = UU.maxColor) && void 0 !== gU ? gU : EU,
+                                TU = RU(),
+                                qU = [kg(EU[0], PU[0], TU) / 255, kg(EU[1], PU[1], TU) / 255, kg(EU[2], PU[2], TU) / 255, kg(null !== (tU = EU[3]) && void 0 !== tU ? tU : 1, null !== (pU = PU[3]) && void 0 !== pU ? pU : 1, TU)];
                               return {
-                                at: DD.timeFraction,
-                                colour: QD
+                                at: UU.timeFraction,
+                                colour: qU
                               }
                             }))
                           }
 
-                          function sc(DD, CD, cD, ID) {
-                            const pD = kc(ID, DD.minEmitPower, DD.maxEmitPower),
-                              iD = CD => kc(ID, Math.min(DD.dir1[CD], DD.dir2[CD]), Math.max(DD.dir1[CD], DD.dir2[CD])) * pD,
-                              fD = [...DD.velocityGradients].sort(((DD, CD) => DD.timeFraction - CD.timeFraction)).map((DD => ({
-                                at: DD.timeFraction,
-                                factor: kc(ID, DD.factor, DD.factor2)
+                          function Ag(UU, RU, gU, tU) {
+                            const pU = yg(tU, UU.minEmitPower, UU.maxEmitPower),
+                              EU = RU => yg(tU, Math.min(UU.dir1[RU], UU.dir2[RU]), Math.max(UU.dir1[RU], UU.dir2[RU])) * pU,
+                              PU = [...UU.velocityGradients].sort(((UU, RU) => UU.timeFraction - RU.timeFraction)).map((UU => ({
+                                at: UU.timeFraction,
+                                factor: yg(tU, UU.factor, UU.factor2)
                               })));
                             return {
-                              pos: [kc(ID, CD[0], cD[0]), kc(ID, CD[1], cD[1]), kc(ID, CD[2], cD[2])],
-                              dir: [iD(0), iD(1), iD(2)],
+                              pos: [yg(tU, RU[0], gU[0]), yg(tU, RU[1], gU[1]), yg(tU, RU[2], gU[2])],
+                              dir: [EU(0), EU(1), EU(2)],
                               age: 0,
-                              life: kc(ID, DD.minLifeTime, DD.maxLifeTime),
-                              size: kc(ID, DD.minSize, DD.maxSize),
-                              colours: Wc(DD, ID),
-                              velocityFactors: fD
+                              life: yg(tU, UU.minLifeTime, UU.maxLifeTime),
+                              size: yg(tU, UU.minSize, UU.maxSize),
+                              colours: ig(UU, tU),
+                              velocityFactors: PU
                             }
                           }
 
-                          function Ec(DD, CD, cD, ID) {
-                            if (CD < DD[0].at) return cD(Math.min(1, DD.length - 1));
-                            for (let pD = 0; pD < DD.length - 1; pD++)
-                              if (CD <= DD[pD + 1].at) {
-                                const iD = DD[pD + 1].at - DD[pD].at;
-                                return ID(cD(pD), cD(pD + 1), iD > 0 ? (CD - DD[pD].at) / iD : 1)
-                              } return cD(DD.length - 1)
+                          function zg(UU, RU, gU, tU) {
+                            if (RU < UU[0].at) return gU(Math.min(1, UU.length - 1));
+                            for (let pU = 0; pU < UU.length - 1; pU++)
+                              if (RU <= UU[pU + 1].at) {
+                                const EU = UU[pU + 1].at - UU[pU].at;
+                                return tU(gU(pU), gU(pU + 1), EU > 0 ? (RU - UU[pU].at) / EU : 1)
+                              } return gU(UU.length - 1)
                           }
 
-                          function ec(DD) {
-                            return Ec(DD.colours, DD.age / DD.life, (CD => DD.colours[CD].colour), ((DD, CD, cD) => [dc(DD[0], CD[0], cD), dc(DD[1], CD[1], cD), dc(DD[2], CD[2], cD), dc(DD[3], CD[3], cD)]))
+                          function Mg(UU) {
+                            return zg(UU.colours, UU.age / UU.life, (RU => UU.colours[RU].colour), ((UU, RU, gU) => [kg(UU[0], RU[0], gU), kg(UU[1], RU[1], gU), kg(UU[2], RU[2], gU), kg(UU[3], RU[3], gU)]))
                           }
 
-                          function uc(DD, CD, cD) {
-                            if (DD.age += cD, DD.age >= DD.life) return !1;
-                            const ID = function(DD) {
-                              return 0 === DD.velocityFactors.length ? 1 : Ec(DD.velocityFactors, DD.age / DD.life, (CD => DD.velocityFactors[CD].factor), dc)
-                            }(DD) * cD;
-                            for (let iD = 0; iD < 3; iD++) {
-                              var pD;
-                              DD.pos[iD] += DD.dir[iD] * ID, DD.dir[iD] += (null !== (pD = CD[iD]) && void 0 !== pD ? pD : 0) * cD
+                          function Dg(UU, RU, gU) {
+                            if (UU.age += gU, UU.age >= UU.life) return !1;
+                            const tU = function(UU) {
+                              return 0 === UU.velocityFactors.length ? 1 : zg(UU.velocityFactors, UU.age / UU.life, (RU => UU.velocityFactors[RU].factor), kg)
+                            }(UU) * gU;
+                            for (let EU = 0; EU < 3; EU++) {
+                              var pU;
+                              UU.pos[EU] += UU.dir[EU] * tU, UU.dir[EU] += (null !== (pU = RU[EU]) && void 0 !== pU ? pU : 0) * gU
                             }
                             return !0
                           }
 
-                          function hc(DD) {
-                            return String(Math.round(1e6 * DD) / 1e6)
+                          function Lg(UU) {
+                            return String(Math.round(1e6 * UU) / 1e6)
                           }
 
-                          function rc(DD) {
-                            return `[${DD.map(hc).join(", ")}]`
+                          function Ng(UU) {
+                            return `[${UU.map(Lg).join(", ")}]`
                           }
 
-                          function Ac(DD, CD) {
-                            const cD = `${CD}    `;
-                            return `[\n${(Yc(DD)?DD.map((DD=>{const CD=[`${cD}    timeFraction: ${hc(DD.timeFraction)},`,`${cD}    minColor: ${rc(DD.minColor)},`];return DD.maxColor&&CD.push(`${cD}    maxColor: ${rc(DD.maxColor)},`),`${cD}{\n${CD.join("\n")}\n${cD}},`})):DD.map((DD=>`
+                          function lg(UU, RU) {
+                            const gU = `${RU}    `;
+                            return `[\n${(Fg(UU)?UU.map((UU=>{const RU=[`${gU}    timeFraction: ${Lg(UU.timeFraction)},`,`${gU}    minColor: ${Ng(UU.minColor)},`];return UU.maxColor&&RU.push(`${gU}    maxColor: ${Ng(UU.maxColor)},`),`${gU}{\n${RU.join("\n")}\n${gU}},`})):UU.map((UU=>`
                             $ {
-                              cD
+                              gU
                             } {
                               color: $ {
-                                rc(DD.color)
+                                Ng(UU.color)
                               }
-                            }, `))).join("\n")}\n${CD}]`
+                            }, `))).join("\n")}\n${RU}]`
                           }
-                          const Fc = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
-                            DI = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
-                          const CI = .6;
+                          const Og = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
+                            Ut = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
+                          const Rt = .6;
 
-                          function cI(DD, CD) {
-                            return `${CD?"song":"sound"}:${DD}`
+                          function gt(UU, RU) {
+                            return `${RU?"song":"sound"}:${UU}`
                           }
-                          let II = {
+                          let tt = {
                               track: null,
-                              volume: CI
+                              volume: Rt
                             },
-                            pI = null,
-                            iI = 0,
-                            fI = 0;
-                          const bI = new Set;
+                            pt = null,
+                            Et = 0,
+                            Pt = 0;
+                          const Tt = new Set;
 
-                          function QI(DD) {
-                            II = {
-                              ...II,
-                              ...DD
-                            }, bI.forEach((DD => {
-                              DD()
+                          function qt(UU) {
+                            tt = {
+                              ...tt,
+                              ...UU
+                            }, Tt.forEach((UU => {
+                              UU()
                             }))
                           }
 
-                          function wI(DD) {
-                            II.track && QI({
+                          function Kt(UU) {
+                            tt.track && qt({
                               track: {
-                                ...II.track,
-                                ...DD
+                                ...tt.track,
+                                ...UU
                               }
                             })
                           }
 
-                          function SI(DD) {
-                            const [CD, cD] = (0, ID.useState)((() => DD(II))), pD = (0, ID.useRef)(DD);
-                            return pD.current = DD, (0, ID.useEffect)((() => {
-                              const DD = () => {
-                                cD((() => pD.current(II)))
+                          function ct(UU) {
+                            const [RU, gU] = (0, tU.useState)((() => UU(tt))), pU = (0, tU.useRef)(UU);
+                            return pU.current = UU, (0, tU.useEffect)((() => {
+                              const UU = () => {
+                                gU((() => pU.current(tt)))
                               };
-                              return bI.add(DD), DD(), () => {
-                                bI.delete(DD)
+                              return Tt.add(UU), UU(), () => {
+                                Tt.delete(UU)
                               }
-                            }), []), CD
+                            }), []), RU
                           }
 
-                          function BI() {
-                            iI++;
-                            const DD = pI;
-                            pI = null, null === DD || void 0 === DD || DD.stop()
+                          function Gt() {
+                            Et++;
+                            const UU = pt;
+                            pt = null, null === UU || void 0 === UU || UU.stop()
                           }
 
-                          function yI(DD, CD) {
-                            let ID = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-                            BI();
-                            const pD = iI,
+                          function jt(UU, RU) {
+                            let tU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+                            Gt();
+                            const pU = Et,
                               {
-                                track: iD
-                              } = II,
-                              fD = iD && iD.name === DD && iD.isSong === CD ? iD.duration : 0;
-                            fI = ID, QI({
+                                track: EU
+                              } = tt,
+                              PU = EU && EU.name === UU && EU.isSong === RU ? EU.duration : 0;
+                            Pt = tU, qt({
                               track: {
-                                name: DD,
-                                isSong: CD,
+                                name: UU,
+                                isSong: RU,
                                 status: "loading",
-                                duration: fD
+                                duration: PU
                               }
-                            }), Promise.all([cD.e(215), cD.e(239)]).then((() => cD(38947))).then((cD => {
+                            }), Promise.all([gU.e(215), gU.e(239)]).then((() => gU(39188))).then((gU => {
                               let {
-                                playDocsSound: iD
-                              } = cD;
-                              pD === iI && (pI = iD(DD, CD, II.volume, ID, {
-                                onPlay: DD => {
-                                  pD === iI && wI({
+                                playDocsSound: EU
+                              } = gU;
+                              pU === Et && (pt = EU(UU, RU, tt.volume, tU, {
+                                onPlay: UU => {
+                                  pU === Et && Kt({
                                     status: "playing",
-                                    duration: DD
+                                    duration: UU
                                   })
                                 },
-                                onEnd: DD => {
-                                  var CD, cD;
-                                  pD === iI && (pI = null, DD ? QI({
+                                onEnd: UU => {
+                                  var RU, gU;
+                                  pU === Et && (pt = null, UU ? qt({
                                     track: null
-                                  }) : (fI = null !== (CD = null === (cD = II.track) || void 0 === cD ? void 0 : cD.duration) && void 0 !== CD ? CD : 0, wI({
+                                  }) : (Pt = null !== (RU = null === (gU = tt.track) || void 0 === gU ? void 0 : gU.duration) && void 0 !== RU ? RU : 0, Kt({
                                     status: "paused"
                                   })))
                                 }
                               }))
-                            })).catch((CD => {
-                              console.error(`Could not play docs sound ${DD}`, CD), pD === iI && QI({
+                            })).catch((RU => {
+                              console.error(`Could not play docs sound ${UU}`, RU), pU === Et && qt({
                                 track: null
                               })
                             }))
                           }
 
-                          function MI() {
+                          function ut() {
                             const {
-                              track: DD
-                            } = II;
-                            if (!DD) return;
-                            if ("playing" === DD.status && pI) return fI = pI.FX(), pI.pause(), void wI({
+                              track: UU
+                            } = tt;
+                            if (!UU) return;
+                            if ("playing" === UU.status && pt) return Pt = pt.Hx(), pt.pause(), void Kt({
                               status: "paused"
                             });
-                            if ("loading" === DD.status) return BI(), void wI({
+                            if ("loading" === UU.status) return Gt(), void Kt({
                               status: "paused"
                             });
-                            if (pI) return void pI.resume();
-                            const CD = DD.duration > 0 && fI >= DD.duration - .05;
-                            yI(DD.name, DD.isSong, CD ? 0 : fI)
+                            if (pt) return void pt.resume();
+                            const RU = UU.duration > 0 && Pt >= UU.duration - .05;
+                            jt(UU.name, UU.isSong, RU ? 0 : Pt)
                           }
 
-                          function tI() {
-                            var DD;
-                            return pI && "playing" === (null === (DD = II.track) || void 0 === DD ? void 0 : DD.status) ? pI.FX() : fI
+                          function Ct() {
+                            var UU;
+                            return pt && "playing" === (null === (UU = tt.track) || void 0 === UU ? void 0 : UU.status) ? pt.Hx() : Pt
                           }
 
-                          function ZI(DD) {
-                            var CD;
-                            null === (CD = pI) || void 0 === CD || CD.setVolume(DD), QI({
-                              volume: DD
+                          function ht(UU) {
+                            var RU;
+                            null === (RU = pt) || void 0 === RU || RU.setVolume(UU), qt({
+                              volume: UU
                             })
                           }
 
-                          function oI() {
-                            BI(), fI = 0, QI({
+                          function Qt() {
+                            Gt(), Pt = 0, qt({
                               track: null
                             })
                           }
-                          const vI = (0, ID.createContext)(null);
-                          let NI = null;
+                          const et = (0, tU.createContext)(null);
+                          let Wt = null;
 
-                          function gI() {
-                            const [DD, CD] = (0, ID.useState)(null);
-                            return (0, ID.useEffect)((() => {
-                              let DD = !1;
-                              return NI ??= Promise.all([cD.e(69), cD.e(72), cD.e(71), cD.e(70), cD.e(196), cD.e(96), cD.e(220)]).then((() => cD(38945))), NI.then((cD => {
-                                DD || CD(cD)
-                              }), (DD => {
-                                console.error("Could not load the docs gallery's textures", DD), NI = null
+                          function ft() {
+                            const [UU, RU] = (0, tU.useState)(null);
+                            return (0, tU.useEffect)((() => {
+                              let UU = !1;
+                              return Wt ??= Promise.all([gU.e(69), gU.e(72), gU.e(71), gU.e(70), gU.e(196), gU.e(96), gU.e(220)]).then((() => gU(39183))), Wt.then((gU => {
+                                UU || RU(gU)
+                              }), (UU => {
+                                console.error("Could not load the docs gallery's textures", UU), Wt = null
                               })), () => {
-                                DD = !0
+                                UU = !0
                               }
-                            }), []), DD
+                            }), []), UU
                           }
-                          const XI = 24,
-                            mI = /^[a-z]+_(\d+(_\d+)?|none)$/;
+                          const xt = 24,
+                            mt = /^[a-z]+_(\d+(_\d+)?|none)$/;
 
-                          function nI(DD, CD) {
-                            const cD = "skins" === DD ? function(DD, CD) {
-                              const cD = lc.find((CD => DD.startsWith(CD.heading)));
-                              return cD ? function(DD, CD) {
-                                return `${DD}-${CD}`
-                              }(cD.prefix, CD) : null
-                            }(CD.heading, CD.name) : null;
-                            return null === cD ? null : `${jc}/${cD}.webp`
+                          function It(UU, RU) {
+                            const gU = "skins" === UU ? function(UU, RU) {
+                              const gU = vg.find((RU => UU.startsWith(RU.heading)));
+                              return gU ? function(UU, RU) {
+                                return `${UU}-${RU}`
+                              }(gU.prefix, RU) : null
+                            }(RU.heading, RU.name) : null;
+                            return null === gU ? null : `${Xg}/${gU}.webp`
                           }
 
-                          function OI(DD) {
+                          function Jt(UU) {
                             let {
-                              kind: CD,
-                              entry: cD,
-                              assets: pD,
-                              renderedUrl: fD
-                            } = DD;
+                              kind: RU,
+                              entry: gU,
+                              assets: pU,
+                              renderedUrl: PU
+                            } = UU;
                             const {
-                              name: bD
-                            } = cD, [QD, wD] = (0, ID.useState)(!1);
-                            if ("icons" === CD && GC(bD)) return (0, tD.jsx)(Xc.c, {
+                              name: TU
+                            } = gU, [qU, KU] = (0, tU.useState)(!1);
+                            if ("icons" === RU && SR(TU)) return (0, CU.jsx)(xg.c, {
                               className: "DocsTileIcon",
-                              name: bD
+                              name: TU
                             });
-                            let SD = null;
-                            var BD;
-                            if ("icons" === CD) SD = null !== (BD = null === pD || void 0 === pD ? void 0 : pD.getIngameIconUrl(bD)) && void 0 !== BD ? BD : null;
-                            else if ("particles" === CD) {
-                              var yD, MD, ZD;
-                              SD = null !== (yD = null === pD || void 0 === pD ? void 0 : pD.getParticleTextureUrl(null !== (MD = null === (ZD = Gc(bD)) || void 0 === ZD ? void 0 : ZD.texture) && void 0 !== MD ? MD : bD)) && void 0 !== yD ? yD : null
-                            } else "skins" === CD && (SD = null !== fD && void 0 !== fD ? fD : mI.test(bD) ? `/textures/charSkins/previews/${bD}_preview.png` : null);
-                            return !SD || QD ? (0, tD.jsx)(oD, {
+                            let cU = null;
+                            var GU;
+                            if ("icons" === RU) cU = null !== (GU = null === pU || void 0 === pU ? void 0 : pU.getIngameIconUrl(TU)) && void 0 !== GU ? GU : null;
+                            else if ("particles" === RU) {
+                              var jU, uU, hU;
+                              cU = null !== (jU = null === pU || void 0 === pU ? void 0 : pU.getParticleTextureUrl(null !== (uU = null === (hU = Sg(TU)) || void 0 === hU ? void 0 : hU.texture) && void 0 !== uU ? uU : TU)) && void 0 !== jU ? jU : null
+                            } else "skins" === RU && (cU = null !== PU && void 0 !== PU ? PU : mt.test(TU) ? `/textures/charSkins/previews/${TU}_preview.png` : null);
+                            return !cU || qU ? (0, CU.jsx)(QU, {
                               className: "DocsTileIcon Placeholder",
-                              name: "skins" === CD ? "person" : "image"
-                            }) : (0, tD.jsx)("img", {
-                              className: iD()("DocsTileImage", {
-                                Pixelated: "skins" !== CD
+                              name: "skins" === RU ? "person" : "image"
+                            }) : (0, CU.jsx)("img", {
+                              className: EU()("DocsTileImage", {
+                                Pixelated: "skins" !== RU
                               }),
-                              src: SD,
-                              srcSet: SD === fD ? `${SD} 2x` : void 0,
+                              src: cU,
+                              srcSet: cU === PU ? `${cU} 2x` : void 0,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs gallery: could not load ${SD}`), wD(!0)
+                                console.warn(`Docs gallery: could not load ${cU}`), KU(!0)
                               }
                             })
                           }
 
-                          function PI(DD) {
+                          function wt(UU) {
                             let {
-                              entry: CD,
-                              isSong: cD
-                            } = DD;
-                            const ID = SI((DD => {
+                              entry: RU,
+                              isSong: gU
+                            } = UU;
+                            const tU = ct((UU => {
                                 let {
-                                  track: ID
-                                } = DD;
-                                return (null === ID || void 0 === ID ? void 0 : ID.name) === CD.name && ID.isSong === cD ? ID.status : null
+                                  track: tU
+                                } = UU;
+                                return (null === tU || void 0 === tU ? void 0 : tU.name) === RU.name && tU.isSong === gU ? tU.status : null
                               })),
-                              pD = null !== ID && "paused" !== ID;
-                            return (0, tD.jsxs)("button", {
+                              pU = null !== tU && "paused" !== tU;
+                            return (0, CU.jsxs)("button", {
                               type: "button",
-                              id: CD.anchor,
-                              className: iD()("DocsSoundTile", {
-                                Playing: pD
+                              id: RU.anchor,
+                              className: EU()("DocsSoundTile", {
+                                Playing: pU
                               }),
-                              "data-docs-track": cI(CD.name, cD),
-                              "aria-label": pD ? `Pause ${CD.name}` : `Play ${CD.name}`,
+                              "data-docs-track": gt(RU.name, gU),
+                              "aria-label": pU ? `Pause ${RU.name}` : `Play ${RU.name}`,
                               onClick: () => {
-                                null !== ID ? MI() : yI(CD.name, cD)
+                                null !== tU ? ut() : jt(RU.name, gU)
                               },
-                              children: [(0, tD.jsx)("span", {
+                              children: [(0, CU.jsx)("span", {
                                 className: "DocsSoundPlay",
-                                children: (0, tD.jsx)(oD, {
-                                  name: pD ? "pause" : "play"
+                                children: (0, CU.jsx)(QU, {
+                                  name: pU ? "pause" : "play"
                                 })
-                              }), (0, tD.jsx)("code", {
+                              }), (0, CU.jsx)("code", {
                                 className: "DocsSoundName",
-                                children: CD.name
-                              }), CD.caption && (0, tD.jsx)("span", {
+                                children: RU.name
+                              }), RU.caption && (0, CU.jsx)("span", {
                                 className: "DocsSoundCaption",
-                                children: CD.caption
+                                children: RU.caption
                               })]
                             })
                           }
 
-                          function HI(DD) {
+                          function nt(UU) {
                             let {
-                              kind: CD,
-                              names: cD,
-                              isSongs: pD
-                            } = DD;
-                            const fD = gI(),
-                              [bD, QD] = ND(),
-                              wD = !1 === (null === bD || void 0 === bD ? void 0 : bD.failed) ? bD.text : null,
-                              SD = (0, ID.useContext)(vI),
-                              [BD, yD] = (0, ID.useState)(""),
-                              MD = BD.trim().toLowerCase(),
-                              ZD = MD ? cD.filter((DD => DD.name.toLowerCase().includes(MD))) : cD;
-                            return (0, tD.jsxs)("div", {
+                              kind: RU,
+                              names: gU,
+                              isSongs: pU
+                            } = UU;
+                            const PU = ft(),
+                              [TU, qU] = WU(),
+                              KU = !1 === (null === TU || void 0 === TU ? void 0 : TU.failed) ? TU.text : null,
+                              cU = (0, tU.useContext)(et),
+                              [GU, jU] = (0, tU.useState)(""),
+                              uU = GU.trim().toLowerCase(),
+                              hU = uU ? gU.filter((UU => UU.name.toLowerCase().includes(uU))) : gU;
+                            return (0, CU.jsxs)("div", {
                               className: "DocsGallery",
-                              children: [cD.length > XI && (0, tD.jsx)(gc, {
+                              children: [gU.length > xt && (0, CU.jsx)(fg, {
                                 className: "DocsGalleryFilter",
-                                value: BD,
-                                placeholder: `Filter ${cD.length} names\u2026`,
+                                value: GU,
+                                placeholder: `Filter ${gU.length} names\u2026`,
                                 label: "Filter names",
-                                onChange: yD,
-                                count: MD ? {
-                                  visible: ZD.length,
-                                  total: cD.length
+                                onChange: jU,
+                                count: uU ? {
+                                  visible: hU.length,
+                                  total: gU.length
                                 } : null
-                              }), (0, tD.jsx)("div", {
-                                className: iD()("DocsGalleryGrid", `Kind-${CD}`, {
-                                  Songs: pD
+                              }), (0, CU.jsx)("div", {
+                                className: EU()("DocsGalleryGrid", `Kind-${RU}`, {
+                                  Songs: pU
                                 }),
-                                children: ZD.map((DD => {
-                                  if ("sounds" === CD) return (0, tD.jsx)(PI, {
-                                    entry: DD,
-                                    isSong: pD
-                                  }, DD.anchor);
-                                  if (SD && "particles" === CD && Gc(DD.name)) return (0, tD.jsxs)("button", {
+                                children: hU.map((UU => {
+                                  if ("sounds" === RU) return (0, CU.jsx)(wt, {
+                                    entry: UU,
+                                    isSong: pU
+                                  }, UU.anchor);
+                                  if (cU && "particles" === RU && Sg(UU.name)) return (0, CU.jsxs)("button", {
                                     type: "button",
-                                    id: DD.anchor,
-                                    className: iD()("DocsTile Previewable", {
-                                      Copied: wD === DD.name
+                                    id: UU.anchor,
+                                    className: EU()("DocsTile Previewable", {
+                                      Copied: KU === UU.name
                                     }),
-                                    title: `Play "${DD.name}" in the playground and copy its name`,
+                                    title: `Play "${UU.name}" in the playground and copy its name`,
                                     onClick: () => {
-                                      SD(DD.name), QD(DD.name)
+                                      cU(UU.name), qU(UU.name)
                                     },
-                                    children: [(0, tD.jsxs)("span", {
+                                    children: [(0, CU.jsxs)("span", {
                                       className: "DocsTilePreview",
-                                      children: [(0, tD.jsx)(OI, {
-                                        kind: CD,
-                                        entry: DD,
-                                        assets: fD,
+                                      children: [(0, CU.jsx)(Jt, {
+                                        kind: RU,
+                                        entry: UU,
+                                        assets: PU,
                                         renderedUrl: null
-                                      }), (0, tD.jsx)("span", {
+                                      }), (0, CU.jsx)("span", {
                                         className: "DocsTilePlayBadge",
-                                        children: (0, tD.jsx)(oD, {
+                                        children: (0, CU.jsx)(QU, {
                                           name: "play"
                                         })
                                       })]
-                                    }), (0, tD.jsx)("span", {
+                                    }), (0, CU.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: wD === DD.name ? "Copied!" : DD.name
+                                      children: KU === UU.name ? "Copied!" : UU.name
                                     })]
-                                  }, DD.anchor);
-                                  const cD = nI(CD, DD);
-                                  return (0, tD.jsxs)("button", {
+                                  }, UU.anchor);
+                                  const gU = It(RU, UU);
+                                  return (0, CU.jsxs)("button", {
                                     type: "button",
-                                    id: DD.anchor,
-                                    className: iD()("DocsTile", {
-                                      Copied: wD === DD.name
+                                    id: UU.anchor,
+                                    className: EU()("DocsTile", {
+                                      Copied: KU === UU.name
                                     }),
-                                    title: `Copy "${DD.name}"`,
+                                    title: `Copy "${UU.name}"`,
                                     onClick: () => {
-                                      QD(DD.name)
+                                      qU(UU.name)
                                     },
-                                    children: [(0, tD.jsx)("span", {
-                                      className: iD()("DocsTilePreview", {
-                                        Rendered: null !== cD
+                                    children: [(0, CU.jsx)("span", {
+                                      className: EU()("DocsTilePreview", {
+                                        Rendered: null !== gU
                                       }),
-                                      children: (0, tD.jsx)(OI, {
-                                        kind: CD,
-                                        entry: DD,
-                                        assets: fD,
-                                        renderedUrl: cD
+                                      children: (0, CU.jsx)(Jt, {
+                                        kind: RU,
+                                        entry: UU,
+                                        assets: PU,
+                                        renderedUrl: gU
                                       })
-                                    }), (0, tD.jsx)("span", {
+                                    }), (0, CU.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: wD === DD.name ? "Copied!" : DD.name
+                                      children: KU === UU.name ? "Copied!" : UU.name
                                     })]
-                                  }, DD.anchor)
+                                  }, UU.anchor)
                                 }))
                               })]
                             })
                           }
 
-                          function UI(DD) {
+                          function bt(UU) {
                             let {
-                              kind: CD,
-                              content: cD,
-                              blocks: ID
-                            } = DD;
-                            return (0, tD.jsx)(tD.Fragment, {
-                              children: zc(CD, cD, ID).map(((DD, cD) => "block" === DD.kind ? (0, tD.jsx)(yc, {
-                                block: DD.block
-                              }, cD) : (0, tD.jsx)(HI, {
-                                kind: CD,
-                                names: DD.names,
-                                isSongs: DD.isSongs
-                              }, cD)))
+                              kind: RU,
+                              content: gU,
+                              blocks: tU
+                            } = UU;
+                            return (0, CU.jsx)(CU.Fragment, {
+                              children: rg(RU, gU, tU).map(((UU, gU) => "block" === UU.kind ? (0, CU.jsx)(jg, {
+                                block: UU.block
+                              }, gU) : (0, CU.jsx)(nt, {
+                                kind: RU,
+                                names: UU.names,
+                                isSongs: UU.isSongs
+                              }, gU)))
                             })
                           }
-                          const xI = [{
+                          const ot = [{
                             pageId: "readme"
                           }, {
                             pageId: "snippets",
@@ -2161,420 +2161,420 @@ export const modules = {
                             countNoun: "options"
                           }];
 
-                          function qI(DD) {
+                          function Zt(UU) {
                             let {
-                              cards: CD = xI,
-                              label: cD = "Start here"
-                            } = DD;
-                            const pD = (0, ID.useContext)(MC);
-                            return (0, tD.jsx)("nav", {
+                              cards: RU = ot,
+                              label: gU = "Start here"
+                            } = UU;
+                            const pU = (0, tU.useContext)(uR);
+                            return (0, CU.jsx)("nav", {
                               className: "DocsLandingCards",
-                              "aria-label": cD,
-                              children: CD.map((DD => {
+                              "aria-label": gU,
+                              children: RU.map((UU => {
                                 let {
-                                  pageId: CD,
-                                  countNoun: cD
-                                } = DD;
-                                const ID = TD(CD);
-                                return (0, tD.jsxs)(fD.d, {
-                                  to: WD(pD, ID),
+                                  pageId: RU,
+                                  countNoun: gU
+                                } = UU;
+                                const tU = HU(RU);
+                                return (0, CU.jsxs)(PU.c, {
+                                  to: iU(pU, tU),
                                   className: "DocsLandingCard",
-                                  children: [(0, tD.jsx)("span", {
+                                  children: [(0, CU.jsx)("span", {
                                     className: "DocsLandingCardIcon",
-                                    children: (0, tD.jsx)(oD, {
-                                      name: ID.icon
+                                    children: (0, CU.jsx)(QU, {
+                                      name: tU.icon
                                     })
-                                  }), (0, tD.jsx)("span", {
+                                  }), (0, CU.jsx)("span", {
                                     className: "DocsLandingCardTitle",
-                                    children: ID.title
-                                  }), (0, tD.jsx)("span", {
+                                    children: tU.title
+                                  }), (0, CU.jsx)("span", {
                                     className: "DocsLandingCardSummary",
-                                    children: ID.summary
-                                  }), cD && (0, tD.jsxs)("span", {
+                                    children: tU.summary
+                                  }), gU && (0, CU.jsxs)("span", {
                                     className: "DocsLandingCardCount",
-                                    children: [RD(ID).sections.length, " ", cD]
+                                    children: [sU(tU).sections.length, " ", gU]
                                   })]
-                                }, CD)
+                                }, RU)
                               }))
                             })
                           }
-                          const JI = 240;
+                          const Yt = 240;
 
-                          function KI(DD) {
+                          function Bt(UU) {
                             let {
-                              faces: CD
-                            } = DD;
-                            return (0, tD.jsxs)("span", {
+                              faces: RU
+                            } = UU;
+                            return (0, CU.jsxs)("span", {
                               className: "DocsCube",
                               "aria-hidden": "true",
-                              children: [(0, tD.jsx)("span", {
+                              children: [(0, CU.jsx)("span", {
                                 className: "DocsCubeFace Top",
                                 style: {
-                                  backgroundImage: `url("${CD.top}")`
+                                  backgroundImage: `url("${RU.top}")`
                                 }
-                              }), (0, tD.jsx)("span", {
+                              }), (0, CU.jsx)("span", {
                                 className: "DocsCubeFace Left",
                                 style: {
-                                  backgroundImage: `url("${CD.left}")`
+                                  backgroundImage: `url("${RU.left}")`
                                 }
-                              }), (0, tD.jsx)("span", {
+                              }), (0, CU.jsx)("span", {
                                 className: "DocsCubeFace Right",
                                 style: {
-                                  backgroundImage: `url("${CD.right}")`
+                                  backgroundImage: `url("${RU.right}")`
                                 }
                               })]
                             })
                           }
 
-                          function aI(DD) {
+                          function Vt(UU) {
                             let {
-                              src: CD
-                            } = DD;
-                            const [cD, pD] = (0, ID.useState)(!1);
-                            return cD ? null : (0, tD.jsx)("img", {
-                              src: CD,
+                              src: RU
+                            } = UU;
+                            const [gU, pU] = (0, tU.useState)(!1);
+                            return gU ? null : (0, CU.jsx)("img", {
+                              src: RU,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs catalogue: could not load ${CD}`), pD(!0)
+                                console.warn(`Docs catalogue: could not load ${RU}`), pU(!0)
                               }
                             })
                           }
 
-                          function VI(DD) {
+                          function rt(UU) {
                             let {
-                              kind: CD
-                            } = DD;
-                            const cD = Nc(CD),
-                              pD = gI(),
-                              fD = (0, bD.w)(),
-                              [QD, wD] = (0, ID.useState)(""),
-                              [SD, BD] = (0, ID.useState)(null),
-                              [yD, MD] = (0, ID.useState)(JI),
-                              [ZD, vD] = (0, ID.useState)(null),
-                              ND = (0, ID.useRef)(null),
-                              XD = QD.trim().toLowerCase();
-                            (0, ID.useEffect)((() => {
-                              const DD = (0, PD.s)(fD.hash),
-                                ID = cD.entries.find((cD => ac(CD, cD.name) === DD));
-                              if (ID) ND.current = ID.name, wD(ID.name), BD(null), vD(ID.name);
-                              else if (null !== ND.current) {
-                                const DD = ND.current;
-                                ND.current = null, wD((CD => CD === DD ? "" : CD)), vD(null)
+                              kind: RU
+                            } = UU;
+                            const gU = Wg(RU),
+                              pU = ft(),
+                              PU = (0, TU.s)(),
+                              [qU, KU] = (0, tU.useState)(""),
+                              [cU, GU] = (0, tU.useState)(null),
+                              [jU, uU] = (0, tU.useState)(Yt),
+                              [hU, eU] = (0, tU.useState)(null),
+                              WU = (0, tU.useRef)(null),
+                              xU = qU.trim().toLowerCase();
+                            (0, tU.useEffect)((() => {
+                              const UU = (0, wU.m)(PU.hash),
+                                tU = gU.entries.find((gU => Bg(RU, gU.name) === UU));
+                              if (tU) WU.current = tU.name, KU(tU.name), GU(null), eU(tU.name);
+                              else if (null !== WU.current) {
+                                const UU = WU.current;
+                                WU.current = null, KU((RU => RU === UU ? "" : RU)), eU(null)
                               }
-                            }), [cD, CD, fD.hash, fD.key]), (0, ID.useEffect)((() => {
-                              var DD;
-                              null !== ZD && (null === (DD = document.getElementById(ac(CD, ZD))) || void 0 === DD || DD.scrollIntoView({
+                            }), [gU, RU, PU.hash, PU.key]), (0, tU.useEffect)((() => {
+                              var UU;
+                              null !== hU && (null === (UU = document.getElementById(Bg(RU, hU))) || void 0 === UU || UU.scrollIntoView({
                                 block: "center"
                               }))
-                            }), [CD, ZD]);
-                            const mD = cD.entries.filter((DD => (!XD || DD.name.toLowerCase().includes(XD)) && (!SD || DD.variants.includes(SD))));
-                            return (0, tD.jsxs)("div", {
+                            }), [RU, hU]);
+                            const mU = gU.entries.filter((UU => (!xU || UU.name.toLowerCase().includes(xU)) && (!cU || UU.variants.includes(cU))));
+                            return (0, CU.jsxs)("div", {
                               className: "DocsCatalogue",
-                              children: [cD.notes.length > 0 && (0, tD.jsx)("div", {
+                              children: [gU.notes.length > 0 && (0, CU.jsx)("div", {
                                 className: "DocsProse",
-                                children: cD.notes.map((DD => (0, tD.jsx)("p", {
-                                  children: DD
-                                }, DD)))
-                              }), cD.legend.length > 0 && (0, tD.jsx)("div", {
+                                children: gU.notes.map((UU => (0, CU.jsx)("p", {
+                                  children: UU
+                                }, UU)))
+                              }), gU.legend.length > 0 && (0, CU.jsx)("div", {
                                 className: "DocsTableScroll",
-                                children: (0, tD.jsxs)("table", {
+                                children: (0, CU.jsxs)("table", {
                                   className: "DocsTable DocsVariantLegend",
-                                  children: [(0, tD.jsx)("thead", {
-                                    children: (0, tD.jsxs)("tr", {
-                                      children: [(0, tD.jsx)("th", {
+                                  children: [(0, CU.jsx)("thead", {
+                                    children: (0, CU.jsxs)("tr", {
+                                      children: [(0, CU.jsx)("th", {
                                         children: "Code"
-                                      }), (0, tD.jsx)("th", {
+                                      }), (0, CU.jsx)("th", {
                                         children: "Variant"
-                                      }), (0, tD.jsx)("th", {
+                                      }), (0, CU.jsx)("th", {
                                         children: "Name to use"
                                       })]
                                     })
-                                  }), (0, tD.jsx)("tbody", {
-                                    children: cD.legend.map((DD => (0, tD.jsxs)("tr", {
-                                      children: [(0, tD.jsx)("td", {
-                                        children: (0, tD.jsx)("button", {
+                                  }), (0, CU.jsx)("tbody", {
+                                    children: gU.legend.map((UU => (0, CU.jsxs)("tr", {
+                                      children: [(0, CU.jsx)("td", {
+                                        children: (0, CU.jsx)("button", {
                                           type: "button",
-                                          className: iD()("DocsVariantChip", {
-                                            Active: SD === DD.code
+                                          className: EU()("DocsVariantChip", {
+                                            Active: cU === UU.code
                                           }),
-                                          "aria-pressed": SD === DD.code,
-                                          title: `Show only ${CD} with ${DD.meaning} variants`,
+                                          "aria-pressed": cU === UU.code,
+                                          title: `Show only ${RU} with ${UU.meaning} variants`,
                                           onClick: () => {
-                                            BD(SD === DD.code ? null : DD.code)
+                                            GU(cU === UU.code ? null : UU.code)
                                           },
-                                          children: DD.code
+                                          children: UU.code
                                         })
-                                      }), (0, tD.jsx)("td", {
-                                        children: DD.meaning
-                                      }), (0, tD.jsx)("td", {
-                                        children: (0, tD.jsx)("code", {
+                                      }), (0, CU.jsx)("td", {
+                                        children: UU.meaning
+                                      }), (0, CU.jsx)("td", {
+                                        children: (0, CU.jsx)("code", {
                                           className: "DocsInlineCode",
-                                          children: DD.usage
+                                          children: UU.usage
                                         })
                                       })]
-                                    }, DD.code)))
+                                    }, UU.code)))
                                   })]
                                 })
-                              }), cD.examples.length > 0 && (0, tD.jsx)(OD, {
+                              }), gU.examples.length > 0 && (0, CU.jsx)(JU, {
                                 lang: "text",
-                                code: cD.examples.join("\n")
-                              }), (0, tD.jsx)(gc, {
+                                code: gU.examples.join("\n")
+                              }), (0, CU.jsx)(fg, {
                                 className: "DocsFilterBar",
-                                value: QD,
-                                placeholder: `Search ${cD.entries.length} ${CD}\u2026`,
-                                label: `Search ${CD}`,
-                                onChange: DD => {
-                                  wD(DD), MD(JI)
+                                value: qU,
+                                placeholder: `Search ${gU.entries.length} ${RU}\u2026`,
+                                label: `Search ${RU}`,
+                                onChange: UU => {
+                                  KU(UU), uU(Yt)
                                 },
-                                count: XD || SD ? {
-                                  visible: mD.length,
-                                  total: cD.entries.length
+                                count: xU || cU ? {
+                                  visible: mU.length,
+                                  total: gU.entries.length
                                 } : null,
-                                children: SD && (0, tD.jsxs)("button", {
+                                children: cU && (0, CU.jsxs)("button", {
                                   type: "button",
                                   className: "DocsVariantChip Active",
                                   onClick: () => {
-                                    BD(null)
+                                    GU(null)
                                   },
-                                  children: [SD, " ", (0, tD.jsx)(oD, {
+                                  children: [cU, " ", (0, CU.jsx)(QU, {
                                     name: "cross"
                                   })]
                                 })
-                              }), (0, tD.jsx)("div", {
+                              }), (0, CU.jsx)("div", {
                                 className: "DocsCatalogueGrid",
-                                children: mD.slice(0, yD).map((DD => {
-                                  const cD = "blocks" === CD ? null === pD || void 0 === pD ? void 0 : pD.getBlockFaces(DD.name) : null,
-                                    ID = pD && !cD ? pD.getItemTextureUrl(DD.name) : null;
-                                  return (0, tD.jsxs)("div", {
-                                    id: ac(CD, DD.name),
-                                    className: iD()("DocsCatalogueTile", {
-                                      Linked: DD.name === ZD
+                                children: mU.slice(0, jU).map((UU => {
+                                  const gU = "blocks" === RU ? null === pU || void 0 === pU ? void 0 : pU.getBlockFaces(UU.name) : null,
+                                    tU = pU && !gU ? pU.getItemTextureUrl(UU.name) : null;
+                                  return (0, CU.jsxs)("div", {
+                                    id: Bg(RU, UU.name),
+                                    className: EU()("DocsCatalogueTile", {
+                                      Linked: UU.name === hU
                                     }),
-                                    children: [(0, tD.jsxs)("span", {
+                                    children: [(0, CU.jsxs)("span", {
                                       className: "DocsCatalogueTexture",
-                                      children: [cD && (0, tD.jsx)(KI, {
-                                        faces: cD
-                                      }), ID && (0, tD.jsx)(aI, {
-                                        src: ID
+                                      children: [gU && (0, CU.jsx)(Bt, {
+                                        faces: gU
+                                      }), tU && (0, CU.jsx)(Vt, {
+                                        src: tU
                                       })]
-                                    }), (0, tD.jsx)("span", {
+                                    }), (0, CU.jsx)("span", {
                                       className: "DocsCatalogueName",
-                                      children: DD.name
-                                    }), DD.variants.length > 0 && (0, tD.jsx)("span", {
+                                      children: UU.name
+                                    }), UU.variants.length > 0 && (0, CU.jsx)("span", {
                                       className: "DocsCatalogueVariants",
-                                      children: DD.variants.map((DD => (0, tD.jsx)("span", {
-                                        children: DD
-                                      }, DD)))
-                                    }), (0, tD.jsx)(gD, {
-                                      text: DD.name,
+                                      children: UU.variants.map((UU => (0, CU.jsx)("span", {
+                                        children: UU
+                                      }, UU)))
+                                    }), (0, CU.jsx)(fU, {
+                                      text: UU.name,
                                       className: "DocsCatalogueCopy"
                                     })]
-                                  }, DD.name)
+                                  }, UU.name)
                                 }))
-                              }), mD.length > yD && (0, tD.jsxs)("button", {
+                              }), mU.length > jU && (0, CU.jsxs)("button", {
                                 type: "button",
                                 className: "DocsShowMore",
                                 onClick: () => {
-                                  MD(mD.length)
+                                  uU(mU.length)
                                 },
-                                children: ["Show all ", mD.length]
-                              }), 0 === mD.length && (0, tD.jsxs)("p", {
+                                children: ["Show all ", mU.length]
+                              }), 0 === mU.length && (0, CU.jsxs)("p", {
                                 className: "DocsEmpty",
-                                children: ["No ", CD, " match."]
+                                children: ["No ", RU, " match."]
                               })]
                             })
                           }
-                          var zI = cD(4597),
-                            jI = cD(1577);
-                          const lI = .95 * zI.b;
+                          var Xt = gU(4480),
+                            vt = gU(1535);
+                          const dt = .95 * Xt.e;
 
-                          function LI(DD) {
-                            return /^\s*```/.test(DD)
+                          function Ht(UU) {
+                            return /^\s*```/.test(UU)
                           }
 
-                          function TI(DD, CD) {
-                            const cD = [
+                          function St(UU, RU) {
+                            const gU = [
                               []
                             ];
-                            let ID = !1;
-                            for (const pD of DD.split("\n")) !ID && CD(pD) && cD.at(-1).length > 0 && cD.push([]), LI(pD) && (ID = !ID), cD.at(-1).push(pD);
-                            return cD.map((DD => DD.join("\n").trim())).filter(Boolean)
+                            let tU = !1;
+                            for (const pU of UU.split("\n")) !tU && RU(pU) && gU.at(-1).length > 0 && gU.push([]), Ht(pU) && (tU = !tU), gU.at(-1).push(pU);
+                            return gU.map((UU => UU.join("\n").trim())).filter(Boolean)
                           }
 
-                          function GI(DD, CD) {
-                            const cD = `${"#".repeat(CD)} `,
-                              ID = [];
-                            let pD = !1;
-                            for (const iD of DD.split("\n")) LI(iD) ? pD = !pD : !pD && iD.startsWith(cD) && ID.push(iD.slice(cD.length).trim());
-                            return ID
+                          function st(UU, RU) {
+                            const gU = `${"#".repeat(RU)} `,
+                              tU = [];
+                            let pU = !1;
+                            for (const EU of UU.split("\n")) Ht(EU) ? pU = !pU : !pU && EU.startsWith(gU) && tU.push(EU.slice(gU.length).trim());
+                            return tU
                           }
 
-                          function RI(DD) {
-                            return DD.markdown.replace(/^\s*# .*\n/, "").trim()
+                          function yt(UU) {
+                            return UU.markdown.replace(/^\s*# .*\n/, "").trim()
                           }
-                          class kI {
-                            constructor(DD, CD) {
-                              this.origin = CD, this.pages = void 0, this.partPaths = new Map;
-                              const cD = DD.map((DD => {
-                                const CD = CD => this.resolveLinks(DD, CD).length,
-                                  cD = function(DD, CD) {
-                                    const cD = DD.map((DD => CD(DD.markdown) + 2)),
-                                      ID = cD.reduce(((DD, CD) => DD + CD), 0),
-                                      pD = ID / Math.ceil(ID / lI),
-                                      iD = [];
-                                    let fD = 0;
-                                    return DD.forEach(((DD, CD) => {
-                                      const ID = cD[CD];
-                                      (0 === iD.length || fD + ID > lI || fD + ID / 2 > pD) && (iD.push([]), fD = 0), iD.at(-1).push(DD), fD += ID
-                                    })), iD
-                                  }(function(DD, CD) {
-                                    return TI(DD, (DD => DD.startsWith("## "))).flatMap((DD => {
-                                      var cD;
-                                      const ID = null !== (cD = GI(DD, 2)[0]) && void 0 !== cD ? cD : "";
-                                      if (CD(DD) <= lI) return [{
-                                        markdown: DD,
-                                        section: ID
+                          class kt {
+                            constructor(UU, RU) {
+                              this.origin = RU, this.pages = void 0, this.partPaths = new Map;
+                              const gU = UU.map((UU => {
+                                const RU = RU => this.resolveLinks(UU, RU).length,
+                                  gU = function(UU, RU) {
+                                    const gU = UU.map((UU => RU(UU.markdown) + 2)),
+                                      tU = gU.reduce(((UU, RU) => UU + RU), 0),
+                                      pU = tU / Math.ceil(tU / dt),
+                                      EU = [];
+                                    let PU = 0;
+                                    return UU.forEach(((UU, RU) => {
+                                      const tU = gU[RU];
+                                      (0 === EU.length || PU + tU > dt || PU + tU / 2 > pU) && (EU.push([]), PU = 0), EU.at(-1).push(UU), PU += tU
+                                    })), EU
+                                  }(function(UU, RU) {
+                                    return St(UU, (UU => UU.startsWith("## "))).flatMap((UU => {
+                                      var gU;
+                                      const tU = null !== (gU = st(UU, 2)[0]) && void 0 !== gU ? gU : "";
+                                      if (RU(UU) <= dt) return [{
+                                        markdown: UU,
+                                        section: tU
                                       }];
-                                      let pD = !1,
-                                        iD = "";
-                                      return TI(DD, (DD => {
-                                        const CD = pD && "" !== DD.trim();
-                                        return pD = "" === DD.trim(), CD
-                                      })).map((DD => {
-                                        var CD;
-                                        const cD = GI(DD, 3),
-                                          pD = DD.startsWith("### ") ? cD[0] : iD;
-                                        return iD = null !== (CD = cD.at(-1)) && void 0 !== CD ? CD : iD, {
-                                          markdown: DD,
-                                          section: ID || pD
+                                      let pU = !1,
+                                        EU = "";
+                                      return St(UU, (UU => {
+                                        const RU = pU && "" !== UU.trim();
+                                        return pU = "" === UU.trim(), RU
+                                      })).map((UU => {
+                                        var RU;
+                                        const gU = st(UU, 3),
+                                          pU = UU.startsWith("### ") ? gU[0] : EU;
+                                        return EU = null !== (RU = gU.at(-1)) && void 0 !== RU ? RU : EU, {
+                                          markdown: UU,
+                                          section: tU || pU
                                         }
                                       }))
                                     }))
-                                  }(RI(DD), CD), CD);
+                                  }(yt(UU), RU), RU);
                                 return {
-                                  page: DD,
-                                  groups: cD.length > 1 ? cD : []
+                                  page: UU,
+                                  groups: gU.length > 1 ? gU : []
                                 }
                               }));
                               for (const {
-                                  page: ID,
-                                  groups: pD
+                                  page: tU,
+                                  groups: pU
                                 }
-                                of cD) pD.forEach(((DD, CD) => {
-                                const cD = (0, zI.p)(ID.slug, CD);
-                                for (const pD of DD.flatMap((DD => [...GI(DD.markdown, 2), ...GI(DD.markdown, 3)]))) {
-                                  const DD = `${ID.id}#${(0,PD.u)(pD)}`;
-                                  this.partPaths.has(DD) || this.partPaths.set(DD, cD)
+                                of gU) pU.forEach(((UU, RU) => {
+                                const gU = (0, Xt.s)(tU.slug, RU);
+                                for (const pU of UU.flatMap((UU => [...st(UU.markdown, 2), ...st(UU.markdown, 3)]))) {
+                                  const UU = `${tU.id}#${(0,wU.n)(pU)}`;
+                                  this.partPaths.has(UU) || this.partPaths.set(UU, gU)
                                 }
                               }));
-                              this.pages = cD.map((DD => {
+                              this.pages = gU.map((UU => {
                                 let {
-                                  page: CD,
-                                  groups: cD
-                                } = DD;
+                                  page: RU,
+                                  groups: gU
+                                } = UU;
                                 return {
-                                  page: CD,
-                                  path: (0, zI.m)(CD.slug),
-                                  markdown: `# ${CD.title}\n\n${this.resolveLinks(CD,RI(CD))}\n`,
-                                  parts: cD.map(((DD, ID) => this.renderPart(CD, DD, ID, cD.length)))
+                                  page: RU,
+                                  path: (0, Xt.q)(RU.slug),
+                                  markdown: `# ${RU.title}\n\n${this.resolveLinks(RU,yt(RU))}\n`,
+                                  parts: gU.map(((UU, tU) => this.renderPart(RU, UU, tU, gU.length)))
                                 }
                               }))
                             }
-                            url(DD) {
-                              return `${this.origin}${DD}`
+                            url(UU) {
+                              return `${this.origin}${UU}`
                             }
-                            getPage(DD) {
-                              return this.pages.find((CD => CD.page.id === DD))
+                            getPage(UU) {
+                              return this.pages.find((RU => RU.page.id === UU))
                             }
                             oversizedFiles() {
-                              return this.pages.flatMap((DD => (DD.parts.length > 0 ? DD.parts : [{
-                                path: DD.path,
+                              return this.pages.flatMap((UU => (UU.parts.length > 0 ? UU.parts : [{
+                                path: UU.path,
                                 label: "",
-                                markdown: DD.markdown
-                              }]).filter((DD => DD.markdown.length > zI.b))))
+                                markdown: UU.markdown
+                              }]).filter((UU => UU.markdown.length > Xt.e))))
                             }
-                            markdownUrl(DD, CD) {
-                              const cD = CD && this.partPaths.get(`${DD.id}#${CD}`) || (0, zI.m)(DD.slug);
-                              return this.url(CD ? `${cD}#${CD}` : cD)
+                            markdownUrl(UU, RU) {
+                              const gU = RU && this.partPaths.get(`${UU.id}#${RU}`) || (0, Xt.q)(UU.slug);
+                              return this.url(RU ? `${gU}#${RU}` : gU)
                             }
-                            resolveLinks(DD, CD) {
-                              return CD.replace(/\]\((#[^)]+)\)/g, ((CD, cD) => {
-                                var ID;
-                                const pD = null !== (ID = dD(cD)) && void 0 !== ID ? ID : this.samePageTarget(DD, cD);
-                                return pD ? `](${this.markdownUrl(pD.page,pD.anchor)})` : CD
+                            resolveLinks(UU, RU) {
+                              return RU.replace(/\]\((#[^)]+)\)/g, ((RU, gU) => {
+                                var tU;
+                                const pU = null !== (tU = kU(gU)) && void 0 !== tU ? tU : this.samePageTarget(UU, gU);
+                                return pU ? `](${this.markdownUrl(pU.page,pU.anchor)})` : RU
                               }))
                             }
-                            samePageTarget(DD, CD) {
-                              const cD = (0, PD.u)(CD.slice(1));
-                              return kD(DD, cD) ? {
-                                page: DD,
-                                anchor: cD
+                            samePageTarget(UU, RU) {
+                              const gU = (0, wU.n)(RU.slice(1));
+                              return yU(UU, gU) ? {
+                                page: UU,
+                                anchor: gU
                               } : null
                             }
-                            renderPart(DD, CD, cD, ID) {
-                              const pD = function(DD) {
-                                  const CD = DD.map((DD => DD.section)).filter(Boolean);
-                                  if (0 === CD.length) return "";
-                                  const cD = CD[0],
-                                    ID = CD.at(-1);
-                                  return cD === ID ? cD : `${cD} to ${ID}`
-                                }(CD),
-                                iD = CD.map((DD => DD.markdown)).join("\n\n"),
-                                fD = pD ? `It covers ${pD}. ` : "",
-                                bD = `Part ${cD+1} of ${ID} of [${DD.title}](${this.url((0,zI.m)(DD.slug))}). ${fD}[llms.txt](${this.url(zI.g)}) lists every part.`;
+                            renderPart(UU, RU, gU, tU) {
+                              const pU = function(UU) {
+                                  const RU = UU.map((UU => UU.section)).filter(Boolean);
+                                  if (0 === RU.length) return "";
+                                  const gU = RU[0],
+                                    tU = RU.at(-1);
+                                  return gU === tU ? gU : `${gU} to ${tU}`
+                                }(RU),
+                                EU = RU.map((UU => UU.markdown)).join("\n\n"),
+                                PU = pU ? `It covers ${pU}. ` : "",
+                                TU = `Part ${gU+1} of ${tU} of [${UU.title}](${this.url((0,Xt.q)(UU.slug))}). ${PU}[llms.txt](${this.url(Xt.j)}) lists every part.`;
                               return {
-                                path: (0, zI.p)(DD.slug, cD),
-                                label: pD,
-                                markdown: `# ${DD.title}, part ${cD+1} of ${ID}\n\n${bD}\n\n${this.resolveLinks(DD,iD)}\n`
+                                path: (0, Xt.s)(UU.slug, gU),
+                                label: pU,
+                                markdown: `# ${UU.title}, part ${gU+1} of ${tU}\n\n${TU}\n\n${this.resolveLinks(UU,EU)}\n`
                               }
                             }
-                            llmsTxt(DD) {
-                              const CD = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${dI(zI.b)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
-                              for (const cD of LD) {
-                                CD.push("", `## ${cD.title}`, "");
-                                for (const DD of cD.pageIds) {
-                                  const cD = this.getPage(DD),
+                            llmsTxt(UU) {
+                              const RU = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${Ft(Xt.e)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
+                              for (const gU of dU) {
+                                RU.push("", `## ${gU.title}`, "");
+                                for (const UU of gU.pageIds) {
+                                  const gU = this.getPage(UU),
                                     {
-                                      page: ID,
-                                      parts: pD
-                                    } = cD,
-                                    iD = `About ${dI(cD.markdown.length)} tokens${pD.length>0?`, in ${pD.length} parts:`:"."}`;
-                                  CD.push(`- [${ID.title}](${this.url(cD.path)}): ${ID.summary} ${iD}`), pD.forEach(((DD, cD) => {
-                                    CD.push(`  - [Part ${cD+1}${DD.label?`: ${DD.label}`:""}](${this.url(DD.path)})`)
+                                      page: tU,
+                                      parts: pU
+                                    } = gU,
+                                    EU = `About ${Ft(gU.markdown.length)} tokens${pU.length>0?`, in ${pU.length} parts:`:"."}`;
+                                  RU.push(`- [${tU.title}](${this.url(gU.path)}): ${tU.summary} ${EU}`), pU.forEach(((UU, gU) => {
+                                    RU.push(`  - [Part ${gU+1}${UU.label?`: ${UU.label}`:""}](${this.url(UU.path)})`)
                                   }))
                                 }
                               }
-                              return CD.push("", "## Optional", "", `- [Every page in one file](${this.url(zI.c)}): About ${dI(DD.length)} tokens, for a model with a large context window.`, ""), CD.join("\n")
+                              return RU.push("", "## Optional", "", `- [Every page in one file](${this.url(Xt.h)}): About ${Ft(UU.length)} tokens, for a model with a large context window.`, ""), RU.join("\n")
                             }
                             llmsFullTxt() {
-                              return LD.flatMap((DD => DD.pageIds.map((DD => this.getPage(DD).markdown)))).join("\n---\n\n")
+                              return dU.flatMap((UU => UU.pageIds.map((UU => this.getPage(UU).markdown)))).join("\n---\n\n")
                             }
                             files() {
-                              const DD = this.llmsFullTxt(),
-                                CD = this.llmsTxt(DD),
-                                cD = new Map([
-                                  [zI.k, CD],
-                                  [zI.g, CD],
-                                  [zI.c, DD]
+                              const UU = this.llmsFullTxt(),
+                                RU = this.llmsTxt(UU),
+                                gU = new Map([
+                                  [Xt.n, RU],
+                                  [Xt.j, RU],
+                                  [Xt.h, UU]
                                 ]);
-                              for (const ID of this.pages) {
-                                cD.set(ID.path, ID.markdown);
-                                for (const DD of ID.parts) cD.set(DD.path, DD.markdown)
+                              for (const tU of this.pages) {
+                                gU.set(tU.path, tU.markdown);
+                                for (const UU of tU.parts) gU.set(UU.path, UU.markdown)
                               }
-                              return cD
+                              return gU
                             }
                           }
 
-                          function dI(DD) {
-                            return `${Math.max(1,Math.round(DD/4e3))}K`
+                          function Ft(UU) {
+                            return `${Math.max(1,Math.round(UU/4e3))}K`
                           }
-                          let YI = null;
+                          let it = null;
 
-                          function WI() {
-                            return YI ??= new kI(lD, jI.c), YI
+                          function At() {
+                            return it ??= new kt(vU, vt.b), it
                           }
-                          const sI = [{
+                          const zt = [{
                             name: "ChatGPT",
                             url: "https://chatgpt.com/?hints=search&q="
                           }, {
@@ -2582,373 +2582,373 @@ export const modules = {
                             url: "https://claude.ai/new?q="
                           }];
 
-                          function EI(DD) {
-                            return WI().getPage(DD.id).parts.length > 0 ? `Read ${zI.i}, then the parts of the Bloxd Code API's ${DD.title} page it lists, so I can ask questions about it.` : `Read ${jI.c}${(0,zI.m)(DD.slug)} so I can ask questions about it. ${zI.i} lists every page of the Bloxd Code API docs.`
+                          function Mt(UU) {
+                            return At().getPage(UU.id).parts.length > 0 ? `Read ${Xt.m}, then the parts of the Bloxd Code API's ${UU.title} page it lists, so I can ask questions about it.` : `Read ${vt.b}${(0,Xt.q)(UU.slug)} so I can ask questions about it. ${Xt.m} lists every page of the Bloxd Code API docs.`
                           }
 
-                          function eI(DD) {
+                          function Dt(UU) {
                             let {
-                              page: CD
-                            } = DD;
-                            const [cD, ID] = ND();
-                            return (0, tD.jsxs)("div", {
+                              page: RU
+                            } = UU;
+                            const [gU, tU] = WU();
+                            return (0, CU.jsxs)("div", {
                               className: "DocsPageAgentActions",
-                              children: [(0, tD.jsxs)("button", {
+                              children: [(0, CU.jsxs)("button", {
                                 type: "button",
                                 className: "DocsPageAgentAction",
                                 onClick: () => {
-                                  ID(WI().getPage(CD.id).markdown)
+                                  tU(At().getPage(RU.id).markdown)
                                 },
-                                children: [(0, tD.jsx)(oD, {
-                                  name: !1 === (null === cD || void 0 === cD ? void 0 : cD.failed) ? "check" : "copy"
-                                }), (0, tD.jsx)("span", {
-                                  children: cD ? cD.failed ? "Copy failed" : "Copied" : "Copy page"
+                                children: [(0, CU.jsx)(QU, {
+                                  name: !1 === (null === gU || void 0 === gU ? void 0 : gU.failed) ? "check" : "copy"
+                                }), (0, CU.jsx)("span", {
+                                  children: gU ? gU.failed ? "Copy failed" : "Copied" : "Copy page"
                                 })]
-                              }), sI.map((DD => (0, tD.jsxs)("a", {
+                              }), zt.map((UU => (0, CU.jsxs)("a", {
                                 className: "DocsPageAgentAction",
-                                href: `${DD.url}${encodeURIComponent(EI(CD))}`,
+                                href: `${UU.url}${encodeURIComponent(Mt(RU))}`,
                                 target: "_blank",
                                 rel: "noreferrer",
-                                children: [(0, tD.jsx)(oD, {
+                                children: [(0, CU.jsx)(QU, {
                                   name: "external-link"
-                                }), (0, tD.jsxs)("span", {
-                                  children: ["Open in ", DD.name]
+                                }), (0, CU.jsxs)("span", {
+                                  children: ["Open in ", UU.name]
                                 })]
-                              }, DD.name)))]
+                              }, UU.name)))]
                             })
                           }
 
-                          function uI(DD) {
-                            return `#${[0,1,2].map((CD=>Math.round(Math.min(255,Math.max(0,DD[CD]))).toString(16).padStart(2,"0"))).join("")}`
+                          function Lt(UU) {
+                            return `#${[0,1,2].map((RU=>Math.round(Math.min(255,Math.max(0,UU[RU]))).toString(16).padStart(2,"0"))).join("")}`
                           }
 
-                          function hI(DD) {
-                            return [parseInt(DD.slice(1, 3), 16), parseInt(DD.slice(3, 5), 16), parseInt(DD.slice(5, 7), 16)]
+                          function Nt(UU) {
+                            return [parseInt(UU.slice(1, 3), 16), parseInt(UU.slice(3, 5), 16), parseInt(UU.slice(5, 7), 16)]
                           }
 
-                          function rI(DD) {
+                          function lt(UU) {
                             let {
-                              label: CD,
-                              min: cD,
-                              max: ID,
-                              step: pD,
-                              low: iD,
-                              high: fD,
-                              onChange: bD
-                            } = DD;
-                            return (0, tD.jsxs)("div", {
+                              label: RU,
+                              min: gU,
+                              max: tU,
+                              step: pU,
+                              low: EU,
+                              high: PU,
+                              onChange: TU
+                            } = UU;
+                            return (0, CU.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, tD.jsxs)("div", {
+                              children: [(0, CU.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, tD.jsx)("span", {
-                                  children: CD
-                                }), (0, tD.jsx)("span", {
+                                children: [(0, CU.jsx)("span", {
+                                  children: RU
+                                }), (0, CU.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: iD === fD ? iD : `${iD}\u2013${fD}`
+                                  children: EU === PU ? EU : `${EU}\u2013${PU}`
                                 })]
-                              }), (0, tD.jsxs)("div", {
+                              }), (0, CU.jsxs)("div", {
                                 className: "DocsParticleRange",
-                                children: [(0, tD.jsx)("input", {
+                                children: [(0, CU.jsx)("input", {
                                   type: "range",
-                                  min: cD,
-                                  max: ID,
-                                  step: pD,
-                                  value: Math.min(ID, iD),
-                                  "aria-label": `Minimum ${CD.toLowerCase()}`,
-                                  onChange: DD => {
-                                    const CD = Number(DD.target.value);
-                                    bD(CD, Math.max(CD, fD))
+                                  min: gU,
+                                  max: tU,
+                                  step: pU,
+                                  value: Math.min(tU, EU),
+                                  "aria-label": `Minimum ${RU.toLowerCase()}`,
+                                  onChange: UU => {
+                                    const RU = Number(UU.target.value);
+                                    TU(RU, Math.max(RU, PU))
                                   }
-                                }), (0, tD.jsx)("input", {
+                                }), (0, CU.jsx)("input", {
                                   type: "range",
-                                  min: cD,
-                                  max: ID,
-                                  step: pD,
-                                  value: Math.min(ID, fD),
-                                  "aria-label": `Maximum ${CD.toLowerCase()}`,
-                                  onChange: DD => {
-                                    const CD = Number(DD.target.value);
-                                    bD(Math.min(CD, iD), CD)
+                                  min: gU,
+                                  max: tU,
+                                  step: pU,
+                                  value: Math.min(tU, PU),
+                                  "aria-label": `Maximum ${RU.toLowerCase()}`,
+                                  onChange: UU => {
+                                    const RU = Number(UU.target.value);
+                                    TU(Math.min(RU, EU), RU)
                                   }
                                 })]
                               })]
                             })
                           }
 
-                          function AI(DD) {
+                          function Ot(UU) {
                             let {
-                              label: CD,
-                              min: cD,
-                              max: ID,
-                              step: pD,
-                              value: iD,
-                              onChange: fD,
-                              format: bD = String
-                            } = DD;
-                            return (0, tD.jsxs)("div", {
+                              label: RU,
+                              min: gU,
+                              max: tU,
+                              step: pU,
+                              value: EU,
+                              onChange: PU,
+                              format: TU = String
+                            } = UU;
+                            return (0, CU.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, tD.jsxs)("div", {
+                              children: [(0, CU.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, tD.jsx)("span", {
-                                  children: CD
-                                }), (0, tD.jsx)("span", {
+                                children: [(0, CU.jsx)("span", {
+                                  children: RU
+                                }), (0, CU.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: bD(iD)
+                                  children: TU(EU)
                                 })]
-                              }), (0, tD.jsx)("input", {
+                              }), (0, CU.jsx)("input", {
                                 type: "range",
-                                min: cD,
-                                max: ID,
-                                step: pD,
-                                value: Math.min(ID, Math.max(cD, iD)),
-                                "aria-label": CD,
-                                onChange: DD => {
-                                  fD(Number(DD.target.value))
+                                min: gU,
+                                max: tU,
+                                step: pU,
+                                value: Math.min(tU, Math.max(gU, EU)),
+                                "aria-label": RU,
+                                onChange: UU => {
+                                  PU(Number(UU.target.value))
                                 }
                               })]
                             })
                           }
 
-                          function FI(DD) {
+                          function Up(UU) {
                             let {
-                              opts: CD,
-                              onChange: cD
-                            } = DD;
-                            const ID = CD.colorGradients;
-                            if (!Yc(ID)) return (0, tD.jsxs)("div", {
+                              opts: RU,
+                              onChange: gU
+                            } = UU;
+                            const tU = RU.colorGradients;
+                            if (!Fg(tU)) return (0, CU.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, tD.jsx)("div", {
+                              children: [(0, CU.jsx)("div", {
                                 className: "DocsControlLabel",
-                                children: (0, tD.jsx)("span", {
+                                children: (0, CU.jsx)("span", {
                                   children: "Colours, one per particle"
                                 })
-                              }), (0, tD.jsx)("div", {
+                              }), (0, CU.jsx)("div", {
                                 className: "DocsParticleSwatches",
-                                children: ID.map(((DD, CD) => (0, tD.jsx)("input", {
+                                children: tU.map(((UU, RU) => (0, CU.jsx)("input", {
                                   type: "color",
-                                  value: uI(DD.color),
-                                  "aria-label": `Colour ${CD+1}`,
-                                  onChange: DD => {
-                                    const pD = [...ID];
-                                    pD[CD] = {
-                                      color: hI(DD.target.value)
-                                    }, cD(pD)
+                                  value: Lt(UU.color),
+                                  "aria-label": `Colour ${RU+1}`,
+                                  onChange: UU => {
+                                    const pU = [...tU];
+                                    pU[RU] = {
+                                      color: Nt(UU.target.value)
+                                    }, gU(pU)
                                   }
-                                }, CD)))
+                                }, RU)))
                               })]
                             });
-                            const pD = (DD, CD) => {
-                              const pD = [...ID];
-                              pD[DD] = CD, cD(pD)
+                            const pU = (UU, RU) => {
+                              const pU = [...tU];
+                              pU[UU] = RU, gU(pU)
                             };
-                            return (0, tD.jsxs)("div", {
+                            return (0, CU.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, tD.jsxs)("div", {
+                              children: [(0, CU.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, tD.jsx)("span", {
+                                children: [(0, CU.jsx)("span", {
                                   children: "Colour over lifetime"
-                                }), (0, tD.jsx)("span", {
+                                }), (0, CU.jsx)("span", {
                                   className: "DocsControlValue",
                                   children: "min \xb7 max"
                                 })]
-                              }), ID.map(((DD, CD) => {
-                                var cD;
-                                const ID = null !== (cD = DD.maxColor) && void 0 !== cD ? cD : DD.minColor;
-                                return (0, tD.jsxs)("div", {
+                              }), tU.map(((UU, RU) => {
+                                var gU;
+                                const tU = null !== (gU = UU.maxColor) && void 0 !== gU ? gU : UU.minColor;
+                                return (0, CU.jsxs)("div", {
                                   className: "DocsParticleStop",
-                                  children: [(0, tD.jsxs)("span", {
+                                  children: [(0, CU.jsxs)("span", {
                                     className: "DocsParticleStopTime",
-                                    children: [Math.round(100 * DD.timeFraction), "%"]
-                                  }), (0, tD.jsx)("span", {
+                                    children: [Math.round(100 * UU.timeFraction), "%"]
+                                  }), (0, CU.jsx)("span", {
                                     className: "DocsParticleStopBar",
                                     style: {
-                                      background: `linear-gradient(90deg, ${uI(DD.minColor)}, ${uI(ID)})`
+                                      background: `linear-gradient(90deg, ${Lt(UU.minColor)}, ${Lt(tU)})`
                                     }
-                                  }), (0, tD.jsx)("input", {
+                                  }), (0, CU.jsx)("input", {
                                     type: "color",
-                                    value: uI(DD.minColor),
-                                    "aria-label": `Minimum colour at ${Math.round(100*DD.timeFraction)}%`,
-                                    onChange: cD => {
-                                      pD(CD, {
-                                        ...DD,
-                                        minColor: [...hI(cD.target.value), DD.minColor[3]]
+                                    value: Lt(UU.minColor),
+                                    "aria-label": `Minimum colour at ${Math.round(100*UU.timeFraction)}%`,
+                                    onChange: gU => {
+                                      pU(RU, {
+                                        ...UU,
+                                        minColor: [...Nt(gU.target.value), UU.minColor[3]]
                                       })
                                     }
-                                  }), (0, tD.jsx)("input", {
+                                  }), (0, CU.jsx)("input", {
                                     type: "color",
-                                    value: uI(ID),
-                                    "aria-label": `Maximum colour at ${Math.round(100*DD.timeFraction)}%`,
-                                    onChange: cD => {
-                                      pD(CD, {
-                                        ...DD,
-                                        maxColor: [...hI(cD.target.value), ID[3]]
+                                    value: Lt(tU),
+                                    "aria-label": `Maximum colour at ${Math.round(100*UU.timeFraction)}%`,
+                                    onChange: gU => {
+                                      pU(RU, {
+                                        ...UU,
+                                        maxColor: [...Nt(gU.target.value), tU[3]]
                                       })
                                     }
                                   })]
-                                }, CD)
+                                }, RU)
                               }))]
                             })
                           }
-                          const Dp = [-.5, -.5, -.5],
-                            Cp = [.5, .5, .5],
-                            cp = [0, 1, 2, 3, 4, 5, 6, 7].map((DD => [1 & DD ? Cp[0] : Dp[0], 2 & DD ? Cp[1] : Dp[1], 4 & DD ? Cp[2] : Dp[2]]));class Ip {
+                          const Rp = [-.5, -.5, -.5],
+                            gp = [.5, .5, .5],
+                            tp = [0, 1, 2, 3, 4, 5, 6, 7].map((UU => [1 & UU ? gp[0] : Rp[0], 2 & UU ? gp[1] : Rp[1], 4 & UU ? gp[2] : Rp[2]]));class pp {
                             constructor() {
                               this.tints = new WeakMap
                             }
-                            get(DD, CD, cD, ID) {
-                              const pD = Math.round(31 * CD),
-                                iD = Math.round(31 * cD),
-                                fD = Math.round(31 * ID),
-                                bD = `${pD}|${iD}|${fD}`;
-                              let QD = this.tints.get(DD);
-                              (!QD || QD.size > 2e3) && (QD = new Map, this.tints.set(DD, QD));
-                              let wD = QD.get(bD);
-                              if (wD) return wD;
-                              wD = document.createElement("canvas"), wD.width = DD.naturalWidth || 16, wD.height = DD.naturalHeight || 16;
-                              const SD = wD.getContext("2d");
-                              return SD ? (SD.imageSmoothingEnabled = !1, SD.drawImage(DD, 0, 0, wD.width, wD.height), SD.globalCompositeOperation = "multiply", SD.fillStyle = `rgb(${pD/31*255}, ${iD/31*255}, ${fD/31*255})`, SD.fillRect(0, 0, wD.width, wD.height), SD.globalCompositeOperation = "destination-in", SD.drawImage(DD, 0, 0, wD.width, wD.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), QD.set(bD, wD), wD
+                            get(UU, RU, gU, tU) {
+                              const pU = Math.round(31 * RU),
+                                EU = Math.round(31 * gU),
+                                PU = Math.round(31 * tU),
+                                TU = `${pU}|${EU}|${PU}`;
+                              let qU = this.tints.get(UU);
+                              (!qU || qU.size > 2e3) && (qU = new Map, this.tints.set(UU, qU));
+                              let KU = qU.get(TU);
+                              if (KU) return KU;
+                              KU = document.createElement("canvas"), KU.width = UU.naturalWidth || 16, KU.height = UU.naturalHeight || 16;
+                              const cU = KU.getContext("2d");
+                              return cU ? (cU.imageSmoothingEnabled = !1, cU.drawImage(UU, 0, 0, KU.width, KU.height), cU.globalCompositeOperation = "multiply", cU.fillStyle = `rgb(${pU/31*255}, ${EU/31*255}, ${PU/31*255})`, cU.fillRect(0, 0, KU.width, KU.height), cU.globalCompositeOperation = "destination-in", cU.drawImage(UU, 0, 0, KU.width, KU.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), qU.set(TU, KU), KU
                             }
                           }
 
-                          function pp(DD) {
+                          function Ep(UU) {
                             let {
-                              opts: CD,
-                              textureUrl: cD,
-                              burst: pD,
-                              paused: iD
-                            } = DD;
-                            const fD = (0, ID.useRef)(null),
-                              bD = (0, ID.useRef)(CD);
-                            bD.current = CD;
-                            const QD = (0, ID.useRef)(iD);
-                            QD.current = iD;
-                            const wD = (0, ID.useRef)(null),
-                              SD = (0, ID.useRef)(null),
-                              BD = (0, ID.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(DD) {
-                                let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
-                                const cD = [-.5, -.5, -.5],
-                                  ID = [.5, .5, .5];
-                                let pD = .5;
-                                for (let iD = 0; iD < 40; iD++) {
-                                  const iD = sc(DD, cD, ID, CD),
-                                    fD = Math.max(iD.life / 30, .001);
-                                  for (; uc(iD, DD.gravity, fD);) pD = Math.max(pD, Math.hypot(iD.pos[0], iD.pos[1], iD.pos[2]) + iD.size / 2)
+                              opts: RU,
+                              textureUrl: gU,
+                              burst: pU,
+                              paused: EU
+                            } = UU;
+                            const PU = (0, tU.useRef)(null),
+                              TU = (0, tU.useRef)(RU);
+                            TU.current = RU;
+                            const qU = (0, tU.useRef)(EU);
+                            qU.current = EU;
+                            const KU = (0, tU.useRef)(null),
+                              cU = (0, tU.useRef)(null),
+                              GU = (0, tU.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(UU) {
+                                let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
+                                const gU = [-.5, -.5, -.5],
+                                  tU = [.5, .5, .5];
+                                let pU = .5;
+                                for (let EU = 0; EU < 40; EU++) {
+                                  const EU = Ag(UU, gU, tU, RU),
+                                    PU = Math.max(EU.life / 30, .001);
+                                  for (; Dg(EU, UU.gravity, PU);) pU = Math.max(pU, Math.hypot(EU.pos[0], EU.pos[1], EU.pos[2]) + EU.size / 2)
                                 }
-                                return pD
-                              }(CD)))), [CD]),
-                              yD = (0, ID.useRef)(BD);
-                            return yD.current = BD, (0, ID.useEffect)((() => {
-                              if (wD.current = null, !cD) return;
-                              const DD = new Image;
-                              let CD = !1;
-                              return DD.onload = () => {
-                                CD || (wD.current = DD)
-                              }, DD.onerror = () => {
-                                console.warn(`Particle preview: could not load the texture ${cD}`)
-                              }, DD.src = cD, () => {
-                                CD = !0
+                                return pU
+                              }(RU)))), [RU]),
+                              jU = (0, tU.useRef)(GU);
+                            return jU.current = GU, (0, tU.useEffect)((() => {
+                              if (KU.current = null, !gU) return;
+                              const UU = new Image;
+                              let RU = !1;
+                              return UU.onload = () => {
+                                RU || (KU.current = UU)
+                              }, UU.onerror = () => {
+                                console.warn(`Particle preview: could not load the texture ${gU}`)
+                              }, UU.src = gU, () => {
+                                RU = !0
                               }
-                            }), [cD]), (0, ID.useEffect)((() => {
-                              var DD;
-                              null === (DD = SD.current) || void 0 === DD || DD.call(SD)
-                            }), [CD, pD]), (0, ID.useEffect)((() => {
-                              const DD = fD.current,
-                                CD = null === DD || void 0 === DD ? void 0 : DD.getContext("2d");
-                              if (!DD || !CD) return void console.warn("Particle preview: no 2D canvas context to draw on");
-                              const cD = new Ip;
-                              let ID = [],
-                                pD = 0,
-                                iD = -.7,
-                                BD = yD.current,
-                                MD = performance.now(),
-                                tD = 0,
-                                ZD = !0,
-                                oD = null;
-                              const vD = () => {
-                                const DD = bD.current,
-                                  CD = Math.min(400, Math.max(0, Math.ceil(DD.manualEmitCount)));
-                                ID = [];
-                                for (let cD = 0; cD < CD; cD++) ID.push(sc(DD, Dp, Cp, Math.random));
-                                pD = 0
+                            }), [gU]), (0, tU.useEffect)((() => {
+                              var UU;
+                              null === (UU = cU.current) || void 0 === UU || UU.call(cU)
+                            }), [RU, pU]), (0, tU.useEffect)((() => {
+                              const UU = PU.current,
+                                RU = null === UU || void 0 === UU ? void 0 : UU.getContext("2d");
+                              if (!UU || !RU) return void console.warn("Particle preview: no 2D canvas context to draw on");
+                              const gU = new pp;
+                              let tU = [],
+                                pU = 0,
+                                EU = -.7,
+                                GU = jU.current,
+                                uU = performance.now(),
+                                CU = 0,
+                                hU = !0,
+                                QU = null;
+                              const eU = () => {
+                                const UU = TU.current,
+                                  RU = Math.min(400, Math.max(0, Math.ceil(UU.manualEmitCount)));
+                                tU = [];
+                                for (let gU = 0; gU < RU; gU++) tU.push(Ag(UU, Rp, gp, Math.random));
+                                pU = 0
                               };
-                              SD.current = vD, vD();
-                              const ND = fD => {
-                                tD = requestAnimationFrame(ND);
-                                const SD = Math.min(.05, (fD - MD) / 1e3);
-                                if (MD = fD, !ZD) return;
-                                const gD = window.devicePixelRatio || 1,
-                                  XD = Math.round(DD.clientWidth * gD),
-                                  mD = Math.round(DD.clientHeight * gD);
-                                if (0 === XD || 0 === mD) return;
-                                DD.width === XD && DD.height === mD || (DD.width = XD, DD.height = mD);
-                                const nD = bD.current;
-                                null === oD && (iD += .18 * SD), BD += (yD.current - BD) * Math.min(1, 4 * SD);
-                                const OD = .6 * SD;
-                                ID = ID.filter((DD => uc(DD, nD.gravity, OD))), 0 !== ID.length || QD.current || (pD += SD, pD > .6 && vD());
-                                const PD = function(DD, CD, cD, ID) {
-                                  const pD = 3.2 * ID,
-                                    iD = .44 * Math.min(DD, CD) * pD / ID,
-                                    fD = Math.cos(cD),
-                                    bD = Math.sin(cD),
-                                    QD = Math.cos(.42),
-                                    wD = Math.sin(.42);
-                                  return (cD, ID, SD) => {
-                                    const BD = cD * bD + SD * fD,
-                                      yD = pD - (ID * wD + BD * QD);
-                                    if (yD < .05) return null;
-                                    const MD = iD / yD;
+                              cU.current = eU, eU();
+                              const WU = PU => {
+                                CU = requestAnimationFrame(WU);
+                                const cU = Math.min(.05, (PU - uU) / 1e3);
+                                if (uU = PU, !hU) return;
+                                const fU = window.devicePixelRatio || 1,
+                                  xU = Math.round(UU.clientWidth * fU),
+                                  mU = Math.round(UU.clientHeight * fU);
+                                if (0 === xU || 0 === mU) return;
+                                UU.width === xU && UU.height === mU || (UU.width = xU, UU.height = mU);
+                                const IU = TU.current;
+                                null === QU && (EU += .18 * cU), GU += (jU.current - GU) * Math.min(1, 4 * cU);
+                                const JU = .6 * cU;
+                                tU = tU.filter((UU => Dg(UU, IU.gravity, JU))), 0 !== tU.length || qU.current || (pU += cU, pU > .6 && eU());
+                                const wU = function(UU, RU, gU, tU) {
+                                  const pU = 3.2 * tU,
+                                    EU = .44 * Math.min(UU, RU) * pU / tU,
+                                    PU = Math.cos(gU),
+                                    TU = Math.sin(gU),
+                                    qU = Math.cos(.42),
+                                    KU = Math.sin(.42);
+                                  return (gU, tU, cU) => {
+                                    const GU = gU * TU + cU * PU,
+                                      jU = pU - (tU * KU + GU * qU);
+                                    if (jU < .05) return null;
+                                    const uU = EU / jU;
                                     return {
-                                      x: DD / 2 + (cD * fD - SD * bD) * MD,
-                                      y: CD / 2 - (ID * QD - BD * wD) * MD,
-                                      scale: MD,
-                                      depth: yD
+                                      x: UU / 2 + (gU * PU - cU * TU) * uU,
+                                      y: RU / 2 - (tU * qU - GU * KU) * uU,
+                                      scale: uU,
+                                      depth: jU
                                     }
                                   }
-                                }(XD, mD, iD, BD);
-                                ! function(DD, CD, cD, ID, pD) {
-                                  const iD = DD.createLinearGradient(0, 0, 0, cD);
-                                  iD.addColorStop(0, "#23262d"), iD.addColorStop(1, "#16181c"), DD.globalCompositeOperation = "source-over", DD.globalAlpha = 1, DD.fillStyle = iD, DD.fillRect(0, 0, CD, cD);
-                                  const fD = (CD, cD) => {
-                                      const pD = ID(CD[0], CD[1], CD[2]),
-                                        iD = ID(cD[0], cD[1], cD[2]);
-                                      pD && iD && (DD.beginPath(), DD.moveTo(pD.x, pD.y), DD.lineTo(iD.x, iD.y), DD.stroke())
+                                }(xU, mU, EU, GU);
+                                ! function(UU, RU, gU, tU, pU) {
+                                  const EU = UU.createLinearGradient(0, 0, 0, gU);
+                                  EU.addColorStop(0, "#23262d"), EU.addColorStop(1, "#16181c"), UU.globalCompositeOperation = "source-over", UU.globalAlpha = 1, UU.fillStyle = EU, UU.fillRect(0, 0, RU, gU);
+                                  const PU = (RU, gU) => {
+                                      const pU = tU(RU[0], RU[1], RU[2]),
+                                        EU = tU(gU[0], gU[1], gU[2]);
+                                      pU && EU && (UU.beginPath(), UU.moveTo(pU.x, pU.y), UU.lineTo(EU.x, EU.y), UU.stroke())
                                     },
-                                    bD = Math.ceil(pD) + 1,
-                                    QD = Dp[1];
-                                  DD.lineWidth = 1, DD.strokeStyle = "rgba(255, 255, 255, 0.07)";
-                                  for (let wD = -bD; wD <= bD; wD++) fD([wD + .5, QD, .5 - bD], [wD + .5, QD, bD + .5]), fD([.5 - bD, QD, wD + .5], [bD + .5, QD, wD + .5]);
-                                  DD.strokeStyle = "rgba(255, 255, 255, 0.28)", DD.setLineDash([4, 4]);
-                                  for (const wD of cp)
-                                    for (const DD of cp) {
-                                      const CD = [0, 1, 2].filter((CD => wD[CD] !== DD[CD]));
-                                      1 === CD.length && wD[CD[0]] < DD[CD[0]] && fD(wD, DD)
+                                    TU = Math.ceil(pU) + 1,
+                                    qU = Rp[1];
+                                  UU.lineWidth = 1, UU.strokeStyle = "rgba(255, 255, 255, 0.07)";
+                                  for (let KU = -TU; KU <= TU; KU++) PU([KU + .5, qU, .5 - TU], [KU + .5, qU, TU + .5]), PU([.5 - TU, qU, KU + .5], [TU + .5, qU, KU + .5]);
+                                  UU.strokeStyle = "rgba(255, 255, 255, 0.28)", UU.setLineDash([4, 4]);
+                                  for (const KU of tp)
+                                    for (const UU of tp) {
+                                      const RU = [0, 1, 2].filter((RU => KU[RU] !== UU[RU]));
+                                      1 === RU.length && KU[RU[0]] < UU[RU[0]] && PU(KU, UU)
                                     }
-                                  DD.setLineDash([])
-                                }(CD, XD, mD, PD, BD);
-                                const HD = wD.current,
-                                  UD = ID.map((DD => ({
-                                    particle: DD,
-                                    at: PD(DD.pos[0], DD.pos[1], DD.pos[2])
-                                  }))).filter((DD => null !== DD.at)).sort(((DD, CD) => CD.at.depth - DD.at.depth));
-                                CD.imageSmoothingEnabled = !1;
-                                for (const DD of function(DD) {
-                                    switch (DD) {
-                                      case Tc.c.OneOne:
+                                  UU.setLineDash([])
+                                }(RU, xU, mU, wU, GU);
+                                const nU = KU.current,
+                                  bU = tU.map((UU => ({
+                                    particle: UU,
+                                    at: wU(UU.pos[0], UU.pos[1], UU.pos[2])
+                                  }))).filter((UU => null !== UU.at)).sort(((UU, RU) => RU.at.depth - UU.at.depth));
+                                RU.imageSmoothingEnabled = !1;
+                                for (const UU of function(UU) {
+                                    switch (UU) {
+                                      case Hg.g.OneOne:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !1
                                         }];
-                                      case Tc.c.Add:
+                                      case Hg.g.Add:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !0
                                         }];
-                                      case Tc.c.Multiply:
+                                      case Hg.g.Multiply:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
                                         }];
-                                      case Tc.c.MultiplyAdd:
+                                      case Hg.g.MultiplyAdd:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
@@ -2962,665 +2962,665 @@ export const modules = {
                                           usesAlpha: !0
                                         }]
                                     }
-                                  }(nD.blendMode)) {
-                                  CD.globalCompositeOperation = DD.operation;
+                                  }(IU.blendMode)) {
+                                  RU.globalCompositeOperation = UU.operation;
                                   for (const {
-                                      particle: ID,
-                                      at: pD
+                                      particle: tU,
+                                      at: pU
                                     }
-                                    of UD) {
-                                    const [iD, fD, bD, QD] = ec(ID), wD = Math.max(1, ID.size * pD.scale);
-                                    CD.globalAlpha = DD.usesAlpha ? Math.min(1, Math.max(0, QD)) : 1, HD ? CD.drawImage(cD.get(HD, iD, fD, bD), pD.x - wD / 2, pD.y - wD / 2, wD, wD) : (CD.fillStyle = `rgb(${255*iD}, ${255*fD}, ${255*bD})`, CD.fillRect(pD.x - wD / 2, pD.y - wD / 2, wD, wD))
+                                    of bU) {
+                                    const [EU, PU, TU, qU] = Mg(tU), KU = Math.max(1, tU.size * pU.scale);
+                                    RU.globalAlpha = UU.usesAlpha ? Math.min(1, Math.max(0, qU)) : 1, nU ? RU.drawImage(gU.get(nU, EU, PU, TU), pU.x - KU / 2, pU.y - KU / 2, KU, KU) : (RU.fillStyle = `rgb(${255*EU}, ${255*PU}, ${255*TU})`, RU.fillRect(pU.x - KU / 2, pU.y - KU / 2, KU, KU))
                                   }
                                 }
-                                CD.globalCompositeOperation = "source-over", CD.globalAlpha = 1
+                                RU.globalCompositeOperation = "source-over", RU.globalAlpha = 1
                               };
-                              tD = requestAnimationFrame(ND);
-                              const gD = new IntersectionObserver((DD => {
-                                let [CD] = DD;
-                                ZD = CD.isIntersecting
+                              CU = requestAnimationFrame(WU);
+                              const fU = new IntersectionObserver((UU => {
+                                let [RU] = UU;
+                                hU = RU.isIntersecting
                               }));
-                              gD.observe(DD);
-                              const XD = CD => {
-                                  oD = CD.clientX, DD.setPointerCapture(CD.pointerId)
+                              fU.observe(UU);
+                              const xU = RU => {
+                                  QU = RU.clientX, UU.setPointerCapture(RU.pointerId)
                                 },
-                                mD = DD => {
-                                  null !== oD && (iD += .01 * (DD.clientX - oD), oD = DD.clientX)
+                                mU = UU => {
+                                  null !== QU && (EU += .01 * (UU.clientX - QU), QU = UU.clientX)
                                 },
-                                nD = () => {
-                                  oD = null
+                                IU = () => {
+                                  QU = null
                                 };
-                              return DD.addEventListener("pointerdown", XD), DD.addEventListener("pointermove", mD), DD.addEventListener("pointerup", nD), DD.addEventListener("pointercancel", nD), () => {
-                                cancelAnimationFrame(tD), gD.disconnect(), SD.current = null, DD.removeEventListener("pointerdown", XD), DD.removeEventListener("pointermove", mD), DD.removeEventListener("pointerup", nD), DD.removeEventListener("pointercancel", nD)
+                              return UU.addEventListener("pointerdown", xU), UU.addEventListener("pointermove", mU), UU.addEventListener("pointerup", IU), UU.addEventListener("pointercancel", IU), () => {
+                                cancelAnimationFrame(CU), fU.disconnect(), cU.current = null, UU.removeEventListener("pointerdown", xU), UU.removeEventListener("pointermove", mU), UU.removeEventListener("pointerup", IU), UU.removeEventListener("pointercancel", IU)
                               }
-                            }), []), (0, tD.jsx)("canvas", {
-                              ref: fD,
+                            }), []), (0, CU.jsx)("canvas", {
+                              ref: PU,
                               className: "DocsParticleCanvas",
                               role: "img",
-                              "aria-label": `Preview of a ${CD.texture} particle effect. Drag to turn the view.`
+                              "aria-label": `Preview of a ${RU.texture} particle effect. Drag to turn the view.`
                             })
                           }
-                          const ip = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
-                            fp = [{
-                              mode: Tc.c.OneOne,
+                          const Pp = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
+                            Tp = [{
+                              mode: Hg.g.OneOne,
                               label: "0 \xb7 OneOne (glow)"
                             }, {
-                              mode: Tc.c.Standard,
+                              mode: Hg.g.Standard,
                               label: "1 \xb7 Standard"
                             }, {
-                              mode: Tc.c.Add,
+                              mode: Hg.g.Add,
                               label: "2 \xb7 Add"
                             }, {
-                              mode: Tc.c.Multiply,
+                              mode: Hg.g.Multiply,
                               label: "3 \xb7 Multiply"
                             }, {
-                              mode: Tc.c.MultiplyAdd,
+                              mode: Hg.g.MultiplyAdd,
                               label: "4 \xb7 MultiplyAdd"
                             }],
-                            bp = (0, ID.forwardRef)((function(DD, CD) {
-                              var cD, pD;
+                            qp = (0, tU.forwardRef)((function(UU, RU) {
+                              var gU, pU;
                               let {
-                                textures: fD
-                              } = DD;
-                              const bD = gI(),
-                                QD = (0, ID.useRef)(null),
-                                [wD, SD] = (0, ID.useState)(Rc),
-                                [BD, yD] = (0, ID.useState)("example"),
-                                [MD, ZD] = (0, ID.useState)(0),
-                                [vD, ND] = (0, ID.useState)(!1),
-                                XD = DD => {
-                                  const CD = "example" === DD ? Rc : Gc(DD);
-                                  CD && (SD(CD), yD(DD))
+                                textures: PU
+                              } = UU;
+                              const TU = ft(),
+                                qU = (0, tU.useRef)(null),
+                                [KU, cU] = (0, tU.useState)(sg),
+                                [GU, jU] = (0, tU.useState)("example"),
+                                [uU, hU] = (0, tU.useState)(0),
+                                [eU, WU] = (0, tU.useState)(!1),
+                                xU = UU => {
+                                  const RU = "example" === UU ? sg : Sg(UU);
+                                  RU && (cU(RU), jU(UU))
                                 };
-                              (0, ID.useImperativeHandle)(CD, (() => ({
-                                preview: DD => {
-                                  var CD;
-                                  XD(DD), null === (CD = QD.current) || void 0 === CD || CD.scrollIntoView({
+                              (0, tU.useImperativeHandle)(RU, (() => ({
+                                preview: UU => {
+                                  var RU;
+                                  xU(UU), null === (RU = qU.current) || void 0 === RU || RU.scrollIntoView({
                                     behavior: "smooth",
                                     block: "start"
                                   })
                                 }
                               })));
-                              const mD = DD => {
-                                  SD({
-                                    ...wD,
-                                    ...DD
-                                  }), yD(null)
+                              const mU = UU => {
+                                  cU({
+                                    ...KU,
+                                    ...UU
+                                  }), jU(null)
                                 },
-                                nD = function(DD, CD) {
-                                  if (null !== CD) return `${Fc}    presetId: "${CD}",\n${DI}\n})`;
-                                  const cD = DD.velocityGradients.map((DD => `        {\n            timeFraction: ${hc(DD.timeFraction)},\n            factor: ${hc(DD.factor)},\n            factor2: ${hc(DD.factor2)},\n        },`)),
-                                    ID = [`    dir1: ${rc(DD.dir1)},`, `    dir2: ${rc(DD.dir2)},`, DI, `    texture: "${DD.texture}",`, `    minLifeTime: ${hc(DD.minLifeTime)},`, `    maxLifeTime: ${hc(DD.maxLifeTime)},`, `    minEmitPower: ${hc(DD.minEmitPower)},`, `    maxEmitPower: ${hc(DD.maxEmitPower)},`, `    minSize: ${hc(DD.minSize)},`, `    maxSize: ${hc(DD.maxSize)},`, `    manualEmitCount: ${hc(DD.manualEmitCount)},`, `    gravity: ${rc(DD.gravity)},`, `    colorGradients: ${Ac(DD.colorGradients,"    ")},`, `    velocityGradients: ${cD.length>0?`[\n${cD.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${hc(DD.blendMode)},`];
-                                  return void 0 !== DD.hideDist && ID.push(`    hideDist: ${hc(DD.hideDist)},`), `${Fc}${ID.join("\n")}\n})`
-                                }(wD, null === BD || "example" === BD ? null : BD),
-                                PD = fD.includes(wD.texture) ? fD : [...fD, wD.texture];
-                              return (0, tD.jsxs)("section", {
-                                ref: QD,
+                                IU = function(UU, RU) {
+                                  if (null !== RU) return `${Og}    presetId: "${RU}",\n${Ut}\n})`;
+                                  const gU = UU.velocityGradients.map((UU => `        {\n            timeFraction: ${Lg(UU.timeFraction)},\n            factor: ${Lg(UU.factor)},\n            factor2: ${Lg(UU.factor2)},\n        },`)),
+                                    tU = [`    dir1: ${Ng(UU.dir1)},`, `    dir2: ${Ng(UU.dir2)},`, Ut, `    texture: "${UU.texture}",`, `    minLifeTime: ${Lg(UU.minLifeTime)},`, `    maxLifeTime: ${Lg(UU.maxLifeTime)},`, `    minEmitPower: ${Lg(UU.minEmitPower)},`, `    maxEmitPower: ${Lg(UU.maxEmitPower)},`, `    minSize: ${Lg(UU.minSize)},`, `    maxSize: ${Lg(UU.maxSize)},`, `    manualEmitCount: ${Lg(UU.manualEmitCount)},`, `    gravity: ${Ng(UU.gravity)},`, `    colorGradients: ${lg(UU.colorGradients,"    ")},`, `    velocityGradients: ${gU.length>0?`[\n${gU.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${Lg(UU.blendMode)},`];
+                                  return void 0 !== UU.hideDist && tU.push(`    hideDist: ${Lg(UU.hideDist)},`), `${Og}${tU.join("\n")}\n})`
+                                }(KU, null === GU || "example" === GU ? null : GU),
+                                wU = PU.includes(KU.texture) ? PU : [...PU, KU.texture];
+                              return (0, CU.jsxs)("section", {
+                                ref: qU,
                                 className: "DocsPlayground DocsParticlePlayground",
                                 "aria-label": "Particle effect playground",
-                                children: [(0, tD.jsxs)("header", {
+                                children: [(0, CU.jsxs)("header", {
                                   className: "DocsPlaygroundHeader",
-                                  children: [(0, tD.jsxs)("div", {
-                                    children: [(0, tD.jsx)("div", {
+                                  children: [(0, CU.jsxs)("div", {
+                                    children: [(0, CU.jsx)("div", {
                                       className: "DocsPlaygroundTitle",
                                       children: "Try it: particle effects"
-                                    }), (0, tD.jsx)("div", {
+                                    }), (0, CU.jsx)("div", {
                                       className: "DocsPlaygroundHint",
                                       children: "Pick a preset or change the settings, and the burst replays. Drag the preview to turn it."
                                     })]
-                                  }), (0, tD.jsx)(gD, {
-                                    text: nD,
+                                  }), (0, CU.jsx)(fU, {
+                                    text: IU,
                                     label: "Copy code"
                                   })]
-                                }), (0, tD.jsxs)("div", {
+                                }), (0, CU.jsxs)("div", {
                                   className: "DocsPlaygroundPresets",
-                                  children: [(0, tD.jsx)("button", {
+                                  children: [(0, CU.jsx)("button", {
                                     type: "button",
-                                    className: iD()("DocsVariantChip", {
-                                      Active: "example" === BD
+                                    className: EU()("DocsVariantChip", {
+                                      Active: "example" === GU
                                     }),
                                     onClick: () => {
-                                      XD("example")
+                                      xU("example")
                                     },
                                     children: "Example"
-                                  }), ip.filter((DD => null !== Gc(DD))).map((DD => (0, tD.jsx)("button", {
+                                  }), Pp.filter((UU => null !== Sg(UU))).map((UU => (0, CU.jsx)("button", {
                                     type: "button",
-                                    className: iD()("DocsVariantChip", {
-                                      Active: BD === DD
+                                    className: EU()("DocsVariantChip", {
+                                      Active: GU === UU
                                     }),
                                     onClick: () => {
-                                      XD(DD)
+                                      xU(UU)
                                     },
-                                    children: DD
-                                  }, DD))), (0, tD.jsxs)("select", {
+                                    children: UU
+                                  }, UU))), (0, CU.jsxs)("select", {
                                     className: "DocsParticleSelect",
-                                    value: null !== BD && void 0 !== BD ? BD : "custom",
+                                    value: null !== GU && void 0 !== GU ? GU : "custom",
                                     "aria-label": "Preset",
-                                    onChange: DD => {
-                                      XD(DD.target.value)
+                                    onChange: UU => {
+                                      xU(UU.target.value)
                                     },
-                                    children: [(0, tD.jsx)("option", {
+                                    children: [(0, CU.jsx)("option", {
                                       value: "example",
                                       children: "Example effect"
-                                    }), null === BD && (0, tD.jsx)("option", {
+                                    }), null === GU && (0, CU.jsx)("option", {
                                       value: "custom",
                                       children: "Custom"
-                                    }), Lc.e.map((DD => (0, tD.jsx)("option", {
-                                      value: DD,
-                                      children: DD
-                                    }, DD)))]
+                                    }), dg.d.map((UU => (0, CU.jsx)("option", {
+                                      value: UU,
+                                      children: UU
+                                    }, UU)))]
                                   })]
-                                }), (0, tD.jsxs)("div", {
+                                }), (0, CU.jsxs)("div", {
                                   className: "DocsParticleBody",
-                                  children: [(0, tD.jsxs)("div", {
+                                  children: [(0, CU.jsxs)("div", {
                                     className: "DocsParticleStageWrap",
-                                    children: [(0, tD.jsx)(pp, {
-                                      opts: wD,
-                                      textureUrl: null !== (cD = null === bD || void 0 === bD ? void 0 : bD.getParticleTextureUrl(wD.texture)) && void 0 !== cD ? cD : null,
-                                      burst: MD,
-                                      paused: vD
-                                    }), (0, tD.jsxs)("div", {
+                                    children: [(0, CU.jsx)(Ep, {
+                                      opts: KU,
+                                      textureUrl: null !== (gU = null === TU || void 0 === TU ? void 0 : TU.getParticleTextureUrl(KU.texture)) && void 0 !== gU ? gU : null,
+                                      burst: uU,
+                                      paused: eU
+                                    }), (0, CU.jsxs)("div", {
                                       className: "DocsParticleStageButtons",
-                                      children: [(0, tD.jsxs)("button", {
+                                      children: [(0, CU.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
                                         onClick: () => {
-                                          ZD(MD + 1)
+                                          hU(uU + 1)
                                         },
-                                        children: [(0, tD.jsx)(oD, {
+                                        children: [(0, CU.jsx)(QU, {
                                           name: "replay"
-                                        }), (0, tD.jsx)("span", {
+                                        }), (0, CU.jsx)("span", {
                                           children: "Replay"
                                         })]
-                                      }), (0, tD.jsxs)("button", {
+                                      }), (0, CU.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
-                                        "aria-pressed": vD,
+                                        "aria-pressed": eU,
                                         onClick: () => {
-                                          ND(!vD)
+                                          WU(!eU)
                                         },
-                                        children: [(0, tD.jsx)(oD, {
-                                          name: vD ? "play" : "pause"
-                                        }), (0, tD.jsx)("span", {
-                                          children: vD ? "Loop" : "Stop looping"
+                                        children: [(0, CU.jsx)(QU, {
+                                          name: eU ? "play" : "pause"
+                                        }), (0, CU.jsx)("span", {
+                                          children: eU ? "Loop" : "Stop looping"
                                         })]
                                       })]
                                     })]
-                                  }), (0, tD.jsxs)("div", {
+                                  }), (0, CU.jsxs)("div", {
                                     className: "DocsParticleControls",
-                                    children: [(0, tD.jsxs)("div", {
+                                    children: [(0, CU.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, tD.jsxs)("div", {
+                                      children: [(0, CU.jsxs)("div", {
                                         className: "DocsControlLabel",
-                                        children: [(0, tD.jsx)("span", {
+                                        children: [(0, CU.jsx)("span", {
                                           children: "Texture"
-                                        }), (0, tD.jsx)("code", {
+                                        }), (0, CU.jsx)("code", {
                                           className: "DocsControlValue",
-                                          children: wD.texture
+                                          children: KU.texture
                                         })]
-                                      }), (0, tD.jsx)("div", {
+                                      }), (0, CU.jsx)("div", {
                                         className: "DocsParticleTextures",
-                                        children: PD.map((DD => {
-                                          var CD;
-                                          const cD = null !== (CD = null === bD || void 0 === bD ? void 0 : bD.getParticleTextureUrl(DD)) && void 0 !== CD ? CD : null;
-                                          return (0, tD.jsx)("button", {
+                                        children: wU.map((UU => {
+                                          var RU;
+                                          const gU = null !== (RU = null === TU || void 0 === TU ? void 0 : TU.getParticleTextureUrl(UU)) && void 0 !== RU ? RU : null;
+                                          return (0, CU.jsx)("button", {
                                             type: "button",
-                                            className: iD()("DocsParticleTexture", {
-                                              Active: wD.texture === DD
+                                            className: EU()("DocsParticleTexture", {
+                                              Active: KU.texture === UU
                                             }),
-                                            title: DD,
-                                            "aria-label": DD,
-                                            "aria-pressed": wD.texture === DD,
+                                            title: UU,
+                                            "aria-label": UU,
+                                            "aria-pressed": KU.texture === UU,
                                             onClick: () => {
-                                              mD({
-                                                texture: DD
+                                              mU({
+                                                texture: UU
                                               })
                                             },
-                                            children: cD ? (0, tD.jsx)("img", {
-                                              src: cD,
+                                            children: gU ? (0, CU.jsx)("img", {
+                                              src: gU,
                                               alt: ""
-                                            }) : (0, tD.jsx)(oD, {
+                                            }) : (0, CU.jsx)(QU, {
                                               name: "image"
                                             })
-                                          }, DD)
+                                          }, UU)
                                         }))
                                       })]
-                                    }), (0, tD.jsx)(AI, {
+                                    }), (0, CU.jsx)(Ot, {
                                       label: "Particles",
                                       min: 1,
                                       max: 400,
                                       step: 1,
-                                      value: wD.manualEmitCount,
-                                      onChange: DD => {
-                                        mD({
-                                          manualEmitCount: DD
+                                      value: KU.manualEmitCount,
+                                      onChange: UU => {
+                                        mU({
+                                          manualEmitCount: UU
                                         })
                                       }
-                                    }), (0, tD.jsx)(rI, {
+                                    }), (0, CU.jsx)(lt, {
                                       label: "Lifetime",
                                       min: .05,
                                       max: 3,
                                       step: .05,
-                                      low: wD.minLifeTime,
-                                      high: wD.maxLifeTime,
-                                      onChange: (DD, CD) => {
-                                        mD({
-                                          minLifeTime: DD,
-                                          maxLifeTime: CD
+                                      low: KU.minLifeTime,
+                                      high: KU.maxLifeTime,
+                                      onChange: (UU, RU) => {
+                                        mU({
+                                          minLifeTime: UU,
+                                          maxLifeTime: RU
                                         })
                                       }
-                                    }), (0, tD.jsx)(rI, {
+                                    }), (0, CU.jsx)(lt, {
                                       label: "Emit power",
                                       min: 0,
                                       max: 40,
                                       step: .5,
-                                      low: wD.minEmitPower,
-                                      high: wD.maxEmitPower,
-                                      onChange: (DD, CD) => {
-                                        mD({
-                                          minEmitPower: DD,
-                                          maxEmitPower: CD
+                                      low: KU.minEmitPower,
+                                      high: KU.maxEmitPower,
+                                      onChange: (UU, RU) => {
+                                        mU({
+                                          minEmitPower: UU,
+                                          maxEmitPower: RU
                                         })
                                       }
-                                    }), (0, tD.jsx)(rI, {
+                                    }), (0, CU.jsx)(lt, {
                                       label: "Size",
                                       min: .05,
                                       max: 2,
                                       step: .05,
-                                      low: wD.minSize,
-                                      high: wD.maxSize,
-                                      onChange: (DD, CD) => {
-                                        mD({
-                                          minSize: DD,
-                                          maxSize: CD
+                                      low: KU.minSize,
+                                      high: KU.maxSize,
+                                      onChange: (UU, RU) => {
+                                        mU({
+                                          minSize: UU,
+                                          maxSize: RU
                                         })
                                       }
-                                    }), (0, tD.jsx)(AI, {
+                                    }), (0, CU.jsx)(Ot, {
                                       label: "Gravity (up)",
                                       min: -40,
                                       max: 40,
                                       step: 1,
-                                      value: null !== (pD = wD.gravity[1]) && void 0 !== pD ? pD : 0,
-                                      onChange: DD => {
-                                        var CD, cD;
-                                        mD({
-                                          gravity: [null !== (CD = wD.gravity[0]) && void 0 !== CD ? CD : 0, DD, null !== (cD = wD.gravity[2]) && void 0 !== cD ? cD : 0]
+                                      value: null !== (pU = KU.gravity[1]) && void 0 !== pU ? pU : 0,
+                                      onChange: UU => {
+                                        var RU, gU;
+                                        mU({
+                                          gravity: [null !== (RU = KU.gravity[0]) && void 0 !== RU ? RU : 0, UU, null !== (gU = KU.gravity[2]) && void 0 !== gU ? gU : 0]
                                         })
                                       }
-                                    }), (0, tD.jsxs)("div", {
+                                    }), (0, CU.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, tD.jsx)("div", {
+                                      children: [(0, CU.jsx)("div", {
                                         className: "DocsControlLabel",
-                                        children: (0, tD.jsx)("span", {
+                                        children: (0, CU.jsx)("span", {
                                           children: "Blend mode"
                                         })
-                                      }), (0, tD.jsx)("select", {
+                                      }), (0, CU.jsx)("select", {
                                         className: "DocsParticleSelect",
-                                        value: wD.blendMode,
+                                        value: KU.blendMode,
                                         "aria-label": "Blend mode",
-                                        onChange: DD => {
-                                          mD({
-                                            blendMode: Number(DD.target.value)
+                                        onChange: UU => {
+                                          mU({
+                                            blendMode: Number(UU.target.value)
                                           })
                                         },
-                                        children: fp.map((DD => {
+                                        children: Tp.map((UU => {
                                           let {
-                                            mode: CD,
-                                            label: cD
-                                          } = DD;
-                                          return (0, tD.jsx)("option", {
-                                            value: CD,
-                                            children: cD
-                                          }, CD)
+                                            mode: RU,
+                                            label: gU
+                                          } = UU;
+                                          return (0, CU.jsx)("option", {
+                                            value: RU,
+                                            children: gU
+                                          }, RU)
                                         }))
                                       })]
-                                    }), (0, tD.jsx)(FI, {
-                                      opts: wD,
-                                      onChange: DD => {
-                                        mD({
-                                          colorGradients: DD
+                                    }), (0, CU.jsx)(Up, {
+                                      opts: KU,
+                                      onChange: UU => {
+                                        mU({
+                                          colorGradients: UU
                                         })
                                       }
                                     })]
                                   })]
-                                }), (0, tD.jsx)(OD, {
-                                  code: nD,
+                                }), (0, CU.jsx)(JU, {
+                                  code: IU,
                                   lang: "ts"
                                 })]
                               })
                             }));
-                          var Qp = cD(4274),
-                            wp = cD(1872);
+                          var Kp = gU(4139),
+                            cp = gU(1777);
 
-                          function Sp(DD, CD) {
-                            return DD ? Qp.b.includes(CD) ? DD.getIngameIconUrl(CD) : DD.getItemIconUrl(CD) : null
+                          function Gp(UU, RU) {
+                            return UU ? Kp.e.includes(RU) ? UU.getIngameIconUrl(RU) : UU.getItemIconUrl(RU) : null
                           }
 
-                          function Bp(DD) {
-                            var CD, cD, ID;
+                          function jp(UU) {
+                            var RU, gU, tU;
                             let {
-                              part: pD,
-                              assets: fD
-                            } = DD;
-                            const bD = Sp(fD, pD.icon),
-                              QD = null !== (CD = null === (cD = pD.style) || void 0 === cD ? void 0 : cD.fontSize) && void 0 !== CD ? CD : "1.8em",
-                              wD = (0, LC.Xb)(pD.style);
-                            return (0, tD.jsxs)("span", {
-                              className: iD()("DocsBloxdTextIcon", {
-                                Missing: !bD
+                              part: pU,
+                              assets: PU
+                            } = UU;
+                            const TU = Gp(PU, pU.icon),
+                              qU = null !== (RU = null === (gU = pU.style) || void 0 === gU ? void 0 : gU.fontSize) && void 0 !== RU ? RU : "1.8em",
+                              KU = (0, dR.Wb)(pU.style);
+                            return (0, CU.jsxs)("span", {
+                              className: EU()("DocsBloxdTextIcon", {
+                                Missing: !TU
                               }),
                               style: {
-                                width: QD,
-                                height: QD,
-                                opacity: null === (ID = pD.style) || void 0 === ID ? void 0 : ID.opacity
+                                width: qU,
+                                height: qU,
+                                opacity: null === (tU = pU.style) || void 0 === tU ? void 0 : tU.opacity
                               },
-                              title: bD ? void 0 : `No Bloxd icon, item or block is called "${pD.icon}"`,
-                              children: [bD && wD && (0, tD.jsx)("span", {
+                              title: TU ? void 0 : `No Bloxd icon, item or block is called "${pU.icon}"`,
+                              children: [TU && KU && (0, CU.jsx)("span", {
                                 className: "DocsBloxdTextIconTint",
                                 style: {
-                                  background: wD,
-                                  maskImage: `url("${bD}")`,
-                                  WebkitMaskImage: `url("${bD}")`
+                                  background: KU,
+                                  maskImage: `url("${TU}")`,
+                                  WebkitMaskImage: `url("${TU}")`
                                 }
-                              }), bD ? (0, tD.jsx)("img", {
-                                src: bD,
+                              }), TU ? (0, CU.jsx)("img", {
+                                src: TU,
                                 alt: "",
-                                className: iD()({
-                                  Tinted: wD
+                                className: EU()({
+                                  Tinted: KU
                                 })
-                              }) : (0, tD.jsx)(oD, {
+                              }) : (0, CU.jsx)(QU, {
                                 name: "image"
                               })]
                             })
                           }
 
-                          function yp(DD) {
+                          function Cp(UU) {
                             let {
-                              parts: CD,
-                              className: cD
-                            } = DD;
-                            const ID = gI(),
-                              pD = [];
-                            let fD = [];
-                            const bD = DD => {
-                              fD.length > 0 && (pD.push((0, tD.jsx)(wp.c, {
-                                text: fD
-                              }, `run-${DD}`)), fD = [])
+                              parts: RU,
+                              className: gU
+                            } = UU;
+                            const tU = ft(),
+                              pU = [];
+                            let PU = [];
+                            const TU = UU => {
+                              PU.length > 0 && (pU.push((0, CU.jsx)(cp.e, {
+                                text: PU
+                              }, `run-${UU}`)), PU = [])
                             };
-                            return CD.forEach(((DD, CD) => {
-                              "icon" !== dC(DD) || GC(DD.icon) ? fD.push(DD) : (bD(CD), pD.push((0, tD.jsx)(Bp, {
-                                part: DD,
-                                assets: ID
-                              }, `icon-${CD}`)))
-                            })), bD(CD.length), (0, tD.jsx)("div", {
-                              className: iD()("DocsStyledTextPreview", cD),
-                              children: pD
+                            return RU.forEach(((UU, RU) => {
+                              "icon" !== kR(UU) || SR(UU.icon) ? PU.push(UU) : (TU(RU), pU.push((0, CU.jsx)(jp, {
+                                part: UU,
+                                assets: tU
+                              }, `icon-${RU}`)))
+                            })), TU(RU.length), (0, CU.jsx)("div", {
+                              className: EU()("DocsStyledTextPreview", gU),
+                              children: pU
                             })
                           }
-                          const Mp = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
-                          let tp = null;
+                          const hp = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
+                          let Qp = null;
 
-                          function Zp(DD) {
-                            if (tp ??= document.createElement("canvas").getContext("2d"), !tp) return "#000000";
-                            tp.fillStyle = "#000000", tp.fillStyle = DD;
-                            const CD = tp.fillStyle;
-                            return CD.startsWith("#") ? CD : "#000000"
+                          function ep(UU) {
+                            if (Qp ??= document.createElement("canvas").getContext("2d"), !Qp) return "#000000";
+                            Qp.fillStyle = "#000000", Qp.fillStyle = UU;
+                            const RU = Qp.fillStyle;
+                            return RU.startsWith("#") ? RU : "#000000"
                           }
 
-                          function op(DD) {
+                          function Wp(UU) {
                             let {
-                              value: CD,
-                              label: cD,
-                              onChange: ID
-                            } = DD;
-                            return (0, tD.jsxs)("span", {
+                              value: RU,
+                              label: gU,
+                              onChange: tU
+                            } = UU;
+                            return (0, CU.jsxs)("span", {
                               className: "DocsColourInput",
-                              children: [(0, tD.jsx)("input", {
+                              children: [(0, CU.jsx)("input", {
                                 type: "color",
-                                value: Zp(CD),
-                                "aria-label": `${cD} picker`,
-                                onChange: DD => {
-                                  ID(DD.target.value)
+                                value: ep(RU),
+                                "aria-label": `${gU} picker`,
+                                onChange: UU => {
+                                  tU(UU.target.value)
                                 }
-                              }), (0, tD.jsx)("input", {
+                              }), (0, CU.jsx)("input", {
                                 type: "text",
-                                value: CD,
+                                value: RU,
                                 placeholder: "#ffb914 or gold",
-                                "aria-label": cD,
+                                "aria-label": gU,
                                 spellCheck: !1,
-                                onChange: DD => {
-                                  ID(DD.target.value)
+                                onChange: UU => {
+                                  tU(UU.target.value)
                                 }
                               })]
                             })
                           }
 
-                          function vp(DD) {
+                          function fp(UU) {
                             let {
-                              value: CD,
-                              fontAwesomeIcons: cD,
-                              onChange: pD
-                            } = DD;
-                            const fD = gI(),
-                              [bD, QD] = (0, ID.useState)(GC(CD) ? "fontAwesome" : "bloxd"),
-                              [wD, SD] = (0, ID.useState)(""),
-                              BD = wD.trim().toLowerCase(),
-                              yD = "bloxd" === bD ? Qp.b : cD,
-                              MD = BD ? yD.filter((DD => DD.toLowerCase().includes(BD))) : yD;
-                            return (0, tD.jsxs)("div", {
+                              value: RU,
+                              fontAwesomeIcons: gU,
+                              onChange: pU
+                            } = UU;
+                            const PU = ft(),
+                              [TU, qU] = (0, tU.useState)(SR(RU) ? "fontAwesome" : "bloxd"),
+                              [KU, cU] = (0, tU.useState)(""),
+                              GU = KU.trim().toLowerCase(),
+                              jU = "bloxd" === TU ? Kp.e : gU,
+                              uU = GU ? jU.filter((UU => UU.toLowerCase().includes(GU))) : jU;
+                            return (0, CU.jsxs)("div", {
                               className: "DocsIconPicker",
-                              children: [(0, tD.jsx)("input", {
+                              children: [(0, CU.jsx)("input", {
                                 type: "text",
-                                value: CD,
+                                value: RU,
                                 "aria-label": "Icon name",
                                 spellCheck: !1,
-                                onChange: DD => {
-                                  pD(DD.target.value)
+                                onChange: UU => {
+                                  pU(UU.target.value)
                                 }
-                              }), (0, tD.jsx)("p", {
+                              }), (0, CU.jsx)("p", {
                                 className: "DocsTextFieldHint",
                                 children: "Pick one below, or type any item or block name."
-                              }), (0, tD.jsxs)("div", {
+                              }), (0, CU.jsxs)("div", {
                                 className: "DocsIconPickerTabs",
                                 role: "tablist",
                                 children: [
-                                  ["bloxd", "fontAwesome"].map((DD => (0, tD.jsx)("button", {
+                                  ["bloxd", "fontAwesome"].map((UU => (0, CU.jsx)("button", {
                                     type: "button",
                                     role: "tab",
-                                    "aria-selected": bD === DD,
-                                    className: iD()("DocsVariantChip", {
-                                      Active: bD === DD
+                                    "aria-selected": TU === UU,
+                                    className: EU()("DocsVariantChip", {
+                                      Active: TU === UU
                                     }),
                                     onClick: () => {
-                                      QD(DD)
+                                      qU(UU)
                                     },
-                                    children: "bloxd" === DD ? `Bloxd icons (${Qp.b.length})` : `Font Awesome (${cD.length})`
-                                  }, DD))), (0, tD.jsx)("input", {
+                                    children: "bloxd" === UU ? `Bloxd icons (${Kp.e.length})` : `Font Awesome (${gU.length})`
+                                  }, UU))), (0, CU.jsx)("input", {
                                     type: "search",
-                                    value: wD,
+                                    value: KU,
                                     placeholder: "Filter\u2026",
                                     "aria-label": "Filter icons",
-                                    onChange: DD => {
-                                      SD(DD.target.value)
+                                    onChange: UU => {
+                                      cU(UU.target.value)
                                     }
                                   })
                                 ]
-                              }), (0, tD.jsxs)("div", {
+                              }), (0, CU.jsxs)("div", {
                                 className: "DocsIconPickerGrid",
                                 role: "tabpanel",
-                                children: [MD.map((DD => {
-                                  const cD = "bloxd" === bD ? Sp(fD, DD) : null;
-                                  return (0, tD.jsx)("button", {
+                                children: [uU.map((UU => {
+                                  const gU = "bloxd" === TU ? Gp(PU, UU) : null;
+                                  return (0, CU.jsx)("button", {
                                     type: "button",
-                                    title: DD,
-                                    "aria-label": DD,
-                                    "aria-pressed": DD === CD,
-                                    className: iD()("DocsIconPickerOption", {
-                                      Active: DD === CD
+                                    title: UU,
+                                    "aria-label": UU,
+                                    "aria-pressed": UU === RU,
+                                    className: EU()("DocsIconPickerOption", {
+                                      Active: UU === RU
                                     }),
                                     onClick: () => {
-                                      pD(DD)
+                                      pU(UU)
                                     },
-                                    children: "fontAwesome" === bD ? (0, tD.jsx)(Xc.c, {
-                                      name: DD
-                                    }) : cD ? (0, tD.jsx)("img", {
-                                      src: cD,
+                                    children: "fontAwesome" === TU ? (0, CU.jsx)(xg.c, {
+                                      name: UU
+                                    }) : gU ? (0, CU.jsx)("img", {
+                                      src: gU,
                                       alt: ""
-                                    }) : (0, tD.jsx)(oD, {
+                                    }) : (0, CU.jsx)(QU, {
                                       name: "image"
                                     })
-                                  }, DD)
-                                })), 0 === MD.length && (0, tD.jsxs)("p", {
+                                  }, UU)
+                                })), 0 === uU.length && (0, CU.jsxs)("p", {
                                   className: "DocsTextFieldHint",
-                                  children: ["No icons match \u201c", wD, "\u201d."]
+                                  children: ["No icons match \u201c", KU, "\u201d."]
                                 })]
                               })]
                             })
                           }
 
-                          function Np(DD) {
+                          function xp(UU) {
                             let {
-                              property: CD,
-                              value: cD,
-                              fontAwesomeIcons: ID,
-                              onChange: pD
-                            } = DD;
+                              property: RU,
+                              value: gU,
+                              fontAwesomeIcons: tU,
+                              onChange: pU
+                            } = UU;
                             const {
-                              field: iD,
-                              label: fD
-                            } = CD, bD = DD => "" !== DD || CD.isRequired ? DD : void 0;
-                            switch (iD.kind) {
+                              field: EU,
+                              label: PU
+                            } = RU, TU = UU => "" !== UU || RU.isRequired ? UU : void 0;
+                            switch (EU.kind) {
                               case "text":
-                                return iD.multiline ? (0, tD.jsx)("textarea", {
-                                  value: String(null !== cD && void 0 !== cD ? cD : ""),
+                                return EU.multiline ? (0, CU.jsx)("textarea", {
+                                  value: String(null !== gU && void 0 !== gU ? gU : ""),
                                   rows: 2,
-                                  "aria-label": fD,
-                                  onChange: DD => {
-                                    pD(DD.target.value)
+                                  "aria-label": PU,
+                                  onChange: UU => {
+                                    pU(UU.target.value)
                                   }
-                                }) : (0, tD.jsx)("input", {
+                                }) : (0, CU.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== cD && void 0 !== cD ? cD : ""),
-                                  "aria-label": fD,
-                                  onChange: DD => {
-                                    pD(bD(DD.target.value))
+                                  value: String(null !== gU && void 0 !== gU ? gU : ""),
+                                  "aria-label": PU,
+                                  onChange: UU => {
+                                    pU(TU(UU.target.value))
                                   }
                                 });
                               case "size":
-                                return (0, tD.jsx)("input", {
+                                return (0, CU.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== cD && void 0 !== cD ? cD : ""),
-                                  placeholder: CD.defaultText,
+                                  value: String(null !== gU && void 0 !== gU ? gU : ""),
+                                  placeholder: RU.defaultText,
                                   list: "DocsTextSizeSuggestions",
-                                  "aria-label": fD,
+                                  "aria-label": PU,
                                   spellCheck: !1,
-                                  onChange: DD => {
-                                    pD(bD(DD.target.value.trim()))
+                                  onChange: UU => {
+                                    pU(TU(UU.target.value.trim()))
                                   }
                                 });
                               case "colour":
-                                return (0, tD.jsx)(op, {
-                                  value: String(null !== cD && void 0 !== cD ? cD : ""),
-                                  label: fD,
-                                  onChange: DD => {
-                                    pD(bD(DD))
+                                return (0, CU.jsx)(Wp, {
+                                  value: String(null !== gU && void 0 !== gU ? gU : ""),
+                                  label: PU,
+                                  onChange: UU => {
+                                    pU(TU(UU))
                                   }
                                 });
                               case "colours": {
-                                const DD = Array.isArray(cD) ? cD : [],
-                                  CD = DD => {
-                                    pD(DD.length > 0 ? DD : void 0)
+                                const UU = Array.isArray(gU) ? gU : [],
+                                  RU = UU => {
+                                    pU(UU.length > 0 ? UU : void 0)
                                   };
-                                return (0, tD.jsxs)("div", {
+                                return (0, CU.jsxs)("div", {
                                   className: "DocsColourList",
-                                  children: [DD.map(((cD, ID) => (0, tD.jsxs)("span", {
+                                  children: [UU.map(((gU, tU) => (0, CU.jsxs)("span", {
                                     className: "DocsColourListRow",
-                                    children: [(0, tD.jsx)(op, {
-                                      value: cD,
-                                      label: `${fD} ${ID+1}`,
-                                      onChange: cD => {
-                                        CD(DD.map(((DD, CD) => CD === ID ? cD : DD)))
+                                    children: [(0, CU.jsx)(Wp, {
+                                      value: gU,
+                                      label: `${PU} ${tU+1}`,
+                                      onChange: gU => {
+                                        RU(UU.map(((UU, RU) => RU === tU ? gU : UU)))
                                       }
-                                    }), (0, tD.jsx)("button", {
+                                    }), (0, CU.jsx)("button", {
                                       type: "button",
                                       className: "DocsTextIconButton",
-                                      "aria-label": `Remove colour ${ID+1}`,
+                                      "aria-label": `Remove colour ${tU+1}`,
                                       onClick: () => {
-                                        CD(DD.filter(((DD, CD) => CD !== ID)))
+                                        RU(UU.filter(((UU, RU) => RU !== tU)))
                                       },
-                                      children: (0, tD.jsx)(oD, {
+                                      children: (0, CU.jsx)(QU, {
                                         name: "cross"
                                       })
                                     })]
-                                  }, ID))), (0, tD.jsxs)("button", {
+                                  }, tU))), (0, CU.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextAddButton",
                                     onClick: () => {
-                                      var cD;
-                                      CD([...DD, null !== (cD = DD.at(-1)) && void 0 !== cD ? cD : "#ffffff"])
+                                      var gU;
+                                      RU([...UU, null !== (gU = UU.at(-1)) && void 0 !== gU ? gU : "#ffffff"])
                                     },
-                                    children: [(0, tD.jsx)(oD, {
+                                    children: [(0, CU.jsx)(QU, {
                                       name: "plus"
-                                    }), 0 === DD.length ? "Add a colour" : "Add a colour to the gradient"]
+                                    }), 0 === UU.length ? "Add a colour" : "Add a colour to the gradient"]
                                   })]
                                 })
                               }
                               case "fraction": {
-                                var QD;
-                                const DD = "number" === typeof cD ? cD : Number(null !== (QD = CD.defaultText) && void 0 !== QD ? QD : 0);
-                                return (0, tD.jsxs)("span", {
+                                var qU;
+                                const UU = "number" === typeof gU ? gU : Number(null !== (qU = RU.defaultText) && void 0 !== qU ? qU : 0);
+                                return (0, CU.jsxs)("span", {
                                   className: "DocsFractionInput",
-                                  children: [(0, tD.jsx)("input", {
+                                  children: [(0, CU.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: DD,
-                                    "aria-label": fD,
-                                    onChange: DD => {
-                                      pD(Number(DD.target.value))
+                                    value: UU,
+                                    "aria-label": PU,
+                                    onChange: UU => {
+                                      pU(Number(UU.target.value))
                                     }
-                                  }), (0, tD.jsx)("output", {
-                                    children: DD.toFixed(2)
+                                  }), (0, CU.jsx)("output", {
+                                    children: UU.toFixed(2)
                                   })]
                                 })
                               }
                               case "choice":
-                                return (0, tD.jsxs)("select", {
-                                  value: String(null !== cD && void 0 !== cD ? cD : ""),
-                                  "aria-label": fD,
-                                  onChange: DD => {
-                                    pD(bD(DD.target.value))
+                                return (0, CU.jsxs)("select", {
+                                  value: String(null !== gU && void 0 !== gU ? gU : ""),
+                                  "aria-label": PU,
+                                  onChange: UU => {
+                                    pU(TU(UU.target.value))
                                   },
-                                  children: [!CD.isRequired && (0, tD.jsxs)("option", {
+                                  children: [!RU.isRequired && (0, CU.jsxs)("option", {
                                     value: "",
-                                    children: ["Default (", CD.defaultText, ")"]
-                                  }), iD.options.map((DD => (0, tD.jsx)("option", {
-                                    value: DD,
-                                    children: DD
-                                  }, DD)))]
+                                    children: ["Default (", RU.defaultText, ")"]
+                                  }), EU.options.map((UU => (0, CU.jsx)("option", {
+                                    value: UU,
+                                    children: UU
+                                  }, UU)))]
                                 });
                               case "icon":
-                                return (0, tD.jsx)(vp, {
-                                  value: String(null !== cD && void 0 !== cD ? cD : ""),
-                                  fontAwesomeIcons: ID,
-                                  onChange: pD
+                                return (0, CU.jsx)(fp, {
+                                  value: String(null !== gU && void 0 !== gU ? gU : ""),
+                                  fontAwesomeIcons: tU,
+                                  onChange: pU
                                 })
                             }
                           }
 
-                          function gp(DD) {
-                            let CD;
+                          function mp(UU) {
+                            let RU;
                             try {
-                              CD = JSON.parse(DD)
-                            } catch (cD) {
+                              RU = JSON.parse(UU)
+                            } catch (gU) {
                               return {
                                 part: null,
-                                error: `Not valid JSON yet: ${cD.message}`
+                                error: `Not valid JSON yet: ${gU.message}`
                               }
                             }
-                            return cc(CD) ? {
-                              part: CD,
+                            return gg(RU) ? {
+                              part: RU,
                               error: null
                             } : {
                               part: null,
@@ -3628,150 +3628,150 @@ export const modules = {
                             }
                           }
 
-                          function Xp(DD) {
+                          function Ip(UU) {
                             let {
-                              parts: CD,
-                              index: cD,
-                              fontAwesomeIcons: pD,
-                              onChange: iD,
-                              Zx: fD,
-                              onClose: bD
-                            } = DD;
-                            const QD = (0, ID.useContext)(tC),
-                              SD = (0, ID.useRef)(null),
-                              BD = CD[cD],
-                              yD = dC(BD),
-                              [MD, ZD] = (0, ID.useState)((() => JSON.stringify(BD, null, 2))),
-                              vD = (0, ID.useMemo)((() => "other" === yD ? gp(MD).error : null), [yD, MD]);
-                            (0, ID.useEffect)((() => {
-                              var DD;
-                              null === (DD = SD.current) || void 0 === DD || DD.focus()
+                              parts: RU,
+                              index: gU,
+                              fontAwesomeIcons: pU,
+                              onChange: EU,
+                              Kw: PU,
+                              onClose: TU
+                            } = UU;
+                            const qU = (0, tU.useContext)(CR),
+                              cU = (0, tU.useRef)(null),
+                              GU = RU[gU],
+                              jU = kR(GU),
+                              [uU, hU] = (0, tU.useState)((() => JSON.stringify(GU, null, 2))),
+                              eU = (0, tU.useMemo)((() => "other" === jU ? mp(uU).error : null), [jU, uU]);
+                            (0, tU.useEffect)((() => {
+                              var UU;
+                              null === (UU = cU.current) || void 0 === UU || UU.focus()
                             }), []);
-                            const ND = (0, tD.jsx)("div", {
+                            const WU = (0, CU.jsx)("div", {
                               className: "DocsTextDialogOverlay",
-                              onMouseDown: DD => {
-                                DD.target === DD.currentTarget && bD()
+                              onMouseDown: UU => {
+                                UU.target === UU.currentTarget && TU()
                               },
-                              children: (0, tD.jsxs)("div", {
-                                ref: SD,
+                              children: (0, CU.jsxs)("div", {
+                                ref: cU,
                                 className: "DocsTextDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
-                                "aria-label": `Edit part ${cD+1}: ${RC[yD]}`,
+                                "aria-label": `Edit part ${gU+1}: ${sR[jU]}`,
                                 tabIndex: -1,
-                                onKeyDown: DD => {
-                                  "Escape" === DD.key ? (DD.stopPropagation(), bD()) : "Tab" === DD.key && SD.current && function(DD, CD) {
-                                    const cD = Array.from(DD.querySelectorAll(qC)),
-                                      ID = cD[0],
-                                      pD = cD.at(-1);
-                                    if (!ID || !pD) return;
-                                    const iD = document.activeElement;
-                                    !CD.shiftKey || iD !== ID && iD !== DD ? CD.shiftKey || iD !== pD || (CD.preventDefault(), ID.focus()) : (CD.preventDefault(), pD.focus())
-                                  }(SD.current, DD)
+                                onKeyDown: UU => {
+                                  "Escape" === UU.key ? (UU.stopPropagation(), TU()) : "Tab" === UU.key && cU.current && function(UU, RU) {
+                                    const gU = Array.from(UU.querySelectorAll(ZR)),
+                                      tU = gU[0],
+                                      pU = gU.at(-1);
+                                    if (!tU || !pU) return;
+                                    const EU = document.activeElement;
+                                    !RU.shiftKey || EU !== tU && EU !== UU ? RU.shiftKey || EU !== pU || (RU.preventDefault(), tU.focus()) : (RU.preventDefault(), pU.focus())
+                                  }(cU.current, UU)
                                 },
-                                children: [(0, tD.jsxs)("header", {
+                                children: [(0, CU.jsxs)("header", {
                                   className: "DocsTextDialogHeader",
-                                  children: [(0, tD.jsxs)("div", {
-                                    children: [(0, tD.jsxs)("div", {
+                                  children: [(0, CU.jsxs)("div", {
+                                    children: [(0, CU.jsxs)("div", {
                                       className: "DocsTextDialogKind",
-                                      children: ["Part ", cD + 1]
-                                    }), (0, tD.jsx)("div", {
+                                      children: ["Part ", gU + 1]
+                                    }), (0, CU.jsx)("div", {
                                       className: "DocsTextDialogTitle",
-                                      children: RC[yD]
+                                      children: sR[jU]
                                     })]
-                                  }), (0, tD.jsx)("button", {
+                                  }), (0, CU.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextIconButton",
                                     "aria-label": "Close",
-                                    onClick: bD,
-                                    children: (0, tD.jsx)(oD, {
+                                    onClick: TU,
+                                    children: (0, CU.jsx)(QU, {
                                       name: "cross"
                                     })
                                   })]
-                                }), (0, tD.jsx)(yp, {
-                                  parts: CD,
+                                }), (0, CU.jsx)(Cp, {
+                                  parts: RU,
                                   className: "DocsTextDialogPreview"
-                                }), (0, tD.jsx)("div", {
+                                }), (0, CU.jsx)("div", {
                                   className: "DocsTextDialogFields",
-                                  children: "other" === yD ? (0, tD.jsxs)("label", {
+                                  children: "other" === jU ? (0, CU.jsxs)("label", {
                                     className: "DocsTextField",
-                                    children: [(0, tD.jsx)("span", {
+                                    children: [(0, CU.jsx)("span", {
                                       className: "DocsTextFieldLabel",
                                       children: "JSON"
-                                    }), (0, tD.jsx)("textarea", {
+                                    }), (0, CU.jsx)("textarea", {
                                       className: "DocsTextJson",
-                                      value: MD,
+                                      value: uU,
                                       rows: 6,
                                       spellCheck: !1,
-                                      onChange: DD => {
-                                        ZD(DD.target.value);
-                                        const CD = gp(DD.target.value);
-                                        null !== CD.part && iD(CD.part)
+                                      onChange: UU => {
+                                        hU(UU.target.value);
+                                        const RU = mp(UU.target.value);
+                                        null !== RU.part && EU(RU.part)
                                       }
-                                    }), vD && (0, tD.jsx)("span", {
+                                    }), eU && (0, CU.jsx)("span", {
                                       className: "DocsTextFieldError",
-                                      children: vD
+                                      children: eU
                                     })]
-                                  }) : WC[yD].map((DD => {
-                                    const CD = EC(BD, DD.path),
-                                      cD = DD.isRequired ? JSON.stringify(uC(BD, DD.path)) === JSON.stringify(BD) : void 0 === CD;
-                                    return (0, tD.jsxs)("div", {
+                                  }) : iR[jU].map((UU => {
+                                    const RU = zR(GU, UU.path),
+                                      gU = UU.isRequired ? JSON.stringify(DR(GU, UU.path)) === JSON.stringify(GU) : void 0 === RU;
+                                    return (0, CU.jsxs)("div", {
                                       className: "DocsTextField",
-                                      children: [(0, tD.jsxs)("div", {
+                                      children: [(0, CU.jsxs)("div", {
                                         className: "DocsTextFieldLabel",
-                                        children: [(0, tD.jsx)("span", {
-                                          children: DD.label
-                                        }), (0, tD.jsxs)("button", {
+                                        children: [(0, CU.jsx)("span", {
+                                          children: UU.label
+                                        }), (0, CU.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextResetButton",
-                                          disabled: cD,
-                                          "aria-label": `Reset ${DD.label.toLowerCase()} to default`,
+                                          disabled: gU,
+                                          "aria-label": `Reset ${UU.label.toLowerCase()} to default`,
                                           onClick: () => {
-                                            iD(uC(BD, DD.path))
+                                            EU(DR(GU, UU.path))
                                           },
-                                          children: [(0, tD.jsx)(oD, {
+                                          children: [(0, CU.jsx)(QU, {
                                             name: "replay"
                                           }), "Reset"]
                                         })]
-                                      }), (0, tD.jsx)(Np, {
-                                        property: DD,
-                                        value: CD,
-                                        fontAwesomeIcons: pD,
-                                        onChange: CD => {
-                                          iD(eC(BD, DD.path, CD))
+                                      }), (0, CU.jsx)(xp, {
+                                        property: UU,
+                                        value: RU,
+                                        fontAwesomeIcons: pU,
+                                        onChange: RU => {
+                                          EU(MR(GU, UU.path, RU))
                                         }
-                                      }), !DD.isRequired && (0, tD.jsxs)("span", {
+                                      }), !UU.isRequired && (0, CU.jsxs)("span", {
                                         className: "DocsTextFieldHint",
-                                        children: ["Default: ", DD.defaultText]
+                                        children: ["Default: ", UU.defaultText]
                                       })]
-                                    }, DD.path.join("."))
+                                    }, UU.path.join("."))
                                   }))
-                                }), (0, tD.jsxs)("footer", {
+                                }), (0, CU.jsxs)("footer", {
                                   className: "DocsTextDialogFooter",
-                                  children: [(0, tD.jsxs)("button", {
+                                  children: [(0, CU.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextRemoveButton",
-                                    onClick: fD,
-                                    children: [(0, tD.jsx)(oD, {
+                                    onClick: PU,
+                                    children: [(0, CU.jsx)(QU, {
                                       name: "trash"
                                     }), "Remove part"]
-                                  }), (0, tD.jsx)("button", {
+                                  }), (0, CU.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextDoneButton",
-                                    onClick: bD,
+                                    onClick: TU,
                                     children: "Done"
                                   })]
-                                }), (0, tD.jsx)("datalist", {
+                                }), (0, CU.jsx)("datalist", {
                                   id: "DocsTextSizeSuggestions",
-                                  children: Mp.map((DD => (0, tD.jsx)("option", {
-                                    value: DD
-                                  }, DD)))
+                                  children: hp.map((UU => (0, CU.jsx)("option", {
+                                    value: UU
+                                  }, UU)))
                                 })]
                               })
                             });
-                            return QD ? (0, wD.createPortal)(ND, QD) : ND
+                            return qU ? (0, KU.createPortal)(WU, qU) : WU
                           }
-                          const mp = [{
+                          const Jp = [{
                               label: "Icon and text",
                               parts: [{
                                 icon: "Pixelated Heart"
@@ -3815,265 +3815,265 @@ export const modules = {
                                 action: "jump"
                               }]
                             }],
-                            np = Object.keys(kC);
+                            wp = Object.keys(yR);
 
-                          function Op(DD) {
+                          function np(UU) {
                             let {
-                              fontAwesomeIcons: CD
-                            } = DD;
-                            const [cD, pD] = (0, ID.useState)(mp[0].parts), [fD, bD] = (0, ID.useState)((() => FC(mp[0].parts))), [QD, wD] = (0, ID.useState)(null), [SD, BD] = (0, ID.useState)(!1), [yD, MD] = (0, ID.useState)(null), [ZD, vD] = (0, ID.useState)(!1), [ND, gD] = (0, ID.useState)(null), XD = (0, ID.useRef)(null), mD = FC(cD);
-                            (0, ID.useLayoutEffect)((() => {
-                              var DD;
-                              if (!ND) return;
-                              const CD = DD => {
-                                  var CD;
-                                  return null === (CD = XD.current) || void 0 === CD ? void 0 : CD.querySelector(`[data-focus-key="${DD}"]`)
+                              fontAwesomeIcons: RU
+                            } = UU;
+                            const [gU, pU] = (0, tU.useState)(Jp[0].parts), [PU, TU] = (0, tU.useState)((() => OR(Jp[0].parts))), [qU, KU] = (0, tU.useState)(null), [cU, GU] = (0, tU.useState)(!1), [jU, uU] = (0, tU.useState)(null), [hU, eU] = (0, tU.useState)(!1), [WU, fU] = (0, tU.useState)(null), xU = (0, tU.useRef)(null), mU = OR(gU);
+                            (0, tU.useLayoutEffect)((() => {
+                              var UU;
+                              if (!WU) return;
+                              const RU = UU => {
+                                  var RU;
+                                  return null === (RU = xU.current) || void 0 === RU ? void 0 : RU.querySelector(`[data-focus-key="${UU}"]`)
                                 },
-                                cD = CD(ND.key);
-                              null === (DD = cD && !cD.disabled ? cD : CD(ND.fallback)) || void 0 === DD || DD.focus(), gD(null)
-                            }), [ND]);
-                            const nD = DD => {
-                                pD(DD), bD(FC(DD)), wD(null)
+                                gU = RU(WU.key);
+                              null === (UU = gU && !gU.disabled ? gU : RU(WU.fallback)) || void 0 === UU || UU.focus(), fU(null)
+                            }), [WU]);
+                            const IU = UU => {
+                                pU(UU), TU(OR(UU)), KU(null)
                               },
-                              PD = DD => {
-                                nD(cD.filter(((CD, cD) => cD !== DD))), gD({
-                                  key: `edit-${Math.min(DD,cD.length-2)}`,
+                              wU = UU => {
+                                IU(gU.filter(((RU, gU) => gU !== UU))), fU({
+                                  key: `edit-${Math.min(UU,gU.length-2)}`,
                                   fallback: "add"
                                 })
                               },
-                              HD = (DD, CD) => {
-                                const ID = [...cD],
-                                  [pD] = ID.splice(DD, 1);
-                                ID.splice(DD + CD, 0, pD), nD(ID);
-                                gD({
-                                  key: `${CD<0?"up":"down"}-${DD+CD}`,
-                                  fallback: `edit-${DD+CD}`
+                              nU = (UU, RU) => {
+                                const tU = [...gU],
+                                  [pU] = tU.splice(UU, 1);
+                                tU.splice(UU + RU, 0, pU), IU(tU);
+                                fU({
+                                  key: `${RU<0?"up":"down"}-${UU+RU}`,
+                                  fallback: `edit-${UU+RU}`
                                 })
                               };
-                            return (0, tD.jsxs)("section", {
-                              ref: XD,
+                            return (0, CU.jsxs)("section", {
+                              ref: xU,
                               className: "DocsPlayground DocsTextEditor",
                               "aria-label": "Styled text editor",
-                              children: [(0, tD.jsx)("header", {
+                              children: [(0, CU.jsx)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: (0, tD.jsxs)("div", {
-                                  children: [(0, tD.jsx)("div", {
+                                children: (0, CU.jsxs)("div", {
+                                  children: [(0, CU.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Styled text editor"
-                                  }), (0, tD.jsx)("div", {
+                                  }), (0, CU.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Add parts, click one to style it, and copy the code. The preview draws it as the game does."
                                   })]
                                 })
-                              }), (0, tD.jsx)("div", {
+                              }), (0, CU.jsx)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: mp.map((DD => (0, tD.jsx)("button", {
+                                children: Jp.map((UU => (0, CU.jsx)("button", {
                                   type: "button",
-                                  className: iD()("DocsVariantChip", {
-                                    Active: mD === FC(DD.parts)
+                                  className: EU()("DocsVariantChip", {
+                                    Active: mU === OR(UU.parts)
                                   }),
                                   onClick: () => {
-                                    nD(DD.parts)
+                                    IU(UU.parts)
                                   },
-                                  children: DD.label
-                                }, DD.label)))
-                              }), (0, tD.jsx)(yp, {
-                                parts: cD,
+                                  children: UU.label
+                                }, UU.label)))
+                              }), (0, CU.jsx)(Cp, {
+                                parts: gU,
                                 className: "DocsTextEditorPreview"
-                              }), (0, tD.jsxs)("div", {
+                              }), (0, CU.jsxs)("div", {
                                 className: "DocsTextEditorBody",
-                                children: [(0, tD.jsxs)("div", {
+                                children: [(0, CU.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, tD.jsx)("div", {
+                                  children: [(0, CU.jsx)("div", {
                                     className: "DocsTextEditorPanelTitle",
                                     children: "Parts"
-                                  }), (0, tD.jsxs)("ol", {
+                                  }), (0, CU.jsxs)("ol", {
                                     className: "DocsTextParts",
-                                    children: [cD.map(((DD, CD) => {
-                                      const ID = dC(DD);
-                                      return (0, tD.jsxs)("li", {
+                                    children: [gU.map(((UU, RU) => {
+                                      const tU = kR(UU);
+                                      return (0, CU.jsxs)("li", {
                                         className: "DocsTextPart",
-                                        children: [(0, tD.jsxs)("button", {
+                                        children: [(0, CU.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextPartMain",
-                                          "data-focus-key": `edit-${CD}`,
-                                          "aria-label": `Edit part ${CD+1}, ${RC[ID]}`,
+                                          "data-focus-key": `edit-${RU}`,
+                                          "aria-label": `Edit part ${RU+1}, ${sR[tU]}`,
                                           onClick: () => {
-                                            MD(CD)
+                                            uU(RU)
                                           },
-                                          children: [(0, tD.jsx)("span", {
+                                          children: [(0, CU.jsx)("span", {
                                             className: "DocsTextPartKind",
-                                            children: RC[ID]
-                                          }), (0, tD.jsx)(yp, {
-                                            parts: [DD],
+                                            children: sR[tU]
+                                          }), (0, CU.jsx)(Cp, {
+                                            parts: [UU],
                                             className: "DocsTextPartPreview"
-                                          }), "text" !== ID && (0, tD.jsx)("code", {
+                                          }), "text" !== tU && (0, CU.jsx)("code", {
                                             className: "DocsTextPartName",
-                                            children: hC(DD)
+                                            children: LR(UU)
                                           })]
-                                        }), (0, tD.jsxs)("span", {
+                                        }), (0, CU.jsxs)("span", {
                                           className: "DocsTextPartActions",
-                                          children: [(0, tD.jsx)("button", {
+                                          children: [(0, CU.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${CD+1} up`,
-                                            "data-focus-key": `up-${CD}`,
-                                            disabled: 0 === CD,
+                                            "aria-label": `Move part ${RU+1} up`,
+                                            "data-focus-key": `up-${RU}`,
+                                            disabled: 0 === RU,
                                             onClick: () => {
-                                              HD(CD, -1)
+                                              nU(RU, -1)
                                             },
-                                            children: (0, tD.jsx)(oD, {
+                                            children: (0, CU.jsx)(QU, {
                                               name: "chevron-up"
                                             })
-                                          }), (0, tD.jsx)("button", {
+                                          }), (0, CU.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${CD+1} down`,
-                                            "data-focus-key": `down-${CD}`,
-                                            disabled: CD === cD.length - 1,
+                                            "aria-label": `Move part ${RU+1} down`,
+                                            "data-focus-key": `down-${RU}`,
+                                            disabled: RU === gU.length - 1,
                                             onClick: () => {
-                                              HD(CD, 1)
+                                              nU(RU, 1)
                                             },
-                                            children: (0, tD.jsx)(oD, {
+                                            children: (0, CU.jsx)(QU, {
                                               name: "chevron-down"
                                             })
-                                          }), (0, tD.jsx)("button", {
+                                          }), (0, CU.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Remove part ${CD+1}`,
+                                            "aria-label": `Remove part ${RU+1}`,
                                             onClick: () => {
-                                              PD(CD)
+                                              wU(RU)
                                             },
-                                            children: (0, tD.jsx)(oD, {
+                                            children: (0, CU.jsx)(QU, {
                                               name: "cross"
                                             })
                                           })]
                                         })]
-                                      }, CD)
-                                    })), 0 === cD.length && (0, tD.jsx)("li", {
+                                      }, RU)
+                                    })), 0 === gU.length && (0, CU.jsx)("li", {
                                       className: "DocsTextPartsEmpty",
                                       children: "No parts yet. Add one below."
                                     })]
-                                  }), (0, tD.jsxs)("div", {
+                                  }), (0, CU.jsxs)("div", {
                                     className: "DocsTextAddPart",
-                                    onKeyDown: DD => {
-                                      "Escape" === DD.key && ZD && (DD.stopPropagation(), vD(!1), gD({
+                                    onKeyDown: UU => {
+                                      "Escape" === UU.key && hU && (UU.stopPropagation(), eU(!1), fU({
                                         key: "add",
                                         fallback: "add"
                                       }))
                                     },
-                                    children: [(0, tD.jsxs)("button", {
+                                    children: [(0, CU.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextAddPartButton",
                                       "data-focus-key": "add",
-                                      "aria-expanded": ZD,
+                                      "aria-expanded": hU,
                                       "aria-controls": "DocsTextAddPartMenu",
                                       onClick: () => {
-                                        vD(!ZD)
+                                        eU(!hU)
                                       },
-                                      children: [(0, tD.jsx)(oD, {
+                                      children: [(0, CU.jsx)(QU, {
                                         name: "plus"
-                                      }), "Add a part", (0, tD.jsx)(oD, {
-                                        name: ZD ? "chevron-up" : "chevron-down"
+                                      }), "Add a part", (0, CU.jsx)(QU, {
+                                        name: hU ? "chevron-up" : "chevron-down"
                                       })]
-                                    }), ZD && (0, tD.jsx)("ul", {
+                                    }), hU && (0, CU.jsx)("ul", {
                                       id: "DocsTextAddPartMenu",
                                       className: "DocsTextAddPartMenu",
-                                      children: np.map((DD => (0, tD.jsx)("li", {
-                                        children: (0, tD.jsx)("button", {
+                                      children: wp.map((UU => (0, CU.jsx)("li", {
+                                        children: (0, CU.jsx)("button", {
                                           type: "button",
                                           onClick: () => {
-                                            (DD => {
-                                              nD([...cD, kC[DD]]), vD(!1), MD(cD.length)
-                                            })(DD)
+                                            (UU => {
+                                              IU([...gU, yR[UU]]), eU(!1), uU(gU.length)
+                                            })(UU)
                                           },
-                                          children: RC[DD]
+                                          children: sR[UU]
                                         })
-                                      }, DD)))
+                                      }, UU)))
                                     })]
                                   })]
-                                }), (0, tD.jsxs)("div", {
+                                }), (0, CU.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, tD.jsxs)("div", {
+                                  children: [(0, CU.jsxs)("div", {
                                     className: "DocsTextEditorPanelTitle",
-                                    children: ["Code", (0, tD.jsxs)("button", {
+                                    children: ["Code", (0, CU.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextEditCodeButton",
-                                      "aria-pressed": SD,
+                                      "aria-pressed": cU,
                                       onClick: () => {
-                                        BD(!SD)
+                                        GU(!cU)
                                       },
-                                      children: [(0, tD.jsx)(oD, {
-                                        name: SD ? "check" : "pencil"
-                                      }), SD ? "Done" : "Edit"]
+                                      children: [(0, CU.jsx)(QU, {
+                                        name: cU ? "check" : "pencil"
+                                      }), cU ? "Done" : "Edit"]
                                     })]
-                                  }), SD ? (0, tD.jsxs)(tD.Fragment, {
-                                    children: [(0, tD.jsx)("textarea", {
+                                  }), cU ? (0, CU.jsxs)(CU.Fragment, {
+                                    children: [(0, CU.jsx)("textarea", {
                                       className: "DocsPlaygroundInput",
-                                      value: fD,
+                                      value: PU,
                                       spellCheck: !1,
                                       "aria-label": "Styled text as code",
-                                      onChange: DD => {
-                                        bD(DD.target.value);
-                                        const CD = Ic(DD.target.value);
-                                        wD(CD.error), CD.parts && pD(CD.parts)
+                                      onChange: UU => {
+                                        TU(UU.target.value);
+                                        const RU = tg(UU.target.value);
+                                        KU(RU.error), RU.parts && pU(RU.parts)
                                       }
-                                    }), QD && (0, tD.jsx)("p", {
+                                    }), qU && (0, CU.jsx)("p", {
                                       className: "DocsPlaygroundError",
-                                      children: QD
+                                      children: qU
                                     })]
-                                  }) : (0, tD.jsx)(OD, {
+                                  }) : (0, CU.jsx)(JU, {
                                     lang: "js",
-                                    code: `api.sendMessage(playerId, ${mD})`
+                                    code: `api.sendMessage(playerId, ${mU})`
                                   })]
                                 })]
-                              }), null !== yD && yD < cD.length && (0, tD.jsx)(Xp, {
-                                parts: cD,
-                                index: yD,
-                                fontAwesomeIcons: CD,
-                                onChange: DD => {
-                                  ((DD, CD) => {
-                                    nD(cD.map(((cD, ID) => ID === DD ? CD : cD)))
-                                  })(yD, DD)
+                              }), null !== jU && jU < gU.length && (0, CU.jsx)(Ip, {
+                                parts: gU,
+                                index: jU,
+                                fontAwesomeIcons: RU,
+                                onChange: UU => {
+                                  ((UU, RU) => {
+                                    IU(gU.map(((gU, tU) => tU === UU ? RU : gU)))
+                                  })(jU, UU)
                                 },
-                                Zx: () => {
-                                  PD(yD), MD(null)
+                                Kw: () => {
+                                  wU(jU), uU(null)
                                 },
                                 onClose: () => {
-                                  MD(null), gD({
-                                    key: `edit-${yD}`,
+                                  uU(null), fU({
+                                    key: `edit-${jU}`,
                                     fallback: "add"
                                   })
                                 }
                               })]
                             })
                           }
-                          var Pp = cD(4615),
-                            Hp = cD(4599),
-                            Up = cD(4608),
-                            xp = cD(4618);
-                          const qp = 40,
-                            Jp = 800,
-                            Kp = 150,
-                            ap = 8e3,
-                            Vp = 2e3;
+                          var bp = gU(4503),
+                            op = gU(4487),
+                            Zp = gU(4501),
+                            ap = gU(4508);
+                          const Yp = 40,
+                            Bp = 800,
+                            Vp = 150,
+                            rp = 8e3,
+                            Xp = 2e3;
 
-                          function zp(DD, CD) {
-                            return 12 * Math.log2(CD / DD)
+                          function vp(UU, RU) {
+                            return 12 * Math.log2(RU / UU)
                           }
 
-                          function jp(DD, CD) {
-                            return Math.round(DD * 2 ** (CD / 12) * 10) / 10
+                          function dp(UU, RU) {
+                            return Math.round(UU * 2 ** (RU / 12) * 10) / 10
                           }
 
-                          function lp(DD) {
-                            return `${DD} ms`
+                          function Hp(UU) {
+                            return `${UU} ms`
                           }
 
-                          function Lp(DD) {
-                            return `${DD} st`
+                          function Sp(UU) {
+                            return `${UU} st`
                           }
-                          const Tp = [{
+                          const sp = [{
                             key: "variationSemitones",
                             label: "Word variation",
                             max: 6
@@ -4091,769 +4091,769 @@ export const modules = {
                             max: 12
                           }];
 
-                          function Gp(DD) {
+                          function yp(UU) {
                             let {
-                              synth: CD,
-                              onChange: cD
-                            } = DD;
-                            const ID = (0, Pp.l)(CD);
-                            return (0, tD.jsxs)("div", {
+                              synth: RU,
+                              onChange: gU
+                            } = UU;
+                            const tU = (0, bp.k)(RU);
+                            return (0, CU.jsxs)("div", {
                               className: "DocsVoiceControls",
-                              children: [(0, tD.jsxs)("div", {
+                              children: [(0, CU.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, tD.jsx)("div", {
+                                children: [(0, CU.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Voice"
-                                }), (0, tD.jsxs)("div", {
+                                }), (0, CU.jsxs)("div", {
                                   className: "DocsControl",
-                                  children: [(0, tD.jsx)("div", {
+                                  children: [(0, CU.jsx)("div", {
                                     className: "DocsControlLabel",
-                                    children: (0, tD.jsx)("span", {
+                                    children: (0, CU.jsx)("span", {
                                       children: "Tone"
                                     })
-                                  }), (0, tD.jsx)("div", {
+                                  }), (0, CU.jsx)("div", {
                                     className: "DocsVoiceWaveforms",
-                                    children: Pp.h.map((DD => (0, tD.jsx)("button", {
+                                    children: bp.f.map((UU => (0, CU.jsx)("button", {
                                       type: "button",
-                                      className: iD()("DocsVariantChip", {
-                                        Active: CD.waveform === DD
+                                      className: EU()("DocsVariantChip", {
+                                        Active: RU.waveform === UU
                                       }),
-                                      "aria-pressed": CD.waveform === DD,
+                                      "aria-pressed": RU.waveform === UU,
                                       onClick: () => {
-                                        cD({
-                                          waveform: DD
+                                        gU({
+                                          waveform: UU
                                         })
                                       },
-                                      children: DD
-                                    }, DD)))
+                                      children: UU
+                                    }, UU)))
                                   })]
-                                }), (0, tD.jsx)(AI, {
+                                }), (0, CU.jsx)(Ot, {
                                   label: "Pitch",
                                   min: 0,
-                                  max: zp(qp, Jp),
+                                  max: vp(Yp, Bp),
                                   step: .1,
-                                  value: zp(qp, CD.pitchHz),
-                                  format: () => `${CD.pitchHz} Hz`,
-                                  onChange: DD => {
-                                    cD({
-                                      pitchHz: jp(qp, DD)
+                                  value: vp(Yp, RU.pitchHz),
+                                  format: () => `${RU.pitchHz} Hz`,
+                                  onChange: UU => {
+                                    gU({
+                                      pitchHz: dp(Yp, UU)
                                     })
                                   }
-                                }), (0, tD.jsx)(AI, {
+                                }), (0, CU.jsx)(Ot, {
                                   label: "Time per syllable",
                                   min: 25,
                                   max: 200,
                                   step: 1,
-                                  value: CD.syllableMs,
-                                  format: lp,
-                                  onChange: DD => {
-                                    cD({
-                                      syllableMs: DD
+                                  value: RU.syllableMs,
+                                  format: Hp,
+                                  onChange: UU => {
+                                    gU({
+                                      syllableMs: UU
                                     })
                                   }
-                                }), (0, tD.jsx)(AI, {
+                                }), (0, CU.jsx)(Ot, {
                                   label: "Volume",
                                   min: 0,
                                   max: 2,
                                   step: .05,
-                                  value: CD.volume,
-                                  onChange: DD => {
-                                    cD({
-                                      volume: DD
+                                  value: RU.volume,
+                                  onChange: UU => {
+                                    gU({
+                                      volume: UU
                                     })
                                   }
                                 })]
-                              }), (0, tD.jsxs)("div", {
+                              }), (0, CU.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, tD.jsx)("div", {
+                                children: [(0, CU.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Each blip"
-                                }), (0, tD.jsx)(AI, {
+                                }), (0, CU.jsx)(Ot, {
                                   label: "Length",
                                   min: 10,
                                   max: 300,
                                   step: 1,
-                                  value: CD.durationMs,
-                                  format: lp,
-                                  onChange: DD => {
-                                    cD({
-                                      durationMs: DD
+                                  value: RU.durationMs,
+                                  format: Hp,
+                                  onChange: UU => {
+                                    gU({
+                                      durationMs: UU
                                     })
                                   }
-                                }), (0, tD.jsx)(AI, {
+                                }), (0, CU.jsx)(Ot, {
                                   label: "Fade in",
                                   min: 0,
-                                  max: ID.durationMs,
+                                  max: tU.durationMs,
                                   step: 1,
-                                  value: ID.attackMs,
-                                  format: lp,
-                                  onChange: DD => {
-                                    cD({
-                                      attackMs: DD
+                                  value: tU.attackMs,
+                                  format: Hp,
+                                  onChange: UU => {
+                                    gU({
+                                      attackMs: UU
                                     })
                                   }
-                                }), (0, tD.jsx)(AI, {
+                                }), (0, CU.jsx)(Ot, {
                                   label: "Fade out",
                                   min: 0,
-                                  max: ID.durationMs - ID.attackMs,
+                                  max: tU.durationMs - tU.attackMs,
                                   step: 1,
-                                  value: ID.releaseMs,
-                                  format: lp,
-                                  onChange: DD => {
-                                    cD({
-                                      releaseMs: DD
+                                  value: tU.releaseMs,
+                                  format: Hp,
+                                  onChange: UU => {
+                                    gU({
+                                      releaseMs: UU
                                     })
                                   }
-                                }), (0, tD.jsx)(AI, {
+                                }), (0, CU.jsx)(Ot, {
                                   label: "Glide",
                                   min: -12,
                                   max: 12,
                                   step: .1,
-                                  value: CD.glideSemitones,
-                                  format: Lp,
-                                  onChange: DD => {
-                                    cD({
-                                      glideSemitones: DD
+                                  value: RU.glideSemitones,
+                                  format: Sp,
+                                  onChange: UU => {
+                                    gU({
+                                      glideSemitones: UU
                                     })
                                   }
-                                }), (0, tD.jsxs)("label", {
+                                }), (0, CU.jsxs)("label", {
                                   className: "DocsVoiceToggle",
-                                  children: [(0, tD.jsx)("input", {
+                                  children: [(0, CU.jsx)("input", {
                                     type: "checkbox",
-                                    checked: null !== CD.lowpassHz,
-                                    onChange: DD => {
-                                      cD({
-                                        lowpassHz: DD.target.checked ? Vp : null
+                                    checked: null !== RU.lowpassHz,
+                                    onChange: UU => {
+                                      gU({
+                                        lowpassHz: UU.target.checked ? Xp : null
                                       })
                                     }
-                                  }), (0, tD.jsx)("span", {
+                                  }), (0, CU.jsx)("span", {
                                     children: "Muffle with a filter"
                                   })]
-                                }), null !== CD.lowpassHz && (0, tD.jsx)(AI, {
+                                }), null !== RU.lowpassHz && (0, CU.jsx)(Ot, {
                                   label: "Filter",
                                   min: 0,
-                                  max: zp(Kp, ap),
+                                  max: vp(Vp, rp),
                                   step: .1,
-                                  value: zp(Kp, CD.lowpassHz),
-                                  format: () => `${CD.lowpassHz} Hz`,
-                                  onChange: DD => {
-                                    cD({
-                                      lowpassHz: jp(Kp, DD)
+                                  value: vp(Vp, RU.lowpassHz),
+                                  format: () => `${RU.lowpassHz} Hz`,
+                                  onChange: UU => {
+                                    gU({
+                                      lowpassHz: dp(Vp, UU)
                                     })
                                   }
                                 })]
-                              }), (0, tD.jsxs)("div", {
+                              }), (0, CU.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, tD.jsx)("div", {
+                                children: [(0, CU.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Intonation"
-                                }), Tp.map((DD => {
+                                }), sp.map((UU => {
                                   let {
-                                    key: ID,
-                                    label: pD,
-                                    max: iD
-                                  } = DD;
-                                  return (0, tD.jsx)(AI, {
-                                    label: pD,
+                                    key: tU,
+                                    label: pU,
+                                    max: EU
+                                  } = UU;
+                                  return (0, CU.jsx)(Ot, {
+                                    label: pU,
                                     min: 0,
-                                    max: iD,
+                                    max: EU,
                                     step: .1,
-                                    value: CD.intonation[ID],
-                                    format: Lp,
-                                    onChange: DD => {
-                                      cD({
+                                    value: RU.intonation[tU],
+                                    format: Sp,
+                                    onChange: UU => {
+                                      gU({
                                         intonation: {
-                                          ...CD.intonation,
-                                          [ID]: DD
+                                          ...RU.intonation,
+                                          [tU]: UU
                                         }
                                       })
                                     }
-                                  }, ID)
+                                  }, tU)
                                 }))]
                               })]
                             })
                           }
-                          const Rp = Object.keys(Pp.k),
-                            kp = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
+                          const kp = Object.keys(bp.j),
+                            Fp = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
 
-                          function dp(DD) {
-                            var CD;
-                            const cD = JSON.stringify((0, Pp.l)(DD));
-                            return null !== (CD = Rp.find((DD => JSON.stringify((0, Pp.l)(Pp.k[DD])) === cD))) && void 0 !== CD ? CD : null
+                          function ip(UU) {
+                            var RU;
+                            const gU = JSON.stringify((0, bp.k)(UU));
+                            return null !== (RU = kp.find((UU => JSON.stringify((0, bp.k)(bp.j[UU])) === gU))) && void 0 !== RU ? RU : null
                           }
 
-                          function Yp(DD) {
-                            let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-                            if ("object" !== typeof DD || null === DD) return JSON.stringify(DD);
-                            return `{\n${Object.entries(DD).map((DD=>{let[cD,ID]=DD;return`${CD}    ${cD}: ${Yp(ID,`${CD}    `)},`})).join("\n")}\n${CD}}`
+                          function Ap(UU) {
+                            let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                            if ("object" !== typeof UU || null === UU) return JSON.stringify(UU);
+                            return `{\n${Object.entries(UU).map((UU=>{let[gU,tU]=UU;return`${RU}    ${gU}: ${Ap(tU,`${RU}    `)},`})).join("\n")}\n${RU}}`
                           }
 
-                          function Wp(DD, CD, cD) {
-                            const ID = dp(DD),
-                              pD = [`    line: ${JSON.stringify(CD)},`];
-                            return cD && pD.push(`    speakerName: ${JSON.stringify(cD)},`), pD.push("    voice,"), `const voice = ${ID?JSON.stringify(ID):Yp((0,Pp.l)(DD))}\n\napi.setClientOption(playerId, "dialogue", {\n${pD.join("\n")}\n})`
+                          function zp(UU, RU, gU) {
+                            const tU = ip(UU),
+                              pU = [`    line: ${JSON.stringify(RU)},`];
+                            return gU && pU.push(`    speakerName: ${JSON.stringify(gU)},`), pU.push("    voice,"), `const voice = ${tU?JSON.stringify(tU):Ap((0,bp.k)(UU))}\n\napi.setClientOption(playerId, "dialogue", {\n${pU.join("\n")}\n})`
                           }
-                          const sp = 400,
-                            Ep = 90;
-                          let ep = null;
+                          const Mp = 400,
+                            Dp = 90;
+                          let Lp = null;
 
-                          function hp(DD, CD, cD) {
-                            return ep ??= new AudioContext, ep.resume(), (0, xp.d)(ep, ep.destination, DD, CD, cD, (() => {}))
+                          function Np(UU, RU, gU) {
+                            return Lp ??= new AudioContext, Lp.resume(), (0, ap.d)(Lp, Lp.destination, UU, RU, gU, (() => {}))
                           }
 
-                          function rp() {
-                            const [DD, CD] = (0, ID.useState)(Pp.k.regular), [cD, pD] = (0, ID.useState)(kp[0]), [fD, bD] = (0, ID.useState)("Innkeeper"), [QD, wD] = (0, ID.useState)(0), SD = SI((DD => DD.volume)), BD = (0, ID.useRef)(null), yD = (0, ID.useRef)(0), MD = (0, ID.useRef)(0), ZD = () => {
-                              var DD;
-                              null === (DD = BD.current) || void 0 === DD || DD.call(BD), BD.current = null
+                          function lp() {
+                            const [UU, RU] = (0, tU.useState)(bp.j.regular), [gU, pU] = (0, tU.useState)(Fp[0]), [PU, TU] = (0, tU.useState)("Innkeeper"), [qU, KU] = (0, tU.useState)(0), cU = ct((UU => UU.volume)), GU = (0, tU.useRef)(null), jU = (0, tU.useRef)(0), uU = (0, tU.useRef)(0), hU = () => {
+                              var UU;
+                              null === (UU = GU.current) || void 0 === UU || UU.call(GU), GU.current = null
                             };
-                            (0, ID.useEffect)((() => () => {
-                              var DD;
-                              null === (DD = BD.current) || void 0 === DD || DD.call(BD), window.clearTimeout(yD.current)
+                            (0, tU.useEffect)((() => () => {
+                              var UU;
+                              null === (UU = GU.current) || void 0 === UU || UU.call(GU), window.clearTimeout(jU.current)
                             }), []);
-                            const vD = (0, ID.useMemo)((() => ({
-                                line: cD,
-                                speakerName: fD || void 0,
-                                voice: DD
-                              })), [cD, fD, DD]),
-                              ND = (0, ID.useRef)(vD);
-                            ND.current = vD;
-                            const XD = dp(DD),
-                              mD = DD => {
-                                window.clearTimeout(yD.current), ZD();
+                            const eU = (0, tU.useMemo)((() => ({
+                                line: gU,
+                                speakerName: PU || void 0,
+                                voice: UU
+                              })), [gU, PU, UU]),
+                              WU = (0, tU.useRef)(eU);
+                            WU.current = eU;
+                            const xU = ip(UU),
+                              mU = UU => {
+                                window.clearTimeout(jU.current), hU();
                                 const {
-                                  plan: CD,
-                                  synth: cD
-                                } = (0, Up.e)(DD);
-                                cD && (BD.current = hp(cD, CD.blips, SD)), wD((DD => DD + 1))
+                                  plan: RU,
+                                  synth: gU
+                                } = (0, Zp.c)(UU);
+                                gU && (GU.current = Np(gU, RU.blips, cU)), KU((UU => UU + 1))
                               },
-                              nD = Wp(DD, cD, fD);
-                            return (0, tD.jsxs)("section", {
+                              IU = zp(UU, gU, PU);
+                            return (0, CU.jsxs)("section", {
                               className: "DocsPlayground DocsVoicePlayground",
                               "aria-label": "Voice playground",
-                              children: [(0, tD.jsxs)("header", {
+                              children: [(0, CU.jsxs)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: [(0, tD.jsxs)("div", {
-                                  children: [(0, tD.jsx)("div", {
+                                children: [(0, CU.jsxs)("div", {
+                                  children: [(0, CU.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Try it: voices"
-                                  }), (0, tD.jsx)("div", {
+                                  }), (0, CU.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Start from a preset and change it to suit your character. The line replays as you go."
                                   })]
-                                }), (0, tD.jsx)(gD, {
-                                  text: nD,
+                                }), (0, CU.jsx)(fU, {
+                                  text: IU,
                                   label: "Copy code"
                                 })]
-                              }), (0, tD.jsxs)("div", {
+                              }), (0, CU.jsxs)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: [Rp.map((DD => (0, tD.jsx)("button", {
+                                children: [kp.map((UU => (0, CU.jsx)("button", {
                                   type: "button",
-                                  className: iD()("DocsVariantChip", {
-                                    Active: XD === DD
+                                  className: EU()("DocsVariantChip", {
+                                    Active: xU === UU
                                   }),
-                                  "aria-pressed": XD === DD,
+                                  "aria-pressed": xU === UU,
                                   onClick: () => {
-                                    (DD => {
-                                      const cD = Pp.k[DD];
-                                      CD(cD), mD({
-                                        ...vD,
-                                        voice: cD
+                                    (UU => {
+                                      const gU = bp.j[UU];
+                                      RU(gU), mU({
+                                        ...eU,
+                                        voice: gU
                                       })
-                                    })(DD)
+                                    })(UU)
                                   },
-                                  children: DD
-                                }, DD))), !XD && (0, tD.jsx)("span", {
+                                  children: UU
+                                }, UU))), !xU && (0, CU.jsx)("span", {
                                   className: "DocsVariantChip Active DocsVoiceCustomChip",
                                   children: "custom"
                                 })]
-                              }), (0, tD.jsxs)("div", {
+                              }), (0, CU.jsxs)("div", {
                                 className: "DocsVoiceBody",
-                                children: [(0, tD.jsxs)("div", {
+                                children: [(0, CU.jsxs)("div", {
                                   className: "DocsVoiceScene",
-                                  children: [(0, tD.jsx)("div", {
+                                  children: [(0, CU.jsx)("div", {
                                     className: "DocsVoiceStage",
-                                    children: (0, tD.jsx)(Hp.c, {
-                                      display: vD
-                                    }, QD)
-                                  }), (0, tD.jsxs)("form", {
+                                    children: (0, CU.jsx)(op.d, {
+                                      display: eU
+                                    }, qU)
+                                  }), (0, CU.jsxs)("form", {
                                     className: "DocsVoiceLineRow",
-                                    onSubmit: DD => {
-                                      DD.preventDefault(), mD(vD)
+                                    onSubmit: UU => {
+                                      UU.preventDefault(), mU(eU)
                                     },
-                                    children: [(0, tD.jsx)("input", {
-                                      value: cD,
+                                    children: [(0, CU.jsx)("input", {
+                                      value: gU,
                                       "aria-label": "Line",
                                       placeholder: "Type a line to hear it",
-                                      onChange: DD => {
-                                        pD(DD.target.value)
+                                      onChange: UU => {
+                                        pU(UU.target.value)
                                       }
-                                    }), (0, tD.jsxs)("button", {
+                                    }), (0, CU.jsxs)("button", {
                                       type: "submit",
                                       className: "DocsVoiceSpeakButton",
-                                      children: [(0, tD.jsx)(oD, {
+                                      children: [(0, CU.jsx)(QU, {
                                         name: "play"
-                                      }), (0, tD.jsx)("span", {
+                                      }), (0, CU.jsx)("span", {
                                         children: "Speak"
                                       })]
                                     })]
-                                  }), (0, tD.jsx)("div", {
+                                  }), (0, CU.jsx)("div", {
                                     className: "DocsVoiceSamples",
-                                    children: kp.map((DD => (0, tD.jsx)("button", {
+                                    children: Fp.map((UU => (0, CU.jsx)("button", {
                                       type: "button",
-                                      className: iD()("DocsVariantChip", {
-                                        Active: cD === DD
+                                      className: EU()("DocsVariantChip", {
+                                        Active: gU === UU
                                       }),
                                       onClick: () => {
-                                        var CD;
-                                        pD(CD = DD), mD({
-                                          ...vD,
-                                          line: CD
+                                        var RU;
+                                        pU(RU = UU), mU({
+                                          ...eU,
+                                          line: RU
                                         })
                                       },
-                                      children: DD
-                                    }, DD)))
-                                  }), (0, tD.jsxs)("label", {
+                                      children: UU
+                                    }, UU)))
+                                  }), (0, CU.jsxs)("label", {
                                     className: "DocsVoiceSpeaker",
-                                    children: [(0, tD.jsx)("span", {
+                                    children: [(0, CU.jsx)("span", {
                                       children: "Speaker"
-                                    }), (0, tD.jsx)("input", {
-                                      value: fD,
+                                    }), (0, CU.jsx)("input", {
+                                      value: PU,
                                       placeholder: "No name",
-                                      onChange: DD => {
-                                        bD(DD.target.value)
+                                      onChange: UU => {
+                                        TU(UU.target.value)
                                       }
                                     })]
                                   })]
-                                }), (0, tD.jsx)(Gp, {
-                                  synth: DD,
-                                  onChange: cD => {
-                                    const ID = {
-                                      ...DD,
-                                      ...cD
+                                }), (0, CU.jsx)(yp, {
+                                  synth: UU,
+                                  onChange: gU => {
+                                    const tU = {
+                                      ...UU,
+                                      ...gU
                                     };
-                                    CD(ID);
-                                    const pD = {
-                                        ...vD,
-                                        voice: ID
+                                    RU(tU);
+                                    const pU = {
+                                        ...eU,
+                                        voice: tU
                                       },
-                                      iD = performance.now();
-                                    if (iD - MD.current >= Ep) {
-                                      MD.current = iD, ZD();
-                                      const DD = (0, Up.e)(pD).plan.blips[0];
-                                      DD && (BD.current = hp((0, Pp.l)(ID), [{
-                                        ...DD,
+                                      EU = performance.now();
+                                    if (EU - uU.current >= Dp) {
+                                      uU.current = EU, hU();
+                                      const UU = (0, Zp.c)(pU).plan.blips[0];
+                                      UU && (GU.current = Np((0, bp.k)(tU), [{
+                                        ...UU,
                                         atMs: 0
-                                      }], SD))
+                                      }], cU))
                                     }
-                                    window.clearTimeout(yD.current), yD.current = window.setTimeout((() => {
-                                      mD(ND.current)
-                                    }), sp)
+                                    window.clearTimeout(jU.current), jU.current = window.setTimeout((() => {
+                                      mU(WU.current)
+                                    }), Mp)
                                   }
                                 })]
-                              }), (0, tD.jsx)(OD, {
-                                code: nD,
+                              }), (0, CU.jsx)(JU, {
+                                code: IU,
                                 lang: "ts"
                               })]
                             })
                           }
-                          var Ap = cD(4630);
-                          const Fp = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
-                            Di = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
-                            Ci = [
-                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${Di}`, "g"), Ap.q],
+                          var Op = gU(4525);
+                          const UE = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
+                            RE = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
+                            gE = [
+                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${RE}`, "g"), Op.h],
                               [/\bfunction\s+([A-Za-z_$][\w$]*)\s*\(/g],
-                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, Ap.q]
+                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, Op.h]
                             ];
 
-                          function ci(DD) {
-                            return `${DD.pageId}#${DD.anchor}`
+                          function tE(UU) {
+                            return `${UU.pageId}#${UU.anchor}`
                           }
-                          let Ii, ii, fi;
+                          let pE, EE, PE;
 
-                          function bi(DD) {
-                            const CD = (0, PD.j)(DD),
-                              cD = new Set;
-                            for (const [, , ID] of CD.matchAll(PD.e)) {
-                              const DD = ID.startsWith("#") ? dD(ID) : null,
-                                CD = DD ? ci({
-                                  pageId: DD.page.id,
-                                  anchor: DD.anchor
+                          function TE(UU) {
+                            const RU = (0, wU.h)(UU),
+                              gU = new Set;
+                            for (const [, , tU] of RU.matchAll(wU.e)) {
+                              const UU = tU.startsWith("#") ? kU(tU) : null,
+                                RU = UU ? tE({
+                                  pageId: UU.page.id,
+                                  anchor: UU.anchor
                                 }) : null;
-                              null !== CD && (Ii || (Ii = new Set(lD.flatMap((DD => qD(DD.layout) ? RD(DD).sections.map((CD => ci({
-                                pageId: DD.id,
-                                anchor: CD.heading.anchor
-                              }))) : [])))), Ii).has(CD) && cD.add(CD)
+                              null !== RU && (pE || (pE = new Set(vU.flatMap((UU => ZU(UU.layout) ? sU(UU).sections.map((RU => tE({
+                                pageId: UU.id,
+                                anchor: RU.heading.anchor
+                              }))) : [])))), pE).has(RU) && gU.add(RU)
                             }
-                            for (const [, , ID] of CD.matchAll(Fp)) {
-                              const DD = yC(ID);
-                              DD && cD.add(ci(DD))
+                            for (const [, , tU] of RU.matchAll(UE)) {
+                              const UU = jR(tU);
+                              UU && gU.add(tE(UU))
                             }
-                            return cD
+                            return gU
                           }
 
-                          function Qi(DD, CD) {
-                            const cD = new Set,
-                              ID = function(DD) {
-                                return DD.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
-                              }(DD);
-                            for (const [, pD] of ID.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) cD.add(pD);
-                            for (const [pD, iD] of Ci)
-                              for (const [, DD] of(0, Ap.f)(ID, pD, iD)) CD.has(DD) && cD.add(DD);
-                            return cD
+                          function qE(UU, RU) {
+                            const gU = new Set,
+                              tU = function(UU) {
+                                return UU.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
+                              }(UU);
+                            for (const [, pU] of tU.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) gU.add(pU);
+                            for (const [pU, EU] of gE)
+                              for (const [, UU] of(0, Op.c)(tU, pU, EU)) RU.has(UU) && gU.add(UU);
+                            return gU
                           }
 
-                          function wi(DD, CD, cD, ID) {
-                            const pD = DD.get(CD);
-                            pD ? !ID && pD.some((DD => DD.pageId === cD.pageId)) || pD.push(cD) : DD.set(CD, [cD])
+                          function KE(UU, RU, gU, tU) {
+                            const pU = UU.get(RU);
+                            pU ? !tU && pU.some((UU => UU.pageId === gU.pageId)) || pU.push(gU) : UU.set(RU, [gU])
                           }
-                          const Si = /^[A-Za-z_$][\w$]*$/;
+                          const cE = /^[A-Za-z_$][\w$]*$/;
 
-                          function Bi(DD) {
-                            return Si.test(DD.name) ? DD.name : "options"
-                          }
-
-                          function yi(DD, CD) {
-                            const cD = DD.params.map(Bi).join(", ");
-                            return CD ? `${DD.name} = (${cD}) => {\n\t\n}` : `api.${DD.name}(${cD})`
+                          function GE(UU) {
+                            return cE.test(UU.name) ? UU.name : "options"
                           }
 
-                          function Mi(DD) {
+                          function jE(UU, RU) {
+                            const gU = UU.params.map(GE).join(", ");
+                            return RU ? `${UU.name} = (${gU}) => {\n\t\n}` : `api.${UU.name}(${gU})`
+                          }
+
+                          function uE(UU) {
                             let {
-                              method: CD,
-                              isCallback: cD
-                            } = DD;
-                            return (0, tD.jsxs)("div", {
+                              method: RU,
+                              isCallback: gU
+                            } = UU;
+                            return (0, CU.jsxs)("div", {
                               className: "DocsSignature",
-                              children: [(0, tD.jsxs)("span", {
+                              children: [(0, CU.jsxs)("span", {
                                 className: "DocsSignatureCode",
-                                children: [cD ? (0, tD.jsxs)(tD.Fragment, {
-                                  children: [(0, tD.jsx)("span", {
+                                children: [gU ? (0, CU.jsxs)(CU.Fragment, {
+                                  children: [(0, CU.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: CD.name
-                                  }), (0, tD.jsx)("span", {
+                                    children: RU.name
+                                  }), (0, CU.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: " = ("
                                   })]
-                                }) : (0, tD.jsxs)(tD.Fragment, {
-                                  children: [(0, tD.jsx)("span", {
+                                }) : (0, CU.jsxs)(CU.Fragment, {
+                                  children: [(0, CU.jsx)("span", {
                                     className: "DocsSignatureObject",
                                     children: "api."
-                                  }), (0, tD.jsx)("span", {
+                                  }), (0, CU.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: CD.name
-                                  }), (0, tD.jsx)("span", {
+                                    children: RU.name
+                                  }), (0, CU.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: "("
                                   })]
-                                }), CD.params.map(((DD, cD) => (0, tD.jsxs)(ID.Fragment, {
-                                  children: [cD > 0 && (0, tD.jsx)("span", {
+                                }), RU.params.map(((UU, gU) => (0, CU.jsxs)(tU.Fragment, {
+                                  children: [gU > 0 && (0, CU.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: ", "
-                                  }), (0, tD.jsx)("a", {
+                                  }), (0, CU.jsx)("a", {
                                     className: "DocsSignatureParam",
-                                    href: `#${CD.name}-${Bi(DD)}`,
-                                    children: DD.name
+                                    href: `#${RU.name}-${GE(UU)}`,
+                                    children: UU.name
                                   })]
-                                }, DD.name))), (0, tD.jsx)("span", {
+                                }, UU.name))), (0, CU.jsx)("span", {
                                   className: "DocsTypePunctuation",
-                                  children: cD ? ") => " : ")"
-                                }), cD && !CD.returns && (0, tD.jsx)("span", {
+                                  children: gU ? ") => " : ")"
+                                }), gU && !RU.returns && (0, CU.jsx)("span", {
                                   className: "DocsTypeKeyword",
                                   children: "void"
                                 })]
-                              }), CD.returns && CD.returns.type && (0, tD.jsxs)("span", {
+                              }), RU.returns && RU.returns.type && (0, CU.jsxs)("span", {
                                 className: "DocsSignatureReturns",
-                                children: [!cD && (0, tD.jsx)("span", {
+                                children: [!gU && (0, CU.jsx)("span", {
                                   className: "DocsSignatureArrow",
                                   children: "\u2192"
-                                }), (0, tD.jsx)(HC, {
-                                  type: CD.returns.type
+                                }), (0, CU.jsx)(nR, {
+                                  type: RU.returns.type
                                 })]
                               })]
                             })
                           }
 
-                          function ti(DD) {
+                          function CE(UU) {
                             let {
-                              title: CD,
-                              references: cD
-                            } = DD;
-                            const pD = (0, ID.useContext)(MC);
-                            return (0, tD.jsxs)("div", {
+                              title: RU,
+                              references: gU
+                            } = UU;
+                            const pU = (0, tU.useContext)(uR);
+                            return (0, CU.jsxs)("div", {
                               className: "DocsCardReferences",
-                              children: [(0, tD.jsx)("span", {
+                              children: [(0, CU.jsx)("span", {
                                 className: "DocsCardReferencesTitle",
-                                children: CD
-                              }), cD.map((DD => (0, tD.jsx)(fD.d, {
-                                to: WD(pD, TD(DD.pageId), DD.anchor),
-                                children: DD.label
-                              }, `${DD.pageId}#${DD.anchor}`)))]
+                                children: RU
+                              }), gU.map((UU => (0, CU.jsx)(PU.c, {
+                                to: iU(pU, HU(UU.pageId), UU.anchor),
+                                children: UU.label
+                              }, `${UU.pageId}#${UU.anchor}`)))]
                             })
                           }
 
-                          function Zi(DD) {
-                            var CD, cD;
+                          function hE(UU) {
+                            var RU, gU;
                             let {
-                              pageId: ID,
-                              anchor: pD
-                            } = DD;
-                            const iD = ci({
-                                pageId: ID,
-                                anchor: pD
+                              pageId: tU,
+                              anchor: pU
+                            } = UU;
+                            const EU = tE({
+                                pageId: tU,
+                                anchor: pU
                               }),
-                              fD = null !== (CD = function() {
-                                if (!fi) {
-                                  fi = new Map;
-                                  const ID = new Set(lD.filter((DD => "callbacks" === DD.layout)).flatMap((DD => RD(DD).sections.map((DD => DD.heading.text)))));
-                                  for (const pD of lD)
-                                    if ("article" === pD.layout || "snippets" === pD.layout)
-                                      for (const iD of (0, PD.y)(RD(pD)))
+                              PU = null !== (RU = function() {
+                                if (!PE) {
+                                  PE = new Map;
+                                  const tU = new Set(vU.filter((UU => "callbacks" === UU.layout)).flatMap((UU => sU(UU).sections.map((UU => UU.heading.text)))));
+                                  for (const pU of vU)
+                                    if ("article" === pU.layout || "snippets" === pU.layout)
+                                      for (const EU of (0, wU.o)(sU(pU)))
                                         for (const {
-                                            code: fD
+                                            code: PU
                                           }
-                                          of(0, PD.l)(iD.blocks))
-                                          for (const bD of Qi(fD, ID)) {
-                                            const ID = BC().get(bD);
-                                            if (ID) {
-                                              var DD, CD, cD;
-                                              const fD = {
-                                                pageId: pD.id,
-                                                anchor: null !== (DD = null === (CD = iD.heading) || void 0 === CD ? void 0 : CD.anchor) && void 0 !== DD ? DD : "",
-                                                label: null !== (cD = pD.navTitle) && void 0 !== cD ? cD : pD.title
+                                          of(0, wU.k)(EU.blocks))
+                                          for (const TU of qE(PU, tU)) {
+                                            const tU = GR().get(TU);
+                                            if (tU) {
+                                              var UU, RU, gU;
+                                              const PU = {
+                                                pageId: pU.id,
+                                                anchor: null !== (UU = null === (RU = EU.heading) || void 0 === RU ? void 0 : RU.anchor) && void 0 !== UU ? UU : "",
+                                                label: null !== (gU = pU.navTitle) && void 0 !== gU ? gU : pU.title
                                               };
-                                              wi(fi, ci(ID), fD, !1)
+                                              KE(PE, tE(tU), PU, !1)
                                             }
                                           }
                                 }
-                                return fi
-                              }().get(iD)) && void 0 !== CD ? CD : [],
-                              bD = null !== (cD = function() {
-                                if (!ii) {
-                                  ii = new Map;
-                                  const DD = TD("changelog");
-                                  for (const CD of RD(DD).sections) {
-                                    const cD = new Set(CD.blocks.flatMap((DD => [...bi(DD)])));
-                                    for (const ID of cD) {
-                                      const cD = {
-                                        pageId: DD.id,
-                                        anchor: CD.heading.anchor,
-                                        label: CD.heading.text
+                                return PE
+                              }().get(EU)) && void 0 !== RU ? RU : [],
+                              TU = null !== (gU = function() {
+                                if (!EE) {
+                                  EE = new Map;
+                                  const UU = HU("changelog");
+                                  for (const RU of sU(UU).sections) {
+                                    const gU = new Set(RU.blocks.flatMap((UU => [...TE(UU)])));
+                                    for (const tU of gU) {
+                                      const gU = {
+                                        pageId: UU.id,
+                                        anchor: RU.heading.anchor,
+                                        label: RU.heading.text
                                       };
-                                      wi(ii, ID, cD, !0)
+                                      KE(EE, tU, gU, !0)
                                     }
                                   }
                                 }
-                                return ii
-                              }().get(iD)) && void 0 !== cD ? cD : [];
-                            return 0 === fD.length && 0 === bD.length ? null : (0, tD.jsxs)("footer", {
+                                return EE
+                              }().get(EU)) && void 0 !== gU ? gU : [];
+                            return 0 === PU.length && 0 === TU.length ? null : (0, CU.jsxs)("footer", {
                               className: "DocsCardFooter",
-                              children: [fD.length > 0 && (0, tD.jsx)(ti, {
+                              children: [PU.length > 0 && (0, CU.jsx)(CE, {
                                 title: "Used in",
-                                references: fD
-                              }), bD.length > 0 && (0, tD.jsx)(ti, {
+                                references: PU
+                              }), TU.length > 0 && (0, CU.jsx)(CE, {
                                 title: "Changelog",
-                                references: bD
+                                references: TU
                               })]
                             })
                           }
 
-                          function oi(DD) {
+                          function QE(UU) {
                             let {
-                              method: CD,
-                              pageId: cD,
-                              anchor: ID,
-                              isCallback: pD
-                            } = DD;
-                            const iD = pD ? void 0 : bC().get(CD.name),
-                              fD = CD.description.length > 0 || null === iD || void 0 === iD || !iD.description ? CD.description : (0, PD.C)(iD.description);
-                            return (0, tD.jsxs)("article", {
+                              method: RU,
+                              pageId: gU,
+                              anchor: tU,
+                              isCallback: pU
+                            } = UU;
+                            const EU = pU ? void 0 : TR().get(RU.name),
+                              PU = RU.description.length > 0 || null === EU || void 0 === EU || !EU.description ? RU.description : (0, wU.u)(EU.description);
+                            return (0, CU.jsxs)("article", {
                               className: "DocsCard DocsMethodCard",
-                              children: [(0, tD.jsxs)("header", {
+                              children: [(0, CU.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, tD.jsx)(wc, {
+                                children: [(0, CU.jsx)(Kg, {
                                   level: 2,
-                                  text: CD.name,
-                                  anchor: ID,
+                                  text: RU.name,
+                                  anchor: tU,
                                   className: "DocsCardTitle"
-                                }), (0, tD.jsx)(gD, {
-                                  text: yi(CD, pD),
-                                  label: pD ? "Copy handler" : "Copy call",
+                                }), (0, CU.jsx)(fU, {
+                                  text: jE(RU, pU),
+                                  label: pU ? "Copy handler" : "Copy call",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, tD.jsx)(Mi, {
-                                method: CD,
-                                isCallback: pD
-                              }), iD && null !== iD.deprecation && (0, tD.jsxs)("aside", {
+                              }), (0, CU.jsx)(uE, {
+                                method: RU,
+                                isCallback: pU
+                              }), EU && null !== EU.deprecation && (0, CU.jsxs)("aside", {
                                 className: "DocsCallout warning DocsDeprecation",
-                                children: [(0, tD.jsx)("strong", {
+                                children: [(0, CU.jsx)("strong", {
                                   children: "Deprecated"
-                                }), iD.deprecation && (0, tD.jsxs)(tD.Fragment, {
-                                  children: [": ", (0, tD.jsx)(nC, {
-                                    text: (bD = iD.deprecation, (0, Ap.C)(bD, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, Ap.n)("`\\w"), (DD => {
-                                      let [CD] = DD;
-                                      return BC().has(CD) ? `\`${CD}\`` : CD
+                                }), EU.deprecation && (0, CU.jsxs)(CU.Fragment, {
+                                  children: [": ", (0, CU.jsx)(IR, {
+                                    text: (TU = EU.deprecation, (0, Op.o)(TU, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, Op.f)("`\\w"), (UU => {
+                                      let [RU] = UU;
+                                      return GR().has(RU) ? `\`${RU}\`` : RU
                                     })))
                                   })]
                                 })]
-                              }), fD.length > 0 && (0, tD.jsx)("div", {
+                              }), PU.length > 0 && (0, CU.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, tD.jsx)(Mc, {
-                                  blocks: fD
+                                children: (0, CU.jsx)(ug, {
+                                  blocks: PU
                                 })
-                              }), CD.params.length > 0 && (0, tD.jsxs)("section", {
+                              }), RU.params.length > 0 && (0, CU.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, tD.jsx)("h3", {
+                                children: [(0, CU.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Parameters"
-                                }), (0, tD.jsx)("dl", {
+                                }), (0, CU.jsx)("dl", {
                                   className: "DocsParamList",
-                                  children: CD.params.map((DD => (0, tD.jsxs)("div", {
-                                    id: `${CD.name}-${Bi(DD)}`,
+                                  children: RU.params.map((UU => (0, CU.jsxs)("div", {
+                                    id: `${RU.name}-${GE(UU)}`,
                                     className: "DocsParam",
-                                    children: [(0, tD.jsxs)("dt", {
-                                      children: [(0, tD.jsx)("code", {
+                                    children: [(0, CU.jsxs)("dt", {
+                                      children: [(0, CU.jsx)("code", {
                                         className: "DocsParamName",
-                                        children: DD.name
-                                      }), (0, tD.jsx)(HC, {
-                                        type: DD.type
+                                        children: UU.name
+                                      }), (0, CU.jsx)(nR, {
+                                        type: UU.type
                                       })]
-                                    }), DD.description && (0, tD.jsx)("dd", {
-                                      children: (0, tD.jsx)(nC, {
-                                        text: DD.description
+                                    }), UU.description && (0, CU.jsx)("dd", {
+                                      children: (0, CU.jsx)(IR, {
+                                        text: UU.description
                                       })
                                     })]
-                                  }, DD.name)))
+                                  }, UU.name)))
                                 })]
-                              }), CD.returns && (CD.returns.type || CD.returns.description.length > 0) && (0, tD.jsxs)("section", {
+                              }), RU.returns && (RU.returns.type || RU.returns.description.length > 0) && (0, CU.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, tD.jsx)("h3", {
+                                children: [(0, CU.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Returns"
-                                }), (0, tD.jsxs)("div", {
+                                }), (0, CU.jsxs)("div", {
                                   className: "DocsReturns",
-                                  children: [CD.returns.type && (0, tD.jsx)(HC, {
-                                    type: CD.returns.type
-                                  }), CD.returns.description.length > 0 && (0, tD.jsx)("div", {
+                                  children: [RU.returns.type && (0, CU.jsx)(nR, {
+                                    type: RU.returns.type
+                                  }), RU.returns.description.length > 0 && (0, CU.jsx)("div", {
                                     className: "DocsProse",
-                                    children: (0, tD.jsx)(Mc, {
-                                      blocks: CD.returns.description
+                                    children: (0, CU.jsx)(ug, {
+                                      blocks: RU.returns.description
                                     })
                                   })]
                                 })]
-                              }), (0, tD.jsx)(Zi, {
-                                pageId: cD,
-                                anchor: ID
+                              }), (0, CU.jsx)(hE, {
+                                pageId: gU,
+                                anchor: tU
                               })]
                             });
-                            var bD
+                            var TU
                           }
 
-                          function vi(DD) {
-                            var CD;
-                            return null !== DD.defaultValue && "undefined" !== DD.defaultValue ? DD.defaultValue : null !== (CD = DD.example) && void 0 !== CD ? CD : "value"
+                          function eE(UU) {
+                            var RU;
+                            return null !== UU.defaultValue && "undefined" !== UU.defaultValue ? UU.defaultValue : null !== (RU = UU.example) && void 0 !== RU ? RU : "value"
                           }
 
-                          function Ni(DD) {
+                          function WE(UU) {
                             let {
-                              setting: CD,
-                              pageId: cD,
-                              anchor: ID,
-                              setterSnippet: pD
-                            } = DD;
-                            const iD = null === CD.defaultValue ? null : vC(CD.defaultValue);
-                            return (0, tD.jsxs)("article", {
+                              setting: RU,
+                              pageId: gU,
+                              anchor: tU,
+                              setterSnippet: pU
+                            } = UU;
+                            const EU = null === RU.defaultValue ? null : eR(RU.defaultValue);
+                            return (0, CU.jsxs)("article", {
                               className: "DocsCard DocsSettingCard",
-                              children: [(0, tD.jsxs)("header", {
+                              children: [(0, CU.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, tD.jsx)(wc, {
+                                children: [(0, CU.jsx)(Kg, {
                                   level: 2,
-                                  text: CD.name,
-                                  anchor: ID,
+                                  text: RU.name,
+                                  anchor: tU,
                                   className: "DocsCardTitle"
-                                }), (0, tD.jsx)(gD, {
-                                  text: pD(CD.name, vi(CD)),
+                                }), (0, CU.jsx)(fU, {
+                                  text: pU(RU.name, eE(RU)),
                                   label: "Copy setter",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, tD.jsxs)("dl", {
+                              }), (0, CU.jsxs)("dl", {
                                 className: "DocsSettingFacts",
-                                children: [(0, tD.jsxs)("div", {
-                                  children: [(0, tD.jsx)("dt", {
+                                children: [(0, CU.jsxs)("div", {
+                                  children: [(0, CU.jsx)("dt", {
                                     children: "Type"
-                                  }), (0, tD.jsx)("dd", {
-                                    children: (0, tD.jsx)(HC, {
-                                      type: CD.type
+                                  }), (0, CU.jsx)("dd", {
+                                    children: (0, CU.jsx)(nR, {
+                                      type: RU.type
                                     })
                                   })]
-                                }), null !== CD.defaultValue && (0, tD.jsxs)("div", {
-                                  children: [(0, tD.jsx)("dt", {
+                                }), null !== RU.defaultValue && (0, CU.jsxs)("div", {
+                                  children: [(0, CU.jsx)("dt", {
                                     children: "Default"
-                                  }), (0, tD.jsx)("dd", {
-                                    children: (0, tD.jsxs)("code", {
+                                  }), (0, CU.jsx)("dd", {
+                                    children: (0, CU.jsxs)("code", {
                                       className: "DocsInlineCode DocsDefaultValue",
-                                      children: [iD && (0, tD.jsx)(NC, {
-                                        colour: iD
-                                      }), CD.defaultValue]
+                                      children: [EU && (0, CU.jsx)(WR, {
+                                        colour: EU
+                                      }), RU.defaultValue]
                                     })
                                   })]
-                                }), null !== CD.example && (0, tD.jsxs)("div", {
-                                  children: [(0, tD.jsx)("dt", {
+                                }), null !== RU.example && (0, CU.jsxs)("div", {
+                                  children: [(0, CU.jsx)("dt", {
                                     children: "Example"
-                                  }), (0, tD.jsx)("dd", {
-                                    children: (0, tD.jsx)("code", {
+                                  }), (0, CU.jsx)("dd", {
+                                    children: (0, CU.jsx)("code", {
                                       className: "DocsInlineCode",
-                                      children: CD.example
+                                      children: RU.example
                                     })
                                   })]
                                 })]
-                              }), CD.description.length > 0 && (0, tD.jsx)("div", {
+                              }), RU.description.length > 0 && (0, CU.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, tD.jsx)(Mc, {
-                                  blocks: CD.description
+                                children: (0, CU.jsx)(ug, {
+                                  blocks: RU.description
                                 })
-                              }), (0, tD.jsx)(Zi, {
-                                pageId: cD,
-                                anchor: ID
+                              }), (0, CU.jsx)(hE, {
+                                pageId: gU,
+                                anchor: tU
                               })]
                             })
                           }
 
-                          function gi(DD) {
+                          function fE(UU) {
                             let {
-                              section: CD
-                            } = DD;
-                            return (0, tD.jsxs)("article", {
+                              section: RU
+                            } = UU;
+                            return (0, CU.jsxs)("article", {
                               className: "DocsCard DocsSnippetCard",
-                              children: [(0, tD.jsx)(wc, {
+                              children: [(0, CU.jsx)(Kg, {
                                 level: 2,
-                                text: CD.heading.text,
-                                anchor: CD.heading.anchor,
+                                text: RU.heading.text,
+                                anchor: RU.heading.anchor,
                                 className: "DocsCardTitle"
-                              }), (0, tD.jsx)("div", {
+                              }), (0, CU.jsx)("div", {
                                 className: "DocsProse",
-                                children: (0, tD.jsx)(Mc, {
-                                  blocks: CD.blocks
+                                children: (0, CU.jsx)(ug, {
+                                  blocks: RU.blocks
                                 })
                               })]
                             })
                           }
 
-                          function Xi(DD) {
+                          function xE(UU) {
                             let {
-                              section: CD
-                            } = DD;
-                            return (0, tD.jsxs)("section", {
+                              section: RU
+                            } = UU;
+                            return (0, CU.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, tD.jsx)(wc, {
-                                level: CD.heading.level,
-                                text: CD.heading.text,
-                                anchor: CD.heading.anchor
-                              }), (0, tD.jsx)(Mc, {
-                                blocks: CD.blocks
+                              children: [(0, CU.jsx)(Kg, {
+                                level: RU.heading.level,
+                                text: RU.heading.text,
+                                anchor: RU.heading.anchor
+                              }), (0, CU.jsx)(ug, {
+                                blocks: RU.blocks
                               })]
                             })
                           }
-                          const mi = {
+                          const mE = {
                             methods: "methods",
                             callbacks: "callbacks",
                             settings: "settings",
@@ -4862,337 +4862,337 @@ export const modules = {
                             article: "sections"
                           };
 
-                          function ni(DD) {
+                          function IE(UU) {
                             let {
-                              page: CD,
-                              section: cD
-                            } = DD;
-                            if ("methods" === CD.layout || "callbacks" === CD.layout) return (0, tD.jsx)(oi, {
-                              method: Oc(cD),
-                              pageId: CD.id,
-                              anchor: cD.heading.anchor,
-                              isCallback: "callbacks" === CD.layout
+                              page: RU,
+                              section: gU
+                            } = UU;
+                            if ("methods" === RU.layout || "callbacks" === RU.layout) return (0, CU.jsx)(QE, {
+                              method: Jg(gU),
+                              pageId: RU.id,
+                              anchor: gU.heading.anchor,
+                              isCallback: "callbacks" === RU.layout
                             });
-                            if ("settings" === CD.layout) {
-                              const DD = function(DD) {
-                                const CD = {
-                                  name: DD.heading.text,
+                            if ("settings" === RU.layout) {
+                              const UU = function(UU) {
+                                const RU = {
+                                  name: UU.heading.text,
                                   type: "",
                                   defaultValue: null,
                                   example: null,
                                   description: []
                                 };
-                                for (const ID of DD.blocks) {
-                                  var cD;
-                                  if (nc(ID)) continue;
-                                  const DD = "paragraph" === ID.kind ? ID.text.match(Pc) : null;
-                                  if (!DD) {
-                                    CD.description.push(ID);
+                                for (const tU of UU.blocks) {
+                                  var gU;
+                                  if (Ig(tU)) continue;
+                                  const UU = "paragraph" === tU.kind ? tU.text.match(wg) : null;
+                                  if (!UU) {
+                                    RU.description.push(tU);
                                     continue
                                   }
-                                  const pD = null !== (cD = mc(DD[2])) && void 0 !== cD ? cD : DD[2];
-                                  "Type" === DD[1] ? CD.type = pD : "Default" === DD[1] ? CD.defaultValue = pD : "" !== pD && (CD.example = pD)
+                                  const pU = null !== (gU = mg(UU[2])) && void 0 !== gU ? gU : UU[2];
+                                  "Type" === UU[1] ? RU.type = pU : "Default" === UU[1] ? RU.defaultValue = pU : "" !== pU && (RU.example = pU)
                                 }
-                                return CD.type ? CD : null
-                              }(cD);
-                              if (DD) return (0, tD.jsx)(Ni, {
-                                setting: DD,
-                                pageId: CD.id,
-                                anchor: cD.heading.anchor,
-                                setterSnippet: CD.setterSnippet
+                                return RU.type ? RU : null
+                              }(gU);
+                              if (UU) return (0, CU.jsx)(WE, {
+                                setting: UU,
+                                pageId: RU.id,
+                                anchor: gU.heading.anchor,
+                                setterSnippet: RU.setterSnippet
                               })
                             }
-                            return "snippets" === CD.layout ? (0, tD.jsx)(gi, {
-                              section: cD
-                            }) : "changelog" === CD.layout ? (0, tD.jsxs)("section", {
+                            return "snippets" === RU.layout ? (0, CU.jsx)(fE, {
+                              section: gU
+                            }) : "changelog" === RU.layout ? (0, CU.jsxs)("section", {
                               className: "DocsChangelogEntry",
-                              children: [(0, tD.jsx)("div", {
+                              children: [(0, CU.jsx)("div", {
                                 className: "DocsChangelogDate",
-                                children: (0, tD.jsx)(wc, {
+                                children: (0, CU.jsx)(Kg, {
                                   level: 2,
-                                  text: cD.heading.text,
-                                  anchor: cD.heading.anchor
+                                  text: gU.heading.text,
+                                  anchor: gU.heading.anchor
                                 })
-                              }), (0, tD.jsx)("div", {
+                              }), (0, CU.jsx)("div", {
                                 className: "DocsProse DocsChangelogBody",
-                                children: (0, tD.jsx)(Mc, {
-                                  blocks: Hc(cD.blocks)
+                                children: (0, CU.jsx)(ug, {
+                                  blocks: ng(gU.blocks)
                                 })
                               })]
-                            }) : CD.gallery ? (0, tD.jsxs)("section", {
+                            }) : RU.gallery ? (0, CU.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, tD.jsx)(wc, {
-                                level: cD.heading.level,
-                                text: cD.heading.text,
-                                anchor: cD.heading.anchor
-                              }), (0, tD.jsx)(UI, {
-                                kind: CD.gallery,
-                                content: RD(CD),
-                                blocks: cD.blocks
+                              children: [(0, CU.jsx)(Kg, {
+                                level: gU.heading.level,
+                                text: gU.heading.text,
+                                anchor: gU.heading.anchor
+                              }), (0, CU.jsx)(bt, {
+                                kind: RU.gallery,
+                                content: sU(RU),
+                                blocks: gU.blocks
                               })]
-                            }) : (0, tD.jsx)(Xi, {
-                              section: cD
+                            }) : (0, CU.jsx)(xE, {
+                              section: gU
                             })
                           }
 
-                          function Oi(DD) {
+                          function JE(UU) {
                             let {
-                              page: CD,
-                              onTocChange: cD
-                            } = DD;
-                            const pD = RD(CD),
-                              [iD, fD] = (0, ID.useState)(""),
-                              bD = "article" !== CD.layout,
-                              QD = oc(CD.gallery) ? CD.gallery : null,
-                              wD = null !== QD,
-                              SD = iD.trim().toLowerCase(),
-                              BD = (0, ID.useRef)(null),
-                              yD = (0, ID.useCallback)((DD => {
-                                var CD;
-                                null === (CD = BD.current) || void 0 === CD || CD.preview(DD)
+                              page: RU,
+                              onTocChange: gU
+                            } = UU;
+                            const pU = sU(RU),
+                              [EU, PU] = (0, tU.useState)(""),
+                              TU = "article" !== RU.layout,
+                              qU = Qg(RU.gallery) ? RU.gallery : null,
+                              KU = null !== qU,
+                              cU = EU.trim().toLowerCase(),
+                              GU = (0, tU.useRef)(null),
+                              jU = (0, tU.useCallback)((UU => {
+                                var RU;
+                                null === (RU = GU.current) || void 0 === RU || RU.preview(UU)
                               }), []),
-                              MD = (0, ID.useMemo)((() => {
-                                if (!CD.hasParticlePlayground) return [];
-                                const DD = Jc(pD.intro).find((DD => "names" === DD.kind && !DD.names.some((DD => null !== Gc(DD.name)))));
-                                return "names" === (null === DD || void 0 === DD ? void 0 : DD.kind) ? DD.names.map((DD => DD.name)) : []
-                              }), [CD, pD]),
-                              ZD = (0, ID.useMemo)((() => {
-                                if (!CD.hasTextPlayground) return [];
-                                const DD = pD.sections.flatMap((DD => DD.blocks.flatMap((DD => {
-                                  var CD;
-                                  return (null !== (CD = qc(DD)) && void 0 !== CD ? CD : []).flatMap((DD => GC(DD.name) ? [DD.name] : []))
+                              uU = (0, tU.useMemo)((() => {
+                                if (!RU.hasParticlePlayground) return [];
+                                const UU = ag(pU.intro).find((UU => "names" === UU.kind && !UU.names.some((UU => null !== Sg(UU.name)))));
+                                return "names" === (null === UU || void 0 === UU ? void 0 : UU.kind) ? UU.names.map((UU => UU.name)) : []
+                              }), [RU, pU]),
+                              hU = (0, tU.useMemo)((() => {
+                                if (!RU.hasTextPlayground) return [];
+                                const UU = pU.sections.flatMap((UU => UU.blocks.flatMap((UU => {
+                                  var RU;
+                                  return (null !== (RU = Zg(UU)) && void 0 !== RU ? RU : []).flatMap((UU => SR(UU.name) ? [UU.name] : []))
                                 }))));
-                                return [...new Set(DD)]
-                              }), [CD, pD]),
-                              oD = (0, ID.useMemo)((() => SD ? pD.sections.filter((DD => function(DD, CD) {
-                                return !!DD.heading.text.toLowerCase().includes(CD) || DD.blocks.some((DD => (0, PD.j)(DD).toLowerCase().includes(CD)))
-                              }(DD, SD))) : pD.sections), [pD, SD]),
-                              vD = (0, ID.useMemo)((() => function(DD, CD) {
-                                return "article" !== DD.layout ? CD.map((DD => ({
-                                  anchor: DD.heading.anchor,
-                                  text: DD.heading.text,
+                                return [...new Set(UU)]
+                              }), [RU, pU]),
+                              QU = (0, tU.useMemo)((() => cU ? pU.sections.filter((UU => function(UU, RU) {
+                                return !!UU.heading.text.toLowerCase().includes(RU) || UU.blocks.some((UU => (0, wU.h)(UU).toLowerCase().includes(RU)))
+                              }(UU, cU))) : pU.sections), [pU, cU]),
+                              eU = (0, tU.useMemo)((() => function(UU, RU) {
+                                return "article" !== UU.layout ? RU.map((UU => ({
+                                  anchor: UU.heading.anchor,
+                                  text: UU.heading.text,
                                   level: 2
-                                }))) : CD.flatMap((DD => {
-                                  const CD = DD.blocks.flatMap((DD => "heading" === DD.kind && 3 === DD.level ? [{
-                                    anchor: DD.anchor,
-                                    text: DD.text,
+                                }))) : RU.flatMap((UU => {
+                                  const RU = UU.blocks.flatMap((UU => "heading" === UU.kind && 3 === UU.level ? [{
+                                    anchor: UU.anchor,
+                                    text: UU.text,
                                     level: 3
                                   }] : []));
                                   return [{
-                                    anchor: DD.heading.anchor,
-                                    text: DD.heading.text,
+                                    anchor: UU.heading.anchor,
+                                    text: UU.heading.text,
                                     level: 2
-                                  }, ...CD]
+                                  }, ...RU]
                                 }))
-                              }(CD, oD)), [CD, oD]);
-                            return (0, ID.useEffect)((() => {
-                              cD(vD)
-                            }), [vD, cD]), (0, tD.jsxs)("article", {
+                              }(RU, QU)), [RU, QU]);
+                            return (0, tU.useEffect)((() => {
+                              gU(eU)
+                            }), [eU, gU]), (0, CU.jsxs)("article", {
                               className: "DocsPage",
-                              children: [(0, tD.jsxs)("header", {
+                              children: [(0, CU.jsxs)("header", {
                                 className: "DocsPageHeader",
-                                children: [(0, tD.jsx)("h1", {
+                                children: [(0, CU.jsx)("h1", {
                                   className: "DocsPageTitle",
-                                  children: pD.title || CD.title
-                                }), (0, tD.jsx)("p", {
+                                  children: pU.title || RU.title
+                                }), (0, CU.jsx)("p", {
                                   className: "DocsPageSummary",
-                                  children: CD.summary
-                                }), (0, tD.jsx)(eI, {
-                                  page: CD
-                                }), bD && (0, tD.jsx)("div", {
+                                  children: RU.summary
+                                }), (0, CU.jsx)(Dt, {
+                                  page: RU
+                                }), TU && (0, CU.jsx)("div", {
                                   className: "DocsPageStats",
-                                  children: (0, tD.jsxs)("span", {
-                                    children: [(0, tD.jsx)("strong", {
-                                      children: pD.sections.length
-                                    }), " ", mi[CD.layout]]
+                                  children: (0, CU.jsxs)("span", {
+                                    children: [(0, CU.jsx)("strong", {
+                                      children: pU.sections.length
+                                    }), " ", mE[RU.layout]]
                                   })
                                 })]
-                              }), "" === CD.slug && (0, tD.jsx)(qI, {}), QD && (0, tD.jsx)(VI, {
-                                kind: QD
-                              }, QD), CD.hasParticlePlayground && (0, tD.jsx)(bp, {
-                                ref: BD,
-                                textures: MD
-                              }), !wD && pD.intro.length > 0 && (0, tD.jsx)("div", {
+                              }), "" === RU.slug && (0, CU.jsx)(Zt, {}), qU && (0, CU.jsx)(rt, {
+                                kind: qU
+                              }, qU), RU.hasParticlePlayground && (0, CU.jsx)(qp, {
+                                ref: GU,
+                                textures: uU
+                              }), !KU && pU.intro.length > 0 && (0, CU.jsx)("div", {
                                 className: "DocsProse DocsPageIntro",
-                                children: CD.gallery ? (0, tD.jsx)(vI.Provider, {
-                                  value: CD.hasParticlePlayground ? yD : null,
-                                  children: (0, tD.jsx)(UI, {
-                                    kind: CD.gallery,
-                                    content: pD,
-                                    blocks: pD.intro
+                                children: RU.gallery ? (0, CU.jsx)(et.Provider, {
+                                  value: RU.hasParticlePlayground ? jU : null,
+                                  children: (0, CU.jsx)(bt, {
+                                    kind: RU.gallery,
+                                    content: pU,
+                                    blocks: pU.intro
                                   })
-                                }) : (0, tD.jsx)(Mc, {
-                                  blocks: Hc(pD.intro)
+                                }) : (0, CU.jsx)(ug, {
+                                  blocks: ng(pU.intro)
                                 })
-                              }), CD.hasTextPlayground && (0, tD.jsx)(Op, {
-                                fontAwesomeIcons: ZD
-                              }), CD.hasVoicePlayground && (0, tD.jsx)(rp, {}), CD.childPageIds && (0, tD.jsx)(qI, {
-                                cards: CD.childPageIds.map((DD => ({
-                                  pageId: DD
+                              }), RU.hasTextPlayground && (0, CU.jsx)(np, {
+                                fontAwesomeIcons: hU
+                              }), RU.hasVoicePlayground && (0, CU.jsx)(lp, {}), RU.childPageIds && (0, CU.jsx)(Zt, {
+                                cards: RU.childPageIds.map((UU => ({
+                                  pageId: UU
                                 }))),
-                                label: CD.title
-                              }), bD && (0, tD.jsx)(gc, {
+                                label: RU.title
+                              }), TU && (0, CU.jsx)(fg, {
                                 className: "DocsFilterBar",
-                                value: iD,
-                                placeholder: `Filter ${pD.sections.length} ${mi[CD.layout]}\u2026`,
-                                label: `Filter ${mi[CD.layout]}`,
-                                onChange: fD,
-                                count: SD ? {
-                                  visible: oD.length,
-                                  total: pD.sections.length
+                                value: EU,
+                                placeholder: `Filter ${pU.sections.length} ${mE[RU.layout]}\u2026`,
+                                label: `Filter ${mE[RU.layout]}`,
+                                onChange: PU,
+                                count: cU ? {
+                                  visible: QU.length,
+                                  total: pU.sections.length
                                 } : null
-                              }), !wD && (0, tD.jsxs)("div", {
-                                className: `DocsSections Layout-${CD.layout}`,
-                                children: [oD.map((DD => (0, tD.jsx)(ni, {
-                                  page: CD,
-                                  section: DD
-                                }, DD.heading.anchor))), 0 === oD.length && (0, tD.jsxs)("p", {
+                              }), !KU && (0, CU.jsxs)("div", {
+                                className: `DocsSections Layout-${RU.layout}`,
+                                children: [QU.map((UU => (0, CU.jsx)(IE, {
+                                  page: RU,
+                                  section: UU
+                                }, UU.heading.anchor))), 0 === QU.length && (0, CU.jsxs)("p", {
                                   className: "DocsEmpty",
-                                  children: ["No ", mi[CD.layout], " match \u201c", iD, "\u201d."]
+                                  children: ["No ", mE[RU.layout], " match \u201c", EU, "\u201d."]
                                 })]
                               })]
                             })
                           }
-                          const Pi = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
+                          const wE = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
 
-                          function Hi(DD) {
+                          function nE(UU) {
                             let {
-                              entry: CD,
-                              isActive: cD,
-                              onNavigate: ID,
-                              label: pD,
-                              children: fD
-                            } = DD;
-                            return (0, tD.jsx)("a", {
-                              href: `#${CD.anchor}`,
-                              "aria-label": pD,
-                              className: iD()(`Level${CD.level}`, {
-                                Active: cD
+                              entry: RU,
+                              isActive: gU,
+                              onNavigate: tU,
+                              label: pU,
+                              children: PU
+                            } = UU;
+                            return (0, CU.jsx)("a", {
+                              href: `#${RU.anchor}`,
+                              "aria-label": pU,
+                              className: EU()(`Level${RU.level}`, {
+                                Active: gU
                               }),
-                              "aria-current": cD ? "location" : void 0,
-                              onClick: DD => {
-                                DD.preventDefault(), ID(CD.anchor)
+                              "aria-current": gU ? "location" : void 0,
+                              onClick: UU => {
+                                UU.preventDefault(), tU(RU.anchor)
                               },
-                              children: fD
+                              children: PU
                             })
                           }
 
-                          function Ui(DD) {
+                          function bE(UU) {
                             let {
-                              toc: CD,
-                              activeAnchor: cD,
-                              onNavigate: pD
-                            } = DD;
-                            const fD = Math.max(0, CD.findIndex((DD => DD.anchor === cD))),
-                              bD = (0, ID.useRef)(null),
-                              QD = (0, ID.useRef)(!1);
-                            (0, ID.useEffect)((() => {
-                              var DD, cD;
-                              const ID = null === (DD = bD.current) || void 0 === DD ? void 0 : DD.closest(".DocsToc"),
-                                pD = null === (cD = bD.current) || void 0 === cD ? void 0 : cD.querySelector(".DocsTimelineNotch.Active");
-                              if (!ID || !pD) return;
-                              let iD = 0;
-                              if (fD === CD.length - 1) iD = ID.scrollHeight;
-                              else if (fD > 0) {
-                                const DD = ID.getBoundingClientRect(),
-                                  CD = pD.getBoundingClientRect();
-                                iD = ID.scrollTop + CD.top + CD.height / 2 - (DD.top + ID.clientHeight / 2)
+                              toc: RU,
+                              activeAnchor: gU,
+                              onNavigate: pU
+                            } = UU;
+                            const PU = Math.max(0, RU.findIndex((UU => UU.anchor === gU))),
+                              TU = (0, tU.useRef)(null),
+                              qU = (0, tU.useRef)(!1);
+                            (0, tU.useEffect)((() => {
+                              var UU, gU;
+                              const tU = null === (UU = TU.current) || void 0 === UU ? void 0 : UU.closest(".DocsToc"),
+                                pU = null === (gU = TU.current) || void 0 === gU ? void 0 : gU.querySelector(".DocsTimelineNotch.Active");
+                              if (!tU || !pU) return;
+                              let EU = 0;
+                              if (PU === RU.length - 1) EU = tU.scrollHeight;
+                              else if (PU > 0) {
+                                const UU = tU.getBoundingClientRect(),
+                                  RU = pU.getBoundingClientRect();
+                                EU = tU.scrollTop + RU.top + RU.height / 2 - (UU.top + tU.clientHeight / 2)
                               }
-                              ID.scrollTo({
-                                top: iD,
-                                behavior: QD.current ? "smooth" : "auto"
-                              }), QD.current = !0
-                            }), [fD, CD.length]);
-                            const wD = [];
-                            return CD.forEach(((DD, CD) => {
-                              var cD, ID, pD;
-                              const iD = function(DD) {
-                                  const CD = DD.trim().match(Pi);
-                                  return CD ? {
-                                    day: CD[1],
-                                    month: `${CD[2]} ${CD[3]}`
+                              tU.scrollTo({
+                                top: EU,
+                                behavior: qU.current ? "smooth" : "auto"
+                              }), qU.current = !0
+                            }), [PU, RU.length]);
+                            const KU = [];
+                            return RU.forEach(((UU, RU) => {
+                              var gU, tU, pU;
+                              const EU = function(UU) {
+                                  const RU = UU.trim().match(wE);
+                                  return RU ? {
+                                    day: RU[1],
+                                    month: `${RU[2]} ${RU[3]}`
                                   } : null
-                                }(DD.text),
-                                fD = null !== (cD = null === iD || void 0 === iD ? void 0 : iD.month) && void 0 !== cD ? cD : null;
-                              null !== fD && (null === (ID = wD.at(-1)) || void 0 === ID ? void 0 : ID.month) === fD || wD.push({
-                                month: fD,
+                                }(UU.text),
+                                PU = null !== (gU = null === EU || void 0 === EU ? void 0 : EU.month) && void 0 !== gU ? gU : null;
+                              null !== PU && (null === (tU = KU.at(-1)) || void 0 === tU ? void 0 : tU.month) === PU || KU.push({
+                                month: PU,
                                 entries: []
-                              }), wD.at(-1).entries.push({
-                                entry: DD,
-                                day: null !== (pD = null === iD || void 0 === iD ? void 0 : iD.day) && void 0 !== pD ? pD : null,
-                                index: CD
+                              }), KU.at(-1).entries.push({
+                                entry: UU,
+                                day: null !== (pU = null === EU || void 0 === EU ? void 0 : EU.day) && void 0 !== pU ? pU : null,
+                                index: RU
                               })
-                            })), (0, tD.jsx)("ol", {
-                              ref: bD,
+                            })), (0, CU.jsx)("ol", {
+                              ref: TU,
                               className: "DocsTimeline",
-                              children: wD.map((DD => {
+                              children: KU.map((UU => {
                                 let {
-                                  month: CD,
-                                  entries: cD
-                                } = DD;
-                                return (0, tD.jsxs)("li", {
+                                  month: RU,
+                                  entries: gU
+                                } = UU;
+                                return (0, CU.jsxs)("li", {
                                   className: "DocsTimelineMonth",
-                                  children: [CD && (0, tD.jsx)("span", {
+                                  children: [RU && (0, CU.jsx)("span", {
                                     className: "DocsTimelineMonthName",
-                                    children: CD
-                                  }), (0, tD.jsx)("ol", {
-                                    children: cD.map((DD => {
+                                    children: RU
+                                  }), (0, CU.jsx)("ol", {
+                                    children: gU.map((UU => {
                                       let {
-                                        entry: CD,
-                                        day: cD,
-                                        index: ID
-                                      } = DD;
-                                      return (0, tD.jsx)("li", {
-                                        className: iD()("DocsTimelineNotch", {
-                                          Passed: ID < fD,
-                                          Active: ID === fD
+                                        entry: RU,
+                                        day: gU,
+                                        index: tU
+                                      } = UU;
+                                      return (0, CU.jsx)("li", {
+                                        className: EU()("DocsTimelineNotch", {
+                                          Passed: tU < PU,
+                                          Active: tU === PU
                                         }),
-                                        children: (0, tD.jsx)(Hi, {
-                                          entry: CD,
-                                          isActive: ID === fD,
-                                          onNavigate: pD,
-                                          label: CD.text,
-                                          children: (0, tD.jsx)("span", {
+                                        children: (0, CU.jsx)(nE, {
+                                          entry: RU,
+                                          isActive: tU === PU,
+                                          onNavigate: pU,
+                                          label: RU.text,
+                                          children: (0, CU.jsx)("span", {
                                             className: "DocsTimelineDay",
-                                            children: null !== cD && void 0 !== cD ? cD : CD.text
+                                            children: null !== gU && void 0 !== gU ? gU : RU.text
                                           })
                                         })
-                                      }, CD.anchor)
+                                      }, RU.anchor)
                                     }))
                                   })]
-                                }, cD[0].entry.anchor)
+                                }, gU[0].entry.anchor)
                               }))
                             })
                           }
 
-                          function xi(DD) {
+                          function oE(UU) {
                             let {
-                              isChangelog: CD,
-                              toc: cD,
-                              activeAnchor: ID,
-                              onNavigate: pD
-                            } = DD;
-                            return 0 === cD.length ? null : (0, tD.jsxs)(tD.Fragment, {
-                              children: [(0, tD.jsx)("div", {
+                              isChangelog: RU,
+                              toc: gU,
+                              activeAnchor: tU,
+                              onNavigate: pU
+                            } = UU;
+                            return 0 === gU.length ? null : (0, CU.jsxs)(CU.Fragment, {
+                              children: [(0, CU.jsx)("div", {
                                 className: "DocsTocTitle",
-                                children: CD ? "Updates" : "On this page"
-                              }), CD ? (0, tD.jsx)(Ui, {
-                                toc: cD,
-                                activeAnchor: ID,
-                                onNavigate: pD
-                              }) : (0, tD.jsx)("ul", {
-                                children: cD.map((DD => (0, tD.jsx)("li", {
-                                  children: (0, tD.jsx)(Hi, {
-                                    entry: DD,
-                                    isActive: DD.anchor === ID,
-                                    onNavigate: pD,
-                                    children: DD.text.replace(/`/g, "")
+                                children: RU ? "Updates" : "On this page"
+                              }), RU ? (0, CU.jsx)(bE, {
+                                toc: gU,
+                                activeAnchor: tU,
+                                onNavigate: pU
+                              }) : (0, CU.jsx)("ul", {
+                                children: gU.map((UU => (0, CU.jsx)("li", {
+                                  children: (0, CU.jsx)(nE, {
+                                    entry: UU,
+                                    isActive: UU.anchor === tU,
+                                    onNavigate: pU,
+                                    children: UU.text.replace(/`/g, "")
                                   })
-                                }, DD.anchor)))
+                                }, UU.anchor)))
                               })]
                             })
                           }
-                          const qi = {
+                          const ZE = {
                               methods: "Method",
                               callbacks: "Callback",
                               settings: "Setting",
@@ -5200,7 +5200,7 @@ export const modules = {
                               snippets: "Snippet",
                               article: "Section"
                             },
-                            Ji = {
+                            aE = {
                               icons: "Icon",
                               particles: "Particle",
                               sounds: "Sound",
@@ -5208,1086 +5208,1086 @@ export const modules = {
                               blocks: "Block",
                               items: "Item"
                             },
-                            Ki = 20,
-                            ai = 10,
-                            Vi = 40,
-                            zi = 120;
-                          let ji;
+                            YE = 20,
+                            BE = 10,
+                            VE = 40,
+                            rE = 120;
+                          let XE;
 
-                          function li(DD) {
-                            const CD = DD.gallery;
-                            if (!CD) return [];
-                            if (oc(CD)) return function(DD) {
-                              return Nc(DD).entries.map((DD => DD.name))
-                            }(CD).map((cD => ({
-                              page: DD,
-                              anchor: ac(CD, cD),
-                              title: cD,
-                              kind: Ji[CD],
+                          function vE(UU) {
+                            const RU = UU.gallery;
+                            if (!RU) return [];
+                            if (Qg(RU)) return function(UU) {
+                              return Wg(UU).entries.map((UU => UU.name))
+                            }(RU).map((gU => ({
+                              page: UU,
+                              anchor: Bg(RU, gU),
+                              title: gU,
+                              kind: aE[RU],
                               text: "",
-                              listedUnder: DD.title
+                              listedUnder: UU.title
                             })));
-                            const cD = RD(DD);
-                            return (0, PD.y)(cD).flatMap((ID => {
-                              const pD = ID.heading ? `${DD.title} \u203a ${ID.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : DD.title;
-                              return zc(CD, cD, ID.blocks).flatMap((cD => "names" !== cD.kind ? [] : cD.names.map((ID => {
-                                const iD = cD.isSongs ? "Song" : Ji[CD];
+                            const gU = sU(UU);
+                            return (0, wU.o)(gU).flatMap((tU => {
+                              const pU = tU.heading ? `${UU.title} \u203a ${tU.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : UU.title;
+                              return rg(RU, gU, tU.blocks).flatMap((gU => "names" !== gU.kind ? [] : gU.names.map((tU => {
+                                const EU = gU.isSongs ? "Song" : aE[RU];
                                 return {
-                                  page: DD,
-                                  anchor: ID.anchor,
-                                  title: ID.name,
-                                  kind: iD,
+                                  page: UU,
+                                  anchor: tU.anchor,
+                                  title: tU.name,
+                                  kind: EU,
                                   text: "",
-                                  listedUnder: pD
+                                  listedUnder: pU
                                 }
                               }))))
                             }))
                           }
 
-                          function Li(DD, CD, cD) {
-                            const ID = DD.title.toLowerCase();
-                            let pD = 0;
-                            if (ID === CD) pD = 100;
-                            else if (ID.startsWith(CD)) pD = 80;
-                            else if (ID.includes(CD)) pD = 60;
-                            else if (cD.every((DD => ID.includes(DD)))) pD = 45;
+                          function dE(UU, RU, gU) {
+                            const tU = UU.title.toLowerCase();
+                            let pU = 0;
+                            if (tU === RU) pU = 100;
+                            else if (tU.startsWith(RU)) pU = 80;
+                            else if (tU.includes(RU)) pU = 60;
+                            else if (gU.every((UU => tU.includes(UU)))) pU = 45;
                             else {
-                              if (!DD.text.toLowerCase().includes(CD)) return 0;
-                              pD = 20
+                              if (!UU.text.toLowerCase().includes(RU)) return 0;
+                              pU = 20
                             }
-                            return pD - Math.min(ID.length / 10, 9) + ("Page" === DD.kind ? 8 : "Method" === DD.kind ? 3 : 0) - (DD.listedUnder ? Ki : 0)
+                            return pU - Math.min(tU.length / 10, 9) + ("Page" === UU.kind ? 8 : "Method" === UU.kind ? 3 : 0) - (UU.listedUnder ? YE : 0)
                           }
 
-                          function Ti(DD, CD) {
-                            const cD = DD.toLowerCase().indexOf(CD),
-                              ID = Math.max(0, cD - zi / 3);
-                            return `${ID>0?"\u2026":""}${DD.slice(ID,ID+zi)}${ID+zi<DD.length?"\u2026":""}`
+                          function HE(UU, RU) {
+                            const gU = UU.toLowerCase().indexOf(RU),
+                              tU = Math.max(0, gU - rE / 3);
+                            return `${tU>0?"\u2026":""}${UU.slice(tU,tU+rE)}${tU+rE<UU.length?"\u2026":""}`
                           }
 
-                          function Gi(DD) {
+                          function SE(UU) {
                             let {
-                              text: CD,
-                              query: cD
-                            } = DD;
-                            const ID = cD ? CD.toLowerCase().indexOf(cD) : -1;
-                            return -1 === ID ? (0, tD.jsx)(tD.Fragment, {
-                              children: CD
-                            }) : (0, tD.jsxs)(tD.Fragment, {
-                              children: [CD.slice(0, ID), (0, tD.jsx)("mark", {
-                                children: CD.slice(ID, ID + cD.length)
-                              }), CD.slice(ID + cD.length)]
+                              text: RU,
+                              query: gU
+                            } = UU;
+                            const tU = gU ? RU.toLowerCase().indexOf(gU) : -1;
+                            return -1 === tU ? (0, CU.jsx)(CU.Fragment, {
+                              children: RU
+                            }) : (0, CU.jsxs)(CU.Fragment, {
+                              children: [RU.slice(0, tU), (0, CU.jsx)("mark", {
+                                children: RU.slice(tU, tU + gU.length)
+                              }), RU.slice(tU + gU.length)]
                             })
                           }
 
-                          function Ri(DD) {
+                          function sE(UU) {
                             let {
-                              basePath: CD,
-                              onClose: cD
-                            } = DD;
-                            const pD = (0, bD.x)(),
-                              [fD, QD] = (0, ID.useState)(""),
-                              [wD, SD] = (0, ID.useState)(0),
-                              BD = (0, ID.useRef)(null),
-                              yD = (0, ID.useRef)(null),
-                              MD = fD.trim().toLowerCase(),
-                              ZD = (0, ID.useMemo)((() => {
-                                const DD = (ji || (ji = lD.flatMap((DD => {
-                                  const CD = RD(DD);
+                              basePath: RU,
+                              onClose: gU
+                            } = UU;
+                            const pU = (0, TU.u)(),
+                              [PU, qU] = (0, tU.useState)(""),
+                              [KU, cU] = (0, tU.useState)(0),
+                              GU = (0, tU.useRef)(null),
+                              jU = (0, tU.useRef)(null),
+                              uU = PU.trim().toLowerCase(),
+                              hU = (0, tU.useMemo)((() => {
+                                const UU = (XE || (XE = vU.flatMap((UU => {
+                                  const RU = sU(UU);
                                   return [{
-                                    page: DD,
+                                    page: UU,
                                     anchor: "",
-                                    title: DD.title,
+                                    title: UU.title,
                                     kind: "Page",
-                                    text: DD.summary
-                                  }, ...CD.sections.flatMap((CD => {
-                                    const cD = CD.blocks.filter((DD => "paragraph" === DD.kind)).map(PD.j).join(" ").replace(/[`*]/g, ""),
-                                      ID = {
-                                        page: DD,
-                                        anchor: CD.heading.anchor,
-                                        title: CD.heading.text.replace(/`/g, ""),
-                                        kind: qi[DD.layout],
-                                        text: cD
+                                    text: UU.summary
+                                  }, ...RU.sections.flatMap((RU => {
+                                    const gU = RU.blocks.filter((UU => "paragraph" === UU.kind)).map(wU.h).join(" ").replace(/[`*]/g, ""),
+                                      tU = {
+                                        page: UU,
+                                        anchor: RU.heading.anchor,
+                                        title: RU.heading.text.replace(/`/g, ""),
+                                        kind: ZE[UU.layout],
+                                        text: gU
                                       },
-                                      pD = CD.blocks.flatMap((CD => "article" === DD.layout && "heading" === CD.kind && 3 === CD.level ? [{
-                                        page: DD,
-                                        anchor: CD.anchor,
-                                        title: CD.text.replace(/`/g, ""),
+                                      pU = RU.blocks.flatMap((RU => "article" === UU.layout && "heading" === RU.kind && 3 === RU.level ? [{
+                                        page: UU,
+                                        anchor: RU.anchor,
+                                        title: RU.text.replace(/`/g, ""),
                                         kind: "Section",
-                                        text: ID.title
+                                        text: tU.title
                                       }] : []));
-                                    return [ID, ...pD]
-                                  })), ...li(DD)]
-                                }))), ji);
-                                if (!MD) return DD.filter((DD => "Page" === DD.kind));
-                                const CD = MD.split(/\s+/);
-                                let cD = 0;
-                                return DD.map((DD => ({
-                                  entry: DD,
-                                  score: Li(DD, MD, CD)
-                                }))).filter((DD => DD.score > 0)).sort(((DD, CD) => CD.score - DD.score)).filter((DD => !DD.entry.listedUnder || (cD++, cD <= ai))).slice(0, Vi).map((DD => DD.entry))
-                              }), [MD]);
-                            (0, ID.useEffect)((() => {
-                              SD(0)
-                            }), [MD]), (0, ID.useEffect)((() => {
-                              const DD = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+                                    return [tU, ...pU]
+                                  })), ...vE(UU)]
+                                }))), XE);
+                                if (!uU) return UU.filter((UU => "Page" === UU.kind));
+                                const RU = uU.split(/\s+/);
+                                let gU = 0;
+                                return UU.map((UU => ({
+                                  entry: UU,
+                                  score: dE(UU, uU, RU)
+                                }))).filter((UU => UU.score > 0)).sort(((UU, RU) => RU.score - UU.score)).filter((UU => !UU.entry.listedUnder || (gU++, gU <= BE))).slice(0, VE).map((UU => UU.entry))
+                              }), [uU]);
+                            (0, tU.useEffect)((() => {
+                              cU(0)
+                            }), [uU]), (0, tU.useEffect)((() => {
+                              const UU = document.activeElement instanceof HTMLElement ? document.activeElement : null;
                               return () => {
-                                null === DD || void 0 === DD || DD.focus()
+                                null === UU || void 0 === UU || UU.focus()
                               }
-                            }), []), (0, ID.useEffect)((() => {
-                              var DD, CD;
-                              null === (DD = BD.current) || void 0 === DD || null === (CD = DD.querySelector(".Active")) || void 0 === CD || CD.scrollIntoView({
+                            }), []), (0, tU.useEffect)((() => {
+                              var UU, RU;
+                              null === (UU = GU.current) || void 0 === UU || null === (RU = UU.querySelector(".Active")) || void 0 === RU || RU.scrollIntoView({
                                 block: "nearest"
                               })
-                            }), [wD]);
-                            const vD = DD => {
-                              pD(WD(CD, DD.page, DD.anchor)), cD()
+                            }), [KU]);
+                            const eU = UU => {
+                              pU(iU(RU, UU.page, UU.anchor)), gU()
                             };
-                            return (0, tD.jsx)("div", {
+                            return (0, CU.jsx)("div", {
                               className: "DocsSearchOverlay",
-                              onMouseDown: DD => {
-                                DD.target === DD.currentTarget && cD()
+                              onMouseDown: UU => {
+                                UU.target === UU.currentTarget && gU()
                               },
-                              children: (0, tD.jsxs)("div", {
+                              children: (0, CU.jsxs)("div", {
                                 className: "DocsSearchDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
                                 "aria-label": "Search the docs",
-                                onMouseDown: DD => {
-                                  DD.target !== yD.current && DD.preventDefault()
+                                onMouseDown: UU => {
+                                  UU.target !== jU.current && UU.preventDefault()
                                 },
-                                onKeyDown: DD => {
-                                  if ("Escape" === DD.key) cD();
-                                  else if ("Tab" === DD.key) {
-                                    var CD;
-                                    DD.preventDefault(), null === (CD = yD.current) || void 0 === CD || CD.focus()
+                                onKeyDown: UU => {
+                                  if ("Escape" === UU.key) gU();
+                                  else if ("Tab" === UU.key) {
+                                    var RU;
+                                    UU.preventDefault(), null === (RU = jU.current) || void 0 === RU || RU.focus()
                                   }
                                 },
-                                children: [(0, tD.jsxs)("div", {
+                                children: [(0, CU.jsxs)("div", {
                                   className: "DocsSearchInputRow",
-                                  children: [(0, tD.jsx)(oD, {
+                                  children: [(0, CU.jsx)(QU, {
                                     name: "magnifying-glass"
-                                  }), (0, tD.jsx)("input", {
-                                    ref: yD,
+                                  }), (0, CU.jsx)("input", {
+                                    ref: jU,
                                     autoFocus: !0,
-                                    value: fD,
+                                    value: PU,
                                     placeholder: "Search methods, callbacks, settings and guides\u2026",
                                     "aria-label": "Search the docs",
                                     "aria-controls": "DocsSearchResults",
-                                    "aria-activedescendant": ZD.length > 0 ? `DocsSearchResult-${wD}` : void 0,
-                                    onChange: DD => {
-                                      QD(DD.target.value)
+                                    "aria-activedescendant": hU.length > 0 ? `DocsSearchResult-${KU}` : void 0,
+                                    onChange: UU => {
+                                      qU(UU.target.value)
                                     },
-                                    onKeyDown: DD => {
-                                      if ("ArrowDown" === DD.key || "ArrowUp" === DD.key) {
-                                        DD.preventDefault();
-                                        const CD = "ArrowDown" === DD.key ? 1 : -1;
-                                        SD((wD + CD + ZD.length) % Math.max(ZD.length, 1))
-                                      } else "Enter" === DD.key && ZD[wD] && vD(ZD[wD])
+                                    onKeyDown: UU => {
+                                      if ("ArrowDown" === UU.key || "ArrowUp" === UU.key) {
+                                        UU.preventDefault();
+                                        const RU = "ArrowDown" === UU.key ? 1 : -1;
+                                        cU((KU + RU + hU.length) % Math.max(hU.length, 1))
+                                      } else "Enter" === UU.key && hU[KU] && eU(hU[KU])
                                     }
-                                  }), (0, tD.jsx)("kbd", {
+                                  }), (0, CU.jsx)("kbd", {
                                     children: "Esc"
                                   })]
-                                }), (0, tD.jsxs)("ul", {
+                                }), (0, CU.jsxs)("ul", {
                                   id: "DocsSearchResults",
-                                  ref: BD,
+                                  ref: GU,
                                   className: "DocsSearchResults",
                                   role: "listbox",
-                                  children: [!MD && (0, tD.jsx)("li", {
+                                  children: [!uU && (0, CU.jsx)("li", {
                                     className: "DocsSearchHint",
                                     children: "Jump to a page"
-                                  }), ZD.map(((DD, CD) => {
-                                    var cD;
-                                    return (0, tD.jsxs)("li", {
-                                      id: `DocsSearchResult-${CD}`,
+                                  }), hU.map(((UU, RU) => {
+                                    var gU;
+                                    return (0, CU.jsxs)("li", {
+                                      id: `DocsSearchResult-${RU}`,
                                       role: "option",
-                                      "aria-selected": CD === wD,
-                                      className: iD()("DocsSearchResult", {
-                                        Active: CD === wD
+                                      "aria-selected": RU === KU,
+                                      className: EU()("DocsSearchResult", {
+                                        Active: RU === KU
                                       }),
                                       onMouseMove: () => {
-                                        SD(CD)
+                                        cU(RU)
                                       },
                                       onClick: () => {
-                                        vD(DD)
+                                        eU(UU)
                                       },
-                                      children: [(0, tD.jsx)(oD, {
-                                        name: DD.page.icon
-                                      }), (0, tD.jsxs)("div", {
+                                      children: [(0, CU.jsx)(QU, {
+                                        name: UU.page.icon
+                                      }), (0, CU.jsxs)("div", {
                                         className: "DocsSearchResultText",
-                                        children: [(0, tD.jsx)("div", {
+                                        children: [(0, CU.jsx)("div", {
                                           className: "DocsSearchResultTitle",
-                                          children: (0, tD.jsx)(Gi, {
-                                            text: DD.title,
-                                            query: MD
+                                          children: (0, CU.jsx)(SE, {
+                                            text: UU.title,
+                                            query: uU
                                           })
-                                        }), DD.text && (0, tD.jsx)("div", {
+                                        }), UU.text && (0, CU.jsx)("div", {
                                           className: "DocsSearchResultSnippet",
-                                          children: (0, tD.jsx)(Gi, {
-                                            text: Ti(DD.text, MD),
-                                            query: MD
+                                          children: (0, CU.jsx)(SE, {
+                                            text: HE(UU.text, uU),
+                                            query: uU
                                           })
                                         })]
-                                      }), (0, tD.jsx)("span", {
+                                      }), (0, CU.jsx)("span", {
                                         className: "DocsSearchResultMeta",
-                                        children: "Page" === DD.kind ? "Page" : null !== (cD = DD.listedUnder) && void 0 !== cD ? cD : `${DD.kind} \xb7 ${DD.page.title}`
+                                        children: "Page" === UU.kind ? "Page" : null !== (gU = UU.listedUnder) && void 0 !== gU ? gU : `${UU.kind} \xb7 ${UU.page.title}`
                                       })]
-                                    }, `${DD.page.id}#${DD.anchor}`)
-                                  })), MD && 0 === ZD.length && (0, tD.jsxs)("li", {
+                                    }, `${UU.page.id}#${UU.anchor}`)
+                                  })), uU && 0 === hU.length && (0, CU.jsxs)("li", {
                                     className: "DocsSearchHint",
-                                    children: ["Nothing matches \u201c", fD, "\u201d."]
+                                    children: ["Nothing matches \u201c", PU, "\u201d."]
                                   })]
                                 })]
                               })
                             })
                           }
 
-                          function ki(DD, CD) {
-                            if (CD < 10) return `${DD.toFixed(1)}s`;
-                            const cD = Math.floor(DD);
-                            return `${Math.floor(cD/60)}:${String(cD%60).padStart(2,"0")}`
+                          function yE(UU, RU) {
+                            if (RU < 10) return `${UU.toFixed(1)}s`;
+                            const gU = Math.floor(UU);
+                            return `${Math.floor(gU/60)}:${String(gU%60).padStart(2,"0")}`
                           }
 
-                          function di() {
-                            const DD = SI((DD => DD.track)),
-                              CD = SI((DD => DD.volume)),
-                              [cD, pD] = (0, ID.useState)(0),
-                              fD = (0, ID.useRef)(CI);
-                            if ((0, ID.useEffect)((() => {
-                                if (!DD) return;
-                                if (pD(tI()), "playing" !== DD.status) return;
-                                let CD = 0;
-                                const cD = () => {
-                                  pD(tI()), CD = requestAnimationFrame(cD)
+                          function kE() {
+                            const UU = ct((UU => UU.track)),
+                              RU = ct((UU => UU.volume)),
+                              [gU, pU] = (0, tU.useState)(0),
+                              PU = (0, tU.useRef)(Rt);
+                            if ((0, tU.useEffect)((() => {
+                                if (!UU) return;
+                                if (pU(Ct()), "playing" !== UU.status) return;
+                                let RU = 0;
+                                const gU = () => {
+                                  pU(Ct()), RU = requestAnimationFrame(gU)
                                 };
-                                return CD = requestAnimationFrame(cD), () => {
-                                  cancelAnimationFrame(CD)
+                                return RU = requestAnimationFrame(gU), () => {
+                                  cancelAnimationFrame(RU)
                                 }
-                              }), [DD]), !DD) return null;
-                            const bD = "paused" !== DD.status,
-                              QD = Math.min(cD, DD.duration);
-                            return (0, tD.jsx)("div", {
+                              }), [UU]), !UU) return null;
+                            const TU = "paused" !== UU.status,
+                              qU = Math.min(gU, UU.duration);
+                            return (0, CU.jsx)("div", {
                               className: "DocsSoundPlayerDock",
-                              children: (0, tD.jsxs)("section", {
+                              children: (0, CU.jsxs)("section", {
                                 className: "DocsSoundPlayer",
                                 "aria-label": "Sound player",
-                                children: [(0, tD.jsx)("button", {
+                                children: [(0, CU.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerToggle",
-                                  "aria-label": bD ? `Pause ${DD.name}` : `Play ${DD.name}`,
-                                  onClick: MI,
-                                  children: (0, tD.jsx)(oD, {
-                                    name: bD ? "pause" : "play"
+                                  "aria-label": TU ? `Pause ${UU.name}` : `Play ${UU.name}`,
+                                  onClick: ut,
+                                  children: (0, CU.jsx)(QU, {
+                                    name: TU ? "pause" : "play"
                                   })
-                                }), (0, tD.jsxs)("div", {
+                                }), (0, CU.jsxs)("div", {
                                   className: "DocsSoundPlayerTrack",
-                                  children: [(0, tD.jsxs)("div", {
+                                  children: [(0, CU.jsxs)("div", {
                                     className: "DocsSoundPlayerTitle",
-                                    children: [(0, tD.jsx)("code", {
-                                      children: DD.name
-                                    }), (0, tD.jsx)("span", {
-                                      children: DD.isSong ? "Song" : "Sound"
+                                    children: [(0, CU.jsx)("code", {
+                                      children: UU.name
+                                    }), (0, CU.jsx)("span", {
+                                      children: UU.isSong ? "Song" : "Sound"
                                     })]
-                                  }), (0, tD.jsxs)("div", {
+                                  }), (0, CU.jsxs)("div", {
                                     className: "DocsSoundPlayerScrubber",
-                                    children: [(0, tD.jsx)("span", {
-                                      children: ki(QD, DD.duration)
-                                    }), (0, tD.jsx)("input", {
+                                    children: [(0, CU.jsx)("span", {
+                                      children: yE(qU, UU.duration)
+                                    }), (0, CU.jsx)("input", {
                                       type: "range",
                                       min: 0,
-                                      max: DD.duration || 1,
+                                      max: UU.duration || 1,
                                       step: .01,
-                                      value: QD,
-                                      disabled: 0 === DD.duration,
+                                      value: qU,
+                                      disabled: 0 === UU.duration,
                                       "aria-label": "Position",
-                                      "aria-valuetext": `${ki(QD,DD.duration)} of ${ki(DD.duration,DD.duration)}`,
-                                      onChange: DD => {
-                                        const CD = Number(DD.target.value);
-                                        ! function(DD) {
-                                          var CD;
-                                          fI = DD, null === (CD = pI) || void 0 === CD || CD.seek(DD)
-                                        }(CD), pD(CD)
+                                      "aria-valuetext": `${yE(qU,UU.duration)} of ${yE(UU.duration,UU.duration)}`,
+                                      onChange: UU => {
+                                        const RU = Number(UU.target.value);
+                                        ! function(UU) {
+                                          var RU;
+                                          Pt = UU, null === (RU = pt) || void 0 === RU || RU.seek(UU)
+                                        }(RU), pU(RU)
                                       }
-                                    }), (0, tD.jsx)("span", {
-                                      children: DD.duration > 0 ? ki(DD.duration, DD.duration) : "\u2013"
+                                    }), (0, CU.jsx)("span", {
+                                      children: UU.duration > 0 ? yE(UU.duration, UU.duration) : "\u2013"
                                     })]
                                   })]
-                                }), (0, tD.jsxs)("div", {
+                                }), (0, CU.jsxs)("div", {
                                   className: "DocsSoundPlayerVolume",
-                                  children: [(0, tD.jsx)("button", {
+                                  children: [(0, CU.jsx)("button", {
                                     type: "button",
-                                    "aria-label": 0 === CD ? "Unmute" : "Mute",
+                                    "aria-label": 0 === RU ? "Unmute" : "Mute",
                                     onClick: () => {
-                                      0 === CD ? ZI(fD.current) : (fD.current = CD, ZI(0))
+                                      0 === RU ? ht(PU.current) : (PU.current = RU, ht(0))
                                     },
-                                    children: (0, tD.jsx)(oD, {
+                                    children: (0, CU.jsx)(QU, {
                                       name: "volume",
-                                      className: iD()({
-                                        Muted: 0 === CD
+                                      className: EU()({
+                                        Muted: 0 === RU
                                       })
                                     })
-                                  }), (0, tD.jsx)("input", {
+                                  }), (0, CU.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: CD,
+                                    value: RU,
                                     "aria-label": "Volume",
-                                    onChange: DD => {
-                                      ZI(Number(DD.target.value))
+                                    onChange: UU => {
+                                      ht(Number(UU.target.value))
                                     }
                                   })]
-                                }), (0, tD.jsx)("button", {
+                                }), (0, CU.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerClose",
                                   "aria-label": "Close the player",
                                   onClick: () => {
-                                    var CD;
-                                    null === (CD = document.querySelector(`[data-docs-track="${CSS.escape(cI(DD.name,DD.isSong))}"]`)) || void 0 === CD || CD.focus(), oI()
+                                    var RU;
+                                    null === (RU = document.querySelector(`[data-docs-track="${CSS.escape(gt(UU.name,UU.isSong))}"]`)) || void 0 === RU || RU.focus(), Qt()
                                   },
-                                  children: (0, tD.jsx)(oD, {
+                                  children: (0, CU.jsx)(QU, {
                                     name: "cross"
                                   })
                                 })]
                               })
                             })
                           }
-                          var Yi = cD(36);
-                          const Wi = "docsTheme",
-                            si = window.matchMedia("(prefers-color-scheme: light)");
+                          var FE = gU(34);
+                          const iE = "docsTheme",
+                            AE = window.matchMedia("(prefers-color-scheme: light)");
 
-                          function Ei(DD) {
+                          function zE(UU) {
                             let {
-                              theme: CD,
-                              onChange: cD
-                            } = DD;
-                            const ID = "dark" === CD ? "light" : "dark";
-                            return (0, tD.jsx)("button", {
+                              theme: RU,
+                              onChange: gU
+                            } = UU;
+                            const tU = "dark" === RU ? "light" : "dark";
+                            return (0, CU.jsx)("button", {
                               type: "button",
                               className: "DocsIconButton DocsThemeToggle",
-                              "aria-label": `Switch to ${ID} theme`,
-                              title: `Switch to ${ID} theme`,
+                              "aria-label": `Switch to ${tU} theme`,
+                              title: `Switch to ${tU} theme`,
                               onClick: () => {
-                                cD(ID)
+                                gU(tU)
                               },
-                              children: (0, tD.jsx)(oD, {
-                                name: "dark" === CD ? "moon" : "sun"
+                              children: (0, CU.jsx)(QU, {
+                                name: "dark" === RU ? "moon" : "sun"
                               })
                             })
                           }
-                          const ei = "https://github.com/Bloxdy/code-api",
-                            ui = "https://discord.gg/playbloxd",
-                            ri = 180,
-                            Ai = /Mac|iPhone|iPad/.test(navigator.userAgent);
+                          const ME = "https://github.com/Bloxdy/code-api",
+                            DE = "https://discord.gg/playbloxd",
+                            LE = 180,
+                            NE = /Mac|iPhone|iPad/.test(navigator.userAgent);
 
-                          function Fi(DD) {
+                          function lE(UU) {
                             let {
-                              basePath: CD,
-                              activePageId: cD,
-                              onNavigate: ID
-                            } = DD;
-                            return (0, tD.jsx)("nav", {
+                              basePath: RU,
+                              activePageId: gU,
+                              onNavigate: tU
+                            } = UU;
+                            return (0, CU.jsx)("nav", {
                               className: "DocsNav",
                               "aria-label": "Documentation",
-                              children: LD.map((DD => (0, tD.jsxs)("div", {
+                              children: dU.map((UU => (0, CU.jsxs)("div", {
                                 className: "DocsNavGroup",
-                                children: [(0, tD.jsx)("div", {
+                                children: [(0, CU.jsx)("div", {
                                   className: "DocsNavGroupTitle",
-                                  children: DD.title
-                                }), DD.pageIds.map((DD => {
-                                  var pD;
-                                  const bD = TD(DD);
-                                  return (0, tD.jsxs)(fD.d, {
-                                    to: WD(CD, bD),
-                                    className: iD()("DocsNavLink", {
-                                      Active: bD.id === cD
+                                  children: UU.title
+                                }), UU.pageIds.map((UU => {
+                                  var pU;
+                                  const TU = HU(UU);
+                                  return (0, CU.jsxs)(PU.c, {
+                                    to: iU(RU, TU),
+                                    className: EU()("DocsNavLink", {
+                                      Active: TU.id === gU
                                     }),
-                                    "aria-current": bD.id === cD ? "page" : void 0,
-                                    onClick: ID,
-                                    children: [(0, tD.jsx)(oD, {
-                                      name: bD.icon
-                                    }), (0, tD.jsx)("span", {
-                                      children: null !== (pD = bD.navTitle) && void 0 !== pD ? pD : bD.title
+                                    "aria-current": TU.id === gU ? "page" : void 0,
+                                    onClick: tU,
+                                    children: [(0, CU.jsx)(QU, {
+                                      name: TU.icon
+                                    }), (0, CU.jsx)("span", {
+                                      children: null !== (pU = TU.navTitle) && void 0 !== pU ? pU : TU.title
                                     })]
-                                  }, bD.id)
+                                  }, TU.id)
                                 }))]
-                              }, DD.title)))
+                              }, UU.title)))
                             })
                           }
 
-                          function Df(DD) {
+                          function OE(UU) {
                             let {
-                              basePath: CD,
-                              pageId: cD
-                            } = DD;
-                            const ID = LD.flatMap((DD => DD.pageIds)),
-                              pD = ID.indexOf(cD),
-                              iD = pD > 0 ? TD(ID[pD - 1]) : null,
-                              bD = pD < ID.length - 1 ? TD(ID[pD + 1]) : null;
-                            return (0, tD.jsxs)("nav", {
+                              basePath: RU,
+                              pageId: gU
+                            } = UU;
+                            const tU = dU.flatMap((UU => UU.pageIds)),
+                              pU = tU.indexOf(gU),
+                              EU = pU > 0 ? HU(tU[pU - 1]) : null,
+                              TU = pU < tU.length - 1 ? HU(tU[pU + 1]) : null;
+                            return (0, CU.jsxs)("nav", {
                               className: "DocsPager",
                               "aria-label": "Pages",
-                              children: [iD ? (0, tD.jsxs)(fD.d, {
+                              children: [EU ? (0, CU.jsxs)(PU.c, {
                                 className: "DocsPagerLink Previous",
-                                to: WD(CD, iD),
-                                children: [(0, tD.jsx)("span", {
+                                to: iU(RU, EU),
+                                children: [(0, CU.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Previous"
-                                }), (0, tD.jsx)("span", {
+                                }), (0, CU.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: iD.title
+                                  children: EU.title
                                 })]
-                              }) : (0, tD.jsx)("span", {}), bD && (0, tD.jsxs)(fD.d, {
+                              }) : (0, CU.jsx)("span", {}), TU && (0, CU.jsxs)(PU.c, {
                                 className: "DocsPagerLink Next",
-                                to: WD(CD, bD),
-                                children: [(0, tD.jsx)("span", {
+                                to: iU(RU, TU),
+                                children: [(0, CU.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Next"
-                                }), (0, tD.jsx)("span", {
+                                }), (0, CU.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: bD.title
+                                  children: TU.title
                                 })]
                               })]
                             })
                           }
 
-                          function Cf(DD) {
+                          function UP(UU) {
                             let {
-                              basePath: CD,
-                              embedded: cD = !1
-                            } = DD;
+                              basePath: RU,
+                              embedded: gU = !1
+                            } = UU;
                             const {
-                              pageSlug: pD = ""
-                            } = (0, bD.F)(), wD = (0, bD.w)(), SD = (0, bD.x)(), BD = (yD = pD, lD.find((DD => DD.slug === yD)));
-                            var yD;
-                            const [MD, ZD] = function() {
-                              const [DD, CD] = (0, ID.useState)((() => {
-                                const DD = Yi.h.getItem(Wi);
-                                return "dark" === DD || "light" === DD ? DD : null
-                              })), [cD, pD] = (0, ID.useState)(si.matches ? "light" : "dark");
-                              return (0, ID.useEffect)((() => {
-                                const DD = () => {
-                                  pD(si.matches ? "light" : "dark")
+                              pageSlug: pU = ""
+                            } = (0, TU.y)(), KU = (0, TU.s)(), cU = (0, TU.u)(), GU = (jU = pU, vU.find((UU => UU.slug === jU)));
+                            var jU;
+                            const [uU, hU] = function() {
+                              const [UU, RU] = (0, tU.useState)((() => {
+                                const UU = FE.k.getItem(iE);
+                                return "dark" === UU || "light" === UU ? UU : null
+                              })), [gU, pU] = (0, tU.useState)(AE.matches ? "light" : "dark");
+                              return (0, tU.useEffect)((() => {
+                                const UU = () => {
+                                  pU(AE.matches ? "light" : "dark")
                                 };
-                                return si.addEventListener("change", DD), () => {
-                                  si.removeEventListener("change", DD)
+                                return AE.addEventListener("change", UU), () => {
+                                  AE.removeEventListener("change", UU)
                                 }
-                              }), []), [null !== DD && void 0 !== DD ? DD : cD, DD => {
-                                Yi.h.setItem(Wi, DD), CD(DD)
+                              }), []), [null !== UU && void 0 !== UU ? UU : gU, UU => {
+                                FE.k.setItem(iE, UU), RU(UU)
                               }]
-                            }(), [vD, ND] = (0, ID.useState)(null), [gD, XD] = (0, ID.useState)(!1), [mD, nD] = (0, ID.useState)(!1), [OD, HD] = (0, ID.useState)([]), UD = function(DD, CD) {
-                              const [cD, pD] = (0, ID.useState)("");
-                              return (0, ID.useEffect)((() => {
-                                if (!CD) return;
-                                let cD = 0;
-                                const ID = () => {
-                                    var ID, iD;
-                                    cD = 0;
-                                    const fD = CD.getBoundingClientRect().top + ri;
-                                    let bD = null !== (ID = null === (iD = DD[0]) || void 0 === iD ? void 0 : iD.anchor) && void 0 !== ID ? ID : "";
-                                    for (const CD of DD) {
-                                      const DD = document.getElementById(CD.anchor);
-                                      DD && DD.getBoundingClientRect().top <= fD && (bD = CD.anchor)
+                            }(), [eU, WU] = (0, tU.useState)(null), [fU, xU] = (0, tU.useState)(!1), [mU, IU] = (0, tU.useState)(!1), [JU, nU] = (0, tU.useState)([]), bU = function(UU, RU) {
+                              const [gU, pU] = (0, tU.useState)("");
+                              return (0, tU.useEffect)((() => {
+                                if (!RU) return;
+                                let gU = 0;
+                                const tU = () => {
+                                    var tU, EU;
+                                    gU = 0;
+                                    const PU = RU.getBoundingClientRect().top + LE;
+                                    let TU = null !== (tU = null === (EU = UU[0]) || void 0 === EU ? void 0 : EU.anchor) && void 0 !== tU ? tU : "";
+                                    for (const RU of UU) {
+                                      const UU = document.getElementById(RU.anchor);
+                                      UU && UU.getBoundingClientRect().top <= PU && (TU = RU.anchor)
                                     }
-                                    CD.scrollTop + CD.clientHeight >= CD.scrollHeight - 2 && CD.scrollTop > 0 && DD.length > 0 && (bD = DD[DD.length - 1].anchor), pD(bD)
+                                    RU.scrollTop + RU.clientHeight >= RU.scrollHeight - 2 && RU.scrollTop > 0 && UU.length > 0 && (TU = UU[UU.length - 1].anchor), pU(TU)
                                   },
-                                  iD = () => {
-                                    cD || (cD = requestAnimationFrame(ID))
+                                  EU = () => {
+                                    gU || (gU = requestAnimationFrame(tU))
                                   };
-                                return ID(), CD.addEventListener("scroll", iD, {
+                                return tU(), RU.addEventListener("scroll", EU, {
                                   passive: !0
                                 }), () => {
-                                  cancelAnimationFrame(cD), CD.removeEventListener("scroll", iD)
+                                  cancelAnimationFrame(gU), RU.removeEventListener("scroll", EU)
                                 }
-                              }), [DD, CD]), cD
-                            }(OD, vD), xD = "" === pD && wD.hash ? function(DD) {
-                              const CD = (0, PD.s)(DD);
-                              if (kD(TD("welcome"), CD)) return null;
-                              const cD = Object.hasOwn(YD, CD) ? YD[CD] : null;
-                              if (cD) return {
-                                page: TD(cD.pageId),
-                                anchor: cD.anchor
+                              }), [UU, RU]), gU
+                            }(JU, eU), oU = "" === pU && KU.hash ? function(UU) {
+                              const RU = (0, wU.m)(UU);
+                              if (yU(HU("welcome"), RU)) return null;
+                              const gU = Object.hasOwn(FU, RU) ? FU[RU] : null;
+                              if (gU) return {
+                                page: HU(gU.pageId),
+                                anchor: gU.anchor
                               };
-                              const ID = TD("readme");
-                              return kD(ID, CD) ? {
-                                page: ID,
-                                anchor: CD
-                              } : dD(`#${CD}`)
-                            }(wD.hash) : null;
-                            (0, ID.useEffect)((() => (QD.d.set({
+                              const tU = HU("readme");
+                              return yU(tU, RU) ? {
+                                page: tU,
+                                anchor: RU
+                              } : kU(`#${RU}`)
+                            }(KU.hash) : null;
+                            (0, tU.useEffect)((() => (qU.b.set({
                               musicOnFromPage: !1
                             }), () => {
-                              QD.d.set({
+                              qU.b.set({
                                 musicOnFromPage: !0
-                              }), oI()
-                            })), []), (0, ID.useEffect)((() => {
-                              const DD = DD => {
-                                const CD = DD.target;
-                                if (CD.closest(".DocsTextDialog")) return;
-                                const cD = CD.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(CD.tagName);
-                                "k" === DD.key && (DD.metaKey || DD.ctrlKey) || "/" === DD.key && !cD ? (DD.preventDefault(), nD(!0)) : "Escape" === DD.key && XD(!1)
+                              }), Qt()
+                            })), []), (0, tU.useEffect)((() => {
+                              const UU = UU => {
+                                const RU = UU.target;
+                                if (RU.closest(".DocsTextDialog")) return;
+                                const gU = RU.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(RU.tagName);
+                                "k" === UU.key && (UU.metaKey || UU.ctrlKey) || "/" === UU.key && !gU ? (UU.preventDefault(), IU(!0)) : "Escape" === UU.key && xU(!1)
                               };
-                              return window.addEventListener("keydown", DD), () => {
-                                window.removeEventListener("keydown", DD)
+                              return window.addEventListener("keydown", UU), () => {
+                                window.removeEventListener("keydown", UU)
                               }
                             }), []);
-                            const qD = (0, ID.useRef)(null);
-                            (0, ID.useLayoutEffect)((() => {
-                              var DD, CD;
-                              if (!vD) return;
-                              const cD = qD.current === wD.pathname;
-                              qD.current = wD.pathname;
-                              const ID = (0, PD.s)(wD.hash),
-                                pD = ID ? document.getElementById(ID) : null;
-                              if (null === (DD = vD.querySelector(".DocsTargeted")) || void 0 === DD || DD.classList.remove("DocsTargeted"), null === pD || void 0 === pD || null === (CD = pD.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === CD || CD.classList.add("DocsTargeted"), pD) {
-                                var iD;
-                                const DD = pD.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
-                                (null !== (iD = pD.closest(".DocsChangelogEntry")) && void 0 !== iD ? iD : pD).scrollIntoView({
-                                  block: DD ? "center" : "start",
-                                  behavior: cD ? "smooth" : "auto"
+                            const ZU = (0, tU.useRef)(null);
+                            (0, tU.useLayoutEffect)((() => {
+                              var UU, RU;
+                              if (!eU) return;
+                              const gU = ZU.current === KU.pathname;
+                              ZU.current = KU.pathname;
+                              const tU = (0, wU.m)(KU.hash),
+                                pU = tU ? document.getElementById(tU) : null;
+                              if (null === (UU = eU.querySelector(".DocsTargeted")) || void 0 === UU || UU.classList.remove("DocsTargeted"), null === pU || void 0 === pU || null === (RU = pU.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === RU || RU.classList.add("DocsTargeted"), pU) {
+                                var EU;
+                                const UU = pU.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
+                                (null !== (EU = pU.closest(".DocsChangelogEntry")) && void 0 !== EU ? EU : pU).scrollIntoView({
+                                  block: UU ? "center" : "start",
+                                  behavior: gU ? "smooth" : "auto"
                                 })
-                              } else cD || vD.scrollTo({
+                              } else gU || eU.scrollTo({
                                 top: 0
                               })
-                            }), [vD, wD.pathname, wD.hash, wD.key]);
-                            const JD = (0, ID.useCallback)((() => {
-                                XD(!1)
+                            }), [eU, KU.pathname, KU.hash, KU.key]);
+                            const aU = (0, tU.useCallback)((() => {
+                                xU(!1)
                               }), []),
-                              KD = (0, ID.useCallback)((DD => {
-                                SD({
-                                  hash: DD
+                              YU = (0, tU.useCallback)((UU => {
+                                cU({
+                                  hash: UU
                                 })
-                              }), [SD]);
-                            if (xD) return (0, tD.jsx)(bD.c, {
+                              }), [cU]);
+                            if (oU) return (0, CU.jsx)(TU.d, {
                               replace: !0,
-                              to: WD(CD, xD.page, xD.anchor)
+                              to: iU(RU, oU.page, oU.anchor)
                             });
-                            if (!BD) return (0, tD.jsx)(bD.c, {
+                            if (!GU) return (0, CU.jsx)(TU.d, {
                               replace: !0,
-                              to: CD
+                              to: RU
                             });
-                            const aD = cD ? "div" : "main";
-                            return (0, tD.jsx)(MC.Provider, {
-                              value: CD,
-                              children: (0, tD.jsx)(tC.Provider, {
-                                value: vD,
-                                children: (0, tD.jsxs)("div", {
-                                  ref: ND,
-                                  className: iD()("DocsSite", {
-                                    Embedded: cD,
-                                    NavOpen: gD
+                            const BU = gU ? "div" : "main";
+                            return (0, CU.jsx)(uR.Provider, {
+                              value: RU,
+                              children: (0, CU.jsx)(CR.Provider, {
+                                value: eU,
+                                children: (0, CU.jsxs)("div", {
+                                  ref: WU,
+                                  className: EU()("DocsSite", {
+                                    Embedded: gU,
+                                    NavOpen: fU
                                   }),
-                                  "data-theme": MD,
-                                  children: [(0, tD.jsxs)("header", {
+                                  "data-theme": uU,
+                                  children: [(0, CU.jsxs)("header", {
                                     className: "DocsTopBar",
-                                    children: [(0, tD.jsx)("button", {
+                                    children: [(0, CU.jsx)("button", {
                                       type: "button",
                                       className: "DocsIconButton DocsMenuButton",
-                                      "aria-label": gD ? "Close menu" : "Open menu",
-                                      "aria-expanded": gD,
+                                      "aria-label": fU ? "Close menu" : "Open menu",
+                                      "aria-expanded": fU,
                                       onClick: () => {
-                                        XD(!gD)
+                                        xU(!fU)
                                       },
-                                      children: (0, tD.jsx)(oD, {
-                                        name: gD ? "cross" : "menu"
+                                      children: (0, CU.jsx)(QU, {
+                                        name: fU ? "cross" : "menu"
                                       })
-                                    }), (0, tD.jsxs)(fD.d, {
-                                      to: CD,
+                                    }), (0, CU.jsxs)(PU.c, {
+                                      to: RU,
                                       className: "DocsBrand",
-                                      children: [(0, tD.jsx)("img", {
+                                      children: [(0, CU.jsx)("img", {
                                         src: "/favicon.svg",
                                         alt: "",
                                         width: 28,
                                         height: 28
-                                      }), (0, tD.jsx)("span", {
+                                      }), (0, CU.jsx)("span", {
                                         className: "DocsBrandName",
                                         children: "Bloxd"
-                                      }), (0, tD.jsx)("span", {
+                                      }), (0, CU.jsx)("span", {
                                         className: "DocsBrandTag",
                                         children: "Code API"
                                       })]
-                                    }), (0, tD.jsxs)("button", {
+                                    }), (0, CU.jsxs)("button", {
                                       type: "button",
                                       className: "DocsSearchTrigger",
                                       onClick: () => {
-                                        nD(!0)
+                                        IU(!0)
                                       },
-                                      children: [(0, tD.jsx)(oD, {
+                                      children: [(0, CU.jsx)(QU, {
                                         name: "magnifying-glass"
-                                      }), (0, tD.jsx)("span", {
+                                      }), (0, CU.jsx)("span", {
                                         className: "DocsSearchTriggerLabel",
                                         children: "Search docs"
-                                      }), (0, tD.jsxs)("kbd", {
-                                        children: [Ai ? "\u2318" : "Ctrl", " K"]
+                                      }), (0, CU.jsxs)("kbd", {
+                                        children: [NE ? "\u2318" : "Ctrl", " K"]
                                       })]
-                                    }), (0, tD.jsxs)("div", {
+                                    }), (0, CU.jsxs)("div", {
                                       className: "DocsTopBarLinks",
-                                      children: [(0, tD.jsxs)("a", {
-                                        href: ui,
+                                      children: [(0, CU.jsxs)("a", {
+                                        href: DE,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, tD.jsx)(oD, {
+                                        children: [(0, CU.jsx)(QU, {
                                           name: "discord"
-                                        }), (0, tD.jsx)("span", {
+                                        }), (0, CU.jsx)("span", {
                                           children: "Discord"
                                         })]
-                                      }), (0, tD.jsxs)("a", {
-                                        href: ei,
+                                      }), (0, CU.jsxs)("a", {
+                                        href: ME,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, tD.jsx)(oD, {
+                                        children: [(0, CU.jsx)(QU, {
                                           name: "external-link"
-                                        }), (0, tD.jsx)("span", {
+                                        }), (0, CU.jsx)("span", {
                                           children: "GitHub"
                                         })]
-                                      }), !cD && (0, tD.jsxs)(fD.d, {
+                                      }), !gU && (0, CU.jsxs)(PU.c, {
                                         to: "/",
                                         className: "DocsTopBarLink DocsPlayLink",
-                                        children: [(0, tD.jsx)(oD, {
+                                        children: [(0, CU.jsx)(QU, {
                                           name: "play"
-                                        }), (0, tD.jsx)("span", {
+                                        }), (0, CU.jsx)("span", {
                                           children: "Play Bloxd"
                                         })]
-                                      }), (0, tD.jsx)(Ei, {
-                                        theme: MD,
-                                        onChange: ZD
+                                      }), (0, CU.jsx)(zE, {
+                                        theme: uU,
+                                        onChange: hU
                                       })]
                                     })]
-                                  }), (0, tD.jsxs)("div", {
+                                  }), (0, CU.jsxs)("div", {
                                     className: "DocsSiteBody",
-                                    children: [(0, tD.jsx)("aside", {
+                                    children: [(0, CU.jsx)("aside", {
                                       className: "DocsSidebar",
-                                      children: (0, tD.jsx)(Fi, {
-                                        basePath: CD,
-                                        activePageId: BD.id,
-                                        onNavigate: JD
+                                      children: (0, CU.jsx)(lE, {
+                                        basePath: RU,
+                                        activePageId: GU.id,
+                                        onNavigate: aU
                                       })
-                                    }), (0, tD.jsx)("div", {
+                                    }), (0, CU.jsx)("div", {
                                       className: "DocsNavScrim",
-                                      onClick: JD
-                                    }), (0, tD.jsxs)(aD, {
+                                      onClick: aU
+                                    }), (0, CU.jsxs)(BU, {
                                       className: "DocsMain",
-                                      children: [(0, tD.jsx)(Oi, {
-                                        page: BD,
-                                        onTocChange: HD
-                                      }, BD.id), (0, tD.jsx)(Df, {
-                                        basePath: CD,
-                                        pageId: BD.id
+                                      children: [(0, CU.jsx)(JE, {
+                                        page: GU,
+                                        onTocChange: nU
+                                      }, GU.id), (0, CU.jsx)(OE, {
+                                        basePath: RU,
+                                        pageId: GU.id
                                       })]
-                                    }), (0, tD.jsx)("aside", {
-                                      className: iD()("DocsToc", {
-                                        Timeline: "changelog" === BD.layout
+                                    }), (0, CU.jsx)("aside", {
+                                      className: EU()("DocsToc", {
+                                        Timeline: "changelog" === GU.layout
                                       }),
                                       "aria-label": "On this page",
-                                      children: (0, tD.jsx)(xi, {
-                                        isChangelog: "changelog" === BD.layout,
-                                        toc: OD,
-                                        activeAnchor: UD,
-                                        onNavigate: KD
+                                      children: (0, CU.jsx)(oE, {
+                                        isChangelog: "changelog" === GU.layout,
+                                        toc: JU,
+                                        activeAnchor: bU,
+                                        onNavigate: YU
                                       })
                                     })]
-                                  }), (0, tD.jsx)(di, {}), mD && (0, tD.jsx)(Ri, {
-                                    basePath: CD,
+                                  }), (0, CU.jsx)(kE, {}), mU && (0, CU.jsx)(sE, {
+                                    basePath: RU,
                                     onClose: () => {
-                                      nD(!1)
+                                      IU(!1)
                                     }
                                   })]
                                 })
                               })
                             })
                           }
-                        }, 4534: (DD, CD, cD) => {
-                          cD.d(CD, {
-                            B: () => MD,
-                            C: () => yD,
-                            e: () => ID,
-                            i: () => fD,
-                            j: () => oD,
-                            l: () => ZD,
-                            o: () => bD,
-                            s: () => pD,
-                            u: () => iD,
-                            y: () => tD
+                        }, 4396: (UU, RU, gU) => {
+                          gU.d(RU, {
+                            e: () => tU,
+                            g: () => PU,
+                            h: () => QU,
+                            k: () => hU,
+                            l: () => TU,
+                            m: () => pU,
+                            n: () => EU,
+                            o: () => CU,
+                            q: () => uU,
+                            u: () => jU
                           });
-                          const ID = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+                          const tU = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-                          function pD(DD) {
+                          function pU(UU) {
                             try {
-                              return decodeURIComponent(DD.slice(1))
+                              return decodeURIComponent(UU.slice(1))
                             } catch {
-                              return DD.slice(1)
+                              return UU.slice(1)
                             }
                           }
 
-                          function iD(DD) {
-                            return DD.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+                          function EU(UU) {
+                            return UU.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
                           }
-                          const fD = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${ID.source}`, "g");
+                          const PU = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${tU.source}`, "g");
 
-                          function bD(DD, CD) {
-                            return 2 === DD.length ? CD.replace(/^ (.*) $/, "$1") : CD
-                          }
-
-                          function QD(DD) {
-                            return "" === DD.trim()
+                          function TU(UU, RU) {
+                            return 2 === UU.length ? RU.replace(/^ (.*) $/, "$1") : RU
                           }
 
-                          function wD(DD) {
-                            const CD = [];
-                            for (const cD of DD.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) CD.length > 0 && CD[CD.length - 1].endsWith("\\") ? CD[CD.length - 1] += `|${cD}` : CD.push(cD);
-                            return CD.map((DD => DD.trim().replaceAll("\\|", "|")))
+                          function qU(UU) {
+                            return "" === UU.trim()
                           }
-                          const SD = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-                          function BD(DD) {
-                            const CD = [],
-                              cD = [{
+                          function KU(UU) {
+                            const RU = [];
+                            for (const gU of UU.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) RU.length > 0 && RU[RU.length - 1].endsWith("\\") ? RU[RU.length - 1] += `|${gU}` : RU.push(gU);
+                            return RU.map((UU => UU.trim().replaceAll("\\|", "|")))
+                          }
+                          const cU = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+                          function GU(UU) {
+                            const RU = [],
+                              gU = [{
                                 indent: -1,
-                                items: CD
+                                items: RU
                               }];
-                            let ID = null;
-                            for (const pD of DD) {
-                              const DD = pD.match(SD);
-                              if (!DD) {
-                                ID && (ID.text += ` ${pD.trim()}`);
+                            let tU = null;
+                            for (const pU of UU) {
+                              const UU = pU.match(cU);
+                              if (!UU) {
+                                tU && (tU.text += ` ${pU.trim()}`);
                                 continue
                               }
-                              const CD = DD[1].replace(/\t/g, "  ").length;
-                              for (; CD <= cD[cD.length - 1].indent;) cD.pop();
-                              ID = {
-                                text: DD[3].trim(),
+                              const RU = UU[1].replace(/\t/g, "  ").length;
+                              for (; RU <= gU[gU.length - 1].indent;) gU.pop();
+                              tU = {
+                                text: UU[3].trim(),
                                 children: []
-                              }, cD[cD.length - 1].items.push(ID), cD.push({
-                                indent: CD,
-                                items: ID.children
+                              }, gU[gU.length - 1].items.push(tU), gU.push({
+                                indent: RU,
+                                items: tU.children
                               })
                             }
-                            return CD
+                            return RU
                           }
 
-                          function yD(DD) {
-                            const CD = DD.replace(/\r\n/g, "\n").split("\n"),
-                              cD = [];
-                            let ID = 0;
-                            for (; ID < CD.length;) {
-                              const DD = CD[ID];
-                              if (QD(DD)) {
-                                ID++;
+                          function jU(UU) {
+                            const RU = UU.replace(/\r\n/g, "\n").split("\n"),
+                              gU = [];
+                            let tU = 0;
+                            for (; tU < RU.length;) {
+                              const UU = RU[tU];
+                              if (qU(UU)) {
+                                tU++;
                                 continue
                               }
-                              const pD = DD.match(/^\s*```\s*(\w*)\s*$/);
-                              if (pD) {
-                                const DD = [];
-                                for (ID++; ID < CD.length && !/^\s*```\s*$/.test(CD[ID]);) DD.push(CD[ID]), ID++;
-                                ID++, cD.push({
+                              const pU = UU.match(/^\s*```\s*(\w*)\s*$/);
+                              if (pU) {
+                                const UU = [];
+                                for (tU++; tU < RU.length && !/^\s*```\s*$/.test(RU[tU]);) UU.push(RU[tU]), tU++;
+                                tU++, gU.push({
                                   kind: "code",
-                                  lang: pD[1] || "text",
-                                  code: DD.join("\n").replace(/\s+$/, "")
+                                  lang: pU[1] || "text",
+                                  code: UU.join("\n").replace(/\s+$/, "")
                                 });
                                 continue
                               }
-                              const fD = DD.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-                              if (fD) {
-                                const DD = fD[2].trim();
-                                cD.push({
+                              const PU = UU.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+                              if (PU) {
+                                const UU = PU[2].trim();
+                                gU.push({
                                   kind: "heading",
-                                  level: fD[1].length,
-                                  text: DD,
-                                  anchor: iD(DD)
-                                }), ID++;
+                                  level: PU[1].length,
+                                  text: UU,
+                                  anchor: EU(UU)
+                                }), tU++;
                                 continue
                               }
-                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(DD)) {
-                                cD.push({
+                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(UU)) {
+                                gU.push({
                                   kind: "rule"
-                                }), ID++;
+                                }), tU++;
                                 continue
                               }
-                              if (DD.trim().startsWith("|") && ID + 1 < CD.length && /^\s*\|[\s:|-]+\|\s*$/.test(CD[ID + 1])) {
-                                const pD = wD(DD),
-                                  iD = [];
-                                for (ID += 2; ID < CD.length && CD[ID].trim().startsWith("|");) iD.push(wD(CD[ID])), ID++;
-                                cD.push({
+                              if (UU.trim().startsWith("|") && tU + 1 < RU.length && /^\s*\|[\s:|-]+\|\s*$/.test(RU[tU + 1])) {
+                                const pU = KU(UU),
+                                  EU = [];
+                                for (tU += 2; tU < RU.length && RU[tU].trim().startsWith("|");) EU.push(KU(RU[tU])), tU++;
+                                gU.push({
                                   kind: "table",
-                                  header: pD,
-                                  rows: iD
+                                  header: pU,
+                                  rows: EU
                                 });
                                 continue
                               }
-                              if (DD.startsWith(">")) {
-                                const DD = [];
-                                for (; ID < CD.length && CD[ID].startsWith(">");) DD.push(CD[ID].replace(/^>\s?/, "")), ID++;
-                                cD.push({
+                              if (UU.startsWith(">")) {
+                                const UU = [];
+                                for (; tU < RU.length && RU[tU].startsWith(">");) UU.push(RU[tU].replace(/^>\s?/, "")), tU++;
+                                gU.push({
                                   kind: "quote",
-                                  blocks: yD(DD.join("\n"))
+                                  blocks: jU(UU.join("\n"))
                                 });
                                 continue
                               }
-                              if (SD.test(DD)) {
-                                const pD = [],
-                                  iD = /^\s*\d+\./.test(DD);
-                                for (; ID < CD.length && !QD(CD[ID]) && (SD.test(CD[ID]) || /^\s+\S/.test(CD[ID]));) pD.push(CD[ID]), ID++;
-                                cD.push({
+                              if (cU.test(UU)) {
+                                const pU = [],
+                                  EU = /^\s*\d+\./.test(UU);
+                                for (; tU < RU.length && !qU(RU[tU]) && (cU.test(RU[tU]) || /^\s+\S/.test(RU[tU]));) pU.push(RU[tU]), tU++;
+                                gU.push({
                                   kind: "list",
-                                  ordered: iD,
-                                  items: BD(pD)
+                                  ordered: EU,
+                                  items: GU(pU)
                                 });
                                 continue
                               }
-                              const bD = [];
-                              for (; ID < CD.length && !QD(CD[ID]) && !/^\s*```/.test(CD[ID]) && !/^#{1,6}\s/.test(CD[ID]) && !CD[ID].startsWith(">") && !SD.test(CD[ID]) && (!CD[ID].trim().startsWith("|") || 0 !== bD.length);) bD.push(CD[ID].trim()), ID++;
-                              0 === bD.length && (bD.push(CD[ID].trim()), ID++), cD.push({
+                              const TU = [];
+                              for (; tU < RU.length && !qU(RU[tU]) && !/^\s*```/.test(RU[tU]) && !/^#{1,6}\s/.test(RU[tU]) && !RU[tU].startsWith(">") && !cU.test(RU[tU]) && (!RU[tU].trim().startsWith("|") || 0 !== TU.length);) TU.push(RU[tU].trim()), tU++;
+                              0 === TU.length && (TU.push(RU[tU].trim()), tU++), gU.push({
                                 kind: "paragraph",
-                                text: bD.join(" ")
+                                text: TU.join(" ")
                               })
                             }
-                            return cD
+                            return gU
                           }
 
-                          function MD(DD) {
-                            let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-                            const cD = yD(DD);
-                            let ID = "";
-                            const pD = [],
-                              iD = [],
-                              fD = new Map;
-                            for (const wD of cD) {
-                              if ("heading" === wD.kind) {
-                                var bD;
-                                const DD = (null !== (bD = fD.get(wD.anchor)) && void 0 !== bD ? bD : 0) + 1;
-                                fD.set(wD.anchor, DD), DD > 1 && (wD.anchor = `${wD.anchor}-${DD}`)
+                          function uU(UU) {
+                            let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+                            const gU = jU(UU);
+                            let tU = "";
+                            const pU = [],
+                              EU = [],
+                              PU = new Map;
+                            for (const KU of gU) {
+                              if ("heading" === KU.kind) {
+                                var TU;
+                                const UU = (null !== (TU = PU.get(KU.anchor)) && void 0 !== TU ? TU : 0) + 1;
+                                PU.set(KU.anchor, UU), UU > 1 && (KU.anchor = `${KU.anchor}-${UU}`)
                               }
-                              if ("heading" === wD.kind && 1 === wD.level && !ID) {
-                                ID = wD.text;
+                              if ("heading" === KU.kind && 1 === KU.level && !tU) {
+                                tU = KU.text;
                                 continue
                               }
-                              if ("heading" === wD.kind && wD.level <= CD) {
-                                iD.push({
-                                  heading: wD,
+                              if ("heading" === KU.kind && KU.level <= RU) {
+                                EU.push({
+                                  heading: KU,
                                   blocks: []
                                 });
                                 continue
                               }
-                              const DD = iD.at(-1);
-                              DD ? DD.blocks.push(wD) : pD.push(wD)
+                              const UU = EU.at(-1);
+                              UU ? UU.blocks.push(KU) : pU.push(KU)
                             }
-                            const QD = DD => {
+                            const qU = UU => {
                               for (;
-                                "rule" === (null === (CD = DD.at(-1)) || void 0 === CD ? void 0 : CD.kind);) {
-                                var CD;
-                                DD.pop()
+                                "rule" === (null === (RU = UU.at(-1)) || void 0 === RU ? void 0 : RU.kind);) {
+                                var RU;
+                                UU.pop()
                               }
                             };
-                            QD(pD);
-                            for (const wD of iD) QD(wD.blocks);
+                            qU(pU);
+                            for (const KU of EU) qU(KU.blocks);
                             return {
-                              title: ID,
-                              intro: pD,
-                              sections: iD
+                              title: tU,
+                              intro: pU,
+                              sections: EU
                             }
                           }
 
-                          function tD(DD) {
+                          function CU(UU) {
                             return [{
                               heading: null,
-                              blocks: DD.intro
-                            }, ...DD.sections.map((DD => ({
-                              heading: DD.heading,
-                              blocks: DD.blocks
+                              blocks: UU.intro
+                            }, ...UU.sections.map((UU => ({
+                              heading: UU.heading,
+                              blocks: UU.blocks
                             })))]
                           }
 
-                          function ZD(DD) {
-                            return DD.flatMap((DD => "code" === DD.kind ? [DD] : "quote" === DD.kind ? ZD(DD.blocks) : []))
+                          function hU(UU) {
+                            return UU.flatMap((UU => "code" === UU.kind ? [UU] : "quote" === UU.kind ? hU(UU.blocks) : []))
                           }
 
-                          function oD(DD) {
-                            switch (DD.kind) {
+                          function QU(UU) {
+                            switch (UU.kind) {
                               case "heading":
                               case "paragraph":
-                                return DD.text;
+                                return UU.text;
                               case "code":
-                                return DD.code;
+                                return UU.code;
                               case "table":
-                                return [DD.header, ...DD.rows].map((DD => DD.join(" "))).join(" ");
+                                return [UU.header, ...UU.rows].map((UU => UU.join(" "))).join(" ");
                               case "list": {
-                                const CD = DD => DD.map((DD => `${DD.text} ${CD(DD.children)}`)).join(" ");
-                                return CD(DD.items)
+                                const RU = UU => UU.map((UU => `${UU.text} ${RU(UU.children)}`)).join(" ");
+                                return RU(UU.items)
                               }
                               case "quote":
-                                return DD.blocks.map(oD).join(" ");
+                                return UU.blocks.map(QU).join(" ");
                               case "rule":
                                 return ""
                             }
                           }
-                        }, 4606: (DD, CD, cD) => {
-                          cD.d(CD, {
-                            b: () => bD
+                        }, 4495: (UU, RU, gU) => {
+                          gU.d(RU, {
+                            c: () => TU
                           });
-                          var ID = cD(53),
-                            pD = cD(312),
-                            iD = cD(1893),
-                            fD = cD(1093);
+                          var tU = gU(56),
+                            pU = gU(299),
+                            EU = gU(1790),
+                            PU = gU(1090);
 
-                          function bD(DD) {
+                          function TU(UU) {
                             let {
-                              text: CD
-                            } = DD;
-                            const cD = [];
-                            let bD = "";
-                            return (0, pD.bc)(CD).forEach(((DD, CD) => {
-                              if ("string" === typeof DD || !(0, iD.g)(DD.icon)) return void(bD += "string" === typeof DD ? DD : DD.icon);
-                              const pD = Math.max(0, bD.trimEnd().search(/\S{1,12}$/));
-                              cD.push((0, fD.jsxs)(ID.Fragment, {
-                                children: [bD.slice(0, pD), (0, fD.jsxs)("span", {
+                              text: RU
+                            } = UU;
+                            const gU = [];
+                            let TU = "";
+                            return (0, pU.dc)(RU).forEach(((UU, RU) => {
+                              if ("string" === typeof UU || !(0, EU.f)(UU.icon)) return void(TU += "string" === typeof UU ? UU : UU.icon);
+                              const pU = Math.max(0, TU.trimEnd().search(/\S{1,12}$/));
+                              gU.push((0, PU.jsxs)(tU.Fragment, {
+                                children: [TU.slice(0, pU), (0, PU.jsxs)("span", {
                                   className: "InlineIconTextGlue",
-                                  children: [bD.slice(pD), (0, fD.jsx)("span", {
+                                  children: [TU.slice(pU), (0, PU.jsx)("span", {
                                     className: "InlineIconTextIcon",
                                     role: "img",
-                                    "aria-label": DD.icon,
-                                    children: (0, fD.jsx)(iD.d, {
-                                      itemName: DD.icon,
+                                    "aria-label": UU.icon,
+                                    children: (0, PU.jsx)(EU.c, {
+                                      itemName: UU.icon,
                                       amount: 0
                                     })
                                   })]
                                 })]
-                              }, CD)), bD = ""
-                            })), cD.push(bD), (0, fD.jsx)(fD.Fragment, {
-                              children: cD
+                              }, RU)), TU = ""
+                            })), gU.push(TU), (0, PU.jsx)(PU.Fragment, {
+                              children: gU
                             })
                           }
-                        }, 4557: (DD, CD, cD) => {
-                          cD.d(CD, {
-                            f: () => ND,
-                            b: () => vD
+                        }, 4422: (UU, RU, gU) => {
+                          gU.d(RU, {
+                            e: () => WU,
+                            b: () => eU
                           });
-                          var ID = cD(53),
-                            pD = cD(1440),
-                            iD = cD(1872),
-                            fD = cD(4560),
-                            bD = cD(1093);
-                          const QD = (0, ID.memo)((function(DD) {
+                          var tU = gU(56),
+                            pU = gU(1410),
+                            EU = gU(1777),
+                            PU = gU(4430),
+                            TU = gU(1090);
+                          const qU = (0, tU.memo)((function(UU) {
                             let {
-                              initialParameters: CD
-                            } = DD;
-                            const cD = (0, ID.useRef)(null),
-                              pD = (0, ID.useRef)(null),
-                              QD = (0, ID.useRef)(0),
-                              wD = (0, ID.useRef)(null),
-                              SD = CD.description,
-                              BD = CD.LD,
+                              initialParameters: RU
+                            } = UU;
+                            const gU = (0, tU.useRef)(null),
+                              pU = (0, tU.useRef)(null),
+                              qU = (0, tU.useRef)(0),
+                              KU = (0, tU.useRef)(null),
+                              cU = RU.description,
+                              GU = RU.vU,
                               {
-                                scale: yD,
-                                rotation: MD
-                              } = null !== CD && void 0 !== CD ? CD : {},
-                              tD = (0, fD.e)();
-                            return (0, ID.useEffect)((() => {
-                              const DD = tD.onFrame((() => {
-                                const DD = tD.getState();
-                                if (!DD.isActive || !cD.current || !pD.current) return;
-                                const CD = DD.state;
-                                if (cD.current.value = CD.progress, CD.clickCount > QD.current) {
-                                  QD.current = CD.clickCount;
-                                  const DD = pD.current;
-                                  DD.classList.add("pulse"), wD.current = setTimeout((() => {
-                                    DD.classList.remove("pulse")
+                                scale: jU,
+                                rotation: uU
+                              } = null !== RU && void 0 !== RU ? RU : {},
+                              CU = (0, PU.f)();
+                            return (0, tU.useEffect)((() => {
+                              const UU = CU.onFrame((() => {
+                                const UU = CU.getState();
+                                if (!UU.isActive || !gU.current || !pU.current) return;
+                                const RU = UU.state;
+                                if (gU.current.value = RU.progress, RU.clickCount > qU.current) {
+                                  qU.current = RU.clickCount;
+                                  const UU = pU.current;
+                                  UU.classList.add("pulse"), KU.current = setTimeout((() => {
+                                    UU.classList.remove("pulse")
                                   }), 100)
                                 }
                               }));
                               return () => {
-                                clearTimeout(wD.current), DD()
+                                clearTimeout(KU.current), UU()
                               }
-                            }), [tD]), (0, bD.jsx)(bD.Fragment, {
-                              children: (0, bD.jsxs)("div", {
+                            }), [CU]), (0, TU.jsx)(TU.Fragment, {
+                              children: (0, TU.jsxs)("div", {
                                 className: "QTEProgressBarWrapper",
                                 style: {
-                                  ...null !== yD && {
-                                    "--scale": yD
+                                  ...null !== jU && {
+                                    "--scale": jU
                                   },
-                                  ...null !== MD && {
-                                    "--rotation": `${MD}deg`
+                                  ...null !== uU && {
+                                    "--rotation": `${uU}deg`
                                   }
                                 },
-                                children: [(0, bD.jsx)("progress", {
+                                children: [(0, TU.jsx)("progress", {
                                   id: "catch",
                                   max: 100,
                                   className: "QTEProgressBar",
-                                  ref: cD
-                                }), (0, bD.jsx)("span", {
+                                  ref: gU
+                                }), (0, TU.jsx)("span", {
                                   className: "QTEProgressBarInteractionIndicator",
-                                  ref: pD,
-                                  children: (0, bD.jsx)(iD.c, {
+                                  ref: pU,
+                                  children: (0, TU.jsx)(EU.e, {
                                     text: [{
-                                      icon: BD
+                                      icon: GU
                                     }]
                                   })
-                                }), (0, bD.jsx)("div", {
+                                }), (0, TU.jsx)("div", {
                                   className: "QTEProgressBarDescription",
-                                  children: (0, bD.jsx)(iD.c, {
-                                    text: SD
+                                  children: (0, TU.jsx)(EU.e, {
+                                    text: cU
                                   })
                                 })]
                               })
                             })
                           }));
-                          var wD = cD(1049),
-                            SD = cD.n(wD);
-                          const BD = 2 * Math.PI * 90,
-                            yD = (0, ID.memo)((function(DD) {
+                          var KU = gU(1037),
+                            cU = gU.n(KU);
+                          const GU = 2 * Math.PI * 90,
+                            jU = (0, tU.memo)((function(UU) {
                               let {
-                                initialParameters: CD
-                              } = DD;
-                              const cD = (0, ID.useRef)(null),
-                                pD = (0, ID.useRef)(null),
-                                QD = (0, ID.useRef)(null),
-                                wD = CD.label,
-                                yD = CD.icon,
-                                MD = CD.RD,
+                                initialParameters: RU
+                              } = UU;
+                              const gU = (0, tU.useRef)(null),
+                                pU = (0, tU.useRef)(null),
+                                qU = (0, tU.useRef)(null),
+                                KU = RU.label,
+                                jU = RU.icon,
+                                uU = RU.SU,
                                 {
-                                  scale: tD,
-                                  rotation: ZD,
-                                  kD: oD
-                                } = null !== CD && void 0 !== CD ? CD : {},
-                                vD = (0, fD.e)();
-                              return (0, ID.useEffect)((() => {
-                                const DD = vD.onFrame((() => {
-                                  var DD, CD;
-                                  const ID = vD.getState();
-                                  if (!ID.isActive || !pD.current) return;
-                                  const iD = ID.state,
-                                    fD = null !== (DD = iD.timeRemaining) && void 0 !== DD ? DD : 0,
-                                    bD = null !== (CD = iD.GD) && void 0 !== CD ? CD : 1,
-                                    wD = BD * (1 - fD / bD);
-                                  pD.current.style.strokeDashoffset = `${wD}`, cD.current && (cD.current.style.opacity = fD > 0 ? "1" : "0"), QD.current && MD && (QD.current.textContent = `${(fD/1e3).toFixed(1)}s`)
+                                  scale: CU,
+                                  rotation: hU,
+                                  sU: QU
+                                } = null !== RU && void 0 !== RU ? RU : {},
+                                eU = (0, PU.f)();
+                              return (0, tU.useEffect)((() => {
+                                const UU = eU.onFrame((() => {
+                                  var UU, RU;
+                                  const tU = eU.getState();
+                                  if (!tU.isActive || !pU.current) return;
+                                  const EU = tU.state,
+                                    PU = null !== (UU = EU.timeRemaining) && void 0 !== UU ? UU : 0,
+                                    TU = null !== (RU = EU.HU) && void 0 !== RU ? RU : 1,
+                                    KU = GU * (1 - PU / TU);
+                                  pU.current.style.strokeDashoffset = `${KU}`, gU.current && (gU.current.style.opacity = PU > 0 ? "1" : "0"), qU.current && uU && (qU.current.textContent = `${(PU/1e3).toFixed(1)}s`)
                                 }));
                                 return () => {
-                                  DD()
+                                  UU()
                                 }
-                              }), [vD, MD]), (0, bD.jsxs)("div", {
+                              }), [eU, uU]), (0, TU.jsxs)("div", {
                                 className: "QTETimedClick",
-                                ref: cD,
+                                ref: gU,
                                 style: {
-                                  ...null !== tD && {
-                                    "--scale": tD
+                                  ...null !== CU && {
+                                    "--scale": CU
                                   },
-                                  ...null !== ZD && {
-                                    "--rotation": `${ZD}deg`
+                                  ...null !== hU && {
+                                    "--rotation": `${hU}deg`
                                   }
                                 },
-                                children: [(0, bD.jsxs)("div", {
+                                children: [(0, TU.jsxs)("div", {
                                   className: "QTETimedClickCircleContainer",
-                                  children: [(0, bD.jsxs)("svg", {
+                                  children: [(0, TU.jsxs)("svg", {
                                     className: "QTETimedClickCircularProgress",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, bD.jsx)("circle", {
+                                    children: [(0, TU.jsx)("circle", {
                                       className: "QTETimedClickProgressTrack",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
                                       fill: "none",
                                       strokeWidth: "12"
-                                    }), (0, bD.jsx)("circle", {
+                                    }), (0, TU.jsx)("circle", {
                                       className: "QTETimedClickProgressArc",
                                       cx: "100",
                                       cy: "100",
@@ -6295,80 +6295,80 @@ export const modules = {
                                       fill: "none",
                                       strokeWidth: "12",
                                       strokeLinecap: "square",
-                                      strokeDasharray: BD,
-                                      ref: pD
+                                      strokeDasharray: GU,
+                                      ref: pU
                                     })]
-                                  }), (0, bD.jsx)("div", {
+                                  }), (0, TU.jsx)("div", {
                                     className: "QTETimedClickCenterContent",
-                                    children: (0, bD.jsx)(iD.c, {
+                                    children: (0, TU.jsx)(EU.e, {
                                       text: [{
-                                        icon: yD
+                                        icon: jU
                                       }],
-                                      className: SD()("QTETimedClickInnerText", {
-                                        QTETimedClickBreathe: oD
+                                      className: cU()("QTETimedClickInnerText", {
+                                        QTETimedClickBreathe: QU
                                       })
                                     })
                                   })]
-                                }), (0, bD.jsxs)("div", {
+                                }), (0, TU.jsxs)("div", {
                                   className: "QTETimedClickRightTextContainer",
-                                  children: [(0, bD.jsx)(iD.c, {
-                                    text: wD,
+                                  children: [(0, TU.jsx)(EU.e, {
+                                    text: KU,
                                     className: "QTETimedClickLabelText"
-                                  }), MD && (0, bD.jsx)("span", {
+                                  }), uU && (0, TU.jsx)("span", {
                                     className: "QTETimedClickTimeText",
-                                    ref: QD
+                                    ref: qU
                                   })]
                                 })]
                               })
                             })),
-                            MD = (0, ID.memo)((function(DD) {
+                            uU = (0, tU.memo)((function(UU) {
                               let {
-                                initialParameters: CD
-                              } = DD;
-                              const cD = (0, ID.useRef)(null),
-                                pD = (0, ID.useRef)(null),
-                                QD = (0, ID.useRef)(null),
-                                wD = (0, ID.useRef)(!1),
-                                SD = CD.description,
-                                BD = null === CD || void 0 === CD ? void 0 : CD.icon,
-                                yD = (0, fD.e)();
-                              return (0, ID.useEffect)((() => {
-                                const DD = yD.onFrame((() => {
-                                  const DD = yD.getState();
-                                  if (!DD.isActive) return;
-                                  const CD = DD.state;
-                                  if (cD.current) {
-                                    const DD = 100 * (CD.catchZonePosition - CD.YD / 2);
-                                    cD.current.style.left = `${DD}%`, cD.current.style.width = 100 * CD.YD + "%", CD.isCatching !== wD.current && (wD.current = CD.isCatching, CD.isCatching ? cD.current.classList.add("catching") : cD.current.classList.remove("catching"))
+                                initialParameters: RU
+                              } = UU;
+                              const gU = (0, tU.useRef)(null),
+                                pU = (0, tU.useRef)(null),
+                                qU = (0, tU.useRef)(null),
+                                KU = (0, tU.useRef)(!1),
+                                cU = RU.description,
+                                GU = null === RU || void 0 === RU ? void 0 : RU.icon,
+                                jU = (0, PU.f)();
+                              return (0, tU.useEffect)((() => {
+                                const UU = jU.onFrame((() => {
+                                  const UU = jU.getState();
+                                  if (!UU.isActive) return;
+                                  const RU = UU.state;
+                                  if (gU.current) {
+                                    const UU = 100 * (RU.catchZonePosition - RU.kU / 2);
+                                    gU.current.style.left = `${UU}%`, gU.current.style.width = 100 * RU.kU + "%", RU.isCatching !== KU.current && (KU.current = RU.isCatching, RU.isCatching ? gU.current.classList.add("catching") : gU.current.classList.remove("catching"))
                                   }
-                                  pD.current && (pD.current.style.left = 100 * CD.moverPosition + "%"), QD.current && (QD.current.value = CD.progress)
+                                  pU.current && (pU.current.style.left = 100 * RU.moverPosition + "%"), qU.current && (qU.current.value = RU.progress)
                                 }));
                                 return () => {
-                                  DD()
+                                  UU()
                                 }
-                              }), [yD]), (0, bD.jsxs)("div", {
+                              }), [jU]), (0, TU.jsxs)("div", {
                                 className: "QTEGravityBar",
-                                children: [(0, bD.jsx)("div", {
+                                children: [(0, TU.jsx)("div", {
                                   className: "QTEGravityBarDescription",
-                                  children: (0, bD.jsx)(iD.c, {
-                                    text: SD
+                                  children: (0, TU.jsx)(EU.e, {
+                                    text: cU
                                   })
-                                }), (0, bD.jsx)("progress", {
+                                }), (0, TU.jsx)("progress", {
                                   max: 100,
                                   className: "QTEGravityBarProgress",
-                                  ref: QD
-                                }), (0, bD.jsxs)("div", {
+                                  ref: qU
+                                }), (0, TU.jsxs)("div", {
                                   className: "QTEGravityBarTrack",
-                                  children: [(0, bD.jsx)("div", {
+                                  children: [(0, TU.jsx)("div", {
                                     className: "QTEGravityBarCatchZone",
-                                    ref: cD
-                                  }), (0, bD.jsx)("div", {
+                                    ref: gU
+                                  }), (0, TU.jsx)("div", {
                                     className: "QTEGravityBarMover",
-                                    ref: pD,
-                                    children: (0, bD.jsx)("span", {
-                                      children: BD && (0, bD.jsx)(iD.c, {
+                                    ref: pU,
+                                    children: (0, TU.jsx)("span", {
+                                      children: GU && (0, TU.jsx)(EU.e, {
                                         text: [{
-                                          icon: BD,
+                                          icon: GU,
                                           style: {
                                             fontSize: "4rem"
                                           }
@@ -6379,703 +6379,703 @@ export const modules = {
                                 })]
                               })
                             }));
-                          var tD = cD(624);
-                          const ZD = (0, ID.memo)((function(DD) {
+                          var CU = gU(581);
+                          const hU = (0, tU.memo)((function(UU) {
                               let {
-                                initialParameters: CD
-                              } = DD;
-                              const cD = (0, ID.useRef)(null),
-                                pD = CD.label,
-                                QD = CD.rD,
+                                initialParameters: RU
+                              } = UU;
+                              const gU = (0, tU.useRef)(null),
+                                pU = RU.label,
+                                qU = RU.LU,
                                 {
-                                  icon: wD,
-                                  scale: SD,
-                                  rotation: BD
-                                } = null !== CD && void 0 !== CD ? CD : {},
-                                yD = 100 * (.5 - QD / 2),
-                                MD = 100 * QD,
-                                ZD = (0, fD.e)();
-                              return (0, ID.useEffect)((() => {
-                                const DD = ZD.onFrame((() => {
-                                  const DD = ZD.getState();
-                                  if (!DD.isActive || !cD.current) return;
-                                  const CD = DD.state;
-                                  cD.current.style.left = 100 * CD.markerPosition + "%"
+                                  icon: KU,
+                                  scale: cU,
+                                  rotation: GU
+                                } = null !== RU && void 0 !== RU ? RU : {},
+                                jU = 100 * (.5 - qU / 2),
+                                uU = 100 * qU,
+                                hU = (0, PU.f)();
+                              return (0, tU.useEffect)((() => {
+                                const UU = hU.onFrame((() => {
+                                  const UU = hU.getState();
+                                  if (!UU.isActive || !gU.current) return;
+                                  const RU = UU.state;
+                                  gU.current.style.left = 100 * RU.markerPosition + "%"
                                 }));
                                 return () => {
-                                  DD()
+                                  UU()
                                 }
-                              }), [ZD]), (0, bD.jsxs)("div", {
+                              }), [hU]), (0, TU.jsxs)("div", {
                                 className: "QTEPrecisionBarWrapper",
                                 style: {
-                                  ...!(0, tD.C)(SD) && {
-                                    "--scale": SD
+                                  ...!(0, CU.E)(cU) && {
+                                    "--scale": cU
                                   },
-                                  ...!(0, tD.C)(BD) && {
-                                    "--rotation": `${BD}deg`
+                                  ...!(0, CU.E)(GU) && {
+                                    "--rotation": `${GU}deg`
                                   }
                                 },
-                                children: [wD && (0, bD.jsx)(iD.c, {
+                                children: [KU && (0, TU.jsx)(EU.e, {
                                   text: [{
-                                    icon: wD
+                                    icon: KU
                                   }],
                                   className: "QTEPrecisionBarIcon"
-                                }), (0, bD.jsxs)("div", {
+                                }), (0, TU.jsxs)("div", {
                                   className: "QTEPrecisionBarTrack",
-                                  children: [(0, bD.jsx)("div", {
+                                  children: [(0, TU.jsx)("div", {
                                     className: "QTEPrecisionBarSuccessZone",
                                     style: {
-                                      left: `${yD}%`,
-                                      width: `${MD}%`
+                                      left: `${jU}%`,
+                                      width: `${uU}%`
                                     }
-                                  }), (0, bD.jsx)("div", {
+                                  }), (0, TU.jsx)("div", {
                                     className: "QTEPrecisionBarMarker",
-                                    ref: cD
+                                    ref: gU
                                   })]
-                                }), (0, bD.jsx)("div", {
+                                }), (0, TU.jsx)("div", {
                                   className: "QTEPrecisionBarLabel",
-                                  children: (0, bD.jsx)(iD.c, {
-                                    text: pD
+                                  children: (0, TU.jsx)(EU.e, {
+                                    text: pU
                                   })
                                 })]
                               })
                             })),
-                            oD = (0, ID.memo)((function(DD) {
+                            QU = (0, tU.memo)((function(UU) {
                               let {
-                                initialParameters: CD
-                              } = DD;
-                              const cD = (0, ID.useRef)(null),
-                                [pD, QD] = (0, ID.useState)((() => new Array(CD.FD).fill("pending"))),
-                                [wD, SD] = (0, ID.useState)((() => {
-                                  const DD = CD.cC;
-                                  return (0, tD.C)(DD) || DD <= 0 ? [] : new Array(DD).fill("pending")
+                                initialParameters: RU
+                              } = UU;
+                              const gU = (0, tU.useRef)(null),
+                                [pU, qU] = (0, tU.useState)((() => new Array(RU.lU).fill("pending"))),
+                                [KU, cU] = (0, tU.useState)((() => {
+                                  const UU = RU.RR;
+                                  return (0, CU.E)(UU) || UU <= 0 ? [] : new Array(UU).fill("pending")
                                 })),
-                                BD = CD.label,
+                                GU = RU.label,
                                 {
-                                  icon: yD
-                                } = CD,
-                                MD = (0, ID.useRef)(0),
-                                ZD = (0, ID.useRef)(0),
-                                oD = (0, ID.useRef)([]),
-                                vD = (0, fD.e)();
-                              return (0, ID.useEffect)((() => {
-                                const DD = vD.onFrame((() => {
-                                  const DD = vD.getState();
-                                  if (!DD.isActive || !cD.current) return;
-                                  const CD = DD.state,
-                                    ID = 30 + 60 * CD.outerCircleProgress;
-                                  if (cD.current.setAttribute("r", String(ID)), !0 === CD.lastClickResult && CD.successes > MD.current) {
-                                    cD.current.classList.remove("QTERhythmClickOuterCircle--miss"), cD.current.classList.add("QTERhythmClickOuterCircle--hit");
-                                    const DD = setTimeout((() => {
-                                      var DD;
-                                      null === (DD = cD.current) || void 0 === DD || DD.classList.remove("QTERhythmClickOuterCircle--hit")
+                                  icon: jU
+                                } = RU,
+                                uU = (0, tU.useRef)(0),
+                                hU = (0, tU.useRef)(0),
+                                QU = (0, tU.useRef)([]),
+                                eU = (0, PU.f)();
+                              return (0, tU.useEffect)((() => {
+                                const UU = eU.onFrame((() => {
+                                  const UU = eU.getState();
+                                  if (!UU.isActive || !gU.current) return;
+                                  const RU = UU.state,
+                                    tU = 30 + 60 * RU.outerCircleProgress;
+                                  if (gU.current.setAttribute("r", String(tU)), !0 === RU.lastClickResult && RU.successes > uU.current) {
+                                    gU.current.classList.remove("QTERhythmClickOuterCircle--miss"), gU.current.classList.add("QTERhythmClickOuterCircle--hit");
+                                    const UU = setTimeout((() => {
+                                      var UU;
+                                      null === (UU = gU.current) || void 0 === UU || UU.classList.remove("QTERhythmClickOuterCircle--hit")
                                     }), 200);
-                                    oD.current.push(DD)
-                                  } else if (!1 === CD.lastClickResult && CD.misses > ZD.current) {
-                                    cD.current.classList.remove("QTERhythmClickOuterCircle--hit"), cD.current.classList.add("QTERhythmClickOuterCircle--miss");
-                                    const DD = setTimeout((() => {
-                                      var DD;
-                                      null === (DD = cD.current) || void 0 === DD || DD.classList.remove("QTERhythmClickOuterCircle--miss")
+                                    QU.current.push(UU)
+                                  } else if (!1 === RU.lastClickResult && RU.misses > hU.current) {
+                                    gU.current.classList.remove("QTERhythmClickOuterCircle--hit"), gU.current.classList.add("QTERhythmClickOuterCircle--miss");
+                                    const UU = setTimeout((() => {
+                                      var UU;
+                                      null === (UU = gU.current) || void 0 === UU || UU.classList.remove("QTERhythmClickOuterCircle--miss")
                                     }), 200);
-                                    oD.current.push(DD)
+                                    QU.current.push(UU)
                                   }
-                                  CD.successes === MD.current && CD.misses === ZD.current || (MD.current = CD.successes, ZD.current = CD.misses, QD((DD => {
-                                    const cD = [...DD];
-                                    for (let ID = 0; ID < CD.FD; ID++) cD[ID] = ID < CD.successes ? "success" : "pending";
-                                    return cD
-                                  })), SD((DD => {
-                                    if (0 === DD.length) return DD;
-                                    const cD = [...DD];
-                                    for (let ID = 0; ID < cD.length; ID++) cD[ID] = ID < CD.misses ? "miss" : "pending";
-                                    return cD
+                                  RU.successes === uU.current && RU.misses === hU.current || (uU.current = RU.successes, hU.current = RU.misses, qU((UU => {
+                                    const gU = [...UU];
+                                    for (let tU = 0; tU < RU.lU; tU++) gU[tU] = tU < RU.successes ? "success" : "pending";
+                                    return gU
+                                  })), cU((UU => {
+                                    if (0 === UU.length) return UU;
+                                    const gU = [...UU];
+                                    for (let tU = 0; tU < gU.length; tU++) gU[tU] = tU < RU.misses ? "miss" : "pending";
+                                    return gU
                                   })))
                                 }));
                                 return () => {
-                                  DD();
-                                  for (const DD of oD.current) clearTimeout(DD);
-                                  oD.current = []
+                                  UU();
+                                  for (const UU of QU.current) clearTimeout(UU);
+                                  QU.current = []
                                 }
-                              }), [vD]), (0, bD.jsxs)("div", {
+                              }), [eU]), (0, TU.jsxs)("div", {
                                 className: "QTERhythmClickWrapper",
-                                children: [(0, bD.jsx)("div", {
+                                children: [(0, TU.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: pD.map(((DD, CD) => (0, bD.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("success" === DD ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
-                                  }, CD)))
-                                }), (0, bD.jsxs)("div", {
+                                  children: pU.map(((UU, RU) => (0, TU.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("success" === UU ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
+                                  }, RU)))
+                                }), (0, TU.jsxs)("div", {
                                   className: "QTERhythmClickCircleContainer",
-                                  children: [(0, bD.jsxs)("svg", {
+                                  children: [(0, TU.jsxs)("svg", {
                                     className: "QTERhythmClickSvg",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, bD.jsx)("circle", {
+                                    children: [(0, TU.jsx)("circle", {
                                       className: "QTERhythmClickInnerCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 30
-                                    }), (0, bD.jsx)("circle", {
+                                    }), (0, TU.jsx)("circle", {
                                       className: "QTERhythmClickOuterCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
-                                      ref: cD
+                                      ref: gU
                                     })]
-                                  }), yD && (0, bD.jsx)("div", {
+                                  }), jU && (0, TU.jsx)("div", {
                                     className: "QTERhythmClickCenterContent",
-                                    children: (0, bD.jsx)(iD.c, {
+                                    children: (0, TU.jsx)(EU.e, {
                                       text: [{
-                                        icon: yD
+                                        icon: jU
                                       }],
                                       className: "QTERhythmClickIcon"
                                     })
                                   })]
-                                }), wD.length > 0 && (0, bD.jsx)("div", {
+                                }), KU.length > 0 && (0, TU.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: wD.map(((DD, CD) => (0, bD.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("miss" === DD ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
-                                  }, CD)))
-                                }), (0, bD.jsx)("div", {
+                                  children: KU.map(((UU, RU) => (0, TU.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("miss" === UU ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
+                                  }, RU)))
+                                }), (0, TU.jsx)("div", {
                                   className: "QTERhythmClickLabel",
-                                  children: (0, bD.jsx)(iD.c, {
-                                    text: BD
+                                  children: (0, TU.jsx)(EU.e, {
+                                    text: GU
                                   })
                                 })]
                               })
                             }));
 
-                          function vD(DD) {
+                          function eU(UU) {
                             let {
-                              qte: CD
-                            } = DD;
-                            switch (CD.type) {
+                              qte: RU
+                            } = UU;
+                            switch (RU.type) {
                               case "progressBar":
-                                return (0, bD.jsx)(QD, {
-                                  initialParameters: CD.parameters
+                                return (0, TU.jsx)(qU, {
+                                  initialParameters: RU.parameters
                                 });
                               case "timedClick":
-                                return (0, bD.jsx)(yD, {
-                                  initialParameters: CD.parameters
+                                return (0, TU.jsx)(jU, {
+                                  initialParameters: RU.parameters
                                 });
                               case "gravityBar":
-                                return (0, bD.jsx)(MD, {
-                                  initialParameters: CD.parameters
+                                return (0, TU.jsx)(uU, {
+                                  initialParameters: RU.parameters
                                 });
                               case "precisionBar":
-                                return (0, bD.jsx)(ZD, {
-                                  initialParameters: CD.parameters
+                                return (0, TU.jsx)(hU, {
+                                  initialParameters: RU.parameters
                                 });
                               case "rhythmClick":
-                                return (0, bD.jsx)(oD, {
-                                  initialParameters: CD.parameters
+                                return (0, TU.jsx)(QU, {
+                                  initialParameters: RU.parameters
                                 });
                               default:
                                 return console.warn("Unknown QTE type"), null
                             }
                           }
-                          const ND = (0, ID.memo)((function() {
-                            const [DD, CD] = (0, ID.useState)({
+                          const WU = (0, tU.memo)((function() {
+                            const [UU, RU] = (0, tU.useState)({
                               type: null,
                               parameters: null,
                               state: null,
                               isActive: !1
                             });
-                            return (0, pD.f)("qteStateUpdated", (DD => {
-                              CD(DD)
-                            })), DD.isActive && DD.type ? (0, bD.jsx)("div", {
+                            return (0, pU.e)("qteStateUpdated", (UU => {
+                              RU(UU)
+                            })), UU.isActive && UU.type ? (0, TU.jsx)("div", {
                               className: "QTE",
                               "data-camera-keeper": "",
-                              children: (0, bD.jsx)(vD, {
-                                qte: DD
+                              children: (0, TU.jsx)(eU, {
+                                qte: UU
                               })
                             }) : null
                           }))
-                        }, 4560: (DD, CD, cD) => {
-                          cD.d(CD, {
-                            c: () => bD,
-                            e: () => QD
+                        }, 4430: (UU, RU, gU) => {
+                          gU.d(RU, {
+                            e: () => TU,
+                            f: () => qU
                           });
-                          var ID = cD(53),
-                            pD = cD(1294),
-                            iD = cD(4562);
-                          const fD = {
-                              getState: () => iD.e.getCurrentState(),
-                              onFrame: pD.n
+                          var tU = gU(56),
+                            pU = gU(1293),
+                            EU = gU(4438);
+                          const PU = {
+                              getState: () => EU.c.getCurrentState(),
+                              onFrame: pU.p
                             },
-                            bD = (0, ID.createContext)(fD);
+                            TU = (0, tU.createContext)(PU);
 
-                          function QD() {
-                            return (0, ID.useContext)(bD)
+                          function qU() {
+                            return (0, tU.useContext)(TU)
                           }
-                        }, 4608: (DD, CD, cD) => {
-                          cD.d(CD, {
-                            d: () => zD,
-                            e: () => VD
+                        }, 4501: (UU, RU, gU) => {
+                          gU.d(RU, {
+                            b: () => rU,
+                            c: () => VU
                           });
-                          var ID = cD(4615),
-                            pD = cD(312);
-                          const iD = 120,
-                            fD = 260,
-                            bD = 1.15,
-                            QD = 1.2,
-                            wD = 2,
-                            SD = 1.08,
-                            BD = .8,
-                            yD = .95,
-                            MD = 8,
-                            tD = "[\"')\\]\u300d\u300f\uff09]*",
-                            ZD = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${tD}$`),
-                            oD = new RegExp(`[?\uff1f]${tD}$`),
-                            vD = new RegExp(`[!\uff01]${tD}$`),
-                            ND = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-                            gD = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-                            XD = new RegExp(`[${gD}]`),
-                            mD = new RegExp(`[${gD}]|[^${gD}]+`, "g"),
-                            nD = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+                          var tU = gU(4503),
+                            pU = gU(299);
+                          const EU = 120,
+                            PU = 260,
+                            TU = 1.15,
+                            qU = 1.2,
+                            KU = 2,
+                            cU = 1.08,
+                            GU = .8,
+                            jU = .95,
+                            uU = 8,
+                            CU = "[\"')\\]\u300d\u300f\uff09]*",
+                            hU = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${CU}$`),
+                            QU = new RegExp(`[?\uff1f]${CU}$`),
+                            eU = new RegExp(`[!\uff01]${CU}$`),
+                            WU = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+                            fU = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+                            xU = new RegExp(`[${fU}]`),
+                            mU = new RegExp(`[${fU}]|[^${fU}]+`, "g"),
+                            IU = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-                          function OD(DD) {
-                            let CD = 2166136261;
-                            for (let cD = 0; cD < DD.length; cD++) CD ^= DD.charCodeAt(cD), CD = Math.imul(CD, 16777619);
-                            return (CD >>> 0) / 4294967295 * 2 - 1
+                          function JU(UU) {
+                            let RU = 2166136261;
+                            for (let gU = 0; gU < UU.length; gU++) RU ^= UU.charCodeAt(gU), RU = Math.imul(RU, 16777619);
+                            return (RU >>> 0) / 4294967295 * 2 - 1
                           }
 
-                          function PD(DD) {
-                            var CD;
-                            if (XD.test(DD)) return 1;
-                            const cD = DD.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-                              ID = cD.replace(/[^0-9]/g, "");
-                            if (ID.length > 0 && !/\p{L}/u.test(cD)) return Math.min(ID.length, 4);
-                            const pD = null !== (CD = cD.match(nD)) && void 0 !== CD ? CD : [];
-                            if (0 === pD.length) {
-                              var iD, fD;
-                              const DD = null !== (iD = null === (fD = cD.match(/\p{L}/gu)) || void 0 === fD ? void 0 : fD.length) && void 0 !== iD ? iD : 0;
-                              return 0 === DD ? 0 : Math.min(Math.max(1, Math.round(DD / 2.5)), MD)
+                          function wU(UU) {
+                            var RU;
+                            if (xU.test(UU)) return 1;
+                            const gU = UU.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+                              tU = gU.replace(/[^0-9]/g, "");
+                            if (tU.length > 0 && !/\p{L}/u.test(gU)) return Math.min(tU.length, 4);
+                            const pU = null !== (RU = gU.match(IU)) && void 0 !== RU ? RU : [];
+                            if (0 === pU.length) {
+                              var EU, PU;
+                              const UU = null !== (EU = null === (PU = gU.match(/\p{L}/gu)) || void 0 === PU ? void 0 : PU.length) && void 0 !== EU ? EU : 0;
+                              return 0 === UU ? 0 : Math.min(Math.max(1, Math.round(UU / 2.5)), uU)
                             }
-                            const bD = cD.replace(/[^\p{L}]/gu, ""),
-                              QD = pD.length > 1 && "e" === pD.at(-1) && bD.endsWith("e") && !bD.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(DD.replace(/[^\p{L}]/gu, ""));
-                            return Math.min(pD.length - (QD ? 1 : 0), MD)
+                            const TU = gU.replace(/[^\p{L}]/gu, ""),
+                              qU = pU.length > 1 && "e" === pU.at(-1) && TU.endsWith("e") && !TU.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(UU.replace(/[^\p{L}]/gu, ""));
+                            return Math.min(pU.length - (qU ? 1 : 0), uU)
                           }
 
-                          function HD(DD) {
-                            return DD.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+                          function nU(UU) {
+                            return UU.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
                           }
 
-                          function UD(DD) {
-                            const CD = DD.replace(/[^\p{L}]/gu, "");
-                            return CD.length >= 2 && CD === CD.toUpperCase() && CD !== CD.toLowerCase()
+                          function bU(UU) {
+                            const RU = UU.replace(/[^\p{L}]/gu, "");
+                            return RU.length >= 2 && RU === RU.toUpperCase() && RU !== RU.toLowerCase()
                           }
 
-                          function xD(DD, CD) {
-                            var cD;
-                            const MD = CD && (0, ID.l)(CD),
-                              tD = null !== (cD = null === MD || void 0 === MD ? void 0 : MD.syllableMs) && void 0 !== cD ? cD : ID.d,
-                              gD = function(DD) {
-                                const CD = [];
-                                for (const ID of (0, pD.bc)(DD))
-                                  if ("string" === typeof ID)
-                                    for (const DD of ID.split(/(\s+)/)) {
-                                      if ("" === DD) continue;
-                                      if (/^\s+$/.test(DD)) {
-                                        CD.push({
+                          function oU(UU, RU) {
+                            var gU;
+                            const uU = RU && (0, tU.k)(RU),
+                              CU = null !== (gU = null === uU || void 0 === uU ? void 0 : uU.syllableMs) && void 0 !== gU ? gU : tU.c,
+                              fU = function(UU) {
+                                const RU = [];
+                                for (const tU of (0, pU.dc)(UU))
+                                  if ("string" === typeof tU)
+                                    for (const UU of tU.split(/(\s+)/)) {
+                                      if ("" === UU) continue;
+                                      if (/^\s+$/.test(UU)) {
+                                        RU.push({
                                           kind: "space",
-                                          text: DD
+                                          text: UU
                                         });
                                         continue
                                       }
-                                      if (!XD.test(DD)) {
-                                        CD.push({
+                                      if (!xU.test(UU)) {
+                                        RU.push({
                                           kind: "word",
-                                          text: DD,
+                                          text: UU,
                                           delayMs: 0
                                         });
                                         continue
                                       }
-                                      let ID = !0;
-                                      for (const pD of null !== (cD = DD.match(mD)) && void 0 !== cD ? cD : []) {
-                                        var cD;
-                                        const DD = CD.at(-1);
-                                        ID || "word" !== (null === DD || void 0 === DD ? void 0 : DD.kind) || XD.test(pD) || /[\p{L}\p{N}]/u.test(pD) ? (ID || CD.push({
+                                      let tU = !0;
+                                      for (const pU of null !== (gU = UU.match(mU)) && void 0 !== gU ? gU : []) {
+                                        var gU;
+                                        const UU = RU.at(-1);
+                                        tU || "word" !== (null === UU || void 0 === UU ? void 0 : UU.kind) || xU.test(pU) || /[\p{L}\p{N}]/u.test(pU) ? (tU || RU.push({
                                           kind: "space",
                                           text: "\u200b"
-                                        }), CD.push({
+                                        }), RU.push({
                                           kind: "word",
-                                          text: pD,
+                                          text: pU,
                                           delayMs: 0
-                                        }), ID = !1) : DD.text += pD
+                                        }), tU = !1) : UU.text += pU
                                       }
-                                    } else CD.push({
+                                    } else RU.push({
                                       kind: "icon",
-                                      text: ID.icon,
+                                      text: tU.icon,
                                       delayMs: 0
                                     });
-                                return CD
-                              }(DD),
-                              nD = [];
-                            let xD = [];
-                            for (const ID of gD) "space" !== ID.kind && (xD.push(ID), ZD.test(ID.text) && (nD.push(xD), xD = []));
-                            nD.push(xD);
-                            const qD = [];
-                            let JD = 0;
-                            for (const ID of nD) {
-                              var KD, aD;
-                              const DD = null !== (KD = null === (aD = ID.at(-1)) || void 0 === aD ? void 0 : aD.text) && void 0 !== KD ? KD : "",
-                                CD = oD.test(DD),
-                                cD = vD.test(DD),
-                                pD = ID.map((DD => "word" === DD.kind ? PD(DD.text) : 1)),
-                                gD = pD.findLastIndex((DD => DD > 0));
-                              for (const [oD, vD] of ID.entries()) {
-                                const DD = "word" === vD.kind,
-                                  ID = pD[oD];
-                                vD.delayMs = JD;
-                                for (let pD = 0; MD && pD < ID; pD++) {
+                                return RU
+                              }(UU),
+                              IU = [];
+                            let oU = [];
+                            for (const tU of fU) "space" !== tU.kind && (oU.push(tU), hU.test(tU.text) && (IU.push(oU), oU = []));
+                            IU.push(oU);
+                            const ZU = [];
+                            let aU = 0;
+                            for (const tU of IU) {
+                              var YU, BU;
+                              const UU = null !== (YU = null === (BU = tU.at(-1)) || void 0 === BU ? void 0 : BU.text) && void 0 !== YU ? YU : "",
+                                RU = QU.test(UU),
+                                gU = eU.test(UU),
+                                pU = tU.map((UU => "word" === UU.kind ? wU(UU.text) : 1)),
+                                fU = pU.findLastIndex((UU => UU > 0));
+                              for (const [QU, eU] of tU.entries()) {
+                                const UU = "word" === eU.kind,
+                                  tU = pU[QU];
+                                eU.delayMs = aU;
+                                for (let pU = 0; uU && pU < tU; pU++) {
                                   const {
-                                    intonation: iD
-                                  } = MD;
-                                  let fD = gD > 0 ? -iD.declineSemitones * (oD / gD) : 0;
-                                  fD += OD(`${HD(vD.text)}|${pD}`) * iD.variationSemitones;
-                                  const ZD = Math.min(1, iD.variationSemitones);
-                                  let ND = MD.glideSemitones,
-                                    XD = 1;
-                                  cD && (fD += iD.exclaimLiftSemitones, XD *= bD), CD && oD === gD && (fD += iD.questionRiseSemitones * (ID > 1 ? .5 + .5 * pD / (ID - 1) : 1), pD === ID - 1 && (ND = Math.abs(ND) + iD.questionRiseSemitones / 2)), DD && UD(vD.text) && (fD += wD * ZD, XD *= QD), ID > 1 && 0 === pD && (fD += BD * ZD, XD *= SD), qD.push({
-                                    atMs: JD + pD * tD,
-                                    semitones: fD,
-                                    glideSemitones: ND,
-                                    durationMs: pD < ID - 1 ? Math.min(MD.durationMs, tD * yD) : MD.durationMs,
-                                    level: XD
+                                    intonation: EU
+                                  } = uU;
+                                  let PU = fU > 0 ? -EU.declineSemitones * (QU / fU) : 0;
+                                  PU += JU(`${nU(eU.text)}|${pU}`) * EU.variationSemitones;
+                                  const hU = Math.min(1, EU.variationSemitones);
+                                  let WU = uU.glideSemitones,
+                                    xU = 1;
+                                  gU && (PU += EU.exclaimLiftSemitones, xU *= TU), RU && QU === fU && (PU += EU.questionRiseSemitones * (tU > 1 ? .5 + .5 * pU / (tU - 1) : 1), pU === tU - 1 && (WU = Math.abs(WU) + EU.questionRiseSemitones / 2)), UU && bU(eU.text) && (PU += KU * hU, xU *= qU), tU > 1 && 0 === pU && (PU += GU * hU, xU *= cU), ZU.push({
+                                    atMs: aU + pU * CU,
+                                    semitones: PU,
+                                    glideSemitones: WU,
+                                    durationMs: pU < tU - 1 ? Math.min(uU.durationMs, CU * jU) : uU.durationMs,
+                                    level: xU
                                   })
                                 }
-                                JD += ID * tD + (ZD.test(vD.text) ? fD : ND.test(vD.text) ? iD : 0)
+                                aU += tU * CU + (hU.test(eU.text) ? PU : WU.test(eU.text) ? EU : 0)
                               }
                             }
                             return {
-                              pieces: gD.map((DD => "space" === DD.kind ? DD : "icon" === DD.kind ? {
+                              pieces: fU.map((UU => "space" === UU.kind ? UU : "icon" === UU.kind ? {
                                 kind: "icon",
-                                icon: DD.text,
-                                delayMs: DD.delayMs
+                                icon: UU.text,
+                                delayMs: UU.delayMs
                               } : {
                                 kind: "word",
-                                text: DD.text,
-                                delayMs: DD.delayMs
+                                text: UU.text,
+                                delayMs: UU.delayMs
                               })),
-                              blips: qD
+                              blips: ZU
                             }
                           }
-                          var qD = cD(1192),
-                            JD = cD(1250),
-                            KD = cD(1913);
+                          var ZU = gU(1181),
+                            aU = gU(1249),
+                            YU = gU(1802);
 
-                          function aD(DD) {
-                            if ("string" === typeof DD) return DD;
-                            const CD = JD.e.get().getCurrentLanguageCode();
-                            return (0, qD.s)(CD, DD.translationKey, (0, qD.o)(DD.params, KD.c.shown))
+                          function BU(UU) {
+                            if ("string" === typeof UU) return UU;
+                            const RU = aU.g.get().getCurrentLanguageCode();
+                            return (0, ZU.s)(RU, UU.translationKey, (0, ZU.r)(UU.params, YU.b.shown))
                           }
 
-                          function VD(DD) {
-                            const CD = void 0 === DD.voice ? null : (0, ID.p)(DD.voice),
-                              cD = CD && (0, ID.l)(CD);
+                          function VU(UU) {
+                            const RU = void 0 === UU.voice ? null : (0, tU.n)(UU.voice),
+                              gU = RU && (0, tU.k)(RU);
                             return {
-                              plan: xD(aD(DD.line), cD),
-                              synth: cD
+                              plan: oU(BU(UU.line), gU),
+                              synth: gU
                             }
                           }
 
-                          function zD(DD) {
-                            const CD = [];
-                            let cD = [];
-                            for (const [pD, iD] of DD.entries()) {
-                              var ID;
-                              "space" === iD.kind && (" " !== iD.text || "icon" !== (null === (ID = DD[pD + 1]) || void 0 === ID ? void 0 : ID.kind)) ? (cD.length > 0 && CD.push(cD), CD.push([iD]), cD = []) : cD.push(iD)
+                          function rU(UU) {
+                            const RU = [];
+                            let gU = [];
+                            for (const [pU, EU] of UU.entries()) {
+                              var tU;
+                              "space" === EU.kind && (" " !== EU.text || "icon" !== (null === (tU = UU[pU + 1]) || void 0 === tU ? void 0 : tU.kind)) ? (gU.length > 0 && RU.push(gU), RU.push([EU]), gU = []) : gU.push(EU)
                             }
-                            return cD.length > 0 && CD.push(cD), CD
+                            return gU.length > 0 && RU.push(gU), RU
                           }
-                        }, 4618: (DD, CD, cD) => {
-                          cD.d(CD, {
-                            d: () => SD,
-                            g: () => BD
+                        }, 4508: (UU, RU, gU) => {
+                          gU.d(RU, {
+                            d: () => cU,
+                            f: () => GU
                           });
-                          var ID = cD(4621),
-                            pD = cD(16);
-                          const iD = .25,
-                            fD = .85,
-                            bD = .02,
-                            QD = .01;
+                          var tU = gU(4512),
+                            pU = gU(21);
+                          const EU = .25,
+                            PU = .85,
+                            TU = .02,
+                            qU = .01;
 
-                          function wD(DD, CD, cD, ID, pD, iD, bD) {
+                          function KU(UU, RU, gU, tU, pU, EU, TU) {
                             const {
-                              waveform: QD,
-                              pitchHz: wD,
-                              attackMs: SD,
-                              releaseMs: BD,
-                              lowpassHz: yD
-                            } = cD, MD = pD + ID.durationMs / 1e3, tD = wD * 2 ** (ID.semitones / 12), ZD = DD.createOscillator();
-                            ZD.type = QD, ZD.frequency.setValueAtTime(tD, pD), ZD.frequency.exponentialRampToValueAtTime(tD * 2 ** (ID.glideSemitones / 12), MD);
-                            const oD = pD + Math.min(SD, ID.durationMs) / 1e3,
-                              vD = DD.createGain();
-                            vD.gain.setValueAtTime(0, pD), vD.gain.linearRampToValueAtTime(iD, oD), vD.gain.linearRampToValueAtTime(iD * fD, Math.max(oD, MD - BD / 1e3)), vD.gain.linearRampToValueAtTime(0, MD);
-                            const ND = [ZD];
-                            if (null !== yD) {
-                              const CD = DD.createBiquadFilter();
-                              CD.type = "lowpass", CD.frequency.value = yD, ND.push(CD)
+                              waveform: qU,
+                              pitchHz: KU,
+                              attackMs: cU,
+                              releaseMs: GU,
+                              lowpassHz: jU
+                            } = gU, uU = pU + tU.durationMs / 1e3, CU = KU * 2 ** (tU.semitones / 12), hU = UU.createOscillator();
+                            hU.type = qU, hU.frequency.setValueAtTime(CU, pU), hU.frequency.exponentialRampToValueAtTime(CU * 2 ** (tU.glideSemitones / 12), uU);
+                            const QU = pU + Math.min(cU, tU.durationMs) / 1e3,
+                              eU = UU.createGain();
+                            eU.gain.setValueAtTime(0, pU), eU.gain.linearRampToValueAtTime(EU, QU), eU.gain.linearRampToValueAtTime(EU * PU, Math.max(QU, uU - GU / 1e3)), eU.gain.linearRampToValueAtTime(0, uU);
+                            const WU = [hU];
+                            if (null !== jU) {
+                              const RU = UU.createBiquadFilter();
+                              RU.type = "lowpass", RU.frequency.value = jU, WU.push(RU)
                             }
-                            ND.push(vD, CD);
-                            for (let fD = 1; fD < ND.length; fD++) ND[fD - 1].connect(ND[fD]);
-                            return ZD.onended = () => {
-                              for (const DD of ND.slice(0, -1)) DD.disconnect();
-                              bD()
-                            }, ZD.start(pD), ZD.stop(MD), ZD
+                            WU.push(eU, RU);
+                            for (let PU = 1; PU < WU.length; PU++) WU[PU - 1].connect(WU[PU]);
+                            return hU.onended = () => {
+                              for (const UU of WU.slice(0, -1)) UU.disconnect();
+                              TU()
+                            }, hU.start(pU), hU.stop(uU), hU
                           }
 
-                          function SD(DD, CD, cD, ID, pD, fD) {
-                            if (0 === ID.length) return fD(), () => {};
-                            const SD = iD * cD.volume * pD,
-                              BD = DD.createGain();
-                            BD.connect(CD);
-                            const yD = DD.currentTime + bD,
-                              MD = new Set;
-                            for (const iD of ID) {
-                              const CD = wD(DD, BD, cD, iD, yD + iD.atMs / 1e3, SD * iD.level, (() => {
-                                MD.delete(CD), 0 === MD.size && (BD.disconnect(), fD())
+                          function cU(UU, RU, gU, tU, pU, PU) {
+                            if (0 === tU.length) return PU(), () => {};
+                            const cU = EU * gU.volume * pU,
+                              GU = UU.createGain();
+                            GU.connect(RU);
+                            const jU = UU.currentTime + TU,
+                              uU = new Set;
+                            for (const EU of tU) {
+                              const RU = KU(UU, GU, gU, EU, jU + EU.atMs / 1e3, cU * EU.level, (() => {
+                                uU.delete(RU), 0 === uU.size && (GU.disconnect(), PU())
                               }));
-                              MD.add(CD)
+                              uU.add(RU)
                             }
                             return () => {
-                              const CD = DD.currentTime;
-                              BD.gain.setTargetAtTime(0, CD, QD);
-                              for (const DD of MD) try {
-                                DD.stop(CD + 5 * QD)
+                              const RU = UU.currentTime;
+                              GU.gain.setTargetAtTime(0, RU, qU);
+                              for (const UU of uU) try {
+                                UU.stop(RU + 5 * qU)
                               } catch {}
                             }
                           }
 
-                          function BD(DD, CD) {
-                            var cD;
-                            const iD = ID.Howler.ctx,
-                              fD = ID.Howler.masterGain;
-                            if (!iD || !fD || !pD.d.get("soundOnFromAd")) return () => {};
-                            const bD = ID.Howler;
-                            return null === (cD = bD._autoResume) || void 0 === cD || cD.call(bD), SD(iD, fD, DD, CD, pD.d.get("soundVolume"), (() => {
-                              var DD;
-                              null === (DD = bD._autoSuspend) || void 0 === DD || DD.call(bD)
+                          function GU(UU, RU) {
+                            var gU;
+                            const EU = tU.Howler.ctx,
+                              PU = tU.Howler.masterGain;
+                            if (!EU || !PU || !pU.b.get("soundOnFromAd")) return () => {};
+                            const TU = tU.Howler;
+                            return null === (gU = TU._autoResume) || void 0 === gU || gU.call(TU), cU(EU, PU, UU, RU, pU.b.get("soundVolume"), (() => {
+                              var UU;
+                              null === (UU = TU._autoSuspend) || void 0 === UU || UU.call(TU)
                             }))
                           }
-                        }, 4621: (DD, CD, cD) => {
-                          cD.r(CD), cD.d(CD, {
-                            Howl: () => pD.Howl,
-                            Howler: () => pD.Howler,
-                            iosAudio: () => QD,
-                            musicOutput: () => oD,
-                            readyAudioContext: () => vD
+                        }, 4512: (UU, RU, gU) => {
+                          gU.r(RU), gU.d(RU, {
+                            Howl: () => pU.Howl,
+                            Howler: () => pU.Howler,
+                            iosAudio: () => qU,
+                            musicOutput: () => QU,
+                            readyAudioContext: () => eU
                           });
-                          var ID, pD = cD(4626),
-                            iD = cD(90);
-                          const fD = pD.Howler;
-                          let bD;
+                          var tU, pU = gU(4518),
+                            EU = gU(96);
+                          const PU = pU.Howler;
+                          let TU;
 
-                          function QD() {
-                            return bD ??= "ios" === (0, iD.getOperatingSystem)(), bD
+                          function qU() {
+                            return TU ??= "ios" === (0, EU.getOperatingSystem)(), TU
                           }
 
-                          function wD() {
-                            var DD, CD;
-                            if (fD.ctx || !fD.usingWebAudio || "undefined" === typeof AudioContext || !QD()) return;
-                            const cD = navigator.audioSession;
-                            let ID;
-                            "auto" === (null === cD || void 0 === cD ? void 0 : cD.type) && (cD.type = "ambient");
+                          function KU() {
+                            var UU, RU;
+                            if (PU.ctx || !PU.usingWebAudio || "undefined" === typeof AudioContext || !qU()) return;
+                            const gU = navigator.audioSession;
+                            let tU;
+                            "auto" === (null === gU || void 0 === gU ? void 0 : gU.type) && (gU.type = "ambient");
                             try {
-                              ID = new AudioContext({
+                              tU = new AudioContext({
                                 sampleRate: 44100
                               })
                             } catch {
                               return
                             }
-                            const pD = ID.createGain();
-                            pD.gain.setValueAtTime(fD._muted ? 0 : null !== (DD = fD._volume) && void 0 !== DD ? DD : 1, ID.currentTime), pD.connect(ID.destination), fD.ctx = ID, fD.masterGain = pD, null === (CD = fD._setup) || void 0 === CD || CD.call(fD)
+                            const pU = tU.createGain();
+                            pU.gain.setValueAtTime(PU._muted ? 0 : null !== (UU = PU._volume) && void 0 !== UU ? UU : 1, tU.currentTime), pU.connect(tU.destination), PU.ctx = tU, PU.masterGain = pU, null === (RU = PU._setup) || void 0 === RU || RU.call(PU)
                           }
-                          fD._mobileUnloaded = !0;
-                          const SD = fD.volume.bind(pD.Howler);
-                          fD.volume = function() {
-                            return wD(), SD(...arguments)
+                          PU._mobileUnloaded = !0;
+                          const cU = PU.volume.bind(pU.Howler);
+                          PU.volume = function() {
+                            return KU(), cU(...arguments)
                           };
-                          const BD = fD.mute.bind(pD.Howler);
-                          fD.mute = DD => (wD(), BD(DD));
-                          const yD = pD.Howl.prototype,
-                            MD = yD.init;
-                          yD.init = function(DD) {
-                            return wD(), MD.call(this, DD)
+                          const GU = PU.mute.bind(pU.Howler);
+                          PU.mute = UU => (KU(), GU(UU));
+                          const jU = pU.Howl.prototype,
+                            uU = jU.init;
+                          jU.init = function(UU) {
+                            return KU(), uU.call(this, UU)
                           };
-                          let tD = 0;
-                          const ZD = null === (ID = fD._autoSuspend) || void 0 === ID ? void 0 : ID.bind(pD.Howler);
+                          let CU = 0;
+                          const hU = null === (tU = PU._autoSuspend) || void 0 === tU ? void 0 : tU.bind(pU.Howler);
 
-                          function oD() {
-                            vD();
+                          function QU() {
+                            eU();
                             const {
-                              ctx: DD,
-                              masterGain: CD
-                            } = fD;
-                            return DD && CD ? {
-                              ctx: DD,
-                              destination: CD,
-                              holdAwake: DD => {
-                                var CD, cD;
-                                (tD += DD ? 1 : -1, DD) ? null === (CD = fD._autoResume) || void 0 === CD || CD.call(fD): null === (cD = fD._autoSuspend) || void 0 === cD || cD.call(fD)
+                              ctx: UU,
+                              masterGain: RU
+                            } = PU;
+                            return UU && RU ? {
+                              ctx: UU,
+                              destination: RU,
+                              holdAwake: UU => {
+                                var RU, gU;
+                                (CU += UU ? 1 : -1, UU) ? null === (RU = PU._autoResume) || void 0 === RU || RU.call(PU): null === (gU = PU._autoSuspend) || void 0 === gU || gU.call(PU)
                               },
                               wake: () => {
-                                var CD;
-                                "running" !== DD.state && (null === (CD = fD._autoResume) || void 0 === CD || CD.call(fD), DD.resume().catch((() => {})))
+                                var RU;
+                                "running" !== UU.state && (null === (RU = PU._autoResume) || void 0 === RU || RU.call(PU), UU.resume().catch((() => {})))
                               }
                             } : null
                           }
 
-                          function vD() {
-                            var DD;
-                            (fD.volume(), fD.ctx && fD.autoUnlock) && (null === (DD = fD._unlockAudio) || void 0 === DD || DD.call(fD))
+                          function eU() {
+                            var UU;
+                            (PU.volume(), PU.ctx && PU.autoUnlock) && (null === (UU = PU._unlockAudio) || void 0 === UU || UU.call(PU))
                           }
-                          ZD && (fD._autoSuspend = () => tD > 0 ? pD.Howler : ZD())
-                        }, 4630: (DD, CD, cD) => {
-                          function ID(DD) {
+                          hU && (PU._autoSuspend = () => CU > 0 ? pU.Howler : hU())
+                        }, 4525: (UU, RU, gU) => {
+                          function tU(UU) {
                             return {
-                              notAfter: DD
+                              notAfter: UU
                             }
                           }
-                          cD.d(CD, {
-                            C: () => SD,
-                            F: () => BD,
-                            e: () => QD,
-                            f: () => wD,
-                            j: () => bD,
-                            n: () => ID,
-                            q: () => pD,
-                            u: () => iD,
-                            y: () => fD
+                          gU.d(RU, {
+                            b: () => qU,
+                            c: () => KU,
+                            e: () => TU,
+                            f: () => tU,
+                            h: () => pU,
+                            k: () => EU,
+                            m: () => PU,
+                            o: () => cU,
+                            p: () => GU
                           });
-                          const pD = ID("\\w$."),
-                            iD = ID("\\w.,");
+                          const pU = tU("\\w$."),
+                            EU = tU("\\w.,");
 
-                          function fD(DD) {
-                            return CD => QD(CD, DD)
+                          function PU(UU) {
+                            return RU => qU(RU, UU)
                           }
 
-                          function bD(DD) {
-                            return CD => !DD.test(CD.input.slice(0, CD.index))
+                          function TU(UU) {
+                            return RU => !UU.test(RU.input.slice(0, RU.index))
                           }
 
-                          function QD(DD, CD) {
-                            return DD.index > 0 && new RegExp(`[${CD}]`).test(DD.input[DD.index - 1])
+                          function qU(UU, RU) {
+                            return UU.index > 0 && new RegExp(`[${RU}]`).test(UU.input[UU.index - 1])
                           }
 
-                          function wD(DD, CD, cD) {
-                            return function(DD) {
-                              return void 0 !== DD && "function" !== typeof DD
-                            }(cD) ? function(DD, CD, cD) {
-                              const ID = CD.flags.replace(/[gy]/g, ""),
-                                pD = new RegExp(`[^${cD}](?:${CD.source})`, `${ID}g`),
-                                iD = [],
-                                fD = cD => {
-                                  const ID = cD.index + cD[0].length;
-                                  return ("" === cD[0] ? yD(DD, CD, ID) : ID) - 1
+                          function KU(UU, RU, gU) {
+                            return function(UU) {
+                              return void 0 !== UU && "function" !== typeof UU
+                            }(gU) ? function(UU, RU, gU) {
+                              const tU = RU.flags.replace(/[gy]/g, ""),
+                                pU = new RegExp(`[^${gU}](?:${RU.source})`, `${tU}g`),
+                                EU = [],
+                                PU = gU => {
+                                  const tU = gU.index + gU[0].length;
+                                  return ("" === gU[0] ? jU(UU, RU, tU) : tU) - 1
                                 },
-                                bD = new RegExp(`(?:${CD.source})`, `${ID}y`).exec(DD);
-                              if (bD) {
-                                if (iD.push(bD), !CD.global) return iD;
-                                pD.lastIndex = fD(bD)
+                                TU = new RegExp(`(?:${RU.source})`, `${tU}y`).exec(UU);
+                              if (TU) {
+                                if (EU.push(TU), !RU.global) return EU;
+                                pU.lastIndex = PU(TU)
                               }
-                              for (let QD = pD.exec(DD); QD; QD = pD.exec(DD)) {
-                                const cD = yD(DD, CD, QD.index) - QD.index;
-                                if (QD[0] = QD[0].slice(cD), QD.index += cD, iD.push(QD), !CD.global) break;
-                                pD.lastIndex = fD(QD)
+                              for (let qU = pU.exec(UU); qU; qU = pU.exec(UU)) {
+                                const gU = jU(UU, RU, qU.index) - qU.index;
+                                if (qU[0] = qU[0].slice(gU), qU.index += gU, EU.push(qU), !RU.global) break;
+                                pU.lastIndex = PU(qU)
                               }
-                              return iD
-                            }(DD, CD, cD.notAfter) : function(DD, CD, cD) {
-                              const ID = new RegExp(CD.source, `${CD.flags.replace(/[gy]/g,"")}g`),
-                                pD = [];
-                              for (let iD = ID.exec(DD); iD; iD = ID.exec(DD))
-                                if (!cD || cD(iD)) {
-                                  if (pD.push(iD), !CD.global) break;
-                                  "" === iD[0] && (ID.lastIndex = yD(DD, CD, ID.lastIndex))
-                                } else ID.lastIndex = yD(DD, CD, iD.index);
-                              return pD
-                            }(DD, CD, cD)
+                              return EU
+                            }(UU, RU, gU.notAfter) : function(UU, RU, gU) {
+                              const tU = new RegExp(RU.source, `${RU.flags.replace(/[gy]/g,"")}g`),
+                                pU = [];
+                              for (let EU = tU.exec(UU); EU; EU = tU.exec(UU))
+                                if (!gU || gU(EU)) {
+                                  if (pU.push(EU), !RU.global) break;
+                                  "" === EU[0] && (tU.lastIndex = jU(UU, RU, tU.lastIndex))
+                                } else tU.lastIndex = jU(UU, RU, EU.index);
+                              return pU
+                            }(UU, RU, gU)
                           }
 
-                          function SD(DD, CD, cD, ID) {
-                            let pD = "",
-                              iD = 0;
-                            for (const fD of wD(DD, CD, cD)) pD += DD.slice(iD, fD.index) + ID(fD), iD = fD.index + fD[0].length;
-                            return pD + DD.slice(iD)
+                          function cU(UU, RU, gU, tU) {
+                            let pU = "",
+                              EU = 0;
+                            for (const PU of KU(UU, RU, gU)) pU += UU.slice(EU, PU.index) + tU(PU), EU = PU.index + PU[0].length;
+                            return pU + UU.slice(EU)
                           }
 
-                          function BD(DD, CD, cD) {
-                            const ID = [];
-                            let pD = 0;
-                            for (const iD of wD(DD, CD, cD)) ID.push(DD.slice(pD, iD.index)), pD = iD.index + iD[0].length;
-                            return [...ID, DD.slice(pD)]
+                          function GU(UU, RU, gU) {
+                            const tU = [];
+                            let pU = 0;
+                            for (const EU of KU(UU, RU, gU)) tU.push(UU.slice(pU, EU.index)), pU = EU.index + EU[0].length;
+                            return [...tU, UU.slice(pU)]
                           }
 
-                          function yD(DD, CD, cD) {
-                            var ID;
-                            return cD + (CD.unicode && (null !== (ID = DD.codePointAt(cD)) && void 0 !== ID ? ID : 0) > 65535 ? 2 : 1)
+                          function jU(UU, RU, gU) {
+                            var tU;
+                            return gU + (RU.unicode && (null !== (tU = UU.codePointAt(gU)) && void 0 !== tU ? tU : 0) > 65535 ? 2 : 1)
                           }
-                        }, 4597: (DD, CD, cD) => {
-                          cD.d(CD, {
-                            b: () => pD,
-                            c: () => QD,
-                            g: () => iD,
-                            i: () => fD,
-                            k: () => bD,
-                            l: () => oD,
-                            m: () => SD,
-                            p: () => BD,
-                            q: () => ZD,
-                            t: () => MD
+                        }, 4480: (UU, RU, gU) => {
+                          gU.d(RU, {
+                            e: () => pU,
+                            h: () => qU,
+                            j: () => EU,
+                            m: () => PU,
+                            n: () => TU,
+                            p: () => QU,
+                            q: () => cU,
+                            s: () => GU,
+                            u: () => hU,
+                            v: () => uU
                           });
-                          var ID = cD(1577);
-                          const pD = 24e3,
-                            iD = "/docs/llms.txt",
-                            fD = `${ID.c}${iD}`,
-                            bD = "/llms.txt",
-                            QD = "/docs/llms-full.txt";
+                          var tU = gU(1535);
+                          const pU = 24e3,
+                            EU = "/docs/llms.txt",
+                            PU = `${tU.b}${EU}`,
+                            TU = "/llms.txt",
+                            qU = "/docs/llms-full.txt";
 
-                          function wD(DD) {
-                            return DD || "index"
+                          function KU(UU) {
+                            return UU || "index"
                           }
 
-                          function SD(DD) {
-                            return `/docs/${wD(DD)}.md`
+                          function cU(UU) {
+                            return `/docs/${KU(UU)}.md`
                           }
 
-                          function BD(DD, CD) {
-                            return `/docs/${wD(DD)}/${CD+1}.md`
+                          function GU(UU, RU) {
+                            return `/docs/${KU(UU)}/${RU+1}.md`
                           }
-                          const yD = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+                          const jU = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-                          function MD(DD) {
-                            const CD = yD.exec(DD);
-                            return null === CD ? null : {
-                              name: CD[1],
-                              part: void 0 === CD[2] ? null : Number(CD[2])
+                          function uU(UU) {
+                            const RU = jU.exec(UU);
+                            return null === RU ? null : {
+                              name: RU[1],
+                              part: void 0 === RU[2] ? null : Number(RU[2])
                             }
                           }
-                          const tD = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+                          const CU = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-                          function ZD(DD) {
-                            const CD = tD.exec(DD);
-                            if (null === CD) return null;
-                            const [, cD = "", ID] = CD;
-                            return void 0 === ID ? SD(cD) : BD(cD, Number(ID) - 1)
+                          function hU(UU) {
+                            const RU = CU.exec(UU);
+                            if (null === RU) return null;
+                            const [, gU = "", tU] = RU;
+                            return void 0 === tU ? cU(gU) : GU(gU, Number(tU) - 1)
                           }
 
-                          function oD(DD) {
-                            return `/docsHtml/${wD(DD)}.html`
+                          function QU(UU) {
+                            return `/docsHtml/${KU(UU)}.html`
                           }
-                        }, 4615: (DD, CD, cD) => {
-                          cD.d(CD, {
-                            d: () => pD,
-                            h: () => ID,
-                            k: () => iD,
-                            l: () => QD,
-                            p: () => fD
+                        }, 4503: (UU, RU, gU) => {
+                          gU.d(RU, {
+                            c: () => pU,
+                            f: () => tU,
+                            j: () => EU,
+                            k: () => qU,
+                            n: () => PU
                           });
-                          const ID = ["sine", "triangle", "square", "sawtooth"],
-                            pD = 55,
-                            iD = {
+                          const tU = ["sine", "triangle", "square", "sawtooth"],
+                            pU = 55,
+                            EU = {
                               soft: {
                                 waveform: "sine",
                                 pitchHz: 300,
@@ -7214,38 +7214,38 @@ export const modules = {
                               }
                             };
 
-                          function fD(DD) {
-                            return "string" !== typeof DD ? DD : Object.hasOwn(iD, DD) ? iD[DD] : null
+                          function PU(UU) {
+                            return "string" !== typeof UU ? UU : Object.hasOwn(EU, UU) ? EU[UU] : null
                           }
 
-                          function bD(DD, CD, cD) {
-                            return Math.min(cD, Math.max(CD, DD))
+                          function TU(UU, RU, gU) {
+                            return Math.min(gU, Math.max(RU, UU))
                           }
 
-                          function QD(DD) {
-                            const CD = bD(DD.durationMs, 10, 500),
-                              cD = bD(DD.attackMs, 0, CD),
+                          function qU(UU) {
+                            const RU = TU(UU.durationMs, 10, 500),
+                              gU = TU(UU.attackMs, 0, RU),
                               {
-                                intonation: pD
-                              } = DD;
+                                intonation: pU
+                              } = UU;
                             return {
-                              waveform: ID.includes(DD.waveform) ? DD.waveform : "sine",
-                              pitchHz: bD(DD.pitchHz, 20, 4e3),
-                              glideSemitones: bD(DD.glideSemitones, -24, 24),
-                              durationMs: CD,
-                              attackMs: cD,
-                              releaseMs: bD(DD.releaseMs, 0, CD - cD),
-                              lowpassHz: null === DD.lowpassHz ? null : bD(DD.lowpassHz, 20, 2e4),
-                              volume: bD(DD.volume, 0, 2),
+                              waveform: tU.includes(UU.waveform) ? UU.waveform : "sine",
+                              pitchHz: TU(UU.pitchHz, 20, 4e3),
+                              glideSemitones: TU(UU.glideSemitones, -24, 24),
+                              durationMs: RU,
+                              attackMs: gU,
+                              releaseMs: TU(UU.releaseMs, 0, RU - gU),
+                              lowpassHz: null === UU.lowpassHz ? null : TU(UU.lowpassHz, 20, 2e4),
+                              volume: TU(UU.volume, 0, 2),
                               intonation: {
-                                variationSemitones: bD(pD.variationSemitones, 0, 6),
-                                declineSemitones: bD(pD.declineSemitones, 0, 12),
-                                questionRiseSemitones: bD(pD.questionRiseSemitones, 0, 12),
-                                exclaimLiftSemitones: bD(pD.exclaimLiftSemitones, 0, 12)
+                                variationSemitones: TU(pU.variationSemitones, 0, 6),
+                                declineSemitones: TU(pU.declineSemitones, 0, 12),
+                                questionRiseSemitones: TU(pU.questionRiseSemitones, 0, 12),
+                                exclaimLiftSemitones: TU(pU.exclaimLiftSemitones, 0, 12)
                               },
-                              syllableMs: bD(DD.syllableMs, 25, 200)
+                              syllableMs: TU(UU.syllableMs, 25, 200)
                             }
                           }
                         }
                       }; Object.freeze(modules);
-                      for (const DD in modules) Object.freeze(modules[DD]);
+                      for (const UU in modules) Object.freeze(modules[UU]);

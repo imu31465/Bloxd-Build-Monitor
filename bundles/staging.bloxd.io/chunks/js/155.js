@@ -1,163 +1,163 @@
 export const id = 155;
 export const ids = [155];
 export const modules = {
-  38431: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => iD,
-      h: () => fD
+  38631: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => EU,
+      f: () => PU
     });
-    var ID = cD(20);
-    let pD = !1;
+    var tU = gU(24);
+    let pU = !1;
 
-    function iD() {
-      return pD
+    function EU() {
+      return pU
     }
 
-    function fD(DD) {
-      pD !== DD && (pD = DD, ID.i.Uo("replayViewer|videoExportChanged"))
+    function PU(UU) {
+      pU !== UU && (pU = UU, tU.p.yh("replayViewer|videoExportChanged"))
     }
   },
-  38323: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => iD
+  38524: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => EU
     });
-    var ID = cD(20),
-      pD = cD(1928);
+    var tU = gU(24),
+      pU = gU(1821);
 
-    function iD(DD) {
+    function EU(UU) {
       let {
-        taskId: CD,
-        progress: cD
-      } = DD;
-      const ID = pD.d.get("_tasks");
-      null !== ID && void 0 !== ID && ID[CD] && pD.d.apply({
+        taskId: RU,
+        progress: gU
+      } = UU;
+      const tU = pU.b.get("_tasks");
+      null !== tU && void 0 !== tU && tU[RU] && pU.b.apply({
         _tasks: {
-          ...ID,
-          [CD]: {
-            ...ID[CD],
-            progress: cD
+          ...tU,
+          [RU]: {
+            ...tU[RU],
+            progress: gU
           }
         }
       })
     }
-    ID.i.subscribe("clientTaskProgress", (DD => {
-      iD(DD)
+    tU.p.subscribe("clientTaskProgress", (UU => {
+      EU(UU)
     }))
   },
-  38447: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => ZD,
-      e: () => oD,
-      f: () => tD
+  38654: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => hU,
+      i: () => QU,
+      m: () => CU
     });
-    var ID = cD(2727);
-    const pD = 0,
-      iD = 2,
-      fD = 3,
-      bD = 4;
-    class QD {
-      constructor(DD, CD) {
-        this.width = DD, this.LB = CD, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(DD * CD)
+    var tU = gU(2624);
+    const pU = 0,
+      EU = 2,
+      PU = 3,
+      TU = 4;
+    class qU {
+      constructor(UU, RU) {
+        this.width = UU, this.hG = RU, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(UU * RU)
       }
-      push(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const cD = this.data.subarray(this.next * this.width, (this.next + 1) * this.width);
-        for (let ID = 0; ID < this.width; ID++) cD[ID] = DD[CD + ID];
-        return this.next = (this.next + 1) % this.LB, this.size = Math.min(this.size + 1, this.LB), cD
+      push(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const gU = this.data.subarray(this.next * this.width, (this.next + 1) * this.width);
+        for (let tU = 0; tU < this.width; tU++) gU[tU] = UU[RU + tU];
+        return this.next = (this.next + 1) % this.hG, this.size = Math.min(this.size + 1, this.hG), gU
       }
       lines() {
-        const DD = [],
-          CD = (this.next - this.size + this.LB) % this.LB;
-        for (let cD = 0; cD < this.size; cD++) {
-          const ID = (CD + cD) % this.LB * this.width;
-          DD.push(Array.from(this.data.subarray(ID, ID + this.width)).join(","))
+        const UU = [],
+          RU = (this.next - this.size + this.hG) % this.hG;
+        for (let gU = 0; gU < this.size; gU++) {
+          const tU = (RU + gU) % this.hG * this.width;
+          UU.push(Array.from(this.data.subarray(tU, tU + this.width)).join(","))
         }
-        return DD
+        return UU
       }
     }
 
-    function wD(DD) {
-      return Number.isFinite(DD) ? String(Math.round(10 * DD) / 10) : String(DD)
+    function KU(UU) {
+      return Number.isFinite(UU) ? String(Math.round(10 * UU) / 10) : String(UU)
     }
 
-    function SD(DD) {
-      return Number.isFinite(DD) ? DD.toFixed(1) : String(DD)
+    function cU(UU) {
+      return Number.isFinite(UU) ? UU.toFixed(1) : String(UU)
     }
-    class BD {
+    class GU {
       constructor() {
-        this.frames = 0, this.looked = 0, this.idle = 0, this.lL = 0, this.pastLimit = 0, this.lockSkips = 0, this.eb = 0, this.lost = 0, this.dropped = 0, this.longFrames = 0, this.dtMin = 1 / 0, this.dtMax = 0, this.dtSum = 0, this.raw = [0, 0], this.turned = [0, 0], this.peakRate = 0, this.events = 0, this.eventMax = 0, this.bigEvents = 0, this.outliers = 0, this.eventLines = 0, this.suppressed = 0
+        this.frames = 0, this.looked = 0, this.idle = 0, this.YH = 0, this.pastLimit = 0, this.lockSkips = 0, this.ih = 0, this.lost = 0, this.dropped = 0, this.longFrames = 0, this.dtMin = 1 / 0, this.dtMax = 0, this.dtSum = 0, this.raw = [0, 0], this.turned = [0, 0], this.peakRate = 0, this.events = 0, this.eventMax = 0, this.bigEvents = 0, this.outliers = 0, this.eventLines = 0, this.suppressed = 0
       }
     }
-    class yD {
+    class jU {
       constructor() {
-        var DD = this;
-        this.tally = new BD, this.records = new QD(10, 3600), this.events = new QD(4, 12e3), this.event = new Float64Array(4), this.take = null, this.client = "js", this.started = !1, this.record = function(CD) {
-          let cD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-          const [ID, QD, BD, yD, MD, tD, ZD, oD, vD, ND] = DD.records.push(CD, cD), gD = DD.tally;
-          switch (gD.frames++, ZD) {
-            case pD:
-              return void gD.idle++;
-            case bD:
-              return void gD.eb++;
-            case fD:
-              return gD.lockSkips++, void(0 === BD && 0 === yD || DD.outlier(`lock skip dropped raw (${wD(BD)}, ${wD(yD)}) at ${SD(ID)} ms`))
+        var UU = this;
+        this.tally = new GU, this.records = new qU(10, 3600), this.events = new qU(4, 12e3), this.event = new Float64Array(4), this.take = null, this.client = "js", this.started = !1, this.record = function(RU) {
+          let gU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+          const [tU, qU, GU, jU, uU, CU, hU, QU, eU, WU] = UU.records.push(RU, gU), fU = UU.tally;
+          switch (fU.frames++, hU) {
+            case pU:
+              return void fU.idle++;
+            case TU:
+              return void fU.ih++;
+            case PU:
+              return fU.lockSkips++, void(0 === GU && 0 === jU || UU.outlier(`lock skip dropped raw (${KU(GU)}, ${KU(jU)}) at ${cU(tU)} ms`))
           }
-          gD.looked++, Number.isFinite(QD) && (gD.dtMin = Math.min(gD.dtMin, QD), gD.dtMax = Math.max(gD.dtMax, QD), gD.dtSum += QD, QD > 0 && (gD.peakRate = Math.max(gD.peakRate, Math.hypot(MD, tD) / QD))), gD.raw[0] += BD, gD.raw[1] += yD, gD.turned[0] += MD, gD.turned[1] += tD;
-          const XD = Math.abs(BD) > ND || Math.abs(yD) > ND,
-            mD = `raw (${wD(BD)}, ${wD(yD)}) over ${SD(QD)} ms, limit ${wD(ND)}, filter v (${oD.toFixed(3)}, ${vD.toFixed(3)}) px/ms, at ${SD(ID)} ms`;
-          ZD === iD ? (gD.lL++, DD.outlier(`spike put right: ${mD} -> turned (${wD(MD)}, ${wD(tD)})`)) : XD ? (gD.pastLimit++, DD.outlier(`kept past limit: ${mD}`)) : QD > 50 && (gD.longFrames++, DD.outlier(`long frame: ${mD}, turned in full`))
-        }, this.onMouseMove = DD => {
-          const CD = this.tally,
+          fU.looked++, Number.isFinite(qU) && (fU.dtMin = Math.min(fU.dtMin, qU), fU.dtMax = Math.max(fU.dtMax, qU), fU.dtSum += qU, qU > 0 && (fU.peakRate = Math.max(fU.peakRate, Math.hypot(uU, CU) / qU))), fU.raw[0] += GU, fU.raw[1] += jU, fU.turned[0] += uU, fU.turned[1] += CU;
+          const xU = Math.abs(GU) > WU || Math.abs(jU) > WU,
+            mU = `raw (${KU(GU)}, ${KU(jU)}) over ${cU(qU)} ms, limit ${KU(WU)}, filter v (${QU.toFixed(3)}, ${eU.toFixed(3)}) px/ms, at ${cU(tU)} ms`;
+          hU === EU ? (fU.YH++, UU.outlier(`spike put right: ${mU} -> turned (${KU(uU)}, ${KU(CU)})`)) : xU ? (fU.pastLimit++, UU.outlier(`kept past limit: ${mU}`)) : qU > 50 && (fU.longFrames++, UU.outlier(`long frame: ${mU}, turned in full`))
+        }, this.onMouseMove = UU => {
+          const RU = this.tally,
             {
-              movementX: cD,
-              movementY: ID
-            } = DD;
-          CD.events++;
-          const pD = Math.max(Math.abs(cD), Math.abs(ID));
-          CD.eventMax = Math.max(CD.eventMax, pD);
-          const iD = null !== document.pointerLockElement,
-            fD = this.event;
-          fD[0] = DD.timeStamp, fD[1] = cD, fD[2] = ID, fD[3] = iD ? 1 : 0, this.events.push(fD), pD >= 200 && (CD.bigEvents++, this.eventOutlier(`big mousemove (${cD}, ${ID}) at ${SD(DD.timeStamp)} ms, lock ${iD?"Lb":"free"}`))
+              movementX: gU,
+              movementY: tU
+            } = UU;
+          RU.events++;
+          const pU = Math.max(Math.abs(gU), Math.abs(tU));
+          RU.eventMax = Math.max(RU.eventMax, pU);
+          const EU = null !== document.pointerLockElement,
+            PU = this.event;
+          PU[0] = UU.timeStamp, PU[1] = gU, PU[2] = tU, PU[3] = EU ? 1 : 0, this.events.push(PU), pU >= 200 && (RU.bigEvents++, this.eventOutlier(`big mousemove (${gU}, ${tU}) at ${cU(UU.timeStamp)} ms, lock ${EU?"WT":"free"}`))
         }, this.onLockChange = () => {
-          const DD = document.pointerLockElement;
-          (0, ID.j)("look", `pointer lock ${DD?`gained (${DD.tagName.toLowerCase()})`:"lost"} at ${SD(performance.now())} ms`)
+          const UU = document.pointerLockElement;
+          (0, tU.h)("look", `pointer lock ${UU?`gained (${UU.tagName.toLowerCase()})`:"lost"} at ${cU(performance.now())} ms`)
         }, this.onLockError = () => {
-          (0, ID.j)("look", `pointer lock request failed at ${SD(performance.now())} ms`)
+          (0, tU.h)("look", `pointer lock request failed at ${cU(performance.now())} ms`)
         }, this.onVisibility = () => {
-          (0, ID.j)("look", `page ${document.visibilityState} at ${SD(performance.now())} ms`)
+          (0, tU.h)("look", `page ${document.visibilityState} at ${cU(performance.now())} ms`)
         }, this.flush = () => {
           this.takeRecords();
-          const DD = this.tally;
-          if (this.tally = new BD, 0 === DD.events && 0 === DD.raw[0] && 0 === DD.raw[1] && 0 === DD.lockSkips && 0 === DD.lL && 0 === DD.dropped) return;
-          const CD = DD.looked > 0 ? DD.dtSum / DD.looked : NaN,
-            cD = [`${DD.frames} frames (${DD.looked} looked, ${DD.idle} idle${"wasm"===this.client?`, ${DD.eb} carried`:""})`, `dt avg ${SD(CD)} min ${SD(DD.dtMin)} max ${SD(DD.dtMax)}, ${DD.longFrames} long`, `${DD.events} mousemoves (max ${wD(DD.eventMax)} px, ${DD.bigEvents} big)`, `raw (${wD(DD.raw[0])}, ${wD(DD.raw[1])}) turned (${wD(DD.turned[0])}, ${wD(DD.turned[1])})`, `peak ${DD.peakRate.toFixed(2)} px/ms`, `put right ${DD.lL}, past limit ${DD.pastLimit}, lock skips ${DD.lockSkips}`, "lock " + (document.pointerLockElement ? "Lb" : "free")];
-          DD.dropped > 0 && cD.push(`${DD.dropped} doubled spike copies dropped`), DD.lost > 0 && cD.push(`${DD.lost} records lost`), DD.suppressed > 0 && cD.push(`${DD.suppressed} outlier lines not shown`), (0, ID.j)("look", `1s: ${cD.join("; ")}`)
+          const UU = this.tally;
+          if (this.tally = new GU, 0 === UU.events && 0 === UU.raw[0] && 0 === UU.raw[1] && 0 === UU.lockSkips && 0 === UU.YH && 0 === UU.dropped) return;
+          const RU = UU.looked > 0 ? UU.dtSum / UU.looked : NaN,
+            gU = [`${UU.frames} frames (${UU.looked} looked, ${UU.idle} idle${"wasm"===this.client?`, ${UU.ih} carried`:""})`, `dt avg ${cU(RU)} min ${cU(UU.dtMin)} max ${cU(UU.dtMax)}, ${UU.longFrames} long`, `${UU.events} mousemoves (max ${KU(UU.eventMax)} px, ${UU.bigEvents} big)`, `raw (${KU(UU.raw[0])}, ${KU(UU.raw[1])}) turned (${KU(UU.turned[0])}, ${KU(UU.turned[1])})`, `peak ${UU.peakRate.toFixed(2)} px/ms`, `put right ${UU.YH}, past limit ${UU.pastLimit}, lock skips ${UU.lockSkips}`, "lock " + (document.pointerLockElement ? "WT" : "free")];
+          UU.dropped > 0 && gU.push(`${UU.dropped} doubled spike copies dropped`), UU.lost > 0 && gU.push(`${UU.lost} records lost`), UU.suppressed > 0 && gU.push(`${UU.suppressed} outlier lines not shown`), (0, tU.h)("look", `1s: ${gU.join("; ")}`)
         }, this.dump = () => [`look records (${this.client}): nowMs,dtMs,rawX,rawY,turnedX,turnedY,outcome,vX,vY,limit`, ...this.records.lines(), "mousemove events: timeStamp,movementX,movementY,locked", ...this.events.lines()].join("\n")
       }
-      start(DD, CD) {
-        this.client = DD, this.take = CD;
+      start(UU, RU) {
+        this.client = UU, this.take = RU;
         const {
-          screen: cD
+          screen: gU
         } = window;
-        (0, ID.j)("look", `start: ${DD} client, dpr ${window.devicePixelRatio}, screen ${cD.width}x${cD.height}, pointer lock ${document.pointerLockElement?"Lb":"free"}`), this.started || (this.started = !0, window.addEventListener("mousemove", this.onMouseMove, {
+        (0, tU.h)("look", `start: ${UU} client, dpr ${window.devicePixelRatio}, screen ${gU.width}x${gU.height}, pointer lock ${document.pointerLockElement?"WT":"free"}`), this.started || (this.started = !0, window.addEventListener("mousemove", this.onMouseMove, {
           capture: !0,
           passive: !0
-        }), document.addEventListener("pointerlockchange", this.onLockChange), document.addEventListener("pointerlockerror", this.onLockError), document.addEventListener("visibilitychange", this.onVisibility), setInterval(this.flush, 1e3), (0, ID.h)("look", this.dump))
+        }), document.addEventListener("pointerlockchange", this.onLockChange), document.addEventListener("pointerlockerror", this.onLockError), document.addEventListener("visibilitychange", this.onVisibility), setInterval(this.flush, 1e3), (0, tU.g)("look", this.dump))
       }
-      outlier(DD) {
-        const CD = this.tally;
-        CD.outliers >= 20 ? CD.suppressed++ : (CD.outliers++, (0, ID.j)("look", DD))
+      outlier(UU) {
+        const RU = this.tally;
+        RU.outliers >= 20 ? RU.suppressed++ : (RU.outliers++, (0, tU.h)("look", UU))
       }
-      eventOutlier(DD) {
-        const CD = this.tally;
-        CD.eventLines >= 10 ? CD.suppressed++ : (CD.eventLines++, (0, ID.j)("look", DD))
+      eventOutlier(UU) {
+        const RU = this.tally;
+        RU.eventLines >= 10 ? RU.suppressed++ : (RU.eventLines++, (0, tU.h)("look", UU))
       }
       takeRecords() {
-        var DD;
-        const CD = null === (DD = this.take) || void 0 === DD ? void 0 : DD.call(this);
-        if (CD && CD.length >= 2) {
-          this.tally.lost += CD[0], this.tally.dropped += CD[1];
-          for (let DD = 2; DD + 10 <= CD.length; DD += 10) this.record(CD, DD)
+        var UU;
+        const RU = null === (UU = this.take) || void 0 === UU ? void 0 : UU.call(this);
+        if (RU && RU.length >= 2) {
+          this.tally.lost += RU[0], this.tally.dropped += RU[1];
+          for (let UU = 2; UU + 10 <= RU.length; UU += 10) this.record(RU, UU)
         }
       }
       droppedCopy() {
@@ -167,1141 +167,1141 @@ export const modules = {
         this.takeRecords(), this.take = null
       }
     }
-    let MD = null;
+    let uU = null;
 
-    function tD(DD) {
-      let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      return MD ??= new yD, MD.start(DD, CD), MD.record
+    function CU(UU) {
+      let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      return uU ??= new jU, uU.start(UU, RU), uU.record
     }
 
-    function ZD() {
-      var DD;
-      null === (DD = MD) || void 0 === DD || DD.endTake()
+    function hU() {
+      var UU;
+      null === (UU = uU) || void 0 === UU || UU.endTake()
     }
 
-    function oD() {
-      var DD;
-      null === (DD = MD) || void 0 === DD || DD.droppedCopy()
+    function QU() {
+      var UU;
+      null === (UU = uU) || void 0 === UU || UU.droppedCopy()
     }
   },
-  38314: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => dC,
-      f: () => RC,
-      j: () => kC
+  38517: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => kR,
+      f: () => sR,
+      g: () => yR
     });
-    var ID = cD(3501),
-      pD = cD(162),
-      iD = cD(194),
-      fD = cD(630),
-      bD = cD(36),
-      QD = cD(2642),
-      wD = cD(3583),
-      SD = cD(3563),
-      BD = cD(1221);
-    const yD = new WeakMap;
-    class MD {
-      constructor(DD, CD) {
-        let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
-          ywD: !0
+    var tU = gU(3349),
+      pU = gU(165),
+      EU = gU(189),
+      PU = gU(587),
+      TU = gU(34),
+      qU = gU(2551),
+      KU = gU(3420),
+      cU = gU(3398),
+      GU = gU(1217);
+    const jU = new WeakMap;
+    class uU {
+      constructor(UU, RU) {
+        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
+          pKU: !0
         };
-        this.callbacks = CD, this.options = cD, this.lCD = void 0, this.sessionId = void 0, this.WH = [], this.MwD = !1, this.Lt = !1, this.twD = void 0, this.YH = 0, this.sID = 0, this.ZwD = (DD, CD) => {
-          if (this.Lt) return;
-          const cD = Number(DD);
-          this.MwD ? this.vwD(cD, CD) : this.WH.push({
-            id: cD,
-            payload: CD
+        this.callbacks = RU, this.options = gU, this.ORU = void 0, this.sessionId = void 0, this.eJ = [], this.EKU = !1, this.pC = !1, this.PKU = void 0, this.QJ = 0, this.OtU = 0, this.TKU = (UU, RU) => {
+          if (this.pC) return;
+          const gU = Number(UU);
+          this.EKU ? this.qKU(gU, RU) : this.eJ.push({
+            id: gU,
+            payload: RU
           })
         }, this.dispose = () => {
-          this.Lt || (this.Lt = !0, yD.delete(this), this.WH.length = 0, this.twD())
-        }, this.lCD = DD, this.sessionId = DD.sessionId, yD.set(this, []), this.twD = this.NwD()
+          this.pC || (this.pC = !0, jU.delete(this), this.eJ.length = 0, this.PKU())
+        }, this.ORU = UU, this.sessionId = UU.sessionId, jU.set(this, []), this.PKU = this.KKU()
       }
-      gwD(DD) {
-        this.twD(), this.lCD = DD, this.sessionId = DD.sessionId, this.YH = 0, this.sID = 0, this.twD = this.NwD()
+      cKU(UU) {
+        this.PKU(), this.ORU = UU, this.sessionId = UU.sessionId, this.QJ = 0, this.OtU = 0, this.PKU = this.KKU()
       }
-      get jH() {
-        return this.sID
+      get KJ() {
+        return this.OtU
       }
-      NwD() {
-        const DD = this.lCD.Qm("*", this.ZwD);
-        return this.options.ywD && this.lCD.Zm(this.dispose), DD
+      KKU() {
+        const UU = this.ORU.Tm("*", this.TKU);
+        return this.options.pKU && this.ORU.qm(this.dispose), UU
       }
-      vwD(DD, CD) {
+      qKU(UU, RU) {
         try {
-          (0, wD.tc)(DD) && (CD = (0, wD.c)(DD, SD.lt.from(CD)));
-          const cD = yD.get(this)[DD];
-          if ("function" !== typeof cD) {
-            if (this.callbacks.XwD) return void this.callbacks.XwD(DD, CD);
-            throw new Error(`No onMessage handler registered for message id ${DD}`)
+          (0, KU.vc)(UU) && (RU = (0, KU.e)(UU, cU.tC.from(RU)));
+          const gU = jU.get(this)[UU];
+          if ("function" !== typeof gU) {
+            if (this.callbacks.GKU) return void this.callbacks.GKU(UU, RU);
+            throw new Error(`No onMessage handler registered for message id ${UU}`)
           }
-          cD(CD)
-        } catch (cD) {
-          this.callbacks.mwD(`Error in onMessage ${DD} with payload ${JSON.stringify(CD)}`, cD)
+          gU(RU)
+        } catch (gU) {
+          this.callbacks.jKU(`Error in onMessage ${UU} with payload ${JSON.stringify(RU)}`, gU)
         } finally {
-          this.YH++
+          this.QJ++
         }
       }
-      nwD() {
+      uKU() {
         for (const {
-            id: DD,
-            payload: CD
+            id: UU,
+            payload: RU
           }
-          of this.WH) {
-          if (this.Lt) break;
-          this.vwD(DD, CD)
+          of this.eJ) {
+          if (this.pC) break;
+          this.qKU(UU, RU)
         }
-        this.WH.length = 0
+        this.eJ.length = 0
       }
-      jCD() {
-        return this.Lt
+      lRU() {
+        return this.pC
       }
-      OwD() {
-        if (this.MwD || this.Lt) throw new Error("Trying to getOnMessageRegistrationHandler after registration finished");
+      CKU() {
+        if (this.EKU || this.pC) throw new Error("Trying to getOnMessageRegistrationHandler after registration finished");
         return {
-          Qm: (DD, CD) => {
-            if (this.MwD || this.Lt) throw new Error("Trying to call onMessage after registration finished");
-            this.Qm(DD, CD)
+          Tm: (UU, RU) => {
+            if (this.EKU || this.pC) throw new Error("Trying to call onMessage after registration finished");
+            this.Tm(UU, RU)
           },
           finishRegistration: () => {
-            if (this.Lt) throw new Error("Cannot finish message registration after disposal");
-            this.MwD = !0, this.nwD()
+            if (this.pC) throw new Error("Cannot finish message registration after disposal");
+            this.EKU = !0, this.uKU()
           }
         }
       }
-      Qm(DD, CD) {
-        var cD, ID;
-        null === (cD = (ID = this.callbacks).PwD) || void 0 === cD || cD.call(ID);
-        const pD = yD.get(this);
-        for (; DD > pD.length;) pD[pD.length] = null;
-        pD[DD] = CD
+      Tm(UU, RU) {
+        var gU, tU;
+        null === (gU = (tU = this.callbacks).hKU) || void 0 === gU || gU.call(tU);
+        const pU = jU.get(this);
+        for (; UU > pU.length;) pU[pU.length] = null;
+        pU[UU] = RU
       }
-      send(DD, CD) {
-        this.HwD(), (0, BD.C)(CD) ? this.lCD.vU(DD, CD) : this.lCD.send(DD, CD)
+      send(UU, RU) {
+        this.QKU(), (0, GU.E)(RU) ? this.ORU.aJ(UU, RU) : this.ORU.send(UU, RU)
       }
-      HwD() {
-        var DD, CD;
-        (this.sID++, 5 === tD++) && (null === (DD = (CD = this.callbacks).PwD) || void 0 === DD || DD.call(CD), tD = 0)
+      QKU() {
+        var UU, RU;
+        (this.OtU++, 5 === CU++) && (null === (UU = (RU = this.callbacks).hKU) || void 0 === UU || UU.call(RU), CU = 0)
       }
-      iN() {
-        this.dispose(), this.lCD.iN()
+      fW() {
+        this.dispose(), this.ORU.fW()
       }
       leave() {
-        this.dispose(), this.lCD.leave()
+        this.dispose(), this.ORU.leave()
       }
     }
-    let tD = 0;
-    var ZD = cD(3516);
-    class oD extends MD {
-      constructor(DD) {
-        super(DD, {
-          PwD: () => {
-            (0, bD.k)(!0) && (0, ID.xH)()
+    let CU = 0;
+    var hU = gU(3367);
+    class QU extends uU {
+      constructor(UU) {
+        super(UU, {
+          hKU: () => {
+            (0, TU.p)(!0) && (0, tU.qJ)()
           },
-          mwD: (DD, CD) => {
-            var cD;
-            null === (cD = (0, QD.i)()) || void 0 === cD || cD.dZ(DD, CD)
+          jKU: (UU, RU) => {
+            var gU;
+            null === (gU = (0, qU.g)()) || void 0 === gU || gU.Th(UU, RU)
           }
         }, {
-          ywD: !1
-        }), (0, ZD.f)(DD)
+          pKU: !1
+        }), (0, hU.f)(UU)
       }
-      sH(DD, CD) {
-        return !!(0, ZD.l)((0, ZD.c)(), this.lCD, DD, CD) && (this.HwD(), !0)
+      xJ(UU, RU) {
+        return !!(0, hU.h)((0, hU.b)(), this.ORU, UU, RU) && (this.QKU(), !0)
       }
-      gwD(DD) {
-        this.UwD(), super.gwD(DD), (0, ZD.f)(DD)
+      cKU(UU) {
+        this.eKU(), super.cKU(UU), (0, hU.f)(UU)
       }
-      iN() {
-        super.iN(), this.UwD()
+      fW() {
+        super.fW(), this.eKU()
       }
-      UwD() {
-        this.lCD.yN.Pt.mq = void 0
+      eKU() {
+        this.ORU.oW.zu.uZ = void 0
       }
     }
-    var vD = cD(20),
-      ND = cD(1928),
-      gD = cD(1701),
-      XD = cD(35879);
+    var eU = gU(24),
+      WU = gU(1821),
+      fU = gU(1637),
+      xU = gU(36027);
 
-    function mD(DD, CD, cD, ID, pD) {
-      let iD = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      if (!DD.Km.JDD(DD.aJ)) return console.log("Got resync inven but don't have inven component"), void CD.acknowledge(ID);
-      iD && console.error("Had to sync inven"), CD.O4(ID, pD) && cD.Uo("chestToggleFromServer", !1, !0), cD.Uo("syncedInvenFromServer")
+    function mU(UU, RU, gU, tU, pU) {
+      let EU = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      if (!UU.Im.DUU(UU.AY)) return console.log("Got resync inven but don't have inven component"), void RU.acknowledge(tU);
+      EU && console.error("Had to sync inven"), RU.n_(tU, pU) && gU.yh("chestToggleFromServer", !1, !0), gU.yh("syncedInvenFromServer")
     }
-    var nD = cD(38323),
-      OD = cD(38331),
-      PD = cD(37428),
-      HD = cD(37194),
-      UD = cD(624),
-      xD = cD(37782);
+    var IU = gU(38524),
+      JU = gU(38528),
+      wU = gU(37581),
+      nU = gU(37335),
+      bU = gU(581),
+      oU = gU(37971);
 
-    function qD(DD, CD, cD) {
-      const ID = function(DD) {
-          const CD = new Int32Array(DD.length * xD.e);
-          return DD.forEach(((DD, cD) => {
-            const ID = cD * xD.e;
-            if (4 === DD.length) {
-              const [cD, pD, iD, fD] = DD;
-              CD.set([cD, pD, iD, cD, pD, iD, fD], ID)
+    function ZU(UU, RU, gU) {
+      const tU = function(UU) {
+          const RU = new Int32Array(UU.length * oU.d);
+          return UU.forEach(((UU, gU) => {
+            const tU = gU * oU.d;
+            if (4 === UU.length) {
+              const [gU, pU, EU, PU] = UU;
+              RU.set([gU, pU, EU, gU, pU, EU, PU], tU)
             } else {
-              const [cD, pD, iD, fD, bD, QD, wD] = DD;
-              CD.set([cD, iD, bD, pD, fD, QD, wD], ID)
+              const [gU, pU, EU, PU, TU, qU, KU] = UU;
+              RU.set([gU, EU, TU, pU, PU, qU, KU], tU)
             }
-          })), CD
-        }(cD),
-        pD = (CD, cD, ID, pD) => {
-          DD.setBlockNoMulti(CD, cD, ID, pD, !0)
+          })), RU
+        }(gU),
+        pU = (RU, gU, tU, pU) => {
+          UU.setBlockNoMulti(RU, gU, tU, pU, !0)
         };
-      DD.client.gameRecorder.isCapturing() ? (0, xD.fb)(ID, (0, xD.db)(ID), pD) : DD.ny.Zy.Al(ID, {
-        wL: pD,
-        isHookId: CD => DD.blockChangeHasHooks(CD),
-        watched: () => function(DD, CD, cD) {
-          const ID = [],
-            pD = (DD, CD, cD) => {
-              ID.push(DD, CD, cD)
+      UU.client.gameRecorder.isCapturing() ? (0, oU.mb)(tU, (0, oU.lb)(tU), pU) : UU.LG.FG.uH(tU, {
+        mH: pU,
+        isHookId: RU => UU.blockChangeHasHooks(RU),
+        watched: () => function(UU, RU, gU) {
+          const tU = [],
+            pU = (UU, RU, gU) => {
+              tU.push(UU, RU, gU)
             },
-            iD = new Set;
-          for (let fD = 0; fD < cD.length; fD += xD.e)
-            for (let CD = (0, UD.I)(cD[fD]); CD <= (0, UD.I)(cD[fD + 3]); CD++)
-              for (let ID = (0, UD.I)(cD[fD + 1]); ID <= (0, UD.I)(cD[fD + 4]); ID++)
-                for (let bD = (0, UD.I)(cD[fD + 2]); bD <= (0, UD.I)(cD[fD + 5]); bD++) {
-                  const cD = `${CD}|${ID}|${bD}`;
-                  iD.has(cD) || (iD.add(cD), DD.blockDataOwner.forEachDataCell(CD, ID, bD, pD))
+            EU = new Set;
+          for (let PU = 0; PU < gU.length; PU += oU.d)
+            for (let RU = (0, bU.K)(gU[PU]); RU <= (0, bU.K)(gU[PU + 3]); RU++)
+              for (let tU = (0, bU.K)(gU[PU + 1]); tU <= (0, bU.K)(gU[PU + 4]); tU++)
+                for (let TU = (0, bU.K)(gU[PU + 2]); TU <= (0, bU.K)(gU[PU + 5]); TU++) {
+                  const gU = `${RU}|${tU}|${TU}`;
+                  EU.has(gU) || (EU.add(gU), UU.blockDataOwner.forEachDataCell(RU, tU, TU, pU))
                 }
-          return CD.forEachCell(pD), Int32Array.from(ID)
-        }(DD, CD, ID)
-      }), DD.ny.Y_()
+          return RU.forEachCell(pU), Int32Array.from(tU)
+        }(UU, RU, tU)
+      }), UU.LG.RUU()
     }
-    var JD = cD(36509),
-      KD = cD(38335),
-      aD = cD(38339),
-      VD = cD(1011),
-      zD = cD(1937);
-    var jD = cD(4301);
+    var aU = gU(36658),
+      YU = gU(38534),
+      BU = gU(38540),
+      VU = gU(994),
+      rU = gU(1823);
+    var XU = gU(4176);
 
-    function lD(DD) {
-      const CD = DD.Zy;
-      let cD = 0,
-        pD = -1,
-        fD = -1 / 0,
-        bD = null,
-        QD = !0;
-      const SD = () => {
-        if (++cD % 10 !== 0) return;
-        const SD = (0, ID.getLastReceivedPacketId)();
-        if (SD <= pD) return;
-        const [BD, yD, MD] = DD.Km.FX(DD.aJ), tD = ! function(DD) {
-          var CD;
-          let cD = null === (CD = DD.Km.ZCD(DD.aJ)) || void 0 === CD ? void 0 : CD.qt;
-          if (void 0 === cD) return !1;
-          const ID = new Set;
-          for (; void 0 !== cD && !ID.has(cD);) {
-            var pD;
-            ID.add(cD);
-            const CD = DD.Km.getState(cD, "smoothToServerPos"),
-              iD = Array.isArray(CD) ? null : null === CD || void 0 === CD ? void 0 : CD.serverPosition;
-            if (iD) {
-              const CD = DD.Km.FX(cD);
-              if (Math.abs(CD[0] - iD[0]) > 10 || Math.abs(CD[1] - iD[1]) > 10 || Math.abs(CD[2] - iD[2]) > 10) return !0
+    function vU(UU) {
+      const RU = UU.FG;
+      let gU = 0,
+        pU = -1,
+        PU = -1 / 0,
+        TU = null,
+        qU = !0;
+      const cU = () => {
+        if (++gU % 10 !== 0) return;
+        const cU = (0, tU.getLastReceivedPacketId)();
+        if (cU <= pU) return;
+        const [GU, jU, uU] = UU.Im.Hx(UU.AY), CU = ! function(UU) {
+          var RU;
+          let gU = null === (RU = UU.Im.rRU(UU.AY)) || void 0 === RU ? void 0 : RU.Nu;
+          if (void 0 === gU) return !1;
+          const tU = new Set;
+          for (; void 0 !== gU && !tU.has(gU);) {
+            var pU;
+            tU.add(gU);
+            const RU = UU.Im.getState(gU, "smoothToServerPos"),
+              EU = Array.isArray(RU) ? null : null === RU || void 0 === RU ? void 0 : RU.serverPosition;
+            if (EU) {
+              const RU = UU.Im.Hx(gU);
+              if (Math.abs(RU[0] - EU[0]) > 10 || Math.abs(RU[1] - EU[1]) > 10 || Math.abs(RU[2] - EU[2]) > 10) return !0
             }
-            cD = null === (pD = DD.Km.ZCD(cD)) || void 0 === pD ? void 0 : pD.qt
+            gU = null === (pU = UU.Im.rRU(gU)) || void 0 === pU ? void 0 : pU.Nu
           }
           return !1
-        }(DD) && function(DD, CD, cD, ID) {
-          const pD = iD.h.Wt;
-          for (let iD = 0; iD < DD.length; iD++) {
-            const fD = DD[iD];
-            if (!(0, jD.i)(CD, cD, ID, fD[0] * pD, fD[1] * pD, fD[2] * pD)) return !1
+        }(UU) && function(UU, RU, gU, tU) {
+          const pU = EU.e.jC;
+          for (let EU = 0; EU < UU.length; EU++) {
+            const PU = UU[EU];
+            if (!(0, XU.h)(RU, gU, tU, PU[0] * pU, PU[1] * pU, PU[2] * pU)) return !1
           }
           return !0
-        }(CD.Ho.Tt, BD, yD, MD), ZD = null === bD || Math.abs(BD - bD[0]) > 8 || Math.abs(yD - bD[1]) > 8 || Math.abs(MD - bD[2]) > 8, oD = !QD || ZD || performance.now() - fD >= 1e4;
-        QD = tD, tD && oD && (pD = SD, fD = performance.now(), bD = [BD, yD, MD], (0, ID.sendColyMessage)(wD.eg, {
-          aw: SD
+        }(RU.sh.EC, GU, jU, uU), hU = null === TU || Math.abs(GU - TU[0]) > 8 || Math.abs(jU - TU[1]) > 8 || Math.abs(uU - TU[2]) > 8, QU = !qU || hU || performance.now() - PU >= 1e4;
+        qU = CU, CU && QU && (pU = cU, PU = performance.now(), TU = [GU, jU, uU], (0, tU.sendColyMessage)(KU.yg, {
+          KK: cU
         }))
       };
-      return DD.on("wy", SD), () => {
-        DD.off("wy", SD)
+      return UU.on("HG", cU), () => {
+        UU.off("HG", cU)
       }
     }
-    var LD = cD(36125),
-      TD = cD(335),
-      GD = cD.n(TD),
-      RD = cD(6212),
-      kD = cD(37460),
-      dD = cD(37180),
-      YD = cD(37154),
-      WD = cD(4321),
-      sD = cD(37481),
-      ED = cD(37303),
-      eD = cD(36748),
-      uD = cD(37055),
-      hD = cD(38344),
-      rD = cD(36113),
-      AD = cD(36122),
-      FD = cD(38353),
-      DC = cD(38356),
-      CC = cD(3460),
-      cC = cD(1508),
-      IC = cD(2635),
-      pC = cD(2737),
-      iC = cD(37630),
-      fC = cD(36422),
-      bC = cD(4562),
-      QC = cD(38388),
-      wC = cD(37472),
-      SC = cD(4068),
-      BC = cD(36501),
-      yC = cD(36591),
-      MC = cD(37489),
-      tC = cD(38362),
-      ZC = cD(38369),
-      oC = cD(36744);
-    class vC {
-      constructor(DD, CD, cD, ID) {
-        this.gameNameWithVariation = DD, this.ny = cD, this.connectionResume = ID, this.stateReplicationHandler = void 0, this.stopChunkReports = () => {}, this.replayResume = null, this.stateReplicationHandler = new ZC.e(CD, this.ny)
+    var dU = gU(36313),
+      HU = gU(316),
+      SU = gU.n(HU),
+      sU = gU(6152),
+      yU = gU(37609),
+      kU = gU(37314),
+      FU = gU(37297),
+      iU = gU(4187),
+      AU = gU(37645),
+      zU = gU(37453),
+      MU = gU(36907),
+      DU = gU(37186),
+      LU = gU(38544),
+      NU = gU(36307),
+      lU = gU(36311),
+      OU = gU(38546),
+      UR = gU(38549),
+      RR = gU(3322),
+      gR = gU(1475),
+      tR = gU(2545),
+      pR = gU(2644),
+      ER = gU(37814),
+      PR = gU(36581),
+      TR = gU(4438),
+      qR = gU(38590),
+      KR = gU(37635),
+      cR = gU(3924),
+      GR = gU(36651),
+      jR = gU(36724),
+      uR = gU(37649),
+      CR = gU(38558),
+      hR = gU(38565),
+      QR = gU(36898);
+    class eR {
+      constructor(UU, RU, gU, tU) {
+        this.gameNameWithVariation = UU, this.LG = gU, this.connectionResume = tU, this.stateReplicationHandler = void 0, this.stopChunkReports = () => {}, this.replayResume = null, this.stateReplicationHandler = new hR.b(RU, this.LG)
       }
       setupStateReplicationHandlers() {
-        this.stateReplicationHandler.setup(), (0, ID.onGameResetOnce)((() => {
+        this.stateReplicationHandler.setup(), (0, tU.onGameResetOnce)((() => {
           this.stateReplicationHandler.dispose()
         }))
       }
-      gwD(DD) {
-        this.stateReplicationHandler.dispose(), this.stateReplicationHandler = new ZC.e(DD, this.ny), this.stateReplicationHandler.setup()
+      cKU(UU) {
+        this.stateReplicationHandler.dispose(), this.stateReplicationHandler = new hR.b(UU, this.LG), this.stateReplicationHandler.setup()
       }
       clearBlockRules() {
-        const DD = this.ny.Zy;
-        DD.PCD = new Set, DD.qCD = new Set, DD.HCD = new Set, DD.JCD = new Set, DD.xCD = [], DD.KCD = [], DD.YV = new Set, DD.li = [], DD.sV = []
+        const UU = this.LG.FG;
+        UU.kRU = new Set, UU.ARU = new Set, UU.FRU = new Set, UU.zRU = new Set, UU.iRU = [], UU.MRU = [], UU.Vr = new Set, UU.vE = [], UU.Hr = []
       }
       clearUiRequestsAndQTEs() {
-        bC.e.reset(), (0, OD.c)()
+        TR.c.reset(), (0, JU.d)()
       }
       startChunkReports() {
-        const DD = function(DD) {
-            let CD = null,
-              cD = -1 / 0,
-              pD = null;
-            const iD = () => {
-                pD = null;
-                const iD = Math.ceil(DD.dU[0]),
-                  fD = Math.ceil(DD.dU[1]);
-                CD && CD[0] === iD && CD[1] === fD || (CD = [iD, fD], cD = performance.now(), (0, ID.sendColyMessage)(wD.ag, {
-                  Bf: iD,
-                  yf: fD
+        const UU = function(UU) {
+            let RU = null,
+              gU = -1 / 0,
+              pU = null;
+            const EU = () => {
+                pU = null;
+                const EU = Math.ceil(UU.yJ[0]),
+                  PU = Math.ceil(UU.yJ[1]);
+                RU && RU[0] === EU && RU[1] === PU || (RU = [EU, PU], gU = performance.now(), (0, tU.sendColyMessage)(KU.wg, {
+                  pP: EU,
+                  EP: PU
                 }))
               },
-              fD = () => {
-                null === pD && (pD = setTimeout(iD, Math.max(0, cD + 250 - performance.now())))
+              PU = () => {
+                null === pU && (pU = setTimeout(EU, Math.max(0, gU + 250 - performance.now())))
               };
-            return iD(), DD.on("addRemoveDistanceChanged", fD), () => {
-              DD.off("addRemoveDistanceChanged", fD), null !== pD && (clearTimeout(pD), pD = null)
+            return EU(), UU.on("addRemoveDistanceChanged", PU), () => {
+              UU.off("addRemoveDistanceChanged", PU), null !== pU && (clearTimeout(pU), pU = null)
             }
-          }(this.ny.Zy),
-          CD = lD(this.ny);
+          }(this.LG.FG),
+          RU = vU(this.LG);
         this.stopChunkReports = () => {
-          DD(), CD()
+          UU(), RU()
         }
       }
       restartChunkStreaming() {
-        (0, uD.o)(this.ny, (0, QD.e)().recentChunkEdits.chunksEditedSince(this.connectionResume.getDroppedAt() - hD.c)), this.startChunkReports()
+        (0, DU.j)(this.LG, (0, qU.c)().recentChunkEdits.chunksEditedSince(this.connectionResume.getDroppedAt() - LU.d)), this.startChunkReports()
       }
-      setupOnMessageListeners(DD, CD) {
-        const cD = this.ny,
-          pD = this.gameNameWithVariation;
-        DD.Qm(wD.Cc, (DD => {
+      setupOnMessageListeners(UU, RU) {
+        const gU = this.LG,
+          pU = this.gameNameWithVariation;
+        UU.Tm(KU.Cc, (UU => {
           let {
-            Ec: CD,
-            uc: ID,
-            hc: pD,
-            Ac: iD,
-            Fc: fD,
-            DI: bD,
-            CI: QD,
-            cI: wD,
-            II: SD
-          } = DD;
-          if (!cD.Km.R7(CD, "itemState")) return void(0, dD.i)(cD, CD, [fD, bD, QD], ID, {
-            amount: pD,
-            attributes: JSON.parse(iD),
-            cI: wD,
-            size: SD
+            Fg: RU,
+            ig: tU,
+            Ag: pU,
+            zg: EU,
+            Mg: PU,
+            Dg: TU,
+            Lg: qU,
+            Ng: KU,
+            lg: cU
+          } = UU;
+          if (!gU.Im.cUU(RU, "itemState")) return void(0, kU.j)(gU, RU, [PU, TU, qU], tU, {
+            amount: pU,
+            attributes: JSON.parse(EU),
+            Ng: KU,
+            size: cU
           });
-          const BD = cD.Km.getState(CD, "itemState");
-          BD.amount = pD, BD.cI = wD, BD.creationTime = Date.now(), (0, YD.setServerPosition)(cD.Km.getState(CD, "smoothToServerPos"), fD, bD, QD)
-        })), DD.Qm(wD.nb, (DD => {
-          (0, JD.b)(cD).setCantPickUp(DD, !0), cD.Km.R7(DD, "itemState") && (cD.Km.getState(DD, "itemState").cI = !0)
-        })), DD.Qm(wD.Yd, (DD => {
-          (0, JD.b)(cD).setCantPickUp(DD, !1), cD.Km.R7(DD, "itemState") && (cD.Km.getState(DD, "itemState").cI = !1)
-        })), DD.Qm(wD.Zc, (DD => {
-          ND.d.applyNewClientOptions(DD)
-        })), DD.Qm(wD.bd, (DD => {
+          const GU = gU.Im.getState(RU, "itemState");
+          GU.amount = pU, GU.Ng = KU, GU.creationTime = Date.now(), (0, FU.setServerPosition)(gU.Im.getState(RU, "smoothToServerPos"), PU, TU, qU)
+        })), UU.Tm(KU.qb, (UU => {
+          (0, aU.d)(gU).setCantPickUp(UU, !0), gU.Im.cUU(UU, "itemState") && (gU.Im.getState(UU, "itemState").Ng = !0)
+        })), UU.Tm(KU.fe, (UU => {
+          (0, aU.d)(gU).setCantPickUp(UU, !1), gU.Im.cUU(UU, "itemState") && (gU.Im.getState(UU, "itemState").Ng = !1)
+        })), UU.Tm(KU.Zc, (UU => {
+          WU.b.applyNewClientOptions(UU)
+        })), UU.Tm(KU.$c, (UU => {
           let {
-            eId: CD,
-            settings: ID
-          } = DD;
-          (0, yC.h)(CD);
-          for (const cD in ID)(0, yC.e)(CD, cD, ID[cD]);
-          if ("canSee" in ID && cD.Km.R7(CD, "hidingMeshManager")) {
-            const DD = cD.Km.getState(CD, "hidingMeshManager");
-            DD.canSee = (0, MC.d)("canSee", ID.canSee), DD._forceUpdate = !0
+            eId: RU,
+            settings: tU
+          } = UU;
+          (0, jR.f)(RU);
+          for (const gU in tU)(0, jR.e)(RU, gU, tU[gU]);
+          if ("canSee" in tU && gU.Im.cUU(RU, "hidingMeshManager")) {
+            const UU = gU.Im.getState(RU, "hidingMeshManager");
+            UU.canSee = (0, uR.b)("canSee", tU.canSee), UU._forceUpdate = !0
           }
-        })), DD.Qm(wD.Ve, (DD => {
+        })), UU.Tm(KU.ef, (UU => {
           let {
-            Cc: CD,
-            Ic: pD,
-            fc: iD,
-            bc: fD
-          } = DD;
-          const bD = [pD, iD, fD];
-          cD.Km.setPosition(cD.aJ, bD), (0, ID.sendColyMessage)(wD.Dg, {
-            KS: CD,
-            aS: WD.h
-          }), vD.i.Uo("localPlayerTeleported", {
-            pos: bD,
+            Ug: RU,
+            Rg: pU,
+            gg: EU,
+            tg: PU
+          } = UU;
+          const TU = [pU, EU, PU];
+          gU.Im.setPosition(gU.AY, TU), (0, tU.sendColyMessage)(KU.Tg, {
+            Tc: RU,
+            qc: iU.e
+          }), eU.p.yh("localPlayerTeleported", {
+            pos: TU,
             isCorrection: !1
           })
-        })), DD.Qm(wD.md, (DD => {
+        })), UU.Tm(KU.kd, (UU => {
           let {
-            ip: CD,
-            bp: cD,
-            Qp: ID,
-            wp: pD
-          } = DD;
-          this.stateReplicationHandler.setUpIfQueued(CD);
-          const iD = [cD, ID, pD];
-          vD.i.Uo(`otherPlayerTeleported|${CD}`, {
-            pos: iD
+            Gp: RU,
+            jp: gU,
+            Cp: tU,
+            hp: pU
+          } = UU;
+          this.stateReplicationHandler.setUpIfQueued(RU);
+          const EU = [gU, tU, pU];
+          eU.p.yh(`otherPlayerTeleported|${RU}`, {
+            pos: EU
           })
-        })), DD.Qm(wD.Bd, (DD => {
+        })), UU.Tm(KU.Ed, (UU => {
           let {
-            Kp: CD,
-            ap: pD,
-            Vp: iD,
-            zp: fD,
-            jp: bD,
-            lp: QD,
-            Lp: SD,
-            Gp: BD,
-            Tp: yD,
-            dp: MD
-          } = DD;
-          const tD = [pD, iD, fD];
-          cD.Km.setPosition(cD.aJ, tD);
-          const ZD = cD.Km.QDD(cD.aJ),
-            oD = cD.Km.Yz(cD.aJ);
-          GD().set(oD.qV, 0, 0, 0), GD().set(oD.JV, 0, 0, 0), GD().set(oD.lb, bD, QD, SD), oD.KV(), ZD._flying = null !== MD, MD ? (ZD.flyAccel.Yp = MD.Yp, ZD.flyAccel.Wp = MD.Wp) : ZD.flyAccel.reset(), BD && ZD.movementType === RD.n.GLIDING && (ZD.Rp = BD.Rp, GD().copy(ZD.kp, BD.kp)), (0, ID.sendColyMessage)(wD.Dg, {
-            KS: CD,
-            aS: WD.h
-          }), vD.i.Uo("localPlayerTeleported", {
-            pos: tD,
+            Hp: RU,
+            Sp: pU,
+            sp: EU,
+            yp: PU,
+            kp: TU,
+            Fp: qU,
+            ip: cU,
+            zp: GU,
+            Ap: jU,
+            Lp: uU
+          } = UU;
+          const CU = [pU, EU, PU];
+          gU.Im.setPosition(gU.AY, CU);
+          const hU = gU.Im.bUU(gU.AY),
+            QU = gU.Im.yX(gU.AY);
+          SU().set(QU.vV, 0, 0, 0), SU().set(QU.HV, 0, 0, 0), SU().set(QU.Fh, TU, qU, cU), QU.sV(), hU._flying = null !== uU, uU ? (hU.flyAccel.Np = uU.Np, hU.flyAccel.lp = uU.lp) : hU.flyAccel.reset(), GU && hU.movementType === sU.r.GLIDING && (hU.Mp = GU.Mp, SU().copy(hU.Dp, GU.Dp)), (0, tU.sendColyMessage)(KU.Tg, {
+            Tc: RU,
+            qc: iU.e
+          }), eU.p.yh("localPlayerTeleported", {
+            pos: CU,
             isCorrection: !0
           })
         }));
 
-        function iD() {
-          return cD.Km.KDD(cD.aJ)
+        function EU() {
+          return gU.Im.LUU(gU.AY)
         }
-        DD.Qm(wD.xb, (DD => {
+        UU.Tm(KU.Ab, (UU => {
           let {
-            chatMsgId: CD,
-            content: cD,
-            chatterEId: ID
-          } = DD;
-          vD.i.Uo("chat", {
-            serverChatMsgId: CD,
-            content: cD,
-            chatterEId: ID
+            chatMsgId: RU,
+            content: gU,
+            chatterEId: tU
+          } = UU;
+          eU.p.yh("chat", {
+            serverChatMsgId: RU,
+            content: gU,
+            chatterEId: tU
           }, !0)
-        })), DD.Qm(wD.sd, (DD => {
-          IC.b.onReceiveColyseusPing(DD)
-        })), DD.Qm(wD.ze, (DD => {
+        })), UU.Tm(KU.ud, (UU => {
+          tR.e.onReceiveColyseusPing(UU)
+        })), UU.Tm(KU.Ke, (UU => {
           let {
-            key: CD,
-            value: cD
-          } = DD;
-          (0, gD.setCookie)(pD, CD, cD)
-        })), DD.Qm(wD.De, (DD => {
-          vD.i.Uo("setDiscordReportKey", DD)
-        })), (0, ID.onGameResetOnce)((() => {
+            key: RU,
+            value: gU
+          } = UU;
+          (0, fU.setCookie)(pU, RU, gU)
+        })), UU.Tm(KU.Pe, (UU => {
+          eU.p.yh("setDiscordReportKey", UU)
+        })), (0, tU.onGameResetOnce)((() => {
           this.stopChunkReports()
-        })), DD.Qm(wD.vc, (CD => {
+        })), UU.Tm(KU.xc, (RU => {
           const {
-            jC: pD,
-            lC: iD
-          } = CD;
-          if ((0, ID.setAdjustment)(iD), this.connectionResume.onInitialInfo(CD.LC, CD.TC), ID.offlineInputReplay.lH(CD.RC), this.connectionResume.isResuming()) {
-            console.log("Resumed the connection as eId", pD);
+            rR: pU,
+            XR: EU
+          } = RU;
+          if ((0, tU.setAdjustment)(EU), this.connectionResume.onInitialInfo(RU.vR, RU.dR), tU.offlineInputReplay.GJ(RU.HR), this.connectionResume.isResuming()) {
+            console.log("Resumed the connection as eId", pU);
             try {
-              null === CD.kC && (0, QD.e)().client.inventoryPrediction.dropPending(), this.stopChunkReports(), this.clearBlockRules(), ND.d.apply({
+              null === RU.SR && (0, qU.c)().client.inventoryPrediction.dropPending(), this.stopChunkReports(), this.clearBlockRules(), WU.b.apply({
                 shopInfo: null,
-                _shopVersion: zD.c
+                _shopVersion: rU.e
               });
-              const ID = cD.Km.aDD(cD.aJ);
-              ID.Hc && (ID.chestClosed(), vD.i.Uo("chestToggleFromServer", !1, !0)), this.clearUiRequestsAndQTEs(), vD.i.Uo("initInfoReceived", DD)
+              const tU = gU.Im.NUU(gU.AY);
+              tU.mg && (tU.chestClosed(), eU.p.yh("chestToggleFromServer", !1, !0)), this.clearUiRequestsAndQTEs(), eU.p.yh("initInfoReceived", UU)
             } finally {
-              const DD = null === CD.kC ? null : {
+              const UU = null === RU.SR ? null : {
                 sync: null,
                 endSeq: null
               };
-              this.replayResume = DD, this.connectionResume.onResumeInitialInfo(CD.kC, (() => {
-                DD.endSeq = (0, QD.e)().client.inventoryPrediction.lastActionSeq
-              })), null === DD && this.restartChunkStreaming()
+              this.replayResume = UU, this.connectionResume.onResumeInitialInfo(RU.SR, (() => {
+                UU.endSeq = (0, qU.c)().client.inventoryPrediction.lastActionSeq
+              })), null === UU && this.restartChunkStreaming()
             }
-          } else console.log("Local client is eId", pD), vD.i.Uo("loadingScreenState", "loadingPage:loadingWorld"), cD.o9 = pD, cD.Km.R7(cD.aJ, cD.Km.names.entityName) && cD.Km.mJ(cD.aJ, cD.Km.names.entityName), (0, QD.e)().setEntityName(cD.o9, (0, QD.e)().getRawEntityName(cD.aJ)), cD.KJ[cD.o9] = {}, cD.Km.gJ(cD.aJ, cD.Km.names.entityName), vD.i.Uo("initInfoReceived", DD), this.startChunkReports(), fD.client.onServerConnectionFinalised()
-        })), DD.Qm(wD.ke, (() => {
+          } else console.log("Local client is eId", pU), eU.p.yh("loadingScreenState", "loadingPage:loadingWorld"), gU.jUU = pU, gU.Im.cUU(gU.AY, gU.Im.names.entityName) && gU.Im.bY(gU.AY, gU.Im.names.entityName), (0, qU.c)().setEntityName(gU.jUU, (0, qU.c)().getRawEntityName(gU.AY)), gU.FY[gU.jUU] = {}, gU.Im.JY(gU.AY, gU.Im.names.entityName), eU.p.yh("initInfoReceived", UU), this.startChunkReports(), PU.client.onServerConnectionFinalised()
+        })), UU.Tm(KU.re, (() => {
           this.connectionResume.isResuming() ? this.connectionResume.onResumed((() => {
-            const DD = this.replayResume;
-            if (this.replayResume = null, !DD) return;
+            const UU = this.replayResume;
+            if (this.replayResume = null, !UU) return;
             this.restartChunkStreaming();
             const {
-              inventoryPrediction: CD
-            } = (0, QD.e)().client, {
-              sync: pD
-            } = DD, iD = new Set(ID.offlineInputReplay.takeDroppedActions());
-            if (pD) {
-              var fD;
-              const ID = null !== (fD = DD.endSeq) && void 0 !== fD ? fD : CD.lastActionSeq;
-              CD.forget((DD => DD > pD.Kc && DD <= ID || iD.has(DD))), mD(cD, CD, vD.i, pD.Kc, pD.load)
-            } else CD.dropPending(), CD.askForSnapshot()
+              inventoryPrediction: RU
+            } = (0, qU.c)().client, {
+              sync: pU
+            } = UU, EU = new Set(tU.offlineInputReplay.takeDroppedActions());
+            if (pU) {
+              var PU;
+              const tU = null !== (PU = UU.endSeq) && void 0 !== PU ? PU : RU.lastActionSeq;
+              RU.forget((UU => UU > pU.bg && UU <= tU || EU.has(UU))), mU(gU, RU, eU.p, pU.bg, pU.load)
+            } else RU.dropPending(), RU.askForSnapshot()
           })) : console.warn("ResumeComplete arrived without a resume")
-        })), DD.Qm(wD.We, (DD => {
-          vD.i.Uo("TopRightHelper", DD, !0)
-        })), DD.Qm(wD.Ed, (DD => {
+        })), UU.Tm(KU.if, (UU => {
+          eU.p.yh("TopRightHelper", UU, !0)
+        })), UU.Tm(KU.Jd, (UU => {
           let {
-            type: CD,
-            location1: cD,
-            location2: ID,
-            location3: pD,
-            score: iD
-          } = DD;
-          (0, pC.x)({
-            type: CD,
-            location1: cD,
-            location2: ID,
-            location3: pD,
-            score: iD
+            type: RU,
+            location1: gU,
+            location2: tU,
+            location3: pU,
+            score: EU
+          } = UU;
+          (0, pR.y)({
+            type: RU,
+            location1: gU,
+            location2: tU,
+            location3: pU,
+            score: EU
           })
-        })), DD.Qm(wD.je, (DD => {
+        })), UU.Tm(KU.qe, (UU => {
           let {
-            type: CD,
-            resourceType: cD,
-            amount: ID,
-            category: pD,
-            itemName: iD
-          } = DD;
-          (0, pC.A)({
-            type: CD,
-            resourceType: cD,
-            amount: ID,
-            category: pD,
-            itemName: iD
+            type: RU,
+            resourceType: gU,
+            amount: tU,
+            category: pU,
+            itemName: EU
+          } = UU;
+          (0, pR.C)({
+            type: RU,
+            resourceType: gU,
+            amount: tU,
+            category: pU,
+            itemName: EU
           })
-        })), DD.Qm(wD._, (DD => {
-          cD.Zy.PCD.add(DD), cD.Zy.qCD.delete(DD)
-        })), DD.Qm(wD.eb, (DD => {
-          cD.Zy.qCD.add(DD), cD.Zy.PCD.delete(DD)
-        })), DD.Qm(wD._d, (DD => {
-          cD.Zy.qCD.delete(DD), cD.Zy.PCD.delete(DD)
-        })), DD.Qm(wD.db, (DD => {
-          cD.Zy.HCD.add(DD), cD.Zy.JCD.delete(DD)
-        })), DD.Qm(wD.lb, (DD => {
-          cD.Zy.JCD.add(DD), cD.Zy.HCD.delete(DD)
-        })), DD.Qm(wD.ce, (DD => {
-          cD.Zy.JCD.delete(DD), cD.Zy.HCD.delete(DD)
-        })), DD.Qm(wD.cb, (DD => {
-          (0, BD.hb)(DD, cD.Zy.KCD), (0, BD.hb)(DD, cD.Zy.xCD), cD.Zy.xCD.push(DD)
-        })), DD.Qm(wD.ib, (DD => {
-          (0, BD.hb)(DD, cD.Zy.xCD), (0, BD.hb)(DD, cD.Zy.KCD), cD.Zy.KCD.push(DD)
-        })), DD.Qm(wD.$d, (DD => {
-          (0, BD.hb)(DD, cD.Zy.xCD), (0, BD.hb)(DD, cD.Zy.KCD)
-        })), DD.Qm(wD.jf, (DD => {
+        })), UU.Tm(KU.bb, (UU => {
+          gU.FG.kRU.add(UU), gU.FG.ARU.delete(UU)
+        })), UU.Tm(KU.jb, (UU => {
+          gU.FG.ARU.add(UU), gU.FG.kRU.delete(UU)
+        })), UU.Tm(KU.he, (UU => {
+          gU.FG.ARU.delete(UU), gU.FG.kRU.delete(UU)
+        })), UU.Tm(KU.hb, (UU => {
+          gU.FG.FRU.add(UU), gU.FG.zRU.delete(UU)
+        })), UU.Tm(KU.pb, (UU => {
+          gU.FG.zRU.add(UU), gU.FG.FRU.delete(UU)
+        })), UU.Tm(KU.me, (UU => {
+          gU.FG.zRU.delete(UU), gU.FG.FRU.delete(UU)
+        })), UU.Tm(KU.fb, (UU => {
+          (0, GU.db)(UU, gU.FG.MRU), (0, GU.db)(UU, gU.FG.iRU), gU.FG.iRU.push(UU)
+        })), UU.Tm(KU.nb, (UU => {
+          (0, GU.db)(UU, gU.FG.iRU), (0, GU.db)(UU, gU.FG.MRU), gU.FG.MRU.push(UU)
+        })), UU.Tm(KU.ie, (UU => {
+          (0, GU.db)(UU, gU.FG.iRU), (0, GU.db)(UU, gU.FG.MRU)
+        })), UU.Tm(KU.xf, (UU => {
           let {
-            kc: CD,
-            dc: ID
-          } = DD;
-          ID ? cD.Zy.YV.delete(CD) : cD.Zy.YV.add(CD)
-        })), DD.Qm(wD.hf, (DD => {
+            Hg: RU,
+            Sg: tU
+          } = UU;
+          tU ? gU.FG.Vr.delete(RU) : gU.FG.Vr.add(RU)
+        })), UU.Tm(KU.vf, (UU => {
           let {
-            li: CD,
-            Li: ID
-          } = DD;
-          fD.updateWalkThroughRect(cD.aJ, CD, ID)
-        })), (0, ID.onGameResetOnce)((() => {
+            vE: RU,
+            dE: tU
+          } = UU;
+          PU.updateWalkThroughRect(gU.AY, RU, tU)
+        })), (0, tU.onGameResetOnce)((() => {
           this.clearBlockRules()
-        })), DD.Qm(wD.Te, (DD => {
-          (0, nD.d)(DD)
-        })), DD.Qm(wD.oc, (DD => {
-          PD.e.applyServerUpdate(DD)
-        })), DD.Qm(wD.pb, (DD => {
-          fD.applyServerBlocks((() => {
-            ! function(DD, CD) {
+        })), UU.Tm(KU.cf, (UU => {
+          (0, IU.e)(UU)
+        })), UU.Tm(KU.qc, (UU => {
+          wU.b.applyServerUpdate(UU)
+        })), UU.Tm(KU.ub, (UU => {
+          PU.applyServerBlocks((() => {
+            ! function(UU, RU) {
               for (const {
-                  Ti: cD,
-                  Gi: ID
+                  HE: gU,
+                  SE: tU
                 }
-                of CD) {
-                const CD = HD.e[ID];
-                if (CD) {
+                of RU) {
+                const RU = nU.c[tU];
+                if (RU) {
                   const {
-                    compX: ID,
-                    compY: pD,
-                    compZ: iD,
-                    mainMultiblock: fD
-                  } = CD;
-                  DD.Hx(cD[0] - ID, cD[1] - pD, cD[2] - iD, fD)
+                    compX: tU,
+                    compY: pU,
+                    compZ: EU,
+                    mainMultiblock: PU
+                  } = RU;
+                  UU.mw(gU[0] - tU, gU[1] - pU, gU[2] - EU, PU)
                 }
               }
               for (const {
-                  Ti: cD,
-                  Gi: ID,
-                  Ri: pD
+                  HE: gU,
+                  SE: tU,
+                  sE: pU
                 }
-                of CD) DD.setBlockNoMulti(cD[0], cD[1], cD[2], ID, !0), DD.blockDataOwner.setBlockData(cD[0], cD[1], cD[2], null === pD ? void 0 : JSON.parse(pD)), DD.blockAdded(cD[0], cD[1], cD[2], ID)
-            }(fD, DD)
-          })), vD.i.Uo("changeBlockFail", DD), fD.client.triggerGameCallback("onChangeBlockFail", DD), vD.i.Uo("EditBoard", {
+                of RU) UU.setBlockNoMulti(gU[0], gU[1], gU[2], tU, !0), UU.blockDataOwner.setBlockData(gU[0], gU[1], gU[2], null === pU ? void 0 : JSON.parse(pU)), UU.blockAdded(gU[0], gU[1], gU[2], tU)
+            }(PU, UU)
+          })), eU.p.yh("changeBlockFail", UU), PU.client.triggerGameCallback("onChangeBlockFail", UU), eU.p.yh("EditBoard", {
             pos: null
-          }), vD.i.Uo("EditCodeBlock", {
+          }), eU.p.yh("EditCodeBlock", {
             pos: null,
             canChangePos: null
           })
-        })), DD.Qm(wD.qd, (DD => {
+        })), UU.Tm(KU.qd, (UU => {
           let {
-            pickUpItems: CD,
-            pickUpAckSeq: cD
-          } = DD;
+            pickUpItems: RU,
+            pickUpAckSeq: gU
+          } = UU;
           for (const {
-              name: ID,
-              amount: pD,
-              attributes: fD
+              name: tU,
+              amount: pU,
+              attributes: PU
             }
-            of CD) iD().pickUpItem({
-            name: ID,
-            amount: pD,
-            typeObj: dD.u[ID],
-            attributes: fD
+            of RU) EU().pickUpItem({
+            name: tU,
+            amount: pU,
+            typeObj: kU.v[tU],
+            attributes: PU
           });
-          (0, QD.e)().client.inventoryPrediction.serverChangeApplied(cD)
-        })), DD.Qm(wD.He, (DD => {
+          (0, qU.c)().client.inventoryPrediction.serverChangeApplied(gU)
+        })), UU.Tm(KU.Te, (UU => {
           let {
-            index: CD,
-            name: ID,
-            amount: pD,
-            attributes: iD,
-            setSlotAckSeq: fD
-          } = DD;
-          const bD = cD.Km.aDD(cD.aJ);
-          (CD < bD.playerInventory.numSlots || bD.Hc || bD.inCreative) && bD.setItemSlot(CD, ID, pD, iD), (0, QD.e)().client.inventoryPrediction.serverChangeApplied(fD)
-        })), DD.Qm(wD.Se, (DD => {
+            index: RU,
+            name: tU,
+            amount: pU,
+            attributes: EU,
+            setSlotAckSeq: PU
+          } = UU;
+          const TU = gU.Im.NUU(gU.AY);
+          (RU < TU.playerInventory.numSlots || TU.mg || TU.inCreative) && TU.setItemSlot(RU, tU, pU, EU), (0, qU.c)().client.inventoryPrediction.serverChangeApplied(PU)
+        })), UU.Tm(KU.bf, (UU => {
           let {
-            Oc: CD,
-            Jc: ID,
-            Kc: pD
-          } = DD;
+            fg: RU,
+            ng: tU,
+            bg: pU
+          } = UU;
           const {
-            inventoryPrediction: iD
-          } = (0, QD.e)().client, fD = () => {
-            cD.Km.aDD(cD.aJ).loadFromString(CD)
+            inventoryPrediction: EU
+          } = (0, qU.c)().client, PU = () => {
+            gU.Im.NUU(gU.AY).loadFromString(RU)
           };
           this.replayResume && (this.replayResume.sync = {
-            Kc: pD,
-            load: fD
-          }), mD(cD, iD, vD.i, pD, fD, ID)
-        })), DD.Qm(wD.yc, (DD => {
-          (0, QD.e)().client.inventoryPrediction.acknowledge(DD)
-        })), DD.Qm(wD.K, (DD => {
+            bg: pU,
+            load: PU
+          }), mU(gU, EU, eU.p, pU, PU, tU)
+        })), UU.Tm(KU.Bc, (UU => {
+          (0, qU.c)().client.inventoryPrediction.acknowledge(UU)
+        })), UU.Tm(KU.G, (UU => {
           let {
-            bi: CD,
-            Qi: cD,
-            Si: ID,
-            Bi: pD
-          } = DD;
-          (0, QD.e)().client.itemDropPrediction.onActionItemDrops(CD, cD, ID, pD)
-        })), DD.Qm(wD.Jb, (DD => {
-          iD().clearInventory(), (0, QD.e)().client.inventoryPrediction.serverChangeApplied(DD)
-        })), DD.Qm(wD.Jc, (DD => {
+            KE: RU,
+            cE: gU,
+            GE: tU,
+            jE: pU
+          } = UU;
+          (0, qU.c)().client.itemDropPrediction.onActionItemDrops(RU, gU, tU, pU)
+        })), UU.Tm(KU.Nb, (UU => {
+          EU().clearInventory(), (0, qU.c)().client.inventoryPrediction.serverChangeApplied(UU)
+        })), UU.Tm(KU.Kc, (UU => {
           let {
-            leaveEventType: CD,
-            category: cD,
-            subCategory: ID,
-            value: pD
-          } = DD;
-          (0, pC.G)({
-            leaveEventType: CD,
-            category: cD,
-            subCategory: ID,
-            value: pD
+            leaveEventType: RU,
+            category: gU,
+            subCategory: tU,
+            value: pU
+          } = UU;
+          (0, pR.K)({
+            leaveEventType: RU,
+            category: gU,
+            subCategory: tU,
+            value: pU
           })
-        })), DD.Qm(wD.Vb, (DD => {
+        })), UU.Tm(KU.Yb, (UU => {
           let {
-            cat1: CD,
-            cat2: cD,
-            cat3: ID,
-            value: pD
-          } = DD;
-          (0, pC.q)({
-            cat1: CD,
-            cat2: cD,
-            cat3: ID,
-            value: pD
+            cat1: RU,
+            cat2: gU,
+            cat3: tU,
+            value: pU
+          } = UU;
+          (0, pR.u)({
+            cat1: RU,
+            cat2: gU,
+            cat3: tU,
+            value: pU
           })
         }));
-        const fD = (0, QD.e)();
-        DD.Qm(wD.Pb, (DD => {
-          fD.applyServerBlocks((() => {
-            qD(fD, PD.e, DD)
+        const PU = (0, qU.c)();
+        UU.Tm(KU.Rb, (UU => {
+          PU.applyServerBlocks((() => {
+            ZU(PU, wU.b, UU)
           }))
-        })), DD.Qm(wD.Ie, (DD => {
-          vD.i.Uo("setSelectedInventorySlotI", DD, !0)
-        })), DD.Qm(wD.Gc, (DD => {
+        })), UU.Tm(KU.Ue, (UU => {
+          eU.p.yh("setSelectedInventorySlotI", UU, !0)
+        })), UU.Tm(KU.Jc, (UU => {
           let {
-            category: CD,
-            timeframe: cD,
-            data: ID
-          } = DD;
-          vD.i.Uo("leaderboardResponse", {
-            category: CD,
-            timeframe: cD,
-            data: ID
+            category: RU,
+            timeframe: gU,
+            data: tU
+          } = UU;
+          eU.p.yh("leaderboardResponse", {
+            category: RU,
+            timeframe: gU,
+            data: tU
           })
-        })), DD.Qm(wD.Z, (DD => {
+        })), UU.Tm(KU._, (UU => {
           let {
-            Di: CD,
-            Ci: cD
-          } = DD;
-          this.stateReplicationHandler.setUpIfQueued(CD), CD = (0, LD.b)(CD), (0, QD.e)().client.gameRecorder.recordBulletShot(CD, cD), vD.i.Uo(`bulletShot|${CD}`, {
-            bulletDirections: cD
+            EE: RU,
+            PE: gU
+          } = UU;
+          this.stateReplicationHandler.setUpIfQueued(RU), RU = (0, dU.c)(RU), (0, qU.c)().client.gameRecorder.recordBulletShot(RU, gU), eU.p.yh(`bulletShot|${RU}`, {
+            bulletDirections: gU
           })
-        })), DD.Qm(wD.rc, (DD => {
+        })), UU.Tm(KU.rc, (UU => {
           let {
-            Wc: CD,
-            sc: cD
-          } = DD;
-          vD.i.Uo("damagedByOtherPlayer", {
-            Wc: CD,
-            direction: cD
+            yg: RU,
+            kg: gU
+          } = UU;
+          eU.p.yh("damagedByOtherPlayer", {
+            yg: RU,
+            direction: gU
           }, !0)
-        })), DD.Qm(wD.xd, (DD => {
-          vD.i.Uo("playerKilled", DD, !0), (0, QD.e)().client.gameRecorder.recordPlayerKilled(DD.deadEId, DD.killerEId, DD.withItem, DD.killstreak)
-        })), DD.Qm(wD.Xb, (DD => {
-          vD.i.Uo("customKillfeed", DD, !0), (0, QD.e)().client.gameRecorder.recordCustomKillfeed(DD.killer, DD.victim, DD.withItem)
-        })), DD.Qm(wD.Fd, (DD => {
+        })), UU.Tm(KU.Bd, (UU => {
+          eU.p.yh("playerKilled", UU, !0), (0, qU.c)().client.gameRecorder.recordPlayerKilled(UU.deadEId, UU.killerEId, UU.withItem, UU.killstreak)
+        })), UU.Tm(KU.ac, (UU => {
+          eU.p.yh("customKillfeed", UU, !0), (0, qU.c)().client.gameRecorder.recordCustomKillfeed(UU.killer, UU.victim, UU.withItem)
+        })), UU.Tm(KU.Ld, (UU => {
           let {
-            FC: CD,
-            Dc: ID
-          } = DD;
-          this.stateReplicationHandler.setUpIfQueued(CD);
-          const pD = cD.Km.FDD(CD);
-          null !== pD && void 0 !== pD && pD.isGun() && pD.reload(Date.now(), ID)
-        })), DD.Qm(wD.Pe, (() => {
-          vD.i.Uo("showShopTutorial", null, !0)
-        })), DD.Qm(wD.Dd, (DD => {
-          vD.i.Uo("progressBarUpdate", DD, !0)
-        })), DD.Qm(wD.xc, (DD => {
-          vD.i.Uo("middleScreenBarInitiate", {
-            duration: DD.pI,
-            iI: DD.iI,
-            horizBarRemOffset: DD.fI
+            NR: RU,
+            lR: tU
+          } = UU;
+          this.stateReplicationHandler.setUpIfQueued(RU);
+          const pU = gU.Im.QRU(RU);
+          null !== pU && void 0 !== pU && pU.isGun() && pU.reload(Date.now(), tU)
+        })), UU.Tm(KU.af, (() => {
+          eU.p.yh("showShopTutorial", null, !0)
+        })), UU.Tm(KU.Fd, (UU => {
+          eU.p.yh("progressBarUpdate", UU, !0)
+        })), UU.Tm(KU.Ac, (UU => {
+          eU.p.yh("middleScreenBarInitiate", {
+            duration: UU.Og,
+            Ut: UU.Ut,
+            horizBarRemOffset: UU.Rt
           }, !0)
-        })), DD.Qm(wD.Qd, (() => {
-          vD.i.Uo("middleScreenBarRemove", !0)
-        })), DD.Qm(wD.me, (DD => {
+        })), UU.Tm(KU.Yd, (() => {
+          eU.p.yh("middleScreenBarRemove", !0)
+        })), UU.Tm(KU.xe, (UU => {
           let {
-            rC: CD,
-            AC: ID
-          } = DD;
-          const pD = ID ? (0, wC.d)(cD, ID) : void 0;
-          vD.i.Uo("sendHitmarker", {
-            rC: CD,
-            screenPos: pD
+            DR: RU,
+            LR: tU
+          } = UU;
+          const pU = tU ? (0, KR.f)(gU, tU) : void 0;
+          eU.p.yh("sendHitmarker", {
+            DR: RU,
+            screenPos: pU
           }, !0)
-        })), DD.Qm(wD.Ce, (DD => {
+        })), UU.Tm(KU.Ne, (UU => {
           let {
-            id: CD,
-            position: cD,
-            style: ID,
-            rp: pD,
-            Fp: iD
-          } = DD;
-          vD.i.Uo("setDirectionArrow", {
-            id: CD,
-            position: cD,
-            style: ID,
-            text: (0, wD.x)(pD),
-            Fp: iD
+            id: RU,
+            position: gU,
+            style: tU,
+            gE: pU,
+            pE: EU
+          } = UU;
+          eU.p.yh("setDirectionArrow", {
+            id: RU,
+            position: gU,
+            style: tU,
+            text: (0, KU.w)(pU),
+            pE: EU
           }, !0)
-        })), DD.Qm(wD.Hb, (DD => {
+        })), UU.Tm(KU.Jb, (UU => {
           let {
-            id: CD
-          } = DD;
-          vD.i.Uo("clearDirectionArrow", {
-            id: CD
+            id: RU
+          } = UU;
+          eU.p.yh("clearDirectionArrow", {
+            id: RU
           }, !0)
-        })), DD.Qm(wD.N, (DD => {
+        })), UU.Tm(KU.J, (UU => {
           let {
-            yi: CD,
-            Mi: ID,
-            animationScript: pD,
-            Zi: iD,
-            oi: fD,
-            Ni: bD,
-            gi: wD
-          } = DD;
-          CD = (0, LD.b)(CD);
-          const SD = null === pD && null !== bD ? (0, KD.g)(bD, wD) : pD;
-          (0, QD.e)().client.gameRecorder.recordAnimateEntity(CD, ID, SD, iD, fD), (0, JD.b)(cD).animations.animateEntity(CD, ID, pD, iD, fD, bD, wD), null !== pD || CD === cD.aJ && ID === BC.d.Emote && (0, QD.e)().client.cameraController.endTemporaryThirdPerson()
-        })), DD.Qm(wD.cf, (DD => {
+            uE: RU,
+            CE: tU,
+            animationScript: pU,
+            hE: EU,
+            QE: PU,
+            eE: TU,
+            WE: KU
+          } = UU;
+          RU = (0, dU.c)(RU);
+          const cU = null === pU && null !== TU ? (0, YU.d)(TU, KU) : pU;
+          (0, qU.c)().client.gameRecorder.recordAnimateEntity(RU, tU, cU, EU, PU), (0, aU.d)(gU).animations.animateEntity(RU, tU, pU, EU, PU, TU, KU), null !== pU || RU === gU.AY && tU === GR.f.Emote && (0, qU.c)().client.cameraController.endTemporaryThirdPerson()
+        })), UU.Tm(KU.nf, (UU => {
           let {
-            lc: CD,
-            Lc: cD
-          } = DD;
-          if (fD.vG(CD[0], CD[1], CD[2])) {
-            const DD = (0, QD.e)().hN(CD[0], CD[1], CD[2]);
-            (0, QD.e)().updateMailboxContents(CD[0], CD[1], CD[2], DD, cD)
+            Bg: RU,
+            Vg: gU
+          } = UU;
+          if (PU.jy(RU[0], RU[1], RU[2])) {
+            const UU = (0, qU.c)().Zx(RU[0], RU[1], RU[2]);
+            (0, qU.c)().updateMailboxContents(RU[0], RU[1], RU[2], UU, gU)
           }
-        })), DD.Qm(wD.Ab, (DD => {
+        })), UU.Tm(KU.Eb, (UU => {
           let {
-            ki: CD,
-            Yi: ID,
-            Wi: pD,
-            si: iD,
-            Ei: fD,
-            ui: bD,
-            Ai: wD,
-            Fi: SD
-          } = DD;
-          const BD = cD.Km.aDD(cD.aJ);
-          if (bD) {
+            yE: RU,
+            kE: tU,
+            FE: pU,
+            iE: EU,
+            AE: PU,
+            zE: TU,
+            ME: KU,
+            DE: cU
+          } = UU;
+          const GU = gU.Im.NUU(gU.AY);
+          if (TU) {
             const {
-              Pc: DD,
-              Kc: CD
-            } = SD;
-            return (0, QD.e)().client.inventoryPrediction.O4(CD, (() => {
-              BD.chestRefreshed(ID, pD, iD, wD, DD)
-            })) && vD.i.Uo("chestToggleFromServer", !1, !0), void vD.i.Uo("chestRefreshedFromServer")
-          }(CD || BD.Hc) && (CD ? (BD.chestOpened(ID, pD, iD, fD, wD), null !== fD && (0, QD.e)().client.ironChestPasskeyCache.onChestOpened(iD, fD)) : BD.chestClosed(), vD.i.Uo("chestToggleFromServer", CD, !0))
-        })), DD.Qm(wD.$b, (DD => {
+              xg: UU,
+              bg: RU
+            } = cU;
+            return (0, qU.c)().client.inventoryPrediction.n_(RU, (() => {
+              GU.chestRefreshed(tU, pU, EU, KU, UU)
+            })) && eU.p.yh("chestToggleFromServer", !1, !0), void eU.p.yh("chestRefreshedFromServer")
+          }(RU || GU.mg) && (RU ? (GU.chestOpened(tU, pU, EU, PU, KU), null !== PU && (0, qU.c)().client.ironChestPasskeyCache.onChestOpened(EU, PU)) : GU.chestClosed(), eU.p.yh("chestToggleFromServer", RU, !0))
+        })), UU.Tm(KU.cc, (UU => {
           let {
-            craftingRecipeItemName: CD,
-            recipesForItem: ID
-          } = DD;
-          CD ? fD.craftingManager.editRecipesForPlayer(cD.aJ, CD, ID) : fD.craftingManager.resetAllPlayerRecipes(cD.aJ), vD.i.Uo("craftingRecipesEdited", {
-            itemName: CD,
-            recipesForItem: ID
+            craftingRecipeItemName: RU,
+            recipesForItem: tU
+          } = UU;
+          RU ? PU.craftingManager.editRecipesForPlayer(gU.AY, RU, tU) : PU.craftingManager.resetAllPlayerRecipes(gU.AY), eU.p.yh("craftingRecipesEdited", {
+            itemName: RU,
+            recipesForItem: tU
           })
-        })), DD.Qm(wD.Je, (DD => {
+        })), UU.Tm(KU.We, (UU => {
           let {
-            vehicleEId: CD,
-            overrides: cD
-          } = DD;
-          (0, QD.e)().applyRiddenVehicleSettingOverrides(CD, cD)
-        })), DD.Qm(wD.ff, (DD => {
+            vehicleEId: RU,
+            overrides: gU
+          } = UU;
+          (0, qU.c)().applyRiddenVehicleSettingOverrides(RU, gU)
+        })), UU.Tm(KU.sf, (UU => {
           let {
-            BC: CD,
-            yC: ID,
-            MC: pD
-          } = DD;
-          const iD = cD.Km.QDD(cD.aJ).physicsState.type === RD.p.SLEEPING && CD === RD.p.DEFAULT;
-          (0, QD.e)().updatePositionAndPhysics(cD.aJ, {
-            type: CD,
-            tier: ID
-          }, !0, pD), iD && (0, QD.e)().updateHeldVehicleStatus()
-        })), DD.Qm(wD.tb, (DD => {
+            cR: RU,
+            GR: tU,
+            jR: pU
+          } = UU;
+          const EU = gU.Im.bUU(gU.AY).physicsState.type === sU.u.SLEEPING && RU === sU.u.DEFAULT;
+          (0, qU.c)().updatePositionAndPhysics(gU.AY, {
+            type: RU,
+            tier: tU
+          }, !0, pU), EU && (0, qU.c)().updateHeldVehicleStatus()
+        })), UU.Tm(KU.wb, (UU => {
           let {
-            Ep: CD,
-            hp: ID
-          } = DD;
-          cD.Km.qDD(cD.aJ).setPose(CD, ID)
-        })), DD.Qm(wD.le, (DD => {
-          (0, tC.e)(DD)
-        })), DD.Qm(wD.wd, (DD => {
-          for (const CD of DD)(0, sD.y)(CD);
-          vD.i.Uo("playerCosmeticsUpdated", DD, !0)
-        })), DD.Qm(wD.T, (DD => {
-          for (const CD of DD)(0, fC.e)(cD, CD)
-        })), DD.Qm(wD.Lc, (DD => {
+            UE: RU,
+            RE: tU
+          } = UU;
+          gU.Im.MUU(gU.AY).setPose(RU, tU)
+        })), UU.Tm(KU.te, (UU => {
+          (0, CR.d)(UU)
+        })), UU.Tm(KU.xd, (UU => {
+          for (const RU of UU)(0, AU.v)(RU);
+          eU.p.yh("playerCosmeticsUpdated", UU, !0)
+        })), UU.Tm(KU.O, (UU => {
+          for (const RU of UU)(0, PR.h)(gU, RU)
+        })), UU.Tm(KU.Oc, (UU => {
           let {
-            yp: CD,
-            Mp: ID,
-            Zp: pD,
-            vp: iD,
-            Np: bD,
-            Xp: QD,
-            mp: wD
-          } = DD;
-          this.stateReplicationHandler.setUpIfQueued(CD), CD = (0, LD.b)(CD);
-          const SD = cD.Km.WDD(CD);
-          if (SD && (SD.lastHurtTime = performance.now()), (0, kD.playRigHurt)(cD, CD, QD), vD.i.Uo("lifeformHurt", {
-              eId: CD,
-              mp: wD
-            }), ID) {
-            const DD = (0, wC.d)(cD, ID.AC);
-            vD.i.Uo("yourAttackHit", {
-              rC: iD,
-              screenPos: DD,
-              hitSelf: CD === cD.aJ
+            xp: RU,
+            mp: tU,
+            Jp: pU,
+            wp: EU,
+            np: TU,
+            bp: qU,
+            Zp: KU
+          } = UU;
+          this.stateReplicationHandler.setUpIfQueued(RU), RU = (0, dU.c)(RU);
+          const cU = gU.Im.KRU(RU);
+          if (cU && (cU.lastHurtTime = performance.now()), (0, yU.playRigHurt)(gU, RU, qU), eU.p.yh("lifeformHurt", {
+              eId: RU,
+              Zp: KU
+            }), tU) {
+            const UU = (0, KR.f)(gU, tU.LR);
+            eU.p.yh("yourAttackHit", {
+              DR: EU,
+              screenPos: UU,
+              hitSelf: RU === gU.AY
             })
           }
-          CD === cD.aJ && (fD.shakePlayerCamera(CD, bD / 40, 200), vD.i.Uo("closeShopOnDamaged", null), vD.i.Uo("damagedByOtherPlayer", {
-            Wc: null,
-            direction: QD,
-            Np: bD
+          RU === gU.AY && (PU.shakePlayerCamera(RU, TU / 40, 200), eU.p.yh("closeShopOnDamaged", null), eU.p.yh("damagedByOtherPlayer", {
+            yg: null,
+            direction: qU,
+            np: TU
           }, !0));
-          const BD = cD.Km.FX(CD);
-          if (BD && (pD || iD)) {
-            const DD = [BD[0], BD[1] + 1, BD[2]];
-            pD && (0, ED.p)(cD, ED.B, DD, 15), iD && (0, ED.p)(cD, ED.t, DD, 10)
+          const GU = gU.Im.Hx(RU);
+          if (GU && (pU || EU)) {
+            const UU = [GU[0], GU[1] + 1, GU[2]];
+            pU && (0, zU.j)(gU, zU.x, UU, 15), EU && (0, zU.j)(gU, zU.o, UU, 10)
           }
-        })), DD.Qm(wD.Kc, (DD => {
+        })), UU.Tm(KU.Nc, (UU => {
           let {
-            qC: CD,
-            JC: ID,
-            KC: pD
-          } = DD;
-          (0, JD.b)(cD).setHealthFrac((0, LD.b)(CD), pD), vD.i.Uo("lifeformHealthChanged", {
-            eId: (0, LD.b)(CD),
-            JC: ID,
-            KC: pD
+            oR: RU,
+            ZR: tU,
+            aR: pU
+          } = UU;
+          (0, aU.d)(gU).setHealthFrac((0, dU.c)(RU), pU), eU.p.yh("lifeformHealthChanged", {
+            eId: (0, dU.c)(RU),
+            ZR: tU,
+            aR: pU
           })
-        })), DD.Qm(wD.W, (DD => {
+        })), UU.Tm(KU.S, (UU => {
           let {
-            Ii: CD,
-            ii: ID
-          } = DD;
-          (0, QD.e)().playerAttacked(cD.aJ, CD, ID)
-        })), DD.Qm(wD.Fc, (DD => {
-          (0, QD.e)().client.leaveGameUnwanted({
-            reason: DD,
+            TE: RU,
+            qE: tU
+          } = UU;
+          (0, qU.c)().playerAttacked(gU.AY, RU, tU)
+        })), UU.Tm(KU.Hc, (UU => {
+          (0, qU.c)().client.leaveGameUnwanted({
+            reason: UU,
             requiresRefresh: !1,
             canReconnect: !1,
             automaticallyReconnect: !1
-          }), (0, cC.navigatePreserveSearch)("/")
-        })), DD.Qm(wD.Md, (DD => {
+          }), (0, gR.navigatePreserveSearch)("/")
+        })), UU.Tm(KU.Ud, (UU => {
           let {
-            aC: CD,
-            VC: cD,
-            zC: ID
-          } = DD;
-          iD().removeItemName(CD, cD), (0, QD.e)().client.inventoryPrediction.serverChangeApplied(ID)
-        })), DD.Qm(wD.se, (DD => {
+            YR: RU,
+            BR: gU,
+            VR: tU
+          } = UU;
+          EU().removeItemName(RU, gU), (0, qU.c)().client.inventoryPrediction.serverChangeApplied(tU)
+        })), UU.Tm(KU.Ge, (UU => {
           const {
-            fi: CD,
-            yCD: ID
-          } = (0, eD.e)([DD[0], DD[1], DD[2]]);
-          oC.d.setLookDirection(cD, CD, ID), (0, uD.u)(CD, ID);
-          const pD = cD.Km.qDD(cD.aJ);
-          pD && (pD.heading = CD)
-        })), DD.Qm(wD.we, (DD => {
-          fD.client.cameraController.setCameraZoom(DD)
-        })), DD.Qm(wD.Me, (DD => {
+            fp: RU,
+            YRU: tU
+          } = (0, MU.i)([UU[0], UU[1], UU[2]]);
+          QR.c.setLookDirection(gU, RU, tU), (0, DU.o)(RU, tU);
+          const pU = gU.Im.MUU(gU.AY);
+          pU && (pU.heading = RU)
+        })), UU.Tm(KU.Ie, (UU => {
+          PU.client.cameraController.setCameraZoom(UU)
+        })), UU.Tm(KU._e, (UU => {
           let {
-            sC: CD,
-            EC: ID
-          } = DD;
-          fD.shakePlayerCamera(cD.aJ, CD, ID)
-        })), DD.Qm(wD.Tb, (DD => {
-          (0, CC.onCosmeticPackGranted)(DD)
-        })), DD.Qm(wD.ne, (DD => {
-          vD.i.Uo("serverUpdating", Date.now() + DD, !0)
-        })), DD.Qm(wD.Vc, aD.d), DD.Qm(wD.jd, (DD => {
+            FR: RU,
+            iR: tU
+          } = UU;
+          PU.shakePlayerCamera(gU.AY, RU, tU)
+        })), UU.Tm(KU.Ub, (UU => {
+          (0, RR.onCosmeticPackGranted)(UU)
+        })), UU.Tm(KU.ze, (UU => {
+          eU.p.yh("serverUpdating", Date.now() + UU, !0)
+        })), UU.Tm(KU.Vc, BU.c), UU.Tm(KU.ed, (UU => {
           let {
-            id: CD,
-            UD: cD
-          } = DD;
+            id: RU,
+            nU: gU
+          } = UU;
           const {
-            type: pD,
-            params: iD
-          } = (0, QC.h)(cD), fD = {
-            ...iD
+            type: pU,
+            params: EU
+          } = (0, qR.d)(gU), PU = {
+            ...EU
           };
-          for (const ID of QC.d) ID in fD && fD[ID] && (fD[ID] = (0, wD.x)(fD[ID]));
-          bC.e.queueQTE(CD, pD, fD).getResult().then((DD => {
-            "boolean" === typeof DD && (0, ID.sendColyMessage)(wD.$h, {
-              qteId: CD,
-              qteResponse: DD
+          for (const tU of qR.b) tU in PU && PU[tU] && (PU[tU] = (0, KU.w)(PU[tU]));
+          TR.c.queueQTE(RU, pU, PU).getResult().then((UU => {
+            "boolean" === typeof UU && (0, tU.sendColyMessage)(KU.ti, {
+              qteId: RU,
+              qteResponse: UU
             })
           }))
-        })), DD.Qm(wD.Sd, (DD => {
-          bC.e.cancelQTE(DD)
-        })), (0, ID.onGameResetOnce)((() => {
-          bC.e.reset()
-        })), DD.Qm(wD.kd, (DD => {
+        })), UU.Tm(KU.Zd, (UU => {
+          TR.c.cancelQTE(UU)
+        })), (0, tU.onGameResetOnce)((() => {
+          TR.c.reset()
+        })), UU.Tm(KU.gd, (UU => {
           let {
-            id: CD,
-            clientParameters: cD
-          } = DD;
-          (0, OD.g)(CD, cD)
-        })), DD.Qm(wD.Ud, (DD => {
-          (0, OD.i)(DD)
-        })), DD.Qm(wD.$e, (DD => {
+            id: RU,
+            clientParameters: gU
+          } = UU;
+          (0, JU.h)(RU, gU)
+        })), UU.Tm(KU.be, (UU => {
+          (0, JU.l)(UU)
+        })), UU.Tm(KU.lf, (UU => {
           let {
-            text: CD,
-            id: cD
-          } = DD;
-          (0, OD.m)(cD, CD, (DD => {
-            (0, ID.sendColyMessage)(wD.vj, {
-              Gb: cD,
-              Rb: DD,
-              kb: 5
+            text: RU,
+            id: gU
+          } = UU;
+          (0, JU.o)(gU, RU, (UU => {
+            (0, tU.sendColyMessage)(KU.Dj, {
+              xT: gU,
+              mT: UU,
+              IT: 5
             })
           }))
-        })), DD.Qm(wD.ac, (DD => {
+        })), UU.Tm(KU.dc, (UU => {
           let {
-            IC: CD,
-            pC: cD,
-            iC: ID,
-            fC: pD,
-            bC: iD,
-            QC: fD
-          } = DD;
-          CD = (0, LD.b)(CD), (0, QD.e)().client.updateEffect(CD, cD, {
-            displayName: ID,
-            icon: pD,
-            duration: iD,
-            level: fD
+            gR: RU,
+            tR: gU,
+            pR: tU,
+            ER: pU,
+            PR: EU,
+            TR: PU
+          } = UU;
+          RU = (0, dU.c)(RU), (0, qU.c)().client.updateEffect(RU, gU, {
+            displayName: tU,
+            icon: pU,
+            duration: EU,
+            level: PU
           })
-        })), DD.Qm(wD.Hd, (DD => {
+        })), UU.Tm(KU.Od, (UU => {
           let {
-            IC: CD,
-            pC: cD
-          } = DD;
-          CD = (0, LD.b)(CD), (0, QD.e)().client.removeEffect(CD, cD)
-        })), DD.Qm(wD.Ec, (DD => {
-          cD.Km.qDD(cD.aJ).jumpMultiplier.setMultiplierType("jumpEffectAmount", DD)
-        })), DD.Qm(wD._e, (DD => {
-          vD.i.Uo("ttbEffectMultiplier", DD)
-        })), (0, ID.onGameResetOnce)((() => {
-          cD.Km.qDD(cD.aJ).jumpMultiplier.setMultiplierType("jumpEffectAmount", 1)
-        })), DD.Qm(wD.ed, (DD => {
-          (0, ED.q)(cD, (0, BD.o)(DD))
-        })), DD.Qm(wD.id, (DD => {
-          SC.i[DD.sp] ? (0, ED.q)(cD, {
-            ...SC.i[DD.sp],
-            pos1: DD.pos1,
-            pos2: DD.pos2
-          }) : console.error(`Unknown preset id: ${DD.sp}`)
-        })), DD.Qm(wD.td, (DD => {
-          var CD, cD;
+            gR: RU,
+            tR: gU
+          } = UU;
+          RU = (0, dU.c)(RU), (0, qU.c)().client.removeEffect(RU, gU)
+        })), UU.Tm(KU.Ec, (UU => {
+          gU.Im.MUU(gU.AY).jumpMultiplier.setMultiplierType("jumpEffectAmount", UU)
+        })), UU.Tm(KU.kf, (UU => {
+          eU.p.yh("ttbEffectMultiplier", UU)
+        })), (0, tU.onGameResetOnce)((() => {
+          gU.Im.MUU(gU.AY).jumpMultiplier.setMultiplierType("jumpEffectAmount", 1)
+        })), UU.Tm(KU.bd, (UU => {
+          (0, zU.k)(gU, (0, GU.s)(UU))
+        })), UU.Tm(KU.cd, (UU => {
+          cR.g[UU.Op] ? (0, zU.k)(gU, {
+            ...cR.g[UU.Op],
+            pos1: UU.pos1,
+            pos2: UU.pos2
+          }) : console.error(`Unknown preset id: ${UU.Op}`)
+        })), UU.Tm(KU.vd, (UU => {
+          var RU, gU;
           let {
-            Op: ID,
-            Pp: pD,
-            Hp: iD,
-            Up: fD
-          } = DD, {
-            qp: bD,
-            Jp: wD
-          } = null !== fD && void 0 !== fD ? fD : {};
+            Yp: tU,
+            Bp: pU,
+            Vp: EU,
+            rp: PU
+          } = UU, {
+            vp: TU,
+            dp: KU
+          } = null !== PU && void 0 !== PU ? PU : {};
           const {
-            xp: SD
-          } = null !== fD && void 0 !== fD ? fD : {};
-          bD = null !== (CD = bD) && void 0 !== CD ? CD : void 0, wD = null !== (cD = wD) && void 0 !== cD ? cD : void 0, "string" === typeof SD && this.stateReplicationHandler.setUpIfQueued(SD), (0, QD.e)().client.gameRecorder.recordPlaySound(ID, pD, iD, fD), rD.e.play((0, AD.c)(ID), pD, SD, bD, wD).rate(iD)
-        })), DD.Qm(wD.qe, (DD => {
+            Xp: cU
+          } = null !== PU && void 0 !== PU ? PU : {};
+          TU = null !== (RU = TU) && void 0 !== RU ? RU : void 0, KU = null !== (gU = KU) && void 0 !== gU ? gU : void 0, "string" === typeof cU && this.stateReplicationHandler.setUpIfQueued(cU), (0, qU.c)().client.gameRecorder.recordPlaySound(tU, pU, EU, PU), NU.e.play((0, lU.d)(tU), pU, cU, TU, KU).rate(EU)
+        })), UU.Tm(KU.Ce, (UU => {
           let {
-            pos: CD,
-            data: cD
-          } = DD;
-          fD.blockDataOwner.setBlockData(CD[0], CD[1], CD[2], cD), fD.blockAdded(CD[0], CD[1], CD[2], fD.hN(CD[0], CD[1], CD[2]))
-        })), DD.Qm(wD.od, (DD => {
+            pos: RU,
+            data: gU
+          } = UU;
+          PU.blockDataOwner.setBlockData(RU[0], RU[1], RU[2], gU), PU.blockAdded(RU[0], RU[1], RU[2], PU.Zx(RU[0], RU[1], RU[2]))
+        })), UU.Tm(KU.nd, (UU => {
           let {
-            info: CD
-          } = DD;
-          vD.i.Uo("overShopInfo", CD, !0)
-        })), DD.Qm(wD.jc, (DD => {
+            info: RU
+          } = UU;
+          eU.p.yh("overShopInfo", RU, !0)
+        })), UU.Tm(KU.kc, (UU => {
           let {
-            wC: ID,
-            SC: pD
-          } = DD;
-          CD.openShop(cD.aJ, ID, pD)
-        })), DD.Qm(wD.Q, (DD => {
-          cD.Km.Yz(cD.aJ).applyImpulse(DD)
-        })), DD.Qm(wD.Ke, (DD => {
-          const CD = cD.Km.Yz(cD.aJ);
-          GD().set(CD.qV, 0, 0, 0), GD().set(CD.JV, 0, 0, 0), GD().copy(CD.lb, DD), CD.KV()
-        })), DD.Qm(wD.Oc, (DD => {
-          console.error(`[logErrorToConsole]: ${DD}`)
-        })), DD.Qm(wD.ic, (DD => {
+            qR: tU,
+            KR: pU
+          } = UU;
+          RU.openShop(gU.AY, tU, pU)
+        })), UU.Tm(KU.L, (UU => {
+          gU.Im.yX(gU.AY).applyImpulse(UU)
+        })), UU.Tm(KU.Xe, (UU => {
+          const RU = gU.Im.yX(gU.AY);
+          SU().set(RU.vV, 0, 0, 0), SU().set(RU.HV, 0, 0, 0), SU().copy(RU.Fh, UU), RU.sV()
+        })), UU.Tm(KU.Qc, (UU => {
+          console.error(`[logErrorToConsole]: ${UU}`)
+        })), UU.Tm(KU.ic, (UU => {
           let {
-            Vi: CD,
-            zi: cD,
-            ji: ID
-          } = DD;
-          vD.i.Uo("flyingMiddleMessage", {
-            content: (0, wD.x)(CD),
-            zi: cD,
-            ji: ID
+            VE: RU,
+            rE: gU,
+            XE: tU
+          } = UU;
+          eU.p.yh("flyingMiddleMessage", {
+            content: (0, KU.w)(RU),
+            rE: gU,
+            XE: tU
           }, !0)
-        })), DD.Qm(wD.lf, (DD => {
-          const CD = DD === VD.g ? null : {
-            message: `Currently loaded as variation: ${DD}`,
+        })), UU.Tm(KU.zf, (UU => {
+          const RU = UU === VU.g ? null : {
+            message: `Currently loaded as variation: ${UU}`,
             type: "Warning"
           };
-          vD.i.Uo("showPermanentBottomMessage", CD, !0)
-        })), DD.Qm(wD.mc, (DD => {
+          eU.p.yh("showPermanentBottomMessage", RU, !0)
+        })), UU.Tm(KU.mc, (UU => {
           let {
-            messageType: CD,
-            data: cD
-          } = DD;
-          (0, FD.e)(CD) ? (0, FD.b)(CD, cD) : ("freeCamPerms" === CD && fD.client.freeCameraController.setPerms(cD.key, cD.value), fD.client.triggerGameCallback("onReceivedMessageFromServer", CD, cD))
-        })), DD.Qm(wD.ub, (() => {
-          const DD = cD.Km.FDD(cD.aJ);
-          null !== DD && void 0 !== DD && DD.isChargeable() && DD.finishCharging(!1, Date.now())
-        })), DD.Qm(wD.Jd, (DD => {
+            messageType: RU,
+            data: gU
+          } = UU;
+          (0, OU.f)(RU) ? (0, OU.b)(RU, gU) : ("freeCamPerms" === RU && PU.client.freeCameraController.setPerms(gU.key, gU.value), PU.client.triggerGameCallback("onReceivedMessageFromServer", RU, gU))
+        })), UU.Tm(KU.yb, (() => {
+          const UU = gU.Im.QRU(gU.AY);
+          null !== UU && void 0 !== UU && UU.isChargeable() && UU.finishCharging(!1, Date.now())
+        })), UU.Tm(KU.Sd, (UU => {
           let {
-            np: CD
-          } = DD;
-          fD.craftingManager.removeRecipes(cD.aJ, CD), vD.i.Uo("craftingRecipesEdited", {
-            itemName: CD,
+            ap: RU
+          } = UU;
+          PU.craftingManager.removeRecipes(gU.AY, RU), eU.p.yh("craftingRecipesEdited", {
+            itemName: RU,
             recipesForItem: []
           })
-        })), DD.Qm(wD.ef, (DD => {
-          for (const CD in DD) {
-            const cD = DD[CD];
-            for (const DD in cD) fD.client.meshCreator.handleParticleSystemUpdate(CD, DD, cD[DD])
+        })), UU.Tm(KU.of, (UU => {
+          for (const RU in UU) {
+            const gU = UU[RU];
+            for (const UU in gU) PU.client.meshCreator.handleParticleSystemUpdate(RU, UU, gU[UU])
           }
-        })), (0, ID.onGameResetOnce)((() => {
-          (0, iC.setFloatingYValue)(cD.Km.getState(cD.aJ, "physics"), cD.Km.fR(cD.aJ), null)
-        })), DD.Qm(wD.ec, (DD => {
+        })), (0, tU.onGameResetOnce)((() => {
+          (0, ER.setFloatingYValue)(gU.Im.getState(gU.AY, "physics"), gU.Im.Hk(gU.AY), null)
+        })), UU.Tm(KU.ec, (UU => {
           let {
-            eC: CD,
-            uC: ID,
-            hC: pD
-          } = DD;
-          const iD = (0, LD.b)(CD);
-          if (iD === cD.aJ) {
-            const DD = cD.Km.fR(cD.aJ).position;
-            pD ??= Math.floor(DD[1]) - 1, (0, iC.setFloatingYValue)(cD.Km.getState(cD.aJ, "physics"), cD.Km.fR(cD.aJ), ID ? pD : null)
-          }(0, JD.b)(cD).setFloating(iD, ID, pD);
-          const fD = cD.Km.getState(iD, "floating");
-          fD && (fD.isFloating = ID, fD.hC = ID ? pD : null)
-        })), DD.Qm(wD.Nb, DC.e)
+            AR: RU,
+            zR: tU,
+            MR: pU
+          } = UU;
+          const EU = (0, dU.c)(RU);
+          if (EU === gU.AY) {
+            const UU = gU.Im.Hk(gU.AY).position;
+            pU ??= Math.floor(UU[1]) - 1, (0, ER.setFloatingYValue)(gU.Im.getState(gU.AY, "physics"), gU.Im.Hk(gU.AY), tU ? pU : null)
+          }(0, aU.d)(gU).setFloating(EU, tU, pU);
+          const PU = gU.Im.getState(EU, "floating");
+          PU && (PU.isFloating = tU, PU.MR = tU ? pU : null)
+        })), UU.Tm(KU.Ob, UR.i)
       }
     }
     window.addEventListener("beforeunload", (() => {}));
-    var NC = cD(38396),
-      gC = cD(38404),
-      XC = cD(659),
-      mC = cD(3032);
-    class nC {
-      constructor(DD, CD, cD, ID) {
-        this.msgHandler = cD, this.listener = ID, this.session = void 0, this.attachedRoom = null, this.detachRoomListeners = null, this.suspended = !1, this.droppedAt = 0, this.session = new NC.e({
-          reconnect: DD,
-          isLive: () => ID.isLive(),
-          onReconnected: DD => {
-            this.resumeOnRoom(DD)
+    var WR = gU(38598),
+      fR = gU(38603),
+      xR = gU(623),
+      mR = gU(2927);
+    class IR {
+      constructor(UU, RU, gU, tU) {
+        this.msgHandler = gU, this.listener = tU, this.session = void 0, this.attachedRoom = null, this.detachRoomListeners = null, this.suspended = !1, this.droppedAt = 0, this.session = new WR.e({
+          reconnect: UU,
+          isLive: () => tU.isLive(),
+          onReconnected: UU => {
+            this.resumeOnRoom(UU)
           },
-          onGaveUp: (DD, CD) => {
-            ID.onGaveUp(DD, CD)
+          onGaveUp: (UU, RU) => {
+            tU.onGaveUp(UU, RU)
           },
-          freeze: CD,
-          releaseSeat: CD => {
-            DD(CD).then((DD => {
-              DD.leave(!0)
-            }), (DD => {
-              console.warn("Couldn't release the held seat of a game left while reconnecting", DD)
+          freeze: RU,
+          releaseSeat: RU => {
+            UU(RU).then((UU => {
+              UU.leave(!0)
+            }), (UU => {
+              console.warn("Couldn't release the held seat of a game left while reconnecting", UU)
             }))
           }
         })
       }
-      onInitialInfo(DD, CD) {
-        this.session.onInitialInfo(DD, CD)
+      onInitialInfo(UU, RU) {
+        this.session.onInitialInfo(UU, RU)
       }
       isResuming() {
         return this.session.isResuming()
@@ -1309,172 +1309,172 @@ export const modules = {
       getDroppedAt() {
         return this.droppedAt
       }
-      onResumeInitialInfo(DD, CD) {
-        if (this.session.onResuming(), null === DD) {
+      onResumeInitialInfo(UU, RU) {
+        if (this.session.onResuming(), null === UU) {
           try {
-            (0, QD.e)().client.itemDropPrediction.reset()
-          } catch (cD) {
-            console.error("Error dropping the item drop predictions on resuming", cD)
+            (0, qU.c)().client.itemDropPrediction.reset()
+          } catch (gU) {
+            console.error("Error dropping the item drop predictions on resuming", gU)
           }
-          return ID.offlineInputReplay.discard(), void this.setSuspended(!1)
-        }(0, QD.e)().client.itemDropPrediction.onResumeReplayOffered(), ID.offlineInputReplay.replayFrom(DD.YC, CD)
+          return tU.offlineInputReplay.discard(), void this.setSuspended(!1)
+        }(0, qU.c)().client.itemDropPrediction.onResumeReplayOffered(), tU.offlineInputReplay.replayFrom(UU.yR, RU)
       }
-      onResumed(DD) {
-        this.setSuspended(!1), (0, ID.resendBeacons)();
+      onResumed(UU) {
+        this.setSuspended(!1), (0, tU.resendBeacons)();
         try {
-          DD()
-        } catch (CD) {
-          console.error("Error completing the resume", CD)
+          UU()
+        } catch (RU) {
+          console.error("Error completing the resume", RU)
         } finally {
           this.session.onResumed()
         }
       }
-      attachRoom(DD) {
-        const CD = (0, XC.e)((() => DD.connection.isOpen));
-        DD.Zm(CD);
-        const cD = new gC.d((() => {
-          this.session.canHoldSeat() && this.listener.isLive() && (console.warn("The game server went silent, reconnecting"), this.onConnectionDropped(DD, "silent"), DD.leave(!1))
+      attachRoom(UU) {
+        const RU = (0, xR.e)((() => UU.connection.isOpen));
+        UU.qm(RU);
+        const gU = new fR.e((() => {
+          this.session.canHoldSeat() && this.listener.isLive() && (console.warn("The game server went silent, reconnecting"), this.onConnectionDropped(UU, "silent"), UU.leave(!1))
         }));
-        DD.onStateChange((() => {
-          cD.heard()
+        UU.onStateChange((() => {
+          gU.heard()
         }));
-        const ID = CD => {
-          CD.persisted || DD.leave(!0)
+        const tU = RU => {
+          RU.persisted || UU.leave(!0)
         };
-        window.addEventListener("pagehide", ID), DD.Zm(((CD, cD) => {
-          if (DD === this.attachedRoom && this.listener.isLive()) return (0, iD.k)(CD) && this.session.canHoldSeat() ? (console.warn(`Connection to the game server dropped with code ${CD}, reconnecting`), this.listener.onDropped(CD, cD), void this.onConnectionDropped(DD, String(CD))) : void this.listener.onRoomLeft(CD, cD)
-        })), this.attachedRoom = DD, this.detachRoomListeners = () => {
-          CD(), cD.dispose(), window.removeEventListener("pagehide", ID)
+        window.addEventListener("pagehide", tU), UU.qm(((RU, gU) => {
+          if (UU === this.attachedRoom && this.listener.isLive()) return (0, EU.g)(RU) && this.session.canHoldSeat() ? (console.warn(`Connection to the game server dropped with code ${RU}, reconnecting`), this.listener.onDropped(RU, gU), void this.onConnectionDropped(UU, String(RU))) : void this.listener.onRoomLeft(RU, gU)
+        })), this.attachedRoom = UU, this.detachRoomListeners = () => {
+          RU(), gU.dispose(), window.removeEventListener("pagehide", tU)
         }
       }
       dispose() {
         this.detachRoom(), this.session.leave(), this.setSuspended(!1)
       }
-      setSuspended(DD) {
-        DD !== this.suspended && (this.suspended = DD, (0, ID.setConnectionSuspended)(DD), (0, QD.e)().client.itemDropPrediction.setSuspended(DD))
+      setSuspended(UU) {
+        UU !== this.suspended && (this.suspended = UU, (0, tU.setConnectionSuspended)(UU), (0, qU.c)().client.itemDropPrediction.setSuspended(UU))
       }
       detachRoom() {
-        var DD;
-        null === (DD = this.detachRoomListeners) || void 0 === DD || DD.call(this), this.detachRoomListeners = null, this.attachedRoom = null
+        var UU;
+        null === (UU = this.detachRoomListeners) || void 0 === UU || UU.call(this), this.detachRoomListeners = null, this.attachedRoom = null
       }
-      onConnectionDropped(DD, CD) {
-        (0, mC.h)("disconnect", "Left room", CD), this.isResuming() || (this.droppedAt = Date.now()), this.detachRoom(), ID.offlineInputReplay.onConnectionLost(), this.setSuspended(!0), this.session.onConnectionLost(DD.reconnectionToken)
+      onConnectionDropped(UU, RU) {
+        (0, mR.e)("disconnect", "Left room", RU), this.isResuming() || (this.droppedAt = Date.now()), this.detachRoom(), tU.offlineInputReplay.onConnectionLost(), this.setSuspended(!0), this.session.onConnectionLost(UU.reconnectionToken)
       }
-      resumeOnRoom(DD) {
-        if (!this.listener.isLive()) return console.warn("Left the game while reconnecting, leaving the resumed room"), DD.leave(!0), void this.dispose();
-        console.log("Reconnected to the game server, waiting for the game to resume"), (0, tC.r)(), ID.offlineInputReplay.onConnectionReplaced(), this.msgHandler.gwD(DD), this.listener.onReconnected(DD), this.attachRoom(DD)
+      resumeOnRoom(UU) {
+        if (!this.listener.isLive()) return console.warn("Left the game while reconnecting, leaving the resumed room"), UU.leave(!0), void this.dispose();
+        console.log("Reconnected to the game server, waiting for the game to resume"), (0, CR.q)(), tU.offlineInputReplay.onConnectionReplaced(), this.msgHandler.cKU(UU), this.listener.onReconnected(UU), this.attachRoom(UU)
       }
     }
-    var OC = cD(3275),
-      PC = cD(3280),
-      HC = cD(1317),
-      UC = cD(4476),
-      xC = cD(2946),
-      qC = cD(1077),
-      JC = cD(37079),
-      KC = cD(38409),
-      aC = cD(8598),
-      VC = cD(38418),
-      zC = cD(1796),
-      jC = cD(38423),
-      lC = cD(1694),
-      LC = cD(2644);
+    var JR = gU(3165),
+      wR = gU(3167),
+      nR = gU(1316),
+      bR = gU(4336),
+      oR = gU(2840),
+      ZR = gU(1064),
+      aR = gU(37222),
+      YR = gU(38611),
+      BR = gU(8522),
+      VR = gU(38618),
+      rR = gU(1704),
+      XR = gU(38621),
+      vR = gU(1629),
+      dR = gU(2558);
 
-    function TC(DD) {
-      var CD, cD;
-      if ("object" !== typeof DD || null === DD) return {
-        errType: typeof DD
+    function HR(UU) {
+      var RU, gU;
+      if ("object" !== typeof UU || null === UU) return {
+        errType: typeof UU
       };
-      const ID = DD;
+      const tU = UU;
       return {
-        errType: null !== (CD = null === (cD = DD.constructor) || void 0 === cD ? void 0 : cD.name) && void 0 !== CD ? CD : "",
-        errName: "string" === typeof ID.name ? ID.name : "",
-        eventType: "string" === typeof ID.type ? ID.type : "",
-        errStack: "string" === typeof ID.stack ? ID.stack.split("\n").slice(1).join(" | ") : ""
+        errType: null !== (RU = null === (gU = UU.constructor) || void 0 === gU ? void 0 : gU.name) && void 0 !== RU ? RU : "",
+        errName: "string" === typeof tU.name ? tU.name : "",
+        eventType: "string" === typeof tU.type ? tU.type : "",
+        errStack: "string" === typeof tU.stack ? tU.stack.split("\n").slice(1).join(" | ") : ""
       }
     }
 
-    function GC(DD) {
-      if ("undefined" !== typeof ProgressEvent && DD instanceof ProgressEvent) return !0;
-      if (!(DD instanceof Error)) return !1;
-      const CD = DD.code;
-      return "ServerError" === DD.name && void 0 === CD || "AbortError" === DD.name || "seat reservation expired." === DD.message || "early_leave" === DD.message
-    }(0, ZD.o)((DD => {
-      (0, mC.h)("wasm_net", DD)
+    function SR(UU) {
+      if ("undefined" !== typeof ProgressEvent && UU instanceof ProgressEvent) return !0;
+      if (!(UU instanceof Error)) return !1;
+      const RU = UU.code;
+      return "ServerError" === UU.name && void 0 === RU || "AbortError" === UU.name || "seat reservation expired." === UU.message || "early_leave" === UU.message
+    }(0, hU.k)((UU => {
+      (0, mR.e)("wasm_net", UU)
     }));
-    let RC = !0;
+    let sR = !0;
 
-    function kC() {
-      RC = !1
+    function yR() {
+      sR = !1
     }
-    class dC {
-      constructor(DD) {
-        this.gameNameWithVariation = void 0, this.lobbyName = void 0, this.colyClient = void 0, this.userContext = void 0, this.joinedAt = null, this.checkSendPath = () => {}, this.ny = void 0, this.connectionResume = void 0, this.incomingMsgInitialisor = void 0, this.gameNameWithVariation = DD.gameNameWithVariation, this.lobbyName = DD.lobbyName, this.colyClient = DD.colyClient, this.userContext = DD.userContext
+    class kR {
+      constructor(UU) {
+        this.gameNameWithVariation = void 0, this.lobbyName = void 0, this.colyClient = void 0, this.userContext = void 0, this.joinedAt = null, this.checkSendPath = () => {}, this.LG = void 0, this.connectionResume = void 0, this.incomingMsgInitialisor = void 0, this.gameNameWithVariation = UU.gameNameWithVariation, this.lobbyName = UU.lobbyName, this.colyClient = UU.colyClient, this.userContext = UU.userContext
       }
-      async connectToServer(DD, CD, cD) {
-        ND.d.reset(), DD.KJ = {
-          [DD.aJ]: {}
-        }, DD.o9 = void 0, (0, tC.r)(), (0, QD.e)().removeAllEntityNames(), (0, QD.e)().setEntityName(DD.aJ, this.userContext.getPlayerName()), (0, HC.o)({
+      async connectToServer(UU, RU, gU) {
+        WU.b.reset(), UU.FY = {
+          [UU.AY]: {}
+        }, UU.jUU = void 0, (0, CR.q)(), (0, qU.c)().removeAllEntityNames(), (0, qU.c)().setEntityName(UU.AY, this.userContext.getPlayerName()), (0, nR.m)({
           lobbyName: this.lobbyName
         }), console.log("Waiting for clientConnection passed promise to resolve");
-        const fD = (0, lC.e)();
+        const PU = (0, vR.f)();
         console.log("joining server with game", this.gameNameWithVariation, "lobbyName", this.lobbyName);
-        const bD = performance.now(),
-          wD = (0, VC.f)(this.userContext, (() => {
+        const TU = performance.now(),
+          KU = (0, VR.e)(this.userContext, (() => {
             const {
-              roomName: ID,
-              joinOptions: pD
-            } = (0, XD.h)(this.userContext, this.gameNameWithVariation, this.lobbyName, CD, (DD => xC.e.isUsingCustomGameTexturePack(DD)));
-            return pD.joinAdHold = fD, pD.renderBackend = (0, LC.b)(DD.XZ), (0, KC.c)((() => this.colyClient.joinOrCreate(ID, pD)), cD)
+              roomName: tU,
+              joinOptions: pU
+            } = (0, xU.d)(this.userContext, this.gameNameWithVariation, this.lobbyName, RU, (UU => oR.e.isUsingCustomGameTexturePack(UU)));
+            return pU.joinAdHold = PU, pU.renderBackend = (0, dR.b)(UU.SC), (0, YR.h)((() => this.colyClient.joinOrCreate(tU, pU)), gU)
           }));
-        return vD.i.Uo("loadingScreenState", "loadingPage:joiningLobby"), await wD.then((CD => {
-          if (this.joinedAt = performance.now(), this.ny = DD, fD) {
-            const DD = (0, lC.m)((() => {
-              CD.send(pD.h)
+        return eU.p.yh("loadingScreenState", "loadingPage:joiningLobby"), await KU.then((RU => {
+          if (this.joinedAt = performance.now(), this.LG = UU, PU) {
+            const UU = (0, vR.p)((() => {
+              RU.send(pU.f)
             }));
-            CD.Zm(DD), (0, ID.onGameResetOnce)(DD)
+            RU.qm(UU), (0, tU.onGameResetOnce)(UU)
           }
-          const cD = new oD(CD);
-          this.connectionResume = new nC((DD => this.colyClient.reconnect(DD)), (CD => {
-            DD.kU(CD)
-          }), cD, {
-            isLive: () => (0, QD.e)().client.getMsgHandler() === cD,
-            onDropped: (DD, CD) => {
-              (0, PC.f)(DD) || this.logUnrecognisedConnectionLoss(DD, void 0, {
+          const gU = new QU(RU);
+          this.connectionResume = new IR((UU => this.colyClient.reconnect(UU)), (RU => {
+            UU.HJ(RU)
+          }), gU, {
+            isLive: () => (0, qU.c)().client.getMsgHandler() === gU,
+            onDropped: (UU, RU) => {
+              (0, wR.h)(UU) || this.logUnrecognisedConnectionLoss(UU, void 0, {
                 site: "drop",
-                closeReason: null !== CD && void 0 !== CD ? CD : "",
+                closeReason: null !== RU && void 0 !== RU ? RU : "",
                 sinceJoined: this.sinceJoined()
               })
             },
-            onRoomLeft: (DD, CD) => {
-              this.onRoomLeft(DD, CD)
+            onRoomLeft: (UU, RU) => {
+              this.onRoomLeft(UU, RU)
             },
-            onReconnected: DD => {
-              this.incomingMsgInitialisor.gwD(DD), this.checkSendPath = (0, JC.d)(cD, DD, ZD.p)
+            onReconnected: UU => {
+              this.incomingMsgInitialisor.cKU(UU), this.checkSendPath = (0, aR.e)(gU, UU, hU.n)
             },
-            onGaveUp: (DD, CD) => {
-              this.onResumeGaveUp(DD, CD)
+            onGaveUp: (UU, RU) => {
+              this.onResumeGaveUp(UU, RU)
             }
-          }), this.connectionResume.attachRoom(CD), (0, ID.onGameResetOnce)((() => {
+          }), this.connectionResume.attachRoom(RU), (0, tU.onGameResetOnce)((() => {
             this.connectionResume.dispose()
           }));
-          const iD = cD.send,
-            bD = cD.Qm,
-            wD = cD.lCD.send,
-            SD = cD.lCD.Qm,
-            BD = cD.vwD;
-          this.checkSendPath = (0, JC.d)(cD, CD, ZD.p);
-          const yD = setInterval((() => {
-            iD === cD.send && bD === cD.Qm && wD === cD.lCD.send && SD === cD.lCD.Qm && BD === cD.vwD || kC(), this.checkSendPath()
+          const EU = gU.send,
+            TU = gU.Tm,
+            KU = gU.ORU.send,
+            cU = gU.ORU.Tm,
+            GU = gU.qKU;
+          this.checkSendPath = (0, aR.e)(gU, RU, hU.n);
+          const jU = setInterval((() => {
+            EU === gU.send && TU === gU.Tm && KU === gU.ORU.send && cU === gU.ORU.Tm && GU === gU.qKU || yR(), this.checkSendPath()
           }), 1e4);
-          return (0, ID.onGameResetOnce)((() => {
-            clearInterval(yD)
+          return (0, tU.onGameResetOnce)((() => {
+            clearInterval(jU)
           })), {
             success: !0,
-            successDetails: cD
+            successDetails: gU
           }
-        })).catch((CD => {
-          if (cD.aborted && CD === (0, zC.g)(cD)) return {
+        })).catch((RU => {
+          if (gU.aborted && RU === (0, rR.g)(gU)) return {
             success: !1,
             failDetails: {
               reason: "Left the game while it loaded",
@@ -1482,21 +1482,21 @@ export const modules = {
               canReconnect: !1
             }
           };
-          if (CD instanceof jC.g) return console.warn("Seat request timed out", this.lobbyName, this.gameNameWithVariation), {
+          if (RU instanceof XR.e) return console.warn("Seat request timed out", this.lobbyName, this.gameNameWithVariation), {
             success: !1,
             failDetails: {
-              reason: CD.message,
+              reason: RU.message,
               requiresRefresh: !1,
               canReconnect: !1,
               gameServerUnreachable: "timedOut"
             }
           };
-          DD.dZ(`Failed to connect to bloxd room, check your internet connection. lobbyName: ${this.lobbyName}, gameNameWithVariation: ${this.gameNameWithVariation} code: ${CD.code}\n`, CD);
-          const ID = CD.code;
-          return ID === iD.e.serverUpdating.code ? (this.goToUpdateWaiting(), {
+          UU.Th(`Failed to connect to bloxd room, check your internet connection. lobbyName: ${this.lobbyName}, gameNameWithVariation: ${this.gameNameWithVariation} code: ${RU.code}\n`, RU);
+          const tU = RU.code;
+          return tU === EU.d.serverUpdating.code ? (this.goToUpdateWaiting(), {
             success: !1,
             failDetails: {
-              reason: iD.e.serverUpdating.text,
+              reason: EU.d.serverUpdating.text,
               requiresRefresh: !1,
               canReconnect: !0,
               goesToUpdateWaiting: !0
@@ -1504,1402 +1504,1402 @@ export const modules = {
           }) : {
             success: !1,
             failDetails: {
-              ...this.onConnectionToServerLost(ID, CD.message, {
+              ...this.onConnectionToServerLost(tU, RU.message, {
                 site: "join",
-                sinceJoinStart: (0, PC.d)(performance.now() - bD),
-                ...TC(CD)
-              }, GC(CD)),
-              rematch: (0, KC.b)(CD),
-              gameRefused: (0, aC.c)(CD)
+                sinceJoinStart: (0, wR.c)(performance.now() - TU),
+                ...HR(RU)
+              }, SR(RU)),
+              rematch: (0, YR.e)(RU),
+              gameRefused: (0, BR.b)(RU)
             }
           }
         }))
       }
-      setupServerListeners(DD, CD, cD) {
-        vD.i.Uo("loadingScreenState", "loadingPage:loadingPlayerInfo"), this.incomingMsgInitialisor = new vC(this.gameNameWithVariation, CD.lCD, DD, this.connectionResume), this.incomingMsgInitialisor.setupStateReplicationHandlers();
-        const pD = CD.OwD();
-        this.incomingMsgInitialisor.setupOnMessageListeners(pD, cD), (0, ID.onConnectionToServerReady)(pD, CD), pD.finishRegistration()
+      setupServerListeners(UU, RU, gU) {
+        eU.p.yh("loadingScreenState", "loadingPage:loadingPlayerInfo"), this.incomingMsgInitialisor = new eR(this.gameNameWithVariation, RU.ORU, UU, this.connectionResume), this.incomingMsgInitialisor.setupStateReplicationHandlers();
+        const pU = RU.CKU();
+        this.incomingMsgInitialisor.setupOnMessageListeners(pU, gU), (0, tU.onConnectionToServerReady)(pU, RU), pU.finishRegistration()
       }
       dispose() {
         this.connectionResume.dispose()
       }
-      onResumeGaveUp(DD, CD) {
-        (0, qC.WZ)(new Error("Reconnect failed"), {
-          ...(0, OC.j)(CD),
+      onResumeGaveUp(UU, RU) {
+        (0, ZR.Kh)(new Error("Reconnect failed"), {
+          ...(0, JR.n)(RU),
           game: this.gameNameWithVariation
-        }), (0, mC.h)("disconnect", "Reconnect failed", CD.reason), (0, QD.e)().client.leaveGameUnwanted({
+        }), (0, mR.e)("disconnect", "Reconnect failed", RU.reason), (0, qU.c)().client.leaveGameUnwanted({
           reason: {
             translationKey: "general:lostConnection"
           },
-          canReconnect: !DD,
-          canPlayAgain: DD,
+          canReconnect: !UU,
+          canPlayAgain: UU,
           requiresRefresh: !1,
           automaticallyReconnect: !1
-        }), (0, cC.navigatePreserveSearch)("/")
+        }), (0, gR.navigatePreserveSearch)("/")
       }
       sinceJoined() {
-        return null === this.joinedAt ? "" : (0, PC.d)(performance.now() - this.joinedAt)
+        return null === this.joinedAt ? "" : (0, wR.c)(performance.now() - this.joinedAt)
       }
-      onRoomLeft(DD, CD) {
-        var cD;
-        if (DD === iD.e.gameOrPluginKick.code) return;
-        if (console.log(`Left room with code ${DD}`), DD === iD.e.serverUpdating.code) return (0, mC.h)("disconnect", "Left room", "serverUpdating"), (0, QD.e)().client.leaveGame(this.getUpdateWaitingUrl()), void this.goToUpdateWaiting();
-        this.ny.dZ(`Kicked from server with code ${DD}`, new Error);
-        const ID = Object.keys(iD.e).find((CD => iD.e[CD].code === DD));
-        (0, mC.h)("disconnect", "Left room", null !== ID && void 0 !== ID ? ID : String(DD));
-        const pD = this.onConnectionToServerLost(DD, void 0, {
+      onRoomLeft(UU, RU) {
+        var gU;
+        if (UU === EU.d.gameOrPluginKick.code) return;
+        if (console.log(`Left room with code ${UU}`), UU === EU.d.serverUpdating.code) return (0, mR.e)("disconnect", "Left room", "serverUpdating"), (0, qU.c)().client.leaveGame(this.getUpdateWaitingUrl()), void this.goToUpdateWaiting();
+        this.LG.Th(`Kicked from server with code ${UU}`, new Error);
+        const tU = Object.keys(EU.d).find((RU => EU.d[RU].code === UU));
+        (0, mR.e)("disconnect", "Left room", null !== tU && void 0 !== tU ? tU : String(UU));
+        const pU = this.onConnectionToServerLost(UU, void 0, {
           site: "leave",
-          closeReason: null !== CD && void 0 !== CD ? CD : "",
+          closeReason: null !== RU && void 0 !== RU ? RU : "",
           sinceJoined: this.sinceJoined()
         });
-        (0, QD.e)().client.leaveGameUnwanted({
-          reason: `You have disconnected from the server.\n${pD.reason}`,
-          canReconnect: pD.canReconnect,
-          requiresRefresh: pD.requiresRefresh,
-          automaticallyReconnect: null !== (cD = pD.automaticallyReconnect) && void 0 !== cD && cD
-        }), (0, cC.navigatePreserveSearch)("/")
+        (0, qU.c)().client.leaveGameUnwanted({
+          reason: `You have disconnected from the server.\n${pU.reason}`,
+          canReconnect: pU.canReconnect,
+          requiresRefresh: pU.requiresRefresh,
+          automaticallyReconnect: null !== (gU = pU.automaticallyReconnect) && void 0 !== gU && gU
+        }), (0, gR.navigatePreserveSearch)("/")
       }
       getUpdateWaitingUrl() {
-        return (0, UC.D)(this.gameNameWithVariation, this.lobbyName)
+        return (0, bR.z)(this.gameNameWithVariation, this.lobbyName)
       }
       goToUpdateWaiting() {
-        (0, cC.navigatePreserveSearch)(this.getUpdateWaitingUrl())
+        (0, gR.navigatePreserveSearch)(this.getUpdateWaitingUrl())
       }
-      onConnectionToServerLost(DD, CD, cD) {
-        var ID;
-        let pD = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (null !== (ID = CD) && void 0 !== ID && ID.endsWith(iD.o) && (this.userContext.invalidateTrafficCode(), CD = CD.replace(iD.o, "")), DD === iD.e.outdatedVersion.code) return console.error("Outdated client with version ", fD.c, ", refreshing page"), (0, gD.reloadBloxd)(), {
+      onConnectionToServerLost(UU, RU, gU) {
+        var tU;
+        let pU = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        if (null !== (tU = RU) && void 0 !== tU && tU.endsWith(EU.k) && (this.userContext.invalidateTrafficCode(), RU = RU.replace(EU.k, "")), UU === EU.d.outdatedVersion.code) return console.error("Outdated client with version ", PU.d, ", refreshing page"), (0, fU.reloadBloxd)(), {
           reason: "Outdated client",
           requiresRefresh: !0,
           canReconnect: !1
         };
-        if (DD === iD.e.loadRecaptchaError.code) return console.error("Load recaptcha error, refreshing page"), (0, gD.reloadBloxd)(), {
+        if (UU === EU.d.loadRecaptchaError.code) return console.error("Load recaptcha error, refreshing page"), (0, fU.reloadBloxd)(), {
           reason: "Failed to load recaptcha",
           requiresRefresh: !0,
           canReconnect: !1
         };
-        for (const fD in iD.e) {
+        for (const PU in EU.d) {
           const {
-            code: cD,
-            text: ID,
-            canReconnect: pD
-          } = iD.e[fD];
-          if (cD === DD) {
-            console.log("matched known error", DD, "leaving game");
+            code: gU,
+            text: tU,
+            canReconnect: pU
+          } = EU.d[PU];
+          if (gU === UU) {
+            console.log("matched known error", UU, "leaving game");
             return {
-              reason: "" !== ID ? ID : CD || `Code: ${DD}`,
+              reason: "" !== tU ? tU : RU || `Code: ${UU}`,
               requiresRefresh: !1,
-              canReconnect: pD,
-              automaticallyReconnect: cD === iD.e.customGameUpdated.code || cD === iD.e.duplicateLobbyNameError.code
+              canReconnect: pU,
+              automaticallyReconnect: gU === EU.d.customGameUpdated.code || gU === EU.d.duplicateLobbyNameError.code
             }
           }
         }
-        return console.log("Didn't match known error, leaving game"), (0, PC.e)(DD) || pD ? console.warn("Connection lost", DD, CD) : this.logUnrecognisedConnectionLoss(DD, CD, cD), {
-          reason: `Either your internet isn't working or this is a bug.\nCode: ${DD}`,
+        return console.log("Didn't match known error, leaving game"), (0, wR.d)(UU) || pU ? console.warn("Connection lost", UU, RU) : this.logUnrecognisedConnectionLoss(UU, RU, gU), {
+          reason: `Either your internet isn't working or this is a bug.\nCode: ${UU}`,
           requiresRefresh: !1,
           canReconnect: !1,
-          gameServerUnreachable: pD ? "failed" : void 0
+          gameServerUnreachable: pU ? "failed" : void 0
         }
       }
-      logUnrecognisedConnectionLoss(DD, CD, cD) {
-        (0, qC.WZ)(new Error("Unrecognised connection loss"), {
-          code: String(DD),
-          cause: null !== CD && void 0 !== CD ? CD : "",
-          ...cD,
+      logUnrecognisedConnectionLoss(UU, RU, gU) {
+        (0, ZR.Kh)(new Error("Unrecognised connection loss"), {
+          code: String(UU),
+          cause: null !== RU && void 0 !== RU ? RU : "",
+          ...gU,
           game: this.gameNameWithVariation,
-          ...(0, PC.j)()
+          ...(0, wR.k)()
         })
       }
     }
   },
-  38369: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => Ec,
-      g: () => Fc
+  38565: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => zg,
+      d: () => Og
     });
-    var ID, pD, iD, fD, bD, QD, wD, SD, BD, yD, MD, tD, ZD, oD, vD, ND, gD, XD, mD, nD, OD, PD, HD, UD, xD, qD, JD, KD, aD, VD, zD, jD, lD, LD, TD, GD, RD, kD, dD, YD, WD, sD, ED, eD, uD, hD, rD, AD, FD, DC, CC, cC, IC, pC, iC, fC, bC, QC, wC, SC, BC, yC, MC, tC, ZC, oC, vC, NC, gC, XC, mC, nC, OC, PC, HC, UC, xC, qC, JC, KC, aC, VC, zC, jC, lC, LC, TC, GC, RC, kC, dC, YC, WC, sC, EC, eC, uC, hC, rC, AC = cD(20),
-      FC = cD(36509),
-      Dc = cD(38382),
-      Cc = cD(38384),
-      cc = cD(8811),
-      Ic = cD(618),
-      pc = cD(613),
-      ic = cD(36139);
-    let fc = (ID = (0, cc.type)("number"), pD = (0, cc.type)("number"), iD = (0, cc.type)("number"), fD = (0, cc.type)("number"), bD = (0, cc.type)("number"), QD = (0, cc.type)("number"), wD = (0, cc.type)("string"), SD = class extends cc.Schema {
+    var tU, pU, EU, PU, TU, qU, KU, cU, GU, jU, uU, CU, hU, QU, eU, WU, fU, xU, mU, IU, JU, wU, nU, bU, oU, ZU, aU, YU, BU, VU, rU, XU, vU, dU, HU, SU, sU, yU, kU, FU, iU, AU, zU, MU, DU, LU, NU, lU, OU, UR, RR, gR, tR, pR, ER, PR, TR, qR, KR, cR, GR, jR, uR, CR, hR, QR, eR, WR, fR, xR, mR, IR, JR, wR, nR, bR, oR, ZR, aR, YR, BR, VR, rR, XR, vR, dR, HR, SR, sR, yR, kR, FR, iR, AR, zR, MR, DR, LR, NR, lR = gU(24),
+      OR = gU(36658),
+      Ug = gU(38578),
+      Rg = gU(38584),
+      gg = gU(8742),
+      tg = gU(572),
+      pg = gU(567),
+      Eg = gU(36324);
+    let Pg = (tU = (0, gg.type)("number"), pU = (0, gg.type)("number"), EU = (0, gg.type)("number"), PU = (0, gg.type)("number"), TU = (0, gg.type)("number"), qU = (0, gg.type)("number"), KU = (0, gg.type)("string"), cU = class extends gg.Schema {
         constructor() {
-          super(...arguments), (0, Dc.c)(this, "id", BD, this), (0, Dc.c)(this, "amount", yD, this), (0, Dc.c)(this, "x", MD, this), (0, Dc.c)(this, "y", tD, this), (0, Dc.c)(this, "z", ZD, this), (0, Dc.c)(this, "size", oD, this), (0, Dc.c)(this, "attributes", vD, this)
+          super(...arguments), (0, Ug.d)(this, "id", GU, this), (0, Ug.d)(this, "amount", jU, this), (0, Ug.d)(this, "x", uU, this), (0, Ug.d)(this, "y", CU, this), (0, Ug.d)(this, "z", hU, this), (0, Ug.d)(this, "size", QU, this), (0, Ug.d)(this, "attributes", eU, this)
         }
-      }, BD = (0, Cc.d)(SD.prototype, "id", [ID], {
+      }, GU = (0, Rg.c)(cU.prototype, "id", [tU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), yD = (0, Cc.d)(SD.prototype, "amount", [pD], {
+      }), jU = (0, Rg.c)(cU.prototype, "amount", [pU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), MD = (0, Cc.d)(SD.prototype, "x", [iD], {
+      }), uU = (0, Rg.c)(cU.prototype, "x", [EU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), tD = (0, Cc.d)(SD.prototype, "y", [fD], {
+      }), CU = (0, Rg.c)(cU.prototype, "y", [PU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), ZD = (0, Cc.d)(SD.prototype, "z", [bD], {
+      }), hU = (0, Rg.c)(cU.prototype, "z", [TU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), oD = (0, Cc.d)(SD.prototype, "size", [QD], {
+      }), QU = (0, Rg.c)(cU.prototype, "size", [qU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 1
         }
-      }), vD = (0, Cc.d)(SD.prototype, "attributes", [wD], {
+      }), eU = (0, Rg.c)(cU.prototype, "attributes", [KU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return "{}"
         }
-      }), SD),
-      bc = (ND = (0, cc.type)("string"), gD = (0, cc.type)("string"), XD = class extends cc.Schema {
+      }), cU),
+      Tg = (WU = (0, gg.type)("string"), fU = (0, gg.type)("string"), xU = class extends gg.Schema {
         constructor() {
-          super(...arguments), (0, Dc.c)(this, "itemName", mD, this), (0, Dc.c)(this, "enchantmentTier", nD, this)
+          super(...arguments), (0, Ug.d)(this, "itemName", mU, this), (0, Ug.d)(this, "enchantmentTier", IU, this)
         }
-      }, mD = (0, Cc.d)(XD.prototype, "itemName", [ND], {
+      }, mU = (0, Rg.c)(xU.prototype, "itemName", [WU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), nD = (0, Cc.d)(XD.prototype, "enchantmentTier", [gD], {
+      }), IU = (0, Rg.c)(xU.prototype, "enchantmentTier", [fU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), XD),
-      Qc = (OD = (0, cc.type)("string"), PD = (0, cc.type)("string"), HD = (0, cc.type)("number"), UD = (0, cc.type)("number"), xD = (0, cc.type)("number"), qD = (0, cc.type)("float32"), JD = (0, cc.type)("float32"), KD = (0, cc.type)("float32"), aD = (0, cc.type)("string"), VD = (0, cc.type)(["number"]), zD = (0, cc.type)("boolean"), jD = class extends cc.Schema {
+      }), xU),
+      qg = (JU = (0, gg.type)("string"), wU = (0, gg.type)("string"), nU = (0, gg.type)("number"), bU = (0, gg.type)("number"), oU = (0, gg.type)("number"), ZU = (0, gg.type)("float32"), aU = (0, gg.type)("float32"), YU = (0, gg.type)("float32"), BU = (0, gg.type)("string"), VU = (0, gg.type)(["number"]), rU = (0, gg.type)("boolean"), XU = class extends gg.Schema {
         constructor() {
-          super(...arguments), (0, Dc.c)(this, "type", lD, this), (0, Dc.c)(this, "name", LD, this), (0, Dc.c)(this, "x", TD, this), (0, Dc.c)(this, "y", GD, this), (0, Dc.c)(this, "z", RD, this), (0, Dc.c)(this, "xRotation", kD, this), (0, Dc.c)(this, "yRotation", dD, this), (0, Dc.c)(this, "zRotation", YD, this), (0, Dc.c)(this, "followingEId", WD, this), (0, Dc.c)(this, "followingOffset", sD, this), (0, Dc.c)(this, "shouldMatchFollowingEntityRotation", ED, this)
+          super(...arguments), (0, Ug.d)(this, "type", vU, this), (0, Ug.d)(this, "name", dU, this), (0, Ug.d)(this, "x", HU, this), (0, Ug.d)(this, "y", SU, this), (0, Ug.d)(this, "z", sU, this), (0, Ug.d)(this, "xRotation", yU, this), (0, Ug.d)(this, "yRotation", kU, this), (0, Ug.d)(this, "zRotation", FU, this), (0, Ug.d)(this, "followingEId", iU, this), (0, Ug.d)(this, "followingOffset", AU, this), (0, Ug.d)(this, "shouldMatchFollowingEntityRotation", zU, this)
         }
-      }, lD = (0, Cc.d)(jD.prototype, "type", [OD], {
+      }, vU = (0, Rg.c)(XU.prototype, "type", [JU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), LD = (0, Cc.d)(jD.prototype, "name", [PD], {
+      }), dU = (0, Rg.c)(XU.prototype, "name", [wU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return ""
         }
-      }), TD = (0, Cc.d)(jD.prototype, "x", [HD], {
+      }), HU = (0, Rg.c)(XU.prototype, "x", [nU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), GD = (0, Cc.d)(jD.prototype, "y", [UD], {
+      }), SU = (0, Rg.c)(XU.prototype, "y", [bU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), RD = (0, Cc.d)(jD.prototype, "z", [xD], {
+      }), sU = (0, Rg.c)(XU.prototype, "z", [oU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), kD = (0, Cc.d)(jD.prototype, "xRotation", [qD], {
+      }), yU = (0, Rg.c)(XU.prototype, "xRotation", [ZU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), dD = (0, Cc.d)(jD.prototype, "yRotation", [JD], {
+      }), kU = (0, Rg.c)(XU.prototype, "yRotation", [aU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), YD = (0, Cc.d)(jD.prototype, "zRotation", [KD], {
+      }), FU = (0, Rg.c)(XU.prototype, "zRotation", [YU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), WD = (0, Cc.d)(jD.prototype, "followingEId", [aD], {
+      }), iU = (0, Rg.c)(XU.prototype, "followingEId", [BU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), sD = (0, Cc.d)(jD.prototype, "followingOffset", [VD], {
+      }), AU = (0, Rg.c)(XU.prototype, "followingOffset", [VU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
-          return new cc.ArraySchema(0, 0, 0)
+          return new gg.ArraySchema(0, 0, 0)
         }
-      }), ED = (0, Cc.d)(jD.prototype, "shouldMatchFollowingEntityRotation", [zD], {
+      }), zU = (0, Rg.c)(XU.prototype, "shouldMatchFollowingEntityRotation", [rU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return !0
         }
-      }), jD),
-      wc = (eD = (0, cc.type)("float32"), uD = (0, cc.type)("float32"), hD = (0, cc.type)("boolean"), rD = (0, cc.type)("boolean"), AD = (0, cc.type)("float32"), FD = (0, cc.type)("boolean"), DC = (0, cc.type)("string"), CC = (0, cc.type)("string"), cC = (0, cc.type)("string"), IC = (0, cc.type)("string"), pC = (0, cc.type)(["number"]), iC = (0, cc.type)("number"), fC = (0, cc.type)({
-        map: bc
-      }), bC = class extends Qc {
+      }), XU),
+      Kg = (MU = (0, gg.type)("float32"), DU = (0, gg.type)("float32"), LU = (0, gg.type)("boolean"), NU = (0, gg.type)("boolean"), lU = (0, gg.type)("float32"), OU = (0, gg.type)("boolean"), UR = (0, gg.type)("string"), RR = (0, gg.type)("string"), gR = (0, gg.type)("string"), tR = (0, gg.type)("string"), pR = (0, gg.type)(["number"]), ER = (0, gg.type)("number"), PR = (0, gg.type)({
+        map: Tg
+      }), TR = class extends qg {
         constructor() {
-          super(...arguments), (0, Dc.c)(this, "scale", QC, this), (0, Dc.c)(this, "speed", wC, this), (0, Dc.c)(this, "jumping", SC, this), (0, Dc.c)(this, "crouching", BC, this), (0, Dc.c)(this, "cameraPitch", yC, this), (0, Dc.c)(this, "armSwinging", MC, this), (0, Dc.c)(this, "heldItemName", tC, this), (0, Dc.c)(this, "heldItemEnchantmentTier", ZC, this), (0, Dc.c)(this, "pose", oC, this), (0, Dc.c)(this, "ridingVehicleEId", vC, this), (0, Dc.c)(this, "meshOffset", NC, this), (0, Dc.c)(this, "baseRenderHeading", gC, this), (0, Dc.c)(this, "armour", XC, this)
+          super(...arguments), (0, Ug.d)(this, "scale", qR, this), (0, Ug.d)(this, "speed", KR, this), (0, Ug.d)(this, "jumping", cR, this), (0, Ug.d)(this, "crouching", GR, this), (0, Ug.d)(this, "cameraPitch", jR, this), (0, Ug.d)(this, "armSwinging", uR, this), (0, Ug.d)(this, "heldItemName", CR, this), (0, Ug.d)(this, "heldItemEnchantmentTier", hR, this), (0, Ug.d)(this, "pose", QR, this), (0, Ug.d)(this, "ridingVehicleEId", eR, this), (0, Ug.d)(this, "meshOffset", WR, this), (0, Ug.d)(this, "baseRenderHeading", fR, this), (0, Ug.d)(this, "armour", xR, this)
         }
-      }, QC = (0, Cc.d)(bC.prototype, "scale", [eD], {
+      }, qR = (0, Rg.c)(TR.prototype, "scale", [MU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 1
         }
-      }), wC = (0, Cc.d)(bC.prototype, "speed", [uD], {
+      }), KR = (0, Rg.c)(TR.prototype, "speed", [DU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), SC = (0, Cc.d)(bC.prototype, "jumping", [hD], {
+      }), cR = (0, Rg.c)(TR.prototype, "jumping", [LU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return !1
         }
-      }), BC = (0, Cc.d)(bC.prototype, "crouching", [rD], {
+      }), GR = (0, Rg.c)(TR.prototype, "crouching", [NU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return !1
         }
-      }), yC = (0, Cc.d)(bC.prototype, "cameraPitch", [AD], {
+      }), jR = (0, Rg.c)(TR.prototype, "cameraPitch", [lU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), MC = (0, Cc.d)(bC.prototype, "armSwinging", [FD], {
+      }), uR = (0, Rg.c)(TR.prototype, "armSwinging", [OU], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return !1
         }
-      }), tC = (0, Cc.d)(bC.prototype, "heldItemName", [DC], {
+      }), CR = (0, Rg.c)(TR.prototype, "heldItemName", [UR], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), ZC = (0, Cc.d)(bC.prototype, "heldItemEnchantmentTier", [CC], {
+      }), hR = (0, Rg.c)(TR.prototype, "heldItemEnchantmentTier", [RR], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), oC = (0, Cc.d)(bC.prototype, "pose", [cC], {
+      }), QR = (0, Rg.c)(TR.prototype, "pose", [gR], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return "standing"
         }
-      }), vC = (0, Cc.d)(bC.prototype, "ridingVehicleEId", [IC], {
+      }), eR = (0, Rg.c)(TR.prototype, "ridingVehicleEId", [tR], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return null
         }
-      }), NC = (0, Cc.d)(bC.prototype, "meshOffset", [pC], {
+      }), WR = (0, Rg.c)(TR.prototype, "meshOffset", [pR], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
-          return new cc.ArraySchema(0, 0, 0)
+          return new gg.ArraySchema(0, 0, 0)
         }
-      }), gC = (0, Cc.d)(bC.prototype, "baseRenderHeading", [iC], {
+      }), fR = (0, Rg.c)(TR.prototype, "baseRenderHeading", [ER], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), XC = (0, Cc.d)(bC.prototype, "armour", [fC], {
+      }), xR = (0, Rg.c)(TR.prototype, "armour", [PR], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
-          return new cc.MapSchema
+          return new gg.MapSchema
         }
-      }), bC),
-      Sc = (mC = (0, cc.type)("string"), nC = (0, cc.type)("string"), OC = (0, cc.type)("string"), PC = (0, cc.type)("uint8"), HC = class extends wc {
+      }), TR),
+      cg = (mR = (0, gg.type)("string"), IR = (0, gg.type)("string"), JR = (0, gg.type)("string"), wR = (0, gg.type)("uint8"), nR = class extends Kg {
         constructor() {
-          super(...arguments), (0, Dc.c)(this, "variation", UC, this), (0, Dc.c)(this, "ownerDbId", xC, this), (0, Dc.c)(this, "metaInfo", qC, this), (0, Dc.c)(this, "aiState", JC, this)
+          super(...arguments), (0, Ug.d)(this, "variation", bR, this), (0, Ug.d)(this, "ownerDbId", oR, this), (0, Ug.d)(this, "metaInfo", ZR, this), (0, Ug.d)(this, "aiState", aR, this)
         }
-      }, UC = (0, Cc.d)(HC.prototype, "variation", [mC], {
+      }, bR = (0, Rg.c)(nR.prototype, "variation", [mR], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return "default"
         }
-      }), xC = (0, Cc.d)(HC.prototype, "ownerDbId", [nC], {
+      }), oR = (0, Rg.c)(nR.prototype, "ownerDbId", [IR], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return null
         }
-      }), qC = (0, Cc.d)(HC.prototype, "metaInfo", [OC], {
+      }), ZR = (0, Rg.c)(nR.prototype, "metaInfo", [JR], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return ""
         }
-      }), JC = (0, Cc.d)(HC.prototype, "aiState", [PC], {
+      }), aR = (0, Rg.c)(nR.prototype, "aiState", [wR], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), HC);
-    KC = (0, cc.type)("string"), aC = (0, cc.type)("string"), VC = (0, cc.type)("string"), zC = (0, cc.type)("string"), jC = class extends Qc {
+      }), nR);
+    YR = (0, gg.type)("string"), BR = (0, gg.type)("string"), VR = (0, gg.type)("string"), rR = (0, gg.type)("string"), XR = class extends qg {
       constructor() {
-        super(...arguments), (0, Dc.c)(this, "meshKind", lC, this), (0, Dc.c)(this, "meshOpts", LC, this), (0, Dc.c)(this, "pose", TC, this), (0, Dc.c)(this, "leaderboardTop", GC, this)
+        super(...arguments), (0, Ug.d)(this, "meshKind", vR, this), (0, Ug.d)(this, "meshOpts", dR, this), (0, Ug.d)(this, "pose", HR, this), (0, Ug.d)(this, "leaderboardTop", SR, this)
       }
-    }, lC = (0, Cc.d)(jC.prototype, "meshKind", [KC], {
+    }, vR = (0, Rg.c)(XR.prototype, "meshKind", [YR], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: null
-    }), LC = (0, Cc.d)(jC.prototype, "meshOpts", [aC], {
+    }), dR = (0, Rg.c)(XR.prototype, "meshOpts", [BR], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: null
-    }), TC = (0, Cc.d)(jC.prototype, "pose", [VC], {
+    }), HR = (0, Rg.c)(XR.prototype, "pose", [VR], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: null
-    }), GC = (0, Cc.d)(jC.prototype, "leaderboardTop", [zC], {
+    }), SR = (0, Rg.c)(XR.prototype, "leaderboardTop", [rR], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: null
     });
 
-    function Bc(DD) {
-      return Object.keys(cc.Metadata.getFields(DD))
+    function Gg(UU) {
+      return Object.keys(gg.Metadata.getFields(UU))
     }
-    const yc = Bc(Sc);
-    for (const DI of Ic.u)
-      if (!yc.includes(DI)) throw new Error(`Mob Schema is missing a networked property: "${DI}"`);
-    const Mc = Bc((RC = (0, cc.type)("string"), kC = (0, cc.type)("float32"), dC = (0, cc.type)("float32"), YC = (0, cc.type)("float32"), WC = (0, cc.type)("float32"), sC = class extends Qc {
+    const jg = Gg(cg);
+    for (const Ut of tg.o)
+      if (!jg.includes(Ut)) throw new Error(`Mob Schema is missing a networked property: "${Ut}"`);
+    const ug = Gg((sR = (0, gg.type)("string"), yR = (0, gg.type)("float32"), kR = (0, gg.type)("float32"), FR = (0, gg.type)("float32"), iR = (0, gg.type)("float32"), AR = class extends qg {
       constructor() {
-        super(...arguments), (0, Dc.c)(this, "soundName", EC, this), (0, Dc.c)(this, "volume", eC, this), (0, Dc.c)(this, "refDistance", uC, this), (0, Dc.c)(this, "maxHearDist", hC, this), (0, Dc.c)(this, "rate", rC, this)
+        super(...arguments), (0, Ug.d)(this, "soundName", zR, this), (0, Ug.d)(this, "volume", MR, this), (0, Ug.d)(this, "refDistance", DR, this), (0, Ug.d)(this, "maxHearDist", LR, this), (0, Ug.d)(this, "rate", NR, this)
       }
-    }, EC = (0, Cc.d)(sC.prototype, "soundName", [RC], {
+    }, zR = (0, Rg.c)(AR.prototype, "soundName", [sR], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
         return ""
       }
-    }), eC = (0, Cc.d)(sC.prototype, "volume", [kC], {
+    }), MR = (0, Rg.c)(AR.prototype, "volume", [yR], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
         return 1
       }
-    }), uC = (0, Cc.d)(sC.prototype, "refDistance", [dC], {
+    }), DR = (0, Rg.c)(AR.prototype, "refDistance", [kR], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
-        return ic.h
+        return Eg.e
       }
-    }), hC = (0, Cc.d)(sC.prototype, "maxHearDist", [YC], {
+    }), LR = (0, Rg.c)(AR.prototype, "maxHearDist", [FR], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
-        return ic.c
+        return Eg.b
       }
-    }), rC = (0, Cc.d)(sC.prototype, "rate", [WC], {
+    }), NR = (0, Rg.c)(AR.prototype, "rate", [iR], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
         return 1
       }
-    }), sC));
-    for (const DI of pc.h)
-      if (!Mc.includes(DI)) throw new Error(`AudioEntity Schema is missing a replicated property: "${DI}"`);
-    var tc = cD(37813),
-      Zc = cD(1240),
-      oc = cD(624),
-      vc = cD(37581),
-      Nc = cD(4081),
-      gc = cD(326),
-      Xc = cD(36613),
-      mc = cD(37481),
-      nc = cD(2192),
-      Oc = cD(36591),
-      Pc = cD(37837),
-      Hc = cD(36730),
-      Uc = cD(335),
-      xc = cD.n(Uc),
-      qc = cD(37321),
-      Jc = cD(36429),
-      Kc = cD(37464),
-      ac = cD(37494);
-    class Vc {
-      constructor(DD, CD) {
-        this.bloxd = DD, this.eId = CD, this.ny = void 0, this.colyseusEntity = void 0, this.canSeeSub = void 0, this.canAttackSub = void 0, this.interactableSub = void 0, this.overlayColourSub = void 0, this.opacitySub = void 0, this.zIndexSub = void 0, this.multilineTextBoxSub = void 0, this.previousHidingMeshManagerState = void 0, this.meshKind = void 0, this.meshOpts = void 0, this.leaderboardTop = void 0, this.meshRebuildQueued = !1, this.Lt = !1, this.ny = DD.ny
+    }), AR));
+    for (const Ut of pg.j)
+      if (!ug.includes(Ut)) throw new Error(`AudioEntity Schema is missing a replicated property: "${Ut}"`);
+    var Cg = gU(37996),
+      hg = gU(1238),
+      Qg = gU(581),
+      eg = gU(37774),
+      Wg = gU(3937),
+      fg = gU(311),
+      xg = gU(36754),
+      mg = gU(37645),
+      Ig = gU(2053),
+      Jg = gU(36724),
+      wg = gU(38020),
+      ng = gU(36886),
+      bg = gU(316),
+      og = gU.n(bg),
+      Zg = gU(37476),
+      ag = gU(36584),
+      Yg = gU(37618),
+      Bg = gU(37663);
+    class Vg {
+      constructor(UU, RU) {
+        this.bloxd = UU, this.eId = RU, this.LG = void 0, this.colyseusEntity = void 0, this.canSeeSub = void 0, this.canAttackSub = void 0, this.interactableSub = void 0, this.overlayColourSub = void 0, this.opacitySub = void 0, this.zIndexSub = void 0, this.multilineTextBoxSub = void 0, this.previousHidingMeshManagerState = void 0, this.meshKind = void 0, this.meshOpts = void 0, this.leaderboardTop = void 0, this.meshRebuildQueued = !1, this.pC = !1, this.LG = UU.LG
       }
-      initClient(DD) {
-        var CD, cD, ID;
-        this.colyseusEntity = DD, this.meshKind = DD.meshKind, this.meshOpts = DD.meshOpts, this.leaderboardTop = DD.leaderboardTop, this.ny.Km.add([DD.x, DD.y, DD.z], 1, 1, null, null, !1, !1, this.eId), this.ny.Km.gJ(this.eId, "smoothToServerPos");
-        const pD = "Person" === this.meshKind;
-        this.ny.Km.gJ(this.eId, "meshRotation", {
+      initClient(UU) {
+        var RU, gU, tU;
+        this.colyseusEntity = UU, this.meshKind = UU.meshKind, this.meshOpts = UU.meshOpts, this.leaderboardTop = UU.leaderboardTop, this.LG.Im.add([UU.x, UU.y, UU.z], 1, 1, null, null, !1, !1, this.eId), this.LG.Im.JY(this.eId, "smoothToServerPos");
+        const pU = "Person" === this.meshKind;
+        this.LG.Im.JY(this.eId, "meshRotation", {
           isServerControlled: !0,
-          ...pD ? {
+          ...pU ? {
             defaultRotationsPerSecond: .5
           } : {},
-          childrenNodeParams: pD ? [{
+          childrenNodeParams: pU ? [{
             nodeName: "HeadMesh",
-            softTolerance: Pc.l,
+            softTolerance: wg.l,
             hardTolerance: null
           }] : []
-        }), this.updateHidingMeshMgr(), this.canSeeSub = AC.i.subscribe(`otherEntitySettings|${this.eId}|canSee`, (DD => {
+        }), this.updateHidingMeshMgr(), this.canSeeSub = lR.p.subscribe(`otherEntitySettings|${this.eId}|canSee`, (UU => {
           this.updateHidingMeshMgr()
         }));
-        const iD = () => {
-          const DD = this.ny.Km.mDD(this.eId);
-          if (!DD) return;
-          const CD = (0, Hc.m)(this.eId);
-          if ("number" === typeof DD.bJ) {
-            var cD, ID, pD, iD;
-            const fD = null === (cD = (0, nc.k)("head", null === (pD = this.getSpec()) || void 0 === pD || null === (iD = pD.opts.textures) || void 0 === iD ? void 0 : iD.head)) || void 0 === cD || null === (ID = cD.personModel) || void 0 === ID ? void 0 : ID.fullBody;
-            return this.ny.XZ.iJ.setPickable(DD.bJ, CD && !fD), void(0, Jc.updatePersonAttachmentPickability)(this.ny, this.eId, CD)
+        const EU = () => {
+          const UU = this.LG.Im.sUU(this.eId);
+          if (!UU) return;
+          const RU = (0, ng.j)(this.eId);
+          if ("number" === typeof UU.RY) {
+            var gU, tU, pU, EU;
+            const PU = null === (gU = (0, Ig.j)("head", null === (pU = this.getSpec()) || void 0 === pU || null === (EU = pU.opts.textures) || void 0 === EU ? void 0 : EU.head)) || void 0 === gU || null === (tU = gU.personModel) || void 0 === tU ? void 0 : tU.fullBody;
+            return this.LG.SC.iZ.setPickable(UU.RY, RU && !PU), void(0, ag.updatePersonAttachmentPickability)(this.LG, this.eId, RU)
           }
-          const fD = DD.mesh;
-          if (fD)
-            for (const bD of [fD, ...fD.getChildMeshes(!1)]) "yo" in bD && !bD.name.startsWith("Cape|") && (bD.yo = CD)
+          const PU = UU.mesh;
+          if (PU)
+            for (const TU of [PU, ...PU.getChildMeshes(!1)]) "Yh" in TU && !TU.name.startsWith("Cape|") && (TU.Yh = RU)
         };
-        this.canAttackSub = AC.i.subscribe(`otherEntitySettings|${this.eId}|canAttack`, iD), this.interactableSub = AC.i.subscribe(`otherEntitySettings|${this.eId}|interactable`, iD), this.overlayColourSub = AC.i.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|overlayColour`, (DD => {
-          this.updateOverlayColour(DD)
-        })), this.opacitySub = AC.i.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|opacity`, (DD => {
-          this.updateOpacity(DD)
-        })), this.zIndexSub = AC.i.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|zIndex`, (DD => {
-          this.updateZIndex(DD)
+        this.canAttackSub = lR.p.subscribe(`otherEntitySettings|${this.eId}|canAttack`, EU), this.interactableSub = lR.p.subscribe(`otherEntitySettings|${this.eId}|interactable`, EU), this.overlayColourSub = lR.p.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|overlayColour`, (UU => {
+          this.updateOverlayColour(UU)
+        })), this.opacitySub = lR.p.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|opacity`, (UU => {
+          this.updateOpacity(UU)
+        })), this.zIndexSub = lR.p.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|zIndex`, (UU => {
+          this.updateZIndex(UU)
         }));
-        const fD = this.ny.KJ[this.ny.aJ][this.eId];
-        this.updateOverlayColour(null !== (CD = null === fD || void 0 === fD ? void 0 : fD.overlayColour) && void 0 !== CD ? CD : null), this.updateOpacity(null !== (cD = null === fD || void 0 === fD ? void 0 : fD.opacity) && void 0 !== cD ? cD : 1), this.updateZIndex(null !== (ID = null === fD || void 0 === fD ? void 0 : fD.zIndex) && void 0 !== ID ? ID : 0), this.multilineTextBoxSub = (0, Oc.w)(this.ny, this.eId)
+        const PU = this.LG.FY[this.LG.AY][this.eId];
+        this.updateOverlayColour(null !== (RU = null === PU || void 0 === PU ? void 0 : PU.overlayColour) && void 0 !== RU ? RU : null), this.updateOpacity(null !== (gU = null === PU || void 0 === PU ? void 0 : PU.opacity) && void 0 !== gU ? gU : 1), this.updateZIndex(null !== (tU = null === PU || void 0 === PU ? void 0 : PU.zIndex) && void 0 !== tU ? tU : 0), this.multilineTextBoxSub = (0, Jg.r)(this.LG, this.eId)
       }
-      onChangeClient(DD, CD) {
-        if ("xRotation" === DD || "yRotation" === DD || "zRotation" === DD)(0, Oc.z)(this.ny, this.eId, DD, CD);
-        else if ("pose" === DD) {
-          const DD = this.ny.Km.qDD(this.eId);
-          DD && (DD.pose = CD || "standing")
-        } else "meshKind" === DD || "meshOpts" === DD ? (this[DD] = CD, this.queueMeshRebuild()) : "name" === DD && "" !== CD ? this.updateHidingMeshMgr() : "leaderboardTop" === DD && (this.leaderboardTop = CD, AC.i.Uo(`leaderboardTop|${this.eId}`, CD))
+      onChangeClient(UU, RU) {
+        if ("xRotation" === UU || "yRotation" === UU || "zRotation" === UU)(0, Jg.v)(this.LG, this.eId, UU, RU);
+        else if ("pose" === UU) {
+          const UU = this.LG.Im.MUU(this.eId);
+          UU && (UU.pose = RU || "standing")
+        } else "meshKind" === UU || "meshOpts" === UU ? (this[UU] = RU, this.queueMeshRebuild()) : "name" === UU && "" !== RU ? this.updateHidingMeshMgr() : "leaderboardTop" === UU && (this.leaderboardTop = RU, lR.p.yh(`leaderboardTop|${this.eId}`, RU))
       }
       disposeClient() {
-        this.Lt = !0, this.ny.Km.deleteEntity(this.eId), AC.i.unsubscribe(this.canSeeSub), AC.i.unsubscribe(this.canAttackSub), AC.i.unsubscribe(this.interactableSub), AC.i.unsubscribe(this.overlayColourSub), AC.i.unsubscribe(this.opacitySub), AC.i.unsubscribe(this.zIndexSub), AC.i.unsubscribe(this.multilineTextBoxSub)
+        this.pC = !0, this.LG.Im.deleteEntity(this.eId), lR.p.unsubscribe(this.canSeeSub), lR.p.unsubscribe(this.canAttackSub), lR.p.unsubscribe(this.interactableSub), lR.p.unsubscribe(this.overlayColourSub), lR.p.unsubscribe(this.opacitySub), lR.p.unsubscribe(this.zIndexSub), lR.p.unsubscribe(this.multilineTextBoxSub)
       }
       getCurrentHidingMeshMgrState() {
-        var DD, CD;
+        var UU, RU;
         return {
-          canSee: null !== (DD = null === (CD = this.ny.KJ[this.ny.aJ][this.eId]) || void 0 === CD ? void 0 : CD.canSee) && void 0 !== DD && DD,
+          canSee: null !== (UU = null === (RU = this.LG.FY[this.LG.AY][this.eId]) || void 0 === RU ? void 0 : RU.canSee) && void 0 !== UU && UU,
           name: this.colyseusEntity.name,
           meshKind: this.meshKind,
           meshOpts: this.meshOpts
         }
       }
       updateHidingMeshMgr() {
-        var DD, CD, cD;
+        var UU, RU, gU;
         const {
-          ny: ID
+          LG: tU
         } = this, {
-          Km: pD
-        } = ID, iD = this.getCurrentHidingMeshMgrState();
-        if ((0, gc.Xd)(this.previousHidingMeshManagerState, iD)) return;
-        if (this.previousHidingMeshManagerState = iD, pD.mJ(this.eId, "hidingMeshManager"), null === (DD = ID.KJ[ID.aJ][this.eId]) || void 0 === DD || !DD.canSee) return;
-        const fD = this.getSpec();
-        if (!fD) return;
+          Im: pU
+        } = tU, EU = this.getCurrentHidingMeshMgrState();
+        if ((0, fg.re)(this.previousHidingMeshManagerState, EU)) return;
+        if (this.previousHidingMeshManagerState = EU, pU.bY(this.eId, "hidingMeshManager"), null === (UU = tU.FY[tU.AY][this.eId]) || void 0 === UU || !UU.canSee) return;
+        const PU = this.getSpec();
+        if (!PU) return;
         const {
-          type: bD,
-          opts: QD
-        } = fD;
-        "Person" === bD && (QD.textures = (0, nc.p)(QD.textures)), QD.eId = this.eId, pD.gJ(this.eId, "hidingMeshManager", {
+          type: TU,
+          opts: qU
+        } = PU;
+        "Person" === TU && (qU.textures = (0, Ig.p)(qU.textures)), qU.eId = this.eId, pU.JY(this.eId, "hidingMeshManager", {
           addMeshComponent: () => {
-            var DD, CD, cD;
-            "Leaderboard" === bD && (QD.leaderboardTop = this.leaderboardTop);
-            const iD = this.bloxd.client.meshCreator.getEntityMesh(bD, QD, (DD => {
-              var CD, cD;
-              if ("number" === typeof DD) {
-                var pD, iD, fD;
-                const CD = ID.XZ.iJ;
-                CD.setEntityId(DD, this.eId);
-                const cD = "Person" === bD && (null === (pD = (0, nc.k)("head", null === (fD = QD.textures) || void 0 === fD ? void 0 : fD.head)) || void 0 === pD || null === (iD = pD.personModel) || void 0 === iD ? void 0 : iD.fullBody);
-                return void CD.setPickable(DD, (0, Hc.m)(this.eId) && !cD)
+            var UU, RU, gU;
+            "Leaderboard" === TU && (qU.leaderboardTop = this.leaderboardTop);
+            const EU = this.bloxd.client.meshCreator.getEntityMesh(TU, qU, (UU => {
+              var RU, gU;
+              if ("number" === typeof UU) {
+                var pU, EU, PU;
+                const RU = tU.SC.iZ;
+                RU.setEntityId(UU, this.eId);
+                const gU = "Person" === TU && (null === (pU = (0, Ig.j)("head", null === (PU = qU.textures) || void 0 === PU ? void 0 : PU.head)) || void 0 === pU || null === (EU = pU.personModel) || void 0 === EU ? void 0 : EU.fullBody);
+                return void RU.setPickable(UU, (0, ng.j)(this.eId) && !gU)
               }
-              const wD = DD;
-              for (const bD of [wD, ...wD.getChildMeshes(!1)]) void 0 === bD.yo || bD.name.startsWith("Cape|") || (bD.yo = (0, Hc.m)(this.eId), bD.metadata ??= new ID.XZ.Mo, bD.metadata.eId = this.eId);
-              this.updateOpacity(null !== (CD = null === (cD = ID.KJ[ID.aJ][this.eId]) || void 0 === cD ? void 0 : cD.opacity) && void 0 !== CD ? CD : 1)
+              const KU = UU;
+              for (const TU of [KU, ...KU.getChildMeshes(!1)]) void 0 === TU.Yh || TU.name.startsWith("Cape|") || (TU.Yh = (0, ng.j)(this.eId), TU.metadata ??= new tU.SC.Bh, TU.metadata.eId = this.eId);
+              this.updateOpacity(null !== (RU = null === (gU = tU.FY[tU.AY][this.eId]) || void 0 === gU ? void 0 : gU.opacity) && void 0 !== RU ? RU : 1)
             }));
-            if (!iD) return;
+            if (!EU) return;
             const {
-              bJ: fD,
-              mesh: wD,
-              meshOffset: SD,
-              nameYOffset: BD,
-              modelLoaded: yD
-            } = iD;
-            null === yD || void 0 === yD || yD.then((() => {
-              var DD;
-              (null === (DD = pD.mDD(this.eId)) || void 0 === DD ? void 0 : DD.mesh) === wD && (this.previousHidingMeshManagerState = null, this.updateHidingMeshMgr())
+              RY: PU,
+              mesh: KU,
+              meshOffset: cU,
+              nameYOffset: GU,
+              modelLoaded: jU
+            } = EU;
+            null === jU || void 0 === jU || jU.then((() => {
+              var UU;
+              (null === (UU = pU.sUU(this.eId)) || void 0 === UU ? void 0 : UU.mesh) === KU && (this.previousHidingMeshManagerState = null, this.updateHidingMeshMgr())
             }));
-            const MD = null === fD ? null : ID.XZ.iJ.NcD(fD, 0);
-            if (pD.gJ(this.eId, pD.names.mesh, {
-                bJ: fD,
-                kCD: MD,
-                mesh: wD,
-                PfD: !1,
-                WCD: "Leaderboard" !== bD,
-                offset: SD.slice(),
-                OfD: "ParticleEmitter" === bD && QD.followTargetMeshOffset ? DD => {
-                  var CD;
-                  xc().copy(DD, SD);
-                  const cD = null === (CD = pD.ZCD(this.eId)) || void 0 === CD ? void 0 : CD.qt,
-                    ID = void 0 === cD ? null : pD.qDD(cD);
-                  if (ID) {
-                    var iD, fD;
-                    const CD = this.bloxd.getEntityHeading(null !== (iD = ID.ridingVehicleEId) && void 0 !== iD ? iD : cD, !0),
-                      pD = Math.sin(CD),
-                      bD = Math.cos(CD);
-                    DD[0] += ID.meshOffset[0] * bD + ID.meshOffset[2] * pD, DD[1] += ID.meshOffset[1], DD[2] += ID.meshOffset[2] * bD - ID.meshOffset[0] * pD;
-                    const QD = null !== (fD = ID.ridingVehicleEId) && void 0 !== fD ? fD : null;
-                    null !== QD && (0, ac.c)(this.ny, QD, DD)
+            const uU = null === PU ? null : tU.SC.iZ.rgU(PU, 0);
+            if (pU.JY(this.eId, pU.names.mesh, {
+                RY: PU,
+                pgU: uU,
+                mesh: KU,
+                oPU: !1,
+                TgU: "Leaderboard" !== TU,
+                offset: cU.slice(),
+                bPU: "ParticleEmitter" === TU && qU.followTargetMeshOffset ? UU => {
+                  var RU;
+                  og().copy(UU, cU);
+                  const gU = null === (RU = pU.rRU(this.eId)) || void 0 === RU ? void 0 : RU.Nu,
+                    tU = void 0 === gU ? null : pU.MUU(gU);
+                  if (tU) {
+                    var EU, PU;
+                    const RU = this.bloxd.getEntityHeading(null !== (EU = tU.ridingVehicleEId) && void 0 !== EU ? EU : gU, !0),
+                      pU = Math.sin(RU),
+                      TU = Math.cos(RU);
+                    UU[0] += tU.meshOffset[0] * TU + tU.meshOffset[2] * pU, UU[1] += tU.meshOffset[1], UU[2] += tU.meshOffset[2] * TU - tU.meshOffset[0] * pU;
+                    const qU = null !== (PU = tU.ridingVehicleEId) && void 0 !== PU ? PU : null;
+                    null !== qU && (0, Bg.e)(this.LG, qU, UU)
                   }
                 } : null
-              }), "Person" === bD) {
-              var tD, ZD, oD, vD;
-              pD.gJ(this.eId, pD.names.meshAttachments, {
-                personFullBody: null !== (tD = null === (ZD = (0, nc.k)("head", null === (vD = QD.textures) || void 0 === vD ? void 0 : vD.head)) || void 0 === ZD || null === (oD = ZD.personModel) || void 0 === oD ? void 0 : oD.fullBody) && void 0 !== tD && tD
+              }), "Person" === TU) {
+              var CU, hU, QU, eU;
+              pU.JY(this.eId, pU.names.meshAttachments, {
+                personFullBody: null !== (CU = null === (hU = (0, Ig.j)("head", null === (eU = qU.textures) || void 0 === eU ? void 0 : eU.head)) || void 0 === hU || null === (QU = hU.personModel) || void 0 === QU ? void 0 : QU.fullBody) && void 0 !== CU && CU
               });
-              for (const DD of Zc.u) {
-                var ND, gD, XD;
-                const CD = null === (ND = QD.textures) || void 0 === ND ? void 0 : ND[DD];
-                CD && null !== (gD = (0, nc.k)(DD, CD)) && void 0 !== gD && null !== (XD = gD.attachments) && void 0 !== XD && XD.length && mc.b.Player.meshApi.updatePlayerCosmetic(this.eId, fD, DD, CD)
+              for (const UU of hg.r) {
+                var WU, fU, xU;
+                const RU = null === (WU = qU.textures) || void 0 === WU ? void 0 : WU[UU];
+                RU && null !== (fU = (0, Ig.j)(UU, RU)) && void 0 !== fU && null !== (xU = fU.attachments) && void 0 !== xU && xU.length && mg.b.Player.meshApi.updatePlayerCosmetic(this.eId, PU, UU, RU)
               }
-              pD.gJ(this.eId, pD.names.moveState), pD.gJ(this.eId, "updateWalkingState", {
-                bJ: fD,
-                kCD: MD,
-                walkingLegSwingDuration: Pc.w
-              }), pD.gJ(this.eId, "humanoidMesh", {
-                bJ: fD,
-                kCD: MD,
+              pU.JY(this.eId, pU.names.moveState), pU.JY(this.eId, "updateWalkingState", {
+                RY: PU,
+                pgU: uU,
+                walkingLegSwingDuration: wg.q
+              }), pU.JY(this.eId, "humanoidMesh", {
+                RY: PU,
+                pgU: uU,
                 heldItemPositionParams: {},
                 maxWalkingAngleOverride: null
-              }), pD.gJ(this.eId, "animator", {
-                bJ: fD,
-                kCD: MD,
+              }), pU.JY(this.eId, "animator", {
+                RY: PU,
+                pgU: uU,
                 modelLifeformType: "Player"
-              }), Kc.i.hasAnimation("Person") && pD.gJ(this.eId, "rigAnimation", {
+              }), Yg.h.hasAnimation("Person") && pU.JY(this.eId, "rigAnimation", {
                 target: "Person",
-                bJ: fD
-              }), pD.qDD(this.eId).pose = this.colyseusEntity.pose || "standing"
-            } else if ("BloxdBlock" === bD && null !== fD) {
-              pD.gJ(this.eId, "animator", {
-                bJ: fD,
-                kCD: MD,
+                RY: PU
+              }), pU.MUU(this.eId).pose = this.colyseusEntity.pose || "standing"
+            } else if ("BloxdBlock" === TU && null !== PU) {
+              pU.JY(this.eId, "animator", {
+                RY: PU,
+                pgU: uU,
                 modelLifeformType: null
               });
-              const DD = (0, vc.p)(QD.blockName);
-              null !== DD && pD.gJ(this.eId, "rigAnimation", {
-                target: DD,
-                bJ: fD
+              const UU = (0, eg.q)(qU.blockName);
+              null !== UU && pU.JY(this.eId, "rigAnimation", {
+                target: UU,
+                RY: PU
               })
             }
-            pD.CbD(this.eId, "entityName", {
+            pU.pTU(this.eId, "entityName", {
               name: this.colyseusEntity.name,
-              nameYOffset: BD
-            }), this.bloxd.setEntityName(this.eId, this.colyseusEntity.name), !0 === QD.autoRotate && (pD.mJ(this.eId, "meshRotation"), pD.gJ(this.eId, "autoRotate"));
+              nameYOffset: GU
+            }), this.bloxd.setEntityName(this.eId, this.colyseusEntity.name), !0 === qU.autoRotate && (pU.bY(this.eId, "meshRotation"), pU.JY(this.eId, "autoRotate"));
             const {
-              lineToEId: mD
-            } = QD;
-            (0, oc.C)(mD) || pD.gJ(this.eId, "lineToEntity", {
-              lineToEId: mD
+              lineToEId: mU
+            } = qU;
+            (0, Qg.E)(mU) || pU.JY(this.eId, "lineToEntity", {
+              lineToEId: mU
             });
-            const nD = ID.KJ[ID.aJ][this.eId];
-            this.updateOverlayColour(null !== (DD = null === nD || void 0 === nD ? void 0 : nD.overlayColour) && void 0 !== DD ? DD : null), this.updateOpacity(null !== (CD = null === nD || void 0 === nD ? void 0 : nD.opacity) && void 0 !== CD ? CD : 1), this.updateZIndex(null !== (cD = null === nD || void 0 === nD ? void 0 : nD.zIndex) && void 0 !== cD ? cD : 0)
+            const IU = tU.FY[tU.AY][this.eId];
+            this.updateOverlayColour(null !== (UU = null === IU || void 0 === IU ? void 0 : IU.overlayColour) && void 0 !== UU ? UU : null), this.updateOpacity(null !== (RU = null === IU || void 0 === IU ? void 0 : IU.opacity) && void 0 !== RU ? RU : 1), this.updateZIndex(null !== (gU = null === IU || void 0 === IU ? void 0 : IU.zIndex) && void 0 !== gU ? gU : 0)
           },
           removeMeshComponent: () => {
-            "Person" !== bD && "BloxdBlock" !== bD || pD.mJ(this.eId, "rigAnimation"), pD.mJ(this.eId, pD.names.mesh), pD.R7(this.eId, pD.names.meshAttachments) && pD.mJ(this.eId, pD.names.meshAttachments), pD.mJ(this.eId, "entityName"), pD.mJ(this.eId, "autoRotate"), pD.mJ(this.eId, "lineToEntity"), "Person" === bD ? (pD.mJ(this.eId, pD.names.moveState), pD.mJ(this.eId, "updateWalkingState"), pD.mJ(this.eId, "humanoidMesh"), pD.mJ(this.eId, "animator")) : "BloxdBlock" === bD && pD.mJ(this.eId, "animator")
+            "Person" !== TU && "BloxdBlock" !== TU || pU.bY(this.eId, "rigAnimation"), pU.bY(this.eId, pU.names.mesh), pU.cUU(this.eId, pU.names.meshAttachments) && pU.bY(this.eId, pU.names.meshAttachments), pU.bY(this.eId, "entityName"), pU.bY(this.eId, "autoRotate"), pU.bY(this.eId, "lineToEntity"), "Person" === TU ? (pU.bY(this.eId, pU.names.moveState), pU.bY(this.eId, "updateWalkingState"), pU.bY(this.eId, "humanoidMesh"), pU.bY(this.eId, "animator")) : "BloxdBlock" === TU && pU.bY(this.eId, "animator")
           },
-          hideDist: null !== (CD = QD.hideDist) && void 0 !== CD ? CD : 80,
-          movingHideDist: null !== (cD = QD.hideDist) && void 0 !== cD ? cD : 120,
-          displayOutsideLoadedChunk: QD.hideDist > 100,
+          hideDist: null !== (RU = qU.hideDist) && void 0 !== RU ? RU : 80,
+          movingHideDist: null !== (gU = qU.hideDist) && void 0 !== gU ? gU : 120,
+          displayOutsideLoadedChunk: qU.hideDist > 100,
           immediatelyUpdate: !0,
-          pB: "BloxdBlock" === bD ? QD.blockName : bD
+          vc: "BloxdBlock" === TU ? qU.blockName : TU
         })
       }
       queueMeshRebuild() {
         this.meshRebuildQueued || (this.meshRebuildQueued = !0, queueMicrotask((() => {
-          this.meshRebuildQueued = !1, this.Lt || this.updateHidingMeshMgr()
+          this.meshRebuildQueued = !1, this.pC || this.updateHidingMeshMgr()
         })))
       }
       getSpec() {
-        return (0, Nc.d)({
+        return (0, Wg.j)({
           meshKind: this.meshKind,
           meshOpts: this.meshOpts
         })
       }
-      updateOverlayColour(DD) {
-        var CD, cD;
+      updateOverlayColour(UU) {
+        var RU, gU;
         if ("Person" !== this.meshKind) return;
-        let ID = new Xc.c(0, 0, 0, 0);
-        if (null !== DD) {
-          const CD = (0, gc.V)(DD);
-          ID = new Xc.c(CD[0] / 255, CD[1] / 255, CD[2] / 255, .5)
+        let tU = new xg.c(0, 0, 0, 0);
+        if (null !== UU) {
+          const RU = (0, fg.ab)(UU);
+          tU = new xg.c(RU[0] / 255, RU[1] / 255, RU[2] / 255, .5)
         }
-        const pD = null !== (CD = null === (cD = this.ny.Km.mDD(this.eId)) || void 0 === cD ? void 0 : cD.bJ) && void 0 !== CD ? CD : null;
-        null !== pD && mc.b.Player.meshApi.updateMeshOverlayColour(pD, ID)
+        const pU = null !== (RU = null === (gU = this.LG.Im.sUU(this.eId)) || void 0 === gU ? void 0 : gU.RY) && void 0 !== RU ? RU : null;
+        null !== pU && mg.b.Player.meshApi.updateMeshOverlayColour(pU, tU)
       }
-      updateZIndex(DD) {
-        var CD;
+      updateZIndex(UU) {
+        var RU;
         if ("Person" !== this.meshKind) return;
-        const cD = null === (CD = this.ny.Km.mDD(this.eId)) || void 0 === CD ? void 0 : CD.bJ;
-        "number" === typeof cD && this.ny.XZ.iJ.setRenderingGroupId(cD, DD)
+        const gU = null === (RU = this.LG.Im.sUU(this.eId)) || void 0 === RU ? void 0 : RU.RY;
+        "number" === typeof gU && this.LG.SC.iZ.setRenderingGroupId(gU, UU)
       }
-      updateOpacity(DD) {
-        const CD = this.ny.Km.mDD(this.eId);
-        CD && ("number" !== typeof CD.bJ ? CD.mesh && "ParticleEmitter" !== this.meshKind && (0, qc.f)(CD.mesh, DD) : mc.b.Player.meshApi.updateMeshOpacity(CD.bJ, DD))
+      updateOpacity(UU) {
+        const RU = this.LG.Im.sUU(this.eId);
+        RU && ("number" !== typeof RU.RY ? RU.mesh && "ParticleEmitter" !== this.meshKind && (0, Zg.e)(RU.mesh, UU) : mg.b.Player.meshApi.updateMeshOpacity(RU.RY, UU))
       }
     }
-    var zc = cD(38373);
-    class jc {
-      constructor(DD, CD) {
-        this.eId = CD, this.ny = void 0, this.schema = void 0, this.ny = DD.ny
+    var rg = gU(38569);
+    class Xg {
+      constructor(UU, RU) {
+        this.eId = RU, this.LG = void 0, this.schema = void 0, this.LG = UU.LG
       }
-      initClient(DD) {
-        this.schema = DD, this.ny.Km.add([DD.x, DD.y, DD.z], .1, .1, null, null, !1, !1, this.eId), this.ny.Km.gJ(this.eId, "smoothToServerPos"), zc.e.add(this.eId, this.copyOpts())
+      initClient(UU) {
+        this.schema = UU, this.LG.Im.add([UU.x, UU.y, UU.z], .1, .1, null, null, !1, !1, this.eId), this.LG.Im.JY(this.eId, "smoothToServerPos"), rg.d.add(this.eId, this.copyOpts())
       }
-      onChangeClient(DD) {
-        pc.h.includes(DD) && zc.e.update(this.eId, this.copyOpts())
+      onChangeClient(UU) {
+        pg.j.includes(UU) && rg.d.update(this.eId, this.copyOpts())
       }
       disposeClient() {
-        zc.e.remove(this.eId), this.ny.Km.deleteEntity(this.eId)
+        rg.d.remove(this.eId), this.LG.Im.deleteEntity(this.eId)
       }
       copyOpts() {
         const {
-          soundName: DD,
-          volume: CD,
-          refDistance: cD,
-          maxHearDist: ID,
-          rate: pD
+          soundName: UU,
+          volume: RU,
+          refDistance: gU,
+          maxHearDist: tU,
+          rate: pU
         } = this.schema;
         return {
-          soundName: DD,
-          volume: CD,
-          refDistance: cD,
-          maxHearDist: ID,
-          rate: pD
+          soundName: UU,
+          volume: RU,
+          refDistance: gU,
+          maxHearDist: tU,
+          rate: pU
         }
       }
     }
-    var lc = cD(3501),
-      Lc = cD(36125),
-      Tc = cD(6212),
-      Gc = cD(37180),
-      Rc = cD(2642),
-      kc = cD(37519),
-      dc = cD(8764),
-      Yc = cD(37848),
-      Wc = cD(37154),
-      sc = cD(3032);
-    class Ec {
-      constructor(DD, CD) {
-        let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 4,
-          ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now();
-        this.lCD = DD, this.ny = CD, this.setupBudgetMs = cD, this.now = ID, this.createStateCallbacks = void 0, this.roomStateCallbacks = void 0, this.allItems = {}, this.detachers = new Map, this.deferredSetups = new Map, this.queuedSetups = new Map, this.promotedSetups = new Set, this.setupBudgetLeftMs = void 0, this.lastRefillMs = void 0, this.roomState = void 0, this.Lt = !1, this.onFrame = () => {
+    var vg = gU(3349),
+      dg = gU(36313),
+      Hg = gU(6152),
+      Sg = gU(37314),
+      sg = gU(2551),
+      yg = gU(37703),
+      kg = gU(8696),
+      Fg = gU(38030),
+      ig = gU(37297),
+      Ag = gU(2927);
+    class zg {
+      constructor(UU, RU) {
+        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 4,
+          tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now();
+        this.ORU = UU, this.LG = RU, this.setupBudgetMs = gU, this.now = tU, this.createStateCallbacks = void 0, this.roomStateCallbacks = void 0, this.allItems = {}, this.detachers = new Map, this.deferredSetups = new Map, this.queuedSetups = new Map, this.promotedSetups = new Set, this.setupBudgetLeftMs = void 0, this.lastRefillMs = void 0, this.roomState = void 0, this.pC = !1, this.onFrame = () => {
           this.setUpQueuedEntities(!0)
-        }, this.BX = () => {
+        }, this.Bx = () => {
           this.setUpQueuedEntities(this.now() - this.lastRefillMs > 100)
         }, this.setUpPromoted = () => {
-          for (const DD of this.promotedSetups) {
-            this.promotedSetups.delete(DD);
-            const CD = this.queuedSetups.get(DD);
-            CD && (this.queuedSetups.delete(DD), this.timedSetup(CD, DD))
+          for (const UU of this.promotedSetups) {
+            this.promotedSetups.delete(UU);
+            const RU = this.queuedSetups.get(UU);
+            RU && (this.queuedSetups.delete(UU), this.timedSetup(RU, UU))
           }
-        }, this.createStateCallbacks = (0, dc.getStateCallbacks)(DD), this.roomStateCallbacks = this.createStateCallbacks(DD.state), this.roomState = DD.state, this.setupBudgetLeftMs = cD, this.lastRefillMs = ID()
+        }, this.createStateCallbacks = (0, kg.getStateCallbacks)(UU), this.roomStateCallbacks = this.createStateCallbacks(UU.state), this.roomState = UU.state, this.setupBudgetLeftMs = gU, this.lastRefillMs = tU()
       }
       setup() {
-        this.setupEntityHandlers(), this.setupItemHandlers(), this.lCD.onStateChange(this.setUpPromoted), this.ny.on("beforeInputs", this.onFrame), this.ny.on("wy", this.BX)
+        this.setupEntityHandlers(), this.setupItemHandlers(), this.ORU.onStateChange(this.setUpPromoted), this.LG.on("beforeInputs", this.onFrame), this.LG.on("HG", this.Bx)
       }
-      setUpQueuedEntities(DD) {
-        var CD;
-        if ((null === (CD = (0, Rc.e)().client.getMsgHandler()) || void 0 === CD ? void 0 : CD.lCD) !== this.lCD) return this.ny.off("beforeInputs", this.onFrame), this.ny.off("wy", this.BX), this.queuedSetups.clear(), void this.promotedSetups.clear();
-        if (DD && (this.setupBudgetLeftMs = this.setupBudgetMs, this.lastRefillMs = this.now()), this.setUpPromoted(), 0 !== this.queuedSetups.size)
-          for (xc().copy(ec, this.ny.Km.FX(this.ny.aJ)); this.setupBudgetLeftMs > 0;) {
-            const DD = this.nearestQueued(ec);
-            if (null === DD) return;
-            this.setUpIfQueued(DD), this.setUpPromoted()
+      setUpQueuedEntities(UU) {
+        var RU;
+        if ((null === (RU = (0, sg.c)().client.getMsgHandler()) || void 0 === RU ? void 0 : RU.ORU) !== this.ORU) return this.LG.off("beforeInputs", this.onFrame), this.LG.off("HG", this.Bx), this.queuedSetups.clear(), void this.promotedSetups.clear();
+        if (UU && (this.setupBudgetLeftMs = this.setupBudgetMs, this.lastRefillMs = this.now()), this.setUpPromoted(), 0 !== this.queuedSetups.size)
+          for (og().copy(Mg, this.LG.Im.Hx(this.LG.AY)); this.setupBudgetLeftMs > 0;) {
+            const UU = this.nearestQueued(Mg);
+            if (null === UU) return;
+            this.setUpIfQueued(UU), this.setUpPromoted()
           }
       }
-      nearestQueued(DD) {
-        let CD = null,
-          cD = 1 / 0;
-        return this.queuedSetups.forEach(((ID, pD) => {
-          const iD = function(DD, CD) {
-            return (CD.x - DD[0]) ** 2 + (CD.y - DD[1]) ** 2 + (CD.z - DD[2]) ** 2
-          }(DD, ID);
-          (null === CD || iD < cD) && (CD = pD, cD = iD)
-        })), CD
+      nearestQueued(UU) {
+        let RU = null,
+          gU = 1 / 0;
+        return this.queuedSetups.forEach(((tU, pU) => {
+          const EU = function(UU, RU) {
+            return (RU.x - UU[0]) ** 2 + (RU.y - UU[1]) ** 2 + (RU.z - UU[2]) ** 2
+          }(UU, tU);
+          (null === RU || EU < gU) && (RU = pU, gU = EU)
+        })), RU
       }
-      setUpOrQueue(DD, CD) {
-        0 === this.queuedSetups.size && this.setupBudgetLeftMs > 0 || this.mustSetUpNow(DD, CD) ? this.timedSetup(DD, CD) : this.queuedSetups.set(CD, DD)
+      setUpOrQueue(UU, RU) {
+        0 === this.queuedSetups.size && this.setupBudgetLeftMs > 0 || this.mustSetUpNow(UU, RU) ? this.timedSetup(UU, RU) : this.queuedSetups.set(RU, UU)
       }
-      mustSetUpNow(DD, CD) {
-        const cD = this.ny.o9;
-        if (CD === cD) return !0;
-        const ID = this.roomState.entities.get(cD);
-        return !(!ID || ID.ridingVehicleEId !== CD && ID.followingEId !== CD) || (uc(DD.type) === tc.c || (0, Rc.e)().getFollowingEntities(CD).length > 0)
+      mustSetUpNow(UU, RU) {
+        const gU = this.LG.jUU;
+        if (RU === gU) return !0;
+        const tU = this.roomState.entities.get(gU);
+        return !(!tU || tU.ridingVehicleEId !== RU && tU.followingEId !== RU) || (Dg(UU.type) === Cg.c || (0, sg.c)().getFollowingEntities(RU).length > 0)
       }
-      setUpIfQueued(DD) {
-        const CD = this.queuedSetups.get(DD);
-        CD && (this.queuedSetups.delete(DD), this.timedSetup(CD, DD))
+      setUpIfQueued(UU) {
+        const RU = this.queuedSetups.get(UU);
+        RU && (this.queuedSetups.delete(UU), this.timedSetup(RU, UU))
       }
-      promoteIfQueued(DD) {
-        null !== DD && this.queuedSetups.has(DD) && this.promotedSetups.add(DD)
+      promoteIfQueued(UU) {
+        null !== UU && this.queuedSetups.has(UU) && this.promotedSetups.add(UU)
       }
-      timedSetup(DD, CD) {
-        const cD = this.now();
-        this.setupEntity(DD, CD), this.setupBudgetLeftMs -= this.now() - cD
+      timedSetup(UU, RU) {
+        const gU = this.now();
+        this.setupEntity(UU, RU), this.setupBudgetLeftMs -= this.now() - gU
       }
       setupEntityHandlers() {
-        this.roomStateCallbacks.entities.Jm(((DD, CD) => {
-          this.ny.o9 ? this.setUpOrQueue(DD, CD) : this.deferEntitySetupUntilInitInfo(DD, CD)
-        })), this.roomStateCallbacks.entities.Zx(((DD, CD) => {
-          const cD = this.deferredSetups.get(CD);
-          cD && (AC.i.unsubscribe(cD), this.deferredSetups.delete(CD)), this.queuedSetups.delete(CD), this.detach(CD), (0, Rc.e)().client.disposeEntity(CD)
+        this.roomStateCallbacks.entities.Wm(((UU, RU) => {
+          this.LG.jUU ? this.setUpOrQueue(UU, RU) : this.deferEntitySetupUntilInitInfo(UU, RU)
+        })), this.roomStateCallbacks.entities.Kw(((UU, RU) => {
+          const gU = this.deferredSetups.get(RU);
+          gU && (lR.p.unsubscribe(gU), this.deferredSetups.delete(RU)), this.queuedSetups.delete(RU), this.detach(RU), (0, sg.c)().client.disposeEntity(RU)
         }))
       }
-      deferEntitySetupUntilInitInfo(DD, CD) {
-        const cD = AC.i.Fv("initInfoReceived", (() => {
-          this.deferredSetups.delete(CD), this.setUpOrQueue(DD, CD)
+      deferEntitySetupUntilInitInfo(UU, RU) {
+        const gU = lR.p.cW("initInfoReceived", (() => {
+          this.deferredSetups.delete(RU), this.setUpOrQueue(UU, RU)
         }));
-        this.deferredSetups.set(CD, cD), (0, lc.onGameResetOnce)((() => {
-          this.deferredSetups.get(CD) === cD && (AC.i.unsubscribe(cD), this.deferredSetups.delete(CD)), (0, Rc.e)().updatePositionAndPhysics(this.ny.aJ, {
-            type: Tc.p.DEFAULT,
+        this.deferredSetups.set(RU, gU), (0, vg.onGameResetOnce)((() => {
+          this.deferredSetups.get(RU) === gU && (lR.p.unsubscribe(gU), this.deferredSetups.delete(RU)), (0, sg.c)().updatePositionAndPhysics(this.LG.AY, {
+            type: Hg.u.DEFAULT,
             tier: null
-          }, !0), (0, Rc.e)().takeHeldPlayerBodySize(this.ny.aJ);
-          const DD = this.ny.Km.QDD(this.ny.aJ);
-          DD && (DD.movementType = Tc.n.NORMAL)
+          }, !0), (0, sg.c)().takeHeldPlayerBodySize(this.LG.AY);
+          const UU = this.LG.Im.bUU(this.LG.AY);
+          UU && (UU.movementType = Hg.r.NORMAL)
         }))
       }
-      setupEntity(DD, CD) {
-        const cD = CD === this.ny.o9;
-        if (cD)(0, Rc.e)().client.pR(this.ny.aJ, null, null);
+      setupEntity(UU, RU) {
+        const gU = RU === this.LG.jUU;
+        if (gU)(0, sg.c)().client.Vk(this.LG.AY, null, null);
         else {
           const {
-            type: cD
-          } = DD, ID = uc(cD);
-          if (void 0 === ID) return void
-          function(DD, CD) {
-            const cD = String(DD);
-            if (hc.has(cD)) return;
-            hc.add(cD);
-            const ID = cD.length > 80 ? `${cD.slice(0,80)}...` : cD,
-              pD = `No client handler for entity type ${JSON.stringify(ID)}, so entity ${CD} is not set up`;
-            console.warn(pD), (0, sc.h)("uncaught", pD, "unknown_entity_type")
-          }(cD, CD);
-          (0, Rc.e)().client.pR(CD, DD, new ID((0, Rc.e)(), CD, cD))
+            type: gU
+          } = UU, tU = Dg(gU);
+          if (void 0 === tU) return void
+          function(UU, RU) {
+            const gU = String(UU);
+            if (Lg.has(gU)) return;
+            Lg.add(gU);
+            const tU = gU.length > 80 ? `${gU.slice(0,80)}...` : gU,
+              pU = `No client handler for entity type ${JSON.stringify(tU)}, so entity ${RU} is not set up`;
+            console.warn(pU), (0, Ag.e)("uncaught", pU, "unknown_entity_type")
+          }(gU, RU);
+          (0, sg.c)().client.Vk(RU, UU, new tU((0, sg.c)(), RU, gU))
         }
-        const ID = this.createStateCallbacks(DD);
-        if (cD) return this.setupMapSchemaCallbacks(CD, DD, ID, "armour"), this.setupScalarField(CD, DD, ID, "scale"), this.setupScalarField(CD, DD, ID, "ridingVehicleEId"), this.setupScalarField(CD, DD, ID, "followingEId"), this.setupScalarField(CD, DD, ID, "followingOffset"), void this.setupScalarField(CD, DD, ID, "shouldMatchFollowingEntityRotation");
-        for (const pD of Bc(DD.constructor)) DD[pD] instanceof cc.MapSchema ? this.setupMapSchemaCallbacks(CD, DD, ID, pD) : this.setupScalarField(CD, DD, ID, pD)
+        const tU = this.createStateCallbacks(UU);
+        if (gU) return this.setupMapSchemaCallbacks(RU, UU, tU, "armour"), this.setupScalarField(RU, UU, tU, "scale"), this.setupScalarField(RU, UU, tU, "ridingVehicleEId"), this.setupScalarField(RU, UU, tU, "followingEId"), this.setupScalarField(RU, UU, tU, "followingOffset"), void this.setupScalarField(RU, UU, tU, "shouldMatchFollowingEntityRotation");
+        for (const pU of Gg(UU.constructor)) UU[pU] instanceof gg.MapSchema ? this.setupMapSchemaCallbacks(RU, UU, tU, pU) : this.setupScalarField(RU, UU, tU, pU)
       }
-      setupMapSchemaCallbacks(DD, CD, cD, ID) {
-        const pD = cD[ID],
-          iD = new Map;
-        pD.Jm(((cD, pD) => {
-          if (this.onEntityFieldChange(DD, CD, ID, {
-              key: pD,
-              value: cD
-            }), !(cD instanceof cc.Schema)) return;
-          const fD = this.createStateCallbacks(cD),
-            bD = [];
-          for (const iD of Bc(cD.constructor)) bD.push(this.listenForFutureChanges(fD, iD, (() => {
-            this.onEntityFieldChange(DD, CD, ID, {
-              key: pD,
-              value: cD
+      setupMapSchemaCallbacks(UU, RU, gU, tU) {
+        const pU = gU[tU],
+          EU = new Map;
+        pU.Wm(((gU, pU) => {
+          if (this.onEntityFieldChange(UU, RU, tU, {
+              key: pU,
+              value: gU
+            }), !(gU instanceof gg.Schema)) return;
+          const PU = this.createStateCallbacks(gU),
+            TU = [];
+          for (const EU of Gg(gU.constructor)) TU.push(this.listenForFutureChanges(PU, EU, (() => {
+            this.onEntityFieldChange(UU, RU, tU, {
+              key: pU,
+              value: gU
             })
           })));
-          iD.set(pD, (() => {
-            for (const DD of bD) DD()
+          EU.set(pU, (() => {
+            for (const UU of TU) UU()
           }))
-        })), pD.Zx(((cD, pD) => {
-          var fD;
-          null === (fD = iD.get(pD)) || void 0 === fD || fD(), iD.delete(pD), this.onEntityFieldChange(DD, CD, ID, {
-            key: pD,
+        })), pU.Kw(((gU, pU) => {
+          var PU;
+          null === (PU = EU.get(pU)) || void 0 === PU || PU(), EU.delete(pU), this.onEntityFieldChange(UU, RU, tU, {
+            key: pU,
             value: null
           })
-        })), this.addDetacher(DD, (() => {
-          for (const DD of iD.values()) DD();
-          iD.clear()
+        })), this.addDetacher(UU, (() => {
+          for (const UU of EU.values()) UU();
+          EU.clear()
         }))
       }
-      setupScalarField(DD, CD, cD, ID) {
-        this.onEntityFieldChange(DD, CD, ID, CD[ID]);
-        const pD = this.listenForFutureChanges(cD, ID, (cD => {
-          this.onEntityFieldChange(DD, CD, ID, cD)
+      setupScalarField(UU, RU, gU, tU) {
+        this.onEntityFieldChange(UU, RU, tU, RU[tU]);
+        const pU = this.listenForFutureChanges(gU, tU, (gU => {
+          this.onEntityFieldChange(UU, RU, tU, gU)
         }));
-        this.addDetacher(DD, pD)
+        this.addDetacher(UU, pU)
       }
-      addDetacher(DD, CD) {
-        let cD = this.detachers.get(DD);
-        cD || (cD = [], this.detachers.set(DD, cD)), cD.push(CD)
+      addDetacher(UU, RU) {
+        let gU = this.detachers.get(UU);
+        gU || (gU = [], this.detachers.set(UU, gU)), gU.push(RU)
       }
-      detach(DD) {
-        for (const cD of null !== (CD = this.detachers.get(DD)) && void 0 !== CD ? CD : []) {
-          var CD;
-          cD()
+      detach(UU) {
+        for (const gU of null !== (RU = this.detachers.get(UU)) && void 0 !== RU ? RU : []) {
+          var RU;
+          gU()
         }
-        this.detachers.delete(DD)
+        this.detachers.delete(UU)
       }
-      listenForFutureChanges(DD, CD, cD) {
-        return DD.listen(CD, cD, !1)
+      listenForFutureChanges(UU, RU, gU) {
+        return UU.listen(RU, gU, !1)
       }
-      onEntityFieldChange(DD, CD, cD, ID) {
-        switch (cD) {
+      onEntityFieldChange(UU, RU, gU, tU) {
+        switch (gU) {
           case "ridingVehicleEId": {
-            this.promoteIfQueued(ID);
-            const CD = this.ny.Km.qDD((0, Lc.b)(DD));
-            CD && (CD.ridingVehicleEId = ID);
+            this.promoteIfQueued(tU);
+            const RU = this.LG.Im.MUU((0, dg.c)(UU));
+            RU && (RU.ridingVehicleEId = tU);
             break
           }
           case "armour":
-            this.handleArmourChange(DD, ID);
+            this.handleArmourChange(UU, tU);
             break;
           case "followingEId":
-            this.promoteIfQueued(ID), this.handleFollowingEIdChange(DD, CD, ID);
+            this.promoteIfQueued(tU), this.handleFollowingEIdChange(UU, RU, tU);
             break;
           case "xRotation":
           case "yRotation":
           case "zRotation":
-            this.handleRotationChange(DD, cD, ID);
+            this.handleRotationChange(UU, gU, tU);
             break;
           case "scale":
-            this.handleScaleChange(DD, ID);
+            this.handleScaleChange(UU, tU);
             break;
           case "baseRenderHeading":
-            this.handleBaseRenderHeadingChange(DD, ID);
+            this.handleBaseRenderHeadingChange(UU, tU);
             break;
           case "followingOffset":
-            this.handleFollowingOffsetChange(DD, ID);
+            this.handleFollowingOffsetChange(UU, tU);
             break;
           case "shouldMatchFollowingEntityRotation":
-            this.handleShouldMatchFollowingEntityRotationChange(DD, ID);
+            this.handleShouldMatchFollowingEntityRotationChange(UU, tU);
             break;
           case "x":
           case "y":
           case "z":
-            return void this.handlePositionChange(DD, cD, ID)
-        }(0, Rc.e)().client.updateEntityField(DD, cD, ID)
+            return void this.handlePositionChange(UU, gU, tU)
+        }(0, sg.c)().client.updateEntityField(UU, gU, tU)
       }
-      handleArmourChange(DD, CD) {
-        var cD, ID;
+      handleArmourChange(UU, RU) {
+        var gU, tU;
         const {
-          key: pD,
-          value: iD
-        } = CD;
-        (0, mc.u)(DD, pD, null !== (cD = null === iD || void 0 === iD ? void 0 : iD.itemName) && void 0 !== cD ? cD : null, null !== (ID = null === iD || void 0 === iD ? void 0 : iD.enchantmentTier) && void 0 !== ID ? ID : null)
+          key: pU,
+          value: EU
+        } = RU;
+        (0, mg.t)(UU, pU, null !== (gU = null === EU || void 0 === EU ? void 0 : EU.itemName) && void 0 !== gU ? gU : null, null !== (tU = null === EU || void 0 === EU ? void 0 : EU.enchantmentTier) && void 0 !== tU ? tU : null)
       }
-      handleFollowingEIdChange(DD, CD, cD) {
-        const ID = (0, Lc.b)(DD),
-          pD = ID === this.ny.aJ;
-        if (this.ny.Km.mJ(ID, this.ny.Km.names.mH), cD) this.ny.Km.mJ(ID, "smoothToServerPos"), this.ny.Km.gJ(ID, this.ny.Km.names.mH, {
-          qt: (0, Lc.b)(cD),
-          offset: Array.from(CD.followingOffset),
-          oCD: CD.shouldMatchFollowingEntityRotation,
-          mCD: !0,
-          nCD: (DD, ID) => {
-            if (xc().copy(DD, CD.followingOffset), CD.ridingVehicleEId === cD) {
-              const CD = (0, Lc.b)(cD),
-                pD = (0, Rc.e)().getEntityHeading(CD, ID);
-              xc().gp(DD, DD, xc().ZERO, pD)
+      handleFollowingEIdChange(UU, RU, gU) {
+        const tU = (0, dg.c)(UU),
+          pU = tU === this.LG.AY;
+        if (this.LG.Im.bY(tU, this.LG.Im.names.MI), gU) this.LG.Im.bY(tU, "smoothToServerPos"), this.LG.Im.JY(tU, this.LG.Im.names.MI, {
+          Nu: (0, dg.c)(gU),
+          offset: Array.from(RU.followingOffset),
+          XRU: RU.shouldMatchFollowingEntityRotation,
+          SRU: !0,
+          sRU: (UU, tU) => {
+            if (og().copy(UU, RU.followingOffset), RU.ridingVehicleEId === gU) {
+              const RU = (0, dg.c)(gU),
+                pU = (0, sg.c)().getEntityHeading(RU, tU);
+              og().gp(UU, UU, og().ZERO, pU)
             }
           }
         });
-        else if (!pD) {
-          this.ny.Km.R7(ID, "smoothToServerPos") || this.ny.Km.gJ(ID, "smoothToServerPos");
-          const DD = this.ny.Km.getState(ID, "smoothToServerPos"),
-            CD = this.ny.Km.fR(ID).position;
-          (0, Wc.setServerPosition)(DD, CD[0], CD[1], CD[2])
+        else if (!pU) {
+          this.LG.Im.cUU(tU, "smoothToServerPos") || this.LG.Im.JY(tU, "smoothToServerPos");
+          const UU = this.LG.Im.getState(tU, "smoothToServerPos"),
+            RU = this.LG.Im.Hk(tU).position;
+          (0, ig.setServerPosition)(UU, RU[0], RU[1], RU[2])
         }
       }
-      handleRotationChange(DD, CD, cD) {
-        const ID = "xRotation" === CD ? 0 : "yRotation" === CD ? 1 : 2;
-        for (const pD of (0, Rc.e)().getFollowingEntities(DD)) {
-          const DD = this.ny.Km.getState(pD, "meshRotation"),
-            CD = this.ny.Km.ZCD(pD);
-          DD && CD.oCD && (DD.serverSetRotation[ID] = cD)
+      handleRotationChange(UU, RU, gU) {
+        const tU = "xRotation" === RU ? 0 : "yRotation" === RU ? 1 : 2;
+        for (const pU of (0, sg.c)().getFollowingEntities(UU)) {
+          const UU = this.LG.Im.getState(pU, "meshRotation"),
+            RU = this.LG.Im.rRU(pU);
+          UU && RU.XRU && (UU.serverSetRotation[tU] = gU)
         }
       }
-      handleScaleChange(DD, CD) {
-        const cD = (0, Lc.b)(DD);
-        if (AC.i.Uo(`entityScale|${cD}`, CD), cD === this.ny.aJ) {
-          var ID;
-          (0, Rc.e)().removeFromEyeHeightCache(cD);
-          const DD = this.ny.Km.QDD(this.ny.aJ),
-            CD = null !== (ID = null === DD || void 0 === DD ? void 0 : DD.physicsState) && void 0 !== ID ? ID : {
-              type: Tc.p.DEFAULT,
+      handleScaleChange(UU, RU) {
+        const gU = (0, dg.c)(UU);
+        if (lR.p.yh(`entityScale|${gU}`, RU), gU === this.LG.AY) {
+          var tU;
+          (0, sg.c)().removeFromEyeHeightCache(gU);
+          const UU = this.LG.Im.bUU(this.LG.AY),
+            RU = null !== (tU = null === UU || void 0 === UU ? void 0 : UU.physicsState) && void 0 !== tU ? tU : {
+              type: Hg.u.DEFAULT,
               tier: null
             };
-          return void(0, Rc.e)().updatePositionAndPhysics(this.ny.aJ, CD, !1)
+          return void(0, sg.c)().updatePositionAndPhysics(this.LG.AY, RU, !1)
         }
-        const pD = (0, Rc.e)().getLifeformType(cD);
-        if (null === pD) return;
+        const pU = (0, sg.c)().getLifeformType(gU);
+        if (null === pU) return;
         const {
-          physicsBodyWidth: iD,
-          physicsBodyHeight: fD
-        } = (0, Yc.f)(CD, pD);
-        this.ny.Km.MCD(cD, iD, fD, iD)
+          physicsBodyWidth: EU,
+          physicsBodyHeight: PU
+        } = (0, Fg.f)(RU, pU);
+        this.LG.Im.BRU(gU, EU, PU, EU)
       }
-      handleBaseRenderHeadingChange(DD, CD) {
-        const cD = this.ny.Km.getState(DD, "meshRotation");
-        cD && (cD.baseRenderRotation[1] = CD);
-        for (const ID of (0, Rc.e)().getFollowingEntities(DD)) {
-          const DD = this.ny.Km.getState(ID, "meshRotation"),
-            cD = this.ny.Km.ZCD(ID);
-          DD && cD.oCD && (DD.baseRenderRotation[1] = CD)
+      handleBaseRenderHeadingChange(UU, RU) {
+        const gU = this.LG.Im.getState(UU, "meshRotation");
+        gU && (gU.baseRenderRotation[1] = RU);
+        for (const tU of (0, sg.c)().getFollowingEntities(UU)) {
+          const UU = this.LG.Im.getState(tU, "meshRotation"),
+            gU = this.LG.Im.rRU(tU);
+          UU && gU.XRU && (UU.baseRenderRotation[1] = RU)
         }
       }
-      handleFollowingOffsetChange(DD, CD) {
-        const cD = this.ny.Km.ZCD((0, Lc.b)(DD));
-        if (cD && cD.offset) {
-          const DD = CD ? Array.from(CD) : xc().ZERO;
-          cD.offset[0] = DD[0], cD.offset[1] = DD[1], cD.offset[2] = DD[2]
+      handleFollowingOffsetChange(UU, RU) {
+        const gU = this.LG.Im.rRU((0, dg.c)(UU));
+        if (gU && gU.offset) {
+          const UU = RU ? Array.from(RU) : og().ZERO;
+          gU.offset[0] = UU[0], gU.offset[1] = UU[1], gU.offset[2] = UU[2]
         }
       }
-      handleShouldMatchFollowingEntityRotationChange(DD, CD) {
-        const cD = this.ny.Km.ZCD((0, Lc.b)(DD));
-        cD && (cD.oCD = null === CD || void 0 === CD || CD)
+      handleShouldMatchFollowingEntityRotationChange(UU, RU) {
+        const gU = this.LG.Im.rRU((0, dg.c)(UU));
+        gU && (gU.XRU = null === RU || void 0 === RU || RU)
       }
-      handlePositionChange(DD, CD, cD) {
-        if (this.ny.Km.R7(DD, "smoothToServerPos")) {
-          const ID = this.ny.Km.getState(DD, "smoothToServerPos");
-          (0, Wc.setServerPositionAxis)(ID, rc[CD], cD)
+      handlePositionChange(UU, RU, gU) {
+        if (this.LG.Im.cUU(UU, "smoothToServerPos")) {
+          const tU = this.LG.Im.getState(UU, "smoothToServerPos");
+          (0, ig.setServerPositionAxis)(tU, Ng[RU], gU)
         }
       }
       setupItemHandlers() {
-        this.roomStateCallbacks.items.Jm(((DD, CD) => {
-          this.allItems[CD] = DD, (0, Gc.i)(this.ny, CD, [DD.x, DD.y, DD.z], DD.id, {
-            amount: DD.amount,
-            attributes: JSON.parse(DD.attributes),
-            cI: (0, FC.b)(this.ny).cantPickUpItem(CD),
-            size: DD.size,
-            predictedAt: (0, Rc.e)().client.itemDropPrediction.onServerItemAdded(CD)
+        this.roomStateCallbacks.items.Wm(((UU, RU) => {
+          this.allItems[RU] = UU, (0, Sg.j)(this.LG, RU, [UU.x, UU.y, UU.z], UU.id, {
+            amount: UU.amount,
+            attributes: JSON.parse(UU.attributes),
+            Ng: (0, OR.d)(this.LG).cantPickUpItem(RU),
+            size: UU.size,
+            predictedAt: (0, sg.c)().client.itemDropPrediction.onServerItemAdded(RU)
           });
-          const cD = this.createStateCallbacks(DD);
-          for (const ID of Bc(fc)) this.onItemFieldChange(CD, ID, DD[ID]), this.addDetacher(CD, this.listenForFutureChanges(cD, ID, (DD => {
-            this.onItemFieldChange(CD, ID, DD)
+          const gU = this.createStateCallbacks(UU);
+          for (const tU of Gg(Pg)) this.onItemFieldChange(RU, tU, UU[tU]), this.addDetacher(RU, this.listenForFutureChanges(gU, tU, (UU => {
+            this.onItemFieldChange(RU, tU, UU)
           })))
-        })), this.roomStateCallbacks.items.Zx(((DD, CD) => {
-          delete this.allItems[CD], this.detach(CD), (0, Rc.e)().client.itemDropPrediction.onServerItemRemoved(CD), this.ny.Km.R7(CD, this.ny.Km.names.itemState) && this.ny.Km.deleteEntity(CD), (0, FC.b)(this.ny).disposeEntity(CD)
+        })), this.roomStateCallbacks.items.Kw(((UU, RU) => {
+          delete this.allItems[RU], this.detach(RU), (0, sg.c)().client.itemDropPrediction.onServerItemRemoved(RU), this.LG.Im.cUU(RU, this.LG.Im.names.itemState) && this.LG.Im.deleteEntity(RU), (0, OR.d)(this.LG).disposeEntity(RU)
         }))
       }
-      onItemFieldChange(DD, CD, cD) {
-        if (CD in rc) {
-          if (this.ny.Km.R7(DD, "itemState")) {
-            const ID = this.ny.Km.getState(DD, "smoothToServerPos");
-            (0, Wc.setServerPositionAxis)(ID, rc[CD], cD), (0, Rc.e)().client.itemDropPrediction.onServerItemMoved(DD)
+      onItemFieldChange(UU, RU, gU) {
+        if (RU in Ng) {
+          if (this.LG.Im.cUU(UU, "itemState")) {
+            const tU = this.LG.Im.getState(UU, "smoothToServerPos");
+            (0, ig.setServerPositionAxis)(tU, Ng[RU], gU), (0, sg.c)().client.itemDropPrediction.onServerItemMoved(UU)
           }
           return
         }
-        if (!this.ny.Km.R7(DD, "itemState")) return;
-        const ID = this.ny.Km.getState(DD, "itemState");
-        "amount" === CD && cD !== ID.amount && (ID.creationTime = Date.now()), ID[CD] = "attributes" === CD ? JSON.parse(cD) : cD
+        if (!this.LG.Im.cUU(UU, "itemState")) return;
+        const tU = this.LG.Im.getState(UU, "itemState");
+        "amount" === RU && gU !== tU.amount && (tU.creationTime = Date.now()), tU[RU] = "attributes" === RU ? JSON.parse(gU) : gU
       }
       dispose() {
-        if (!this.Lt) {
-          this.Lt = !0, this.ny.off("beforeInputs", this.onFrame), this.ny.off("wy", this.BX), this.queuedSetups.clear(), this.promotedSetups.clear();
-          for (const DD of this.deferredSetups.values()) AC.i.unsubscribe(DD);
-          this.deferredSetups.clear(), this.ny.Km.mJ(this.ny.aJ, this.ny.Km.names.mH);
-          for (const DD in this.allItems) this.ny.Km.deleteEntity(DD), delete this.allItems[DD];
-          for (const DD of [...this.detachers.keys()]) this.detach(DD);
-          (0, FC.b)(this.ny).clear();
-          for (const DD of (0, Rc.e)().client.iterateEntityIds())(0, Rc.e)().client.disposeEntity(DD)
+        if (!this.pC) {
+          this.pC = !0, this.LG.off("beforeInputs", this.onFrame), this.LG.off("HG", this.Bx), this.queuedSetups.clear(), this.promotedSetups.clear();
+          for (const UU of this.deferredSetups.values()) lR.p.unsubscribe(UU);
+          this.deferredSetups.clear(), this.LG.Im.bY(this.LG.AY, this.LG.Im.names.MI);
+          for (const UU in this.allItems) this.LG.Im.deleteEntity(UU), delete this.allItems[UU];
+          for (const UU of [...this.detachers.keys()]) this.detach(UU);
+          (0, OR.d)(this.LG).clear();
+          for (const UU of (0, sg.c)().client.iterateEntityIds())(0, sg.c)().client.disposeEntity(UU)
         }
       }
     }
-    const ec = [0, 0, 0];
+    const Mg = [0, 0, 0];
 
-    function uc(DD) {
-      if ("string" !== typeof DD) return;
-      const CD = DD.indexOf("|"),
-        cD = -1 === CD ? DD : DD.slice(0, CD),
-        ID = Fc();
-      return Object.hasOwn(ID, cD) ? ID[cD] : void 0
+    function Dg(UU) {
+      if ("string" !== typeof UU) return;
+      const RU = UU.indexOf("|"),
+        gU = -1 === RU ? UU : UU.slice(0, RU),
+        tU = Og();
+      return Object.hasOwn(tU, gU) ? tU[gU] : void 0
     }
-    const hc = new Set;
-    const rc = {
+    const Lg = new Set;
+    const Ng = {
       x: 0,
       y: 1,
       z: 2
     };
-    let Ac = null;
+    let lg = null;
 
-    function Fc() {
-      return null !== Ac || (Ac = {
-        ...Object.fromEntries(pc.j.map((DD => {
+    function Og() {
+      return null !== lg || (lg = {
+        ...Object.fromEntries(pg.m.map((UU => {
           const {
-            pB: CD
-          } = (0, kc.c)(DD);
-          return [DD, CD]
+            vc: RU
+          } = (0, yg.e)(UU);
+          return [UU, RU]
         }))),
-        Pebble: tc.c,
-        Snowball: tc.c,
-        "Snowball Launcher": tc.c,
-        "Reinforced Pebble": tc.c,
-        Bullet: tc.c,
-        "Reinforced Ball": tc.c,
-        Ball: tc.c,
-        Mango: tc.c,
-        "Moonstone Orb": tc.c,
-        ...Object.fromEntries(Ic.v.map((DD => [(0, gc.Xb)(DD), tc.c]))),
-        Arrow: tc.c,
-        "Arrow of Speed": tc.c,
-        "Arrow of Poison": tc.c,
-        "Arrow of Slowness": tc.c,
-        "Arrow of Weakness": tc.c,
-        "Arrow of Knockback": tc.c,
-        "Arrow of Strength": tc.c,
-        "Arrow of Invisibility": tc.c,
-        "Arrow of Jumping": tc.c,
-        "Arrow of Defense": tc.c,
-        "Arrow of Instant Healing": tc.c,
-        "Arrow of Instant Damage": tc.c,
-        "Arrow of Regeneration": tc.c,
-        "Arrow of Haste": tc.c,
-        "Arrow of Shield": tc.c,
-        "Arrow of Double Jump": tc.c,
-        "Arrow of Heat Resistance": tc.c,
-        "Arrow of X-Ray Vision": tc.c,
-        "Arrow of Mining Yield": tc.c,
-        "Arrow of Brain Rot": tc.c,
-        "Arrow of Milk": tc.c,
-        Fireball: tc.c,
-        "Bouncy Bomb": tc.c,
-        RPG: tc.c,
-        "Obby RPG": tc.c,
-        "Super RPG": tc.c,
-        "Grenade Launcher": tc.c,
-        Iceball: tc.c,
-        Coconut: tc.c,
-        "Splash Speed Potion": tc.c,
-        "Splash Defense Potion": tc.c,
-        "Splash Strength Potion": tc.c,
-        "Splash Invisibility Potion": tc.c,
-        "Splash Jump Potion": tc.c,
-        "Splash Knockback Potion": tc.c,
-        "Splash Poison Potion": tc.c,
-        "Splash Speed Potion II": tc.c,
-        "Splash Defense Potion II": tc.c,
-        "Splash Strength Potion II": tc.c,
-        "Splash Jump Potion II": tc.c,
-        "Splash Knockback Potion II": tc.c,
-        "Splash Poison Potion II": tc.c,
-        "Splash Slowness Potion": tc.c,
-        "Splash Slowness Potion II": tc.c,
-        "Splash Weakness Potion": tc.c,
-        "Splash Weakness Potion II": tc.c,
-        "Splash Milk Potion": tc.c,
-        "Splash Instant Damage Potion": tc.c,
-        "Splash Instant Damage Potion II": tc.c,
-        "Splash Instant Healing Potion": tc.c,
-        "Splash Instant Healing Potion II": tc.c,
-        "Splash Regeneration Potion": tc.c,
-        "Splash Regeneration Potion II": tc.c,
-        "Splash Haste Potion": tc.c,
-        "Splash Haste Potion II": tc.c,
-        "Splash Shield Potion": tc.c,
-        "Splash Shield Potion II": tc.c,
-        "Splash Double Jump Potion": tc.c,
-        "Splash Heat Resistance Potion": tc.c,
-        "Splash X-Ray Vision Potion": tc.c,
-        "Splash Mining Yield Potion": tc.c,
-        "Splash Mining Yield Potion II": tc.c,
-        "Splash Brain Rot Potion": tc.c,
-        "Yellow Paintball Gun": tc.c,
-        "White Paintball Gun": tc.c,
-        "Red Paintball Gun": tc.c,
-        "Purple Paintball Gun": tc.c,
-        "Pink Paintball Gun": tc.c,
-        "Orange Paintball Gun": tc.c,
-        "Magenta Paintball Gun": tc.c,
-        "Lime Paintball Gun": tc.c,
-        "Light Gray Paintball Gun": tc.c,
-        "Light Blue Paintball Gun": tc.c,
-        "Green Paintball Gun": tc.c,
-        "Gray Paintball Gun": tc.c,
-        "Cyan Paintball Gun": tc.c,
-        "Brown Paintball Gun": tc.c,
-        "Blue Paintball Gun": tc.c,
-        "Black Paintball Gun": tc.c,
-        "Yellow Heavy Paintball Gun": tc.c,
-        "White Heavy Paintball Gun": tc.c,
-        "Red Heavy Paintball Gun": tc.c,
-        "Purple Heavy Paintball Gun": tc.c,
-        "Pink Heavy Paintball Gun": tc.c,
-        "Orange Heavy Paintball Gun": tc.c,
-        "Magenta Heavy Paintball Gun": tc.c,
-        "Lime Heavy Paintball Gun": tc.c,
-        "Light Gray Heavy Paintball Gun": tc.c,
-        "Light Blue Heavy Paintball Gun": tc.c,
-        "Green Heavy Paintball Gun": tc.c,
-        "Gray Heavy Paintball Gun": tc.c,
-        "Cyan Heavy Paintball Gun": tc.c,
-        "Brown Heavy Paintball Gun": tc.c,
-        "Blue Heavy Paintball Gun": tc.c,
-        "Black Heavy Paintball Gun": tc.c,
-        "Toxin Ball": tc.c,
-        "Splash Aura XP Potion": tc.c,
-        "Splash Aura XP Potion II": tc.c,
-        "Arrow of Aura XP": tc.c,
-        Firecracker: tc.c,
-        "Rainbow Firecracker": tc.c,
-        "White Firecracker": tc.c,
-        "Orange Firecracker": tc.c,
-        "Magenta Firecracker": tc.c,
-        "Light Blue Firecracker": tc.c,
-        "Yellow Firecracker": tc.c,
-        "Lime Firecracker": tc.c,
-        "Pink Firecracker": tc.c,
-        "Gray Firecracker": tc.c,
-        "Light Gray Firecracker": tc.c,
-        "Cyan Firecracker": tc.c,
-        "Purple Firecracker": tc.c,
-        "Blue Firecracker": tc.c,
-        "Brown Firecracker": tc.c,
-        "Green Firecracker": tc.c,
-        "Red Firecracker": tc.c,
-        "Black Firecracker": tc.c,
-        "Firecracker Pebble": tc.c,
-        "Rainbow Firecracker Pebble": tc.c,
-        "White Firecracker Pebble": tc.c,
-        "Orange Firecracker Pebble": tc.c,
-        "Magenta Firecracker Pebble": tc.c,
-        "Light Blue Firecracker Pebble": tc.c,
-        "Yellow Firecracker Pebble": tc.c,
-        "Lime Firecracker Pebble": tc.c,
-        "Pink Firecracker Pebble": tc.c,
-        "Gray Firecracker Pebble": tc.c,
-        "Light Gray Firecracker Pebble": tc.c,
-        "Cyan Firecracker Pebble": tc.c,
-        "Purple Firecracker Pebble": tc.c,
-        "Blue Firecracker Pebble": tc.c,
-        "Brown Firecracker Pebble": tc.c,
-        "Green Firecracker Pebble": tc.c,
-        "Red Firecracker Pebble": tc.c,
-        "Black Firecracker Pebble": tc.c,
-        "Blinding Pebble": tc.c,
-        Poop: tc.c,
-        "Wood Boomerang": tc.c,
-        "Stone Boomerang": tc.c,
-        "Iron Boomerang": tc.c,
-        "Gold Boomerang": tc.c,
-        "Diamond Boomerang": tc.c,
-        "Amethite Boomerang": tc.c,
-        "Magmasteel Boomerang": tc.c,
-        "Rubellite Boomerang": tc.c,
-        "Serpentite Boomerang": tc.c,
-        "Moonstone Boomerang": tc.c,
-        "67 Base Projectile": tc.c,
-        "67 Boosted Projectile": tc.c,
-        "Capitano Grenade": tc.c,
-        "Scatter Pellet": tc.c,
-        "Lucky Bomb": tc.c,
-        "Unlucky Bomb": tc.c,
-        "Swap Orb": tc.c,
-        Mesh: Vc,
-        AudioEntity: jc
-      }), Ac
+        Pebble: Cg.c,
+        Snowball: Cg.c,
+        "Snowball Launcher": Cg.c,
+        "Reinforced Pebble": Cg.c,
+        Bullet: Cg.c,
+        "Reinforced Ball": Cg.c,
+        Ball: Cg.c,
+        Mango: Cg.c,
+        "Moonstone Orb": Cg.c,
+        ...Object.fromEntries(tg.p.map((UU => [(0, fg.$b)(UU), Cg.c]))),
+        Arrow: Cg.c,
+        "Arrow of Speed": Cg.c,
+        "Arrow of Poison": Cg.c,
+        "Arrow of Slowness": Cg.c,
+        "Arrow of Weakness": Cg.c,
+        "Arrow of Knockback": Cg.c,
+        "Arrow of Strength": Cg.c,
+        "Arrow of Invisibility": Cg.c,
+        "Arrow of Jumping": Cg.c,
+        "Arrow of Defense": Cg.c,
+        "Arrow of Instant Healing": Cg.c,
+        "Arrow of Instant Damage": Cg.c,
+        "Arrow of Regeneration": Cg.c,
+        "Arrow of Haste": Cg.c,
+        "Arrow of Shield": Cg.c,
+        "Arrow of Double Jump": Cg.c,
+        "Arrow of Heat Resistance": Cg.c,
+        "Arrow of X-Ray Vision": Cg.c,
+        "Arrow of Mining Yield": Cg.c,
+        "Arrow of Brain Rot": Cg.c,
+        "Arrow of Milk": Cg.c,
+        Fireball: Cg.c,
+        "Bouncy Bomb": Cg.c,
+        RPG: Cg.c,
+        "Obby RPG": Cg.c,
+        "Super RPG": Cg.c,
+        "Grenade Launcher": Cg.c,
+        Iceball: Cg.c,
+        Coconut: Cg.c,
+        "Splash Speed Potion": Cg.c,
+        "Splash Defense Potion": Cg.c,
+        "Splash Strength Potion": Cg.c,
+        "Splash Invisibility Potion": Cg.c,
+        "Splash Jump Potion": Cg.c,
+        "Splash Knockback Potion": Cg.c,
+        "Splash Poison Potion": Cg.c,
+        "Splash Speed Potion II": Cg.c,
+        "Splash Defense Potion II": Cg.c,
+        "Splash Strength Potion II": Cg.c,
+        "Splash Jump Potion II": Cg.c,
+        "Splash Knockback Potion II": Cg.c,
+        "Splash Poison Potion II": Cg.c,
+        "Splash Slowness Potion": Cg.c,
+        "Splash Slowness Potion II": Cg.c,
+        "Splash Weakness Potion": Cg.c,
+        "Splash Weakness Potion II": Cg.c,
+        "Splash Milk Potion": Cg.c,
+        "Splash Instant Damage Potion": Cg.c,
+        "Splash Instant Damage Potion II": Cg.c,
+        "Splash Instant Healing Potion": Cg.c,
+        "Splash Instant Healing Potion II": Cg.c,
+        "Splash Regeneration Potion": Cg.c,
+        "Splash Regeneration Potion II": Cg.c,
+        "Splash Haste Potion": Cg.c,
+        "Splash Haste Potion II": Cg.c,
+        "Splash Shield Potion": Cg.c,
+        "Splash Shield Potion II": Cg.c,
+        "Splash Double Jump Potion": Cg.c,
+        "Splash Heat Resistance Potion": Cg.c,
+        "Splash X-Ray Vision Potion": Cg.c,
+        "Splash Mining Yield Potion": Cg.c,
+        "Splash Mining Yield Potion II": Cg.c,
+        "Splash Brain Rot Potion": Cg.c,
+        "Yellow Paintball Gun": Cg.c,
+        "White Paintball Gun": Cg.c,
+        "Red Paintball Gun": Cg.c,
+        "Purple Paintball Gun": Cg.c,
+        "Pink Paintball Gun": Cg.c,
+        "Orange Paintball Gun": Cg.c,
+        "Magenta Paintball Gun": Cg.c,
+        "Lime Paintball Gun": Cg.c,
+        "Light Gray Paintball Gun": Cg.c,
+        "Light Blue Paintball Gun": Cg.c,
+        "Green Paintball Gun": Cg.c,
+        "Gray Paintball Gun": Cg.c,
+        "Cyan Paintball Gun": Cg.c,
+        "Brown Paintball Gun": Cg.c,
+        "Blue Paintball Gun": Cg.c,
+        "Black Paintball Gun": Cg.c,
+        "Yellow Heavy Paintball Gun": Cg.c,
+        "White Heavy Paintball Gun": Cg.c,
+        "Red Heavy Paintball Gun": Cg.c,
+        "Purple Heavy Paintball Gun": Cg.c,
+        "Pink Heavy Paintball Gun": Cg.c,
+        "Orange Heavy Paintball Gun": Cg.c,
+        "Magenta Heavy Paintball Gun": Cg.c,
+        "Lime Heavy Paintball Gun": Cg.c,
+        "Light Gray Heavy Paintball Gun": Cg.c,
+        "Light Blue Heavy Paintball Gun": Cg.c,
+        "Green Heavy Paintball Gun": Cg.c,
+        "Gray Heavy Paintball Gun": Cg.c,
+        "Cyan Heavy Paintball Gun": Cg.c,
+        "Brown Heavy Paintball Gun": Cg.c,
+        "Blue Heavy Paintball Gun": Cg.c,
+        "Black Heavy Paintball Gun": Cg.c,
+        "Toxin Ball": Cg.c,
+        "Splash Aura XP Potion": Cg.c,
+        "Splash Aura XP Potion II": Cg.c,
+        "Arrow of Aura XP": Cg.c,
+        Firecracker: Cg.c,
+        "Rainbow Firecracker": Cg.c,
+        "White Firecracker": Cg.c,
+        "Orange Firecracker": Cg.c,
+        "Magenta Firecracker": Cg.c,
+        "Light Blue Firecracker": Cg.c,
+        "Yellow Firecracker": Cg.c,
+        "Lime Firecracker": Cg.c,
+        "Pink Firecracker": Cg.c,
+        "Gray Firecracker": Cg.c,
+        "Light Gray Firecracker": Cg.c,
+        "Cyan Firecracker": Cg.c,
+        "Purple Firecracker": Cg.c,
+        "Blue Firecracker": Cg.c,
+        "Brown Firecracker": Cg.c,
+        "Green Firecracker": Cg.c,
+        "Red Firecracker": Cg.c,
+        "Black Firecracker": Cg.c,
+        "Firecracker Pebble": Cg.c,
+        "Rainbow Firecracker Pebble": Cg.c,
+        "White Firecracker Pebble": Cg.c,
+        "Orange Firecracker Pebble": Cg.c,
+        "Magenta Firecracker Pebble": Cg.c,
+        "Light Blue Firecracker Pebble": Cg.c,
+        "Yellow Firecracker Pebble": Cg.c,
+        "Lime Firecracker Pebble": Cg.c,
+        "Pink Firecracker Pebble": Cg.c,
+        "Gray Firecracker Pebble": Cg.c,
+        "Light Gray Firecracker Pebble": Cg.c,
+        "Cyan Firecracker Pebble": Cg.c,
+        "Purple Firecracker Pebble": Cg.c,
+        "Blue Firecracker Pebble": Cg.c,
+        "Brown Firecracker Pebble": Cg.c,
+        "Green Firecracker Pebble": Cg.c,
+        "Red Firecracker Pebble": Cg.c,
+        "Black Firecracker Pebble": Cg.c,
+        "Blinding Pebble": Cg.c,
+        Poop: Cg.c,
+        "Wood Boomerang": Cg.c,
+        "Stone Boomerang": Cg.c,
+        "Iron Boomerang": Cg.c,
+        "Gold Boomerang": Cg.c,
+        "Diamond Boomerang": Cg.c,
+        "Amethite Boomerang": Cg.c,
+        "Magmasteel Boomerang": Cg.c,
+        "Rubellite Boomerang": Cg.c,
+        "Serpentite Boomerang": Cg.c,
+        "Moonstone Boomerang": Cg.c,
+        "67 Base Projectile": Cg.c,
+        "67 Boosted Projectile": Cg.c,
+        "Capitano Grenade": Cg.c,
+        "Scatter Pellet": Cg.c,
+        "Lucky Bomb": Cg.c,
+        "Unlucky Bomb": Cg.c,
+        "Swap Orb": Cg.c,
+        Mesh: Vg,
+        AudioEntity: Xg
+      }), lg
     }
   },
-  38344: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => iD,
-      d: () => fD
+  38544: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => EU,
+      h: () => PU
     });
-    var ID = cD(624),
-      pD = cD(37110);
-    const iD = 4e4;
-    class fD {
+    var tU = gU(581),
+      pU = gU(37258);
+    const EU = 4e4;
+    class PU {
       constructor() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now;
-        this.now = DD, this.editedAt = new Map, this.lastChunkX = NaN, this.lastChunkY = NaN, this.lastChunkZ = NaN, this.lastChunkId = ""
+        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now;
+        this.now = UU, this.editedAt = new Map, this.lastChunkX = NaN, this.lastChunkY = NaN, this.lastChunkZ = NaN, this.lastChunkId = ""
       }
-      noteEdit(DD, CD, cD) {
-        const iD = (0, ID.I)(DD),
-          fD = (0, ID.I)(CD),
-          bD = (0, ID.I)(cD),
-          QD = this.now();
-        if (iD !== this.lastChunkX || fD !== this.lastChunkY || bD !== this.lastChunkZ) {
-          this.lastChunkX = iD, this.lastChunkY = fD, this.lastChunkZ = bD, this.lastChunkId = (0, pD.b)(iD, fD, bD), this.editedAt.delete(this.lastChunkId), this.editedAt.set(this.lastChunkId, QD);
-          for (const [DD, CD] of this.editedAt) {
-            if (CD >= QD - 3e5) break;
-            this.editedAt.delete(DD)
+      noteEdit(UU, RU, gU) {
+        const EU = (0, tU.K)(UU),
+          PU = (0, tU.K)(RU),
+          TU = (0, tU.K)(gU),
+          qU = this.now();
+        if (EU !== this.lastChunkX || PU !== this.lastChunkY || TU !== this.lastChunkZ) {
+          this.lastChunkX = EU, this.lastChunkY = PU, this.lastChunkZ = TU, this.lastChunkId = (0, pU.d)(EU, PU, TU), this.editedAt.delete(this.lastChunkId), this.editedAt.set(this.lastChunkId, qU);
+          for (const [UU, RU] of this.editedAt) {
+            if (RU >= qU - 3e5) break;
+            this.editedAt.delete(UU)
           }
-        } else this.editedAt.set(this.lastChunkId, QD)
+        } else this.editedAt.set(this.lastChunkId, qU)
       }
-      chunksEditedSince(DD) {
-        const CD = [];
-        for (const [cD, ID] of this.editedAt) ID >= DD && CD.push(cD);
-        return CD
+      chunksEditedSince(UU) {
+        const RU = [];
+        for (const [gU, tU] of this.editedAt) tU >= UU && RU.push(gU);
+        return RU
       }
     }
   },
-  38427: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => wC,
-      c: () => lC,
-      e: () => UC,
-      h: () => LC
+  38628: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => KR,
+      d: () => vR,
+      h: () => bR,
+      i: () => dR
     });
-    var ID = cD(3501),
-      pD = cD(8456),
-      iD = cD(36075),
-      fD = cD(1425),
-      bD = cD(36113),
-      QD = cD(38373),
-      wD = cD(38314),
-      SD = cD(3583),
-      BD = cD(37252),
-      yD = cD(1240),
-      MD = cD(312),
-      tD = cD(20),
-      ZD = cD(1928),
-      oD = cD(90),
-      vD = cD(36),
-      ND = cD(1961),
-      gD = cD(1865),
-      XD = cD(2773);
-    class mD {
-      constructor(DD) {
-        this.storeForMs = DD, this.clicks = new XD.b
+    var tU = gU(3349),
+      pU = gU(8400),
+      EU = gU(36266),
+      PU = gU(1403),
+      TU = gU(36307),
+      qU = gU(38569),
+      KU = gU(38517),
+      cU = gU(3420),
+      GU = gU(37399),
+      jU = gU(1238),
+      uU = gU(299),
+      CU = gU(24),
+      hU = gU(1821),
+      QU = gU(96),
+      eU = gU(34),
+      WU = gU(1844),
+      fU = gU(1771),
+      xU = gU(2677);
+    class mU {
+      constructor(UU) {
+        this.storeForMs = UU, this.clicks = new xU.d
       }
       click() {
         this.clicks.enqueue(Date.now());
-        const DD = Date.now() - this.storeForMs;
-        for (; this.clicks.size > 0 && this.clicks.peek() < DD;) this.clicks.dequeue()
+        const UU = Date.now() - this.storeForMs;
+        for (; this.clicks.size > 0 && this.clicks.peek() < UU;) this.clicks.dequeue()
       }
-      getNumClicksInMs(DD) {
-        let CD = 0;
-        return this.clicks.forEach((cD => {
-          cD > Date.now() - DD && CD++
-        })), CD
+      getNumClicksInMs(UU) {
+        let RU = 0;
+        return this.clicks.forEach((gU => {
+          gU > Date.now() - UU && RU++
+        })), RU
       }
-      getMaxClickSeparationInMs(DD) {
+      getMaxClickSeparationInMs(UU) {
         if (0 === this.clicks.size) return this.storeForMs;
-        let CD = 0,
-          cD = Date.now() - DD;
-        this.clicks.forEach((ID => {
-          ID < Date.now() - DD || (CD = Math.max(CD, Math.abs(ID - cD)), cD = ID)
+        let RU = 0,
+          gU = Date.now() - UU;
+        this.clicks.forEach((tU => {
+          tU < Date.now() - UU || (RU = Math.max(RU, Math.abs(tU - gU)), gU = tU)
         }));
-        const ID = Math.abs(Date.now() - cD);
-        return Math.max(CD, ID)
+        const tU = Math.abs(Date.now() - gU);
+        return Math.max(RU, tU)
       }
     }
-    class nD {
-      constructor(DD) {
-        this.storeForMs = DD, this.clickDownDurations = new XD.b
+    class IU {
+      constructor(UU) {
+        this.storeForMs = UU, this.clickDownDurations = new xU.d
       }
-      registerClickDownDuration(DD) {
+      registerClickDownDuration(UU) {
         this.clickDownDurations.enqueue({
-          dur: DD,
+          dur: UU,
           atTime: Date.now()
         });
-        const CD = Date.now() - this.storeForMs;
-        for (; this.clickDownDurations.size > 0 && this.clickDownDurations.peek().atTime < CD;) this.clickDownDurations.dequeue()
+        const RU = Date.now() - this.storeForMs;
+        for (; this.clickDownDurations.size > 0 && this.clickDownDurations.peek().atTime < RU;) this.clickDownDurations.dequeue()
       }
-      clickDownDurationsCheck(DD) {
-        if (DD > this.storeForMs) return console.error("overDuration is greater than storeForMs"), "0:0";
-        let CD = 0,
-          cD = 0;
-        return this.clickDownDurations.forEach((ID => {
-          ID.atTime > Date.now() - DD && (CD++, cD = Math.max(cD, ID.dur))
-        })), `${CD}:${cD}`
+      clickDownDurationsCheck(UU) {
+        if (UU > this.storeForMs) return console.error("overDuration is greater than storeForMs"), "0:0";
+        let RU = 0,
+          gU = 0;
+        return this.clickDownDurations.forEach((tU => {
+          tU.atTime > Date.now() - UU && (RU++, gU = Math.max(gU, tU.dur))
+        })), `${RU}:${gU}`
       }
     }
-    var OD = cD(35908),
-      PD = cD(38431),
-      HD = cD(16),
-      UD = cD(2642),
-      xD = cD(1317),
-      qD = cD(38356),
-      JD = cD(4238),
-      KD = cD(120),
-      aD = cD(37523),
-      VD = cD(37754),
-      zD = cD(624),
-      jD = cD(35906),
-      lD = cD(11),
-      LD = cD(9141),
-      TD = cD(1221),
-      GD = cD(194),
-      RD = cD(38436),
-      kD = cD(38443),
-      dD = cD(37559),
-      YD = cD(38455),
-      WD = cD(37472),
-      sD = cD(3193),
-      ED = cD(1627),
-      eD = cD(35996),
-      uD = cD(2727),
-      hD = cD(38447),
-      rD = cD(37329);
-    const AD = {
+    var JU = gU(36072),
+      wU = gU(38631),
+      nU = gU(21),
+      bU = gU(2551),
+      oU = gU(1316),
+      ZU = gU(38549),
+      aU = gU(4099),
+      YU = gU(135),
+      BU = gU(37711),
+      VU = gU(37940),
+      rU = gU(581),
+      XU = gU(36066),
+      vU = gU(10),
+      dU = gU(9078),
+      HU = gU(1217),
+      SU = gU(189),
+      sU = gU(38640),
+      yU = gU(38646),
+      kU = gU(37749),
+      FU = gU(38660),
+      iU = gU(37635),
+      AU = gU(3099),
+      zU = gU(1567),
+      MU = gU(36191),
+      DU = gU(2624),
+      LU = gU(38654),
+      NU = gU(37479);
+    const lU = {
       forward: "freeCamForward",
       backward: "freeCamBackward",
       left: "freeCamLeft",
@@ -2908,1158 +2908,1264 @@ export const modules = {
       crouch: "freeCamDown"
     };
 
-    function FD() {
-      var DD, CD;
-      return !(null === (DD = (0, UD.e)().client) || void 0 === DD || null === (CD = DD.freeCameraController) || void 0 === CD || !CD.movesFly())
+    function OU() {
+      var UU, RU;
+      return !(null === (UU = (0, bU.c)().client) || void 0 === UU || null === (RU = UU.freeCameraController) || void 0 === RU || !RU.movesFly())
     }
 
-    function DC(DD) {
-      const CD = DD.on.bind(DD);
-      DD.on = (DD, cD) => {
-        ND.x.has(DD) ? CD(DD, cD) : CD(DD, (CD => {
-          var ID;
-          return null !== (ID = (0, UD.e)().client) && void 0 !== ID && ID.isReplayMode() ? function(DD) {
-            return DD in AD
-          }(DD) && FD() ? cD(CD) : void 0 : cD(CD)
+    function UR(UU) {
+      const RU = UU.on.bind(UU);
+      UU.on = (UU, gU) => {
+        WU.C.has(UU) ? RU(UU, gU) : RU(UU, (RU => {
+          var tU;
+          return null !== (tU = (0, bU.c)().client) && void 0 !== tU && tU.isReplayMode() ? function(UU) {
+            return UU in lU
+          }(UU) && OU() ? gU(RU) : void 0 : gU(RU)
         }))
       }
     }
-    const CC = 5e3,
-      cC = 1;
-    let IC, pC = cC,
-      iC = 0;
-    const fC = !0;
-    let bC = fC;
-    ZD.d.subscribe("_ignoreBasicBoards", (DD => {
-      bC = DD
-    })), (0, ID.onGameReset)((() => {
-      bC = fC
+    const RR = 5e3,
+      gR = 1;
+    let tR, pR = gR,
+      ER = 0;
+    const PR = !0;
+    let TR = PR;
+    hU.b.subscribe("_ignoreBasicBoards", (UU => {
+      TR = UU
+    })), (0, tU.onGameReset)((() => {
+      TR = PR
     }));
-    let QC = null;
-    const wC = () => QC;
-    let SC, BC, yC;
-    var MC, tC, ZC, oC, vC, NC, gC, XC, mC;
-    const nC = [2, 0, 1, "h", 214, 9, "a", 239, 163, 4, 8, 255, "length", "c", "d", 125, 234, "f", "undefined", void 0, 58, 63, 6, "fromCodePoint", 7, 12, "push", "b", 3, 49, "i", 113, 91, 151, 8191, 88, 13, 14, 133, !1, 179, "g", 5, 33554432, 67108864, 212, 115, 56, "e", 227, !0, 241, 114, 16, "_", 198, 140, 70, 164, 24, 152, 220, 248, 154, "H", 98, 159, 22, 10, 105, 226, 50, null, "=", ";", 225, 89, " ", 108, 75, 213, 60];
+    let qR = null;
+    const KR = () => qR;
+    let cR, GR, jR;
+    var uR, CR, hR, QR, eR, WR, fR, xR, mR;
+    const IR = [2, 0, 1, 55, 96, "a", 219, 7, "e", "f", 4, 8, 255, "length", "b", 40, "d", 134, 195, "undefined", void 0, 28, "c", 63, 6, "fromCodePoint", 12, "push", 81, 204, 152, 31, 47, 230, 86, 91, 118, 8191, 88, 13, 14, 3, 227, 9, 222, 5, 205, 1023, 214, 65536, 10, 55296, 56320, 225, 129, 128, 15, 18, 137, 52, 90, 64, 46, "i", "g", 164, 192, 209, 216, 178, 22, 224, 240, !1, 188, 108, 66, 60, "h", 174, 127, 43, 220, 92, 25, 237, 191, 149, !0, 228, 49, 65, 104, 172, "js", 166, 68, 157, 32, 241, 215, 187, 24, null, 146, 202, 162, 181, 239, 221, 156, 95, 232, 61, 100, 97, 175, 56, 167, 223];
 
-    function OC(...DD) {
-      return DD[nC[12]] = nC[2], typeof oC !== nC[18] && oC ? (new oC).decode(new vC(DD[nC[1]])) : typeof NC !== nC[18] && NC ? NC.from(DD[nC[1]]).toString("utf-8") : mC(DD[nC[1]])
+    function JR(...UU) {
+      return UU[IR[13]] = IR[2], typeof QR !== IR[19] && QR ? (new QR).decode(new eR(UU[IR[1]])) : typeof WR !== IR[19] && WR ? WR.from(UU[IR[1]]).toString("utf-8") : mR(UU[IR[1]])
     }
 
-    function PC() {}
+    function wR() {}
 
-    function HC() {
-      HC = function() {}
+    function nR() {
+      nR = function() {}
     }
 
-    function UC(DD) {
-      function CD() {
-        return DD.Km.FDD(DD.aJ)
+    function bR(UU) {
+      function RU() {
+        return UU.Im.QRU(UU.AY)
       }
-      DC(DD.inputs.down), DC(DD.inputs.up);
-      for (const ID of ["forward", "backward", "left", "right", "sprint", "jump", "crouch"]) {
-        const CD = (CD, cD) => {
-          var pD, iD;
-          if (FD()) {
-            var fD;
-            const pD = AD[ID];
-            var bD, QD;
-            if (pD) null === (bD = (0, UD.e)().client) || void 0 === bD || null === (QD = bD.freeCameraController) || void 0 === QD || QD.handlefreeCamKeyPress(pD, CD, cD);
-            return void(cD || null !== (fD = (0, UD.e)().client) && void 0 !== fD && fD.isReplayMode() || (DD.Km.fCD()[ID] = !1))
+      UR(UU.inputs.down), UR(UU.inputs.up);
+      for (const tU of ["forward", "backward", "left", "right", "sprint", "jump", "crouch"]) {
+        const RU = (RU, gU) => {
+          var pU, EU;
+          if (OU()) {
+            var PU;
+            const pU = lU[tU];
+            var TU, qU;
+            if (pU) null === (TU = (0, bU.c)().client) || void 0 === TU || null === (qU = TU.freeCameraController) || void 0 === qU || qU.handlefreeCamKeyPress(pU, RU, gU);
+            return void(gU || null !== (PU = (0, bU.c)().client) && void 0 !== PU && PU.isReplayMode() || (UU.Im.JRU()[tU] = !1))
           }
-          if (null !== (pD = (0, UD.e)().client) && void 0 !== pD && null !== (iD = pD.freeCameraController) && void 0 !== iD && iD.isKeyPressOverriden(CD)) return;
-          DD.Km.fCD()[ID] = cD
+          if (null !== (pU = (0, bU.c)().client) && void 0 !== pU && null !== (EU = pU.freeCameraController) && void 0 !== EU && EU.isKeyPressOverriden(RU)) return;
+          UU.Im.JRU()[tU] = gU
         };
-        DD.inputs.down.on(ID, (DD => CD(DD, !0))), DD.inputs.up.on(ID, (DD => CD(DD, !1)))
+        UU.inputs.down.on(tU, (UU => RU(UU, !0))), UU.inputs.up.on(tU, (UU => RU(UU, !1)))
       }
-      DD.inputs.down.on("crouch", (() => {
-        if (FD()) return;
-        if (!DD.qm.canCrouch) return;
-        const CD = DD.Km.fCD();
-        HD.d.get("clientEscMenuOptions").crouchIsToggle && (CD.crouchToggled = !CD.crouchToggled && !CD.padSneakToggled), CD.padSneakToggled = !1
+      UU.inputs.down.on("crouch", (() => {
+        if (OU()) return;
+        if (!UU.Qm.canCrouch) return;
+        const RU = UU.Im.JRU();
+        nU.b.get("clientEscMenuOptions").crouchIsToggle && (RU.crouchToggled = !RU.crouchToggled && !RU.padSneakToggled), RU.padSneakToggled = !1
       }));
-      const cD = () => {
-        const DD = CD();
-        DD.isGun() && DD.inaccuracyCalculator.jump()
+      const gU = () => {
+        const UU = RU();
+        UU.isGun() && UU.inaccuracyCalculator.jump()
       };
-      DD.inputs.down.on("jump", (DD => {
-        FD() || (cD(), SC(DD))
+      UU.inputs.down.on("jump", (UU => {
+        OU() || (gU(), cR(UU))
       }));
-      for (const ID of ND.l) DD.inputs.down.on(ID, (DD => {
-        var CD, cD;
-        null !== (CD = (0, UD.e)().client) && void 0 !== CD && null !== (cD = CD.freeCameraController) && void 0 !== cD && cD.handlefreeCamKeyPress(ID, DD, !0) && (DD.preventDefault(), DD.stopPropagation())
-      })), DD.inputs.up.on(ID, (DD => {
-        var CD, cD;
-        null !== (CD = (0, UD.e)().client) && void 0 !== CD && null !== (cD = CD.freeCameraController) && void 0 !== cD && cD.handlefreeCamKeyPress(ID, DD, !1) && (DD.preventDefault(), DD.stopPropagation())
+      for (const tU of WU.l) UU.inputs.down.on(tU, (UU => {
+        var RU, gU;
+        null !== (RU = (0, bU.c)().client) && void 0 !== RU && null !== (gU = RU.freeCameraController) && void 0 !== gU && gU.handlefreeCamKeyPress(tU, UU, !0) && (UU.preventDefault(), UU.stopPropagation())
+      })), UU.inputs.up.on(tU, (UU => {
+        var RU, gU;
+        null !== (RU = (0, bU.c)().client) && void 0 !== RU && null !== (gU = RU.freeCameraController) && void 0 !== gU && gU.handlefreeCamKeyPress(tU, UU, !1) && (UU.preventDefault(), UU.stopPropagation())
       }));
-      DD.inputs.down.on("recordGame", (() => {
-        var DD, CD;
-        null === (DD = (0, UD.e)().client) || void 0 === DD || null === (CD = DD.gameRecorder) || void 0 === CD || CD.toggleRecording()
-      })), DD.inputs.down.on("recordClip", (() => {
-        var DD, CD;
-        (0, OD.d)() || null === (DD = (0, UD.e)().client) || void 0 === DD || null === (CD = DD.gameRecorder) || void 0 === CD || CD.saveClip()
+      UU.inputs.down.on("recordGame", (() => {
+        var UU, RU;
+        null === (UU = (0, bU.c)().client) || void 0 === UU || null === (RU = UU.gameRecorder) || void 0 === RU || RU.toggleRecording()
+      })), UU.inputs.down.on("recordClip", (() => {
+        var UU, RU;
+        (0, JU.c)() || null === (UU = (0, bU.c)().client) || void 0 === UU || null === (RU = UU.gameRecorder) || void 0 === RU || RU.saveClip()
       }));
-      for (const ID of ND.x) DD.inputs.down.on(ID, (() => {
-        var DD;
-        if ((0, PD.d)()) return;
-        if ("replayViewerOpen" === ID) return void tD.i.Uo("replayViewer|requested", "toggle");
-        const CD = null === (DD = (0, UD.e)().client) || void 0 === DD ? void 0 : DD.gameReplayer;
-        ((0, OD.d)() || null !== CD && void 0 !== CD && CD.isReplayMode()) && (null === CD || void 0 === CD || CD.handleAction(ID))
+      for (const tU of WU.C) UU.inputs.down.on(tU, (() => {
+        var UU;
+        if ((0, wU.b)()) return;
+        if ("replayViewerOpen" === tU) return void CU.p.yh("replayViewer|requested", "toggle");
+        const RU = null === (UU = (0, bU.c)().client) || void 0 === UU ? void 0 : UU.gameReplayer;
+        ((0, JU.c)() || null !== RU && void 0 !== RU && RU.isReplayMode()) && (null === RU || void 0 === RU || RU.handleAction(tU))
       }));
-      const fD = new mD(3e4),
-        BD = new nD(4e4);
-      let vD = 0;
-      const XD = DD => {
-          let CD = 0,
-            cD = null;
-          const ID = CD => null !== CD && CD === cD && (cD = null, DD(), !0);
+      const PU = new mU(3e4),
+        GU = new IU(4e4);
+      let eU = 0;
+      const xU = UU => {
+          let RU = 0,
+            gU = null;
+          const tU = RU => null !== RU && RU === gU && (gU = null, UU(), !0);
           return {
-            press: () => (CD++, (0, RD.c)() || (ID(cD), cD = CD), CD),
-            owns: DD => DD === cD,
-            release: ID
+            press: () => (RU++, (0, sU.d)() || (tU(gU), gU = RU), RU),
+            owns: UU => UU === gU,
+            release: tU
           }
         },
-        JD = (DD, cD) => {
-          cD && LC(yD.d.TouchDownFirePrimary), DD ? LD() : ((0, VD.c)(), CD().FCD()), cD || LC(yD.d.DownFirePrimary), lC(!0), fD.click();
-          const pD = fD.getMaxClickSeparationInMs(3e4) < 1e3 / 30,
-            iD = fD.getMaxClickSeparationInMs(1e4) < 20,
-            bD = fD.getMaxClickSeparationInMs(4e3) < 1e3 / 70;
-          if (pD || iD || bD) {
-            let DD;
-            if (pD) DD = 30;
-            else if (iD) DD = 50;
+        aU = (UU, gU) => {
+          gU && dR(jU.b.TouchDownFirePrimary), UU ? dU() : ((0, VU.h)(), RU().hgU()), gU || dR(jU.b.DownFirePrimary), vR(!0), PU.click();
+          const pU = PU.getMaxClickSeparationInMs(3e4) < 1e3 / 30,
+            EU = PU.getMaxClickSeparationInMs(1e4) < 20,
+            TU = PU.getMaxClickSeparationInMs(4e3) < 1e3 / 70;
+          if (pU || EU || TU) {
+            let UU;
+            if (pU) UU = 30;
+            else if (EU) UU = 50;
             else {
-              if (!bD) throw new Error("???");
-              DD = 70
-            }(0, ID.sendColyMessage)(SD.Qj, DD)
+              if (!TU) throw new Error("???");
+              UU = 70
+            }(0, tU.sendColyMessage)(cU.Wj, UU)
           }
         },
-        KD = XD((() => {
-          const DD = Date.now() - vD;
-          BD.registerClickDownDuration(DD), CD().hCD(), LC(yD.d.UpFirePrimary), lC(!1);
-          const cD = BD.clickDownDurationsCheck(4e4);
-          (0, ID.sendColyMessage)(SD.hg, cD)
+        YU = xU((() => {
+          const UU = Date.now() - eU;
+          GU.registerClickDownDuration(UU), RU().jgU(), dR(jU.b.UpFirePrimary), vR(!1);
+          const gU = GU.clickDownDurationsCheck(4e4);
+          (0, tU.sendColyMessage)(cU.Cg, gU)
         }));
-      let aD = 0;
-      DD.inputs.down.on("primary-fire", (function(DD) {
-        aD = KD.press(), KD.owns(aD) && (vD = Date.now(), Math.abs(performance.now() - DD.timeStamp) > 5e3 || (JD(DD.altKey, "changedTouches" in DD), SC(DD)))
-      })), DD.inputs.up.on("primary-fire", (function(DD) {
-        KD.release(aD) && SC(DD, !0)
+      let BU = 0;
+      UU.inputs.down.on("primary-fire", (function(UU) {
+        BU = YU.press(), YU.owns(BU) && (eU = Date.now(), Math.abs(performance.now() - UU.timeStamp) > 5e3 || (aU(UU.altKey, "changedTouches" in UU), cR(UU)))
+      })), UU.inputs.up.on("primary-fire", (function(UU) {
+        YU.release(BU) && cR(UU, !0)
       }));
-      const zD = () => {
-          CD().bwD(), LC(yD.d.DownFireSecondary), lC(!0), DD.R_ && !DD.R_.position && (0, wD.j)()
+      const rU = () => {
+          RU().UKU(), dR(jU.b.DownFireSecondary), vR(!0), UU.N9 && !UU.N9.position && (0, KU.g)()
         },
-        jD = XD((() => {
-          CD().uCD(), LC(yD.d.UpFireSecondary), lC(!1)
+        XU = xU((() => {
+          RU().GgU(), dR(jU.b.UpFireSecondary), vR(!1)
         }));
-      let lD = 0;
-      DD.inputs.down.on("alt-fire", (function(DD) {
-        lD = jD.press(), jD.owns(lD) && (zD(), SC(DD))
-      })), DD.inputs.up.on("alt-fire", (function(DD) {
-        jD.release(lD) && SC(DD, !0)
+      let vU = 0;
+      UU.inputs.down.on("alt-fire", (function(UU) {
+        vU = XU.press(), XU.owns(vU) && (rU(), cR(UU))
+      })), UU.inputs.up.on("alt-fire", (function(UU) {
+        XU.release(vU) && cR(UU, !0)
       }));
-      const LD = () => CD().SwD();
-      DD.inputs.down.on("mid-fire", (() => {
-        (0, RD.c)() || LD()
+      const dU = () => RU().tKU();
+      UU.inputs.down.on("mid-fire", (() => {
+        (0, sU.d)() || dU()
       }));
-      const YD = DD => {
-          (0, ID.sendColyMessage)(SD.oh, DD, !0)
+      const FU = UU => {
+          (0, tU.sendColyMessage)(cU.Ih, UU, !0)
         },
-        IC = DD => {
-          (0, ID.sendColyMessage)(SD.ph, {
-            jb: DD,
-            Lb: fC()
+        tR = UU => {
+          (0, tU.sendColyMessage)(cU.Mh, {
+            eT: UU,
+            WT: PR()
           }, !0)
         };
-      for (const ID of ["SpecialAction1", "SpecialAction2"]) DD.inputs.down.on(ID, (() => {
-        YD(ID)
-      })), DD.inputs.up.on(ID, (() => {
-        IC(ID)
+      for (const tU of ["SpecialAction1", "SpecialAction2"]) UU.inputs.down.on(tU, (() => {
+        FU(tU)
+      })), UU.inputs.up.on(tU, (() => {
+        tR(tU)
       }));
-      const iC = () => {
-        const DD = CD();
-        DD.isGun() && DD.reload(Date.now())
+      const ER = () => {
+        const UU = RU();
+        UU.isGun() && UU.reload(Date.now())
       };
-      DD.inputs.down.on("ReloadGun", iC);
-      const fC = () => {
-        let CD = "a";
-        return DD.physics.testSolid.toString().includes("Yy") || (CD = "b"), CD
+      UU.inputs.down.on("ReloadGun", ER);
+      const PR = () => {
+        let RU = "a";
+        return UU.physics.testSolid.toString().includes("hj") || (RU = "b"), RU
       };
-      DD.inputs.down.on("OpenInventory", (DD => {
-        DD.preventDefault(), (0, ED.z)(DD, "inventory", (0, kD.c)((0, UD.i)()))
-      })), DD.inputs.bind("ShiftHeld", "ShiftLeft", "ShiftRight");
-      const bC = DD => {
-        tD.i.Uo("DropItemKeyPressed", DD)
+      UU.inputs.down.on("OpenInventory", (UU => {
+        UU.preventDefault(), (0, zU.y)(UU, "inventory", (0, yU.c)((0, bU.g)()))
+      })), UU.inputs.bind("ShiftHeld", "ShiftLeft", "ShiftRight");
+      const TR = UU => {
+        CU.p.yh("DropItemKeyPressed", UU)
       };
-      DD.inputs.down.on("DropItem", (() => {
-        bC(DD.Km.fCD().crouch)
-      })), DD.inputs.down.on("OpenShop", (CD => {
-        (0, OD.d)() || "inGame" === HD.d.get("gameState") && (0, ED.y)(CD, MD.q.SHOP, !(0, pD.b)(DD.qm.shopInfo))
-      })), DD.inputs.down.on("OpenLobbyLeaderboard", (CD => {
-        (0, OD.d)() || "inGame" === HD.d.get("gameState") && (0, ED.y)(CD, MD.q.LOBBY_LEADERBOARD, !!DD.qm.lobbyLeaderboardInfo)
-      })), DD.inputs.down.on("HideUi", (() => {
-        tD.i.Uo("showUi", !1)
-      })), DD.inputs.up.on("HideUi", (() => {
-        tD.i.Uo("showUi", !0)
+      UU.inputs.down.on("DropItem", (() => {
+        TR(UU.Im.JRU().crouch)
+      })), UU.inputs.down.on("OpenShop", (RU => {
+        (0, JU.c)() || "inGame" === nU.b.get("gameState") && (0, zU.w)(RU, uU.n.SHOP, !(0, pU.c)(UU.Qm.shopInfo))
+      })), UU.inputs.down.on("OpenLobbyLeaderboard", (RU => {
+        (0, JU.c)() || "inGame" === nU.b.get("gameState") && (0, zU.w)(RU, uU.n.LOBBY_LEADERBOARD, !!UU.Qm.lobbyLeaderboardInfo)
+      })), UU.inputs.down.on("HideUi", (() => {
+        CU.p.yh("showUi", !1)
+      })), UU.inputs.up.on("HideUi", (() => {
+        CU.p.yh("showUi", !0)
       }));
-      const wC = DD => {
-        0 === DD && (DD = 10), tD.i.Uo("setSelectedInventorySlotI", DD - 1), tD.i.Uo("numkeyPressed", DD)
+      const KR = UU => {
+        0 === UU && (UU = 10), CU.p.yh("setSelectedInventorySlotI", UU - 1), CU.p.yh("numkeyPressed", UU)
       };
-      for (let ID = 1; ID <= 10; ID++) DD.inputs.down.on("HotBarSlot" + ID.toString(), (() => {
-        wC(ID)
+      for (let tU = 1; tU <= 10; tU++) UU.inputs.down.on("HotBarSlot" + tU.toString(), (() => {
+        KR(tU)
       }));
-      DD.inputs.down.on("OpenTasksAndLeaderboard", (CD => {
-        const cD = (0, eD.m)();
-        cD ? (0, ED.B)(CD, !0, cD) : (0, ED.z)(CD, "retentionFeatures", !(!DD.qm._tasks && !DD.qm._availableLeaderboards))
-      })), DD.inputs.down.on("OpenCodeEditor", (CD => {
-        (0, ED.B)(CD, (0, qD.b)((0, xD.b)()), (() => {
-          tD.i.Uo("EditLobbyCode", DD.Km.FX(DD.aJ).map(Math.floor))
+      UU.inputs.down.on("OpenTasksAndLeaderboard", (RU => {
+        const gU = (0, MU.p)();
+        gU ? (0, zU.A)(RU, !0, gU) : (0, zU.y)(RU, "retentionFeatures", !(!UU.Qm._tasks && !UU.Qm._availableLeaderboards))
+      })), UU.inputs.down.on("OpenCodeEditor", (RU => {
+        (0, zU.A)(RU, (0, ZU.d)((0, oU.d)()), (() => {
+          CU.p.yh("EditLobbyCode", UU.Im.Hx(UU.AY).map(Math.floor))
         }))
-      })), DD.inputs.bind("ToggleFullCoordinateOverlay", "F3"), DD.inputs.down.on("ToggleFullCoordinateOverlay", (() => {
-        tD.i.Uo("toggleFullCoordinateOverlay")
+      })), UU.inputs.bind("ToggleFullCoordinateOverlay", "F3"), UU.inputs.down.on("ToggleFullCoordinateOverlay", (() => {
+        CU.p.yh("toggleFullCoordinateOverlay")
       }));
-      const yC = () => {
-        (0, UD.e)().client.cameraController.swapCameraZoom()
+      const jR = () => {
+        (0, bU.c)().client.cameraController.swapCameraZoom()
       };
-      DD.inputs.down.on("SwapCameraZoom", yC), DD.inputs.down.on("OpenInviteLink", (DD => {
-        (0, ED.z)(DD, "inviteLink", oD.featureFlags.canUseInviteLinks)
-      })), DD.inputs.bind("Y", "KeyY"), DD.inputs.down.on("Y", (DD => {
-        (0, OD.d)() || tD.i.Uo("YKeyPressed")
-      })), DD.inputs.bind("X", "KeyX"), DD.inputs.down.on("X", (DD => {
-        (0, OD.d)() || tD.i.Uo("XKeyPressed")
-      })), DD.inputs.down.on("OpenEmoteWheel", (() => {
-        tD.i.Uo("requestEmoteWheelHoldOpen")
-      })), DD.inputs.up.on("OpenEmoteWheel", (() => {
-        tD.i.Uo("requestEmoteWheelHoldRelease")
-      })), DD.inputs.down.on("Zoom", (() => {
-        if ("inGame" === HD.d.get("gameState")) {
-          DD.Km.getState(DD.aJ, "playerCameraAdjustment").zoomKeyPressed = !0, (0, UD.e)().client.cameraController.handleZoomKeyPressed()
+      UU.inputs.down.on("SwapCameraZoom", jR), UU.inputs.down.on("OpenInviteLink", (UU => {
+        (0, zU.y)(UU, "inviteLink", QU.featureFlags.canUseInviteLinks)
+      })), UU.inputs.bind("Y", "KeyY"), UU.inputs.down.on("Y", (UU => {
+        (0, JU.c)() || CU.p.yh("YKeyPressed")
+      })), UU.inputs.bind("X", "KeyX"), UU.inputs.down.on("X", (UU => {
+        (0, JU.c)() || CU.p.yh("XKeyPressed")
+      })), UU.inputs.down.on("OpenEmoteWheel", (() => {
+        CU.p.yh("requestEmoteWheelHoldOpen")
+      })), UU.inputs.up.on("OpenEmoteWheel", (() => {
+        CU.p.yh("requestEmoteWheelHoldRelease")
+      })), UU.inputs.down.on("Zoom", (() => {
+        if ("inGame" === nU.b.get("gameState")) {
+          UU.Im.getState(UU.AY, "playerCameraAdjustment").zoomKeyPressed = !0, (0, bU.c)().client.cameraController.handleZoomKeyPressed()
         }
-      })), DD.inputs.up.on("Zoom", (() => {
-        DD.Km.getState(DD.aJ, "playerCameraAdjustment").zoomKeyPressed = !1
-      })), xC();
-      const MC = DD => function() {
-        return BC(), DD(...arguments)
+      })), UU.inputs.up.on("Zoom", (() => {
+        UU.Im.getState(UU.AY, "playerCameraAdjustment").zoomKeyPressed = !1
+      })), oR();
+      const uR = UU => function() {
+        return GR(), UU(...arguments)
       };
 
-      function tC(DD) {
-        "inGame" !== HD.d.get("gameState") || (0, ED.v)() || (tD.i.Uo("ctrlCrouchWithoutFullscreen"), DD.preventDefault())
+      function CR(UU) {
+        "inGame" !== nU.b.get("gameState") || (0, zU.s)() || (CU.p.yh("ctrlCrouchWithoutFullscreen"), UU.preventDefault())
       }
-      QC = {
-        primaryFireDown: MC((() => {
-          const DD = KD.press();
-          return KD.owns(DD) && (vD = Date.now(), JD(!1, !1)), DD
+      qR = {
+        primaryFireDown: uR((() => {
+          const UU = YU.press();
+          return YU.owns(UU) && (eU = Date.now(), aU(!1, !1)), UU
         })),
-        primaryFireUp: MC((DD => {
-          KD.release(DD)
+        primaryFireUp: uR((UU => {
+          YU.release(UU)
         })),
-        altFireDown: MC((() => {
-          const DD = jD.press();
-          return jD.owns(DD) && zD(), DD
+        altFireDown: uR((() => {
+          const UU = XU.press();
+          return XU.owns(UU) && rU(), UU
         })),
-        altFireUp: MC((DD => {
-          jD.release(DD)
+        altFireUp: uR((UU => {
+          XU.release(UU)
         })),
-        jumpDown: MC(cD),
-        specialActionDown: MC(YD),
-        specialActionUp: MC(IC),
-        reloadGun: MC(iC),
-        dropItem: MC(bC),
-        swapCameraZoom: MC(yC),
-        pickBlock: MC(LD)
-      }, DD.inputs.down.on("ctrlCrouch", tC), DD.inputs.up.on("ctrlCrouch", tC), DD.inputs.bind("ctrlCrouch", "ControlLeft");
-      const ZC = DD => {
-        "inGame" === HD.d.get("gameState") && DD.ctrlKey && !(0, ED.v)() && DD.preventDefault()
+        jumpDown: uR(gU),
+        specialActionDown: uR(FU),
+        specialActionUp: uR(tR),
+        reloadGun: uR(ER),
+        dropItem: uR(TR),
+        swapCameraZoom: uR(jR),
+        pickBlock: uR(dU)
+      }, UU.inputs.down.on("ctrlCrouch", CR), UU.inputs.up.on("ctrlCrouch", CR), UU.inputs.bind("ctrlCrouch", "ControlLeft");
+      const hR = UU => {
+        "inGame" === nU.b.get("gameState") && UU.ctrlKey && !(0, zU.s)() && UU.preventDefault()
       };
-      document.addEventListener("keydown", ZC), document.addEventListener("keyup", ZC), document.addEventListener("keypress", ZC), DD.inputs.bind("Alt", "AltLeft", "AltRight"), DD.inputs.down.on("Alt", (DD => {
-        DD.preventDefault()
+      document.addEventListener("keydown", hR), document.addEventListener("keyup", hR), document.addEventListener("keypress", hR), UU.inputs.bind("Alt", "AltLeft", "AltRight"), UU.inputs.down.on("Alt", (UU => {
+        UU.preventDefault()
       }));
-      const oC = CD => (0, WD.e)(DD, CD),
-        vC = CD => (0, WD.f)(DD, CD),
-        NC = [0, 0, 0],
-        gC = [0, 0, 1];
-      DD.on("afterRender", (CD => {
-        (0, iD.e)(DD.camera.heading), (0, WD.i)(DD, NC, gC), (0, UD.e)().client.triggerGameCallback("onAfterRender", CD, {
-          cameraHeading: DD.camera.heading,
-          cameraPitch: DD.camera.pitch,
-          cameraPosition: NC,
-          cameraDirection: gC,
-          tanHalfFovX: (0, WD.b)(DD),
-          tanHalfFovY: Math.tan(DD.XZ.rY().fov / 2),
+      const QR = RU => (0, iU.j)(UU, RU),
+        eR = RU => (0, iU.m)(UU, RU),
+        WR = [0, 0, 0],
+        fR = [0, 0, 1];
+      UU.on("afterRender", (RU => {
+        (0, EU.g)(UU.camera.heading), (0, iU.n)(UU, WR, fR), (0, bU.c)().client.triggerGameCallback("onAfterRender", RU, {
+          cameraHeading: UU.camera.heading,
+          cameraPitch: UU.camera.pitch,
+          cameraPosition: WR,
+          cameraDirection: fR,
+          tanHalfFovX: (0, iU.d)(UU),
+          tanHalfFovY: Math.tan(UU.SC.eD().fov / 2),
           screenBandPct: {
-            x: sD.e,
-            y: (0, sD.l)()
+            x: AU.b,
+            y: (0, AU.i)()
           },
-          projectWorldPosToScreenPos: oC,
-          projectWorldPosToViewport: vC
+          projectWorldPosToScreenPos: QR,
+          projectWorldPosToViewport: eR
         })
-      })), (0, uD.o)("look") && (DD.camera.qL = (0, hD.f)("js"), DD.inputs.hT = hD.e), (0, uD.o)("remesh") && (0, rD.h)(DD), DD.on("beforeInputs", (() => {
-        if ((0, PD.d)()) return DD.inputs.pG.dx = 0, void(DD.inputs.pG.dy = 0);
-        if (DD.camera.pG.dx += DD.inputs.pG.dx, DD.camera.pG.dy += DD.inputs.pG.dy, 0 !== DD.inputs.pG.dx || 0 !== DD.inputs.pG.dy) {
-          DD.Km.getState(DD.aJ, "playerCameraAdjustment").lastPointerMove = Date.now()
+      })), (0, DU.l)("look") && (UU.camera.ZH = (0, LU.m)("js"), UU.inputs.Hs = LU.i), (0, DU.l)("remesh") && (0, NU.l)(UU), UU.on("beforeInputs", (() => {
+        if ((0, wU.b)()) return UU.inputs.Fs.dx = 0, void(UU.inputs.Fs.dy = 0);
+        if (UU.camera.Fs.dx += UU.inputs.Fs.dx, UU.camera.Fs.dy += UU.inputs.Fs.dy, 0 !== UU.inputs.Fs.dx || 0 !== UU.inputs.Fs.dy) {
+          UU.Im.getState(UU.AY, "playerCameraAdjustment").lastPointerMove = Date.now()
         }
-        DD.inputs.pG.dx = 0, DD.inputs.pG.dy = 0
+        UU.inputs.Fs.dx = 0, UU.inputs.Fs.dy = 0
       }));
-      let XC = 0;
-      DD.on("wy", (function(CD) {
-        tD.i.Uo("noaTick", CD);
-        const cD = (0, UD.e)().client;
-        if (cD.triggerGameCallback("wy", CD), cD.isClientGameSessionActive()) try {
-          QD.e.wy(CD)
-        } catch (fD) {
-          console.error("Error ticking audio entities", fD)
+      let xR = 0;
+      UU.on("HG", (function(RU) {
+        CU.p.yh("noaTick", RU);
+        const gU = (0, bU.c)().client;
+        if (gU.triggerGameCallback("HG", RU), gU.isClientGameSessionActive()) try {
+          qU.d.HG(RU)
+        } catch (PU) {
+          console.error("Error ticking audio entities", PU)
         }
-        if (!DD.Km.hDD(DD.aJ).isAlive) return;
-        Date.now() - XC > 9e3 && (! function() {
-          const DD = (0, UD.i)();
-          "number" === typeof DD.qm.speedMultiplier && "number" === typeof DD.qm.jumpAmount && (0, ID.sendColyMessage)(SD.Oh, {
-            uf: (0, TD.e)(DD.qm.speedMultiplier),
-            hf: (0, TD.d)(DD.qm.jumpAmount),
-            rf: (0, TD.e)(DD.qm.crouchingSpeed),
-            Af: (0, TD.e)(DD.qm.walkingSpeed),
-            Ff: (0, TD.e)(DD.qm.runningSpeed),
-            Db: (0, TD.d)(DD.P_),
-            Cb: DD.Km.QDD(DD.aJ).jumpForce,
-            cb: DD.Km.fR(1).width,
-            Ib: DD.Km.fR(1).height,
-            pb: DD.Km.Yz(1).pb
+        if (!UU.Im.CRU(UU.AY).isAlive) return;
+        Date.now() - xR > 9e3 && (! function() {
+          const UU = (0, bU.g)();
+          "number" === typeof UU.Qm.speedMultiplier && "number" === typeof UU.Qm.jumpAmount && (0, tU.sendColyMessage)(cU.gi, {
+            vP: (0, HU.i)(UU.Qm.speedMultiplier),
+            dP: (0, HU.e)(UU.Qm.jumpAmount),
+            HP: (0, HU.i)(UU.Qm.crouchingSpeed),
+            SP: (0, HU.i)(UU.Qm.walkingSpeed),
+            sP: (0, HU.i)(UU.Qm.runningSpeed),
+            yP: (0, HU.e)(UU.Z8),
+            kP: UU.Im.bUU(UU.AY).jumpForce,
+            FP: UU.Im.Hk(1).width,
+            iP: UU.Im.Hk(1).height,
+            AP: UU.Im.yX(1).AP
           }, !0)
-        }(), XC = Date.now());
-        const pD = DD.Km.fCD();
-        if ((pD.jump || pD.forward || pD.backward || pD.left || pD.right || pD.sprint) && tD.i.Uo("usedKeyboard"), DD.Km.VDD(DD.aJ) && !0 === DD.qm.canPickUpItems) {
-          const CD = DD.Km.FX(DD.aJ),
-            cD = (0, gD.r)(pC),
-            pD = (0, gD.t)(pC),
-            iD = [CD[0] - cD, CD[1] - .6 * pD, CD[2] - cD],
-            fD = [CD[0] + cD, CD[1] + GD.h.XN + .6 * pD, CD[2] + cD],
-            QD = DD.Km.cbD({
-              base: iD,
-              max: fD
-            }, DD.Km.names.autoRotate),
-            BD = DD => {
-              const CD = GD.h.droppedBlockSize / 2;
-              return [0, 1, 2].every((cD => DD[cD] >= iD[cD] - CD && DD[cD] <= fD[cD] + CD))
+        }(), xR = Date.now());
+        const pU = UU.Im.JRU();
+        if ((pU.jump || pU.forward || pU.backward || pU.left || pU.right || pU.sprint) && CU.p.yh("usedKeyboard"), UU.Im.lUU(UU.AY) && !0 === UU.Qm.canPickUpItems) {
+          const RU = UU.Im.Hx(UU.AY),
+            gU = (0, fU.n)(pR),
+            pU = (0, fU.r)(pR),
+            EU = [RU[0] - gU, RU[1] - .6 * pU, RU[2] - gU],
+            PU = [RU[0] + gU, RU[1] + SU.e.FW + .6 * pU, RU[2] + gU],
+            qU = UU.Im.ETU({
+              base: EU,
+              max: PU
+            }, UU.Im.names.autoRotate),
+            GU = UU => {
+              const RU = SU.e.droppedBlockSize / 2;
+              return [0, 1, 2].every((gU => UU[gU] >= EU[gU] - RU && UU[gU] <= PU[gU] + RU))
             },
             {
-              itemDropPrediction: yD
-            } = (0, UD.e)().client,
-            MD = ID.offlineInputReplay.holdsInput();
-          if (QD.length > 0)
-            for (const tD of QD) {
-              const CD = DD.Km.getState(tD, "itemState");
-              if (void 0 === CD || Date.now() - CD.creationTime < 500) continue;
-              let cD = tD,
-                pD = null;
-              if (CD.cI) {
-                const DD = yD.pickupTarget(tD, BD, MD);
-                if (null === DD) continue;
+              itemDropPrediction: jU
+            } = (0, bU.c)().client,
+            uU = tU.offlineInputReplay.holdsInput();
+          if (qU.length > 0)
+            for (const CU of qU) {
+              const RU = UU.Im.getState(CU, "itemState");
+              if (void 0 === RU || Date.now() - RU.creationTime < 500) continue;
+              let gU = CU,
+                pU = null;
+              if (RU.Ng) {
+                const UU = jU.pickupTarget(CU, GU, uU);
+                if (null === UU) continue;
                 ({
-                  Tw: cD,
-                  kw: pD
-                } = DD)
+                  hK: gU,
+                  WK: pU
+                } = UU)
               }
-              const iD = DD.Km.getState(cD, "itemState");
-              if (iD.cI && null === pD) continue;
-              let fD = 0,
-                QD = null,
-                ZD = !1;
-              if (0 === iD.amount) ZD = !0;
+              const EU = UU.Im.getState(gU, "itemState");
+              if (EU.Ng && null === pU) continue;
+              let PU = 0,
+                qU = null,
+                hU = !1;
+              if (0 === EU.amount) hU = !0;
               else {
                 const {
-                  amountPickedUp: CD
-                } = DD.Km.KDD(DD.aJ).pickUpItem({
-                  name: iD.name,
-                  typeObj: iD.typeObj,
-                  amount: iD.amount,
-                  attributes: iD.attributes
+                  amountPickedUp: RU
+                } = UU.Im.LUU(UU.AY).pickUpItem({
+                  name: EU.name,
+                  typeObj: EU.typeObj,
+                  amount: EU.amount,
+                  attributes: EU.attributes
                 });
-                if (fD = CD, 0 === fD) continue;
-                QD = dD.c.pickUp(iD, fD), iD.amount -= fD, iD.amount < 0 ? console.error("Picking up led to less than 0 of item!") : 0 === iD.amount ? ZD = !0 : iD.creationTime = Date.now() + CC
+                if (PU = RU, 0 === PU) continue;
+                qU = kU.d.pickUp(EU, PU), EU.amount -= PU, EU.amount < 0 ? console.error("Picking up led to less than 0 of item!") : 0 === EU.amount ? hU = !0 : EU.creationTime = Date.now() + RR
               }
-              const oD = (0, UD.e)().client.inventoryPrediction.record(QD);
-              (0, ID.sendColyMessage)(SD.jh, {
-                Tw: null === pD ? cD : "",
-                Gw: fD,
-                Rw: wD.f,
-                qf: oD,
-                kw: pD
-              }, !0), ZD && (MD && yD.onPickedUpOffline(cD, oD, pD), null === pD && DD.Km.deleteEntity(cD));
-              bD.e.play("pickUp", GD.h.pickupSoundVol).rate(1 + Math.random() * GD.h.pickupSoundRateVariation)
+              const QU = (0, bU.c)().client.inventoryPrediction.record(qU);
+              (0, tU.sendColyMessage)(cU.Eh, {
+                hK: null === pU ? gU : "",
+                QK: PU,
+                eK: KU.f,
+                WP: QU,
+                WK: pU
+              }, !0), hU && (uU && jU.onPickedUpOffline(gU, QU, pU), null === pU && UU.Im.deleteEntity(gU));
+              TU.e.play("pickUp", SU.e.pickupSoundVol).rate(1 + Math.random() * SU.e.pickupSoundRateVariation)
             }
         }
-        if (!DD.Km.mDD(DD.aJ)) return;
-        const iD = DD.inputs.pG.MDD;
-        if (0 !== iD) {
-          const CD = iD > 0 ? 1 : -1;
-          DD.inputs.state["mid-fire"] || DD.inputs.state.Alt || !DD.qm.useInventory ? (DD.inputs.state["mid-fire"] && tD.i.Uo("requestEmoteWheelClose"), (0, UD.e)().client.cameraController.handleScrollZoom(CD)) : tD.i.Uo("ScrollInventorySlot", CD)
+        if (!UU.Im.sUU(UU.AY)) return;
+        const EU = UU.inputs.Fs.BUU;
+        if (0 !== EU) {
+          const RU = EU > 0 ? 1 : -1;
+          UU.inputs.state["mid-fire"] || UU.inputs.state.Alt || !UU.Qm.useInventory ? (UU.inputs.state["mid-fire"] && CU.p.yh("requestEmoteWheelClose"), (0, bU.c)().client.cameraController.handleScrollZoom(RU)) : CU.p.yh("ScrollInventorySlot", RU)
         }
-      })), ZD.d.subscribe("droppedItemScale", (DD => {
-        pC = "number" === typeof DD && isFinite(DD) ? DD : cC
+      })), hU.b.subscribe("droppedItemScale", (UU => {
+        pR = "number" === typeof UU && isFinite(UU) ? UU : gR
       }))
     }
 
-    function xC() {
-      const DD = (0, UD.i)();
-      if (DD)
-        for (const CD in ND.q) {
-          DD.inputs.unbind(CD);
-          for (const cD of ND.q[CD]) DD.inputs.bind(CD, cD)
+    function oR() {
+      const UU = (0, bU.g)();
+      if (UU)
+        for (const RU in WU.r) {
+          UU.inputs.unbind(RU);
+          for (const gU of WU.r[RU]) UU.inputs.bind(RU, gU)
         }
     }
-    HC(MC = {}, tC = ["nHJF#3Pu0", '$R;x@%6v2Z^c81!la*nevL"":2', '9y}o?=8U+.Wp"K1>{%X0', "E^{35qndh.s=7#c>O[(U1v6/7<aAtIwj8jSFs", ".<o&ji[YD<>rF.UU%<VkPYDd|fk<;=2J.zP+{}1q~B/pmppl6%X>t", 'l*Zkf=)Xku1SD.}lg*WB}rG"fTA34(N>BUMGI:5oQ"cU@QHR#@GC@', 'gz#3x%%Y#"l(/DZVV?9G,DNu#W0NO8oM20d]>f:~', "lDXYz|IYu/R<R5+U#>LtPLvU=M!Sy5", "nl:P<FTu3Bv]h<5{6*vU8", ">B^cz||TIuC`Q5", 'Q/vU:q{{wZVcb#Il097CV#@|x,&</0Flp>lN]}n*gMx9`I28;I=oEIU"{[', "M^(NFT,*a`2N`m`+8Pwe;dwT1,o*;=maFB!e:}9u$[", "BuX>E]RMLWf]CJDwP?d0OL&qdnqgTqsR6hueC|pY&QB9Jj7jSP7GM.`6}B", "b.KB_Gu||`Icr8|Z??ZLV9#6~u/2J3q+MQ6fArcCF`BN@NyU`Q,fIRsKE<w", "T.uGgm*oInD<WQ}VY>7UK!$@7Ztlc0x>2~", "*0U%G%VdLQo:J5v8QB^B@!}UgM1]4", "7zPk6c362[jr^+,ZeH:!0l1#x", 'yBceNFQ61T]2Us0kaz1Y}hm%~"Wt*qK1s^vE{JcU7W5*N^N>}<3*', 'c(>];dWd3"@9eQ>Z.z(UpqTk?hkrW+<[aP<CQ]p@f`T', 'F9>]gm@{_hLu<1VuH*4kV"""l@l+9Q78TzUYO/mXOZEBQ5', "kdf>(N9@=QkN&IfVHhWf[JHMPBbU~", "=.~k4ABg`h%K~", 'KwX]VW5{R`z<#J+Uk?6fI:/#+<nt$#WwA2^0;h("eMP{ZNOtmH)x', 'BPtUxAgUeMUE!3"wl?|%2J=VBZh.v<nu{jmg]!lu4D&A3`et#^#twKPk}fVp~', 'j1y3@F"`#"Nd!1lZLlue,IxMB[cc=qyv1fL>j', "D1X0|p}i0", 'x/hcJ1"6J`fr"+zwBUDUErt%MB.uT3l{}eMN*l<,3"l', "Q3Ftc/*TkSSN#QMlRBnet.gv_oylT3`", "8y1E@IK@CEZ=[+iVV*&++#}/)hS>RKmt9H!eqr2:hu;<d151ue5", "]ZP*p!~q(MW", '"9#3"A7dxE[r/8T|', "!VK]H1<de@uz0^*J$t7Eu", "zf&:>L/6YMTpEq.vzITg}Ll5", "OIDGCD(MY`<=.Tx8icw+&Y)h/zsZ=3Qjwe>txN1M_.ep:}]JnhPB4lfTx", "~3t>^gluh2_t~|S+]WXc>#_v8hv>Q<L+@/~NI3DkaT_~E1o", "yB.GEJ4", "#B~f@]_:&B)P0+YtYBno9FmV2<v.eJG+bZueIW4", ')ow+"dfT;fo(_01keeCk0%ryI"m;Aj|JfjoLG]p{Hgg]WNMlPf"]sJ[Yn//K4', "`Q6*8#|T(fjegs{U", ">*>0HeUv0fXQw8x{n9eNX^V|ID)Gjx,w4d6kd1n{HSTcp0S+`/G0<IEYt.5B~", '0BBke3`g)hdYcN+wu"PkG|ao{TbP?5WwR*R3U^%*OThC}<?JE@>YTdf%*', 'OlA0{}.~,"m8m.X63fwG0AL*(@R', "aVSC~I<oc[:WvjilGZ(PuLGU@Zsy?jc>@1RB|V4ot.gp0}fl[@xFS", "}wd>ee,9@hof|+uV", '(BUE/"p@I"!c4(', "+9/oPcfV/[jI4QHJ!z!+O#=@[/S=^<yUZV*Y[he`l@", "Bd`CL!h5", "de3+L/TV0ff", "We!GA|2~", "zhGYV#Z#vBjZ~", 'o":o3"t{yTm851x8k1R31_:"ZQjh/I_ZBvkF~D4', '3HjNwfRC$ZYr.QHj/fmU"Au{gMY]}Jn1;y/*Td4', "EyskndOA1`!hc{^8:1+Nb/VV!ME`Ex]Jn1_%Vc4", '"98*"dH/#gI]QJr1t?G^v:P%eMRY|#h|H@Rc#R":eB', "|9I+L|_v6zGon10Jw@r>7fAUw2vn|(", "wj;gHv<Y0", "Neyc;A]%Z/XU~", 'T9#f13O6?hzW^T~|5/qf=LX@C[Y]m|^MDh"*ND#6Zfv]M})w2?SE', 'E"YCX]XVBZ?{YQOU[^ze"d]Y3/OPw3gvRe_>3mx:j["KMJ9u~DWeN%]{C', 'Qe1E.ec/C`4[[($aWVp*eTy#P"mK:(5|?/mUL|qCNz`F=3vkCvePn|@5', "3j7E_T!YqD4LEj6u[ev%)&iU}/3p#=Xl1B9%)fh{:[g{w3T|Q1JFU", "(Dm%uL_6`n0N2QXl>(Zfi&v`jZrKx|!V$eg0", "fyt%hD@5", "]98kfl9T|Miow8~{udnPBr6M%z[*0QVuQd~", 'H9D>4A~6`nuE,Q:j798f;Nh%5D[eM5<+ayfF6#u%dn9"e=4?btKtii0Tjhv', "I^d0^gId(M7YH09Zt?`E", "Nh&NzDZUqupu2<}+cIx%?vS`IBRI@}kZ/y2GwWB`{`I]8q,|+l)P9d[5", "XK>]ph{5", '}z"B@}={8zS*+!,k', "lV#c9|;v|f%ay!z1v?@%Er~:InD0;=oJS^zex%oK%[|Cr{2jc4", "BVijPv/6+z8", "iH_E$YTV*", 'PDdY#_&6i`|("K@J=1"0*rz`"uZ+N^"Z*UZ:{Ly6CTbU~', "v9@UvL<X@ha`t+=VGWE+4Ik5", "AWk0$],p+Z!{1Ie+S%^Y#KmVr,poxN7MWzZk)&^U&/+lvj%>g/~", '#jR3Y:/";BH.~N=V$e2U,R$V8<ZN4', "?V#cP^j|/TJAt0OvD<MPiH4X5D`NRJ;1pz/fj", '09K>lf]VQuS]w<*1>9*>#T"y>""Y}J$l{?w:K!dTZ"dr4', "Uz`]DGwpBzI", "}w5:*XDu*", "fI=P).j{y[7.oQgt$I0!,R5k=/,cz8plj15", 'M"dBuYO/3u', "3laYTg1q[,!vhri6a%sk5XBCw<PhI+dR(uP3mYrCAokA4", '{[7Gb#>/zQ}8Us`+5%yBBXIu%[fYW(J8Ff<CtiV@q"f<G|*', "R/JchDyr+.Ql1s{vVz~L(l!VGho:0(KM+dseFd4", '+BDE7vYYd.,~^J/tNw$BCg0u,"yF|#Ej|/,3hANd=@WCXrma{y5', "_tE:)cTpH.hKf8(uf<mxjJ/vC`ln|(uVL9f]<%TV~@K3@Qia;4", "6^oLR=zvD<(_~|=t1jj+^|$hAg)Kz{5|m>,*p}a,l@[Ed3v>q4", 'WIzfLrk{7.4N:(%RPQK>YTo|k"ElzI0>UDco~RiUOZMN@Q<V$.&NqHxg0', ",9o&gTIdj[tNF(K>xyx!I3`MWTi;j_86I*K>YGiv3/J", "L<|E?:{,)<f0j1QROe~NC!/`}B&(1IsjSe$*E]V{chYt@}9kVIUtO&iCh2QA~", "rZG%|.ZUHWVE~", 'HyKt<|SMT.b%"J5Z;yj+a/D5(', "$wL>(FX{_.ZrT</wb<a>aVbvw[@eqD`+W<o&:F.#MDUl7^?MW4", '"f.P;lM~', "y3?[<Vip", "/{f8f(Mp", "G|L5N_Y$", "JL95({=A", "c1P[s0OQ", "z1q>v:!q", "IvQGnsFH", "dp?woQ)U", 'E9"Z"f[U', "4hS~I5(A", "*h/dU,WH", "on`6QXFN", ".95<Q2`N", '"eW?', '4W"y~08T', '5"9y`E+T', "]S:F%{8T", "Jn*?+@AN", "Ei$rCX=", "Jt`66XVN", ";_$^XT:|", "_!O68Un", ")d&+ISkT", "Xd35d;*r", "!7vC", "*)hwRvy", "hyGE5q9!", "6`v01J;", "8OjxAUEA"]), HC(ZC = function(...DD) {
-        HC(DD[nC[12]] = nC[1], DD[nC[16]] = [function() {
-          return globalThis
-        }, function() {
-          return global
-        }, function() {
-          return window
-        }, function() {
-          return new Function("return this")()
-        }], DD[nC[13]] = nC[19], DD[nC[14]] = []);
-        try {
-          HC(DD[nC[13]] = Object, DD[nC[14]][nC[26]]("".__proto__.constructor.name))
-        } catch (tC) {}
-        DD: for (DD[-nC[15]] = nC[1]; DD[-nC[15]] < DD[nC[16]][nC[12]]; DD[-nC[15]]++) try {
-          for (DD[nC[13]] = DD[nC[16]][DD[-nC[15]]](), DD[nC[17]] = nC[1]; DD[nC[17]] < DD[nC[14]][nC[12]]; DD[nC[17]]++)
-            if (typeof DD[nC[13]][DD[nC[14]][DD[nC[17]]]] === nC[18]) continue DD;
-          return DD[nC[13]]
-        } catch (tC) {}
-        return DD[nC[13]] || this
-      }() || {}, oC = ZC.TextDecoder, vC = ZC.Uint8Array, NC = ZC.lt, gC = ZC.String || String, XC = ZC.Array || Array, mC = function(...DD) {
-        return HC(DD[nC[12]] = nC[1], DD[nC[27]] = new XC(128), DD[nC[13]] = gC[nC[23]] || gC.fromCharCode, DD[nC[0]] = []),
-          function(...CD) {
-            for (HC(CD[nC[12]] = nC[2], CD[nC[6]] = nC[19], CD[nC[20]] = nC[19], CD[nC[13]] = CD[nC[1]][nC[12]], DD[nC[0]][nC[12]] = nC[1]), CD[nC[14]] = nC[1]; CD[nC[14]] < CD[nC[13]];) HC(CD[nC[20]] = CD[nC[1]][CD[nC[14]]++], CD[nC[20]] <= 127 ? CD[nC[6]] = CD[nC[20]] : CD[nC[20]] <= 223 ? CD[nC[6]] = (31 & CD[nC[20]]) << nC[22] | CD[nC[1]][CD[nC[14]]++] & nC[21] : CD[nC[20]] <= nC[7] ? CD[nC[6]] = (15 & CD[nC[20]]) << nC[25] | (CD[nC[1]][CD[nC[14]]++] & nC[21]) << nC[22] | CD[nC[1]][CD[nC[14]]++] & nC[21] : gC[nC[23]] ? CD[nC[6]] = (CD[nC[20]] & nC[24]) << 18 | (CD[nC[1]][CD[nC[14]]++] & nC[21]) << nC[25] | (CD[nC[1]][CD[nC[14]]++] & nC[21]) << nC[22] | CD[nC[1]][CD[nC[14]]++] & nC[21] : (CD[nC[6]] = nC[21], CD[nC[14]] += nC[28]), DD[nC[0]][nC[26]](DD[nC[27]][CD[nC[6]]] || (DD[nC[27]][CD[nC[6]]] = DD[nC[13]](CD[nC[6]]))));
-            return DD[nC[0]].join("")
-          }
-      }()),
-      function(...DD) {
-        return DD[nC[12]] = nC[2], typeof MC[DD[nC[1]]] === nC[18] ? MC[DD[nC[1]]] = function(...DD) {
-          for (HC(DD[nC[12]] = nC[2], DD[nC[6]] = '4~5(0x*CoBE2@`<QsZuM[Say{8j+tUk>P&lv|1JRV6w?7Hd#I3!eYgfFW/T.D_h",zn;9rK^Nc%:]GLApq=}miXb$O)', DD[nC[0]] = "" + (DD[nC[1]] || ""), DD[nC[4]] = DD[nC[0]].length, DD[nC[9]] = [], DD[nC[7]] = nC[1], DD[nC[8]] = nC[1], DD[-nC[5]] = -nC[2]), DD[nC[3]] = nC[1]; DD[nC[3]] < DD[nC[4]]; DD[nC[3]]++)
-            if (DD[nC[5]] = DD[nC[6]].indexOf(DD[nC[0]][DD[nC[3]]]), DD[nC[5]] !== -nC[2])
-              if (DD[-nC[5]] < nC[1]) DD[-nC[5]] = DD[nC[5]];
+    nR(uR = {}, CR = ["+;~Pj;t]~G(8w$Dr3MDCb6*sd", "oKanl&.n`tK<ZN=.{hM[S,:==X6UvE", "CMMc.?l]wN?51", "o%swb(!~$pVzPO>.9tfogoy!ON", "8C]b~4~+z;S8H,&Dh%k[gB{8]pzhZqD,h#W.^!;=&U>Bop{xT%=", "D!25#LY5@t9*PDc}zruCLC9P?hkzGrE.vt1(m_c]d", "rCIbYwlo1ttQMNi35I+b7i[+E;lU]+|tdus*iB/>V3", "?rWoVrinqk]cWrc}Xr]a)i+`#!ozR+qQ`!R.j0;Q3;/Wne", "zk>C5k^`;5)SSs&K7&do8>r!&^LETptgr;pC%<9zZRcsPO@t", 'qIo_#o2IEXocTeC|tfMo;_lfxB"PMZjx^vnd', "_k%XM5=xyUXf<e=8REswC]O}@ULTW=.Q3HE", ")&C[jT+dt}gck;Ca;&YbPyvs~9/l$;ES>KanLLc]0}ZBEKw}}Kfc_b,=", "DRBwG6<+7CCUy,=swmcJS!6g=Xct[8ZaIg^*:,j", '[9_Ks`_183{s/$D}TC4J4,&o/C?]16&O1uk(Yb"3Z3h&!:(ON!lXYsY}f', "UG.Qur2wf", "aKYwIsD~ck=fq8@nv]qd^", "z[uOMJflwN&R5:WO?B].)`:Z/vi8Y6Et&M65q&?8@tvqH=;%V!/(<;)LsCBk1", "YM|TvJ)!hNw5vO!a,3DaiqPlC@Fwqe!%HM=(sILdt}", "P]e.;Z?f[Z9T&TBxjehnmuTtN^|[lNo|>v;w9", "ovBPV(Q=/!VcblOnTj", "U3w#iL;wEXB^Ml#8$.&[R5_d9}nZzB0g&G1O77/g/v5<94P", 'ZRd?8,8s^@C[3;cD4&0a"B2Zp2IS4=$gW(,c#oL!]t__L=f', "=!vnG&Z>k3$u6EZao&#[k;ULk+&.l+UnSM*ON", "BK+b_wbd>9hTiuf8wkR.&~kQp;%3MKD8L&QaH(fxQBr", ",!,a$M.L@5>[qukx;KhnNwzZNB{_g/!L)f=", "GEF(JZCoOGu<2N4|g&%Qb](Lm22LKY", "1!]a3oVZ2XNG4lV,ZRf.tJ0]a^", '2m%eh,n$k9iE<;j%G%%[?R^L0+jIElwKoffod;F>hG"sa`?Kug7d', 'jCr*guH}SNEyOJ"%>RXQ.[/]NBklxZdrI&=', "{GOTv&c>e+u3sE", "&Hqbmz9]A!jGdJs87lm.J6lIf", 'AX9_AT>oR5^<u&9aw.=~!l2v#2Tl%M5OcGDoiB]>"NiG6`l8=#Bn8oNom^', 'aK"({ij', "#%]c9M(1EvsEKYTKVH5w[;A1", "A&7M25M!HGaRh=F:{Gme", "rKDoh,:]cREyM,>,p;@XRT5Uj;UL78v}TkyC%!ddm^", "?9|f{i*l`Uf9iTKamgbabUbd{G,2@E", 'r9g#4<"<4}kl(,X.jt0dG$1S1vZBMl+', "[Nhnru@w2;8&@BRQOK+b]z]=", "xIF(4BM<t;dq3:rtEKYwby^1", "Og9*A$Ps!NH&kpeSUfTXi>(drZ(83:0O8Xh#oD4|m5~w0,d.(Cvd", "^vfb!(el+^", "[9n.EbtZ]tkc)KXSL(<d<5&o*BIesM+9AxCobr(n6C)sSeK|5Gh#O", "+r.Xxzwv1p]*pK13bGK~Uy*tE", "Y;CuoT7LWZc_b,r._GmadsPovBRoR$wSW]]aQqcg`t", "je}#@Z@v;GU2}JA.@3,bh0*l{Zwkr&_DVwm*`DU~U5**f$X", ",fa_N$j", "XUzub]A!C}J", ">3XQ{44n6CVo^;E.qIX~G$Y5E!t(#MArjHXQ#Bydf}l[Cqg3[R>QQ", "w(bc2]etxN=TZNqL+IkXNJ>QxB<zT4yDy((_QM|1", "1Us.oZ+}4vD", "FG8([cdUsCJLo4MtJm]u_mf]*GMlo&uD)E,a%<VQ2vDc.=uDh%Wo=$B+Y}", "%fdX,I|Ld9NyI4hKLnMcVznUdb6;$8<tfvK(xCW8@Uzl%JKxgf=", "Y;(nPJj", 'Am"P:Jj', "bXfc_b:8nN^cJr@QpKDoo6u~e", ";3!C)4{vo@%3y,Fx@BPO~4+`VR&aYTWa!mKn]uiLGt*f]uaLG>S~25^d?B5t1", "X#&f!(15.vbal+(asn<K(l^ds!3<FK@8dM;5]l.|.^#b;BEH1ndX}", 'kRO_oZh52XHNHKM80(b[)B[nQ^~z";0gpUM[kTCIu!Me.=f.iEfbeTu1', ')B,ahb5dmt&b3;7>=X9_eyzw!3/;DK{gQ]"(fyp+A;BLl+u>U>E', "?R;.fRlf~kGa<sD.)N)X_be@C@~eEKCa<x65N![1*bGS1", "gC:fRZp+$tSO/$CaDI.QxC6ge", ">MpoZgt=2X.TFSwSfvH#<<st.^2hb/zD|9]eQzsQAX_h|&8L8CDX", "du)C!U<~?t?p16VD[r&[Y&,o@UhT1qf", "n%_.$$q1", "W>}n8oTQ3v(t?$|S7xYdu(Md*NCtCuFs5m~#]k.~P*Ml_T{xT9^*", "i!c.%4@Z&t3G9MX", "FEjC/s9=(vX%5:|.ZEzX", "fI}*mIWzRkgTFKt9MmS??$ddBk/_GuFx/g65$<!n[9!a1", "|n7d(ZgQwGlSTB!aeUhnN,(+Uvs&%=;n!&ST`U:o.t4A1", 'YM}n`Dy+"3h~meOar9w#I;"1~P2uM,2rzr}_js#0E}Q<VeG.$(~#=6H7<+5', "Q]G(+so]NU!l}4?K|nVw7o,s5}&2Rrg3`RI*", "<(]a(Z3d};}(2+|}{(~Kg>1|sC6Jzp<t*wT[8`E|~R=Cq8w,<j", "PUUfkZ*oC}@]^:*KG[^.eRH!r+nT[u[.1;eJ]_iL}ClzaE<8gv~#]qV=", "i(Mun`4n_PH2(,i39C.a<bcv2Xr.#E(g[k^o%<s=", "1HcJY;DU#tq2Nq?K/(YbC/T0N2M_1", "@(a_AwZQ:;FAx=", '"&F("iZtE', "V92(k]z]ppwz}JA3#pIK<&X+,+kS~lD}", "UR@Xok%d5}m*aEXt@(&uUZn}MZ8**q.n*!~w`D,sQ^a+4,qs1tU[@sv8d*", "sMMCQ7soU55<SuE3CCCe3o?ZD+LTrSW>?.`XokNZO9ce>`Mt", "+edoU_CQQ^I^Zr&D`!X(4,P@4}me6Ed8AIsdv", "iC8Q!U1<*N(B}NzKNU&OXy~!9CDLBlX", "@fS~YgpSOGAth,Qx:](#D~zo#tA[7e1%}(&usqKsqN", '0DGCew|dk34U"zIQ@(>C?cr`_NRaWq{:DR%QfbCZ4CxotY', "/m!P4RKo1vblN/X", ".pZ#lgpSup(L+Th,>G)[^!;t$!mu=Y", "f%Dah&Q8/;f::`lSBM1#]l_UuUvI{EFafKA_}J)yL!X9;E", 'NfReV/nnL!.bsMN9aHu(Jl"7=C}r0$r}Mfx#^cQ=3;5cAlZ|qaxOc4i`nRwAj', "aKPQ(~.n3UUSxrN", "QvMe),G%qPhZ94v9KM)o{cM1Q^2hsO_Of%W.g[O}4}", '+KUa#?H<z;{$MKi8iE3(EwP8jvct6BMSY%^dWcJttv`N;E"W', "d!Ro%,zfs}7lgJ[}]H4n}Bj", '_.zunM.LNB.9"shS;G,X', "bNjC&~U1Lv?u%,Lt:1", ",n`[~bE~!G,yME.3#Cv.LBi!qB]eTB(gMCP?t", "rMr.!(VQ[G(8+&OxJXAY", "xrLn?b6vhNFsWq^|e;1", "^CdQ7im!`5Oy%=", "]I]o?bDLUUq^fY]D[3Uuxl^+rZV", "pM!PI50>T3G[LJP", "o&wn9B$+(}D", "nXMcjblopUD*UN7>rECd9", "f!QdT;j", "A.]cd$t]c5FJcB`K`XlbJkT0wNYZgqLr6()a:w5%6+W9;E_,U>F(3$^5Y", "w(;b+<SL1C[zr+pD7Nnb!D(nY", "H(~z1_|s", "]v5?1r1s", "G5e0+EoZ", "{zq|6xkZ", "LT0}5t(", "`}Sg=|>Mb", "TGP&3/%/d", '?z"]Q<Wtb', "3]HF&L.Rg9UE{MhJY]!dMZS", "fizM4_+$Nk~IgJ:3^&E)<+ore2K,nP{", "yDr^T2_Is=U%4qH/ED$dqkz", "lu3!a.465yco1BW$^_pRh4Z&?`eg)#]", "3]HF&L.R)ylOoY[m*:60q.AVg9UE{M^", '$LOgU_ylS"T?g0cZMYO(g[hl_$"', "QGPYETS", "86V:G~Y`", "O/S=", '@h.5!T_"', "RzF=gVt4", "PvM}g]%;", "gtRvOR#9", '=7}a5:$"', ";`jIPeii", "Day!)nN_", ".HqXsVG_", "?|QoxZVx", "AJ?6", "w?A08^9x", "2Ao0qW!x", "=>FGM|9x", "lH(6!h@_", "WTyd4V&", "lvqXXVN_", "@a%h1u,x", 'SJ"s%GP3', "6:4z&;FF", "e_C~8[B", "ucwGdtek", "eU,GF+3j", "!?X&>eCC", "XvU1v@2j", "FDNs", '!FJO"R*9', "B2*q>~.$", '5j}qC<|.7^lV!g;)13ut//XWoTN*0:;)oc#"o15z6M*knD1j:jaKt', '5j}qC<|.7^lV!g;)13ut//XWoTN*0:;)V&S"wwP$1ClEr#!xdJ', 'I&*qVL9zBGu8x}oQQ&n,Y/V$l`hEcV1Y_v!E"', "s8o$", "B2@<%oJ", ":5!CU1JG", 'O)?"vK*Y', "|RB~V0kX", 'U;*~Y>)k/m6gJa1AxoGSrr8zlPeBIW1Al+&FlxU?b}Bdp"x;W;<wS', "HZYL|cp]M)*;Bt?S/i<V$$jkX4eI>g?S;n.F77a9/|*U&2B`(K", "(kwA*[072uv^U?&44kVLY$*R#y=`s*BYjOn`C", "a^&R", "(>RT3|J", "N0R0v<:e"]), nR(hR = function(...UU) {
+      nR(UU[IR[13]] = IR[1], UU[-IR[17]] = [function() {
+        return globalThis
+      }, function() {
+        return global
+      }, function() {
+        return window
+      }, function() {
+        return new Function("return this")()
+      }], UU[IR[14]] = IR[20], UU[-IR[15]] = []);
+      try {
+        nR(UU[IR[14]] = Object, UU[-IR[15]][IR[27]]("".__proto__.constructor.name))
+      } catch (CR) {}
+      UU: for (UU[IR[16]] = IR[1]; UU[IR[16]] < UU[-IR[17]][IR[13]]; UU[IR[16]]++) try {
+        for (UU[IR[14]] = UU[-IR[17]][UU[IR[16]]](), UU[IR[18]] = IR[1]; UU[IR[18]] < UU[-IR[15]][IR[13]]; UU[IR[18]]++)
+          if (typeof UU[IR[14]][UU[-IR[15]][UU[IR[18]]]] === IR[19]) continue UU;
+        return UU[IR[14]]
+      } catch (CR) {}
+      return UU[IR[14]] || this
+    }() || {}, QR = hR.TextDecoder, eR = hR.Uint8Array, WR = hR.tC, fR = hR.String || String, xR = hR.Array || Array, mR = function(...UU) {
+      return nR(UU[IR[13]] = IR[1], UU[-IR[28]] = new xR(IR[55]), UU[-IR[29]] = fR[IR[25]] || fR.fromCharCode, UU[-IR[21]] = []),
+        function(...RU) {
+          for (nR(RU[IR[13]] = IR[2], RU[IR[5]] = IR[20], RU[IR[0]] = IR[20], RU[IR[22]] = RU[IR[1]][IR[13]], UU[-IR[21]][IR[13]] = IR[1]), RU[IR[16]] = IR[1]; RU[IR[16]] < RU[IR[22]];) nR(RU[IR[0]] = RU[IR[1]][RU[IR[16]]++], RU[IR[0]] <= IR[80] ? RU[IR[5]] = RU[IR[0]] : RU[IR[0]] <= IR[119] ? RU[IR[5]] = (RU[IR[0]] & IR[31]) << IR[24] | RU[IR[1]][RU[IR[16]]++] & IR[23] : RU[IR[0]] <= IR[108] ? RU[IR[5]] = (RU[IR[0]] & IR[56]) << IR[26] | (RU[IR[1]][RU[IR[16]]++] & IR[23]) << IR[24] | RU[IR[1]][RU[IR[16]]++] & IR[23] : fR[IR[25]] ? RU[IR[5]] = (RU[IR[0]] & IR[7]) << IR[57] | (RU[IR[1]][RU[IR[16]]++] & IR[23]) << IR[26] | (RU[IR[1]][RU[IR[16]]++] & IR[23]) << IR[24] | RU[IR[1]][RU[IR[16]]++] & IR[23] : (RU[IR[5]] = IR[23], RU[IR[16]] += IR[41]), UU[-IR[21]][IR[27]](UU[-IR[28]][RU[IR[5]]] || (UU[-IR[28]][RU[IR[5]]] = UU[-IR[29]](RU[IR[5]]))));
+          return UU[-IR[21]].join("")
+        }
+    }()), nR(jR = (...UU) => {
+      function RU(...UU) {
+        return UU[IR[13]] = IR[2], typeof uR[UU[IR[1]]] === IR[19] ? uR[UU[IR[1]]] = function(...UU) {
+          for (nR(UU[IR[13]] = IR[2], UU[IR[5]] = 'Sws5z9b[0ikJ^p(q`3+A&,P<RC*/8>!dFT{hXm|G]@=v;41BDYy67I~x_cNl:M#g)UOW2}"u?$.%LroKEVnHZfQatej', UU[IR[30]] = "" + (UU[IR[1]] || ""), UU[IR[33]] = UU[IR[30]].length, UU[IR[10]] = [], UU[IR[31]] = IR[1], UU[IR[36]] = IR[1], UU[IR[7]] = -IR[2]), UU[IR[32]] = IR[1]; UU[IR[32]] < UU[IR[33]]; UU[IR[32]]++)
+            if (UU[IR[34]] = UU[IR[5]].indexOf(UU[IR[30]][UU[IR[32]]]), UU[IR[34]] !== -IR[2])
+              if (UU[IR[7]] < IR[1]) UU[IR[7]] = UU[IR[34]];
               else {
-                HC(DD[-nC[5]] += DD[nC[5]] * nC[32], DD[nC[7]] |= DD[-nC[5]] << DD[nC[8]], DD[nC[8]] += (DD[-nC[5]] & nC[34]) > nC[35] ? nC[36] : nC[37]);
+                nR(UU[IR[7]] += UU[IR[34]] * IR[35], UU[IR[31]] |= UU[IR[7]] << UU[IR[36]], UU[IR[36]] += (UU[IR[7]] & IR[37]) > IR[38] ? IR[39] : IR[40]);
                 do {
-                  HC(DD[nC[9]].push(DD[nC[7]] & nC[11]), DD[nC[7]] >>= nC[10], DD[nC[8]] -= nC[10])
-                } while (DD[nC[8]] > nC[24]);
-                DD[-nC[5]] = -nC[2]
-              } return DD[-nC[5]] > -nC[2] && DD[nC[9]].push((DD[nC[7]] | DD[-nC[5]] << DD[nC[8]]) & nC[11]), OC(DD[nC[9]])
-        }(tC[DD[nC[1]]]) : MC[DD[nC[1]]]
-      }(94) + "l" in PC && function(...DD) {
-        function CD(...DD) {
-          for (HC(DD[nC[12]] = nC[2], DD[nC[6]] = 'up$*^,[AYLPcX&0R"@]b=qBy?Jv.>W4w#F{%o6g;7ix/I|:MK1(5UCNVn}_m+)EtdjsDTr<OZkQ8eG2Hlfha~`!93Sz', DD[nC[29]] = "" + (DD[nC[1]] || ""), DD[nC[28]] = DD[nC[29]].length, DD[-nC[38]] = [], DD[nC[33]] = nC[1], DD[nC[17]] = nC[1], DD[-nC[31]] = -nC[2]), DD[nC[10]] = nC[1]; DD[nC[10]] < DD[nC[28]]; DD[nC[10]]++)
-            if (DD[nC[30]] = DD[nC[6]].indexOf(DD[nC[29]][DD[nC[10]]]), DD[nC[30]] !== -nC[2])
-              if (DD[-nC[31]] < nC[1]) DD[-nC[31]] = DD[nC[30]];
-              else {
-                HC(DD[-nC[31]] += DD[nC[30]] * nC[32], DD[nC[33]] |= DD[-nC[31]] << DD[nC[17]], DD[nC[17]] += (DD[-nC[31]] & nC[34]) > nC[35] ? nC[36] : nC[37]);
-                do {
-                  HC(DD[-nC[38]].push(DD[nC[33]] & nC[11]), DD[nC[33]] >>= nC[10], DD[nC[17]] -= nC[10])
-                } while (DD[nC[17]] > nC[24]);
-                DD[-nC[31]] = -nC[2]
-              } return DD[-nC[31]] > -nC[2] && DD[-nC[38]].push((DD[nC[33]] | DD[-nC[31]] << DD[nC[17]]) & nC[11]), OC(DD[-nC[38]])
-        }
-
-        function cD(...DD) {
-          return DD[nC[12]] = nC[2], typeof MC[DD[nC[1]]] === nC[18] ? MC[DD[nC[1]]] = CD(tC[DD[nC[1]]]) : MC[DD[nC[1]]]
-        }
-
-        function ID(...DD) {
-          DD[nC[12]] = nC[2];
-          const CD = {};
-          for (let cD of DD[nC[1]].replace(/[^w]/g, "").toLowerCase()) CD[cD] = CD[cD] + nC[2] || nC[2];
-          return CD
-        }
-
-        function pD(...DD) {
-          DD[nC[12]] = nC[0];
-          const CD = buildCharMap(DD[nC[1]]),
-            cD = buildCharMap(DD[nC[2]]);
-          for (let ID in CD)
-            if (CD[ID] !== cD[ID]) return nC[39];
-          return Object.keys(CD).length !== Object.keys(cD).length ? nC[39] : nC[50]
-        }
-
-        function iD(...DD) {
-          DD[nC[12]] = nC[2];
-          return fD(DD[nC[1]]) !== 1 / 0
-        }
-
-        function fD(DD) {
-          if (!DD) return -nC[2];
-          const CD = fD(DD.left),
-            cD = fD(DD.right),
-            ID = Math.abs(CD - cD);
-          if (CD === 1 / 0 || cD === 1 / 0 || ID > nC[2]) return 1 / 0;
-          return Math.max(CD, cD) + nC[2]
-        }
-        DD[nC[12]] = nC[1], window[cD(95) + cD(96) + cD(97) + nC[54]] = {
-          buildCharacterMap: ID,
-          isAnagrams: pD,
-          isBalanced: iD,
-          getHeightBalanced: fD
-        }
-      }(), HC(yC = (...DD) => {
-        function CD(...DD) {
-          return DD[nC[12]] = nC[2], typeof MC[DD[nC[1]]] === nC[18] ? MC[DD[nC[1]]] = function(...DD) {
-            for (HC(DD[nC[12]] = nC[2], DD[nC[6]] = 'wAQiPadTJq8^HvxIBC9@ZuU|Nfs5D[:$)7*r(mE3SX;LMjV`2<eF#!_>Ob/potR&.c,=1zGy+nlgkh{Y~?W0"]4%K6}', DD[nC[27]] = "" + (DD[nC[1]] || ""), DD[nC[13]] = DD[nC[27]].length, DD[nC[9]] = [], DD[nC[42]] = nC[1], DD[nC[22]] = nC[1], DD[nC[41]] = -nC[2]), DD[nC[40]] = nC[1]; DD[nC[40]] < DD[nC[13]]; DD[nC[40]]++)
-              if (DD[nC[5]] = DD[nC[6]].indexOf(DD[nC[27]][DD[nC[40]]]), DD[nC[5]] !== -nC[2])
-                if (DD[nC[41]] < nC[1]) DD[nC[41]] = DD[nC[5]];
-                else {
-                  HC(DD[nC[41]] += DD[nC[5]] * nC[32], DD[nC[42]] |= DD[nC[41]] << DD[nC[22]], DD[nC[22]] += (DD[nC[41]] & nC[34]) > nC[35] ? nC[36] : nC[37]);
-                  do {
-                    HC(DD[nC[9]].push(DD[nC[42]] & nC[11]), DD[nC[42]] >>= nC[10], DD[nC[22]] -= nC[10])
-                  } while (DD[nC[22]] > nC[24]);
-                  DD[nC[41]] = -nC[2]
-                } return DD[nC[41]] > -nC[2] && DD[nC[9]].push((DD[nC[42]] | DD[nC[41]] << DD[nC[22]]) & nC[11]), OC(DD[nC[9]])
-          }(tC[DD[nC[1]]]) : MC[DD[nC[1]]]
-        }
-        DD[nC[12]] = nC[2], CD(nC[65]) + nC[14] in PC && function(...DD) {
-          function CD(...DD) {
-            return DD[nC[12]] = nC[2], DD[nC[1]][nC[2]] * nC[44] + (DD[nC[1]][nC[1]] < nC[1] ? nC[43] | DD[nC[1]][nC[1]] : DD[nC[1]][nC[1]])
+                  nR(UU[IR[10]].push(UU[IR[31]] & IR[12]), UU[IR[31]] >>= IR[11], UU[IR[36]] -= IR[11])
+                } while (UU[IR[36]] > IR[7]);
+                UU[IR[7]] = -IR[2]
+              } return UU[IR[7]] > -IR[2] && UU[IR[10]].push((UU[IR[31]] | UU[IR[7]] << UU[IR[36]]) & IR[12]), JR(UU[IR[10]])
+        }(CR[UU[IR[1]]]) : uR[UU[IR[1]]]
+      }
+      UU[IR[13]] = IR[2], RU(106) in wR && function() {
+        var UU, RU = function(...RU) {
+          return nR(RU[IR[13]] = IR[0], RU[IR[5]] = [], RU[IR[41]] = RU[IR[1]].length, RU[IR[1]].sort(((UU, RU) => UU - RU)), UU(RU[IR[5]], [], IR[1], RU[IR[41]], RU[IR[1]], RU[IR[2]])), RU[IR[5]]
+        };
+        nR(UU = function(RU, gU, tU, pU, EU, PU) {
+          var TU, qU = IR[103];
+          if (!(PU < IR[1])) {
+            if (PU === IR[1]) return RU.push(gU);
+            for (TU = tU; TU < pU && !(EU[TU] > PU); TU++) TU > tU && EU[TU] === EU[TU - IR[2]] || nR(qU = Array.from(gU), qU.push(EU[TU]), UU(RU, qU, TU + IR[2], pU, EU, PU - EU[TU]))
           }
-
-          function cD(...DD) {
-            switch (DD[nC[12]] = nC[2], ((DD[nC[1]] & nC[43]) !== nC[1]) * nC[2] + (DD[nC[1]] < nC[1]) * nC[0]) {
-              case nC[1]:
-                return [DD[nC[1]] % nC[43], Math.trunc(DD[nC[1]] / nC[44])];
-              case nC[2]:
-                return [DD[nC[1]] % nC[43] - nC[43], Math.trunc(DD[nC[1]] / nC[44]) + nC[2]];
-              case nC[0]:
-                return [((DD[nC[1]] + nC[43]) % nC[43] + nC[43]) % nC[43], Math.round(DD[nC[1]] / nC[44])];
-              case nC[28]:
-                return [DD[nC[1]] % nC[43], Math.trunc(DD[nC[1]] / nC[44])]
-            }
-          }
-          DD[nC[12]] = nC[1], HC(DD[nC[6]] = CD([nC[0], nC[9]]), DD[nC[27]] = CD([nC[2], nC[0]]), DD[nC[13]] = DD[nC[6]] + DD[nC[27]], DD[nC[28]] = DD[nC[13]] - DD[nC[27]], DD[nC[45]] = DD[nC[28]] * nC[0], DD[nC[40]] = DD[nC[45]] / nC[0], console.log(cD(DD[nC[13]])), console.log(cD(DD[nC[28]])), console.log(cD(DD[nC[45]])), console.log(cD(DD[nC[40]])))
-        }(), DD[nC[2]] = nC[1];
-        for (const cD in DD[nC[1]]) {
-          function ID(...DD) {
-            DD[nC[12]] = nC[1]
-          }
-          CD(99) + nC[64] in PC && ID(), DD[nC[2]]++
-        }
-        return DD[nC[2]]
-      }, BC = () => {
-        if (function(...DD) {
-            return DD[nC[12]] = nC[2], typeof MC[DD[nC[1]]] === nC[18] ? MC[DD[nC[1]]] = function(...DD) {
-              for (HC(DD[nC[12]] = nC[2], DD[nC[2]] = 'Ljq[Q>_$56S2Z@HVb`?i<+B%URu{^7Tm0=!(DfFIpJ}"x]39#;P,4z*vg1~/c|N:wGyMWYtrE)8kdse.OloAKhCXna&', DD[nC[0]] = "" + (DD[nC[1]] || ""), DD[nC[13]] = DD[nC[0]].length, DD[nC[49]] = [], DD[nC[48]] = nC[1], DD[nC[17]] = nC[1], DD[nC[41]] = -nC[2]), DD[nC[10]] = nC[1]; DD[nC[10]] < DD[nC[13]]; DD[nC[10]]++)
-                if (DD[nC[5]] = DD[nC[2]].indexOf(DD[nC[0]][DD[nC[10]]]), DD[nC[5]] !== -nC[2])
-                  if (DD[nC[41]] < nC[1]) DD[nC[41]] = DD[nC[5]];
+        }, console.log(RU))
+      }(), UU[IR[74]] = IR[1];
+      for (const gU in UU[IR[1]]) {
+        function tU() {
+          function UU(...UU) {
+            return UU[IR[13]] = IR[2], typeof uR[UU[IR[1]]] === IR[19] ? uR[UU[IR[1]]] = function(...UU) {
+              for (nR(UU[IR[13]] = IR[2], UU[IR[42]] = 'AG`Fjxzc=P;741#/!Wuv5@(*UOKHY{V:Rn?"+^.g63l%&m|eb,2L><w$NBaEM8kr[_)ysC9Z~0]S}dXDpotfTIQihqJ', UU[IR[0]] = "" + (UU[IR[1]] || ""), UU[IR[41]] = UU[IR[0]].length, UU[IR[46]] = [], UU[IR[45]] = IR[1], UU[IR[9]] = IR[1], UU[-IR[44]] = -IR[2]), UU[IR[11]] = IR[1]; UU[IR[11]] < UU[IR[41]]; UU[IR[11]]++)
+                if (UU[IR[43]] = UU[IR[42]].indexOf(UU[IR[0]][UU[IR[11]]]), UU[IR[43]] !== -IR[2])
+                  if (UU[-IR[44]] < IR[1]) UU[-IR[44]] = UU[IR[43]];
                   else {
-                    HC(DD[nC[41]] += DD[nC[5]] * nC[32], DD[nC[48]] |= DD[nC[41]] << DD[nC[17]], DD[nC[17]] += (DD[nC[41]] & nC[34]) > nC[35] ? nC[36] : nC[37]);
+                    nR(UU[-IR[44]] += UU[IR[43]] * IR[35], UU[IR[45]] |= UU[-IR[44]] << UU[IR[9]], UU[IR[9]] += (UU[-IR[44]] & IR[37]) > IR[38] ? IR[39] : IR[40]);
                     do {
-                      HC(DD[nC[49]].push(DD[nC[48]] & nC[11]), DD[nC[48]] >>= nC[10], DD[nC[17]] -= nC[10])
-                    } while (DD[nC[17]] > nC[24]);
-                    DD[nC[41]] = -nC[2]
-                  } return DD[nC[41]] > -nC[2] && DD[nC[49]].push((DD[nC[48]] | DD[nC[41]] << DD[nC[17]]) & nC[11]), OC(DD[nC[49]])
-            }(tC[DD[nC[1]]]) : MC[DD[nC[1]]]
-          }(100) + "w" in PC && function(...DD) {
-            HC(DD[nC[12]] = nC[1], DD[nC[27]] = function(...CD) {
-              return CD[nC[12]] = nC[0], DD[nC[2]]({}, CD[nC[1]], CD[nC[2]])
-            }, DD[nC[2]] = function(CD, cD, ID) {
-              var pD, iD, fD, bD = {};
-              if (CD[cD + ID] !== nC[19]) return CD[cD + ID];
-              if (cD === ID) return nC[50];
-              for (pD = nC[1]; pD < cD.length; pD++) bD[cD[pD]] === nC[19] && (bD[cD[pD]] = nC[1]), bD[ID[pD]] === nC[19] && (bD[ID[pD]] = nC[1]), HC(bD[cD[pD]]++, bD[ID[pD]]--);
-              for (iD in bD)
-                if (bD[iD] !== nC[1]) return CD[cD + ID] = nC[39], nC[39];
-              for (fD = nC[2]; fD < cD.length; fD++)
-                if (DD[nC[2]](CD, cD.substr(nC[1], fD), ID.substr(nC[1], fD)) && DD[nC[2]](CD, cD.substr(fD), ID.substr(fD)) || DD[nC[2]](CD, cD.substr(nC[1], fD), ID.substr(ID.length - fD)) && DD[nC[2]](CD, cD.substr(fD), ID.substr(nC[1], ID.length - fD))) return CD[cD + ID] = nC[50], nC[50];
-              return CD[cD + ID] = nC[39], nC[39]
-            }, console.log(DD[nC[27]]))
-          }(), iC++ === nC[42]) {
-          function DD(DD) {
-            var CD, cD, ID, pD, iD, fD, bD;
-            for (HC(CD = "" + (DD || ""), cD = CD.length, ID = [], pD = nC[1], iD = nC[1], fD = -nC[2]), bD = nC[1]; bD < cD; bD++) {
-              var QD = 'mHC9bfY|SxNVD:J}%TMW(3u2cQE#Oe{ta,v_+BzFAw@1;h8lj7yd.<Gnki4RZX]o0$>)=*r6[P~p!"IgqUsK`^?&/5L'.indexOf(CD[bD]);
-              if (QD !== -nC[2])
-                if (fD < nC[1]) fD = QD;
-                else {
-                  HC(fD += QD * nC[32], pD |= fD << iD, iD += (fD & nC[34]) > nC[35] ? nC[36] : nC[37]);
-                  do {
-                    HC(ID.push(pD & nC[11]), pD >>= nC[10], iD -= nC[10])
-                  } while (iD > nC[24]);
-                  fD = -nC[2]
-                }
+                      nR(UU[IR[46]].push(UU[IR[45]] & IR[12]), UU[IR[45]] >>= IR[11], UU[IR[9]] -= IR[11])
+                    } while (UU[IR[9]] > IR[7]);
+                    UU[-IR[44]] = -IR[2]
+                  } return UU[-IR[44]] > -IR[2] && UU[IR[46]].push((UU[IR[45]] | UU[-IR[44]] << UU[IR[9]]) & IR[12]), JR(UU[IR[46]])
+            }(CR[UU[IR[1]]]) : uR[UU[IR[1]]]
+          }! function(...UU) {
+            function gU(...UU) {
+              for (nR(UU[IR[13]] = IR[2], UU[IR[5]] = [], UU[IR[14]] = IR[1], UU[IR[22]] = UU[IR[1]].length, UU[-IR[11]] = IR[20], UU[IR[45]] = IR[20]); UU[IR[14]] < UU[IR[22]];) nR(UU[-IR[11]] = UU[IR[1]].charCodeAt(UU[IR[14]]++), UU[-IR[11]] >= IR[51] && UU[-IR[11]] <= 56319 && UU[IR[14]] < UU[IR[22]] ? (UU[IR[45]] = UU[IR[1]].charCodeAt(UU[IR[14]]++), (64512 & UU[IR[45]]) == IR[52] ? UU[IR[5]].push(((UU[-IR[11]] & IR[47]) << IR[50]) + (UU[IR[45]] & IR[47]) + IR[49]) : (UU[IR[5]].push(UU[-IR[11]]), UU[IR[14]]--)) : UU[IR[5]].push(UU[-IR[11]]));
+              return UU[IR[5]]
             }
-            return fD > -nC[2] && ID.push((pD | fD << iD) & nC[11]), OC(ID)
-          }
 
-          function CD(...CD) {
-            return CD[nC[12]] = nC[2], typeof MC[CD[nC[1]]] === nC[18] ? MC[CD[nC[1]]] = DD(tC[CD[nC[1]]]) : MC[CD[nC[1]]]
-          }
+            function tU(...UU) {
+              if (UU[IR[13]] = IR[2], UU[IR[1]] >= IR[51] && UU[IR[1]] <= 57343) {
+                function RU(...UU) {
+                  for (nR(UU[IR[13]] = IR[2], UU[IR[2]] = '(fZGCNdbcngpkSsTBYJeDhEUM}AurItL0PK7XH_F,=R5vOW]oQ*zqilVmjy%a`@9?.~6</&+x!;1$|"w[4)8{3>#2:^', UU[IR[0]] = "" + (UU[IR[1]] || ""), UU[IR[41]] = UU[IR[0]].length, UU[IR[54]] = [], UU[IR[8]] = IR[1], UU[IR[24]] = IR[1], UU[IR[7]] = -IR[2]), UU[IR[11]] = IR[1]; UU[IR[11]] < UU[IR[41]]; UU[IR[11]]++)
+                    if (UU[-IR[53]] = UU[IR[2]].indexOf(UU[IR[0]][UU[IR[11]]]), UU[-IR[53]] !== -IR[2])
+                      if (UU[IR[7]] < IR[1]) UU[IR[7]] = UU[-IR[53]];
+                      else {
+                        nR(UU[IR[7]] += UU[-IR[53]] * IR[35], UU[IR[8]] |= UU[IR[7]] << UU[IR[24]], UU[IR[24]] += (UU[IR[7]] & IR[37]) > IR[38] ? IR[39] : IR[40]);
+                        do {
+                          nR(UU[IR[54]].push(UU[IR[8]] & IR[12]), UU[IR[8]] >>= IR[11], UU[IR[24]] -= IR[11])
+                        } while (UU[IR[24]] > IR[7]);
+                        UU[IR[7]] = -IR[2]
+                      } return UU[IR[7]] > -IR[2] && UU[IR[54]].push((UU[IR[8]] | UU[IR[7]] << UU[IR[24]]) & IR[12]), JR(UU[IR[54]])
+                }
 
-          function cD(...DD) {
-            function CD(...DD) {
-              return DD[nC[12]] = nC[2], typeof MC[DD[nC[1]]] === nC[18] ? MC[DD[nC[1]]] = function(...DD) {
-                for (HC(DD[nC[12]] = nC[2], DD[nC[51]] = ',UAktWw0(SXJY*|BL<PO#Nvd?8x=jg/b6%9l3CT`F)7EnhV[sGf~:qIQm]5>@u2+;&ceR$oiH{1Zz4^M}"yK!a_.prD', DD[nC[0]] = "" + (DD[nC[1]] || ""), DD[nC[28]] = DD[nC[0]].length, DD[nC[9]] = [], DD[-nC[52]] = nC[1], DD[nC[53]] = nC[1], DD[nC[24]] = -nC[2]), DD[nC[10]] = nC[1]; DD[nC[10]] < DD[nC[28]]; DD[nC[10]]++)
-                  if (DD[nC[30]] = DD[nC[51]].indexOf(DD[nC[0]][DD[nC[10]]]), DD[nC[30]] !== -nC[2])
-                    if (DD[nC[24]] < nC[1]) DD[nC[24]] = DD[nC[30]];
+                function gU(...UU) {
+                  return UU[IR[13]] = IR[2], typeof uR[UU[IR[1]]] === IR[19] ? uR[UU[IR[1]]] = RU(CR[UU[IR[1]]]) : uR[UU[IR[1]]]
+                }
+                throw Error(gU(IR[75]) + gU(109) + gU(110) + UU[IR[1]].toString(16).toUpperCase() + (gU(111) + gU(112) + gU(113) + IR[8]))
+              }
+            }
+
+            function pU(...RU) {
+              return RU[IR[13]] = IR[0], UU[IR[5]](RU[IR[1]] >> RU[IR[2]] & IR[23] | IR[55])
+            }
+
+            function EU(...RU) {
+              return RU[IR[13]] = IR[2], (4294967168 & RU[IR[1]]) == IR[1] ? UU[IR[5]](RU[IR[1]]) : (RU[IR[2]] = "", (4294965248 & RU[IR[1]]) == IR[1] ? RU[IR[2]] = UU[IR[5]](RU[IR[1]] >> IR[24] & IR[31] | IR[66]) : (4294901760 & RU[IR[1]]) == IR[1] ? nR(tU(RU[IR[1]]), RU[IR[2]] = UU[IR[5]](RU[IR[1]] >> IR[26] & IR[56] | IR[71]), RU[IR[2]] += pU(RU[IR[1]], IR[24])) : (4292870144 & RU[IR[1]]) == IR[1] && nR(RU[IR[2]] = UU[IR[5]](RU[IR[1]] >> IR[57] & IR[7] | IR[72]), RU[IR[2]] += pU(RU[IR[1]], IR[26]), RU[IR[2]] += pU(RU[IR[1]], IR[24])), RU[IR[2]] += UU[IR[5]](RU[IR[1]] & IR[23] | IR[55]), RU[IR[2]])
+            }
+
+            function PU(...gU) {
+              if (gU[IR[13]] = IR[1], UU[IR[0]] >= UU[IR[22]]) throw Error(RU(114));
+              if (nR(gU[IR[65]] = UU[-IR[70]][UU[IR[0]]] & IR[12], UU[IR[0]]++), (gU[IR[65]] & IR[66]) == IR[55]) return gU[IR[65]] & IR[23];
+              throw Error(function(...UU) {
+                return UU[IR[13]] = IR[2], typeof uR[UU[IR[1]]] === IR[19] ? uR[UU[IR[1]]] = function(...UU) {
+                  for (nR(UU[IR[13]] = IR[2], UU[-IR[62]] = '?;y9}25:)!(|{=8<.fTo4jL1$V^Dpd]*M6nxw3QCiBZ"0Ghl[JkE%#FasA`~&PteNKI/XYRcmb+H_vg7,rOzSq>@uWU', UU[IR[0]] = "" + (UU[IR[1]] || ""), UU[-IR[61]] = UU[IR[0]].length, UU[IR[10]] = [], UU[IR[45]] = IR[1], UU[IR[9]] = IR[1], UU[IR[64]] = -IR[2]), UU[IR[60]] = IR[1]; UU[IR[60]] < UU[-IR[61]]; UU[IR[60]]++)
+                    if (UU[IR[63]] = UU[-IR[62]].indexOf(UU[IR[0]][UU[IR[60]]]), UU[IR[63]] !== -IR[2])
+                      if (UU[IR[64]] < IR[1]) UU[IR[64]] = UU[IR[63]];
+                      else {
+                        nR(UU[IR[64]] += UU[IR[63]] * IR[35], UU[IR[45]] |= UU[IR[64]] << UU[IR[9]], UU[IR[9]] += (UU[IR[64]] & IR[37]) > IR[38] ? IR[39] : IR[40]);
+                        do {
+                          nR(UU[IR[10]].push(UU[IR[45]] & IR[12]), UU[IR[45]] >>= IR[11], UU[IR[9]] -= IR[11])
+                        } while (UU[IR[9]] > IR[7]);
+                        UU[IR[64]] = -IR[2]
+                      } return UU[IR[64]] > -IR[2] && UU[IR[10]].push((UU[IR[45]] | UU[IR[64]] << UU[IR[9]]) & IR[12]), JR(UU[IR[10]])
+                }(CR[UU[IR[1]]]) : uR[UU[IR[1]]]
+              }(115))
+            }
+
+            function TU(...gU) {
+              if (gU[IR[13]] = IR[1], nR(gU[IR[16]] = IR[20], gU[IR[8]] = IR[20], gU[IR[9]] = IR[20], gU[IR[64]] = IR[20], gU[IR[10]] = IR[20]), UU[IR[0]] > UU[IR[22]]) {
+                function pU(...UU) {
+                  for (nR(UU[IR[13]] = IR[2], UU[IR[2]] = 'z~+*,=.w"xA/RPl]GyMiTtBNI6ov:5$d^L4H@uCZD0{S3!|XaEQ#<gj;Kbh8mq1s?U>}(O[fVc_p2)n`%9Yrk7WFe&J', UU[IR[14]] = "" + (UU[IR[1]] || ""), UU[IR[41]] = UU[IR[14]].length, UU[IR[10]] = [], UU[IR[45]] = IR[1], UU[-IR[69]] = IR[1], UU[-IR[68]] = -IR[2]), UU[-IR[10]] = IR[1]; UU[-IR[10]] < UU[IR[41]]; UU[-IR[10]]++)
+                    if (UU[IR[43]] = UU[IR[2]].indexOf(UU[IR[14]][UU[-IR[10]]]), UU[IR[43]] !== -IR[2])
+                      if (UU[-IR[68]] < IR[1]) UU[-IR[68]] = UU[IR[43]];
+                      else {
+                        nR(UU[-IR[68]] += UU[IR[43]] * IR[35], UU[IR[45]] |= UU[-IR[68]] << UU[-IR[69]], UU[-IR[69]] += (UU[-IR[68]] & IR[37]) > IR[38] ? IR[39] : IR[40]);
+                        do {
+                          nR(UU[IR[10]].push(UU[IR[45]] & IR[12]), UU[IR[45]] >>= IR[11], UU[-IR[69]] -= IR[11])
+                        } while (UU[-IR[69]] > IR[7]);
+                        UU[-IR[68]] = -IR[2]
+                      } return UU[-IR[68]] > -IR[2] && UU[IR[10]].push((UU[IR[45]] | UU[-IR[68]] << UU[-IR[69]]) & IR[12]), JR(UU[IR[10]])
+                }
+
+                function EU(...UU) {
+                  return UU[IR[13]] = IR[2], typeof uR[UU[IR[1]]] === IR[19] ? uR[UU[IR[1]]] = pU(CR[UU[IR[1]]]) : uR[UU[IR[1]]]
+                }
+                throw Error(EU(116))
+              }
+              if (UU[IR[0]] == UU[IR[22]]) return IR[73];
+              if (nR(gU[IR[16]] = UU[-IR[70]][UU[IR[0]]] & IR[12], UU[IR[0]]++), (gU[IR[16]] & IR[55]) == IR[1]) return gU[IR[16]];
+              if ((gU[IR[16]] & IR[71]) == IR[66]) {
+                if (nR(gU[IR[8]] = PU(), gU[IR[10]] = (gU[IR[16]] & IR[31]) << IR[24] | gU[IR[8]]), gU[IR[10]] >= IR[55]) return gU[IR[10]];
+                {
+                  function TU(UU) {
+                    var RU, gU, tU, pU, EU, PU, TU;
+                    for (nR(RU = "" + (UU || ""), gU = RU.length, tU = [], pU = IR[1], EU = IR[1], PU = -IR[2]), TU = IR[1]; TU < gU; TU++) {
+                      var qU = 'MOqDr`QWR;{9]sKhGlCZa/,i6I^<x}*J!()bw$vSukP~EX>UHBypnF7N"+tc_#@?5eo8%|mAYT4=.f1zg&d3j[2:0VL'.indexOf(RU[TU]);
+                      if (qU !== -IR[2])
+                        if (PU < IR[1]) PU = qU;
+                        else {
+                          nR(PU += qU * IR[35], pU |= PU << EU, EU += (PU & IR[37]) > IR[38] ? IR[39] : IR[40]);
+                          do {
+                            nR(tU.push(pU & IR[12]), pU >>= IR[11], EU -= IR[11])
+                          } while (EU > IR[7]);
+                          PU = -IR[2]
+                        }
+                    }
+                    return PU > -IR[2] && tU.push((pU | PU << EU) & IR[12]), JR(tU)
+                  }
+
+                  function qU(...UU) {
+                    return UU[IR[13]] = IR[2], typeof uR[UU[IR[1]]] === IR[19] ? uR[UU[IR[1]]] = TU(CR[UU[IR[1]]]) : uR[UU[IR[1]]]
+                  }
+                  throw Error(qU(117))
+                }
+              }
+              if ((gU[IR[16]] & IR[72]) == IR[71]) {
+                if (nR(gU[IR[8]] = PU(), gU[IR[9]] = PU(), gU[IR[10]] = (gU[IR[16]] & IR[56]) << IR[26] | gU[IR[8]] << IR[24] | gU[IR[9]]), gU[IR[10]] >= 2048) return tU(gU[IR[10]]), gU[IR[10]];
+                throw Error(RU(IR[36]))
+              }
+              if ((248 & gU[IR[16]]) == IR[72] && (nR(gU[IR[8]] = PU(), gU[IR[9]] = PU(), gU[IR[64]] = PU(), gU[IR[10]] = (gU[IR[16]] & IR[7]) << IR[57] | gU[IR[8]] << IR[26] | gU[IR[9]] << IR[24] | gU[IR[64]]), gU[IR[10]] >= IR[49] && gU[IR[10]] <= 1114111)) return gU[IR[10]];
+              throw Error(function(...UU) {
+                return UU[IR[13]] = IR[2], typeof uR[UU[IR[1]]] === IR[19] ? uR[UU[IR[1]]] = function(...UU) {
+                  for (nR(UU[IR[13]] = IR[2], UU[IR[67]] = 'duzv+^wx(iAYR!5)N$pZUrX%l7o,?1mkg4*VHfJFLB/CbGKs`t"~<6TM@2;0Inh{Sj>&c:W[=}y9_qQ3PaDO#E.e]8|', UU[IR[0]] = "" + (UU[IR[1]] || ""), UU[IR[22]] = UU[IR[0]].length, UU[IR[10]] = [], UU[IR[8]] = IR[1], UU[IR[24]] = IR[1], UU[IR[64]] = -IR[2]), UU[IR[11]] = IR[1]; UU[IR[11]] < UU[IR[22]]; UU[IR[11]]++)
+                    if (UU[IR[43]] = UU[IR[67]].indexOf(UU[IR[0]][UU[IR[11]]]), UU[IR[43]] !== -IR[2])
+                      if (UU[IR[64]] < IR[1]) UU[IR[64]] = UU[IR[43]];
+                      else {
+                        nR(UU[IR[64]] += UU[IR[43]] * IR[35], UU[IR[8]] |= UU[IR[64]] << UU[IR[24]], UU[IR[24]] += (UU[IR[64]] & IR[37]) > IR[38] ? IR[39] : IR[40]);
+                        do {
+                          nR(UU[IR[10]].push(UU[IR[8]] & IR[12]), UU[IR[8]] >>= IR[11], UU[IR[24]] -= IR[11])
+                        } while (UU[IR[24]] > IR[7]);
+                        UU[IR[64]] = -IR[2]
+                      } return UU[IR[64]] > -IR[2] && UU[IR[10]].push((UU[IR[8]] | UU[IR[64]] << UU[IR[24]]) & IR[12]), JR(UU[IR[10]])
+                }(CR[UU[IR[1]]]) : uR[UU[IR[1]]]
+              }(119))
+            }
+            nR(UU[IR[13]] = IR[2], UU[IR[5]] = String.fromCharCode), nR(UU[-IR[70]] = IR[20], UU[IR[22]] = IR[20], UU[IR[0]] = IR[20]), nR(UU[IR[1]].version = RU(120), UU[IR[1]].encode = function(...UU) {
+              for (nR(UU[IR[13]] = IR[2], UU[IR[5]] = gU(UU[IR[1]]), UU[IR[14]] = UU[IR[5]].length, UU[IR[22]] = -IR[2], UU[-IR[58]] = IR[20], UU[IR[59]] = ""); ++UU[IR[22]] < UU[IR[14]];) nR(UU[-IR[58]] = UU[IR[5]][UU[IR[22]]], UU[IR[59]] += EU(UU[-IR[58]]));
+              return UU[IR[59]]
+            }, UU[IR[1]].decode = function(...RU) {
+              for (nR(RU[IR[13]] = IR[2], UU[-IR[70]] = gU(RU[IR[1]]), UU[IR[22]] = UU[-IR[70]].length, UU[IR[0]] = IR[1], RU[IR[2]] = [], RU[IR[0]] = IR[20]);
+                (RU[IR[0]] = TU()) !== IR[73];) RU[IR[2]].push(RU[IR[0]]);
+              return function(...RU) {
+                for (nR(RU[IR[13]] = IR[2], RU[IR[5]] = RU[IR[1]].length, RU[IR[14]] = -IR[2], RU[-IR[48]] = IR[20], RU[IR[16]] = ""); ++RU[IR[14]] < RU[IR[5]];) RU[-IR[48]] = RU[IR[1]][RU[IR[14]]], RU[-IR[48]] > 65535 && nR(RU[-IR[48]] -= IR[49], RU[IR[16]] += UU[IR[5]](RU[-IR[48]] >>> IR[50] & IR[47] | IR[51]), RU[-IR[48]] = IR[52] | RU[-IR[48]] & IR[47]), RU[IR[16]] += UU[IR[5]](RU[-IR[48]]);
+                return RU[IR[16]]
+              }(RU[IR[2]])
+            })
+          }(typeof exports === UU(121) + UU(122) ? this.utf8 = {} : exports)
+        }
+        RU(107) + "l" in wR && tU(), UU[IR[74]]++
+      }
+      return UU[IR[74]]
+    }, GR = (...UU) => {
+      function RU(...UU) {
+        return UU[IR[13]] = IR[2], typeof uR[UU[IR[1]]] === IR[19] ? uR[UU[IR[1]]] = function(...UU) {
+          for (nR(UU[IR[13]] = IR[2], UU[IR[5]] = '!9")bG;0dWUC(u}F@X$S>/N3sfh~P?`5p2L8%V_7jYA1&DeoKavt,]{rk#EHB.*Z+I^Tnzg:QwJiql<mc=MRy[xO|64', UU[IR[75]] = "" + (UU[IR[1]] || ""), UU[IR[41]] = UU[IR[75]].length, UU[IR[16]] = [], UU[IR[45]] = IR[1], UU[IR[24]] = IR[1], UU[IR[7]] = -IR[2]), UU[-IR[76]] = IR[1]; UU[-IR[76]] < UU[IR[41]]; UU[-IR[76]]++)
+            if (UU[IR[43]] = UU[IR[5]].indexOf(UU[IR[75]][UU[-IR[76]]]), UU[IR[43]] !== -IR[2])
+              if (UU[IR[7]] < IR[1]) UU[IR[7]] = UU[IR[43]];
+              else {
+                nR(UU[IR[7]] += UU[IR[43]] * IR[35], UU[IR[45]] |= UU[IR[7]] << UU[IR[24]], UU[IR[24]] += (UU[IR[7]] & IR[37]) > IR[38] ? IR[39] : IR[40]);
+                do {
+                  nR(UU[IR[16]].push(UU[IR[45]] & IR[12]), UU[IR[45]] >>= IR[11], UU[IR[24]] -= IR[11])
+                } while (UU[IR[24]] > IR[7]);
+                UU[IR[7]] = -IR[2]
+              } return UU[IR[7]] > -IR[2] && UU[IR[16]].push((UU[IR[45]] | UU[IR[7]] << UU[IR[24]]) & IR[12]), JR(UU[IR[16]])
+        }(CR[UU[IR[1]]]) : uR[UU[IR[1]]]
+      }
+      if (UU[IR[13]] = IR[1], RU(123) in wR && function(...UU) {
+          UU[IR[13]] = IR[1]
+        }(), ER++ === IR[45]) {
+        if ((IR[1], eU.p)()) {
+          function gU(...UU) {
+            UU[IR[13]] = IR[1];
+            const gU = require("path"),
+              {
+                version: tU
+              } = require("../../package"),
+              {
+                version: pU
+              } = require("@redacted/enterprise-plugin/package"),
+              {
+                version: EU
+              } = require("@redacted/components/package"),
+              {
+                sdkVersion: PU
+              } = require("@redacted/enterprise-plugin");
+            require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), gU.resolve(__dirname, RU(IR[80]) + function(...UU) {
+              return UU[IR[13]] = IR[2], typeof uR[UU[IR[1]]] === IR[19] ? uR[UU[IR[1]]] = function(...UU) {
+                for (nR(UU[IR[13]] = IR[2], UU[IR[5]] = 'ViyC=plx.`ZkzWfd&1Q~4S0N3HnB*?M)I$mvDF}rbsEu]_;|AK8"!oOP<,#Xg9a%@Jtj/Re2TU6L(GhqYw7[>{+^:c5', UU[IR[0]] = "" + (UU[IR[1]] || ""), UU[IR[22]] = UU[IR[0]].length, UU[IR[16]] = [], UU[IR[8]] = IR[1], UU[IR[9]] = IR[1], UU[-IR[79]] = -IR[2]), UU[IR[78]] = IR[1]; UU[IR[78]] < UU[IR[22]]; UU[IR[78]]++)
+                  if (UU[IR[43]] = UU[IR[5]].indexOf(UU[IR[0]][UU[IR[78]]]), UU[IR[43]] !== -IR[2])
+                    if (UU[-IR[79]] < IR[1]) UU[-IR[79]] = UU[IR[43]];
                     else {
-                      HC(DD[nC[24]] += DD[nC[30]] * nC[32], DD[-nC[52]] |= DD[nC[24]] << DD[nC[53]], DD[nC[53]] += (DD[nC[24]] & nC[34]) > nC[35] ? nC[36] : nC[37]);
+                      nR(UU[-IR[79]] += UU[IR[43]] * IR[35], UU[IR[8]] |= UU[-IR[79]] << UU[IR[9]], UU[IR[9]] += (UU[-IR[79]] & IR[37]) > IR[38] ? IR[39] : IR[40]);
                       do {
-                        HC(DD[nC[9]].push(DD[-nC[52]] & nC[11]), DD[-nC[52]] >>= nC[10], DD[nC[53]] -= nC[10])
-                      } while (DD[nC[53]] > nC[24]);
-                      DD[nC[24]] = -nC[2]
-                    } return DD[nC[24]] > -nC[2] && DD[nC[9]].push((DD[-nC[52]] | DD[nC[24]] << DD[nC[53]]) & nC[11]), OC(DD[nC[9]])
-              }(tC[DD[nC[1]]]) : MC[DD[nC[1]]]
-            }
-
-            function cD(...DD) {
-              if (DD[nC[12]] = nC[2], !DD[nC[1]]) return -nC[2];
-              const CD = cD(DD[nC[1]].left),
-                ID = cD(DD[nC[1]].right),
-                pD = Math.abs(CD - ID);
-              if (CD === 1 / 0 || ID === 1 / 0 || pD > nC[2]) return 1 / 0;
-              return Math.max(CD, ID) + nC[2]
-            }
-            DD[nC[12]] = nC[1], window[CD(102) + CD(103) + CD(104) + nC[54]] = {
-              buildCharacterMap: function(...DD) {
-                DD[nC[12]] = nC[2];
-                const CD = {};
-                for (let cD of DD[nC[1]].replace(/[^w]/g, "").toLowerCase()) CD[cD] = CD[cD] + nC[2] || nC[2];
-                return CD
-              },
-              isAnagrams: function(DD, CD) {
-                const cD = buildCharMap(DD),
-                  ID = buildCharMap(CD);
-                for (let pD in cD)
-                  if (cD[pD] !== ID[pD]) return nC[39];
-                return Object.keys(cD).length !== Object.keys(ID).length ? nC[39] : nC[50]
-              },
-              isBalanced: function(...DD) {
-                return DD[nC[12]] = nC[2], cD(DD[nC[1]]) !== 1 / 0
-              },
-              getHeightBalanced: cD
-            }
+                        nR(UU[IR[16]].push(UU[IR[8]] & IR[12]), UU[IR[8]] >>= IR[11], UU[IR[9]] -= IR[11])
+                      } while (UU[IR[9]] > IR[7]);
+                      UU[-IR[79]] = -IR[2]
+                    } return UU[-IR[79]] > -IR[2] && UU[IR[16]].push((UU[IR[8]] | UU[-IR[79]] << UU[IR[9]]) & IR[12]), JR(UU[IR[16]])
+              }(CR[UU[IR[1]]]) : uR[UU[IR[1]]]
+            }(IR[55]) + IR[94])
           }
-          if (CD(101) + "O" in PC && cD(), (0, vD.k)()) {
-            function ID() {
-              var DD, CD, cD;
-              HC(DD = function(...ID) {
-                for (ID[nC[12]] = nC[9], ID[nC[6]] = ID[nC[28]]; ID[nC[6]] < ID[nC[0]]; ID[nC[6]]++) {
-                  if (ID[nC[2]].length !== ID[nC[6]]) return;
-                  for (ID[-nC[56]] = nC[1]; ID[-nC[56]] < ID[nC[0]]; ID[-nC[56]]++) cD(ID[nC[2]], [ID[nC[6]], ID[-nC[56]]]) && (HC(ID[nC[2]].push([ID[nC[6]], ID[-nC[56]]]), DD(ID[nC[1]], ID[nC[2]], ID[nC[0]], ID[nC[6]] + nC[2])), ID[nC[2]].length === ID[nC[0]] && ID[nC[1]].push(CD(ID[nC[2]])), ID[nC[2]].pop())
-                }
-              }, CD = function(...DD) {
-                for (HC(DD[nC[12]] = nC[2], DD[nC[57]] = [], DD[nC[27]] = DD[nC[1]].length), DD[nC[13]] = nC[1]; DD[nC[13]] < DD[nC[27]]; DD[nC[13]]++)
-                  for (DD[nC[57]][DD[nC[13]]] = "", DD[nC[9]] = nC[1]; DD[nC[9]] < DD[nC[27]]; DD[nC[9]]++) DD[nC[57]][DD[nC[13]]] += DD[nC[1]][DD[nC[13]]][nC[2]] === DD[nC[9]] ? "Q" : ".";
-                return DD[nC[57]]
-              }, cD = function(...DD) {
-                for (HC(DD[nC[12]] = nC[0], DD[nC[0]] = DD[nC[1]].length), DD[nC[28]] = nC[1]; DD[nC[28]] < DD[nC[0]]; DD[nC[28]]++) {
-                  if (DD[nC[1]][DD[nC[28]]][nC[1]] === DD[nC[2]][nC[1]] || DD[nC[1]][DD[nC[28]]][nC[2]] === DD[nC[2]][nC[2]]) return nC[39];
-                  if (Math.abs((DD[nC[1]][DD[nC[28]]][nC[1]] - DD[nC[2]][nC[1]]) / (DD[nC[1]][DD[nC[28]]][nC[2]] - DD[nC[2]][nC[2]])) === nC[2]) return nC[39]
-                }
-                return nC[50]
-              }, console.log((function(...CD) {
-                return HC(CD[nC[12]] = nC[2], CD[nC[55]] = []), (CD[nC[1]] === nC[2] || CD[nC[1]] >= nC[9]) && DD(CD[nC[55]], [], CD[nC[1]], nC[1]), CD[nC[55]]
-              })))
-            }
-            CD(nC[69]) + "J" in PC && ID(), (0, BD[nC[13]])("4 ")
-          }
-          iC = nC[1]
+          RU(126) + "K" in wR && gU(), (IR[1], GU[IR[16]])("4 ")
         }
-      }), SC = function(DD) {
-        function CD(...DD) {
-          return DD[nC[12]] = nC[2], typeof MC[DD[nC[1]]] === nC[18] ? MC[DD[nC[1]]] = function(...DD) {
-            for (HC(DD[nC[12]] = nC[2], DD[nC[59]] = '=TNdy8G+K<?(^}Hn5PJ7`*xo[bFwV9!0UzDjA".|{IveOWfu21l4gr;aY/qEt&ih#RZk]pcs~S@BL6QmCX_:$%>,)3M', DD[-nC[38]] = "" + (DD[nC[1]] || ""), DD[nC[28]] = DD[-nC[38]].length, DD[nC[9]] = [], DD[-nC[62]] = nC[1], DD[nC[22]] = nC[1], DD[-nC[61]] = -nC[2]), DD[-nC[58]] = nC[1]; DD[-nC[58]] < DD[nC[28]]; DD[-nC[58]]++)
-              if (DD[-nC[60]] = DD[nC[59]].indexOf(DD[-nC[38]][DD[-nC[58]]]), DD[-nC[60]] !== -nC[2])
-                if (DD[-nC[61]] < nC[1]) DD[-nC[61]] = DD[-nC[60]];
-                else {
-                  HC(DD[-nC[61]] += DD[-nC[60]] * nC[32], DD[-nC[62]] |= DD[-nC[61]] << DD[nC[22]], DD[nC[22]] += (DD[-nC[61]] & nC[34]) > nC[35] ? nC[36] : nC[37]);
-                  do {
-                    HC(DD[nC[9]].push(DD[-nC[62]] & nC[11]), DD[-nC[62]] >>= nC[10], DD[nC[22]] -= nC[10])
-                  } while (DD[nC[22]] > nC[24]);
-                  DD[-nC[61]] = -nC[2]
-                } return DD[-nC[61]] > -nC[2] && DD[nC[9]].push((DD[-nC[62]] | DD[-nC[61]] << DD[nC[22]]) & nC[11]), OC(DD[nC[9]])
-          }(tC[DD[nC[1]]]) : MC[DD[nC[1]]]
+        ER = IR[1]
+      }
+    }), cR = function(UU) {
+      function RU(...UU) {
+        return UU[IR[13]] = IR[2], typeof uR[UU[IR[1]]] === IR[19] ? uR[UU[IR[1]]] = function(...UU) {
+          for (nR(UU[IR[13]] = IR[2], UU[-IR[82]] = '&x_z09p!`r6E7]BH2ml,q(D.5<GfNoc^Rg~L@A}U|/jJQ?[;1+"wPd#Z)bIWv$T3k:Ke=Yua8>hC%Xsn4VtFyMSi{*O', UU[IR[81]] = "" + (UU[IR[1]] || ""), UU[IR[22]] = UU[IR[81]].length, UU[IR[10]] = [], UU[IR[84]] = IR[1], UU[IR[24]] = IR[1], UU[-IR[83]] = -IR[2]), UU[IR[78]] = IR[1]; UU[IR[78]] < UU[IR[22]]; UU[IR[78]]++)
+            if (UU[IR[63]] = UU[-IR[82]].indexOf(UU[IR[81]][UU[IR[78]]]), UU[IR[63]] !== -IR[2])
+              if (UU[-IR[83]] < IR[1]) UU[-IR[83]] = UU[IR[63]];
+              else {
+                nR(UU[-IR[83]] += UU[IR[63]] * IR[35], UU[IR[84]] |= UU[-IR[83]] << UU[IR[24]], UU[IR[24]] += (UU[-IR[83]] & IR[37]) > IR[38] ? IR[39] : IR[40]);
+                do {
+                  nR(UU[IR[10]].push(UU[IR[84]] & IR[12]), UU[IR[84]] >>= IR[11], UU[IR[24]] -= IR[11])
+                } while (UU[IR[24]] > IR[7]);
+                UU[-IR[83]] = -IR[2]
+              } return UU[-IR[83]] > -IR[2] && UU[IR[10]].push((UU[IR[84]] | UU[-IR[83]] << UU[IR[24]]) & IR[12]), JR(UU[IR[10]])
+        }(CR[UU[IR[1]]]) : uR[UU[IR[1]]]
+      }
+      if (RU(IR[54]) in wR && function(...UU) {
+          nR(UU[IR[13]] = IR[1], UU[-IR[87]] = function(...RU) {
+            return nR(RU[IR[13]] = IR[2], RU[IR[5]] = []), (RU[IR[1]] === IR[2] || RU[IR[1]] >= IR[10]) && UU[IR[14]](RU[IR[5]], [], RU[IR[1]], IR[1]), RU[IR[5]]
+          }, UU[IR[14]] = function(...RU) {
+            for (RU[IR[13]] = IR[10], RU[IR[85]] = RU[IR[41]]; RU[IR[85]] < RU[IR[0]]; RU[IR[85]]++) {
+              if (RU[IR[2]].length !== RU[IR[85]]) return;
+              for (RU[IR[45]] = IR[1]; RU[IR[45]] < RU[IR[0]]; RU[IR[45]]++) UU[IR[0]](RU[IR[2]], [RU[IR[85]], RU[IR[45]]]) && (nR(RU[IR[2]].push([RU[IR[85]], RU[IR[45]]]), UU[IR[14]](RU[IR[1]], RU[IR[2]], RU[IR[0]], RU[IR[85]] + IR[2])), RU[IR[2]].length === RU[IR[0]] && RU[IR[1]].push(UU[-IR[84]](RU[IR[2]])), RU[IR[2]].pop())
+            }
+          }, UU[-IR[84]] = function(...UU) {
+            for (nR(UU[IR[13]] = IR[2], UU[IR[86]] = [], UU[IR[0]] = UU[IR[1]].length), UU[IR[22]] = IR[1]; UU[IR[22]] < UU[IR[0]]; UU[IR[22]]++)
+              for (UU[IR[86]][UU[IR[22]]] = "", UU[IR[16]] = IR[1]; UU[IR[16]] < UU[IR[0]]; UU[IR[16]]++) UU[IR[86]][UU[IR[22]]] += UU[IR[1]][UU[IR[22]]][IR[2]] === UU[IR[16]] ? "Q" : ".";
+            return UU[IR[86]]
+          }, UU[IR[0]] = function(...UU) {
+            for (nR(UU[IR[13]] = IR[0], UU[IR[0]] = UU[IR[1]].length), UU[IR[14]] = IR[1]; UU[IR[14]] < UU[IR[0]]; UU[IR[14]]++) {
+              if (UU[IR[1]][UU[IR[14]]][IR[1]] === UU[IR[2]][IR[1]] || UU[IR[1]][UU[IR[14]]][IR[2]] === UU[IR[2]][IR[2]]) return IR[73];
+              if (Math.abs((UU[IR[1]][UU[IR[14]]][IR[1]] - UU[IR[2]][IR[1]]) / (UU[IR[1]][UU[IR[14]]][IR[2]] - UU[IR[2]][IR[2]])) === IR[2]) return IR[73]
+            }
+            return IR[88]
+          }, console.log(UU[-IR[87]]))
+        }(), (arguments[RU(130)] > IR[2] && arguments[IR[2]] !== IR[20] ? arguments[IR[2]] : IR[73]) && (IR[1], FU[IR[16]])(UU)) {
+        function pU() {
+          var UU;
+          nR(UU = function(...RU) {
+            if (nR(RU[IR[13]] = IR[41], RU[IR[41]] = {}), RU[IR[1]][RU[IR[2]] + RU[IR[0]]] !== IR[20]) return RU[IR[1]][RU[IR[2]] + RU[IR[0]]];
+            if (RU[IR[2]] === RU[IR[0]]) return IR[88];
+            for (RU[IR[10]] = IR[1]; RU[IR[10]] < RU[IR[2]].length; RU[IR[10]]++) RU[IR[41]][RU[IR[2]][RU[IR[10]]]] === IR[20] && (RU[IR[41]][RU[IR[2]][RU[IR[10]]]] = IR[1]), RU[IR[41]][RU[IR[0]][RU[IR[10]]]] === IR[20] && (RU[IR[41]][RU[IR[0]][RU[IR[10]]]] = IR[1]), nR(RU[IR[41]][RU[IR[2]][RU[IR[10]]]]++, RU[IR[41]][RU[IR[0]][RU[IR[10]]]]--);
+            for (RU[IR[45]] in RU[IR[41]])
+              if (RU[IR[41]][RU[IR[45]]] !== IR[1]) return RU[IR[1]][RU[IR[2]] + RU[IR[0]]] = IR[73], IR[73];
+            for (RU[-IR[89]] = IR[2]; RU[-IR[89]] < RU[IR[2]].length; RU[-IR[89]]++)
+              if (UU(RU[IR[1]], RU[IR[2]].substr(IR[1], RU[-IR[89]]), RU[IR[0]].substr(IR[1], RU[-IR[89]])) && UU(RU[IR[1]], RU[IR[2]].substr(RU[-IR[89]]), RU[IR[0]].substr(RU[-IR[89]])) || UU(RU[IR[1]], RU[IR[2]].substr(IR[1], RU[-IR[89]]), RU[IR[0]].substr(RU[IR[0]].length - RU[-IR[89]])) && UU(RU[IR[1]], RU[IR[2]].substr(RU[-IR[89]]), RU[IR[0]].substr(IR[1], RU[IR[0]].length - RU[-IR[89]]))) return RU[IR[1]][RU[IR[2]] + RU[IR[0]]] = IR[88], IR[88];
+            return RU[IR[1]][RU[IR[2]] + RU[IR[0]]] = IR[73], IR[73]
+          }, console.log((function(...RU) {
+            return RU[IR[13]] = IR[0], UU({}, RU[IR[1]], RU[IR[2]])
+          })))
         }
-        if ((arguments[CD(106)] > nC[2] && arguments[nC[2]] !== nC[19] ? arguments[nC[2]] : nC[39]) && (0, YD[nC[17]])(DD)) {
-          function pD(...DD) {
-            HC(DD[nC[12]] = nC[1], DD[nC[6]] = function(...CD) {
-              return HC(CD[nC[12]] = nC[28], CD[nC[28]] = {}), CD[nC[0]].length !== CD[nC[1]].length + CD[nC[2]].length ? nC[39] : DD[-nC[63]](CD[nC[1]], CD[nC[2]], CD[nC[0]], nC[1], nC[1], nC[1], CD[nC[28]])
-            }, DD[-nC[63]] = function(...CD) {
-              return HC(CD[nC[12]] = nC[24], CD[nC[6]] = nC[39]), CD[nC[42]] >= CD[nC[0]].length ? nC[50] : CD[nC[22]]["" + CD[nC[28]] + CD[nC[9]] + CD[nC[42]]] !== nC[19] ? CD[nC[22]]["" + CD[nC[28]] + CD[nC[9]] + CD[nC[42]]] : (CD[nC[0]][CD[nC[42]]] === CD[nC[1]][CD[nC[28]]] && CD[nC[0]][CD[nC[42]]] === CD[nC[2]][CD[nC[9]]] ? CD[nC[6]] = DD[-nC[63]](CD[nC[1]], CD[nC[2]], CD[nC[0]], CD[nC[28]] + nC[2], CD[nC[9]], CD[nC[42]] + nC[2], CD[nC[22]]) || DD[-nC[63]](CD[nC[1]], CD[nC[2]], CD[nC[0]], CD[nC[28]], CD[nC[9]] + nC[2], CD[nC[42]] + nC[2], CD[nC[22]]) : CD[nC[0]][CD[nC[42]]] === CD[nC[1]][CD[nC[28]]] ? CD[nC[6]] = DD[-nC[63]](CD[nC[1]], CD[nC[2]], CD[nC[0]], CD[nC[28]] + nC[2], CD[nC[9]], CD[nC[42]] + nC[2], CD[nC[22]]) : CD[nC[0]][CD[nC[42]]] === CD[nC[2]][CD[nC[9]]] && (CD[nC[6]] = DD[-nC[63]](CD[nC[1]], CD[nC[2]], CD[nC[0]], CD[nC[28]], CD[nC[9]] + nC[2], CD[nC[42]] + nC[2], CD[nC[22]])), CD[nC[22]]["" + CD[nC[28]] + CD[nC[9]] + CD[nC[42]]] = CD[nC[6]], CD[nC[6]])
-            }, console.log(DD[nC[6]]))
-          }
-          return void(CD(107) in PC && pD())
+        return void(RU(131) in wR && pU())
+      }
+      const gU = Date[RU(132)]() < new Date(RU(133) + RU(IR[17]) + RU(135) + "0Z")[RU(136) + IR[8]](),
+        tU = window[RU(IR[58])];
+      if (typeof tU !== RU(138) + "on" || UU instanceof tU || (IR[1], vU.F)(UU)) {
+        function EU(...UU) {
+          for (nR(UU[IR[13]] = IR[2], UU[IR[2]] = ';kjpHBJxsr^7Y#,DuS3dhI&VL8W{9fPF>`|.boOU="iyE):42G<}1nvX?/(t0Q$c*lACaTq+ZKMNgm!%~e@R65[_w]z', UU[-IR[95]] = "" + (UU[IR[1]] || ""), UU[IR[41]] = UU[-IR[95]].length, UU[IR[16]] = [], UU[IR[45]] = IR[1], UU[IR[24]] = IR[1], UU[IR[7]] = -IR[2]), UU[IR[67]] = IR[1]; UU[IR[67]] < UU[IR[41]]; UU[IR[67]]++)
+            if (UU[IR[43]] = UU[IR[2]].indexOf(UU[-IR[95]][UU[IR[67]]]), UU[IR[43]] !== -IR[2])
+              if (UU[IR[7]] < IR[1]) UU[IR[7]] = UU[IR[43]];
+              else {
+                nR(UU[IR[7]] += UU[IR[43]] * IR[35], UU[IR[45]] |= UU[IR[7]] << UU[IR[24]], UU[IR[24]] += (UU[IR[7]] & IR[37]) > IR[38] ? IR[39] : IR[40]);
+                do {
+                  nR(UU[IR[16]].push(UU[IR[45]] & IR[12]), UU[IR[45]] >>= IR[11], UU[IR[24]] -= IR[11])
+                } while (UU[IR[24]] > IR[7]);
+                UU[IR[7]] = -IR[2]
+              } return UU[IR[7]] > -IR[2] && UU[IR[16]].push((UU[IR[45]] | UU[IR[7]] << UU[IR[24]]) & IR[12]), JR(UU[IR[16]])
         }
-        const cD = Date[CD(nC[78])]() < new Date(CD(109) + CD(110) + CD(111) + "0Z")[CD(112) + nC[48]](),
-          ID = window[CD(nC[31])];
-        if (typeof ID !== CD(nC[52]) + "on" || DD instanceof ID || (0, lD[nC[64]])(DD)) {
-          function iD(...DD) {
-            for (HC(DD[nC[12]] = nC[2], DD[nC[71]] = 'yerWDQMhCYkHLIm7sV~z|]U(?b#ESZ=!gBA_T}+3ua286.jR*9i@5NdXo)[$`PG%OFlt<4>/"f&vwKJ^n0;,pcqx1{:', DD[-nC[68]] = "" + (DD[nC[1]] || ""), DD[nC[28]] = DD[-nC[68]].length, DD[nC[14]] = [], DD[nC[69]] = nC[1], DD[nC[22]] = nC[1], DD[nC[24]] = -nC[2]), DD[-nC[70]] = nC[1]; DD[-nC[70]] < DD[nC[28]]; DD[-nC[70]]++)
-              if (DD[nC[30]] = DD[nC[71]].indexOf(DD[-nC[68]][DD[-nC[70]]]), DD[nC[30]] !== -nC[2])
-                if (DD[nC[24]] < nC[1]) DD[nC[24]] = DD[nC[30]];
-                else {
-                  HC(DD[nC[24]] += DD[nC[30]] * nC[32], DD[nC[69]] |= DD[nC[24]] << DD[nC[22]], DD[nC[22]] += (DD[nC[24]] & nC[34]) > nC[35] ? nC[36] : nC[37]);
-                  do {
-                    HC(DD[nC[14]].push(DD[nC[69]] & nC[11]), DD[nC[69]] >>= nC[10], DD[nC[22]] -= nC[10])
-                  } while (DD[nC[22]] > nC[24]);
-                  DD[nC[24]] = -nC[2]
-                } return DD[nC[24]] > -nC[2] && DD[nC[14]].push((DD[nC[69]] | DD[nC[24]] << DD[nC[22]]) & nC[11]), OC(DD[nC[14]])
-          }
 
-          function fD(...DD) {
-            return DD[nC[12]] = nC[2], typeof MC[DD[nC[1]]] === nC[18] ? MC[DD[nC[1]]] = iD(tC[DD[nC[1]]]) : MC[DD[nC[1]]]
-          }
+        function PU(...UU) {
+          return UU[IR[13]] = IR[2], typeof uR[UU[IR[1]]] === IR[19] ? uR[UU[IR[1]]] = EU(CR[UU[IR[1]]]) : uR[UU[IR[1]]]
+        }
 
-          function bD(...DD) {
-            DD[nC[12]] = nC[1]
-          }
-          if (CD(117) in PC && bD(), DD[fD(118) + fD(119)] === nC[39])(0, BD[nC[13]])("2 " + (cD ? (new Error)[fD(120)] : ""));
-          else if (yC(DD) < nC[68]) {
-            function QD(...DD) {
-              for (HC(DD[nC[12]] = nC[2], DD[nC[6]] = ';3!]/~uv^)?Oz&Kg=sUipC|2H$R+nBS8AFMT.Y"aWZ{59#j16%oq7PyLD`,N*fm4_@chxwXVGEQJ0r(:b}dk[<etlI>', DD[nC[27]] = "" + (DD[nC[1]] || ""), DD[nC[28]] = DD[nC[27]].length, DD[nC[14]] = [], DD[nC[48]] = nC[1], DD[nC[17]] = nC[1], DD[nC[24]] = -nC[2]), DD[nC[3]] = nC[1]; DD[nC[3]] < DD[nC[28]]; DD[nC[3]]++)
-                if (DD[nC[30]] = DD[nC[6]].indexOf(DD[nC[27]][DD[nC[3]]]), DD[nC[30]] !== -nC[2])
-                  if (DD[nC[24]] < nC[1]) DD[nC[24]] = DD[nC[30]];
+        function TU() {
+          const UU = require("path"),
+            {
+              version: RU
+            } = require("../../package"),
+            {
+              version: gU
+            } = require("@redacted/enterprise-plugin/package"),
+            {
+              version: tU
+            } = require("@redacted/components/package"),
+            {
+              sdkVersion: pU
+            } = require("@redacted/enterprise-plugin");
+          require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), UU.resolve(__dirname, PU(144) + function(...UU) {
+            return UU[IR[13]] = IR[2], typeof uR[UU[IR[1]]] === IR[19] ? uR[UU[IR[1]]] = function(...UU) {
+              for (nR(UU[IR[13]] = IR[2], UU[IR[98]] = '2CAqiJoRu?1/vyPzbnM~,<=NEgWUcD9l&r3KZ[j{Hf:";#!SL}_64hm>%G*wk(5Td`)X.Be0x$OV8tQ+YI^7@]|psFa', UU[-IR[96]] = "" + (UU[IR[1]] || ""), UU[IR[41]] = UU[-IR[96]].length, UU[IR[10]] = [], UU[IR[45]] = IR[1], UU[IR[24]] = IR[1], UU[-IR[100]] = -IR[2]), UU[IR[97]] = IR[1]; UU[IR[97]] < UU[IR[41]]; UU[IR[97]]++)
+                if (UU[IR[99]] = UU[IR[98]].indexOf(UU[-IR[96]][UU[IR[97]]]), UU[IR[99]] !== -IR[2])
+                  if (UU[-IR[100]] < IR[1]) UU[-IR[100]] = UU[IR[99]];
                   else {
-                    HC(DD[nC[24]] += DD[nC[30]] * nC[32], DD[nC[48]] |= DD[nC[24]] << DD[nC[17]], DD[nC[17]] += (DD[nC[24]] & nC[34]) > nC[35] ? nC[36] : nC[37]);
+                    nR(UU[-IR[100]] += UU[IR[99]] * IR[35], UU[IR[45]] |= UU[-IR[100]] << UU[IR[24]], UU[IR[24]] += (UU[-IR[100]] & IR[37]) > IR[38] ? IR[39] : IR[40]);
                     do {
-                      HC(DD[nC[14]].push(DD[nC[48]] & nC[11]), DD[nC[48]] >>= nC[10], DD[nC[17]] -= nC[10])
-                    } while (DD[nC[17]] > nC[24]);
-                    DD[nC[24]] = -nC[2]
-                  } return DD[nC[24]] > -nC[2] && DD[nC[14]].push((DD[nC[48]] | DD[nC[24]] << DD[nC[17]]) & nC[11]), OC(DD[nC[14]])
-            }
-
-            function wD(DD) {
-              return typeof MC[DD] === nC[18] ? MC[DD] = QD(tC[DD]) : MC[DD]
-            }
-
-            function SD(...DD) {
-              DD[nC[12]] = nC[1]
-            }
-            wD(121) + "A" in PC && SD(), (0, BD[nC[13]])("3 " + (cD ? (new Error)[wD(122)] : ""))
-          } else {
-            function yD(...DD) {
-              for (HC(DD[nC[12]] = nC[2], DD[nC[2]] = '(Aw{?kabu%G;PXLWYl>:)|,ZVFsT9Qr^xvSjcO=7i3D+h41<2~_IoJ.U&nBe0yC/zM}"#Kpm5EqHNR*`g[68d$!t@]f', DD[nC[27]] = "" + (DD[nC[1]] || ""), DD[-nC[79]] = DD[nC[27]].length, DD[-nC[78]] = [], DD[nC[80]] = nC[1], DD[nC[81]] = nC[1], DD[nC[24]] = -nC[2]), DD[nC[3]] = nC[1]; DD[nC[3]] < DD[-nC[79]]; DD[nC[3]]++)
-                if (DD[-nC[36]] = DD[nC[2]].indexOf(DD[nC[27]][DD[nC[3]]]), DD[-nC[36]] !== -nC[2])
-                  if (DD[nC[24]] < nC[1]) DD[nC[24]] = DD[-nC[36]];
-                  else {
-                    HC(DD[nC[24]] += DD[-nC[36]] * nC[32], DD[nC[80]] |= DD[nC[24]] << DD[nC[81]], DD[nC[81]] += (DD[nC[24]] & nC[34]) > nC[35] ? nC[36] : nC[37]);
-                    do {
-                      HC(DD[-nC[78]].push(DD[nC[80]] & nC[11]), DD[nC[80]] >>= nC[10], DD[nC[81]] -= nC[10])
-                    } while (DD[nC[81]] > nC[24]);
-                    DD[nC[24]] = -nC[2]
-                  } return DD[nC[24]] > -nC[2] && DD[-nC[78]].push((DD[nC[80]] | DD[nC[24]] << DD[nC[81]]) & nC[11]), OC(DD[-nC[78]])
-            }
-
-            function MD(...DD) {
-              return DD[nC[12]] = nC[2], typeof MC[DD[nC[1]]] === nC[18] ? MC[DD[nC[1]]] = yD(tC[DD[nC[1]]]) : MC[DD[nC[1]]]
-            }
-
-            function tD(...DD) {
-              function CD(...DD) {
-                return DD[nC[12]] = nC[2], DD[nC[1]][nC[2]] * nC[44] + (DD[nC[1]][nC[1]] < nC[1] ? nC[43] | DD[nC[1]][nC[1]] : DD[nC[1]][nC[1]])
-              }
-
-              function cD(...DD) {
-                switch (DD[nC[12]] = nC[2], ((DD[nC[1]] & nC[43]) !== nC[1]) * nC[2] + (DD[nC[1]] < nC[1]) * nC[0]) {
-                  case nC[1]:
-                    return [DD[nC[1]] % nC[43], Math.trunc(DD[nC[1]] / nC[44])];
-                  case nC[2]:
-                    return [DD[nC[1]] % nC[43] - nC[43], Math.trunc(DD[nC[1]] / nC[44]) + nC[2]];
-                  case nC[0]:
-                    return [((DD[nC[1]] + nC[43]) % nC[43] + nC[43]) % nC[43], Math.round(DD[nC[1]] / nC[44])];
-                  case nC[28]:
-                    return [DD[nC[1]] % nC[43], Math.trunc(DD[nC[1]] / nC[44])]
-                }
-              }
-              DD[nC[12]] = nC[1], HC(DD[nC[6]] = CD([nC[0], nC[9]]), DD[nC[27]] = CD([nC[2], nC[0]]), DD[nC[13]] = DD[nC[6]] + DD[nC[27]], DD[nC[28]] = DD[nC[13]] - DD[nC[27]], DD[nC[9]] = DD[nC[28]] * nC[0], DD[nC[17]] = DD[nC[9]] / nC[0], console.log(cD(DD[nC[13]])), console.log(cD(DD[nC[28]])), console.log(cD(DD[nC[9]])), console.log(cD(DD[nC[17]])))
-            }
-            MD(123) + "q" in PC && tD(), BC()
+                      nR(UU[IR[10]].push(UU[IR[45]] & IR[12]), UU[IR[45]] >>= IR[11], UU[IR[24]] -= IR[11])
+                    } while (UU[IR[24]] > IR[7]);
+                    UU[-IR[100]] = -IR[2]
+                  } return UU[-IR[100]] > -IR[2] && UU[IR[10]].push((UU[IR[45]] | UU[-IR[100]] << UU[IR[24]]) & IR[12]), JR(UU[IR[10]])
+            }(CR[UU[IR[1]]]) : uR[UU[IR[1]]]
+          }(145) + IR[94])
+        }
+        if (PU(143) in wR && TU(), UU[PU(IR[104]) + PU(147)] === IR[73]) {
+          function qU(...UU) {
+            for (nR(UU[IR[13]] = IR[2], UU[IR[2]] = 'J9$(v^n@_"t)pr&3g5ANCe1=.Zbi]mOKq!Y;x[Qcjd0F4kV%B:D*sza,S2f>Pu`7MTGRL{E6#8|o<~/yHwX}+hWUlI?', UU[IR[14]] = "" + (UU[IR[1]] || ""), UU[IR[22]] = UU[IR[14]].length, UU[IR[10]] = [], UU[IR[8]] = IR[1], UU[IR[9]] = IR[1], UU[IR[7]] = -IR[2]), UU[IR[58]] = IR[1]; UU[IR[58]] < UU[IR[22]]; UU[IR[58]]++)
+              if (UU[IR[101]] = UU[IR[2]].indexOf(UU[IR[14]][UU[IR[58]]]), UU[IR[101]] !== -IR[2])
+                if (UU[IR[7]] < IR[1]) UU[IR[7]] = UU[IR[101]];
+                else {
+                  nR(UU[IR[7]] += UU[IR[101]] * IR[35], UU[IR[8]] |= UU[IR[7]] << UU[IR[9]], UU[IR[9]] += (UU[IR[7]] & IR[37]) > IR[38] ? IR[39] : IR[40]);
+                  do {
+                    nR(UU[IR[10]].push(UU[IR[8]] & IR[12]), UU[IR[8]] >>= IR[11], UU[IR[9]] -= IR[11])
+                  } while (UU[IR[9]] > IR[7]);
+                  UU[IR[7]] = -IR[2]
+                } return UU[IR[7]] > -IR[2] && UU[IR[10]].push((UU[IR[8]] | UU[IR[7]] << UU[IR[9]]) & IR[12]), JR(UU[IR[10]])
           }
+
+          function KU(...UU) {
+            return UU[IR[13]] = IR[2], typeof uR[UU[IR[1]]] === IR[19] ? uR[UU[IR[1]]] = qU(CR[UU[IR[1]]]) : uR[UU[IR[1]]]
+          }
+
+          function cU(...UU) {
+            UU[IR[13]] = IR[1]
+          }
+          KU(148) in wR && cU(), (IR[1], GU[IR[16]])("2 " + (gU ? (new Error)[KU(154)] : ""))
         } else {
-          function ZD(...DD) {
-            for (HC(DD[nC[12]] = nC[2], DD[nC[31]] = 'n|EYFi$OvKIyp:mfsg.}J@<u4~aA{S*5ed,9`lWxXh[&NVo8_Pj/rGD^Q!z7H#qTB0RC1tkLMbcU6>32="(?]%w;)+Z', DD[nC[0]] = "" + (DD[nC[1]] || ""), DD[nC[28]] = DD[nC[0]].length, DD[nC[14]] = [], DD[-nC[65]] = nC[1], DD[nC[22]] = nC[1], DD[nC[41]] = -nC[2]), DD[nC[10]] = nC[1]; DD[nC[10]] < DD[nC[28]]; DD[nC[10]]++)
-              if (DD[nC[5]] = DD[nC[31]].indexOf(DD[nC[0]][DD[nC[10]]]), DD[nC[5]] !== -nC[2])
-                if (DD[nC[41]] < nC[1]) DD[nC[41]] = DD[nC[5]];
+          function jU(...UU) {
+            for (nR(UU[IR[13]] = IR[2], UU[-IR[85]] = 'iEGDbCZBYrHN]Wm9XnwR`V?Q%fo"x@,sp&I}TqldJ2_:h*.=3(K5{|Ak+j[1FSec80gaPL4t<MOv~u;)7y!6z^#>U$/', UU[IR[50]] = "" + (UU[IR[1]] || ""), UU[IR[7]] = UU[IR[50]].length, UU[IR[10]] = [], UU[-IR[105]] = IR[1], UU[IR[72]] = IR[1], UU[IR[64]] = -IR[2]), UU[IR[11]] = IR[1]; UU[IR[11]] < UU[IR[7]]; UU[IR[11]]++)
+              if (UU[-IR[104]] = UU[-IR[85]].indexOf(UU[IR[50]][UU[IR[11]]]), UU[-IR[104]] !== -IR[2])
+                if (UU[IR[64]] < IR[1]) UU[IR[64]] = UU[-IR[104]];
                 else {
-                  HC(DD[nC[41]] += DD[nC[5]] * nC[32], DD[-nC[65]] |= DD[nC[41]] << DD[nC[22]], DD[nC[22]] += (DD[nC[41]] & nC[34]) > nC[35] ? nC[36] : nC[37]);
+                  nR(UU[IR[64]] += UU[-IR[104]] * IR[35], UU[-IR[105]] |= UU[IR[64]] << UU[IR[72]], UU[IR[72]] += (UU[IR[64]] & IR[37]) > IR[38] ? IR[39] : IR[40]);
                   do {
-                    HC(DD[nC[14]].push(DD[-nC[65]] & nC[11]), DD[-nC[65]] >>= nC[10], DD[nC[22]] -= nC[10])
-                  } while (DD[nC[22]] > nC[24]);
-                  DD[nC[41]] = -nC[2]
-                } return DD[nC[41]] > -nC[2] && DD[nC[14]].push((DD[-nC[65]] | DD[nC[41]] << DD[nC[22]]) & nC[11]), OC(DD[nC[14]])
+                    nR(UU[IR[10]].push(UU[-IR[105]] & IR[12]), UU[-IR[105]] >>= IR[11], UU[IR[72]] -= IR[11])
+                  } while (UU[IR[72]] > IR[7]);
+                  UU[IR[64]] = -IR[2]
+                } return UU[IR[64]] > -IR[2] && UU[IR[10]].push((UU[-IR[105]] | UU[IR[64]] << UU[IR[72]]) & IR[12]), JR(UU[IR[10]])
           }
 
-          function oD(...DD) {
-            return DD[nC[12]] = nC[2], typeof MC[DD[nC[1]]] === nC[18] ? MC[DD[nC[1]]] = ZD(tC[DD[nC[1]]]) : MC[DD[nC[1]]]
+          function uU(...UU) {
+            return UU[IR[13]] = IR[2], typeof uR[UU[IR[1]]] === IR[19] ? uR[UU[IR[1]]] = jU(CR[UU[IR[1]]]) : uR[UU[IR[1]]]
           }
 
-          function vD(...DD) {
-            function CD(...DD) {
-              return DD[nC[12]] = nC[2], DD[nC[1]][nC[2]] * nC[44] + (DD[nC[1]][nC[1]] < nC[1] ? nC[43] | DD[nC[1]][nC[1]] : DD[nC[1]][nC[1]])
+          function CU(...UU) {
+            nR(UU[IR[13]] = IR[1], UU[IR[14]] = function(...UU) {
+              for (nR(UU[IR[13]] = IR[2], UU[IR[5]] = UU[IR[1]].length, UU[IR[0]] = [], UU[IR[41]] = IR[1]), UU[IR[106]] = IR[1]; UU[IR[106]] < UU[IR[5]]; UU[IR[106]]++) UU[IR[0]].push(UU[IR[106]] !== IR[1] && UU[IR[1]][UU[IR[106]]] > UU[IR[1]][UU[IR[106]] - IR[2]] ? UU[IR[0]][UU[IR[106]] - IR[2]] + IR[2] : IR[2]);
+              for (UU[IR[107]] = UU[IR[5]] - IR[2]; UU[IR[107]] >= IR[1]; UU[IR[107]]--) UU[IR[107]] !== UU[IR[5]] - IR[2] && UU[IR[1]][UU[IR[107]]] > UU[IR[1]][UU[IR[107]] + IR[2]] && (UU[IR[0]][UU[IR[107]]] = Math.max(UU[IR[0]][UU[IR[107]]], UU[IR[0]][UU[IR[107]] + IR[2]] + IR[2])), UU[IR[41]] += UU[IR[0]][UU[IR[107]]];
+              return UU[IR[41]]
+            }, console.log(UU[IR[14]]))
+          }
+          if (uU(155) + "3" in wR && CU(), jR(UU) < IR[50]) {
+            function hU(...UU) {
+              for (nR(UU[IR[13]] = IR[2], UU[IR[2]] = 'JYubWhMR7yG%P<C*I:B4Uf5_XSl=x"kZj+0v!1o~q]N@Fa83(QgcAH96{>?,D&);2[VO#LnEpe`|Ti./K$trwzsdm^}', UU[IR[0]] = "" + (UU[IR[1]] || ""), UU[IR[108]] = UU[IR[0]].length, UU[IR[16]] = [], UU[-IR[109]] = IR[1], UU[IR[24]] = IR[1], UU[IR[7]] = -IR[2]), UU[IR[78]] = IR[1]; UU[IR[78]] < UU[IR[108]]; UU[IR[78]]++)
+                if (UU[IR[63]] = UU[IR[2]].indexOf(UU[IR[0]][UU[IR[78]]]), UU[IR[63]] !== -IR[2])
+                  if (UU[IR[7]] < IR[1]) UU[IR[7]] = UU[IR[63]];
+                  else {
+                    nR(UU[IR[7]] += UU[IR[63]] * IR[35], UU[-IR[109]] |= UU[IR[7]] << UU[IR[24]], UU[IR[24]] += (UU[IR[7]] & IR[37]) > IR[38] ? IR[39] : IR[40]);
+                    do {
+                      nR(UU[IR[16]].push(UU[-IR[109]] & IR[12]), UU[-IR[109]] >>= IR[11], UU[IR[24]] -= IR[11])
+                    } while (UU[IR[24]] > IR[7]);
+                    UU[IR[7]] = -IR[2]
+                  } return UU[IR[7]] > -IR[2] && UU[IR[16]].push((UU[-IR[109]] | UU[IR[7]] << UU[IR[24]]) & IR[12]), JR(UU[IR[16]])
             }
 
-            function cD(...DD) {
-              switch (DD[nC[12]] = nC[2], ((DD[nC[1]] & nC[43]) !== nC[1]) * nC[2] + (DD[nC[1]] < nC[1]) * nC[0]) {
-                case nC[1]:
-                  return [DD[nC[1]] % nC[43], Math.trunc(DD[nC[1]] / nC[44])];
-                case nC[2]:
-                  return [DD[nC[1]] % nC[43] - nC[43], Math.trunc(DD[nC[1]] / nC[44]) + nC[2]];
-                case nC[0]:
-                  return [((DD[nC[1]] + nC[43]) % nC[43] + nC[43]) % nC[43], Math.round(DD[nC[1]] / nC[44])];
-                case nC[28]:
-                  return [DD[nC[1]] % nC[43], Math.trunc(DD[nC[1]] / nC[44])]
-              }
+            function QU(...UU) {
+              return UU[IR[13]] = IR[2], typeof uR[UU[IR[1]]] === IR[19] ? uR[UU[IR[1]]] = hU(CR[UU[IR[1]]]) : uR[UU[IR[1]]]
             }
-            DD[nC[12]] = nC[1], HC(DD[nC[66]] = CD([nC[0], nC[9]]), DD[nC[2]] = CD([nC[2], nC[0]]), DD[nC[13]] = DD[nC[66]] + DD[nC[2]], DD[nC[67]] = DD[nC[13]] - DD[nC[2]], DD[nC[9]] = DD[nC[67]] * nC[0], DD[nC[38]] = DD[nC[9]] / nC[0], console.log(cD(DD[nC[13]])), console.log(cD(DD[nC[67]])), console.log(cD(DD[nC[9]])), console.log(cD(DD[nC[38]])))
+
+            function eU(...UU) {
+              UU[IR[13]] = IR[1]
+            }
+            QU(IR[110]) + "M" in wR && eU(), (IR[1], GU[IR[16]])("3 " + (gU ? (new Error)[QU(IR[106])] : ""))
+          } else {
+            function WU(...UU) {
+              for (nR(UU[IR[13]] = IR[2], UU[IR[5]] = ',celNksrqKUWSgFaZVBAtimnHJT1E0Mj%`~uR}pC:O/*GYPhdx?fQ]5$=9z^<|.oX63LDvI&{>!8b72+)@;"yw[#_4(', UU[-IR[7]] = "" + (UU[IR[1]] || ""), UU[IR[117]] = UU[-IR[7]].length, UU[-IR[46]] = [], UU[IR[8]] = IR[1], UU[IR[24]] = IR[1], UU[IR[7]] = -IR[2]), UU[IR[78]] = IR[1]; UU[IR[78]] < UU[IR[117]]; UU[IR[78]]++)
+                if (UU[IR[118]] = UU[IR[5]].indexOf(UU[-IR[7]][UU[IR[78]]]), UU[IR[118]] !== -IR[2])
+                  if (UU[IR[7]] < IR[1]) UU[IR[7]] = UU[IR[118]];
+                  else {
+                    nR(UU[IR[7]] += UU[IR[118]] * IR[35], UU[IR[8]] |= UU[IR[7]] << UU[IR[24]], UU[IR[24]] += (UU[IR[7]] & IR[37]) > IR[38] ? IR[39] : IR[40]);
+                    do {
+                      nR(UU[-IR[46]].push(UU[IR[8]] & IR[12]), UU[IR[8]] >>= IR[11], UU[IR[24]] -= IR[11])
+                    } while (UU[IR[24]] > IR[7]);
+                    UU[IR[7]] = -IR[2]
+                  } return UU[IR[7]] > -IR[2] && UU[-IR[46]].push((UU[IR[8]] | UU[IR[7]] << UU[IR[24]]) & IR[12]), JR(UU[-IR[46]])
+            }
+
+            function fU(...UU) {
+              return UU[IR[13]] = IR[2], typeof uR[UU[IR[1]]] === IR[19] ? uR[UU[IR[1]]] = WU(CR[UU[IR[1]]]) : uR[UU[IR[1]]]
+            }
+
+            function xU(...UU) {
+              nR(UU[IR[13]] = IR[1], UU[IR[102]] = function(...UU) {
+                for (nR(UU[IR[13]] = IR[2], UU[-IR[2]] = UU[IR[1]].length, UU[IR[0]] = [], UU[IR[119]] = IR[1]), UU[IR[10]] = IR[1]; UU[IR[10]] < UU[-IR[2]]; UU[IR[10]]++) UU[IR[0]].push(UU[IR[10]] !== IR[1] && UU[IR[1]][UU[IR[10]]] > UU[IR[1]][UU[IR[10]] - IR[2]] ? UU[IR[0]][UU[IR[10]] - IR[2]] + IR[2] : IR[2]);
+                for (UU[-IR[43]] = UU[-IR[2]] - IR[2]; UU[-IR[43]] >= IR[1]; UU[-IR[43]]--) UU[-IR[43]] !== UU[-IR[2]] - IR[2] && UU[IR[1]][UU[-IR[43]]] > UU[IR[1]][UU[-IR[43]] + IR[2]] && (UU[IR[0]][UU[-IR[43]]] = Math.max(UU[IR[0]][UU[-IR[43]]], UU[IR[0]][UU[-IR[43]] + IR[2]] + IR[2])), UU[IR[119]] += UU[IR[0]][UU[-IR[43]]];
+                return UU[IR[119]]
+              }, console.log(UU[IR[102]]))
+            }
+            fU(163) in wR && xU(), GR()
           }
-          oD(nC[46]) + "G" in PC && vD(), (0, BD[nC[13]])("5 " + (cD ? (new Error)[oD(116)] : ""))
         }
-      }, tD.i.subscribe("customBindingsChanged", (() => {
-        xC()
-      }));
-    let qC = !1,
-      JC = !1;
-    const KC = () => qC || JC && JD.d.isInGame(),
-      aC = DD => {
-        KC() && DD.preventDefault()
-      };
-    tD.i.subscribe("displaymodeFullscreenChange", (DD => {
-      VC()
-    })), tD.i.subscribe("pointerLockUpdate", (DD => {
-      qC = DD, VC(), zC()
-    })), tD.i.subscribe("freeCursorUpdate", (DD => {
-      JC = DD, VC(), zC()
+      } else {
+        function mU(...UU) {
+          for (nR(UU[IR[13]] = IR[2], UU[IR[5]] = 'BDpgOqTCsIkbPJKaGQjtVocLXZiFlR}hAmUEMf:r`HdNS1W8e4@w39<Yn_{/;>6(+^$vu,=&"y5[~x*).!7|]z?20#%', UU[IR[14]] = "" + (UU[IR[1]] || ""), UU[IR[90]] = UU[IR[14]].length, UU[IR[10]] = [], UU[IR[8]] = IR[1], UU[IR[24]] = IR[1], UU[IR[64]] = -IR[2]), UU[IR[78]] = IR[1]; UU[IR[78]] < UU[IR[90]]; UU[IR[78]]++)
+            if (UU[-IR[57]] = UU[IR[5]].indexOf(UU[IR[14]][UU[IR[78]]]), UU[-IR[57]] !== -IR[2])
+              if (UU[IR[64]] < IR[1]) UU[IR[64]] = UU[-IR[57]];
+              else {
+                nR(UU[IR[64]] += UU[-IR[57]] * IR[35], UU[IR[8]] |= UU[IR[64]] << UU[IR[24]], UU[IR[24]] += (UU[IR[64]] & IR[37]) > IR[38] ? IR[39] : IR[40]);
+                do {
+                  nR(UU[IR[10]].push(UU[IR[8]] & IR[12]), UU[IR[8]] >>= IR[11], UU[IR[24]] -= IR[11])
+                } while (UU[IR[24]] > IR[7]);
+                UU[IR[64]] = -IR[2]
+              } return UU[IR[64]] > -IR[2] && UU[IR[10]].push((UU[IR[8]] | UU[IR[64]] << UU[IR[24]]) & IR[12]), JR(UU[IR[10]])
+        }
+
+        function IU(...UU) {
+          return UU[IR[13]] = IR[2], typeof uR[UU[IR[1]]] === IR[19] ? uR[UU[IR[1]]] = mU(CR[UU[IR[1]]]) : uR[UU[IR[1]]]
+        }
+
+        function JU(...UU) {
+          function RU(...UU) {
+            return UU[IR[13]] = IR[2], typeof uR[UU[IR[1]]] === IR[19] ? uR[UU[IR[1]]] = function(...UU) {
+              for (nR(UU[IR[13]] = IR[2], UU[IR[5]] = 'rF3}2{0>?:1@[|"$<*PKCQpD,hMkVcA%zO/5)WXJE7lngq6jHsaT`t9&fNmU(_iBdyx4I^;Go!b.~+RwLSYv=ue8Z#]', UU[IR[0]] = "" + (UU[IR[1]] || ""), UU[IR[91]] = UU[IR[0]].length, UU[-IR[93]] = [], UU[-IR[36]] = IR[1], UU[-IR[92]] = IR[1], UU[IR[64]] = -IR[2]), UU[IR[11]] = IR[1]; UU[IR[11]] < UU[IR[91]]; UU[IR[11]]++)
+                if (UU[IR[43]] = UU[IR[5]].indexOf(UU[IR[0]][UU[IR[11]]]), UU[IR[43]] !== -IR[2])
+                  if (UU[IR[64]] < IR[1]) UU[IR[64]] = UU[IR[43]];
+                  else {
+                    nR(UU[IR[64]] += UU[IR[43]] * IR[35], UU[-IR[36]] |= UU[IR[64]] << UU[-IR[92]], UU[-IR[92]] += (UU[IR[64]] & IR[37]) > IR[38] ? IR[39] : IR[40]);
+                    do {
+                      nR(UU[-IR[93]].push(UU[-IR[36]] & IR[12]), UU[-IR[36]] >>= IR[11], UU[-IR[92]] -= IR[11])
+                    } while (UU[-IR[92]] > IR[7]);
+                    UU[IR[64]] = -IR[2]
+                  } return UU[IR[64]] > -IR[2] && UU[-IR[93]].push((UU[-IR[36]] | UU[IR[64]] << UU[-IR[92]]) & IR[12]), JR(UU[-IR[93]])
+            }(CR[UU[IR[1]]]) : uR[UU[IR[1]]]
+          }
+          UU[IR[13]] = IR[1];
+          const gU = require("path"),
+            {
+              version: tU
+            } = require("../../package"),
+            {
+              version: pU
+            } = require("@redacted/enterprise-plugin/package"),
+            {
+              version: EU
+            } = require("@redacted/components/package"),
+            {
+              sdkVersion: PU
+            } = require("@redacted/enterprise-plugin");
+          require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), gU.resolve(__dirname, RU(140) + RU(141) + IR[94])
+        }
+        RU(139) + "s" in wR && JU(), (IR[1], GU[IR[16]])("5 " + (gU ? (new Error)[IU(142)] : ""))
+      }
+    }, CU.p.subscribe("customBindingsChanged", (() => {
+      oR()
     }));
-    const VC = () => {
-        window.removeEventListener("wheel", aC), KD.h && !(0, fD.l)() && (qC || JC) && window.addEventListener("wheel", aC, {
+    let ZR = !1,
+      aR = !1;
+    const YR = () => ZR || aR && aU.c.isInGame(),
+      BR = UU => {
+        YR() && UU.preventDefault()
+      };
+    CU.p.subscribe("displaymodeFullscreenChange", (UU => {
+      VR()
+    })), CU.p.subscribe("pointerLockUpdate", (UU => {
+      ZR = UU, VR(), rR()
+    })), CU.p.subscribe("freeCursorUpdate", (UU => {
+      aR = UU, VR(), rR()
+    }));
+    const VR = () => {
+        window.removeEventListener("wheel", BR), YU.j && !(0, PU.o)() && (ZR || aR) && window.addEventListener("wheel", BR, {
           passive: !1
         })
       },
-      zC = () => {
-        window.removeEventListener("wheel", jC), (qC || JC) && window.addEventListener("wheel", jC, {
+      rR = () => {
+        window.removeEventListener("wheel", XR), (ZR || aR) && window.addEventListener("wheel", XR, {
           passive: !1
         })
       },
-      jC = DD => {
-        !0 === DD.ctrlKey && KC() && DD.preventDefault()
+      XR = UU => {
+        !0 === UU.ctrlKey && YR() && UU.preventDefault()
       };
 
-    function lC(DD) {
-      tD.i.Uo("QTEMouseState", {
-        isDown: DD
+    function vR(UU) {
+      CU.p.yh("QTEMouseState", {
+        isDown: UU
       })
     }
 
-    function LC(DD) {
-      var CD, cD, pD, iD, fD, bD, QD, wD;
-      const BD = (0, UD.i)();
-      BD.R_ = null !== (CD = function(DD, CD) {
-        var cD, ID;
-        if (!bC) return null;
-        const pD = DD.bloxd;
-        IC ??= pD.getMetaInfo("Board").rootId;
-        const iD = null !== (cD = null === CD || void 0 === CD ? void 0 : CD.EW) && void 0 !== cD ? cD : null;
-        if (!iD || pD.getMetaInfo(iD).rootId !== IC) return null;
-        const fD = null !== (ID = null === CD || void 0 === CD ? void 0 : CD.position) && void 0 !== ID ? ID : null;
-        if (pD.playerCanChangePos(DD.aJ, fD[0], fD[1], fD[2])) return null;
-        const bD = (DD, CD, cD) => {
-          const ID = pD.blockDataOwner.getBlockData(DD, CD, cD),
-            iD = null === ID || void 0 === ID ? void 0 : ID.persisted.shared.text.split("\n")[0].toLowerCase().trim();
-          return aD.singleLineBoardActions.has(iD)
+    function dR(UU) {
+      var RU, gU, pU, EU, PU, TU, qU, KU;
+      const GU = (0, bU.g)();
+      GU.N9 = null !== (RU = function(UU, RU) {
+        var gU, tU;
+        if (!TR) return null;
+        const pU = UU.bloxd;
+        tR ??= pU.getMetaInfo("Board").rootId;
+        const EU = null !== (gU = null === RU || void 0 === RU ? void 0 : RU.cL) && void 0 !== gU ? gU : null;
+        if (!EU || pU.getMetaInfo(EU).rootId !== tR) return null;
+        const PU = null !== (tU = null === RU || void 0 === RU ? void 0 : RU.position) && void 0 !== tU ? tU : null;
+        if (pU.playerCanChangePos(UU.AY, PU[0], PU[1], PU[2])) return null;
+        const TU = (UU, RU, gU) => {
+          const tU = pU.blockDataOwner.getBlockData(UU, RU, gU),
+            EU = null === tU || void 0 === tU ? void 0 : tU.persisted.shared.text.split("\n")[0].toLowerCase().trim();
+          return BU.singleLineBoardActions.has(EU)
         };
-        if (bD(fD[0], fD[1], fD[2])) return null;
-        let QD;
-        DD.N9 && (QD = [...DD.N9], DD.pY(QD, QD));
-        const wD = (QD ? DD.camera.bR : 0) + pD.getBlockReach(DD.aJ);
-        return DD.pickBlock(QD, DD.J9, wD, ((CD, cD, ID, iD) => 0 !== CD && ("Board" !== pD.getMetaInfo(CD).rootName || pD.playerCanChangePos(DD.aJ, cD, ID, iD) || bD(cD, ID, iD))))
-      }(BD, BD.R_)) && void 0 !== CD ? CD : BD.R_;
-      const MD = null !== (cD = null === (pD = BD.R_) || void 0 === pD ? void 0 : pD.position) && void 0 !== cD ? cD : null,
-        ZD = null !== (iD = BD.J9) && void 0 !== iD ? iD : BD.camera.qY(),
-        oD = UD.j.localPlayerPickActionHelper.getPickEntityResult(ZD),
-        vD = null !== (fD = BD.R_) && void 0 !== fD && fD.EW ? (0, LD.f)(BD.R_.EW) : "Air",
-        ND = DD === yD.d.UpFirePrimary || DD === yD.d.UpFireSecondary,
-        gD = ND ? "onPlayerClickUp" : "onPlayerClick",
-        XD = ND ? DD === yD.d.UpFireSecondary : DD === yD.d.DownFireSecondary,
-        mD = !ND && (0, ID.getWasDoubleClick)();
-      tD.i.Uo("mouseState", {
-        jS: DD,
-        isDown: !ND
-      }), (0, ID.sendColyMessage)(SD.eh, {
-        jS: DD,
-        lS: mD,
-        Vw: MD,
-        zw: oD
-      }, !0), (0, UD.e)().client.triggerGameCallback(gD, BD.aJ, XD, null !== (bD = null === MD || void 0 === MD ? void 0 : MD[0]) && void 0 !== bD ? bD : null, null !== (QD = null === MD || void 0 === MD ? void 0 : MD[1]) && void 0 !== QD ? QD : null, null !== (wD = null === MD || void 0 === MD ? void 0 : MD[2]) && void 0 !== wD ? wD : null, vD, oD)
+        if (TU(PU[0], PU[1], PU[2])) return null;
+        let qU;
+        UU.uUU && (qU = [...UU.uUU], UU.HA(qU, qU));
+        const KU = (qU ? UU.camera.Fk : 0) + pU.getBlockReach(UU.AY);
+        return UU.pickBlock(qU, UU.CUU, KU, ((RU, gU, tU, EU) => 0 !== RU && ("Board" !== pU.getMetaInfo(RU).rootName || pU.playerCanChangePos(UU.AY, gU, tU, EU) || TU(gU, tU, EU))))
+      }(GU, GU.N9)) && void 0 !== RU ? RU : GU.N9;
+      const uU = null !== (gU = null === (pU = GU.N9) || void 0 === pU ? void 0 : pU.position) && void 0 !== gU ? gU : null,
+        hU = null !== (EU = GU.CUU) && void 0 !== EU ? EU : GU.camera.pM(),
+        QU = bU.j.localPlayerPickActionHelper.getPickEntityResult(hU),
+        eU = null !== (PU = GU.N9) && void 0 !== PU && PU.cL ? (0, dU.e)(GU.N9.cL) : "Air",
+        WU = UU === jU.b.UpFirePrimary || UU === jU.b.UpFireSecondary,
+        fU = WU ? "onPlayerClickUp" : "onPlayerClick",
+        xU = WU ? UU === jU.b.UpFireSecondary : UU === jU.b.DownFireSecondary,
+        mU = !WU && (0, tU.getWasDoubleClick)();
+      CU.p.yh("mouseState", {
+        jc: UU,
+        isDown: !WU
+      }), (0, tU.sendColyMessage)(cU.Bh, {
+        jc: UU,
+        uc: mU,
+        cK: uU,
+        GK: QU
+      }, !0), (0, bU.c)().client.triggerGameCallback(fU, GU.AY, xU, null !== (TU = null === uU || void 0 === uU ? void 0 : uU[0]) && void 0 !== TU ? TU : null, null !== (qU = null === uU || void 0 === uU ? void 0 : uU[1]) && void 0 !== qU ? qU : null, null !== (KU = null === uU || void 0 === uU ? void 0 : uU[2]) && void 0 !== KU ? KU : null, eU, QU)
     }
-    window.addEventListener("keydown", (DD => {
-      ["ArrowUp", "ArrowDown"].includes(DD.key) && DD.preventDefault()
-    })), document.addEventListener("keydown", (DD => {
-      (0, jD.e)(DD, (() => {
-        const DD = (0, UD.i)();
-        return (0, zD.C)(DD) || !1 !== DD.qm.canCustomiseChar
+    window.addEventListener("keydown", (UU => {
+      ["ArrowUp", "ArrowDown"].includes(UU.key) && UU.preventDefault()
+    })), document.addEventListener("keydown", (UU => {
+      (0, XU.b)(UU, (() => {
+        const UU = (0, bU.g)();
+        return (0, rU.E)(UU) || !1 !== UU.Qm.canCustomiseChar
       }))
     }))
   },
-  38436: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => iD,
-      f: () => fD
+  38640: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => EU,
+      h: () => PU
     });
-    var ID = cD(37807);
-    let pD = !1;
+    var tU = gU(37992);
+    let pU = !1;
 
-    function iD() {
-      return pD
+    function EU() {
+      return pU
     }
 
-    function fD(DD) {
-      pD = DD, DD ? ID.e.setMultiplierType("emoteWheel", 0) : ID.e.removeMultiplier("emoteWheel")
+    function PU(UU) {
+      pU = UU, UU ? tU.g.setMultiplierType("emoteWheel", 0) : tU.g.removeMultiplier("emoteWheel")
     }
   },
-  38443: (DD, CD, cD) => {
-    function ID(DD) {
-      return Boolean(DD.qm.useInventory && DD.qm.useFullInventory && DD.Km.VDD(DD.aJ))
+  38646: (UU, RU, gU) => {
+    function tU(UU) {
+      return Boolean(UU.Qm.useInventory && UU.Qm.useFullInventory && UU.Im.lUU(UU.AY))
     }
-    cD.d(CD, {
-      c: () => ID
+    gU.d(RU, {
+      c: () => tU
     })
   },
-  38335: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => iD,
-      g: () => pD
+  38534: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => EU,
+      d: () => pU
     });
-    var ID = cD(36501);
+    var tU = gU(36651);
 
-    function pD(DD, CD) {
+    function pU(UU, RU) {
       return {
-        replayedClipName: DD,
-        replayedClipAgeSeconds: CD
+        replayedClipName: UU,
+        replayedClipAgeSeconds: RU
       }
     }
 
-    function iD(DD, CD, cD, pD, iD) {
-      const fD = function(DD) {
-          if ("object" !== typeof DD || null === DD) return null;
+    function EU(UU, RU, gU, pU, EU) {
+      const PU = function(UU) {
+          if ("object" !== typeof UU || null === UU) return null;
           const {
-            replayedClipName: CD,
-            replayedClipAgeSeconds: cD
-          } = DD;
-          return "string" === typeof CD && "number" === typeof cD ? {
-            Ni: CD,
-            gi: cD
+            replayedClipName: RU,
+            replayedClipAgeSeconds: gU
+          } = UU;
+          return "string" === typeof RU && "number" === typeof gU ? {
+            eE: RU,
+            WE: gU
           } : null
-        }(cD),
-        bD = null === fD ? cD : null,
+        }(gU),
+        TU = null === PU ? gU : null,
         {
-          Ni: QD = null,
-          gi: wD = 0
-        } = null !== fD && void 0 !== fD ? fD : {};
-      DD.animateEntity(CD, ID.d.Custom, bD, pD, iD, QD, wD)
+          eE: qU = null,
+          WE: KU = 0
+        } = null !== PU && void 0 !== PU ? PU : {};
+      UU.animateEntity(RU, tU.f.Custom, TU, pU, EU, qU, KU)
     }
   },
-  38362: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => tD,
-      h: () => SD,
-      i: () => MD,
-      l: () => yD,
-      o: () => ZD,
-      r: () => BD
+  38558: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => CU,
+      f: () => cU,
+      j: () => uU,
+      l: () => jU,
+      n: () => hU,
+      q: () => GU
     });
-    var ID = cD(38366),
-      pD = cD(36591),
-      iD = cD(3501),
-      fD = cD(1913),
-      bD = cD(20),
-      QD = cD(2642);
-    const wD = new ID.c;
+    var tU = gU(38561),
+      pU = gU(36724),
+      EU = gU(3349),
+      PU = gU(1802),
+      TU = gU(24),
+      qU = gU(2551);
+    const KU = new tU.b;
 
-    function SD() {
-      return wD
+    function cU() {
+      return KU
     }
 
-    function BD() {
-      wD.clear()
+    function GU() {
+      KU.clear()
     }
 
-    function yD() {
-      for (const DD of wD.ids()) {
-        const CD = wD.getName(DD);
-        void 0 !== CD && fD.c.delete(CD)
+    function jU() {
+      for (const UU of KU.ids()) {
+        const RU = KU.getName(UU);
+        void 0 !== RU && PU.b.delete(RU)
       }
-      BD(), bD.i.Uo("playerRosterChanged", wD.ids())
+      GU(), TU.p.yh("playerRosterChanged", KU.ids())
     }
 
-    function MD(DD, CD) {
-      var cD, ID;
-      if (wD.has(DD)) return wD.getSetting(DD, CD);
-      const pD = (0, QD.i)();
-      return null === (cD = pD.KJ[pD.aJ]) || void 0 === cD || null === (ID = cD[DD]) || void 0 === ID ? void 0 : ID[CD]
+    function uU(UU, RU) {
+      var gU, tU;
+      if (KU.has(UU)) return KU.getSetting(UU, RU);
+      const pU = (0, qU.g)();
+      return null === (gU = pU.FY[pU.AY]) || void 0 === gU || null === (tU = gU[UU]) || void 0 === tU ? void 0 : tU[RU]
     }
 
-    function tD(DD) {
+    function CU(UU) {
       const {
-        added: CD,
-        removed: cD,
-        settingChanges: ID
-      } = wD.apply(DD);
+        added: RU,
+        removed: gU,
+        settingChanges: tU
+      } = KU.apply(UU);
       for (const {
-          playerId: pD,
-          name: iD
+          playerId: pU,
+          name: EU
         }
-        of cD) void 0 === iD || oD(pD) || fD.c.delete(iD);
+        of gU) void 0 === EU || QU(pU) || PU.b.delete(EU);
       for (const {
-          playerId: iD,
-          settings: fD
+          playerId: EU,
+          settings: PU
         }
-        of ID)
-        if (oD(iD)) ZD(iD, fD);
+        of tU)
+        if (QU(EU)) hU(EU, PU);
         else
-          for (const DD in fD)(0, pD.m)(iD, DD, fD[DD]);
-      (CD.length > 0 || cD.length > 0) && bD.i.Uo("playerRosterChanged", wD.ids())
+          for (const UU in PU)(0, pU.l)(EU, UU, PU[UU]);
+      (RU.length > 0 || gU.length > 0) && TU.p.yh("playerRosterChanged", KU.ids())
     }
 
-    function ZD(DD) {
-      let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wD.getSettings(DD);
-      if (CD) {
-        (0, pD.h)(DD);
-        for (const cD in CD)(0, pD.e)(DD, cD, CD[cD])
+    function hU(UU) {
+      let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : KU.getSettings(UU);
+      if (RU) {
+        (0, pU.f)(UU);
+        for (const gU in RU)(0, pU.e)(UU, gU, RU[gU])
       }
     }
 
-    function oD(DD) {
-      return DD === (0, QD.i)().o9 || (0, QD.e)().client.hasEntity(DD)
-    }(0, iD.onGameReset)(BD)
+    function QU(UU) {
+      return UU === (0, qU.g)().jUU || (0, qU.c)().client.hasEntity(UU)
+    }(0, EU.onGameReset)(GU)
   },
-  37472: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => UD,
-      d: () => nD,
-      e: () => PD,
-      f: () => HD,
-      i: () => xD
+  37635: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => bU,
+      f: () => IU,
+      j: () => wU,
+      m: () => nU,
+      n: () => oU
     });
-    var ID = cD(36440),
-      pD = cD(37479),
-      iD = cD(335),
-      fD = cD.n(iD),
-      bD = cD(3193);
-    const QD = new ID.cZ,
-      wD = new ID.cZ,
-      SD = new ID.cZ,
-      BD = new ID.cZ,
-      yD = new ID.cZ,
-      MD = [0, 0, 0],
-      tD = {
+    var tU = gU(36593),
+      pU = gU(37641),
+      EU = gU(316),
+      PU = gU.n(EU),
+      TU = gU(3099);
+    const qU = new tU.xC,
+      KU = new tU.xC,
+      cU = new tU.xC,
+      GU = new tU.xC,
+      jU = new tU.xC,
+      uU = [0, 0, 0],
+      CU = {
         x: 0,
         y: 0
       },
-      ZD = new ID.cZ(1, 0, 0),
-      oD = new ID.cZ(0, 1, 0),
-      vD = ID.Matrix.Identity(),
-      ND = new ID.Matrix,
-      gD = new ID.Matrix,
-      XD = new ID.cZ,
-      mD = new pD.e(0, 0, 0, 0);
+      hU = new tU.xC(1, 0, 0),
+      QU = new tU.xC(0, 1, 0),
+      eU = tU.Matrix.Identity(),
+      WU = new tU.Matrix,
+      fU = new tU.Matrix,
+      xU = new tU.xC,
+      mU = new pU.d(0, 0, 0, 0);
 
-    function nD(DD, CD) {
-      var cD, pD;
-      const iD = OD(DD, CD);
-      if (iD) {
-        const DD = iD.x,
-          CD = iD.y,
-          cD = DD - 50,
-          ID = CD - 50;
-        return Math.abs(cD) <= bD.e && Math.abs(ID) <= (0, bD.l)() ? {
-          x: DD,
-          y: CD
-        } : JD(cD, ID)
+    function IU(UU, RU) {
+      var gU, pU;
+      const EU = JU(UU, RU);
+      if (EU) {
+        const UU = EU.x,
+          RU = EU.y,
+          gU = UU - 50,
+          tU = RU - 50;
+        return Math.abs(gU) <= TU.b && Math.abs(tU) <= (0, TU.i)() ? {
+          x: UU,
+          y: RU
+        } : aU(gU, tU)
       }
-      SD.K4(CD[0], CD[1], CD[2]),
-        function(DD) {
-          const CD = DD.XZ.ECD(),
-            cD = CD ? ID.Matrix.FromArrayToRef(CD.worldMatrix, 0, gD) : DD.XZ.hq().activeCamera.getWorldMatrix();
-          ID.cZ.TransformNormalToRef(ZD, cD, BD), BD.normalize(), ID.cZ.TransformNormalToRef(oD, cD, yD), yD.normalize()
-        }(DD);
-      const fD = ID.cZ.Dot(SD, BD);
-      let QD = -ID.cZ.Dot(SD, yD);
-      Math.abs(fD) < .001 && Math.abs(QD) < .001 && (QD = -1);
-      const wD = null !== (cD = null === (pD = DD.XZ.ECD()) || void 0 === pD ? void 0 : pD.projectionMatrix) && void 0 !== cD ? cD : DD.XZ.hq().activeCamera.getProjectionMatrix().m;
-      return JD(fD * wD[0], QD * wD[5])
+      cU.b_(RU[0], RU[1], RU[2]),
+        function(UU) {
+          const RU = UU.SC.KgU(),
+            gU = RU ? tU.Matrix.FromArrayToRef(RU.worldMatrix, 0, fU) : UU.SC.aZ().activeCamera.getWorldMatrix();
+          tU.xC.TransformNormalToRef(hU, gU, GU), GU.normalize(), tU.xC.TransformNormalToRef(QU, gU, jU), jU.normalize()
+        }(UU);
+      const PU = tU.xC.Dot(cU, GU);
+      let qU = -tU.xC.Dot(cU, jU);
+      Math.abs(PU) < .001 && Math.abs(qU) < .001 && (qU = -1);
+      const KU = null !== (gU = null === (pU = UU.SC.KgU()) || void 0 === pU ? void 0 : pU.projectionMatrix) && void 0 !== gU ? gU : UU.SC.aZ().activeCamera.getProjectionMatrix().m;
+      return aU(PU * KU[0], qU * KU[5])
     }
 
-    function OD(DD, CD) {
-      const cD = DD.XZ.hq(),
-        pD = cD.DZ(),
-        iD = pD.getRenderWidth(),
-        fD = pD.getRenderHeight();
-      mD.width = iD, mD.height = fD;
-      const bD = DD.XZ.ECD(),
-        SD = bD ? XD.K4(bD.eye[0], bD.eye[1], bD.eye[2]) : DD.XZ.camera.globalPosition;
-      QD.K4(SD.x + 10 * CD[0], SD.y + 10 * CD[1], SD.z + 10 * CD[2]);
-      const BD = bD ? ID.Matrix.FromArrayToRef(bD.viewProjectionMatrix, 0, ND) : cD.getTransformMatrix();
-      return ID.cZ.ProjectToRef(QD, vD, BD, mD, wD), wD.z < 0 || wD.z > 1 ? null : (tD.x = wD.x / iD * 100, tD.y = wD.y / fD * 100, tD)
+    function JU(UU, RU) {
+      const gU = UU.SC.aZ(),
+        pU = gU.WC(),
+        EU = pU.getRenderWidth(),
+        PU = pU.getRenderHeight();
+      mU.width = EU, mU.height = PU;
+      const TU = UU.SC.KgU(),
+        cU = TU ? xU.b_(TU.eye[0], TU.eye[1], TU.eye[2]) : UU.SC.camera.globalPosition;
+      qU.b_(cU.x + 10 * RU[0], cU.y + 10 * RU[1], cU.z + 10 * RU[2]);
+      const GU = TU ? tU.Matrix.FromArrayToRef(TU.viewProjectionMatrix, 0, WU) : gU.getTransformMatrix();
+      return tU.xC.ProjectToRef(qU, eU, GU, mU, KU), KU.z < 0 || KU.z > 1 ? null : (CU.x = KU.x / EU * 100, CU.y = KU.y / PU * 100, CU)
     }
 
-    function PD(DD, CD) {
-      return nD(DD, qD(DD, CD))
+    function wU(UU, RU) {
+      return IU(UU, ZU(UU, RU))
     }
 
-    function HD(DD, CD) {
-      const cD = OD(DD, qD(DD, CD));
-      return cD && {
-        x: cD.x,
-        y: cD.y
+    function nU(UU, RU) {
+      const gU = JU(UU, ZU(UU, RU));
+      return gU && {
+        x: gU.x,
+        y: gU.y
       }
     }
 
-    function UD(DD) {
-      var CD, cD;
-      return 1 / (null !== (CD = null === (cD = DD.XZ.ECD()) || void 0 === cD ? void 0 : cD.projectionMatrix[0]) && void 0 !== CD ? CD : DD.XZ.hq().activeCamera.getProjectionMatrix().m[0])
+    function bU(UU) {
+      var RU, gU;
+      return 1 / (null !== (RU = null === (gU = UU.SC.KgU()) || void 0 === gU ? void 0 : gU.projectionMatrix[0]) && void 0 !== RU ? RU : UU.SC.aZ().activeCamera.getProjectionMatrix().m[0])
     }
 
-    function xD(DD, CD, cD) {
-      const ID = DD.XZ.ECD(),
-        pD = ID ? ID.worldMatrix : DD.XZ.hq().activeCamera.getWorldMatrix().m,
-        iD = DD.Ry;
-      for (let fD = 0; fD < 3; fD++) CD[fD] = pD[12 + fD] + iD[fD], cD[fD] = pD[8 + fD];
-      fD().normalize(cD, cD)
+    function oU(UU, RU, gU) {
+      const tU = UU.SC.KgU(),
+        pU = tU ? tU.worldMatrix : UU.SC.aZ().activeCamera.getWorldMatrix().m,
+        EU = UU.uj;
+      for (let PU = 0; PU < 3; PU++) RU[PU] = pU[12 + PU] + EU[PU], gU[PU] = pU[8 + PU];
+      PU().normalize(gU, gU)
     }
 
-    function qD(DD, CD) {
-      const cD = DD.Ry,
-        ID = DD.XZ.ECD(),
-        pD = ID ? XD.K4(ID.eye[0], ID.eye[1], ID.eye[2]) : DD.XZ.camera.globalPosition;
-      return MD[0] = CD[0] - cD[0] - pD.x, MD[1] = CD[1] - cD[1] - pD.y, MD[2] = CD[2] - cD[2] - pD.z, fD().normalize(MD, MD), MD
+    function ZU(UU, RU) {
+      const gU = UU.uj,
+        tU = UU.SC.KgU(),
+        pU = tU ? xU.b_(tU.eye[0], tU.eye[1], tU.eye[2]) : UU.SC.camera.globalPosition;
+      return uU[0] = RU[0] - gU[0] - pU.x, uU[1] = RU[1] - gU[1] - pU.y, uU[2] = RU[2] - gU[2] - pU.z, PU().normalize(uU, uU), uU
     }
 
-    function JD(DD, CD) {
-      return (0, bD.h)(DD, CD, bD.e, (0, bD.l)())
+    function aU(UU, RU) {
+      return (0, TU.e)(UU, RU, TU.b, (0, TU.i)())
     }
   },
-  38396: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => bD
+  38598: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => TU
     });
-    var ID = cD(20),
-      pD = cD(1284),
-      iD = cD(3275);
-    const fD = "Reconnecting";
-    class bD {
-      constructor(DD) {
-        this.hooks = DD, this.graceMs = 0, this.sessionBased = !1, this.controller = void 0, this.frozen = !1, this.stopped = !1, this.listening = !1, this.ended = !1, this.retryNow = () => {
+    var tU = gU(24),
+      pU = gU(1287),
+      EU = gU(3165);
+    const PU = "Reconnecting";
+    class TU {
+      constructor(UU) {
+        this.hooks = UU, this.graceMs = 0, this.sessionBased = !1, this.controller = void 0, this.frozen = !1, this.stopped = !1, this.listening = !1, this.ended = !1, this.retryNow = () => {
           "visible" === document.visibilityState && this.controller.retryNow()
-        }, this.onPageHide = DD => {
-          DD.persisted || this.leave()
-        }, this.controller = new iD.b((CD => DD.reconnect(CD)), {
-          isSessionLive: () => !this.ended && DD.isLive(),
-          onPhaseChanged: DD => {
-            this.onPhaseChanged(DD)
+        }, this.onPageHide = UU => {
+          UU.persisted || this.leave()
+        }, this.controller = new EU.d((RU => UU.reconnect(RU)), {
+          isSessionLive: () => !this.ended && UU.isLive(),
+          onPhaseChanged: UU => {
+            this.onPhaseChanged(UU)
           },
-          onReconnected: CD => {
-            DD.onReconnected(CD)
+          onReconnected: RU => {
+            UU.onReconnected(RU)
           },
-          onGaveUp: CD => {
-            !this.ended && DD.isLive() && DD.onGaveUp(this.sessionBased, CD)
+          onGaveUp: RU => {
+            !this.ended && UU.isLive() && UU.onGaveUp(this.sessionBased, RU)
           }
         })
       }
-      onInitialInfo(DD, CD) {
-        this.graceMs = DD, this.sessionBased = CD
+      onInitialInfo(UU, RU) {
+        this.graceMs = UU, this.sessionBased = RU
       }
       canHoldSeat() {
         return this.graceMs > 0 && !this.ended
@@ -4067,8 +4173,8 @@ export const modules = {
       isResuming() {
         return "connected" !== this.controller.phase
       }
-      onConnectionLost(DD) {
-        this.ended || this.controller.onConnectionLost(DD, this.graceMs)
+      onConnectionLost(UU) {
+        this.ended || this.controller.onConnectionLost(UU, this.graceMs)
       }
       onResuming() {
         this.ended || this.controller.onResuming()
@@ -4077,38 +4183,38 @@ export const modules = {
         this.controller.stop()
       }
       leave() {
-        const DD = this.isResuming() && !this.controller.awaitingResumeOnRoom,
-          CD = this.controller.heldToken;
-        this.end(), DD && "" !== CD && this.hooks.releaseSeat(CD)
+        const UU = this.isResuming() && !this.controller.awaitingResumeOnRoom,
+          RU = this.controller.heldToken;
+        this.end(), UU && "" !== RU && this.hooks.releaseSeat(RU)
       }
       end() {
         this.ended = !0, this.controller.stop()
       }
-      onPhaseChanged(DD) {
-        const CD = "frozen" === DD || "resuming" === DD;
-        CD !== this.stopped && (this.stopped = CD, this.hooks.freeze(CD));
-        const cD = "frozen" === DD || "resuming" === DD && this.frozen;
-        cD && !this.frozen ? (0, pD.p)(fD) : !cD && this.frozen && (0, pD.l)(fD), this.frozen = cD, this.setListening("connected" !== DD), ID.i.Uo(iD.k, cD ? "frozen" : DD)
+      onPhaseChanged(UU) {
+        const RU = "frozen" === UU || "resuming" === UU;
+        RU !== this.stopped && (this.stopped = RU, this.hooks.freeze(RU));
+        const gU = "frozen" === UU || "resuming" === UU && this.frozen;
+        gU && !this.frozen ? (0, pU.o)(PU) : !gU && this.frozen && (0, pU.k)(PU), this.frozen = gU, this.setListening("connected" !== UU), tU.p.yh(EU.q, gU ? "frozen" : UU)
       }
-      setListening(DD) {
-        DD !== this.listening && (this.listening = DD, DD ? (window.addEventListener("online", this.retryNow), document.addEventListener("visibilitychange", this.retryNow), window.addEventListener("pagehide", this.onPageHide)) : (window.removeEventListener("online", this.retryNow), document.removeEventListener("visibilitychange", this.retryNow), window.removeEventListener("pagehide", this.onPageHide)))
+      setListening(UU) {
+        UU !== this.listening && (this.listening = UU, UU ? (window.addEventListener("online", this.retryNow), document.addEventListener("visibilitychange", this.retryNow), window.addEventListener("pagehide", this.onPageHide)) : (window.removeEventListener("online", this.retryNow), document.removeEventListener("visibilitychange", this.retryNow), window.removeEventListener("pagehide", this.onPageHide)))
       }
     }
   },
-  38404: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => ID
+  38603: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => tU
     });
-    class ID {
-      constructor(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.onSilent = DD, this.now = CD, this.lastHeardAt = void 0, this.resumedAt = void 0, this.lastCheckAt = void 0, this.wasVisible = "visible" === document.visibilityState, this.interval = void 0, this.check = () => {
-          const DD = this.now(),
-            CD = DD - this.lastCheckAt <= 2e3;
-          this.lastCheckAt = DD;
-          const cD = "visible" === document.visibilityState;
-          !cD || CD && this.wasVisible || (this.resumedAt = DD), this.wasVisible = cD, cD && DD - this.lastHeardAt > 12e3 && DD - this.resumedAt > 2e3 && this.onSilent()
-        }, this.lastHeardAt = CD(), this.resumedAt = this.lastHeardAt, this.lastCheckAt = this.lastHeardAt, this.interval = setInterval(this.check, 1e3), document.addEventListener("visibilitychange", this.check), window.addEventListener("online", this.check)
+    class tU {
+      constructor(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.onSilent = UU, this.now = RU, this.lastHeardAt = void 0, this.resumedAt = void 0, this.lastCheckAt = void 0, this.wasVisible = "visible" === document.visibilityState, this.interval = void 0, this.check = () => {
+          const UU = this.now(),
+            RU = UU - this.lastCheckAt <= 2e3;
+          this.lastCheckAt = UU;
+          const gU = "visible" === document.visibilityState;
+          !gU || RU && this.wasVisible || (this.resumedAt = UU), this.wasVisible = gU, gU && UU - this.lastHeardAt > 12e3 && UU - this.resumedAt > 2e3 && this.onSilent()
+        }, this.lastHeardAt = RU(), this.resumedAt = this.lastHeardAt, this.lastCheckAt = this.lastHeardAt, this.interval = setInterval(this.check, 1e3), document.addEventListener("visibilitychange", this.check), window.addEventListener("online", this.check)
       }
       heard() {
         this.lastHeardAt = this.now()
@@ -4118,406 +4224,406 @@ export const modules = {
       }
     }
   },
-  38373: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => yD
+  38569: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => jU
     });
-    var ID = cD(194),
-      pD = cD(335),
-      iD = cD.n(pD),
-      fD = cD(36113),
-      bD = cD(36122),
-      QD = cD(2642);
-    const wD = ID.h.XN * ID.h.playerEyeToHeightRatio,
-      SD = 250,
-      BD = 1.1,
-      yD = new class {
+    var tU = gU(189),
+      pU = gU(316),
+      EU = gU.n(pU),
+      PU = gU(36307),
+      TU = gU(36311),
+      qU = gU(2551);
+    const KU = tU.e.FW * tU.e.playerEyeToHeightRatio,
+      cU = 250,
+      GU = 1.1,
+      jU = new class {
         constructor() {
           this.entities = new Map, this.playing = new Map, this.msSinceLastScan = 0
         }
-        add(DD, CD) {
-          this.entities.set(DD, CD)
+        add(UU, RU) {
+          this.entities.set(UU, RU)
         }
-        update(DD, CD) {
-          const cD = this.entities.get(DD);
-          this.entities.set(DD, CD);
-          const ID = this.playing.get(DD);
-          ID && (cD && cD.soundName === CD.soundName ? (ID.sound.setRelativeVolume(CD.volume), ID.sound.rate(CD.rate), ID.sound.setPannerAttr({
-            refDistance: CD.refDistance
-          })) : this.stopEntity(DD))
+        update(UU, RU) {
+          const gU = this.entities.get(UU);
+          this.entities.set(UU, RU);
+          const tU = this.playing.get(UU);
+          tU && (gU && gU.soundName === RU.soundName ? (tU.sound.setRelativeVolume(RU.volume), tU.sound.rate(RU.rate), tU.sound.setPannerAttr({
+            refDistance: RU.refDistance
+          })) : this.stopEntity(UU))
         }
-        remove(DD) {
-          this.stopEntity(DD), this.entities.delete(DD)
+        remove(UU) {
+          this.stopEntity(UU), this.entities.delete(UU)
         }
-        wy(DD) {
-          this.msSinceLastScan += DD, this.msSinceLastScan < SD || (this.msSinceLastScan = 0, this.scan())
+        HG(UU) {
+          this.msSinceLastScan += UU, this.msSinceLastScan < cU || (this.msSinceLastScan = 0, this.scan())
         }
-        stopEntity(DD) {
-          const CD = this.playing.get(DD);
-          CD && (CD.sound.stop(), this.playing.delete(DD))
+        stopEntity(UU) {
+          const RU = this.playing.get(UU);
+          RU && (RU.sound.stop(), this.playing.delete(UU))
         }
-        startEntity(DD, CD, cD) {
-          const ID = (0, bD.c)(CD.soundName);
-          if (!ID) return console.error(`AudioEntityManager: no sound found for "${CD.soundName}", dropping audio entity ${DD}`), void this.remove(DD);
-          const pD = fD.e.play(ID, CD.volume, cD, CD.maxHearDist, CD.refDistance, !0);
-          pD.rate(CD.rate), this.playing.set(DD, {
-            sound: pD,
-            lastPos: iD().clone(cD)
+        startEntity(UU, RU, gU) {
+          const tU = (0, TU.d)(RU.soundName);
+          if (!tU) return console.error(`AudioEntityManager: no sound found for "${RU.soundName}", dropping audio entity ${UU}`), void this.remove(UU);
+          const pU = PU.e.play(tU, RU.volume, gU, RU.maxHearDist, RU.refDistance, !0);
+          pU.rate(RU.rate), this.playing.set(UU, {
+            sound: pU,
+            lastPos: EU().clone(gU)
           })
         }
         scan() {
-          const DD = (0, QD.i)();
-          if (!DD) return;
-          const CD = DD.Km.FX(DD.aJ);
-          if (CD)
-            for (const [cD, ID] of this.entities) {
-              if (!DD.Km.R7(cD, "position")) continue;
-              const pD = DD.Km.FX(cD),
-                fD = iD().sqrDist(CD, pD),
-                bD = this.playing.get(cD);
-              if (bD) {
-                const DD = ID.maxHearDist * BD;
-                fD > DD * DD ? this.stopEntity(cD) : iD().equals(pD, bD.lastPos) || (bD.sound.setPosition([pD[0], pD[1] + wD, pD[2]]), iD().copy(bD.lastPos, pD))
-              } else fD <= ID.maxHearDist * ID.maxHearDist && this.startEntity(cD, ID, pD)
+          const UU = (0, qU.g)();
+          if (!UU) return;
+          const RU = UU.Im.Hx(UU.AY);
+          if (RU)
+            for (const [gU, tU] of this.entities) {
+              if (!UU.Im.cUU(gU, "position")) continue;
+              const pU = UU.Im.Hx(gU),
+                PU = EU().sqrDist(RU, pU),
+                TU = this.playing.get(gU);
+              if (TU) {
+                const UU = tU.maxHearDist * GU;
+                PU > UU * UU ? this.stopEntity(gU) : EU().equals(pU, TU.lastPos) || (TU.sound.setPosition([pU[0], pU[1] + KU, pU[2]]), EU().copy(TU.lastPos, pU))
+              } else PU <= tU.maxHearDist * tU.maxHearDist && this.startEntity(gU, tU, pU)
             }
         }
       }
   },
-  38418: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => wD,
-      f: () => SD
+  38618: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => KU,
+      e: () => cU
     });
-    var ID = cD(1685),
-      pD = cD(194),
-      iD = cD(1664),
-      fD = cD(1759),
-      bD = cD(1199),
-      QD = cD(1127);
-    async function wD(DD, CD) {
-      return function(DD) {
-        return "object" === typeof DD && null !== DD && DD.code === pD.e.VpnIp.code
-      }(CD) && function(DD) {
-        return iD.b.supports("appCheck") && DD.isLoggedIn() && !DD.hasTriedAppAttestation()
-      }(DD) && await async function(DD) {
+    var tU = gU(1627),
+      pU = gU(189),
+      EU = gU(1614),
+      PU = gU(1672),
+      TU = gU(1196),
+      qU = gU(1120);
+    async function KU(UU, RU) {
+      return function(UU) {
+        return "object" === typeof UU && null !== UU && UU.code === pU.d.VpnIp.code
+      }(RU) && function(UU) {
+        return EU.b.supports("appCheck") && UU.isLoggedIn() && !UU.hasTriedAppAttestation()
+      }(UU) && await async function(UU) {
         try {
           const {
-            token: CD
-          } = await (0, fD.d)(), {
-            "3PSIDMCPP": cD
-          } = await (0, QD.postJsonWithMetricsCookiesAndJsonResponse)(`${bD.clientSideServerUrls.indexUrl}/index/app-attestation`, {
-            appCheckToken: CD
+            token: RU
+          } = await (0, PU.d)(), {
+            "3PSIDMCPP": gU
+          } = await (0, qU.postJsonWithMetricsCookiesAndJsonResponse)(`${TU.clientSideServerUrls.indexUrl}/index/app-attestation`, {
+            appCheckToken: RU
           }, {
             retries: 0
-          }, DD.getMetricsCookies());
-          return DD.setAppAttestedAuthJwt(cD), !0
-        } catch (CD) {
-          return CD instanceof ID.c && "failed" === CD.code ? (console.warn("The app couldn't get an App Check token:", CD), DD.markAppAttestationTried()) : console.error("Failed to attest the app:", CD), !1
+          }, UU.getMetricsCookies());
+          return UU.setAppAttestedAuthJwt(gU), !0
+        } catch (RU) {
+          return RU instanceof tU.e && "failed" === RU.code ? (console.warn("The app couldn't get an App Check token:", RU), UU.markAppAttestationTried()) : console.error("Failed to attest the app:", RU), !1
         }
-      }(DD)
+      }(UU)
     }
-    async function SD(DD, CD) {
+    async function cU(UU, RU) {
       try {
-        return await CD()
-      } catch (cD) {
-        if (!await wD(DD, cD)) throw cD
+        return await RU()
+      } catch (gU) {
+        if (!await KU(UU, gU)) throw gU
       }
-      return CD()
+      return RU()
     }
   },
-  38409: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => yD,
-      c: () => SD
+  38611: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => jU,
+      h: () => cU
     });
-    var ID = cD(194),
-      pD = cD(1793),
-      iD = cD(1796),
-      fD = cD(8598);
-    const bD = [250, 500, 1e3, 2e3, 1250],
-      QD = 406;
+    var tU = gU(189),
+      pU = gU(1698),
+      EU = gU(1704),
+      PU = gU(8522);
+    const TU = [250, 500, 1e3, 2e3, 1250],
+      qU = 406;
 
-    function wD(DD) {
-      if ("object" !== typeof DD || null === DD) return !1;
+    function KU(UU) {
+      if ("object" !== typeof UU || null === UU) return !1;
       const {
-        code: CD,
-        message: cD
-      } = DD, pD = ID.e.duplicateLobbyNameError;
-      return (CD === pD.code || CD === QD) && (cD === pD.text || cD === pD.text + ID.o)
+        code: RU,
+        message: gU
+      } = UU, pU = tU.d.duplicateLobbyNameError;
+      return (RU === pU.code || RU === qU) && (gU === pU.text || gU === pU.text + tU.k)
     }
-    async function SD(DD, CD) {
-      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : pD.d;
-      for (let pD = 0;; pD++) {
-        let fD;
-        (0, iD.r)(CD);
+    async function cU(UU, RU) {
+      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : pU.b;
+      for (let pU = 0;; pU++) {
+        let PU;
+        (0, EU.m)(RU);
         try {
-          return await DD()
-        } catch (ID) {
-          if (fD = bD[pD], void 0 === fD || !wD(ID)) throw ID
+          return await UU()
+        } catch (tU) {
+          if (PU = TU[pU], void 0 === PU || !KU(tU)) throw tU
         }
-        await cD(fD, CD)
+        await gU(PU, RU)
       }
     }
-    const BD = new Set([ID.e.duplicateLobbyNameError.code, ID.e.lobbyCantBeCreated.code, ID.e.roomDisposedEarlyError.code, ID.e.roomDisposedLateError.code, ID.e.serverRoomLimitReached.code]);
+    const GU = new Set([tU.d.duplicateLobbyNameError.code, tU.d.lobbyCantBeCreated.code, tU.d.roomDisposedEarlyError.code, tU.d.roomDisposedLateError.code, tU.d.serverRoomLimitReached.code]);
 
-    function yD(DD) {
-      if (wD(DD)) return !0;
-      const CD = (0, fD.e)(DD);
-      return "number" === typeof CD && BD.has(CD)
+    function jU(UU) {
+      if (KU(UU)) return !0;
+      const RU = (0, PU.d)(UU);
+      return "number" === typeof RU && GU.has(RU)
     }
   },
-  38353: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => iD,
-      e: () => pD
+  38546: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => EU,
+      f: () => pU
     });
-    var ID = cD(20);
+    var tU = gU(24);
 
-    function pD(DD) {
-      return "refetchCode" === DD || "devDownloadJson" === DD || DD.startsWith("Plugin")
+    function pU(UU) {
+      return "refetchCode" === UU || "devDownloadJson" === UU || UU.startsWith("Plugin")
     }
 
-    function iD(DD, CD) {
-      "refetchCode" !== DD ? "Plugin|MobAiPlugin|ShowPetUi" !== DD ? Promise.all([cD.e(105), cD.e(106), cD.e(101), cD.e(103), cD.e(210)]).then((() => cD(40838))).then((cD => {
+    function EU(UU, RU) {
+      "refetchCode" !== UU ? "Plugin|MobAiPlugin|ShowPetUi" !== UU ? Promise.all([gU.e(105), gU.e(106), gU.e(101), gU.e(103), gU.e(210)]).then((() => gU(41095))).then((gU => {
         let {
-          runClientGameMessage: ID
-        } = cD;
-        ID(DD, CD)
-      })).catch((CD => {
-        console.error(`Game message ${DD} failed`, CD)
-      })) : ID.i.Uo("showPetUi", CD) : ID.i.Uo("refetchCode")
+          runClientGameMessage: tU
+        } = gU;
+        tU(UU, RU)
+      })).catch((RU => {
+        console.error(`Game message ${UU} failed`, RU)
+      })) : tU.p.yh("showPetUi", RU) : tU.p.yh("refetchCode")
     }
   },
-  8598: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => iD,
-      e: () => fD,
-      h: () => bD,
-      j: () => wD,
-      m: () => QD
+  8522: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => EU,
+      d: () => PU,
+      g: () => TU,
+      k: () => KU,
+      l: () => qU
     });
-    var ID = cD(194),
-      pD = cD(4431);
+    var tU = gU(189),
+      pU = gU(4293);
 
-    function iD(DD) {
-      return fD(DD) === ID.e.gameOrPluginOnPlayerAuthRejected.code
+    function EU(UU) {
+      return PU(UU) === tU.d.gameOrPluginOnPlayerAuthRejected.code
     }
 
-    function fD(DD) {
-      return "object" === typeof DD && null !== DD ? DD.code : void 0
+    function PU(UU) {
+      return "object" === typeof UU && null !== UU ? UU.code : void 0
     }
 
-    function bD(DD) {
-      var CD;
-      return null !== (CD = Object.keys(pD.e).find((CD => pD.e[CD] === DD))) && void 0 !== CD ? CD : null
+    function TU(UU) {
+      var RU;
+      return null !== (RU = Object.keys(pU.b).find((RU => pU.b[RU] === UU))) && void 0 !== RU ? RU : null
     }
 
-    function QD(DD) {
-      return "notWhitelisted" === DD ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    function qU(UU) {
+      return "notWhitelisted" === UU ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
     }
-    const wD = {
+    const KU = {
       private: "customLobby:cantJoinPrivate",
       notWhitelisted: "customLobby:cantJoinNotWhitelisted",
       banned: "customLobby:cantJoinBanned",
       adminLocked: "customLobby:cantJoinAdminLocked"
     }
   },
-  38423: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => ID,
-      g: () => pD
+  38621: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => tU,
+      e: () => pU
     });
-    const ID = 45e3;
-    class pD extends Error {
+    const tU = 45e3;
+    class pU extends Error {
       constructor() {
         super("The game server didn't answer in time"), this.name = "SeatRequestTimedOut"
       }
     }
   },
-  38339: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => SD
+  38540: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => cU
     });
-    var ID = cD(1221),
-      pD = cD(1319),
-      iD = cD(16),
-      fD = cD(1305),
-      bD = cD(1317),
-      QD = cD(1508),
-      wD = cD(35883);
+    var tU = gU(1217),
+      pU = gU(1320),
+      EU = gU(21),
+      PU = gU(1305),
+      TU = gU(1316),
+      qU = gU(1475),
+      KU = gU(36033);
 
-    function SD(DD) {
+    function cU(UU) {
       let {
-        DD: CD,
-        CD: cD
-      } = DD;
-      const SD = null !== CD && void 0 !== CD ? CD : (0, bD.b)().gameNameWithVariation;
-      (0, ID.J)(SD) && ((0, wD.i)(), (0, fD.ab)((() => {
-        console.log("Received matchmaking order from game server to game", CD), (0, iD.k)("inGameReplay"), (0, QD.navigatePreserveSearch)((0, pD.b)(SD, null !== cD && void 0 !== cD ? cD : void 0))
+        UU: RU,
+        RU: gU
+      } = UU;
+      const cU = null !== RU && void 0 !== RU ? RU : (0, TU.d)().gameNameWithVariation;
+      (0, tU.M)(cU) && ((0, KU.i)(), (0, PU.ib)((() => {
+        console.log("Received matchmaking order from game server to game", RU), (0, EU.h)("inGameReplay"), (0, qU.navigatePreserveSearch)((0, pU.e)(cU, null !== gU && void 0 !== gU ? gU : void 0))
       }), "video_start"))
     }
   },
-  38331: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => QD,
-      g: () => fD,
-      i: () => bD,
-      m: () => wD
+  38528: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => qU,
+      h: () => PU,
+      l: () => TU,
+      o: () => KU
     });
-    var ID = cD(20),
-      pD = cD(1340);
-    const iD = new Map;
+    var tU = gU(24),
+      pU = gU(1333);
+    const EU = new Map;
 
-    function fD(DD, CD) {
-      ID.i.Uo("newUiRequest", {
-        id: DD,
-        clientParameters: CD
+    function PU(UU, RU) {
+      tU.p.yh("newUiRequest", {
+        id: UU,
+        clientParameters: RU
       }, !0)
     }
 
-    function bD(DD) {
-      ID.i.Uo("removeUiRequest", DD, !0);
-      const CD = iD.get(DD);
-      CD && (CD.tearDownNotification(), iD.delete(DD))
+    function TU(UU) {
+      tU.p.yh("removeUiRequest", UU, !0);
+      const RU = EU.get(UU);
+      RU && (RU.tearDownNotification(), EU.delete(UU))
     }
 
-    function QD() {
-      ID.i.Uo("clearUiRequests");
-      for (const DD of iD.values()) DD.tearDownNotification();
-      iD.clear()
+    function qU() {
+      tU.p.yh("clearUiRequests");
+      for (const UU of EU.values()) UU.tearDownNotification();
+      EU.clear()
     }
 
-    function wD(DD, CD, cD) {
-      const ID = pD.NotificationProvider.showPromptPopup({
-        title: CD,
+    function KU(UU, RU, gU) {
+      const tU = pU.NotificationProvider.showPromptPopup({
+        title: RU,
         confirmText: "general:yes",
         cancelText: "general:no",
         unlockPointerKey: "uiRequestPopup"
       });
-      iD.set(DD, ID), ID.getResult().then((CD => {
-        iD.delete(DD), "notificationTornDown" !== CD && cD(CD)
+      EU.set(UU, tU), tU.getResult().then((RU => {
+        EU.delete(UU), "notificationTornDown" !== RU && gU(RU)
       }))
     }
   },
-  38356: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => bD,
-      c: () => QD,
-      e: () => wD
+  38549: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => TU,
+      g: () => qU,
+      i: () => KU
     });
-    var ID = cD(1221),
-      pD = cD(1011),
-      iD = cD(36216),
-      fD = cD(20);
+    var tU = gU(1217),
+      pU = gU(994),
+      EU = gU(36413),
+      PU = gU(24);
 
-    function bD(DD) {
+    function TU(UU) {
       let {
-        lobbyName: CD,
-        gameNameWithVariation: cD
-      } = DD;
-      return !(0, ID.N)(CD) || null !== cD && (cD.startsWith("testGym") || (0, pD.m)(cD))
+        lobbyName: RU,
+        gameNameWithVariation: gU
+      } = UU;
+      return !(0, tU.P)(RU) || null !== gU && (gU.startsWith("testGym") || (0, pU.m)(gU))
     }
 
-    function QD(DD) {
-      return DD.tC === iD.e.Leave || DD.tC === iD.e.Cursor
+    function qU(UU) {
+      return UU.uR === EU.b.Leave || UU.uR === EU.b.Cursor
     }
 
-    function wD(DD) {
-      fD.i.Uo("codeCollab", {
-        type: DD.tC,
-        docKey: DD.ZC,
-        version: DD.oC,
-        editorCount: DD.vC,
-        peers: DD.NC,
-        updates: DD.gC,
-        playerId: DD.XC,
-        playerName: DD.mC,
-        colour: DD.nC,
-        anchor: DD.OC,
-        head: DD.PC,
-        existingCursors: DD.HC,
-        files: DD.UC,
-        engineSettings: DD.xC
+    function KU(UU) {
+      PU.p.yh("codeCollab", {
+        type: UU.uR,
+        docKey: UU.CR,
+        version: UU.hR,
+        editorCount: UU.QR,
+        peers: UU.eR,
+        updates: UU.WR,
+        playerId: UU.fR,
+        playerName: UU.xR,
+        colour: UU.mR,
+        anchor: UU.IR,
+        head: UU.JR,
+        existingCursors: UU.wR,
+        files: UU.nR,
+        engineSettings: UU.bR
       })
     }
   },
-  38366: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => ID
+  38561: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => tU
     });
-    class ID {
+    class tU {
       constructor() {
         this.members = new Map
       }
-      apply(DD) {
-        const CD = {
+      apply(UU) {
+        const RU = {
           added: [],
           removed: [],
           settingChanges: []
         };
-        for (const ID of DD.bI) {
-          let DD = this.members.get(ID.QI);
-          if (DD || (DD = {
+        for (const tU of UU.gt) {
+          let UU = this.members.get(tU.tt);
+          if (UU || (UU = {
               name: null,
               settings: {}
-            }, this.members.set(ID.QI, DD), CD.added.push(ID.QI)), null !== ID.wI && (DD.name = ID.wI), null !== ID.SI || ID.BI.length > 0) {
-            const cD = null === ID.SI ? {} : JSON.parse(ID.SI);
-            Object.assign(DD.settings, cD);
-            for (const CD of ID.BI) delete DD.settings[CD], cD[CD] = void 0;
-            CD.settingChanges.push({
-              playerId: ID.QI,
-              settings: cD
+            }, this.members.set(tU.tt, UU), RU.added.push(tU.tt)), null !== tU.Et && (UU.name = tU.Et), null !== tU.Pt || tU.Tt.length > 0) {
+            const gU = null === tU.Pt ? {} : JSON.parse(tU.Pt);
+            Object.assign(UU.settings, gU);
+            for (const RU of tU.Tt) delete UU.settings[RU], gU[RU] = void 0;
+            RU.settingChanges.push({
+              playerId: tU.tt,
+              settings: gU
             })
           }
         }
-        for (const ID of DD.yI) {
-          const DD = this.members.get(ID);
-          var cD;
-          if (DD) this.members.delete(ID), CD.removed.push({
-            playerId: ID,
-            name: null !== (cD = DD.name) && void 0 !== cD ? cD : void 0
+        for (const tU of UU.qt) {
+          const UU = this.members.get(tU);
+          var gU;
+          if (UU) this.members.delete(tU), RU.removed.push({
+            playerId: tU,
+            name: null !== (gU = UU.name) && void 0 !== gU ? gU : void 0
           })
         }
-        return CD
+        return RU
       }
-      has(DD) {
-        return this.members.has(DD)
+      has(UU) {
+        return this.members.has(UU)
       }
       ids() {
         return [...this.members.keys()]
       }
-      getName(DD) {
-        var CD, cD;
-        return null !== (CD = null === (cD = this.members.get(DD)) || void 0 === cD ? void 0 : cD.name) && void 0 !== CD ? CD : void 0
+      getName(UU) {
+        var RU, gU;
+        return null !== (RU = null === (gU = this.members.get(UU)) || void 0 === gU ? void 0 : gU.name) && void 0 !== RU ? RU : void 0
       }
-      getSettings(DD) {
-        var CD;
-        return null === (CD = this.members.get(DD)) || void 0 === CD ? void 0 : CD.settings
+      getSettings(UU) {
+        var RU;
+        return null === (RU = this.members.get(UU)) || void 0 === RU ? void 0 : RU.settings
       }
-      getSetting(DD, CD) {
-        var cD;
-        return null === (cD = this.members.get(DD)) || void 0 === cD ? void 0 : cD.settings[CD]
+      getSetting(UU, RU) {
+        var gU;
+        return null === (gU = this.members.get(UU)) || void 0 === gU ? void 0 : gU.settings[RU]
       }
       clear() {
         this.members.clear()
       }
     }
   },
-  38388: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => ID,
-      h: () => pD
+  38590: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => tU,
+      d: () => pU
     });
-    const ID = ["description", "label"];
+    const tU = ["description", "label"];
 
-    function pD(DD) {
-      const CD = DD.type;
+    function pU(UU) {
+      const RU = UU.type;
       return {
-        type: CD,
-        params: DD[CD]
+        type: RU,
+        params: UU[RU]
       }
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

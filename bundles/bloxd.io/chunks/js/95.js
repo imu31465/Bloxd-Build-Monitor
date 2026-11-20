@@ -1,341 +1,341 @@
 export const id = 95;
 export const ids = [95];
 export const modules = {
-  4634: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      default: () => YD
+  4527: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      default: () => FU
     });
-    var ID = cD(53),
-      pD = cD(1517),
-      iD = cD(326),
-      fD = cD(1232),
-      bD = cD(1609),
-      QD = cD(1266),
-      wD = cD(1540),
-      SD = cD(1497),
-      BD = cD(2544);
-    const yD = {
+    var tU = gU(56),
+      pU = gU(1481),
+      EU = gU(311),
+      PU = gU(1229),
+      TU = gU(1554),
+      qU = gU(1271),
+      KU = gU(1501),
+      cU = gU(1461),
+      GU = gU(2456);
+    const jU = {
       retries: 2,
       minTimeout: 2e3
     };
-    var MD = cD(1108),
-      tD = cD(1607),
-      ZD = cD(1120),
-      oD = cD(1872),
-      vD = cD(1192),
-      ND = cD(1221),
-      gD = cD(3295),
-      XD = cD(1328),
-      mD = cD(1442),
-      nD = cD(1508),
-      OD = cD(2478),
-      PD = cD(2490),
-      HD = cD(4643),
-      UD = cD(2112),
-      xD = cD(1049),
-      qD = cD.n(xD),
-      JD = cD(1064),
-      KD = cD(4648),
-      aD = cD(16),
-      VD = cD(1905),
-      zD = cD(3452),
-      jD = cD(1997),
-      lD = cD(3397),
-      LD = cD(90),
-      TD = cD(4346),
-      GD = cD(1093);
-    const RD = [HD];
+    var uU = gU(1099),
+      CU = gU(1551),
+      hU = gU(1112),
+      QU = gU(1777),
+      eU = gU(1181),
+      WU = gU(1217),
+      fU = gU(3176),
+      xU = gU(1326),
+      mU = gU(1412),
+      IU = gU(1475),
+      JU = gU(2393),
+      wU = gU(2405),
+      nU = gU(4532),
+      bU = gU(1998),
+      oU = gU(1037),
+      ZU = gU.n(oU),
+      aU = gU(1049),
+      YU = gU(4540),
+      BU = gU(21),
+      VU = gU(1800),
+      rU = gU(3312),
+      XU = gU(1869),
+      vU = gU(3278),
+      dU = gU(96),
+      HU = gU(4214),
+      SU = gU(1090);
+    const sU = [nU];
 
-    function kD(DD) {
+    function yU(UU) {
       let {
-        icon: CD,
-        label: cD,
-        value: ID
-      } = DD;
-      return (0, GD.jsxs)("div", {
+        icon: RU,
+        label: gU,
+        value: tU
+      } = UU;
+      return (0, SU.jsxs)("div", {
         className: "PlayerProfileStat",
-        children: [(0, GD.jsx)(JD.c, {
-          name: CD,
+        children: [(0, SU.jsx)(aU.c, {
+          name: RU,
           className: "PlayerProfileStatIcon"
-        }), (0, GD.jsxs)("div", {
+        }), (0, SU.jsxs)("div", {
           className: "PlayerProfileStatText",
-          children: [(0, GD.jsx)("div", {
+          children: [(0, SU.jsx)("div", {
             className: "PlayerProfileStatLabel SmallTextLight",
-            children: cD
-          }), (0, GD.jsx)("div", {
+            children: gU
+          }), (0, SU.jsx)("div", {
             className: "PlayerProfileStatValue",
-            children: ID
+            children: tU
           })]
         })]
       })
     }
 
-    function dD(DD) {
+    function kU(UU) {
       let {
-        profile: CD
-      } = DD;
+        profile: RU
+      } = UU;
       const {
-        t: cD,
-        selectedLanguage: ID
-      } = (0, vD.F)();
-      let pD = cD("homePage:profileUnknown");
-      if (CD.lastOnline) {
-        const DD = (0, vD.m)(ID.code, "homePage:profileTimeAgo");
-        pD = cD("homePage:profileTimeAgo", {
-          time: (0, iD.cb)(DD, CD.lastOnline, Date.now())
+        t: gU,
+        selectedLanguage: tU
+      } = (0, eU.B)();
+      let pU = gU("homePage:profileUnknown");
+      if (RU.lastOnline) {
+        const UU = (0, eU.n)(tU.code, "homePage:profileTimeAgo");
+        pU = gU("homePage:profileTimeAgo", {
+          time: (0, EU.kb)(UU, RU.lastOnline, Date.now())
         })
       }
-      let fD = cD("homePage:profileUnknown");
-      return CD.accountCreatedAt && (fD = new Date(CD.accountCreatedAt).toLocaleDateString(void 0, {
+      let PU = gU("homePage:profileUnknown");
+      return RU.accountCreatedAt && (PU = new Date(RU.accountCreatedAt).toLocaleDateString(void 0, {
         year: "numeric",
         month: "short",
         day: "numeric"
-      })), (0, GD.jsxs)("div", {
+      })), (0, SU.jsxs)("div", {
         className: "PlayerProfileStats",
-        children: [(0, GD.jsx)(kD, {
+        children: [(0, SU.jsx)(yU, {
           icon: "hourglass",
-          label: cD("homePage:profileTimePlayed"),
-          value: (0, zD.b)(CD.totalPlayMinutes)
-        }), (0, GD.jsx)(kD, {
+          label: gU("homePage:profileTimePlayed"),
+          value: (0, rU.c)(RU.totalPlayMinutes)
+        }), (0, SU.jsx)(yU, {
           icon: "wifi",
-          label: cD("homePage:profileLastOnline"),
-          value: pD
-        }), (0, GD.jsx)(kD, {
+          label: gU("homePage:profileLastOnline"),
+          value: pU
+        }), (0, SU.jsx)(yU, {
           icon: "calendar",
-          label: cD("homePage:profileJoined"),
-          value: fD
+          label: gU("homePage:profileJoined"),
+          value: PU
         })]
       })
     }
 
-    function YD() {
+    function FU() {
       const {
-        t: DD
-      } = (0, vD.F)(), CD = (0, nD.useNavigatePreserveSearch)(), cD = (0, MD.o)(), {
-        playerName: HD,
-        playerUrlName: xD
-      } = (0, pD.F)(), zD = (0, pD.w)(), kD = (0, fD.f)(zD.pathname), YD = kD && ("urlId" in kD ? `urlId:${kD.urlId}` : `name:${kD.lowerCaseName}`), WD = (0, ID.useRef)(YD);
-      WD.current = YD;
+        t: UU
+      } = (0, eU.B)(), RU = (0, IU.useNavigatePreserveSearch)(), gU = (0, uU.k)(), {
+        playerName: nU,
+        playerUrlName: oU
+      } = (0, pU.y)(), rU = (0, pU.s)(), yU = (0, PU.g)(rU.pathname), FU = yU && ("urlId" in yU ? `urlId:${yU.urlId}` : `name:${yU.lowerCaseName}`), iU = (0, tU.useRef)(FU);
+      iU.current = FU;
       const {
-        userContext: sD,
-        isUserContextUpdating: ED
-      } = (0, ZD.c)(), eD = (0, ID.useRef)(null), uD = (0, ID.useRef)(null), hD = (0, ID.useRef)(null), rD = (0, ID.useRef)(!1), AD = (0, ID.useRef)((0, iD.dc)(RD)), [FD, DC] = (0, ID.useState)((() => {
-        const DD = kD && PD.e.peek(sD, kD);
-        return DD ? {
+        userContext: AU,
+        isUserContextUpdating: zU
+      } = (0, hU.e)(), MU = (0, tU.useRef)(null), DU = (0, tU.useRef)(null), LU = (0, tU.useRef)(null), NU = (0, tU.useRef)(!1), lU = (0, tU.useRef)((0, EU.ec)(sU)), [OU, UR] = (0, tU.useState)((() => {
+        const UU = yU && wU.c.peek(AU, yU);
+        return UU ? {
           status: "loaded",
-          profile: DD,
-          playerKey: YD
+          profile: UU,
+          playerKey: FU
         } : {
           status: "loading"
         }
-      })), [CC, cC] = (0, ID.useState)(0);
-      (0, ID.useEffect)(OD.f, []), (0, ID.useEffect)((() => {
-        VD.gameBridge.send("leaveGame", {
+      })), [RR, gR] = (0, tU.useState)(0);
+      (0, tU.useEffect)(JU.f, []), (0, tU.useEffect)((() => {
+        VU.gameBridge.send("leaveGame", {
           reloadPath: null
-        }), aD.d.set({
+        }), BU.b.set({
           gameState: "landingPage",
           openEverythingMenuName: null,
           openInGameMenuName: null
         })
-      }), [zD.key]);
-      const IC = () => {
-        const DD = (0, nD.getPreviousLocation)();
-        null === DD || DD.startsWith("/play") ? (0, nD.navigateToHomePage)() : CD(-1)
+      }), [rU.key]);
+      const tR = () => {
+        const UU = (0, IU.getPreviousLocation)();
+        null === UU || UU.startsWith("/play") ? (0, IU.navigateToHomePage)() : RU(-1)
       };
-      (0, TD.d)(IC), (0, ID.useEffect)((() => {
-        var DD;
-        if (ED) return;
-        if (!kD) return void DC({
+      (0, HU.c)(tR), (0, tU.useEffect)((() => {
+        var UU;
+        if (zU) return;
+        if (!yU) return void UR({
           status: "notFound",
-          playerKey: YD
+          playerKey: FU
         });
-        const CD = "urlId" in kD && (null === (DD = uD.current) || void 0 === DD ? void 0 : DD.urlId) === kD.urlId && hD.current === sD;
-        if (CD && rD.current) return;
-        const cD = CD ? null : PD.e.peek(sD, kD);
-        let ID = !1;
-        const pD = DD => "loaded" === DD.status && (DD.playerKey === YD || "urlId" in kD && DD.profile.urlId === kD.urlId);
-        return cD ? (hD.current = sD, rD.current = !1, DC({
+        const RU = "urlId" in yU && (null === (UU = DU.current) || void 0 === UU ? void 0 : UU.urlId) === yU.urlId && LU.current === AU;
+        if (RU && NU.current) return;
+        const gU = RU ? null : wU.c.peek(AU, yU);
+        let tU = !1;
+        const pU = UU => "loaded" === UU.status && (UU.playerKey === FU || "urlId" in yU && UU.profile.urlId === yU.urlId);
+        return gU ? (LU.current = AU, NU.current = !1, UR({
           status: "loaded",
-          profile: cD,
-          playerKey: YD
-        }), PD.e.invalidate(kD)) : DC((DD => pD(DD) ? DD : {
+          profile: gU,
+          playerKey: FU
+        }), wU.c.invalidate(yU)) : UR((UU => pU(UU) ? UU : {
           status: "loading"
-        })), async function(DD, CD) {
-          if ("lowerCaseName" in CD && CD.lowerCaseName.length > QD.i) return {
+        })), async function(UU, RU) {
+          if ("lowerCaseName" in RU && RU.lowerCaseName.length > qU.h) return {
             status: "notFound"
           };
           try {
             return {
               status: "loaded",
-              profile: await SD.c.getPlayerProfile(DD, CD, yD)
+              profile: await cU.c.getPlayerProfile(UU, RU, jU)
             }
-          } catch (cD) {
-            return (0, BD.c)(cD) ? {
+          } catch (gU) {
+            return (0, GU.d)(gU) ? {
               status: "notFound"
-            } : (console.error("Failed to load user profile", cD), {
+            } : (console.error("Failed to load user profile", gU), {
               status: "failed"
             })
           }
-        }(sD, kD).then((DD => {
-          ID || ("loaded" === DD.status && (hD.current = sD, rD.current = !0), DC((CD => "failed" === DD.status && pD(CD) ? CD : {
-            ...DD,
-            playerKey: YD
+        }(AU, yU).then((UU => {
+          tU || ("loaded" === UU.status && (LU.current = AU, NU.current = !0), UR((RU => "failed" === UU.status && pU(RU) ? RU : {
+            ...UU,
+            playerKey: FU
           })))
         })), () => {
-          ID = !0
+          tU = !0
         }
-      }), [ED, YD, sD, CC]);
-      const pC = "loading" === FD.status || FD.playerKey === YD || "loaded" === FD.status && !!kD && "urlId" in kD && FD.profile.urlId === kD.urlId ? FD : {
+      }), [zU, FU, AU, RR]);
+      const pR = "loading" === OU.status || OU.playerKey === FU || "loaded" === OU.status && !!yU && "urlId" in yU && OU.profile.urlId === yU.urlId ? OU : {
           status: "loading"
         },
-        iC = "loaded" === pC.status ? pC.profile : null,
-        fC = "loading" === pC.status ? null : function(DD) {
-          if ("loaded" === DD.status) {
+        ER = "loaded" === pR.status ? pR.profile : null,
+        PR = "loading" === pR.status ? null : function(UU) {
+          if ("loaded" === UU.status) {
             const {
-              profile: CD
-            } = DD;
-            return (0, wD.U)({
-              urlId: CD.urlId,
-              name: CD.player.name,
-              ranks: CD.player.ranks,
-              socialLinks: CD.socialLinks
+              profile: RU
+            } = UU;
+            return (0, KU.S)({
+              urlId: RU.urlId,
+              name: RU.player.name,
+              ranks: RU.player.ranks,
+              socialLinks: RU.socialLinks
             })
           }
-          return "notFound" === DD.status ? (0, wD.$)() : null
-        }(pC),
-        bC = null !== iC && void 0 !== iC && iC.urlId ? (0, fD.h)({
-          urlId: iC.urlId,
-          name: iC.player.name
+          return "notFound" === UU.status ? (0, KU.Z)() : null
+        }(pR),
+        TR = null !== ER && void 0 !== ER && ER.urlId ? (0, PU.j)({
+          urlId: ER.urlId,
+          name: ER.player.name
         }) : null;
-      (0, tD.e)(bC);
-      const QC = null !== iC && void 0 !== iC && iC.player.cosmetics.profileEffect ? UD.h[iC.player.cosmetics.profileEffect] : void 0,
-        wC = null !== iC && !ED && sD.getPlayerName().toLowerCase() === iC.player.name.toLowerCase(),
-        SC = (0, jD.b)(null === iC || void 0 === iC ? void 0 : iC.player.name),
-        BC = wC && sD.playerHasRank("youtuber");
-      uD.current = iC;
-      const yC = (0, ID.useCallback)((() => {
-          kD && (PD.e.invalidate(kD), PD.e.get(sD, kD).then((DD => {
-            WD.current === YD && (rD.current = !0, DC({
+      (0, CU.g)(TR);
+      const qR = null !== ER && void 0 !== ER && ER.player.cosmetics.profileEffect ? bU.d[ER.player.cosmetics.profileEffect] : void 0,
+        KR = null !== ER && !zU && AU.getPlayerName().toLowerCase() === ER.player.name.toLowerCase(),
+        cR = (0, XU.b)(null === ER || void 0 === ER ? void 0 : ER.player.name),
+        GR = KR && AU.playerHasRank("youtuber");
+      DU.current = ER;
+      const jR = (0, tU.useCallback)((() => {
+          yU && (wU.c.invalidate(yU), wU.c.get(AU, yU).then((UU => {
+            iU.current === FU && (NU.current = !0, UR({
               status: "loaded",
-              profile: DD,
-              playerKey: YD
+              profile: UU,
+              playerKey: FU
             }))
-          })).catch((DD => {
-            console.error("Failed to refresh user profile", DD)
+          })).catch((UU => {
+            console.error("Failed to refresh user profile", UU)
           })))
-        }), [YD, sD]),
-        MC = (0, ID.useCallback)((() => {
-          var DD;
-          const CD = uD.current;
-          return !(!CD || null === (DD = eD.current) || void 0 === DD || !DD.isReady()) && (eD.current.setAllCosmetics(CD.player.cosmetics), !0)
+        }), [FU, AU]),
+        uR = (0, tU.useCallback)((() => {
+          var UU;
+          const RU = DU.current;
+          return !(!RU || null === (UU = MU.current) || void 0 === UU || !UU.isReady()) && (MU.current.setAllCosmetics(RU.player.cosmetics), !0)
         }), []);
-      return (0, ID.useEffect)((() => {
-        if (!iC) return;
-        let DD, CD = !1;
-        const cD = () => {
-          CD || MC() || (DD = setTimeout(cD, 100))
+      return (0, tU.useEffect)((() => {
+        if (!ER) return;
+        let UU, RU = !1;
+        const gU = () => {
+          RU || uR() || (UU = setTimeout(gU, 100))
         };
-        return cD(), () => {
-          CD = !0, clearTimeout(DD)
+        return gU(), () => {
+          RU = !0, clearTimeout(UU)
         }
-      }), [iC, MC]), (0, GD.jsxs)("div", {
-        className: qD()("PlayerProfile", {
-          PlayerProfilePortrait: cD
+      }), [ER, uR]), (0, SU.jsxs)("div", {
+        className: ZU()("PlayerProfile", {
+          PlayerProfilePortrait: gU
         }),
-        children: [fC && (0, GD.jsx)(bD.d, {
-          meta: fC
-        }), (0, GD.jsxs)("div", {
+        children: [PR && (0, SU.jsx)(TU.c, {
+          meta: PR
+        }), (0, SU.jsxs)("div", {
           className: "PlayerProfileBackgroundContainer",
-          children: [QC && (0, GD.jsx)(QC, {}), !QC && (0, GD.jsx)("div", {
+          children: [qR && (0, SU.jsx)(qR, {}), !qR && (0, SU.jsx)("div", {
             className: "PlayerProfileBackground",
             style: {
-              backgroundImage: `url(${AD.current})`
+              backgroundImage: `url(${lU.current})`
             }
           })]
-        }), (0, GD.jsxs)("div", {
+        }), (0, SU.jsxs)("div", {
           className: "PlayerProfileHeader",
-          children: [(0, GD.jsx)(mD.e, {
-            onClick: IC,
-            children: DD("general:back")
-          }), iC && !ED && !wC && LD.featureFlags.useSocialFeatures && (0, GD.jsx)("div", {
+          children: [(0, SU.jsx)(mU.d, {
+            onClick: tR,
+            children: UU("general:back")
+          }), ER && !zU && !KR && dU.featureFlags.useSocialFeatures && (0, SU.jsx)("div", {
             className: "PlayerProfileExclusionActions",
-            children: (0, GD.jsx)(lD.b, {
-              playerName: iC.player.name,
+            children: (0, SU.jsx)(vU.c, {
+              playerName: ER.player.name,
               className: "SmallTextLight"
             })
           })]
-        }), "loading" === pC.status && (0, GD.jsx)("div", {
+        }), "loading" === pR.status && (0, SU.jsx)("div", {
           className: "PlayerProfileCentredMessage",
-          children: (0, GD.jsx)(XD.e, {})
-        }), ("notFound" === pC.status || "failed" === pC.status) && (0, GD.jsxs)("div", {
+          children: (0, SU.jsx)(xU.d, {})
+        }), ("notFound" === pR.status || "failed" === pR.status) && (0, SU.jsxs)("div", {
           className: "PlayerProfileCentredMessage PlayerProfileError",
-          children: [(0, GD.jsx)(JD.c, {
+          children: [(0, SU.jsx)(aU.c, {
             name: "face-dizzy"
-          }), (0, GD.jsx)("div", {
+          }), (0, SU.jsx)("div", {
             className: "PlayerProfileErrorText",
-            children: "notFound" === pC.status ? DD("socialBar:playerNotFound", {
-              playerName: null !== xD && void 0 !== xD ? xD : HD
-            }) : DD("playerProfile:loadFailed")
-          }), "failed" === pC.status && (0, GD.jsx)(mD.i, {
+            children: "notFound" === pR.status ? UU("socialBar:playerNotFound", {
+              playerName: null !== oU && void 0 !== oU ? oU : nU
+            }) : UU("playerProfile:loadFailed")
+          }), "failed" === pR.status && (0, SU.jsx)(mU.e, {
             onClick: () => {
-              cC((DD => DD + 1))
+              gR((UU => UU + 1))
             },
-            children: DD("general:tryAgain")
+            children: UU("general:tryAgain")
           })]
-        }), iC && (0, GD.jsxs)("div", {
+        }), ER && (0, SU.jsxs)("div", {
           className: "PlayerProfileContent",
-          children: [(0, GD.jsxs)("div", {
+          children: [(0, SU.jsxs)("div", {
             className: "PlayerProfileLeft",
-            children: [(0, GD.jsx)("div", {
+            children: [(0, SU.jsx)("div", {
               className: "PlayerProfileName FullyFancyText",
-              children: (0, GD.jsx)(oD.c, {
-                text: (0, ND.r)(iC.player.ranks, iC.player.name, iC.player.nameColour),
-                friendBadgeFor: SC ? iC.player.name : void 0
+              children: (0, SU.jsx)(QU.e, {
+                text: (0, WU.w)(ER.player.ranks, ER.player.name, ER.player.nameColour),
+                friendBadgeFor: cR ? ER.player.name : void 0
               })
-            }), (0, GD.jsx)("div", {
+            }), (0, SU.jsx)("div", {
               className: "PlayerProfileModel",
-              children: (0, GD.jsx)(ID.Suspense, {
-                fallback: (0, GD.jsx)("div", {
+              children: (0, SU.jsx)(tU.Suspense, {
+                fallback: (0, SU.jsx)("div", {
                   className: "PlayerProfileModelLoading",
-                  children: (0, GD.jsx)(XD.e, {})
+                  children: (0, SU.jsx)(xU.d, {})
                 }),
-                children: (0, GD.jsx)(OD.d, {
-                  ref: eD,
+                children: (0, SU.jsx)(JU.b, {
+                  ref: MU,
                   onReady: () => {
-                    MC()
+                    uR()
                   }
                 })
               })
             })]
-          }), (0, GD.jsxs)("div", {
+          }), (0, SU.jsxs)("div", {
             className: "PlayerProfileRight",
-            children: [(0, GD.jsx)(dD, {
-              profile: iC
-            }), (iC.socialLinks.length > 0 || BC) && (0, GD.jsx)(KD.c, {
-              socialLinks: iC.socialLinks,
-              editable: BC,
-              userContext: sD,
-              onLinksUpdated: yC
-            }), (0, GD.jsxs)("div", {
+            children: [(0, SU.jsx)(kU, {
+              profile: ER
+            }), (ER.socialLinks.length > 0 || GR) && (0, SU.jsx)(YU.c, {
+              socialLinks: ER.socialLinks,
+              editable: GR,
+              userContext: AU,
+              onLinksUpdated: jR
+            }), (0, SU.jsxs)("div", {
               className: "PlayerProfileGames",
-              children: [(0, GD.jsx)("div", {
+              children: [(0, SU.jsx)("div", {
                 className: "PlayerProfileGamesTitle SmallTextBold",
-                children: DD("homePage:profileReleasedGames")
-              }), 0 === iC.releasedGames.length && (0, GD.jsx)("div", {
+                children: UU("homePage:profileReleasedGames")
+              }), 0 === ER.releasedGames.length && (0, SU.jsx)("div", {
                 className: "PlayerProfileNoGames",
-                children: DD("homePage:profileNoReleasedGames")
-              }), iC.releasedGames.length > 0 && (0, GD.jsx)("div", {
+                children: UU("homePage:profileNoReleasedGames")
+              }), ER.releasedGames.length > 0 && (0, SU.jsx)("div", {
                 className: "PlayerProfileGamesGrid",
-                children: iC.releasedGames.map((DD => (0, GD.jsx)(gD.f, {
+                children: ER.releasedGames.map((UU => (0, SU.jsx)(fU.f, {
                   source: {
                     type: "preview",
-                    preview: DD
+                    preview: UU
                   },
                   gameWidth: "100%",
                   useLongRatio: !0,
                   hideFavourites: !0,
                   entrySource: "other"
-                }, DD.schematicId)))
+                }, UU.schematicId)))
               })]
             })]
           })]
@@ -343,21 +343,21 @@ export const modules = {
       })
     }
   },
-  4648: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => oD
+  4540: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => QU
     });
-    var ID = cD(1049),
-      pD = cD.n(ID),
-      iD = cD(4438),
-      fD = cD(1192),
-      bD = cD(1064),
-      QD = cD(1442),
-      wD = cD(1497),
-      SD = cD(1340),
-      BD = cD(2421),
-      yD = cD(1093);
-    const MD = {
+    var tU = gU(1037),
+      pU = gU.n(tU),
+      EU = gU(4307),
+      PU = gU(1181),
+      TU = gU(1049),
+      qU = gU(1412),
+      KU = gU(1461),
+      cU = gU(1333),
+      GU = gU(2309),
+      jU = gU(1090);
+    const uU = {
       youtube: {
         icon: "youtube",
         color: "#FF0033",
@@ -385,163 +385,163 @@ export const modules = {
       }
     };
 
-    function tD(DD) {
+    function CU(UU) {
       let {
-        platform: CD
-      } = DD;
-      const cD = "youtube" === CD;
-      return (0, yD.jsxs)("span", {
-        className: pD()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: cD
+        platform: RU
+      } = UU;
+      const gU = "youtube" === RU;
+      return (0, jU.jsxs)("span", {
+        className: pU()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: gU
         }),
-        children: [cD && (0, yD.jsx)(BD.c, {
+        children: [gU && (0, jU.jsx)(GU.b, {
           variant: "white"
-        }), !cD && (0, yD.jsx)(bD.c, {
-          name: MD[CD].icon,
+        }), !gU && (0, jU.jsx)(TU.c, {
+          name: uU[RU].icon,
           kit: "brands"
         })]
       })
     }
 
-    function ZD(DD) {
+    function hU(UU) {
       let {
-        platform: CD,
-        link: cD,
-        editable: ID,
-        userContext: pD,
-        onLinksUpdated: BD
-      } = DD;
+        platform: RU,
+        link: gU,
+        editable: tU,
+        userContext: pU,
+        onLinksUpdated: GU
+      } = UU;
       const {
-        t: ZD
-      } = (0, fD.F)(), oD = MD[CD];
-      if (!cD && !ID) return null;
+        t: hU
+      } = (0, PU.B)(), QU = uU[RU];
+      if (!gU && !tU) return null;
 
-      function vD() {
-        var DD;
-        if (!pD || !BD) return;
-        SD.NotificationProvider.showInputPopup({
+      function eU() {
+        var UU;
+        if (!pU || !GU) return;
+        cU.NotificationProvider.showInputPopup({
           title: "homePage:profileSocialLinkEditTitle",
           textOpts: {
             title: {
-              platform: oD.name
+              platform: QU.name
             }
           },
-          prefixText: iD.x[CD],
+          prefixText: EU.y[RU],
           placeholderText: "playBloxd",
-          initialValue: null !== (DD = null === cD || void 0 === cD ? void 0 : cD.handle) && void 0 !== DD ? DD : "",
+          initialValue: null !== (UU = null === gU || void 0 === gU ? void 0 : gU.handle) && void 0 !== UU ? UU : "",
           maxLength: 30,
           submitText: "general:save",
-          secondaryButtonText: cD ? "general:remove" : void 0
-        }).getResult().then((async DD => {
-          if ("notificationTornDown" !== DD && null !== DD) try {
-            "submit" === DD.type ? await wD.c.setSocialLink(pD, CD, DD.value) : await wD.c.clearSocialLink(pD, CD), BD()
-          } catch (cD) {
-            console.error("Failed to update social link", cD), SD.NotificationProvider.showAlertPopup({
-              title: cD.errorMessageForUser,
+          secondaryButtonText: gU ? "general:remove" : void 0
+        }).getResult().then((async UU => {
+          if ("notificationTornDown" !== UU && null !== UU) try {
+            "submit" === UU.type ? await KU.c.setSocialLink(pU, RU, UU.value) : await KU.c.clearSocialLink(pU, RU), GU()
+          } catch (gU) {
+            console.error("Failed to update social link", gU), cU.NotificationProvider.showAlertPopup({
+              title: gU.errorMessageForUser,
               confirmText: "general:ok"
             })
           }
         }))
       }
-      if (cD) {
-        const DD = `@${cD.handle}`;
-        return (0, yD.jsxs)("a", {
+      if (gU) {
+        const UU = `@${gU.handle}`;
+        return (0, jU.jsxs)("a", {
           className: "PlayerProfileSocialLink",
           style: {
-            background: oD.color
+            background: QU.color
           },
-          href: cD.profileUrl,
+          href: gU.profileUrl,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: [(0, yD.jsxs)("div", {
+          children: [(0, jU.jsxs)("div", {
             className: "PlayerProfileSocialLinkMain",
-            children: [(0, yD.jsx)(tD, {
-              platform: CD
-            }), (0, yD.jsx)("span", {
+            children: [(0, jU.jsx)(CU, {
+              platform: RU
+            }), (0, jU.jsx)("span", {
               className: "PlayerProfileSocialLinkText",
-              children: (0, yD.jsx)("span", {
+              children: (0, jU.jsx)("span", {
                 className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: DD
+                children: UU
               })
             })]
-          }), ID && (0, yD.jsx)("button", {
+          }), tU && (0, jU.jsx)("button", {
             type: "button",
             className: "PlayerProfileSocialLinkEditButton",
-            ...(0, QD.U)({
+            ...(0, qU.R)({
               stopPropagation: !0
             }),
-            onClick: DD => {
-              DD.stopPropagation(), DD.preventDefault(), vD()
+            onClick: UU => {
+              UU.stopPropagation(), UU.preventDefault(), eU()
             },
-            children: (0, yD.jsx)(bD.c, {
+            children: (0, jU.jsx)(TU.c, {
               name: "pen-to-square"
             })
-          }), !ID && (0, yD.jsx)("span", {
+          }), !tU && (0, jU.jsx)("span", {
             className: "PlayerProfileSocialLinkArrow",
-            children: (0, yD.jsx)(bD.c, {
+            children: (0, jU.jsx)(TU.c, {
               name: "arrow-up-right-from-square"
             })
           })]
         })
       }
-      return (0, yD.jsxs)("button", {
+      return (0, jU.jsxs)("button", {
         type: "button",
         className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
         style: {
-          background: oD.color
+          background: QU.color
         },
-        ...(0, QD.U)(),
+        ...(0, qU.R)(),
         onClick: () => {
-          vD()
+          eU()
         },
-        children: [(0, yD.jsx)(tD, {
-          platform: CD
-        }), (0, yD.jsxs)("span", {
+        children: [(0, jU.jsx)(CU, {
+          platform: RU
+        }), (0, jU.jsxs)("span", {
           className: "PlayerProfileSocialLinkText",
-          children: [(0, yD.jsx)("span", {
+          children: [(0, jU.jsx)("span", {
             className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: oD.name
-          }), (0, yD.jsx)("span", {
+            children: QU.name
+          }), (0, jU.jsx)("span", {
             className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: ZD("homePage:profileSocialLinkAdd")
+            children: hU("homePage:profileSocialLinkAdd")
           })]
-        }), (0, yD.jsx)("span", {
+        }), (0, jU.jsx)("span", {
           className: "PlayerProfileSocialLinkEditButton",
-          children: (0, yD.jsx)(bD.c, {
+          children: (0, jU.jsx)(TU.c, {
             name: "pen-to-square"
           })
         })]
       })
     }
 
-    function oD(DD) {
+    function QU(UU) {
       let {
-        socialLinks: CD,
-        editable: cD = !1,
-        userContext: ID,
-        onLinksUpdated: pD
-      } = DD;
-      if (!cD && 0 === CD.length) return null;
-      const fD = new Map(CD.map((DD => [DD.platform, DD]))),
-        bD = cD ? iD.u : CD.map((DD => DD.platform));
-      return (0, yD.jsx)("div", {
+        socialLinks: RU,
+        editable: gU = !1,
+        userContext: tU,
+        onLinksUpdated: pU
+      } = UU;
+      if (!gU && 0 === RU.length) return null;
+      const PU = new Map(RU.map((UU => [UU.platform, UU]))),
+        TU = gU ? EU.u : RU.map((UU => UU.platform));
+      return (0, jU.jsx)("div", {
         className: "PlayerProfileSocialLinks",
-        children: (0, yD.jsx)("div", {
+        children: (0, jU.jsx)("div", {
           className: "PlayerProfileSocialLinksList",
-          children: bD.map((DD => (0, yD.jsx)(ZD, {
-            platform: DD,
-            link: fD.get(DD),
-            editable: cD,
-            userContext: ID,
-            onLinksUpdated: pD
-          }, DD)))
+          children: TU.map((UU => (0, jU.jsx)(hU, {
+            platform: UU,
+            link: PU.get(UU),
+            editable: gU,
+            userContext: tU,
+            onLinksUpdated: pU
+          }, UU)))
         })
       })
     }
   },
-  4643: DD => {
-    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGOws7P7D8Kmpqb/NTU1wTQymwGbAhANwwzIOmAYxQRkCXNzczBGtgrFBGQFKFZgsxtuAi67YY5HMQGbAgCIxWSBYHJzHAAAAABJRU5ErkJggg=="
+  4532: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGOws7P7D8Kmpqb/NTU1wTQymwGbAhANwwzIOmAYxQRkCXNzczBGtgrFBGQFKFZgsxtuAi67YY5HMQGbAgCIxWSBYHJzHAAAAABJRU5ErkJggg=="
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

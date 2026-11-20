@@ -1,128 +1,128 @@
 export const id = 17;
 export const ids = [17];
 export const modules = {
-  35994: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => MD,
-      e: () => tD,
-      f: () => yD,
-      h: () => BD
+  36187: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => uU,
+      e: () => CU,
+      h: () => jU,
+      l: () => GU
     });
-    var ID = cD(9041),
-      pD = cD(35996),
-      iD = cD(36002),
-      fD = cD(8394),
-      bD = cD(1440),
-      QD = cD(53),
-      wD = cD(62),
-      SD = cD(1093);
+    var tU = gU(8982),
+      pU = gU(36191),
+      EU = gU(36197),
+      PU = gU(8340),
+      TU = gU(1410),
+      qU = gU(56),
+      KU = gU(74),
+      cU = gU(1090);
 
-    function BD() {
-      var DD;
-      return (0, bD.g)(pD.b, (0, pD.o)()), (0, SD.jsx)(SD.Fragment, {
-        children: null === (DD = (0, pD.o)()) || void 0 === DD ? void 0 : DD.content
+    function GU() {
+      var UU;
+      return (0, TU.h)(pU.e, (0, pU.t)()), (0, cU.jsx)(cU.Fragment, {
+        children: null === (UU = (0, pU.t)()) || void 0 === UU ? void 0 : UU.content
       })
     }
 
-    function yD(DD) {
-      var CD;
+    function jU(UU) {
+      var RU;
       let {
-        show: cD
-      } = DD;
-      (0, bD.g)(pD.b, (0, pD.o)());
-      const wD = null === (CD = (0, pD.o)()) || void 0 === CD ? void 0 : CD.menu;
-      return (0, QD.useEffect)((() => {
-        var DD;
-        cD || (null === wD || void 0 === wD || null === (DD = wD.onClose) || void 0 === DD || DD.call(wD), (0, iD.q)())
-      }), [cD, wD]), (0, QD.useEffect)((() => cD ? (0, fD.i)(iD.B, iD.e) : void 0), [cD]), (0, SD.jsx)(ID.c, {
-        showing: cD,
+        show: gU
+      } = UU;
+      (0, TU.h)(pU.e, (0, pU.t)());
+      const KU = null === (RU = (0, pU.t)()) || void 0 === RU ? void 0 : RU.menu;
+      return (0, qU.useEffect)((() => {
+        var UU;
+        gU || (null === KU || void 0 === KU || null === (UU = KU.onClose) || void 0 === UU || UU.call(KU), (0, EU.q)())
+      }), [gU, KU]), (0, qU.useEffect)((() => gU ? (0, PU.f)(EU.w, EU.e) : void 0), [gU]), (0, cU.jsx)(tU.d, {
+        showing: gU,
         globallyUniqueKey: "clientGameMenu",
-        children: null === wD || void 0 === wD ? void 0 : wD.content
+        children: null === KU || void 0 === KU ? void 0 : KU.content
       })
     }
 
-    function MD(DD) {
+    function uU(UU) {
       let {
-        placement: CD = "bottom"
-      } = DD;
-      return (0, SD.jsx)("div", {
-        id: `clientGameHud-${CD}`,
+        placement: RU = "bottom"
+      } = UU;
+      return (0, cU.jsx)("div", {
+        id: `clientGameHud-${RU}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function tD(DD) {
+    function CU(UU) {
       let {
-        children: CD,
-        placement: cD = "bottom"
-      } = DD;
-      const [ID, pD] = (0, QD.useState)(null);
-      return (0, QD.useEffect)((() => {
-        pD(document.getElementById(`clientGameHud-${cD}`))
-      }), [cD]), ID ? (0, wD.createPortal)(CD, ID) : null
+        children: RU,
+        placement: gU = "bottom"
+      } = UU;
+      const [tU, pU] = (0, qU.useState)(null);
+      return (0, qU.useEffect)((() => {
+        pU(document.getElementById(`clientGameHud-${gU}`))
+      }), [gU]), tU ? (0, KU.createPortal)(RU, tU) : null
     }
   },
-  9041: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => iD
+  8982: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => EU
     });
-    var ID = cD(4329),
-      pD = cD(4337);
+    var tU = gU(4200),
+      pU = gU(4206);
 
-    function iD(DD) {
+    function EU(UU) {
       let {
-        children: CD,
-        showing: cD,
-        globallyUniqueKey: iD,
-        alwaysMountChildren: fD = !1,
-        doGameplayStartStopOnShow: bD = !0,
-        keepsMovement: QD = !1
-      } = DD;
-      return (0, pD.e)(!0, cD, iD, QD), (0, ID.b)(bD, cD), cD || fD ? CD : null
+        children: RU,
+        showing: gU,
+        globallyUniqueKey: EU,
+        alwaysMountChildren: PU = !1,
+        doGameplayStartStopOnShow: TU = !0,
+        keepsMovement: qU = !1
+      } = UU;
+      return (0, pU.e)(!0, gU, EU, qU), (0, tU.c)(TU, gU), gU || PU ? RU : null
     }
   },
-  36085: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => iD,
-      g: () => fD,
-      h: () => bD,
-      i: () => QD
+  36280: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => EU,
+      f: () => PU,
+      i: () => TU,
+      m: () => qU
     });
-    var ID = cD(53),
-      pD = cD(1113);
-    const iD = 8,
-      fD = "InGameHeaderContainer",
-      bD = "TopRightElements";
+    var tU = gU(56),
+      pU = gU(1106);
+    const EU = 8,
+      PU = "InGameHeaderContainer",
+      TU = "TopRightElements";
 
-    function QD(DD) {
-      const [CD] = (0, pD.b)(), [cD, QD] = (0, ID.useState)(!1);
-      return (0, ID.useLayoutEffect)((() => {
-        if (!DD) return;
-        const CD = document.querySelector(`.${fD}`),
-          cD = document.querySelector(`.${bD}`),
-          ID = () => {
-            const ID = DD.getBoundingClientRect(),
-              pD = CD ? CD.getBoundingClientRect().right : 0,
-              fD = cD ? cD.getBoundingClientRect().left : window.innerWidth,
-              bD = ID.left < pD + iD,
-              wD = ID.right > fD - iD;
-            QD(bD || wD)
+    function qU(UU) {
+      const [RU] = (0, pU.d)(), [gU, qU] = (0, tU.useState)(!1);
+      return (0, tU.useLayoutEffect)((() => {
+        if (!UU) return;
+        const RU = document.querySelector(`.${PU}`),
+          gU = document.querySelector(`.${TU}`),
+          tU = () => {
+            const tU = UU.getBoundingClientRect(),
+              pU = RU ? RU.getBoundingClientRect().right : 0,
+              PU = gU ? gU.getBoundingClientRect().left : window.innerWidth,
+              TU = tU.left < pU + EU,
+              KU = tU.right > PU - EU;
+            qU(TU || KU)
           };
-        ID();
-        const pD = new ResizeObserver(ID);
-        return pD.observe(DD), CD && pD.observe(CD), cD && pD.observe(cD), () => {
-          pD.disconnect()
+        tU();
+        const pU = new ResizeObserver(tU);
+        return pU.observe(UU), RU && pU.observe(RU), gU && pU.observe(gU), () => {
+          pU.disconnect()
         }
-      }), [DD, CD]), cD
+      }), [UU, RU]), gU
     }
   },
-  36083: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => pD
+  36275: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => pU
     });
-    const ID = [{
+    const tU = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -139,214 +139,214 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function pD(DD, CD, cD) {
-      const pD = Math.abs(DD - CD),
-        iD = Date.now() - cD;
-      for (const fD of ID)
-        if (DD < fD.maxDist) return pD >= fD.hardUpdateDist || iD > fD.timeBetweenSoftChecks && pD >= fD.softUpdateDist;
+    function pU(UU, RU, gU) {
+      const pU = Math.abs(UU - RU),
+        EU = Date.now() - gU;
+      for (const PU of tU)
+        if (UU < PU.maxDist) return pU >= PU.hardUpdateDist || EU > PU.timeBetweenSoftChecks && pU >= PU.softUpdateDist;
       return !1
     }
   },
-  8394: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => iD,
-      i: () => pD
+  8340: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => EU,
+      f: () => pU
     });
-    let ID = null;
-    const pD = function(DD) {
-        const CD = {
-          cycle: DD,
+    let tU = null;
+    const pU = function(UU) {
+        const RU = {
+          cycle: UU,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return ID = CD, () => {
-          ID === CD && (ID = null)
+        return tU = RU, () => {
+          tU === RU && (tU = null)
         }
       },
-      iD = () => {
-        var DD;
-        return null !== (DD = ID) && void 0 !== DD && DD.canCycle() ? ID.cycle : null
+      EU = () => {
+        var UU;
+        return null !== (UU = tU) && void 0 !== UU && UU.canCycle() ? tU.cycle : null
       }
   },
-  37907: (DD, CD, cD) => {
-    function ID(DD, CD, cD) {
-      var ID;
+  38083: (UU, RU, gU) => {
+    function tU(UU, RU, gU) {
+      var tU;
       const {
-        width: pD,
-        height: iD
-      } = cD, fD = null !== (ID = DD.text) && void 0 !== ID ? ID : DD, bD = (fD.x / 100 - .5) * pD, QD = (fD.y / 100 - .5) * iD, wD = pD / 2 - CD.x;
-      if (null !== DD.text && Math.abs(bD) <= wD && QD >= CD.top - iD / 2 && QD <= iD / 2 - CD.bottom) return {
-        x: fD.x,
-        y: fD.y
+        width: pU,
+        height: EU
+      } = gU, PU = null !== (tU = UU.text) && void 0 !== tU ? tU : UU, TU = (PU.x / 100 - .5) * pU, qU = (PU.y / 100 - .5) * EU, KU = pU / 2 - RU.x;
+      if (null !== UU.text && Math.abs(TU) <= KU && qU >= RU.top - EU / 2 && qU <= EU / 2 - RU.bottom) return {
+        x: PU.x,
+        y: PU.y
       };
-      const SD = Math.min(0 === bD ? 1 / 0 : wD / Math.abs(bD), QD > 0 ? (iD / 2 - CD.bottom) / QD : QD < 0 ? (CD.top - iD / 2) / QD : 1 / 0);
-      return !Number.isFinite(SD) || SD < 0 ? {
+      const cU = Math.min(0 === TU ? 1 / 0 : KU / Math.abs(TU), qU > 0 ? (EU / 2 - RU.bottom) / qU : qU < 0 ? (RU.top - EU / 2) / qU : 1 / 0);
+      return !Number.isFinite(cU) || cU < 0 ? {
         x: 50,
         y: 50
       } : {
-        x: 50 + bD * SD / pD * 100,
-        y: 50 + QD * SD / iD * 100
+        x: 50 + TU * cU / pU * 100,
+        y: 50 + qU * cU / EU * 100
       }
     }
-    cD.d(CD, {
-      e: () => ID
+    gU.d(RU, {
+      e: () => tU
     })
   },
-  36002: (DD, CD, cD) => {
-    cD.d(CD, {
-      B: () => tD,
-      C: () => ND,
-      b: () => iD,
-      e: () => ZD,
-      i: () => oD,
-      l: () => bD,
-      p: () => yD,
-      q: () => vD,
-      t: () => BD,
-      x: () => gD
+  36197: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => EU,
+      e: () => hU,
+      g: () => QU,
+      j: () => TU,
+      n: () => jU,
+      q: () => eU,
+      r: () => GU,
+      t: () => fU,
+      w: () => CU,
+      x: () => WU
     });
-    var ID = cD(16),
-      pD = cD(20);
-    const iD = "clientGameInventoryButtonsChanged",
-      fD = new Map;
+    var tU = gU(21),
+      pU = gU(24);
+    const EU = "clientGameInventoryButtonsChanged",
+      PU = new Map;
 
-    function bD() {
-      return [...fD.values()].sort(((DD, CD) => {
-        var cD, ID;
-        return (null !== (cD = DD.order) && void 0 !== cD ? cD : 0) - (null !== (ID = CD.order) && void 0 !== ID ? ID : 0)
+    function TU() {
+      return [...PU.values()].sort(((UU, RU) => {
+        var gU, tU;
+        return (null !== (gU = UU.order) && void 0 !== gU ? gU : 0) - (null !== (tU = RU.order) && void 0 !== tU ? tU : 0)
       }))
     }
-    let QD = null;
+    let qU = null;
 
-    function wD(DD) {
-      QD = DD
+    function KU(UU) {
+      qU = UU
     }
-    let SD = !1;
+    let cU = !1;
 
-    function BD(DD) {
-      SD = !0;
+    function GU(UU) {
+      cU = !0;
       try {
-        DD.onClick()
+        UU.onClick()
       } finally {
-        SD = !1
+        cU = !1
       }
-      DD.panel && "clientGame" === ID.d.get("openInGameMenuName") && wD(DD.id)
+      UU.panel && "clientGame" === tU.b.get("openInGameMenuName") && KU(UU.id)
     }
 
-    function yD() {
-      return SD
+    function jU() {
+      return cU
     }
 
-    function MD() {
-      return bD().filter((DD => DD.panel && !DD.disabled))
+    function uU() {
+      return TU().filter((UU => UU.panel && !UU.disabled))
     }
 
-    function tD(DD) {
-      const CD = MD(),
-        cD = CD.findIndex((DD => DD.id === QD));
-      return !(cD < 0 || CD.length < 2) && (BD(CD[(cD + DD + CD.length) % CD.length]), !0)
+    function CU(UU) {
+      const RU = uU(),
+        gU = RU.findIndex((UU => UU.id === qU));
+      return !(gU < 0 || RU.length < 2) && (GU(RU[(gU + UU + RU.length) % RU.length]), !0)
     }
 
-    function ZD() {
-      return null !== QD && MD().length > 1
+    function hU() {
+      return null !== qU && uU().length > 1
     }
 
-    function oD() {
-      wD(null)
+    function QU() {
+      KU(null)
     }
 
-    function vD() {
-      "inventory" !== ID.d.get("openInGameMenuName") && wD(null)
+    function eU() {
+      "inventory" !== tU.b.get("openInGameMenuName") && KU(null)
     }
 
-    function ND() {
-      const DD = QD;
-      return wD(null), DD
+    function WU() {
+      const UU = qU;
+      return KU(null), UU
     }
 
-    function gD(DD) {
-      return fD.set(DD.id, DD), pD.i.Uo(iD, bD(), !0), () => {
-        fD.get(DD.id) === DD && (fD.delete(DD.id), pD.i.Uo(iD, bD()))
+    function fU(UU) {
+      return PU.set(UU.id, UU), pU.p.yh(EU, TU(), !0), () => {
+        PU.get(UU.id) === UU && (PU.delete(UU.id), pU.p.yh(EU, TU()))
       }
     }
   },
-  35996: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => bD,
-      e: () => oD,
-      i: () => vD,
-      m: () => yD,
-      o: () => wD,
-      s: () => ZD,
-      u: () => MD,
-      v: () => SD
+  36191: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => TU,
+      h: () => QU,
+      l: () => eU,
+      p: () => jU,
+      t: () => KU,
+      w: () => hU,
+      x: () => uU,
+      y: () => cU
     });
-    var ID = cD(16),
-      pD = cD(20),
-      iD = cD(1284),
-      fD = cD(36002);
-    const bD = "clientGameUiChanged";
-    let QD = null;
+    var tU = gU(21),
+      pU = gU(24),
+      EU = gU(1287),
+      PU = gU(36197);
+    const TU = "clientGameUiChanged";
+    let qU = null;
 
-    function wD() {
-      return QD
+    function KU() {
+      return qU
     }
 
-    function SD(DD, CD) {
-      const cD = {
-        content: DD,
-        menu: CD
+    function cU(UU, RU) {
+      const gU = {
+        content: UU,
+        menu: RU
       };
-      return QD = cD, pD.i.Uo(bD, QD, !0), () => {
-        QD === cD && (QD = null, tD = !1, oD(), pD.i.Uo(bD, null))
+      return qU = gU, pU.p.yh(TU, qU, !0), () => {
+        qU === gU && (qU = null, CU = !1, QU(), pU.p.yh(TU, null))
       }
     }
-    let BD = null;
+    let GU = null;
 
-    function yD() {
-      return BD
+    function jU() {
+      return GU
     }
 
-    function MD(DD) {
-      return BD = DD, () => {
-        BD === DD && (BD = null)
+    function uU(UU) {
+      return GU = UU, () => {
+        GU === UU && (GU = null)
       }
     }
-    let tD = !1;
+    let CU = !1;
 
-    function ZD() {
-      const DD = ID.d.get("openInGameMenuName");
-      "clientGame" !== DD && (tD = "inventory" === DD), (0, fD.p)() || (0, fD.i)(), (0, iD.p)(iD.e), ID.d.set({
+    function hU() {
+      const UU = tU.b.get("openInGameMenuName");
+      "clientGame" !== UU && (CU = "inventory" === UU), (0, PU.n)() || (0, PU.g)(), (0, EU.o)(EU.c), tU.b.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function oD() {
-      ND(!1)
+    function QU() {
+      WU(!1)
     }
 
-    function vD() {
-      ND(tD)
+    function eU() {
+      WU(CU)
     }
 
-    function ND(DD) {
-      "clientGame" === ID.d.get("openInGameMenuName") && ID.d.set({
-        openInGameMenuName: DD ? "inventory" : null
-      }), DD || (0, fD.i)(), tD = !1
+    function WU(UU) {
+      "clientGame" === tU.b.get("openInGameMenuName") && tU.b.set({
+        openInGameMenuName: UU ? "inventory" : null
+      }), UU || (0, PU.g)(), CU = !1
     }
   },
-  38734: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      default: () => oC
+  38955: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      default: () => QR
     });
-    const ID = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
-    var pD = cD(53),
-      iD = cD(35996),
-      fD = cD(36402),
-      bD = cD(36010),
-      QD = cD(1701),
-      wD = cD(20);
-    const SD = {
+    const tU = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
+    var pU = gU(56),
+      EU = gU(36191),
+      PU = gU(36554),
+      TU = gU(36203),
+      qU = gU(1637),
+      KU = gU(24);
+    const cU = {
       M1911: "pistol",
       Deagle: "pistol",
       "Block-19": "pistol",
@@ -372,284 +372,284 @@ export const modules = {
       "Splash Instant Healing Potion": "throwable",
       Snowdash: "throwable"
     };
-    const BD = 32;
+    const GU = 32;
 
-    function yD(DD, CD, cD, ID) {
+    function jU(UU, RU, gU, tU) {
       return {
         tag: "line",
         attrs: {
-          x1: DD,
-          y1: CD,
-          x2: cD,
-          y2: ID,
+          x1: UU,
+          y1: RU,
+          x2: gU,
+          y2: tU,
           "stroke-width": arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 2
         }
       }
     }
 
-    function MD(DD) {
+    function uU(UU) {
       return {
         tag: "circle",
         attrs: {
-          cx: BD,
-          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BD,
-          r: DD,
+          cx: GU,
+          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : GU,
+          r: UU,
           class: "Fill"
         }
       }
     }
 
-    function tD(DD, CD) {
+    function CU(UU, RU) {
       return {
         tag: "path",
         attrs: {
-          d: DD,
-          "stroke-width": CD
+          d: UU,
+          "stroke-width": RU
         }
       }
     }
 
-    function ZD(DD, CD, cD) {
+    function hU(UU, RU, gU) {
       return {
         tag: "circle",
         attrs: {
-          cx: BD,
-          cy: BD,
-          r: DD,
-          "stroke-width": CD,
-          class: cD
+          cx: GU,
+          cy: GU,
+          r: UU,
+          "stroke-width": RU,
+          class: gU
         }
       }
     }
 
-    function oD(DD, CD, cD) {
+    function QU(UU, RU, gU) {
       return {
         tag: "text",
         attrs: {
-          x: DD,
-          y: CD,
+          x: UU,
+          y: RU,
           class: "Fill Label"
         },
-        text: cD
+        text: gU
       }
     }
-    const vD = {
-      pistol: DD => [yD(BD, BD - DD - 5, BD, BD - DD), yD(BD - DD - 5, BD, BD - DD, BD), yD(BD + DD, BD, BD + DD + 5, BD), MD(1.4)],
-      rifle: DD => [yD(BD, BD - DD - 8, BD, BD - DD), yD(BD, BD + DD, BD, BD + DD + 8), yD(BD - DD - 8, BD, BD - DD, BD), yD(BD + DD, BD, BD + DD + 8, BD), MD(1)],
-      smg: DD => {
-        const CD = Math.PI / 2,
-          cD = [];
-        for (let fD = 0; fD < 4; fD++) cD.push((pD = fD * CD + .35, iD = (fD + 1) * CD - .35, tD(`M${BD+(ID=6+DD)*Math.cos(pD)} ${BD+ID*Math.sin(pD)} A${ID} ${ID} 0 0 1 ${BD+ID*Math.cos(iD)} ${BD+ID*Math.sin(iD)}`, 2)));
-        var ID, pD, iD;
-        return [...cD, MD(1.4)]
+    const eU = {
+      pistol: UU => [jU(GU, GU - UU - 5, GU, GU - UU), jU(GU - UU - 5, GU, GU - UU, GU), jU(GU + UU, GU, GU + UU + 5, GU), uU(1.4)],
+      rifle: UU => [jU(GU, GU - UU - 8, GU, GU - UU), jU(GU, GU + UU, GU, GU + UU + 8), jU(GU - UU - 8, GU, GU - UU, GU), jU(GU + UU, GU, GU + UU + 8, GU), uU(1)],
+      smg: UU => {
+        const RU = Math.PI / 2,
+          gU = [];
+        for (let PU = 0; PU < 4; PU++) gU.push((pU = PU * RU + .35, EU = (PU + 1) * RU - .35, CU(`M${GU+(tU=6+UU)*Math.cos(pU)} ${GU+tU*Math.sin(pU)} A${tU} ${tU} 0 0 1 ${GU+tU*Math.cos(EU)} ${GU+tU*Math.sin(EU)}`, 2)));
+        var tU, pU, EU;
+        return [...gU, uU(1.4)]
       },
-      shotgun: DD => [ZD(DD, 3, "Ring Outline"), ZD(DD, 1.5, "Ring")],
-      marksman: DD => [tD(`M${26-DD/2} ${39+DD/2} L32 33 L${38+DD/2} ${39+DD/2}`, 2), yD(14 - DD, BD, 24 - DD, BD, 1.5), yD(40 + DD, BD, 50 + DD, BD, 1.5), yD(14 - DD, 30, 14 - DD, 34, 1.5), yD(50 + DD, 30, 50 + DD, 34, 1.5)],
-      machineGun: DD => {
-        const CD = 10 + DD,
-          cD = [];
-        for (const [ID, pD] of [
+      shotgun: UU => [hU(UU, 3, "Ring Outline"), hU(UU, 1.5, "Ring")],
+      marksman: UU => [CU(`M${26-UU/2} ${39+UU/2} L32 33 L${38+UU/2} ${39+UU/2}`, 2), jU(14 - UU, GU, 24 - UU, GU, 1.5), jU(40 + UU, GU, 50 + UU, GU, 1.5), jU(14 - UU, 30, 14 - UU, 34, 1.5), jU(50 + UU, 30, 50 + UU, 34, 1.5)],
+      machineGun: UU => {
+        const RU = 10 + UU,
+          gU = [];
+        for (const [tU, pU] of [
             [-1, -1],
             [1, -1],
             [-1, 1],
             [1, 1]
-          ]) cD.push(tD(`M${BD+ID*CD} ${BD+pD*(CD-5)} L${BD+ID*CD} ${BD+pD*CD} L${BD+ID*(CD-5)} ${BD+pD*CD}`, 2));
-        return [...cD, yD(BD, 28, BD, 36, 1.5), yD(28, BD, 36, BD, 1.5)]
+          ]) gU.push(CU(`M${GU+tU*RU} ${GU+pU*(RU-5)} L${GU+tU*RU} ${GU+pU*RU} L${GU+tU*(RU-5)} ${GU+pU*RU}`, 2));
+        return [...gU, jU(GU, 28, GU, 36, 1.5), jU(28, GU, 36, GU, 1.5)]
       },
-      launcher: () => [yD(14, 30, 50, 30, 1.5), yD(BD, 24, BD, 52, 1.5), yD(28, 38, 36, 38, 1.5), yD(29, 44, 35, 44, 1.5), yD(30, 50, 34, 50, 1.5), oD(38, 40, "100"), oD(37, 46, "200"), MD(1.4, 30)],
-      melee: () => [tD("M32 26 L38 32 L32 38 L26 32 Z", 1.5), MD(1.2)],
-      throwable: () => [MD(1.6)]
+      launcher: () => [jU(14, 30, 50, 30, 1.5), jU(GU, 24, GU, 52, 1.5), jU(28, 38, 36, 38, 1.5), jU(29, 44, 35, 44, 1.5), jU(30, 50, 34, 50, 1.5), QU(38, 40, "100"), QU(37, 46, "200"), uU(1.4, 30)],
+      melee: () => [CU("M32 26 L38 32 L32 38 L26 32 Z", 1.5), uU(1.2)],
+      throwable: () => [uU(1.6)]
     };
 
-    function ND(DD) {
+    function WU(UU) {
       let {
-        tag: CD,
-        attrs: cD,
-        text: ID
-      } = DD, pD = `<${CD}`;
-      for (const [iD, fD] of Object.entries(cD)) pD += ` ${iD}="${fD}"`;
-      return void 0 === ID ? `${pD}/>` : `${pD}>${ID}</${CD}>`
+        tag: RU,
+        attrs: gU,
+        text: tU
+      } = UU, pU = `<${RU}`;
+      for (const [EU, PU] of Object.entries(gU)) pU += ` ${EU}="${PU}"`;
+      return void 0 === tU ? `${pU}/>` : `${pU}>${tU}</${RU}>`
     }
-    class gD {
-      constructor(DD, CD) {
-        this.api = DD, this.localPlayerId = CD, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = DD => {
-          this.element = DD, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, DD && !this.enabled && (DD.style.display = "none")
+    class fU {
+      constructor(UU, RU) {
+        this.api = UU, this.localPlayerId = RU, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = UU => {
+          this.element = UU, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, UU && !this.enabled && (UU.style.display = "none")
         }, this.measure = () => {
-          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, QD.getRemInPx)()))
-        }, this.tokens = [wD.i.subscribe("aimingOverlay", (DD => {
-          this.sniperOverlay = "sniper" === DD
-        })), wD.i.subscribe("mouseState", (DD => {
+          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, qU.getRemInPx)()))
+        }, this.tokens = [KU.p.subscribe("aimingOverlay", (UU => {
+          this.sniperOverlay = "sniper" === UU
+        })), KU.p.subscribe("mouseState", (UU => {
           let {
-            isDown: CD
-          } = DD;
-          this.mouseDown = CD
+            isDown: RU
+          } = UU;
+          this.mouseDown = RU
         }))], window.addEventListener("resize", this.measure), this.measure()
       }
-      lH(DD) {
-        DD !== this.enabled && (this.enabled = DD, this.drawnVisible = null, DD || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
+      GJ(UU) {
+        UU !== this.enabled && (this.enabled = UU, this.drawnVisible = null, UU || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
       }
-      frame(DD, CD) {
-        var cD, ID;
+      frame(UU, RU) {
+        var gU, tU;
         if (!this.enabled) return;
         const {
-          api: pD
-        } = this, iD = pD.isAlive(this.localPlayerId) && null !== (cD = null === (ID = pD.FDD(this.localPlayerId)) || void 0 === ID ? void 0 : ID.name) && void 0 !== cD ? cD : null, fD = (bD = iD) && SD[bD] || null;
-        var bD;
-        if (this.setOwnsCrosshair(null !== fD), !this.element) return;
-        const QD = pD.getHeldGunInaccuracy(),
-          wD = null !== QD,
-          BD = null !== fD && !this.sniperOverlay && pD.isCrosshairShown();
-        if (BD !== this.drawnVisible && (this.drawnVisible = BD, this.element.style.display = BD ? "block" : "none"), !BD) return;
-        const yD = wD ? function(DD) {
-            return "launcher" === DD || "melee" === DD || "throwable" === DD ? "none" : "shotgun" === DD ? "cone" : "offset"
-          }(fD) : "none",
-          MD = null !== QD && void 0 !== QD ? QD : 0;
-        "cone" === yD ? this.drawCone(fD, this.coneRadiusVh(MD, CD) * this.gapPerVh, DD) : (this.coneDrawn = !1, this.draw(fD, "none" === yD ? 2 : this.offsetGap(MD)));
-        const tD = !wD && this.mouseDown;
-        tD !== this.drawnPressed && (this.drawnPressed = tD, this.element.classList.toggle("Pressed", tD))
+          api: pU
+        } = this, EU = pU.isAlive(this.localPlayerId) && null !== (gU = null === (tU = pU.QRU(this.localPlayerId)) || void 0 === tU ? void 0 : tU.name) && void 0 !== gU ? gU : null, PU = (TU = EU) && cU[TU] || null;
+        var TU;
+        if (this.setOwnsCrosshair(null !== PU), !this.element) return;
+        const qU = pU.getHeldGunInaccuracy(),
+          KU = null !== qU,
+          GU = null !== PU && !this.sniperOverlay && pU.isCrosshairShown();
+        if (GU !== this.drawnVisible && (this.drawnVisible = GU, this.element.style.display = GU ? "block" : "none"), !GU) return;
+        const jU = KU ? function(UU) {
+            return "launcher" === UU || "melee" === UU || "throwable" === UU ? "none" : "shotgun" === UU ? "cone" : "offset"
+          }(PU) : "none",
+          uU = null !== qU && void 0 !== qU ? qU : 0;
+        "cone" === jU ? this.drawCone(PU, this.coneRadiusVh(uU, RU) * this.gapPerVh, UU) : (this.coneDrawn = !1, this.draw(PU, "none" === jU ? 2 : this.offsetGap(uU)));
+        const CU = !KU && this.mouseDown;
+        CU !== this.drawnPressed && (this.drawnPressed = CU, this.element.classList.toggle("Pressed", CU))
       }
       dispose() {
-        for (const DD of this.tokens) wD.i.unsubscribe(DD);
+        for (const UU of this.tokens) KU.p.unsubscribe(UU);
         window.removeEventListener("resize", this.measure), this.setOwnsCrosshair(!1)
       }
-      draw(DD, CD) {
-        var cD, ID;
-        DD !== this.drawnFamily ? (this.drawnFamily = DD, this.drawnGap = CD, this.element.innerHTML = function(DD, CD) {
-          return `<svg viewBox="0 0 64 64">${vD[DD](CD).map(ND).join("")}</svg>`
-        }(DD, CD), this.shapes = Array.from(null !== (cD = null === (ID = this.element.firstElementChild) || void 0 === ID ? void 0 : ID.children) && void 0 !== cD ? cD : [])) : CD !== this.drawnGap && (this.drawnGap = CD, function(DD, CD, cD) {
-          const ID = vD[CD](cD);
-          for (let pD = 0; pD < ID.length; pD++)
-            for (const [CD, cD] of Object.entries(ID[pD].attrs)) {
-              const ID = String(cD);
-              DD[pD].getAttribute(CD) !== ID && DD[pD].setAttribute(CD, ID)
+      draw(UU, RU) {
+        var gU, tU;
+        UU !== this.drawnFamily ? (this.drawnFamily = UU, this.drawnGap = RU, this.element.innerHTML = function(UU, RU) {
+          return `<svg viewBox="0 0 64 64">${eU[UU](RU).map(WU).join("")}</svg>`
+        }(UU, RU), this.shapes = Array.from(null !== (gU = null === (tU = this.element.firstElementChild) || void 0 === tU ? void 0 : tU.children) && void 0 !== gU ? gU : [])) : RU !== this.drawnGap && (this.drawnGap = RU, function(UU, RU, gU) {
+          const tU = eU[RU](gU);
+          for (let pU = 0; pU < tU.length; pU++)
+            for (const [RU, gU] of Object.entries(tU[pU].attrs)) {
+              const tU = String(gU);
+              UU[pU].getAttribute(RU) !== tU && UU[pU].setAttribute(RU, tU)
             }
-        }(this.shapes, DD, CD))
+        }(this.shapes, UU, RU))
       }
-      drawCone(DD, CD, cD) {
-        DD === this.drawnFamily && this.coneDrawn ? this.shownRadius += (CD - this.shownRadius) * (1 - Math.exp(-cD / 80)) : this.shownRadius = CD, this.coneDrawn = !0, this.draw(DD, Math.round(4 * this.shownRadius) / 4)
+      drawCone(UU, RU, gU) {
+        UU === this.drawnFamily && this.coneDrawn ? this.shownRadius += (RU - this.shownRadius) * (1 - Math.exp(-gU / 80)) : this.shownRadius = RU, this.coneDrawn = !0, this.draw(UU, Math.round(4 * this.shownRadius) / 4)
       }
-      coneRadiusVh(DD, CD) {
-        if (!(CD > 0)) return 1;
-        const cD = DD * fD.f / 2;
-        return Math.max(50 * Math.tan(cD) / CD, 1)
+      coneRadiusVh(UU, RU) {
+        if (!(RU > 0)) return 1;
+        const gU = UU * PU.h / 2;
+        return Math.max(50 * Math.tan(gU) / RU, 1)
       }
-      offsetGap(DD) {
-        const CD = 2 + ((0, bD.g)(DD) - 1) * this.gapPerVh;
-        return Math.min(24, Math.round(2 * CD) / 2)
+      offsetGap(UU) {
+        const RU = 2 + ((0, TU.d)(UU) - 1) * this.gapPerVh;
+        return Math.min(24, Math.round(2 * RU) / 2)
       }
-      setOwnsCrosshair(DD) {
-        DD !== this.ownsCrosshair && (this.ownsCrosshair = DD, document.body.classList.toggle("FrontlineCustomCrosshair", DD))
+      setOwnsCrosshair(UU) {
+        UU !== this.ownsCrosshair && (this.ownsCrosshair = UU, document.body.classList.toggle("FrontlineCustomCrosshair", UU))
       }
     }
-    const XD = "FrontlineCustomDamage",
-      mD = .45,
-      nD = .2;
-    class OD {
-      constructor(DD, CD) {
-        this.api = DD, this.localPlayerId = CD, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
+    const xU = "FrontlineCustomDamage",
+      mU = .45,
+      IU = .2;
+    class JU {
+      constructor(UU, RU) {
+        this.api = UU, this.localPlayerId = RU, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, this.maxHealth = null, this.mp = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = DD => {
-          var CD, cD;
-          this.clearHits(), this.root = DD, this.lowLayer = null !== (CD = null === DD || void 0 === DD ? void 0 : DD.querySelector(".FrontlineDamageLow")) && void 0 !== CD ? CD : null, this.arcLayer = null !== (cD = null === DD || void 0 === DD ? void 0 : DD.querySelector(".FrontlineDamageArcs")) && void 0 !== cD ? cD : null, this.showRoot(), this.drawLow()
-        }, this.token = wD.i.subscribe("damagedByOtherPlayer", (DD => {
+        }, this.maxHealth = null, this.Zp = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = UU => {
+          var RU, gU;
+          this.clearHits(), this.root = UU, this.lowLayer = null !== (RU = null === UU || void 0 === UU ? void 0 : UU.querySelector(".FrontlineDamageLow")) && void 0 !== RU ? RU : null, this.arcLayer = null !== (gU = null === UU || void 0 === UU ? void 0 : UU.querySelector(".FrontlineDamageArcs")) && void 0 !== gU ? gU : null, this.showRoot(), this.drawLow()
+        }, this.token = KU.p.subscribe("damagedByOtherPlayer", (UU => {
           let {
-            direction: CD,
-            Np: cD
-          } = DD;
-          this.onHurt(CD, cD)
-        })), this.syncHealth(), document.body.classList.add(XD)
+            direction: RU,
+            np: gU
+          } = UU;
+          this.onHurt(RU, gU)
+        })), this.syncHealth(), document.body.classList.add(xU)
       }
-      lH(DD) {
-        DD !== this.enabled && (this.enabled = DD, document.body.classList.toggle(XD, DD), DD || this.clearHits(), this.showRoot())
+      GJ(UU) {
+        UU !== this.enabled && (this.enabled = UU, document.body.classList.toggle(xU, UU), UU || this.clearHits(), this.showRoot())
       }
-      frame(DD) {
-        this.syncHealth(), this.cameraHeading = DD;
-        for (const CD of this.arcs) this.drawArcAngle(CD)
+      frame(UU) {
+        this.syncHealth(), this.cameraHeading = UU;
+        for (const RU of this.arcs) this.drawArcAngle(RU)
       }
       dispose() {
-        wD.i.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(XD)
+        KU.p.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(xU)
       }
       showRoot() {
         this.root && (this.root.style.display = this.enabled ? "" : "none")
       }
       syncHealth() {
-        const DD = this.api.getClientOption(this.localPlayerId, "_health"),
-          CD = this.api.getClientOption(this.localPlayerId, "_shield"),
-          cD = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
-        if (Object.is(DD, this.readHealth) && Object.is(CD, this.readShield) && Object.is(cD, this.readMaxHealth)) return;
-        if (this.readHealth = DD, this.readShield = CD, this.readMaxHealth = cD, null === DD || void 0 === DD || !cD) return this.lastHealthPool = null, this.maxHealth = null, this.mp = 1, this.dead = !1, void this.drawLow();
-        const ID = DD + (null !== CD && void 0 !== CD ? CD : 0);
-        if (null !== this.lastHealthPool && ID < this.lastHealthPool) {
-          const DD = performance.now(),
-            CD = (this.lastHealthPool - ID) / cD;
-          this.lastDrop = DD - this.lastDrop.at < 300 ? {
-            frac: this.lastDrop.frac + CD,
+        const UU = this.api.getClientOption(this.localPlayerId, "_health"),
+          RU = this.api.getClientOption(this.localPlayerId, "_shield"),
+          gU = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
+        if (Object.is(UU, this.readHealth) && Object.is(RU, this.readShield) && Object.is(gU, this.readMaxHealth)) return;
+        if (this.readHealth = UU, this.readShield = RU, this.readMaxHealth = gU, null === UU || void 0 === UU || !gU) return this.lastHealthPool = null, this.maxHealth = null, this.Zp = 1, this.dead = !1, void this.drawLow();
+        const tU = UU + (null !== RU && void 0 !== RU ? RU : 0);
+        if (null !== this.lastHealthPool && tU < this.lastHealthPool) {
+          const UU = performance.now(),
+            RU = (this.lastHealthPool - tU) / gU;
+          this.lastDrop = UU - this.lastDrop.at < 300 ? {
+            frac: this.lastDrop.frac + RU,
             at: this.lastDrop.at
           } : {
-            frac: CD,
-            at: DD
+            frac: RU,
+            at: UU
           }
         }
-        this.dead = DD <= 0, this.dead && this.clearHits(), this.lastHealthPool = ID, this.maxHealth = cD, this.mp = DD > 0 ? DD / cD : 1, this.drawLow()
+        this.dead = UU <= 0, this.dead && this.clearHits(), this.lastHealthPool = tU, this.maxHealth = gU, this.Zp = UU > 0 ? UU / gU : 1, this.drawLow()
       }
-      onHurt(DD, CD) {
+      onHurt(UU, RU) {
         if (this.syncHealth(), this.dead || !this.enabled) return;
-        const cD = Math.min(1, this.takeDamageFrac(CD) / .3);
-        null !== DD && this.showArc(DD, cD), this.flashEdge(null === DD ? null : DD - this.cameraHeading, .4 + .6 * cD)
+        const gU = Math.min(1, this.takeDamageFrac(RU) / .3);
+        null !== UU && this.showArc(UU, gU), this.flashEdge(null === UU ? null : UU - this.cameraHeading, .4 + .6 * gU)
       }
-      takeDamageFrac(DD) {
-        if (void 0 !== DD && this.maxHealth) return DD / this.maxHealth;
+      takeDamageFrac(UU) {
+        if (void 0 !== UU && this.maxHealth) return UU / this.maxHealth;
         if (performance.now() - this.lastDrop.at >= 300) return .12;
         const {
-          frac: CD
+          frac: RU
         } = this.lastDrop;
         return this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, CD
+        }, RU
       }
       drawLow() {
         if (!this.lowLayer) return;
-        const DD = HD((mD - this.mp) / .25),
-          CD = HD((nD - this.mp) / .15000000000000002),
-          cD = this.mp < mD;
-        this.lowLayer.classList.toggle("Active", cD), this.lowLayer.classList.toggle("Critical", this.mp < nD), this.lowLayer.style.opacity = String(cD ? .55 + .3 * DD + .15 * CD : 0)
+        const UU = nU((mU - this.Zp) / .25),
+          RU = nU((IU - this.Zp) / .15000000000000002),
+          gU = this.Zp < mU;
+        this.lowLayer.classList.toggle("Active", gU), this.lowLayer.classList.toggle("Critical", this.Zp < IU), this.lowLayer.style.opacity = String(gU ? .55 + .3 * UU + .15 * RU : 0)
       }
-      showArc(DD, CD) {
-        var cD, ID;
+      showArc(UU, RU) {
+        var gU, tU;
         if (!this.arcLayer) return;
-        let pD = this.arcs.find((CD => PD(CD.direction, DD) < .6));
-        if (!pD) {
-          const CD = document.createElement("div");
-          CD.className = "FrontlineDamageArc", CD.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(CD), pD = {
-            element: CD,
-            direction: DD,
+        let pU = this.arcs.find((RU => wU(RU.direction, UU) < .6));
+        if (!pU) {
+          const RU = document.createElement("div");
+          RU.className = "FrontlineDamageArc", RU.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(RU), pU = {
+            element: RU,
+            direction: UU,
             drawnAngle: null,
             fade: null,
             pop: null
-          }, this.arcs.push(pD)
+          }, this.arcs.push(pU)
         }
-        pD.direction = DD, this.drawArcAngle(pD);
-        const iD = pD.fade ? Number(getComputedStyle(pD.element).opacity) : 0;
-        null === (cD = pD.fade) || void 0 === cD || cD.cancel(), null === (ID = pD.pop) || void 0 === ID || ID.cancel(), pD.element.style.opacity = "1";
-        const fD = pD.element.animate([{
-          opacity: iD
+        pU.direction = UU, this.drawArcAngle(pU);
+        const EU = pU.fade ? Number(getComputedStyle(pU.element).opacity) : 0;
+        null === (gU = pU.fade) || void 0 === gU || gU.cancel(), null === (tU = pU.pop) || void 0 === tU || tU.cancel(), pU.element.style.opacity = "1";
+        const PU = pU.element.animate([{
+          opacity: EU
         }, {
           opacity: 1
         }], 144);
-        pD.fade = fD, pD.pop = pD.element.animate([{
-          scale: 1.1 + (1.16 - 1.1) * CD
+        pU.fade = PU, pU.pop = pU.element.animate([{
+          scale: 1.1 + (1.16 - 1.1) * RU
         }, {
           scale: 1
         }], {
           duration: 160,
           easing: "cubic-bezier(0.2, 0.7, 0.3, 1)"
         });
-        const bD = pD;
-        fD.onfinish = () => {
-          if (bD.fade !== fD) return;
-          const DD = bD.element.animate([{
+        const TU = pU;
+        PU.onfinish = () => {
+          if (TU.fade !== PU) return;
+          const UU = TU.element.animate([{
             opacity: 1
           }, {
             opacity: 0
@@ -659,128 +659,128 @@ export const modules = {
             easing: "cubic-bezier(0.4, 0, 0.7, 1)",
             fill: "forwards"
           });
-          DD.startTime = fD.startTime, bD.fade = DD, DD.onfinish = () => {
-            bD.fade === DD && (bD.element.remove(), UD(this.arcs, bD))
+          UU.startTime = PU.startTime, TU.fade = UU, UU.onfinish = () => {
+            TU.fade === UU && (TU.element.remove(), bU(this.arcs, TU))
           }
         }
       }
-      drawArcAngle(DD) {
-        const CD = DD.direction - this.cameraHeading;
-        (null === DD.drawnAngle || Math.abs(CD - DD.drawnAngle) > .005) && (DD.drawnAngle = CD, DD.element.style.rotate = `${CD}rad`)
+      drawArcAngle(UU) {
+        const RU = UU.direction - this.cameraHeading;
+        (null === UU.drawnAngle || Math.abs(RU - UU.drawnAngle) > .005) && (UU.drawnAngle = RU, UU.element.style.rotate = `${RU}rad`)
       }
-      flashEdge(DD, CD) {
-        var cD, ID, pD;
+      flashEdge(UU, RU) {
+        var gU, tU, pU;
         if (!this.root) return;
-        let iD = this.flashes.find((CD => null === CD.angle || null === DD ? CD.angle === DD : PD(CD.angle, DD) < .5));
-        if (!iD) {
-          const CD = document.createElement("div");
-          CD.className = "FrontlineDamageFlash";
-          const cD = CD.appendChild(document.createElement("div"));
-          cD.className = "FrontlineDamageFlashGlow", this.root.insertBefore(CD, this.arcLayer), iD = {
-            element: CD,
-            glow: cD,
-            angle: DD,
+        let EU = this.flashes.find((RU => null === RU.angle || null === UU ? RU.angle === UU : wU(RU.angle, UU) < .5));
+        if (!EU) {
+          const RU = document.createElement("div");
+          RU.className = "FrontlineDamageFlash";
+          const gU = RU.appendChild(document.createElement("div"));
+          gU.className = "FrontlineDamageFlashGlow", this.root.insertBefore(RU, this.arcLayer), EU = {
+            element: RU,
+            glow: gU,
+            angle: UU,
             level: 0,
             animation: null
-          }, this.flashes.push(iD)
+          }, this.flashes.push(EU)
         }
-        const fD = null === (cD = iD.animation) || void 0 === cD || null === (ID = cD.effect) || void 0 === ID ? void 0 : ID.getComputedTiming().progress,
-          bD = null === fD || void 0 === fD ? 0 : iD.level * (1 - fD);
-        iD.level = Math.min(1, Math.max(CD, bD + .6 * CD)), iD.angle = DD;
+        const PU = null === (gU = EU.animation) || void 0 === gU || null === (tU = gU.effect) || void 0 === tU ? void 0 : tU.getComputedTiming().progress,
+          TU = null === PU || void 0 === PU ? 0 : EU.level * (1 - PU);
+        EU.level = Math.min(1, Math.max(RU, TU + .6 * RU)), EU.angle = UU;
         const {
-          x: QD,
-          y: wD,
-          rx: SD,
-          ry: BD
-        } = function(DD, CD) {
-          const cD = window.innerWidth,
-            ID = window.innerHeight;
-          if (null === DD) return {
-            x: cD / 2,
-            y: ID / 2,
+          x: qU,
+          y: KU,
+          rx: cU,
+          ry: GU
+        } = function(UU, RU) {
+          const gU = window.innerWidth,
+            tU = window.innerHeight;
+          if (null === UU) return {
+            x: gU / 2,
+            y: tU / 2,
             rx: 0,
             ry: 0
           };
-          const pD = Math.sin(DD),
-            iD = -Math.cos(DD),
-            fD = cD / 2 / Math.max(1e-6, Math.abs(pD)),
-            bD = ID / 2 / Math.max(1e-6, Math.abs(iD)),
-            QD = Math.min(fD, bD),
-            wD = Math.round(cD / 2 + pD * QD),
-            SD = Math.round(ID / 2 + iD * QD),
-            BD = ID / 100 * (.85 + .25 * CD),
-            yD = fD <= bD,
-            MD = Math.round((yD ? 30 : 74) * BD),
-            tD = Math.round((yD ? 58 : 26) * BD);
+          const pU = Math.sin(UU),
+            EU = -Math.cos(UU),
+            PU = gU / 2 / Math.max(1e-6, Math.abs(pU)),
+            TU = tU / 2 / Math.max(1e-6, Math.abs(EU)),
+            qU = Math.min(PU, TU),
+            KU = Math.round(gU / 2 + pU * qU),
+            cU = Math.round(tU / 2 + EU * qU),
+            GU = tU / 100 * (.85 + .25 * RU),
+            jU = PU <= TU,
+            uU = Math.round((jU ? 30 : 74) * GU),
+            CU = Math.round((jU ? 58 : 26) * GU);
           return {
-            x: wD,
-            y: SD,
-            rx: MD,
-            ry: tD
+            x: KU,
+            y: cU,
+            rx: uU,
+            ry: CU
           }
-        }(DD, iD.level), {
-          style: yD
-        } = iD.glow;
-        iD.glow.classList.toggle("Everywhere", null === DD), yD.setProperty("--glowX", `${QD}px`), yD.setProperty("--glowY", `${wD}px`), yD.setProperty("--glowRx", `${SD}px`), yD.setProperty("--glowRy", `${BD}px`), iD.element.style.transformOrigin = `${QD}px ${wD}px`, null === (pD = iD.animation) || void 0 === pD || pD.cancel();
-        const MD = iD.element.animate([{
+        }(UU, EU.level), {
+          style: jU
+        } = EU.glow;
+        EU.glow.classList.toggle("Everywhere", null === UU), jU.setProperty("--glowX", `${qU}px`), jU.setProperty("--glowY", `${KU}px`), jU.setProperty("--glowRx", `${cU}px`), jU.setProperty("--glowRy", `${GU}px`), EU.element.style.transformOrigin = `${qU}px ${KU}px`, null === (pU = EU.animation) || void 0 === pU || pU.cancel();
+        const uU = EU.element.animate([{
           opacity: 0,
           scale: .82,
           easing: "cubic-bezier(0.2, 0.8, 0.3, 1)"
         }, {
-          opacity: iD.level,
+          opacity: EU.level,
           scale: 1,
           offset: .12,
           easing: "linear"
         }, {
-          opacity: .8 * iD.level,
+          opacity: .8 * EU.level,
           offset: .38,
           easing: "cubic-bezier(0.4, 0, 0.7, 1)"
         }, {
           opacity: 0,
           scale: .92
         }], {
-          duration: 520 + 180 * iD.level
+          duration: 520 + 180 * EU.level
         });
-        iD.animation = MD;
-        const tD = iD;
-        MD.onfinish = () => {
-          tD.animation === MD && (tD.element.remove(), UD(this.flashes, tD))
+        EU.animation = uU;
+        const CU = EU;
+        uU.onfinish = () => {
+          CU.animation === uU && (CU.element.remove(), bU(this.flashes, CU))
         }
       }
       clearHits() {
-        for (const ID of this.arcs) {
-          var DD, CD;
-          null === (DD = ID.fade) || void 0 === DD || DD.cancel(), ID.fade = null, null === (CD = ID.pop) || void 0 === CD || CD.cancel(), ID.element.remove()
+        for (const tU of this.arcs) {
+          var UU, RU;
+          null === (UU = tU.fade) || void 0 === UU || UU.cancel(), tU.fade = null, null === (RU = tU.pop) || void 0 === RU || RU.cancel(), tU.element.remove()
         }
         this.arcs.length = 0;
-        for (const ID of this.flashes) {
-          var cD;
-          null === (cD = ID.animation) || void 0 === cD || cD.cancel(), ID.element.remove()
+        for (const tU of this.flashes) {
+          var gU;
+          null === (gU = tU.animation) || void 0 === gU || gU.cancel(), tU.element.remove()
         }
         this.flashes.length = 0
       }
     }
 
-    function PD(DD, CD) {
-      return Math.abs(Math.atan2(Math.sin(DD - CD), Math.cos(DD - CD)))
+    function wU(UU, RU) {
+      return Math.abs(Math.atan2(Math.sin(UU - RU), Math.cos(UU - RU)))
     }
 
-    function HD(DD) {
-      return Math.max(0, Math.min(1, DD))
+    function nU(UU) {
+      return Math.max(0, Math.min(1, UU))
     }
 
-    function UD(DD, CD) {
-      const cD = DD.indexOf(CD); - 1 !== cD && DD.splice(cD, 1)
+    function bU(UU, RU) {
+      const gU = UU.indexOf(RU); - 1 !== gU && UU.splice(gU, 1)
     }
-    var xD = cD(1049),
-      qD = cD.n(xD),
-      JD = cD(35994),
-      KD = cD(36085),
-      aD = cD(1192),
-      VD = cD(1440);
-    const zD = "frontlineHudChanged",
-      jD = "frontlineScoreboardChanged";
-    class lD {
+    var oU = gU(1037),
+      ZU = gU.n(oU),
+      aU = gU(36187),
+      YU = gU(36280),
+      BU = gU(1181),
+      VU = gU(1410);
+    const rU = "frontlineHudChanged",
+      XU = "frontlineScoreboardChanged";
+    class vU {
       constructor() {
         this.wire = ["none"], this.scoreboard = {
           wire: ["none"],
@@ -793,101 +793,101 @@ export const modules = {
       getScoreboard() {
         return this.scoreboard
       }
-      kt(DD) {
-        this.wire = DD, wD.i.Uo(zD, DD, !0)
+      qC(UU) {
+        this.wire = UU, KU.p.yh(rU, UU, !0)
       }
-      receiveScoreboard(DD) {
-        let CD = "scoreboard" === DD[0] ? performance.now() + DD[5] : 0;
-        const cD = this.scoreboard.endsAt;
-        0 !== CD && 0 !== cD && Math.abs(CD - cD) < 1e3 && (CD = cD), this.scoreboard = {
-          wire: DD,
-          endsAt: CD
-        }, wD.i.Uo(jD, this.scoreboard, !0)
+      receiveScoreboard(UU) {
+        let RU = "scoreboard" === UU[0] ? performance.now() + UU[5] : 0;
+        const gU = this.scoreboard.endsAt;
+        0 !== RU && 0 !== gU && Math.abs(RU - gU) < 1e3 && (RU = gU), this.scoreboard = {
+          wire: UU,
+          endsAt: RU
+        }, KU.p.yh(XU, this.scoreboard, !0)
       }
     }
-    var LD = cD(1093);
-    const TD = {
+    var dU = gU(1090);
+    const HU = {
       Red: "frontlineHud:teamRed",
       Blue: "frontlineHud:teamBlue"
     };
 
-    function GD(DD) {
-      const [CD, cD] = (0, pD.useState)((() => (DD - performance.now()) / 1e3));
-      return (0, pD.useEffect)((() => {
-        if (0 === DD) return;
-        const CD = () => {
-          cD((DD - performance.now()) / 1e3)
+    function SU(UU) {
+      const [RU, gU] = (0, pU.useState)((() => (UU - performance.now()) / 1e3));
+      return (0, pU.useEffect)((() => {
+        if (0 === UU) return;
+        const RU = () => {
+          gU((UU - performance.now()) / 1e3)
         };
-        CD();
-        const ID = window.setInterval(CD, 250);
+        RU();
+        const tU = window.setInterval(RU, 250);
         return () => {
-          window.clearInterval(ID)
+          window.clearInterval(tU)
         }
-      }), [DD]), CD
+      }), [UU]), RU
     }
 
-    function RD(DD) {
+    function sU(UU) {
       let {
-        className: CD,
-        point: cD
-      } = DD;
-      const [ID, pD, iD, fD, bD, QD] = cD;
-      return (0, LD.jsxs)("div", {
-        className: qD()(CD, `Owner-${pD||"None"}`, `Leader-${fD||"None"}`, {
-          Contested: bD,
-          Here: QD
+        className: RU,
+        point: gU
+      } = UU;
+      const [tU, pU, EU, PU, TU, qU] = gU;
+      return (0, dU.jsxs)("div", {
+        className: ZU()(RU, `Owner-${pU||"None"}`, `Leader-${PU||"None"}`, {
+          Contested: TU,
+          Here: qU
         }),
-        children: [(0, LD.jsx)("span", {
+        children: [(0, dU.jsx)("span", {
           className: "FrontlinePointLetter",
-          children: ID
-        }), (0, LD.jsx)("i", {
+          children: tU
+        }), (0, dU.jsx)("i", {
           className: "FrontlinePointFill",
           style: {
-            width: `${iD}%`
+            width: `${EU}%`
           }
         })]
       })
     }
-    const kD = (0, pD.memo)((function(DD) {
+    const yU = (0, pU.memo)((function(UU) {
         let {
-          points: CD,
-          markers: cD
-        } = DD;
+          points: RU,
+          markers: gU
+        } = UU;
         const {
-          t: ID
-        } = (0, aD.F)();
-        return CD ? (0, LD.jsx)("div", {
+          t: tU
+        } = (0, BU.B)();
+        return RU ? (0, dU.jsx)("div", {
           className: "FrontlinePointMarkers",
-          children: CD.map((DD => {
-            const [CD, , , , , , , pD] = DD;
-            return (0, LD.jsxs)("div", {
-              ref: cD.bindMarker(CD),
+          children: RU.map((UU => {
+            const [RU, , , , , , , pU] = UU;
+            return (0, dU.jsxs)("div", {
+              ref: gU.bindMarker(RU),
               className: "FrontlinePointMarker",
-              children: [(0, LD.jsx)(RD, {
+              children: [(0, dU.jsx)(sU, {
                 className: "FrontlinePointMarkerTile",
-                point: DD
-              }), (0, LD.jsxs)("div", {
+                point: UU
+              }), (0, dU.jsxs)("div", {
                 className: "FrontlinePointMarkerLabels",
-                children: [pD && (0, LD.jsx)("span", {
-                  className: qD()("FrontlinePointMarkerHomeTurf", `Team-${pD}`),
-                  children: ID("frontlineHud:homeTurf", {
-                    team: ID(TD[pD])
+                children: [pU && (0, dU.jsx)("span", {
+                  className: ZU()("FrontlinePointMarkerHomeTurf", `Team-${pU}`),
+                  children: tU("frontlineHud:homeTurf", {
+                    team: tU(HU[pU])
                   })
-                }), (0, LD.jsx)("span", {
+                }), (0, dU.jsx)("span", {
                   className: "FrontlinePointMarkerDistance"
                 })]
               })]
-            }, CD)
+            }, RU)
           }))
         }) : null
       })),
-      dD = {
+      kU = {
         capturing: "frontlineHud:capturing",
         contesting: "frontlineHud:contesting",
         defending: "frontlineHud:defending",
         captured: "frontlineHud:captured"
       },
-      YD = {
+      FU = {
         captured: "frontlineHud:capturedTag",
         lost: "frontlineHud:lostTag",
         milestone: "frontlineHud:milestoneTag",
@@ -895,321 +895,321 @@ export const modules = {
         reinforcements: "frontlineHud:reinforcementsTag"
       };
 
-    function WD(DD) {
+    function iU(UU) {
       let {
-        hud: CD,
-        crosshair: cD,
-        damage: ID,
-        markers: pD
-      } = DD;
-      const iD = (0, VD.g)(zD, CD.getWire()),
-        fD = (0, VD.g)(jD, CD.getScoreboard());
-      return (0, LD.jsxs)(LD.Fragment, {
-        children: [(0, LD.jsx)(sD, {
-          damage: ID
-        }), (0, LD.jsx)(kD, {
-          points: "scoreboard" === fD.wire[0] ? fD.wire[6] : null,
-          markers: pD
-        }), (0, LD.jsx)(eD, {
-          view: fD
-        }), (0, LD.jsx)("div", {
+        hud: RU,
+        crosshair: gU,
+        damage: tU,
+        markers: pU
+      } = UU;
+      const EU = (0, VU.h)(rU, RU.getWire()),
+        PU = (0, VU.h)(XU, RU.getScoreboard());
+      return (0, dU.jsxs)(dU.Fragment, {
+        children: [(0, dU.jsx)(AU, {
+          damage: tU
+        }), (0, dU.jsx)(yU, {
+          points: "scoreboard" === PU.wire[0] ? PU.wire[6] : null,
+          markers: pU
+        }), (0, dU.jsx)(MU, {
+          view: PU
+        }), (0, dU.jsx)("div", {
           className: "FrontlineReticle",
-          ref: cD.bindElement
-        }), (0, LD.jsx)(JD.e, {
-          children: (0, LD.jsx)(ED, {
-            wire: iD
+          ref: gU.bindElement
+        }), (0, dU.jsx)(aU.e, {
+          children: (0, dU.jsx)(zU, {
+            wire: EU
           })
         })]
       })
     }
-    const sD = (0, pD.memo)((function(DD) {
+    const AU = (0, pU.memo)((function(UU) {
         let {
-          damage: CD
-        } = DD;
-        return (0, LD.jsxs)("div", {
+          damage: RU
+        } = UU;
+        return (0, dU.jsxs)("div", {
           className: "FrontlineDamage",
-          ref: CD.bindElement,
-          children: [(0, LD.jsx)("div", {
+          ref: RU.bindElement,
+          children: [(0, dU.jsx)("div", {
             className: "FrontlineDamageLow",
-            children: (0, LD.jsx)("div", {
+            children: (0, dU.jsx)("div", {
               className: "FrontlineDamageShade"
             })
-          }), (0, LD.jsx)("div", {
+          }), (0, dU.jsx)("div", {
             className: "FrontlineDamageArcs"
           })]
         })
       })),
-      ED = (0, pD.memo)((function(DD) {
+      zU = (0, pU.memo)((function(UU) {
         let {
-          wire: CD
-        } = DD;
+          wire: RU
+        } = UU;
         const {
-          t: cD
-        } = (0, aD.F)();
-        if ("capture" === CD[0]) {
-          const [, DD, ID, pD, iD, fD, bD] = CD, QD = Math.round(pD / 100 * 24);
-          return (0, LD.jsxs)("div", {
-            className: qD()("FrontlinePlate", `Status-${ID}`, `Leader-${iD||"None"}`),
-            children: [(0, LD.jsx)(AD, {}), (0, LD.jsxs)("div", {
+          t: gU
+        } = (0, BU.B)();
+        if ("capture" === RU[0]) {
+          const [, UU, tU, pU, EU, PU, TU] = RU, qU = Math.round(pU / 100 * 24);
+          return (0, dU.jsxs)("div", {
+            className: ZU()("FrontlinePlate", `Status-${tU}`, `Leader-${EU||"None"}`),
+            children: [(0, dU.jsx)(lU, {}), (0, dU.jsxs)("div", {
               className: "FrontlinePlateRow",
-              children: [(0, LD.jsx)("span", {
+              children: [(0, dU.jsx)("span", {
                 className: "FrontlineObjective",
-                children: DD
-              }), (0, LD.jsxs)("div", {
+                children: UU
+              }), (0, dU.jsxs)("div", {
                 className: "FrontlinePlateMiddle",
-                children: [(0, LD.jsx)("div", {
+                children: [(0, dU.jsx)("div", {
                   className: "FrontlinePlateMeta",
-                  children: cD("frontlineHud:objective", {
-                    point: DD,
-                    friendly: fD,
-                    enemy: bD
+                  children: gU("frontlineHud:objective", {
+                    point: UU,
+                    friendly: PU,
+                    enemy: TU
                   })
-                }), (0, LD.jsx)("div", {
+                }), (0, dU.jsx)("div", {
                   className: "FrontlinePlateStatus",
-                  children: cD(dD[ID])
+                  children: gU(kU[tU])
                 })]
-              }), (0, LD.jsxs)("span", {
+              }), (0, dU.jsxs)("span", {
                 className: "FrontlinePercent",
-                children: [String(pD).padStart(3, "0"), (0, LD.jsx)("small", {
+                children: [String(pU).padStart(3, "0"), (0, dU.jsx)("small", {
                   children: "%"
                 })]
               })]
-            }), (0, LD.jsx)(hD, {
+            }), (0, dU.jsx)(LU, {
               segments: 24,
-              lit: QD
+              lit: qU
             })]
           })
         }
-        if ("alert" === CD[0]) {
-          const [, DD, ID, pD] = CD;
-          return (0, LD.jsxs)("div", {
-            className: qD()("FrontlinePlate", "FrontlineAlert", `Tone-${pD}`),
-            children: [(0, LD.jsx)(AD, {}), (0, LD.jsx)("div", {
+        if ("alert" === RU[0]) {
+          const [, UU, tU, pU] = RU;
+          return (0, dU.jsxs)("div", {
+            className: ZU()("FrontlinePlate", "FrontlineAlert", `Tone-${pU}`),
+            children: [(0, dU.jsx)(lU, {}), (0, dU.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: cD(YD[DD])
-            }), (0, LD.jsx)("div", {
+              children: gU(FU[UU])
+            }), (0, dU.jsx)("div", {
               className: "FrontlinePlateStatus",
-              children: ID
+              children: tU
             })]
           })
         }
         return null
       })),
-      eD = (0, pD.memo)((function(DD) {
+      MU = (0, pU.memo)((function(UU) {
         let {
-          view: CD
-        } = DD;
+          view: RU
+        } = UU;
         const {
-          t: cD
-        } = (0, aD.F)(), ID = (0, pD.useRef)(null), iD = function(DD, CD) {
-          const [cD, ID] = (0, pD.useState)(!1);
-          return (0, pD.useLayoutEffect)((() => {
-            const CD = DD.current;
-            if (!CD) return;
-            const cD = document.querySelector(`.${KD.g}`),
-              pD = document.querySelector(`.${KD.h}`),
-              iD = () => {
-                var DD;
-                const iD = CD.querySelector(".FrontlineTeamTrack"),
-                  fD = (0, QD.getRemInPx)(),
-                  bD = CD.getBoundingClientRect().width - 2 * (null !== (DD = null === iD || void 0 === iD ? void 0 : iD.getBoundingClientRect().width) && void 0 !== DD ? DD : 0),
-                  wD = window.innerWidth / 2,
-                  SD = cD ? cD.getBoundingClientRect().right : 0,
-                  BD = pD ? pD.getBoundingClientRect().left : window.innerWidth,
-                  yD = Math.min(wD - SD, BD - wD) - KD.c - bD / 2,
-                  MD = yD < 6 * fD,
-                  tD = MD ? (window.innerWidth - bD) / 2 - KD.c : yD;
-                CD.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(tD,14*fD)))}px`), ID(MD)
+          t: gU
+        } = (0, BU.B)(), tU = (0, pU.useRef)(null), EU = function(UU, RU) {
+          const [gU, tU] = (0, pU.useState)(!1);
+          return (0, pU.useLayoutEffect)((() => {
+            const RU = UU.current;
+            if (!RU) return;
+            const gU = document.querySelector(`.${YU.f}`),
+              pU = document.querySelector(`.${YU.i}`),
+              EU = () => {
+                var UU;
+                const EU = RU.querySelector(".FrontlineTeamTrack"),
+                  PU = (0, qU.getRemInPx)(),
+                  TU = RU.getBoundingClientRect().width - 2 * (null !== (UU = null === EU || void 0 === EU ? void 0 : EU.getBoundingClientRect().width) && void 0 !== UU ? UU : 0),
+                  KU = window.innerWidth / 2,
+                  cU = gU ? gU.getBoundingClientRect().right : 0,
+                  GU = pU ? pU.getBoundingClientRect().left : window.innerWidth,
+                  jU = Math.min(KU - cU, GU - KU) - YU.d - TU / 2,
+                  uU = jU < 6 * PU,
+                  CU = uU ? (window.innerWidth - TU) / 2 - YU.d : jU;
+                RU.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(CU,14*PU)))}px`), tU(uU)
               };
-            iD();
-            const fD = new ResizeObserver(iD);
-            for (const DD of [CD, cD, pD]) DD && fD.observe(DD);
-            return window.addEventListener("resize", iD), () => {
-              fD.disconnect(), window.removeEventListener("resize", iD)
+            EU();
+            const PU = new ResizeObserver(EU);
+            for (const UU of [RU, gU, pU]) UU && PU.observe(UU);
+            return window.addEventListener("resize", EU), () => {
+              PU.disconnect(), window.removeEventListener("resize", EU)
             }
-          }), [DD, CD]), cD
-        }(ID, "scoreboard" === CD.wire[0]);
-        if ("scoreboard" !== CD.wire[0]) return null;
-        const [, fD, bD, wD, SD, , BD] = CD.wire, yD = "Red" === fD ? "Blue" : "Red";
-        return (0, LD.jsxs)("div", {
-          className: qD()("FrontlineScoreboardContainer", {
-            Below: iD
+          }), [UU, RU]), gU
+        }(tU, "scoreboard" === RU.wire[0]);
+        if ("scoreboard" !== RU.wire[0]) return null;
+        const [, PU, TU, KU, cU, , GU] = RU.wire, jU = "Red" === PU ? "Blue" : "Red";
+        return (0, dU.jsxs)("div", {
+          className: ZU()("FrontlineScoreboardContainer", {
+            Below: EU
           }),
-          children: [(0, LD.jsxs)("div", {
-            ref: ID,
+          children: [(0, dU.jsxs)("div", {
+            ref: tU,
             className: "FrontlineScoreboard",
-            children: [(0, LD.jsx)(AD, {}), (0, LD.jsx)(uD, {
-              team: fD,
-              tickets: bD,
-              goal: SD,
+            children: [(0, dU.jsx)(lU, {}), (0, dU.jsx)(DU, {
+              team: PU,
+              tickets: TU,
+              goal: cU,
               side: "Friendly"
-            }), (0, LD.jsx)("div", {
+            }), (0, dU.jsx)("div", {
               className: "FrontlinePoints",
-              children: BD.map((DD => (0, LD.jsx)(RD, {
+              children: GU.map((UU => (0, dU.jsx)(sU, {
                 className: "FrontlinePoint",
-                point: DD
-              }, DD[0])))
-            }), (0, LD.jsx)(uD, {
-              team: yD,
-              tickets: wD,
-              goal: SD,
+                point: UU
+              }, UU[0])))
+            }), (0, dU.jsx)(DU, {
+              team: jU,
+              tickets: KU,
+              goal: cU,
               side: "Enemy"
             })]
-          }), (0, LD.jsxs)("div", {
+          }), (0, dU.jsxs)("div", {
             className: "FrontlineClockTab",
-            children: [(0, LD.jsx)(rD, {
-              endsAt: CD.endsAt
-            }), (0, LD.jsx)("div", {
+            children: [(0, dU.jsx)(NU, {
+              endsAt: RU.endsAt
+            }), (0, dU.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: cD("frontlineHud:ticketGoal", {
-                goal: SD
+              children: gU("frontlineHud:ticketGoal", {
+                goal: cU
               })
             })]
           })]
         })
       }));
 
-    function uD(DD) {
+    function DU(UU) {
       let {
-        team: CD,
-        tickets: cD,
-        goal: ID,
-        side: pD
-      } = DD;
+        team: RU,
+        tickets: gU,
+        goal: tU,
+        side: pU
+      } = UU;
       const {
-        t: iD
-      } = (0, aD.F)(), fD = String(cD).padStart(3, "0"), bD = fD.search(/[1-9]/), QD = -1 === bD ? fD : fD.slice(0, bD), wD = Math.min(20, Math.floor(cD / ID * 20));
-      return (0, LD.jsxs)("div", {
-        className: qD()("FrontlineTeamScore", pD, `Team-${CD}`),
-        children: [(0, LD.jsxs)("div", {
+        t: EU
+      } = (0, BU.B)(), PU = String(gU).padStart(3, "0"), TU = PU.search(/[1-9]/), qU = -1 === TU ? PU : PU.slice(0, TU), KU = Math.min(20, Math.floor(gU / tU * 20));
+      return (0, dU.jsxs)("div", {
+        className: ZU()("FrontlineTeamScore", pU, `Team-${RU}`),
+        children: [(0, dU.jsxs)("div", {
           className: "FrontlineTickets",
-          children: [(0, LD.jsx)("span", {
+          children: [(0, dU.jsx)("span", {
             className: "Lead",
-            children: QD
-          }), -1 !== bD && fD.slice(bD)]
-        }), (0, LD.jsxs)("div", {
+            children: qU
+          }), -1 !== TU && PU.slice(TU)]
+        }), (0, dU.jsxs)("div", {
           className: "FrontlineTeamTrack",
-          children: [(0, LD.jsx)("div", {
+          children: [(0, dU.jsx)("div", {
             className: "FrontlinePlateMeta",
-            children: iD(TD[CD])
-          }), (0, LD.jsx)(hD, {
+            children: EU(HU[RU])
+          }), (0, dU.jsx)(LU, {
             segments: 20,
-            lit: wD
+            lit: KU
           })]
         })]
       })
     }
 
-    function hD(DD) {
+    function LU(UU) {
       let {
-        segments: CD,
-        lit: cD
-      } = DD;
-      return (0, LD.jsx)("div", {
+        segments: RU,
+        lit: gU
+      } = UU;
+      return (0, dU.jsx)("div", {
         className: "FrontlineBar",
         children: Array.from({
-          length: CD
-        }, ((DD, CD) => (0, LD.jsx)("i", {
-          className: qD()({
-            Lit: CD < cD
+          length: RU
+        }, ((UU, RU) => (0, dU.jsx)("i", {
+          className: ZU()({
+            Lit: RU < gU
           })
-        }, CD)))
+        }, RU)))
       })
     }
 
-    function rD(DD) {
+    function NU(UU) {
       let {
-        endsAt: CD
-      } = DD;
-      const cD = Math.max(0, Math.ceil(GD(CD)));
-      return (0, LD.jsxs)("div", {
-        className: qD()("FrontlineClock", {
-          Urgent: cD <= 60
+        endsAt: RU
+      } = UU;
+      const gU = Math.max(0, Math.ceil(SU(RU)));
+      return (0, dU.jsxs)("div", {
+        className: ZU()("FrontlineClock", {
+          Urgent: gU <= 60
         }),
-        children: [Math.floor(cD / 60), ":", String(cD % 60).padStart(2, "0")]
+        children: [Math.floor(gU / 60), ":", String(gU % 60).padStart(2, "0")]
       })
     }
 
-    function AD() {
-      return (0, LD.jsxs)(LD.Fragment, {
-        children: [(0, LD.jsx)("i", {
+    function lU() {
+      return (0, dU.jsxs)(dU.Fragment, {
+        children: [(0, dU.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, LD.jsx)("i", {
+        }), (0, dU.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
         })]
       })
     }
-    var FD = cD(36083),
-      DC = cD(1250),
-      CC = cD(37870),
-      cC = cD(37907);
-    class IC {
-      constructor(DD) {
-        var CD;
-        this.hud = DD, this.markers = new Map, this.refs = new Map, this.viewport = {
+    var OU = gU(36275),
+      UR = gU(1249),
+      RR = gU(38046),
+      gR = gU(38083);
+    class tR {
+      constructor(UU) {
+        var RU;
+        this.hud = UU, this.markers = new Map, this.refs = new Map, this.viewport = {
           width: window.innerWidth,
           height: window.innerHeight
-        }, this.render = null, this.Lt = !1, this.yX = () => {
+        }, this.render = null, this.pC = !1, this.Xx = () => {
           this.viewport = {
             width: window.innerWidth,
             height: window.innerHeight
           }
-        }, window.addEventListener("resize", this.yX), null === (CD = window.visualViewport) || void 0 === CD || CD.addEventListener("resize", this.yX)
+        }, window.addEventListener("resize", this.Xx), null === (RU = window.visualViewport) || void 0 === RU || RU.addEventListener("resize", this.Xx)
       }
-      bindMarker(DD) {
-        let CD = this.refs.get(DD);
-        return CD || (CD = CD => {
-          var cD;
-          null === (cD = this.markers.get(DD)) || void 0 === cD || cD.stopObserving(), this.markers.delete(DD), CD && !this.Lt && this.markers.set(DD, this.mount(CD))
-        }, this.refs.set(DD, CD)), CD
+      bindMarker(UU) {
+        let RU = this.refs.get(UU);
+        return RU || (RU = RU => {
+          var gU;
+          null === (gU = this.markers.get(UU)) || void 0 === gU || gU.stopObserving(), this.markers.delete(UU), RU && !this.pC && this.markers.set(UU, this.mount(RU))
+        }, this.refs.set(UU, RU)), RU
       }
-      frame(DD, CD) {
-        this.render = DD;
-        const cD = this.hud.getScoreboard().wire;
-        if ("scoreboard" === cD[0] && 0 !== this.markers.size)
-          for (const [ID, , , , , , pD] of cD[6]) {
-            const DD = this.markers.get(ID);
-            DD && pD && (DD.target ??= [0, 0, 0], DD.target[0] = pD[0], DD.target[1] = pD[1] + 2.5, DD.target[2] = pD[2], this.place(DD), this.Fp(DD, CD && Math.hypot(pD[0] - CD[0], pD[1] - CD[1], pD[2] - CD[2])))
+      frame(UU, RU) {
+        this.render = UU;
+        const gU = this.hud.getScoreboard().wire;
+        if ("scoreboard" === gU[0] && 0 !== this.markers.size)
+          for (const [tU, , , , , , pU] of gU[6]) {
+            const UU = this.markers.get(tU);
+            UU && pU && (UU.target ??= [0, 0, 0], UU.target[0] = pU[0], UU.target[1] = pU[1] + 2.5, UU.target[2] = pU[2], this.place(UU), this.pE(UU, RU && Math.hypot(pU[0] - RU[0], pU[1] - RU[1], pU[2] - RU[2])))
           }
       }
       dispose() {
-        var DD;
-        this.Lt = !0, window.removeEventListener("resize", this.yX), null === (DD = window.visualViewport) || void 0 === DD || DD.removeEventListener("resize", this.yX);
-        for (const CD of this.markers.values()) CD.stopObserving();
+        var UU;
+        this.pC = !0, window.removeEventListener("resize", this.Xx), null === (UU = window.visualViewport) || void 0 === UU || UU.removeEventListener("resize", this.Xx);
+        for (const RU of this.markers.values()) RU.stopObserving();
         this.markers.clear(), this.refs.clear(), this.render = null
       }
-      place(DD) {
+      place(UU) {
         const {
-          render: CD,
-          viewport: cD
+          render: RU,
+          viewport: gU
         } = this;
-        if (!CD || !DD.target) return;
-        const ID = (50 - CD.screenBandPct.y) / 100 * cD.height,
-          pD = {
-            x: DD.halfSize.width + 8,
-            top: DD.halfSize.height + 8,
-            bottom: DD.halfSize.height + DD.labelsBelow + ID
+        if (!RU || !UU.target) return;
+        const tU = (50 - RU.screenBandPct.y) / 100 * gU.height,
+          pU = {
+            x: UU.halfSize.width + 8,
+            top: UU.halfSize.height + 8,
+            bottom: UU.halfSize.height + UU.labelsBelow + tU
           },
-          iD = CD.projectWorldPosToViewport(DD.target),
-          fD = null !== iD && void 0 !== iD ? iD : CD.projectWorldPosToScreenPos(DD.target),
-          bD = (0, cC.e)({
-            x: fD.x,
-            y: fD.y,
-            text: iD
-          }, pD, cD);
-        (0, CC.c)(DD.root, Math.round(100 * bD.x) / 100, Math.round(100 * bD.y) / 100)
+          EU = RU.projectWorldPosToViewport(UU.target),
+          PU = null !== EU && void 0 !== EU ? EU : RU.projectWorldPosToScreenPos(UU.target),
+          TU = (0, gR.e)({
+            x: PU.x,
+            y: PU.y,
+            text: EU
+          }, pU, gU);
+        (0, RR.c)(UU.root, Math.round(100 * TU.x) / 100, Math.round(100 * TU.y) / 100)
       }
-      Fp(DD, CD) {
-        if (null === CD) return void(null !== DD.metres && (DD.metres = null, DD.distance.textContent = ""));
-        const cD = Date.now();
-        (null === DD.metres || (0, FD.d)(CD, DD.metres, DD.metresShownAt)) && (DD.metres = Math.round(CD), DD.metresShownAt = cD, DD.distance.textContent = (0, aD.y)(DC.e.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
-          distance: String(DD.metres)
+      pE(UU, RU) {
+        if (null === RU) return void(null !== UU.metres && (UU.metres = null, UU.distance.textContent = ""));
+        const gU = Date.now();
+        (null === UU.metres || (0, OU.d)(RU, UU.metres, UU.metresShownAt)) && (UU.metres = Math.round(RU), UU.metresShownAt = gU, UU.distance.textContent = (0, BU.x)(UR.g.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
+          distance: String(UU.metres)
         }))
       }
-      mount(DD) {
-        const CD = {
-            root: DD,
-            distance: DD.querySelector(".FrontlinePointMarkerDistance"),
+      mount(UU) {
+        const RU = {
+            root: UU,
+            distance: UU.querySelector(".FrontlinePointMarkerDistance"),
             halfSize: {
               width: 0,
               height: 0
@@ -1220,26 +1220,26 @@ export const modules = {
             metresShownAt: 0,
             stopObserving: () => {}
           },
-          cD = DD.querySelector(".FrontlinePointMarkerLabels"),
-          ID = new ResizeObserver((() => {
-            CD.halfSize = {
-              width: Math.max(DD.offsetWidth, cD.offsetWidth) / 2,
-              height: DD.offsetHeight / 2
-            }, CD.labelsBelow = cD.offsetTop + cD.offsetHeight - DD.offsetHeight, this.place(CD)
+          gU = UU.querySelector(".FrontlinePointMarkerLabels"),
+          tU = new ResizeObserver((() => {
+            RU.halfSize = {
+              width: Math.max(UU.offsetWidth, gU.offsetWidth) / 2,
+              height: UU.offsetHeight / 2
+            }, RU.labelsBelow = gU.offsetTop + gU.offsetHeight - UU.offsetHeight, this.place(RU)
           }));
-        return ID.observe(DD, {
+        return tU.observe(UU, {
           box: "border-box"
-        }), ID.observe(cD, {
+        }), tU.observe(gU, {
           box: "border-box"
-        }), CD.stopObserving = () => {
-          ID.disconnect()
-        }, CD
+        }), RU.stopObserving = () => {
+          tU.disconnect()
+        }, RU
       }
     }
-    var pC = cD(6176),
-      iC = cD(2482);
-    const fC = "frontlineRoundEndChanged";
-    class bC {
+    var pR = gU(6127),
+      ER = gU(2401);
+    const PR = "frontlineRoundEndChanged";
+    class TR {
       constructor() {
         this.view = {
           wire: ["none"],
@@ -1250,245 +1250,245 @@ export const modules = {
       getView() {
         return this.view
       }
-      kt(DD) {
-        const CD = "roundEnd" === DD[0] ? performance.now() + DD[5] : 0;
+      qC(UU) {
+        const RU = "roundEnd" === UU[0] ? performance.now() + UU[5] : 0;
         this.view = {
-          wire: DD,
+          wire: UU,
           key: this.view.key + 1,
-          endsAt: CD
-        }, wD.i.Uo(fC, this.view, !0)
+          endsAt: RU
+        }, KU.p.yh(PR, this.view, !0)
       }
     }
-    const QC = (0, pD.lazy)((() => (0, iC.c)(cD.e(191).then((() => cD(40845))), (DD => DD.FrontlineMvpLineup)))),
-      wC = [4800, 4e3, 3200],
-      SC = [1, 0, 2],
-      BC = {
+    const qR = (0, pU.lazy)((() => (0, ER.e)(gU.e(191).then((() => gU(41107))), (UU => UU.FrontlineMvpLineup)))),
+      KR = [4800, 4e3, 3200],
+      cR = [1, 0, 2],
+      GR = {
         victory: "frontlineRoundEnd:victory",
         defeat: "frontlineRoundEnd:defeat",
         draw: "frontlineRoundEnd:draw"
       },
-      yC = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
+      jR = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
 
-    function MC(DD) {
+    function uR(UU) {
       let {
-        controller: CD
-      } = DD;
-      const cD = (0, VD.g)(fC, CD.getView()),
-        ID = GD(cD.endsAt);
-      return "roundEnd" !== cD.wire[0] || 1e3 * ID < -2e3 ? null : (0, LD.jsx)(tC, {
-        wire: cD.wire,
-        secondsLeft: Math.max(0, Math.ceil(ID))
-      }, cD.key)
+        controller: RU
+      } = UU;
+      const gU = (0, VU.h)(PR, RU.getView()),
+        tU = SU(gU.endsAt);
+      return "roundEnd" !== gU.wire[0] || 1e3 * tU < -2e3 ? null : (0, dU.jsx)(CR, {
+        wire: gU.wire,
+        secondsLeft: Math.max(0, Math.ceil(tU))
+      }, gU.key)
     }
-    const tC = (0, pD.memo)((function(DD) {
+    const CR = (0, pU.memo)((function(UU) {
       let {
-        wire: CD,
-        secondsLeft: cD
-      } = DD;
+        wire: RU,
+        secondsLeft: gU
+      } = UU;
       const {
-        t: iD
-      } = (0, aD.F)(), [, fD, bD, QD, wD, , SD, BD] = CD, yD = (0, pD.useMemo)((() => SC.filter((DD => DD < BD.length))), [BD]), MD = (0, pD.useMemo)((() => yD.map((DD => {
-        const [, , , , , CD, cD] = BD[DD];
+        t: EU
+      } = (0, BU.B)(), [, PU, TU, qU, KU, , cU, GU] = RU, jU = (0, pU.useMemo)((() => cR.filter((UU => UU < GU.length))), [GU]), uU = (0, pU.useMemo)((() => jU.map((UU => {
+        const [, , , , , RU, gU] = GU[UU];
         return {
-          cosmetics: ID.map(((DD, cD) => [DD, CD[cD]])),
-          size: 0 === DD ? 1.15 : .85,
+          cosmetics: tU.map(((UU, gU) => [UU, RU[gU]])),
+          size: 0 === UU ? 1.15 : .85,
           heldGun: {
-            name: cD,
-            aimed: 0 === DD
+            name: gU,
+            aimed: 0 === UU
           },
-          showAfterMs: wC[DD]
+          showAfterMs: KR[UU]
         }
-      }))), [BD, yD]);
-      return (0, LD.jsxs)("div", {
-        className: qD()("FrontlineRoundEnd", `Result-${fD}`),
+      }))), [GU, jU]);
+      return (0, dU.jsxs)("div", {
+        className: ZU()("FrontlineRoundEnd", `Result-${PU}`),
         style: {
           "--titleRiseMs": "2600ms"
         },
-        children: [(0, LD.jsx)("div", {
+        children: [(0, dU.jsx)("div", {
           className: "FrontlineRoundEndVeil"
-        }), (0, LD.jsxs)("div", {
+        }), (0, dU.jsxs)("div", {
           className: "FrontlineRoundEndTitle",
-          children: [(0, LD.jsxs)("div", {
+          children: [(0, dU.jsxs)("div", {
             className: "FrontlineRoundEndResult",
-            children: [(0, LD.jsx)("i", {
+            children: [(0, dU.jsx)("i", {
               className: "FrontlineBracket TopLeft"
-            }), (0, LD.jsx)("i", {
+            }), (0, dU.jsx)("i", {
               className: "FrontlineBracket BottomRight"
-            }), (tD = iD(BC[fD]), /\p{Script=Arabic}/u.test(tD) ? [tD] : (0, pC.b)(tD)).map(((DD, CD) => (0, LD.jsx)("span", {
+            }), (CU = EU(GR[PU]), /\p{Script=Arabic}/u.test(CU) ? [CU] : (0, pR.e)(CU)).map(((UU, RU) => (0, dU.jsx)("span", {
               style: {
-                "--letter": CD
+                "--letter": RU
               },
-              children: DD
-            }, CD)))]
-          }), (0, LD.jsxs)("div", {
+              children: UU
+            }, RU)))]
+          }), (0, dU.jsxs)("div", {
             className: "FrontlineRoundEndScore",
-            children: [bD && "victory" === fD && (0, LD.jsx)("span", {
+            children: [TU && "victory" === PU && (0, dU.jsx)("span", {
               className: "FrontlineRoundEndComeback",
-              children: iD("frontlineRoundEnd:comeback")
-            }), (0, LD.jsxs)("span", {
+              children: EU("frontlineRoundEnd:comeback")
+            }), (0, dU.jsxs)("span", {
               className: "FrontlineRoundEndTickets",
-              children: [(0, LD.jsx)("b", {
+              children: [(0, dU.jsx)("b", {
                 className: "Friendly",
-                children: QD
-              }), " \u2013 ", (0, LD.jsx)("b", {
+                children: qU
+              }), " \u2013 ", (0, dU.jsx)("b", {
                 className: "Enemy",
-                children: wD
+                children: KU
               })]
             })]
           })]
-        }), yD.length > 0 && (0, LD.jsxs)("div", {
+        }), jU.length > 0 && (0, dU.jsxs)("div", {
           className: "FrontlineRoundEndMvps",
           style: {
-            "--columns": yD.length
+            "--columns": jU.length
           },
-          children: [(0, LD.jsx)(pD.Suspense, {
+          children: [(0, dU.jsx)(pU.Suspense, {
             fallback: null,
-            children: (0, LD.jsx)(QC, {
+            children: (0, dU.jsx)(qR, {
               className: "FrontlineRoundEndLineup",
-              players: MD
+              players: uU
             })
-          }), yD.map((DD => (0, LD.jsx)(ZC, {
-            mvp: BD[DD],
-            place: DD
-          }, DD)))]
-        }), (0, LD.jsx)("div", {
+          }), jU.map((UU => (0, dU.jsx)(hR, {
+            mvp: GU[UU],
+            place: UU
+          }, UU)))]
+        }), (0, dU.jsx)("div", {
           className: "FrontlineRoundEndNext",
-          children: iD("frontlineRoundEnd:nextFront", {
-            map: SD,
-            seconds: String(cD)
+          children: EU("frontlineRoundEnd:nextFront", {
+            map: cU,
+            seconds: String(gU)
           })
         })]
       });
-      var tD
+      var CU
     }));
 
-    function ZC(DD) {
+    function hR(UU) {
       let {
-        mvp: CD,
-        place: cD
-      } = DD;
+        mvp: RU,
+        place: gU
+      } = UU;
       const {
-        t: ID
-      } = (0, aD.F)(), [pD, iD, fD, bD, QD] = CD, [wD, SD] = ID(function(DD, CD) {
-        return 1 === CD && "damage" !== DD ? `frontlineRoundEnd:${DD}One` : `frontlineRoundEnd:${DD}`
-      }(fD, bD), {
+        t: tU
+      } = (0, BU.B)(), [pU, EU, PU, TU, qU] = RU, [KU, cU] = tU(function(UU, RU) {
+        return 1 === RU && "damage" !== UU ? `frontlineRoundEnd:${UU}One` : `frontlineRoundEnd:${UU}`
+      }(PU, TU), {
         name: "\0",
-        count: bD.toLocaleString()
+        count: TU.toLocaleString()
       }).split("\0");
-      return (0, LD.jsxs)("div", {
-        className: qD()("FrontlineMvpCard", `Place-${cD+1}`, `Team-${iD}`),
+      return (0, dU.jsxs)("div", {
+        className: ZU()("FrontlineMvpCard", `Place-${gU+1}`, `Team-${EU}`),
         style: {
-          "--revealMs": `${wC[cD]}ms`
+          "--revealMs": `${KR[gU]}ms`
         },
-        children: [(0, LD.jsx)("i", {
+        children: [(0, dU.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, LD.jsx)("i", {
+        }), (0, dU.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
-        }), (0, LD.jsx)("div", {
+        }), (0, dU.jsx)("div", {
           className: "FrontlineMvpPlace",
-          children: ID(yC[cD])
-        }), (0, LD.jsxs)("div", {
+          children: tU(jR[gU])
+        }), (0, dU.jsxs)("div", {
           className: "FrontlineMvpLine",
-          children: [wD, (0, LD.jsx)("span", {
+          children: [KU, (0, dU.jsx)("span", {
             className: "FrontlineMvpName",
-            children: pD
-          }), SD]
-        }), (0, LD.jsx)("div", {
+            children: pU
+          }), cU]
+        }), (0, dU.jsx)("div", {
           className: "FrontlineMvpKit",
-          children: QD
+          children: qU
         })]
       })
     }
-    const oC = function(DD, CD, cD, ID) {
+    const QR = function(UU, RU, gU, tU) {
       let {
-        localPlayerId: fD
-      } = ID;
-      const bD = new lD,
-        QD = new bC;
-      let wD = null,
-        SD = null,
-        BD = null,
-        yD = null,
-        MD = null,
-        tD = [!1, !1];
-      const ZD = () => {
-        var DD, CD;
-        const [cD, ID] = tD;
-        null === (DD = SD) || void 0 === DD || DD.lH(!cD), null === (CD = BD) || void 0 === CD || CD.lH(!ID)
+        localPlayerId: PU
+      } = tU;
+      const TU = new vU,
+        qU = new TR;
+      let KU = null,
+        cU = null,
+        GU = null,
+        jU = null,
+        uU = null,
+        CU = [!1, !1];
+      const hU = () => {
+        var UU, RU;
+        const [gU, tU] = CU;
+        null === (UU = cU) || void 0 === UU || UU.GJ(!gU), null === (RU = GU) || void 0 === RU || RU.GJ(!tU)
       };
       return {
-        onCreate: DD => {
-          wD = DD, SD = new gD(DD, fD), BD = new OD(DD, fD), yD = new IC(bD), ZD(), MD = (0, iD.v)((0, pD.createElement)(pD.Fragment, null, (0, pD.createElement)(WD, {
-            hud: bD,
-            crosshair: SD,
-            damage: BD,
-            markers: yD
-          }), (0, pD.createElement)(MC, {
-            controller: QD
+        onCreate: UU => {
+          KU = UU, cU = new fU(UU, PU), GU = new JU(UU, PU), jU = new tR(TU), hU(), uU = (0, EU.y)((0, pU.createElement)(pU.Fragment, null, (0, pU.createElement)(iU, {
+            hud: TU,
+            crosshair: cU,
+            damage: GU,
+            markers: jU
+          }), (0, pU.createElement)(uR, {
+            controller: qU
           })))
         },
         onClose: () => {
-          var DD, CD, cD, ID;
-          null === (DD = MD) || void 0 === DD || DD(), null === (CD = SD) || void 0 === CD || CD.dispose(), SD = null, null === (cD = BD) || void 0 === cD || cD.dispose(), BD = null, null === (ID = yD) || void 0 === ID || ID.dispose(), yD = null, wD = null
+          var UU, RU, gU, tU;
+          null === (UU = uU) || void 0 === UU || UU(), null === (RU = cU) || void 0 === RU || RU.dispose(), cU = null, null === (gU = GU) || void 0 === gU || gU.dispose(), GU = null, null === (tU = jU) || void 0 === tU || tU.dispose(), jU = null, KU = null
         },
-        onAfterRender: (DD, CD) => {
-          var cD, ID, pD, iD;
-          null === (cD = SD) || void 0 === cD || cD.frame(DD, CD.tanHalfFovY), null === (ID = BD) || void 0 === ID || ID.frame(CD.cameraHeading), null === (pD = yD) || void 0 === pD || pD.frame(CD, null !== (iD = wD) && void 0 !== iD && iD.checkValid(fD) ? wD.FX(fD) : null)
+        onAfterRender: (UU, RU) => {
+          var gU, tU, pU, EU;
+          null === (gU = cU) || void 0 === gU || gU.frame(UU, RU.tanHalfFovY), null === (tU = GU) || void 0 === tU || tU.frame(RU.cameraHeading), null === (pU = jU) || void 0 === pU || pU.frame(RU, null !== (EU = KU) && void 0 !== EU && EU.checkValid(PU) ? KU.Hx(PU) : null)
         },
-        onReceivedMessageFromServer: (DD, CD) => {
-          "frontlineHud" === DD ? bD.kt(CD) : "frontlineScoreboard" === DD ? bD.receiveScoreboard(CD) : "frontlineRoundEnd" === DD ? QD.kt(CD) : "frontlinePrefs" === DD && (tD = CD, ZD())
+        onReceivedMessageFromServer: (UU, RU) => {
+          "frontlineHud" === UU ? TU.qC(RU) : "frontlineScoreboard" === UU ? TU.receiveScoreboard(RU) : "frontlineRoundEnd" === UU ? qU.qC(RU) : "frontlinePrefs" === UU && (CU = RU, hU())
         }
       }
     }
   },
-  6176: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => pD
+  6127: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => pU
     });
-    const ID = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
+    const tU = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
       granularity: "grapheme"
     }) : null;
 
-    function pD(DD) {
-      return null === ID ? Array.from(DD) : Array.from(ID.segment(DD), (DD => {
+    function pU(UU) {
+      return null === tU ? Array.from(UU) : Array.from(tU.segment(UU), (UU => {
         let {
-          segment: CD
-        } = DD;
-        return CD
+          segment: RU
+        } = UU;
+        return RU
       }))
     }
   },
-  37870: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => fD,
-      e: () => iD
+  38046: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => PU,
+      g: () => EU
     });
-    const ID = new WeakMap;
+    const tU = new WeakMap;
 
-    function pD(DD) {
-      let CD = ID.get(DD);
-      return CD || (CD = {
-        hidden: DD.hidden,
+    function pU(UU) {
+      let RU = tU.get(UU);
+      return RU || (RU = {
+        hidden: UU.hidden,
         x: NaN,
         y: NaN
-      }, ID.set(DD, CD)), CD
+      }, tU.set(UU, RU)), RU
     }
 
-    function iD(DD, CD) {
-      const cD = pD(DD);
-      cD.hidden !== CD && (cD.hidden = CD, DD.hidden = CD)
+    function EU(UU, RU) {
+      const gU = pU(UU);
+      gU.hidden !== RU && (gU.hidden = RU, UU.hidden = RU)
     }
 
-    function fD(DD, CD, cD) {
-      const ID = pD(DD);
-      ID.x === CD && ID.y === cD || (ID.x = CD, ID.y = cD, DD.style.translate = `${CD}vw ${cD}vh`)
+    function PU(UU, RU, gU) {
+      const tU = pU(UU);
+      tU.x === RU && tU.y === gU || (tU.x = RU, tU.y = gU, UU.style.translate = `${RU}vw ${gU}vh`)
     }
   },
-  36420: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => ID
+  36573: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => tU
     });
-    const ID = {
+    const tU = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -1650,4 +1650,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

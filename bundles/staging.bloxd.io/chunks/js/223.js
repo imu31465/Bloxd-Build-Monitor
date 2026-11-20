@@ -1,127 +1,127 @@
 export const id = 223;
 export const ids = [223, 229, 232];
 export const modules = {
-  39380: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => fD,
-      g: () => bD
+  39629: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => PU,
+      f: () => TU
     });
-    var ID = cD(38048),
-      pD = cD(39174),
-      iD = cD(39351),
-      fD = {};
-    class bD {
-      constructor(DD) {
-        this.attachedToElement = !1, this.attached = {}, this.camera = DD, this.checkInputs = () => {}
+    var tU = gU(38236),
+      pU = gU(39395),
+      EU = gU(39603),
+      PU = {};
+    class TU {
+      constructor(UU) {
+        this.attachedToElement = !1, this.attached = {}, this.camera = UU, this.checkInputs = () => {}
       }
-      add(DD) {
-        const CD = DD.getSimpleName();
-        this.attached[CD] ? ID.e.Warn("camera input of type " + CD + " already exists on camera") : (this.attached[CD] = DD, DD.camera = this.camera, DD.checkInputs && (this.checkInputs = this._addCheckInputs(DD.checkInputs.bind(DD))), this.attachedToElement && DD.attachControl(this.noPreventDefault))
+      add(UU) {
+        const RU = UU.getSimpleName();
+        this.attached[RU] ? tU.e.Warn("camera input of type " + RU + " already exists on camera") : (this.attached[RU] = UU, UU.camera = this.camera, UU.checkInputs && (this.checkInputs = this._addCheckInputs(UU.checkInputs.bind(UU))), this.attachedToElement && UU.attachControl(this.noPreventDefault))
       }
-      remove(DD) {
-        for (const CD in this.attached) {
-          const cD = this.attached[CD];
-          if (cD === DD) return cD.detachControl(), cD.camera = null, delete this.attached[CD], void this.rebuildInputCheck()
+      remove(UU) {
+        for (const RU in this.attached) {
+          const gU = this.attached[RU];
+          if (gU === UU) return gU.detachControl(), gU.camera = null, delete this.attached[RU], void this.rebuildInputCheck()
         }
       }
-      removeByType(DD) {
-        for (const CD in this.attached) {
-          const cD = this.attached[CD];
-          cD.getClassName() === DD && (cD.detachControl(), cD.camera = null, delete this.attached[CD], this.rebuildInputCheck())
+      removeByType(UU) {
+        for (const RU in this.attached) {
+          const gU = this.attached[RU];
+          gU.getClassName() === UU && (gU.detachControl(), gU.camera = null, delete this.attached[RU], this.rebuildInputCheck())
         }
       }
-      _addCheckInputs(DD) {
-        const CD = this.checkInputs;
+      _addCheckInputs(UU) {
+        const RU = this.checkInputs;
         return () => {
-          CD(), DD()
+          RU(), UU()
         }
       }
-      attachInput(DD) {
-        this.attachedToElement && DD.attachControl(this.noPreventDefault)
+      attachInput(UU) {
+        this.attachedToElement && UU.attachControl(this.noPreventDefault)
       }
       attachElement() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (!this.attachedToElement) {
-          DD = !iD.c.ForceAttachControlToAlwaysPreventDefault && DD, this.attachedToElement = !0, this.noPreventDefault = DD;
-          for (const CD in this.attached) this.attached[CD].attachControl(DD)
+          UU = !EU.d.ForceAttachControlToAlwaysPreventDefault && UU, this.attachedToElement = !0, this.noPreventDefault = UU;
+          for (const RU in this.attached) this.attached[RU].attachControl(UU)
         }
       }
       detachElement() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        for (const CD in this.attached) this.attached[CD].detachControl(), DD && (this.attached[CD].camera = null);
+        let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        for (const RU in this.attached) this.attached[RU].detachControl(), UU && (this.attached[RU].camera = null);
         this.attachedToElement = !1
       }
       rebuildInputCheck() {
         this.checkInputs = () => {};
-        for (const DD in this.attached) {
-          const CD = this.attached[DD];
-          CD.checkInputs && (this.checkInputs = this._addCheckInputs(CD.checkInputs.bind(CD)))
+        for (const UU in this.attached) {
+          const RU = this.attached[UU];
+          RU.checkInputs && (this.checkInputs = this._addCheckInputs(RU.checkInputs.bind(RU)))
         }
       }
       clear() {
         this.attachedToElement && this.detachElement(!0), this.attached = {}, this.attachedToElement = !1, this.checkInputs = () => {}
       }
-      serialize(DD) {
-        const CD = {};
-        for (const cD in this.attached) {
-          const DD = this.attached[cD],
-            ID = pD.d.Serialize(DD);
-          CD[DD.getClassName()] = ID
+      serialize(UU) {
+        const RU = {};
+        for (const gU in this.attached) {
+          const UU = this.attached[gU],
+            tU = pU.b.Serialize(UU);
+          RU[UU.getClassName()] = tU
         }
-        DD.inputsmgr = CD
+        UU.inputsmgr = RU
       }
-      parse(DD) {
-        const CD = DD.inputsmgr;
-        if (CD) {
+      parse(UU) {
+        const RU = UU.inputsmgr;
+        if (RU) {
           this.clear();
-          for (const DD in CD) {
-            const cD = fD[DD];
-            if (cD) {
-              const ID = CD[DD],
-                iD = pD.d.Parse((() => new cD), ID, null);
-              this.add(iD)
+          for (const UU in RU) {
+            const gU = PU[UU];
+            if (gU) {
+              const tU = RU[UU],
+                EU = pU.b.Parse((() => new gU), tU, null);
+              this.add(EU)
             }
           }
         } else
-          for (const cD in this.attached) {
-            const CD = fD[this.attached[cD].getClassName()];
-            if (CD) {
-              const ID = pD.d.Parse((() => new CD), DD, null);
-              this.remove(this.attached[cD]), this.add(ID)
+          for (const gU in this.attached) {
+            const RU = PU[this.attached[gU].getClassName()];
+            if (RU) {
+              const tU = pU.b.Parse((() => new RU), UU, null);
+              this.remove(this.attached[gU]), this.add(tU)
             }
           }
       }
     }
   },
-  39382: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => ID.b
+  39636: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => tU.b
     });
-    var ID = cD(39388);
-    (0, ID.c)()
+    var tU = gU(39643);
+    (0, tU.e)()
   },
-  39388: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => SD,
-      c: () => yD
+  39643: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => cU,
+      e: () => jU
     });
-    var ID = cD(39154),
-      pD = cD(39156),
-      iD = cD(36446),
-      fD = cD(36622),
-      bD = cD(39392),
-      QD = cD(39356),
-      wD = cD(36488);
-    let SD = (() => {
-        var DD;
-        let CD, cD, QD = bD.b,
-          wD = [],
-          SD = [],
-          BD = [],
-          yD = [];
-        return DD = class extends QD {
-          constructor(DD, CD, cD, pD) {
-            super(DD, cD, pD), this.groundColor = (0, ID.m)(this, wD, new fD.d(0, 0, 0)), this.direction = ((0, ID.m)(this, SD), (0, ID.m)(this, BD, void 0)), (0, ID.m)(this, yD), this.direction = CD || iD.p.Up()
+    var tU = gU(39377),
+      pU = gU(39380),
+      EU = gU(36600),
+      PU = gU(36761),
+      TU = gU(39645),
+      qU = gU(39610),
+      KU = gU(36639);
+    let cU = (() => {
+        var UU;
+        let RU, gU, qU = TU.e,
+          KU = [],
+          cU = [],
+          GU = [],
+          jU = [];
+        return UU = class extends qU {
+          constructor(UU, RU, gU, pU) {
+            super(UU, gU, pU), this.groundColor = (0, tU.j)(this, KU, new PU.e(0, 0, 0)), this.direction = ((0, tU.j)(this, cU), (0, tU.j)(this, GU, void 0)), (0, tU.j)(this, jU), this.direction = RU || EU.n.Up()
           }
           _buildUniformLayout() {
             this._uniformBuffer.addUniform("vLightData", 4), this._uniformBuffer.addUniform("vLightDiffuse", 4), this._uniformBuffer.addUniform("vLightSpecular", 4), this._uniformBuffer.addUniform("vLightGround", 3), this._uniformBuffer.addUniform("shadowsInfo", 3), this._uniformBuffer.addUniform("depthValues", 2), this._uniformBuffer.create()
@@ -129,499 +129,499 @@ export const modules = {
           getClassName() {
             return "HemisphericLight"
           }
-          setDirectionToTarget(DD) {
-            return this.direction = iD.p.Normalize(DD.subtract(iD.p.Zero())), this.direction
+          setDirectionToTarget(UU) {
+            return this.direction = EU.n.Normalize(UU.subtract(EU.n.Zero())), this.direction
           }
           getShadowGenerator() {
             return null
           }
-          transferToEffect(DD, CD) {
-            const cD = iD.p.Normalize(this.direction);
-            return this._uniformBuffer.updateFloat4("vLightData", cD.x, cD.y, cD.z, 0, CD), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), CD), this
+          transferToEffect(UU, RU) {
+            const gU = EU.n.Normalize(this.direction);
+            return this._uniformBuffer.updateFloat4("vLightData", gU.x, gU.y, gU.z, 0, RU), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), RU), this
           }
-          transferToNodeMaterialEffect(DD, CD) {
-            const cD = iD.p.Normalize(this.direction);
-            return DD.setFloat3(CD, cD.x, cD.y, cD.z), this
+          transferToNodeMaterialEffect(UU, RU) {
+            const gU = EU.n.Normalize(this.direction);
+            return UU.setFloat3(RU, gU.x, gU.y, gU.z), this
           }
           computeWorldMatrix() {
-            return this._worldMatrix || (this._worldMatrix = iD.d.Identity()), this._worldMatrix
+            return this._worldMatrix || (this._worldMatrix = EU.c.Identity()), this._worldMatrix
           }
           getTypeID() {
-            return bD.b.LIGHTTYPEID_HEMISPHERICLIGHT
+            return TU.e.LIGHTTYPEID_HEMISPHERICLIGHT
           }
-          prepareLightSpecificDefines(DD, CD) {
-            DD["HEMILIGHT" + CD] = !0
+          prepareLightSpecificDefines(UU, RU) {
+            UU["HEMILIGHT" + RU] = !0
           }
         }, (() => {
-          const iD = "function" === typeof Symbol && Symbol.metadata ? Object.create(QD[Symbol.metadata] ?? null) : void 0;
-          CD = [(0, pD.l)()], cD = [(0, pD.C)()], (0, ID.k)(null, null, CD, {
+          const EU = "function" === typeof Symbol && Symbol.metadata ? Object.create(qU[Symbol.metadata] ?? null) : void 0;
+          RU = [(0, pU.l)()], gU = [(0, pU.I)()], (0, tU.i)(null, null, RU, {
             kind: "field",
             name: "groundColor",
             static: !1,
             private: !1,
             access: {
-              has: DD => "groundColor" in DD,
-              get: DD => DD.groundColor,
-              set: (DD, CD) => {
-                DD.groundColor = CD
+              has: UU => "groundColor" in UU,
+              get: UU => UU.groundColor,
+              set: (UU, RU) => {
+                UU.groundColor = RU
               }
             },
-            metadata: iD
-          }, wD, SD), (0, ID.k)(null, null, cD, {
+            metadata: EU
+          }, KU, cU), (0, tU.i)(null, null, gU, {
             kind: "field",
             name: "direction",
             static: !1,
             private: !1,
             access: {
-              has: DD => "direction" in DD,
-              get: DD => DD.direction,
-              set: (DD, CD) => {
-                DD.direction = CD
+              has: UU => "direction" in UU,
+              get: UU => UU.direction,
+              set: (UU, RU) => {
+                UU.direction = RU
               }
             },
-            metadata: iD
-          }, BD, yD), iD && Object.defineProperty(DD, Symbol.metadata, {
+            metadata: EU
+          }, GU, jU), EU && Object.defineProperty(UU, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: iD
+            value: EU
           })
-        })(), DD
+        })(), UU
       })(),
-      BD = !1;
+      GU = !1;
 
-    function yD() {
-      BD || (BD = !0, QD.b.AddNodeConstructor("Light_Type_3", ((DD, CD) => () => new SD(DD, iD.p.Zero(), CD))), (0, wD.d)("BABYLON.HemisphericLight", SD))
+    function jU() {
+      GU || (GU = !0, qU.b.AddNodeConstructor("Light_Type_3", ((UU, RU) => () => new cU(UU, EU.n.Zero(), RU))), (0, KU.g)("BABYLON.HemisphericLight", cU))
     }
   },
-  36613: (DD, CD, cD) => {
-    cD.d(CD, {
-      Color3: () => ID.d,
-      c: () => ID.e
+  36754: (UU, RU, gU) => {
+    gU.d(RU, {
+      Color3: () => tU.e,
+      c: () => tU.g
     });
-    var ID = cD(36622);
-    (0, ID.h)()
+    var tU = gU(36761);
+    (0, tU.k)()
   },
-  37159: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => pD
+  37301: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => pU
     });
-    var ID = cD(37167);
-    class pD {
-      static GetPlanes(DD) {
-        const CD = [];
-        for (let cD = 0; cD < 6; cD++) CD.push(new ID.c(0, 0, 0, 0));
-        return pD.GetPlanesToRef(DD, CD), CD
+    var tU = gU(37308);
+    class pU {
+      static GetPlanes(UU) {
+        const RU = [];
+        for (let gU = 0; gU < 6; gU++) RU.push(new tU.e(0, 0, 0, 0));
+        return pU.GetPlanesToRef(UU, RU), RU
       }
-      static GetNearPlaneToRef(DD, CD) {
-        const cD = DD.m;
-        CD.normal.x = cD[3] + cD[2], CD.normal.y = cD[7] + cD[6], CD.normal.z = cD[11] + cD[10], CD.d = cD[15] + cD[14], CD.normalize()
+      static GetNearPlaneToRef(UU, RU) {
+        const gU = UU.m;
+        RU.normal.x = gU[3] + gU[2], RU.normal.y = gU[7] + gU[6], RU.normal.z = gU[11] + gU[10], RU.d = gU[15] + gU[14], RU.normalize()
       }
-      static GetFarPlaneToRef(DD, CD) {
-        const cD = DD.m;
-        CD.normal.x = cD[3] - cD[2], CD.normal.y = cD[7] - cD[6], CD.normal.z = cD[11] - cD[10], CD.d = cD[15] - cD[14], CD.normalize()
+      static GetFarPlaneToRef(UU, RU) {
+        const gU = UU.m;
+        RU.normal.x = gU[3] - gU[2], RU.normal.y = gU[7] - gU[6], RU.normal.z = gU[11] - gU[10], RU.d = gU[15] - gU[14], RU.normalize()
       }
-      static GetLeftPlaneToRef(DD, CD) {
-        const cD = DD.m;
-        CD.normal.x = cD[3] + cD[0], CD.normal.y = cD[7] + cD[4], CD.normal.z = cD[11] + cD[8], CD.d = cD[15] + cD[12], CD.normalize()
+      static GetLeftPlaneToRef(UU, RU) {
+        const gU = UU.m;
+        RU.normal.x = gU[3] + gU[0], RU.normal.y = gU[7] + gU[4], RU.normal.z = gU[11] + gU[8], RU.d = gU[15] + gU[12], RU.normalize()
       }
-      static GetRightPlaneToRef(DD, CD) {
-        const cD = DD.m;
-        CD.normal.x = cD[3] - cD[0], CD.normal.y = cD[7] - cD[4], CD.normal.z = cD[11] - cD[8], CD.d = cD[15] - cD[12], CD.normalize()
+      static GetRightPlaneToRef(UU, RU) {
+        const gU = UU.m;
+        RU.normal.x = gU[3] - gU[0], RU.normal.y = gU[7] - gU[4], RU.normal.z = gU[11] - gU[8], RU.d = gU[15] - gU[12], RU.normalize()
       }
-      static GetTopPlaneToRef(DD, CD) {
-        const cD = DD.m;
-        CD.normal.x = cD[3] - cD[1], CD.normal.y = cD[7] - cD[5], CD.normal.z = cD[11] - cD[9], CD.d = cD[15] - cD[13], CD.normalize()
+      static GetTopPlaneToRef(UU, RU) {
+        const gU = UU.m;
+        RU.normal.x = gU[3] - gU[1], RU.normal.y = gU[7] - gU[5], RU.normal.z = gU[11] - gU[9], RU.d = gU[15] - gU[13], RU.normalize()
       }
-      static GetBottomPlaneToRef(DD, CD) {
-        const cD = DD.m;
-        CD.normal.x = cD[3] + cD[1], CD.normal.y = cD[7] + cD[5], CD.normal.z = cD[11] + cD[9], CD.d = cD[15] + cD[13], CD.normalize()
+      static GetBottomPlaneToRef(UU, RU) {
+        const gU = UU.m;
+        RU.normal.x = gU[3] + gU[1], RU.normal.y = gU[7] + gU[5], RU.normal.z = gU[11] + gU[9], RU.d = gU[15] + gU[13], RU.normalize()
       }
-      static GetPlanesToRef(DD, CD) {
-        pD.GetNearPlaneToRef(DD, CD[0]), pD.GetFarPlaneToRef(DD, CD[1]), pD.GetLeftPlaneToRef(DD, CD[2]), pD.GetRightPlaneToRef(DD, CD[3]), pD.GetTopPlaneToRef(DD, CD[4]), pD.GetBottomPlaneToRef(DD, CD[5])
+      static GetPlanesToRef(UU, RU) {
+        pU.GetNearPlaneToRef(UU, RU[0]), pU.GetFarPlaneToRef(UU, RU[1]), pU.GetLeftPlaneToRef(UU, RU[2]), pU.GetRightPlaneToRef(UU, RU[3]), pU.GetTopPlaneToRef(UU, RU[4]), pU.GetBottomPlaneToRef(UU, RU[5])
       }
-      static IsPointInFrustum(DD, CD) {
-        for (let cD = 0; cD < 6; cD++)
-          if (CD[cD].dotCoordinate(DD) < 0) return !1;
+      static IsPointInFrustum(UU, RU) {
+        for (let gU = 0; gU < 6; gU++)
+          if (RU[gU].dotCoordinate(UU) < 0) return !1;
         return !0
       }
     }
   },
-  37167: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => pD
+  37308: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => pU
     });
-    var ID = cD(36446);
-    class pD {
-      constructor(DD, CD, cD, pD) {
-        this.normal = new ID.p(DD, CD, cD), this.d = pD
+    var tU = gU(36600);
+    class pU {
+      constructor(UU, RU, gU, pU) {
+        this.normal = new tU.n(UU, RU, gU), this.d = pU
       }
-      XcD() {
+      vgU() {
         return [this.normal.x, this.normal.y, this.normal.z, this.d]
       }
       clone() {
-        return new pD(this.normal.x, this.normal.y, this.normal.z, this.d)
+        return new pU(this.normal.x, this.normal.y, this.normal.z, this.d)
       }
       getClassName() {
         return "Plane"
       }
       getHashCode() {
-        let DD = this.normal.getHashCode();
-        return DD = 397 * DD ^ this.d, DD
+        let UU = this.normal.getHashCode();
+        return UU = 397 * UU ^ this.d, UU
       }
       normalize() {
-        const DD = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let CD = 0;
-        return 0 !== DD && (CD = 1 / DD), this.normal.x *= CD, this.normal.y *= CD, this.normal.z *= CD, this.d *= CD, this
+        const UU = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let RU = 0;
+        return 0 !== UU && (RU = 1 / UU), this.normal.x *= RU, this.normal.y *= RU, this.normal.z *= RU, this.d *= RU, this
       }
-      transform(DD) {
-        const CD = pD._TmpMatrix;
-        DD.invertToRef(CD);
-        const cD = CD.m,
-          ID = this.normal.x,
-          iD = this.normal.y,
-          fD = this.normal.z,
-          bD = this.d,
-          QD = ID * cD[0] + iD * cD[1] + fD * cD[2] + bD * cD[3],
-          wD = ID * cD[4] + iD * cD[5] + fD * cD[6] + bD * cD[7],
-          SD = ID * cD[8] + iD * cD[9] + fD * cD[10] + bD * cD[11],
-          BD = ID * cD[12] + iD * cD[13] + fD * cD[14] + bD * cD[15];
-        return new pD(QD, wD, SD, BD)
+      transform(UU) {
+        const RU = pU._TmpMatrix;
+        UU.invertToRef(RU);
+        const gU = RU.m,
+          tU = this.normal.x,
+          EU = this.normal.y,
+          PU = this.normal.z,
+          TU = this.d,
+          qU = tU * gU[0] + EU * gU[1] + PU * gU[2] + TU * gU[3],
+          KU = tU * gU[4] + EU * gU[5] + PU * gU[6] + TU * gU[7],
+          cU = tU * gU[8] + EU * gU[9] + PU * gU[10] + TU * gU[11],
+          GU = tU * gU[12] + EU * gU[13] + PU * gU[14] + TU * gU[15];
+        return new pU(qU, KU, cU, GU)
       }
-      dotCoordinate(DD) {
-        return this.normal.x * DD.x + this.normal.y * DD.y + this.normal.z * DD.z + this.d
+      dotCoordinate(UU) {
+        return this.normal.x * UU.x + this.normal.y * UU.y + this.normal.z * UU.z + this.d
       }
-      copyFromPoints(DD, CD, cD) {
-        const ID = CD.x - DD.x,
-          pD = CD.y - DD.y,
-          iD = CD.z - DD.z,
-          fD = cD.x - DD.x,
-          bD = cD.y - DD.y,
-          QD = cD.z - DD.z,
-          wD = pD * QD - iD * bD,
-          SD = iD * fD - ID * QD,
-          BD = ID * bD - pD * fD,
-          yD = Math.sqrt(wD * wD + SD * SD + BD * BD);
-        let MD;
-        return MD = 0 !== yD ? 1 / yD : 0, this.normal.x = wD * MD, this.normal.y = SD * MD, this.normal.z = BD * MD, this.d = -(this.normal.x * DD.x + this.normal.y * DD.y + this.normal.z * DD.z), this
+      copyFromPoints(UU, RU, gU) {
+        const tU = RU.x - UU.x,
+          pU = RU.y - UU.y,
+          EU = RU.z - UU.z,
+          PU = gU.x - UU.x,
+          TU = gU.y - UU.y,
+          qU = gU.z - UU.z,
+          KU = pU * qU - EU * TU,
+          cU = EU * PU - tU * qU,
+          GU = tU * TU - pU * PU,
+          jU = Math.sqrt(KU * KU + cU * cU + GU * GU);
+        let uU;
+        return uU = 0 !== jU ? 1 / jU : 0, this.normal.x = KU * uU, this.normal.y = cU * uU, this.normal.z = GU * uU, this.d = -(this.normal.x * UU.x + this.normal.y * UU.y + this.normal.z * UU.z), this
       }
-      isFrontFacingTo(DD, CD) {
-        return ID.p.Dot(this.normal, DD) <= CD
+      isFrontFacingTo(UU, RU) {
+        return tU.n.Dot(this.normal, UU) <= RU
       }
-      signedDistanceTo(DD) {
-        return ID.p.Dot(DD, this.normal) + this.d
+      signedDistanceTo(UU) {
+        return tU.n.Dot(UU, this.normal) + this.d
       }
-      static FromArray(DD) {
-        return new pD(DD[0], DD[1], DD[2], DD[3])
+      static FromArray(UU) {
+        return new pU(UU[0], UU[1], UU[2], UU[3])
       }
-      static FromPoints(DD, CD, cD) {
-        const ID = new pD(0, 0, 0, 0);
-        return ID.copyFromPoints(DD, CD, cD), ID
+      static FromPoints(UU, RU, gU) {
+        const tU = new pU(0, 0, 0, 0);
+        return tU.copyFromPoints(UU, RU, gU), tU
       }
-      static FromPositionAndNormal(DD, CD) {
-        const cD = new pD(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(DD, CD, cD)
+      static FromPositionAndNormal(UU, RU) {
+        const gU = new pU(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(UU, RU, gU)
       }
-      static FromPositionAndNormalToRef(DD, CD, cD) {
-        return cD.normal.YCD(CD), cD.normal.normalize(), cD.d = -DD.dot(cD.normal), cD
+      static FromPositionAndNormalToRef(UU, RU, gU) {
+        return gU.normal.PgU(RU), gU.normal.normalize(), gU.d = -UU.dot(gU.normal), gU
       }
-      static SignedDistanceToPlaneFromPositionAndNormal(DD, CD, cD) {
-        const pD = -(CD.x * DD.x + CD.y * DD.y + CD.z * DD.z);
-        return ID.p.Dot(cD, CD) + pD
+      static SignedDistanceToPlaneFromPositionAndNormal(UU, RU, gU) {
+        const pU = -(RU.x * UU.x + RU.y * UU.y + RU.z * UU.z);
+        return tU.n.Dot(gU, RU) + pU
       }
     }
-    pD._TmpMatrix = ID.d.Identity()
+    pU._TmpMatrix = tU.c.Identity()
   },
-  36440: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      Matrix: () => ID.d,
-      Quaternion: () => ID.h,
-      RegisterMathVector: () => ID.k,
-      TmpVectors: () => ID.l,
-      Vector2: () => ID.n,
-      cZ: () => ID.p,
-      Vector4: () => ID.s
+  36593: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      Matrix: () => tU.c,
+      Quaternion: () => tU.d,
+      RegisterMathVector: () => tU.g,
+      TmpVectors: () => tU.h,
+      Vector2: () => tU.l,
+      xC: () => tU.n,
+      Vector4: () => tU.q
     });
-    var ID = cD(36446);
-    (0, ID.k)()
+    var tU = gU(36600);
+    (0, tU.g)()
   },
-  37479: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => ID
+  37641: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => tU
     });
-    class ID {
-      constructor(DD, CD, cD, ID) {
-        this.x = DD, this.y = CD, this.width = cD, this.height = ID
+    class tU {
+      constructor(UU, RU, gU, tU) {
+        this.x = UU, this.y = RU, this.width = gU, this.height = tU
       }
-      toGlobal(DD, CD) {
-        return new ID(this.x * DD, this.y * CD, this.width * DD, this.height * CD)
+      toGlobal(UU, RU) {
+        return new tU(this.x * UU, this.y * RU, this.width * UU, this.height * RU)
       }
-      toGlobalToRef(DD, CD, cD) {
-        return cD.x = this.x * DD, cD.y = this.y * CD, cD.width = this.width * DD, cD.height = this.height * CD, this
+      toGlobalToRef(UU, RU, gU) {
+        return gU.x = this.x * UU, gU.y = this.y * RU, gU.width = this.width * UU, gU.height = this.height * RU, this
       }
       clone() {
-        return new ID(this.x, this.y, this.width, this.height)
+        return new tU(this.x, this.y, this.width, this.height)
       }
     }
   },
-  39526: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => wD
+  39780: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => KU
     });
-    var ID = cD(36446),
-      pD = cD(36622),
-      iD = cD(39531),
-      fD = cD(39545),
-      bD = cD(39560);
+    var tU = gU(36600),
+      pU = gU(36761),
+      EU = gU(39782),
+      PU = gU(39792),
+      TU = gU(39812);
 
-    function QD(DD) {
-      let CD = [0, 1, 2, 0, 2, 3, 4, 5, 6, 4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14, 12, 14, 15, 16, 17, 18, 16, 18, 19, 20, 21, 22, 20, 22, 23];
-      const cD = [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0],
-        iD = [],
-        QD = DD.width || DD.size || 1,
-        wD = DD.height || DD.size || 1,
-        SD = DD.depth || DD.size || 1,
-        BD = DD.wrap || !1;
-      let yD = void 0 === DD.topBaseAt ? 1 : DD.topBaseAt,
-        MD = void 0 === DD.bottomBaseAt ? 0 : DD.bottomBaseAt;
-      yD = (yD + 4) % 4, MD = (MD + 4) % 4;
-      let tD = [2, 0, 3, 1][yD],
-        ZD = [2, 0, 1, 3][MD],
-        oD = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1];
-      if (BD) {
-        CD = [2, 3, 0, 2, 0, 1, 4, 5, 6, 4, 6, 7, 9, 10, 11, 9, 11, 8, 12, 14, 15, 12, 13, 14], oD = [-1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1];
-        let DD = [
+    function qU(UU) {
+      let RU = [0, 1, 2, 0, 2, 3, 4, 5, 6, 4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14, 12, 14, 15, 16, 17, 18, 16, 18, 19, 20, 21, 22, 20, 22, 23];
+      const gU = [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0],
+        EU = [],
+        qU = UU.width || UU.size || 1,
+        KU = UU.height || UU.size || 1,
+        cU = UU.depth || UU.size || 1,
+        GU = UU.wrap || !1;
+      let jU = void 0 === UU.topBaseAt ? 1 : UU.topBaseAt,
+        uU = void 0 === UU.bottomBaseAt ? 0 : UU.bottomBaseAt;
+      jU = (jU + 4) % 4, uU = (uU + 4) % 4;
+      let CU = [2, 0, 3, 1][jU],
+        hU = [2, 0, 1, 3][uU],
+        QU = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1];
+      if (GU) {
+        RU = [2, 3, 0, 2, 0, 1, 4, 5, 6, 4, 6, 7, 9, 10, 11, 9, 11, 8, 12, 14, 15, 12, 13, 14], QU = [-1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1];
+        let UU = [
             [1, 1, 1],
             [-1, 1, 1],
             [-1, 1, -1],
             [1, 1, -1]
           ],
-          cD = [
+          gU = [
             [-1, -1, 1],
             [1, -1, 1],
             [1, -1, -1],
             [-1, -1, -1]
           ];
-        const ID = [17, 18, 19, 16],
-          pD = [22, 23, 20, 21];
-        for (; tD > 0;) DD.unshift(DD.pop()), ID.unshift(ID.pop()), tD--;
-        for (; ZD > 0;) cD.unshift(cD.pop()), pD.unshift(pD.pop()), ZD--;
-        DD = DD.flat(), cD = cD.flat(), oD = oD.concat(DD).concat(cD), CD.push(ID[0], ID[2], ID[3], ID[0], ID[1], ID[2]), CD.push(pD[0], pD[2], pD[3], pD[0], pD[1], pD[2])
+        const tU = [17, 18, 19, 16],
+          pU = [22, 23, 20, 21];
+        for (; CU > 0;) UU.unshift(UU.pop()), tU.unshift(tU.pop()), CU--;
+        for (; hU > 0;) gU.unshift(gU.pop()), pU.unshift(pU.pop()), hU--;
+        UU = UU.flat(), gU = gU.flat(), QU = QU.concat(UU).concat(gU), RU.push(tU[0], tU[2], tU[3], tU[0], tU[1], tU[2]), RU.push(pU[0], pU[2], pU[3], pU[0], pU[1], pU[2])
       }
-      const vD = [QD / 2, wD / 2, SD / 2],
-        ND = oD.reduce(((DD, CD, cD) => DD.concat(CD * vD[cD % 3])), []),
-        gD = 0 === DD.sideOrientation ? 0 : DD.sideOrientation || fD.c.DEFAULTSIDE,
-        XD = DD.faceUV || new Array(6),
-        mD = DD.faceColors,
-        nD = [];
-      for (let fD = 0; fD < 6; fD++) void 0 === XD[fD] && (XD[fD] = new ID.s(0, 0, 1, 1)), mD && void 0 === mD[fD] && (mD[fD] = new pD.e(1, 1, 1, 1));
-      for (let ID = 0; ID < 6; ID++)
-        if (iD.push(XD[ID].z, bD.c ? 1 - XD[ID].w : XD[ID].w), iD.push(XD[ID].x, bD.c ? 1 - XD[ID].w : XD[ID].w), iD.push(XD[ID].x, bD.c ? 1 - XD[ID].y : XD[ID].y), iD.push(XD[ID].z, bD.c ? 1 - XD[ID].y : XD[ID].y), mD)
-          for (let DD = 0; DD < 4; DD++) nD.push(mD[ID].r, mD[ID].g, mD[ID].b, mD[ID].a);
-      fD.c._ComputeSides(gD, ND, CD, cD, iD, DD.frontUVs, DD.backUVs);
-      const OD = new fD.c;
-      if (OD.indices = CD, OD.positions = ND, OD.normals = cD, OD.uvs = iD, mD) {
-        const DD = gD === fD.c.DOUBLESIDE ? nD.concat(nD) : nD;
-        OD.colors = DD
+      const eU = [qU / 2, KU / 2, cU / 2],
+        WU = QU.reduce(((UU, RU, gU) => UU.concat(RU * eU[gU % 3])), []),
+        fU = 0 === UU.sideOrientation ? 0 : UU.sideOrientation || PU.b.DEFAULTSIDE,
+        xU = UU.faceUV || new Array(6),
+        mU = UU.faceColors,
+        IU = [];
+      for (let PU = 0; PU < 6; PU++) void 0 === xU[PU] && (xU[PU] = new tU.q(0, 0, 1, 1)), mU && void 0 === mU[PU] && (mU[PU] = new pU.g(1, 1, 1, 1));
+      for (let tU = 0; tU < 6; tU++)
+        if (EU.push(xU[tU].z, TU.c ? 1 - xU[tU].w : xU[tU].w), EU.push(xU[tU].x, TU.c ? 1 - xU[tU].w : xU[tU].w), EU.push(xU[tU].x, TU.c ? 1 - xU[tU].y : xU[tU].y), EU.push(xU[tU].z, TU.c ? 1 - xU[tU].y : xU[tU].y), mU)
+          for (let UU = 0; UU < 4; UU++) IU.push(mU[tU].r, mU[tU].g, mU[tU].b, mU[tU].a);
+      PU.b._ComputeSides(fU, WU, RU, gU, EU, UU.frontUVs, UU.backUVs);
+      const JU = new PU.b;
+      if (JU.indices = RU, JU.positions = WU, JU.normals = gU, JU.uvs = EU, mU) {
+        const UU = fU === PU.b.DOUBLESIDE ? IU.concat(IU) : IU;
+        JU.colors = UU
       }
-      return OD
+      return JU
     }
 
-    function wD(DD) {
-      let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const ID = new iD.d(DD, cD);
-      CD.sideOrientation = iD.d._GetDefaultSideOrientation(CD.sideOrientation), ID._originalBuilderSideOrientation = CD.sideOrientation;
-      return QD(CD).applyToMesh(ID, CD.updatable), ID
+    function KU(UU) {
+      let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const tU = new EU.c(UU, gU);
+      RU.sideOrientation = EU.c._GetDefaultSideOrientation(RU.sideOrientation), tU._originalBuilderSideOrientation = RU.sideOrientation;
+      return qU(RU).applyToMesh(tU, RU.updatable), tU
     }
-    let SD = !1;
-    SD || (SD = !0, fD.c.CreateBox = QD, iD.d.CreateBox = function(DD, CD) {
-      return wD(DD, {
-        size: CD,
+    let cU = !1;
+    cU || (cU = !0, PU.b.CreateBox = qU, EU.c.CreateBox = function(UU, RU) {
+      return KU(UU, {
+        size: RU,
         sideOrientation: arguments.length > 4 ? arguments[4] : void 0,
         updatable: arguments.length > 3 ? arguments[3] : void 0
       }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
     })
   },
-  39576: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => BD
+  39833: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => GU
     });
-    var ID = cD(36446),
-      pD = cD(39531),
-      iD = cD(39545),
-      fD = cD(39579),
-      bD = cD(39286),
-      QD = cD(38048);
+    var tU = gU(36600),
+      pU = gU(39782),
+      EU = gU(39792),
+      PU = gU(39835),
+      TU = gU(39517),
+      qU = gU(38236);
 
-    function wD(DD) {
-      const CD = [],
-        cD = [],
-        ID = DD.lines,
-        pD = DD.colors,
-        fD = [];
-      let bD = 0;
-      for (let iD = 0; iD < ID.length; iD++) {
-        const DD = ID[iD];
-        for (let ID = 0; ID < DD.length; ID++) {
+    function KU(UU) {
+      const RU = [],
+        gU = [],
+        tU = UU.lines,
+        pU = UU.colors,
+        PU = [];
+      let TU = 0;
+      for (let EU = 0; EU < tU.length; EU++) {
+        const UU = tU[EU];
+        for (let tU = 0; tU < UU.length; tU++) {
           const {
-            x: QD,
-            y: wD,
-            z: SD
-          } = DD[ID];
-          if (cD.push(QD, wD, SD), pD) {
-            const DD = pD[iD],
+            x: qU,
+            y: KU,
+            z: cU
+          } = UU[tU];
+          if (gU.push(qU, KU, cU), pU) {
+            const UU = pU[EU],
               {
-                r: CD,
-                g: cD,
-                b: bD,
-                a: QD
-              } = DD[ID];
-            fD.push(CD, cD, bD, QD)
+                r: RU,
+                g: gU,
+                b: TU,
+                a: qU
+              } = UU[tU];
+            PU.push(RU, gU, TU, qU)
           }
-          ID > 0 && (CD.push(bD - 1), CD.push(bD)), bD++
+          tU > 0 && (RU.push(TU - 1), RU.push(TU)), TU++
         }
       }
-      const QD = new iD.c;
-      return QD.indices = CD, QD.positions = cD, pD && (QD.colors = fD), QD
+      const qU = new EU.b;
+      return qU.indices = RU, qU.positions = gU, pU && (qU.colors = PU), qU
     }
 
-    function SD(DD) {
-      const CD = DD.dashSize || 3,
-        cD = DD.gapSize || 1,
-        pD = DD.dashNb || 200,
-        fD = DD.points,
-        bD = [],
-        QD = [],
-        wD = ID.p.Zero();
-      let SD, BD, yD, MD = 0,
-        tD = 0;
-      for (yD = 0; yD < fD.length - 1; yD++) fD[yD + 1].subtractToRef(fD[yD], wD), MD += wD.length();
-      const ZD = MD / pD,
-        oD = CD * ZD / (CD + cD);
-      for (yD = 0; yD < fD.length - 1; yD++) {
-        fD[yD + 1].subtractToRef(fD[yD], wD), SD = Math.floor(wD.length() / ZD), wD.normalize();
-        for (let DD = 0; DD < SD; DD++) BD = ZD * DD, bD.push(fD[yD].x + BD * wD.x, fD[yD].y + BD * wD.y, fD[yD].z + BD * wD.z), bD.push(fD[yD].x + (BD + oD) * wD.x, fD[yD].y + (BD + oD) * wD.y, fD[yD].z + (BD + oD) * wD.z), QD.push(tD, tD + 1), tD += 2
+    function cU(UU) {
+      const RU = UU.dashSize || 3,
+        gU = UU.gapSize || 1,
+        pU = UU.dashNb || 200,
+        PU = UU.points,
+        TU = [],
+        qU = [],
+        KU = tU.n.Zero();
+      let cU, GU, jU, uU = 0,
+        CU = 0;
+      for (jU = 0; jU < PU.length - 1; jU++) PU[jU + 1].subtractToRef(PU[jU], KU), uU += KU.length();
+      const hU = uU / pU,
+        QU = RU * hU / (RU + gU);
+      for (jU = 0; jU < PU.length - 1; jU++) {
+        PU[jU + 1].subtractToRef(PU[jU], KU), cU = Math.floor(KU.length() / hU), KU.normalize();
+        for (let UU = 0; UU < cU; UU++) GU = hU * UU, TU.push(PU[jU].x + GU * KU.x, PU[jU].y + GU * KU.y, PU[jU].z + GU * KU.z), TU.push(PU[jU].x + (GU + QU) * KU.x, PU[jU].y + (GU + QU) * KU.y, PU[jU].z + (GU + QU) * KU.z), qU.push(CU, CU + 1), CU += 2
       }
-      const vD = new iD.c;
-      return vD.positions = bD, vD.indices = QD, vD
+      const eU = new EU.b;
+      return eU.positions = TU, eU.indices = qU, eU
     }
 
-    function BD(DD, CD) {
-      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const ID = CD.instance,
-        pD = CD.lines,
-        iD = CD.colors;
-      if (ID) {
-        const DD = ID.getVerticesData(bD.k.PositionKind);
-        let CD, cD;
-        iD && (CD = ID.getVerticesData(bD.k.ColorKind));
-        let fD = 0,
-          QD = 0;
-        for (let ID = 0; ID < pD.length; ID++) {
-          const bD = pD[ID];
-          for (let pD = 0; pD < bD.length; pD++) DD[fD] = bD[pD].x, DD[fD + 1] = bD[pD].y, DD[fD + 2] = bD[pD].z, iD && CD && (cD = iD[ID], CD[QD] = cD[pD].r, CD[QD + 1] = cD[pD].g, CD[QD + 2] = cD[pD].b, CD[QD + 3] = cD[pD].a, QD += 4), fD += 3
+    function GU(UU, RU) {
+      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const tU = RU.instance,
+        pU = RU.lines,
+        EU = RU.colors;
+      if (tU) {
+        const UU = tU.getVerticesData(TU.l.PositionKind);
+        let RU, gU;
+        EU && (RU = tU.getVerticesData(TU.l.ColorKind));
+        let PU = 0,
+          qU = 0;
+        for (let tU = 0; tU < pU.length; tU++) {
+          const TU = pU[tU];
+          for (let pU = 0; pU < TU.length; pU++) UU[PU] = TU[pU].x, UU[PU + 1] = TU[pU].y, UU[PU + 2] = TU[pU].z, EU && RU && (gU = EU[tU], RU[qU] = gU[pU].r, RU[qU + 1] = gU[pU].g, RU[qU + 2] = gU[pU].b, RU[qU + 3] = gU[pU].a, qU += 4), PU += 3
         }
-        return ID.updateVerticesData(bD.k.PositionKind, DD, !1, !1), iD && CD && ID.updateVerticesData(bD.k.ColorKind, CD, !1, !1), ID.refreshBoundingInfo(), ID
+        return tU.updateVerticesData(TU.l.PositionKind, UU, !1, !1), EU && RU && tU.updateVerticesData(TU.l.ColorKind, RU, !1, !1), tU.refreshBoundingInfo(), tU
       }
-      const QD = !!iD,
-        SD = new fD.c(DD, cD, null, void 0, void 0, QD, CD.useVertexAlpha, CD.material);
-      return wD(CD).applyToMesh(SD, CD.updatable), SD
+      const qU = !!EU,
+        cU = new PU.e(UU, gU, null, void 0, void 0, qU, RU.useVertexAlpha, RU.material);
+      return KU(RU).applyToMesh(cU, RU.updatable), cU
     }
 
-    function yD(DD, CD) {
-      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const ID = CD.colors ? [CD.colors] : null;
-      return BD(DD, {
-        lines: [CD.points],
-        updatable: CD.updatable,
-        instance: CD.instance,
-        colors: ID,
-        useVertexAlpha: CD.useVertexAlpha,
-        material: CD.material
-      }, cD)
+    function jU(UU, RU) {
+      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const tU = RU.colors ? [RU.colors] : null;
+      return GU(UU, {
+        lines: [RU.points],
+        updatable: RU.updatable,
+        instance: RU.instance,
+        colors: tU,
+        useVertexAlpha: RU.useVertexAlpha,
+        material: RU.material
+      }, gU)
     }
 
-    function MD(DD, CD) {
-      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const iD = CD.points,
-        bD = CD.instance,
-        wD = CD.gapSize || 1,
-        BD = CD.dashSize || 3;
-      if (bD) {
-        const DD = DD => {
-          const CD = ID.p.Zero(),
-            cD = DD.length / 6;
-          let pD, fD, QD, wD, SD = 0,
-            BD = 0;
-          for (QD = 0; QD < iD.length - 1; QD++) iD[QD + 1].subtractToRef(iD[QD], CD), SD += CD.length();
-          const yD = SD / cD,
-            MD = bD._creationDataStorage.dashSize,
-            tD = MD * yD / (MD + bD._creationDataStorage.gapSize);
-          for (QD = 0; QD < iD.length - 1; QD++)
-            for (iD[QD + 1].subtractToRef(iD[QD], CD), pD = Math.floor(CD.length() / yD), CD.normalize(), wD = 0; wD < pD && BD < DD.length;) fD = yD * wD, DD[BD] = iD[QD].x + fD * CD.x, DD[BD + 1] = iD[QD].y + fD * CD.y, DD[BD + 2] = iD[QD].z + fD * CD.z, DD[BD + 3] = iD[QD].x + (fD + tD) * CD.x, DD[BD + 4] = iD[QD].y + (fD + tD) * CD.y, DD[BD + 5] = iD[QD].z + (fD + tD) * CD.z, BD += 6, wD++;
-          for (; BD < DD.length;) DD[BD] = iD[QD].x, DD[BD + 1] = iD[QD].y, DD[BD + 2] = iD[QD].z, BD += 3
+    function uU(UU, RU) {
+      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const EU = RU.points,
+        TU = RU.instance,
+        KU = RU.gapSize || 1,
+        GU = RU.dashSize || 3;
+      if (TU) {
+        const UU = UU => {
+          const RU = tU.n.Zero(),
+            gU = UU.length / 6;
+          let pU, PU, qU, KU, cU = 0,
+            GU = 0;
+          for (qU = 0; qU < EU.length - 1; qU++) EU[qU + 1].subtractToRef(EU[qU], RU), cU += RU.length();
+          const jU = cU / gU,
+            uU = TU._creationDataStorage.dashSize,
+            CU = uU * jU / (uU + TU._creationDataStorage.gapSize);
+          for (qU = 0; qU < EU.length - 1; qU++)
+            for (EU[qU + 1].subtractToRef(EU[qU], RU), pU = Math.floor(RU.length() / jU), RU.normalize(), KU = 0; KU < pU && GU < UU.length;) PU = jU * KU, UU[GU] = EU[qU].x + PU * RU.x, UU[GU + 1] = EU[qU].y + PU * RU.y, UU[GU + 2] = EU[qU].z + PU * RU.z, UU[GU + 3] = EU[qU].x + (PU + CU) * RU.x, UU[GU + 4] = EU[qU].y + (PU + CU) * RU.y, UU[GU + 5] = EU[qU].z + (PU + CU) * RU.z, GU += 6, KU++;
+          for (; GU < UU.length;) UU[GU] = EU[qU].x, UU[GU + 1] = EU[qU].y, UU[GU + 2] = EU[qU].z, GU += 3
         };
-        return (CD.dashNb || CD.dashSize || CD.gapSize || CD.useVertexAlpha || CD.material) && QD.e.Warn("You have used an option other than points with the instance option. Please be aware that these other options will be ignored."), bD.updateMeshPositions(DD, !1), bD
+        return (RU.dashNb || RU.dashSize || RU.gapSize || RU.useVertexAlpha || RU.material) && qU.e.Warn("You have used an option other than points with the instance option. Please be aware that these other options will be ignored."), TU.updateMeshPositions(UU, !1), TU
       }
-      const yD = new fD.c(DD, cD, null, void 0, void 0, void 0, CD.useVertexAlpha, CD.material);
-      return SD(CD).applyToMesh(yD, CD.updatable), yD._creationDataStorage = new pD.j, yD._creationDataStorage.dashSize = BD, yD._creationDataStorage.gapSize = wD, yD
+      const jU = new PU.e(UU, gU, null, void 0, void 0, void 0, RU.useVertexAlpha, RU.material);
+      return cU(RU).applyToMesh(jU, RU.updatable), jU._creationDataStorage = new pU.h, jU._creationDataStorage.dashSize = GU, jU._creationDataStorage.gapSize = KU, jU
     }
-    let tD = !1;
-    tD || (tD = !0, iD.c.CreateLineSystem = wD, iD.c.CreateDashedLines = SD, pD.d.CreateLines = function(DD, CD) {
-      return yD(DD, {
-        points: CD,
+    let CU = !1;
+    CU || (CU = !0, EU.b.CreateLineSystem = KU, EU.b.CreateDashedLines = cU, pU.c.CreateLines = function(UU, RU) {
+      return jU(UU, {
+        points: RU,
         updatable: arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         instance: arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null
       }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
-    }, pD.d.CreateDashedLines = function(DD, CD, cD, ID, pD) {
-      return MD(DD, {
-        points: CD,
-        dashSize: cD,
-        gapSize: ID,
-        dashNb: pD,
+    }, pU.c.CreateDashedLines = function(UU, RU, gU, tU, pU) {
+      return uU(UU, {
+        points: RU,
+        dashSize: gU,
+        gapSize: tU,
+        dashNb: pU,
         updatable: arguments.length > 6 ? arguments[6] : void 0,
         instance: arguments.length > 7 ? arguments[7] : void 0
       }, arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null)
     })
   },
-  39579: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => yD,
-      g: () => ZD
+  39835: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => jU,
+      i: () => hU
     });
-    var ID, pD, iD = cD(36622),
-      fD = cD(39286),
-      bD = cD(39531),
-      QD = cD(39586),
-      wD = cD(39416),
-      SD = cD(39590),
-      BD = cD(39027);
-    class yD extends bD.d {
-      _isShaderMaterial(DD) {
-        return !!DD && "ShaderMaterial" === DD.getClassName()
+    var tU, pU, EU = gU(36761),
+      PU = gU(39517),
+      TU = gU(39782),
+      qU = gU(39844),
+      KU = gU(39676),
+      cU = gU(39847),
+      GU = gU(39256);
+    class jU extends TU.c {
+      _isShaderMaterial(UU) {
+        return !!UU && "ShaderMaterial" === UU.getClassName()
       }
-      constructor(DD) {
-        let CD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          ID = arguments.length > 5 ? arguments[5] : void 0,
-          pD = arguments.length > 6 ? arguments[6] : void 0,
-          bD = arguments.length > 7 ? arguments[7] : void 0;
-        super(DD, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, CD, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = ID, this.useVertexAlpha = pD, this.color = new iD.d(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, CD && (this.color = CD.color.clone(), this.alpha = CD.alpha, this.useVertexColor = CD.useVertexColor, this.useVertexAlpha = CD.useVertexAlpha), this.intersectionThreshold = .1;
-        const QD = {
-          attributes: [fD.k.PositionKind],
+      constructor(UU) {
+        let RU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          tU = arguments.length > 5 ? arguments[5] : void 0,
+          pU = arguments.length > 6 ? arguments[6] : void 0,
+          TU = arguments.length > 7 ? arguments[7] : void 0;
+        super(UU, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, RU, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = tU, this.useVertexAlpha = pU, this.color = new EU.e(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, RU && (this.color = RU.color.clone(), this.alpha = RU.alpha, this.useVertexColor = RU.useVertexColor, this.useVertexAlpha = RU.useVertexAlpha), this.intersectionThreshold = .1;
+        const qU = {
+          attributes: [PU.l.PositionKind],
           uniforms: ["world", "viewProjection"],
           needAlphaBlending: !0,
           defines: [],
           useClipPlane: null,
           shaderLanguage: 0
         };
-        if (this.useVertexAlpha ? QD.defines.push("#define VERTEXALPHA") : QD.needAlphaBlending = !1, this.useVertexColor ? (QD.defines.push("#define VERTEXCOLOR"), QD.attributes.push(fD.k.ColorKind)) : (QD.uniforms.push("color"), this._color4 = new iD.e), bD) this.material = bD;
+        if (this.useVertexAlpha ? qU.defines.push("#define VERTEXALPHA") : qU.needAlphaBlending = !1, this.useVertexColor ? (qU.defines.push("#define VERTEXCOLOR"), qU.attributes.push(PU.l.ColorKind)) : (qU.uniforms.push("color"), this._color4 = new EU.g), TU) this.material = TU;
         else {
-          this.hq().DZ().isWebGPU && !yD.ForceGLSL && (this._shaderLanguage = 1), QD.shaderLanguage = this._shaderLanguage, QD.extraInitializationsAsync = async () => {
-            1 === this._shaderLanguage ? await Promise.all([cD.e(334).then((() => cD(41708))), cD.e(340).then((() => cD(41711)))]) : await Promise.all([cD.e(316).then((() => cD(41713))), cD.e(322).then((() => cD(41722)))])
+          this.aZ().WC().isWebGPU && !jU.ForceGLSL && (this._shaderLanguage = 1), qU.shaderLanguage = this._shaderLanguage, qU.extraInitializationsAsync = async () => {
+            1 === this._shaderLanguage ? await Promise.all([gU.e(334).then((() => gU(41887))), gU.e(340).then((() => gU(41895)))]) : await Promise.all([gU.e(316).then((() => gU(41903))), gU.e(322).then((() => gU(41912)))])
           };
-          const DD = new SD.p("colorShader", this.hq(), "color", QD, !1);
-          DD.doNotSerialize = !0, this._ownsMaterial = !0, this._setInternalMaterial(DD)
+          const UU = new cU.l("colorShader", this.aZ(), "color", qU, !1);
+          UU.doNotSerialize = !0, this._ownsMaterial = !0, this._setInternalMaterial(UU)
         }
       }
       getClassName() {
@@ -630,193 +630,193 @@ export const modules = {
       get material() {
         return this._internalAbstractMeshDataInfo._material
       }
-      set material(DD) {
-        const CD = this.material;
-        if (CD === DD) return;
-        const cD = CD && this._ownsMaterial;
-        this._ownsMaterial = !1, this._setInternalMaterial(DD), cD && CD?.dispose()
+      set material(UU) {
+        const RU = this.material;
+        if (RU === UU) return;
+        const gU = RU && this._ownsMaterial;
+        this._ownsMaterial = !1, this._setInternalMaterial(UU), gU && RU?.dispose()
       }
-      _setInternalMaterial(DD) {
-        this._setMaterial(DD), this.material && (this.material.fillMode = wD.d.LineListDrawMode, this.material.disableLighting = !0)
+      _setInternalMaterial(UU) {
+        this._setMaterial(UU), this.material && (this.material.fillMode = KU.c.LineListDrawMode, this.material.disableLighting = !0)
       }
       get checkCollisions() {
         return !1
       }
-      set checkCollisions(DD) {}
-      _bind(DD, CD) {
+      set checkCollisions(UU) {}
+      _bind(UU, RU) {
         if (!this._geometry) return this;
-        const cD = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
-        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(CD, cD) : this._geometry._bind(CD, cD, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
+        const gU = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
+        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(RU, gU) : this._geometry._bind(RU, gU, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
           const {
-            r: DD,
-            g: CD,
-            b: cD
+            r: UU,
+            g: RU,
+            b: gU
           } = this.color;
-          this._color4.set(DD, CD, cD, this.alpha), this.material.setColor4("color", this._color4)
+          this._color4.set(UU, RU, gU, this.alpha), this.material.setColor4("color", this._color4)
         }
         return this
       }
-      _draw(DD, CD, cD) {
+      _draw(UU, RU, gU) {
         if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return this;
-        const ID = this.hq().DZ();
-        return this._unIndexed ? ID.drawArraysType(wD.d.LineListDrawMode, DD.verticesStart, DD.verticesCount, cD) : ID.drawElementsType(wD.d.LineListDrawMode, DD.indexStart, DD.indexCount, cD), this
+        const tU = this.aZ().WC();
+        return this._unIndexed ? tU.drawArraysType(KU.c.LineListDrawMode, UU.verticesStart, UU.verticesCount, gU) : tU.drawElementsType(KU.c.LineListDrawMode, UU.indexStart, UU.indexCount, gU), this
       }
-      dispose(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || CD) && this.material?.dispose(!1, !1, !0), super.dispose(DD)
+      dispose(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || RU) && this.material?.dispose(!1, !1, !0), super.dispose(UU)
       }
-      clone(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          cD = arguments.length > 2 ? arguments[2] : void 0;
-        if (CD && void 0 === CD._addToSceneRootNodes) {
-          const cD = CD;
-          return cD.source = this, new yD(DD, this.hq(), cD.parent, cD.source, cD.doNotCloneChildren)
+      clone(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          gU = arguments.length > 2 ? arguments[2] : void 0;
+        if (RU && void 0 === RU._addToSceneRootNodes) {
+          const gU = RU;
+          return gU.source = this, new jU(UU, this.aZ(), gU.parent, gU.source, gU.doNotCloneChildren)
         }
-        return new yD(DD, this.hq(), CD, this, cD)
+        return new jU(UU, this.aZ(), RU, this, gU)
       }
-      createInstance(DD) {
-        const CD = new MD(DD, this);
-        if (this.qJ) {
-          CD.qJ = {};
-          for (const DD in this.qJ) CD.qJ[DD] = this.qJ[DD]
+      createInstance(UU) {
+        const RU = new uU(UU, this);
+        if (this.kY) {
+          RU.kY = {};
+          for (const UU in this.kY) RU.kY[UU] = this.kY[UU]
         }
-        return CD
+        return RU
       }
-      serialize(DD) {
-        super.serialize(DD), DD.color = this.color.XcD(), DD.alpha = this.alpha
+      serialize(UU) {
+        super.serialize(UU), UU.color = this.color.vgU(), UU.alpha = this.alpha
       }
-      static Parse(DD, CD) {
-        const cD = new yD(DD.name, CD);
-        return cD.color = iD.d.FromArray(DD.color), cD.alpha = DD.alpha, cD
+      static Parse(UU, RU) {
+        const gU = new jU(UU.name, RU);
+        return gU.color = EU.e.FromArray(UU.color), gU.alpha = UU.alpha, gU
       }
     }
-    yD.ForceGLSL = !1;
-    class MD extends QD.c {
-      constructor(DD, CD) {
-        super(DD, CD), this.intersectionThreshold = CD.intersectionThreshold
+    jU.ForceGLSL = !1;
+    class uU extends qU.c {
+      constructor(UU, RU) {
+        super(UU, RU), this.intersectionThreshold = RU.intersectionThreshold
       }
       getClassName() {
         return "InstancedLinesMesh"
       }
     }
-    let tD = !1;
+    let CU = !1;
 
-    function ZD() {
-      tD || (tD = !0, bD.d._LinesMeshParser = (DD, CD) => yD.Parse(DD, CD))
-    }(ID = yD.prototype).enableEdgesRendering ?? (ID.enableEdgesRendering = (0, BD.j)("LinesMesh", "enableEdgesRendering")), (pD = MD.prototype).enableEdgesRendering ?? (pD.enableEdgesRendering = (0, BD.j)("InstancedLinesMesh", "enableEdgesRendering"))
+    function hU() {
+      CU || (CU = !0, TU.c._LinesMeshParser = (UU, RU) => jU.Parse(UU, RU))
+    }(tU = jU.prototype).enableEdgesRendering ?? (tU.enableEdgesRendering = (0, GU.m)("LinesMesh", "enableEdgesRendering")), (pU = uU.prototype).enableEdgesRendering ?? (pU.enableEdgesRendering = (0, GU.m)("InstancedLinesMesh", "enableEdgesRendering"))
   },
-  38045: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => iD
+  38234: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => EU
     });
-    var ID = cD(38048);
-    const pD = (DD, CD, cD) => DD ? DD.getClassName && "Mesh" === DD.getClassName() ? null : !DD.getClassName || "SubMesh" !== DD.getClassName() && "PhysicsBody" !== DD.getClassName() ? DD.clone ? DD.clone() : Array.isArray(DD) ? DD.slice() : cD && "object" === typeof DD ? {
-      ...DD
-    } : null : DD.clone(CD) : null;
-    class iD {
-      static DeepCopy(DD, CD, cD, iD) {
-        let fD = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const bD = function(DD) {
-          const CD = [];
+    var tU = gU(38236);
+    const pU = (UU, RU, gU) => UU ? UU.getClassName && "Mesh" === UU.getClassName() ? null : !UU.getClassName || "SubMesh" !== UU.getClassName() && "PhysicsBody" !== UU.getClassName() ? UU.clone ? UU.clone() : Array.isArray(UU) ? UU.slice() : gU && "object" === typeof UU ? {
+      ...UU
+    } : null : UU.clone(RU) : null;
+    class EU {
+      static DeepCopy(UU, RU, gU, EU) {
+        let PU = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const TU = function(UU) {
+          const RU = [];
           do {
-            const cD = Object.getOwnPropertyNames(DD);
-            for (const DD of cD) - 1 === CD.indexOf(DD) && CD.push(DD)
-          } while (DD = Object.getPrototypeOf(DD));
-          return CD
-        }(DD);
-        for (const wD of bD) {
-          if ("_" === wD[0] && (!iD || -1 === iD.indexOf(wD))) continue;
-          if (wD.endsWith("Observable")) continue;
-          if (cD && -1 !== cD.indexOf(wD)) continue;
-          const bD = DD[wD],
-            SD = typeof bD;
-          if ("function" !== SD) try {
-            if ("object" === SD)
-              if (bD instanceof Uint8Array) CD[wD] = Uint8Array.from(bD);
-              else if (bD instanceof Array) {
-              if (CD[wD] = [], bD.length > 0)
-                if ("object" == typeof bD[0])
-                  for (let DD = 0; DD < bD.length; DD++) {
-                    const cD = pD(bD[DD], CD, fD); - 1 === CD[wD].indexOf(cD) && CD[wD].push(cD)
-                  } else CD[wD] = bD.slice(0)
-            } else CD[wD] = pD(bD, CD, fD);
-            else CD[wD] = bD
-          } catch (QD) {
-            ID.e.Warn(QD.message)
+            const gU = Object.getOwnPropertyNames(UU);
+            for (const UU of gU) - 1 === RU.indexOf(UU) && RU.push(UU)
+          } while (UU = Object.getPrototypeOf(UU));
+          return RU
+        }(UU);
+        for (const KU of TU) {
+          if ("_" === KU[0] && (!EU || -1 === EU.indexOf(KU))) continue;
+          if (KU.endsWith("Observable")) continue;
+          if (gU && -1 !== gU.indexOf(KU)) continue;
+          const TU = UU[KU],
+            cU = typeof TU;
+          if ("function" !== cU) try {
+            if ("object" === cU)
+              if (TU instanceof Uint8Array) RU[KU] = Uint8Array.from(TU);
+              else if (TU instanceof Array) {
+              if (RU[KU] = [], TU.length > 0)
+                if ("object" == typeof TU[0])
+                  for (let UU = 0; UU < TU.length; UU++) {
+                    const gU = pU(TU[UU], RU, PU); - 1 === RU[KU].indexOf(gU) && RU[KU].push(gU)
+                  } else RU[KU] = TU.slice(0)
+            } else RU[KU] = pU(TU, RU, PU);
+            else RU[KU] = TU
+          } catch (qU) {
+            tU.e.Warn(qU.message)
           }
         }
       }
     }
   },
-  37290: (DD, CD, cD) => {
-    function ID() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (DD => {
-        const CD = 16 * Math.random() | 0;
-        return ("x" === DD ? CD : 3 & CD | 8).toString(16)
+  37439: (UU, RU, gU) => {
+    function tU() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (UU => {
+        const RU = 16 * Math.random() | 0;
+        return ("x" === UU ? RU : 3 & RU | 8).toString(16)
       }))
     }
-    cD.d(CD, {
-      d: () => ID
+    gU.d(RU, {
+      b: () => tU
     })
   },
-  38048: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => ID
+  38236: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => tU
     });
-    class ID {
-      static _CheckLimit(DD, CD) {
-        let cD = ID._LogLimitOutputs[DD];
-        return cD ? cD.current++ : (cD = {
-          limit: CD,
+    class tU {
+      static _CheckLimit(UU, RU) {
+        let gU = tU._LogLimitOutputs[UU];
+        return gU ? gU.current++ : (gU = {
+          limit: RU,
           current: 1
-        }, ID._LogLimitOutputs[DD] = cD), cD.current <= cD.limit
+        }, tU._LogLimitOutputs[UU] = gU), gU.current <= gU.limit
       }
-      static _GenerateLimitMessage(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const cD = ID._LogLimitOutputs[DD];
-        if (!cD || !ID.MessageLimitReached) return;
-        const pD = this._Levels[CD];
-        cD.current === cD.limit && ID[pD.name](ID.MessageLimitReached.replace(/%LIMIT%/g, "" + cD.limit).replace(/%TYPE%/g, pD.name ?? ""))
+      static _GenerateLimitMessage(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const gU = tU._LogLimitOutputs[UU];
+        if (!gU || !tU.MessageLimitReached) return;
+        const pU = this._Levels[RU];
+        gU.current === gU.limit && tU[pU.name](tU.MessageLimitReached.replace(/%LIMIT%/g, "" + gU.limit).replace(/%TYPE%/g, pU.name ?? ""))
       }
-      static _AddLogEntry(DD) {
-        ID._LogCache = DD + ID._LogCache, ID.OnNewCacheEntry && ID.OnNewCacheEntry(DD)
+      static _AddLogEntry(UU) {
+        tU._LogCache = UU + tU._LogCache, tU.OnNewCacheEntry && tU.OnNewCacheEntry(UU)
       }
-      static _FormatMessage(DD) {
-        const CD = DD => DD < 10 ? "0" + DD : "" + DD,
-          cD = new Date;
-        return "[" + CD(cD.getHours()) + ":" + CD(cD.getMinutes()) + ":" + CD(cD.getSeconds()) + "]: " + DD
+      static _FormatMessage(UU) {
+        const RU = UU => UU < 10 ? "0" + UU : "" + UU,
+          gU = new Date;
+        return "[" + RU(gU.getHours()) + ":" + RU(gU.getMinutes()) + ":" + RU(gU.getSeconds()) + "]: " + UU
       }
-      static _LogDisabled(DD, CD) {}
+      static _LogDisabled(UU, RU) {}
       static _LogEnabled() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          CD = arguments.length > 1 ? arguments[1] : void 0,
-          cD = arguments.length > 2 ? arguments[2] : void 0;
-        const pD = Array.isArray(CD) ? CD[0] : CD;
-        if (void 0 !== cD && !ID._CheckLimit(pD, cD)) return;
-        const iD = ID._FormatMessage(pD),
-          fD = this._Levels[DD],
-          bD = Array.isArray(CD) ? CD.slice(1) : [];
-        fD.logFunc && fD.logFunc("BJS - " + iD, ...bD);
-        const QD = `<div style='color:${fD.color}'>${iD}</div><br>`;
-        ID._AddLogEntry(QD), ID._GenerateLimitMessage(pD, DD)
+        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          RU = arguments.length > 1 ? arguments[1] : void 0,
+          gU = arguments.length > 2 ? arguments[2] : void 0;
+        const pU = Array.isArray(RU) ? RU[0] : RU;
+        if (void 0 !== gU && !tU._CheckLimit(pU, gU)) return;
+        const EU = tU._FormatMessage(pU),
+          PU = this._Levels[UU],
+          TU = Array.isArray(RU) ? RU.slice(1) : [];
+        PU.logFunc && PU.logFunc("BJS - " + EU, ...TU);
+        const qU = `<div style='color:${PU.color}'>${EU}</div><br>`;
+        tU._AddLogEntry(qU), tU._GenerateLimitMessage(pU, UU)
       }
       static get LogCache() {
-        return ID._LogCache
+        return tU._LogCache
       }
       static ClearLogCache() {
-        ID._LogCache = "", ID._LogLimitOutputs = {}, ID.errorsCount = 0
+        tU._LogCache = "", tU._LogLimitOutputs = {}, tU.errorsCount = 0
       }
-      static set LogLevels(DD) {
-        ID.Log = ID._LogDisabled, ID.Warn = ID._LogDisabled, ID.Error = ID._LogDisabled;
-        const CD = [ID.MessageLogLevel, ID.WarningLogLevel, ID.ErrorLogLevel];
-        for (const cD of CD)
-          if ((DD & cD) === cD) {
-            const DD = this._Levels[cD];
-            ID[DD.name] = ID._LogEnabled.bind(ID, cD)
+      static set LogLevels(UU) {
+        tU.Log = tU._LogDisabled, tU.Warn = tU._LogDisabled, tU.Error = tU._LogDisabled;
+        const RU = [tU.MessageLogLevel, tU.WarningLogLevel, tU.ErrorLogLevel];
+        for (const gU of RU)
+          if ((UU & gU) === gU) {
+            const UU = this._Levels[gU];
+            tU[UU.name] = tU._LogEnabled.bind(tU, gU)
           }
       }
     }
-    ID.NoneLogLevel = 0, ID.MessageLogLevel = 1, ID.WarningLogLevel = 2, ID.ErrorLogLevel = 4, ID.AllLogLevel = 7, ID.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", ID._LogCache = "", ID._LogLimitOutputs = {}, ID._Levels = [{}, {
+    tU.NoneLogLevel = 0, tU.MessageLogLevel = 1, tU.WarningLogLevel = 2, tU.ErrorLogLevel = 4, tU.AllLogLevel = 7, tU.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", tU._LogCache = "", tU._LogLimitOutputs = {}, tU._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -828,15 +828,15 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], ID.errorsCount = 0, ID.Log = ID._LogEnabled.bind(ID, ID.MessageLogLevel), ID.Warn = ID._LogEnabled.bind(ID, ID.WarningLogLevel), ID.Error = ID._LogEnabled.bind(ID, ID.ErrorLogLevel)
+    }], tU.errorsCount = 0, tU.Log = tU._LogEnabled.bind(tU, tU.MessageLogLevel), tU.Warn = tU._LogEnabled.bind(tU, tU.WarningLogLevel), tU.Error = tU._LogEnabled.bind(tU, tU.ErrorLogLevel)
   },
-  39231: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => ID.e
+  39460: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => tU.f
     });
-    var ID = cD(39239);
-    (0, ID.d)()
+    var tU = gU(39468);
+    (0, tU.c)()
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

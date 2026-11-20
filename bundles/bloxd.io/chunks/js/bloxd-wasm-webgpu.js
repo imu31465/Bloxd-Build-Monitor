@@ -1,2302 +1,2302 @@
 export const id = 8;
 export const ids = [8];
 export const modules = {
-  42396: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/bloxd_wasm_webgpu_bg.96cc9cb8e9e16bdde977.wasm"
+  42579: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/bloxd_wasm_webgpu_bg.f6caf1363cec86bf32ce.wasm"
   },
-  42391: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      bloxdWasmWebgpu: () => ic
+  42571: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      bloxdWasmWebgpu: () => Eg
     });
-    var ID = {};
-    cD.r(ID), cD.d(ID, {
-      Vo: () => pD,
-      TpD: () => iD,
-      Renderer: () => fD,
-      NB: () => bD,
-      default: () => pc,
-      initSync: () => Ic,
-      gB: () => QD,
-      ZcD: () => wD,
-      XB: () => SD,
-      mB: () => BD,
-      nB: () => yD,
-      OB: () => MD,
-      PB: () => tD,
-      HB: () => ZD,
-      UB: () => oD,
-      ocD: () => vD,
-      aB: () => ND,
-      bcD: () => gD,
-      GpD: () => XD,
-      QcD: () => mD,
-      RpD: () => nD,
-      kpD: () => OD,
-      BcD: () => PD,
-      dpD: () => HD,
-      McD: () => UD,
-      zB: () => xD,
-      jB: () => qD
+    var tU = {};
+    gU.r(tU), gU.d(tU, {
+      CQ: () => pU,
+      kpU: () => EU,
+      Renderer: () => PU,
+      Nc: () => TU,
+      default: () => pg,
+      initSync: () => tg,
+      lc: () => qU,
+      YgU: () => KU,
+      Oc: () => cU,
+      UG: () => GU,
+      gG: () => jU,
+      tG: () => uU,
+      pG: () => CU,
+      EG: () => hU,
+      PG: () => QU,
+      BgU: () => eU,
+      cG: () => WU,
+      JgU: () => fU,
+      FpU: () => xU,
+      wgU: () => mU,
+      ipU: () => IU,
+      ApU: () => JU,
+      bgU: () => wU,
+      zpU: () => nU,
+      ZgU: () => bU,
+      jG: () => oU,
+      uG: () => ZU
     });
-    class pD {
+    class pU {
       __destroy_into_raw() {
-        const DD = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, tC.unregister(this), DD
+        const UU = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, CR.unregister(this), UU
       }
       free() {
-        const DD = this.__destroy_into_raw();
-        Dc.KboX(DD, 0)
+        const UU = this.__destroy_into_raw();
+        Ug.hVJr(UU, 0)
       }
-      static ycD() {
-        return Dc.tK3A() >>> 0
+      static ogU() {
+        return Ug.t6iy() >>> 0
       }
-      YpD() {
-        return Dc.Kl7L(this.__wbg_ptr)
+      MpU() {
+        return Ug.AI51(this.__wbg_ptr)
       }
-      GID() {
-        return Dc.YIBC(this.__wbg_ptr) >>> 0
+      ztU() {
+        return Ug.GaQu(this.__wbg_ptr) >>> 0
       }
-      WpD(DD, CD, cD) {
-        return Dc.czn0(this.__wbg_ptr, DD, CD, cD) >>> 0
+      DpU(UU, RU, gU) {
+        return Ug.lvHA(this.__wbg_ptr, UU, RU, gU) >>> 0
       }
-      hy(DD, CD, cD) {
-        return Dc.iRIh(this.__wbg_ptr, DD, CD, cD) >>> 0
+      xj(UU, RU, gU) {
+        return Ug.mIeV(this.__wbg_ptr, UU, RU, gU) >>> 0
       }
-      spD() {
-        return Dc.sOGS(this.__wbg_ptr) >>> 0
+      LpU() {
+        return Ug.CAs1(this.__wbg_ptr) >>> 0
       }
-      kID(DD, CD, cD, ID, pD, iD, fD) {
-        return Dc.eIst(this.__wbg_ptr, DD, CD, cD, ID, pD, iD, fD)
+      DtU(UU, RU, gU, tU, pU, EU, PU) {
+        return Ug.iub3(this.__wbg_ptr, UU, RU, gU, tU, pU, EU, PU)
       }
-      EpD(DD, CD, cD) {
-        return Dc.ZRAe(this.__wbg_ptr, DD, CD, cD) >>> 0
+      NpU(UU, RU, gU) {
+        return Ug.dwAX(this.__wbg_ptr, UU, RU, gU) >>> 0
       }
-      epD() {
-        return Dc.PMyt(this.__wbg_ptr) >>> 0
+      lpU() {
+        return Ug.xXTk(this.__wbg_ptr) >>> 0
       }
-      upD() {
-        return Dc.Oq52(this.__wbg_ptr) >>> 0
+      OpU() {
+        return Ug.gI1f(this.__wbg_ptr) >>> 0
       }
-      rpD() {
-        return Dc.DZMb(this.__wbg_ptr) >>> 0
+      REU() {
+        return Ug.Xt3M(this.__wbg_ptr) >>> 0
       }
-      craft(DD, CD, cD) {
-        return Dc.N5vK(this.__wbg_ptr, DD, CD, cD) >>> 0
+      craft(UU, RU, gU) {
+        return Ug.R0co(this.__wbg_ptr, UU, RU, gU) >>> 0
       }
-      eID(DD, CD, cD) {
-        return Dc.JPgi(this.__wbg_ptr, DD, CD, cD) >>> 0
+      RpU(UU, RU, gU) {
+        return Ug.ww3D(this.__wbg_ptr, UU, RU, gU) >>> 0
       }
-      dID() {
-        return Dc.ReLD(this.__wbg_ptr) >>> 0
+      LtU() {
+        return Ug.lTJD(this.__wbg_ptr) >>> 0
       }
-      YID(DD) {
-        return Dc.ce1d(this.__wbg_ptr, DD) >>> 0
+      NtU(UU) {
+        return Ug.yzVm(this.__wbg_ptr, UU) >>> 0
       }
-      WID(DD, CD, cD, ID, pD, iD) {
-        return Dc.dk41(this.__wbg_ptr, DD, CD, cD, ID, pD, iD) >>> 0
+      ltU(UU, RU, gU, tU, pU, EU) {
+        return Ug.Uu3r(this.__wbg_ptr, UU, RU, gU, tU, pU, EU) >>> 0
       }
-      RID() {
-        return Dc.Cf9x(this.__wbg_ptr) >>> 0
+      MtU() {
+        return Ug.sab2(this.__wbg_ptr) >>> 0
       }
-      ApD() {
-        return Dc.VZ4C(this.__wbg_ptr) >>> 0
+      gEU() {
+        return Ug.NVWw(this.__wbg_ptr) >>> 0
       }
-      FpD(DD) {
-        return Dc.sG7U(this.__wbg_ptr, DD) >>> 0
+      tEU(UU) {
+        return Ug.OcFs(this.__wbg_ptr, UU) >>> 0
       }
-      hID(DD) {
-        return Dc.sEmB(this.__wbg_ptr, DD) >>> 0
+      tpU(UU) {
+        return Ug.N75X(this.__wbg_ptr, UU) >>> 0
       }
-      DiD(DD) {
-        return Dc.MyzI(this.__wbg_ptr, DD) >>> 0
+      pEU(UU) {
+        return Ug.Yy4d(this.__wbg_ptr, UU) >>> 0
       }
-      CiD(DD) {
-        return Dc.ls2B(this.__wbg_ptr, DD) >>> 0
+      EEU(UU) {
+        return Ug.NGuY(this.__wbg_ptr, UU) >>> 0
       }
-      frame(DD, CD, cD, ID, pD, iD) {
-        return Dc.qNMD(this.__wbg_ptr, DD, CD, cD, ID, pD, iD) >>> 0
+      frame(UU, RU, gU, tU, pU, EU) {
+        return Ug.oFCX(this.__wbg_ptr, UU, RU, gU, tU, pU, EU) >>> 0
       }
-      IiD(DD) {
-        return 0 !== Dc.uXBD(this.__wbg_ptr, DD)
+      TEU(UU) {
+        return 0 !== Ug.Rvbk(this.__wbg_ptr, UU)
       }
-      piD(DD, CD) {
-        return Dc.lUee(this.__wbg_ptr, DD, CD) >>> 0
+      qEU(UU, RU) {
+        return Ug.Ymsm(this.__wbg_ptr, UU, RU) >>> 0
       }
-      iiD(DD) {
-        return Dc.drwb(this.__wbg_ptr, DD) >>> 0
+      KEU(UU) {
+        return Ug.xMIy(this.__wbg_ptr, UU) >>> 0
       }
-      zM() {
-        return Dc.bO33(this.__wbg_ptr) >>> 0
+      Eu() {
+        return Ug.VBCm(this.__wbg_ptr) >>> 0
       }
-      fiD() {
-        return Dc.mO6S(this.__wbg_ptr) >>> 0
+      cEU() {
+        return Ug.CvV3(this.__wbg_ptr) >>> 0
       }
-      rB() {
-        return Dc.f5Mv(this.__wbg_ptr) >>> 0
+      ZG() {
+        return Ug.HyVq(this.__wbg_ptr) >>> 0
       }
-      biD(DD, CD, cD, ID, pD) {
-        return Dc.mhVe(this.__wbg_ptr, DD, CD, cD, ID, pD) >>> 0
+      GEU(UU, RU, gU, tU, pU) {
+        return Ug.ZZpz(this.__wbg_ptr, UU, RU, gU, tU, pU) >>> 0
       }
-      wiD(DD, CD, cD) {
-        return Dc.CrHq(this.__wbg_ptr, DD, CD, cD) >>> 0
+      jEU(UU, RU, gU) {
+        return Ug.Ljv2(this.__wbg_ptr, UU, RU, gU) >>> 0
       }
-      SiD(DD, CD, cD, ID) {
-        return Dc.T0xU(this.__wbg_ptr, DD, CD, cD, ID) >>> 0
+      uEU(UU, RU, gU, tU) {
+        return Ug.jIMC(this.__wbg_ptr, UU, RU, gU, tU) >>> 0
       }
-      BiD(DD, CD, cD) {
-        return Dc.WKdg(this.__wbg_ptr, DD, CD, cD) >>> 0
+      CEU(UU, RU, gU) {
+        return Ug.twnv(this.__wbg_ptr, UU, RU, gU) >>> 0
       }
-      yiD(DD, CD) {
-        return Dc.fPwA(this.__wbg_ptr, DD, CD) >>> 0
+      hEU(UU, RU) {
+        return Ug.NQmt(this.__wbg_ptr, UU, RU) >>> 0
       }
-      uID(DD) {
-        return Dc.B5xv(this.__wbg_ptr, DD) >>> 0
+      gpU(UU) {
+        return Ug.VcyL(this.__wbg_ptr, UU) >>> 0
       }
-      UH() {
-        return Dc.g43C(this.__wbg_ptr) >>> 0
+      PJ() {
+        return Ug.qGJ8(this.__wbg_ptr) >>> 0
       }
-      MiD() {
-        return Dc.EWGl(this.__wbg_ptr) >>> 0
+      QEU() {
+        return Ug.smHk(this.__wbg_ptr) >>> 0
       }
-      tiD() {
-        return Dc.NvXf(this.__wbg_ptr) >>> 0
+      eEU() {
+        return Ug.llfI(this.__wbg_ptr) >>> 0
       }
-      ZiD() {
-        return Dc.PnP9(this.__wbg_ptr) >>> 0
+      WEU() {
+        return Ug.AlA3(this.__wbg_ptr) >>> 0
       }
-      constructor(DD, CD) {
-        const cD = Dc.wMOH(DD, CD);
-        return this.__wbg_ptr = cD, tC.register(this, this.__wbg_ptr, this), this
+      constructor(UU, RU) {
+        const gU = Ug.NO3V(UU, RU);
+        return this.__wbg_ptr = gU, CR.register(this, this.__wbg_ptr, this), this
       }
-      oiD(DD) {
-        return Dc.Yyms(this.__wbg_ptr, DD) >>> 0
+      fEU(UU) {
+        return Ug.YnW1(this.__wbg_ptr, UU) >>> 0
       }
-      ko() {
-        return Dc.q6Nw(this.__wbg_ptr) >>> 0
+      mQ() {
+        return Ug.Ppc1(this.__wbg_ptr) >>> 0
       }
-      ZpD(DD, CD) {
-        return Dc.s1QB(this.__wbg_ptr, DD, CD) >>> 0
+      fpU(UU, RU) {
+        return Ug.aKWg(this.__wbg_ptr, UU, RU) >>> 0
       }
-      BpD(DD) {
-        return Dc.oqoN(this.__wbg_ptr, DD) >>> 0
+      hpU(UU) {
+        return Ug.vKwz(this.__wbg_ptr, UU) >>> 0
       }
-      viD(DD, CD, cD, ID) {
-        return Dc.r8EE(this.__wbg_ptr, DD, CD, cD, ID) >>> 0
+      xEU(UU, RU, gU, tU) {
+        return Ug.YrAJ(this.__wbg_ptr, UU, RU, gU, tU) >>> 0
       }
-      gpD(DD) {
-        return Dc.lrdG(this.__wbg_ptr, DD) >>> 0
+      JpU(UU) {
+        return Ug.FfK4(this.__wbg_ptr, UU) >>> 0
       }
-      IpD() {
-        Dc.rpaJ(this.__wbg_ptr)
+      qpU() {
+        Ug.rKBk(this.__wbg_ptr)
       }
-      OpD(DD) {
-        Dc.FtNH(this.__wbg_ptr, DD)
+      opU(UU) {
+        Ug.vMSI(this.__wbg_ptr, UU)
       }
-      npD(DD) {
-        return Dc.b9gV(this.__wbg_ptr, DD)
+      bpU(UU) {
+        return Ug.y3VN(this.__wbg_ptr, UU)
       }
-      cpD() {
-        return Dc.psT8(this.__wbg_ptr) >>> 0
+      TpU() {
+        return Ug.z4XN(this.__wbg_ptr) >>> 0
       }
-      Lo() {
-        return Dc.HMwa(this.__wbg_ptr) >>> 0
+      eQ() {
+        return Ug.Nghd(this.__wbg_ptr) >>> 0
       }
-      vpD() {
-        return Dc.n74s(this.__wbg_ptr) >>> 0
+      mpU() {
+        return Ug.vDXq(this.__wbg_ptr) >>> 0
       }
-      hpD(DD) {
-        return Dc.myyc(this.__wbg_ptr, DD) >>> 0
+      UEU(UU) {
+        return Ug.osSG(this.__wbg_ptr, UU) >>> 0
       }
-      NiD(DD) {
-        return Dc.Ilxw(this.__wbg_ptr, DD) >>> 0
+      mEU(UU) {
+        return Ug.ZdbL(this.__wbg_ptr, UU) >>> 0
       }
-      giD(DD) {
-        return Dc.d0Vw(this.__wbg_ptr, DD) >>> 0
+      IEU(UU) {
+        return Ug.jqaI(this.__wbg_ptr, UU) >>> 0
       }
-      miD(DD) {
-        return Dc.tabN(this.__wbg_ptr, DD) >>> 0
+      JEU(UU) {
+        return Ug.cW3n(this.__wbg_ptr, UU) >>> 0
       }
-      salvage(DD, CD, cD) {
-        return Dc.Hjay(this.__wbg_ptr, DD, CD, cD) >>> 0
+      salvage(UU, RU, gU) {
+        return Ug.DXc9(this.__wbg_ptr, UU, RU, gU) >>> 0
       }
-      DpD(DD) {
-        return Dc.mxDQ(this.__wbg_ptr, DD) >>> 0
+      EpU(UU) {
+        return Ug.bUYp(this.__wbg_ptr, UU) >>> 0
       }
-      TID() {
-        return Dc.VYVk(this.__wbg_ptr) >>> 0
+      AtU() {
+        return Ug.sHwC(this.__wbg_ptr) >>> 0
       }
-      niD(DD) {
-        return Dc.KkxX(this.__wbg_ptr, DD) >>> 0
+      wEU(UU) {
+        return Ug.eXzT(this.__wbg_ptr, UU) >>> 0
       }
-      OiD(DD) {
-        Dc.ycNl(this.__wbg_ptr, DD)
+      nEU(UU) {
+        Ug.pDhU(this.__wbg_ptr, UU)
       }
-      HiD(DD) {
-        return 0 !== Dc.JsWC(this.__wbg_ptr, vC(DD))
+      bEU(UU) {
+        return 0 !== Ug.iiYG(this.__wbg_ptr, eR(UU))
       }
-      NM(DD, CD, cD, ID) {
-        return Dc.jghW(this.__wbg_ptr, DD, CD, cD, ID) >>> 0
+      Fj(UU, RU, gU, tU) {
+        return Ug.oQo9(this.__wbg_ptr, UU, RU, gU, tU) >>> 0
       }
-      ScD(DD, CD, cD) {
-        const ID = sC(DD, Dc.sWdd, Dc.qJke),
-          pD = Cc,
-          iD = dC(CD, Dc.sWdd),
-          fD = Cc,
-          bD = function(DD, CD) {
-            const cD = CD(8 * DD.length, 8) >>> 0;
-            return JC().set(DD, cD / 8), Cc = DD.length, cD
-          }(cD, Dc.sWdd),
-          QD = Cc;
-        return 0 !== Dc.BvrO(this.__wbg_ptr, ID, pD, iD, fD, bD, QD)
+      ngU(UU, RU, gU) {
+        const tU = AR(UU, Ug.XcLG, Ug.WHpS),
+          pU = Rg,
+          EU = kR(RU, Ug.XcLG),
+          PU = Rg,
+          TU = function(UU, RU) {
+            const gU = RU(8 * UU.length, 8) >>> 0;
+            return aR().set(UU, gU / 8), Rg = UU.length, gU
+          }(gU, Ug.XcLG),
+          qU = Rg;
+        return 0 !== Ug.CXe2(this.__wbg_ptr, tU, pU, EU, PU, TU, qU)
       }
-      UiD(DD) {
-        Dc.mMHL(this.__wbg_ptr, DD)
+      oEU(UU) {
+        Ug.zQEM(this.__wbg_ptr, UU)
       }
-      xiD(DD, CD) {
-        return 0 !== Dc.fxWF(this.__wbg_ptr, DD, CD)
+      ZEU(UU, RU) {
+        return 0 !== Ug.NQjf(this.__wbg_ptr, UU, RU)
       }
-      qiD(DD) {
-        return Dc.h6DJ(this.__wbg_ptr, DD) >>> 0
+      aEU(UU) {
+        return Ug.Z9xZ(this.__wbg_ptr, UU) >>> 0
       }
-      zo(DD, CD) {
-        Dc.Jdvd(this.__wbg_ptr, DD, CD)
+      hQ(UU, RU) {
+        Ug.JxlQ(this.__wbg_ptr, UU, RU)
       }
-      ciD(DD) {
-        Dc.Gmo0(this.__wbg_ptr, vC(DD))
+      PEU(UU) {
+        Ug.kqKG(this.__wbg_ptr, eR(UU))
       }
-      JiD(DD) {
-        Dc.UIPS(this.__wbg_ptr, DD)
+      YEU(UU) {
+        Ug.ViXs(this.__wbg_ptr, UU)
       }
-      EID(DD, CD, cD) {
-        return Dc.bIuJ(this.__wbg_ptr, DD, CD, cD) >>> 0
+      UpU(UU, RU, gU) {
+        return Ug.pez3(this.__wbg_ptr, UU, RU, gU) >>> 0
       }
-      CpD(DD) {
-        return Dc.SETY(this.__wbg_ptr, DD) >>> 0
+      PpU(UU) {
+        return Ug.edDz(this.__wbg_ptr, UU) >>> 0
       }
-      KiD(DD) {
-        Dc.S2RP(this.__wbg_ptr, DD)
+      BEU(UU) {
+        Ug.LUot(this.__wbg_ptr, UU)
       }
-      aiD(DD) {
-        NC(DD, fD);
-        var CD = DD.__destroy_into_raw();
-        Dc.Ufo0(this.__wbg_ptr, CD)
+      VEU(UU) {
+        WR(UU, PU);
+        var RU = UU.__destroy_into_raw();
+        Ug.HQkU(this.__wbg_ptr, RU)
       }
-      UcD(DD, CD, cD, ID, pD, iD) {
-        var fD = RC(DD) ? 0 : YC(DD, Dc.sWdd),
-          bD = Cc;
-        const QD = YC(CD, Dc.sWdd),
-          wD = Cc,
-          SD = WC(cD, Dc.sWdd),
-          BD = Cc,
-          yD = dC(ID, Dc.sWdd),
-          MD = Cc;
-        return 0 !== Dc.oL1d(this.__wbg_ptr, fD, bD, QD, wD, SD, BD, yD, MD, pD, iD)
+      SgU(UU, RU, gU, tU, pU, EU) {
+        var PU = sR(UU) ? 0 : FR(UU, Ug.XcLG),
+          TU = Rg;
+        const qU = FR(RU, Ug.XcLG),
+          KU = Rg,
+          cU = iR(gU, Ug.XcLG),
+          GU = Rg,
+          jU = kR(tU, Ug.XcLG),
+          uU = Rg;
+        return 0 !== Ug.YFbF(this.__wbg_ptr, PU, TU, qU, KU, cU, GU, jU, uU, pU, EU)
       }
-      ViD(DD, CD, cD, ID, pD) {
-        var iD = RC(pD) ? 0 : YC(pD, Dc.sWdd),
-          fD = Cc;
-        Dc.DQwK(this.__wbg_ptr, DD, CD, cD, ID, iD, fD)
+      rEU(UU, RU, gU, tU, pU) {
+        var EU = sR(pU) ? 0 : FR(pU, Ug.XcLG),
+          PU = Rg;
+        Ug.Eb05(this.__wbg_ptr, UU, RU, gU, tU, EU, PU)
       }
-      ziD(DD, CD, cD, ID) {
-        const pD = WC(DD, Dc.sWdd),
-          iD = Cc,
-          fD = dC(CD, Dc.sWdd),
-          bD = Cc,
-          QD = WC(cD, Dc.sWdd),
-          wD = Cc;
-        return 0 !== Dc.zjLO(this.__wbg_ptr, pD, iD, fD, bD, QD, wD, RC(ID) ? 0 : vC(ID))
+      XEU(UU, RU, gU, tU) {
+        const pU = iR(UU, Ug.XcLG),
+          EU = Rg,
+          PU = kR(RU, Ug.XcLG),
+          TU = Rg,
+          qU = iR(gU, Ug.XcLG),
+          KU = Rg;
+        return 0 !== Ug.Mt7U(this.__wbg_ptr, pU, EU, PU, TU, qU, KU, sR(tU) ? 0 : eR(tU))
       }
-      jiD(DD) {
-        const CD = sC(DD, Dc.sWdd, Dc.qJke),
-          cD = Cc;
-        return 0 !== Dc.B7wj(this.__wbg_ptr, CD, cD)
+      vEU(UU) {
+        const RU = AR(UU, Ug.XcLG, Ug.WHpS),
+          gU = Rg;
+        return 0 !== Ug.E30I(this.__wbg_ptr, RU, gU)
       }
-      liD(DD) {
-        return Dc.OLhR(this.__wbg_ptr, DD) >>> 0
+      dEU(UU) {
+        return Ug.JYqn(this.__wbg_ptr, UU) >>> 0
       }
-      tcD() {
-        return Dc.nLqp(this.__wbg_ptr) >>> 0
+      agU() {
+        return Ug.pyo7(this.__wbg_ptr) >>> 0
       }
-      LiD() {
-        const DD = Dc.tKtx(this.__wbg_ptr);
-        var CD = PC(DD[0], DD[1]).slice();
-        return Dc.ngrl(DD[0], 4 * DD[1], 4), CD
+      HEU() {
+        const UU = Ug.FWQX(this.__wbg_ptr);
+        var RU = wR(UU[0], UU[1]).slice();
+        return Ug.IOaE(UU[0], 4 * UU[1], 4), RU
       }
-      TiD() {
-        const DD = Dc.bHrD(this.__wbg_ptr);
-        return 16777215 === DD ? void 0 : 0 !== DD
+      SEU() {
+        const UU = Ug.OtXG(this.__wbg_ptr);
+        return 16777215 === UU ? void 0 : 0 !== UU
       }
-      jo(DD) {
-        const CD = Dc.oo9f(this.__wbg_ptr, DD);
-        var cD = mC(CD[0], CD[1]).slice();
-        return Dc.ngrl(CD[0], 8 * CD[1], 8), cD
+      QQ(UU) {
+        const RU = Ug.I0cj(this.__wbg_ptr, UU);
+        var gU = mR(RU[0], RU[1]).slice();
+        return Ug.IOaE(RU[0], 8 * RU[1], 8), gU
       }
-      GiD() {
-        const DD = Dc.OkZM(this.__wbg_ptr);
-        var CD = nC(DD[0], DD[1]);
-        return Dc.ngrl(DD[0], 4 * DD[1], 4), CD
+      sEU() {
+        const UU = Ug.FCgB(this.__wbg_ptr);
+        var RU = IR(UU[0], UU[1]);
+        return Ug.IOaE(UU[0], 4 * UU[1], 4), RU
       }
-      RiD(DD, CD, cD, ID, pD) {
-        return Dc.h5q4(this.__wbg_ptr, DD, CD, cD, ID, pD) >>> 0
+      yEU(UU, RU, gU, tU, pU) {
+        return Ug.XDNw(this.__wbg_ptr, UU, RU, gU, tU, pU) >>> 0
       }
-      kiD() {
-        const DD = Dc.ZKLu(this.__wbg_ptr);
-        var CD = nC(DD[0], DD[1]);
-        return Dc.ngrl(DD[0], 4 * DD[1], 4), CD
+      kEU() {
+        const UU = Ug.dOPO(this.__wbg_ptr);
+        var RU = IR(UU[0], UU[1]);
+        return Ug.IOaE(UU[0], 4 * UU[1], 4), RU
       }
-      diD() {
-        return Dc.Rwq4(this.__wbg_ptr) >>> 0
+      FEU() {
+        return Ug.HzCs(this.__wbg_ptr) >>> 0
       }
-      YiD() {
-        return Dc.NHOO(this.__wbg_ptr) >>> 0
+      iEU() {
+        return Ug.DEyK(this.__wbg_ptr) >>> 0
       }
     }
-    Symbol.dispose && (pD.prototype[Symbol.dispose] = pD.prototype.free);
-    class iD {
+    Symbol.dispose && (pU.prototype[Symbol.dispose] = pU.prototype.free);
+    class EU {
       __destroy_into_raw() {
-        const DD = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, ZC.unregister(this), DD
+        const UU = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, hR.unregister(this), UU
       }
       free() {
-        const DD = this.__destroy_into_raw();
-        Dc.yPpY(DD, 0)
+        const UU = this.__destroy_into_raw();
+        Ug.hdv1(UU, 0)
       }
-      attach(DD) {
-        NC(DD, pD);
-        return 0 !== Dc.yVmh(this.__wbg_ptr, DD.__wbg_ptr)
+      attach(UU) {
+        WR(UU, pU);
+        return 0 !== Ug.PJZ3(this.__wbg_ptr, UU.__wbg_ptr)
       }
       attached() {
-        return 0 !== Dc.ODfr(this.__wbg_ptr)
+        return 0 !== Ug.q0Ep(this.__wbg_ptr)
       }
-      close(DD) {
-        const CD = Dc.woik(this.__wbg_ptr, DD);
-        var cD = HC(CD[0], CD[1]).slice();
-        return Dc.ngrl(CD[0], 1 * CD[1], 1), cD
+      close(UU) {
+        const RU = Ug.mMQ3(this.__wbg_ptr, UU);
+        var gU = nR(RU[0], RU[1]).slice();
+        return Ug.IOaE(RU[0], 1 * RU[1], 1), gU
       }
       detach() {
-        Dc.nIWn(this.__wbg_ptr)
+        Ug.LJ2h(this.__wbg_ptr)
       }
-      WiD() {
-        return Dc.LpBa(this.__wbg_ptr) >>> 0
+      AEU() {
+        return Ug.rBeK(this.__wbg_ptr) >>> 0
       }
-      siD() {
-        return Dc.n9xB(this.__wbg_ptr) >>> 0
+      zEU() {
+        return Ug.i3mp(this.__wbg_ptr) >>> 0
       }
-      frame(DD) {
-        return Dc.GMEL(this.__wbg_ptr, DD) >>> 0
+      frame(UU) {
+        return Ug.rFIn(this.__wbg_ptr, UU) >>> 0
       }
-      EiD(DD, CD, cD, ID) {
-        const pD = YC(ID, Dc.sWdd),
-          iD = Cc;
-        return Dc.hSft(this.__wbg_ptr, DD, CD, cD, pD, iD)
+      MEU(UU, RU, gU, tU) {
+        const pU = FR(tU, Ug.XcLG),
+          EU = Rg;
+        return Ug.Lki7(this.__wbg_ptr, UU, RU, gU, pU, EU)
       }
-      eiD() {
-        return 0 !== Dc.LkLu(this.__wbg_ptr)
+      DEU() {
+        return 0 !== Ug.DDSn(this.__wbg_ptr)
       }
-      uiD(DD, CD) {
-        const cD = YC(CD, Dc.sWdd),
-          ID = Cc;
-        Dc.cp9d(this.__wbg_ptr, DD, cD, ID)
+      LEU(UU, RU) {
+        const gU = FR(RU, Ug.XcLG),
+          tU = Rg;
+        Ug.QaHQ(this.__wbg_ptr, UU, gU, tU)
       }
       constructor() {
-        const DD = Dc.dI4B();
-        return this.__wbg_ptr = DD, ZC.register(this, this.__wbg_ptr, this), this
+        const UU = Ug.JVK2();
+        return this.__wbg_ptr = UU, hR.register(this, this.__wbg_ptr, this), this
       }
-      open(DD, CD, cD, ID) {
-        return 0 !== Dc.fegr(this.__wbg_ptr, DD, CD, cD, ID)
+      open(UU, RU, gU, tU) {
+        return 0 !== Ug.QPi9(this.__wbg_ptr, UU, RU, gU, tU)
       }
-      orbit(DD) {
-        const CD = Dc.dGYo(this.__wbg_ptr, DD);
-        var cD = mC(CD[0], CD[1]).slice();
-        return Dc.ngrl(CD[0], 8 * CD[1], 8), cD
+      orbit(UU) {
+        const RU = Ug.iWaJ(this.__wbg_ptr, UU);
+        var gU = mR(RU[0], RU[1]).slice();
+        return Ug.IOaE(RU[0], 8 * RU[1], 8), gU
       }
-      replay(DD) {
-        return Dc.YpeZ(this.__wbg_ptr, DD) >>> 0
+      replay(UU) {
+        return Ug.ETRx(this.__wbg_ptr, UU) >>> 0
       }
-      resize(DD, CD, cD) {
-        Dc.Xt1u(this.__wbg_ptr, DD, CD, cD)
+      resize(UU, RU, gU) {
+        Ug.yNnV(this.__wbg_ptr, UU, RU, gU)
       }
-      hiD(DD) {
-        const CD = YC(DD, Dc.sWdd),
-          cD = Cc;
-        return 0 !== Dc.MbuK(this.__wbg_ptr, CD, cD)
+      NEU(UU) {
+        const RU = FR(UU, Ug.XcLG),
+          gU = Rg;
+        return 0 !== Ug.TYZ3(this.__wbg_ptr, RU, gU)
       }
-      AiD(DD, CD, cD, ID, pD) {
-        const iD = sC(CD, Dc.sWdd, Dc.qJke),
-          fD = Cc;
-        return Dc.NCKq(this.__wbg_ptr, DD, iD, fD, cD, ID, pD) >>> 0
+      OEU(UU, RU, gU, tU, pU) {
+        const EU = AR(RU, Ug.XcLG, Ug.WHpS),
+          PU = Rg;
+        return Ug.oYOD(this.__wbg_ptr, UU, EU, PU, gU, tU, pU) >>> 0
       }
-      FiD(DD) {
-        Dc.q8Mr(this.__wbg_ptr, DD)
+      UPU(UU) {
+        Ug.qDCs(this.__wbg_ptr, UU)
       }
-      DfD(DD, CD, cD, ID, pD) {
-        const iD = sC(cD, Dc.sWdd, Dc.qJke),
-          fD = Cc;
-        return Dc.UQEJ(this.__wbg_ptr, DD, CD, iD, fD, ID, pD) >>> 0
+      RPU(UU, RU, gU, tU, pU) {
+        const EU = AR(gU, Ug.XcLG, Ug.WHpS),
+          PU = Rg;
+        return Ug.O3NT(this.__wbg_ptr, UU, RU, EU, PU, tU, pU) >>> 0
       }
-      CfD(DD, CD, cD, ID) {
-        Dc.IiVa(this.__wbg_ptr, DD, CD, cD, ID)
+      gPU(UU, RU, gU, tU) {
+        Ug.pbbO(this.__wbg_ptr, UU, RU, gU, tU)
       }
-      cfD(DD, CD, cD, ID, pD) {
-        const iD = sC(cD, Dc.sWdd, Dc.qJke),
-          fD = Cc,
-          bD = sC(ID, Dc.sWdd, Dc.qJke),
-          QD = Cc;
-        return Dc.M3sB(this.__wbg_ptr, DD, CD, iD, fD, bD, QD, pD) >>> 0
+      tPU(UU, RU, gU, tU, pU) {
+        const EU = AR(gU, Ug.XcLG, Ug.WHpS),
+          PU = Rg,
+          TU = AR(tU, Ug.XcLG, Ug.WHpS),
+          qU = Rg;
+        return Ug.PJuE(this.__wbg_ptr, UU, RU, EU, PU, TU, qU, pU) >>> 0
       }
-      riD(DD, CD, cD, ID) {
-        const pD = sC(CD, Dc.sWdd, Dc.qJke),
-          iD = Cc,
-          fD = dC(cD, Dc.sWdd),
-          bD = Cc;
-        return Dc.NdMA(this.__wbg_ptr, DD, pD, iD, fD, bD, ID) >>> 0
+      lEU(UU, RU, gU, tU) {
+        const pU = AR(RU, Ug.XcLG, Ug.WHpS),
+          EU = Rg,
+          PU = kR(gU, Ug.XcLG),
+          TU = Rg;
+        return Ug.QnrW(this.__wbg_ptr, UU, pU, EU, PU, TU, tU) >>> 0
       }
-      aiD(DD) {
-        NC(DD, fD);
-        var CD = DD.__destroy_into_raw();
-        return 0 !== Dc.JZ6S(this.__wbg_ptr, CD)
+      VEU(UU) {
+        WR(UU, PU);
+        var RU = UU.__destroy_into_raw();
+        return 0 !== Ug.xrYd(this.__wbg_ptr, RU)
       }
-      UcD(DD, CD, cD, ID, pD) {
-        var iD = RC(DD) ? 0 : YC(DD, Dc.sWdd),
-          fD = Cc;
-        const bD = YC(CD, Dc.sWdd),
-          QD = Cc,
-          wD = WC(cD, Dc.sWdd),
-          SD = Cc,
-          BD = dC(ID, Dc.sWdd),
-          yD = Cc;
-        return 0 !== Dc.RCfx(this.__wbg_ptr, iD, fD, bD, QD, wD, SD, BD, yD, pD)
+      SgU(UU, RU, gU, tU, pU) {
+        var EU = sR(UU) ? 0 : FR(UU, Ug.XcLG),
+          PU = Rg;
+        const TU = FR(RU, Ug.XcLG),
+          qU = Rg,
+          KU = iR(gU, Ug.XcLG),
+          cU = Rg,
+          GU = kR(tU, Ug.XcLG),
+          jU = Rg;
+        return 0 !== Ug.atYc(this.__wbg_ptr, EU, PU, TU, qU, KU, cU, GU, jU, pU)
       }
-      IfD() {
-        const DD = Dc.Jy4T(this.__wbg_ptr);
-        var CD = PC(DD[0], DD[1]).slice();
-        return Dc.ngrl(DD[0], 4 * DD[1], 4), CD
+      pPU() {
+        const UU = Ug.xNVW(this.__wbg_ptr);
+        var RU = wR(UU[0], UU[1]).slice();
+        return Ug.IOaE(UU[0], 4 * UU[1], 4), RU
       }
-      pfD(DD) {
-        const CD = Dc.wNjP(this.__wbg_ptr, DD);
-        var cD = HC(CD[0], CD[1]).slice();
-        return Dc.ngrl(CD[0], 1 * CD[1], 1), cD
+      EPU(UU) {
+        const RU = Ug.OlMr(this.__wbg_ptr, UU);
+        var gU = nR(RU[0], RU[1]).slice();
+        return Ug.IOaE(RU[0], 1 * RU[1], 1), gU
       }
-      ifD(DD) {
-        const CD = Dc.GlPd(this.__wbg_ptr, DD);
-        var cD = PC(CD[0], CD[1]).slice();
-        return Dc.ngrl(CD[0], 4 * CD[1], 4), cD
+      PPU(UU) {
+        const RU = Ug.ZY1V(this.__wbg_ptr, UU);
+        var gU = wR(RU[0], RU[1]).slice();
+        return Ug.IOaE(RU[0], 4 * RU[1], 4), gU
       }
     }
-    Symbol.dispose && (iD.prototype[Symbol.dispose] = iD.prototype.free);
-    class fD {
-      static __wrap(DD) {
-        const CD = Object.create(fD.prototype);
-        return CD.__wbg_ptr = DD, oC.register(CD, CD.__wbg_ptr, CD), CD
+    Symbol.dispose && (EU.prototype[Symbol.dispose] = EU.prototype.free);
+    class PU {
+      static __wrap(UU) {
+        const RU = Object.create(PU.prototype);
+        return RU.__wbg_ptr = UU, QR.register(RU, RU.__wbg_ptr, RU), RU
       }
       __destroy_into_raw() {
-        const DD = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, oC.unregister(this), DD
+        const UU = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, QR.unregister(this), UU
       }
       free() {
-        const DD = this.__destroy_into_raw();
-        Dc.iZWt(DD, 0)
+        const UU = this.__destroy_into_raw();
+        Ug.pLwI(UU, 0)
       }
     }
 
-    function bD(DD, CD) {
-      const cD = sC(DD, Dc.sWdd, Dc.qJke),
-        ID = Cc,
-        pD = Dc.TvFz(cD, ID, CD);
-      if (pD[1]) throw EC(pD[0])
+    function TU(UU, RU) {
+      const gU = AR(UU, Ug.XcLG, Ug.WHpS),
+        tU = Rg,
+        pU = Ug.XsGC(gU, tU, RU);
+      if (pU[1]) throw zR(pU[0])
     }
 
-    function QD() {
-      Dc.iAxd()
+    function qU() {
+      Ug.eAYK()
     }
 
-    function wD() {
-      return Dc.F8CJ()
+    function KU() {
+      return Ug.XULU()
     }
 
-    function SD() {
-      return Dc.vj41() >>> 0
+    function cU() {
+      return Ug.VxsO() >>> 0
     }
 
-    function BD(DD) {
-      return 0 !== Dc.lp27(DD)
+    function GU(UU) {
+      return 0 !== Ug.zVVL(UU)
     }
 
-    function yD(DD) {
-      return 0 !== Dc.cufG(DD)
+    function jU(UU) {
+      return 0 !== Ug.aXsZ(UU)
     }
 
-    function MD(DD) {
-      Dc.D2u8(DD)
+    function uU(UU) {
+      Ug.JtmE(UU)
     }
 
-    function tD() {
-      return Dc.NGmt() >>> 0
+    function CU() {
+      return Ug.pvK9() >>> 0
     }
 
-    function ZD() {
-      return Dc.sLkN() >>> 0
+    function hU() {
+      return Ug.q0EG() >>> 0
     }
 
-    function oD() {
-      return 0 !== Dc.T1eZ()
+    function QU() {
+      return 0 !== Ug.wao4()
     }
 
-    function vD(DD, CD, cD, ID, pD, iD, fD, bD) {
-      return EC(Dc.yfO5(vC(DD), CD, vC(cD), ID, pD, iD, RC(fD) ? Number.MAX_SAFE_INTEGER : fD >>> 0, bD))
+    function eU(UU, RU, gU, tU, pU, EU, PU, TU) {
+      return zR(Ug.JTN5(eR(UU), RU, eR(gU), tU, pU, EU, sR(PU) ? Number.MAX_SAFE_INTEGER : PU >>> 0, TU))
     }
 
-    function ND() {
-      return Dc.Lxjv() >>> 0
+    function WU() {
+      return Ug.fMKr() >>> 0
     }
 
-    function gD(DD, CD) {
-      Dc.vrxg(DD, vC(CD))
+    function fU(UU, RU) {
+      Ug.T0kI(UU, eR(RU))
     }
 
-    function XD(DD, CD) {
-      Dc.AwWy(DD, vC(CD))
+    function xU(UU, RU) {
+      Ug.WHVI(UU, eR(RU))
     }
 
-    function mD(DD) {
-      Dc.otcz(DD)
+    function mU(UU) {
+      Ug.OPJ0(UU)
     }
 
-    function nD(DD) {
-      Dc.jNq0(DD)
+    function IU(UU) {
+      Ug.Ywxa(UU)
     }
 
-    function OD(DD) {
-      const CD = YC(DD, Dc.sWdd),
-        cD = Cc;
-      return 0 !== Dc.YSUJ(CD, cD)
+    function JU(UU) {
+      const RU = FR(UU, Ug.XcLG),
+        gU = Rg;
+      return 0 !== Ug.zdoU(RU, gU)
     }
 
-    function PD(DD) {
-      var CD = RC(DD) ? 0 : YC(DD, Dc.sWdd),
-        cD = Cc;
-      const ID = Dc.g2q8(CD, cD);
-      let pD;
-      return 0 !== ID[0] && (pD = nC(ID[0], ID[1]), Dc.ngrl(ID[0], 4 * ID[1], 4)), pD
+    function wU(UU) {
+      var RU = sR(UU) ? 0 : FR(UU, Ug.XcLG),
+        gU = Rg;
+      const tU = Ug.R2Im(RU, gU);
+      let pU;
+      return 0 !== tU[0] && (pU = IR(tU[0], tU[1]), Ug.IOaE(tU[0], 4 * tU[1], 4)), pU
     }
 
-    function HD() {
-      const DD = Dc.s2PS();
-      let CD;
-      return 0 !== DD[0] && (CD = KC(DD[0], DD[1]), Dc.ngrl(DD[0], 1 * DD[1], 1)), CD
+    function nU() {
+      const UU = Ug.qsed();
+      let RU;
+      return 0 !== UU[0] && (RU = YR(UU[0], UU[1]), Ug.IOaE(UU[0], 1 * UU[1], 1)), RU
     }
 
-    function UD(DD, CD) {
-      const cD = Dc.DEGx(DD, CD);
-      let ID;
-      return 0 !== cD[0] && (ID = KC(cD[0], cD[1]), Dc.ngrl(cD[0], 1 * cD[1], 1)), ID
+    function bU(UU, RU) {
+      const gU = Ug.rsuq(UU, RU);
+      let tU;
+      return 0 !== gU[0] && (tU = YR(gU[0], gU[1]), Ug.IOaE(gU[0], 1 * gU[1], 1)), tU
     }
 
-    function xD() {
-      let DD, CD;
+    function oU() {
+      let UU, RU;
       try {
-        const cD = Dc.IDoa();
-        return DD = cD[0], CD = cD[1], KC(cD[0], cD[1])
+        const gU = Ug.wemW();
+        return UU = gU[0], RU = gU[1], YR(gU[0], gU[1])
       } finally {
-        Dc.ngrl(DD, CD, 1)
+        Ug.IOaE(UU, RU, 1)
       }
     }
 
-    function qD(DD) {
-      Dc.FXej(vC(DD))
+    function ZU(UU) {
+      Ug.CrOB(eR(UU))
     }
 
-    function JD() {
-      const DD = {
+    function aU() {
+      const UU = {
         __proto__: null,
-        XACr: function(DD, CD) {
-          return vC(Error(KC(DD, CD)))
+        Cfyf: function(UU, RU) {
+          return eR(Error(YR(UU, RU)))
         },
-        PUEF: function(DD) {
-          return vC(lC(DD).Window)
+        FZeJ: function(UU) {
+          return eR(vR(UU).Window)
         },
-        EyUb: function(DD) {
-          return vC(lC(DD).WorkerGlobalScope)
+        eMUy: function(UU) {
+          return eR(vR(UU).WorkerGlobalScope)
         },
-        rCM8: function(DD, CD) {
-          const cD = sC(XC(lC(CD)), Dc.sWdd, Dc.qJke),
-            ID = Cc;
-          xC().setInt32(DD + 4, ID, !0), xC().setInt32(DD + 0, cD, !0)
+        khME: function(UU, RU) {
+          const gU = AR(xR(vR(RU)), Ug.XcLG, Ug.WHpS),
+            tU = Rg;
+          oR().setInt32(UU + 4, tU, !0), oR().setInt32(UU + 0, gU, !0)
         },
-        YdBl: function(DD) {
-          return "function" === typeof lC(DD)
+        e3tj: function(UU) {
+          return "function" === typeof vR(UU)
         },
-        fgzV: function(DD) {
-          return null === lC(DD)
+        Qbxb: function(UU) {
+          return null === vR(UU)
         },
-        XkmY: function(DD) {
-          const CD = lC(DD);
-          return "object" === typeof CD && null !== CD
+        tPWn: function(UU) {
+          const RU = vR(UU);
+          return "object" === typeof RU && null !== RU
         },
-        jEEn: function(DD) {
-          return "string" === typeof lC(DD)
+        y3zm: function(UU) {
+          return "string" === typeof vR(UU)
         },
-        nTCI: function(DD) {
-          return void 0 === lC(DD)
+        i4YW: function(UU) {
+          return void 0 === vR(UU)
         },
-        z7BH: function(DD, CD) {
-          const cD = lC(CD),
-            ID = "number" === typeof cD ? cD : void 0;
-          xC().setFloat64(DD + 8, RC(ID) ? 0 : ID, !0), xC().setInt32(DD + 0, !RC(ID), !0)
+        DUvN: function(UU, RU) {
+          const gU = vR(RU),
+            tU = "number" === typeof gU ? gU : void 0;
+          oR().setFloat64(UU + 8, sR(tU) ? 0 : tU, !0), oR().setInt32(UU + 0, !sR(tU), !0)
         },
-        BsKG: function(DD) {
-          throw EC(DD)
+        hGEj: function(UU) {
+          throw zR(UU)
         },
-        amlk: function(DD, CD) {
-          const cD = lC(CD),
-            ID = "string" === typeof cD ? cD : void 0;
-          var pD = RC(ID) ? 0 : sC(ID, Dc.sWdd, Dc.qJke),
-            iD = Cc;
-          xC().setInt32(DD + 4, iD, !0), xC().setInt32(DD + 0, pD, !0)
+        tgCf: function(UU, RU) {
+          const gU = vR(RU),
+            tU = "string" === typeof gU ? gU : void 0;
+          var pU = sR(tU) ? 0 : AR(tU, Ug.XcLG, Ug.WHpS),
+            EU = Rg;
+          oR().setInt32(UU + 4, EU, !0), oR().setInt32(UU + 0, pU, !0)
         },
-        YPba: function(DD, CD) {
-          throw new Error(KC(DD, CD))
+        Rxjg: function(UU, RU) {
+          throw new Error(YR(UU, RU))
         },
-        DAZk: function(DD) {
-          lC(DD)._wbg_cb_unref()
+        ltVI: function(UU) {
+          vR(UU)._wbg_cb_unref()
         },
-        JUpc: function(DD, CD) {
-          return vC(lC(DD).beginComputePass(lC(CD)))
+        hrd0: function(UU, RU) {
+          return eR(vR(UU).beginComputePass(vR(RU)))
         },
-        VNxY: function() {
-          return LC((function(DD, CD) {
-            return vC(lC(DD).beginRenderPass(lC(CD)))
+        Ma9Z: function() {
+          return dR((function(UU, RU) {
+            return eR(vR(UU).beginRenderPass(vR(RU)))
           }), arguments)
         },
-        rBwD: function() {
-          return LC((function(DD, CD, cD, ID, pD, iD) {
-            return vC(lC(DD).call(lC(CD), lC(cD), lC(ID), lC(pD), lC(iD)))
+        iRo1: function() {
+          return dR((function(UU, RU, gU, tU, pU, EU) {
+            return eR(vR(UU).call(vR(RU), vR(gU), vR(tU), vR(pU), vR(EU)))
           }), arguments)
         },
-        EYDW: function() {
-          return LC((function(DD, CD, cD) {
-            return vC(lC(DD).call(lC(CD), lC(cD)))
+        kG9p: function() {
+          return dR((function(UU, RU, gU) {
+            return eR(vR(UU).call(vR(RU), vR(gU)))
           }), arguments)
         },
-        WeR0: function(DD) {
-          lC(DD).call()
+        wpyh: function(UU) {
+          vR(UU).call()
         },
-        yyWX: function() {
-          return LC((function(DD, CD) {
-            return vC(lC(DD).call(lC(CD)))
+        Mod7: function() {
+          return dR((function(UU, RU) {
+            return eR(vR(UU).call(vR(RU)))
           }), arguments)
         },
-        lIG6: function() {
-          return LC((function(DD, CD) {
-            lC(DD).configure(lC(CD))
+        WFb6: function() {
+          return dR((function(UU, RU) {
+            vR(UU).configure(vR(RU))
           }), arguments)
         },
-        l9s4: function() {
-          return LC((function(DD, CD, cD, ID, pD, iD) {
-            lC(DD).copyBufferToBuffer(lC(CD), cD, lC(ID), pD, iD)
+        DQew: function() {
+          return dR((function(UU, RU, gU, tU, pU, EU) {
+            vR(UU).copyBufferToBuffer(vR(RU), gU, vR(tU), pU, EU)
           }), arguments)
         },
-        ZNE8: function() {
-          return LC((function(DD, CD, cD, ID) {
-            lC(DD).copyExternalImageToTexture(lC(CD), lC(cD), lC(ID))
+        KFBm: function() {
+          return dR((function(UU, RU, gU, tU) {
+            vR(UU).copyExternalImageToTexture(vR(RU), vR(gU), vR(tU))
           }), arguments)
         },
-        yww0: function() {
-          return LC((function(DD, CD, cD, ID) {
-            lC(DD).copyTextureToTexture(lC(CD), lC(cD), lC(ID))
+        sVdj: function() {
+          return dR((function(UU, RU, gU, tU) {
+            vR(UU).copyTextureToTexture(vR(RU), vR(gU), vR(tU))
           }), arguments)
         },
-        J91V: function() {
-          return LC((function(DD, CD) {
-            return vC(lC(DD).createBindGroupLayout(lC(CD)))
+        EewM: function() {
+          return dR((function(UU, RU) {
+            return eR(vR(UU).createBindGroupLayout(vR(RU)))
           }), arguments)
         },
-        TCYd: function(DD, CD) {
-          return vC(lC(DD).createBindGroup(lC(CD)))
+        aNll: function(UU, RU) {
+          return eR(vR(UU).createBindGroup(vR(RU)))
         },
-        q48f: function() {
-          return LC((function(DD, CD) {
-            return vC(lC(DD).createBuffer(lC(CD)))
+        NuyO: function() {
+          return dR((function(UU, RU) {
+            return eR(vR(UU).createBuffer(vR(RU)))
           }), arguments)
         },
-        XyRi: function(DD, CD) {
-          return vC(lC(DD).createCommandEncoder(lC(CD)))
+        JDhM: function(UU, RU) {
+          return eR(vR(UU).createCommandEncoder(vR(RU)))
         },
-        vRI6: function(DD, CD) {
-          return vC(lC(DD).createComputePipeline(lC(CD)))
+        MgK1: function(UU, RU) {
+          return eR(vR(UU).createComputePipeline(vR(RU)))
         },
-        mUN4: function() {
-          return LC((function(DD, CD, cD) {
-            return vC(lC(DD).createElement(KC(CD, cD)))
+        D0Ca: function() {
+          return dR((function(UU, RU, gU) {
+            return eR(vR(UU).createElement(YR(RU, gU)))
           }), arguments)
         },
-        oaj5: function(DD, CD) {
-          return vC(lC(DD).createPipelineLayout(lC(CD)))
+        bKBd: function(UU, RU) {
+          return eR(vR(UU).createPipelineLayout(vR(RU)))
         },
-        yd9q: function() {
-          return LC((function(DD, CD) {
-            return vC(lC(DD).createQuerySet(lC(CD)))
+        ZcMN: function() {
+          return dR((function(UU, RU) {
+            return eR(vR(UU).createQuerySet(vR(RU)))
           }), arguments)
         },
-        HXXM: function() {
-          return LC((function(DD, CD) {
-            return vC(lC(DD).createRenderBundleEncoder(lC(CD)))
+        WqYE: function() {
+          return dR((function(UU, RU) {
+            return eR(vR(UU).createRenderBundleEncoder(vR(RU)))
           }), arguments)
         },
-        f4fp: function() {
-          return LC((function(DD, CD) {
-            return vC(lC(DD).createRenderPipeline(lC(CD)))
+        MZvy: function() {
+          return dR((function(UU, RU) {
+            return eR(vR(UU).createRenderPipeline(vR(RU)))
           }), arguments)
         },
-        w5Po: function(DD, CD) {
-          return vC(lC(DD).createSampler(lC(CD)))
+        Zial: function(UU, RU) {
+          return eR(vR(UU).createSampler(vR(RU)))
         },
-        Fze5: function(DD, CD) {
-          return vC(lC(DD).createShaderModule(lC(CD)))
+        zQkk: function(UU, RU) {
+          return eR(vR(UU).createShaderModule(vR(RU)))
         },
-        euOQ: function() {
-          return LC((function(DD, CD) {
-            return vC(lC(DD).createTexture(lC(CD)))
+        UbLm: function() {
+          return dR((function(UU, RU) {
+            return eR(vR(UU).createTexture(vR(RU)))
           }), arguments)
         },
-        R5rQ: function() {
-          return LC((function(DD, CD) {
-            return vC(lC(DD).createView(lC(CD)))
+        lPrC: function() {
+          return dR((function(UU, RU) {
+            return eR(vR(UU).createView(vR(RU)))
           }), arguments)
         },
-        zv2r: function() {
-          return LC((function(DD, CD) {
-            return Reflect.deleteProperty(lC(DD), lC(CD))
+        NPPS: function() {
+          return dR((function(UU, RU) {
+            return Reflect.deleteProperty(vR(UU), vR(RU))
           }), arguments)
         },
-        ilTd: function(DD, CD) {
-          const cD = sC(lC(CD).description, Dc.sWdd, Dc.qJke),
-            ID = Cc;
-          xC().setInt32(DD + 4, ID, !0), xC().setInt32(DD + 0, cD, !0)
+        cg5X: function(UU, RU) {
+          const gU = AR(vR(RU).description, Ug.XcLG, Ug.WHpS),
+            tU = Rg;
+          oR().setInt32(UU + 4, tU, !0), oR().setInt32(UU + 0, gU, !0)
         },
-        ByKv: function(DD) {
-          lC(DD).destroy()
+        SGr7: function(UU) {
+          vR(UU).destroy()
         },
-        thtB: function(DD) {
-          lC(DD).destroy()
+        CMfd: function(UU) {
+          vR(UU).destroy()
         },
-        OmBZ: function(DD, CD, cD, ID) {
-          lC(DD).dispatchWorkgroups(CD >>> 0, cD >>> 0, ID >>> 0)
+        kTGx: function(UU, RU, gU, tU) {
+          vR(UU).dispatchWorkgroups(RU >>> 0, gU >>> 0, tU >>> 0)
         },
-        uh6v: function(DD) {
-          const CD = lC(DD).document;
-          return RC(CD) ? 0 : vC(CD)
+        gXCz: function(UU) {
+          const RU = vR(UU).document;
+          return sR(RU) ? 0 : eR(RU)
         },
-        w51H: function(DD, CD, cD) {
-          lC(DD).drawIndexedIndirect(lC(CD), cD)
+        cHOc: function(UU, RU, gU) {
+          vR(UU).drawIndexedIndirect(vR(RU), gU)
         },
-        xzLe: function(DD, CD, cD, ID, pD, iD) {
-          lC(DD).drawIndexed(CD >>> 0, cD >>> 0, ID >>> 0, pD, iD >>> 0)
+        B2ij: function(UU, RU, gU, tU, pU, EU) {
+          vR(UU).drawIndexed(RU >>> 0, gU >>> 0, tU >>> 0, pU, EU >>> 0)
         },
-        s8b2: function(DD, CD, cD, ID, pD) {
-          lC(DD).draw(CD >>> 0, cD >>> 0, ID >>> 0, pD >>> 0)
+        hC3Y: function(UU, RU, gU, tU, pU) {
+          vR(UU).draw(RU >>> 0, gU >>> 0, tU >>> 0, pU >>> 0)
         },
-        MihS: function(DD) {
-          lC(DD).end()
+        fqO0: function(UU) {
+          vR(UU).end()
         },
-        MhDd: function(DD) {
-          lC(DD).end()
+        SGw2: function(UU) {
+          vR(UU).end()
         },
-        vqO1: function(DD, CD) {
-          console.error(KC(DD, CD))
+        pmR1: function(UU, RU) {
+          console.error(YR(UU, RU))
         },
-        vGNe: function(DD, CD, cD) {
-          lC(DD).executeBundles(OC(CD, cD))
+        Nmn8: function(UU, RU, gU) {
+          vR(UU).executeBundles(JR(RU, gU))
         },
-        GAOP: function(DD) {
-          return vC(lC(DD).features)
+        Ob11: function(UU) {
+          return eR(vR(UU).features)
         },
-        MzD4: function(DD) {
-          return vC(lC(DD).features)
+        kUGb: function(UU) {
+          return eR(vR(UU).features)
         },
-        Co48: function(DD) {
-          return vC(lC(DD).finish())
+        Oh1R: function(UU) {
+          return eR(vR(UU).finish())
         },
-        UVle: function(DD) {
-          return vC(lC(DD).finish())
+        m23j: function(UU) {
+          return eR(vR(UU).finish())
         },
-        y11R: function(DD, CD) {
-          return vC(lC(DD).finish(lC(CD)))
+        rZK0: function(UU, RU) {
+          return eR(vR(UU).finish(vR(RU)))
         },
-        i0ZL: function() {
-          return LC((function(DD, CD, cD, ID, pD, iD, fD, bD, QD, wD) {
-            return lC(DD).gameCall(CD >>> 0, cD, ID, pD, iD, fD, bD, QD, wD)
+        qWLg: function() {
+          return dR((function(UU, RU, gU, tU, pU, EU, PU, TU, qU, KU) {
+            return vR(UU).gameCall(RU >>> 0, gU, tU, pU, EU, PU, TU, qU, KU)
           }), arguments)
         },
-        MEVm: function() {
-          return LC((function(DD, CD, cD, ID) {
-            const pD = lC(DD).getContext(KC(CD, cD), lC(ID));
-            return RC(pD) ? 0 : vC(pD)
+        mNWK: function() {
+          return dR((function(UU, RU, gU, tU) {
+            const pU = vR(UU).getContext(YR(RU, gU), vR(tU));
+            return sR(pU) ? 0 : eR(pU)
           }), arguments)
         },
-        C13c: function() {
-          return LC((function(DD, CD, cD, ID) {
-            const pD = lC(DD).getContext(KC(CD, cD), lC(ID));
-            return RC(pD) ? 0 : vC(pD)
+        y9Ts: function() {
+          return dR((function(UU, RU, gU, tU) {
+            const pU = vR(UU).getContext(YR(RU, gU), vR(tU));
+            return sR(pU) ? 0 : eR(pU)
           }), arguments)
         },
-        Fz73: function() {
-          return LC((function(DD, CD, cD) {
-            const ID = lC(DD).getContext(KC(CD, cD));
-            return RC(ID) ? 0 : vC(ID)
+        sNmk: function() {
+          return dR((function(UU, RU, gU) {
+            const tU = vR(UU).getContext(YR(RU, gU));
+            return sR(tU) ? 0 : eR(tU)
           }), arguments)
         },
-        Nbg3: function() {
-          return LC((function(DD, CD, cD) {
-            const ID = lC(DD).getContext(KC(CD, cD));
-            return RC(ID) ? 0 : vC(ID)
+        yNvP: function() {
+          return dR((function(UU, RU, gU) {
+            const tU = vR(UU).getContext(YR(RU, gU));
+            return sR(tU) ? 0 : eR(tU)
           }), arguments)
         },
-        nA8b: function() {
-          return LC((function(DD) {
-            return vC(lC(DD).getCurrentTexture())
+        bSkB: function() {
+          return dR((function(UU) {
+            return eR(vR(UU).getCurrentTexture())
           }), arguments)
         },
-        NUP1: function() {
-          return LC((function(DD, CD, cD) {
-            return vC(lC(DD).getMappedRange(CD, cD))
+        GEVy: function() {
+          return dR((function(UU, RU, gU) {
+            return eR(vR(UU).getMappedRange(RU, gU))
           }), arguments)
         },
-        t2ve: function(DD) {
-          const CD = lC(DD).getPreferredCanvasFormat();
-          return (wC.indexOf(CD) + 1 || 102) - 1
+        yDiS: function(UU) {
+          const RU = vR(UU).getPreferredCanvasFormat();
+          return (KR.indexOf(RU) + 1 || 102) - 1
         },
-        VCj4: function() {
-          return LC((function(DD, CD) {
-            return vC(Reflect.get(lC(DD), lC(CD)))
+        Q9dn: function() {
+          return dR((function(UU, RU) {
+            return eR(Reflect.get(vR(UU), vR(RU)))
           }), arguments)
         },
-        pNtu: function(DD, CD) {
-          return vC(lC(DD)[CD >>> 0])
+        m1ik: function(UU, RU) {
+          return eR(vR(UU)[RU >>> 0])
         },
-        Xlke: function(DD, CD, cD, ID) {
-          const pD = lC(CD).get(KC(cD, ID));
-          var iD = RC(pD) ? 0 : sC(pD, Dc.sWdd, Dc.qJke),
-            fD = Cc;
-          xC().setInt32(DD + 4, fD, !0), xC().setInt32(DD + 0, iD, !0)
+        LnsO: function(UU, RU, gU, tU) {
+          const pU = vR(RU).get(YR(gU, tU));
+          var EU = sR(pU) ? 0 : AR(pU, Ug.XcLG, Ug.WHpS),
+            PU = Rg;
+          oR().setInt32(UU + 4, PU, !0), oR().setInt32(UU + 0, EU, !0)
         },
-        snTM: function(DD) {
-          return vC(lC(DD).gpu)
+        BOhf: function(UU) {
+          return eR(vR(UU).gpu)
         },
-        jrkE: function(DD, CD, cD) {
-          return lC(DD).has(KC(CD, cD))
+        adi6: function(UU, RU, gU) {
+          return vR(UU).has(YR(RU, gU))
         },
-        lhcA: function(DD) {
-          return lC(DD).height
+        FZB1: function(UU) {
+          return vR(UU).height
         },
-        fv9s: function(DD) {
-          console.info(lC(DD))
+        cl28: function(UU) {
+          console.info(vR(UU))
         },
-        WgE4: function(DD) {
-          return vC(lC(DD).info)
+        FfoX: function(UU) {
+          return eR(vR(UU).info)
         },
-        I84f: function(DD) {
-          let CD;
+        oCRg: function(UU) {
+          let RU;
           try {
-            CD = lC(DD) instanceof Error
-          } catch (cD) {
-            CD = !1
+            RU = vR(UU) instanceof Error
+          } catch (gU) {
+            RU = !1
           }
-          return CD
+          return RU
         },
-        jm1F: function(DD) {
-          let CD;
+        k2PA: function(UU) {
+          let RU;
           try {
-            CD = lC(DD) instanceof GPUOutOfMemoryError
-          } catch (cD) {
-            CD = !1
+            RU = vR(UU) instanceof GPUOutOfMemoryError
+          } catch (gU) {
+            RU = !1
           }
-          return CD
+          return RU
         },
-        dUrj: function(DD) {
-          let CD;
+        zdXB: function(UU) {
+          let RU;
           try {
-            CD = lC(DD) instanceof GPUValidationError
-          } catch (cD) {
-            CD = !1
+            RU = vR(UU) instanceof GPUValidationError
+          } catch (gU) {
+            RU = !1
           }
-          return CD
+          return RU
         },
-        r3zL: function(DD) {
-          let CD;
+        xuVL: function(UU) {
+          let RU;
           try {
-            CD = lC(DD) instanceof HTMLCanvasElement
-          } catch (cD) {
-            CD = !1
+            RU = vR(UU) instanceof HTMLCanvasElement
+          } catch (gU) {
+            RU = !1
           }
-          return CD
+          return RU
         },
-        FMld: function(DD) {
-          let CD;
+        vg5k: function(UU) {
+          let RU;
           try {
-            CD = lC(DD) instanceof ImageBitmap
-          } catch (cD) {
-            CD = !1
+            RU = vR(UU) instanceof ImageBitmap
+          } catch (gU) {
+            RU = !1
           }
-          return CD
+          return RU
         },
-        hT7Y: function(DD) {
-          let CD;
+        Nhox: function(UU) {
+          let RU;
           try {
-            CD = lC(DD) instanceof OffscreenCanvas
-          } catch (cD) {
-            CD = !1
+            RU = vR(UU) instanceof OffscreenCanvas
+          } catch (gU) {
+            RU = !1
           }
-          return CD
+          return RU
         },
-        XwFR: function(DD) {
-          let CD;
+        Og3J: function(UU) {
+          let RU;
           try {
-            CD = lC(DD) instanceof Performance
-          } catch (cD) {
-            CD = !1
+            RU = vR(UU) instanceof Performance
+          } catch (gU) {
+            RU = !1
           }
-          return CD
+          return RU
         },
-        FjZQ: function(DD) {
-          let CD;
+        xcAo: function(UU) {
+          let RU;
           try {
-            CD = lC(DD) instanceof Promise
-          } catch (cD) {
-            CD = !1
+            RU = vR(UU) instanceof Promise
+          } catch (gU) {
+            RU = !1
           }
-          return CD
+          return RU
         },
-        F9AM: function(DD) {
-          let CD;
+        UXEX: function(UU) {
+          let RU;
           try {
-            CD = lC(DD) instanceof TypeError
-          } catch (cD) {
-            CD = !1
+            RU = vR(UU) instanceof TypeError
+          } catch (gU) {
+            RU = !1
           }
-          return CD
+          return RU
         },
-        lHxq: function(DD) {
-          let CD;
+        xWNn: function(UU) {
+          let RU;
           try {
-            CD = lC(DD) instanceof Window
-          } catch (cD) {
-            CD = !1
+            RU = vR(UU) instanceof Window
+          } catch (gU) {
+            RU = !1
           }
-          return CD
+          return RU
         },
-        y0fW: function(DD) {
-          return Array.isArray(lC(DD))
+        tjd0: function(UU) {
+          return Array.isArray(vR(UU))
         },
-        dUK8: function(DD) {
-          return lC(DD).isFallbackAdapter
+        gJgr: function(UU) {
+          return vR(UU).isFallbackAdapter
         },
-        N8EI: function(DD, CD) {
-          const cD = sC(lC(CD).label, Dc.sWdd, Dc.qJke),
-            ID = Cc;
-          xC().setInt32(DD + 4, ID, !0), xC().setInt32(DD + 0, cD, !0)
+        rXje: function(UU, RU) {
+          const gU = AR(vR(RU).label, Ug.XcLG, Ug.WHpS),
+            tU = Rg;
+          oR().setInt32(UU + 4, tU, !0), oR().setInt32(UU + 0, gU, !0)
         },
-        cmNm: function(DD) {
-          return lC(DD).length
+        sMlf: function(UU) {
+          return vR(UU).length
         },
-        R6sf: function(DD) {
-          return vC(lC(DD).limits)
+        UOJ1: function(UU) {
+          return eR(vR(UU).limits)
         },
-        i3vq: function(DD) {
-          return vC(lC(DD).limits)
+        pJHO: function(UU) {
+          return eR(vR(UU).limits)
         },
-        ysgJ: function(DD) {
-          return vC(lC(DD).location)
+        VN3f: function(UU) {
+          return eR(vR(UU).location)
         },
-        zcLx: function(DD) {
-          return vC(lC(DD).lost)
+        et5Q: function(UU) {
+          return eR(vR(UU).lost)
         },
-        CN3B: function(DD, CD, cD, ID) {
-          return vC(lC(DD).mapAsync(CD >>> 0, cD, ID))
+        jsF1: function(UU, RU, gU, tU) {
+          return eR(vR(UU).mapAsync(RU >>> 0, gU, tU))
         },
-        goIz: function(DD) {
-          return lC(DD).maxBindGroupsPlusVertexBuffers
+        cFg4: function(UU) {
+          return vR(UU).maxBindGroupsPlusVertexBuffers
         },
-        hI2U: function(DD) {
-          return lC(DD).maxBindGroups
+        zyBO: function(UU) {
+          return vR(UU).maxBindGroups
         },
-        aNHQ: function(DD) {
-          return lC(DD).maxBindingsPerBindGroup
+        Jktt: function(UU) {
+          return vR(UU).maxBindingsPerBindGroup
         },
-        zSG7: function(DD) {
-          return lC(DD).maxBufferSize
+        a2jw: function(UU) {
+          return vR(UU).maxBufferSize
         },
-        BVwm: function(DD) {
-          return lC(DD).maxColorAttachmentBytesPerSample
+        Fxrd: function(UU) {
+          return vR(UU).maxColorAttachmentBytesPerSample
         },
-        YimX: function(DD) {
-          return lC(DD).maxColorAttachments
+        L5gX: function(UU) {
+          return vR(UU).maxColorAttachments
         },
-        ROZZ: function(DD) {
-          return lC(DD).maxComputeInvocationsPerWorkgroup
+        QmUX: function(UU) {
+          return vR(UU).maxComputeInvocationsPerWorkgroup
         },
-        jnk7: function(DD) {
-          return lC(DD).maxComputeWorkgroupSizeX
+        eNzO: function(UU) {
+          return vR(UU).maxComputeWorkgroupSizeX
         },
-        NvZN: function(DD) {
-          return lC(DD).maxComputeWorkgroupSizeY
+        LmGQ: function(UU) {
+          return vR(UU).maxComputeWorkgroupSizeY
         },
-        VJPS: function(DD) {
-          return lC(DD).maxComputeWorkgroupSizeZ
+        iPvw: function(UU) {
+          return vR(UU).maxComputeWorkgroupSizeZ
         },
-        fHNY: function(DD) {
-          return lC(DD).maxComputeWorkgroupStorageSize
+        xXaM: function(UU) {
+          return vR(UU).maxComputeWorkgroupStorageSize
         },
-        p2Ar: function(DD) {
-          return lC(DD).maxComputeWorkgroupsPerDimension
+        LXG5: function(UU) {
+          return vR(UU).maxComputeWorkgroupsPerDimension
         },
-        j7ka: function(DD) {
-          return lC(DD).maxDynamicStorageBuffersPerPipelineLayout
+        llyG: function(UU) {
+          return vR(UU).maxDynamicStorageBuffersPerPipelineLayout
         },
-        tFIM: function(DD) {
-          return lC(DD).maxDynamicUniformBuffersPerPipelineLayout
+        IMFS: function(UU) {
+          return vR(UU).maxDynamicUniformBuffersPerPipelineLayout
         },
-        KrNc: function(DD) {
-          return lC(DD).maxInterStageShaderVariables
+        Ejrj: function(UU) {
+          return vR(UU).maxInterStageShaderVariables
         },
-        IVnM: function(DD) {
-          return lC(DD).maxSampledTexturesPerShaderStage
+        Vxs6: function(UU) {
+          return vR(UU).maxSampledTexturesPerShaderStage
         },
-        RLkT: function(DD) {
-          return lC(DD).maxSamplersPerShaderStage
+        QjvV: function(UU) {
+          return vR(UU).maxSamplersPerShaderStage
         },
-        QpeZ: function(DD) {
-          return lC(DD).maxStorageBufferBindingSize
+        Obwo: function(UU) {
+          return vR(UU).maxStorageBufferBindingSize
         },
-        h8ls: function(DD) {
-          return lC(DD).maxStorageBuffersPerShaderStage
+        gsoH: function(UU) {
+          return vR(UU).maxStorageBuffersPerShaderStage
         },
-        SH1E: function(DD) {
-          return lC(DD).maxStorageTexturesPerShaderStage
+        K9jz: function(UU) {
+          return vR(UU).maxStorageTexturesPerShaderStage
         },
-        reRG: function(DD) {
-          return lC(DD).maxTextureArrayLayers
+        mXHY: function(UU) {
+          return vR(UU).maxTextureArrayLayers
         },
-        LJXZ: function(DD) {
-          return lC(DD).maxTextureDimension1D
+        iKZA: function(UU) {
+          return vR(UU).maxTextureDimension1D
         },
-        jR1t: function(DD) {
-          return lC(DD).maxTextureDimension2D
+        NKtm: function(UU) {
+          return vR(UU).maxTextureDimension2D
         },
-        rt5I: function(DD) {
-          return lC(DD).maxTextureDimension3D
+        bAWf: function(UU) {
+          return vR(UU).maxTextureDimension3D
         },
-        a7cD: function(DD) {
-          return lC(DD).maxUniformBufferBindingSize
+        ZTvN: function(UU) {
+          return vR(UU).maxUniformBufferBindingSize
         },
-        fyCt: function(DD) {
-          return lC(DD).maxUniformBuffersPerShaderStage
+        w0vw: function(UU) {
+          return vR(UU).maxUniformBuffersPerShaderStage
         },
-        eGPa: function(DD) {
-          return lC(DD).maxVertexAttributes
+        c1wD: function(UU) {
+          return vR(UU).maxVertexAttributes
         },
-        sRHP: function(DD) {
-          return lC(DD).maxVertexBufferArrayStride
+        fCiy: function(UU) {
+          return vR(UU).maxVertexBufferArrayStride
         },
-        LWCq: function(DD) {
-          return lC(DD).maxVertexBuffers
+        l4js: function(UU) {
+          return vR(UU).maxVertexBuffers
         },
-        sEED: function(DD, CD) {
-          const cD = sC(lC(CD).message, Dc.sWdd, Dc.qJke),
-            ID = Cc;
-          xC().setInt32(DD + 4, ID, !0), xC().setInt32(DD + 0, cD, !0)
+        UYmI: function(UU, RU) {
+          const gU = AR(vR(RU).message, Ug.XcLG, Ug.WHpS),
+            tU = Rg;
+          oR().setInt32(UU + 4, tU, !0), oR().setInt32(UU + 0, gU, !0)
         },
-        Qk2P: function(DD) {
-          return vC(lC(DD).message)
+        qLqK: function(UU) {
+          return eR(vR(UU).message)
         },
-        VPao: function(DD, CD) {
-          const cD = sC(lC(CD).message, Dc.sWdd, Dc.qJke),
-            ID = Cc;
-          xC().setInt32(DD + 4, ID, !0), xC().setInt32(DD + 0, cD, !0)
+        Jm50: function(UU, RU) {
+          const gU = AR(vR(RU).message, Ug.XcLG, Ug.WHpS),
+            tU = Rg;
+          oR().setInt32(UU + 4, tU, !0), oR().setInt32(UU + 0, gU, !0)
         },
-        Sd7y: function(DD) {
-          return lC(DD).minStorageBufferOffsetAlignment
+        bWwg: function(UU) {
+          return vR(UU).minStorageBufferOffsetAlignment
         },
-        T1nL: function(DD) {
-          return lC(DD).minUniformBufferOffsetAlignment
+        BT7Q: function(UU) {
+          return vR(UU).minUniformBufferOffsetAlignment
         },
-        EG2Y: function(DD) {
-          return vC(lC(DD).name)
+        fuqX: function(UU) {
+          return eR(vR(UU).name)
         },
-        l12s: function(DD) {
-          return vC(lC(DD).navigator)
+        PH6D: function(UU) {
+          return eR(vR(UU).navigator)
         },
-        sXKe: function(DD) {
-          return vC(lC(DD).navigator)
+        zloN: function(UU) {
+          return eR(vR(UU).navigator)
         },
-        bcOt: function(DD, CD) {
-          return vC(new Error(KC(DD, CD)))
+        ue82: function(UU, RU) {
+          return eR(new Error(YR(UU, RU)))
         },
-        DnIf: function() {
-          return vC(new Object)
+        Dmia: function() {
+          return eR(new Object)
         },
-        fyy6: function() {
-          return LC((function(DD, CD) {
-            return vC(new OffscreenCanvas(DD >>> 0, CD >>> 0))
+        zI88: function() {
+          return dR((function(UU, RU) {
+            return eR(new OffscreenCanvas(UU >>> 0, RU >>> 0))
           }), arguments)
         },
-        dZOA: function() {
-          return vC(new Array)
+        vsz4: function() {
+          return eR(new Array)
         },
-        OueZ: function(DD, CD) {
-          return vC(new Uint8Array(HC(DD, CD)))
+        t7wp: function(UU, RU) {
+          return eR(new Uint8Array(nR(UU, RU)))
         },
-        LA5p: function() {
-          return vC(new Object)
+        vai3: function() {
+          return eR(new Object)
         },
-        ztpb: function(DD, CD) {
+        ikCV: function(UU, RU) {
           try {
-            var cD = {
-              a: DD,
-              b: CD
+            var gU = {
+              a: UU,
+              b: RU
             };
-            const ID = new Promise(((DD, CD) => {
-              const ID = cD.a;
-              cD.a = 0;
+            const tU = new Promise(((UU, RU) => {
+              const tU = gU.a;
+              gU.a = 0;
               try {
-                return function(DD, CD, cD, ID) {
-                  Dc.hvpN(DD, CD, vC(cD), vC(ID))
-                }(ID, cD.b, DD, CD)
+                return function(UU, RU, gU, tU) {
+                  Ug.rtci(UU, RU, eR(gU), eR(tU))
+                }(tU, gU.b, UU, RU)
               } finally {
-                cD.a = ID
+                gU.a = tU
               }
             }));
-            return vC(ID)
+            return eR(tU)
           } finally {
-            cD.a = 0
+            gU.a = 0
           }
         },
-        YdG2: function(DD, CD, cD) {
-          return vC(new Uint8Array(lC(DD), CD >>> 0, cD >>> 0))
+        dPi9: function(UU, RU, gU) {
+          return eR(new Uint8Array(vR(UU), RU >>> 0, gU >>> 0))
         },
-        mb43: function() {
-          return LC((function(DD, CD) {
-            return vC(new URLSearchParams(KC(DD, CD)))
+        bixG: function() {
+          return dR((function(UU, RU) {
+            return eR(new URLSearchParams(YR(UU, RU)))
           }), arguments)
         },
-        wnDX: function() {
+        AGw9: function() {
           return performance.now()
         },
-        o3Gf: function(DD) {
-          return Performance.prototype.now.call(lC(DD))
+        gkym: function(UU) {
+          return Performance.prototype.now.call(vR(UU))
         },
-        NjPw: function() {
+        Y8w5: function() {
           return Date.now()
         },
-        sT1O: function(DD) {
-          return vC(lC(DD).onSubmittedWorkDone())
+        K0rl: function(UU) {
+          return eR(vR(UU).onSubmittedWorkDone())
         },
-        ECGI: function(DD) {
-          return vC(lC(DD).popErrorScope())
+        vi4q: function(UU) {
+          return eR(vR(UU).popErrorScope())
         },
-        pDRc: function(DD) {
-          return vC(lC(DD).popErrorScope())
+        lAFK: function(UU) {
+          return eR(vR(UU).popErrorScope())
         },
-        cMxQ: function(DD, CD, cD, ID) {
-          return lC(DD).probe(CD >>> 0, cD >>> 0, ID >>> 0)
+        yN1D: function(UU, RU, gU, tU) {
+          return vR(UU).probe(RU >>> 0, gU >>> 0, tU >>> 0)
         },
-        Mm9J: function(DD, CD, cD) {
-          Uint8Array.prototype.set.call(HC(DD, CD), lC(cD))
+        q9Ic: function(UU, RU, gU) {
+          Uint8Array.prototype.set.call(nR(UU, RU), vR(gU))
         },
-        TWOC: function(DD, CD, cD) {
-          lC(DD).pushErrorScope(KC(CD, cD))
+        g9t4: function(UU, RU, gU) {
+          vR(UU).pushErrorScope(YR(RU, gU))
         },
-        o9Ir: function(DD, CD) {
-          lC(DD).pushErrorScope(eD[CD])
+        J8Ti: function(UU, RU) {
+          vR(UU).pushErrorScope(MU[RU])
         },
-        ofpD: function(DD, CD) {
-          return lC(DD).push(lC(CD))
+        ZSsf: function(UU, RU) {
+          return vR(UU).push(vR(RU))
         },
-        VrA3: function(DD) {
-          return vC(lC(DD).queueMicrotask)
+        cuoa: function(UU) {
+          return eR(vR(UU).queueMicrotask)
         },
-        Q2lk: function(DD) {
-          queueMicrotask(lC(DD))
+        h6hc: function(UU) {
+          queueMicrotask(vR(UU))
         },
-        mZjB: function(DD) {
-          return vC(lC(DD).queue)
+        DmDB: function(UU) {
+          return eR(vR(UU).queue)
         },
-        IzSA: function(DD) {
-          const CD = lC(DD).reason;
-          return (ED.indexOf(CD) + 1 || 3) - 1
+        q9ZG: function(UU) {
+          const RU = vR(UU).reason;
+          return (zU.indexOf(RU) + 1 || 3) - 1
         },
-        SAB1: function(DD) {
-          return vC(Promise.reject(lC(DD)))
+        nQNp: function(UU) {
+          return eR(Promise.reject(vR(UU)))
         },
-        GXAS: function(DD) {
-          return vC(fD.__wrap(DD))
+        GVkc: function(UU) {
+          return eR(PU.__wrap(UU))
         },
-        JejF: function(DD, CD) {
-          return vC(lC(DD).requestAdapter(lC(CD)))
+        JzJM: function(UU, RU) {
+          return eR(vR(UU).requestAdapter(vR(RU)))
         },
-        ENWz: function(DD) {
-          return vC(lC(DD).requestAdapter())
+        VH9i: function(UU) {
+          return eR(vR(UU).requestAdapter())
         },
-        yTDC: function(DD, CD) {
-          return vC(lC(DD).requestDevice(lC(CD)))
+        Mn9c: function(UU, RU) {
+          return eR(vR(UU).requestDevice(vR(RU)))
         },
-        Rf5p: function(DD, CD, cD, ID, pD, iD) {
-          lC(DD).resolveQuerySet(lC(CD), cD >>> 0, ID >>> 0, lC(pD), iD >>> 0)
+        p1Bl: function(UU, RU, gU, tU, pU, EU) {
+          vR(UU).resolveQuerySet(vR(RU), gU >>> 0, tU >>> 0, vR(pU), EU >>> 0)
         },
-        IqUL: function(DD) {
-          return vC(Promise.resolve(lC(DD)))
+        eG9Z: function(UU) {
+          return eR(Promise.resolve(vR(UU)))
         },
-        UPfK: function() {
-          return LC((function(DD, CD) {
-            const cD = sC(lC(CD).search, Dc.sWdd, Dc.qJke),
-              ID = Cc;
-            xC().setInt32(DD + 4, ID, !0), xC().setInt32(DD + 0, cD, !0)
+        RPxp: function() {
+          return dR((function(UU, RU) {
+            const gU = AR(vR(RU).search, Ug.XcLG, Ug.WHpS),
+              tU = Rg;
+            oR().setInt32(UU + 4, tU, !0), oR().setInt32(UU + 0, gU, !0)
           }), arguments)
         },
-        ir7w: function() {
-          return LC((function(DD, CD, cD, ID, pD, iD, fD) {
-            lC(DD).setBindGroup(CD >>> 0, lC(cD), PC(ID, pD), iD, fD >>> 0)
+        BbCw: function() {
+          return dR((function(UU, RU, gU, tU, pU, EU, PU) {
+            vR(UU).setBindGroup(RU >>> 0, vR(gU), wR(tU, pU), EU, PU >>> 0)
           }), arguments)
         },
-        YDca: function(DD, CD, cD) {
-          lC(DD).setBindGroup(CD >>> 0, lC(cD))
+        WddY: function(UU, RU, gU) {
+          vR(UU).setBindGroup(RU >>> 0, vR(gU))
         },
-        ix5f: function(DD, CD, cD) {
-          lC(DD).setBindGroup(CD >>> 0, lC(cD))
+        Vu8G: function(UU, RU, gU) {
+          vR(UU).setBindGroup(RU >>> 0, vR(gU))
         },
-        LaU7: function() {
-          return LC((function(DD, CD, cD, ID, pD, iD, fD) {
-            lC(DD).setBindGroup(CD >>> 0, lC(cD), PC(ID, pD), iD, fD >>> 0)
+        qkBQ: function() {
+          return dR((function(UU, RU, gU, tU, pU, EU, PU) {
+            vR(UU).setBindGroup(RU >>> 0, vR(gU), wR(tU, pU), EU, PU >>> 0)
           }), arguments)
         },
-        lzFP: function(DD, CD, cD) {
-          lC(DD).setBindGroup(CD >>> 0, lC(cD))
+        AhGN: function(UU, RU, gU) {
+          vR(UU).setBindGroup(RU >>> 0, vR(gU))
         },
-        KEZP: function(DD, CD, cD, ID, pD) {
-          lC(DD).setIndexBuffer(lC(CD), rD[cD], ID, pD)
+        cXqD: function(UU, RU, gU, tU, pU) {
+          vR(UU).setIndexBuffer(vR(RU), NU[gU], tU, pU)
         },
-        QgdC: function(DD, CD, cD, ID, pD) {
-          lC(DD).setIndexBuffer(lC(CD), rD[cD], ID, pD)
+        ChIv: function(UU, RU, gU, tU, pU) {
+          vR(UU).setIndexBuffer(vR(RU), NU[gU], tU, pU)
         },
-        gJQJ: function(DD, CD) {
-          lC(DD).setPipeline(lC(CD))
+        JOBv: function(UU, RU) {
+          vR(UU).setPipeline(vR(RU))
         },
-        aMtW: function(DD, CD) {
-          lC(DD).setPipeline(lC(CD))
+        MfLR: function(UU, RU) {
+          vR(UU).setPipeline(vR(RU))
         },
-        HR1O: function(DD, CD) {
-          lC(DD).setPipeline(lC(CD))
+        hiLW: function(UU, RU) {
+          vR(UU).setPipeline(vR(RU))
         },
-        sZkh: function(DD, CD, cD, ID, pD) {
-          lC(DD).setVertexBuffer(CD >>> 0, lC(cD), ID, pD)
+        tVhx: function(UU, RU, gU, tU, pU) {
+          vR(UU).setVertexBuffer(RU >>> 0, vR(gU), tU, pU)
         },
-        bUK5: function(DD, CD, cD, ID, pD) {
-          lC(DD).setVertexBuffer(CD >>> 0, lC(cD), ID, pD)
+        AK6N: function(UU, RU, gU, tU, pU) {
+          vR(UU).setVertexBuffer(RU >>> 0, vR(gU), tU, pU)
         },
-        bmZT: function(DD, CD, cD, ID, pD, iD, fD) {
-          lC(DD).setViewport(CD, cD, ID, pD, iD, fD)
+        fY9E: function(UU, RU, gU, tU, pU, EU, PU) {
+          vR(UU).setViewport(RU, gU, tU, pU, EU, PU)
         },
-        qWRw: function() {
-          return LC((function(DD, CD, cD) {
-            return Reflect.set(lC(DD), lC(CD), lC(cD))
+        LX6l: function() {
+          return dR((function(UU, RU, gU) {
+            return Reflect.set(vR(UU), vR(RU), vR(gU))
           }), arguments)
         },
-        iykc: function(DD, CD, cD) {
-          lC(DD).set(lC(CD), cD >>> 0)
+        rVxm: function(UU, RU, gU) {
+          vR(UU).set(vR(RU), gU >>> 0)
         },
-        XFA0: function(DD, CD) {
-          lC(DD).a = CD
+        JGvs: function(UU, RU) {
+          vR(UU).a = RU
         },
-        s6Zt: function(DD, CD) {
-          lC(DD).access = iC[CD]
+        lroD: function(UU, RU) {
+          vR(UU).access = ER[RU]
         },
-        q0iN: function(DD, CD) {
-          lC(DD).addressModeU = LD[CD]
+        vJex: function(UU, RU) {
+          vR(UU).addressModeU = dU[RU]
         },
-        I2Fb: function(DD, CD) {
-          lC(DD).addressModeV = LD[CD]
+        a7xy: function(UU, RU) {
+          vR(UU).addressModeV = dU[RU]
         },
-        O3AC: function(DD, CD) {
-          lC(DD).addressModeW = LD[CD]
+        fFJP: function(UU, RU) {
+          vR(UU).addressModeW = dU[RU]
         },
-        calh: function(DD, CD) {
-          lC(DD).alpha = lC(CD)
+        yxPJ: function(UU, RU) {
+          vR(UU).alpha = vR(RU)
         },
-        JnWf: function(DD, CD) {
-          lC(DD).alphaMode = dD[CD]
+        euUR: function(UU, RU) {
+          vR(UU).alphaMode = kU[RU]
         },
-        KU0I: function(DD, CD) {
-          lC(DD).alphaToCoverageEnabled = 0 !== CD
+        z2GG: function(UU, RU) {
+          vR(UU).alphaToCoverageEnabled = 0 !== RU
         },
-        c4Qn: function(DD, CD) {
-          lC(DD).arrayLayerCount = CD >>> 0
+        VBCe: function(UU, RU) {
+          vR(UU).arrayLayerCount = RU >>> 0
         },
-        oW8K: function(DD, CD) {
-          lC(DD).arrayStride = CD
+        lNyX: function(UU, RU) {
+          vR(UU).arrayStride = RU
         },
-        lcWk: function(DD, CD) {
-          lC(DD).aspect = bC[CD]
+        ZY7d: function(UU, RU) {
+          vR(UU).aspect = TR[RU]
         },
-        I36i: function(DD, CD) {
-          lC(DD).aspect = bC[CD]
+        gQqc: function(UU, RU) {
+          vR(UU).aspect = TR[RU]
         },
-        D7UC: function(DD, CD, cD) {
-          lC(DD).attributes = OC(CD, cD)
+        A0BS: function(UU, RU, gU) {
+          vR(UU).attributes = JR(RU, gU)
         },
-        jc3L: function(DD, CD) {
-          lC(DD).b = CD
+        ET5J: function(UU, RU) {
+          vR(UU).b = RU
         },
-        jfgD: function(DD, CD) {
-          lC(DD).baseArrayLayer = CD >>> 0
+        bE8A: function(UU, RU) {
+          vR(UU).baseArrayLayer = RU >>> 0
         },
-        Fpnn: function(DD, CD) {
-          lC(DD).baseMipLevel = CD >>> 0
+        ty5U: function(UU, RU) {
+          vR(UU).baseMipLevel = RU >>> 0
         },
-        zCIi: function(DD, CD) {
-          lC(DD).beginningOfPassWriteIndex = CD >>> 0
+        DgCh: function(UU, RU) {
+          vR(UU).beginningOfPassWriteIndex = RU >>> 0
         },
-        pbn3: function(DD, CD) {
-          lC(DD).beginningOfPassWriteIndex = CD >>> 0
+        CGwn: function(UU, RU) {
+          vR(UU).beginningOfPassWriteIndex = RU >>> 0
         },
-        XyRv: function(DD, CD, cD) {
-          lC(DD).bindGroupLayouts = OC(CD, cD)
+        ZGHz: function(UU, RU, gU) {
+          vR(UU).bindGroupLayouts = JR(RU, gU)
         },
-        sLsH: function(DD, CD) {
-          lC(DD).binding = CD >>> 0
+        b5Up: function(UU, RU) {
+          vR(UU).binding = RU >>> 0
         },
-        JaXH: function(DD, CD) {
-          lC(DD).binding = CD >>> 0
+        t8T8: function(UU, RU) {
+          vR(UU).binding = RU >>> 0
         },
-        cBmo: function(DD, CD) {
-          lC(DD).blend = lC(CD)
+        OrD3: function(UU, RU) {
+          vR(UU).blend = vR(RU)
         },
-        RSWG: function(DD, CD) {
-          lC(DD).buffer = lC(CD)
+        Bi9F: function(UU, RU) {
+          vR(UU).buffer = vR(RU)
         },
-        KQlf: function(DD, CD) {
-          lC(DD).buffer = lC(CD)
+        h2T8: function(UU, RU) {
+          vR(UU).buffer = vR(RU)
         },
-        vEzi: function(DD, CD, cD) {
-          lC(DD).buffers = OC(CD, cD)
+        hNdw: function(UU, RU, gU) {
+          vR(UU).buffers = JR(RU, gU)
         },
-        yLZm: function(DD, CD) {
-          lC(DD).bytesPerRow = CD >>> 0
+        Zm41: function(UU, RU) {
+          vR(UU).bytesPerRow = RU >>> 0
         },
-        j91g: function(DD, CD) {
-          lC(DD).clearValue = lC(CD)
+        tZ5Z: function(UU, RU) {
+          vR(UU).clearValue = vR(RU)
         },
-        OlRR: function(DD, CD, cD) {
-          lC(DD).code = KC(CD, cD)
+        DNhx: function(UU, RU, gU) {
+          vR(UU).code = YR(RU, gU)
         },
-        mcsv: function(DD, CD) {
-          lC(DD).color = lC(CD)
+        RAOK: function(UU, RU) {
+          vR(UU).color = vR(RU)
         },
-        feK5: function(DD, CD, cD) {
-          lC(DD).colorAttachments = OC(CD, cD)
+        UNIj: function(UU, RU, gU) {
+          vR(UU).colorAttachments = JR(RU, gU)
         },
-        kt2E: function(DD, CD, cD) {
-          lC(DD).colorFormats = OC(CD, cD)
+        lpSP: function(UU, RU, gU) {
+          vR(UU).colorFormats = JR(RU, gU)
         },
-        BHKZ: function(DD, CD) {
-          lC(DD).compare = WD[CD]
+        Bf2u: function(UU, RU) {
+          vR(UU).compare = iU[RU]
         },
-        qAcS: function(DD, CD) {
-          lC(DD).compute = lC(CD)
+        ccta: function(UU, RU) {
+          vR(UU).compute = vR(RU)
         },
-        hd9R: function(DD, CD) {
-          lC(DD).count = CD >>> 0
+        YxnR: function(UU, RU) {
+          vR(UU).count = RU >>> 0
         },
-        G5qf: function(DD, CD) {
-          lC(DD).count = CD >>> 0
+        yTJs: function(UU, RU) {
+          vR(UU).count = RU >>> 0
         },
-        kNbU: function(DD, CD) {
-          lC(DD).cullMode = sD[CD]
+        ckCX: function(UU, RU) {
+          vR(UU).cullMode = AU[RU]
         },
-        VJ5Z: function(DD, CD) {
-          lC(DD).depthBias = CD
+        OT9G: function(UU, RU) {
+          vR(UU).depthBias = RU
         },
-        qFAZ: function(DD, CD) {
-          lC(DD).depthBiasClamp = CD
+        hLUt: function(UU, RU) {
+          vR(UU).depthBiasClamp = RU
         },
-        uJAj: function(DD, CD) {
-          lC(DD).depthBiasSlopeScale = CD
+        QVAq: function(UU, RU) {
+          vR(UU).depthBiasSlopeScale = RU
         },
-        ydGL: function(DD, CD) {
-          lC(DD).depthClearValue = CD
+        tIy5: function(UU, RU) {
+          vR(UU).depthClearValue = RU
         },
-        fKPj: function(DD, CD) {
-          lC(DD).depthCompare = WD[CD]
+        f23Y: function(UU, RU) {
+          vR(UU).depthCompare = iU[RU]
         },
-        kwSm: function(DD, CD) {
-          lC(DD).depthFailOp = pC[CD]
+        fe6U: function(UU, RU) {
+          vR(UU).depthFailOp = pR[RU]
         },
-        y64y: function(DD, CD) {
-          lC(DD).depthLoadOp = AD[CD]
+        G7JC: function(UU, RU) {
+          vR(UU).depthLoadOp = lU[RU]
         },
-        LJvD: function(DD, CD) {
-          lC(DD).depthOrArrayLayers = CD >>> 0
+        V9BV: function(UU, RU) {
+          vR(UU).depthOrArrayLayers = RU >>> 0
         },
-        nouw: function(DD, CD) {
-          lC(DD).depthReadOnly = 0 !== CD
+        XmVW: function(UU, RU) {
+          vR(UU).depthReadOnly = 0 !== RU
         },
-        cJal: function(DD, CD) {
-          lC(DD).depthReadOnly = 0 !== CD
+        AE4l: function(UU, RU) {
+          vR(UU).depthReadOnly = 0 !== RU
         },
-        KK0J: function(DD, CD) {
-          lC(DD).depthStencilAttachment = lC(CD)
+        fCHg: function(UU, RU) {
+          vR(UU).depthStencilAttachment = vR(RU)
         },
-        Qgbn: function(DD, CD) {
-          lC(DD).depthStencil = lC(CD)
+        ig5v: function(UU, RU) {
+          vR(UU).depthStencil = vR(RU)
         },
-        e9RV: function(DD, CD) {
-          lC(DD).depthStencilFormat = wC[CD]
+        cDnp: function(UU, RU) {
+          vR(UU).depthStencilFormat = KR[RU]
         },
-        rrcq: function(DD, CD) {
-          lC(DD).depthStoreOp = fC[CD]
+        nCaA: function(UU, RU) {
+          vR(UU).depthStoreOp = PR[RU]
         },
-        DtTc: function(DD, CD) {
-          lC(DD).depthWriteEnabled = 0 !== CD
+        j00b: function(UU, RU) {
+          vR(UU).depthWriteEnabled = 0 !== RU
         },
-        IxvE: function(DD, CD) {
-          lC(DD).device = lC(CD)
+        TzUl: function(UU, RU) {
+          vR(UU).device = vR(RU)
         },
-        Qcuv: function(DD, CD) {
-          lC(DD).dimension = QC[CD]
+        oyu7: function(UU, RU) {
+          vR(UU).dimension = qR[RU]
         },
-        iOI3: function(DD, CD) {
-          lC(DD).dimension = BC[CD]
+        Of8h: function(UU, RU) {
+          vR(UU).dimension = GR[RU]
         },
-        SAW9: function(DD, CD) {
-          lC(DD).dstFactor = GD[CD]
+        WbkZ: function(UU, RU) {
+          vR(UU).dstFactor = SU[RU]
         },
-        XtKp: function(DD, CD) {
-          lC(DD).endOfPassWriteIndex = CD >>> 0
+        Z2DG: function(UU, RU) {
+          vR(UU).endOfPassWriteIndex = RU >>> 0
         },
-        n3Hb: function(DD, CD) {
-          lC(DD).endOfPassWriteIndex = CD >>> 0
+        iPcB: function(UU, RU) {
+          vR(UU).endOfPassWriteIndex = RU >>> 0
         },
-        bPT6: function(DD, CD, cD) {
-          lC(DD).entries = OC(CD, cD)
+        svcn: function(UU, RU, gU) {
+          vR(UU).entries = JR(RU, gU)
         },
-        B7eg: function(DD, CD, cD) {
-          lC(DD).entries = OC(CD, cD)
+        Pmjx: function(UU, RU, gU) {
+          vR(UU).entries = JR(RU, gU)
         },
-        k5Yp: function(DD, CD, cD) {
-          lC(DD).entryPoint = KC(CD, cD)
+        Ac5N: function(UU, RU, gU) {
+          vR(UU).entryPoint = YR(RU, gU)
         },
-        DJR5: function(DD, CD, cD) {
-          lC(DD).entryPoint = KC(CD, cD)
+        hTCf: function(UU, RU, gU) {
+          vR(UU).entryPoint = YR(RU, gU)
         },
-        qR9p: function(DD, CD, cD) {
-          lC(DD).entryPoint = KC(CD, cD)
+        kaeg: function(UU, RU, gU) {
+          vR(UU).entryPoint = YR(RU, gU)
         },
-        RquY: function(DD, CD) {
-          lC(DD).externalTexture = lC(CD)
+        q6I9: function(UU, RU) {
+          vR(UU).externalTexture = vR(RU)
         },
-        gOvv: function(DD, CD) {
-          lC(DD).failOp = pC[CD]
+        QIha: function(UU, RU) {
+          vR(UU).failOp = pR[RU]
         },
-        yMID: function(DD, CD) {
-          lC(DD).format = wC[CD]
+        IuyX: function(UU, RU) {
+          vR(UU).format = KR[RU]
         },
-        yfyH: function(DD, CD) {
-          lC(DD).format = wC[CD]
+        wmcQ: function(UU, RU) {
+          vR(UU).format = KR[RU]
         },
-        NLes: function(DD, CD) {
-          lC(DD).format = yC[CD]
+        rFjc: function(UU, RU) {
+          vR(UU).format = jR[RU]
         },
-        U1lc: function(DD, CD) {
-          lC(DD).format = wC[CD]
+        TcYx: function(UU, RU) {
+          vR(UU).format = KR[RU]
         },
-        kGBS: function(DD, CD) {
-          lC(DD).format = wC[CD]
+        EDKC: function(UU, RU) {
+          vR(UU).format = KR[RU]
         },
-        eNbM: function(DD, CD) {
-          lC(DD).format = wC[CD]
+        vbU0: function(UU, RU) {
+          vR(UU).format = KR[RU]
         },
-        DnPw: function(DD, CD) {
-          lC(DD).format = wC[CD]
+        TWFi: function(UU, RU) {
+          vR(UU).format = KR[RU]
         },
-        y50w: function(DD, CD) {
-          lC(DD).fragment = lC(CD)
+        oruS: function(UU, RU) {
+          vR(UU).fragment = vR(RU)
         },
-        EYAm: function(DD, CD) {
-          lC(DD).frontFace = hD[CD]
+        J1cA: function(UU, RU) {
+          vR(UU).frontFace = LU[RU]
         },
-        Dpm6: function(DD, CD) {
-          lC(DD).g = CD
+        y6YG: function(UU, RU) {
+          vR(UU).g = RU
         },
-        AjNH: function(DD, CD) {
-          lC(DD).hasDynamicOffset = 0 !== CD
+        qjtU: function(UU, RU) {
+          vR(UU).hasDynamicOffset = 0 !== RU
         },
-        KMjo: function(DD, CD) {
-          lC(DD).height = CD >>> 0
+        WSUJ: function(UU, RU) {
+          vR(UU).height = RU >>> 0
         },
-        zaMk: function(DD, CD) {
-          lC(DD).height = CD >>> 0
+        LOtK: function(UU, RU) {
+          vR(UU).height = RU >>> 0
         },
-        EPtl: function(DD, CD) {
-          lC(DD).height = CD >>> 0
+        Gc8t: function(UU, RU) {
+          vR(UU).height = RU >>> 0
         },
-        vC6W: function(DD, CD, cD) {
-          lC(DD).label = KC(CD, cD)
+        mzzO: function(UU, RU, gU) {
+          vR(UU).label = YR(RU, gU)
         },
-        FkJc: function(DD, CD, cD) {
-          lC(DD).label = KC(CD, cD)
+        lj7y: function(UU, RU, gU) {
+          vR(UU).label = YR(RU, gU)
         },
-        QB3d: function(DD, CD, cD) {
-          lC(DD).label = KC(CD, cD)
+        SY6d: function(UU, RU, gU) {
+          vR(UU).label = YR(RU, gU)
         },
-        KvPl: function(DD, CD, cD) {
-          lC(DD).label = KC(CD, cD)
+        lhss: function(UU, RU, gU) {
+          vR(UU).label = YR(RU, gU)
         },
-        xcbi: function(DD, CD, cD) {
-          lC(DD).label = KC(CD, cD)
+        mrPX: function(UU, RU, gU) {
+          vR(UU).label = YR(RU, gU)
         },
-        cP56: function(DD, CD, cD) {
-          lC(DD).label = KC(CD, cD)
+        gXNX: function(UU, RU, gU) {
+          vR(UU).label = YR(RU, gU)
         },
-        B88S: function(DD, CD, cD) {
-          lC(DD).label = KC(CD, cD)
+        ywCn: function(UU, RU, gU) {
+          vR(UU).label = YR(RU, gU)
         },
-        iSYS: function(DD, CD, cD) {
-          lC(DD).label = KC(CD, cD)
+        dh8d: function(UU, RU, gU) {
+          vR(UU).label = YR(RU, gU)
         },
-        PmJ1: function(DD, CD, cD) {
-          lC(DD).label = KC(CD, cD)
+        LykD: function(UU, RU, gU) {
+          vR(UU).label = YR(RU, gU)
         },
-        bULt: function(DD, CD, cD) {
-          lC(DD).label = KC(CD, cD)
+        pvEm: function(UU, RU, gU) {
+          vR(UU).label = YR(RU, gU)
         },
-        zrXf: function(DD, CD, cD) {
-          lC(DD).label = KC(CD, cD)
+        shMj: function(UU, RU, gU) {
+          vR(UU).label = YR(RU, gU)
         },
-        DyN5: function(DD, CD, cD) {
-          lC(DD).label = KC(CD, cD)
+        inlr: function(UU, RU, gU) {
+          vR(UU).label = YR(RU, gU)
         },
-        jqSq: function(DD, CD, cD) {
-          lC(DD).label = KC(CD, cD)
+        dDUw: function(UU, RU, gU) {
+          vR(UU).label = YR(RU, gU)
         },
-        xd7l: function(DD, CD) {
-          lC(DD).layout = lC(CD)
+        MEW0: function(UU, RU) {
+          vR(UU).layout = vR(RU)
         },
-        S0Dj: function(DD, CD) {
-          lC(DD).layout = lC(CD)
+        SOKF: function(UU, RU) {
+          vR(UU).layout = vR(RU)
         },
-        rmjp: function(DD, CD) {
-          lC(DD).layout = lC(CD)
+        OoMI: function(UU, RU) {
+          vR(UU).layout = vR(RU)
         },
-        Un3W: function(DD, CD) {
-          lC(DD).layout = TD[CD]
+        RjBq: function(UU, RU) {
+          vR(UU).layout = HU[RU]
         },
-        khZO: function(DD, CD) {
-          lC(DD).layout = TD[CD]
+        cvMb: function(UU, RU) {
+          vR(UU).layout = HU[RU]
         },
-        PfqQ: function(DD, CD) {
-          lC(DD).loadOp = AD[CD]
+        USMy: function(UU, RU) {
+          vR(UU).loadOp = lU[RU]
         },
-        S8px: function(DD, CD) {
-          lC(DD).lodMaxClamp = CD
+        fvda: function(UU, RU) {
+          vR(UU).lodMaxClamp = RU
         },
-        e25W: function(DD, CD) {
-          lC(DD).lodMinClamp = CD
+        apIr: function(UU, RU) {
+          vR(UU).lodMinClamp = RU
         },
-        wJdE: function(DD, CD) {
-          lC(DD).magFilter = uD[CD]
+        IxtU: function(UU, RU) {
+          vR(UU).magFilter = DU[RU]
         },
-        ncKh: function(DD, CD) {
-          lC(DD).mappedAtCreation = 0 !== CD
+        kOxS: function(UU, RU) {
+          vR(UU).mappedAtCreation = 0 !== RU
         },
-        HrIU: function(DD, CD) {
-          lC(DD).mask = CD >>> 0
+        RYk7: function(UU, RU) {
+          vR(UU).mask = RU >>> 0
         },
-        i3o6: function(DD, CD) {
-          lC(DD).maxAnisotropy = CD
+        b2Tg: function(UU, RU) {
+          vR(UU).maxAnisotropy = RU
         },
-        wUHf: function(DD, CD) {
-          lC(DD).minBindingSize = CD
+        qVxl: function(UU, RU) {
+          vR(UU).minBindingSize = RU
         },
-        qjsc: function(DD, CD) {
-          lC(DD).minFilter = uD[CD]
+        T6QT: function(UU, RU) {
+          vR(UU).minFilter = DU[RU]
         },
-        JdG4: function(DD, CD) {
-          lC(DD).mipLevelCount = CD >>> 0
+        wc3s: function(UU, RU) {
+          vR(UU).mipLevelCount = RU >>> 0
         },
-        sOcs: function(DD, CD) {
-          lC(DD).mipLevelCount = CD >>> 0
+        pKKs: function(UU, RU) {
+          vR(UU).mipLevelCount = RU >>> 0
         },
-        nfEP: function(DD, CD) {
-          lC(DD).mipLevel = CD >>> 0
+        QrEl: function(UU, RU) {
+          vR(UU).mipLevel = RU >>> 0
         },
-        ux0a: function(DD, CD) {
-          lC(DD).mipmapFilter = FD[CD]
+        dEeJ: function(UU, RU) {
+          vR(UU).mipmapFilter = OU[RU]
         },
-        WdMC: function(DD, CD) {
-          lC(DD).mode = YD[CD]
+        JUIn: function(UU, RU) {
+          vR(UU).mode = FU[RU]
         },
-        TCVR: function(DD, CD) {
-          lC(DD).module = lC(CD)
+        T7hL: function(UU, RU) {
+          vR(UU).module = vR(RU)
         },
-        HDKI: function(DD, CD) {
-          lC(DD).module = lC(CD)
+        g6Wm: function(UU, RU) {
+          vR(UU).module = vR(RU)
         },
-        n3vs: function(DD, CD) {
-          lC(DD).module = lC(CD)
+        piwk: function(UU, RU) {
+          vR(UU).module = vR(RU)
         },
-        LSfD: function(DD, CD) {
-          lC(DD).multisample = lC(CD)
+        qSRv: function(UU, RU) {
+          vR(UU).multisample = vR(RU)
         },
-        orfH: function(DD, CD) {
-          lC(DD).multisampled = 0 !== CD
+        Cwzm: function(UU, RU) {
+          vR(UU).multisampled = 0 !== RU
         },
-        hLyJ: function(DD, CD) {
-          lC(DD).offset = CD
+        ZgSt: function(UU, RU) {
+          vR(UU).offset = RU
         },
-        ZNcK: function(DD, CD) {
-          lC(DD).offset = CD
+        RAsw: function(UU, RU) {
+          vR(UU).offset = RU
         },
-        zbHf: function(DD, CD) {
-          lC(DD).offset = CD
+        eJf4: function(UU, RU) {
+          vR(UU).offset = RU
         },
-        pAKx: function(DD, CD) {
-          lC(DD).operation = RD[CD]
+        t4Bp: function(UU, RU) {
+          vR(UU).operation = sU[RU]
         },
-        wRgK: function(DD, CD) {
-          lC(DD).origin = lC(CD)
+        idYN: function(UU, RU) {
+          vR(UU).origin = vR(RU)
         },
-        W6cH: function(DD, CD) {
-          lC(DD).passOp = pC[CD]
+        SRAX: function(UU, RU) {
+          vR(UU).passOp = pR[RU]
         },
-        FL64: function(DD, CD) {
-          lC(DD).powerPreference = DC[CD]
+        Lglw: function(UU, RU) {
+          vR(UU).powerPreference = UR[RU]
         },
-        TWYg: function(DD, CD) {
-          lC(DD).primitive = lC(CD)
+        tifP: function(UU, RU) {
+          vR(UU).primitive = vR(RU)
         },
-        FNHv: function(DD, CD) {
-          lC(DD).querySet = lC(CD)
+        hkuu: function(UU, RU) {
+          vR(UU).querySet = vR(RU)
         },
-        Skal: function(DD, CD) {
-          lC(DD).querySet = lC(CD)
+        ru0t: function(UU, RU) {
+          vR(UU).querySet = vR(RU)
         },
-        NLtW: function(DD, CD) {
-          lC(DD).r = CD
+        FO7r: function(UU, RU) {
+          vR(UU).r = RU
         },
-        gYba: function(DD, CD, cD) {
-          lC(DD).requiredFeatures = OC(CD, cD)
+        JyNV: function(UU, RU, gU) {
+          vR(UU).requiredFeatures = JR(RU, gU)
         },
-        WHLD: function(DD, CD) {
-          lC(DD).requiredLimits = lC(CD)
+        RHwp: function(UU, RU) {
+          vR(UU).requiredLimits = vR(RU)
         },
-        U9g5: function(DD, CD) {
-          lC(DD).resolveTarget = lC(CD)
+        Q2BL: function(UU, RU) {
+          vR(UU).resolveTarget = vR(RU)
         },
-        Bw56: function(DD, CD) {
-          lC(DD).resource = lC(CD)
+        xjgw: function(UU, RU) {
+          vR(UU).resource = vR(RU)
         },
-        GiZs: function(DD, CD) {
-          lC(DD).resource = lC(CD)
+        nwIJ: function(UU, RU) {
+          vR(UU).resource = vR(RU)
         },
-        x6XB: function(DD, CD) {
-          lC(DD).resource = lC(CD)
+        YrCb: function(UU, RU) {
+          vR(UU).resource = vR(RU)
         },
-        SGF8: function(DD, CD) {
-          lC(DD).rowsPerImage = CD >>> 0
+        EqAT: function(UU, RU) {
+          vR(UU).rowsPerImage = RU >>> 0
         },
-        qwGw: function(DD, CD) {
-          lC(DD).sampleCount = CD >>> 0
+        Dy6l: function(UU, RU) {
+          vR(UU).sampleCount = RU >>> 0
         },
-        vtXR: function(DD, CD) {
-          lC(DD).sampleCount = CD >>> 0
+        JmRn: function(UU, RU) {
+          vR(UU).sampleCount = RU >>> 0
         },
-        jvXv: function(DD, CD) {
-          lC(DD).sampleType = SC[CD]
+        CVFJ: function(UU, RU) {
+          vR(UU).sampleType = cR[RU]
         },
-        Nz3Z: function(DD, CD) {
-          lC(DD).sampler = lC(CD)
+        dTk4: function(UU, RU) {
+          vR(UU).sampler = vR(RU)
         },
-        rZvV: function(DD, CD) {
-          lC(DD).shaderLocation = CD >>> 0
+        jg0a: function(UU, RU) {
+          vR(UU).shaderLocation = RU >>> 0
         },
-        zDtU: function(DD, CD) {
-          lC(DD).size = CD
+        IhMv: function(UU, RU) {
+          vR(UU).size = RU
         },
-        SRhZ: function(DD, CD) {
-          lC(DD).size = CD
+        ekC3: function(UU, RU) {
+          vR(UU).size = RU
         },
-        TAWw: function(DD, CD) {
-          lC(DD).size = lC(CD)
+        cygp: function(UU, RU) {
+          vR(UU).size = vR(RU)
         },
-        nNaR: function(DD, CD) {
-          lC(DD).srcFactor = GD[CD]
+        XP8e: function(UU, RU) {
+          vR(UU).srcFactor = SU[RU]
         },
-        CpM3: function(DD, CD) {
-          lC(DD).stencilBack = lC(CD)
+        gOlp: function(UU, RU) {
+          vR(UU).stencilBack = vR(RU)
         },
-        FQlS: function(DD, CD) {
-          lC(DD).stencilClearValue = CD >>> 0
+        dCPE: function(UU, RU) {
+          vR(UU).stencilClearValue = RU >>> 0
         },
-        pBdk: function(DD, CD) {
-          lC(DD).stencilFront = lC(CD)
+        wfs7: function(UU, RU) {
+          vR(UU).stencilFront = vR(RU)
         },
-        CqCB: function(DD, CD) {
-          lC(DD).stencilLoadOp = AD[CD]
+        iwQo: function(UU, RU) {
+          vR(UU).stencilLoadOp = lU[RU]
         },
-        nDF7: function(DD, CD) {
-          lC(DD).stencilReadMask = CD >>> 0
+        VcKm: function(UU, RU) {
+          vR(UU).stencilReadMask = RU >>> 0
         },
-        OUny: function(DD, CD) {
-          lC(DD).stencilReadOnly = 0 !== CD
+        L7vP: function(UU, RU) {
+          vR(UU).stencilReadOnly = 0 !== RU
         },
-        lC6V: function(DD, CD) {
-          lC(DD).stencilReadOnly = 0 !== CD
+        MApF: function(UU, RU) {
+          vR(UU).stencilReadOnly = 0 !== RU
         },
-        FTZN: function(DD, CD) {
-          lC(DD).stencilStoreOp = fC[CD]
+        mC82: function(UU, RU) {
+          vR(UU).stencilStoreOp = PR[RU]
         },
-        eYRi: function(DD, CD) {
-          lC(DD).stencilWriteMask = CD >>> 0
+        vNOC: function(UU, RU) {
+          vR(UU).stencilWriteMask = RU >>> 0
         },
-        HIMS: function(DD, CD) {
-          lC(DD).stepMode = MC[CD]
+        gzgY: function(UU, RU) {
+          vR(UU).stepMode = uR[RU]
         },
-        F8wL: function(DD, CD) {
-          lC(DD).storageTexture = lC(CD)
+        shmr: function(UU, RU) {
+          vR(UU).storageTexture = vR(RU)
         },
-        eXJU: function(DD, CD) {
-          lC(DD).storeOp = fC[CD]
+        tyw5: function(UU, RU) {
+          vR(UU).storeOp = PR[RU]
         },
-        TPVx: function(DD, CD) {
-          lC(DD).stripIndexFormat = rD[CD]
+        Dk2B: function(UU, RU) {
+          vR(UU).stripIndexFormat = NU[RU]
         },
-        ecHI: function(DD, CD, cD) {
-          lC(DD).targets = OC(CD, cD)
+        v3ed: function(UU, RU, gU) {
+          vR(UU).targets = JR(RU, gU)
         },
-        rnoQ: function(DD, CD) {
-          lC(DD).texture = lC(CD)
+        aXEN: function(UU, RU) {
+          vR(UU).texture = vR(RU)
         },
-        qDTS: function(DD, CD) {
-          lC(DD).texture = lC(CD)
+        eeDN: function(UU, RU) {
+          vR(UU).texture = vR(RU)
         },
-        JXpZ: function(DD, CD) {
-          lC(DD).timestampWrites = lC(CD)
+        Rp9G: function(UU, RU) {
+          vR(UU).timestampWrites = vR(RU)
         },
-        PU1F: function(DD, CD) {
-          lC(DD).timestampWrites = lC(CD)
+        Eh3d: function(UU, RU) {
+          vR(UU).timestampWrites = vR(RU)
         },
-        MHOC: function(DD, CD) {
-          lC(DD).toneMapping = lC(CD)
+        JTBJ: function(UU, RU) {
+          vR(UU).toneMapping = vR(RU)
         },
-        Evzq: function(DD, CD) {
-          lC(DD).topology = CC[CD]
+        WU6N: function(UU, RU) {
+          vR(UU).topology = RR[RU]
         },
-        GGaQ: function(DD, CD) {
-          lC(DD).type = IC[CD]
+        GLlJ: function(UU, RU) {
+          vR(UU).type = tR[RU]
         },
-        hpF6: function(DD, CD) {
-          lC(DD).type = kD[CD]
+        mSKD: function(UU, RU) {
+          vR(UU).type = yU[RU]
         },
-        B0iW: function(DD, CD) {
-          lC(DD).type = cC[CD]
+        gizX: function(UU, RU) {
+          vR(UU).type = gR[RU]
         },
-        H7xX: function(DD, CD) {
-          lC(DD).unclippedDepth = 0 !== CD
+        Sh1G: function(UU, RU) {
+          vR(UU).unclippedDepth = 0 !== RU
         },
-        uo29: function(DD, CD) {
-          lC(DD).usage = CD >>> 0
+        Vt9d: function(UU, RU) {
+          vR(UU).usage = RU >>> 0
         },
-        LaZF: function(DD, CD) {
-          lC(DD).usage = CD >>> 0
+        BOda: function(UU, RU) {
+          vR(UU).usage = RU >>> 0
         },
-        B9gU: function(DD, CD) {
-          lC(DD).usage = CD >>> 0
+        V9xY: function(UU, RU) {
+          vR(UU).usage = RU >>> 0
         },
-        Ot5d: function(DD, CD) {
-          lC(DD).usage = CD >>> 0
+        GS3E: function(UU, RU) {
+          vR(UU).usage = RU >>> 0
         },
-        Gatv: function(DD, CD) {
-          lC(DD).vertex = lC(CD)
+        DBMW: function(UU, RU) {
+          vR(UU).vertex = vR(RU)
         },
-        e7NT: function(DD, CD) {
-          lC(DD).viewDimension = BC[CD]
+        lqSI: function(UU, RU) {
+          vR(UU).viewDimension = GR[RU]
         },
-        NGwk: function(DD, CD) {
-          lC(DD).viewDimension = BC[CD]
+        Fzqa: function(UU, RU) {
+          vR(UU).viewDimension = GR[RU]
         },
-        Uwun: function(DD, CD, cD) {
-          lC(DD).viewFormats = OC(CD, cD)
+        onJS: function(UU, RU, gU) {
+          vR(UU).viewFormats = JR(RU, gU)
         },
-        dPMQ: function(DD, CD, cD) {
-          lC(DD).viewFormats = OC(CD, cD)
+        JVGf: function(UU, RU, gU) {
+          vR(UU).viewFormats = JR(RU, gU)
         },
-        dT7p: function(DD, CD) {
-          lC(DD).view = lC(CD)
+        r3tg: function(UU, RU) {
+          vR(UU).view = vR(RU)
         },
-        fPCt: function(DD, CD) {
-          lC(DD).view = lC(CD)
+        PdOb: function(UU, RU) {
+          vR(UU).view = vR(RU)
         },
-        U8RG: function(DD, CD) {
-          lC(DD).visibility = CD >>> 0
+        NWJr: function(UU, RU) {
+          vR(UU).visibility = RU >>> 0
         },
-        QkWZ: function(DD, CD) {
-          lC(DD).width = CD >>> 0
+        VlHh: function(UU, RU) {
+          vR(UU).width = RU >>> 0
         },
-        yOH0: function(DD, CD) {
-          lC(DD).width = CD >>> 0
+        kFwH: function(UU, RU) {
+          vR(UU).width = RU >>> 0
         },
-        RYzO: function(DD, CD) {
-          lC(DD).width = CD >>> 0
+        Qz0g: function(UU, RU) {
+          vR(UU).width = RU >>> 0
         },
-        IvB4: function(DD, CD) {
-          lC(DD).writeMask = CD >>> 0
+        LAPP: function(UU, RU) {
+          vR(UU).writeMask = RU >>> 0
         },
-        FZSC: function(DD, CD) {
-          lC(DD).x = CD >>> 0
+        e90M: function(UU, RU) {
+          vR(UU).x = RU >>> 0
         },
-        vBHd: function(DD, CD) {
-          lC(DD).y = CD >>> 0
+        TfGl: function(UU, RU) {
+          vR(UU).y = RU >>> 0
         },
-        oPTM: function(DD, CD) {
-          lC(DD).z = CD >>> 0
+        xanX: function(UU, RU) {
+          vR(UU).z = RU >>> 0
         },
-        fs7x: function() {
-          const DD = "undefined" === typeof global ? null : global;
-          return RC(DD) ? 0 : vC(DD)
+        x5Rj: function() {
+          const UU = "undefined" === typeof global ? null : global;
+          return sR(UU) ? 0 : eR(UU)
         },
-        pA2X: function() {
-          const DD = "undefined" === typeof globalThis ? null : globalThis;
-          return RC(DD) ? 0 : vC(DD)
+        ucbk: function() {
+          const UU = "undefined" === typeof globalThis ? null : globalThis;
+          return sR(UU) ? 0 : eR(UU)
         },
-        MgYD: function() {
-          const DD = "undefined" === typeof self ? null : self;
-          return RC(DD) ? 0 : vC(DD)
+        O28S: function() {
+          const UU = "undefined" === typeof self ? null : self;
+          return sR(UU) ? 0 : eR(UU)
         },
-        AzEU: function() {
-          const DD = "undefined" === typeof window ? null : window;
-          return RC(DD) ? 0 : vC(DD)
+        JTf0: function() {
+          const UU = "undefined" === typeof window ? null : window;
+          return sR(UU) ? 0 : eR(UU)
         },
-        RaFT: function(DD, CD, cD) {
-          return vC(lC(DD).subarray(CD >>> 0, cD >>> 0))
+        E9pn: function(UU, RU, gU) {
+          return eR(vR(UU).subarray(RU >>> 0, gU >>> 0))
         },
-        YZOr: function(DD) {
-          return lC(DD).subgroupMaxSize
+        hIAO: function(UU) {
+          return vR(UU).subgroupMaxSize
         },
-        IKKE: function(DD) {
-          return lC(DD).subgroupMinSize
+        JERh: function(UU) {
+          return vR(UU).subgroupMinSize
         },
-        JTnv: function(DD, CD, cD) {
-          lC(DD).submit(OC(CD, cD))
+        G7Lw: function(UU, RU, gU) {
+          vR(UU).submit(JR(RU, gU))
         },
-        K0yq: function(DD, CD) {
-          return vC(lC(DD).then(lC(CD)))
+        ylN9: function(UU, RU) {
+          return eR(vR(UU).then(vR(RU)))
         },
-        o1Op: function(DD, CD, cD) {
-          return vC(lC(DD).then(lC(CD), lC(cD)))
+        mqIn: function(UU, RU, gU) {
+          return eR(vR(UU).then(vR(RU), vR(gU)))
         },
-        QkDi: function(DD, CD) {
-          return vC(lC(DD).then(lC(CD)))
+        rEAl: function(UU, RU) {
+          return eR(vR(UU).then(vR(RU)))
         },
-        qGne: function(DD) {
-          lC(DD).unconfigure()
+        bxKx: function(UU) {
+          vR(UU).unconfigure()
         },
-        bppS: function(DD) {
-          lC(DD).unmap()
+        QYaJ: function(UU) {
+          vR(UU).unmap()
         },
-        TVTn: function(DD) {
-          console.warn(lC(DD))
+        aJh6: function(UU) {
+          console.warn(vR(UU))
         },
-        Gnje: function(DD, CD) {
-          console.warn(KC(DD, CD))
+        a2rr: function(UU, RU) {
+          console.warn(YR(UU, RU))
         },
-        shGT: function(DD) {
-          return lC(DD).width
+        Spzd: function(UU) {
+          return vR(UU).width
         },
-        D1nN: function() {
-          return LC((function(DD, CD, cD, ID, pD, iD, fD) {
-            lC(DD).writeBuffer(lC(CD), cD, HC(ID, pD), iD, fD)
+        Rip0: function() {
+          return dR((function(UU, RU, gU, tU, pU, EU, PU) {
+            vR(UU).writeBuffer(vR(RU), gU, nR(tU, pU), EU, PU)
           }), arguments)
         },
-        Nhib: function() {
-          return LC((function(DD, CD, cD, ID, pD, iD) {
-            lC(DD).writeTexture(lC(CD), HC(cD, ID), lC(pD), lC(iD))
+        isHE: function() {
+          return dR((function(UU, RU, gU, tU, pU, EU) {
+            vR(UU).writeTexture(vR(RU), nR(gU, tU), vR(pU), vR(EU))
           }), arguments)
         },
-        F987: function(DD, CD) {
-          return vC(kC(DD, CD, VD))
+        rkqZ: function(UU, RU) {
+          return eR(yR(UU, RU, VU))
         },
-        H4iM: function(DD, CD) {
-          return vC(kC(DD, CD, aD))
+        sBfN: function(UU, RU) {
+          return eR(yR(UU, RU, BU))
         },
-        H0vb: function(DD, CD) {
-          return vC(kC(DD, CD, zD))
+        lQMG: function(UU, RU) {
+          return eR(yR(UU, RU, rU))
         },
-        U9pb: function(DD, CD) {
-          return vC(kC(DD, CD, KD))
+        Vj4z: function(UU, RU) {
+          return eR(yR(UU, RU, YU))
         },
-        j1sB: function(DD, CD) {
-          return vC(kC(DD, CD, jD))
+        d8JR: function(UU, RU) {
+          return eR(yR(UU, RU, XU))
         },
-        xxZp: function(DD, CD) {
-          return vC(kC(DD, CD, lD))
+        uvxA: function(UU, RU) {
+          return eR(yR(UU, RU, vU))
         },
-        DYe0: function(DD) {
-          return vC(DD)
+        hX6b: function(UU) {
+          return eR(UU)
         },
-        dGut: function(DD, CD) {
-          return vC(HC(DD, CD))
+        oV7R: function(UU, RU) {
+          return eR(nR(UU, RU))
         },
-        eAWG: function(DD, CD) {
-          return vC(KC(DD, CD))
+        drWs: function(UU, RU) {
+          return eR(YR(UU, RU))
         },
-        NUbJ: function(DD) {
-          return vC(lC(DD))
+        vfEo: function(UU) {
+          return eR(vR(UU))
         },
-        gYaA: function(DD) {
-          EC(DD)
+        alsA: function(UU) {
+          zR(UU)
         }
       };
       return {
         __proto__: null,
-        Lxx0: DD
+        imam: UU
       }
     }
 
-    function KD(DD, CD, cD) {
-      Dc.nMqe(DD, CD, vC(cD))
+    function YU(UU, RU, gU) {
+      Ug.zcpf(UU, RU, eR(gU))
     }
 
-    function aD(DD, CD, cD) {
-      return EC(Dc.wg3j(DD, CD, vC(cD)))
+    function BU(UU, RU, gU) {
+      return zR(Ug.Z6Xa(UU, RU, eR(gU)))
     }
 
-    function VD(DD, CD, cD) {
-      const ID = Dc.tMbO(DD, CD, vC(cD));
-      if (ID[1]) throw EC(ID[0])
+    function VU(UU, RU, gU) {
+      const tU = Ug.Ia3y(UU, RU, eR(gU));
+      if (tU[1]) throw zR(tU[0])
     }
 
-    function zD(DD, CD, cD) {
-      const ID = Dc.HR0f(DD, CD, vC(cD));
-      if (ID[1]) throw EC(ID[0])
+    function rU(UU, RU, gU) {
+      const tU = Ug.hsXL(UU, RU, eR(gU));
+      if (tU[1]) throw zR(tU[0])
     }
 
-    function jD(DD, CD, cD) {
-      const ID = Dc.Vlav(DD, CD, vC(cD));
-      if (ID[1]) throw EC(ID[0])
+    function XU(UU, RU, gU) {
+      const tU = Ug.U6xb(UU, RU, eR(gU));
+      if (tU[1]) throw zR(tU[0])
     }
 
-    function lD(DD, CD, cD) {
-      const ID = Dc.lYv9(DD, CD, vC(cD));
-      if (ID[1]) throw EC(ID[0])
+    function vU(UU, RU, gU) {
+      const tU = Ug.UwHI(UU, RU, eR(gU));
+      if (tU[1]) throw zR(tU[0])
     }
-    Symbol.dispose && (fD.prototype[Symbol.dispose] = fD.prototype.free);
-    const LD = ["clamp-to-edge", "repeat", "mirror-repeat"],
-      TD = ["auto"],
-      GD = ["zero", "one", "src", "one-minus-src", "src-alpha", "one-minus-src-alpha", "dst", "one-minus-dst", "dst-alpha", "one-minus-dst-alpha", "src-alpha-saturated", "constant", "one-minus-constant", "src1", "one-minus-src1", "src1-alpha", "one-minus-src1-alpha"],
-      RD = ["add", "subtract", "reverse-subtract", "min", "max"],
-      kD = ["uniform", "storage", "read-only-storage"],
-      dD = ["opaque", "premultiplied"],
-      YD = ["standard", "extended"],
-      WD = ["never", "less", "equal", "less-equal", "greater", "not-equal", "greater-equal", "always"],
-      sD = ["none", "front", "back"],
-      ED = ["unknown", "destroyed"],
-      eD = ["validation", "out-of-memory", "internal"],
-      uD = ["nearest", "linear"],
-      hD = ["ccw", "cw"],
-      rD = ["uint16", "uint32"],
-      AD = ["load", "clear"],
-      FD = ["nearest", "linear"],
-      DC = ["low-power", "high-performance"],
-      CC = ["point-list", "line-list", "line-strip", "triangle-list", "triangle-strip"],
-      cC = ["occlusion", "timestamp"],
-      IC = ["filtering", "non-filtering", "comparison"],
-      pC = ["keep", "zero", "replace", "invert", "increment-clamp", "decrement-clamp", "increment-wrap", "decrement-wrap"],
-      iC = ["write-only", "read-only", "read-write"],
-      fC = ["store", "discard"],
-      bC = ["all", "stencil-only", "depth-only"],
-      QC = ["1d", "2d", "3d"],
-      wC = ["r8unorm", "r8snorm", "r8uint", "r8sint", "r16unorm", "r16snorm", "r16uint", "r16sint", "r16float", "rg8unorm", "rg8snorm", "rg8uint", "rg8sint", "r32uint", "r32sint", "r32float", "rg16unorm", "rg16snorm", "rg16uint", "rg16sint", "rg16float", "rgba8unorm", "rgba8unorm-srgb", "rgba8snorm", "rgba8uint", "rgba8sint", "bgra8unorm", "bgra8unorm-srgb", "rgb9e5ufloat", "rgb10a2uint", "rgb10a2unorm", "rg11b10ufloat", "rg32uint", "rg32sint", "rg32float", "rgba16unorm", "rgba16snorm", "rgba16uint", "rgba16sint", "rgba16float", "rgba32uint", "rgba32sint", "rgba32float", "stencil8", "depth16unorm", "depth24plus", "depth24plus-stencil8", "depth32float", "depth32float-stencil8", "bc1-rgba-unorm", "bc1-rgba-unorm-srgb", "bc2-rgba-unorm", "bc2-rgba-unorm-srgb", "bc3-rgba-unorm", "bc3-rgba-unorm-srgb", "bc4-r-unorm", "bc4-r-snorm", "bc5-rg-unorm", "bc5-rg-snorm", "bc6h-rgb-ufloat", "bc6h-rgb-float", "bc7-rgba-unorm", "bc7-rgba-unorm-srgb", "etc2-rgb8unorm", "etc2-rgb8unorm-srgb", "etc2-rgb8a1unorm", "etc2-rgb8a1unorm-srgb", "etc2-rgba8unorm", "etc2-rgba8unorm-srgb", "eac-r11unorm", "eac-r11snorm", "eac-rg11unorm", "eac-rg11snorm", "astc-4x4-unorm", "astc-4x4-unorm-srgb", "astc-5x4-unorm", "astc-5x4-unorm-srgb", "astc-5x5-unorm", "astc-5x5-unorm-srgb", "astc-6x5-unorm", "astc-6x5-unorm-srgb", "astc-6x6-unorm", "astc-6x6-unorm-srgb", "astc-8x5-unorm", "astc-8x5-unorm-srgb", "astc-8x6-unorm", "astc-8x6-unorm-srgb", "astc-8x8-unorm", "astc-8x8-unorm-srgb", "astc-10x5-unorm", "astc-10x5-unorm-srgb", "astc-10x6-unorm", "astc-10x6-unorm-srgb", "astc-10x8-unorm", "astc-10x8-unorm-srgb", "astc-10x10-unorm", "astc-10x10-unorm-srgb", "astc-12x10-unorm", "astc-12x10-unorm-srgb", "astc-12x12-unorm", "astc-12x12-unorm-srgb"],
-      SC = ["float", "unfilterable-float", "depth", "sint", "uint"],
-      BC = ["1d", "2d", "2d-array", "cube", "cube-array", "3d"],
-      yC = ["uint8", "uint8x2", "uint8x4", "sint8", "sint8x2", "sint8x4", "unorm8", "unorm8x2", "unorm8x4", "snorm8", "snorm8x2", "snorm8x4", "uint16", "uint16x2", "uint16x4", "sint16", "sint16x2", "sint16x4", "unorm16", "unorm16x2", "unorm16x4", "snorm16", "snorm16x2", "snorm16x4", "float16", "float16x2", "float16x4", "float32", "float32x2", "float32x3", "float32x4", "uint32", "uint32x2", "uint32x3", "uint32x4", "sint32", "sint32x2", "sint32x3", "sint32x4", "unorm10-10-10-2", "unorm8x4-bgra"],
-      MC = ["vertex", "instance"],
-      tC = "undefined" === typeof FinalizationRegistry ? {
+    Symbol.dispose && (PU.prototype[Symbol.dispose] = PU.prototype.free);
+    const dU = ["clamp-to-edge", "repeat", "mirror-repeat"],
+      HU = ["auto"],
+      SU = ["zero", "one", "src", "one-minus-src", "src-alpha", "one-minus-src-alpha", "dst", "one-minus-dst", "dst-alpha", "one-minus-dst-alpha", "src-alpha-saturated", "constant", "one-minus-constant", "src1", "one-minus-src1", "src1-alpha", "one-minus-src1-alpha"],
+      sU = ["add", "subtract", "reverse-subtract", "min", "max"],
+      yU = ["uniform", "storage", "read-only-storage"],
+      kU = ["opaque", "premultiplied"],
+      FU = ["standard", "extended"],
+      iU = ["never", "less", "equal", "less-equal", "greater", "not-equal", "greater-equal", "always"],
+      AU = ["none", "front", "back"],
+      zU = ["unknown", "destroyed"],
+      MU = ["validation", "out-of-memory", "internal"],
+      DU = ["nearest", "linear"],
+      LU = ["ccw", "cw"],
+      NU = ["uint16", "uint32"],
+      lU = ["load", "clear"],
+      OU = ["nearest", "linear"],
+      UR = ["low-power", "high-performance"],
+      RR = ["point-list", "line-list", "line-strip", "triangle-list", "triangle-strip"],
+      gR = ["occlusion", "timestamp"],
+      tR = ["filtering", "non-filtering", "comparison"],
+      pR = ["keep", "zero", "replace", "invert", "increment-clamp", "decrement-clamp", "increment-wrap", "decrement-wrap"],
+      ER = ["write-only", "read-only", "read-write"],
+      PR = ["store", "discard"],
+      TR = ["all", "stencil-only", "depth-only"],
+      qR = ["1d", "2d", "3d"],
+      KR = ["r8unorm", "r8snorm", "r8uint", "r8sint", "r16unorm", "r16snorm", "r16uint", "r16sint", "r16float", "rg8unorm", "rg8snorm", "rg8uint", "rg8sint", "r32uint", "r32sint", "r32float", "rg16unorm", "rg16snorm", "rg16uint", "rg16sint", "rg16float", "rgba8unorm", "rgba8unorm-srgb", "rgba8snorm", "rgba8uint", "rgba8sint", "bgra8unorm", "bgra8unorm-srgb", "rgb9e5ufloat", "rgb10a2uint", "rgb10a2unorm", "rg11b10ufloat", "rg32uint", "rg32sint", "rg32float", "rgba16unorm", "rgba16snorm", "rgba16uint", "rgba16sint", "rgba16float", "rgba32uint", "rgba32sint", "rgba32float", "stencil8", "depth16unorm", "depth24plus", "depth24plus-stencil8", "depth32float", "depth32float-stencil8", "bc1-rgba-unorm", "bc1-rgba-unorm-srgb", "bc2-rgba-unorm", "bc2-rgba-unorm-srgb", "bc3-rgba-unorm", "bc3-rgba-unorm-srgb", "bc4-r-unorm", "bc4-r-snorm", "bc5-rg-unorm", "bc5-rg-snorm", "bc6h-rgb-ufloat", "bc6h-rgb-float", "bc7-rgba-unorm", "bc7-rgba-unorm-srgb", "etc2-rgb8unorm", "etc2-rgb8unorm-srgb", "etc2-rgb8a1unorm", "etc2-rgb8a1unorm-srgb", "etc2-rgba8unorm", "etc2-rgba8unorm-srgb", "eac-r11unorm", "eac-r11snorm", "eac-rg11unorm", "eac-rg11snorm", "astc-4x4-unorm", "astc-4x4-unorm-srgb", "astc-5x4-unorm", "astc-5x4-unorm-srgb", "astc-5x5-unorm", "astc-5x5-unorm-srgb", "astc-6x5-unorm", "astc-6x5-unorm-srgb", "astc-6x6-unorm", "astc-6x6-unorm-srgb", "astc-8x5-unorm", "astc-8x5-unorm-srgb", "astc-8x6-unorm", "astc-8x6-unorm-srgb", "astc-8x8-unorm", "astc-8x8-unorm-srgb", "astc-10x5-unorm", "astc-10x5-unorm-srgb", "astc-10x6-unorm", "astc-10x6-unorm-srgb", "astc-10x8-unorm", "astc-10x8-unorm-srgb", "astc-10x10-unorm", "astc-10x10-unorm-srgb", "astc-12x10-unorm", "astc-12x10-unorm-srgb", "astc-12x12-unorm", "astc-12x12-unorm-srgb"],
+      cR = ["float", "unfilterable-float", "depth", "sint", "uint"],
+      GR = ["1d", "2d", "2d-array", "cube", "cube-array", "3d"],
+      jR = ["uint8", "uint8x2", "uint8x4", "sint8", "sint8x2", "sint8x4", "unorm8", "unorm8x2", "unorm8x4", "snorm8", "snorm8x2", "snorm8x4", "uint16", "uint16x2", "uint16x4", "sint16", "sint16x2", "sint16x4", "unorm16", "unorm16x2", "unorm16x4", "snorm16", "snorm16x2", "snorm16x4", "float16", "float16x2", "float16x4", "float32", "float32x2", "float32x3", "float32x4", "uint32", "uint32x2", "uint32x3", "uint32x4", "sint32", "sint32x2", "sint32x3", "sint32x4", "unorm10-10-10-2", "unorm8x4-bgra"],
+      uR = ["vertex", "instance"],
+      CR = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((DD => Dc.KboX(DD, 1))),
-      ZC = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((UU => Ug.hVJr(UU, 1))),
+      hR = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((DD => Dc.yPpY(DD, 1))),
-      oC = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((UU => Ug.hdv1(UU, 1))),
+      QR = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((DD => Dc.iZWt(DD, 1)));
+      } : new FinalizationRegistry((UU => Ug.pLwI(UU, 1)));
 
-    function vC(DD) {
-      GC === TC.length && TC.push(TC.length + 1);
-      const CD = GC;
-      return GC = TC[CD], TC[CD] = DD, CD
+    function eR(UU) {
+      SR === HR.length && HR.push(HR.length + 1);
+      const RU = SR;
+      return SR = HR[RU], HR[RU] = UU, RU
     }
 
-    function NC(DD, CD) {
-      if (!(DD instanceof CD)) throw new Error(`expected instance of ${CD.name}`)
+    function WR(UU, RU) {
+      if (!(UU instanceof RU)) throw new Error(`expected instance of ${RU.name}`)
     }
-    const gC = "undefined" === typeof FinalizationRegistry ? {
+    const fR = "undefined" === typeof FinalizationRegistry ? {
       register: () => {},
       unregister: () => {}
-    } : new FinalizationRegistry((DD => Dc.zzzz(DD.a, DD.b)));
+    } : new FinalizationRegistry((UU => Ug.ZlEY(UU.a, UU.b)));
 
-    function XC(DD) {
-      const CD = typeof DD;
-      if ("number" == CD || "boolean" == CD || null == DD) return `${DD}`;
-      if ("string" == CD) return `"${DD}"`;
-      if ("symbol" == CD) {
-        const CD = DD.description;
-        return null == CD ? "Symbol" : `Symbol(${CD})`
+    function xR(UU) {
+      const RU = typeof UU;
+      if ("number" == RU || "boolean" == RU || null == UU) return `${UU}`;
+      if ("string" == RU) return `"${UU}"`;
+      if ("symbol" == RU) {
+        const RU = UU.description;
+        return null == RU ? "Symbol" : `Symbol(${RU})`
       }
-      if ("function" == CD) {
-        const CD = DD.name;
-        return "string" == typeof CD && CD.length > 0 ? `Function(${CD})` : "Function"
+      if ("function" == RU) {
+        const RU = UU.name;
+        return "string" == typeof RU && RU.length > 0 ? `Function(${RU})` : "Function"
       }
-      if (Array.isArray(DD)) {
-        const CD = DD.length;
-        let cD = "[";
-        CD > 0 && (cD += XC(DD[0]));
-        for (let ID = 1; ID < CD; ID++) cD += ", " + XC(DD[ID]);
-        return cD += "]", cD
+      if (Array.isArray(UU)) {
+        const RU = UU.length;
+        let gU = "[";
+        RU > 0 && (gU += xR(UU[0]));
+        for (let tU = 1; tU < RU; tU++) gU += ", " + xR(UU[tU]);
+        return gU += "]", gU
       }
-      const cD = /\[object ([^\]]+)\]/.exec(toString.call(DD));
-      let ID;
-      if (!(cD && cD.length > 1)) return toString.call(DD);
-      if (ID = cD[1], "Object" == ID) try {
-        return "Object(" + JSON.stringify(DD) + ")"
-      } catch (pD) {
+      const gU = /\[object ([^\]]+)\]/.exec(toString.call(UU));
+      let tU;
+      if (!(gU && gU.length > 1)) return toString.call(UU);
+      if (tU = gU[1], "Object" == tU) try {
+        return "Object(" + JSON.stringify(UU) + ")"
+      } catch (pU) {
         return "Object"
       }
-      return DD instanceof Error ? `${DD.name}: ${DD.message}\n${DD.stack}` : ID
+      return UU instanceof Error ? `${UU.name}: ${UU.message}\n${UU.stack}` : tU
     }
 
-    function mC(DD, CD) {
-      return DD >>>= 0, JC().subarray(DD / 8, DD / 8 + CD)
+    function mR(UU, RU) {
+      return UU >>>= 0, aR().subarray(UU / 8, UU / 8 + RU)
     }
 
-    function nC(DD, CD) {
-      DD >>>= 0;
-      const cD = xC(),
-        ID = [];
-      for (let pD = DD; pD < DD + 4 * CD; pD += 4) ID.push(EC(cD.getUint32(pD, !0)));
-      return ID
+    function IR(UU, RU) {
+      UU >>>= 0;
+      const gU = oR(),
+        tU = [];
+      for (let pU = UU; pU < UU + 4 * RU; pU += 4) tU.push(zR(gU.getUint32(pU, !0)));
+      return tU
     }
 
-    function OC(DD, CD) {
-      DD >>>= 0;
-      const cD = xC(),
-        ID = [];
-      for (let pD = DD; pD < DD + 4 * CD; pD += 4) ID.push(lC(cD.getUint32(pD, !0)));
-      return ID
+    function JR(UU, RU) {
+      UU >>>= 0;
+      const gU = oR(),
+        tU = [];
+      for (let pU = UU; pU < UU + 4 * RU; pU += 4) tU.push(vR(gU.getUint32(pU, !0)));
+      return tU
     }
 
-    function PC(DD, CD) {
-      return DD >>>= 0, VC().subarray(DD / 4, DD / 4 + CD)
+    function wR(UU, RU) {
+      return UU >>>= 0, VR().subarray(UU / 4, UU / 4 + RU)
     }
 
-    function HC(DD, CD) {
-      return DD >>>= 0, jC().subarray(DD / 1, DD / 1 + CD)
+    function nR(UU, RU) {
+      return UU >>>= 0, XR().subarray(UU / 1, UU / 1 + RU)
     }
-    let UC = null;
+    let bR = null;
 
-    function xC() {
-      return (null === UC || !0 === UC.buffer.detached || void 0 === UC.buffer.detached && UC.buffer !== Dc.memory.buffer) && (UC = new DataView(Dc.memory.buffer)), UC
+    function oR() {
+      return (null === bR || !0 === bR.buffer.detached || void 0 === bR.buffer.detached && bR.buffer !== Ug.memory.buffer) && (bR = new DataView(Ug.memory.buffer)), bR
     }
-    let qC = null;
+    let ZR = null;
 
-    function JC() {
-      return null !== qC && 0 !== qC.byteLength || (qC = new Float64Array(Dc.memory.buffer)), qC
+    function aR() {
+      return null !== ZR && 0 !== ZR.byteLength || (ZR = new Float64Array(Ug.memory.buffer)), ZR
     }
 
-    function KC(DD, CD) {
-      return function(DD, CD) {
-        hC += CD, hC >= uC && (eC = new TextDecoder("utf-8", {
+    function YR(UU, RU) {
+      return function(UU, RU) {
+        LR += RU, LR >= DR && (MR = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), eC.decode(), hC = CD);
-        return eC.decode(jC().subarray(DD, DD + CD))
-      }(DD >>> 0, CD)
+        }), MR.decode(), LR = RU);
+        return MR.decode(XR().subarray(UU, UU + RU))
+      }(UU >>> 0, RU)
     }
-    let aC = null;
+    let BR = null;
 
-    function VC() {
-      return null !== aC && 0 !== aC.byteLength || (aC = new Uint32Array(Dc.memory.buffer)), aC
+    function VR() {
+      return null !== BR && 0 !== BR.byteLength || (BR = new Uint32Array(Ug.memory.buffer)), BR
     }
-    let zC = null;
+    let rR = null;
 
-    function jC() {
-      return null !== zC && 0 !== zC.byteLength || (zC = new Uint8Array(Dc.memory.buffer)), zC
-    }
-
-    function lC(DD) {
-      return TC[DD]
+    function XR() {
+      return null !== rR && 0 !== rR.byteLength || (rR = new Uint8Array(Ug.memory.buffer)), rR
     }
 
-    function LC(DD, CD) {
+    function vR(UU) {
+      return HR[UU]
+    }
+
+    function dR(UU, RU) {
       try {
-        return DD.apply(this, CD)
-      } catch (cD) {
-        Dc.c3rN(vC(cD))
+        return UU.apply(this, RU)
+      } catch (gU) {
+        Ug.GoB2(eR(gU))
       }
     }
-    let TC = new Array(1024).fill(void 0);
-    TC.push(void 0, null, !0, !1);
-    let GC = TC.length;
+    let HR = new Array(1024).fill(void 0);
+    HR.push(void 0, null, !0, !1);
+    let SR = HR.length;
 
-    function RC(DD) {
-      return void 0 === DD || null === DD
+    function sR(UU) {
+      return void 0 === UU || null === UU
     }
 
-    function kC(DD, CD, cD) {
-      const ID = {
-          a: DD,
-          b: CD,
+    function yR(UU, RU, gU) {
+      const tU = {
+          a: UU,
+          b: RU,
           cnt: 1
         },
-        pD = function() {
-          ID.cnt++;
-          const DD = ID.a;
-          ID.a = 0;
+        pU = function() {
+          tU.cnt++;
+          const UU = tU.a;
+          tU.a = 0;
           try {
-            for (var CD = arguments.length, iD = new Array(CD), fD = 0; fD < CD; fD++) iD[fD] = arguments[fD];
-            return cD(DD, ID.b, ...iD)
+            for (var RU = arguments.length, EU = new Array(RU), PU = 0; PU < RU; PU++) EU[PU] = arguments[PU];
+            return gU(UU, tU.b, ...EU)
           } finally {
-            ID.a = DD, pD._wbg_cb_unref()
+            tU.a = UU, pU._wbg_cb_unref()
           }
         };
-      return pD._wbg_cb_unref = () => {
-        0 === --ID.cnt && (Dc.zzzz(ID.a, ID.b), ID.a = 0, gC.unregister(ID))
-      }, gC.register(pD, ID, ID), pD
+      return pU._wbg_cb_unref = () => {
+        0 === --tU.cnt && (Ug.ZlEY(tU.a, tU.b), tU.a = 0, fR.unregister(tU))
+      }, fR.register(pU, tU, tU), pU
     }
 
-    function dC(DD, CD) {
-      const cD = CD(4 * DD.length, 4) >>> 0;
-      return VC().set(DD, cD / 4), Cc = DD.length, cD
+    function kR(UU, RU) {
+      const gU = RU(4 * UU.length, 4) >>> 0;
+      return VR().set(UU, gU / 4), Rg = UU.length, gU
     }
 
-    function YC(DD, CD) {
-      const cD = CD(1 * DD.length, 1) >>> 0;
-      return jC().set(DD, cD / 1), Cc = DD.length, cD
+    function FR(UU, RU) {
+      const gU = RU(1 * UU.length, 1) >>> 0;
+      return XR().set(UU, gU / 1), Rg = UU.length, gU
     }
 
-    function WC(DD, CD) {
-      const cD = CD(4 * DD.length, 4) >>> 0,
-        ID = xC();
-      for (let pD = 0; pD < DD.length; pD++) ID.setUint32(cD + 4 * pD, vC(DD[pD]), !0);
-      return Cc = DD.length, cD
+    function iR(UU, RU) {
+      const gU = RU(4 * UU.length, 4) >>> 0,
+        tU = oR();
+      for (let pU = 0; pU < UU.length; pU++) tU.setUint32(gU + 4 * pU, eR(UU[pU]), !0);
+      return Rg = UU.length, gU
     }
 
-    function sC(DD, CD, cD) {
-      if (void 0 === cD) {
-        const cD = rC.encode(DD),
-          ID = CD(cD.length, 1) >>> 0;
-        return jC().subarray(ID, ID + cD.length).set(cD), Cc = cD.length, ID
+    function AR(UU, RU, gU) {
+      if (void 0 === gU) {
+        const gU = NR.encode(UU),
+          tU = RU(gU.length, 1) >>> 0;
+        return XR().subarray(tU, tU + gU.length).set(gU), Rg = gU.length, tU
       }
-      let ID = DD.length,
-        pD = CD(ID, 1) >>> 0;
-      const iD = jC();
-      let fD = 0;
-      for (; fD < ID; fD++) {
-        const CD = DD.charCodeAt(fD);
-        if (CD > 127) break;
-        iD[pD + fD] = CD
+      let tU = UU.length,
+        pU = RU(tU, 1) >>> 0;
+      const EU = XR();
+      let PU = 0;
+      for (; PU < tU; PU++) {
+        const RU = UU.charCodeAt(PU);
+        if (RU > 127) break;
+        EU[pU + PU] = RU
       }
-      if (fD !== ID) {
-        0 !== fD && (DD = DD.slice(fD)), pD = cD(pD, ID, ID = fD + 3 * DD.length, 1) >>> 0;
-        const CD = jC().subarray(pD + fD, pD + ID);
-        fD += rC.encodeInto(DD, CD).written, pD = cD(pD, ID, fD, 1) >>> 0
+      if (PU !== tU) {
+        0 !== PU && (UU = UU.slice(PU)), pU = gU(pU, tU, tU = PU + 3 * UU.length, 1) >>> 0;
+        const RU = XR().subarray(pU + PU, pU + tU);
+        PU += NR.encodeInto(UU, RU).written, pU = gU(pU, tU, PU, 1) >>> 0
       }
-      return Cc = fD, pD
+      return Rg = PU, pU
     }
 
-    function EC(DD) {
-      const CD = lC(DD);
-      return function(DD) {
-        DD < 1028 || (TC[DD] = GC, GC = DD)
-      }(DD), CD
+    function zR(UU) {
+      const RU = vR(UU);
+      return function(UU) {
+        UU < 1028 || (HR[UU] = SR, SR = UU)
+      }(UU), RU
     }
-    let eC = new TextDecoder("utf-8", {
+    let MR = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    eC.decode();
-    const uC = 2146435072;
-    let hC = 0;
-    const rC = new TextEncoder;
-    "encodeInto" in rC || (rC.encodeInto = function(DD, CD) {
-      const cD = rC.encode(DD);
-      return CD.set(cD), {
-        read: DD.length,
-        written: cD.length
+    MR.decode();
+    const DR = 2146435072;
+    let LR = 0;
+    const NR = new TextEncoder;
+    "encodeInto" in NR || (NR.encodeInto = function(UU, RU) {
+      const gU = NR.encode(UU);
+      return RU.set(gU), {
+        read: UU.length,
+        written: gU.length
       }
     });
-    let AC, FC, Dc, Cc = 0;
+    let lR, OR, Ug, Rg = 0;
 
-    function cc(DD, CD) {
-      return FC = DD, Dc = DD.exports, AC = CD, UC = null, qC = null, aC = null, zC = null, Dc.Bofi(), Dc
+    function gg(UU, RU) {
+      return OR = UU, Ug = UU.exports, lR = RU, bR = null, ZR = null, BR = null, rR = null, Ug.aUCt(), Ug
     }
 
-    function Ic(DD) {
-      if (void 0 !== Dc) return Dc;
-      void 0 !== DD && (Object.getPrototypeOf(DD) === Object.prototype ? ({
-        module: DD
-      } = DD) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const CD = JD();
-      DD instanceof WebAssembly.Module || (DD = new WebAssembly.Module(DD));
-      return cc(new WebAssembly.Instance(DD, CD), DD)
+    function tg(UU) {
+      if (void 0 !== Ug) return Ug;
+      void 0 !== UU && (Object.getPrototypeOf(UU) === Object.prototype ? ({
+        module: UU
+      } = UU) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const RU = aU();
+      UU instanceof WebAssembly.Module || (UU = new WebAssembly.Module(UU));
+      return gg(new WebAssembly.Instance(UU, RU), UU)
     }
-    async function pc(DD) {
-      if (void 0 !== Dc) return Dc;
-      void 0 !== DD && (Object.getPrototypeOf(DD) === Object.prototype ? ({
-        module_or_path: DD
-      } = DD) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const CD = JD();
-      ("string" === typeof DD || "function" === typeof Request && DD instanceof Request || "function" === typeof URL && DD instanceof URL) && (DD = fetch(DD));
+    async function pg(UU) {
+      if (void 0 !== Ug) return Ug;
+      void 0 !== UU && (Object.getPrototypeOf(UU) === Object.prototype ? ({
+        module_or_path: UU
+      } = UU) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const RU = aU();
+      ("string" === typeof UU || "function" === typeof Request && UU instanceof Request || "function" === typeof URL && UU instanceof URL) && (UU = fetch(UU));
       const {
-        instance: cD,
-        module: ID
-      } = await async function(DD, CD) {
-        if ("function" === typeof Response && DD instanceof Response) {
-          if (!DD.ok) throw new Error(`failed to fetch Wasm: ${DD.status} ${DD.statusText} fetching '${DD.url}'`);
+        instance: gU,
+        module: tU
+      } = await async function(UU, RU) {
+        if ("function" === typeof Response && UU instanceof Response) {
+          if (!UU.ok) throw new Error(`failed to fetch Wasm: ${UU.status} ${UU.statusText} fetching '${UU.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(DD, CD)
-          } catch (cD) {
-            if (! function(DD) {
-                switch (DD) {
+            return await WebAssembly.instantiateStreaming(UU, RU)
+          } catch (gU) {
+            if (! function(UU) {
+                switch (UU) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(DD.type) || "application/wasm" === DD.headers.get("Content-Type")) throw cD;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", cD)
+              }(UU.type) || "application/wasm" === UU.headers.get("Content-Type")) throw gU;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", gU)
           }
-          const ID = await DD.arrayBuffer();
-          return await WebAssembly.instantiate(ID, CD)
+          const tU = await UU.arrayBuffer();
+          return await WebAssembly.instantiate(tU, RU)
         } {
-          const cD = await WebAssembly.instantiate(DD, CD);
-          return cD instanceof WebAssembly.Instance ? {
-            instance: cD,
-            module: DD
-          } : cD
+          const gU = await WebAssembly.instantiate(UU, RU);
+          return gU instanceof WebAssembly.Instance ? {
+            instance: gU,
+            module: UU
+          } : gU
         }
-      }(await DD, CD);
-      return cc(cD, ID)
+      }(await UU, RU);
+      return gg(gU, tU)
     }
-    const ic = {
+    const Eg = {
       name: "bloxd_wasm_webgpu",
-      url: () => new cD.U(cD(42396)),
-      init: pc,
-      bindings: ID
+      url: () => new gU.U(gU(42579)),
+      init: pg,
+      bindings: tU
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

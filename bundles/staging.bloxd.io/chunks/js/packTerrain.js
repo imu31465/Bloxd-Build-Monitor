@@ -1,235 +1,235 @@
 export const id = 45;
 export const ids = [45];
 export const modules = {
-  42480: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      MAX_LAYER_WIDTH: () => wD,
-      PackTextures: () => ND,
-      deviceMaxLayerWidth: () => SD,
-      layerWidthFor: () => MD,
-      packFileUrl: () => tD,
-      packFilesOf: () => vD,
-      packTerrainSources: () => ZD,
-      webgl1GridColumns: () => BD,
-      webgl1LayerWidth: () => yD
+  42653: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      MAX_LAYER_WIDTH: () => KU,
+      PackTextures: () => WU,
+      deviceMaxLayerWidth: () => cU,
+      layerWidthFor: () => uU,
+      packFileUrl: () => CU,
+      packFilesOf: () => eU,
+      packTerrainSources: () => hU,
+      webgl1GridColumns: () => GU,
+      webgl1LayerWidth: () => jU
     });
-    var ID = cD(2908),
-      pD = cD(39860),
-      iD = cD(40088),
-      fD = cD(42485),
-      bD = cD(40079),
-      QD = cD(42491);
-    const wD = {
+    var tU = gU(2811),
+      pU = gU(40172),
+      EU = gU(40382),
+      PU = gU(42655),
+      TU = gU(40369),
+      qU = gU(42658);
+    const KU = {
       webgpu: 128,
       webgl: 128,
       webgl1: 64
     };
 
-    function SD(DD) {
-      return (0, ID.e)() ? Math.min(wD[DD], 64) : wD[DD]
+    function cU(UU) {
+      return (0, tU.e)() ? Math.min(KU[UU], 64) : KU[UU]
     }
 
-    function BD(DD) {
-      const CD = Math.ceil(Math.log2(Math.max(1, DD)));
-      return 2 ** Math.ceil(CD / 2)
+    function GU(UU) {
+      const RU = Math.ceil(Math.log2(Math.max(1, UU)));
+      return 2 ** Math.ceil(RU / 2)
     }
 
-    function yD(DD, CD, cD) {
-      const ID = null !== cD && cD > 0 ? cD : pD.e.limits.MAX_TEXTURE_SIZE;
-      return MD(Math.max(1, Math.floor(ID / BD(CD))), DD)
+    function jU(UU, RU, gU) {
+      const tU = null !== gU && gU > 0 ? gU : pU.c.limits.MAX_TEXTURE_SIZE;
+      return uU(Math.max(1, Math.floor(tU / GU(RU))), UU)
     }
 
-    function MD(DD, CD) {
-      let cD = 1;
-      for (; 2 * cD <= Math.min(DD, CD);) cD *= 2;
-      return cD
+    function uU(UU, RU) {
+      let gU = 1;
+      for (; 2 * gU <= Math.min(UU, RU);) gU *= 2;
+      return gU
     }
 
-    function tD(DD, CD) {
-      return "string" !== typeof DD || "" === DD ? null : "player" === CD || (0, fD.d)(DD) ? DD : null
+    function CU(UU, RU) {
+      return "string" !== typeof UU || "" === UU ? null : "player" === RU || (0, PU.d)(UU) ? UU : null
     }
-    async function ZD(DD, CD, ID) {
-      const pD = await cD.e(201).then((() => cD(33733))),
+    async function hU(UU, RU, tU) {
+      const pU = await gU.e(201).then((() => gU(33915))),
         {
-          sheetLayout: fD,
-          sheetWidth: QD
-        } = DD;
-      if (QD > CD) throw new Error(`the pack's atlas is ${QD} px wide, not within ${CD} px`);
-      if (!(fD.length === pD.imagesPerAtlas.length && fD.every(((DD, CD) => DD === pD.imagesPerAtlas[CD])))) {
-        const DD = `the pack's atlas is sheets of ${fD.join(", ")} layers, the built atlas's ${pD.imagesPerAtlas.join(", ")}: run npm run buildAtlas`;
-        if (fD.length < pD.imagesPerAtlas.length) throw new Error(DD);
-        console.warn(DD)
+          sheetLayout: PU,
+          sheetWidth: qU
+        } = UU;
+      if (qU > RU) throw new Error(`the pack's atlas is ${qU} px wide, not within ${RU} px`);
+      if (!(PU.length === pU.imagesPerAtlas.length && PU.every(((UU, RU) => UU === pU.imagesPerAtlas[RU])))) {
+        const UU = `the pack's atlas is sheets of ${PU.join(", ")} layers, the built atlas's ${pU.imagesPerAtlas.join(", ")}: run npm run buildAtlas`;
+        if (PU.length < pU.imagesPerAtlas.length) throw new Error(UU);
+        console.warn(UU)
       }
       return {
         atlasSheets: [],
-        heldUntil: DD.heldUntil,
-        texture: CD => {
-          var cD, fD, bD;
-          return null !== (cD = null !== (fD = null !== (bD = tD(DD.terrain.texture(CD), ID)) && void 0 !== bD ? bD : pD.animatedBlockTextures[CD]) && void 0 !== fD ? fD : pD.rotatedBlockTextures[CD]) && void 0 !== cD ? cD : function(DD, CD, cD) {
-            var ID, pD;
-            const fD = null !== (ID = iD.d[DD]) && void 0 !== ID ? ID : null;
-            return null === fD ? null : null !== (pD = tD(CD.texture(DD), cD)) && void 0 !== pD ? pD : fD
-          }(CD, DD, ID)
+        heldUntil: UU.heldUntil,
+        texture: RU => {
+          var gU, PU, TU;
+          return null !== (gU = null !== (PU = null !== (TU = CU(UU.terrain.texture(RU), tU)) && void 0 !== TU ? TU : pU.animatedBlockTextures[RU]) && void 0 !== PU ? PU : pU.rotatedBlockTextures[RU]) && void 0 !== gU ? gU : function(UU, RU, gU) {
+            var tU, pU;
+            const PU = null !== (tU = EU.c[UU]) && void 0 !== tU ? tU : null;
+            return null === PU ? null : null !== (pU = CU(RU.texture(UU), gU)) && void 0 !== pU ? pU : PU
+          }(RU, UU, tU)
         },
-        decoded: CD => {
-          const cD = (0, bD.g)(CD);
-          return null === cD ? null : (async CD => {
-            const cD = DD.sheetPixels.at(CD);
-            if (cD) {
-              DD.sheetPixels[CD] = null;
-              const ID = QD > 0 ? cD.byteLength / (4 * QD) : 0;
+        decoded: RU => {
+          const gU = (0, TU.j)(RU);
+          return null === gU ? null : (async RU => {
+            const gU = UU.sheetPixels.at(RU);
+            if (gU) {
+              UU.sheetPixels[RU] = null;
+              const tU = qU > 0 ? gU.byteLength / (4 * qU) : 0;
               return {
-                width: QD,
-                height: ID,
-                pixels: new Uint8Array(cD.buffer, cD.byteOffset, cD.byteLength)
+                width: qU,
+                height: tU,
+                pixels: new Uint8Array(gU.buffer, gU.byteOffset, gU.byteLength)
               }
             }
-            const pD = DD.terrain.atlasSheets.at(CD);
-            if (void 0 === pD) throw new Error(`the pack has no atlas sheet ${CD}`);
-            const iD = tD(pD, ID);
-            if (null === iD) throw new Error(`the pack's atlas sheet ${CD} isn't a pack file`);
-            return (0, bD.l)(iD)
-          })(cD)
+            const pU = UU.terrain.atlasSheets.at(RU);
+            if (void 0 === pU) throw new Error(`the pack has no atlas sheet ${RU}`);
+            const EU = CU(pU, tU);
+            if (null === EU) throw new Error(`the pack's atlas sheet ${RU} isn't a pack file`);
+            return (0, TU.m)(EU)
+          })(gU)
         }
       }
     }
-    const oD = new WeakMap;
+    const QU = new WeakMap;
 
-    function vD(DD, CD) {
-      if (null === DD) return null;
-      let cD = oD.get(DD);
-      void 0 === cD && (cD = {}, oD.set(DD, cD));
-      const ID = cD[CD];
-      if (void 0 !== ID) return ID;
+    function eU(UU, RU) {
+      if (null === UU) return null;
+      let gU = QU.get(UU);
+      void 0 === gU && (gU = {}, QU.set(UU, gU));
+      const tU = gU[RU];
+      if (void 0 !== tU) return tU;
       const {
-        armourAtlasUrl: pD,
-        texture: iD,
-        model: fD
-      } = DD, bD = {
-        armourAtlasUrl: () => tD(pD, CD),
-        textureUrl: DD => tD(iD(DD), CD),
-        modelUrl: DD => tD(fD(DD), CD)
+        armourAtlasUrl: pU,
+        texture: EU,
+        model: PU
+      } = UU, TU = {
+        armourAtlasUrl: () => CU(pU, RU),
+        textureUrl: UU => CU(EU(UU), RU),
+        modelUrl: UU => CU(PU(UU), RU)
       };
-      return cD[CD] = bD, bD
+      return gU[RU] = TU, TU
     }
-    class ND {
-      constructor(DD) {
-        this.host = DD, this.assets = null, this.owner = "player", this.latest = 0, this.swapping = 0, this.ended = !1, this.maxWidth = null
+    class WU {
+      constructor(UU) {
+        this.host = UU, this.assets = null, this.owner = "player", this.latest = 0, this.swapping = 0, this.ended = !1, this.maxWidth = null
       }
       maxLayerWidth() {
-        return this.maxWidth ??= (async (DD, CD, ID) => {
+        return this.maxWidth ??= (async (UU, RU, tU) => {
           const {
-            backend: pD
-          } = this.host, iD = SD(pD);
-          if ("webgl1" !== pD) return iD;
-          const [fD, bD] = await Promise.all([cD.e(201).then((() => cD(33733))), null !== (DD = null === (CD = (ID = this.host).maxTextureSize) || void 0 === CD ? void 0 : CD.call(ID)) && void 0 !== DD ? DD : null]);
-          return yD(iD, fD.imagesPerAtlas.length * Math.max(0, ...fD.imagesPerAtlas), bD)
-        })().catch((DD => {
-          throw this.maxWidth = null, DD
+            backend: pU
+          } = this.host, EU = cU(pU);
+          if ("webgl1" !== pU) return EU;
+          const [PU, TU] = await Promise.all([gU.e(201).then((() => gU(33915))), null !== (UU = null === (RU = (tU = this.host).maxTextureSize) || void 0 === RU ? void 0 : RU.call(tU)) && void 0 !== UU ? UU : null]);
+          return jU(EU, PU.imagesPerAtlas.length * Math.max(0, ...PU.imagesPerAtlas), TU)
+        })().catch((UU => {
+          throw this.maxWidth = null, UU
         })), this.maxWidth
       }
       files() {
-        return vD(this.assets, this.owner)
+        return eU(this.assets, this.owner)
       }
       iconOverrides() {
-        const DD = this.files();
-        return null === DD ? null : {
-          itemSprite: DD.textureUrl,
-          blockTexture: DD.textureUrl,
-          model: DD.modelUrl
+        const UU = this.files();
+        return null === UU ? null : {
+          itemSprite: UU.textureUrl,
+          blockTexture: UU.textureUrl,
+          model: UU.modelUrl
         }
       }
       start() {
-        const DD = this.host.feed.subscribe((DD => {
-          const CD = ++this.latest;
-          this.host.settling(), this.assetsFor(DD).then((cD => this.apply(CD, cD, DD).catch((DD => {
-            this.host.warn("the texture pack landed, but reloading what it overrides failed", DD)
-          }))), (cD => {
-            this.host.warn("the texture pack's atlas couldn't be generated: the textures in stay", cD), this.settled(CD, DD, null, !0)
+        const UU = this.host.feed.subscribe((UU => {
+          const RU = ++this.latest;
+          this.host.settling(), this.assetsFor(UU).then((gU => this.apply(RU, gU, UU).catch((UU => {
+            this.host.warn("the texture pack landed, but reloading what it overrides failed", UU)
+          }))), (gU => {
+            this.host.warn("the texture pack's atlas couldn't be generated: the textures in stay", gU), this.settled(RU, UU, null, !0)
           }))
         }));
         return () => {
-          DD(), this.latest++, this.ended = !0
+          UU(), this.latest++, this.ended = !0
         }
       }
-      async apply(DD, CD, cD) {
+      async apply(UU, RU, gU) {
         const {
-          host: ID
+          host: tU
         } = this;
-        if (DD !== this.latest || ID.stopped()) return;
-        const pD = (0, fD.i)(cD);
-        if (this.texturesIn(CD, pD) && 0 === this.swapping) return void this.settled(DD, cD, vD(CD, pD));
-        let iD;
+        if (UU !== this.latest || tU.stopped()) return;
+        const pU = (0, PU.j)(gU);
+        if (this.texturesIn(RU, pU) && 0 === this.swapping) return void this.settled(UU, gU, eU(RU, pU));
+        let EU;
         this.swapping++;
         try {
-          iD = await ID.terrain.swap((DD => {
-            var CD;
-            ID.warn(`texture pack texture ${null!==(CD=DD.name)&&void 0!==CD?CD:"(all)"} failed`, DD.error)
-          }), (async () => ID.sourcesOf ? ID.sourcesOf(CD) : null === CD ? (0, bD.h)() : ZD(CD, await this.maxLayerWidth(), pD)), {
-            wholeAtlas: null !== CD,
-            wanted: () => DD === this.latest
+          EU = await tU.terrain.swap((UU => {
+            var RU;
+            tU.warn(`texture pack texture ${null!==(RU=UU.name)&&void 0!==RU?RU:"(all)"} failed`, UU.error)
+          }), (async () => tU.sourcesOf ? tU.sourcesOf(RU) : null === RU ? (0, TU.l)() : hU(RU, await this.maxLayerWidth(), pU)), {
+            wholeAtlas: null !== RU,
+            wanted: () => UU === this.latest
           })
-        } catch (QD) {
-          return ID.warn("the texture pack's swap failed: the textures in stay", QD), void this.settled(DD, cD, null, !0)
+        } catch (qU) {
+          return tU.warn("the texture pack's swap failed: the textures in stay", qU), void this.settled(UU, gU, null, !0)
         } finally {
           this.swapping--
         }
-        if (!0 !== iD || this.ended) this.settled(DD, cD, null, !0);
+        if (!0 !== EU || this.ended) this.settled(UU, gU, null, !0);
         else {
-          ID.landed(), this.assets = CD, this.owner = pD;
+          tU.landed(), this.assets = RU, this.owner = pU;
           try {
-            ID.packSwapped()
+            tU.packSwapped()
           } finally {
-            this.settled(DD, cD, this.files())
+            this.settled(UU, gU, this.files())
           }
         }
       }
-      async assetsFor(DD) {
-        var CD;
-        return (null !== (CD = this.host.assetsOf) && void 0 !== CD ? CD : QD.k)(DD, await this.maxLayerWidth())
+      async assetsFor(UU) {
+        var RU;
+        return (null !== (RU = this.host.assetsOf) && void 0 !== RU ? RU : qU.g)(UU, await this.maxLayerWidth())
       }
-      texturesIn(DD, CD) {
-        return DD === this.assets && (null === DD || CD === this.owner)
+      texturesIn(UU, RU) {
+        return UU === this.assets && (null === UU || RU === this.owner)
       }
-      settled(DD, CD, cD) {
-        let ID = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        DD !== this.latest || this.ended || this.host.stopped() || this.host.settled(CD, cD, ID)
+      settled(UU, RU, gU) {
+        let tU = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        UU !== this.latest || this.ended || this.host.stopped() || this.host.settled(RU, gU, tU)
       }
     }
   },
-  42494: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      followPagePackFiles: () => iD
+  42663: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      followPagePackFiles: () => EU
     });
-    var ID = cD(42480),
-      pD = cD(42491);
+    var tU = gU(42653),
+      pU = gU(42658);
 
-    function iD(DD, CD, cD, iD, fD) {
-      let bD, QD = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : DD => (0, pD.k)(DD, (0, ID.deviceMaxLayerWidth)(cD)),
-        wD = 0,
-        SD = null;
-      const BD = () => {
-          if (null === SD || null !== SD.gameSource && !CD.showsPage()) return;
-          const cD = null === SD.gameSource ? SD : DD.playerState();
-          if (cD.pack === bD) return;
-          bD = cD.pack;
-          const pD = ++wD;
-          QD(cD).then((DD => {
-            pD === wD && iD((0, ID.packFilesOf)(DD, "player"))
-          }), (DD => {
-            pD === wD && (bD = void 0), fD("the texture pack's files couldn't be had for the previews: the files in stay", DD)
+    function EU(UU, RU, gU, EU, PU) {
+      let TU, qU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : UU => (0, pU.g)(UU, (0, tU.deviceMaxLayerWidth)(gU)),
+        KU = 0,
+        cU = null;
+      const GU = () => {
+          if (null === cU || null !== cU.gameSource && !RU.showsPage()) return;
+          const gU = null === cU.gameSource ? cU : UU.playerState();
+          if (gU.pack === TU) return;
+          TU = gU.pack;
+          const pU = ++KU;
+          qU(gU).then((UU => {
+            pU === KU && EU((0, tU.packFilesOf)(UU, "player"))
+          }), (UU => {
+            pU === KU && (TU = void 0), PU("the texture pack's files couldn't be had for the previews: the files in stay", UU)
           }))
         },
-        yD = DD.subscribe((DD => {
-          SD = DD, BD()
+        jU = UU.subscribe((UU => {
+          cU = UU, GU()
         })),
-        MD = DD.onPlayerPackChange(BD),
-        tD = CD.onPageShown(BD);
+        uU = UU.onPlayerPackChange(GU),
+        CU = RU.onPageShown(GU);
       return () => {
-        yD(), MD(), tD(), wD++
+        jU(), uU(), CU(), KU++
       }
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

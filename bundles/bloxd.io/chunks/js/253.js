@@ -1,80 +1,80 @@
 export const id = 253;
 export const ids = [253];
 export const modules = {
-  40662: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => ID
+  40975: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => tU
     });
-    class ID {}
-    ID.AUTOSAMPLERSUFFIX = "Sampler", ID.DISABLEUA = "#define DISABLE_UNIFORMITY_ANALYSIS", ID.ALPHA_DISABLE = 0, ID.ALPHA_ADD = 1, ID.ALPHA_COMBINE = 2, ID.ALPHA_SUBTRACT = 3, ID.ALPHA_MULTIPLY = 4, ID.ALPHA_MAXIMIZED = 5, ID.ALPHA_ONEONE = 6, ID.ALPHA_PREMULTIPLIED = 7, ID.ALPHA_PREMULTIPLIED_PORTERDUFF = 8, ID.ALPHA_INTERPOLATE = 9, ID.ALPHA_SCREENMODE = 10, ID.ALPHA_ONEONE_ONEONE = 11, ID.ALPHA_ALPHATOCOLOR = 12, ID.ALPHA_REVERSEONEMINUS = 13, ID.ALPHA_SRC_DSTONEMINUSSRCALPHA = 14, ID.ALPHA_ONEONE_ONEZERO = 15, ID.ALPHA_EXCLUSION = 16, ID.ALPHA_LAYER_ACCUMULATE = 17, ID.ALPHA_MIN = 18, ID.ALPHA_MAX = 19, ID.ALPHA_DUAL_SRC0_ADD_SRC1xDST = 20, ID.ALPHA_REPLACE_COLOR = 21, ID.ALPHA_EQUATION_ADD = 0, ID.ALPHA_EQUATION_SUBSTRACT = 1, ID.ALPHA_EQUATION_REVERSE_SUBTRACT = 2, ID.ALPHA_EQUATION_MAX = 3, ID.ALPHA_EQUATION_MIN = 4, ID.ALPHA_EQUATION_DARKEN = 5, ID.DELAYLOADSTATE_NONE = 0, ID.DELAYLOADSTATE_LOADED = 1, ID.DELAYLOADSTATE_LOADING = 2, ID.DELAYLOADSTATE_NOTLOADED = 4, ID.NEVER = 512, ID.ALWAYS = 519, ID.LESS = 513, ID.EQUAL = 514, ID.LEQUAL = 515, ID.GREATER = 516, ID.GEQUAL = 518, ID.NOTEQUAL = 517, ID.KEEP = 7680, ID.ZERO = 0, ID.REPLACE = 7681, ID.INCR = 7682, ID.DECR = 7683, ID.INVERT = 5386, ID.INCR_WRAP = 34055, ID.DECR_WRAP = 34056, ID.TEXTURE_CLAMP_ADDRESSMODE = 0, ID.TEXTURE_WRAP_ADDRESSMODE = 1, ID.TEXTURE_MIRROR_ADDRESSMODE = 2, ID.TEXTURE_REPETITION_NONE = 0, ID.TEXTURE_REPETITION_NOISE_BLEND = 1, ID.TEXTURE_REPETITION_HEX_TILING = 2, ID.TEXTURE_REPETITION_TILE_RANDOMIZATION = 3, ID.TEXTURE_REPETITION_VORONOI_BOMBING = 4, ID.TEXTURE_CREATIONFLAG_STORAGE = 1, ID.TEXTUREFORMAT_ALPHA = 0, ID.TEXTUREFORMAT_LUMINANCE = 1, ID.TEXTUREFORMAT_LUMINANCE_ALPHA = 2, ID.TEXTUREFORMAT_RGB = 4, ID.TEXTUREFORMAT_RGBA = 5, ID.TEXTUREFORMAT_RED = 6, ID.TEXTUREFORMAT_R = 6, ID.TEXTUREFORMAT_R16_UNORM = 33322, ID.TEXTUREFORMAT_RG16_UNORM = 33324, ID.TEXTUREFORMAT_RGB16_UNORM = 32852, ID.TEXTUREFORMAT_RGBA16_UNORM = 32859, ID.TEXTUREFORMAT_R16_SNORM = 36760, ID.TEXTUREFORMAT_RG16_SNORM = 36761, ID.TEXTUREFORMAT_RGB16_SNORM = 36762, ID.TEXTUREFORMAT_RGBA16_SNORM = 36763, ID.TEXTUREFORMAT_RG = 7, ID.TEXTUREFORMAT_RED_INTEGER = 8, ID.TEXTUREFORMAT_R_INTEGER = 8, ID.TEXTUREFORMAT_RG_INTEGER = 9, ID.TEXTUREFORMAT_RGB_INTEGER = 10, ID.TEXTUREFORMAT_RGBA_INTEGER = 11, ID.TEXTUREFORMAT_BGRA = 12, ID.TEXTUREFORMAT_DEPTH24_STENCIL8 = 13, ID.TEXTUREFORMAT_DEPTH32_FLOAT = 14, ID.TEXTUREFORMAT_DEPTH16 = 15, ID.TEXTUREFORMAT_DEPTH24 = 16, ID.TEXTUREFORMAT_DEPTH24UNORM_STENCIL8 = 17, ID.TEXTUREFORMAT_DEPTH32FLOAT_STENCIL8 = 18, ID.TEXTUREFORMAT_STENCIL8 = 19, ID.TEXTUREFORMAT_UNDEFINED = 4294967295, ID.TEXTUREFORMAT_COMPRESSED_RGBA_BPTC_UNORM = 36492, ID.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_BPTC_UNORM = 36493, ID.TEXTUREFORMAT_COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT = 36495, ID.TEXTUREFORMAT_COMPRESSED_RGB_BPTC_SIGNED_FLOAT = 36494, ID.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT5 = 33779, ID.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT = 35919, ID.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT3 = 33778, ID.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT = 35918, ID.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT1 = 33777, ID.TEXTUREFORMAT_COMPRESSED_RGB_S3TC_DXT1 = 33776, ID.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT = 35917, ID.TEXTUREFORMAT_COMPRESSED_SRGB_S3TC_DXT1_EXT = 35916, ID.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_4x4 = 37808, ID.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_5x4 = 37809, ID.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_5x5 = 37810, ID.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_6x5 = 37811, ID.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_6x6 = 37812, ID.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x5 = 37813, ID.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x6 = 37814, ID.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x8 = 37815, ID.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x5 = 37816, ID.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x6 = 37817, ID.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x8 = 37818, ID.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x10 = 37819, ID.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_12x10 = 37820, ID.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_12x12 = 37821, ID.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR = 37840, ID.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR = 37841, ID.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR = 37842, ID.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR = 37843, ID.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR = 37844, ID.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR = 37845, ID.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR = 37846, ID.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR = 37847, ID.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR = 37848, ID.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR = 37849, ID.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR = 37850, ID.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR = 37851, ID.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR = 37852, ID.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR = 37853, ID.TEXTUREFORMAT_COMPRESSED_RGB_ETC1_WEBGL = 36196, ID.TEXTUREFORMAT_COMPRESSED_RGB8_ETC2 = 37492, ID.TEXTUREFORMAT_COMPRESSED_SRGB8_ETC2 = 37493, ID.TEXTUREFORMAT_COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 37494, ID.TEXTUREFORMAT_COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 37495, ID.TEXTUREFORMAT_COMPRESSED_RGBA8_ETC2_EAC = 37496, ID.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC = 37497, ID.TEXTURETYPE_UNSIGNED_BYTE = 0, ID.TEXTURETYPE_UNSIGNED_INT = 0, ID.TEXTURETYPE_FLOAT = 1, ID.TEXTURETYPE_HALF_FLOAT = 2, ID.TEXTURETYPE_BYTE = 3, ID.TEXTURETYPE_SHORT = 4, ID.TEXTURETYPE_UNSIGNED_SHORT = 5, ID.TEXTURETYPE_INT = 6, ID.TEXTURETYPE_UNSIGNED_INTEGER = 7, ID.TEXTURETYPE_UNSIGNED_SHORT_4_4_4_4 = 8, ID.TEXTURETYPE_UNSIGNED_SHORT_5_5_5_1 = 9, ID.TEXTURETYPE_UNSIGNED_SHORT_5_6_5 = 10, ID.TEXTURETYPE_UNSIGNED_INT_2_10_10_10_REV = 11, ID.TEXTURETYPE_UNSIGNED_INT_24_8 = 12, ID.TEXTURETYPE_UNSIGNED_INT_10F_11F_11F_REV = 13, ID.TEXTURETYPE_UNSIGNED_INT_5_9_9_9_REV = 14, ID.TEXTURETYPE_FLOAT_32_UNSIGNED_INT_24_8_REV = 15, ID.TEXTURETYPE_UNDEFINED = 16, ID.TEXTURE_2D = 3553, ID.TEXTURE_2D_ARRAY = 35866, ID.TEXTURE_CUBE_MAP = 34067, ID.TEXTURE_CUBE_MAP_ARRAY = 3735928559, ID.TEXTURE_3D = 32879, ID.TEXTURE_NEAREST_SAMPLINGMODE = 1, ID.TEXTURE_NEAREST_NEAREST = 1, ID.TEXTURE_BILINEAR_SAMPLINGMODE = 2, ID.TEXTURE_LINEAR_LINEAR = 2, ID.TEXTURE_TRILINEAR_SAMPLINGMODE = 3, ID.TEXTURE_LINEAR_LINEAR_MIPLINEAR = 3, ID.TEXTURE_NEAREST_NEAREST_MIPNEAREST = 4, ID.TEXTURE_NEAREST_LINEAR_MIPNEAREST = 5, ID.TEXTURE_NEAREST_LINEAR_MIPLINEAR = 6, ID.TEXTURE_NEAREST_LINEAR = 7, ID.TEXTURE_NEAREST_NEAREST_MIPLINEAR = 8, ID.TEXTURE_LINEAR_NEAREST_MIPNEAREST = 9, ID.TEXTURE_LINEAR_NEAREST_MIPLINEAR = 10, ID.TEXTURE_LINEAR_LINEAR_MIPNEAREST = 11, ID.TEXTURE_LINEAR_NEAREST = 12, ID.TEXTURE_EXPLICIT_MODE = 0, ID.TEXTURE_SPHERICAL_MODE = 1, ID.TEXTURE_PLANAR_MODE = 2, ID.TEXTURE_CUBIC_MODE = 3, ID.TEXTURE_PROJECTION_MODE = 4, ID.TEXTURE_SKYBOX_MODE = 5, ID.TEXTURE_INVCUBIC_MODE = 6, ID.TEXTURE_EQUIRECTANGULAR_MODE = 7, ID.TEXTURE_FIXED_EQUIRECTANGULAR_MODE = 8, ID.TEXTURE_FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, ID.TEXTURE_FILTERING_QUALITY_OFFLINE = 4096, ID.TEXTURE_FILTERING_QUALITY_HIGH = 64, ID.TEXTURE_FILTERING_QUALITY_MEDIUM = 16, ID.TEXTURE_FILTERING_QUALITY_LOW = 8, ID.SCALEMODE_FLOOR = 1, ID.SCALEMODE_NEAREST = 2, ID.SCALEMODE_CEILING = 3, ID.MATERIAL_TextureDirtyFlag = 1, ID.MATERIAL_LightDirtyFlag = 2, ID.MATERIAL_FresnelDirtyFlag = 4, ID.MATERIAL_AttributesDirtyFlag = 8, ID.MATERIAL_MiscDirtyFlag = 16, ID.MATERIAL_PrePassDirtyFlag = 32, ID.MATERIAL_ImageProcessingDirtyFlag = 64, ID.MATERIAL_AllDirtyFlag = 127, ID.MATERIAL_TriangleFillMode = 0, ID.MATERIAL_WireFrameFillMode = 1, ID.MATERIAL_PointFillMode = 2, ID.MATERIAL_PointListDrawMode = 3, ID.MATERIAL_LineListDrawMode = 4, ID.MATERIAL_LineLoopDrawMode = 5, ID.MATERIAL_LineStripDrawMode = 6, ID.MATERIAL_TriangleStripDrawMode = 7, ID.MATERIAL_TriangleFanDrawMode = 8, ID.MATERIAL_ClockWiseSideOrientation = 0, ID.MATERIAL_CounterClockWiseSideOrientation = 1, ID.MATERIAL_DIFFUSE_MODEL_E_OREN_NAYAR = 0, ID.MATERIAL_DIFFUSE_MODEL_BURLEY = 1, ID.MATERIAL_DIFFUSE_MODEL_LAMBERT = 2, ID.MATERIAL_DIFFUSE_MODEL_LEGACY = 3, ID.MATERIAL_DIELECTRIC_SPECULAR_MODEL_GLTF = 0, ID.MATERIAL_DIELECTRIC_SPECULAR_MODEL_OPENPBR = 1, ID.MATERIAL_CONDUCTOR_SPECULAR_MODEL_GLTF = 0, ID.MATERIAL_CONDUCTOR_SPECULAR_MODEL_OPENPBR = 1, ID.ACTION_NothingTrigger = 0, ID.ACTION_OnPickTrigger = 1, ID.ACTION_OnLeftPickTrigger = 2, ID.ACTION_OnRightPickTrigger = 3, ID.ACTION_OnCenterPickTrigger = 4, ID.ACTION_OnPickDownTrigger = 5, ID.ACTION_OnDoublePickTrigger = 6, ID.ACTION_OnPickUpTrigger = 7, ID.ACTION_OnPickOutTrigger = 16, ID.ACTION_OnLongPressTrigger = 8, ID.ACTION_OnPointerOverTrigger = 9, ID.ACTION_OnPointerOutTrigger = 10, ID.ACTION_OnEveryFrameTrigger = 11, ID.ACTION_OnIntersectionEnterTrigger = 12, ID.ACTION_OnIntersectionExitTrigger = 13, ID.ACTION_OnKeyDownTrigger = 14, ID.ACTION_OnKeyUpTrigger = 15, ID.PARTICLES_BILLBOARDMODE_Y = 2, ID.PARTICLES_BILLBOARDMODE_ALL = 7, ID.PARTICLES_BILLBOARDMODE_STRETCHED = 8, ID.PARTICLES_BILLBOARDMODE_STRETCHED_LOCAL = 9, ID.MESHES_CULLINGSTRATEGY_STANDARD = 0, ID.MESHES_CULLINGSTRATEGY_BOUNDINGSPHERE_ONLY = 1, ID.MESHES_CULLINGSTRATEGY_OPTIMISTIC_INCLUSION = 2, ID.MESHES_CULLINGSTRATEGY_OPTIMISTIC_INCLUSION_THEN_BSPHERE_ONLY = 3, ID.SCENELOADER_NO_LOGGING = 0, ID.SCENELOADER_MINIMAL_LOGGING = 1, ID.SCENELOADER_SUMMARY_LOGGING = 2, ID.SCENELOADER_DETAILED_LOGGING = 3, ID.PREPASS_IRRADIANCE_LEGACY_TEXTURE_TYPE = 0, ID.PREPASS_POSITION_TEXTURE_TYPE = 1, ID.PREPASS_VELOCITY_TEXTURE_TYPE = 2, ID.PREPASS_REFLECTIVITY_TEXTURE_TYPE = 3, ID.PREPASS_COLOR_TEXTURE_TYPE = 4, ID.PREPASS_DEPTH_TEXTURE_TYPE = 5, ID.PREPASS_NORMAL_TEXTURE_TYPE = 6, ID.PREPASS_ALBEDO_SQRT_TEXTURE_TYPE = 7, ID.PREPASS_WORLD_NORMAL_TEXTURE_TYPE = 8, ID.PREPASS_LOCAL_POSITION_TEXTURE_TYPE = 9, ID.PREPASS_SCREENSPACE_DEPTH_TEXTURE_TYPE = 10, ID.PREPASS_VELOCITY_LINEAR_TEXTURE_TYPE = 11, ID.PREPASS_ALBEDO_TEXTURE_TYPE = 12, ID.PREPASS_NORMALIZED_VIEW_DEPTH_TEXTURE_TYPE = 13, ID.PREPASS_IRRADIANCE_TEXTURE_TYPE = 14, ID.PREPASS_OBJECT_ID_TEXTURE_TYPE = 15, ID.PREPASS_MESH_BLEND_TAG_TEXTURE_TYPE = 16, ID.BUFFER_CREATIONFLAG_READ = 1, ID.BUFFER_CREATIONFLAG_WRITE = 2, ID.BUFFER_CREATIONFLAG_READWRITE = 3, ID.BUFFER_CREATIONFLAG_UNIFORM = 4, ID.BUFFER_CREATIONFLAG_VERTEX = 8, ID.BUFFER_CREATIONFLAG_INDEX = 16, ID.BUFFER_CREATIONFLAG_STORAGE = 32, ID.BUFFER_CREATIONFLAG_INDIRECT = 64, ID.RENDERPASS_MAIN = 0, ID.INPUT_ALT_KEY = 18, ID.INPUT_CTRL_KEY = 17, ID.INPUT_META_KEY1 = 91, ID.INPUT_META_KEY2 = 92, ID.INPUT_META_KEY3 = 93, ID.INPUT_SHIFT_KEY = 16, ID.SNAPSHOTRENDERING_STANDARD = 0, ID.SNAPSHOTRENDERING_FAST = 1, ID.PERSPECTIVE_CAMERA = 0, ID.ORTHOGRAPHIC_CAMERA = 1, ID.FOVMODE_VERTICAL_FIXED = 0, ID.FOVMODE_HORIZONTAL_FIXED = 1, ID.RIG_MODE_NONE = 0, ID.RIG_MODE_STEREOSCOPIC_ANAGLYPH = 10, ID.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL = 11, ID.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED = 12, ID.RIG_MODE_STEREOSCOPIC_OVERUNDER = 13, ID.RIG_MODE_STEREOSCOPIC_INTERLACED = 14, ID.RIG_MODE_VR = 20, ID.RIG_MODE_CUSTOM = 22, ID.MAX_SUPPORTED_UV_SETS = 6, ID.GL_ALPHA_EQUATION_ADD = 32774, ID.GL_ALPHA_EQUATION_MIN = 32775, ID.GL_ALPHA_EQUATION_MAX = 32776, ID.GL_ALPHA_EQUATION_SUBTRACT = 32778, ID.GL_ALPHA_EQUATION_REVERSE_SUBTRACT = 32779, ID.GL_ALPHA_FUNCTION_SRC = 768, ID.GL_ALPHA_FUNCTION_ONE_MINUS_SRC_COLOR = 769, ID.GL_ALPHA_FUNCTION_SRC_ALPHA = 770, ID.GL_ALPHA_FUNCTION_ONE_MINUS_SRC_ALPHA = 771, ID.GL_ALPHA_FUNCTION_DST_ALPHA = 772, ID.GL_ALPHA_FUNCTION_ONE_MINUS_DST_ALPHA = 773, ID.GL_ALPHA_FUNCTION_DST_COLOR = 774, ID.GL_ALPHA_FUNCTION_ONE_MINUS_DST_COLOR = 775, ID.GL_ALPHA_FUNCTION_SRC_ALPHA_SATURATED = 776, ID.GL_ALPHA_FUNCTION_CONSTANT_COLOR = 32769, ID.GL_ALPHA_FUNCTION_ONE_MINUS_CONSTANT_COLOR = 32770, ID.GL_ALPHA_FUNCTION_CONSTANT_ALPHA = 32771, ID.GL_ALPHA_FUNCTION_ONE_MINUS_CONSTANT_ALPHA = 32772, ID.GL_ALPHA_FUNCTION_SRC1_COLOR = 35065, ID.GL_ALPHA_FUNCTION_ONE_MINUS_SRC1_COLOR = 35066, ID.GL_ALPHA_FUNCTION_SRC1_ALPHA = 34185, ID.GL_ALPHA_FUNCTION_ONE_MINUS_SRC1_ALPHA = 35067, ID.SnippetUrl = "https://snippet.babylonjs.com", ID.FOGMODE_NONE = 0, ID.FOGMODE_EXP = 1, ID.FOGMODE_EXP2 = 2, ID.FOGMODE_LINEAR = 3, ID.BYTE = 5120, ID.UNSIGNED_BYTE = 5121, ID.SHORT = 5122, ID.UNSIGNED_SHORT = 5123, ID.INT = 5124, ID.UNSIGNED_INT = 5125, ID.FLOAT = 5126, ID.HALF_FLOAT = 5131, ID.PositionKind = "position", ID.NormalKind = "normal", ID.TangentKind = "tangent", ID.UVKind = "uv", ID.UV2Kind = "uv2", ID.UV3Kind = "uv3", ID.UV4Kind = "uv4", ID.UV5Kind = "uv5", ID.UV6Kind = "uv6", ID.ColorKind = "color", ID.ColorInstanceKind = "instanceColor", ID.MatricesIndicesKind = "matricesIndices", ID.MatricesWeightsKind = "matricesWeights", ID.MatricesIndicesExtraKind = "matricesIndicesExtra", ID.MatricesWeightsExtraKind = "matricesWeightsExtra", ID.ANIMATIONTYPE_FLOAT = 0, ID.ANIMATIONTYPE_VECTOR3 = 1, ID.ANIMATIONTYPE_QUATERNION = 2, ID.ANIMATIONTYPE_MATRIX = 3, ID.ANIMATIONTYPE_COLOR3 = 4, ID.ANIMATIONTYPE_COLOR4 = 7, ID.ANIMATIONTYPE_VECTOR2 = 5, ID.ANIMATIONTYPE_SIZE = 6, ID.ShadowMinZ = 0, ID.ShadowMaxZ = 1e4, ID.OUTLINELAYER_SAMPLING_TRIDIRECTIONAL = 0, ID.OUTLINELAYER_SAMPLING_OCTADIRECTIONAL = 1
+    class tU {}
+    tU.AUTOSAMPLERSUFFIX = "Sampler", tU.DISABLEUA = "#define DISABLE_UNIFORMITY_ANALYSIS", tU.ALPHA_DISABLE = 0, tU.ALPHA_ADD = 1, tU.ALPHA_COMBINE = 2, tU.ALPHA_SUBTRACT = 3, tU.ALPHA_MULTIPLY = 4, tU.ALPHA_MAXIMIZED = 5, tU.ALPHA_ONEONE = 6, tU.ALPHA_PREMULTIPLIED = 7, tU.ALPHA_PREMULTIPLIED_PORTERDUFF = 8, tU.ALPHA_INTERPOLATE = 9, tU.ALPHA_SCREENMODE = 10, tU.ALPHA_ONEONE_ONEONE = 11, tU.ALPHA_ALPHATOCOLOR = 12, tU.ALPHA_REVERSEONEMINUS = 13, tU.ALPHA_SRC_DSTONEMINUSSRCALPHA = 14, tU.ALPHA_ONEONE_ONEZERO = 15, tU.ALPHA_EXCLUSION = 16, tU.ALPHA_LAYER_ACCUMULATE = 17, tU.ALPHA_MIN = 18, tU.ALPHA_MAX = 19, tU.ALPHA_DUAL_SRC0_ADD_SRC1xDST = 20, tU.ALPHA_REPLACE_COLOR = 21, tU.ALPHA_EQUATION_ADD = 0, tU.ALPHA_EQUATION_SUBSTRACT = 1, tU.ALPHA_EQUATION_REVERSE_SUBTRACT = 2, tU.ALPHA_EQUATION_MAX = 3, tU.ALPHA_EQUATION_MIN = 4, tU.ALPHA_EQUATION_DARKEN = 5, tU.DELAYLOADSTATE_NONE = 0, tU.DELAYLOADSTATE_LOADED = 1, tU.DELAYLOADSTATE_LOADING = 2, tU.DELAYLOADSTATE_NOTLOADED = 4, tU.NEVER = 512, tU.ALWAYS = 519, tU.LESS = 513, tU.EQUAL = 514, tU.LEQUAL = 515, tU.GREATER = 516, tU.GEQUAL = 518, tU.NOTEQUAL = 517, tU.KEEP = 7680, tU.ZERO = 0, tU.REPLACE = 7681, tU.INCR = 7682, tU.DECR = 7683, tU.INVERT = 5386, tU.INCR_WRAP = 34055, tU.DECR_WRAP = 34056, tU.TEXTURE_CLAMP_ADDRESSMODE = 0, tU.TEXTURE_WRAP_ADDRESSMODE = 1, tU.TEXTURE_MIRROR_ADDRESSMODE = 2, tU.TEXTURE_REPETITION_NONE = 0, tU.TEXTURE_REPETITION_NOISE_BLEND = 1, tU.TEXTURE_REPETITION_HEX_TILING = 2, tU.TEXTURE_REPETITION_TILE_RANDOMIZATION = 3, tU.TEXTURE_REPETITION_VORONOI_BOMBING = 4, tU.TEXTURE_CREATIONFLAG_STORAGE = 1, tU.TEXTUREFORMAT_ALPHA = 0, tU.TEXTUREFORMAT_LUMINANCE = 1, tU.TEXTUREFORMAT_LUMINANCE_ALPHA = 2, tU.TEXTUREFORMAT_RGB = 4, tU.TEXTUREFORMAT_RGBA = 5, tU.TEXTUREFORMAT_RED = 6, tU.TEXTUREFORMAT_R = 6, tU.TEXTUREFORMAT_R16_UNORM = 33322, tU.TEXTUREFORMAT_RG16_UNORM = 33324, tU.TEXTUREFORMAT_RGB16_UNORM = 32852, tU.TEXTUREFORMAT_RGBA16_UNORM = 32859, tU.TEXTUREFORMAT_R16_SNORM = 36760, tU.TEXTUREFORMAT_RG16_SNORM = 36761, tU.TEXTUREFORMAT_RGB16_SNORM = 36762, tU.TEXTUREFORMAT_RGBA16_SNORM = 36763, tU.TEXTUREFORMAT_RG = 7, tU.TEXTUREFORMAT_RED_INTEGER = 8, tU.TEXTUREFORMAT_R_INTEGER = 8, tU.TEXTUREFORMAT_RG_INTEGER = 9, tU.TEXTUREFORMAT_RGB_INTEGER = 10, tU.TEXTUREFORMAT_RGBA_INTEGER = 11, tU.TEXTUREFORMAT_BGRA = 12, tU.TEXTUREFORMAT_DEPTH24_STENCIL8 = 13, tU.TEXTUREFORMAT_DEPTH32_FLOAT = 14, tU.TEXTUREFORMAT_DEPTH16 = 15, tU.TEXTUREFORMAT_DEPTH24 = 16, tU.TEXTUREFORMAT_DEPTH24UNORM_STENCIL8 = 17, tU.TEXTUREFORMAT_DEPTH32FLOAT_STENCIL8 = 18, tU.TEXTUREFORMAT_STENCIL8 = 19, tU.TEXTUREFORMAT_UNDEFINED = 4294967295, tU.TEXTUREFORMAT_COMPRESSED_RGBA_BPTC_UNORM = 36492, tU.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_BPTC_UNORM = 36493, tU.TEXTUREFORMAT_COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT = 36495, tU.TEXTUREFORMAT_COMPRESSED_RGB_BPTC_SIGNED_FLOAT = 36494, tU.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT5 = 33779, tU.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT = 35919, tU.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT3 = 33778, tU.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT = 35918, tU.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT1 = 33777, tU.TEXTUREFORMAT_COMPRESSED_RGB_S3TC_DXT1 = 33776, tU.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT = 35917, tU.TEXTUREFORMAT_COMPRESSED_SRGB_S3TC_DXT1_EXT = 35916, tU.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_4x4 = 37808, tU.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_5x4 = 37809, tU.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_5x5 = 37810, tU.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_6x5 = 37811, tU.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_6x6 = 37812, tU.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x5 = 37813, tU.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x6 = 37814, tU.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x8 = 37815, tU.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x5 = 37816, tU.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x6 = 37817, tU.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x8 = 37818, tU.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x10 = 37819, tU.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_12x10 = 37820, tU.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_12x12 = 37821, tU.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR = 37840, tU.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR = 37841, tU.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR = 37842, tU.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR = 37843, tU.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR = 37844, tU.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR = 37845, tU.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR = 37846, tU.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR = 37847, tU.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR = 37848, tU.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR = 37849, tU.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR = 37850, tU.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR = 37851, tU.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR = 37852, tU.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR = 37853, tU.TEXTUREFORMAT_COMPRESSED_RGB_ETC1_WEBGL = 36196, tU.TEXTUREFORMAT_COMPRESSED_RGB8_ETC2 = 37492, tU.TEXTUREFORMAT_COMPRESSED_SRGB8_ETC2 = 37493, tU.TEXTUREFORMAT_COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 37494, tU.TEXTUREFORMAT_COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 37495, tU.TEXTUREFORMAT_COMPRESSED_RGBA8_ETC2_EAC = 37496, tU.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC = 37497, tU.TEXTURETYPE_UNSIGNED_BYTE = 0, tU.TEXTURETYPE_UNSIGNED_INT = 0, tU.TEXTURETYPE_FLOAT = 1, tU.TEXTURETYPE_HALF_FLOAT = 2, tU.TEXTURETYPE_BYTE = 3, tU.TEXTURETYPE_SHORT = 4, tU.TEXTURETYPE_UNSIGNED_SHORT = 5, tU.TEXTURETYPE_INT = 6, tU.TEXTURETYPE_UNSIGNED_INTEGER = 7, tU.TEXTURETYPE_UNSIGNED_SHORT_4_4_4_4 = 8, tU.TEXTURETYPE_UNSIGNED_SHORT_5_5_5_1 = 9, tU.TEXTURETYPE_UNSIGNED_SHORT_5_6_5 = 10, tU.TEXTURETYPE_UNSIGNED_INT_2_10_10_10_REV = 11, tU.TEXTURETYPE_UNSIGNED_INT_24_8 = 12, tU.TEXTURETYPE_UNSIGNED_INT_10F_11F_11F_REV = 13, tU.TEXTURETYPE_UNSIGNED_INT_5_9_9_9_REV = 14, tU.TEXTURETYPE_FLOAT_32_UNSIGNED_INT_24_8_REV = 15, tU.TEXTURETYPE_UNDEFINED = 16, tU.TEXTURE_2D = 3553, tU.TEXTURE_2D_ARRAY = 35866, tU.TEXTURE_CUBE_MAP = 34067, tU.TEXTURE_CUBE_MAP_ARRAY = 3735928559, tU.TEXTURE_3D = 32879, tU.TEXTURE_NEAREST_SAMPLINGMODE = 1, tU.TEXTURE_NEAREST_NEAREST = 1, tU.TEXTURE_BILINEAR_SAMPLINGMODE = 2, tU.TEXTURE_LINEAR_LINEAR = 2, tU.TEXTURE_TRILINEAR_SAMPLINGMODE = 3, tU.TEXTURE_LINEAR_LINEAR_MIPLINEAR = 3, tU.TEXTURE_NEAREST_NEAREST_MIPNEAREST = 4, tU.TEXTURE_NEAREST_LINEAR_MIPNEAREST = 5, tU.TEXTURE_NEAREST_LINEAR_MIPLINEAR = 6, tU.TEXTURE_NEAREST_LINEAR = 7, tU.TEXTURE_NEAREST_NEAREST_MIPLINEAR = 8, tU.TEXTURE_LINEAR_NEAREST_MIPNEAREST = 9, tU.TEXTURE_LINEAR_NEAREST_MIPLINEAR = 10, tU.TEXTURE_LINEAR_LINEAR_MIPNEAREST = 11, tU.TEXTURE_LINEAR_NEAREST = 12, tU.TEXTURE_EXPLICIT_MODE = 0, tU.TEXTURE_SPHERICAL_MODE = 1, tU.TEXTURE_PLANAR_MODE = 2, tU.TEXTURE_CUBIC_MODE = 3, tU.TEXTURE_PROJECTION_MODE = 4, tU.TEXTURE_SKYBOX_MODE = 5, tU.TEXTURE_INVCUBIC_MODE = 6, tU.TEXTURE_EQUIRECTANGULAR_MODE = 7, tU.TEXTURE_FIXED_EQUIRECTANGULAR_MODE = 8, tU.TEXTURE_FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, tU.TEXTURE_FILTERING_QUALITY_OFFLINE = 4096, tU.TEXTURE_FILTERING_QUALITY_HIGH = 64, tU.TEXTURE_FILTERING_QUALITY_MEDIUM = 16, tU.TEXTURE_FILTERING_QUALITY_LOW = 8, tU.SCALEMODE_FLOOR = 1, tU.SCALEMODE_NEAREST = 2, tU.SCALEMODE_CEILING = 3, tU.MATERIAL_TextureDirtyFlag = 1, tU.MATERIAL_LightDirtyFlag = 2, tU.MATERIAL_FresnelDirtyFlag = 4, tU.MATERIAL_AttributesDirtyFlag = 8, tU.MATERIAL_MiscDirtyFlag = 16, tU.MATERIAL_PrePassDirtyFlag = 32, tU.MATERIAL_ImageProcessingDirtyFlag = 64, tU.MATERIAL_AllDirtyFlag = 127, tU.MATERIAL_TriangleFillMode = 0, tU.MATERIAL_WireFrameFillMode = 1, tU.MATERIAL_PointFillMode = 2, tU.MATERIAL_PointListDrawMode = 3, tU.MATERIAL_LineListDrawMode = 4, tU.MATERIAL_LineLoopDrawMode = 5, tU.MATERIAL_LineStripDrawMode = 6, tU.MATERIAL_TriangleStripDrawMode = 7, tU.MATERIAL_TriangleFanDrawMode = 8, tU.MATERIAL_ClockWiseSideOrientation = 0, tU.MATERIAL_CounterClockWiseSideOrientation = 1, tU.MATERIAL_DIFFUSE_MODEL_E_OREN_NAYAR = 0, tU.MATERIAL_DIFFUSE_MODEL_BURLEY = 1, tU.MATERIAL_DIFFUSE_MODEL_LAMBERT = 2, tU.MATERIAL_DIFFUSE_MODEL_LEGACY = 3, tU.MATERIAL_DIELECTRIC_SPECULAR_MODEL_GLTF = 0, tU.MATERIAL_DIELECTRIC_SPECULAR_MODEL_OPENPBR = 1, tU.MATERIAL_CONDUCTOR_SPECULAR_MODEL_GLTF = 0, tU.MATERIAL_CONDUCTOR_SPECULAR_MODEL_OPENPBR = 1, tU.ACTION_NothingTrigger = 0, tU.ACTION_OnPickTrigger = 1, tU.ACTION_OnLeftPickTrigger = 2, tU.ACTION_OnRightPickTrigger = 3, tU.ACTION_OnCenterPickTrigger = 4, tU.ACTION_OnPickDownTrigger = 5, tU.ACTION_OnDoublePickTrigger = 6, tU.ACTION_OnPickUpTrigger = 7, tU.ACTION_OnPickOutTrigger = 16, tU.ACTION_OnLongPressTrigger = 8, tU.ACTION_OnPointerOverTrigger = 9, tU.ACTION_OnPointerOutTrigger = 10, tU.ACTION_OnEveryFrameTrigger = 11, tU.ACTION_OnIntersectionEnterTrigger = 12, tU.ACTION_OnIntersectionExitTrigger = 13, tU.ACTION_OnKeyDownTrigger = 14, tU.ACTION_OnKeyUpTrigger = 15, tU.PARTICLES_BILLBOARDMODE_Y = 2, tU.PARTICLES_BILLBOARDMODE_ALL = 7, tU.PARTICLES_BILLBOARDMODE_STRETCHED = 8, tU.PARTICLES_BILLBOARDMODE_STRETCHED_LOCAL = 9, tU.MESHES_CULLINGSTRATEGY_STANDARD = 0, tU.MESHES_CULLINGSTRATEGY_BOUNDINGSPHERE_ONLY = 1, tU.MESHES_CULLINGSTRATEGY_OPTIMISTIC_INCLUSION = 2, tU.MESHES_CULLINGSTRATEGY_OPTIMISTIC_INCLUSION_THEN_BSPHERE_ONLY = 3, tU.SCENELOADER_NO_LOGGING = 0, tU.SCENELOADER_MINIMAL_LOGGING = 1, tU.SCENELOADER_SUMMARY_LOGGING = 2, tU.SCENELOADER_DETAILED_LOGGING = 3, tU.PREPASS_IRRADIANCE_LEGACY_TEXTURE_TYPE = 0, tU.PREPASS_POSITION_TEXTURE_TYPE = 1, tU.PREPASS_VELOCITY_TEXTURE_TYPE = 2, tU.PREPASS_REFLECTIVITY_TEXTURE_TYPE = 3, tU.PREPASS_COLOR_TEXTURE_TYPE = 4, tU.PREPASS_DEPTH_TEXTURE_TYPE = 5, tU.PREPASS_NORMAL_TEXTURE_TYPE = 6, tU.PREPASS_ALBEDO_SQRT_TEXTURE_TYPE = 7, tU.PREPASS_WORLD_NORMAL_TEXTURE_TYPE = 8, tU.PREPASS_LOCAL_POSITION_TEXTURE_TYPE = 9, tU.PREPASS_SCREENSPACE_DEPTH_TEXTURE_TYPE = 10, tU.PREPASS_VELOCITY_LINEAR_TEXTURE_TYPE = 11, tU.PREPASS_ALBEDO_TEXTURE_TYPE = 12, tU.PREPASS_NORMALIZED_VIEW_DEPTH_TEXTURE_TYPE = 13, tU.PREPASS_IRRADIANCE_TEXTURE_TYPE = 14, tU.PREPASS_OBJECT_ID_TEXTURE_TYPE = 15, tU.PREPASS_MESH_BLEND_TAG_TEXTURE_TYPE = 16, tU.BUFFER_CREATIONFLAG_READ = 1, tU.BUFFER_CREATIONFLAG_WRITE = 2, tU.BUFFER_CREATIONFLAG_READWRITE = 3, tU.BUFFER_CREATIONFLAG_UNIFORM = 4, tU.BUFFER_CREATIONFLAG_VERTEX = 8, tU.BUFFER_CREATIONFLAG_INDEX = 16, tU.BUFFER_CREATIONFLAG_STORAGE = 32, tU.BUFFER_CREATIONFLAG_INDIRECT = 64, tU.RENDERPASS_MAIN = 0, tU.INPUT_ALT_KEY = 18, tU.INPUT_CTRL_KEY = 17, tU.INPUT_META_KEY1 = 91, tU.INPUT_META_KEY2 = 92, tU.INPUT_META_KEY3 = 93, tU.INPUT_SHIFT_KEY = 16, tU.SNAPSHOTRENDERING_STANDARD = 0, tU.SNAPSHOTRENDERING_FAST = 1, tU.PERSPECTIVE_CAMERA = 0, tU.ORTHOGRAPHIC_CAMERA = 1, tU.FOVMODE_VERTICAL_FIXED = 0, tU.FOVMODE_HORIZONTAL_FIXED = 1, tU.RIG_MODE_NONE = 0, tU.RIG_MODE_STEREOSCOPIC_ANAGLYPH = 10, tU.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL = 11, tU.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED = 12, tU.RIG_MODE_STEREOSCOPIC_OVERUNDER = 13, tU.RIG_MODE_STEREOSCOPIC_INTERLACED = 14, tU.RIG_MODE_VR = 20, tU.RIG_MODE_CUSTOM = 22, tU.MAX_SUPPORTED_UV_SETS = 6, tU.GL_ALPHA_EQUATION_ADD = 32774, tU.GL_ALPHA_EQUATION_MIN = 32775, tU.GL_ALPHA_EQUATION_MAX = 32776, tU.GL_ALPHA_EQUATION_SUBTRACT = 32778, tU.GL_ALPHA_EQUATION_REVERSE_SUBTRACT = 32779, tU.GL_ALPHA_FUNCTION_SRC = 768, tU.GL_ALPHA_FUNCTION_ONE_MINUS_SRC_COLOR = 769, tU.GL_ALPHA_FUNCTION_SRC_ALPHA = 770, tU.GL_ALPHA_FUNCTION_ONE_MINUS_SRC_ALPHA = 771, tU.GL_ALPHA_FUNCTION_DST_ALPHA = 772, tU.GL_ALPHA_FUNCTION_ONE_MINUS_DST_ALPHA = 773, tU.GL_ALPHA_FUNCTION_DST_COLOR = 774, tU.GL_ALPHA_FUNCTION_ONE_MINUS_DST_COLOR = 775, tU.GL_ALPHA_FUNCTION_SRC_ALPHA_SATURATED = 776, tU.GL_ALPHA_FUNCTION_CONSTANT_COLOR = 32769, tU.GL_ALPHA_FUNCTION_ONE_MINUS_CONSTANT_COLOR = 32770, tU.GL_ALPHA_FUNCTION_CONSTANT_ALPHA = 32771, tU.GL_ALPHA_FUNCTION_ONE_MINUS_CONSTANT_ALPHA = 32772, tU.GL_ALPHA_FUNCTION_SRC1_COLOR = 35065, tU.GL_ALPHA_FUNCTION_ONE_MINUS_SRC1_COLOR = 35066, tU.GL_ALPHA_FUNCTION_SRC1_ALPHA = 34185, tU.GL_ALPHA_FUNCTION_ONE_MINUS_SRC1_ALPHA = 35067, tU.SnippetUrl = "https://snippet.babylonjs.com", tU.FOGMODE_NONE = 0, tU.FOGMODE_EXP = 1, tU.FOGMODE_EXP2 = 2, tU.FOGMODE_LINEAR = 3, tU.BYTE = 5120, tU.UNSIGNED_BYTE = 5121, tU.SHORT = 5122, tU.UNSIGNED_SHORT = 5123, tU.INT = 5124, tU.UNSIGNED_INT = 5125, tU.FLOAT = 5126, tU.HALF_FLOAT = 5131, tU.PositionKind = "position", tU.NormalKind = "normal", tU.TangentKind = "tangent", tU.UVKind = "uv", tU.UV2Kind = "uv2", tU.UV3Kind = "uv3", tU.UV4Kind = "uv4", tU.UV5Kind = "uv5", tU.UV6Kind = "uv6", tU.ColorKind = "color", tU.ColorInstanceKind = "instanceColor", tU.MatricesIndicesKind = "matricesIndices", tU.MatricesWeightsKind = "matricesWeights", tU.MatricesIndicesExtraKind = "matricesIndicesExtra", tU.MatricesWeightsExtraKind = "matricesWeightsExtra", tU.ANIMATIONTYPE_FLOAT = 0, tU.ANIMATIONTYPE_VECTOR3 = 1, tU.ANIMATIONTYPE_QUATERNION = 2, tU.ANIMATIONTYPE_MATRIX = 3, tU.ANIMATIONTYPE_COLOR3 = 4, tU.ANIMATIONTYPE_COLOR4 = 7, tU.ANIMATIONTYPE_VECTOR2 = 5, tU.ANIMATIONTYPE_SIZE = 6, tU.ShadowMinZ = 0, tU.ShadowMaxZ = 1e4, tU.OUTLINELAYER_SAMPLING_TRIDIRECTIONAL = 0, tU.OUTLINELAYER_SAMPLING_OCTADIRECTIONAL = 1
   },
-  40636: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => QD
+  40953: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => qU
     });
-    var ID = cD(39154),
-      pD = cD(39156),
-      iD = cD(36446),
-      fD = cD(39392),
-      bD = cD(39359);
-    let QD = (() => {
-      var DD;
-      let CD, cD, QD, wD, SD = fD.b,
-        BD = [];
-      return DD = class extends SD {
+    var tU = gU(39377),
+      pU = gU(39380),
+      EU = gU(36600),
+      PU = gU(39645),
+      TU = gU(39613);
+    let qU = (() => {
+      var UU;
+      let RU, gU, qU, KU, cU = PU.e,
+        GU = [];
+      return UU = class extends cU {
         constructor() {
-          super(...arguments), this._position = (0, ID.m)(this, BD), this._needProjectionMatrixCompute = !0, this._viewMatrix = iD.d.Identity(), this._projectionMatrix = iD.d.Identity()
+          super(...arguments), this._position = (0, tU.j)(this, GU), this._needProjectionMatrixCompute = !0, this._viewMatrix = EU.c.Identity(), this._projectionMatrix = EU.c.Identity()
         }
-        _setPosition(DD) {
-          this._position = DD
+        _setPosition(UU) {
+          this._position = UU
         }
         get position() {
           return this._position
         }
-        set position(DD) {
-          this._setPosition(DD)
+        set position(UU) {
+          this._setPosition(UU)
         }
-        _setDirection(DD) {
-          this._direction = DD
+        _setDirection(UU) {
+          this._direction = UU
         }
         get direction() {
           return this._direction
         }
-        set direction(DD) {
-          this._setDirection(DD)
+        set direction(UU) {
+          this._setDirection(UU)
         }
         get shadowMinZ() {
           return this._shadowMinZ
         }
-        set shadowMinZ(DD) {
-          this._shadowMinZ = DD, this.forceProjectionMatrixCompute()
+        set shadowMinZ(UU) {
+          this._shadowMinZ = UU, this.forceProjectionMatrixCompute()
         }
         get shadowMaxZ() {
           return this._shadowMaxZ
         }
-        set shadowMaxZ(DD) {
-          this._shadowMaxZ = DD, this.forceProjectionMatrixCompute()
+        set shadowMaxZ(UU) {
+          this._shadowMaxZ = UU, this.forceProjectionMatrixCompute()
         }
         computeTransformedInformation() {
-          return !(!this.parent || !this.parent.getWorldMatrix) && (this.transformedPosition || (this.transformedPosition = iD.p.Zero()), iD.p.TransformCoordinatesToRef(this.position, this.parent.getWorldMatrix(), this.transformedPosition), this.direction && (this.transformedDirection || (this.transformedDirection = iD.p.Zero()), iD.p.TransformNormalToRef(this.direction, this.parent.getWorldMatrix(), this.transformedDirection)), !0)
+          return !(!this.parent || !this.parent.getWorldMatrix) && (this.transformedPosition || (this.transformedPosition = EU.n.Zero()), EU.n.TransformCoordinatesToRef(this.position, this.parent.getWorldMatrix(), this.transformedPosition), this.direction && (this.transformedDirection || (this.transformedDirection = EU.n.Zero()), EU.n.TransformNormalToRef(this.direction, this.parent.getWorldMatrix(), this.transformedDirection)), !0)
         }
         getDepthScale() {
           return 50
         }
-        getShadowDirection(DD) {
+        getShadowDirection(UU) {
           return this.transformedDirection ? this.transformedDirection : this.direction
         }
         getAbsolutePosition() {
           return this.transformedPosition ? this.transformedPosition : this.position
         }
-        setDirectionToTarget(DD) {
-          return this.direction = iD.p.Normalize(DD.subtract(this.position)), this.direction
+        setDirectionToTarget(UU) {
+          return this.direction = EU.n.Normalize(UU.subtract(this.position)), this.direction
         }
         getRotation() {
           this.direction.normalize();
-          const DD = iD.p.Cross(this.direction, bD.c.Y),
-            CD = iD.p.Cross(DD, this.direction);
-          return iD.p.RotationFromAxis(DD, CD, this.direction)
+          const UU = EU.n.Cross(this.direction, TU.c.Y),
+            RU = EU.n.Cross(UU, this.direction);
+          return EU.n.RotationFromAxis(UU, RU, this.direction)
         }
         needCube() {
           return !1
@@ -86,201 +86,201 @@ export const modules = {
           this._needProjectionMatrixCompute = !0
         }
         _initCache() {
-          super._initCache(), this._cache.position = iD.p.Zero()
+          super._initCache(), this._cache.position = EU.n.Zero()
         }
         _isSynchronized() {
           return !!this._cache.position.equals(this.position)
         }
-        computeWorldMatrix(DD) {
-          return !DD && this.isSynchronized() ? (this._currentRenderId = this.hq().getRenderId(), this._worldMatrix) : (this._updateCache(), this._cache.position.YCD(this.position), this._worldMatrix || (this._worldMatrix = iD.d.Identity()), iD.d.TranslationToRef(this.position.x, this.position.y, this.position.z, this._worldMatrix), this.parent && this.parent.getWorldMatrix && (this._worldMatrix.multiplyToRef(this.parent.getWorldMatrix(), this._worldMatrix), this._markSyncedWithParent()), this._worldMatrixDeterminantIsDirty = !0, this._worldMatrix)
+        computeWorldMatrix(UU) {
+          return !UU && this.isSynchronized() ? (this._currentRenderId = this.aZ().getRenderId(), this._worldMatrix) : (this._updateCache(), this._cache.position.PgU(this.position), this._worldMatrix || (this._worldMatrix = EU.c.Identity()), EU.c.TranslationToRef(this.position.x, this.position.y, this.position.z, this._worldMatrix), this.parent && this.parent.getWorldMatrix && (this._worldMatrix.multiplyToRef(this.parent.getWorldMatrix(), this._worldMatrix), this._markSyncedWithParent()), this._worldMatrixDeterminantIsDirty = !0, this._worldMatrix)
         }
-        getDepthMinZ(DD) {
-          return void 0 !== this.shadowMinZ ? this.shadowMinZ : DD?.minZ || 0
+        getDepthMinZ(UU) {
+          return void 0 !== this.shadowMinZ ? this.shadowMinZ : UU?.minZ || 0
         }
-        getDepthMaxZ(DD) {
-          return void 0 !== this.shadowMaxZ ? this.shadowMaxZ : DD?.maxZ || 1e4
+        getDepthMaxZ(UU) {
+          return void 0 !== this.shadowMaxZ ? this.shadowMaxZ : UU?.maxZ || 1e4
         }
-        setShadowProjectionMatrix(DD, CD, cD) {
-          return this.customProjectionMatrixBuilder ? this.customProjectionMatrixBuilder(CD, cD, DD) : this._setDefaultShadowProjectionMatrix(DD, CD, cD), this
+        setShadowProjectionMatrix(UU, RU, gU) {
+          return this.customProjectionMatrixBuilder ? this.customProjectionMatrixBuilder(RU, gU, UU) : this._setDefaultShadowProjectionMatrix(UU, RU, gU), this
         }
         _syncParentEnabledState() {
           super._syncParentEnabledState(), this.parent && this.parent.getWorldMatrix || (this.transformedPosition = null, this.transformedDirection = null)
         }
-        getViewMatrix(DD) {
-          const CD = iD.l.cZ[0];
-          let cD = this.position;
-          this.computeTransformedInformation() && (cD = this.transformedPosition), iD.p.NormalizeToRef(this.getShadowDirection(DD), CD), 1 === Math.abs(iD.p.Dot(CD, iD.p.Up())) && (CD.z = 1e-13);
-          const ID = iD.l.cZ[1];
-          return cD.addToRef(CD, ID), iD.d.LookAtLHToRef(cD, ID, iD.p.Up(), this._viewMatrix), this._viewMatrix
+        getViewMatrix(UU) {
+          const RU = EU.h.xC[0];
+          let gU = this.position;
+          this.computeTransformedInformation() && (gU = this.transformedPosition), EU.n.NormalizeToRef(this.getShadowDirection(UU), RU), 1 === Math.abs(EU.n.Dot(RU, EU.n.Up())) && (RU.z = 1e-13);
+          const tU = EU.h.xC[1];
+          return gU.addToRef(RU, tU), EU.c.LookAtLHToRef(gU, tU, EU.n.Up(), this._viewMatrix), this._viewMatrix
         }
-        getProjectionMatrix(DD, CD) {
-          return this.setShadowProjectionMatrix(this._projectionMatrix, DD ?? this._viewMatrix, CD ?? []), this._projectionMatrix
+        getProjectionMatrix(UU, RU) {
+          return this.setShadowProjectionMatrix(this._projectionMatrix, UU ?? this._viewMatrix, RU ?? []), this._projectionMatrix
         }
       }, (() => {
-        const iD = "function" === typeof Symbol && Symbol.metadata ? Object.create(SD[Symbol.metadata] ?? null) : void 0;
-        CD = [(0, pD.C)()], cD = [(0, pD.C)()], QD = [(0, pD.G)()], wD = [(0, pD.G)()], (0, ID.k)(DD, null, CD, {
+        const EU = "function" === typeof Symbol && Symbol.metadata ? Object.create(cU[Symbol.metadata] ?? null) : void 0;
+        RU = [(0, pU.I)()], gU = [(0, pU.I)()], qU = [(0, pU.K)()], KU = [(0, pU.K)()], (0, tU.i)(UU, null, RU, {
           kind: "getter",
           name: "position",
           static: !1,
           private: !1,
           access: {
-            has: DD => "position" in DD,
-            get: DD => DD.position
+            has: UU => "position" in UU,
+            get: UU => UU.position
           },
-          metadata: iD
-        }, null, BD), (0, ID.k)(DD, null, cD, {
+          metadata: EU
+        }, null, GU), (0, tU.i)(UU, null, gU, {
           kind: "getter",
           name: "direction",
           static: !1,
           private: !1,
           access: {
-            has: DD => "direction" in DD,
-            get: DD => DD.direction
+            has: UU => "direction" in UU,
+            get: UU => UU.direction
           },
-          metadata: iD
-        }, null, BD), (0, ID.k)(DD, null, QD, {
+          metadata: EU
+        }, null, GU), (0, tU.i)(UU, null, qU, {
           kind: "getter",
           name: "shadowMinZ",
           static: !1,
           private: !1,
           access: {
-            has: DD => "shadowMinZ" in DD,
-            get: DD => DD.shadowMinZ
+            has: UU => "shadowMinZ" in UU,
+            get: UU => UU.shadowMinZ
           },
-          metadata: iD
-        }, null, BD), (0, ID.k)(DD, null, wD, {
+          metadata: EU
+        }, null, GU), (0, tU.i)(UU, null, KU, {
           kind: "getter",
           name: "shadowMaxZ",
           static: !1,
           private: !1,
           access: {
-            has: DD => "shadowMaxZ" in DD,
-            get: DD => DD.shadowMaxZ
+            has: UU => "shadowMaxZ" in UU,
+            get: UU => UU.shadowMaxZ
           },
-          metadata: iD
-        }, null, BD), iD && Object.defineProperty(DD, Symbol.metadata, {
+          metadata: EU
+        }, null, GU), EU && Object.defineProperty(UU, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: iD
+          value: EU
         })
-      })(), DD
+      })(), UU
     })()
   },
-  40654: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => pD
+  40966: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => pU
     });
-    var ID = cD(39595);
-    class pD extends ID.c {
-      constructor(DD, CD, cD, pD, iD) {
-        let fD = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          bD = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-          QD = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 3,
-          wD = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0,
-          SD = arguments.length > 9 ? arguments[9] : void 0,
-          BD = arguments.length > 10 ? arguments[10] : void 0,
-          yD = arguments.length > 11 ? arguments[11] : void 0,
-          MD = arguments.length > 12 ? arguments[12] : void 0;
-        super(null, iD, !fD, bD, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, SD), this.format = pD, this._engine && (this._engine._caps.textureFloatLinearFiltering || 1 !== wD || (QD = 1), this._engine._caps.textureHalfFloatLinearFiltering || 2 !== wD || (QD = 1), this._texture = this._engine.createRawTexture(DD, CD, cD, pD, fD, bD, QD, null, wD, SD ?? 0, BD ?? !1, MD), this.wrapU = ID.c.CLAMP_ADDRESSMODE, this.wrapV = ID.c.CLAMP_ADDRESSMODE, this._waitingForData = !!yD && !DD)
+    var tU = gU(39855);
+    class pU extends tU.e {
+      constructor(UU, RU, gU, pU, EU) {
+        let PU = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          TU = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+          qU = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 3,
+          KU = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0,
+          cU = arguments.length > 9 ? arguments[9] : void 0,
+          GU = arguments.length > 10 ? arguments[10] : void 0,
+          jU = arguments.length > 11 ? arguments[11] : void 0,
+          uU = arguments.length > 12 ? arguments[12] : void 0;
+        super(null, EU, !PU, TU, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, cU), this.format = pU, this._engine && (this._engine._caps.textureFloatLinearFiltering || 1 !== KU || (qU = 1), this._engine._caps.textureHalfFloatLinearFiltering || 2 !== KU || (qU = 1), this._texture = this._engine.createRawTexture(UU, RU, gU, pU, PU, TU, qU, null, KU, cU ?? 0, GU ?? !1, uU), this.wrapU = tU.e.CLAMP_ADDRESSMODE, this.wrapV = tU.e.CLAMP_ADDRESSMODE, this._waitingForData = !!jU && !UU)
       }
-      update(DD) {
-        this.updateMipLevel(DD, 0)
+      update(UU) {
+        this.updateMipLevel(UU, 0)
       }
-      updateMipLevel(DD, CD) {
-        this._getEngine().updateRawTexture(this._texture, DD, this._texture.format, this._texture.invertY, null, this._texture.type, this._texture._useSRGBBuffer, CD), this._waitingForData = !1
+      updateMipLevel(UU, RU) {
+        this._getEngine().updateRawTexture(this._texture, UU, this._texture.format, this._texture.invertY, null, this._texture.type, this._texture._useSRGBBuffer, RU), this._waitingForData = !1
       }
       clone() {
         if (!this._texture) return super.clone();
-        const DD = new pD(null, this.getSize().width, this.getSize().height, this.format, this.hq(), this._texture.generateMipMaps, this._invertY, this.samplingMode, this._texture.type, this._texture._creationFlags, this._useSRGBBuffer);
-        return DD._texture = this._texture, this._texture.incrementReferences(), DD
+        const UU = new pU(null, this.getSize().width, this.getSize().height, this.format, this.aZ(), this._texture.generateMipMaps, this._invertY, this.samplingMode, this._texture.type, this._texture._creationFlags, this._useSRGBBuffer);
+        return UU._texture = this._texture, this._texture.incrementReferences(), UU
       }
       isReady() {
         return super.isReady() && !this._waitingForData
       }
-      static CreateLuminanceTexture(DD, CD, cD, ID) {
-        return new pD(DD, CD, cD, 1, ID, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
+      static CreateLuminanceTexture(UU, RU, gU, tU) {
+        return new pU(UU, RU, gU, 1, tU, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
       }
-      static CreateLuminanceAlphaTexture(DD, CD, cD, ID) {
-        return new pD(DD, CD, cD, 2, ID, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
+      static CreateLuminanceAlphaTexture(UU, RU, gU, tU) {
+        return new pU(UU, RU, gU, 2, tU, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
       }
-      static CreateAlphaTexture(DD, CD, cD, ID) {
-        return new pD(DD, CD, cD, 0, ID, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
+      static CreateAlphaTexture(UU, RU, gU, tU) {
+        return new pU(UU, RU, gU, 0, tU, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
       }
-      static CreateRGBTexture(DD, CD, cD, ID) {
-        return new pD(DD, CD, cD, 4, ID, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0, arguments.length > 9 && void 0 !== arguments[9] && arguments[9])
+      static CreateRGBTexture(UU, RU, gU, tU) {
+        return new pU(UU, RU, gU, 4, tU, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0, arguments.length > 9 && void 0 !== arguments[9] && arguments[9])
       }
-      static CreateRGBATexture(DD, CD, cD, ID) {
-        return new pD(DD, CD, cD, 5, ID, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0, arguments.length > 9 && void 0 !== arguments[9] && arguments[9], arguments.length > 10 && void 0 !== arguments[10] && arguments[10])
+      static CreateRGBATexture(UU, RU, gU, tU) {
+        return new pU(UU, RU, gU, 5, tU, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0, arguments.length > 9 && void 0 !== arguments[9] && arguments[9], arguments.length > 10 && void 0 !== arguments[10] && arguments[10])
       }
-      static CreateRGBAStorageTexture(DD, CD, cD, ID) {
-        return new pD(DD, CD, cD, 5, ID, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, 1, arguments.length > 8 && void 0 !== arguments[8] && arguments[8])
+      static CreateRGBAStorageTexture(UU, RU, gU, tU) {
+        return new pU(UU, RU, gU, 5, tU, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, 1, arguments.length > 8 && void 0 !== arguments[8] && arguments[8])
       }
-      static CreateRTexture(DD, CD, cD, iD) {
-        let fD = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          bD = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-          QD = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : ID.c.TRILINEAR_SAMPLINGMODE;
-        return new pD(DD, CD, cD, 6, iD, fD, bD, QD, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 1)
+      static CreateRTexture(UU, RU, gU, EU) {
+        let PU = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          TU = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+          qU = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : tU.e.TRILINEAR_SAMPLINGMODE;
+        return new pU(UU, RU, gU, 6, EU, PU, TU, qU, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 1)
       }
-      static CreateRStorageTexture(DD, CD, cD, iD) {
-        let fD = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          bD = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-          QD = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : ID.c.TRILINEAR_SAMPLINGMODE;
-        return new pD(DD, CD, cD, 6, iD, fD, bD, QD, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 1, 1)
+      static CreateRStorageTexture(UU, RU, gU, EU) {
+        let PU = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          TU = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+          qU = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : tU.e.TRILINEAR_SAMPLINGMODE;
+        return new pU(UU, RU, gU, 6, EU, PU, TU, qU, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 1, 1)
       }
     }
   },
-  40703: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => ID.b
+  41007: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => tU.d
     });
-    var ID = cD(39567);
-    (0, ID.f)()
+    var tU = gU(39817);
+    (0, tU.h)()
   },
-  40641: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => ID.c
+  40960: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => tU.e
     });
-    var ID = cD(39579);
-    (0, ID.g)()
+    var tU = gU(39835);
+    (0, tU.i)()
   },
-  39579: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => yD,
-      g: () => ZD
+  39835: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => jU,
+      i: () => hU
     });
-    var ID, pD, iD = cD(36622),
-      fD = cD(39286),
-      bD = cD(39531),
-      QD = cD(39586),
-      wD = cD(39416),
-      SD = cD(39590),
-      BD = cD(39027);
-    class yD extends bD.d {
-      _isShaderMaterial(DD) {
-        return !!DD && "ShaderMaterial" === DD.getClassName()
+    var tU, pU, EU = gU(36761),
+      PU = gU(39517),
+      TU = gU(39782),
+      qU = gU(39844),
+      KU = gU(39676),
+      cU = gU(39847),
+      GU = gU(39256);
+    class jU extends TU.c {
+      _isShaderMaterial(UU) {
+        return !!UU && "ShaderMaterial" === UU.getClassName()
       }
-      constructor(DD) {
-        let CD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          ID = arguments.length > 5 ? arguments[5] : void 0,
-          pD = arguments.length > 6 ? arguments[6] : void 0,
-          bD = arguments.length > 7 ? arguments[7] : void 0;
-        super(DD, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, CD, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = ID, this.useVertexAlpha = pD, this.color = new iD.d(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, CD && (this.color = CD.color.clone(), this.alpha = CD.alpha, this.useVertexColor = CD.useVertexColor, this.useVertexAlpha = CD.useVertexAlpha), this.intersectionThreshold = .1;
-        const QD = {
-          attributes: [fD.k.PositionKind],
+      constructor(UU) {
+        let RU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          tU = arguments.length > 5 ? arguments[5] : void 0,
+          pU = arguments.length > 6 ? arguments[6] : void 0,
+          TU = arguments.length > 7 ? arguments[7] : void 0;
+        super(UU, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, RU, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = tU, this.useVertexAlpha = pU, this.color = new EU.e(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, RU && (this.color = RU.color.clone(), this.alpha = RU.alpha, this.useVertexColor = RU.useVertexColor, this.useVertexAlpha = RU.useVertexAlpha), this.intersectionThreshold = .1;
+        const qU = {
+          attributes: [PU.l.PositionKind],
           uniforms: ["world", "viewProjection"],
           needAlphaBlending: !0,
           defines: [],
           useClipPlane: null,
           shaderLanguage: 0
         };
-        if (this.useVertexAlpha ? QD.defines.push("#define VERTEXALPHA") : QD.needAlphaBlending = !1, this.useVertexColor ? (QD.defines.push("#define VERTEXCOLOR"), QD.attributes.push(fD.k.ColorKind)) : (QD.uniforms.push("color"), this._color4 = new iD.e), bD) this.material = bD;
+        if (this.useVertexAlpha ? qU.defines.push("#define VERTEXALPHA") : qU.needAlphaBlending = !1, this.useVertexColor ? (qU.defines.push("#define VERTEXCOLOR"), qU.attributes.push(PU.l.ColorKind)) : (qU.uniforms.push("color"), this._color4 = new EU.g), TU) this.material = TU;
         else {
-          this.hq().DZ().isWebGPU && !yD.ForceGLSL && (this._shaderLanguage = 1), QD.shaderLanguage = this._shaderLanguage, QD.extraInitializationsAsync = async () => {
-            1 === this._shaderLanguage ? await Promise.all([cD.e(334).then((() => cD(41708))), cD.e(340).then((() => cD(41711)))]) : await Promise.all([cD.e(316).then((() => cD(41713))), cD.e(322).then((() => cD(41722)))])
+          this.aZ().WC().isWebGPU && !jU.ForceGLSL && (this._shaderLanguage = 1), qU.shaderLanguage = this._shaderLanguage, qU.extraInitializationsAsync = async () => {
+            1 === this._shaderLanguage ? await Promise.all([gU.e(334).then((() => gU(41887))), gU.e(340).then((() => gU(41895)))]) : await Promise.all([gU.e(316).then((() => gU(41903))), gU.e(322).then((() => gU(41912)))])
           };
-          const DD = new SD.p("colorShader", this.hq(), "color", QD, !1);
-          DD.doNotSerialize = !0, this._ownsMaterial = !0, this._setInternalMaterial(DD)
+          const UU = new cU.l("colorShader", this.aZ(), "color", qU, !1);
+          UU.doNotSerialize = !0, this._ownsMaterial = !0, this._setInternalMaterial(UU)
         }
       }
       getClassName() {
@@ -289,81 +289,81 @@ export const modules = {
       get material() {
         return this._internalAbstractMeshDataInfo._material
       }
-      set material(DD) {
-        const CD = this.material;
-        if (CD === DD) return;
-        const cD = CD && this._ownsMaterial;
-        this._ownsMaterial = !1, this._setInternalMaterial(DD), cD && CD?.dispose()
+      set material(UU) {
+        const RU = this.material;
+        if (RU === UU) return;
+        const gU = RU && this._ownsMaterial;
+        this._ownsMaterial = !1, this._setInternalMaterial(UU), gU && RU?.dispose()
       }
-      _setInternalMaterial(DD) {
-        this._setMaterial(DD), this.material && (this.material.fillMode = wD.d.LineListDrawMode, this.material.disableLighting = !0)
+      _setInternalMaterial(UU) {
+        this._setMaterial(UU), this.material && (this.material.fillMode = KU.c.LineListDrawMode, this.material.disableLighting = !0)
       }
       get checkCollisions() {
         return !1
       }
-      set checkCollisions(DD) {}
-      _bind(DD, CD) {
+      set checkCollisions(UU) {}
+      _bind(UU, RU) {
         if (!this._geometry) return this;
-        const cD = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
-        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(CD, cD) : this._geometry._bind(CD, cD, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
+        const gU = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
+        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(RU, gU) : this._geometry._bind(RU, gU, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
           const {
-            r: DD,
-            g: CD,
-            b: cD
+            r: UU,
+            g: RU,
+            b: gU
           } = this.color;
-          this._color4.set(DD, CD, cD, this.alpha), this.material.setColor4("color", this._color4)
+          this._color4.set(UU, RU, gU, this.alpha), this.material.setColor4("color", this._color4)
         }
         return this
       }
-      _draw(DD, CD, cD) {
+      _draw(UU, RU, gU) {
         if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return this;
-        const ID = this.hq().DZ();
-        return this._unIndexed ? ID.drawArraysType(wD.d.LineListDrawMode, DD.verticesStart, DD.verticesCount, cD) : ID.drawElementsType(wD.d.LineListDrawMode, DD.indexStart, DD.indexCount, cD), this
+        const tU = this.aZ().WC();
+        return this._unIndexed ? tU.drawArraysType(KU.c.LineListDrawMode, UU.verticesStart, UU.verticesCount, gU) : tU.drawElementsType(KU.c.LineListDrawMode, UU.indexStart, UU.indexCount, gU), this
       }
-      dispose(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || CD) && this.material?.dispose(!1, !1, !0), super.dispose(DD)
+      dispose(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || RU) && this.material?.dispose(!1, !1, !0), super.dispose(UU)
       }
-      clone(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          cD = arguments.length > 2 ? arguments[2] : void 0;
-        if (CD && void 0 === CD._addToSceneRootNodes) {
-          const cD = CD;
-          return cD.source = this, new yD(DD, this.hq(), cD.parent, cD.source, cD.doNotCloneChildren)
+      clone(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          gU = arguments.length > 2 ? arguments[2] : void 0;
+        if (RU && void 0 === RU._addToSceneRootNodes) {
+          const gU = RU;
+          return gU.source = this, new jU(UU, this.aZ(), gU.parent, gU.source, gU.doNotCloneChildren)
         }
-        return new yD(DD, this.hq(), CD, this, cD)
+        return new jU(UU, this.aZ(), RU, this, gU)
       }
-      createInstance(DD) {
-        const CD = new MD(DD, this);
-        if (this.qJ) {
-          CD.qJ = {};
-          for (const DD in this.qJ) CD.qJ[DD] = this.qJ[DD]
+      createInstance(UU) {
+        const RU = new uU(UU, this);
+        if (this.kY) {
+          RU.kY = {};
+          for (const UU in this.kY) RU.kY[UU] = this.kY[UU]
         }
-        return CD
+        return RU
       }
-      serialize(DD) {
-        super.serialize(DD), DD.color = this.color.XcD(), DD.alpha = this.alpha
+      serialize(UU) {
+        super.serialize(UU), UU.color = this.color.vgU(), UU.alpha = this.alpha
       }
-      static Parse(DD, CD) {
-        const cD = new yD(DD.name, CD);
-        return cD.color = iD.d.FromArray(DD.color), cD.alpha = DD.alpha, cD
+      static Parse(UU, RU) {
+        const gU = new jU(UU.name, RU);
+        return gU.color = EU.e.FromArray(UU.color), gU.alpha = UU.alpha, gU
       }
     }
-    yD.ForceGLSL = !1;
-    class MD extends QD.c {
-      constructor(DD, CD) {
-        super(DD, CD), this.intersectionThreshold = CD.intersectionThreshold
+    jU.ForceGLSL = !1;
+    class uU extends qU.c {
+      constructor(UU, RU) {
+        super(UU, RU), this.intersectionThreshold = RU.intersectionThreshold
       }
       getClassName() {
         return "InstancedLinesMesh"
       }
     }
-    let tD = !1;
+    let CU = !1;
 
-    function ZD() {
-      tD || (tD = !0, bD.d._LinesMeshParser = (DD, CD) => yD.Parse(DD, CD))
-    }(ID = yD.prototype).enableEdgesRendering ?? (ID.enableEdgesRendering = (0, BD.j)("LinesMesh", "enableEdgesRendering")), (pD = MD.prototype).enableEdgesRendering ?? (pD.enableEdgesRendering = (0, BD.j)("InstancedLinesMesh", "enableEdgesRendering"))
+    function hU() {
+      CU || (CU = !0, TU.c._LinesMeshParser = (UU, RU) => jU.Parse(UU, RU))
+    }(tU = jU.prototype).enableEdgesRendering ?? (tU.enableEdgesRendering = (0, GU.m)("LinesMesh", "enableEdgesRendering")), (pU = uU.prototype).enableEdgesRendering ?? (pU.enableEdgesRendering = (0, GU.m)("InstancedLinesMesh", "enableEdgesRendering"))
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

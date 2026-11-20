@@ -1,114 +1,114 @@
-/*! For license information please see wd13r.258.914c814e.chunk.js.LICENSE.txt */
+/*! For license information please see eulrrq.258.a3528977.chunk.js.LICENSE.txt */
 export const id = 258;
 export const ids = [258];
 export const modules = {
-    39645: (DD, CD, cD) => {
-        cD.r(CD), cD.d(CD, {
-          ActionCodeOperation: () => yD,
-          ActionCodeURL: () => rC,
-          AuthCredential: () => TC,
-          AuthErrorCodes: () => vD,
-          EmailAuthCredential: () => sC,
-          EmailAuthProvider: () => FC,
-          FacebookAuthProvider: () => Ic,
-          FactorId: () => QD,
-          GithubAuthProvider: () => ic,
-          GoogleAuthProvider: () => pc,
-          OAuthCredential: () => eC,
-          OAuthProvider: () => cc,
-          OperationType: () => BD,
-          PhoneAuthCredential: () => hC,
-          PhoneAuthProvider: () => Cp,
-          PhoneMultiFactorGenerator: () => Ci,
-          ProviderId: () => wD,
-          RecaptchaVerifier: () => eI,
-          SAMLAuthProvider: () => bc,
-          SignInMethod: () => SD,
-          TotpMultiFactorGenerator: () => ci,
-          TotpSecret: () => ii,
-          TwitterAuthProvider: () => Qc,
-          applyActionCode: () => ac,
-          beforeAuthStateChanged: () => pI,
-          browserLocalPersistence: () => gI,
-          browserPopupRedirectResolver: () => Ap,
-          browserSessionPersistence: () => mI,
-          checkActionCode: () => Vc,
-          confirmPasswordReset: () => Kc,
-          connectAuthEmulator: () => jC,
-          createUserWithEmailAndPassword: () => jc,
-          debugErrorMap: () => tD,
-          deleteUser: () => wI,
-          fetchSignInMethodsForEmail: () => Rc,
-          getAdditionalUserInfo: () => DI,
-          getAuth: () => Mi,
-          getIdToken: () => sD,
-          getIdTokenResult: () => ED,
-          getMultiFactorResolver: () => yI,
-          getRedirectResult: () => Op,
-          inMemoryPersistence: () => bC,
-          indexedDBLocalPersistence: () => LI,
-          initializeAuth: () => zC,
-          initializeRecaptchaConfig: () => cI,
-          isSignInWithEmailLink: () => Tc,
-          linkWithCredential: () => nc,
-          linkWithPhoneNumber: () => rI,
-          linkWithPopup: () => Bp,
-          linkWithRedirect: () => np,
-          multiFactor: () => ZI,
-          onAuthStateChanged: () => iI,
-          onIdTokenChanged: () => II,
-          parseActionCodeURL: () => AC,
-          prodErrorMap: () => ZD,
-          reauthenticateWithCredential: () => Oc,
-          reauthenticateWithPhoneNumber: () => AI,
-          reauthenticateWithPopup: () => Sp,
-          reauthenticateWithRedirect: () => mp,
-          reload: () => DC,
-          sendEmailVerification: () => kc,
-          sendPasswordResetEmail: () => Jc,
-          sendSignInLinkToEmail: () => Lc,
-          setPersistence: () => CI,
-          signInAnonymously: () => yc,
-          signInWithCredential: () => mc,
-          signInWithCustomToken: () => Pc,
-          signInWithEmailAndPassword: () => lc,
-          signInWithEmailLink: () => Gc,
-          signInWithPhoneNumber: () => hI,
-          signInWithPopup: () => wp,
-          signInWithRedirect: () => Xp,
-          signOut: () => QI,
-          unlink: () => oc,
-          updateCurrentUser: () => bI,
-          updateEmail: () => Wc,
-          updatePassword: () => sc,
-          updatePhoneNumber: () => Dp,
-          updateProfile: () => Yc,
-          useDeviceLanguage: () => fI,
-          verifyBeforeUpdateEmail: () => dc,
-          verifyPasswordResetCode: () => zc
+    39911: (UU, RU, gU) => {
+        gU.r(RU), gU.d(RU, {
+          ActionCodeOperation: () => jU,
+          ActionCodeURL: () => NR,
+          AuthCredential: () => HR,
+          AuthErrorCodes: () => eU,
+          EmailAuthCredential: () => AR,
+          EmailAuthProvider: () => OR,
+          FacebookAuthProvider: () => tg,
+          FactorId: () => qU,
+          GithubAuthProvider: () => Eg,
+          GoogleAuthProvider: () => pg,
+          OAuthCredential: () => MR,
+          OAuthProvider: () => gg,
+          OperationType: () => GU,
+          PhoneAuthCredential: () => LR,
+          PhoneAuthProvider: () => gp,
+          PhoneMultiFactorGenerator: () => gE,
+          ProviderId: () => KU,
+          RecaptchaVerifier: () => Dt,
+          SAMLAuthProvider: () => Tg,
+          SignInMethod: () => cU,
+          TotpMultiFactorGenerator: () => tE,
+          TotpSecret: () => EE,
+          TwitterAuthProvider: () => qg,
+          applyActionCode: () => Bg,
+          beforeAuthStateChanged: () => pt,
+          browserLocalPersistence: () => ft,
+          browserPopupRedirectResolver: () => Op,
+          browserSessionPersistence: () => mt,
+          checkActionCode: () => Vg,
+          confirmPasswordReset: () => Yg,
+          connectAuthEmulator: () => XR,
+          createUserWithEmailAndPassword: () => Xg,
+          debugErrorMap: () => CU,
+          deleteUser: () => Kt,
+          fetchSignInMethodsForEmail: () => sg,
+          getAdditionalUserInfo: () => Ut,
+          getAuth: () => uE,
+          getIdToken: () => AU,
+          getIdTokenResult: () => zU,
+          getMultiFactorResolver: () => jt,
+          getRedirectResult: () => np,
+          inMemoryPersistence: () => TR,
+          indexedDBLocalPersistence: () => Ht,
+          initializeAuth: () => rR,
+          initializeRecaptchaConfig: () => gt,
+          isSignInWithEmailLink: () => Hg,
+          linkWithCredential: () => Ig,
+          linkWithPhoneNumber: () => lt,
+          linkWithPopup: () => jp,
+          linkWithRedirect: () => wp,
+          multiFactor: () => ht,
+          onAuthStateChanged: () => Et,
+          onIdTokenChanged: () => tt,
+          parseActionCodeURL: () => lR,
+          prodErrorMap: () => hU,
+          reauthenticateWithCredential: () => Jg,
+          reauthenticateWithPhoneNumber: () => Ot,
+          reauthenticateWithPopup: () => Gp,
+          reauthenticateWithRedirect: () => Jp,
+          reload: () => UR,
+          sendEmailVerification: () => yg,
+          sendPasswordResetEmail: () => ag,
+          sendSignInLinkToEmail: () => dg,
+          setPersistence: () => Rt,
+          signInAnonymously: () => jg,
+          signInWithCredential: () => mg,
+          signInWithCustomToken: () => wg,
+          signInWithEmailAndPassword: () => vg,
+          signInWithEmailLink: () => Sg,
+          signInWithPhoneNumber: () => Nt,
+          signInWithPopup: () => cp,
+          signInWithRedirect: () => Ip,
+          signOut: () => qt,
+          unlink: () => Qg,
+          updateCurrentUser: () => Tt,
+          updateEmail: () => ig,
+          updatePassword: () => Ag,
+          updatePhoneNumber: () => Rp,
+          updateProfile: () => Fg,
+          useDeviceLanguage: () => Pt,
+          verifyBeforeUpdateEmail: () => kg,
+          verifyPasswordResetCode: () => rg
         });
-        var ID = cD(39634),
-          pD = cD(39626);
+        var tU = gU(39894),
+          pU = gU(39882);
 
-        function iD(DD, CD) {
-          var cD = {};
-          for (var ID in DD) Object.prototype.hasOwnProperty.call(DD, ID) && CD.indexOf(ID) < 0 && (cD[ID] = DD[ID]);
-          if (null != DD && "function" === typeof Object.getOwnPropertySymbols) {
-            var pD = 0;
-            for (ID = Object.getOwnPropertySymbols(DD); pD < ID.length; pD++) CD.indexOf(ID[pD]) < 0 && Object.prototype.propertyIsEnumerable.call(DD, ID[pD]) && (cD[ID[pD]] = DD[ID[pD]])
+        function EU(UU, RU) {
+          var gU = {};
+          for (var tU in UU) Object.prototype.hasOwnProperty.call(UU, tU) && RU.indexOf(tU) < 0 && (gU[tU] = UU[tU]);
+          if (null != UU && "function" === typeof Object.getOwnPropertySymbols) {
+            var pU = 0;
+            for (tU = Object.getOwnPropertySymbols(UU); pU < tU.length; pU++) RU.indexOf(tU[pU]) < 0 && Object.prototype.propertyIsEnumerable.call(UU, tU[pU]) && (gU[tU[pU]] = UU[tU[pU]])
           }
-          return cD
+          return gU
         }
         Object.create;
         Object.create;
         "function" === typeof SuppressedError && SuppressedError;
-        var fD = cD(39637),
-          bD = cD(39632);
-        const QD = {
+        var PU = gU(39898),
+          TU = gU(39887);
+        const qU = {
             PHONE: "phone",
             TOTP: "totp"
           },
-          wD = {
+          KU = {
             FACEBOOK: "facebook.com",
             GITHUB: "github.com",
             GOOGLE: "google.com",
@@ -116,7 +116,7 @@ export const modules = {
             PHONE: "phone",
             TWITTER: "twitter.com"
           },
-          SD = {
+          cU = {
             EMAIL_LINK: "emailLink",
             EMAIL_PASSWORD: "password",
             FACEBOOK: "facebook.com",
@@ -125,12 +125,12 @@ export const modules = {
             PHONE: "phone",
             TWITTER: "twitter.com"
           },
-          BD = {
+          GU = {
             LINK: "link",
             REAUTHENTICATE: "reauthenticate",
             SIGN_IN: "signIn"
           },
-          yD = {
+          jU = {
             EMAIL_SIGNIN: "EMAIL_SIGNIN",
             PASSWORD_RESET: "PASSWORD_RESET",
             RECOVER_EMAIL: "RECOVER_EMAIL",
@@ -139,12 +139,12 @@ export const modules = {
             VERIFY_EMAIL: "VERIFY_EMAIL"
           };
 
-        function MD() {
+        function uU() {
           return {
             "dependent-sdk-initialized-before-auth": "Another Firebase SDK was initialized and is trying to use Auth before Auth is initialized. Please be sure to call `initializeAuth` or `getAuth` before starting any other Firebase SDK."
           }
         }
-        const tD = function() {
+        const CU = function() {
             return {
               "admin-restricted-operation": "This operation is restricted to administrators only.",
               "argument-error": "",
@@ -253,11 +253,11 @@ export const modules = {
               "invalid-recaptcha-version": "The reCAPTCHA version is invalid when sending request to the backend."
             }
           },
-          ZD = MD,
-          oD = new ID.h("auth", "Firebase", {
+          hU = uU,
+          QU = new tU.e("auth", "Firebase", {
             "dependent-sdk-initialized-before-auth": "Another Firebase SDK was initialized and is trying to use Auth before Auth is initialized. Please be sure to call `initializeAuth` or `getAuth` before starting any other Firebase SDK."
           }),
-          vD = {
+          eU = {
             ADMIN_ONLY_OPERATION: "auth/admin-restricted-operation",
             ARGUMENT_ERROR: "auth/argument-error",
             APP_NOT_AUTHORIZED: "auth/app-not-authorized",
@@ -362,108 +362,108 @@ export const modules = {
             INVALID_RECAPTCHA_VERSION: "auth/invalid-recaptcha-version",
             INVALID_REQ_TYPE: "auth/invalid-req-type"
           },
-          ND = new fD.f("@firebase/auth");
+          WU = new PU.h("@firebase/auth");
 
-        function gD(DD) {
-          if (ND.logLevel <= fD.d.ERROR) {
-            for (var CD = arguments.length, cD = new Array(CD > 1 ? CD - 1 : 0), ID = 1; ID < CD; ID++) cD[ID - 1] = arguments[ID];
-            ND.error(`Auth (${pD.e}): ${DD}`, ...cD)
+        function fU(UU) {
+          if (WU.logLevel <= PU.d.ERROR) {
+            for (var RU = arguments.length, gU = new Array(RU > 1 ? RU - 1 : 0), tU = 1; tU < RU; tU++) gU[tU - 1] = arguments[tU];
+            WU.error(`Auth (${pU.f}): ${UU}`, ...gU)
           }
         }
 
-        function XD(DD) {
-          for (var CD = arguments.length, cD = new Array(CD > 1 ? CD - 1 : 0), ID = 1; ID < CD; ID++) cD[ID - 1] = arguments[ID];
-          throw PD(DD, ...cD)
+        function xU(UU) {
+          for (var RU = arguments.length, gU = new Array(RU > 1 ? RU - 1 : 0), tU = 1; tU < RU; tU++) gU[tU - 1] = arguments[tU];
+          throw wU(UU, ...gU)
         }
 
-        function mD(DD) {
-          for (var CD = arguments.length, cD = new Array(CD > 1 ? CD - 1 : 0), ID = 1; ID < CD; ID++) cD[ID - 1] = arguments[ID];
-          return PD(DD, ...cD)
+        function mU(UU) {
+          for (var RU = arguments.length, gU = new Array(RU > 1 ? RU - 1 : 0), tU = 1; tU < RU; tU++) gU[tU - 1] = arguments[tU];
+          return wU(UU, ...gU)
         }
 
-        function nD(DD, CD, cD) {
-          const pD = Object.assign(Object.assign({}, ZD()), {
-            [CD]: cD
+        function IU(UU, RU, gU) {
+          const pU = Object.assign(Object.assign({}, hU()), {
+            [RU]: gU
           });
-          return new ID.h("auth", "Firebase", pD).create(CD, {
-            appName: DD.name
+          return new tU.e("auth", "Firebase", pU).create(RU, {
+            appName: UU.name
           })
         }
 
-        function OD(DD, CD, cD) {
-          if (!(CD instanceof cD)) throw cD.name !== CD.constructor.name && XD(DD, "argument-error"), nD(DD, "argument-error", `Type of ${CD.constructor.name} does not match expected instance.Did you pass a reference from a different Auth SDK?`)
+        function JU(UU, RU, gU) {
+          if (!(RU instanceof gU)) throw gU.name !== RU.constructor.name && xU(UU, "argument-error"), IU(UU, "argument-error", `Type of ${RU.constructor.name} does not match expected instance.Did you pass a reference from a different Auth SDK?`)
         }
 
-        function PD(DD) {
-          for (var CD = arguments.length, cD = new Array(CD > 1 ? CD - 1 : 0), ID = 1; ID < CD; ID++) cD[ID - 1] = arguments[ID];
-          if ("string" !== typeof DD) {
-            const CD = cD[0],
-              ID = [...cD.slice(1)];
-            return ID[0] && (ID[0].appName = DD.name), DD._errorFactory.create(CD, ...ID)
+        function wU(UU) {
+          for (var RU = arguments.length, gU = new Array(RU > 1 ? RU - 1 : 0), tU = 1; tU < RU; tU++) gU[tU - 1] = arguments[tU];
+          if ("string" !== typeof UU) {
+            const RU = gU[0],
+              tU = [...gU.slice(1)];
+            return tU[0] && (tU[0].appName = UU.name), UU._errorFactory.create(RU, ...tU)
           }
-          return oD.create(DD, ...cD)
+          return QU.create(UU, ...gU)
         }
 
-        function HD(DD, CD) {
-          if (!DD) {
-            for (var cD = arguments.length, ID = new Array(cD > 2 ? cD - 2 : 0), pD = 2; pD < cD; pD++) ID[pD - 2] = arguments[pD];
-            throw PD(CD, ...ID)
+        function nU(UU, RU) {
+          if (!UU) {
+            for (var gU = arguments.length, tU = new Array(gU > 2 ? gU - 2 : 0), pU = 2; pU < gU; pU++) tU[pU - 2] = arguments[pU];
+            throw wU(RU, ...tU)
           }
         }
 
-        function UD(DD) {
-          const CD = "INTERNAL ASSERTION FAILED: " + DD;
-          throw gD(CD), new Error(CD)
+        function bU(UU) {
+          const RU = "INTERNAL ASSERTION FAILED: " + UU;
+          throw fU(RU), new Error(RU)
         }
 
-        function xD(DD, CD) {
-          DD || UD(CD)
+        function oU(UU, RU) {
+          UU || bU(RU)
         }
 
-        function qD() {
-          var DD;
-          return "undefined" !== typeof self && (null === (DD = self.location) || void 0 === DD ? void 0 : DD.href) || ""
+        function ZU() {
+          var UU;
+          return "undefined" !== typeof self && (null === (UU = self.location) || void 0 === UU ? void 0 : UU.href) || ""
         }
 
-        function JD() {
-          return "http:" === KD() || "https:" === KD()
+        function aU() {
+          return "http:" === YU() || "https:" === YU()
         }
 
-        function KD() {
-          var DD;
-          return "undefined" !== typeof self && (null === (DD = self.location) || void 0 === DD ? void 0 : DD.protocol) || null
+        function YU() {
+          var UU;
+          return "undefined" !== typeof self && (null === (UU = self.location) || void 0 === UU ? void 0 : UU.protocol) || null
         }
-        class aD {
-          constructor(DD, CD) {
-            this.shortDelay = DD, this.longDelay = CD, xD(CD > DD, "Short delay should be less than long delay!"), this.isMobile = (0, ID.bb)() || (0, ID.fb)()
+        class BU {
+          constructor(UU, RU) {
+            this.shortDelay = UU, this.longDelay = RU, oU(RU > UU, "Short delay should be less than long delay!"), this.isMobile = (0, tU.Q)() || (0, tU.U)()
           }
           get() {
-            return "undefined" !== typeof navigator && navigator && "onLine" in navigator && "boolean" === typeof navigator.onLine && (JD() || (0, ID.U)() || "connection" in navigator) && !navigator.onLine ? Math.min(5e3, this.shortDelay) : this.isMobile ? this.longDelay : this.shortDelay
+            return "undefined" !== typeof navigator && navigator && "onLine" in navigator && "boolean" === typeof navigator.onLine && (aU() || (0, tU.M)() || "connection" in navigator) && !navigator.onLine ? Math.min(5e3, this.shortDelay) : this.isMobile ? this.longDelay : this.shortDelay
           }
         }
 
-        function VD(DD, CD) {
-          xD(DD.emulator, "Emulator should always be set here");
+        function VU(UU, RU) {
+          oU(UU.emulator, "Emulator should always be set here");
           const {
-            url: cD
-          } = DD.emulator;
-          return CD ? `${cD}${CD.startsWith("/")?CD.slice(1):CD}` : cD
+            url: gU
+          } = UU.emulator;
+          return RU ? `${gU}${RU.startsWith("/")?RU.slice(1):RU}` : gU
         }
-        class zD {
-          static initialize(DD, CD, cD) {
-            this.fetchImpl = DD, CD && (this.headersImpl = CD), cD && (this.responseImpl = cD)
+        class rU {
+          static initialize(UU, RU, gU) {
+            this.fetchImpl = UU, RU && (this.headersImpl = RU), gU && (this.responseImpl = gU)
           }
           static fetch() {
-            return this.fetchImpl ? this.fetchImpl : "undefined" !== typeof self && "fetch" in self ? self.fetch : void UD("Could not find fetch implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
+            return this.fetchImpl ? this.fetchImpl : "undefined" !== typeof self && "fetch" in self ? self.fetch : void bU("Could not find fetch implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
           }
           static headers() {
-            return this.headersImpl ? this.headersImpl : "undefined" !== typeof self && "Headers" in self ? self.Headers : void UD("Could not find Headers implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
+            return this.headersImpl ? this.headersImpl : "undefined" !== typeof self && "Headers" in self ? self.Headers : void bU("Could not find Headers implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
           }
           static response() {
-            return this.responseImpl ? this.responseImpl : "undefined" !== typeof self && "Response" in self ? self.Response : void UD("Could not find Response implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
+            return this.responseImpl ? this.responseImpl : "undefined" !== typeof self && "Response" in self ? self.Response : void bU("Could not find Response implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
           }
         }
-        const jD = {
+        const XU = {
             CREDENTIAL_MISMATCH: "custom-token-mismatch",
             MISSING_CUSTOM_TOKEN: "internal-error",
             INVALID_IDENTIFIER: "invalid-email",
@@ -511,74 +511,74 @@ export const modules = {
             INVALID_RECAPTCHA_VERSION: "invalid-recaptcha-version",
             INVALID_REQ_TYPE: "invalid-req-type"
           },
-          lD = new aD(3e4, 6e4);
+          vU = new BU(3e4, 6e4);
 
-        function LD(DD, CD) {
-          return DD.tenantId && !CD.tenantId ? Object.assign(Object.assign({}, CD), {
-            tenantId: DD.tenantId
-          }) : CD
+        function dU(UU, RU) {
+          return UU.tenantId && !RU.tenantId ? Object.assign(Object.assign({}, RU), {
+            tenantId: UU.tenantId
+          }) : RU
         }
-        async function TD(DD, CD, cD, pD) {
-          return GD(DD, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, (async () => {
-            let iD = {},
-              fD = {};
-            pD && ("GET" === CD ? fD = pD : iD = {
-              body: JSON.stringify(pD)
+        async function HU(UU, RU, gU, pU) {
+          return SU(UU, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, (async () => {
+            let EU = {},
+              PU = {};
+            pU && ("GET" === RU ? PU = pU : EU = {
+              body: JSON.stringify(pU)
             });
-            const bD = (0, ID.kb)(Object.assign({
-                key: DD.config.apiKey
-              }, fD)).slice(1),
-              QD = await DD._getAdditionalHeaders();
-            return QD["Content-Type"] = "application/json", DD.languageCode && (QD["X-Firebase-Locale"] = DD.languageCode), zD.fetch()(kD(DD, DD.config.apiHost, cD, bD), Object.assign({
-              method: CD,
-              headers: QD,
+            const TU = (0, tU._)(Object.assign({
+                key: UU.config.apiKey
+              }, PU)).slice(1),
+              qU = await UU._getAdditionalHeaders();
+            return qU["Content-Type"] = "application/json", UU.languageCode && (qU["X-Firebase-Locale"] = UU.languageCode), rU.fetch()(yU(UU, UU.config.apiHost, gU, TU), Object.assign({
+              method: RU,
+              headers: qU,
               referrerPolicy: "no-referrer"
-            }, iD))
+            }, EU))
           }))
         }
-        async function GD(DD, CD, cD) {
-          DD._canInitEmulator = !1;
-          const pD = Object.assign(Object.assign({}, jD), CD);
+        async function SU(UU, RU, gU) {
+          UU._canInitEmulator = !1;
+          const pU = Object.assign(Object.assign({}, XU), RU);
           try {
-            const CD = new dD(DD),
-              ID = await Promise.race([cD(), CD.promise]);
-            CD.clearNetworkTimeout();
-            const iD = await ID.json();
-            if ("needConfirmation" in iD) throw YD(DD, "account-exists-with-different-credential", iD);
-            if (ID.ok && !("errorMessage" in iD)) return iD;
+            const RU = new kU(UU),
+              tU = await Promise.race([gU(), RU.promise]);
+            RU.clearNetworkTimeout();
+            const EU = await tU.json();
+            if ("needConfirmation" in EU) throw FU(UU, "account-exists-with-different-credential", EU);
+            if (tU.ok && !("errorMessage" in EU)) return EU;
             {
-              const CD = ID.ok ? iD.errorMessage : iD.error.message,
-                [cD, fD] = CD.split(" : ");
-              if ("FEDERATED_USER_ID_ALREADY_LINKED" === cD) throw YD(DD, "credential-already-in-use", iD);
-              if ("EMAIL_EXISTS" === cD) throw YD(DD, "email-already-in-use", iD);
-              if ("USER_DISABLED" === cD) throw YD(DD, "user-disabled", iD);
-              const bD = pD[cD] || cD.toLowerCase().replace(/[_\s]+/g, "-");
-              if (fD) throw nD(DD, bD, fD);
-              XD(DD, bD)
+              const RU = tU.ok ? EU.errorMessage : EU.error.message,
+                [gU, PU] = RU.split(" : ");
+              if ("FEDERATED_USER_ID_ALREADY_LINKED" === gU) throw FU(UU, "credential-already-in-use", EU);
+              if ("EMAIL_EXISTS" === gU) throw FU(UU, "email-already-in-use", EU);
+              if ("USER_DISABLED" === gU) throw FU(UU, "user-disabled", EU);
+              const TU = pU[gU] || gU.toLowerCase().replace(/[_\s]+/g, "-");
+              if (PU) throw IU(UU, TU, PU);
+              xU(UU, TU)
             }
-          } catch (iD) {
-            if (iD instanceof ID.k) throw iD;
-            XD(DD, "network-request-failed", {
-              message: String(iD)
+          } catch (EU) {
+            if (EU instanceof tU.i) throw EU;
+            xU(UU, "network-request-failed", {
+              message: String(EU)
             })
           }
         }
-        async function RD(DD, CD, cD, ID) {
-          let pD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-          const iD = await TD(DD, CD, cD, ID, pD);
-          return "mfaPendingCredential" in iD && XD(DD, "multi-factor-auth-required", {
-            _serverResponse: iD
-          }), iD
+        async function sU(UU, RU, gU, tU) {
+          let pU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+          const EU = await HU(UU, RU, gU, tU, pU);
+          return "mfaPendingCredential" in EU && xU(UU, "multi-factor-auth-required", {
+            _serverResponse: EU
+          }), EU
         }
 
-        function kD(DD, CD, cD, ID) {
-          const pD = `${CD}${cD}?${ID}`;
-          return DD.config.emulator ? VD(DD.config, pD) : `${DD.config.apiScheme}://${pD}`
+        function yU(UU, RU, gU, tU) {
+          const pU = `${RU}${gU}?${tU}`;
+          return UU.config.emulator ? VU(UU.config, pU) : `${UU.config.apiScheme}://${pU}`
         }
-        class dD {
-          constructor(DD) {
-            this.auth = DD, this.timer = null, this.promise = new Promise(((DD, CD) => {
-              this.timer = setTimeout((() => CD(mD(this.auth, "network-request-failed"))), lD.get())
+        class kU {
+          constructor(UU) {
+            this.auth = UU, this.timer = null, this.promise = new Promise(((UU, RU) => {
+              this.timer = setTimeout((() => RU(mU(this.auth, "network-request-failed"))), vU.get())
             }))
           }
           clearNetworkTimeout() {
@@ -586,75 +586,75 @@ export const modules = {
           }
         }
 
-        function YD(DD, CD, cD) {
-          const ID = {
-            appName: DD.name
+        function FU(UU, RU, gU) {
+          const tU = {
+            appName: UU.name
           };
-          cD.email && (ID.email = cD.email), cD.phoneNumber && (ID.phoneNumber = cD.phoneNumber);
-          const pD = mD(DD, CD, ID);
-          return pD.customData._tokenResponse = cD, pD
+          gU.email && (tU.email = gU.email), gU.phoneNumber && (tU.phoneNumber = gU.phoneNumber);
+          const pU = mU(UU, RU, tU);
+          return pU.customData._tokenResponse = gU, pU
         }
 
-        function WD(DD) {
-          if (DD) try {
-            const CD = new Date(Number(DD));
-            if (!isNaN(CD.getTime())) return CD.toUTCString()
-          } catch (CD) {}
+        function iU(UU) {
+          if (UU) try {
+            const RU = new Date(Number(UU));
+            if (!isNaN(RU.getTime())) return RU.toUTCString()
+          } catch (RU) {}
         }
 
-        function sD(DD) {
-          let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          return (0, ID.P)(DD).getIdToken(CD)
+        function AU(UU) {
+          let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          return (0, tU.I)(UU).getIdToken(RU)
         }
-        async function ED(DD) {
-          let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          const cD = (0, ID.P)(DD),
-            pD = await cD.getIdToken(CD),
-            iD = uD(pD);
-          HD(iD && iD.exp && iD.auth_time && iD.iat, cD.auth, "internal-error");
-          const fD = "object" === typeof iD.firebase ? iD.firebase : void 0,
-            bD = null === fD || void 0 === fD ? void 0 : fD.sign_in_provider;
+        async function zU(UU) {
+          let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          const gU = (0, tU.I)(UU),
+            pU = await gU.getIdToken(RU),
+            EU = DU(pU);
+          nU(EU && EU.exp && EU.auth_time && EU.iat, gU.auth, "internal-error");
+          const PU = "object" === typeof EU.firebase ? EU.firebase : void 0,
+            TU = null === PU || void 0 === PU ? void 0 : PU.sign_in_provider;
           return {
-            claims: iD,
-            token: pD,
-            authTime: WD(eD(iD.auth_time)),
-            issuedAtTime: WD(eD(iD.iat)),
-            expirationTime: WD(eD(iD.exp)),
-            signInProvider: bD || null,
-            signInSecondFactor: (null === fD || void 0 === fD ? void 0 : fD.sign_in_second_factor) || null
+            claims: EU,
+            token: pU,
+            authTime: iU(MU(EU.auth_time)),
+            issuedAtTime: iU(MU(EU.iat)),
+            expirationTime: iU(MU(EU.exp)),
+            signInProvider: TU || null,
+            signInSecondFactor: (null === PU || void 0 === PU ? void 0 : PU.sign_in_second_factor) || null
           }
         }
 
-        function eD(DD) {
-          return 1e3 * Number(DD)
+        function MU(UU) {
+          return 1e3 * Number(UU)
         }
 
-        function uD(DD) {
-          const [CD, cD, pD] = DD.split(".");
-          if (void 0 === CD || void 0 === cD || void 0 === pD) return gD("JWT malformed, contained fewer than 3 sections"), null;
+        function DU(UU) {
+          const [RU, gU, pU] = UU.split(".");
+          if (void 0 === RU || void 0 === gU || void 0 === pU) return fU("JWT malformed, contained fewer than 3 sections"), null;
           try {
-            const DD = (0, ID.q)(cD);
-            return DD ? JSON.parse(DD) : (gD("Failed to decode base64 JWT payload"), null)
-          } catch (iD) {
-            return gD("Caught error parsing JWT payload as JSON", null === iD || void 0 === iD ? void 0 : iD.toString()), null
+            const UU = (0, tU.n)(gU);
+            return UU ? JSON.parse(UU) : (fU("Failed to decode base64 JWT payload"), null)
+          } catch (EU) {
+            return fU("Caught error parsing JWT payload as JSON", null === EU || void 0 === EU ? void 0 : EU.toString()), null
           }
         }
-        async function hD(DD, CD) {
-          if (arguments.length > 2 && void 0 !== arguments[2] && arguments[2]) return CD;
+        async function LU(UU, RU) {
+          if (arguments.length > 2 && void 0 !== arguments[2] && arguments[2]) return RU;
           try {
-            return await CD
-          } catch (cD) {
-            throw cD instanceof ID.k && function(DD) {
+            return await RU
+          } catch (gU) {
+            throw gU instanceof tU.i && function(UU) {
               let {
-                code: CD
-              } = DD;
-              return "auth/user-disabled" === CD || "auth/user-token-expired" === CD
-            }(cD) && DD.auth.currentUser === DD && await DD.auth.signOut(), cD
+                code: RU
+              } = UU;
+              return "auth/user-disabled" === RU || "auth/user-token-expired" === RU
+            }(gU) && UU.auth.currentUser === UU && await UU.auth.signOut(), gU
           }
         }
-        class rD {
-          constructor(DD) {
-            this.user = DD, this.isRunning = !1, this.timerId = null, this.errorBackoff = 3e4
+        class NU {
+          constructor(UU) {
+            this.user = UU, this.isRunning = !1, this.timerId = null, this.errorBackoff = 3e4
           }
           _start() {
             this.isRunning || (this.isRunning = !0, this.schedule())
@@ -662,43 +662,43 @@ export const modules = {
           _stop() {
             this.isRunning && (this.isRunning = !1, null !== this.timerId && clearTimeout(this.timerId))
           }
-          getInterval(DD) {
-            var CD;
-            if (DD) {
-              const DD = this.errorBackoff;
-              return this.errorBackoff = Math.min(2 * this.errorBackoff, 96e4), DD
+          getInterval(UU) {
+            var RU;
+            if (UU) {
+              const UU = this.errorBackoff;
+              return this.errorBackoff = Math.min(2 * this.errorBackoff, 96e4), UU
             } {
               this.errorBackoff = 3e4;
-              const DD = (null !== (CD = this.user.stsTokenManager.expirationTime) && void 0 !== CD ? CD : 0) - Date.now() - 3e5;
-              return Math.max(0, DD)
+              const UU = (null !== (RU = this.user.stsTokenManager.expirationTime) && void 0 !== RU ? RU : 0) - Date.now() - 3e5;
+              return Math.max(0, UU)
             }
           }
           schedule() {
-            let DD = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+            let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
             if (!this.isRunning) return;
-            const CD = this.getInterval(DD);
+            const RU = this.getInterval(UU);
             this.timerId = setTimeout((async () => {
               await this.iteration()
-            }), CD)
+            }), RU)
           }
           async iteration() {
             try {
               await this.user.getIdToken(!0)
-            } catch (DD) {
-              return void("auth/network-request-failed" === (null === DD || void 0 === DD ? void 0 : DD.code) && this.schedule(!0))
+            } catch (UU) {
+              return void("auth/network-request-failed" === (null === UU || void 0 === UU ? void 0 : UU.code) && this.schedule(!0))
             }
             this.schedule()
           }
         }
-        class AD {
-          constructor(DD, CD) {
-            this.createdAt = DD, this.lastLoginAt = CD, this._initializeTime()
+        class lU {
+          constructor(UU, RU) {
+            this.createdAt = UU, this.lastLoginAt = RU, this._initializeTime()
           }
           _initializeTime() {
-            this.lastSignInTime = WD(this.lastLoginAt), this.creationTime = WD(this.createdAt)
+            this.lastSignInTime = iU(this.lastLoginAt), this.creationTime = iU(this.createdAt)
           }
-          _copy(DD) {
-            this.createdAt = DD.createdAt, this.lastLoginAt = DD.lastLoginAt, this._initializeTime()
+          _copy(UU) {
+            this.createdAt = UU.createdAt, this.lastLoginAt = UU.lastLoginAt, this._initializeTime()
           }
           toJSON() {
             return {
@@ -707,123 +707,123 @@ export const modules = {
             }
           }
         }
-        async function FD(DD) {
-          var CD;
-          const cD = DD.auth,
-            ID = await DD.getIdToken(),
-            pD = await hD(DD, async function(DD, CD) {
-              return TD(DD, "POST", "/v1/accounts:lookup", CD)
-            }(cD, {
-              idToken: ID
+        async function OU(UU) {
+          var RU;
+          const gU = UU.auth,
+            tU = await UU.getIdToken(),
+            pU = await LU(UU, async function(UU, RU) {
+              return HU(UU, "POST", "/v1/accounts:lookup", RU)
+            }(gU, {
+              idToken: tU
             }));
-          HD(null === pD || void 0 === pD ? void 0 : pD.users.length, cD, "internal-error");
-          const fD = pD.users[0];
-          DD._notifyReloadListener(fD);
-          const bD = (null === (CD = fD.providerUserInfo) || void 0 === CD ? void 0 : CD.length) ? fD.providerUserInfo.map((DD => {
+          nU(null === pU || void 0 === pU ? void 0 : pU.users.length, gU, "internal-error");
+          const PU = pU.users[0];
+          UU._notifyReloadListener(PU);
+          const TU = (null === (RU = PU.providerUserInfo) || void 0 === RU ? void 0 : RU.length) ? PU.providerUserInfo.map((UU => {
             var {
-              providerId: CD
-            } = DD, cD = iD(DD, ["providerId"]);
+              providerId: RU
+            } = UU, gU = EU(UU, ["providerId"]);
             return {
-              providerId: CD,
-              uid: cD.rawId || "",
-              displayName: cD.displayName || null,
-              email: cD.email || null,
-              phoneNumber: cD.phoneNumber || null,
-              photoURL: cD.photoUrl || null
+              providerId: RU,
+              uid: gU.rawId || "",
+              displayName: gU.displayName || null,
+              email: gU.email || null,
+              phoneNumber: gU.phoneNumber || null,
+              photoURL: gU.photoUrl || null
             }
           })) : [];
-          const QD = (wD = DD.providerData, SD = bD, [...wD.filter((DD => !SD.some((CD => CD.providerId === DD.providerId)))), ...SD]);
-          var wD, SD;
-          const BD = DD.isAnonymous,
-            yD = !(DD.email && fD.passwordHash) && !(null === QD || void 0 === QD ? void 0 : QD.length),
-            MD = !!BD && yD,
-            tD = {
-              uid: fD.localId,
-              displayName: fD.displayName || null,
-              photoURL: fD.photoUrl || null,
-              email: fD.email || null,
-              emailVerified: fD.emailVerified || !1,
-              phoneNumber: fD.phoneNumber || null,
-              tenantId: fD.tenantId || null,
-              providerData: QD,
-              metadata: new AD(fD.createdAt, fD.lastLoginAt),
-              isAnonymous: MD
+          const qU = (KU = UU.providerData, cU = TU, [...KU.filter((UU => !cU.some((RU => RU.providerId === UU.providerId)))), ...cU]);
+          var KU, cU;
+          const GU = UU.isAnonymous,
+            jU = !(UU.email && PU.passwordHash) && !(null === qU || void 0 === qU ? void 0 : qU.length),
+            uU = !!GU && jU,
+            CU = {
+              uid: PU.localId,
+              displayName: PU.displayName || null,
+              photoURL: PU.photoUrl || null,
+              email: PU.email || null,
+              emailVerified: PU.emailVerified || !1,
+              phoneNumber: PU.phoneNumber || null,
+              tenantId: PU.tenantId || null,
+              providerData: qU,
+              metadata: new lU(PU.createdAt, PU.lastLoginAt),
+              isAnonymous: uU
             };
-          Object.assign(DD, tD)
+          Object.assign(UU, CU)
         }
-        async function DC(DD) {
-          const CD = (0, ID.P)(DD);
-          await FD(CD), await CD.auth._persistUserIfCurrent(CD), CD.auth._notifyListenersIfCurrent(CD)
+        async function UR(UU) {
+          const RU = (0, tU.I)(UU);
+          await OU(RU), await RU.auth._persistUserIfCurrent(RU), RU.auth._notifyListenersIfCurrent(RU)
         }
-        class CC {
+        class RR {
           constructor() {
             this.refreshToken = null, this.accessToken = null, this.expirationTime = null
           }
           get isExpired() {
             return !this.expirationTime || Date.now() > this.expirationTime - 3e4
           }
-          updateFromServerResponse(DD) {
-            HD(DD.idToken, "internal-error"), HD("undefined" !== typeof DD.idToken, "internal-error"), HD("undefined" !== typeof DD.refreshToken, "internal-error");
-            const CD = "expiresIn" in DD && "undefined" !== typeof DD.expiresIn ? Number(DD.expiresIn) : function(DD) {
-              const CD = uD(DD);
-              return HD(CD, "internal-error"), HD("undefined" !== typeof CD.exp, "internal-error"), HD("undefined" !== typeof CD.iat, "internal-error"), Number(CD.exp) - Number(CD.iat)
-            }(DD.idToken);
-            this.updateTokensAndExpiration(DD.idToken, DD.refreshToken, CD)
+          updateFromServerResponse(UU) {
+            nU(UU.idToken, "internal-error"), nU("undefined" !== typeof UU.idToken, "internal-error"), nU("undefined" !== typeof UU.refreshToken, "internal-error");
+            const RU = "expiresIn" in UU && "undefined" !== typeof UU.expiresIn ? Number(UU.expiresIn) : function(UU) {
+              const RU = DU(UU);
+              return nU(RU, "internal-error"), nU("undefined" !== typeof RU.exp, "internal-error"), nU("undefined" !== typeof RU.iat, "internal-error"), Number(RU.exp) - Number(RU.iat)
+            }(UU.idToken);
+            this.updateTokensAndExpiration(UU.idToken, UU.refreshToken, RU)
           }
-          async getToken(DD) {
-            let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            return HD(!this.accessToken || this.refreshToken, DD, "user-token-expired"), CD || !this.accessToken || this.isExpired ? this.refreshToken ? (await this.refresh(DD, this.refreshToken), this.accessToken) : null : this.accessToken
+          async getToken(UU) {
+            let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            return nU(!this.accessToken || this.refreshToken, UU, "user-token-expired"), RU || !this.accessToken || this.isExpired ? this.refreshToken ? (await this.refresh(UU, this.refreshToken), this.accessToken) : null : this.accessToken
           }
           clearRefreshToken() {
             this.refreshToken = null
           }
-          async refresh(DD, CD) {
+          async refresh(UU, RU) {
             const {
-              accessToken: cD,
-              refreshToken: pD,
-              expiresIn: iD
-            } = await async function(DD, CD) {
-              const cD = await GD(DD, {}, (async () => {
-                const cD = (0, ID.kb)({
+              accessToken: gU,
+              refreshToken: pU,
+              expiresIn: EU
+            } = await async function(UU, RU) {
+              const gU = await SU(UU, {}, (async () => {
+                const gU = (0, tU._)({
                     grant_type: "refresh_token",
-                    refresh_token: CD
+                    refresh_token: RU
                   }).slice(1),
                   {
-                    tokenApiHost: pD,
-                    apiKey: iD
-                  } = DD.config,
-                  fD = kD(DD, pD, "/v1/token", `key=${iD}`),
-                  bD = await DD._getAdditionalHeaders();
-                return bD["Content-Type"] = "application/x-www-form-urlencoded", zD.fetch()(fD, {
+                    tokenApiHost: pU,
+                    apiKey: EU
+                  } = UU.config,
+                  PU = yU(UU, pU, "/v1/token", `key=${EU}`),
+                  TU = await UU._getAdditionalHeaders();
+                return TU["Content-Type"] = "application/x-www-form-urlencoded", rU.fetch()(PU, {
                   method: "POST",
-                  headers: bD,
-                  body: cD
+                  headers: TU,
+                  body: gU
                 })
               }));
               return {
-                accessToken: cD.access_token,
-                expiresIn: cD.expires_in,
-                refreshToken: cD.refresh_token
+                accessToken: gU.access_token,
+                expiresIn: gU.expires_in,
+                refreshToken: gU.refresh_token
               }
-            }(DD, CD);
-            this.updateTokensAndExpiration(cD, pD, Number(iD))
+            }(UU, RU);
+            this.updateTokensAndExpiration(gU, pU, Number(EU))
           }
-          updateTokensAndExpiration(DD, CD, cD) {
-            this.refreshToken = CD || null, this.accessToken = DD || null, this.expirationTime = Date.now() + 1e3 * cD
+          updateTokensAndExpiration(UU, RU, gU) {
+            this.refreshToken = RU || null, this.accessToken = UU || null, this.expirationTime = Date.now() + 1e3 * gU
           }
-          static fromJSON(DD, CD) {
+          static fromJSON(UU, RU) {
             const {
-              refreshToken: cD,
-              accessToken: ID,
-              expirationTime: pD
-            } = CD, iD = new CC;
-            return cD && (HD("string" === typeof cD, "internal-error", {
-              appName: DD
-            }), iD.refreshToken = cD), ID && (HD("string" === typeof ID, "internal-error", {
-              appName: DD
-            }), iD.accessToken = ID), pD && (HD("number" === typeof pD, "internal-error", {
-              appName: DD
-            }), iD.expirationTime = pD), iD
+              refreshToken: gU,
+              accessToken: tU,
+              expirationTime: pU
+            } = RU, EU = new RR;
+            return gU && (nU("string" === typeof gU, "internal-error", {
+              appName: UU
+            }), EU.refreshToken = gU), tU && (nU("string" === typeof tU, "internal-error", {
+              appName: UU
+            }), EU.accessToken = tU), pU && (nU("number" === typeof pU, "internal-error", {
+              appName: UU
+            }), EU.expirationTime = pU), EU
           }
           toJSON() {
             return {
@@ -832,56 +832,56 @@ export const modules = {
               expirationTime: this.expirationTime
             }
           }
-          _assign(DD) {
-            this.accessToken = DD.accessToken, this.refreshToken = DD.refreshToken, this.expirationTime = DD.expirationTime
+          _assign(UU) {
+            this.accessToken = UU.accessToken, this.refreshToken = UU.refreshToken, this.expirationTime = UU.expirationTime
           }
           _clone() {
-            return Object.assign(new CC, this.toJSON())
+            return Object.assign(new RR, this.toJSON())
           }
           _performRefresh() {
-            return UD("not implemented")
+            return bU("not implemented")
           }
         }
 
-        function cC(DD, CD) {
-          HD("string" === typeof DD || "undefined" === typeof DD, "internal-error", {
-            appName: CD
+        function gR(UU, RU) {
+          nU("string" === typeof UU || "undefined" === typeof UU, "internal-error", {
+            appName: RU
           })
         }
-        class IC {
-          constructor(DD) {
+        class tR {
+          constructor(UU) {
             var {
-              uid: CD,
-              auth: cD,
-              stsTokenManager: ID
-            } = DD, pD = iD(DD, ["uid", "auth", "stsTokenManager"]);
-            this.providerId = "firebase", this.proactiveRefresh = new rD(this), this.reloadUserInfo = null, this.reloadListener = null, this.uid = CD, this.auth = cD, this.stsTokenManager = ID, this.accessToken = ID.accessToken, this.displayName = pD.displayName || null, this.email = pD.email || null, this.emailVerified = pD.emailVerified || !1, this.phoneNumber = pD.phoneNumber || null, this.photoURL = pD.photoURL || null, this.isAnonymous = pD.isAnonymous || !1, this.tenantId = pD.tenantId || null, this.providerData = pD.providerData ? [...pD.providerData] : [], this.metadata = new AD(pD.createdAt || void 0, pD.lastLoginAt || void 0)
+              uid: RU,
+              auth: gU,
+              stsTokenManager: tU
+            } = UU, pU = EU(UU, ["uid", "auth", "stsTokenManager"]);
+            this.providerId = "firebase", this.proactiveRefresh = new NU(this), this.reloadUserInfo = null, this.reloadListener = null, this.uid = RU, this.auth = gU, this.stsTokenManager = tU, this.accessToken = tU.accessToken, this.displayName = pU.displayName || null, this.email = pU.email || null, this.emailVerified = pU.emailVerified || !1, this.phoneNumber = pU.phoneNumber || null, this.photoURL = pU.photoURL || null, this.isAnonymous = pU.isAnonymous || !1, this.tenantId = pU.tenantId || null, this.providerData = pU.providerData ? [...pU.providerData] : [], this.metadata = new lU(pU.createdAt || void 0, pU.lastLoginAt || void 0)
           }
-          async getIdToken(DD) {
-            const CD = await hD(this, this.stsTokenManager.getToken(this.auth, DD));
-            return HD(CD, this.auth, "internal-error"), this.accessToken !== CD && (this.accessToken = CD, await this.auth._persistUserIfCurrent(this), this.auth._notifyListenersIfCurrent(this)), CD
+          async getIdToken(UU) {
+            const RU = await LU(this, this.stsTokenManager.getToken(this.auth, UU));
+            return nU(RU, this.auth, "internal-error"), this.accessToken !== RU && (this.accessToken = RU, await this.auth._persistUserIfCurrent(this), this.auth._notifyListenersIfCurrent(this)), RU
           }
-          getIdTokenResult(DD) {
-            return ED(this, DD)
+          getIdTokenResult(UU) {
+            return zU(this, UU)
           }
           reload() {
-            return DC(this)
+            return UR(this)
           }
-          _assign(DD) {
-            this !== DD && (HD(this.uid === DD.uid, this.auth, "internal-error"), this.displayName = DD.displayName, this.photoURL = DD.photoURL, this.email = DD.email, this.emailVerified = DD.emailVerified, this.phoneNumber = DD.phoneNumber, this.isAnonymous = DD.isAnonymous, this.tenantId = DD.tenantId, this.providerData = DD.providerData.map((DD => Object.assign({}, DD))), this.metadata._copy(DD.metadata), this.stsTokenManager._assign(DD.stsTokenManager))
+          _assign(UU) {
+            this !== UU && (nU(this.uid === UU.uid, this.auth, "internal-error"), this.displayName = UU.displayName, this.photoURL = UU.photoURL, this.email = UU.email, this.emailVerified = UU.emailVerified, this.phoneNumber = UU.phoneNumber, this.isAnonymous = UU.isAnonymous, this.tenantId = UU.tenantId, this.providerData = UU.providerData.map((UU => Object.assign({}, UU))), this.metadata._copy(UU.metadata), this.stsTokenManager._assign(UU.stsTokenManager))
           }
-          _clone(DD) {
-            const CD = new IC(Object.assign(Object.assign({}, this), {
-              auth: DD,
+          _clone(UU) {
+            const RU = new tR(Object.assign(Object.assign({}, this), {
+              auth: UU,
               stsTokenManager: this.stsTokenManager._clone()
             }));
-            return CD.metadata._copy(this.metadata), CD
+            return RU.metadata._copy(this.metadata), RU
           }
-          _onReload(DD) {
-            HD(!this.reloadListener, this.auth, "internal-error"), this.reloadListener = DD, this.reloadUserInfo && (this._notifyReloadListener(this.reloadUserInfo), this.reloadUserInfo = null)
+          _onReload(UU) {
+            nU(!this.reloadListener, this.auth, "internal-error"), this.reloadListener = UU, this.reloadUserInfo && (this._notifyReloadListener(this.reloadUserInfo), this.reloadUserInfo = null)
           }
-          _notifyReloadListener(DD) {
-            this.reloadListener ? this.reloadListener(DD) : this.reloadUserInfo = DD
+          _notifyReloadListener(UU) {
+            this.reloadListener ? this.reloadListener(UU) : this.reloadUserInfo = UU
           }
           _startProactiveRefresh() {
             this.proactiveRefresh._start()
@@ -889,17 +889,17 @@ export const modules = {
           _stopProactiveRefresh() {
             this.proactiveRefresh._stop()
           }
-          async _updateTokensIfNecessary(DD) {
-            let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-              cD = !1;
-            DD.idToken && DD.idToken !== this.stsTokenManager.accessToken && (this.stsTokenManager.updateFromServerResponse(DD), cD = !0), CD && await FD(this), await this.auth._persistUserIfCurrent(this), cD && this.auth._notifyListenersIfCurrent(this)
+          async _updateTokensIfNecessary(UU) {
+            let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+              gU = !1;
+            UU.idToken && UU.idToken !== this.stsTokenManager.accessToken && (this.stsTokenManager.updateFromServerResponse(UU), gU = !0), RU && await OU(this), await this.auth._persistUserIfCurrent(this), gU && this.auth._notifyListenersIfCurrent(this)
           }
           async delete() {
-            const DD = await this.getIdToken();
-            return await hD(this, async function(DD, CD) {
-              return TD(DD, "POST", "/v1/accounts:delete", CD)
+            const UU = await this.getIdToken();
+            return await LU(this, async function(UU, RU) {
+              return HU(UU, "POST", "/v1/accounts:delete", RU)
             }(this.auth, {
-              idToken: DD
+              idToken: UU
             })), this.stsTokenManager.clearRefreshToken(), this.auth.signOut()
           }
           toJSON() {
@@ -912,7 +912,7 @@ export const modules = {
               photoURL: this.photoURL || void 0,
               phoneNumber: this.phoneNumber || void 0,
               tenantId: this.tenantId || void 0,
-              providerData: this.providerData.map((DD => Object.assign({}, DD))),
+              providerData: this.providerData.map((UU => Object.assign({}, UU))),
               stsTokenManager: this.stsTokenManager.toJSON(),
               _redirectEventId: this._redirectEventId
             }, this.metadata.toJSON()), {
@@ -923,103 +923,103 @@ export const modules = {
           get refreshToken() {
             return this.stsTokenManager.refreshToken || ""
           }
-          static _fromJSON(DD, CD) {
-            var cD, ID, pD, iD, fD, bD, QD, wD;
-            const SD = null !== (cD = CD.displayName) && void 0 !== cD ? cD : void 0,
-              BD = null !== (ID = CD.email) && void 0 !== ID ? ID : void 0,
-              yD = null !== (pD = CD.phoneNumber) && void 0 !== pD ? pD : void 0,
-              MD = null !== (iD = CD.photoURL) && void 0 !== iD ? iD : void 0,
-              tD = null !== (fD = CD.tenantId) && void 0 !== fD ? fD : void 0,
-              ZD = null !== (bD = CD._redirectEventId) && void 0 !== bD ? bD : void 0,
-              oD = null !== (QD = CD.createdAt) && void 0 !== QD ? QD : void 0,
-              vD = null !== (wD = CD.lastLoginAt) && void 0 !== wD ? wD : void 0,
+          static _fromJSON(UU, RU) {
+            var gU, tU, pU, EU, PU, TU, qU, KU;
+            const cU = null !== (gU = RU.displayName) && void 0 !== gU ? gU : void 0,
+              GU = null !== (tU = RU.email) && void 0 !== tU ? tU : void 0,
+              jU = null !== (pU = RU.phoneNumber) && void 0 !== pU ? pU : void 0,
+              uU = null !== (EU = RU.photoURL) && void 0 !== EU ? EU : void 0,
+              CU = null !== (PU = RU.tenantId) && void 0 !== PU ? PU : void 0,
+              hU = null !== (TU = RU._redirectEventId) && void 0 !== TU ? TU : void 0,
+              QU = null !== (qU = RU.createdAt) && void 0 !== qU ? qU : void 0,
+              eU = null !== (KU = RU.lastLoginAt) && void 0 !== KU ? KU : void 0,
               {
-                uid: ND,
-                emailVerified: gD,
-                isAnonymous: XD,
-                providerData: mD,
-                stsTokenManager: nD
-              } = CD;
-            HD(ND && nD, DD, "internal-error");
-            const OD = CC.fromJSON(this.name, nD);
-            HD("string" === typeof ND, DD, "internal-error"), cC(SD, DD.name), cC(BD, DD.name), HD("boolean" === typeof gD, DD, "internal-error"), HD("boolean" === typeof XD, DD, "internal-error"), cC(yD, DD.name), cC(MD, DD.name), cC(tD, DD.name), cC(ZD, DD.name), cC(oD, DD.name), cC(vD, DD.name);
-            const PD = new IC({
-              uid: ND,
-              auth: DD,
-              email: BD,
-              emailVerified: gD,
-              displayName: SD,
-              isAnonymous: XD,
-              photoURL: MD,
-              phoneNumber: yD,
-              tenantId: tD,
-              stsTokenManager: OD,
-              createdAt: oD,
-              lastLoginAt: vD
+                uid: WU,
+                emailVerified: fU,
+                isAnonymous: xU,
+                providerData: mU,
+                stsTokenManager: IU
+              } = RU;
+            nU(WU && IU, UU, "internal-error");
+            const JU = RR.fromJSON(this.name, IU);
+            nU("string" === typeof WU, UU, "internal-error"), gR(cU, UU.name), gR(GU, UU.name), nU("boolean" === typeof fU, UU, "internal-error"), nU("boolean" === typeof xU, UU, "internal-error"), gR(jU, UU.name), gR(uU, UU.name), gR(CU, UU.name), gR(hU, UU.name), gR(QU, UU.name), gR(eU, UU.name);
+            const wU = new tR({
+              uid: WU,
+              auth: UU,
+              email: GU,
+              emailVerified: fU,
+              displayName: cU,
+              isAnonymous: xU,
+              photoURL: uU,
+              phoneNumber: jU,
+              tenantId: CU,
+              stsTokenManager: JU,
+              createdAt: QU,
+              lastLoginAt: eU
             });
-            return mD && Array.isArray(mD) && (PD.providerData = mD.map((DD => Object.assign({}, DD)))), ZD && (PD._redirectEventId = ZD), PD
+            return mU && Array.isArray(mU) && (wU.providerData = mU.map((UU => Object.assign({}, UU)))), hU && (wU._redirectEventId = hU), wU
           }
-          static async _fromIdTokenResponse(DD, CD) {
-            let cD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-            const ID = new CC;
-            ID.updateFromServerResponse(CD);
-            const pD = new IC({
-              uid: CD.localId,
-              auth: DD,
-              stsTokenManager: ID,
-              isAnonymous: cD
+          static async _fromIdTokenResponse(UU, RU) {
+            let gU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+            const tU = new RR;
+            tU.updateFromServerResponse(RU);
+            const pU = new tR({
+              uid: RU.localId,
+              auth: UU,
+              stsTokenManager: tU,
+              isAnonymous: gU
             });
-            return await FD(pD), pD
+            return await OU(pU), pU
           }
         }
-        const pC = new Map;
+        const pR = new Map;
 
-        function iC(DD) {
-          xD(DD instanceof Function, "Expected a class definition");
-          let CD = pC.get(DD);
-          return CD ? (xD(CD instanceof DD, "Instance stored in cache mismatched with class"), CD) : (CD = new DD, pC.set(DD, CD), CD)
+        function ER(UU) {
+          oU(UU instanceof Function, "Expected a class definition");
+          let RU = pR.get(UU);
+          return RU ? (oU(RU instanceof UU, "Instance stored in cache mismatched with class"), RU) : (RU = new UU, pR.set(UU, RU), RU)
         }
-        class fC {
+        class PR {
           constructor() {
             this.type = "NONE", this.storage = {}
           }
           async _isAvailable() {
             return !0
           }
-          async _set(DD, CD) {
-            this.storage[DD] = CD
+          async _set(UU, RU) {
+            this.storage[UU] = RU
           }
-          async _get(DD) {
-            const CD = this.storage[DD];
-            return void 0 === CD ? null : CD
+          async _get(UU) {
+            const RU = this.storage[UU];
+            return void 0 === RU ? null : RU
           }
-          async _remove(DD) {
-            delete this.storage[DD]
+          async _remove(UU) {
+            delete this.storage[UU]
           }
-          _addListener(DD, CD) {}
-          _removeListener(DD, CD) {}
+          _addListener(UU, RU) {}
+          _removeListener(UU, RU) {}
         }
-        fC.type = "NONE";
-        const bC = fC;
+        PR.type = "NONE";
+        const TR = PR;
 
-        function QC(DD, CD, cD) {
-          return `firebase:${DD}:${CD}:${cD}`
+        function qR(UU, RU, gU) {
+          return `firebase:${UU}:${RU}:${gU}`
         }
-        class wC {
-          constructor(DD, CD, cD) {
-            this.persistence = DD, this.auth = CD, this.userKey = cD;
+        class KR {
+          constructor(UU, RU, gU) {
+            this.persistence = UU, this.auth = RU, this.userKey = gU;
             const {
-              config: ID,
-              name: pD
+              config: tU,
+              name: pU
             } = this.auth;
-            this.fullUserKey = QC(this.userKey, ID.apiKey, pD), this.fullPersistenceKey = QC("persistence", ID.apiKey, pD), this.boundEventHandler = CD._onStorageEvent.bind(CD), this.persistence._addListener(this.fullUserKey, this.boundEventHandler)
+            this.fullUserKey = qR(this.userKey, tU.apiKey, pU), this.fullPersistenceKey = qR("persistence", tU.apiKey, pU), this.boundEventHandler = RU._onStorageEvent.bind(RU), this.persistence._addListener(this.fullUserKey, this.boundEventHandler)
           }
-          setCurrentUser(DD) {
-            return this.persistence._set(this.fullUserKey, DD.toJSON())
+          setCurrentUser(UU) {
+            return this.persistence._set(this.fullUserKey, UU.toJSON())
           }
           async getCurrentUser() {
-            const DD = await this.persistence._get(this.fullUserKey);
-            return DD ? IC._fromJSON(this.auth, DD) : null
+            const UU = await this.persistence._get(this.fullUserKey);
+            return UU ? tR._fromJSON(this.auth, UU) : null
           }
           removeCurrentUser() {
             return this.persistence._remove(this.fullUserKey)
@@ -1027,364 +1027,364 @@ export const modules = {
           savePersistenceForRedirect() {
             return this.persistence._set(this.fullPersistenceKey, this.persistence.type)
           }
-          async setPersistence(DD) {
-            if (this.persistence === DD) return;
-            const CD = await this.getCurrentUser();
-            return await this.removeCurrentUser(), this.persistence = DD, CD ? this.setCurrentUser(CD) : void 0
+          async setPersistence(UU) {
+            if (this.persistence === UU) return;
+            const RU = await this.getCurrentUser();
+            return await this.removeCurrentUser(), this.persistence = UU, RU ? this.setCurrentUser(RU) : void 0
           }
           delete() {
             this.persistence._removeListener(this.fullUserKey, this.boundEventHandler)
           }
-          static async create(DD, CD) {
-            let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "authUser";
-            if (!CD.length) return new wC(iC(bC), DD, cD);
-            const ID = (await Promise.all(CD.map((async DD => {
-              if (await DD._isAvailable()) return DD
-            })))).filter((DD => DD));
-            let pD = ID[0] || iC(bC);
-            const iD = QC(cD, DD.config.apiKey, DD.name);
-            let fD = null;
-            for (const wD of CD) try {
-              const CD = await wD._get(iD);
-              if (CD) {
-                const cD = IC._fromJSON(DD, CD);
-                wD !== pD && (fD = cD), pD = wD;
+          static async create(UU, RU) {
+            let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "authUser";
+            if (!RU.length) return new KR(ER(TR), UU, gU);
+            const tU = (await Promise.all(RU.map((async UU => {
+              if (await UU._isAvailable()) return UU
+            })))).filter((UU => UU));
+            let pU = tU[0] || ER(TR);
+            const EU = qR(gU, UU.config.apiKey, UU.name);
+            let PU = null;
+            for (const KU of RU) try {
+              const RU = await KU._get(EU);
+              if (RU) {
+                const gU = tR._fromJSON(UU, RU);
+                KU !== pU && (PU = gU), pU = KU;
                 break
               }
-            } catch (QD) {}
-            const bD = ID.filter((DD => DD._shouldAllowMigration));
-            return pD._shouldAllowMigration && bD.length ? (pD = bD[0], fD && await pD._set(iD, fD.toJSON()), await Promise.all(CD.map((async DD => {
-              if (DD !== pD) try {
-                await DD._remove(iD)
-              } catch (QD) {}
-            }))), new wC(pD, DD, cD)) : new wC(pD, DD, cD)
+            } catch (qU) {}
+            const TU = tU.filter((UU => UU._shouldAllowMigration));
+            return pU._shouldAllowMigration && TU.length ? (pU = TU[0], PU && await pU._set(EU, PU.toJSON()), await Promise.all(RU.map((async UU => {
+              if (UU !== pU) try {
+                await UU._remove(EU)
+              } catch (qU) {}
+            }))), new KR(pU, UU, gU)) : new KR(pU, UU, gU)
           }
         }
 
-        function SC(DD) {
-          const CD = DD.toLowerCase();
-          if (CD.includes("opera/") || CD.includes("opr/") || CD.includes("opios/")) return "Opera";
-          if (tC(CD)) return "IEMobile";
-          if (CD.includes("msie") || CD.includes("trident/")) return "IE";
-          if (CD.includes("edge/")) return "Edge";
-          if (BC(CD)) return "Firefox";
-          if (CD.includes("silk/")) return "Silk";
-          if (oC(CD)) return "Blackberry";
-          if (vC(CD)) return "Webos";
-          if (yC(CD)) return "Safari";
-          if ((CD.includes("chrome/") || MC(CD)) && !CD.includes("edge/")) return "Chrome";
-          if (ZC(CD)) return "Android";
+        function cR(UU) {
+          const RU = UU.toLowerCase();
+          if (RU.includes("opera/") || RU.includes("opr/") || RU.includes("opios/")) return "Opera";
+          if (CR(RU)) return "IEMobile";
+          if (RU.includes("msie") || RU.includes("trident/")) return "IE";
+          if (RU.includes("edge/")) return "Edge";
+          if (GR(RU)) return "Firefox";
+          if (RU.includes("silk/")) return "Silk";
+          if (QR(RU)) return "Blackberry";
+          if (eR(RU)) return "Webos";
+          if (jR(RU)) return "Safari";
+          if ((RU.includes("chrome/") || uR(RU)) && !RU.includes("edge/")) return "Chrome";
+          if (hR(RU)) return "Android";
           {
-            const CD = /([a-zA-Z\d\.]+)\/[a-zA-Z\d\.]*$/,
-              cD = DD.match(CD);
-            if (2 === (null === cD || void 0 === cD ? void 0 : cD.length)) return cD[1]
+            const RU = /([a-zA-Z\d\.]+)\/[a-zA-Z\d\.]*$/,
+              gU = UU.match(RU);
+            if (2 === (null === gU || void 0 === gU ? void 0 : gU.length)) return gU[1]
           }
           return "Other"
         }
 
-        function BC() {
-          let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, ID.S)();
-          return /firefox\//i.test(DD)
+        function GR() {
+          let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, tU.J)();
+          return /firefox\//i.test(UU)
         }
 
-        function yC() {
-          const DD = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, ID.S)()).toLowerCase();
-          return DD.includes("safari/") && !DD.includes("chrome/") && !DD.includes("crios/") && !DD.includes("android")
+        function jR() {
+          const UU = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, tU.J)()).toLowerCase();
+          return UU.includes("safari/") && !UU.includes("chrome/") && !UU.includes("crios/") && !UU.includes("android")
         }
 
-        function MC() {
-          let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, ID.S)();
-          return /crios\//i.test(DD)
+        function uR() {
+          let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, tU.J)();
+          return /crios\//i.test(UU)
         }
 
-        function tC() {
-          let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, ID.S)();
-          return /iemobile/i.test(DD)
+        function CR() {
+          let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, tU.J)();
+          return /iemobile/i.test(UU)
         }
 
-        function ZC() {
-          let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, ID.S)();
-          return /android/i.test(DD)
+        function hR() {
+          let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, tU.J)();
+          return /android/i.test(UU)
         }
 
-        function oC() {
-          let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, ID.S)();
-          return /blackberry/i.test(DD)
+        function QR() {
+          let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, tU.J)();
+          return /blackberry/i.test(UU)
         }
 
-        function vC() {
-          let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, ID.S)();
-          return /webos/i.test(DD)
+        function eR() {
+          let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, tU.J)();
+          return /webos/i.test(UU)
         }
 
-        function NC() {
-          let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, ID.S)();
-          return /iphone|ipad|ipod/i.test(DD) || /macintosh/i.test(DD) && /mobile/i.test(DD)
+        function WR() {
+          let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, tU.J)();
+          return /iphone|ipad|ipod/i.test(UU) || /macintosh/i.test(UU) && /mobile/i.test(UU)
         }
 
-        function gC() {
-          let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, ID.S)();
-          return NC(DD) || ZC(DD) || vC(DD) || oC(DD) || /windows phone/i.test(DD) || tC(DD)
+        function fR() {
+          let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, tU.J)();
+          return WR(UU) || hR(UU) || eR(UU) || QR(UU) || /windows phone/i.test(UU) || CR(UU)
         }
 
-        function XC(DD) {
-          let CD, cD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-          switch (DD) {
+        function xR(UU) {
+          let RU, gU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+          switch (UU) {
             case "Browser":
-              CD = SC((0, ID.S)());
+              RU = cR((0, tU.J)());
               break;
             case "Worker":
-              CD = `${SC((0,ID.S)())}-${DD}`;
+              RU = `${cR((0,tU.J)())}-${UU}`;
               break;
             default:
-              CD = DD
+              RU = UU
           }
-          const iD = cD.length ? cD.join(",") : "FirebaseCore-web";
-          return `${CD}/JsCore/${pD.e}/${iD}`
+          const EU = gU.length ? gU.join(",") : "FirebaseCore-web";
+          return `${RU}/JsCore/${pU.f}/${EU}`
         }
-        async function mC(DD, CD) {
-          return TD(DD, "GET", "/v2/recaptchaConfig", LD(DD, CD))
-        }
-
-        function nC(DD) {
-          return void 0 !== DD && void 0 !== DD.getResponse
+        async function mR(UU, RU) {
+          return HU(UU, "GET", "/v2/recaptchaConfig", dU(UU, RU))
         }
 
-        function OC(DD) {
-          return void 0 !== DD && void 0 !== DD.enterprise
+        function IR(UU) {
+          return void 0 !== UU && void 0 !== UU.getResponse
         }
-        class PC {
-          constructor(DD) {
-            if (this.siteKey = "", this.emailPasswordEnabled = !1, void 0 === DD.recaptchaKey) throw new Error("recaptchaKey undefined");
-            this.siteKey = DD.recaptchaKey.split("/")[3], this.emailPasswordEnabled = DD.recaptchaEnforcementState.some((DD => "EMAIL_PASSWORD_PROVIDER" === DD.provider && "OFF" !== DD.enforcementState))
+
+        function JR(UU) {
+          return void 0 !== UU && void 0 !== UU.enterprise
+        }
+        class wR {
+          constructor(UU) {
+            if (this.siteKey = "", this.emailPasswordEnabled = !1, void 0 === UU.recaptchaKey) throw new Error("recaptchaKey undefined");
+            this.siteKey = UU.recaptchaKey.split("/")[3], this.emailPasswordEnabled = UU.recaptchaEnforcementState.some((UU => "EMAIL_PASSWORD_PROVIDER" === UU.provider && "OFF" !== UU.enforcementState))
           }
         }
 
-        function HC(DD) {
-          return new Promise(((CD, cD) => {
-            const ID = document.createElement("script");
-            ID.setAttribute("src", DD), ID.onload = CD, ID.onerror = DD => {
-                const CD = mD("internal-error");
-                CD.customData = DD, cD(CD)
-              }, ID.type = "text/javascript", ID.charset = "UTF-8",
+        function nR(UU) {
+          return new Promise(((RU, gU) => {
+            const tU = document.createElement("script");
+            tU.setAttribute("src", UU), tU.onload = RU, tU.onerror = UU => {
+                const RU = mU("internal-error");
+                RU.customData = UU, gU(RU)
+              }, tU.type = "text/javascript", tU.charset = "UTF-8",
               function() {
-                var DD, CD;
-                return null !== (CD = null === (DD = document.getElementsByTagName("head")) || void 0 === DD ? void 0 : DD[0]) && void 0 !== CD ? CD : document
-              }().appendChild(ID)
+                var UU, RU;
+                return null !== (RU = null === (UU = document.getElementsByTagName("head")) || void 0 === UU ? void 0 : UU[0]) && void 0 !== RU ? RU : document
+              }().appendChild(tU)
           }))
         }
 
-        function UC(DD) {
-          return `__${DD}${Math.floor(1e6*Math.random())}`
+        function bR(UU) {
+          return `__${UU}${Math.floor(1e6*Math.random())}`
         }
-        class xC {
-          constructor(DD) {
-            this.type = "recaptcha-enterprise", this.auth = aC(DD)
+        class oR {
+          constructor(UU) {
+            this.type = "recaptcha-enterprise", this.auth = BR(UU)
           }
           async verify() {
-            let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "verify",
-              CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "verify",
+              RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
 
-            function cD(CD, cD, ID) {
-              const pD = window.grecaptcha;
-              OC(pD) ? pD.enterprise.ready((() => {
-                pD.enterprise.execute(CD, {
-                  action: DD
-                }).then((DD => {
-                  cD(DD)
+            function gU(RU, gU, tU) {
+              const pU = window.grecaptcha;
+              JR(pU) ? pU.enterprise.ready((() => {
+                pU.enterprise.execute(RU, {
+                  action: UU
+                }).then((UU => {
+                  gU(UU)
                 })).catch((() => {
-                  cD("NO_RECAPTCHA")
+                  gU("NO_RECAPTCHA")
                 }))
-              })) : ID(Error("No reCAPTCHA enterprise script loaded."))
+              })) : tU(Error("No reCAPTCHA enterprise script loaded."))
             }
-            return new Promise(((DD, ID) => {
-              (async function(DD) {
-                if (!CD) {
-                  if (null == DD.tenantId && null != DD._agentRecaptchaConfig) return DD._agentRecaptchaConfig.siteKey;
-                  if (null != DD.tenantId && void 0 !== DD._tenantRecaptchaConfigs[DD.tenantId]) return DD._tenantRecaptchaConfigs[DD.tenantId].siteKey
+            return new Promise(((UU, tU) => {
+              (async function(UU) {
+                if (!RU) {
+                  if (null == UU.tenantId && null != UU._agentRecaptchaConfig) return UU._agentRecaptchaConfig.siteKey;
+                  if (null != UU.tenantId && void 0 !== UU._tenantRecaptchaConfigs[UU.tenantId]) return UU._tenantRecaptchaConfigs[UU.tenantId].siteKey
                 }
-                return new Promise((async (CD, cD) => {
-                  mC(DD, {
+                return new Promise((async (RU, gU) => {
+                  mR(UU, {
                     clientType: "CLIENT_TYPE_WEB",
                     version: "RECAPTCHA_ENTERPRISE"
-                  }).then((ID => {
-                    if (void 0 !== ID.recaptchaKey) {
-                      const cD = new PC(ID);
-                      return null == DD.tenantId ? DD._agentRecaptchaConfig = cD : DD._tenantRecaptchaConfigs[DD.tenantId] = cD, CD(cD.siteKey)
+                  }).then((tU => {
+                    if (void 0 !== tU.recaptchaKey) {
+                      const gU = new wR(tU);
+                      return null == UU.tenantId ? UU._agentRecaptchaConfig = gU : UU._tenantRecaptchaConfigs[UU.tenantId] = gU, RU(gU.siteKey)
                     }
-                    cD(new Error("recaptcha Enterprise site key undefined"))
-                  })).catch((DD => {
-                    cD(DD)
+                    gU(new Error("recaptcha Enterprise site key undefined"))
+                  })).catch((UU => {
+                    gU(UU)
                   }))
                 }))
-              })(this.auth).then((pD => {
-                if (!CD && OC(window.grecaptcha)) cD(pD, DD, ID);
+              })(this.auth).then((pU => {
+                if (!RU && JR(window.grecaptcha)) gU(pU, UU, tU);
                 else {
-                  if ("undefined" === typeof window) return void ID(new Error("RecaptchaVerifier is only supported in browser"));
-                  HC("https://www.google.com/recaptcha/enterprise.js?render=" + pD).then((() => {
-                    cD(pD, DD, ID)
-                  })).catch((DD => {
-                    ID(DD)
+                  if ("undefined" === typeof window) return void tU(new Error("RecaptchaVerifier is only supported in browser"));
+                  nR("https://www.google.com/recaptcha/enterprise.js?render=" + pU).then((() => {
+                    gU(pU, UU, tU)
+                  })).catch((UU => {
+                    tU(UU)
                   }))
                 }
-              })).catch((DD => {
-                ID(DD)
+              })).catch((UU => {
+                tU(UU)
               }))
             }))
           }
         }
-        async function qC(DD, CD, cD) {
-          let ID = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-          const pD = new xC(DD);
-          let iD;
+        async function ZR(UU, RU, gU) {
+          let tU = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+          const pU = new oR(UU);
+          let EU;
           try {
-            iD = await pD.verify(cD)
-          } catch (bD) {
-            iD = await pD.verify(cD, !0)
+            EU = await pU.verify(gU)
+          } catch (TU) {
+            EU = await pU.verify(gU, !0)
           }
-          const fD = Object.assign({}, CD);
-          return ID ? Object.assign(fD, {
-            captchaResp: iD
-          }) : Object.assign(fD, {
-            captchaResponse: iD
-          }), Object.assign(fD, {
+          const PU = Object.assign({}, RU);
+          return tU ? Object.assign(PU, {
+            captchaResp: EU
+          }) : Object.assign(PU, {
+            captchaResponse: EU
+          }), Object.assign(PU, {
             clientType: "CLIENT_TYPE_WEB"
-          }), Object.assign(fD, {
+          }), Object.assign(PU, {
             recaptchaVersion: "RECAPTCHA_ENTERPRISE"
-          }), fD
+          }), PU
         }
-        class JC {
-          constructor(DD) {
-            this.auth = DD, this.queue = []
+        class aR {
+          constructor(UU) {
+            this.auth = UU, this.queue = []
           }
-          pushCallback(DD, CD) {
-            const cD = CD => new Promise(((cD, ID) => {
+          pushCallback(UU, RU) {
+            const gU = RU => new Promise(((gU, tU) => {
               try {
-                cD(DD(CD))
-              } catch (pD) {
-                ID(pD)
+                gU(UU(RU))
+              } catch (pU) {
+                tU(pU)
               }
             }));
-            cD.onAbort = CD, this.queue.push(cD);
-            const ID = this.queue.length - 1;
+            gU.onAbort = RU, this.queue.push(gU);
+            const tU = this.queue.length - 1;
             return () => {
-              this.queue[ID] = () => Promise.resolve()
+              this.queue[tU] = () => Promise.resolve()
             }
           }
-          async runMiddleware(DD) {
-            if (this.auth.currentUser === DD) return;
-            const CD = [];
+          async runMiddleware(UU) {
+            if (this.auth.currentUser === UU) return;
+            const RU = [];
             try {
-              for (const cD of this.queue) await cD(DD), cD.onAbort && CD.push(cD.onAbort)
-            } catch (cD) {
-              CD.reverse();
-              for (const DD of CD) try {
-                DD()
-              } catch (ID) {}
+              for (const gU of this.queue) await gU(UU), gU.onAbort && RU.push(gU.onAbort)
+            } catch (gU) {
+              RU.reverse();
+              for (const UU of RU) try {
+                UU()
+              } catch (tU) {}
               throw this.auth._errorFactory.create("login-blocked", {
-                originalMessage: null === cD || void 0 === cD ? void 0 : cD.message
+                originalMessage: null === gU || void 0 === gU ? void 0 : gU.message
               })
             }
           }
         }
-        class KC {
-          constructor(DD, CD, cD, ID) {
-            this.app = DD, this.heartbeatServiceProvider = CD, this.appCheckServiceProvider = cD, this.config = ID, this.currentUser = null, this.emulatorConfig = null, this.operations = Promise.resolve(), this.authStateSubscription = new VC(this), this.idTokenSubscription = new VC(this), this.beforeStateQueue = new JC(this), this.redirectUser = null, this.isProactiveRefreshEnabled = !1, this._canInitEmulator = !0, this._isInitialized = !1, this._deleted = !1, this._initializationPromise = null, this._popupRedirectResolver = null, this._errorFactory = oD, this._agentRecaptchaConfig = null, this._tenantRecaptchaConfigs = {}, this.lastNotifiedUid = void 0, this.languageCode = null, this.tenantId = null, this.settings = {
+        class YR {
+          constructor(UU, RU, gU, tU) {
+            this.app = UU, this.heartbeatServiceProvider = RU, this.appCheckServiceProvider = gU, this.config = tU, this.currentUser = null, this.emulatorConfig = null, this.operations = Promise.resolve(), this.authStateSubscription = new VR(this), this.idTokenSubscription = new VR(this), this.beforeStateQueue = new aR(this), this.redirectUser = null, this.isProactiveRefreshEnabled = !1, this._canInitEmulator = !0, this._isInitialized = !1, this._deleted = !1, this._initializationPromise = null, this._popupRedirectResolver = null, this._errorFactory = QU, this._agentRecaptchaConfig = null, this._tenantRecaptchaConfigs = {}, this.lastNotifiedUid = void 0, this.languageCode = null, this.tenantId = null, this.settings = {
               appVerificationDisabledForTesting: !1
-            }, this.frameworks = [], this.name = DD.name, this.clientVersion = ID.sdkClientVersion
+            }, this.frameworks = [], this.name = UU.name, this.clientVersion = tU.sdkClientVersion
           }
-          _initializeWithPersistence(DD, CD) {
-            return CD && (this._popupRedirectResolver = iC(CD)), this._initializationPromise = this.queue((async () => {
-              var cD, ID;
-              if (!this._deleted && (this.persistenceManager = await wC.create(this, DD), !this._deleted)) {
-                if (null === (cD = this._popupRedirectResolver) || void 0 === cD ? void 0 : cD._shouldInitProactively) try {
+          _initializeWithPersistence(UU, RU) {
+            return RU && (this._popupRedirectResolver = ER(RU)), this._initializationPromise = this.queue((async () => {
+              var gU, tU;
+              if (!this._deleted && (this.persistenceManager = await KR.create(this, UU), !this._deleted)) {
+                if (null === (gU = this._popupRedirectResolver) || void 0 === gU ? void 0 : gU._shouldInitProactively) try {
                   await this._popupRedirectResolver._initialize(this)
-                } catch (pD) {}
-                await this.initializeCurrentUser(CD), this.lastNotifiedUid = (null === (ID = this.currentUser) || void 0 === ID ? void 0 : ID.uid) || null, this._deleted || (this._isInitialized = !0)
+                } catch (pU) {}
+                await this.initializeCurrentUser(RU), this.lastNotifiedUid = (null === (tU = this.currentUser) || void 0 === tU ? void 0 : tU.uid) || null, this._deleted || (this._isInitialized = !0)
               }
             })), this._initializationPromise
           }
           async _onStorageEvent() {
             if (this._deleted) return;
-            const DD = await this.assertedPersistence.getCurrentUser();
-            return this.currentUser || DD ? this.currentUser && DD && this.currentUser.uid === DD.uid ? (this._currentUser._assign(DD), void await this.currentUser.getIdToken()) : void await this._updateCurrentUser(DD, !0) : void 0
+            const UU = await this.assertedPersistence.getCurrentUser();
+            return this.currentUser || UU ? this.currentUser && UU && this.currentUser.uid === UU.uid ? (this._currentUser._assign(UU), void await this.currentUser.getIdToken()) : void await this._updateCurrentUser(UU, !0) : void 0
           }
-          async initializeCurrentUser(DD) {
-            var CD;
-            const cD = await this.assertedPersistence.getCurrentUser();
-            let ID = cD,
-              pD = !1;
-            if (DD && this.config.authDomain) {
+          async initializeCurrentUser(UU) {
+            var RU;
+            const gU = await this.assertedPersistence.getCurrentUser();
+            let tU = gU,
+              pU = !1;
+            if (UU && this.config.authDomain) {
               await this.getOrInitRedirectPersistenceManager();
-              const cD = null === (CD = this.redirectUser) || void 0 === CD ? void 0 : CD._redirectEventId,
-                iD = null === ID || void 0 === ID ? void 0 : ID._redirectEventId,
-                fD = await this.tryRedirectSignIn(DD);
-              cD && cD !== iD || !(null === fD || void 0 === fD ? void 0 : fD.user) || (ID = fD.user, pD = !0)
+              const gU = null === (RU = this.redirectUser) || void 0 === RU ? void 0 : RU._redirectEventId,
+                EU = null === tU || void 0 === tU ? void 0 : tU._redirectEventId,
+                PU = await this.tryRedirectSignIn(UU);
+              gU && gU !== EU || !(null === PU || void 0 === PU ? void 0 : PU.user) || (tU = PU.user, pU = !0)
             }
-            if (!ID) return this.directlySetCurrentUser(null);
-            if (!ID._redirectEventId) {
-              if (pD) try {
-                await this.beforeStateQueue.runMiddleware(ID)
-              } catch (iD) {
-                ID = cD, this._popupRedirectResolver._overrideRedirectResult(this, (() => Promise.reject(iD)))
+            if (!tU) return this.directlySetCurrentUser(null);
+            if (!tU._redirectEventId) {
+              if (pU) try {
+                await this.beforeStateQueue.runMiddleware(tU)
+              } catch (EU) {
+                tU = gU, this._popupRedirectResolver._overrideRedirectResult(this, (() => Promise.reject(EU)))
               }
-              return ID ? this.reloadAndSetCurrentUserOrClear(ID) : this.directlySetCurrentUser(null)
+              return tU ? this.reloadAndSetCurrentUserOrClear(tU) : this.directlySetCurrentUser(null)
             }
-            return HD(this._popupRedirectResolver, this, "argument-error"), await this.getOrInitRedirectPersistenceManager(), this.redirectUser && this.redirectUser._redirectEventId === ID._redirectEventId ? this.directlySetCurrentUser(ID) : this.reloadAndSetCurrentUserOrClear(ID)
+            return nU(this._popupRedirectResolver, this, "argument-error"), await this.getOrInitRedirectPersistenceManager(), this.redirectUser && this.redirectUser._redirectEventId === tU._redirectEventId ? this.directlySetCurrentUser(tU) : this.reloadAndSetCurrentUserOrClear(tU)
           }
-          async tryRedirectSignIn(DD) {
-            let CD = null;
+          async tryRedirectSignIn(UU) {
+            let RU = null;
             try {
-              CD = await this._popupRedirectResolver._completeRedirectFn(this, DD, !0)
-            } catch (cD) {
+              RU = await this._popupRedirectResolver._completeRedirectFn(this, UU, !0)
+            } catch (gU) {
               await this._setRedirectUser(null)
             }
-            return CD
+            return RU
           }
-          async reloadAndSetCurrentUserOrClear(DD) {
+          async reloadAndSetCurrentUserOrClear(UU) {
             try {
-              await FD(DD)
-            } catch (CD) {
-              if ("auth/network-request-failed" !== (null === CD || void 0 === CD ? void 0 : CD.code)) return this.directlySetCurrentUser(null)
+              await OU(UU)
+            } catch (RU) {
+              if ("auth/network-request-failed" !== (null === RU || void 0 === RU ? void 0 : RU.code)) return this.directlySetCurrentUser(null)
             }
-            return this.directlySetCurrentUser(DD)
+            return this.directlySetCurrentUser(UU)
           }
           useDeviceLanguage() {
             this.languageCode = function() {
               if ("undefined" === typeof navigator) return null;
-              const DD = navigator;
-              return DD.languages && DD.languages[0] || DD.language || null
+              const UU = navigator;
+              return UU.languages && UU.languages[0] || UU.language || null
             }()
           }
           async _delete() {
             this._deleted = !0
           }
-          async updateCurrentUser(DD) {
-            const CD = DD ? (0, ID.P)(DD) : null;
-            return CD && HD(CD.auth.config.apiKey === this.config.apiKey, this, "invalid-user-token"), this._updateCurrentUser(CD && CD._clone(this))
+          async updateCurrentUser(UU) {
+            const RU = UU ? (0, tU.I)(UU) : null;
+            return RU && nU(RU.auth.config.apiKey === this.config.apiKey, this, "invalid-user-token"), this._updateCurrentUser(RU && RU._clone(this))
           }
-          async _updateCurrentUser(DD) {
-            let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            if (!this._deleted) return DD && HD(this.tenantId === DD.tenantId, this, "tenant-id-mismatch"), CD || await this.beforeStateQueue.runMiddleware(DD), this.queue((async () => {
-              await this.directlySetCurrentUser(DD), this.notifyAuthListeners()
+          async _updateCurrentUser(UU) {
+            let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            if (!this._deleted) return UU && nU(this.tenantId === UU.tenantId, this, "tenant-id-mismatch"), RU || await this.beforeStateQueue.runMiddleware(UU), this.queue((async () => {
+              await this.directlySetCurrentUser(UU), this.notifyAuthListeners()
             }))
           }
           async signOut() {
             return await this.beforeStateQueue.runMiddleware(null), (this.redirectPersistenceManager || this._popupRedirectResolver) && await this._setRedirectUser(null), this._updateCurrentUser(null, !0)
           }
-          setPersistence(DD) {
+          setPersistence(UU) {
             return this.queue((async () => {
-              await this.assertedPersistence.setPersistence(iC(DD))
+              await this.assertedPersistence.setPersistence(ER(UU))
             }))
           }
           async initializeRecaptchaConfig() {
-            const DD = await mC(this, {
+            const UU = await mR(this, {
                 clientType: "CLIENT_TYPE_WEB",
                 version: "RECAPTCHA_ENTERPRISE"
               }),
-              CD = new PC(DD);
-            if (null == this.tenantId ? this._agentRecaptchaConfig = CD : this._tenantRecaptchaConfigs[this.tenantId] = CD, CD.emailPasswordEnabled) {
-              new xC(this).verify()
+              RU = new wR(UU);
+            if (null == this.tenantId ? this._agentRecaptchaConfig = RU : this._tenantRecaptchaConfigs[this.tenantId] = RU, RU.emailPasswordEnabled) {
+              new oR(this).verify()
             }
           }
           _getRecaptchaConfig() {
@@ -1393,47 +1393,47 @@ export const modules = {
           _getPersistence() {
             return this.assertedPersistence.persistence.type
           }
-          _updateErrorMap(DD) {
-            this._errorFactory = new ID.h("auth", "Firebase", DD())
+          _updateErrorMap(UU) {
+            this._errorFactory = new tU.e("auth", "Firebase", UU())
           }
-          onAuthStateChanged(DD, CD, cD) {
-            return this.registerStateListener(this.authStateSubscription, DD, CD, cD)
+          onAuthStateChanged(UU, RU, gU) {
+            return this.registerStateListener(this.authStateSubscription, UU, RU, gU)
           }
-          beforeAuthStateChanged(DD, CD) {
-            return this.beforeStateQueue.pushCallback(DD, CD)
+          beforeAuthStateChanged(UU, RU) {
+            return this.beforeStateQueue.pushCallback(UU, RU)
           }
-          onIdTokenChanged(DD, CD, cD) {
-            return this.registerStateListener(this.idTokenSubscription, DD, CD, cD)
+          onIdTokenChanged(UU, RU, gU) {
+            return this.registerStateListener(this.idTokenSubscription, UU, RU, gU)
           }
           toJSON() {
-            var DD;
+            var UU;
             return {
               apiKey: this.config.apiKey,
               authDomain: this.config.authDomain,
               appName: this.name,
-              currentUser: null === (DD = this._currentUser) || void 0 === DD ? void 0 : DD.toJSON()
+              currentUser: null === (UU = this._currentUser) || void 0 === UU ? void 0 : UU.toJSON()
             }
           }
-          async _setRedirectUser(DD, CD) {
-            const cD = await this.getOrInitRedirectPersistenceManager(CD);
-            return null === DD ? cD.removeCurrentUser() : cD.setCurrentUser(DD)
+          async _setRedirectUser(UU, RU) {
+            const gU = await this.getOrInitRedirectPersistenceManager(RU);
+            return null === UU ? gU.removeCurrentUser() : gU.setCurrentUser(UU)
           }
-          async getOrInitRedirectPersistenceManager(DD) {
+          async getOrInitRedirectPersistenceManager(UU) {
             if (!this.redirectPersistenceManager) {
-              const CD = DD && iC(DD) || this._popupRedirectResolver;
-              HD(CD, this, "argument-error"), this.redirectPersistenceManager = await wC.create(this, [iC(CD._redirectPersistence)], "redirectUser"), this.redirectUser = await this.redirectPersistenceManager.getCurrentUser()
+              const RU = UU && ER(UU) || this._popupRedirectResolver;
+              nU(RU, this, "argument-error"), this.redirectPersistenceManager = await KR.create(this, [ER(RU._redirectPersistence)], "redirectUser"), this.redirectUser = await this.redirectPersistenceManager.getCurrentUser()
             }
             return this.redirectPersistenceManager
           }
-          async _redirectUserForId(DD) {
-            var CD, cD;
-            return this._isInitialized && await this.queue((async () => {})), (null === (CD = this._currentUser) || void 0 === CD ? void 0 : CD._redirectEventId) === DD ? this._currentUser : (null === (cD = this.redirectUser) || void 0 === cD ? void 0 : cD._redirectEventId) === DD ? this.redirectUser : null
+          async _redirectUserForId(UU) {
+            var RU, gU;
+            return this._isInitialized && await this.queue((async () => {})), (null === (RU = this._currentUser) || void 0 === RU ? void 0 : RU._redirectEventId) === UU ? this._currentUser : (null === (gU = this.redirectUser) || void 0 === gU ? void 0 : gU._redirectEventId) === UU ? this.redirectUser : null
           }
-          async _persistUserIfCurrent(DD) {
-            if (DD === this.currentUser) return this.queue((async () => this.directlySetCurrentUser(DD)))
+          async _persistUserIfCurrent(UU) {
+            if (UU === this.currentUser) return this.queue((async () => this.directlySetCurrentUser(UU)))
           }
-          _notifyListenersIfCurrent(DD) {
-            DD === this.currentUser && this.notifyAuthListeners()
+          _notifyListenersIfCurrent(UU) {
+            UU === this.currentUser && this.notifyAuthListeners()
           }
           _key() {
             return `${this.config.authDomain}:${this.config.apiKey}:${this.name}`
@@ -1448,192 +1448,192 @@ export const modules = {
             return this.currentUser
           }
           notifyAuthListeners() {
-            var DD, CD;
+            var UU, RU;
             if (!this._isInitialized) return;
             this.idTokenSubscription.next(this.currentUser);
-            const cD = null !== (CD = null === (DD = this.currentUser) || void 0 === DD ? void 0 : DD.uid) && void 0 !== CD ? CD : null;
-            this.lastNotifiedUid !== cD && (this.lastNotifiedUid = cD, this.authStateSubscription.next(this.currentUser))
+            const gU = null !== (RU = null === (UU = this.currentUser) || void 0 === UU ? void 0 : UU.uid) && void 0 !== RU ? RU : null;
+            this.lastNotifiedUid !== gU && (this.lastNotifiedUid = gU, this.authStateSubscription.next(this.currentUser))
           }
-          registerStateListener(DD, CD, cD, ID) {
+          registerStateListener(UU, RU, gU, tU) {
             if (this._deleted) return () => {};
-            const pD = "function" === typeof CD ? CD : CD.next.bind(CD),
-              iD = this._isInitialized ? Promise.resolve() : this._initializationPromise;
-            return HD(iD, this, "internal-error"), iD.then((() => pD(this.currentUser))), "function" === typeof CD ? DD.addObserver(CD, cD, ID) : DD.addObserver(CD)
+            const pU = "function" === typeof RU ? RU : RU.next.bind(RU),
+              EU = this._isInitialized ? Promise.resolve() : this._initializationPromise;
+            return nU(EU, this, "internal-error"), EU.then((() => pU(this.currentUser))), "function" === typeof RU ? UU.addObserver(RU, gU, tU) : UU.addObserver(RU)
           }
-          async directlySetCurrentUser(DD) {
-            this.currentUser && this.currentUser !== DD && this._currentUser._stopProactiveRefresh(), DD && this.isProactiveRefreshEnabled && DD._startProactiveRefresh(), this.currentUser = DD, DD ? await this.assertedPersistence.setCurrentUser(DD) : await this.assertedPersistence.removeCurrentUser()
+          async directlySetCurrentUser(UU) {
+            this.currentUser && this.currentUser !== UU && this._currentUser._stopProactiveRefresh(), UU && this.isProactiveRefreshEnabled && UU._startProactiveRefresh(), this.currentUser = UU, UU ? await this.assertedPersistence.setCurrentUser(UU) : await this.assertedPersistence.removeCurrentUser()
           }
-          queue(DD) {
-            return this.operations = this.operations.then(DD, DD), this.operations
+          queue(UU) {
+            return this.operations = this.operations.then(UU, UU), this.operations
           }
           get assertedPersistence() {
-            return HD(this.persistenceManager, this, "internal-error"), this.persistenceManager
+            return nU(this.persistenceManager, this, "internal-error"), this.persistenceManager
           }
-          _logFramework(DD) {
-            DD && !this.frameworks.includes(DD) && (this.frameworks.push(DD), this.frameworks.sort(), this.clientVersion = XC(this.config.clientPlatform, this._getFrameworks()))
+          _logFramework(UU) {
+            UU && !this.frameworks.includes(UU) && (this.frameworks.push(UU), this.frameworks.sort(), this.clientVersion = xR(this.config.clientPlatform, this._getFrameworks()))
           }
           _getFrameworks() {
             return this.frameworks
           }
           async _getAdditionalHeaders() {
-            var DD;
-            const CD = {
+            var UU;
+            const RU = {
               "X-Client-Version": this.clientVersion
             };
-            this.app.options.appId && (CD["X-Firebase-gmpid"] = this.app.options.appId);
-            const cD = await (null === (DD = this.heartbeatServiceProvider.getImmediate({
+            this.app.options.appId && (RU["X-Firebase-gmpid"] = this.app.options.appId);
+            const gU = await (null === (UU = this.heartbeatServiceProvider.getImmediate({
               optional: !0
-            })) || void 0 === DD ? void 0 : DD.getHeartbeatsHeader());
-            cD && (CD["X-Firebase-Client"] = cD);
-            const ID = await this._getAppCheckToken();
-            return ID && (CD["X-Firebase-AppCheck"] = ID), CD
+            })) || void 0 === UU ? void 0 : UU.getHeartbeatsHeader());
+            gU && (RU["X-Firebase-Client"] = gU);
+            const tU = await this._getAppCheckToken();
+            return tU && (RU["X-Firebase-AppCheck"] = tU), RU
           }
           async _getAppCheckToken() {
-            var DD;
-            const CD = await (null === (DD = this.appCheckServiceProvider.getImmediate({
+            var UU;
+            const RU = await (null === (UU = this.appCheckServiceProvider.getImmediate({
               optional: !0
-            })) || void 0 === DD ? void 0 : DD.getToken());
-            return (null === CD || void 0 === CD ? void 0 : CD.error) && function(DD) {
-              if (ND.logLevel <= fD.d.WARN) {
-                for (var CD = arguments.length, cD = new Array(CD > 1 ? CD - 1 : 0), ID = 1; ID < CD; ID++) cD[ID - 1] = arguments[ID];
-                ND.warn(`Auth (${pD.e}): ${DD}`, ...cD)
+            })) || void 0 === UU ? void 0 : UU.getToken());
+            return (null === RU || void 0 === RU ? void 0 : RU.error) && function(UU) {
+              if (WU.logLevel <= PU.d.WARN) {
+                for (var RU = arguments.length, gU = new Array(RU > 1 ? RU - 1 : 0), tU = 1; tU < RU; tU++) gU[tU - 1] = arguments[tU];
+                WU.warn(`Auth (${pU.f}): ${UU}`, ...gU)
               }
-            }(`Error while retrieving App Check token: ${CD.error}`), null === CD || void 0 === CD ? void 0 : CD.token
+            }(`Error while retrieving App Check token: ${RU.error}`), null === RU || void 0 === RU ? void 0 : RU.token
           }
         }
 
-        function aC(DD) {
-          return (0, ID.P)(DD)
+        function BR(UU) {
+          return (0, tU.I)(UU)
         }
-        class VC {
-          constructor(DD) {
-            this.auth = DD, this.observer = null, this.addObserver = (0, ID.y)((DD => this.observer = DD))
+        class VR {
+          constructor(UU) {
+            this.auth = UU, this.observer = null, this.addObserver = (0, tU.r)((UU => this.observer = UU))
           }
           get next() {
-            return HD(this.observer, this.auth, "internal-error"), this.observer.next.bind(this.observer)
+            return nU(this.observer, this.auth, "internal-error"), this.observer.next.bind(this.observer)
           }
         }
 
-        function zC(DD, CD) {
-          const cD = (0, pD.w)(DD, "auth");
-          if (cD.isInitialized()) {
-            const DD = cD.getImmediate(),
-              pD = cD.getOptions();
-            if ((0, ID.A)(pD, null !== CD && void 0 !== CD ? CD : {})) return DD;
-            XD(DD, "already-initialized")
+        function rR(UU, RU) {
+          const gU = (0, pU.w)(UU, "auth");
+          if (gU.isInitialized()) {
+            const UU = gU.getImmediate(),
+              pU = gU.getOptions();
+            if ((0, tU.v)(pU, null !== RU && void 0 !== RU ? RU : {})) return UU;
+            xU(UU, "already-initialized")
           }
-          return cD.initialize({
-            options: CD
+          return gU.initialize({
+            options: RU
           })
         }
 
-        function jC(DD, CD, cD) {
-          const ID = aC(DD);
-          HD(ID._canInitEmulator, ID, "emulator-config-failed"), HD(/^https?:\/\//.test(CD), ID, "invalid-emulator-scheme");
-          const pD = !!(null === cD || void 0 === cD ? void 0 : cD.disableWarnings),
-            iD = lC(CD),
+        function XR(UU, RU, gU) {
+          const tU = BR(UU);
+          nU(tU._canInitEmulator, tU, "emulator-config-failed"), nU(/^https?:\/\//.test(RU), tU, "invalid-emulator-scheme");
+          const pU = !!(null === gU || void 0 === gU ? void 0 : gU.disableWarnings),
+            EU = vR(RU),
             {
-              host: fD,
-              port: bD
-            } = function(DD) {
-              const CD = lC(DD),
-                cD = /(\/\/)?([^?#/]+)/.exec(DD.substr(CD.length));
-              if (!cD) return {
+              host: PU,
+              port: TU
+            } = function(UU) {
+              const RU = vR(UU),
+                gU = /(\/\/)?([^?#/]+)/.exec(UU.substr(RU.length));
+              if (!gU) return {
                 host: "",
                 port: null
               };
-              const ID = cD[2].split("@").pop() || "",
-                pD = /^(\[[^\]]+\])(:|$)/.exec(ID);
-              if (pD) {
-                const DD = pD[1];
+              const tU = gU[2].split("@").pop() || "",
+                pU = /^(\[[^\]]+\])(:|$)/.exec(tU);
+              if (pU) {
+                const UU = pU[1];
                 return {
-                  host: DD,
-                  port: LC(ID.substr(DD.length + 1))
+                  host: UU,
+                  port: dR(tU.substr(UU.length + 1))
                 }
               } {
-                const [DD, CD] = ID.split(":");
+                const [UU, RU] = tU.split(":");
                 return {
-                  host: DD,
-                  port: LC(CD)
+                  host: UU,
+                  port: dR(RU)
                 }
               }
-            }(CD),
-            QD = null === bD ? "" : `:${bD}`;
-          ID.config.emulator = {
-            url: `${iD}//${fD}${QD}/`
-          }, ID.settings.appVerificationDisabledForTesting = !0, ID.emulatorConfig = Object.freeze({
-            host: fD,
-            port: bD,
-            protocol: iD.replace(":", ""),
+            }(RU),
+            qU = null === TU ? "" : `:${TU}`;
+          tU.config.emulator = {
+            url: `${EU}//${PU}${qU}/`
+          }, tU.settings.appVerificationDisabledForTesting = !0, tU.emulatorConfig = Object.freeze({
+            host: PU,
+            port: TU,
+            protocol: EU.replace(":", ""),
             options: Object.freeze({
-              disableWarnings: pD
+              disableWarnings: pU
             })
-          }), pD || function() {
-            function DD() {
-              const DD = document.createElement("p"),
-                CD = DD.style;
-              DD.innerText = "Running in emulator mode. Do not use with production credentials.", CD.position = "fixed", CD.width = "100%", CD.backgroundColor = "#ffffff", CD.border = ".1em solid #000000", CD.color = "#b50000", CD.bottom = "0px", CD.left = "0px", CD.margin = "0px", CD.zIndex = "10000", CD.textAlign = "center", DD.classList.add("firebase-emulator-warning"), document.body.appendChild(DD)
+          }), pU || function() {
+            function UU() {
+              const UU = document.createElement("p"),
+                RU = UU.style;
+              UU.innerText = "Running in emulator mode. Do not use with production credentials.", RU.position = "fixed", RU.width = "100%", RU.backgroundColor = "#ffffff", RU.border = ".1em solid #000000", RU.color = "#b50000", RU.bottom = "0px", RU.left = "0px", RU.margin = "0px", RU.zIndex = "10000", RU.textAlign = "center", UU.classList.add("firebase-emulator-warning"), document.body.appendChild(UU)
             }
             "undefined" !== typeof console && "function" === typeof console.info && console.info("WARNING: You are using the Auth Emulator, which is intended for local testing only.  Do not use with production credentials.");
-            "undefined" !== typeof window && "undefined" !== typeof document && ("loading" === document.readyState ? window.addEventListener("DOMContentLoaded", DD) : DD())
+            "undefined" !== typeof window && "undefined" !== typeof document && ("loading" === document.readyState ? window.addEventListener("DOMContentLoaded", UU) : UU())
           }()
         }
 
-        function lC(DD) {
-          const CD = DD.indexOf(":");
-          return CD < 0 ? "" : DD.substr(0, CD + 1)
+        function vR(UU) {
+          const RU = UU.indexOf(":");
+          return RU < 0 ? "" : UU.substr(0, RU + 1)
         }
 
-        function LC(DD) {
-          if (!DD) return null;
-          const CD = Number(DD);
-          return isNaN(CD) ? null : CD
+        function dR(UU) {
+          if (!UU) return null;
+          const RU = Number(UU);
+          return isNaN(RU) ? null : RU
         }
-        class TC {
-          constructor(DD, CD) {
-            this.providerId = DD, this.signInMethod = CD
+        class HR {
+          constructor(UU, RU) {
+            this.providerId = UU, this.signInMethod = RU
           }
           toJSON() {
-            return UD("not implemented")
+            return bU("not implemented")
           }
-          _getIdTokenResponse(DD) {
-            return UD("not implemented")
+          _getIdTokenResponse(UU) {
+            return bU("not implemented")
           }
-          _linkToIdToken(DD, CD) {
-            return UD("not implemented")
+          _linkToIdToken(UU, RU) {
+            return bU("not implemented")
           }
-          _getReauthenticationResolver(DD) {
-            return UD("not implemented")
+          _getReauthenticationResolver(UU) {
+            return bU("not implemented")
           }
         }
-        async function GC(DD, CD) {
-          return TD(DD, "POST", "/v1/accounts:resetPassword", LD(DD, CD))
+        async function SR(UU, RU) {
+          return HU(UU, "POST", "/v1/accounts:resetPassword", dU(UU, RU))
         }
-        async function RC(DD, CD) {
-          return TD(DD, "POST", "/v1/accounts:update", CD)
+        async function sR(UU, RU) {
+          return HU(UU, "POST", "/v1/accounts:update", RU)
         }
-        async function kC(DD, CD) {
-          return RD(DD, "POST", "/v1/accounts:signInWithPassword", LD(DD, CD))
+        async function yR(UU, RU) {
+          return sU(UU, "POST", "/v1/accounts:signInWithPassword", dU(UU, RU))
         }
-        async function dC(DD, CD) {
-          return TD(DD, "POST", "/v1/accounts:sendOobCode", LD(DD, CD))
+        async function kR(UU, RU) {
+          return HU(UU, "POST", "/v1/accounts:sendOobCode", dU(UU, RU))
         }
-        async function YC(DD, CD) {
-          return dC(DD, CD)
+        async function FR(UU, RU) {
+          return kR(UU, RU)
         }
-        async function WC(DD, CD) {
-          return dC(DD, CD)
+        async function iR(UU, RU) {
+          return kR(UU, RU)
         }
-        class sC extends TC {
-          constructor(DD, CD, cD) {
-            let ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-            super("password", cD), this._email = DD, this._password = CD, this._tenantId = ID
+        class AR extends HR {
+          constructor(UU, RU, gU) {
+            let tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+            super("password", gU), this._email = UU, this._password = RU, this._tenantId = tU
           }
-          static _fromEmailAndPassword(DD, CD) {
-            return new sC(DD, CD, "password")
+          static _fromEmailAndPassword(UU, RU) {
+            return new AR(UU, RU, "password")
           }
-          static _fromEmailAndCode(DD, CD) {
-            return new sC(DD, CD, "emailLink", arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
+          static _fromEmailAndCode(UU, RU) {
+            return new AR(UU, RU, "emailLink", arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
           }
           toJSON() {
             return {
@@ -1643,82 +1643,82 @@ export const modules = {
               tenantId: this._tenantId
             }
           }
-          static fromJSON(DD) {
-            const CD = "string" === typeof DD ? JSON.parse(DD) : DD;
-            if ((null === CD || void 0 === CD ? void 0 : CD.email) && (null === CD || void 0 === CD ? void 0 : CD.password)) {
-              if ("password" === CD.signInMethod) return this._fromEmailAndPassword(CD.email, CD.password);
-              if ("emailLink" === CD.signInMethod) return this._fromEmailAndCode(CD.email, CD.password, CD.tenantId)
+          static fromJSON(UU) {
+            const RU = "string" === typeof UU ? JSON.parse(UU) : UU;
+            if ((null === RU || void 0 === RU ? void 0 : RU.email) && (null === RU || void 0 === RU ? void 0 : RU.password)) {
+              if ("password" === RU.signInMethod) return this._fromEmailAndPassword(RU.email, RU.password);
+              if ("emailLink" === RU.signInMethod) return this._fromEmailAndCode(RU.email, RU.password, RU.tenantId)
             }
             return null
           }
-          async _getIdTokenResponse(DD) {
-            var CD;
+          async _getIdTokenResponse(UU) {
+            var RU;
             switch (this.signInMethod) {
               case "password":
-                const cD = {
+                const gU = {
                   returnSecureToken: !0,
                   email: this._email,
                   password: this._password,
                   clientType: "CLIENT_TYPE_WEB"
                 };
-                if (null === (CD = DD._getRecaptchaConfig()) || void 0 === CD ? void 0 : CD.emailPasswordEnabled) {
-                  const CD = await qC(DD, cD, "signInWithPassword");
-                  return kC(DD, CD)
+                if (null === (RU = UU._getRecaptchaConfig()) || void 0 === RU ? void 0 : RU.emailPasswordEnabled) {
+                  const RU = await ZR(UU, gU, "signInWithPassword");
+                  return yR(UU, RU)
                 }
-                return kC(DD, cD).catch((async CD => {
-                  if ("auth/missing-recaptcha-token" === CD.code) {
+                return yR(UU, gU).catch((async RU => {
+                  if ("auth/missing-recaptcha-token" === RU.code) {
                     console.log("Sign-in with email address and password is protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the sign-in flow.");
-                    const CD = await qC(DD, cD, "signInWithPassword");
-                    return kC(DD, CD)
+                    const RU = await ZR(UU, gU, "signInWithPassword");
+                    return yR(UU, RU)
                   }
-                  return Promise.reject(CD)
+                  return Promise.reject(RU)
                 }));
               case "emailLink":
-                return async function(DD, CD) {
-                  return RD(DD, "POST", "/v1/accounts:signInWithEmailLink", LD(DD, CD))
-                }(DD, {
+                return async function(UU, RU) {
+                  return sU(UU, "POST", "/v1/accounts:signInWithEmailLink", dU(UU, RU))
+                }(UU, {
                   email: this._email,
                   oobCode: this._password
                 });
               default:
-                XD(DD, "internal-error")
+                xU(UU, "internal-error")
             }
           }
-          async _linkToIdToken(DD, CD) {
+          async _linkToIdToken(UU, RU) {
             switch (this.signInMethod) {
               case "password":
-                return RC(DD, {
-                  idToken: CD,
+                return sR(UU, {
+                  idToken: RU,
                   returnSecureToken: !0,
                   email: this._email,
                   password: this._password
                 });
               case "emailLink":
-                return async function(DD, CD) {
-                  return RD(DD, "POST", "/v1/accounts:signInWithEmailLink", LD(DD, CD))
-                }(DD, {
-                  idToken: CD,
+                return async function(UU, RU) {
+                  return sU(UU, "POST", "/v1/accounts:signInWithEmailLink", dU(UU, RU))
+                }(UU, {
+                  idToken: RU,
                   email: this._email,
                   oobCode: this._password
                 });
               default:
-                XD(DD, "internal-error")
+                xU(UU, "internal-error")
             }
           }
-          _getReauthenticationResolver(DD) {
-            return this._getIdTokenResponse(DD)
+          _getReauthenticationResolver(UU) {
+            return this._getIdTokenResponse(UU)
           }
         }
-        async function EC(DD, CD) {
-          return RD(DD, "POST", "/v1/accounts:signInWithIdp", LD(DD, CD))
+        async function zR(UU, RU) {
+          return sU(UU, "POST", "/v1/accounts:signInWithIdp", dU(UU, RU))
         }
-        class eC extends TC {
+        class MR extends HR {
           constructor() {
             super(...arguments), this.pendingToken = null
           }
-          static _fromParams(DD) {
-            const CD = new eC(DD.providerId, DD.signInMethod);
-            return DD.idToken || DD.accessToken ? (DD.idToken && (CD.idToken = DD.idToken), DD.accessToken && (CD.accessToken = DD.accessToken), DD.nonce && !DD.pendingToken && (CD.nonce = DD.nonce), DD.pendingToken && (CD.pendingToken = DD.pendingToken)) : DD.oauthToken && DD.oauthTokenSecret ? (CD.accessToken = DD.oauthToken, CD.secret = DD.oauthTokenSecret) : XD("argument-error"), CD
+          static _fromParams(UU) {
+            const RU = new MR(UU.providerId, UU.signInMethod);
+            return UU.idToken || UU.accessToken ? (UU.idToken && (RU.idToken = UU.idToken), UU.accessToken && (RU.accessToken = UU.accessToken), UU.nonce && !UU.pendingToken && (RU.nonce = UU.nonce), UU.pendingToken && (RU.pendingToken = UU.pendingToken)) : UU.oauthToken && UU.oauthTokenSecret ? (RU.accessToken = UU.oauthToken, RU.secret = UU.oauthTokenSecret) : xU("argument-error"), RU
           }
           toJSON() {
             return {
@@ -1731,126 +1731,126 @@ export const modules = {
               signInMethod: this.signInMethod
             }
           }
-          static fromJSON(DD) {
-            const CD = "string" === typeof DD ? JSON.parse(DD) : DD,
+          static fromJSON(UU) {
+            const RU = "string" === typeof UU ? JSON.parse(UU) : UU,
               {
-                providerId: cD,
-                signInMethod: ID
-              } = CD,
-              pD = iD(CD, ["providerId", "signInMethod"]);
-            if (!cD || !ID) return null;
-            const fD = new eC(cD, ID);
-            return fD.idToken = pD.idToken || void 0, fD.accessToken = pD.accessToken || void 0, fD.secret = pD.secret, fD.nonce = pD.nonce, fD.pendingToken = pD.pendingToken || null, fD
+                providerId: gU,
+                signInMethod: tU
+              } = RU,
+              pU = EU(RU, ["providerId", "signInMethod"]);
+            if (!gU || !tU) return null;
+            const PU = new MR(gU, tU);
+            return PU.idToken = pU.idToken || void 0, PU.accessToken = pU.accessToken || void 0, PU.secret = pU.secret, PU.nonce = pU.nonce, PU.pendingToken = pU.pendingToken || null, PU
           }
-          _getIdTokenResponse(DD) {
-            return EC(DD, this.buildRequest())
+          _getIdTokenResponse(UU) {
+            return zR(UU, this.buildRequest())
           }
-          _linkToIdToken(DD, CD) {
-            const cD = this.buildRequest();
-            return cD.idToken = CD, EC(DD, cD)
+          _linkToIdToken(UU, RU) {
+            const gU = this.buildRequest();
+            return gU.idToken = RU, zR(UU, gU)
           }
-          _getReauthenticationResolver(DD) {
-            const CD = this.buildRequest();
-            return CD.autoCreate = !1, EC(DD, CD)
+          _getReauthenticationResolver(UU) {
+            const RU = this.buildRequest();
+            return RU.autoCreate = !1, zR(UU, RU)
           }
           buildRequest() {
-            const DD = {
+            const UU = {
               requestUri: "http://localhost",
               returnSecureToken: !0
             };
-            if (this.pendingToken) DD.pendingToken = this.pendingToken;
+            if (this.pendingToken) UU.pendingToken = this.pendingToken;
             else {
-              const CD = {};
-              this.idToken && (CD.id_token = this.idToken), this.accessToken && (CD.access_token = this.accessToken), this.secret && (CD.oauth_token_secret = this.secret), CD.providerId = this.providerId, this.nonce && !this.pendingToken && (CD.nonce = this.nonce), DD.postBody = (0, ID.kb)(CD)
+              const RU = {};
+              this.idToken && (RU.id_token = this.idToken), this.accessToken && (RU.access_token = this.accessToken), this.secret && (RU.oauth_token_secret = this.secret), RU.providerId = this.providerId, this.nonce && !this.pendingToken && (RU.nonce = this.nonce), UU.postBody = (0, tU._)(RU)
             }
-            return DD
+            return UU
           }
         }
-        const uC = {
+        const DR = {
           USER_NOT_FOUND: "user-not-found"
         };
-        class hC extends TC {
-          constructor(DD) {
-            super("phone", "phone"), this.params = DD
+        class LR extends HR {
+          constructor(UU) {
+            super("phone", "phone"), this.params = UU
           }
-          static _fromVerification(DD, CD) {
-            return new hC({
-              verificationId: DD,
-              verificationCode: CD
+          static _fromVerification(UU, RU) {
+            return new LR({
+              verificationId: UU,
+              verificationCode: RU
             })
           }
-          static _fromTokenResponse(DD, CD) {
-            return new hC({
-              phoneNumber: DD,
-              temporaryProof: CD
+          static _fromTokenResponse(UU, RU) {
+            return new LR({
+              phoneNumber: UU,
+              temporaryProof: RU
             })
           }
-          _getIdTokenResponse(DD) {
-            return async function(DD, CD) {
-              return RD(DD, "POST", "/v1/accounts:signInWithPhoneNumber", LD(DD, CD))
-            }(DD, this._makeVerificationRequest())
+          _getIdTokenResponse(UU) {
+            return async function(UU, RU) {
+              return sU(UU, "POST", "/v1/accounts:signInWithPhoneNumber", dU(UU, RU))
+            }(UU, this._makeVerificationRequest())
           }
-          _linkToIdToken(DD, CD) {
-            return async function(DD, CD) {
-              const cD = await RD(DD, "POST", "/v1/accounts:signInWithPhoneNumber", LD(DD, CD));
-              if (cD.temporaryProof) throw YD(DD, "account-exists-with-different-credential", cD);
-              return cD
-            }(DD, Object.assign({
-              idToken: CD
+          _linkToIdToken(UU, RU) {
+            return async function(UU, RU) {
+              const gU = await sU(UU, "POST", "/v1/accounts:signInWithPhoneNumber", dU(UU, RU));
+              if (gU.temporaryProof) throw FU(UU, "account-exists-with-different-credential", gU);
+              return gU
+            }(UU, Object.assign({
+              idToken: RU
             }, this._makeVerificationRequest()))
           }
-          _getReauthenticationResolver(DD) {
-            return async function(DD, CD) {
-              return RD(DD, "POST", "/v1/accounts:signInWithPhoneNumber", LD(DD, Object.assign(Object.assign({}, CD), {
+          _getReauthenticationResolver(UU) {
+            return async function(UU, RU) {
+              return sU(UU, "POST", "/v1/accounts:signInWithPhoneNumber", dU(UU, Object.assign(Object.assign({}, RU), {
                 operation: "REAUTH"
-              })), uC)
-            }(DD, this._makeVerificationRequest())
+              })), DR)
+            }(UU, this._makeVerificationRequest())
           }
           _makeVerificationRequest() {
             const {
-              temporaryProof: DD,
-              phoneNumber: CD,
-              verificationId: cD,
-              verificationCode: ID
+              temporaryProof: UU,
+              phoneNumber: RU,
+              verificationId: gU,
+              verificationCode: tU
             } = this.params;
-            return DD && CD ? {
-              temporaryProof: DD,
-              phoneNumber: CD
+            return UU && RU ? {
+              temporaryProof: UU,
+              phoneNumber: RU
             } : {
-              sessionInfo: cD,
-              code: ID
+              sessionInfo: gU,
+              code: tU
             }
           }
           toJSON() {
-            const DD = {
+            const UU = {
               providerId: this.providerId
             };
-            return this.params.phoneNumber && (DD.phoneNumber = this.params.phoneNumber), this.params.temporaryProof && (DD.temporaryProof = this.params.temporaryProof), this.params.verificationCode && (DD.verificationCode = this.params.verificationCode), this.params.verificationId && (DD.verificationId = this.params.verificationId), DD
+            return this.params.phoneNumber && (UU.phoneNumber = this.params.phoneNumber), this.params.temporaryProof && (UU.temporaryProof = this.params.temporaryProof), this.params.verificationCode && (UU.verificationCode = this.params.verificationCode), this.params.verificationId && (UU.verificationId = this.params.verificationId), UU
           }
-          static fromJSON(DD) {
-            "string" === typeof DD && (DD = JSON.parse(DD));
+          static fromJSON(UU) {
+            "string" === typeof UU && (UU = JSON.parse(UU));
             const {
-              verificationId: CD,
-              verificationCode: cD,
-              phoneNumber: ID,
-              temporaryProof: pD
-            } = DD;
-            return cD || CD || ID || pD ? new hC({
-              verificationId: CD,
-              verificationCode: cD,
-              phoneNumber: ID,
-              temporaryProof: pD
+              verificationId: RU,
+              verificationCode: gU,
+              phoneNumber: tU,
+              temporaryProof: pU
+            } = UU;
+            return gU || RU || tU || pU ? new LR({
+              verificationId: RU,
+              verificationCode: gU,
+              phoneNumber: tU,
+              temporaryProof: pU
             }) : null
           }
         }
-        class rC {
-          constructor(DD) {
-            var CD, cD, pD, iD, fD, bD;
-            const QD = (0, ID.ib)((0, ID.D)(DD)),
-              wD = null !== (CD = QD.apiKey) && void 0 !== CD ? CD : null,
-              SD = null !== (cD = QD.oobCode) && void 0 !== cD ? cD : null,
-              BD = function(DD) {
-                switch (DD) {
+        class NR {
+          constructor(UU) {
+            var RU, gU, pU, EU, PU, TU;
+            const qU = (0, tU.X)((0, tU.z)(UU)),
+              KU = null !== (RU = qU.apiKey) && void 0 !== RU ? RU : null,
+              cU = null !== (gU = qU.oobCode) && void 0 !== gU ? gU : null,
+              GU = function(UU) {
+                switch (UU) {
                   case "recoverEmail":
                     return "RECOVER_EMAIL";
                   case "resetPassword":
@@ -1866,226 +1866,226 @@ export const modules = {
                   default:
                     return null
                 }
-              }(null !== (pD = QD.mode) && void 0 !== pD ? pD : null);
-            HD(wD && SD && BD, "argument-error"), this.apiKey = wD, this.operation = BD, this.code = SD, this.continueUrl = null !== (iD = QD.continueUrl) && void 0 !== iD ? iD : null, this.languageCode = null !== (fD = QD.languageCode) && void 0 !== fD ? fD : null, this.tenantId = null !== (bD = QD.tenantId) && void 0 !== bD ? bD : null
+              }(null !== (pU = qU.mode) && void 0 !== pU ? pU : null);
+            nU(KU && cU && GU, "argument-error"), this.apiKey = KU, this.operation = GU, this.code = cU, this.continueUrl = null !== (EU = qU.continueUrl) && void 0 !== EU ? EU : null, this.languageCode = null !== (PU = qU.languageCode) && void 0 !== PU ? PU : null, this.tenantId = null !== (TU = qU.tenantId) && void 0 !== TU ? TU : null
           }
-          static parseLink(DD) {
-            const CD = function(DD) {
-              const CD = (0, ID.ib)((0, ID.D)(DD)).link,
-                cD = CD ? (0, ID.ib)((0, ID.D)(CD)).deep_link_id : null,
-                pD = (0, ID.ib)((0, ID.D)(DD)).deep_link_id;
-              return (pD ? (0, ID.ib)((0, ID.D)(pD)).link : null) || pD || cD || CD || DD
-            }(DD);
+          static parseLink(UU) {
+            const RU = function(UU) {
+              const RU = (0, tU.X)((0, tU.z)(UU)).link,
+                gU = RU ? (0, tU.X)((0, tU.z)(RU)).deep_link_id : null,
+                pU = (0, tU.X)((0, tU.z)(UU)).deep_link_id;
+              return (pU ? (0, tU.X)((0, tU.z)(pU)).link : null) || pU || gU || RU || UU
+            }(UU);
             try {
-              return new rC(CD)
-            } catch (cD) {
+              return new NR(RU)
+            } catch (gU) {
               return null
             }
           }
         }
 
-        function AC(DD) {
-          return rC.parseLink(DD)
+        function lR(UU) {
+          return NR.parseLink(UU)
         }
-        class FC {
+        class OR {
           constructor() {
-            this.providerId = FC.PROVIDER_ID
+            this.providerId = OR.PROVIDER_ID
           }
-          static credential(DD, CD) {
-            return sC._fromEmailAndPassword(DD, CD)
+          static credential(UU, RU) {
+            return AR._fromEmailAndPassword(UU, RU)
           }
-          static credentialWithLink(DD, CD) {
-            const cD = rC.parseLink(CD);
-            return HD(cD, "argument-error"), sC._fromEmailAndCode(DD, cD.code, cD.tenantId)
+          static credentialWithLink(UU, RU) {
+            const gU = NR.parseLink(RU);
+            return nU(gU, "argument-error"), AR._fromEmailAndCode(UU, gU.code, gU.tenantId)
           }
         }
-        FC.PROVIDER_ID = "password", FC.EMAIL_PASSWORD_SIGN_IN_METHOD = "password", FC.EMAIL_LINK_SIGN_IN_METHOD = "emailLink";
-        class Dc {
-          constructor(DD) {
-            this.providerId = DD, this.defaultLanguageCode = null, this.customParameters = {}
+        OR.PROVIDER_ID = "password", OR.EMAIL_PASSWORD_SIGN_IN_METHOD = "password", OR.EMAIL_LINK_SIGN_IN_METHOD = "emailLink";
+        class Ug {
+          constructor(UU) {
+            this.providerId = UU, this.defaultLanguageCode = null, this.customParameters = {}
           }
-          setDefaultLanguage(DD) {
-            this.defaultLanguageCode = DD
+          setDefaultLanguage(UU) {
+            this.defaultLanguageCode = UU
           }
-          setCustomParameters(DD) {
-            return this.customParameters = DD, this
+          setCustomParameters(UU) {
+            return this.customParameters = UU, this
           }
           getCustomParameters() {
             return this.customParameters
           }
         }
-        class Cc extends Dc {
+        class Rg extends Ug {
           constructor() {
             super(...arguments), this.scopes = []
           }
-          addScope(DD) {
-            return this.scopes.includes(DD) || this.scopes.push(DD), this
+          addScope(UU) {
+            return this.scopes.includes(UU) || this.scopes.push(UU), this
           }
           getScopes() {
             return [...this.scopes]
           }
         }
-        class cc extends Cc {
-          static credentialFromJSON(DD) {
-            const CD = "string" === typeof DD ? JSON.parse(DD) : DD;
-            return HD("providerId" in CD && "signInMethod" in CD, "argument-error"), eC._fromParams(CD)
+        class gg extends Rg {
+          static credentialFromJSON(UU) {
+            const RU = "string" === typeof UU ? JSON.parse(UU) : UU;
+            return nU("providerId" in RU && "signInMethod" in RU, "argument-error"), MR._fromParams(RU)
           }
-          credential(DD) {
-            return this._credential(Object.assign(Object.assign({}, DD), {
-              nonce: DD.rawNonce
+          credential(UU) {
+            return this._credential(Object.assign(Object.assign({}, UU), {
+              nonce: UU.rawNonce
             }))
           }
-          _credential(DD) {
-            return HD(DD.idToken || DD.accessToken, "argument-error"), eC._fromParams(Object.assign(Object.assign({}, DD), {
+          _credential(UU) {
+            return nU(UU.idToken || UU.accessToken, "argument-error"), MR._fromParams(Object.assign(Object.assign({}, UU), {
               providerId: this.providerId,
               signInMethod: this.providerId
             }))
           }
-          static credentialFromResult(DD) {
-            return cc.oauthCredentialFromTaggedObject(DD)
+          static credentialFromResult(UU) {
+            return gg.oauthCredentialFromTaggedObject(UU)
           }
-          static credentialFromError(DD) {
-            return cc.oauthCredentialFromTaggedObject(DD.customData || {})
+          static credentialFromError(UU) {
+            return gg.oauthCredentialFromTaggedObject(UU.customData || {})
           }
-          static oauthCredentialFromTaggedObject(DD) {
+          static oauthCredentialFromTaggedObject(UU) {
             let {
-              _tokenResponse: CD
-            } = DD;
-            if (!CD) return null;
+              _tokenResponse: RU
+            } = UU;
+            if (!RU) return null;
             const {
-              oauthIdToken: cD,
-              oauthAccessToken: ID,
-              oauthTokenSecret: pD,
-              pendingToken: iD,
-              nonce: fD,
-              providerId: bD
-            } = CD;
-            if (!ID && !pD && !cD && !iD) return null;
-            if (!bD) return null;
+              oauthIdToken: gU,
+              oauthAccessToken: tU,
+              oauthTokenSecret: pU,
+              pendingToken: EU,
+              nonce: PU,
+              providerId: TU
+            } = RU;
+            if (!tU && !pU && !gU && !EU) return null;
+            if (!TU) return null;
             try {
-              return new cc(bD)._credential({
-                idToken: cD,
-                accessToken: ID,
-                nonce: fD,
-                pendingToken: iD
+              return new gg(TU)._credential({
+                idToken: gU,
+                accessToken: tU,
+                nonce: PU,
+                pendingToken: EU
               })
-            } catch (QD) {
+            } catch (qU) {
               return null
             }
           }
         }
-        class Ic extends Cc {
+        class tg extends Rg {
           constructor() {
             super("facebook.com")
           }
-          static credential(DD) {
-            return eC._fromParams({
-              providerId: Ic.PROVIDER_ID,
-              signInMethod: Ic.FACEBOOK_SIGN_IN_METHOD,
-              accessToken: DD
+          static credential(UU) {
+            return MR._fromParams({
+              providerId: tg.PROVIDER_ID,
+              signInMethod: tg.FACEBOOK_SIGN_IN_METHOD,
+              accessToken: UU
             })
           }
-          static credentialFromResult(DD) {
-            return Ic.credentialFromTaggedObject(DD)
+          static credentialFromResult(UU) {
+            return tg.credentialFromTaggedObject(UU)
           }
-          static credentialFromError(DD) {
-            return Ic.credentialFromTaggedObject(DD.customData || {})
+          static credentialFromError(UU) {
+            return tg.credentialFromTaggedObject(UU.customData || {})
           }
-          static credentialFromTaggedObject(DD) {
+          static credentialFromTaggedObject(UU) {
             let {
-              _tokenResponse: CD
-            } = DD;
-            if (!CD || !("oauthAccessToken" in CD)) return null;
-            if (!CD.oauthAccessToken) return null;
+              _tokenResponse: RU
+            } = UU;
+            if (!RU || !("oauthAccessToken" in RU)) return null;
+            if (!RU.oauthAccessToken) return null;
             try {
-              return Ic.credential(CD.oauthAccessToken)
-            } catch (cD) {
+              return tg.credential(RU.oauthAccessToken)
+            } catch (gU) {
               return null
             }
           }
         }
-        Ic.FACEBOOK_SIGN_IN_METHOD = "facebook.com", Ic.PROVIDER_ID = "facebook.com";
-        class pc extends Cc {
+        tg.FACEBOOK_SIGN_IN_METHOD = "facebook.com", tg.PROVIDER_ID = "facebook.com";
+        class pg extends Rg {
           constructor() {
             super("google.com"), this.addScope("profile")
           }
-          static credential(DD, CD) {
-            return eC._fromParams({
-              providerId: pc.PROVIDER_ID,
-              signInMethod: pc.GOOGLE_SIGN_IN_METHOD,
-              idToken: DD,
-              accessToken: CD
+          static credential(UU, RU) {
+            return MR._fromParams({
+              providerId: pg.PROVIDER_ID,
+              signInMethod: pg.GOOGLE_SIGN_IN_METHOD,
+              idToken: UU,
+              accessToken: RU
             })
           }
-          static credentialFromResult(DD) {
-            return pc.credentialFromTaggedObject(DD)
+          static credentialFromResult(UU) {
+            return pg.credentialFromTaggedObject(UU)
           }
-          static credentialFromError(DD) {
-            return pc.credentialFromTaggedObject(DD.customData || {})
+          static credentialFromError(UU) {
+            return pg.credentialFromTaggedObject(UU.customData || {})
           }
-          static credentialFromTaggedObject(DD) {
+          static credentialFromTaggedObject(UU) {
             let {
-              _tokenResponse: CD
-            } = DD;
-            if (!CD) return null;
+              _tokenResponse: RU
+            } = UU;
+            if (!RU) return null;
             const {
-              oauthIdToken: cD,
-              oauthAccessToken: ID
-            } = CD;
-            if (!cD && !ID) return null;
+              oauthIdToken: gU,
+              oauthAccessToken: tU
+            } = RU;
+            if (!gU && !tU) return null;
             try {
-              return pc.credential(cD, ID)
-            } catch (pD) {
+              return pg.credential(gU, tU)
+            } catch (pU) {
               return null
             }
           }
         }
-        pc.GOOGLE_SIGN_IN_METHOD = "google.com", pc.PROVIDER_ID = "google.com";
-        class ic extends Cc {
+        pg.GOOGLE_SIGN_IN_METHOD = "google.com", pg.PROVIDER_ID = "google.com";
+        class Eg extends Rg {
           constructor() {
             super("github.com")
           }
-          static credential(DD) {
-            return eC._fromParams({
-              providerId: ic.PROVIDER_ID,
-              signInMethod: ic.GITHUB_SIGN_IN_METHOD,
-              accessToken: DD
+          static credential(UU) {
+            return MR._fromParams({
+              providerId: Eg.PROVIDER_ID,
+              signInMethod: Eg.GITHUB_SIGN_IN_METHOD,
+              accessToken: UU
             })
           }
-          static credentialFromResult(DD) {
-            return ic.credentialFromTaggedObject(DD)
+          static credentialFromResult(UU) {
+            return Eg.credentialFromTaggedObject(UU)
           }
-          static credentialFromError(DD) {
-            return ic.credentialFromTaggedObject(DD.customData || {})
+          static credentialFromError(UU) {
+            return Eg.credentialFromTaggedObject(UU.customData || {})
           }
-          static credentialFromTaggedObject(DD) {
+          static credentialFromTaggedObject(UU) {
             let {
-              _tokenResponse: CD
-            } = DD;
-            if (!CD || !("oauthAccessToken" in CD)) return null;
-            if (!CD.oauthAccessToken) return null;
+              _tokenResponse: RU
+            } = UU;
+            if (!RU || !("oauthAccessToken" in RU)) return null;
+            if (!RU.oauthAccessToken) return null;
             try {
-              return ic.credential(CD.oauthAccessToken)
-            } catch (cD) {
+              return Eg.credential(RU.oauthAccessToken)
+            } catch (gU) {
               return null
             }
           }
         }
-        ic.GITHUB_SIGN_IN_METHOD = "github.com", ic.PROVIDER_ID = "github.com";
-        class fc extends TC {
-          constructor(DD, CD) {
-            super(DD, DD), this.pendingToken = CD
+        Eg.GITHUB_SIGN_IN_METHOD = "github.com", Eg.PROVIDER_ID = "github.com";
+        class Pg extends HR {
+          constructor(UU, RU) {
+            super(UU, UU), this.pendingToken = RU
           }
-          _getIdTokenResponse(DD) {
-            return EC(DD, this.buildRequest())
+          _getIdTokenResponse(UU) {
+            return zR(UU, this.buildRequest())
           }
-          _linkToIdToken(DD, CD) {
-            const cD = this.buildRequest();
-            return cD.idToken = CD, EC(DD, cD)
+          _linkToIdToken(UU, RU) {
+            const gU = this.buildRequest();
+            return gU.idToken = RU, zR(UU, gU)
           }
-          _getReauthenticationResolver(DD) {
-            const CD = this.buildRequest();
-            return CD.autoCreate = !1, EC(DD, CD)
+          _getReauthenticationResolver(UU) {
+            const RU = this.buildRequest();
+            return RU.autoCreate = !1, zR(UU, RU)
           }
           toJSON() {
             return {
@@ -2094,17 +2094,17 @@ export const modules = {
               pendingToken: this.pendingToken
             }
           }
-          static fromJSON(DD) {
-            const CD = "string" === typeof DD ? JSON.parse(DD) : DD,
+          static fromJSON(UU) {
+            const RU = "string" === typeof UU ? JSON.parse(UU) : UU,
               {
-                providerId: cD,
-                signInMethod: ID,
-                pendingToken: pD
-              } = CD;
-            return cD && ID && pD && cD === ID ? new fc(cD, pD) : null
+                providerId: gU,
+                signInMethod: tU,
+                pendingToken: pU
+              } = RU;
+            return gU && tU && pU && gU === tU ? new Pg(gU, pU) : null
           }
-          static _create(DD, CD) {
-            return new fc(DD, CD)
+          static _create(UU, RU) {
+            return new Pg(UU, RU)
           }
           buildRequest() {
             return {
@@ -2114,753 +2114,753 @@ export const modules = {
             }
           }
         }
-        class bc extends Dc {
-          constructor(DD) {
-            HD(DD.startsWith("saml."), "argument-error"), super(DD)
+        class Tg extends Ug {
+          constructor(UU) {
+            nU(UU.startsWith("saml."), "argument-error"), super(UU)
           }
-          static credentialFromResult(DD) {
-            return bc.samlCredentialFromTaggedObject(DD)
+          static credentialFromResult(UU) {
+            return Tg.samlCredentialFromTaggedObject(UU)
           }
-          static credentialFromError(DD) {
-            return bc.samlCredentialFromTaggedObject(DD.customData || {})
+          static credentialFromError(UU) {
+            return Tg.samlCredentialFromTaggedObject(UU.customData || {})
           }
-          static credentialFromJSON(DD) {
-            const CD = fc.fromJSON(DD);
-            return HD(CD, "argument-error"), CD
+          static credentialFromJSON(UU) {
+            const RU = Pg.fromJSON(UU);
+            return nU(RU, "argument-error"), RU
           }
-          static samlCredentialFromTaggedObject(DD) {
+          static samlCredentialFromTaggedObject(UU) {
             let {
-              _tokenResponse: CD
-            } = DD;
-            if (!CD) return null;
+              _tokenResponse: RU
+            } = UU;
+            if (!RU) return null;
             const {
-              pendingToken: cD,
-              providerId: ID
-            } = CD;
-            if (!cD || !ID) return null;
+              pendingToken: gU,
+              providerId: tU
+            } = RU;
+            if (!gU || !tU) return null;
             try {
-              return fc._create(ID, cD)
-            } catch (pD) {
+              return Pg._create(tU, gU)
+            } catch (pU) {
               return null
             }
           }
         }
-        class Qc extends Cc {
+        class qg extends Rg {
           constructor() {
             super("twitter.com")
           }
-          static credential(DD, CD) {
-            return eC._fromParams({
-              providerId: Qc.PROVIDER_ID,
-              signInMethod: Qc.TWITTER_SIGN_IN_METHOD,
-              oauthToken: DD,
-              oauthTokenSecret: CD
+          static credential(UU, RU) {
+            return MR._fromParams({
+              providerId: qg.PROVIDER_ID,
+              signInMethod: qg.TWITTER_SIGN_IN_METHOD,
+              oauthToken: UU,
+              oauthTokenSecret: RU
             })
           }
-          static credentialFromResult(DD) {
-            return Qc.credentialFromTaggedObject(DD)
+          static credentialFromResult(UU) {
+            return qg.credentialFromTaggedObject(UU)
           }
-          static credentialFromError(DD) {
-            return Qc.credentialFromTaggedObject(DD.customData || {})
+          static credentialFromError(UU) {
+            return qg.credentialFromTaggedObject(UU.customData || {})
           }
-          static credentialFromTaggedObject(DD) {
+          static credentialFromTaggedObject(UU) {
             let {
-              _tokenResponse: CD
-            } = DD;
-            if (!CD) return null;
+              _tokenResponse: RU
+            } = UU;
+            if (!RU) return null;
             const {
-              oauthAccessToken: cD,
-              oauthTokenSecret: ID
-            } = CD;
-            if (!cD || !ID) return null;
+              oauthAccessToken: gU,
+              oauthTokenSecret: tU
+            } = RU;
+            if (!gU || !tU) return null;
             try {
-              return Qc.credential(cD, ID)
-            } catch (pD) {
+              return qg.credential(gU, tU)
+            } catch (pU) {
               return null
             }
           }
         }
-        async function wc(DD, CD) {
-          return RD(DD, "POST", "/v1/accounts:signUp", LD(DD, CD))
+        async function Kg(UU, RU) {
+          return sU(UU, "POST", "/v1/accounts:signUp", dU(UU, RU))
         }
-        Qc.TWITTER_SIGN_IN_METHOD = "twitter.com", Qc.PROVIDER_ID = "twitter.com";
-        class Sc {
-          constructor(DD) {
-            this.user = DD.user, this.providerId = DD.providerId, this._tokenResponse = DD._tokenResponse, this.operationType = DD.operationType
+        qg.TWITTER_SIGN_IN_METHOD = "twitter.com", qg.PROVIDER_ID = "twitter.com";
+        class cg {
+          constructor(UU) {
+            this.user = UU.user, this.providerId = UU.providerId, this._tokenResponse = UU._tokenResponse, this.operationType = UU.operationType
           }
-          static async _fromIdTokenResponse(DD, CD, cD) {
-            let ID = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-            const pD = await IC._fromIdTokenResponse(DD, cD, ID),
-              iD = Bc(cD);
-            return new Sc({
-              user: pD,
-              providerId: iD,
-              _tokenResponse: cD,
-              operationType: CD
+          static async _fromIdTokenResponse(UU, RU, gU) {
+            let tU = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+            const pU = await tR._fromIdTokenResponse(UU, gU, tU),
+              EU = Gg(gU);
+            return new cg({
+              user: pU,
+              providerId: EU,
+              _tokenResponse: gU,
+              operationType: RU
             })
           }
-          static async _forOperation(DD, CD, cD) {
-            await DD._updateTokensIfNecessary(cD, !0);
-            const ID = Bc(cD);
-            return new Sc({
-              user: DD,
-              providerId: ID,
-              _tokenResponse: cD,
-              operationType: CD
+          static async _forOperation(UU, RU, gU) {
+            await UU._updateTokensIfNecessary(gU, !0);
+            const tU = Gg(gU);
+            return new cg({
+              user: UU,
+              providerId: tU,
+              _tokenResponse: gU,
+              operationType: RU
             })
           }
         }
 
-        function Bc(DD) {
-          return DD.providerId ? DD.providerId : "phoneNumber" in DD ? "phone" : null
+        function Gg(UU) {
+          return UU.providerId ? UU.providerId : "phoneNumber" in UU ? "phone" : null
         }
-        async function yc(DD) {
-          var CD;
-          const cD = aC(DD);
-          if (await cD._initializationPromise, null === (CD = cD.currentUser) || void 0 === CD ? void 0 : CD.isAnonymous) return new Sc({
-            user: cD.currentUser,
+        async function jg(UU) {
+          var RU;
+          const gU = BR(UU);
+          if (await gU._initializationPromise, null === (RU = gU.currentUser) || void 0 === RU ? void 0 : RU.isAnonymous) return new cg({
+            user: gU.currentUser,
             providerId: null,
             operationType: "signIn"
           });
-          const ID = await wc(cD, {
+          const tU = await Kg(gU, {
               returnSecureToken: !0
             }),
-            pD = await Sc._fromIdTokenResponse(cD, "signIn", ID, !0);
-          return await cD._updateCurrentUser(pD.user), pD
+            pU = await cg._fromIdTokenResponse(gU, "signIn", tU, !0);
+          return await gU._updateCurrentUser(pU.user), pU
         }
-        class Mc extends ID.k {
-          constructor(DD, CD, cD, ID) {
-            var pD;
-            super(CD.code, CD.message), this.operationType = cD, this.user = ID, Object.setPrototypeOf(this, Mc.prototype), this.customData = {
-              appName: DD.name,
-              tenantId: null !== (pD = DD.tenantId) && void 0 !== pD ? pD : void 0,
-              _serverResponse: CD.customData._serverResponse,
-              operationType: cD
+        class ug extends tU.i {
+          constructor(UU, RU, gU, tU) {
+            var pU;
+            super(RU.code, RU.message), this.operationType = gU, this.user = tU, Object.setPrototypeOf(this, ug.prototype), this.customData = {
+              appName: UU.name,
+              tenantId: null !== (pU = UU.tenantId) && void 0 !== pU ? pU : void 0,
+              _serverResponse: RU.customData._serverResponse,
+              operationType: gU
             }
           }
-          static _fromErrorAndOperation(DD, CD, cD, ID) {
-            return new Mc(DD, CD, cD, ID)
+          static _fromErrorAndOperation(UU, RU, gU, tU) {
+            return new ug(UU, RU, gU, tU)
           }
         }
 
-        function tc(DD, CD, cD, ID) {
-          return ("reauthenticate" === CD ? cD._getReauthenticationResolver(DD) : cD._getIdTokenResponse(DD)).catch((cD => {
-            if ("auth/multi-factor-auth-required" === cD.code) throw Mc._fromErrorAndOperation(DD, cD, CD, ID);
-            throw cD
+        function Cg(UU, RU, gU, tU) {
+          return ("reauthenticate" === RU ? gU._getReauthenticationResolver(UU) : gU._getIdTokenResponse(UU)).catch((gU => {
+            if ("auth/multi-factor-auth-required" === gU.code) throw ug._fromErrorAndOperation(UU, gU, RU, tU);
+            throw gU
           }))
         }
 
-        function Zc(DD) {
-          return new Set(DD.map((DD => {
+        function hg(UU) {
+          return new Set(UU.map((UU => {
             let {
-              providerId: CD
-            } = DD;
-            return CD
-          })).filter((DD => !!DD)))
+              providerId: RU
+            } = UU;
+            return RU
+          })).filter((UU => !!UU)))
         }
-        async function oc(DD, CD) {
-          const cD = (0, ID.P)(DD);
-          await Nc(!0, cD, CD);
+        async function Qg(UU, RU) {
+          const gU = (0, tU.I)(UU);
+          await Wg(!0, gU, RU);
           const {
-            providerUserInfo: pD
-          } = await async function(DD, CD) {
-            return TD(DD, "POST", "/v1/accounts:update", CD)
-          }(cD.auth, {
-            idToken: await cD.getIdToken(),
-            deleteProvider: [CD]
-          }), iD = Zc(pD || []);
-          return cD.providerData = cD.providerData.filter((DD => iD.has(DD.providerId))), iD.has("phone") || (cD.phoneNumber = null), await cD.auth._persistUserIfCurrent(cD), cD
+            providerUserInfo: pU
+          } = await async function(UU, RU) {
+            return HU(UU, "POST", "/v1/accounts:update", RU)
+          }(gU.auth, {
+            idToken: await gU.getIdToken(),
+            deleteProvider: [RU]
+          }), EU = hg(pU || []);
+          return gU.providerData = gU.providerData.filter((UU => EU.has(UU.providerId))), EU.has("phone") || (gU.phoneNumber = null), await gU.auth._persistUserIfCurrent(gU), gU
         }
-        async function vc(DD, CD) {
-          let cD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          const ID = await hD(DD, CD._linkToIdToken(DD.auth, await DD.getIdToken()), cD);
-          return Sc._forOperation(DD, "link", ID)
+        async function eg(UU, RU) {
+          let gU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          const tU = await LU(UU, RU._linkToIdToken(UU.auth, await UU.getIdToken()), gU);
+          return cg._forOperation(UU, "link", tU)
         }
-        async function Nc(DD, CD, cD) {
-          await FD(CD);
-          const ID = !1 === DD ? "provider-already-linked" : "no-such-provider";
-          HD(Zc(CD.providerData).has(cD) === DD, CD.auth, ID)
+        async function Wg(UU, RU, gU) {
+          await OU(RU);
+          const tU = !1 === UU ? "provider-already-linked" : "no-such-provider";
+          nU(hg(RU.providerData).has(gU) === UU, RU.auth, tU)
         }
-        async function gc(DD, CD) {
-          let cD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        async function fg(UU, RU) {
+          let gU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
           const {
-            auth: ID
-          } = DD, pD = "reauthenticate";
+            auth: tU
+          } = UU, pU = "reauthenticate";
           try {
-            const iD = await hD(DD, tc(ID, pD, CD, DD), cD);
-            HD(iD.idToken, ID, "internal-error");
-            const fD = uD(iD.idToken);
-            HD(fD, ID, "internal-error");
+            const EU = await LU(UU, Cg(tU, pU, RU, UU), gU);
+            nU(EU.idToken, tU, "internal-error");
+            const PU = DU(EU.idToken);
+            nU(PU, tU, "internal-error");
             const {
-              sub: bD
-            } = fD;
-            return HD(DD.uid === bD, ID, "user-mismatch"), Sc._forOperation(DD, pD, iD)
-          } catch (iD) {
-            throw "auth/user-not-found" === (null === iD || void 0 === iD ? void 0 : iD.code) && XD(ID, "user-mismatch"), iD
+              sub: TU
+            } = PU;
+            return nU(UU.uid === TU, tU, "user-mismatch"), cg._forOperation(UU, pU, EU)
+          } catch (EU) {
+            throw "auth/user-not-found" === (null === EU || void 0 === EU ? void 0 : EU.code) && xU(tU, "user-mismatch"), EU
           }
         }
-        async function Xc(DD, CD) {
-          let cD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          const ID = "signIn",
-            pD = await tc(DD, ID, CD),
-            iD = await Sc._fromIdTokenResponse(DD, ID, pD);
-          return cD || await DD._updateCurrentUser(iD.user), iD
+        async function xg(UU, RU) {
+          let gU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          const tU = "signIn",
+            pU = await Cg(UU, tU, RU),
+            EU = await cg._fromIdTokenResponse(UU, tU, pU);
+          return gU || await UU._updateCurrentUser(EU.user), EU
         }
-        async function mc(DD, CD) {
-          return Xc(aC(DD), CD)
+        async function mg(UU, RU) {
+          return xg(BR(UU), RU)
         }
-        async function nc(DD, CD) {
-          const cD = (0, ID.P)(DD);
-          return await Nc(!1, cD, CD.providerId), vc(cD, CD)
+        async function Ig(UU, RU) {
+          const gU = (0, tU.I)(UU);
+          return await Wg(!1, gU, RU.providerId), eg(gU, RU)
         }
-        async function Oc(DD, CD) {
-          return gc((0, ID.P)(DD), CD)
+        async function Jg(UU, RU) {
+          return fg((0, tU.I)(UU), RU)
         }
-        async function Pc(DD, CD) {
-          const cD = aC(DD),
-            ID = await async function(DD, CD) {
-              return RD(DD, "POST", "/v1/accounts:signInWithCustomToken", LD(DD, CD))
-            }(cD, {
-              token: CD,
+        async function wg(UU, RU) {
+          const gU = BR(UU),
+            tU = await async function(UU, RU) {
+              return sU(UU, "POST", "/v1/accounts:signInWithCustomToken", dU(UU, RU))
+            }(gU, {
+              token: RU,
               returnSecureToken: !0
-            }), pD = await Sc._fromIdTokenResponse(cD, "signIn", ID);
-          return await cD._updateCurrentUser(pD.user), pD
+            }), pU = await cg._fromIdTokenResponse(gU, "signIn", tU);
+          return await gU._updateCurrentUser(pU.user), pU
         }
-        class Hc {
-          constructor(DD, CD) {
-            this.factorId = DD, this.uid = CD.mfaEnrollmentId, this.enrollmentTime = new Date(CD.enrolledAt).toUTCString(), this.displayName = CD.displayName
+        class ng {
+          constructor(UU, RU) {
+            this.factorId = UU, this.uid = RU.mfaEnrollmentId, this.enrollmentTime = new Date(RU.enrolledAt).toUTCString(), this.displayName = RU.displayName
           }
-          static _fromServerResponse(DD, CD) {
-            return "phoneInfo" in CD ? Uc._fromServerResponse(DD, CD) : "totpInfo" in CD ? xc._fromServerResponse(DD, CD) : XD(DD, "internal-error")
-          }
-        }
-        class Uc extends Hc {
-          constructor(DD) {
-            super("phone", DD), this.phoneNumber = DD.phoneInfo
-          }
-          static _fromServerResponse(DD, CD) {
-            return new Uc(CD)
+          static _fromServerResponse(UU, RU) {
+            return "phoneInfo" in RU ? bg._fromServerResponse(UU, RU) : "totpInfo" in RU ? og._fromServerResponse(UU, RU) : xU(UU, "internal-error")
           }
         }
-        class xc extends Hc {
-          constructor(DD) {
-            super("totp", DD)
+        class bg extends ng {
+          constructor(UU) {
+            super("phone", UU), this.phoneNumber = UU.phoneInfo
           }
-          static _fromServerResponse(DD, CD) {
-            return new xc(CD)
+          static _fromServerResponse(UU, RU) {
+            return new bg(RU)
+          }
+        }
+        class og extends ng {
+          constructor(UU) {
+            super("totp", UU)
+          }
+          static _fromServerResponse(UU, RU) {
+            return new og(RU)
           }
         }
 
-        function qc(DD, CD, cD) {
-          var ID;
-          HD((null === (ID = cD.url) || void 0 === ID ? void 0 : ID.length) > 0, DD, "invalid-continue-uri"), HD("undefined" === typeof cD.dynamicLinkDomain || cD.dynamicLinkDomain.length > 0, DD, "invalid-dynamic-link-domain"), CD.continueUrl = cD.url, CD.dynamicLinkDomain = cD.dynamicLinkDomain, CD.canHandleCodeInApp = cD.handleCodeInApp, cD.iOS && (HD(cD.iOS.bundleId.length > 0, DD, "missing-ios-bundle-id"), CD.iOSBundleId = cD.iOS.bundleId), cD.android && (HD(cD.android.packageName.length > 0, DD, "missing-android-pkg-name"), CD.androidInstallApp = cD.android.installApp, CD.androidMinimumVersionCode = cD.android.minimumVersion, CD.androidPackageName = cD.android.packageName)
+        function Zg(UU, RU, gU) {
+          var tU;
+          nU((null === (tU = gU.url) || void 0 === tU ? void 0 : tU.length) > 0, UU, "invalid-continue-uri"), nU("undefined" === typeof gU.dynamicLinkDomain || gU.dynamicLinkDomain.length > 0, UU, "invalid-dynamic-link-domain"), RU.continueUrl = gU.url, RU.dynamicLinkDomain = gU.dynamicLinkDomain, RU.canHandleCodeInApp = gU.handleCodeInApp, gU.iOS && (nU(gU.iOS.bundleId.length > 0, UU, "missing-ios-bundle-id"), RU.iOSBundleId = gU.iOS.bundleId), gU.android && (nU(gU.android.packageName.length > 0, UU, "missing-android-pkg-name"), RU.androidInstallApp = gU.android.installApp, RU.androidMinimumVersionCode = gU.android.minimumVersion, RU.androidPackageName = gU.android.packageName)
         }
-        async function Jc(DD, CD, cD) {
-          var ID;
-          const pD = aC(DD),
-            iD = {
+        async function ag(UU, RU, gU) {
+          var tU;
+          const pU = BR(UU),
+            EU = {
               requestType: "PASSWORD_RESET",
-              email: CD,
+              email: RU,
               clientType: "CLIENT_TYPE_WEB"
             };
-          if (null === (ID = pD._getRecaptchaConfig()) || void 0 === ID ? void 0 : ID.emailPasswordEnabled) {
-            const DD = await qC(pD, iD, "getOobCode", !0);
-            cD && qc(pD, DD, cD), await YC(pD, DD)
-          } else cD && qc(pD, iD, cD), await YC(pD, iD).catch((async DD => {
-            if ("auth/missing-recaptcha-token" !== DD.code) return Promise.reject(DD);
+          if (null === (tU = pU._getRecaptchaConfig()) || void 0 === tU ? void 0 : tU.emailPasswordEnabled) {
+            const UU = await ZR(pU, EU, "getOobCode", !0);
+            gU && Zg(pU, UU, gU), await FR(pU, UU)
+          } else gU && Zg(pU, EU, gU), await FR(pU, EU).catch((async UU => {
+            if ("auth/missing-recaptcha-token" !== UU.code) return Promise.reject(UU);
             {
               console.log("Password resets are protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the password reset flow.");
-              const DD = await qC(pD, iD, "getOobCode", !0);
-              cD && qc(pD, DD, cD), await YC(pD, DD)
+              const UU = await ZR(pU, EU, "getOobCode", !0);
+              gU && Zg(pU, UU, gU), await FR(pU, UU)
             }
           }))
         }
-        async function Kc(DD, CD, cD) {
-          await GC((0, ID.P)(DD), {
-            oobCode: CD,
-            newPassword: cD
+        async function Yg(UU, RU, gU) {
+          await SR((0, tU.I)(UU), {
+            oobCode: RU,
+            newPassword: gU
           })
         }
-        async function ac(DD, CD) {
-          await async function(DD, CD) {
-            return TD(DD, "POST", "/v1/accounts:update", LD(DD, CD))
-          }((0, ID.P)(DD), {
-            oobCode: CD
+        async function Bg(UU, RU) {
+          await async function(UU, RU) {
+            return HU(UU, "POST", "/v1/accounts:update", dU(UU, RU))
+          }((0, tU.I)(UU), {
+            oobCode: RU
           })
         }
-        async function Vc(DD, CD) {
-          const cD = (0, ID.P)(DD),
-            pD = await GC(cD, {
-              oobCode: CD
+        async function Vg(UU, RU) {
+          const gU = (0, tU.I)(UU),
+            pU = await SR(gU, {
+              oobCode: RU
             }),
-            iD = pD.requestType;
-          switch (HD(iD, cD, "internal-error"), iD) {
+            EU = pU.requestType;
+          switch (nU(EU, gU, "internal-error"), EU) {
             case "EMAIL_SIGNIN":
               break;
             case "VERIFY_AND_CHANGE_EMAIL":
-              HD(pD.newEmail, cD, "internal-error");
+              nU(pU.newEmail, gU, "internal-error");
               break;
             case "REVERT_SECOND_FACTOR_ADDITION":
-              HD(pD.mfaInfo, cD, "internal-error");
+              nU(pU.mfaInfo, gU, "internal-error");
             default:
-              HD(pD.email, cD, "internal-error")
+              nU(pU.email, gU, "internal-error")
           }
-          let fD = null;
-          return pD.mfaInfo && (fD = Hc._fromServerResponse(aC(cD), pD.mfaInfo)), {
+          let PU = null;
+          return pU.mfaInfo && (PU = ng._fromServerResponse(BR(gU), pU.mfaInfo)), {
             data: {
-              email: ("VERIFY_AND_CHANGE_EMAIL" === pD.requestType ? pD.newEmail : pD.email) || null,
-              previousEmail: ("VERIFY_AND_CHANGE_EMAIL" === pD.requestType ? pD.email : pD.newEmail) || null,
-              multiFactorInfo: fD
+              email: ("VERIFY_AND_CHANGE_EMAIL" === pU.requestType ? pU.newEmail : pU.email) || null,
+              previousEmail: ("VERIFY_AND_CHANGE_EMAIL" === pU.requestType ? pU.email : pU.newEmail) || null,
+              multiFactorInfo: PU
             },
-            operation: iD
+            operation: EU
           }
         }
-        async function zc(DD, CD) {
+        async function rg(UU, RU) {
           const {
-            data: cD
-          } = await Vc((0, ID.P)(DD), CD);
-          return cD.email
+            data: gU
+          } = await Vg((0, tU.I)(UU), RU);
+          return gU.email
         }
-        async function jc(DD, CD, cD) {
-          var ID;
-          const pD = aC(DD),
-            iD = {
+        async function Xg(UU, RU, gU) {
+          var tU;
+          const pU = BR(UU),
+            EU = {
               returnSecureToken: !0,
-              email: CD,
-              password: cD,
+              email: RU,
+              password: gU,
               clientType: "CLIENT_TYPE_WEB"
             };
-          let fD;
-          if (null === (ID = pD._getRecaptchaConfig()) || void 0 === ID ? void 0 : ID.emailPasswordEnabled) {
-            const DD = await qC(pD, iD, "signUpPassword");
-            fD = wc(pD, DD)
-          } else fD = wc(pD, iD).catch((async DD => {
-            if ("auth/missing-recaptcha-token" === DD.code) {
+          let PU;
+          if (null === (tU = pU._getRecaptchaConfig()) || void 0 === tU ? void 0 : tU.emailPasswordEnabled) {
+            const UU = await ZR(pU, EU, "signUpPassword");
+            PU = Kg(pU, UU)
+          } else PU = Kg(pU, EU).catch((async UU => {
+            if ("auth/missing-recaptcha-token" === UU.code) {
               console.log("Sign-up is protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the sign-up flow.");
-              const DD = await qC(pD, iD, "signUpPassword");
-              return wc(pD, DD)
+              const UU = await ZR(pU, EU, "signUpPassword");
+              return Kg(pU, UU)
             }
-            return Promise.reject(DD)
+            return Promise.reject(UU)
           }));
-          const bD = await fD.catch((DD => Promise.reject(DD))),
-            QD = await Sc._fromIdTokenResponse(pD, "signIn", bD);
-          return await pD._updateCurrentUser(QD.user), QD
+          const TU = await PU.catch((UU => Promise.reject(UU))),
+            qU = await cg._fromIdTokenResponse(pU, "signIn", TU);
+          return await pU._updateCurrentUser(qU.user), qU
         }
 
-        function lc(DD, CD, cD) {
-          return mc((0, ID.P)(DD), FC.credential(CD, cD))
+        function vg(UU, RU, gU) {
+          return mg((0, tU.I)(UU), OR.credential(RU, gU))
         }
-        async function Lc(DD, CD, cD) {
-          var ID;
-          const pD = aC(DD),
-            iD = {
+        async function dg(UU, RU, gU) {
+          var tU;
+          const pU = BR(UU),
+            EU = {
               requestType: "EMAIL_SIGNIN",
-              email: CD,
+              email: RU,
               clientType: "CLIENT_TYPE_WEB"
             };
 
-          function fD(DD, CD) {
-            HD(CD.handleCodeInApp, pD, "argument-error"), CD && qc(pD, DD, CD)
+          function PU(UU, RU) {
+            nU(RU.handleCodeInApp, pU, "argument-error"), RU && Zg(pU, UU, RU)
           }
-          if (null === (ID = pD._getRecaptchaConfig()) || void 0 === ID ? void 0 : ID.emailPasswordEnabled) {
-            const DD = await qC(pD, iD, "getOobCode", !0);
-            fD(DD, cD), await WC(pD, DD)
-          } else fD(iD, cD), await WC(pD, iD).catch((async DD => {
-            if ("auth/missing-recaptcha-token" !== DD.code) return Promise.reject(DD);
+          if (null === (tU = pU._getRecaptchaConfig()) || void 0 === tU ? void 0 : tU.emailPasswordEnabled) {
+            const UU = await ZR(pU, EU, "getOobCode", !0);
+            PU(UU, gU), await iR(pU, UU)
+          } else PU(EU, gU), await iR(pU, EU).catch((async UU => {
+            if ("auth/missing-recaptcha-token" !== UU.code) return Promise.reject(UU);
             {
               console.log("Email link sign-in is protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the sign-in flow.");
-              const DD = await qC(pD, iD, "getOobCode", !0);
-              fD(DD, cD), await WC(pD, DD)
+              const UU = await ZR(pU, EU, "getOobCode", !0);
+              PU(UU, gU), await iR(pU, UU)
             }
           }))
         }
 
-        function Tc(DD, CD) {
-          const cD = rC.parseLink(CD);
-          return "EMAIL_SIGNIN" === (null === cD || void 0 === cD ? void 0 : cD.operation)
+        function Hg(UU, RU) {
+          const gU = NR.parseLink(RU);
+          return "EMAIL_SIGNIN" === (null === gU || void 0 === gU ? void 0 : gU.operation)
         }
-        async function Gc(DD, CD, cD) {
-          const pD = (0, ID.P)(DD),
-            iD = FC.credentialWithLink(CD, cD || qD());
-          return HD(iD._tenantId === (pD.tenantId || null), pD, "tenant-id-mismatch"), mc(pD, iD)
+        async function Sg(UU, RU, gU) {
+          const pU = (0, tU.I)(UU),
+            EU = OR.credentialWithLink(RU, gU || ZU());
+          return nU(EU._tenantId === (pU.tenantId || null), pU, "tenant-id-mismatch"), mg(pU, EU)
         }
-        async function Rc(DD, CD) {
-          const cD = {
-              identifier: CD,
-              continueUri: JD() ? qD() : "http://localhost"
+        async function sg(UU, RU) {
+          const gU = {
+              identifier: RU,
+              continueUri: aU() ? ZU() : "http://localhost"
             },
             {
-              signinMethods: pD
-            } = await async function(DD, CD) {
-              return TD(DD, "POST", "/v1/accounts:createAuthUri", LD(DD, CD))
-            }((0, ID.P)(DD), cD);
-          return pD || []
+              signinMethods: pU
+            } = await async function(UU, RU) {
+              return HU(UU, "POST", "/v1/accounts:createAuthUri", dU(UU, RU))
+            }((0, tU.I)(UU), gU);
+          return pU || []
         }
-        async function kc(DD, CD) {
-          const cD = (0, ID.P)(DD),
-            pD = {
+        async function yg(UU, RU) {
+          const gU = (0, tU.I)(UU),
+            pU = {
               requestType: "VERIFY_EMAIL",
-              idToken: await DD.getIdToken()
+              idToken: await UU.getIdToken()
             };
-          CD && qc(cD.auth, pD, CD);
+          RU && Zg(gU.auth, pU, RU);
           const {
-            email: iD
-          } = await async function(DD, CD) {
-            return dC(DD, CD)
-          }(cD.auth, pD);
-          iD !== DD.email && await DD.reload()
+            email: EU
+          } = await async function(UU, RU) {
+            return kR(UU, RU)
+          }(gU.auth, pU);
+          EU !== UU.email && await UU.reload()
         }
-        async function dc(DD, CD, cD) {
-          const pD = (0, ID.P)(DD),
-            iD = {
+        async function kg(UU, RU, gU) {
+          const pU = (0, tU.I)(UU),
+            EU = {
               requestType: "VERIFY_AND_CHANGE_EMAIL",
-              idToken: await DD.getIdToken(),
-              newEmail: CD
+              idToken: await UU.getIdToken(),
+              newEmail: RU
             };
-          cD && qc(pD.auth, iD, cD);
+          gU && Zg(pU.auth, EU, gU);
           const {
-            email: fD
-          } = await async function(DD, CD) {
-            return dC(DD, CD)
-          }(pD.auth, iD);
-          fD !== DD.email && await DD.reload()
+            email: PU
+          } = await async function(UU, RU) {
+            return kR(UU, RU)
+          }(pU.auth, EU);
+          PU !== UU.email && await UU.reload()
         }
-        async function Yc(DD, CD) {
+        async function Fg(UU, RU) {
           let {
-            displayName: cD,
-            photoURL: pD
-          } = CD;
-          if (void 0 === cD && void 0 === pD) return;
-          const iD = (0, ID.P)(DD),
-            fD = {
-              idToken: await iD.getIdToken(),
-              displayName: cD,
-              photoUrl: pD,
+            displayName: gU,
+            photoURL: pU
+          } = RU;
+          if (void 0 === gU && void 0 === pU) return;
+          const EU = (0, tU.I)(UU),
+            PU = {
+              idToken: await EU.getIdToken(),
+              displayName: gU,
+              photoUrl: pU,
               returnSecureToken: !0
             },
-            bD = await hD(iD, async function(DD, CD) {
-              return TD(DD, "POST", "/v1/accounts:update", CD)
-            }(iD.auth, fD));
-          iD.displayName = bD.displayName || null, iD.photoURL = bD.photoUrl || null;
-          const QD = iD.providerData.find((DD => {
+            TU = await LU(EU, async function(UU, RU) {
+              return HU(UU, "POST", "/v1/accounts:update", RU)
+            }(EU.auth, PU));
+          EU.displayName = TU.displayName || null, EU.photoURL = TU.photoUrl || null;
+          const qU = EU.providerData.find((UU => {
             let {
-              providerId: CD
-            } = DD;
-            return "password" === CD
+              providerId: RU
+            } = UU;
+            return "password" === RU
           }));
-          QD && (QD.displayName = iD.displayName, QD.photoURL = iD.photoURL), await iD._updateTokensIfNecessary(bD)
+          qU && (qU.displayName = EU.displayName, qU.photoURL = EU.photoURL), await EU._updateTokensIfNecessary(TU)
         }
 
-        function Wc(DD, CD) {
-          return Ec((0, ID.P)(DD), CD, null)
+        function ig(UU, RU) {
+          return zg((0, tU.I)(UU), RU, null)
         }
 
-        function sc(DD, CD) {
-          return Ec((0, ID.P)(DD), null, CD)
+        function Ag(UU, RU) {
+          return zg((0, tU.I)(UU), null, RU)
         }
-        async function Ec(DD, CD, cD) {
+        async function zg(UU, RU, gU) {
           const {
-            auth: ID
-          } = DD, pD = {
-            idToken: await DD.getIdToken(),
+            auth: tU
+          } = UU, pU = {
+            idToken: await UU.getIdToken(),
             returnSecureToken: !0
           };
-          CD && (pD.email = CD), cD && (pD.password = cD);
-          const iD = await hD(DD, RC(ID, pD));
-          await DD._updateTokensIfNecessary(iD, !0)
+          RU && (pU.email = RU), gU && (pU.password = gU);
+          const EU = await LU(UU, sR(tU, pU));
+          await UU._updateTokensIfNecessary(EU, !0)
         }
-        class ec {
-          constructor(DD, CD) {
-            let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-            this.isNewUser = DD, this.providerId = CD, this.profile = cD
+        class Mg {
+          constructor(UU, RU) {
+            let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+            this.isNewUser = UU, this.providerId = RU, this.profile = gU
           }
         }
-        class uc extends ec {
-          constructor(DD, CD, cD, ID) {
-            super(DD, CD, cD), this.username = ID
+        class Dg extends Mg {
+          constructor(UU, RU, gU, tU) {
+            super(UU, RU, gU), this.username = tU
           }
         }
-        class hc extends ec {
-          constructor(DD, CD) {
-            super(DD, "facebook.com", CD)
+        class Lg extends Mg {
+          constructor(UU, RU) {
+            super(UU, "facebook.com", RU)
           }
         }
-        class rc extends uc {
-          constructor(DD, CD) {
-            super(DD, "github.com", CD, "string" === typeof(null === CD || void 0 === CD ? void 0 : CD.login) ? null === CD || void 0 === CD ? void 0 : CD.login : null)
+        class Ng extends Dg {
+          constructor(UU, RU) {
+            super(UU, "github.com", RU, "string" === typeof(null === RU || void 0 === RU ? void 0 : RU.login) ? null === RU || void 0 === RU ? void 0 : RU.login : null)
           }
         }
-        class Ac extends ec {
-          constructor(DD, CD) {
-            super(DD, "google.com", CD)
+        class lg extends Mg {
+          constructor(UU, RU) {
+            super(UU, "google.com", RU)
           }
         }
-        class Fc extends uc {
-          constructor(DD, CD, cD) {
-            super(DD, "twitter.com", CD, cD)
+        class Og extends Dg {
+          constructor(UU, RU, gU) {
+            super(UU, "twitter.com", RU, gU)
           }
         }
 
-        function DI(DD) {
+        function Ut(UU) {
           const {
-            user: CD,
-            _tokenResponse: cD
-          } = DD;
-          return CD.isAnonymous && !cD ? {
+            user: RU,
+            _tokenResponse: gU
+          } = UU;
+          return RU.isAnonymous && !gU ? {
             providerId: null,
             isNewUser: !1,
             profile: null
-          } : function(DD) {
-            var CD, cD;
-            if (!DD) return null;
+          } : function(UU) {
+            var RU, gU;
+            if (!UU) return null;
             const {
-              providerId: ID
-            } = DD, pD = DD.rawUserInfo ? JSON.parse(DD.rawUserInfo) : {}, iD = DD.isNewUser || "identitytoolkit#SignupNewUserResponse" === DD.kind;
-            if (!ID && (null === DD || void 0 === DD ? void 0 : DD.idToken)) {
-              const ID = null === (cD = null === (CD = uD(DD.idToken)) || void 0 === CD ? void 0 : CD.firebase) || void 0 === cD ? void 0 : cD.sign_in_provider;
-              if (ID) return new ec(iD, "anonymous" !== ID && "custom" !== ID ? ID : null)
+              providerId: tU
+            } = UU, pU = UU.rawUserInfo ? JSON.parse(UU.rawUserInfo) : {}, EU = UU.isNewUser || "identitytoolkit#SignupNewUserResponse" === UU.kind;
+            if (!tU && (null === UU || void 0 === UU ? void 0 : UU.idToken)) {
+              const tU = null === (gU = null === (RU = DU(UU.idToken)) || void 0 === RU ? void 0 : RU.firebase) || void 0 === gU ? void 0 : gU.sign_in_provider;
+              if (tU) return new Mg(EU, "anonymous" !== tU && "custom" !== tU ? tU : null)
             }
-            if (!ID) return null;
-            switch (ID) {
+            if (!tU) return null;
+            switch (tU) {
               case "facebook.com":
-                return new hc(iD, pD);
+                return new Lg(EU, pU);
               case "github.com":
-                return new rc(iD, pD);
+                return new Ng(EU, pU);
               case "google.com":
-                return new Ac(iD, pD);
+                return new lg(EU, pU);
               case "twitter.com":
-                return new Fc(iD, pD, DD.screenName || null);
+                return new Og(EU, pU, UU.screenName || null);
               case "custom":
               case "anonymous":
-                return new ec(iD, null);
+                return new Mg(EU, null);
               default:
-                return new ec(iD, ID, pD)
+                return new Mg(EU, tU, pU)
             }
-          }(cD)
+          }(gU)
         }
 
-        function CI(DD, CD) {
-          return (0, ID.P)(DD).setPersistence(CD)
+        function Rt(UU, RU) {
+          return (0, tU.I)(UU).setPersistence(RU)
         }
 
-        function cI(DD) {
-          return aC(DD).initializeRecaptchaConfig()
+        function gt(UU) {
+          return BR(UU).initializeRecaptchaConfig()
         }
 
-        function II(DD, CD, cD, pD) {
-          return (0, ID.P)(DD).onIdTokenChanged(CD, cD, pD)
+        function tt(UU, RU, gU, pU) {
+          return (0, tU.I)(UU).onIdTokenChanged(RU, gU, pU)
         }
 
-        function pI(DD, CD, cD) {
-          return (0, ID.P)(DD).beforeAuthStateChanged(CD, cD)
+        function pt(UU, RU, gU) {
+          return (0, tU.I)(UU).beforeAuthStateChanged(RU, gU)
         }
 
-        function iI(DD, CD, cD, pD) {
-          return (0, ID.P)(DD).onAuthStateChanged(CD, cD, pD)
+        function Et(UU, RU, gU, pU) {
+          return (0, tU.I)(UU).onAuthStateChanged(RU, gU, pU)
         }
 
-        function fI(DD) {
-          (0, ID.P)(DD).useDeviceLanguage()
+        function Pt(UU) {
+          (0, tU.I)(UU).useDeviceLanguage()
         }
 
-        function bI(DD, CD) {
-          return (0, ID.P)(DD).updateCurrentUser(CD)
+        function Tt(UU, RU) {
+          return (0, tU.I)(UU).updateCurrentUser(RU)
         }
 
-        function QI(DD) {
-          return (0, ID.P)(DD).signOut()
+        function qt(UU) {
+          return (0, tU.I)(UU).signOut()
         }
-        async function wI(DD) {
-          return (0, ID.P)(DD).delete()
+        async function Kt(UU) {
+          return (0, tU.I)(UU).delete()
         }
-        class SI {
-          constructor(DD, CD, cD) {
-            this.type = DD, this.credential = CD, this.auth = cD
+        class ct {
+          constructor(UU, RU, gU) {
+            this.type = UU, this.credential = RU, this.auth = gU
           }
-          static _fromIdtoken(DD, CD) {
-            return new SI("enroll", DD, CD)
+          static _fromIdtoken(UU, RU) {
+            return new ct("enroll", UU, RU)
           }
-          static _fromMfaPendingCredential(DD) {
-            return new SI("signin", DD)
+          static _fromMfaPendingCredential(UU) {
+            return new ct("signin", UU)
           }
           toJSON() {
-            const DD = "enroll" === this.type ? "idToken" : "pendingCredential";
+            const UU = "enroll" === this.type ? "idToken" : "pendingCredential";
             return {
               multiFactorSession: {
-                [DD]: this.credential
+                [UU]: this.credential
               }
             }
           }
-          static fromJSON(DD) {
-            var CD, cD;
-            if (null === DD || void 0 === DD ? void 0 : DD.multiFactorSession) {
-              if (null === (CD = DD.multiFactorSession) || void 0 === CD ? void 0 : CD.pendingCredential) return SI._fromMfaPendingCredential(DD.multiFactorSession.pendingCredential);
-              if (null === (cD = DD.multiFactorSession) || void 0 === cD ? void 0 : cD.idToken) return SI._fromIdtoken(DD.multiFactorSession.idToken)
+          static fromJSON(UU) {
+            var RU, gU;
+            if (null === UU || void 0 === UU ? void 0 : UU.multiFactorSession) {
+              if (null === (RU = UU.multiFactorSession) || void 0 === RU ? void 0 : RU.pendingCredential) return ct._fromMfaPendingCredential(UU.multiFactorSession.pendingCredential);
+              if (null === (gU = UU.multiFactorSession) || void 0 === gU ? void 0 : gU.idToken) return ct._fromIdtoken(UU.multiFactorSession.idToken)
             }
             return null
           }
         }
-        class BI {
-          constructor(DD, CD, cD) {
-            this.session = DD, this.hints = CD, this.signInResolver = cD
+        class Gt {
+          constructor(UU, RU, gU) {
+            this.session = UU, this.hints = RU, this.signInResolver = gU
           }
-          static _fromError(DD, CD) {
-            const cD = aC(DD),
-              ID = CD.customData._serverResponse,
-              pD = (ID.mfaInfo || []).map((DD => Hc._fromServerResponse(cD, DD)));
-            HD(ID.mfaPendingCredential, cD, "internal-error");
-            const iD = SI._fromMfaPendingCredential(ID.mfaPendingCredential);
-            return new BI(iD, pD, (async DD => {
-              const pD = await DD._process(cD, iD);
-              delete ID.mfaInfo, delete ID.mfaPendingCredential;
-              const fD = Object.assign(Object.assign({}, ID), {
-                idToken: pD.idToken,
-                refreshToken: pD.refreshToken
+          static _fromError(UU, RU) {
+            const gU = BR(UU),
+              tU = RU.customData._serverResponse,
+              pU = (tU.mfaInfo || []).map((UU => ng._fromServerResponse(gU, UU)));
+            nU(tU.mfaPendingCredential, gU, "internal-error");
+            const EU = ct._fromMfaPendingCredential(tU.mfaPendingCredential);
+            return new Gt(EU, pU, (async UU => {
+              const pU = await UU._process(gU, EU);
+              delete tU.mfaInfo, delete tU.mfaPendingCredential;
+              const PU = Object.assign(Object.assign({}, tU), {
+                idToken: pU.idToken,
+                refreshToken: pU.refreshToken
               });
-              switch (CD.operationType) {
+              switch (RU.operationType) {
                 case "signIn":
-                  const DD = await Sc._fromIdTokenResponse(cD, CD.operationType, fD);
-                  return await cD._updateCurrentUser(DD.user), DD;
+                  const UU = await cg._fromIdTokenResponse(gU, RU.operationType, PU);
+                  return await gU._updateCurrentUser(UU.user), UU;
                 case "reauthenticate":
-                  return HD(CD.user, cD, "internal-error"), Sc._forOperation(CD.user, CD.operationType, fD);
+                  return nU(RU.user, gU, "internal-error"), cg._forOperation(RU.user, RU.operationType, PU);
                 default:
-                  XD(cD, "internal-error")
+                  xU(gU, "internal-error")
               }
             }))
           }
-          async resolveSignIn(DD) {
-            const CD = DD;
-            return this.signInResolver(CD)
+          async resolveSignIn(UU) {
+            const RU = UU;
+            return this.signInResolver(RU)
           }
         }
 
-        function yI(DD, CD) {
-          var cD;
-          const pD = (0, ID.P)(DD),
-            iD = CD;
-          return HD(CD.customData.operationType, pD, "argument-error"), HD(null === (cD = iD.customData._serverResponse) || void 0 === cD ? void 0 : cD.mfaPendingCredential, pD, "argument-error"), BI._fromError(pD, iD)
+        function jt(UU, RU) {
+          var gU;
+          const pU = (0, tU.I)(UU),
+            EU = RU;
+          return nU(RU.customData.operationType, pU, "argument-error"), nU(null === (gU = EU.customData._serverResponse) || void 0 === gU ? void 0 : gU.mfaPendingCredential, pU, "argument-error"), Gt._fromError(pU, EU)
         }
-        class MI {
-          constructor(DD) {
-            this.user = DD, this.enrolledFactors = [], DD._onReload((CD => {
-              CD.mfaInfo && (this.enrolledFactors = CD.mfaInfo.map((CD => Hc._fromServerResponse(DD.auth, CD))))
+        class ut {
+          constructor(UU) {
+            this.user = UU, this.enrolledFactors = [], UU._onReload((RU => {
+              RU.mfaInfo && (this.enrolledFactors = RU.mfaInfo.map((RU => ng._fromServerResponse(UU.auth, RU))))
             }))
           }
-          static _fromUser(DD) {
-            return new MI(DD)
+          static _fromUser(UU) {
+            return new ut(UU)
           }
           async getSession() {
-            return SI._fromIdtoken(await this.user.getIdToken(), this.user.auth)
+            return ct._fromIdtoken(await this.user.getIdToken(), this.user.auth)
           }
-          async enroll(DD, CD) {
-            const cD = DD,
-              ID = await this.getSession(),
-              pD = await hD(this.user, cD._process(this.user.auth, ID, CD));
-            return await this.user._updateTokensIfNecessary(pD), this.user.reload()
+          async enroll(UU, RU) {
+            const gU = UU,
+              tU = await this.getSession(),
+              pU = await LU(this.user, gU._process(this.user.auth, tU, RU));
+            return await this.user._updateTokensIfNecessary(pU), this.user.reload()
           }
-          async unenroll(DD) {
-            const CD = "string" === typeof DD ? DD : DD.uid,
-              cD = await this.user.getIdToken();
+          async unenroll(UU) {
+            const RU = "string" === typeof UU ? UU : UU.uid,
+              gU = await this.user.getIdToken();
             try {
-              const DD = await hD(this.user, (ID = this.user.auth, pD = {
-                idToken: cD,
-                mfaEnrollmentId: CD
-              }, TD(ID, "POST", "/v2/accounts/mfaEnrollment:withdraw", LD(ID, pD))));
-              this.enrolledFactors = this.enrolledFactors.filter((DD => {
+              const UU = await LU(this.user, (tU = this.user.auth, pU = {
+                idToken: gU,
+                mfaEnrollmentId: RU
+              }, HU(tU, "POST", "/v2/accounts/mfaEnrollment:withdraw", dU(tU, pU))));
+              this.enrolledFactors = this.enrolledFactors.filter((UU => {
                 let {
-                  uid: cD
-                } = DD;
-                return cD !== CD
-              })), await this.user._updateTokensIfNecessary(DD), await this.user.reload()
-            } catch (iD) {
-              throw iD
+                  uid: gU
+                } = UU;
+                return gU !== RU
+              })), await this.user._updateTokensIfNecessary(UU), await this.user.reload()
+            } catch (EU) {
+              throw EU
             }
-            var ID, pD
+            var tU, pU
           }
         }
-        const tI = new WeakMap;
+        const Ct = new WeakMap;
 
-        function ZI(DD) {
-          const CD = (0, ID.P)(DD);
-          return tI.has(CD) || tI.set(CD, MI._fromUser(CD)), tI.get(CD)
+        function ht(UU) {
+          const RU = (0, tU.I)(UU);
+          return Ct.has(RU) || Ct.set(RU, ut._fromUser(RU)), Ct.get(RU)
         }
-        const oI = "__sak";
-        class vI {
-          constructor(DD, CD) {
-            this.storageRetriever = DD, this.type = CD
+        const Qt = "__sak";
+        class et {
+          constructor(UU, RU) {
+            this.storageRetriever = UU, this.type = RU
           }
           _isAvailable() {
             try {
-              return this.storage ? (this.storage.setItem(oI, "1"), this.storage.removeItem(oI), Promise.resolve(!0)) : Promise.resolve(!1)
-            } catch (DD) {
+              return this.storage ? (this.storage.setItem(Qt, "1"), this.storage.removeItem(Qt), Promise.resolve(!0)) : Promise.resolve(!1)
+            } catch (UU) {
               return Promise.resolve(!1)
             }
           }
-          _set(DD, CD) {
-            return this.storage.setItem(DD, JSON.stringify(CD)), Promise.resolve()
+          _set(UU, RU) {
+            return this.storage.setItem(UU, JSON.stringify(RU)), Promise.resolve()
           }
-          _get(DD) {
-            const CD = this.storage.getItem(DD);
-            return Promise.resolve(CD ? JSON.parse(CD) : null)
+          _get(UU) {
+            const RU = this.storage.getItem(UU);
+            return Promise.resolve(RU ? JSON.parse(RU) : null)
           }
-          _remove(DD) {
-            return this.storage.removeItem(DD), Promise.resolve()
+          _remove(UU) {
+            return this.storage.removeItem(UU), Promise.resolve()
           }
           get storage() {
             return this.storageRetriever()
           }
         }
-        class NI extends vI {
+        class Wt extends et {
           constructor() {
-            super((() => window.localStorage), "LOCAL"), this.boundEventHandler = (DD, CD) => this.onStorageEvent(DD, CD), this.listeners = {}, this.localCache = {}, this.pollTimer = null, this.safariLocalStorageNotSynced = function() {
-              const DD = (0, ID.S)();
-              return yC(DD) || NC(DD)
+            super((() => window.localStorage), "LOCAL"), this.boundEventHandler = (UU, RU) => this.onStorageEvent(UU, RU), this.listeners = {}, this.localCache = {}, this.pollTimer = null, this.safariLocalStorageNotSynced = function() {
+              const UU = (0, tU.J)();
+              return jR(UU) || WR(UU)
             }() && function() {
               try {
                 return !(!window || window === window.top)
-              } catch (DD) {
+              } catch (UU) {
                 return !1
               }
-            }(), this.fallbackToPolling = gC(), this._shouldAllowMigration = !0
+            }(), this.fallbackToPolling = fR(), this._shouldAllowMigration = !0
           }
-          forAllChangedKeys(DD) {
-            for (const CD of Object.keys(this.listeners)) {
-              const cD = this.storage.getItem(CD),
-                ID = this.localCache[CD];
-              cD !== ID && DD(CD, ID, cD)
+          forAllChangedKeys(UU) {
+            for (const RU of Object.keys(this.listeners)) {
+              const gU = this.storage.getItem(RU),
+                tU = this.localCache[RU];
+              gU !== tU && UU(RU, tU, gU)
             }
           }
-          onStorageEvent(DD) {
-            let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            if (!DD.key) return void this.forAllChangedKeys(((DD, CD, cD) => {
-              this.notifyListeners(DD, cD)
+          onStorageEvent(UU) {
+            let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            if (!UU.key) return void this.forAllChangedKeys(((UU, RU, gU) => {
+              this.notifyListeners(UU, gU)
             }));
-            const cD = DD.key;
-            if (CD ? this.detachListener() : this.stopPolling(), this.safariLocalStorageNotSynced) {
-              const ID = this.storage.getItem(cD);
-              if (DD.newValue !== ID) null !== DD.newValue ? this.storage.setItem(cD, DD.newValue) : this.storage.removeItem(cD);
-              else if (this.localCache[cD] === DD.newValue && !CD) return
+            const gU = UU.key;
+            if (RU ? this.detachListener() : this.stopPolling(), this.safariLocalStorageNotSynced) {
+              const tU = this.storage.getItem(gU);
+              if (UU.newValue !== tU) null !== UU.newValue ? this.storage.setItem(gU, UU.newValue) : this.storage.removeItem(gU);
+              else if (this.localCache[gU] === UU.newValue && !RU) return
             }
-            const pD = () => {
-                const DD = this.storage.getItem(cD);
-                (CD || this.localCache[cD] !== DD) && this.notifyListeners(cD, DD)
+            const pU = () => {
+                const UU = this.storage.getItem(gU);
+                (RU || this.localCache[gU] !== UU) && this.notifyListeners(gU, UU)
               },
-              iD = this.storage.getItem(cD);
-            (0, ID.Z)() && 10 === document.documentMode && iD !== DD.newValue && DD.newValue !== DD.oldValue ? setTimeout(pD, 10) : pD()
+              EU = this.storage.getItem(gU);
+            (0, tU.O)() && 10 === document.documentMode && EU !== UU.newValue && UU.newValue !== UU.oldValue ? setTimeout(pU, 10) : pU()
           }
-          notifyListeners(DD, CD) {
-            this.localCache[DD] = CD;
-            const cD = this.listeners[DD];
-            if (cD)
-              for (const ID of Array.from(cD)) ID(CD ? JSON.parse(CD) : CD)
+          notifyListeners(UU, RU) {
+            this.localCache[UU] = RU;
+            const gU = this.listeners[UU];
+            if (gU)
+              for (const tU of Array.from(gU)) tU(RU ? JSON.parse(RU) : RU)
           }
           startPolling() {
             this.stopPolling(), this.pollTimer = setInterval((() => {
-              this.forAllChangedKeys(((DD, CD, cD) => {
+              this.forAllChangedKeys(((UU, RU, gU) => {
                 this.onStorageEvent(new StorageEvent("storage", {
-                  key: DD,
-                  oldValue: CD,
-                  newValue: cD
+                  key: UU,
+                  oldValue: RU,
+                  newValue: gU
                 }), !0)
               }))
             }), 1e3)
@@ -2874,313 +2874,313 @@ export const modules = {
           detachListener() {
             window.removeEventListener("storage", this.boundEventHandler)
           }
-          _addListener(DD, CD) {
-            0 === Object.keys(this.listeners).length && (this.fallbackToPolling ? this.startPolling() : this.attachListener()), this.listeners[DD] || (this.listeners[DD] = new Set, this.localCache[DD] = this.storage.getItem(DD)), this.listeners[DD].add(CD)
+          _addListener(UU, RU) {
+            0 === Object.keys(this.listeners).length && (this.fallbackToPolling ? this.startPolling() : this.attachListener()), this.listeners[UU] || (this.listeners[UU] = new Set, this.localCache[UU] = this.storage.getItem(UU)), this.listeners[UU].add(RU)
           }
-          _removeListener(DD, CD) {
-            this.listeners[DD] && (this.listeners[DD].delete(CD), 0 === this.listeners[DD].size && delete this.listeners[DD]), 0 === Object.keys(this.listeners).length && (this.detachListener(), this.stopPolling())
+          _removeListener(UU, RU) {
+            this.listeners[UU] && (this.listeners[UU].delete(RU), 0 === this.listeners[UU].size && delete this.listeners[UU]), 0 === Object.keys(this.listeners).length && (this.detachListener(), this.stopPolling())
           }
-          async _set(DD, CD) {
-            await super._set(DD, CD), this.localCache[DD] = JSON.stringify(CD)
+          async _set(UU, RU) {
+            await super._set(UU, RU), this.localCache[UU] = JSON.stringify(RU)
           }
-          async _get(DD) {
-            const CD = await super._get(DD);
-            return this.localCache[DD] = JSON.stringify(CD), CD
+          async _get(UU) {
+            const RU = await super._get(UU);
+            return this.localCache[UU] = JSON.stringify(RU), RU
           }
-          async _remove(DD) {
-            await super._remove(DD), delete this.localCache[DD]
+          async _remove(UU) {
+            await super._remove(UU), delete this.localCache[UU]
           }
         }
-        NI.type = "LOCAL";
-        const gI = NI;
-        class XI extends vI {
+        Wt.type = "LOCAL";
+        const ft = Wt;
+        class xt extends et {
           constructor() {
             super((() => window.sessionStorage), "SESSION")
           }
-          _addListener(DD, CD) {}
-          _removeListener(DD, CD) {}
+          _addListener(UU, RU) {}
+          _removeListener(UU, RU) {}
         }
-        XI.type = "SESSION";
-        const mI = XI;
-        class nI {
-          constructor(DD) {
-            this.eventTarget = DD, this.handlersMap = {}, this.boundEventHandler = this.handleEvent.bind(this)
+        xt.type = "SESSION";
+        const mt = xt;
+        class It {
+          constructor(UU) {
+            this.eventTarget = UU, this.handlersMap = {}, this.boundEventHandler = this.handleEvent.bind(this)
           }
-          static _getInstance(DD) {
-            const CD = this.receivers.find((CD => CD.isListeningto(DD)));
-            if (CD) return CD;
-            const cD = new nI(DD);
-            return this.receivers.push(cD), cD
+          static _getInstance(UU) {
+            const RU = this.receivers.find((RU => RU.isListeningto(UU)));
+            if (RU) return RU;
+            const gU = new It(UU);
+            return this.receivers.push(gU), gU
           }
-          isListeningto(DD) {
-            return this.eventTarget === DD
+          isListeningto(UU) {
+            return this.eventTarget === UU
           }
-          async handleEvent(DD) {
-            const CD = DD,
+          async handleEvent(UU) {
+            const RU = UU,
               {
-                eventId: cD,
-                eventType: ID,
-                data: pD
-              } = CD.data,
-              iD = this.handlersMap[ID];
-            if (!(null === iD || void 0 === iD ? void 0 : iD.size)) return;
-            CD.ports[0].postMessage({
+                eventId: gU,
+                eventType: tU,
+                data: pU
+              } = RU.data,
+              EU = this.handlersMap[tU];
+            if (!(null === EU || void 0 === EU ? void 0 : EU.size)) return;
+            RU.ports[0].postMessage({
               status: "ack",
-              eventId: cD,
-              eventType: ID
+              eventId: gU,
+              eventType: tU
             });
-            const fD = Array.from(iD).map((async DD => DD(CD.origin, pD))),
-              bD = await
-            function(DD) {
-              return Promise.all(DD.map((async DD => {
+            const PU = Array.from(EU).map((async UU => UU(RU.origin, pU))),
+              TU = await
+            function(UU) {
+              return Promise.all(UU.map((async UU => {
                 try {
                   return {
                     fulfilled: !0,
-                    value: await DD
+                    value: await UU
                   }
-                } catch (CD) {
+                } catch (RU) {
                   return {
                     fulfilled: !1,
-                    reason: CD
+                    reason: RU
                   }
                 }
               })))
-            }(fD);
-            CD.ports[0].postMessage({
+            }(PU);
+            RU.ports[0].postMessage({
               status: "done",
-              eventId: cD,
-              eventType: ID,
-              response: bD
+              eventId: gU,
+              eventType: tU,
+              response: TU
             })
           }
-          _subscribe(DD, CD) {
-            0 === Object.keys(this.handlersMap).length && this.eventTarget.addEventListener("message", this.boundEventHandler), this.handlersMap[DD] || (this.handlersMap[DD] = new Set), this.handlersMap[DD].add(CD)
+          _subscribe(UU, RU) {
+            0 === Object.keys(this.handlersMap).length && this.eventTarget.addEventListener("message", this.boundEventHandler), this.handlersMap[UU] || (this.handlersMap[UU] = new Set), this.handlersMap[UU].add(RU)
           }
-          _unsubscribe(DD, CD) {
-            this.handlersMap[DD] && CD && this.handlersMap[DD].delete(CD), CD && 0 !== this.handlersMap[DD].size || delete this.handlersMap[DD], 0 === Object.keys(this.handlersMap).length && this.eventTarget.removeEventListener("message", this.boundEventHandler)
+          _unsubscribe(UU, RU) {
+            this.handlersMap[UU] && RU && this.handlersMap[UU].delete(RU), RU && 0 !== this.handlersMap[UU].size || delete this.handlersMap[UU], 0 === Object.keys(this.handlersMap).length && this.eventTarget.removeEventListener("message", this.boundEventHandler)
           }
         }
 
-        function OI() {
-          let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
-            CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10,
-            cD = "";
-          for (let ID = 0; ID < CD; ID++) cD += Math.floor(10 * Math.random());
-          return DD + cD
+        function Jt() {
+          let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
+            RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10,
+            gU = "";
+          for (let tU = 0; tU < RU; tU++) gU += Math.floor(10 * Math.random());
+          return UU + gU
         }
-        nI.receivers = [];
-        class PI {
-          constructor(DD) {
-            this.target = DD, this.handlers = new Set
+        It.receivers = [];
+        class wt {
+          constructor(UU) {
+            this.target = UU, this.handlers = new Set
           }
-          removeMessageHandler(DD) {
-            DD.messageChannel && (DD.messageChannel.port1.removeEventListener("message", DD.Qm), DD.messageChannel.port1.close()), this.handlers.delete(DD)
+          removeMessageHandler(UU) {
+            UU.messageChannel && (UU.messageChannel.port1.removeEventListener("message", UU.Tm), UU.messageChannel.port1.close()), this.handlers.delete(UU)
           }
-          async _send(DD, CD) {
-            let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 50;
-            const ID = "undefined" !== typeof MessageChannel ? new MessageChannel : null;
-            if (!ID) throw new Error("connection_unavailable");
-            let pD, iD;
-            return new Promise(((fD, bD) => {
-              const QD = OI("", 20);
-              ID.port1.start();
-              const wD = setTimeout((() => {
-                bD(new Error("unsupported_event"))
-              }), cD);
-              iD = {
-                messageChannel: ID,
-                Qm(DD) {
-                  const CD = DD;
-                  if (CD.data.eventId === QD) switch (CD.data.status) {
+          async _send(UU, RU) {
+            let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 50;
+            const tU = "undefined" !== typeof MessageChannel ? new MessageChannel : null;
+            if (!tU) throw new Error("connection_unavailable");
+            let pU, EU;
+            return new Promise(((PU, TU) => {
+              const qU = Jt("", 20);
+              tU.port1.start();
+              const KU = setTimeout((() => {
+                TU(new Error("unsupported_event"))
+              }), gU);
+              EU = {
+                messageChannel: tU,
+                Tm(UU) {
+                  const RU = UU;
+                  if (RU.data.eventId === qU) switch (RU.data.status) {
                     case "ack":
-                      clearTimeout(wD), pD = setTimeout((() => {
-                        bD(new Error("timeout"))
+                      clearTimeout(KU), pU = setTimeout((() => {
+                        TU(new Error("timeout"))
                       }), 3e3);
                       break;
                     case "done":
-                      clearTimeout(pD), fD(CD.data.response);
+                      clearTimeout(pU), PU(RU.data.response);
                       break;
                     default:
-                      clearTimeout(wD), clearTimeout(pD), bD(new Error("invalid_response"))
+                      clearTimeout(KU), clearTimeout(pU), TU(new Error("invalid_response"))
                   }
                 }
-              }, this.handlers.add(iD), ID.port1.addEventListener("message", iD.Qm), this.target.postMessage({
-                eventType: DD,
-                eventId: QD,
-                data: CD
-              }, [ID.port2])
+              }, this.handlers.add(EU), tU.port1.addEventListener("message", EU.Tm), this.target.postMessage({
+                eventType: UU,
+                eventId: qU,
+                data: RU
+              }, [tU.port2])
             })).finally((() => {
-              iD && this.removeMessageHandler(iD)
+              EU && this.removeMessageHandler(EU)
             }))
           }
         }
 
-        function HI() {
+        function nt() {
           return window
         }
 
-        function UI() {
-          return "undefined" !== typeof HI().WorkerGlobalScope && "function" === typeof HI().importScripts
+        function bt() {
+          return "undefined" !== typeof nt().WorkerGlobalScope && "function" === typeof nt().importScripts
         }
-        const xI = "firebaseLocalStorageDb",
-          qI = "firebaseLocalStorage",
-          JI = "fbase_key";
-        class KI {
-          constructor(DD) {
-            this.request = DD
+        const ot = "firebaseLocalStorageDb",
+          Zt = "firebaseLocalStorage",
+          Yt = "fbase_key";
+        class Bt {
+          constructor(UU) {
+            this.request = UU
           }
           toPromise() {
-            return new Promise(((DD, CD) => {
+            return new Promise(((UU, RU) => {
               this.request.addEventListener("success", (() => {
-                DD(this.request.result)
+                UU(this.request.result)
               })), this.request.addEventListener("error", (() => {
-                CD(this.request.error)
+                RU(this.request.error)
               }))
             }))
           }
         }
 
-        function aI(DD, CD) {
-          return DD.transaction([qI], CD ? "readwrite" : "readonly").objectStore(qI)
+        function Vt(UU, RU) {
+          return UU.transaction([Zt], RU ? "readwrite" : "readonly").objectStore(Zt)
         }
 
-        function VI() {
-          const DD = indexedDB.open(xI, 1);
-          return new Promise(((CD, cD) => {
-            DD.addEventListener("error", (() => {
-              cD(DD.error)
-            })), DD.addEventListener("upgradeneeded", (() => {
-              const CD = DD.result;
+        function rt() {
+          const UU = indexedDB.open(ot, 1);
+          return new Promise(((RU, gU) => {
+            UU.addEventListener("error", (() => {
+              gU(UU.error)
+            })), UU.addEventListener("upgradeneeded", (() => {
+              const RU = UU.result;
               try {
-                CD.createObjectStore(qI, {
-                  keyPath: JI
+                RU.createObjectStore(Zt, {
+                  keyPath: Yt
                 })
-              } catch (ID) {
-                cD(ID)
+              } catch (tU) {
+                gU(tU)
               }
-            })), DD.addEventListener("success", (async () => {
-              const cD = DD.result;
-              cD.objectStoreNames.contains(qI) ? CD(cD) : (cD.close(), await
+            })), UU.addEventListener("success", (async () => {
+              const gU = UU.result;
+              gU.objectStoreNames.contains(Zt) ? RU(gU) : (gU.close(), await
                 function() {
-                  const DD = indexedDB.deleteDatabase(xI);
-                  return new KI(DD).toPromise()
-                }(), CD(await VI()))
+                  const UU = indexedDB.deleteDatabase(ot);
+                  return new Bt(UU).toPromise()
+                }(), RU(await rt()))
             }))
           }))
         }
-        async function zI(DD, CD, cD) {
-          const ID = aI(DD, !0).put({
-            [JI]: CD,
-            value: cD
+        async function Xt(UU, RU, gU) {
+          const tU = Vt(UU, !0).put({
+            [Yt]: RU,
+            value: gU
           });
-          return new KI(ID).toPromise()
+          return new Bt(tU).toPromise()
         }
 
-        function jI(DD, CD) {
-          const cD = aI(DD, !0).delete(CD);
-          return new KI(cD).toPromise()
+        function vt(UU, RU) {
+          const gU = Vt(UU, !0).delete(RU);
+          return new Bt(gU).toPromise()
         }
-        class lI {
+        class dt {
           constructor() {
             this.type = "LOCAL", this._shouldAllowMigration = !0, this.listeners = {}, this.localCache = {}, this.pollTimer = null, this.pendingWrites = 0, this.receiver = null, this.sender = null, this.serviceWorkerReceiverAvailable = !1, this.activeServiceWorker = null, this._workerInitializationPromise = this.initializeServiceWorkerMessaging().then((() => {}), (() => {}))
           }
           async _openDb() {
-            return this.db || (this.db = await VI()), this.db
+            return this.db || (this.db = await rt()), this.db
           }
-          async _withRetries(DD) {
-            let CD = 0;
+          async _withRetries(UU) {
+            let RU = 0;
             for (;;) try {
-              const CD = await this._openDb();
-              return await DD(CD)
-            } catch (cD) {
-              if (CD++ > 3) throw cD;
+              const RU = await this._openDb();
+              return await UU(RU)
+            } catch (gU) {
+              if (RU++ > 3) throw gU;
               this.db && (this.db.close(), this.db = void 0)
             }
           }
           async initializeServiceWorkerMessaging() {
-            return UI() ? this.initializeReceiver() : this.initializeSender()
+            return bt() ? this.initializeReceiver() : this.initializeSender()
           }
           async initializeReceiver() {
-            this.receiver = nI._getInstance(UI() ? self : null), this.receiver._subscribe("keyChanged", (async (DD, CD) => ({
-              keyProcessed: (await this._poll()).includes(CD.key)
-            }))), this.receiver._subscribe("ping", (async (DD, CD) => ["keyChanged"]))
+            this.receiver = It._getInstance(bt() ? self : null), this.receiver._subscribe("keyChanged", (async (UU, RU) => ({
+              keyProcessed: (await this._poll()).includes(RU.key)
+            }))), this.receiver._subscribe("ping", (async (UU, RU) => ["keyChanged"]))
           }
           async initializeSender() {
-            var DD, CD;
+            var UU, RU;
             if (this.activeServiceWorker = await async function() {
                 if (!(null === navigator || void 0 === navigator ? void 0 : navigator.serviceWorker)) return null;
                 try {
                   return (await navigator.serviceWorker.ready).active
-                } catch (DD) {
+                } catch (UU) {
                   return null
                 }
               }(), !this.activeServiceWorker) return;
-            this.sender = new PI(this.activeServiceWorker);
-            const cD = await this.sender._send("ping", {}, 800);
-            cD && (null === (DD = cD[0]) || void 0 === DD ? void 0 : DD.fulfilled) && (null === (CD = cD[0]) || void 0 === CD ? void 0 : CD.value.includes("keyChanged")) && (this.serviceWorkerReceiverAvailable = !0)
+            this.sender = new wt(this.activeServiceWorker);
+            const gU = await this.sender._send("ping", {}, 800);
+            gU && (null === (UU = gU[0]) || void 0 === UU ? void 0 : UU.fulfilled) && (null === (RU = gU[0]) || void 0 === RU ? void 0 : RU.value.includes("keyChanged")) && (this.serviceWorkerReceiverAvailable = !0)
           }
-          async notifyServiceWorker(DD) {
+          async notifyServiceWorker(UU) {
             if (this.sender && this.activeServiceWorker && function() {
-                var DD;
-                return (null === (DD = null === navigator || void 0 === navigator ? void 0 : navigator.serviceWorker) || void 0 === DD ? void 0 : DD.controller) || null
+                var UU;
+                return (null === (UU = null === navigator || void 0 === navigator ? void 0 : navigator.serviceWorker) || void 0 === UU ? void 0 : UU.controller) || null
               }() === this.activeServiceWorker) try {
               await this.sender._send("keyChanged", {
-                key: DD
+                key: UU
               }, this.serviceWorkerReceiverAvailable ? 800 : 50)
-            } catch (CD) {}
+            } catch (RU) {}
           }
           async _isAvailable() {
             try {
               if (!indexedDB) return !1;
-              const DD = await VI();
-              return await zI(DD, oI, "1"), await jI(DD, oI), !0
-            } catch (DD) {}
+              const UU = await rt();
+              return await Xt(UU, Qt, "1"), await vt(UU, Qt), !0
+            } catch (UU) {}
             return !1
           }
-          async _withPendingWrite(DD) {
+          async _withPendingWrite(UU) {
             this.pendingWrites++;
             try {
-              await DD()
+              await UU()
             } finally {
               this.pendingWrites--
             }
           }
-          async _set(DD, CD) {
-            return this._withPendingWrite((async () => (await this._withRetries((cD => zI(cD, DD, CD))), this.localCache[DD] = CD, this.notifyServiceWorker(DD))))
+          async _set(UU, RU) {
+            return this._withPendingWrite((async () => (await this._withRetries((gU => Xt(gU, UU, RU))), this.localCache[UU] = RU, this.notifyServiceWorker(UU))))
           }
-          async _get(DD) {
-            const CD = await this._withRetries((CD => async function(DD, CD) {
-              const cD = aI(DD, !1).get(CD),
-                ID = await new KI(cD).toPromise();
-              return void 0 === ID ? null : ID.value
-            }(CD, DD)));
-            return this.localCache[DD] = CD, CD
+          async _get(UU) {
+            const RU = await this._withRetries((RU => async function(UU, RU) {
+              const gU = Vt(UU, !1).get(RU),
+                tU = await new Bt(gU).toPromise();
+              return void 0 === tU ? null : tU.value
+            }(RU, UU)));
+            return this.localCache[UU] = RU, RU
           }
-          async _remove(DD) {
-            return this._withPendingWrite((async () => (await this._withRetries((CD => jI(CD, DD))), delete this.localCache[DD], this.notifyServiceWorker(DD))))
+          async _remove(UU) {
+            return this._withPendingWrite((async () => (await this._withRetries((RU => vt(RU, UU))), delete this.localCache[UU], this.notifyServiceWorker(UU))))
           }
           async _poll() {
-            const DD = await this._withRetries((DD => {
-              const CD = aI(DD, !1).getAll();
-              return new KI(CD).toPromise()
+            const UU = await this._withRetries((UU => {
+              const RU = Vt(UU, !1).getAll();
+              return new Bt(RU).toPromise()
             }));
-            if (!DD) return [];
+            if (!UU) return [];
             if (0 !== this.pendingWrites) return [];
-            const CD = [],
-              cD = new Set;
+            const RU = [],
+              gU = new Set;
             for (const {
-                fbase_key: ID,
-                value: pD
+                fbase_key: tU,
+                value: pU
               }
-              of DD) cD.add(ID), JSON.stringify(this.localCache[ID]) !== JSON.stringify(pD) && (this.notifyListeners(ID, pD), CD.push(ID));
-            for (const ID of Object.keys(this.localCache)) this.localCache[ID] && !cD.has(ID) && (this.notifyListeners(ID, null), CD.push(ID));
-            return CD
+              of UU) gU.add(tU), JSON.stringify(this.localCache[tU]) !== JSON.stringify(pU) && (this.notifyListeners(tU, pU), RU.push(tU));
+            for (const tU of Object.keys(this.localCache)) this.localCache[tU] && !gU.has(tU) && (this.notifyListeners(tU, null), RU.push(tU));
+            return RU
           }
-          notifyListeners(DD, CD) {
-            this.localCache[DD] = CD;
-            const cD = this.listeners[DD];
-            if (cD)
-              for (const ID of Array.from(cD)) ID(CD)
+          notifyListeners(UU, RU) {
+            this.localCache[UU] = RU;
+            const gU = this.listeners[UU];
+            if (gU)
+              for (const tU of Array.from(gU)) tU(RU)
           }
           startPolling() {
             this.stopPolling(), this.pollTimer = setInterval((async () => this._poll()), 800)
@@ -3188,49 +3188,49 @@ export const modules = {
           stopPolling() {
             this.pollTimer && (clearInterval(this.pollTimer), this.pollTimer = null)
           }
-          _addListener(DD, CD) {
-            0 === Object.keys(this.listeners).length && this.startPolling(), this.listeners[DD] || (this.listeners[DD] = new Set, this._get(DD)), this.listeners[DD].add(CD)
+          _addListener(UU, RU) {
+            0 === Object.keys(this.listeners).length && this.startPolling(), this.listeners[UU] || (this.listeners[UU] = new Set, this._get(UU)), this.listeners[UU].add(RU)
           }
-          _removeListener(DD, CD) {
-            this.listeners[DD] && (this.listeners[DD].delete(CD), 0 === this.listeners[DD].size && delete this.listeners[DD]), 0 === Object.keys(this.listeners).length && this.stopPolling()
-          }
-        }
-        lI.type = "LOCAL";
-        const LI = lI;
-        const TI = 1e12;
-        class GI {
-          constructor(DD) {
-            this.auth = DD, this.counter = TI, this._widgets = new Map
-          }
-          render(DD, CD) {
-            const cD = this.counter;
-            return this._widgets.set(cD, new RI(DD, this.auth.name, CD || {})), this.counter++, cD
-          }
-          reset(DD) {
-            var CD;
-            const cD = DD || TI;
-            null === (CD = this._widgets.get(cD)) || void 0 === CD || CD.delete(), this._widgets.delete(cD)
-          }
-          getResponse(DD) {
-            var CD;
-            const cD = DD || TI;
-            return (null === (CD = this._widgets.get(cD)) || void 0 === CD ? void 0 : CD.getResponse()) || ""
-          }
-          async execute(DD) {
-            var CD;
-            const cD = DD || TI;
-            return null === (CD = this._widgets.get(cD)) || void 0 === CD || CD.execute(), ""
+          _removeListener(UU, RU) {
+            this.listeners[UU] && (this.listeners[UU].delete(RU), 0 === this.listeners[UU].size && delete this.listeners[UU]), 0 === Object.keys(this.listeners).length && this.stopPolling()
           }
         }
-        class RI {
-          constructor(DD, CD, cD) {
-            this.params = cD, this.timerId = null, this.deleted = !1, this.responseToken = null, this.clickHandler = () => {
+        dt.type = "LOCAL";
+        const Ht = dt;
+        const St = 1e12;
+        class st {
+          constructor(UU) {
+            this.auth = UU, this.counter = St, this._widgets = new Map
+          }
+          render(UU, RU) {
+            const gU = this.counter;
+            return this._widgets.set(gU, new yt(UU, this.auth.name, RU || {})), this.counter++, gU
+          }
+          reset(UU) {
+            var RU;
+            const gU = UU || St;
+            null === (RU = this._widgets.get(gU)) || void 0 === RU || RU.delete(), this._widgets.delete(gU)
+          }
+          getResponse(UU) {
+            var RU;
+            const gU = UU || St;
+            return (null === (RU = this._widgets.get(gU)) || void 0 === RU ? void 0 : RU.getResponse()) || ""
+          }
+          async execute(UU) {
+            var RU;
+            const gU = UU || St;
+            return null === (RU = this._widgets.get(gU)) || void 0 === RU || RU.execute(), ""
+          }
+        }
+        class yt {
+          constructor(UU, RU, gU) {
+            this.params = gU, this.timerId = null, this.deleted = !1, this.responseToken = null, this.clickHandler = () => {
               this.execute()
             };
-            const ID = "string" === typeof DD ? document.getElementById(DD) : DD;
-            HD(ID, "argument-error", {
-              appName: CD
-            }), this.container = ID, this.isVisible = "invisible" !== this.params.size, this.isVisible ? this.execute() : this.container.addEventListener("click", this.clickHandler)
+            const tU = "string" === typeof UU ? document.getElementById(UU) : UU;
+            nU(tU, "argument-error", {
+              appName: RU
+            }), this.container = tU, this.isVisible = "invisible" !== this.params.size, this.isVisible ? this.execute() : this.container.addEventListener("click", this.clickHandler)
           }
           getResponse() {
             return this.checkIfDeleted(), this.responseToken
@@ -3240,23 +3240,23 @@ export const modules = {
           }
           execute() {
             this.checkIfDeleted(), this.timerId || (this.timerId = window.setTimeout((() => {
-              this.responseToken = function(DD) {
-                const CD = [],
-                  cD = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-                for (let ID = 0; ID < DD; ID++) CD.push(cD.charAt(Math.floor(Math.random() * cD.length)));
-                return CD.join("")
+              this.responseToken = function(UU) {
+                const RU = [],
+                  gU = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                for (let tU = 0; tU < UU; tU++) RU.push(gU.charAt(Math.floor(Math.random() * gU.length)));
+                return RU.join("")
               }(50);
               const {
-                callback: DD,
-                "expired-callback": CD
+                callback: UU,
+                "expired-callback": RU
               } = this.params;
-              if (DD) try {
-                DD(this.responseToken)
-              } catch (cD) {}
+              if (UU) try {
+                UU(this.responseToken)
+              } catch (gU) {}
               this.timerId = window.setTimeout((() => {
-                if (this.timerId = null, this.responseToken = null, CD) try {
-                  CD()
-                } catch (cD) {}
+                if (this.timerId = null, this.responseToken = null, RU) try {
+                  RU()
+                } catch (gU) {}
                 this.isVisible && this.execute()
               }), 6e4)
             }), 500))
@@ -3265,268 +3265,268 @@ export const modules = {
             if (this.deleted) throw new Error("reCAPTCHA mock was already deleted!")
           }
         }
-        const kI = UC("rcb"),
-          dI = new aD(3e4, 6e4);
-        class YI {
+        const kt = bR("rcb"),
+          Ft = new BU(3e4, 6e4);
+        class it {
           constructor() {
-            var DD;
-            this.hostLanguage = "", this.counter = 0, this.librarySeparatelyLoaded = !!(null === (DD = HI().grecaptcha) || void 0 === DD ? void 0 : DD.render)
+            var UU;
+            this.hostLanguage = "", this.counter = 0, this.librarySeparatelyLoaded = !!(null === (UU = nt().grecaptcha) || void 0 === UU ? void 0 : UU.render)
           }
-          load(DD) {
-            let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-            return HD(function(DD) {
-              return DD.length <= 6 && /^\s*[a-zA-Z0-9\-]*\s*$/.test(DD)
-            }(CD), DD, "argument-error"), this.shouldResolveImmediately(CD) && nC(HI().grecaptcha) ? Promise.resolve(HI().grecaptcha) : new Promise(((cD, pD) => {
-              const iD = HI().setTimeout((() => {
-                pD(mD(DD, "network-request-failed"))
-              }), dI.get());
-              HI()[kI] = () => {
-                HI().clearTimeout(iD), delete HI()[kI];
-                const ID = HI().grecaptcha;
-                if (!ID || !nC(ID)) return void pD(mD(DD, "internal-error"));
-                const fD = ID.render;
-                ID.render = (DD, CD) => {
-                  const cD = fD(DD, CD);
-                  return this.counter++, cD
-                }, this.hostLanguage = CD, cD(ID)
+          load(UU) {
+            let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+            return nU(function(UU) {
+              return UU.length <= 6 && /^\s*[a-zA-Z0-9\-]*\s*$/.test(UU)
+            }(RU), UU, "argument-error"), this.shouldResolveImmediately(RU) && IR(nt().grecaptcha) ? Promise.resolve(nt().grecaptcha) : new Promise(((gU, pU) => {
+              const EU = nt().setTimeout((() => {
+                pU(mU(UU, "network-request-failed"))
+              }), Ft.get());
+              nt()[kt] = () => {
+                nt().clearTimeout(EU), delete nt()[kt];
+                const tU = nt().grecaptcha;
+                if (!tU || !IR(tU)) return void pU(mU(UU, "internal-error"));
+                const PU = tU.render;
+                tU.render = (UU, RU) => {
+                  const gU = PU(UU, RU);
+                  return this.counter++, gU
+                }, this.hostLanguage = RU, gU(tU)
               };
-              HC(`https://www.google.com/recaptcha/api.js??${(0,ID.kb)({onload:kI,render:"explicit",hl:CD})}`).catch((() => {
-                clearTimeout(iD), pD(mD(DD, "internal-error"))
+              nR(`https://www.google.com/recaptcha/api.js??${(0,tU._)({onload:kt,render:"explicit",hl:RU})}`).catch((() => {
+                clearTimeout(EU), pU(mU(UU, "internal-error"))
               }))
             }))
           }
           clearedOneInstance() {
             this.counter--
           }
-          shouldResolveImmediately(DD) {
-            var CD;
-            return !!(null === (CD = HI().grecaptcha) || void 0 === CD ? void 0 : CD.render) && (DD === this.hostLanguage || this.counter > 0 || this.librarySeparatelyLoaded)
+          shouldResolveImmediately(UU) {
+            var RU;
+            return !!(null === (RU = nt().grecaptcha) || void 0 === RU ? void 0 : RU.render) && (UU === this.hostLanguage || this.counter > 0 || this.librarySeparatelyLoaded)
           }
         }
-        class WI {
-          async load(DD) {
-            return new GI(DD)
+        class At {
+          async load(UU) {
+            return new st(UU)
           }
           clearedOneInstance() {}
         }
-        const sI = "recaptcha",
-          EI = {
+        const zt = "recaptcha",
+          Mt = {
             theme: "light",
             type: "image"
           };
-        class eI {
-          constructor(DD) {
-            let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.assign({}, EI),
-              cD = arguments.length > 2 ? arguments[2] : void 0;
-            this.parameters = CD, this.type = sI, this.destroyed = !1, this.widgetId = null, this.tokenChangeListeners = new Set, this.renderPromise = null, this.recaptcha = null, this.auth = aC(cD), this.isInvisible = "invisible" === this.parameters.size, HD("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment");
-            const ID = "string" === typeof DD ? document.getElementById(DD) : DD;
-            HD(ID, this.auth, "argument-error"), this.container = ID, this.parameters.callback = this.makeTokenCallback(this.parameters.callback), this._recaptchaLoader = this.auth.settings.appVerificationDisabledForTesting ? new WI : new YI, this.validateStartingState()
+        class Dt {
+          constructor(UU) {
+            let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.assign({}, Mt),
+              gU = arguments.length > 2 ? arguments[2] : void 0;
+            this.parameters = RU, this.type = zt, this.destroyed = !1, this.widgetId = null, this.tokenChangeListeners = new Set, this.renderPromise = null, this.recaptcha = null, this.auth = BR(gU), this.isInvisible = "invisible" === this.parameters.size, nU("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment");
+            const tU = "string" === typeof UU ? document.getElementById(UU) : UU;
+            nU(tU, this.auth, "argument-error"), this.container = tU, this.parameters.callback = this.makeTokenCallback(this.parameters.callback), this._recaptchaLoader = this.auth.settings.appVerificationDisabledForTesting ? new At : new it, this.validateStartingState()
           }
           async verify() {
             this.assertNotDestroyed();
-            const DD = await this.render(),
-              CD = this.getAssertedRecaptcha(),
-              cD = CD.getResponse(DD);
-            return cD || new Promise((cD => {
-              const ID = DD => {
-                DD && (this.tokenChangeListeners.delete(ID), cD(DD))
+            const UU = await this.render(),
+              RU = this.getAssertedRecaptcha(),
+              gU = RU.getResponse(UU);
+            return gU || new Promise((gU => {
+              const tU = UU => {
+                UU && (this.tokenChangeListeners.delete(tU), gU(UU))
               };
-              this.tokenChangeListeners.add(ID), this.isInvisible && CD.execute(DD)
+              this.tokenChangeListeners.add(tU), this.isInvisible && RU.execute(UU)
             }))
           }
           render() {
             try {
               this.assertNotDestroyed()
-            } catch (DD) {
-              return Promise.reject(DD)
+            } catch (UU) {
+              return Promise.reject(UU)
             }
-            return this.renderPromise || (this.renderPromise = this.makeRenderPromise().catch((DD => {
-              throw this.renderPromise = null, DD
+            return this.renderPromise || (this.renderPromise = this.makeRenderPromise().catch((UU => {
+              throw this.renderPromise = null, UU
             }))), this.renderPromise
           }
           _reset() {
             this.assertNotDestroyed(), null !== this.widgetId && this.getAssertedRecaptcha().reset(this.widgetId)
           }
           clear() {
-            this.assertNotDestroyed(), this.destroyed = !0, this._recaptchaLoader.clearedOneInstance(), this.isInvisible || this.container.childNodes.forEach((DD => {
-              this.container.removeChild(DD)
+            this.assertNotDestroyed(), this.destroyed = !0, this._recaptchaLoader.clearedOneInstance(), this.isInvisible || this.container.childNodes.forEach((UU => {
+              this.container.removeChild(UU)
             }))
           }
           validateStartingState() {
-            HD(!this.parameters.sitekey, this.auth, "argument-error"), HD(this.isInvisible || !this.container.hasChildNodes(), this.auth, "argument-error"), HD("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment")
+            nU(!this.parameters.sitekey, this.auth, "argument-error"), nU(this.isInvisible || !this.container.hasChildNodes(), this.auth, "argument-error"), nU("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment")
           }
-          makeTokenCallback(DD) {
-            return CD => {
-              if (this.tokenChangeListeners.forEach((DD => DD(CD))), "function" === typeof DD) DD(CD);
-              else if ("string" === typeof DD) {
-                const cD = HI()[DD];
-                "function" === typeof cD && cD(CD)
+          makeTokenCallback(UU) {
+            return RU => {
+              if (this.tokenChangeListeners.forEach((UU => UU(RU))), "function" === typeof UU) UU(RU);
+              else if ("string" === typeof UU) {
+                const gU = nt()[UU];
+                "function" === typeof gU && gU(RU)
               }
             }
           }
           assertNotDestroyed() {
-            HD(!this.destroyed, this.auth, "internal-error")
+            nU(!this.destroyed, this.auth, "internal-error")
           }
           async makeRenderPromise() {
             if (await this.init(), !this.widgetId) {
-              let DD = this.container;
+              let UU = this.container;
               if (!this.isInvisible) {
-                const CD = document.createElement("div");
-                DD.appendChild(CD), DD = CD
+                const RU = document.createElement("div");
+                UU.appendChild(RU), UU = RU
               }
-              this.widgetId = this.getAssertedRecaptcha().render(DD, this.parameters)
+              this.widgetId = this.getAssertedRecaptcha().render(UU, this.parameters)
             }
             return this.widgetId
           }
           async init() {
-            HD(JD() && !UI(), this.auth, "internal-error"), await
+            nU(aU() && !bt(), this.auth, "internal-error"), await
             function() {
-              let DD = null;
-              return new Promise((CD => {
-                "complete" !== document.readyState ? (DD = () => CD(), window.addEventListener("load", DD)) : CD()
-              })).catch((CD => {
-                throw DD && window.removeEventListener("load", DD), CD
+              let UU = null;
+              return new Promise((RU => {
+                "complete" !== document.readyState ? (UU = () => RU(), window.addEventListener("load", UU)) : RU()
+              })).catch((RU => {
+                throw UU && window.removeEventListener("load", UU), RU
               }))
             }(), this.recaptcha = await this._recaptchaLoader.load(this.auth, this.auth.languageCode || void 0);
-            const DD = await async function(DD) {
-              return (await TD(DD, "GET", "/v1/recaptchaParams")).recaptchaSiteKey || ""
+            const UU = await async function(UU) {
+              return (await HU(UU, "GET", "/v1/recaptchaParams")).recaptchaSiteKey || ""
             }(this.auth);
-            HD(DD, this.auth, "internal-error"), this.parameters.sitekey = DD
+            nU(UU, this.auth, "internal-error"), this.parameters.sitekey = UU
           }
           getAssertedRecaptcha() {
-            return HD(this.recaptcha, this.auth, "internal-error"), this.recaptcha
+            return nU(this.recaptcha, this.auth, "internal-error"), this.recaptcha
           }
         }
-        class uI {
-          constructor(DD, CD) {
-            this.verificationId = DD, this.onConfirmation = CD
+        class Lt {
+          constructor(UU, RU) {
+            this.verificationId = UU, this.onConfirmation = RU
           }
-          confirm(DD) {
-            const CD = hC._fromVerification(this.verificationId, DD);
-            return this.onConfirmation(CD)
+          confirm(UU) {
+            const RU = LR._fromVerification(this.verificationId, UU);
+            return this.onConfirmation(RU)
           }
         }
-        async function hI(DD, CD, cD) {
-          const pD = aC(DD),
-            iD = await FI(pD, CD, (0, ID.P)(cD));
-          return new uI(iD, (DD => mc(pD, DD)))
+        async function Nt(UU, RU, gU) {
+          const pU = BR(UU),
+            EU = await Up(pU, RU, (0, tU.I)(gU));
+          return new Lt(EU, (UU => mg(pU, UU)))
         }
-        async function rI(DD, CD, cD) {
-          const pD = (0, ID.P)(DD);
-          await Nc(!1, pD, "phone");
-          const iD = await FI(pD.auth, CD, (0, ID.P)(cD));
-          return new uI(iD, (DD => nc(pD, DD)))
+        async function lt(UU, RU, gU) {
+          const pU = (0, tU.I)(UU);
+          await Wg(!1, pU, "phone");
+          const EU = await Up(pU.auth, RU, (0, tU.I)(gU));
+          return new Lt(EU, (UU => Ig(pU, UU)))
         }
-        async function AI(DD, CD, cD) {
-          const pD = (0, ID.P)(DD),
-            iD = await FI(pD.auth, CD, (0, ID.P)(cD));
-          return new uI(iD, (DD => Oc(pD, DD)))
+        async function Ot(UU, RU, gU) {
+          const pU = (0, tU.I)(UU),
+            EU = await Up(pU.auth, RU, (0, tU.I)(gU));
+          return new Lt(EU, (UU => Jg(pU, UU)))
         }
-        async function FI(DD, CD, cD) {
-          var ID;
-          const pD = await cD.verify();
+        async function Up(UU, RU, gU) {
+          var tU;
+          const pU = await gU.verify();
           try {
-            let iD;
-            if (HD("string" === typeof pD, DD, "argument-error"), HD(cD.type === sI, DD, "argument-error"), iD = "string" === typeof CD ? {
-                phoneNumber: CD
-              } : CD, "session" in iD) {
-              const CD = iD.session;
-              if ("phoneNumber" in iD) {
-                HD("enroll" === CD.type, DD, "internal-error");
-                const cD = await
-                function(DD, CD) {
-                  return TD(DD, "POST", "/v2/accounts/mfaEnrollment:start", LD(DD, CD))
-                }(DD, {
-                  idToken: CD.credential,
+            let EU;
+            if (nU("string" === typeof pU, UU, "argument-error"), nU(gU.type === zt, UU, "argument-error"), EU = "string" === typeof RU ? {
+                phoneNumber: RU
+              } : RU, "session" in EU) {
+              const RU = EU.session;
+              if ("phoneNumber" in EU) {
+                nU("enroll" === RU.type, UU, "internal-error");
+                const gU = await
+                function(UU, RU) {
+                  return HU(UU, "POST", "/v2/accounts/mfaEnrollment:start", dU(UU, RU))
+                }(UU, {
+                  idToken: RU.credential,
                   phoneEnrollmentInfo: {
-                    phoneNumber: iD.phoneNumber,
-                    recaptchaToken: pD
+                    phoneNumber: EU.phoneNumber,
+                    recaptchaToken: pU
                   }
                 });
-                return cD.phoneSessionInfo.sessionInfo
+                return gU.phoneSessionInfo.sessionInfo
               } {
-                HD("signin" === CD.type, DD, "internal-error");
-                const cD = (null === (ID = iD.multiFactorHint) || void 0 === ID ? void 0 : ID.uid) || iD.multiFactorUid;
-                HD(cD, DD, "missing-multi-factor-info");
-                const fD = await
-                function(DD, CD) {
-                  return TD(DD, "POST", "/v2/accounts/mfaSignIn:start", LD(DD, CD))
-                }(DD, {
-                  mfaPendingCredential: CD.credential,
-                  mfaEnrollmentId: cD,
+                nU("signin" === RU.type, UU, "internal-error");
+                const gU = (null === (tU = EU.multiFactorHint) || void 0 === tU ? void 0 : tU.uid) || EU.multiFactorUid;
+                nU(gU, UU, "missing-multi-factor-info");
+                const PU = await
+                function(UU, RU) {
+                  return HU(UU, "POST", "/v2/accounts/mfaSignIn:start", dU(UU, RU))
+                }(UU, {
+                  mfaPendingCredential: RU.credential,
+                  mfaEnrollmentId: gU,
                   phoneSignInInfo: {
-                    recaptchaToken: pD
+                    recaptchaToken: pU
                   }
                 });
-                return fD.phoneResponseInfo.sessionInfo
+                return PU.phoneResponseInfo.sessionInfo
               }
             } {
               const {
-                sessionInfo: CD
-              } = await async function(DD, CD) {
-                return TD(DD, "POST", "/v1/accounts:sendVerificationCode", LD(DD, CD))
-              }(DD, {
-                phoneNumber: iD.phoneNumber,
-                recaptchaToken: pD
+                sessionInfo: RU
+              } = await async function(UU, RU) {
+                return HU(UU, "POST", "/v1/accounts:sendVerificationCode", dU(UU, RU))
+              }(UU, {
+                phoneNumber: EU.phoneNumber,
+                recaptchaToken: pU
               });
-              return CD
+              return RU
             }
           } finally {
-            cD._reset()
+            gU._reset()
           }
         }
-        async function Dp(DD, CD) {
-          await vc((0, ID.P)(DD), CD)
+        async function Rp(UU, RU) {
+          await eg((0, tU.I)(UU), RU)
         }
-        class Cp {
-          constructor(DD) {
-            this.providerId = Cp.PROVIDER_ID, this.auth = aC(DD)
+        class gp {
+          constructor(UU) {
+            this.providerId = gp.PROVIDER_ID, this.auth = BR(UU)
           }
-          verifyPhoneNumber(DD, CD) {
-            return FI(this.auth, DD, (0, ID.P)(CD))
+          verifyPhoneNumber(UU, RU) {
+            return Up(this.auth, UU, (0, tU.I)(RU))
           }
-          static credential(DD, CD) {
-            return hC._fromVerification(DD, CD)
+          static credential(UU, RU) {
+            return LR._fromVerification(UU, RU)
           }
-          static credentialFromResult(DD) {
-            const CD = DD;
-            return Cp.credentialFromTaggedObject(CD)
+          static credentialFromResult(UU) {
+            const RU = UU;
+            return gp.credentialFromTaggedObject(RU)
           }
-          static credentialFromError(DD) {
-            return Cp.credentialFromTaggedObject(DD.customData || {})
+          static credentialFromError(UU) {
+            return gp.credentialFromTaggedObject(UU.customData || {})
           }
-          static credentialFromTaggedObject(DD) {
+          static credentialFromTaggedObject(UU) {
             let {
-              _tokenResponse: CD
-            } = DD;
-            if (!CD) return null;
+              _tokenResponse: RU
+            } = UU;
+            if (!RU) return null;
             const {
-              phoneNumber: cD,
-              temporaryProof: ID
-            } = CD;
-            return cD && ID ? hC._fromTokenResponse(cD, ID) : null
+              phoneNumber: gU,
+              temporaryProof: tU
+            } = RU;
+            return gU && tU ? LR._fromTokenResponse(gU, tU) : null
           }
         }
 
-        function cp(DD, CD) {
-          return CD ? iC(CD) : (HD(DD._popupRedirectResolver, DD, "argument-error"), DD._popupRedirectResolver)
+        function tp(UU, RU) {
+          return RU ? ER(RU) : (nU(UU._popupRedirectResolver, UU, "argument-error"), UU._popupRedirectResolver)
         }
-        Cp.PROVIDER_ID = "phone", Cp.PHONE_SIGN_IN_METHOD = "phone";
-        class Ip extends TC {
-          constructor(DD) {
-            super("custom", "custom"), this.params = DD
+        gp.PROVIDER_ID = "phone", gp.PHONE_SIGN_IN_METHOD = "phone";
+        class pp extends HR {
+          constructor(UU) {
+            super("custom", "custom"), this.params = UU
           }
-          _getIdTokenResponse(DD) {
-            return EC(DD, this._buildIdpRequest())
+          _getIdTokenResponse(UU) {
+            return zR(UU, this._buildIdpRequest())
           }
-          _linkToIdToken(DD, CD) {
-            return EC(DD, this._buildIdpRequest(CD))
+          _linkToIdToken(UU, RU) {
+            return zR(UU, this._buildIdpRequest(RU))
           }
-          _getReauthenticationResolver(DD) {
-            return EC(DD, this._buildIdpRequest())
+          _getReauthenticationResolver(UU) {
+            return zR(UU, this._buildIdpRequest())
           }
-          _buildIdpRequest(DD) {
-            const CD = {
+          _buildIdpRequest(UU) {
+            const RU = {
               requestUri: this.params.requestUri,
               sessionId: this.params.sessionId,
               postBody: this.params.postBody,
@@ -3535,187 +3535,187 @@ export const modules = {
               returnSecureToken: !0,
               returnIdpCredential: !0
             };
-            return DD && (CD.idToken = DD), CD
+            return UU && (RU.idToken = UU), RU
           }
         }
 
-        function pp(DD) {
-          return Xc(DD.auth, new Ip(DD), DD.bypassAuthState)
+        function Ep(UU) {
+          return xg(UU.auth, new pp(UU), UU.bypassAuthState)
         }
 
-        function ip(DD) {
+        function Pp(UU) {
           const {
-            auth: CD,
-            user: cD
-          } = DD;
-          return HD(cD, CD, "internal-error"), gc(cD, new Ip(DD), DD.bypassAuthState)
+            auth: RU,
+            user: gU
+          } = UU;
+          return nU(gU, RU, "internal-error"), fg(gU, new pp(UU), UU.bypassAuthState)
         }
-        async function fp(DD) {
+        async function Tp(UU) {
           const {
-            auth: CD,
-            user: cD
-          } = DD;
-          return HD(cD, CD, "internal-error"), vc(cD, new Ip(DD), DD.bypassAuthState)
+            auth: RU,
+            user: gU
+          } = UU;
+          return nU(gU, RU, "internal-error"), eg(gU, new pp(UU), UU.bypassAuthState)
         }
-        class bp {
-          constructor(DD, CD, cD, ID) {
-            let pD = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-            this.auth = DD, this.resolver = cD, this.user = ID, this.bypassAuthState = pD, this.pendingPromise = null, this.eventManager = null, this.filter = Array.isArray(CD) ? CD : [CD]
+        class qp {
+          constructor(UU, RU, gU, tU) {
+            let pU = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+            this.auth = UU, this.resolver = gU, this.user = tU, this.bypassAuthState = pU, this.pendingPromise = null, this.eventManager = null, this.filter = Array.isArray(RU) ? RU : [RU]
           }
           execute() {
-            return new Promise((async (DD, CD) => {
+            return new Promise((async (UU, RU) => {
               this.pendingPromise = {
-                resolve: DD,
-                reject: CD
+                resolve: UU,
+                reject: RU
               };
               try {
                 this.eventManager = await this.resolver._initialize(this.auth), await this.onExecution(), this.eventManager.registerConsumer(this)
-              } catch (cD) {
-                this.reject(cD)
+              } catch (gU) {
+                this.reject(gU)
               }
             }))
           }
-          async onAuthEvent(DD) {
+          async onAuthEvent(UU) {
             const {
-              urlResponse: CD,
-              sessionId: cD,
-              postBody: ID,
-              tenantId: pD,
-              error: iD,
-              type: fD
-            } = DD;
-            if (iD) return void this.reject(iD);
-            const bD = {
+              urlResponse: RU,
+              sessionId: gU,
+              postBody: tU,
+              tenantId: pU,
+              error: EU,
+              type: PU
+            } = UU;
+            if (EU) return void this.reject(EU);
+            const TU = {
               auth: this.auth,
-              requestUri: CD,
-              sessionId: cD,
-              tenantId: pD || void 0,
-              postBody: ID || void 0,
+              requestUri: RU,
+              sessionId: gU,
+              tenantId: pU || void 0,
+              postBody: tU || void 0,
               user: this.user,
               bypassAuthState: this.bypassAuthState
             };
             try {
-              this.resolve(await this.getIdpTask(fD)(bD))
-            } catch (QD) {
-              this.reject(QD)
+              this.resolve(await this.getIdpTask(PU)(TU))
+            } catch (qU) {
+              this.reject(qU)
             }
           }
-          onError(DD) {
-            this.reject(DD)
+          onError(UU) {
+            this.reject(UU)
           }
-          getIdpTask(DD) {
-            switch (DD) {
+          getIdpTask(UU) {
+            switch (UU) {
               case "signInViaPopup":
               case "signInViaRedirect":
-                return pp;
+                return Ep;
               case "linkViaPopup":
               case "linkViaRedirect":
-                return fp;
+                return Tp;
               case "reauthViaPopup":
               case "reauthViaRedirect":
-                return ip;
+                return Pp;
               default:
-                XD(this.auth, "internal-error")
+                xU(this.auth, "internal-error")
             }
           }
-          resolve(DD) {
-            xD(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.resolve(DD), this.unregisterAndCleanUp()
+          resolve(UU) {
+            oU(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.resolve(UU), this.unregisterAndCleanUp()
           }
-          reject(DD) {
-            xD(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.reject(DD), this.unregisterAndCleanUp()
+          reject(UU) {
+            oU(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.reject(UU), this.unregisterAndCleanUp()
           }
           unregisterAndCleanUp() {
             this.eventManager && this.eventManager.unregisterConsumer(this), this.pendingPromise = null, this.cleanUp()
           }
         }
-        const Qp = new aD(2e3, 1e4);
-        async function wp(DD, CD, cD) {
-          const ID = aC(DD);
-          OD(DD, CD, Dc);
-          const pD = cp(ID, cD);
-          return new yp(ID, "signInViaPopup", CD, pD).executeNotNull()
+        const Kp = new BU(2e3, 1e4);
+        async function cp(UU, RU, gU) {
+          const tU = BR(UU);
+          JU(UU, RU, Ug);
+          const pU = tp(tU, gU);
+          return new Cp(tU, "signInViaPopup", RU, pU).executeNotNull()
         }
-        async function Sp(DD, CD, cD) {
-          const pD = (0, ID.P)(DD);
-          OD(pD.auth, CD, Dc);
-          const iD = cp(pD.auth, cD);
-          return new yp(pD.auth, "reauthViaPopup", CD, iD, pD).executeNotNull()
+        async function Gp(UU, RU, gU) {
+          const pU = (0, tU.I)(UU);
+          JU(pU.auth, RU, Ug);
+          const EU = tp(pU.auth, gU);
+          return new Cp(pU.auth, "reauthViaPopup", RU, EU, pU).executeNotNull()
         }
-        async function Bp(DD, CD, cD) {
-          const pD = (0, ID.P)(DD);
-          OD(pD.auth, CD, Dc);
-          const iD = cp(pD.auth, cD);
-          return new yp(pD.auth, "linkViaPopup", CD, iD, pD).executeNotNull()
+        async function jp(UU, RU, gU) {
+          const pU = (0, tU.I)(UU);
+          JU(pU.auth, RU, Ug);
+          const EU = tp(pU.auth, gU);
+          return new Cp(pU.auth, "linkViaPopup", RU, EU, pU).executeNotNull()
         }
-        class yp extends bp {
-          constructor(DD, CD, cD, ID, pD) {
-            super(DD, CD, ID, pD), this.provider = cD, this.authWindow = null, this.pollId = null, yp.currentPopupAction && yp.currentPopupAction.cancel(), yp.currentPopupAction = this
+        class Cp extends qp {
+          constructor(UU, RU, gU, tU, pU) {
+            super(UU, RU, tU, pU), this.provider = gU, this.authWindow = null, this.pollId = null, Cp.currentPopupAction && Cp.currentPopupAction.cancel(), Cp.currentPopupAction = this
           }
           async executeNotNull() {
-            const DD = await this.execute();
-            return HD(DD, this.auth, "internal-error"), DD
+            const UU = await this.execute();
+            return nU(UU, this.auth, "internal-error"), UU
           }
           async onExecution() {
-            xD(1 === this.filter.length, "Popup operations only handle one event");
-            const DD = OI();
-            this.authWindow = await this.resolver._openPopup(this.auth, this.provider, this.filter[0], DD), this.authWindow.associatedEvent = DD, this.resolver._originValidation(this.auth).catch((DD => {
-              this.reject(DD)
-            })), this.resolver._isIframeWebStorageSupported(this.auth, (DD => {
-              DD || this.reject(mD(this.auth, "web-storage-unsupported"))
+            oU(1 === this.filter.length, "Popup operations only handle one event");
+            const UU = Jt();
+            this.authWindow = await this.resolver._openPopup(this.auth, this.provider, this.filter[0], UU), this.authWindow.associatedEvent = UU, this.resolver._originValidation(this.auth).catch((UU => {
+              this.reject(UU)
+            })), this.resolver._isIframeWebStorageSupported(this.auth, (UU => {
+              UU || this.reject(mU(this.auth, "web-storage-unsupported"))
             })), this.pollUserCancellation()
           }
           get eventId() {
-            var DD;
-            return (null === (DD = this.authWindow) || void 0 === DD ? void 0 : DD.associatedEvent) || null
+            var UU;
+            return (null === (UU = this.authWindow) || void 0 === UU ? void 0 : UU.associatedEvent) || null
           }
           cancel() {
-            this.reject(mD(this.auth, "cancelled-popup-request"))
+            this.reject(mU(this.auth, "cancelled-popup-request"))
           }
           cleanUp() {
-            this.authWindow && this.authWindow.close(), this.pollId && window.clearTimeout(this.pollId), this.authWindow = null, this.pollId = null, yp.currentPopupAction = null
+            this.authWindow && this.authWindow.close(), this.pollId && window.clearTimeout(this.pollId), this.authWindow = null, this.pollId = null, Cp.currentPopupAction = null
           }
           pollUserCancellation() {
-            const DD = () => {
-              var CD, cD;
-              (null === (cD = null === (CD = this.authWindow) || void 0 === CD ? void 0 : CD.window) || void 0 === cD ? void 0 : cD.closed) ? this.pollId = window.setTimeout((() => {
-                this.pollId = null, this.reject(mD(this.auth, "popup-closed-by-user"))
-              }), 8e3): this.pollId = window.setTimeout(DD, Qp.get())
+            const UU = () => {
+              var RU, gU;
+              (null === (gU = null === (RU = this.authWindow) || void 0 === RU ? void 0 : RU.window) || void 0 === gU ? void 0 : gU.closed) ? this.pollId = window.setTimeout((() => {
+                this.pollId = null, this.reject(mU(this.auth, "popup-closed-by-user"))
+              }), 8e3): this.pollId = window.setTimeout(UU, Kp.get())
             };
-            DD()
+            UU()
           }
         }
-        yp.currentPopupAction = null;
-        const Mp = "pendingRedirect",
-          tp = new Map;
-        class Zp extends bp {
-          constructor(DD, CD) {
-            super(DD, ["signInViaRedirect", "linkViaRedirect", "reauthViaRedirect", "unknown"], CD, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]), this.eventId = null
+        Cp.currentPopupAction = null;
+        const hp = "pendingRedirect",
+          Qp = new Map;
+        class ep extends qp {
+          constructor(UU, RU) {
+            super(UU, ["signInViaRedirect", "linkViaRedirect", "reauthViaRedirect", "unknown"], RU, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]), this.eventId = null
           }
           async execute() {
-            let DD = tp.get(this.auth._key());
-            if (!DD) {
+            let UU = Qp.get(this.auth._key());
+            if (!UU) {
               try {
-                const CD = await async function(DD, CD) {
-                  const cD = gp(CD),
-                    ID = Np(DD);
-                  if (!await ID._isAvailable()) return !1;
-                  const pD = "true" === await ID._get(cD);
-                  return await ID._remove(cD), pD
+                const RU = await async function(UU, RU) {
+                  const gU = mp(RU),
+                    tU = xp(UU);
+                  if (!await tU._isAvailable()) return !1;
+                  const pU = "true" === await tU._get(gU);
+                  return await tU._remove(gU), pU
                 }(this.resolver, this.auth) ? await super.execute() : null;
-                DD = () => Promise.resolve(CD)
-              } catch (CD) {
-                DD = () => Promise.reject(CD)
+                UU = () => Promise.resolve(RU)
+              } catch (RU) {
+                UU = () => Promise.reject(RU)
               }
-              tp.set(this.auth._key(), DD)
+              Qp.set(this.auth._key(), UU)
             }
-            return this.bypassAuthState || tp.set(this.auth._key(), (() => Promise.resolve(null))), DD()
+            return this.bypassAuthState || Qp.set(this.auth._key(), (() => Promise.resolve(null))), UU()
           }
-          async onAuthEvent(DD) {
-            if ("signInViaRedirect" === DD.type) return super.onAuthEvent(DD);
-            if ("unknown" !== DD.type) {
-              if (DD.eventId) {
-                const CD = await this.auth._redirectUserForId(DD.eventId);
-                if (CD) return this.user = CD, super.onAuthEvent(DD);
+          async onAuthEvent(UU) {
+            if ("signInViaRedirect" === UU.type) return super.onAuthEvent(UU);
+            if ("unknown" !== UU.type) {
+              if (UU.eventId) {
+                const RU = await this.auth._redirectUserForId(UU.eventId);
+                if (RU) return this.user = RU, super.onAuthEvent(UU);
                 this.resolve(null)
               }
             } else this.resolve(null)
@@ -3723,199 +3723,199 @@ export const modules = {
           async onExecution() {}
           cleanUp() {}
         }
-        async function op(DD, CD) {
-          return Np(DD)._set(gp(CD), "true")
+        async function Wp(UU, RU) {
+          return xp(UU)._set(mp(RU), "true")
         }
 
-        function vp(DD, CD) {
-          tp.set(DD._key(), CD)
+        function fp(UU, RU) {
+          Qp.set(UU._key(), RU)
         }
 
-        function Np(DD) {
-          return iC(DD._redirectPersistence)
+        function xp(UU) {
+          return ER(UU._redirectPersistence)
         }
 
-        function gp(DD) {
-          return QC(Mp, DD.config.apiKey, DD.name)
+        function mp(UU) {
+          return qR(hp, UU.config.apiKey, UU.name)
         }
 
-        function Xp(DD, CD, cD) {
-          return async function(DD, CD, cD) {
-            const ID = aC(DD);
-            OD(DD, CD, Dc), await ID._initializationPromise;
-            const pD = cp(ID, cD);
-            return await op(pD, ID), pD._openRedirect(ID, CD, "signInViaRedirect")
-          }(DD, CD, cD)
+        function Ip(UU, RU, gU) {
+          return async function(UU, RU, gU) {
+            const tU = BR(UU);
+            JU(UU, RU, Ug), await tU._initializationPromise;
+            const pU = tp(tU, gU);
+            return await Wp(pU, tU), pU._openRedirect(tU, RU, "signInViaRedirect")
+          }(UU, RU, gU)
         }
 
-        function mp(DD, CD, cD) {
-          return async function(DD, CD, cD) {
-            const pD = (0, ID.P)(DD);
-            OD(pD.auth, CD, Dc), await pD.auth._initializationPromise;
-            const iD = cp(pD.auth, cD);
-            await op(iD, pD.auth);
-            const fD = await Hp(pD);
-            return iD._openRedirect(pD.auth, CD, "reauthViaRedirect", fD)
-          }(DD, CD, cD)
+        function Jp(UU, RU, gU) {
+          return async function(UU, RU, gU) {
+            const pU = (0, tU.I)(UU);
+            JU(pU.auth, RU, Ug), await pU.auth._initializationPromise;
+            const EU = tp(pU.auth, gU);
+            await Wp(EU, pU.auth);
+            const PU = await op(pU);
+            return EU._openRedirect(pU.auth, RU, "reauthViaRedirect", PU)
+          }(UU, RU, gU)
         }
 
-        function np(DD, CD, cD) {
-          return async function(DD, CD, cD) {
-            const pD = (0, ID.P)(DD);
-            OD(pD.auth, CD, Dc), await pD.auth._initializationPromise;
-            const iD = cp(pD.auth, cD);
-            await Nc(!1, pD, CD.providerId), await op(iD, pD.auth);
-            const fD = await Hp(pD);
-            return iD._openRedirect(pD.auth, CD, "linkViaRedirect", fD)
-          }(DD, CD, cD)
+        function wp(UU, RU, gU) {
+          return async function(UU, RU, gU) {
+            const pU = (0, tU.I)(UU);
+            JU(pU.auth, RU, Ug), await pU.auth._initializationPromise;
+            const EU = tp(pU.auth, gU);
+            await Wg(!1, pU, RU.providerId), await Wp(EU, pU.auth);
+            const PU = await op(pU);
+            return EU._openRedirect(pU.auth, RU, "linkViaRedirect", PU)
+          }(UU, RU, gU)
         }
-        async function Op(DD, CD) {
-          return await aC(DD)._initializationPromise, Pp(DD, CD, !1)
+        async function np(UU, RU) {
+          return await BR(UU)._initializationPromise, bp(UU, RU, !1)
         }
-        async function Pp(DD, CD) {
-          let cD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          const ID = aC(DD),
-            pD = cp(ID, CD),
-            iD = new Zp(ID, pD, cD),
-            fD = await iD.execute();
-          return fD && !cD && (delete fD.user._redirectEventId, await ID._persistUserIfCurrent(fD.user), await ID._setRedirectUser(null, CD)), fD
+        async function bp(UU, RU) {
+          let gU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          const tU = BR(UU),
+            pU = tp(tU, RU),
+            EU = new ep(tU, pU, gU),
+            PU = await EU.execute();
+          return PU && !gU && (delete PU.user._redirectEventId, await tU._persistUserIfCurrent(PU.user), await tU._setRedirectUser(null, RU)), PU
         }
-        async function Hp(DD) {
-          const CD = OI(`${DD.uid}:::`);
-          return DD._redirectEventId = CD, await DD.auth._setRedirectUser(DD), await DD.auth._persistUserIfCurrent(DD), CD
+        async function op(UU) {
+          const RU = Jt(`${UU.uid}:::`);
+          return UU._redirectEventId = RU, await UU.auth._setRedirectUser(UU), await UU.auth._persistUserIfCurrent(UU), RU
         }
-        class Up {
-          constructor(DD) {
-            this.auth = DD, this.cachedEventUids = new Set, this.consumers = new Set, this.queuedRedirectEvent = null, this.hasHandledPotentialRedirect = !1, this.lastProcessedEventTime = Date.now()
+        class Zp {
+          constructor(UU) {
+            this.auth = UU, this.cachedEventUids = new Set, this.consumers = new Set, this.queuedRedirectEvent = null, this.hasHandledPotentialRedirect = !1, this.lastProcessedEventTime = Date.now()
           }
-          registerConsumer(DD) {
-            this.consumers.add(DD), this.queuedRedirectEvent && this.isEventForConsumer(this.queuedRedirectEvent, DD) && (this.sendToConsumer(this.queuedRedirectEvent, DD), this.saveEventToCache(this.queuedRedirectEvent), this.queuedRedirectEvent = null)
+          registerConsumer(UU) {
+            this.consumers.add(UU), this.queuedRedirectEvent && this.isEventForConsumer(this.queuedRedirectEvent, UU) && (this.sendToConsumer(this.queuedRedirectEvent, UU), this.saveEventToCache(this.queuedRedirectEvent), this.queuedRedirectEvent = null)
           }
-          unregisterConsumer(DD) {
-            this.consumers.delete(DD)
+          unregisterConsumer(UU) {
+            this.consumers.delete(UU)
           }
-          onEvent(DD) {
-            if (this.hasEventBeenHandled(DD)) return !1;
-            let CD = !1;
-            return this.consumers.forEach((cD => {
-              this.isEventForConsumer(DD, cD) && (CD = !0, this.sendToConsumer(DD, cD), this.saveEventToCache(DD))
-            })), this.hasHandledPotentialRedirect || ! function(DD) {
-              switch (DD.type) {
+          onEvent(UU) {
+            if (this.hasEventBeenHandled(UU)) return !1;
+            let RU = !1;
+            return this.consumers.forEach((gU => {
+              this.isEventForConsumer(UU, gU) && (RU = !0, this.sendToConsumer(UU, gU), this.saveEventToCache(UU))
+            })), this.hasHandledPotentialRedirect || ! function(UU) {
+              switch (UU.type) {
                 case "signInViaRedirect":
                 case "linkViaRedirect":
                 case "reauthViaRedirect":
                   return !0;
                 case "unknown":
-                  return qp(DD);
+                  return Yp(UU);
                 default:
                   return !1
               }
-            }(DD) || (this.hasHandledPotentialRedirect = !0, CD || (this.queuedRedirectEvent = DD, CD = !0)), CD
+            }(UU) || (this.hasHandledPotentialRedirect = !0, RU || (this.queuedRedirectEvent = UU, RU = !0)), RU
           }
-          sendToConsumer(DD, CD) {
-            var cD;
-            if (DD.error && !qp(DD)) {
-              const ID = (null === (cD = DD.error.code) || void 0 === cD ? void 0 : cD.split("auth/")[1]) || "internal-error";
-              CD.onError(mD(this.auth, ID))
-            } else CD.onAuthEvent(DD)
+          sendToConsumer(UU, RU) {
+            var gU;
+            if (UU.error && !Yp(UU)) {
+              const tU = (null === (gU = UU.error.code) || void 0 === gU ? void 0 : gU.split("auth/")[1]) || "internal-error";
+              RU.onError(mU(this.auth, tU))
+            } else RU.onAuthEvent(UU)
           }
-          isEventForConsumer(DD, CD) {
-            const cD = null === CD.eventId || !!DD.eventId && DD.eventId === CD.eventId;
-            return CD.filter.includes(DD.type) && cD
+          isEventForConsumer(UU, RU) {
+            const gU = null === RU.eventId || !!UU.eventId && UU.eventId === RU.eventId;
+            return RU.filter.includes(UU.type) && gU
           }
-          hasEventBeenHandled(DD) {
-            return Date.now() - this.lastProcessedEventTime >= 6e5 && this.cachedEventUids.clear(), this.cachedEventUids.has(xp(DD))
+          hasEventBeenHandled(UU) {
+            return Date.now() - this.lastProcessedEventTime >= 6e5 && this.cachedEventUids.clear(), this.cachedEventUids.has(ap(UU))
           }
-          saveEventToCache(DD) {
-            this.cachedEventUids.add(xp(DD)), this.lastProcessedEventTime = Date.now()
+          saveEventToCache(UU) {
+            this.cachedEventUids.add(ap(UU)), this.lastProcessedEventTime = Date.now()
           }
         }
 
-        function xp(DD) {
-          return [DD.type, DD.eventId, DD.sessionId, DD.tenantId].filter((DD => DD)).join("-")
+        function ap(UU) {
+          return [UU.type, UU.eventId, UU.sessionId, UU.tenantId].filter((UU => UU)).join("-")
         }
 
-        function qp(DD) {
+        function Yp(UU) {
           let {
-            type: CD,
-            error: cD
-          } = DD;
-          return "unknown" === CD && "auth/no-auth-event" === (null === cD || void 0 === cD ? void 0 : cD.code)
+            type: RU,
+            error: gU
+          } = UU;
+          return "unknown" === RU && "auth/no-auth-event" === (null === gU || void 0 === gU ? void 0 : gU.code)
         }
-        const Jp = /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/,
-          Kp = /^https?/;
-        async function ap(DD) {
-          if (DD.config.emulator) return;
+        const Bp = /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/,
+          Vp = /^https?/;
+        async function rp(UU) {
+          if (UU.config.emulator) return;
           const {
-            authorizedDomains: CD
-          } = await async function(DD) {
-            return TD(DD, "GET", "/v1/projects", arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
-          }(DD);
-          for (const ID of CD) try {
-            if (Vp(ID)) return
-          } catch (cD) {}
-          XD(DD, "unauthorized-domain")
+            authorizedDomains: RU
+          } = await async function(UU) {
+            return HU(UU, "GET", "/v1/projects", arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
+          }(UU);
+          for (const tU of RU) try {
+            if (Xp(tU)) return
+          } catch (gU) {}
+          xU(UU, "unauthorized-domain")
         }
 
-        function Vp(DD) {
-          const CD = qD(),
+        function Xp(UU) {
+          const RU = ZU(),
             {
-              protocol: cD,
-              hostname: ID
-            } = new URL(CD);
-          if (DD.startsWith("chrome-extension://")) {
-            const pD = new URL(DD);
-            return "" === pD.hostname && "" === ID ? "chrome-extension:" === cD && DD.replace("chrome-extension://", "") === CD.replace("chrome-extension://", "") : "chrome-extension:" === cD && pD.hostname === ID
+              protocol: gU,
+              hostname: tU
+            } = new URL(RU);
+          if (UU.startsWith("chrome-extension://")) {
+            const pU = new URL(UU);
+            return "" === pU.hostname && "" === tU ? "chrome-extension:" === gU && UU.replace("chrome-extension://", "") === RU.replace("chrome-extension://", "") : "chrome-extension:" === gU && pU.hostname === tU
           }
-          if (!Kp.test(cD)) return !1;
-          if (Jp.test(DD)) return ID === DD;
-          const pD = DD.replace(/\./g, "\\.");
-          return new RegExp("^(.+\\." + pD + "|" + pD + ")$", "i").test(ID)
+          if (!Vp.test(gU)) return !1;
+          if (Bp.test(UU)) return tU === UU;
+          const pU = UU.replace(/\./g, "\\.");
+          return new RegExp("^(.+\\." + pU + "|" + pU + ")$", "i").test(tU)
         }
-        const zp = new aD(3e4, 6e4);
+        const vp = new BU(3e4, 6e4);
 
-        function jp() {
-          const DD = HI().___jsl;
-          if (null === DD || void 0 === DD ? void 0 : DD.H)
-            for (const CD of Object.keys(DD.H))
-              if (DD.H[CD].r = DD.H[CD].r || [], DD.H[CD].L = DD.H[CD].L || [], DD.H[CD].r = [...DD.H[CD].L], DD.CP)
-                for (let cD = 0; cD < DD.CP.length; cD++) DD.CP[cD] = null
+        function dp() {
+          const UU = nt().___jsl;
+          if (null === UU || void 0 === UU ? void 0 : UU.H)
+            for (const RU of Object.keys(UU.H))
+              if (UU.H[RU].r = UU.H[RU].r || [], UU.H[RU].L = UU.H[RU].L || [], UU.H[RU].r = [...UU.H[RU].L], UU.CP)
+                for (let gU = 0; gU < UU.CP.length; gU++) UU.CP[gU] = null
         }
-        let lp = null;
+        let Hp = null;
 
-        function Lp(DD) {
-          return lp = lp || function(DD) {
-            return new Promise(((CD, cD) => {
-              var ID, pD, iD;
+        function Sp(UU) {
+          return Hp = Hp || function(UU) {
+            return new Promise(((RU, gU) => {
+              var tU, pU, EU;
 
-              function fD() {
-                jp(), gapi.load("gapi.iframes", {
+              function PU() {
+                dp(), gapi.load("gapi.iframes", {
                   callback: () => {
-                    CD(gapi.iframes.getContext())
+                    RU(gapi.iframes.getContext())
                   },
                   ontimeout: () => {
-                    jp(), cD(mD(DD, "network-request-failed"))
+                    dp(), gU(mU(UU, "network-request-failed"))
                   },
-                  timeout: zp.get()
+                  timeout: vp.get()
                 })
               }
-              if (null === (pD = null === (ID = HI().gapi) || void 0 === ID ? void 0 : ID.iframes) || void 0 === pD ? void 0 : pD.Iframe) CD(gapi.iframes.getContext());
+              if (null === (pU = null === (tU = nt().gapi) || void 0 === tU ? void 0 : tU.iframes) || void 0 === pU ? void 0 : pU.Iframe) RU(gapi.iframes.getContext());
               else {
-                if (!(null === (iD = HI().gapi) || void 0 === iD ? void 0 : iD.load)) {
-                  const CD = UC("iframefcb");
-                  return HI()[CD] = () => {
-                    gapi.load ? fD() : cD(mD(DD, "network-request-failed"))
-                  }, HC(`https://apis.google.com/js/api.js?onload=${CD}`).catch((DD => cD(DD)))
+                if (!(null === (EU = nt().gapi) || void 0 === EU ? void 0 : EU.load)) {
+                  const RU = bR("iframefcb");
+                  return nt()[RU] = () => {
+                    gapi.load ? PU() : gU(mU(UU, "network-request-failed"))
+                  }, nR(`https://apis.google.com/js/api.js?onload=${RU}`).catch((UU => gU(UU)))
                 }
-                fD()
+                PU()
               }
-            })).catch((DD => {
-              throw lp = null, DD
+            })).catch((UU => {
+              throw Hp = null, UU
             }))
-          }(DD), lp
+          }(UU), Hp
         }
-        const Tp = new aD(5e3, 15e3),
-          Gp = {
+        const sp = new BU(5e3, 15e3),
+          yp = {
             style: {
               position: "absolute",
               top: "-100px",
@@ -3925,102 +3925,102 @@ export const modules = {
             "aria-hidden": "true",
             tabindex: "-1"
           },
-          Rp = new Map([
+          kp = new Map([
             ["identitytoolkit.googleapis.com", "p"],
             ["staging-identitytoolkit.sandbox.googleapis.com", "s"],
             ["test-identitytoolkit.sandbox.googleapis.com", "t"]
           ]);
 
-        function kp(DD) {
-          const CD = DD.config;
-          HD(CD.authDomain, DD, "auth-domain-config-required");
-          const cD = CD.emulator ? VD(CD, "emulator/auth/iframe") : `https://${DD.config.authDomain}/__/auth/iframe`,
-            iD = {
-              apiKey: CD.apiKey,
-              appName: DD.name,
-              v: pD.e
+        function Fp(UU) {
+          const RU = UU.config;
+          nU(RU.authDomain, UU, "auth-domain-config-required");
+          const gU = RU.emulator ? VU(RU, "emulator/auth/iframe") : `https://${UU.config.authDomain}/__/auth/iframe`,
+            EU = {
+              apiKey: RU.apiKey,
+              appName: UU.name,
+              v: pU.f
             },
-            fD = Rp.get(DD.config.apiHost);
-          fD && (iD.eid = fD);
-          const bD = DD._getFrameworks();
-          return bD.length && (iD.fw = bD.join(",")), `${cD}?${(0,ID.kb)(iD).slice(1)}`
+            PU = kp.get(UU.config.apiHost);
+          PU && (EU.eid = PU);
+          const TU = UU._getFrameworks();
+          return TU.length && (EU.fw = TU.join(",")), `${gU}?${(0,tU._)(EU).slice(1)}`
         }
-        const dp = {
+        const ip = {
           location: "yes",
           resizable: "yes",
           statusbar: "yes",
           toolbar: "no"
         };
-        class Yp {
-          constructor(DD) {
-            this.window = DD, this.associatedEvent = null
+        class Ap {
+          constructor(UU) {
+            this.window = UU, this.associatedEvent = null
           }
           close() {
             if (this.window) try {
               this.window.close()
-            } catch (DD) {}
+            } catch (UU) {}
           }
         }
 
-        function Wp(DD, CD, cD) {
-          let pD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 500,
-            iD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 600;
-          const fD = Math.max((window.screen.availHeight - iD) / 2, 0).toString(),
-            bD = Math.max((window.screen.availWidth - pD) / 2, 0).toString();
-          let QD = "";
-          const wD = Object.assign(Object.assign({}, dp), {
-              width: pD.toString(),
-              height: iD.toString(),
-              top: fD,
-              left: bD
+        function zp(UU, RU, gU) {
+          let pU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 500,
+            EU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 600;
+          const PU = Math.max((window.screen.availHeight - EU) / 2, 0).toString(),
+            TU = Math.max((window.screen.availWidth - pU) / 2, 0).toString();
+          let qU = "";
+          const KU = Object.assign(Object.assign({}, ip), {
+              width: pU.toString(),
+              height: EU.toString(),
+              top: PU,
+              left: TU
             }),
-            SD = (0, ID.S)().toLowerCase();
-          cD && (QD = MC(SD) ? "_blank" : cD), BC(SD) && (CD = CD || "http://localhost", wD.scrollbars = "yes");
-          const BD = Object.entries(wD).reduce(((DD, CD) => {
-            let [cD, ID] = CD;
-            return `${DD}${cD}=${ID},`
+            cU = (0, tU.J)().toLowerCase();
+          gU && (qU = uR(cU) ? "_blank" : gU), GR(cU) && (RU = RU || "http://localhost", KU.scrollbars = "yes");
+          const GU = Object.entries(KU).reduce(((UU, RU) => {
+            let [gU, tU] = RU;
+            return `${UU}${gU}=${tU},`
           }), "");
           if (function() {
-              var DD;
-              return NC(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, ID.S)()) && !!(null === (DD = window.navigator) || void 0 === DD ? void 0 : DD.standalone)
-            }(SD) && "_self" !== QD) return function(DD, CD) {
-            const cD = document.createElement("a");
-            cD.href = DD, cD.target = CD;
-            const ID = document.createEvent("MouseEvent");
-            ID.initMouseEvent("click", !0, !0, window, 1, 0, 0, 0, 0, !1, !1, !1, !1, 1, null), cD.dispatchEvent(ID)
-          }(CD || "", QD), new Yp(null);
-          const yD = window.open(CD || "", QD, BD);
-          HD(yD, DD, "popup-blocked");
+              var UU;
+              return WR(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, tU.J)()) && !!(null === (UU = window.navigator) || void 0 === UU ? void 0 : UU.standalone)
+            }(cU) && "_self" !== qU) return function(UU, RU) {
+            const gU = document.createElement("a");
+            gU.href = UU, gU.target = RU;
+            const tU = document.createEvent("MouseEvent");
+            tU.initMouseEvent("click", !0, !0, window, 1, 0, 0, 0, 0, !1, !1, !1, !1, 1, null), gU.dispatchEvent(tU)
+          }(RU || "", qU), new Ap(null);
+          const jU = window.open(RU || "", qU, GU);
+          nU(jU, UU, "popup-blocked");
           try {
-            yD.focus()
-          } catch (MD) {}
-          return new Yp(yD)
+            jU.focus()
+          } catch (uU) {}
+          return new Ap(jU)
         }
-        const sp = "__/auth/handler",
-          Ep = "emulator/auth/handler",
-          ep = encodeURIComponent("fac");
-        async function hp(DD, CD, cD, iD, fD, bD) {
-            HD(DD.config.authDomain, DD, "auth-domain-config-required"), HD(DD.config.apiKey, DD, "invalid-api-key");
-            const QD = {
-              apiKey: DD.config.apiKey,
-              appName: DD.name,
-              authType: cD,
-              redirectUrl: iD,
-              v: pD.e,
-              eventId: fD
+        const Mp = "__/auth/handler",
+          Dp = "emulator/auth/handler",
+          Lp = encodeURIComponent("fac");
+        async function Np(UU, RU, gU, EU, PU, TU) {
+            nU(UU.config.authDomain, UU, "auth-domain-config-required"), nU(UU.config.apiKey, UU, "invalid-api-key");
+            const qU = {
+              apiKey: UU.config.apiKey,
+              appName: UU.name,
+              authType: gU,
+              redirectUrl: EU,
+              v: pU.f,
+              eventId: PU
             };
-            if (CD instanceof Dc) {
-              CD.setDefaultLanguage(DD.languageCode), QD.providerId = CD.providerId || "", (0, ID.Y)(CD.getCustomParameters()) || (QD.customParameters = JSON.stringify(CD.getCustomParameters()));
-              for (const [DD, CD] of Object.entries(bD || {})) QD[DD] = CD
+            if (RU instanceof Ug) {
+              RU.setDefaultLanguage(UU.languageCode), qU.providerId = RU.providerId || "", (0, tU.N)(RU.getCustomParameters()) || (qU.customParameters = JSON.stringify(RU.getCustomParameters()));
+              for (const [UU, RU] of Object.entries(TU || {})) qU[UU] = RU
             }
-            if (CD instanceof Cc) {
-              const DD = CD.getScopes().filter((DD => "" !== DD));
-              DD.length > 0 && (QD.scopes = DD.join(","))
+            if (RU instanceof Rg) {
+              const UU = RU.getScopes().filter((UU => "" !== UU));
+              UU.length > 0 && (qU.scopes = UU.join(","))
             }
-            DD.tenantId && (QD.tid = DD.tenantId);
-            const wD = QD;
-            for (const ID of Object.keys(wD)) void 0 === wD[ID] && delete wD[ID];
-            const SD = await DD._getAppCheckToken(),
-              BD = SD ? `#${ep}=${encodeURIComponent(SD)}` : "";
-            return `${function(DD){let{config:CD}=DD;if(!CD.emulator)return`
-            https: //${CD.authDomain}/${sp}`;return VD(CD,Ep)}(DD)}?${(0,ID.kb)(wD).slice(1)}${BD}`}const rp="webStorageSupport";const Ap=class{constructor(){this.eventManagers={},this.iframes={},this.originValidationPromises={},this._redirectPersistence=mI,this._completeRedirectFn=Pp,this._overrideRedirectResult=vp}async _openPopup(DD,CD,cD,ID){var pD;xD(null===(pD=this.eventManagers[DD._key()])||void 0===pD?void 0:pD.manager,"_initialize() not called before _openPopup()");return Wp(DD,await hp(DD,CD,cD,qD(),ID),OI())}async _openRedirect(DD,CD,cD,ID){await this._originValidation(DD);return function(DD){HI().location.href=DD}(await hp(DD,CD,cD,qD(),ID)),new Promise((()=>{}))}_initialize(DD){const CD=DD._key();if(this.eventManagers[CD]){const{manager:DD,promise:cD}=this.eventManagers[CD];return DD?Promise.resolve(DD):(xD(cD,"If manager is not set, promise should be"),cD)}const cD=this.initAndGetManager(DD);return this.eventManagers[CD]={promise:cD},cD.catch((()=>{delete this.eventManagers[CD]})),cD}async initAndGetManager(DD){const CD=await async function(DD){const CD=await Lp(DD),cD=HI().gapi;return HD(cD,DD,"internal-error"),CD.open({where:document.body,url:kp(DD),messageHandlersFilter:cD.iframes.CROSS_ORIGIN_IFRAMES_FILTER,attributes:Gp,dontclear:!0},(CD=>new Promise((async(cD,ID)=>{await CD.restyle({setHideOnLeave:!1});const pD=mD(DD,"network-request-failed"),iD=HI().setTimeout((()=>{ID(pD)}),Tp.get());function fD(){HI().clearTimeout(iD),cD(CD)}CD.ping(fD).then(fD,(()=>{ID(pD)}))}))))}(DD),cD=new Up(DD);return CD.register("authEvent",(CD=>{HD(null===CD||void 0===CD?void 0:CD.authEvent,DD,"invalid-auth-event");return{status:cD.onEvent(CD.authEvent)?"ACK":"ERROR"}}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER),this.eventManagers[DD._key()]={manager:cD},this.iframes[DD._key()]=CD,cD}_isIframeWebStorageSupported(DD,CD){this.iframes[DD._key()].send(rp,{type:rp},(cD=>{var ID;const pD=null===(ID=null===cD||void 0===cD?void 0:cD[0])||void 0===ID?void 0:ID[rp];void 0!==pD&&CD(!!pD),XD(DD,"internal-error")}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER)}_originValidation(DD){const CD=DD._key();return this.originValidationPromises[CD]||(this.originValidationPromises[CD]=ap(DD)),this.originValidationPromises[CD]}get _shouldInitProactively(){return gC()||yC()||NC()}};class Fp{constructor(DD){this.factorId=DD}_process(DD,CD,cD){switch(CD.type){case"enroll":return this._finalizeEnroll(DD,CD.credential,cD);case"signin":return this._finalizeSignIn(DD,CD.credential);default:return UD("unexpected MultiFactorSessionType")}}}class Di extends Fp{constructor(DD){super("phone"),this.credential=DD}static _fromCredential(DD){return new Di(DD)}_finalizeEnroll(DD,CD,cD){return function(DD,CD){return TD(DD,"POST","/v2/accounts/mfaEnrollment:finalize",LD(DD,CD))}(DD,{idToken:CD,displayName:cD,phoneVerificationInfo:this.credential._makeVerificationRequest()})}_finalizeSignIn(DD,CD){return function(DD,CD){return TD(DD,"POST","/v2/accounts/mfaSignIn:finalize",LD(DD,CD))}(DD,{mfaPendingCredential:CD,phoneVerificationInfo:this.credential._makeVerificationRequest()})}}class Ci{constructor(){}static assertion(DD){return Di._fromCredential(DD)}}Ci.FACTOR_ID="phone";class ci{static assertionForEnrollment(DD,CD){return Ii._fromSecret(DD,CD)}static assertionForSignIn(DD,CD){return Ii._fromEnrollmentId(DD,CD)}static async generateSecret(DD){const CD=DD;HD("undefined"!==typeof CD.auth,"internal-error");const cD=await(ID=CD.auth,pD={idToken:CD.credential,totpEnrollmentInfo:{}},TD(ID,"POST","/v2/accounts/mfaEnrollment:start",LD(ID,pD)));var ID,pD;return ii._fromStartTotpMfaEnrollmentResponse(cD,CD.auth)}}ci.FACTOR_ID="totp";class Ii extends Fp{constructor(DD,CD,cD){super("totp"),this.otp=DD,this.enrollmentId=CD,this.secret=cD}static _fromSecret(DD,CD){return new Ii(CD,void 0,DD)}static _fromEnrollmentId(DD,CD){return new Ii(CD,DD)}async _finalizeEnroll(DD,CD,cD){return HD("undefined"!==typeof this.secret,DD,"argument-error"),function(DD,CD){return TD(DD,"POST","/v2/accounts/mfaEnrollment:finalize",LD(DD,CD))}(DD,{idToken:CD,displayName:cD,totpVerificationInfo:this.secret._makeTotpVerificationInfo(this.otp)})}async _finalizeSignIn(DD,CD){HD(void 0!==this.enrollmentId&&void 0!==this.otp,DD,"argument-error");const cD={verificationCode:this.otp};return function(DD,CD){return TD(DD,"POST","/v2/accounts/mfaSignIn:finalize",LD(DD,CD))}(DD,{mfaPendingCredential:CD,mfaEnrollmentId:this.enrollmentId,totpVerificationInfo:cD})}}class ii{constructor(DD,CD,cD,ID,pD,iD,fD){this.sessionInfo=iD,this.auth=fD,this.secretKey=DD,this.hashingAlgorithm=CD,this.codeLength=cD,this.codeIntervalSeconds=ID,this.enrollmentCompletionDeadline=pD}static _fromStartTotpMfaEnrollmentResponse(DD,CD){return new ii(DD.totpSessionInfo.sharedSecretKey,DD.totpSessionInfo.hashingAlgorithm,DD.totpSessionInfo.verificationCodeLength,DD.totpSessionInfo.periodSec,new Date(DD.totpSessionInfo.finalizeEnrollmentTime).toUTCString(),DD.totpSessionInfo.sessionInfo,CD)}_makeTotpVerificationInfo(DD){return{sessionInfo:this.sessionInfo,verificationCode:DD}}generateQrCodeUrl(DD,CD){var cD;let ID=!1;return(fi(DD)||fi(CD))&&(ID=!0),ID&&(fi(DD)&&(DD=(null===(cD=this.auth.currentUser)||void 0===cD?void 0:cD.email)||"unknownuser"),fi(CD)&&(CD=this.auth.name)),`otpauth://totp/${CD}:${DD}?secret=${this.secretKey}&issuer=${CD}&algorithm=${this.hashingAlgorithm}&digits=${this.codeLength}`}}function fi(DD){return"undefined"===typeof DD||0===(null===DD||void 0===DD?void 0:DD.length)}var bi="@firebase/auth",Qi="0.23.2";class wi{constructor(DD){this.auth=DD,this.internalListeners=new Map}getUid(){var DD;return this.assertAuthConfigured(),(null===(DD=this.auth.currentUser)||void 0===DD?void 0:DD.uid)||null}async getToken(DD){if(this.assertAuthConfigured(),await this.auth._initializationPromise,!this.auth.currentUser)return null;return{accessToken:await this.auth.currentUser.getIdToken(DD)}}addAuthTokenListener(DD){if(this.assertAuthConfigured(),this.internalListeners.has(DD))return;const CD=this.auth.onIdTokenChanged((CD=>{DD((null===CD||void 0===CD?void 0:CD.stsTokenManager.accessToken)||null)}));this.internalListeners.set(DD,CD),this.updateProactiveRefresh()}removeAuthTokenListener(DD){this.assertAuthConfigured();const CD=this.internalListeners.get(DD);CD&&(this.internalListeners.delete(DD),CD(),this.updateProactiveRefresh())}assertAuthConfigured(){HD(this.auth._initializationPromise,"dependent-sdk-initialized-before-auth")}updateProactiveRefresh(){this.internalListeners.size>0?this.auth._startProactiveRefresh():this.auth._stopProactiveRefresh()}}const Si=(0,ID.L)("authIdTokenMaxAge")||300;let Bi=null;const yi=DD=>async CD=>{const cD=CD&&await CD.getIdTokenResult(),ID=cD&&((new Date).getTime()-Date.parse(cD.issuedAtTime))/1e3;if(ID&&ID>Si)return;const pD=null===cD||void 0===cD?void 0:cD.token;Bi!==pD&&(Bi=pD,await fetch(DD,{method:pD?"POST":"DELETE",headers:pD?{Authorization:`Bearer ${pD}`}:{}}))};function Mi(){let DD=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,pD.F)();const CD=(0,pD.w)(DD,"auth");if(CD.isInitialized())return CD.getImmediate();const cD=zC(DD,{popupRedirectResolver:Ap,persistence:[LI,gI,mI]}),iD=(0,ID.L)("authTokenSyncURL");if(iD){const DD=yi(iD);pI(cD,DD,(()=>DD(cD.currentUser))),II(cD,(CD=>DD(CD)))}const fD=(0,ID.H)("auth");return fD&&jC(cD,`http://${fD}`),cD}var ti;ti="Browser",(0,pD.x)(new bD.g("auth",((DD,CD)=>{let{options:cD}=CD;const ID=DD.getProvider("app").getImmediate(),pD=DD.getProvider("heartbeat"),iD=DD.getProvider("app-check-internal"),{apiKey:fD,authDomain:bD}=ID.options;HD(fD&&!fD.includes(":"),"invalid-api-key",{appName:ID.name});const QD={apiKey:fD,authDomain:bD,clientPlatform:ti,apiHost:"identitytoolkit.googleapis.com",tokenApiHost:"securetoken.googleapis.com",apiScheme:"https",sdkClientVersion:XC(ti)},wD=new KC(ID,pD,iD,QD);return function(DD,CD){const cD=(null===CD||void 0===CD?void 0:CD.persistence)||[],ID=(Array.isArray(cD)?cD:[cD]).map(iC);(null===CD||void 0===CD?void 0:CD.errorMap)&&DD._updateErrorMap(CD.errorMap),DD._initializeWithPersistence(ID,null===CD||void 0===CD?void 0:CD.popupRedirectResolver)}(wD,cD),wD}),"PUBLIC").setInstantiationMode("EXPLICIT").setInstanceCreatedCallback(((DD,CD,cD)=>{DD.getProvider("auth-internal").initialize()}))),(0,pD.x)(new bD.g("auth-internal",(DD=>(DD=>new wi(DD))(aC(DD.getProvider("auth").getImmediate()))),"PRIVATE").setInstantiationMode("EXPLICIT")),(0,pD.O)(bi,Qi,function(DD){switch(DD){case"Node":return"node";case"ReactNative":return"rn";case"Worker":return"webworker";case"Cordova":return"cordova";default:return}}(ti)),(0,pD.O)(bi,Qi,"esm2017")}};Object.freeze(modules);for(const DD in modules)Object.freeze(modules[DD]);
+            UU.tenantId && (qU.tid = UU.tenantId);
+            const KU = qU;
+            for (const tU of Object.keys(KU)) void 0 === KU[tU] && delete KU[tU];
+            const cU = await UU._getAppCheckToken(),
+              GU = cU ? `#${Lp}=${encodeURIComponent(cU)}` : "";
+            return `${function(UU){let{config:RU}=UU;if(!RU.emulator)return`
+            https: //${RU.authDomain}/${Mp}`;return VU(RU,Dp)}(UU)}?${(0,tU._)(KU).slice(1)}${GU}`}const lp="webStorageSupport";const Op=class{constructor(){this.eventManagers={},this.iframes={},this.originValidationPromises={},this._redirectPersistence=mt,this._completeRedirectFn=bp,this._overrideRedirectResult=fp}async _openPopup(UU,RU,gU,tU){var pU;oU(null===(pU=this.eventManagers[UU._key()])||void 0===pU?void 0:pU.manager,"_initialize() not called before _openPopup()");return zp(UU,await Np(UU,RU,gU,ZU(),tU),Jt())}async _openRedirect(UU,RU,gU,tU){await this._originValidation(UU);return function(UU){nt().location.href=UU}(await Np(UU,RU,gU,ZU(),tU)),new Promise((()=>{}))}_initialize(UU){const RU=UU._key();if(this.eventManagers[RU]){const{manager:UU,promise:gU}=this.eventManagers[RU];return UU?Promise.resolve(UU):(oU(gU,"If manager is not set, promise should be"),gU)}const gU=this.initAndGetManager(UU);return this.eventManagers[RU]={promise:gU},gU.catch((()=>{delete this.eventManagers[RU]})),gU}async initAndGetManager(UU){const RU=await async function(UU){const RU=await Sp(UU),gU=nt().gapi;return nU(gU,UU,"internal-error"),RU.open({where:document.body,url:Fp(UU),messageHandlersFilter:gU.iframes.CROSS_ORIGIN_IFRAMES_FILTER,attributes:yp,dontclear:!0},(RU=>new Promise((async(gU,tU)=>{await RU.restyle({setHideOnLeave:!1});const pU=mU(UU,"network-request-failed"),EU=nt().setTimeout((()=>{tU(pU)}),sp.get());function PU(){nt().clearTimeout(EU),gU(RU)}RU.ping(PU).then(PU,(()=>{tU(pU)}))}))))}(UU),gU=new Zp(UU);return RU.register("authEvent",(RU=>{nU(null===RU||void 0===RU?void 0:RU.authEvent,UU,"invalid-auth-event");return{status:gU.onEvent(RU.authEvent)?"ACK":"ERROR"}}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER),this.eventManagers[UU._key()]={manager:gU},this.iframes[UU._key()]=RU,gU}_isIframeWebStorageSupported(UU,RU){this.iframes[UU._key()].send(lp,{type:lp},(gU=>{var tU;const pU=null===(tU=null===gU||void 0===gU?void 0:gU[0])||void 0===tU?void 0:tU[lp];void 0!==pU&&RU(!!pU),xU(UU,"internal-error")}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER)}_originValidation(UU){const RU=UU._key();return this.originValidationPromises[RU]||(this.originValidationPromises[RU]=rp(UU)),this.originValidationPromises[RU]}get _shouldInitProactively(){return fR()||jR()||WR()}};class UE{constructor(UU){this.factorId=UU}_process(UU,RU,gU){switch(RU.type){case"enroll":return this._finalizeEnroll(UU,RU.credential,gU);case"signin":return this._finalizeSignIn(UU,RU.credential);default:return bU("unexpected MultiFactorSessionType")}}}class RE extends UE{constructor(UU){super("phone"),this.credential=UU}static _fromCredential(UU){return new RE(UU)}_finalizeEnroll(UU,RU,gU){return function(UU,RU){return HU(UU,"POST","/v2/accounts/mfaEnrollment:finalize",dU(UU,RU))}(UU,{idToken:RU,displayName:gU,phoneVerificationInfo:this.credential._makeVerificationRequest()})}_finalizeSignIn(UU,RU){return function(UU,RU){return HU(UU,"POST","/v2/accounts/mfaSignIn:finalize",dU(UU,RU))}(UU,{mfaPendingCredential:RU,phoneVerificationInfo:this.credential._makeVerificationRequest()})}}class gE{constructor(){}static assertion(UU){return RE._fromCredential(UU)}}gE.FACTOR_ID="phone";class tE{static assertionForEnrollment(UU,RU){return pE._fromSecret(UU,RU)}static assertionForSignIn(UU,RU){return pE._fromEnrollmentId(UU,RU)}static async generateSecret(UU){const RU=UU;nU("undefined"!==typeof RU.auth,"internal-error");const gU=await(tU=RU.auth,pU={idToken:RU.credential,totpEnrollmentInfo:{}},HU(tU,"POST","/v2/accounts/mfaEnrollment:start",dU(tU,pU)));var tU,pU;return EE._fromStartTotpMfaEnrollmentResponse(gU,RU.auth)}}tE.FACTOR_ID="totp";class pE extends UE{constructor(UU,RU,gU){super("totp"),this.otp=UU,this.enrollmentId=RU,this.secret=gU}static _fromSecret(UU,RU){return new pE(RU,void 0,UU)}static _fromEnrollmentId(UU,RU){return new pE(RU,UU)}async _finalizeEnroll(UU,RU,gU){return nU("undefined"!==typeof this.secret,UU,"argument-error"),function(UU,RU){return HU(UU,"POST","/v2/accounts/mfaEnrollment:finalize",dU(UU,RU))}(UU,{idToken:RU,displayName:gU,totpVerificationInfo:this.secret._makeTotpVerificationInfo(this.otp)})}async _finalizeSignIn(UU,RU){nU(void 0!==this.enrollmentId&&void 0!==this.otp,UU,"argument-error");const gU={verificationCode:this.otp};return function(UU,RU){return HU(UU,"POST","/v2/accounts/mfaSignIn:finalize",dU(UU,RU))}(UU,{mfaPendingCredential:RU,mfaEnrollmentId:this.enrollmentId,totpVerificationInfo:gU})}}class EE{constructor(UU,RU,gU,tU,pU,EU,PU){this.sessionInfo=EU,this.auth=PU,this.secretKey=UU,this.hashingAlgorithm=RU,this.codeLength=gU,this.codeIntervalSeconds=tU,this.enrollmentCompletionDeadline=pU}static _fromStartTotpMfaEnrollmentResponse(UU,RU){return new EE(UU.totpSessionInfo.sharedSecretKey,UU.totpSessionInfo.hashingAlgorithm,UU.totpSessionInfo.verificationCodeLength,UU.totpSessionInfo.periodSec,new Date(UU.totpSessionInfo.finalizeEnrollmentTime).toUTCString(),UU.totpSessionInfo.sessionInfo,RU)}_makeTotpVerificationInfo(UU){return{sessionInfo:this.sessionInfo,verificationCode:UU}}generateQrCodeUrl(UU,RU){var gU;let tU=!1;return(PE(UU)||PE(RU))&&(tU=!0),tU&&(PE(UU)&&(UU=(null===(gU=this.auth.currentUser)||void 0===gU?void 0:gU.email)||"unknownuser"),PE(RU)&&(RU=this.auth.name)),`otpauth://totp/${RU}:${UU}?secret=${this.secretKey}&issuer=${RU}&algorithm=${this.hashingAlgorithm}&digits=${this.codeLength}`}}function PE(UU){return"undefined"===typeof UU||0===(null===UU||void 0===UU?void 0:UU.length)}var TE="@firebase/auth",qE="0.23.2";class KE{constructor(UU){this.auth=UU,this.internalListeners=new Map}getUid(){var UU;return this.assertAuthConfigured(),(null===(UU=this.auth.currentUser)||void 0===UU?void 0:UU.uid)||null}async getToken(UU){if(this.assertAuthConfigured(),await this.auth._initializationPromise,!this.auth.currentUser)return null;return{accessToken:await this.auth.currentUser.getIdToken(UU)}}addAuthTokenListener(UU){if(this.assertAuthConfigured(),this.internalListeners.has(UU))return;const RU=this.auth.onIdTokenChanged((RU=>{UU((null===RU||void 0===RU?void 0:RU.stsTokenManager.accessToken)||null)}));this.internalListeners.set(UU,RU),this.updateProactiveRefresh()}removeAuthTokenListener(UU){this.assertAuthConfigured();const RU=this.internalListeners.get(UU);RU&&(this.internalListeners.delete(UU),RU(),this.updateProactiveRefresh())}assertAuthConfigured(){nU(this.auth._initializationPromise,"dependent-sdk-initialized-before-auth")}updateProactiveRefresh(){this.internalListeners.size>0?this.auth._startProactiveRefresh():this.auth._stopProactiveRefresh()}}const cE=(0,tU.F)("authIdTokenMaxAge")||300;let GE=null;const jE=UU=>async RU=>{const gU=RU&&await RU.getIdTokenResult(),tU=gU&&((new Date).getTime()-Date.parse(gU.issuedAtTime))/1e3;if(tU&&tU>cE)return;const pU=null===gU||void 0===gU?void 0:gU.token;GE!==pU&&(GE=pU,await fetch(UU,{method:pU?"POST":"DELETE",headers:pU?{Authorization:`Bearer ${pU}`}:{}}))};function uE(){let UU=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,pU.K)();const RU=(0,pU.w)(UU,"auth");if(RU.isInitialized())return RU.getImmediate();const gU=rR(UU,{popupRedirectResolver:Op,persistence:[Ht,ft,mt]}),EU=(0,tU.F)("authTokenSyncURL");if(EU){const UU=jE(EU);pt(gU,UU,(()=>UU(gU.currentUser))),tt(gU,(RU=>UU(RU)))}const PU=(0,tU.E)("auth");return PU&&XR(gU,`http://${PU}`),gU}var CE;CE="Browser",(0,pU.A)(new TU.e("auth",((UU,RU)=>{let{options:gU}=RU;const tU=UU.getProvider("app").getImmediate(),pU=UU.getProvider("heartbeat"),EU=UU.getProvider("app-check-internal"),{apiKey:PU,authDomain:TU}=tU.options;nU(PU&&!PU.includes(":"),"invalid-api-key",{appName:tU.name});const qU={apiKey:PU,authDomain:TU,clientPlatform:CE,apiHost:"identitytoolkit.googleapis.com",tokenApiHost:"securetoken.googleapis.com",apiScheme:"https",sdkClientVersion:xR(CE)},KU=new YR(tU,pU,EU,qU);return function(UU,RU){const gU=(null===RU||void 0===RU?void 0:RU.persistence)||[],tU=(Array.isArray(gU)?gU:[gU]).map(ER);(null===RU||void 0===RU?void 0:RU.errorMap)&&UU._updateErrorMap(RU.errorMap),UU._initializeWithPersistence(tU,null===RU||void 0===RU?void 0:RU.popupRedirectResolver)}(KU,gU),KU}),"PUBLIC").setInstantiationMode("EXPLICIT").setInstanceCreatedCallback(((UU,RU,gU)=>{UU.getProvider("auth-internal").initialize()}))),(0,pU.A)(new TU.e("auth-internal",(UU=>(UU=>new KE(UU))(BR(UU.getProvider("auth").getImmediate()))),"PRIVATE").setInstantiationMode("EXPLICIT")),(0,pU.U)(TE,qE,function(UU){switch(UU){case"Node":return"node";case"ReactNative":return"rn";case"Worker":return"webworker";case"Cordova":return"cordova";default:return}}(CE)),(0,pU.U)(TE,qE,"esm2017")}};Object.freeze(modules);for(const UU in modules)Object.freeze(modules[UU]);

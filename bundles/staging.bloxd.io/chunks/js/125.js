@@ -1,13 +1,13 @@
 export const id = 125;
 export const ids = [125, 127, 130];
 export const modules = {
-  6350: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => fD
+  6270: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => PU
     });
-    var ID = cD(6354),
-      pD = cD(1093);
-    const iD = {
+    var tU = gU(6276),
+      pU = gU(1090);
+    const EU = {
       strict: "shaderPack:variantStrict",
       nonStrict: "shaderPack:variantNonStrict",
       terrain: "shaderPack:variantTerrain",
@@ -15,549 +15,549 @@ export const modules = {
       model: "shaderPack:variantModel"
     };
 
-    function fD(DD) {
+    function PU(UU) {
       let {
-        diagnostics: CD,
-        more: cD = 0,
-        t: fD
-      } = DD;
-      return (0, pD.jsxs)("ul", {
+        diagnostics: RU,
+        more: gU = 0,
+        t: PU
+      } = UU;
+      return (0, pU.jsxs)("ul", {
         className: "ShaderPackDiagnostics",
-        children: [CD.map(((DD, CD) => {
-          const cD = (0, ID.c)(DD),
-            bD = function(DD, CD) {
-              const cD = (0, ID.b)(null !== DD && void 0 !== DD ? DD : []);
-              if (0 === cD.length) return null;
-              return cD.map((DD => DD.map((DD => CD(iD[DD]))).join(", "))).join("; ")
-            }(DD.variants, fD);
-          return (0, pD.jsxs)("li", {
-            children: [cD && (0, pD.jsx)("span", {
+        children: [RU.map(((UU, RU) => {
+          const gU = (0, tU.e)(UU),
+            TU = function(UU, RU) {
+              const gU = (0, tU.d)(null !== UU && void 0 !== UU ? UU : []);
+              if (0 === gU.length) return null;
+              return gU.map((UU => UU.map((UU => RU(EU[UU]))).join(", "))).join("; ")
+            }(UU.variants, PU);
+          return (0, pU.jsxs)("li", {
+            children: [gU && (0, pU.jsx)("span", {
               className: "ShaderPackDiagnosticLocation",
-              children: cD
-            }), DD.message, bD && (0, pD.jsx)("span", {
+              children: gU
+            }), UU.message, TU && (0, pU.jsx)("span", {
               className: "ShaderPackDiagnosticVariants",
-              children: fD("shaderPack:onlyIn", {
-                variants: bD
+              children: PU("shaderPack:onlyIn", {
+                variants: TU
               })
             })]
-          }, CD)
-        })), cD > 0 && (0, pD.jsx)("li", {
-          children: fD("shaderPack:moreErrors", {
-            count: String(cD)
+          }, RU)
+        })), gU > 0 && (0, pU.jsx)("li", {
+          children: PU("shaderPack:moreErrors", {
+            count: String(gU)
           })
         })]
       })
     }
   },
-  6362: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => dD,
-      e: () => YD
+  6292: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => kU,
+      g: () => FU
     });
-    var ID = cD(53),
-      pD = cD(1049),
-      iD = cD.n(pD),
-      fD = cD(4734),
-      bD = cD(1328),
-      QD = cD(1064),
-      wD = cD(1442),
-      SD = cD(1192),
-      BD = cD(90),
-      yD = cD(6343),
-      MD = cD(6356);
-    class tD extends Error {
-      constructor(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        super(DD, arguments.length > 2 ? arguments[2] : void 0), this.translationKey = DD, this.params = CD
+    var tU = gU(56),
+      pU = gU(1037),
+      EU = gU.n(pU),
+      PU = gU(4623),
+      TU = gU(1326),
+      qU = gU(1049),
+      KU = gU(1412),
+      cU = gU(1181),
+      GU = gU(96),
+      jU = gU(6265),
+      uU = gU(6284);
+    class CU extends Error {
+      constructor(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        super(UU, arguments.length > 2 ? arguments[2] : void 0), this.translationKey = UU, this.params = RU
       }
     }
-    const ZD = 1024,
-      oD = 101010256,
-      vD = 33639248,
-      ND = 67324752,
-      gD = 22,
-      XD = 46,
-      mD = 30,
-      nD = 65535,
-      OD = 65535,
-      PD = 4294967295,
-      HD = 0,
-      UD = 8,
-      xD = new TextDecoder;
+    const hU = 1024,
+      QU = 101010256,
+      eU = 33639248,
+      WU = 67324752,
+      fU = 22,
+      xU = 46,
+      mU = 30,
+      IU = 65535,
+      JU = 65535,
+      wU = 4294967295,
+      nU = 0,
+      bU = 8,
+      oU = new TextDecoder;
 
-    function qD(DD) {
-      const CD = new DataView(DD.buffer, DD.byteOffset, DD.byteLength),
-        cD = function(DD) {
-          const CD = DD.byteLength - gD;
-          for (let cD = CD; cD >= Math.max(0, CD - nD); cD--)
-            if (DD.getUint32(cD, !0) === oD && cD + gD + DD.getUint16(cD + 20, !0) <= DD.byteLength) return cD;
-          throw new tD("shaderPack:loadNotZip")
-        }(CD),
-        ID = CD.getUint16(cD + 8, !0),
-        pD = CD.getUint16(cD + 10, !0),
-        iD = CD.getUint32(cD + 12, !0),
-        fD = CD.getUint32(cD + 16, !0);
-      if (pD === OD || iD === PD || fD === PD) throw VD();
-      if (0 !== CD.getUint16(cD + 4, !0) || 0 !== CD.getUint16(cD + 6, !0) || ID !== pD) throw new tD("shaderPack:loadSplitZip");
-      if (pD > ZD) throw new tD("shaderPack:loadTooManyZipEntries", {
-        count: String(ZD)
+    function ZU(UU) {
+      const RU = new DataView(UU.buffer, UU.byteOffset, UU.byteLength),
+        gU = function(UU) {
+          const RU = UU.byteLength - fU;
+          for (let gU = RU; gU >= Math.max(0, RU - IU); gU--)
+            if (UU.getUint32(gU, !0) === QU && gU + fU + UU.getUint16(gU + 20, !0) <= UU.byteLength) return gU;
+          throw new CU("shaderPack:loadNotZip")
+        }(RU),
+        tU = RU.getUint16(gU + 8, !0),
+        pU = RU.getUint16(gU + 10, !0),
+        EU = RU.getUint32(gU + 12, !0),
+        PU = RU.getUint32(gU + 16, !0);
+      if (pU === JU || EU === wU || PU === wU) throw VU();
+      if (0 !== RU.getUint16(gU + 4, !0) || 0 !== RU.getUint16(gU + 6, !0) || tU !== pU) throw new CU("shaderPack:loadSplitZip");
+      if (pU > hU) throw new CU("shaderPack:loadTooManyZipEntries", {
+        count: String(hU)
       });
-      const bD = fD + iD;
-      if (bD > cD) throw aD();
-      const QD = [];
-      let wD = fD;
-      for (let SD = 0; SD < pD; SD++) {
-        if (wD + XD > bD || CD.getUint32(wD, !0) !== vD) throw aD();
-        const cD = CD.getUint16(wD + 8, !0),
-          ID = CD.getUint16(wD + 10, !0),
-          pD = CD.getUint32(wD + 20, !0),
-          iD = CD.getUint32(wD + 24, !0),
-          SD = CD.getUint16(wD + 28, !0),
-          BD = CD.getUint16(wD + 30, !0),
-          yD = CD.getUint16(wD + 32, !0),
-          MD = CD.getUint32(wD + 42, !0),
-          tD = wD + XD;
-        if (wD = tD + SD + BD + yD, wD > bD) throw aD();
-        if (pD === PD || iD === PD || MD === PD) throw VD();
-        const ZD = xD.decode(DD.subarray(tD, tD + SD)).replace(/\\/g, "/");
-        ZD.endsWith("/") || QD.push({
-          path: ZD,
-          method: ID,
-          encrypted: 0 !== (1 & cD),
-          compressedSize: pD,
-          dataOffset: KD(CD, MD, pD, fD)
+      const TU = PU + EU;
+      if (TU > gU) throw BU();
+      const qU = [];
+      let KU = PU;
+      for (let cU = 0; cU < pU; cU++) {
+        if (KU + xU > TU || RU.getUint32(KU, !0) !== eU) throw BU();
+        const gU = RU.getUint16(KU + 8, !0),
+          tU = RU.getUint16(KU + 10, !0),
+          pU = RU.getUint32(KU + 20, !0),
+          EU = RU.getUint32(KU + 24, !0),
+          cU = RU.getUint16(KU + 28, !0),
+          GU = RU.getUint16(KU + 30, !0),
+          jU = RU.getUint16(KU + 32, !0),
+          uU = RU.getUint32(KU + 42, !0),
+          CU = KU + xU;
+        if (KU = CU + cU + GU + jU, KU > TU) throw BU();
+        if (pU === wU || EU === wU || uU === wU) throw VU();
+        const hU = oU.decode(UU.subarray(CU, CU + cU)).replace(/\\/g, "/");
+        hU.endsWith("/") || qU.push({
+          path: hU,
+          method: tU,
+          encrypted: 0 !== (1 & gU),
+          compressedSize: pU,
+          dataOffset: YU(RU, uU, pU, PU)
         })
       }
-      return QD
+      return qU
     }
-    async function JD(DD, CD, cD) {
-      if (CD.encrypted) throw new tD("shaderPack:loadEncrypted", {
-        path: CD.path
+    async function aU(UU, RU, gU) {
+      if (RU.encrypted) throw new CU("shaderPack:loadEncrypted", {
+        path: RU.path
       });
-      if (CD.method === HD) return CD.compressedSize > cD ? null : DD.subarray(CD.dataOffset, CD.dataOffset + CD.compressedSize);
-      if (CD.method === UD) return async function(DD, CD, cD) {
-        const ID = new Blob([DD]).stream().pipeThrough(new DecompressionStream("deflate-raw")).getReader(),
-          pD = [];
-        let iD = 0;
+      if (RU.method === nU) return RU.compressedSize > gU ? null : UU.subarray(RU.dataOffset, RU.dataOffset + RU.compressedSize);
+      if (RU.method === bU) return async function(UU, RU, gU) {
+        const tU = new Blob([UU]).stream().pipeThrough(new DecompressionStream("deflate-raw")).getReader(),
+          pU = [];
+        let EU = 0;
         try {
           for (;;) {
             const {
-              done: DD,
-              value: cD
-            } = await ID.read();
-            if (DD) break;
-            if (iD += cD.byteLength, iD > CD) return await ID.cancel(), null;
-            pD.push(cD)
+              done: UU,
+              value: gU
+            } = await tU.read();
+            if (UU) break;
+            if (EU += gU.byteLength, EU > RU) return await tU.cancel(), null;
+            pU.push(gU)
           }
-        } catch (QD) {
-          throw new tD("shaderPack:loadDecompressFailed", {
-            path: cD
+        } catch (qU) {
+          throw new CU("shaderPack:loadDecompressFailed", {
+            path: gU
           }, {
-            cause: QD
+            cause: qU
           })
         }
-        const fD = new Uint8Array(iD);
-        let bD = 0;
-        for (const wD of pD) fD.set(wD, bD), bD += wD.byteLength;
-        return fD
-      }(DD.slice(CD.dataOffset, CD.dataOffset + CD.compressedSize), cD, CD.path);
-      throw new tD("shaderPack:loadUnsupportedCompression", {
-        path: CD.path,
-        method: String(CD.method)
+        const PU = new Uint8Array(EU);
+        let TU = 0;
+        for (const KU of pU) PU.set(KU, TU), TU += KU.byteLength;
+        return PU
+      }(UU.slice(RU.dataOffset, RU.dataOffset + RU.compressedSize), gU, RU.path);
+      throw new CU("shaderPack:loadUnsupportedCompression", {
+        path: RU.path,
+        method: String(RU.method)
       })
     }
 
-    function KD(DD, CD, cD, ID) {
-      if (CD + mD > ID || DD.getUint32(CD, !0) !== ND) throw aD();
-      const pD = CD + mD + DD.getUint16(CD + 26, !0) + DD.getUint16(CD + 28, !0);
-      if (pD + cD > ID) throw aD();
-      return pD
+    function YU(UU, RU, gU, tU) {
+      if (RU + mU > tU || UU.getUint32(RU, !0) !== WU) throw BU();
+      const pU = RU + mU + UU.getUint16(RU + 26, !0) + UU.getUint16(RU + 28, !0);
+      if (pU + gU > tU) throw BU();
+      return pU
     }
 
-    function aD() {
-      return new tD("shaderPack:loadZipDamaged")
+    function BU() {
+      return new CU("shaderPack:loadZipDamaged")
     }
 
-    function VD() {
-      return new tD("shaderPack:loadZip64")
+    function VU() {
+      return new CU("shaderPack:loadZip64")
     }
-    const zD = 33554432,
-      jD = 65536;
-    async function lD(DD) {
-      if (1 === DD.length && DD[0].name.toLowerCase().endsWith(".zip")) {
-        const CD = DD[0];
-        if (CD.size > zD) throw new tD("shaderPack:loadZipTooBig", {
-          megabytes: String(zD / 1048576)
+    const rU = 33554432,
+      XU = 65536;
+    async function vU(UU) {
+      if (1 === UU.length && UU[0].name.toLowerCase().endsWith(".zip")) {
+        const RU = UU[0];
+        if (RU.size > rU) throw new CU("shaderPack:loadZipTooBig", {
+          megabytes: String(rU / 1048576)
         });
-        return async function(DD) {
-          return LD(qD(DD).map((CD => ({
-            path: CD.path,
-            read: cD => JD(DD, CD, cD)
+        return async function(UU) {
+          return dU(ZU(UU).map((RU => ({
+            path: RU.path,
+            read: gU => aU(UU, RU, gU)
           }))))
-        }(new Uint8Array(await CD.arrayBuffer()))
+        }(new Uint8Array(await RU.arrayBuffer()))
       }
-      return LD(DD.map((DD => ({
-        path: TD(DD),
-        read: CD => async function(DD, CD) {
-          return DD.size > CD ? null : new Uint8Array(await DD.arrayBuffer())
-        }(DD, CD)
+      return dU(UU.map((UU => ({
+        path: HU(UU),
+        read: RU => async function(UU, RU) {
+          return UU.size > RU ? null : new Uint8Array(await UU.arrayBuffer())
+        }(UU, RU)
       }))))
     }
-    async function LD(DD) {
-      const CD = function(DD) {
-          const CD = DD.length > 0 ? DD[0].path.indexOf("/") : -1;
-          if (-1 === CD) return DD;
-          const cD = DD[0].path.slice(0, CD + 1);
-          if (!DD.every((DD => DD.path.startsWith(cD)))) return DD;
-          return DD.map((DD => ({
-            ...DD,
-            path: DD.path.slice(cD.length)
+    async function dU(UU) {
+      const RU = function(UU) {
+          const RU = UU.length > 0 ? UU[0].path.indexOf("/") : -1;
+          if (-1 === RU) return UU;
+          const gU = UU[0].path.slice(0, RU + 1);
+          if (!UU.every((UU => UU.path.startsWith(gU)))) return UU;
+          return UU.map((UU => ({
+            ...UU,
+            path: UU.path.slice(gU.length)
           })))
-        }(DD.filter((DD => ! function(DD) {
-          const CD = DD.split("/"),
-            cD = CD[CD.length - 1];
-          return CD.includes("__MACOSX") || cD.startsWith("._") || ".DS_Store" === cD
-        }(DD.path)))),
-        cD = CD.filter((DD => "pack.json" === DD.path.toLowerCase()));
-      if (0 === cD.length) throw new tD("shaderPack:loadNoManifest");
-      if (cD.length > 1) throw new tD("shaderPack:loadDuplicateManifest");
-      const ID = cD[0],
-        pD = await ID.read(jD);
-      if (null === pD) throw new tD("shaderPack:loadManifestTooBig", {
-        kilobytes: String(jD / 1024)
+        }(UU.filter((UU => ! function(UU) {
+          const RU = UU.split("/"),
+            gU = RU[RU.length - 1];
+          return RU.includes("__MACOSX") || gU.startsWith("._") || ".DS_Store" === gU
+        }(UU.path)))),
+        gU = RU.filter((UU => "pack.json" === UU.path.toLowerCase()));
+      if (0 === gU.length) throw new CU("shaderPack:loadNoManifest");
+      if (gU.length > 1) throw new CU("shaderPack:loadDuplicateManifest");
+      const tU = gU[0],
+        pU = await tU.read(XU);
+      if (null === pU) throw new CU("shaderPack:loadManifestTooBig", {
+        kilobytes: String(XU / 1024)
       });
-      const iD = function(DD) {
-          let CD;
+      const EU = function(UU) {
+          let RU;
           try {
-            CD = JSON.parse(DD)
-          } catch (bD) {
-            throw new tD("shaderPack:loadManifestNotJson", {
-              error: bD.message
+            RU = JSON.parse(UU)
+          } catch (TU) {
+            throw new CU("shaderPack:loadManifestNotJson", {
+              error: TU.message
             }, {
-              cause: bD
+              cause: TU
             })
           }
-          if ("object" !== typeof CD || null === CD || Array.isArray(CD)) throw new tD("shaderPack:loadManifestNotObject");
+          if ("object" !== typeof RU || null === RU || Array.isArray(RU)) throw new CU("shaderPack:loadManifestNotObject");
           const {
-            apiVersion: cD,
-            name: ID,
-            author: pD,
-            description: iD,
-            keepCircleShadows: fD
-          } = CD;
-          if (void 0 === cD) throw new tD("shaderPack:loadNoApiVersion", {
-            version: String(MD.c)
+            apiVersion: gU,
+            name: tU,
+            author: pU,
+            description: EU,
+            keepCircleShadows: PU
+          } = RU;
+          if (void 0 === gU) throw new CU("shaderPack:loadNoApiVersion", {
+            version: String(uU.b)
           });
-          if (!(0, MD.f)(cD)) throw new tD("shaderPack:loadWrongApiVersion", {
-            packVersion: JSON.stringify(cD),
-            version: String(MD.c)
+          if (!(0, uU.i)(gU)) throw new CU("shaderPack:loadWrongApiVersion", {
+            packVersion: JSON.stringify(gU),
+            version: String(uU.b)
           });
-          if ("string" !== typeof ID || "" === ID.trim()) throw new tD("shaderPack:loadNoName");
-          if (void 0 !== pD && null !== pD && "string" !== typeof pD) throw new tD("shaderPack:loadAuthorNotString");
-          if (void 0 !== iD && null !== iD && "string" !== typeof iD) throw new tD("shaderPack:loadDescriptionNotString");
-          if (void 0 !== fD && "boolean" !== typeof fD) throw new tD("shaderPack:loadKeepCircleShadowsNotBoolean");
+          if ("string" !== typeof tU || "" === tU.trim()) throw new CU("shaderPack:loadNoName");
+          if (void 0 !== pU && null !== pU && "string" !== typeof pU) throw new CU("shaderPack:loadAuthorNotString");
+          if (void 0 !== EU && null !== EU && "string" !== typeof EU) throw new CU("shaderPack:loadDescriptionNotString");
+          if (void 0 !== PU && "boolean" !== typeof PU) throw new CU("shaderPack:loadKeepCircleShadowsNotBoolean");
           return {
-            apiVersion: cD,
-            name: ID,
-            author: "string" === typeof pD ? pD : null,
-            description: "string" === typeof iD && "" !== iD.trim() ? iD : null,
-            keepCircleShadows: !0 === fD
+            apiVersion: gU,
+            name: tU,
+            author: "string" === typeof pU ? pU : null,
+            description: "string" === typeof EU && "" !== EU.trim() ? EU : null,
+            keepCircleShadows: !0 === PU
           }
-        }(GD(pD, ID.path)),
-        fD = CD.filter((DD => DD.path.toLowerCase().endsWith(".wgsl"))).sort(((DD, CD) => (0, yD.n)(DD.path, CD.path)));
-      if (0 === fD.length) throw new tD("shaderPack:loadNoWgsl");
-      if (fD.length > yD.d) throw new tD("shaderPack:loadTooManyWgsl", {
-        count: String(yD.d)
+        }(SU(pU, tU.path)),
+        PU = RU.filter((UU => UU.path.toLowerCase().endsWith(".wgsl"))).sort(((UU, RU) => (0, jU.k)(UU.path, RU.path)));
+      if (0 === PU.length) throw new CU("shaderPack:loadNoWgsl");
+      if (PU.length > jU.c) throw new CU("shaderPack:loadTooManyWgsl", {
+        count: String(jU.c)
       });
-      const bD = fD.find(((DD, CD) => CD > 0 && DD.path === fD[CD - 1].path));
-      if (bD) throw new tD("shaderPack:loadDuplicatePath", {
-        path: bD.path
+      const TU = PU.find(((UU, RU) => RU > 0 && UU.path === PU[RU - 1].path));
+      if (TU) throw new CU("shaderPack:loadDuplicatePath", {
+        path: TU.path
       });
-      const QD = [];
-      let wD = yD.h;
-      for (const SD of fD) {
-        const DD = await SD.read(wD);
-        if (null === DD) throw new tD("shaderPack:loadSourceTooBig", {
-          kilobytes: String(yD.h / 1024)
+      const qU = [];
+      let KU = jU.e;
+      for (const cU of PU) {
+        const UU = await cU.read(KU);
+        if (null === UU) throw new CU("shaderPack:loadSourceTooBig", {
+          kilobytes: String(jU.e / 1024)
         });
-        wD -= DD.byteLength, QD.push({
-          path: SD.path,
-          source: GD(DD, SD.path)
+        KU -= UU.byteLength, qU.push({
+          path: cU.path,
+          source: SU(UU, cU.path)
         })
       }
       return {
-        manifest: iD,
-        files: QD
+        manifest: EU,
+        files: qU
       }
     }
 
-    function TD(DD) {
-      return (DD.webkitRelativePath || DD.path || DD.name).replace(/^\.?\//, "")
+    function HU(UU) {
+      return (UU.webkitRelativePath || UU.path || UU.name).replace(/^\.?\//, "")
     }
 
-    function GD(DD, CD) {
+    function SU(UU, RU) {
       try {
         return new TextDecoder("utf-8", {
           fatal: !0
-        }).decode(DD)
-      } catch (cD) {
-        throw new tD("shaderPack:loadNotUtf8", {
-          path: CD
+        }).decode(UU)
+      } catch (gU) {
+        throw new CU("shaderPack:loadNotUtf8", {
+          path: RU
         }, {
-          cause: cD
+          cause: gU
         })
       }
     }
-    var RD = cD(6354),
-      kD = cD(1093);
+    var sU = gU(6276),
+      yU = gU(1090);
 
-    function dD(DD) {
+    function kU(UU) {
       let {
-        busy: CD,
-        disabled: cD,
-        onFiles: pD
-      } = DD;
+        busy: RU,
+        disabled: gU,
+        onFiles: pU
+      } = UU;
       const {
-        t: yD
-      } = (0, SD.F)(), MD = (0, ID.useRef)(null), tD = !(0, BD.isMobile)(), {
-        getRootProps: ZD,
-        getInputProps: oD,
-        isDragActive: vD,
-        open: ND
-      } = (0, fD.b)({
-        onDrop: pD,
+        t: jU
+      } = (0, cU.B)(), uU = (0, tU.useRef)(null), CU = !(0, GU.isMobile)(), {
+        getRootProps: hU,
+        getInputProps: QU,
+        isDragActive: eU,
+        open: WU
+      } = (0, PU.e)({
+        onDrop: pU,
         noClick: !0,
         noKeyboard: !0,
         useFsAccessApi: !1,
-        disabled: cD
+        disabled: gU
       });
-      return (0, kD.jsxs)("div", {
-        ...ZD({
-          className: iD()("ShaderPackDropZone", {
-            ActiveDrag: vD,
-            Disabled: cD
+      return (0, yU.jsxs)("div", {
+        ...hU({
+          className: EU()("ShaderPackDropZone", {
+            ActiveDrag: eU,
+            Disabled: gU
           })
         }),
-        children: [(0, kD.jsx)("input", {
-          ...oD({
+        children: [(0, yU.jsx)("input", {
+          ...QU({
             webkitdirectory: "true"
           })
-        }), (0, kD.jsx)("input", {
-          ref: MD,
+        }), (0, yU.jsx)("input", {
+          ref: uU,
           type: "file",
           accept: ".zip,application/zip",
           hidden: !0,
-          onChange: function(DD) {
-            const CD = Array.from(DD.target.files);
-            DD.target.value = "", pD(CD)
+          onChange: function(UU) {
+            const RU = Array.from(UU.target.files);
+            UU.target.value = "", pU(RU)
           }
-        }), CD && (0, kD.jsx)(bD.e, {}), !CD && (0, kD.jsxs)(kD.Fragment, {
-          children: [(0, kD.jsx)("div", {
+        }), RU && (0, yU.jsx)(TU.d, {}), !RU && (0, yU.jsxs)(yU.Fragment, {
+          children: [(0, yU.jsx)("div", {
             className: "ShaderPackDropZoneIcon",
-            children: (0, kD.jsx)(QD.c, {
+            children: (0, yU.jsx)(qU.c, {
               name: "up-from-bracket"
             })
-          }), (0, kD.jsx)("div", {
+          }), (0, yU.jsx)("div", {
             className: "ShaderPackDropZoneInstructions",
-            children: yD(tD ? "shaderPack:dropHere" : "shaderPack:chooseZipInstructions")
-          }), (0, kD.jsxs)("div", {
+            children: jU(CU ? "shaderPack:dropHere" : "shaderPack:chooseZipInstructions")
+          }), (0, yU.jsxs)("div", {
             className: "ShaderPackDropZoneButtons",
             "data-pad-mouse-only": !0,
-            children: [tD && (0, kD.jsx)(wD.i, {
-              disabled: cD,
-              onClick: ND,
-              children: yD("shaderPack:chooseFolder")
-            }), (0, kD.jsx)(wD.i, {
-              disabled: cD,
+            children: [CU && (0, yU.jsx)(KU.e, {
+              disabled: gU,
+              onClick: WU,
+              children: jU("shaderPack:chooseFolder")
+            }), (0, yU.jsx)(KU.e, {
+              disabled: gU,
               onClick: () => {
-                MD.current.click()
+                uU.current.click()
               },
-              children: yD("shaderPack:chooseZip")
+              children: jU("shaderPack:chooseZip")
             })]
           })]
         })]
       })
     }
 
-    function YD(DD) {
+    function FU(UU) {
       const {
-        t: CD
-      } = (0, SD.F)(), [cD, pD] = (0, ID.useState)(!1), [iD, fD] = (0, ID.useState)(null), bD = (0, ID.useRef)(!1);
+        t: RU
+      } = (0, cU.B)(), [gU, pU] = (0, tU.useState)(!1), [EU, PU] = (0, tU.useState)(null), TU = (0, tU.useRef)(!1);
       return {
-        loading: cD,
-        error: iD,
-        setError: fD,
-        onFiles: async function(cD) {
-          if (!bD.current) {
-            bD.current = !0, pD(!0), fD(null);
+        loading: gU,
+        error: EU,
+        setError: PU,
+        onFiles: async function(gU) {
+          if (!TU.current) {
+            TU.current = !0, pU(!0), PU(null);
             try {
-              await DD(await lD(cD))
-            } catch (ID) {
-              ID instanceof tD ? fD((0, RD.d)(CD, ID.translationKey, ID.params)) : (console.error("Failed to load the shader pack", ID), fD(CD("shaderPack:unexpectedError")))
+              await UU(await vU(gU))
+            } catch (tU) {
+              tU instanceof CU ? PU((0, sU.g)(RU, tU.translationKey, tU.params)) : (console.error("Failed to load the shader pack", tU), PU(RU("shaderPack:unexpectedError")))
             } finally {
-              bD.current = !1, pD(!1)
+              TU.current = !1, pU(!1)
             }
           }
         }
       }
     }
   },
-  6354: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => bD,
-      c: () => fD,
-      d: () => iD
+  6276: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => TU,
+      e: () => PU,
+      g: () => EU
     });
-    var ID = cD(6356);
-    const pD = [DD => DD.strict ? "strict" : "nonStrict", DD => DD.program];
+    var tU = gU(6284);
+    const pU = [UU => UU.strict ? "strict" : "nonStrict", UU => UU.program];
 
-    function iD(DD, CD) {
-      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const ID = {};
-      for (const pD in cD) ID[pD] = `\0${pD}\0`;
-      return DD(CD, ID).replace(/\0(\w+)\0/g, ((DD, CD) => cD[CD]))
+    function EU(UU, RU) {
+      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const tU = {};
+      for (const pU in gU) tU[pU] = `\0${pU}\0`;
+      return UU(RU, tU).replace(/\0(\w+)\0/g, ((UU, RU) => gU[RU]))
     }
 
-    function fD(DD) {
-      return null === DD.file ? null : DD.line > 0 ? `${DD.file}:${DD.line}` : DD.file
+    function PU(UU) {
+      return null === UU.file ? null : UU.line > 0 ? `${UU.file}:${UU.line}` : UU.file
     }
 
-    function bD(DD) {
-      const CD = new Map(DD.map((DD => [QD(DD).join("."), DD])));
-      if (0 === CD.size) return [];
-      const cD = SD([...CD.values()]);
-      return 0 === cD[0].length ? [] : cD
+    function TU(UU) {
+      const RU = new Map(UU.map((UU => [qU(UU).join("."), UU])));
+      if (0 === RU.size) return [];
+      const gU = cU([...RU.values()]);
+      return 0 === gU[0].length ? [] : gU
     }
 
-    function QD(DD) {
-      return pD.map((CD => CD(DD)))
+    function qU(UU) {
+      return pU.map((RU => RU(UU)))
     }
-    const wD = pD.map((DD => new Set(ID.e.map(DD)).size));
+    const KU = pU.map((UU => new Set(tU.e.map(UU)).size));
 
-    function SD(DD) {
-      const CD = pD.map((CD => new Set(DD.map(CD)))),
-        cD = CD.reduce(((DD, CD) => DD * CD.size), 1),
-        ID = CD.every(((DD, CD) => 1 === DD.size || DD.size === wD[CD]));
-      if (cD === DD.length && ID) return [pD.filter(((DD, cD) => 1 === CD[cD].size)).map((CD => CD(DD[0])))];
-      let iD = null;
-      for (let fD = 0; fD < pD.length; fD++) {
-        if (1 === CD[fD].size) continue;
-        const cD = BD(DD, pD[fD]).flatMap(SD);
-        (null === iD || cD.length < iD.length) && (iD = cD)
+    function cU(UU) {
+      const RU = pU.map((RU => new Set(UU.map(RU)))),
+        gU = RU.reduce(((UU, RU) => UU * RU.size), 1),
+        tU = RU.every(((UU, RU) => 1 === UU.size || UU.size === KU[RU]));
+      if (gU === UU.length && tU) return [pU.filter(((UU, gU) => 1 === RU[gU].size)).map((RU => RU(UU[0])))];
+      let EU = null;
+      for (let PU = 0; PU < pU.length; PU++) {
+        if (1 === RU[PU].size) continue;
+        const gU = GU(UU, pU[PU]).flatMap(cU);
+        (null === EU || gU.length < EU.length) && (EU = gU)
       }
-      return iD
+      return EU
     }
 
-    function BD(DD, CD) {
-      const cD = new Map;
-      for (const pD of DD) {
-        var ID;
-        const DD = CD(pD);
-        cD.set(DD, [...null !== (ID = cD.get(DD)) && void 0 !== ID ? ID : [], pD])
+    function GU(UU, RU) {
+      const gU = new Map;
+      for (const pU of UU) {
+        var tU;
+        const UU = RU(pU);
+        gU.set(UU, [...null !== (tU = gU.get(UU)) && void 0 !== tU ? tU : [], pU])
       }
-      return [...cD.values()]
+      return [...gU.values()]
     }
   },
-  6356: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => ID.l,
-      e: () => pD,
-      f: () => ID.r
+  6284: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => tU.h,
+      e: () => pU,
+      i: () => tU.n
     });
-    var ID = cD(6343);
-    const pD = [!1, !0].flatMap((DD => ["terrain", "liquid", "model"].map((CD => ({
-      strict: DD,
-      program: CD
+    var tU = gU(6265);
+    const pU = [!1, !0].flatMap((UU => ["terrain", "liquid", "model"].map((RU => ({
+      strict: UU,
+      program: RU
     })))))
   },
-  6404: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      forgetShaderPackActiveHint: () => qD,
-      isOtherApiVersion: () => PD,
-      isShaderPackActive: () => XD,
-      isShaderPackChangePending: () => OD,
-      markShaderPackChangePending: () => nD,
-      pageShaderPackValidationVersion: () => HD,
-      reconcileStoredShaderPackHint: () => xD,
-      removeShaderPack: () => gD,
-      replaceShaderPack: () => oD,
-      saveShaderPack: () => ZD,
-      shaderPackNeedsCheck: () => UD,
-      storedPackOutcome: () => mD,
-      storedShaderPackFiles: () => yD,
-      toStoredShaderPack: () => BD
+  6330: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      forgetShaderPackActiveHint: () => ZU,
+      isOtherApiVersion: () => wU,
+      isShaderPackActive: () => xU,
+      isShaderPackChangePending: () => JU,
+      markShaderPackChangePending: () => IU,
+      pageShaderPackValidationVersion: () => nU,
+      reconcileStoredShaderPackHint: () => oU,
+      removeShaderPack: () => fU,
+      replaceShaderPack: () => QU,
+      saveShaderPack: () => hU,
+      shaderPackNeedsCheck: () => bU,
+      storedPackOutcome: () => mU,
+      storedShaderPackFiles: () => jU,
+      toStoredShaderPack: () => GU
     });
-    var ID = cD(6343),
-      pD = cD(6356),
-      iD = cD(36),
-      fD = cD(3255),
-      bD = cD(6409),
-      QD = cD(6379);
-    const wD = "shaderPackChangePending";
-    let SD = null;
+    var tU = gU(6265),
+      pU = gU(6284),
+      EU = gU(34),
+      PU = gU(3151),
+      TU = gU(6339),
+      qU = gU(6306);
+    const KU = "shaderPackChangePending";
+    let cU = null;
 
-    function BD(DD, CD, cD) {
+    function GU(UU, RU, gU) {
       return {
-        manifest: DD.manifest,
-        files: (0, ID.w)(DD.files),
-        validation: CD,
-        ...cD && {
-          listing: cD
+        manifest: UU.manifest,
+        files: (0, tU.t)(UU.files),
+        validation: RU,
+        ...gU && {
+          listing: gU
         }
       }
     }
 
-    function yD(DD) {
-      return Object.keys(DD.files).map((CD => ({
-        path: CD,
-        source: DD.files[CD]
+    function jU(UU) {
+      return Object.keys(UU.files).map((RU => ({
+        path: RU,
+        source: UU.files[RU]
       })))
     }
-    let MD = Promise.resolve();
+    let uU = Promise.resolve();
 
-    function tD(DD) {
-      const CD = MD.then(DD);
-      return MD = CD.catch((() => {})), CD
-    }
-
-    function ZD(DD, CD) {
-      return tD((() => vD(DD, CD)))
+    function CU(UU) {
+      const RU = uU.then(UU);
+      return uU = RU.catch((() => {})), RU
     }
 
-    function oD(DD, CD, cD) {
-      return tD((async () => JSON.stringify(await (0, bD.d)()) === JSON.stringify(DD) && (null === CD ? (await ND(), !0) : vD(CD, cD))))
-    }
-    async function vD(DD, CD) {
-      const cD = await iD.f.setItem(bD.c, DD);
-      return cD && JD(DD, CD), cD
-    }
-    async function ND() {
-      await iD.f.removeItem(bD.c), iD.h.removeItem(fD.e)
+    function hU(UU, RU) {
+      return CU((() => eU(UU, RU)))
     }
 
-    function gD() {
-      return tD(ND)
+    function QU(UU, RU, gU) {
+      return CU((async () => JSON.stringify(await (0, TU.e)()) === JSON.stringify(UU) && (null === RU ? (await WU(), !0) : eU(RU, gU))))
+    }
+    async function eU(UU, RU) {
+      const gU = await EU.g.setItem(TU.b, UU);
+      return gU && aU(UU, RU), gU
+    }
+    async function WU() {
+      await EU.g.removeItem(TU.b), EU.k.removeItem(PU.b)
     }
 
-    function XD(DD, CD) {
-      return "active" === mD(DD, CD).kind
+    function fU() {
+      return CU(WU)
     }
 
-    function mD(DD, CD) {
-      var cD;
-      return null === DD ? {
+    function xU(UU, RU) {
+      return "active" === mU(UU, RU).kind
+    }
+
+    function mU(UU, RU) {
+      var gU;
+      return null === UU ? {
         kind: "none",
         reason: "nothingStored"
-      } : PD(DD) ? {
+      } : wU(UU) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (cD = DD.validation) || void 0 === cD ? void 0 : cD.ok) || DD.validation.fromRecheck ? null === CD ? {
+      } : !1 !== (null === (gU = UU.validation) || void 0 === gU ? void 0 : gU.ok) || UU.validation.fromRecheck ? null === RU ? {
         kind: "none",
         reason: "noCompiler"
-      } : UD(DD, CD) ? {
+      } : bU(UU, RU) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : DD.validation.ok ? {
+      } : UU.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -568,326 +568,326 @@ export const modules = {
       }
     }
 
-    function nD() {
-      iD.j.setItem(wD, performance.timeOrigin)
+    function IU() {
+      EU.l.setItem(KU, performance.timeOrigin)
     }
 
-    function OD() {
-      return iD.j.getItem(wD) === performance.timeOrigin
+    function JU() {
+      return EU.l.getItem(KU) === performance.timeOrigin
     }
 
-    function PD(DD) {
-      return !(0, pD.f)(DD.manifest.apiVersion)
+    function wU(UU) {
+      return !(0, pU.i)(UU.manifest.apiVersion)
     }
 
-    function HD(DD) {
-      return SD ??= DD.zq((0, QD.shaderPackTextures)()), SD
+    function nU(UU) {
+      return cU ??= UU.xZ((0, qU.shaderPackTextures)()), cU
     }
 
-    function UD(DD, CD) {
-      var cD;
-      return (null === (cD = DD.validation) || void 0 === cD ? void 0 : cD.headerVersion) !== HD(CD)
+    function bU(UU, RU) {
+      var gU;
+      return (null === (gU = UU.validation) || void 0 === gU ? void 0 : gU.headerVersion) !== nU(RU)
     }
 
-    function xD(DD) {
-      return tD((async () => {
-        JD(await (0, bD.d)(!0), DD)
+    function oU(UU) {
+      return CU((async () => {
+        aU(await (0, TU.e)(!0), UU)
       }))
     }
 
-    function qD() {
-      return tD((async () => {
-        iD.h.removeItem(fD.e)
+    function ZU() {
+      return CU((async () => {
+        EU.k.removeItem(PU.b)
       }))
     }
 
-    function JD(DD, CD) {
-      XD(DD, CD) ? iD.h.setItem(fD.e, !0) : iD.h.removeItem(fD.e)
+    function aU(UU, RU) {
+      xU(UU, RU) ? EU.k.setItem(PU.b, !0) : EU.k.removeItem(PU.b)
     }
   },
-  6379: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      loadShaderPackTextures: () => fD,
-      shaderPackTextures: () => bD
+  6306: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      loadShaderPackTextures: () => PU,
+      shaderPackTextures: () => TU
     });
-    var ID = cD(6343);
-    let pD = null,
-      iD = null;
+    var tU = gU(6265);
+    let pU = null,
+      EU = null;
 
-    function fD() {
-      return iD ??= Promise.all([cD.e(69), cD.e(198)]).then((() => cD(39608))).then((DD => {
+    function PU() {
+      return EU ??= Promise.all([gU.e(69), gU.e(198)]).then((() => gU(39871))).then((UU => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: CD,
-          textureNameToIndex: cD,
-          textureAnimationData: iD
-        } = DD;
-        return pD ??= (0, ID.m)(cD, iD, CD), pD
-      })), iD
+          FORMER_BLOCK_IMAGE_NAMES: RU,
+          textureNameToIndex: gU,
+          textureAnimationData: EU
+        } = UU;
+        return pU ??= (0, tU.i)(gU, EU, RU), pU
+      })), EU
     }
 
-    function bD() {
-      if (null === pD) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return pD
+    function TU() {
+      if (null === pU) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return pU
     }
   },
-  6401: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => QD,
-      f: () => bD
+  6321: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => qU,
+      f: () => TU
     });
-    var ID = cD(6404),
-      pD = cD(6379),
-      iD = cD(110);
-    const fD = 100;
-    async function bD(DD, CD) {
-      var cD;
-      let ID = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (cD = navigator.gpu) && void 0 !== cD ? cD : null;
-      const fD = DD.R6(CD, (0, pD.shaderPackTextures)());
-      if (fD.errors.length > 0) return wD(DD, fD.errors, fD.offInStrict);
-      const bD = await async function(DD) {
-        if (!DD) return null;
+    var tU = gU(6330),
+      pU = gU(6306),
+      EU = gU(122);
+    const PU = 100;
+    async function TU(UU, RU) {
+      var gU;
+      let tU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (gU = navigator.gpu) && void 0 !== gU ? gU : null;
+      const PU = UU.i_(RU, (0, pU.shaderPackTextures)());
+      if (PU.errors.length > 0) return KU(UU, PU.errors, PU.offInStrict);
+      const TU = await async function(UU) {
+        if (!UU) return null;
         try {
-          const CD = await (0, iD.v)(DD);
-          return CD ? await CD.requestDevice() : null
-        } catch (CD) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", CD), null
+          const RU = await (0, EU.v)(UU);
+          return RU ? await RU.requestDevice() : null
+        } catch (RU) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", RU), null
         }
-      }(ID);
-      if (!bD) return null;
-      let QD = !1;
-      bD.lost.then((() => {
-        QD = !0
+      }(tU);
+      if (!TU) return null;
+      let qU = !1;
+      TU.lost.then((() => {
+        qU = !0
       }));
       try {
-        const CD = await Promise.all(fD.validationModules.map((CD => async function(DD, CD, cD) {
-          CD.pushErrorScope("validation");
-          const ID = CD.createShaderModule({
-              code: cD.code
+        const RU = await Promise.all(PU.validationModules.map((RU => async function(UU, RU, gU) {
+          RU.pushErrorScope("validation");
+          const tU = RU.createShaderModule({
+              code: gU.code
             }),
-            pD = CD.popErrorScope(),
+            pU = RU.popErrorScope(),
             {
-              messages: iD
-            } = await ID.getCompilationInfo(),
-            fD = iD.filter((DD => "error" === DD.type)).map((CD => DD.mapValidationMessage(cD, CD))),
-            bD = await pD;
-          bD && 0 === fD.length && fD.push({
+              messages: EU
+            } = await tU.getCompilationInfo(),
+            PU = EU.filter((UU => "error" === UU.type)).map((RU => UU.mapValidationMessage(gU, RU))),
+            TU = await pU;
+          TU && 0 === PU.length && PU.push({
             file: null,
             line: 0,
-            message: bD.message,
-            variants: [cD.key]
+            message: TU.message,
+            variants: [gU.key]
           });
-          return fD
-        }(DD, bD, CD))));
-        return QD ? null : wD(DD, DD.icD(CD.flat()), fD.offInStrict)
-      } catch (SD) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", SD), null
+          return PU
+        }(UU, TU, RU))));
+        return qU ? null : KU(UU, UU.mgU(RU.flat()), PU.offInStrict)
+      } catch (cU) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", cU), null
       } finally {
-        bD.destroy()
+        TU.destroy()
       }
     }
-    async function QD(DD, CD) {
-      var cD;
-      if (!(0, ID.shaderPackNeedsCheck)(DD, CD) || (0, ID.isOtherApiVersion)(DD)) return DD;
-      const pD = await bD(CD, (0, ID.storedShaderPackFiles)(DD));
-      if (!pD) return DD;
-      const iD = !1 === (null === (cD = DD.validation) || void 0 === cD ? void 0 : cD.ok) && !DD.validation.fromRecheck,
-        fD = {
-          ...DD,
-          validation: iD ? pD : {
-            ...pD,
+    async function qU(UU, RU) {
+      var gU;
+      if (!(0, tU.shaderPackNeedsCheck)(UU, RU) || (0, tU.isOtherApiVersion)(UU)) return UU;
+      const pU = await TU(RU, (0, tU.storedShaderPackFiles)(UU));
+      if (!pU) return UU;
+      const EU = !1 === (null === (gU = UU.validation) || void 0 === gU ? void 0 : gU.ok) && !UU.validation.fromRecheck,
+        PU = {
+          ...UU,
+          validation: EU ? pU : {
+            ...pU,
             fromRecheck: !0
           }
         };
-      return await (0, ID.replaceShaderPack)(DD, fD, CD) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), fD
+      return await (0, tU.replaceShaderPack)(UU, PU, RU) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), PU
     }
 
-    function wD(DD, CD, cD) {
+    function KU(UU, RU, gU) {
       return {
-        headerVersion: (0, ID.pageShaderPackValidationVersion)(DD),
-        ok: 0 === CD.length,
-        errors: CD.slice(0, fD),
-        moreErrors: Math.max(0, CD.length - fD),
-        offInStrict: cD
+        headerVersion: (0, tU.pageShaderPackValidationVersion)(UU),
+        ok: 0 === RU.length,
+        errors: RU.slice(0, PU),
+        moreErrors: Math.max(0, RU.length - PU),
+        offInStrict: gU
       }
     }
   },
-  6343: (DD, CD, cD) => {
-    cD.d(CD, {
-      A: () => BD,
-      d: () => fD,
-      h: () => iD,
-      l: () => ID,
-      m: () => tD,
-      n: () => SD,
-      r: () => pD,
-      s: () => QD,
-      w: () => wD
+  6265: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => PU,
+      e: () => EU,
+      h: () => tU,
+      i: () => CU,
+      k: () => cU,
+      n: () => pU,
+      r: () => qU,
+      t: () => KU,
+      x: () => GU
     });
-    const ID = 5;
+    const tU = 5;
 
-    function pD(DD) {
-      return DD === ID
+    function pU(UU) {
+      return UU === tU
     }
-    const iD = 262144,
-      fD = 256,
-      bD = 256;
+    const EU = 262144,
+      PU = 256,
+      TU = 256;
 
-    function QD(DD) {
-      if ("object" !== typeof DD || null === DD || Array.isArray(DD)) return "The pack has no files.";
-      const CD = [];
-      for (const [cD, ID] of Object.entries(DD)) {
-        if ("string" !== typeof ID) return `${cD} isn't text.`;
-        CD.push({
-          path: cD,
-          source: ID
+    function qU(UU) {
+      if ("object" !== typeof UU || null === UU || Array.isArray(UU)) return "The pack has no files.";
+      const RU = [];
+      for (const [gU, tU] of Object.entries(UU)) {
+        if ("string" !== typeof tU) return `${gU} isn't text.`;
+        RU.push({
+          path: gU,
+          source: tU
         })
       }
-      return CD.sort(((DD, CD) => SD(DD.path, CD.path))),
-        function(DD) {
-          if (0 === DD.length) return "The pack has no .wgsl files.";
-          if (DD.length > fD) return `The pack has more than ${fD} .wgsl files.`;
-          const CD = new Set;
+      return RU.sort(((UU, RU) => cU(UU.path, RU.path))),
+        function(UU) {
+          if (0 === UU.length) return "The pack has no .wgsl files.";
+          if (UU.length > PU) return `The pack has more than ${PU} .wgsl files.`;
+          const RU = new Set;
           for (const {
-              path: cD
+              path: gU
             }
-            of DD) {
-            const DD = yD(cD);
-            if (null !== DD) return DD;
-            if (CD.has(cD)) return `The pack has two files at ${cD}.`;
-            CD.add(cD)
+            of UU) {
+            const UU = jU(gU);
+            if (null !== UU) return UU;
+            if (RU.has(gU)) return `The pack has two files at ${gU}.`;
+            RU.add(gU)
           }
-          return BD(DD) > iD ? `The pack's .wgsl files are over ${iD/1024} KB in total.` : null
-        }(CD) ?? CD
+          return GU(UU) > EU ? `The pack's .wgsl files are over ${EU/1024} KB in total.` : null
+        }(RU) ?? RU
     }
 
-    function wD(DD) {
-      const CD = {};
-      for (const cD of DD) CD[cD.path] = cD.source;
-      return CD
+    function KU(UU) {
+      const RU = {};
+      for (const gU of UU) RU[gU.path] = gU.source;
+      return RU
     }
 
-    function SD(DD, CD) {
-      return DD < CD ? -1 : DD > CD ? 1 : 0
+    function cU(UU, RU) {
+      return UU < RU ? -1 : UU > RU ? 1 : 0
     }
 
-    function BD(DD) {
-      const CD = new TextEncoder;
-      let cD = 0;
+    function GU(UU) {
+      const RU = new TextEncoder;
+      let gU = 0;
       for (const {
-          source: ID
+          source: tU
         }
-        of DD) cD += CD.encode(ID).byteLength;
-      return cD
+        of UU) gU += RU.encode(tU).byteLength;
+      return gU
     }
 
-    function yD(DD) {
-      if (!DD.toLowerCase().endsWith(".wgsl")) return `${DD} isn't a .wgsl file.`;
-      if (DD.length > bD) return `A file path is over ${bD} characters.`;
-      if (DD.includes("\\") || /[\u0000-\u001f]/.test(DD)) return `${DD} isn't a valid file path.`;
-      return DD.split("/").some((DD => "" === DD || "." === DD || ".." === DD)) ? `${DD} isn't a valid file path.` : null
+    function jU(UU) {
+      if (!UU.toLowerCase().endsWith(".wgsl")) return `${UU} isn't a .wgsl file.`;
+      if (UU.length > TU) return `A file path is over ${TU} characters.`;
+      if (UU.includes("\\") || /[\u0000-\u001f]/.test(UU)) return `${UU} isn't a valid file path.`;
+      return UU.split("/").some((UU => "" === UU || "." === UU || ".." === UU)) ? `${UU} isn't a valid file path.` : null
     }
-    const MD = /^(.*)\[rot\[([1-4])$/;
+    const uU = /^(.*)\[rot\[([1-4])$/;
 
-    function tD(DD, CD) {
-      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const ID = new Map;
-      CD.forEach(((DD, CD) => {
+    function CU(UU, RU) {
+      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const tU = new Map;
+      RU.forEach(((UU, RU) => {
         let {
-          numAnimStates: cD,
-          animStartIdx: pD
-        } = DD;
-        for (let iD = 1; iD < cD; iD++) ID.set(pD + iD - 1, CD)
+          numAnimStates: gU,
+          animStartIdx: pU
+        } = UU;
+        for (let EU = 1; EU < gU; EU++) tU.set(pU + EU - 1, RU)
       }));
-      const pD = Object.entries(DD),
-        iD = new Map;
-      for (const [ZD, oD] of pD) {
-        const DD = MD.exec(ZD);
-        "1" === DD?.[2] && iD.set(DD[1], oD + 1)
+      const pU = Object.entries(UU),
+        EU = new Map;
+      for (const [hU, QU] of pU) {
+        const UU = uU.exec(hU);
+        "1" === UU?.[2] && EU.set(UU[1], QU + 1)
       }
-      const fD = DD => {
-          const CD = MD.exec(DD);
-          return CD && iD.has(CD[1]) ? {
-            root: CD[1],
-            rotation: Number(CD[2]) - 1
+      const PU = UU => {
+          const RU = uU.exec(UU);
+          return RU && EU.has(RU[1]) ? {
+            root: RU[1],
+            rotation: Number(RU[2]) - 1
           } : null
         },
-        bD = new Set(pD.map((DD => {
-          let [CD] = DD;
-          return fD(CD)?.root ?? CD
+        TU = new Set(pU.map((UU => {
+          let [RU] = UU;
+          return PU(RU)?.root ?? RU
         }))),
-        QD = (DD, cD) => {
-          const ID = DD.replace(/_?0$/, "");
-          return (CD[cD]?.numAnimStates ?? 0) > 1 && !bD.has(ID) ? ID : DD
+        qU = (UU, gU) => {
+          const tU = UU.replace(/_?0$/, "");
+          return (RU[gU]?.numAnimStates ?? 0) > 1 && !TU.has(tU) ? tU : UU
         },
-        wD = new Map;
-      for (const [MD, ZD] of pD) wD.set(ZD, QD(fD(MD)?.root ?? MD, ZD));
-      const SD = pD.reduce(((DD, CD) => {
-          let [, cD] = CD;
-          return Math.max(DD, cD + 1)
+        KU = new Map;
+      for (const [uU, hU] of pU) KU.set(hU, qU(PU(uU)?.root ?? uU, hU));
+      const cU = pU.reduce(((UU, RU) => {
+          let [, gU] = RU;
+          return Math.max(UU, gU + 1)
         }), 0),
-        BD = Array.from({
-          length: SD
-        }, ((DD, CD) => ({
-          id: CD + 1,
+        GU = Array.from({
+          length: cU
+        }, ((UU, RU) => ({
+          id: RU + 1,
           rotation: 0
         }))),
-        yD = new Map,
-        tD = new Map;
-      for (const [MD, ZD] of pD) {
-        const DD = fD(MD),
-          CD = ID.get(ZD);
-        if (void 0 !== CD) {
-          const cD = wD.get(CD);
-          tD.set(MD, {
-            name: MD,
-            texture: cD,
+        jU = new Map,
+        CU = new Map;
+      for (const [uU, hU] of pU) {
+        const UU = PU(uU),
+          RU = tU.get(hU);
+        if (void 0 !== RU) {
+          const gU = KU.get(RU);
+          CU.set(uU, {
+            name: uU,
+            texture: gU,
             kind: "frame"
-          }), DD && !tD.has(DD.root) && tD.set(DD.root, {
-            name: DD.root,
-            texture: cD,
+          }), UU && !CU.has(UU.root) && CU.set(UU.root, {
+            name: UU.root,
+            texture: gU,
             kind: "frame"
           });
           continue
         }
-        const cD = wD.get(ZD),
-          pD = DD?.root ?? MD;
-        if (cD !== pD && tD.set(pD, {
-            name: pD,
-            texture: cD,
+        const gU = KU.get(hU),
+          pU = UU?.root ?? uU;
+        if (gU !== pU && CU.set(pU, {
+            name: pU,
+            texture: gU,
             kind: "frame"
-          }), DD) {
-          const CD = iD.get(DD.root);
-          BD[ZD] = {
-            id: CD,
-            rotation: DD.rotation
-          }, yD.set(cD, CD), tD.set(MD, {
-            name: MD,
-            texture: cD,
+          }), UU) {
+          const RU = EU.get(UU.root);
+          GU[hU] = {
+            id: RU,
+            rotation: UU.rotation
+          }, jU.set(gU, RU), CU.set(uU, {
+            name: uU,
+            texture: gU,
             kind: "rotation"
           })
-        } else yD.set(cD, ZD + 1)
+        } else jU.set(gU, hU + 1)
       }
-      for (const MD of yD.keys()) tD.delete(MD);
-      for (const [MD, ZD] of cD) {
-        const DD = yD.get(ZD);
-        void 0 === DD || yD.has(MD) || (yD.set(MD, DD), tD.delete(MD))
+      for (const uU of jU.keys()) CU.delete(uU);
+      for (const [uU, hU] of gU) {
+        const UU = jU.get(hU);
+        void 0 === UU || jU.has(uU) || (jU.set(uU, UU), CU.delete(uU))
       }
       return {
-        named: [...yD].sort(((DD, CD) => {
-          let [cD] = DD, [ID] = CD;
-          return cD < ID ? -1 : cD > ID ? 1 : 0
-        })).map((DD => {
-          let [CD, cD] = DD;
+        named: [...jU].sort(((UU, RU) => {
+          let [gU] = UU, [tU] = RU;
+          return gU < tU ? -1 : gU > tU ? 1 : 0
+        })).map((UU => {
+          let [RU, gU] = UU;
           return {
-            name: CD,
-            id: cD
+            name: RU,
+            id: gU
           }
         })),
-        aliases: [...tD.values()],
-        layers: BD
+        aliases: [...CU.values()],
+        layers: GU
       }
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

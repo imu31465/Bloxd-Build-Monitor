@@ -1,39 +1,39 @@
 export const id = 226;
 export const ids = [226];
 export const modules = {
-  36622: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => BD,
-      e: () => yD,
-      h: () => ZD,
-      j: () => MD
+  36761: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => GU,
+      g: () => jU,
+      k: () => hU,
+      m: () => uU
     });
-    var ID = cD(36452),
-      pD = cD(36449),
-      iD = cD(36479),
-      fD = cD(36488);
+    var tU = gU(36610),
+      pU = gU(36602),
+      EU = gU(36626),
+      PU = gU(36639);
 
-    function bD(DD) {
-      return Math.pow(DD, pD.h)
+    function TU(UU) {
+      return Math.pow(UU, pU.k)
     }
 
-    function QD(DD) {
-      return DD <= .04045 ? .0773993808 * DD : Math.pow(.947867299 * (DD + .055), 2.4)
+    function qU(UU) {
+      return UU <= .04045 ? .0773993808 * UU : Math.pow(.947867299 * (UU + .055), 2.4)
     }
 
-    function wD(DD) {
-      return Math.pow(DD, pD.g)
+    function KU(UU) {
+      return Math.pow(UU, pU.h)
     }
 
-    function SD(DD) {
-      return DD <= .0031308 ? 12.92 * DD : 1.055 * Math.pow(DD, .41666) - .055
+    function cU(UU) {
+      return UU <= .0031308 ? 12.92 * UU : 1.055 * Math.pow(UU, .41666) - .055
     }
-    class BD {
+    class GU {
       constructor() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.r = DD, this.g = CD, this.b = cD
+        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.r = UU, this.g = RU, this.b = gU
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + "}"
@@ -42,416 +42,416 @@ export const modules = {
         return "Color3"
       }
       getHashCode() {
-        let DD = 255 * this.r | 0;
-        return DD = 397 * DD ^ 255 * this.g, DD = 397 * DD ^ 255 * this.b, DD
+        let UU = 255 * this.r | 0;
+        return UU = 397 * UU ^ 255 * this.g, UU = 397 * UU ^ 255 * this.b, UU
       }
-      toArray(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return DD[CD] = this.r, DD[CD + 1] = this.g, DD[CD + 2] = this.b, this
+      toArray(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return UU[RU] = this.r, UU[RU + 1] = this.g, UU[RU + 2] = this.b, this
       }
-      QCD(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return BD.FromArrayToRef(DD, CD, this), this
+      bRU(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return GU.FromArrayToRef(UU, RU, this), this
       }
       toColor4() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-        return new yD(this.r, this.g, this.b, DD)
+        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+        return new jU(this.r, this.g, this.b, UU)
       }
-      XcD() {
+      vgU() {
         return [this.r, this.g, this.b]
       }
       toLuminance() {
         return .3 * this.r + .59 * this.g + .11 * this.b
       }
-      multiply(DD) {
-        return new BD(this.r * DD.r, this.g * DD.g, this.b * DD.b)
+      multiply(UU) {
+        return new GU(this.r * UU.r, this.g * UU.g, this.b * UU.b)
       }
-      multiplyToRef(DD, CD) {
-        return CD.r = this.r * DD.r, CD.g = this.g * DD.g, CD.b = this.b * DD.b, CD
+      multiplyToRef(UU, RU) {
+        return RU.r = this.r * UU.r, RU.g = this.g * UU.g, RU.b = this.b * UU.b, RU
       }
-      multiplyInPlace(DD) {
-        return this.r *= DD.r, this.g *= DD.g, this.b *= DD.b, this
+      multiplyInPlace(UU) {
+        return this.r *= UU.r, this.g *= UU.g, this.b *= UU.b, this
       }
-      multiplyByFloats(DD, CD, cD) {
-        return new BD(this.r * DD, this.g * CD, this.b * cD)
+      multiplyByFloats(UU, RU, gU) {
+        return new GU(this.r * UU, this.g * RU, this.b * gU)
       }
-      divide(DD) {
+      divide(UU) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(DD, CD) {
+      divideToRef(UU, RU) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideInPlace(DD) {
+      divideInPlace(UU) {
         throw new ReferenceError("Can not divide a color")
       }
-      minimizeInPlace(DD) {
-        return this.minimizeInPlaceFromFloats(DD.r, DD.g, DD.b)
+      minimizeInPlace(UU) {
+        return this.minimizeInPlaceFromFloats(UU.r, UU.g, UU.b)
       }
-      maximizeInPlace(DD) {
-        return this.maximizeInPlaceFromFloats(DD.r, DD.g, DD.b)
+      maximizeInPlace(UU) {
+        return this.maximizeInPlaceFromFloats(UU.r, UU.g, UU.b)
       }
-      minimizeInPlaceFromFloats(DD, CD, cD) {
-        return this.r = Math.min(DD, this.r), this.g = Math.min(CD, this.g), this.b = Math.min(cD, this.b), this
+      minimizeInPlaceFromFloats(UU, RU, gU) {
+        return this.r = Math.min(UU, this.r), this.g = Math.min(RU, this.g), this.b = Math.min(gU, this.b), this
       }
-      maximizeInPlaceFromFloats(DD, CD, cD) {
-        return this.r = Math.max(DD, this.r), this.g = Math.max(CD, this.g), this.b = Math.max(cD, this.b), this
+      maximizeInPlaceFromFloats(UU, RU, gU) {
+        return this.r = Math.max(UU, this.r), this.g = Math.max(RU, this.g), this.b = Math.max(gU, this.b), this
       }
-      floorToRef(DD) {
+      floorToRef(UU) {
         throw new ReferenceError("Can not floor a color")
       }
       floor() {
         throw new ReferenceError("Can not floor a color")
       }
-      fractToRef(DD) {
+      fractToRef(UU) {
         throw new ReferenceError("Can not fract a color")
       }
       fract() {
         throw new ReferenceError("Can not fract a color")
       }
-      equals(DD) {
-        return DD && this.r === DD.r && this.g === DD.g && this.b === DD.b
+      equals(UU) {
+        return UU && this.r === UU.r && this.g === UU.g && this.b === UU.b
       }
-      equalsFloats(DD, CD, cD) {
-        return this.wfD(DD, CD, cD)
+      equalsFloats(UU, RU, gU) {
+        return this.cPU(UU, RU, gU)
       }
-      wfD(DD, CD, cD) {
-        return this.r === DD && this.g === CD && this.b === cD
+      cPU(UU, RU, gU) {
+        return this.r === UU && this.g === RU && this.b === gU
       }
-      equalsWithEpsilon(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pD.c;
-        return (0, iD.WithinEpsilon)(this.r, DD.r, CD) && (0, iD.WithinEpsilon)(this.g, DD.g, CD) && (0, iD.WithinEpsilon)(this.b, DD.b, CD)
+      equalsWithEpsilon(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pU.e;
+        return (0, EU.WithinEpsilon)(this.r, UU.r, RU) && (0, EU.WithinEpsilon)(this.g, UU.g, RU) && (0, EU.WithinEpsilon)(this.b, UU.b, RU)
       }
-      pp() {
+      nt() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
         throw new ReferenceError("Can not negate a color")
       }
-      negateToRef(DD) {
+      negateToRef(UU) {
         throw new ReferenceError("Can not negate a color")
       }
-      scale(DD) {
-        return new BD(this.r * DD, this.g * DD, this.b * DD)
+      scale(UU) {
+        return new GU(this.r * UU, this.g * UU, this.b * UU)
       }
-      scaleInPlace(DD) {
-        return this.r *= DD, this.g *= DD, this.b *= DD, this
+      scaleInPlace(UU) {
+        return this.r *= UU, this.g *= UU, this.b *= UU, this
       }
-      scaleToRef(DD, CD) {
-        return CD.r = this.r * DD, CD.g = this.g * DD, CD.b = this.b * DD, CD
+      scaleToRef(UU, RU) {
+        return RU.r = this.r * UU, RU.g = this.g * UU, RU.b = this.b * UU, RU
       }
-      scaleAndAddToRef(DD, CD) {
-        return CD.r += this.r * DD, CD.g += this.g * DD, CD.b += this.b * DD, CD
+      scaleAndAddToRef(UU, RU) {
+        return RU.r += this.r * UU, RU.g += this.g * UU, RU.b += this.b * UU, RU
       }
       clampToRef() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          cD = arguments.length > 2 ? arguments[2] : void 0;
-        return cD.r = (0, iD.Clamp)(this.r, DD, CD), cD.g = (0, iD.Clamp)(this.g, DD, CD), cD.b = (0, iD.Clamp)(this.b, DD, CD), cD
+        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          gU = arguments.length > 2 ? arguments[2] : void 0;
+        return gU.r = (0, EU.Clamp)(this.r, UU, RU), gU.g = (0, EU.Clamp)(this.g, UU, RU), gU.b = (0, EU.Clamp)(this.b, UU, RU), gU
       }
-      add(DD) {
-        return new BD(this.r + DD.r, this.g + DD.g, this.b + DD.b)
+      add(UU) {
+        return new GU(this.r + UU.r, this.g + UU.g, this.b + UU.b)
       }
-      addInPlace(DD) {
-        return this.r += DD.r, this.g += DD.g, this.b += DD.b, this
+      addInPlace(UU) {
+        return this.r += UU.r, this.g += UU.g, this.b += UU.b, this
       }
-      addInPlaceFromFloats(DD, CD, cD) {
-        return this.r += DD, this.g += CD, this.b += cD, this
+      addInPlaceFromFloats(UU, RU, gU) {
+        return this.r += UU, this.g += RU, this.b += gU, this
       }
-      addToRef(DD, CD) {
-        return CD.r = this.r + DD.r, CD.g = this.g + DD.g, CD.b = this.b + DD.b, CD
+      addToRef(UU, RU) {
+        return RU.r = this.r + UU.r, RU.g = this.g + UU.g, RU.b = this.b + UU.b, RU
       }
-      subtract(DD) {
-        return new BD(this.r - DD.r, this.g - DD.g, this.b - DD.b)
+      subtract(UU) {
+        return new GU(this.r - UU.r, this.g - UU.g, this.b - UU.b)
       }
-      subtractToRef(DD, CD) {
-        return CD.r = this.r - DD.r, CD.g = this.g - DD.g, CD.b = this.b - DD.b, CD
+      subtractToRef(UU, RU) {
+        return RU.r = this.r - UU.r, RU.g = this.g - UU.g, RU.b = this.b - UU.b, RU
       }
-      EcD(DD) {
-        return this.r -= DD.r, this.g -= DD.g, this.b -= DD.b, this
+      ptU(UU) {
+        return this.r -= UU.r, this.g -= UU.g, this.b -= UU.b, this
       }
-      subtractFromFloats(DD, CD, cD) {
-        return new BD(this.r - DD, this.g - CD, this.b - cD)
+      subtractFromFloats(UU, RU, gU) {
+        return new GU(this.r - UU, this.g - RU, this.b - gU)
       }
-      subtractFromFloatsToRef(DD, CD, cD, ID) {
-        return ID.r = this.r - DD, ID.g = this.g - CD, ID.b = this.b - cD, ID
+      subtractFromFloatsToRef(UU, RU, gU, tU) {
+        return tU.r = this.r - UU, tU.g = this.g - RU, tU.b = this.b - gU, tU
       }
       clone() {
-        return new BD(this.r, this.g, this.b)
+        return new GU(this.r, this.g, this.b)
       }
-      YCD(DD) {
-        return this.r = DD.r, this.g = DD.g, this.b = DD.b, this
+      PgU(UU) {
+        return this.r = UU.r, this.g = UU.g, this.b = UU.b, this
       }
-      K4(DD, CD, cD) {
-        return this.r = DD, this.g = CD, this.b = cD, this
+      b_(UU, RU, gU) {
+        return this.r = UU, this.g = RU, this.b = gU, this
       }
-      set(DD, CD, cD) {
-        return this.K4(DD, CD, cD)
+      set(UU, RU, gU) {
+        return this.b_(UU, RU, gU)
       }
-      YF(DD) {
-        return this.r = this.g = this.b = DD, this
+      Y5(UU) {
+        return this.r = this.g = this.b = UU, this
       }
       toHexString() {
-        const DD = Math.round(255 * this.r),
-          CD = Math.round(255 * this.g),
-          cD = Math.round(255 * this.b);
-        return "#" + (0, iD.ToHex)(DD) + (0, iD.ToHex)(CD) + (0, iD.ToHex)(cD)
+        const UU = Math.round(255 * this.r),
+          RU = Math.round(255 * this.g),
+          gU = Math.round(255 * this.b);
+        return "#" + (0, EU.ToHex)(UU) + (0, EU.ToHex)(RU) + (0, EU.ToHex)(gU)
       }
-      fromHexString(DD) {
-        return "#" !== DD.substring(0, 1) || 7 !== DD.length || (this.r = parseInt(DD.substring(1, 3), 16) / 255, this.g = parseInt(DD.substring(3, 5), 16) / 255, this.b = parseInt(DD.substring(5, 7), 16) / 255), this
+      fromHexString(UU) {
+        return "#" !== UU.substring(0, 1) || 7 !== UU.length || (this.r = parseInt(UU.substring(1, 3), 16) / 255, this.g = parseInt(UU.substring(3, 5), 16) / 255, this.b = parseInt(UU.substring(5, 7), 16) / 255), this
       }
       toHSV() {
-        return this.toHSVToRef(new BD)
+        return this.toHSVToRef(new GU)
       }
-      toHSVToRef(DD) {
-        const CD = this.r,
-          cD = this.g,
-          ID = this.b,
-          pD = Math.max(CD, cD, ID),
-          iD = Math.min(CD, cD, ID);
-        let fD = 0,
-          bD = 0;
-        const QD = pD,
-          wD = pD - iD;
-        return 0 !== pD && (bD = wD / pD), pD != iD && (pD == CD ? (fD = (cD - ID) / wD, cD < ID && (fD += 6)) : pD == cD ? fD = (ID - CD) / wD + 2 : pD == ID && (fD = (CD - cD) / wD + 4), fD *= 60), DD.r = fD, DD.g = bD, DD.b = QD, DD
+      toHSVToRef(UU) {
+        const RU = this.r,
+          gU = this.g,
+          tU = this.b,
+          pU = Math.max(RU, gU, tU),
+          EU = Math.min(RU, gU, tU);
+        let PU = 0,
+          TU = 0;
+        const qU = pU,
+          KU = pU - EU;
+        return 0 !== pU && (TU = KU / pU), pU != EU && (pU == RU ? (PU = (gU - tU) / KU, gU < tU && (PU += 6)) : pU == gU ? PU = (tU - RU) / KU + 2 : pU == tU && (PU = (RU - gU) / KU + 4), PU *= 60), UU.r = PU, UU.g = TU, UU.b = qU, UU
       }
       toLinearSpace() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const CD = new BD;
-        return this.toLinearSpaceToRef(CD, DD), CD
+        let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const RU = new GU;
+        return this.toLinearSpaceToRef(RU, UU), RU
       }
-      toLinearSpaceToRef(DD) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (DD.r = QD(this.r), DD.g = QD(this.g), DD.b = QD(this.b)) : (DD.r = bD(this.r), DD.g = bD(this.g), DD.b = bD(this.b)), this
+      toLinearSpaceToRef(UU) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (UU.r = qU(this.r), UU.g = qU(this.g), UU.b = qU(this.b)) : (UU.r = TU(this.r), UU.g = TU(this.g), UU.b = TU(this.b)), this
       }
       toGammaSpace() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const CD = new BD;
-        return this.toGammaSpaceToRef(CD, DD), CD
+        let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const RU = new GU;
+        return this.toGammaSpaceToRef(RU, UU), RU
       }
-      toGammaSpaceToRef(DD) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (DD.r = SD(this.r), DD.g = SD(this.g), DD.b = SD(this.b)) : (DD.r = wD(this.r), DD.g = wD(this.g), DD.b = wD(this.b)), this
+      toGammaSpaceToRef(UU) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (UU.r = cU(this.r), UU.g = cU(this.g), UU.b = cU(this.b)) : (UU.r = KU(this.r), UU.g = KU(this.g), UU.b = KU(this.b)), this
       }
-      static HSVtoRGBToRef(DD, CD, cD, ID) {
-        const pD = cD * CD,
-          iD = DD / 60,
-          fD = pD * (1 - Math.abs(iD % 2 - 1));
-        let bD = 0,
-          QD = 0,
-          wD = 0;
-        iD >= 0 && iD <= 1 ? (bD = pD, QD = fD) : iD >= 1 && iD <= 2 ? (bD = fD, QD = pD) : iD >= 2 && iD <= 3 ? (QD = pD, wD = fD) : iD >= 3 && iD <= 4 ? (QD = fD, wD = pD) : iD >= 4 && iD <= 5 ? (bD = fD, wD = pD) : iD >= 5 && iD <= 6 && (bD = pD, wD = fD);
-        const SD = cD - pD;
-        return ID.r = bD + SD, ID.g = QD + SD, ID.b = wD + SD, ID
+      static HSVtoRGBToRef(UU, RU, gU, tU) {
+        const pU = gU * RU,
+          EU = UU / 60,
+          PU = pU * (1 - Math.abs(EU % 2 - 1));
+        let TU = 0,
+          qU = 0,
+          KU = 0;
+        EU >= 0 && EU <= 1 ? (TU = pU, qU = PU) : EU >= 1 && EU <= 2 ? (TU = PU, qU = pU) : EU >= 2 && EU <= 3 ? (qU = pU, KU = PU) : EU >= 3 && EU <= 4 ? (qU = PU, KU = pU) : EU >= 4 && EU <= 5 ? (TU = PU, KU = pU) : EU >= 5 && EU <= 6 && (TU = pU, KU = PU);
+        const cU = gU - pU;
+        return tU.r = TU + cU, tU.g = qU + cU, tU.b = KU + cU, tU
       }
-      static FromHSV(DD, CD, cD) {
-        const ID = new BD(0, 0, 0);
-        return BD.HSVtoRGBToRef(DD, CD, cD, ID), ID
+      static FromHSV(UU, RU, gU) {
+        const tU = new GU(0, 0, 0);
+        return GU.HSVtoRGBToRef(UU, RU, gU, tU), tU
       }
-      static FromHexString(DD) {
-        return new BD(0, 0, 0).fromHexString(DD)
+      static FromHexString(UU) {
+        return new GU(0, 0, 0).fromHexString(UU)
       }
-      static FromArray(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new BD(DD[CD], DD[CD + 1], DD[CD + 2])
+      static FromArray(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new GU(UU[RU], UU[RU + 1], UU[RU + 2])
       }
-      static FromArrayToRef(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          cD = arguments.length > 2 ? arguments[2] : void 0;
-        cD.r = DD[CD], cD.g = DD[CD + 1], cD.b = DD[CD + 2]
+      static FromArrayToRef(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          gU = arguments.length > 2 ? arguments[2] : void 0;
+        gU.r = UU[RU], gU.g = UU[RU + 1], gU.b = UU[RU + 2]
       }
-      static FromInts(DD, CD, cD) {
-        return new BD(DD / 255, CD / 255, cD / 255)
+      static FromInts(UU, RU, gU) {
+        return new GU(UU / 255, RU / 255, gU / 255)
       }
-      static Lerp(DD, CD, cD) {
-        const ID = new BD(0, 0, 0);
-        return BD.LerpToRef(DD, CD, cD, ID), ID
+      static Lerp(UU, RU, gU) {
+        const tU = new GU(0, 0, 0);
+        return GU.LerpToRef(UU, RU, gU, tU), tU
       }
-      static LerpToRef(DD, CD, cD, ID) {
-        ID.r = DD.r + (CD.r - DD.r) * cD, ID.g = DD.g + (CD.g - DD.g) * cD, ID.b = DD.b + (CD.b - DD.b) * cD
+      static LerpToRef(UU, RU, gU, tU) {
+        tU.r = UU.r + (RU.r - UU.r) * gU, tU.g = UU.g + (RU.g - UU.g) * gU, tU.b = UU.b + (RU.b - UU.b) * gU
       }
-      static Hermite(DD, CD, cD, ID, pD) {
-        const iD = pD * pD,
-          fD = pD * iD,
-          bD = 2 * fD - 3 * iD + 1,
-          QD = -2 * fD + 3 * iD,
-          wD = fD - 2 * iD + pD,
-          SD = fD - iD,
-          yD = DD.r * bD + cD.r * QD + CD.r * wD + ID.r * SD,
-          MD = DD.g * bD + cD.g * QD + CD.g * wD + ID.g * SD,
-          tD = DD.b * bD + cD.b * QD + CD.b * wD + ID.b * SD;
-        return new BD(yD, MD, tD)
+      static Hermite(UU, RU, gU, tU, pU) {
+        const EU = pU * pU,
+          PU = pU * EU,
+          TU = 2 * PU - 3 * EU + 1,
+          qU = -2 * PU + 3 * EU,
+          KU = PU - 2 * EU + pU,
+          cU = PU - EU,
+          jU = UU.r * TU + gU.r * qU + RU.r * KU + tU.r * cU,
+          uU = UU.g * TU + gU.g * qU + RU.g * KU + tU.g * cU,
+          CU = UU.b * TU + gU.b * qU + RU.b * KU + tU.b * cU;
+        return new GU(jU, uU, CU)
       }
-      static Hermite1stDerivative(DD, CD, cD, ID, pD) {
-        const iD = BD.Black();
-        return this.Hermite1stDerivativeToRef(DD, CD, cD, ID, pD, iD), iD
+      static Hermite1stDerivative(UU, RU, gU, tU, pU) {
+        const EU = GU.Black();
+        return this.Hermite1stDerivativeToRef(UU, RU, gU, tU, pU, EU), EU
       }
-      static Hermite1stDerivativeToRef(DD, CD, cD, ID, pD, iD) {
-        const fD = pD * pD;
-        iD.r = 6 * (fD - pD) * DD.r + (3 * fD - 4 * pD + 1) * CD.r + 6 * (-fD + pD) * cD.r + (3 * fD - 2 * pD) * ID.r, iD.g = 6 * (fD - pD) * DD.g + (3 * fD - 4 * pD + 1) * CD.g + 6 * (-fD + pD) * cD.g + (3 * fD - 2 * pD) * ID.g, iD.b = 6 * (fD - pD) * DD.b + (3 * fD - 4 * pD + 1) * CD.b + 6 * (-fD + pD) * cD.b + (3 * fD - 2 * pD) * ID.b
+      static Hermite1stDerivativeToRef(UU, RU, gU, tU, pU, EU) {
+        const PU = pU * pU;
+        EU.r = 6 * (PU - pU) * UU.r + (3 * PU - 4 * pU + 1) * RU.r + 6 * (-PU + pU) * gU.r + (3 * PU - 2 * pU) * tU.r, EU.g = 6 * (PU - pU) * UU.g + (3 * PU - 4 * pU + 1) * RU.g + 6 * (-PU + pU) * gU.g + (3 * PU - 2 * pU) * tU.g, EU.b = 6 * (PU - pU) * UU.b + (3 * PU - 4 * pU + 1) * RU.b + 6 * (-PU + pU) * gU.b + (3 * PU - 2 * pU) * tU.b
       }
       static Red() {
-        return new BD(1, 0, 0)
+        return new GU(1, 0, 0)
       }
       static Green() {
-        return new BD(0, 1, 0)
+        return new GU(0, 1, 0)
       }
       static Blue() {
-        return new BD(0, 0, 1)
+        return new GU(0, 0, 1)
       }
       static Black() {
-        return new BD(0, 0, 0)
+        return new GU(0, 0, 0)
       }
       static get BlackReadOnly() {
-        return BD._BlackReadOnly
+        return GU._BlackReadOnly
       }
       static White() {
-        return new BD(1, 1, 1)
+        return new GU(1, 1, 1)
       }
       static Purple() {
-        return new BD(.5, 0, .5)
+        return new GU(.5, 0, .5)
       }
       static Magenta() {
-        return new BD(1, 0, 1)
+        return new GU(1, 0, 1)
       }
       static Yellow() {
-        return new BD(1, 1, 0)
+        return new GU(1, 1, 0)
       }
       static Gray() {
-        return new BD(.5, .5, .5)
+        return new GU(.5, .5, .5)
       }
       static Teal() {
-        return new BD(0, 1, 1)
+        return new GU(0, 1, 1)
       }
       static Random() {
-        return new BD(Math.random(), Math.random(), Math.random())
+        return new GU(Math.random(), Math.random(), Math.random())
       }
     }
-    BD._V8PerformanceHack = new BD(.5, .5, .5), BD._BlackReadOnly = BD.Black();
-    class yD {
+    GU._V8PerformanceHack = new GU(.5, .5, .5), GU._BlackReadOnly = GU.Black();
+    class jU {
       constructor() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
-        this.r = DD, this.g = CD, this.b = cD, this.a = ID
+        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        this.r = UU, this.g = RU, this.b = gU, this.a = tU
       }
-      XcD() {
+      vgU() {
         return [this.r, this.g, this.b, this.a]
       }
-      toArray(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return DD[CD] = this.r, DD[CD + 1] = this.g, DD[CD + 2] = this.b, DD[CD + 3] = this.a, this
+      toArray(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return UU[RU] = this.r, UU[RU + 1] = this.g, UU[RU + 2] = this.b, UU[RU + 3] = this.a, this
       }
-      QCD(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.r = DD[CD], this.g = DD[CD + 1], this.b = DD[CD + 2], this.a = DD[CD + 3], this
+      bRU(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.r = UU[RU], this.g = UU[RU + 1], this.b = UU[RU + 2], this.a = UU[RU + 3], this
       }
-      equals(DD) {
-        return DD && this.r === DD.r && this.g === DD.g && this.b === DD.b && this.a === DD.a
+      equals(UU) {
+        return UU && this.r === UU.r && this.g === UU.g && this.b === UU.b && this.a === UU.a
       }
-      add(DD) {
-        return new yD(this.r + DD.r, this.g + DD.g, this.b + DD.b, this.a + DD.a)
+      add(UU) {
+        return new jU(this.r + UU.r, this.g + UU.g, this.b + UU.b, this.a + UU.a)
       }
-      addToRef(DD, CD) {
-        return CD.r = this.r + DD.r, CD.g = this.g + DD.g, CD.b = this.b + DD.b, CD.a = this.a + DD.a, CD
+      addToRef(UU, RU) {
+        return RU.r = this.r + UU.r, RU.g = this.g + UU.g, RU.b = this.b + UU.b, RU.a = this.a + UU.a, RU
       }
-      addInPlace(DD) {
-        return this.r += DD.r, this.g += DD.g, this.b += DD.b, this.a += DD.a, this
+      addInPlace(UU) {
+        return this.r += UU.r, this.g += UU.g, this.b += UU.b, this.a += UU.a, this
       }
-      addInPlaceFromFloats(DD, CD, cD, ID) {
-        return this.r += DD, this.g += CD, this.b += cD, this.a += ID, this
+      addInPlaceFromFloats(UU, RU, gU, tU) {
+        return this.r += UU, this.g += RU, this.b += gU, this.a += tU, this
       }
-      subtract(DD) {
-        return new yD(this.r - DD.r, this.g - DD.g, this.b - DD.b, this.a - DD.a)
+      subtract(UU) {
+        return new jU(this.r - UU.r, this.g - UU.g, this.b - UU.b, this.a - UU.a)
       }
-      subtractToRef(DD, CD) {
-        return CD.r = this.r - DD.r, CD.g = this.g - DD.g, CD.b = this.b - DD.b, CD.a = this.a - DD.a, CD
+      subtractToRef(UU, RU) {
+        return RU.r = this.r - UU.r, RU.g = this.g - UU.g, RU.b = this.b - UU.b, RU.a = this.a - UU.a, RU
       }
-      EcD(DD) {
-        return this.r -= DD.r, this.g -= DD.g, this.b -= DD.b, this.a -= DD.a, this
+      ptU(UU) {
+        return this.r -= UU.r, this.g -= UU.g, this.b -= UU.b, this.a -= UU.a, this
       }
-      subtractFromFloats(DD, CD, cD, ID) {
-        return new yD(this.r - DD, this.g - CD, this.b - cD, this.a - ID)
+      subtractFromFloats(UU, RU, gU, tU) {
+        return new jU(this.r - UU, this.g - RU, this.b - gU, this.a - tU)
       }
-      subtractFromFloatsToRef(DD, CD, cD, ID, pD) {
-        return pD.r = this.r - DD, pD.g = this.g - CD, pD.b = this.b - cD, pD.a = this.a - ID, pD
+      subtractFromFloatsToRef(UU, RU, gU, tU, pU) {
+        return pU.r = this.r - UU, pU.g = this.g - RU, pU.b = this.b - gU, pU.a = this.a - tU, pU
       }
-      scale(DD) {
-        return new yD(this.r * DD, this.g * DD, this.b * DD, this.a * DD)
+      scale(UU) {
+        return new jU(this.r * UU, this.g * UU, this.b * UU, this.a * UU)
       }
-      scaleInPlace(DD) {
-        return this.r *= DD, this.g *= DD, this.b *= DD, this.a *= DD, this
+      scaleInPlace(UU) {
+        return this.r *= UU, this.g *= UU, this.b *= UU, this.a *= UU, this
       }
-      scaleToRef(DD, CD) {
-        return CD.r = this.r * DD, CD.g = this.g * DD, CD.b = this.b * DD, CD.a = this.a * DD, CD
+      scaleToRef(UU, RU) {
+        return RU.r = this.r * UU, RU.g = this.g * UU, RU.b = this.b * UU, RU.a = this.a * UU, RU
       }
-      scaleAndAddToRef(DD, CD) {
-        return CD.r += this.r * DD, CD.g += this.g * DD, CD.b += this.b * DD, CD.a += this.a * DD, CD
+      scaleAndAddToRef(UU, RU) {
+        return RU.r += this.r * UU, RU.g += this.g * UU, RU.b += this.b * UU, RU.a += this.a * UU, RU
       }
       clampToRef() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          cD = arguments.length > 2 ? arguments[2] : void 0;
-        return cD.r = (0, iD.Clamp)(this.r, DD, CD), cD.g = (0, iD.Clamp)(this.g, DD, CD), cD.b = (0, iD.Clamp)(this.b, DD, CD), cD.a = (0, iD.Clamp)(this.a, DD, CD), cD
+        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          gU = arguments.length > 2 ? arguments[2] : void 0;
+        return gU.r = (0, EU.Clamp)(this.r, UU, RU), gU.g = (0, EU.Clamp)(this.g, UU, RU), gU.b = (0, EU.Clamp)(this.b, UU, RU), gU.a = (0, EU.Clamp)(this.a, UU, RU), gU
       }
-      multiply(DD) {
-        return new yD(this.r * DD.r, this.g * DD.g, this.b * DD.b, this.a * DD.a)
+      multiply(UU) {
+        return new jU(this.r * UU.r, this.g * UU.g, this.b * UU.b, this.a * UU.a)
       }
-      multiplyToRef(DD, CD) {
-        return CD.r = this.r * DD.r, CD.g = this.g * DD.g, CD.b = this.b * DD.b, CD.a = this.a * DD.a, CD
+      multiplyToRef(UU, RU) {
+        return RU.r = this.r * UU.r, RU.g = this.g * UU.g, RU.b = this.b * UU.b, RU.a = this.a * UU.a, RU
       }
-      multiplyInPlace(DD) {
-        return this.r *= DD.r, this.g *= DD.g, this.b *= DD.b, this.a *= DD.a, this
+      multiplyInPlace(UU) {
+        return this.r *= UU.r, this.g *= UU.g, this.b *= UU.b, this.a *= UU.a, this
       }
-      multiplyByFloats(DD, CD, cD, ID) {
-        return new yD(this.r * DD, this.g * CD, this.b * cD, this.a * ID)
+      multiplyByFloats(UU, RU, gU, tU) {
+        return new jU(this.r * UU, this.g * RU, this.b * gU, this.a * tU)
       }
-      divide(DD) {
+      divide(UU) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(DD, CD) {
+      divideToRef(UU, RU) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideInPlace(DD) {
+      divideInPlace(UU) {
         throw new ReferenceError("Can not divide a color")
       }
-      minimizeInPlace(DD) {
-        return this.r = Math.min(this.r, DD.r), this.g = Math.min(this.g, DD.g), this.b = Math.min(this.b, DD.b), this.a = Math.min(this.a, DD.a), this
+      minimizeInPlace(UU) {
+        return this.r = Math.min(this.r, UU.r), this.g = Math.min(this.g, UU.g), this.b = Math.min(this.b, UU.b), this.a = Math.min(this.a, UU.a), this
       }
-      maximizeInPlace(DD) {
-        return this.r = Math.max(this.r, DD.r), this.g = Math.max(this.g, DD.g), this.b = Math.max(this.b, DD.b), this.a = Math.max(this.a, DD.a), this
+      maximizeInPlace(UU) {
+        return this.r = Math.max(this.r, UU.r), this.g = Math.max(this.g, UU.g), this.b = Math.max(this.b, UU.b), this.a = Math.max(this.a, UU.a), this
       }
-      minimizeInPlaceFromFloats(DD, CD, cD, ID) {
-        return this.r = Math.min(DD, this.r), this.g = Math.min(CD, this.g), this.b = Math.min(cD, this.b), this.a = Math.min(ID, this.a), this
+      minimizeInPlaceFromFloats(UU, RU, gU, tU) {
+        return this.r = Math.min(UU, this.r), this.g = Math.min(RU, this.g), this.b = Math.min(gU, this.b), this.a = Math.min(tU, this.a), this
       }
-      maximizeInPlaceFromFloats(DD, CD, cD, ID) {
-        return this.r = Math.max(DD, this.r), this.g = Math.max(CD, this.g), this.b = Math.max(cD, this.b), this.a = Math.max(ID, this.a), this
+      maximizeInPlaceFromFloats(UU, RU, gU, tU) {
+        return this.r = Math.max(UU, this.r), this.g = Math.max(RU, this.g), this.b = Math.max(gU, this.b), this.a = Math.max(tU, this.a), this
       }
-      floorToRef(DD) {
+      floorToRef(UU) {
         throw new ReferenceError("Can not floor a color")
       }
       floor() {
         throw new ReferenceError("Can not floor a color")
       }
-      fractToRef(DD) {
+      fractToRef(UU) {
         throw new ReferenceError("Can not fract a color")
       }
       fract() {
         throw new ReferenceError("Can not fract a color")
       }
-      pp() {
+      nt() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
         throw new ReferenceError("Can not negate a color")
       }
-      negateToRef(DD) {
+      negateToRef(UU) {
         throw new ReferenceError("Can not negate a color")
       }
-      equalsWithEpsilon(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pD.c;
-        return (0, iD.WithinEpsilon)(this.r, DD.r, CD) && (0, iD.WithinEpsilon)(this.g, DD.g, CD) && (0, iD.WithinEpsilon)(this.b, DD.b, CD) && (0, iD.WithinEpsilon)(this.a, DD.a, CD)
+      equalsWithEpsilon(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pU.e;
+        return (0, EU.WithinEpsilon)(this.r, UU.r, RU) && (0, EU.WithinEpsilon)(this.g, UU.g, RU) && (0, EU.WithinEpsilon)(this.b, UU.b, RU) && (0, EU.WithinEpsilon)(this.a, UU.a, RU)
       }
-      wfD(DD, CD, cD, ID) {
-        return this.r === DD && this.g === CD && this.b === cD && this.a === ID
+      cPU(UU, RU, gU, tU) {
+        return this.r === UU && this.g === RU && this.b === gU && this.a === tU
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + " A:" + this.a + "}"
@@ -460,346 +460,346 @@ export const modules = {
         return "Color4"
       }
       getHashCode() {
-        let DD = 255 * this.r | 0;
-        return DD = 397 * DD ^ 255 * this.g, DD = 397 * DD ^ 255 * this.b, DD = 397 * DD ^ 255 * this.a, DD
+        let UU = 255 * this.r | 0;
+        return UU = 397 * UU ^ 255 * this.g, UU = 397 * UU ^ 255 * this.b, UU = 397 * UU ^ 255 * this.a, UU
       }
       clone() {
-        return (new yD).YCD(this)
+        return (new jU).PgU(this)
       }
-      YCD(DD) {
-        return this.r = DD.r, this.g = DD.g, this.b = DD.b, this.a = DD.a, this
+      PgU(UU) {
+        return this.r = UU.r, this.g = UU.g, this.b = UU.b, this.a = UU.a, this
       }
-      K4(DD, CD, cD, ID) {
-        return this.r = DD, this.g = CD, this.b = cD, this.a = ID, this
+      b_(UU, RU, gU, tU) {
+        return this.r = UU, this.g = RU, this.b = gU, this.a = tU, this
       }
-      set(DD, CD, cD, ID) {
-        return this.K4(DD, CD, cD, ID)
+      set(UU, RU, gU, tU) {
+        return this.b_(UU, RU, gU, tU)
       }
-      YF(DD) {
-        return this.r = this.g = this.b = this.a = DD, this
+      Y5(UU) {
+        return this.r = this.g = this.b = this.a = UU, this
       }
       toHexString() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const CD = Math.round(255 * this.r),
-          cD = Math.round(255 * this.g),
-          ID = Math.round(255 * this.b);
-        if (DD) return "#" + (0, iD.ToHex)(CD) + (0, iD.ToHex)(cD) + (0, iD.ToHex)(ID);
-        const pD = Math.round(255 * this.a);
-        return "#" + (0, iD.ToHex)(CD) + (0, iD.ToHex)(cD) + (0, iD.ToHex)(ID) + (0, iD.ToHex)(pD)
+        let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const RU = Math.round(255 * this.r),
+          gU = Math.round(255 * this.g),
+          tU = Math.round(255 * this.b);
+        if (UU) return "#" + (0, EU.ToHex)(RU) + (0, EU.ToHex)(gU) + (0, EU.ToHex)(tU);
+        const pU = Math.round(255 * this.a);
+        return "#" + (0, EU.ToHex)(RU) + (0, EU.ToHex)(gU) + (0, EU.ToHex)(tU) + (0, EU.ToHex)(pU)
       }
-      fromHexString(DD) {
-        return "#" !== DD.substring(0, 1) || 9 !== DD.length && 7 !== DD.length || (this.r = parseInt(DD.substring(1, 3), 16) / 255, this.g = parseInt(DD.substring(3, 5), 16) / 255, this.b = parseInt(DD.substring(5, 7), 16) / 255, 9 === DD.length && (this.a = parseInt(DD.substring(7, 9), 16) / 255)), this
+      fromHexString(UU) {
+        return "#" !== UU.substring(0, 1) || 9 !== UU.length && 7 !== UU.length || (this.r = parseInt(UU.substring(1, 3), 16) / 255, this.g = parseInt(UU.substring(3, 5), 16) / 255, this.b = parseInt(UU.substring(5, 7), 16) / 255, 9 === UU.length && (this.a = parseInt(UU.substring(7, 9), 16) / 255)), this
       }
       toLinearSpace() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const CD = new yD;
-        return this.toLinearSpaceToRef(CD, DD), CD
+        let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const RU = new jU;
+        return this.toLinearSpaceToRef(RU, UU), RU
       }
-      toLinearSpaceToRef(DD) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (DD.r = QD(this.r), DD.g = QD(this.g), DD.b = QD(this.b)) : (DD.r = bD(this.r), DD.g = bD(this.g), DD.b = bD(this.b)), DD.a = this.a, this
+      toLinearSpaceToRef(UU) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (UU.r = qU(this.r), UU.g = qU(this.g), UU.b = qU(this.b)) : (UU.r = TU(this.r), UU.g = TU(this.g), UU.b = TU(this.b)), UU.a = this.a, this
       }
       toGammaSpace() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const CD = new yD;
-        return this.toGammaSpaceToRef(CD, DD), CD
+        let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const RU = new jU;
+        return this.toGammaSpaceToRef(RU, UU), RU
       }
-      toGammaSpaceToRef(DD) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (DD.r = SD(this.r), DD.g = SD(this.g), DD.b = SD(this.b)) : (DD.r = wD(this.r), DD.g = wD(this.g), DD.b = wD(this.b)), DD.a = this.a, this
+      toGammaSpaceToRef(UU) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (UU.r = cU(this.r), UU.g = cU(this.g), UU.b = cU(this.b)) : (UU.r = KU(this.r), UU.g = KU(this.g), UU.b = KU(this.b)), UU.a = this.a, this
       }
-      static FromHexString(DD) {
-        return "#" !== DD.substring(0, 1) || 9 !== DD.length && 7 !== DD.length ? new yD(0, 0, 0, 0) : new yD(0, 0, 0, 1).fromHexString(DD)
+      static FromHexString(UU) {
+        return "#" !== UU.substring(0, 1) || 9 !== UU.length && 7 !== UU.length ? new jU(0, 0, 0, 0) : new jU(0, 0, 0, 1).fromHexString(UU)
       }
-      static Lerp(DD, CD, cD) {
-        return yD.LerpToRef(DD, CD, cD, new yD)
+      static Lerp(UU, RU, gU) {
+        return jU.LerpToRef(UU, RU, gU, new jU)
       }
-      static LerpToRef(DD, CD, cD, ID) {
-        return ID.r = DD.r + (CD.r - DD.r) * cD, ID.g = DD.g + (CD.g - DD.g) * cD, ID.b = DD.b + (CD.b - DD.b) * cD, ID.a = DD.a + (CD.a - DD.a) * cD, ID
+      static LerpToRef(UU, RU, gU, tU) {
+        return tU.r = UU.r + (RU.r - UU.r) * gU, tU.g = UU.g + (RU.g - UU.g) * gU, tU.b = UU.b + (RU.b - UU.b) * gU, tU.a = UU.a + (RU.a - UU.a) * gU, tU
       }
-      static Hermite(DD, CD, cD, ID, pD) {
-        const iD = pD * pD,
-          fD = pD * iD,
-          bD = 2 * fD - 3 * iD + 1,
-          QD = -2 * fD + 3 * iD,
-          wD = fD - 2 * iD + pD,
-          SD = fD - iD,
-          BD = DD.r * bD + cD.r * QD + CD.r * wD + ID.r * SD,
-          MD = DD.g * bD + cD.g * QD + CD.g * wD + ID.g * SD,
-          tD = DD.b * bD + cD.b * QD + CD.b * wD + ID.b * SD,
-          ZD = DD.a * bD + cD.a * QD + CD.a * wD + ID.a * SD;
-        return new yD(BD, MD, tD, ZD)
+      static Hermite(UU, RU, gU, tU, pU) {
+        const EU = pU * pU,
+          PU = pU * EU,
+          TU = 2 * PU - 3 * EU + 1,
+          qU = -2 * PU + 3 * EU,
+          KU = PU - 2 * EU + pU,
+          cU = PU - EU,
+          GU = UU.r * TU + gU.r * qU + RU.r * KU + tU.r * cU,
+          uU = UU.g * TU + gU.g * qU + RU.g * KU + tU.g * cU,
+          CU = UU.b * TU + gU.b * qU + RU.b * KU + tU.b * cU,
+          hU = UU.a * TU + gU.a * qU + RU.a * KU + tU.a * cU;
+        return new jU(GU, uU, CU, hU)
       }
-      static Hermite1stDerivative(DD, CD, cD, ID, pD) {
-        const iD = new yD;
-        return this.Hermite1stDerivativeToRef(DD, CD, cD, ID, pD, iD), iD
+      static Hermite1stDerivative(UU, RU, gU, tU, pU) {
+        const EU = new jU;
+        return this.Hermite1stDerivativeToRef(UU, RU, gU, tU, pU, EU), EU
       }
-      static Hermite1stDerivativeToRef(DD, CD, cD, ID, pD, iD) {
-        const fD = pD * pD;
-        iD.r = 6 * (fD - pD) * DD.r + (3 * fD - 4 * pD + 1) * CD.r + 6 * (-fD + pD) * cD.r + (3 * fD - 2 * pD) * ID.r, iD.g = 6 * (fD - pD) * DD.g + (3 * fD - 4 * pD + 1) * CD.g + 6 * (-fD + pD) * cD.g + (3 * fD - 2 * pD) * ID.g, iD.b = 6 * (fD - pD) * DD.b + (3 * fD - 4 * pD + 1) * CD.b + 6 * (-fD + pD) * cD.b + (3 * fD - 2 * pD) * ID.b, iD.a = 6 * (fD - pD) * DD.a + (3 * fD - 4 * pD + 1) * CD.a + 6 * (-fD + pD) * cD.a + (3 * fD - 2 * pD) * ID.a
+      static Hermite1stDerivativeToRef(UU, RU, gU, tU, pU, EU) {
+        const PU = pU * pU;
+        EU.r = 6 * (PU - pU) * UU.r + (3 * PU - 4 * pU + 1) * RU.r + 6 * (-PU + pU) * gU.r + (3 * PU - 2 * pU) * tU.r, EU.g = 6 * (PU - pU) * UU.g + (3 * PU - 4 * pU + 1) * RU.g + 6 * (-PU + pU) * gU.g + (3 * PU - 2 * pU) * tU.g, EU.b = 6 * (PU - pU) * UU.b + (3 * PU - 4 * pU + 1) * RU.b + 6 * (-PU + pU) * gU.b + (3 * PU - 2 * pU) * tU.b, EU.a = 6 * (PU - pU) * UU.a + (3 * PU - 4 * pU + 1) * RU.a + 6 * (-PU + pU) * gU.a + (3 * PU - 2 * pU) * tU.a
       }
-      static FromColor3(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new yD(DD.r, DD.g, DD.b, CD)
+      static FromColor3(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new jU(UU.r, UU.g, UU.b, RU)
       }
-      static FromArray(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new yD(DD[CD], DD[CD + 1], DD[CD + 2], DD[CD + 3])
+      static FromArray(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new jU(UU[RU], UU[RU + 1], UU[RU + 2], UU[RU + 3])
       }
-      static FromArrayToRef(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          cD = arguments.length > 2 ? arguments[2] : void 0;
-        cD.r = DD[CD], cD.g = DD[CD + 1], cD.b = DD[CD + 2], cD.a = DD[CD + 3]
+      static FromArrayToRef(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          gU = arguments.length > 2 ? arguments[2] : void 0;
+        gU.r = UU[RU], gU.g = UU[RU + 1], gU.b = UU[RU + 2], gU.a = UU[RU + 3]
       }
-      static FromInts(DD, CD, cD, ID) {
-        return new yD(DD / 255, CD / 255, cD / 255, ID / 255)
+      static FromInts(UU, RU, gU, tU) {
+        return new jU(UU / 255, RU / 255, gU / 255, tU / 255)
       }
-      static CheckColors4(DD, CD) {
-        if (DD.length === 3 * CD) {
-          const CD = [];
-          for (let cD = 0; cD < DD.length; cD += 3) {
-            const ID = cD / 3 * 4;
-            CD[ID] = DD[cD], CD[ID + 1] = DD[cD + 1], CD[ID + 2] = DD[cD + 2], CD[ID + 3] = 1
+      static CheckColors4(UU, RU) {
+        if (UU.length === 3 * RU) {
+          const RU = [];
+          for (let gU = 0; gU < UU.length; gU += 3) {
+            const tU = gU / 3 * 4;
+            RU[tU] = UU[gU], RU[tU + 1] = UU[gU + 1], RU[tU + 2] = UU[gU + 2], RU[tU + 3] = 1
           }
-          return CD
+          return RU
         }
-        return DD
+        return UU
       }
     }
-    yD._V8PerformanceHack = new yD(.5, .5, .5, .5);
-    class MD {}
-    MD.Color3 = (0, ID.b)(3, BD.Black), MD.Color4 = (0, ID.b)(3, (() => new yD(0, 0, 0, 0)));
-    let tD = !1;
+    jU._V8PerformanceHack = new jU(.5, .5, .5, .5);
+    class uU {}
+    uU.Color3 = (0, tU.e)(3, GU.Black), uU.Color4 = (0, tU.e)(3, (() => new jU(0, 0, 0, 0)));
+    let CU = !1;
 
-    function ZD() {
-      tD || (tD = !0, Object.defineProperties(BD.prototype, {
+    function hU() {
+      CU || (CU = !0, Object.defineProperties(GU.prototype, {
         dimension: {
           value: [3]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(yD.prototype, {
+      }), Object.defineProperties(jU.prototype, {
         dimension: {
           value: [4]
         },
         rank: {
           value: 1
         }
-      }), (0, fD.d)("BABYLON.Color3", BD), (0, fD.d)("BABYLON.Color4", yD))
+      }), (0, PU.g)("BABYLON.Color3", GU), (0, PU.g)("BABYLON.Color4", jU))
     }
   },
-  36449: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => iD,
-      g: () => ID,
-      h: () => pD
+  36602: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => EU,
+      h: () => tU,
+      k: () => pU
     });
-    const ID = 1 / 2.2,
-      pD = 2.2;
+    const tU = 1 / 2.2,
+      pU = 2.2;
     Math.sqrt(5);
-    let iD = .001
+    let EU = .001
   },
-  36479: (DD, CD, cD) => {
-    function ID(DD) {
-      return parseInt(DD.toString().replace(/\W/g, ""))
+  36626: (UU, RU, gU) => {
+    function tU(UU) {
+      return parseInt(UU.toString().replace(/\W/g, ""))
     }
 
-    function pD(DD, CD) {
-      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
-      return Math.abs(DD - CD) <= cD
+    function pU(UU, RU) {
+      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
+      return Math.abs(UU - RU) <= gU
     }
 
-    function iD(DD, CD, cD) {
-      let ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
-      return DD < CD - ID || DD > cD + ID
+    function EU(UU, RU, gU) {
+      let tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
+      return UU < RU - tU || UU > gU + tU
     }
 
-    function fD(DD, CD) {
-      return DD === CD ? DD : Math.random() * (CD - DD) + DD
+    function PU(UU, RU) {
+      return UU === RU ? UU : Math.random() * (RU - UU) + UU
     }
 
-    function bD(DD, CD, cD) {
-      return DD + (CD - DD) * cD
+    function TU(UU, RU, gU) {
+      return UU + (RU - UU) * gU
     }
 
-    function QD(DD, CD, cD) {
-      let ID = oD(CD - DD, 360);
-      return ID > 180 && (ID -= 360), DD + ID * yD(cD)
+    function qU(UU, RU, gU) {
+      let tU = QU(RU - UU, 360);
+      return tU > 180 && (tU -= 360), UU + tU * jU(gU)
     }
 
-    function wD(DD, CD, cD) {
-      let ID;
-      return ID = DD != CD ? yD((cD - DD) / (CD - DD)) : 0, ID
+    function KU(UU, RU, gU) {
+      let tU;
+      return tU = UU != RU ? jU((gU - UU) / (RU - UU)) : 0, tU
     }
 
-    function SD(DD, CD, cD, ID, pD) {
-      const iD = pD * pD,
-        fD = pD * iD;
-      return DD * (2 * fD - 3 * iD + 1) + cD * (-2 * fD + 3 * iD) + CD * (fD - 2 * iD + pD) + ID * (fD - iD)
+    function cU(UU, RU, gU, tU, pU) {
+      const EU = pU * pU,
+        PU = pU * EU;
+      return UU * (2 * PU - 3 * EU + 1) + gU * (-2 * PU + 3 * EU) + RU * (PU - 2 * EU + pU) + tU * (PU - EU)
     }
 
-    function BD(DD, CD, cD, ID, pD) {
-      const iD = pD * pD;
-      return 6 * (iD - pD) * DD + (3 * iD - 4 * pD + 1) * CD + 6 * (-iD + pD) * cD + (3 * iD - 2 * pD) * ID
+    function GU(UU, RU, gU, tU, pU) {
+      const EU = pU * pU;
+      return 6 * (EU - pU) * UU + (3 * EU - 4 * pU + 1) * RU + 6 * (-EU + pU) * gU + (3 * EU - 2 * pU) * tU
     }
 
-    function yD(DD) {
-      let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return Math.min(cD, Math.max(CD, DD))
+    function jU(UU) {
+      let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return Math.min(gU, Math.max(RU, UU))
     }
 
-    function MD(DD) {
-      return DD -= 2 * Math.PI * Math.floor((DD + Math.PI) / (2 * Math.PI))
+    function uU(UU) {
+      return UU -= 2 * Math.PI * Math.floor((UU + Math.PI) / (2 * Math.PI))
     }
 
-    function tD(DD) {
-      const CD = DD.toString(16);
-      return DD <= 15 ? ("0" + CD).toUpperCase() : CD.toUpperCase()
+    function CU(UU) {
+      const RU = UU.toString(16);
+      return UU <= 15 ? ("0" + RU).toUpperCase() : RU.toUpperCase()
     }
 
-    function ZD(DD) {
-      if (Math.log2) return Math.floor(Math.log2(DD));
-      if (DD < 0) return NaN;
-      if (0 === DD) return -1 / 0;
-      let CD = 0;
-      if (DD < 1) {
-        for (; DD < 1;) CD++, DD *= 2;
-        CD = -CD
-      } else if (DD > 1)
-        for (; DD > 1;) CD++, DD = Math.floor(DD / 2);
-      return CD
+    function hU(UU) {
+      if (Math.log2) return Math.floor(Math.log2(UU));
+      if (UU < 0) return NaN;
+      if (0 === UU) return -1 / 0;
+      let RU = 0;
+      if (UU < 1) {
+        for (; UU < 1;) RU++, UU *= 2;
+        RU = -RU
+      } else if (UU > 1)
+        for (; UU > 1;) RU++, UU = Math.floor(UU / 2);
+      return RU
     }
 
-    function oD(DD, CD) {
-      return DD - Math.floor(DD / CD) * CD
+    function QU(UU, RU) {
+      return UU - Math.floor(UU / RU) * RU
     }
 
-    function vD(DD, CD, cD) {
-      return (DD - CD) / (cD - CD)
+    function eU(UU, RU, gU) {
+      return (UU - RU) / (gU - RU)
     }
 
-    function ND(DD, CD, cD) {
-      return DD * (cD - CD) + CD
+    function WU(UU, RU, gU) {
+      return UU * (gU - RU) + RU
     }
 
-    function gD(DD, CD) {
-      let cD = oD(CD - DD, 360);
-      return cD > 180 && (cD -= 360), cD
+    function fU(UU, RU) {
+      let gU = QU(RU - UU, 360);
+      return gU > 180 && (gU -= 360), gU
     }
 
-    function XD(DD, CD) {
-      const cD = oD(DD, 2 * CD);
-      return CD - Math.abs(cD - CD)
+    function xU(UU, RU) {
+      const gU = QU(UU, 2 * RU);
+      return RU - Math.abs(gU - RU)
     }
 
-    function mD(DD, CD, cD) {
-      let ID = yD(cD);
-      return ID = -2 * ID * ID * ID + 3 * ID * ID, CD * ID + DD * (1 - ID)
+    function mU(UU, RU, gU) {
+      let tU = jU(gU);
+      return tU = -2 * tU * tU * tU + 3 * tU * tU, RU * tU + UU * (1 - tU)
     }
 
-    function nD(DD, CD, cD) {
-      let ID;
-      return ID = Math.abs(CD - DD) <= cD ? CD : DD + Math.sign(CD - DD) * cD, ID
+    function IU(UU, RU, gU) {
+      let tU;
+      return tU = Math.abs(RU - UU) <= gU ? RU : UU + Math.sign(RU - UU) * gU, tU
     }
 
-    function OD(DD, CD, cD) {
-      const ID = gD(DD, CD);
-      let pD;
-      return pD = -cD < ID && ID < cD ? CD : nD(DD, CD = DD + ID, cD), pD
+    function JU(UU, RU, gU) {
+      const tU = fU(UU, RU);
+      let pU;
+      return pU = -gU < tU && tU < gU ? RU : IU(UU, RU = UU + tU, gU), pU
     }
 
-    function PD(DD, CD, cD) {
-      return (DD - CD) / (cD - CD)
+    function wU(UU, RU, gU) {
+      return (UU - RU) / (gU - RU)
     }
 
-    function HD(DD, CD, cD) {
-      return (cD - CD) * DD + CD
+    function nU(UU, RU, gU) {
+      return (gU - RU) * UU + RU
     }
 
-    function UD(DD, CD) {
-      const cD = DD % CD;
-      return 0 === cD ? CD : UD(CD, cD)
+    function bU(UU, RU) {
+      const gU = UU % RU;
+      return 0 === gU ? RU : bU(RU, gU)
     }
-    cD.r(CD), cD.d(CD, {
-      Clamp: () => yD,
-      DeltaAngle: () => gD,
-      Denormalize: () => ND,
-      ExtractAsInt: () => ID,
-      Hermite: () => SD,
-      Hermite1stDerivative: () => BD,
-      HighestCommonFactor: () => UD,
-      ILog2: () => ZD,
-      InverseLerp: () => wD,
-      Lerp: () => bD,
-      LerpAngle: () => QD,
-      MoveTowards: () => nD,
-      MoveTowardsAngle: () => OD,
-      Normalize: () => vD,
-      NormalizeRadians: () => MD,
-      OutsideRange: () => iD,
-      PercentToRange: () => HD,
-      PingPong: () => XD,
-      RandomRange: () => fD,
-      RangeToPercent: () => PD,
-      Repeat: () => oD,
-      SmoothStep: () => mD,
-      ToHex: () => tD,
-      WithinEpsilon: () => pD
+    gU.r(RU), gU.d(RU, {
+      Clamp: () => jU,
+      DeltaAngle: () => fU,
+      Denormalize: () => WU,
+      ExtractAsInt: () => tU,
+      Hermite: () => cU,
+      Hermite1stDerivative: () => GU,
+      HighestCommonFactor: () => bU,
+      ILog2: () => hU,
+      InverseLerp: () => KU,
+      Lerp: () => TU,
+      LerpAngle: () => qU,
+      MoveTowards: () => IU,
+      MoveTowardsAngle: () => JU,
+      Normalize: () => eU,
+      NormalizeRadians: () => uU,
+      OutsideRange: () => EU,
+      PercentToRange: () => nU,
+      PingPong: () => xU,
+      RandomRange: () => PU,
+      RangeToPercent: () => wU,
+      Repeat: () => QU,
+      SmoothStep: () => mU,
+      ToHex: () => CU,
+      WithinEpsilon: () => pU
     })
   },
-  36452: (DD, CD, cD) => {
-    function ID(DD, CD) {
-      const cD = [];
-      for (let ID = 0; ID < DD; ++ID) cD.push(CD());
-      return cD
+  36610: (UU, RU, gU) => {
+    function tU(UU, RU) {
+      const gU = [];
+      for (let tU = 0; tU < UU; ++tU) gU.push(RU());
+      return gU
     }
 
-    function pD(DD, CD) {
-      return ID(DD, CD)
+    function pU(UU, RU) {
+      return tU(UU, RU)
     }
-    cD.d(CD, {
-      b: () => ID,
-      d: () => pD,
-      f: () => fD
+    gU.d(RU, {
+      e: () => tU,
+      f: () => pU,
+      h: () => PU
     });
-    const iD = ["push", "splice", "pop", "shift", "unshift"];
+    const EU = ["push", "splice", "pop", "shift", "unshift"];
 
-    function fD(DD, CD) {
-      const cD = iD.map((cD => function(DD, CD, cD) {
-        const ID = DD[CD];
-        if ("function" !== typeof ID) return null;
-        const pD = function() {
-          const ID = DD.length,
-            iD = pD.previous.apply(DD, arguments);
-          return cD(CD, ID), iD
+    function PU(UU, RU) {
+      const gU = EU.map((gU => function(UU, RU, gU) {
+        const tU = UU[RU];
+        if ("function" !== typeof tU) return null;
+        const pU = function() {
+          const tU = UU.length,
+            EU = pU.previous.apply(UU, arguments);
+          return gU(RU, tU), EU
         };
-        return ID.next = pD, pD.previous = ID, DD[CD] = pD, () => {
-          const cD = pD.previous;
-          if (!cD) return;
-          const ID = pD.next;
-          ID ? (cD.next = ID, ID.previous = cD) : (cD.next = void 0, DD[CD] = cD), pD.next = void 0, pD.previous = void 0
+        return tU.next = pU, pU.previous = tU, UU[RU] = pU, () => {
+          const gU = pU.previous;
+          if (!gU) return;
+          const tU = pU.next;
+          tU ? (gU.next = tU, tU.previous = gU) : (gU.next = void 0, UU[RU] = gU), pU.next = void 0, pU.previous = void 0
         }
-      }(DD, cD, CD)));
+      }(UU, gU, RU)));
       return () => {
-        for (const DD of cD) DD?.()
+        for (const UU of gU) UU?.()
       }
     }
   },
-  36488: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => iD,
-      d: () => pD
+  36639: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => EU,
+      g: () => pU
     });
-    const ID = {};
+    const tU = {};
 
-    function pD(DD, CD) {
-      ID[DD] = CD
+    function pU(UU, RU) {
+      tU[UU] = RU
     }
 
-    function iD(DD) {
-      return ID[DD]
+    function EU(UU) {
+      return tU[UU]
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

@@ -1,279 +1,279 @@
 export const id = 260;
 export const ids = [260];
 export const modules = {
-  39815: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => iD,
-      e: () => fD
+  40124: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => EU,
+      f: () => PU
     });
-    var ID = cD(1922);
-    let pD = !1;
+    var tU = gU(1808);
+    let pU = !1;
 
-    function iD() {
-      pD = !0
+    function EU() {
+      pU = !0
     }
 
-    function fD() {
-      pD && (pD = !1, (0, ID.b)())
+    function PU() {
+      pU && (pU = !1, (0, tU.c)())
     }
   },
-  39822: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => bD,
-      h: () => fD
+  40140: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => TU,
+      e: () => PU
     });
-    var ID = cD(3090);
-    let pD = null,
-      iD = null;
+    var tU = gU(2973);
+    let pU = null,
+      EU = null;
 
-    function fD() {
-      return iD ??= cD.e(208).then((() => cD(35741))).then((DD => {
+    function PU() {
+      return EU ??= gU.e(208).then((() => gU(35922))).then((UU => {
         let {
-          ITEM_SPRITES: CD,
-          ITEM_SPRITES_WITHOUT_FILE: cD,
-          ITEM_FILES_WITHOUT_SPRITE: iD
-        } = DD;
-        pD = function(DD, CD, cD) {
-          const pD = new Set,
-            iD = (0, ID.z)(CD);
-          let fD = 0;
-          for (const [ID, bD] of DD.entries()) ID === iD[fD] ? fD++ : pD.add(bD);
-          if ("" !== cD)
-            for (const bD of cD.split(ID.v)) pD.add(bD);
-          return pD
-        }(CD.split(ID.v), cD, iD)
-      }), (DD => {
-        throw iD = null, DD
-      })), iD
+          ITEM_SPRITES: RU,
+          ITEM_SPRITES_WITHOUT_FILE: gU,
+          ITEM_FILES_WITHOUT_SPRITE: EU
+        } = UU;
+        pU = function(UU, RU, gU) {
+          const pU = new Set,
+            EU = (0, tU.s)(RU);
+          let PU = 0;
+          for (const [tU, TU] of UU.entries()) tU === EU[PU] ? PU++ : pU.add(TU);
+          if ("" !== gU)
+            for (const TU of gU.split(tU.q)) pU.add(TU);
+          return pU
+        }(RU.split(tU.q), gU, EU)
+      }), (UU => {
+        throw EU = null, UU
+      })), EU
     }
 
-    function bD(DD) {
-      var CD, cD;
-      return null !== (CD = null === (cD = pD) || void 0 === cD ? void 0 : cD.has(DD)) && void 0 !== CD && CD
+    function TU(UU) {
+      var RU, gU;
+      return null !== (RU = null === (gU = pU) || void 0 === gU ? void 0 : gU.has(UU)) && void 0 !== RU && RU
     }
   },
-  39808: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      loadIcons: () => xD,
-      setIconFileOverrides: () => qD,
-      wasmIconLookups: () => TD,
-      wasmIconQueries: () => LD
+  40121: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      loadIcons: () => oU,
+      setIconFileOverrides: () => ZU,
+      wasmIconLookups: () => HU,
+      wasmIconQueries: () => dU
     });
-    var ID = cD(4288),
-      pD = cD(4272),
-      iD = cD(39815),
-      fD = cD(1922),
-      bD = cD(1905),
-      QD = cD(3083),
-      wD = cD(3090);
-    let SD = null,
-      BD = null;
+    var tU = gU(4162),
+      pU = gU(4131),
+      EU = gU(40124),
+      PU = gU(1808),
+      TU = gU(1800),
+      qU = gU(2969),
+      KU = gU(2973);
+    let cU = null,
+      GU = null;
 
-    function yD(DD) {
-      const CD = DD.startsWith(wD.m),
-        [cD, ID = cD, pD = cD] = (CD ? DD.slice(wD.m.length) : DD).split(wD.k);
+    function jU(UU) {
+      const RU = UU.startsWith(KU.i),
+        [gU, tU = gU, pU = gU] = (RU ? UU.slice(KU.i.length) : UU).split(KU.f);
       return {
-        top: cD,
-        left: ID,
-        right: pD,
-        half: CD
+        top: gU,
+        left: tU,
+        right: pU,
+        half: RU
       }
     }
 
-    function MD(DD) {
-      const CD = null === SD ? void 0 : (0, QD.e)(DD),
-        cD = void 0 === CD ? 0 : SD.codes[CD];
-      return 0 === cD ? void 0 : SD.pool[cD - 1]
+    function uU(UU) {
+      const RU = null === cU ? void 0 : (0, qU.c)(UU),
+        gU = void 0 === RU ? 0 : cU.codes[RU];
+      return 0 === gU ? void 0 : cU.pool[gU - 1]
     }
-    var tD = cD(3076),
-      ZD = cD(4259),
-      oD = cD(4284),
-      vD = cD(39817);
-    const ND = "item:";
-    let gD = null,
-      XD = null,
-      mD = null,
-      nD = null,
-      OD = !1,
-      PD = !1,
-      HD = null,
-      UD = 0;
+    var CU = gU(2966),
+      hU = gU(4120),
+      QU = gU(4153),
+      eU = gU(40133);
+    const WU = "item:";
+    let fU = null,
+      xU = null,
+      mU = null,
+      IU = null,
+      JU = !1,
+      wU = !1,
+      nU = null,
+      bU = 0;
 
-    function xD() {
-      return PD || (PD = !0, (0, oD.i)().then((DD => {
-        DD && (0, fD.b)()
-      }))), mD ??= Promise.all([(0, tD.e)(), (BD ??= cD.e(1).then((() => cD(41770))).then((DD => {
+    function oU() {
+      return wU || (wU = !0, (0, QU.g)().then((UU => {
+        UU && (0, PU.c)()
+      }))), mU ??= Promise.all([(0, CU.f)(), (GU ??= gU.e(1).then((() => gU(41972))).then((UU => {
         let {
-          BLOCK_FACE_RUNS: CD,
-          BLOCK_FACES: cD,
-          MAX_FACE_ITEM_ID: ID
-        } = DD;
-        SD = {
-          codes: (0, wD.A)(CD, ID + 1),
-          pool: cD.split(wD.v).map(yD)
+          BLOCK_FACE_RUNS: RU,
+          BLOCK_FACES: gU,
+          MAX_FACE_ITEM_ID: tU
+        } = UU;
+        cU = {
+          codes: (0, KU.t)(RU, tU + 1),
+          pool: gU.split(KU.q).map(jU)
         }
-      }), (DD => {
-        throw BD = null, DD
-      })), BD), (0, vD.d)(), cD.e(189).then((() => cD(9062)))]).then((DD => {
-        let [, , CD, cD] = DD;
-        CD.followBundledTextures(), gD = CD, XD = cD, (0, fD.b)()
-      }), (DD => {
-        mD = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", DD)
-      })), mD
+      }), (UU => {
+        throw GU = null, UU
+      })), GU), (0, eU.d)(), gU.e(189).then((() => gU(9009)))]).then((UU => {
+        let [, , RU, gU] = UU;
+        RU.followBundledTextures(), fU = RU, xU = gU, (0, PU.c)()
+      }), (UU => {
+        mU = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", UU)
+      })), mU
     }
 
-    function qD(DD) {
-      HD = DD, UD++, (0, fD.b)()
+    function ZU(UU) {
+      nU = UU, bU++, (0, PU.c)()
     }
 
-    function JD(DD) {
-      var CD, cD;
-      return null !== (CD = null === (cD = HD) || void 0 === cD ? void 0 : cD.itemSprite(DD)) && void 0 !== CD ? CD : gD.itemSpriteUrl(DD)
+    function aU(UU) {
+      var RU, gU;
+      return null !== (RU = null === (gU = nU) || void 0 === gU ? void 0 : gU.itemSprite(UU)) && void 0 !== RU ? RU : fU.itemSpriteUrl(UU)
     }
 
-    function KD(DD) {
-      var CD, cD;
-      return null !== (CD = null === (cD = HD) || void 0 === cD ? void 0 : cD.blockTexture(DD)) && void 0 !== CD ? CD : gD.blockTextureUrl(DD)
+    function YU(UU) {
+      var RU, gU;
+      return null !== (RU = null === (gU = nU) || void 0 === gU ? void 0 : gU.blockTexture(UU)) && void 0 !== RU ? RU : fU.blockTextureUrl(UU)
     }
 
-    function aD(DD) {
-      var CD;
-      return null !== (CD = (0, tD.d)(DD)) && void 0 !== CD ? CD : DD
+    function BU(UU) {
+      var RU;
+      return null !== (RU = (0, CU.c)(UU)) && void 0 !== RU ? RU : UU
     }
 
-    function VD(DD, CD) {
-      var cD, ID, pD;
-      return null !== (cD = null !== (ID = null !== (pD = KD(DD)) && void 0 !== pD ? pD : null === CD || void 0 === CD ? void 0 : CD.rotated[DD]) && void 0 !== ID ? ID : null === CD || void 0 === CD ? void 0 : CD.animated[DD]) && void 0 !== cD ? cD : gD.notFoundUrl()
+    function VU(UU, RU) {
+      var gU, tU, pU;
+      return null !== (gU = null !== (tU = null !== (pU = YU(UU)) && void 0 !== pU ? pU : null === RU || void 0 === RU ? void 0 : RU.rotated[UU]) && void 0 !== tU ? tU : null === RU || void 0 === RU ? void 0 : RU.animated[UU]) && void 0 !== gU ? gU : fU.notFoundUrl()
     }
 
-    function zD(DD) {
-      return void 0 !== (0, QD.e)(DD) ? DD : /^[1-9][0-9]*$/.test(DD) ? (0, QD.h)(Number(DD)) : void 0
+    function rU(UU) {
+      return void 0 !== (0, qU.c)(UU) ? UU : /^[1-9][0-9]*$/.test(UU) ? (0, qU.f)(Number(UU)) : void 0
     }
 
-    function jD(DD) {
-      var CD;
-      if (DD.startsWith(ND)) {
-        var cD;
-        const CD = (0, tD.d)(DD.slice(5));
-        return null !== (cD = void 0 === CD ? null : JD(CD)) && void 0 !== cD ? cD : gD.notFoundUrl()
+    function XU(UU) {
+      var RU;
+      if (UU.startsWith(WU)) {
+        var gU;
+        const RU = (0, CU.c)(UU.slice(5));
+        return null !== (gU = void 0 === RU ? null : aU(RU)) && void 0 !== gU ? gU : fU.notFoundUrl()
       }
-      return null !== (CD = gD.particleUrl(DD)) && void 0 !== CD ? CD : gD.notFoundUrl()
+      return null !== (RU = fU.particleUrl(UU)) && void 0 !== RU ? RU : fU.notFoundUrl()
     }
 
-    function lD(DD, CD) {
-      return "StairsBlock" === DD ? DD : CD ? "SlabBlock" : "CubeBlock"
+    function vU(UU, RU) {
+      return "StairsBlock" === UU ? UU : RU ? "SlabBlock" : "CubeBlock"
     }
-    const LD = {
-        async blockIcon(DD) {
-          var CD;
+    const dU = {
+        async blockIcon(UU) {
+          var RU;
           let {
-            name: ID,
-            size: pD,
-            lineWidth: iD
-          } = DD;
-          await xD();
-          const bD = null !== (CD = zD(ID)) && void 0 !== CD ? CD : ID,
-            wD = (0, oD.c)(bD, pD, iD);
-          if (null !== wD) return wD;
-          const SD = MD(bD),
-            BD = (0, QD.e)(bD),
-            yD = void 0 === BD || null === XD ? void 0 : XD.itemTypeNameOf(BD);
-          if (null === gD || void 0 === SD) return "";
-          const tD = [SD.top, SD.left, SD.right].some((DD => null === KD(DD))),
-            vD = tD ? await (nD ??= cD.e(201).then((() => cD(33733))).then((DD => (OD && (OD = !1, (0, fD.b)()), {
-              rotated: DD.rotatedBlockTextures,
-              animated: DD.animatedBlockTextures
-            })), (DD => (nD = null, OD = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", DD), null))), nD) : null;
-          if (tD && null === vD) return "";
-          const ND = {
-              top: VD(SD.top, vD),
-              left: VD(SD.left, vD),
-              right: VD(SD.right, vD),
-              itemType: lD(yD, SD.half)
+            name: tU,
+            size: pU,
+            lineWidth: EU
+          } = UU;
+          await oU();
+          const TU = null !== (RU = rU(tU)) && void 0 !== RU ? RU : tU,
+            KU = (0, QU.b)(TU, pU, EU);
+          if (null !== KU) return KU;
+          const cU = uU(TU),
+            GU = (0, qU.c)(TU),
+            jU = void 0 === GU || null === xU ? void 0 : xU.itemTypeNameOf(GU);
+          if (null === fU || void 0 === cU) return "";
+          const CU = [cU.top, cU.left, cU.right].some((UU => null === YU(UU))),
+            eU = CU ? await (IU ??= gU.e(201).then((() => gU(33915))).then((UU => (JU && (JU = !1, (0, PU.c)()), {
+              rotated: UU.rotatedBlockTextures,
+              animated: UU.animatedBlockTextures
+            })), (UU => (IU = null, JU = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", UU), null))), IU) : null;
+          if (CU && null === eU) return "";
+          const WU = {
+              top: VU(cU.top, eU),
+              left: VU(cU.left, eU),
+              right: VU(cU.right, eU),
+              itemType: vU(jU, cU.half)
             },
-            mD = 0 === UD ? bD : `${bD}#${UD}`;
-          return (await (0, ZD.d)()).drawBlockIconUrl(mD, pD, iD, (() => ND))
+            mU = 0 === bU ? TU : `${TU}#${bU}`;
+          return (await (0, hU.e)()).drawBlockIconUrl(mU, pU, EU, (() => WU))
         }
       },
-      TD = {
-        itemIcon: function(DD) {
-          var CD, cD;
-          if (null === gD) return xD(), bD.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(DD);
-          if ((0, pD.h)(DD)) return {
+      HU = {
+        itemIcon: function(UU) {
+          var RU, gU;
+          if (null === fU) return oU(), TU.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(UU);
+          if ((0, pU.k)(UU)) return {
             kind: "icon",
-            url: null !== (cD = gD.ingameIconUrl(DD)) && void 0 !== cD ? cD : gD.notFoundUrl()
+            url: null !== (gU = fU.ingameIconUrl(UU)) && void 0 !== gU ? gU : fU.notFoundUrl()
           };
-          if (DD.startsWith(pD.c)) return {
+          if (UU.startsWith(pU.e)) return {
             kind: "icon",
-            url: jD(DD.slice(pD.c.length))
+            url: XU(UU.slice(pU.e.length))
           };
-          if (0 === (0, QD.l)()) return (0, iD.c)(), bD.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(DD);
-          const fD = null !== (CD = zD(DD)) && void 0 !== CD ? CD : DD,
-            wD = (0, QD.e)(fD),
-            SD = void 0 === wD ? void 0 : XD.itemTypeNameOf(wD);
-          if (void 0 !== MD(fD)) return {
+          if (0 === (0, qU.g)()) return (0, EU.c)(), TU.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(UU);
+          const PU = null !== (RU = rU(UU)) && void 0 !== RU ? RU : UU,
+            KU = (0, qU.c)(PU),
+            cU = void 0 === KU ? void 0 : xU.itemTypeNameOf(KU);
+          if (void 0 !== uU(PU)) return {
             kind: "drawnBlock"
           };
-          const BD = function(DD) {
-            var CD;
-            return null !== (CD = JD(aD(DD))) && void 0 !== CD ? CD : gD.notFoundUrl()
-          }(fD);
-          if ((0, oD.f)(fD) && ! function(DD) {
-              return null !== HD && (null !== HD.itemSprite(aD(DD)) || null !== HD.model(DD))
-            }(fD)) return {
+          const GU = function(UU) {
+            var RU;
+            return null !== (RU = aU(BU(UU))) && void 0 !== RU ? RU : fU.notFoundUrl()
+          }(PU);
+          if ((0, QU.e)(PU) && ! function(UU) {
+              return null !== nU && (null !== nU.itemSprite(BU(UU)) || null !== nU.model(UU))
+            }(PU)) return {
             kind: "model",
-            url: BD
+            url: GU
           };
-          if ("Gun" === SD) return {
+          if ("Gun" === cU) return {
             kind: "gun",
-            url: BD
+            url: GU
           };
-          if (void 0 !== wD && "GrayscaleArmour" === XD.itemTypeOf(wD) || Object.hasOwn(ID.b, fD)) {
-            var yD;
-            const CD = null !== (yD = (0, ID.d)(DD)) && void 0 !== yD ? yD : (0, ID.d)(fD);
-            if (CD) return {
+          if (void 0 !== KU && "GrayscaleArmour" === xU.itemTypeOf(KU) || Object.hasOwn(tU.d, PU)) {
+            var jU;
+            const RU = null !== (jU = (0, tU.h)(UU)) && void 0 !== jU ? jU : (0, tU.h)(PU);
+            if (RU) return {
               kind: "item",
-              url: BD,
-              tint: CD
+              url: GU,
+              tint: RU
             }
           }
           return {
             kind: "item",
-            url: BD
+            url: GU
           }
         },
-        hasIcon: function(DD) {
-          return void 0 !== zD(DD) || (0, pD.h)(DD) || DD.startsWith(pD.c)
+        hasIcon: function(UU) {
+          return void 0 !== rU(UU) || (0, pU.k)(UU) || UU.startsWith(pU.e)
         },
-        isItemName: function(DD) {
-          return void 0 !== zD(DD)
+        isItemName: function(UU) {
+          return void 0 !== rU(UU)
         }
       }
   },
-  39817: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => fD,
-      d: () => bD
+  40133: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => PU,
+      d: () => TU
     });
-    var ID = cD(39822);
-    let pD = null,
-      iD = null;
+    var tU = gU(40140);
+    let pU = null,
+      EU = null;
 
-    function fD() {
-      return pD ??= cD.e(58).then((() => cD(41772))).catch((DD => {
-        throw pD = null, DD
-      })), pD
+    function PU() {
+      return pU ??= gU.e(58).then((() => gU(41979))).catch((UU => {
+        throw pU = null, UU
+      })), pU
     }
 
-    function bD() {
-      return iD ??= Promise.all([fD(), (0, ID.h)()]).then((DD => {
-        let [CD] = DD;
-        return CD
-      }), (DD => {
-        throw iD = null, DD
-      })), iD
+    function TU() {
+      return EU ??= Promise.all([PU(), (0, tU.e)()]).then((UU => {
+        let [RU] = UU;
+        return RU
+      }), (UU => {
+        throw EU = null, UU
+      })), EU
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

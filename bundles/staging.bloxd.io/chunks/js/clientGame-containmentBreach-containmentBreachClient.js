@@ -1,282 +1,282 @@
 export const id = 14;
 export const ids = [14];
 export const modules = {
-  36235: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => PD,
-      h: () => nD,
-      l: () => OD,
-      n: () => tD
+  36425: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => wU,
+      d: () => IU,
+      h: () => JU,
+      j: () => CU
     });
-    var ID = cD(1049),
-      pD = cD.n(ID),
-      iD = cD(53),
-      fD = cD(62),
-      bD = cD(1365),
-      QD = cD(1442),
-      wD = cD(1356),
-      SD = cD(1280),
-      BD = cD(1192),
-      yD = cD(36240),
-      MD = cD(1093);
+    var tU = gU(1037),
+      pU = gU.n(tU),
+      EU = gU(56),
+      PU = gU(74),
+      TU = gU(1347),
+      qU = gU(1412),
+      KU = gU(1344),
+      cU = gU(1283),
+      GU = gU(1181),
+      jU = gU(36427),
+      uU = gU(1090);
 
-    function tD(DD) {
-      const [CD, cD] = (0, iD.useState)((() => (0, yD.m)(DD)));
-      return (0, iD.useEffect)((() => (cD((0, yD.m)(DD)), (0, yD.J)((() => {
-        cD((0, yD.m)(DD))
-      })))), [DD]), CD
+    function CU(UU) {
+      const [RU, gU] = (0, EU.useState)((() => (0, jU.p)(UU)));
+      return (0, EU.useEffect)((() => (gU((0, jU.p)(UU)), (0, jU.N)((() => {
+        gU((0, jU.p)(UU))
+      })))), [UU]), RU
     }
 
-    function ZD(DD, CD) {
-      "function" === typeof DD ? DD(CD) : DD && (DD.current = CD)
+    function hU(UU, RU) {
+      "function" === typeof UU ? UU(RU) : UU && (UU.current = RU)
     }
 
-    function oD(DD) {
+    function QU(UU) {
       let {
-        tutorial: CD,
-        step: cD,
-        enabled: ID = !0
-      } = DD;
-      const pD = tD(CD);
-      return ID && pD === cD
+        tutorial: RU,
+        step: gU,
+        enabled: tU = !0
+      } = UU;
+      const pU = CU(RU);
+      return tU && pU === gU
     }
 
-    function vD(DD, CD) {
-      const cD = (0, yD.n)(DD),
-        ID = cD.indexOf(CD);
-      return !cD.slice(ID + 1).some((CD => (0, yD.u)(DD, CD)))
+    function eU(UU, RU) {
+      const gU = (0, jU.t)(UU),
+        tU = gU.indexOf(RU);
+      return !gU.slice(tU + 1).some((RU => (0, jU.C)(UU, RU)))
     }
 
-    function ND(DD, CD, cD, ID) {
+    function WU(UU, RU, gU, tU) {
       let {
-        tutorial: pD,
-        step: iD,
-        waitForClick: fD = !1,
-        onPrevious: bD
-      } = DD;
-      const QD = CD && (0, yD.s)(pD, iD),
-        wD = CD && !vD(pD, iD),
-        BD = fD ? ID : cD;
-      let MD = null;
-      QD ? MD = () => {
-        null === bD || void 0 === bD || bD(), (0, yD.o)(pD, iD)
-      } : wD && (MD = () => {
-        (0, yD.l)(pD)
-      }), (0, SD.t)("popup", null !== BD && void 0 !== BD ? BD : cD, MD, CD && null !== BD, null, QD ? void 0 : "controller:menusSkipTutorial")
+        tutorial: pU,
+        step: EU,
+        waitForClick: PU = !1,
+        onPrevious: TU
+      } = UU;
+      const qU = RU && (0, jU.y)(pU, EU),
+        KU = RU && !eU(pU, EU),
+        GU = PU ? tU : gU;
+      let uU = null;
+      qU ? uU = () => {
+        null === TU || void 0 === TU || TU(), (0, jU.v)(pU, EU)
+      } : KU && (uU = () => {
+        (0, jU.m)(pU)
+      }), (0, cU.q)("popup", null !== GU && void 0 !== GU ? GU : gU, uU, RU && null !== GU, null, qU ? void 0 : "controller:menusSkipTutorial")
     }
 
-    function gD(DD) {
+    function fU(UU) {
       let {
-        tutorial: CD,
-        step: cD,
-        text: ID,
-        waitForClick: pD = !1,
-        onPrevious: iD
-      } = DD;
+        tutorial: RU,
+        step: gU,
+        text: tU,
+        waitForClick: pU = !1,
+        onPrevious: EU
+      } = UU;
       const {
-        t: fD
-      } = (0, BD.F)(), bD = vD(CD, cD);
-      return (0, MD.jsxs)(MD.Fragment, {
-        children: [(0, MD.jsx)("div", {
+        t: PU
+      } = (0, GU.B)(), TU = eU(RU, gU);
+      return (0, uU.jsxs)(uU.Fragment, {
+        children: [(0, uU.jsx)("div", {
           className: "TutorialStepText",
-          children: ID
-        }), (0, MD.jsxs)("div", {
+          children: tU
+        }), (0, uU.jsxs)("div", {
           className: "TutorialStepButtons",
-          children: [(0, yD.s)(CD, cD) && (0, MD.jsx)(QD.k, {
+          children: [(0, jU.y)(RU, gU) && (0, uU.jsx)(qU.g, {
             className: "TutorialStepButton",
             onClick: () => {
-              null === iD || void 0 === iD || iD(), (0, yD.o)(CD, cD)
+              null === EU || void 0 === EU || EU(), (0, jU.v)(RU, gU)
             },
-            children: fD("tutorial:back")
-          }), !pD && (0, MD.jsx)(QD.i, {
+            children: PU("tutorial:back")
+          }), !pU && (0, uU.jsx)(qU.e, {
             className: "TutorialStepButton",
             onClick: () => {
-              (0, yD.f)(cD)
+              (0, jU.g)(gU)
             },
             padDefaultFocus: !0,
-            children: fD(bD ? "tutorial:done" : "tutorial:next")
-          }), !bD && (0, MD.jsx)(QD.k, {
+            children: PU(TU ? "tutorial:done" : "tutorial:next")
+          }), !TU && (0, uU.jsx)(qU.g, {
             className: "TutorialStepButton",
             onClick: () => {
-              (0, yD.l)(CD)
+              (0, jU.m)(RU)
             },
-            children: fD("tutorial:skip")
+            children: PU("tutorial:skip")
           })]
         })]
       })
     }
-    const XD = 6;
+    const xU = 6;
 
-    function mD(DD) {
+    function mU(UU) {
       let {
-        rect: CD,
-        margin: cD
-      } = DD;
-      const ID = Math.max(0, CD.top - cD),
-        pD = CD.bottom + cD,
-        iD = Math.max(0, CD.left - cD),
-        fD = CD.right + cD;
-      return (0, MD.jsxs)(MD.Fragment, {
-        children: [(0, MD.jsx)("div", {
+        rect: RU,
+        margin: gU
+      } = UU;
+      const tU = Math.max(0, RU.top - gU),
+        pU = RU.bottom + gU,
+        EU = Math.max(0, RU.left - gU),
+        PU = RU.right + gU;
+      return (0, uU.jsxs)(uU.Fragment, {
+        children: [(0, uU.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
             top: 0,
             left: 0,
             right: 0,
-            height: ID
+            height: tU
           }
-        }), (0, MD.jsx)("div", {
+        }), (0, uU.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: pD,
+            top: pU,
             left: 0,
             right: 0,
             bottom: 0
           }
-        }), (0, MD.jsx)("div", {
+        }), (0, uU.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: ID,
+            top: tU,
             left: 0,
-            width: iD,
-            height: pD - ID
+            width: EU,
+            height: pU - tU
           }
-        }), (0, MD.jsx)("div", {
+        }), (0, uU.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: ID,
-            left: fD,
+            top: tU,
+            left: PU,
             right: 0,
-            height: pD - ID
+            height: pU - tU
           }
         })]
       })
     }
 
-    function nD(DD) {
+    function IU(UU) {
       let {
-        target: CD,
-        placement: cD,
-        boxRef: ID,
-        className: QD,
-        spotlightMargin: SD = XD,
-        children: BD
-      } = DD;
+        target: RU,
+        placement: gU,
+        boxRef: tU,
+        className: qU,
+        spotlightMargin: cU = xU,
+        children: GU
+      } = UU;
       const {
-        getArrowProps: yD,
-        getTooltipProps: tD,
-        setTooltipRef: ZD,
-        setTriggerRef: oD
-      } = (0, bD.c)({
-        placement: cD,
+        getArrowProps: jU,
+        getTooltipProps: CU,
+        setTooltipRef: hU,
+        setTriggerRef: QU
+      } = (0, TU.e)({
+        placement: gU,
         trigger: null,
         visible: !0,
         interactive: !0,
         closeOnOutsideClick: !1,
-        offset: [0, SD]
+        offset: [0, cU]
       });
-      (0, iD.useLayoutEffect)((() => {
-        oD(CD)
-      }), [CD, oD]);
-      const vD = function(DD, CD) {
-        const [cD, ID] = (0, iD.useState)(null);
-        return (0, iD.useEffect)((() => {
-          if (!CD || !DD) return void ID(null);
-          let cD = 0,
-            pD = null;
-          const iD = () => {
-            const CD = DD.getBoundingClientRect();
-            pD && CD.left === pD.left && CD.top === pD.top && CD.width === pD.width && CD.height === pD.height || (pD = CD, ID(CD)), cD = requestAnimationFrame(iD)
+      (0, EU.useLayoutEffect)((() => {
+        QU(RU)
+      }), [RU, QU]);
+      const eU = function(UU, RU) {
+        const [gU, tU] = (0, EU.useState)(null);
+        return (0, EU.useEffect)((() => {
+          if (!RU || !UU) return void tU(null);
+          let gU = 0,
+            pU = null;
+          const EU = () => {
+            const RU = UU.getBoundingClientRect();
+            pU && RU.left === pU.left && RU.top === pU.top && RU.width === pU.width && RU.height === pU.height || (pU = RU, tU(RU)), gU = requestAnimationFrame(EU)
           };
-          return iD(), () => {
-            cancelAnimationFrame(cD)
+          return EU(), () => {
+            cancelAnimationFrame(gU)
           }
-        }), [DD, CD]), cD
-      }(CD, !0);
-      (0, iD.useEffect)((() => {
-        null === CD || void 0 === CD || CD.scrollIntoView({
+        }), [UU, RU]), gU
+      }(RU, !0);
+      (0, EU.useEffect)((() => {
+        null === RU || void 0 === RU || RU.scrollIntoView({
           block: "nearest",
           inline: "nearest"
         })
-      }), [CD]);
-      const ND = (0, iD.useCallback)((DD => {
-        ZD(DD), ID && (ID.current = DD)
-      }), [ZD, ID]);
-      return (0, fD.createPortal)((0, MD.jsxs)(MD.Fragment, {
-        children: [vD && (0, MD.jsx)(mD, {
-          rect: vD,
-          margin: SD
-        }), (0, MD.jsxs)("div", {
-          ref: ND,
-          ...tD({
-            className: pD()("tooltip-container SmallTextLight TutorialStep", QD)
+      }), [RU]);
+      const WU = (0, EU.useCallback)((UU => {
+        hU(UU), tU && (tU.current = UU)
+      }), [hU, tU]);
+      return (0, PU.createPortal)((0, uU.jsxs)(uU.Fragment, {
+        children: [eU && (0, uU.jsx)(mU, {
+          rect: eU,
+          margin: cU
+        }), (0, uU.jsxs)("div", {
+          ref: WU,
+          ...CU({
+            className: pU()("tooltip-container SmallTextLight TutorialStep", qU)
           }),
-          children: [BD, (0, MD.jsx)("div", {
-            ...yD({
+          children: [GU, (0, uU.jsx)("div", {
+            ...jU({
               className: "tooltip-arrow"
             })
           })]
         })]
-      }), (0, wD.g)())
+      }), (0, KU.k)())
     }
-    const OD = (0, iD.forwardRef)((function(DD, CD) {
+    const JU = (0, EU.forwardRef)((function(UU, RU) {
       let {
-        placement: cD = "right",
-        children: ID,
-        ...pD
-      } = DD;
-      const fD = oD(pD),
-        bD = (0, iD.useRef)(null),
-        QD = (0, iD.useRef)(null);
-      ND(pD, fD, bD, QD);
-      const [wD, SD] = (0, iD.useState)(null), BD = ID.ref, yD = (0, iD.useCallback)((DD => {
-        QD.current = DD, SD(DD), ZD(CD, DD), ZD(BD, DD)
-      }), [CD, BD]);
-      return (0, MD.jsxs)(MD.Fragment, {
-        children: [(0, iD.cloneElement)(ID, {
-          ref: yD
-        }), fD && (0, MD.jsx)(nD, {
-          target: wD,
-          placement: cD,
-          boxRef: bD,
-          children: (0, MD.jsx)(gD, {
-            ...pD
+        placement: gU = "right",
+        children: tU,
+        ...pU
+      } = UU;
+      const PU = QU(pU),
+        TU = (0, EU.useRef)(null),
+        qU = (0, EU.useRef)(null);
+      WU(pU, PU, TU, qU);
+      const [KU, cU] = (0, EU.useState)(null), GU = tU.ref, jU = (0, EU.useCallback)((UU => {
+        qU.current = UU, cU(UU), hU(RU, UU), hU(GU, UU)
+      }), [RU, GU]);
+      return (0, uU.jsxs)(uU.Fragment, {
+        children: [(0, EU.cloneElement)(tU, {
+          ref: jU
+        }), PU && (0, uU.jsx)(IU, {
+          target: KU,
+          placement: gU,
+          boxRef: TU,
+          children: (0, uU.jsx)(fU, {
+            ...pU
           })
         })]
       })
     }));
 
-    function PD(DD) {
-      const CD = oD(DD),
-        cD = (0, iD.useRef)(null);
-      return ND(DD, CD, cD, null), CD ? (0, fD.createPortal)((0, MD.jsx)("div", {
+    function wU(UU) {
+      const RU = QU(UU),
+        gU = (0, EU.useRef)(null);
+      return WU(UU, RU, gU, null), RU ? (0, PU.createPortal)((0, uU.jsx)("div", {
         className: "TutorialCentreBackdrop",
-        children: (0, MD.jsx)("div", {
-          ref: cD,
+        children: (0, uU.jsx)("div", {
+          ref: gU,
           className: "tooltip-container SmallTextLight TutorialStep TutorialCentreStep",
-          children: (0, MD.jsx)(gD, {
-            ...DD
+          children: (0, uU.jsx)(fU, {
+            ...UU
           })
         })
-      }), (0, wD.g)()) : null
+      }), (0, KU.k)()) : null
     }
   },
-  37919: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => fD
+  38092: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => PU
     });
-    const ID = 4,
-      pD = 12e3,
-      iD = 1e3;
-    class fD {
+    const tU = 4,
+      pU = 12e3,
+      EU = 1e3;
+    class PU {
       constructor() {
         let {
-          limit: DD = ID,
-          windowMs: CD = pD,
-          spacingMs: cD = iD,
-          now: fD = Date.now
+          limit: UU = tU,
+          windowMs: RU = pU,
+          spacingMs: gU = EU,
+          now: PU = Date.now
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = DD, this.windowMs = CD, this.spacingMs = cD, this.now = fD
+        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = UU, this.windowMs = RU, this.spacingMs = gU, this.now = PU
       }
       isPacing() {
         return !this.canSendPriority() || this.isPriorityWaiting()
@@ -285,139 +285,139 @@ export const modules = {
         return this.prune(), this.sent.length < this.limit && this.now() - this.lastSentAt >= this.spacingMs
       }
       tryStart() {
-        for (const DD of this.priority) DD.flush();
+        for (const UU of this.priority) UU.flush();
         return !this.isPacing() && (this.start(), !0)
       }
       start() {
         this.prune();
-        const DD = this.now();
-        this.sent.push(DD), this.lastSentAt = DD, this.schedule(), this.notify()
+        const UU = this.now();
+        this.sent.push(UU), this.lastSentAt = UU, this.schedule(), this.notify()
       }
-      addPriority(DD) {
-        return this.priority.add(DD), () => {
-          this.priority.delete(DD)
+      addPriority(UU) {
+        return this.priority.add(UU), () => {
+          this.priority.delete(UU)
         }
       }
-      subscribe(DD) {
-        return this.listeners.add(DD), () => {
-          this.listeners.delete(DD)
+      subscribe(UU) {
+        return this.listeners.add(UU), () => {
+          this.listeners.delete(UU)
         }
       }
       dispose() {
         this.clearTimer(), this.sent = [], this.listeners.clear(), this.priority.clear()
       }
       isPriorityWaiting() {
-        for (const DD of this.priority)
-          if (DD.waiting()) return !0;
+        for (const UU of this.priority)
+          if (UU.waiting()) return !0;
         return !1
       }
       prune() {
-        const DD = this.now() - this.windowMs;
-        for (; this.sent.length > 0 && this.sent[0] <= DD;) this.sent.shift()
+        const UU = this.now() - this.windowMs;
+        for (; this.sent.length > 0 && this.sent[0] <= UU;) this.sent.shift()
       }
       schedule() {
         this.clearTimer();
-        const DD = this.now(),
-          CD = this.lastSentAt + this.spacingMs,
-          cD = Math.min(CD > DD ? CD : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
-        cD !== 1 / 0 && (this.timer = setTimeout((() => {
+        const UU = this.now(),
+          RU = this.lastSentAt + this.spacingMs,
+          gU = Math.min(RU > UU ? RU : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
+        gU !== 1 / 0 && (this.timer = setTimeout((() => {
           this.timer = null, this.prune(), this.schedule(), this.notify()
-        }), Math.max(0, cD - DD)))
+        }), Math.max(0, gU - UU)))
       }
       notify() {
-        for (const DD of this.listeners) DD()
+        for (const UU of this.listeners) UU()
       }
       clearTimer() {
         null !== this.timer && (clearTimeout(this.timer), this.timer = null)
       }
     }
   },
-  36002: (DD, CD, cD) => {
-    cD.d(CD, {
-      B: () => tD,
-      C: () => ND,
-      b: () => iD,
-      e: () => ZD,
-      i: () => oD,
-      l: () => bD,
-      p: () => yD,
-      q: () => vD,
-      t: () => BD,
-      x: () => gD
+  36197: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => EU,
+      e: () => hU,
+      g: () => QU,
+      j: () => TU,
+      n: () => jU,
+      q: () => eU,
+      r: () => GU,
+      t: () => fU,
+      w: () => CU,
+      x: () => WU
     });
-    var ID = cD(16),
-      pD = cD(20);
-    const iD = "clientGameInventoryButtonsChanged",
-      fD = new Map;
+    var tU = gU(21),
+      pU = gU(24);
+    const EU = "clientGameInventoryButtonsChanged",
+      PU = new Map;
 
-    function bD() {
-      return [...fD.values()].sort(((DD, CD) => {
-        var cD, ID;
-        return (null !== (cD = DD.order) && void 0 !== cD ? cD : 0) - (null !== (ID = CD.order) && void 0 !== ID ? ID : 0)
+    function TU() {
+      return [...PU.values()].sort(((UU, RU) => {
+        var gU, tU;
+        return (null !== (gU = UU.order) && void 0 !== gU ? gU : 0) - (null !== (tU = RU.order) && void 0 !== tU ? tU : 0)
       }))
     }
-    let QD = null;
+    let qU = null;
 
-    function wD(DD) {
-      QD = DD
+    function KU(UU) {
+      qU = UU
     }
-    let SD = !1;
+    let cU = !1;
 
-    function BD(DD) {
-      SD = !0;
+    function GU(UU) {
+      cU = !0;
       try {
-        DD.onClick()
+        UU.onClick()
       } finally {
-        SD = !1
+        cU = !1
       }
-      DD.panel && "clientGame" === ID.d.get("openInGameMenuName") && wD(DD.id)
+      UU.panel && "clientGame" === tU.b.get("openInGameMenuName") && KU(UU.id)
     }
 
-    function yD() {
-      return SD
+    function jU() {
+      return cU
     }
 
-    function MD() {
-      return bD().filter((DD => DD.panel && !DD.disabled))
+    function uU() {
+      return TU().filter((UU => UU.panel && !UU.disabled))
     }
 
-    function tD(DD) {
-      const CD = MD(),
-        cD = CD.findIndex((DD => DD.id === QD));
-      return !(cD < 0 || CD.length < 2) && (BD(CD[(cD + DD + CD.length) % CD.length]), !0)
+    function CU(UU) {
+      const RU = uU(),
+        gU = RU.findIndex((UU => UU.id === qU));
+      return !(gU < 0 || RU.length < 2) && (GU(RU[(gU + UU + RU.length) % RU.length]), !0)
     }
 
-    function ZD() {
-      return null !== QD && MD().length > 1
+    function hU() {
+      return null !== qU && uU().length > 1
     }
 
-    function oD() {
-      wD(null)
+    function QU() {
+      KU(null)
     }
 
-    function vD() {
-      "inventory" !== ID.d.get("openInGameMenuName") && wD(null)
+    function eU() {
+      "inventory" !== tU.b.get("openInGameMenuName") && KU(null)
     }
 
-    function ND() {
-      const DD = QD;
-      return wD(null), DD
+    function WU() {
+      const UU = qU;
+      return KU(null), UU
     }
 
-    function gD(DD) {
-      return fD.set(DD.id, DD), pD.i.Uo(iD, bD(), !0), () => {
-        fD.get(DD.id) === DD && (fD.delete(DD.id), pD.i.Uo(iD, bD()))
+    function fU(UU) {
+      return PU.set(UU.id, UU), pU.p.yh(EU, TU(), !0), () => {
+        PU.get(UU.id) === UU && (PU.delete(UU.id), pU.p.yh(EU, TU()))
       }
     }
   },
-  37899: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => ID
+  38076: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => tU
     });
-    class ID {
-      constructor(DD, CD, cD) {
-        this.Uo = DD, this.beforeOpen = CD, this.afterClose = cD, this.open = !1, this.Lt = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
-          this.isEnabled() && !this.Lt && (this.open = !0, this.beforeOpen(this), this.emit())
+    class tU {
+      constructor(UU, RU, gU) {
+        this.yh = UU, this.beforeOpen = RU, this.afterClose = gU, this.open = !1, this.pC = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
+          this.isEnabled() && !this.pC && (this.open = !0, this.beforeOpen(this), this.emit())
         }, this.close = () => {
           this.closePanel(!1)
         }, this.dismiss = () => {
@@ -430,300 +430,300 @@ export const modules = {
       showOrRefresh() {
         this.open ? this.emit() : this.show()
       }
-      closePanel(DD) {
-        this.open = !1, this.onClosed(), this.emit(), this.afterClose(DD)
+      closePanel(UU) {
+        this.open = !1, this.onClosed(), this.emit(), this.afterClose(UU)
       }
       onClosed() {}
       dispose() {
-        this.open = !1, this.emit(), this.Lt = !0
+        this.open = !1, this.emit(), this.pC = !0
       }
       isEnabled() {
         return !0
       }
       emit() {
-        this.Lt || (this.snapshot = this.buildSnapshot(), this.Uo(this.snapshot))
+        this.pC || (this.snapshot = this.buildSnapshot(), this.yh(this.snapshot))
       }
     }
   },
-  35996: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => bD,
-      e: () => oD,
-      i: () => vD,
-      m: () => yD,
-      o: () => wD,
-      s: () => ZD,
-      u: () => MD,
-      v: () => SD
+  36191: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => TU,
+      h: () => QU,
+      l: () => eU,
+      p: () => jU,
+      t: () => KU,
+      w: () => hU,
+      x: () => uU,
+      y: () => cU
     });
-    var ID = cD(16),
-      pD = cD(20),
-      iD = cD(1284),
-      fD = cD(36002);
-    const bD = "clientGameUiChanged";
-    let QD = null;
+    var tU = gU(21),
+      pU = gU(24),
+      EU = gU(1287),
+      PU = gU(36197);
+    const TU = "clientGameUiChanged";
+    let qU = null;
 
-    function wD() {
-      return QD
+    function KU() {
+      return qU
     }
 
-    function SD(DD, CD) {
-      const cD = {
-        content: DD,
-        menu: CD
+    function cU(UU, RU) {
+      const gU = {
+        content: UU,
+        menu: RU
       };
-      return QD = cD, pD.i.Uo(bD, QD, !0), () => {
-        QD === cD && (QD = null, tD = !1, oD(), pD.i.Uo(bD, null))
+      return qU = gU, pU.p.yh(TU, qU, !0), () => {
+        qU === gU && (qU = null, CU = !1, QU(), pU.p.yh(TU, null))
       }
     }
-    let BD = null;
+    let GU = null;
 
-    function yD() {
-      return BD
+    function jU() {
+      return GU
     }
 
-    function MD(DD) {
-      return BD = DD, () => {
-        BD === DD && (BD = null)
+    function uU(UU) {
+      return GU = UU, () => {
+        GU === UU && (GU = null)
       }
     }
-    let tD = !1;
+    let CU = !1;
 
-    function ZD() {
-      const DD = ID.d.get("openInGameMenuName");
-      "clientGame" !== DD && (tD = "inventory" === DD), (0, fD.p)() || (0, fD.i)(), (0, iD.p)(iD.e), ID.d.set({
+    function hU() {
+      const UU = tU.b.get("openInGameMenuName");
+      "clientGame" !== UU && (CU = "inventory" === UU), (0, PU.n)() || (0, PU.g)(), (0, EU.o)(EU.c), tU.b.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function oD() {
-      ND(!1)
+    function QU() {
+      WU(!1)
     }
 
-    function vD() {
-      ND(tD)
+    function eU() {
+      WU(CU)
     }
 
-    function ND(DD) {
-      "clientGame" === ID.d.get("openInGameMenuName") && ID.d.set({
-        openInGameMenuName: DD ? "inventory" : null
-      }), DD || (0, fD.i)(), tD = !1
+    function WU(UU) {
+      "clientGame" === tU.b.get("openInGameMenuName") && tU.b.set({
+        openInGameMenuName: UU ? "inventory" : null
+      }), UU || (0, PU.g)(), CU = !1
     }
   },
-  38598: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      default: () => Sc
+  38824: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      default: () => cg
     });
-    var ID = cD(53);
-    var pD = cD(16),
-      iD = cD(1886),
-      fD = cD(20),
-      bD = cD(35996),
-      QD = cD(1049),
-      wD = cD.n(QD),
-      SD = cD(1440),
-      BD = cD(1192),
-      yD = cD(4325),
-      MD = cD(1331),
-      tD = cD(1442),
-      ZD = cD(1893),
-      oD = cD(1356),
-      vD = cD(1872),
-      ND = cD(1954),
-      gD = cD(208);
-    const XD = cD(38601),
-      mD = Object.fromEntries(XD.keys().map((DD => [DD.replace(/^\.\/(.*)\.webp$/, "$1"), XD(DD)]))),
-      nD = new Set;
+    var tU = gU(56);
+    var pU = gU(21),
+      EU = gU(1786),
+      PU = gU(24),
+      TU = gU(36191),
+      qU = gU(1037),
+      KU = gU.n(qU),
+      cU = gU(1410),
+      GU = gU(1181),
+      jU = gU(4195),
+      uU = gU(1328),
+      CU = gU(1412),
+      hU = gU(1790),
+      QU = gU(1344),
+      eU = gU(1777),
+      WU = gU(1834),
+      fU = gU(201);
+    const xU = gU(38831),
+      mU = Object.fromEntries(xU.keys().map((UU => [UU.replace(/^\.\/(.*)\.webp$/, "$1"), xU(UU)]))),
+      IU = new Set;
 
-    function OD(DD, CD) {
-      const cD = CD ? DD : `${DD}-uncaught`,
-        ID = (0, gD.c)(mD, cD);
-      return void 0 !== ID || nD.has(cD) || (nD.add(cD), console.warn(`Containment Breach has no mugshot ${cD}: run tools/harnessCutouts/ContainmentMugshotCapture.ts`)), ID
+    function JU(UU, RU) {
+      const gU = RU ? UU : `${UU}-uncaught`,
+        tU = (0, fU.b)(mU, gU);
+      return void 0 !== tU || IU.has(gU) || (IU.add(gU), console.warn(`Containment Breach has no mugshot ${gU}: run tools/harnessCutouts/ContainmentMugshotCapture.ts`)), tU
     }
-    var PD = cD(1093);
-    const HD = "containmentBreach",
-      UD = "Gold Coin";
+    var wU = gU(1090);
+    const nU = "containmentBreach",
+      bU = "Gold Coin";
 
-    function xD(DD) {
+    function oU(UU) {
       let {
-        open: CD,
-        onDismiss: cD,
-        title: ID,
-        className: pD,
-        decor: iD,
-        headerExtra: fD,
-        status: bD,
-        statusRefused: QD = !1,
-        children: SD
-      } = DD;
-      const BD = `${pD}Title`;
-      return (0, PD.jsx)(yD.e, {
-        show: CD,
-        close: cD,
+        open: RU,
+        onDismiss: gU,
+        title: tU,
+        className: pU,
+        decor: EU,
+        headerExtra: PU,
+        status: TU,
+        statusRefused: qU = !1,
+        children: cU
+      } = UU;
+      const GU = `${pU}Title`;
+      return (0, wU.jsx)(jU.d, {
+        show: RU,
+        close: gU,
         togglePointerLock: !1,
         className: "ContainmentBoardOverlay",
-        children: (0, PD.jsxs)("section", {
-          className: wD()("ContainmentBoardPanel", pD),
+        children: (0, wU.jsxs)("section", {
+          className: KU()("ContainmentBoardPanel", pU),
           role: "dialog",
           "aria-modal": "true",
-          "aria-labelledby": BD,
-          children: [iD && (0, PD.jsx)("div", {
+          "aria-labelledby": GU,
+          children: [EU && (0, wU.jsx)("div", {
             className: "BoardDecor",
             "aria-hidden": "true",
-            children: iD
-          }), (0, PD.jsxs)("header", {
+            children: EU
+          }), (0, wU.jsxs)("header", {
             className: "BoardHeader",
-            children: [(0, PD.jsx)("h2", {
-              id: BD,
+            children: [(0, wU.jsx)("h2", {
+              id: GU,
               className: "VisuallyHidden",
-              children: ID
-            }), fD, (0, PD.jsx)(tD.l, {
-              onClick: cD
+              children: tU
+            }), PU, (0, wU.jsx)(CU.h, {
+              onClick: gU
             })]
-          }), (0, PD.jsx)("div", {
+          }), (0, wU.jsx)("div", {
             className: "BoardBody",
-            children: SD
-          }), void 0 !== bD && (0, PD.jsx)("footer", {
-            className: wD()("BoardStatus", {
-              Refused: QD
+            children: cU
+          }), void 0 !== TU && (0, wU.jsx)("footer", {
+            className: KU()("BoardStatus", {
+              Refused: qU
             }),
-            children: bD
+            children: TU
           })]
         })
       })
     }
 
-    function qD(DD) {
+    function ZU(UU) {
       let {
-        itemName: CD
-      } = DD;
-      return (0, PD.jsx)(ZD.d, {
-        itemName: CD,
+        itemName: RU
+      } = UU;
+      return (0, wU.jsx)(hU.c, {
+        itemName: RU,
         amount: 0
       })
     }
 
-    function JD(DD) {
+    function aU(UU) {
       let {
-        anomalyId: CD,
-        caught: cD
-      } = DD;
-      const pD = (0, ID.useRef)(null);
-      return (0, MD.b)(pD, !cD), (0, PD.jsx)("span", {
-        ref: pD,
-        className: wD()("BoardMugshot", {
-          Uncaught: !cD
+        anomalyId: RU,
+        caught: gU
+      } = UU;
+      const pU = (0, tU.useRef)(null);
+      return (0, uU.b)(pU, !gU), (0, wU.jsx)("span", {
+        ref: pU,
+        className: KU()("BoardMugshot", {
+          Uncaught: !gU
         }),
-        children: (0, PD.jsx)("img", {
-          src: OD(CD, cD),
+        children: (0, wU.jsx)("img", {
+          src: JU(RU, gU),
           alt: "",
           draggable: !1
         })
       })
     }
 
-    function KD(DD) {
+    function YU(UU) {
       let {
-        itemName: CD,
-        amount: cD,
-        Lb: ID,
-        inTile: pD = !1
-      } = DD;
-      return (0, PD.jsx)(oD.f, {
+        itemName: RU,
+        amount: gU,
+        WT: tU,
+        inTile: pU = !1
+      } = UU;
+      return (0, wU.jsx)(QU.g, {
         delayShow: 200,
-        hoverOnly: pD,
+        hoverOnly: pU,
         placement: "top",
         tooltipClassName: "BoardChipTooltipBox",
-        tooltipInner: (0, PD.jsx)(VD, {
-          itemName: CD,
-          amount: cD,
-          Lb: ID
+        tooltipInner: (0, wU.jsx)(VU, {
+          itemName: RU,
+          amount: gU,
+          WT: tU
         }),
-        children: (0, PD.jsxs)("span", {
-          className: wD()("BoardChip", {
-            Short: void 0 !== ID && ID < cD
+        children: (0, wU.jsxs)("span", {
+          className: KU()("BoardChip", {
+            Short: void 0 !== tU && tU < gU
           }),
-          children: [(0, PD.jsx)("span", {
+          children: [(0, wU.jsx)("span", {
             className: "BoardChipIcon",
-            children: (0, PD.jsx)(qD, {
-              itemName: CD
+            children: (0, wU.jsx)(ZU, {
+              itemName: RU
             })
-          }), cD.toLocaleString()]
+          }), gU.toLocaleString()]
         })
       })
     }
-    const aD = /^(.*?)\s*Salvaged from (?:an? )?(.+?)\.?$/;
+    const BU = /^(.*?)\s*Salvaged from (?:an? )?(.+?)\.?$/;
 
-    function VD(DD) {
-      var CD;
+    function VU(UU) {
+      var RU;
       let {
-        itemName: cD,
-        amount: ID,
-        Lb: pD
-      } = DD;
+        itemName: gU,
+        amount: tU,
+        WT: pU
+      } = UU;
       const {
-        t: iD
-      } = (0, BD.F)(), fD = (0, ND.g)("itemInfo", (DD => DD[cD])), {
-        lore: bD,
-        droppedBy: QD
-      } = function(DD) {
-        if ("string" !== typeof DD) return {
-          lore: DD,
+        t: EU
+      } = (0, GU.B)(), PU = (0, WU.h)("itemInfo", (UU => UU[gU])), {
+        lore: TU,
+        droppedBy: qU
+      } = function(UU) {
+        if ("string" !== typeof UU) return {
+          lore: UU,
           droppedBy: null
         };
-        const CD = aD.exec(DD);
-        return null === CD ? {
-          lore: DD,
+        const RU = BU.exec(UU);
+        return null === RU ? {
+          lore: UU,
           droppedBy: null
         } : {
-          lore: "" === CD[1] ? void 0 : CD[1],
-          droppedBy: CD[2]
+          lore: "" === RU[1] ? void 0 : RU[1],
+          droppedBy: RU[2]
         }
-      }(null === fD || void 0 === fD ? void 0 : fD.description);
-      return (0, PD.jsxs)("div", {
+      }(null === PU || void 0 === PU ? void 0 : PU.description);
+      return (0, wU.jsxs)("div", {
         className: "BoardChipTooltip",
-        children: [(0, PD.jsxs)("div", {
+        children: [(0, wU.jsxs)("div", {
           className: "BoardChipTooltipHeader",
-          children: [(0, PD.jsx)("span", {
+          children: [(0, wU.jsx)("span", {
             className: "BoardChipTooltipIcon",
-            children: (0, PD.jsx)(qD, {
-              itemName: cD
+            children: (0, wU.jsx)(ZU, {
+              itemName: gU
             })
-          }), (0, PD.jsx)(vD.c, {
-            text: null !== (CD = null === fD || void 0 === fD ? void 0 : fD.displayName) && void 0 !== CD ? CD : cD,
+          }), (0, wU.jsx)(eU.e, {
+            text: null !== (RU = null === PU || void 0 === PU ? void 0 : PU.displayName) && void 0 !== RU ? RU : gU,
             className: "BoardChipTooltipName"
           })]
-        }), (void 0 !== bD || null !== QD) && (0, PD.jsxs)("div", {
+        }), (void 0 !== TU || null !== qU) && (0, wU.jsxs)("div", {
           className: "BoardChipTooltipBody",
-          children: [void 0 !== bD && (0, PD.jsx)(vD.c, {
-            text: bD,
+          children: [void 0 !== TU && (0, wU.jsx)(eU.e, {
+            text: TU,
             className: "BoardChipTooltipDescription"
-          }), null !== QD && (0, PD.jsxs)("span", {
+          }), null !== qU && (0, wU.jsxs)("span", {
             className: "BoardChipTooltipSource",
-            children: [(0, PD.jsx)("span", {
+            children: [(0, wU.jsx)("span", {
               className: "BoardChipTooltipLabel",
-              children: iD(`${HD}:chipDroppedBy`)
-            }), QD]
+              children: EU(`${nU}:chipDroppedBy`)
+            }), qU]
           })]
-        }), void 0 !== pD && (0, PD.jsxs)("div", {
-          className: wD()("BoardChipTooltipHeld", {
-            Short: pD < ID
+        }), void 0 !== pU && (0, wU.jsxs)("div", {
+          className: KU()("BoardChipTooltipHeld", {
+            Short: pU < tU
           }),
-          children: [(0, PD.jsx)("span", {
+          children: [(0, wU.jsx)("span", {
             className: "BoardChipTooltipLabel",
-            children: iD(`${HD}:chipYouHave`)
-          }), (0, PD.jsxs)("span", {
+            children: EU(`${nU}:chipYouHave`)
+          }), (0, wU.jsxs)("span", {
             className: "BoardChipTooltipCount",
-            children: [(0, PD.jsx)("span", {
+            children: [(0, wU.jsx)("span", {
               className: "BoardChipTooltipHeldAmount",
-              children: pD.toLocaleString()
-            }), ` / ${ID.toLocaleString()}`]
-          }), (0, PD.jsx)("span", {
+              children: pU.toLocaleString()
+            }), ` / ${tU.toLocaleString()}`]
+          }), (0, wU.jsx)("span", {
             className: "BoardChipTooltipMeter",
-            children: (0, PD.jsx)("span", {
+            children: (0, wU.jsx)("span", {
               style: {
-                width: (ID > 0 ? 100 * Math.min(1, pD / ID) : 100) + "%"
+                width: (tU > 0 ? 100 * Math.min(1, pU / tU) : 100) + "%"
               }
             })
           })]
@@ -731,81 +731,81 @@ export const modules = {
       })
     }
 
-    function zD(DD) {
+    function rU(UU) {
       let {
-        icon: CD,
-        name: cD,
-        selected: ID,
-        locked: pD,
-        className: iD,
-        buttonRef: fD,
-        onSelect: bD,
-        children: QD
-      } = DD;
-      return (0, PD.jsxs)("button", {
-        ref: fD,
+        icon: RU,
+        name: gU,
+        selected: tU,
+        locked: pU,
+        className: EU,
+        buttonRef: PU,
+        onSelect: TU,
+        children: qU
+      } = UU;
+      return (0, wU.jsxs)("button", {
+        ref: PU,
         type: "button",
-        className: wD()("BoardTile", iD, {
-          Selected: ID,
-          Locked: pD
+        className: KU()("BoardTile", EU, {
+          Selected: tU,
+          Locked: pU
         }),
-        onClick: bD,
-        children: [(0, PD.jsx)("span", {
+        onClick: TU,
+        children: [(0, wU.jsx)("span", {
           className: "BoardTileIcon",
-          children: CD
-        }), (0, PD.jsx)("span", {
+          children: RU
+        }), (0, wU.jsx)("span", {
           className: "BoardTileName",
-          children: cD
-        }), QD]
+          children: gU
+        }), qU]
       })
     }
 
-    function jD(DD) {
+    function XU(UU) {
       let {
-        icon: CD,
-        name: cD,
-        children: ID
-      } = DD;
-      return (0, PD.jsxs)("header", {
+        icon: RU,
+        name: gU,
+        children: tU
+      } = UU;
+      return (0, wU.jsxs)("header", {
         className: "BoardDetailHeader",
-        children: [(0, PD.jsx)("span", {
+        children: [(0, wU.jsx)("span", {
           className: "BoardDetailIcon",
-          children: CD
-        }), (0, PD.jsxs)("div", {
+          children: RU
+        }), (0, wU.jsxs)("div", {
           className: "BoardDetailHeading",
-          children: [(0, PD.jsx)("h3", {
-            children: cD
-          }), (0, PD.jsx)("span", {
+          children: [(0, wU.jsx)("h3", {
+            children: gU
+          }), (0, wU.jsx)("span", {
             className: "BoardDetailStatus",
-            children: ID
+            children: tU
           })]
         })]
       })
     }
 
-    function lD(DD) {
+    function vU(UU) {
       let {
-        coins: CD,
-        children: cD
-      } = DD;
-      return (0, PD.jsxs)("div", {
+        coins: RU,
+        children: gU
+      } = UU;
+      return (0, wU.jsxs)("div", {
         className: "BoardWallet",
-        children: [(0, PD.jsx)(KD, {
-          itemName: UD,
-          amount: CD
-        }), cD]
+        children: [(0, wU.jsx)(YU, {
+          itemName: bU,
+          amount: RU
+        }), gU]
       })
     }
-    var LD = cD(37899);
-    const TD = "containmentCodexView";
-    class GD extends LD.d {
+    var dU = gU(38076);
+    const HU = "containmentCodexView";
+    class SU extends dU.b {
       constructor() {
-        super(...arguments), this.entries = [], this.selectedId = "", this.snapshot = this.buildSnapshot(), this.select = DD => {
-          this.selectedId = DD, this.emit()
+        super(...arguments), this.entries = [], this.selectedId = "", this.snapshot = this.buildSnapshot(), this.select = UU => {
+          this.selectedId = UU, this.emit()
         }
       }
-      kt(DD) {
-        this.entries = DD.codexEntries, this.selectedId = this.entries[0].codexEntryId, this.showOrRefresh()
+      qC(UU) {
+        this.entries = UU.codexEntries, this.selectedId = this.entries[0].codexEntryId, this.showOrRefresh()
       }
       buildSnapshot() {
         return {
@@ -815,55 +815,55 @@ export const modules = {
         }
       }
     }
-    const RD = {
-        codexAnyDifficulty: `${HD}:codexNeedsAny`,
-        codexNormalOnly: `${HD}:codexNeedsNormal`,
-        codexHardOnly: `${HD}:codexNeedsHard`
+    const sU = {
+        codexAnyDifficulty: `${nU}:codexNeedsAny`,
+        codexNormalOnly: `${nU}:codexNeedsNormal`,
+        codexHardOnly: `${nU}:codexNeedsHard`
       },
-      kD = {
+      yU = {
         codexContained: "Contained",
         codexEncountered: "Sighted",
         codexUnidentified: "Unknown"
       },
-      dD = {
-        codexContained: `${HD}:codexContainedBadge`,
-        codexEncountered: `${HD}:codexEncounteredBadge`,
-        codexUnidentified: `${HD}:codexUnidentifiedBadge`
+      kU = {
+        codexContained: `${nU}:codexContainedBadge`,
+        codexEncountered: `${nU}:codexEncounteredBadge`,
+        codexUnidentified: `${nU}:codexUnidentifiedBadge`
       },
-      YD = ["94%", "81%", "88%", "46%", "72%"];
+      FU = ["94%", "81%", "88%", "46%", "72%"];
 
-    function WD(DD) {
+    function iU(UU) {
       let {
-        entry: CD
-      } = DD;
+        entry: RU
+      } = UU;
       const {
-        t: cD
-      } = (0, BD.F)();
-      return (0, PD.jsx)("span", {
-        className: wD()("BoardBadge", kD[CD.codexEntryState]),
-        children: cD(dD[CD.codexEntryState])
+        t: gU
+      } = (0, GU.B)();
+      return (0, wU.jsx)("span", {
+        className: KU()("BoardBadge", yU[RU.codexEntryState]),
+        children: gU(kU[RU.codexEntryState])
       })
     }
 
-    function sD(DD) {
+    function AU(UU) {
       const {
-        t: CD
-      } = (0, BD.F)();
-      return "codexUnidentified" === DD.codexEntryState ? CD(`${HD}:codexUnidentifiedName`) : DD.codexEntryName
+        t: RU
+      } = (0, GU.B)();
+      return "codexUnidentified" === UU.codexEntryState ? RU(`${nU}:codexUnidentifiedName`) : UU.codexEntryName
     }
 
-    function ED(DD) {
+    function zU(UU) {
       let {
-        entry: CD
-      } = DD;
-      return "codexUnidentified" === CD.codexEntryState ? (0, PD.jsx)(qD, {
+        entry: RU
+      } = UU;
+      return "codexUnidentified" === RU.codexEntryState ? (0, wU.jsx)(ZU, {
         itemName: "Book"
-      }) : (0, PD.jsxs)("span", {
+      }) : (0, wU.jsxs)("span", {
         className: "CodexPhoto",
-        children: [(0, PD.jsx)(JD, {
-          anomalyId: CD.codexEntryId,
-          caught: "codexContained" === CD.codexEntryState
-        }), (0, PD.jsx)("img", {
+        children: [(0, wU.jsx)(aU, {
+          anomalyId: RU.codexEntryId,
+          caught: "codexContained" === RU.codexEntryState
+        }), (0, wU.jsx)("img", {
           className: "CodexPaperclip",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAYAAACulacQAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGNggIIXb97/X7V57/+Wvtn/GZDBqs17UQTgClahScBATHrlf5ySeHWimo9NMbokCp9OkmD/oasGCaJLAAC5ZUIBS85GiAAAAABJRU5ErkJggg==",
           alt: "",
@@ -872,27 +872,27 @@ export const modules = {
       })
     }
 
-    function eD(DD) {
+    function MU(UU) {
       let {
-        entry: CD,
-        selected: cD,
-        onSelect: ID
-      } = DD;
-      const pD = "codexUnidentified" === CD.codexEntryState;
-      return (0, PD.jsxs)(zD, {
-        icon: (0, PD.jsx)(ED, {
-          entry: CD
+        entry: RU,
+        selected: gU,
+        onSelect: tU
+      } = UU;
+      const pU = "codexUnidentified" === RU.codexEntryState;
+      return (0, wU.jsxs)(rU, {
+        icon: (0, wU.jsx)(zU, {
+          entry: RU
         }),
-        name: sD(CD),
-        selected: cD,
-        locked: pD,
-        className: wD()("CodexFolder", kD[CD.codexEntryState]),
+        name: AU(RU),
+        selected: gU,
+        locked: pU,
+        className: KU()("CodexFolder", yU[RU.codexEntryState]),
         onSelect: () => {
-          ID(CD.codexEntryId)
+          tU(RU.codexEntryId)
         },
-        children: [!pD && (0, PD.jsx)(WD, {
-          entry: CD
-        }), pD && (0, PD.jsx)("img", {
+        children: [!pU && (0, wU.jsx)(iU, {
+          entry: RU
+        }), pU && (0, wU.jsx)("img", {
           className: "CodexSeal",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAARElEQVR4nGNggIIGHp7/MAzjw+TAnMf+/mB8RkQEjOGKYZLIgsiK4AqQJZA1gBXAOHgVwCRQJJEdCVOEYj8yQPciTAEAz0hgyamUqskAAAAASUVORK5CYII=",
           alt: "",
@@ -901,176 +901,176 @@ export const modules = {
       })
     }
 
-    function uD(DD) {
+    function DU(UU) {
       let {
-        count: CD
-      } = DD;
-      const cD = [];
-      for (let ID = Math.min(CD, 25); ID > 0; ID -= 5) cD.push(Math.min(ID, 5));
-      return (0, PD.jsx)("span", {
+        count: RU
+      } = UU;
+      const gU = [];
+      for (let tU = Math.min(RU, 25); tU > 0; tU -= 5) gU.push(Math.min(tU, 5));
+      return (0, wU.jsx)("span", {
         className: "CodexTallyMarks",
         "aria-hidden": "true",
-        children: cD.map(((DD, CD) => (0, PD.jsx)("span", {
-          className: wD()("CodexTallyGroup", {
-            Gate: 5 === DD
+        children: gU.map(((UU, RU) => (0, wU.jsx)("span", {
+          className: KU()("CodexTallyGroup", {
+            Gate: 5 === UU
           }),
           children: Array.from({
-            length: Math.min(DD, 4)
-          }, ((DD, CD) => (0, PD.jsx)("span", {
+            length: Math.min(UU, 4)
+          }, ((UU, RU) => (0, wU.jsx)("span", {
             className: "CodexTallyMark"
-          }, CD)))
-        }, CD)))
+          }, RU)))
+        }, RU)))
       })
     }
 
-    function hD(DD) {
+    function LU(UU) {
       let {
-        contained: CD,
-        total: cD
-      } = DD;
+        contained: RU,
+        total: gU
+      } = UU;
       const {
-        t: ID
-      } = (0, BD.F)();
-      return (0, PD.jsxs)("div", {
+        t: tU
+      } = (0, GU.B)();
+      return (0, wU.jsxs)("div", {
         className: "CodexProgress",
-        children: [ID(`${HD}:codexProgress`, {
-          contained: String(CD),
-          total: String(cD)
-        }), (0, PD.jsx)("span", {
+        children: [tU(`${nU}:codexProgress`, {
+          contained: String(RU),
+          total: String(gU)
+        }), (0, wU.jsx)("span", {
           className: "CodexProgressMeter",
-          children: (0, PD.jsx)("span", {
+          children: (0, wU.jsx)("span", {
             style: {
-              width: CD / cD * 100 + "%"
+              width: RU / gU * 100 + "%"
             }
           })
         })]
       })
     }
 
-    function rD(DD) {
+    function NU(UU) {
       let {
-        entry: CD,
-        fileNumber: cD
-      } = DD;
+        entry: RU,
+        fileNumber: gU
+      } = UU;
       const {
-        t: ID
-      } = (0, BD.F)(), pD = "codexContained" === CD.codexEntryState;
-      return (0, PD.jsx)("section", {
+        t: tU
+      } = (0, GU.B)(), pU = "codexContained" === RU.codexEntryState;
+      return (0, wU.jsx)("section", {
         className: "BoardDetail",
-        children: (0, PD.jsxs)("article", {
-          className: wD()("CodexDossier", kD[CD.codexEntryState]),
-          children: [(0, PD.jsx)("span", {
+        children: (0, wU.jsxs)("article", {
+          className: KU()("CodexDossier", yU[RU.codexEntryState]),
+          children: [(0, wU.jsx)("span", {
             className: "CodexFileNumber",
-            children: ID(`${HD}:codexFileNumber`, {
-              number: String(cD).padStart(3, "0")
+            children: tU(`${nU}:codexFileNumber`, {
+              number: String(gU).padStart(3, "0")
             })
-          }), (0, PD.jsx)(jD, {
-            icon: (0, PD.jsx)(ED, {
-              entry: CD
+          }), (0, wU.jsx)(XU, {
+            icon: (0, wU.jsx)(zU, {
+              entry: RU
             }),
-            name: sD(CD),
-            children: (0, PD.jsx)(WD, {
-              entry: CD
+            name: AU(RU),
+            children: (0, wU.jsx)(iU, {
+              entry: RU
             })
-          }), pD && (0, PD.jsxs)(PD.Fragment, {
-            children: [(0, PD.jsx)("p", {
+          }), pU && (0, wU.jsxs)(wU.Fragment, {
+            children: [(0, wU.jsx)("p", {
               className: "BoardDescription",
-              children: CD.codexEntryLore
-            }), (0, PD.jsxs)("p", {
+              children: RU.codexEntryLore
+            }), (0, wU.jsxs)("p", {
               className: "CodexTally",
-              children: [ID(`${HD}:codexContainments`, {
-                count: String(CD.codexEntryContainedCount)
-              }), (0, PD.jsx)(uD, {
-                count: CD.codexEntryContainedCount
+              children: [tU(`${nU}:codexContainments`, {
+                count: String(RU.codexEntryContainedCount)
+              }), (0, wU.jsx)(DU, {
+                count: RU.codexEntryContainedCount
               })]
-            }), (0, PD.jsx)("span", {
+            }), (0, wU.jsx)("span", {
               className: "CodexClosedStamp",
               "aria-hidden": "true",
-              children: ID(`${HD}:codexContainedBadge`)
+              children: tU(`${nU}:codexContainedBadge`)
             })]
-          }), !pD && (0, PD.jsxs)(PD.Fragment, {
-            children: [(0, PD.jsxs)("div", {
+          }), !pU && (0, wU.jsxs)(wU.Fragment, {
+            children: [(0, wU.jsxs)("div", {
               className: "CodexRedaction",
-              children: [YD.map((DD => (0, PD.jsx)("span", {
+              children: [FU.map((UU => (0, wU.jsx)("span", {
                 className: "CodexRedactedLine",
                 style: {
-                  width: DD
+                  width: UU
                 }
-              }, DD))), (0, PD.jsx)("p", {
+              }, UU))), (0, wU.jsx)("p", {
                 className: "CodexRedacted",
-                children: ID(`${HD}:codexRedacted`)
+                children: tU(`${nU}:codexRedacted`)
               })]
-            }), "" !== CD.codexEntryHint && (0, PD.jsxs)("aside", {
+            }), "" !== RU.codexEntryHint && (0, wU.jsxs)("aside", {
               className: "CodexNote",
-              children: [(0, PD.jsx)("h4", {
-                children: ID(`${HD}:codexHintLabel`)
-              }), (0, PD.jsx)("p", {
-                children: CD.codexEntryHint
+              children: [(0, wU.jsx)("h4", {
+                children: tU(`${nU}:codexHintLabel`)
+              }), (0, wU.jsx)("p", {
+                children: RU.codexEntryHint
               })]
-            }), (0, PD.jsx)("p", {
+            }), (0, wU.jsx)("p", {
               className: "CodexClearance",
-              children: ID(RD[CD.codexEntryDifficulty])
+              children: tU(sU[RU.codexEntryDifficulty])
             })]
           })]
         })
       })
     }
 
-    function AD(DD) {
+    function lU(UU) {
       let {
-        controller: CD
-      } = DD;
-      const cD = (0, SD.g)(TD, CD.getSnapshot()),
+        controller: RU
+      } = UU;
+      const gU = (0, cU.h)(HU, RU.getSnapshot()),
         {
-          t: ID
-        } = (0, BD.F)();
-      if (0 === cD.entries.length) return null;
-      const pD = cD.entries.find((DD => DD.codexEntryId === cD.selectedId)),
-        iD = cD.entries.filter((DD => "codexContained" === DD.codexEntryState)).length,
-        fD = cD.entries.map((DD => DD.codexEntryId)).sort().indexOf(pD.codexEntryId) + 1;
-      return (0, PD.jsxs)(xD, {
-        open: cD.open,
-        onDismiss: CD.dismiss,
-        title: ID(`${HD}:codexTitle`),
+          t: tU
+        } = (0, GU.B)();
+      if (0 === gU.entries.length) return null;
+      const pU = gU.entries.find((UU => UU.codexEntryId === gU.selectedId)),
+        EU = gU.entries.filter((UU => "codexContained" === UU.codexEntryState)).length,
+        PU = gU.entries.map((UU => UU.codexEntryId)).sort().indexOf(pU.codexEntryId) + 1;
+      return (0, wU.jsxs)(oU, {
+        open: gU.open,
+        onDismiss: RU.dismiss,
+        title: tU(`${nU}:codexTitle`),
         className: "ContainmentCodexPanel",
-        headerExtra: (0, PD.jsx)(hD, {
-          contained: iD,
-          total: cD.entries.length
+        headerExtra: (0, wU.jsx)(LU, {
+          contained: EU,
+          total: gU.entries.length
         }),
-        children: [(0, PD.jsx)("div", {
+        children: [(0, wU.jsx)("div", {
           className: "BoardTiles",
-          children: cD.entries.map((DD => (0, PD.jsx)(eD, {
-            entry: DD,
-            selected: DD === pD,
-            onSelect: CD.select
-          }, DD.codexEntryId)))
-        }), (0, PD.jsx)(rD, {
-          entry: pD,
-          fileNumber: fD
+          children: gU.entries.map((UU => (0, wU.jsx)(MU, {
+            entry: UU,
+            selected: UU === pU,
+            onSelect: RU.select
+          }, UU.codexEntryId)))
+        }), (0, wU.jsx)(NU, {
+          entry: pU,
+          fileNumber: PU
         })]
       })
     }
-    var FD = cD(326);
-    class DC extends LD.d {
-      constructor(DD, CD, cD, ID, pD, iD) {
-        super(DD, CD, cD), this.pacer = ID, this.command = pD, this.predict = iD, this.board = null, this.confirmed = null, this.selectedId = "", this.notice = null, this.unsubscribePacer = void 0, this.select = DD => {
-          this.selectedId = DD, this.emit()
-        }, this.act = (DD, CD) => {
-          if (!this.open || null === this.board || !this.pacer.send(`${this.command} ${DD} ${CD}`, this.rollBack)) return;
-          const cD = this.predict(this.board, DD, CD);
-          null !== cD && (this.board = cD.board, this.notice = cD.notice, this.emit())
+    var OU = gU(311);
+    class UR extends dU.b {
+      constructor(UU, RU, gU, tU, pU, EU) {
+        super(UU, RU, gU), this.pacer = tU, this.command = pU, this.predict = EU, this.board = null, this.confirmed = null, this.selectedId = "", this.notice = null, this.unsubscribePacer = void 0, this.select = UU => {
+          this.selectedId = UU, this.emit()
+        }, this.act = (UU, RU) => {
+          if (!this.open || null === this.board || !this.pacer.send(`${this.command} ${UU} ${RU}`, this.rollBack)) return;
+          const gU = this.predict(this.board, UU, RU);
+          null !== gU && (this.board = gU.board, this.notice = gU.notice, this.emit())
         }, this.rollBack = () => {
           this.board !== this.confirmed && (this.board = this.confirmed, this.notice = null)
-        }, this.unsubscribePacer = ID.subscribe((() => {
+        }, this.unsubscribePacer = tU.subscribe((() => {
           this.emit()
         }))
       }
-      kt(DD) {
-        const CD = this.messageOpens(DD);
-        if (CD && this.open) return this.board === this.confirmed && (this.board = DD), this.confirmed = DD, void this.emit();
-        if (this.board = DD, this.confirmed = DD, this.pacer.onReply(), CD) return this.notice = null, this.selectedId = this.openingSelection(DD), void this.show();
-        const cD = this.messageNotice(DD);
-        null !== cD && (this.notice = cD), this.emit()
+      qC(UU) {
+        const RU = this.messageOpens(UU);
+        if (RU && this.open) return this.board === this.confirmed && (this.board = UU), this.confirmed = UU, void this.emit();
+        if (this.board = UU, this.confirmed = UU, this.pacer.onReply(), RU) return this.notice = null, this.selectedId = this.openingSelection(UU), void this.show();
+        const gU = this.messageNotice(UU);
+        null !== gU && (this.notice = gU), this.emit()
       }
       dispose() {
         this.unsubscribePacer(), super.dispose()
@@ -1080,153 +1080,153 @@ export const modules = {
       }
     }
 
-    function CC(DD, CD) {
-      return DD.loadoutCoins >= CD.loadoutCostCoins && CD.loadoutCostParts.every((CD => function(DD, CD) {
-        return cC(DD, CD).loadoutHeldPartAmount
-      }(DD, CD.loadoutPartCurrency) >= CD.loadoutPartAmount))
+    function RR(UU, RU) {
+      return UU.loadoutCoins >= RU.loadoutCostCoins && RU.loadoutCostParts.every((RU => function(UU, RU) {
+        return gR(UU, RU).loadoutHeldPartAmount
+      }(UU, RU.loadoutPartCurrency) >= RU.loadoutPartAmount))
     }
 
-    function cC(DD, CD) {
-      return DD.loadoutHeldParts.find((DD => DD.loadoutHeldPartCurrency === CD))
+    function gR(UU, RU) {
+      return UU.loadoutHeldParts.find((UU => UU.loadoutHeldPartCurrency === RU))
     }
 
-    function IC(DD, CD) {
-      return DD.loadoutSlots.find((DD => DD.loadoutSlotKind === CD))
+    function tR(UU, RU) {
+      return UU.loadoutSlots.find((UU => UU.loadoutSlotKind === RU))
     }
 
-    function pC(DD) {
-      return DD.loadoutPerks.filter((DD => DD.loadoutPerkEquipped)).length >= DD.loadoutMaxPerks
+    function pR(UU) {
+      return UU.loadoutPerks.filter((UU => UU.loadoutPerkEquipped)).length >= UU.loadoutMaxPerks
     }
 
-    function iC(DD, CD, cD) {
-      for (const pD of DD.loadoutSlots) {
-        const ID = pD.loadoutSlotOptions.find((DD => DD.loadoutOptionId === cD));
-        if (ID) return "loadoutArmour" === pD.loadoutSlotKind ? bC(DD, pD, ID, CD) : fC(DD, pD, ID, CD)
+    function ER(UU, RU, gU) {
+      for (const pU of UU.loadoutSlots) {
+        const tU = pU.loadoutSlotOptions.find((UU => UU.loadoutOptionId === gU));
+        if (tU) return "loadoutArmour" === pU.loadoutSlotKind ? TR(UU, pU, tU, RU) : PR(UU, pU, tU, RU)
       }
-      const ID = DD.loadoutPerks.find((DD => DD.loadoutPerkId === cD));
-      return ID ? function(DD, CD, cD) {
-        const ID = CD.loadoutPerkOwned,
-          pD = CD.loadoutPerkEquipped,
-          iD = CD.loadoutPerkName,
-          fD = pC(DD);
-        if ("loadoutUnlock" === cD) {
-          if (ID || !CC(DD, CD.loadoutPerkCost)) return null;
-          const cD = {
-            ...CD,
+      const tU = UU.loadoutPerks.find((UU => UU.loadoutPerkId === gU));
+      return tU ? function(UU, RU, gU) {
+        const tU = RU.loadoutPerkOwned,
+          pU = RU.loadoutPerkEquipped,
+          EU = RU.loadoutPerkName,
+          PU = pR(UU);
+        if ("loadoutUnlock" === gU) {
+          if (tU || !RR(UU, RU.loadoutPerkCost)) return null;
+          const gU = {
+            ...RU,
             loadoutPerkOwned: !0,
-            loadoutPerkEquipped: !fD
+            loadoutPerkEquipped: !PU
           };
           return {
-            board: wC(SC(DD, CD.loadoutPerkCost), cD),
-            notice: BC(fD ? "loadoutNoticeUnlockedNoRoom" : "loadoutNoticeUnlocked", iD)
+            board: KR(cR(UU, RU.loadoutPerkCost), gU),
+            notice: GR(PU ? "loadoutNoticeUnlockedNoRoom" : "loadoutNoticeUnlocked", EU)
           }
         }
-        if ("loadoutUpgrade" === cD || !ID || "loadoutEquip" === cD === pD || !pD && fD) return null;
+        if ("loadoutUpgrade" === gU || !tU || "loadoutEquip" === gU === pU || !pU && PU) return null;
         return {
-          board: wC(DD, {
-            ...CD,
-            loadoutPerkEquipped: !pD
+          board: KR(UU, {
+            ...RU,
+            loadoutPerkEquipped: !pU
           }),
-          notice: BC(pD ? "loadoutNoticeUnequipped" : "loadoutNoticeEquipped", iD)
+          notice: GR(pU ? "loadoutNoticeUnequipped" : "loadoutNoticeEquipped", EU)
         }
-      }(DD, ID, CD) : null
+      }(UU, tU, RU) : null
     }
 
-    function fC(DD, CD, cD, ID) {
-      const pD = cD.loadoutOptionOwnedTier,
-        iD = cD.loadoutOptionName;
-      if ("loadoutEquip" === ID) return 0 === pD ? null : {
-        board: QC(DD, CD, cD.loadoutOptionId, null),
-        notice: BC("loadoutNoticeEquipped", iD)
+    function PR(UU, RU, gU, tU) {
+      const pU = gU.loadoutOptionOwnedTier,
+        EU = gU.loadoutOptionName;
+      if ("loadoutEquip" === tU) return 0 === pU ? null : {
+        board: qR(UU, RU, gU.loadoutOptionId, null),
+        notice: GR("loadoutNoticeEquipped", EU)
       };
-      const fD = "loadoutUnlock" === ID;
-      if (fD && 0 !== pD || "loadoutUpgrade" === ID && (0 === pD || pD >= cD.loadoutOptionTiers.length) || "loadoutUnequip" === ID) return null;
-      const bD = cD.loadoutOptionTiers[pD].loadoutTierCost;
-      if (!CC(DD, bD)) return null;
-      const QD = {
-          ...cD,
-          loadoutOptionOwnedTier: pD + 1
+      const PU = "loadoutUnlock" === tU;
+      if (PU && 0 !== pU || "loadoutUpgrade" === tU && (0 === pU || pU >= gU.loadoutOptionTiers.length) || "loadoutUnequip" === tU) return null;
+      const TU = gU.loadoutOptionTiers[pU].loadoutTierCost;
+      if (!RR(UU, TU)) return null;
+      const qU = {
+          ...gU,
+          loadoutOptionOwnedTier: pU + 1
         },
-        wD = fD ? cD.loadoutOptionId : CD.loadoutSlotEquippedId;
+        KU = PU ? gU.loadoutOptionId : RU.loadoutSlotEquippedId;
       return {
-        board: QC(SC(DD, bD), CD, wD, QD),
-        notice: fD ? BC("loadoutNoticeUnlocked", iD) : BC("loadoutNoticeUpgraded", iD, pD + 1)
+        board: qR(cR(UU, TU), RU, KU, qU),
+        notice: PU ? GR("loadoutNoticeUnlocked", EU) : GR("loadoutNoticeUpgraded", EU, pU + 1)
       }
     }
 
-    function bC(DD, CD, cD, ID) {
-      const pD = cD.loadoutOptionOwnedTier > 0,
-        iD = cD.loadoutOptionName;
-      if ("loadoutEquip" === ID && pD) return {
-        board: QC(DD, CD, cD.loadoutOptionId, null),
-        notice: BC("loadoutNoticeEquipped", iD)
+    function TR(UU, RU, gU, tU) {
+      const pU = gU.loadoutOptionOwnedTier > 0,
+        EU = gU.loadoutOptionName;
+      if ("loadoutEquip" === tU && pU) return {
+        board: qR(UU, RU, gU.loadoutOptionId, null),
+        notice: GR("loadoutNoticeEquipped", EU)
       };
-      const fD = cD.loadoutOptionTiers[0].loadoutTierCost;
-      return "loadoutUnlock" !== ID || pD || !CC(DD, fD) ? null : {
-        board: QC(SC(DD, fD), CD, cD.loadoutOptionId, {
-          ...cD,
+      const PU = gU.loadoutOptionTiers[0].loadoutTierCost;
+      return "loadoutUnlock" !== tU || pU || !RR(UU, PU) ? null : {
+        board: qR(cR(UU, PU), RU, gU.loadoutOptionId, {
+          ...gU,
           loadoutOptionOwnedTier: 1
         }),
-        notice: BC("loadoutNoticeUnlocked", iD)
+        notice: GR("loadoutNoticeUnlocked", EU)
       }
     }
 
-    function QC(DD, CD, cD, ID) {
-      const pD = {
-        ...CD,
-        loadoutSlotEquippedId: cD,
-        loadoutSlotOptions: CD.loadoutSlotOptions.map((DD => null !== ID && DD.loadoutOptionId === ID.loadoutOptionId ? ID : DD))
+    function qR(UU, RU, gU, tU) {
+      const pU = {
+        ...RU,
+        loadoutSlotEquippedId: gU,
+        loadoutSlotOptions: RU.loadoutSlotOptions.map((UU => null !== tU && UU.loadoutOptionId === tU.loadoutOptionId ? tU : UU))
       };
       return {
-        ...DD,
-        loadoutSlots: DD.loadoutSlots.map((DD => DD === CD ? pD : DD))
+        ...UU,
+        loadoutSlots: UU.loadoutSlots.map((UU => UU === RU ? pU : UU))
       }
     }
 
-    function wC(DD, CD) {
+    function KR(UU, RU) {
       return {
-        ...DD,
-        loadoutPerks: DD.loadoutPerks.map((DD => DD.loadoutPerkId === CD.loadoutPerkId ? CD : DD))
+        ...UU,
+        loadoutPerks: UU.loadoutPerks.map((UU => UU.loadoutPerkId === RU.loadoutPerkId ? RU : UU))
       }
     }
 
-    function SC(DD, CD) {
+    function cR(UU, RU) {
       return {
-        ...DD,
-        loadoutCoins: DD.loadoutCoins - CD.loadoutCostCoins,
-        loadoutHeldParts: DD.loadoutHeldParts.map((DD => {
-          const cD = CD.loadoutCostParts.find((CD => CD.loadoutPartCurrency === DD.loadoutHeldPartCurrency));
-          return cD ? {
-            ...DD,
-            loadoutHeldPartAmount: DD.loadoutHeldPartAmount - cD.loadoutPartAmount
-          } : DD
+        ...UU,
+        loadoutCoins: UU.loadoutCoins - RU.loadoutCostCoins,
+        loadoutHeldParts: UU.loadoutHeldParts.map((UU => {
+          const gU = RU.loadoutCostParts.find((RU => RU.loadoutPartCurrency === UU.loadoutHeldPartCurrency));
+          return gU ? {
+            ...UU,
+            loadoutHeldPartAmount: UU.loadoutHeldPartAmount - gU.loadoutPartAmount
+          } : UU
         }))
       }
     }
 
-    function BC(DD, CD) {
+    function GR(UU, RU) {
       return {
-        loadoutNoticeKey: DD,
+        loadoutNoticeKey: UU,
         loadoutNoticeRefused: !1,
-        loadoutNoticeName: CD,
+        loadoutNoticeName: RU,
         loadoutNoticeTier: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0
       }
     }
-    const yC = "containmentLoadoutView";
-    class MC extends DC {
-      constructor(DD, CD, cD, ID) {
-        super(DD, CD, cD, ID, "loadout", iC), this.slot = "loadoutPrimary", this.snapshot = this.buildSnapshot(), this.selectSlot = DD => {
-          this.slot = DD, this.selectedId = tC(this.board, DD), this.emit()
+    const jR = "containmentLoadoutView";
+    class uR extends UR {
+      constructor(UU, RU, gU, tU) {
+        super(UU, RU, gU, tU, "loadout", ER), this.slot = "loadoutPrimary", this.snapshot = this.buildSnapshot(), this.selectSlot = UU => {
+          this.slot = UU, this.selectedId = CR(this.board, UU), this.emit()
         }
       }
-      messageOpens(DD) {
-        return DD.loadoutMessageOpens
+      messageOpens(UU) {
+        return UU.loadoutMessageOpens
       }
-      messageNotice(DD) {
-        return DD.loadoutNotice
+      messageNotice(UU) {
+        return UU.loadoutNotice
       }
-      openingSelection(DD) {
-        return tC(DD, this.slot)
+      openingSelection(UU) {
+        return CR(UU, this.slot)
       }
       buildSnapshot() {
         return {
@@ -1240,765 +1240,765 @@ export const modules = {
       }
     }
 
-    function tC(DD, CD) {
-      if ("loadoutPerks" === CD) {
-        var cD;
-        const CD = DD.loadoutPerks;
-        return (null !== (cD = CD.find((DD => DD.loadoutPerkEquipped))) && void 0 !== cD ? cD : CD[0]).loadoutPerkId
+    function CR(UU, RU) {
+      if ("loadoutPerks" === RU) {
+        var gU;
+        const RU = UU.loadoutPerks;
+        return (null !== (gU = RU.find((UU => UU.loadoutPerkEquipped))) && void 0 !== gU ? gU : RU[0]).loadoutPerkId
       }
-      return IC(DD, CD).loadoutSlotEquippedId
+      return tR(UU, RU).loadoutSlotEquippedId
     }
-    const ZC = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAY0lEQVR4nGNgIAP8x4FRwP/sFt3/EYU6YBqGIwp1MBSDBUH4/3nW//83csD5DOgKfeKNsWIMhV+///qvbOT7/87cMjCG8TEUgiSLqlpRMEgMQ+HJvgy4aTAMEsPqc2KChyAAAFxNbnylK5O6AAAAAElFTkSuQmCC";
-    var oC = cD(36235),
-      vC = cD(1280);
-    const NC = {
-        loadoutPrimary: `${HD}:loadoutSlotPrimary`,
-        loadoutSecondary: `${HD}:loadoutSlotSecondary`,
-        loadoutOffensive: `${HD}:loadoutSlotOffensive`,
-        loadoutSelfHelp: `${HD}:loadoutSlotSelfHelp`,
-        loadoutArmour: `${HD}:loadoutSlotArmour`,
-        loadoutPerks: `${HD}:loadoutSlotPerks`
+    const hR = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAY0lEQVR4nGNgIAP8x4FRwP/sFt3/EYU6YBqGIwp1MBSDBUH4/3nW//83csD5DOgKfeKNsWIMhV+///qvbOT7/87cMjCG8TEUgiSLqlpRMEgMQ+HJvgy4aTAMEsPqc2KChyAAAFxNbnylK5O6AAAAAElFTkSuQmCC";
+    var QR = gU(36425),
+      eR = gU(1283);
+    const WR = {
+        loadoutPrimary: `${nU}:loadoutSlotPrimary`,
+        loadoutSecondary: `${nU}:loadoutSlotSecondary`,
+        loadoutOffensive: `${nU}:loadoutSlotOffensive`,
+        loadoutSelfHelp: `${nU}:loadoutSlotSelfHelp`,
+        loadoutArmour: `${nU}:loadoutSlotArmour`,
+        loadoutPerks: `${nU}:loadoutSlotPerks`
       },
-      gC = {
+      fR = {
         section: "right",
-        MM: "bottom",
+        Hj: "bottom",
         act: "top"
       },
-      XC = (0, ID.createContext)({
+      xR = (0, tU.createContext)({
         step: null,
         targetRef: () => {}
       });
 
-    function mC() {
+    function mR() {
       const {
-        step: DD,
-        targetRef: CD
-      } = (0, ID.useContext)(XC);
-      return (cD, ID) => (null === DD || void 0 === DD ? void 0 : DD.kind) === cD && DD.id === ID ? CD : void 0
+        step: UU,
+        targetRef: RU
+      } = (0, tU.useContext)(xR);
+      return (gU, tU) => (null === UU || void 0 === UU ? void 0 : UU.kind) === gU && UU.id === tU ? RU : void 0
     }
 
-    function nC(DD, CD) {
-      const cD = CD.loadoutTargetId;
-      if ("loadoutPerks" === CD.loadoutTargetSection) {
-        const CD = DD.loadoutPerks.find((DD => DD.loadoutPerkId === cD));
+    function IR(UU, RU) {
+      const gU = RU.loadoutTargetId;
+      if ("loadoutPerks" === RU.loadoutTargetSection) {
+        const RU = UU.loadoutPerks.find((UU => UU.loadoutPerkId === gU));
         return {
-          name: CD.loadoutPerkName,
-          owned: CD.loadoutPerkOwned,
-          equipped: CD.loadoutPerkEquipped
+          name: RU.loadoutPerkName,
+          owned: RU.loadoutPerkOwned,
+          equipped: RU.loadoutPerkEquipped
         }
       }
-      const ID = IC(DD, CD.loadoutTargetSection),
-        pD = ID.loadoutSlotOptions.find((DD => DD.loadoutOptionId === cD));
+      const tU = tR(UU, RU.loadoutTargetSection),
+        pU = tU.loadoutSlotOptions.find((UU => UU.loadoutOptionId === gU));
       return {
-        name: pD.loadoutOptionName,
-        owned: pD.loadoutOptionOwnedTier > 0,
-        equipped: ID.loadoutSlotEquippedId === cD
+        name: pU.loadoutOptionName,
+        owned: pU.loadoutOptionOwnedTier > 0,
+        equipped: tU.loadoutSlotEquippedId === gU
       }
     }
 
-    function OC(DD, CD, cD, ID) {
-      const [pD, iD] = DD(`${HD}:${CD}`, {
-        [cD]: "\x01"
+    function JR(UU, RU, gU, tU) {
+      const [pU, EU] = UU(`${nU}:${RU}`, {
+        [gU]: "\x01"
       }).split("\x01");
-      return (0, PD.jsxs)(PD.Fragment, {
-        children: [pD, (0, PD.jsx)("span", {
+      return (0, wU.jsxs)(wU.Fragment, {
+        children: [pU, (0, wU.jsx)("span", {
           className: "LoadoutWalkthroughName",
-          children: ID
-        }), iD]
+          children: tU
+        }), EU]
       })
     }
 
-    function PC(DD) {
+    function wR(UU) {
       let {
-        view: CD,
-        onDismiss: cD,
-        children: pD
-      } = DD;
+        view: RU,
+        onDismiss: gU,
+        children: pU
+      } = UU;
       const {
-        t: iD
-      } = (0, BD.F)(), fD = CD.loadout, bD = CD.open ? fD.loadoutWalkthrough.map((DD => ({
-        target: DD,
-        info: nC(fD, DD)
-      }))).find((DD => {
+        t: EU
+      } = (0, GU.B)(), PU = RU.loadout, TU = RU.open ? PU.loadoutWalkthrough.map((UU => ({
+        target: UU,
+        info: IR(PU, UU)
+      }))).find((UU => {
         let {
-          info: CD
-        } = DD;
-        return !CD.equipped
+          info: RU
+        } = UU;
+        return !RU.equipped
       })) : void 0;
-      let QD = null,
-        wD = null;
-      if (void 0 !== bD) {
+      let qU = null,
+        KU = null;
+      if (void 0 !== TU) {
         const {
-          target: DD,
-          info: cD
-        } = bD;
-        CD.slot !== DD.loadoutTargetSection ? (QD = {
+          target: UU,
+          info: gU
+        } = TU;
+        RU.slot !== UU.loadoutTargetSection ? (qU = {
           kind: "section",
-          id: DD.loadoutTargetSection
-        }, wD = OC(iD, "loadoutWalkthroughSection", "section", iD(NC[DD.loadoutTargetSection]))) : CD.selectedId !== DD.loadoutTargetId ? (QD = {
-          kind: "MM",
-          id: DD.loadoutTargetId
-        }, wD = OC(iD, "loadoutWalkthroughPick", "name", cD.name)) : (QD = {
+          id: UU.loadoutTargetSection
+        }, KU = JR(EU, "loadoutWalkthroughSection", "section", EU(WR[UU.loadoutTargetSection]))) : RU.selectedId !== UU.loadoutTargetId ? (qU = {
+          kind: "Hj",
+          id: UU.loadoutTargetId
+        }, KU = JR(EU, "loadoutWalkthroughPick", "name", gU.name)) : (qU = {
           kind: "act",
-          id: DD.loadoutTargetId
-        }, wD = OC(iD, cD.owned ? "loadoutWalkthroughEquip" : "loadoutWalkthroughUnlock", "name", cD.name))
+          id: UU.loadoutTargetId
+        }, KU = JR(EU, gU.owned ? "loadoutWalkthroughEquip" : "loadoutWalkthroughUnlock", "name", gU.name))
       }
-      const SD = null === QD ? null : function(DD) {
-          return `${DD.kind}:${DD.id}`
-        }(QD),
-        [yD, MD] = (0, ID.useState)(null),
-        tD = (0, ID.useCallback)((DD => {
-          MD((CD => null !== DD ? {
-            key: SD,
-            node: DD
-          } : (null === CD || void 0 === CD ? void 0 : CD.key) === SD ? null : CD))
-        }), [SD]),
-        ZD = null !== SD && (null === yD || void 0 === yD ? void 0 : yD.key) === SD ? yD.node : null;
-      return (0, PD.jsxs)(XC.Provider, {
+      const cU = null === qU ? null : function(UU) {
+          return `${UU.kind}:${UU.id}`
+        }(qU),
+        [jU, uU] = (0, tU.useState)(null),
+        CU = (0, tU.useCallback)((UU => {
+          uU((RU => null !== UU ? {
+            key: cU,
+            node: UU
+          } : (null === RU || void 0 === RU ? void 0 : RU.key) === cU ? null : RU))
+        }), [cU]),
+        hU = null !== cU && (null === jU || void 0 === jU ? void 0 : jU.key) === cU ? jU.node : null;
+      return (0, wU.jsxs)(xR.Provider, {
         value: {
-          step: QD,
-          targetRef: tD
+          step: qU,
+          targetRef: CU
         },
-        children: [pD, null !== QD && null !== ZD && (0, PD.jsx)(HC, {
-          target: ZD,
-          placement: gC[QD.kind],
-          onDismiss: cD,
-          children: wD
-        }, SD)]
+        children: [pU, null !== qU && null !== hU && (0, wU.jsx)(nR, {
+          target: hU,
+          placement: fR[qU.kind],
+          onDismiss: gU,
+          children: KU
+        }, cU)]
       })
     }
 
-    function HC(DD) {
+    function nR(UU) {
       let {
-        target: CD,
-        placement: cD,
-        onDismiss: pD,
-        children: iD
-      } = DD;
+        target: RU,
+        placement: gU,
+        onDismiss: pU,
+        children: EU
+      } = UU;
       const {
-        t: fD
-      } = (0, BD.F)(), bD = (0, ID.useRef)(CD);
-      return bD.current = CD, (0, vC.t)("popup", bD, pD), (0, PD.jsxs)(oC.h, {
-        target: CD,
-        placement: cD,
+        t: PU
+      } = (0, GU.B)(), TU = (0, tU.useRef)(RU);
+      return TU.current = RU, (0, eR.q)("popup", TU, pU), (0, wU.jsxs)(QR.d, {
+        target: RU,
+        placement: gU,
         className: "LoadoutWalkthroughStep",
         spotlightMargin: 10,
-        children: [(0, PD.jsxs)("div", {
+        children: [(0, wU.jsxs)("div", {
           className: "LoadoutWalkthroughHeader",
-          children: [(0, PD.jsx)("img", {
+          children: [(0, wU.jsx)("img", {
             className: "LoadoutWalkthroughPortrait",
-            src: ZC,
+            src: hR,
             alt: "",
             draggable: !1
-          }), (0, PD.jsx)("span", {
+          }), (0, wU.jsx)("span", {
             className: "LoadoutWalkthroughSpeaker",
-            children: fD(`${HD}:operatorName`)
-          }), (0, PD.jsx)(tD.l, {
-            onClick: pD,
-            ariaLabel: fD(`${HD}:loadoutWalkthroughClose`),
+            children: PU(`${nU}:operatorName`)
+          }), (0, wU.jsx)(CU.h, {
+            onClick: pU,
+            ariaLabel: PU(`${nU}:loadoutWalkthroughClose`),
             padIgnore: !0
           })]
-        }), (0, PD.jsx)("p", {
+        }), (0, wU.jsx)("p", {
           className: "LoadoutWalkthroughText",
-          children: iD
+          children: EU
         })]
       })
     }
-    const UC = new Set(["loadoutStatReload", "loadoutStatResupply"]);
+    const bR = new Set(["loadoutStatReload", "loadoutStatResupply"]);
 
-    function xC(DD) {
+    function oR(UU) {
       let {
-        cost: CD,
-        loadout: cD
-      } = DD;
+        cost: RU,
+        loadout: gU
+      } = UU;
       const {
-        t: ID
-      } = (0, BD.F)();
-      return CD.loadoutCostCoins <= 0 && 0 === CD.loadoutCostParts.length ? (0, PD.jsx)("span", {
+        t: tU
+      } = (0, GU.B)();
+      return RU.loadoutCostCoins <= 0 && 0 === RU.loadoutCostParts.length ? (0, wU.jsx)("span", {
         className: "LoadoutCost",
-        children: ID(`${HD}:loadoutFree`)
-      }) : (0, PD.jsxs)("span", {
+        children: tU(`${nU}:loadoutFree`)
+      }) : (0, wU.jsxs)("span", {
         className: "LoadoutCost",
-        children: [CD.loadoutCostCoins > 0 && (0, PD.jsx)(KD, {
-          itemName: UD,
-          amount: CD.loadoutCostCoins,
-          Lb: cD.loadoutCoins
-        }), CD.loadoutCostParts.map((DD => {
-          const CD = cC(cD, DD.loadoutPartCurrency);
-          return (0, PD.jsx)(KD, {
-            itemName: CD.loadoutHeldPartItem,
-            amount: DD.loadoutPartAmount,
-            Lb: CD.loadoutHeldPartAmount
-          }, DD.loadoutPartCurrency)
+        children: [RU.loadoutCostCoins > 0 && (0, wU.jsx)(YU, {
+          itemName: bU,
+          amount: RU.loadoutCostCoins,
+          WT: gU.loadoutCoins
+        }), RU.loadoutCostParts.map((UU => {
+          const RU = gR(gU, UU.loadoutPartCurrency);
+          return (0, wU.jsx)(YU, {
+            itemName: RU.loadoutHeldPartItem,
+            amount: UU.loadoutPartAmount,
+            WT: RU.loadoutHeldPartAmount
+          }, UU.loadoutPartCurrency)
         }))]
       })
     }
-    const qC = {
-      loadoutStatFireRate: `${HD}:loadoutUnitPerMinute`,
-      loadoutStatReload: `${HD}:loadoutUnitSeconds`,
-      loadoutStatResupply: `${HD}:loadoutUnitSeconds`
+    const ZR = {
+      loadoutStatFireRate: `${nU}:loadoutUnitPerMinute`,
+      loadoutStatReload: `${nU}:loadoutUnitSeconds`,
+      loadoutStatResupply: `${nU}:loadoutUnitSeconds`
     };
 
-    function JC(DD) {
-      return "loadoutStatPotency" === DD.loadoutStatKind ? (0, FD.S)(DD.loadoutStatValue) : String(DD.loadoutStatValue)
+    function aR(UU) {
+      return "loadoutStatPotency" === UU.loadoutStatKind ? (0, OU.V)(UU.loadoutStatValue) : String(UU.loadoutStatValue)
     }
 
-    function KC(DD) {
-      var CD;
+    function YR(UU) {
+      var RU;
       let {
-        option: cD
-      } = DD;
+        option: gU
+      } = UU;
       const {
-        t: ID
-      } = (0, BD.F)(), pD = cD.loadoutOptionTiers, iD = null === (CD = pD[0]) || void 0 === CD ? void 0 : CD.loadoutTierStats.map((DD => DD.loadoutStatKind));
-      if (!iD || 0 === iD.length) return null;
-      const fD = cD.loadoutOptionOwnedTier,
-        bD = (DD, CD) => {
-          var cD;
-          return null === (cD = pD[DD]) || void 0 === cD ? void 0 : cD.loadoutTierStats.find((DD => DD.loadoutStatKind === CD))
+        t: tU
+      } = (0, GU.B)(), pU = gU.loadoutOptionTiers, EU = null === (RU = pU[0]) || void 0 === RU ? void 0 : RU.loadoutTierStats.map((UU => UU.loadoutStatKind));
+      if (!EU || 0 === EU.length) return null;
+      const PU = gU.loadoutOptionOwnedTier,
+        TU = (UU, RU) => {
+          var gU;
+          return null === (gU = pU[UU]) || void 0 === gU ? void 0 : gU.loadoutTierStats.find((UU => UU.loadoutStatKind === RU))
         };
-      return (0, PD.jsxs)("table", {
+      return (0, wU.jsxs)("table", {
         className: "LoadoutTierTable",
-        children: [(0, PD.jsx)("thead", {
-          children: (0, PD.jsxs)("tr", {
-            children: [(0, PD.jsx)("th", {}), pD.map(((DD, CD) => (0, PD.jsx)("th", {
-              className: wD()({
-                Current: CD + 1 === fD,
-                Next: CD === fD
+        children: [(0, wU.jsx)("thead", {
+          children: (0, wU.jsxs)("tr", {
+            children: [(0, wU.jsx)("th", {}), pU.map(((UU, RU) => (0, wU.jsx)("th", {
+              className: KU()({
+                Current: RU + 1 === PU,
+                Next: RU === PU
               }),
-              children: ID(`${HD}:loadoutTier`, {
-                tier: (0, FD.S)(CD + 1)
+              children: tU(`${nU}:loadoutTier`, {
+                tier: (0, OU.V)(RU + 1)
               })
-            }, CD)))]
+            }, RU)))]
           })
-        }), (0, PD.jsx)("tbody", {
-          children: iD.map((DD => {
-            const CD = qC[DD];
-            return (0, PD.jsxs)("tr", {
-              children: [(0, PD.jsxs)("th", {
+        }), (0, wU.jsx)("tbody", {
+          children: EU.map((UU => {
+            const RU = ZR[UU];
+            return (0, wU.jsxs)("tr", {
+              children: [(0, wU.jsxs)("th", {
                 scope: "row",
-                children: [ID(`${HD}:${DD}`), CD && (0, PD.jsx)("span", {
+                children: [tU(`${nU}:${UU}`), RU && (0, wU.jsx)("span", {
                   className: "LoadoutStatUnit",
-                  children: ID(CD)
+                  children: tU(RU)
                 })]
-              }), pD.map(((CD, cD) => {
-                const ID = bD(cD, DD),
-                  pD = cD > 0 ? bD(cD - 1, DD) : void 0,
-                  iD = ID && pD ? ID.loadoutStatValue - pD.loadoutStatValue : 0,
-                  QD = UC.has(DD) ? iD < 0 : iD > 0,
-                  SD = cD === fD;
-                return (0, PD.jsxs)("td", {
-                  className: wD()({
-                    Current: cD + 1 === fD,
-                    Next: SD,
-                    Gain: QD,
-                    Owned: cD < fD
+              }), pU.map(((RU, gU) => {
+                const tU = TU(gU, UU),
+                  pU = gU > 0 ? TU(gU - 1, UU) : void 0,
+                  EU = tU && pU ? tU.loadoutStatValue - pU.loadoutStatValue : 0,
+                  qU = bR.has(UU) ? EU < 0 : EU > 0,
+                  cU = gU === PU;
+                return (0, wU.jsxs)("td", {
+                  className: KU()({
+                    Current: gU + 1 === PU,
+                    Next: cU,
+                    Gain: qU,
+                    Owned: gU < PU
                   }),
-                  children: [SD && QD && (0, PD.jsx)("span", {
+                  children: [cU && qU && (0, wU.jsx)("span", {
                     className: "LoadoutGainArrow",
                     "aria-hidden": "true",
-                    children: iD < 0 ? "\u25bc" : "\u25b2"
-                  }), ID ? JC(ID) : "-"]
-                }, cD)
+                    children: EU < 0 ? "\u25bc" : "\u25b2"
+                  }), tU ? aR(tU) : "-"]
+                }, gU)
               }))]
-            }, DD)
+            }, UU)
           }))
         })]
       })
     }
 
-    function aC(DD) {
+    function BR(UU) {
       let {
-        view: CD,
-        controller: cD,
-        slot: ID,
-        option: pD
-      } = DD;
+        view: RU,
+        controller: gU,
+        slot: tU,
+        option: pU
+      } = UU;
       const {
-        t: iD
-      } = (0, BD.F)(), fD = CD.loadout, bD = pD.loadoutOptionOwnedTier, QD = pD.loadoutOptionTiers.length, wD = ID.loadoutSlotEquippedId === pD.loadoutOptionId, SD = bD < QD ? pD.loadoutOptionTiers[bD].loadoutTierCost : null, yD = null !== SD && CC(fD, SD), MD = pD.loadoutOptionId, ZD = mC();
-      return (0, PD.jsxs)(PD.Fragment, {
-        children: [(0, PD.jsx)(zC, {
-          icon: pD.loadoutOptionIcon,
-          name: pD.loadoutOptionName,
-          status: 0 === bD ? iD(`${HD}:loadoutLocked`) : QD > 1 ? iD(`${HD}:loadoutTier`, {
-            tier: (0, FD.S)(bD)
+        t: EU
+      } = (0, GU.B)(), PU = RU.loadout, TU = pU.loadoutOptionOwnedTier, qU = pU.loadoutOptionTiers.length, KU = tU.loadoutSlotEquippedId === pU.loadoutOptionId, cU = TU < qU ? pU.loadoutOptionTiers[TU].loadoutTierCost : null, jU = null !== cU && RR(PU, cU), uU = pU.loadoutOptionId, hU = mR();
+      return (0, wU.jsxs)(wU.Fragment, {
+        children: [(0, wU.jsx)(rR, {
+          icon: pU.loadoutOptionIcon,
+          name: pU.loadoutOptionName,
+          status: 0 === TU ? EU(`${nU}:loadoutLocked`) : qU > 1 ? EU(`${nU}:loadoutTier`, {
+            tier: (0, OU.V)(TU)
           }) : null,
-          locked: 0 === bD,
-          equipped: wD
-        }), (0, PD.jsx)("p", {
+          locked: 0 === TU,
+          equipped: KU
+        }), (0, wU.jsx)("p", {
           className: "BoardDescription",
-          children: pD.loadoutOptionDescription
-        }), (0, PD.jsx)(KC, {
-          option: pD
-        }), (0, PD.jsxs)("div", {
-          ref: ZD("act", MD),
+          children: pU.loadoutOptionDescription
+        }), (0, wU.jsx)(YR, {
+          option: pU
+        }), (0, wU.jsxs)("div", {
+          ref: hU("act", uU),
           className: "BoardActions",
-          children: [null !== SD && (0, PD.jsxs)("div", {
+          children: [null !== cU && (0, wU.jsxs)("div", {
             className: "LoadoutBuy",
-            children: [(0, PD.jsx)(xC, {
-              cost: SD,
-              loadout: fD
-            }), (0, PD.jsx)(tD.o, {
-              disabled: !yD || CD.pending,
+            children: [(0, wU.jsx)(oR, {
+              cost: cU,
+              loadout: PU
+            }), (0, wU.jsx)(CU.j, {
+              disabled: !jU || RU.pending,
               onClick: () => {
-                cD.act(0 === bD ? "loadoutUnlock" : "loadoutUpgrade", MD)
+                gU.act(0 === TU ? "loadoutUnlock" : "loadoutUpgrade", uU)
               },
-              children: 0 === bD ? iD(`${HD}:loadoutUnlock`) : iD(`${HD}:loadoutUpgrade`, {
-                tier: (0, FD.S)(bD + 1)
+              children: 0 === TU ? EU(`${nU}:loadoutUnlock`) : EU(`${nU}:loadoutUpgrade`, {
+                tier: (0, OU.V)(TU + 1)
               })
             })]
-          }), null === SD && QD > 1 && (0, PD.jsx)("span", {
+          }), null === cU && qU > 1 && (0, wU.jsx)("span", {
             className: "BoardHint",
-            children: iD(`${HD}:loadoutMaxed`)
-          }), bD > 0 && !wD && (0, PD.jsx)(tD.i, {
-            disabled: CD.pending,
+            children: EU(`${nU}:loadoutMaxed`)
+          }), TU > 0 && !KU && (0, wU.jsx)(CU.e, {
+            disabled: RU.pending,
             onClick: () => {
-              cD.act("loadoutEquip", MD)
+              gU.act("loadoutEquip", uU)
             },
-            children: iD(`${HD}:loadoutEquip`)
+            children: EU(`${nU}:loadoutEquip`)
           })]
         })]
       })
     }
 
-    function VC(DD) {
+    function VR(UU) {
       let {
-        view: CD,
-        controller: cD,
-        perk: ID
-      } = DD;
+        view: RU,
+        controller: gU,
+        perk: tU
+      } = UU;
       const {
-        t: pD
-      } = (0, BD.F)(), iD = CD.loadout, fD = pC(iD), bD = ID.loadoutPerkId, QD = mC();
-      return (0, PD.jsxs)(PD.Fragment, {
-        children: [(0, PD.jsx)(zC, {
-          icon: ID.loadoutPerkIcon,
-          name: ID.loadoutPerkName,
-          status: ID.loadoutPerkOwned ? null : pD(`${HD}:loadoutLocked`),
-          locked: !ID.loadoutPerkOwned,
-          equipped: ID.loadoutPerkEquipped
-        }), (0, PD.jsx)("p", {
+        t: pU
+      } = (0, GU.B)(), EU = RU.loadout, PU = pR(EU), TU = tU.loadoutPerkId, qU = mR();
+      return (0, wU.jsxs)(wU.Fragment, {
+        children: [(0, wU.jsx)(rR, {
+          icon: tU.loadoutPerkIcon,
+          name: tU.loadoutPerkName,
+          status: tU.loadoutPerkOwned ? null : pU(`${nU}:loadoutLocked`),
+          locked: !tU.loadoutPerkOwned,
+          equipped: tU.loadoutPerkEquipped
+        }), (0, wU.jsx)("p", {
           className: "BoardDescription",
-          children: ID.loadoutPerkDescription
-        }), (0, PD.jsxs)("div", {
-          ref: QD("act", bD),
+          children: tU.loadoutPerkDescription
+        }), (0, wU.jsxs)("div", {
+          ref: qU("act", TU),
           className: "BoardActions",
-          children: [!ID.loadoutPerkOwned && (0, PD.jsxs)("div", {
+          children: [!tU.loadoutPerkOwned && (0, wU.jsxs)("div", {
             className: "LoadoutBuy",
-            children: [(0, PD.jsx)(xC, {
-              cost: ID.loadoutPerkCost,
-              loadout: iD
-            }), (0, PD.jsx)(tD.o, {
-              disabled: !CC(iD, ID.loadoutPerkCost) || CD.pending,
+            children: [(0, wU.jsx)(oR, {
+              cost: tU.loadoutPerkCost,
+              loadout: EU
+            }), (0, wU.jsx)(CU.j, {
+              disabled: !RR(EU, tU.loadoutPerkCost) || RU.pending,
               onClick: () => {
-                cD.act("loadoutUnlock", bD)
+                gU.act("loadoutUnlock", TU)
               },
-              children: pD(`${HD}:loadoutUnlock`)
+              children: pU(`${nU}:loadoutUnlock`)
             })]
-          }), ID.loadoutPerkOwned && !ID.loadoutPerkEquipped && (0, PD.jsx)(tD.i, {
-            disabled: fD || CD.pending,
+          }), tU.loadoutPerkOwned && !tU.loadoutPerkEquipped && (0, wU.jsx)(CU.e, {
+            disabled: PU || RU.pending,
             onClick: () => {
-              cD.act("loadoutEquip", bD)
+              gU.act("loadoutEquip", TU)
             },
-            children: pD(`${HD}:loadoutEquip`)
-          }), ID.loadoutPerkOwned && !ID.loadoutPerkEquipped && fD && (0, PD.jsx)("span", {
+            children: pU(`${nU}:loadoutEquip`)
+          }), tU.loadoutPerkOwned && !tU.loadoutPerkEquipped && PU && (0, wU.jsx)("span", {
             className: "BoardHint",
-            children: pD(`${HD}:loadoutSocketsFullHint`)
-          }), ID.loadoutPerkEquipped && (0, PD.jsx)(tD.P, {
-            disabled: CD.pending,
+            children: pU(`${nU}:loadoutSocketsFullHint`)
+          }), tU.loadoutPerkEquipped && (0, wU.jsx)(CU.M, {
+            disabled: RU.pending,
             onClick: () => {
-              cD.act("loadoutUnequip", bD)
+              gU.act("loadoutUnequip", TU)
             },
-            children: pD(`${HD}:loadoutUnequip`)
+            children: pU(`${nU}:loadoutUnequip`)
           })]
         })]
       })
     }
 
-    function zC(DD) {
+    function rR(UU) {
       let {
-        icon: CD,
-        name: cD,
-        status: ID,
-        locked: pD,
-        equipped: iD
-      } = DD;
+        icon: RU,
+        name: gU,
+        status: tU,
+        locked: pU,
+        equipped: EU
+      } = UU;
       const {
-        t: fD
-      } = (0, BD.F)();
-      return (0, PD.jsxs)(jD, {
-        icon: (0, PD.jsx)(qD, {
-          itemName: CD
+        t: PU
+      } = (0, GU.B)();
+      return (0, wU.jsxs)(XU, {
+        icon: (0, wU.jsx)(ZU, {
+          itemName: RU
         }),
-        name: cD,
-        children: [null !== ID && (0, PD.jsx)("span", {
-          className: wD()("LoadoutStatusText", {
-            Locked: pD
+        name: gU,
+        children: [null !== tU && (0, wU.jsx)("span", {
+          className: KU()("LoadoutStatusText", {
+            Locked: pU
           }),
-          children: ID
-        }), iD && (0, PD.jsx)("span", {
+          children: tU
+        }), EU && (0, wU.jsx)("span", {
           className: "BoardBadge",
-          children: fD(`${HD}:loadoutEquippedBadge`)
+          children: PU(`${nU}:loadoutEquippedBadge`)
         })]
       })
     }
 
-    function jC(DD) {
+    function XR(UU) {
       let {
-        view: CD,
-        controller: cD
-      } = DD;
-      const ID = CD.loadout;
-      if ("loadoutPerks" === CD.slot) {
-        const DD = ID.loadoutPerks.find((DD => DD.loadoutPerkId === CD.selectedId));
-        return (0, PD.jsx)("section", {
+        view: RU,
+        controller: gU
+      } = UU;
+      const tU = RU.loadout;
+      if ("loadoutPerks" === RU.slot) {
+        const UU = tU.loadoutPerks.find((UU => UU.loadoutPerkId === RU.selectedId));
+        return (0, wU.jsx)("section", {
           className: "BoardDetail",
-          children: DD && (0, PD.jsx)(VC, {
-            view: CD,
-            controller: cD,
-            perk: DD
+          children: UU && (0, wU.jsx)(VR, {
+            view: RU,
+            controller: gU,
+            perk: UU
           })
         })
       }
-      const pD = IC(ID, CD.slot),
-        iD = pD.loadoutSlotOptions.find((DD => DD.loadoutOptionId === CD.selectedId));
-      return (0, PD.jsx)("section", {
+      const pU = tR(tU, RU.slot),
+        EU = pU.loadoutSlotOptions.find((UU => UU.loadoutOptionId === RU.selectedId));
+      return (0, wU.jsx)("section", {
         className: "BoardDetail",
-        children: iD && (0, PD.jsx)(aC, {
-          view: CD,
-          controller: cD,
-          slot: pD,
-          option: iD
+        children: EU && (0, wU.jsx)(BR, {
+          view: RU,
+          controller: gU,
+          slot: pU,
+          option: EU
         })
       })
     }
 
-    function lC(DD) {
+    function vR(UU) {
       let {
-        owned: CD,
-        total: cD
-      } = DD;
-      return cD <= 1 ? null : (0, PD.jsx)("span", {
+        owned: RU,
+        total: gU
+      } = UU;
+      return gU <= 1 ? null : (0, wU.jsx)("span", {
         className: "LoadoutPips",
         children: Array.from({
-          length: cD
-        }, ((DD, cD) => (0, PD.jsx)("span", {
-          className: wD()("LoadoutPip", {
-            Filled: cD < CD
+          length: gU
+        }, ((UU, gU) => (0, wU.jsx)("span", {
+          className: KU()("LoadoutPip", {
+            Filled: gU < RU
           })
-        }, cD)))
+        }, gU)))
       })
     }
 
-    function LC(DD) {
+    function dR(UU) {
       let {
-        view: CD,
-        controller: cD
-      } = DD;
+        view: RU,
+        controller: gU
+      } = UU;
       const {
-        t: ID
-      } = (0, BD.F)(), pD = CD.loadout, iD = mC();
-      return (0, PD.jsxs)("nav", {
+        t: tU
+      } = (0, GU.B)(), pU = RU.loadout, EU = mR();
+      return (0, wU.jsxs)("nav", {
         className: "LoadoutKit",
-        "aria-label": ID(`${HD}:loadoutKit`),
-        children: [pD.loadoutSlots.map((DD => {
-          const pD = DD.loadoutSlotOptions.find((CD => CD.loadoutOptionId === DD.loadoutSlotEquippedId));
-          return (0, PD.jsxs)("button", {
-            ref: iD("section", DD.loadoutSlotKind),
+        "aria-label": tU(`${nU}:loadoutKit`),
+        children: [pU.loadoutSlots.map((UU => {
+          const pU = UU.loadoutSlotOptions.find((RU => RU.loadoutOptionId === UU.loadoutSlotEquippedId));
+          return (0, wU.jsxs)("button", {
+            ref: EU("section", UU.loadoutSlotKind),
             type: "button",
-            className: wD()("LoadoutKitSlot", {
-              Selected: CD.slot === DD.loadoutSlotKind
+            className: KU()("LoadoutKitSlot", {
+              Selected: RU.slot === UU.loadoutSlotKind
             }),
             onClick: () => {
-              cD.selectSlot(DD.loadoutSlotKind)
+              gU.selectSlot(UU.loadoutSlotKind)
             },
-            children: [(0, PD.jsx)("span", {
+            children: [(0, wU.jsx)("span", {
               className: "LoadoutKitIcon",
-              children: pD && (0, PD.jsx)(qD, {
-                itemName: pD.loadoutOptionIcon
+              children: pU && (0, wU.jsx)(ZU, {
+                itemName: pU.loadoutOptionIcon
               })
-            }), (0, PD.jsxs)("span", {
+            }), (0, wU.jsxs)("span", {
               className: "LoadoutKitText",
-              children: [(0, PD.jsxs)("span", {
+              children: [(0, wU.jsxs)("span", {
                 className: "LoadoutKitTop",
-                children: [(0, PD.jsx)("span", {
+                children: [(0, wU.jsx)("span", {
                   className: "LoadoutKitLabel",
-                  children: ID(NC[DD.loadoutSlotKind])
-                }), pD && (0, PD.jsx)(lC, {
-                  owned: pD.loadoutOptionOwnedTier,
-                  total: pD.loadoutOptionTiers.length
+                  children: tU(WR[UU.loadoutSlotKind])
+                }), pU && (0, wU.jsx)(vR, {
+                  owned: pU.loadoutOptionOwnedTier,
+                  total: pU.loadoutOptionTiers.length
                 })]
-              }), (0, PD.jsx)("span", {
+              }), (0, wU.jsx)("span", {
                 className: "LoadoutKitName",
-                children: null === pD || void 0 === pD ? void 0 : pD.loadoutOptionName
+                children: null === pU || void 0 === pU ? void 0 : pU.loadoutOptionName
               })]
             })]
-          }, DD.loadoutSlotKind)
-        })), (0, PD.jsx)(TC, {
-          view: CD,
-          controller: cD
+          }, UU.loadoutSlotKind)
+        })), (0, wU.jsx)(HR, {
+          view: RU,
+          controller: gU
         })]
       })
     }
 
-    function TC(DD) {
+    function HR(UU) {
       let {
-        view: CD,
-        controller: cD
-      } = DD;
+        view: RU,
+        controller: gU
+      } = UU;
       const {
-        t: ID
-      } = (0, BD.F)(), pD = CD.loadout, iD = pD.loadoutPerks.filter((DD => DD.loadoutPerkEquipped)), fD = mC();
-      return (0, PD.jsxs)("button", {
-        ref: fD("section", "loadoutPerks"),
+        t: tU
+      } = (0, GU.B)(), pU = RU.loadout, EU = pU.loadoutPerks.filter((UU => UU.loadoutPerkEquipped)), PU = mR();
+      return (0, wU.jsxs)("button", {
+        ref: PU("section", "loadoutPerks"),
         type: "button",
-        className: wD()("LoadoutKitSlot", "LoadoutPerks", {
-          Selected: "loadoutPerks" === CD.slot
+        className: KU()("LoadoutKitSlot", "LoadoutPerks", {
+          Selected: "loadoutPerks" === RU.slot
         }),
         onClick: () => {
-          cD.selectSlot("loadoutPerks")
+          gU.selectSlot("loadoutPerks")
         },
-        children: [(0, PD.jsxs)("span", {
+        children: [(0, wU.jsxs)("span", {
           className: "LoadoutKitTop",
-          children: [(0, PD.jsx)("span", {
+          children: [(0, wU.jsx)("span", {
             className: "LoadoutKitLabel",
-            children: ID(NC.loadoutPerks)
-          }), (0, PD.jsx)("span", {
+            children: tU(WR.loadoutPerks)
+          }), (0, wU.jsx)("span", {
             className: "LoadoutPerkCount",
-            children: ID(`${HD}:loadoutPerkCount`, {
-              equipped: String(iD.length),
-              max: String(pD.loadoutMaxPerks)
+            children: tU(`${nU}:loadoutPerkCount`, {
+              equipped: String(EU.length),
+              max: String(pU.loadoutMaxPerks)
             })
           })]
-        }), (0, PD.jsx)("span", {
+        }), (0, wU.jsx)("span", {
           className: "LoadoutSockets",
           children: Array.from({
-            length: pD.loadoutMaxPerks
-          }, ((DD, CD) => {
-            const cD = iD[CD];
-            return (0, PD.jsxs)("span", {
-              className: wD()("LoadoutSocket", {
-                Filled: cD,
-                Empty: !cD
+            length: pU.loadoutMaxPerks
+          }, ((UU, RU) => {
+            const gU = EU[RU];
+            return (0, wU.jsxs)("span", {
+              className: KU()("LoadoutSocket", {
+                Filled: gU,
+                Empty: !gU
               }),
-              children: [(0, PD.jsx)("span", {
+              children: [(0, wU.jsx)("span", {
                 className: "LoadoutSocketWell",
-                children: cD && (0, PD.jsx)(qD, {
-                  itemName: cD.loadoutPerkIcon
+                children: gU && (0, wU.jsx)(ZU, {
+                  itemName: gU.loadoutPerkIcon
                 })
-              }), (0, PD.jsx)("span", {
+              }), (0, wU.jsx)("span", {
                 className: "LoadoutSocketName",
-                children: cD ? cD.loadoutPerkName : ID(`${HD}:loadoutPerkSocketEmpty`)
+                children: gU ? gU.loadoutPerkName : tU(`${nU}:loadoutPerkSocketEmpty`)
               })]
-            }, CD)
+            }, RU)
           }))
         })]
       })
     }
 
-    function GC(DD) {
+    function SR(UU) {
       let {
-        icon: CD,
-        name: cD,
-        selected: ID,
-        equipped: pD,
-        locked: iD,
-        ownedTier: fD,
-        tiers: bD,
-        buttonRef: QD,
-        onSelect: wD
-      } = DD;
+        icon: RU,
+        name: gU,
+        selected: tU,
+        equipped: pU,
+        locked: EU,
+        ownedTier: PU,
+        tiers: TU,
+        buttonRef: qU,
+        onSelect: KU
+      } = UU;
       const {
-        t: SD
-      } = (0, BD.F)();
-      return (0, PD.jsxs)(zD, {
-        icon: (0, PD.jsx)(qD, {
-          itemName: CD
+        t: cU
+      } = (0, GU.B)();
+      return (0, wU.jsxs)(rU, {
+        icon: (0, wU.jsx)(ZU, {
+          itemName: RU
         }),
-        name: cD,
-        selected: ID,
-        locked: iD,
-        buttonRef: QD,
-        onSelect: wD,
-        children: [pD && (0, PD.jsx)("span", {
+        name: gU,
+        selected: tU,
+        locked: EU,
+        buttonRef: qU,
+        onSelect: KU,
+        children: [pU && (0, wU.jsx)("span", {
           className: "BoardBadge",
-          children: SD(`${HD}:loadoutEquippedBadge`)
-        }), iD && (0, PD.jsx)("span", {
+          children: cU(`${nU}:loadoutEquippedBadge`)
+        }), EU && (0, wU.jsx)("span", {
           className: "BoardBadge Muted",
-          children: SD(`${HD}:loadoutLocked`)
-        }), !iD && (0, PD.jsx)(lC, {
-          owned: fD,
-          total: bD
+          children: cU(`${nU}:loadoutLocked`)
+        }), !EU && (0, wU.jsx)(vR, {
+          owned: PU,
+          total: TU
         })]
       })
     }
 
-    function RC(DD) {
+    function sR(UU) {
       let {
-        view: CD,
-        controller: cD
-      } = DD;
-      const ID = CD.loadout,
-        pD = mC();
-      if ("loadoutPerks" === CD.slot) return (0, PD.jsx)("div", {
+        view: RU,
+        controller: gU
+      } = UU;
+      const tU = RU.loadout,
+        pU = mR();
+      if ("loadoutPerks" === RU.slot) return (0, wU.jsx)("div", {
         className: "BoardTiles",
-        children: ID.loadoutPerks.map((DD => (0, PD.jsx)(GC, {
-          icon: DD.loadoutPerkIcon,
-          name: DD.loadoutPerkName,
-          selected: CD.selectedId === DD.loadoutPerkId,
-          equipped: DD.loadoutPerkEquipped,
-          locked: !DD.loadoutPerkOwned,
+        children: tU.loadoutPerks.map((UU => (0, wU.jsx)(SR, {
+          icon: UU.loadoutPerkIcon,
+          name: UU.loadoutPerkName,
+          selected: RU.selectedId === UU.loadoutPerkId,
+          equipped: UU.loadoutPerkEquipped,
+          locked: !UU.loadoutPerkOwned,
           ownedTier: 0,
           tiers: 0,
-          buttonRef: pD("MM", DD.loadoutPerkId),
+          buttonRef: pU("Hj", UU.loadoutPerkId),
           onSelect: () => {
-            cD.select(DD.loadoutPerkId)
+            gU.select(UU.loadoutPerkId)
           }
-        }, DD.loadoutPerkId)))
+        }, UU.loadoutPerkId)))
       });
-      const iD = IC(ID, CD.slot);
-      return (0, PD.jsx)("div", {
+      const EU = tR(tU, RU.slot);
+      return (0, wU.jsx)("div", {
         className: "BoardTiles",
-        children: iD.loadoutSlotOptions.map((DD => (0, PD.jsx)(GC, {
-          icon: DD.loadoutOptionIcon,
-          name: DD.loadoutOptionName,
-          selected: CD.selectedId === DD.loadoutOptionId,
-          equipped: iD.loadoutSlotEquippedId === DD.loadoutOptionId,
-          locked: 0 === DD.loadoutOptionOwnedTier,
-          ownedTier: DD.loadoutOptionOwnedTier,
-          tiers: DD.loadoutOptionTiers.length,
-          buttonRef: pD("MM", DD.loadoutOptionId),
+        children: EU.loadoutSlotOptions.map((UU => (0, wU.jsx)(SR, {
+          icon: UU.loadoutOptionIcon,
+          name: UU.loadoutOptionName,
+          selected: RU.selectedId === UU.loadoutOptionId,
+          equipped: EU.loadoutSlotEquippedId === UU.loadoutOptionId,
+          locked: 0 === UU.loadoutOptionOwnedTier,
+          ownedTier: UU.loadoutOptionOwnedTier,
+          tiers: UU.loadoutOptionTiers.length,
+          buttonRef: pU("Hj", UU.loadoutOptionId),
           onSelect: () => {
-            cD.select(DD.loadoutOptionId)
+            gU.select(UU.loadoutOptionId)
           }
-        }, DD.loadoutOptionId)))
+        }, UU.loadoutOptionId)))
       })
     }
 
-    function kC(DD) {
+    function yR(UU) {
       let {
-        loadout: CD
-      } = DD;
-      return (0, PD.jsx)(lD, {
-        coins: CD.loadoutCoins,
-        children: CD.loadoutHeldParts.filter((DD => DD.loadoutHeldPartAmount > 0)).map((DD => (0, PD.jsx)(KD, {
-          itemName: DD.loadoutHeldPartItem,
-          amount: DD.loadoutHeldPartAmount
-        }, DD.loadoutHeldPartCurrency)))
+        loadout: RU
+      } = UU;
+      return (0, wU.jsx)(vU, {
+        coins: RU.loadoutCoins,
+        children: RU.loadoutHeldParts.filter((UU => UU.loadoutHeldPartAmount > 0)).map((UU => (0, wU.jsx)(YU, {
+          itemName: UU.loadoutHeldPartItem,
+          amount: UU.loadoutHeldPartAmount
+        }, UU.loadoutHeldPartCurrency)))
       })
     }
 
-    function dC(DD) {
+    function kR(UU) {
       let {
-        controller: CD
-      } = DD;
-      const cD = (0, SD.g)(yC, CD.getSnapshot()),
+        controller: RU
+      } = UU;
+      const gU = (0, cU.h)(jR, RU.getSnapshot()),
         {
-          t: ID
-        } = (0, BD.F)();
-      if (null === cD.loadout) return null;
-      const pD = cD.notice;
-      return (0, PD.jsx)(PC, {
-        view: cD,
-        onDismiss: CD.dismiss,
-        children: (0, PD.jsxs)(xD, {
-          open: cD.open,
-          onDismiss: CD.dismiss,
-          title: ID(`${HD}:loadoutTitle`),
+          t: tU
+        } = (0, GU.B)();
+      if (null === gU.loadout) return null;
+      const pU = gU.notice;
+      return (0, wU.jsx)(wR, {
+        view: gU,
+        onDismiss: RU.dismiss,
+        children: (0, wU.jsxs)(oU, {
+          open: gU.open,
+          onDismiss: RU.dismiss,
+          title: tU(`${nU}:loadoutTitle`),
           className: "ContainmentLoadoutPanel",
-          headerExtra: (0, PD.jsx)(kC, {
-            loadout: cD.loadout
+          headerExtra: (0, wU.jsx)(yR, {
+            loadout: gU.loadout
           }),
-          statusRefused: null === pD || void 0 === pD ? void 0 : pD.loadoutNoticeRefused,
-          status: (0, PD.jsxs)(PD.Fragment, {
-            children: [(0, PD.jsx)("span", {
+          statusRefused: null === pU || void 0 === pU ? void 0 : pU.loadoutNoticeRefused,
+          status: (0, wU.jsxs)(wU.Fragment, {
+            children: [(0, wU.jsx)("span", {
               className: "LoadoutRadioBadge",
-              children: ID(`${HD}:loadoutRadioBadge`)
-            }), null !== pD && ID(`${HD}:${pD.loadoutNoticeKey}`, {
-              name: pD.loadoutNoticeName,
-              tier: (0, FD.S)(pD.loadoutNoticeTier),
-              max: String(cD.loadout.loadoutMaxPerks)
+              children: tU(`${nU}:loadoutRadioBadge`)
+            }), null !== pU && tU(`${nU}:${pU.loadoutNoticeKey}`, {
+              name: pU.loadoutNoticeName,
+              tier: (0, OU.V)(pU.loadoutNoticeTier),
+              max: String(gU.loadout.loadoutMaxPerks)
             })]
           }),
-          children: [(0, PD.jsx)(LC, {
-            view: cD,
-            controller: CD
-          }), (0, PD.jsx)(RC, {
-            view: cD,
-            controller: CD
-          }), (0, PD.jsx)(jC, {
-            view: cD,
-            controller: CD
+          children: [(0, wU.jsx)(dR, {
+            view: gU,
+            controller: RU
+          }), (0, wU.jsx)(sR, {
+            view: gU,
+            controller: RU
+          }), (0, wU.jsx)(XR, {
+            view: gU,
+            controller: RU
           })]
         })
       })
     }
 
-    function YC(DD, CD, cD) {
-      const ID = DD.locatorEntries.find((DD => DD.locatorEntryId === cD));
-      if (!ID) return null;
-      const pD = ID.locatorEntryName;
-      if ("locatorDisarm" === CD) return ID.locatorEntryArmed ? {
-        board: WC(DD, null),
-        notice: sC("locatorNoticeDisarmed", pD)
+    function FR(UU, RU, gU) {
+      const tU = UU.locatorEntries.find((UU => UU.locatorEntryId === gU));
+      if (!tU) return null;
+      const pU = tU.locatorEntryName;
+      if ("locatorDisarm" === RU) return tU.locatorEntryArmed ? {
+        board: iR(UU, null),
+        notice: AR("locatorNoticeDisarmed", pU)
       } : null;
-      if ("locatorArm" === CD) return ID.locatorEntryOwned && !ID.locatorEntryArmed ? {
-        board: WC(DD, cD),
-        notice: sC("locatorNoticeArmed", pD)
+      if ("locatorArm" === RU) return tU.locatorEntryOwned && !tU.locatorEntryArmed ? {
+        board: iR(UU, gU),
+        notice: AR("locatorNoticeArmed", pU)
       } : null;
-      if (ID.locatorEntryOwned || DD.locatorCoins < ID.locatorEntryPrice) return null;
-      const iD = WC({
-        ...DD,
-        locatorCoins: DD.locatorCoins - ID.locatorEntryPrice
-      }, cD);
+      if (tU.locatorEntryOwned || UU.locatorCoins < tU.locatorEntryPrice) return null;
+      const EU = iR({
+        ...UU,
+        locatorCoins: UU.locatorCoins - tU.locatorEntryPrice
+      }, gU);
       return {
         board: {
-          ...iD,
-          locatorEntries: iD.locatorEntries.map((DD => DD.locatorEntryId === cD ? {
-            ...DD,
+          ...EU,
+          locatorEntries: EU.locatorEntries.map((UU => UU.locatorEntryId === gU ? {
+            ...UU,
             locatorEntryOwned: !0
-          } : DD))
+          } : UU))
         },
-        notice: sC("locatorNoticeBought", pD)
+        notice: AR("locatorNoticeBought", pU)
       }
     }
 
-    function WC(DD, CD) {
+    function iR(UU, RU) {
       return {
-        ...DD,
-        locatorEntries: DD.locatorEntries.map((DD => {
-          const cD = DD.locatorEntryId === CD;
-          return DD.locatorEntryArmed === cD ? DD : {
-            ...DD,
-            locatorEntryArmed: cD
+        ...UU,
+        locatorEntries: UU.locatorEntries.map((UU => {
+          const gU = UU.locatorEntryId === RU;
+          return UU.locatorEntryArmed === gU ? UU : {
+            ...UU,
+            locatorEntryArmed: gU
           }
         }))
       }
     }
 
-    function sC(DD, CD) {
+    function AR(UU, RU) {
       return {
-        locatorNoticeKey: DD,
+        locatorNoticeKey: UU,
         locatorNoticeRefused: !1,
-        locatorNoticeName: CD
+        locatorNoticeName: RU
       }
     }
-    const EC = "containmentLocatorView";
-    class eC extends DC {
-      constructor(DD, CD, cD, ID) {
-        super(DD, CD, cD, ID, "locator", YC), this.snapshot = this.buildSnapshot()
+    const zR = "containmentLocatorView";
+    class MR extends UR {
+      constructor(UU, RU, gU, tU) {
+        super(UU, RU, gU, tU, "locator", FR), this.snapshot = this.buildSnapshot()
       }
-      messageOpens(DD) {
-        return DD.locatorMessageOpens
+      messageOpens(UU) {
+        return UU.locatorMessageOpens
       }
-      messageNotice(DD) {
-        return DD.locatorNotice
+      messageNotice(UU) {
+        return UU.locatorNotice
       }
-      openingSelection(DD) {
-        var CD;
-        const cD = DD.locatorEntries;
-        return (null !== (CD = cD.find((DD => DD.locatorEntryArmed))) && void 0 !== CD ? CD : cD[0]).locatorEntryId
+      openingSelection(UU) {
+        var RU;
+        const gU = UU.locatorEntries;
+        return (null !== (RU = gU.find((UU => UU.locatorEntryArmed))) && void 0 !== RU ? RU : gU[0]).locatorEntryId
       }
       buildSnapshot() {
         return {
@@ -2010,245 +2010,245 @@ export const modules = {
         }
       }
     }
-    const uC = {
-        locatorContained: `${HD}:locatorFlavourContained`,
-        locatorEncountered: `${HD}:locatorFlavourEncountered`,
-        locatorUnseen: `${HD}:locatorFlavourUnseen`
+    const DR = {
+        locatorContained: `${nU}:locatorFlavourContained`,
+        locatorEncountered: `${nU}:locatorFlavourEncountered`,
+        locatorUnseen: `${nU}:locatorFlavourUnseen`
       },
-      hC = {
+      LR = {
         codexAnyDifficulty: null,
-        codexNormalOnly: `${HD}:locatorAttunedNormal`,
-        codexHardOnly: `${HD}:locatorAttunedHard`
+        codexNormalOnly: `${nU}:locatorAttunedNormal`,
+        codexHardOnly: `${nU}:locatorAttunedHard`
       };
 
-    function rC() {
-      return (0, PD.jsx)(PD.Fragment, {
+    function NR() {
+      return (0, wU.jsx)(wU.Fragment, {
         children: Array.from({
           length: 5
-        }, ((DD, CD) => (0, PD.jsx)("span", {
+        }, ((UU, RU) => (0, wU.jsx)("span", {
           className: "LocatorFly",
-          children: (0, PD.jsx)("img", {
+          children: (0, wU.jsx)("img", {
             src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAYAAADwdn+XAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYElEQVR4nGNgoBboMlb5LyUjD8YgNtHyJ6/d+Q/CILa1lz9YAbo4DCDLYxjQv3gt3AYQG90AdHkUQ/qhkjAb0BURkgcDmAQMo7sSXR7deyiGoIvDvIOsGasB+ACyBmTNACS0go3ibhumAAAAAElFTkSuQmCC",
             alt: "",
             draggable: !1
           })
-        }, CD)))
+        }, RU)))
       })
     }
 
-    function AC(DD) {
+    function lR(UU) {
       let {
-        entry: CD
-      } = DD;
+        entry: RU
+      } = UU;
       const {
-        t: cD
-      } = (0, BD.F)();
-      return CD.locatorEntryArmed ? (0, PD.jsx)("span", {
+        t: gU
+      } = (0, GU.B)();
+      return RU.locatorEntryArmed ? (0, wU.jsx)("span", {
         className: "BoardBadge Armed",
-        children: cD(`${HD}:locatorArmedBadge`)
-      }) : CD.locatorEntryOwned ? (0, PD.jsx)("span", {
+        children: gU(`${nU}:locatorArmedBadge`)
+      }) : RU.locatorEntryOwned ? (0, wU.jsx)("span", {
         className: "BoardBadge",
-        children: cD(`${HD}:locatorOwnedBadge`)
+        children: gU(`${nU}:locatorOwnedBadge`)
       }) : null
     }
 
-    function FC(DD) {
+    function OR(UU) {
       let {
-        entry: CD,
-        coins: cD,
-        inTile: ID = !1
-      } = DD;
-      return (0, PD.jsx)(KD, {
-        itemName: UD,
-        amount: CD.locatorEntryPrice,
-        Lb: cD,
-        inTile: ID
+        entry: RU,
+        coins: gU,
+        inTile: tU = !1
+      } = UU;
+      return (0, wU.jsx)(YU, {
+        itemName: bU,
+        amount: RU.locatorEntryPrice,
+        WT: gU,
+        inTile: tU
       })
     }
 
-    function Dc(DD) {
+    function Ug(UU) {
       let {
-        view: CD,
-        controller: cD,
-        entry: ID
-      } = DD;
+        view: RU,
+        controller: gU,
+        entry: tU
+      } = UU;
       const {
-        t: pD
-      } = (0, BD.F)(), iD = ID.locatorEntryId, fD = CD.locators.locatorEntries.find((DD => DD.locatorEntryArmed && DD !== ID));
-      return (0, PD.jsxs)("div", {
+        t: pU
+      } = (0, GU.B)(), EU = tU.locatorEntryId, PU = RU.locators.locatorEntries.find((UU => UU.locatorEntryArmed && UU !== tU));
+      return (0, wU.jsxs)("div", {
         className: "BoardActions",
-        children: [ID.locatorEntryArmed && (0, PD.jsx)(tD.P, {
-          disabled: CD.pending,
+        children: [tU.locatorEntryArmed && (0, wU.jsx)(CU.M, {
+          disabled: RU.pending,
           onClick: () => {
-            cD.act("locatorDisarm", iD)
+            gU.act("locatorDisarm", EU)
           },
-          children: pD(`${HD}:locatorDisarm`)
-        }), ID.locatorEntryOwned && !ID.locatorEntryArmed && (0, PD.jsx)(tD.i, {
-          disabled: CD.pending,
+          children: pU(`${nU}:locatorDisarm`)
+        }), tU.locatorEntryOwned && !tU.locatorEntryArmed && (0, wU.jsx)(CU.e, {
+          disabled: RU.pending,
           onClick: () => {
-            cD.act("locatorArm", iD)
+            gU.act("locatorArm", EU)
           },
-          children: pD(`${HD}:locatorArm`)
-        }), !ID.locatorEntryOwned && (0, PD.jsxs)("div", {
+          children: pU(`${nU}:locatorArm`)
+        }), !tU.locatorEntryOwned && (0, wU.jsxs)("div", {
           className: "LocatorBuy",
-          children: [(0, PD.jsx)(FC, {
-            entry: ID,
-            coins: CD.locators.locatorCoins
-          }), (0, PD.jsx)(tD.o, {
-            disabled: CD.locators.locatorCoins < ID.locatorEntryPrice || CD.pending,
+          children: [(0, wU.jsx)(OR, {
+            entry: tU,
+            coins: RU.locators.locatorCoins
+          }), (0, wU.jsx)(CU.j, {
+            disabled: RU.locators.locatorCoins < tU.locatorEntryPrice || RU.pending,
             onClick: () => {
-              cD.act("locatorBuy", iD)
+              gU.act("locatorBuy", EU)
             },
-            children: pD(`${HD}:locatorBuy`)
+            children: pU(`${nU}:locatorBuy`)
           })]
-        }), fD && !ID.locatorEntryArmed && (0, PD.jsx)("span", {
+        }), PU && !tU.locatorEntryArmed && (0, wU.jsx)("span", {
           className: "BoardHint",
-          children: pD(`${HD}:locatorReplacesHint`, {
-            name: fD.locatorEntryName
+          children: pU(`${nU}:locatorReplacesHint`, {
+            name: PU.locatorEntryName
           })
         })]
       })
     }
 
-    function Cc(DD) {
+    function Rg(UU) {
       let {
-        entry: CD
-      } = DD;
-      return "locatorUnseen" === CD.locatorEntryStanding ? (0, PD.jsx)(qD, {
+        entry: RU
+      } = UU;
+      return "locatorUnseen" === RU.locatorEntryStanding ? (0, wU.jsx)(ZU, {
         itemName: "Compass"
-      }) : (0, PD.jsx)(JD, {
-        anomalyId: CD.locatorEntryId,
-        caught: "locatorContained" === CD.locatorEntryStanding
+      }) : (0, wU.jsx)(aU, {
+        anomalyId: RU.locatorEntryId,
+        caught: "locatorContained" === RU.locatorEntryStanding
       })
     }
 
-    function cc(DD) {
+    function gg(UU) {
       let {
-        view: CD,
-        controller: cD,
-        entry: ID
-      } = DD;
+        view: RU,
+        controller: gU,
+        entry: tU
+      } = UU;
       const {
-        t: pD
-      } = (0, BD.F)(), iD = hC[ID.locatorEntryDifficulty];
-      return (0, PD.jsxs)("section", {
+        t: pU
+      } = (0, GU.B)(), EU = LR[tU.locatorEntryDifficulty];
+      return (0, wU.jsxs)("section", {
         className: "BoardDetail",
-        children: [(0, PD.jsxs)("div", {
-          className: wD()("LocatorLabel", {
-            Armed: ID.locatorEntryArmed
+        children: [(0, wU.jsxs)("div", {
+          className: KU()("LocatorLabel", {
+            Armed: tU.locatorEntryArmed
           }),
-          children: [(0, PD.jsx)(jD, {
-            icon: (0, PD.jsx)(Cc, {
-              entry: ID
+          children: [(0, wU.jsx)(XU, {
+            icon: (0, wU.jsx)(Rg, {
+              entry: tU
             }),
-            name: pD(`${HD}:locatorName`, {
-              name: ID.locatorEntryName
+            name: pU(`${nU}:locatorName`, {
+              name: tU.locatorEntryName
             }),
-            children: (0, PD.jsx)(AC, {
-              entry: ID
+            children: (0, wU.jsx)(lR, {
+              entry: tU
             })
-          }), (0, PD.jsx)("p", {
+          }), (0, wU.jsx)("p", {
             className: "BoardDescription",
-            children: pD(ID.locatorEntryArmed ? `${HD}:locatorFlavourArmed` : uC[ID.locatorEntryStanding])
-          }), null !== iD && (0, PD.jsx)("p", {
+            children: pU(tU.locatorEntryArmed ? `${nU}:locatorFlavourArmed` : DR[tU.locatorEntryStanding])
+          }), null !== EU && (0, wU.jsx)("p", {
             className: "LocatorAttuned",
-            children: pD(iD)
-          }), (0, PD.jsx)("p", {
+            children: pU(EU)
+          }), (0, wU.jsx)("p", {
             className: "BoardDescription LocatorUsage",
-            children: pD(`${HD}:locatorUsage`)
+            children: pU(`${nU}:locatorUsage`)
           })]
-        }), (0, PD.jsx)(Dc, {
-          view: CD,
-          controller: cD,
-          entry: ID
+        }), (0, wU.jsx)(Ug, {
+          view: RU,
+          controller: gU,
+          entry: tU
         })]
       })
     }
 
-    function Ic(DD) {
+    function tg(UU) {
       let {
-        controller: CD
-      } = DD;
-      const cD = (0, SD.g)(EC, CD.getSnapshot()),
+        controller: RU
+      } = UU;
+      const gU = (0, cU.h)(zR, RU.getSnapshot()),
         {
-          t: ID
-        } = (0, BD.F)(),
-        pD = cD.locators;
-      if (null === pD) return null;
-      const iD = pD.locatorEntries.find((DD => DD.locatorEntryId === cD.selectedId)),
-        fD = cD.notice;
-      return (0, PD.jsxs)(xD, {
-        open: cD.open,
-        onDismiss: CD.dismiss,
-        title: ID(`${HD}:locatorTitle`),
+          t: tU
+        } = (0, GU.B)(),
+        pU = gU.locators;
+      if (null === pU) return null;
+      const EU = pU.locatorEntries.find((UU => UU.locatorEntryId === gU.selectedId)),
+        PU = gU.notice;
+      return (0, wU.jsxs)(oU, {
+        open: gU.open,
+        onDismiss: RU.dismiss,
+        title: tU(`${nU}:locatorTitle`),
         className: "ContainmentLocatorPanel",
-        decor: (0, PD.jsx)(rC, {}),
-        headerExtra: (0, PD.jsx)(lD, {
-          coins: pD.locatorCoins
+        decor: (0, wU.jsx)(NR, {}),
+        headerExtra: (0, wU.jsx)(vU, {
+          coins: pU.locatorCoins
         }),
-        statusRefused: null === fD || void 0 === fD ? void 0 : fD.locatorNoticeRefused,
-        status: (0, PD.jsxs)(PD.Fragment, {
-          children: [(0, PD.jsx)("span", {
+        statusRefused: null === PU || void 0 === PU ? void 0 : PU.locatorNoticeRefused,
+        status: (0, wU.jsxs)(wU.Fragment, {
+          children: [(0, wU.jsx)("span", {
             className: "LocatorKeeperBadge",
-            children: ID(`${HD}:locatorKeeperName`)
-          }), null !== fD && ID(`${HD}:${fD.locatorNoticeKey}`, {
-            name: fD.locatorNoticeName
+            children: tU(`${nU}:locatorKeeperName`)
+          }), null !== PU && tU(`${nU}:${PU.locatorNoticeKey}`, {
+            name: PU.locatorNoticeName
           })]
         }),
-        children: [(0, PD.jsx)("div", {
+        children: [(0, wU.jsx)("div", {
           className: "BoardTiles",
-          children: pD.locatorEntries.map((DD => (0, PD.jsxs)(zD, {
-            icon: (0, PD.jsx)(Cc, {
-              entry: DD
+          children: pU.locatorEntries.map((UU => (0, wU.jsxs)(rU, {
+            icon: (0, wU.jsx)(Rg, {
+              entry: UU
             }),
-            name: DD.locatorEntryName,
-            selected: DD === iD,
+            name: UU.locatorEntryName,
+            selected: UU === EU,
             locked: !1,
-            className: wD()("LocatorTag", {
-              Armed: DD.locatorEntryArmed
+            className: KU()("LocatorTag", {
+              Armed: UU.locatorEntryArmed
             }),
             onSelect: () => {
-              CD.select(DD.locatorEntryId)
+              RU.select(UU.locatorEntryId)
             },
-            children: [(0, PD.jsx)(AC, {
-              entry: DD
-            }), !DD.locatorEntryOwned && (0, PD.jsx)(FC, {
-              entry: DD,
-              coins: pD.locatorCoins,
+            children: [(0, wU.jsx)(lR, {
+              entry: UU
+            }), !UU.locatorEntryOwned && (0, wU.jsx)(OR, {
+              entry: UU,
+              coins: pU.locatorCoins,
               inTile: !0
             })]
-          }, DD.locatorEntryId)))
-        }), (0, PD.jsx)(cc, {
-          view: cD,
-          controller: CD,
-          entry: iD
+          }, UU.locatorEntryId)))
+        }), (0, wU.jsx)(gg, {
+          view: gU,
+          controller: RU,
+          entry: EU
         })]
       })
     }
 
-    function pc(DD) {
+    function pg(UU) {
       let {
-        loadout: CD,
-        codex: cD,
-        locator: ID
-      } = DD;
-      return (0, PD.jsxs)(PD.Fragment, {
-        children: [(0, PD.jsx)(dC, {
-          controller: CD
-        }), (0, PD.jsx)(AD, {
-          controller: cD
-        }), (0, PD.jsx)(Ic, {
-          controller: ID
+        loadout: RU,
+        codex: gU,
+        locator: tU
+      } = UU;
+      return (0, wU.jsxs)(wU.Fragment, {
+        children: [(0, wU.jsx)(kR, {
+          controller: RU
+        }), (0, wU.jsx)(lU, {
+          controller: gU
+        }), (0, wU.jsx)(tg, {
+          controller: tU
         })]
       })
     }
-    var ic = cD(37919);
-    class fc {
-      constructor(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.sendCommand = DD, this.budget = void 0, this.awaitingReply = !1, this.replyTimer = null, this.listeners = new Set, this.budget = new ic.d({
+    var Eg = gU(38092);
+    class Pg {
+      constructor(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.sendCommand = UU, this.budget = void 0, this.awaitingReply = !1, this.replyTimer = null, this.listeners = new Set, this.budget = new Eg.d({
           spacingMs: 0,
-          now: CD
+          now: RU
         }), this.budget.subscribe((() => {
           this.notify()
         }))
@@ -2256,17 +2256,17 @@ export const modules = {
       isPending() {
         return this.awaitingReply || this.budget.isPacing()
       }
-      send(DD, CD) {
+      send(UU, RU) {
         return !this.isPending() && (this.awaitingReply = !0, this.replyTimer = setTimeout((() => {
-          this.replyTimer = null, this.awaitingReply = !1, CD(), this.notify()
-        }), 8e3), this.budget.start(), this.sendCommand(DD), !0)
+          this.replyTimer = null, this.awaitingReply = !1, RU(), this.notify()
+        }), 8e3), this.budget.start(), this.sendCommand(UU), !0)
       }
       onReply() {
         this.awaitingReply = !1, this.clearReplyTimer()
       }
-      subscribe(DD) {
-        return this.listeners.add(DD), () => {
-          this.listeners.delete(DD)
+      subscribe(UU) {
+        return this.listeners.add(UU), () => {
+          this.listeners.delete(UU)
         }
       }
       dispose() {
@@ -2276,340 +2276,340 @@ export const modules = {
         null !== this.replyTimer && (clearTimeout(this.replyTimer), this.replyTimer = null)
       }
       notify() {
-        for (const DD of this.listeners) DD()
+        for (const UU of this.listeners) UU()
       }
     }
-    var bc = cD(37912);
-    const Qc = new Map([
-      ["npc_general", ZC],
-      ["npc_tentacle_guy", bc]
+    var Tg = gU(38090);
+    const qg = new Map([
+      ["npc_general", hR],
+      ["npc_tentacle_guy", Tg]
     ]);
 
-    function wc(DD) {
-      const CD = Qc.get(DD);
-      if (void 0 === CD) return null;
-      const cD = document.createElement("img");
-      return cD.src = CD, cD.alt = "", cD.draggable = !1, cD.style.imageRendering = "pixelated", cD
+    function Kg(UU) {
+      const RU = qg.get(UU);
+      if (void 0 === RU) return null;
+      const gU = document.createElement("img");
+      return gU.src = RU, gU.alt = "", gU.draggable = !1, gU.style.imageRendering = "pixelated", gU
     }
-    const Sc = function() {
-      let DD, CD = !1,
-        cD = null,
-        QD = null;
-      const wD = [],
-        SD = DD => {
-          for (const CD of wD) CD !== DD && CD.close();
-          (0, bD.s)()
+    const cg = function() {
+      let UU, RU = !1,
+        gU = null,
+        qU = null;
+      const KU = [],
+        cU = UU => {
+          for (const RU of KU) RU !== UU && RU.close();
+          (0, TU.w)()
         },
-        BD = DD => {
-          DD && (0, bD.i)()
+        GU = UU => {
+          UU && (0, TU.l)()
         },
-        yD = new fc((CD => {
-          DD.sendCommand(CD)
+        jU = new Pg((RU => {
+          UU.sendCommand(RU)
         })),
-        MD = new MC((DD => {
-          fD.i.Uo(yC, DD, !0)
-        }), SD, BD, yD),
-        tD = new GD((DD => {
-          fD.i.Uo(TD, DD, !0)
-        }), SD, BD),
-        ZD = new eC((DD => {
-          fD.i.Uo(EC, DD, !0)
-        }), SD, BD, yD);
-      wD.push(MD, tD, ZD);
+        uU = new uR((UU => {
+          PU.p.yh(jR, UU, !0)
+        }), cU, GU, jU),
+        CU = new SU((UU => {
+          PU.p.yh(HU, UU, !0)
+        }), cU, GU),
+        hU = new MR((UU => {
+          PU.p.yh(zR, UU, !0)
+        }), cU, GU, jU);
+      KU.push(uU, CU, hU);
       return {
-        onCreate: CD => {
-          DD = CD, cD = (0, bD.v)(null, {
-            content: (0, ID.createElement)(pc, {
-              loadout: MD,
-              codex: tD,
-              locator: ZD
+        onCreate: RU => {
+          UU = RU, gU = (0, TU.y)(null, {
+            content: (0, tU.createElement)(pg, {
+              loadout: uU,
+              codex: CU,
+              locator: hU
             }),
             onClose: () => {
-              for (const DD of wD) DD.close()
+              for (const UU of KU) UU.close()
             }
-          }), QD = (0, iD.e)(wc)
+          }), qU = (0, EU.h)(Kg)
         },
-        onReceivedMessageFromServer: (DD, CD) => {
-          "containmentLoadout" === DD ? MD.kt(CD) : "containmentLoadoutClose" === DD ? MD.isOpen() && (MD.close(), (0, bD.e)()) : "containmentCodex" === DD ? tD.kt(CD) : "containmentLocator" === DD && ZD.kt(CD)
+        onReceivedMessageFromServer: (UU, RU) => {
+          "containmentLoadout" === UU ? uU.qC(RU) : "containmentLoadoutClose" === UU ? uU.isOpen() && (uU.close(), (0, TU.h)()) : "containmentCodex" === UU ? CU.qC(RU) : "containmentLocator" === UU && hU.qC(RU)
         },
-        wy: () => {
-          CD || pD.d.get("loadingOverlayVisible") || (CD = !0, DD.sendCommand("containmentEntered"))
+        HG: () => {
+          RU || pU.b.get("loadingOverlayVisible") || (RU = !0, UU.sendCommand("containmentEntered"))
         },
         onClose: () => {
-          var DD, CD;
-          null === (DD = cD) || void 0 === DD || DD(), cD = null, null === (CD = QD) || void 0 === CD || CD(), QD = null;
-          for (const cD of wD) cD.dispose();
-          yD.dispose()
+          var UU, RU;
+          null === (UU = gU) || void 0 === UU || UU(), gU = null, null === (RU = qU) || void 0 === RU || RU(), qU = null;
+          for (const gU of KU) gU.dispose();
+          jU.dispose()
         }
       }
     }
   },
-  36240: (DD, CD, cD) => {
-    cD.d(CD, {
-      A: () => lD,
-      D: () => LD,
-      F: () => zD,
-      J: () => TD,
-      e: () => QD,
-      f: () => qD,
-      j: () => bD,
-      l: () => VD,
-      m: () => UD,
-      n: () => nD,
-      o: () => aD,
-      s: () => KD,
-      u: () => HD,
-      y: () => jD
+  36427: (UU, RU, gU) => {
+    gU.d(RU, {
+      C: () => nU,
+      D: () => XU,
+      F: () => vU,
+      H: () => dU,
+      K: () => rU,
+      N: () => HU,
+      e: () => qU,
+      g: () => ZU,
+      k: () => TU,
+      m: () => VU,
+      p: () => bU,
+      t: () => IU,
+      v: () => BU,
+      y: () => YU
     });
-    var ID = cD(36);
-    const pD = {
+    var tU = gU(34);
+    const pU = {
         codeBlock: ["codeBlockIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "worldCodeButton", "exportButton", "helpButton"],
         worldCode: ["worldCodeIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "exportButton", "helpButton"]
       },
-      iD = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
-      fD = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
-      bD = iD.filter((DD => "docsButton" !== DD)),
-      QD = fD.filter((DD => "aiHelperButton" !== DD)),
-      wD = "codeEditorTutorials",
-      SD = {
+      EU = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
+      PU = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
+      TU = EU.filter((UU => "docsButton" !== UU)),
+      qU = PU.filter((UU => "aiHelperButton" !== UU)),
+      KU = "codeEditorTutorials",
+      cU = {
         codeBlockIntro: "codeBlockIntroShown",
         worldCodeIntro: "worldCodeIntroShown"
       },
-      BD = {
+      GU = {
         welcome: "welcomeComplete",
         docsOverview: "docsOverviewComplete",
         aiHelperOverview: "aiHelperOverviewComplete"
       };
-    let yD = null,
-      MD = null;
-    const tD = new Set,
-      ZD = new Set;
-    let oD = null;
-    const vD = new Set,
-      ND = new Set;
+    let jU = null,
+      uU = null;
+    const CU = new Set,
+      hU = new Set;
+    let QU = null;
+    const eU = new Set,
+      WU = new Set;
 
-    function gD() {
-      ND.forEach((DD => {
-        DD()
+    function fU() {
+      WU.forEach((UU => {
+        UU()
       }))
     }
 
-    function XD() {
-      if (!yD) {
-        const DD = ID.h.getItem(wD);
-        yD = {
+    function xU() {
+      if (!jU) {
+        const UU = tU.k.getItem(KU);
+        jU = {
           codeBlockIntroShown: !1,
           worldCodeIntroShown: !1,
           welcomeComplete: !1,
           docsOverviewComplete: !1,
           aiHelperOverviewComplete: !1,
-          ..."object" === typeof DD && null !== DD ? DD : {}
+          ..."object" === typeof UU && null !== UU ? UU : {}
         }
       }
-      return yD
+      return jU
     }
 
-    function mD(DD) {
-      const CD = XD();
-      CD[DD] || (yD = {
-        ...CD,
-        [DD]: !0
-      }, ID.h.setItem(wD, yD))
+    function mU(UU) {
+      const RU = xU();
+      RU[UU] || (jU = {
+        ...RU,
+        [UU]: !0
+      }, tU.k.setItem(KU, jU))
     }
 
-    function nD(DD) {
-      return "docsOverview" === DD ? iD : "aiHelperOverview" === DD ? fD : MD ? pD[MD] : []
+    function IU(UU) {
+      return "docsOverview" === UU ? EU : "aiHelperOverview" === UU ? PU : uU ? pU[uU] : []
     }
 
-    function OD(DD) {
-      return ("worldCodeButton" !== DD || !XD().worldCodeIntroShown) && !vD.has(DD)
+    function JU(UU) {
+      return ("worldCodeButton" !== UU || !xU().worldCodeIntroShown) && !eU.has(UU)
     }
 
-    function PD(DD) {
-      var CD;
-      return (null === (CD = oD) || void 0 === CD ? void 0 : CD.name) === DD ? oD.stepsDone : tD
+    function wU(UU) {
+      var RU;
+      return (null === (RU = QU) || void 0 === RU ? void 0 : RU.name) === UU ? QU.stepsDone : CU
     }
 
-    function HD(DD, CD) {
-      if (! function(DD) {
-          return oD ? oD.name === DD : "welcome" === DD
-        }(DD) || !OD(CD) || PD(DD).has(CD)) return !1;
-      if (oD) return !0;
-      const cD = SD[CD];
-      return cD ? !XD()[cD] || ZD.has(CD) : !XD()[BD[DD]]
+    function nU(UU, RU) {
+      if (! function(UU) {
+          return QU ? QU.name === UU : "welcome" === UU
+        }(UU) || !JU(RU) || wU(UU).has(RU)) return !1;
+      if (QU) return !0;
+      const gU = cU[RU];
+      return gU ? !xU()[gU] || hU.has(RU) : !xU()[GU[UU]]
     }
 
-    function UD(DD) {
-      var CD;
-      return null !== (CD = nD(DD).find((CD => HD(DD, CD)))) && void 0 !== CD ? CD : null
+    function bU(UU) {
+      var RU;
+      return null !== (RU = IU(UU).find((RU => nU(UU, RU)))) && void 0 !== RU ? RU : null
     }
 
-    function xD(DD) {
-      var CD;
-      mD(BD[DD]), (null === (CD = oD) || void 0 === CD ? void 0 : CD.name) === DD && (oD = null)
+    function oU(UU) {
+      var RU;
+      mU(GU[UU]), (null === (RU = QU) || void 0 === RU ? void 0 : RU.name) === UU && (QU = null)
     }
 
-    function qD(DD) {
-      const CD = (oD ? [oD.name] : ["welcome", "docsOverview"]).find((CD => UD(CD) === DD));
-      if (!CD) return;
-      PD(CD).add(DD);
-      const cD = SD[DD];
-      cD && (mD(cD), oD || ZD.add(DD)), null === UD(CD) && xD(CD), gD()
+    function ZU(UU) {
+      const RU = (QU ? [QU.name] : ["welcome", "docsOverview"]).find((RU => bU(RU) === UU));
+      if (!RU) return;
+      wU(RU).add(UU);
+      const gU = cU[UU];
+      gU && (mU(gU), QU || hU.add(UU)), null === bU(RU) && oU(RU), fU()
     }
 
-    function JD(DD, CD) {
-      const cD = nD(DD),
-        ID = PD(DD);
-      for (let pD = cD.indexOf(CD) - 1; pD >= 0; pD--)
-        if (ID.has(cD[pD]) && OD(cD[pD])) return cD[pD];
+    function aU(UU, RU) {
+      const gU = IU(UU),
+        tU = wU(UU);
+      for (let pU = gU.indexOf(RU) - 1; pU >= 0; pU--)
+        if (tU.has(gU[pU]) && JU(gU[pU])) return gU[pU];
       return null
     }
 
-    function KD(DD, CD) {
-      return null !== JD(DD, CD)
+    function YU(UU, RU) {
+      return null !== aU(UU, RU)
     }
 
-    function aD(DD, CD) {
-      const cD = JD(DD, CD);
-      cD && (PD(DD).delete(cD), gD())
+    function BU(UU, RU) {
+      const gU = aU(UU, RU);
+      gU && (wU(UU).delete(gU), fU())
     }
 
-    function VD(DD) {
-      xD(DD), "welcome" === DD && nD("welcome").forEach((DD => {
-        const CD = SD[DD];
-        CD && mD(CD)
-      })), gD()
+    function VU(UU) {
+      oU(UU), "welcome" === UU && IU("welcome").forEach((UU => {
+        const RU = cU[UU];
+        RU && mU(RU)
+      })), fU()
     }
 
-    function zD(DD) {
-      oD = {
-        name: DD,
+    function rU(UU) {
+      QU = {
+        name: UU,
         stepsDone: new Set
-      }, gD()
+      }, fU()
     }
 
-    function jD() {
-      (oD || 0 !== tD.size || 0 !== ZD.size) && (oD = null, tD.clear(), ZD.clear(), gD())
+    function XU() {
+      (QU || 0 !== CU.size || 0 !== hU.size) && (QU = null, CU.clear(), hU.clear(), fU())
     }
 
-    function lD(DD, CD) {
-      const cD = CD ? DD : MD === DD ? null : MD;
-      cD !== MD && (MD = cD, gD())
+    function vU(UU, RU) {
+      const gU = RU ? UU : uU === UU ? null : uU;
+      gU !== uU && (uU = gU, fU())
     }
 
-    function LD(DD, CD) {
-      vD.has(DD) === CD && (CD ? vD.delete(DD) : vD.add(DD), gD())
+    function dU(UU, RU) {
+      eU.has(UU) === RU && (RU ? eU.delete(UU) : eU.add(UU), fU())
     }
 
-    function TD(DD) {
-      return ND.add(DD), () => {
-        ND.delete(DD)
+    function HU(UU) {
+      return WU.add(UU), () => {
+        WU.delete(UU)
       }
     }
   },
-  38601: (DD, CD, cD) => {
-    var ID = {
-      "./breach-zero-uncaught.webp": 38604,
-      "./breach-zero.webp": 38613,
-      "./brood-father-uncaught.webp": 38621,
-      "./brood-father.webp": 38626,
-      "./carousel-uncaught.webp": 38633,
-      "./carousel.webp": 38637,
-      "./deadlock-uncaught.webp": 38639,
-      "./deadlock.webp": 38641,
-      "./frost-revenant-uncaught.webp": 38647,
-      "./frost-revenant.webp": 38652,
-      "./hollow-choir-uncaught.webp": 38659,
-      "./hollow-choir.webp": 38668,
-      "./magma-warden-uncaught.webp": 38672,
-      "./magma-warden.webp": 38677,
-      "./patient-zero-uncaught.webp": 38683,
-      "./patient-zero.webp": 38690,
-      "./siege-engine-uncaught.webp": 38695,
-      "./siege-engine.webp": 38700,
-      "./warp-stalker-uncaught.webp": 38708,
-      "./warp-stalker.webp": 38712
+  38831: (UU, RU, gU) => {
+    var tU = {
+      "./breach-zero-uncaught.webp": 38835,
+      "./breach-zero.webp": 38840,
+      "./brood-father-uncaught.webp": 38847,
+      "./brood-father.webp": 38852,
+      "./carousel-uncaught.webp": 38860,
+      "./carousel.webp": 38865,
+      "./deadlock-uncaught.webp": 38867,
+      "./deadlock.webp": 38874,
+      "./frost-revenant-uncaught.webp": 38877,
+      "./frost-revenant.webp": 38886,
+      "./hollow-choir-uncaught.webp": 38892,
+      "./hollow-choir.webp": 38897,
+      "./magma-warden-uncaught.webp": 38903,
+      "./magma-warden.webp": 38907,
+      "./patient-zero-uncaught.webp": 38916,
+      "./patient-zero.webp": 38922,
+      "./siege-engine-uncaught.webp": 38924,
+      "./siege-engine.webp": 38929,
+      "./warp-stalker-uncaught.webp": 38933,
+      "./warp-stalker.webp": 38939
     };
 
-    function pD(DD) {
-      var CD = iD(DD);
-      return cD(CD)
+    function pU(UU) {
+      var RU = EU(UU);
+      return gU(RU)
     }
 
-    function iD(DD) {
-      if (!cD.o(ID, DD)) {
-        var CD = new Error("Cannot find module '" + DD + "'");
-        throw CD.code = "MODULE_NOT_FOUND", CD
+    function EU(UU) {
+      if (!gU.o(tU, UU)) {
+        var RU = new Error("Cannot find module '" + UU + "'");
+        throw RU.code = "MODULE_NOT_FOUND", RU
       }
-      return ID[DD]
+      return tU[UU]
     }
-    pD.keys = function() {
-      return Object.keys(ID)
-    }, pD.resolve = iD, DD.exports = pD, pD.id = 38601
+    pU.keys = function() {
+      return Object.keys(tU)
+    }, pU.resolve = EU, UU.exports = pU, pU.id = 38831
   },
-  38604: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/breach-zero-uncaught.c7d4410f99269ac1ee2f.webp"
+  38835: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/breach-zero-uncaught.c7d4410f99269ac1ee2f.webp"
   },
-  38613: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/breach-zero.ef5aacecf502228cd20b.webp"
+  38840: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/breach-zero.ef5aacecf502228cd20b.webp"
   },
-  38621: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/brood-father-uncaught.ee678432c71b7061fae1.webp"
+  38847: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/brood-father-uncaught.ee678432c71b7061fae1.webp"
   },
-  38626: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/brood-father.e48391955a574c1155fa.webp"
+  38852: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/brood-father.e48391955a574c1155fa.webp"
   },
-  38633: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/carousel-uncaught.a92757620f569f31d7d2.webp"
+  38860: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/carousel-uncaught.a92757620f569f31d7d2.webp"
   },
-  38637: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/carousel.5fc13db7958067d6e1a3.webp"
+  38865: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/carousel.5fc13db7958067d6e1a3.webp"
   },
-  38639: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/deadlock-uncaught.feadbdbbf2d040dce5c0.webp"
+  38867: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/deadlock-uncaught.feadbdbbf2d040dce5c0.webp"
   },
-  38641: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/deadlock.2bcaeaa57376fd78ddcb.webp"
+  38874: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/deadlock.2bcaeaa57376fd78ddcb.webp"
   },
-  38647: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/frost-revenant-uncaught.c0271636eeae988b1a40.webp"
+  38877: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/frost-revenant-uncaught.c0271636eeae988b1a40.webp"
   },
-  38652: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/frost-revenant.fed6021646d7f0f81876.webp"
+  38886: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/frost-revenant.fed6021646d7f0f81876.webp"
   },
-  38659: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/hollow-choir-uncaught.7eaab76a15f82bd79558.webp"
+  38892: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/hollow-choir-uncaught.7eaab76a15f82bd79558.webp"
   },
-  38668: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/hollow-choir.05f9c51994aecece852a.webp"
+  38897: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/hollow-choir.05f9c51994aecece852a.webp"
   },
-  38672: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/magma-warden-uncaught.5308736fbb8a503cdfc7.webp"
+  38903: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/magma-warden-uncaught.5308736fbb8a503cdfc7.webp"
   },
-  38677: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/magma-warden.cc4302a49a39ae962a31.webp"
+  38907: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/magma-warden.cc4302a49a39ae962a31.webp"
   },
-  38683: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/patient-zero-uncaught.1f9ec012a14c4dbdcc8f.webp"
+  38916: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/patient-zero-uncaught.1f9ec012a14c4dbdcc8f.webp"
   },
-  38690: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/patient-zero.cc76984bb20e9f9ace76.webp"
+  38922: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/patient-zero.cc76984bb20e9f9ace76.webp"
   },
-  38695: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/siege-engine-uncaught.88e0ad7fec37ba2b4a2e.webp"
+  38924: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/siege-engine-uncaught.88e0ad7fec37ba2b4a2e.webp"
   },
-  38700: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/siege-engine.b2e2382e415f4ae470ac.webp"
+  38929: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/siege-engine.b2e2382e415f4ae470ac.webp"
   },
-  38708: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/warp-stalker-uncaught.c3b1b82ecb18446b71b0.webp"
+  38933: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/warp-stalker-uncaught.c3b1b82ecb18446b71b0.webp"
   },
-  38712: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/warp-stalker.851972c629601b668aa7.webp"
+  38939: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/warp-stalker.851972c629601b668aa7.webp"
   },
-  37912: DD => {
-    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
+  38090: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

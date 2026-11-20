@@ -1,28 +1,28 @@
 export const id = 64;
 export const ids = [64];
 export const modules = {
-  40237: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      ZstdErrorCode: () => SD,
-      ZstdFrameDecoder: () => qD
+  40561: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      ZstdErrorCode: () => cU,
+      ZstdFrameDecoder: () => ZU
     });
-    const ID = ArrayBuffer,
-      pD = Uint8Array,
-      iD = Uint16Array,
-      fD = Int16Array,
-      bD = Int32Array,
-      QD = (DD, CD, cD) => {
-        if (pD.prototype.slice) return pD.prototype.slice.call(DD, CD, cD);
-        (null == CD || CD < 0) && (CD = 0), (null == cD || cD > DD.length) && (cD = DD.length);
-        const ID = new pD(cD - CD);
-        return ID.set(DD.subarray(CD, cD)), ID
+    const tU = ArrayBuffer,
+      pU = Uint8Array,
+      EU = Uint16Array,
+      PU = Int16Array,
+      TU = Int32Array,
+      qU = (UU, RU, gU) => {
+        if (pU.prototype.slice) return pU.prototype.slice.call(UU, RU, gU);
+        (null == RU || RU < 0) && (RU = 0), (null == gU || gU > UU.length) && (gU = UU.length);
+        const tU = new pU(gU - RU);
+        return tU.set(UU.subarray(RU, gU)), tU
       },
-      wD = (DD, CD, cD, ID) => {
-        if (pD.prototype.fill) return pD.prototype.fill.call(DD, CD, cD, ID);
-        for ((null == cD || cD < 0) && (cD = 0), (null == ID || ID > DD.length) && (ID = DD.length); cD < ID; ++cD) DD[cD] = CD;
-        return DD
+      KU = (UU, RU, gU, tU) => {
+        if (pU.prototype.fill) return pU.prototype.fill.call(UU, RU, gU, tU);
+        for ((null == gU || gU < 0) && (gU = 0), (null == tU || tU > UU.length) && (tU = UU.length); gU < tU; ++gU) UU[gU] = RU;
+        return UU
       },
-      SD = {
+      cU = {
         InvalidData: 0,
         WindowSizeTooLarge: 1,
         InvalidBlockType: 2,
@@ -30,376 +30,376 @@ export const modules = {
         DistanceTooFarBack: 4,
         UnexpectedEOF: 5
       },
-      BD = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
-      yD = (DD, CD, cD) => {
-        const ID = new Error(CD || BD[DD]);
-        if (ID.code = DD, Error.captureStackTrace && Error.captureStackTrace(ID, yD), !cD) throw ID;
-        return ID
+      GU = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
+      jU = (UU, RU, gU) => {
+        const tU = new Error(RU || GU[UU]);
+        if (tU.code = UU, Error.captureStackTrace && Error.captureStackTrace(tU, jU), !gU) throw tU;
+        return tU
       },
-      MD = (DD, CD, cD) => {
-        let ID = 0,
-          pD = 0;
-        for (; ID < cD; ++ID) pD |= DD[CD++] << (ID << 3);
-        return pD
+      uU = (UU, RU, gU) => {
+        let tU = 0,
+          pU = 0;
+        for (; tU < gU; ++tU) pU |= UU[RU++] << (tU << 3);
+        return pU
       },
-      tD = (DD, CD) => {
-        const cD = DD[0] | DD[1] << 8 | DD[2] << 16;
-        if (3126568 == cD && 253 == DD[3]) {
-          const cD = DD[4],
-            ID = cD >> 5 & 1,
-            iD = cD >> 2 & 1,
-            fD = 3 & cD,
-            QD = cD >> 6;
-          8 & cD && yD(0);
-          let wD = 6 - ID;
-          const SD = 3 == fD ? 4 : fD,
-            BD = MD(DD, wD, SD);
-          wD += SD;
-          const tD = QD ? 1 << QD : ID,
-            ZD = MD(DD, wD, tD) + (1 == QD && 256);
-          let oD = ZD;
-          if (!ID) {
-            const CD = 1 << 10 + (DD[5] >> 3);
-            oD = CD + (CD >> 3) * (7 & DD[5])
+      CU = (UU, RU) => {
+        const gU = UU[0] | UU[1] << 8 | UU[2] << 16;
+        if (3126568 == gU && 253 == UU[3]) {
+          const gU = UU[4],
+            tU = gU >> 5 & 1,
+            EU = gU >> 2 & 1,
+            PU = 3 & gU,
+            qU = gU >> 6;
+          8 & gU && jU(0);
+          let KU = 6 - tU;
+          const cU = 3 == PU ? 4 : PU,
+            GU = uU(UU, KU, cU);
+          KU += cU;
+          const CU = qU ? 1 << qU : tU,
+            hU = uU(UU, KU, CU) + (1 == qU && 256);
+          let QU = hU;
+          if (!tU) {
+            const RU = 1 << 10 + (UU[5] >> 3);
+            QU = RU + (RU >> 3) * (7 & UU[5])
           }
-          oD > 2145386496 && yD(1);
-          const vD = new pD((1 == CD ? ZD || oD : CD ? 0 : oD) + 12);
-          return vD[0] = 1, vD[4] = 4, vD[8] = 8, {
-            b: wD + tD,
+          QU > 2145386496 && jU(1);
+          const eU = new pU((1 == RU ? hU || QU : RU ? 0 : QU) + 12);
+          return eU[0] = 1, eU[4] = 4, eU[8] = 8, {
+            b: KU + CU,
             y: 0,
             l: 0,
-            d: BD,
-            w: CD && 1 != CD ? CD : vD.subarray(12),
-            e: oD,
-            o: new bD(vD.buffer, 0, 3),
-            u: ZD,
-            c: iD,
-            m: Math.min(131072, oD)
+            d: GU,
+            w: RU && 1 != RU ? RU : eU.subarray(12),
+            e: QU,
+            o: new TU(eU.buffer, 0, 3),
+            u: hU,
+            c: EU,
+            m: Math.min(131072, QU)
           }
         }
-        if (25481893 == (cD >> 4 | DD[3] << 20)) return 8 + (((ID = DD)[iD = 4] | ID[iD + 1] << 8 | ID[iD + 2] << 16 | ID[iD + 3] << 24) >>> 0);
-        var ID, iD;
-        yD(0)
+        if (25481893 == (gU >> 4 | UU[3] << 20)) return 8 + (((tU = UU)[EU = 4] | tU[EU + 1] << 8 | tU[EU + 2] << 16 | tU[EU + 3] << 24) >>> 0);
+        var tU, EU;
+        jU(0)
       },
-      ZD = DD => {
-        let CD = 0;
-        for (; 1 << CD <= DD; ++CD);
-        return CD - 1
+      hU = UU => {
+        let RU = 0;
+        for (; 1 << RU <= UU; ++RU);
+        return RU - 1
       },
-      oD = (DD, CD, cD) => {
-        let bD = 4 + (CD << 3);
-        const QD = 5 + (15 & DD[CD]);
-        QD > cD && yD(3);
-        const wD = 1 << QD;
-        let SD = wD,
-          BD = -1,
-          MD = -1,
-          tD = -1,
-          oD = wD;
-        const vD = new ID(512 + (wD << 2)),
-          ND = new fD(vD, 0, 256),
-          gD = new iD(vD, 0, 256),
-          XD = new iD(vD, 512, wD),
-          mD = 512 + (wD << 1),
-          nD = new pD(vD, mD, wD),
-          OD = new pD(vD, mD + wD);
-        for (; BD < 255 && SD > 0;) {
-          const CD = ZD(SD + 1),
-            cD = bD >> 3,
-            ID = (1 << CD + 1) - 1;
-          let pD = (DD[cD] | DD[cD + 1] << 8 | DD[cD + 2] << 16) >> (7 & bD) & ID;
-          const iD = (1 << CD) - 1,
-            fD = ID - SD - 1,
-            QD = pD & iD;
-          if (QD < fD ? (bD += CD, pD = QD) : (bD += CD + 1, pD > iD && (pD -= fD)), ND[++BD] = --pD, -1 == pD ? (SD += pD, nD[--oD] = BD) : SD -= pD, !pD)
+      QU = (UU, RU, gU) => {
+        let TU = 4 + (RU << 3);
+        const qU = 5 + (15 & UU[RU]);
+        qU > gU && jU(3);
+        const KU = 1 << qU;
+        let cU = KU,
+          GU = -1,
+          uU = -1,
+          CU = -1,
+          QU = KU;
+        const eU = new tU(512 + (KU << 2)),
+          WU = new PU(eU, 0, 256),
+          fU = new EU(eU, 0, 256),
+          xU = new EU(eU, 512, KU),
+          mU = 512 + (KU << 1),
+          IU = new pU(eU, mU, KU),
+          JU = new pU(eU, mU + KU);
+        for (; GU < 255 && cU > 0;) {
+          const RU = hU(cU + 1),
+            gU = TU >> 3,
+            tU = (1 << RU + 1) - 1;
+          let pU = (UU[gU] | UU[gU + 1] << 8 | UU[gU + 2] << 16) >> (7 & TU) & tU;
+          const EU = (1 << RU) - 1,
+            PU = tU - cU - 1,
+            qU = pU & EU;
+          if (qU < PU ? (TU += RU, pU = qU) : (TU += RU + 1, pU > EU && (pU -= PU)), WU[++GU] = --pU, -1 == pU ? (cU += pU, IU[--QU] = GU) : cU -= pU, !pU)
             do {
-              const CD = bD >> 3;
-              MD = (DD[CD] | DD[CD + 1] << 8) >> (7 & bD) & 3, bD += 2, BD += MD
-            } while (3 == MD)
-        }(BD > 255 || SD) && yD(0);
-        let PD = 0;
-        const HD = (wD >> 1) + (wD >> 3) + 3,
-          UD = wD - 1;
-        for (let ID = 0; ID <= BD; ++ID) {
-          const DD = ND[ID];
-          if (DD < 1) gD[ID] = -DD;
+              const RU = TU >> 3;
+              uU = (UU[RU] | UU[RU + 1] << 8) >> (7 & TU) & 3, TU += 2, GU += uU
+            } while (3 == uU)
+        }(GU > 255 || cU) && jU(0);
+        let wU = 0;
+        const nU = (KU >> 1) + (KU >> 3) + 3,
+          bU = KU - 1;
+        for (let tU = 0; tU <= GU; ++tU) {
+          const UU = WU[tU];
+          if (UU < 1) fU[tU] = -UU;
           else
-            for (tD = 0; tD < DD; ++tD) {
-              nD[PD] = ID;
+            for (CU = 0; CU < UU; ++CU) {
+              IU[wU] = tU;
               do {
-                PD = PD + HD & UD
-              } while (PD >= oD)
+                wU = wU + nU & bU
+              } while (wU >= QU)
             }
         }
-        for (PD && yD(0), tD = 0; tD < wD; ++tD) {
-          const DD = gD[nD[tD]]++,
-            CD = OD[tD] = QD - ZD(DD);
-          XD[tD] = (DD << CD) - wD
+        for (wU && jU(0), CU = 0; CU < KU; ++CU) {
+          const UU = fU[IU[CU]]++,
+            RU = JU[CU] = qU - hU(UU);
+          xU[CU] = (UU << RU) - KU
         }
-        return [bD + 7 >> 3, {
-          b: QD,
-          s: nD,
-          n: OD,
-          t: XD
+        return [TU + 7 >> 3, {
+          b: qU,
+          s: IU,
+          n: JU,
+          t: xU
         }]
       },
-      vD = oD(new pD([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
-      ND = oD(new pD([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
-      gD = oD(new pD([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
-      XD = (DD, CD) => {
-        const cD = DD.length,
-          ID = new bD(cD);
-        for (let pD = 0; pD < cD; ++pD) ID[pD] = CD, CD += 1 << DD[pD];
-        return ID
+      eU = QU(new pU([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
+      WU = QU(new pU([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
+      fU = QU(new pU([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
+      xU = (UU, RU) => {
+        const gU = UU.length,
+          tU = new TU(gU);
+        for (let pU = 0; pU < gU; ++pU) tU[pU] = RU, RU += 1 << UU[pU];
+        return tU
       },
-      mD = new pD(new bD([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
-      nD = XD(mD, 0),
-      OD = new pD(new bD([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
-      PD = XD(OD, 3),
-      HD = (DD, CD, cD) => {
-        const ID = DD.length,
-          pD = CD.length,
-          iD = DD[ID - 1],
-          fD = (1 << cD.b) - 1,
-          bD = -cD.b;
-        iD || yD(0);
-        let QD = 0,
-          wD = cD.b,
-          SD = (ID << 3) - 8 + ZD(iD) - wD,
-          BD = -1;
-        for (; SD > bD && BD < pD;) {
-          const ID = SD >> 3;
-          QD = (QD << wD | (DD[ID] | DD[ID + 1] << 8 | DD[ID + 2] << 16) >> (7 & SD)) & fD, CD[++BD] = cD.s[QD], SD -= wD = cD.n[QD]
+      mU = new pU(new TU([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
+      IU = xU(mU, 0),
+      JU = new pU(new TU([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
+      wU = xU(JU, 3),
+      nU = (UU, RU, gU) => {
+        const tU = UU.length,
+          pU = RU.length,
+          EU = UU[tU - 1],
+          PU = (1 << gU.b) - 1,
+          TU = -gU.b;
+        EU || jU(0);
+        let qU = 0,
+          KU = gU.b,
+          cU = (tU << 3) - 8 + hU(EU) - KU,
+          GU = -1;
+        for (; cU > TU && GU < pU;) {
+          const tU = cU >> 3;
+          qU = (qU << KU | (UU[tU] | UU[tU + 1] << 8 | UU[tU + 2] << 16) >> (7 & cU)) & PU, RU[++GU] = gU.s[qU], cU -= KU = gU.n[qU]
         }
-        SD == bD && BD + 1 == pD || yD(0)
+        cU == TU && GU + 1 == pU || jU(0)
       },
-      UD = (DD, CD, cD) => {
-        let ID = 6;
-        const pD = CD.length + 3 >> 2,
-          iD = pD << 1,
-          fD = pD + iD;
-        HD(DD.subarray(ID, ID += DD[0] | DD[1] << 8), CD.subarray(0, pD), cD), HD(DD.subarray(ID, ID += DD[2] | DD[3] << 8), CD.subarray(pD, iD), cD), HD(DD.subarray(ID, ID += DD[4] | DD[5] << 8), CD.subarray(iD, fD), cD), HD(DD.subarray(ID), CD.subarray(fD), cD)
+      bU = (UU, RU, gU) => {
+        let tU = 6;
+        const pU = RU.length + 3 >> 2,
+          EU = pU << 1,
+          PU = pU + EU;
+        nU(UU.subarray(tU, tU += UU[0] | UU[1] << 8), RU.subarray(0, pU), gU), nU(UU.subarray(tU, tU += UU[2] | UU[3] << 8), RU.subarray(pU, EU), gU), nU(UU.subarray(tU, tU += UU[4] | UU[5] << 8), RU.subarray(EU, PU), gU), nU(UU.subarray(tU), RU.subarray(PU), gU)
       },
-      xD = (DD, CD, cD) => {
-        let ID = CD.b;
-        const fD = DD[ID],
-          bD = fD >> 1 & 3;
-        CD.l = 1 & fD;
-        const SD = fD >> 3 | DD[ID + 1] << 5 | DD[ID + 2] << 13,
-          BD = (ID += 3) + SD;
-        if (1 == bD) {
-          if (ID >= DD.length) return;
-          return CD.b = ID + 1, cD ? (wD(cD, DD[ID], CD.y, CD.y += SD), cD) : wD(new pD(SD), DD[ID])
+      oU = (UU, RU, gU) => {
+        let tU = RU.b;
+        const PU = UU[tU],
+          TU = PU >> 1 & 3;
+        RU.l = 1 & PU;
+        const cU = PU >> 3 | UU[tU + 1] << 5 | UU[tU + 2] << 13,
+          GU = (tU += 3) + cU;
+        if (1 == TU) {
+          if (tU >= UU.length) return;
+          return RU.b = tU + 1, gU ? (KU(gU, UU[tU], RU.y, RU.y += cU), gU) : KU(new pU(cU), UU[tU])
         }
-        if (!(BD > DD.length)) {
-          if (0 == bD) return CD.b = BD, cD ? (cD.set(DD.subarray(ID, BD), CD.y), CD.y += SD, cD) : QD(DD, ID, BD);
-          if (2 == bD) {
-            const fD = DD[ID],
-              bD = 3 & fD,
-              SD = fD >> 2 & 3;
-            let MD = fD >> 4,
-              tD = 0,
-              XD = 0;
-            bD < 2 ? 1 & SD ? MD |= DD[++ID] << 4 | (2 & SD && DD[++ID] << 12) : MD = fD >> 3 : (XD = SD, SD < 2 ? (MD |= (63 & DD[++ID]) << 4, tD = DD[ID] >> 6 | DD[++ID] << 2) : 2 == SD ? (MD |= DD[++ID] << 4 | (3 & DD[++ID]) << 12, tD = DD[ID] >> 2 | DD[++ID] << 6) : (MD |= DD[++ID] << 4 | (63 & DD[++ID]) << 12, tD = DD[ID] >> 6 | DD[++ID] << 2 | DD[++ID] << 10)), ++ID;
-            let xD = cD ? cD.subarray(CD.y, CD.y + CD.m) : new pD(CD.m),
-              qD = xD.length - MD;
-            if (qD < 0 && yD(0), 0 == bD) xD.set(DD.subarray(ID, ID += MD), qD);
-            else if (1 == bD) wD(xD, DD[ID++], qD);
+        if (!(GU > UU.length)) {
+          if (0 == TU) return RU.b = GU, gU ? (gU.set(UU.subarray(tU, GU), RU.y), RU.y += cU, gU) : qU(UU, tU, GU);
+          if (2 == TU) {
+            const PU = UU[tU],
+              TU = 3 & PU,
+              cU = PU >> 2 & 3;
+            let uU = PU >> 4,
+              CU = 0,
+              xU = 0;
+            TU < 2 ? 1 & cU ? uU |= UU[++tU] << 4 | (2 & cU && UU[++tU] << 12) : uU = PU >> 3 : (xU = cU, cU < 2 ? (uU |= (63 & UU[++tU]) << 4, CU = UU[tU] >> 6 | UU[++tU] << 2) : 2 == cU ? (uU |= UU[++tU] << 4 | (3 & UU[++tU]) << 12, CU = UU[tU] >> 2 | UU[++tU] << 6) : (uU |= UU[++tU] << 4 | (63 & UU[++tU]) << 12, CU = UU[tU] >> 6 | UU[++tU] << 2 | UU[++tU] << 10)), ++tU;
+            let oU = gU ? gU.subarray(RU.y, RU.y + RU.m) : new pU(RU.m),
+              ZU = oU.length - uU;
+            if (ZU < 0 && jU(0), 0 == TU) oU.set(UU.subarray(tU, tU += uU), ZU);
+            else if (1 == TU) KU(oU, UU[tU++], ZU);
             else {
-              let cD = CD.h;
-              if (2 == bD) {
-                const fD = ((DD, CD) => {
-                  let cD = 0,
-                    ID = -1;
-                  const fD = new pD(292),
-                    bD = DD[CD],
-                    QD = fD.subarray(0, 256),
-                    SD = fD.subarray(256, 268),
-                    BD = new iD(fD.buffer, 268);
-                  if (bD < 128) {
-                    const [cD, pD] = oD(DD, CD + 1, 6), iD = cD << 3, fD = DD[CD += bD];
-                    fD || yD(0);
-                    let wD = 0,
-                      SD = 0,
-                      BD = pD.b,
-                      MD = BD,
-                      tD = (++CD << 3) - 8 + ZD(fD);
-                    for (; ID > 254 && yD(0), tD -= BD, !(tD < iD);) {
-                      let CD = tD >> 3;
-                      if (wD += (DD[CD] | DD[CD + 1] << 8) >> (7 & tD) & (1 << BD) - 1, QD[++ID] = pD.s[wD], tD -= MD, tD < iD) break;
-                      CD = tD >> 3, SD += (DD[CD] | DD[CD + 1] << 8) >> (7 & tD) & (1 << MD) - 1, QD[++ID] = pD.s[SD], BD = pD.n[wD], wD = pD.t[wD], MD = pD.n[SD], SD = pD.t[SD]
-                    }++ID > 255 && yD(0)
+              let gU = RU.h;
+              if (2 == TU) {
+                const PU = ((UU, RU) => {
+                  let gU = 0,
+                    tU = -1;
+                  const PU = new pU(292),
+                    TU = UU[RU],
+                    qU = PU.subarray(0, 256),
+                    cU = PU.subarray(256, 268),
+                    GU = new EU(PU.buffer, 268);
+                  if (TU < 128) {
+                    const [gU, pU] = QU(UU, RU + 1, 6), EU = gU << 3, PU = UU[RU += TU];
+                    PU || jU(0);
+                    let KU = 0,
+                      cU = 0,
+                      GU = pU.b,
+                      uU = GU,
+                      CU = (++RU << 3) - 8 + hU(PU);
+                    for (; tU > 254 && jU(0), CU -= GU, !(CU < EU);) {
+                      let RU = CU >> 3;
+                      if (KU += (UU[RU] | UU[RU + 1] << 8) >> (7 & CU) & (1 << GU) - 1, qU[++tU] = pU.s[KU], CU -= uU, CU < EU) break;
+                      RU = CU >> 3, cU += (UU[RU] | UU[RU + 1] << 8) >> (7 & CU) & (1 << uU) - 1, qU[++tU] = pU.s[cU], GU = pU.n[KU], KU = pU.t[KU], uU = pU.n[cU], cU = pU.t[cU]
+                    }++tU > 255 && jU(0)
                   } else {
-                    for (ID = bD - 127; cD < ID; cD += 2) {
-                      const ID = DD[++CD];
-                      QD[cD] = ID >> 4, QD[cD + 1] = 15 & ID
-                    }++CD
+                    for (tU = TU - 127; gU < tU; gU += 2) {
+                      const tU = UU[++RU];
+                      qU[gU] = tU >> 4, qU[gU + 1] = 15 & tU
+                    }++RU
                   }
-                  let MD = 0;
-                  for (cD = 0; cD < ID; ++cD) {
-                    const DD = QD[cD];
-                    DD > 11 && yD(0), MD += DD && 1 << DD - 1
+                  let uU = 0;
+                  for (gU = 0; gU < tU; ++gU) {
+                    const UU = qU[gU];
+                    UU > 11 && jU(0), uU += UU && 1 << UU - 1
                   }
-                  const tD = ZD(MD) + 1,
-                    vD = 1 << tD,
-                    ND = vD - MD;
-                  for (ND & ND - 1 && yD(0), QD[ID++] = ZD(ND) + 1, cD = 0; cD < ID; ++cD) {
-                    const DD = QD[cD];
-                    ++SD[QD[cD] = DD && tD + 1 - DD]
+                  const CU = hU(uU) + 1,
+                    eU = 1 << CU,
+                    WU = eU - uU;
+                  for (WU & WU - 1 && jU(0), qU[tU++] = hU(WU) + 1, gU = 0; gU < tU; ++gU) {
+                    const UU = qU[gU];
+                    ++cU[qU[gU] = UU && CU + 1 - UU]
                   }
-                  const gD = new pD(vD << 1),
-                    XD = gD.subarray(0, vD),
-                    mD = gD.subarray(vD);
-                  for (BD[tD] = 0, cD = tD; cD > 0; --cD) {
-                    const DD = BD[cD];
-                    wD(mD, cD, DD, BD[cD - 1] = DD + SD[cD] * (1 << tD - cD))
+                  const fU = new pU(eU << 1),
+                    xU = fU.subarray(0, eU),
+                    mU = fU.subarray(eU);
+                  for (GU[CU] = 0, gU = CU; gU > 0; --gU) {
+                    const UU = GU[gU];
+                    KU(mU, gU, UU, GU[gU - 1] = UU + cU[gU] * (1 << CU - gU))
                   }
-                  for (BD[0] != vD && yD(0), cD = 0; cD < ID; ++cD) {
-                    const DD = QD[cD];
-                    if (DD) {
-                      const CD = BD[DD];
-                      wD(XD, cD, CD, BD[DD] = CD + (1 << tD - DD))
+                  for (GU[0] != eU && jU(0), gU = 0; gU < tU; ++gU) {
+                    const UU = qU[gU];
+                    if (UU) {
+                      const RU = GU[UU];
+                      KU(xU, gU, RU, GU[UU] = RU + (1 << CU - UU))
                     }
                   }
-                  return [CD, {
-                    n: mD,
-                    b: tD,
-                    s: XD
+                  return [RU, {
+                    n: mU,
+                    b: CU,
+                    s: xU
                   }]
-                })(DD, ID);
-                tD += ID - (ID = fD[0]), CD.h = cD = fD[1]
-              } else cD || yD(0);
-              (XD ? UD : HD)(DD.subarray(ID, ID += tD), xD.subarray(qD), cD)
+                })(UU, tU);
+                CU += tU - (tU = PU[0]), RU.h = gU = PU[1]
+              } else gU || jU(0);
+              (xU ? bU : nU)(UU.subarray(tU, tU += CU), oU.subarray(ZU), gU)
             }
-            let JD = DD[ID++];
-            if (JD) {
-              255 == JD ? JD = 32512 + (DD[ID++] | DD[ID++] << 8) : JD > 127 && (JD = JD - 128 << 8 | DD[ID++]);
-              const fD = DD[ID++];
-              3 & fD && yD(0);
-              const bD = [ND, gD, vD];
-              for (let cD = 2; cD > -1; --cD) {
-                const QD = fD >> 2 + (cD << 1) & 3;
-                if (1 == QD) {
-                  const CD = new pD([0, 0, DD[ID++]]);
-                  bD[cD] = {
-                    s: CD.subarray(2, 3),
-                    n: CD.subarray(0, 1),
-                    t: new iD(CD.buffer, 0, 1),
+            let aU = UU[tU++];
+            if (aU) {
+              255 == aU ? aU = 32512 + (UU[tU++] | UU[tU++] << 8) : aU > 127 && (aU = aU - 128 << 8 | UU[tU++]);
+              const PU = UU[tU++];
+              3 & PU && jU(0);
+              const TU = [WU, fU, eU];
+              for (let gU = 2; gU > -1; --gU) {
+                const qU = PU >> 2 + (gU << 1) & 3;
+                if (1 == qU) {
+                  const RU = new pU([0, 0, UU[tU++]]);
+                  TU[gU] = {
+                    s: RU.subarray(2, 3),
+                    n: RU.subarray(0, 1),
+                    t: new EU(RU.buffer, 0, 1),
                     b: 0
                   }
-                } else 2 == QD ? [ID, bD[cD]] = oD(DD, ID, 9 - (1 & cD)) : 3 == QD && (CD.t || yD(0), bD[cD] = CD.t[cD])
+                } else 2 == qU ? [tU, TU[gU]] = QU(UU, tU, 9 - (1 & gU)) : 3 == qU && (RU.t || jU(0), TU[gU] = RU.t[gU])
               }
-              const [wD, SD, MD] = CD.t = bD, tD = DD[BD - 1];
-              tD || yD(0);
-              let XD = (BD << 3) - 8 + ZD(tD) - MD.b,
-                HD = XD >> 3,
-                UD = 0,
-                KD = (DD[HD] | DD[HD + 1] << 8) >> (7 & XD) & (1 << MD.b) - 1;
-              HD = (XD -= SD.b) >> 3;
-              let aD = (DD[HD] | DD[HD + 1] << 8) >> (7 & XD) & (1 << SD.b) - 1;
-              HD = (XD -= wD.b) >> 3;
-              let VD = (DD[HD] | DD[HD + 1] << 8) >> (7 & XD) & (1 << wD.b) - 1;
-              for (++JD; --JD;) {
-                const cD = MD.s[KD],
-                  ID = MD.n[KD],
-                  pD = wD.s[VD],
-                  iD = wD.n[VD],
-                  fD = SD.s[aD],
-                  bD = SD.n[aD];
-                HD = (XD -= fD) >> 3;
-                const QD = 1 << fD;
-                let BD = QD + ((DD[HD] | DD[HD + 1] << 8 | DD[HD + 2] << 16 | DD[HD + 3] << 24) >>> (7 & XD) & QD - 1);
-                HD = (XD -= OD[pD]) >> 3;
-                let tD = PD[pD] + ((DD[HD] | DD[HD + 1] << 8 | DD[HD + 2] << 16) >> (7 & XD) & (1 << OD[pD]) - 1);
-                HD = (XD -= mD[cD]) >> 3;
-                const ZD = nD[cD] + ((DD[HD] | DD[HD + 1] << 8 | DD[HD + 2] << 16) >> (7 & XD) & (1 << mD[cD]) - 1);
-                if ((XD < 0 || qD + ZD > xD.length || UD + ZD + tD > xD.length) && yD(0), HD = (XD -= ID) >> 3, KD = MD.t[KD] + ((DD[HD] | DD[HD + 1] << 8) >> (7 & XD) & (1 << ID) - 1), HD = (XD -= iD) >> 3, VD = wD.t[VD] + ((DD[HD] | DD[HD + 1] << 8) >> (7 & XD) & (1 << iD) - 1), HD = (XD -= bD) >> 3, aD = SD.t[aD] + ((DD[HD] | DD[HD + 1] << 8) >> (7 & XD) & (1 << bD) - 1), BD > 3) CD.o[2] = CD.o[1], CD.o[1] = CD.o[0], CD.o[0] = BD -= 3;
+              const [KU, cU, uU] = RU.t = TU, CU = UU[GU - 1];
+              CU || jU(0);
+              let xU = (GU << 3) - 8 + hU(CU) - uU.b,
+                nU = xU >> 3,
+                bU = 0,
+                YU = (UU[nU] | UU[nU + 1] << 8) >> (7 & xU) & (1 << uU.b) - 1;
+              nU = (xU -= cU.b) >> 3;
+              let BU = (UU[nU] | UU[nU + 1] << 8) >> (7 & xU) & (1 << cU.b) - 1;
+              nU = (xU -= KU.b) >> 3;
+              let VU = (UU[nU] | UU[nU + 1] << 8) >> (7 & xU) & (1 << KU.b) - 1;
+              for (++aU; --aU;) {
+                const gU = uU.s[YU],
+                  tU = uU.n[YU],
+                  pU = KU.s[VU],
+                  EU = KU.n[VU],
+                  PU = cU.s[BU],
+                  TU = cU.n[BU];
+                nU = (xU -= PU) >> 3;
+                const qU = 1 << PU;
+                let GU = qU + ((UU[nU] | UU[nU + 1] << 8 | UU[nU + 2] << 16 | UU[nU + 3] << 24) >>> (7 & xU) & qU - 1);
+                nU = (xU -= JU[pU]) >> 3;
+                let CU = wU[pU] + ((UU[nU] | UU[nU + 1] << 8 | UU[nU + 2] << 16) >> (7 & xU) & (1 << JU[pU]) - 1);
+                nU = (xU -= mU[gU]) >> 3;
+                const hU = IU[gU] + ((UU[nU] | UU[nU + 1] << 8 | UU[nU + 2] << 16) >> (7 & xU) & (1 << mU[gU]) - 1);
+                if ((xU < 0 || ZU + hU > oU.length || bU + hU + CU > oU.length) && jU(0), nU = (xU -= tU) >> 3, YU = uU.t[YU] + ((UU[nU] | UU[nU + 1] << 8) >> (7 & xU) & (1 << tU) - 1), nU = (xU -= EU) >> 3, VU = KU.t[VU] + ((UU[nU] | UU[nU + 1] << 8) >> (7 & xU) & (1 << EU) - 1), nU = (xU -= TU) >> 3, BU = cU.t[BU] + ((UU[nU] | UU[nU + 1] << 8) >> (7 & xU) & (1 << TU) - 1), GU > 3) RU.o[2] = RU.o[1], RU.o[1] = RU.o[0], RU.o[0] = GU -= 3;
                 else {
-                  const DD = BD - (0 != ZD);
-                  DD ? (BD = 3 == DD ? CD.o[0] - 1 : CD.o[DD], DD > 1 && (CD.o[2] = CD.o[1]), CD.o[1] = CD.o[0], CD.o[0] = BD) : BD = CD.o[0]
+                  const UU = GU - (0 != hU);
+                  UU ? (GU = 3 == UU ? RU.o[0] - 1 : RU.o[UU], UU > 1 && (RU.o[2] = RU.o[1]), RU.o[1] = RU.o[0], RU.o[0] = GU) : GU = RU.o[0]
                 }
-                for (let DD = 0; DD < ZD; ++DD) xD[UD + DD] = xD[qD + DD];
-                UD += ZD, qD += ZD;
-                let oD = UD - BD;
-                if (oD < 0) {
-                  let DD = -oD;
-                  const cD = CD.e + oD;
-                  cD < 0 && yD(4), DD > tD && (DD = tD);
-                  for (let ID = 0; ID < DD; ++ID) xD[UD + ID] = CD.w[cD + ID];
-                  UD += DD, tD -= DD, oD = 0
+                for (let UU = 0; UU < hU; ++UU) oU[bU + UU] = oU[ZU + UU];
+                bU += hU, ZU += hU;
+                let QU = bU - GU;
+                if (QU < 0) {
+                  let UU = -QU;
+                  const gU = RU.e + QU;
+                  gU < 0 && jU(4), UU > CU && (UU = CU);
+                  for (let tU = 0; tU < UU; ++tU) oU[bU + tU] = RU.w[gU + tU];
+                  bU += UU, CU -= UU, QU = 0
                 }
-                for (let DD = 0; DD < tD; ++DD) xD[UD + DD] = xD[oD + DD];
-                UD += tD
+                for (let UU = 0; UU < CU; ++UU) oU[bU + UU] = oU[QU + UU];
+                bU += CU
               }
-              if (UD != qD)
-                for (; qD < xD.length;) xD[UD++] = xD[qD++];
-              else UD = xD.length;
-              cD ? CD.y += UD : xD = QD(xD, 0, UD)
-            } else if (cD) {
-              if (CD.y += MD, qD)
-                for (let DD = 0; DD < MD; ++DD) xD[DD] = xD[qD + DD]
-            } else qD && (xD = QD(xD, qD));
-            return CD.b = BD, xD
+              if (bU != ZU)
+                for (; ZU < oU.length;) oU[bU++] = oU[ZU++];
+              else bU = oU.length;
+              gU ? RU.y += bU : oU = qU(oU, 0, bU)
+            } else if (gU) {
+              if (RU.y += uU, ZU)
+                for (let UU = 0; UU < uU; ++UU) oU[UU] = oU[ZU + UU]
+            } else ZU && (oU = qU(oU, ZU));
+            return RU.b = GU, oU
           }
-          yD(2)
+          jU(2)
         }
       };
-    class qD {
+    class ZU {
       output = null;
       decoded = 0;
       done = !1;
       st = null;
       parts = [];
-      Lb = 0;
+      WT = 0;
       needed = 18;
       size;
-      constructor(DD) {
-        this.size = DD
+      constructor(UU) {
+        this.size = UU
       }
-      push(DD) {
+      push(UU) {
         if (this.done) return;
-        if (this.parts.push(DD), this.Lb += DD.length, this.Lb < this.needed) return;
-        const CD = ((DD, CD) => {
-          if (1 == DD.length) return DD[0];
-          const cD = new pD(CD);
-          for (let ID = 0, pD = 0; ID < DD.length; ++ID) {
-            const CD = DD[ID];
-            cD.set(CD, pD), pD += CD.length
+        if (this.parts.push(UU), this.WT += UU.length, this.WT < this.needed) return;
+        const RU = ((UU, RU) => {
+          if (1 == UU.length) return UU[0];
+          const gU = new pU(RU);
+          for (let tU = 0, pU = 0; tU < UU.length; ++tU) {
+            const RU = UU[tU];
+            gU.set(RU, pU), pU += RU.length
           }
-          return cD
-        })(this.parts, this.Lb);
-        let cD = this.st;
-        if (!cD) {
-          const DD = tD(CD, new pD(0));
-          "number" != typeof DD && DD.u === this.size || yD(0, `not a zstd frame of ${this.size} bytes`), cD = this.st = tD(CD, 1), cD.e = 0, this.output = cD.w
+          return gU
+        })(this.parts, this.WT);
+        let gU = this.st;
+        if (!gU) {
+          const UU = CU(RU, new pU(0));
+          "number" != typeof UU && UU.u === this.size || jU(0, `not a zstd frame of ${this.size} bytes`), gU = this.st = CU(RU, 1), gU.e = 0, this.output = gU.w
         }
         for (;;) {
-          const DD = CD.length - cD.b;
-          if (DD < 3) {
+          const UU = RU.length - gU.b;
+          if (UU < 3) {
             this.needed = 3;
             break
           }
-          const ID = CD[cD.b],
-            pD = ID >> 1 & 3;
-          3 == pD && yD(2);
-          const iD = ID >> 3 | CD[cD.b + 1] << 5 | CD[cD.b + 2] << 13;
-          iD > cD.m && yD(0);
-          const fD = 1 == pD ? 4 : 3 + iD;
-          if (DD < fD) {
-            this.needed = fD;
+          const tU = RU[gU.b],
+            pU = tU >> 1 & 3;
+          3 == pU && jU(2);
+          const EU = tU >> 3 | RU[gU.b + 1] << 5 | RU[gU.b + 2] << 13;
+          EU > gU.m && jU(0);
+          const PU = 1 == pU ? 4 : 3 + EU;
+          if (UU < PU) {
+            this.needed = PU;
             break
           }
-          if (xD(CD, cD, cD.w) || yD(5), cD.e = cD.y, (cD.y > cD.u || cD.l && cD.y != cD.u) && yD(0), cD.l) {
+          if (oU(RU, gU, gU.w) || jU(5), gU.e = gU.y, (gU.y > gU.u || gU.l && gU.y != gU.u) && jU(0), gU.l) {
             this.done = !0;
             break
           }
         }
-        this.decoded = cD.y;
-        const ID = CD.subarray(cD.b);
-        this.parts = ID.length ? [ID] : [], this.Lb = ID.length, cD.b = 0
+        this.decoded = gU.y;
+        const tU = RU.subarray(gU.b);
+        this.parts = tU.length ? [tU] : [], this.WT = tU.length, gU.b = 0
       }
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

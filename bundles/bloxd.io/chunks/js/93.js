@@ -1,279 +1,279 @@
 export const id = 93;
 export const ids = [91, 93];
 export const modules = {
-  36010: (DD, CD, cD) => {
-    function ID(DD, CD, cD, ID) {
-      return !(cD && !DD.aimable) && (!CD || DD.gun && "head" !== ID)
+  36203: (UU, RU, gU) => {
+    function tU(UU, RU, gU, tU) {
+      return !(gU && !UU.aimable) && (!RU || UU.gun && "head" !== tU)
     }
 
-    function pD(DD) {
-      return Math.max(.1 * DD, 1)
+    function pU(UU) {
+      return Math.max(.1 * UU, 1)
     }
 
-    function iD(DD, CD) {
-      return !DD && CD
+    function EU(UU, RU) {
+      return !UU && RU
     }
-    cD.d(CD, {
-      e: () => iD,
-      g: () => pD,
-      i: () => ID
+    gU.d(RU, {
+      b: () => EU,
+      d: () => pU,
+      e: () => tU
     })
   },
-  36018: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => bD,
-      c: () => fD
+  36209: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => TU,
+      f: () => PU
     });
-    let ID = null;
-    const pD = {
+    let tU = null;
+    const pU = {
         crosshairAccuracy: [],
         turnDamageIndicators: []
       },
-      iD = {
-        crosshairAccuracy: DD => {
-          const CD = pD.crosshairAccuracy.at(-1);
-          CD ? CD.hook(DD) : ID = DD
+      EU = {
+        crosshairAccuracy: UU => {
+          const RU = pU.crosshairAccuracy.at(-1);
+          RU ? RU.hook(UU) : tU = UU
         },
-        turnDamageIndicators: DD => {
-          var CD;
-          null === (CD = pD.turnDamageIndicators.at(-1)) || void 0 === CD || CD.hook(DD)
+        turnDamageIndicators: UU => {
+          var RU;
+          null === (RU = pU.turnDamageIndicators.at(-1)) || void 0 === RU || RU.hook(UU)
         }
       };
 
-    function fD(DD, CD) {
-      const cD = {
-          hook: CD
+    function PU(UU, RU) {
+      const gU = {
+          hook: RU
         },
-        fD = pD[DD];
-      if (fD.push(cD), "crosshairAccuracy" === DD && null !== ID) {
-        const DD = ID;
-        ID = null, iD.crosshairAccuracy(DD)
+        PU = pU[UU];
+      if (PU.push(gU), "crosshairAccuracy" === UU && null !== tU) {
+        const UU = tU;
+        tU = null, EU.crosshairAccuracy(UU)
       }
       return () => {
-        const DD = fD.indexOf(cD); - 1 !== DD && fD.splice(DD, 1)
+        const UU = PU.indexOf(gU); - 1 !== UU && PU.splice(UU, 1)
       }
     }
 
-    function bD() {
-      return iD
+    function TU() {
+      return EU
     }
   },
-  4621: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      Howl: () => pD.Howl,
-      Howler: () => pD.Howler,
-      iosAudio: () => QD,
-      musicOutput: () => oD,
-      readyAudioContext: () => vD
+  4512: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      Howl: () => pU.Howl,
+      Howler: () => pU.Howler,
+      iosAudio: () => qU,
+      musicOutput: () => QU,
+      readyAudioContext: () => eU
     });
-    var ID, pD = cD(4626),
-      iD = cD(90);
-    const fD = pD.Howler;
-    let bD;
+    var tU, pU = gU(4518),
+      EU = gU(96);
+    const PU = pU.Howler;
+    let TU;
 
-    function QD() {
-      return bD ??= "ios" === (0, iD.getOperatingSystem)(), bD
+    function qU() {
+      return TU ??= "ios" === (0, EU.getOperatingSystem)(), TU
     }
 
-    function wD() {
-      var DD, CD;
-      if (fD.ctx || !fD.usingWebAudio || "undefined" === typeof AudioContext || !QD()) return;
-      const cD = navigator.audioSession;
-      let ID;
-      "auto" === (null === cD || void 0 === cD ? void 0 : cD.type) && (cD.type = "ambient");
+    function KU() {
+      var UU, RU;
+      if (PU.ctx || !PU.usingWebAudio || "undefined" === typeof AudioContext || !qU()) return;
+      const gU = navigator.audioSession;
+      let tU;
+      "auto" === (null === gU || void 0 === gU ? void 0 : gU.type) && (gU.type = "ambient");
       try {
-        ID = new AudioContext({
+        tU = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const pD = ID.createGain();
-      pD.gain.setValueAtTime(fD._muted ? 0 : null !== (DD = fD._volume) && void 0 !== DD ? DD : 1, ID.currentTime), pD.connect(ID.destination), fD.ctx = ID, fD.masterGain = pD, null === (CD = fD._setup) || void 0 === CD || CD.call(fD)
+      const pU = tU.createGain();
+      pU.gain.setValueAtTime(PU._muted ? 0 : null !== (UU = PU._volume) && void 0 !== UU ? UU : 1, tU.currentTime), pU.connect(tU.destination), PU.ctx = tU, PU.masterGain = pU, null === (RU = PU._setup) || void 0 === RU || RU.call(PU)
     }
-    fD._mobileUnloaded = !0;
-    const SD = fD.volume.bind(pD.Howler);
-    fD.volume = function() {
-      return wD(), SD(...arguments)
+    PU._mobileUnloaded = !0;
+    const cU = PU.volume.bind(pU.Howler);
+    PU.volume = function() {
+      return KU(), cU(...arguments)
     };
-    const BD = fD.mute.bind(pD.Howler);
-    fD.mute = DD => (wD(), BD(DD));
-    const yD = pD.Howl.prototype,
-      MD = yD.init;
-    yD.init = function(DD) {
-      return wD(), MD.call(this, DD)
+    const GU = PU.mute.bind(pU.Howler);
+    PU.mute = UU => (KU(), GU(UU));
+    const jU = pU.Howl.prototype,
+      uU = jU.init;
+    jU.init = function(UU) {
+      return KU(), uU.call(this, UU)
     };
-    let tD = 0;
-    const ZD = null === (ID = fD._autoSuspend) || void 0 === ID ? void 0 : ID.bind(pD.Howler);
+    let CU = 0;
+    const hU = null === (tU = PU._autoSuspend) || void 0 === tU ? void 0 : tU.bind(pU.Howler);
 
-    function oD() {
-      vD();
+    function QU() {
+      eU();
       const {
-        ctx: DD,
-        masterGain: CD
-      } = fD;
-      return DD && CD ? {
-        ctx: DD,
-        destination: CD,
-        holdAwake: DD => {
-          var CD, cD;
-          (tD += DD ? 1 : -1, DD) ? null === (CD = fD._autoResume) || void 0 === CD || CD.call(fD): null === (cD = fD._autoSuspend) || void 0 === cD || cD.call(fD)
+        ctx: UU,
+        masterGain: RU
+      } = PU;
+      return UU && RU ? {
+        ctx: UU,
+        destination: RU,
+        holdAwake: UU => {
+          var RU, gU;
+          (CU += UU ? 1 : -1, UU) ? null === (RU = PU._autoResume) || void 0 === RU || RU.call(PU): null === (gU = PU._autoSuspend) || void 0 === gU || gU.call(PU)
         },
         wake: () => {
-          var CD;
-          "running" !== DD.state && (null === (CD = fD._autoResume) || void 0 === CD || CD.call(fD), DD.resume().catch((() => {})))
+          var RU;
+          "running" !== UU.state && (null === (RU = PU._autoResume) || void 0 === RU || RU.call(PU), UU.resume().catch((() => {})))
         }
       } : null
     }
 
-    function vD() {
-      var DD;
-      (fD.volume(), fD.ctx && fD.autoUnlock) && (null === (DD = fD._unlockAudio) || void 0 === DD || DD.call(fD))
+    function eU() {
+      var UU;
+      (PU.volume(), PU.ctx && PU.autoUnlock) && (null === (UU = PU._unlockAudio) || void 0 === UU || UU.call(PU))
     }
-    ZD && (fD._autoSuspend = () => tD > 0 ? pD.Howler : ZD())
+    hU && (PU._autoSuspend = () => CU > 0 ? pU.Howler : hU())
   },
-  36133: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => fD,
-      e: () => pD,
-      g: () => ID
+  36319: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => PU,
+      f: () => pU,
+      g: () => tU
     });
 
-    function ID(DD) {
-      return DD.replace(/[_\-\s]*\d+$/, "") || DD
+    function tU(UU) {
+      return UU.replace(/[_\-\s]*\d+$/, "") || UU
     }
 
-    function pD(DD, CD, cD) {
-      return cD <= 0 ? 0 : DD * cD / Math.max(CD, cD)
+    function pU(UU, RU, gU) {
+      return gU <= 0 ? 0 : UU * gU / Math.max(RU, gU)
     }
 
-    function iD(DD, CD) {
-      const cD = DD.getDurationMs();
-      return cD > 0 ? DD.loudness * Math.max(0, 1 - (CD - DD.startMs) / cD) : 0
+    function EU(UU, RU) {
+      const gU = UU.getDurationMs();
+      return gU > 0 ? UU.loudness * Math.max(0, 1 - (RU - UU.startMs) / gU) : 0
     }
-    class fD {
+    class PU {
       constructor() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
-          CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
-        this.maxVoices = DD, this.maxPerGroup = CD, this.voices = []
+        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
+          RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
+        this.maxVoices = UU, this.maxPerGroup = RU, this.voices = []
       }
-      admit(DD) {
-        if (this.voices = this.voices.filter((DD => DD.isAlive())), null !== DD.group) {
-          const CD = this.voices.filter((CD => CD.group === DD.group));
-          if (CD.length >= this.maxPerGroup && !this.dropLeastWorth(CD, DD)) return !1
+      admit(UU) {
+        if (this.voices = this.voices.filter((UU => UU.isAlive())), null !== UU.group) {
+          const RU = this.voices.filter((RU => RU.group === UU.group));
+          if (RU.length >= this.maxPerGroup && !this.dropLeastWorth(RU, UU)) return !1
         }
-        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, DD)) && (this.voices.push(DD), !0)
+        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, UU)) && (this.voices.push(UU), !0)
       }
-      dropLeastWorth(DD, CD) {
-        let cD = null,
-          ID = 1 / 0;
-        for (const pD of DD) {
-          if (!pD.canStop()) continue;
-          const DD = iD(pD, CD.startMs);
-          DD < ID && (cD = pD, ID = DD)
+      dropLeastWorth(UU, RU) {
+        let gU = null,
+          tU = 1 / 0;
+        for (const pU of UU) {
+          if (!pU.canStop()) continue;
+          const UU = EU(pU, RU.startMs);
+          UU < tU && (gU = pU, tU = UU)
         }
-        return !(!cD || CD.loudness < ID) && (this.voices.splice(this.voices.indexOf(cD), 1), cD.stop(), !0)
+        return !(!gU || RU.loudness < tU) && (this.voices.splice(this.voices.indexOf(gU), 1), gU.stop(), !0)
       }
     }
   },
-  36144: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => iD,
-      f: () => fD,
-      i: () => ID
+  36329: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => EU,
+      d: () => PU,
+      e: () => tU
     });
-    class ID {
-      constructor(DD) {
-        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = DD
+    class tU {
+      constructor(UU) {
+        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = UU
       }
-      setMultiplierType(DD, CD) {
-        var cD;
-        this.multipliers[DD] = CD, null === (cD = this._onUpdate) || void 0 === cD || cD.call(this)
+      setMultiplierType(UU, RU) {
+        var gU;
+        this.multipliers[UU] = RU, null === (gU = this._onUpdate) || void 0 === gU || gU.call(this)
       }
-      removeMultiplier(DD) {
-        var CD;
-        delete this.multipliers[DD], null === (CD = this._onUpdate) || void 0 === CD || CD.call(this)
+      removeMultiplier(UU) {
+        var RU;
+        delete this.multipliers[UU], null === (RU = this._onUpdate) || void 0 === RU || RU.call(this)
       }
-      getMultiplierType(DD) {
-        return this.multipliers[DD]
+      getMultiplierType(UU) {
+        return this.multipliers[UU]
       }
       getTotalMultipliedVal() {
-        let DD = 1;
-        for (const CD in this.multipliers) DD *= this.multipliers[CD];
-        return DD
+        let UU = 1;
+        for (const RU in this.multipliers) UU *= this.multipliers[RU];
+        return UU
       }
     }
-    class pD {
+    class pU {
       constructor() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = DD
+        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = UU
       }
-      setBooleanType(DD, CD) {
-        const cD = this._getTotalBooleanVal();
-        this.booleans[DD] = !!CD;
-        const ID = this.getTotalBooleanVal();
-        var pD;
-        ID !== cD && (null === (pD = this._onUpdate) || void 0 === pD || pD.call(this, ID, this.booleans));
-        return ID
+      setBooleanType(UU, RU) {
+        const gU = this._getTotalBooleanVal();
+        this.booleans[UU] = !!RU;
+        const tU = this.getTotalBooleanVal();
+        var pU;
+        tU !== gU && (null === (pU = this._onUpdate) || void 0 === pU || pU.call(this, tU, this.booleans));
+        return tU
       }
-      removeBoolean(DD) {
-        const CD = this._getTotalBooleanVal();
-        delete this.booleans[DD];
-        const cD = this._getTotalBooleanVal();
-        var ID;
-        null !== cD && cD !== CD && (null === (ID = this._onUpdate) || void 0 === ID || ID.call(this, cD, this.booleans));
-        return null !== cD && void 0 !== cD && cD
+      removeBoolean(UU) {
+        const RU = this._getTotalBooleanVal();
+        delete this.booleans[UU];
+        const gU = this._getTotalBooleanVal();
+        var tU;
+        null !== gU && gU !== RU && (null === (tU = this._onUpdate) || void 0 === tU || tU.call(this, gU, this.booleans));
+        return null !== gU && void 0 !== gU && gU
       }
-      getBooleanType(DD) {
-        return this.booleans[DD]
+      getBooleanType(UU) {
+        return this.booleans[UU]
       }
       getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
       forceUpdate() {
-        var DD;
-        null === (DD = this._onUpdate) || void 0 === DD || DD.call(this, this.getTotalBooleanVal(), this.booleans)
+        var UU;
+        null === (UU = this._onUpdate) || void 0 === UU || UU.call(this, this.getTotalBooleanVal(), this.booleans)
       }
       _getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
     }
-    class iD extends pD {
+    class EU extends pU {
       getTotalBooleanVal() {
-        const DD = this._getTotalBooleanVal();
-        if (null === DD) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return DD
+        const UU = this._getTotalBooleanVal();
+        if (null === UU) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return UU
       }
       _getTotalBooleanVal() {
-        let DD = !1,
-          CD = !0;
-        for (const cD in this.booleans) DD = !0, CD &&= this.booleans[cD];
-        return DD ? CD : null
+        let UU = !1,
+          RU = !0;
+        for (const gU in this.booleans) UU = !0, RU &&= this.booleans[gU];
+        return UU ? RU : null
       }
     }
-    class fD extends pD {
+    class PU extends pU {
       getTotalBooleanVal() {
-        const DD = this._getTotalBooleanVal();
-        if (null === DD) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return DD
+        const UU = this._getTotalBooleanVal();
+        if (null === UU) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return UU
       }
       _getTotalBooleanVal() {
-        let DD = !1,
-          CD = !1;
-        for (const cD in this.booleans) DD = !0, CD ||= this.booleans[cD];
-        return DD ? CD : null
+        let UU = !1,
+          RU = !1;
+        for (const gU in this.booleans) UU = !0, RU ||= this.booleans[gU];
+        return UU ? RU : null
       }
     }
   },
-  37194: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => BD,
-      f: () => fD
+  37335: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => GU,
+      e: () => PU
     });
-    var ID = cD(9162),
-      pD = cD(9141),
-      iD = cD(326);
-    const fD = {
+    var tU = gU(9101),
+      pU = gU(9078),
+      EU = gU(311);
+    const PU = {
       "Maple Door": {
         positions: [{
           block: "Maple Door",
@@ -3212,52 +3212,52 @@ export const modules = {
           z: 0
         }]
       },
-      ...bD("White"),
-      ...bD("Orange"),
-      ...bD("Magenta"),
-      ...bD("Light Blue"),
-      ...bD("Yellow"),
-      ...bD("Lime"),
-      ...bD("Pink"),
-      ...bD("Gray"),
-      ...bD("Light Gray"),
-      ...bD("Cyan"),
-      ...bD("Purple"),
-      ...bD("Blue"),
-      ...bD("Brown"),
-      ...bD("Green"),
-      ...bD("Red"),
-      ...bD("Black"),
-      ...bD("Draugr"),
-      ...bD("Skull"),
-      ...bD("Rainbow"),
-      ...QD("Sheep"),
-      ...QD("Cow"),
-      ...QD("Pig"),
-      ...QD("Horse"),
-      ...QD("Camel"),
-      ...QD("Wolf"),
-      ...QD("Deer"),
-      ...QD("Wildcat"),
-      ...wD("Radar"),
-      ...wD("Inactive Radar"),
-      ...wD("Active Radar"),
-      ...SD("Magenta"),
-      ...SD("Light Gray"),
-      ...SD("Red"),
-      ...SD("White"),
-      ...SD("Orange"),
-      ...SD("Light Blue"),
-      ...SD("Yellow"),
-      ...SD("Lime"),
-      ...SD("Pink"),
-      ...SD("Gray"),
-      ...SD("Cyan"),
-      ...SD("Purple"),
-      ...SD("Blue"),
-      ...SD("Brown"),
-      ...SD("Green"),
-      ...SD("Black"),
+      ...TU("White"),
+      ...TU("Orange"),
+      ...TU("Magenta"),
+      ...TU("Light Blue"),
+      ...TU("Yellow"),
+      ...TU("Lime"),
+      ...TU("Pink"),
+      ...TU("Gray"),
+      ...TU("Light Gray"),
+      ...TU("Cyan"),
+      ...TU("Purple"),
+      ...TU("Blue"),
+      ...TU("Brown"),
+      ...TU("Green"),
+      ...TU("Red"),
+      ...TU("Black"),
+      ...TU("Draugr"),
+      ...TU("Skull"),
+      ...TU("Rainbow"),
+      ...qU("Sheep"),
+      ...qU("Cow"),
+      ...qU("Pig"),
+      ...qU("Horse"),
+      ...qU("Camel"),
+      ...qU("Wolf"),
+      ...qU("Deer"),
+      ...qU("Wildcat"),
+      ...KU("Radar"),
+      ...KU("Inactive Radar"),
+      ...KU("Active Radar"),
+      ...cU("Magenta"),
+      ...cU("Light Gray"),
+      ...cU("Red"),
+      ...cU("White"),
+      ...cU("Orange"),
+      ...cU("Light Blue"),
+      ...cU("Yellow"),
+      ...cU("Lime"),
+      ...cU("Pink"),
+      ...cU("Gray"),
+      ...cU("Cyan"),
+      ...cU("Purple"),
+      ...cU("Blue"),
+      ...cU("Brown"),
+      ...cU("Green"),
+      ...cU("Black"),
       "Auto Miner": {
         positions: [{
           block: "Auto Miner",
@@ -3371,11 +3371,11 @@ export const modules = {
         }]
       },
       ... function() {
-        const DD = "Lunite Auto Miner";
+        const UU = "Lunite Auto Miner";
         return {
-          [DD]: {
+          [UU]: {
             positions: [{
-              block: DD,
+              block: UU,
               x: 0,
               y: 0,
               z: 0
@@ -3401,9 +3401,9 @@ export const modules = {
               z: -2
             }]
           },
-          [`${DD}|meta|rot2`]: {
+          [`${UU}|meta|rot2`]: {
             positions: [{
-              block: `${DD}|meta|rot2`,
+              block: `${UU}|meta|rot2`,
               x: 0,
               y: 0,
               z: 0
@@ -3429,9 +3429,9 @@ export const modules = {
               z: 0
             }]
           },
-          [`${DD}|meta|rot3`]: {
+          [`${UU}|meta|rot3`]: {
             positions: [{
-              block: `${DD}|meta|rot3`,
+              block: `${UU}|meta|rot3`,
               x: 0,
               y: 0,
               z: 0
@@ -3457,9 +3457,9 @@ export const modules = {
               z: 2
             }]
           },
-          [`${DD}|meta|rot4`]: {
+          [`${UU}|meta|rot4`]: {
             positions: [{
-              block: `${DD}|meta|rot4`,
+              block: `${UU}|meta|rot4`,
               x: 0,
               y: 0,
               z: 0
@@ -3488,74 +3488,74 @@ export const modules = {
         }
       }(),
       ... function() {
-        const DD = {
-            1: DD => ({
+        const UU = {
+            1: UU => ({
               x: 0,
-              z: DD
+              z: UU
             }),
-            2: DD => ({
-              x: DD,
+            2: UU => ({
+              x: UU,
               z: 0
             }),
-            3: DD => ({
+            3: UU => ({
               x: 0,
-              z: -DD
+              z: -UU
             }),
-            4: DD => ({
-              x: -DD,
+            4: UU => ({
+              x: -UU,
               z: 0
             })
           },
-          CD = {};
-        for (let cD = 1; cD <= 4; cD++) {
-          const pD = 1 === cD ? "" : `|meta|rot${cD}`;
-          CD[`${ID.c[0].block}${pD}`] = {
-            positions: ID.c.map((CD => {
+          RU = {};
+        for (let gU = 1; gU <= 4; gU++) {
+          const pU = 1 === gU ? "" : `|meta|rot${gU}`;
+          RU[`${tU.b[0].block}${pU}`] = {
+            positions: tU.b.map((RU => {
               let {
-                block: ID,
-                y: iD,
-                z: fD
-              } = CD;
+                block: tU,
+                y: EU,
+                z: PU
+              } = RU;
               return {
-                block: `${ID}${pD}`,
-                y: iD,
-                ...DD[cD](fD)
+                block: `${tU}${pU}`,
+                y: EU,
+                ...UU[gU](PU)
               }
             }))
           }
         }
-        return CD
+        return RU
       }(),
       ... function() {
-        const DD = {};
-        for (let CD = 1; CD <= ID.i; CD++) {
-          const cD = (0, ID.ic)(CD),
-            pD = ID.k[CD - 1],
-            iD = [{
-              block: cD,
+        const UU = {};
+        for (let RU = 1; RU <= tU.k; RU++) {
+          const gU = (0, tU.bc)(RU),
+            pU = tU.l[RU - 1],
+            EU = [{
+              block: gU,
               x: 0,
               y: 0,
               z: 0
             }];
-          for (const DD of ID.f)
-            for (let CD = 1; CD <= pD; CD++) {
-              if ("southwest" === DD && 1 === CD) continue;
+          for (const UU of tU.e)
+            for (let RU = 1; RU <= pU; RU++) {
+              if ("southwest" === UU && 1 === RU) continue;
               const {
-                x: cD,
-                z: pD
-              } = ID.g[DD];
-              iD.push({
-                block: (0, ID.hc)(DD, CD),
-                x: cD,
-                y: CD - 1,
-                z: pD
+                x: gU,
+                z: pU
+              } = tU.h[UU];
+              EU.push({
+                block: (0, tU.$b)(UU, RU),
+                x: gU,
+                y: RU - 1,
+                z: pU
               })
             }
-          DD[cD] = {
-            positions: iD
+          UU[gU] = {
+            positions: EU
           }
         }
-        return DD
+        return UU
       }(),
       "Solar Panel": {
         positions: [{
@@ -3669,159 +3669,159 @@ export const modules = {
       }
     };
 
-    function bD(DD) {
+    function TU(UU) {
       return {
-        [`${DD} Banner`]: {
+        [`${UU} Banner`]: {
           positions: [{
-            block: `${DD} Banner`,
+            block: `${UU} Banner`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${DD} Banner Flag|meta|rot1|bot`,
+            block: `_${UU} Banner Flag|meta|rot1|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${DD} Banner|meta|rot2|bot`]: {
+        [`${UU} Banner|meta|rot2|bot`]: {
           positions: [{
-            block: `${DD} Banner|meta|rot2|bot`,
+            block: `${UU} Banner|meta|rot2|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${DD} Banner Flag|meta|rot2|bot`,
+            block: `_${UU} Banner Flag|meta|rot2|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${DD} Banner|meta|rot3|bot`]: {
+        [`${UU} Banner|meta|rot3|bot`]: {
           positions: [{
-            block: `${DD} Banner|meta|rot3|bot`,
+            block: `${UU} Banner|meta|rot3|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${DD} Banner Flag|meta|rot3|bot`,
+            block: `_${UU} Banner Flag|meta|rot3|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${DD} Banner|meta|rot4|bot`]: {
+        [`${UU} Banner|meta|rot4|bot`]: {
           positions: [{
-            block: `${DD} Banner|meta|rot4|bot`,
+            block: `${UU} Banner|meta|rot4|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${DD} Banner Flag|meta|rot4|bot`,
+            block: `_${UU} Banner Flag|meta|rot4|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${DD} Banner|meta|rot1|side`]: {
+        [`${UU} Banner|meta|rot1|side`]: {
           positions: [{
-            block: `${DD} Banner|meta|rot1|side`,
+            block: `${UU} Banner|meta|rot1|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${DD} Banner Flag|meta|rot1|side`,
+            block: `_${UU} Banner Flag|meta|rot1|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${DD} Banner|meta|rot2|side`]: {
+        [`${UU} Banner|meta|rot2|side`]: {
           positions: [{
-            block: `${DD} Banner|meta|rot2|side`,
+            block: `${UU} Banner|meta|rot2|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${DD} Banner Flag|meta|rot2|side`,
+            block: `_${UU} Banner Flag|meta|rot2|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${DD} Banner|meta|rot3|side`]: {
+        [`${UU} Banner|meta|rot3|side`]: {
           positions: [{
-            block: `${DD} Banner|meta|rot3|side`,
+            block: `${UU} Banner|meta|rot3|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${DD} Banner Flag|meta|rot3|side`,
+            block: `_${UU} Banner Flag|meta|rot3|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${DD} Banner|meta|rot4|side`]: {
+        [`${UU} Banner|meta|rot4|side`]: {
           positions: [{
-            block: `${DD} Banner|meta|rot4|side`,
+            block: `${UU} Banner|meta|rot4|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${DD} Banner Flag|meta|rot4|side`,
+            block: `_${UU} Banner Flag|meta|rot4|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${DD} Banner|meta|rot1|top`]: {
+        [`${UU} Banner|meta|rot1|top`]: {
           positions: [{
-            block: `${DD} Banner|meta|rot1|top`,
+            block: `${UU} Banner|meta|rot1|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${DD} Banner Flag`,
+            block: `_${UU} Banner Flag`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${DD} Banner|meta|rot2|top`]: {
+        [`${UU} Banner|meta|rot2|top`]: {
           positions: [{
-            block: `${DD} Banner|meta|rot2|top`,
+            block: `${UU} Banner|meta|rot2|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${DD} Banner Flag|meta|rot2|top`,
+            block: `_${UU} Banner Flag|meta|rot2|top`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${DD} Banner|meta|rot3|top`]: {
+        [`${UU} Banner|meta|rot3|top`]: {
           positions: [{
-            block: `${DD} Banner|meta|rot3|top`,
+            block: `${UU} Banner|meta|rot3|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${DD} Banner Flag|meta|rot3|top`,
+            block: `_${UU} Banner Flag|meta|rot3|top`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${DD} Banner|meta|rot4|top`]: {
+        [`${UU} Banner|meta|rot4|top`]: {
           positions: [{
-            block: `${DD} Banner|meta|rot4|top`,
+            block: `${UU} Banner|meta|rot4|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${DD} Banner Flag|meta|rot4|top`,
+            block: `_${UU} Banner Flag|meta|rot4|top`,
             x: 0,
             y: -1,
             z: 0
@@ -3830,96 +3830,96 @@ export const modules = {
       }
     }
 
-    function QD(DD) {
-      const CD = (0, iD.Wb)(DD);
+    function qU(UU) {
+      const RU = (0, EU.Zb)(UU);
       return {
-        [CD]: {
+        [RU]: {
           positions: [{
-            block: CD,
+            block: RU,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${CD} Top Left`,
+            block: `_${RU} Top Left`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${CD} Top Right`,
+            block: `_${RU} Top Right`,
             x: -1,
             y: 1,
             z: 0
           }, {
-            block: `_${CD} Bottom Right`,
+            block: `_${RU} Bottom Right`,
             x: -1,
             y: 0,
             z: 0
           }]
         },
-        [`${CD}|meta|rot2`]: {
+        [`${RU}|meta|rot2`]: {
           positions: [{
-            block: `${CD}|meta|rot2`,
+            block: `${RU}|meta|rot2`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${CD} Top Left|meta|rot2`,
+            block: `_${RU} Top Left|meta|rot2`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${CD} Top Right|meta|rot2`,
+            block: `_${RU} Top Right|meta|rot2`,
             x: 0,
             y: 1,
             z: 1
           }, {
-            block: `_${CD} Bottom Right|meta|rot2`,
+            block: `_${RU} Bottom Right|meta|rot2`,
             x: 0,
             y: 0,
             z: 1
           }]
         },
-        [`${CD}|meta|rot3`]: {
+        [`${RU}|meta|rot3`]: {
           positions: [{
-            block: `${CD}|meta|rot3`,
+            block: `${RU}|meta|rot3`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${CD} Top Left|meta|rot3`,
+            block: `_${RU} Top Left|meta|rot3`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${CD} Top Right|meta|rot3`,
+            block: `_${RU} Top Right|meta|rot3`,
             x: 1,
             y: 1,
             z: 0
           }, {
-            block: `_${CD} Bottom Right|meta|rot3`,
+            block: `_${RU} Bottom Right|meta|rot3`,
             x: 1,
             y: 0,
             z: 0
           }]
         },
-        [`${CD}|meta|rot4`]: {
+        [`${RU}|meta|rot4`]: {
           positions: [{
-            block: `${CD}|meta|rot4`,
+            block: `${RU}|meta|rot4`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${CD} Top Left|meta|rot4`,
+            block: `_${RU} Top Left|meta|rot4`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${CD} Top Right|meta|rot4`,
+            block: `_${RU} Top Right|meta|rot4`,
             x: 0,
             y: 1,
             z: -1
           }, {
-            block: `_${CD} Bottom Right|meta|rot4`,
+            block: `_${RU} Bottom Right|meta|rot4`,
             x: 0,
             y: 0,
             z: -1
@@ -3928,77 +3928,77 @@ export const modules = {
       }
     }
 
-    function wD(DD) {
-      const CD = `_${DD} Back`,
-        cD = `_${DD} Dish`;
+    function KU(UU) {
+      const RU = `_${UU} Back`,
+        gU = `_${UU} Dish`;
       return {
-        [DD]: {
+        [UU]: {
           positions: [{
-            block: DD,
+            block: UU,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: CD,
+            block: RU,
             x: 0,
             y: 0,
             z: -1
           }, {
-            block: cD,
+            block: gU,
             x: 0,
             y: 1,
             z: -1
           }]
         },
-        [`${DD}|meta|rot2`]: {
+        [`${UU}|meta|rot2`]: {
           positions: [{
-            block: `${DD}|meta|rot2`,
+            block: `${UU}|meta|rot2`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${CD}|meta|rot2`,
+            block: `${RU}|meta|rot2`,
             x: -1,
             y: 0,
             z: 0
           }, {
-            block: `${cD}|meta|rot2`,
+            block: `${gU}|meta|rot2`,
             x: -1,
             y: 1,
             z: 0
           }]
         },
-        [`${DD}|meta|rot3`]: {
+        [`${UU}|meta|rot3`]: {
           positions: [{
-            block: `${DD}|meta|rot3`,
+            block: `${UU}|meta|rot3`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${CD}|meta|rot3`,
+            block: `${RU}|meta|rot3`,
             x: 0,
             y: 0,
             z: 1
           }, {
-            block: `${cD}|meta|rot3`,
+            block: `${gU}|meta|rot3`,
             x: 0,
             y: 1,
             z: 1
           }]
         },
-        [`${DD}|meta|rot4`]: {
+        [`${UU}|meta|rot4`]: {
           positions: [{
-            block: `${DD}|meta|rot4`,
+            block: `${UU}|meta|rot4`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${CD}|meta|rot4`,
+            block: `${RU}|meta|rot4`,
             x: 1,
             y: 0,
             z: 0
           }, {
-            block: `${cD}|meta|rot4`,
+            block: `${gU}|meta|rot4`,
             x: 1,
             y: 1,
             z: 0
@@ -4007,22 +4007,22 @@ export const modules = {
       }
     }
 
-    function SD(DD) {
-      const CD = `Small ${DD} Pod`;
+    function cU(UU) {
+      const RU = `Small ${UU} Pod`;
       return {
-        [CD]: {
+        [RU]: {
           positions: [{
-            block: CD,
+            block: RU,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_Small ${DD} Pod Mid`,
+            block: `_Small ${UU} Pod Mid`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_Small ${DD} Pod Top`,
+            block: `_Small ${UU} Pod Top`,
             x: 0,
             y: 2,
             z: 0
@@ -4030,290 +4030,290 @@ export const modules = {
         }
       }
     }
-    for (const yD in fD) {
-      for (const DD of fD[yD].positions)
-        if (DD.id = pD.g[DD.block].id, yD === DD.block && (0 !== DD.x || 0 !== DD.y || 0 !== DD.z)) throw new Error(`Multiblock "${yD}" has main block "${DD.block}" at non-origin position (${DD.x}, ${DD.y}, ${DD.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
-      fD[pD.g[yD].id] = fD[yD]
+    for (const jU in PU) {
+      for (const UU of PU[jU].positions)
+        if (UU.id = pU.f[UU.block].id, jU === UU.block && (0 !== UU.x || 0 !== UU.y || 0 !== UU.z)) throw new Error(`Multiblock "${jU}" has main block "${UU.block}" at non-origin position (${UU.x}, ${UU.y}, ${UU.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
+      PU[pU.f[jU].id] = PU[jU]
     }
-    const BD = {};
-    for (const yD in fD)
+    const GU = {};
+    for (const jU in PU)
       for (const {
-          block: DD,
-          x: CD,
-          y: cD,
-          z: ID
+          block: UU,
+          x: RU,
+          y: gU,
+          z: tU
         }
-        of fD[yD].positions) {
-        const iD = {
-          mainMultiblock: yD,
-          compX: CD,
-          compY: cD,
-          compZ: ID
+        of PU[jU].positions) {
+        const EU = {
+          mainMultiblock: jU,
+          compX: RU,
+          compY: gU,
+          compZ: tU
         };
-        BD[DD] = iD, BD[pD.g[DD].id] = iD
+        GU[UU] = EU, GU[pU.f[UU].id] = EU
       }
   },
-  37589: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => QD,
-      e: () => bD
+  37781: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => qU,
+      h: () => TU
     });
-    var ID = cD(9141),
-      pD = cD(9198),
-      iD = cD(9202);
-    const fD = pD.o.map((DD => {
+    var tU = gU(9078),
+      pU = gU(9125),
+      EU = gU(9127);
+    const PU = pU.p.map((UU => {
       let {
-        dx: CD,
-        dz: cD
-      } = DD;
-      return [CD, 0, cD]
+        dx: RU,
+        dz: gU
+      } = UU;
+      return [RU, 0, gU]
     }));
 
-    function bD(DD) {
-      const CD = ID.g[DD];
-      return !!CD && DD !== ID.d && !CD.model && !CD.HM && !1 !== CD.solid && !CD.wb
+    function TU(UU) {
+      const RU = tU.f[UU];
+      return !!RU && UU !== tU.c && !RU.model && !RU.Nj && !1 !== RU.solid && !RU.du
     }
-    class QD {
-      constructor(DD) {
-        this.model = DD, this.reshapeOffsets = [...fD, [0, -1, 0]]
+    class qU {
+      constructor(UU) {
+        this.model = UU, this.reshapeOffsets = [...PU, [0, -1, 0]]
       }
-      handles(DD) {
-        const CD = ID.g[DD];
-        return (null === CD || void 0 === CD ? void 0 : CD.model) === this.model && void 0 !== CD.attachedTop
+      handles(UU) {
+        const RU = tU.f[UU];
+        return (null === RU || void 0 === RU ? void 0 : RU.model) === this.model && void 0 !== RU.attachedTop
       }
-      affects(DD) {
-        return this.handles(DD) || bD(DD) || (0, iD.t)(ID.g[DD])
+      affects(UU) {
+        return this.handles(UU) || TU(UU) || (0, EU.y)(tU.f[UU])
       }
-      shape(DD, CD, cD, fD, QD) {
-        let wD = this.handles(DD(CD, cD + 1, fD)) ? pD.j : 0;
-        return pD.o.forEach(((QD, SD) => {
+      shape(UU, RU, gU, PU, qU) {
+        let KU = this.handles(UU(RU, gU + 1, PU)) ? pU.g : 0;
+        return pU.p.forEach(((qU, cU) => {
           let {
-            dx: BD,
-            dz: yD
-          } = QD;
-          const MD = DD(CD + BD, cD, fD + yD);
-          (this.handles(MD) || bD(MD) || function(DD, CD) {
-            const cD = ID.g[DD];
-            return (0, iD.t)(cD) && (0, iD.n)(cD.meta.rot) === (0 !== pD.o[CD].dx)
-          }(MD, SD)) && (wD |= 1 << SD)
-        })), (0, ID.k)((0, pD.l)(ID.g[QD].meta.rootName, wD))
+            dx: GU,
+            dz: jU
+          } = qU;
+          const uU = UU(RU + GU, gU, PU + jU);
+          (this.handles(uU) || TU(uU) || function(UU, RU) {
+            const gU = tU.f[UU];
+            return (0, EU.y)(gU) && (0, EU.t)(gU.meta.rot) === (0 !== pU.p[RU].dx)
+          }(uU, cU)) && (KU |= 1 << cU)
+        })), (0, tU.i)((0, pU.j)(tU.f[qU].meta.rootName, KU))
       }
     }
   },
-  37393: (DD, CD, cD) => {
-    function ID(DD, CD) {
-      var cD;
-      CD || (CD = {});
-      const ID = null !== (cD = CD.customAttributes) && void 0 !== cD ? cD : {};
-      var pD, iD, fD;
-      "Gun" === (null === DD || void 0 === DD ? void 0 : DD.type) && (ID.shotsLeft = null !== (pD = null !== (iD = ID.shotsLeft) && void 0 !== iD ? iD : null === (fD = ID.gunStats) || void 0 === fD ? void 0 : fD.clipSize) && void 0 !== pD ? pD : DD.clipSize);
-      if (ID.enchantmentTier && (ID.enchantmentTier = ID.enchantmentTier.toString()), ID.enchantments)
-        for (const BD in ID.enchantments) {
-          const DD = ID.enchantments[BD];
-          if ("number" !== typeof DD) {
-            const CD = parseInt(DD);
-            isNaN(CD) || CD < 0 ? ID.enchantments[BD] = void 0 : ID.enchantments[BD] = CD > 1e9 ? 1e9 : CD
+  37534: (UU, RU, gU) => {
+    function tU(UU, RU) {
+      var gU;
+      RU || (RU = {});
+      const tU = null !== (gU = RU.customAttributes) && void 0 !== gU ? gU : {};
+      var pU, EU, PU;
+      "Gun" === (null === UU || void 0 === UU ? void 0 : UU.type) && (tU.shotsLeft = null !== (pU = null !== (EU = tU.shotsLeft) && void 0 !== EU ? EU : null === (PU = tU.gunStats) || void 0 === PU ? void 0 : PU.clipSize) && void 0 !== pU ? pU : UU.clipSize);
+      if (tU.enchantmentTier && (tU.enchantmentTier = tU.enchantmentTier.toString()), tU.enchantments)
+        for (const GU in tU.enchantments) {
+          const UU = tU.enchantments[GU];
+          if ("number" !== typeof UU) {
+            const RU = parseInt(UU);
+            isNaN(RU) || RU < 0 ? tU.enchantments[GU] = void 0 : tU.enchantments[GU] = RU > 1e9 ? 1e9 : RU
           }
         }
-      if (ID.enchantmentData)
-        for (const BD in ID.enchantmentData) {
-          const DD = ID.enchantmentData[BD];
-          if (!DD) continue;
-          if ("object" !== typeof DD) {
-            ID.enchantmentData[BD] = void 0;
+      if (tU.enchantmentData)
+        for (const GU in tU.enchantmentData) {
+          const UU = tU.enchantmentData[GU];
+          if (!UU) continue;
+          if ("object" !== typeof UU) {
+            tU.enchantmentData[GU] = void 0;
             continue
           }
-          const CD = DD.icon,
-            cD = DD.description;
-          var bD, QD, wD, SD;
-          if ("string" !== typeof CD) ID.enchantmentData[BD].icon = null !== (bD = null === CD || void 0 === CD || null === (QD = CD.toString) || void 0 === QD ? void 0 : QD.call(CD)) && void 0 !== bD ? bD : void 0;
-          if ("string" !== typeof cD) ID.enchantmentData[BD].description = null !== (wD = null === cD || void 0 === cD || null === (SD = cD.toString) || void 0 === SD ? void 0 : SD.call(cD)) && void 0 !== wD ? wD : void 0
+          const RU = UU.icon,
+            gU = UU.description;
+          var TU, qU, KU, cU;
+          if ("string" !== typeof RU) tU.enchantmentData[GU].icon = null !== (TU = null === RU || void 0 === RU || null === (qU = RU.toString) || void 0 === qU ? void 0 : qU.call(RU)) && void 0 !== TU ? TU : void 0;
+          if ("string" !== typeof gU) tU.enchantmentData[GU].description = null !== (KU = null === gU || void 0 === gU || null === (cU = gU.toString) || void 0 === cU ? void 0 : cU.call(gU)) && void 0 !== KU ? KU : void 0
         }
-      return CD.customAttributes = ID, CD
+      return RU.customAttributes = tU, RU
     }
-    cD.d(CD, {
-      e: () => ID
+    gU.d(RU, {
+      e: () => tU
     })
   },
-  37584: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => OD,
-      h: () => vD,
-      l: () => QD,
-      m: () => BD,
-      o: () => PD
+  37777: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => JU,
+      d: () => eU,
+      g: () => qU,
+      k: () => GU,
+      o: () => wU
     });
-    var ID = cD(9141),
-      pD = cD(9173),
-      iD = cD(37589);
-    const fD = (0, ID.k)("Noticeboard"),
-      bD = (0, ID.k)("Standing Noticeboard|meta|rot4|lrud");
+    var tU = gU(9078),
+      pU = gU(9110),
+      EU = gU(37781);
+    const PU = (0, tU.i)("Noticeboard"),
+      TU = (0, tU.i)("Standing Noticeboard|meta|rot4|lrud");
 
-    function QD(DD) {
-      return fD <= DD && DD <= bD
+    function qU(UU) {
+      return PU <= UU && UU <= TU
     }
-    const wD = new Uint8Array(bD - fD + 1);
-    for (let HD = fD; HD <= bD; HD++) wD[HD - fD] = (0, pD.o)(ID.g[HD].meta.metaStr);
-    const SD = 64,
-      BD = SD * SD,
-      [yD, MD, tD, ZD] = [0, 1, 2, 3];
+    const KU = new Uint8Array(TU - PU + 1);
+    for (let nU = PU; nU <= TU; nU++) KU[nU - PU] = (0, pU.s)(tU.f[nU].meta.metaStr);
+    const cU = 64,
+      GU = cU * cU,
+      [jU, uU, CU, hU] = [0, 1, 2, 3];
 
-    function oD(DD) {
-      var CD, cD;
-      return "string" === typeof(null === DD || void 0 === DD || null === (CD = DD.persisted) || void 0 === CD || null === (cD = CD.shared) || void 0 === cD ? void 0 : cD.text)
-    }
-
-    function vD(DD) {
-      return oD(DD) && "" !== DD.persisted.shared.text.trim()
+    function QU(UU) {
+      var RU, gU;
+      return "string" === typeof(null === UU || void 0 === UU || null === (RU = UU.persisted) || void 0 === RU || null === (gU = RU.shared) || void 0 === gU ? void 0 : gU.text)
     }
 
-    function ND(DD, CD) {
-      let [cD, , ID] = CD;
-      const [iD, , fD] = pD.u[DD][MD];
-      return cD * iD + ID * fD
+    function eU(UU) {
+      return QU(UU) && "" !== UU.persisted.shared.text.trim()
     }
 
-    function gD(DD, CD, cD) {
-      return cD[1] - CD[1] || ND(DD, CD) - ND(DD, cD)
+    function WU(UU, RU) {
+      let [gU, , tU] = RU;
+      const [EU, , PU] = pU.v[UU][uU];
+      return gU * EU + tU * PU
     }
 
-    function XD(DD, CD, cD, iD, bD) {
-      var QD;
-      let SD = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : DD(CD[0], CD[1], CD[2]);
-      if (!(wD[SD - fD] & 1 << cD)) return null;
-      const [BD, yD, MD] = pD.u[bD][cD], tD = [CD[0] + BD, CD[1] + yD, CD[2] + MD], ZD = DD(tD[0], tD[1], tD[2]), oD = null === (QD = ID.g[ZD]) || void 0 === QD ? void 0 : QD.meta;
-      return (null === oD || void 0 === oD ? void 0 : oD.rootId) === iD && oD.rot === bD && wD[ZD - fD] & 1 << (1 ^ cD) ? tD : null
+    function fU(UU, RU, gU) {
+      return gU[1] - RU[1] || WU(UU, RU) - WU(UU, gU)
     }
 
-    function mD(DD, CD, cD, iD) {
-      const fD = DD(CD, cD, iD);
-      if (!QD(fD)) return null;
+    function xU(UU, RU, gU, EU, TU) {
+      var qU;
+      let cU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : UU(RU[0], RU[1], RU[2]);
+      if (!(KU[cU - PU] & 1 << gU)) return null;
+      const [GU, jU, uU] = pU.v[TU][gU], CU = [RU[0] + GU, RU[1] + jU, RU[2] + uU], hU = UU(CU[0], CU[1], CU[2]), QU = null === (qU = tU.f[hU]) || void 0 === qU ? void 0 : qU.meta;
+      return (null === QU || void 0 === QU ? void 0 : QU.rootId) === EU && QU.rot === TU && KU[hU - PU] & 1 << (1 ^ gU) ? CU : null
+    }
+
+    function mU(UU, RU, gU, EU) {
+      const PU = UU(RU, gU, EU);
+      if (!qU(PU)) return null;
       const {
-        rootId: bD,
-        rot: wD
-      } = ID.g[fD].meta, BD = (CD, cD) => {
-        let ID = CD,
-          pD = 1;
-        for (let iD = XD(DD, ID, cD, bD, wD); iD && pD < SD; iD = XD(DD, ID, cD, bD, wD)) ID = iD, pD++;
+        rootId: TU,
+        rot: KU
+      } = tU.f[PU].meta, GU = (RU, gU) => {
+        let tU = RU,
+          pU = 1;
+        for (let EU = xU(UU, tU, gU, TU, KU); EU && pU < cU; EU = xU(UU, tU, gU, TU, KU)) tU = EU, pU++;
         return {
-          end: ID,
-          cells: pD
+          end: tU,
+          cells: pU
         }
-      }, oD = BD(BD([CD, cD, iD], yD).end, tD).end, vD = BD(oD, MD).cells, [ND, , gD] = pD.u[wD][MD];
-      let mD = 1;
-      DD: for (; mD < SD; mD++)
-        for (let CD = 0; CD < vD; CD++)
-          if (!XD(DD, [oD[0] + ND * CD, oD[1] - mD + 1, oD[2] + gD * CD], ZD, bD, wD)) break DD;
+      }, QU = GU(GU([RU, gU, EU], jU).end, CU).end, eU = GU(QU, uU).cells, [WU, , fU] = pU.v[KU][uU];
+      let mU = 1;
+      UU: for (; mU < cU; mU++)
+        for (let RU = 0; RU < eU; RU++)
+          if (!xU(UU, [QU[0] + WU * RU, QU[1] - mU + 1, QU[2] + fU * RU], hU, TU, KU)) break UU;
       return {
-        anchor: oD,
-        rootId: bD,
-        rot: wD,
-        width: vD,
-        height: mD
+        anchor: QU,
+        rootId: TU,
+        rot: KU,
+        width: eU,
+        height: mU
       }
     }
 
-    function nD(DD, CD) {
-      for (const cD of function(DD) {
+    function IU(UU, RU) {
+      for (const gU of function(UU) {
           let {
-            anchor: CD,
-            rot: cD,
-            width: ID,
-            height: iD
-          } = DD;
-          const [fD, , bD] = pD.u[cD][MD], QD = [];
-          for (let pD = 0; pD < iD; pD++)
-            for (let DD = 0; DD < ID; DD++) QD.push([CD[0] + fD * DD, CD[1] - pD, CD[2] + bD * DD]);
-          return QD
-        }(DD))
-        if (oD(CD(cD[0], cD[1], cD[2]))) return cD;
+            anchor: RU,
+            rot: gU,
+            width: tU,
+            height: EU
+          } = UU;
+          const [PU, , TU] = pU.v[gU][uU], qU = [];
+          for (let pU = 0; pU < EU; pU++)
+            for (let UU = 0; UU < tU; UU++) qU.push([RU[0] + PU * UU, RU[1] - pU, RU[2] + TU * UU]);
+          return qU
+        }(UU))
+        if (QU(RU(gU[0], gU[1], gU[2]))) return gU;
       return null
     }
 
-    function OD(DD, CD, cD, pD, iD) {
-      const fD = DD(cD, pD, iD);
-      if (!QD(fD)) return null;
+    function JU(UU, RU, gU, pU, EU) {
+      const PU = UU(gU, pU, EU);
+      if (!qU(PU)) return null;
       const {
-        rootId: bD,
-        rot: wD
-      } = ID.g[fD].meta, SD = [
-        [cD, pD, iD]
-      ], yD = new Set([SD[0].join()]);
-      let MD = SD[0],
-        tD = null;
-      for (let ID = 0; ID < SD.length; ID++) {
-        const cD = SD[ID];
-        if (gD(wD, cD, MD) < 0 && (MD = cD), oD(CD(cD[0], cD[1], cD[2]))) {
-          const CD = mD(DD, cD[0], cD[1], cD[2]);
-          (!tD || gD(wD, CD.anchor, tD.anchor) < 0) && (tD = CD)
+        rootId: TU,
+        rot: KU
+      } = tU.f[PU].meta, cU = [
+        [gU, pU, EU]
+      ], jU = new Set([cU[0].join()]);
+      let uU = cU[0],
+        CU = null;
+      for (let tU = 0; tU < cU.length; tU++) {
+        const gU = cU[tU];
+        if (fU(KU, gU, uU) < 0 && (uU = gU), QU(RU(gU[0], gU[1], gU[2]))) {
+          const RU = mU(UU, gU[0], gU[1], gU[2]);
+          (!CU || fU(KU, RU.anchor, CU.anchor) < 0) && (CU = RU)
         }
-        for (let CD = 0; CD < 4 && SD.length < BD; CD++) {
-          const ID = XD(DD, cD, CD, bD, wD);
-          ID && !yD.has(ID.join()) && (yD.add(ID.join()), SD.push(ID))
+        for (let RU = 0; RU < 4 && cU.length < GU; RU++) {
+          const tU = xU(UU, gU, RU, TU, KU);
+          tU && !jU.has(tU.join()) && (jU.add(tU.join()), cU.push(tU))
         }
       }
-      return tD ??= mD(DD, MD[0], MD[1], MD[2]), {
-        cells: SD,
-        topLeft: MD,
-        rect: tD,
-        textCell: nD(tD, CD)
+      return CU ??= mU(UU, uU[0], uU[1], uU[2]), {
+        cells: cU,
+        topLeft: uU,
+        rect: CU,
+        textCell: IU(CU, RU)
       }
     }
 
-    function PD(DD, CD, cD, fD, bD) {
-      if (null !== cD && QD(cD)) {
+    function wU(UU, RU, gU, PU, TU) {
+      if (null !== gU && qU(gU)) {
         const {
-          rootName: DD,
-          rot: CD
-        } = ID.g[cD].meta;
-        if (pD.u[CD].some((DD => {
-            let [CD, cD, ID] = DD;
-            return CD === fD[0] && cD === fD[1] && ID === fD[2]
+          rootName: UU,
+          rot: RU
+        } = tU.f[gU].meta;
+        if (pU.v[RU].some((UU => {
+            let [RU, gU, tU] = UU;
+            return RU === PU[0] && gU === PU[1] && tU === PU[2]
           }))) return {
-          root: DD,
-          rot: CD
+          root: UU,
+          rot: RU
         }
       }
-      const [wD, SD] = pD.j[bD], BD = DD(CD[0] - wD, CD[1], CD[2] - SD);
+      const [KU, cU] = pU.n[TU], GU = UU(RU[0] - KU, RU[1], RU[2] - cU);
       return {
-        root: (0, iD.e)(BD) ? pD.C : pD.y,
-        rot: bD
+        root: (0, EU.h)(GU) ? pU.B : pU.y,
+        rot: TU
       }
     }
   },
-  36139: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => iD,
-      f: () => ID,
-      h: () => pD
+  36324: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => EU,
+      d: () => tU,
+      e: () => pU
     });
-    const ID = 15,
-      pD = 3,
-      iD = 30
+    const tU = 15,
+      pU = 3,
+      EU = 30
   },
-  37597: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => iD,
-      e: () => fD,
-      i: () => pD,
-      l: () => bD
+  37789: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => EU,
+      h: () => PU,
+      j: () => pU,
+      m: () => TU
     });
-    var ID = cD(330);
-    const pD = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...cD(618).v.map((DD => `${DD} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...ID.i, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
-      iD = ["Obby RPG"];
+    var tU = gU(314);
+    const pU = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...gU(572).p.map((UU => `${UU} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...tU.l, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
+      EU = ["Obby RPG"];
 
-    function fD(DD) {
-      const CD = DD.indexOf("|");
-      return -1 === CD ? {
-        item: DD,
+    function PU(UU) {
+      const RU = UU.indexOf("|");
+      return -1 === RU ? {
+        item: UU,
         clientPredictedThrower: null
       } : {
-        item: DD.slice(0, CD),
-        clientPredictedThrower: DD.slice(CD + 1)
+        item: UU.slice(0, RU),
+        clientPredictedThrower: UU.slice(RU + 1)
       }
     }
-    const bD = [...pD, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
+    const TU = [...pU, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

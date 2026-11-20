@@ -1,321 +1,321 @@
 export const id = 4;
 export const ids = [4];
 export const modules = {
-  35828: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      getBlockModelIconUrl: () => yD,
-      hasBlockModelIcon: () => wD
+  35987: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      getBlockModelIconUrl: () => jU,
+      hasBlockModelIcon: () => KU
     });
-    var ID = cD(35817),
-      pD = cD(35809);
-    const iD = cD(35835),
-      fD = new Map(iD.keys().filter((DD => DD.startsWith("./"))).map((DD => [DD.slice(2, -5), DD]))),
-      bD = new Map,
-      QD = new Map;
+    var tU = gU(35980),
+      pU = gU(35974);
+    const EU = gU(35994),
+      PU = new Map(EU.keys().filter((UU => UU.startsWith("./"))).map((UU => [UU.slice(2, -5), UU]))),
+      TU = new Map,
+      qU = new Map;
 
-    function wD(DD) {
-      return fD.has(DD)
+    function KU(UU) {
+      return PU.has(UU)
     }
 
-    function SD(DD) {
-      return iD(fD.get(DD))
+    function cU(UU) {
+      return EU(PU.get(UU))
     }
-    async function BD(DD, CD, cD) {
+    async function GU(UU, RU, gU) {
       const {
-        data: ID,
-        texture: iD
+        data: tU,
+        texture: EU
       } = await
-      function(DD) {
-        let CD = bD.get(DD);
-        return CD || (CD = SD(DD).then((async DD => {
-          const CD = new Image;
-          CD.src = DD.texture, await CD.decode();
-          const cD = document.createElement("canvas");
-          cD.width = CD.width, cD.height = CD.height;
-          const ID = cD.getContext("2d");
-          return ID.drawImage(CD, 0, 0), {
-            data: DD,
+      function(UU) {
+        let RU = TU.get(UU);
+        return RU || (RU = cU(UU).then((async UU => {
+          const RU = new Image;
+          RU.src = UU.texture, await RU.decode();
+          const gU = document.createElement("canvas");
+          gU.width = RU.width, gU.height = RU.height;
+          const tU = gU.getContext("2d");
+          return tU.drawImage(RU, 0, 0), {
+            data: UU,
             texture: {
-              width: CD.width,
-              height: CD.height,
-              pixels: ID.getImageData(0, 0, CD.width, CD.height).data
+              width: RU.width,
+              height: RU.height,
+              pixels: tU.getImageData(0, 0, RU.width, RU.height).data
             }
           }
-        })), CD.catch((() => {
-          bD.delete(DD)
-        })), bD.set(DD, CD)), CD
-      }(DD), fD = document.createElement("canvas");
-      return fD.width = CD, fD.height = CD, fD.getContext("2d").putImageData(new ImageData((0, pD.j)(ID, iD, CD, cD), CD, CD), 0, 0), fD.toDataURL()
+        })), RU.catch((() => {
+          TU.delete(UU)
+        })), TU.set(UU, RU)), RU
+      }(UU), PU = document.createElement("canvas");
+      return PU.width = RU, PU.height = RU, PU.getContext("2d").putImageData(new ImageData((0, pU.f)(tU, EU, RU, gU), RU, RU), 0, 0), PU.toDataURL()
     }
 
-    function yD(DD, CD, cD) {
-      const pD = `${CD}|${cD}|${DD}`;
-      let iD = QD.get(pD);
-      return iD || (iD = (0, ID.f)(DD, (() => SD(DD)), CD, cD).then((ID => null !== ID && void 0 !== ID ? ID : BD(DD, CD, cD))), iD.catch((() => {
-        QD.delete(pD)
-      })), QD.set(pD, iD)), iD
+    function jU(UU, RU, gU) {
+      const pU = `${RU}|${gU}|${UU}`;
+      let EU = qU.get(pU);
+      return EU || (EU = (0, tU.g)(UU, (() => cU(UU)), RU, gU).then((tU => null !== tU && void 0 !== tU ? tU : GU(UU, RU, gU))), EU.catch((() => {
+        qU.delete(pU)
+      })), qU.set(pU, EU)), EU
     }
   },
-  35817: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => UD,
-      f: () => xD,
-      j: () => gD
+  35980: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => bU,
+      g: () => oU,
+      h: () => fU
     });
-    var ID = cD(300),
-      pD = cD(90);
-    const iD = new(cD(35822).c)(new URL(cD.p + cD.u(3), cD.b), {
+    var tU = gU(279),
+      pU = gU(96);
+    const EU = new(gU(35985).c)(new URL(gU.p + gU.u(3), gU.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var fD = cD(1763),
-      bD = cD(2990);
-    const QD = 1e4,
-      wD = 3e4;
-    let SD = null,
-      BD = null,
-      yD = null,
-      MD = !1,
-      tD = 0;
-    const ZD = new Map;
-    let oD = null;
-    const vD = new Map,
-      ND = new Map;
+    var PU = gU(1675),
+      TU = gU(2888);
+    const qU = 1e4,
+      KU = 3e4;
+    let cU = null,
+      GU = null,
+      jU = null,
+      uU = !1,
+      CU = 0;
+    const hU = new Map;
+    let QU = null;
+    const eU = new Map,
+      WU = new Map;
 
-    function gD(DD) {
-      const CD = new Promise(((CD, cD) => {
-        const ID = new Image;
-        ID.crossOrigin = "anonymous", ID.fetchPriority = "high", ID.onload = () => {
-          CD(ID)
-        }, ID.onerror = () => {
-          cD(new Error(`A block icon's texture did not load: ${DD.slice(0,100)}`))
-        }, ID.src = DD
+    function fU(UU) {
+      const RU = new Promise(((RU, gU) => {
+        const tU = new Image;
+        tU.crossOrigin = "anonymous", tU.fetchPriority = "high", tU.onload = () => {
+          RU(tU)
+        }, tU.onerror = () => {
+          gU(new Error(`A block icon's texture did not load: ${UU.slice(0,100)}`))
+        }, tU.src = UU
       }));
-      return (0, bD.f)(CD)
+      return (0, TU.f)(RU)
     }
 
-    function XD(DD) {
-      var CD, cD;
-      MD || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${DD}`), MD = !0, null === (CD = SD) || void 0 === CD || CD.terminate(), SD = null, BD = null, vD.clear(), ND.clear();
-      for (const ID of ZD.values()) ID(null);
-      ZD.clear(), null === (cD = oD) || void 0 === cD || cD()
+    function xU(UU) {
+      var RU, gU;
+      uU || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${UU}`), uU = !0, null === (RU = cU) || void 0 === RU || RU.terminate(), cU = null, GU = null, eU.clear(), WU.clear();
+      for (const tU of hU.values()) tU(null);
+      hU.clear(), null === (gU = QU) || void 0 === gU || gU()
     }
 
-    function mD() {
-      return yD ??= async function() {
+    function mU() {
+      return jU ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === ID.b.ios_icon_worker_v1 && (0, pD.isWebKit)()) return;
+        if ("page" === tU.c.ios_icon_worker_v1 && (0, pU.isWebKit)()) return;
         try {
-          SD = await async function() {
-            return await iD.ready(), iD.start()
+          cU = await async function() {
+            return await EU.ready(), EU.start()
           }()
-        } catch (bD) {
-          return void XD(`did not start (${String(bD)})`)
+        } catch (TU) {
+          return void xU(`did not start (${String(TU)})`)
         }
-        let DD = () => {};
-        const CD = new Promise((CD => {
-          DD = CD
+        let UU = () => {};
+        const RU = new Promise((RU => {
+          UU = RU
         }));
-        SD.onmessage = CD => {
+        cU.onmessage = RU => {
           let {
-            data: cD
-          } = CD;
-          if ("started" === cD.type) BD = SD, DD();
-          else if ("failed" === cD.type) XD(`failed a draw (${cD.message})`);
+            data: gU
+          } = RU;
+          if ("started" === gU.type) GU = cU, UU();
+          else if ("failed" === gU.type) xU(`failed a draw (${gU.message})`);
           else {
-            var ID, pD;
-            null === (ID = ZD.get(cD.id)) || void 0 === ID || ID(cD.url), ZD.delete(cD.id), null === (pD = oD) || void 0 === pD || pD()
+            var tU, pU;
+            null === (tU = hU.get(gU.id)) || void 0 === tU || tU(gU.url), hU.delete(gU.id), null === (pU = QU) || void 0 === pU || pU()
           }
-        }, SD.onerror = CD => {
-          CD.preventDefault(), XD(`stopped (${CD.message||"its script did not load or run"})`), DD()
+        }, cU.onerror = RU => {
+          RU.preventDefault(), xU(`stopped (${RU.message||"its script did not load or run"})`), UU()
         };
-        const cD = `did not start in ${wD/1e3} s`;
-        await (0, fD.k)(CD, wD, cD).catch((() => {
-          XD(cD)
+        const gU = `did not start in ${KU/1e3} s`;
+        await (0, PU.i)(RU, KU, gU).catch((() => {
+          xU(gU)
         }))
-      }(), yD
+      }(), jU
     }
 
-    function nD() {
-      if (null !== oD || 0 === ZD.size) return;
-      const DD = new Promise((DD => {
-          oD = DD
+    function IU() {
+      if (null !== QU || 0 === hU.size) return;
+      const UU = new Promise((UU => {
+          QU = UU
         })),
-        CD = `did not answer in ${QD/1e3} s`;
-      (0, fD.k)(DD, QD, CD).then((() => {
-        oD = null, nD()
+        RU = `did not answer in ${qU/1e3} s`;
+      (0, PU.i)(UU, qU, RU).then((() => {
+        QU = null, IU()
       }), (() => {
-        oD = null, XD(CD)
+        QU = null, xU(RU)
       }))
     }
 
-    function OD(DD, CD) {
-      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      DD.postMessage(CD, cD)
+    function JU(UU, RU) {
+      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      UU.postMessage(RU, gU)
     }
 
-    function PD(DD, CD, cD, ID) {
-      let pD = CD.get(cD);
-      return void 0 === pD && (pD = ID().then((async CD => {
+    function wU(UU, RU, gU, tU) {
+      let pU = RU.get(gU);
+      return void 0 === pU && (pU = tU().then((async RU => {
         let {
-          image: cD,
-          request: ID
-        } = CD;
+          image: gU,
+          request: tU
+        } = RU;
         try {
-          const CD = await createImageBitmap(cD);
-          OD(DD, ID(CD), [CD])
-        } catch (pD) {
-          XD(`could not take an image (${String(pD)})`)
+          const RU = await createImageBitmap(gU);
+          JU(UU, tU(RU), [RU])
+        } catch (pU) {
+          xU(`could not take an image (${String(pU)})`)
         }
-      })), pD.catch((() => {
-        CD.get(cD) === pD && CD.delete(cD)
-      })), CD.set(cD, pD)), pD
+      })), pU.catch((() => {
+        RU.get(gU) === pU && RU.delete(gU)
+      })), RU.set(gU, pU)), pU
     }
-    async function HD(DD, CD) {
-      mD();
-      const cD = BD;
-      if (null === cD) return null;
-      if (await DD(cD), BD !== cD) return null;
-      const ID = ++tD;
-      return new Promise((DD => {
-        ZD.set(ID, DD), OD(cD, CD(ID)), nD()
+    async function nU(UU, RU) {
+      mU();
+      const gU = GU;
+      if (null === gU) return null;
+      if (await UU(gU), GU !== gU) return null;
+      const tU = ++CU;
+      return new Promise((UU => {
+        hU.set(tU, UU), JU(gU, RU(tU)), IU()
       }))
     }
 
-    function UD(DD, CD, cD) {
-      return HD((CD => Promise.all([DD.top, DD.left, DD.right].map((DD => function(DD, CD) {
-        return PD(DD, vD, CD, (async () => ({
-          image: await gD(CD),
-          request: DD => ({
+    function bU(UU, RU, gU) {
+      return nU((RU => Promise.all([UU.top, UU.left, UU.right].map((UU => function(UU, RU) {
+        return wU(UU, eU, RU, (async () => ({
+          image: await fU(RU),
+          request: UU => ({
             type: "texture",
-            url: CD,
-            bitmap: DD
+            url: RU,
+            bitmap: UU
           })
         })))
-      }(CD, DD))))), (ID => ({
+      }(RU, UU))))), (tU => ({
         type: "draw",
-        id: ID,
-        ...DD,
-        size: CD,
-        outlineWidth: cD
+        id: tU,
+        ...UU,
+        size: RU,
+        outlineWidth: gU
       })))
     }
 
-    function xD(DD, CD, cD, ID) {
-      return HD((cD => function(DD, CD, cD) {
-        return PD(DD, ND, CD, (async () => {
+    function oU(UU, RU, gU, tU) {
+      return nU((gU => function(UU, RU, gU) {
+        return wU(UU, WU, RU, (async () => {
           const {
-            texture: DD,
-            ...ID
-          } = await cD();
+            texture: UU,
+            ...tU
+          } = await gU();
           return {
-            image: await gD(DD),
-            request: DD => ({
+            image: await fU(UU),
+            request: UU => ({
               type: "model",
-              name: CD,
-              bitmap: DD,
-              geometry: ID
+              name: RU,
+              bitmap: UU,
+              geometry: tU
             })
           }
         }))
-      }(cD, DD, CD)), (CD => ({
+      }(gU, UU, RU)), (RU => ({
         type: "drawModel",
-        id: CD,
-        name: DD,
-        size: cD,
-        outlineWidth: ID
+        id: RU,
+        name: UU,
+        size: gU,
+        outlineWidth: tU
       })))
     }
   },
-  35809: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => iD,
-      h: () => bD,
-      j: () => fD
+  35974: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => EU,
+      d: () => TU,
+      f: () => PU
     });
-    const ID = 1 / 32,
-      pD = [15, 15, 15],
-      iD = {
+    const tU = 1 / 32,
+      pU = [15, 15, 15],
+      EU = {
         top: 1,
         left: .85,
         right: .7
       };
 
-    function fD(DD, CD, cD, pD) {
+    function PU(UU, RU, gU, pU) {
       const {
-        vertices: iD,
-        uvs: fD,
-        indices: QD,
-        shades: wD
-      } = DD, SD = cD * ID, BD = cD - 2 * SD, yD = new Float32Array(iD.length);
-      for (let ID = 0; ID < iD.length; ID += 3) yD[ID] = SD + iD[ID] * BD, yD[ID + 1] = SD + iD[ID + 1] * BD, yD[ID + 2] = iD[ID + 2];
-      const MD = new Float32Array(cD * cD).fill(-1 / 0),
-        tD = new Uint8ClampedArray(cD * cD * 4),
-        ZD = 255 * DD.alphaCutoff;
-      for (let ID = 0; ID < QD.length; ID += 3) {
-        const [DD, pD, iD] = [QD[ID], QD[ID + 1], QD[ID + 2]], [bD, SD, BD] = [3 * DD, 3 * pD, 3 * iD], [oD, vD, ND, gD, XD, mD] = [yD[bD], yD[bD + 1], yD[SD], yD[SD + 1], yD[BD], yD[BD + 1]], nD = (ND - oD) * (mD - vD) - (XD - oD) * (gD - vD);
-        if (Math.abs(nD) < 1e-9) continue;
-        const OD = wD[ID / 3],
-          [PD, HD, UD, xD, qD, JD] = [fD[2 * DD], fD[2 * DD + 1], fD[2 * pD], fD[2 * pD + 1], fD[2 * iD], fD[2 * iD + 1]],
-          KD = Math.max(0, Math.floor(Math.min(oD, ND, XD))),
-          aD = Math.min(cD - 1, Math.ceil(Math.max(oD, ND, XD))),
-          VD = Math.max(0, Math.floor(Math.min(vD, gD, mD))),
-          zD = Math.min(cD - 1, Math.ceil(Math.max(vD, gD, mD)));
-        for (let ID = VD; ID <= zD; ID++)
-          for (let DD = KD; DD <= aD; DD++) {
-            const [pD, iD] = [DD + .5, ID + .5], fD = ((pD - oD) * (mD - vD) - (XD - oD) * (iD - vD)) / nD, QD = ((ND - oD) * (iD - vD) - (pD - oD) * (gD - vD)) / nD, wD = 1 - fD - QD;
-            if (wD < 0 || fD < 0 || QD < 0) continue;
-            const KD = wD * yD[bD + 2] + fD * yD[SD + 2] + QD * yD[BD + 2],
-              aD = ID * cD + DD;
-            if (KD <= MD[aD]) continue;
-            const VD = Math.max(0, Math.min(CD.width - 1, Math.floor((wD * PD + fD * UD + QD * qD) * CD.width))),
-              zD = 4 * (Math.max(0, Math.min(CD.height - 1, Math.floor((wD * HD + fD * xD + QD * JD) * CD.height))) * CD.width + VD);
-            CD.pixels[zD + 3] < ZD || (MD[aD] = KD, tD[4 * aD] = CD.pixels[zD] * OD, tD[4 * aD + 1] = CD.pixels[zD + 1] * OD, tD[4 * aD + 2] = CD.pixels[zD + 2] * OD, tD[4 * aD + 3] = 255)
+        vertices: EU,
+        uvs: PU,
+        indices: qU,
+        shades: KU
+      } = UU, cU = gU * tU, GU = gU - 2 * cU, jU = new Float32Array(EU.length);
+      for (let tU = 0; tU < EU.length; tU += 3) jU[tU] = cU + EU[tU] * GU, jU[tU + 1] = cU + EU[tU + 1] * GU, jU[tU + 2] = EU[tU + 2];
+      const uU = new Float32Array(gU * gU).fill(-1 / 0),
+        CU = new Uint8ClampedArray(gU * gU * 4),
+        hU = 255 * UU.alphaCutoff;
+      for (let tU = 0; tU < qU.length; tU += 3) {
+        const [UU, pU, EU] = [qU[tU], qU[tU + 1], qU[tU + 2]], [TU, cU, GU] = [3 * UU, 3 * pU, 3 * EU], [QU, eU, WU, fU, xU, mU] = [jU[TU], jU[TU + 1], jU[cU], jU[cU + 1], jU[GU], jU[GU + 1]], IU = (WU - QU) * (mU - eU) - (xU - QU) * (fU - eU);
+        if (Math.abs(IU) < 1e-9) continue;
+        const JU = KU[tU / 3],
+          [wU, nU, bU, oU, ZU, aU] = [PU[2 * UU], PU[2 * UU + 1], PU[2 * pU], PU[2 * pU + 1], PU[2 * EU], PU[2 * EU + 1]],
+          YU = Math.max(0, Math.floor(Math.min(QU, WU, xU))),
+          BU = Math.min(gU - 1, Math.ceil(Math.max(QU, WU, xU))),
+          VU = Math.max(0, Math.floor(Math.min(eU, fU, mU))),
+          rU = Math.min(gU - 1, Math.ceil(Math.max(eU, fU, mU)));
+        for (let tU = VU; tU <= rU; tU++)
+          for (let UU = YU; UU <= BU; UU++) {
+            const [pU, EU] = [UU + .5, tU + .5], PU = ((pU - QU) * (mU - eU) - (xU - QU) * (EU - eU)) / IU, qU = ((WU - QU) * (EU - eU) - (pU - QU) * (fU - eU)) / IU, KU = 1 - PU - qU;
+            if (KU < 0 || PU < 0 || qU < 0) continue;
+            const YU = KU * jU[TU + 2] + PU * jU[cU + 2] + qU * jU[GU + 2],
+              BU = tU * gU + UU;
+            if (YU <= uU[BU]) continue;
+            const VU = Math.max(0, Math.min(RU.width - 1, Math.floor((KU * wU + PU * bU + qU * ZU) * RU.width))),
+              rU = 4 * (Math.max(0, Math.min(RU.height - 1, Math.floor((KU * nU + PU * oU + qU * aU) * RU.height))) * RU.width + VU);
+            RU.pixels[rU + 3] < hU || (uU[BU] = YU, CU[4 * BU] = RU.pixels[rU] * JU, CU[4 * BU + 1] = RU.pixels[rU + 1] * JU, CU[4 * BU + 2] = RU.pixels[rU + 2] * JU, CU[4 * BU + 3] = 255)
           }
       }
-      return bD(tD, cD, pD), tD
+      return TU(CU, gU, pU), CU
     }
 
-    function bD(DD, CD, cD) {
-      let ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : CD => 0 !== DD[4 * CD + 3];
-      const iD = (DD, cD) => DD < 0 || cD < 0 || DD >= CD || cD >= CD || !ID(cD * CD + DD),
-        fD = [];
-      for (let pD = 0; pD < CD; pD++)
-        for (let DD = 0; DD < CD; DD++)
-          if (!iD(DD, pD)) DD: for (let ID = -cD; ID <= cD; ID++) {
-            const bD = cD - Math.abs(ID);
-            for (let cD = -bD; cD <= bD; cD++)
-              if (iD(DD + cD, pD + ID)) {
-                fD.push(pD * CD + DD);
-                break DD
+    function TU(UU, RU, gU) {
+      let tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : RU => 0 !== UU[4 * RU + 3];
+      const EU = (UU, gU) => UU < 0 || gU < 0 || UU >= RU || gU >= RU || !tU(gU * RU + UU),
+        PU = [];
+      for (let pU = 0; pU < RU; pU++)
+        for (let UU = 0; UU < RU; UU++)
+          if (!EU(UU, pU)) UU: for (let tU = -gU; tU <= gU; tU++) {
+            const TU = gU - Math.abs(tU);
+            for (let gU = -TU; gU <= TU; gU++)
+              if (EU(UU + gU, pU + tU)) {
+                PU.push(pU * RU + UU);
+                break UU
               }
           }
-      for (const bD of fD) DD.set(pD, 4 * bD), DD[4 * bD + 3] = 255
+      for (const TU of PU) UU.set(pU, 4 * TU), UU[4 * TU + 3] = 255
     }
   },
-  35822: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => pD
+  35985: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => pU
     });
-    const ID = {
-      wait: function(DD) {
-        return new Promise((CD => {
-          setTimeout(CD, DD)
+    const tU = {
+      wait: function(UU) {
+        return new Promise((RU => {
+          setTimeout(RU, UU)
         }))
       },
       stallMs: 2e4
     };
-    class pD {
-      constructor(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ID;
-        this.url = DD, this.options = CD, this.timing = cD, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = DD
+    class pU {
+      constructor(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : tU;
+        this.url = UU, this.options = RU, this.timing = gU, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = UU
       }
       ready() {
         if (null === this.fetched) {
-          const DD = new AbortController;
-          this.fetchAbort = DD, this.fetched = this.fetchWithRetries(DD.signal).finally((() => {
-            this.fetchAbort === DD && (this.fetchAbort = null)
+          const UU = new AbortController;
+          this.fetchAbort = UU, this.fetched = this.fetchWithRetries(UU.signal).finally((() => {
+            this.fetchAbort === UU && (this.fetchAbort = null)
           }))
         }
         return this.fetched
@@ -326,82 +326,82 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(DD) {
-        for (let CD = 0;; CD++) {
-          const cD = new URL(this.url);
-          if (CD > 0 && cD.searchParams.set("cache-bust", `${Date.now()}-${CD}`), await this.fetchWhole(cD, DD)) return void(this.scriptUrl = cD);
-          if (CD >= 3 || DD.aborted) return;
-          if (await this.timing.wait(500 * 2 ** CD), DD.aborted) return
+      async fetchWithRetries(UU) {
+        for (let RU = 0;; RU++) {
+          const gU = new URL(this.url);
+          if (RU > 0 && gU.searchParams.set("cache-bust", `${Date.now()}-${RU}`), await this.fetchWhole(gU, UU)) return void(this.scriptUrl = gU);
+          if (RU >= 3 || UU.aborted) return;
+          if (await this.timing.wait(500 * 2 ** RU), UU.aborted) return
         }
       }
-      async fetchWhole(DD, CD) {
-        const cD = new AbortController;
-        let ID;
-        const pD = () => {
-            clearTimeout(ID), ID = setTimeout((() => {
-              cD.abort()
+      async fetchWhole(UU, RU) {
+        const gU = new AbortController;
+        let tU;
+        const pU = () => {
+            clearTimeout(tU), tU = setTimeout((() => {
+              gU.abort()
             }), this.timing.stallMs)
           },
-          iD = () => {
-            cD.abort()
+          EU = () => {
+            gU.abort()
           };
-        CD.addEventListener("abort", iD, {
+        RU.addEventListener("abort", EU, {
           once: !0
-        }), pD();
+        }), pU();
         try {
-          var fD;
-          const CD = await fetch(DD, {
-            signal: cD.signal
+          var PU;
+          const RU = await fetch(UU, {
+            signal: gU.signal
           });
-          if (!CD.ok) return !1;
-          const ID = null === (fD = CD.body) || void 0 === fD ? void 0 : fD.getReader();
-          if (!ID) return !1;
+          if (!RU.ok) return !1;
+          const tU = null === (PU = RU.body) || void 0 === PU ? void 0 : PU.getReader();
+          if (!tU) return !1;
           for (;;) {
             const {
-              done: DD
-            } = await ID.read();
-            if (DD) return !0;
-            pD()
+              done: UU
+            } = await tU.read();
+            if (UU) return !0;
+            pU()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(ID), CD.removeEventListener("abort", iD)
+          clearTimeout(tU), RU.removeEventListener("abort", EU)
         }
       }
     }
   },
-  35835: (DD, CD, cD) => {
-    var ID = {
-      "./Artisan Bench.json": [40240, 265],
-      "./Aspen Item Pedestal.json": [40242, 266],
-      "./Cedar Item Pedestal.json": [40249, 267],
-      "./Cherry Item Pedestal.json": [40253, 268],
-      "./Furnace.json": [40256, 269],
-      "./Jungle Item Pedestal.json": [40262, 270],
-      "./Mango Item Pedestal.json": [40266, 271],
-      "./Palm Item Pedestal.json": [40274, 272],
-      "./Pear Item Pedestal.json": [40282, 273],
-      "./Pine Item Pedestal.json": [40286, 274],
-      "./Plum Item Pedestal.json": [40294, 275],
-      "./Potion Table.json": [40301, 276],
-      "./Salvaging Table.json": [40308, 277],
-      "./Showcase.json": [40315, 278],
-      "./Spectral Item Pedestal.json": [40317, 279],
-      "./Workbench.json": [40325, 280]
+  35994: (UU, RU, gU) => {
+    var tU = {
+      "./Artisan Bench.json": [40568, 265],
+      "./Aspen Item Pedestal.json": [40577, 266],
+      "./Cedar Item Pedestal.json": [40584, 267],
+      "./Cherry Item Pedestal.json": [40586, 268],
+      "./Furnace.json": [40595, 269],
+      "./Jungle Item Pedestal.json": [40597, 270],
+      "./Mango Item Pedestal.json": [40606, 271],
+      "./Palm Item Pedestal.json": [40612, 272],
+      "./Pear Item Pedestal.json": [40619, 273],
+      "./Pine Item Pedestal.json": [40621, 274],
+      "./Plum Item Pedestal.json": [40625, 275],
+      "./Potion Table.json": [40631, 276],
+      "./Salvaging Table.json": [40633, 277],
+      "./Showcase.json": [40640, 278],
+      "./Spectral Item Pedestal.json": [40648, 279],
+      "./Workbench.json": [40653, 280]
     };
 
-    function pD(DD) {
-      if (!cD.o(ID, DD)) return Promise.resolve().then((() => {
-        var CD = new Error("Cannot find module '" + DD + "'");
-        throw CD.code = "MODULE_NOT_FOUND", CD
+    function pU(UU) {
+      if (!gU.o(tU, UU)) return Promise.resolve().then((() => {
+        var RU = new Error("Cannot find module '" + UU + "'");
+        throw RU.code = "MODULE_NOT_FOUND", RU
       }));
-      var CD = ID[DD],
-        pD = CD[0];
-      return cD.e(CD[1]).then((() => cD(pD)))
+      var RU = tU[UU],
+        pU = RU[0];
+      return gU.e(RU[1]).then((() => gU(pU)))
     }
-    pD.keys = () => Object.keys(ID), pD.id = 35835, DD.exports = pD
+    pU.keys = () => Object.keys(tU), pU.id = 35994, UU.exports = pU
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

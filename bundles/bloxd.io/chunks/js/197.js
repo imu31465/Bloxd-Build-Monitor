@@ -1,106 +1,106 @@
 export const id = 197;
 export const ids = [197];
 export const modules = {
-  37119: (DD, CD, cD) => {
-    var ID = cD(37127);
+  37266: (UU, RU, gU) => {
+    var tU = gU(37271);
 
-    function pD(DD) {
-      for (var CD, cD, pD = 0, iD = DD.length, fD = 0; fD < DD.length;) {
-        for (CD = DD[fD], cD = 0; fD < iD && DD[fD] === CD;) ++fD, ++cD;
-        pD += ID.log2(cD) / 7 | 0, pD += ID.log2(CD >>> 0) / 7 | 0, pD += 2
+    function pU(UU) {
+      for (var RU, gU, pU = 0, EU = UU.length, PU = 0; PU < UU.length;) {
+        for (RU = UU[PU], gU = 0; PU < EU && UU[PU] === RU;) ++PU, ++gU;
+        pU += tU.log2(gU) / 7 | 0, pU += tU.log2(RU >>> 0) / 7 | 0, pU += 2
       }
-      return pD
+      return pU
     }
-    CD.size = pD, CD.encode = function(DD, CD) {
-      CD || (CD = new Uint8Array(pD(DD)));
-      for (var cD, ID, iD = 0, fD = CD.length, bD = 0; bD < DD.length;) {
-        for (cD = DD[bD], ID = 0; bD < DD.length && DD[bD] === cD;) ++bD, ++ID;
-        for (; iD < fD && ID >= 128;) CD[iD++] = 128 + (127 & ID), ID >>>= 7;
-        if (iD >= fD) throw new Error("RLE buffer overflow");
-        for (CD[iD++] = ID, cD >>>= 0; iD < fD && cD >= 128;) CD[iD++] = 128 + (127 & cD), cD >>>= 7;
-        if (iD >= fD) throw new Error("RLE buffer overflow");
-        CD[iD++] = cD
+    RU.size = pU, RU.encode = function(UU, RU) {
+      RU || (RU = new Uint8Array(pU(UU)));
+      for (var gU, tU, EU = 0, PU = RU.length, TU = 0; TU < UU.length;) {
+        for (gU = UU[TU], tU = 0; TU < UU.length && UU[TU] === gU;) ++TU, ++tU;
+        for (; EU < PU && tU >= 128;) RU[EU++] = 128 + (127 & tU), tU >>>= 7;
+        if (EU >= PU) throw new Error("RLE buffer overflow");
+        for (RU[EU++] = tU, gU >>>= 0; EU < PU && gU >= 128;) RU[EU++] = 128 + (127 & gU), gU >>>= 7;
+        if (EU >= PU) throw new Error("RLE buffer overflow");
+        RU[EU++] = gU
       }
-      return CD
-    }, CD.decode = function(DD, CD) {
-      for (var cD, ID, pD, iD, fD = CD.length, bD = DD.length, QD = 0, wD = 0; wD < bD;) {
-        for (cD = 0, ID = 0; wD < bD && DD[wD] >= 128;) cD += (127 & DD[wD++]) << ID, ID += 7;
-        if (cD += DD[wD++] << ID, wD >= bD) throw new Error("RLE buffer underrun");
-        if (QD + cD > fD) throw new Error("Chunk buffer overflow");
-        for (pD = 0, ID = 0; wD < bD && DD[wD] >= 128;) pD += (127 & DD[wD++]) << ID, ID += 7;
-        if (wD >= bD) throw new Error("RLE buffer underrun");
-        for (pD += DD[wD++] << ID, iD = 0; iD < cD; ++iD) CD[QD++] = pD
+      return RU
+    }, RU.decode = function(UU, RU) {
+      for (var gU, tU, pU, EU, PU = RU.length, TU = UU.length, qU = 0, KU = 0; KU < TU;) {
+        for (gU = 0, tU = 0; KU < TU && UU[KU] >= 128;) gU += (127 & UU[KU++]) << tU, tU += 7;
+        if (gU += UU[KU++] << tU, KU >= TU) throw new Error("RLE buffer underrun");
+        if (qU + gU > PU) throw new Error("Chunk buffer overflow");
+        for (pU = 0, tU = 0; KU < TU && UU[KU] >= 128;) pU += (127 & UU[KU++]) << tU, tU += 7;
+        if (KU >= TU) throw new Error("RLE buffer underrun");
+        for (pU += UU[KU++] << tU, EU = 0; EU < gU; ++EU) RU[qU++] = pU
       }
-      return CD
+      return RU
     }
   },
-  37127: (DD, CD) => {
-    function cD(DD) {
-      var CD = 32;
-      return (DD &= -DD) && CD--, 65535 & DD && (CD -= 16), 16711935 & DD && (CD -= 8), 252645135 & DD && (CD -= 4), 858993459 & DD && (CD -= 2), 1431655765 & DD && (CD -= 1), CD
+  37271: (UU, RU) => {
+    function gU(UU) {
+      var RU = 32;
+      return (UU &= -UU) && RU--, 65535 & UU && (RU -= 16), 16711935 & UU && (RU -= 8), 252645135 & UU && (RU -= 4), 858993459 & UU && (RU -= 2), 1431655765 & UU && (RU -= 1), RU
     }
-    CD.INT_BITS = 32, CD.INT_MAX = 2147483647, CD.INT_MIN = -1 << 31, CD.sign = function(DD) {
-      return (DD > 0) - (DD < 0)
-    }, CD.abs = function(DD) {
-      var CD = DD >> 31;
-      return (DD ^ CD) - CD
-    }, CD.min = function(DD, CD) {
-      return CD ^ (DD ^ CD) & -(DD < CD)
-    }, CD.max = function(DD, CD) {
-      return DD ^ (DD ^ CD) & -(DD < CD)
-    }, CD.isPow2 = function(DD) {
-      return !(DD & DD - 1) && !!DD
-    }, CD.log2 = function(DD) {
-      var CD, cD;
-      return CD = (DD > 65535) << 4, CD |= cD = ((DD >>>= CD) > 255) << 3, CD |= cD = ((DD >>>= cD) > 15) << 2, (CD |= cD = ((DD >>>= cD) > 3) << 1) | (DD >>>= cD) >> 1
-    }, CD.log10 = function(DD) {
-      return DD >= 1e9 ? 9 : DD >= 1e8 ? 8 : DD >= 1e7 ? 7 : DD >= 1e6 ? 6 : DD >= 1e5 ? 5 : DD >= 1e4 ? 4 : DD >= 1e3 ? 3 : DD >= 100 ? 2 : DD >= 10 ? 1 : 0
-    }, CD.popCount = function(DD) {
-      return 16843009 * ((DD = (858993459 & (DD -= DD >>> 1 & 1431655765)) + (DD >>> 2 & 858993459)) + (DD >>> 4) & 252645135) >>> 24
-    }, CD.countTrailingZeros = cD, CD.nextPow2 = function(DD) {
-      return DD += 0 === DD, --DD, DD |= DD >>> 1, DD |= DD >>> 2, DD |= DD >>> 4, DD |= DD >>> 8, (DD |= DD >>> 16) + 1
-    }, CD.prevPow2 = function(DD) {
-      return DD |= DD >>> 1, DD |= DD >>> 2, DD |= DD >>> 4, DD |= DD >>> 8, (DD |= DD >>> 16) - (DD >>> 1)
-    }, CD.parity = function(DD) {
-      return DD ^= DD >>> 16, DD ^= DD >>> 8, DD ^= DD >>> 4, 27030 >>> (DD &= 15) & 1
+    RU.INT_BITS = 32, RU.INT_MAX = 2147483647, RU.INT_MIN = -1 << 31, RU.sign = function(UU) {
+      return (UU > 0) - (UU < 0)
+    }, RU.abs = function(UU) {
+      var RU = UU >> 31;
+      return (UU ^ RU) - RU
+    }, RU.min = function(UU, RU) {
+      return RU ^ (UU ^ RU) & -(UU < RU)
+    }, RU.max = function(UU, RU) {
+      return UU ^ (UU ^ RU) & -(UU < RU)
+    }, RU.isPow2 = function(UU) {
+      return !(UU & UU - 1) && !!UU
+    }, RU.log2 = function(UU) {
+      var RU, gU;
+      return RU = (UU > 65535) << 4, RU |= gU = ((UU >>>= RU) > 255) << 3, RU |= gU = ((UU >>>= gU) > 15) << 2, (RU |= gU = ((UU >>>= gU) > 3) << 1) | (UU >>>= gU) >> 1
+    }, RU.log10 = function(UU) {
+      return UU >= 1e9 ? 9 : UU >= 1e8 ? 8 : UU >= 1e7 ? 7 : UU >= 1e6 ? 6 : UU >= 1e5 ? 5 : UU >= 1e4 ? 4 : UU >= 1e3 ? 3 : UU >= 100 ? 2 : UU >= 10 ? 1 : 0
+    }, RU.popCount = function(UU) {
+      return 16843009 * ((UU = (858993459 & (UU -= UU >>> 1 & 1431655765)) + (UU >>> 2 & 858993459)) + (UU >>> 4) & 252645135) >>> 24
+    }, RU.countTrailingZeros = gU, RU.nextPow2 = function(UU) {
+      return UU += 0 === UU, --UU, UU |= UU >>> 1, UU |= UU >>> 2, UU |= UU >>> 4, UU |= UU >>> 8, (UU |= UU >>> 16) + 1
+    }, RU.prevPow2 = function(UU) {
+      return UU |= UU >>> 1, UU |= UU >>> 2, UU |= UU >>> 4, UU |= UU >>> 8, (UU |= UU >>> 16) - (UU >>> 1)
+    }, RU.parity = function(UU) {
+      return UU ^= UU >>> 16, UU ^= UU >>> 8, UU ^= UU >>> 4, 27030 >>> (UU &= 15) & 1
     };
-    var ID = new Array(256);
-    ! function(DD) {
-      for (var CD = 0; CD < 256; ++CD) {
-        var cD = CD,
-          ID = CD,
-          pD = 7;
-        for (cD >>>= 1; cD; cD >>>= 1) ID <<= 1, ID |= 1 & cD, --pD;
-        DD[CD] = ID << pD & 255
+    var tU = new Array(256);
+    ! function(UU) {
+      for (var RU = 0; RU < 256; ++RU) {
+        var gU = RU,
+          tU = RU,
+          pU = 7;
+        for (gU >>>= 1; gU; gU >>>= 1) tU <<= 1, tU |= 1 & gU, --pU;
+        UU[RU] = tU << pU & 255
       }
-    }(ID), CD.reverse = function(DD) {
-      return ID[255 & DD] << 24 | ID[DD >>> 8 & 255] << 16 | ID[DD >>> 16 & 255] << 8 | ID[DD >>> 24 & 255]
-    }, CD.interleave2 = function(DD, CD) {
-      return (DD = 1431655765 & ((DD = 858993459 & ((DD = 252645135 & ((DD = 16711935 & ((DD &= 65535) | DD << 8)) | DD << 4)) | DD << 2)) | DD << 1)) | (CD = 1431655765 & ((CD = 858993459 & ((CD = 252645135 & ((CD = 16711935 & ((CD &= 65535) | CD << 8)) | CD << 4)) | CD << 2)) | CD << 1)) << 1
-    }, CD.deinterleave2 = function(DD, CD) {
-      return (DD = 65535 & ((DD = 16711935 & ((DD = 252645135 & ((DD = 858993459 & ((DD = DD >>> CD & 1431655765) | DD >>> 1)) | DD >>> 2)) | DD >>> 4)) | DD >>> 16)) << 16 >> 16
-    }, CD.interleave3 = function(DD, CD, cD) {
-      return DD = 1227133513 & ((DD = 3272356035 & ((DD = 251719695 & ((DD = 4278190335 & ((DD &= 1023) | DD << 16)) | DD << 8)) | DD << 4)) | DD << 2), (DD |= (CD = 1227133513 & ((CD = 3272356035 & ((CD = 251719695 & ((CD = 4278190335 & ((CD &= 1023) | CD << 16)) | CD << 8)) | CD << 4)) | CD << 2)) << 1) | (cD = 1227133513 & ((cD = 3272356035 & ((cD = 251719695 & ((cD = 4278190335 & ((cD &= 1023) | cD << 16)) | cD << 8)) | cD << 4)) | cD << 2)) << 2
-    }, CD.deinterleave3 = function(DD, CD) {
-      return (DD = 1023 & ((DD = 4278190335 & ((DD = 251719695 & ((DD = 3272356035 & ((DD = DD >>> CD & 1227133513) | DD >>> 2)) | DD >>> 4)) | DD >>> 8)) | DD >>> 16)) << 22 >> 22
-    }, CD.nextCombination = function(DD) {
-      var CD = DD | DD - 1;
-      return CD + 1 | (~CD & -~CD) - 1 >>> cD(DD) + 1
+    }(tU), RU.reverse = function(UU) {
+      return tU[255 & UU] << 24 | tU[UU >>> 8 & 255] << 16 | tU[UU >>> 16 & 255] << 8 | tU[UU >>> 24 & 255]
+    }, RU.interleave2 = function(UU, RU) {
+      return (UU = 1431655765 & ((UU = 858993459 & ((UU = 252645135 & ((UU = 16711935 & ((UU &= 65535) | UU << 8)) | UU << 4)) | UU << 2)) | UU << 1)) | (RU = 1431655765 & ((RU = 858993459 & ((RU = 252645135 & ((RU = 16711935 & ((RU &= 65535) | RU << 8)) | RU << 4)) | RU << 2)) | RU << 1)) << 1
+    }, RU.deinterleave2 = function(UU, RU) {
+      return (UU = 65535 & ((UU = 16711935 & ((UU = 252645135 & ((UU = 858993459 & ((UU = UU >>> RU & 1431655765) | UU >>> 1)) | UU >>> 2)) | UU >>> 4)) | UU >>> 16)) << 16 >> 16
+    }, RU.interleave3 = function(UU, RU, gU) {
+      return UU = 1227133513 & ((UU = 3272356035 & ((UU = 251719695 & ((UU = 4278190335 & ((UU &= 1023) | UU << 16)) | UU << 8)) | UU << 4)) | UU << 2), (UU |= (RU = 1227133513 & ((RU = 3272356035 & ((RU = 251719695 & ((RU = 4278190335 & ((RU &= 1023) | RU << 16)) | RU << 8)) | RU << 4)) | RU << 2)) << 1) | (gU = 1227133513 & ((gU = 3272356035 & ((gU = 251719695 & ((gU = 4278190335 & ((gU &= 1023) | gU << 16)) | gU << 8)) | gU << 4)) | gU << 2)) << 2
+    }, RU.deinterleave3 = function(UU, RU) {
+      return (UU = 1023 & ((UU = 4278190335 & ((UU = 251719695 & ((UU = 3272356035 & ((UU = UU >>> RU & 1227133513) | UU >>> 2)) | UU >>> 4)) | UU >>> 8)) | UU >>> 16)) << 22 >> 22
+    }, RU.nextCombination = function(UU) {
+      var RU = UU | UU - 1;
+      return RU + 1 | (~RU & -~RU) - 1 >>> gU(UU) + 1
     }
   },
-  38954: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      emptyColumnHeight: () => XD,
-      loadHeatmapSchematic: () => mD,
-      readSchematicBlocks: () => nD
+  39190: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      emptyColumnHeight: () => xU,
+      loadHeatmapSchematic: () => mU,
+      readSchematicBlocks: () => IU
     });
-    var ID = cD(3591),
-      pD = cD.n(ID),
-      iD = cD(3563),
-      fD = cD(37119),
-      bD = cD(194),
-      QD = cD(9141);
-    const wD = [{
+    var tU = gU(3422),
+      pU = gU.n(tU),
+      EU = gU(3398),
+      PU = gU(37266),
+      TU = gU(189),
+      qU = gU(9078);
+    const KU = [{
         name: "x",
         type: "int"
       }, {
@@ -110,20 +110,20 @@ export const modules = {
         name: "z",
         type: "int"
       }],
-      SD = [{
+      cU = [{
         name: "name",
         type: "string"
       }, {
         name: "startOffset",
         type: {
           type: "record",
-          fields: wD
+          fields: KU
         }
       }, {
         name: "dimensions",
         type: {
           type: "record",
-          fields: wD
+          fields: KU
         }
       }, {
         name: "chunkData",
@@ -131,26 +131,26 @@ export const modules = {
           type: "array",
           items: {
             type: "record",
-            fields: [...wD, {
+            fields: [...KU, {
               name: "rle",
               type: "bytes"
             }]
           }
         }
       }],
-      BD = pD().Type.forSchema({
+      GU = pU().Type.forSchema({
         type: "record",
-        fields: SD
+        fields: cU
       }),
-      yD = pD().Type.forSchema({
+      jU = pU().Type.forSchema({
         type: "record",
-        fields: [...SD, {
+        fields: [...cU, {
           name: "blockData",
           type: {
             type: "array",
             items: {
               type: "record",
-              fields: [...wD, {
+              fields: [...KU, {
                 name: "data",
                 type: "bytes"
               }]
@@ -160,187 +160,187 @@ export const modules = {
           name: "pasteOffset",
           type: {
             type: "record",
-            fields: wD
+            fields: KU
           }
         }]
       }),
-      MD = 2,
-      tD = 6,
-      ZD = {
+      uU = 2,
+      CU = 6,
+      hU = {
         Water: [63, 118, 228],
         Lava: [232, 110, 30]
       },
-      oD = [150, 150, 150],
-      vD = 16,
-      ND = 4096,
-      gD = bD.h.Wt,
-      XD = -2147483648;
-    async function mD(DD) {
-      const CD = await nD(new Uint8Array(await DD.arrayBuffer()), await async function() {
+      QU = [150, 150, 150],
+      eU = 16,
+      WU = 4096,
+      fU = TU.e.jC,
+      xU = -2147483648;
+    async function mU(UU) {
+      const RU = await IU(new Uint8Array(await UU.arrayBuffer()), await async function() {
         const {
-          averageColors: DD
-        } = await cD.e(201).then((() => cD(33733))), CD = new Map;
-        return cD => {
-          var ID, pD, iD, fD, bD;
-          const wD = CD.get(cD);
-          if (void 0 !== wD) return wD;
-          const SD = null !== (ID = null === (pD = QD.g[cD]) || void 0 === pD ? void 0 : pD.name) && void 0 !== ID ? ID : "",
-            BD = null !== (iD = DD[SD]) && void 0 !== iD ? iD : DD[SD.split("|")[0]],
-            yD = ZD[SD.split("|")[0]],
-            MD = null !== (fD = null !== (bD = null === BD || void 0 === BD ? void 0 : BD[0]) && void 0 !== bD ? bD : yD) && void 0 !== fD ? fD : 0 === (null === BD || void 0 === BD ? void 0 : BD.length) ? null : oD;
-          return CD.set(cD, MD), MD
+          averageColors: UU
+        } = await gU.e(201).then((() => gU(33915))), RU = new Map;
+        return gU => {
+          var tU, pU, EU, PU, TU;
+          const KU = RU.get(gU);
+          if (void 0 !== KU) return KU;
+          const cU = null !== (tU = null === (pU = qU.f[gU]) || void 0 === pU ? void 0 : pU.name) && void 0 !== tU ? tU : "",
+            GU = null !== (EU = UU[cU]) && void 0 !== EU ? EU : UU[cU.split("|")[0]],
+            jU = hU[cU.split("|")[0]],
+            uU = null !== (PU = null !== (TU = null === GU || void 0 === GU ? void 0 : GU[0]) && void 0 !== TU ? TU : jU) && void 0 !== PU ? PU : 0 === (null === GU || void 0 === GU ? void 0 : GU.length) ? null : QU;
+          return RU.set(gU, uU), uU
         }
       }());
       return {
-        surface: CD.surface,
-        topDown: PD(CD.columnTops)
+        surface: RU.surface,
+        topDown: wU(RU.columnTops)
       }
     }
-    async function nD(DD, CD) {
-      var cD;
-      if (DD.byteLength < 4) throw new Error("The file is too short to be a schematic.");
-      const ID = new DataView(DD.buffer, DD.byteOffset, DD.byteLength).getUint32(0, !0);
-      if (ID > tD) throw new Error("The file isn't a schematic this version of Bloxd can read.");
-      const pD = (ID >= MD ? yD : BD).decode(iD.lt.from(DD.subarray(4)), 0).value;
-      if (!pD) throw new Error("The file isn't a schematic.");
-      if (0 === pD.chunkData.length) throw new Error("The schematic has no blocks in it.");
-      const bD = null !== (cD = pD.pasteOffset) && void 0 !== cD ? cD : {
+    async function IU(UU, RU) {
+      var gU;
+      if (UU.byteLength < 4) throw new Error("The file is too short to be a schematic.");
+      const tU = new DataView(UU.buffer, UU.byteOffset, UU.byteLength).getUint32(0, !0);
+      if (tU > CU) throw new Error("The file isn't a schematic this version of Bloxd can read.");
+      const pU = (tU >= uU ? jU : GU).decode(EU.tC.from(UU.subarray(4)), 0).value;
+      if (!pU) throw new Error("The file isn't a schematic.");
+      if (0 === pU.chunkData.length) throw new Error("The schematic has no blocks in it.");
+      const TU = null !== (gU = pU.pasteOffset) && void 0 !== gU ? gU : {
           x: 0,
           y: 0,
           z: 0
         },
-        QD = [bD.x, bD.y, bD.z].map((DD => Math.floor(DD / gD))),
-        wD = pD.chunkData.map((DD => ({
-          x: DD.x + QD[0],
-          y: DD.y + QD[1],
-          z: DD.z + QD[2],
-          rle: DD.rle
+        qU = [TU.x, TU.y, TU.z].map((UU => Math.floor(UU / fU))),
+        KU = pU.chunkData.map((UU => ({
+          x: UU.x + qU[0],
+          y: UU.y + qU[1],
+          z: UU.z + qU[2],
+          rle: UU.rle
         }))),
-        SD = new Map;
-      for (const [iD, BD] of wD.entries()) {
-        const DD = new Uint16Array(gD ** 3);
-        fD.decode(BD.rle, DD), SD.set(`${BD.x},${BD.y},${BD.z}`, DD), iD % vD === vD - 1 && await HD()
+        cU = new Map;
+      for (const [EU, GU] of KU.entries()) {
+        const UU = new Uint16Array(fU ** 3);
+        PU.decode(GU.rle, UU), cU.set(`${GU.x},${GU.y},${GU.z}`, UU), EU % eU === eU - 1 && await nU()
       }
-      const ZD = (DD, CD, cD) => DD * gD * gD + CD * gD + cD,
-        oD = (DD, CD, cD) => {
-          var ID, pD;
-          const iD = Math.floor(DD / gD),
-            fD = Math.floor(CD / gD),
-            bD = Math.floor(cD / gD);
-          return null !== (ID = null === (pD = SD.get(`${iD},${fD},${bD}`)) || void 0 === pD ? void 0 : pD[ZD(DD - iD * gD, CD - fD * gD, cD - bD * gD)]) && void 0 !== ID ? ID : 0
+      const hU = (UU, RU, gU) => UU * fU * fU + RU * fU + gU,
+        QU = (UU, RU, gU) => {
+          var tU, pU;
+          const EU = Math.floor(UU / fU),
+            PU = Math.floor(RU / fU),
+            TU = Math.floor(gU / fU);
+          return null !== (tU = null === (pU = cU.get(`${EU},${PU},${TU}`)) || void 0 === pU ? void 0 : pU[hU(UU - EU * fU, RU - PU * fU, gU - TU * fU)]) && void 0 !== tU ? tU : 0
         },
-        ND = new Map,
-        mD = [],
-        nD = [];
-      for (const [iD, fD] of wD.entries()) {
-        const DD = SD.get(`${fD.x},${fD.y},${fD.z}`),
-          cD = [fD.x * gD, fD.y * gD, fD.z * gD],
-          ID = (CD, ID, pD) => CD < 0 || ID < 0 || pD < 0 || CD >= gD || ID >= gD || pD >= gD ? oD(cD[0] + CD, cD[1] + ID, cD[2] + pD) : DD[ZD(CD, ID, pD)],
-          pD = `${fD.x},${fD.z}`;
-        let bD = ND.get(pD);
-        void 0 === bD && (bD = {
-          chunkX: fD.x,
-          chunkZ: fD.z,
-          heights: new Int32Array(gD * gD).fill(XD),
-          colours: new Uint8Array(gD * gD * 3)
-        }, ND.set(pD, bD));
-        for (let iD = 0; iD < gD; iD++)
-          for (let pD = 0; pD < gD; pD++)
-            for (let fD = 0; fD < gD; fD++) {
-              const QD = DD[ZD(iD, pD, fD)];
-              if (0 === QD) continue;
-              const wD = cD[0] + iD,
-                SD = cD[1] + pD,
-                BD = cD[2] + fD,
-                yD = CD(QD);
-              if (null === yD) continue;
-              const MD = fD * gD + iD;
-              SD > bD.heights[MD] && (bD.heights[MD] = SD, bD.colours.set(yD, 3 * MD));
-              !OD(QD) && (OD(ID(iD + 1, pD, fD)) || OD(ID(iD - 1, pD, fD)) || OD(ID(iD, pD + 1, fD)) || OD(ID(iD, pD - 1, fD)) || OD(ID(iD, pD, fD + 1)) || OD(ID(iD, pD, fD - 1))) && (mD.push(wD, SD, BD), nD.push(yD[0], yD[1], yD[2]))
+        WU = new Map,
+        mU = [],
+        IU = [];
+      for (const [EU, PU] of KU.entries()) {
+        const UU = cU.get(`${PU.x},${PU.y},${PU.z}`),
+          gU = [PU.x * fU, PU.y * fU, PU.z * fU],
+          tU = (RU, tU, pU) => RU < 0 || tU < 0 || pU < 0 || RU >= fU || tU >= fU || pU >= fU ? QU(gU[0] + RU, gU[1] + tU, gU[2] + pU) : UU[hU(RU, tU, pU)],
+          pU = `${PU.x},${PU.z}`;
+        let TU = WU.get(pU);
+        void 0 === TU && (TU = {
+          chunkX: PU.x,
+          chunkZ: PU.z,
+          heights: new Int32Array(fU * fU).fill(xU),
+          colours: new Uint8Array(fU * fU * 3)
+        }, WU.set(pU, TU));
+        for (let EU = 0; EU < fU; EU++)
+          for (let pU = 0; pU < fU; pU++)
+            for (let PU = 0; PU < fU; PU++) {
+              const qU = UU[hU(EU, pU, PU)];
+              if (0 === qU) continue;
+              const KU = gU[0] + EU,
+                cU = gU[1] + pU,
+                GU = gU[2] + PU,
+                jU = RU(qU);
+              if (null === jU) continue;
+              const uU = PU * fU + EU;
+              cU > TU.heights[uU] && (TU.heights[uU] = cU, TU.colours.set(jU, 3 * uU));
+              !JU(qU) && (JU(tU(EU + 1, pU, PU)) || JU(tU(EU - 1, pU, PU)) || JU(tU(EU, pU + 1, PU)) || JU(tU(EU, pU - 1, PU)) || JU(tU(EU, pU, PU + 1)) || JU(tU(EU, pU, PU - 1))) && (mU.push(KU, cU, GU), IU.push(jU[0], jU[1], jU[2]))
             }
-        iD % vD === vD - 1 && await HD()
+        EU % eU === eU - 1 && await nU()
       }
-      if (0 === mD.length) throw new Error("The schematic has no blocks in it.");
+      if (0 === mU.length) throw new Error("The schematic has no blocks in it.");
       return {
-        name: pD.name,
+        name: pU.name,
         surface: {
-          positions: Int32Array.from(mD),
-          colours: Uint8Array.from(nD),
-          count: mD.length / 3
+          positions: Int32Array.from(mU),
+          colours: Uint8Array.from(IU),
+          count: mU.length / 3
         },
-        columnTops: [...ND.values()]
+        columnTops: [...WU.values()]
       }
     }
 
-    function OD(DD) {
-      if (0 === DD) return !0;
-      const CD = QD.g[DD];
-      return void 0 === CD || CD.HM || CD.transTex || !1 === CD.solid
+    function JU(UU) {
+      if (0 === UU) return !0;
+      const RU = qU.f[UU];
+      return void 0 === RU || RU.Nj || RU.transTex || !1 === RU.solid
     }
 
-    function PD(DD) {
-      let CD = 1 / 0,
-        cD = -1 / 0,
-        ID = 1 / 0,
-        pD = -1 / 0;
+    function wU(UU) {
+      let RU = 1 / 0,
+        gU = -1 / 0,
+        tU = 1 / 0,
+        pU = -1 / 0;
       for (const {
-          chunkX: tD,
-          chunkZ: ZD,
-          heights: oD
+          chunkX: CU,
+          chunkZ: hU,
+          heights: QU
         }
-        of DD) oD.forEach(((DD, iD) => {
-        if (DD === XD) return;
-        const fD = tD * gD + iD % gD,
-          bD = ZD * gD + Math.floor(iD / gD);
-        CD = Math.min(CD, fD), cD = Math.max(cD, fD), ID = Math.min(ID, bD), pD = Math.max(pD, bD)
+        of UU) QU.forEach(((UU, EU) => {
+        if (UU === xU) return;
+        const PU = CU * fU + EU % fU,
+          TU = hU * fU + Math.floor(EU / fU);
+        RU = Math.min(RU, PU), gU = Math.max(gU, PU), tU = Math.min(tU, TU), pU = Math.max(pU, TU)
       }));
-      const iD = cD - CD + 1,
-        fD = pD - ID + 1,
-        bD = Math.max(1, Math.ceil(iD / ND), Math.ceil(fD / ND)),
-        QD = Math.ceil(iD / bD),
-        wD = Math.ceil(fD / bD),
-        SD = document.createElement("canvas");
-      SD.width = QD, SD.height = wD;
-      const BD = SD.getContext("2d");
-      if (!BD) throw new Error("Couldn't draw the schematic from above.");
-      const yD = BD.createImageData(QD, wD),
-        MD = new Int32Array(QD * wD).fill(XD);
+      const EU = gU - RU + 1,
+        PU = pU - tU + 1,
+        TU = Math.max(1, Math.ceil(EU / WU), Math.ceil(PU / WU)),
+        qU = Math.ceil(EU / TU),
+        KU = Math.ceil(PU / TU),
+        cU = document.createElement("canvas");
+      cU.width = qU, cU.height = KU;
+      const GU = cU.getContext("2d");
+      if (!GU) throw new Error("Couldn't draw the schematic from above.");
+      const jU = GU.createImageData(qU, KU),
+        uU = new Int32Array(qU * KU).fill(xU);
       for (const {
-          chunkX: tD,
-          chunkZ: ZD,
-          heights: oD,
-          colours: vD
+          chunkX: CU,
+          chunkZ: hU,
+          heights: QU,
+          colours: eU
         }
-        of DD) oD.forEach(((DD, CD) => {
-        const pD = tD * gD + CD % gD,
-          iD = ZD * gD + Math.floor(CD / gD),
-          fD = Math.floor((iD - ID) / bD) * QD + Math.floor((cD - pD) / bD);
-        DD === XD || DD <= MD[fD] || (MD[fD] = DD, yD.data.set(vD.subarray(3 * CD, 3 * CD + 3), 4 * fD), yD.data[4 * fD + 3] = 255)
+        of UU) QU.forEach(((UU, RU) => {
+        const pU = CU * fU + RU % fU,
+          EU = hU * fU + Math.floor(RU / fU),
+          PU = Math.floor((EU - tU) / TU) * qU + Math.floor((gU - pU) / TU);
+        UU === xU || UU <= uU[PU] || (uU[PU] = UU, jU.data.set(eU.subarray(3 * RU, 3 * RU + 3), 4 * PU), jU.data[4 * PU + 3] = 255)
       }));
-      return BD.putImageData(yD, 0, 0), {
-        maxX: cD,
-        minZ: ID,
-        width: QD * bD,
-        depth: wD * bD,
-        canvas: SD
+      return GU.putImageData(jU, 0, 0), {
+        maxX: gU,
+        minZ: tU,
+        width: qU * TU,
+        depth: KU * TU,
+        canvas: cU
       }
     }
 
-    function HD() {
-      return new Promise((DD => {
-        setTimeout(DD, 0)
+    function nU() {
+      return new Promise((UU => {
+        setTimeout(UU, 0)
       }))
     }
   },
-  9237: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => pD,
-      g: () => iD
+  9155: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => pU,
+      f: () => EU
     });
-    var ID = cD(9189);
-    const pD = "Air",
-      iD = Object.freeze(new ID.d(pD, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var tU = gU(9121);
+    const pU = "Air",
+      EU = Object.freeze(new tU.h(pU, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

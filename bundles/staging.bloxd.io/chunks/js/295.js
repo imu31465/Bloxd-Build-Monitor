@@ -1,261 +1,261 @@
 export const id = 295;
 export const ids = [295];
 export const modules = {
-  40790: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => yD,
-      g: () => vD,
-      k: () => MD,
-      o: () => tD,
-      p: () => gD,
-      s: () => ND
+  41073: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => jU,
+      i: () => eU,
+      l: () => uU,
+      o: () => CU,
+      s: () => fU,
+      t: () => WU
     });
-    var ID = cD(40737);
-    var pD = "Babylon Lite v1.32.0",
-      iD = cD(40798);
+    var tU = gU(41036);
+    var pU = "Babylon Lite v1.32.0",
+      EU = gU(41078);
 
-    function fD(DD) {
-      return "clientWidth" in DD
+    function PU(UU) {
+      return "clientWidth" in UU
     }
-    var bD = 1;
+    var TU = 1;
 
-    function QD(DD, CD, cD) {
-      const QD = CD.getContext("webgpu");
-      QD || (0, ID.d)(54), fD(CD) && CD.setAttribute("data-engine", pD);
-      const wD = cD?.format ?? navigator.gpu.getPreferredCanvasFormat(),
-        SD = cD?.srgb ? (BD = wD).endsWith("-srgb") ? BD : `${BD}-srgb` : wD;
-      var BD;
-      const yD = cD?.alphaMode ?? "opaque";
-      QD.configure({
-        device: DD._device,
-        format: wD,
-        alphaMode: yD,
-        viewFormats: [SD]
+    function qU(UU, RU, gU) {
+      const qU = RU.getContext("webgpu");
+      qU || (0, tU.c)(54), PU(RU) && RU.setAttribute("data-engine", pU);
+      const KU = gU?.format ?? navigator.gpu.getPreferredCanvasFormat(),
+        cU = gU?.srgb ? (GU = KU).endsWith("-srgb") ? GU : `${GU}-srgb` : KU;
+      var GU;
+      const jU = gU?.alphaMode ?? "opaque";
+      qU.configure({
+        device: UU._device,
+        format: KU,
+        alphaMode: jU,
+        viewFormats: [cU]
       });
-      const MD = 1 === cD?.msaaSamples ? 1 : 4,
-        tD = (0, iD.e)({
+      const uU = 1 === gU?.msaaSamples ? 1 : 4,
+        CU = (0, EU.d)({
           lbl: "swapchain",
-          format: SD,
+          format: cU,
           samples: 1,
           size: {
             width: 0,
             height: 0
           }
         });
-      return tD._eager = !0, {
-        engine: DD,
-        canvas: CD,
-        format: SD,
-        msaaSamples: MD,
-        scRT: tD,
-        maxDevicePixelRatio: cD?.maxDevicePixelRatio ?? 1 / 0,
-        _uniqueId: bD++,
-        _context: QD,
-        _configureFormat: wD,
-        _alphaMode: yD,
+      return CU._eager = !0, {
+        engine: UU,
+        canvas: RU,
+        format: cU,
+        msaaSamples: uU,
+        scRT: CU,
+        maxDevicePixelRatio: gU?.maxDevicePixelRatio ?? 1 / 0,
+        _uniqueId: TU++,
+        _context: qU,
+        _configureFormat: KU,
+        _alphaMode: jU,
         _renderingContexts: []
       }
     }
 
-    function wD(DD) {
-      const CD = DD._context.getCurrentTexture(),
-        cD = DD.scRT;
-      cD._colorTexture = CD, cD._colorView = CD.createView({
-        format: DD.format
-      }), cD._width = CD.width, cD._height = CD.height
+    function KU(UU) {
+      const RU = UU._context.getCurrentTexture(),
+        gU = UU.scRT;
+      gU._colorTexture = RU, gU._colorView = RU.createView({
+        format: UU.format
+      }), gU._width = RU.width, gU._height = RU.height
     }
 
-    function SD(DD) {
-      const CD = DD.canvas;
-      if (!fD(CD)) return;
-      const cD = DD._w ?? CD.clientWidth,
-        ID = DD._h ?? CD.clientHeight;
-      if (!(cD > 0 && ID > 0)) return;
-      const pD = Math.min(globalThis.devicePixelRatio || 1, DD.maxDevicePixelRatio);
-      BD(DD, cD * pD | 0, ID * pD | 0)
+    function cU(UU) {
+      const RU = UU.canvas;
+      if (!PU(RU)) return;
+      const gU = UU._w ?? RU.clientWidth,
+        tU = UU._h ?? RU.clientHeight;
+      if (!(gU > 0 && tU > 0)) return;
+      const pU = Math.min(globalThis.devicePixelRatio || 1, UU.maxDevicePixelRatio);
+      GU(UU, gU * pU | 0, tU * pU | 0)
     }
 
-    function BD(DD, CD, cD) {
-      const ID = DD.canvas,
-        pD = 0 | CD,
-        iD = 0 | cD;
-      if (pD > 0 && iD > 0 && (pD !== ID.width || iD !== ID.height)) {
-        ID.width = pD, ID.height = iD, DD.scRT._width = pD, DD.scRT._height = iD;
-        for (const CD of DD._renderingContexts) CD._resize?.()
+    function GU(UU, RU, gU) {
+      const tU = UU.canvas,
+        pU = 0 | RU,
+        EU = 0 | gU;
+      if (pU > 0 && EU > 0 && (pU !== tU.width || EU !== tU.height)) {
+        tU.width = pU, tU.height = EU, UU.scRT._width = pU, UU.scRT._height = EU;
+        for (const RU of UU._renderingContexts) RU._resize?.()
       }
     }
-    var yD = 0;
+    var jU = 0;
 
-    function MD(DD, CD) {
-      return -1 !== DD._renderingContexts.indexOf(CD)
+    function uU(UU, RU) {
+      return -1 !== UU._renderingContexts.indexOf(RU)
     }
 
-    function tD(DD, CD) {
-      return -1 === DD._renderingContexts.indexOf(CD) && (DD._renderingContexts.push(CD), !0)
+    function CU(UU, RU) {
+      return -1 === UU._renderingContexts.indexOf(RU) && (UU._renderingContexts.push(RU), !0)
     }
-    var ZD = null;
-    var oD = ["float32-filterable", "texture-compression-astc", "texture-compression-bc", "texture-compression-etc2", "texture-compression-unaligned", "timestamp-query", "primitive-index"];
-    async function vD(DD, CD) {
-      const iD = await navigator.gpu.requestAdapter({
+    var hU = null;
+    var QU = ["float32-filterable", "texture-compression-astc", "texture-compression-bc", "texture-compression-etc2", "texture-compression-unaligned", "timestamp-query", "primitive-index"];
+    async function eU(UU, RU) {
+      const EU = await navigator.gpu.requestAdapter({
         powerPreference: "high-performance",
-        ...ZD ? ZD() : {}
+        ...hU ? hU() : {}
       });
-      iD || (0, ID.d)(47);
-      const fD = ZD?.deviceFeatures?.(iD, CD) ?? function(DD) {
-          return oD.filter((CD => DD.features.has(CD)))
-        }(iD),
-        bD = await iD.requestDevice({
-          requiredFeatures: fD,
-          requiredLimits: CD?.requiredLimits
+      EU || (0, tU.c)(47);
+      const PU = hU?.deviceFeatures?.(EU, RU) ?? function(UU) {
+          return QU.filter((RU => UU.features.has(RU)))
+        }(EU),
+        TU = await EU.requestDevice({
+          requiredFeatures: PU,
+          requiredLimits: RU?.requiredLimits
         });
-      console.log(`${pD} - WebGPU engine`);
-      const BD = !!CD?.useHighPrecisionMatrix,
-        yD = !!CD?.useFloatingOrigin;
-      if (yD && !BD && (0, ID.d)(48), BD) {
+      console.log(`${pU} - WebGPU engine`);
+      const GU = !!RU?.useHighPrecisionMatrix,
+        jU = !!RU?.useFloatingOrigin;
+      if (jU && !GU && (0, tU.c)(48), GU) {
         const {
-          allocateF64Mat4: DD
-        } = await cD.e(349).then((() => cD(60476)));
+          allocateF64Mat4: UU
+        } = await gU.e(349).then((() => gU(60616)));
         0
       }
-      let MD, tD, vD, ND;
-      if (yD) {
+      let uU, CU, eU, WU;
+      if (jU) {
         const [{
-          wrapRenderableForFO: DD,
-          lightFoVersion: CD,
-          applyLightFoOffset: ID
+          wrapRenderableForFO: UU,
+          lightFoVersion: RU,
+          applyLightFoOffset: tU
         }, {
-          makePackMeshWorld: pD
-        }] = await Promise.all([cD.e(350).then((() => cD(60483))), cD.e(351).then((() => cD(60490)))]);
-        MD = DD, tD = pD, vD = CD, ND = ID
+          makePackMeshWorld: pU
+        }] = await Promise.all([gU.e(350).then((() => gU(60619))), gU.e(351).then((() => gU(60625)))]);
+        uU = UU, CU = pU, eU = RU, WU = tU
       }
-      const gD = {
-          _device: bD
+      const fU = {
+          _device: TU
         },
-        XD = [gD];
-      return Object.assign(gD, {
-        engine: gD,
-        surfaces: XD,
-        _surfaces: XD,
-        _device: bD,
-        _options: CD,
+        xU = [fU];
+      return Object.assign(fU, {
+        engine: fU,
+        surfaces: xU,
+        _surfaces: xU,
+        _device: TU,
+        _options: RU,
         drawCallCount: 0,
         gpuFrameTimeMs: 0,
-        useHighPrecisionMatrix: BD,
-        useFloatingOrigin: yD,
+        useHighPrecisionMatrix: GU,
+        useFloatingOrigin: jU,
         _animFrameId: 0,
         _renderFn: null,
         _currentEncoder: void 0,
         _currentDelta: 0,
         _cbs: [],
-        _wrapRenderableForFO: MD,
-        _makePackMeshWorld: tD,
-        _lightFoVersion: vD,
-        _applyLightFoOffset: ND
-      }, QD(gD, DD, CD)), SD(gD), wD(gD), gD
+        _wrapRenderableForFO: uU,
+        _makePackMeshWorld: CU,
+        _lightFoVersion: eU,
+        _applyLightFoOffset: WU
+      }, qU(fU, UU, RU)), cU(fU), KU(fU), fU
     }
 
-    function ND(DD, CD, cD) {
-      BD(DD, CD, cD)
+    function WU(UU, RU, gU) {
+      GU(UU, RU, gU)
     }
 
-    function gD(DD, CD) {
-      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : DD.surfaces;
-      if (cD !== DD.surfaces)
-        for (let pD = cD.length; pD--;) cD[pD].engine !== DD && (0, ID.d)(49);
-      XD(DD, CD, cD)
+    function fU(UU, RU) {
+      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : UU.surfaces;
+      if (gU !== UU.surfaces)
+        for (let pU = gU.length; pU--;) gU[pU].engine !== UU && (0, tU.c)(49);
+      xU(UU, RU, gU)
     }
 
-    function XD(DD, CD) {
-      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : DD._surfaces,
-        ID = 0;
-      for (let iD = cD.length; iD--;) ID += cD[iD]._renderingContexts.length;
-      if (!ID) return DD.drawCallCount = 0, DD._flushGpuRetirements?.(DD);
-      const pD = DD._device.createCommandEncoder({
+    function xU(UU, RU) {
+      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : UU._surfaces,
+        tU = 0;
+      for (let EU = gU.length; EU--;) tU += gU[EU]._renderingContexts.length;
+      if (!tU) return UU.drawCallCount = 0, UU._flushGpuRetirements?.(UU);
+      const pU = UU._device.createCommandEncoder({
         label: "frame"
       });
-      DD._currentEncoder = pD, DD._currentDelta = CD;
+      UU._currentEncoder = pU, UU._currentDelta = RU;
       try {
-        DD._gpuTimerBegin?.(pD), ID = 0;
-        for (let DD = 0; DD < cD.length; DD++) {
-          const CD = cD[DD];
-          CD._capturePreFrame?.(CD), wD(CD);
-          const pD = CD._renderingContexts;
-          for (let DD = 0; DD < pD.length; DD++) {
-            const CD = pD[DD];
-            CD._update(), ID += CD._drawCallsPre + CD._record()
+        UU._gpuTimerBegin?.(pU), tU = 0;
+        for (let UU = 0; UU < gU.length; UU++) {
+          const RU = gU[UU];
+          RU._capturePreFrame?.(RU), KU(RU);
+          const pU = RU._renderingContexts;
+          for (let UU = 0; UU < pU.length; UU++) {
+            const RU = pU[UU];
+            RU._update(), tU += RU._drawCallsPre + RU._record()
           }
         }
-        const CD = DD._currentEncoder;
-        for (let DD = 0; DD < cD.length; DD++) {
-          const ID = cD[DD];
-          ID._captureService?.(ID, CD)
+        const RU = UU._currentEncoder;
+        for (let UU = 0; UU < gU.length; UU++) {
+          const tU = gU[UU];
+          tU._captureService?.(tU, RU)
         }
-        DD._gpuTimerEnd?.(CD), DD._cbs[0] = CD.finish(), DD._device.queue.submit(DD._cbs), DD._flushGpuRetirements?.(DD), DD.drawCallCount = ID, DD._gpuTimerResolve?.()
+        UU._gpuTimerEnd?.(RU), UU._cbs[0] = RU.finish(), UU._device.queue.submit(UU._cbs), UU._flushGpuRetirements?.(UU), UU.drawCallCount = tU, UU._gpuTimerResolve?.()
       } finally {
-        DD._currentEncoder = void 0
+        UU._currentEncoder = void 0
       }
     }
   },
-  40745: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => pD,
-      h: () => iD,
-      i: () => ID
+  41044: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => pU,
+      c: () => EU,
+      d: () => tU
     });
-    var ID = globalThis.GPUTextureUsage,
-      pD = globalThis.GPUBufferUsage,
-      iD = globalThis.GPUShaderStage;
+    var tU = globalThis.GPUTextureUsage,
+      pU = globalThis.GPUBufferUsage,
+      EU = globalThis.GPUShaderStage;
     globalThis.GPUColorWrite
   },
-  40823: (DD, CD, cD) => {
-    function ID(DD) {
-      pD(DD.splice(0))
+  41090: (UU, RU, gU) => {
+    function tU(UU) {
+      pU(UU.splice(0))
     }
 
-    function pD(DD) {
-      for (const cD of DD) try {
-        cD()
-      } catch (CD) {
-        console.error("GPU resource retirement failed.", CD)
+    function pU(UU) {
+      for (const gU of UU) try {
+        gU()
+      } catch (RU) {
+        console.error("GPU resource retirement failed.", RU)
       }
     }
 
-    function iD(DD, CD) {
-      DD._flushGpuRetirements ??= fD, (DD._retirements ??= []).push(CD)
+    function EU(UU, RU) {
+      UU._flushGpuRetirements ??= PU, (UU._retirements ??= []).push(RU)
     }
 
-    function fD(DD) {
-      const CD = DD._retirements;
-      if (!CD) return;
-      DD._retirements = null;
-      const cD = DD._retiring ??= new Set;
-      cD.add(CD), queueMicrotask((() => {
-        DD._device.queue.onSubmittedWorkDone().then((() => {
-          cD.delete(CD), ID(CD)
+    function PU(UU) {
+      const RU = UU._retirements;
+      if (!RU) return;
+      UU._retirements = null;
+      const gU = UU._retiring ??= new Set;
+      gU.add(RU), queueMicrotask((() => {
+        UU._device.queue.onSubmittedWorkDone().then((() => {
+          gU.delete(RU), tU(RU)
         })).catch((() => {}))
       }))
     }
-    cD.d(CD, {
-      e: () => iD
+    gU.d(RU, {
+      c: () => EU
     })
   },
-  40798: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => iD,
-      h: () => fD,
-      i: () => bD
+  41078: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => EU,
+      h: () => PU,
+      i: () => TU
     });
-    var ID = cD(40745);
+    var tU = gU(41044);
 
-    function pD(DD) {
-      const CD = DD.size;
-      return "canvas" in CD ? CD.canvas : CD
+    function pU(UU) {
+      const RU = UU.size;
+      return "canvas" in RU ? RU.canvas : RU
     }
 
-    function iD(DD) {
+    function EU(UU) {
       return {
-        _descriptor: DD,
-        _resolveSize: pD,
+        _descriptor: UU,
+        _resolveSize: pU,
         _colorTexture: null,
         _colorView: null,
         _depthTexture: null,
@@ -265,609 +265,609 @@ export const modules = {
       }
     }
 
-    function fD(DD, CD) {
-      if (DD._eager) return void DD._syncEager?.(CD);
-      bD(DD);
-      const cD = DD._descriptor,
+    function PU(UU, RU) {
+      if (UU._eager) return void UU._syncEager?.(RU);
+      TU(UU);
+      const gU = UU._descriptor,
         {
-          width: iD,
-          height: fD
-        } = (DD._resolveSize ?? pD)(cD);
-      DD._width = iD, DD._height = fD;
-      const QD = CD._device;
-      cD.format && (DD._colorTexture = QD.createTexture({
-        label: cD.lbl,
+          width: EU,
+          height: PU
+        } = (UU._resolveSize ?? pU)(gU);
+      UU._width = EU, UU._height = PU;
+      const qU = RU._device;
+      gU.format && (UU._colorTexture = qU.createTexture({
+        label: gU.lbl,
         size: {
-          width: iD,
-          height: fD
+          width: EU,
+          height: PU
         },
-        format: cD.format,
-        sampleCount: cD.samples,
-        usage: ID.i.RENDER_ATTACHMENT | ID.i.TEXTURE_BINDING | ID.i.COPY_SRC | ID.i.COPY_DST
-      }), DD._colorView = DD._colorTexture.createView()), cD.dFormat && (DD._depthTexture = QD.createTexture({
-        label: cD.lbl,
+        format: gU.format,
+        sampleCount: gU.samples,
+        usage: tU.d.RENDER_ATTACHMENT | tU.d.TEXTURE_BINDING | tU.d.COPY_SRC | tU.d.COPY_DST
+      }), UU._colorView = UU._colorTexture.createView()), gU.dFormat && (UU._depthTexture = qU.createTexture({
+        label: gU.lbl,
         size: {
-          width: iD,
-          height: fD
+          width: EU,
+          height: PU
         },
-        format: cD.dFormat,
-        sampleCount: cD.samples,
-        usage: ID.i.RENDER_ATTACHMENT | ID.i.TEXTURE_BINDING
-      }), DD._depthView = DD._depthTexture.createView())
+        format: gU.dFormat,
+        sampleCount: gU.samples,
+        usage: tU.d.RENDER_ATTACHMENT | tU.d.TEXTURE_BINDING
+      }), UU._depthView = UU._depthTexture.createView())
     }
 
-    function bD(DD) {
-      if (!DD || DD._eager && !DD._disposeAttachments) return;
-      const CD = DD._colorTexture,
-        cD = DD._depthTexture;
-      if (DD._colorTexture = DD._depthTexture = null, DD._colorView = DD._depthView = null, DD._width = DD._height = 0, DD._disposeAttachments) DD._disposeAttachments(CD, cD);
+    function TU(UU) {
+      if (!UU || UU._eager && !UU._disposeAttachments) return;
+      const RU = UU._colorTexture,
+        gU = UU._depthTexture;
+      if (UU._colorTexture = UU._depthTexture = null, UU._colorView = UU._depthView = null, UU._width = UU._height = 0, UU._disposeAttachments) UU._disposeAttachments(RU, gU);
       else try {
-        CD?.destroy()
+        RU?.destroy()
       } finally {
-        !1 !== DD._ownsDepthTexture && cD?.destroy()
+        !1 !== UU._ownsDepthTexture && gU?.destroy()
       }
     }
   },
-  40814: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => ID,
-      f: () => pD,
-      h: () => iD
+  41085: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => tU,
+      e: () => pU,
+      i: () => EU
     });
-    var ID = Float32Array,
-      pD = Float64Array,
-      iD = Uint32Array
+    var tU = Float32Array,
+      pU = Float64Array,
+      EU = Uint32Array
   },
-  40830: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => ID
+  41092: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => tU
     });
-    var ID = 16
+    var tU = 16
   },
-  40737: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => pD
+  41036: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => pU
     });
-    var ID = null;
+    var tU = null;
 
-    function pD(DD) {
-      for (var CD = arguments.length, cD = new Array(CD > 1 ? CD - 1 : 0), pD = 1; pD < CD; pD++) cD[pD - 1] = arguments[pD];
-      const iD = new Error(ID?.(DD, cD) ?? `#${DD}`);
-      throw iD.lite = cD, iD
+    function pU(UU) {
+      for (var RU = arguments.length, gU = new Array(RU > 1 ? RU - 1 : 0), pU = 1; pU < RU; pU++) gU[pU - 1] = arguments[pU];
+      const EU = new Error(tU?.(UU, gU) ?? `#${UU}`);
+      throw EU.lite = gU, EU
     }
   },
-  40774: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => pD
+  41062: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => pU
     });
-    var ID = cD(40755);
+    var tU = gU(41053);
 
-    function pD(DD) {
-      let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const cD = CD.compare,
-        pD = CD.lodMinClamp ?? 0,
-        iD = CD.lodMaxClamp ?? 32,
-        fD = void 0 !== cD || 0 !== pD || 32 !== iD ? `${cD??""}:${pD}:${iD}` : "";
-      return (0, ID.c)(DD, CD, fD)
+    function pU(UU) {
+      let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const gU = RU.compare,
+        pU = RU.lodMinClamp ?? 0,
+        EU = RU.lodMaxClamp ?? 32,
+        PU = void 0 !== gU || 0 !== pU || 32 !== EU ? `${gU??""}:${pU}:${EU}` : "";
+      return (0, tU.b)(UU, RU, PU)
     }
   },
-  40753: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => iD
+  41051: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => EU
     });
-    var ID = null;
+    var tU = null;
 
-    function pD(DD) {
-      const CD = ID ??= new WeakMap;
-      CD.set(DD, (CD.get(DD) ?? 0) + 1)
+    function pU(UU) {
+      const RU = tU ??= new WeakMap;
+      RU.set(UU, (RU.get(UU) ?? 0) + 1)
     }
 
-    function iD(DD) {
-      pD(DD.texture)
+    function EU(UU) {
+      pU(UU.texture)
     }
   },
-  40755: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => bD
+  41053: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => TU
     });
-    var ID = null,
-      pD = "nearest",
-      iD = "clamp-to-edge",
-      fD = {
-        minFilter: pD,
-        magFilter: pD,
-        mipmapFilter: pD,
-        addressModeU: iD,
-        addressModeV: iD,
-        addressModeW: iD,
+    var tU = null,
+      pU = "nearest",
+      EU = "clamp-to-edge",
+      PU = {
+        minFilter: pU,
+        magFilter: pU,
+        mipmapFilter: pU,
+        addressModeU: EU,
+        addressModeV: EU,
+        addressModeW: EU,
         maxAnisotropy: 1
       };
 
-    function bD(DD) {
-      let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-      const pD = DD._device,
-        iD = ID ??= new WeakMap;
-      let bD = iD.get(pD);
-      bD || iD.set(pD, bD = new Map);
-      let QD = cD;
-      for (const ID in fD) {
-        const DD = ID;
-        QD += `:${CD[DD]??fD[DD]}`
+    function TU(UU) {
+      let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+      const pU = UU._device,
+        EU = tU ??= new WeakMap;
+      let TU = EU.get(pU);
+      TU || EU.set(pU, TU = new Map);
+      let qU = gU;
+      for (const tU in PU) {
+        const UU = tU;
+        qU += `:${RU[UU]??PU[UU]}`
       }
-      let wD = bD.get(QD);
-      return wD || bD.set(QD, wD = pD.createSampler(CD)), wD
+      let KU = TU.get(qU);
+      return KU || TU.set(qU, KU = pU.createSampler(RU)), KU
     }
   },
-  40806: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => LD,
-      g: () => RD
+  41080: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => dU,
+      e: () => sU
     });
-    var ID = cD(40798),
-      pD = cD(40790);
+    var tU = gU(41078),
+      pU = gU(41073);
 
-    function iD(DD, CD) {
-      CD._passes.length = 0, DD._currentProcessedTask = CD;
+    function EU(UU, RU) {
+      RU._passes.length = 0, UU._currentProcessedTask = RU;
       try {
-        CD.record()
+        RU.record()
       } finally {
-        DD._currentProcessedTask = null
+        UU._currentProcessedTask = null
       }
     }
-    var fD = cD(40814);
+    var PU = gU(41085);
 
-    function bD(DD) {
-      const CD = DD.worldMatrixVersion;
-      if (DD._viewVer === CD) return DD._viewCache;
-      const cD = DD._viewCache,
-        ID = DD.worldMatrix,
-        pD = DD._useFloatingOrigin,
-        iD = pD ? 0 : ID[12],
-        fD = pD ? 0 : ID[13],
-        bD = pD ? 0 : ID[14];
-      return cD[0] = ID[0], cD[1] = ID[4], cD[2] = ID[8], cD[3] = 0, cD[4] = ID[1], cD[5] = ID[5], cD[6] = ID[9], cD[7] = 0, cD[8] = ID[2], cD[9] = ID[6], cD[10] = ID[10], cD[11] = 0, cD[12] = -(ID[0] * iD + ID[1] * fD + ID[2] * bD), cD[13] = -(ID[4] * iD + ID[5] * fD + ID[6] * bD), cD[14] = -(ID[8] * iD + ID[9] * fD + ID[10] * bD), cD[15] = 1, DD._viewVer = CD, cD
+    function TU(UU) {
+      const RU = UU.worldMatrixVersion;
+      if (UU._viewVer === RU) return UU._viewCache;
+      const gU = UU._viewCache,
+        tU = UU.worldMatrix,
+        pU = UU._useFloatingOrigin,
+        EU = pU ? 0 : tU[12],
+        PU = pU ? 0 : tU[13],
+        TU = pU ? 0 : tU[14];
+      return gU[0] = tU[0], gU[1] = tU[4], gU[2] = tU[8], gU[3] = 0, gU[4] = tU[1], gU[5] = tU[5], gU[6] = tU[9], gU[7] = 0, gU[8] = tU[2], gU[9] = tU[6], gU[10] = tU[10], gU[11] = 0, gU[12] = -(tU[0] * EU + tU[1] * PU + tU[2] * TU), gU[13] = -(tU[4] * EU + tU[5] * PU + tU[6] * TU), gU[14] = -(tU[8] * EU + tU[9] * PU + tU[10] * TU), gU[15] = 1, UU._viewVer = RU, gU
     }
-    var QD = null;
+    var qU = null;
 
-    function wD(DD) {
-      return DD._projFov === DD.fov && DD._projNear === DD.nearPlane && DD._projFar === DD.farPlane || (DD._projFov = DD.fov, DD._projNear = DD.nearPlane, DD._projFar = DD.farPlane, DD._projRev = (DD._projRev ?? 0) + 1), DD.worldMatrixVersion + (DD._projRev ?? 0)
+    function KU(UU) {
+      return UU._projFov === UU.fov && UU._projNear === UU.nearPlane && UU._projFar === UU.farPlane || (UU._projFov = UU.fov, UU._projNear = UU.nearPlane, UU._projFar = UU.farPlane, UU._projRev = (UU._projRev ?? 0) + 1), UU.worldMatrixVersion + (UU._projRev ?? 0)
     }
 
-    function SD(DD, CD) {
-      const cD = wD(DD);
-      if (DD._projVer === cD && DD._projAspect === CD) return DD._projCache;
-      const ID = DD._projCache;
-      return null !== QD && DD.ortho ? QD(DD, CD, ID) : function(DD, CD, cD, ID, pD) {
-        const iD = 1 / Math.tan(.5 * CD),
-          fD = pD - ID;
-        DD[0] = iD / cD, DD[5] = iD, DD[10] = -ID / fD, DD[11] = 1, DD[14] = pD * ID / fD
-      }(ID, DD.fov, CD, DD.nearPlane, DD.farPlane), DD._projVer = cD, DD._projAspect = CD, ID
+    function cU(UU, RU) {
+      const gU = KU(UU);
+      if (UU._projVer === gU && UU._projAspect === RU) return UU._projCache;
+      const tU = UU._projCache;
+      return null !== qU && UU.ortho ? qU(UU, RU, tU) : function(UU, RU, gU, tU, pU) {
+        const EU = 1 / Math.tan(.5 * RU),
+          PU = pU - tU;
+        UU[0] = EU / gU, UU[5] = EU, UU[10] = -tU / PU, UU[11] = 1, UU[14] = pU * tU / PU
+      }(tU, UU.fov, RU, UU.nearPlane, UU.farPlane), UU._projVer = gU, UU._projAspect = RU, tU
     }
-    var BD = cD(40745);
+    var GU = gU(41044);
 
-    function yD(DD, CD, cD) {
-      return DD._device.createBuffer({
-        label: cD,
-        size: (ID = CD, pD = 16, Math.ceil(ID / pD) * pD),
-        usage: BD.e.UNIFORM | BD.e.COPY_DST
+    function jU(UU, RU, gU) {
+      return UU._device.createBuffer({
+        label: gU,
+        size: (tU = RU, pU = 16, Math.ceil(tU / pU) * pU),
+        usage: GU.b.UNIFORM | GU.b.COPY_DST
       });
-      var ID, pD
+      var tU, pU
     }
-    var MD = cD(40823),
-      tD = null;
+    var uU = gU(41090),
+      CU = null;
 
-    function ZD(DD) {
-      const CD = DD._device,
-        cD = tD ??= new WeakMap;
-      let ID = cD.get(CD);
-      return ID || (ID = CD.createBindGroupLayout({
-        label: "wo",
+    function hU(UU) {
+      const RU = UU._device,
+        gU = CU ??= new WeakMap;
+      let tU = gU.get(RU);
+      return tU || (tU = RU.createBindGroupLayout({
+        label: "Zh",
         entries: [{
           binding: 0,
-          visibility: BD.h.VERTEX | BD.h.FRAGMENT,
+          visibility: GU.c.VERTEX | GU.c.FRAGMENT,
           buffer: {
             type: "uniform"
           }
         }, {
           binding: 1,
-          visibility: BD.h.FRAGMENT,
+          visibility: GU.c.FRAGMENT,
           buffer: {
             type: "uniform"
           }
         }]
-      }), cD.set(CD, ID)), ID
+      }), gU.set(RU, tU)), tU
     }
 
-    function oD(DD, CD, cD) {
-      const ID = DD._device,
-        pD = yD(DD, CD.byteLength, cD);
+    function QU(UU, RU, gU) {
+      const tU = UU._device,
+        pU = jU(UU, RU.byteLength, gU);
       try {
-        ID.queue.writeBuffer(pD, 0, CD.buffer, CD.byteOffset, CD.byteLength)
-      } catch (iD) {
-        throw pD.destroy(), iD
+        tU.queue.writeBuffer(pU, 0, RU.buffer, RU.byteOffset, RU.byteLength)
+      } catch (EU) {
+        throw pU.destroy(), EU
       }
-      return pD
+      return pU
     }
-    var vD = cD(40830),
-      ND = new fD.h(1),
-      gD = new fD.e(ND.buffer);
+    var eU = gU(41092),
+      WU = new PU.i(1),
+      fU = new PU.d(WU.buffer);
 
-    function XD(DD) {
-      let CD = 0;
-      for (const cD of DD) CD += cD._lightVersion ?? 0;
-      return CD
+    function xU(UU) {
+      let RU = 0;
+      for (const gU of UU) RU += gU._lightVersion ?? 0;
+      return RU
     }
 
-    function mD(DD, CD) {
-      DD.fill(0);
-      let cD = 0;
-      for (const ID of CD) {
-        if (cD >= vD.b) break;
-        ID._writeLightUbo && (ID._writeLightUbo(DD, 4 + 16 * cD), cD++)
+    function mU(UU, RU) {
+      UU.fill(0);
+      let gU = 0;
+      for (const tU of RU) {
+        if (gU >= eU.b) break;
+        tU._writeLightUbo && (tU._writeLightUbo(UU, 4 + 16 * gU), gU++)
       }
-      ND[0] = cD, DD[0] = gD[0]
+      WU[0] = gU, UU[0] = fU[0]
     }
 
-    function nD(DD, CD) {
-      let cD = CD._lightGpuState;
-      const ID = 16 + 16 * vD.b * 4;
-      if (cD && cD._byteSize === ID) return cD;
-      const pD = !cD;
-      cD?._buffer.destroy();
-      const iD = new fD.e(ID / 4);
-      return mD(iD, CD.lights), DD._applyLightFoOffset?.(iD, CD), cD = {
-        _buffer: oD(DD, iD),
-        _scratch: iD,
-        lV: XD(CD.lights) + (DD._lightFoVersion?.(CD) ?? 0),
-        _listVersion: CD._lightListVersion ?? 0,
-        _lightCount: CD.lights.length,
-        _byteSize: ID
-      }, CD._lightGpuState = cD, pD && CD._disposables.push((() => {
-        CD._lightGpuState?._buffer.destroy(), CD._lightGpuState = void 0
-      })), cD
+    function IU(UU, RU) {
+      let gU = RU._lightGpuState;
+      const tU = 16 + 16 * eU.b * 4;
+      if (gU && gU._byteSize === tU) return gU;
+      const pU = !gU;
+      gU?._buffer.destroy();
+      const EU = new PU.d(tU / 4);
+      return mU(EU, RU.lights), UU._applyLightFoOffset?.(EU, RU), gU = {
+        _buffer: QU(UU, EU),
+        _scratch: EU,
+        lV: xU(RU.lights) + (UU._lightFoVersion?.(RU) ?? 0),
+        _listVersion: RU._lightListVersion ?? 0,
+        _lightCount: RU.lights.length,
+        _byteSize: tU
+      }, RU._lightGpuState = gU, pU && RU._disposables.push((() => {
+        RU._lightGpuState?._buffer.destroy(), RU._lightGpuState = void 0
+      })), gU
     }
 
-    function OD(DD, CD) {
-      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      const pD = CD;
-      if (0 === ID && 16 === pD.length) return void DD.set(pD, cD);
-      const iD = ID,
-        fD = cD;
-      DD[fD + 0] = pD[iD + 0], DD[fD + 1] = pD[iD + 1], DD[fD + 2] = pD[iD + 2], DD[fD + 3] = pD[iD + 3], DD[fD + 4] = pD[iD + 4], DD[fD + 5] = pD[iD + 5], DD[fD + 6] = pD[iD + 6], DD[fD + 7] = pD[iD + 7], DD[fD + 8] = pD[iD + 8], DD[fD + 9] = pD[iD + 9], DD[fD + 10] = pD[iD + 10], DD[fD + 11] = pD[iD + 11], DD[fD + 12] = pD[iD + 12], DD[fD + 13] = pD[iD + 13], DD[fD + 14] = pD[iD + 14], DD[fD + 15] = pD[iD + 15]
+    function JU(UU, RU) {
+      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      const pU = RU;
+      if (0 === tU && 16 === pU.length) return void UU.set(pU, gU);
+      const EU = tU,
+        PU = gU;
+      UU[PU + 0] = pU[EU + 0], UU[PU + 1] = pU[EU + 1], UU[PU + 2] = pU[EU + 2], UU[PU + 3] = pU[EU + 3], UU[PU + 4] = pU[EU + 4], UU[PU + 5] = pU[EU + 5], UU[PU + 6] = pU[EU + 6], UU[PU + 7] = pU[EU + 7], UU[PU + 8] = pU[EU + 8], UU[PU + 9] = pU[EU + 9], UU[PU + 10] = pU[EU + 10], UU[PU + 11] = pU[EU + 11], UU[PU + 12] = pU[EU + 12], UU[PU + 13] = pU[EU + 13], UU[PU + 14] = pU[EU + 14], UU[PU + 15] = pU[EU + 15]
     }
 
-    function PD(DD, CD, cD, ID, pD) {
-      DD.fill(0);
-      const iD = function(DD, CD) {
-          const cD = wD(DD);
-          if (DD._vpVer === cD && DD._vpAspect === CD) return DD._vpCache;
-          const ID = DD._vpCache;
-          return function(DD, CD, cD, ID, pD, iD) {
-            const fD = cD[ID],
-              bD = cD[ID + 1],
-              QD = cD[ID + 2],
-              wD = cD[ID + 3],
-              SD = cD[ID + 4],
-              BD = cD[ID + 5],
-              yD = cD[ID + 6],
-              MD = cD[ID + 7],
-              tD = cD[ID + 8],
-              ZD = cD[ID + 9],
-              oD = cD[ID + 10],
-              vD = cD[ID + 11],
-              ND = cD[ID + 12],
-              gD = cD[ID + 13],
-              XD = cD[ID + 14],
-              mD = cD[ID + 15];
-            let nD = pD[iD],
-              OD = pD[iD + 1],
-              PD = pD[iD + 2],
-              HD = pD[iD + 3];
-            DD[CD] = fD * nD + SD * OD + tD * PD + ND * HD, DD[CD + 1] = bD * nD + BD * OD + ZD * PD + gD * HD, DD[CD + 2] = QD * nD + yD * OD + oD * PD + XD * HD, DD[CD + 3] = wD * nD + MD * OD + vD * PD + mD * HD, nD = pD[iD + 4], OD = pD[iD + 5], PD = pD[iD + 6], HD = pD[iD + 7], DD[CD + 4] = fD * nD + SD * OD + tD * PD + ND * HD, DD[CD + 5] = bD * nD + BD * OD + ZD * PD + gD * HD, DD[CD + 6] = QD * nD + yD * OD + oD * PD + XD * HD, DD[CD + 7] = wD * nD + MD * OD + vD * PD + mD * HD, nD = pD[iD + 8], OD = pD[iD + 9], PD = pD[iD + 10], HD = pD[iD + 11], DD[CD + 8] = fD * nD + SD * OD + tD * PD + ND * HD, DD[CD + 9] = bD * nD + BD * OD + ZD * PD + gD * HD, DD[CD + 10] = QD * nD + yD * OD + oD * PD + XD * HD, DD[CD + 11] = wD * nD + MD * OD + vD * PD + mD * HD, nD = pD[iD + 12], OD = pD[iD + 13], PD = pD[iD + 14], HD = pD[iD + 15], DD[CD + 12] = fD * nD + SD * OD + tD * PD + ND * HD, DD[CD + 13] = bD * nD + BD * OD + ZD * PD + gD * HD, DD[CD + 14] = QD * nD + yD * OD + oD * PD + XD * HD, DD[CD + 15] = wD * nD + MD * OD + vD * PD + mD * HD
-          }(ID, 0, SD(DD, CD), 0, bD(DD), 0), DD._vpVer = cD, DD._vpAspect = CD, ID
-        }(ID, pD),
-        fD = bD(ID),
-        QD = ID.worldMatrix;
-      OD(DD, iD, 0), OD(DD, fD, 16), CD.useFloatingOrigin ? (DD[32] = 0, DD[33] = 0, DD[34] = 0) : (DD[32] = QD[12], DD[33] = QD[13], DD[34] = QD[14]), DD[87] = CD.canvas.width;
-      const BD = cD.imageProcessing;
-      DD[76] = BD.exposure, DD[77] = BD.contrast, DD[78] = cD._envTextures?.lodGenerationScale ?? .8, DD[79] = +BD.toneMappingEnabled, DD[37] = CD.canvas.height
+    function wU(UU, RU, gU, tU, pU) {
+      UU.fill(0);
+      const EU = function(UU, RU) {
+          const gU = KU(UU);
+          if (UU._vpVer === gU && UU._vpAspect === RU) return UU._vpCache;
+          const tU = UU._vpCache;
+          return function(UU, RU, gU, tU, pU, EU) {
+            const PU = gU[tU],
+              TU = gU[tU + 1],
+              qU = gU[tU + 2],
+              KU = gU[tU + 3],
+              cU = gU[tU + 4],
+              GU = gU[tU + 5],
+              jU = gU[tU + 6],
+              uU = gU[tU + 7],
+              CU = gU[tU + 8],
+              hU = gU[tU + 9],
+              QU = gU[tU + 10],
+              eU = gU[tU + 11],
+              WU = gU[tU + 12],
+              fU = gU[tU + 13],
+              xU = gU[tU + 14],
+              mU = gU[tU + 15];
+            let IU = pU[EU],
+              JU = pU[EU + 1],
+              wU = pU[EU + 2],
+              nU = pU[EU + 3];
+            UU[RU] = PU * IU + cU * JU + CU * wU + WU * nU, UU[RU + 1] = TU * IU + GU * JU + hU * wU + fU * nU, UU[RU + 2] = qU * IU + jU * JU + QU * wU + xU * nU, UU[RU + 3] = KU * IU + uU * JU + eU * wU + mU * nU, IU = pU[EU + 4], JU = pU[EU + 5], wU = pU[EU + 6], nU = pU[EU + 7], UU[RU + 4] = PU * IU + cU * JU + CU * wU + WU * nU, UU[RU + 5] = TU * IU + GU * JU + hU * wU + fU * nU, UU[RU + 6] = qU * IU + jU * JU + QU * wU + xU * nU, UU[RU + 7] = KU * IU + uU * JU + eU * wU + mU * nU, IU = pU[EU + 8], JU = pU[EU + 9], wU = pU[EU + 10], nU = pU[EU + 11], UU[RU + 8] = PU * IU + cU * JU + CU * wU + WU * nU, UU[RU + 9] = TU * IU + GU * JU + hU * wU + fU * nU, UU[RU + 10] = qU * IU + jU * JU + QU * wU + xU * nU, UU[RU + 11] = KU * IU + uU * JU + eU * wU + mU * nU, IU = pU[EU + 12], JU = pU[EU + 13], wU = pU[EU + 14], nU = pU[EU + 15], UU[RU + 12] = PU * IU + cU * JU + CU * wU + WU * nU, UU[RU + 13] = TU * IU + GU * JU + hU * wU + fU * nU, UU[RU + 14] = qU * IU + jU * JU + QU * wU + xU * nU, UU[RU + 15] = KU * IU + uU * JU + eU * wU + mU * nU
+          }(tU, 0, cU(UU, RU), 0, TU(UU), 0), UU._vpVer = gU, UU._vpAspect = RU, tU
+        }(tU, pU),
+        PU = TU(tU),
+        qU = tU.worldMatrix;
+      JU(UU, EU, 0), JU(UU, PU, 16), RU.useFloatingOrigin ? (UU[32] = 0, UU[33] = 0, UU[34] = 0) : (UU[32] = qU[12], UU[33] = qU[13], UU[34] = qU[14]), UU[87] = RU.canvas.width;
+      const GU = gU.imageProcessing;
+      UU[76] = GU.exposure, UU[77] = GU.contrast, UU[78] = gU._envTextures?.lodGenerationScale ?? .8, UU[79] = +GU.toneMappingEnabled, UU[37] = RU.canvas.height
     }
 
-    function HD(DD, CD) {
+    function nU(UU, RU) {
       return {
-        _renderables: DD,
+        _renderables: UU,
         _opaqueBindings: [],
         _directBindings: [],
         _transparentBindings: [],
         _ob: [],
-        _lastVersion: CD
+        _lastVersion: RU
       }
     }
 
-    function UD(DD, CD, cD) {
-      DD.clr ??= !0;
-      const pD = DD.rt._descriptor,
-        iD = DD.depth?._descriptor,
-        QD = {
-          _colorFormat: pD.format,
-          _depthStencilFormat: iD?.dFormat ?? pD.dFormat,
-          _depthCompare: pD.depthCompare ?? iD?.depthCompare,
-          _sampleCount: pD.samples
+    function bU(UU, RU, gU) {
+      UU.clr ??= !0;
+      const pU = UU.rt._descriptor,
+        EU = UU.depth?._descriptor,
+        qU = {
+          _colorFormat: pU.format,
+          _depthStencilFormat: EU?.dFormat ?? pU.dFormat,
+          _depthCompare: pU.depthCompare ?? EU?.depthCompare,
+          _sampleCount: pU.samples
         },
-        SD = {
+        cU = {
           loadOp: "clear",
           storeOp: "store"
         },
-        BD = {
-          ...HD([], -1),
-          name: DD.name,
-          _config: DD,
-          _ownsTargets: !DD.sharedRt,
-          engine: CD,
-          wo: cD,
+        GU = {
+          ...nU([], -1),
+          name: UU.name,
+          _config: UU,
+          _ownsTargets: !UU.sharedRt,
+          engine: RU,
+          Zh: gU,
           _passes: [],
           _renderPassDescriptor: {
-            colorAttachments: [SD]
+            colorAttachments: [cU]
           },
-          _colorAttachment: SD,
-          _sceneUBO: yD(CD, 368),
-          _suData: new fD.e(92),
+          _colorAttachment: cU,
+          _sceneUBO: jU(RU, 368),
+          _suData: new PU.d(92),
           _sceneUboCacheKey: [],
-          _targetSignature: QD,
+          _targetSignature: qU,
           _updateContext: {
             targetWidth: 0,
             targetHeight: 0
           },
           record() {
-            if (BD._disposed) throw new Error("RenderTask has been disposed.");
-            BD._recordExplicit ? BD._recordExplicit(BD, !0) : JD(BD, !1 !== DD.autoMirror ? cD._renderables.slice() : BD._renderables, !0)
+            if (GU._disposed) throw new Error("RenderTask has been disposed.");
+            GU._recordExplicit ? GU._recordExplicit(GU, !0) : aU(GU, !1 !== UU.autoMirror ? gU._renderables.slice() : GU._renderables, !0)
           },
-          execute: () => function(DD, CD, cD) {
-            if (!1 === DD.enabled) return 0;
-            const ID = DD.wo;
-            ! function(DD, CD, cD) {
-              const ID = DD.wo;
-              !1 !== DD._config.autoMirror && DD._lastVersion !== ID._renderableVersion && JD(DD, ID._renderables.slice());
-              aD(DD, CD);
-              const pD = DD._updateContext,
-                iD = DD._config.cam ?? ID.camera;
-              cD._colorFormat && (DD._config._skipClusteredLights || ID._clusteredLightUpdater?.(iD, pD.targetWidth, pD.targetHeight), function(DD, CD) {
-                const cD = nD(DD, CD),
-                  ID = XD(CD.lights) + (DD._lightFoVersion?.(CD) ?? 0),
-                  pD = CD._lightListVersion ?? 0;
-                ID === cD.lV && pD === cD._listVersion && CD.lights.length === cD._lightCount || (cD.lV = ID, cD._listVersion = pD, cD._lightCount = CD.lights.length, mD(cD._scratch, CD.lights), DD._applyLightFoOffset?.(cD._scratch, CD), DD._device.queue.writeBuffer(cD._buffer, 0, cD._scratch)), cD._buffer
-              }(CD, ID));
-              (function(DD, CD, cD, ID) {
-                if (!ID) return;
-                const pD = ID.viewport,
-                  iD = DD._config.rt,
-                  fD = (DD._config.cs ? CD.canvas.width / CD.canvas.height : iD._width / iD._height) * (pD ? pD.width / pD.height : 1),
-                  bD = cD.fog,
-                  QD = cD.imageProcessing,
-                  SD = wD(ID),
-                  BD = cD._envTextures,
-                  yD = DD._sceneUboCacheKey;
-                if (yD[0] === ID && yD[1] === bD && yD[2] === SD && yD[3] === fD && yD[4] === QD.exposure && yD[5] === QD.contrast && yD[6] === BD) return;
-                yD[0] = ID, yD[1] = bD, yD[2] = SD, yD[3] = fD, yD[4] = QD.exposure, yD[5] = QD.contrast, yD[6] = BD;
-                const MD = DD._suData;
-                PD(MD, CD, cD, ID, fD);
-                const tD = cD._sceneUboContributors;
-                if (tD)
-                  for (const wD of tD) wD(MD, cD);
-                CD._device.queue.writeBuffer(DD._sceneUBO, 0, MD)
-              })(DD, CD, ID, iD), pD.FY = iD, DD._batchState?._reset(), VD(DD._opaqueBindings, pD), VD(DD._directBindings, pD), VD(DD._transparentBindings, pD), DD._batchState?._flush(CD),
-                function(DD, CD) {
-                  const cD = DD._transparentBindings;
-                  if (cD.length <= 1 || !CD) return;
-                  const ID = bD(CD);
-                  for (const pD of cD) {
-                    const DD = pD.renderable._worldCenter;
-                    pD._sortDistance = DD ? DD[0] * ID[2] + DD[1] * ID[6] + DD[2] * ID[10] + ID[14] : 0
+          execute: () => function(UU, RU, gU) {
+            if (!1 === UU.enabled) return 0;
+            const tU = UU.Zh;
+            ! function(UU, RU, gU) {
+              const tU = UU.Zh;
+              !1 !== UU._config.autoMirror && UU._lastVersion !== tU._renderableVersion && aU(UU, tU._renderables.slice());
+              BU(UU, RU);
+              const pU = UU._updateContext,
+                EU = UU._config.cam ?? tU.camera;
+              gU._colorFormat && (UU._config._skipClusteredLights || tU._clusteredLightUpdater?.(EU, pU.targetWidth, pU.targetHeight), function(UU, RU) {
+                const gU = IU(UU, RU),
+                  tU = xU(RU.lights) + (UU._lightFoVersion?.(RU) ?? 0),
+                  pU = RU._lightListVersion ?? 0;
+                tU === gU.lV && pU === gU._listVersion && RU.lights.length === gU._lightCount || (gU.lV = tU, gU._listVersion = pU, gU._lightCount = RU.lights.length, mU(gU._scratch, RU.lights), UU._applyLightFoOffset?.(gU._scratch, RU), UU._device.queue.writeBuffer(gU._buffer, 0, gU._scratch)), gU._buffer
+              }(RU, tU));
+              (function(UU, RU, gU, tU) {
+                if (!tU) return;
+                const pU = tU.viewport,
+                  EU = UU._config.rt,
+                  PU = (UU._config.cs ? RU.canvas.width / RU.canvas.height : EU._width / EU._height) * (pU ? pU.width / pU.height : 1),
+                  TU = gU.fog,
+                  qU = gU.imageProcessing,
+                  cU = KU(tU),
+                  GU = gU._envTextures,
+                  jU = UU._sceneUboCacheKey;
+                if (jU[0] === tU && jU[1] === TU && jU[2] === cU && jU[3] === PU && jU[4] === qU.exposure && jU[5] === qU.contrast && jU[6] === GU) return;
+                jU[0] = tU, jU[1] = TU, jU[2] = cU, jU[3] = PU, jU[4] = qU.exposure, jU[5] = qU.contrast, jU[6] = GU;
+                const uU = UU._suData;
+                wU(uU, RU, gU, tU, PU);
+                const CU = gU._sceneUboContributors;
+                if (CU)
+                  for (const KU of CU) KU(uU, gU);
+                RU._device.queue.writeBuffer(UU._sceneUBO, 0, uU)
+              })(UU, RU, tU, EU), pU.mD = EU, UU._batchState?._reset(), VU(UU._opaqueBindings, pU), VU(UU._directBindings, pU), VU(UU._transparentBindings, pU), UU._batchState?._flush(RU),
+                function(UU, RU) {
+                  const gU = UU._transparentBindings;
+                  if (gU.length <= 1 || !RU) return;
+                  const tU = TU(RU);
+                  for (const pU of gU) {
+                    const UU = pU.renderable._worldCenter;
+                    pU._sortDistance = UU ? UU[0] * tU[2] + UU[1] * tU[6] + UU[2] * tU[10] + tU[14] : 0
                   }
-                  cD.sort(xD)
-                }(DD, iD)
-            }(DD, CD, cD);
-            const pD = DD._colorAttachment,
-              iD = DD._config;
-            iD.rt._colorView && (iD.rt === ID.surface.scRT && (pD.view = iD.rt._colorView), pD.resolveTarget = iD.rst?._colorView ?? void 0, pD.clearValue = iD.clrColor ?? ID.clearColor, pD.loadOp = iD.clr ? "clear" : "load");
-            if (DD._executeWithTransmission) return DD._executeWithTransmission(cD._sampleCount);
-            const fD = CD._currentEncoder.beginRenderPass(DD._renderPassDescriptor),
-              QD = KD(DD, fD);
-            return fD.end(), QD
-          }(BD, CD, QD),
+                  gU.sort(oU)
+                }(UU, EU)
+            }(UU, RU, gU);
+            const pU = UU._colorAttachment,
+              EU = UU._config;
+            EU.rt._colorView && (EU.rt === tU.surface.scRT && (pU.view = EU.rt._colorView), pU.resolveTarget = EU.rst?._colorView ?? void 0, pU.clearValue = EU.clrColor ?? tU.clearColor, pU.loadOp = EU.clr ? "clear" : "load");
+            if (UU._executeWithTransmission) return UU._executeWithTransmission(gU._sampleCount);
+            const PU = RU._currentEncoder.beginRenderPass(UU._renderPassDescriptor),
+              qU = YU(UU, PU);
+            return PU.end(), qU
+          }(GU, RU, qU),
           dispose() {
-            if (BD._disposed) return;
-            BD._disposed = !0;
-            const CD = BD._pendingMeshes;
-            CD && (CD.length = 0);
-            for (const DD of BD._renderables) BD._retireRenderable?.(BD.engine, DD);
-            BD._passes.length = BD._opaqueBindings.length = BD._directBindings.length = 0, BD._transparentBindings.length = BD._renderables.length = BD._ob.length = 0, BD._ownsTargets && ((0, ID.i)(DD.rt), (0, ID.i)(DD.rst)), DD.depth?._eager || (0, ID.i)(DD.depth);
-            const cD = BD._sceneUBO;
-            (0, MD.e)(BD.engine, (() => cD.destroy())), BD._batchState?._release(BD.engine), BD._batchState = void 0
+            if (GU._disposed) return;
+            GU._disposed = !0;
+            const RU = GU._pendingMeshes;
+            RU && (RU.length = 0);
+            for (const UU of GU._renderables) GU._retireRenderable?.(GU.engine, UU);
+            GU._passes.length = GU._opaqueBindings.length = GU._directBindings.length = 0, GU._transparentBindings.length = GU._renderables.length = GU._ob.length = 0, GU._ownsTargets && ((0, tU.i)(UU.rt), (0, tU.i)(UU.rst)), UU.depth?._eager || (0, tU.i)(UU.depth);
+            const gU = GU._sceneUBO;
+            (0, uU.c)(GU.engine, (() => gU.destroy())), GU._batchState?._release(GU.engine), GU._batchState = void 0
           }
         };
-      return BD
+      return GU
     }
 
-    function xD(DD, CD) {
-      return CD._sortDistance - DD._sortDistance || DD.renderable.order - CD.renderable.order
+    function oU(UU, RU) {
+      return RU._sortDistance - UU._sortDistance || UU.renderable.order - RU.renderable.order
     }
 
-    function qD(DD, CD) {
-      return DD.renderable.order - CD.renderable.order
+    function ZU(UU, RU) {
+      return UU.renderable.order - RU.renderable.order
     }
 
-    function JD(DD) {
-      let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : DD._renderables,
-        cD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        pD = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
-        iD = arguments.length > 4 ? arguments[4] : void 0;
-      const fD = DD._config,
-        bD = fD.rt,
-        QD = DD._batchState,
-        wD = HD(CD, DD.wo._renderableVersion);
-      if (cD) {
-        const CD = (CD, cD) => {
-          CD && (cD || DD._ownsTargets || CD._eager) && (0, ID.h)(CD, DD.engine)
+    function aU(UU) {
+      let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : UU._renderables,
+        gU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        pU = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+        EU = arguments.length > 4 ? arguments[4] : void 0;
+      const PU = UU._config,
+        TU = PU.rt,
+        qU = UU._batchState,
+        KU = nU(RU, UU.Zh._renderableVersion);
+      if (gU) {
+        const RU = (RU, gU) => {
+          RU && (gU || UU._ownsTargets || RU._eager) && (0, tU.h)(RU, UU.engine)
         };
-        CD(bD), bD._descriptor.samples > 1 && CD(fD.rst), CD(fD.depth, !0)
+        RU(TU), TU._descriptor.samples > 1 && RU(PU.rst), RU(PU.depth, !0)
       }
       const {
-        _opaqueBindings: SD,
-        _directBindings: BD,
-        _transparentBindings: yD
-      } = wD;
+        _opaqueBindings: cU,
+        _directBindings: GU,
+        _transparentBindings: jU
+      } = KU;
       try {
-        for (const cD of CD) {
-          const CD = cD.bind(DD.engine, DD._targetSignature);
-          wD._batchState = DD._targetSignature._collectBatches?.(wD._batchState, CD), cD.isTransparent || cD._transmissive ? yD.push(CD) : cD._direct ? BD.push(CD) : SD.push(CD)
+        for (const gU of RU) {
+          const RU = gU.bind(UU.engine, UU._targetSignature);
+          KU._batchState = UU._targetSignature._collectBatches?.(KU._batchState, RU), gU.isTransparent || gU._transmissive ? jU.push(RU) : gU._direct ? GU.push(RU) : cU.push(RU)
         }
-        SD.sort(qD), BD.sort(qD), cD && aD(DD, DD.engine, !1)
-      } catch (MD) {
-        throw wD._batchState?._release(void 0, iD ?? [QD]), MD
+        cU.sort(ZU), GU.sort(ZU), gU && BU(UU, UU.engine, !1)
+      } catch (uU) {
+        throw KU._batchState?._release(void 0, EU ?? [qU]), uU
       }
-      return cD && (! function(DD, CD) {
-        const cD = DD._config,
-          ID = DD._colorAttachment;
-        ID.view = CD._colorView, DD._renderPassDescriptor.colorAttachments = CD._colorView ? [ID] : [];
-        const pD = cD.depth ?? CD,
-          iD = pD._depthView;
-        let fD;
-        if (iD) {
-          const DD = pD._descriptor,
-            CD = (cD.depth ? pD._eager : !1 === cD.depthClear) ? "load" : "clear";
-          fD = {
-            view: iD,
-            depthClearValue: DD.depthClearValue ?? 0,
-            depthLoadOp: CD,
+      return gU && (! function(UU, RU) {
+        const gU = UU._config,
+          tU = UU._colorAttachment;
+        tU.view = RU._colorView, UU._renderPassDescriptor.colorAttachments = RU._colorView ? [tU] : [];
+        const pU = gU.depth ?? RU,
+          EU = pU._depthView;
+        let PU;
+        if (EU) {
+          const UU = pU._descriptor,
+            RU = (gU.depth ? pU._eager : !1 === gU.depthClear) ? "load" : "clear";
+          PU = {
+            view: EU,
+            depthClearValue: UU.depthClearValue ?? 0,
+            depthLoadOp: RU,
             depthStoreOp: "store"
-          }, DD.dFormat?.includes("stencil") && (fD.stencilClearValue = 0, fD.stencilLoadOp = CD, fD.stencilStoreOp = "store")
+          }, UU.dFormat?.includes("stencil") && (PU.stencilClearValue = 0, PU.stencilLoadOp = RU, PU.stencilStoreOp = "store")
         }
-        DD._renderPassDescriptor.depthStencilAttachment = fD
-      }(DD, bD), DD._updateContext.targetWidth = bD._width, DD._updateContext.targetHeight = bD._height), pD && (Object.assign(DD, wD), QD?._release(DD.engine, [wD._batchState])), wD
+        UU._renderPassDescriptor.depthStencilAttachment = PU
+      }(UU, TU), UU._updateContext.targetWidth = TU._width, UU._updateContext.targetHeight = TU._height), pU && (Object.assign(UU, KU), qU?._release(UU.engine, [KU._batchState])), KU
     }
 
-    function KD(DD, CD) {
-      const cD = DD.engine,
-        ID = DD._config,
-        iD = ID.rt,
-        fD = DD.wo,
-        bD = DD._opaqueBindings,
-        QD = DD._ob,
-        wD = DD._sceneBG;
-      if (function(DD, CD, cD, ID) {
-          const pD = CD?.viewport;
-          if (!pD) return;
-          const iD = Math.floor(pD.x * cD),
-            fD = Math.floor((1 - pD.y - pD.height) * ID),
-            bD = Math.ceil((pD.x + pD.width) * cD) - iD,
-            QD = Math.ceil((1 - pD.y) * ID) - fD;
-          DD.setViewport(iD, fD, bD, QD, 0, 1), DD.setScissorRect(iD, fD, bD, QD)
-        }(CD, ID.cam ?? fD.camera, iD._width, iD._height), CD.setBindGroup(0, wD), DD._lastVis !== pD.d || !QD.length) {
-        const CD = iD._descriptor,
-          ID = cD._device.createRenderBundleEncoder({
-            colorFormats: CD.format ? [CD.format] : [],
-            depthStencilFormat: DD._targetSignature._depthStencilFormat,
-            sampleCount: CD.samples
+    function YU(UU, RU) {
+      const gU = UU.engine,
+        tU = UU._config,
+        EU = tU.rt,
+        PU = UU.Zh,
+        TU = UU._opaqueBindings,
+        qU = UU._ob,
+        KU = UU._sceneBG;
+      if (function(UU, RU, gU, tU) {
+          const pU = RU?.viewport;
+          if (!pU) return;
+          const EU = Math.floor(pU.x * gU),
+            PU = Math.floor((1 - pU.y - pU.height) * tU),
+            TU = Math.ceil((pU.x + pU.width) * gU) - EU,
+            qU = Math.ceil((1 - pU.y) * tU) - PU;
+          UU.setViewport(EU, PU, TU, qU, 0, 1), UU.setScissorRect(EU, PU, TU, qU)
+        }(RU, tU.cam ?? PU.camera, EU._width, EU._height), RU.setBindGroup(0, KU), UU._lastVis !== pU.e || !qU.length) {
+        const RU = EU._descriptor,
+          tU = gU._device.createRenderBundleEncoder({
+            colorFormats: RU.format ? [RU.format] : [],
+            depthStencilFormat: UU._targetSignature._depthStencilFormat,
+            sampleCount: RU.samples
           });
-        ID.setBindGroup(0, wD), zD(ID, bD, cD), QD[0] = ID.finish(), DD._lastVis = pD.d
+        tU.setBindGroup(0, KU), rU(tU, TU, gU), qU[0] = tU.finish(), UU._lastVis = pU.e
       }
-      let SD = bD.length;
-      return CD.executeBundles(QD), CD.setBindGroup(0, wD), SD += zD(CD, DD._directBindings, cD), SD += zD(CD, DD._transparentBindings, cD), SD
+      let cU = TU.length;
+      return RU.executeBundles(qU), RU.setBindGroup(0, KU), cU += rU(RU, UU._directBindings, gU), cU += rU(RU, UU._transparentBindings, gU), cU
     }
 
-    function aD(DD, CD) {
-      let cD = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-      const ID = nD(CD, DD.wo)._buffer;
-      if (ID === DD._lightsUBO) return;
-      const pD = CD._device.createBindGroup({
-        layout: ZD(CD),
+    function BU(UU, RU) {
+      let gU = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+      const tU = IU(RU, UU.Zh)._buffer;
+      if (tU === UU._lightsUBO) return;
+      const pU = RU._device.createBindGroup({
+        layout: hU(RU),
         entries: [{
           binding: 0,
           resource: {
-            buffer: DD._sceneUBO
+            buffer: UU._sceneUBO
           }
         }, {
           binding: 1,
           resource: {
-            buffer: ID
+            buffer: tU
           }
         }]
       });
-      DD._lightsUBO = ID, DD._sceneBG = pD, cD && (DD._ob = [])
+      UU._lightsUBO = tU, UU._sceneBG = pU, gU && (UU._ob = [])
     }
 
-    function VD(DD, CD) {
-      for (const cD of DD) cD.update?.(CD)
+    function VU(UU, RU) {
+      for (const gU of UU) gU.update?.(RU)
     }
 
-    function zD(DD, CD, cD) {
-      let ID = null,
-        pD = 0;
-      for (const iD of CD) {
-        const CD = iD.renderable.mesh;
-        CD && !1 === CD.visible || (iD.pipeline !== ID && (DD.setPipeline(iD.pipeline), ID = iD.pipeline), pD += iD.draw(DD, cD))
+    function rU(UU, RU, gU) {
+      let tU = null,
+        pU = 0;
+      for (const EU of RU) {
+        const RU = EU.renderable.mesh;
+        RU && !1 === RU.visible || (EU.pipeline !== tU && (UU.setPipeline(EU.pipeline), tU = EU.pipeline), pU += EU.draw(UU, gU))
       }
-      return pD
+      return pU
     }
 
-    function jD(DD) {
-      const CD = DD._materialSwapQueue;
-      if (!CD[0] || DD._runtimeBuilds?.w) return;
-      let ID, pD, iD;
-      const fD = DD._renderables;
-      for (const cD of CD) {
-        const CD = cD.material;
-        if (!CD) continue;
-        const bD = cD._runtimeThinBuild;
-        if (bD) {
-          pD = bD(DD, cD, pD);
+    function XU(UU) {
+      const RU = UU._materialSwapQueue;
+      if (!RU[0] || UU._runtimeBuilds?.w) return;
+      let tU, pU, EU;
+      const PU = UU._renderables;
+      for (const gU of RU) {
+        const RU = gU.material;
+        if (!RU) continue;
+        const TU = gU._runtimeThinBuild;
+        if (TU) {
+          pU = TU(UU, gU, pU);
           continue
         }
-        const QD = DD._groups.get(CD._buildGroup),
-          wD = QD?.r;
-        if (!wD) {
-          (iD ??= []).push(cD);
+        const qU = UU._groups.get(RU._buildGroup),
+          KU = qU?.r;
+        if (!KU) {
+          (EU ??= []).push(gU);
           continue
         }
-        if (QD._w?.(cD)) {
-          (iD ??= []).push([cD, CD]);
+        if (qU._w?.(gU)) {
+          (EU ??= []).push([gU, RU]);
           continue
         }
-        const SD = DD._meshDisposables.get(cD);
-        SD && (DD._meshDisposables.delete(cD), (0, MD.e)(DD.surface.engine, (() => SD.forEach((DD => DD())))));
-        const BD = QD.o;
-        let yD;
-        for (let DD = fD.length; DD--;) fD[DD].mesh === cD && (yD = fD.splice(DD, 1)[0]);
-        CD._csmGen = -~CD._csmGen;
-        const tD = wD(DD, cD);
-        if (BD) {
-          const DD = BD.indexOf(yD);
-          DD < 0 ? BD.push(tD) : BD[DD] = tD
+        const cU = UU._meshDisposables.get(gU);
+        cU && (UU._meshDisposables.delete(gU), (0, uU.c)(UU.surface.engine, (() => cU.forEach((UU => UU())))));
+        const GU = qU.o;
+        let jU;
+        for (let UU = PU.length; UU--;) PU[UU].mesh === gU && (jU = PU.splice(UU, 1)[0]);
+        RU._csmGen = -~RU._csmGen;
+        const CU = KU(UU, gU);
+        if (GU) {
+          const UU = GU.indexOf(jU);
+          UU < 0 ? GU.push(CU) : GU[UU] = CU
         }
-        ID = fD.push(tD)
+        tU = PU.push(CU)
       }
-      if (ID && (fD.sort(((DD, CD) => DD.order - CD.order)), DD._renderableVersion++, DD._materialEpoch++), CD.length = 0, !iD) return pD;
-      const bD = iD;
-      return cD.e(355).then((() => cD(60508))).then((CD => {
+      if (tU && (PU.sort(((UU, RU) => UU.order - RU.order)), UU._renderableVersion++, UU._materialEpoch++), RU.length = 0, !EU) return pU;
+      const TU = EU;
+      return gU.e(355).then((() => gU(60644))).then((RU => {
         let {
-          C: cD
-        } = CD;
-        return cD(DD, bD, pD)
-      }), (CD => {
-        const cD = DD._runtimeBuilds;
-        cD ? cD._x(CD) : console.error(CD)
+          C: gU
+        } = RU;
+        return gU(UU, TU, pU)
+      }), (RU => {
+        const gU = UU._runtimeBuilds;
+        gU ? gU._x(RU) : console.error(RU)
       }))
     }
-    var lD = null;
+    var vU = null;
 
-    function LD(DD, CD) {
-      const cD = DD.engine,
-        pD = {
-          _kind: "wo",
-          surface: DD,
+    function dU(UU, RU) {
+      const gU = UU.engine,
+        pU = {
+          _kind: "Zh",
+          surface: UU,
           clearColor: {
             r: .2,
             g: .2,
@@ -902,365 +902,365 @@ export const modules = {
           _built: !1,
           _drawCallsPre: 0,
           _update() {
-            cD.useFloatingOrigin && pD.camera && !pD.camera._useFloatingOrigin && (pD.camera._useFloatingOrigin = !0, pD.camera._viewVer = -1, pD.camera._vpVer = -1);
-            const DD = pD.fixedDeltaMs > 0 ? pD.fixedDeltaMs : cD._currentDelta,
-              CD = cD._currentEncoder;
-            let ID = 0;
-            for (const cD of pD._beforeRender) cD(DD);
-            pD._materialSwapQueue.length && jD(pD);
-            for (const iD of pD._prePasses) ID += iD.execute(CD, cD);
-            for (const iD of pD._uniformUpdaters) iD.update(cD);
-            pD._drawCallsPre = ID
+            gU.useFloatingOrigin && pU.camera && !pU.camera._useFloatingOrigin && (pU.camera._useFloatingOrigin = !0, pU.camera._viewVer = -1, pU.camera._vpVer = -1);
+            const UU = pU.fixedDeltaMs > 0 ? pU.fixedDeltaMs : gU._currentDelta,
+              RU = gU._currentEncoder;
+            let tU = 0;
+            for (const gU of pU._beforeRender) gU(UU);
+            pU._materialSwapQueue.length && XU(pU);
+            for (const EU of pU._prePasses) tU += EU.execute(RU, gU);
+            for (const EU of pU._uniformUpdaters) EU.update(gU);
+            pU._drawCallsPre = tU
           },
-          _record: () => pD._frameGraph.execute(),
+          _record: () => pU._frameGraph.execute(),
           _resize() {
-            pD._frameGraph.build()
+            pU._frameGraph.build()
           }
         },
-        fD = function() {
-          const DD = {
+        PU = function() {
+          const UU = {
             _tasks: [],
             _currentProcessedTask: null,
             build() {
-              for (let CD = 0; CD < DD._tasks.length; CD++) iD(DD, DD._tasks[CD]);
-              for (const CD of DD._tasks)
-                for (const DD of CD._passes) DD._initialize()
+              for (let RU = 0; RU < UU._tasks.length; RU++) EU(UU, UU._tasks[RU]);
+              for (const RU of UU._tasks)
+                for (const UU of RU._passes) UU._initialize()
             },
             execute() {
-              let CD = 0;
-              for (const cD of DD._tasks)
-                if (!1 !== cD.executionEnabled)
-                  if (cD.execute) CD += cD.execute();
+              let RU = 0;
+              for (const gU of UU._tasks)
+                if (!1 !== gU.executionEnabled)
+                  if (gU.execute) RU += gU.execute();
                   else
-                    for (const DD of cD._passes) CD += DD._execute();
-              return CD
+                    for (const UU of gU._passes) RU += UU._execute();
+              return RU
             },
             dispose() {
-              for (const CD of DD._tasks) CD.dispose();
-              DD._tasks.length = 0, DD._currentProcessedTask = null
+              for (const RU of UU._tasks) RU.dispose();
+              UU._tasks.length = 0, UU._currentProcessedTask = null
             }
           };
-          return DD
+          return UU
         }();
-      if (pD._frameGraph = fD, !1 !== CD?.defaultRenderTask) {
-        const CD = DD.msaaSamples > 1,
-          iD = CD ? (0, ID.e)({
+      if (pU._frameGraph = PU, !1 !== RU?.defaultRenderTask) {
+        const RU = UU.msaaSamples > 1,
+          EU = RU ? (0, tU.d)({
             lbl: "scene-color",
-            format: DD.format,
+            format: UU.format,
             dFormat: "depth24plus-stencil8",
-            samples: DD.msaaSamples,
-            size: DD
-          }) : DD.scRT,
-          bD = CD ? void 0 : (0, ID.e)({
+            samples: UU.msaaSamples,
+            size: UU
+          }) : UU.scRT,
+          TU = RU ? void 0 : (0, tU.d)({
             lbl: "scene-depth",
             dFormat: "depth24plus-stencil8",
             samples: 1,
-            size: DD
+            size: UU
           });
-        ! function(DD, CD) {
-          DD._tasks.push(CD)
-        }(fD, UD({
-          name: "wo",
-          rt: iD,
-          rst: CD ? DD.scRT : void 0,
-          depth: bD
-        }, cD, pD))
+        ! function(UU, RU) {
+          UU._tasks.push(RU)
+        }(PU, bU({
+          name: "Zh",
+          rt: EU,
+          rst: RU ? UU.scRT : void 0,
+          depth: TU
+        }, gU, pU))
       }
-      return pD._disposables.push((() => fD.dispose())), pD
+      return pU._disposables.push((() => PU.dispose())), pU
     }
-    async function TD(DD) {
-      const CD = DD;
-      for (CD._built || (CD._materialSwapQueue.length = 0); CD._deferredBuilders.length;) {
-        const DD = CD._deferredBuilders.splice(0);
-        await Promise.all(DD.map((DD => DD())))
+    async function HU(UU) {
+      const RU = UU;
+      for (RU._built || (RU._materialSwapQueue.length = 0); RU._deferredBuilders.length;) {
+        const UU = RU._deferredBuilders.splice(0);
+        await Promise.all(UU.map((UU => UU())))
       }
-      await jD(CD), lD?.get(CD)?.() || (CD._runtimeBuilds?._e(), CD._renderableVersion++, CD._built = !0), await (CD._rebuildHook?.(CD))
+      await XU(RU), vU?.get(RU)?.() || (RU._runtimeBuilds?._e(), RU._renderableVersion++, RU._built = !0), await (RU._rebuildHook?.(RU))
     }
-    var GD = null;
-    async function RD(DD) {
-      const CD = DD,
-        ID = CD.surface;
-      (0, pD.k)(ID, CD) || (await TD(DD), CD._renderables.sort(kD), await Promise.all(CD._frameGraph._tasks.map((DD => DD._preload?.()))), GD && await GD(CD), CD._frameGraph.build(), ID._renderingContexts[0] && (await cD.e(353).then((() => cD(60498)))).configureSwapchainOverlayScene(ID, CD), lD?.get(CD)?.() || (0, pD.o)(ID, CD))
+    var SU = null;
+    async function sU(UU) {
+      const RU = UU,
+        tU = RU.surface;
+      (0, pU.l)(tU, RU) || (await HU(UU), RU._renderables.sort(yU), await Promise.all(RU._frameGraph._tasks.map((UU => UU._preload?.()))), SU && await SU(RU), RU._frameGraph.build(), tU._renderingContexts[0] && (await gU.e(353).then((() => gU(60634)))).configureSwapchainOverlayScene(tU, RU), vU?.get(RU)?.() || (0, pU.o)(tU, RU))
     }
-    var kD = (DD, CD) => DD.order - CD.order
+    var yU = (UU, RU) => UU.order - RU.order
   },
-  40788: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => wD,
-      g: () => SD
+  41071: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => KU,
+      f: () => cU
     });
-    var ID = cD(40737),
-      pD = cD(40745),
-      iD = cD(40753),
-      fD = cD(40755),
-      bD = cD(40764),
-      QD = cD(40767);
+    var tU = gU(41036),
+      pU = gU(41044),
+      EU = gU(41051),
+      PU = gU(41053),
+      TU = gU(41056),
+      qU = gU(41060);
 
-    function wD(DD, CD, cD) {
-      let bD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      (CD < 1 || cD < 1) && (0, ID.d)(676, CD, cD);
-      const wD = DD._device,
-        SD = bD.mipMaps ?? !1,
-        BD = bD.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
-        yD = SD ? (0, QD.d)(CD, cD) : 1,
-        MD = wD.createTexture({
+    function KU(UU, RU, gU) {
+      let TU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      (RU < 1 || gU < 1) && (0, tU.c)(676, RU, gU);
+      const KU = UU._device,
+        cU = TU.mipMaps ?? !1,
+        GU = TU.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
+        jU = cU ? (0, qU.e)(RU, gU) : 1,
+        uU = KU.createTexture({
           size: {
-            width: CD,
-            height: cD
+            width: RU,
+            height: gU
           },
-          format: BD,
-          mipLevelCount: yD,
-          usage: pD.i.TEXTURE_BINDING | pD.i.COPY_DST | pD.i.RENDER_ATTACHMENT
+          format: GU,
+          mipLevelCount: jU,
+          usage: pU.d.TEXTURE_BINDING | pU.d.COPY_DST | pU.d.RENDER_ATTACHMENT
         }),
-        tD = {
-          addressModeU: bD.addressModeU ?? "clamp-to-edge",
-          addressModeV: bD.addressModeV ?? "clamp-to-edge",
-          minFilter: bD.minFilter ?? "linear",
-          magFilter: bD.magFilter ?? "linear",
-          mipmapFilter: SD ? "linear" : "nearest"
+        CU = {
+          addressModeU: TU.addressModeU ?? "clamp-to-edge",
+          addressModeV: TU.addressModeV ?? "clamp-to-edge",
+          minFilter: TU.minFilter ?? "linear",
+          magFilter: TU.magFilter ?? "linear",
+          mipmapFilter: cU ? "linear" : "nearest"
         },
-        ZD = (0, fD.c)(DD, tD),
-        oD = {
-          texture: MD,
-          view: MD.createView(),
-          sampler: ZD,
-          width: CD,
-          height: cD
+        hU = (0, PU.b)(UU, CU),
+        QU = {
+          texture: uU,
+          view: uU.createView(),
+          sampler: hU,
+          width: RU,
+          height: gU
         };
-      return (0, iD.e)(oD), DD._dlr && DD._dlr.t(oD, {
+      return (0, EU.b)(QU), UU._dlr && UU._dlr.t(QU, {
         kind: "dynamic",
-        width: CD,
-        height: cD,
-        format: BD,
-        levels: yD,
-        samplerDesc: tD,
+        width: RU,
+        height: gU,
+        format: GU,
+        levels: jU,
+        samplerDesc: CU,
         source: null,
         flipY: !0,
         premultipliedAlpha: !1
-      }), oD
+      }), QU
     }
 
-    function SD(DD, CD, cD) {
-      let ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const pD = ID.invertY ?? !0,
-        iD = ID.premultiplyAlpha ?? !1;
-      DD._device.queue.copyExternalImageToTexture({
-        source: cD,
-        flipY: pD
+    function cU(UU, RU, gU) {
+      let tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      const pU = tU.invertY ?? !0,
+        EU = tU.premultiplyAlpha ?? !1;
+      UU._device.queue.copyExternalImageToTexture({
+        source: gU,
+        flipY: pU
       }, {
-        texture: CD.texture,
-        premultipliedAlpha: iD
-      }, [CD.width, CD.height]);
-      const fD = CD._recoverySource;
-      fD && "dynamic" === fD.kind && (fD.source = cD, fD.flipY = pD, fD.premultipliedAlpha = iD), CD.texture.mipLevelCount > 1 && (0, bD.generateMipmaps)(DD, CD.texture)
+        texture: RU.texture,
+        premultipliedAlpha: EU
+      }, [RU.width, RU.height]);
+      const PU = RU._recoverySource;
+      PU && "dynamic" === PU.kind && (PU.source = gU, PU.flipY = pU, PU.premultipliedAlpha = EU), RU.texture.mipLevelCount > 1 && (0, TU.generateMipmaps)(UU, RU.texture)
     }
   },
-  40779: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => QD
+  41069: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => qU
     });
-    var ID = cD(40737),
-      pD = cD(40745),
-      iD = cD(40753),
-      fD = cD(40755),
-      bD = cD(40767);
-    async function QD(DD, CD) {
-      let QD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const [wD, SD] = function(DD) {
-        const CD = DD,
-          cD = [
-            [CD.displayWidth, CD.displayHeight],
-            [CD.videoWidth, CD.videoHeight],
-            [CD.naturalWidth, CD.naturalHeight],
-            [CD.width, CD.height]
+    var tU = gU(41036),
+      pU = gU(41044),
+      EU = gU(41051),
+      PU = gU(41053),
+      TU = gU(41060);
+    async function qU(UU, RU) {
+      let qU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const [KU, cU] = function(UU) {
+        const RU = UU,
+          gU = [
+            [RU.displayWidth, RU.displayHeight],
+            [RU.videoWidth, RU.videoHeight],
+            [RU.naturalWidth, RU.naturalHeight],
+            [RU.width, RU.height]
           ];
-        for (const [ID, pD] of cD)
-          if (void 0 !== ID && void 0 !== pD && Number.isInteger(ID) && Number.isInteger(pD) && ID > 0 && pD > 0) return [ID, pD];
+        for (const [tU, pU] of gU)
+          if (void 0 !== tU && void 0 !== pU && Number.isInteger(tU) && Number.isInteger(pU) && tU > 0 && pU > 0) return [tU, pU];
         throw new TypeError("createTexture2DFromExternalImage: source has no supported positive intrinsic dimensions")
-      }(CD), [BD, yD] = function(DD, CD, cD) {
-        if (void 0 === cD) return [DD, CD];
-        if (!Number.isInteger(cD) || cD < 1) throw new TypeError(`createTexture2DFromExternalImage: maxDimension must be a positive integer (got ${cD})`);
-        if (Math.max(DD, CD) <= cD) return [DD, CD];
-        const ID = cD / Math.max(DD, CD);
-        return DD >= CD ? [cD, Math.max(1, Math.round(CD * ID))] : [Math.max(1, Math.round(DD * ID)), cD]
-      }(wD, SD, QD.maxDimension), MD = QD.mipMaps ?? !0, tD = QD.premultiplyAlpha ?? !1;
-      let ZD = CD,
-        oD = null;
-      const vD = {
+      }(RU), [GU, jU] = function(UU, RU, gU) {
+        if (void 0 === gU) return [UU, RU];
+        if (!Number.isInteger(gU) || gU < 1) throw new TypeError(`createTexture2DFromExternalImage: maxDimension must be a positive integer (got ${gU})`);
+        if (Math.max(UU, RU) <= gU) return [UU, RU];
+        const tU = gU / Math.max(UU, RU);
+        return UU >= RU ? [gU, Math.max(1, Math.round(RU * tU))] : [Math.max(1, Math.round(UU * tU)), gU]
+      }(KU, cU, qU.maxDimension), uU = qU.mipMaps ?? !0, CU = qU.premultiplyAlpha ?? !1;
+      let hU = RU,
+        QU = null;
+      const eU = {
         texture: null
       };
       try {
-        BD === wD && yD === SD || (oD = await createImageBitmap(CD, {
-          resizeWidth: BD,
-          resizeHeight: yD,
+        GU === KU && jU === cU || (QU = await createImageBitmap(RU, {
+          resizeWidth: GU,
+          resizeHeight: jU,
           resizeQuality: "high",
-          premultiplyAlpha: tD ? "premultiply" : "none",
+          premultiplyAlpha: CU ? "premultiply" : "none",
           colorSpaceConversion: "none"
-        }), ZD = oD);
-        const ND = DD._device,
-          gD = QD.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
-          XD = MD ? (0, bD.d)(BD, yD) : 1,
-          mD = XD > 1 ? (await Promise.resolve().then((() => cD(40764)))).generateMipmaps : null,
-          nD = {
-            addressModeU: QD.addressModeU ?? "repeat",
-            addressModeV: QD.addressModeV ?? "repeat",
-            minFilter: QD.minFilter ?? "linear",
-            magFilter: QD.magFilter ?? "linear",
-            mipmapFilter: MD ? "linear" : "nearest"
+        }), hU = QU);
+        const WU = UU._device,
+          fU = qU.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
+          xU = uU ? (0, TU.e)(GU, jU) : 1,
+          mU = xU > 1 ? (await Promise.resolve().then((() => gU(41056)))).generateMipmaps : null,
+          IU = {
+            addressModeU: qU.addressModeU ?? "repeat",
+            addressModeV: qU.addressModeV ?? "repeat",
+            minFilter: qU.minFilter ?? "linear",
+            magFilter: qU.magFilter ?? "linear",
+            mipmapFilter: uU ? "linear" : "nearest"
           };
-        nD.maxAnisotropy = "linear" === nD.minFilter && "linear" === nD.magFilter && "linear" === nD.mipmapFilter ? 4 : 1;
-        const OD = QD.invertY ?? !0,
-          PD = async CD => {
-            let cD;
-            ND.pushErrorScope("validation"), ND.pushErrorScope("out-of-memory");
-            let iD = null;
+        IU.maxAnisotropy = "linear" === IU.minFilter && "linear" === IU.magFilter && "linear" === IU.mipmapFilter ? 4 : 1;
+        const JU = qU.invertY ?? !0,
+          wU = async RU => {
+            let gU;
+            WU.pushErrorScope("validation"), WU.pushErrorScope("out-of-memory");
+            let EU = null;
             try {
-              const cD = vD.texture = ND.createTexture({
+              const gU = eU.texture = WU.createTexture({
                 size: {
-                  width: BD,
-                  height: yD
+                  width: GU,
+                  height: jU
                 },
-                format: gD,
-                mipLevelCount: XD,
-                usage: pD.i.TEXTURE_BINDING | pD.i.COPY_DST | pD.i.RENDER_ATTACHMENT
+                format: fU,
+                mipLevelCount: xU,
+                usage: pU.d.TEXTURE_BINDING | pU.d.COPY_DST | pU.d.RENDER_ATTACHMENT
               });
-              ND.queue.copyExternalImageToTexture({
-                source: CD,
-                flipY: OD
+              WU.queue.copyExternalImageToTexture({
+                source: RU,
+                flipY: JU
               }, {
-                texture: cD,
-                premultipliedAlpha: tD
+                texture: gU,
+                premultipliedAlpha: CU
               }, {
-                width: BD,
-                height: yD
-              }), mD && mD(DD, cD), iD = (0, fD.c)(DD, nD)
-            } catch (MD) {
-              cD = MD
+                width: GU,
+                height: jU
+              }), mU && mU(UU, gU), EU = (0, PU.b)(UU, IU)
+            } catch (uU) {
+              gU = uU
             }
-            const [bD, QD] = await Promise.all([ND.popErrorScope(), ND.popErrorScope()]);
-            if (cD) throw cD;
-            const wD = QD ?? bD;
-            if (wD) throw new Error(`createTexture2DFromExternalImage: GPU upload failed: ${wD.message}`, {
-              cause: wD
+            const [TU, qU] = await Promise.all([WU.popErrorScope(), WU.popErrorScope()]);
+            if (gU) throw gU;
+            const KU = qU ?? TU;
+            if (KU) throw new Error(`createTexture2DFromExternalImage: GPU upload failed: ${KU.message}`, {
+              cause: KU
             });
-            const SD = vD.texture;
-            return SD && iD || (0, ID.d)(677), {
-              texture: SD,
-              view: SD.createView(),
-              sampler: iD,
-              width: BD,
-              height: yD
+            const cU = eU.texture;
+            return cU && EU || (0, tU.c)(677), {
+              texture: cU,
+              view: cU.createView(),
+              sampler: EU,
+              width: GU,
+              height: jU
             }
-          }, HD = await (DD._dlr?.x(ZD, BD, yD, gD, XD, nD, OD, tD, PD)) ?? await PD(ZD);
-        return (0, iD.e)(HD), HD
-      } catch (ND) {
-        throw vD.texture?.destroy(), ND
+          }, nU = await (UU._dlr?.x(hU, GU, jU, fU, xU, IU, JU, CU, wU)) ?? await wU(hU);
+        return (0, EU.b)(nU), nU
+      } catch (WU) {
+        throw eU.texture?.destroy(), WU
       } finally {
-        oD?.close()
+        QU?.close()
       }
     }
   },
-  40764: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      generateMipmaps: () => MD,
-      recordMipmaps: () => tD
+  41056: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      generateMipmaps: () => uU,
+      recordMipmaps: () => CU
     });
-    var ID = cD(40745),
-      pD = cD(40755),
-      iD = {
+    var tU = gU(41044),
+      pU = gU(41053),
+      EU = {
         magFilter: "linear",
         minFilter: "linear"
       };
-    var fD = "@group(0)@binding(0)var t:texture_2d<f32>;@group(0)@binding(1)var s:sampler;struct V{@builtin(position)p:vec4f,@location(0)u:vec2f};@vertex fn vs(@builtin(vertex_index)i:u32)->V{let p=array<vec2f,3>(vec2f(-1,-1),vec2f(3,-1),vec2f(-1,3))[i];return V(vec4f(p,0,1),p*vec2f(.5,-.5)+.5);}@fragment fn fs(v:V)->@location(0)vec4f{return textureSample(t,s,v.u);}",
-      bD = null,
-      QD = null,
-      wD = null,
-      SD = null,
-      BD = null;
+    var PU = "@group(0)@binding(0)var t:texture_2d<f32>;@group(0)@binding(1)var s:sampler;struct V{@builtin(position)p:vec4f,@location(0)u:vec2f};@vertex fn vs(@builtin(vertex_index)i:u32)->V{let p=array<vec2f,3>(vec2f(-1,-1),vec2f(3,-1),vec2f(-1,3))[i];return V(vec4f(p,0,1),p*vec2f(.5,-.5)+.5);}@fragment fn fs(v:V)->@location(0)vec4f{return textureSample(t,s,v.u);}",
+      TU = null,
+      qU = null,
+      KU = null,
+      cU = null,
+      GU = null;
 
-    function yD(DD) {
-      const CD = DD._device;
-      CD !== BD && (bD?.clear(), bD = null, QD = null, wD = null, SD = null, BD = null, BD = CD), QD ??= CD.createShaderModule({
-        code: fD
-      }), wD ??= function(DD) {
-        return (0, pD.c)(DD, iD)
-      }(DD), SD ??= CD.createBindGroupLayout({
+    function jU(UU) {
+      const RU = UU._device;
+      RU !== GU && (TU?.clear(), TU = null, qU = null, KU = null, cU = null, GU = null, GU = RU), qU ??= RU.createShaderModule({
+        code: PU
+      }), KU ??= function(UU) {
+        return (0, pU.b)(UU, EU)
+      }(UU), cU ??= RU.createBindGroupLayout({
         entries: [{
           binding: 0,
-          visibility: ID.h.FRAGMENT,
+          visibility: tU.c.FRAGMENT,
           texture: {
             sampleType: "float"
           }
         }, {
           binding: 1,
-          visibility: ID.h.FRAGMENT,
+          visibility: tU.c.FRAGMENT,
           sampler: {}
         }]
       })
     }
 
-    function MD(DD, CD, cD) {
-      const ID = DD._device,
-        pD = ID.createCommandEncoder();
-      tD(DD, CD, pD, cD), ID.queue.submit([pD.finish()])
+    function uU(UU, RU, gU) {
+      const tU = UU._device,
+        pU = tU.createCommandEncoder();
+      CU(UU, RU, pU, gU), tU.queue.submit([pU.finish()])
     }
 
-    function tD(DD, CD, cD, ID) {
-      if (CD.mipLevelCount <= 1) return;
-      const pD = DD._device,
-        iD = function(DD, CD) {
-          const cD = DD._device;
-          yD(DD), bD ??= new Map;
-          let ID = bD.get(CD);
-          return ID || (ID = cD.createRenderPipeline({
-            layout: cD.createPipelineLayout({
-              bindGroupLayouts: [SD]
+    function CU(UU, RU, gU, tU) {
+      if (RU.mipLevelCount <= 1) return;
+      const pU = UU._device,
+        EU = function(UU, RU) {
+          const gU = UU._device;
+          jU(UU), TU ??= new Map;
+          let tU = TU.get(RU);
+          return tU || (tU = gU.createRenderPipeline({
+            layout: gU.createPipelineLayout({
+              bindGroupLayouts: [cU]
             }),
             vertex: {
-              module: QD,
+              module: qU,
               entryPoint: "vs"
             },
             fragment: {
-              module: QD,
+              module: qU,
               entryPoint: "fs",
               targets: [{
-                format: CD
+                format: RU
               }]
             },
             primitive: {
               topology: "triangle-list"
             }
-          }), bD.set(CD, ID)), ID
-        }(DD, CD.format),
-        fD = null != ID ? {
+          }), TU.set(RU, tU)), tU
+        }(UU, RU.format),
+        PU = null != tU ? {
           dimension: "2d",
-          baseArrayLayer: ID,
+          baseArrayLayer: tU,
           arrayLayerCount: 1
         } : {};
-      for (let bD = 1; bD < CD.mipLevelCount; bD++) {
-        const DD = CD.createView({
-            baseMipLevel: bD - 1,
+      for (let TU = 1; TU < RU.mipLevelCount; TU++) {
+        const UU = RU.createView({
+            baseMipLevel: TU - 1,
             mipLevelCount: 1,
-            ...fD
+            ...PU
           }),
-          ID = CD.createView({
-            baseMipLevel: bD,
+          tU = RU.createView({
+            baseMipLevel: TU,
             mipLevelCount: 1,
-            ...fD
+            ...PU
           }),
-          QD = pD.createBindGroup({
-            layout: SD,
+          qU = pU.createBindGroup({
+            layout: cU,
             entries: [{
               binding: 0,
-              resource: DD
+              resource: UU
             }, {
               binding: 1,
-              resource: wD
+              resource: KU
             }]
           }),
-          BD = cD.beginRenderPass({
+          GU = gU.beginRenderPass({
             colorAttachments: [{
-              view: ID,
+              view: tU,
               loadOp: "clear",
               storeOp: "store",
               clearValue: {
@@ -1271,82 +1271,82 @@ export const modules = {
               }
             }]
           });
-        BD.setPipeline(iD), BD.setBindGroup(0, QD), BD.draw(3), BD.end()
+        GU.setPipeline(EU), GU.setBindGroup(0, qU), GU.draw(3), GU.end()
       }
     }
   },
-  40767: (DD, CD, cD) => {
-    function ID(DD, CD) {
-      return Math.floor(Math.log2(Math.max(DD, CD))) + 1
+  41060: (UU, RU, gU) => {
+    function tU(UU, RU) {
+      return Math.floor(Math.log2(Math.max(UU, RU))) + 1
     }
-    cD.d(CD, {
-      d: () => ID
+    gU.d(RU, {
+      e: () => tU
     })
   },
-  40730: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => wD,
-      g: () => SD
+  41032: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => KU,
+      g: () => cU
     });
-    var ID = cD(40737),
-      pD = cD(40745),
-      iD = cD(40753),
-      fD = cD(40755),
-      bD = cD(40764),
-      QD = cD(40767);
+    var tU = gU(41036),
+      pU = gU(41044),
+      EU = gU(41051),
+      PU = gU(41053),
+      TU = gU(41056),
+      qU = gU(41060);
 
-    function wD(DD, CD, cD, bD) {
-      let wD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-      (CD < 1 || cD < 1 || bD < 1) && (0, ID.d)(722, CD, cD, bD);
-      const SD = DD._device,
-        BD = wD.mipMaps ?? !0,
-        yD = wD.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
-        MD = SD.createTexture({
+    function KU(UU, RU, gU, TU) {
+      let KU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      (RU < 1 || gU < 1 || TU < 1) && (0, tU.c)(722, RU, gU, TU);
+      const cU = UU._device,
+        GU = KU.mipMaps ?? !0,
+        jU = KU.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
+        uU = cU.createTexture({
           size: {
-            width: CD,
-            height: cD,
-            depthOrArrayLayers: bD
+            width: RU,
+            height: gU,
+            depthOrArrayLayers: TU
           },
           dimension: "2d",
-          format: yD,
-          mipLevelCount: BD ? (0, QD.d)(CD, cD) : 1,
-          usage: pD.i.TEXTURE_BINDING | pD.i.COPY_DST | pD.i.RENDER_ATTACHMENT
+          format: jU,
+          mipLevelCount: GU ? (0, qU.e)(RU, gU) : 1,
+          usage: pU.d.TEXTURE_BINDING | pU.d.COPY_DST | pU.d.RENDER_ATTACHMENT
         }),
-        tD = (0, fD.c)(DD, {
-          addressModeU: wD.addressModeU ?? "repeat",
-          addressModeV: wD.addressModeV ?? "repeat",
-          minFilter: wD.minFilter ?? "linear",
-          magFilter: wD.magFilter ?? "linear",
-          mipmapFilter: BD ? "linear" : "nearest"
+        CU = (0, PU.b)(UU, {
+          addressModeU: KU.addressModeU ?? "repeat",
+          addressModeV: KU.addressModeV ?? "repeat",
+          minFilter: KU.minFilter ?? "linear",
+          magFilter: KU.magFilter ?? "linear",
+          mipmapFilter: GU ? "linear" : "nearest"
         }),
-        ZD = {
-          texture: MD,
-          view: MD.createView({
+        hU = {
+          texture: uU,
+          view: uU.createView({
             dimension: "2d-array"
           }),
-          sampler: tD,
-          width: CD,
-          height: cD,
-          layers: bD
+          sampler: CU,
+          width: RU,
+          height: gU,
+          layers: TU
         };
-      return (0, iD.e)(ZD), ZD
+      return (0, EU.b)(hU), hU
     }
 
-    function SD(DD, CD, cD, pD) {
-      let iD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-      (cD < 0 || cD >= CD.layers || (0 | cD) !== cD) && (0, ID.d)(723, CD.layers, cD);
-      const fD = iD.invertY ?? !0,
-        QD = iD.premultiplyAlpha ?? !1;
-      DD._device.queue.copyExternalImageToTexture({
-        source: pD,
-        flipY: fD
+    function cU(UU, RU, gU, pU) {
+      let EU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      (gU < 0 || gU >= RU.layers || (0 | gU) !== gU) && (0, tU.c)(723, RU.layers, gU);
+      const PU = EU.invertY ?? !0,
+        qU = EU.premultiplyAlpha ?? !1;
+      UU._device.queue.copyExternalImageToTexture({
+        source: pU,
+        flipY: PU
       }, {
-        texture: CD.texture,
-        origin: [0, 0, cD],
-        premultipliedAlpha: QD
-      }, [CD.width, CD.height, 1]), CD.texture.mipLevelCount > 1 && (0, bD.generateMipmaps)(DD, CD.texture, cD)
+        texture: RU.texture,
+        origin: [0, 0, gU],
+        premultipliedAlpha: qU
+      }, [RU.width, RU.height, 1]), RU.texture.mipLevelCount > 1 && (0, TU.generateMipmaps)(UU, RU.texture, gU)
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

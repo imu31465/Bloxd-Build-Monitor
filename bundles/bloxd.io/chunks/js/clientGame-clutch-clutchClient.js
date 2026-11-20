@@ -1,22 +1,22 @@
 export const id = 13;
 export const ids = [13];
 export const modules = {
-  38592: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      default: () => ID
+  38816: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      default: () => tU
     });
-    const ID = function(DD, CD, cD) {
-      let ID;
+    const tU = function(UU, RU, gU) {
+      let tU;
       return {
-        onCreate: DD => {
-          ID = DD
+        onCreate: UU => {
+          tU = UU
         },
-        onPlayerAltAction: (DD, CD, cD, pD, iD, fD) => {
-          fD && "Mesh" === ID.getEntityType(fD) && "Quartermaster" === ID.getEntityName(fD) && ID.openShop(DD, !1, "Armoury")
+        onPlayerAltAction: (UU, RU, gU, pU, EU, PU) => {
+          PU && "Mesh" === tU.getEntityType(PU) && "Quartermaster" === tU.getEntityName(PU) && tU.openShop(UU, !1, "Armoury")
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

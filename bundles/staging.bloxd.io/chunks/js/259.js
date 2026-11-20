@@ -1,157 +1,157 @@
 export const id = 259;
 export const ids = [259];
 export const modules = {
-  39680: (DD, CD, cD) => {
-    cD.d(CD, {
-      $d: () => SD,
-      $e: () => ac,
-      Ab: () => Ic,
-      Ac: () => ND,
-      Ae: () => Qc,
-      Af: () => qc,
-      Ag: () => sc,
-      Bb: () => pc,
-      Be: () => cI,
-      Bf: () => Hc,
-      Cd: () => ZD,
-      D: () => yD,
-      Dd: () => tD,
-      Df: () => Jc,
-      Dg: () => Nc,
-      Eb: () => GD,
-      Ec: () => gD,
-      F: () => pC,
-      Fd: () => ic,
-      Fe: () => vc,
-      Gc: () => SC,
-      Gd: () => fc,
-      Gf: () => xc,
-      Hb: () => cc,
-      He: () => mc,
-      Hg: () => Yc,
-      Ic: () => wD,
-      Id: () => nD,
-      J: () => xD,
-      Jb: () => Cc,
-      Je: () => Mc,
-      K: () => JD,
-      Kd: () => zD,
-      Kf: () => Uc,
-      Kg: () => yc,
-      Lb: () => MC,
-      Lc: () => WC,
-      Le: () => Ec,
-      Lf: () => II,
-      Lg: () => tc,
-      Md: () => VD,
-      Me: () => Wc,
-      Mf: () => Ac,
-      Nf: () => DI,
-      O: () => qD,
-      Oc: () => kD,
-      Od: () => lD,
-      Pb: () => bC,
-      Pe: () => Vc,
-      Pf: () => rc,
-      R: () => dC,
-      Rb: () => pD,
-      Sc: () => sD,
-      Sd: () => jD,
-      Se: () => jc,
-      Sf: () => Fc,
-      Uc: () => eC,
-      V: () => MD,
-      Vb: () => vD,
-      Vf: () => CI,
-      Wb: () => NC,
-      Wd: () => tC,
-      We: () => zc,
-      Yc: () => IC,
-      Z: () => YD,
-      Zd: () => QD,
-      Zf: () => ec,
-      _b: () => hD,
-      _e: () => hc,
-      _f: () => nc,
-      ad: () => BC,
-      af: () => Gc,
-      bb: () => iI,
-      bc: () => Dc,
-      bd: () => UD,
-      bg: () => oc,
-      cb: () => FC,
-      ce: () => oC,
-      cg: () => uc,
-      d: () => iD,
-      ec: () => KD,
-      ef: () => Kc,
-      fb: () => uD,
-      fd: () => wC,
-      fe: () => sC,
-      g: () => fD,
-      ge: () => RD,
-      gg: () => Lc,
-      hc: () => AD,
-      hd: () => QC,
-      he: () => yC,
-      ic: () => rD,
-      if: () => dc,
-      j: () => OD,
-      jb: () => rC,
-      jc: () => CC,
-      jd: () => cC,
-      je: () => uC,
-      kg: () => Tc,
-      l: () => LD,
-      ld: () => HD,
-      lg: () => gc,
-      m: () => wc,
-      md: () => XD,
-      mf: () => kc,
-      mg: () => Zc,
-      n: () => bc,
-      nb: () => AC,
-      nc: () => ZC,
-      nd: () => ID,
-      ne: () => RC,
-      o: () => bD,
-      pe: () => DC,
-      pf: () => Rc,
-      qd: () => PD,
-      qg: () => lc,
-      rb: () => eD,
-      rc: () => ED,
-      re: () => FD,
-      s: () => kC,
-      sb: () => hC,
-      sf: () => pI,
-      tg: () => Oc,
-      uc: () => aD,
-      ud: () => fC,
-      v: () => YC,
-      ve: () => dD,
-      wb: () => TD,
-      wf: () => Pc,
-      xc: () => iC,
-      xe: () => mD,
-      xg: () => Xc,
-      y: () => WD,
-      yd: () => oD,
-      ye: () => BD,
-      z: () => EC
+  39955: (UU, RU, gU) => {
+    gU.d(RU, {
+      A: () => FR,
+      Ac: () => yU,
+      B: () => iU,
+      Bb: () => uR,
+      Bd: () => IU,
+      Cf: () => bg,
+      Cg: () => Cg,
+      D: () => zR,
+      Db: () => TR,
+      Dc: () => AU,
+      De: () => mg,
+      Df: () => tt,
+      Ed: () => rU,
+      Fd: () => VU,
+      G: () => jU,
+      Gb: () => pU,
+      Gc: () => MR,
+      Ge: () => ug,
+      Gf: () => lg,
+      Hb: () => eU,
+      Hd: () => vU,
+      If: () => Ut,
+      J: () => pR,
+      Kb: () => WR,
+      Kc: () => tR,
+      Kd: () => XU,
+      Ke: () => zg,
+      Kf: () => Ng,
+      Ld: () => CR,
+      Lf: () => Og,
+      Mb: () => LU,
+      Mc: () => GR,
+      Mf: () => Rt,
+      N: () => oU,
+      Ne: () => ig,
+      Nf: () => Mg,
+      O: () => aU,
+      Oc: () => bU,
+      Oe: () => Vg,
+      Pb: () => Ug,
+      Pd: () => qU,
+      Qe: () => Xg,
+      Qf: () => Ig,
+      Rc: () => KR,
+      S: () => ZU,
+      Sd: () => cU,
+      Tb: () => YU,
+      Te: () => rg,
+      Tf: () => Qg,
+      U: () => kR,
+      Uf: () => Dg,
+      Vb: () => lU,
+      Vc: () => qR,
+      Vd: () => QR,
+      Ve: () => Lg,
+      W: () => uU,
+      Wd: () => AR,
+      X: () => FU,
+      Yf: () => dg,
+      Zb: () => NU,
+      Zc: () => gR,
+      Ze: () => Bg,
+      _: () => Et,
+      _c: () => nU,
+      _d: () => sU,
+      ad: () => xU,
+      ae: () => jR,
+      af: () => Sg,
+      ag: () => Hg,
+      bb: () => OR,
+      bc: () => RR,
+      c: () => EU,
+      cg: () => fg,
+      dc: () => hR,
+      dd: () => tU,
+      dg: () => hg,
+      ee: () => DR,
+      ef: () => Yg,
+      fb: () => DU,
+      fc: () => zU,
+      fd: () => wU,
+      ff: () => kg,
+      g: () => PU,
+      gd: () => PR,
+      ge: () => sR,
+      gf: () => yg,
+      hg: () => vg,
+      ic: () => BU,
+      ie: () => UR,
+      jb: () => NR,
+      je: () => OU,
+      jg: () => Jg,
+      k: () => JU,
+      kd: () => QU,
+      ke: () => kU,
+      kf: () => sg,
+      m: () => dU,
+      mb: () => lR,
+      mc: () => ER,
+      mf: () => pt,
+      ne: () => mU,
+      ng: () => xg,
+      ob: () => MU,
+      od: () => hU,
+      p: () => Kg,
+      pb: () => LR,
+      pf: () => wg,
+      qb: () => HU,
+      qc: () => WU,
+      qe: () => GU,
+      qg: () => Ag,
+      r: () => Tg,
+      s: () => TU,
+      sd: () => CU,
+      sf: () => Zg,
+      sg: () => Wg,
+      tb: () => tg,
+      tc: () => fU,
+      tf: () => ng,
+      uc: () => cR,
+      ue: () => qg,
+      uf: () => ag,
+      ug: () => Fg,
+      vb: () => pg,
+      vc: () => KU,
+      w: () => yR,
+      wb: () => SU,
+      wc: () => iR,
+      wd: () => Eg,
+      xb: () => gg,
+      xd: () => Pg,
+      ye: () => gt,
+      yf: () => og,
+      yg: () => jg,
+      zb: () => Rg,
+      ze: () => eg
     });
-    const ID = -2147483648,
-      pD = 12,
-      iD = 12,
-      fD = 4095,
-      bD = {
+    const tU = -2147483648,
+      pU = 12,
+      EU = 12,
+      PU = 4095,
+      TU = {
         Lifeform: 1,
         Throwable: 2,
         Mesh: 3,
         Audio: 4,
         Item: 5
       },
-      QD = {
+      qU = {
         Alive: 1,
         Crouching: 2,
         OnGround: 4,
@@ -172,7 +172,7 @@ export const modules = {
         DropAhead: 131072,
         FreeCamMoves: 262144
       },
-      wD = {
+      KU = {
         None: 0,
         Entity: 1,
         Open: 2,
@@ -184,21 +184,21 @@ export const modules = {
         Feed: 8,
         Ride: 9
       },
-      SD = {
+      cU = {
         Off: 0,
         Key: 1,
         Touch: 2
       },
-      BD = {
+      GU = {
         Alive: 16
       },
-      yD = 32,
-      MD = {
+      jU = 32,
+      uU = {
         Stored: 1,
         Unloaded: 2,
         ResetAll: 4
       },
-      tD = {
+      CU = {
         opacity: 0,
         zIndex: 1,
         overlayColour: 2,
@@ -229,31 +229,31 @@ export const modules = {
         _protectionEnchantSum: 27,
         _receivingDamageMultiplier: 28
       },
-      ZD = 4294967295,
-      oD = 0,
-      vD = 4294967295,
-      ND = 4,
-      gD = 123,
-      XD = -2147483648,
-      mD = {
+      hU = 4294967295,
+      QU = 0,
+      eU = 4294967295,
+      WU = 4,
+      fU = 123,
+      xU = -2147483648,
+      mU = {
         Off: 0,
         All: 1,
         Filter: 2
       },
-      nD = 51,
-      OD = 5,
-      PD = 4294967295,
-      HD = 4294967295,
-      UD = 128,
-      xD = ["Workbench", "Furnace", "Artisan Bench", "Potion Table", "Salvaging Table", "Enchanting Table"],
-      qD = 16,
-      JD = 255,
-      KD = {
+      IU = 51,
+      JU = 5,
+      wU = 4294967295,
+      nU = 4294967295,
+      bU = 128,
+      oU = ["Workbench", "Furnace", "Artisan Bench", "Potion Table", "Salvaging Table", "Enchanting Table"],
+      ZU = 16,
+      aU = 255,
+      YU = {
         Off: 0,
         On: 1,
         Keep: 2
       },
-      aD = {
+      BU = {
         AltVeto: 1,
         AltAction: 2,
         Click: 3,
@@ -264,20 +264,20 @@ export const modules = {
         Create: 8,
         Director: 11
       },
-      VD = {
+      VU = {
         Hotbar: 256,
         Drop: 257
       },
-      zD = {
+      rU = {
         Down: 1,
         Next: 2,
         Stack: 4
       },
-      jD = {
+      XU = {
         Rate: 0,
         Gyro: 1
       },
-      lD = {
+      vU = {
         Active: 1,
         JumpHeld: 2,
         JumpPressed: 4,
@@ -288,24 +288,24 @@ export const modules = {
         Peek: 128,
         EndToggle: 256
       },
-      LD = {
+      dU = {
         Prevent: 0,
         Allow: 1,
         PreventPlacement: 2
       },
-      TD = {
+      HU = {
         None: 0,
         Pose: 1,
         FaceMovement: 2,
         FaceCamera: 3,
         FaceCursor: 4
       },
-      GD = {
+      SU = {
         LookPointed: 1,
         Held: 2
       },
-      RD = 3,
-      kD = {
+      sU = 3,
+      yU = {
         Synced: 0,
         ChestOpened: 1,
         ChestClosed: 2,
@@ -316,7 +316,7 @@ export const modules = {
         NumberKey: 7,
         DropRequested: 8
       },
-      dD = {
+      kU = {
         ToggleMenu: 0,
         EditBoard: 1,
         EditCodeBlock: 2,
@@ -337,82 +337,82 @@ export const modules = {
         EmoteWheelClose: 17,
         BlockMined: 18
       },
-      YD = {
+      FU = {
         Alt: 1,
         Up: 2,
         HasPos: 4,
         AttackOnly: 8
       },
-      WD = {
+      iU = {
         Solid: 1,
         Fluid: 2,
         PlaceOver: 4
       },
-      sD = {
+      AU = {
         Stackable: 1
       },
-      ED = {
+      zU = {
         granule: 1,
         wood: 2,
         rock: 3,
         cuttable: 4
       },
-      eD = {
+      MU = {
         Detail: 1,
         RoomForOne: 2
       },
-      uD = {
+      DU = {
         HaveIngredients: 1,
         Listed: 2
       },
-      hD = {
+      LU = {
         HasOpts: 1
       },
-      rD = {
+      NU = {
         Flat: 0,
         Chevrons: 1,
         FurnaceFire: 2,
         FlatOpaque: 3,
         FlatOnTop: 4
       },
-      AD = {
+      lU = {
         Up: 1,
         Down: 2
       },
-      FD = {
+      OU = {
         TwoD: 1,
         Loop: 2
       },
-      DC = {
+      UR = {
         StopAfter: 1
       },
-      CC = {
+      RR = {
         Anchor: 1,
         Visible: 2,
         UvOffset: 4,
         Visibility: 8,
         Scale: 16
       },
-      cC = {
+      gR = {
         Pose: 1,
         Visible: 2
       },
-      IC = 255,
-      pC = 65535,
-      iC = 255,
-      fC = 65535,
-      bC = ["standing", "sitting", "zombie", "gliding", "driving", "sleeping", "riding"],
-      QC = ["", "Sheared", "Saddled", "Antlers", "skyblockHeldBoss"],
-      wC = ["Box", "BloxdBlock", "Person", "Leaderboard", "ParticleEmitter"],
-      SC = {
+      tR = 255,
+      pR = 65535,
+      ER = 255,
+      PR = 65535,
+      TR = ["standing", "sitting", "zombie", "gliding", "driving", "sleeping", "riding"],
+      qR = ["", "Sheared", "Saddled", "Antlers", "skyblockHeldBoss"],
+      KR = ["Box", "BloxdBlock", "Person", "Leaderboard", "ParticleEmitter"],
+      cR = {
         Bytes: 16,
         Hidden: 2147483648,
         Max: 262144
       },
-      BC = 4294967295,
-      yC = 4294967295,
-      MC = 255,
-      tC = {
+      GR = 4294967295,
+      jR = 4294967295,
+      uR = 255,
+      CR = {
         PresetNone: 65535,
         HasBox: 1,
         Anchored: 1,
@@ -423,328 +423,328 @@ export const modules = {
         MaxKey: 1073741823,
         MaxLiveKeys: 256
       },
-      ZC = {
+      hR = {
         critical: 123
       },
-      oC = 4294967295,
-      vC = {
+      QR = 4294967295,
+      eR = {
         BYTES: 4,
-        wy: (DD, CD) => DD.getUint32(CD + 0, !0)
+        HG: (UU, RU) => UU.getUint32(RU + 0, !0)
       },
-      NC = {
+      WR = {
         BYTES: 12,
-        serverId: (DD, CD) => DD.getInt32(CD + 0, !0),
-        index: (DD, CD) => DD.getUint32(CD + 4, !0),
-        kind: (DD, CD) => DD.getUint16(CD + 8, !0)
+        serverId: (UU, RU) => UU.getInt32(RU + 0, !0),
+        index: (UU, RU) => UU.getUint32(RU + 4, !0),
+        kind: (UU, RU) => UU.getUint16(RU + 8, !0)
       },
-      gC = {
+      fR = {
         BYTES: 20,
-        pos: (DD, CD, cD) => DD.getInt32(CD + 0 + 4 * cD, !0),
-        actual: (DD, CD) => DD.getUint32(CD + 12, !0),
-        dataLen: (DD, CD) => DD.getUint32(CD + 16, !0)
+        pos: (UU, RU, gU) => UU.getInt32(RU + 0 + 4 * gU, !0),
+        actual: (UU, RU) => UU.getUint32(RU + 12, !0),
+        dataLen: (UU, RU) => UU.getUint32(RU + 16, !0)
       },
-      XC = {
+      xR = {
         BYTES: 20,
-        what: (DD, CD) => DD.getUint8(CD + 0),
-        value: (DD, CD) => DD.getInt16(CD + 2, !0),
-        pos: (DD, CD, cD) => DD.getInt32(CD + 4 + 4 * cD, !0),
-        block: (DD, CD) => DD.getUint32(CD + 16, !0)
+        what: (UU, RU) => UU.getUint8(RU + 0),
+        value: (UU, RU) => UU.getInt16(RU + 2, !0),
+        pos: (UU, RU, gU) => UU.getInt32(RU + 4 + 4 * gU, !0),
+        block: (UU, RU) => UU.getUint32(RU + 16, !0)
       },
-      mC = {
+      mR = {
         BYTES: 4,
-        item: (DD, CD) => DD.getUint16(CD + 0, !0),
-        slot: (DD, CD) => DD.getUint8(CD + 2)
+        item: (UU, RU) => UU.getUint16(RU + 0, !0),
+        slot: (UU, RU) => UU.getUint8(RU + 2)
       },
-      nC = {
+      IR = {
         BYTES: 16,
-        target: (DD, CD) => DD.getInt32(CD + 0, !0),
-        damage: (DD, CD) => DD.getFloat32(CD + 4, !0),
-        distance: (DD, CD) => DD.getFloat32(CD + 8, !0),
-        crit: (DD, CD) => DD.getUint8(CD + 12)
+        target: (UU, RU) => UU.getInt32(RU + 0, !0),
+        damage: (UU, RU) => UU.getFloat32(RU + 4, !0),
+        distance: (UU, RU) => UU.getFloat32(RU + 8, !0),
+        crit: (UU, RU) => UU.getUint8(RU + 12)
       },
-      OC = {
+      JR = {
         BYTES: 4,
-        slot: (DD, CD) => DD.getUint16(CD + 0, !0)
+        slot: (UU, RU) => UU.getUint16(RU + 0, !0)
       },
-      PC = {
+      wR = {
         BYTES: 20,
-        what: (DD, CD) => DD.getUint8(CD + 0),
-        value: (DD, CD) => DD.getInt16(CD + 2, !0),
-        pos: (DD, CD, cD) => DD.getInt32(CD + 4 + 4 * cD, !0),
-        block: (DD, CD) => DD.getUint32(CD + 16, !0)
+        what: (UU, RU) => UU.getUint8(RU + 0),
+        value: (UU, RU) => UU.getInt16(RU + 2, !0),
+        pos: (UU, RU, gU) => UU.getInt32(RU + 4 + 4 * gU, !0),
+        block: (UU, RU) => UU.getUint32(RU + 16, !0)
       },
-      HC = {
+      nR = {
         BYTES: 12,
-        serverId: (DD, CD) => DD.getInt32(CD + 0, !0),
-        index: (DD, CD) => DD.getUint32(CD + 4, !0),
-        what: (DD, CD) => DD.getUint16(CD + 8, !0)
+        serverId: (UU, RU) => UU.getInt32(RU + 0, !0),
+        index: (UU, RU) => UU.getUint32(RU + 4, !0),
+        what: (UU, RU) => UU.getUint16(RU + 8, !0)
       },
-      UC = {
+      bR = {
         BYTES: 24,
-        cx: (DD, CD) => DD.getInt32(CD + 0, !0),
-        cy: (DD, CD) => DD.getInt32(CD + 4, !0),
-        cz: (DD, CD) => DD.getInt32(CD + 8, !0),
-        slot: (DD, CD) => DD.getUint32(CD + 12, !0),
-        generation: (DD, CD) => DD.getUint32(CD + 16, !0),
-        flags: (DD, CD) => DD.getUint32(CD + 20, !0)
+        cx: (UU, RU) => UU.getInt32(RU + 0, !0),
+        cy: (UU, RU) => UU.getInt32(RU + 4, !0),
+        cz: (UU, RU) => UU.getInt32(RU + 8, !0),
+        slot: (UU, RU) => UU.getUint32(RU + 12, !0),
+        generation: (UU, RU) => UU.getUint32(RU + 16, !0),
+        flags: (UU, RU) => UU.getUint32(RU + 20, !0)
       },
-      xC = {
+      oR = {
         BYTES: 44,
-        pos: (DD, CD, cD) => DD.getFloat64(CD + 0 + 8 * cD, !0),
-        sound: (DD, CD) => DD.getUint16(CD + 24, !0),
-        flags: (DD, CD) => DD.getUint16(CD + 26, !0),
-        handle: (DD, CD) => DD.getUint32(CD + 28, !0),
-        volume: (DD, CD) => DD.getFloat32(CD + 32, !0),
-        rate: (DD, CD) => DD.getFloat32(CD + 36, !0),
-        refDist: (DD, CD) => DD.getFloat32(CD + 40, !0)
+        pos: (UU, RU, gU) => UU.getFloat64(RU + 0 + 8 * gU, !0),
+        sound: (UU, RU) => UU.getUint16(RU + 24, !0),
+        flags: (UU, RU) => UU.getUint16(RU + 26, !0),
+        handle: (UU, RU) => UU.getUint32(RU + 28, !0),
+        volume: (UU, RU) => UU.getFloat32(RU + 32, !0),
+        rate: (UU, RU) => UU.getFloat32(RU + 36, !0),
+        refDist: (UU, RU) => UU.getFloat32(RU + 40, !0)
       },
-      qC = {
+      ZR = {
         BYTES: 28,
-        pos: (DD, CD, cD) => DD.getFloat64(CD + 0 + 8 * cD, !0),
-        handle: (DD, CD) => DD.getUint32(CD + 24, !0)
+        pos: (UU, RU, gU) => UU.getFloat64(RU + 0 + 8 * gU, !0),
+        handle: (UU, RU) => UU.getUint32(RU + 24, !0)
       },
-      JC = {
+      aR = {
         BYTES: 16,
-        handle: (DD, CD) => DD.getUint32(CD + 0, !0),
-        volume: (DD, CD) => DD.getFloat32(CD + 4, !0),
-        rate: (DD, CD) => DD.getFloat32(CD + 8, !0),
-        refDist: (DD, CD) => DD.getFloat32(CD + 12, !0)
+        handle: (UU, RU) => UU.getUint32(RU + 0, !0),
+        volume: (UU, RU) => UU.getFloat32(RU + 4, !0),
+        rate: (UU, RU) => UU.getFloat32(RU + 8, !0),
+        refDist: (UU, RU) => UU.getFloat32(RU + 12, !0)
       },
-      KC = {
+      YR = {
         BYTES: 12,
-        handle: (DD, CD) => DD.getUint32(CD + 0, !0),
-        to: (DD, CD) => DD.getFloat32(CD + 4, !0),
-        ms: (DD, CD) => DD.getUint16(CD + 8, !0),
-        flags: (DD, CD) => DD.getUint16(CD + 10, !0)
+        handle: (UU, RU) => UU.getUint32(RU + 0, !0),
+        to: (UU, RU) => UU.getFloat32(RU + 4, !0),
+        ms: (UU, RU) => UU.getUint16(RU + 8, !0),
+        flags: (UU, RU) => UU.getUint16(RU + 10, !0)
       },
-      aC = {
+      BR = {
         BYTES: 4,
-        handle: (DD, CD) => DD.getUint32(CD + 0, !0)
+        handle: (UU, RU) => UU.getUint32(RU + 0, !0)
       },
-      VC = {
+      VR = {
         BYTES: 4,
-        reason: (DD, CD) => DD.getUint8(CD + 0),
-        code: (DD, CD) => DD.getUint8(CD + 1)
+        reason: (UU, RU) => UU.getUint8(RU + 0),
+        code: (UU, RU) => UU.getUint8(RU + 1)
       },
-      zC = {
+      rR = {
         BYTES: 4,
-        key: (DD, CD) => DD.getUint8(CD + 0),
-        tag: (DD, CD) => DD.getUint8(CD + 1)
+        key: (UU, RU) => UU.getUint8(RU + 0),
+        tag: (UU, RU) => UU.getUint8(RU + 1)
       },
-      jC = {
+      XR = {
         BYTES: 16,
-        save: (DD, CD) => DD.getUint32(CD + 0, !0),
-        index: (DD, CD) => DD.getUint32(CD + 4, !0),
-        ptr: (DD, CD) => DD.getUint32(CD + 8, !0),
-        len: (DD, CD) => DD.getUint32(CD + 12, !0)
+        save: (UU, RU) => UU.getUint32(RU + 0, !0),
+        index: (UU, RU) => UU.getUint32(RU + 4, !0),
+        ptr: (UU, RU) => UU.getUint32(RU + 8, !0),
+        len: (UU, RU) => UU.getUint32(RU + 12, !0)
       },
-      lC = {
+      vR = {
         BYTES: 16,
-        save: (DD, CD) => DD.getUint32(CD + 0, !0),
-        kind: (DD, CD) => DD.getUint8(CD + 4),
-        parts: (DD, CD) => DD.getUint32(CD + 8, !0),
-        bytes: (DD, CD) => DD.getUint32(CD + 12, !0)
+        save: (UU, RU) => UU.getUint32(RU + 0, !0),
+        kind: (UU, RU) => UU.getUint8(RU + 4),
+        parts: (UU, RU) => UU.getUint32(RU + 8, !0),
+        bytes: (UU, RU) => UU.getUint32(RU + 12, !0)
       },
-      LC = {
+      dR = {
         BYTES: 4,
-        totalTicks: (DD, CD) => DD.getUint32(CD + 0, !0)
+        totalTicks: (UU, RU) => UU.getUint32(RU + 0, !0)
       },
-      TC = {
+      HR = {
         BYTES: 24,
-        what: (DD, CD) => DD.getUint8(CD + 0),
-        int: (DD, CD) => DD.getInt32(CD + 4, !0),
-        x: (DD, CD) => DD.getFloat64(CD + 8, !0),
-        y: (DD, CD) => DD.getFloat64(CD + 16, !0)
+        what: (UU, RU) => UU.getUint8(RU + 0),
+        int: (UU, RU) => UU.getInt32(RU + 4, !0),
+        x: (UU, RU) => UU.getFloat64(RU + 8, !0),
+        y: (UU, RU) => UU.getFloat64(RU + 16, !0)
       },
-      GC = {
+      SR = {
         BYTES: 8,
-        what: (DD, CD) => DD.getUint8(CD + 0),
-        kind: (DD, CD) => DD.getUint8(CD + 1),
-        save: (DD, CD) => DD.getUint32(CD + 4, !0)
+        what: (UU, RU) => UU.getUint8(RU + 0),
+        kind: (UU, RU) => UU.getUint8(RU + 1),
+        save: (UU, RU) => UU.getUint32(RU + 4, !0)
       },
-      RC = {
+      sR = {
         BYTES: 4,
-        Rf: (DD, CD) => DD.getUint16(CD + 0, !0)
+        aP: (UU, RU) => UU.getUint16(RU + 0, !0)
       },
-      kC = {
+      yR = {
         BYTES: 360,
-        eye: (DD, CD, cD) => DD.getFloat64(CD + 0 + 8 * cD, !0),
-        localPos: (DD, CD, cD) => DD.getFloat64(CD + 24 + 8 * cD, !0),
-        N9: (DD, CD, cD) => DD.getFloat64(CD + 48 + 8 * cD, !0),
-        viewProj: (DD, CD, cD) => DD.getFloat32(CD + 72 + 4 * cD, !0),
-        origin: (DD, CD, cD) => DD.getInt32(CD + 136 + 4 * cD, !0),
-        heading: (DD, CD) => DD.getFloat32(CD + 148, !0),
-        pitch: (DD, CD) => DD.getFloat32(CD + 152, !0),
-        tanHalfFovX: (DD, CD) => DD.getFloat32(CD + 156, !0),
-        tanHalfFovY: (DD, CD) => DD.getFloat32(CD + 160, !0),
-        viewportCss: (DD, CD, cD) => DD.getFloat32(CD + 164 + 4 * cD, !0),
-        localVel: (DD, CD, cD) => DD.getFloat32(CD + 172 + 4 * cD, !0),
-        actionDir: (DD, CD, cD) => DD.getFloat32(CD + 184 + 4 * cD, !0),
-        localId: (DD, CD) => DD.getInt32(CD + 196, !0),
-        playerFlags: (DD, CD) => DD.getUint32(CD + 200, !0),
-        targetBlock: (DD, CD, cD) => DD.getInt32(CD + 204 + 4 * cD, !0),
-        targetAdjacent: (DD, CD, cD) => DD.getInt32(CD + 216 + 4 * cD, !0),
-        targetBlockId: (DD, CD) => DD.getUint32(CD + 228, !0),
-        targetNormal: (DD, CD, cD) => DD.getInt8(CD + 232 + 1 * cD),
-        targetFlags: (DD, CD) => DD.getUint8(CD + 235),
-        pickedEntity: (DD, CD) => DD.getInt32(CD + 236, !0),
-        breakingPos: (DD, CD, cD) => DD.getInt32(CD + 240 + 4 * cD, !0),
-        breakingProgress: (DD, CD) => DD.getFloat32(CD + 252, !0),
-        gH: (DD, CD) => DD.getUint16(CD + 256, !0),
-        selectedSlot: (DD, CD) => DD.getUint8(CD + 258),
-        heldFlags: (DD, CD) => DD.getUint8(CD + 259),
-        heldAttrVersion: (DD, CD) => DD.getUint32(CD + 260, !0),
-        inventoryVersion: (DD, CD) => DD.getUint32(CD + 264, !0),
-        effectsVersion: (DD, CD) => DD.getUint32(CD + 268, !0),
-        entitiesVersion: (DD, CD) => DD.getUint32(CD + 272, !0),
-        entRenderPtr: (DD, CD) => DD.getUint32(CD + 276, !0),
-        entCapacity: (DD, CD) => DD.getUint32(CD + 280, !0),
-        frameMs: (DD, CD) => DD.getFloat32(CD + 284, !0),
-        fps: (DD, CD) => DD.getFloat32(CD + 288, !0),
-        entVisPtr: (DD, CD) => DD.getUint32(CD + 292, !0),
-        momentumFrac: (DD, CD) => DD.getFloat32(CD + 296, !0),
-        chunkSlotsPtr: (DD, CD) => DD.getUint32(CD + 300, !0),
-        chunkSlotsLen: (DD, CD) => DD.getUint32(CD + 304, !0),
-        walkThroughPtr: (DD, CD) => DD.getUint32(CD + 308, !0),
-        walkThroughLen: (DD, CD) => DD.getUint32(CD + 312, !0),
-        audioViewPtr: (DD, CD) => DD.getUint32(CD + 316, !0),
-        inventoryViewPtr: (DD, CD) => DD.getUint32(CD + 320, !0),
-        eventOverflowGen: (DD, CD) => DD.getUint32(CD + 324, !0),
-        eventOverflowMask: (DD, CD) => DD.getUint32(CD + 328, !0),
-        promptEntity: (DD, CD) => DD.getInt32(CD + 332, !0),
-        replayViewPtr: (DD, CD) => DD.getUint32(CD + 336, !0),
-        slotIcon: (DD, CD) => DD.getUint32(CD + 340, !0),
-        localDeaths: (DD, CD) => DD.getUint32(CD + 344, !0),
-        cameraFar: (DD, CD) => DD.getFloat32(CD + 348, !0),
-        gliderBoostFuel: (DD, CD) => DD.getUint32(CD + 352, !0),
-        interactLabel: (DD, CD) => DD.getUint16(CD + 356, !0),
-        interactIcon: (DD, CD) => DD.getUint16(CD + 358, !0)
+        eye: (UU, RU, gU) => UU.getFloat64(RU + 0 + 8 * gU, !0),
+        localPos: (UU, RU, gU) => UU.getFloat64(RU + 24 + 8 * gU, !0),
+        uUU: (UU, RU, gU) => UU.getFloat64(RU + 48 + 8 * gU, !0),
+        viewProj: (UU, RU, gU) => UU.getFloat32(RU + 72 + 4 * gU, !0),
+        origin: (UU, RU, gU) => UU.getInt32(RU + 136 + 4 * gU, !0),
+        heading: (UU, RU) => UU.getFloat32(RU + 148, !0),
+        pitch: (UU, RU) => UU.getFloat32(RU + 152, !0),
+        tanHalfFovX: (UU, RU) => UU.getFloat32(RU + 156, !0),
+        tanHalfFovY: (UU, RU) => UU.getFloat32(RU + 160, !0),
+        viewportCss: (UU, RU, gU) => UU.getFloat32(RU + 164 + 4 * gU, !0),
+        localVel: (UU, RU, gU) => UU.getFloat32(RU + 172 + 4 * gU, !0),
+        actionDir: (UU, RU, gU) => UU.getFloat32(RU + 184 + 4 * gU, !0),
+        localId: (UU, RU) => UU.getInt32(RU + 196, !0),
+        playerFlags: (UU, RU) => UU.getUint32(RU + 200, !0),
+        targetBlock: (UU, RU, gU) => UU.getInt32(RU + 204 + 4 * gU, !0),
+        targetAdjacent: (UU, RU, gU) => UU.getInt32(RU + 216 + 4 * gU, !0),
+        targetBlockId: (UU, RU) => UU.getUint32(RU + 228, !0),
+        targetNormal: (UU, RU, gU) => UU.getInt8(RU + 232 + 1 * gU),
+        targetFlags: (UU, RU) => UU.getUint8(RU + 235),
+        pickedEntity: (UU, RU) => UU.getInt32(RU + 236, !0),
+        breakingPos: (UU, RU, gU) => UU.getInt32(RU + 240 + 4 * gU, !0),
+        breakingProgress: (UU, RU) => UU.getFloat32(RU + 252, !0),
+        yI: (UU, RU) => UU.getUint16(RU + 256, !0),
+        selectedSlot: (UU, RU) => UU.getUint8(RU + 258),
+        heldFlags: (UU, RU) => UU.getUint8(RU + 259),
+        heldAttrVersion: (UU, RU) => UU.getUint32(RU + 260, !0),
+        inventoryVersion: (UU, RU) => UU.getUint32(RU + 264, !0),
+        effectsVersion: (UU, RU) => UU.getUint32(RU + 268, !0),
+        entitiesVersion: (UU, RU) => UU.getUint32(RU + 272, !0),
+        entRenderPtr: (UU, RU) => UU.getUint32(RU + 276, !0),
+        entCapacity: (UU, RU) => UU.getUint32(RU + 280, !0),
+        frameMs: (UU, RU) => UU.getFloat32(RU + 284, !0),
+        fps: (UU, RU) => UU.getFloat32(RU + 288, !0),
+        entVisPtr: (UU, RU) => UU.getUint32(RU + 292, !0),
+        momentumFrac: (UU, RU) => UU.getFloat32(RU + 296, !0),
+        chunkSlotsPtr: (UU, RU) => UU.getUint32(RU + 300, !0),
+        chunkSlotsLen: (UU, RU) => UU.getUint32(RU + 304, !0),
+        walkThroughPtr: (UU, RU) => UU.getUint32(RU + 308, !0),
+        walkThroughLen: (UU, RU) => UU.getUint32(RU + 312, !0),
+        audioViewPtr: (UU, RU) => UU.getUint32(RU + 316, !0),
+        inventoryViewPtr: (UU, RU) => UU.getUint32(RU + 320, !0),
+        eventOverflowGen: (UU, RU) => UU.getUint32(RU + 324, !0),
+        eventOverflowMask: (UU, RU) => UU.getUint32(RU + 328, !0),
+        promptEntity: (UU, RU) => UU.getInt32(RU + 332, !0),
+        replayViewPtr: (UU, RU) => UU.getUint32(RU + 336, !0),
+        slotIcon: (UU, RU) => UU.getUint32(RU + 340, !0),
+        localDeaths: (UU, RU) => UU.getUint32(RU + 344, !0),
+        cameraFar: (UU, RU) => UU.getFloat32(RU + 348, !0),
+        gliderBoostFuel: (UU, RU) => UU.getUint32(RU + 352, !0),
+        interactLabel: (UU, RU) => UU.getUint16(RU + 356, !0),
+        interactIcon: (UU, RU) => UU.getUint16(RU + 358, !0)
       },
-      dC = {
+      kR = {
         BYTES: 16,
-        voxelsPtr: (DD, CD) => DD.getUint32(CD + 0, !0),
-        version: (DD, CD) => DD.getUint32(CD + 4, !0),
-        generation: (DD, CD) => DD.getUint32(CD + 8, !0),
-        Lb: (DD, CD) => DD.getUint32(CD + 12, !0)
+        voxelsPtr: (UU, RU) => UU.getUint32(RU + 0, !0),
+        version: (UU, RU) => UU.getUint32(RU + 4, !0),
+        generation: (UU, RU) => UU.getUint32(RU + 8, !0),
+        WT: (UU, RU) => UU.getUint32(RU + 12, !0)
       },
-      YC = {
+      FR = {
         BYTES: 56,
-        listener: (DD, CD, cD) => DD.getFloat64(CD + 0 + 8 * cD, !0),
-        forward: (DD, CD, cD) => DD.getFloat32(CD + 24 + 4 * cD, !0),
-        up: (DD, CD, cD) => DD.getFloat32(CD + 36 + 4 * cD, !0),
-        dropped: (DD, CD) => DD.getUint32(CD + 48, !0),
-        unfollowed: (DD, CD) => DD.getUint32(CD + 52, !0)
+        listener: (UU, RU, gU) => UU.getFloat64(RU + 0 + 8 * gU, !0),
+        forward: (UU, RU, gU) => UU.getFloat32(RU + 24 + 4 * gU, !0),
+        up: (UU, RU, gU) => UU.getFloat32(RU + 36 + 4 * gU, !0),
+        dropped: (UU, RU) => UU.getUint32(RU + 48, !0),
+        unfollowed: (UU, RU) => UU.getUint32(RU + 52, !0)
       },
-      WC = {
+      iR = {
         BYTES: 8,
-        item: (DD, CD) => DD.getUint16(CD + 0, !0),
-        amount: (DD, CD) => DD.getUint16(CD + 2, !0),
-        attrVersion: (DD, CD) => DD.getUint32(CD + 4, !0)
+        item: (UU, RU) => UU.getUint16(RU + 0, !0),
+        amount: (UU, RU) => UU.getUint16(RU + 2, !0),
+        attrVersion: (UU, RU) => UU.getUint32(RU + 4, !0)
       },
-      sC = {
+      AR = {
         BYTES: 76,
-        version: (DD, CD) => DD.getUint32(CD + 0, !0),
-        state: (DD, CD) => DD.getUint8(CD + 4),
-        cameraMode: (DD, CD) => DD.getUint8(CD + 5),
-        wy: (DD, CD) => DD.getUint32(CD + 8, !0),
-        totalTicks: (DD, CD) => DD.getUint32(CD + 12, !0),
-        speed: (DD, CD) => DD.getFloat32(CD + 16, !0),
-        markIn: (DD, CD) => DD.getUint32(CD + 20, !0),
-        markOut: (DD, CD) => DD.getUint32(CD + 24, !0),
-        editVersion: (DD, CD) => DD.getUint32(CD + 28, !0),
-        drops: (DD, CD, cD) => DD.getUint32(CD + 32 + 4 * cD, !0)
+        version: (UU, RU) => UU.getUint32(RU + 0, !0),
+        state: (UU, RU) => UU.getUint8(RU + 4),
+        cameraMode: (UU, RU) => UU.getUint8(RU + 5),
+        HG: (UU, RU) => UU.getUint32(RU + 8, !0),
+        totalTicks: (UU, RU) => UU.getUint32(RU + 12, !0),
+        speed: (UU, RU) => UU.getFloat32(RU + 16, !0),
+        markIn: (UU, RU) => UU.getUint32(RU + 20, !0),
+        markOut: (UU, RU) => UU.getUint32(RU + 24, !0),
+        editVersion: (UU, RU) => UU.getUint32(RU + 28, !0),
+        drops: (UU, RU, gU) => UU.getUint32(RU + 32 + 4 * gU, !0)
       },
-      EC = {
+      zR = {
         BYTES: 6,
-        flags: (DD, CD) => DD.getUint8(CD + 0),
-        harvestType: (DD, CD) => DD.getUint8(CD + 1),
-        harvestLevel: (DD, CD) => DD.getUint8(CD + 2),
-        attachedTop: (DD, CD) => DD.getUint16(CD + 4, !0)
+        flags: (UU, RU) => UU.getUint8(RU + 0),
+        harvestType: (UU, RU) => UU.getUint8(RU + 1),
+        harvestLevel: (UU, RU) => UU.getUint8(RU + 2),
+        attachedTop: (UU, RU) => UU.getUint16(RU + 4, !0)
       },
-      eC = {
+      MR = {
         BYTES: 3,
-        flags: (DD, CD) => DD.getUint8(CD + 0),
-        harvests: (DD, CD) => DD.getUint8(CD + 1),
-        level: (DD, CD) => DD.getUint8(CD + 2)
+        flags: (UU, RU) => UU.getUint8(RU + 0),
+        harvests: (UU, RU) => UU.getUint8(RU + 1),
+        level: (UU, RU) => UU.getUint8(RU + 2)
       },
-      uC = {
+      DR = {
         BYTES: 12,
-        item: (DD, CD) => DD.getUint32(CD + 0, !0),
-        amount: (DD, CD) => DD.getFloat64(CD + 4, !0)
+        item: (UU, RU) => UU.getUint32(RU + 0, !0),
+        amount: (UU, RU) => UU.getFloat64(RU + 4, !0)
       },
-      hC = {
+      LR = {
         BYTES: 16,
-        recipes: (DD, CD) => DD.getUint32(CD + 0, !0),
-        ingredients: (DD, CD) => DD.getUint32(CD + 4, !0),
-        craftAllTimes: (DD, CD) => DD.getUint32(CD + 8, !0),
-        flags: (DD, CD) => DD.getUint32(CD + 12, !0)
+        recipes: (UU, RU) => UU.getUint32(RU + 0, !0),
+        ingredients: (UU, RU) => UU.getUint32(RU + 4, !0),
+        craftAllTimes: (UU, RU) => UU.getUint32(RU + 8, !0),
+        flags: (UU, RU) => UU.getUint32(RU + 12, !0)
       },
-      rC = {
+      NR = {
         BYTES: 10,
-        item: (DD, CD) => DD.getUint16(CD + 0, !0),
-        recipe: (DD, CD) => DD.getUint16(CD + 2, !0),
-        produces: (DD, CD) => DD.getUint16(CD + 4, !0),
-        requires: (DD, CD) => DD.getUint16(CD + 6, !0),
-        flags: (DD, CD) => DD.getUint8(CD + 8)
+        item: (UU, RU) => UU.getUint16(RU + 0, !0),
+        recipe: (UU, RU) => UU.getUint16(RU + 2, !0),
+        produces: (UU, RU) => UU.getUint16(RU + 4, !0),
+        requires: (UU, RU) => UU.getUint16(RU + 6, !0),
+        flags: (UU, RU) => UU.getUint8(RU + 8)
       },
-      AC = {
+      lR = {
         BYTES: 4,
-        amount: (DD, CD) => DD.getUint16(CD + 0, !0),
-        items: (DD, CD) => DD.getUint16(CD + 2, !0)
+        amount: (UU, RU) => UU.getUint16(RU + 0, !0),
+        items: (UU, RU) => UU.getUint16(RU + 2, !0)
       },
-      FC = {
+      OR = {
         BYTES: 8,
-        amount: (DD, CD) => DD.getUint32(CD + 0, !0),
-        item: (DD, CD) => DD.getUint16(CD + 4, !0),
-        from: (DD, CD) => DD.getUint16(CD + 6, !0)
+        amount: (UU, RU) => UU.getUint32(RU + 0, !0),
+        item: (UU, RU) => UU.getUint16(RU + 4, !0),
+        from: (UU, RU) => UU.getUint16(RU + 6, !0)
       },
-      Dc = {
+      Ug = {
         BYTES: 16,
-        serverId: (DD, CD) => DD.getInt32(CD + 0, !0),
-        len: (DD, CD) => DD.getUint32(CD + 4, !0),
-        kind: (DD, CD) => DD.getUint16(CD + 8, !0),
-        variation: (DD, CD) => DD.getUint16(CD + 10, !0),
-        pose: (DD, CD) => DD.getUint8(CD + 12),
-        meta: (DD, CD) => DD.getUint8(CD + 13),
-        mesh: (DD, CD) => DD.getUint8(CD + 14),
-        flags: (DD, CD) => DD.getUint8(CD + 15)
+        serverId: (UU, RU) => UU.getInt32(RU + 0, !0),
+        len: (UU, RU) => UU.getUint32(RU + 4, !0),
+        kind: (UU, RU) => UU.getUint16(RU + 8, !0),
+        variation: (UU, RU) => UU.getUint16(RU + 10, !0),
+        pose: (UU, RU) => UU.getUint8(RU + 12),
+        meta: (UU, RU) => UU.getUint8(RU + 13),
+        mesh: (UU, RU) => UU.getUint8(RU + 14),
+        flags: (UU, RU) => UU.getUint8(RU + 15)
       },
-      Cc = {
+      Rg = {
         BYTES: 40,
-        terrainOpaque: (DD, CD) => DD.getUint32(CD + 0, !0),
-        terrainTransparent: (DD, CD) => DD.getUint32(CD + 4, !0),
-        terrainPack: (DD, CD) => DD.getUint32(CD + 8, !0),
-        earthSky: (DD, CD) => DD.getUint32(CD + 12, !0),
-        skyMeshes: (DD, CD) => DD.getUint32(CD + 16, !0),
-        regular: (DD, CD) => DD.getUint32(CD + 20, !0),
-        thin: (DD, CD) => DD.getUint32(CD + 24, !0),
-        line: (DD, CD) => DD.getUint32(CD + 28, !0),
-        text: (DD, CD) => DD.getUint32(CD + 32, !0),
-        particles: (DD, CD) => DD.getUint32(CD + 36, !0)
+        terrainOpaque: (UU, RU) => UU.getUint32(RU + 0, !0),
+        terrainTransparent: (UU, RU) => UU.getUint32(RU + 4, !0),
+        terrainPack: (UU, RU) => UU.getUint32(RU + 8, !0),
+        earthSky: (UU, RU) => UU.getUint32(RU + 12, !0),
+        skyMeshes: (UU, RU) => UU.getUint32(RU + 16, !0),
+        regular: (UU, RU) => UU.getUint32(RU + 20, !0),
+        thin: (UU, RU) => UU.getUint32(RU + 24, !0),
+        line: (UU, RU) => UU.getUint32(RU + 28, !0),
+        text: (UU, RU) => UU.getUint32(RU + 32, !0),
+        particles: (UU, RU) => UU.getUint32(RU + 36, !0)
       },
-      cc = {
+      gg = {
         BYTES: 16,
-        fov: (DD, CD) => DD.getFloat32(CD + 0, !0),
-        baseFov: (DD, CD) => DD.getFloat32(CD + 4, !0),
-        aspect: (DD, CD) => DD.getFloat32(CD + 8, !0),
-        bodyHeading: (DD, CD) => DD.getFloat32(CD + 12, !0)
+        fov: (UU, RU) => UU.getFloat32(RU + 0, !0),
+        baseFov: (UU, RU) => UU.getFloat32(RU + 4, !0),
+        aspect: (UU, RU) => UU.getFloat32(RU + 8, !0),
+        bodyHeading: (UU, RU) => UU.getFloat32(RU + 12, !0)
       },
-      Ic = {
+      tg = {
         BYTES: 32,
-        eye: (DD, CD, cD) => DD.getFloat64(CD + 0 + 8 * cD, !0),
-        heading: (DD, CD) => DD.getFloat32(CD + 24, !0),
-        pitch: (DD, CD) => DD.getFloat32(CD + 28, !0)
+        eye: (UU, RU, gU) => UU.getFloat64(RU + 0 + 8 * gU, !0),
+        heading: (UU, RU) => UU.getFloat32(RU + 24, !0),
+        pitch: (UU, RU) => UU.getFloat32(RU + 28, !0)
       },
-      pc = {
+      pg = {
         BYTES: 40,
-        feet: (DD, CD, cD) => DD.getFloat64(CD + 0 + 8 * cD, !0),
-        eyeHeight: (DD, CD) => DD.getFloat32(CD + 24, !0),
-        heading: (DD, CD) => DD.getFloat32(CD + 28, !0),
-        headingIsDrawn: (DD, CD) => DD.getUint32(CD + 32, !0)
+        feet: (UU, RU, gU) => UU.getFloat64(RU + 0 + 8 * gU, !0),
+        eyeHeight: (UU, RU) => UU.getFloat32(RU + 24, !0),
+        heading: (UU, RU) => UU.getFloat32(RU + 28, !0),
+        headingIsDrawn: (UU, RU) => UU.getUint32(RU + 32, !0)
       },
-      ic = 32,
-      fc = 63,
-      bc = {
+      Eg = 32,
+      Pg = 63,
+      Tg = {
         TickEnd: 32,
         EntitySpawned: 33,
         EntityDespawned: 34,
@@ -772,64 +772,64 @@ export const modules = {
         RecorderEvent: 62
       };
 
-    function Qc(DD, CD, cD, ID, pD) {
-      var iD, fD, bD, QD, wD, SD, BD, yD, MD, tD, ZD, oD, vD, ND, gD, XD, mD, nD, OD, PD, HD, UD, xD, qD, JD;
-      switch (DD) {
+    function qg(UU, RU, gU, tU, pU) {
+      var EU, PU, TU, qU, KU, cU, GU, jU, uU, CU, hU, QU, eU, WU, fU, xU, mU, IU, JU, wU, nU, bU, oU, ZU, aU;
+      switch (UU) {
         case 32:
-          return 4 === ID && (null === (iD = pD.tickEnd) || void 0 === iD || iD.call(pD, vC.wy(CD, cD)), !0);
+          return 4 === tU && (null === (EU = pU.tickEnd) || void 0 === EU || EU.call(pU, eR.HG(RU, gU)), !0);
         case 33:
-          return 12 === ID && (null === (fD = pD.entitySpawned) || void 0 === fD || fD.call(pD, NC.serverId(CD, cD), NC.index(CD, cD), NC.kind(CD, cD)), !0);
+          return 12 === tU && (null === (PU = pU.entitySpawned) || void 0 === PU || PU.call(pU, WR.serverId(RU, gU), WR.index(RU, gU), WR.kind(RU, gU)), !0);
         case 34:
-          return 12 === ID && (null === (bD = pD.entityDespawned) || void 0 === bD || bD.call(pD, NC.serverId(CD, cD), NC.index(CD, cD), NC.kind(CD, cD)), !0);
+          return 12 === tU && (null === (TU = pU.entityDespawned) || void 0 === TU || TU.call(pU, WR.serverId(RU, gU), WR.index(RU, gU), WR.kind(RU, gU)), !0);
         case 39:
-          return !(ID < 20) && (null === (QD = pD.changeBlockFail) || void 0 === QD || QD.call(pD, gC.pos(CD, cD, 0), gC.pos(CD, cD, 1), gC.pos(CD, cD, 2), gC.actual(CD, cD), gC.dataLen(CD, cD), cD + 20, ID - 20), !0);
+          return !(tU < 20) && (null === (qU = pU.changeBlockFail) || void 0 === qU || qU.call(pU, fR.pos(RU, gU, 0), fR.pos(RU, gU, 1), fR.pos(RU, gU, 2), fR.actual(RU, gU), fR.dataLen(RU, gU), gU + 20, tU - 20), !0);
         case 46:
-          return 0 === ID && (null === (wD = pD.changeBlockFailEnd) || void 0 === wD || wD.call(pD), !0);
+          return 0 === tU && (null === (KU = pU.changeBlockFailEnd) || void 0 === KU || KU.call(pU), !0);
         case 48:
-          return 20 === ID && (null === (SD = pD.inventoryEvent) || void 0 === SD || SD.call(pD, XC.what(CD, cD), XC.value(CD, cD), XC.pos(CD, cD, 0), XC.pos(CD, cD, 1), XC.pos(CD, cD, 2), XC.block(CD, cD)), !0);
+          return 20 === tU && (null === (cU = pU.inventoryEvent) || void 0 === cU || cU.call(pU, xR.what(RU, gU), xR.value(RU, gU), xR.pos(RU, gU, 0), xR.pos(RU, gU, 1), xR.pos(RU, gU, 2), xR.block(RU, gU)), !0);
         case 49:
-          return 4 === ID && (null === (BD = pD.heldItemChanged) || void 0 === BD || BD.call(pD, mC.item(CD, cD), mC.slot(CD, cD)), !0);
+          return 4 === tU && (null === (GU = pU.heldItemChanged) || void 0 === GU || GU.call(pU, mR.item(RU, gU), mR.slot(RU, gU)), !0);
         case 50:
-          return 16 === ID && (null === (yD = pD.shotDamage) || void 0 === yD || yD.call(pD, nC.target(CD, cD), nC.damage(CD, cD), nC.distance(CD, cD), nC.crit(CD, cD)), !0);
+          return 16 === tU && (null === (jU = pU.shotDamage) || void 0 === jU || jU.call(pU, IR.target(RU, gU), IR.damage(RU, gU), IR.distance(RU, gU), IR.crit(RU, gU)), !0);
         case 51:
-          return !(ID < 4) && (null === (MD = pD.enchantOffer) || void 0 === MD || MD.call(pD, OC.slot(CD, cD), cD + 4, ID - 4), !0);
+          return !(tU < 4) && (null === (uU = pU.enchantOffer) || void 0 === uU || uU.call(pU, JR.slot(RU, gU), gU + 4, tU - 4), !0);
         case 52:
-          return !(ID < 20) && (null === (tD = pD.uiEvent) || void 0 === tD || tD.call(pD, PC.what(CD, cD), PC.value(CD, cD), PC.pos(CD, cD, 0), PC.pos(CD, cD, 1), PC.pos(CD, cD, 2), PC.block(CD, cD), cD + 20, ID - 20), !0);
+          return !(tU < 20) && (null === (CU = pU.uiEvent) || void 0 === CU || CU.call(pU, wR.what(RU, gU), wR.value(RU, gU), wR.pos(RU, gU, 0), wR.pos(RU, gU, 1), wR.pos(RU, gU, 2), wR.block(RU, gU), gU + 20, tU - 20), !0);
         case 53:
-          return 12 === ID && (null === (ZD = pD.entityInfoChanged) || void 0 === ZD || ZD.call(pD, HC.serverId(CD, cD), HC.index(CD, cD), HC.what(CD, cD)), !0);
+          return 12 === tU && (null === (hU = pU.entityInfoChanged) || void 0 === hU || hU.call(pU, nR.serverId(RU, gU), nR.index(RU, gU), nR.what(RU, gU)), !0);
         case 55:
-          return 24 === ID && (null === (oD = pD.chunkSlot) || void 0 === oD || oD.call(pD, UC.cx(CD, cD), UC.cy(CD, cD), UC.cz(CD, cD), UC.slot(CD, cD), UC.generation(CD, cD), UC.flags(CD, cD)), !0);
+          return 24 === tU && (null === (QU = pU.chunkSlot) || void 0 === QU || QU.call(pU, bR.cx(RU, gU), bR.cy(RU, gU), bR.cz(RU, gU), bR.slot(RU, gU), bR.generation(RU, gU), bR.flags(RU, gU)), !0);
         case 40:
-          return 44 === ID && (null === (vD = pD.playSound) || void 0 === vD || vD.call(pD, xC.pos(CD, cD, 0), xC.pos(CD, cD, 1), xC.pos(CD, cD, 2), xC.sound(CD, cD), xC.flags(CD, cD), xC.handle(CD, cD), xC.volume(CD, cD), xC.rate(CD, cD), xC.refDist(CD, cD)), !0);
+          return 44 === tU && (null === (eU = pU.playSound) || void 0 === eU || eU.call(pU, oR.pos(RU, gU, 0), oR.pos(RU, gU, 1), oR.pos(RU, gU, 2), oR.sound(RU, gU), oR.flags(RU, gU), oR.handle(RU, gU), oR.volume(RU, gU), oR.rate(RU, gU), oR.refDist(RU, gU)), !0);
         case 41:
-          return 28 === ID && (null === (ND = pD.soundPos) || void 0 === ND || ND.call(pD, qC.pos(CD, cD, 0), qC.pos(CD, cD, 1), qC.pos(CD, cD, 2), qC.handle(CD, cD)), !0);
+          return 28 === tU && (null === (WU = pU.soundPos) || void 0 === WU || WU.call(pU, ZR.pos(RU, gU, 0), ZR.pos(RU, gU, 1), ZR.pos(RU, gU, 2), ZR.handle(RU, gU)), !0);
         case 42:
-          return 16 === ID && (null === (gD = pD.soundSet) || void 0 === gD || gD.call(pD, JC.handle(CD, cD), JC.volume(CD, cD), JC.rate(CD, cD), JC.refDist(CD, cD)), !0);
+          return 16 === tU && (null === (fU = pU.soundSet) || void 0 === fU || fU.call(pU, aR.handle(RU, gU), aR.volume(RU, gU), aR.rate(RU, gU), aR.refDist(RU, gU)), !0);
         case 43:
-          return 12 === ID && (null === (XD = pD.soundFade) || void 0 === XD || XD.call(pD, KC.handle(CD, cD), KC.to(CD, cD), KC.ms(CD, cD), KC.flags(CD, cD)), !0);
+          return 12 === tU && (null === (xU = pU.soundFade) || void 0 === xU || xU.call(pU, YR.handle(RU, gU), YR.to(RU, gU), YR.ms(RU, gU), YR.flags(RU, gU)), !0);
         case 44:
-          return 4 === ID && (null === (mD = pD.soundStop) || void 0 === mD || mD.call(pD, aC.handle(CD, cD)), !0);
+          return 4 === tU && (null === (mU = pU.soundStop) || void 0 === mU || mU.call(pU, BR.handle(RU, gU)), !0);
         case 45:
-          return 0 === ID && (null === (nD = pD.soundReset) || void 0 === nD || nD.call(pD), !0);
+          return 0 === tU && (null === (IU = pU.soundReset) || void 0 === IU || IU.call(pU), !0);
         case 56:
-          return 4 === ID && (null === (OD = pD.replayFailed) || void 0 === OD || OD.call(pD, VC.reason(CD, cD), VC.code(CD, cD)), !0);
+          return 4 === tU && (null === (JU = pU.replayFailed) || void 0 === JU || JU.call(pU, VR.reason(RU, gU), VR.code(RU, gU)), !0);
         case 57:
-          return !(ID < 4) && (null === (PD = pD.replayOption) || void 0 === PD || PD.call(pD, zC.key(CD, cD), zC.tag(CD, cD), cD + 4, ID - 4), !0);
+          return !(tU < 4) && (null === (wU = pU.replayOption) || void 0 === wU || wU.call(pU, rR.key(RU, gU), rR.tag(RU, gU), gU + 4, tU - 4), !0);
         case 58:
-          return 16 === ID && (null === (HD = pD.replayFilePart) || void 0 === HD || HD.call(pD, jC.save(CD, cD), jC.index(CD, cD), jC.ptr(CD, cD), jC.len(CD, cD)), !0);
+          return 16 === tU && (null === (nU = pU.replayFilePart) || void 0 === nU || nU.call(pU, XR.save(RU, gU), XR.index(RU, gU), XR.ptr(RU, gU), XR.len(RU, gU)), !0);
         case 59:
-          return 16 === ID && (null === (UD = pD.replayFileReady) || void 0 === UD || UD.call(pD, lC.save(CD, cD), lC.kind(CD, cD), lC.parts(CD, cD), lC.bytes(CD, cD)), !0);
+          return 16 === tU && (null === (bU = pU.replayFileReady) || void 0 === bU || bU.call(pU, vR.save(RU, gU), vR.kind(RU, gU), vR.parts(RU, gU), vR.bytes(RU, gU)), !0);
         case 60:
-          return !(ID < 4) && (null === (xD = pD.replayOpened) || void 0 === xD || xD.call(pD, LC.totalTicks(CD, cD), cD + 4, ID - 4), !0);
+          return !(tU < 4) && (null === (oU = pU.replayOpened) || void 0 === oU || oU.call(pU, dR.totalTicks(RU, gU), gU + 4, tU - 4), !0);
         case 61:
-          return !(ID < 24) && (null === (qD = pD.replayUiEvent) || void 0 === qD || qD.call(pD, TC.what(CD, cD), TC.int(CD, cD), TC.x(CD, cD), TC.y(CD, cD), cD + 24, ID - 24), !0);
+          return !(tU < 24) && (null === (ZU = pU.replayUiEvent) || void 0 === ZU || ZU.call(pU, HR.what(RU, gU), HR.int(RU, gU), HR.x(RU, gU), HR.y(RU, gU), gU + 24, tU - 24), !0);
         case 62:
-          return 8 === ID && (null === (JD = pD.recorderEvent) || void 0 === JD || JD.call(pD, GC.what(CD, cD), GC.kind(CD, cD), GC.save(CD, cD)), !0);
+          return 8 === tU && (null === (aU = pU.recorderEvent) || void 0 === aU || aU.call(pU, SR.what(RU, gU), SR.kind(RU, gU), SR.save(RU, gU)), !0);
         default:
           return !1
       }
     }
-    const wc = {
+    const Kg = {
       SetChunkAddDistance: 2,
       WatchEntityInfo: 66,
       EventResync: 67,
@@ -881,483 +881,483 @@ export const modules = {
       PressCustomButton: 578,
       PadMove: 579
     };
-    let Sc = new Uint8Array(0);
+    let cg = new Uint8Array(0);
 
-    function Bc(DD) {
-      return Sc.buffer !== DD.buffer && (Sc = new Uint8Array(DD.buffer)), Sc
+    function Gg(UU) {
+      return cg.buffer !== UU.buffer && (cg = new Uint8Array(UU.buffer)), cg
     }
 
-    function yc(DD, CD, cD) {
-      const ID = DD.VM(66, CD, 4);
-      if (ID < 0) return !1;
-      return DD.view.setUint8(ID + 0, cD), !0
+    function jg(UU, RU, gU) {
+      const tU = UU.pu(66, RU, 4);
+      if (tU < 0) return !1;
+      return UU.view.setUint8(tU + 0, gU), !0
     }
 
-    function Mc(DD, CD, cD) {
-      const ID = DD.VM(67, CD, 4);
-      if (ID < 0) return !1;
-      return DD.view.setUint32(ID + 0, cD, !0), !0
+    function ug(UU, RU, gU) {
+      const tU = UU.pu(67, RU, 4);
+      if (tU < 0) return !1;
+      return UU.view.setUint32(tU + 0, gU, !0), !0
     }
 
-    function tc(DD, CD, cD) {
-      const ID = DD.VM(68, CD, 4);
-      if (ID < 0) return !1;
-      return DD.view.setUint8(ID + 0, cD), !0
+    function Cg(UU, RU, gU) {
+      const tU = UU.pu(68, RU, 4);
+      if (tU < 0) return !1;
+      return UU.view.setUint8(tU + 0, gU), !0
     }
 
-    function Zc(DD, CD, cD, ID) {
-      const pD = DD.VM(69, CD, 4 + ID.length);
-      if (pD < 0) return !1;
-      const iD = DD.view;
-      return iD.setUint8(pD + 0, cD), Bc(iD).set(ID, iD.byteOffset + pD + 4), !0
+    function hg(UU, RU, gU, tU) {
+      const pU = UU.pu(69, RU, 4 + tU.length);
+      if (pU < 0) return !1;
+      const EU = UU.view;
+      return EU.setUint8(pU + 0, gU), Gg(EU).set(tU, EU.byteOffset + pU + 4), !0
     }
 
-    function oc(DD, CD, cD, ID, pD) {
-      const iD = DD.VM(128, CD, 4 + pD.length);
-      if (iD < 0) return !1;
-      const fD = DD.view;
-      return fD.setUint8(iD + 0, cD), fD.setUint16(iD + 2, ID, !0), Bc(fD).set(pD, fD.byteOffset + iD + 4), !0
+    function Qg(UU, RU, gU, tU, pU) {
+      const EU = UU.pu(128, RU, 4 + pU.length);
+      if (EU < 0) return !1;
+      const PU = UU.view;
+      return PU.setUint8(EU + 0, gU), PU.setUint16(EU + 2, tU, !0), Gg(PU).set(pU, PU.byteOffset + EU + 4), !0
     }
 
-    function vc(DD, CD, cD) {
-      const ID = DD.VM(131, CD, 4);
-      if (ID < 0) return !1;
-      return DD.view.setInt32(ID + 0, cD, !0), !0
+    function eg(UU, RU, gU) {
+      const tU = UU.pu(131, RU, 4);
+      if (tU < 0) return !1;
+      return UU.view.setInt32(tU + 0, gU, !0), !0
     }
 
-    function Nc(DD, CD, cD) {
-      const ID = DD.VM(132, CD, 4);
-      if (ID < 0) return !1;
-      return DD.view.setUint32(ID + 0, cD, !0), !0
+    function Wg(UU, RU, gU) {
+      const tU = UU.pu(132, RU, 4);
+      if (tU < 0) return !1;
+      return UU.view.setUint32(tU + 0, gU, !0), !0
     }
 
-    function gc(DD, CD, cD) {
-      const ID = DD.VM(133, CD, 4);
-      if (ID < 0) return !1;
-      return DD.view.setUint32(ID + 0, cD, !0), !0
+    function fg(UU, RU, gU) {
+      const tU = UU.pu(133, RU, 4);
+      if (tU < 0) return !1;
+      return UU.view.setUint32(tU + 0, gU, !0), !0
     }
 
-    function Xc(DD, CD, cD) {
-      const ID = DD.VM(144, CD, 4);
-      if (ID < 0) return !1;
-      return DD.view.setUint8(ID + 0, cD), !0
+    function xg(UU, RU, gU) {
+      const tU = UU.pu(144, RU, 4);
+      if (tU < 0) return !1;
+      return UU.view.setUint8(tU + 0, gU), !0
     }
 
-    function mc(DD, CD, cD, ID, pD) {
-      const iD = DD.VM(145, CD, 12);
-      if (iD < 0) return !1;
-      const fD = DD.view;
-      return fD.setInt32(iD + 0, cD, !0), fD.setInt32(iD + 4, ID, !0), fD.setInt32(iD + 8, pD, !0), !0
+    function mg(UU, RU, gU, tU, pU) {
+      const EU = UU.pu(145, RU, 12);
+      if (EU < 0) return !1;
+      const PU = UU.view;
+      return PU.setInt32(EU + 0, gU, !0), PU.setInt32(EU + 4, tU, !0), PU.setInt32(EU + 8, pU, !0), !0
     }
 
-    function nc(DD, CD, cD, ID) {
-      const pD = DD.VM(256, CD, 4 + ID.length);
-      if (pD < 0) return !1;
-      const iD = DD.view;
-      return iD.setUint16(pD + 0, cD, !0), Bc(iD).set(ID, iD.byteOffset + pD + 4), !0
+    function Ig(UU, RU, gU, tU) {
+      const pU = UU.pu(256, RU, 4 + tU.length);
+      if (pU < 0) return !1;
+      const EU = UU.view;
+      return EU.setUint16(pU + 0, gU, !0), Gg(EU).set(tU, EU.byteOffset + pU + 4), !0
     }
 
-    function Oc(DD, CD, cD) {
-      const ID = DD.VM(258, CD, 4);
-      if (ID < 0) return !1;
-      return DD.view.setUint8(ID + 0, cD), !0
+    function Jg(UU, RU, gU) {
+      const tU = UU.pu(258, RU, 4);
+      if (tU < 0) return !1;
+      return UU.view.setUint8(tU + 0, gU), !0
     }
 
-    function Pc(DD, CD, cD, ID, pD, iD, fD, bD, QD) {
-      const wD = DD.VM(320, CD, 48 + QD.length);
-      if (wD < 0) return !1;
-      const SD = DD.view;
-      SD.setUint32(wD + 0, cD, !0), SD.setUint16(wD + 4, ID, !0), SD.setUint16(wD + 6, pD, !0), SD.setUint32(wD + 8, iD, !0);
-      for (let BD = 0; BD < 3; BD++) SD.setFloat64(wD + 12 + 8 * BD, fD[BD], !0);
-      for (let BD = 0; BD < 3; BD++) SD.setFloat32(wD + 36 + 4 * BD, bD[BD], !0);
-      return Bc(SD).set(QD, SD.byteOffset + wD + 48), !0
+    function wg(UU, RU, gU, tU, pU, EU, PU, TU, qU) {
+      const KU = UU.pu(320, RU, 48 + qU.length);
+      if (KU < 0) return !1;
+      const cU = UU.view;
+      cU.setUint32(KU + 0, gU, !0), cU.setUint16(KU + 4, tU, !0), cU.setUint16(KU + 6, pU, !0), cU.setUint32(KU + 8, EU, !0);
+      for (let GU = 0; GU < 3; GU++) cU.setFloat64(KU + 12 + 8 * GU, PU[GU], !0);
+      for (let GU = 0; GU < 3; GU++) cU.setFloat32(KU + 36 + 4 * GU, TU[GU], !0);
+      return Gg(cU).set(qU, cU.byteOffset + KU + 48), !0
     }
 
-    function Hc(DD, CD, cD, ID, pD, iD, fD, bD, QD) {
-      const wD = DD.VM(321, CD, 48 + QD.length);
-      if (wD < 0) return !1;
-      const SD = DD.view;
-      SD.setUint32(wD + 0, cD, !0), SD.setInt32(wD + 4, ID, !0), SD.setUint16(wD + 8, pD, !0), SD.setUint16(wD + 10, iD, !0);
-      for (let BD = 0; BD < 3; BD++) SD.setFloat64(wD + 12 + 8 * BD, fD[BD], !0);
-      for (let BD = 0; BD < 3; BD++) SD.setFloat32(wD + 36 + 4 * BD, bD[BD], !0);
-      return Bc(SD).set(QD, SD.byteOffset + wD + 48), !0
+    function ng(UU, RU, gU, tU, pU, EU, PU, TU, qU) {
+      const KU = UU.pu(321, RU, 48 + qU.length);
+      if (KU < 0) return !1;
+      const cU = UU.view;
+      cU.setUint32(KU + 0, gU, !0), cU.setInt32(KU + 4, tU, !0), cU.setUint16(KU + 8, pU, !0), cU.setUint16(KU + 10, EU, !0);
+      for (let GU = 0; GU < 3; GU++) cU.setFloat64(KU + 12 + 8 * GU, PU[GU], !0);
+      for (let GU = 0; GU < 3; GU++) cU.setFloat32(KU + 36 + 4 * GU, TU[GU], !0);
+      return Gg(cU).set(qU, cU.byteOffset + KU + 48), !0
     }
 
-    function Uc(DD, CD, cD, ID, pD, iD, fD) {
-      const bD = DD.VM(322, CD, 44 + fD.length);
-      if (bD < 0) return !1;
-      const QD = DD.view;
-      QD.setUint32(bD + 0, cD, !0), QD.setUint32(bD + 4, ID, !0);
-      for (let wD = 0; wD < 3; wD++) QD.setFloat64(bD + 8 + 8 * wD, pD[wD], !0);
-      for (let wD = 0; wD < 3; wD++) QD.setFloat32(bD + 32 + 4 * wD, iD[wD], !0);
-      return Bc(QD).set(fD, QD.byteOffset + bD + 44), !0
+    function bg(UU, RU, gU, tU, pU, EU, PU) {
+      const TU = UU.pu(322, RU, 44 + PU.length);
+      if (TU < 0) return !1;
+      const qU = UU.view;
+      qU.setUint32(TU + 0, gU, !0), qU.setUint32(TU + 4, tU, !0);
+      for (let KU = 0; KU < 3; KU++) qU.setFloat64(TU + 8 + 8 * KU, pU[KU], !0);
+      for (let KU = 0; KU < 3; KU++) qU.setFloat32(TU + 32 + 4 * KU, EU[KU], !0);
+      return Gg(qU).set(PU, qU.byteOffset + TU + 44), !0
     }
 
-    function xc(DD, CD, cD) {
-      const ID = DD.VM(323, CD, 4);
-      if (ID < 0) return !1;
-      return DD.view.setUint32(ID + 0, cD, !0), !0
+    function og(UU, RU, gU) {
+      const tU = UU.pu(323, RU, 4);
+      if (tU < 0) return !1;
+      return UU.view.setUint32(tU + 0, gU, !0), !0
     }
 
-    function qc(DD, CD, cD, ID, pD, iD) {
-      const fD = DD.VM(324, CD, 32 + iD.length);
-      if (fD < 0) return !1;
-      const bD = DD.view;
-      bD.setUint32(fD + 0, cD, !0), bD.setUint32(fD + 4, ID, !0);
-      for (let QD = 0; QD < 3; QD++) bD.setFloat64(fD + 8 + 8 * QD, pD[QD], !0);
-      return Bc(bD).set(iD, bD.byteOffset + fD + 32), !0
+    function Zg(UU, RU, gU, tU, pU, EU) {
+      const PU = UU.pu(324, RU, 32 + EU.length);
+      if (PU < 0) return !1;
+      const TU = UU.view;
+      TU.setUint32(PU + 0, gU, !0), TU.setUint32(PU + 4, tU, !0);
+      for (let qU = 0; qU < 3; qU++) TU.setFloat64(PU + 8 + 8 * qU, pU[qU], !0);
+      return Gg(TU).set(EU, TU.byteOffset + PU + 32), !0
     }
 
-    function Jc(DD, CD) {
-      return !(DD.VM(325, CD, 0) < 0)
+    function ag(UU, RU) {
+      return !(UU.pu(325, RU, 0) < 0)
     }
 
-    function Kc(DD, CD, cD, ID, pD, iD) {
-      const fD = DD.VM(384, CD, 16);
-      if (fD < 0) return !1;
-      const bD = DD.view;
-      return bD.setUint32(fD + 0, cD, !0), bD.setUint32(fD + 4, ID, !0), bD.setFloat32(fD + 8, pD, !0), bD.setFloat32(fD + 12, iD, !0), !0
+    function Yg(UU, RU, gU, tU, pU, EU) {
+      const PU = UU.pu(384, RU, 16);
+      if (PU < 0) return !1;
+      const TU = UU.view;
+      return TU.setUint32(PU + 0, gU, !0), TU.setUint32(PU + 4, tU, !0), TU.setFloat32(PU + 8, pU, !0), TU.setFloat32(PU + 12, EU, !0), !0
     }
 
-    function ac(DD, CD, cD, ID, pD, iD, fD) {
-      const bD = DD.VM(385, CD, 36 + fD.length);
-      if (bD < 0) return !1;
-      const QD = DD.view;
-      QD.setUint32(bD + 0, cD, !0), QD.setUint32(bD + 4, ID, !0);
-      for (let wD = 0; wD < 3; wD++) QD.setFloat64(bD + 8 + 8 * wD, pD[wD], !0);
-      return QD.setUint32(bD + 32, iD, !0), Bc(QD).set(fD, QD.byteOffset + bD + 36), !0
+    function Bg(UU, RU, gU, tU, pU, EU, PU) {
+      const TU = UU.pu(385, RU, 36 + PU.length);
+      if (TU < 0) return !1;
+      const qU = UU.view;
+      qU.setUint32(TU + 0, gU, !0), qU.setUint32(TU + 4, tU, !0);
+      for (let KU = 0; KU < 3; KU++) qU.setFloat64(TU + 8 + 8 * KU, pU[KU], !0);
+      return qU.setUint32(TU + 32, EU, !0), Gg(qU).set(PU, qU.byteOffset + TU + 36), !0
     }
 
-    function Vc(DD, CD, cD, ID, pD, iD, fD, bD, QD) {
-      const wD = DD.VM(386, CD, 56 + QD.length);
-      if (wD < 0) return !1;
-      const SD = DD.view;
-      SD.setUint32(wD + 0, cD, !0), SD.setUint8(wD + 4, ID);
-      for (let BD = 0; BD < 4; BD++) SD.setFloat32(wD + 8 + 4 * BD, pD[BD], !0);
-      for (let BD = 0; BD < 3; BD++) SD.setFloat64(wD + 24 + 8 * BD, iD[BD], !0);
-      return SD.setUint32(wD + 48, fD, !0), SD.setUint32(wD + 52, bD, !0), Bc(SD).set(QD, SD.byteOffset + wD + 56), !0
+    function Vg(UU, RU, gU, tU, pU, EU, PU, TU, qU) {
+      const KU = UU.pu(386, RU, 56 + qU.length);
+      if (KU < 0) return !1;
+      const cU = UU.view;
+      cU.setUint32(KU + 0, gU, !0), cU.setUint8(KU + 4, tU);
+      for (let GU = 0; GU < 4; GU++) cU.setFloat32(KU + 8 + 4 * GU, pU[GU], !0);
+      for (let GU = 0; GU < 3; GU++) cU.setFloat64(KU + 24 + 8 * GU, EU[GU], !0);
+      return cU.setUint32(KU + 48, PU, !0), cU.setUint32(KU + 52, TU, !0), Gg(cU).set(qU, cU.byteOffset + KU + 56), !0
     }
 
-    function zc(DD, CD, cD, ID, pD, iD, fD, bD, QD) {
-      const wD = DD.VM(387, CD, 56);
-      if (wD < 0) return !1;
-      const SD = DD.view;
-      SD.setUint32(wD + 0, cD, !0), SD.setUint16(wD + 4, ID, !0), SD.setUint8(wD + 6, pD);
-      for (let BD = 0; BD < 3; BD++) SD.setFloat64(wD + 8 + 8 * BD, iD[BD], !0);
-      for (let BD = 0; BD < 2; BD++) SD.setFloat32(wD + 32 + 4 * BD, fD[BD], !0);
-      SD.setFloat32(wD + 40, bD, !0);
-      for (let BD = 0; BD < 3; BD++) SD.setFloat32(wD + 44 + 4 * BD, QD[BD], !0);
+    function rg(UU, RU, gU, tU, pU, EU, PU, TU, qU) {
+      const KU = UU.pu(387, RU, 56);
+      if (KU < 0) return !1;
+      const cU = UU.view;
+      cU.setUint32(KU + 0, gU, !0), cU.setUint16(KU + 4, tU, !0), cU.setUint8(KU + 6, pU);
+      for (let GU = 0; GU < 3; GU++) cU.setFloat64(KU + 8 + 8 * GU, EU[GU], !0);
+      for (let GU = 0; GU < 2; GU++) cU.setFloat32(KU + 32 + 4 * GU, PU[GU], !0);
+      cU.setFloat32(KU + 40, TU, !0);
+      for (let GU = 0; GU < 3; GU++) cU.setFloat32(KU + 44 + 4 * GU, qU[GU], !0);
       return !0
     }
 
-    function jc(DD, CD, cD) {
-      const ID = DD.VM(388, CD, 4);
-      if (ID < 0) return !1;
-      return DD.view.setUint32(ID + 0, cD, !0), !0
+    function Xg(UU, RU, gU) {
+      const tU = UU.pu(388, RU, 4);
+      if (tU < 0) return !1;
+      return UU.view.setUint32(tU + 0, gU, !0), !0
     }
 
-    function lc(DD, CD, cD, ID) {
-      const pD = DD.VM(389, CD, 8);
-      if (pD < 0) return !1;
-      const iD = DD.view;
-      return iD.setInt32(pD + 0, cD, !0), iD.setFloat32(pD + 4, ID, !0), !0
+    function vg(UU, RU, gU, tU) {
+      const pU = UU.pu(389, RU, 8);
+      if (pU < 0) return !1;
+      const EU = UU.view;
+      return EU.setInt32(pU + 0, gU, !0), EU.setFloat32(pU + 4, tU, !0), !0
     }
 
-    function Lc(DD, CD, cD, ID) {
-      const pD = DD.VM(390, CD, 8);
-      if (pD < 0) return !1;
-      const iD = DD.view;
-      return iD.setInt32(pD + 0, cD, !0), iD.setFloat32(pD + 4, ID, !0), !0
+    function dg(UU, RU, gU, tU) {
+      const pU = UU.pu(390, RU, 8);
+      if (pU < 0) return !1;
+      const EU = UU.view;
+      return EU.setInt32(pU + 0, gU, !0), EU.setFloat32(pU + 4, tU, !0), !0
     }
 
-    function Tc(DD, CD, cD, ID, pD, iD) {
-      const fD = DD.VM(391, CD, 12);
-      if (fD < 0) return !1;
-      const bD = DD.view;
-      return bD.setFloat32(fD + 0, cD, !0), bD.setFloat32(fD + 4, ID, !0), bD.setUint8(fD + 8, pD), bD.setUint8(fD + 9, iD), !0
+    function Hg(UU, RU, gU, tU, pU, EU) {
+      const PU = UU.pu(391, RU, 12);
+      if (PU < 0) return !1;
+      const TU = UU.view;
+      return TU.setFloat32(PU + 0, gU, !0), TU.setFloat32(PU + 4, tU, !0), TU.setUint8(PU + 8, pU), TU.setUint8(PU + 9, EU), !0
     }
 
-    function Gc(DD, CD, cD) {
-      const ID = DD.VM(392, CD, 4);
-      if (ID < 0) return !1;
-      return DD.view.setUint32(ID + 0, cD, !0), !0
+    function Sg(UU, RU, gU) {
+      const tU = UU.pu(392, RU, 4);
+      if (tU < 0) return !1;
+      return UU.view.setUint32(tU + 0, gU, !0), !0
     }
 
-    function Rc(DD, CD, cD, ID, pD) {
-      const iD = DD.VM(393, CD, 12);
-      if (iD < 0) return !1;
-      const fD = DD.view;
-      return fD.setUint32(iD + 0, cD, !0), fD.setUint16(iD + 4, ID, !0), fD.setFloat32(iD + 8, pD, !0), !0
+    function sg(UU, RU, gU, tU, pU) {
+      const EU = UU.pu(393, RU, 12);
+      if (EU < 0) return !1;
+      const PU = UU.view;
+      return PU.setUint32(EU + 0, gU, !0), PU.setUint16(EU + 4, tU, !0), PU.setFloat32(EU + 8, pU, !0), !0
     }
 
-    function kc(DD, CD, cD, ID, pD, iD, fD) {
-      const bD = DD.VM(394, CD, 36);
-      if (bD < 0) return !1;
-      const QD = DD.view;
-      QD.setUint32(bD + 0, cD, !0), QD.setUint16(bD + 4, ID, !0), QD.setUint8(bD + 6, pD);
-      for (let wD = 0; wD < 3; wD++) QD.setFloat64(bD + 8 + 8 * wD, iD[wD], !0);
-      return QD.setFloat32(bD + 32, fD, !0), !0
+    function yg(UU, RU, gU, tU, pU, EU, PU) {
+      const TU = UU.pu(394, RU, 36);
+      if (TU < 0) return !1;
+      const qU = UU.view;
+      qU.setUint32(TU + 0, gU, !0), qU.setUint16(TU + 4, tU, !0), qU.setUint8(TU + 6, pU);
+      for (let KU = 0; KU < 3; KU++) qU.setFloat64(TU + 8 + 8 * KU, EU[KU], !0);
+      return qU.setFloat32(TU + 32, PU, !0), !0
     }
 
-    function dc(DD, CD, cD) {
-      const ID = DD.VM(398, CD, 4);
-      if (ID < 0) return !1;
-      return DD.view.setUint32(ID + 0, cD, !0), !0
+    function kg(UU, RU, gU) {
+      const tU = UU.pu(398, RU, 4);
+      if (tU < 0) return !1;
+      return UU.view.setUint32(tU + 0, gU, !0), !0
     }
 
-    function Yc(DD, CD, cD) {
-      const ID = DD.VM(448, CD, 4);
-      if (ID < 0) return !1;
-      return DD.view.setFloat32(ID + 0, cD, !0), !0
+    function Fg(UU, RU, gU) {
+      const tU = UU.pu(448, RU, 4);
+      if (tU < 0) return !1;
+      return UU.view.setFloat32(tU + 0, gU, !0), !0
     }
 
-    function Wc(DD, CD, cD, ID) {
-      const pD = DD.VM(450, CD, 12);
-      if (pD < 0) return !1;
-      const iD = DD.view;
-      for (let fD = 0; fD < 2; fD++) iD.setFloat32(pD + 0 + 4 * fD, cD[fD], !0);
-      return iD.setUint8(pD + 8, ID), !0
+    function ig(UU, RU, gU, tU) {
+      const pU = UU.pu(450, RU, 12);
+      if (pU < 0) return !1;
+      const EU = UU.view;
+      for (let PU = 0; PU < 2; PU++) EU.setFloat32(pU + 0 + 4 * PU, gU[PU], !0);
+      return EU.setUint8(pU + 8, tU), !0
     }
 
-    function sc(DD, CD, cD, ID) {
-      const pD = DD.VM(452, CD, 8);
-      if (pD < 0) return !1;
-      const iD = DD.view;
-      return iD.setFloat32(pD + 0, cD, !0), iD.setUint8(pD + 4, ID), !0
+    function Ag(UU, RU, gU, tU) {
+      const pU = UU.pu(452, RU, 8);
+      if (pU < 0) return !1;
+      const EU = UU.view;
+      return EU.setFloat32(pU + 0, gU, !0), EU.setUint8(pU + 4, tU), !0
     }
 
-    function Ec(DD, CD, cD, ID, pD) {
-      const iD = DD.VM(454, CD, 4);
-      if (iD < 0) return !1;
-      const fD = DD.view;
-      return fD.setUint8(iD + 0, cD), fD.setUint8(iD + 1, ID), fD.setUint8(iD + 2, pD), !0
+    function zg(UU, RU, gU, tU, pU) {
+      const EU = UU.pu(454, RU, 4);
+      if (EU < 0) return !1;
+      const PU = UU.view;
+      return PU.setUint8(EU + 0, gU), PU.setUint8(EU + 1, tU), PU.setUint8(EU + 2, pU), !0
     }
 
-    function ec(DD, CD, cD, ID) {
-      const pD = DD.VM(455, CD, 40);
-      if (pD < 0) return !1;
-      const iD = DD.view;
-      for (let fD = 0; fD < 9; fD++) iD.setInt32(pD + 0 + 4 * fD, cD[fD], !0);
-      return iD.setUint32(pD + 36, ID, !0), !0
+    function Mg(UU, RU, gU, tU) {
+      const pU = UU.pu(455, RU, 40);
+      if (pU < 0) return !1;
+      const EU = UU.view;
+      for (let PU = 0; PU < 9; PU++) EU.setInt32(pU + 0 + 4 * PU, gU[PU], !0);
+      return EU.setUint32(pU + 36, tU, !0), !0
     }
 
-    function uc(DD, CD, cD, ID) {
-      const pD = DD.VM(456, CD, 8);
-      if (pD < 0) return !1;
-      const iD = DD.view;
-      return iD.setFloat32(pD + 0, cD, !0), iD.setUint8(pD + 4, ID), !0
+    function Dg(UU, RU, gU, tU) {
+      const pU = UU.pu(456, RU, 8);
+      if (pU < 0) return !1;
+      const EU = UU.view;
+      return EU.setFloat32(pU + 0, gU, !0), EU.setUint8(pU + 4, tU), !0
     }
 
-    function hc(DD, CD, cD, ID, pD) {
-      const iD = DD.VM(457, CD, 16);
-      if (iD < 0) return !1;
-      const fD = DD.view;
-      for (let bD = 0; bD < 3; bD++) fD.setInt32(iD + 0 + 4 * bD, cD[bD], !0);
-      for (let bD = 0; bD < 3; bD++) fD.setInt8(iD + 12 + 1 * bD, ID[bD]);
-      return fD.setUint8(iD + 15, pD), !0
+    function Lg(UU, RU, gU, tU, pU) {
+      const EU = UU.pu(457, RU, 16);
+      if (EU < 0) return !1;
+      const PU = UU.view;
+      for (let TU = 0; TU < 3; TU++) PU.setInt32(EU + 0 + 4 * TU, gU[TU], !0);
+      for (let TU = 0; TU < 3; TU++) PU.setInt8(EU + 12 + 1 * TU, tU[TU]);
+      return PU.setUint8(EU + 15, pU), !0
     }
 
-    function rc(DD, CD, cD, ID) {
-      const pD = DD.VM(530, CD, 4 + ID.length);
-      if (pD < 0) return !1;
-      const iD = DD.view;
-      return iD.setUint8(pD + 0, cD), Bc(iD).set(ID, iD.byteOffset + pD + 4), !0
+    function Ng(UU, RU, gU, tU) {
+      const pU = UU.pu(530, RU, 4 + tU.length);
+      if (pU < 0) return !1;
+      const EU = UU.view;
+      return EU.setUint8(pU + 0, gU), Gg(EU).set(tU, EU.byteOffset + pU + 4), !0
     }
 
-    function Ac(DD, CD, cD, ID, pD, iD) {
-      const fD = DD.VM(531, CD, 12 + iD.length);
-      if (fD < 0) return !1;
-      const bD = DD.view;
-      return bD.setFloat32(fD + 0, cD, !0), bD.setFloat32(fD + 4, ID, !0), bD.setUint32(fD + 8, pD, !0), Bc(bD).set(iD, bD.byteOffset + fD + 12), !0
+    function lg(UU, RU, gU, tU, pU, EU) {
+      const PU = UU.pu(531, RU, 12 + EU.length);
+      if (PU < 0) return !1;
+      const TU = UU.view;
+      return TU.setFloat32(PU + 0, gU, !0), TU.setFloat32(PU + 4, tU, !0), TU.setUint32(PU + 8, pU, !0), Gg(TU).set(EU, TU.byteOffset + PU + 12), !0
     }
 
-    function Fc(DD, CD, cD, ID, pD, iD) {
-      const fD = DD.VM(532, CD, 12 + iD.length);
-      if (fD < 0) return !1;
-      const bD = DD.view;
-      return bD.setInt32(fD + 0, cD, !0), bD.setInt32(fD + 4, ID, !0), bD.setUint32(fD + 8, pD, !0), Bc(bD).set(iD, bD.byteOffset + fD + 12), !0
+    function Og(UU, RU, gU, tU, pU, EU) {
+      const PU = UU.pu(532, RU, 12 + EU.length);
+      if (PU < 0) return !1;
+      const TU = UU.view;
+      return TU.setInt32(PU + 0, gU, !0), TU.setInt32(PU + 4, tU, !0), TU.setUint32(PU + 8, pU, !0), Gg(TU).set(EU, TU.byteOffset + PU + 12), !0
     }
 
-    function DI(DD, CD, cD, ID, pD) {
-      const iD = DD.VM(533, CD, 8 + pD.length);
-      if (iD < 0) return !1;
-      const fD = DD.view;
-      return fD.setInt32(iD + 0, cD, !0), fD.setInt32(iD + 4, ID, !0), Bc(fD).set(pD, fD.byteOffset + iD + 8), !0
+    function Ut(UU, RU, gU, tU, pU) {
+      const EU = UU.pu(533, RU, 8 + pU.length);
+      if (EU < 0) return !1;
+      const PU = UU.view;
+      return PU.setInt32(EU + 0, gU, !0), PU.setInt32(EU + 4, tU, !0), Gg(PU).set(pU, PU.byteOffset + EU + 8), !0
     }
 
-    function CI(DD, CD) {
-      return !(DD.VM(576, CD, 0) < 0)
+    function Rt(UU, RU) {
+      return !(UU.pu(576, RU, 0) < 0)
     }
 
-    function cI(DD, CD, cD, ID, pD, iD) {
-      const fD = DD.VM(577, CD, 36 + iD.length);
-      if (fD < 0) return !1;
-      const bD = DD.view;
-      bD.setUint8(fD + 0, cD);
-      for (let QD = 0; QD < 16; QD++) bD.setUint8(fD + 4 + 1 * QD, ID[QD]);
-      for (let QD = 0; QD < 16; QD++) bD.setUint8(fD + 20 + 1 * QD, pD[QD]);
-      return Bc(bD).set(iD, bD.byteOffset + fD + 36), !0
+    function gt(UU, RU, gU, tU, pU, EU) {
+      const PU = UU.pu(577, RU, 36 + EU.length);
+      if (PU < 0) return !1;
+      const TU = UU.view;
+      TU.setUint8(PU + 0, gU);
+      for (let qU = 0; qU < 16; qU++) TU.setUint8(PU + 4 + 1 * qU, tU[qU]);
+      for (let qU = 0; qU < 16; qU++) TU.setUint8(PU + 20 + 1 * qU, pU[qU]);
+      return Gg(TU).set(EU, TU.byteOffset + PU + 36), !0
     }
 
-    function II(DD, CD, cD, ID) {
-      const pD = DD.VM(578, CD, 4 + ID.length);
-      if (pD < 0) return !1;
-      const iD = DD.view;
-      return iD.setUint8(pD + 0, cD), Bc(iD).set(ID, iD.byteOffset + pD + 4), !0
+    function tt(UU, RU, gU, tU) {
+      const pU = UU.pu(578, RU, 4 + tU.length);
+      if (pU < 0) return !1;
+      const EU = UU.view;
+      return EU.setUint8(pU + 0, gU), Gg(EU).set(tU, EU.byteOffset + pU + 4), !0
     }
 
-    function pI(DD, CD, cD, ID, pD, iD, fD, bD) {
-      const QD = DD.VM(579, CD, 36);
-      if (QD < 0) return !1;
-      const wD = DD.view;
-      return wD.setFloat64(QD + 0, cD, !0), wD.setFloat64(QD + 8, ID, !0), wD.setFloat64(QD + 16, pD, !0), wD.setFloat64(QD + 24, iD, !0), wD.setUint16(QD + 32, fD, !0), wD.setUint8(QD + 34, bD), !0
+    function pt(UU, RU, gU, tU, pU, EU, PU, TU) {
+      const qU = UU.pu(579, RU, 36);
+      if (qU < 0) return !1;
+      const KU = UU.view;
+      return KU.setFloat64(qU + 0, gU, !0), KU.setFloat64(qU + 8, tU, !0), KU.setFloat64(qU + 16, pU, !0), KU.setFloat64(qU + 24, EU, !0), KU.setUint16(qU + 32, PU, !0), KU.setUint8(qU + 34, TU), !0
     }
-    class iI {
-      constructor(DD, CD) {
-        this.core = DD, this.afterCall = CD
+    class Et {
+      constructor(UU, RU) {
+        this.core = UU, this.afterCall = RU
       }
-      canModify(DD, CD, cD) {
-        const ID = this.core.EpD(DD, CD, cD);
-        return this.afterCall(), ID
+      canModify(UU, RU, gU) {
+        const tU = this.core.NpU(UU, RU, gU);
+        return this.afterCall(), tU
       }
-      terrainBlocked(DD, CD, cD, ID, pD) {
-        const iD = this.core.RiD(DD, CD, cD, ID, pD);
-        return this.afterCall(), iD
+      terrainBlocked(UU, RU, gU, tU, pU) {
+        const EU = this.core.yEU(UU, RU, gU, tU, pU);
+        return this.afterCall(), EU
       }
-      Hx(DD, CD, cD, ID) {
-        const pD = this.core.NM(DD, CD, cD, ID);
-        return this.afterCall(), pD
+      mw(UU, RU, gU, tU) {
+        const pU = this.core.Fj(UU, RU, gU, tU);
+        return this.afterCall(), pU
       }
-      blockData(DD, CD, cD) {
-        const ID = this.core.WpD(DD, CD, cD);
-        return this.afterCall(), ID
+      blockData(UU, RU, gU) {
+        const tU = this.core.DpU(UU, RU, gU);
+        return this.afterCall(), tU
       }
-      cameraSweep(DD, CD, cD, ID, pD, iD, fD) {
-        const bD = this.core.kID(DD, CD, cD, ID, pD, iD, fD);
-        return this.afterCall(), bD
+      cameraSweep(UU, RU, gU, tU, pU, EU, PU) {
+        const TU = this.core.DtU(UU, RU, gU, tU, pU, EU, PU);
+        return this.afterCall(), TU
       }
-      hasServerTarget(DD) {
-        const CD = this.core.iiD(DD);
-        return this.afterCall(), CD
+      hasServerTarget(UU) {
+        const RU = this.core.KEU(UU);
+        return this.afterCall(), RU
       }
-      entityInteractable(DD) {
-        const CD = this.core.DiD(DD);
-        return this.afterCall(), CD
+      entityInteractable(UU) {
+        const RU = this.core.pEU(UU);
+        return this.afterCall(), RU
       }
-      entityCrouching(DD) {
-        const CD = this.core.FpD(DD);
-        return this.afterCall(), CD
+      entityCrouching(UU) {
+        const RU = this.core.tEU(UU);
+        return this.afterCall(), RU
       }
-      predictServerPosition(DD, CD, cD, ID) {
-        const pD = this.core.viD(DD, CD, cD, ID);
-        return this.afterCall(), pD
+      predictServerPosition(UU, RU, gU, tU) {
+        const pU = this.core.xEU(UU, RU, gU, tU);
+        return this.afterCall(), pU
       }
-      setOtherEntitySetting(DD, CD, cD) {
-        const ID = this.core.EID(DD, CD, cD);
-        return this.afterCall(), ID
+      setOtherEntitySetting(UU, RU, gU) {
+        const tU = this.core.UpU(UU, RU, gU);
+        return this.afterCall(), tU
       }
-      entityInfoBatch(DD) {
-        const CD = this.core.hID(DD);
-        return this.afterCall(), CD
+      entityInfoBatch(UU) {
+        const RU = this.core.tpU(UU);
+        return this.afterCall(), RU
       }
-      entityName(DD) {
-        const CD = this.core.CiD(DD);
-        return this.afterCall(), CD
+      entityName(UU) {
+        const RU = this.core.EEU(UU);
+        return this.afterCall(), RU
       }
-      hasEffect(DD, CD) {
-        const cD = this.core.piD(DD, CD);
-        return this.afterCall(), cD
+      hasEffect(UU, RU) {
+        const gU = this.core.qEU(UU, RU);
+        return this.afterCall(), gU
       }
       scratchPtr() {
-        const DD = this.core.TID();
-        return this.afterCall(), DD
+        const UU = this.core.AtU();
+        return this.afterCall(), UU
       }
-      invSwap(DD, CD) {
-        const cD = this.core.yiD(DD, CD);
-        return this.afterCall(), cD
+      invSwap(UU, RU) {
+        const gU = this.core.hEU(UU, RU);
+        return this.afterCall(), gU
       }
-      invMove(DD, CD, cD) {
-        const ID = this.core.wiD(DD, CD, cD);
-        return this.afterCall(), ID
+      invMove(UU, RU, gU) {
+        const tU = this.core.jEU(UU, RU, gU);
+        return this.afterCall(), tU
       }
-      invQuickMove(DD, CD, cD, ID) {
-        const pD = this.core.SiD(DD, CD, cD, ID);
-        return this.afterCall(), pD
+      invQuickMove(UU, RU, gU, tU) {
+        const pU = this.core.uEU(UU, RU, gU, tU);
+        return this.afterCall(), pU
       }
-      invRemove(DD, CD, cD) {
-        const ID = this.core.BiD(DD, CD, cD);
-        return this.afterCall(), ID
+      invRemove(UU, RU, gU) {
+        const tU = this.core.CEU(UU, RU, gU);
+        return this.afterCall(), tU
       }
-      invEnchant(DD, CD, cD, ID, pD) {
-        const iD = this.core.biD(DD, CD, cD, ID, pD);
-        return this.afterCall(), iD
+      invEnchant(UU, RU, gU, tU, pU) {
+        const EU = this.core.GEU(UU, RU, gU, tU, pU);
+        return this.afterCall(), EU
       }
-      craft(DD, CD, cD) {
-        const ID = this.core.craft(DD, CD, cD);
-        return this.afterCall(), ID
+      craft(UU, RU, gU) {
+        const tU = this.core.craft(UU, RU, gU);
+        return this.afterCall(), tU
       }
-      salvage(DD, CD, cD) {
-        const ID = this.core.salvage(DD, CD, cD);
-        return this.afterCall(), ID
+      salvage(UU, RU, gU) {
+        const tU = this.core.salvage(UU, RU, gU);
+        return this.afterCall(), tU
       }
-      selectSlot(DD) {
-        const CD = this.core.niD(DD);
-        return this.afterCall(), CD
+      selectSlot(UU) {
+        const RU = this.core.wEU(UU);
+        return this.afterCall(), RU
       }
       closeChest() {
-        const DD = this.core.epD();
-        return this.afterCall(), DD
+        const UU = this.core.lpU();
+        return this.afterCall(), UU
       }
-      itemAttributesBatch(DD) {
-        const CD = this.core.uID(DD);
-        return this.afterCall(), CD
+      itemAttributesBatch(UU) {
+        const RU = this.core.gpU(UU);
+        return this.afterCall(), RU
       }
       itemNames() {
-        const DD = this.core.UH();
-        return this.afterCall(), DD
+        const UU = this.core.PJ();
+        return this.afterCall(), UU
       }
       blockProps() {
-        const DD = this.core.spD();
-        return this.afterCall(), DD
+        const UU = this.core.LpU();
+        return this.afterCall(), UU
       }
       itemProps() {
-        const DD = this.core.MiD();
-        return this.afterCall(), DD
+        const UU = this.core.QEU();
+        return this.afterCall(), UU
       }
-      salvageRecipe(DD) {
-        const CD = this.core.DpD(DD);
-        return this.afterCall(), CD
+      salvageRecipe(UU) {
+        const RU = this.core.EpU(UU);
+        return this.afterCall(), RU
       }
-      craftingView(DD, CD, cD) {
-        const ID = this.core.eID(DD, CD, cD);
-        return this.afterCall(), ID
+      craftingView(UU, RU, gU) {
+        const tU = this.core.RpU(UU, RU, gU);
+        return this.afterCall(), tU
       }
       directorView() {
-        const DD = this.core.RID();
-        return this.afterCall(), DD
+        const UU = this.core.MtU();
+        return this.afterCall(), UU
       }
       directorDefaultPose() {
-        const DD = this.core.dID();
-        return this.afterCall(), DD
+        const UU = this.core.LtU();
+        return this.afterCall(), UU
       }
-      directorEntity(DD) {
-        const CD = this.core.YID(DD);
-        return this.afterCall(), CD
+      directorEntity(UU) {
+        const RU = this.core.NtU(UU);
+        return this.afterCall(), RU
       }
-      directorPose(DD, CD, cD, ID, pD, iD) {
-        const fD = this.core.WID(DD, CD, cD, ID, pD, iD);
-        return this.afterCall(), fD
+      directorPose(UU, RU, gU, tU, pU, EU) {
+        const PU = this.core.ltU(UU, RU, gU, tU, pU, EU);
+        return this.afterCall(), PU
       }
-      passTimings(DD) {
-        const CD = this.core.oiD(DD);
-        return this.afterCall(), CD
+      passTimings(UU) {
+        const RU = this.core.fEU(UU);
+        return this.afterCall(), RU
       }
       drawCensus() {
-        const DD = this.core.ApD();
-        return this.afterCall(), DD
+        const UU = this.core.gEU();
+        return this.afterCall(), UU
       }
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

@@ -1,421 +1,421 @@
 export const id = 237;
 export const ids = [237];
 export const modules = {
-  39815: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => iD,
-      e: () => fD
+  40124: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => EU,
+      f: () => PU
     });
-    var ID = cD(1922);
-    let pD = !1;
+    var tU = gU(1808);
+    let pU = !1;
 
-    function iD() {
-      pD = !0
+    function EU() {
+      pU = !0
     }
 
-    function fD() {
-      pD && (pD = !1, (0, ID.b)())
+    function PU() {
+      pU && (pU = !1, (0, tU.c)())
     }
   },
-  39781: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => tD,
-      g: () => yD,
-      h: () => MD
+  40081: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => CU,
+      i: () => jU,
+      l: () => uU
     });
-    var ID = cD(1924),
-      pD = cD(1286),
-      iD = cD(39692),
-      fD = cD(39711),
-      bD = cD(39715),
-      QD = cD(39727);
-    const wD = new pD.b;
-    let SD = !1;
+    var tU = gU(1813),
+      pU = gU(1291),
+      EU = gU(39971),
+      PU = gU(39991),
+      TU = gU(39994),
+      qU = gU(40016);
+    const KU = new pU.d;
+    let cU = !1;
 
-    function BD(DD) {
-      const CD = (0, iD.g)();
-      return null !== CD && +DD === CD.api.localId
+    function GU(UU) {
+      const RU = (0, EU.i)();
+      return null !== RU && +UU === RU.api.localId
     }
 
-    function yD() {
-      SD || (SD = !0, (0, QD.l)(fD.t, (DD => {
-        var CD, cD;
-        const ID = (0, bD.g)(fD.t, DD);
-        if (!(0, bD.e)(ID)) return;
-        const pD = ID;
-        BD(pD.IC) && MD(pD.pC, {
-          icon: pD.fC,
-          level: pD.QC,
-          displayName: null !== (CD = pD.iC) && void 0 !== CD ? CD : null,
-          durationMs: null !== (cD = pD.bC) && void 0 !== cD ? cD : null
+    function jU() {
+      cU || (cU = !0, (0, qU.h)(PU.p, (UU => {
+        var RU, gU;
+        const tU = (0, TU.e)(PU.p, UU);
+        if (!(0, TU.c)(tU)) return;
+        const pU = tU;
+        GU(pU.gR) && uU(pU.tR, {
+          icon: pU.ER,
+          level: pU.TR,
+          displayName: null !== (RU = pU.pR) && void 0 !== RU ? RU : null,
+          durationMs: null !== (gU = pU.PR) && void 0 !== gU ? gU : null
         })
-      })), (0, QD.l)(fD.X, (DD => {
-        const CD = (0, bD.g)(fD.X, DD);
-        if (!(0, bD.e)(CD)) return;
-        const cD = CD;
-        BD(cD.IC) && ID.b.remove(cD.pC)
-      })), (0, QD.i)((() => {
-        ID.b.clear()
+      })), (0, qU.h)(PU.W, (UU => {
+        const RU = (0, TU.e)(PU.W, UU);
+        if (!(0, TU.c)(RU)) return;
+        const gU = RU;
+        GU(gU.gR) && tU.c.remove(gU.tR)
+      })), (0, qU.f)((() => {
+        tU.c.clear()
       })))
     }
 
-    function MD(DD, CD) {
-      ID.b.update(DD, CD), wD.forEach((CD => {
-        CD(DD)
+    function uU(UU, RU) {
+      tU.c.update(UU, RU), KU.forEach((RU => {
+        RU(UU)
       }))
     }
-    const tD = {
+    const CU = {
       localEffectUpdated: {
-        watch: DD => wD.add(DD)
+        watch: UU => KU.add(UU)
       }
     }
   },
-  39785: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => SD
+  40088: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => cU
     });
-    var ID = cD(4585),
-      pD = cD(4581),
-      iD = cD(39718),
-      fD = cD(39727);
-    const bD = new Set(ID.F),
-      QD = ID.F.map((DD => (new TextEncoder).encode(DD))),
-      wD = new Map;
+    var tU = gU(4456),
+      pU = gU(4449),
+      EU = gU(40003),
+      PU = gU(40016);
+    const TU = new Set(tU.F),
+      qU = tU.F.map((UU => (new TextEncoder).encode(UU))),
+      KU = new Map;
 
-    function SD(DD, CD) {
-      var cD;
-      return null === (cD = wD.get(DD)) || void 0 === cD ? void 0 : cD[CD]
-    }(0, fD.l)(ID.dc.NewOtherEntitySettings, (DD => {
-      DD.payloadKind === pD.ic.Msgpack && QD.some((CD => function(DD, CD) {
-        const cD = CD[0];
-        for (let ID = DD.indexOf(cD); - 1 !== ID && ID + CD.length <= DD.length; ID = DD.indexOf(cD, ID + 1)) {
-          let cD = 1;
-          for (; cD < CD.length && DD[ID + cD] === CD[cD];) cD++;
-          if (cD === CD.length) return !0
+    function cU(UU, RU) {
+      var gU;
+      return null === (gU = KU.get(UU)) || void 0 === gU ? void 0 : gU[RU]
+    }(0, PU.h)(tU.dc.NewOtherEntitySettings, (UU => {
+      UU.payloadKind === pU.kc.Msgpack && qU.some((RU => function(UU, RU) {
+        const gU = RU[0];
+        for (let tU = UU.indexOf(gU); - 1 !== tU && tU + RU.length <= UU.length; tU = UU.indexOf(gU, tU + 1)) {
+          let gU = 1;
+          for (; gU < RU.length && UU[tU + gU] === RU[gU];) gU++;
+          if (gU === RU.length) return !0
         }
         return !1
-      }(DD.payload, CD))) && function(DD) {
-        if (null === DD || "object" !== typeof DD || null === DD.settings || "object" !== typeof DD.settings) return;
-        const CD = String(DD.eId),
-          cD = DD.settings;
-        let ID = wD.get(CD);
-        for (const pD in cD) {
-          if (!bD.has(pD)) continue;
-          const DD = cD[pD];
-          null === DD || void 0 === DD ? ID && delete ID[pD] : (ID ??= {}, ID[pD] = DD)
+      }(UU.payload, RU))) && function(UU) {
+        if (null === UU || "object" !== typeof UU || null === UU.settings || "object" !== typeof UU.settings) return;
+        const RU = String(UU.eId),
+          gU = UU.settings;
+        let tU = KU.get(RU);
+        for (const pU in gU) {
+          if (!TU.has(pU)) continue;
+          const UU = gU[pU];
+          null === UU || void 0 === UU ? tU && delete tU[pU] : (tU ??= {}, tU[pU] = UU)
         }
-        ID && wD.set(CD, ID)
-      }((0, iD.c)(DD.payload))
-    })), (0, fD.i)((() => {
-      wD.clear()
+        tU && KU.set(RU, tU)
+      }((0, EU.b)(UU.payload))
+    })), (0, PU.f)((() => {
+      KU.clear()
     }))
   },
-  39773: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => MD,
-      f: () => wD,
-      g: () => BD
+  40079: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => uU,
+      c: () => KU,
+      g: () => GU
     });
-    var ID = cD(38366),
-      pD = cD(1913),
-      iD = cD(1286),
-      fD = cD(39711),
-      bD = cD(39715),
-      QD = cD(39727);
-    const wD = new ID.c;
-    let SD = {};
+    var tU = gU(38561),
+      pU = gU(1802),
+      EU = gU(1291),
+      PU = gU(39991),
+      TU = gU(39994),
+      qU = gU(40016);
+    const KU = new tU.b;
+    let cU = {};
 
-    function BD(DD) {
-      return SD[DD]
+    function GU(UU) {
+      return cU[UU]
     }
-    const yD = new iD.b;
+    const jU = new EU.d;
 
-    function MD(DD) {
-      return yD.add(DD)
+    function uU(UU) {
+      return jU.add(UU)
     }
 
-    function tD(DD) {
-      yD.callEach(DD, "a roster listener")
-    }(0, QD.l)(fD.fb, (DD => {
-      const CD = (0, bD.g)(fD.fb, DD);
-      if (void 0 === CD) return;
-      const cD = CD.bI.some((DD => {
+    function CU(UU) {
+      jU.callEach(UU, "a roster listener")
+    }(0, qU.h)(PU.db, (UU => {
+      const RU = (0, TU.e)(PU.db, UU);
+      if (void 0 === RU) return;
+      const gU = RU.gt.some((UU => {
           let {
-            QI: CD,
-            wI: cD
-          } = DD;
-          return null !== cD && wD.has(CD) && wD.getName(CD) !== cD
+            tt: RU,
+            Et: gU
+          } = UU;
+          return null !== gU && KU.has(RU) && KU.getName(RU) !== gU
         })),
         {
-          added: ID,
-          removed: iD,
-          settingChanges: QD
-        } = wD.apply(CD),
-        SD = new Set;
-      for (const pD of QD)
-        for (const DD in pD.settings) SD.add(DD);
-      const BD = cD || ID.length > 0 || iD.length > 0;
-      (BD || SD.has("hideNameSeed")) && function() {
-        const DD = new Map;
-        for (const CD of wD.ids()) {
-          const cD = wD.getName(CD),
-            ID = wD.getSetting(CD, "hideNameSeed");
-          void 0 !== cD && void 0 !== ID && null !== ID && DD.set(cD, ID)
+          added: tU,
+          removed: EU,
+          settingChanges: qU
+        } = KU.apply(RU),
+        cU = new Set;
+      for (const pU of qU)
+        for (const UU in pU.settings) cU.add(UU);
+      const GU = gU || tU.length > 0 || EU.length > 0;
+      (GU || cU.has("hideNameSeed")) && function() {
+        const UU = new Map;
+        for (const RU of KU.ids()) {
+          const gU = KU.getName(RU),
+            tU = KU.getSetting(RU, "hideNameSeed");
+          void 0 !== gU && void 0 !== tU && null !== tU && UU.set(gU, tU)
         }
-        pD.c.replaceAll(DD)
-      }(), tD({
+        pU.b.replaceAll(UU)
+      }(), CU({
         kind: "roster",
-        members: BD,
-        settings: SD
+        members: GU,
+        settings: cU
       })
-    })), (0, QD.l)(fD.U, (DD => {
-      const CD = (0, bD.g)(fD.U, DD);
-      if (void 0 !== CD) {
+    })), (0, qU.h)(PU.S, (UU => {
+      const RU = (0, TU.e)(PU.S, UU);
+      if (void 0 !== RU) {
         for (const {
-            Tc: DD,
-            Gc: cD,
-            Rc: ID
+            rg: UU,
+            Xg: gU,
+            vg: tU
           }
-          of CD) SD[DD] = {
-          ...SD[DD],
-          [cD]: ID
+          of RU) cU[UU] = {
+          ...cU[UU],
+          [gU]: tU
         };
-        tD({
+        CU({
           kind: "cosmetics",
-          updates: CD
+          updates: RU
         })
       }
-    })), (0, QD.i)((() => {
-      wD.clear(), SD = {}, pD.c.clear(), tD({
+    })), (0, qU.f)((() => {
+      KU.clear(), cU = {}, pU.b.clear(), CU({
         kind: "reset"
       })
-    })), (0, QD.j)((() => {
-      wD.clear(), tD({
+    })), (0, qU.g)((() => {
+      KU.clear(), CU({
         kind: "reset"
       })
     }))
   },
-  39793: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => xD,
-      d: () => oD,
-      f: () => aD,
-      g: () => VD
+  40105: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => oU,
+      c: () => QU,
+      g: () => BU,
+      j: () => VU
     });
-    var ID = cD(1266),
-      pD = cD(613),
-      iD = cD(90),
-      fD = cD(4585),
-      bD = cD(39680),
-      QD = cD(39709),
-      wD = cD(39692),
-      SD = cD(39785),
-      BD = cD(39773),
-      yD = cD(39715),
-      MD = cD(39727);
+    var tU = gU(1271),
+      pU = gU(567),
+      EU = gU(96),
+      PU = gU(4456),
+      TU = gU(39955),
+      qU = gU(39984),
+      KU = gU(39971),
+      cU = gU(40088),
+      GU = gU(40079),
+      jU = gU(39994),
+      uU = gU(40016);
 
-    function tD(DD) {
+    function CU(UU) {
       let {
-        deadEId: CD,
-        killerEId: cD,
-        killerLifeformType: ID,
-        withItem: pD,
-        killstreak: iD
-      } = DD;
+        deadEId: RU,
+        killerEId: gU,
+        killerLifeformType: tU,
+        withItem: pU,
+        killstreak: EU
+      } = UU;
       return {
-        killer: XD({
-          eId: cD,
-          lifeformType: ID
+        killer: xU({
+          eId: gU,
+          lifeformType: tU
         }),
-        victim: XD({
-          eId: CD
+        victim: xU({
+          eId: RU
         }),
-        withItem: pD,
-        killstreak: iD
+        withItem: pU,
+        killstreak: EU
       }
     }
 
-    function ZD(DD) {
+    function hU(UU) {
       let {
-        killer: CD,
-        victim: cD,
-        withItem: ID
-      } = DD;
+        killer: RU,
+        victim: gU,
+        withItem: tU
+      } = UU;
       return {
-        killer: XD(CD),
-        victim: XD(cD),
-        withItem: ID,
+        killer: xU(RU),
+        victim: xU(gU),
+        withItem: tU,
         killstreak: 0
       }
     }
 
-    function oD(DD) {
-      PD && UD((() => "killed" === DD.kind ? tD(DD.body) : ZD(DD.body)))
+    function QU(UU) {
+      wU && bU((() => "killed" === UU.kind ? CU(UU.body) : hU(UU.body)))
     }
-    const vD = "#2727f1",
-      ND = "#912c2c";
+    const eU = "#2727f1",
+      WU = "#912c2c";
 
-    function gD(DD, CD) {
-      var cD;
-      return BD.f.has(DD) ? null === (cD = BD.f.getSettings(DD)) || void 0 === cD ? void 0 : cD[CD] : (0, SD.b)(DD, CD)
+    function fU(UU, RU) {
+      var gU;
+      return GU.c.has(UU) ? null === (gU = GU.c.getSettings(UU)) || void 0 === gU ? void 0 : gU[RU] : (0, cU.e)(UU, RU)
     }
 
-    function XD(DD) {
-      var CD, cD, fD, bD, SD;
+    function xU(UU) {
+      var RU, gU, PU, TU, cU;
       let {
-        eId: yD,
-        name: MD,
-        colour: tD,
-        lifeformType: ZD
-      } = DD;
-      if (void 0 === yD || null === yD || "" === yD) {
-        const DD = MD || null;
+        eId: jU,
+        name: uU,
+        colour: CU,
+        lifeformType: hU
+      } = UU;
+      if (void 0 === jU || null === jU || "" === jU) {
+        const UU = uU || null;
         return {
           id: null,
-          shownName: DD,
-          lifeformType: null === DD && null !== ZD && void 0 !== ZD ? ZD : null,
-          colour: tD || null,
+          shownName: UU,
+          lifeformType: null === UU && null !== hU && void 0 !== hU ? hU : null,
+          colour: CU || null,
           local: !1,
           realName: null
         }
       }
-      const oD = String(yD),
-        XD = null === (CD = (0, wD.g)()) || void 0 === CD ? void 0 : CD.api,
-        mD = void 0 !== XD && String(XD.localId) === oD,
-        nD = null !== (cD = BD.f.getName(oD)) && void 0 !== cD ? cD : null,
-        OD = null !== (fD = gD(oD, "hideNameSeed")) && void 0 !== fD ? fD : null;
-      let PD = null === nD ? null : (0, ID.d)(nD, !iD.featureFlags.canSeeRealPlayerNames, OD) || null,
-        HD = null;
-      if (null === PD && void 0 !== XD) {
-        const DD = XD.getEntityType(oD);
-        "Player" !== DD && (PD = (0, QD.f)(XD, +oD) || null), HD = pD.j.includes(DD) ? DD : null
+      const QU = String(jU),
+        xU = null === (RU = (0, KU.i)()) || void 0 === RU ? void 0 : RU.api,
+        mU = void 0 !== xU && String(xU.localId) === QU,
+        IU = null !== (gU = GU.c.getName(QU)) && void 0 !== gU ? gU : null,
+        JU = null !== (PU = fU(QU, "hideNameSeed")) && void 0 !== PU ? PU : null;
+      let wU = null === IU ? null : (0, tU.c)(IU, !EU.featureFlags.canSeeRealPlayerNames, JU) || null,
+        nU = null;
+      if (null === wU && void 0 !== xU) {
+        const UU = xU.getEntityType(QU);
+        "Player" !== UU && (wU = (0, qU.e)(xU, +QU) || null), nU = pU.m.includes(UU) ? UU : null
       }
       return {
-        id: oD,
-        shownName: PD,
-        lifeformType: null === PD && null !== (bD = null !== (SD = HD) && void 0 !== SD ? SD : ZD) && void 0 !== bD ? bD : null,
-        colour: tD || gD(oD, "killfeedColour") || (mD ? vD : ND),
-        local: mD,
-        realName: nD
+        id: QU,
+        shownName: wU,
+        lifeformType: null === wU && null !== (TU = null !== (cU = nU) && void 0 !== cU ? cU : hU) && void 0 !== TU ? TU : null,
+        colour: CU || fU(QU, "killfeedColour") || (mU ? eU : WU),
+        local: mU,
+        realName: IU
       }
     }
-    const mD = 32;
-    let nD = [],
-      OD = null,
-      PD = !1,
-      HD = !1;
+    const mU = 32;
+    let IU = [],
+      JU = null,
+      wU = !1,
+      nU = !1;
 
-    function UD(DD) {
-      null === OD ? (nD.length === mD && nD.shift(), nD.push(DD)) : OD(DD())
+    function bU(UU) {
+      null === JU ? (IU.length === mU && IU.shift(), IU.push(UU)) : JU(UU())
     }
 
-    function xD() {
-      HD || (HD = !0, (0, MD.l)(fD.dc.PlayerKilled, (DD => {
-        const CD = (0, yD.k)(DD);
-        (0, yD.e)(CD) && UD((() => tD(CD)))
-      })), (0, MD.l)(fD.dc.CustomKillfeed, (DD => {
-        const CD = (0, yD.k)(DD);
-        (0, yD.e)(CD) && (0, yD.e)(CD.killer) && (0, yD.e)(CD.victim) && UD((() => ZD(CD)))
-      })), (0, MD.i)((() => {
-        nD = []
+    function oU() {
+      nU || (nU = !0, (0, uU.h)(PU.dc.PlayerKilled, (UU => {
+        const RU = (0, jU.f)(UU);
+        (0, jU.c)(RU) && bU((() => CU(RU)))
+      })), (0, uU.h)(PU.dc.CustomKillfeed, (UU => {
+        const RU = (0, jU.f)(UU);
+        (0, jU.c)(RU) && (0, jU.c)(RU.killer) && (0, jU.c)(RU.victim) && bU((() => hU(RU)))
+      })), (0, uU.f)((() => {
+        IU = []
       })))
     }
-    const qD = Object.freeze([0, 0, 0]),
-      JD = [0, 0, 0],
-      KD = [0, 0, 0],
-      aD = {
+    const ZU = Object.freeze([0, 0, 0]),
+      aU = [0, 0, 0],
+      YU = [0, 0, 0],
+      BU = {
         kill: {
-          watch(DD) {
-            if (PD = !0, 0 === nD.length) return OD = DD, () => {
-              PD = !1, OD = null
+          watch(UU) {
+            if (wU = !0, 0 === IU.length) return JU = UU, () => {
+              wU = !1, JU = null
             };
-            const CD = setTimeout((() => {
-              const CD = nD;
-              nD = [], OD = DD;
-              for (const ID of CD) try {
-                DD(ID())
-              } catch (cD) {
-                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", cD)
+            const RU = setTimeout((() => {
+              const RU = IU;
+              IU = [], JU = UU;
+              for (const tU of RU) try {
+                UU(tU())
+              } catch (gU) {
+                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", gU)
               }
             }), 0);
             return () => {
-              clearTimeout(CD), PD = !1, OD = null
+              clearTimeout(RU), wU = !1, JU = null
             }
           }
         }
       },
-      VD = {
+      VU = {
         localPos() {
-          const DD = (0, wD.g)();
-          if (null === DD) return qD;
-          const CD = DD.api.apiView;
-          for (let cD = 0; cD < 3; cD++) JD[cD] = bD.s.localPos(CD, 0, cD);
-          return JD
+          const UU = (0, KU.i)();
+          if (null === UU) return ZU;
+          const RU = UU.api.apiView;
+          for (let gU = 0; gU < 3; gU++) aU[gU] = TU.w.localPos(RU, 0, gU);
+          return aU
         },
         targetedBlockPos() {
-          const DD = (0, wD.g)();
-          if (null === DD || bD.s.targetBlockId(DD.api.apiView, 0) === bD.qd) return null;
-          for (let CD = 0; CD < 3; CD++) KD[CD] = bD.s.targetBlock(DD.api.apiView, 0, CD);
-          return KD
+          const UU = (0, KU.i)();
+          if (null === UU || TU.w.targetBlockId(UU.api.apiView, 0) === TU.fd) return null;
+          for (let RU = 0; RU < 3; RU++) YU[RU] = TU.w.targetBlock(UU.api.apiView, 0, RU);
+          return YU
         }
       }
   },
-  38366: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => ID
+  38561: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => tU
     });
-    class ID {
+    class tU {
       constructor() {
         this.members = new Map
       }
-      apply(DD) {
-        const CD = {
+      apply(UU) {
+        const RU = {
           added: [],
           removed: [],
           settingChanges: []
         };
-        for (const ID of DD.bI) {
-          let DD = this.members.get(ID.QI);
-          if (DD || (DD = {
+        for (const tU of UU.gt) {
+          let UU = this.members.get(tU.tt);
+          if (UU || (UU = {
               name: null,
               settings: {}
-            }, this.members.set(ID.QI, DD), CD.added.push(ID.QI)), null !== ID.wI && (DD.name = ID.wI), null !== ID.SI || ID.BI.length > 0) {
-            const cD = null === ID.SI ? {} : JSON.parse(ID.SI);
-            Object.assign(DD.settings, cD);
-            for (const CD of ID.BI) delete DD.settings[CD], cD[CD] = void 0;
-            CD.settingChanges.push({
-              playerId: ID.QI,
-              settings: cD
+            }, this.members.set(tU.tt, UU), RU.added.push(tU.tt)), null !== tU.Et && (UU.name = tU.Et), null !== tU.Pt || tU.Tt.length > 0) {
+            const gU = null === tU.Pt ? {} : JSON.parse(tU.Pt);
+            Object.assign(UU.settings, gU);
+            for (const RU of tU.Tt) delete UU.settings[RU], gU[RU] = void 0;
+            RU.settingChanges.push({
+              playerId: tU.tt,
+              settings: gU
             })
           }
         }
-        for (const ID of DD.yI) {
-          const DD = this.members.get(ID);
-          var cD;
-          if (DD) this.members.delete(ID), CD.removed.push({
-            playerId: ID,
-            name: null !== (cD = DD.name) && void 0 !== cD ? cD : void 0
+        for (const tU of UU.qt) {
+          const UU = this.members.get(tU);
+          var gU;
+          if (UU) this.members.delete(tU), RU.removed.push({
+            playerId: tU,
+            name: null !== (gU = UU.name) && void 0 !== gU ? gU : void 0
           })
         }
-        return CD
+        return RU
       }
-      has(DD) {
-        return this.members.has(DD)
+      has(UU) {
+        return this.members.has(UU)
       }
       ids() {
         return [...this.members.keys()]
       }
-      getName(DD) {
-        var CD, cD;
-        return null !== (CD = null === (cD = this.members.get(DD)) || void 0 === cD ? void 0 : cD.name) && void 0 !== CD ? CD : void 0
+      getName(UU) {
+        var RU, gU;
+        return null !== (RU = null === (gU = this.members.get(UU)) || void 0 === gU ? void 0 : gU.name) && void 0 !== RU ? RU : void 0
       }
-      getSettings(DD) {
-        var CD;
-        return null === (CD = this.members.get(DD)) || void 0 === CD ? void 0 : CD.settings
+      getSettings(UU) {
+        var RU;
+        return null === (RU = this.members.get(UU)) || void 0 === RU ? void 0 : RU.settings
       }
-      getSetting(DD, CD) {
-        var cD;
-        return null === (cD = this.members.get(DD)) || void 0 === cD ? void 0 : cD.settings[CD]
+      getSetting(UU, RU) {
+        var gU;
+        return null === (gU = this.members.get(UU)) || void 0 === gU ? void 0 : gU.settings[RU]
       }
       clear() {
         this.members.clear()
@@ -424,4 +424,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

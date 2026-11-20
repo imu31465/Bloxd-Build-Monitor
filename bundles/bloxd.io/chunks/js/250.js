@@ -1,47 +1,47 @@
 export const id = 250;
 export const ids = [250];
 export const modules = {
-  40160: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => RD
+  40464: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => sU
     });
-    var ID = cD(39154),
-      pD = cD(39156),
-      iD = cD(36473),
-      fD = cD(36446),
-      bD = cD(36479),
-      QD = cD(39356),
-      wD = cD(39531),
-      SD = cD(39319),
-      BD = cD(39054),
-      yD = cD(36449);
-    class MD {
+    var tU = gU(39377),
+      pU = gU(39380),
+      EU = gU(36624),
+      PU = gU(36600),
+      TU = gU(36626),
+      qU = gU(39610),
+      KU = gU(39782),
+      cU = gU(39554),
+      GU = gU(39280),
+      jU = gU(36602);
+    class uU {
       constructor() {
         this._zoomStopsAnimation = !1, this._idleRotationSpeed = .05, this._idleRotationWaitTime = 2e3, this._idleRotationSpinupTime = 2e3, this.targetAlpha = null, this._attachedCamera = null, this._isPointerDown = !1, this._lastFrameTime = null, this._lastInteractionTime = -1 / 0, this._cameraRotationSpeed = 0, this._lastFrameRadius = 0
       }
       get name() {
         return "AutoRotation"
       }
-      set zoomStopsAnimation(DD) {
-        this._zoomStopsAnimation = DD
+      set zoomStopsAnimation(UU) {
+        this._zoomStopsAnimation = UU
       }
       get zoomStopsAnimation() {
         return this._zoomStopsAnimation
       }
-      set idleRotationSpeed(DD) {
-        this._idleRotationSpeed = DD
+      set idleRotationSpeed(UU) {
+        this._idleRotationSpeed = UU
       }
       get idleRotationSpeed() {
         return this._idleRotationSpeed
       }
-      set idleRotationWaitTime(DD) {
-        this._idleRotationWaitTime = DD
+      set idleRotationWaitTime(UU) {
+        this._idleRotationWaitTime = UU
       }
       get idleRotationWaitTime() {
         return this._idleRotationWaitTime
       }
-      set idleRotationSpinupTime(DD) {
-        this._idleRotationSpinupTime = DD
+      set idleRotationSpinupTime(UU) {
+        this._idleRotationSpinupTime = UU
       }
       get idleRotationSpinupTime() {
         return this._idleRotationSpinupTime
@@ -53,75 +53,75 @@ export const modules = {
         return this._attachedCamera
       }
       init() {}
-      attach(DD) {
-        this._attachedCamera = DD;
-        const CD = this._attachedCamera.hq();
-        this._onPrePointerObservableObserver = CD.onPrePointerObservable.add((DD => {
-          DD.type !== SD.c.POINTERDOWN ? DD.type === SD.c.POINTERUP && (this._isPointerDown = !1) : this._isPointerDown = !0
-        })), this._onAfterCheckInputsObserver = DD.onAfterCheckInputsObservable.add((() => {
+      attach(UU) {
+        this._attachedCamera = UU;
+        const RU = this._attachedCamera.aZ();
+        this._onPrePointerObservableObserver = RU.onPrePointerObservable.add((UU => {
+          UU.type !== cU.e.POINTERDOWN ? UU.type === cU.e.POINTERUP && (this._isPointerDown = !1) : this._isPointerDown = !0
+        })), this._onAfterCheckInputsObserver = UU.onAfterCheckInputsObservable.add((() => {
           if (this._reachTargetAlpha()) return;
-          const DD = BD.b.Now;
-          let CD = 0;
-          null != this._lastFrameTime && (CD = DD - this._lastFrameTime), this._lastFrameTime = DD, this._applyUserInteraction();
-          const cD = DD - this._lastInteractionTime - this._idleRotationWaitTime,
-            ID = Math.max(Math.min(cD / this._idleRotationSpinupTime, 1), 0);
-          this._cameraRotationSpeed = this._idleRotationSpeed * ID, this._attachedCamera && (this._attachedCamera.alpha -= this._cameraRotationSpeed * (CD / 1e3))
+          const UU = GU.b.Now;
+          let RU = 0;
+          null != this._lastFrameTime && (RU = UU - this._lastFrameTime), this._lastFrameTime = UU, this._applyUserInteraction();
+          const gU = UU - this._lastInteractionTime - this._idleRotationWaitTime,
+            tU = Math.max(Math.min(gU / this._idleRotationSpinupTime, 1), 0);
+          this._cameraRotationSpeed = this._idleRotationSpeed * tU, this._attachedCamera && (this._attachedCamera.alpha -= this._cameraRotationSpeed * (RU / 1e3))
         }))
       }
       detach() {
         if (!this._attachedCamera) return;
-        const DD = this._attachedCamera.hq();
-        this._onPrePointerObservableObserver && DD.onPrePointerObservable.remove(this._onPrePointerObservableObserver), this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._attachedCamera = null, this._lastFrameTime = null
+        const UU = this._attachedCamera.aZ();
+        this._onPrePointerObservableObserver && UU.onPrePointerObservable.remove(this._onPrePointerObservableObserver), this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._attachedCamera = null, this._lastFrameTime = null
       }
-      resetLastInteractionTime(DD) {
-        this._lastInteractionTime = DD ?? BD.b.Now
+      resetLastInteractionTime(UU) {
+        this._lastInteractionTime = UU ?? GU.b.Now
       }
       _reachTargetAlpha() {
-        return !(!this._attachedCamera || null === this.targetAlpha) && Math.abs(this._attachedCamera.alpha - this.targetAlpha) < yD.c
+        return !(!this._attachedCamera || null === this.targetAlpha) && Math.abs(this._attachedCamera.alpha - this.targetAlpha) < jU.e
       }
       _userIsZooming() {
         return !!this._attachedCamera && 0 !== this._attachedCamera.inertialRadiusOffset
       }
       _shouldAnimationStopForInteraction() {
         if (!this._attachedCamera) return !1;
-        let DD = !1;
-        return this._lastFrameRadius === this._attachedCamera.radius && 0 !== this._attachedCamera.inertialRadiusOffset && (DD = !0), this._lastFrameRadius = this._attachedCamera.radius, this._zoomStopsAnimation ? DD : this._userIsZooming()
+        let UU = !1;
+        return this._lastFrameRadius === this._attachedCamera.radius && 0 !== this._attachedCamera.inertialRadiusOffset && (UU = !0), this._lastFrameRadius = this._attachedCamera.radius, this._zoomStopsAnimation ? UU : this._userIsZooming()
       }
       _applyUserInteraction() {
-        this._userIsMoving() && !this._shouldAnimationStopForInteraction() && (this._lastInteractionTime = BD.b.Now)
+        this._userIsMoving() && !this._shouldAnimationStopForInteraction() && (this._lastInteractionTime = GU.b.Now)
       }
       _userIsMoving() {
         return !!this._attachedCamera && (0 !== this._attachedCamera.inertialAlphaOffset || 0 !== this._attachedCamera.inertialBetaOffset || 0 !== this._attachedCamera.inertialRadiusOffset || 0 !== this._attachedCamera.inertialPanningX || 0 !== this._attachedCamera.inertialPanningY || this._isPointerDown)
       }
     }
-    cD(40166);
-    class tD {
+    gU(40472);
+    class CU {
       constructor() {
-        this._easingMode = tD.EASINGMODE_EASEIN
+        this._easingMode = CU.EASINGMODE_EASEIN
       }
-      setEasingMode(DD) {
-        const CD = Math.min(Math.max(DD, 0), 2);
-        this._easingMode = CD
+      setEasingMode(UU) {
+        const RU = Math.min(Math.max(UU, 0), 2);
+        this._easingMode = RU
       }
       getEasingMode() {
         return this._easingMode
       }
-      easeInCore(DD) {
+      easeInCore(UU) {
         throw new Error("You must implement this method")
       }
-      ease(DD) {
+      ease(UU) {
         switch (this._easingMode) {
-          case tD.EASINGMODE_EASEIN:
-            return this.easeInCore(DD);
-          case tD.EASINGMODE_EASEOUT:
-            return 1 - this.easeInCore(1 - DD)
+          case CU.EASINGMODE_EASEIN:
+            return this.easeInCore(UU);
+          case CU.EASINGMODE_EASEOUT:
+            return 1 - this.easeInCore(1 - UU)
         }
-        return DD >= .5 ? .5 * (1 - this.easeInCore(2 * (1 - DD))) + .5 : .5 * this.easeInCore(2 * DD)
+        return UU >= .5 ? .5 * (1 - this.easeInCore(2 * (1 - UU))) + .5 : .5 * this.easeInCore(2 * UU)
       }
     }
-    tD.EASINGMODE_EASEIN = 0, tD.EASINGMODE_EASEOUT = 1, tD.EASINGMODE_EASEINOUT = 2;
-    var ZD = cD(40171);
-    class oD {
+    CU.EASINGMODE_EASEIN = 0, CU.EASINGMODE_EASEOUT = 1, CU.EASINGMODE_EASEINOUT = 2;
+    var hU = gU(40477);
+    class QU {
       constructor() {
         this.transitionDuration = 450, this.lowerRadiusTransitionRange = 2, this.upperRadiusTransitionRange = -2, this._autoTransitionRange = !1, this._attachedCamera = null, this._radiusIsAnimating = !1, this._radiusBounceTransition = null, this._animatables = new Array
       }
@@ -131,37 +131,37 @@ export const modules = {
       get autoTransitionRange() {
         return this._autoTransitionRange
       }
-      set autoTransitionRange(DD) {
-        if (this._autoTransitionRange === DD) return;
-        this._autoTransitionRange = DD;
-        const CD = this._attachedCamera;
-        CD && (DD ? this._onMeshTargetChangedObserver = CD.onMeshTargetChangedObservable.add((DD => {
-          if (DD && (DD.computeWorldMatrix(!0), DD.VJ)) {
-            const CD = DD.VJ().diagonalLength;
-            this.lowerRadiusTransitionRange = .05 * CD, this.upperRadiusTransitionRange = .05 * CD
+      set autoTransitionRange(UU) {
+        if (this._autoTransitionRange === UU) return;
+        this._autoTransitionRange = UU;
+        const RU = this._attachedCamera;
+        RU && (UU ? this._onMeshTargetChangedObserver = RU.onMeshTargetChangedObservable.add((UU => {
+          if (UU && (UU.computeWorldMatrix(!0), UU.lY)) {
+            const RU = UU.lY().diagonalLength;
+            this.lowerRadiusTransitionRange = .05 * RU, this.upperRadiusTransitionRange = .05 * RU
           }
-        })) : this._onMeshTargetChangedObserver && CD.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver))
+        })) : this._onMeshTargetChangedObserver && RU.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver))
       }
       get attachedNode() {
         return this._attachedCamera
       }
       init() {}
-      attach(DD) {
-        this._attachedCamera = DD, this._onAfterCheckInputsObserver = DD.onAfterCheckInputsObservable.add((() => {
+      attach(UU) {
+        this._attachedCamera = UU, this._onAfterCheckInputsObserver = UU.onAfterCheckInputsObservable.add((() => {
           this._attachedCamera && (this._isRadiusAtLimit(this._attachedCamera.lowerRadiusLimit) && this._applyBoundRadiusAnimation(this.lowerRadiusTransitionRange), this._isRadiusAtLimit(this._attachedCamera.upperRadiusLimit) && this._applyBoundRadiusAnimation(this.upperRadiusTransitionRange))
         }))
       }
       detach() {
         this._attachedCamera && (this._onAfterCheckInputsObserver && this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._onMeshTargetChangedObserver && this._attachedCamera.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver), this._attachedCamera = null)
       }
-      _isRadiusAtLimit(DD) {
-        return !!this._attachedCamera && (this._attachedCamera.radius === DD && !this._radiusIsAnimating)
+      _isRadiusAtLimit(UU) {
+        return !!this._attachedCamera && (this._attachedCamera.radius === UU && !this._radiusIsAnimating)
       }
-      _applyBoundRadiusAnimation(DD) {
+      _applyBoundRadiusAnimation(UU) {
         if (!this._attachedCamera) return;
-        this._radiusBounceTransition || (oD.EasingFunction.setEasingMode(oD.EasingMode), this._radiusBounceTransition = ZD.d.CreateAnimation("radius", ZD.d.ANIMATIONTYPE_FLOAT, 60, oD.EasingFunction)), this._cachedWheelPrecision = this._attachedCamera.wheelPrecision, this._attachedCamera.wheelPrecision = 1 / 0, this._attachedCamera.inertialRadiusOffset = 0, this.stopAllAnimations(), this._radiusIsAnimating = !0;
-        const CD = ZD.d.TransitionTo("radius", this._attachedCamera.radius + DD, this._attachedCamera, this._attachedCamera.hq(), 60, this._radiusBounceTransition, this.transitionDuration, (() => this._clearAnimationLocks()));
-        CD && this._animatables.push(CD)
+        this._radiusBounceTransition || (QU.EasingFunction.setEasingMode(QU.EasingMode), this._radiusBounceTransition = hU.e.CreateAnimation("radius", hU.e.ANIMATIONTYPE_FLOAT, 60, QU.EasingFunction)), this._cachedWheelPrecision = this._attachedCamera.wheelPrecision, this._attachedCamera.wheelPrecision = 1 / 0, this._attachedCamera.inertialRadiusOffset = 0, this.stopAllAnimations(), this._radiusIsAnimating = !0;
+        const RU = hU.e.TransitionTo("radius", this._attachedCamera.radius + UU, this._attachedCamera, this._attachedCamera.aZ(), 60, this._radiusBounceTransition, this.transitionDuration, (() => this._clearAnimationLocks()));
+        RU && this._animatables.push(RU)
       }
       _clearAnimationLocks() {
         this._radiusIsAnimating = !1, this._attachedCamera && (this._attachedCamera.wheelPrecision = this._cachedWheelPrecision)
@@ -170,67 +170,67 @@ export const modules = {
         for (this._attachedCamera && (this._attachedCamera.animations = []); this._animatables.length;) this._animatables[0].onAnimationEnd = null, this._animatables[0].stop(), this._animatables.shift()
       }
     }
-    oD.EasingFunction = new class extends tD {
+    QU.EasingFunction = new class extends CU {
       constructor() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-        super(), this.amplitude = DD
+        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+        super(), this.amplitude = UU
       }
-      easeInCore(DD) {
-        const CD = Math.max(0, this.amplitude);
-        return Math.pow(DD, 3) - DD * CD * Math.sin(3.141592653589793 * DD)
+      easeInCore(UU) {
+        const RU = Math.max(0, this.amplitude);
+        return Math.pow(UU, 3) - UU * RU * Math.sin(3.141592653589793 * UU)
       }
-    }(.3), oD.EasingMode = tD.EASINGMODE_EASEOUT;
-    class vD {
+    }(.3), QU.EasingMode = CU.EASINGMODE_EASEOUT;
+    class eU {
       constructor() {
-        this.onTargetFramingAnimationEndObservable = new iD.c, this._mode = vD.FitFrustumSidesMode, this._radiusScale = 1, this._positionScale = .5, this._defaultElevation = .3, this._elevationReturnTime = 1500, this._elevationReturnWaitTime = 1e3, this._zoomStopsAnimation = !1, this._framingTime = 1500, this.autoCorrectCameraLimitsAndSensibility = !0, this._attachedCamera = null, this._isPointerDown = !1, this._lastInteractionTime = -1 / 0, this._animatables = new Array, this._betaIsAnimating = !1
+        this.onTargetFramingAnimationEndObservable = new EU.b, this._mode = eU.FitFrustumSidesMode, this._radiusScale = 1, this._positionScale = .5, this._defaultElevation = .3, this._elevationReturnTime = 1500, this._elevationReturnWaitTime = 1e3, this._zoomStopsAnimation = !1, this._framingTime = 1500, this.autoCorrectCameraLimitsAndSensibility = !0, this._attachedCamera = null, this._isPointerDown = !1, this._lastInteractionTime = -1 / 0, this._animatables = new Array, this._betaIsAnimating = !1
       }
       get name() {
         return "Framing"
       }
-      set mode(DD) {
-        this._mode = DD
+      set mode(UU) {
+        this._mode = UU
       }
       get mode() {
         return this._mode
       }
-      set radiusScale(DD) {
-        this._radiusScale = DD
+      set radiusScale(UU) {
+        this._radiusScale = UU
       }
       get radiusScale() {
         return this._radiusScale
       }
-      set positionScale(DD) {
-        this._positionScale = DD
+      set positionScale(UU) {
+        this._positionScale = UU
       }
       get positionScale() {
         return this._positionScale
       }
-      set defaultElevation(DD) {
-        this._defaultElevation = DD
+      set defaultElevation(UU) {
+        this._defaultElevation = UU
       }
       get defaultElevation() {
         return this._defaultElevation
       }
-      set elevationReturnTime(DD) {
-        this._elevationReturnTime = DD
+      set elevationReturnTime(UU) {
+        this._elevationReturnTime = UU
       }
       get elevationReturnTime() {
         return this._elevationReturnTime
       }
-      set elevationReturnWaitTime(DD) {
-        this._elevationReturnWaitTime = DD
+      set elevationReturnWaitTime(UU) {
+        this._elevationReturnWaitTime = UU
       }
       get elevationReturnWaitTime() {
         return this._elevationReturnWaitTime
       }
-      set zoomStopsAnimation(DD) {
-        this._zoomStopsAnimation = DD
+      set zoomStopsAnimation(UU) {
+        this._zoomStopsAnimation = UU
       }
       get zoomStopsAnimation() {
         return this._zoomStopsAnimation
       }
-      set framingTime(DD) {
-        this._framingTime = DD
+      set framingTime(UU) {
+        this._framingTime = UU
       }
       get framingTime() {
         return this._framingTime
@@ -239,102 +239,102 @@ export const modules = {
         return this._attachedCamera
       }
       init() {}
-      attach(DD) {
-        this._attachedCamera = DD;
-        const CD = this._attachedCamera.hq();
-        vD.EasingFunction.setEasingMode(vD.EasingMode), this._onPrePointerObservableObserver = CD.onPrePointerObservable.add((DD => {
-          DD.type !== SD.c.POINTERDOWN ? DD.type === SD.c.POINTERUP && (this._isPointerDown = !1) : this._isPointerDown = !0
-        })), this._onMeshTargetChangedObserver = DD.onMeshTargetChangedObservable.add((DD => {
-          DD && DD.VJ && this.zoomOnMesh(DD, void 0, (() => {
+      attach(UU) {
+        this._attachedCamera = UU;
+        const RU = this._attachedCamera.aZ();
+        eU.EasingFunction.setEasingMode(eU.EasingMode), this._onPrePointerObservableObserver = RU.onPrePointerObservable.add((UU => {
+          UU.type !== cU.e.POINTERDOWN ? UU.type === cU.e.POINTERUP && (this._isPointerDown = !1) : this._isPointerDown = !0
+        })), this._onMeshTargetChangedObserver = UU.onMeshTargetChangedObservable.add((UU => {
+          UU && UU.lY && this.zoomOnMesh(UU, void 0, (() => {
             this.onTargetFramingAnimationEndObservable.notifyObservers()
           }))
-        })), this._onAfterCheckInputsObserver = DD.onAfterCheckInputsObservable.add((() => {
+        })), this._onAfterCheckInputsObserver = UU.onAfterCheckInputsObservable.add((() => {
           this._applyUserInteraction(), this._maintainCameraAboveGround()
         }))
       }
       detach() {
         if (!this._attachedCamera) return;
-        const DD = this._attachedCamera.hq();
-        this._onPrePointerObservableObserver && DD.onPrePointerObservable.remove(this._onPrePointerObservableObserver), this._onAfterCheckInputsObserver && this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._onMeshTargetChangedObserver && this._attachedCamera.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver), this._attachedCamera = null
+        const UU = this._attachedCamera.aZ();
+        this._onPrePointerObservableObserver && UU.onPrePointerObservable.remove(this._onPrePointerObservableObserver), this._onAfterCheckInputsObserver && this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._onMeshTargetChangedObserver && this._attachedCamera.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver), this._attachedCamera = null
       }
-      zoomOnMesh(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        DD.computeWorldMatrix(!0);
-        const ID = DD.VJ().boundingBox;
-        this.zoomOnBoundingInfo(ID.minimumWorld, ID.maximumWorld, CD, cD)
+      zoomOnMesh(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        UU.computeWorldMatrix(!0);
+        const tU = UU.lY().boundingBox;
+        this.zoomOnBoundingInfo(tU.minimumWorld, tU.maximumWorld, RU, gU)
       }
-      zoomOnMeshHierarchy(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        DD.computeWorldMatrix(!0);
-        const ID = DD.getHierarchyBoundingVectors(!0);
-        this.zoomOnBoundingInfo(ID.min, ID.max, CD, cD)
+      zoomOnMeshHierarchy(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        UU.computeWorldMatrix(!0);
+        const tU = UU.getHierarchyBoundingVectors(!0);
+        this.zoomOnBoundingInfo(tU.min, tU.max, RU, gU)
       }
-      zoomOnMeshesHierarchy(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        const ID = new fD.p(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE),
-          pD = new fD.p(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
-        for (let iD = 0; iD < DD.length; iD++) {
-          const CD = DD[iD].getHierarchyBoundingVectors(!0);
-          fD.p.CheckExtends(CD.min, ID, pD), fD.p.CheckExtends(CD.max, ID, pD)
+      zoomOnMeshesHierarchy(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        const tU = new PU.n(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE),
+          pU = new PU.n(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
+        for (let EU = 0; EU < UU.length; EU++) {
+          const RU = UU[EU].getHierarchyBoundingVectors(!0);
+          PU.n.CheckExtends(RU.min, tU, pU), PU.n.CheckExtends(RU.max, tU, pU)
         }
-        this.zoomOnBoundingInfo(ID, pD, CD, cD)
+        this.zoomOnBoundingInfo(tU, pU, RU, gU)
       }
-      zoomOnBoundingInfo(DD, CD) {
-        let cD, ID = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          pD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      zoomOnBoundingInfo(UU, RU) {
+        let gU, tU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          pU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
         if (!this._attachedCamera) return !1;
-        const iD = DD.y,
-          bD = iD + (CD.y - iD) * this._positionScale,
-          QD = CD.subtract(DD).scale(.5);
-        if (!isFinite(bD)) return !1;
-        if (ID) cD = new fD.p(0, bD, 0);
+        const EU = UU.y,
+          TU = EU + (RU.y - EU) * this._positionScale,
+          qU = RU.subtract(UU).scale(.5);
+        if (!isFinite(TU)) return !1;
+        if (tU) gU = new PU.n(0, TU, 0);
         else {
-          const CD = DD.add(QD);
-          cD = new fD.p(CD.x, bD, CD.z)
+          const RU = UU.add(qU);
+          gU = new PU.n(RU.x, TU, RU.z)
         }
-        this._vectorTransition || (this._vectorTransition = ZD.d.CreateAnimation("target", ZD.d.ANIMATIONTYPE_VECTOR3, 60, vD.EasingFunction)), this._betaIsAnimating = !0;
-        let wD = ZD.d.TransitionTo("target", cD, this._attachedCamera, this._attachedCamera.hq(), 60, this._vectorTransition, this._framingTime);
-        wD && this._animatables.push(wD);
-        let SD = 0;
-        if (this._mode === vD.FitFrustumSidesMode) {
-          const cD = this._calculateLowerRadiusFromModelBoundingSphere(DD, CD);
-          this.autoCorrectCameraLimitsAndSensibility && (this._attachedCamera.lowerRadiusLimit = QD.length() + this._attachedCamera.minZ), SD = cD
-        } else this._mode === vD.IgnoreBoundsSizeMode && (SD = this._calculateLowerRadiusFromModelBoundingSphere(DD, CD), this.autoCorrectCameraLimitsAndSensibility && null === this._attachedCamera.lowerRadiusLimit && (this._attachedCamera.lowerRadiusLimit = this._attachedCamera.minZ));
+        this._vectorTransition || (this._vectorTransition = hU.e.CreateAnimation("target", hU.e.ANIMATIONTYPE_VECTOR3, 60, eU.EasingFunction)), this._betaIsAnimating = !0;
+        let KU = hU.e.TransitionTo("target", gU, this._attachedCamera, this._attachedCamera.aZ(), 60, this._vectorTransition, this._framingTime);
+        KU && this._animatables.push(KU);
+        let cU = 0;
+        if (this._mode === eU.FitFrustumSidesMode) {
+          const gU = this._calculateLowerRadiusFromModelBoundingSphere(UU, RU);
+          this.autoCorrectCameraLimitsAndSensibility && (this._attachedCamera.lowerRadiusLimit = qU.length() + this._attachedCamera.minZ), cU = gU
+        } else this._mode === eU.IgnoreBoundsSizeMode && (cU = this._calculateLowerRadiusFromModelBoundingSphere(UU, RU), this.autoCorrectCameraLimitsAndSensibility && null === this._attachedCamera.lowerRadiusLimit && (this._attachedCamera.lowerRadiusLimit = this._attachedCamera.minZ));
         if (this.autoCorrectCameraLimitsAndSensibility) {
-          const cD = CD.subtract(DD).length();
-          this._attachedCamera.panningSensibility = 5e3 / cD, this._attachedCamera.wheelPrecision = 100 / SD
+          const gU = RU.subtract(UU).length();
+          this._attachedCamera.panningSensibility = 5e3 / gU, this._attachedCamera.wheelPrecision = 100 / cU
         }
-        return this._radiusTransition || (this._radiusTransition = ZD.d.CreateAnimation("radius", ZD.d.ANIMATIONTYPE_FLOAT, 60, vD.EasingFunction)), wD = ZD.d.TransitionTo("radius", SD, this._attachedCamera, this._attachedCamera.hq(), 60, this._radiusTransition, this._framingTime, (() => {
-          this.stopAllAnimations(), pD && pD(), this._attachedCamera && this._attachedCamera.useInputToRestoreState && this._attachedCamera.storeState()
-        })), wD && this._animatables.push(wD), !0
+        return this._radiusTransition || (this._radiusTransition = hU.e.CreateAnimation("radius", hU.e.ANIMATIONTYPE_FLOAT, 60, eU.EasingFunction)), KU = hU.e.TransitionTo("radius", cU, this._attachedCamera, this._attachedCamera.aZ(), 60, this._radiusTransition, this._framingTime, (() => {
+          this.stopAllAnimations(), pU && pU(), this._attachedCamera && this._attachedCamera.useInputToRestoreState && this._attachedCamera.storeState()
+        })), KU && this._animatables.push(KU), !0
       }
-      _calculateLowerRadiusFromModelBoundingSphere(DD, CD) {
-        const cD = this._attachedCamera;
-        if (!cD) return 0;
-        let ID = cD._calculateLowerRadiusFromModelBoundingSphere(DD, CD, this._radiusScale);
-        return cD.lowerRadiusLimit && this._mode === vD.IgnoreBoundsSizeMode && (ID = ID < cD.lowerRadiusLimit ? cD.lowerRadiusLimit : ID), cD.upperRadiusLimit && (ID = ID > cD.upperRadiusLimit ? cD.upperRadiusLimit : ID), ID
+      _calculateLowerRadiusFromModelBoundingSphere(UU, RU) {
+        const gU = this._attachedCamera;
+        if (!gU) return 0;
+        let tU = gU._calculateLowerRadiusFromModelBoundingSphere(UU, RU, this._radiusScale);
+        return gU.lowerRadiusLimit && this._mode === eU.IgnoreBoundsSizeMode && (tU = tU < gU.lowerRadiusLimit ? gU.lowerRadiusLimit : tU), gU.upperRadiusLimit && (tU = tU > gU.upperRadiusLimit ? gU.upperRadiusLimit : tU), tU
       }
       _maintainCameraAboveGround() {
         if (this._elevationReturnTime < 0) return;
-        const DD = BD.b.Now - this._lastInteractionTime,
-          CD = .5 * Math.PI - this._defaultElevation,
-          cD = .5 * Math.PI;
-        if (this._attachedCamera && !this._betaIsAnimating && this._attachedCamera.beta > cD && DD >= this._elevationReturnWaitTime) {
-          this._betaIsAnimating = !0, this.stopAllAnimations(), this._betaTransition || (this._betaTransition = ZD.d.CreateAnimation("beta", ZD.d.ANIMATIONTYPE_FLOAT, 60, vD.EasingFunction));
-          const DD = ZD.d.TransitionTo("beta", CD, this._attachedCamera, this._attachedCamera.hq(), 60, this._betaTransition, this._elevationReturnTime, (() => {
+        const UU = GU.b.Now - this._lastInteractionTime,
+          RU = .5 * Math.PI - this._defaultElevation,
+          gU = .5 * Math.PI;
+        if (this._attachedCamera && !this._betaIsAnimating && this._attachedCamera.beta > gU && UU >= this._elevationReturnWaitTime) {
+          this._betaIsAnimating = !0, this.stopAllAnimations(), this._betaTransition || (this._betaTransition = hU.e.CreateAnimation("beta", hU.e.ANIMATIONTYPE_FLOAT, 60, eU.EasingFunction));
+          const UU = hU.e.TransitionTo("beta", RU, this._attachedCamera, this._attachedCamera.aZ(), 60, this._betaTransition, this._elevationReturnTime, (() => {
             this._clearAnimationLocks(), this.stopAllAnimations()
           }));
-          DD && this._animatables.push(DD)
+          UU && this._animatables.push(UU)
         }
       }
       _clearAnimationLocks() {
         this._betaIsAnimating = !1
       }
       _applyUserInteraction() {
-        this.isUserIsMoving && (this._lastInteractionTime = BD.b.Now, this.stopAllAnimations(), this._clearAnimationLocks())
+        this.isUserIsMoving && (this._lastInteractionTime = GU.b.Now, this.stopAllAnimations(), this._clearAnimationLocks())
       }
       stopAllAnimations() {
         for (this._attachedCamera && (this._attachedCamera.animations = []); this._animatables.length;) this._animatables[0] && (this._animatables[0].onAnimationEnd = null, this._animatables[0].stop()), this._animatables.shift()
@@ -343,115 +343,115 @@ export const modules = {
         return !!this._attachedCamera && (0 !== this._attachedCamera.inertialAlphaOffset || 0 !== this._attachedCamera.inertialBetaOffset || 0 !== this._attachedCamera.inertialRadiusOffset || 0 !== this._attachedCamera.inertialPanningX || 0 !== this._attachedCamera.inertialPanningY || this._isPointerDown)
       }
     }
-    vD.EasingFunction = new class extends tD {
+    eU.EasingFunction = new class extends CU {
       constructor() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
-        super(), this.exponent = DD
+        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
+        super(), this.exponent = UU
       }
-      easeInCore(DD) {
-        return this.exponent <= 0 ? DD : (Math.exp(this.exponent * DD) - 1) / (Math.exp(this.exponent) - 1)
+      easeInCore(UU) {
+        return this.exponent <= 0 ? UU : (Math.exp(this.exponent * UU) - 1) / (Math.exp(this.exponent) - 1)
       }
-    }, vD.EasingMode = tD.EASINGMODE_EASEINOUT, vD.IgnoreBoundsSizeMode = 0, vD.FitFrustumSidesMode = 1;
-    var ND = cD(39351),
-      gD = cD(39349),
-      XD = cD(39380),
-      mD = cD(39245);
-    let nD = (() => {
-        var DD;
-        let CD, cD = [],
-          iD = [];
-        return DD = class {
+    }, eU.EasingMode = CU.EASINGMODE_EASEINOUT, eU.IgnoreBoundsSizeMode = 0, eU.FitFrustumSidesMode = 1;
+    var WU = gU(39603),
+      fU = gU(39597),
+      xU = gU(39629),
+      mU = gU(39473);
+    let IU = (() => {
+        var UU;
+        let RU, gU = [],
+          EU = [];
+        return UU = class {
           constructor() {
-            this._currentMousePointerIdDown = -1, this.buttons = (0, ID.m)(this, cD, [0, 1, 2]), this._pointerInput = (0, ID.m)(this, iD)
+            this._currentMousePointerIdDown = -1, this.buttons = (0, tU.j)(this, gU, [0, 1, 2]), this._pointerInput = (0, tU.j)(this, EU)
           }
-          attachControl(DD) {
-            DD = mD.g.BackCompatCameraNoPreventDefault(arguments);
-            const CD = this.camera.DZ(),
-              cD = CD.getInputElement();
-            let ID = 0,
-              pD = null;
-            this._pointA = null, this._pointB = null, this._altKey = !1, this._ctrlKey = !1, this._metaKey = !1, this._shiftKey = !1, this._buttonsPressed = 0, this._pointerInput = iD => {
-              const fD = iD.event,
-                bD = "touch" === fD.pointerType;
-              if (iD.type !== SD.c.POINTERMOVE && -1 === this.buttons.indexOf(fD.button)) return;
-              const QD = fD.target;
-              if (this._altKey = fD.altKey, this._ctrlKey = fD.ctrlKey, this._metaKey = fD.metaKey, this._shiftKey = fD.shiftKey, this._buttonsPressed = fD.buttons, CD.isPointerLock) {
-                const DD = fD.movementX,
-                  CD = fD.movementY;
-                this.onTouch(null, DD, CD), this._pointA = null, this._pointB = null
+          attachControl(UU) {
+            UU = mU.g.BackCompatCameraNoPreventDefault(arguments);
+            const RU = this.camera.WC(),
+              gU = RU.getInputElement();
+            let tU = 0,
+              pU = null;
+            this._pointA = null, this._pointB = null, this._altKey = !1, this._ctrlKey = !1, this._metaKey = !1, this._shiftKey = !1, this._buttonsPressed = 0, this._pointerInput = EU => {
+              const PU = EU.event,
+                TU = "touch" === PU.pointerType;
+              if (EU.type !== cU.e.POINTERMOVE && -1 === this.buttons.indexOf(PU.button)) return;
+              const qU = PU.target;
+              if (this._altKey = PU.altKey, this._ctrlKey = PU.ctrlKey, this._metaKey = PU.metaKey, this._shiftKey = PU.shiftKey, this._buttonsPressed = PU.buttons, RU.isPointerLock) {
+                const UU = PU.movementX,
+                  RU = PU.movementY;
+                this.onTouch(null, UU, RU), this._pointA = null, this._pointB = null
               } else {
-                if (iD.type !== SD.c.POINTERDOWN && iD.type !== SD.c.POINTERDOUBLETAP && bD && this._pointA?.pointerId !== fD.pointerId && this._pointB?.pointerId !== fD.pointerId) return;
-                if (iD.type !== SD.c.POINTERDOWN || -1 !== this._currentMousePointerIdDown && !bD)
-                  if (iD.type === SD.c.POINTERDOUBLETAP) this.onDoubleTap(fD.pointerType, fD);
-                  else if (iD.type !== SD.c.POINTERUP || this._currentMousePointerIdDown !== fD.pointerId && !bD) {
-                  if (iD.type === SD.c.POINTERMOVE)
-                    if (DD || fD.preventDefault(), this._pointA && null === this._pointB) {
-                      const DD = fD.clientX - this._pointA.x,
-                        CD = fD.clientY - this._pointA.y;
-                      this._pointA.x = fD.clientX, this._pointA.y = fD.clientY, this.onTouch(this._pointA, DD, CD)
+                if (EU.type !== cU.e.POINTERDOWN && EU.type !== cU.e.POINTERDOUBLETAP && TU && this._pointA?.pointerId !== PU.pointerId && this._pointB?.pointerId !== PU.pointerId) return;
+                if (EU.type !== cU.e.POINTERDOWN || -1 !== this._currentMousePointerIdDown && !TU)
+                  if (EU.type === cU.e.POINTERDOUBLETAP) this.onDoubleTap(PU.pointerType, PU);
+                  else if (EU.type !== cU.e.POINTERUP || this._currentMousePointerIdDown !== PU.pointerId && !TU) {
+                  if (EU.type === cU.e.POINTERMOVE)
+                    if (UU || PU.preventDefault(), this._pointA && null === this._pointB) {
+                      const UU = PU.clientX - this._pointA.x,
+                        RU = PU.clientY - this._pointA.y;
+                      this._pointA.x = PU.clientX, this._pointA.y = PU.clientY, this.onTouch(this._pointA, UU, RU)
                     } else if (this._pointA && this._pointB) {
-                    const DD = this._pointA.pointerId === fD.pointerId ? this._pointA : this._pointB;
-                    DD.x = fD.clientX, DD.y = fD.clientY;
-                    const CD = this._pointA.x - this._pointB.x,
-                      cD = this._pointA.y - this._pointB.y,
-                      bD = CD * CD + cD * cD,
-                      QD = {
+                    const UU = this._pointA.pointerId === PU.pointerId ? this._pointA : this._pointB;
+                    UU.x = PU.clientX, UU.y = PU.clientY;
+                    const RU = this._pointA.x - this._pointB.x,
+                      gU = this._pointA.y - this._pointB.y,
+                      TU = RU * RU + gU * gU,
+                      qU = {
                         x: (this._pointA.x + this._pointB.x) / 2,
                         y: (this._pointA.y + this._pointB.y) / 2,
-                        pointerId: fD.pointerId,
-                        type: iD.type
+                        pointerId: PU.pointerId,
+                        type: EU.type
                       };
-                    this.onMultiTouch(this._pointA, this._pointB, ID, bD, pD, QD), pD = QD, ID = bD
+                    this.onMultiTouch(this._pointA, this._pointB, tU, TU, pU, qU), pU = qU, tU = TU
                   }
                 } else {
                   try {
-                    QD?.releasePointerCapture(fD.pointerId)
-                  } catch (wD) {}
-                  bD || (this._pointB = null), CD._badOS ? this._pointA = this._pointB = null : this._pointB && this._pointA && this._pointA.pointerId == fD.pointerId ? (this._pointA = this._pointB, this._pointB = null) : this._pointA && this._pointB && this._pointB.pointerId == fD.pointerId ? this._pointB = null : this._pointA = this._pointB = null, (0 !== ID || pD) && (this.onMultiTouch(this._pointA, this._pointB, ID, 0, pD, null), ID = 0, pD = null), this._currentMousePointerIdDown = -1, this.onButtonUp(fD), DD || fD.preventDefault()
+                    qU?.releasePointerCapture(PU.pointerId)
+                  } catch (KU) {}
+                  TU || (this._pointB = null), RU._badOS ? this._pointA = this._pointB = null : this._pointB && this._pointA && this._pointA.pointerId == PU.pointerId ? (this._pointA = this._pointB, this._pointB = null) : this._pointA && this._pointB && this._pointB.pointerId == PU.pointerId ? this._pointB = null : this._pointA = this._pointB = null, (0 !== tU || pU) && (this.onMultiTouch(this._pointA, this._pointB, tU, 0, pU, null), tU = 0, pU = null), this._currentMousePointerIdDown = -1, this.onButtonUp(PU), UU || PU.preventDefault()
                 } else {
                   try {
-                    QD?.setPointerCapture(fD.pointerId)
-                  } catch (wD) {}
+                    qU?.setPointerCapture(PU.pointerId)
+                  } catch (KU) {}
                   if (null === this._pointA) this._pointA = {
-                    x: fD.clientX,
-                    y: fD.clientY,
-                    pointerId: fD.pointerId,
-                    type: fD.pointerType,
-                    button: fD.button
+                    x: PU.clientX,
+                    y: PU.clientY,
+                    pointerId: PU.pointerId,
+                    type: PU.pointerType,
+                    button: PU.button
                   };
                   else {
                     if (null !== this._pointB) return;
                     this._pointB = {
-                      x: fD.clientX,
-                      y: fD.clientY,
-                      pointerId: fD.pointerId,
-                      type: fD.pointerType,
-                      button: fD.button
+                      x: PU.clientX,
+                      y: PU.clientY,
+                      pointerId: PU.pointerId,
+                      type: PU.pointerType,
+                      button: PU.button
                     }
-                  } - 1 !== this._currentMousePointerIdDown || bD || (this._currentMousePointerIdDown = fD.pointerId), this.onButtonDown(fD), DD || (fD.preventDefault(), cD && cD.focus())
+                  } - 1 !== this._currentMousePointerIdDown || TU || (this._currentMousePointerIdDown = PU.pointerId), this.onButtonDown(PU), UU || (PU.preventDefault(), gU && gU.focus())
                 }
               }
-            }, this._observer = this.camera.hq()._inputManager._addCameraPointerObserver(this._pointerInput, SD.c.POINTERDOWN | SD.c.POINTERUP | SD.c.POINTERMOVE | SD.c.POINTERDOUBLETAP), this._onLostFocus = () => {
-              this._pointA = this._pointB = null, ID = 0, pD = null, this.onLostFocus()
-            }, this._contextMenuBind = DD => this.onContextMenu(DD), cD && cD.addEventListener("contextmenu", this._contextMenuBind, !1);
-            const iD = this.camera.hq().DZ().getHostWindow();
-            iD && mD.g.RegisterTopRootEvents(iD, [{
+            }, this._observer = this.camera.aZ()._inputManager._addCameraPointerObserver(this._pointerInput, cU.e.POINTERDOWN | cU.e.POINTERUP | cU.e.POINTERMOVE | cU.e.POINTERDOUBLETAP), this._onLostFocus = () => {
+              this._pointA = this._pointB = null, tU = 0, pU = null, this.onLostFocus()
+            }, this._contextMenuBind = UU => this.onContextMenu(UU), gU && gU.addEventListener("contextmenu", this._contextMenuBind, !1);
+            const EU = this.camera.aZ().WC().getHostWindow();
+            EU && mU.g.RegisterTopRootEvents(EU, [{
               name: "blur",
               handler: this._onLostFocus
             }])
           }
           detachControl() {
             if (this._onLostFocus) {
-              const DD = this.camera.hq().DZ().getHostWindow();
-              DD && mD.g.UnregisterTopRootEvents(DD, [{
+              const UU = this.camera.aZ().WC().getHostWindow();
+              UU && mU.g.UnregisterTopRootEvents(UU, [{
                 name: "blur",
                 handler: this._onLostFocus
               }])
             }
             if (this._observer) {
-              if (this.camera.hq()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._contextMenuBind) {
-                const DD = this.camera.hq().DZ().getInputElement();
-                DD && DD.removeEventListener("contextmenu", this._contextMenuBind)
+              if (this.camera.aZ()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._contextMenuBind) {
+                const UU = this.camera.aZ().WC().getInputElement();
+                UU && UU.removeEventListener("contextmenu", this._contextMenuBind)
               }
               this._onLostFocus = null
             }
@@ -463,131 +463,131 @@ export const modules = {
           getSimpleName() {
             return "pointers"
           }
-          onDoubleTap(DD, CD) {}
-          onTouch(DD, CD, cD) {}
-          onMultiTouch(DD, CD, cD, ID, pD, iD) {}
-          onContextMenu(DD) {
-            DD.preventDefault()
+          onDoubleTap(UU, RU) {}
+          onTouch(UU, RU, gU) {}
+          onMultiTouch(UU, RU, gU, tU, pU, EU) {}
+          onContextMenu(UU) {
+            UU.preventDefault()
           }
-          onButtonDown(DD) {}
-          onButtonUp(DD) {}
+          onButtonDown(UU) {}
+          onButtonUp(UU) {}
           onLostFocus() {}
         }, (() => {
-          const fD = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-          CD = [(0, pD.G)()], (0, ID.k)(null, null, CD, {
+          const PU = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+          RU = [(0, pU.K)()], (0, tU.i)(null, null, RU, {
             kind: "field",
             name: "buttons",
             static: !1,
             private: !1,
             access: {
-              has: DD => "buttons" in DD,
-              get: DD => DD.buttons,
-              set: (DD, CD) => {
-                DD.buttons = CD
+              has: UU => "buttons" in UU,
+              get: UU => UU.buttons,
+              set: (UU, RU) => {
+                UU.buttons = RU
               }
             },
-            metadata: fD
-          }, cD, iD), fD && Object.defineProperty(DD, Symbol.metadata, {
+            metadata: PU
+          }, gU, EU), PU && Object.defineProperty(UU, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: fD
+            value: PU
           })
-        })(), DD
+        })(), UU
       })(),
-      OD = (() => {
-        var DD;
-        let CD, cD, iD, fD = nD,
-          bD = [],
-          QD = [],
-          wD = [],
-          SD = [],
-          BD = [],
-          yD = [];
-        return DD = class extends fD {
+      JU = (() => {
+        var UU;
+        let RU, gU, EU, PU = IU,
+          TU = [],
+          qU = [],
+          KU = [],
+          cU = [],
+          GU = [],
+          jU = [];
+        return UU = class extends PU {
           constructor() {
-            super(...arguments), this.pinchZoom = (0, ID.m)(this, bD, !0), this.multiTouchPanning = ((0, ID.m)(this, QD), (0, ID.m)(this, wD, !0)), this.multiTouchPanAndZoom = ((0, ID.m)(this, SD), (0, ID.m)(this, BD, !0)), this._isPinching = ((0, ID.m)(this, yD), !1), this._twoFingerActivityCount = 0, this._shouldStartPinchZoom = !1
+            super(...arguments), this.pinchZoom = (0, tU.j)(this, TU, !0), this.multiTouchPanning = ((0, tU.j)(this, qU), (0, tU.j)(this, KU, !0)), this.multiTouchPanAndZoom = ((0, tU.j)(this, cU), (0, tU.j)(this, GU, !0)), this._isPinching = ((0, tU.j)(this, jU), !1), this._twoFingerActivityCount = 0, this._shouldStartPinchZoom = !1
           }
-          _computePinchZoom(DD, CD) {}
-          _computeMultiTouchPanning(DD, CD) {}
-          onMultiTouch(DD, CD, cD, ID, pD, iD) {
-            0 === cD && null === pD || 0 === ID && null === iD || (this.multiTouchPanAndZoom ? (this._computePinchZoom(cD, ID), this._computeMultiTouchPanning(pD, iD)) : this.multiTouchPanning && this.pinchZoom ? (this._twoFingerActivityCount++, this._isPinching || this._shouldStartPinchZoom ? (this._computePinchZoom(cD, ID), this._isPinching = !0) : this._computeMultiTouchPanning(pD, iD)) : this.multiTouchPanning ? this._computeMultiTouchPanning(pD, iD) : this.pinchZoom && this._computePinchZoom(cD, ID))
+          _computePinchZoom(UU, RU) {}
+          _computeMultiTouchPanning(UU, RU) {}
+          onMultiTouch(UU, RU, gU, tU, pU, EU) {
+            0 === gU && null === pU || 0 === tU && null === EU || (this.multiTouchPanAndZoom ? (this._computePinchZoom(gU, tU), this._computeMultiTouchPanning(pU, EU)) : this.multiTouchPanning && this.pinchZoom ? (this._twoFingerActivityCount++, this._isPinching || this._shouldStartPinchZoom ? (this._computePinchZoom(gU, tU), this._isPinching = !0) : this._computeMultiTouchPanning(pU, EU)) : this.multiTouchPanning ? this._computeMultiTouchPanning(pU, EU) : this.pinchZoom && this._computePinchZoom(gU, tU))
           }
-          onButtonUp(DD) {
+          onButtonUp(UU) {
             this._twoFingerActivityCount = 0, this._isPinching = !1
           }
           onLostFocus() {
             this._twoFingerActivityCount = 0, this._isPinching = !1
           }
         }, (() => {
-          const MD = "function" === typeof Symbol && Symbol.metadata ? Object.create(fD[Symbol.metadata] ?? null) : void 0;
-          CD = [(0, pD.G)()], cD = [(0, pD.G)()], iD = [(0, pD.G)()], (0, ID.k)(null, null, CD, {
+          const uU = "function" === typeof Symbol && Symbol.metadata ? Object.create(PU[Symbol.metadata] ?? null) : void 0;
+          RU = [(0, pU.K)()], gU = [(0, pU.K)()], EU = [(0, pU.K)()], (0, tU.i)(null, null, RU, {
             kind: "field",
             name: "pinchZoom",
             static: !1,
             private: !1,
             access: {
-              has: DD => "pinchZoom" in DD,
-              get: DD => DD.pinchZoom,
-              set: (DD, CD) => {
-                DD.pinchZoom = CD
+              has: UU => "pinchZoom" in UU,
+              get: UU => UU.pinchZoom,
+              set: (UU, RU) => {
+                UU.pinchZoom = RU
               }
             },
-            metadata: MD
-          }, bD, QD), (0, ID.k)(null, null, cD, {
+            metadata: uU
+          }, TU, qU), (0, tU.i)(null, null, gU, {
             kind: "field",
             name: "multiTouchPanning",
             static: !1,
             private: !1,
             access: {
-              has: DD => "multiTouchPanning" in DD,
-              get: DD => DD.multiTouchPanning,
-              set: (DD, CD) => {
-                DD.multiTouchPanning = CD
+              has: UU => "multiTouchPanning" in UU,
+              get: UU => UU.multiTouchPanning,
+              set: (UU, RU) => {
+                UU.multiTouchPanning = RU
               }
             },
-            metadata: MD
-          }, wD, SD), (0, ID.k)(null, null, iD, {
+            metadata: uU
+          }, KU, cU), (0, tU.i)(null, null, EU, {
             kind: "field",
             name: "multiTouchPanAndZoom",
             static: !1,
             private: !1,
             access: {
-              has: DD => "multiTouchPanAndZoom" in DD,
-              get: DD => DD.multiTouchPanAndZoom,
-              set: (DD, CD) => {
-                DD.multiTouchPanAndZoom = CD
+              has: UU => "multiTouchPanAndZoom" in UU,
+              get: UU => UU.multiTouchPanAndZoom,
+              set: (UU, RU) => {
+                UU.multiTouchPanAndZoom = RU
               }
             },
-            metadata: MD
-          }, BD, yD), MD && Object.defineProperty(DD, Symbol.metadata, {
+            metadata: uU
+          }, GU, jU), uU && Object.defineProperty(UU, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: MD
+            value: uU
           })
-        })(), DD
+        })(), UU
       })(),
-      PD = (() => {
-        var DD;
-        let CD, cD, iD, fD, bD, QD, wD, SD = OD,
-          BD = [],
-          yD = [],
-          MD = [],
-          tD = [],
-          ZD = [],
-          oD = [],
-          vD = [],
-          ND = [],
-          gD = [],
-          XD = [],
-          mD = [],
-          nD = [],
-          PD = [],
-          HD = [];
-        return DD = class extends SD {
+      wU = (() => {
+        var UU;
+        let RU, gU, EU, PU, TU, qU, KU, cU = JU,
+          GU = [],
+          jU = [],
+          uU = [],
+          CU = [],
+          hU = [],
+          QU = [],
+          eU = [],
+          WU = [],
+          fU = [],
+          xU = [],
+          mU = [],
+          IU = [],
+          wU = [],
+          nU = [];
+        return UU = class extends cU {
           constructor() {
-            super(...arguments), this.buttons = (0, ID.m)(this, BD, [0, 1, 2]), this.angularSensibilityX = ((0, ID.m)(this, yD), (0, ID.m)(this, MD, 1e3)), this.angularSensibilityY = ((0, ID.m)(this, tD), (0, ID.m)(this, ZD, 1e3)), this.pinchPrecision = ((0, ID.m)(this, oD), (0, ID.m)(this, vD, 12)), this.pinchDeltaPercentage = ((0, ID.m)(this, ND), (0, ID.m)(this, gD, 0)), this.useNaturalPinchZoom = ((0, ID.m)(this, XD), (0, ID.m)(this, mD, !1)), this.panningSensibility = ((0, ID.m)(this, nD), (0, ID.m)(this, PD, 1e3)), this.pinchInwards = ((0, ID.m)(this, HD), !0), this._activeEntry = null, this._pointerLockConditions = {
+            super(...arguments), this.buttons = (0, tU.j)(this, GU, [0, 1, 2]), this.angularSensibilityX = ((0, tU.j)(this, jU), (0, tU.j)(this, uU, 1e3)), this.angularSensibilityY = ((0, tU.j)(this, CU), (0, tU.j)(this, hU, 1e3)), this.pinchPrecision = ((0, tU.j)(this, QU), (0, tU.j)(this, eU, 12)), this.pinchDeltaPercentage = ((0, tU.j)(this, WU), (0, tU.j)(this, fU, 0)), this.useNaturalPinchZoom = ((0, tU.j)(this, xU), (0, tU.j)(this, mU, !1)), this.panningSensibility = ((0, tU.j)(this, IU), (0, tU.j)(this, wU, 1e3)), this.pinchInwards = ((0, tU.j)(this, nU), !0), this._activeEntry = null, this._pointerLockConditions = {
               button: 0,
               modifiers: {}
             }, this._pointerModifiers = {
@@ -601,203 +601,203 @@ export const modules = {
           getClassName() {
             return "ArcRotateCameraPointersInput"
           }
-          _computeMultiTouchPanning(DD, CD) {
-            if (DD && CD) {
-              const cD = CD.x - DD.x,
-                ID = CD.y - DD.y,
-                pD = this.camera.movement.input.getEntry("pointer", "pan"),
-                iD = pD?.sensitivity ?? (0 !== this.panningSensibility ? 1 / this.panningSensibility : 0);
-              0 !== iD && (this.camera.movement.activeInput = !0, this.camera.movement.panAccumulatedPixels.x += -cD * iD, this.camera.movement.panAccumulatedPixels.y += ID * iD)
+          _computeMultiTouchPanning(UU, RU) {
+            if (UU && RU) {
+              const gU = RU.x - UU.x,
+                tU = RU.y - UU.y,
+                pU = this.camera.movement.input.getEntry("pointer", "pan"),
+                EU = pU?.sensitivity ?? (0 !== this.panningSensibility ? 1 / this.panningSensibility : 0);
+              0 !== EU && (this.camera.movement.activeInput = !0, this.camera.movement.panAccumulatedPixels.x += -gU * EU, this.camera.movement.panAccumulatedPixels.y += tU * EU)
             }
           }
-          _computePinchZoom(CD, cD) {
-            const ID = this.camera.radius || DD.MinimumRadiusForPinch;
-            if (this.useNaturalPinchZoom) this.camera.radius = ID * Math.sqrt(CD) / Math.sqrt(cD);
+          _computePinchZoom(RU, gU) {
+            const tU = this.camera.radius || UU.MinimumRadiusForPinch;
+            if (this.useNaturalPinchZoom) this.camera.radius = tU * Math.sqrt(RU) / Math.sqrt(gU);
             else if (this.pinchDeltaPercentage) {
-              const DD = .001 * (cD - CD) * ID * this.pinchDeltaPercentage;
-              this.camera.movement.activeInput = !0, this.camera.movement.zoomAccumulatedPixels += DD
+              const UU = .001 * (gU - RU) * tU * this.pinchDeltaPercentage;
+              this.camera.movement.activeInput = !0, this.camera.movement.zoomAccumulatedPixels += UU
             } else {
-              const DD = (cD - CD) / (this.pinchPrecision * (this.pinchInwards ? 1 : -1) * (this.angularSensibilityX + this.angularSensibilityY) / 2);
-              this.camera.movement.activeInput = !0, this.camera.movement.zoomAccumulatedPixels += DD
+              const UU = (gU - RU) / (this.pinchPrecision * (this.pinchInwards ? 1 : -1) * (this.angularSensibilityX + this.angularSensibilityY) / 2);
+              this.camera.movement.activeInput = !0, this.camera.movement.zoomAccumulatedPixels += UU
             }
           }
-          onTouch(DD, CD, cD) {
-            const ID = this._activeEntry ?? (this.camera.DZ().isPointerLock ? this.camera.movement.input.resolveInteraction("pointer", this._pointerLockConditions) : null);
-            if (ID)
-              if ("pan" === ID.interaction) {
-                const DD = ID.sensitivity ?? (0 !== this.panningSensibility ? 1 / this.panningSensibility : 0);
-                0 !== DD && (this.camera.movement.activeInput = !0, this.camera.movement.panAccumulatedPixels.x += -CD * DD, this.camera.movement.panAccumulatedPixels.y += cD * DD)
-              } else if ("rotate" === ID.interaction) {
-              const DD = ID.YG ?? ID.sensitivity ?? 1 / this.angularSensibilityX,
-                pD = ID.WG ?? ID.sensitivity ?? 1 / this.angularSensibilityY;
-              this.camera.movement.activeInput = !0, this.camera.movement.rotationAccumulatedPixels.x += -CD * DD, this.camera.movement.rotationAccumulatedPixels.y += -cD * pD
+          onTouch(UU, RU, gU) {
+            const tU = this._activeEntry ?? (this.camera.WC().isPointerLock ? this.camera.movement.input.resolveInteraction("pointer", this._pointerLockConditions) : null);
+            if (tU)
+              if ("pan" === tU.interaction) {
+                const UU = tU.sensitivity ?? (0 !== this.panningSensibility ? 1 / this.panningSensibility : 0);
+                0 !== UU && (this.camera.movement.activeInput = !0, this.camera.movement.panAccumulatedPixels.x += -RU * UU, this.camera.movement.panAccumulatedPixels.y += gU * UU)
+              } else if ("rotate" === tU.interaction) {
+              const UU = tU.Ay ?? tU.sensitivity ?? 1 / this.angularSensibilityX,
+                pU = tU.Rk ?? tU.sensitivity ?? 1 / this.angularSensibilityY;
+              this.camera.movement.activeInput = !0, this.camera.movement.rotationAccumulatedPixels.x += -RU * UU, this.camera.movement.rotationAccumulatedPixels.y += -gU * pU
             }
           }
           onDoubleTap() {
             this.camera.useInputToRestoreState && this.camera.restoreState()
           }
-          onMultiTouch(DD, CD, cD, ID, pD, iD) {
-            this._shouldStartPinchZoom = this._twoFingerActivityCount < 20 && Math.abs(Math.sqrt(ID) - Math.sqrt(cD)) > this.camera.pinchToPanMaxDistance, super.onMultiTouch(DD, CD, cD, ID, pD, iD)
+          onMultiTouch(UU, RU, gU, tU, pU, EU) {
+            this._shouldStartPinchZoom = this._twoFingerActivityCount < 20 && Math.abs(Math.sqrt(tU) - Math.sqrt(gU)) > this.camera.pinchToPanMaxDistance, super.onMultiTouch(UU, RU, gU, tU, pU, EU)
           }
-          onButtonDown(DD) {
-            this._pointerConditions.button = DD.button, this._pointerModifiers.ctrl = DD.ctrlKey, this._pointerModifiers.alt = DD.altKey, this._pointerModifiers.shift = DD.shiftKey, this._activeEntry = this.camera.movement.input.resolveInteraction("pointer", this._pointerConditions), super.onButtonDown(DD)
+          onButtonDown(UU) {
+            this._pointerConditions.button = UU.button, this._pointerModifiers.ctrl = UU.ctrlKey, this._pointerModifiers.alt = UU.altKey, this._pointerModifiers.shift = UU.shiftKey, this._activeEntry = this.camera.movement.input.resolveInteraction("pointer", this._pointerConditions), super.onButtonDown(UU)
           }
-          onButtonUp(DD) {
-            this._activeEntry = null, super.onButtonUp(DD)
+          onButtonUp(UU) {
+            this._activeEntry = null, super.onButtonUp(UU)
           }
           onLostFocus() {
             this._activeEntry = null, super.onLostFocus()
           }
         }, (() => {
-          const OD = "function" === typeof Symbol && Symbol.metadata ? Object.create(SD[Symbol.metadata] ?? null) : void 0;
-          CD = [(0, pD.G)()], cD = [(0, pD.G)()], iD = [(0, pD.G)()], fD = [(0, pD.G)()], bD = [(0, pD.G)()], QD = [(0, pD.G)()], wD = [(0, pD.G)()], (0, ID.k)(null, null, CD, {
+          const JU = "function" === typeof Symbol && Symbol.metadata ? Object.create(cU[Symbol.metadata] ?? null) : void 0;
+          RU = [(0, pU.K)()], gU = [(0, pU.K)()], EU = [(0, pU.K)()], PU = [(0, pU.K)()], TU = [(0, pU.K)()], qU = [(0, pU.K)()], KU = [(0, pU.K)()], (0, tU.i)(null, null, RU, {
             kind: "field",
             name: "buttons",
             static: !1,
             private: !1,
             access: {
-              has: DD => "buttons" in DD,
-              get: DD => DD.buttons,
-              set: (DD, CD) => {
-                DD.buttons = CD
+              has: UU => "buttons" in UU,
+              get: UU => UU.buttons,
+              set: (UU, RU) => {
+                UU.buttons = RU
               }
             },
-            metadata: OD
-          }, BD, yD), (0, ID.k)(null, null, cD, {
+            metadata: JU
+          }, GU, jU), (0, tU.i)(null, null, gU, {
             kind: "field",
             name: "angularSensibilityX",
             static: !1,
             private: !1,
             access: {
-              has: DD => "angularSensibilityX" in DD,
-              get: DD => DD.angularSensibilityX,
-              set: (DD, CD) => {
-                DD.angularSensibilityX = CD
+              has: UU => "angularSensibilityX" in UU,
+              get: UU => UU.angularSensibilityX,
+              set: (UU, RU) => {
+                UU.angularSensibilityX = RU
               }
             },
-            metadata: OD
-          }, MD, tD), (0, ID.k)(null, null, iD, {
+            metadata: JU
+          }, uU, CU), (0, tU.i)(null, null, EU, {
             kind: "field",
             name: "angularSensibilityY",
             static: !1,
             private: !1,
             access: {
-              has: DD => "angularSensibilityY" in DD,
-              get: DD => DD.angularSensibilityY,
-              set: (DD, CD) => {
-                DD.angularSensibilityY = CD
+              has: UU => "angularSensibilityY" in UU,
+              get: UU => UU.angularSensibilityY,
+              set: (UU, RU) => {
+                UU.angularSensibilityY = RU
               }
             },
-            metadata: OD
-          }, ZD, oD), (0, ID.k)(null, null, fD, {
+            metadata: JU
+          }, hU, QU), (0, tU.i)(null, null, PU, {
             kind: "field",
             name: "pinchPrecision",
             static: !1,
             private: !1,
             access: {
-              has: DD => "pinchPrecision" in DD,
-              get: DD => DD.pinchPrecision,
-              set: (DD, CD) => {
-                DD.pinchPrecision = CD
+              has: UU => "pinchPrecision" in UU,
+              get: UU => UU.pinchPrecision,
+              set: (UU, RU) => {
+                UU.pinchPrecision = RU
               }
             },
-            metadata: OD
-          }, vD, ND), (0, ID.k)(null, null, bD, {
+            metadata: JU
+          }, eU, WU), (0, tU.i)(null, null, TU, {
             kind: "field",
             name: "pinchDeltaPercentage",
             static: !1,
             private: !1,
             access: {
-              has: DD => "pinchDeltaPercentage" in DD,
-              get: DD => DD.pinchDeltaPercentage,
-              set: (DD, CD) => {
-                DD.pinchDeltaPercentage = CD
+              has: UU => "pinchDeltaPercentage" in UU,
+              get: UU => UU.pinchDeltaPercentage,
+              set: (UU, RU) => {
+                UU.pinchDeltaPercentage = RU
               }
             },
-            metadata: OD
-          }, gD, XD), (0, ID.k)(null, null, QD, {
+            metadata: JU
+          }, fU, xU), (0, tU.i)(null, null, qU, {
             kind: "field",
             name: "useNaturalPinchZoom",
             static: !1,
             private: !1,
             access: {
-              has: DD => "useNaturalPinchZoom" in DD,
-              get: DD => DD.useNaturalPinchZoom,
-              set: (DD, CD) => {
-                DD.useNaturalPinchZoom = CD
+              has: UU => "useNaturalPinchZoom" in UU,
+              get: UU => UU.useNaturalPinchZoom,
+              set: (UU, RU) => {
+                UU.useNaturalPinchZoom = RU
               }
             },
-            metadata: OD
-          }, mD, nD), (0, ID.k)(null, null, wD, {
+            metadata: JU
+          }, mU, IU), (0, tU.i)(null, null, KU, {
             kind: "field",
             name: "panningSensibility",
             static: !1,
             private: !1,
             access: {
-              has: DD => "panningSensibility" in DD,
-              get: DD => DD.panningSensibility,
-              set: (DD, CD) => {
-                DD.panningSensibility = CD
+              has: UU => "panningSensibility" in UU,
+              get: UU => UU.panningSensibility,
+              set: (UU, RU) => {
+                UU.panningSensibility = RU
               }
             },
-            metadata: OD
-          }, PD, HD), OD && Object.defineProperty(DD, Symbol.metadata, {
+            metadata: JU
+          }, wU, nU), JU && Object.defineProperty(UU, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: OD
+            value: JU
           })
-        })(), DD.MinimumRadiusForPinch = .001, DD
+        })(), UU.MinimumRadiusForPinch = .001, UU
       })();
-    XD.c.ArcRotateCameraPointersInput = PD;
-    var HD = cD(39328);
-    let UD = (() => {
-      var DD;
-      let CD, cD, iD, bD, QD, wD, SD, BD, yD, MD, tD, ZD = [],
-        oD = [],
-        vD = [],
-        ND = [],
-        gD = [],
-        XD = [],
-        nD = [],
-        OD = [],
-        PD = [],
-        UD = [],
-        xD = [],
-        qD = [],
-        JD = [],
-        KD = [],
-        aD = [],
-        VD = [],
-        zD = [],
-        jD = [],
-        lD = [],
-        LD = [],
-        TD = [];
-      return DD = class {
+    xU.d.ArcRotateCameraPointersInput = wU;
+    var nU = gU(39562);
+    let bU = (() => {
+      var UU;
+      let RU, gU, EU, TU, qU, KU, cU, GU, jU, uU, CU, hU = [],
+        QU = [],
+        eU = [],
+        WU = [],
+        fU = [],
+        xU = [],
+        IU = [],
+        JU = [],
+        wU = [],
+        bU = [],
+        oU = [],
+        ZU = [],
+        aU = [],
+        YU = [],
+        BU = [],
+        VU = [],
+        rU = [],
+        XU = [],
+        vU = [],
+        dU = [],
+        HU = [];
+      return UU = class {
         constructor() {
-          this.camera = (0, ID.m)(this, ZD), this.keysUp = (0, ID.m)(this, oD, [38]), this.keysDown = ((0, ID.m)(this, vD), (0, ID.m)(this, ND, [40])), this.keysLeft = ((0, ID.m)(this, gD), (0, ID.m)(this, XD, [37])), this.keysRight = ((0, ID.m)(this, nD), (0, ID.m)(this, OD, [39])), this.keysReset = ((0, ID.m)(this, PD), (0, ID.m)(this, UD, [220])), this.keysZoomIn = ((0, ID.m)(this, xD), (0, ID.m)(this, qD, [187, 107])), this.keysZoomOut = ((0, ID.m)(this, JD), (0, ID.m)(this, KD, [189, 109])), this.panningSensibility = ((0, ID.m)(this, aD), (0, ID.m)(this, VD, 50)), this.zoomingSensibility = ((0, ID.m)(this, zD), (0, ID.m)(this, jD, 25)), this.angularSpeed = ((0, ID.m)(this, lD), (0, ID.m)(this, LD, .01)), this._useAltToZoom = ((0, ID.m)(this, TD), !0), this._keys = new Array, this._keyboardModifiers = {
+          this.camera = (0, tU.j)(this, hU), this.keysUp = (0, tU.j)(this, QU, [38]), this.keysDown = ((0, tU.j)(this, eU), (0, tU.j)(this, WU, [40])), this.keysLeft = ((0, tU.j)(this, fU), (0, tU.j)(this, xU, [37])), this.keysRight = ((0, tU.j)(this, IU), (0, tU.j)(this, JU, [39])), this.keysReset = ((0, tU.j)(this, wU), (0, tU.j)(this, bU, [220])), this.keysZoomIn = ((0, tU.j)(this, oU), (0, tU.j)(this, ZU, [187, 107])), this.keysZoomOut = ((0, tU.j)(this, aU), (0, tU.j)(this, YU, [189, 109])), this.panningSensibility = ((0, tU.j)(this, BU), (0, tU.j)(this, VU, 50)), this.zoomingSensibility = ((0, tU.j)(this, rU), (0, tU.j)(this, XU, 25)), this.angularSpeed = ((0, tU.j)(this, vU), (0, tU.j)(this, dU, .01)), this._useAltToZoom = ((0, tU.j)(this, HU), !0), this._keys = new Array, this._keyboardModifiers = {
             ctrl: !1,
             alt: !1
           }, this._keyboardConditions = {
             modifiers: this._keyboardModifiers
-          }, this._rotateDirection = new fD.n, this._panDirection = new fD.n
+          }, this._rotateDirection = new PU.l, this._panDirection = new PU.l
         }
         get useAltToZoom() {
           return this._useAltToZoom
         }
-        set useAltToZoom(DD) {
-          this._useAltToZoom = DD, this._applyUseAltToZoomToInputMap()
+        set useAltToZoom(UU) {
+          this._useAltToZoom = UU, this._applyUseAltToZoomToInputMap()
         }
         _applyUseAltToZoomToInputMap() {
           if (!this.camera?.movement) return;
-          const DD = this.camera.movement.input,
-            CD = DD.getEntry("keyboard", "zoom", {
+          const UU = this.camera.movement.input,
+            RU = UU.getEntry("keyboard", "zoom", {
               modifiers: {
                 alt: !0
               }
             });
-          !this._useAltToZoom && CD ? DD.inputMap.splice(DD.inputMap.indexOf(CD), 1) : this._useAltToZoom && !CD && DD.addEntry({
+          !this._useAltToZoom && RU ? UU.inputMap.splice(UU.inputMap.indexOf(RU), 1) : this._useAltToZoom && !RU && UU.addEntry({
             source: "keyboard",
             modifiers: {
               alt: !0
@@ -805,19 +805,19 @@ export const modules = {
             interaction: "zoom"
           })
         }
-        attachControl(DD) {
-          DD = mD.g.BackCompatCameraNoPreventDefault(arguments), this._onCanvasBlurObserver || (this._scene = this.camera.hq(), this._engine = this._scene.DZ(), this._applyUseAltToZoomToInputMap(), this._onCanvasBlurObserver = this._engine.onCanvasBlurObservable.add((() => {
+        attachControl(UU) {
+          UU = mU.g.BackCompatCameraNoPreventDefault(arguments), this._onCanvasBlurObserver || (this._scene = this.camera.aZ(), this._engine = this._scene.WC(), this._applyUseAltToZoomToInputMap(), this._onCanvasBlurObserver = this._engine.onCanvasBlurObservable.add((() => {
             this._keys.length = 0
-          })), this._onKeyboardObserver = this._scene.onKeyboardObservable.add((CD => {
-            const cD = CD.event;
-            if (!cD.metaKey)
-              if (CD.type === HD.c.KEYDOWN) {
-                if (this._ctrlPressed = cD.ctrlKey, this._altPressed = cD.altKey, -1 !== this.keysUp.indexOf(cD.keyCode) || -1 !== this.keysDown.indexOf(cD.keyCode) || -1 !== this.keysLeft.indexOf(cD.keyCode) || -1 !== this.keysRight.indexOf(cD.keyCode) || -1 !== this.keysReset.indexOf(cD.keyCode) || -1 !== this.keysZoomIn.indexOf(cD.keyCode) || -1 !== this.keysZoomOut.indexOf(cD.keyCode)) {
-                  -1 === this._keys.indexOf(cD.keyCode) && this._keys.push(cD.keyCode), cD.preventDefault && (DD || cD.preventDefault())
+          })), this._onKeyboardObserver = this._scene.onKeyboardObservable.add((RU => {
+            const gU = RU.event;
+            if (!gU.metaKey)
+              if (RU.type === nU.b.KEYDOWN) {
+                if (this._ctrlPressed = gU.ctrlKey, this._altPressed = gU.altKey, -1 !== this.keysUp.indexOf(gU.keyCode) || -1 !== this.keysDown.indexOf(gU.keyCode) || -1 !== this.keysLeft.indexOf(gU.keyCode) || -1 !== this.keysRight.indexOf(gU.keyCode) || -1 !== this.keysReset.indexOf(gU.keyCode) || -1 !== this.keysZoomIn.indexOf(gU.keyCode) || -1 !== this.keysZoomOut.indexOf(gU.keyCode)) {
+                  -1 === this._keys.indexOf(gU.keyCode) && this._keys.push(gU.keyCode), gU.preventDefault && (UU || gU.preventDefault())
                 }
-              } else if (-1 !== this.keysUp.indexOf(cD.keyCode) || -1 !== this.keysDown.indexOf(cD.keyCode) || -1 !== this.keysLeft.indexOf(cD.keyCode) || -1 !== this.keysRight.indexOf(cD.keyCode) || -1 !== this.keysReset.indexOf(cD.keyCode) || -1 !== this.keysZoomIn.indexOf(cD.keyCode) || -1 !== this.keysZoomOut.indexOf(cD.keyCode)) {
-              const CD = this._keys.indexOf(cD.keyCode);
-              CD >= 0 && this._keys.splice(CD, 1), cD.preventDefault && (DD || cD.preventDefault())
+              } else if (-1 !== this.keysUp.indexOf(gU.keyCode) || -1 !== this.keysDown.indexOf(gU.keyCode) || -1 !== this.keysLeft.indexOf(gU.keyCode) || -1 !== this.keysRight.indexOf(gU.keyCode) || -1 !== this.keysReset.indexOf(gU.keyCode) || -1 !== this.keysZoomIn.indexOf(gU.keyCode) || -1 !== this.keysZoomOut.indexOf(gU.keyCode)) {
+              const RU = this._keys.indexOf(gU.keyCode);
+              RU >= 0 && this._keys.splice(RU, 1), gU.preventDefault && (UU || gU.preventDefault())
             }
           })))
         }
@@ -826,25 +826,25 @@ export const modules = {
         }
         checkInputs() {
           if (this._onKeyboardObserver) {
-            const DD = this.camera,
-              CD = DD.movement.input;
+            const UU = this.camera,
+              RU = UU.movement.input;
             this._keyboardModifiers.ctrl = this._ctrlPressed, this._keyboardModifiers.alt = this._altPressed;
-            const cD = this._rotateDirection.set(0, 0),
-              ID = this._panDirection.set(0, 0);
-            let pD = 0,
-              iD = 0;
-            for (let fD = 0; fD < this._keys.length; fD++) {
-              const bD = this._keys[fD];
-              if (this._keyboardConditions.key = bD, -1 === this.keysReset.indexOf(bD)) {
-                const DD = CD.resolveInteraction("keyboard", this._keyboardConditions);
-                if (DD)
-                  if ("pan" === DD.interaction) iD = Math.max(iD, DD.sensitivity ?? 1 / this.panningSensibility), -1 !== this.keysLeft.indexOf(bD) ? ID.x -= 1 : -1 !== this.keysRight.indexOf(bD) ? ID.x += 1 : -1 !== this.keysUp.indexOf(bD) ? ID.y += 1 : -1 !== this.keysDown.indexOf(bD) && (ID.y -= 1);
-                  else if ("zoom" === DD.interaction) {
-                  const cD = DD.sensitivity ?? 1 / this.zoomingSensibility; - 1 !== this.keysUp.indexOf(bD) || -1 !== this.keysZoomIn.indexOf(bD) ? CD.handlers.zoom(cD) : -1 === this.keysDown.indexOf(bD) && -1 === this.keysZoomOut.indexOf(bD) || CD.handlers.zoom(-cD)
-                } else "rotate" === DD.interaction && (pD = Math.max(pD, DD.sensitivity ?? this.angularSpeed), -1 !== this.keysLeft.indexOf(bD) ? cD.x -= 1 : -1 !== this.keysRight.indexOf(bD) ? cD.x += 1 : -1 !== this.keysUp.indexOf(bD) ? cD.y -= 1 : -1 !== this.keysDown.indexOf(bD) && (cD.y += 1))
-              } - 1 !== this.keysReset.indexOf(bD) && DD.useInputToRestoreState && DD.restoreState()
+            const gU = this._rotateDirection.set(0, 0),
+              tU = this._panDirection.set(0, 0);
+            let pU = 0,
+              EU = 0;
+            for (let PU = 0; PU < this._keys.length; PU++) {
+              const TU = this._keys[PU];
+              if (this._keyboardConditions.key = TU, -1 === this.keysReset.indexOf(TU)) {
+                const UU = RU.resolveInteraction("keyboard", this._keyboardConditions);
+                if (UU)
+                  if ("pan" === UU.interaction) EU = Math.max(EU, UU.sensitivity ?? 1 / this.panningSensibility), -1 !== this.keysLeft.indexOf(TU) ? tU.x -= 1 : -1 !== this.keysRight.indexOf(TU) ? tU.x += 1 : -1 !== this.keysUp.indexOf(TU) ? tU.y += 1 : -1 !== this.keysDown.indexOf(TU) && (tU.y -= 1);
+                  else if ("zoom" === UU.interaction) {
+                  const gU = UU.sensitivity ?? 1 / this.zoomingSensibility; - 1 !== this.keysUp.indexOf(TU) || -1 !== this.keysZoomIn.indexOf(TU) ? RU.handlers.zoom(gU) : -1 === this.keysDown.indexOf(TU) && -1 === this.keysZoomOut.indexOf(TU) || RU.handlers.zoom(-gU)
+                } else "rotate" === UU.interaction && (pU = Math.max(pU, UU.sensitivity ?? this.angularSpeed), -1 !== this.keysLeft.indexOf(TU) ? gU.x -= 1 : -1 !== this.keysRight.indexOf(TU) ? gU.x += 1 : -1 !== this.keysUp.indexOf(TU) ? gU.y -= 1 : -1 !== this.keysDown.indexOf(TU) && (gU.y += 1))
+              } - 1 !== this.keysReset.indexOf(TU) && UU.useInputToRestoreState && UU.restoreState()
             }
-            0 === cD.x && 0 === cD.y || (cD.normalize().scaleInPlace(pD), CD.handlers.rotate(cD.x, cD.y)), 0 === ID.x && 0 === ID.y || (ID.normalize().scaleInPlace(iD), CD.handlers.pan(ID.x, ID.y))
+            0 === gU.x && 0 === gU.y || (gU.normalize().scaleInPlace(pU), RU.handlers.rotate(gU.x, gU.y)), 0 === tU.x && 0 === tU.y || (tU.normalize().scaleInPlace(EU), RU.handlers.pan(tU.x, tU.y))
           }
         }
         getClassName() {
@@ -854,208 +854,208 @@ export const modules = {
           return "keyboard"
         }
       }, (() => {
-        const fD = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        CD = [(0, pD.G)()], cD = [(0, pD.G)()], iD = [(0, pD.G)()], bD = [(0, pD.G)()], QD = [(0, pD.G)()], wD = [(0, pD.G)()], SD = [(0, pD.G)()], BD = [(0, pD.G)()], yD = [(0, pD.G)()], MD = [(0, pD.G)()], tD = [(0, pD.G)()], (0, ID.k)(DD, null, tD, {
+        const PU = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        RU = [(0, pU.K)()], gU = [(0, pU.K)()], EU = [(0, pU.K)()], TU = [(0, pU.K)()], qU = [(0, pU.K)()], KU = [(0, pU.K)()], cU = [(0, pU.K)()], GU = [(0, pU.K)()], jU = [(0, pU.K)()], uU = [(0, pU.K)()], CU = [(0, pU.K)()], (0, tU.i)(UU, null, CU, {
           kind: "getter",
           name: "useAltToZoom",
           static: !1,
           private: !1,
           access: {
-            has: DD => "useAltToZoom" in DD,
-            get: DD => DD.useAltToZoom
+            has: UU => "useAltToZoom" in UU,
+            get: UU => UU.useAltToZoom
           },
-          metadata: fD
-        }, null, ZD), (0, ID.k)(null, null, CD, {
+          metadata: PU
+        }, null, hU), (0, tU.i)(null, null, RU, {
           kind: "field",
           name: "keysUp",
           static: !1,
           private: !1,
           access: {
-            has: DD => "keysUp" in DD,
-            get: DD => DD.keysUp,
-            set: (DD, CD) => {
-              DD.keysUp = CD
+            has: UU => "keysUp" in UU,
+            get: UU => UU.keysUp,
+            set: (UU, RU) => {
+              UU.keysUp = RU
             }
           },
-          metadata: fD
-        }, oD, vD), (0, ID.k)(null, null, cD, {
+          metadata: PU
+        }, QU, eU), (0, tU.i)(null, null, gU, {
           kind: "field",
           name: "keysDown",
           static: !1,
           private: !1,
           access: {
-            has: DD => "keysDown" in DD,
-            get: DD => DD.keysDown,
-            set: (DD, CD) => {
-              DD.keysDown = CD
+            has: UU => "keysDown" in UU,
+            get: UU => UU.keysDown,
+            set: (UU, RU) => {
+              UU.keysDown = RU
             }
           },
-          metadata: fD
-        }, ND, gD), (0, ID.k)(null, null, iD, {
+          metadata: PU
+        }, WU, fU), (0, tU.i)(null, null, EU, {
           kind: "field",
           name: "keysLeft",
           static: !1,
           private: !1,
           access: {
-            has: DD => "keysLeft" in DD,
-            get: DD => DD.keysLeft,
-            set: (DD, CD) => {
-              DD.keysLeft = CD
+            has: UU => "keysLeft" in UU,
+            get: UU => UU.keysLeft,
+            set: (UU, RU) => {
+              UU.keysLeft = RU
             }
           },
-          metadata: fD
-        }, XD, nD), (0, ID.k)(null, null, bD, {
+          metadata: PU
+        }, xU, IU), (0, tU.i)(null, null, TU, {
           kind: "field",
           name: "keysRight",
           static: !1,
           private: !1,
           access: {
-            has: DD => "keysRight" in DD,
-            get: DD => DD.keysRight,
-            set: (DD, CD) => {
-              DD.keysRight = CD
+            has: UU => "keysRight" in UU,
+            get: UU => UU.keysRight,
+            set: (UU, RU) => {
+              UU.keysRight = RU
             }
           },
-          metadata: fD
-        }, OD, PD), (0, ID.k)(null, null, QD, {
+          metadata: PU
+        }, JU, wU), (0, tU.i)(null, null, qU, {
           kind: "field",
           name: "keysReset",
           static: !1,
           private: !1,
           access: {
-            has: DD => "keysReset" in DD,
-            get: DD => DD.keysReset,
-            set: (DD, CD) => {
-              DD.keysReset = CD
+            has: UU => "keysReset" in UU,
+            get: UU => UU.keysReset,
+            set: (UU, RU) => {
+              UU.keysReset = RU
             }
           },
-          metadata: fD
-        }, UD, xD), (0, ID.k)(null, null, wD, {
+          metadata: PU
+        }, bU, oU), (0, tU.i)(null, null, KU, {
           kind: "field",
           name: "keysZoomIn",
           static: !1,
           private: !1,
           access: {
-            has: DD => "keysZoomIn" in DD,
-            get: DD => DD.keysZoomIn,
-            set: (DD, CD) => {
-              DD.keysZoomIn = CD
+            has: UU => "keysZoomIn" in UU,
+            get: UU => UU.keysZoomIn,
+            set: (UU, RU) => {
+              UU.keysZoomIn = RU
             }
           },
-          metadata: fD
-        }, qD, JD), (0, ID.k)(null, null, SD, {
+          metadata: PU
+        }, ZU, aU), (0, tU.i)(null, null, cU, {
           kind: "field",
           name: "keysZoomOut",
           static: !1,
           private: !1,
           access: {
-            has: DD => "keysZoomOut" in DD,
-            get: DD => DD.keysZoomOut,
-            set: (DD, CD) => {
-              DD.keysZoomOut = CD
+            has: UU => "keysZoomOut" in UU,
+            get: UU => UU.keysZoomOut,
+            set: (UU, RU) => {
+              UU.keysZoomOut = RU
             }
           },
-          metadata: fD
-        }, KD, aD), (0, ID.k)(null, null, BD, {
+          metadata: PU
+        }, YU, BU), (0, tU.i)(null, null, GU, {
           kind: "field",
           name: "panningSensibility",
           static: !1,
           private: !1,
           access: {
-            has: DD => "panningSensibility" in DD,
-            get: DD => DD.panningSensibility,
-            set: (DD, CD) => {
-              DD.panningSensibility = CD
+            has: UU => "panningSensibility" in UU,
+            get: UU => UU.panningSensibility,
+            set: (UU, RU) => {
+              UU.panningSensibility = RU
             }
           },
-          metadata: fD
-        }, VD, zD), (0, ID.k)(null, null, yD, {
+          metadata: PU
+        }, VU, rU), (0, tU.i)(null, null, jU, {
           kind: "field",
           name: "zoomingSensibility",
           static: !1,
           private: !1,
           access: {
-            has: DD => "zoomingSensibility" in DD,
-            get: DD => DD.zoomingSensibility,
-            set: (DD, CD) => {
-              DD.zoomingSensibility = CD
+            has: UU => "zoomingSensibility" in UU,
+            get: UU => UU.zoomingSensibility,
+            set: (UU, RU) => {
+              UU.zoomingSensibility = RU
             }
           },
-          metadata: fD
-        }, jD, lD), (0, ID.k)(null, null, MD, {
+          metadata: PU
+        }, XU, vU), (0, tU.i)(null, null, uU, {
           kind: "field",
           name: "angularSpeed",
           static: !1,
           private: !1,
           access: {
-            has: DD => "angularSpeed" in DD,
-            get: DD => DD.angularSpeed,
-            set: (DD, CD) => {
-              DD.angularSpeed = CD
+            has: UU => "angularSpeed" in UU,
+            get: UU => UU.angularSpeed,
+            set: (UU, RU) => {
+              UU.angularSpeed = RU
             }
           },
-          metadata: fD
-        }, LD, TD), fD && Object.defineProperty(DD, Symbol.metadata, {
+          metadata: PU
+        }, dU, HU), PU && Object.defineProperty(UU, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: fD
+          value: PU
         })
-      })(), DD
+      })(), UU
     })();
-    XD.c.ArcRotateCameraKeyboardMoveInput = UD;
-    var xD = cD(37167),
-      qD = cD(39334);
-    let JD = (() => {
-      var DD;
-      let CD, cD, iD, QD = [],
-        wD = [],
-        BD = [],
-        MD = [],
-        tD = [],
-        ZD = [];
-      return DD = class {
+    xU.d.ArcRotateCameraKeyboardMoveInput = bU;
+    var oU = gU(37308),
+      ZU = gU(39571);
+    let aU = (() => {
+      var UU;
+      let RU, gU, EU, qU = [],
+        KU = [],
+        GU = [],
+        uU = [],
+        CU = [],
+        hU = [];
+      return UU = class {
         constructor() {
-          this.wheelPrecision = (0, ID.m)(this, QD, 3), this.zoomToMouseLocation = ((0, ID.m)(this, wD), (0, ID.m)(this, BD, !1)), this.wheelDeltaPercentage = ((0, ID.m)(this, MD), (0, ID.m)(this, tD, 0)), this.customComputeDeltaFromMouseWheel = ((0, ID.m)(this, ZD), null), this._viewOffset = new fD.p(0, 0, 0), this._globalOffset = new fD.p(0, 0, 0), this._inertialPanning = fD.p.Zero(), this._zoomToMouseRadiusOffset = 0
+          this.wheelPrecision = (0, tU.j)(this, qU, 3), this.zoomToMouseLocation = ((0, tU.j)(this, KU), (0, tU.j)(this, GU, !1)), this.wheelDeltaPercentage = ((0, tU.j)(this, uU), (0, tU.j)(this, CU, 0)), this.customComputeDeltaFromMouseWheel = ((0, tU.j)(this, hU), null), this._viewOffset = new PU.n(0, 0, 0), this._globalOffset = new PU.n(0, 0, 0), this._inertialPanning = PU.n.Zero(), this._zoomToMouseRadiusOffset = 0
         }
-        _computeDeltaFromMouseWheelLegacyEvent(DD, CD) {
-          let cD;
-          const ID = .01 * DD * this.wheelDeltaPercentage * CD;
-          return cD = DD > 0 ? ID / (1 + this.wheelDeltaPercentage) : ID * (1 + this.wheelDeltaPercentage), cD
+        _computeDeltaFromMouseWheelLegacyEvent(UU, RU) {
+          let gU;
+          const tU = .01 * UU * this.wheelDeltaPercentage * RU;
+          return gU = UU > 0 ? tU / (1 + this.wheelDeltaPercentage) : tU * (1 + this.wheelDeltaPercentage), gU
         }
-        attachControl(DD) {
-          DD = mD.g.BackCompatCameraNoPreventDefault(arguments), this._wheel = CD => {
-            if (CD.type !== SD.c.POINTERWHEEL) return;
-            const cD = CD.event;
-            let ID;
-            const pD = cD.deltaMode === qD.c.DOM_DELTA_LINE ? 40 : 1,
-              iD = -cD.deltaY * pD;
-            if (this.customComputeDeltaFromMouseWheel) ID = this.customComputeDeltaFromMouseWheel(iD, this, cD);
+        attachControl(UU) {
+          UU = mU.g.BackCompatCameraNoPreventDefault(arguments), this._wheel = RU => {
+            if (RU.type !== cU.e.POINTERWHEEL) return;
+            const gU = RU.event;
+            let tU;
+            const pU = gU.deltaMode === ZU.c.DOM_DELTA_LINE ? 40 : 1,
+              EU = -gU.deltaY * pU;
+            if (this.customComputeDeltaFromMouseWheel) tU = this.customComputeDeltaFromMouseWheel(EU, this, gU);
             else if (this.wheelDeltaPercentage) {
-              if (ID = this._computeDeltaFromMouseWheelLegacyEvent(iD, this.camera.radius), ID > 0) {
-                const DD = this.zoomToMouseLocation ? this._zoomToMouseRadiusOffset : this.camera.inertialRadiusOffset;
-                let CD = this.camera.radius,
-                  cD = DD + ID;
-                for (let ID = 0; ID < 20 && !(CD <= cD) && !(Math.abs(cD * this.camera.inertia) < .001); ID++) CD -= cD, cD *= this.camera.inertia;
-                CD = (0, bD.Clamp)(CD, 0, Number.MAX_VALUE), ID = this._computeDeltaFromMouseWheelLegacyEvent(iD, CD)
+              if (tU = this._computeDeltaFromMouseWheelLegacyEvent(EU, this.camera.radius), tU > 0) {
+                const UU = this.zoomToMouseLocation ? this._zoomToMouseRadiusOffset : this.camera.inertialRadiusOffset;
+                let RU = this.camera.radius,
+                  gU = UU + tU;
+                for (let tU = 0; tU < 20 && !(RU <= gU) && !(Math.abs(gU * this.camera.inertia) < .001); tU++) RU -= gU, gU *= this.camera.inertia;
+                RU = (0, TU.Clamp)(RU, 0, Number.MAX_VALUE), tU = this._computeDeltaFromMouseWheelLegacyEvent(EU, RU)
               }
             } else {
-              const DD = this.camera.movement.input.getEntry("wheel", "zoom");
-              ID = iD * (DD?.sensitivity ?? 1 / (40 * this.wheelPrecision))
+              const UU = this.camera.movement.input.getEntry("wheel", "zoom");
+              tU = EU * (UU?.sensitivity ?? 1 / (40 * this.wheelPrecision))
             }
-            ID && (this.zoomToMouseLocation ? (this._hitPlane || this._updateHitPlane(), this._zoomToMouse(ID)) : this.camera.movement.zoomAccumulatedPixels += ID), cD.preventDefault && (DD || cD.preventDefault())
-          }, this._observer = this.camera.hq()._inputManager._addCameraPointerObserver(this._wheel, SD.c.POINTERWHEEL), this.zoomToMouseLocation && this._inertialPanning.YF(0)
+            tU && (this.zoomToMouseLocation ? (this._hitPlane || this._updateHitPlane(), this._zoomToMouse(tU)) : this.camera.movement.zoomAccumulatedPixels += tU), gU.preventDefault && (UU || gU.preventDefault())
+          }, this._observer = this.camera.aZ()._inputManager._addCameraPointerObserver(this._wheel, cU.e.POINTERWHEEL), this.zoomToMouseLocation && this._inertialPanning.Y5(0)
         }
         detachControl() {
-          this._observer && (this.camera.hq()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._wheel = null)
+          this._observer && (this.camera.aZ()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._wheel = null)
         }
         checkInputs() {
           if (!this.zoomToMouseLocation) return;
-          const DD = this.camera;
-          if (Math.abs(this._zoomToMouseRadiusOffset) + this._inertialPanning.lengthSquared() + Math.abs(DD.inertialAlphaOffset) + Math.abs(DD.inertialBetaOffset) + Math.abs(DD.inertialRadiusOffset)) {
-            this._updateHitPlane(), DD.target.addInPlace(this._inertialPanning), DD.radius -= this._zoomToMouseRadiusOffset;
-            const CD = DD.movement.getFrameIndependentDecay(DD.inertia);
-            this._inertialPanning.scaleInPlace(CD), this._zoomToMouseRadiusOffset *= CD, this._zeroIfClose(this._inertialPanning), Math.abs(this._zoomToMouseRadiusOffset) < yD.c && (this._zoomToMouseRadiusOffset = 0)
+          const UU = this.camera;
+          if (Math.abs(this._zoomToMouseRadiusOffset) + this._inertialPanning.lengthSquared() + Math.abs(UU.inertialAlphaOffset) + Math.abs(UU.inertialBetaOffset) + Math.abs(UU.inertialRadiusOffset)) {
+            this._updateHitPlane(), UU.target.addInPlace(this._inertialPanning), UU.radius -= this._zoomToMouseRadiusOffset;
+            const RU = UU.movement.getFrameIndependentDecay(UU.inertia);
+            this._inertialPanning.scaleInPlace(RU), this._zoomToMouseRadiusOffset *= RU, this._zeroIfClose(this._inertialPanning), Math.abs(this._zoomToMouseRadiusOffset) < jU.e && (this._zoomToMouseRadiusOffset = 0)
           }
         }
         getClassName() {
@@ -1065,117 +1065,117 @@ export const modules = {
           return "mousewheel"
         }
         _updateHitPlane() {
-          const DD = this.camera,
-            CD = DD.target.subtract(DD.position);
-          this._hitPlane = xD.c.FromPositionAndNormal(DD.target, CD)
+          const UU = this.camera,
+            RU = UU.target.subtract(UU.position);
+          this._hitPlane = oU.e.FromPositionAndNormal(UU.target, RU)
         }
         _getPosition() {
-          const DD = this.camera,
-            CD = DD.hq(),
-            cD = CD.createPickingRay(CD.pointerX, CD.pointerY, fD.d.Identity(), DD, !1);
-          0 === DD.targetScreenOffset.x && 0 === DD.targetScreenOffset.y || (this._viewOffset.set(DD.targetScreenOffset.x, DD.targetScreenOffset.y, 0), DD.getViewMatrix().invertToRef(DD._cameraTransformMatrix), this._globalOffset = fD.p.TransformNormal(this._viewOffset, DD._cameraTransformMatrix), cD.origin.addInPlace(this._globalOffset));
-          let ID = 0;
-          return this._hitPlane && (ID = cD.intersectsPlane(this._hitPlane) ?? 0), cD.origin.addInPlace(cD.direction.scaleInPlace(ID))
+          const UU = this.camera,
+            RU = UU.aZ(),
+            gU = RU.createPickingRay(RU.pointerX, RU.pointerY, PU.c.Identity(), UU, !1);
+          0 === UU.targetScreenOffset.x && 0 === UU.targetScreenOffset.y || (this._viewOffset.set(UU.targetScreenOffset.x, UU.targetScreenOffset.y, 0), UU.getViewMatrix().invertToRef(UU._cameraTransformMatrix), this._globalOffset = PU.n.TransformNormal(this._viewOffset, UU._cameraTransformMatrix), gU.origin.addInPlace(this._globalOffset));
+          let tU = 0;
+          return this._hitPlane && (tU = gU.intersectsPlane(this._hitPlane) ?? 0), gU.origin.addInPlace(gU.direction.scaleInPlace(tU))
         }
-        _zoomToMouse(DD) {
-          const CD = this.camera,
-            cD = 1 - CD.inertia,
-            ID = CD.movement.getFrameIndependentInputScale(CD.inertia);
-          if (CD.lowerRadiusLimit) {
-            const pD = CD.lowerRadiusLimit ?? 0;
-            CD.radius - (this._zoomToMouseRadiusOffset + DD * ID) / cD < pD && (DD = ((CD.radius - pD) * cD - this._zoomToMouseRadiusOffset) / ID)
+        _zoomToMouse(UU) {
+          const RU = this.camera,
+            gU = 1 - RU.inertia,
+            tU = RU.movement.getFrameIndependentInputScale(RU.inertia);
+          if (RU.lowerRadiusLimit) {
+            const pU = RU.lowerRadiusLimit ?? 0;
+            RU.radius - (this._zoomToMouseRadiusOffset + UU * tU) / gU < pU && (UU = ((RU.radius - pU) * gU - this._zoomToMouseRadiusOffset) / tU)
           }
-          if (CD.upperRadiusLimit) {
-            const pD = CD.upperRadiusLimit ?? 0;
-            CD.radius - (this._zoomToMouseRadiusOffset + DD * ID) / cD > pD && (DD = ((CD.radius - pD) * cD - this._zoomToMouseRadiusOffset) / ID)
+          if (RU.upperRadiusLimit) {
+            const pU = RU.upperRadiusLimit ?? 0;
+            RU.radius - (this._zoomToMouseRadiusOffset + UU * tU) / gU > pU && (UU = ((RU.radius - pU) * gU - this._zoomToMouseRadiusOffset) / tU)
           }
-          const pD = DD / cD / CD.radius,
-            iD = this._getPosition(),
-            bD = fD.l.cZ[6];
-          iD.subtractToRef(CD.target, bD), bD.scaleInPlace(pD), bD.scaleInPlace(cD), bD.scaleInPlace(ID), this._inertialPanning.addInPlace(bD), this._zoomToMouseRadiusOffset += DD * ID
+          const pU = UU / gU / RU.radius,
+            EU = this._getPosition(),
+            TU = PU.h.xC[6];
+          EU.subtractToRef(RU.target, TU), TU.scaleInPlace(pU), TU.scaleInPlace(gU), TU.scaleInPlace(tU), this._inertialPanning.addInPlace(TU), this._zoomToMouseRadiusOffset += UU * tU
         }
-        _zeroIfClose(DD) {
-          Math.abs(DD.x) < yD.c && (DD.x = 0), Math.abs(DD.y) < yD.c && (DD.y = 0), Math.abs(DD.z) < yD.c && (DD.z = 0)
+        _zeroIfClose(UU) {
+          Math.abs(UU.x) < jU.e && (UU.x = 0), Math.abs(UU.y) < jU.e && (UU.y = 0), Math.abs(UU.z) < jU.e && (UU.z = 0)
         }
       }, (() => {
-        const fD = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        CD = [(0, pD.G)()], cD = [(0, pD.G)()], iD = [(0, pD.G)()], (0, ID.k)(null, null, CD, {
+        const PU = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        RU = [(0, pU.K)()], gU = [(0, pU.K)()], EU = [(0, pU.K)()], (0, tU.i)(null, null, RU, {
           kind: "field",
           name: "wheelPrecision",
           static: !1,
           private: !1,
           access: {
-            has: DD => "wheelPrecision" in DD,
-            get: DD => DD.wheelPrecision,
-            set: (DD, CD) => {
-              DD.wheelPrecision = CD
+            has: UU => "wheelPrecision" in UU,
+            get: UU => UU.wheelPrecision,
+            set: (UU, RU) => {
+              UU.wheelPrecision = RU
             }
           },
-          metadata: fD
-        }, QD, wD), (0, ID.k)(null, null, cD, {
+          metadata: PU
+        }, qU, KU), (0, tU.i)(null, null, gU, {
           kind: "field",
           name: "zoomToMouseLocation",
           static: !1,
           private: !1,
           access: {
-            has: DD => "zoomToMouseLocation" in DD,
-            get: DD => DD.zoomToMouseLocation,
-            set: (DD, CD) => {
-              DD.zoomToMouseLocation = CD
+            has: UU => "zoomToMouseLocation" in UU,
+            get: UU => UU.zoomToMouseLocation,
+            set: (UU, RU) => {
+              UU.zoomToMouseLocation = RU
             }
           },
-          metadata: fD
-        }, BD, MD), (0, ID.k)(null, null, iD, {
+          metadata: PU
+        }, GU, uU), (0, tU.i)(null, null, EU, {
           kind: "field",
           name: "wheelDeltaPercentage",
           static: !1,
           private: !1,
           access: {
-            has: DD => "wheelDeltaPercentage" in DD,
-            get: DD => DD.wheelDeltaPercentage,
-            set: (DD, CD) => {
-              DD.wheelDeltaPercentage = CD
+            has: UU => "wheelDeltaPercentage" in UU,
+            get: UU => UU.wheelDeltaPercentage,
+            set: (UU, RU) => {
+              UU.wheelDeltaPercentage = RU
             }
           },
-          metadata: fD
-        }, tD, ZD), fD && Object.defineProperty(DD, Symbol.metadata, {
+          metadata: PU
+        }, CU, hU), PU && Object.defineProperty(UU, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: fD
+          value: PU
         })
-      })(), DD
+      })(), UU
     })();
-    XD.c.ArcRotateCameraMouseWheelInput = JD;
-    var KD, aD, VD = cD(39027);
-    class zD extends XD.g {
-      constructor(DD) {
-        super(DD)
+    xU.d.ArcRotateCameraMouseWheelInput = aU;
+    var YU, BU, VU = gU(39256);
+    class rU extends xU.f {
+      constructor(UU) {
+        super(UU)
       }
       addMouseWheel() {
-        return this.add(new JD), this
+        return this.add(new aU), this
       }
       addPointers() {
-        return this.add(new PD), this
+        return this.add(new wU), this
       }
       addKeyboard() {
-        return this.add(new UD), this
+        return this.add(new bU), this
       }
-    }(KD = zD.prototype).addVRDeviceOrientation ?? (KD.addVRDeviceOrientation = (0, VD.j)("ArcRotateCameraInputsManager", "addVRDeviceOrientation")), (aD = zD.prototype).addGamepad ?? (aD.addGamepad = (0, VD.j)("ArcRotateCameraInputsManager", "addGamepad"));
-    var jD = cD(36488),
-      lD = cD(39368),
-      LD = cD(39373);
-    class TD extends lD.c {
-      constructor(DD, CD, cD) {
-        super(DD, CD, cD), this.input = new LD.b({
-          pan: (DD, CD) => {
-            this.panAccumulatedPixels.x += DD, this.panAccumulatedPixels.y += CD
+    }(YU = rU.prototype).addVRDeviceOrientation ?? (YU.addVRDeviceOrientation = (0, VU.m)("ArcRotateCameraInputsManager", "addVRDeviceOrientation")), (BU = rU.prototype).addGamepad ?? (BU.addGamepad = (0, VU.m)("ArcRotateCameraInputsManager", "addGamepad"));
+    var XU = gU(36639),
+      vU = gU(39615),
+      dU = gU(39624);
+    class HU extends vU.d {
+      constructor(UU, RU, gU) {
+        super(UU, RU, gU), this.input = new dU.d({
+          pan: (UU, RU) => {
+            this.panAccumulatedPixels.x += UU, this.panAccumulatedPixels.y += RU
           },
-          rotate: (DD, CD) => {
-            this.rotationAccumulatedPixels.x += DD, this.rotationAccumulatedPixels.y += CD
+          rotate: (UU, RU) => {
+            this.rotationAccumulatedPixels.x += UU, this.rotationAccumulatedPixels.y += RU
           },
-          zoom: DD => {
-            this.zoomAccumulatedPixels += DD
+          zoom: UU => {
+            this.zoomAccumulatedPixels += UU
           }
         }, (() => this._createDefaultInputMap()))
       }
@@ -1221,71 +1221,71 @@ export const modules = {
       }
     }
 
-    function GD(DD, CD) {
-      return isNaN(DD) ? CD : DD
+    function SU(UU, RU) {
+      return isNaN(UU) ? RU : UU
     }
-    let RD = (() => {
-        var DD;
-        let CD, cD, QD, SD, BD, tD, ZD, XD, nD, OD, PD, HD, UD, xD, qD, JD, KD, aD, VD, jD, lD, LD, RD, kD, dD, YD, WD, sD, ED = gD.e,
-          eD = [],
-          uD = [],
-          hD = [],
-          rD = [],
-          AD = [],
-          FD = [],
-          DC = [],
-          CC = [],
-          cC = [],
-          IC = [],
-          pC = [],
-          iC = [],
-          fC = [],
-          bC = [],
-          QC = [],
-          wC = [],
-          SC = [],
-          BC = [],
-          yC = [],
-          MC = [],
-          tC = [],
-          ZC = [],
-          oC = [],
-          vC = [],
-          NC = [],
-          gC = [],
-          XC = [],
-          mC = [],
-          nC = [],
-          OC = [],
-          PC = [],
-          HC = [],
-          UC = [],
-          xC = [],
-          qC = [],
-          JC = [],
-          KC = [],
-          aC = [],
-          VC = [],
-          zC = [],
-          jC = [],
-          lC = [],
-          LC = [],
-          TC = [],
-          GC = [],
-          RC = [],
-          kC = [];
-        return DD = class extends ED {
+    let sU = (() => {
+        var UU;
+        let RU, gU, qU, cU, GU, CU, hU, xU, IU, JU, wU, nU, bU, oU, ZU, aU, YU, BU, VU, XU, vU, dU, sU, yU, kU, FU, iU, AU, zU = fU.i,
+          MU = [],
+          DU = [],
+          LU = [],
+          NU = [],
+          lU = [],
+          OU = [],
+          UR = [],
+          RR = [],
+          gR = [],
+          tR = [],
+          pR = [],
+          ER = [],
+          PR = [],
+          TR = [],
+          qR = [],
+          KR = [],
+          cR = [],
+          GR = [],
+          jR = [],
+          uR = [],
+          CR = [],
+          hR = [],
+          QR = [],
+          eR = [],
+          WR = [],
+          fR = [],
+          xR = [],
+          mR = [],
+          IR = [],
+          JR = [],
+          wR = [],
+          nR = [],
+          bR = [],
+          oR = [],
+          ZR = [],
+          aR = [],
+          YR = [],
+          BR = [],
+          VR = [],
+          rR = [],
+          XR = [],
+          vR = [],
+          dR = [],
+          HR = [],
+          SR = [],
+          sR = [],
+          yR = [];
+        return UU = class extends zU {
           get target() {
-            return this.DW
+            return this.nD
           }
-          set target(DD) {
-            this.setTarget(DD)
+          set target(UU) {
+            this.setTarget(UU)
           }
           get targetHost() {
             return this._targetHost
           }
-          set targetHost(DD) {
-            DD && this.setTarget(DD)
+          set targetHost(UU) {
+            UU && this.setTarget(UU)
           }
           getTarget() {
             return this.target
@@ -1293,185 +1293,185 @@ export const modules = {
           get position() {
             return this._position
           }
-          set position(DD) {
-            this.setPosition(DD)
+          set position(UU) {
+            this.setPosition(UU)
           }
-          set upVector(DD) {
-            this._upToYMatrix || (this._yToUpMatrix = new fD.d, this._upToYMatrix = new fD.d, this._upVector = fD.p.Zero()), DD.normalize(), this._upVector.YCD(DD), this.setMatUp()
+          set upVector(UU) {
+            this._upToYMatrix || (this._yToUpMatrix = new PU.c, this._upToYMatrix = new PU.c, this._upVector = PU.n.Zero()), UU.normalize(), this._upVector.PgU(UU), this.setMatUp()
           }
           get upVector() {
             return this._upVector
           }
           setMatUp() {
-            fD.d.RotationAlignToRef(fD.p.UpReadOnly, this._upVector, this._yToUpMatrix), fD.d.RotationAlignToRef(this._upVector, fD.p.UpReadOnly, this._upToYMatrix)
+            PU.c.RotationAlignToRef(PU.n.UpReadOnly, this._upVector, this._yToUpMatrix), PU.c.RotationAlignToRef(this._upVector, PU.n.UpReadOnly, this._upToYMatrix)
           }
           get inertialAlphaOffset() {
             if (0 !== this._inertialAlphaOffset) return this._inertialAlphaOffset;
             if (0 !== this.movement.rotationAccumulatedPixels.x) return this.movement.rotationAccumulatedPixels.x;
-            const DD = this.movement.rotationDeltaCurrentFrame.x;
-            return Math.abs(DD) < this._rotationEpsilon ? 0 : DD
+            const UU = this.movement.rotationDeltaCurrentFrame.x;
+            return Math.abs(UU) < this._rotationEpsilon ? 0 : UU
           }
-          set inertialAlphaOffset(DD) {
-            this._inertialAlphaOffset = DD, 0 === DD && this.movement.resetRotationVelocity()
+          set inertialAlphaOffset(UU) {
+            this._inertialAlphaOffset = UU, 0 === UU && this.movement.resetRotationVelocity()
           }
           get inertialBetaOffset() {
             if (0 !== this._inertialBetaOffset) return this._inertialBetaOffset;
             if (0 !== this.movement.rotationAccumulatedPixels.y) return this.movement.rotationAccumulatedPixels.y;
-            const DD = this.movement.rotationDeltaCurrentFrame.y;
-            return Math.abs(DD) < this._rotationEpsilon ? 0 : DD
+            const UU = this.movement.rotationDeltaCurrentFrame.y;
+            return Math.abs(UU) < this._rotationEpsilon ? 0 : UU
           }
-          set inertialBetaOffset(DD) {
-            this._inertialBetaOffset = DD, 0 === DD && this.movement.resetRotationVelocity()
+          set inertialBetaOffset(UU) {
+            this._inertialBetaOffset = UU, 0 === UU && this.movement.resetRotationVelocity()
           }
           get inertialRadiusOffset() {
             if (0 !== this._inertialRadiusOffset) return this._inertialRadiusOffset;
             if (0 !== this.movement.zoomAccumulatedPixels) return this.movement.zoomAccumulatedPixels;
-            const DD = this.movement.zoomDeltaCurrentFrame;
-            return Math.abs(DD) < this._rotationEpsilon ? 0 : DD
+            const UU = this.movement.zoomDeltaCurrentFrame;
+            return Math.abs(UU) < this._rotationEpsilon ? 0 : UU
           }
-          set inertialRadiusOffset(DD) {
-            this._inertialRadiusOffset = DD, 0 === DD && this.movement.resetZoomVelocity()
+          set inertialRadiusOffset(UU) {
+            this._inertialRadiusOffset = UU, 0 === UU && this.movement.resetZoomVelocity()
           }
           get panningInertia() {
             return this._panningInertia
           }
-          set panningInertia(DD) {
-            this._panningInertia = DD, this.movement && (this.movement.panInertia = DD)
+          set panningInertia(UU) {
+            this._panningInertia = UU, this.movement && (this.movement.panInertia = UU)
           }
           get inertia() {
             return this._inertia
           }
-          set inertia(DD) {
-            this._inertia = DD, this.movement && (this.movement.rotationInertia = DD, this.movement.zoomInertia = DD)
+          set inertia(UU) {
+            this._inertia = UU, this.movement && (this.movement.rotationInertia = UU, this.movement.zoomInertia = UU)
           }
           get angularSensibilityX() {
-            const DD = this.inputs.attached.pointers;
-            return DD ? DD.angularSensibilityX : 0
+            const UU = this.inputs.attached.pointers;
+            return UU ? UU.angularSensibilityX : 0
           }
-          set angularSensibilityX(DD) {
-            const CD = this.inputs.attached.pointers;
-            CD && (CD.angularSensibilityX = DD)
+          set angularSensibilityX(UU) {
+            const RU = this.inputs.attached.pointers;
+            RU && (RU.angularSensibilityX = UU)
           }
           get angularSensibilityY() {
-            const DD = this.inputs.attached.pointers;
-            return DD ? DD.angularSensibilityY : 0
+            const UU = this.inputs.attached.pointers;
+            return UU ? UU.angularSensibilityY : 0
           }
-          set angularSensibilityY(DD) {
-            const CD = this.inputs.attached.pointers;
-            CD && (CD.angularSensibilityY = DD)
+          set angularSensibilityY(UU) {
+            const RU = this.inputs.attached.pointers;
+            RU && (RU.angularSensibilityY = UU)
           }
           get pinchPrecision() {
-            const DD = this.inputs.attached.pointers;
-            return DD ? DD.pinchPrecision : 0
+            const UU = this.inputs.attached.pointers;
+            return UU ? UU.pinchPrecision : 0
           }
-          set pinchPrecision(DD) {
-            const CD = this.inputs.attached.pointers;
-            CD && (CD.pinchPrecision = DD)
+          set pinchPrecision(UU) {
+            const RU = this.inputs.attached.pointers;
+            RU && (RU.pinchPrecision = UU)
           }
           get pinchDeltaPercentage() {
-            const DD = this.inputs.attached.pointers;
-            return DD ? DD.pinchDeltaPercentage : 0
+            const UU = this.inputs.attached.pointers;
+            return UU ? UU.pinchDeltaPercentage : 0
           }
-          set pinchDeltaPercentage(DD) {
-            const CD = this.inputs.attached.pointers;
-            CD && (CD.pinchDeltaPercentage = DD)
+          set pinchDeltaPercentage(UU) {
+            const RU = this.inputs.attached.pointers;
+            RU && (RU.pinchDeltaPercentage = UU)
           }
           get useNaturalPinchZoom() {
-            const DD = this.inputs.attached.pointers;
-            return !!DD && DD.useNaturalPinchZoom
+            const UU = this.inputs.attached.pointers;
+            return !!UU && UU.useNaturalPinchZoom
           }
-          set useNaturalPinchZoom(DD) {
-            const CD = this.inputs.attached.pointers;
-            CD && (CD.useNaturalPinchZoom = DD)
+          set useNaturalPinchZoom(UU) {
+            const RU = this.inputs.attached.pointers;
+            RU && (RU.useNaturalPinchZoom = UU)
           }
           get panningSensibility() {
-            const DD = this.inputs.attached.pointers;
-            return DD ? DD.panningSensibility : 0
+            const UU = this.inputs.attached.pointers;
+            return UU ? UU.panningSensibility : 0
           }
-          set panningSensibility(DD) {
-            const CD = this.inputs.attached.pointers;
-            CD && (CD.panningSensibility = DD)
+          set panningSensibility(UU) {
+            const RU = this.inputs.attached.pointers;
+            RU && (RU.panningSensibility = UU)
           }
           get keysUp() {
-            const DD = this.inputs.attached.keyboard;
-            return DD ? DD.keysUp : []
+            const UU = this.inputs.attached.keyboard;
+            return UU ? UU.keysUp : []
           }
-          set keysUp(DD) {
-            const CD = this.inputs.attached.keyboard;
-            CD && (CD.keysUp = DD)
+          set keysUp(UU) {
+            const RU = this.inputs.attached.keyboard;
+            RU && (RU.keysUp = UU)
           }
           get keysDown() {
-            const DD = this.inputs.attached.keyboard;
-            return DD ? DD.keysDown : []
+            const UU = this.inputs.attached.keyboard;
+            return UU ? UU.keysDown : []
           }
-          set keysDown(DD) {
-            const CD = this.inputs.attached.keyboard;
-            CD && (CD.keysDown = DD)
+          set keysDown(UU) {
+            const RU = this.inputs.attached.keyboard;
+            RU && (RU.keysDown = UU)
           }
           get keysLeft() {
-            const DD = this.inputs.attached.keyboard;
-            return DD ? DD.keysLeft : []
+            const UU = this.inputs.attached.keyboard;
+            return UU ? UU.keysLeft : []
           }
-          set keysLeft(DD) {
-            const CD = this.inputs.attached.keyboard;
-            CD && (CD.keysLeft = DD)
+          set keysLeft(UU) {
+            const RU = this.inputs.attached.keyboard;
+            RU && (RU.keysLeft = UU)
           }
           get keysRight() {
-            const DD = this.inputs.attached.keyboard;
-            return DD ? DD.keysRight : []
+            const UU = this.inputs.attached.keyboard;
+            return UU ? UU.keysRight : []
           }
-          set keysRight(DD) {
-            const CD = this.inputs.attached.keyboard;
-            CD && (CD.keysRight = DD)
+          set keysRight(UU) {
+            const RU = this.inputs.attached.keyboard;
+            RU && (RU.keysRight = UU)
           }
           get wheelPrecision() {
-            const DD = this.inputs.attached.mousewheel;
-            return DD ? DD.wheelPrecision : 0
+            const UU = this.inputs.attached.mousewheel;
+            return UU ? UU.wheelPrecision : 0
           }
-          set wheelPrecision(DD) {
-            const CD = this.inputs.attached.mousewheel;
-            CD && (CD.wheelPrecision = DD)
+          set wheelPrecision(UU) {
+            const RU = this.inputs.attached.mousewheel;
+            RU && (RU.wheelPrecision = UU)
           }
           get zoomToMouseLocation() {
-            const DD = this.inputs.attached.mousewheel;
-            return !!DD && DD.zoomToMouseLocation
+            const UU = this.inputs.attached.mousewheel;
+            return !!UU && UU.zoomToMouseLocation
           }
-          set zoomToMouseLocation(DD) {
-            const CD = this.inputs.attached.mousewheel;
-            CD && (CD.zoomToMouseLocation = DD)
+          set zoomToMouseLocation(UU) {
+            const RU = this.inputs.attached.mousewheel;
+            RU && (RU.zoomToMouseLocation = UU)
           }
           get wheelDeltaPercentage() {
-            const DD = this.inputs.attached.mousewheel;
-            return DD ? DD.wheelDeltaPercentage : 0
+            const UU = this.inputs.attached.mousewheel;
+            return UU ? UU.wheelDeltaPercentage : 0
           }
-          set wheelDeltaPercentage(DD) {
-            const CD = this.inputs.attached.mousewheel;
-            CD && (CD.wheelDeltaPercentage = DD)
+          set wheelDeltaPercentage(UU) {
+            const RU = this.inputs.attached.mousewheel;
+            RU && (RU.wheelDeltaPercentage = UU)
           }
           get _useCtrlForPanning() {
             return this._useCtrlForPanningInternal
           }
-          set _useCtrlForPanning(DD) {
-            this._useCtrlForPanningInternal = DD;
-            const CD = this.movement.input,
-              cD = CD.getEntry("keyboard", "pan", {
+          set _useCtrlForPanning(UU) {
+            this._useCtrlForPanningInternal = UU;
+            const RU = this.movement.input,
+              gU = RU.getEntry("keyboard", "pan", {
                 modifiers: {
                   ctrl: !0
                 }
               });
-            !DD && cD ? CD.inputMap.splice(CD.inputMap.indexOf(cD), 1) : DD && !cD && CD.addEntry({
+            !UU && gU ? RU.inputMap.splice(RU.inputMap.indexOf(gU), 1) : UU && !gU && RU.addEntry({
               source: "keyboard",
               modifiers: {
                 ctrl: !0
               },
               interaction: "pan"
             });
-            const ID = CD.getEntry("pointer", "pan", {
+            const tU = RU.getEntry("pointer", "pan", {
               modifiers: {
                 ctrl: !0
               }
             });
-            !DD && ID ? CD.inputMap.splice(CD.inputMap.indexOf(ID), 1) : DD && !ID && CD.addEntry({
+            !UU && tU ? RU.inputMap.splice(RU.inputMap.indexOf(tU), 1) : UU && !tU && RU.addEntry({
               source: "pointer",
               button: 0,
               modifiers: {
@@ -1483,12 +1483,12 @@ export const modules = {
           get _panningMouseButton() {
             return this._panningMouseButtonInternal
           }
-          set _panningMouseButton(DD) {
-            this._panningMouseButtonInternal = DD;
-            const CD = this.movement.input.getEntry("pointer", "pan", {
+          set _panningMouseButton(UU) {
+            this._panningMouseButtonInternal = UU;
+            const RU = this.movement.input.getEntry("pointer", "pan", {
               modifiers: {}
             });
-            CD && (CD.button = DD)
+            RU && (RU.button = UU)
           }
           get isInterpolating() {
             return this._isInterpolating
@@ -1499,8 +1499,8 @@ export const modules = {
           get useBouncingBehavior() {
             return null != this._bouncingBehavior
           }
-          set useBouncingBehavior(DD) {
-            DD !== this.useBouncingBehavior && (DD ? (this._bouncingBehavior = new oD, this.addBehavior(this._bouncingBehavior)) : this._bouncingBehavior && (this.removeBehavior(this._bouncingBehavior), this._bouncingBehavior = null))
+          set useBouncingBehavior(UU) {
+            UU !== this.useBouncingBehavior && (UU ? (this._bouncingBehavior = new QU, this.addBehavior(this._bouncingBehavior)) : this._bouncingBehavior && (this.removeBehavior(this._bouncingBehavior), this._bouncingBehavior = null))
           }
           get framingBehavior() {
             return this._framingBehavior
@@ -1508,8 +1508,8 @@ export const modules = {
           get useFramingBehavior() {
             return null != this._framingBehavior
           }
-          set useFramingBehavior(DD) {
-            DD !== this.useFramingBehavior && (DD ? (this._framingBehavior = new vD, this.addBehavior(this._framingBehavior)) : this._framingBehavior && (this.removeBehavior(this._framingBehavior), this._framingBehavior = null))
+          set useFramingBehavior(UU) {
+            UU !== this.useFramingBehavior && (UU ? (this._framingBehavior = new eU, this.addBehavior(this._framingBehavior)) : this._framingBehavior && (this.removeBehavior(this._framingBehavior), this._framingBehavior = null))
           }
           get autoRotationBehavior() {
             return this._autoRotationBehavior
@@ -1517,136 +1517,136 @@ export const modules = {
           get useAutoRotationBehavior() {
             return null != this._autoRotationBehavior
           }
-          set useAutoRotationBehavior(DD) {
-            DD !== this.useAutoRotationBehavior && (DD ? (this._autoRotationBehavior = new MD, this.addBehavior(this._autoRotationBehavior)) : this._autoRotationBehavior && (this.removeBehavior(this._autoRotationBehavior), this._autoRotationBehavior = null))
+          set useAutoRotationBehavior(UU) {
+            UU !== this.useAutoRotationBehavior && (UU ? (this._autoRotationBehavior = new uU, this.addBehavior(this._autoRotationBehavior)) : this._autoRotationBehavior && (this.removeBehavior(this._autoRotationBehavior), this._autoRotationBehavior = null))
           }
-          constructor(DD, CD, cD, pD, bD, QD) {
-            var wD;
-            let SD = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
-            super(DD, fD.p.Zero(), QD, SD), wD = this, this.alpha = ((0, ID.m)(this, eD), (0, ID.m)(this, uD, void 0)), this.beta = ((0, ID.m)(this, hD), (0, ID.m)(this, rD, void 0)), this.radius = ((0, ID.m)(this, AD), (0, ID.m)(this, FD, void 0)), this.overrideCloneAlphaBetaRadius = ((0, ID.m)(this, DC), (0, ID.m)(this, CC, void 0)), this.DW = ((0, ID.m)(this, cC), (0, ID.m)(this, IC, void 0)), this._targetHost = ((0, ID.m)(this, pC), (0, ID.m)(this, iC, void 0)), this._upToYMatrix = (0, ID.m)(this, fC), this._inertialAlphaOffset = 0, this._inertialBetaOffset = 0, this._inertialRadiusOffset = 0, this.lowerAlphaLimit = (0, ID.m)(this, bC, null), this.upperAlphaLimit = ((0, ID.m)(this, QC), (0, ID.m)(this, wC, null)), this.lowerBetaLimit = ((0, ID.m)(this, SC), (0, ID.m)(this, BC, .01)), this.upperBetaLimit = ((0, ID.m)(this, yC), (0, ID.m)(this, MC, Math.PI - .01)), this.lowerRadiusLimit = ((0, ID.m)(this, tC), (0, ID.m)(this, ZC, null)), this.upperRadiusLimit = ((0, ID.m)(this, oC), (0, ID.m)(this, vC, null)), this.lowerTargetYLimit = ((0, ID.m)(this, NC), (0, ID.m)(this, gC, -1 / 0)), this.inertialPanningX = ((0, ID.m)(this, XC), (0, ID.m)(this, mC, 0)), this.inertialPanningY = ((0, ID.m)(this, nC), (0, ID.m)(this, OC, 0)), this.pinchToPanMaxDistance = ((0, ID.m)(this, PC), (0, ID.m)(this, HC, 20)), this.panningDistanceLimit = ((0, ID.m)(this, UC), (0, ID.m)(this, xC, null)), this.panningOriginTarget = ((0, ID.m)(this, qC), (0, ID.m)(this, JC, fD.p.Zero())), this._panningInertia = ((0, ID.m)(this, KC), .9), this._inertia = .9, this.zoomOnFactor = (0, ID.m)(this, aC, 1), this.targetScreenOffset = ((0, ID.m)(this, VC), (0, ID.m)(this, zC, fD.n.Zero())), this.allowUpsideDown = ((0, ID.m)(this, jC), (0, ID.m)(this, lC, !0)), this.useInputToRestoreState = ((0, ID.m)(this, LC), (0, ID.m)(this, TC, !0)), this.restoreStateInterpolationFactor = ((0, ID.m)(this, GC), (0, ID.m)(this, RC, 0)), this._currentInterpolationFactor = ((0, ID.m)(this, kC), 0), this._viewMatrix = new fD.d, this._useCtrlForPanningInternal = !0, this._panningMouseButtonInternal = 2, this.panningAxis = new fD.p(1, 1, 0), this._transformedDirection = new fD.p, this.mapPanning = !1, this._isInterpolating = !1, this.onMeshTargetChangedObservable = new iD.c, this.checkCollisions = !1, this.collisionRadius = new fD.p(.5, .5, .5), this._previousPosition = fD.p.Zero(), this._collisionVelocity = fD.p.Zero(), this._newPosition = fD.p.Zero(), this._computationVector = fD.p.Zero(), this._goalAlpha = NaN, this._goalBeta = NaN, this._goalRadius = NaN, this._goalTarget = new fD.p(NaN, NaN, NaN), this._goalTargetScreenOffset = new fD.n(NaN, NaN), this._onCollisionPositionChange = function(DD, CD) {
-              let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-              cD ? (wD.setPosition(CD), wD.xy && wD.xy(cD)) : wD._previousPosition.YCD(wD._position);
-              const ID = Math.cos(wD.alpha),
-                pD = Math.sin(wD.alpha),
-                iD = Math.cos(wD.beta);
-              let fD = Math.sin(wD.beta);
-              0 === fD && (fD = 1e-4);
-              const bD = wD._getTargetPosition();
-              wD._computationVector.K4(wD.radius * ID * fD, wD.radius * iD, wD.radius * pD * fD), bD.addToRef(wD._computationVector, wD._newPosition), wD._position.YCD(wD._newPosition);
-              let QD = wD.upVector;
-              wD.allowUpsideDown && wD.beta < 0 && (QD = QD.clone(), QD = QD.pp()), wD._computeViewMatrix(wD._position, bD, QD), wD._viewMatrix.addAtIndex(12, wD.targetScreenOffset.x), wD._viewMatrix.addAtIndex(13, wD.targetScreenOffset.y), wD._collisionTriggered = !1
-            }, this.DW = fD.p.Zero(), bD && this.setTarget(bD), this.alpha = CD, this.beta = cD, this.radius = pD, this.getViewMatrix(), this.inputs = new zD(this), this.inputs.addKeyboard().addMouseWheel().addPointers(), this.movement = new TD(this.hq(), this._position), this.movement.rotationInertia = this._inertia, this.movement.zoomInertia = this._inertia, this.movement.panInertia = this._panningInertia
+          constructor(UU, RU, gU, pU, TU, qU) {
+            var KU;
+            let cU = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
+            super(UU, PU.n.Zero(), qU, cU), KU = this, this.alpha = ((0, tU.j)(this, MU), (0, tU.j)(this, DU, void 0)), this.beta = ((0, tU.j)(this, LU), (0, tU.j)(this, NU, void 0)), this.radius = ((0, tU.j)(this, lU), (0, tU.j)(this, OU, void 0)), this.overrideCloneAlphaBetaRadius = ((0, tU.j)(this, UR), (0, tU.j)(this, RR, void 0)), this.nD = ((0, tU.j)(this, gR), (0, tU.j)(this, tR, void 0)), this._targetHost = ((0, tU.j)(this, pR), (0, tU.j)(this, ER, void 0)), this._upToYMatrix = (0, tU.j)(this, PR), this._inertialAlphaOffset = 0, this._inertialBetaOffset = 0, this._inertialRadiusOffset = 0, this.lowerAlphaLimit = (0, tU.j)(this, TR, null), this.upperAlphaLimit = ((0, tU.j)(this, qR), (0, tU.j)(this, KR, null)), this.lowerBetaLimit = ((0, tU.j)(this, cR), (0, tU.j)(this, GR, .01)), this.upperBetaLimit = ((0, tU.j)(this, jR), (0, tU.j)(this, uR, Math.PI - .01)), this.lowerRadiusLimit = ((0, tU.j)(this, CR), (0, tU.j)(this, hR, null)), this.upperRadiusLimit = ((0, tU.j)(this, QR), (0, tU.j)(this, eR, null)), this.lowerTargetYLimit = ((0, tU.j)(this, WR), (0, tU.j)(this, fR, -1 / 0)), this.inertialPanningX = ((0, tU.j)(this, xR), (0, tU.j)(this, mR, 0)), this.inertialPanningY = ((0, tU.j)(this, IR), (0, tU.j)(this, JR, 0)), this.pinchToPanMaxDistance = ((0, tU.j)(this, wR), (0, tU.j)(this, nR, 20)), this.panningDistanceLimit = ((0, tU.j)(this, bR), (0, tU.j)(this, oR, null)), this.panningOriginTarget = ((0, tU.j)(this, ZR), (0, tU.j)(this, aR, PU.n.Zero())), this._panningInertia = ((0, tU.j)(this, YR), .9), this._inertia = .9, this.zoomOnFactor = (0, tU.j)(this, BR, 1), this.targetScreenOffset = ((0, tU.j)(this, VR), (0, tU.j)(this, rR, PU.l.Zero())), this.allowUpsideDown = ((0, tU.j)(this, XR), (0, tU.j)(this, vR, !0)), this.useInputToRestoreState = ((0, tU.j)(this, dR), (0, tU.j)(this, HR, !0)), this.restoreStateInterpolationFactor = ((0, tU.j)(this, SR), (0, tU.j)(this, sR, 0)), this._currentInterpolationFactor = ((0, tU.j)(this, yR), 0), this._viewMatrix = new PU.c, this._useCtrlForPanningInternal = !0, this._panningMouseButtonInternal = 2, this.panningAxis = new PU.n(1, 1, 0), this._transformedDirection = new PU.n, this.mapPanning = !1, this._isInterpolating = !1, this.onMeshTargetChangedObservable = new EU.b, this.checkCollisions = !1, this.collisionRadius = new PU.n(.5, .5, .5), this._previousPosition = PU.n.Zero(), this._collisionVelocity = PU.n.Zero(), this._newPosition = PU.n.Zero(), this._computationVector = PU.n.Zero(), this._goalAlpha = NaN, this._goalBeta = NaN, this._goalRadius = NaN, this._goalTarget = new PU.n(NaN, NaN, NaN), this._goalTargetScreenOffset = new PU.l(NaN, NaN), this._onCollisionPositionChange = function(UU, RU) {
+              let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+              gU ? (KU.setPosition(RU), KU.Rj && KU.Rj(gU)) : KU._previousPosition.PgU(KU._position);
+              const tU = Math.cos(KU.alpha),
+                pU = Math.sin(KU.alpha),
+                EU = Math.cos(KU.beta);
+              let PU = Math.sin(KU.beta);
+              0 === PU && (PU = 1e-4);
+              const TU = KU._getTargetPosition();
+              KU._computationVector.b_(KU.radius * tU * PU, KU.radius * EU, KU.radius * pU * PU), TU.addToRef(KU._computationVector, KU._newPosition), KU._position.PgU(KU._newPosition);
+              let qU = KU.upVector;
+              KU.allowUpsideDown && KU.beta < 0 && (qU = qU.clone(), qU = qU.nt()), KU._computeViewMatrix(KU._position, TU, qU), KU._viewMatrix.addAtIndex(12, KU.targetScreenOffset.x), KU._viewMatrix.addAtIndex(13, KU.targetScreenOffset.y), KU._collisionTriggered = !1
+            }, this.nD = PU.n.Zero(), TU && this.setTarget(TU), this.alpha = RU, this.beta = gU, this.radius = pU, this.getViewMatrix(), this.inputs = new rU(this), this.inputs.addKeyboard().addMouseWheel().addPointers(), this.movement = new HU(this.aZ(), this._position), this.movement.rotationInertia = this._inertia, this.movement.zoomInertia = this._inertia, this.movement.panInertia = this._panningInertia
           }
           _initCache() {
-            super._initCache(), this._cache.DW = new fD.p(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.alpha = void 0, this._cache.beta = void 0, this._cache.radius = void 0, this._cache.targetScreenOffset = fD.n.Zero()
+            super._initCache(), this._cache.nD = new PU.n(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.alpha = void 0, this._cache.beta = void 0, this._cache.radius = void 0, this._cache.targetScreenOffset = PU.l.Zero()
           }
-          _updateCache(DD) {
-            DD || super._updateCache(), this._cache.DW.YCD(this._getTargetPosition()), this._cache.alpha = this.alpha, this._cache.beta = this.beta, this._cache.radius = this.radius, this._cache.targetScreenOffset.YCD(this.targetScreenOffset)
+          _updateCache(UU) {
+            UU || super._updateCache(), this._cache.nD.PgU(this._getTargetPosition()), this._cache.alpha = this.alpha, this._cache.beta = this.beta, this._cache.radius = this.radius, this._cache.targetScreenOffset.PgU(this.targetScreenOffset)
           }
           _getTargetPosition() {
             if (this._targetHost && this._targetHost.getAbsolutePosition) {
-              const DD = this._targetHost.getAbsolutePosition();
-              this._targetBoundingCenter ? DD.addToRef(this._targetBoundingCenter, this.DW) : this.DW.YCD(DD)
+              const UU = this._targetHost.getAbsolutePosition();
+              this._targetBoundingCenter ? UU.addToRef(this._targetBoundingCenter, this.nD) : this.nD.PgU(UU)
             }
-            const DD = this._getLockedTargetPosition();
-            return DD || this.DW
+            const UU = this._getLockedTargetPosition();
+            return UU || this.nD
           }
           storeState() {
             return this._storedAlpha = this.alpha, this._storedBeta = this.beta, this._storedRadius = this.radius, this._storedTarget = this._getTargetPosition().clone(), this._storedTargetScreenOffset = this.targetScreenOffset.clone(), super.storeState()
           }
           _restoreStateValues() {
-            return this.hasStateStored() && this.restoreStateInterpolationFactor > yD.c && this.restoreStateInterpolationFactor < 1 ? (this.interpolateTo(this._storedAlpha, this._storedBeta, this._storedRadius, this._storedTarget, this._storedTargetScreenOffset, this.restoreStateInterpolationFactor), !0) : !!super._restoreStateValues() && (this.setTarget(this._storedTarget.clone()), this.alpha = this._storedAlpha, this.beta = this._storedBeta, this.radius = this._storedRadius, this.targetScreenOffset = this._storedTargetScreenOffset.clone(), this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0, !0)
+            return this.hasStateStored() && this.restoreStateInterpolationFactor > jU.e && this.restoreStateInterpolationFactor < 1 ? (this.interpolateTo(this._storedAlpha, this._storedBeta, this._storedRadius, this._storedTarget, this._storedTargetScreenOffset, this.restoreStateInterpolationFactor), !0) : !!super._restoreStateValues() && (this.setTarget(this._storedTarget.clone()), this.alpha = this._storedAlpha, this.beta = this._storedBeta, this.radius = this._storedRadius, this.targetScreenOffset = this._storedTargetScreenOffset.clone(), this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0, !0)
           }
           stopInterpolation() {
             this._goalAlpha = NaN, this._goalBeta = NaN, this._goalRadius = NaN, this._goalTarget.set(NaN, NaN, NaN), this._goalTargetScreenOffset.set(NaN, NaN)
           }
           interpolateTo() {
-            let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.alpha,
-              CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.beta,
-              cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.radius,
-              ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.target,
-              pD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : this.targetScreenOffset,
-              iD = arguments.length > 5 ? arguments[5] : void 0;
-            this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0, null != iD ? this._currentInterpolationFactor = iD : 0 !== this.restoreStateInterpolationFactor ? this._currentInterpolationFactor = this.restoreStateInterpolationFactor : this._currentInterpolationFactor = .1, this._goalAlpha = GD(DD, this._goalAlpha), this._goalBeta = GD(CD, this._goalBeta), this._goalRadius = GD(cD, this._goalRadius), this._goalTarget.set(GD(ID.x, this._goalTarget.x), GD(ID.y, this._goalTarget.y), GD(ID.z, this._goalTarget.z)), this._goalTargetScreenOffset.set(GD(pD.x, this._goalTargetScreenOffset.x), GD(pD.y, this._goalTargetScreenOffset.y)), this._goalAlpha = (0, bD.Clamp)(this._goalAlpha, this.lowerAlphaLimit ?? -1 / 0, this.upperAlphaLimit ?? 1 / 0), this._goalBeta = (0, bD.Clamp)(this._goalBeta, this.lowerBetaLimit ?? -1 / 0, this.upperBetaLimit ?? 1 / 0), this._goalRadius = (0, bD.Clamp)(this._goalRadius, this.lowerRadiusLimit ?? -1 / 0, this.upperRadiusLimit ?? 1 / 0), this._goalTarget.y = (0, bD.Clamp)(this._goalTarget.y, this.lowerTargetYLimit ?? -1 / 0, 1 / 0), this._isInterpolating = !0
+            let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.alpha,
+              RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.beta,
+              gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.radius,
+              tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.target,
+              pU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : this.targetScreenOffset,
+              EU = arguments.length > 5 ? arguments[5] : void 0;
+            this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0, null != EU ? this._currentInterpolationFactor = EU : 0 !== this.restoreStateInterpolationFactor ? this._currentInterpolationFactor = this.restoreStateInterpolationFactor : this._currentInterpolationFactor = .1, this._goalAlpha = SU(UU, this._goalAlpha), this._goalBeta = SU(RU, this._goalBeta), this._goalRadius = SU(gU, this._goalRadius), this._goalTarget.set(SU(tU.x, this._goalTarget.x), SU(tU.y, this._goalTarget.y), SU(tU.z, this._goalTarget.z)), this._goalTargetScreenOffset.set(SU(pU.x, this._goalTargetScreenOffset.x), SU(pU.y, this._goalTargetScreenOffset.y)), this._goalAlpha = (0, TU.Clamp)(this._goalAlpha, this.lowerAlphaLimit ?? -1 / 0, this.upperAlphaLimit ?? 1 / 0), this._goalBeta = (0, TU.Clamp)(this._goalBeta, this.lowerBetaLimit ?? -1 / 0, this.upperBetaLimit ?? 1 / 0), this._goalRadius = (0, TU.Clamp)(this._goalRadius, this.lowerRadiusLimit ?? -1 / 0, this.upperRadiusLimit ?? 1 / 0), this._goalTarget.y = (0, TU.Clamp)(this._goalTarget.y, this.lowerTargetYLimit ?? -1 / 0, 1 / 0), this._isInterpolating = !0
           }
           _isSynchronizedViewMatrix() {
-            return !!super._isSynchronizedViewMatrix() && (this._cache.DW.equals(this._getTargetPosition()) && this._cache.alpha === this.alpha && this._cache.beta === this.beta && this._cache.radius === this.radius && this._cache.targetScreenOffset.equals(this.targetScreenOffset))
+            return !!super._isSynchronizedViewMatrix() && (this._cache.nD.equals(this._getTargetPosition()) && this._cache.alpha === this.alpha && this._cache.beta === this.beta && this._cache.radius === this.radius && this._cache.targetScreenOffset.equals(this.targetScreenOffset))
           }
-          attachControl(DD, CD) {
-            let cD = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
-              ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2;
-            const pD = arguments;
-            CD = mD.g.BackCompatCameraNoPreventDefault(pD), this._useCtrlForPanning = cD, this._panningMouseButton = ID, "boolean" === typeof pD[0] && (pD.length > 1 && (this._useCtrlForPanning = pD[1]), pD.length > 2 && (this._panningMouseButton = pD[2])), this.inputs.attachElement(CD), this._reset = () => {
+          attachControl(UU, RU) {
+            let gU = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
+              tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2;
+            const pU = arguments;
+            RU = mU.g.BackCompatCameraNoPreventDefault(pU), this._useCtrlForPanning = gU, this._panningMouseButton = tU, "boolean" === typeof pU[0] && (pU.length > 1 && (this._useCtrlForPanning = pU[1]), pU.length > 2 && (this._panningMouseButton = pU[2])), this.inputs.attachElement(RU), this._reset = () => {
               this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0
             }
           }
           detachControl() {
             this.inputs.detachElement(), this._reset && this._reset()
           }
-          _applyRotationAndZoomDelta(DD, CD, cD) {
-            const ID = this.invertRotation ? -1 : 1;
-            let pD = DD * this._calculateHandednessMultiplier();
-            this.beta < 0 && (pD *= -1), this.alpha += pD * ID, this.beta += CD * ID, this.radius -= cD
+          _applyRotationAndZoomDelta(UU, RU, gU) {
+            const tU = this.invertRotation ? -1 : 1;
+            let pU = UU * this._calculateHandednessMultiplier();
+            this.beta < 0 && (pU *= -1), this.alpha += pU * tU, this.beta += RU * tU, this.radius -= gU
           }
-          _applyPanDelta(DD, CD) {
-            const cD = fD.l.cZ[0].K4(DD, CD, CD);
-            if (this._viewMatrix.invertToRef(this._cameraTransformMatrix), cD.multiplyInPlace(this.panningAxis), fD.p.TransformNormalToRef(cD, this._cameraTransformMatrix, this._transformedDirection), this.mapPanning) {
-              const DD = this.upVector,
-                CD = fD.p.CrossToRef(this._transformedDirection, DD, this._transformedDirection);
-              fD.p.CrossToRef(DD, CD, this._transformedDirection)
+          _applyPanDelta(UU, RU) {
+            const gU = PU.h.xC[0].b_(UU, RU, RU);
+            if (this._viewMatrix.invertToRef(this._cameraTransformMatrix), gU.multiplyInPlace(this.panningAxis), PU.n.TransformNormalToRef(gU, this._cameraTransformMatrix, this._transformedDirection), this.mapPanning) {
+              const UU = this.upVector,
+                RU = PU.n.CrossToRef(this._transformedDirection, UU, this._transformedDirection);
+              PU.n.CrossToRef(UU, RU, this._transformedDirection)
             } else this.panningAxis.y || (this._transformedDirection.y = 0);
             if (!this._targetHost)
               if (null !== this.panningDistanceLimit) {
-                this._transformedDirection.addInPlace(this.DW);
-                fD.p.DistanceSquared(this._transformedDirection, this.panningOriginTarget) <= this.panningDistanceLimit * this.panningDistanceLimit && this.DW.YCD(this._transformedDirection)
+                this._transformedDirection.addInPlace(this.nD);
+                PU.n.DistanceSquared(this._transformedDirection, this.panningOriginTarget) <= this.panningDistanceLimit * this.panningDistanceLimit && this.nD.PgU(this._transformedDirection)
               } else {
                 if (this.parent) {
-                  const DD = fD.l.Matrix[0];
-                  this.parent.getWorldMatrix().getRotationMatrixToRef(DD), DD.transposeToRef(DD), fD.p.TransformCoordinatesToRef(this._transformedDirection, DD, this._transformedDirection)
+                  const UU = PU.h.Matrix[0];
+                  this.parent.getWorldMatrix().getRotationMatrixToRef(UU), UU.transposeToRef(UU), PU.n.TransformCoordinatesToRef(this._transformedDirection, UU, this._transformedDirection)
                 }
-                this.DW.addInPlace(this._transformedDirection)
+                this.nD.addInPlace(this._transformedDirection)
               }
           }
           _checkInputs() {
             if (this._collisionTriggered) return;
             this.inputs.checkInputs();
-            let DD = !1;
+            let UU = !1;
             this.movement.computeCurrentFrameDeltas();
-            const CD = this.movement.rotationDeltaCurrentFrame,
-              cD = this.movement.zoomDeltaCurrentFrame,
-              ID = this.movement.panDeltaCurrentFrame;
-            if (0 === CD.x && 0 === CD.y && 0 === cD && 0 === ID.x && 0 === ID.y || (DD = !0, 0 === CD.x && 0 === CD.y && 0 === cD || this._applyRotationAndZoomDelta(CD.x, CD.y, cD), 0 === ID.x && 0 === ID.y || this._applyPanDelta(ID.x, ID.y)), 0 === this._inertialAlphaOffset && 0 === this._inertialBetaOffset && 0 === this._inertialRadiusOffset || (this._applyRotationAndZoomDelta(this._inertialAlphaOffset, this._inertialBetaOffset, this._inertialRadiusOffset), this._inertialAlphaOffset *= this.inertia, this._inertialBetaOffset *= this.inertia, this._inertialRadiusOffset *= this.inertia, Math.abs(this._inertialAlphaOffset) < this._rotationEpsilon && (this._inertialAlphaOffset = 0), Math.abs(this._inertialBetaOffset) < this._rotationEpsilon && (this._inertialBetaOffset = 0), Math.abs(this._inertialRadiusOffset) < this._rotationEpsilon && (this._inertialRadiusOffset = 0), DD = !0), 0 !== this.inertialPanningX || 0 !== this.inertialPanningY) {
+            const RU = this.movement.rotationDeltaCurrentFrame,
+              gU = this.movement.zoomDeltaCurrentFrame,
+              tU = this.movement.panDeltaCurrentFrame;
+            if (0 === RU.x && 0 === RU.y && 0 === gU && 0 === tU.x && 0 === tU.y || (UU = !0, 0 === RU.x && 0 === RU.y && 0 === gU || this._applyRotationAndZoomDelta(RU.x, RU.y, gU), 0 === tU.x && 0 === tU.y || this._applyPanDelta(tU.x, tU.y)), 0 === this._inertialAlphaOffset && 0 === this._inertialBetaOffset && 0 === this._inertialRadiusOffset || (this._applyRotationAndZoomDelta(this._inertialAlphaOffset, this._inertialBetaOffset, this._inertialRadiusOffset), this._inertialAlphaOffset *= this.inertia, this._inertialBetaOffset *= this.inertia, this._inertialRadiusOffset *= this.inertia, Math.abs(this._inertialAlphaOffset) < this._rotationEpsilon && (this._inertialAlphaOffset = 0), Math.abs(this._inertialBetaOffset) < this._rotationEpsilon && (this._inertialBetaOffset = 0), Math.abs(this._inertialRadiusOffset) < this._rotationEpsilon && (this._inertialRadiusOffset = 0), UU = !0), 0 !== this.inertialPanningX || 0 !== this.inertialPanningY) {
               this._applyPanDelta(this.inertialPanningX, this.inertialPanningY), this.inertialPanningX *= this.panningInertia, this.inertialPanningY *= this.panningInertia;
-              const CD = this._panningEpsilon;
-              Math.abs(this.inertialPanningX) < CD && (this.inertialPanningX = 0), Math.abs(this.inertialPanningY) < CD && (this.inertialPanningY = 0), DD = !0
+              const RU = this._panningEpsilon;
+              Math.abs(this.inertialPanningX) < RU && (this.inertialPanningX = 0), Math.abs(this.inertialPanningY) < RU && (this.inertialPanningY = 0), UU = !0
             }
-            if (DD) this.stopInterpolation();
+            if (UU) this.stopInterpolation();
             else if (this._isInterpolating) {
-              let DD = !1;
-              const CD = this._scene.DZ().getDeltaTime() / 1e3,
-                cD = 1 - Math.pow(2, -CD / this._currentInterpolationFactor),
-                ID = GD(this._goalRadius, this.radius);
+              let UU = !1;
+              const RU = this._scene.WC().getDeltaTime() / 1e3,
+                gU = 1 - Math.pow(2, -RU / this._currentInterpolationFactor),
+                tU = SU(this._goalRadius, this.radius);
               if (!isNaN(this._goalTarget.x) || !isNaN(this._goalTarget.y) || !isNaN(this._goalTarget.z)) {
-                const CD = fD.l.cZ[0].set(GD(this._goalTarget.x, this.DW.x), GD(this._goalTarget.y, this.DW.y), GD(this._goalTarget.z, this.DW.z));
-                fD.p.LerpToRef(this.target, CD, cD, this.DW), 10 * fD.p.Distance(this.target, CD) / ID < yD.c ? (this._goalTarget.set(NaN, NaN, NaN), this.target.YCD(CD), this.setTarget(this.target, !1, !0, !0)) : DD = !0
+                const RU = PU.h.xC[0].set(SU(this._goalTarget.x, this.nD.x), SU(this._goalTarget.y, this.nD.y), SU(this._goalTarget.z, this.nD.z));
+                PU.n.LerpToRef(this.target, RU, gU, this.nD), 10 * PU.n.Distance(this.target, RU) / tU < jU.e ? (this._goalTarget.set(NaN, NaN, NaN), this.target.PgU(RU), this.setTarget(this.target, !1, !0, !0)) : UU = !0
               }
               if (!isNaN(this._goalAlpha) || !isNaN(this._goalBeta)) {
-                const CD = fD.h.RotationAlphaBetaGammaToRef(GD(this._goalAlpha, this.alpha), GD(this._goalBeta, this.beta), 0, fD.l.Quaternion[0]),
-                  ID = fD.h.RotationAlphaBetaGammaToRef(this.alpha, this.beta, 0, fD.l.Quaternion[1]),
-                  pD = fD.h.SlerpToRef(ID, CD, cD, fD.l.Quaternion[2]);
-                pD.normalize();
-                const iD = pD.toAlphaBetaGammaToRef(fD.l.cZ[0]);
-                if (this.alpha = iD.x, this.beta = iD.y, pD.isApprox(CD, yD.c / 5)) {
+                const RU = PU.d.RotationAlphaBetaGammaToRef(SU(this._goalAlpha, this.alpha), SU(this._goalBeta, this.beta), 0, PU.h.Quaternion[0]),
+                  tU = PU.d.RotationAlphaBetaGammaToRef(this.alpha, this.beta, 0, PU.h.Quaternion[1]),
+                  pU = PU.d.SlerpToRef(tU, RU, gU, PU.h.Quaternion[2]);
+                pU.normalize();
+                const EU = pU.toAlphaBetaGammaToRef(PU.h.xC[0]);
+                if (this.alpha = EU.x, this.beta = EU.y, pU.isApprox(RU, jU.e / 5)) {
                   this._goalAlpha = NaN, this._goalBeta = NaN;
-                  const DD = CD.toAlphaBetaGammaToRef(fD.l.cZ[0]);
-                  this.alpha = DD.x, this.beta = DD.y
-                } else DD = !0
+                  const UU = RU.toAlphaBetaGammaToRef(PU.h.xC[0]);
+                  this.alpha = UU.x, this.beta = UU.y
+                } else UU = !0
               }
-              if (isNaN(this._goalRadius) || (this.radius += (ID - this.radius) * cD, Math.abs(ID / this.radius - 1) < yD.c ? (this._goalRadius = NaN, this.radius = ID) : DD = !0), !isNaN(this._goalTargetScreenOffset.x) || !isNaN(this._goalTargetScreenOffset.y)) {
-                const CD = fD.l.Vector2[0].set(GD(this._goalTargetScreenOffset.x, this.targetScreenOffset.x), GD(this._goalTargetScreenOffset.y, this.targetScreenOffset.y));
-                fD.n.LerpToRef(this.targetScreenOffset, CD, cD, this.targetScreenOffset), fD.n.Distance(this.targetScreenOffset, CD) < yD.c ? (this._goalTargetScreenOffset.set(NaN, NaN), this.targetScreenOffset.YCD(CD)) : DD = !0
+              if (isNaN(this._goalRadius) || (this.radius += (tU - this.radius) * gU, Math.abs(tU / this.radius - 1) < jU.e ? (this._goalRadius = NaN, this.radius = tU) : UU = !0), !isNaN(this._goalTargetScreenOffset.x) || !isNaN(this._goalTargetScreenOffset.y)) {
+                const RU = PU.h.Vector2[0].set(SU(this._goalTargetScreenOffset.x, this.targetScreenOffset.x), SU(this._goalTargetScreenOffset.y, this.targetScreenOffset.y));
+                PU.l.LerpToRef(this.targetScreenOffset, RU, gU, this.targetScreenOffset), PU.l.Distance(this.targetScreenOffset, RU) < jU.e ? (this._goalTargetScreenOffset.set(NaN, NaN), this.targetScreenOffset.PgU(RU)) : UU = !0
               }
-              this._isInterpolating = DD
+              this._isInterpolating = UU
             }
             this._checkLimits(), super._checkInputs()
           }
@@ -1654,117 +1654,117 @@ export const modules = {
             null === this.lowerBetaLimit || void 0 === this.lowerBetaLimit ? this.allowUpsideDown && this.beta > Math.PI && (this.beta = this.beta - 2 * Math.PI) : this.beta < this.lowerBetaLimit && (this.beta = this.lowerBetaLimit), null === this.upperBetaLimit || void 0 === this.upperBetaLimit ? this.allowUpsideDown && this.beta < -Math.PI && (this.beta = this.beta + 2 * Math.PI) : this.beta > this.upperBetaLimit && (this.beta = this.upperBetaLimit), null !== this.lowerAlphaLimit && this.alpha < this.lowerAlphaLimit && (this.alpha = this.lowerAlphaLimit), null !== this.upperAlphaLimit && this.alpha > this.upperAlphaLimit && (this.alpha = this.upperAlphaLimit), null !== this.lowerRadiusLimit && this.radius < this.lowerRadiusLimit && (this.radius = this.lowerRadiusLimit, this.inertialRadiusOffset = 0), null !== this.upperRadiusLimit && this.radius > this.upperRadiusLimit && (this.radius = this.upperRadiusLimit, this.inertialRadiusOffset = 0), this.target.y = Math.max(this.target.y, this.lowerTargetYLimit)
           }
           rebuildAnglesAndRadius() {
-            this._position.subtractToRef(this._getTargetPosition(), this._computationVector), 0 === this._upVector.x && 1 === this._upVector.y && 0 === this._upVector.z || fD.p.TransformCoordinatesToRef(this._computationVector, this._upToYMatrix, this._computationVector), this.radius = this._computationVector.length(), 0 === this.radius && (this.radius = 1e-4);
-            const DD = this.alpha;
-            var CD, cD;
-            this.alpha = function(DD) {
-              let CD = Math.PI / 2;
-              return 0 === DD.x && 0 === DD.z || (CD = Math.acos(DD.x / Math.sqrt(Math.pow(DD.x, 2) + Math.pow(DD.z, 2)))), DD.z < 0 && (CD = 2 * Math.PI - CD), CD
-            }(this._computationVector), this.beta = (CD = this._computationVector.y, cD = this.radius, Math.acos(CD / cD));
-            const ID = Math.round((DD - this.alpha) / (2 * Math.PI));
-            this.alpha += 2 * ID * Math.PI, this._checkLimits()
+            this._position.subtractToRef(this._getTargetPosition(), this._computationVector), 0 === this._upVector.x && 1 === this._upVector.y && 0 === this._upVector.z || PU.n.TransformCoordinatesToRef(this._computationVector, this._upToYMatrix, this._computationVector), this.radius = this._computationVector.length(), 0 === this.radius && (this.radius = 1e-4);
+            const UU = this.alpha;
+            var RU, gU;
+            this.alpha = function(UU) {
+              let RU = Math.PI / 2;
+              return 0 === UU.x && 0 === UU.z || (RU = Math.acos(UU.x / Math.sqrt(Math.pow(UU.x, 2) + Math.pow(UU.z, 2)))), UU.z < 0 && (RU = 2 * Math.PI - RU), RU
+            }(this._computationVector), this.beta = (RU = this._computationVector.y, gU = this.radius, Math.acos(RU / gU));
+            const tU = Math.round((UU - this.alpha) / (2 * Math.PI));
+            this.alpha += 2 * tU * Math.PI, this._checkLimits()
           }
-          setPosition(DD) {
-            this._position.equals(DD) || (this._position.YCD(DD), this.rebuildAnglesAndRadius())
+          setPosition(UU) {
+            this._position.equals(UU) || (this._position.PgU(UU), this.rebuildAnglesAndRadius())
           }
-          setTarget(DD) {
-            let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-              cD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-              ID = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-            if (ID = this.overrideCloneAlphaBetaRadius ?? ID, DD.computeWorldMatrix) CD && DD.VJ ? this._targetBoundingCenter = DD.VJ().boundingBox.centerWorld.clone() : this._targetBoundingCenter = null, DD.computeWorldMatrix(), this._targetHost = DD, this.DW = this._getTargetPosition(), this.onMeshTargetChangedObservable.notifyObservers(this._targetHost);
+          setTarget(UU) {
+            let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+              gU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+              tU = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+            if (tU = this.overrideCloneAlphaBetaRadius ?? tU, UU.computeWorldMatrix) RU && UU.lY ? this._targetBoundingCenter = UU.lY().boundingBox.centerWorld.clone() : this._targetBoundingCenter = null, UU.computeWorldMatrix(), this._targetHost = UU, this.nD = this._getTargetPosition(), this.onMeshTargetChangedObservable.notifyObservers(this._targetHost);
             else {
-              const CD = DD,
-                ID = this._getTargetPosition();
-              if (ID && !cD && ID.equals(CD)) return;
-              this._targetHost = null, this.DW = CD, this._targetBoundingCenter = null, this.onMeshTargetChangedObservable.notifyObservers(null)
+              const RU = UU,
+                tU = this._getTargetPosition();
+              if (tU && !gU && tU.equals(RU)) return;
+              this._targetHost = null, this.nD = RU, this._targetBoundingCenter = null, this.onMeshTargetChangedObservable.notifyObservers(null)
             }
-            ID || this.rebuildAnglesAndRadius()
+            tU || this.rebuildAnglesAndRadius()
           }
           _getViewMatrix() {
-            const DD = Math.cos(this.alpha),
-              CD = Math.sin(this.alpha),
-              cD = Math.cos(this.beta);
-            let ID = Math.sin(this.beta);
-            0 === ID && (ID = 1e-4), 0 === this.radius && (this.radius = 1e-4);
-            const pD = this._getTargetPosition();
-            if (this._computationVector.K4(this.radius * DD * ID, this.radius * cD, this.radius * CD * ID), 0 === this._upVector.x && 1 === this._upVector.y && 0 === this._upVector.z || fD.p.TransformCoordinatesToRef(this._computationVector, this._yToUpMatrix, this._computationVector), pD.addToRef(this._computationVector, this._newPosition), this.hq().collisionsEnabled && this.checkCollisions) {
-              const DD = this.hq().collisionCoordinator;
-              this._collider || (this._collider = DD.createCollider()), this._collider._radius = this.collisionRadius, this._newPosition.subtractToRef(this._position, this._collisionVelocity), this._collisionTriggered = !0, DD.getNewPosition(this._position, this._collisionVelocity, this._collider, 3, null, this._onCollisionPositionChange, this.uniqueId)
+            const UU = Math.cos(this.alpha),
+              RU = Math.sin(this.alpha),
+              gU = Math.cos(this.beta);
+            let tU = Math.sin(this.beta);
+            0 === tU && (tU = 1e-4), 0 === this.radius && (this.radius = 1e-4);
+            const pU = this._getTargetPosition();
+            if (this._computationVector.b_(this.radius * UU * tU, this.radius * gU, this.radius * RU * tU), 0 === this._upVector.x && 1 === this._upVector.y && 0 === this._upVector.z || PU.n.TransformCoordinatesToRef(this._computationVector, this._yToUpMatrix, this._computationVector), pU.addToRef(this._computationVector, this._newPosition), this.aZ().collisionsEnabled && this.checkCollisions) {
+              const UU = this.aZ().collisionCoordinator;
+              this._collider || (this._collider = UU.createCollider()), this._collider._radius = this.collisionRadius, this._newPosition.subtractToRef(this._position, this._collisionVelocity), this._collisionTriggered = !0, UU.getNewPosition(this._position, this._collisionVelocity, this._collider, 3, null, this._onCollisionPositionChange, this.uniqueId)
             } else {
-              this._position.YCD(this._newPosition);
-              let DD = this.upVector;
-              this.allowUpsideDown && ID < 0 && (DD = DD.pp()), this._computeViewMatrix(this._position, pD, DD), this._viewMatrix.addAtIndex(12, this.targetScreenOffset.x), this._viewMatrix.addAtIndex(13, this.targetScreenOffset.y)
+              this._position.PgU(this._newPosition);
+              let UU = this.upVector;
+              this.allowUpsideDown && tU < 0 && (UU = UU.nt()), this._computeViewMatrix(this._position, pU, UU), this._viewMatrix.addAtIndex(12, this.targetScreenOffset.x), this._viewMatrix.addAtIndex(13, this.targetScreenOffset.y)
             }
-            return this._currentTarget.YCD(pD), this._viewMatrix
+            return this._currentTarget.PgU(pU), this._viewMatrix
           }
-          zoomOn(DD) {
-            let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            DD = DD || this.hq().meshes;
-            const cD = wD.d.MinMax(DD);
-            let ID = this._calculateLowerRadiusFromModelBoundingSphere(cD.min, cD.max);
-            if (ID = Math.max(Math.min(ID, this.upperRadiusLimit || Number.MAX_VALUE), this.lowerRadiusLimit || 0), this.radius = ID * this.zoomOnFactor, this.mode === ND.c.ORTHOGRAPHIC_CAMERA) {
-              const DD = this.hq().DZ().getAspectRatio(this),
-                CD = ID * this.zoomOnFactor / 2;
-              this.orthoLeft = -CD * DD, this.orthoRight = CD * DD, this.orthoBottom = -CD, this.orthoTop = CD
+          zoomOn(UU) {
+            let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            UU = UU || this.aZ().meshes;
+            const gU = KU.c.MinMax(UU);
+            let tU = this._calculateLowerRadiusFromModelBoundingSphere(gU.min, gU.max);
+            if (tU = Math.max(Math.min(tU, this.upperRadiusLimit || Number.MAX_VALUE), this.lowerRadiusLimit || 0), this.radius = tU * this.zoomOnFactor, this.mode === WU.d.ORTHOGRAPHIC_CAMERA) {
+              const UU = this.aZ().WC().getAspectRatio(this),
+                RU = tU * this.zoomOnFactor / 2;
+              this.orthoLeft = -RU * UU, this.orthoRight = RU * UU, this.orthoBottom = -RU, this.orthoTop = RU
             }
             this.focusOn({
-              min: cD.min,
-              max: cD.max,
-              distance: ID
-            }, CD)
+              min: gU.min,
+              max: gU.max,
+              distance: tU
+            }, RU)
           }
-          focusOn(DD) {
-            let CD, cD, ID = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            if (void 0 === DD.min) {
-              const ID = DD || this.hq().meshes;
-              CD = wD.d.MinMax(ID), cD = fD.p.Distance(CD.min, CD.max)
+          focusOn(UU) {
+            let RU, gU, tU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            if (void 0 === UU.min) {
+              const tU = UU || this.aZ().meshes;
+              RU = KU.c.MinMax(tU), gU = PU.n.Distance(RU.min, RU.max)
             } else {
-              CD = DD, cD = DD.distance
+              RU = UU, gU = UU.distance
             }
-            this.DW = wD.d.Center(CD), ID || (this.maxZ = 2 * cD)
+            this.nD = KU.c.Center(RU), tU || (this.maxZ = 2 * gU)
           }
-          createRigCamera(CD, cD) {
-            let ID = 0;
+          createRigCamera(RU, gU) {
+            let tU = 0;
             switch (this.cameraRigMode) {
-              case ND.c.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
-              case ND.c.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
-              case ND.c.RIG_MODE_STEREOSCOPIC_OVERUNDER:
-              case ND.c.RIG_MODE_STEREOSCOPIC_INTERLACED:
-              case ND.c.RIG_MODE_VR:
-                ID = this._cameraRigParams.stereoHalfAngle * (0 === cD ? 1 : -1);
+              case WU.d.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
+              case WU.d.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
+              case WU.d.RIG_MODE_STEREOSCOPIC_OVERUNDER:
+              case WU.d.RIG_MODE_STEREOSCOPIC_INTERLACED:
+              case WU.d.RIG_MODE_VR:
+                tU = this._cameraRigParams.stereoHalfAngle * (0 === gU ? 1 : -1);
                 break;
-              case ND.c.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
-                ID = this._cameraRigParams.stereoHalfAngle * (0 === cD ? -1 : 1)
+              case WU.d.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
+                tU = this._cameraRigParams.stereoHalfAngle * (0 === gU ? -1 : 1)
             }
-            const pD = new DD(CD, this.alpha + ID, this.beta, this.radius, this.DW, this.hq());
-            return pD._cameraRigParams = {}, pD.isRigCamera = !0, pD.rigParent = this, pD.upVector = this.upVector, pD.mode = this.mode, pD.orthoLeft = this.orthoLeft, pD.orthoRight = this.orthoRight, pD.orthoBottom = this.orthoBottom, pD.orthoTop = this.orthoTop, pD
+            const pU = new UU(RU, this.alpha + tU, this.beta, this.radius, this.nD, this.aZ());
+            return pU._cameraRigParams = {}, pU.isRigCamera = !0, pU.rigParent = this, pU.upVector = this.upVector, pU.mode = this.mode, pU.orthoLeft = this.orthoLeft, pU.orthoRight = this.orthoRight, pU.orthoBottom = this.orthoBottom, pU.orthoTop = this.orthoTop, pU
           }
           _updateRigCameras() {
-            const DD = this._rigCameras[0],
-              CD = this._rigCameras[1];
-            switch (DD.beta = CD.beta = this.beta, this.cameraRigMode) {
-              case ND.c.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
-              case ND.c.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
-              case ND.c.RIG_MODE_STEREOSCOPIC_OVERUNDER:
-              case ND.c.RIG_MODE_STEREOSCOPIC_INTERLACED:
-              case ND.c.RIG_MODE_VR:
-                DD.alpha = this.alpha - this._cameraRigParams.stereoHalfAngle, CD.alpha = this.alpha + this._cameraRigParams.stereoHalfAngle;
+            const UU = this._rigCameras[0],
+              RU = this._rigCameras[1];
+            switch (UU.beta = RU.beta = this.beta, this.cameraRigMode) {
+              case WU.d.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
+              case WU.d.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
+              case WU.d.RIG_MODE_STEREOSCOPIC_OVERUNDER:
+              case WU.d.RIG_MODE_STEREOSCOPIC_INTERLACED:
+              case WU.d.RIG_MODE_VR:
+                UU.alpha = this.alpha - this._cameraRigParams.stereoHalfAngle, RU.alpha = this.alpha + this._cameraRigParams.stereoHalfAngle;
                 break;
-              case ND.c.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
-                DD.alpha = this.alpha + this._cameraRigParams.stereoHalfAngle, CD.alpha = this.alpha - this._cameraRigParams.stereoHalfAngle
+              case WU.d.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
+                UU.alpha = this.alpha + this._cameraRigParams.stereoHalfAngle, RU.alpha = this.alpha - this._cameraRigParams.stereoHalfAngle
             }
             super._updateRigCameras()
           }
-          _calculateLowerRadiusFromModelBoundingSphere(DD, CD) {
-            let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-            const ID = fD.p.Distance(DD, CD),
-              pD = this.hq().DZ().getAspectRatio(this),
-              iD = Math.tan(this.fov / 2),
-              bD = iD * pD,
-              QD = .5 * ID * cD,
-              wD = QD * Math.sqrt(1 + 1 / (bD * bD)),
-              SD = QD * Math.sqrt(1 + 1 / (iD * iD));
-            return Math.max(wD, SD)
+          _calculateLowerRadiusFromModelBoundingSphere(UU, RU) {
+            let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+            const tU = PU.n.Distance(UU, RU),
+              pU = this.aZ().WC().getAspectRatio(this),
+              EU = Math.tan(this.fov / 2),
+              TU = EU * pU,
+              qU = .5 * tU * gU,
+              KU = qU * Math.sqrt(1 + 1 / (TU * TU)),
+              cU = qU * Math.sqrt(1 + 1 / (EU * EU));
+            return Math.max(KU, cU)
           }
           dispose() {
             this.inputs.clear(), super.dispose()
@@ -1773,396 +1773,396 @@ export const modules = {
             return "ArcRotateCamera"
           }
         }, (() => {
-          const iD = "function" === typeof Symbol && Symbol.metadata ? Object.create(ED[Symbol.metadata] ?? null) : void 0;
-          CD = [(0, pD.G)()], cD = [(0, pD.G)()], QD = [(0, pD.G)()], SD = [(0, pD.G)()], BD = [(0, pD.C)("target")], tD = [(0, pD.s)("targetHost")], ZD = [(0, pD.G)()], XD = [(0, pD.G)()], nD = [(0, pD.G)()], OD = [(0, pD.G)()], PD = [(0, pD.G)()], HD = [(0, pD.G)()], UD = [(0, pD.G)()], xD = [(0, pD.G)()], qD = [(0, pD.G)()], JD = [(0, pD.G)()], KD = [(0, pD.G)()], aD = [(0, pD.G)()], VD = [(0, pD.G)()], jD = [(0, pD.G)()], lD = [(0, pD.C)()], LD = [(0, pD.G)()], RD = [(0, pD.G)()], kD = [(0, pD.G)()], dD = [(0, pD.y)()], YD = [(0, pD.G)()], WD = [(0, pD.G)()], sD = [(0, pD.G)()], (0, ID.k)(DD, null, ZD, {
+          const EU = "function" === typeof Symbol && Symbol.metadata ? Object.create(zU[Symbol.metadata] ?? null) : void 0;
+          RU = [(0, pU.K)()], gU = [(0, pU.K)()], qU = [(0, pU.K)()], cU = [(0, pU.K)()], GU = [(0, pU.I)("target")], CU = [(0, pU.w)("targetHost")], hU = [(0, pU.K)()], xU = [(0, pU.K)()], IU = [(0, pU.K)()], JU = [(0, pU.K)()], wU = [(0, pU.K)()], nU = [(0, pU.K)()], bU = [(0, pU.K)()], oU = [(0, pU.K)()], ZU = [(0, pU.K)()], aU = [(0, pU.K)()], YU = [(0, pU.K)()], BU = [(0, pU.K)()], VU = [(0, pU.K)()], XU = [(0, pU.K)()], vU = [(0, pU.I)()], dU = [(0, pU.K)()], sU = [(0, pU.K)()], yU = [(0, pU.K)()], kU = [(0, pU.E)()], FU = [(0, pU.K)()], iU = [(0, pU.K)()], AU = [(0, pU.K)()], (0, tU.i)(UU, null, hU, {
             kind: "getter",
             name: "inertialAlphaOffset",
             static: !1,
             private: !1,
             access: {
-              has: DD => "inertialAlphaOffset" in DD,
-              get: DD => DD.inertialAlphaOffset
+              has: UU => "inertialAlphaOffset" in UU,
+              get: UU => UU.inertialAlphaOffset
             },
-            metadata: iD
-          }, null, eD), (0, ID.k)(DD, null, XD, {
+            metadata: EU
+          }, null, MU), (0, tU.i)(UU, null, xU, {
             kind: "getter",
             name: "inertialBetaOffset",
             static: !1,
             private: !1,
             access: {
-              has: DD => "inertialBetaOffset" in DD,
-              get: DD => DD.inertialBetaOffset
+              has: UU => "inertialBetaOffset" in UU,
+              get: UU => UU.inertialBetaOffset
             },
-            metadata: iD
-          }, null, eD), (0, ID.k)(DD, null, nD, {
+            metadata: EU
+          }, null, MU), (0, tU.i)(UU, null, IU, {
             kind: "getter",
             name: "inertialRadiusOffset",
             static: !1,
             private: !1,
             access: {
-              has: DD => "inertialRadiusOffset" in DD,
-              get: DD => DD.inertialRadiusOffset
+              has: UU => "inertialRadiusOffset" in UU,
+              get: UU => UU.inertialRadiusOffset
             },
-            metadata: iD
-          }, null, eD), (0, ID.k)(DD, null, LD, {
+            metadata: EU
+          }, null, MU), (0, tU.i)(UU, null, dU, {
             kind: "getter",
             name: "panningInertia",
             static: !1,
             private: !1,
             access: {
-              has: DD => "panningInertia" in DD,
-              get: DD => DD.panningInertia
+              has: UU => "panningInertia" in UU,
+              get: UU => UU.panningInertia
             },
-            metadata: iD
-          }, null, eD), (0, ID.k)(DD, null, RD, {
+            metadata: EU
+          }, null, MU), (0, tU.i)(UU, null, sU, {
             kind: "getter",
             name: "zoomToMouseLocation",
             static: !1,
             private: !1,
             access: {
-              has: DD => "zoomToMouseLocation" in DD,
-              get: DD => DD.zoomToMouseLocation
+              has: UU => "zoomToMouseLocation" in UU,
+              get: UU => UU.zoomToMouseLocation
             },
-            metadata: iD
-          }, null, eD), (0, ID.k)(null, null, CD, {
+            metadata: EU
+          }, null, MU), (0, tU.i)(null, null, RU, {
             kind: "field",
             name: "alpha",
             static: !1,
             private: !1,
             access: {
-              has: DD => "alpha" in DD,
-              get: DD => DD.alpha,
-              set: (DD, CD) => {
-                DD.alpha = CD
+              has: UU => "alpha" in UU,
+              get: UU => UU.alpha,
+              set: (UU, RU) => {
+                UU.alpha = RU
               }
             },
-            metadata: iD
-          }, uD, hD), (0, ID.k)(null, null, cD, {
+            metadata: EU
+          }, DU, LU), (0, tU.i)(null, null, gU, {
             kind: "field",
             name: "beta",
             static: !1,
             private: !1,
             access: {
-              has: DD => "beta" in DD,
-              get: DD => DD.beta,
-              set: (DD, CD) => {
-                DD.beta = CD
+              has: UU => "beta" in UU,
+              get: UU => UU.beta,
+              set: (UU, RU) => {
+                UU.beta = RU
               }
             },
-            metadata: iD
-          }, rD, AD), (0, ID.k)(null, null, QD, {
+            metadata: EU
+          }, NU, lU), (0, tU.i)(null, null, qU, {
             kind: "field",
             name: "radius",
             static: !1,
             private: !1,
             access: {
-              has: DD => "radius" in DD,
-              get: DD => DD.radius,
-              set: (DD, CD) => {
-                DD.radius = CD
+              has: UU => "radius" in UU,
+              get: UU => UU.radius,
+              set: (UU, RU) => {
+                UU.radius = RU
               }
             },
-            metadata: iD
-          }, FD, DC), (0, ID.k)(null, null, SD, {
+            metadata: EU
+          }, OU, UR), (0, tU.i)(null, null, cU, {
             kind: "field",
             name: "overrideCloneAlphaBetaRadius",
             static: !1,
             private: !1,
             access: {
-              has: DD => "overrideCloneAlphaBetaRadius" in DD,
-              get: DD => DD.overrideCloneAlphaBetaRadius,
-              set: (DD, CD) => {
-                DD.overrideCloneAlphaBetaRadius = CD
+              has: UU => "overrideCloneAlphaBetaRadius" in UU,
+              get: UU => UU.overrideCloneAlphaBetaRadius,
+              set: (UU, RU) => {
+                UU.overrideCloneAlphaBetaRadius = RU
               }
             },
-            metadata: iD
-          }, CC, cC), (0, ID.k)(null, null, BD, {
+            metadata: EU
+          }, RR, gR), (0, tU.i)(null, null, GU, {
             kind: "field",
-            name: "DW",
+            name: "nD",
             static: !1,
             private: !1,
             access: {
-              has: DD => "DW" in DD,
-              get: DD => DD.DW,
-              set: (DD, CD) => {
-                DD.DW = CD
+              has: UU => "nD" in UU,
+              get: UU => UU.nD,
+              set: (UU, RU) => {
+                UU.nD = RU
               }
             },
-            metadata: iD
-          }, IC, pC), (0, ID.k)(null, null, tD, {
+            metadata: EU
+          }, tR, pR), (0, tU.i)(null, null, CU, {
             kind: "field",
             name: "_targetHost",
             static: !1,
             private: !1,
             access: {
-              has: DD => "_targetHost" in DD,
-              get: DD => DD._targetHost,
-              set: (DD, CD) => {
-                DD._targetHost = CD
+              has: UU => "_targetHost" in UU,
+              get: UU => UU._targetHost,
+              set: (UU, RU) => {
+                UU._targetHost = RU
               }
             },
-            metadata: iD
-          }, iC, fC), (0, ID.k)(null, null, OD, {
+            metadata: EU
+          }, ER, PR), (0, tU.i)(null, null, JU, {
             kind: "field",
             name: "lowerAlphaLimit",
             static: !1,
             private: !1,
             access: {
-              has: DD => "lowerAlphaLimit" in DD,
-              get: DD => DD.lowerAlphaLimit,
-              set: (DD, CD) => {
-                DD.lowerAlphaLimit = CD
+              has: UU => "lowerAlphaLimit" in UU,
+              get: UU => UU.lowerAlphaLimit,
+              set: (UU, RU) => {
+                UU.lowerAlphaLimit = RU
               }
             },
-            metadata: iD
-          }, bC, QC), (0, ID.k)(null, null, PD, {
+            metadata: EU
+          }, TR, qR), (0, tU.i)(null, null, wU, {
             kind: "field",
             name: "upperAlphaLimit",
             static: !1,
             private: !1,
             access: {
-              has: DD => "upperAlphaLimit" in DD,
-              get: DD => DD.upperAlphaLimit,
-              set: (DD, CD) => {
-                DD.upperAlphaLimit = CD
+              has: UU => "upperAlphaLimit" in UU,
+              get: UU => UU.upperAlphaLimit,
+              set: (UU, RU) => {
+                UU.upperAlphaLimit = RU
               }
             },
-            metadata: iD
-          }, wC, SC), (0, ID.k)(null, null, HD, {
+            metadata: EU
+          }, KR, cR), (0, tU.i)(null, null, nU, {
             kind: "field",
             name: "lowerBetaLimit",
             static: !1,
             private: !1,
             access: {
-              has: DD => "lowerBetaLimit" in DD,
-              get: DD => DD.lowerBetaLimit,
-              set: (DD, CD) => {
-                DD.lowerBetaLimit = CD
+              has: UU => "lowerBetaLimit" in UU,
+              get: UU => UU.lowerBetaLimit,
+              set: (UU, RU) => {
+                UU.lowerBetaLimit = RU
               }
             },
-            metadata: iD
-          }, BC, yC), (0, ID.k)(null, null, UD, {
+            metadata: EU
+          }, GR, jR), (0, tU.i)(null, null, bU, {
             kind: "field",
             name: "upperBetaLimit",
             static: !1,
             private: !1,
             access: {
-              has: DD => "upperBetaLimit" in DD,
-              get: DD => DD.upperBetaLimit,
-              set: (DD, CD) => {
-                DD.upperBetaLimit = CD
+              has: UU => "upperBetaLimit" in UU,
+              get: UU => UU.upperBetaLimit,
+              set: (UU, RU) => {
+                UU.upperBetaLimit = RU
               }
             },
-            metadata: iD
-          }, MC, tC), (0, ID.k)(null, null, xD, {
+            metadata: EU
+          }, uR, CR), (0, tU.i)(null, null, oU, {
             kind: "field",
             name: "lowerRadiusLimit",
             static: !1,
             private: !1,
             access: {
-              has: DD => "lowerRadiusLimit" in DD,
-              get: DD => DD.lowerRadiusLimit,
-              set: (DD, CD) => {
-                DD.lowerRadiusLimit = CD
+              has: UU => "lowerRadiusLimit" in UU,
+              get: UU => UU.lowerRadiusLimit,
+              set: (UU, RU) => {
+                UU.lowerRadiusLimit = RU
               }
             },
-            metadata: iD
-          }, ZC, oC), (0, ID.k)(null, null, qD, {
+            metadata: EU
+          }, hR, QR), (0, tU.i)(null, null, ZU, {
             kind: "field",
             name: "upperRadiusLimit",
             static: !1,
             private: !1,
             access: {
-              has: DD => "upperRadiusLimit" in DD,
-              get: DD => DD.upperRadiusLimit,
-              set: (DD, CD) => {
-                DD.upperRadiusLimit = CD
+              has: UU => "upperRadiusLimit" in UU,
+              get: UU => UU.upperRadiusLimit,
+              set: (UU, RU) => {
+                UU.upperRadiusLimit = RU
               }
             },
-            metadata: iD
-          }, vC, NC), (0, ID.k)(null, null, JD, {
+            metadata: EU
+          }, eR, WR), (0, tU.i)(null, null, aU, {
             kind: "field",
             name: "lowerTargetYLimit",
             static: !1,
             private: !1,
             access: {
-              has: DD => "lowerTargetYLimit" in DD,
-              get: DD => DD.lowerTargetYLimit,
-              set: (DD, CD) => {
-                DD.lowerTargetYLimit = CD
+              has: UU => "lowerTargetYLimit" in UU,
+              get: UU => UU.lowerTargetYLimit,
+              set: (UU, RU) => {
+                UU.lowerTargetYLimit = RU
               }
             },
-            metadata: iD
-          }, gC, XC), (0, ID.k)(null, null, KD, {
+            metadata: EU
+          }, fR, xR), (0, tU.i)(null, null, YU, {
             kind: "field",
             name: "inertialPanningX",
             static: !1,
             private: !1,
             access: {
-              has: DD => "inertialPanningX" in DD,
-              get: DD => DD.inertialPanningX,
-              set: (DD, CD) => {
-                DD.inertialPanningX = CD
+              has: UU => "inertialPanningX" in UU,
+              get: UU => UU.inertialPanningX,
+              set: (UU, RU) => {
+                UU.inertialPanningX = RU
               }
             },
-            metadata: iD
-          }, mC, nC), (0, ID.k)(null, null, aD, {
+            metadata: EU
+          }, mR, IR), (0, tU.i)(null, null, BU, {
             kind: "field",
             name: "inertialPanningY",
             static: !1,
             private: !1,
             access: {
-              has: DD => "inertialPanningY" in DD,
-              get: DD => DD.inertialPanningY,
-              set: (DD, CD) => {
-                DD.inertialPanningY = CD
+              has: UU => "inertialPanningY" in UU,
+              get: UU => UU.inertialPanningY,
+              set: (UU, RU) => {
+                UU.inertialPanningY = RU
               }
             },
-            metadata: iD
-          }, OC, PC), (0, ID.k)(null, null, VD, {
+            metadata: EU
+          }, JR, wR), (0, tU.i)(null, null, VU, {
             kind: "field",
             name: "pinchToPanMaxDistance",
             static: !1,
             private: !1,
             access: {
-              has: DD => "pinchToPanMaxDistance" in DD,
-              get: DD => DD.pinchToPanMaxDistance,
-              set: (DD, CD) => {
-                DD.pinchToPanMaxDistance = CD
+              has: UU => "pinchToPanMaxDistance" in UU,
+              get: UU => UU.pinchToPanMaxDistance,
+              set: (UU, RU) => {
+                UU.pinchToPanMaxDistance = RU
               }
             },
-            metadata: iD
-          }, HC, UC), (0, ID.k)(null, null, jD, {
+            metadata: EU
+          }, nR, bR), (0, tU.i)(null, null, XU, {
             kind: "field",
             name: "panningDistanceLimit",
             static: !1,
             private: !1,
             access: {
-              has: DD => "panningDistanceLimit" in DD,
-              get: DD => DD.panningDistanceLimit,
-              set: (DD, CD) => {
-                DD.panningDistanceLimit = CD
+              has: UU => "panningDistanceLimit" in UU,
+              get: UU => UU.panningDistanceLimit,
+              set: (UU, RU) => {
+                UU.panningDistanceLimit = RU
               }
             },
-            metadata: iD
-          }, xC, qC), (0, ID.k)(null, null, lD, {
+            metadata: EU
+          }, oR, ZR), (0, tU.i)(null, null, vU, {
             kind: "field",
             name: "panningOriginTarget",
             static: !1,
             private: !1,
             access: {
-              has: DD => "panningOriginTarget" in DD,
-              get: DD => DD.panningOriginTarget,
-              set: (DD, CD) => {
-                DD.panningOriginTarget = CD
+              has: UU => "panningOriginTarget" in UU,
+              get: UU => UU.panningOriginTarget,
+              set: (UU, RU) => {
+                UU.panningOriginTarget = RU
               }
             },
-            metadata: iD
-          }, JC, KC), (0, ID.k)(null, null, kD, {
+            metadata: EU
+          }, aR, YR), (0, tU.i)(null, null, yU, {
             kind: "field",
             name: "zoomOnFactor",
             static: !1,
             private: !1,
             access: {
-              has: DD => "zoomOnFactor" in DD,
-              get: DD => DD.zoomOnFactor,
-              set: (DD, CD) => {
-                DD.zoomOnFactor = CD
+              has: UU => "zoomOnFactor" in UU,
+              get: UU => UU.zoomOnFactor,
+              set: (UU, RU) => {
+                UU.zoomOnFactor = RU
               }
             },
-            metadata: iD
-          }, aC, VC), (0, ID.k)(null, null, dD, {
+            metadata: EU
+          }, BR, VR), (0, tU.i)(null, null, kU, {
             kind: "field",
             name: "targetScreenOffset",
             static: !1,
             private: !1,
             access: {
-              has: DD => "targetScreenOffset" in DD,
-              get: DD => DD.targetScreenOffset,
-              set: (DD, CD) => {
-                DD.targetScreenOffset = CD
+              has: UU => "targetScreenOffset" in UU,
+              get: UU => UU.targetScreenOffset,
+              set: (UU, RU) => {
+                UU.targetScreenOffset = RU
               }
             },
-            metadata: iD
-          }, zC, jC), (0, ID.k)(null, null, YD, {
+            metadata: EU
+          }, rR, XR), (0, tU.i)(null, null, FU, {
             kind: "field",
             name: "allowUpsideDown",
             static: !1,
             private: !1,
             access: {
-              has: DD => "allowUpsideDown" in DD,
-              get: DD => DD.allowUpsideDown,
-              set: (DD, CD) => {
-                DD.allowUpsideDown = CD
+              has: UU => "allowUpsideDown" in UU,
+              get: UU => UU.allowUpsideDown,
+              set: (UU, RU) => {
+                UU.allowUpsideDown = RU
               }
             },
-            metadata: iD
-          }, lC, LC), (0, ID.k)(null, null, WD, {
+            metadata: EU
+          }, vR, dR), (0, tU.i)(null, null, iU, {
             kind: "field",
             name: "useInputToRestoreState",
             static: !1,
             private: !1,
             access: {
-              has: DD => "useInputToRestoreState" in DD,
-              get: DD => DD.useInputToRestoreState,
-              set: (DD, CD) => {
-                DD.useInputToRestoreState = CD
+              has: UU => "useInputToRestoreState" in UU,
+              get: UU => UU.useInputToRestoreState,
+              set: (UU, RU) => {
+                UU.useInputToRestoreState = RU
               }
             },
-            metadata: iD
-          }, TC, GC), (0, ID.k)(null, null, sD, {
+            metadata: EU
+          }, HR, SR), (0, tU.i)(null, null, AU, {
             kind: "field",
             name: "restoreStateInterpolationFactor",
             static: !1,
             private: !1,
             access: {
-              has: DD => "restoreStateInterpolationFactor" in DD,
-              get: DD => DD.restoreStateInterpolationFactor,
-              set: (DD, CD) => {
-                DD.restoreStateInterpolationFactor = CD
+              has: UU => "restoreStateInterpolationFactor" in UU,
+              get: UU => UU.restoreStateInterpolationFactor,
+              set: (UU, RU) => {
+                UU.restoreStateInterpolationFactor = RU
               }
             },
-            metadata: iD
-          }, RC, kC), iD && Object.defineProperty(DD, Symbol.metadata, {
+            metadata: EU
+          }, sR, yR), EU && Object.defineProperty(UU, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: iD
+            value: EU
           })
-        })(), DD
+        })(), UU
       })(),
-      kD = !1;
-    kD || (kD = !0, QD.b.AddNodeConstructor("ArcRotateCamera", ((DD, CD) => () => new RD(DD, 0, 0, 1, fD.p.Zero(), CD))), (0, jD.d)("BABYLON.ArcRotateCamera", RD))
+      yU = !1;
+    yU || (yU = !0, qU.b.AddNodeConstructor("ArcRotateCamera", ((UU, RU) => () => new sU(UU, 0, 0, 1, PU.n.Zero(), RU))), (0, XU.g)("BABYLON.ArcRotateCamera", sU))
   },
-  39382: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => ID.b
+  39636: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => tU.b
     });
-    var ID = cD(39388);
-    (0, ID.c)()
+    var tU = gU(39643);
+    (0, tU.e)()
   },
-  39388: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => SD,
-      c: () => yD
+  39643: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => cU,
+      e: () => jU
     });
-    var ID = cD(39154),
-      pD = cD(39156),
-      iD = cD(36446),
-      fD = cD(36622),
-      bD = cD(39392),
-      QD = cD(39356),
-      wD = cD(36488);
-    let SD = (() => {
-        var DD;
-        let CD, cD, QD = bD.b,
-          wD = [],
-          SD = [],
-          BD = [],
-          yD = [];
-        return DD = class extends QD {
-          constructor(DD, CD, cD, pD) {
-            super(DD, cD, pD), this.groundColor = (0, ID.m)(this, wD, new fD.d(0, 0, 0)), this.direction = ((0, ID.m)(this, SD), (0, ID.m)(this, BD, void 0)), (0, ID.m)(this, yD), this.direction = CD || iD.p.Up()
+    var tU = gU(39377),
+      pU = gU(39380),
+      EU = gU(36600),
+      PU = gU(36761),
+      TU = gU(39645),
+      qU = gU(39610),
+      KU = gU(36639);
+    let cU = (() => {
+        var UU;
+        let RU, gU, qU = TU.e,
+          KU = [],
+          cU = [],
+          GU = [],
+          jU = [];
+        return UU = class extends qU {
+          constructor(UU, RU, gU, pU) {
+            super(UU, gU, pU), this.groundColor = (0, tU.j)(this, KU, new PU.e(0, 0, 0)), this.direction = ((0, tU.j)(this, cU), (0, tU.j)(this, GU, void 0)), (0, tU.j)(this, jU), this.direction = RU || EU.n.Up()
           }
           _buildUniformLayout() {
             this._uniformBuffer.addUniform("vLightData", 4), this._uniformBuffer.addUniform("vLightDiffuse", 4), this._uniformBuffer.addUniform("vLightSpecular", 4), this._uniformBuffer.addUniform("vLightGround", 3), this._uniformBuffer.addUniform("shadowsInfo", 3), this._uniformBuffer.addUniform("depthValues", 2), this._uniformBuffer.create()
@@ -2170,71 +2170,71 @@ export const modules = {
           getClassName() {
             return "HemisphericLight"
           }
-          setDirectionToTarget(DD) {
-            return this.direction = iD.p.Normalize(DD.subtract(iD.p.Zero())), this.direction
+          setDirectionToTarget(UU) {
+            return this.direction = EU.n.Normalize(UU.subtract(EU.n.Zero())), this.direction
           }
           getShadowGenerator() {
             return null
           }
-          transferToEffect(DD, CD) {
-            const cD = iD.p.Normalize(this.direction);
-            return this._uniformBuffer.updateFloat4("vLightData", cD.x, cD.y, cD.z, 0, CD), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), CD), this
+          transferToEffect(UU, RU) {
+            const gU = EU.n.Normalize(this.direction);
+            return this._uniformBuffer.updateFloat4("vLightData", gU.x, gU.y, gU.z, 0, RU), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), RU), this
           }
-          transferToNodeMaterialEffect(DD, CD) {
-            const cD = iD.p.Normalize(this.direction);
-            return DD.setFloat3(CD, cD.x, cD.y, cD.z), this
+          transferToNodeMaterialEffect(UU, RU) {
+            const gU = EU.n.Normalize(this.direction);
+            return UU.setFloat3(RU, gU.x, gU.y, gU.z), this
           }
           computeWorldMatrix() {
-            return this._worldMatrix || (this._worldMatrix = iD.d.Identity()), this._worldMatrix
+            return this._worldMatrix || (this._worldMatrix = EU.c.Identity()), this._worldMatrix
           }
           getTypeID() {
-            return bD.b.LIGHTTYPEID_HEMISPHERICLIGHT
+            return TU.e.LIGHTTYPEID_HEMISPHERICLIGHT
           }
-          prepareLightSpecificDefines(DD, CD) {
-            DD["HEMILIGHT" + CD] = !0
+          prepareLightSpecificDefines(UU, RU) {
+            UU["HEMILIGHT" + RU] = !0
           }
         }, (() => {
-          const iD = "function" === typeof Symbol && Symbol.metadata ? Object.create(QD[Symbol.metadata] ?? null) : void 0;
-          CD = [(0, pD.l)()], cD = [(0, pD.C)()], (0, ID.k)(null, null, CD, {
+          const EU = "function" === typeof Symbol && Symbol.metadata ? Object.create(qU[Symbol.metadata] ?? null) : void 0;
+          RU = [(0, pU.l)()], gU = [(0, pU.I)()], (0, tU.i)(null, null, RU, {
             kind: "field",
             name: "groundColor",
             static: !1,
             private: !1,
             access: {
-              has: DD => "groundColor" in DD,
-              get: DD => DD.groundColor,
-              set: (DD, CD) => {
-                DD.groundColor = CD
+              has: UU => "groundColor" in UU,
+              get: UU => UU.groundColor,
+              set: (UU, RU) => {
+                UU.groundColor = RU
               }
             },
-            metadata: iD
-          }, wD, SD), (0, ID.k)(null, null, cD, {
+            metadata: EU
+          }, KU, cU), (0, tU.i)(null, null, gU, {
             kind: "field",
             name: "direction",
             static: !1,
             private: !1,
             access: {
-              has: DD => "direction" in DD,
-              get: DD => DD.direction,
-              set: (DD, CD) => {
-                DD.direction = CD
+              has: UU => "direction" in UU,
+              get: UU => UU.direction,
+              set: (UU, RU) => {
+                UU.direction = RU
               }
             },
-            metadata: iD
-          }, BD, yD), iD && Object.defineProperty(DD, Symbol.metadata, {
+            metadata: EU
+          }, GU, jU), EU && Object.defineProperty(UU, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: iD
+            value: EU
           })
-        })(), DD
+        })(), UU
       })(),
-      BD = !1;
+      GU = !1;
 
-    function yD() {
-      BD || (BD = !0, QD.b.AddNodeConstructor("Light_Type_3", ((DD, CD) => () => new SD(DD, iD.p.Zero(), CD))), (0, wD.d)("BABYLON.HemisphericLight", SD))
+    function jU() {
+      GU || (GU = !0, qU.b.AddNodeConstructor("Light_Type_3", ((UU, RU) => () => new cU(UU, EU.n.Zero(), RU))), (0, KU.g)("BABYLON.HemisphericLight", cU))
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

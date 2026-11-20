@@ -1,77 +1,77 @@
 export const id = 200;
 export const ids = [200];
 export const modules = {
-  38465: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => ID
+  38671: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => tU
     });
-    class ID {
-      constructor(DD, CD) {
-        this.read = DD, this.apply = CD, this.release = null
+    class tU {
+      constructor(UU, RU) {
+        this.read = UU, this.apply = RU, this.release = null
       }
-      turn(DD, CD) {
-        const cD = null === this.release ? this.read() : this.release.transitionMs;
+      turn(UU, RU) {
+        const gU = null === this.release ? this.read() : this.release.transitionMs;
         this.stop(!1), this.apply({
-          forcedCameraDirectionTransitionMs: CD,
-          forcedCameraDirection: [DD[0], DD[1], DD[2]]
+          forcedCameraDirectionTransitionMs: RU,
+          forcedCameraDirection: [UU[0], UU[1], UU[2]]
         }), this.release = {
           timer: setTimeout((() => {
             this.stop(!0)
-          }), CD + 100),
-          transitionMs: cD
+          }), RU + 100),
+          transitionMs: gU
         }
       }
       dispose() {
         this.stop(!0)
       }
-      stop(DD) {
-        null !== this.release && (clearTimeout(this.release.timer), DD && this.apply({
+      stop(UU) {
+        null !== this.release && (clearTimeout(this.release.timer), UU && this.apply({
           forcedCameraDirection: null,
           forcedCameraDirectionTransitionMs: this.release.transitionMs
         }), this.release = null)
       }
     }
   },
-  38017: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => iD,
-      f: () => pD
+  38198: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => EU,
+      d: () => pU
     });
-    const ID = new Map;
+    const tU = new Map;
 
-    function pD(DD, CD) {
-      ID.set(DD, CD)
+    function pU(UU, RU) {
+      tU.set(UU, RU)
     }
 
-    function iD(DD) {
-      return DD ? ID.get(DD) : void 0
+    function EU(UU) {
+      return UU ? tU.get(UU) : void 0
     }
   },
-  38901: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => pD
+  39141: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => pU
     });
-    var ID = cD(37584);
+    var tU = gU(37777);
 
-    function pD(DD, CD, cD) {
-      var pD, iD, fD, bD, QD, wD, SD;
-      const BD = (0, ID.d)(DD, CD, cD[0], cD[1], cD[2]),
-        yD = BD ? null !== (pD = BD.textCell) && void 0 !== pD ? pD : BD.rect.anchor : cD,
-        MD = CD(yD[0], yD[1], yD[2]);
+    function pU(UU, RU, gU) {
+      var pU, EU, PU, TU, qU, KU, cU;
+      const GU = (0, tU.c)(UU, RU, gU[0], gU[1], gU[2]),
+        jU = GU ? null !== (pU = GU.textCell) && void 0 !== pU ? pU : GU.rect.anchor : gU,
+        uU = RU(jU[0], jU[1], jU[2]);
       return {
-        pos: [cD[0], cD[1], cD[2]],
-        noticeboardSpan: BD && {
-          width: BD.rect.width,
-          height: BD.rect.height
+        pos: [gU[0], gU[1], gU[2]],
+        noticeboardSpan: GU && {
+          width: GU.rect.width,
+          height: GU.rect.height
         },
-        text: null !== (iD = null === MD || void 0 === MD || null === (fD = MD.persisted) || void 0 === fD || null === (bD = fD.shared) || void 0 === bD ? void 0 : bD.text) && void 0 !== iD ? iD : "",
-        textSize: null !== (QD = null === MD || void 0 === MD || null === (wD = MD.persisted) || void 0 === wD || null === (SD = wD.shared) || void 0 === SD ? void 0 : SD.textSize) && void 0 !== QD ? QD : null
+        text: null !== (EU = null === uU || void 0 === uU || null === (PU = uU.persisted) || void 0 === PU || null === (TU = PU.shared) || void 0 === TU ? void 0 : TU.text) && void 0 !== EU ? EU : "",
+        textSize: null !== (qU = null === uU || void 0 === uU || null === (KU = uU.persisted) || void 0 === KU || null === (cU = KU.shared) || void 0 === cU ? void 0 : cU.textSize) && void 0 !== qU ? qU : null
       }
     }
   },
-  37879: (DD, CD, cD) => {
-    function ID(DD) {
-      switch (DD.kind) {
+  38052: (UU, RU, gU) => {
+    function tU(UU) {
+      switch (UU.kind) {
         case void 0:
         case "flatEmissive":
           return !1;
@@ -80,452 +80,452 @@ export const modules = {
           return !0
       }
     }
-    cD.d(CD, {
-      b: () => pD,
-      f: () => iD,
-      j: () => ID
+    gU.d(RU, {
+      d: () => pU,
+      g: () => EU,
+      h: () => tU
     });
-    const pD = 4,
-      iD = 3
+    const pU = 4,
+      EU = 3
   },
-  38481: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => pD,
-      e: () => iD
+  38700: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => pU,
+      c: () => EU
     });
-    var ID = cD(326);
-    const pD = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "luckyBedwars", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "skyIslands", "skyblock", "tsunami"]);
-    class iD {
-      constructor(DD) {
-        this.importGame = DD, this.loads = new Map, this.loaded = new Map
+    var tU = gU(311);
+    const pU = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "luckyBedwars", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "skyIslands", "skyblock", "tsunami"]);
+    class EU {
+      constructor(UU) {
+        this.importGame = UU, this.loads = new Map, this.loaded = new Map
       }
-      load(DD) {
-        const CD = (0, ID.Vb)(DD);
-        if (!pD.has(CD)) return Promise.resolve(void 0);
-        let cD = this.loads.get(CD);
-        return cD || (cD = this.importGame(CD).then((DD => {
-          const cD = DD.default;
-          if ("function" !== typeof cD) throw new Error(`${CD}'s client code has no default-exported factory`);
-          return this.loaded.set(CD, cD), cD
-        })).catch((DD => {
-          throw this.loads.delete(CD), DD
-        })), this.loads.set(CD, cD)), cD
+      load(UU) {
+        const RU = (0, tU.Wb)(UU);
+        if (!pU.has(RU)) return Promise.resolve(void 0);
+        let gU = this.loads.get(RU);
+        return gU || (gU = this.importGame(RU).then((UU => {
+          const gU = UU.default;
+          if ("function" !== typeof gU) throw new Error(`${RU}'s client code has no default-exported factory`);
+          return this.loaded.set(RU, gU), gU
+        })).catch((UU => {
+          throw this.loads.delete(RU), UU
+        })), this.loads.set(RU, gU)), gU
       }
-      loadedFactory(DD) {
-        const CD = (0, ID.Vb)(DD);
-        if (!pD.has(CD)) return;
-        const cD = this.loaded.get(CD);
-        if (!cD) throw new Error(`${CD}'s client code started before it loaded`);
-        return cD
+      loadedFactory(UU) {
+        const RU = (0, tU.Wb)(UU);
+        if (!pU.has(RU)) return;
+        const gU = this.loaded.get(RU);
+        if (!gU) throw new Error(`${RU}'s client code started before it loaded`);
+        return gU
       }
     }
   },
-  38904: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => fD
+  39143: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => PU
     });
-    var ID = cD(9237),
-      pD = cD(9062),
-      iD = cD(3083);
+    var tU = gU(9155),
+      pU = gU(9009),
+      EU = gU(2969);
 
-    function fD(DD) {
-      if (DD === ID.c) return 0;
-      const CD = (0, iD.e)(DD);
-      if (void 0 !== CD && CD <= pD.MAX_BLOCK_ID) return CD;
-      const cD = (0, iD.e)(DD.split("|")[0]);
-      if (void 0 !== cD && cD <= pD.MAX_BLOCK_ID && (0, pD.rootMetaDescOf)(cD) === DD) return cD;
-      throw new Error(`Invalid block name. You sent ${DD}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
+    function PU(UU) {
+      if (UU === tU.e) return 0;
+      const RU = (0, EU.c)(UU);
+      if (void 0 !== RU && RU <= pU.MAX_BLOCK_ID) return RU;
+      const gU = (0, EU.c)(UU.split("|")[0]);
+      if (void 0 !== gU && gU <= pU.MAX_BLOCK_ID && (0, pU.rootMetaDescOf)(gU) === UU) return gU;
+      throw new Error(`Invalid block name. You sent ${UU}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
     }
   },
-  38524: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => pD
+  38739: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => pU
     });
-    var ID = cD(16);
-    class pD {
-      constructor(DD) {
-        this.screen = DD, this.hidesHud = !1
+    var tU = gU(21);
+    class pU {
+      constructor(UU) {
+        this.screen = UU, this.hidesHud = !1
       }
-      show(DD, CD) {
-        this.screen.setFade(DD.colour, DD.alpha), this.screen.setLetterbox(!0 === CD.letterbox, DD.alpha < 1), this.setHudHidden(!0 === CD.hideHud)
+      show(UU, RU) {
+        this.screen.setFade(UU.colour, UU.alpha), this.screen.setLetterbox(!0 === RU.letterbox, UU.alpha < 1), this.setHudHidden(!0 === RU.hideHud)
       }
       clear() {
         this.screen.clear(), this.setHudHidden(!1)
       }
-      setHudHidden(DD) {
-        this.hidesHud !== DD && (this.hidesHud = DD, ID.d.set({
-          isUiHiddenByCamera: DD
+      setHudHidden(UU) {
+        this.hidesHud !== UU && (this.hidesHud = UU, tU.b.set({
+          isUiHiddenByCamera: UU
         }))
       }
     }
   },
-  38496: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => ID,
-      i: () => yD,
-      j: () => BD,
-      l: () => fD,
-      m: () => tD,
-      p: () => QD,
-      r: () => ZD,
-      u: () => wD,
-      w: () => bD,
-      x: () => SD
+  38708: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => tU,
+      g: () => jU,
+      i: () => GU,
+      l: () => PU,
+      o: () => CU,
+      s: () => qU,
+      u: () => hU,
+      w: () => KU,
+      y: () => TU,
+      z: () => cU
     });
-    const ID = Math.PI / 2 - .001,
-      pD = 2 * Math.PI,
-      iD = 1e-9;
+    const tU = Math.PI / 2 - .001,
+      pU = 2 * Math.PI,
+      EU = 1e-9;
 
-    function fD(DD, CD) {
-      CD.heading = DD.heading, CD.pitch = DD.pitch
+    function PU(UU, RU) {
+      RU.heading = UU.heading, RU.pitch = UU.pitch
     }
 
-    function bD(DD, CD) {
-      const cD = CD - DD;
-      return cD - pD * Math.floor((cD + Math.PI) / pD)
+    function TU(UU, RU) {
+      const gU = RU - UU;
+      return gU - pU * Math.floor((gU + Math.PI) / pU)
     }
 
-    function QD(DD, CD, cD) {
-      return DD + bD(DD, CD) * cD
+    function qU(UU, RU, gU) {
+      return UU + TU(UU, RU) * gU
     }
 
-    function wD(DD) {
-      if (!Number.isFinite(DD)) return DD;
-      const CD = DD - pD * Math.floor(DD / pD);
-      return CD < pD ? CD : 0
+    function KU(UU) {
+      if (!Number.isFinite(UU)) return UU;
+      const RU = UU - pU * Math.floor(UU / pU);
+      return RU < pU ? RU : 0
     }
 
-    function SD(DD, CD) {
-      return DD + bD(DD, CD)
+    function cU(UU, RU) {
+      return UU + TU(UU, RU)
     }
 
-    function BD(DD) {
-      return Math.max(-ID, Math.min(ID, DD))
+    function GU(UU) {
+      return Math.max(-tU, Math.min(tU, UU))
     }
 
-    function yD(DD, CD, cD) {
-      const ID = Math.cos(CD);
-      return cD[0] = ID * Math.sin(DD), cD[1] = -Math.sin(CD), cD[2] = ID * Math.cos(DD), cD
+    function jU(UU, RU, gU) {
+      const tU = Math.cos(RU);
+      return gU[0] = tU * Math.sin(UU), gU[1] = -Math.sin(RU), gU[2] = tU * Math.cos(UU), gU
     }
 
-    function MD(DD, CD, cD, ID) {
-      const pD = Math.sqrt(DD * DD + cD * cD);
-      return pD < iD && Math.abs(CD) < iD || (pD >= iD && (ID.heading = Math.atan2(DD, cD)), ID.pitch = BD(Math.atan2(-CD, pD) + 0)), ID
+    function uU(UU, RU, gU, tU) {
+      const pU = Math.sqrt(UU * UU + gU * gU);
+      return pU < EU && Math.abs(RU) < EU || (pU >= EU && (tU.heading = Math.atan2(UU, gU)), tU.pitch = GU(Math.atan2(-RU, pU) + 0)), tU
     }
 
-    function tD(DD, CD) {
-      return MD(DD[0], DD[1], DD[2], CD)
+    function CU(UU, RU) {
+      return uU(UU[0], UU[1], UU[2], RU)
     }
 
-    function ZD(DD, CD, cD) {
-      return MD(CD[0] - DD[0], CD[1] - DD[1], CD[2] - DD[2], cD)
+    function hU(UU, RU, gU) {
+      return uU(RU[0] - UU[0], RU[1] - UU[1], RU[2] - UU[2], gU)
     }
   },
-  38517: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => iD,
-      h: () => pD
+  38730: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => EU,
+      f: () => pU
     });
-    var ID = cD(38496);
+    var tU = gU(38708);
 
-    function pD(DD) {
-      var CD;
-      const cD = "default" === DD.mode ? "movement" : null !== (CD = DD.playerFacing) && void 0 !== CD ? CD : "movement";
-      return "cursor" === cD ? {
-        facing: cD,
+    function pU(UU) {
+      var RU;
+      const gU = "default" === UU.mode ? "movement" : null !== (RU = UU.playerFacing) && void 0 !== RU ? RU : "movement";
+      return "cursor" === gU ? {
+        facing: gU,
         mouseTurns: null
       } : {
-        facing: cD,
-        mouseTurns: "default" !== DD.mode && void 0 !== DD.playerLook ? "look" : "view"
+        facing: gU,
+        mouseTurns: "default" !== UU.mode && void 0 !== UU.playerLook ? "look" : "view"
       }
     }
 
-    function iD(DD, CD, cD, pD, iD, fD) {
-      return fD.Qq = 0, fD.wq = 0, fD.pointedAt = void 0, void 0 !== pD ? iD ? (fD.pointedAt = pD, DD) : (0, ID.u)(pD.heading) : iD ? (fD.Qq = CD, fD.wq = cD, DD) : (0, ID.u)(DD + CD)
+    function EU(UU, RU, gU, pU, EU, PU) {
+      return PU.Xw = 0, PU.Ow = 0, PU.pointedAt = void 0, void 0 !== pU ? EU ? (PU.pointedAt = pU, UU) : (0, tU.w)(pU.heading) : EU ? (PU.Xw = RU, PU.Ow = gU, UU) : (0, tU.w)(UU + RU)
     }
   },
-  38503: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => dD
+  38719: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => kU
     });
-    var ID = cD(38505),
-      pD = cD(38496),
-      iD = cD(36366);
+    var tU = gU(38724),
+      pU = gU(38708),
+      EU = gU(36521);
 
-    function fD(DD, CD, cD, ID) {
-      if (!(ID > 0)) return CD;
-      const pD = CD > DD ? Math.min(CD, DD + cD / ID) : Math.max(CD, DD - cD / ID);
-      return Math.abs(CD - pD) < 1e-9 ? CD : pD
+    function PU(UU, RU, gU, tU) {
+      if (!(tU > 0)) return RU;
+      const pU = RU > UU ? Math.min(RU, UU + gU / tU) : Math.max(RU, UU - gU / tU);
+      return Math.abs(RU - pU) < 1e-9 ? RU : pU
     }
-    class bD {
+    class TU {
       constructor() {
         this.phase = null, this.outMs = 0, this.holdMs = 0, this.inMs = 0, this.heldMs = 0, this.sinceTurnMs = 1 / 0, this.clearMs = 1 / 0, this.waiting = null, this.screen = {
-          colour: ID.c,
+          colour: tU.d,
           alpha: 0
         }
       }
       getScreen() {
         return this.screen
       }
-      fadeOut(DD) {
-        !this.isGoingOut() && this.sinceTurnMs < ID.k.minFadeTurnMs ? this.waiting = {
+      fadeOut(UU) {
+        !this.isGoingOut() && this.sinceTurnMs < tU.i.minFadeTurnMs ? this.waiting = {
           turn: "out",
-          transition: DD
-        } : (this.waiting = null, this.startOut(DD))
+          transition: UU
+        } : (this.waiting = null, this.startOut(UU))
       }
-      fadeIn(DD) {
-        this.isGoingOut() ? this.sinceTurnMs < ID.k.minFadeTurnMs ? this.waiting = {
+      fadeIn(UU) {
+        this.isGoingOut() ? this.sinceTurnMs < tU.i.minFadeTurnMs ? this.waiting = {
           turn: "in",
-          minMs: DD
-        } : (this.waiting = null, this.startIn(DD)) : this.waiting = null
+          minMs: UU
+        } : (this.waiting = null, this.startIn(UU)) : this.waiting = null
       }
-      advance(DD) {
-        const CD = this.waiting;
-        if (null === CD) return this.step(DD);
-        const cD = ID.k.minFadeTurnMs - this.sinceTurnMs;
-        if (cD > DD) return this.step(DD);
-        const pD = this.step(cD);
-        return this.waiting = null, "out" === CD.turn ? this.startOut(CD.transition) : this.startIn(CD.minMs), this.step(DD - cD) || pD
+      advance(UU) {
+        const RU = this.waiting;
+        if (null === RU) return this.step(UU);
+        const gU = tU.i.minFadeTurnMs - this.sinceTurnMs;
+        if (gU > UU) return this.step(UU);
+        const pU = this.step(gU);
+        return this.waiting = null, "out" === RU.turn ? this.startOut(RU.transition) : this.startIn(RU.minMs), this.step(UU - gU) || pU
       }
       isGoingOut() {
         return "out" === this.phase || "hold" === this.phase
       }
-      startOut(DD) {
-        ("in" === this.phase || null === this.phase && this.clearMs < ID.k.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = DD.colour), this.outMs = DD.outMs, this.holdMs = DD.holdMs, this.inMs = DD.inMs
+      startOut(UU) {
+        ("in" === this.phase || null === this.phase && this.clearMs < tU.i.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = UU.colour), this.outMs = UU.outMs, this.holdMs = UU.holdMs, this.inMs = UU.inMs
       }
-      startIn(DD) {
-        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(DD, this.inMs)
+      startIn(UU) {
+        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(UU, this.inMs)
       }
-      step(DD) {
-        const CD = this.screen;
-        this.sinceTurnMs += DD, null === this.phase && (this.clearMs += DD);
-        let cD = !1,
-          pD = DD;
+      step(UU) {
+        const RU = this.screen;
+        this.sinceTurnMs += UU, null === this.phase && (this.clearMs += UU);
+        let gU = !1,
+          pU = UU;
         if ("out" === this.phase) {
-          const ID = (1 - CD.alpha) * this.outMs;
-          if (CD.alpha = fD(CD.alpha, 1, DD, this.outMs), CD.alpha < 1) return !1;
-          this.phase = "hold", this.heldMs = 0, pD = Math.max(0, DD - ID), cD = !0
+          const tU = (1 - RU.alpha) * this.outMs;
+          if (RU.alpha = PU(RU.alpha, 1, UU, this.outMs), RU.alpha < 1) return !1;
+          this.phase = "hold", this.heldMs = 0, pU = Math.max(0, UU - tU), gU = !0
         }
-        let iD = DD;
+        let EU = UU;
         if ("hold" === this.phase) {
-          this.heldMs += pD;
-          const DD = Math.min(this.heldMs - this.holdMs, this.sinceTurnMs - ID.k.minFadeTurnMs);
-          if (DD < 0 || cD) return cD;
-          this.phase = "in", this.sinceTurnMs = DD, iD = DD
+          this.heldMs += pU;
+          const UU = Math.min(this.heldMs - this.holdMs, this.sinceTurnMs - tU.i.minFadeTurnMs);
+          if (UU < 0 || gU) return gU;
+          this.phase = "in", this.sinceTurnMs = UU, EU = UU
         }
-        return "in" === this.phase && (CD.alpha = fD(CD.alpha, 0, iD, this.inMs), CD.alpha <= 0 && (this.phase = null, this.clearMs = 0)), cD
+        return "in" === this.phase && (RU.alpha = PU(RU.alpha, 0, EU, this.inMs), RU.alpha <= 0 && (this.phase = null, this.clearMs = 0)), gU
       }
     }
-    var QD = cD(38494),
-      wD = cD(38510),
-      SD = cD(1865),
-      BD = cD(35972);
+    var qU = gU(38705),
+      KU = gU(38727),
+      cU = gU(1771),
+      GU = gU(36161);
 
-    function yD(DD, CD) {
-      for (let cD = 0; cD < CD.length; cD++) CD[cD] = DD[cD]
+    function jU(UU, RU) {
+      for (let gU = 0; gU < RU.length; gU++) RU[gU] = UU[gU]
     }
 
-    function MD(DD, CD) {
-      var cD;
-      return null !== (cD = DD.fov) && void 0 !== cD ? cD : CD.getDefaultFov()
+    function uU(UU, RU) {
+      var gU;
+      return null !== (gU = UU.fov) && void 0 !== gU ? gU : RU.getDefaultFov()
     }
 
-    function tD(DD, CD, cD, ID, pD) {
-      const iD = 2 / ID,
-        fD = Math.exp(-iD * pD);
-      for (let bD = 0; bD < DD.length; bD++) {
-        const ID = DD[bD] - cD[bD],
-          QD = (CD[bD] + iD * ID) * pD;
-        DD[bD] = cD[bD] + (ID + QD) * fD, CD[bD] = (CD[bD] - iD * QD) * fD
+    function CU(UU, RU, gU, tU, pU) {
+      const EU = 2 / tU,
+        PU = Math.exp(-EU * pU);
+      for (let TU = 0; TU < UU.length; TU++) {
+        const tU = UU[TU] - gU[TU],
+          qU = (RU[TU] + EU * tU) * pU;
+        UU[TU] = gU[TU] + (tU + qU) * PU, RU[TU] = (RU[TU] - EU * qU) * PU
       }
     }
-    class ZD {
-      constructor(DD, CD, cD, ID) {
-        var iD, fD, bD, QD, wD;
-        this.settings = DD, this.Zy = CD, this.targets = cD, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.lb = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
+    class hU {
+      constructor(UU, RU, gU, tU) {
+        var EU, PU, TU, qU, KU;
+        this.settings = UU, this.FG = RU, this.targets = gU, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.Fh = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
           heading: 0,
           pitch: 0
         }, this.points = [], this.forward = [0, 0, 0], this.base = {
-          heading: (0, pD.u)((0, SD.o)(null !== (iD = DD.viewHeading) && void 0 !== iD ? iD : 0)),
-          pitch: (0, pD.j)((0, SD.o)(null !== (fD = DD.viewElevation) && void 0 !== fD ? fD : 45))
-        }, this.closestDistance = null !== (bD = DD.closestDistance) && void 0 !== bD ? bD : Math.min(6, null !== (QD = DD.furthestDistance) && void 0 !== QD ? QD : 1 / 0), this.furthestDistance = null !== (wD = DD.furthestDistance) && void 0 !== wD ? wD : Math.max(64, this.closestDistance);
-        const BD = (0, pD.i)(this.base.heading, this.base.pitch, this.forward),
-          yD = ID.position,
-          MD = this.closestDistance;
-        this.goal = [yD[0] + BD[0] * MD, yD[1] + BD[1] * MD, yD[2] + BD[2] * MD, MD, this.base.heading, this.base.pitch]
+          heading: (0, pU.w)((0, cU.j)(null !== (EU = UU.viewHeading) && void 0 !== EU ? EU : 0)),
+          pitch: (0, pU.i)((0, cU.j)(null !== (PU = UU.viewElevation) && void 0 !== PU ? PU : 45))
+        }, this.closestDistance = null !== (TU = UU.closestDistance) && void 0 !== TU ? TU : Math.min(6, null !== (qU = UU.furthestDistance) && void 0 !== qU ? qU : 1 / 0), this.furthestDistance = null !== (KU = UU.furthestDistance) && void 0 !== KU ? KU : Math.max(64, this.closestDistance);
+        const GU = (0, pU.g)(this.base.heading, this.base.pitch, this.forward),
+          jU = tU.position,
+          uU = this.closestDistance;
+        this.goal = [jU[0] + GU[0] * uU, jU[1] + GU[1] * uU, jU[2] + GU[2] * uU, uU, this.base.heading, this.base.pitch]
       }
-      update(DD, CD, cD) {
-        var ID, iD;
-        this.placeGoal(null !== (ID = this.settings.fov) && void 0 !== ID ? ID : this.Zy.getBaseFov()), this.goal[4] = (0, pD.x)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
-        const fD = null !== (iD = this.settings.smoothMs) && void 0 !== iD ? iD : 400;
-        !this.started || fD < 1 ? (yD(this.goal, this.smoothed), this.lb.fill(0), this.started = !0) : tD(this.smoothed, this.lb, this.goal, fD, DD), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, pD.j)(this.smoothed[5]), CD.apply(this.angles, cD);
-        const bD = (0, pD.i)(cD.heading, cD.pitch, this.forward);
-        for (let pD = 0; pD < 3; pD++) cD.position[pD] = this.smoothed[pD] - bD[pD] * this.smoothed[3];
-        cD.fov = MD(this.settings, this.Zy)
+      update(UU, RU, gU) {
+        var tU, EU;
+        this.placeGoal(null !== (tU = this.settings.fov) && void 0 !== tU ? tU : this.FG.getBaseFov()), this.goal[4] = (0, pU.z)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
+        const PU = null !== (EU = this.settings.smoothMs) && void 0 !== EU ? EU : 400;
+        !this.started || PU < 1 ? (jU(this.goal, this.smoothed), this.Fh.fill(0), this.started = !0) : CU(this.smoothed, this.Fh, this.goal, PU, UU), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, pU.i)(this.smoothed[5]), RU.apply(this.angles, gU);
+        const TU = (0, pU.g)(gU.heading, gU.pitch, this.forward);
+        for (let pU = 0; pU < 3; pU++) gU.position[pU] = this.smoothed[pU] - TU[pU] * this.smoothed[3];
+        gU.fov = uU(this.settings, this.FG)
       }
-      continueFrom(DD) {
-        DD instanceof ZD && (yD(DD.goal, this.goal), yD(DD.smoothed, this.smoothed), yD(DD.lb, this.lb), this.framedTargets = DD.framedTargets, this.started = DD.started)
+      continueFrom(UU) {
+        UU instanceof hU && (jU(UU.goal, this.goal), jU(UU.smoothed, this.smoothed), jU(UU.Fh, this.Fh), this.framedTargets = UU.framedTargets, this.started = UU.started)
       }
       reset() {
-        this.lb.fill(0), this.started = !1
+        this.Fh.fill(0), this.started = !1
       }
-      placeGoal(DD) {
-        var CD;
-        let cD = 0;
-        for (const SD of this.settings.targets) {
-          const DD = this.targets.currentAimPoint(SD);
-          DD && (0, QD.h)(DD, this.pointAt(cD++))
+      placeGoal(UU) {
+        var RU;
+        let gU = 0;
+        for (const cU of this.settings.targets) {
+          const UU = this.targets.currentAimPoint(cU);
+          UU && (0, qU.g)(UU, this.pointAt(gU++))
         }
-        if (cD > 0) this.framedTargets = !0;
+        if (gU > 0) this.framedTargets = !0;
         else if (!this.framedTargets) {
-          const DD = this.targets.aimPoint(this.Zy.localPlayerId);
-          DD && (0, QD.h)(DD, this.pointAt(cD++))
+          const UU = this.targets.aimPoint(this.FG.localPlayerId);
+          UU && (0, qU.g)(UU, this.pointAt(gU++))
         }
-        const ID = this.goal;
-        if (0 === cD) return void(ID[3] = this.withinDistances(ID[3]));
-        for (let QD = 0; QD < 3; QD++) {
-          let DD = 1 / 0,
-            CD = -1 / 0;
-          for (let ID = 0; ID < cD; ID++) DD = Math.min(DD, this.points[ID][QD]), CD = Math.max(CD, this.points[ID][QD]);
-          ID[QD] = (DD + CD) / 2
+        const tU = this.goal;
+        if (0 === gU) return void(tU[3] = this.withinDistances(tU[3]));
+        for (let qU = 0; qU < 3; qU++) {
+          let UU = 1 / 0,
+            RU = -1 / 0;
+          for (let tU = 0; tU < gU; tU++) UU = Math.min(UU, this.points[tU][qU]), RU = Math.max(RU, this.points[tU][qU]);
+          tU[qU] = (UU + RU) / 2
         }
-        let pD = 0;
-        for (let QD = 0; QD < cD; QD++) {
-          const DD = this.points[QD];
-          pD = Math.max(pD, Math.hypot(DD[0] - ID[0], DD[1] - ID[1], DD[2] - ID[2]))
+        let pU = 0;
+        for (let qU = 0; qU < gU; qU++) {
+          const UU = this.points[qU];
+          pU = Math.max(pU, Math.hypot(UU[0] - tU[0], UU[1] - tU[1], UU[2] - tU[2]))
         }
-        const iD = Math.tan((0, SD.o)(DD) / 2),
-          fD = Math.atan(iD * (!0 === this.settings.letterbox ? BD.g : 1)),
-          bD = Math.atan(iD * this.Zy.getAspectRatio()),
-          wD = (pD + (null !== (CD = this.settings.padding) && void 0 !== CD ? CD : 2)) / Math.sin(Math.min(fD, bD));
-        ID[3] = this.withinDistances(wD)
+        const EU = Math.tan((0, cU.j)(UU) / 2),
+          PU = Math.atan(EU * (!0 === this.settings.letterbox ? GU.i : 1)),
+          TU = Math.atan(EU * this.FG.getAspectRatio()),
+          KU = (pU + (null !== (RU = this.settings.padding) && void 0 !== RU ? RU : 2)) / Math.sin(Math.min(PU, TU));
+        tU[3] = this.withinDistances(KU)
       }
-      withinDistances(DD) {
-        return Math.min(this.furthestDistance, Math.max(this.closestDistance, DD))
+      withinDistances(UU) {
+        return Math.min(this.furthestDistance, Math.max(this.closestDistance, UU))
       }
-      pointAt(DD) {
-        return DD === this.points.length && this.points.push([0, 0, 0]), this.points[DD]
+      pointAt(UU) {
+        return UU === this.points.length && this.points.push([0, 0, 0]), this.points[UU]
       }
     }
-    class oD {
-      constructor(DD) {
-        this.limits = DD, this.yawOffset = 0, this.pitchOffset = 0, this.idleMs = 0, this.pointedAt = null
+    class QU {
+      constructor(UU) {
+        this.limits = UU, this.yawOffset = 0, this.pitchOffset = 0, this.idleMs = 0, this.pointedAt = null
       }
-      continueFrom(DD) {
-        this.limits && (this.yawOffset = DD.yawOffset, this.pitchOffset = DD.pitchOffset, this.idleMs = DD.idleMs)
+      continueFrom(UU) {
+        this.limits && (this.yawOffset = UU.yawOffset, this.pitchOffset = UU.pitchOffset, this.idleMs = UU.idleMs)
       }
-      update(DD, CD) {
-        const cD = this.limits;
-        if (!cD) return;
-        const ID = Number.isFinite(CD.Qq) ? CD.Qq : 0,
-          pD = Number.isFinite(CD.wq) ? CD.wq : 0;
-        if (CD.pointedAt) this.idleMs = 0, this.pointedAt = {
-          heading: CD.pointedAt.heading,
-          pitch: CD.pointedAt.pitch
+      update(UU, RU) {
+        const gU = this.limits;
+        if (!gU) return;
+        const tU = Number.isFinite(RU.Xw) ? RU.Xw : 0,
+          pU = Number.isFinite(RU.Ow) ? RU.Ow : 0;
+        if (RU.pointedAt) this.idleMs = 0, this.pointedAt = {
+          heading: RU.pointedAt.heading,
+          pitch: RU.pointedAt.pitch
         };
-        else if (0 !== ID || 0 !== pD) this.idleMs = 0, this.yawOffset += ID, this.pitchOffset += pD;
+        else if (0 !== tU || 0 !== pU) this.idleMs = 0, this.yawOffset += tU, this.pitchOffset += pU;
         else {
-          const CD = Math.max(0, this.idleMs + DD - 200) - Math.max(0, this.idleMs - 200);
-          if (this.idleMs += DD, void 0 !== cD.returnMs && CD > 0) {
-            const DD = cD.returnMs > 0 ? Math.exp(-3 * CD / cD.returnMs) : 0;
-            this.yawOffset *= DD, this.pitchOffset *= DD
+          const RU = Math.max(0, this.idleMs + UU - 200) - Math.max(0, this.idleMs - 200);
+          if (this.idleMs += UU, void 0 !== gU.returnMs && RU > 0) {
+            const UU = gU.returnMs > 0 ? Math.exp(-3 * RU / gU.returnMs) : 0;
+            this.yawOffset *= UU, this.pitchOffset *= UU
           }
         }
-        this.clampOffsets(cD)
+        this.clampOffsets(gU)
       }
-      clampOffsets(DD) {
-        if (DD.maxYaw >= 180) this.yawOffset = (0, pD.w)(0, this.yawOffset);
+      clampOffsets(UU) {
+        if (UU.maxYaw >= 180) this.yawOffset = (0, pU.y)(0, this.yawOffset);
         else {
-          const CD = (0, SD.o)(DD.maxYaw);
-          this.yawOffset = Math.max(-CD, Math.min(CD, this.yawOffset))
+          const RU = (0, cU.j)(UU.maxYaw);
+          this.yawOffset = Math.max(-RU, Math.min(RU, this.yawOffset))
         }
-        const CD = (0, SD.o)(DD.maxPitch);
-        this.pitchOffset = Math.max(-CD, Math.min(CD, this.pitchOffset))
+        const RU = (0, cU.j)(UU.maxPitch);
+        this.pitchOffset = Math.max(-RU, Math.min(RU, this.pitchOffset))
       }
-      apply(DD, CD) {
-        this.pointedAt && this.limits && (this.yawOffset = (0, pD.w)(DD.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - DD.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
-        const cD = (0, pD.j)(DD.pitch + this.pitchOffset);
-        this.pitchOffset = cD - DD.pitch, CD.heading = (0, pD.u)(DD.heading + this.yawOffset), CD.pitch = cD
+      apply(UU, RU) {
+        this.pointedAt && this.limits && (this.yawOffset = (0, pU.y)(UU.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - UU.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
+        const gU = (0, pU.i)(UU.pitch + this.pitchOffset);
+        this.pitchOffset = gU - UU.pitch, RU.heading = (0, pU.w)(UU.heading + this.yawOffset), RU.pitch = gU
       }
-      unapply(DD, CD) {
-        CD.heading = (0, pD.u)(DD.heading - this.yawOffset), CD.pitch = (0, pD.j)(DD.pitch - this.pitchOffset)
+      unapply(UU, RU) {
+        RU.heading = (0, pU.w)(UU.heading - this.yawOffset), RU.pitch = (0, pU.i)(UU.pitch - this.pitchOffset)
       }
     }
-    const vD = 1e-6;
+    const eU = 1e-6;
 
-    function ND(DD) {
-      return Math.sqrt(DD[0] * DD[0] + DD[1] * DD[1] + DD[2] * DD[2])
+    function WU(UU) {
+      return Math.sqrt(UU[0] * UU[0] + UU[1] * UU[1] + UU[2] * UU[2])
     }
 
-    function gD(DD, CD, cD, ID, pD) {
-      const iD = pD * pD,
-        fD = iD * pD;
-      return (2 * fD - 3 * iD + 1) * DD + (fD - 2 * iD + pD) * CD + (-2 * fD + 3 * iD) * cD + (fD - iD) * ID
+    function fU(UU, RU, gU, tU, pU) {
+      const EU = pU * pU,
+        PU = EU * pU;
+      return (2 * PU - 3 * EU + 1) * UU + (PU - 2 * EU + pU) * RU + (-2 * PU + 3 * EU) * gU + (PU - EU) * tU
     }
 
-    function XD(DD, CD, cD, ID, pD) {
-      const iD = pD * pD;
-      return (6 * iD - 6 * pD) * DD + (3 * iD - 4 * pD + 1) * CD + (-6 * iD + 6 * pD) * cD + (3 * iD - 2 * pD) * ID
+    function xU(UU, RU, gU, tU, pU) {
+      const EU = pU * pU;
+      return (6 * EU - 6 * pU) * UU + (3 * EU - 4 * pU + 1) * RU + (-6 * EU + 6 * pU) * gU + (3 * EU - 2 * pU) * tU
     }
 
-    function mD(DD, CD) {
-      const cD = CD[0] - DD[0],
-        ID = CD[1] - DD[1],
-        pD = CD[2] - DD[2];
-      return Math.sqrt(cD * cD + ID * ID + pD * pD)
+    function mU(UU, RU) {
+      const gU = RU[0] - UU[0],
+        tU = RU[1] - UU[1],
+        pU = RU[2] - UU[2];
+      return Math.sqrt(gU * gU + tU * tU + pU * pU)
     }
 
-    function nD(DD, CD, cD, ID, pD, iD) {
-      for (let fD = 0; fD < 3; fD++) iD[fD] = pD ? DD[fD] * ID : cD[fD] - CD[fD];
-      return pD && function(DD, CD) {
-        const cD = ND(DD);
-        if (cD > CD) {
-          const ID = CD / cD;
-          DD[0] *= ID, DD[1] *= ID, DD[2] *= ID
+    function IU(UU, RU, gU, tU, pU, EU) {
+      for (let PU = 0; PU < 3; PU++) EU[PU] = pU ? UU[PU] * tU : gU[PU] - RU[PU];
+      return pU && function(UU, RU) {
+        const gU = WU(UU);
+        if (gU > RU) {
+          const tU = RU / gU;
+          UU[0] *= tU, UU[1] *= tU, UU[2] *= tU
         }
-      }(iD, 3 * mD(CD, cD)), iD
+      }(EU, 3 * mU(RU, gU)), EU
     }
 
-    function OD(DD, CD, cD, ID) {
-      for (let pD = 0; pD < 3; pD++) ID[pD] = 6 * (CD[pD] - DD[pD]) - 2 * cD[pD];
-      if (ND(ID) < vD)
-        for (let pD = 0; pD < 3; pD++) ID[pD] = CD[pD] - DD[pD];
-      return ID
+    function JU(UU, RU, gU, tU) {
+      for (let pU = 0; pU < 3; pU++) tU[pU] = 6 * (RU[pU] - UU[pU]) - 2 * gU[pU];
+      if (WU(tU) < eU)
+        for (let pU = 0; pU < 3; pU++) tU[pU] = RU[pU] - UU[pU];
+      return tU
     }
 
-    function PD(DD, CD) {
-      return [2 * CD[0] - DD[0], 2 * CD[1] - DD[1], 2 * CD[2] - DD[2]]
+    function wU(UU, RU) {
+      return [2 * RU[0] - UU[0], 2 * RU[1] - UU[1], 2 * RU[2] - UU[2]]
     }
 
-    function HD(DD, CD, cD, ID, pD, iD, fD) {
-      if (!iD && !fD) return 0;
-      const bD = iD ? DD : 2 * CD - cD,
-        QD = fD ? cD : 2 * CD - DD,
-        wD = iD ? ID : pD,
-        SD = fD ? pD : ID,
-        BD = (CD - bD) / wD,
-        yD = (QD - CD) / SD;
-      if (BD * yD <= 0) return 0;
-      const MD = (QD - bD) / (wD + SD),
-        tD = 3 * Math.min(Math.abs(BD), Math.abs(yD));
-      return Math.max(-tD, Math.min(tD, MD))
+    function nU(UU, RU, gU, tU, pU, EU, PU) {
+      if (!EU && !PU) return 0;
+      const TU = EU ? UU : 2 * RU - gU,
+        qU = PU ? gU : 2 * RU - UU,
+        KU = EU ? tU : pU,
+        cU = PU ? pU : tU,
+        GU = (RU - TU) / KU,
+        jU = (qU - RU) / cU;
+      if (GU * jU <= 0) return 0;
+      const uU = (qU - TU) / (KU + cU),
+        CU = 3 * Math.min(Math.abs(GU), Math.abs(jU));
+      return Math.max(-CU, Math.min(CU, uU))
     }
 
-    function UD(DD, CD, cD, ID, pD, iD, fD) {
+    function bU(UU, RU, gU, tU, pU, EU, PU) {
       const {
-        u: bD,
-        segmentMs: QD
-      } = DD;
-      if (!DD.curved) return cD + (ID - cD) * bD;
-      return gD(cD, HD(CD, cD, ID, DD.beforeMs, QD, iD, !0) * QD, ID, HD(cD, ID, pD, QD, DD.afterMs, !0, fD) * QD, bD)
+        u: TU,
+        segmentMs: qU
+      } = UU;
+      if (!UU.curved) return gU + (tU - gU) * TU;
+      return fU(gU, nU(RU, gU, tU, UU.beforeMs, qU, EU, !0) * qU, tU, nU(gU, tU, pU, qU, UU.afterMs, !0, PU) * qU, TU)
     }
 
-    function xD(DD) {
-      return Math.abs(DD.pitch) >= pD.e
+    function oU(UU) {
+      return Math.abs(UU.pitch) >= pU.c
     }
-    class qD {
-      constructor(DD, CD, cD, ID, pD) {
-        this.nodes = DD, this.prevNodes = cD, this.nextNodes = ID, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
+    class ZU {
+      constructor(UU, RU, gU, tU, pU) {
+        this.nodes = UU, this.prevNodes = gU, this.nextNodes = tU, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
           heading: 0,
           pitch: 0
         }, this.fromAngles = {
@@ -540,84 +540,84 @@ export const modules = {
         }, this.borrowedAngles = {
           heading: 0,
           pitch: 0
-        }, this.tangents = DD.map(((DD, cD) => this.nodeTangent(CD, pD, cD)))
+        }, this.tangents = UU.map(((UU, gU) => this.nodeTangent(RU, pU, gU)))
       }
-      sample(DD, CD, cD) {
+      sample(UU, RU, gU) {
         const {
-          index: ID,
-          toIndex: iD,
-          segmentMs: fD,
-          curved: bD
-        } = DD, QD = this.fromAngles, wD = this.toAngles, SD = this.nodeAngles(ID, cD.position, CD, QD), BD = this.nodeAngles(iD, cD.position, CD, wD);
-        if (fD > 0 && "aim" !== SD && "aim" !== BD && this.liveTangent(DD, QD)) return cD.heading = (0, pD.u)(QD.heading), void(cD.pitch = QD.pitch);
-        if ("none" === SD && "none" === BD) return;
-        !bD && fD > 0 && ("tangent" === SD && this.liveTangent(DD, QD), "tangent" === BD && this.liveTangent(DD, wD)), "none" === SD ? (0, pD.l)(wD, QD) : "none" === BD && (0, pD.l)(QD, wD);
-        const yD = bD && DD.beforeIndex >= 0 && "none" !== this.nodeAngles(DD.beforeIndex, cD.position, CD, this.beforeAngles),
-          MD = bD && DD.afterIndex >= 0 && "none" !== this.nodeAngles(DD.afterIndex, cD.position, CD, this.afterAngles),
-          tD = (0, pD.x)(QD.heading, wD.heading),
-          ZD = UD(DD, yD ? (0, pD.x)(QD.heading, this.beforeAngles.heading) : 0, QD.heading, tD, MD ? (0, pD.x)(tD, this.afterAngles.heading) : 0, yD, MD);
-        cD.heading = (0, pD.u)(ZD), cD.pitch = (0, pD.j)(UD(DD, this.beforeAngles.pitch, QD.pitch, wD.pitch, this.afterAngles.pitch, yD, MD))
+          index: tU,
+          toIndex: EU,
+          segmentMs: PU,
+          curved: TU
+        } = UU, qU = this.fromAngles, KU = this.toAngles, cU = this.nodeAngles(tU, gU.position, RU, qU), GU = this.nodeAngles(EU, gU.position, RU, KU);
+        if (PU > 0 && "aim" !== cU && "aim" !== GU && this.liveTangent(UU, qU)) return gU.heading = (0, pU.w)(qU.heading), void(gU.pitch = qU.pitch);
+        if ("none" === cU && "none" === GU) return;
+        !TU && PU > 0 && ("tangent" === cU && this.liveTangent(UU, qU), "tangent" === GU && this.liveTangent(UU, KU)), "none" === cU ? (0, pU.l)(KU, qU) : "none" === GU && (0, pU.l)(qU, KU);
+        const jU = TU && UU.beforeIndex >= 0 && "none" !== this.nodeAngles(UU.beforeIndex, gU.position, RU, this.beforeAngles),
+          uU = TU && UU.afterIndex >= 0 && "none" !== this.nodeAngles(UU.afterIndex, gU.position, RU, this.afterAngles),
+          CU = (0, pU.z)(qU.heading, KU.heading),
+          hU = bU(UU, jU ? (0, pU.z)(qU.heading, this.beforeAngles.heading) : 0, qU.heading, CU, uU ? (0, pU.z)(CU, this.afterAngles.heading) : 0, jU, uU);
+        gU.heading = (0, pU.w)(hU), gU.pitch = (0, pU.i)(bU(UU, this.beforeAngles.pitch, qU.pitch, KU.pitch, this.afterAngles.pitch, jU, uU))
       }
-      nodeAngles(DD, CD, cD, ID) {
-        const pD = this.rawNodeAngles(DD, CD, cD, ID);
-        return "none" !== pD && xD(ID) && !this.borrowHeading(this.prevNodes[DD], CD, cD, ID) && this.borrowHeading(this.nextNodes[DD], CD, cD, ID), pD
+      nodeAngles(UU, RU, gU, tU) {
+        const pU = this.rawNodeAngles(UU, RU, gU, tU);
+        return "none" !== pU && oU(tU) && !this.borrowHeading(this.prevNodes[UU], RU, gU, tU) && this.borrowHeading(this.nextNodes[UU], RU, gU, tU), pU
       }
-      borrowHeading(DD, CD, cD, ID) {
-        const pD = this.borrowedAngles;
-        return !(DD < 0 || "none" === this.rawNodeAngles(DD, CD, cD, pD) || xD(pD)) && (ID.heading = pD.heading, !0)
+      borrowHeading(UU, RU, gU, tU) {
+        const pU = this.borrowedAngles;
+        return !(UU < 0 || "none" === this.rawNodeAngles(UU, RU, gU, pU) || oU(pU)) && (tU.heading = pU.heading, !0)
       }
-      rawNodeAngles(DD, CD, cD, ID) {
-        const iD = this.nodes[DD].keyframe;
-        if (iD.lookDirection) return (0, pD.m)(iD.lookDirection, ID), "aim";
-        if (void 0 !== iD.lookAt) {
-          const DD = cD(iD.lookAt);
-          if (DD) return (0, pD.r)(CD, DD, ID), "aim"
+      rawNodeAngles(UU, RU, gU, tU) {
+        const EU = this.nodes[UU].keyframe;
+        if (EU.lookDirection) return (0, pU.o)(EU.lookDirection, tU), "aim";
+        if (void 0 !== EU.lookAt) {
+          const UU = gU(EU.lookAt);
+          if (UU) return (0, pU.u)(RU, UU, tU), "aim"
         }
-        const fD = this.tangents[DD];
-        return fD ? ((0, pD.l)(fD, ID), "tangent") : "none"
+        const PU = this.tangents[UU];
+        return PU ? ((0, pU.l)(PU, tU), "tangent") : "none"
       }
-      liveTangent(DD, CD) {
-        const cD = this.nodes[DD.index].position,
-          ID = this.nodes[DD.toIndex].position,
-          iD = this.derivative;
-        for (let pD = 0; pD < 3; pD++) iD[pD] = XD(cD[pD], DD.fromTangent[pD], ID[pD], DD.toTangent[pD], DD.u);
-        return ND(iD) > 1e-9 ? ((0, pD.m)(iD, CD), !0) : !(mD(cD, ID) < vD) && ((0, pD.m)(OD(cD, ID, DD.u < .5 ? DD.toTangent : DD.fromTangent, iD), CD), !0)
+      liveTangent(UU, RU) {
+        const gU = this.nodes[UU.index].position,
+          tU = this.nodes[UU.toIndex].position,
+          EU = this.derivative;
+        for (let pU = 0; pU < 3; pU++) EU[pU] = xU(gU[pU], UU.fromTangent[pU], tU[pU], UU.toTangent[pU], UU.u);
+        return WU(EU) > 1e-9 ? ((0, pU.o)(EU, RU), !0) : !(mU(gU, tU) < eU) && ((0, pU.o)(JU(gU, tU, UU.u < .5 ? UU.toTangent : UU.fromTangent, EU), RU), !0)
       }
-      nodeTangent(DD, CD, cD) {
-        var ID;
-        const iD = DD[cD];
-        if (ND(iD) > 1e-9) return (0, pD.m)(iD, {
+      nodeTangent(UU, RU, gU) {
+        var tU;
+        const EU = UU[gU];
+        if (WU(EU) > 1e-9) return (0, pU.o)(EU, {
           heading: 0,
           pitch: 0
         });
-        const fD = null !== (ID = this.restDirectionTo(cD, cD + 1, DD, CD)) && void 0 !== ID ? ID : this.restDirectionTo(cD, cD - 1, DD, CD);
-        return fD ? (0, pD.m)(fD, {
+        const PU = null !== (tU = this.restDirectionTo(gU, gU + 1, UU, RU)) && void 0 !== tU ? tU : this.restDirectionTo(gU, gU - 1, UU, RU);
+        return PU ? (0, pU.o)(PU, {
           heading: 0,
           pitch: 0
         }) : null
       }
-      restDirectionTo(DD, CD, cD, ID) {
-        const pD = this.nodes[DD],
-          iD = this.nodes[CD];
-        if (!iD || mD(pD.position, iD.position) < vD) return null;
-        const [fD, bD] = CD > DD ? [pD, iD] : [iD, pD], QD = nD(cD[CD], fD.position, bD.position, bD.timeMs - fD.timeMs, ID, [0, 0, 0]);
-        return OD(fD.position, bD.position, QD, [0, 0, 0])
+      restDirectionTo(UU, RU, gU, tU) {
+        const pU = this.nodes[UU],
+          EU = this.nodes[RU];
+        if (!EU || mU(pU.position, EU.position) < eU) return null;
+        const [PU, TU] = RU > UU ? [pU, EU] : [EU, pU], qU = IU(gU[RU], PU.position, TU.position, TU.timeMs - PU.timeMs, tU, [0, 0, 0]);
+        return JU(PU.position, TU.position, qU, [0, 0, 0])
       }
     }
 
-    function JD(DD, CD) {
-      const cD = DD.lookDirection || CD.lookDirection ? function(DD, CD) {
-        if (!DD || !CD) return DD === CD;
-        const cD = ND(DD),
-          ID = ND(CD);
-        return Math.hypot(DD[0] / cD - CD[0] / ID, DD[1] / cD - CD[1] / ID, DD[2] / cD - CD[2] / ID) < vD
-      }(DD.lookDirection, CD.lookDirection) : (ID = DD.lookAt, pD = CD.lookAt, "object" !== typeof ID || "object" !== typeof pD ? ID === pD : mD(ID, pD) < vD);
-      var ID, pD;
-      return mD(DD.position, CD.position) < vD && DD.fov === CD.fov && cD
+    function aU(UU, RU) {
+      const gU = UU.lookDirection || RU.lookDirection ? function(UU, RU) {
+        if (!UU || !RU) return UU === RU;
+        const gU = WU(UU),
+          tU = WU(RU);
+        return Math.hypot(UU[0] / gU - RU[0] / tU, UU[1] / gU - RU[1] / tU, UU[2] / gU - RU[2] / tU) < eU
+      }(UU.lookDirection, RU.lookDirection) : (tU = UU.lookAt, pU = RU.lookAt, "object" !== typeof tU || "object" !== typeof pU ? tU === pU : mU(tU, pU) < eU);
+      var tU, pU;
+      return mU(UU.position, RU.position) < eU && UU.fov === RU.fov && gU
     }
-    class KD {
-      constructor(DD, CD, cD) {
-        if (this.smooth = CD, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
+    class YU {
+      constructor(UU, RU, gU) {
+        if (this.smooth = RU, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
             index: 0,
             toIndex: 0,
             u: 0,
@@ -629,306 +629,306 @@ export const modules = {
             afterMs: 0,
             fromTangent: [0, 0, 0],
             toTangent: [0, 0, 0]
-          }, 0 === DD.length) throw new Error("A camera path needs at least one keyframe");
-        for (let iD = 1; iD < DD.length; iD++)
-          if (!(DD[iD].timeMs > DD[iD - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
-        this.nodes = DD.map((DD => {
-          var CD;
+          }, 0 === UU.length) throw new Error("A camera path needs at least one keyframe");
+        for (let EU = 1; EU < UU.length; EU++)
+          if (!(UU[EU].timeMs > UU[EU - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
+        this.nodes = UU.map((UU => {
+          var RU;
           return {
-            timeMs: DD.timeMs,
-            position: [...DD.position],
-            keyframe: DD,
-            easing: (0, iD.s)(null !== (CD = DD.easing) && void 0 !== CD ? CD : "linear")
+            timeMs: UU.timeMs,
+            position: [...UU.position],
+            keyframe: UU,
+            easing: (0, EU.r)(null !== (RU = UU.easing) && void 0 !== RU ? RU : "linear")
           }
         }));
-        const ID = this.nodes[0],
-          pD = this.nodes[this.nodes.length - 1],
-          fD = cD && this.nodes.length > 1;
-        fD && !JD(ID.keyframe, pD.keyframe) && this.nodes.push({
-          ...ID,
-          timeMs: pD.timeMs + (pD.timeMs - ID.timeMs) / (this.nodes.length - 1)
-        }), this.loopMs = fD ? this.nodes[this.nodes.length - 1].timeMs - ID.timeMs : 0, this.prevNodes = this.nodes.map(((DD, CD) => this.neighbour(CD, -1))), this.nextNodes = this.nodes.map(((DD, CD) => this.neighbour(CD, 1))), this.prevGaps = this.prevNodes.map(((DD, CD) => DD >= 0 ? this.gapMs(CD, -1) : 0)), this.nextGaps = this.nextNodes.map(((DD, CD) => DD >= 0 ? this.gapMs(CD, 1) : 0)), this.velocities = this.nodes.map(((DD, CD) => {
-          const cD = this.prevNodes[CD],
-            ID = this.nextNodes[CD];
-          return function(DD, CD, cD, ID, pD, iD) {
-            if (iD[0] = 0, iD[1] = 0, iD[2] = 0, !DD && !cD) return iD;
-            const fD = null !== DD && void 0 !== DD ? DD : PD(null !== cD && void 0 !== cD ? cD : CD, CD),
-              bD = null !== cD && void 0 !== cD ? cD : PD(null !== DD && void 0 !== DD ? DD : CD, CD),
-              QD = DD ? ID : pD,
-              wD = cD ? pD : ID,
-              SD = mD(fD, CD),
-              BD = mD(CD, bD);
-            if (SD < vD || BD < vD) return iD;
-            const yD = Math.sqrt(SD),
-              MD = Math.sqrt(BD),
-              tD = (yD + MD) / (QD + wD);
-            for (let ZD = 0; ZD < 3; ZD++) {
-              const DD = (CD[ZD] - fD[ZD]) / yD - (bD[ZD] - fD[ZD]) / (yD + MD) + (bD[ZD] - CD[ZD]) / MD;
-              iD[ZD] = DD * tD
+        const tU = this.nodes[0],
+          pU = this.nodes[this.nodes.length - 1],
+          PU = gU && this.nodes.length > 1;
+        PU && !aU(tU.keyframe, pU.keyframe) && this.nodes.push({
+          ...tU,
+          timeMs: pU.timeMs + (pU.timeMs - tU.timeMs) / (this.nodes.length - 1)
+        }), this.loopMs = PU ? this.nodes[this.nodes.length - 1].timeMs - tU.timeMs : 0, this.prevNodes = this.nodes.map(((UU, RU) => this.neighbour(RU, -1))), this.nextNodes = this.nodes.map(((UU, RU) => this.neighbour(RU, 1))), this.prevGaps = this.prevNodes.map(((UU, RU) => UU >= 0 ? this.gapMs(RU, -1) : 0)), this.nextGaps = this.nextNodes.map(((UU, RU) => UU >= 0 ? this.gapMs(RU, 1) : 0)), this.velocities = this.nodes.map(((UU, RU) => {
+          const gU = this.prevNodes[RU],
+            tU = this.nextNodes[RU];
+          return function(UU, RU, gU, tU, pU, EU) {
+            if (EU[0] = 0, EU[1] = 0, EU[2] = 0, !UU && !gU) return EU;
+            const PU = null !== UU && void 0 !== UU ? UU : wU(null !== gU && void 0 !== gU ? gU : RU, RU),
+              TU = null !== gU && void 0 !== gU ? gU : wU(null !== UU && void 0 !== UU ? UU : RU, RU),
+              qU = UU ? tU : pU,
+              KU = gU ? pU : tU,
+              cU = mU(PU, RU),
+              GU = mU(RU, TU);
+            if (cU < eU || GU < eU) return EU;
+            const jU = Math.sqrt(cU),
+              uU = Math.sqrt(GU),
+              CU = (jU + uU) / (qU + KU);
+            for (let hU = 0; hU < 3; hU++) {
+              const UU = (RU[hU] - PU[hU]) / jU - (TU[hU] - PU[hU]) / (jU + uU) + (TU[hU] - RU[hU]) / uU;
+              EU[hU] = UU * CU
             }
-            return iD
-          }(cD >= 0 ? this.nodes[cD].position : null, DD.position, ID >= 0 ? this.nodes[ID].position : null, this.prevGaps[CD], this.nextGaps[CD], [0, 0, 0])
-        })), this.aim = new qD(this.nodes, this.velocities, this.prevNodes, this.nextNodes, CD)
+            return EU
+          }(gU >= 0 ? this.nodes[gU].position : null, UU.position, tU >= 0 ? this.nodes[tU].position : null, this.prevGaps[RU], this.nextGaps[RU], [0, 0, 0])
+        })), this.aim = new ZU(this.nodes, this.velocities, this.prevNodes, this.nextNodes, RU)
       }
-      sample(DD, CD, cD, ID) {
-        const pD = this.findSegment(this.pathTime(DD));
-        this.samplePosition(pD, ID.position), this.aim.sample(pD, CD, ID);
+      sample(UU, RU, gU, tU) {
+        const pU = this.findSegment(this.pathTime(UU));
+        this.samplePosition(pU, tU.position), this.aim.sample(pU, RU, tU);
         const {
-          beforeIndex: iD,
-          afterIndex: fD
-        } = pD;
-        ID.fov = UD(pD, iD >= 0 ? this.fovAt(iD, cD) : 0, this.fovAt(pD.index, cD), this.fovAt(pD.toIndex, cD), fD >= 0 ? this.fovAt(fD, cD) : 0, iD >= 0, fD >= 0)
+          beforeIndex: EU,
+          afterIndex: PU
+        } = pU;
+        tU.fov = bU(pU, EU >= 0 ? this.fovAt(EU, gU) : 0, this.fovAt(pU.index, gU), this.fovAt(pU.toIndex, gU), PU >= 0 ? this.fovAt(PU, gU) : 0, EU >= 0, PU >= 0)
       }
-      pathTime(DD) {
-        const CD = this.nodes[0].timeMs;
-        if (this.loopMs <= 0 || DD <= CD) return DD;
-        const cD = DD - CD;
-        return CD + cD - this.loopMs * Math.floor(cD / this.loopMs)
+      pathTime(UU) {
+        const RU = this.nodes[0].timeMs;
+        if (this.loopMs <= 0 || UU <= RU) return UU;
+        const gU = UU - RU;
+        return RU + gU - this.loopMs * Math.floor(gU / this.loopMs)
       }
-      findSegment(DD) {
-        const CD = this.nodes,
-          cD = this.segment;
-        let ID = cD.index;
-        for (DD < CD[ID].timeMs && (ID = 0); ID < CD.length - 2 && CD[ID + 1].timeMs <= DD;) ID++;
-        const pD = Math.min(ID + 1, CD.length - 1),
-          fD = CD[pD].timeMs - CD[ID].timeMs;
-        return cD.index = ID, cD.toIndex = pD, cD.segmentMs = fD, cD.u = fD > 0 ? (0, iD.p)((DD - CD[ID].timeMs) / fD, CD[ID].easing) : 1, cD.curved = this.smooth && fD > 0, cD.beforeIndex = this.prevNodes[ID], cD.afterIndex = this.nextNodes[pD], cD.beforeMs = this.prevGaps[ID], cD.afterMs = this.nextGaps[pD], cD
+      findSegment(UU) {
+        const RU = this.nodes,
+          gU = this.segment;
+        let tU = gU.index;
+        for (UU < RU[tU].timeMs && (tU = 0); tU < RU.length - 2 && RU[tU + 1].timeMs <= UU;) tU++;
+        const pU = Math.min(tU + 1, RU.length - 1),
+          PU = RU[pU].timeMs - RU[tU].timeMs;
+        return gU.index = tU, gU.toIndex = pU, gU.segmentMs = PU, gU.u = PU > 0 ? (0, EU.o)((UU - RU[tU].timeMs) / PU, RU[tU].easing) : 1, gU.curved = this.smooth && PU > 0, gU.beforeIndex = this.prevNodes[tU], gU.afterIndex = this.nextNodes[pU], gU.beforeMs = this.prevGaps[tU], gU.afterMs = this.nextGaps[pU], gU
       }
-      samplePosition(DD, CD) {
+      samplePosition(UU, RU) {
         const {
-          fromTangent: cD,
-          toTangent: ID,
-          curved: pD
-        } = DD, iD = this.nodes[DD.index].position, fD = this.nodes[DD.toIndex].position;
-        nD(this.velocities[DD.index], iD, fD, DD.segmentMs, pD, cD), nD(this.velocities[DD.toIndex], iD, fD, DD.segmentMs, pD, ID);
-        const bD = DD.u;
-        for (let QD = 0; QD < 3; QD++) CD[QD] = pD ? gD(iD[QD], cD[QD], fD[QD], ID[QD], bD) : iD[QD] + (fD[QD] - iD[QD]) * bD
+          fromTangent: gU,
+          toTangent: tU,
+          curved: pU
+        } = UU, EU = this.nodes[UU.index].position, PU = this.nodes[UU.toIndex].position;
+        IU(this.velocities[UU.index], EU, PU, UU.segmentMs, pU, gU), IU(this.velocities[UU.toIndex], EU, PU, UU.segmentMs, pU, tU);
+        const TU = UU.u;
+        for (let qU = 0; qU < 3; qU++) RU[qU] = pU ? fU(EU[qU], gU[qU], PU[qU], tU[qU], TU) : EU[qU] + (PU[qU] - EU[qU]) * TU
       }
-      fovAt(DD, CD) {
-        var cD;
-        return null !== (cD = this.nodes[DD].keyframe.fov) && void 0 !== cD ? cD : CD
+      fovAt(UU, RU) {
+        var gU;
+        return null !== (gU = this.nodes[UU].keyframe.fov) && void 0 !== gU ? gU : RU
       }
-      neighbour(DD, CD) {
-        const cD = this.nodes.length - 1,
-          ID = DD + CD;
-        return ID >= 0 && ID <= cD ? ID : this.loopMs <= 0 || cD < 2 ? -1 : ID < 0 ? cD - 1 : 1
+      neighbour(UU, RU) {
+        const gU = this.nodes.length - 1,
+          tU = UU + RU;
+        return tU >= 0 && tU <= gU ? tU : this.loopMs <= 0 || gU < 2 ? -1 : tU < 0 ? gU - 1 : 1
       }
-      gapMs(DD, CD) {
-        const cD = this.nodes.length - 1;
-        if (1 === CD) {
-          const CD = DD === cD ? 0 : DD;
-          return this.nodes[CD + 1].timeMs - this.nodes[CD].timeMs
+      gapMs(UU, RU) {
+        const gU = this.nodes.length - 1;
+        if (1 === RU) {
+          const RU = UU === gU ? 0 : UU;
+          return this.nodes[RU + 1].timeMs - this.nodes[RU].timeMs
         }
-        const ID = 0 === DD ? cD : DD;
-        return this.nodes[ID].timeMs - this.nodes[ID - 1].timeMs
+        const tU = 0 === UU ? gU : UU;
+        return this.nodes[tU].timeMs - this.nodes[tU - 1].timeMs
       }
     }
-    class aD {
-      constructor(DD) {
-        this.Zy = DD, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = CD => DD.getEntityPosition(CD), this.readAimPoint = CD => DD.getEntityAimPoint(CD)
+    class BU {
+      constructor(UU) {
+        this.FG = UU, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = RU => UU.getEntityPosition(RU), this.readAimPoint = RU => UU.getEntityAimPoint(RU)
       }
-      aimPoint(DD) {
-        return "string" !== typeof DD ? (0, QD.q)(DD, 3) ? DD : null : this.resolve(DD, this.readAimPoint, this.lastAimPoints)
+      aimPoint(UU) {
+        return "string" !== typeof UU ? (0, qU.l)(UU, 3) ? UU : null : this.resolve(UU, this.readAimPoint, this.lastAimPoints)
       }
-      currentAimPoint(DD) {
-        const CD = "string" === typeof DD ? this.Zy.getEntityAimPoint(DD) : DD;
-        return CD && (0, QD.q)(CD, 3) ? CD : null
+      currentAimPoint(UU) {
+        const RU = "string" === typeof UU ? this.FG.getEntityAimPoint(UU) : UU;
+        return RU && (0, qU.l)(RU, 3) ? RU : null
       }
-      feetPosition(DD) {
-        return this.resolve(DD, this.readFeet, this.lastFeet)
+      feetPosition(UU) {
+        return this.resolve(UU, this.readFeet, this.lastFeet)
       }
-      heading(DD) {
-        const CD = this.Zy.getEntityHeading(DD);
-        if (null !== CD && Number.isFinite(CD)) return this.lastHeadings.set(DD, CD), CD;
-        const cD = this.lastHeadings.get(DD);
-        return void 0 !== cD ? cD : DD === this.Zy.localPlayerId ? 0 : this.heading(this.Zy.localPlayerId)
+      heading(UU) {
+        const RU = this.FG.getEntityHeading(UU);
+        if (null !== RU && Number.isFinite(RU)) return this.lastHeadings.set(UU, RU), RU;
+        const gU = this.lastHeadings.get(UU);
+        return void 0 !== gU ? gU : UU === this.FG.localPlayerId ? 0 : this.heading(this.FG.localPlayerId)
       }
-      resolve(DD, CD, cD) {
-        const ID = CD(DD);
-        let pD = cD.get(DD);
-        return ID && (0, QD.q)(ID, 3) ? (pD || (pD = [0, 0, 0], cD.set(DD, pD)), pD[0] = ID[0], pD[1] = ID[1], pD[2] = ID[2], pD) : pD || (DD === this.Zy.localPlayerId ? null : this.resolve(this.Zy.localPlayerId, CD, cD))
+      resolve(UU, RU, gU) {
+        const tU = RU(UU);
+        let pU = gU.get(UU);
+        return tU && (0, qU.l)(tU, 3) ? (pU || (pU = [0, 0, 0], gU.set(UU, pU)), pU[0] = tU[0], pU[1] = tU[1], pU[2] = tU[2], pU) : pU || (UU === this.FG.localPlayerId ? null : this.resolve(this.FG.localPlayerId, RU, gU))
       }
     }
 
-    function VD(DD) {
+    function VU(UU) {
       return {
-        heading: DD.heading,
-        pitch: DD.pitch
+        heading: UU.heading,
+        pitch: UU.pitch
       }
     }
 
-    function zD(DD, CD) {
-      Number.isFinite(DD.heading) && Number.isFinite(DD.pitch) || (0, pD.l)(CD, DD)
+    function rU(UU, RU) {
+      Number.isFinite(UU.heading) && Number.isFinite(UU.pitch) || (0, pU.l)(RU, UU)
     }
 
-    function jD(DD, CD, cD, ID, iD) {
-      if (CD) return void(0, pD.m)(CD, iD);
-      const fD = ID.aimPoint(cD);
-      fD && (0, pD.r)(DD, fD, iD)
+    function XU(UU, RU, gU, tU, EU) {
+      if (RU) return void(0, pU.o)(RU, EU);
+      const PU = tU.aimPoint(gU);
+      PU && (0, pU.u)(UU, PU, EU)
     }
-    class lD {
-      constructor(DD, CD, cD, ID) {
-        this.settings = DD, this.Zy = CD, this.targets = cD, this.base = void 0, this.base = VD(ID)
+    class vU {
+      constructor(UU, RU, gU, tU) {
+        this.settings = UU, this.FG = RU, this.targets = gU, this.base = void 0, this.base = VU(tU)
       }
-      update(DD, CD, cD) {
-        var ID;
-        const pD = this.settings;
-        (0, QD.h)(pD.position, cD.position), jD(pD.position, pD.lookDirection, null !== (ID = pD.lookAt) && void 0 !== ID ? ID : this.Zy.localPlayerId, this.targets, this.base), CD.apply(this.base, cD), cD.fov = MD(pD, this.Zy)
+      update(UU, RU, gU) {
+        var tU;
+        const pU = this.settings;
+        (0, qU.g)(pU.position, gU.position), XU(pU.position, pU.lookDirection, null !== (tU = pU.lookAt) && void 0 !== tU ? tU : this.FG.localPlayerId, this.targets, this.base), RU.apply(this.base, gU), gU.fov = uU(pU, this.FG)
       }
-      continueFrom(DD) {
-        DD instanceof lD && (0, pD.l)(DD.base, this.base)
+      continueFrom(UU) {
+        UU instanceof vU && (0, pU.l)(UU.base, this.base)
       }
-      reset(DD) {
-        zD(this.base, DD)
+      reset(UU) {
+        rU(this.base, UU)
       }
     }
-    class LD {
-      constructor(DD, CD, cD, ID) {
-        this.settings = DD, this.Zy = CD, this.targets = cD, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.lb = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.base = VD(ID), this.goal = [...ID.position]
+    class dU {
+      constructor(UU, RU, gU, tU) {
+        this.settings = UU, this.FG = RU, this.targets = gU, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.Fh = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.base = VU(tU), this.goal = [...tU.position]
       }
-      update(DD, CD, cD) {
-        var ID, pD, iD;
-        const fD = this.settings,
-          bD = null !== (ID = fD.target) && void 0 !== ID ? ID : this.Zy.localPlayerId,
-          wD = this.targets.feetPosition(bD);
-        let SD = !1;
-        wD && (SD = this.foundFeet && mD(this.lastFeet, wD) > 32 + .1 * DD, (0, QD.h)(wD, this.lastFeet), this.foundFeet = !0, this.placeGoal(wD, bD));
-        const BD = null !== (pD = fD.smoothMs) && void 0 !== pD ? pD : 0;
-        !this.started || BD < 1 || SD ? ((0, QD.h)(this.goal, this.smoothed), this.lb.fill(0), this.started = !0) : tD(this.smoothed, this.lb, this.goal, BD, DD), SD && (this.distance = -1), (0, QD.h)(this.smoothed, cD.position);
-        const yD = !0 === fD.avoidTerrain ? this.pullIn(bD, DD, cD) : 1;
-        let ZD = this.goal;
-        if ("target" === fD.offsetSpace) ZD = cD.position;
-        else if (yD < 1) {
-          ZD = this.aimOrigin;
-          for (let DD = 0; DD < 3; DD++) ZD[DD] = cD.position[DD] + (this.goal[DD] - this.smoothed[DD]) * yD
+      update(UU, RU, gU) {
+        var tU, pU, EU;
+        const PU = this.settings,
+          TU = null !== (tU = PU.target) && void 0 !== tU ? tU : this.FG.localPlayerId,
+          KU = this.targets.feetPosition(TU);
+        let cU = !1;
+        KU && (cU = this.foundFeet && mU(this.lastFeet, KU) > 32 + .1 * UU, (0, qU.g)(KU, this.lastFeet), this.foundFeet = !0, this.placeGoal(KU, TU));
+        const GU = null !== (pU = PU.smoothMs) && void 0 !== pU ? pU : 0;
+        !this.started || GU < 1 || cU ? ((0, qU.g)(this.goal, this.smoothed), this.Fh.fill(0), this.started = !0) : CU(this.smoothed, this.Fh, this.goal, GU, UU), cU && (this.distance = -1), (0, qU.g)(this.smoothed, gU.position);
+        const jU = !0 === PU.avoidTerrain ? this.pullIn(TU, UU, gU) : 1;
+        let hU = this.goal;
+        if ("target" === PU.offsetSpace) hU = gU.position;
+        else if (jU < 1) {
+          hU = this.aimOrigin;
+          for (let UU = 0; UU < 3; UU++) hU[UU] = gU.position[UU] + (this.goal[UU] - this.smoothed[UU]) * jU
         }
-        jD(ZD, fD.lookDirection, null !== (iD = fD.lookAt) && void 0 !== iD ? iD : bD, this.targets, this.base), CD.apply(this.base, cD), cD.fov = MD(fD, this.Zy)
+        XU(hU, PU.lookDirection, null !== (EU = PU.lookAt) && void 0 !== EU ? EU : TU, this.targets, this.base), RU.apply(this.base, gU), gU.fov = uU(PU, this.FG)
       }
-      continueFrom(DD) {
-        DD instanceof LD && (0, ID.r)(DD.settings.target, this.settings.target) && ((0, pD.l)(DD.base, this.base), (0, QD.h)(DD.goal, this.goal), (0, QD.h)(DD.lastFeet, this.lastFeet), this.foundFeet = DD.foundFeet, (0, QD.h)(DD.smoothed, this.smoothed), (0, QD.h)(DD.lb, this.lb), this.started = DD.started, !0 === DD.settings.avoidTerrain && (this.distance = DD.distance))
+      continueFrom(UU) {
+        UU instanceof dU && (0, tU.n)(UU.settings.target, this.settings.target) && ((0, pU.l)(UU.base, this.base), (0, qU.g)(UU.goal, this.goal), (0, qU.g)(UU.lastFeet, this.lastFeet), this.foundFeet = UU.foundFeet, (0, qU.g)(UU.smoothed, this.smoothed), (0, qU.g)(UU.Fh, this.Fh), this.started = UU.started, !0 === UU.settings.avoidTerrain && (this.distance = UU.distance))
       }
-      reset(DD) {
-        zD(this.base, DD), this.lb.fill(0), this.started = !1, this.distance = -1
+      reset(UU) {
+        rU(this.base, UU), this.Fh.fill(0), this.started = !1, this.distance = -1
       }
-      pullIn(DD, CD, cD) {
-        const ID = this.targets.aimPoint(DD);
-        if (!ID) return 1;
-        const pD = cD.position,
-          iD = mD(ID, pD);
-        if (!(iD > 0)) return 1;
-        const fD = this.toCamera;
-        for (let QD = 0; QD < 3; QD++) fD[QD] = (pD[QD] - ID[QD]) / iD;
-        const bD = function(DD, CD, cD) {
-          return DD < 0 || CD < DD ? CD : CD + (DD - CD) * Math.exp(-cD / 150)
-        }(this.distance, function(DD, CD, cD, ID) {
-          const pD = DD.raycastTerrain(CD, cD, ID);
-          return null !== pD && Number.isFinite(pD) ? Math.min(ID, Math.max(0, pD - .2)) : ID
-        }(this.Zy, ID, fD, iD), CD);
-        if (iD - bD < .001) return this.distance = -1, 1;
-        this.distance = bD;
-        for (let QD = 0; QD < 3; QD++) pD[QD] = ID[QD] + fD[QD] * bD;
-        return bD / iD
+      pullIn(UU, RU, gU) {
+        const tU = this.targets.aimPoint(UU);
+        if (!tU) return 1;
+        const pU = gU.position,
+          EU = mU(tU, pU);
+        if (!(EU > 0)) return 1;
+        const PU = this.toCamera;
+        for (let qU = 0; qU < 3; qU++) PU[qU] = (pU[qU] - tU[qU]) / EU;
+        const TU = function(UU, RU, gU) {
+          return UU < 0 || RU < UU ? RU : RU + (UU - RU) * Math.exp(-gU / 150)
+        }(this.distance, function(UU, RU, gU, tU) {
+          const pU = UU.raycastTerrain(RU, gU, tU);
+          return null !== pU && Number.isFinite(pU) ? Math.min(tU, Math.max(0, pU - .2)) : tU
+        }(this.FG, tU, PU, EU), RU);
+        if (EU - TU < .001) return this.distance = -1, 1;
+        this.distance = TU;
+        for (let qU = 0; qU < 3; qU++) pU[qU] = tU[qU] + PU[qU] * TU;
+        return TU / EU
       }
-      placeGoal(DD, CD) {
-        const cD = this.settings.offset;
-        let ID = cD[0],
-          pD = cD[2];
+      placeGoal(UU, RU) {
+        const gU = this.settings.offset;
+        let tU = gU[0],
+          pU = gU[2];
         if ("target" === this.settings.offsetSpace) {
-          const DD = this.targets.heading(CD),
-            iD = Math.cos(DD),
-            fD = Math.sin(DD);
-          ID = cD[0] * iD + cD[2] * fD, pD = -cD[0] * fD + cD[2] * iD
+          const UU = this.targets.heading(RU),
+            EU = Math.cos(UU),
+            PU = Math.sin(UU);
+          tU = gU[0] * EU + gU[2] * PU, pU = -gU[0] * PU + gU[2] * EU
         }
-        this.goal[0] = DD[0] + ID, this.goal[1] = DD[1] + cD[1], this.goal[2] = DD[2] + pD
+        this.goal[0] = UU[0] + tU, this.goal[1] = UU[1] + gU[1], this.goal[2] = UU[2] + pU
       }
     }
-    class TD {
-      constructor(DD, CD, cD, ID) {
-        var pD, iD;
-        this.settings = DD, this.Zy = CD, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = DD.keyframes.length > 0 ? new KD(DD.keyframes, null === (pD = DD.smooth) || void 0 === pD || pD, null !== (iD = DD.loop) && void 0 !== iD && iD) : null, this.base = (0, QD.d)(ID, (0, QD.k)()), this.resolveTarget = DD => cD.aimPoint(DD)
+    class HU {
+      constructor(UU, RU, gU, tU) {
+        var pU, EU;
+        this.settings = UU, this.FG = RU, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = UU.keyframes.length > 0 ? new YU(UU.keyframes, null === (pU = UU.smooth) || void 0 === pU || pU, null !== (EU = UU.loop) && void 0 !== EU && EU) : null, this.base = (0, qU.d)(tU, (0, qU.h)()), this.resolveTarget = UU => gU.aimPoint(UU)
       }
-      update(DD, CD, cD) {
-        this.elapsedMs += DD;
-        const ID = MD(this.settings, this.Zy);
-        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, ID, this.base) : this.base.fov = ID, (0, QD.h)(this.base.position, cD.position), cD.fov = this.base.fov, CD.apply(this.base, cD)
+      update(UU, RU, gU) {
+        this.elapsedMs += UU;
+        const tU = uU(this.settings, this.FG);
+        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, tU, this.base) : this.base.fov = tU, (0, qU.g)(this.base.position, gU.position), gU.fov = this.base.fov, RU.apply(this.base, gU)
       }
-      continueFrom(DD) {
-        DD instanceof TD && (0, ID.r)(DD.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = DD.elapsedMs, (0, QD.d)(DD.base, this.base))
+      continueFrom(UU) {
+        UU instanceof HU && (0, tU.n)(UU.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = UU.elapsedMs, (0, qU.d)(UU.base, this.base))
       }
-      reset(DD) {
-        zD(this.base, DD), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
+      reset(UU) {
+        rU(this.base, UU), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
       }
     }
 
-    function GD(DD, CD) {
-      return (0, ID.v)(DD, CD)
+    function SU(UU, RU) {
+      return (0, tU.o)(UU, RU)
     }
-    class RD {
-      constructor(DD, CD, cD) {
-        var ID;
-        this.settings = DD, this.Zy = CD, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
-        const pD = null !== cD && cD.settings.mode === DD.mode,
-          iD = pD ? cD.pose : CD.getDefaultPose();
-        this.pose = (0, QD.d)(iD, (0, QD.k)()), this.lastGoodPose = (0, QD.d)(pD ? cD.lastGoodPose : iD, (0, QD.k)()), this.look = new oD(DD.playerLook), this.targets = null !== (ID = null === cD || void 0 === cD ? void 0 : cD.targets) && void 0 !== ID ? ID : new aD(CD);
-        const fD = (0, QD.d)(iD, (0, QD.k)());
-        pD && cD.look.unapply(fD, fD), this.mode = function(DD, CD, cD, ID) {
-          switch (DD.mode) {
+    class sU {
+      constructor(UU, RU, gU) {
+        var tU;
+        this.settings = UU, this.FG = RU, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
+        const pU = null !== gU && gU.settings.mode === UU.mode,
+          EU = pU ? gU.pose : RU.getDefaultPose();
+        this.pose = (0, qU.d)(EU, (0, qU.h)()), this.lastGoodPose = (0, qU.d)(pU ? gU.lastGoodPose : EU, (0, qU.h)()), this.look = new QU(UU.playerLook), this.targets = null !== (tU = null === gU || void 0 === gU ? void 0 : gU.targets) && void 0 !== tU ? tU : new BU(RU);
+        const PU = (0, qU.d)(EU, (0, qU.h)());
+        pU && gU.look.unapply(PU, PU), this.mode = function(UU, RU, gU, tU) {
+          switch (UU.mode) {
             case "fixed":
-              return new lD(DD, CD, cD, ID);
+              return new vU(UU, RU, gU, tU);
             case "follow":
-              return new LD(DD, CD, cD, ID);
+              return new dU(UU, RU, gU, tU);
             case "path":
-              return new TD(DD, CD, cD, ID);
+              return new HU(UU, RU, gU, tU);
             case "frame":
-              return new ZD(DD, CD, cD, ID)
+              return new hU(UU, RU, gU, tU)
           }
-        }(DD, CD, this.targets, fD), pD && (this.look.continueFrom(cD.look), this.mode.continueFrom(cD.mode))
+        }(UU, RU, this.targets, PU), pU && (this.look.continueFrom(gU.look), this.mode.continueFrom(gU.mode))
       }
-      update(DD, CD) {
-        return this.look.update(DD, CD), this.mode.update(DD, this.look, this.pose), (0, QD.n)(this.pose) ? (0, QD.d)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, QD.d)(this.lastGoodPose, this.pose), this.mode.reset((0, QD.n)(this.lastGoodPose) ? this.lastGoodPose : this.Zy.getDefaultPose())), this.pose
+      update(UU, RU) {
+        return this.look.update(UU, RU), this.mode.update(UU, this.look, this.pose), (0, qU.j)(this.pose) ? (0, qU.d)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, qU.d)(this.lastGoodPose, this.pose), this.mode.reset((0, qU.j)(this.lastGoodPose) ? this.lastGoodPose : this.FG.getDefaultPose())), this.pose
       }
     }
 
-    function kD(DD) {
-      return [0, 0, DD[2], DD[3]]
+    function yU(UU) {
+      return [0, 0, UU[2], UU[3]]
     }
-    class dD {
-      constructor(DD) {
-        this.Zy = DD, this.settings = {
+    class kU {
+      constructor(UU) {
+        this.FG = UU, this.settings = {
           mode: "default"
-        }, this.pending = null, this.fade = new bD, this.shot = null, this.blend = null, this.mixed = (0, QD.k)(), this.output = (0, QD.k)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
+        }, this.pending = null, this.fade = new TU, this.shot = null, this.blend = null, this.mixed = (0, qU.h)(), this.output = (0, qU.h)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
           length: 3
         }, (() => [0, 0, 0]))
       }
-      setSettings(DD) {
-        const CD = (0, wD.c)(DD);
-        if ((0, ID.r)(CD, this.pending ? this.pending.settings : this.settings)) return;
-        const cD = GD(this.settings, CD);
-        if (void 0 !== CD.transition && !cD) return this.pending = {
-          settings: CD,
-          shot: "default" === CD.mode ? null : new RD(CD, this.Zy, null)
-        }, void this.fade.fadeOut(CD.transition);
-        const pD = null !== this.pending;
-        this.pending = null, !pD && cD || this.fade.fadeIn(ID.k.minTransitionFadeMs), this.show(CD, !1)
+      setSettings(UU) {
+        const RU = (0, KU.c)(UU);
+        if ((0, tU.n)(RU, this.pending ? this.pending.settings : this.settings)) return;
+        const gU = SU(this.settings, RU);
+        if (void 0 !== RU.transition && !gU) return this.pending = {
+          settings: RU,
+          shot: "default" === RU.mode ? null : new sU(RU, this.FG, null)
+        }, void this.fade.fadeOut(RU.transition);
+        const pU = null !== this.pending;
+        this.pending = null, !pU && gU || this.fade.fadeIn(tU.i.minTransitionFadeMs), this.show(RU, !1)
       }
-      show(DD, CD) {
-        var cD, pD;
-        if ((0, ID.r)(DD, this.settings)) return;
-        const fD = !CD && GD(this.settings, DD);
-        this.settings = DD;
-        const bD = null !== this.blend && this.blend.elapsedMs > 0,
-          wD = (0, QD.d)(this.hasOutput ? this.output : this.Zy.getDefaultPose(), (0, QD.k)());
-        if (this.shot = "default" === DD.mode ? null : new RD(DD, this.Zy, CD ? null : this.shot), fD) return;
-        const SD = CD || !this.shot && !this.hasOutput ? 0 : null !== (cD = DD.blendInMs) && void 0 !== cD ? cD : 0;
-        if (SD <= 0) return void(this.blend = null);
-        const BD = (0, iD.s)(null !== (pD = DD.blendEasing) && void 0 !== pD ? pD : "easeInOut");
+      show(UU, RU) {
+        var gU, pU;
+        if ((0, tU.n)(UU, this.settings)) return;
+        const PU = !RU && SU(this.settings, UU);
+        this.settings = UU;
+        const TU = null !== this.blend && this.blend.elapsedMs > 0,
+          KU = (0, qU.d)(this.hasOutput ? this.output : this.FG.getDefaultPose(), (0, qU.h)());
+        if (this.shot = "default" === UU.mode ? null : new sU(UU, this.FG, RU ? null : this.shot), PU) return;
+        const cU = RU || !this.shot && !this.hasOutput ? 0 : null !== (gU = UU.blendInMs) && void 0 !== gU ? gU : 0;
+        if (cU <= 0) return void(this.blend = null);
+        const GU = (0, EU.r)(null !== (pU = UU.blendEasing) && void 0 !== pU ? pU : "easeInOut");
         this.blend = {
-          from: wD,
+          from: KU,
           fromScripted: this.hasOutput,
           headingDelta: NaN,
           elapsedMs: 0,
-          durationMs: SD,
-          easing: bD ? kD(BD) : BD
+          durationMs: cU,
+          easing: TU ? yU(GU) : GU
         }
       }
       getSettings() {
@@ -943,66 +943,66 @@ export const modules = {
       isActive() {
         return null !== this.shot || null !== this.blend
       }
-      update(DD, CD) {
-        const cD = Number.isFinite(DD) && DD > 0 ? DD : 0;
-        if (this.fade.advance(cD) && null !== this.pending) {
+      update(UU, RU) {
+        const gU = Number.isFinite(UU) && UU > 0 ? UU : 0;
+        if (this.fade.advance(gU) && null !== this.pending) {
           const {
-            settings: DD
+            settings: UU
           } = this.pending;
-          this.pending = null, this.show(DD, !0)
+          this.pending = null, this.show(UU, !0)
         }
         this.loadingPositions.length = 0;
-        const ID = this.pending;
-        if (null !== ID && void 0 !== ID && ID.shot) {
-          const DD = "path" === ID.settings.mode ? 0 : cD;
-          this.noteLoadingPosition(ID.shot.update(DD, QD.b).position)
+        const tU = this.pending;
+        if (null !== tU && void 0 !== tU && tU.shot) {
+          const UU = "path" === tU.settings.mode ? 0 : gU;
+          this.noteLoadingPosition(tU.shot.update(UU, qU.b).position)
         }
         if (!this.isActive()) return this.hasOutput = !1, null;
-        const fD = this.shot ? this.shot.update(cD, CD) : this.Zy.getDefaultPose();
-        this.shot && this.noteLoadingPosition(fD.position);
-        const bD = this.blend;
-        if (!bD) return this.writeOutput(fD);
-        bD.elapsedMs += cD;
-        const wD = Math.min(1, bD.elapsedMs / bD.durationMs);
-        if (bD.headingDelta = Number.isFinite(bD.headingDelta) ? (0, pD.x)(bD.headingDelta, fD.heading - bD.from.heading) : (0, pD.w)(bD.from.heading, fD.heading), (0, QD.r)(bD.from, fD, bD.headingDelta, (0, iD.p)(wD, bD.easing), this.mixed), wD >= 1) {
+        const PU = this.shot ? this.shot.update(gU, RU) : this.FG.getDefaultPose();
+        this.shot && this.noteLoadingPosition(PU.position);
+        const TU = this.blend;
+        if (!TU) return this.writeOutput(PU);
+        TU.elapsedMs += gU;
+        const KU = Math.min(1, TU.elapsedMs / TU.durationMs);
+        if (TU.headingDelta = Number.isFinite(TU.headingDelta) ? (0, pU.z)(TU.headingDelta, PU.heading - TU.from.heading) : (0, pU.y)(TU.from.heading, PU.heading), (0, qU.n)(TU.from, PU, TU.headingDelta, (0, EU.o)(KU, TU.easing), this.mixed), KU >= 1) {
           if (this.blend = null, !this.shot) return this.hasOutput = !1, null
-        } else bD.fromScripted && this.noteLoadingPosition(bD.from.position);
+        } else TU.fromScripted && this.noteLoadingPosition(TU.from.position);
         return this.writeOutput(this.mixed)
       }
-      noteLoadingPosition(DD) {
-        if (DD.every(Number.isFinite)) {
-          const CD = this.loadingPositions;
-          CD.push((0, QD.h)(DD, this.loadingSlots[CD.length]))
+      noteLoadingPosition(UU) {
+        if (UU.every(Number.isFinite)) {
+          const RU = this.loadingPositions;
+          RU.push((0, qU.g)(UU, this.loadingSlots[RU.length]))
         }
       }
-      writeOutput(DD) {
-        const CD = this.output;
-        (0, QD.n)(DD) ? (0, QD.d)(DD, CD) : this.hasOutput || (0, QD.d)(this.Zy.getDefaultPose(), CD), CD.pitch = (0, pD.j)(CD.pitch);
-        const cD = this.Zy.getDefaultFov(),
-          iD = Number.isFinite(cD) && cD > 0 && cD < 180,
-          fD = iD ? Math.min(ID.k.minFov, cD) : ID.k.minFov,
-          bD = iD ? Math.max(ID.k.maxFov, cD) : ID.k.maxFov;
-        return CD.fov = Number.isFinite(CD.fov) ? Math.min(bD, Math.max(fD, CD.fov)) : bD, this.hasOutput = !0, CD
+      writeOutput(UU) {
+        const RU = this.output;
+        (0, qU.j)(UU) ? (0, qU.d)(UU, RU) : this.hasOutput || (0, qU.d)(this.FG.getDefaultPose(), RU), RU.pitch = (0, pU.i)(RU.pitch);
+        const gU = this.FG.getDefaultFov(),
+          EU = Number.isFinite(gU) && gU > 0 && gU < 180,
+          PU = EU ? Math.min(tU.i.minFov, gU) : tU.i.minFov,
+          TU = EU ? Math.max(tU.i.maxFov, gU) : tU.i.maxFov;
+        return RU.fov = Number.isFinite(RU.fov) ? Math.min(TU, Math.max(PU, RU.fov)) : TU, this.hasOutput = !0, RU
       }
     }
   },
-  38494: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => pD,
-      d: () => bD,
-      h: () => fD,
-      k: () => iD,
-      n: () => wD,
-      q: () => QD,
-      r: () => SD
+  38705: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => pU,
+      d: () => TU,
+      g: () => PU,
+      h: () => EU,
+      j: () => KU,
+      l: () => qU,
+      n: () => cU
     });
-    var ID = cD(38496);
-    const pD = {
-      Qq: 0,
-      wq: 0
+    var tU = gU(38708);
+    const pU = {
+      Xw: 0,
+      Ow: 0
     };
 
-    function iD() {
+    function EU() {
       return {
         position: [0, 0, 0],
         heading: 0,
@@ -1011,196 +1011,196 @@ export const modules = {
       }
     }
 
-    function fD(DD, CD) {
-      return CD[0] = DD[0], CD[1] = DD[1], CD[2] = DD[2], CD
+    function PU(UU, RU) {
+      return RU[0] = UU[0], RU[1] = UU[1], RU[2] = UU[2], RU
     }
 
-    function bD(DD, CD) {
-      return fD(DD.position, CD.position), CD.heading = DD.heading, CD.pitch = DD.pitch, CD.fov = DD.fov, CD
+    function TU(UU, RU) {
+      return PU(UU.position, RU.position), RU.heading = UU.heading, RU.pitch = UU.pitch, RU.fov = UU.fov, RU
     }
 
-    function QD(DD, CD) {
-      return Array.isArray(DD) && DD.length === CD && DD.every(Number.isFinite)
+    function qU(UU, RU) {
+      return Array.isArray(UU) && UU.length === RU && UU.every(Number.isFinite)
     }
 
-    function wD(DD) {
-      return QD(DD.position, 3) && Number.isFinite(DD.heading) && Number.isFinite(DD.pitch) && Number.isFinite(DD.fov)
+    function KU(UU) {
+      return qU(UU.position, 3) && Number.isFinite(UU.heading) && Number.isFinite(UU.pitch) && Number.isFinite(UU.fov)
     }
 
-    function SD(DD, CD, cD, pD, iD) {
-      for (let ID = 0; ID < 3; ID++) iD.position[ID] = DD.position[ID] + (CD.position[ID] - DD.position[ID]) * pD;
-      return iD.heading = (0, ID.u)(DD.heading + cD * pD), iD.pitch = DD.pitch + (CD.pitch - DD.pitch) * pD, iD.fov = DD.fov + (CD.fov - DD.fov) * pD, iD
+    function cU(UU, RU, gU, pU, EU) {
+      for (let tU = 0; tU < 3; tU++) EU.position[tU] = UU.position[tU] + (RU.position[tU] - UU.position[tU]) * pU;
+      return EU.heading = (0, tU.w)(UU.heading + gU * pU), EU.pitch = UU.pitch + (RU.pitch - UU.pitch) * pU, EU.fov = UU.fov + (RU.fov - UU.fov) * pU, EU
     }
   },
-  38510: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => OD,
-      e: () => yD
+  38727: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => JU,
+      f: () => jU
     });
-    var ID = cD(38505),
-      pD = cD(38494);
-    const iD = ID.g,
-      fD = ID.m;
+    var tU = gU(38724),
+      pU = gU(38705);
+    const EU = tU.g,
+      PU = tU.j;
 
-    function bD(DD, CD, cD, ID) {
-      return Number.isFinite(DD) ? Math.min(cD, Math.max(CD, DD)) : ID
+    function TU(UU, RU, gU, tU) {
+      return Number.isFinite(UU) ? Math.min(gU, Math.max(RU, UU)) : tU
     }
 
-    function QD(DD, CD, cD) {
-      return void 0 !== DD && Number.isFinite(DD) ? Math.min(cD, Math.max(CD, DD)) : void 0
+    function qU(UU, RU, gU) {
+      return void 0 !== UU && Number.isFinite(UU) ? Math.min(gU, Math.max(RU, UU)) : void 0
     }
 
-    function wD(DD) {
-      const CD = ID.k.maxCoordinate;
-      return [Math.min(CD, Math.max(-CD, DD[0])), Math.min(CD, Math.max(-CD, DD[1])), Math.min(CD, Math.max(-CD, DD[2]))]
+    function KU(UU) {
+      const RU = tU.i.maxCoordinate;
+      return [Math.min(RU, Math.max(-RU, UU[0])), Math.min(RU, Math.max(-RU, UU[1])), Math.min(RU, Math.max(-RU, UU[2]))]
     }
 
-    function SD(DD) {
-      return "string" === typeof DD ? DD : (0, pD.q)(DD, 3) ? wD(DD) : void 0
+    function cU(UU) {
+      return "string" === typeof UU ? UU : (0, pU.l)(UU, 3) ? KU(UU) : void 0
     }
-    const BD = new RegExp(ID.o);
+    const GU = new RegExp(tU.l);
 
-    function yD(DD) {
-      return "string" === typeof DD && BD.test(DD)
+    function jU(UU) {
+      return "string" === typeof UU && GU.test(UU)
     }
 
-    function MD(DD) {
-      const CD = [];
-      if (!Array.isArray(DD)) return CD;
-      for (const cD of DD.slice(0, ID.k.maxFrameTargets)) {
-        const DD = SD(cD);
-        void 0 === DD || "string" === typeof DD && !yD(DD) || CD.push(DD)
+    function uU(UU) {
+      const RU = [];
+      if (!Array.isArray(UU)) return RU;
+      for (const gU of UU.slice(0, tU.i.maxFrameTargets)) {
+        const UU = cU(gU);
+        void 0 === UU || "string" === typeof UU && !jU(UU) || RU.push(UU)
       }
-      return CD
+      return RU
     }
 
-    function tD(DD) {
-      if (!(0, pD.q)(DD, 3)) return;
-      const CD = Math.max(Math.abs(DD[0]), Math.abs(DD[1]), Math.abs(DD[2])),
-        cD = Math.hypot(DD[0] / CD, DD[1] / CD, DD[2] / CD);
-      return 0 === CD || CD * cD < ID.k.minDirectionLength ? void 0 : [DD[0] / CD / cD, DD[1] / CD / cD, DD[2] / CD / cD]
+    function CU(UU) {
+      if (!(0, pU.l)(UU, 3)) return;
+      const RU = Math.max(Math.abs(UU[0]), Math.abs(UU[1]), Math.abs(UU[2])),
+        gU = Math.hypot(UU[0] / RU, UU[1] / RU, UU[2] / RU);
+      return 0 === RU || RU * gU < tU.i.minDirectionLength ? void 0 : [UU[0] / RU / gU, UU[1] / RU / gU, UU[2] / RU / gU]
     }
 
-    function ZD(DD) {
-      if (void 0 !== DD) return "string" === typeof DD ? iD.includes(DD) ? DD : void 0 : (0, pD.q)(DD, 4) ? [bD(DD[0], 0, 1, 0), bD(DD[1], ID.k.minEasingY, ID.k.maxEasingY, 0), bD(DD[2], 0, 1, 1), bD(DD[3], ID.k.minEasingY, ID.k.maxEasingY, 1)] : "linear"
+    function hU(UU) {
+      if (void 0 !== UU) return "string" === typeof UU ? EU.includes(UU) ? UU : void 0 : (0, pU.l)(UU, 4) ? [TU(UU[0], 0, 1, 0), TU(UU[1], tU.i.minEasingY, tU.i.maxEasingY, 0), TU(UU[2], 0, 1, 1), TU(UU[3], tU.i.minEasingY, tU.i.maxEasingY, 1)] : "linear"
     }
 
-    function oD(DD) {
-      if (DD) return {
-        maxYaw: bD(DD.maxYaw, 0, ID.k.maxPlayerLook, 0),
-        maxPitch: bD(DD.maxPitch, 0, ID.k.maxPlayerLook, 0),
-        returnMs: QD(DD.returnMs, 0, ID.k.maxReturnMs)
+    function QU(UU) {
+      if (UU) return {
+        maxYaw: TU(UU.maxYaw, 0, tU.i.maxPlayerLook, 0),
+        maxPitch: TU(UU.maxPitch, 0, tU.i.maxPlayerLook, 0),
+        returnMs: qU(UU.returnMs, 0, tU.i.maxReturnMs)
       }
     }
-    const vD = new RegExp(ID.b);
+    const eU = new RegExp(tU.c);
 
-    function ND(DD) {
-      var CD;
-      if ("object" !== typeof DD || null === DD) return;
-      const cD = ID.k.maxTransitionMs,
-        pD = ID.k.minTransitionFadeMs;
+    function WU(UU) {
+      var RU;
+      if ("object" !== typeof UU || null === UU) return;
+      const gU = tU.i.maxTransitionMs,
+        pU = tU.i.minTransitionFadeMs;
       return {
-        colour: "string" === typeof DD.colour && vD.test(DD.colour) ? DD.colour : ID.c,
-        outMs: bD(DD.outMs, pD, cD, pD),
-        holdMs: bD(null !== (CD = DD.holdMs) && void 0 !== CD ? CD : 0, 0, cD, 0),
-        inMs: bD(DD.inMs, pD, cD, pD)
+        colour: "string" === typeof UU.colour && eU.test(UU.colour) ? UU.colour : tU.d,
+        outMs: TU(UU.outMs, pU, gU, pU),
+        holdMs: TU(null !== (RU = UU.holdMs) && void 0 !== RU ? RU : 0, 0, gU, 0),
+        inMs: TU(UU.inMs, pU, gU, pU)
       }
     }
 
-    function gD(DD) {
-      return !0 === DD || void 0
+    function fU(UU) {
+      return !0 === UU || void 0
     }
 
-    function XD(DD) {
-      if ("object" !== typeof DD || null === DD) return !1;
-      const CD = DD.lookAt;
-      return Number.isFinite(DD.timeMs) && (0, pD.q)(DD.position, 3) && (void 0 === CD || "string" === typeof CD || (0, pD.q)(CD, 3))
+    function xU(UU) {
+      if ("object" !== typeof UU || null === UU) return !1;
+      const RU = UU.lookAt;
+      return Number.isFinite(UU.timeMs) && (0, pU.l)(UU.position, 3) && (void 0 === RU || "string" === typeof RU || (0, pU.l)(RU, 3))
     }
 
-    function mD(DD) {
+    function mU(UU) {
       return {
-        ...DD,
-        timeMs: bD(DD.timeMs, 0, ID.k.maxPathMs, 0),
-        position: wD(DD.position),
-        lookAt: SD(DD.lookAt),
-        lookDirection: tD(DD.lookDirection),
-        fov: QD(DD.fov, ID.k.minFov, ID.k.maxFov),
-        easing: ZD(DD.easing)
+        ...UU,
+        timeMs: TU(UU.timeMs, 0, tU.i.maxPathMs, 0),
+        position: KU(UU.position),
+        lookAt: cU(UU.lookAt),
+        lookDirection: CU(UU.lookDirection),
+        fov: qU(UU.fov, tU.i.minFov, tU.i.maxFov),
+        easing: hU(UU.easing)
       }
     }
 
-    function nD(DD) {
-      const CD = [];
-      if (!Array.isArray(DD)) return CD;
-      for (const cD of DD.slice(0, ID.k.maxKeyframes)) {
-        if (!XD(cD)) continue;
-        const DD = mD(cD);
-        (0 === CD.length || DD.timeMs > CD[CD.length - 1].timeMs) && CD.push(DD)
+    function IU(UU) {
+      const RU = [];
+      if (!Array.isArray(UU)) return RU;
+      for (const gU of UU.slice(0, tU.i.maxKeyframes)) {
+        if (!xU(gU)) continue;
+        const UU = mU(gU);
+        (0 === RU.length || UU.timeMs > RU[RU.length - 1].timeMs) && RU.push(UU)
       }
-      return CD
+      return RU
     }
 
-    function OD(DD) {
-      if ("object" !== typeof DD || null === DD) return {
+    function JU(UU) {
+      if ("object" !== typeof UU || null === UU) return {
         mode: "default"
       };
-      const CD = {
-          blendInMs: QD(DD.blendInMs, 0, ID.k.maxBlendInMs),
-          blendEasing: ZD(DD.blendEasing),
-          transition: ND(DD.transition),
-          letterbox: gD(DD.letterbox),
-          hideHud: gD(DD.hideHud)
+      const RU = {
+          blendInMs: qU(UU.blendInMs, 0, tU.i.maxBlendInMs),
+          blendEasing: hU(UU.blendEasing),
+          transition: WU(UU.transition),
+          letterbox: fU(UU.letterbox),
+          hideHud: fU(UU.hideHud)
         },
-        cD = {
+        gU = {
           mode: "default",
-          ...CD
+          ...RU
         };
-      if ("default" === DD.mode || "fixed" === DD.mode && !(0, pD.q)(DD.position, 3)) return cD;
-      const iD = {
-        ...CD,
-        fov: QD(DD.fov, ID.k.minFov, ID.k.maxFov),
-        playerFacing: (BD = DD.playerFacing, fD.includes(BD) ? BD : void 0),
-        playerLook: oD(DD.playerLook)
+      if ("default" === UU.mode || "fixed" === UU.mode && !(0, pU.l)(UU.position, 3)) return gU;
+      const EU = {
+        ...RU,
+        fov: qU(UU.fov, tU.i.minFov, tU.i.maxFov),
+        playerFacing: (GU = UU.playerFacing, PU.includes(GU) ? GU : void 0),
+        playerLook: QU(UU.playerLook)
       };
-      var BD, yD;
-      switch (DD.mode) {
+      var GU, jU;
+      switch (UU.mode) {
         case "fixed":
           return {
-            ...DD, ...iD, position: wD(DD.position), lookAt: SD(DD.lookAt), lookDirection: tD(DD.lookDirection)
+            ...UU, ...EU, position: KU(UU.position), lookAt: cU(UU.lookAt), lookDirection: CU(UU.lookDirection)
           };
         case "follow":
           return {
-            ...DD, ...iD, target: "string" === typeof DD.target ? DD.target : void 0, lookAt: SD(DD.lookAt), offset: (yD = DD.offset, Array.isArray(yD) ? [bD(yD[0], -ID.k.maxOffset, ID.k.maxOffset, 0), bD(yD[1], -ID.k.maxOffset, ID.k.maxOffset, 0), bD(yD[2], -ID.k.maxOffset, ID.k.maxOffset, 0)] : [0, 0, 0]), lookDirection: tD(DD.lookDirection), smoothMs: QD(DD.smoothMs, 0, ID.k.maxSmoothMs)
+            ...UU, ...EU, target: "string" === typeof UU.target ? UU.target : void 0, lookAt: cU(UU.lookAt), offset: (jU = UU.offset, Array.isArray(jU) ? [TU(jU[0], -tU.i.maxOffset, tU.i.maxOffset, 0), TU(jU[1], -tU.i.maxOffset, tU.i.maxOffset, 0), TU(jU[2], -tU.i.maxOffset, tU.i.maxOffset, 0)] : [0, 0, 0]), lookDirection: CU(UU.lookDirection), smoothMs: qU(UU.smoothMs, 0, tU.i.maxSmoothMs)
           };
         case "path":
           return {
-            ...DD, ...iD, keyframes: nD(DD.keyframes)
+            ...UU, ...EU, keyframes: IU(UU.keyframes)
           };
         case "frame":
           return {
-            ...DD, ...iD, targets: MD(DD.targets), viewHeading: QD(DD.viewHeading, -ID.k.maxFrameHeading, ID.k.maxFrameHeading), viewElevation: QD(DD.viewElevation, 0, ID.k.maxFrameElevation), padding: QD(DD.padding, 0, ID.k.maxFrameDistance), closestDistance: QD(DD.closestDistance, 0, ID.k.maxFrameDistance), furthestDistance: QD(DD.furthestDistance, 0, ID.k.maxFrameDistance), smoothMs: QD(DD.smoothMs, 0, ID.k.maxSmoothMs)
+            ...UU, ...EU, targets: uU(UU.targets), viewHeading: qU(UU.viewHeading, -tU.i.maxFrameHeading, tU.i.maxFrameHeading), viewElevation: qU(UU.viewElevation, 0, tU.i.maxFrameElevation), padding: qU(UU.padding, 0, tU.i.maxFrameDistance), closestDistance: qU(UU.closestDistance, 0, tU.i.maxFrameDistance), furthestDistance: qU(UU.furthestDistance, 0, tU.i.maxFrameDistance), smoothMs: qU(UU.smoothMs, 0, tU.i.maxSmoothMs)
           };
         default:
-          return cD
+          return gU
       }
     }
   },
-  38030: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => bD
+  38210: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => TU
     });
-    var ID = cD(1221);
+    var tU = gU(1217);
 
-    function pD(DD) {
-      const CD = /(\d*\.?\d+)px/.exec(DD);
-      return CD ? Number(CD[1]) : null
+    function pU(UU) {
+      const RU = /(\d*\.?\d+)px/.exec(UU);
+      return RU ? Number(RU[1]) : null
     }
 
-    function iD(DD) {
-      return DD.split(/[\s,]+/).pop()
+    function EU(UU) {
+      return UU.split(/[\s,]+/).pop()
     }
-    let fD = !1;
-    const bD = {
+    let PU = !1;
+    const TU = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -1211,360 +1211,360 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(DD, CD, ID, bD, QD, wD) {
-        if (QD <= 0 || wD <= 0 || this.fontSize <= 0) return {
+      drawText: function(UU, RU, tU, TU, qU, KU) {
+        if (qU <= 0 || KU <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: SD,
-          fontVariant: BD,
-          fontWeight: yD,
-          fontSize: MD,
-          font: tD
-        } = this, ZD = [SD, BD, yD, `${MD}px`, tD].filter(Boolean).join(" "), oD = [
-          [yD, `${MD}px`, iD(tD)].filter(Boolean).join(" "), `${MD}px sans-serif`
-        ], vD = DD.font, ND = function(DD, CD, cD) {
-          for (const ID of CD) {
-            DD.font = ID;
-            const CD = pD(DD.font),
-              fD = iD(ID);
-            if (null !== CD && Math.abs(CD - cD) <= .5 && DD.font.toLowerCase().includes(fD.toLowerCase())) return ID
+          fontStyle: cU,
+          fontVariant: GU,
+          fontWeight: jU,
+          fontSize: uU,
+          font: CU
+        } = this, hU = [cU, GU, jU, `${uU}px`, CU].filter(Boolean).join(" "), QU = [
+          [jU, `${uU}px`, EU(CU)].filter(Boolean).join(" "), `${uU}px sans-serif`
+        ], eU = UU.font, WU = function(UU, RU, gU) {
+          for (const tU of RU) {
+            UU.font = tU;
+            const RU = pU(UU.font),
+              PU = EU(tU);
+            if (null !== RU && Math.abs(RU - gU) <= .5 && UU.font.toLowerCase().includes(PU.toLowerCase())) return tU
           }
           return null
-        }(DD, [ZD, ...oD], MD);
-        ND !== ZD && function(DD, CD, ID) {
-          fD || (fD = !0, Promise.resolve().then((() => cD(1077))).then((cD => {
+        }(UU, [hU, ...QU], uU);
+        WU !== hU && function(UU, RU, tU) {
+          PU || (PU = !0, Promise.resolve().then((() => gU(1064))).then((gU => {
             let {
-              WZ: pD
-            } = cD;
-            pD(new Error("A canvas didn't take canvasTxt's font"), {
-              font: DD,
-              uM: CD,
-              drawnWith: null !== ID && void 0 !== ID ? ID : "the kept font, scaled"
+              Kh: pU
+            } = gU;
+            pU(new Error("A canvas didn't take canvasTxt's font"), {
+              font: UU,
+              xu: RU,
+              drawnWith: null !== tU && void 0 !== tU ? tU : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(ZD, vD, ND);
-        const gD = pD(DD.font);
-        if (null === ND && null !== gD && gD > 0) {
-          const cD = MD / gD;
-          DD.save();
+        }(hU, eU, WU);
+        const fU = pU(UU.font);
+        if (null === WU && null !== fU && fU > 0) {
+          const gU = uU / fU;
+          UU.save();
           try {
-            return DD.scale(cD, cD), {
-              height: this.drawLines(DD, CD, ID / cD, bD / cD, QD / cD, wD / cD, gD).height * cD
+            return UU.scale(gU, gU), {
+              height: this.drawLines(UU, RU, tU / gU, TU / gU, qU / gU, KU / gU, fU).height * gU
             }
           } finally {
-            DD.restore()
+            UU.restore()
           }
         }
-        return this.drawLines(DD, CD, ID, bD, QD, wD, MD)
+        return this.drawLines(UU, RU, tU, TU, qU, KU, uU)
       },
-      drawLines: function(DD, CD, cD, pD, iD, fD, bD) {
-        const QD = cD + iD,
-          wD = pD + fD;
-        let SD, BD = pD + fD / 2 + bD / 2;
-        "right" === this.align ? (SD = QD, DD.textAlign = "right") : "left" === this.align ? (SD = cD, DD.textAlign = "left") : (SD = cD + iD / 2, DD.textAlign = "center");
-        for (const ID of CD) {
-          DD.measureText(ID).width >= iD && (CD = CD.replace(ID, ""))
+      drawLines: function(UU, RU, gU, pU, EU, PU, TU) {
+        const qU = gU + EU,
+          KU = pU + PU;
+        let cU, GU = pU + PU / 2 + TU / 2;
+        "right" === this.align ? (cU = qU, UU.textAlign = "right") : "left" === this.align ? (cU = gU, UU.textAlign = "left") : (cU = gU + EU / 2, UU.textAlign = "center");
+        for (const tU of RU) {
+          UU.measureText(tU).width >= EU && (RU = RU.replace(tU, ""))
         }
-        CD = (0, ID.V)(CD);
-        const yD = [],
-          MD = CD.split("\n"),
-          tD = this.justify ? DD.measureText("\u200a").width : 0;
-        MD.forEach((CD => {
-          let cD = DD.measureText(CD).width;
-          if (cD <= iD) yD.push(CD);
+        RU = (0, tU.T)(RU);
+        const jU = [],
+          uU = RU.split("\n"),
+          CU = this.justify ? UU.measureText("\u200a").width : 0;
+        uU.forEach((RU => {
+          let gU = UU.measureText(RU).width;
+          if (gU <= EU) jU.push(RU);
           else {
-            let ID = CD;
-            const pD = iD;
-            let fD, bD, QD;
-            for (cD = DD.measureText(ID).width; cD > pD;) {
-              for (fD = 0, bD = 0, QD = ""; bD < pD;) fD++, QD = ID.substr(0, fD), bD = DD.measureText(QD).width;
-              fD--, QD = QD.substr(0, fD);
-              const CD = fD;
-              if (" " !== ID.substr(fD, 1)) {
+            let tU = RU;
+            const pU = EU;
+            let PU, TU, qU;
+            for (gU = UU.measureText(tU).width; gU > pU;) {
+              for (PU = 0, TU = 0, qU = ""; TU < pU;) PU++, qU = tU.substr(0, PU), TU = UU.measureText(qU).width;
+              PU--, qU = qU.substr(0, PU);
+              const RU = PU;
+              if (" " !== tU.substr(PU, 1)) {
                 for (;
-                  " " !== ID.substr(fD, 1) && 0 !== fD;) fD--;
-                0 === fD && (fD = CD), QD = ID.substr(0, fD)
+                  " " !== tU.substr(PU, 1) && 0 !== PU;) PU--;
+                0 === PU && (PU = RU), qU = tU.substr(0, PU)
               }
-              QD = this.justify ? this.justifyLine(DD, QD, tD, "\u200a", iD) : QD, ID = ID.substr(fD), cD = DD.measureText(ID).width, yD.push(QD)
+              qU = this.justify ? this.justifyLine(UU, qU, CU, "\u200a", EU) : qU, tU = tU.substr(PU), gU = UU.measureText(tU).width, jU.push(qU)
             }
-            cD > 0 && yD.push(ID)
+            gU > 0 && jU.push(tU)
           }
         }));
-        const ZD = this.lineHeight ? this.lineHeight : this.getTextHeight(DD, CD),
-          oD = ZD * (yD.length - 1),
-          vD = oD / 2;
-        let ND = pD;
-        "top" === this.vAlign ? BD = pD + bD : "bottom" === this.vAlign ? (BD = wD - oD, ND = wD) : (ND = pD + fD / 2, BD -= vD), yD.forEach((CD => {
-          CD = CD.trim(), DD.fillText(CD, SD, BD), BD += ZD
-        })), this.debug && (DD.lineWidth = 3, DD.strokeStyle = "#00909e", DD.strokeRect(cD, pD, iD, fD), DD.lineWidth = 2, DD.strokeStyle = "#f6d743", DD.beginPath(), DD.moveTo(SD, pD), DD.lineTo(SD, wD), DD.stroke(), DD.strokeStyle = "#ff6363", DD.beginPath(), DD.moveTo(cD, ND), DD.lineTo(QD, ND), DD.stroke());
+        const hU = this.lineHeight ? this.lineHeight : this.getTextHeight(UU, RU),
+          QU = hU * (jU.length - 1),
+          eU = QU / 2;
+        let WU = pU;
+        "top" === this.vAlign ? GU = pU + TU : "bottom" === this.vAlign ? (GU = KU - QU, WU = KU) : (WU = pU + PU / 2, GU -= eU), jU.forEach((RU => {
+          RU = RU.trim(), UU.fillText(RU, cU, GU), GU += hU
+        })), this.debug && (UU.lineWidth = 3, UU.strokeStyle = "#00909e", UU.strokeRect(gU, pU, EU, PU), UU.lineWidth = 2, UU.strokeStyle = "#f6d743", UU.beginPath(), UU.moveTo(cU, pU), UU.lineTo(cU, KU), UU.stroke(), UU.strokeStyle = "#ff6363", UU.beginPath(), UU.moveTo(gU, WU), UU.lineTo(qU, WU), UU.stroke());
         return {
-          height: oD + ZD
+          height: QU + hU
         }
       },
-      getTextHeight: function(DD, CD) {
-        const cD = DD.textBaseline;
-        DD.textBaseline = "bottom";
+      getTextHeight: function(UU, RU) {
+        const gU = UU.textBaseline;
+        UU.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: ID
-        } = DD.measureText(CD);
-        return DD.textBaseline = cD, ID
+          actualBoundingBoxAscent: tU
+        } = UU.measureText(RU);
+        return UU.textBaseline = gU, tU
       },
-      justifyLine: function(DD, CD, cD, ID, pD) {
-        const iD = CD.trim(),
-          fD = DD.measureText(iD).width,
-          bD = iD.split(/\s+/).length - 1,
-          QD = Math.floor((pD - fD) / cD);
-        if (bD <= 0 || QD <= 0) return iD;
-        const wD = Math.floor(QD / bD);
-        let SD = QD - bD * wD,
-          BD = [];
-        for (let yD = 0; yD < wD; yD++) BD.push(ID);
-        BD = BD.join("");
-        return iD.replace(/\s+/g, (DD => {
-          const CD = SD > 0 ? BD + ID : BD;
-          return SD--, DD + CD
+      justifyLine: function(UU, RU, gU, tU, pU) {
+        const EU = RU.trim(),
+          PU = UU.measureText(EU).width,
+          TU = EU.split(/\s+/).length - 1,
+          qU = Math.floor((pU - PU) / gU);
+        if (TU <= 0 || qU <= 0) return EU;
+        const KU = Math.floor(qU / TU);
+        let cU = qU - TU * KU,
+          GU = [];
+        for (let jU = 0; jU < KU; jU++) GU.push(tU);
+        GU = GU.join("");
+        return EU.replace(/\s+/g, (UU => {
+          const RU = cU > 0 ? GU + tU : GU;
+          return cU--, UU + RU
         }))
       }
     }
   },
-  38463: (DD, CD, cD) => {
-    function ID(DD, CD) {
-      return CD.set(DD), CD
+  38666: (UU, RU, gU) => {
+    function tU(UU, RU) {
+      return RU.set(UU), RU
     }
-    cD.d(CD, {
-      d: () => ID
+    gU.d(RU, {
+      d: () => tU
     })
   },
-  38038: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => ZD,
-      e: () => tD,
-      f: () => yD,
-      i: () => SD,
-      k: () => BD
+  38219: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => hU,
+      f: () => CU,
+      g: () => jU,
+      k: () => cU,
+      o: () => GU
     });
-    var ID = cD(4081),
-      pD = cD(326);
-    const iD = 1024,
-      fD = 1536,
-      bD = 2 * ID.h + 1,
-      QD = new Intl.NumberFormat("en", {
+    var tU = gU(3937),
+      pU = gU(311);
+    const EU = 1024,
+      PU = 1536,
+      TU = 2 * tU.m + 1,
+      qU = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      wD = 1.5;
+      KU = 1.5;
 
-    function SD(DD, CD, cD) {
-      if ("string" !== typeof DD) return CD;
+    function cU(UU, RU, gU) {
+      if ("string" !== typeof UU) return RU;
       try {
-        const cD = JSON.parse(DD);
-        return cD && "object" === typeof cD ? cD : CD
-      } catch (ID) {
-        return void 0 !== cD && console.error(`Couldn't parse ${cD}`, ID), CD
+        const gU = JSON.parse(UU);
+        return gU && "object" === typeof gU ? gU : RU
+      } catch (tU) {
+        return void 0 !== gU && console.error(`Couldn't parse ${gU}`, tU), RU
       }
     }
 
-    function BD(DD) {
-      return SD(DD, null, "a leaderboard's rows")
+    function GU(UU) {
+      return cU(UU, null, "a leaderboard's rows")
     }
 
-    function yD(DD, CD) {
-      var cD, ID;
-      return null !== CD && void 0 !== CD ? CD : {
-        status: null !== (cD = DD.status) && void 0 !== cD ? cD : "loading",
-        entries: null !== (ID = DD.entries) && void 0 !== ID ? ID : []
+    function jU(UU, RU) {
+      var gU, tU;
+      return null !== RU && void 0 !== RU ? RU : {
+        status: null !== (gU = UU.status) && void 0 !== gU ? gU : "loading",
+        entries: null !== (tU = UU.entries) && void 0 !== tU ? tU : []
       }
     }
 
-    function MD(DD, CD) {
-      return "number" === typeof DD && Number.isFinite(DD) && DD > 0 ? DD : CD
+    function uU(UU, RU) {
+      return "number" === typeof UU && Number.isFinite(UU) && UU > 0 ? UU : RU
     }
 
-    function tD(DD, CD) {
-      const cD = MD(DD.size, 1);
-      let ID = MD(DD.width, MD(2.5 * cD, 2.5)),
-        pD = MD(DD.height, MD(3.75 * cD, 3.75));
-      Number.isFinite(iD * pD / ID) && Number.isFinite(fD * ID / pD) || (ID = 2.5, pD = 3.75);
-      const bD = pD / ID,
-        QD = Math.max(1, Math.min(iD, CD / bD));
+    function CU(UU, RU) {
+      const gU = uU(UU.size, 1);
+      let tU = uU(UU.width, uU(2.5 * gU, 2.5)),
+        pU = uU(UU.height, uU(3.75 * gU, 3.75));
+      Number.isFinite(EU * pU / tU) && Number.isFinite(PU * tU / pU) || (tU = 2.5, pU = 3.75);
+      const TU = pU / tU,
+        qU = Math.max(1, Math.min(EU, RU / TU));
       return {
-        width: ID,
-        height: pD,
-        layoutWidth: Math.max(iD, fD / bD),
-        layoutHeight: Math.max(fD, iD * bD),
-        pixelWidth: Math.round(QD),
-        pixelHeight: Math.round(Math.max(1, Math.min(CD, QD * bD)))
+        width: tU,
+        height: pU,
+        layoutWidth: Math.max(EU, PU / TU),
+        layoutHeight: Math.max(PU, EU * TU),
+        pixelWidth: Math.round(qU),
+        pixelHeight: Math.round(Math.max(1, Math.min(RU, qU * TU)))
       }
     }
 
-    function ZD(DD, CD, cD, fD, SD, BD) {
-      DD.setTransform(1, 0, 0, 1, 0, 0), DD.fillStyle = pD.J.defaultNameTagBackground, DD.fillRect(0, 0, CD, cD), DD.scale(CD / fD.layoutWidth, cD / fD.layoutHeight), DD.translate((fD.layoutWidth - iD) / 2, 0),
-        function(DD, CD, cD, iD) {
-          var fD, SD, BD, yD;
+    function hU(UU, RU, gU, PU, cU, GU) {
+      UU.setTransform(1, 0, 0, 1, 0, 0), UU.fillStyle = pU.N.defaultNameTagBackground, UU.fillRect(0, 0, RU, gU), UU.scale(RU / PU.layoutWidth, gU / PU.layoutHeight), UU.translate((PU.layoutWidth - EU) / 2, 0),
+        function(UU, RU, gU, EU) {
+          var PU, cU, GU, jU;
           const {
-            top: MD,
-            around: tD,
-            showPlayerText: ZD,
-            localPlayerDbId: ND
-          } = cD, {
-            whiteUiText: gD,
-            grayUiText: XD,
-            yellowUiText: mD
-          } = pD.J;
-          DD.textBaseline = "middle";
-          const nD = function(CD, cD, ID, pD, iD, fD) {
-              let bD = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              DD.font = `bold ${pD}px 'Jetbrains Mono', monospace`, DD.fillStyle = iD, DD.textAlign = bD;
-              let QD = CD.replace(/[\r\n\t]/g, " ");
-              if (DD.measureText(QD).width > fD) {
-                for (; QD.length > 0 && DD.measureText(`${QD}\u2026`).width > fD;) QD = QD.slice(0, -1);
-                QD += "\u2026"
+            top: uU,
+            around: CU,
+            showPlayerText: hU,
+            localPlayerDbId: WU
+          } = gU, {
+            whiteUiText: fU,
+            grayUiText: xU,
+            yellowUiText: mU
+          } = pU.N;
+          UU.textBaseline = "middle";
+          const IU = function(RU, gU, tU, pU, EU, PU) {
+              let TU = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              UU.font = `bold ${pU}px 'Jetbrains Mono', monospace`, UU.fillStyle = EU, UU.textAlign = TU;
+              let qU = RU.replace(/[\r\n\t]/g, " ");
+              if (UU.measureText(qU).width > PU) {
+                for (; qU.length > 0 && UU.measureText(`${qU}\u2026`).width > PU;) qU = qU.slice(0, -1);
+                qU += "\u2026"
               }
-              DD.fillText(QD, cD, ID)
+              UU.fillText(qU, gU, tU)
             },
-            OD = CD => {
-              DD.fillStyle = gD, DD.globalAlpha = .15, DD.fillRect(24, CD, 976, 2), DD.globalAlpha = 1
+            JU = RU => {
+              UU.fillStyle = fU, UU.globalAlpha = .15, UU.fillRect(24, RU, 976, 2), UU.globalAlpha = 1
             },
-            PD = null === ND ? null : (0, pD.rc)(ND),
-            HD = DD => null !== PD && DD.playerHash === PD,
-            UD = oD(MD.entries, ID.l),
-            xD = "ready" === MD.status && UD.length > 0,
-            qD = null === tD ? [] : oD(tD.entries, bD),
-            JD = UD.some(HD),
-            KD = null === tD ? null : function(DD) {
-              const CD = DD;
-              if (!CD || !Number.isFinite(CD.rank) || !Number.isFinite(CD.tied) || !Number.isFinite(CD.total)) return null;
-              return CD
-            }(tD.standing),
-            aD = qD.find(HD),
-            VD = UD.find(HD),
-            zD = null === KD || void 0 === aD ? null : {
-              value: aD.value,
-              rank: KD.rank
+            wU = null === WU ? null : (0, pU.pc)(WU),
+            nU = UU => null !== wU && UU.playerHash === wU,
+            bU = QU(uU.entries, tU.p),
+            oU = "ready" === uU.status && bU.length > 0,
+            ZU = null === CU ? [] : QU(CU.entries, TU),
+            aU = bU.some(nU),
+            YU = null === CU ? null : function(UU) {
+              const RU = UU;
+              if (!RU || !Number.isFinite(RU.rank) || !Number.isFinite(RU.tied) || !Number.isFinite(RU.total)) return null;
+              return RU
+            }(CU.standing),
+            BU = ZU.find(nU),
+            VU = bU.find(nU),
+            rU = null === YU || void 0 === BU ? null : {
+              value: BU.value,
+              rank: YU.rank
             },
-            jD = vD(UD, void 0 === VD || VD.value === (null === zD || void 0 === zD ? void 0 : zD.value) ? zD : null),
-            lD = vD(qD, zD),
-            LD = (DD, CD) => {
-              const cD = DD.findIndex(HD);
-              return cD >= 0 ? CD[cD] : null
+            XU = eU(bU, void 0 === VU || VU.value === (null === rU || void 0 === rU ? void 0 : rU.value) ? rU : null),
+            vU = eU(ZU, rU),
+            dU = (UU, RU) => {
+              const gU = UU.findIndex(nU);
+              return gU >= 0 ? RU[gU] : null
             },
-            TD = null !== (fD = null !== (SD = null === KD || void 0 === KD ? void 0 : KD.rank) && void 0 !== SD ? SD : LD(qD, lD)) && void 0 !== fD ? fD : LD(UD, jD);
-          DD.font = "bold 34px 'Jetbrains Mono', monospace";
-          const GD = [...xD ? jD : [], ...JD ? [] : lD],
-            RD = Math.min(280, Math.max(0, ...GD.map((CD => DD.measureText(QD.format(CD)).width)))),
-            kD = RD <= 80,
-            dD = kD ? 80 : 32 + RD,
-            YD = kD ? 148 : dD + 28,
-            WD = 660 - YD;
-          nD(`TOP ${ID.l}  /  ALL TIME`, 24, 52, 28, XD, 976), nD(ZD ? String(null !== (BD = CD.title) && void 0 !== BD ? BD : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, gD, 976), nD("RANK", 32, 174, 28, XD, YD - 40), nD("PLAYER", YD, 174, 28, XD, WD), nD(ZD ? String(null !== (yD = CD.scoreLabel) && void 0 !== yD ? yD : "Score").slice(0, 24) : "Score", 992, 174, 28, XD, 304, "right"), OD(202);
-          const sD = (iD - 232) / (ID.l + wD + bD),
-            ED = 208 + ID.l * sD,
-            eD = ED + wD * sD,
-            uD = (CD, cD, ID, pD) => {
-              const iD = HD(CD);
-              DD.fillStyle = iD ? mD : gD, DD.globalAlpha = iD ? .15 : pD ? .035 : 0, DD.fillRect(24, ID - sD / 2 + 1, 976, sD - 2), DD.globalAlpha = 1;
-              const fD = iD ? mD : gD;
-              nD(QD.format(cD), dD, ID, 34, fD, kD ? 80 : RD, kD ? "center" : "right"), nD(ZD ? String(CD.name).slice(0, 64) : "Player", YD, ID, 34, fD, WD);
-              const bD = QD.format(CD.value);
-              nD(DD.measureText(bD).width > 304 ? CD.value.toExponential(6) : bD, 992, ID, 34, fD, 304, "right")
+            HU = null !== (PU = null !== (cU = null === YU || void 0 === YU ? void 0 : YU.rank) && void 0 !== cU ? cU : dU(ZU, vU)) && void 0 !== PU ? PU : dU(bU, XU);
+          UU.font = "bold 34px 'Jetbrains Mono', monospace";
+          const SU = [...oU ? XU : [], ...aU ? [] : vU],
+            sU = Math.min(280, Math.max(0, ...SU.map((RU => UU.measureText(qU.format(RU)).width)))),
+            yU = sU <= 80,
+            kU = yU ? 80 : 32 + sU,
+            FU = yU ? 148 : kU + 28,
+            iU = 660 - FU;
+          IU(`TOP ${tU.p}  /  ALL TIME`, 24, 52, 28, xU, 976), IU(hU ? String(null !== (GU = RU.title) && void 0 !== GU ? GU : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, fU, 976), IU("RANK", 32, 174, 28, xU, FU - 40), IU("PLAYER", FU, 174, 28, xU, iU), IU(hU ? String(null !== (jU = RU.scoreLabel) && void 0 !== jU ? jU : "Score").slice(0, 24) : "Score", 992, 174, 28, xU, 304, "right"), JU(202);
+          const AU = (EU - 232) / (tU.p + KU + TU),
+            zU = 208 + tU.p * AU,
+            MU = zU + KU * AU,
+            DU = (RU, gU, tU, pU) => {
+              const EU = nU(RU);
+              UU.fillStyle = EU ? mU : fU, UU.globalAlpha = EU ? .15 : pU ? .035 : 0, UU.fillRect(24, tU - AU / 2 + 1, 976, AU - 2), UU.globalAlpha = 1;
+              const PU = EU ? mU : fU;
+              IU(qU.format(gU), kU, tU, 34, PU, yU ? 80 : sU, yU ? "center" : "right"), IU(hU ? String(RU.name).slice(0, 64) : "Player", FU, tU, 34, PU, iU);
+              const TU = qU.format(RU.value);
+              IU(UU.measureText(TU).width > 304 ? RU.value.toExponential(6) : TU, 992, tU, 34, PU, 304, "right")
             };
-          if (xD)
-            for (const [ID, pD] of UD.entries()) uD(pD, jD[ID], 208 + (ID + .5) * sD, ID % 2 === 0);
+          if (oU)
+            for (const [tU, pU] of bU.entries()) DU(pU, XU[tU], 208 + (tU + .5) * AU, tU % 2 === 0);
           else {
-            const DD = "error" === MD.status,
-              CD = DD ? "Couldn't load leaderboard" : "ready" === MD.status ? "No scores yet" : "Loading leaderboard\u2026",
-              cD = DD ? "Trying again shortly" : "ready" === MD.status ? "Be the first on the board!" : "Fetching the top players",
-              ID = (208 + ED) / 2;
-            nD(CD, 512, ID - 28, 40, DD ? pD.J.redUiText : gD, 960, "center"), nD(cD, 512, ID + 27, 30, XD, 960, "center")
+            const UU = "error" === uU.status,
+              RU = UU ? "Couldn't load leaderboard" : "ready" === uU.status ? "No scores yet" : "Loading leaderboard\u2026",
+              gU = UU ? "Trying again shortly" : "ready" === uU.status ? "Be the first on the board!" : "Fetching the top players",
+              tU = (208 + zU) / 2;
+            IU(RU, 512, tU - 28, 40, UU ? pU.N.redUiText : fU, 960, "center"), IU(gU, 512, tU + 27, 30, xU, 960, "center")
           }
-          const hD = ED + wD * sD / 2;
-          if (null === TD) OD(hD);
+          const LU = zU + KU * AU / 2;
+          if (null === HU) JU(LU);
           else {
-            const CD = null === KD ? 0 : KD.tied - 1,
-              cD = `YOUR RANK #${QD.format(TD)}${null===KD?"":` of ${QD.format(KD.total)}`}`;
-            DD.font = "bold 36px 'Jetbrains Mono', monospace";
-            const ID = Math.max(20, Math.min(36, Math.floor(34560 / DD.measureText(cD).width)));
-            nD(cD, 512, hD - (CD > 0 ? 15 : 0), ID, mD, 960, "center"), CD > 0 && nD(`Tied with ${QD.format(CD)} other${1===CD?"":"s"}`, 512, hD + 24, 24, XD, 960, "center")
+            const RU = null === YU ? 0 : YU.tied - 1,
+              gU = `YOUR RANK #${qU.format(HU)}${null===YU?"":` of ${qU.format(YU.total)}`}`;
+            UU.font = "bold 36px 'Jetbrains Mono', monospace";
+            const tU = Math.max(20, Math.min(36, Math.floor(34560 / UU.measureText(gU).width)));
+            IU(gU, 512, LU - (RU > 0 ? 15 : 0), tU, mU, 960, "center"), RU > 0 && IU(`Tied with ${qU.format(RU)} other${1===RU?"":"s"}`, 512, LU + 24, 24, xU, 960, "center")
           }
-          if (null === tD) return;
-          const rD = eD + bD * sD / 2;
-          if (JD) nD(`You're in the top ${ID.l}!`, 512, rD, 40, mD, 960, "center");
-          else if (0 === qD.length) nD("You're not on this board yet", 512, rD, 34, XD, 960, "center");
+          if (null === CU) return;
+          const NU = MU + TU * AU / 2;
+          if (aU) IU(`You're in the top ${tU.p}!`, 512, NU, 40, mU, 960, "center");
+          else if (0 === ZU.length) IU("You're not on this board yet", 512, NU, 34, xU, 960, "center");
           else
-            for (const [ID, pD] of qD.entries()) uD(pD, lD[ID], eD + (ID + .5) * sD, ID % 2 === 0)
-        }(DD, SD, BD, fD.layoutHeight)
+            for (const [tU, pU] of ZU.entries()) DU(pU, vU[tU], MU + (tU + .5) * AU, tU % 2 === 0)
+        }(UU, cU, GU, PU.layoutHeight)
     }
 
-    function oD(DD, CD) {
-      return Array.isArray(DD) ? DD.slice(0, CD).filter((DD => DD && Number.isFinite(DD.rank) && Number.isFinite(DD.value))) : []
+    function QU(UU, RU) {
+      return Array.isArray(UU) ? UU.slice(0, RU).filter((UU => UU && Number.isFinite(UU.rank) && Number.isFinite(UU.value))) : []
     }
 
-    function vD(DD, CD) {
-      const cD = [];
-      let ID = !1;
-      return DD.forEach(((pD, iD) => {
-        if (null !== CD && pD.value === CD.value) return void cD.push(CD.rank);
-        const fD = iD > 0 && pD.value === DD[iD - 1].value;
-        fD || (ID = 0 === iD && 1 !== pD.rank), cD.push(fD && !ID ? cD[iD - 1] : pD.rank)
-      })), cD
+    function eU(UU, RU) {
+      const gU = [];
+      let tU = !1;
+      return UU.forEach(((pU, EU) => {
+        if (null !== RU && pU.value === RU.value) return void gU.push(RU.rank);
+        const PU = EU > 0 && pU.value === UU[EU - 1].value;
+        PU || (tU = 0 === EU && 1 !== pU.rank), gU.push(PU && !tU ? gU[EU - 1] : pU.rank)
+      })), gU
     }
   },
-  38233: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => pD,
-      e: () => iD
+  38425: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => pU,
+      f: () => EU
     });
-    const ID = 32;
+    const tU = 32;
 
-    function pD(DD) {
-      return Array.from(DD).length
+    function pU(UU) {
+      return Array.from(UU).length
     }
 
-    function iD(DD) {
-      const CD = [""];
-      let cD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        pD = "";
-      const iD = () => {
-        CD.push(""), cD = 0, pD = ""
+    function EU(UU) {
+      const RU = [""];
+      let gU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        pU = "";
+      const EU = () => {
+        RU.push(""), gU = 0, pU = ""
       };
-      for (const fD of DD.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(fD)) iD();
-        else if (/^\s+$/.test(fD)) pD += fD;
-      else if (fD.length > 0) {
-        const DD = Array.from(fD);
-        cD > 0 && cD + pD.length + DD.length > ID && iD(), CD[CD.length - 1] += pD, cD += pD.length, pD = "";
-        for (const pD of DD) cD >= ID && iD(), CD[CD.length - 1] += pD, cD++
+      for (const PU of UU.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(PU)) EU();
+        else if (/^\s+$/.test(PU)) pU += PU;
+      else if (PU.length > 0) {
+        const UU = Array.from(PU);
+        gU > 0 && gU + pU.length + UU.length > tU && EU(), RU[RU.length - 1] += pU, gU += pU.length, pU = "";
+        for (const pU of UU) gU >= tU && EU(), RU[RU.length - 1] += pU, gU++
       }
-      return CD[CD.length - 1] += pD, CD
+      return RU[RU.length - 1] += pU, RU
     }
   },
-  38460: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => fD
+  38662: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => PU
     });
-    var ID = cD(36020),
-      pD = cD.n(ID);
-    const iD = [1, 1, 1];
+    var tU = gU(36214),
+      pU = gU.n(tU);
+    const EU = [1, 1, 1];
 
-    function fD(DD) {
-      if (!DD) return [...iD];
+    function PU(UU) {
+      if (!UU) return [...EU];
       try {
-        const [CD, cD, ID] = pD()(DD).rgb().array();
-        return [CD / 255, cD / 255, ID / 255]
-      } catch (CD) {
-        return console.warn(`Invalid groundArrowPath colour "${DD}":`, CD), [...iD]
+        const [RU, gU, tU] = pU()(UU).rgb().array();
+        return [RU / 255, gU / 255, tU / 255]
+      } catch (RU) {
+        return console.warn(`Invalid groundArrowPath colour "${UU}":`, RU), [...EU]
       }
     }
   },
-  33724: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => iD,
-      e: () => bD,
-      f: () => fD,
-      g: () => pD,
-      i: () => ID
+  33907: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => EU,
+      d: () => TU,
+      h: () => PU,
+      l: () => pU,
+      p: () => tU
     });
-    const ID = {
+    const tU = {
         default: {
           type: "earth",
           vertexTint: [137, 207, 240]
@@ -1651,41 +1651,41 @@ export const modules = {
           pz: "/textures/skyBoxes/space_white/_pz.jpg"
         }
       },
-      pD = "/textures/dayNight/sun.png",
-      iD = "/textures/dayNight/moon.png",
-      fD = "/textures/dayNight/stars",
-      bD = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
+      pU = "/textures/dayNight/sun.png",
+      EU = "/textures/dayNight/moon.png",
+      PU = "/textures/dayNight/stars",
+      TU = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
   },
-  38505: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => SD,
-      c: () => BD,
-      g: () => ID,
-      k: () => QD,
-      m: () => pD,
-      o: () => wD,
-      r: () => bD,
-      v: () => fD
+  38724: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => cU,
+      d: () => GU,
+      g: () => tU,
+      i: () => qU,
+      j: () => pU,
+      l: () => KU,
+      n: () => TU,
+      o: () => PU
     });
-    const ID = ["linear", "easeIn", "easeOut", "easeInOut"],
-      pD = ["movement", "camera", "cursor"],
-      iD = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
+    const tU = ["linear", "easeIn", "easeOut", "easeInOut"],
+      pU = ["movement", "camera", "cursor"],
+      EU = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
 
-    function fD(DD, CD) {
-      return bD(DD, CD, iD)
+    function PU(UU, RU) {
+      return TU(UU, RU, EU)
     }
 
-    function bD(DD, CD) {
-      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      if (DD === CD || Number.isNaN(DD) && Number.isNaN(CD)) return !0;
-      if ("object" !== typeof DD || "object" !== typeof CD || null === DD || null === CD || Array.isArray(DD) !== Array.isArray(CD)) return !1;
-      const ID = DD,
-        pD = CD;
-      for (const iD of new Set([...Object.keys(ID), ...Object.keys(pD)]))
-        if (!cD.includes(iD) && !bD(ID[iD], pD[iD])) return !1;
+    function TU(UU, RU) {
+      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      if (UU === RU || Number.isNaN(UU) && Number.isNaN(RU)) return !0;
+      if ("object" !== typeof UU || "object" !== typeof RU || null === UU || null === RU || Array.isArray(UU) !== Array.isArray(RU)) return !1;
+      const tU = UU,
+        pU = RU;
+      for (const EU of new Set([...Object.keys(tU), ...Object.keys(pU)]))
+        if (!gU.includes(EU) && !TU(tU[EU], pU[EU])) return !1;
       return !0
     }
-    const QD = {
+    const qU = {
         maxBlendInMs: 1e4,
         minFov: 10,
         maxFov: 120,
@@ -1707,10 +1707,10 @@ export const modules = {
         minEasingY: -1,
         maxEasingY: 2
       },
-      wD = "^-[1-9][0-9]*$",
-      SD = "^#[0-9a-fA-F]{6}$",
-      BD = "#000000"
+      KU = "^-[1-9][0-9]*$",
+      cU = "^#[0-9a-fA-F]{6}$",
+      GU = "#000000"
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

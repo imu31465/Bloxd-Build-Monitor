@@ -1,397 +1,397 @@
 export const id = 97;
 export const ids = [97, 185];
 export const modules = {
-  8916: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      EverythingMenu: () => ib
+  8877: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      EverythingMenu: () => gT
     });
-    var ID = cD(53),
-      pD = cD(1049),
-      iD = cD.n(pD),
-      fD = cD(1192),
-      bD = cD(1064),
-      QD = cD(2031),
-      wD = cD(1108),
-      SD = cD(1093);
+    var tU = gU(56),
+      pU = gU(1037),
+      EU = gU.n(pU),
+      PU = gU(1181),
+      TU = gU(1049),
+      qU = gU(1922),
+      KU = gU(1099),
+      cU = gU(1090);
 
-    function BD(DD) {
+    function GU(UU) {
       let {
-        items: CD,
-        onClick: cD,
-        selectedItemId: ID,
-        className: pD,
-        padStartsOnTab: BD = !0
-      } = DD;
+        items: RU,
+        onClick: gU,
+        selectedItemId: tU,
+        className: pU,
+        padStartsOnTab: GU = !0
+      } = UU;
       const {
-        t: yD
-      } = (0, fD.F)(), MD = (0, wD.o)(), tD = [];
-      for (const iD of CD) {
-        var ZD;
-        const DD = tD[tD.length - 1];
-        var oD;
-        if (DD && DD.title === (null !== (ZD = iD.section) && void 0 !== ZD ? ZD : null)) DD.items.push(iD);
-        else tD.push({
-          title: null !== (oD = iD.section) && void 0 !== oD ? oD : null,
-          items: [iD]
+        t: jU
+      } = (0, PU.B)(), uU = (0, KU.k)(), CU = [];
+      for (const EU of RU) {
+        var hU;
+        const UU = CU[CU.length - 1];
+        var QU;
+        if (UU && UU.title === (null !== (hU = EU.section) && void 0 !== hU ? hU : null)) UU.items.push(EU);
+        else CU.push({
+          title: null !== (QU = EU.section) && void 0 !== QU ? QU : null,
+          items: [EU]
         })
       }
-      return (0, SD.jsx)("div", {
-        className: iD()("MenuSideBarBody", pD),
+      return (0, cU.jsx)("div", {
+        className: EU()("MenuSideBarBody", pU),
         "data-pad-tabs": "2",
-        children: tD.map(((DD, CD) => {
-          var pD;
-          return (0, SD.jsxs)("div", {
+        children: CU.map(((UU, RU) => {
+          var pU;
+          return (0, cU.jsxs)("div", {
             className: "MenuSideBarSection",
-            children: [DD.title && (0, SD.jsx)("div", {
+            children: [UU.title && (0, cU.jsx)("div", {
               className: "MenuSideBarSectionTitle",
-              children: yD(DD.title)
-            }), DD.items.map((DD => {
-              var CD;
-              const pD = !!DD.iconElement || !!DD.faIcon;
-              return (0, SD.jsxs)("div", {
+              children: jU(UU.title)
+            }), UU.items.map((UU => {
+              var RU;
+              const pU = !!UU.iconElement || !!UU.faIcon;
+              return (0, cU.jsxs)("div", {
                 "data-pad-tab": !0,
-                "data-pad-selected": ID === DD.id ? "true" : void 0,
-                "data-pad-default-focus": BD && ID === DD.id || void 0,
-                className: iD()("MenuSideBarBodyTab", {
-                  ActiveMenuSideBarBodyTab: ID === DD.id
+                "data-pad-selected": tU === UU.id ? "true" : void 0,
+                "data-pad-default-focus": GU && tU === UU.id || void 0,
+                className: EU()("MenuSideBarBodyTab", {
+                  ActiveMenuSideBarBodyTab: tU === UU.id
                 }),
                 onClick: () => {
-                  cD(DD.id)
+                  gU(UU.id)
                 },
-                children: [pD && (0, SD.jsx)("div", {
+                children: [pU && (0, cU.jsx)("div", {
                   className: "MenuSideBarBodyTabIcon",
-                  children: null !== (CD = DD.iconElement) && void 0 !== CD ? CD : (0, SD.jsx)(bD.c, {
-                    name: DD.faIcon
+                  children: null !== (RU = UU.iconElement) && void 0 !== RU ? RU : (0, cU.jsx)(TU.c, {
+                    name: UU.faIcon
                   })
-                }), (!MD || !pD) && (0, SD.jsx)("div", {
-                  children: yD(DD.title)
-                }), DD.redDot && (0, SD.jsx)(QD.e, {
+                }), (!uU || !pU) && (0, cU.jsx)("div", {
+                  children: jU(UU.title)
+                }), UU.redDot && (0, cU.jsx)(qU.e, {
                   top: "-0.2rem",
                   right: "-1rem"
                 })]
-              }, DD.id)
+              }, UU.id)
             }))]
-          }, null !== (pD = DD.title) && void 0 !== pD ? pD : CD)
+          }, null !== (pU = UU.title) && void 0 !== pU ? pU : RU)
         }))
       })
     }
-    var yD = cD(2790),
-      MD = cD(1120),
-      tD = cD(2358),
-      ZD = cD(1113),
-      oD = cD(1442),
-      vD = cD(90),
-      ND = cD(1905),
-      gD = cD(2216),
-      XD = cD(2224),
-      mD = cD(1655),
-      nD = cD(1328),
-      OD = cD(4770),
-      PD = cD(16),
-      HD = cD(8925);
+    var jU = gU(2691),
+      uU = gU(1112),
+      CU = gU(2254),
+      hU = gU(1106),
+      QU = gU(1412),
+      eU = gU(96),
+      WU = gU(1800),
+      fU = gU(2087),
+      xU = gU(2092),
+      mU = gU(1602),
+      IU = gU(1326),
+      JU = gU(4670),
+      wU = gU(21),
+      nU = gU(8880);
 
-    function UD(DD) {
+    function bU(UU) {
       let {
-        setApplySettingsCallback: CD
-      } = DD;
+        setApplySettingsCallback: RU
+      } = UU;
       const {
-        clientEscMenuOptions: cD
-      } = (0, PD.o)(["clientEscMenuOptions"]), [pD, iD] = (0, ID.useState)(!1), [fD, bD] = (0, ID.useState)(!1), [QD, wD] = (0, ID.useState)(6400), [BD, yD] = (0, ID.useState)(3600), [MD, tD] = (0, ID.useState)(!1), [ZD, vD] = (0, ID.useState)(!1);
+        clientEscMenuOptions: gU
+      } = (0, wU.l)(["clientEscMenuOptions"]), [pU, EU] = (0, tU.useState)(!1), [PU, TU] = (0, tU.useState)(!1), [qU, KU] = (0, tU.useState)(6400), [GU, jU] = (0, tU.useState)(3600), [uU, CU] = (0, tU.useState)(!1), [hU, eU] = (0, tU.useState)(!1);
 
-      function ND(DD) {
-        const CD = "screenshot" === DD ? bD : iD;
-        CD(!0);
-        const cD = MD ? "normals" : ZD ? "depth" : null;
-        HD.devTools.downloadScene(DD, {
-          width: QD,
-          height: BD,
-          colouring: cD
-        }).catch((DD => {
-          console.error("Couldn't download the scene", DD)
+      function WU(UU) {
+        const RU = "screenshot" === UU ? TU : EU;
+        RU(!0);
+        const gU = uU ? "normals" : hU ? "depth" : null;
+        nU.devTools.downloadScene(UU, {
+          width: qU,
+          height: GU,
+          colouring: gU
+        }).catch((UU => {
+          console.error("Couldn't download the scene", UU)
         })).finally((() => {
-          CD(!1)
+          RU(!1)
         }))
       }
-      return (0, SD.jsxs)("div", {
+      return (0, cU.jsxs)("div", {
         className: "DeveloperToolsCategory",
-        children: [(0, SD.jsx)(OD.e, {
+        children: [(0, cU.jsx)(JU.b, {
           label: "Disable Ambient Occlusion",
-          checked: cD.disableAmbientOcclusion,
-          onClick: DD => {
-            PD.d.setClientEscMenuOptions({
-              disableAmbientOcclusion: DD
-            }), CD((() => OD.j))
+          checked: gU.disableAmbientOcclusion,
+          onClick: UU => {
+            wU.b.setClientEscMenuOptions({
+              disableAmbientOcclusion: UU
+            }), RU((() => JU.l))
           },
           circleInfoText: "Disables ambient occlusion which is the shadow effect that makes corners and crevices darker."
-        }), HD.devTools.supports("ambientLight") && (0, SD.jsx)(OD.i, {
+        }), nU.devTools.supports("ambientLight") && (0, cU.jsx)(JU.h, {
           name: "Ambient Lighting Intensity",
           min: 0,
           max: 1,
           step: .01,
-          initValue: cD.ambientLightIntensity,
-          onChange: DD => {
-            HD.devTools.setAmbientLightIntensity(DD).then((() => {
-              PD.d.setClientEscMenuOptions({
-                ambientLightIntensity: DD
+          initValue: gU.ambientLightIntensity,
+          onChange: UU => {
+            nU.devTools.setAmbientLightIntensity(UU).then((() => {
+              wU.b.setClientEscMenuOptions({
+                ambientLightIntensity: UU
               })
-            })).catch((DD => {
-              console.error("Couldn't set the ambient light", DD)
+            })).catch((UU => {
+              console.error("Couldn't set the ambient light", UU)
             }))
           },
           circleInfoText: "Sets the intensity of the white ambient light in the scene. The default is 0.5."
-        }), HD.devTools.supports("weaponRaycasts") && (0, SD.jsx)(OD.e, {
+        }), nU.devTools.supports("weaponRaycasts") && (0, cU.jsx)(JU.b, {
           label: "Show Weapon Raycasts",
-          checked: cD.showWeaponRaycasts,
-          onClick: DD => {
-            PD.d.setClientEscMenuOptions({
-              showWeaponRaycasts: DD
+          checked: gU.showWeaponRaycasts,
+          onClick: UU => {
+            wU.b.setClientEscMenuOptions({
+              showWeaponRaycasts: UU
             })
           },
           circleInfoText: "Draws debug lines for the raw raycasts used by locally fired weapons."
-        }), HD.devTools.supports("sceneDownload") && (0, SD.jsxs)("div", {
+        }), nU.devTools.supports("sceneDownload") && (0, cU.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, SD.jsxs)("div", {
+          children: [(0, cU.jsxs)("div", {
             className: "SettingBox WarningBorder",
-            children: [(0, SD.jsx)(OD.e, {
+            children: [(0, cU.jsx)(JU.b, {
               label: "Apply normal-based coloring",
-              checked: MD,
-              onClick: DD => {
-                tD(DD), DD && vD(!1)
+              checked: uU,
+              onClick: UU => {
+                CU(UU), UU && eU(!1)
               },
               circleInfoText: "Colors faces based on their normal direction (red=X, green=Y, blue=Z)."
-            }), (0, SD.jsx)(OD.e, {
+            }), (0, cU.jsx)(JU.b, {
               label: "Apply depth-based coloring",
-              checked: ZD,
-              onClick: DD => {
-                vD(DD), DD && tD(!1)
+              checked: hU,
+              onClick: UU => {
+                eU(UU), UU && CU(!1)
               },
               circleInfoText: "Colors from white (near) to black (far) based on distance from camera. Only works for screenshot export."
-            }), (0, SD.jsxs)("div", {
+            }), (0, cU.jsxs)("div", {
               className: "SettingBox DeveloperToolsCategoryScreenshotSettings",
-              children: [(0, SD.jsx)("div", {
+              children: [(0, cU.jsx)("div", {
                 className: "SettingLabel",
                 children: "Screenshot size in pixels (width x height)"
-              }), (0, SD.jsx)(mD.b, {
+              }), (0, cU.jsx)(mU.d, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (DD, CD) => {
-                  const cD = parseInt(DD) || 6400;
-                  wD(cD)
+                onValueChange: (UU, RU) => {
+                  const gU = parseInt(UU) || 6400;
+                  KU(gU)
                 },
                 placeholderText: "width",
                 maxLength: 10,
-                defaultValue: QD.toString()
-              }), (0, SD.jsx)("span", {
+                defaultValue: qU.toString()
+              }), (0, cU.jsx)("span", {
                 children: "X"
-              }), (0, SD.jsx)(mD.b, {
+              }), (0, cU.jsx)(mU.d, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (DD, CD) => {
-                  const cD = parseInt(DD) || 3600;
-                  yD(cD)
+                onValueChange: (UU, RU) => {
+                  const gU = parseInt(UU) || 3600;
+                  jU(gU)
                 },
                 placeholderText: "height",
                 maxLength: 10,
-                defaultValue: BD.toString()
+                defaultValue: GU.toString()
               })]
-            }), (0, SD.jsxs)("div", {
+            }), (0, cU.jsxs)("div", {
               className: "DeveloperToolsCategoryExportButtons",
-              children: [(0, SD.jsxs)(oD.i, {
+              children: [(0, cU.jsxs)(QU.e, {
                 onClick: () => {
-                  ND("screenshot")
+                  WU("screenshot")
                 },
-                disabled: fD,
-                children: [fD && (0, SD.jsx)(nD.e, {}), "Download Screenshot"]
-              }), (0, SD.jsxs)(oD.i, {
+                disabled: PU,
+                children: [PU && (0, cU.jsx)(IU.d, {}), "Download Screenshot"]
+              }), (0, cU.jsxs)(QU.e, {
                 onClick: () => {
-                  ND("glb")
+                  WU("glb")
                 },
-                disabled: pD,
-                children: [pD && (0, SD.jsx)(nD.e, {}), "Download GLB"]
+                disabled: pU,
+                children: [pU && (0, cU.jsx)(IU.d, {}), "Download GLB"]
               })]
             })]
-          }), (0, SD.jsx)("div", {
+          }), (0, cU.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
             children: 'To download GLB of scene with textures you need to "Disable Block Texture Atlas" in graphic settings first (you will need to reload the page to apply the setting).'
           })]
         })]
       })
     }
-    var xD = cD(120),
-      qD = cD(1127),
-      JD = cD(1199),
-      KD = cD(2799),
-      aD = cD(1508),
-      VD = cD(1266),
-      zD = cD(1232),
-      jD = cD(2886),
-      lD = cD(2015),
-      LD = cD(1497),
-      TD = cD(326),
-      GD = cD(2228),
-      RD = cD(2238),
-      kD = cD(2572),
-      dD = cD(1629),
-      YD = cD(2867),
-      WD = cD(2837),
-      sD = cD(2893),
-      ED = cD(208);
+    var oU = gU(135),
+      ZU = gU(1120),
+      aU = gU(1196),
+      YU = gU(2700),
+      BU = gU(1475),
+      VU = gU(1271),
+      rU = gU(1229),
+      XU = gU(2781),
+      vU = gU(1892),
+      dU = gU(1461),
+      HU = gU(311),
+      SU = gU(2100),
+      sU = gU(2110),
+      yU = gU(2476),
+      kU = gU(1570),
+      FU = gU(2742),
+      iU = gU(2724),
+      AU = gU(2789),
+      zU = gU(201);
 
-    function eD(DD) {
+    function MU(UU) {
       const {
-        t: CD,
-        selectedLanguage: cD
-      } = (0, fD.F)(), {
-        userContext: pD
-      } = (0, MD.c)(), {
-        superRankInfo: iD
-      } = pD, bD = DD && ((0, TD.Ac)(iD) || pD.ranksMayChange) && (0, RD.purchasesAllowed)(), {
-        accountId: QD,
-        data: wD
-      } = (0, kD.h)(YD.e, bD);
-      if ((0, ID.useEffect)((() => {
-          if (bD) return YD.e.watchAccount(), dD.e.addRefetchListener("billing", (DD => {
-            "reconnected" === DD ? YD.e.refreshAfterReconnect() : YD.e.refresh()
+        t: RU,
+        selectedLanguage: gU
+      } = (0, PU.B)(), {
+        userContext: pU
+      } = (0, uU.e)(), {
+        superRankInfo: EU
+      } = pU, TU = UU && ((0, HU.Bc)(EU) || pU.ranksMayChange) && (0, sU.purchasesAllowed)(), {
+        accountId: qU,
+        data: KU
+      } = (0, yU.j)(FU.d, TU);
+      if ((0, tU.useEffect)((() => {
+          if (TU) return FU.d.watchAccount(), kU.b.addRefetchListener("billing", (UU => {
+            "reconnected" === UU ? FU.d.refreshAfterReconnect() : FU.d.refresh()
           }))
-        }), [bD]), !bD || !(0, TD.Ac)(iD) || null === wD || QD !== pD.whamm) return null;
-      const SD = function(DD, CD, cD) {
-        const ID = sD.i[(0, sD.d)(sD.i, CD)],
-          pD = void 0 === ID ? void 0 : (0, ED.c)(DD.entitlements, ID.entitlementId);
-        return void 0 === pD || null === pD.expiresAt || (0, WD.e)(pD) <= cD ? null : pD.willRenew && null === pD.billingIssueDetectedAt ? {
+        }), [TU]), !TU || !(0, HU.Bc)(EU) || null === KU || qU !== pU.whamm) return null;
+      const cU = function(UU, RU, gU) {
+        const tU = AU.f[(0, AU.b)(AU.f, RU)],
+          pU = void 0 === tU ? void 0 : (0, zU.b)(UU.entitlements, tU.entitlementId);
+        return void 0 === pU || null === pU.expiresAt || (0, iU.f)(pU) <= gU ? null : pU.willRenew && null === pU.billingIssueDetectedAt ? {
           renews: !0,
-          at: Math.max(pD.expiresAt, cD)
+          at: Math.max(pU.expiresAt, gU)
         } : {
           renews: !1,
-          at: (0, WD.e)(pD)
+          at: (0, iU.f)(pU)
         }
-      }(wD, iD.tier, Date.now());
-      if (null === SD) return null;
-      const BD = SD.renews ? "store:renewsOn" : "store:endsOn";
-      return CD(BD, {
-        date: new Date(SD.at).toLocaleDateString((0, fD.m)(cD.code, BD), {
+      }(KU, EU.tier, Date.now());
+      if (null === cU) return null;
+      const GU = cU.renews ? "store:renewsOn" : "store:endsOn";
+      return RU(GU, {
+        date: new Date(cU.at).toLocaleDateString((0, PU.n)(gU.code, GU), {
           year: "numeric",
           month: "short",
           day: "numeric"
         })
       })
     }
-    var uD = cD(1356),
-      hD = cD(1210),
-      rD = cD(4648),
-      AD = cD(1471),
-      FD = cD(3467),
-      DC = cD(2205);
+    var DU = gU(1344),
+      LU = gU(1207),
+      NU = gU(4540),
+      lU = gU(1444),
+      OU = gU(3325),
+      UR = gU(2074);
 
-    function CC(DD) {
+    function RR(UU) {
       let {
-        showing: CD
-      } = DD;
+        showing: RU
+      } = UU;
       const {
-        t: cD
-      } = (0, fD.F)(), {
-        data: ID,
-        failed: pD
-      } = (0, kD.h)(FD.h, CD);
-      return 0 === (null === ID || void 0 === ID ? void 0 : ID.length) || null === ID && !pD ? null : (0, SD.jsxs)("div", {
+        t: gU
+      } = (0, PU.B)(), {
+        data: tU,
+        failed: pU
+      } = (0, yU.j)(OU.i, RU);
+      return 0 === (null === tU || void 0 === tU ? void 0 : tU.length) || null === tU && !pU ? null : (0, cU.jsxs)("div", {
         className: "SettingBox AccountSettingsPaymentHistory",
-        children: [(0, SD.jsx)("div", {
+        children: [(0, cU.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: cD("paymentHistory:title")
-        }), null === ID && pD && (0, SD.jsx)("div", {
+          children: gU("paymentHistory:title")
+        }), null === tU && pU && (0, cU.jsx)("div", {
           className: "AccountSettingsPaymentHistoryError",
-          children: cD("paymentHistory:loadFailed")
-        }), null !== ID && (0, SD.jsx)("ul", {
+          children: gU("paymentHistory:loadFailed")
+        }), null !== tU && (0, cU.jsx)("ul", {
           className: "PaymentHistoryList",
-          children: ID.map((DD => (0, SD.jsxs)("li", {
+          children: tU.map((UU => (0, cU.jsxs)("li", {
             className: "PaymentHistoryEntry",
-            children: [(0, SD.jsx)(DC.d, {
-              entry: DD
-            }), (0, SD.jsxs)("div", {
+            children: [(0, cU.jsx)(UR.d, {
+              entry: UU
+            }), (0, cU.jsxs)("div", {
               className: "PaymentHistoryEntryText",
-              children: [(0, SD.jsx)("div", {
-                children: (0, DC.i)(cD, DD)
-              }), (0, SD.jsxs)("div", {
+              children: [(0, cU.jsx)("div", {
+                children: (0, UR.h)(gU, UU)
+              }), (0, cU.jsxs)("div", {
                 className: "PaymentHistoryEntryDate",
-                children: [new Date(DD.at).toLocaleDateString(), "number" === typeof DD.orderId && ` \xb7 ${cD("paymentHistory:order",{orderId:DD.orderId})}`]
+                children: [new Date(UU.at).toLocaleDateString(), "number" === typeof UU.orderId && ` \xb7 ${gU("paymentHistory:order",{orderId:UU.orderId})}`]
               })]
             })]
-          }, (0, FD.e)(DD))))
+          }, (0, OU.e)(UU))))
         })]
       })
     }
-    var cC = cD(1857),
-      IC = cD(1243),
-      pC = cD(1340),
-      iC = cD(1305),
-      fC = cD(1763),
-      bC = cD(2821);
-    async function QC() {
+    var gR = gU(1768),
+      tR = gU(1240),
+      pR = gU(1333),
+      ER = gU(1305),
+      PR = gU(1675),
+      TR = gU(2715);
+    async function qR() {
       try {
-        return function(DD) {
-          const CD = new Map;
+        return function(UU) {
+          const RU = new Map;
           for (const {
-              store: cD,
-              status: ID,
-              autoRenewStatus: pD,
-              managementUrl: iD
+              store: gU,
+              status: tU,
+              autoRenewStatus: pU,
+              managementUrl: EU
             }
-            of Object.values(DD.subscriptions)) !(0, WD.g)(cD) || (0, WD.j)(ID) || "willNotRenew" === pD || CD.has(cD) || CD.set(cD, null !== iD && void 0 !== iD ? iD : WD.l[cD]);
-          return Array.from(CD, (DD => {
-            let [CD, cD] = DD;
+            of Object.values(UU.subscriptions)) !(0, iU.j)(gU) || (0, iU.n)(tU) || "willNotRenew" === pU || RU.has(gU) || RU.set(gU, null !== EU && void 0 !== EU ? EU : iU.p[gU]);
+          return Array.from(RU, (UU => {
+            let [RU, gU] = UU;
             return {
-              store: CD,
-              managementUrl: cD
+              store: RU,
+              managementUrl: gU
             }
           }))
-        }(await (0, fC.k)((0, bC.h)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
-      } catch (DD) {
-        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", DD), null
+        }(await (0, PR.i)((0, TR.g)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
+      } catch (UU) {
+        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", UU), null
       }
     }
-    var wC = cD(312),
-      SC = cD(2414);
-    const BC = {
+    var KR = gU(299),
+      cR = gU(2307);
+    const GR = {
       appStore: {
         name: "App Store",
-        ...wC.Wb.appStore
+        ...KR.Sb.appStore
       },
       googlePlay: {
         name: "Google Play",
-        ...wC.Wb.googlePlay
+        ...KR.Sb.googlePlay
       },
       discord: {
         name: "Discord",
-        ...wC.Wb.discord
+        ...KR.Sb.discord
       }
     };
 
-    function yC(DD) {
+    function jR(UU) {
       let {
-        warning: CD,
-        subscriptions: cD
-      } = DD;
+        warning: RU,
+        subscriptions: gU
+      } = UU;
       const {
-        t: ID
-      } = (0, fD.F)();
-      return null !== cD && 0 === cD.length ? (0, SD.jsx)(SD.Fragment, {
-        children: ID(CD)
-      }) : (0, SD.jsxs)("div", {
+        t: tU
+      } = (0, PU.B)();
+      return null !== gU && 0 === gU.length ? (0, cU.jsx)(cU.Fragment, {
+        children: tU(RU)
+      }) : (0, cU.jsxs)("div", {
         className: "DeleteAccountSubtitle",
-        children: [ID(CD), null === cD && (0, SD.jsx)("div", {
+        children: [tU(RU), null === gU && (0, cU.jsx)("div", {
           className: "DeleteAccountSubtitleNote",
-          children: ID("auth:deleteAccountSubscriptionsLoadFailed")
-        }), null !== cD && (0, SD.jsxs)(SD.Fragment, {
-          children: [(0, SD.jsx)("div", {
+          children: tU("auth:deleteAccountSubscriptionsLoadFailed")
+        }), null !== gU && (0, cU.jsxs)(cU.Fragment, {
+          children: [(0, cU.jsx)("div", {
             className: "DeleteAccountSubtitleNote",
-            children: ID("auth:deleteAccountStoreSubscriptions")
-          }), (0, SD.jsx)(SC.b, {
+            children: tU("auth:deleteAccountStoreSubscriptions")
+          }), (0, cU.jsx)(cR.b, {
             className: "DeleteAccountSubtitleLinks",
-            links: cD.map((DD => {
+            links: gU.map((UU => {
               let {
-                store: CD,
-                managementUrl: cD
-              } = DD;
+                store: RU,
+                managementUrl: gU
+              } = UU;
               return {
-                ...BC[CD],
-                url: cD
+                ...GR[RU],
+                url: gU
               }
             }))
           })]
@@ -399,703 +399,703 @@ export const modules = {
       })
     }
 
-    function MC(DD) {
+    function uR(UU) {
       let {
-        showing: CD
-      } = DD;
+        showing: RU
+      } = UU;
       const {
-        userContext: cD,
-        isUserContextUpdating: pD
-      } = (0, MD.c)(), {
-        t: iD
-      } = (0, fD.F)(), [bD, QD] = (0, ID.useState)(!1), [wD, BD] = (0, ID.useState)(null), yD = (0, ID.useRef)(CD);
-      (0, ID.useEffect)((() => (yD.current = CD, () => {
-        yD.current = !1
-      })), [CD]);
-      const tD = pD || bD;
-      async function ZD() {
-        const DD = function(DD) {
-            if ((0, xD.c)()) return "auth:discordActivityDeleteAccountWarning";
-            return DD ? "auth:deleteAccountWarning" : "auth:deleteGuestAccountWarning"
-          }(cD.isLoggedIn()),
-          CD = (0, cC.e)(cD.availableUserContextTypes) ? await QC() : [];
-        if (!yD.current) return IC.e.ok();
-        if (!0 !== await pC.NotificationProvider.showPromptPopup({
+        userContext: gU,
+        isUserContextUpdating: pU
+      } = (0, uU.e)(), {
+        t: EU
+      } = (0, PU.B)(), [TU, qU] = (0, tU.useState)(!1), [KU, GU] = (0, tU.useState)(null), jU = (0, tU.useRef)(RU);
+      (0, tU.useEffect)((() => (jU.current = RU, () => {
+        jU.current = !1
+      })), [RU]);
+      const CU = pU || TU;
+      async function hU() {
+        const UU = function(UU) {
+            if ((0, oU.e)()) return "auth:discordActivityDeleteAccountWarning";
+            return UU ? "auth:deleteAccountWarning" : "auth:deleteGuestAccountWarning"
+          }(gU.isLoggedIn()),
+          RU = (0, gR.d)(gU.availableUserContextTypes) ? await qR() : [];
+        if (!jU.current) return tR.c.ok();
+        if (!0 !== await pR.NotificationProvider.showPromptPopup({
             title: "auth:deleteAccountPopupTitleNamed",
             textOpts: {
               title: {
-                playerName: (0, VD.d)(cD.getPlayerName(), !vD.featureFlags.canSeeRealPlayerNames)
+                playerName: (0, VU.c)(gU.getPlayerName(), !eU.featureFlags.canSeeRealPlayerNames)
               }
             },
-            subtitle: (0, SD.jsx)(yC, {
-              warning: DD,
-              subscriptions: CD
+            subtitle: (0, cU.jsx)(jR, {
+              warning: UU,
+              subscriptions: RU
             }),
             confirmText: "auth:deleteAccount",
             destructive: !0,
             confirmTooltip: "auth:deleteAccountPopupConfirmTooltip",
             cancelText: "general:cancel",
             cancelTooltip: "auth:deleteAccountPopupCancelTooltip"
-          }).getResult()) return IC.e.ok();
-        const ID = await (0, qD.postJsonWithMetricsCookiesAndJsonResponse)(`${JD.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
-          gameState: PD.d.get("gameState")
+          }).getResult()) return tR.c.ok();
+        const tU = await (0, ZU.postJsonWithMetricsCookiesAndJsonResponse)(`${aU.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
+          gameState: wU.b.get("gameState")
         }, {
           retries: 3
-        }, cD.getMetricsCookies());
-        if (ID.error) return IC.e.error(ID.error);
-        if ((0, xD.c)()) {
-          (await iC.i.discordActivity()).exit("User deleted their account")
+        }, gU.getMetricsCookies());
+        if (tU.error) return tR.c.error(tU.error);
+        if ((0, oU.e)()) {
+          (await ER.m.discordActivity()).exit("User deleted their account")
         }
-        return (0, qD.forgetStoredGuestAccount)(cD.whamm), (0, qD.forceGlobalSignOut)(!0), IC.e.ok()
+        return (0, ZU.forgetStoredGuestAccount)(gU.whamm), (0, ZU.forceGlobalSignOut)(!0), tR.c.ok()
       }
-      return (0, SD.jsxs)("div", {
+      return (0, cU.jsxs)("div", {
         className: "AccountSettingsDeleteAccountButtonContainer",
-        children: [(0, SD.jsxs)(oD.J, {
+        children: [(0, cU.jsxs)(QU.E, {
           onClick: async function() {
-            if (!bD) {
-              QD(!0);
+            if (!TU) {
+              qU(!0);
               try {
-                const DD = await ZD(),
-                  CD = DD.isError() ? DD.asError().message : null;
-                BD(CD)
-              } catch (DD) {
-                console.error("Failed to delete account:", DD), BD(iD("auth:genericDeleteAccountError"))
+                const UU = await hU(),
+                  RU = UU.isError() ? UU.asError().message : null;
+                GU(RU)
+              } catch (UU) {
+                console.error("Failed to delete account:", UU), GU(EU("auth:genericDeleteAccountError"))
               }
-              QD(!1)
+              qU(!1)
             }
           },
           className: "AccountSettingsDeleteAccountButton",
-          disabled: tD,
-          children: [tD && (0, SD.jsx)("div", {
+          disabled: CU,
+          children: [CU && (0, cU.jsx)("div", {
             className: "DeletingAccountLoader",
-            children: (0, SD.jsx)(nD.e, {})
-          }), iD("auth:deleteAccount")]
-        }), wD && (0, SD.jsx)("div", {
+            children: (0, cU.jsx)(IU.d, {})
+          }), EU("auth:deleteAccount")]
+        }), KU && (0, cU.jsx)("div", {
           className: "DeleteAccountError",
-          children: wD
+          children: KU
         })]
       })
     }
-    var tC = cD(3395),
-      ZC = cD(3410),
-      oC = cD(3406);
+    var CR = gU(3271),
+      hR = gU(3286),
+      QR = gU(3280);
 
-    function vC(DD) {
+    function eR(UU) {
       let {
-        showing: CD
-      } = DD;
+        showing: RU
+      } = UU;
       const {
-        t: cD
-      } = (0, fD.F)(), {
-        data: ID,
-        failed: pD
-      } = (0, kD.h)(tC.b, CD), iD = null === ID ? null : (0, tC.d)(ID);
-      return (0, SD.jsxs)("div", {
+        t: gU
+      } = (0, PU.B)(), {
+        data: tU,
+        failed: pU
+      } = (0, yU.j)(CR.d, RU), EU = null === tU ? null : (0, CR.g)(tU);
+      return (0, cU.jsxs)("div", {
         className: "SettingBox BlockedAndIgnoredPlayers",
-        children: [(0, SD.jsx)("div", {
+        children: [(0, cU.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: cD("settingsMenu:blockedAndIgnoredPlayers")
-        }), null === iD && !pD && (0, SD.jsx)(nD.e, {}), null === iD && pD && (0, SD.jsxs)("div", {
+          children: gU("settingsMenu:blockedAndIgnoredPlayers")
+        }), null === EU && !pU && (0, cU.jsx)(IU.d, {}), null === EU && pU && (0, cU.jsxs)("div", {
           className: "BlockedAndIgnoredPlayersError",
-          children: [cD("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, SD.jsx)(oD.i, {
+          children: [gU("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, cU.jsx)(QU.e, {
             className: "SmallTextLight",
             onClick: () => {
-              tC.b.refresh()
+              CR.d.refresh()
             },
-            children: cD("general:tryAgain")
+            children: gU("general:tryAgain")
           })]
-        }), 0 === (null === iD || void 0 === iD ? void 0 : iD.length) && (0, SD.jsx)("div", {
+        }), 0 === (null === EU || void 0 === EU ? void 0 : EU.length) && (0, cU.jsx)("div", {
           className: "BlockedAndIgnoredPlayersEmpty",
-          children: cD("settingsMenu:noBlockedOrIgnoredPlayers")
-        }), null !== iD && iD.length > 0 && (0, SD.jsx)("ul", {
+          children: gU("settingsMenu:noBlockedOrIgnoredPlayers")
+        }), null !== EU && EU.length > 0 && (0, cU.jsx)("ul", {
           className: "BlockedAndIgnoredPlayersList",
-          children: iD.map((DD => {
+          children: EU.map((UU => {
             let {
-              name: CD,
-              exclusion: ID
-            } = DD;
-            const pD = oC.f[ID];
-            return (0, SD.jsxs)("li", {
+              name: RU,
+              exclusion: tU
+            } = UU;
+            const pU = QR.e[tU];
+            return (0, cU.jsxs)("li", {
               className: "BlockedAndIgnoredPlayer",
-              children: [(0, SD.jsx)("div", {
+              children: [(0, cU.jsx)("div", {
                 className: "BlockedAndIgnoredPlayerName",
-                children: CD
-              }), (0, SD.jsx)(oD.k, {
+                children: RU
+              }), (0, cU.jsx)(QU.g, {
                 className: "SmallTextLight",
                 onClick: () => {
-                  (0, ZC.f)(pD, CD, {
+                  (0, hR.i)(pU, RU, {
                     chatMessage: null
                   })
                 },
-                children: cD(oC.g[pD].text)
+                children: gU(QR.h[pU].text)
               })]
-            }, CD)
+            }, RU)
           }))
         })]
       })
     }
-    const NC = (0, ID.memo)((function(DD) {
-      var CD;
+    const WR = (0, tU.memo)((function(UU) {
+      var RU;
       let {
-        showing: cD,
-        inGame: pD
-      } = DD;
+        showing: gU,
+        inGame: pU
+      } = UU;
       const {
-        t: QD,
-        selectedLanguage: wD
-      } = (0, fD.F)(), {
-        hideSocialLocationFrom: BD
-      } = (0, PD.o)(["hideSocialLocationFrom"]), tD = (0, yD.b)(), {
-        userContext: ZD,
-        isUserContextUpdating: ND
-      } = (0, MD.c)(), [gD, XD] = (0, ID.useState)(null !== (CD = ZD.getPlayerName()) && void 0 !== CD ? CD : ""), [HD, UD] = (0, ID.useState)(null), {
-        purchasing: kD,
-        outcome: dD,
-        purchase: YD
-      } = (0, KD.e)("/super-rank-welcome"), WD = (0, TD.hc)((0, fD.m)(wD.code, "general:timeLeft"), ZD.superRankInfo), sD = eD(cD), ED = WD ? QD("general:timeLeft", {
-        time: WD
-      }) : sD, [FD, DC] = (0, ID.useState)(!1), [cC, IC] = (0, ID.useState)(!1), pC = (0, ID.useRef)(null), iC = (0, ID.useRef)(null), fC = (0, lD.e)({
+        t: qU,
+        selectedLanguage: KU
+      } = (0, PU.B)(), {
+        hideSocialLocationFrom: GU
+      } = (0, wU.l)(["hideSocialLocationFrom"]), CU = (0, jU.b)(), {
+        userContext: hU,
+        isUserContextUpdating: WU
+      } = (0, uU.e)(), [fU, xU] = (0, tU.useState)(null !== (RU = hU.getPlayerName()) && void 0 !== RU ? RU : ""), [nU, bU] = (0, tU.useState)(null), {
+        purchasing: yU,
+        outcome: kU,
+        purchase: FU
+      } = (0, YU.b)("/super-rank-welcome"), iU = (0, HU.jc)((0, PU.n)(KU.code, "general:timeLeft"), hU.superRankInfo), AU = MU(gU), zU = iU ? qU("general:timeLeft", {
+        time: iU
+      }) : AU, [OU, UR] = (0, tU.useState)(!1), [gR, tR] = (0, tU.useState)(!1), pR = (0, tU.useRef)(null), ER = (0, tU.useRef)(null), PR = (0, vU.g)({
         showProgressUpdateMessage: !0,
         enabled: !0
-      }), bC = null === fC, QC = null !== fC && void 0 !== fC ? fC : [], wC = ZD !== qD.NULL_USER_CONTEXT && !ZD.isLoggedIn(), SC = wC && 0 !== (null === fC || void 0 === fC ? void 0 : fC.length), [BC, yC] = (0, ID.useState)([]), [tC, ZC] = (0, ID.useState)(!1), oC = ZD.playerHasRank("youtuber"), NC = (0, ID.useCallback)((() => LD.c.getPlayerProfile(ZD, {
-        lowerCaseName: ZD.getPlayerName().toLowerCase()
-      }).then((DD => {
-        yC(DD.socialLinks)
-      })).catch((DD => {
-        console.error("Failed to refresh social links", DD)
-      }))), [ZD]);
+      }), TR = null === PR, qR = null !== PR && void 0 !== PR ? PR : [], KR = hU !== ZU.NULL_USER_CONTEXT && !hU.isLoggedIn(), cR = KR && 0 !== (null === PR || void 0 === PR ? void 0 : PR.length), [GR, jR] = (0, tU.useState)([]), [CR, hR] = (0, tU.useState)(!1), QR = hU.playerHasRank("youtuber"), WR = (0, tU.useCallback)((() => dU.c.getPlayerProfile(hU, {
+        lowerCaseName: hU.getPlayerName().toLowerCase()
+      }).then((UU => {
+        jR(UU.socialLinks)
+      })).catch((UU => {
+        console.error("Failed to refresh social links", UU)
+      }))), [hU]);
 
-      function XC(DD) {
-        DD !== gD && ((0, VD.k)(DD) ? (DD = (0, VD.o)(DD), UD("Only letters, numbers, and _")) : UD(null), pC.current && (pC.current.value = DD), XD(DD))
+      function xR(UU) {
+        UU !== fU && ((0, VU.m)(UU) ? (UU = (0, VU.q)(UU), bU("Only letters, numbers, and _")) : bU(null), pR.current && (pR.current.value = UU), xU(UU))
       }
-      return (0, ID.useEffect)((() => (!0 === cD ? (clearInterval(iC.current), iC.current = setInterval(tD, 1e3)) : clearInterval(iC.current), () => {
-        clearInterval(iC.current)
-      })), [cD, tD]), (0, ID.useEffect)((() => {
-        var DD;
-        XD(null !== (DD = ZD.getPlayerName()) && void 0 !== DD ? DD : "")
-      }), [ZD]), (0, ID.useEffect)((() => {
-        if (!cD || !oC || ND) return;
-        let DD = !1;
-        return ZC(!0), yC([]), LD.c.getPlayerProfile(ZD, {
-          lowerCaseName: ZD.getPlayerName().toLowerCase()
-        }).then((CD => {
-          DD || yC(CD.socialLinks)
-        })).catch((DD => {
-          console.error("Failed to load social links", DD)
+      return (0, tU.useEffect)((() => (!0 === gU ? (clearInterval(ER.current), ER.current = setInterval(CU, 1e3)) : clearInterval(ER.current), () => {
+        clearInterval(ER.current)
+      })), [gU, CU]), (0, tU.useEffect)((() => {
+        var UU;
+        xU(null !== (UU = hU.getPlayerName()) && void 0 !== UU ? UU : "")
+      }), [hU]), (0, tU.useEffect)((() => {
+        if (!gU || !QR || WU) return;
+        let UU = !1;
+        return hR(!0), jR([]), dU.c.getPlayerProfile(hU, {
+          lowerCaseName: hU.getPlayerName().toLowerCase()
+        }).then((RU => {
+          UU || jR(RU.socialLinks)
+        })).catch((UU => {
+          console.error("Failed to load social links", UU)
         })).finally((() => {
-          DD || ZC(!1)
+          UU || hR(!1)
         })), () => {
-          DD = !0
+          UU = !0
         }
-      }), [cD, oC, ND, ZD]), (0, SD.jsxs)("div", {
-        className: iD()("SettingsMenuRightInner AccountSettings", {
-          AccountSettingsLocked: pD
+      }), [gU, QR, WU, hU]), (0, cU.jsxs)("div", {
+        className: EU()("SettingsMenuRightInner AccountSettings", {
+          AccountSettingsLocked: pU
         }),
-        children: [pD && (0, SD.jsx)("div", {
+        children: [pU && (0, cU.jsx)("div", {
           className: "AccountSettingsInGameWarning",
-          children: QD("settingsMenu:accountSettingsInGameWarning")
-        }), (0, SD.jsxs)("div", {
+          children: qU("settingsMenu:accountSettingsInGameWarning")
+        }), (0, cU.jsxs)("div", {
           className: "SettingBox SetAccountNameDiv SmallTextLight",
-          children: [(0, SD.jsxs)("div", {
+          children: [(0, cU.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsNameLabel",
-            children: [QD("homePage:discordNamePopupTitle"), (0, SD.jsxs)(aD.LinkPreserveSearch, {
+            children: [qU("homePage:discordNamePopupTitle"), (0, cU.jsxs)(BU.LinkPreserveSearch, {
               className: "AccountSettingsViewProfile",
-              to: (0, zD.h)({
-                name: ZD.getPlayerName()
+              to: (0, rU.j)({
+                name: hU.getPlayerName()
               }),
               onClick: () => {
-                PD.d.set({
+                wU.b.set({
                   openEverythingMenuName: null
                 })
               },
-              children: [(0, SD.jsx)(bD.c, {
+              children: [(0, cU.jsx)(TU.c, {
                 name: "arrow-up-right-from-square"
-              }), " ", QD("profileCard:viewProfile")]
+              }), " ", qU("profileCard:viewProfile")]
             })]
-          }), (0, SD.jsxs)("div", {
+          }), (0, cU.jsxs)("div", {
             className: "EnterAccNameDivWrapper",
             "data-pad-initial-area": !0,
-            children: [(0, SD.jsxs)("div", {
+            children: [(0, cU.jsxs)("div", {
               className: "EnterAccNameInputRow",
-              children: [vD.featureFlags.canChangeName && (0, SD.jsx)(mD.b, {
+              children: [eU.featureFlags.canChangeName && (0, cU.jsx)(mU.d, {
                 className: "EnterName",
-                placeholderText: QD("homePage:enterName"),
-                maxLength: VD.i,
-                defaultValue: gD,
-                onValueChange: DD => {
-                  XC(DD)
+                placeholderText: qU("homePage:enterName"),
+                maxLength: VU.h,
+                defaultValue: fU,
+                onValueChange: UU => {
+                  xR(UU)
                 },
-                forcedText: FD || !vD.featureFlags.canChangeName ? gD : null,
+                forcedText: OU || !eU.featureFlags.canChangeName ? fU : null,
                 blurOnEnter: !0,
-                domRef: pC
-              }), (0, SD.jsx)(oD.i, {
+                domRef: pR
+              }), (0, cU.jsx)(QU.e, {
                 className: "ChooseRandomNameButton",
                 onClick: () => {
-                  XC((0, VD.h)())
+                  xR((0, VU.f)())
                 },
-                children: (0, SD.jsx)(bD.c, {
+                children: (0, cU.jsx)(TU.c, {
                   name: "dice",
                   className: "ChooseRandomNameIcon"
                 })
-              }), !vD.featureFlags.canChangeName && (0, SD.jsx)("div", {
+              }), !eU.featureFlags.canChangeName && (0, cU.jsx)("div", {
                 className: "EnterName NoInput",
-                children: (0, VD.d)(gD, !vD.featureFlags.canSeeRealPlayerNames)
+                children: (0, VU.c)(fU, !eU.featureFlags.canSeeRealPlayerNames)
               })]
-            }), (0, SD.jsx)(oD.i, {
+            }), (0, cU.jsx)(QU.e, {
               className: "ChooseNameButton",
-              disabled: FD || gD === ZD.getPlayerName(),
+              disabled: OU || fU === hU.getPlayerName(),
               onClick: () => {
-                gD.length < VD.j ? UD(QD("homePage:changeNameMinLengthError", {
-                  length: VD.j
-                })) : gD.length > VD.i ? UD(QD("homePage:changeNameMaxLengthError", {
-                  length: VD.i
-                })) : (DC(!0), UD(null), async function(DD, CD, cD, ID) {
-                  const pD = await (0, qD.postJsonWithMetricsCookiesAndJsonResponse)(`${JD.clientSideServerUrls.indexUrl}/index/name/update`, {
-                    name: DD
+                fU.length < VU.j ? bU(qU("homePage:changeNameMinLengthError", {
+                  length: VU.j
+                })) : fU.length > VU.h ? bU(qU("homePage:changeNameMaxLengthError", {
+                  length: VU.h
+                })) : (UR(!0), bU(null), async function(UU, RU, gU, tU) {
+                  const pU = await (0, ZU.postJsonWithMetricsCookiesAndJsonResponse)(`${aU.clientSideServerUrls.indexUrl}/index/name/update`, {
+                    name: UU
                   }, {
                     retries: 3
-                  }, CD.getMetricsCookies()).catch((DD => (console.error("Bad response from the server when trying to update name:", DD), {
+                  }, RU.getMetricsCookies()).catch((UU => (console.error("Bad response from the server when trying to update name:", UU), {
                     err: "An error occurred trying to change your name! Please report on discord what steps you took to get this error message."
                   })));
-                  pD.err ? (console.error("Error when trying to get with new name from DB", pD.err), ID(pD.err)) : !0 === pD.nameExists ? ID("Name is already taken") : cD(DD)
-                }(gD, ZD, (DD => {
-                  ZD.setPlayerName(DD), DC(!1)
-                }), (DD => {
-                  UD(DD), DC(!1)
+                  pU.err ? (console.error("Error when trying to get with new name from DB", pU.err), tU(pU.err)) : !0 === pU.nameExists ? tU("Name is already taken") : gU(UU)
+                }(fU, hU, (UU => {
+                  hU.setPlayerName(UU), UR(!1)
+                }), (UU => {
+                  bU(UU), UR(!1)
                 })))
               },
-              children: QD("general:choose")
+              children: qU("general:choose")
             })]
-          }), HD && (0, SD.jsx)("div", {
+          }), nU && (0, cU.jsx)("div", {
             className: "ChooseAccNameError",
-            children: HD
+            children: nU
           })]
-        }), (0, SD.jsx)(OD.e, {
+        }), (0, cU.jsx)(JU.b, {
           label: (() => {
-            if ((0, hD.o)(BD)) {
-              const DD = (0, fD.m)(wD.code, "general:timeLeft"),
-                CD = (0, TD.cb)(DD, Date.now(), BD + hD.l);
-              return `${QD("settingsMenu:hideSocialLocation")} (${QD("general:timeLeft",{time:CD})})`
+            if ((0, LU.q)(GU)) {
+              const UU = (0, PU.n)(KU.code, "general:timeLeft"),
+                RU = (0, HU.kb)(UU, Date.now(), GU + LU.m);
+              return `${qU("settingsMenu:hideSocialLocation")} (${qU("general:timeLeft",{time:RU})})`
             }
-            return QD("settingsMenu:hideSocialLocation")
+            return qU("settingsMenu:hideSocialLocation")
           })(),
           onClick: () => {
-            const DD = !(0, hD.o)(BD);
-            (0, AD.reportAnalyticsClick)({
+            const UU = !(0, LU.q)(GU);
+            (0, lU.reportAnalyticsClick)({
               id: "social.hide_location",
-              value: DD ? "on" : "off"
-            }), IC(!0), LD.c.setHideSocialLocation(ZD, DD).then((() => {
-              PD.d.set({
-                hideSocialLocationFrom: DD ? Date.now() : null
+              value: UU ? "on" : "off"
+            }), tR(!0), dU.c.setHideSocialLocation(hU, UU).then((() => {
+              wU.b.set({
+                hideSocialLocationFrom: UU ? Date.now() : null
               })
             })).finally((() => {
-              IC(!1)
+              tR(!1)
             }))
           },
-          checked: (0, hD.o)(BD),
-          disabled: cC
-        }), oC && (0, SD.jsxs)("div", {
+          checked: (0, LU.q)(GU),
+          disabled: gR
+        }), QR && (0, cU.jsxs)("div", {
           className: "SettingBox AccountSettingsSocialLinks",
-          children: [(0, SD.jsx)("div", {
+          children: [(0, cU.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: QD("settingsMenu:socialLinks")
-          }), tC && (0, SD.jsx)(nD.e, {}), !tC && (0, SD.jsx)(rD.c, {
-            socialLinks: BC,
+            children: qU("settingsMenu:socialLinks")
+          }), CR && (0, cU.jsx)(IU.d, {}), !CR && (0, cU.jsx)(NU.c, {
+            socialLinks: GR,
             editable: !0,
-            userContext: ZD,
-            onLinksUpdated: NC
+            userContext: hU,
+            onLinksUpdated: WR
           })]
-        }), (0, SD.jsxs)("div", {
+        }), (0, cU.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, SD.jsx)("div", {
+          children: [(0, cU.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: QD(SC ? "auth:loginOrSwitchAccount" : "auth:login")
-          }), bC && (0, SD.jsx)(nD.e, {}), !bC && 0 === QC.length && (0, SD.jsx)("div", {
+            children: qU(cR ? "auth:loginOrSwitchAccount" : "auth:login")
+          }), TR && (0, cU.jsx)(IU.d, {}), !TR && 0 === qR.length && (0, cU.jsx)("div", {
             className: "NoLoginOptions",
-            children: QD("auth:noLoginOptions")
-          }), !bC && QC.length > 0 && "crazygames" !== xD.p && (0, SD.jsx)("div", {
+            children: qU("auth:noLoginOptions")
+          }), !TR && qR.length > 0 && "crazygames" !== oU.t && (0, cU.jsx)("div", {
             className: "AccountSettingsLoginButtons",
-            children: QC
-          }), !bC && QC.length > 0 && "crazygames" === xD.p && (0, SD.jsxs)("div", {
+            children: qR
+          }), !TR && qR.length > 0 && "crazygames" === oU.t && (0, cU.jsxs)("div", {
             className: "AccountSettingsLoginButtons",
-            children: [QC[0], QC.length > 1 && (0, SD.jsxs)(SD.Fragment, {
-              children: [(0, SD.jsxs)("div", {
+            children: [qR[0], qR.length > 1 && (0, cU.jsxs)(cU.Fragment, {
+              children: [(0, cU.jsxs)("div", {
                 className: "LegacyLoginOptionsHeader",
-                children: [(0, SD.jsx)("span", {
+                children: [(0, cU.jsx)("span", {
                   className: "LegacyLoginOptionsTitle",
-                  children: QD("auth:legacyLoginOptions")
-                }), (0, SD.jsx)(uD.d, {
+                  children: qU("auth:legacyLoginOptions")
+                }), (0, cU.jsx)(DU.d, {
                   className: "LegacyLoginOptionsInfoIcon",
-                  hoverInfo: QD("auth:legacyLoginOptionsInfo")
+                  hoverInfo: qU("auth:legacyLoginOptionsInfo")
                 })]
-              }), (0, SD.jsx)("div", {
+              }), (0, cU.jsx)("div", {
                 className: "LegacyAccountSettingsLoginButtons",
-                children: QC.slice(1)
+                children: qR.slice(1)
               })]
             })]
-          }), vD.featureFlags.useLogin && (null !== ZD.loggedInInfo || ZD.isLoggedIn()) && (0, SD.jsxs)(SD.Fragment, {
-            children: [(0, SD.jsx)("div", {
+          }), eU.featureFlags.useLogin && (null !== hU.loggedInInfo || hU.isLoggedIn()) && (0, cU.jsxs)(cU.Fragment, {
+            children: [(0, cU.jsx)("div", {
               className: "AccountSettingsLoginDivider"
-            }), (0, SD.jsxs)(oD.J, {
+            }), (0, cU.jsxs)(QU.E, {
               onClick: () => {
-                (0, qD.forceGlobalSignOut)()
+                (0, ZU.forceGlobalSignOut)()
               },
               className: "AccountSettingsSignedInButton",
-              children: [(0, SD.jsx)(bD.c, {
+              children: [(0, cU.jsx)(TU.c, {
                 name: "right-from-bracket"
-              }), QD("auth:signOut")]
+              }), qU("auth:signOut")]
             })]
           })]
-        }), !ZD.playerHasRank("super") && (0, RD.purchasesAllowed)() && (0, SD.jsxs)("div", {
+        }), !hU.playerHasRank("super") && (0, sU.purchasesAllowed)() && (0, cU.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, SD.jsxs)("div", {
+          children: [(0, cU.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, SD.jsx)(bD.c, {
+            children: [(0, cU.jsx)(TU.c, {
               name: "bolt"
-            }), QD("homePage:superRank")]
-          }), (0, SD.jsxs)("div", {
+            }), qU("homePage:superRank")]
+          }), (0, cU.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [(0, SD.jsxs)(oD.o, {
+            children: [(0, cU.jsxs)(QU.j, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, GD.p)({
+                (0, SU.m)({
                   mode: "self",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, SD.jsx)(bD.c, {
+              children: [(0, cU.jsx)(TU.c, {
                 name: "bolt"
-              }), QD("homePage:getSuperRank")]
-            }), (0, SD.jsxs)(oD.o, {
+              }), qU("homePage:getSuperRank")]
+            }), (0, cU.jsxs)(QU.j, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, GD.p)({
+                (0, SU.m)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, SD.jsx)(bD.c, {
+              children: [(0, cU.jsx)(TU.c, {
                 name: "bolt"
-              }), QD("homePage:giftSuperRank")]
+              }), qU("homePage:giftSuperRank")]
             })]
           })]
-        }), ZD.playerHasRank("super") && (0, SD.jsxs)("div", {
+        }), hU.playerHasRank("super") && (0, cU.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, SD.jsxs)("div", {
+          children: [(0, cU.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, SD.jsx)(bD.c, {
+            children: [(0, cU.jsx)(TU.c, {
               name: "bolt"
-            }), QD("homePage:superRank"), ED && (0, SD.jsxs)("div", {
+            }), qU("homePage:superRank"), zU && (0, cU.jsxs)("div", {
               className: "AccountSettingsSuperRankTimeLeft",
-              children: ["(", ED, ")"]
+              children: ["(", zU, ")"]
             })]
-          }), (0, RD.purchasesAllowed)() && (0, SD.jsxs)("div", {
+          }), (0, sU.purchasesAllowed)() && (0, cU.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [!(0, TD.Ac)(ZD.superRankInfo) && (0, SD.jsxs)(oD.o, {
+            children: [!(0, HU.Bc)(hU.superRankInfo) && (0, cU.jsxs)(QU.j, {
               className: "AccountSettingsSuperRankProlong",
-              loading: kD,
+              loading: yU,
               onClick: () => {
-                YD(jD.g.id, null)
+                FU(XU.l.id, null)
               },
-              children: [(0, SD.jsx)(bD.c, {
+              children: [(0, cU.jsx)(TU.c, {
                 name: "bolt"
-              }), QD("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
-                days: jD.g.product.days,
-                price: jD.g.price
+              }), qU("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
+                days: XU.l.product.days,
+                price: XU.l.price
               })]
-            }), (0, SD.jsxs)(oD.o, {
+            }), (0, cU.jsxs)(QU.j, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, GD.p)({
+                (0, SU.m)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, SD.jsx)(bD.c, {
+              children: [(0, cU.jsx)(TU.c, {
                 name: "bolt"
-              }), QD("homePage:giftSuperRank")]
+              }), qU("homePage:giftSuperRank")]
             })]
-          }), dD && (0, SD.jsx)("div", {
+          }), kU && (0, cU.jsx)("div", {
             className: "AccountSettingsSuperRankProlongError SmallTextBold",
-            children: QD(dD.translationKey)
+            children: qU(kU.translationKey)
           })]
-        }), (0, SD.jsx)(CC, {
-          showing: cD
-        }), vD.featureFlags.useSocialFeatures && (0, SD.jsx)(vC, {
-          showing: cD
-        }), (0, SD.jsxs)("div", {
+        }), (0, cU.jsx)(RR, {
+          showing: gU
+        }), eU.featureFlags.useSocialFeatures && (0, cU.jsx)(eR, {
+          showing: gU
+        }), (0, cU.jsxs)("div", {
           className: "SettingBoxGroup AccountSettingsDeleteAccountGroup",
-          children: [(0, SD.jsxs)("div", {
+          children: [(0, cU.jsxs)("div", {
             className: "SettingBox AccountSettingsDeleteAccount SettingBoxWarning",
-            children: [(0, SD.jsx)("div", {
+            children: [(0, cU.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: QD(gC(wC, SC))
-            }), (0, xD.c)() && (0, SD.jsx)("div", {
+              children: qU(fR(KR, cR))
+            }), (0, oU.e)() && (0, cU.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: QD("auth:discordActivityKickWarning")
-            }), (0, SD.jsx)(MC, {
-              showing: cD
+              children: qU("auth:discordActivityKickWarning")
+            }), (0, cU.jsx)(uR, {
+              showing: gU
             })]
-          }), (0, SD.jsx)("div", {
+          }), (0, cU.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: QD("auth:deleteAccountWarning")
+            children: qU("auth:deleteAccountWarning")
           })]
         })]
       })
     }));
 
-    function gC(DD, CD) {
-      return DD ? CD ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
+    function fR(UU, RU) {
+      return UU ? RU ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
     }
-    var XC = cD(8940),
-      mC = cD(2921),
-      nC = cD(1250),
-      OC = cD(1425);
-    const PC = (0, ID.memo)((function(DD) {
+    var xR = gU(8893),
+      mR = gU(2825),
+      IR = gU(1249),
+      JR = gU(1403);
+    const wR = (0, tU.memo)((function(UU) {
         let {
-          inGame: CD
-        } = DD;
+          inGame: RU
+        } = UU;
         const {
-          t: cD,
-          selectedLanguage: ID
-        } = (0, fD.F)(), {
-          clientEscMenuOptions: pD,
-          showDebugOverlay: iD
-        } = (0, PD.o)(["clientEscMenuOptions", "showDebugOverlay"]), bD = (0, tD.h)("hideCoordinates");
-        let QD = "settingsMenu:showCoordinates",
-          wD = "settingsMenu:showChunkCoordinates";
+          t: gU,
+          selectedLanguage: tU
+        } = (0, PU.B)(), {
+          clientEscMenuOptions: pU,
+          showDebugOverlay: EU
+        } = (0, wU.l)(["clientEscMenuOptions", "showDebugOverlay"]), TU = (0, CU.g)("hideCoordinates");
+        let qU = "settingsMenu:showCoordinates",
+          KU = "settingsMenu:showChunkCoordinates";
 
-        function BD(DD) {
-          const CD = new Intl.DisplayNames([DD], {
+        function GU(UU) {
+          const RU = new Intl.DisplayNames([UU], {
             type: "language"
-          }).of(DD);
-          return CD.charAt(0).toUpperCase() + CD.slice(1)
+          }).of(UU);
+          return RU.charAt(0).toUpperCase() + RU.slice(1)
         }
-        return bD && (QD = "settingsMenu:showCoordinatesHidden", wD = "settingsMenu:showChunkCoordinatesHidden"), (0, SD.jsxs)("div", {
+        return TU && (qU = "settingsMenu:showCoordinatesHidden", KU = "settingsMenu:showChunkCoordinatesHidden"), (0, cU.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [CD && vD.featureFlags.canUseInviteLinks && (0, SD.jsxs)("div", {
+          children: [RU && eU.featureFlags.canUseInviteLinks && (0, cU.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, SD.jsx)("div", {
+            children: [(0, cU.jsx)("div", {
               className: "SettingsMenuInviteHeader",
-              children: cD("settingsMenu:inviteLink")
-            }), (0, SD.jsx)(XC.h, {})]
-          }), (0, SD.jsxs)("div", {
+              children: gU("settingsMenu:inviteLink")
+            }), (0, cU.jsx)(xR.d, {})]
+          }), (0, cU.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, SD.jsx)("div", {
+            children: [(0, cU.jsx)("div", {
               className: "SliderText",
               style: {
                 marginBottom: "10px"
               },
-              children: cD("settingsMenu:language")
-            }), (0, SD.jsx)(mC.b, {
-              options: Object.entries(fD.f).map((DD => {
-                let [CD, cD] = DD;
+              children: gU("settingsMenu:language")
+            }), (0, cU.jsx)(mR.c, {
+              options: Object.entries(PU.h).map((UU => {
+                let [RU, gU] = UU;
                 return {
-                  label: (0, SD.jsxs)("div", {
+                  label: (0, cU.jsxs)("div", {
                     className: "SettingsMenuLanguageOption",
-                    children: [(0, SD.jsx)("img", {
-                      src: cD.flagImg,
+                    children: [(0, cU.jsx)("img", {
+                      src: gU.flagImg,
                       alt: "flag"
-                    }), (0, SD.jsxs)("span", {
-                      children: [BD(CD), " ", (0, SD.jsxs)("span", {
+                    }), (0, cU.jsxs)("span", {
+                      children: [GU(RU), " ", (0, cU.jsxs)("span", {
                         className: "SettingsMenuLanguageOptionCode",
-                        children: ["(", CD, ")"]
+                        children: ["(", RU, ")"]
                       })]
                     })]
                   }),
-                  value: CD
+                  value: RU
                 }
               })),
-              value: ID.code,
-              onChange: DD => {
-                nC.e.get().setCurrentLanguage(DD.value)
+              value: tU.code,
+              onChange: UU => {
+                IR.g.get().setCurrentLanguage(UU.value)
               }
             })]
-          }), !(0, vD.isMobileApp)() && (0, OC.c)() && vD.featureFlags.useForceRotateForceFullscreenOverlay && (0, SD.jsx)(OD.e, {
-            label: cD("settingsMenu:disableFullscreenMode"),
-            checked: pD.disableFullscreen,
-            onClick: DD => {
-              PD.d.setClientEscMenuOptions({
-                disableFullscreen: DD
+          }), !(0, eU.isMobileApp)() && (0, JR.f)() && eU.featureFlags.useForceRotateForceFullscreenOverlay && (0, cU.jsx)(JU.b, {
+            label: gU("settingsMenu:disableFullscreenMode"),
+            checked: pU.disableFullscreen,
+            onClick: UU => {
+              wU.b.setClientEscMenuOptions({
+                disableFullscreen: UU
               })
             }
-          }), (0, SD.jsx)(OD.e, {
-            label: cD(QD),
-            checked: pD.showCoordinates,
-            onClick: DD => {
-              PD.d.setClientEscMenuOptions({
-                showCoordinates: DD
+          }), (0, cU.jsx)(JU.b, {
+            label: gU(qU),
+            checked: pU.showCoordinates,
+            onClick: UU => {
+              wU.b.setClientEscMenuOptions({
+                showCoordinates: UU
               })
             },
-            disabled: bD
-          }), (0, SD.jsx)(OD.e, {
-            label: cD(wD),
-            checked: pD.showChunkCoordinates,
-            onClick: DD => {
-              PD.d.setClientEscMenuOptions({
-                showChunkCoordinates: DD
+            disabled: TU
+          }), (0, cU.jsx)(JU.b, {
+            label: gU(KU),
+            checked: pU.showChunkCoordinates,
+            onClick: UU => {
+              wU.b.setClientEscMenuOptions({
+                showChunkCoordinates: UU
               })
             },
-            disabled: bD
-          }), (0, SD.jsx)(OD.e, {
-            label: cD("settingsMenu:showFps"),
-            checked: pD.showFPS,
-            onClick: DD => {
-              PD.d.setClientEscMenuOptions({
-                showFPS: DD
+            disabled: TU
+          }), (0, cU.jsx)(JU.b, {
+            label: gU("settingsMenu:showFps"),
+            checked: pU.showFPS,
+            onClick: UU => {
+              wU.b.setClientEscMenuOptions({
+                showFPS: UU
               })
             }
-          }), (0, SD.jsx)(OD.e, {
-            label: cD("settingsMenu:disableBunnyHopping"),
-            checked: pD.disableBunnyHopping,
-            onClick: DD => {
-              PD.d.setClientEscMenuOptions({
-                disableBunnyHopping: DD
+          }), (0, cU.jsx)(JU.b, {
+            label: gU("settingsMenu:disableBunnyHopping"),
+            checked: pU.disableBunnyHopping,
+            onClick: UU => {
+              wU.b.setClientEscMenuOptions({
+                disableBunnyHopping: UU
               })
             }
-          }), (0, iC.t)() && (0, SD.jsx)(OD.e, {
-            label: cD("settingsMenu:showChat"),
-            checked: pD.showChat,
-            onClick: DD => {
-              PD.d.setClientEscMenuOptions({
-                showChat: DD
+          }), (0, ER.z)() && (0, cU.jsx)(JU.b, {
+            label: gU("settingsMenu:showChat"),
+            checked: pU.showChat,
+            onClick: UU => {
+              wU.b.setClientEscMenuOptions({
+                showChat: UU
               })
             }
-          }), (0, SD.jsx)(OD.e, {
-            label: cD("settingsMenu:showDebugOverlay"),
-            checked: iD,
-            onClick: DD => {
-              PD.d.set({
-                showDebugOverlay: DD
+          }), (0, cU.jsx)(JU.b, {
+            label: gU("settingsMenu:showDebugOverlay"),
+            checked: EU,
+            onClick: UU => {
+              wU.b.set({
+                showDebugOverlay: UU
               })
             }
-          }), vD.featureFlags.useSocialFeatures && (0, SD.jsx)(OD.e, {
-            label: cD("settingsMenu:showFriendOnlineToasts"),
-            checked: pD.showFriendOnlineToasts,
-            onClick: DD => {
-              PD.d.setClientEscMenuOptions({
-                showFriendOnlineToasts: DD
+          }), eU.featureFlags.useSocialFeatures && (0, cU.jsx)(JU.b, {
+            label: gU("settingsMenu:showFriendOnlineToasts"),
+            checked: pU.showFriendOnlineToasts,
+            onClick: UU => {
+              wU.b.setClientEscMenuOptions({
+                showFriendOnlineToasts: UU
               })
             }
-          }), (0, SD.jsx)(OD.e, {
-            label: cD("settingsMenu:showNewItemIndicator"),
-            checked: pD.showNewItemIndicator,
-            onClick: DD => {
-              PD.d.setClientEscMenuOptions({
-                showNewItemIndicator: DD
+          }), (0, cU.jsx)(JU.b, {
+            label: gU("settingsMenu:showNewItemIndicator"),
+            checked: pU.showNewItemIndicator,
+            onClick: UU => {
+              wU.b.setClientEscMenuOptions({
+                showNewItemIndicator: UU
               })
             }
           })]
         })
       })),
-      HC = (0, ID.memo)((function() {
+      nR = (0, tU.memo)((function() {
         const {
-          t: DD
-        } = (0, fD.F)(), {
-          soundVolume: CD,
-          musicVolume: cD
-        } = (0, PD.o)(["soundVolume", "musicVolume"]);
-        return (0, SD.jsxs)("div", {
+          t: UU
+        } = (0, PU.B)(), {
+          soundVolume: RU,
+          musicVolume: gU
+        } = (0, wU.l)(["soundVolume", "musicVolume"]);
+        return (0, cU.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, SD.jsx)(OD.i, {
-            name: DD("settingsMenu:musicVolume"),
+          children: [(0, cU.jsx)(JU.h, {
+            name: UU("settingsMenu:musicVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: cD,
-            onChange: DD => {
-              PD.d.set({
-                musicVolume: Math.round(100 * DD) / 100
+            initValue: gU,
+            onChange: UU => {
+              wU.b.set({
+                musicVolume: Math.round(100 * UU) / 100
               })
             },
-            format: DD => DD.toFixed(2)
-          }), (0, SD.jsx)(OD.i, {
-            name: DD("settingsMenu:soundEffectsVolume"),
+            format: UU => UU.toFixed(2)
+          }), (0, cU.jsx)(JU.h, {
+            name: UU("settingsMenu:soundEffectsVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: CD,
-            onChange: DD => {
-              PD.d.set({
-                soundVolume: Math.round(100 * DD) / 100
+            initValue: RU,
+            onChange: UU => {
+              wU.b.set({
+                soundVolume: Math.round(100 * UU) / 100
               })
             },
-            format: DD => DD.toFixed(2)
+            format: UU => UU.toFixed(2)
           })]
         })
       }));
-    var UC = cD(723),
-      xC = cD(1440),
-      qC = cD(3479),
-      JC = cD(8944),
-      KC = cD(3306);
-    const aC = {
+    var bR = gU(682),
+      oR = gU(1410),
+      ZR = gU(3336),
+      aR = gU(8896),
+      YR = gU(3182);
+    const BR = {
       app: "notificationSettings:pushTargetsApp",
       browser: "notificationSettings:pushTargetsBrowser",
       msnPlay: "notificationSettings:pushTargetsMsnPlay"
     };
 
-    function VC() {
+    function VR() {
       const {
-        t: DD
-      } = (0, fD.F)(), CD = (0, KC.d)(), {
-        mobilePushNotificationsCanAsk: cD
-      } = (0, PD.o)(["mobilePushNotificationsCanAsk"]), [pD, iD] = (0, ID.useState)(null), [bD, QD] = (0, ID.useState)(!1), [wD, BD] = (0, ID.useState)(null), [yD, MD] = (0, ID.useState)(!1), tD = (0, ID.useCallback)((() => {
-        (0, qC.c)().then((DD => {
-          CD.current && (iD(DD), QD(!1))
-        })).catch((DD => {
-          console.error("Failed to load push notification targets:", DD), CD.current && QD(!0)
+        t: UU
+      } = (0, PU.B)(), RU = (0, YR.b)(), {
+        mobilePushNotificationsCanAsk: gU
+      } = (0, wU.l)(["mobilePushNotificationsCanAsk"]), [pU, EU] = (0, tU.useState)(null), [TU, qU] = (0, tU.useState)(!1), [KU, GU] = (0, tU.useState)(null), [jU, uU] = (0, tU.useState)(!1), CU = (0, tU.useCallback)((() => {
+        (0, ZR.e)().then((UU => {
+          RU.current && (EU(UU), qU(!1))
+        })).catch((UU => {
+          console.error("Failed to load push notification targets:", UU), RU.current && qU(!0)
         }))
-      }), [CD]), ZD = (0, ID.useCallback)((() => {
-        (0, JC.d)().then((DD => {
-          CD.current && BD((() => DD))
+      }), [RU]), hU = (0, tU.useCallback)((() => {
+        (0, aR.d)().then((UU => {
+          RU.current && GU((() => UU))
         }))
-      }), [CD]);
-      (0, ID.useEffect)((() => {
-        tD()
-      }), [tD]), (0, ID.useEffect)((() => {
-        ZD()
-      }), [ZD, cD]), (0, xC.f)(qC.g, tD);
-      const vD = null === pD ? [] : Object.keys(aC).filter((DD => pD[DD] > 0));
-      return (0, SD.jsxs)("div", {
+      }), [RU]);
+      (0, tU.useEffect)((() => {
+        CU()
+      }), [CU]), (0, tU.useEffect)((() => {
+        hU()
+      }), [hU, gU]), (0, oR.e)(ZR.m, CU);
+      const eU = null === pU ? [] : Object.keys(BR).filter((UU => pU[UU] > 0));
+      return (0, cU.jsxs)("div", {
         className: "SettingBox PushNotificationSettings",
-        children: [(0, SD.jsx)("div", {
+        children: [(0, cU.jsx)("div", {
           className: "SliderText",
-          children: DD("notificationSettings:pushNotifications")
-        }), null === pD && bD && (0, SD.jsx)("div", {
+          children: UU("notificationSettings:pushNotifications")
+        }), null === pU && TU && (0, cU.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: DD("notificationSettings:pushTargetsLoadFailed")
-        }), null !== pD && 0 === vD.length && (0, SD.jsx)("div", {
+          children: UU("notificationSettings:pushTargetsLoadFailed")
+        }), null !== pU && 0 === eU.length && (0, cU.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: DD("notificationSettings:pushTargetsNone")
-        }), vD.length > 0 && (0, SD.jsx)("ul", {
+          children: UU("notificationSettings:pushTargetsNone")
+        }), eU.length > 0 && (0, cU.jsx)("ul", {
           className: "PushNotificationSettingsTargets",
-          children: vD.map((CD => {
-            var cD;
-            return (0, SD.jsx)("li", {
-              children: DD(aC[CD], {
-                count: null !== (cD = null === pD || void 0 === pD ? void 0 : pD[CD]) && void 0 !== cD ? cD : 0
+          children: eU.map((RU => {
+            var gU;
+            return (0, cU.jsx)("li", {
+              children: UU(BR[RU], {
+                count: null !== (gU = null === pU || void 0 === pU ? void 0 : pU[RU]) && void 0 !== gU ? gU : 0
               })
-            }, CD)
+            }, RU)
           }))
-        }), null !== wD && (0, SD.jsx)(oD.i, {
+        }), null !== KU && (0, cU.jsx)(QU.e, {
           className: "PushNotificationSettingsButton",
-          loading: yD,
+          loading: jU,
           onClick: () => {
-            MD(!0), wD().catch((DD => {
-              console.error("Failed to turn on push notifications:", DD)
+            uU(!0), KU().catch((UU => {
+              console.error("Failed to turn on push notifications:", UU)
             })).finally((() => {
-              CD.current && (MD(!1), ZD())
+              RU.current && (uU(!1), hU())
             }))
           },
-          children: DD("notificationSettings:pushTurnOn")
+          children: UU("notificationSettings:pushTurnOn")
         })]
       })
     }
-    const zC = {
+    const rR = {
         toastAndTray: {
           label: "notificationSettings:friendRequestsAll",
           info: "notificationSettings:friendRequestsAllInfo"
@@ -1109,337 +1109,337 @@ export const modules = {
           info: "notificationSettings:friendRequestsOffInfo"
         }
       },
-      jC = (0, ID.memo)((function() {
+      XR = (0, tU.memo)((function() {
         const {
-          t: DD
-        } = (0, fD.F)(), {
-          clientEscMenuOptions: CD
-        } = (0, PD.o)(["clientEscMenuOptions"]);
-        return (0, SD.jsxs)("div", {
+          t: UU
+        } = (0, PU.B)(), {
+          clientEscMenuOptions: RU
+        } = (0, wU.l)(["clientEscMenuOptions"]);
+        return (0, cU.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, SD.jsx)(OD.g, {
-            label: DD("notificationSettings:friendRequests"),
-            options: UC.e.map((CD => ({
-              value: CD,
-              label: DD(zC[CD].label)
+          children: [(0, cU.jsx)(JU.d, {
+            label: UU("notificationSettings:friendRequests"),
+            options: bR.e.map((RU => ({
+              value: RU,
+              label: UU(rR[RU].label)
             }))),
-            value: CD.friendRequestNotifications,
-            onChange: DD => {
-              PD.d.setClientEscMenuOptions({
-                friendRequestNotifications: DD
+            value: RU.friendRequestNotifications,
+            onChange: UU => {
+              wU.b.setClientEscMenuOptions({
+                friendRequestNotifications: UU
               })
             },
-            circleInfoText: (0, SD.jsx)("div", {
+            circleInfoText: (0, cU.jsx)("div", {
               className: "NotificationSettingLevelsInfo",
-              children: UC.e.map((CD => (0, SD.jsxs)("div", {
-                children: [(0, SD.jsx)("b", {
-                  children: DD(zC[CD].label)
-                }), ": ", DD(zC[CD].info)]
-              }, CD)))
+              children: bR.e.map((RU => (0, cU.jsxs)("div", {
+                children: [(0, cU.jsx)("b", {
+                  children: UU(rR[RU].label)
+                }), ": ", UU(rR[RU].info)]
+              }, RU)))
             })
-          }), (0, SD.jsx)(VC, {})]
+          }), (0, cU.jsx)(VR, {})]
         })
       }));
-    var lC = cD(4301),
-      LC = cD(194),
-      TC = cD(298),
-      GC = cD(6409),
-      RC = cD(3255),
-      kC = cD(8950),
-      dC = cD(624),
-      YC = cD(20);
-    var WC = cD(646),
-      sC = cD(36),
-      EC = cD(4184);
-    const eC = new Map([
+    var vR = gU(4176),
+      dR = gU(189),
+      HR = gU(274),
+      SR = gU(6339),
+      sR = gU(3151),
+      yR = gU(8902),
+      kR = gU(581),
+      FR = gU(24);
+    var iR = gU(603),
+      AR = gU(34),
+      zR = gU(4049);
+    const MR = new Map([
       ["chunkHorizAddDist", "horizontal"],
       ["chunkVertAddDist", "vertical"]
     ]);
 
-    function uC(DD) {
-      return eC.has(DD) ? ND.gameBridge.lookup("Om", null) : null
+    function DR(UU) {
+      return MR.has(UU) ? WU.gameBridge.lookup("Km", null) : null
     }
 
-    function hC(DD) {
-      if (!(0, dC.C)(PD.d.get("clientEscMenuOptions")[DD])) return PD.d.get("clientEscMenuOptions")[DD];
-      const CD = uC(DD);
-      return null !== CD ? CD[eC.get(DD)] : sC.h.getItem(DD)
+    function LR(UU) {
+      if (!(0, kR.E)(wU.b.get("clientEscMenuOptions")[UU])) return wU.b.get("clientEscMenuOptions")[UU];
+      const RU = DR(UU);
+      return null !== RU ? RU[MR.get(UU)] : AR.k.getItem(UU)
     }
 
-    function rC(DD, CD) {
-      if ("useTouchControls" === DD) return void(0, EC.b)(CD);
-      DD in PD.d.get("clientEscMenuOptions") && PD.d.setClientEscMenuOptions({
-        [DD]: CD
+    function NR(UU, RU) {
+      if ("useTouchControls" === UU) return void(0, zR.e)(RU);
+      UU in wU.b.get("clientEscMenuOptions") && wU.b.setClientEscMenuOptions({
+        [UU]: RU
       });
-      const cD = uC(DD);
-      null !== cD && ND.gameBridge.send("setChunkAddDistance", {
-        ...cD,
-        [eC.get(DD)]: CD
-      }), sC.h.setItem(DD, CD)
+      const gU = DR(UU);
+      null !== gU && WU.gameBridge.send("setChunkAddDistance", {
+        ...gU,
+        [MR.get(UU)]: RU
+      }), AR.k.setItem(UU, RU)
     }
-    var AC = cD(4220),
-      FC = cD(8958),
-      Dc = cD(8967),
-      Cc = cD(4296);
+    var lR = gU(4082),
+      OR = gU(8908),
+      Ug = gU(8910),
+      Rg = gU(4169);
 
-    function cc(DD) {
-      var CD, pD, bD, QD;
+    function gg(UU) {
+      var RU, pU, TU, qU;
       let {
-        minChunkAddDist: wD,
-        getValue: BD,
-        onChange: yD,
-        setApplySettingsCallback: MD
-      } = DD;
+        minChunkAddDist: KU,
+        getValue: GU,
+        onChange: jU,
+        setApplySettingsCallback: uU
+      } = UU;
       const {
-        t: ZD
-      } = (0, fD.F)(), {
-        clientEscMenuOptions: oD
-      } = (0, PD.o)(["clientEscMenuOptions", "showDistantNametags"]), ND = (0, ID.useRef)(BD("showFog")), gD = (0, ID.useRef)(oD.antiAliasing), XD = (0, ID.useRef)(oD.useWebGpu), [mD, nD] = (0, ID.useState)(null), [UD, xD] = (0, ID.useState)((() => (0, RC.g)(vD.featureFlags.settings.canUseShaderPacks))), [qD] = (0, ID.useState)((() => PD.d.isWebGpuDefaultOff())), [JD] = (0, ID.useState)(TC.f);
-      (0, ID.useEffect)((() => {
-        let DD = !1;
-        return (0, vD.hasUsableWebGpuAdapter)().then((CD => {
-          DD || nD(CD)
-        })), (0, RC.o)(vD.featureFlags.settings.canUseShaderPacks) && (0, GC.d)().then((async CD => {
-          const ID = null !== CD && await async function(DD) {
+        t: hU
+      } = (0, PU.B)(), {
+        clientEscMenuOptions: QU
+      } = (0, wU.l)(["clientEscMenuOptions", "showDistantNametags"]), WU = (0, tU.useRef)(GU("showFog")), fU = (0, tU.useRef)(QU.antiAliasing), xU = (0, tU.useRef)(QU.useWebGpu), [mU, IU] = (0, tU.useState)(null), [bU, oU] = (0, tU.useState)((() => (0, sR.f)(eU.featureFlags.settings.canUseShaderPacks))), [ZU] = (0, tU.useState)((() => wU.b.isWebGpuDefaultOff())), [aU] = (0, tU.useState)(HR.c);
+      (0, tU.useEffect)((() => {
+        let UU = !1;
+        return (0, eU.hasUsableWebGpuAdapter)().then((RU => {
+          UU || IU(RU)
+        })), (0, sR.l)(eU.featureFlags.settings.canUseShaderPacks) && (0, SR.e)().then((async RU => {
+          const tU = null !== RU && await async function(UU) {
             const [{
-              isShaderPackActive: CD
+              isShaderPackActive: RU
             }, {
-              loadPageShaderPackCompiler: ID
-            }] = await Promise.all([cD.e(127).then((() => cD(6404))), Promise.all([cD.e(74), cD.e(131), cD.e(130)]).then((() => cD(6366)))]);
-            return CD(DD, await ID())
-          }(CD);
-          DD || xD(ID)
+              loadPageShaderPackCompiler: tU
+            }] = await Promise.all([gU.e(127).then((() => gU(6330))), Promise.all([gU.e(74), gU.e(131), gU.e(130)]).then((() => gU(6295)))]);
+            return RU(UU, await tU())
+          }(RU);
+          UU || oU(tU)
         })), () => {
-          DD = !0
+          UU = !0
         }
       }), []);
-      const KD = function(DD, CD, cD, ID, pD) {
-          return (0, kC.e)(cD, ID) && !0 === CD ? {
+      const YU = function(UU, RU, gU, tU, pU) {
+          return (0, yR.c)(gU, tU) && !0 === RU ? {
             translationKey: "settingsMenu:newWebGpuForcedOnByShaderPack",
             checked: !0,
             disabled: !0
           } : {
-            translationKey: !1 !== CD ? "settingsMenu:newWebGpu" : pD ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
-            checked: DD && !1 !== CD,
-            disabled: !0 !== CD
+            translationKey: !1 !== RU ? "settingsMenu:newWebGpu" : pU ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
+            checked: UU && !1 !== RU,
+            disabled: !0 !== RU
           }
-        }(oD.useWebGpu, mD, UD, qD, JD),
-        aD = (oD.useWebGpu || (0, kC.e)(UD, qD)) && UD && !0 === mD,
-        VD = (0, tD.h)("lightingOverride"),
-        zD = !(0, dC.C)(VD);
-      let jD = "settingsMenu:enableLighting";
-      zD && (jD = VD ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
-      const lD = DD => {
-          var CD, cD, ID;
-          const pD = null !== (CD = DD.showFog) && void 0 !== CD ? CD : BD("showFog"),
-            iD = null !== (cD = DD.antiAliasing) && void 0 !== cD ? cD : oD.antiAliasing,
-            fD = null !== (ID = DD.useWebGpu) && void 0 !== ID ? ID : oD.useWebGpu,
-            bD = !WC.q && pD !== ND.current || iD !== gD.current || fD !== XD.current;
-          MD(bD ? () => OD.j : null)
+        }(QU.useWebGpu, mU, bU, ZU, aU),
+        BU = (QU.useWebGpu || (0, yR.c)(bU, ZU)) && bU && !0 === mU,
+        VU = (0, CU.g)("lightingOverride"),
+        rU = !(0, kR.E)(VU);
+      let XU = "settingsMenu:enableLighting";
+      rU && (XU = VU ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
+      const vU = UU => {
+          var RU, gU, tU;
+          const pU = null !== (RU = UU.showFog) && void 0 !== RU ? RU : GU("showFog"),
+            EU = null !== (gU = UU.antiAliasing) && void 0 !== gU ? gU : QU.antiAliasing,
+            PU = null !== (tU = UU.useWebGpu) && void 0 !== tU ? tU : QU.useWebGpu,
+            TU = !iR.u && pU !== WU.current || EU !== fU.current || PU !== xU.current;
+          uU(TU ? () => JU.l : null)
         },
-        LD = (0, tD.h)("fogChunkDistanceOverride"),
-        TD = (0, tD.h)("fogBlockDistanceOverride"),
-        GD = !(0, dC.C)(LD) || !(0, dC.C)(TD),
-        RD = GD ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
-        [kD, dD] = (0, lC.f)(wD),
-        [YD, WD] = (0, Cc.c)(wD),
-        sD = ZD("settingsMenu:chunkLoadDistanceDeviceLimit"),
-        ED = YD < kD,
-        eD = Math.min(null !== (CD = BD("chunkHorizAddDist")) && void 0 !== CD ? CD : wD[0], YD),
-        uD = !GD && function(DD, CD) {
-          return !0 === DD.showFog && DD.fogChunkDistance > CD
-        }(oD, eD);
-      return (0, SD.jsxs)("div", {
+        dU = (0, CU.g)("fogChunkDistanceOverride"),
+        HU = (0, CU.g)("fogBlockDistanceOverride"),
+        SU = !(0, kR.E)(dU) || !(0, kR.E)(HU),
+        sU = SU ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
+        [yU, kU] = (0, vR.e)(KU),
+        [FU, iU] = (0, Rg.b)(KU),
+        AU = hU("settingsMenu:chunkLoadDistanceDeviceLimit"),
+        zU = FU < yU,
+        MU = Math.min(null !== (RU = GU("chunkHorizAddDist")) && void 0 !== RU ? RU : KU[0], FU),
+        DU = !SU && function(UU, RU) {
+          return !0 === UU.showFog && UU.fogChunkDistance > RU
+        }(QU, MU);
+      return (0, cU.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [(0, SD.jsx)(OD.i, {
-          name: ZD("settingsMenu:horizontalChunkLoadDistance"),
-          min: wD[0],
-          max: kD,
-          selectableMax: YD,
-          cappedNote: sD,
+        children: [(0, cU.jsx)(JU.h, {
+          name: hU("settingsMenu:horizontalChunkLoadDistance"),
+          min: KU[0],
+          max: yU,
+          selectableMax: FU,
+          cappedNote: AU,
           step: 1,
-          initValue: eD,
-          onChange: DD => {
-            !0 === BD("showFog") && DD < BD("fogChunkDistance") && yD("fogChunkDistance", DD), yD("chunkHorizAddDist", DD), YC.i.Uo("updatedChunkLoadDist")
+          initValue: MU,
+          onChange: UU => {
+            !0 === GU("showFog") && UU < GU("fogChunkDistance") && jU("fogChunkDistance", UU), jU("chunkHorizAddDist", UU), FR.p.yh("updatedChunkLoadDist")
           },
-          circleInfoText: ZD("settingsMenu:chunkLoadDistanceInfo")
-        }), (0, SD.jsx)(OD.i, {
-          name: ZD("settingsMenu:verticalChunkLoadDistance"),
-          min: wD[1],
-          max: dD,
-          selectableMax: WD,
-          cappedNote: ED ? void 0 : sD,
+          circleInfoText: hU("settingsMenu:chunkLoadDistanceInfo")
+        }), (0, cU.jsx)(JU.h, {
+          name: hU("settingsMenu:verticalChunkLoadDistance"),
+          min: KU[1],
+          max: kU,
+          selectableMax: iU,
+          cappedNote: zU ? void 0 : AU,
           step: 1,
-          initValue: Math.min(null !== (pD = BD("chunkVertAddDist")) && void 0 !== pD ? pD : wD[1], WD),
-          onChange: DD => {
-            yD("chunkVertAddDist", DD), YC.i.Uo("updatedChunkLoadDist")
+          initValue: Math.min(null !== (pU = GU("chunkVertAddDist")) && void 0 !== pU ? pU : KU[1], iU),
+          onChange: UU => {
+            jU("chunkVertAddDist", UU), FR.p.yh("updatedChunkLoadDist")
           },
-          circleInfoText: ZD("settingsMenu:chunkLoadDistanceInfo"),
+          circleInfoText: hU("settingsMenu:chunkLoadDistanceInfo"),
           className: "VerticalChunkLoadSlider"
-        }), (0, SD.jsx)(OD.e, {
-          label: ZD("settingsMenu:chunkFadeIn"),
-          checked: oD.chunkFadeIn,
-          onClick: DD => {
-            PD.d.setClientEscMenuOptions({
-              chunkFadeIn: DD
+        }), (0, cU.jsx)(JU.b, {
+          label: hU("settingsMenu:chunkFadeIn"),
+          checked: QU.chunkFadeIn,
+          onClick: UU => {
+            wU.b.setClientEscMenuOptions({
+              chunkFadeIn: UU
             })
           },
-          circleInfoText: ZD("settingsMenu:chunkFadeInInfo")
-        }), HD.devTools.supports("chunkBorders") && (0, SD.jsx)(OD.e, {
-          label: ZD("settingsMenu:showChunkBorders"),
-          checked: oD.showChunkBorders,
-          onClick: DD => {
-            PD.d.setClientEscMenuOptions({
-              showChunkBorders: DD
+          circleInfoText: hU("settingsMenu:chunkFadeInInfo")
+        }), nU.devTools.supports("chunkBorders") && (0, cU.jsx)(JU.b, {
+          label: hU("settingsMenu:showChunkBorders"),
+          checked: QU.showChunkBorders,
+          onClick: UU => {
+            wU.b.setClientEscMenuOptions({
+              showChunkBorders: UU
             })
           },
-          circleInfoText: ZD("settingsMenu:showChunkBordersInfo")
-        }), (0, SD.jsx)(OD.e, {
-          label: ZD(jD),
-          checked: oD.enableLighting,
-          onClick: DD => {
-            PD.d.setClientEscMenuOptions({
-              enableLighting: DD
+          circleInfoText: hU("settingsMenu:showChunkBordersInfo")
+        }), (0, cU.jsx)(JU.b, {
+          label: hU(XU),
+          checked: QU.enableLighting,
+          onClick: UU => {
+            wU.b.setClientEscMenuOptions({
+              enableLighting: UU
             })
           },
-          disabled: zD
-        }), (0, SD.jsxs)("div", {
+          disabled: rU
+        }), (0, cU.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, SD.jsx)(OD.e, {
-            label: ZD(RD),
-            checked: oD.showFog,
-            onClick: DD => {
-              lD({
-                showFog: DD
-              }), PD.d.setClientEscMenuOptions({
-                showFog: DD
+          children: [(0, cU.jsx)(JU.b, {
+            label: hU(sU),
+            checked: QU.showFog,
+            onClick: UU => {
+              vU({
+                showFog: UU
+              }), wU.b.setClientEscMenuOptions({
+                showFog: UU
               })
             },
-            disabled: GD,
-            className: iD()({
-              SettingBoxWarning: uD
+            disabled: SU,
+            className: EU()({
+              SettingBoxWarning: DU
             })
-          }), (0, SD.jsx)(OD.i, {
-            name: ZD("settingsMenu:fogChunkDistance"),
-            min: wD[0],
-            max: LC.h.maxChunkHorizAddDistance,
+          }), (0, cU.jsx)(JU.h, {
+            name: hU("settingsMenu:fogChunkDistance"),
+            min: KU[0],
+            max: dR.e.maxChunkHorizAddDistance,
             step: 1,
-            initValue: null !== (bD = oD.fogChunkDistance) && void 0 !== bD ? bD : wD[0],
-            onChange: DD => {
-              PD.d.setClientEscMenuOptions({
-                fogChunkDistance: DD
-              }), YC.i.Uo("fogChunkDistanceChanged", DD)
+            initValue: null !== (TU = QU.fogChunkDistance) && void 0 !== TU ? TU : KU[0],
+            onChange: UU => {
+              wU.b.setClientEscMenuOptions({
+                fogChunkDistance: UU
+              }), FR.p.yh("fogChunkDistanceChanged", UU)
             },
-            circleInfoText: ZD("settingsMenu:fogChunkDistanceInfo"),
-            disabled: GD || !1 === BD("showFog"),
-            className: iD()({
-              SettingBoxWarning: uD
+            circleInfoText: hU("settingsMenu:fogChunkDistanceInfo"),
+            disabled: SU || !1 === GU("showFog"),
+            className: EU()({
+              SettingBoxWarning: DU
             })
-          }), uD && (0, SD.jsx)("div", {
+          }), DU && (0, cU.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: ZD("settingsMenu:fogChunkDistanceInfo")
+            children: hU("settingsMenu:fogChunkDistanceInfo")
           })]
-        }), !WC.q && (0, SD.jsx)(OD.e, {
-          label: ZD(aD ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
-          checked: !aD && oD.disableTexAtlas,
-          onClick: DD => {
-            PD.d.setClientEscMenuOptions({
-              disableTexAtlas: DD
+        }), !iR.u && (0, cU.jsx)(JU.b, {
+          label: hU(BU ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
+          checked: !BU && QU.disableTexAtlas,
+          onClick: UU => {
+            wU.b.setClientEscMenuOptions({
+              disableTexAtlas: UU
             })
           },
-          circleInfoText: ZD("settingsMenu:disableBlockTextureAtlasInfo"),
-          disabled: aD
-        }), (0, SD.jsx)(OD.i, {
-          name: ZD("settingsMenu:fieldOfView"),
+          circleInfoText: hU("settingsMenu:disableBlockTextureAtlasInfo"),
+          disabled: BU
+        }), (0, cU.jsx)(JU.h, {
+          name: hU("settingsMenu:fieldOfView"),
           min: 50,
           max: 160,
           step: 1,
-          initValue: oD.cameraFOV,
-          onChange: DD => {
-            PD.d.setClientEscMenuOptions({
-              cameraFOV: DD
+          initValue: QU.cameraFOV,
+          onChange: UU => {
+            wU.b.setClientEscMenuOptions({
+              cameraFOV: UU
             })
           }
-        }), (0, SD.jsx)(OD.e, {
-          label: ZD("settingsMenu:disableViewBobbing"),
-          checked: oD.disableBobbing,
-          onClick: DD => {
-            PD.d.setClientEscMenuOptions({
-              disableBobbing: DD
+        }), (0, cU.jsx)(JU.b, {
+          label: hU("settingsMenu:disableViewBobbing"),
+          checked: QU.disableBobbing,
+          onClick: UU => {
+            wU.b.setClientEscMenuOptions({
+              disableBobbing: UU
             })
           },
-          circleInfoText: ZD("settingsMenu:disableViewBobbingInfo")
-        }), (0, SD.jsx)(OD.e, {
-          label: ZD("settingsMenu:antiAliasing"),
-          checked: oD.antiAliasing,
-          onClick: DD => {
-            lD({
-              antiAliasing: DD
-            }), (0, AC.g)("antiAliasing"), PD.d.setClientEscMenuOptions({
-              antiAliasing: DD
+          circleInfoText: hU("settingsMenu:disableViewBobbingInfo")
+        }), (0, cU.jsx)(JU.b, {
+          label: hU("settingsMenu:antiAliasing"),
+          checked: QU.antiAliasing,
+          onClick: UU => {
+            vU({
+              antiAliasing: UU
+            }), (0, lR.d)("antiAliasing"), wU.b.setClientEscMenuOptions({
+              antiAliasing: UU
             })
           },
-          circleInfoText: ZD("settingsMenu:antiAliasingInfo")
-        }), (0, SD.jsx)(OD.i, {
-          name: ZD("settingsMenu:pixelScale"),
+          circleInfoText: hU("settingsMenu:antiAliasingInfo")
+        }), (0, cU.jsx)(JU.h, {
+          name: hU("settingsMenu:pixelScale"),
           min: 1,
           max: 8,
           step: 1,
-          initValue: null !== (QD = oD.pixelScale) && void 0 !== QD ? QD : 1,
-          onChange: DD => {
-            (DD !== PD.d.get("clientEscMenuOptions").pixelScale || (0, Dc.r)()) && (0, AC.g)("pixelScale"), PD.d.setClientEscMenuOptions({
-              pixelScale: DD
+          initValue: null !== (qU = QU.pixelScale) && void 0 !== qU ? qU : 1,
+          onChange: UU => {
+            (UU !== wU.b.get("clientEscMenuOptions").pixelScale || (0, Ug.o)()) && (0, lR.d)("pixelScale"), wU.b.setClientEscMenuOptions({
+              pixelScale: UU
             })
           },
-          circleInfoText: ZD("settingsMenu:pixelScaleInfo"),
-          format: DD => `${DD}x`
-        }), (0, SD.jsx)(OD.e, {
-          label: ZD("settingsMenu:pixelSmoothing"),
-          checked: oD.pixelSmoothing,
-          onClick: DD => {
-            PD.d.setClientEscMenuOptions({
-              pixelSmoothing: DD
+          circleInfoText: hU("settingsMenu:pixelScaleInfo"),
+          format: UU => `${UU}x`
+        }), (0, cU.jsx)(JU.b, {
+          label: hU("settingsMenu:pixelSmoothing"),
+          checked: QU.pixelSmoothing,
+          onClick: UU => {
+            wU.b.setClientEscMenuOptions({
+              pixelSmoothing: UU
             })
           },
-          circleInfoText: ZD("settingsMenu:pixelSmoothingInfo")
-        }), WC.q && (0, SD.jsx)(OD.e, {
-          label: ZD("settingsMenu:distantNametags"),
-          checked: (0, FC.e)(),
-          onClick: DD => {
-            PD.d.set({
-              showDistantNametags: DD
+          circleInfoText: hU("settingsMenu:pixelSmoothingInfo")
+        }), iR.u && (0, cU.jsx)(JU.b, {
+          label: hU("settingsMenu:distantNametags"),
+          checked: (0, OR.c)(),
+          onClick: UU => {
+            wU.b.set({
+              showDistantNametags: UU
             })
           },
-          circleInfoText: ZD("settingsMenu:distantNametagsInfo")
-        }), (0, SD.jsx)(OD.e, {
-          label: ZD(KD.translationKey),
-          checked: KD.checked,
-          onClick: DD => {
-            lD({
-              useWebGpu: DD
-            }), PD.d.setClientEscMenuOptions({
-              useWebGpu: DD
+          circleInfoText: hU("settingsMenu:distantNametagsInfo")
+        }), (0, cU.jsx)(JU.b, {
+          label: hU(YU.translationKey),
+          checked: YU.checked,
+          onClick: UU => {
+            vU({
+              useWebGpu: UU
+            }), wU.b.setClientEscMenuOptions({
+              useWebGpu: UU
             })
           },
-          circleInfoText: ZD("settingsMenu:newWebGpuInfo"),
-          disabled: KD.disabled
+          circleInfoText: hU("settingsMenu:newWebGpuInfo"),
+          disabled: YU.disabled
         })]
       })
     }
-    var Ic = cD(4213),
-      pc = cD(8564),
-      ic = cD(8986),
-      fc = cD(8574),
-      bc = cD(8991);
-    const Qc = {
+    var tg = gU(4075),
+      pg = gU(8492),
+      Eg = gU(8925),
+      Pg = gU(8505),
+      Tg = gU(8927);
+    const qg = {
         color: 16777215,
         name: "white"
       },
-      wc = {
+      Kg = {
         color: 0,
         name: "black"
       },
-      Sc = [Qc, {
+      cg = [qg, {
         color: 5046092,
         name: "green"
       }, {
@@ -1454,73 +1454,73 @@ export const modules = {
       }, {
         color: 16726843,
         name: "red"
-      }, wc],
-      Bc = [wc, Qc];
+      }, Kg],
+      Gg = [Kg, qg];
 
-    function yc(DD) {
-      return `${DD} px`
+    function jg(UU) {
+      return `${UU} px`
     }
 
-    function Mc(DD) {
-      return `${DD}%`
+    function ug(UU) {
+      return `${UU}%`
     }
 
-    function tc(DD) {
+    function Cg(UU) {
       let {
-        label: CD,
-        value: cD,
-        swatches: ID,
-        onChange: pD
-      } = DD;
+        label: RU,
+        value: gU,
+        swatches: tU,
+        onChange: pU
+      } = UU;
       const {
-        t: bD
-      } = (0, fD.F)(), QD = !ID.some((DD => DD.color === cD));
-      return (0, SD.jsxs)("div", {
+        t: TU
+      } = (0, PU.B)(), qU = !tU.some((UU => UU.color === gU));
+      return (0, cU.jsxs)("div", {
         className: "SettingBox CrosshairColorRow",
-        children: [(0, SD.jsx)("div", {
+        children: [(0, cU.jsx)("div", {
           className: "SliderText",
-          children: CD
-        }), (0, SD.jsxs)("div", {
+          children: RU
+        }), (0, cU.jsxs)("div", {
           className: "CrosshairSwatches",
           role: "radiogroup",
-          "aria-label": CD,
-          children: [ID.map((DD => {
+          "aria-label": RU,
+          children: [tU.map((UU => {
             let {
-              color: CD,
-              name: ID
-            } = DD;
-            return (0, SD.jsx)("button", {
+              color: RU,
+              name: tU
+            } = UU;
+            return (0, cU.jsx)("button", {
               type: "button",
               role: "radio",
-              "aria-checked": CD === cD,
-              "aria-label": bD(`crosshairSettings:color_${ID}`),
+              "aria-checked": RU === gU,
+              "aria-label": TU(`crosshairSettings:color_${tU}`),
               "data-pad-focusable": !0,
-              className: iD()("CrosshairSwatch", {
-                Selected: CD === cD
+              className: EU()("CrosshairSwatch", {
+                Selected: RU === gU
               }),
               style: {
-                background: (0, bc.o)(CD)
+                background: (0, Tg.j)(RU)
               },
               onClick: () => {
-                pD(CD)
+                pU(RU)
               }
-            }, CD)
-          })), (0, SD.jsx)("label", {
-            className: iD()("CrosshairSwatch CrosshairSwatchCustom", {
-              Selected: QD
+            }, RU)
+          })), (0, cU.jsx)("label", {
+            className: EU()("CrosshairSwatch CrosshairSwatchCustom", {
+              Selected: qU
             }),
-            style: QD ? {
-              background: (0, bc.o)(cD)
+            style: qU ? {
+              background: (0, Tg.j)(gU)
             } : void 0,
-            title: bD("crosshairSettings:customColor"),
+            title: TU("crosshairSettings:customColor"),
             "data-pad-focusable": !0,
-            children: (0, SD.jsx)("input", {
+            children: (0, cU.jsx)("input", {
               type: "color",
-              "aria-label": bD("crosshairSettings:customColor"),
-              value: (0, bc.o)(cD),
-              onChange: DD => {
-                const CD = (0, bc.u)(DD.target.value);
-                null !== CD && pD(CD)
+              "aria-label": TU("crosshairSettings:customColor"),
+              value: (0, Tg.j)(gU),
+              onChange: UU => {
+                const RU = (0, Tg.n)(UU.target.value);
+                null !== RU && pU(RU)
               }
             })
           })]
@@ -1528,119 +1528,119 @@ export const modules = {
       })
     }
 
-    function Zc(DD) {
+    function hg(UU) {
       let {
-        settings: CD,
-        onChange: cD
-      } = DD;
+        settings: RU,
+        onChange: gU
+      } = UU;
       const {
-        t: ID
-      } = (0, fD.F)(), pD = (DD, ID) => {
-        cD((0, bc.A)(CD, DD, ID))
-      }, iD = function(DD, cD) {
-        let ID = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : yc;
+        t: tU
+      } = (0, PU.B)(), pU = (UU, tU) => {
+        gU((0, Tg.s)(RU, UU, tU))
+      }, EU = function(UU, gU) {
+        let tU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : jg;
         const {
-          min: iD,
-          max: fD,
-          step: bD
-        } = bc.e[DD];
-        return (0, SD.jsx)(OD.i, {
-          name: cD,
-          min: iD,
-          max: fD,
-          step: bD,
-          initValue: CD[DD],
-          format: ID,
-          onChange: CD => {
-            pD(DD, CD)
+          min: EU,
+          max: PU,
+          step: TU
+        } = Tg.c[UU];
+        return (0, cU.jsx)(JU.h, {
+          name: gU,
+          min: EU,
+          max: PU,
+          step: TU,
+          initValue: RU[UU],
+          format: tU,
+          onChange: RU => {
+            pU(UU, RU)
           }
-        }, DD)
-      }, bD = ["lines", "dot", "circle"].filter((DD => CD[DD])), QD = (DD, cD, ID) => (0, SD.jsx)(OD.e, {
-        label: cD,
-        checked: CD[DD],
-        disabled: 1 === bD.length && bD[0] === DD,
-        circleInfoText: ID,
-        onClick: CD => {
-          pD(DD, CD)
+        }, UU)
+      }, TU = ["lines", "dot", "circle"].filter((UU => RU[UU])), qU = (UU, gU, tU) => (0, cU.jsx)(JU.b, {
+        label: gU,
+        checked: RU[UU],
+        disabled: 1 === TU.length && TU[0] === UU,
+        circleInfoText: tU,
+        onClick: RU => {
+          pU(UU, RU)
         }
-      }, DD), wD = "shapes" === CD.style;
-      return (0, SD.jsxs)(SD.Fragment, {
-        children: [(0, SD.jsx)(OD.g, {
-          label: ID("crosshairSettings:style"),
+      }, UU), KU = "shapes" === RU.style;
+      return (0, cU.jsxs)(cU.Fragment, {
+        children: [(0, cU.jsx)(JU.d, {
+          label: tU("crosshairSettings:style"),
           options: [{
             value: "classic",
-            label: ID("crosshairSettings:styleClassic")
+            label: tU("crosshairSettings:styleClassic")
           }, {
             value: "shapes",
-            label: ID("crosshairSettings:styleShapes")
+            label: tU("crosshairSettings:styleShapes")
           }],
-          value: CD.style,
-          onChange: DD => {
-            pD("style", DD)
+          value: RU.style,
+          onChange: UU => {
+            pU("style", UU)
           }
-        }), (0, SD.jsx)(tc, {
-          label: ID("crosshairSettings:color"),
-          value: CD.color,
-          swatches: Sc,
-          onChange: DD => {
-            pD("color", DD)
+        }), (0, cU.jsx)(Cg, {
+          label: tU("crosshairSettings:color"),
+          value: RU.color,
+          swatches: cg,
+          onChange: UU => {
+            pU("color", UU)
           }
-        }), iD("opacity", ID("crosshairSettings:opacity"), Mc), !wD && iD("size", ID("crosshairSettings:size"), Mc), wD && (0, SD.jsxs)("div", {
+        }), EU("opacity", tU("crosshairSettings:opacity"), ug), !KU && EU("size", tU("crosshairSettings:size"), ug), KU && (0, cU.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [QD("lines", ID("crosshairSettings:lines")), CD.lines && iD("lineLength", ID("crosshairSettings:lineLength")), CD.lines && iD("lineThickness", ID("crosshairSettings:lineThickness")), CD.lines && iD("gap", ID("crosshairSettings:gap")), CD.lines && QD("tStyle", ID("crosshairSettings:tStyle"))]
-        }), wD && (0, SD.jsxs)("div", {
+          children: [qU("lines", tU("crosshairSettings:lines")), RU.lines && EU("lineLength", tU("crosshairSettings:lineLength")), RU.lines && EU("lineThickness", tU("crosshairSettings:lineThickness")), RU.lines && EU("gap", tU("crosshairSettings:gap")), RU.lines && qU("tStyle", tU("crosshairSettings:tStyle"))]
+        }), KU && (0, cU.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [QD("dot", ID("crosshairSettings:dot")), CD.dot && iD("dotSize", ID("crosshairSettings:dotSize"))]
-        }), wD && (0, SD.jsxs)("div", {
+          children: [qU("dot", tU("crosshairSettings:dot")), RU.dot && EU("dotSize", tU("crosshairSettings:dotSize"))]
+        }), KU && (0, cU.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [QD("circle", ID("crosshairSettings:circle")), CD.circle && iD("circleRadius", ID("crosshairSettings:circleRadius")), CD.circle && iD("circleThickness", ID("crosshairSettings:circleThickness"))]
-        }), (0, SD.jsxs)("div", {
+          children: [qU("circle", tU("crosshairSettings:circle")), RU.circle && EU("circleRadius", tU("crosshairSettings:circleRadius")), RU.circle && EU("circleThickness", tU("crosshairSettings:circleThickness"))]
+        }), (0, cU.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [iD("outline", ID("crosshairSettings:outline"), (DD => DD > 0 ? yc(DD) : ID("crosshairSettings:off"))), CD.outline > 0 && (0, SD.jsx)(tc, {
-            label: ID("crosshairSettings:outlineColor"),
-            value: CD.outlineColor,
-            swatches: Bc,
-            onChange: DD => {
-              pD("outlineColor", DD)
+          children: [EU("outline", tU("crosshairSettings:outline"), (UU => UU > 0 ? jg(UU) : tU("crosshairSettings:off"))), RU.outline > 0 && (0, cU.jsx)(Cg, {
+            label: tU("crosshairSettings:outlineColor"),
+            value: RU.outlineColor,
+            swatches: Gg,
+            onChange: UU => {
+              pU("outlineColor", UU)
             }
           })]
-        }), QD("growOnClick", ID("crosshairSettings:growOnClick")), wD && QD("forGuns", ID("crosshairSettings:forGuns"), ID("crosshairSettings:forGunsInfo"))]
+        }), qU("growOnClick", tU("crosshairSettings:growOnClick")), KU && qU("forGuns", tU("crosshairSettings:forGuns"), tU("crosshairSettings:forGunsInfo"))]
       })
     }
-    var oc = cD(62),
-      vc = cD(1280),
-      Nc = cD(8998),
-      gc = cD(9003),
-      Xc = cD(9012),
-      mc = cD(9014);
-    const nc = ["sky", "grass", "stone", "sand", "snow", "night"],
-      Oc = "4rem";
+    var Qg = gU(74),
+      eg = gU(1283),
+      Wg = gU(8933),
+      fg = gU(8936),
+      xg = gU(8942),
+      mg = gU(8947);
+    const Ig = ["sky", "grass", "stone", "sand", "snow", "night"],
+      Jg = "4rem";
 
-    function Pc(DD) {
+    function wg(UU) {
       return {
-        backgroundImage: `url(${DD})`,
-        backgroundSize: `${Oc} ${Oc}`,
+        backgroundImage: `url(${UU})`,
+        backgroundSize: `${Jg} ${Jg}`,
         backgroundRepeat: "repeat",
         imageRendering: "pixelated"
       }
     }
 
-    function Hc(DD) {
+    function ng(UU) {
       return {
         ...(() => {
-          switch (DD) {
+          switch (UU) {
             case "sky":
               return {
                 backgroundImage: "linear-gradient(#3d8fe0 0%, #8cc8f5 45%, #d6eefc 58%, #6fae4a 58.01%, #4f8a33 100%)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
               };
             case "grass":
-              return Pc(Nc);
+              return wg(Wg);
             case "stone":
-              return Pc(gc);
+              return wg(fg);
             case "sand":
-              return Pc(Xc);
+              return wg(xg);
             case "snow":
-              return Pc(mc);
+              return wg(mg);
             case "night":
               return {
                 backgroundImage: "radial-gradient(circle at 50% 50%, #1e2a4a 0%, #070b16 100vmax)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
@@ -1651,21 +1651,21 @@ export const modules = {
       }
     }
 
-    function Uc(DD) {
+    function bg(UU) {
       return Object.freeze({
-        ...bc.h,
+        ...Tg.d,
         style: "shapes",
         outline: 1,
         lines: !1,
-        ...DD
+        ...UU
       })
     }
-    const xc = [{
+    const og = [{
         id: "default",
-        settings: bc.h
+        settings: Tg.d
       }, {
         id: "cross",
-        settings: Uc({
+        settings: bg({
           color: 5046092,
           lines: !0,
           lineLength: 7,
@@ -1674,7 +1674,7 @@ export const modules = {
         })
       }, {
         id: "crossDot",
-        settings: Uc({
+        settings: bg({
           color: 65535,
           lines: !0,
           lineLength: 6,
@@ -1685,13 +1685,13 @@ export const modules = {
         })
       }, {
         id: "dot",
-        settings: Uc({
+        settings: bg({
           dot: !0,
           dotSize: 4
         })
       }, {
         id: "circle",
-        settings: Uc({
+        settings: bg({
           circle: !0,
           circleRadius: 12,
           circleThickness: 1.5,
@@ -1700,7 +1700,7 @@ export const modules = {
         })
       }, {
         id: "tShape",
-        settings: Uc({
+        settings: bg({
           color: 16731391,
           lines: !0,
           lineLength: 7,
@@ -1710,7 +1710,7 @@ export const modules = {
         })
       }, {
         id: "tiny",
-        settings: Uc({
+        settings: bg({
           color: 16776960,
           lines: !0,
           lineLength: 3,
@@ -1719,7 +1719,7 @@ export const modules = {
         })
       }, {
         id: "bold",
-        settings: Uc({
+        settings: bg({
           lines: !0,
           lineLength: 10,
           lineThickness: 3,
@@ -1727,571 +1727,571 @@ export const modules = {
           outline: 1.5
         })
       }],
-      qc = ["growOnClick", "forGuns"];
-    var Jc = cD(9021);
+      Zg = ["growOnClick", "forGuns"];
+    var ag = gU(8953);
 
-    function Kc(DD) {
+    function Yg(UU) {
       let {
-        label: CD,
-        selected: cD,
-        onClick: ID,
-        className: pD,
-        style: fD,
-        children: bD
-      } = DD;
-      return (0, SD.jsx)("button", {
+        label: RU,
+        selected: gU,
+        onClick: tU,
+        className: pU,
+        style: PU,
+        children: TU
+      } = UU;
+      return (0, cU.jsx)("button", {
         type: "button",
         role: "radio",
-        "aria-checked": cD,
-        title: CD,
-        "aria-label": CD,
+        "aria-checked": gU,
+        title: RU,
+        "aria-label": RU,
         "data-pad-focusable": !0,
-        className: iD()("CrosshairBackdropSwatch", pD, {
-          Selected: cD
+        className: EU()("CrosshairBackdropSwatch", pU, {
+          Selected: gU
         }),
-        style: fD,
-        onClick: ID,
-        children: bD
+        style: PU,
+        onClick: tU,
+        children: TU
       })
     }
 
-    function ac(DD) {
+    function Bg(UU) {
       let {
-        backdrop: CD,
-        onChange: cD,
-        game: ID
-      } = DD;
+        backdrop: RU,
+        onChange: gU,
+        game: tU
+      } = UU;
       const {
-        t: pD
-      } = (0, fD.F)();
-      return (0, SD.jsxs)("div", {
+        t: pU
+      } = (0, PU.B)();
+      return (0, cU.jsxs)("div", {
         className: "CrosshairBackdrops",
         role: "radiogroup",
-        "aria-label": pD("crosshairSettings:background"),
-        children: [ID && (0, SD.jsx)(Kc, {
-          label: pD("crosshairSettings:bg_game"),
-          selected: ID.selected,
-          onClick: ID.onSelect,
+        "aria-label": pU("crosshairSettings:background"),
+        children: [tU && (0, cU.jsx)(Yg, {
+          label: pU("crosshairSettings:bg_game"),
+          selected: tU.selected,
+          onClick: tU.onSelect,
           className: "CrosshairGameSwatch",
-          children: (0, SD.jsx)(bD.c, {
+          children: (0, cU.jsx)(TU.c, {
             name: "cube"
           })
-        }), nc.map((DD => (0, SD.jsx)(Kc, {
-          label: pD(`crosshairSettings:bg_${DD}`),
-          selected: !(null !== ID && void 0 !== ID && ID.selected) && DD === CD,
-          style: Hc(DD),
+        }), Ig.map((UU => (0, cU.jsx)(Yg, {
+          label: pU(`crosshairSettings:bg_${UU}`),
+          selected: !(null !== tU && void 0 !== tU && tU.selected) && UU === RU,
+          style: ng(UU),
           onClick: () => {
-            cD(DD)
+            gU(UU)
           }
-        }, DD)))]
+        }, UU)))]
       })
     }
 
-    function Vc(DD) {
+    function Vg(UU) {
       let {
-        settings: CD,
-        touch: cD,
-        backdrop: ID,
-        onChange: pD
-      } = DD;
+        settings: RU,
+        touch: gU,
+        backdrop: tU,
+        onChange: pU
+      } = UU;
       const {
-        t: bD
-      } = (0, fD.F)(), QD = function(DD) {
-        var CD;
-        return null !== (CD = xc.find((CD => (0, bc.w)(CD.settings, DD, qc)))) && void 0 !== CD ? CD : null
-      }(CD);
-      return (0, SD.jsx)("div", {
+        t: TU
+      } = (0, PU.B)(), qU = function(UU) {
+        var RU;
+        return null !== (RU = og.find((RU => (0, Tg.r)(RU.settings, UU, Zg)))) && void 0 !== RU ? RU : null
+      }(RU);
+      return (0, cU.jsx)("div", {
         className: "CrosshairPresets",
         role: "radiogroup",
-        "aria-label": bD("crosshairSettings:presets"),
-        children: xc.map((DD => {
-          const fD = (null === QD || void 0 === QD ? void 0 : QD.id) === DD.id;
-          return (0, SD.jsxs)("button", {
+        "aria-label": TU("crosshairSettings:presets"),
+        children: og.map((UU => {
+          const PU = (null === qU || void 0 === qU ? void 0 : qU.id) === UU.id;
+          return (0, cU.jsxs)("button", {
             type: "button",
             role: "radio",
-            "aria-checked": fD,
+            "aria-checked": PU,
             "data-pad-focusable": !0,
-            className: iD()("CrosshairPreset", {
-              Selected: fD
+            className: EU()("CrosshairPreset", {
+              Selected: PU
             }),
             onClick: () => {
-              pD(function(DD, CD) {
+              pU(function(UU, RU) {
                 return {
-                  ...CD.settings,
-                  growOnClick: DD.growOnClick,
-                  forGuns: DD.forGuns
+                  ...RU.settings,
+                  growOnClick: UU.growOnClick,
+                  forGuns: UU.forGuns
                 }
-              }(CD, DD))
+              }(RU, UU))
             },
-            children: [(0, SD.jsx)("div", {
+            children: [(0, cU.jsx)("div", {
               className: "CrosshairPresetStage",
-              style: Hc(ID),
-              children: (0, SD.jsx)(Jc.e, {
-                settings: DD.settings,
-                touch: cD,
+              style: ng(tU),
+              children: (0, cU.jsx)(ag.e, {
+                settings: UU.settings,
+                touch: gU,
                 inPreview: !0
               })
-            }), (0, SD.jsx)("div", {
+            }), (0, cU.jsx)("div", {
               className: "CrosshairPresetName",
-              children: bD(`crosshairSettings:preset_${DD.id}`)
+              children: TU(`crosshairSettings:preset_${UU.id}`)
             })]
-          }, DD.id)
+          }, UU.id)
         }))
       })
     }
-    var zc = cD(1647);
+    var rg = gU(1598);
 
-    function jc(DD, CD) {
-      const [cD, pD] = (0, ID.useState)(!1), iD = () => {
-        pD(!1)
-      }, [fD, bD] = (0, ID.useState)(!1), QD = (0, ID.useRef)({
-        growOnClick: DD.growOnClick,
-        forGuns: DD.forGuns
+    function Xg(UU, RU) {
+      const [gU, pU] = (0, tU.useState)(!1), EU = () => {
+        pU(!1)
+      }, [PU, TU] = (0, tU.useState)(!1), qU = (0, tU.useRef)({
+        growOnClick: UU.growOnClick,
+        forGuns: UU.forGuns
       });
-      (0, ID.useEffect)((() => {
-        const CD = QD.current;
-        QD.current = {
-          growOnClick: DD.growOnClick,
-          forGuns: DD.forGuns
-        }, (DD.growOnClick && !CD.growOnClick || DD.forGuns && !CD.forGuns) && bD(!0)
-      }), [DD.growOnClick, DD.forGuns]), (0, ID.useEffect)((() => {
-        if (!fD) return;
-        const DD = setTimeout((() => {
-          bD(!1)
+      (0, tU.useEffect)((() => {
+        const RU = qU.current;
+        qU.current = {
+          growOnClick: UU.growOnClick,
+          forGuns: UU.forGuns
+        }, (UU.growOnClick && !RU.growOnClick || UU.forGuns && !RU.forGuns) && TU(!0)
+      }), [UU.growOnClick, UU.forGuns]), (0, tU.useEffect)((() => {
+        if (!PU) return;
+        const UU = setTimeout((() => {
+          TU(!1)
         }), 600);
         return () => {
-          clearTimeout(DD)
+          clearTimeout(UU)
         }
-      }), [fD]);
-      const wD = cD || fD;
+      }), [PU]);
+      const KU = gU || PU;
       return {
         view: {
-          pressed: wD,
-          spread: wD && DD.forGuns && !DD.growOnClick ? 6 : 0
+          pressed: KU,
+          spread: KU && UU.forGuns && !UU.growOnClick ? 6 : 0
         },
         handlers: {
-          onPointerDown: DD => {
-            !DD.target.closest(CD) && (0, zc.e)(DD.currentTarget, DD.pointerId) && pD(!0)
+          onPointerDown: UU => {
+            !UU.target.closest(RU) && (0, rg.e)(UU.currentTarget, UU.pointerId) && pU(!0)
           },
-          onPointerUp: iD,
-          onPointerCancel: iD,
-          onLostPointerCapture: iD
+          onPointerUp: EU,
+          onPointerCancel: EU,
+          onLostPointerCapture: EU
         }
       }
     }
 
-    function lc(DD) {
+    function vg(UU) {
       let {
-        settings: CD,
-        touch: cD,
-        backdrop: ID,
-        className: pD,
-        children: fD,
-        label: bD
-      } = DD;
-      const QD = jc(CD, ".CrosshairStageControls");
-      return (0, SD.jsxs)("div", {
-        className: iD()("CrosshairStage", pD),
-        style: Hc(ID),
-        ...QD.handlers,
-        children: [(0, SD.jsx)("div", {
+        settings: RU,
+        touch: gU,
+        backdrop: tU,
+        className: pU,
+        children: PU,
+        label: TU
+      } = UU;
+      const qU = Xg(RU, ".CrosshairStageControls");
+      return (0, cU.jsxs)("div", {
+        className: EU()("CrosshairStage", pU),
+        style: ng(tU),
+        ...qU.handlers,
+        children: [(0, cU.jsx)("div", {
           className: "CrosshairStageHold",
           role: "img",
-          "aria-label": bD,
-          children: (0, SD.jsx)(Jc.e, {
-            settings: CD,
-            touch: cD,
+          "aria-label": TU,
+          children: (0, cU.jsx)(ag.e, {
+            settings: RU,
+            touch: gU,
             inPreview: !0,
-            ...QD.view
+            ...qU.view
           })
-        }), fD]
+        }), PU]
       })
     }
-    const Lc = "crosshairFullScreen";
+    const dg = "crosshairFullScreen";
 
-    function Tc(DD) {
+    function Hg(UU) {
       let {
-        settings: CD,
-        touch: cD,
-        backdrop: pD,
-        onBackdrop: QD,
-        inGame: wD,
-        onChange: BD,
-        onClose: yD
-      } = DD;
+        settings: RU,
+        touch: gU,
+        backdrop: pU,
+        onBackdrop: qU,
+        inGame: KU,
+        onChange: GU,
+        onClose: jU
+      } = UU;
       const {
-        t: MD
-      } = (0, fD.F)(), tD = (0, ID.useRef)(null);
-      (0, vc.t)("popup", tD, yD),
-      function(DD) {
-        const CD = (0, ID.useRef)(DD);
-        CD.current = DD, (0, ID.useEffect)((() => {
+        t: uU
+      } = (0, PU.B)(), CU = (0, tU.useRef)(null);
+      (0, eg.q)("popup", CU, jU),
+      function(UU) {
+        const RU = (0, tU.useRef)(UU);
+        RU.current = UU, (0, tU.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [Lc]: !0
+            [dg]: !0
           }, "");
-          let DD = !1;
-          const cD = () => {
-            DD = !0, CD.current()
+          let UU = !1;
+          const gU = () => {
+            UU = !0, RU.current()
           };
-          return window.addEventListener("popstate", cD), () => {
-            var CD;
-            window.removeEventListener("popstate", cD), !DD && null !== (CD = window.history.state) && void 0 !== CD && CD[Lc] && window.history.back()
+          return window.addEventListener("popstate", gU), () => {
+            var RU;
+            window.removeEventListener("popstate", gU), !UU && null !== (RU = window.history.state) && void 0 !== RU && RU[dg] && window.history.back()
           }
         }), [])
-      }(yD);
-      const ZD = (0, ID.useRef)(yD);
-      ZD.current = yD, (0, ID.useEffect)((() => {
-        function DD(DD) {
-          "Escape" === DD.key && (DD.stopPropagation(), ZD.current())
+      }(jU);
+      const hU = (0, tU.useRef)(jU);
+      hU.current = jU, (0, tU.useEffect)((() => {
+        function UU(UU) {
+          "Escape" === UU.key && (UU.stopPropagation(), hU.current())
         }
-        return window.addEventListener("keydown", DD, !0), () => {
-          window.removeEventListener("keydown", DD, !0)
+        return window.addEventListener("keydown", UU, !0), () => {
+          window.removeEventListener("keydown", UU, !0)
         }
       }), []);
-      const vD = jc(CD, ".CrosshairFullScreenPanel"),
-        [ND, gD] = (0, ID.useState)(!0),
-        XD = ND && wD;
-      (0, ID.useEffect)((() => {
-        if (XD) return PD.d.set({
+      const eU = Xg(RU, ".CrosshairFullScreenPanel"),
+        [WU, fU] = (0, tU.useState)(!0),
+        xU = WU && KU;
+      (0, tU.useEffect)((() => {
+        if (xU) return wU.b.set({
           crosshairGameView: !0
         }), () => {
-          PD.d.set({
+          wU.b.set({
             crosshairGameView: !1
           })
         }
-      }), [XD]);
-      const [mD, nD] = (0, ID.useState)(!0);
-      return (0, oc.createPortal)((0, SD.jsxs)("div", {
-        ref: tD,
+      }), [xU]);
+      const [mU, IU] = (0, tU.useState)(!0);
+      return (0, Qg.createPortal)((0, cU.jsxs)("div", {
+        ref: CU,
         className: "CrosshairFullScreen",
-        style: XD ? void 0 : Hc(pD),
-        ...vD.handlers,
-        children: [(0, SD.jsx)(Jc.e, {
-          settings: CD,
-          touch: cD,
+        style: xU ? void 0 : ng(pU),
+        ...eU.handlers,
+        children: [(0, cU.jsx)(ag.e, {
+          settings: RU,
+          touch: gU,
           inEditor: !0,
-          ...vD.view
-        }), (0, SD.jsxs)("div", {
-          className: iD()("CrosshairFullScreenPanel", {
-            Collapsed: !mD
+          ...eU.view
+        }), (0, cU.jsxs)("div", {
+          className: EU()("CrosshairFullScreenPanel", {
+            Collapsed: !mU
           }),
-          children: [(0, SD.jsxs)("div", {
+          children: [(0, cU.jsxs)("div", {
             className: "CrosshairFullScreenBar",
-            children: [(0, SD.jsx)(ac, {
-              backdrop: pD,
-              onChange: DD => {
-                gD(!1), QD(DD)
+            children: [(0, cU.jsx)(Bg, {
+              backdrop: pU,
+              onChange: UU => {
+                fU(!1), qU(UU)
               },
-              game: wD ? {
-                selected: XD,
+              game: KU ? {
+                selected: xU,
                 onSelect: () => {
-                  gD(!0)
+                  fU(!0)
                 }
               } : void 0
-            }), (0, SD.jsx)(oD.P, {
+            }), (0, cU.jsx)(QU.M, {
               className: "CrosshairPanelToggle",
-              ariaLabel: MD(mD ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
+              ariaLabel: uU(mU ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
               onClick: () => {
-                nD(!mD)
+                IU(!mU)
               },
-              children: (0, SD.jsx)(bD.c, {
-                name: mD ? "caret-up" : "pen"
+              children: (0, cU.jsx)(TU.c, {
+                name: mU ? "caret-up" : "pen"
               })
-            }), (0, SD.jsx)(oD.i, {
+            }), (0, cU.jsx)(QU.e, {
               className: "CrosshairFullScreenDone",
-              onClick: yD,
+              onClick: jU,
               padDefaultFocus: !0,
-              children: MD("crosshairSettings:done")
+              children: uU("crosshairSettings:done")
             })]
-          }), mD && (0, SD.jsxs)("div", {
+          }), mU && (0, cU.jsxs)("div", {
             className: "CrosshairFullScreenFields",
-            children: [(0, SD.jsx)(Vc, {
-              settings: CD,
-              touch: cD,
-              backdrop: pD,
-              onChange: BD
-            }), (0, SD.jsx)(Zc, {
-              settings: CD,
-              onChange: BD
+            children: [(0, cU.jsx)(Vg, {
+              settings: RU,
+              touch: gU,
+              backdrop: pU,
+              onChange: GU
+            }), (0, cU.jsx)(hg, {
+              settings: RU,
+              onChange: GU
             })]
           })]
         })]
       }), document.body)
     }
-    var Gc = cD(2551),
-      Rc = cD(9028);
+    var Sg = gU(2462),
+      sg = gU(8966);
 
-    function kc(DD) {
+    function yg(UU) {
       let {
-        settings: CD,
-        onChange: cD
-      } = DD;
+        settings: RU,
+        onChange: gU
+      } = UU;
       const {
-        t: pD
-      } = (0, fD.F)(), QD = (0, Rc.g)(CD), [wD, BD] = (0, Gc.h)(), [yD, MD] = (0, ID.useState)(!1), tD = (0, ID.useRef)(null), [ZD, vD] = (0, Gc.h)(), [ND, gD] = (0, ID.useState)(!1);
-      return (0, SD.jsxs)("div", {
+        t: pU
+      } = (0, PU.B)(), qU = (0, sg.g)(RU), [KU, GU] = (0, Sg.h)(), [jU, uU] = (0, tU.useState)(!1), CU = (0, tU.useRef)(null), [hU, eU] = (0, Sg.h)(), [WU, fU] = (0, tU.useState)(!1);
+      return (0, cU.jsxs)("div", {
         className: "SettingBox CrosshairShare",
-        children: [(0, SD.jsxs)("div", {
+        children: [(0, cU.jsxs)("div", {
           className: "CrosshairShareRow",
-          children: [(0, SD.jsxs)(oD.P, {
-            className: iD()("CrosshairCopy", {
-              ActiveSecondaryButton: wD
+          children: [(0, cU.jsxs)(QU.M, {
+            className: EU()("CrosshairCopy", {
+              ActiveSecondaryButton: KU
             }),
             onClick: () => {
-              (0, Gc.d)(QD, {
+              (0, Sg.f)(qU, {
                 useShareSheet: !1,
-                onOutcome: DD => {
-                  MD("failed" === DD), "copied" === DD && BD()
+                onOutcome: UU => {
+                  uU("failed" === UU), "copied" === UU && GU()
                 }
               })
             },
-            children: [(0, SD.jsx)(bD.c, {
-              name: wD ? "check" : "copy"
-            }), " ", pD(wD ? "general:copied" : "crosshairSettings:copy")]
-          }), (0, SD.jsx)(mD.b, {
+            children: [(0, cU.jsx)(TU.c, {
+              name: KU ? "check" : "copy"
+            }), " ", pU(KU ? "general:copied" : "crosshairSettings:copy")]
+          }), (0, cU.jsx)(mU.d, {
             className: "CrosshairPaste",
-            domRef: tD,
-            ariaLabel: pD("crosshairSettings:paste"),
-            placeholderText: pD("crosshairSettings:paste"),
-            onValueChange: DD => {
-              const CD = (0, Rc.e)(DD);
-              gD(!CD && DD.trim().length >= Rc.d), CD && (cD(CD), tD.current.value = "", vD())
+            domRef: CU,
+            ariaLabel: pU("crosshairSettings:paste"),
+            placeholderText: pU("crosshairSettings:paste"),
+            onValueChange: UU => {
+              const RU = (0, sg.d)(UU);
+              fU(!RU && UU.trim().length >= sg.b), RU && (gU(RU), CU.current.value = "", eU())
             }
           })]
-        }), yD && (0, SD.jsx)("input", {
+        }), jU && (0, cU.jsx)("input", {
           className: "CrosshairCode",
           readOnly: !0,
-          value: QD,
-          "aria-label": pD("crosshairSettings:copy"),
-          onFocus: DD => {
-            DD.currentTarget.select()
+          value: qU,
+          "aria-label": pU("crosshairSettings:copy"),
+          onFocus: UU => {
+            UU.currentTarget.select()
           }
-        }), (0, SD.jsxs)("div", {
+        }), (0, cU.jsxs)("div", {
           "aria-live": "polite",
-          children: [ND && (0, SD.jsx)("div", {
+          children: [WU && (0, cU.jsx)("div", {
             className: "CrosshairShareNote Error",
-            children: pD("crosshairSettings:pasteInvalid")
-          }), ZD && !ND && (0, SD.jsx)("div", {
+            children: pU("crosshairSettings:pasteInvalid")
+          }), hU && !WU && (0, cU.jsx)("div", {
             className: "CrosshairShareNote",
-            children: pD("crosshairSettings:applied")
+            children: pU("crosshairSettings:applied")
           })]
         })]
       })
     }
-    var dc = cD(9037);
-    let Yc = "sky";
+    var kg = gU(8969);
+    let Fg = "sky";
 
-    function Wc(DD) {
+    function ig(UU) {
       let {
-        showing: CD
-      } = DD;
+        showing: RU
+      } = UU;
       const {
-        t: cD
-      } = (0, fD.F)(), {
-        isTouchScreen: pD,
-        gameState: iD,
-        clientEscMenuOptions: QD
-      } = (0, PD.o)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), wD = (0, dc.h)(), [BD, yD] = (0, ID.useState)(Yc), MD = DD => {
-        Yc = DD, yD(DD)
-      }, [tD, ZD] = (0, ID.useState)(!1);
-      return (0, ID.useEffect)((() => {
-        CD || ZD(!1)
-      }), [CD]), (0, SD.jsxs)("div", {
+        t: gU
+      } = (0, PU.B)(), {
+        isTouchScreen: pU,
+        gameState: EU,
+        clientEscMenuOptions: qU
+      } = (0, wU.l)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), KU = (0, kg.h)(), [GU, jU] = (0, tU.useState)(Fg), uU = UU => {
+        Fg = UU, jU(UU)
+      }, [CU, hU] = (0, tU.useState)(!1);
+      return (0, tU.useEffect)((() => {
+        RU || hU(!1)
+      }), [RU]), (0, cU.jsxs)("div", {
         className: "SettingsMenuRightInner CrosshairCategory",
-        children: [(0, SD.jsx)("div", {
+        children: [(0, cU.jsx)("div", {
           className: "CrosshairPreviewSticky",
-          children: (0, SD.jsx)(lc, {
+          children: (0, cU.jsx)(vg, {
             className: "CrosshairPreviewStage",
-            settings: wD,
-            touch: pD,
-            backdrop: BD,
-            label: cD("crosshairSettings:preview"),
-            children: (0, SD.jsxs)("div", {
+            settings: KU,
+            touch: pU,
+            backdrop: GU,
+            label: gU("crosshairSettings:preview"),
+            children: (0, cU.jsxs)("div", {
               className: "CrosshairPreviewBar CrosshairStageControls",
-              children: [(0, SD.jsx)(ac, {
-                backdrop: BD,
-                onChange: MD
-              }), (0, SD.jsxs)(oD.P, {
+              children: [(0, cU.jsx)(Bg, {
+                backdrop: GU,
+                onChange: uU
+              }), (0, cU.jsxs)(QU.M, {
                 className: "CrosshairFullScreenButton",
                 onClick: () => {
-                  ZD(!0)
+                  hU(!0)
                 },
-                children: [(0, SD.jsx)(bD.c, {
+                children: [(0, cU.jsx)(TU.c, {
                   name: "expand"
-                }), " ", cD("crosshairSettings:fullScreen")]
+                }), " ", gU("crosshairSettings:fullScreen")]
               })]
             })
           })
-        }), (0, SD.jsx)("div", {
+        }), (0, cU.jsx)("div", {
           className: "SettingBox",
-          children: (0, SD.jsx)(Vc, {
-            settings: wD,
-            touch: pD,
-            backdrop: BD,
-            onChange: dc.e
+          children: (0, cU.jsx)(Vg, {
+            settings: KU,
+            touch: pU,
+            backdrop: GU,
+            onChange: kg.d
           })
-        }), (0, SD.jsx)(kc, {
-          settings: wD,
-          onChange: dc.e
-        }), pD && (0, SD.jsx)(fc.b, {
-          note: (0, ic.g)(pD, QD.touchActionButtons) ? cD("crosshairSettings:touchNote") : void 0
-        }), (0, SD.jsx)(Zc, {
-          settings: wD,
-          onChange: dc.e
-        }), tD && (0, SD.jsx)(Tc, {
-          settings: wD,
-          touch: pD,
-          backdrop: BD,
-          onBackdrop: MD,
-          inGame: "inGame" === iD,
-          onChange: dc.e,
+        }), (0, cU.jsx)(yg, {
+          settings: KU,
+          onChange: kg.d
+        }), pU && (0, cU.jsx)(Pg.b, {
+          note: (0, Eg.h)(pU, qU.touchActionButtons) ? gU("crosshairSettings:touchNote") : void 0
+        }), (0, cU.jsx)(hg, {
+          settings: KU,
+          onChange: kg.d
+        }), CU && (0, cU.jsx)(Hg, {
+          settings: KU,
+          touch: pU,
+          backdrop: GU,
+          onBackdrop: uU,
+          inGame: "inGame" === EU,
+          onChange: kg.d,
           onClose: () => {
-            ZD(!1)
+            hU(!1)
           }
         })]
       })
     }
-    var sc = cD(8572),
-      Ec = cD(1396),
-      ec = cD(4767),
-      uc = cD(9039),
-      hc = cD(1954),
-      rc = cD(4119),
-      Ac = cD(1957),
-      Fc = cD(728);
-    const DI = (0, ID.memo)((function() {
+    var Ag = gU(8501),
+      zg = gU(1371),
+      Mg = gU(4663),
+      Dg = gU(8978),
+      Lg = gU(1834),
+      Ng = gU(3967),
+      lg = gU(1836),
+      Og = gU(688);
+    const Ut = (0, tU.memo)((function() {
       const {
-        clientEscMenuOptions: DD
-      } = (0, PD.o)(["clientEscMenuOptions"]), {
-        recording: CD,
-        clipping: cD,
-        hasClipBuffer: pD
-      } = (0, hc.h)("replayRecorder"), fD = (0, hc.g)("connectedGame", (DD => DD.replay)), bD = (0, rc.o)(), QD = !1 === (0, tD.h)("canRecordReplays");
-      (0, ID.useEffect)((() => {
-        ND.gameBridge.send("setRecorderPrefs", {
-          clipping: DD.enableClipping,
-          clipSeconds: DD.clipDurationSeconds
+        clientEscMenuOptions: UU
+      } = (0, wU.l)(["clientEscMenuOptions"]), {
+        recording: RU,
+        clipping: gU,
+        hasClipBuffer: pU
+      } = (0, Lg.k)("replayRecorder"), PU = (0, Lg.h)("connectedGame", (UU => UU.replay)), TU = (0, Ng.i)(), qU = !1 === (0, CU.g)("canRecordReplays");
+      (0, tU.useEffect)((() => {
+        WU.gameBridge.send("setRecorderPrefs", {
+          clipping: UU.enableClipping,
+          clipSeconds: UU.clipDurationSeconds
         })
-      }), [DD.enableClipping, DD.clipDurationSeconds]);
-      const wD = bD || fD,
-        BD = !wD && !QD,
-        yD = CD || BD,
-        MD = BD,
-        ZD = MD && cD && !CD;
+      }), [UU.enableClipping, UU.clipDurationSeconds]);
+      const KU = TU || PU,
+        GU = !KU && !qU,
+        jU = RU || GU,
+        uU = GU,
+        hU = uU && gU && !RU;
 
-      function vD() {
-        yD && ND.gameBridge.send("toggleRecording", null)
+      function eU() {
+        jU && WU.gameBridge.send("toggleRecording", null)
       }
-      return (0, SD.jsxs)("div", {
+      return (0, cU.jsxs)("div", {
         className: "SettingsMenuRightInner ReplayViewerCategory",
-        children: [(0, SD.jsxs)("div", {
+        children: [(0, cU.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, SD.jsx)("div", {
+          children: [(0, cU.jsx)("div", {
             className: "ReplayViewerCategoryRecordingRow",
-            children: CD ? (0, SD.jsxs)(SD.Fragment, {
-              children: [(0, SD.jsxs)(oD.J, {
+            children: RU ? (0, cU.jsxs)(cU.Fragment, {
+              children: [(0, cU.jsxs)(QU.E, {
                 className: "ReplayViewerCategoryButton",
-                onClick: vD,
-                disabled: !yD,
-                children: [(0, SD.jsx)("span", {
+                onClick: eU,
+                disabled: !jU,
+                children: [(0, cU.jsx)("span", {
                   children: "Stop Recording"
-                }), (0, SD.jsx)(Ac.d, {
+                }), (0, cU.jsx)(lg.b, {
                   noaAction: "recordGame"
                 })]
-              }), (0, SD.jsx)(uc.c, {
+              }), (0, cU.jsx)(Dg.c, {
                 className: "ReplayViewerCategoryRecordingIndicator"
               })]
-            }) : (0, SD.jsxs)(oD.i, {
+            }) : (0, cU.jsxs)(QU.e, {
               className: "ReplayViewerCategoryButton",
-              onClick: vD,
-              disabled: !yD,
-              children: [(0, SD.jsx)("span", {
+              onClick: eU,
+              disabled: !jU,
+              children: [(0, cU.jsx)("span", {
                 children: "Start Recording"
-              }), (0, SD.jsx)(Ac.d, {
+              }), (0, cU.jsx)(lg.b, {
                 noaAction: "recordGame"
               })]
             })
-          }), QD && (0, SD.jsx)("div", {
+          }), qU && (0, cU.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Recording is turned off in this game."
-          }), wD && !CD && (0, SD.jsx)("div", {
+          }), KU && !RU && (0, cU.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Close Replay Mode to start recording."
           })]
-        }), (0, SD.jsxs)("div", {
+        }), (0, cU.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, SD.jsx)(OD.e, {
+          children: [(0, cU.jsx)(JU.b, {
             label: "Enable clipping",
-            checked: DD.enableClipping,
-            disabled: !MD,
-            onClick: function(DD) {
-              MD && PD.d.setClientEscMenuOptions({
-                enableClipping: DD
+            checked: UU.enableClipping,
+            disabled: !uU,
+            onClick: function(UU) {
+              uU && wU.b.setClientEscMenuOptions({
+                enableClipping: UU
               })
             },
-            className: iD()({
-              SettingBoxDisabled: !MD
+            className: EU()({
+              SettingBoxDisabled: !uU
             })
-          }), (0, SD.jsx)(OD.i, {
+          }), (0, cU.jsx)(JU.h, {
             name: "Clip duration (seconds)",
-            min: Fc.i,
-            max: Fc.h,
-            step: Fc.c,
-            initValue: DD.clipDurationSeconds,
-            onChange: function(DD) {
-              PD.d.setClientEscMenuOptions({
-                clipDurationSeconds: DD
+            min: Og.n,
+            max: Og.k,
+            step: Og.d,
+            initValue: UU.clipDurationSeconds,
+            onChange: function(UU) {
+              wU.b.setClientEscMenuOptions({
+                clipDurationSeconds: UU
               })
             },
             circleInfoText: "Longer clip durations use more memory and may affect performance.",
-            disabled: !MD || !DD.enableClipping
+            disabled: !uU || !UU.enableClipping
           })]
-        }), (0, SD.jsxs)("div", {
+        }), (0, cU.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, SD.jsxs)(oD.i, {
+          children: [(0, cU.jsxs)(QU.e, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              ZD && ND.gameBridge.send("saveClip", null)
+              hU && WU.gameBridge.send("saveClip", null)
             },
-            disabled: !ZD,
-            children: [(0, SD.jsx)("span", {
+            disabled: !hU,
+            children: [(0, cU.jsx)("span", {
               children: "Record clip"
-            }), (0, SD.jsx)(Ac.d, {
+            }), (0, cU.jsx)(lg.b, {
               noaAction: "recordClip"
             })]
-          }), DD.enableClipping && !pD && MD && !CD && (0, SD.jsx)("div", {
+          }), UU.enableClipping && !pU && uU && !RU && (0, cU.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clip buffer is filling \u2014 play for a moment, then save."
-          }), CD && (0, SD.jsx)("div", {
+          }), RU && (0, cU.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clipping pauses while a full recording is active."
           })]
-        }), (0, SD.jsxs)("div", {
+        }), (0, cU.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, SD.jsxs)(oD.i, {
+          children: [(0, cU.jsxs)(QU.e, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              (0, rc.l)(!0), PD.d.set({
+              (0, Ng.f)(!0), wU.b.set({
                 openEverythingMenuName: null
               })
             },
-            disabled: bD,
-            children: [(0, SD.jsx)("span", {
+            disabled: TU,
+            children: [(0, cU.jsx)("span", {
               children: "Open Replay Mode"
-            }), (0, SD.jsx)(Ac.d, {
+            }), (0, cU.jsx)(lg.b, {
               noaAction: "replayViewerOpen"
             })]
-          }), bD && (0, SD.jsx)("div", {
+          }), TU && (0, cU.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Replay Mode is already open."
           })]
-        }), (0, SD.jsxs)("div", {
+        }), (0, cU.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, SD.jsx)("div", {
+          children: [(0, cU.jsx)("div", {
             className: "ReplayViewerCategoryTutorialTitle",
             children: "How to use Replay Mode"
-          }), (0, SD.jsx)("iframe", {
+          }), (0, cU.jsx)("iframe", {
             className: "ReplayViewerCategoryTutorial",
             src: "https://www.youtube.com/embed/-FsT0rNSuYA?playsinline=1&rel=0",
             title: "How to use Replay Mode",
@@ -2302,8 +2302,8 @@ export const modules = {
         })]
       })
     }));
-    var CI = cD(1865);
-    const cI = {
+    var Rt = gU(1771);
+    const gt = {
       account: {
         icon: "fa-solid fa-user",
         displayName: "homePage:account"
@@ -2325,11 +2325,11 @@ export const modules = {
         displayName: "settingsMenu:graphics"
       },
       controls: {
-        icon: () => (0, SD.jsx)("svg", {
+        icon: () => (0, cU.jsx)("svg", {
           className: "svg-inline--fa",
           viewBox: "0 0 640 512",
           "aria-hidden": "true",
-          children: (0, SD.jsx)("path", {
+          children: (0, cU.jsx)("path", {
             fill: "currentColor",
             d: "M256 20H384A36 36 0 0 1 420 56V208A36 36 0 0 1 384 244H256A36 36 0 0 1 220 208V56A36 36 0 0 1 256 20ZM262 166L378 166L320 90ZM36 268H164A36 36 0 0 1 200 304V456A36 36 0 0 1 164 492H36A36 36 0 0 1 0 456V304A36 36 0 0 1 36 268ZM134 438L134 322L58 380ZM256 268H384A36 36 0 0 1 420 304V456A36 36 0 0 1 384 492H256A36 36 0 0 1 220 456V304A36 36 0 0 1 256 268ZM378 346L262 346L320 422ZM476 268H604A36 36 0 0 1 640 304V456A36 36 0 0 1 604 492H476A36 36 0 0 1 440 456V304A36 36 0 0 1 476 268ZM506 322L506 438L582 380Z"
           })
@@ -2348,7 +2348,7 @@ export const modules = {
         icon: "fa-solid fa-folder-image",
         displayName: "settingsMenu:texturePack"
       },
-      gt: {
+      Fu: {
         icon: "fa-solid fa-sparkle",
         displayName: "settingsMenu:shaderPack"
       },
@@ -2374,280 +2374,280 @@ export const modules = {
       }
     };
 
-    function II() {
-      return Promise.all([cD.e(74), cD.e(131), cD.e(125), cD.e(122)]).then((() => cD(40151))).then((DD => ({
-        default: DD.ShaderPackCategory
-      })), (DD => (console.error("Failed to load the shader pack settings", DD), {
-        default: pI
+    function tt() {
+      return Promise.all([gU.e(74), gU.e(131), gU.e(125), gU.e(122)]).then((() => gU(40457))).then((UU => ({
+        default: UU.ShaderPackCategory
+      })), (UU => (console.error("Failed to load the shader pack settings", UU), {
+        default: pt
       })))
     }
 
-    function pI() {
+    function pt() {
       const {
-        t: DD
-      } = (0, fD.F)();
-      return (0, SD.jsx)("div", {
+        t: UU
+      } = (0, PU.B)();
+      return (0, cU.jsx)("div", {
         className: "SettingsMenuRightInner",
-        children: DD("shaderPack:tabLoadFailed")
+        children: UU("shaderPack:tabLoadFailed")
       })
     }
-    var iI = cD(1388);
-    const fI = (0, ID.lazy)((() => cD.e(263).then((() => cD(40143))).then((DD => ({
-        default: DD.BloxdInformation
+    var Et = gU(1362);
+    const Pt = (0, tU.lazy)((() => gU.e(263).then((() => gU(40448))).then((UU => ({
+        default: UU.BloxdInformation
       }))))),
-      bI = (0, ID.lazy)(II);
+      Tt = (0, tU.lazy)(tt);
 
-    function QI(DD) {
-      return DD ? "general" : "account"
+    function qt(UU) {
+      return UU ? "general" : "account"
     }
-    const wI = new Map,
-      SI = (0, ID.memo)((function(DD) {
+    const Kt = new Map,
+      ct = (0, tU.memo)((function(UU) {
         let {
-          show: CD,
-          setBeforeResumeCallback: cD
-        } = DD;
-        (0, ZD.b)();
+          show: RU,
+          setBeforeResumeCallback: gU
+        } = UU;
+        (0, hU.d)();
         const {
-          gameState: pD,
-          openSettingsCategory: iD
-        } = (0, PD.o)(["gameState", "openSettingsCategory"]), {
-          userContext: QD
-        } = (0, MD.c)(), {
-          t: wD
-        } = (0, fD.F)(), mD = (0, yD.b)(), nD = (0, tD.h)("minChunkAddDist"), OD = "inGame" === pD, [HD, qD] = (0, ID.useState)(QI(OD)), [JD, KD] = (0, ID.useState)(null), [aD, VD] = (0, ID.useState)([]), zD = (0, ID.useRef)(function() {
-          const DD = new Date,
-            CD = 6 * (DD.getMonth() + DD.getDate()) % wC.x.length;
-          return [...wC.x, ...wC.x].slice(CD, CD + 6)
-        }()), jD = (0, ID.useRef)(null), lD = (0, xC.g)(Ec.k, (0, Ec.e)()), LD = Object.keys(cI).filter((DD => {
-          switch (DD) {
+          gameState: pU,
+          openSettingsCategory: EU
+        } = (0, wU.l)(["gameState", "openSettingsCategory"]), {
+          userContext: qU
+        } = (0, uU.e)(), {
+          t: KU
+        } = (0, PU.B)(), mU = (0, jU.b)(), IU = (0, CU.g)("minChunkAddDist"), JU = "inGame" === pU, [nU, ZU] = (0, tU.useState)(qt(JU)), [aU, YU] = (0, tU.useState)(null), [BU, VU] = (0, tU.useState)([]), rU = (0, tU.useRef)(function() {
+          const UU = new Date,
+            RU = 6 * (UU.getMonth() + UU.getDate()) % KR.z.length;
+          return [...KR.z, ...KR.z].slice(RU, RU + 6)
+        }()), XU = (0, tU.useRef)(null), vU = (0, oR.h)(zg.k, (0, zg.c)()), dU = Object.keys(gt).filter((UU => {
+          switch (UU) {
             case "replayViewer":
-              return OD;
+              return JU;
             case "developerTools":
-              return QD.playerHasRank("developer") || !1;
+              return qU.playerHasRank("developer") || !1;
             case "texturePack":
-              return vD.featureFlags.settings.canChangeTexturePack;
-            case "gt":
-              return vD.featureFlags.settings.canUseShaderPacks;
+              return eU.featureFlags.settings.canChangeTexturePack;
+            case "Fu":
+              return eU.featureFlags.settings.canUseShaderPacks;
             case "notifications":
-              return vD.featureFlags.useSocialFeatures;
+              return eU.featureFlags.useSocialFeatures;
             case "alternativeDomains":
-              return "crazygames" !== xD.p;
+              return "crazygames" !== oU.t;
             case "controller":
-              return vD.featureFlags.useControllerSupport && (lD || "controller" === HD);
+              return eU.featureFlags.useControllerSupport && (vU || "controller" === nU);
             default:
               return !0
           }
         }));
-        (0, xC.f)("toggleFullCoordinateOverlay", (() => {
-          const DD = hC("showCoordinates") && hC("showChunkCoordinates") && hC("showFPS");
-          rC("showCoordinates", !DD), rC("showChunkCoordinates", !DD), rC("showFPS", !DD), mD()
-        })), (0, xC.f)("updatedChunkLoadDist", (() => {
-          mD()
-        })), (0, ID.useEffect)((() => {
-          if (KD(null), null === PD.d.get("openSettingsCategory")) {
-            const DD = (0, iI.e)() ? wI.get(OD) : void 0;
-            qD(DD && LD.includes(DD) ? DD : QI(OD))
+        (0, oR.e)("toggleFullCoordinateOverlay", (() => {
+          const UU = LR("showCoordinates") && LR("showChunkCoordinates") && LR("showFPS");
+          NR("showCoordinates", !UU), NR("showChunkCoordinates", !UU), NR("showFPS", !UU), mU()
+        })), (0, oR.e)("updatedChunkLoadDist", (() => {
+          mU()
+        })), (0, tU.useEffect)((() => {
+          if (YU(null), null === wU.b.get("openSettingsCategory")) {
+            const UU = (0, Et.g)() ? Kt.get(JU) : void 0;
+            ZU(UU && dU.includes(UU) ? UU : qt(JU))
           }
-        }), [CD]), (0, ID.useEffect)((() => {
-          null !== iD && (qD(iD), wI.set(OD, iD), PD.d.set({
+        }), [RU]), (0, tU.useEffect)((() => {
+          null !== EU && (ZU(EU), Kt.set(JU, EU), wU.b.set({
             openSettingsCategory: null
           }))
-        }), [iD, OD]), (0, ID.useLayoutEffect)((() => {
-          jD.current && (jD.current.scrollTop = 0)
-        }), [HD, CD]), (0, ID.useEffect)((() => {
-          "updateLog" === HD && (0, XD.d)().then(VD)
-        }), [HD]), (0, ID.useEffect)((() => {
-          if ((0, dC.C)(nD)) return;
-          const [DD, CD] = (0, Ic.g)(), [cD, ID] = (0, lC.f)(nD), pD = (0, CI.h)(nD[0], DD, cD), iD = (0, CI.h)(nD[1], CD, ID);
-          ND.gameBridge.send("setChunkAddDistance", {
-            horizontal: pD,
-            vertical: iD
+        }), [EU, JU]), (0, tU.useLayoutEffect)((() => {
+          XU.current && (XU.current.scrollTop = 0)
+        }), [nU, RU]), (0, tU.useEffect)((() => {
+          "updateLog" === nU && (0, xU.c)().then(VU)
+        }), [nU]), (0, tU.useEffect)((() => {
+          if ((0, kR.E)(IU)) return;
+          const [UU, RU] = (0, tg.e)(), [gU, tU] = (0, vR.e)(IU), pU = (0, Rt.e)(IU[0], UU, gU), EU = (0, Rt.e)(IU[1], RU, tU);
+          WU.gameBridge.send("setChunkAddDistance", {
+            horizontal: pU,
+            vertical: EU
           })
-        }), [nD]);
-        const TD = (0, ID.useCallback)((async () => {
-          JD && (await JD(), KD(null))
-        }), [JD]);
+        }), [IU]);
+        const HU = (0, tU.useCallback)((async () => {
+          aU && (await aU(), YU(null))
+        }), [aU]);
 
-        function GD() {
-          PD.d.set({
+        function SU() {
+          wU.b.set({
             openEverythingMenuName: null
           })
         }
-        return (0, ID.useEffect)((() => {
-          cD((() => TD))
-        }), [TD, cD]), (0, SD.jsxs)("div", {
+        return (0, tU.useEffect)((() => {
+          gU((() => HU))
+        }), [HU, gU]), (0, cU.jsxs)("div", {
           className: "SettingsMenu Menu",
-          style: CD ? {} : {
+          style: RU ? {} : {
             display: "none"
           },
-          children: [(0, SD.jsx)("div", {
+          children: [(0, cU.jsx)("div", {
             className: "MenuSideBar",
-            children: (0, SD.jsx)("div", {
+            children: (0, cU.jsx)("div", {
               className: "MenuSideBarBody",
-              children: (0, SD.jsx)(BD, {
-                items: LD.map((DD => {
-                  const CD = cI[DD].icon;
+              children: (0, cU.jsx)(GU, {
+                items: dU.map((UU => {
+                  const RU = gt[UU].icon;
                   return {
-                    id: DD,
-                    faIcon: "string" === typeof CD ? CD : void 0,
-                    iconElement: "string" === typeof CD ? void 0 : (0, SD.jsx)(CD, {}),
-                    title: wD(cI[DD].displayName),
+                    id: UU,
+                    faIcon: "string" === typeof RU ? RU : void 0,
+                    iconElement: "string" === typeof RU ? void 0 : (0, cU.jsx)(RU, {}),
+                    title: KU(gt[UU].displayName),
                     redDot: !1
                   }
                 })),
-                selectedItemId: HD,
-                onClick: DD => {
-                  !async function(DD) {
-                    await TD(), qD(DD), wI.set(OD, DD)
-                  }(DD)
+                selectedItemId: nU,
+                onClick: UU => {
+                  !async function(UU) {
+                    await HU(), ZU(UU), Kt.set(JU, UU)
+                  }(UU)
                 }
               })
             })
-          }), (0, SD.jsxs)("div", {
-            ref: jD,
+          }), (0, cU.jsxs)("div", {
+            ref: XU,
             className: "MenuBody SettingsMenuRight",
-            children: ["account" === HD && (0, SD.jsx)(NC, {
-              showing: CD,
-              inGame: OD
-            }), "general" === HD && (0, SD.jsx)(PC, {
-              inGame: OD
-            }), "audio" === HD && (0, SD.jsx)(HC, {}), "notifications" === HD && (0, SD.jsx)(jC, {}), "graphics" === HD && (0, SD.jsx)(cc, {
-              minChunkAddDist: null !== nD && void 0 !== nD ? nD : [2, 2],
-              getValue: hC,
-              onChange: rC,
-              setApplySettingsCallback: KD
-            }), "controls" === HD && (0, SD.jsx)(pc.h, {}), "crosshair" === HD && (0, SD.jsx)(Wc, {
-              showing: CD
-            }), "controller" === HD && vD.featureFlags.useControllerSupport && (0, SD.jsx)(sc.c, {}), vD.featureFlags.settings.canChangeTexturePack && "texturePack" === HD && (0, SD.jsx)(ec.e, {
-              setApplySettingsCallback: KD
-            }), vD.featureFlags.settings.canUseShaderPacks && "gt" === HD && (0, SD.jsx)(ID.Suspense, {
+            children: ["account" === nU && (0, cU.jsx)(WR, {
+              showing: RU,
+              inGame: JU
+            }), "general" === nU && (0, cU.jsx)(wR, {
+              inGame: JU
+            }), "audio" === nU && (0, cU.jsx)(nR, {}), "notifications" === nU && (0, cU.jsx)(XR, {}), "graphics" === nU && (0, cU.jsx)(gg, {
+              minChunkAddDist: null !== IU && void 0 !== IU ? IU : [2, 2],
+              getValue: LR,
+              onChange: NR,
+              setApplySettingsCallback: YU
+            }), "controls" === nU && (0, cU.jsx)(pg.e, {}), "crosshair" === nU && (0, cU.jsx)(ig, {
+              showing: RU
+            }), "controller" === nU && eU.featureFlags.useControllerSupport && (0, cU.jsx)(Ag.c, {}), eU.featureFlags.settings.canChangeTexturePack && "texturePack" === nU && (0, cU.jsx)(Mg.e, {
+              setApplySettingsCallback: YU
+            }), eU.featureFlags.settings.canUseShaderPacks && "Fu" === nU && (0, cU.jsx)(tU.Suspense, {
               fallback: null,
-              children: (0, SD.jsx)(bI, {
-                setApplySettingsCallback: KD
+              children: (0, cU.jsx)(Tt, {
+                setApplySettingsCallback: YU
               })
-            }), "updateLog" === HD && (0, SD.jsx)("div", {
+            }), "updateLog" === nU && (0, cU.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, SD.jsx)("div", {
+              children: (0, cU.jsx)("div", {
                 className: "UpdateLogsContainer",
-                children: aD.map(((DD, CD) => (0, SD.jsx)(gD.c, {
-                  updateLog: DD,
-                  index: CD,
-                  close: GD
-                }, CD)))
+                children: BU.map(((UU, RU) => (0, cU.jsx)(fU.b, {
+                  updateLog: UU,
+                  index: RU,
+                  close: SU
+                }, RU)))
               })
-            }), "information" === HD && (0, SD.jsx)("div", {
+            }), "information" === nU && (0, cU.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, SD.jsx)(ID.Suspense, {
+              children: (0, cU.jsx)(tU.Suspense, {
                 fallback: null,
-                children: (0, SD.jsx)(fI, {})
+                children: (0, cU.jsx)(Pt, {})
               })
-            }), "alternativeDomains" === HD && (0, SD.jsxs)("div", {
+            }), "alternativeDomains" === nU && (0, cU.jsxs)("div", {
               className: "SettingsMenuRightInner",
-              children: [(0, SD.jsx)("div", {
+              children: [(0, cU.jsx)("div", {
                 className: "AlternativeDomainsTitle",
-                children: wD("settingsMenu:unblockedDomainsDescription")
-              }), (0, SD.jsx)("div", {
+                children: KU("settingsMenu:unblockedDomainsDescription")
+              }), (0, cU.jsx)("div", {
                 className: "AlternativeDomainsList",
-                children: zD.current.map((DD => (0, SD.jsxs)(oD.i, {
+                children: rU.current.map((UU => (0, cU.jsxs)(QU.e, {
                   onClick: () => {
-                    window.open(`https://${DD}`)
+                    window.open(`https://${UU}`)
                   },
-                  children: [(0, SD.jsx)(bD.c, {
+                  children: [(0, cU.jsx)(TU.c, {
                     name: "arrow-up-right-from-square"
-                  }), " ", DD]
-                }, DD)))
+                  }), " ", UU]
+                }, UU)))
               })]
-            }), "replayViewer" === HD && (0, SD.jsx)(DI, {}), "developerTools" === HD && (0, SD.jsx)("div", {
+            }), "replayViewer" === nU && (0, cU.jsx)(Ut, {}), "developerTools" === nU && (0, cU.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, SD.jsx)(UD, {
-                setApplySettingsCallback: KD
+              children: (0, cU.jsx)(bU, {
+                setApplySettingsCallback: YU
               })
-            }), null !== JD && (0, SD.jsx)("div", {
+            }), null !== aU && (0, cU.jsx)("div", {
               className: "SettingsMenuRightFooter",
-              children: (0, SD.jsx)(oD.i, {
+              children: (0, cU.jsx)(QU.e, {
                 className: "SettingsMenuRightFooterButton",
-                onClick: TD,
-                children: wD("general:apply")
+                onClick: HU,
+                children: KU("general:apply")
               })
             })]
           })]
         })
       }));
-    var BI = cD(2482);
-    const yI = ["characters", "emote", "skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "profileEffect", "cape", "nameColour"],
-      MI = (0, ID.lazy)((() => Promise.resolve().then((() => cD(4452))).then((DD => {
-        DD.needGameClientAfterPaint();
-        const CD = DD.matchmakingLibrariesPromise.then((DD => (0, BI.c)(DD.loadCharacterCustomisationUI(), (DD => DD.CharacterCustomisationUI))));
-        return Promise.all([DD.ensureGameSetup(), CD]).then((DD => {
-          let [, CD] = DD;
-          return CD
+    var Gt = gU(2401);
+    const jt = ["characters", "emote", "skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "profileEffect", "cape", "nameColour"],
+      ut = (0, tU.lazy)((() => Promise.resolve().then((() => gU(4318))).then((UU => {
+        UU.needGameClientAfterPaint();
+        const RU = UU.matchmakingLibrariesPromise.then((UU => (0, Gt.e)(UU.loadCharacterCustomisationUI(), (UU => UU.CharacterCustomisationUI))));
+        return Promise.all([UU.ensureGameSetup(), RU]).then((UU => {
+          let [, RU] = UU;
+          return RU
         }))
       }))));
 
-    function tI(DD) {
+    function Ct(UU) {
       let {
-        show: CD
-      } = DD;
+        show: RU
+      } = UU;
       const {
-        userContext: cD
-      } = (0, MD.c)(), [pD, iD] = (0, ID.useState)("characters");
-      if (!CD) return null;
-      const fD = yI.filter((DD => "cape" !== DD && "nameColour" !== DD || cD.getPlayerRanks().includes("super") || (0, RD.purchasesAllowed)())).map((DD => ({
-        id: DD,
-        faIcon: wC.F[DD],
-        title: wC.J[DD],
+        userContext: gU
+      } = (0, uU.e)(), [pU, EU] = (0, tU.useState)("characters");
+      if (!RU) return null;
+      const PU = jt.filter((UU => "cape" !== UU && "nameColour" !== UU || gU.getPlayerRanks().includes("super") || (0, sU.purchasesAllowed)())).map((UU => ({
+        id: UU,
+        faIcon: KR.I[UU],
+        title: KR.M[UU],
         redDot: !1
       })));
-      return (0, SD.jsxs)("div", {
+      return (0, cU.jsxs)("div", {
         className: "Menu CharCustomisation",
-        children: [(0, SD.jsx)("div", {
+        children: [(0, cU.jsx)("div", {
           className: "MenuSideBar",
-          children: (0, SD.jsx)(BD, {
-            items: fD,
-            selectedItemId: pD,
-            onClick: DD => {
-              iD(DD)
+          children: (0, cU.jsx)(GU, {
+            items: PU,
+            selectedItemId: pU,
+            onClick: UU => {
+              EU(UU)
             }
           })
-        }), (0, SD.jsx)("div", {
+        }), (0, cU.jsx)("div", {
           className: "MenuBody",
-          children: (0, SD.jsx)(ID.Suspense, {
-            fallback: (0, SD.jsx)("div", {
+          children: (0, cU.jsx)(tU.Suspense, {
+            fallback: (0, cU.jsx)("div", {
               className: "CharacterCustomisationLoading",
-              children: (0, SD.jsx)(nD.e, {})
+              children: (0, cU.jsx)(IU.d, {})
             }),
-            children: (0, SD.jsx)(MI, {
-              selectedTab: pD
+            children: (0, cU.jsx)(ut, {
+              selectedTab: pU
             })
           })
         })]
       })
     }
-    var ZI = cD(1460),
-      oI = cD(9041),
-      vI = cD(4325),
-      NI = cD(3211),
-      gI = cD(3266),
-      XI = cD(9065),
-      mI = cD(8463),
-      nI = cD(9045),
-      OI = cD(9057),
-      PI = cD(1893),
-      HI = cD(1872),
-      UI = cD(4677),
-      xI = cD(1260),
-      qI = cD(1221),
-      JI = cD(1645),
-      KI = cD(8548);
+    var ht = gU(1432),
+      Qt = gU(8982),
+      et = gU(4195),
+      Wt = gU(3117),
+      ft = gU(3161),
+      xt = gU(9012),
+      mt = gU(8405),
+      It = gU(8991),
+      Jt = gU(9001),
+      wt = gU(1790),
+      nt = gU(1777),
+      bt = gU(4569),
+      ot = gU(1265),
+      Zt = gU(1217),
+      Yt = gU(1591),
+      Bt = gU(8475);
 
-    function aI(DD) {
-      return DD ? Object.keys(DD).sort(((CD, cD) => {
-        var ID, pD, iD, fD;
-        const bD = (null !== (ID = null === (pD = DD[cD]) || void 0 === pD ? void 0 : pD.sortPriority) && void 0 !== ID ? ID : 0) - (null !== (iD = null === (fD = DD[CD]) || void 0 === fD ? void 0 : fD.sortPriority) && void 0 !== iD ? iD : 0);
-        return 0 !== bD ? bD : CD.localeCompare(cD)
+    function Vt(UU) {
+      return UU ? Object.keys(UU).sort(((RU, gU) => {
+        var tU, pU, EU, PU;
+        const TU = (null !== (tU = null === (pU = UU[gU]) || void 0 === pU ? void 0 : pU.sortPriority) && void 0 !== tU ? tU : 0) - (null !== (EU = null === (PU = UU[RU]) || void 0 === PU ? void 0 : PU.sortPriority) && void 0 !== EU ? EU : 0);
+        return 0 !== TU ? TU : RU.localeCompare(gU)
       })) : []
     }
-    const VI = [{
+    const rt = [{
       threshold: 1e12,
       suffix: "T"
     }, {
@@ -2661,241 +2661,241 @@ export const modules = {
       suffix: "K"
     }];
 
-    function zI(DD) {
+    function Xt(UU) {
       for (const {
-          threshold: CD,
-          suffix: cD
+          threshold: RU,
+          suffix: gU
         }
-        of VI)
-        if (DD >= CD) {
-          const ID = DD / CD;
-          return ID >= 100 ? `${Math.floor(ID)}${cD}` : ID >= 10 ? `${ID.toFixed(1).replace(/\.0$/,"")}${cD}` : `${ID.toFixed(2).replace(/\.?0+$/,"")}${cD}`
-        } return String(DD)
+        of rt)
+        if (UU >= RU) {
+          const tU = UU / RU;
+          return tU >= 100 ? `${Math.floor(tU)}${gU}` : tU >= 10 ? `${tU.toFixed(1).replace(/\.0$/,"")}${gU}` : `${tU.toFixed(2).replace(/\.?0+$/,"")}${gU}`
+        } return String(UU)
     }
-    var jI = cD(4799);
-    const lI = {
+    var vt = gU(4693);
+    const dt = {
         normal: "0.8em",
         big: "1em"
       },
-      LI = (0, ID.memo)((function(DD) {
+      Ht = (0, tU.memo)((function(UU) {
         let {
-          item: CD,
-          amount: cD = 0,
-          size: ID = "normal",
-          tier: pD = null
-        } = DD;
-        return (0, SD.jsx)("div", {
-          className: iD()("SmpSlot", `SmpSlot-${ID}`),
-          children: CD && (0, SD.jsx)(PI.d, {
-            itemName: CD,
-            amount: cD > 1 ? cD : 0,
-            amountFontSize: lI[ID],
-            enchantmentTier: pD
+          item: RU,
+          amount: gU = 0,
+          size: tU = "normal",
+          tier: pU = null
+        } = UU;
+        return (0, cU.jsx)("div", {
+          className: EU()("SmpSlot", `SmpSlot-${tU}`),
+          children: RU && (0, cU.jsx)(wt.c, {
+            itemName: RU,
+            amount: gU > 1 ? gU : 0,
+            amountFontSize: dt[tU],
+            enchantmentTier: pU
           })
         })
       }));
 
-    function TI(DD) {
+    function St(UU) {
       let {
-        amount: CD,
-        exact: cD = !1,
-        className: ID
-      } = DD;
-      return (0, SD.jsxs)("span", {
-        className: iD()("SmpGold", ID),
-        children: [(0, SD.jsx)("span", {
+        amount: RU,
+        exact: gU = !1,
+        className: tU
+      } = UU;
+      return (0, cU.jsxs)("span", {
+        className: EU()("SmpGold", tU),
+        children: [(0, cU.jsx)("span", {
           className: "SmpCoin",
-          children: (0, SD.jsx)(PI.d, {
+          children: (0, cU.jsx)(wt.c, {
             itemName: "Gold Coin",
             amount: 0
           })
-        }), cD ? CD.toLocaleString("en-US") : zI(CD)]
+        }), gU ? RU.toLocaleString("en-US") : Xt(RU)]
       })
     }
 
-    function GI(DD) {
+    function st(UU) {
       let {
-        count: CD = 5,
-        grid: cD = !1
-      } = DD;
-      return (0, SD.jsx)("div", {
-        className: cD ? "SmpCardGrid" : "SmpList",
+        count: RU = 5,
+        grid: gU = !1
+      } = UU;
+      return (0, cU.jsx)("div", {
+        className: gU ? "SmpCardGrid" : "SmpList",
         "aria-hidden": "true",
         children: Array.from({
-          length: CD
-        }, ((DD, CD) => (0, SD.jsxs)("div", {
-          className: iD()(cD ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
-          children: [(0, SD.jsx)("div", {
-            className: iD()("SmpSlot", cD ? "SmpSlot-big" : "SmpSlot-normal")
-          }), (0, SD.jsxs)("div", {
+          length: RU
+        }, ((UU, RU) => (0, cU.jsxs)("div", {
+          className: EU()(gU ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
+          children: [(0, cU.jsx)("div", {
+            className: EU()("SmpSlot", gU ? "SmpSlot-big" : "SmpSlot-normal")
+          }), (0, cU.jsxs)("div", {
             className: "SmpRowText",
-            children: [(0, SD.jsx)("b", {}), (0, SD.jsx)("small", {})]
-          }), (0, SD.jsx)("div", {
+            children: [(0, cU.jsx)("b", {}), (0, cU.jsx)("small", {})]
+          }), (0, cU.jsx)("div", {
             className: "SmpSkeletonButton"
           })]
-        }, CD)))
+        }, RU)))
       })
     }
 
-    function RI(DD) {
+    function yt(UU) {
       let {
-        title: CD,
-        children: cD
-      } = DD;
-      return (0, SD.jsxs)("div", {
+        title: RU,
+        children: gU
+      } = UU;
+      return (0, cU.jsxs)("div", {
         className: "SmpEmpty",
-        children: [(0, SD.jsx)("b", {
-          children: CD
-        }), cD && (0, SD.jsx)("small", {
-          children: cD
+        children: [(0, cU.jsx)("b", {
+          children: RU
+        }), gU && (0, cU.jsx)("small", {
+          children: gU
         })]
       })
     }
 
-    function kI(DD) {
+    function kt(UU) {
       let {
-        entry: CD
-      } = DD;
-      return (0, SD.jsx)(RI, {
-        title: (0, SD.jsx)(HI.c, {
-          text: CD.item.customTitle
+        entry: RU
+      } = UU;
+      return (0, cU.jsx)(yt, {
+        title: (0, cU.jsx)(nt.e, {
+          text: RU.item.customTitle
         }),
-        children: (0, SD.jsx)(HI.c, {
-          text: CD.item.description
+        children: (0, cU.jsx)(nt.e, {
+          text: RU.item.description
         })
       })
     }
 
-    function dI(DD) {
-      return (0, SD.jsx)(jI.b, {
-        ...DD,
-        className: iD()("SmpChoice", DD.className),
+    function Ft(UU) {
+      return (0, cU.jsx)(vt.d, {
+        ...UU,
+        className: EU()("SmpChoice", UU.className),
         reselectable: !0
       })
     }
 
-    function YI() {
-      return (0, SD.jsx)("span", {
+    function it() {
+      return (0, cU.jsx)("span", {
         className: "SmpLoader",
-        children: (0, SD.jsx)(nD.e, {})
+        children: (0, cU.jsx)(IU.d, {})
       })
     }
 
-    function WI(DD) {
+    function At(UU) {
       let {
-        value: CD,
-        onChange: cD,
-        min: pD = 1,
-        max: iD,
-        step: fD = 1,
-        label: bD
-      } = DD;
-      const QD = (0, ID.useRef)(null),
-        wD = (0, ID.useRef)(CD);
-      wD.current = CD;
-      const [BD, yD] = (0, ID.useState)(null), MD = DD => Math.max(pD, Math.min(iD, Math.floor(DD))), tD = DD => {
-        const CD = wD.current,
-          ID = "function" === typeof fD ? fD(CD, DD) : fD,
-          pD = MD(CD + ID * DD);
-        wD.current = pD, cD(pD)
+        value: RU,
+        onChange: gU,
+        min: pU = 1,
+        max: EU,
+        step: PU = 1,
+        label: TU
+      } = UU;
+      const qU = (0, tU.useRef)(null),
+        KU = (0, tU.useRef)(RU);
+      KU.current = RU;
+      const [GU, jU] = (0, tU.useState)(null), uU = UU => Math.max(pU, Math.min(EU, Math.floor(UU))), CU = UU => {
+        const RU = KU.current,
+          tU = "function" === typeof PU ? PU(RU, UU) : PU,
+          pU = uU(RU + tU * UU);
+        KU.current = pU, gU(pU)
       };
-      (0, ID.useEffect)((() => {
-        if (null === BD) return;
-        let DD;
-        const CD = () => {
-            yD(null)
+      (0, tU.useEffect)((() => {
+        if (null === GU) return;
+        let UU;
+        const RU = () => {
+            jU(null)
           },
-          cD = setTimeout((() => {
-            DD = setInterval((() => {
-              tD(BD);
-              const DD = wD.current;
-              (BD > 0 ? DD >= iD : DD <= pD) && CD()
+          gU = setTimeout((() => {
+            UU = setInterval((() => {
+              CU(GU);
+              const UU = KU.current;
+              (GU > 0 ? UU >= EU : UU <= pU) && RU()
             }), 70)
           }), 380);
-        return window.addEventListener("pointerup", CD), window.addEventListener("pointercancel", CD), window.addEventListener("blur", CD), () => {
-          clearTimeout(cD), clearInterval(DD), window.removeEventListener("pointerup", CD), window.removeEventListener("pointercancel", CD), window.removeEventListener("blur", CD)
+        return window.addEventListener("pointerup", RU), window.addEventListener("pointercancel", RU), window.addEventListener("blur", RU), () => {
+          clearTimeout(gU), clearInterval(UU), window.removeEventListener("pointerup", RU), window.removeEventListener("pointercancel", RU), window.removeEventListener("blur", RU)
         }
-      }), [BD]), (0, ID.useEffect)((() => {
-        const DD = QD.current;
-        DD && document.activeElement !== DD && DD.value !== String(CD) && (DD.value = String(CD))
-      }), [CD]), (0, ID.useEffect)((() => {
-        const DD = QD.current;
-        if (!DD) return;
-        const CD = () => {
-          DD.value = String(wD.current)
+      }), [GU]), (0, tU.useEffect)((() => {
+        const UU = qU.current;
+        UU && document.activeElement !== UU && UU.value !== String(RU) && (UU.value = String(RU))
+      }), [RU]), (0, tU.useEffect)((() => {
+        const UU = qU.current;
+        if (!UU) return;
+        const RU = () => {
+          UU.value = String(KU.current)
         };
-        return DD.addEventListener("blur", CD), () => {
-          DD.removeEventListener("blur", CD)
+        return UU.addEventListener("blur", RU), () => {
+          UU.removeEventListener("blur", RU)
         }
       }), []);
-      const ZD = DD => (0, SD.jsx)("button", {
+      const hU = UU => (0, cU.jsx)("button", {
         type: "button",
         className: "SmpStepButton",
-        "aria-label": `${DD>0?"More":"Less"} ${bD}`,
-        disabled: DD > 0 ? CD >= iD : CD <= pD,
-        onPointerDown: CD => {
-          0 === CD.button && (tD(DD), yD(DD))
+        "aria-label": `${UU>0?"More":"Less"} ${TU}`,
+        disabled: UU > 0 ? RU >= EU : RU <= pU,
+        onPointerDown: RU => {
+          0 === RU.button && (CU(UU), jU(UU))
         },
-        onKeyDown: CD => {
-          "Enter" !== CD.key && " " !== CD.key || tD(DD)
+        onKeyDown: RU => {
+          "Enter" !== RU.key && " " !== RU.key || CU(UU)
         },
-        onContextMenu: DD => {
-          DD.preventDefault()
+        onContextMenu: UU => {
+          UU.preventDefault()
         },
-        children: DD > 0 ? "+" : "\u2212"
+        children: UU > 0 ? "+" : "\u2212"
       });
-      return (0, SD.jsxs)("div", {
+      return (0, cU.jsxs)("div", {
         className: "SmpStepper",
-        children: [ZD(-1), (0, SD.jsx)(mD.b, {
+        children: [hU(-1), (0, cU.jsx)(mU.d, {
           className: "SmpStepperInput",
-          domRef: QD,
-          defaultValue: String(CD),
-          ariaLabel: bD,
+          domRef: qU,
+          defaultValue: String(RU),
+          ariaLabel: TU,
           type: "text",
           blurOnEnter: !0,
-          onValueChange: DD => {
-            const CD = DD.replace(/[^\d]/g, "");
-            QD.current && CD !== DD && (QD.current.value = CD), "" !== CD && cD(MD(Number(CD)))
+          onValueChange: UU => {
+            const RU = UU.replace(/[^\d]/g, "");
+            qU.current && RU !== UU && (qU.current.value = RU), "" !== RU && gU(uU(Number(RU)))
           }
-        }), ZD(1)]
+        }), hU(1)]
       })
     }
 
-    function sI(DD) {
-      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, DD))) - 1))
+    function zt(UU) {
+      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, UU))) - 1))
     }
-    var EI = cD(9062),
-      eI = cD(1240);
-    const uI = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
-    eI.v, TD.Gc.length;
+    var Mt = gU(9009),
+      Dt = gU(1238);
+    const Lt = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
+    Dt.t, HU.Gc.length;
     new Map;
-    var hI = cD(3083);
+    var Nt = gU(2969);
 
-    function rI(DD, CD) {
-      var cD;
-      return CD && (null === (cD = DD[CD]) || void 0 === cD ? void 0 : cD.smp) || null
+    function lt(UU, RU) {
+      var gU;
+      return RU && (null === (gU = UU[RU]) || void 0 === gU ? void 0 : gU.smp) || null
     }
 
-    function AI(DD, CD) {
-      const cD = [];
-      for (const pD of aI(DD)) {
-        var ID;
-        const iD = DD[pD];
-        (null === (ID = iD.smp) || void 0 === ID ? void 0 : ID.kind) === CD && cD.push({
-          key: pD,
-          item: iD,
-          meta: iD.smp
+    function Ot(UU, RU) {
+      const gU = [];
+      for (const pU of Vt(UU)) {
+        var tU;
+        const EU = UU[pU];
+        (null === (tU = EU.smp) || void 0 === tU ? void 0 : tU.kind) === RU && gU.push({
+          key: pU,
+          item: EU,
+          meta: EU.smp
         })
       }
-      return cD
+      return gU
     }
 
-    function FI(DD, CD) {
-      var cD;
-      return null !== (cD = AI(DD, CD)[0]) && void 0 !== cD ? cD : null
+    function Up(UU, RU) {
+      var gU;
+      return null !== (gU = Ot(UU, RU)[0]) && void 0 !== gU ? gU : null
     }
-    const Dp = "50% 0% 50% 0%",
-      Cp = [{
+    const Rp = "50% 0% 50% 0%",
+      gp = [{
         divisor: 864e5,
         suffix: "d"
       }, {
@@ -2909,746 +2909,746 @@ export const modules = {
         suffix: "s"
       }];
 
-    function cp(DD) {
-      const CD = DD - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
+    function tp(UU) {
+      const RU = UU - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
       for (const {
-          divisor: cD,
-          suffix: ID
+          divisor: gU,
+          suffix: tU
         }
-        of Cp)
-        if (CD >= cD) return `${Math.floor(CD/cD)}${ID}`;
+        of gp)
+        if (RU >= gU) return `${Math.floor(RU/gU)}${tU}`;
       return "<1s"
     }
 
-    function Ip(DD) {
-      const CD = DD.map(mI.d),
-        cD = [];
-      return CD.forEach(((DD, ID) => {
-        const pD = function(DD) {
-            const CD = DD.match(/\d+/);
-            return CD ? Number(CD[0]) : 0
-          }(DD),
-          iD = ID === CD.length - 1;
-        (iD || 1 === pD || 10 === pD || 100 === pD) && cD.push({
-          label: DD,
-          quantity: pD,
-          isAll: iD
+    function pp(UU) {
+      const RU = UU.map(mt.h),
+        gU = [];
+      return RU.forEach(((UU, tU) => {
+        const pU = function(UU) {
+            const RU = UU.match(/\d+/);
+            return RU ? Number(RU[0]) : 0
+          }(UU),
+          EU = tU === RU.length - 1;
+        (EU || 1 === pU || 10 === pU || 100 === pU) && gU.push({
+          label: UU,
+          quantity: pU,
+          isAll: EU
         })
-      })), cD
+      })), gU
     }
-    let pp = null;
+    let Ep = null;
 
-    function ip(DD, CD) {
-      const cD = CD.trim().toLowerCase();
-      if (!cD) return [];
-      const ID = DD => {
-          if (DD === cD) return 0;
-          if (DD.startsWith(cD)) return 1;
-          const CD = DD.indexOf(cD);
-          return -1 === CD ? -1 : 2 + CD
+    function Pp(UU, RU) {
+      const gU = RU.trim().toLowerCase();
+      if (!gU) return [];
+      const tU = UU => {
+          if (UU === gU) return 0;
+          if (UU.startsWith(gU)) return 1;
+          const RU = UU.indexOf(gU);
+          return -1 === RU ? -1 : 2 + RU
         },
-        pD = [];
-      for (const bD of DD) {
-        const DD = [ID(bD.lowerLabel), ID(bD.lowerName)].filter((DD => -1 !== DD));
-        DD.length && pD.push({
-          item: bD,
-          rank: Math.min(...DD)
+        pU = [];
+      for (const TU of UU) {
+        const UU = [tU(TU.lowerLabel), tU(TU.lowerName)].filter((UU => -1 !== UU));
+        UU.length && pU.push({
+          item: TU,
+          rank: Math.min(...UU)
         })
       }
-      if (pD.length > 0) return pD.sort(((DD, CD) => DD.rank - CD.rank)).map((DD => DD.item));
-      const iD = [...cD],
-        fD = DD => {
-          let CD = 0;
-          for (const cD of iD) {
-            if (CD = DD.indexOf(cD, CD), -1 === CD) return !1;
-            CD++
+      if (pU.length > 0) return pU.sort(((UU, RU) => UU.rank - RU.rank)).map((UU => UU.item));
+      const EU = [...gU],
+        PU = UU => {
+          let RU = 0;
+          for (const gU of EU) {
+            if (RU = UU.indexOf(gU, RU), -1 === RU) return !1;
+            RU++
           }
           return !0
         };
-      return DD.filter((DD => fD(DD.lowerLabel) || fD(DD.lowerName)))
+      return UU.filter((UU => PU(UU.lowerLabel) || PU(UU.lowerName)))
     }
 
-    function fp(DD, CD) {
-      var cD;
-      return null !== (cD = null === DD || void 0 === DD ? void 0 : DD[CD]) && void 0 !== cD ? cD : CD
+    function Tp(UU, RU) {
+      var gU;
+      return null !== (gU = null === UU || void 0 === UU ? void 0 : UU[RU]) && void 0 !== gU ? gU : RU
     }
 
-    function bp(DD, CD) {
-      const cD = DD.userInput;
-      return void 0 !== CD && "dropdown" === (null === cD || void 0 === cD ? void 0 : cD.type) && cD.dropdownOptions.map(mI.d).includes(CD) ? CD : function(DD) {
-        const CD = DD.userInput;
-        if ("dropdown" !== (null === CD || void 0 === CD ? void 0 : CD.type) || 0 === CD.dropdownOptions.length) return null;
-        const cD = CD.dropdownOptions.map(mI.d);
-        return CD.initialValue && cD.includes(CD.initialValue) ? CD.initialValue : cD[cD.length - 1]
-      }(DD)
+    function qp(UU, RU) {
+      const gU = UU.userInput;
+      return void 0 !== RU && "dropdown" === (null === gU || void 0 === gU ? void 0 : gU.type) && gU.dropdownOptions.map(mt.h).includes(RU) ? RU : function(UU) {
+        const RU = UU.userInput;
+        if ("dropdown" !== (null === RU || void 0 === RU ? void 0 : RU.type) || 0 === RU.dropdownOptions.length) return null;
+        const gU = RU.dropdownOptions.map(mt.h);
+        return RU.initialValue && gU.includes(RU.initialValue) ? RU.initialValue : gU[gU.length - 1]
+      }(UU)
     }
 
-    function Qp(DD) {
-      return void 0 === DD ? "" : JSON.stringify(DD)
+    function Kp(UU) {
+      return void 0 === UU ? "" : JSON.stringify(UU)
     }
-    const wp = (0, ID.createContext)(null);
+    const cp = (0, tU.createContext)(null);
 
-    function Sp() {
-      return (0, ID.useContext)(wp)
+    function Gp() {
+      return (0, tU.useContext)(cp)
     }
-    var Bp = cD(2587);
-    const yp = (0, ID.memo)((function(DD) {
+    var jp = gU(2489);
+    const Cp = (0, tU.memo)((function(UU) {
         let {
-          name: CD,
-          label: cD,
-          onPick: ID
-        } = DD;
-        return (0, SD.jsxs)("button", {
+          name: RU,
+          label: gU,
+          onPick: tU
+        } = UU;
+        return (0, cU.jsxs)("button", {
           type: "button",
           className: "SmpCatalogueTile",
-          title: cD,
+          title: gU,
           onClick: () => {
-            ID(CD)
+            tU(RU)
           },
-          children: [(0, SD.jsx)(LI, {
-            item: CD,
+          children: [(0, cU.jsx)(Ht, {
+            item: RU,
             size: "big"
-          }), (0, SD.jsx)("span", {
-            children: cD
+          }), (0, cU.jsx)("span", {
+            children: gU
           })]
         })
       })),
-      Mp = (0, ID.memo)((function(DD) {
+      hp = (0, tU.memo)((function(UU) {
         let {
-          items: CD,
-          query: cD,
-          onPick: pD
-        } = DD;
+          items: RU,
+          query: gU,
+          onPick: pU
+        } = UU;
         const {
-          t: iD
-        } = (0, fD.F)(), [bD, QD] = (0, ID.useState)(new Set), wD = (0, ID.useMemo)((() => function(DD) {
-          const CD = new Map;
-          for (const cD of DD) {
-            let DD = CD.get(cD.category);
-            DD || (DD = [], CD.set(cD.category, DD)), DD.push(cD)
+          t: EU
+        } = (0, PU.B)(), [TU, qU] = (0, tU.useState)(new Set), KU = (0, tU.useMemo)((() => function(UU) {
+          const RU = new Map;
+          for (const gU of UU) {
+            let UU = RU.get(gU.category);
+            UU || (UU = [], RU.set(gU.category, UU)), UU.push(gU)
           }
-          return [...uI, "other"].filter((DD => CD.has(DD))).map((DD => ({
-            category: DD,
-            items: CD.get(DD)
+          return [...Lt, "other"].filter((UU => RU.has(UU))).map((UU => ({
+            category: UU,
+            items: RU.get(UU)
           })))
-        }(CD)), [CD]), BD = (0, ID.useMemo)((() => ip(CD, cD).slice(0, 60)), [CD, cD]);
-        return cD.trim() ? 0 === BD.length ? (0, SD.jsx)(RI, {
-          title: iD("smpShop:noItemsFound", {
-            query: cD.trim()
+        }(RU)), [RU]), GU = (0, tU.useMemo)((() => Pp(RU, gU).slice(0, 60)), [RU, gU]);
+        return gU.trim() ? 0 === GU.length ? (0, cU.jsx)(yt, {
+          title: EU("smpShop:noItemsFound", {
+            query: gU.trim()
           }),
-          children: iD("smpShop:tryShorterName")
-        }) : (0, SD.jsx)(Bp.c, {
+          children: EU("smpShop:tryShorterName")
+        }) : (0, cU.jsx)(jp.d, {
           lazyLoadedClassName: "SmpCatalogueGrid",
           observerRoot: "SmpBody",
-          rootMargin: Dp,
-          observerUpdateDeps: [cD],
-          children: BD.map((DD => (0, SD.jsx)(yp, {
-            name: DD.name,
-            label: DD.label,
-            onPick: pD
-          }, DD.name)))
-        }) : (0, SD.jsx)(SD.Fragment, {
-          children: wD.map((DD => {
+          rootMargin: Rp,
+          observerUpdateDeps: [gU],
+          children: GU.map((UU => (0, cU.jsx)(Cp, {
+            name: UU.name,
+            label: UU.label,
+            onPick: pU
+          }, UU.name)))
+        }) : (0, cU.jsx)(cU.Fragment, {
+          children: KU.map((UU => {
             let {
-              category: CD,
-              items: cD
-            } = DD;
-            const ID = bD.has(CD) || cD.length <= 48,
-              fD = ID ? cD : cD.slice(0, 48);
-            return (0, SD.jsxs)("section", {
+              category: RU,
+              items: gU
+            } = UU;
+            const tU = TU.has(RU) || gU.length <= 48,
+              PU = tU ? gU : gU.slice(0, 48);
+            return (0, cU.jsxs)("section", {
               className: "SmpCatalogueSection",
-              children: [(0, SD.jsxs)("h4", {
-                children: [iD("other" === CD ? "smpShop:otherItems" : `creativeInventory:${CD}`), !ID && (0, SD.jsx)("button", {
+              children: [(0, cU.jsxs)("h4", {
+                children: [EU("other" === RU ? "smpShop:otherItems" : `creativeInventory:${RU}`), !tU && (0, cU.jsx)("button", {
                   type: "button",
                   className: "SmpLink",
                   onClick: () => {
-                    QD(new Set([...bD, CD]))
+                    qU(new Set([...TU, RU]))
                   },
-                  children: iD("smpShop:showAll", {
-                    count: cD.length
+                  children: EU("smpShop:showAll", {
+                    count: gU.length
                   })
                 })]
-              }), (0, SD.jsx)(Bp.c, {
+              }), (0, cU.jsx)(jp.d, {
                 lazyLoadedClassName: "SmpCatalogueGrid",
                 observerRoot: "SmpBody",
-                rootMargin: Dp,
-                observerUpdateDeps: [ID],
-                children: fD.map((DD => (0, SD.jsx)(yp, {
-                  name: DD.name,
-                  label: DD.label,
-                  onPick: pD
-                }, DD.name)))
+                rootMargin: Rp,
+                observerUpdateDeps: [tU],
+                children: PU.map((UU => (0, cU.jsx)(Cp, {
+                  name: UU.name,
+                  label: UU.label,
+                  onPick: pU
+                }, UU.name)))
               })]
-            }, CD)
+            }, RU)
           }))
         })
       }));
 
-    function tp(DD, CD) {
+    function Qp(UU, RU) {
       const {
-        searched: cD,
-        shown: pD,
-        searchFor: iD,
-        loading: fD
-      } = function(DD, CD) {
-        var cD;
-        const pD = Sp(),
-          [iD, fD] = (0, ID.useState)(void 0),
-          bD = (0, ID.useRef)(void 0),
-          QD = (0, ID.useRef)(0),
-          wD = (0, ID.useRef)(void 0),
-          SD = null !== (cD = null === DD || void 0 === DD ? void 0 : DD.meta.item) && void 0 !== cD ? cD : null,
-          BD = !!DD && pD.isPending(DD.key);
-        (0, ID.useEffect)((() => {
-          if (!DD || BD || !CD || void 0 === iD || iD === SD) return;
-          const cD = iD === bD.current && pD.gaveUpAt(DD.key) > QD.current && wD.current !== iD;
-          (iD !== bD.current || cD) && pD.act(DD.key, null !== iD && void 0 !== iD ? iD : "*", cD) && (cD && (wD.current = iD), bD.current = iD, QD.current = Date.now())
-        }), [DD, BD, CD, iD, SD, pD]);
-        const yD = (0, ID.useCallback)((DD => {
-            bD.current = void 0, wD.current = void 0, fD(DD)
+        searched: gU,
+        shown: pU,
+        searchFor: EU,
+        loading: PU
+      } = function(UU, RU) {
+        var gU;
+        const pU = Gp(),
+          [EU, PU] = (0, tU.useState)(void 0),
+          TU = (0, tU.useRef)(void 0),
+          qU = (0, tU.useRef)(0),
+          KU = (0, tU.useRef)(void 0),
+          cU = null !== (gU = null === UU || void 0 === UU ? void 0 : UU.meta.item) && void 0 !== gU ? gU : null,
+          GU = !!UU && pU.isPending(UU.key);
+        (0, tU.useEffect)((() => {
+          if (!UU || GU || !RU || void 0 === EU || EU === cU) return;
+          const gU = EU === TU.current && pU.gaveUpAt(UU.key) > qU.current && KU.current !== EU;
+          (EU !== TU.current || gU) && pU.act(UU.key, null !== EU && void 0 !== EU ? EU : "*", gU) && (gU && (KU.current = EU), TU.current = EU, qU.current = Date.now())
+        }), [UU, GU, RU, EU, cU, pU]);
+        const jU = (0, tU.useCallback)((UU => {
+            TU.current = void 0, KU.current = void 0, PU(UU)
           }), []),
-          MD = void 0 !== iD && iD !== SD && (BD || bD.current !== iD);
+          uU = void 0 !== EU && EU !== cU && (GU || TU.current !== EU);
         return {
-          searched: SD,
-          shown: MD ? iD : SD,
-          searchFor: yD,
-          loading: MD || BD || null !== SD && !CD
+          searched: cU,
+          shown: uU ? EU : cU,
+          searchFor: jU,
+          loading: uU || GU || null !== cU && !RU
         }
-      }(DD, CD), bD = (0, ID.useMemo)((() => function() {
-        var DD;
-        let CD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-          cD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-          ID = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const pD = `${(0,hI.l)()}\x1f${CD.join("\x1e")}\x1f${cD.join("\x1e")}\x1f${JSON.stringify(ID)}`;
-        if ((null === (DD = pp) || void 0 === DD ? void 0 : DD.key) === pD) return pp.items;
-        const iD = new Set(cD),
-          fD = new Set,
-          bD = [],
-          QD = (DD, CD) => {
-            var cD;
-            if (!DD || fD.has(DD) || iD.has(DD)) return;
-            fD.add(DD);
-            const pD = null !== (cD = ID[DD]) && void 0 !== cD ? cD : DD;
-            bD.push({
-              name: DD,
-              label: pD,
-              lowerLabel: pD.toLowerCase(),
-              lowerName: DD.toLowerCase(),
-              category: CD
+      }(UU, RU), TU = (0, tU.useMemo)((() => function() {
+        var UU;
+        let RU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+          gU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+          tU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const pU = `${(0,Nt.g)()}\x1f${RU.join("\x1e")}\x1f${gU.join("\x1e")}\x1f${JSON.stringify(tU)}`;
+        if ((null === (UU = Ep) || void 0 === UU ? void 0 : UU.key) === pU) return Ep.items;
+        const EU = new Set(gU),
+          PU = new Set,
+          TU = [],
+          qU = (UU, RU) => {
+            var gU;
+            if (!UU || PU.has(UU) || EU.has(UU)) return;
+            PU.add(UU);
+            const pU = null !== (gU = tU[UU]) && void 0 !== gU ? gU : UU;
+            TU.push({
+              name: UU,
+              label: pU,
+              lowerLabel: pU.toLowerCase(),
+              lowerName: UU.toLowerCase(),
+              category: RU
             })
           };
-        for (const SD of (0, EI.creativeItemIds)()) {
-          var wD;
-          (0, EI.itemIsDisabled)(SD, !0, !0, !1) || (0, EI.showOnlyInCreativeSearch)(SD) || QD((0, hI.h)(SD), null !== (wD = (0, EI.creativeCategoryOf)(SD)) && void 0 !== wD ? wD : "other")
+        for (const cU of (0, Mt.creativeItemIds)()) {
+          var KU;
+          (0, Mt.itemIsDisabled)(cU, !0, !0, !1) || (0, Mt.showOnlyInCreativeSearch)(cU) || qU((0, Nt.f)(cU), null !== (KU = (0, Mt.creativeCategoryOf)(cU)) && void 0 !== KU ? KU : "other")
         }
-        for (const SD of CD) QD(SD, "other");
-        return pp = {
-          key: pD,
-          items: bD
-        }, bD
-      }(null === DD || void 0 === DD ? void 0 : DD.meta.extra, null === DD || void 0 === DD ? void 0 : DD.meta.excluded, null === DD || void 0 === DD ? void 0 : DD.meta.names)), [null === DD || void 0 === DD ? void 0 : DD.meta.extra, null === DD || void 0 === DD ? void 0 : DD.meta.excluded, null === DD || void 0 === DD ? void 0 : DD.meta.names]), [QD, wD] = (0, ID.useState)(""), [SD, BD] = (0, ID.useState)(0), [yD, MD] = (0, ID.useState)("recent"), tD = (0, ID.useCallback)((DD => {
-        wD(""), BD((DD => DD + 1)), iD(DD)
-      }), [iD]), ZD = "browse" === yD || "" !== QD.trim();
+        for (const cU of RU) qU(cU, "other");
+        return Ep = {
+          key: pU,
+          items: TU
+        }, TU
+      }(null === UU || void 0 === UU ? void 0 : UU.meta.extra, null === UU || void 0 === UU ? void 0 : UU.meta.excluded, null === UU || void 0 === UU ? void 0 : UU.meta.names)), [null === UU || void 0 === UU ? void 0 : UU.meta.extra, null === UU || void 0 === UU ? void 0 : UU.meta.excluded, null === UU || void 0 === UU ? void 0 : UU.meta.names]), [qU, KU] = (0, tU.useState)(""), [cU, GU] = (0, tU.useState)(0), [jU, uU] = (0, tU.useState)("recent"), CU = (0, tU.useCallback)((UU => {
+        KU(""), GU((UU => UU + 1)), EU(UU)
+      }), [EU]), hU = "browse" === jU || "" !== qU.trim();
       return {
-        searched: cD,
-        shown: pD,
-        searchFor: iD,
-        loading: fD,
-        catalogue: bD,
-        names: null === DD || void 0 === DD ? void 0 : DD.meta.names,
-        query: QD,
-        setQuery: wD,
-        searchBoxKey: SD,
-        pickItem: tD,
-        setView: MD,
-        browsing: ZD
+        searched: gU,
+        shown: pU,
+        searchFor: EU,
+        loading: PU,
+        catalogue: TU,
+        names: null === UU || void 0 === UU ? void 0 : UU.meta.names,
+        query: qU,
+        setQuery: KU,
+        searchBoxKey: cU,
+        pickItem: CU,
+        setView: uU,
+        browsing: hU
       }
     }
 
-    function Zp(DD) {
+    function ep(UU) {
       let {
-        browser: CD,
-        children: cD
-      } = DD;
+        browser: RU,
+        children: gU
+      } = UU;
       const {
-        t: ID
-      } = (0, fD.F)(), pD = Sp();
-      return (0, SD.jsxs)("div", {
+        t: tU
+      } = (0, PU.B)(), pU = Gp();
+      return (0, cU.jsxs)("div", {
         className: "SmpTopBar",
-        children: [(0, SD.jsx)("div", {
+        children: [(0, cU.jsx)("div", {
           className: "SmpSearch",
-          children: (0, SD.jsx)(mD.b, {
+          children: (0, cU.jsx)(mU.d, {
             className: "SmpSearchInput",
-            placeholderText: ID("smpShop:searchPlaceholder"),
-            defaultValue: CD.query,
-            onValueChange: DD => {
-              CD.setQuery(DD), CD.searched && DD.trim() && CD.searchFor(null)
+            placeholderText: tU("smpShop:searchPlaceholder"),
+            defaultValue: RU.query,
+            onValueChange: UU => {
+              RU.setQuery(UU), RU.searched && UU.trim() && RU.searchFor(null)
             },
             blurOnEnter: !0,
             onEnter: () => {
-              const DD = ip(CD.catalogue, CD.query)[0];
-              DD ? CD.pickItem(DD.name) : CD.query.trim() && pD.notify(ID("smpShop:noItemsFound", {
-                query: CD.query.trim()
+              const UU = Pp(RU.catalogue, RU.query)[0];
+              UU ? RU.pickItem(UU.name) : RU.query.trim() && pU.notify(tU("smpShop:noItemsFound", {
+                query: RU.query.trim()
               }))
             }
-          }, CD.searchBoxKey)
-        }), cD]
+          }, RU.searchBoxKey)
+        }), gU]
       })
     }
 
-    function op(DD) {
+    function Wp(UU) {
       let {
-        browser: CD,
-        recentLabel: cD,
-        children: ID
-      } = DD;
+        browser: RU,
+        recentLabel: gU,
+        children: tU
+      } = UU;
       const {
-        t: pD
-      } = (0, fD.F)();
-      return (0, SD.jsxs)("div", {
+        t: pU
+      } = (0, PU.B)();
+      return (0, cU.jsxs)("div", {
         className: "SmpViewBar",
-        children: [(0, SD.jsx)(dI, {
+        children: [(0, cU.jsx)(Ft, {
           options: [{
             value: "recent",
-            label: cD
+            label: gU
           }, {
             value: "browse",
-            label: pD("smpShop:browseItems")
+            label: pU("smpShop:browseItems")
           }],
-          value: CD.browsing ? "browse" : "recent",
-          onChange: CD.setView,
-          ariaLabel: pD("smpShop:show")
-        }), !CD.browsing && ID]
+          value: RU.browsing ? "browse" : "recent",
+          onChange: RU.setView,
+          ariaLabel: pU("smpShop:show")
+        }), !RU.browsing && tU]
       })
     }
 
-    function vp(DD) {
+    function fp(UU) {
       let {
-        item: CD,
-        names: cD,
-        summary: ID,
-        onBack: pD,
-        children: iD
-      } = DD;
+        item: RU,
+        names: gU,
+        summary: tU,
+        onBack: pU,
+        children: EU
+      } = UU;
       const {
-        t: bD
-      } = (0, fD.F)();
-      return (0, SD.jsxs)("div", {
+        t: TU
+      } = (0, PU.B)();
+      return (0, cU.jsxs)("div", {
         className: "SmpItemHeader",
-        children: [(0, SD.jsx)(oD.e, {
+        children: [(0, cU.jsx)(QU.d, {
           className: "SmpBackButton",
-          onClick: pD,
-          children: bD("general:back")
-        }), (0, SD.jsx)(LI, {
-          item: CD,
+          onClick: pU,
+          children: TU("general:back")
+        }), (0, cU.jsx)(Ht, {
+          item: RU,
           size: "big"
-        }), (0, SD.jsxs)("div", {
+        }), (0, cU.jsxs)("div", {
           className: "SmpItemHeaderText",
-          children: [(0, SD.jsx)("b", {
-            children: fp(cD, CD)
-          }), ID && (0, SD.jsx)("small", {
-            children: ID
+          children: [(0, cU.jsx)("b", {
+            children: Tp(gU, RU)
+          }), tU && (0, cU.jsx)("small", {
+            children: tU
           })]
-        }), iD]
+        }), EU]
       })
     }
 
-    function Np(DD) {
+    function xp(UU) {
       let {
-        browser: CD,
-        className: cD,
-        action: ID,
-        above: pD,
-        list: fD,
-        summary: bD,
-        recentLabel: QD,
-        listControls: wD,
-        onBack: BD
-      } = DD;
-      return (0, SD.jsxs)("div", {
-        className: iD()("SmpScreen", cD),
-        children: [(0, SD.jsx)(Zp, {
-          browser: CD,
-          children: ID
-        }), CD.shown && (0, SD.jsx)(vp, {
-          item: CD.shown,
-          names: CD.names,
-          summary: !CD.loading && bD,
+        browser: RU,
+        className: gU,
+        action: tU,
+        above: pU,
+        list: PU,
+        summary: TU,
+        recentLabel: qU,
+        listControls: KU,
+        onBack: GU
+      } = UU;
+      return (0, cU.jsxs)("div", {
+        className: EU()("SmpScreen", gU),
+        children: [(0, cU.jsx)(ep, {
+          browser: RU,
+          children: tU
+        }), RU.shown && (0, cU.jsx)(fp, {
+          item: RU.shown,
+          names: RU.names,
+          summary: !RU.loading && TU,
           onBack: () => {
-            null === BD || void 0 === BD || BD(), CD.searchFor(null)
+            null === GU || void 0 === GU || GU(), RU.searchFor(null)
           },
-          children: wD
-        }), pD, CD.shown ? fD : (0, SD.jsxs)(SD.Fragment, {
-          children: [(0, SD.jsx)(op, {
-            browser: CD,
-            recentLabel: QD,
-            children: wD
-          }), CD.browsing ? (0, SD.jsx)(Mp, {
-            items: CD.catalogue,
-            query: CD.query,
-            onPick: CD.pickItem
-          }) : fD]
+          children: KU
+        }), pU, RU.shown ? PU : (0, cU.jsxs)(cU.Fragment, {
+          children: [(0, cU.jsx)(Wp, {
+            browser: RU,
+            recentLabel: qU,
+            children: KU
+          }), RU.browsing ? (0, cU.jsx)(hp, {
+            items: RU.catalogue,
+            query: RU.query,
+            onPick: RU.pickItem
+          }) : PU]
         })]
       })
     }
 
-    function gp(DD, CD) {
-      const cD = DD.map((DD => {
+    function mp(UU, RU) {
+      const gU = UU.map((UU => {
         let {
-          meta: CD
-        } = DD;
-        return CD.pricePerItem
+          meta: RU
+        } = UU;
+        return RU.pricePerItem
       }));
-      return "min" === CD ? Math.min(...cD) : Math.max(...cD)
+      return "min" === RU ? Math.min(...gU) : Math.max(...gU)
     }
-    var Xp = cD(6320);
-    const mp = (0, ID.memo)((function(DD) {
-      var CD;
+    var Ip = gU(6239);
+    const Jp = (0, tU.memo)((function(UU) {
+      var RU;
       const {
-        t: cD
-      } = (0, fD.F)(), ID = null === DD.seller, pD = DD.quantity * DD.pricePerItem;
-      return (0, SD.jsxs)("div", {
-        className: DD.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
-        children: [(0, SD.jsx)(LI, {
-          item: DD.item,
-          amount: DD.quantity,
-          size: DD.grid ? "big" : "normal",
-          tier: DD.tier
-        }), (0, SD.jsxs)("div", {
+        t: gU
+      } = (0, PU.B)(), tU = null === UU.seller, pU = UU.quantity * UU.pricePerItem;
+      return (0, cU.jsxs)("div", {
+        className: UU.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
+        children: [(0, cU.jsx)(Ht, {
+          item: UU.item,
+          amount: UU.quantity,
+          size: UU.grid ? "big" : "normal",
+          tier: UU.tier
+        }), (0, cU.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, SD.jsx)("b", {
-            children: (0, SD.jsx)(HI.c, {
-              text: null !== (CD = DD.title) && void 0 !== CD ? CD : `${DD.quantity}x ${DD.item}`
+          children: [(0, cU.jsx)("b", {
+            children: (0, cU.jsx)(nt.e, {
+              text: null !== (RU = UU.title) && void 0 !== RU ? RU : `${UU.quantity}x ${UU.item}`
             })
-          }), (0, SD.jsxs)("small", {
+          }), (0, cU.jsxs)("small", {
             className: "SmpListingFacts",
-            children: [(0, SD.jsx)("span", {
-              children: ID ? cD("smpShop:you") : (0, SD.jsx)(HI.c, {
+            children: [(0, cU.jsx)("span", {
+              children: tU ? gU("smpShop:you") : (0, cU.jsx)(nt.e, {
                 text: [{
-                  entityName: DD.seller
+                  entityName: UU.seller
                 }]
               })
-            }), (0, SD.jsx)("span", {
-              children: cD("smpShop:timeLeft", {
-                time: cp(DD.expiresAt)
+            }), (0, cU.jsx)("span", {
+              children: gU("smpShop:timeLeft", {
+                time: tp(UU.expiresAt)
               })
             })]
           })]
-        }), (0, SD.jsxs)("div", {
+        }), (0, cU.jsxs)("div", {
           className: "SmpRowPrice",
-          children: [(0, SD.jsx)(TI, {
-            amount: DD.pricePerItem
-          }), (0, SD.jsx)("small", {
-            children: cD("smpShop:each")
+          children: [(0, cU.jsx)(St, {
+            amount: UU.pricePerItem
+          }), (0, cU.jsx)("small", {
+            children: gU("smpShop:each")
           })]
-        }), (0, SD.jsx)(oD.i, {
+        }), (0, cU.jsx)(QU.e, {
           className: "SmpBuyButton",
-          disabled: ID || !DD.canAfford && !DD.busy,
-          loading: DD.busy,
+          disabled: tU || !UU.canAfford && !UU.busy,
+          loading: UU.busy,
           onClick: () => {
-            DD.onBuy(DD.itemKey)
+            UU.onBuy(UU.itemKey)
           },
-          children: ID ? cD("smpShop:yours") : (0, SD.jsx)(TI, {
-            amount: pD
+          children: tU ? gU("smpShop:yours") : (0, cU.jsx)(St, {
+            amount: pU
           })
         })]
       })
     }));
 
-    function np(DD) {
+    function wp(UU) {
       let {
-        view: CD,
-        onChange: cD
-      } = DD;
+        view: RU,
+        onChange: gU
+      } = UU;
       const {
-        t: ID
-      } = (0, fD.F)();
-      return (0, SD.jsx)(jI.b, {
+        t: tU
+      } = (0, PU.B)();
+      return (0, cU.jsx)(vt.d, {
         className: "SmpChoice SmpViewToggle",
-        ariaLabel: ID("smpShop:layout"),
+        ariaLabel: tU("smpShop:layout"),
         options: [{
           value: "list",
-          label: (0, SD.jsx)(bD.c, {
+          label: (0, cU.jsx)(TU.c, {
             name: "list"
           }),
-          ariaLabel: ID("smpShop:listView")
+          ariaLabel: tU("smpShop:listView")
         }, {
           value: "grid",
-          label: (0, SD.jsx)(bD.c, {
+          label: (0, cU.jsx)(TU.c, {
             name: "grid-2"
           }),
-          ariaLabel: ID("smpShop:gridView")
+          ariaLabel: tU("smpShop:gridView")
         }],
-        value: CD,
-        onChange: cD
+        value: RU,
+        onChange: gU
       })
     }
 
-    function Op(DD) {
+    function np(UU) {
       let {
-        entries: CD,
-        view: cD
-      } = DD;
+        entries: RU,
+        view: gU
+      } = UU;
       const {
-        t: ID
-      } = (0, fD.F)(), pD = Sp(), iD = "grid" === cD;
-      return (0, SD.jsxs)(SD.Fragment, {
-        children: [!iD && (0, SD.jsxs)("div", {
+        t: tU
+      } = (0, PU.B)(), pU = Gp(), EU = "grid" === gU;
+      return (0, cU.jsxs)(cU.Fragment, {
+        children: [!EU && (0, cU.jsxs)("div", {
           className: "SmpColumns",
           "aria-hidden": "true",
-          children: [(0, SD.jsx)("span", {}), (0, SD.jsx)("span", {
-            children: ID("smpShop:columnItem")
-          }), (0, SD.jsx)("span", {
-            children: ID("smpShop:columnPriceEach")
-          }), (0, SD.jsx)("span", {
-            children: ID("smpShop:columnTotal")
+          children: [(0, cU.jsx)("span", {}), (0, cU.jsx)("span", {
+            children: tU("smpShop:columnItem")
+          }), (0, cU.jsx)("span", {
+            children: tU("smpShop:columnPriceEach")
+          }), (0, cU.jsx)("span", {
+            children: tU("smpShop:columnTotal")
           })]
-        }), (0, SD.jsx)(Bp.c, {
-          lazyLoadedClassName: iD ? "SmpCardGrid" : "SmpList",
+        }), (0, cU.jsx)(jp.d, {
+          lazyLoadedClassName: EU ? "SmpCardGrid" : "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: Dp,
-          observerUpdateDeps: [CD.length],
-          children: CD.map((DD => {
-            var CD, cD;
+          rootMargin: Rp,
+          observerUpdateDeps: [RU.length],
+          children: RU.map((UU => {
+            var RU, gU;
             let {
-              key: ID,
-              item: fD,
-              meta: bD
-            } = DD;
-            const QD = bD.quantity * bD.pricePerItem;
-            return (0, SD.jsx)(mp, {
-              itemKey: ID,
-              item: bD.item,
-              title: fD.customTitle,
-              quantity: bD.quantity,
-              pricePerItem: bD.pricePerItem,
-              seller: bD.seller,
-              expiresAt: bD.expiresAt,
-              tier: null !== (CD = null === (cD = fD.enchant) || void 0 === cD ? void 0 : cD.tier) && void 0 !== CD ? CD : null,
-              busy: pD.isPending(ID) || null !== bD.seller && !1 === fD.canBuy,
-              canAfford: pD.canAfford(fD, QD),
-              grid: iD,
-              onBuy: pD.act
-            }, ID)
+              key: tU,
+              item: PU,
+              meta: TU
+            } = UU;
+            const qU = TU.quantity * TU.pricePerItem;
+            return (0, cU.jsx)(Jp, {
+              itemKey: tU,
+              item: TU.item,
+              title: PU.customTitle,
+              quantity: TU.quantity,
+              pricePerItem: TU.pricePerItem,
+              seller: TU.seller,
+              expiresAt: TU.expiresAt,
+              tier: null !== (RU = null === (gU = PU.enchant) || void 0 === gU ? void 0 : gU.tier) && void 0 !== RU ? RU : null,
+              busy: pU.isPending(tU) || null !== TU.seller && !1 === PU.canBuy,
+              canAfford: pU.canAfford(PU, qU),
+              grid: EU,
+              onBuy: pU.act
+            }, tU)
           }))
-        }, cD)]
+        }, gU)]
       })
     }
-    const Pp = [1, 10, 100],
-      Hp = [1, 10, 100, 999];
+    const bp = [1, 10, 100],
+      op = [1, 10, 100, 999];
 
-    function Up(DD) {
-      var CD, cD, pD, QD, wD, BD, yD, MD, tD, ZD;
+    function Zp(UU) {
+      var RU, gU, pU, qU, KU, GU, jU, uU, CU, hU;
       const {
-        t: vD
-      } = (0, fD.F)(), ND = Sp(), {
-        creator: gD,
-        mode: XD
-      } = DD, [nD, OD] = (0, ID.useState)(null !== (CD = null === gD || void 0 === gD ? void 0 : gD.meta.item) && void 0 !== CD ? CD : null), [PD, HD] = (0, ID.useState)(1), [UD, xD] = (0, ID.useState)(0), [qD, JD] = (0, ID.useState)(""), [KD, aD] = (0, ID.useState)(0), VD = (0, ID.useRef)(nD), zD = (0, ID.useRef)(!1), [jD, lD] = (0, ID.useState)(!1), LD = null !== (cD = null === gD || void 0 === gD ? void 0 : gD.meta.item) && void 0 !== cD ? cD : null, TD = null !== (pD = null === gD || void 0 === gD ? void 0 : gD.meta.Lb) && void 0 !== pD ? pD : 0;
-      (0, ID.useEffect)((() => {
-        DD.searching || null === LD || LD === VD.current || (VD.current = LD, zD.current = !1, OD(LD), xD(0), HD("list" === XD ? Math.max(1, TD) : 1))
-      }), [LD, DD.searching]);
-      const GD = !!gD && !!nD && gD.meta.item === nD,
-        RD = GD ? gD.meta.Lb : null !== (QD = null === (wD = DD.inventory) || void 0 === wD || null === (BD = wD.find((DD => DD.item === nD))) || void 0 === BD ? void 0 : BD.quantity) && void 0 !== QD ? QD : 0,
-        kD = "list" === XD ? Math.max(1, RD) : 45954,
-        dD = null !== (yD = DD.prices[0]) && void 0 !== yD ? yD : null,
-        YD = DD.prices.length ? Math.round(DD.prices.reduce(((DD, CD) => DD + CD), 0) / DD.prices.length) : null,
-        WD = null === (MD = DD.inventory) || void 0 === MD || null === (tD = MD.find((DD => DD.item === nD))) || void 0 === tD ? void 0 : tD.sellPrice;
-      (0, ID.useEffect)((() => {
-        var DD;
-        GD && (HD((DD => "list" === XD ? Math.min(Math.max(1, DD), Math.max(1, RD)) : DD)), zD.current || xD(null !== (DD = null !== dD && void 0 !== dD ? dD : YD) && void 0 !== DD ? DD : Math.max(1, null !== WD && void 0 !== WD ? WD : 1)))
-      }), [GD, RD, nD, dD, YD]);
-      const sD = DD => {
-          zD.current = !0, xD(DD)
+        t: eU
+      } = (0, PU.B)(), WU = Gp(), {
+        creator: fU,
+        mode: xU
+      } = UU, [IU, JU] = (0, tU.useState)(null !== (RU = null === fU || void 0 === fU ? void 0 : fU.meta.item) && void 0 !== RU ? RU : null), [wU, nU] = (0, tU.useState)(1), [bU, oU] = (0, tU.useState)(0), [ZU, aU] = (0, tU.useState)(""), [YU, BU] = (0, tU.useState)(0), VU = (0, tU.useRef)(IU), rU = (0, tU.useRef)(!1), [XU, vU] = (0, tU.useState)(!1), dU = null !== (gU = null === fU || void 0 === fU ? void 0 : fU.meta.item) && void 0 !== gU ? gU : null, HU = null !== (pU = null === fU || void 0 === fU ? void 0 : fU.meta.WT) && void 0 !== pU ? pU : 0;
+      (0, tU.useEffect)((() => {
+        UU.searching || null === dU || dU === VU.current || (VU.current = dU, rU.current = !1, JU(dU), oU(0), nU("list" === xU ? Math.max(1, HU) : 1))
+      }), [dU, UU.searching]);
+      const SU = !!fU && !!IU && fU.meta.item === IU,
+        sU = SU ? fU.meta.WT : null !== (qU = null === (KU = UU.inventory) || void 0 === KU || null === (GU = KU.find((UU => UU.item === IU))) || void 0 === GU ? void 0 : GU.quantity) && void 0 !== qU ? qU : 0,
+        yU = "list" === xU ? Math.max(1, sU) : 45954,
+        kU = null !== (jU = UU.prices[0]) && void 0 !== jU ? jU : null,
+        FU = UU.prices.length ? Math.round(UU.prices.reduce(((UU, RU) => UU + RU), 0) / UU.prices.length) : null,
+        iU = null === (uU = UU.inventory) || void 0 === uU || null === (CU = uU.find((UU => UU.item === IU))) || void 0 === CU ? void 0 : CU.sellPrice;
+      (0, tU.useEffect)((() => {
+        var UU;
+        SU && (nU((UU => "list" === xU ? Math.min(Math.max(1, UU), Math.max(1, sU)) : UU)), rU.current || oU(null !== (UU = null !== kU && void 0 !== kU ? kU : FU) && void 0 !== UU ? UU : Math.max(1, null !== iU && void 0 !== iU ? iU : 1)))
+      }), [SU, sU, IU, kU, FU]);
+      const AU = UU => {
+          rU.current = !0, oU(UU)
         },
-        ED = CD => {
-          var cD, ID, pD;
-          VD.current = CD, zD.current = !1, lD(!1), JD(""), aD((DD => DD + 1)), OD(CD), xD(0), HD("list" === XD && null !== (cD = null === (ID = DD.inventory) || void 0 === ID || null === (pD = ID.find((DD => DD.item === CD))) || void 0 === pD ? void 0 : pD.quantity) && void 0 !== cD ? cD : 1), (null === gD || void 0 === gD ? void 0 : gD.meta.item) !== CD && DD.onPickItem(CD)
+        zU = RU => {
+          var gU, tU, pU;
+          VU.current = RU, rU.current = !1, vU(!1), aU(""), BU((UU => UU + 1)), JU(RU), oU(0), nU("list" === xU && null !== (gU = null === (tU = UU.inventory) || void 0 === tU || null === (pU = tU.find((UU => UU.item === RU))) || void 0 === pU ? void 0 : pU.quantity) && void 0 !== gU ? gU : 1), (null === fU || void 0 === fU ? void 0 : fU.meta.item) !== RU && UU.onPickItem(RU)
         },
-        eD = PD * UD,
-        uD = "list" === XD && null !== gD && void 0 !== gD && gD.meta.fee ? function(DD, CD) {
-          const cD = Math.max(0, CD - DD.taxFreeAllowance);
-          return Math.ceil(Math.round(cD * DD.rate * 1e6) / 1e6)
-        }(gD.meta.fee, eD) : 0,
-        hD = !!gD && ND.isPending(gD.key),
-        rD = GD && !DD.searching && PD >= 1 && UD >= 1 && ("order" === XD || RD >= PD) && !hD,
-        AD = !!nD && !GD && !DD.searching && PD >= 1 && UD >= 1,
-        FD = () => {
-          rD ? ND.act(gD.key, `${PD}|${UD}`) : AD && (DD.onPickItem(nD), lD(!0))
+        MU = wU * bU,
+        DU = "list" === xU && null !== fU && void 0 !== fU && fU.meta.fee ? function(UU, RU) {
+          const gU = Math.max(0, RU - UU.taxFreeAllowance);
+          return Math.ceil(Math.round(gU * UU.rate * 1e6) / 1e6)
+        }(fU.meta.fee, MU) : 0,
+        LU = !!fU && WU.isPending(fU.key),
+        NU = SU && !UU.searching && wU >= 1 && bU >= 1 && ("order" === xU || sU >= wU) && !LU,
+        lU = !!IU && !SU && !UU.searching && wU >= 1 && bU >= 1,
+        OU = () => {
+          NU ? WU.act(fU.key, `${wU}|${bU}`) : lU && (UU.onPickItem(IU), vU(!0))
         };
-      (0, ID.useEffect)((() => {
-        jD && GD && !DD.searching && (lD(!1), FD())
-      }), [jD, GD, DD.searching]);
-      const DC = !!nD && !GD && (DD.searching || jD),
-        CC = nD ? fp(DD.names, nD) : "",
-        cC = (0, ID.useMemo)((() => ip(DD.catalogue, qD).slice(0, 8)), [DD.catalogue, qD]),
-        IC = ("list" === XD ? Pp.filter((DD => DD < RD)) : Hp).map((DD => ({
-          value: DD,
-          label: String(DD)
+      (0, tU.useEffect)((() => {
+        XU && SU && !UU.searching && (vU(!1), OU())
+      }), [XU, SU, UU.searching]);
+      const UR = !!IU && !SU && (UU.searching || XU),
+        RR = IU ? Tp(UU.names, IU) : "",
+        gR = (0, tU.useMemo)((() => Pp(UU.catalogue, ZU).slice(0, 8)), [UU.catalogue, ZU]),
+        tR = ("list" === xU ? bp.filter((UU => UU < sU)) : op).map((UU => ({
+          value: UU,
+          label: String(UU)
         })));
-      "list" === XD && RD > 0 && IC.push({
-        value: RD,
-        label: vD("smpShop:all", {
-          count: RD
+      "list" === xU && sU > 0 && tR.push({
+        value: sU,
+        label: eU("smpShop:all", {
+          count: sU
         })
       });
-      const pC = [];
-      return null !== dD && (dD > 1 && pC.push({
-        value: dD - 1,
-        label: vD("smpShop:undercut", {
-          price: zI(dD - 1)
+      const pR = [];
+      return null !== kU && (kU > 1 && pR.push({
+        value: kU - 1,
+        label: eU("smpShop:undercut", {
+          price: Xt(kU - 1)
         })
-      }), pC.push({
-        value: dD,
-        label: vD("smpShop:lowest", {
-          price: zI(dD)
+      }), pR.push({
+        value: kU,
+        label: eU("smpShop:lowest", {
+          price: Xt(kU)
         })
-      })), null !== YD && YD !== dD && pC.push({
-        value: YD,
-        label: vD("smpShop:average", {
-          price: zI(YD)
+      })), null !== FU && FU !== kU && pR.push({
+        value: FU,
+        label: eU("smpShop:average", {
+          price: Xt(FU)
         })
-      }), (0, SD.jsxs)("div", {
+      }), (0, cU.jsxs)("div", {
         className: "SmpTradeForm",
-        children: [(0, SD.jsxs)("div", {
+        children: [(0, cU.jsxs)("div", {
           className: "SmpTradeFormHead",
-          children: [(0, SD.jsx)("b", {
-            children: vD("list" === XD ? "smpShop:sellOnMarket" : "smpShop:createOrder")
-          }), (0, SD.jsx)("button", {
+          children: [(0, cU.jsx)("b", {
+            children: eU("list" === xU ? "smpShop:sellOnMarket" : "smpShop:createOrder")
+          }), (0, cU.jsx)("button", {
             type: "button",
             className: "SmpIconButton",
-            "aria-label": vD("smpShop:close"),
-            onClick: DD.onClose,
-            children: (0, SD.jsx)(bD.c, {
+            "aria-label": eU("smpShop:close"),
+            onClick: UU.onClose,
+            children: (0, cU.jsx)(TU.c, {
               name: "xmark"
             })
           })]
-        }), "list" === XD && (0, SD.jsx)("div", {
+        }), "list" === xU && (0, cU.jsx)("div", {
           className: "SmpPicker",
           role: "listbox",
-          children: null !== (ZD = DD.inventory) && void 0 !== ZD && ZD.length ? DD.inventory.map((DD => {
+          children: null !== (hU = UU.inventory) && void 0 !== hU && hU.length ? UU.inventory.map((UU => {
             let {
-              item: CD,
-              quantity: cD
-            } = DD;
-            return (0, SD.jsx)("button", {
+              item: RU,
+              quantity: gU
+            } = UU;
+            return (0, cU.jsx)("button", {
               type: "button",
-              title: CD,
-              className: iD()("SmpPickerSlot", {
-                SmpPickerSlotOn: CD === nD
+              title: RU,
+              className: EU()("SmpPickerSlot", {
+                SmpPickerSlotOn: RU === IU
               }),
               onClick: () => {
-                ED(CD)
+                zU(RU)
               },
-              children: (0, SD.jsx)(LI, {
-                item: CD,
-                amount: cD
+              children: (0, cU.jsx)(Ht, {
+                item: RU,
+                amount: gU
               })
-            }, CD)
-          })) : (0, SD.jsx)("span", {
+            }, RU)
+          })) : (0, cU.jsx)("span", {
             className: "SmpMuted",
-            children: vD("smpShop:nothingToList")
+            children: eU("smpShop:nothingToList")
           })
-        }), ("list" === XD || !nD) && (0, SD.jsxs)("div", {
+        }), ("list" === xU || !IU) && (0, cU.jsxs)("div", {
           className: "SmpItemSearch",
-          children: [(0, SD.jsx)(mD.b, {
+          children: [(0, cU.jsx)(mU.d, {
             className: "SmpSearchInput",
-            placeholderText: vD("list" === XD ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
-            defaultValue: qD,
-            onValueChange: JD,
+            placeholderText: eU("list" === xU ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
+            defaultValue: ZU,
+            onValueChange: aU,
             blurOnEnter: !0,
             onEnter: () => {
-              cC[0] && ED(cC[0].name)
+              gR[0] && zU(gR[0].name)
             }
-          }, KD), cC.length > 0 && (0, SD.jsx)("div", {
+          }, YU), gR.length > 0 && (0, cU.jsx)("div", {
             className: "SmpPicker",
-            children: cC.map((DD => {
+            children: gR.map((UU => {
               let {
-                name: CD
-              } = DD;
-              return (0, SD.jsx)("button", {
+                name: RU
+              } = UU;
+              return (0, cU.jsx)("button", {
                 type: "button",
-                title: CD,
-                className: iD()("SmpPickerSlot", {
-                  SmpPickerSlotOn: CD === nD
+                title: RU,
+                className: EU()("SmpPickerSlot", {
+                  SmpPickerSlotOn: RU === IU
                 }),
                 onClick: () => {
-                  ED(CD)
+                  zU(RU)
                 },
-                children: (0, SD.jsx)(LI, {
-                  item: CD
+                children: (0, cU.jsx)(Ht, {
+                  item: RU
                 })
-              }, CD)
+              }, RU)
             }))
           })]
-        }), nD && (0, SD.jsxs)(SD.Fragment, {
-          children: [(0, SD.jsxs)("div", {
+        }), IU && (0, cU.jsxs)(cU.Fragment, {
+          children: [(0, cU.jsxs)("div", {
             className: "SmpPickedName",
-            children: [CC, DC && (0, SD.jsx)(YI, {})]
-          }), (0, SD.jsxs)("div", {
+            children: [RR, UR && (0, cU.jsx)(it, {})]
+          }), (0, cU.jsxs)("div", {
             className: "SmpFormGrid",
-            children: [(0, SD.jsxs)("div", {
+            children: [(0, cU.jsxs)("div", {
               className: "SmpField",
-              children: [(0, SD.jsxs)("span", {
-                children: [vD("smpShop:quantity"), "list" === XD && GD && (0, SD.jsx)("small", {
-                  children: vD("smpShop:youHave", {
-                    count: RD
+              children: [(0, cU.jsxs)("span", {
+                children: [eU("smpShop:quantity"), "list" === xU && SU && (0, cU.jsx)("small", {
+                  children: eU("smpShop:youHave", {
+                    count: sU
                   })
                 })]
-              }), (0, SD.jsx)(WI, {
-                value: PD,
-                onChange: HD,
-                max: kD,
-                label: vD("smpShop:quantity")
-              }), (0, SD.jsx)(dI, {
-                options: IC,
-                value: PD,
-                onChange: HD,
-                ariaLabel: vD("smpShop:quantity")
+              }), (0, cU.jsx)(At, {
+                value: wU,
+                onChange: nU,
+                max: yU,
+                label: eU("smpShop:quantity")
+              }), (0, cU.jsx)(Ft, {
+                options: tR,
+                value: wU,
+                onChange: nU,
+                ariaLabel: eU("smpShop:quantity")
               })]
-            }), (0, SD.jsxs)("div", {
+            }), (0, cU.jsxs)("div", {
               className: "SmpField",
-              children: [(0, SD.jsx)("span", {
-                children: vD("smpShop:pricePerItem")
-              }), (0, SD.jsx)(WI, {
-                value: Math.max(1, UD),
-                onChange: sD,
+              children: [(0, cU.jsx)("span", {
+                children: eU("smpShop:pricePerItem")
+              }), (0, cU.jsx)(At, {
+                value: Math.max(1, bU),
+                onChange: AU,
                 max: 9999999,
-                step: sI,
-                label: vD("smpShop:pricePerItem")
-              }), (0, SD.jsx)(dI, {
-                options: pC,
-                value: UD,
-                onChange: sD,
-                ariaLabel: vD("smpShop:pricePerItem")
+                step: zt,
+                label: eU("smpShop:pricePerItem")
+              }), (0, cU.jsx)(Ft, {
+                options: pR,
+                value: bU,
+                onChange: AU,
+                ariaLabel: eU("smpShop:pricePerItem")
               })]
             })]
-          }), "list" === XD && (0, SD.jsxs)("div", {
+          }), "list" === xU && (0, cU.jsxs)("div", {
             className: "SmpTradeSummary",
-            children: [(0, SD.jsxs)("span", {
-              children: [vD("smpShop:youGet"), " ", (0, SD.jsx)(TI, {
-                amount: Math.max(0, eD - uD),
+            children: [(0, cU.jsxs)("span", {
+              children: [eU("smpShop:youGet"), " ", (0, cU.jsx)(St, {
+                amount: Math.max(0, MU - DU),
                 exact: !0
               })]
-            }), (0, SD.jsx)("small", {
-              children: uD > 0 ? vD("smpShop:listingFee", {
-                fee: uD.toLocaleString("en-US")
-              }) : vD("smpShop:listingRules")
+            }), (0, cU.jsx)("small", {
+              children: DU > 0 ? eU("smpShop:listingFee", {
+                fee: DU.toLocaleString("en-US")
+              }) : eU("smpShop:listingRules")
             })]
-          }), (0, SD.jsx)(oD.r, {
+          }), (0, cU.jsx)(QU.p, {
             className: "SmpSubmit",
-            disabled: !rD && !AD && !hD,
-            loading: hD || DC || GD && DD.searching,
-            onClick: FD,
-            children: "list" === XD ? vD("smpShop:listButton", {
-              count: PD,
-              item: CC
-            }) : (0, SD.jsxs)(SD.Fragment, {
-              children: [vD("smpShop:orderButton", {
-                count: PD,
-                item: CC
-              }), " ", UD >= 1 && (0, SD.jsx)(TI, {
-                amount: eD
+            disabled: !NU && !lU && !LU,
+            loading: LU || UR || SU && UU.searching,
+            onClick: OU,
+            children: "list" === xU ? eU("smpShop:listButton", {
+              count: wU,
+              item: RR
+            }) : (0, cU.jsxs)(cU.Fragment, {
+              children: [eU("smpShop:orderButton", {
+                count: wU,
+                item: RR
+              }), " ", bU >= 1 && (0, cU.jsx)(St, {
+                amount: MU
               })]
             })
           })]
@@ -3656,627 +3656,627 @@ export const modules = {
       })
     }
 
-    function xp() {
-      var DD;
+    function ap() {
+      var UU;
       const {
-        t: CD
-      } = (0, fD.F)(), cD = Sp(), pD = null === (DD = cD.shopInfo[cD.categoryKey]) || void 0 === DD ? void 0 : DD.items, iD = FI(pD, "search"), bD = FI(pD, "creator"), QD = AI(pD, "enchantedCreator"), wD = AI(pD, "listing"), BD = FI(pD, "empty"), yD = tp(iD, wD.length > 0 || null !== BD), {
-        searched: MD,
-        shown: tD,
-        loading: ZD
-      } = yD, [vD, ND] = (0, ID.useState)(!1), [gD, XD] = function() {
-        const [DD, CD] = (0, Xp.c)("smpMarketView", "list");
-        return ["grid" === DD ? "grid" : "list", CD]
-      }(), mD = "grid" === gD, nD = (0, ID.useMemo)((() => wD.filter((DD => {
+        t: RU
+      } = (0, PU.B)(), gU = Gp(), pU = null === (UU = gU.shopInfo[gU.categoryKey]) || void 0 === UU ? void 0 : UU.items, EU = Up(pU, "search"), TU = Up(pU, "creator"), qU = Ot(pU, "enchantedCreator"), KU = Ot(pU, "listing"), GU = Up(pU, "empty"), jU = Qp(EU, KU.length > 0 || null !== GU), {
+        searched: uU,
+        shown: CU,
+        loading: hU
+      } = jU, [eU, WU] = (0, tU.useState)(!1), [fU, xU] = function() {
+        const [UU, RU] = (0, Ip.b)("smpMarketView", "list");
+        return ["grid" === UU ? "grid" : "list", RU]
+      }(), mU = "grid" === fU, IU = (0, tU.useMemo)((() => KU.filter((UU => {
         let {
-          meta: CD
-        } = DD;
-        return null !== CD.seller && CD.item === MD
-      })).map((DD => {
+          meta: RU
+        } = UU;
+        return null !== RU.seller && RU.item === uU
+      })).map((UU => {
         let {
-          meta: CD
-        } = DD;
-        return CD.pricePerItem
-      })).sort(((DD, CD) => DD - CD))), [wD, MD]), OD = (0, ID.useMemo)((() => {
-        const DD = new Set(yD.catalogue.map((DD => {
+          meta: RU
+        } = UU;
+        return RU.pricePerItem
+      })).sort(((UU, RU) => UU - RU))), [KU, uU]), JU = (0, tU.useMemo)((() => {
+        const UU = new Set(jU.catalogue.map((UU => {
           let {
-            name: CD
-          } = DD;
-          return CD
+            name: RU
+          } = UU;
+          return RU
         })));
-        return function(DD) {
-          for (const CD in DD)
-            if ("sell" === DD[CD].smp) return AI(DD[CD].items, "sell").filter((DD => {
+        return function(UU) {
+          for (const RU in UU)
+            if ("sell" === UU[RU].smp) return Ot(UU[RU].items, "sell").filter((UU => {
               let {
-                item: CD
-              } = DD;
-              return !CD.enchant
-            })).map((DD => {
+                item: RU
+              } = UU;
+              return !RU.enchant
+            })).map((UU => {
               let {
-                meta: CD
-              } = DD;
+                meta: RU
+              } = UU;
               return {
-                item: CD.item,
-                quantity: CD.quantity,
-                sellPrice: CD.pricePerItem
+                item: RU.item,
+                quantity: RU.quantity,
+                sellPrice: RU.pricePerItem
               }
             }));
           return []
-        }(cD.shopInfo).filter((CD => {
+        }(gU.shopInfo).filter((RU => {
           let {
-            item: cD
-          } = CD;
-          return DD.has(cD)
+            item: gU
+          } = RU;
+          return UU.has(gU)
         }))
-      }), [cD.shopInfo, yD.catalogue]);
-      return (0, SD.jsx)(Np, {
-        browser: yD,
+      }), [gU.shopInfo, jU.catalogue]);
+      return (0, cU.jsx)(xp, {
+        browser: jU,
         className: "SmpMarketTab",
-        recentLabel: CD("smpShop:recentlyListed"),
-        action: (0, SD.jsx)(oD.r, {
+        recentLabel: RU("smpShop:recentlyListed"),
+        action: (0, cU.jsx)(QU.p, {
           className: "SmpSellButton",
           onClick: () => {
-            ND((DD => !DD))
+            WU((UU => !UU))
           },
-          children: CD("smpShop:sell")
+          children: RU("smpShop:sell")
         }),
-        above: vD && (0, SD.jsxs)(SD.Fragment, {
-          children: [(0, SD.jsx)(Up, {
+        above: eU && (0, cU.jsxs)(cU.Fragment, {
+          children: [(0, cU.jsx)(Zp, {
             mode: "list",
-            creator: bD,
-            inventory: OD,
-            catalogue: yD.catalogue,
-            names: yD.names,
-            searching: ZD,
-            prices: nD,
-            onPickItem: yD.searchFor,
+            creator: TU,
+            inventory: JU,
+            catalogue: jU.catalogue,
+            names: jU.names,
+            searching: hU,
+            prices: IU,
+            onPickItem: jU.searchFor,
             onClose: () => {
-              ND(!1)
+              WU(!1)
             }
-          }), QD.length > 0 && (0, SD.jsx)(qp, {
-            entries: QD
+          }), qU.length > 0 && (0, cU.jsx)(Yp, {
+            entries: qU
           })]
         }),
-        listControls: (0, SD.jsx)(np, {
-          view: gD,
-          onChange: XD
+        listControls: (0, cU.jsx)(wp, {
+          view: fU,
+          onChange: xU
         }),
-        summary: tD && (wD.length > 0 ? CD(1 === wD.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
-          count: wD.length,
-          price: zI(gp(wD, "min"))
-        }) : CD("smpShop:noOneSelling", {
-          item: fp(yD.names, tD)
+        summary: CU && (KU.length > 0 ? RU(1 === KU.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
+          count: KU.length,
+          price: Xt(mp(KU, "min"))
+        }) : RU("smpShop:noOneSelling", {
+          item: Tp(jU.names, CU)
         })),
-        list: ZD ? (0, SD.jsx)(GI, {
-          grid: mD
-        }) : wD.length > 0 ? (0, SD.jsx)(Op, {
-          entries: wD,
-          view: gD
-        }) : BD ? (0, SD.jsx)(kI, {
-          entry: BD
-        }) : (0, SD.jsx)(GI, {
+        list: hU ? (0, cU.jsx)(st, {
+          grid: mU
+        }) : KU.length > 0 ? (0, cU.jsx)(np, {
+          entries: KU,
+          view: fU
+        }) : GU ? (0, cU.jsx)(kt, {
+          entry: GU
+        }) : (0, cU.jsx)(st, {
           count: 3,
-          grid: mD
+          grid: mU
         })
       })
     }
 
-    function qp(DD) {
+    function Yp(UU) {
       let {
-        entries: CD
-      } = DD;
+        entries: RU
+      } = UU;
       const {
-        t: cD
-      } = (0, fD.F)(), pD = Sp(), [iD, bD] = (0, ID.useState)({});
-      return (0, SD.jsx)("div", {
+        t: gU
+      } = (0, PU.B)(), pU = Gp(), [EU, TU] = (0, tU.useState)({});
+      return (0, cU.jsx)("div", {
         className: "SmpList",
-        children: CD.map((DD => {
-          var CD, ID, fD;
+        children: RU.map((UU => {
+          var RU, tU, PU;
           let {
-            key: QD,
-            item: wD,
-            meta: BD
-          } = DD;
-          const yD = null !== (CD = iD[QD]) && void 0 !== CD ? CD : 1;
-          return (0, SD.jsxs)("div", {
+            key: qU,
+            item: KU,
+            meta: GU
+          } = UU;
+          const jU = null !== (RU = EU[qU]) && void 0 !== RU ? RU : 1;
+          return (0, cU.jsxs)("div", {
             className: "SmpRow",
-            children: [(0, SD.jsx)(LI, {
-              item: BD.item,
-              amount: BD.quantity,
-              tier: null !== (ID = null === (fD = wD.enchant) || void 0 === fD ? void 0 : fD.tier) && void 0 !== ID ? ID : null
-            }), (0, SD.jsxs)("div", {
+            children: [(0, cU.jsx)(Ht, {
+              item: GU.item,
+              amount: GU.quantity,
+              tier: null !== (tU = null === (PU = KU.enchant) || void 0 === PU ? void 0 : PU.tier) && void 0 !== tU ? tU : null
+            }), (0, cU.jsxs)("div", {
               className: "SmpRowText",
-              children: [(0, SD.jsx)("b", {
-                children: (0, SD.jsx)(HI.c, {
-                  text: wD.customTitle
+              children: [(0, cU.jsx)("b", {
+                children: (0, cU.jsx)(nt.e, {
+                  text: KU.customTitle
                 })
-              }), (0, SD.jsx)("small", {
-                children: cD("smpShop:enchantedListing")
+              }), (0, cU.jsx)("small", {
+                children: gU("smpShop:enchantedListing")
               })]
-            }), (0, SD.jsx)(WI, {
-              value: yD,
-              onChange: DD => {
-                bD({
-                  ...iD,
-                  [QD]: DD
+            }), (0, cU.jsx)(At, {
+              value: jU,
+              onChange: UU => {
+                TU({
+                  ...EU,
+                  [qU]: UU
                 })
               },
               max: 9999999,
-              step: sI,
-              label: cD("smpShop:pricePerItem")
-            }), (0, SD.jsxs)(oD.r, {
-              loading: pD.isPending(QD),
+              step: zt,
+              label: gU("smpShop:pricePerItem")
+            }), (0, cU.jsxs)(QU.p, {
+              loading: pU.isPending(qU),
               onClick: () => {
-                pD.act(QD, String(yD))
+                pU.act(qU, String(jU))
               },
-              children: [cD("smpShop:list"), " ", (0, SD.jsx)(TI, {
-                amount: yD
+              children: [gU("smpShop:list"), " ", (0, cU.jsx)(St, {
+                amount: jU
               })]
             })]
-          }, QD)
+          }, qU)
         }))
       })
     }
-    const Jp = (0, ID.memo)((function(DD) {
+    const Bp = (0, tU.memo)((function(UU) {
       let {
-        itemKey: CD,
-        item: cD,
-        quantity: ID,
-        pricePerItem: pD,
-        tier: fD,
-        selected: bD,
-        onSelect: QD
-      } = DD;
-      return (0, SD.jsxs)("button", {
+        itemKey: RU,
+        item: gU,
+        quantity: tU,
+        pricePerItem: pU,
+        tier: PU,
+        selected: TU,
+        onSelect: qU
+      } = UU;
+      return (0, cU.jsxs)("button", {
         type: "button",
-        className: iD()("SmpInventorySlot", {
-          SmpInventorySlotOn: bD
+        className: EU()("SmpInventorySlot", {
+          SmpInventorySlotOn: TU
         }),
-        title: cD,
+        title: gU,
         onClick: () => {
-          QD(CD)
+          qU(RU)
         },
-        children: [(0, SD.jsx)(LI, {
-          item: cD,
-          amount: ID,
-          tier: fD
-        }), (0, SD.jsx)(TI, {
-          amount: pD
+        children: [(0, cU.jsx)(Ht, {
+          item: gU,
+          amount: tU,
+          tier: PU
+        }), (0, cU.jsx)(St, {
+          amount: pU
         })]
       })
     }));
 
-    function Kp() {
-      var DD;
+    function Vp() {
+      var UU;
       const {
-        t: CD
-      } = (0, fD.F)(), cD = Sp(), pD = null === (DD = cD.shopInfo[cD.categoryKey]) || void 0 === DD ? void 0 : DD.items, bD = AI(pD, "sell"), QD = FI(pD, "empty"), [wD, BD] = (0, ID.useState)(null), [yD, MD] = (0, ID.useState)({}), tD = bD.find((DD => {
+        t: RU
+      } = (0, PU.B)(), gU = Gp(), pU = null === (UU = gU.shopInfo[gU.categoryKey]) || void 0 === UU ? void 0 : UU.items, TU = Ot(pU, "sell"), qU = Up(pU, "empty"), [KU, GU] = (0, tU.useState)(null), [jU, uU] = (0, tU.useState)({}), CU = TU.find((UU => {
         let {
-          key: CD
-        } = DD;
-        return CD === wD
+          key: RU
+        } = UU;
+        return RU === KU
       }));
-      return 0 === bD.length ? (0, SD.jsx)("div", {
+      return 0 === TU.length ? (0, cU.jsx)("div", {
         className: "SmpScreen",
-        children: (0, SD.jsx)(RI, {
-          title: QD ? (0, SD.jsx)(HI.c, {
-            text: QD.item.customTitle
-          }) : CD("smpShop:nothingToSell"),
-          children: QD && (0, SD.jsx)(HI.c, {
-            text: QD.item.description
+        children: (0, cU.jsx)(yt, {
+          title: qU ? (0, cU.jsx)(nt.e, {
+            text: qU.item.customTitle
+          }) : RU("smpShop:nothingToSell"),
+          children: qU && (0, cU.jsx)(nt.e, {
+            text: qU.item.description
           })
         })
-      }) : (0, SD.jsxs)("div", {
+      }) : (0, cU.jsxs)("div", {
         className: "SmpScreen SmpInstantSellTab",
-        children: [(0, SD.jsx)("div", {
+        children: [(0, cU.jsx)("div", {
           className: "SmpInventoryGrid",
-          children: bD.map((DD => {
-            var CD, cD;
+          children: TU.map((UU => {
+            var RU, gU;
             let {
-              key: ID,
-              item: pD,
-              meta: iD
-            } = DD;
-            return (0, SD.jsx)(Jp, {
-              itemKey: ID,
-              item: iD.item,
-              quantity: iD.quantity,
-              pricePerItem: iD.pricePerItem,
-              tier: null !== (CD = null === (cD = pD.enchant) || void 0 === cD ? void 0 : cD.tier) && void 0 !== CD ? CD : null,
-              selected: ID === wD,
-              onSelect: BD
-            }, ID)
+              key: tU,
+              item: pU,
+              meta: EU
+            } = UU;
+            return (0, cU.jsx)(Bp, {
+              itemKey: tU,
+              item: EU.item,
+              quantity: EU.quantity,
+              pricePerItem: EU.pricePerItem,
+              tier: null !== (RU = null === (gU = pU.enchant) || void 0 === gU ? void 0 : gU.tier) && void 0 !== RU ? RU : null,
+              selected: tU === KU,
+              onSelect: GU
+            }, tU)
           }))
-        }), (0, SD.jsx)("div", {
-          className: iD()("SmpSellBar", {
-            SmpSellBarIdle: !tD
+        }), (0, cU.jsx)("div", {
+          className: EU()("SmpSellBar", {
+            SmpSellBarIdle: !CU
           }),
-          children: tD ? (0, SD.jsx)(ap, {
-            entry: tD,
-            choice: bp(tD.item, yD[tD.key]),
-            onChoose: DD => {
-              MD({
-                ...yD,
-                [tD.key]: DD
+          children: CU ? (0, cU.jsx)(rp, {
+            entry: CU,
+            choice: qp(CU.item, jU[CU.key]),
+            onChoose: UU => {
+              uU({
+                ...jU,
+                [CU.key]: UU
               })
             }
-          }) : (0, SD.jsx)("span", {
+          }) : (0, cU.jsx)("span", {
             className: "SmpMuted",
-            children: CD("smpShop:tapToSell")
+            children: RU("smpShop:tapToSell")
           })
         })]
       })
     }
 
-    function ap(DD) {
-      var CD, cD, ID, pD;
+    function rp(UU) {
+      var RU, gU, tU, pU;
       let {
-        entry: iD,
-        choice: bD,
-        onChoose: QD
-      } = DD;
+        entry: EU,
+        choice: TU,
+        onChoose: qU
+      } = UU;
       const {
-        t: wD
-      } = (0, fD.F)(), BD = Sp(), {
-        key: yD,
-        item: MD,
-        meta: tD
-      } = iD, ZD = Ip("dropdown" === (null === (CD = MD.userInput) || void 0 === CD ? void 0 : CD.type) ? MD.userInput.dropdownOptions : []), vD = null === bD ? 0 : -(0, mI.c)(MD, bD);
-      return (0, SD.jsxs)(SD.Fragment, {
-        children: [(0, SD.jsx)(LI, {
-          item: tD.item,
-          amount: tD.quantity,
-          tier: null !== (cD = null === (ID = MD.enchant) || void 0 === ID ? void 0 : ID.tier) && void 0 !== cD ? cD : null
-        }), (0, SD.jsxs)("div", {
+        t: KU
+      } = (0, PU.B)(), GU = Gp(), {
+        key: jU,
+        item: uU,
+        meta: CU
+      } = EU, hU = pp("dropdown" === (null === (RU = uU.userInput) || void 0 === RU ? void 0 : RU.type) ? uU.userInput.dropdownOptions : []), eU = null === TU ? 0 : -(0, mt.e)(uU, TU);
+      return (0, cU.jsxs)(cU.Fragment, {
+        children: [(0, cU.jsx)(Ht, {
+          item: CU.item,
+          amount: CU.quantity,
+          tier: null !== (gU = null === (tU = uU.enchant) || void 0 === tU ? void 0 : tU.tier) && void 0 !== gU ? gU : null
+        }), (0, cU.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, SD.jsx)("b", {
-            children: (0, SD.jsx)(HI.c, {
-              text: null !== (pD = MD.customTitle) && void 0 !== pD ? pD : tD.item
+          children: [(0, cU.jsx)("b", {
+            children: (0, cU.jsx)(nt.e, {
+              text: null !== (pU = uU.customTitle) && void 0 !== pU ? pU : CU.item
             })
-          }), (0, SD.jsx)("small", {
-            children: wD("smpShop:sellEach", {
-              count: tD.quantity
+          }), (0, cU.jsx)("small", {
+            children: KU("smpShop:sellEach", {
+              count: CU.quantity
             })
           })]
-        }), (0, SD.jsx)(dI, {
-          options: ZD.map((DD => {
+        }), (0, cU.jsx)(Ft, {
+          options: hU.map((UU => {
             let {
-              label: CD,
-              quantity: cD,
-              isAll: ID
-            } = DD;
+              label: RU,
+              quantity: gU,
+              isAll: tU
+            } = UU;
             return {
-              value: CD,
-              label: ID ? wD("smpShop:all", {
-                count: cD
-              }) : String(cD)
+              value: RU,
+              label: tU ? KU("smpShop:all", {
+                count: gU
+              }) : String(gU)
             }
           })),
-          value: bD,
-          onChange: QD,
-          ariaLabel: wD("smpShop:quantity")
-        }), (0, SD.jsxs)(oD.r, {
-          loading: BD.isPending(yD),
-          disabled: null === bD,
+          value: TU,
+          onChange: qU,
+          ariaLabel: KU("smpShop:quantity")
+        }), (0, cU.jsxs)(QU.p, {
+          loading: GU.isPending(jU),
+          disabled: null === TU,
           onClick: () => {
-            BD.act(yD, bD)
+            GU.act(jU, TU)
           },
-          children: [wD("smpShop:sellButton"), " ", (0, SD.jsx)(TI, {
-            amount: vD
+          children: [KU("smpShop:sellButton"), " ", (0, cU.jsx)(St, {
+            amount: eU
           })]
         })]
       })
     }
 
-    function Vp() {
-      var DD;
+    function Xp() {
+      var UU;
       const {
-        t: CD
-      } = (0, fD.F)(), cD = Sp(), ID = null === (DD = cD.shopInfo[cD.categoryKey]) || void 0 === DD ? void 0 : DD.items, pD = AI(ID, "collect"), iD = AI(ID, "myListing"), bD = (DD, CD) => cD.isPending(DD) || !1 === CD.canBuy;
-      return (0, SD.jsxs)("div", {
+        t: RU
+      } = (0, PU.B)(), gU = Gp(), tU = null === (UU = gU.shopInfo[gU.categoryKey]) || void 0 === UU ? void 0 : UU.items, pU = Ot(tU, "collect"), EU = Ot(tU, "myListing"), TU = (UU, RU) => gU.isPending(UU) || !1 === RU.canBuy;
+      return (0, cU.jsxs)("div", {
         className: "SmpScreen",
-        children: [(0, SD.jsx)("h3", {
+        children: [(0, cU.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: CD("smpShop:readyToCollect")
-        }), pD.length > 0 ? (0, SD.jsx)("div", {
+          children: RU("smpShop:readyToCollect")
+        }), pU.length > 0 ? (0, cU.jsx)("div", {
           className: "SmpList",
-          children: pD.map((DD => {
-            var ID, pD;
+          children: pU.map((UU => {
+            var tU, pU;
             let {
-              key: iD,
-              item: fD,
-              meta: QD
-            } = DD;
-            return (0, SD.jsxs)("div", {
+              key: EU,
+              item: PU,
+              meta: qU
+            } = UU;
+            return (0, cU.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, SD.jsx)(LI, {
-                item: "sold" === QD.type ? "Gold Coin" : QD.item,
-                amount: "sold" === QD.type ? 0 : QD.quantity,
-                tier: null !== (ID = null === (pD = fD.enchant) || void 0 === pD ? void 0 : pD.tier) && void 0 !== ID ? ID : null
-              }), (0, SD.jsxs)("div", {
+              children: [(0, cU.jsx)(Ht, {
+                item: "sold" === qU.type ? "Gold Coin" : qU.item,
+                amount: "sold" === qU.type ? 0 : qU.quantity,
+                tier: null !== (tU = null === (pU = PU.enchant) || void 0 === pU ? void 0 : pU.tier) && void 0 !== tU ? tU : null
+              }), (0, cU.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, SD.jsx)("b", {
-                  children: (0, SD.jsx)(HI.c, {
-                    text: fD.customTitle
+                children: [(0, cU.jsx)("b", {
+                  children: (0, cU.jsx)(nt.e, {
+                    text: PU.customTitle
                   })
-                }), (0, SD.jsx)("small", {
-                  children: (0, SD.jsx)(HI.c, {
-                    text: fD.description
+                }), (0, cU.jsx)("small", {
+                  children: (0, cU.jsx)(nt.e, {
+                    text: PU.description
                   })
                 })]
-              }), (0, SD.jsx)(oD.o, {
-                loading: bD(iD, fD),
+              }), (0, cU.jsx)(QU.j, {
+                loading: TU(EU, PU),
                 onClick: () => {
-                  cD.act(iD)
+                  gU.act(EU)
                 },
-                children: CD("smpShop:collect")
+                children: RU("smpShop:collect")
               })]
-            }, iD)
+            }, EU)
           }))
-        }) : (0, SD.jsx)(RI, {
-          title: CD("smpShop:nothingToCollect"),
-          children: CD("smpShop:nothingToCollectHint")
-        }), (0, SD.jsx)("h3", {
+        }) : (0, cU.jsx)(yt, {
+          title: RU("smpShop:nothingToCollect"),
+          children: RU("smpShop:nothingToCollectHint")
+        }), (0, cU.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: CD("smpShop:activeListings", {
-            count: iD.length
+          children: RU("smpShop:activeListings", {
+            count: EU.length
           })
-        }), iD.length > 0 ? (0, SD.jsx)("div", {
+        }), EU.length > 0 ? (0, cU.jsx)("div", {
           className: "SmpList",
-          children: iD.map((DD => {
-            var ID, pD;
+          children: EU.map((UU => {
+            var tU, pU;
             let {
-              key: iD,
-              item: fD,
-              meta: QD
-            } = DD;
-            return (0, SD.jsxs)("div", {
+              key: EU,
+              item: PU,
+              meta: qU
+            } = UU;
+            return (0, cU.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, SD.jsx)(LI, {
-                item: QD.item,
-                amount: QD.quantity,
-                tier: null !== (ID = null === (pD = fD.enchant) || void 0 === pD ? void 0 : pD.tier) && void 0 !== ID ? ID : null
-              }), (0, SD.jsxs)("div", {
+              children: [(0, cU.jsx)(Ht, {
+                item: qU.item,
+                amount: qU.quantity,
+                tier: null !== (tU = null === (pU = PU.enchant) || void 0 === pU ? void 0 : pU.tier) && void 0 !== tU ? tU : null
+              }), (0, cU.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, SD.jsx)("b", {
-                  children: (0, SD.jsx)(HI.c, {
-                    text: fD.customTitle
+                children: [(0, cU.jsx)("b", {
+                  children: (0, cU.jsx)(nt.e, {
+                    text: PU.customTitle
                   })
-                }), (0, SD.jsx)("small", {
-                  children: CD("smpShop:timeLeft", {
-                    time: cp(QD.expiresAt)
+                }), (0, cU.jsx)("small", {
+                  children: RU("smpShop:timeLeft", {
+                    time: tp(qU.expiresAt)
                   })
                 })]
-              }), (0, SD.jsxs)("div", {
+              }), (0, cU.jsxs)("div", {
                 className: "SmpRowPrice",
-                children: [(0, SD.jsx)(TI, {
-                  amount: QD.pricePerItem
-                }), (0, SD.jsx)("small", {
-                  children: CD("smpShop:each")
+                children: [(0, cU.jsx)(St, {
+                  amount: qU.pricePerItem
+                }), (0, cU.jsx)("small", {
+                  children: RU("smpShop:each")
                 })]
-              }), (0, SD.jsx)(oD.J, {
-                loading: bD(iD, fD),
+              }), (0, cU.jsx)(QU.E, {
+                loading: TU(EU, PU),
                 onClick: () => {
-                  cD.act(iD)
+                  gU.act(EU)
                 },
-                children: CD("smpShop:cancel")
+                children: RU("smpShop:cancel")
               })]
-            }, iD)
+            }, EU)
           }))
-        }) : (0, SD.jsx)(RI, {
-          title: CD("smpShop:noActiveListings"),
-          children: CD("smpShop:noActiveListingsHint")
+        }) : (0, cU.jsx)(yt, {
+          title: RU("smpShop:noActiveListings"),
+          children: RU("smpShop:noActiveListingsHint")
         })]
       })
     }
 
-    function zp(DD) {
+    function vp(UU) {
       let {
-        done: CD,
-        of: cD
-      } = DD;
-      return (0, SD.jsx)("span", {
+        done: RU,
+        of: gU
+      } = UU;
+      return (0, cU.jsx)("span", {
         className: "SmpProgress",
-        children: (0, SD.jsx)("i", {
+        children: (0, cU.jsx)("i", {
           style: {
-            width: `${Math.min(100,CD/Math.max(1,cD)*100)}%`
+            width: `${Math.min(100,RU/Math.max(1,gU)*100)}%`
           }
         })
       })
     }
 
-    function jp(DD) {
-      var CD, cD, ID;
+    function dp(UU) {
+      var RU, gU, tU;
       let {
-        entry: pD,
-        choice: iD,
-        onChoose: bD
-      } = DD;
+        entry: pU,
+        choice: EU,
+        onChoose: TU
+      } = UU;
       const {
-        t: QD
-      } = (0, fD.F)(), wD = Sp(), {
-        key: BD,
-        item: yD,
-        meta: MD
-      } = pD, tD = "dropdown" === (null === (CD = yD.userInput) || void 0 === CD ? void 0 : CD.type) ? yD.userInput.dropdownOptions : [], ZD = !0 === MD.processing, vD = null !== MD.creator && (MD.Lb > 0 || ZD), ND = vD && MD.Lb > 0 ? Ip(tD) : [], gD = null === iD ? 0 : null !== (cD = null === (ID = ND.find((DD => DD.label === iD))) || void 0 === ID ? void 0 : ID.quantity) && void 0 !== cD ? cD : 0;
-      return (0, SD.jsxs)("div", {
+        t: qU
+      } = (0, PU.B)(), KU = Gp(), {
+        key: GU,
+        item: jU,
+        meta: uU
+      } = pU, CU = "dropdown" === (null === (RU = jU.userInput) || void 0 === RU ? void 0 : RU.type) ? jU.userInput.dropdownOptions : [], hU = !0 === uU.processing, eU = null !== uU.creator && (uU.WT > 0 || hU), WU = eU && uU.WT > 0 ? pp(CU) : [], fU = null === EU ? 0 : null !== (gU = null === (tU = WU.find((UU => UU.label === EU))) || void 0 === tU ? void 0 : tU.quantity) && void 0 !== gU ? gU : 0;
+      return (0, cU.jsxs)("div", {
         className: "SmpRow SmpOrderRow",
-        children: [(0, SD.jsx)(LI, {
-          item: MD.item
-        }), (0, SD.jsxs)("div", {
+        children: [(0, cU.jsx)(Ht, {
+          item: uU.item
+        }), (0, cU.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, SD.jsx)("b", {
-            children: (0, SD.jsx)(HI.c, {
-              text: yD.customTitle
+          children: [(0, cU.jsx)("b", {
+            children: (0, cU.jsx)(nt.e, {
+              text: jU.customTitle
             })
-          }), (0, SD.jsxs)("small", {
-            children: [(0, SD.jsx)(TI, {
-              amount: MD.pricePerItem
-            }), " ", QD("smpShop:each"), " \xb7", " ", null === MD.creator ? QD("smpShop:you") : (0, SD.jsx)(HI.c, {
+          }), (0, cU.jsxs)("small", {
+            children: [(0, cU.jsx)(St, {
+              amount: uU.pricePerItem
+            }), " ", qU("smpShop:each"), " \xb7", " ", null === uU.creator ? qU("smpShop:you") : (0, cU.jsx)(nt.e, {
               text: [{
-                entityName: MD.creator
+                entityName: uU.creator
               }]
             })]
-          }), (0, SD.jsx)(zp, {
-            done: MD.delivered,
-            of: MD.wanted
+          }), (0, cU.jsx)(vp, {
+            done: uU.delivered,
+            of: uU.wanted
           })]
-        }), vD ? (0, SD.jsxs)(SD.Fragment, {
-          children: [(0, SD.jsx)(dI, {
-            options: ND.map((DD => {
+        }), eU ? (0, cU.jsxs)(cU.Fragment, {
+          children: [(0, cU.jsx)(Ft, {
+            options: WU.map((UU => {
               let {
-                label: CD,
-                quantity: cD,
-                isAll: ID
-              } = DD;
+                label: RU,
+                quantity: gU,
+                isAll: tU
+              } = UU;
               return {
-                value: CD,
-                label: ID ? QD("smpShop:max", {
-                  count: cD
-                }) : String(cD)
+                value: RU,
+                label: tU ? qU("smpShop:max", {
+                  count: gU
+                }) : String(gU)
               }
             })),
-            value: iD,
-            onChange: bD,
-            ariaLabel: QD("smpShop:quantity")
-          }), (0, SD.jsxs)(oD.r, {
-            loading: wD.isPending(BD) || ZD,
-            disabled: null === iD,
+            value: EU,
+            onChange: TU,
+            ariaLabel: qU("smpShop:quantity")
+          }), (0, cU.jsxs)(QU.p, {
+            loading: KU.isPending(GU) || hU,
+            disabled: null === EU,
             onClick: () => {
-              wD.act(BD, iD)
+              KU.act(GU, EU)
             },
-            children: [QD("smpShop:deliver"), " ", (0, SD.jsx)(TI, {
-              amount: gD * MD.pricePerItem
+            children: [qU("smpShop:deliver"), " ", (0, cU.jsx)(St, {
+              amount: fU * uU.pricePerItem
             })]
           })]
-        }) : (0, SD.jsx)("span", {
+        }) : (0, cU.jsx)("span", {
           className: "SmpMuted SmpRowNote",
-          children: null === MD.creator ? QD("smpShop:yourOrder") : QD("smpShop:youHave", {
+          children: null === uU.creator ? qU("smpShop:yourOrder") : qU("smpShop:youHave", {
             count: 0
           })
         })]
       })
     }
 
-    function lp() {
-      var DD;
+    function Hp() {
+      var UU;
       const {
-        t: CD
-      } = (0, fD.F)(), cD = Sp(), pD = null === (DD = cD.shopInfo[cD.categoryKey]) || void 0 === DD ? void 0 : DD.items, iD = FI(pD, "search"), bD = FI(pD, "creator"), QD = AI(pD, "order"), wD = FI(pD, "empty"), BD = tp(iD, QD.length > 0 || null !== wD), [yD, MD] = (0, ID.useState)(!1), [tD, ZD] = (0, ID.useState)({});
-      return (0, SD.jsx)(Np, {
-        browser: BD,
-        recentLabel: CD("smpShop:recentOrders"),
-        action: (0, SD.jsx)(oD.r, {
+        t: RU
+      } = (0, PU.B)(), gU = Gp(), pU = null === (UU = gU.shopInfo[gU.categoryKey]) || void 0 === UU ? void 0 : UU.items, EU = Up(pU, "search"), TU = Up(pU, "creator"), qU = Ot(pU, "order"), KU = Up(pU, "empty"), GU = Qp(EU, qU.length > 0 || null !== KU), [jU, uU] = (0, tU.useState)(!1), [CU, hU] = (0, tU.useState)({});
+      return (0, cU.jsx)(xp, {
+        browser: GU,
+        recentLabel: RU("smpShop:recentOrders"),
+        action: (0, cU.jsx)(QU.p, {
           onClick: () => {
-            MD((DD => !DD))
+            uU((UU => !UU))
           },
-          children: CD("smpShop:createOrder")
+          children: RU("smpShop:createOrder")
         }),
-        above: yD && (0, SD.jsx)(Up, {
+        above: jU && (0, cU.jsx)(Zp, {
           mode: "order",
-          creator: bD,
-          catalogue: BD.catalogue,
-          names: BD.names,
-          searching: BD.loading,
+          creator: TU,
+          catalogue: GU.catalogue,
+          names: GU.names,
+          searching: GU.loading,
           prices: [],
-          onPickItem: BD.searchFor,
+          onPickItem: GU.searchFor,
           onClose: () => {
-            MD(!1)
+            uU(!1)
           }
         }),
         onBack: () => {
-          MD(!1)
+          uU(!1)
         },
-        summary: QD.length > 0 && CD(1 === QD.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
-          count: QD.length,
-          price: zI(gp(QD, "max"))
+        summary: qU.length > 0 && RU(1 === qU.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
+          count: qU.length,
+          price: Xt(mp(qU, "max"))
         }),
-        list: BD.loading ? (0, SD.jsx)(GI, {}) : QD.length > 0 ? (0, SD.jsx)(Bp.c, {
+        list: GU.loading ? (0, cU.jsx)(st, {}) : qU.length > 0 ? (0, cU.jsx)(jp.d, {
           lazyLoadedClassName: "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: Dp,
-          observerUpdateDeps: [QD.length],
-          children: QD.map((DD => (0, SD.jsx)(jp, {
-            entry: DD,
-            choice: bp(DD.item, tD[DD.key]),
-            onChoose: CD => {
-              ZD({
-                ...tD,
-                [DD.key]: CD
+          rootMargin: Rp,
+          observerUpdateDeps: [qU.length],
+          children: qU.map((UU => (0, cU.jsx)(dp, {
+            entry: UU,
+            choice: qp(UU.item, CU[UU.key]),
+            onChoose: RU => {
+              hU({
+                ...CU,
+                [UU.key]: RU
               })
             }
-          }, DD.key)))
-        }) : wD ? (0, SD.jsx)(kI, {
-          entry: wD
-        }) : (0, SD.jsx)(GI, {
+          }, UU.key)))
+        }) : KU ? (0, cU.jsx)(kt, {
+          entry: KU
+        }) : (0, cU.jsx)(st, {
           count: 3
         })
       })
     }
 
-    function Lp() {
-      var DD;
+    function Sp() {
+      var UU;
       const {
-        t: CD
-      } = (0, fD.F)(), cD = Sp(), ID = AI(null === (DD = cD.shopInfo[cD.categoryKey]) || void 0 === DD ? void 0 : DD.items, "myOrder");
-      return 0 === ID.length ? (0, SD.jsx)("div", {
+        t: RU
+      } = (0, PU.B)(), gU = Gp(), tU = Ot(null === (UU = gU.shopInfo[gU.categoryKey]) || void 0 === UU ? void 0 : UU.items, "myOrder");
+      return 0 === tU.length ? (0, cU.jsx)("div", {
         className: "SmpScreen",
-        children: (0, SD.jsx)(RI, {
-          title: CD("smpShop:noOrders"),
-          children: CD("smpShop:noOrdersHint")
+        children: (0, cU.jsx)(yt, {
+          title: RU("smpShop:noOrders"),
+          children: RU("smpShop:noOrdersHint")
         })
-      }) : (0, SD.jsx)("div", {
+      }) : (0, cU.jsx)("div", {
         className: "SmpScreen",
-        children: (0, SD.jsx)("div", {
+        children: (0, cU.jsx)("div", {
           className: "SmpList",
-          children: ID.map((DD => {
+          children: tU.map((UU => {
             let {
-              key: ID,
-              item: pD,
-              meta: iD
-            } = DD;
-            const fD = cD.isPending(ID) || !1 === pD.canBuy;
-            return (0, SD.jsxs)("div", {
+              key: tU,
+              item: pU,
+              meta: EU
+            } = UU;
+            const PU = gU.isPending(tU) || !1 === pU.canBuy;
+            return (0, cU.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, SD.jsx)(LI, {
-                item: iD.item,
-                amount: iD.collectable
-              }), (0, SD.jsxs)("div", {
+              children: [(0, cU.jsx)(Ht, {
+                item: EU.item,
+                amount: EU.collectable
+              }), (0, cU.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, SD.jsx)("b", {
-                  children: (0, SD.jsx)(HI.c, {
-                    text: pD.customTitle
+                children: [(0, cU.jsx)("b", {
+                  children: (0, cU.jsx)(nt.e, {
+                    text: pU.customTitle
                   })
-                }), (0, SD.jsxs)("small", {
-                  children: [(0, SD.jsx)(TI, {
-                    amount: iD.pricePerItem
-                  }), " ", CD("smpShop:each"), iD.collectable > 0 && ` \xb7 ${CD("smpShop:readyCount",{count:iD.collectable})}`]
-                }), (0, SD.jsx)(zp, {
-                  done: iD.delivered,
-                  of: iD.wanted
+                }), (0, cU.jsxs)("small", {
+                  children: [(0, cU.jsx)(St, {
+                    amount: EU.pricePerItem
+                  }), " ", RU("smpShop:each"), EU.collectable > 0 && ` \xb7 ${RU("smpShop:readyCount",{count:EU.collectable})}`]
+                }), (0, cU.jsx)(vp, {
+                  done: EU.delivered,
+                  of: EU.wanted
                 })]
-              }), iD.collectable > 0 ? (0, SD.jsx)(oD.o, {
-                loading: fD,
+              }), EU.collectable > 0 ? (0, cU.jsx)(QU.j, {
+                loading: PU,
                 onClick: () => {
-                  cD.act(ID)
+                  gU.act(tU)
                 },
-                children: CD("smpShop:collectCount", {
-                  count: iD.collectable
+                children: RU("smpShop:collectCount", {
+                  count: EU.collectable
                 })
-              }) : (0, SD.jsx)(oD.J, {
-                loading: fD,
+              }) : (0, cU.jsx)(QU.E, {
+                loading: PU,
                 onClick: () => {
-                  cD.act(ID)
+                  gU.act(tU)
                 },
-                children: CD("smpShop:cancel")
+                children: RU("smpShop:cancel")
               })]
-            }, ID)
+            }, tU)
           }))
         })
       })
     }
-    const Tp = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
-      Gp = {
+    const sp = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
+      yp = {
         sell: "coins",
         market: "store",
         collect: "backpack",
@@ -4284,764 +4284,764 @@ export const modules = {
         myOrders: "location-check"
       };
 
-    function Rp(DD, CD) {
-      let cD = !1;
-      const ID = {};
-      for (const pD in DD) CD(pD, DD[pD]) ? ID[pD] = DD[pD] : cD = !0;
-      return cD ? ID : DD
+    function kp(UU, RU) {
+      let gU = !1;
+      const tU = {};
+      for (const pU in UU) RU(pU, UU[pU]) ? tU[pU] = UU[pU] : gU = !0;
+      return gU ? tU : UU
     }
 
-    function kp(DD) {
-      var CD, cD, pD, QD;
+    function Fp(UU) {
+      var RU, gU, pU, qU;
       const {
-        show: wD,
-        shopInfo: BD,
-        selectedCategoryKey: yD
-      } = DD, {
-        t: MD
-      } = (0, fD.F)(), tD = null !== yD && void 0 !== yD ? yD : "", ZD = rI(BD, tD), oD = null === (CD = BD[tD]) || void 0 === CD ? void 0 : CD.items, vD = null !== ZD, [ND, gD] = (0, ID.useState)({}), [XD, mD] = (0, ID.useState)([]), [nD, OD] = (0, ID.useState)(!1), [PD, HD] = (0, ID.useState)(null), [, UD] = (0, ID.useState)(0), xD = (0, ID.useRef)(0), qD = (0, ID.useRef)({}), JD = (0, ID.useRef)({
-        items: oD,
-        pending: ND,
-        shopInfo: BD,
-        active: vD,
-        canAfford: DD.canAfford,
-        buy: DD.buy
+        show: KU,
+        shopInfo: GU,
+        selectedCategoryKey: jU
+      } = UU, {
+        t: uU
+      } = (0, PU.B)(), CU = null !== jU && void 0 !== jU ? jU : "", hU = lt(GU, CU), QU = null === (RU = GU[CU]) || void 0 === RU ? void 0 : RU.items, eU = null !== hU, [WU, fU] = (0, tU.useState)({}), [xU, mU] = (0, tU.useState)([]), [IU, JU] = (0, tU.useState)(!1), [wU, nU] = (0, tU.useState)(null), [, bU] = (0, tU.useState)(0), oU = (0, tU.useRef)(0), ZU = (0, tU.useRef)({}), aU = (0, tU.useRef)({
+        items: QU,
+        pending: WU,
+        shopInfo: GU,
+        active: eU,
+        canAfford: UU.canAfford,
+        buy: UU.buy
       });
-      JD.current = {
-        items: oD,
-        pending: ND,
-        shopInfo: BD,
-        active: vD,
-        canAfford: DD.canAfford,
-        buy: DD.buy
+      aU.current = {
+        items: QU,
+        pending: WU,
+        shopInfo: GU,
+        active: eU,
+        canAfford: UU.canAfford,
+        buy: UU.buy
       };
-      const KD = (0, ID.useCallback)((DD => {
-        xD.current++;
-        const CD = xD.current;
-        mD((cD => [{
-          id: CD,
-          text: DD
-        }, ...cD].slice(0, 8))), HD(CD)
+      const YU = (0, tU.useCallback)((UU => {
+        oU.current++;
+        const RU = oU.current;
+        mU((gU => [{
+          id: RU,
+          text: UU
+        }, ...gU].slice(0, 8))), nU(RU)
       }), []);
-      (0, ID.useEffect)((() => {
-        if (null === PD) return;
-        const DD = setTimeout((() => {
-          HD(null)
+      (0, tU.useEffect)((() => {
+        if (null === wU) return;
+        const UU = setTimeout((() => {
+          nU(null)
         }), 3e3);
         return () => {
-          clearTimeout(DD)
+          clearTimeout(UU)
         }
-      }), [PD]), (0, ID.useEffect)((() => {
-        const CD = DD.message;
-        if (!CD) return;
+      }), [wU]), (0, tU.useEffect)((() => {
+        const RU = UU.message;
+        if (!RU) return;
         const {
-          shopInfo: cD,
-          active: ID,
-          items: pD
-        } = JD.current, iD = null !== CD.categoryKey ? null !== rI(cD, CD.categoryKey) : ID;
-        (iD || ID) && KD(CD.text), iD && gD((DD => Rp(DD, (DD => {
-          var CD, cD;
-          return !Tp.has(null === pD || void 0 === pD || null === (CD = pD[DD]) || void 0 === CD || null === (cD = CD.smp) || void 0 === cD ? void 0 : cD.kind)
+          shopInfo: gU,
+          active: tU,
+          items: pU
+        } = aU.current, EU = null !== RU.categoryKey ? null !== lt(gU, RU.categoryKey) : tU;
+        (EU || tU) && YU(RU.text), EU && fU((UU => kp(UU, (UU => {
+          var RU, gU;
+          return !sp.has(null === pU || void 0 === pU || null === (RU = pU[UU]) || void 0 === RU || null === (gU = RU.smp) || void 0 === gU ? void 0 : gU.kind)
         }))))
-      }), [DD.message, KD]), (0, ID.useEffect)((() => {
-        gD((DD => Rp(DD, ((DD, CD) => Qp(null === oD || void 0 === oD ? void 0 : oD[DD]) === CD.snapshot))))
-      }), [BD, oD]);
-      const aD = Object.keys(ND).length > 0;
-      (0, ID.useEffect)((() => {
-        if (!aD) return;
-        const DD = setInterval((() => {
-          UD((DD => DD + 1));
-          const DD = Date.now(),
+      }), [UU.message, YU]), (0, tU.useEffect)((() => {
+        fU((UU => kp(UU, ((UU, RU) => Kp(null === QU || void 0 === QU ? void 0 : QU[UU]) === RU.snapshot))))
+      }), [GU, QU]);
+      const BU = Object.keys(WU).length > 0;
+      (0, tU.useEffect)((() => {
+        if (!BU) return;
+        const UU = setInterval((() => {
+          bU((UU => UU + 1));
+          const UU = Date.now(),
             {
-              pending: CD,
-              items: cD
-            } = JD.current,
-            ID = Object.keys(CD).filter((cD => DD - CD[cD].at >= 12e3));
-          if (0 === ID.length) return;
-          const pD = ID.some((DD => {
-            var ID, pD;
-            return "search" !== (null === cD || void 0 === cD || null === (ID = cD[DD]) || void 0 === ID || null === (pD = ID.smp) || void 0 === pD ? void 0 : pD.kind) || CD[DD].resend
+              pending: RU,
+              items: gU
+            } = aU.current,
+            tU = Object.keys(RU).filter((gU => UU - RU[gU].at >= 12e3));
+          if (0 === tU.length) return;
+          const pU = tU.some((UU => {
+            var tU, pU;
+            return "search" !== (null === gU || void 0 === gU || null === (tU = gU[UU]) || void 0 === tU || null === (pU = tU.smp) || void 0 === pU ? void 0 : pU.kind) || RU[UU].resend
           }));
-          for (const iD of ID) qD.current[iD] = DD;
-          gD((DD => Rp(DD, (DD => !ID.includes(DD))))), pD && KD(MD("smpShop:noAnswer"))
+          for (const EU of tU) ZU.current[EU] = UU;
+          fU((UU => kp(UU, (UU => !tU.includes(UU))))), pU && YU(uU("smpShop:noAnswer"))
         }), 500);
         return () => {
-          clearInterval(DD)
+          clearInterval(UU)
         }
-      }), [aD]), (0, ID.useEffect)((() => {
-        gD({})
-      }), [tD]), (0, ID.useEffect)((() => {
-        wD || OD(!1)
-      }), [wD]);
-      const VD = (0, ID.useCallback)((function(DD, CD) {
-          let cD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      }), [BU]), (0, tU.useEffect)((() => {
+        fU({})
+      }), [CU]), (0, tU.useEffect)((() => {
+        KU || JU(!1)
+      }), [KU]);
+      const VU = (0, tU.useCallback)((function(UU, RU) {
+          let gU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
           const {
-            items: ID,
-            pending: pD,
-            canAfford: iD,
-            buy: fD
-          } = JD.current, bD = null === ID || void 0 === ID ? void 0 : ID[DD];
-          if (!bD || DD in pD || !1 === bD.canBuy) return !1;
-          if (!iD(bD, (0, mI.c)(bD, CD))) return !1;
-          fD(DD, bD, CD);
-          const QD = {
-            snapshot: Qp(bD),
+            items: tU,
+            pending: pU,
+            canAfford: EU,
+            buy: PU
+          } = aU.current, TU = null === tU || void 0 === tU ? void 0 : tU[UU];
+          if (!TU || UU in pU || !1 === TU.canBuy) return !1;
+          if (!EU(TU, (0, mt.e)(TU, RU))) return !1;
+          PU(UU, TU, RU);
+          const qU = {
+            snapshot: Kp(TU),
             at: Date.now(),
-            resend: cD
+            resend: gU
           };
-          return JD.current.pending = {
-            ...JD.current.pending,
-            [DD]: QD
-          }, gD((CD => ({
-            ...CD,
-            [DD]: QD
+          return aU.current.pending = {
+            ...aU.current.pending,
+            [UU]: qU
+          }, fU((RU => ({
+            ...RU,
+            [UU]: qU
           }))), !0
         }), []),
-        zD = (0, ID.useMemo)((() => ({
-          shopInfo: BD,
-          categoryKey: tD,
-          canAfford: DD.canAfford,
-          isPending: DD => DD in ND,
-          gaveUpAt: DD => {
-            var CD;
-            return null !== (CD = qD.current[DD]) && void 0 !== CD ? CD : 0
+        rU = (0, tU.useMemo)((() => ({
+          shopInfo: GU,
+          categoryKey: CU,
+          canAfford: UU.canAfford,
+          isPending: UU => UU in WU,
+          gaveUpAt: UU => {
+            var RU;
+            return null !== (RU = ZU.current[UU]) && void 0 !== RU ? RU : 0
           },
-          act: VD,
-          notify: KD
-        })), [BD, tD, DD.canAfford, ND, VD, KD]),
-        jD = Math.min(...Object.values(ND).map((DD => DD.at))),
-        lD = aD && Date.now() - jD > 1500,
-        LD = XD.length > 1,
-        TD = null !== (cD = null === (pD = BD[tD]) || void 0 === pD ? void 0 : pD.customTitle) && void 0 !== cD ? cD : tD,
-        GD = null === (QD = BD[tD]) || void 0 === QD ? void 0 : QD.description;
-      let RD = null;
-      return "market" === ZD ? RD = (0, SD.jsx)(xp, {}) : "sell" === ZD ? RD = (0, SD.jsx)(Kp, {}) : "collect" === ZD ? RD = (0, SD.jsx)(Vp, {}) : "orders" === ZD ? RD = (0, SD.jsx)(lp, {}) : "myOrders" === ZD && (RD = (0, SD.jsx)(Lp, {})), (0, SD.jsx)(wp.Provider, {
-        value: zD,
-        children: (0, SD.jsx)("div", {
+          act: VU,
+          notify: YU
+        })), [GU, CU, UU.canAfford, WU, VU, YU]),
+        XU = Math.min(...Object.values(WU).map((UU => UU.at))),
+        vU = BU && Date.now() - XU > 1500,
+        dU = xU.length > 1,
+        HU = null !== (gU = null === (pU = GU[CU]) || void 0 === pU ? void 0 : pU.customTitle) && void 0 !== gU ? gU : CU,
+        SU = null === (qU = GU[CU]) || void 0 === qU ? void 0 : qU.description;
+      let sU = null;
+      return "market" === hU ? sU = (0, cU.jsx)(ap, {}) : "sell" === hU ? sU = (0, cU.jsx)(Vp, {}) : "collect" === hU ? sU = (0, cU.jsx)(Xp, {}) : "orders" === hU ? sU = (0, cU.jsx)(Hp, {}) : "myOrders" === hU && (sU = (0, cU.jsx)(Sp, {})), (0, cU.jsx)(cp.Provider, {
+        value: rU,
+        children: (0, cU.jsx)("div", {
           className: "SmpShopHost",
-          hidden: !vD,
-          children: (0, SD.jsxs)("div", {
+          hidden: !eU,
+          children: (0, cU.jsxs)("div", {
             className: "SmpShop",
-            children: [(0, SD.jsx)("header", {
+            children: [(0, cU.jsx)("header", {
               className: "SmpHeader",
-              children: (0, SD.jsxs)("div", {
+              children: (0, cU.jsxs)("div", {
                 className: "SmpHeaderTitle",
-                children: [(0, SD.jsxs)("h2", {
-                  children: [ZD && (0, SD.jsx)(bD.c, {
-                    name: Gp[ZD]
-                  }), MD(TD)]
-                }), GD && (0, SD.jsx)("p", {
-                  children: (0, SD.jsx)(HI.c, {
-                    text: GD
+                children: [(0, cU.jsxs)("h2", {
+                  children: [hU && (0, cU.jsx)(TU.c, {
+                    name: yp[hU]
+                  }), uU(HU)]
+                }), SU && (0, cU.jsx)("p", {
+                  children: (0, cU.jsx)(nt.e, {
+                    text: SU
                   })
                 })]
               })
-            }), (0, SD.jsx)("main", {
+            }), (0, cU.jsx)("main", {
               className: "SmpBody",
               "data-pad-initial-area": !0,
-              children: wD && RD
-            }), (0, SD.jsxs)("button", {
+              children: KU && sU
+            }), (0, cU.jsxs)("button", {
               type: "button",
-              className: iD()("SmpStatus", {
-                SmpStatusWaiting: aD,
-                SmpStatusFresh: !aD && null !== PD,
-                SmpStatusHasHistory: LD
+              className: EU()("SmpStatus", {
+                SmpStatusWaiting: BU,
+                SmpStatusFresh: !BU && null !== wU,
+                SmpStatusHasHistory: dU
               }),
               "aria-live": "polite",
-              "aria-expanded": LD ? nD : void 0,
+              "aria-expanded": dU ? IU : void 0,
               onClick: () => {
-                LD && OD((DD => !DD))
+                dU && JU((UU => !UU))
               },
-              children: [aD ? (0, SD.jsxs)("span", {
+              children: [BU ? (0, cU.jsxs)("span", {
                 className: "SmpStatusText",
-                children: [(0, SD.jsx)(YI, {}), MD(lD ? "smpShop:slowConnection" : "smpShop:waiting")]
-              }) : XD[0] ? (0, SD.jsx)("span", {
+                children: [(0, cU.jsx)(it, {}), uU(vU ? "smpShop:slowConnection" : "smpShop:waiting")]
+              }) : xU[0] ? (0, cU.jsx)("span", {
                 className: "SmpStatusText",
-                children: (0, SD.jsx)(HI.c, {
-                  text: XD[0].text
+                children: (0, cU.jsx)(nt.e, {
+                  text: xU[0].text
                 })
-              }, XD[0].id) : (0, SD.jsx)("span", {
+              }, xU[0].id) : (0, cU.jsx)("span", {
                 className: "SmpStatusText SmpMuted",
-                children: MD("smpShop:ready")
-              }), LD && (0, SD.jsx)("small", {
-                children: MD("smpShop:recentMessages", {
-                  count: XD.length
+                children: uU("smpShop:ready")
+              }), dU && (0, cU.jsx)("small", {
+                children: uU("smpShop:recentMessages", {
+                  count: xU.length
                 })
               })]
-            }), nD && LD && (0, SD.jsx)("div", {
+            }), IU && dU && (0, cU.jsx)("div", {
               className: "SmpStatusHistory",
-              children: XD.map((DD => (0, SD.jsx)("div", {
-                children: (0, SD.jsx)(HI.c, {
-                  text: DD.text
+              children: xU.map((UU => (0, cU.jsx)("div", {
+                children: (0, cU.jsx)(nt.e, {
+                  text: UU.text
                 })
-              }, DD.id)))
+              }, UU.id)))
             })]
           })
         })
       })
     }
-    class dp {
-      constructor(DD) {
-        this.info = DD
+    class ip {
+      constructor(UU) {
+        this.info = UU
       }
-      static fromShopInfo(DD) {
-        const CD = {};
-        for (const cD in DD) {
-          const ID = !0 === DD[cD].redDot && !0 !== DD[cD].forceRemoveRedDot;
-          CD[cD] = {
-            redDot: ID,
+      static fromShopInfo(UU) {
+        const RU = {};
+        for (const gU in UU) {
+          const tU = !0 === UU[gU].redDot && !0 !== UU[gU].forceRemoveRedDot;
+          RU[gU] = {
+            redDot: tU,
             items: {}
           };
-          for (const pD in DD[cD].items) {
-            const ID = DD[cD].items[pD],
-              iD = !0 === ID.redDot && !0 !== ID.forceRemoveRedDot;
-            CD[cD].items[pD] = {
-              redDot: iD
+          for (const pU in UU[gU].items) {
+            const tU = UU[gU].items[pU],
+              EU = !0 === tU.redDot && !0 !== tU.forceRemoveRedDot;
+            RU[gU].items[pU] = {
+              redDot: EU
             }
           }
         }
-        return new dp(CD)
+        return new ip(RU)
       }
       anyCategoryHasRedDots() {
-        for (const DD in this.info)
-          if (this.categoryHasRedDot(DD)) return !0;
+        for (const UU in this.info)
+          if (this.categoryHasRedDot(UU)) return !0;
         return !1
       }
-      doesCategoryExist(DD) {
-        return !(0, dC.C)(this.info[DD])
+      doesCategoryExist(UU) {
+        return !(0, kR.E)(this.info[UU])
       }
-      categoryHasRedDot(DD) {
-        return !0 === this.info[DD].redDot
+      categoryHasRedDot(UU) {
+        return !0 === this.info[UU].redDot
       }
-      updateCategoryRedDot(DD, CD) {
-        this.info[DD].redDot = CD
+      updateCategoryRedDot(UU, RU) {
+        this.info[UU].redDot = RU
       }
-      doesItemExist(DD, CD) {
-        return this.doesCategoryExist(DD) && !(0, dC.C)(this.info[DD].items[CD])
+      doesItemExist(UU, RU) {
+        return this.doesCategoryExist(UU) && !(0, kR.E)(this.info[UU].items[RU])
       }
-      itemHasRedDot(DD, CD) {
-        return !0 === this.info[DD].items[CD].redDot
+      itemHasRedDot(UU, RU) {
+        return !0 === this.info[UU].items[RU].redDot
       }
-      updateItemRedDot(DD, CD, cD) {
-        this.info[DD].items[CD].redDot = cD
+      updateItemRedDot(UU, RU, gU) {
+        this.info[UU].items[RU].redDot = gU
       }
       shallowCopy() {
-        return new dp(this.info)
+        return new ip(this.info)
       }
     }
 
-    function Yp(DD, CD) {
-      return `${DD}\x1f${CD}`
+    function Ap(UU, RU) {
+      return `${UU}\x1f${RU}`
     }
 
-    function Wp(DD, CD) {
-      return !(0, dC.C)(CD) && !(0, dC.C)(DD) && CD in DD
+    function zp(UU, RU) {
+      return !(0, kR.E)(RU) && !(0, kR.E)(UU) && RU in UU
     }
-    const sp = (0, ID.memo)((function(DD) {
-      var CD, cD;
+    const Mp = (0, tU.memo)((function(UU) {
+      var RU, gU;
       let {
-        show: pD
-      } = DD;
-      const fD = (0, hc.g)("players", Fp),
-        bD = (0, hc.g)("players", Di),
-        [wD, yD] = (0, ID.useState)({
+        show: pU
+      } = UU;
+      const PU = (0, Lg.h)("players", UE),
+        TU = (0, Lg.h)("players", RE),
+        [KU, jU] = (0, tU.useState)({
           shopInfo: {},
           userInputsPerItem: {},
-          redDotInfo: dp.fromShopInfo({}),
+          redDotInfo: ip.fromShopInfo({}),
           currencyAmounts: {},
           selectedCategoryKey: null,
           onBoughtInfo: null,
           awaitingPurchase: !1
         }),
-        MD = (0, ID.useRef)(""),
-        ZD = (0, ID.useRef)(null),
-        vD = (0, ID.useRef)(null),
-        gD = (0, ID.useRef)(0),
-        XD = (0, ID.useRef)(void 0),
-        mD = (0, ID.useRef)(null),
-        nD = (0, ID.useRef)(wD),
-        OD = wD.redDotInfo.anyCategoryHasRedDots(),
-        [HD, UD] = (0, ID.useState)(null),
-        qD = (0, ID.useRef)(!1);
-      let JD = !1,
-        KD = 0,
-        aD = 0;
-      if (wD.currencyAmounts) {
-        for (const DD in wD.currencyAmounts) {
-          var VD;
-          const CD = wD.currencyAmounts[DD];
-          CD.hidden || (KD++, (null === (VD = CD.subtext) || void 0 === VD ? void 0 : VD.length) > 0 && aD++)
+        uU = (0, tU.useRef)(""),
+        hU = (0, tU.useRef)(null),
+        eU = (0, tU.useRef)(null),
+        fU = (0, tU.useRef)(0),
+        xU = (0, tU.useRef)(void 0),
+        mU = (0, tU.useRef)(null),
+        IU = (0, tU.useRef)(KU),
+        JU = KU.redDotInfo.anyCategoryHasRedDots(),
+        [nU, bU] = (0, tU.useState)(null),
+        ZU = (0, tU.useRef)(!1);
+      let aU = !1,
+        YU = 0,
+        BU = 0;
+      if (KU.currencyAmounts) {
+        for (const UU in KU.currencyAmounts) {
+          var VU;
+          const RU = KU.currencyAmounts[UU];
+          RU.hidden || (YU++, (null === (VU = RU.subtext) || void 0 === VU ? void 0 : VU.length) > 0 && BU++)
         }
-        JD = KD + aD > 4
-      }(0, ID.useEffect)((() => {
-        YC.i.Uo("showShopIconRedDot", OD, !0)
-      }), [OD]), (0, ID.useEffect)((() => {
-        ND.gameBridge.send("setShopOpen", pD), pD || (clearTimeout(XD.current), yD((DD => DD.awaitingPurchase ? {
-          ...DD,
+        aU = YU + BU > 4
+      }(0, tU.useEffect)((() => {
+        FR.p.yh("showShopIconRedDot", JU, !0)
+      }), [JU]), (0, tU.useEffect)((() => {
+        WU.gameBridge.send("setShopOpen", pU), pU || (clearTimeout(xU.current), jU((UU => UU.awaitingPurchase ? {
+          ...UU,
           awaitingPurchase: !1
-        } : DD)))
-      }), [pD]), (0, ID.useEffect)((() => () => {
-        ND.gameBridge.send("setShopOpen", !1), clearTimeout(XD.current)
-      }), []), (0, ID.useEffect)((() => {
-        nD.current = wD
-      }), [wD]), (0, ID.useEffect)((() => {
-        if (null === HD) return;
-        return (0, JI.d)("pointerdown", (DD => {
-          const CD = DD.target;
-          null !== CD && void 0 !== CD && CD.closest(".ShopItem") || UD(null)
+        } : UU)))
+      }), [pU]), (0, tU.useEffect)((() => () => {
+        WU.gameBridge.send("setShopOpen", !1), clearTimeout(xU.current)
+      }), []), (0, tU.useEffect)((() => {
+        IU.current = KU
+      }), [KU]), (0, tU.useEffect)((() => {
+        if (null === nU) return;
+        return (0, Yt.e)("pointerdown", (UU => {
+          const RU = UU.target;
+          null !== RU && void 0 !== RU && RU.closest(".ShopItem") || bU(null)
         }))
-      }), [HD]);
-      const zD = DD => {
-          yD((CD => ({
-            ...CD,
-            ...DD
+      }), [nU]);
+      const rU = UU => {
+          jU((RU => ({
+            ...RU,
+            ...UU
           })))
         },
-        jD = DD => {
-          var CD;
-          clearTimeout(null === (CD = wD.onBoughtInfo) || void 0 === CD ? void 0 : CD.timeout);
-          const cD = setTimeout((() => {
-            zD({
+        XU = UU => {
+          var RU;
+          clearTimeout(null === (RU = KU.onBoughtInfo) || void 0 === RU ? void 0 : RU.timeout);
+          const gU = setTimeout((() => {
+            rU({
               onBoughtInfo: null
             })
           }), 3e3);
-          MD.current = DD, zD({
+          uU.current = UU, rU({
             onBoughtInfo: {
-              text: DD,
-              timeout: cD,
-              categoryKey: ZD.current
+              text: UU,
+              timeout: gU,
+              categoryKey: hU.current
             }
           })
         },
-        lD = DD => {
+        vU = UU => {
           const {
-            shopInfo: CD,
-            userInputsPerItem: cD,
-            redDotInfo: ID,
-            autoSelectCategory: iD
-          } = function(DD, CD, cD, ID, pD, iD) {
-            if ((0, dC.C)(DD) || 0 === Object.keys(DD).length) return {
+            shopInfo: RU,
+            userInputsPerItem: gU,
+            redDotInfo: tU,
+            autoSelectCategory: EU
+          } = function(UU, RU, gU, tU, pU, EU) {
+            if ((0, kR.E)(UU) || 0 === Object.keys(UU).length) return {
               shopInfo: {},
               userInputsPerItem: {},
-              redDotInfo: dp.fromShopInfo({}),
+              redDotInfo: ip.fromShopInfo({}),
               autoSelectCategory: null
             };
-            const fD = xD.j[xD.p].adConfig.showRewardedAds,
-              bD = {};
-            let QD = null;
-            for (const oD in DD) {
-              const CD = DD[oD],
-                cD = {};
-              let ID = !1;
-              for (const DD in CD.items) {
-                const pD = CD.items[DD];
-                (0, mI.i)(pD, fD) && (cD[DD] = pD, ID = !0)
+            const PU = oU.p[oU.t].adConfig.showRewardedAds,
+              TU = {};
+            let qU = null;
+            for (const QU in UU) {
+              const RU = UU[QU],
+                gU = {};
+              let tU = !1;
+              for (const UU in RU.items) {
+                const pU = RU.items[UU];
+                (0, mt.l)(pU, PU) && (gU[UU] = pU, tU = !0)
               }
-              ID && (bD[oD] = {
-                ...CD,
-                items: cD
-              }, !0 === CD.autoSelectCategory && (QD = oD))
+              tU && (TU[QU] = {
+                ...RU,
+                items: gU
+              }, !0 === RU.autoSelectCategory && (qU = QU))
             }
-            const wD = {},
-              SD = (DD, CD, ID, fD) => {
-                var bD, QD;
-                const SD = Yp(DD, CD),
-                  BD = null !== (bD = cD[SD]) && void 0 !== bD ? bD : cD[CD];
-                if (null !== (QD = fD.userInput) && void 0 !== QD && QD.type) switch (fD.userInput.type) {
+            const KU = {},
+              cU = (UU, RU, tU, PU) => {
+                var TU, qU;
+                const cU = Ap(UU, RU),
+                  GU = null !== (TU = gU[cU]) && void 0 !== TU ? TU : gU[RU];
+                if (null !== (qU = PU.userInput) && void 0 !== qU && qU.type) switch (PU.userInput.type) {
                   case "dropdown": {
-                    var yD;
-                    const DD = !BD || !fD.userInput.dropdownOptions.some((DD => (0, mI.d)(DD) === BD)),
-                      CD = fD.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === ID || void 0 === ID || null === (yD = ID.userInput) || void 0 === yD ? void 0 : yD.type) || JSON.stringify(ID.userInput.dropdownOptions) !== JSON.stringify(fD.userInput.dropdownOptions)),
-                      cD = fD.userInput,
-                      pD = !(0, dC.C)(cD.initialValue) && cD.dropdownOptions.some((DD => (0, mI.d)(DD) === cD.initialValue));
-                    var MD;
-                    return void(DD || CD ? pD ? wD[SD] = null !== (MD = fD.userInput.initialValue) && void 0 !== MD ? MD : null : fD.userInput.dropdownOptions.length > 0 ? wD[SD] = (0, mI.d)(fD.userInput.dropdownOptions[0]) : wD[SD] = null : wD[SD] = BD)
+                    var jU;
+                    const UU = !GU || !PU.userInput.dropdownOptions.some((UU => (0, mt.h)(UU) === GU)),
+                      RU = PU.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === tU || void 0 === tU || null === (jU = tU.userInput) || void 0 === jU ? void 0 : jU.type) || JSON.stringify(tU.userInput.dropdownOptions) !== JSON.stringify(PU.userInput.dropdownOptions)),
+                      gU = PU.userInput,
+                      pU = !(0, kR.E)(gU.initialValue) && gU.dropdownOptions.some((UU => (0, mt.h)(UU) === gU.initialValue));
+                    var uU;
+                    return void(UU || RU ? pU ? KU[cU] = null !== (uU = PU.userInput.initialValue) && void 0 !== uU ? uU : null : PU.userInput.dropdownOptions.length > 0 ? KU[cU] = (0, mt.h)(PU.userInput.dropdownOptions[0]) : KU[cU] = null : KU[cU] = GU)
                   }
                   case "text":
                   case "number":
-                    var tD, ZD, oD;
-                    return void((null === ID || void 0 === ID ? void 0 : ID.userInput) !== fD.userInput ? wD[SD] = null !== (tD = null !== (ZD = fD.userInput.initialValue) && void 0 !== ZD ? ZD : BD) && void 0 !== tD ? tD : "" : wD[SD] = null !== (oD = null !== BD && void 0 !== BD ? BD : fD.userInput.initialValue) && void 0 !== oD ? oD : "");
+                    var CU, hU, QU;
+                    return void((null === tU || void 0 === tU ? void 0 : tU.userInput) !== PU.userInput ? KU[cU] = null !== (CU = null !== (hU = PU.userInput.initialValue) && void 0 !== hU ? hU : GU) && void 0 !== CU ? CU : "" : KU[cU] = null !== (QU = null !== GU && void 0 !== GU ? GU : PU.userInput.initialValue) && void 0 !== QU ? QU : "");
                   case "color":
-                    var vD, ND, gD;
-                    return void((null === ID || void 0 === ID ? void 0 : ID.userInput) !== fD.userInput ? wD[SD] = null !== (vD = null !== (ND = fD.userInput.initialValue) && void 0 !== ND ? ND : BD) && void 0 !== vD ? vD : "#000000" : wD[SD] = null !== (gD = null !== BD && void 0 !== BD ? BD : fD.userInput.initialValue) && void 0 !== gD ? gD : "#000000");
+                    var eU, WU, fU;
+                    return void((null === tU || void 0 === tU ? void 0 : tU.userInput) !== PU.userInput ? KU[cU] = null !== (eU = null !== (WU = PU.userInput.initialValue) && void 0 !== WU ? WU : GU) && void 0 !== eU ? eU : "#000000" : KU[cU] = null !== (fU = null !== GU && void 0 !== GU ? GU : PU.userInput.initialValue) && void 0 !== fU ? fU : "#000000");
                   case "player": {
-                    const DD = (0, mI.f)(pD, iD, fD.userInput);
-                    return void(BD && DD.includes(BD) ? wD[SD] = BD : wD[SD] = DD.length > 0 ? DD[0] : null)
+                    const UU = (0, mt.i)(pU, EU, PU.userInput);
+                    return void(GU && UU.includes(GU) ? KU[cU] = GU : KU[cU] = UU.length > 0 ? UU[0] : null)
                   }
                 }
               };
-            for (const oD in bD)
-              for (const DD in bD[oD].items) {
-                var BD;
-                const cD = bD[oD].items[DD];
-                SD(oD, DD, null === (BD = CD[oD]) || void 0 === BD ? void 0 : BD.items[DD], cD)
+            for (const QU in TU)
+              for (const UU in TU[QU].items) {
+                var GU;
+                const gU = TU[QU].items[UU];
+                cU(QU, UU, null === (GU = RU[QU]) || void 0 === GU ? void 0 : GU.items[UU], gU)
               }
-            const yD = dp.fromShopInfo(bD);
-            for (const oD in bD) {
-              var MD;
-              if (ID.doesCategoryExist(oD)) {
-                (null === (MD = CD[oD]) || void 0 === MD ? void 0 : MD.redDot) === bD[oD].redDot && yD.updateCategoryRedDot(oD, ID.categoryHasRedDot(oD));
-                for (const DD in bD[oD].items) {
-                  var tD, ZD;
-                  ID.doesItemExist(oD, DD) && (null === (tD = CD[oD]) || void 0 === tD || null === (ZD = tD.items[DD]) || void 0 === ZD ? void 0 : ZD.redDot) === bD[oD].items[DD].redDot && yD.updateItemRedDot(oD, DD, ID.itemHasRedDot(oD, DD))
+            const jU = ip.fromShopInfo(TU);
+            for (const QU in TU) {
+              var uU;
+              if (tU.doesCategoryExist(QU)) {
+                (null === (uU = RU[QU]) || void 0 === uU ? void 0 : uU.redDot) === TU[QU].redDot && jU.updateCategoryRedDot(QU, tU.categoryHasRedDot(QU));
+                for (const UU in TU[QU].items) {
+                  var CU, hU;
+                  tU.doesItemExist(QU, UU) && (null === (CU = RU[QU]) || void 0 === CU || null === (hU = CU.items[UU]) || void 0 === hU ? void 0 : hU.redDot) === TU[QU].items[UU].redDot && jU.updateItemRedDot(QU, UU, tU.itemHasRedDot(QU, UU))
                 }
               }
             }
             return {
-              shopInfo: bD,
-              userInputsPerItem: wD,
-              redDotInfo: yD,
-              autoSelectCategory: QD
+              shopInfo: TU,
+              userInputsPerItem: KU,
+              redDotInfo: jU,
+              autoSelectCategory: qU
             }
-          }(DD, wD.shopInfo, wD.userInputsPerItem, wD.redDotInfo, fD, bD), QD = {
-            shopInfo: CD,
-            userInputsPerItem: cD,
-            redDotInfo: ID
+          }(UU, KU.shopInfo, KU.userInputsPerItem, KU.redDotInfo, PU, TU), qU = {
+            shopInfo: RU,
+            userInputsPerItem: gU,
+            redDotInfo: tU
           };
-          if (null === iD || pD)
-            if (CD[wD.selectedCategoryKey]) QD.selectedCategoryKey = wD.selectedCategoryKey;
+          if (null === EU || pU)
+            if (RU[KU.selectedCategoryKey]) qU.selectedCategoryKey = KU.selectedCategoryKey;
             else {
-              const DD = aI(CD);
-              QD.selectedCategoryKey = DD.length > 0 ? DD[0] : null
+              const UU = Vt(RU);
+              qU.selectedCategoryKey = UU.length > 0 ? UU[0] : null
             }
-          else QD.selectedCategoryKey = iD;
-          return 0 === Object.keys(CD).length && pD && PD.d.set({
+          else qU.selectedCategoryKey = EU;
+          return 0 === Object.keys(RU).length && pU && wU.b.set({
             openEverythingMenuName: null
-          }), QD
+          }), qU
         },
-        LD = (DD, CD, cD) => {
-          const ID = wD.selectedCategoryKey,
-            pD = Yp(ID, DD),
-            iD = null !== cD && void 0 !== cD ? cD : wD.userInputsPerItem[pD],
-            fD = {
-              categoryKey: ID,
-              itemKey: DD,
-              userInput: iD
+        dU = (UU, RU, gU) => {
+          const tU = KU.selectedCategoryKey,
+            pU = Ap(tU, UU),
+            EU = null !== gU && void 0 !== gU ? gU : KU.userInputsPerItem[pU],
+            PU = {
+              categoryKey: tU,
+              itemKey: UU,
+              userInput: EU
             };
-          if (ZD.current = ID, CD.isRewardedAd) {
-            if (Date.now() - gD.current < 5e3) return;
-            (0, iC.Z)((() => {
-              var cD, ID, iD;
+          if (hU.current = tU, RU.isRewardedAd) {
+            if (Date.now() - fU.current < 5e3) return;
+            (0, ER.fb)((() => {
+              var gU, tU, EU;
               console.log("bought rewarded ad");
-              const bD = fD.categoryKey ? null === (cD = nD.current.shopInfo[fD.categoryKey]) || void 0 === cD ? void 0 : cD.items[DD] : null;
-              if (!bD || !bD.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
-              (null === (ID = CD.userInput) || void 0 === ID ? void 0 : ID.type) === (null === bD || void 0 === bD || null === (iD = bD.userInput) || void 0 === iD ? void 0 : iD.type) ? (fD.userInput = nD.current.userInputsPerItem[pD], ND.gameBridge.send("buyShopItem", fD), CD.onBoughtMessage && jD(CD.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
-            })), gD.current = Date.now()
+              const TU = PU.categoryKey ? null === (gU = IU.current.shopInfo[PU.categoryKey]) || void 0 === gU ? void 0 : gU.items[UU] : null;
+              if (!TU || !TU.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
+              (null === (tU = RU.userInput) || void 0 === tU ? void 0 : tU.type) === (null === TU || void 0 === TU || null === (EU = TU.userInput) || void 0 === EU ? void 0 : EU.type) ? (PU.userInput = IU.current.userInputsPerItem[pU], WU.gameBridge.send("buyShopItem", PU), RU.onBoughtMessage && XU(RU.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
+            })), fU.current = Date.now()
           } else {
-            ND.gameBridge.send("buyShopItem", fD), zD({
+            WU.gameBridge.send("buyShopItem", PU), rU({
               awaitingPurchase: !0
-            }), clearTimeout(XD.current), XD.current = setTimeout((() => {
-              mD.current = null, zD({
+            }), clearTimeout(xU.current), xU.current = setTimeout((() => {
+              mU.current = null, rU({
                 awaitingPurchase: !1
               })
             }), 1e3);
-            const DD = (0, mI.c)(CD, iD);
-            if (mD.current = null, !isNaN(DD) && Wp(wD.currencyAmounts, CD.currency)) {
-              0 !== DD && (mD.current = {
-                currency: CD.currency,
-                amountBefore: wD.currencyAmounts[CD.currency].amount
+            const UU = (0, mt.e)(RU, EU);
+            if (mU.current = null, !isNaN(UU) && zp(KU.currencyAmounts, RU.currency)) {
+              0 !== UU && (mU.current = {
+                currency: RU.currency,
+                amountBefore: KU.currencyAmounts[RU.currency].amount
               });
-              const cD = {
-                ...wD.currencyAmounts
+              const gU = {
+                ...KU.currencyAmounts
               };
-              cD[CD.currency].amount -= DD, zD({
-                currencyAmounts: cD
+              gU[RU.currency].amount -= UU, rU({
+                currencyAmounts: gU
               })
             }
-            CD.onBoughtMessage && jD(CD.onBoughtMessage)
+            RU.onBoughtMessage && XU(RU.onBoughtMessage)
           }
         },
-        GD = (DD, CD) => {
-          if (null === CD || !DD.shopInfo[CD]) return DD;
-          let cD = DD.redDotInfo;
-          return cD.categoryHasRedDot(CD) && (cD.updateCategoryRedDot(CD, !1), cD = cD.shallowCopy()), {
-            ...DD,
-            selectedCategoryKey: CD,
-            redDotInfo: cD
+        SU = (UU, RU) => {
+          if (null === RU || !UU.shopInfo[RU]) return UU;
+          let gU = UU.redDotInfo;
+          return gU.categoryHasRedDot(RU) && (gU.updateCategoryRedDot(RU, !1), gU = gU.shallowCopy()), {
+            ...UU,
+            selectedCategoryKey: RU,
+            redDotInfo: gU
           }
         },
-        RD = DD => {
-          yD((CD => GD(CD, DD)))
+        sU = UU => {
+          jU((RU => SU(RU, UU)))
         };
-      (0, xC.f)(KI.j, (() => {
-        yD((DD => {
-          const CD = (0, KI.m)(aI(DD.shopInfo), DD.selectedCategoryKey, (CD => (0, KI.g)(DD.shopInfo[CD].items)));
-          return CD === DD.selectedCategoryKey ? DD : GD(DD, CD)
+      (0, oR.e)(Bt.j, (() => {
+        jU((UU => {
+          const RU = (0, Bt.l)(Vt(UU.shopInfo), UU.selectedCategoryKey, (RU => (0, Bt.f)(UU.shopInfo[RU].items)));
+          return RU === UU.selectedCategoryKey ? UU : SU(UU, RU)
         }))
-      })), (0, xC.f)("showShopFromServer", (DD => {
+      })), (0, oR.e)("showShopFromServer", (UU => {
         let {
-          toggle: CD,
-          SC: cD
-        } = DD;
-        cD && RD(cD), 0 === Object.keys(wD.shopInfo).length || CD && pD ? PD.d.set({
+          toggle: RU,
+          KR: gU
+        } = UU;
+        gU && sU(gU), 0 === Object.keys(KU.shopInfo).length || RU && pU ? wU.b.set({
           openEverythingMenuName: null
-        }) : PD.d.set({
-          openEverythingMenuName: wC.q.SHOP
+        }) : wU.b.set({
+          openEverythingMenuName: KR.n.SHOP
         })
-      })), (0, xC.f)("closeShopOnDamaged", (() => {
-        pD && PD.d.set({
+      })), (0, oR.e)("closeShopOnDamaged", (() => {
+        pU && wU.b.set({
           openEverythingMenuName: null
         })
-      })), (0, xC.f)("overShopInfo", (DD => {
-        jD(DD)
-      })), (0, tD.e)("currencyAmounts", (DD => {
-        var CD;
-        const cD = mD.current;
-        cD && (null === DD || void 0 === DD || null === (CD = DD[cD.currency]) || void 0 === CD ? void 0 : CD.amount) === cD.amountBefore ? zD({
-          currencyAmounts: DD
-        }) : (mD.current = null, zD({
-          currencyAmounts: DD,
+      })), (0, oR.e)("overShopInfo", (UU => {
+        XU(UU)
+      })), (0, CU.f)("currencyAmounts", (UU => {
+        var RU;
+        const gU = mU.current;
+        gU && (null === UU || void 0 === UU || null === (RU = UU[gU.currency]) || void 0 === RU ? void 0 : RU.amount) === gU.amountBefore ? rU({
+          currencyAmounts: UU
+        }) : (mU.current = null, rU({
+          currencyAmounts: UU,
           awaitingPurchase: !1
         }))
-      })), (0, tD.e)("shopInfo", (DD => {
-        zD({
-          ...lD(DD),
+      })), (0, CU.f)("shopInfo", (UU => {
+        rU({
+          ...vU(UU),
           awaitingPurchase: !1
         })
       }));
-      const kD = (0, ID.useRef)({
-        playerIds: fD,
-        localPlayerId: bD
+      const yU = (0, tU.useRef)({
+        playerIds: PU,
+        localPlayerId: TU
       });
-      (0, ID.useEffect)((() => {
-        kD.current.playerIds === fD && kD.current.localPlayerId === bD || (kD.current = {
-          playerIds: fD,
-          localPlayerId: bD
-        }, yD((DD => {
-          const CD = lD(DD.shopInfo);
+      (0, tU.useEffect)((() => {
+        yU.current.playerIds === PU && yU.current.localPlayerId === TU || (yU.current = {
+          playerIds: PU,
+          localPlayerId: TU
+        }, jU((UU => {
+          const RU = vU(UU.shopInfo);
           return {
-            ...DD,
-            ...CD
+            ...UU,
+            ...RU
           }
         })))
-      }), [fD, bD]);
-      const dD = wD.selectedCategoryKey,
-        YD = (DD, CD) => {
-          var cD, ID;
-          return (isNaN(CD) || (0, dC.C)(DD.currency) || Wp(wD.currencyAmounts, DD.currency) && CD <= wD.currencyAmounts[DD.currency].amount) && (null === (cD = DD.canBuy) || void 0 === cD || cD) && !(null !== (ID = DD.hidden) && void 0 !== ID && ID)
+      }), [PU, TU]);
+      const kU = KU.selectedCategoryKey,
+        FU = (UU, RU) => {
+          var gU, tU;
+          return (isNaN(RU) || (0, kR.E)(UU.currency) || zp(KU.currencyAmounts, UU.currency) && RU <= KU.currencyAmounts[UU.currency].amount) && (null === (gU = UU.canBuy) || void 0 === gU || gU) && !(null !== (tU = UU.hidden) && void 0 !== tU && tU)
         },
-        WD = (DD, CD) => {
-          var cD, ID, pD;
-          const fD = Yp(dD, DD),
-            bD = wD.shopInfo[dD].items[DD],
-            BD = wD.userInputsPerItem[fD],
-            yD = (0, mI.c)(bD, BD),
-            MD = YD(bD, yD),
-            tD = bD.enchant,
-            ZD = tD ? (0, TD.tb)(null !== (cD = bD.customTitle) && void 0 !== cD ? cD : DD, {
-              colour: TD.lb[tD.tier]
-            }) : null !== (ID = bD.customTitle) && void 0 !== ID ? ID : DD,
-            vD = CD => {
-              const cD = null !== CD && void 0 !== CD ? CD : BD,
-                ID = void 0 !== CD ? (0, mI.c)(bD, CD) : yD;
-              YD(bD, ID) && null !== cD && LD(DD, bD, CD);
-              let pD = wD.redDotInfo;
-              pD.itemHasRedDot(dD, DD) && (pD.updateItemRedDot(dD, DD, !1), pD = pD.shallowCopy()), zD({
-                redDotInfo: pD
+        iU = (UU, RU) => {
+          var gU, tU, pU;
+          const PU = Ap(kU, UU),
+            TU = KU.shopInfo[kU].items[UU],
+            GU = KU.userInputsPerItem[PU],
+            jU = (0, mt.e)(TU, GU),
+            uU = FU(TU, jU),
+            CU = TU.enchant,
+            hU = CU ? (0, HU.xb)(null !== (gU = TU.customTitle) && void 0 !== gU ? gU : UU, {
+              colour: HU.sb[CU.tier]
+            }) : null !== (tU = TU.customTitle) && void 0 !== tU ? tU : UU,
+            eU = RU => {
+              const gU = null !== RU && void 0 !== RU ? RU : GU,
+                tU = void 0 !== RU ? (0, mt.e)(TU, RU) : jU;
+              FU(TU, tU) && null !== gU && dU(UU, TU, RU);
+              let pU = KU.redDotInfo;
+              pU.itemHasRedDot(kU, UU) && (pU.updateItemRedDot(kU, UU, !1), pU = pU.shallowCopy()), rU({
+                redDotInfo: pU
               })
             };
-          return (0, SD.jsxs)("div", {
-            className: iD()("ShopItem", {
-              ShopItemNoInput: !bD.userInput,
-              ShopItemNoInputCanBuy: !bD.userInput && MD,
-              ShopItemNoInputSelected: bD.isSelected,
-              ShopItemEnchant: !!tD
+          return (0, cU.jsxs)("div", {
+            className: EU()("ShopItem", {
+              ShopItemNoInput: !TU.userInput,
+              ShopItemNoInputCanBuy: !TU.userInput && uU,
+              ShopItemNoInputSelected: TU.isSelected,
+              ShopItemEnchant: !!CU
             }),
-            "data-pad-focusable": !bD.userInput || void 0,
-            "data-pad-unavailable": !bD.userInput && !MD || void 0,
-            "data-pad-repeat": null !== (pD = (0, KI.d)(bD)) && void 0 !== pD ? pD : void 0,
-            "data-pad-repeat-wait": wD.awaitingPurchase || void 0,
+            "data-pad-focusable": !TU.userInput || void 0,
+            "data-pad-unavailable": !TU.userInput && !uU || void 0,
+            "data-pad-repeat": null !== (pU = (0, Bt.c)(TU)) && void 0 !== pU ? pU : void 0,
+            "data-pad-repeat-wait": KU.awaitingPurchase || void 0,
             onClick: () => {
-              if (tD && qD.current) {
-                if (HD !== fD) return void UD(fD);
-                UD(null)
+              if (CU && ZU.current) {
+                if (nU !== PU) return void bU(PU);
+                bU(null)
               }
-              bD.userInput || vD()
+              TU.userInput || eU()
             },
-            onPointerDown: DD => {
-              tD && (qD.current = (0, OI.r)(DD))
+            onPointerDown: UU => {
+              CU && (ZU.current = (0, Jt.m)(UU))
             },
-            onPointerEnter: DD => {
-              tD && !(0, OI.r)(DD) && UD(fD)
+            onPointerEnter: UU => {
+              CU && !(0, Jt.m)(UU) && bU(PU)
             },
-            onPointerLeave: DD => {
-              tD && !(0, OI.r)(DD) && UD((DD => DD === fD ? null : DD))
+            onPointerLeave: UU => {
+              CU && !(0, Jt.m)(UU) && bU((UU => UU === PU ? null : UU))
             },
             style: {
-              zIndex: Object.keys(wD.shopInfo[dD].items).length - CD
+              zIndex: Object.keys(KU.shopInfo[kU].items).length - RU
             },
-            children: [wD.redDotInfo.itemHasRedDot(dD, DD) && (0, SD.jsx)(QD.e, {
+            children: [KU.redDotInfo.itemHasRedDot(kU, UU) && (0, cU.jsx)(qU.e, {
               top: "-6px",
               right: "-6px"
-            }), bD.badge && (0, SD.jsx)("div", {
+            }), TU.badge && (0, cU.jsx)("div", {
               className: "ShopBadgeContainer",
-              children: (0, SD.jsx)("div", {
-                className: iD()("ShopBadgeMain", bD.badge.type),
-                children: (0, SD.jsx)(HI.c, {
-                  text: bD.badge.text
+              children: (0, cU.jsx)("div", {
+                className: EU()("ShopBadgeMain", TU.badge.type),
+                children: (0, cU.jsx)(nt.e, {
+                  text: TU.badge.text
                 })
               })
-            }), (0, SD.jsx)("div", {
+            }), (0, cU.jsx)("div", {
               className: "ShopItemLeft",
-              children: bD.image && (0, SD.jsx)(Ep, {
-                item: bD,
+              children: TU.image && (0, cU.jsx)(Dp, {
+                item: TU,
                 minWidth: 5,
                 minHeight: 4.8
               })
-            }), (0, SD.jsxs)("div", {
+            }), (0, cU.jsxs)("div", {
               className: "ShopItemRight",
-              children: [(0, SD.jsxs)("div", {
+              children: [(0, cU.jsxs)("div", {
                 className: "ShopItemHeader",
-                children: [(0, SD.jsx)("div", {
+                children: [(0, cU.jsx)("div", {
                   className: "ShopItemHeaderTitle",
-                  children: (0, SD.jsx)(HI.c, {
-                    text: ZD
+                  children: (0, cU.jsx)(nt.e, {
+                    text: hU
                   })
-                }), (0, SD.jsx)("div", {
+                }), (0, cU.jsx)("div", {
                   className: "ShopItemHeaderDescription",
-                  children: (0, SD.jsx)(HI.c, {
-                    text: bD.description
+                  children: (0, cU.jsx)(nt.e, {
+                    text: TU.description
                   })
                 })]
-              }), bD.userInput && (0, SD.jsxs)("div", {
+              }), TU.userInput && (0, cU.jsxs)("div", {
                 className: "ShopItemInputsContainer",
-                onClick: DD => {
-                  DD.stopPropagation()
+                onClick: UU => {
+                  UU.stopPropagation()
                 },
-                children: [(0, SD.jsx)(rp, {
-                  item: bD,
-                  currInput: BD,
-                  updateInput: CD => {
-                    ((DD, CD, cD) => {
-                      const ID = Yp(DD, CD),
-                        pD = {
-                          ...wD.userInputsPerItem
+                children: [(0, cU.jsx)(lp, {
+                  item: TU,
+                  currInput: GU,
+                  updateInput: RU => {
+                    ((UU, RU, gU) => {
+                      const tU = Ap(UU, RU),
+                        pU = {
+                          ...KU.userInputsPerItem
                         };
-                      pD[ID] = cD, zD({
-                        userInputsPerItem: pD
+                      pU[tU] = gU, rU({
+                        userInputsPerItem: pU
                       })
-                    })(dD, DD, CD)
+                    })(kU, UU, RU)
                   },
-                  onSubmit: DD => {
-                    vD(DD)
+                  onSubmit: UU => {
+                    eU(UU)
                   }
-                }), ("dropdown" !== bD.userInput.type || !bD.userInput.autoSubmit) && (0, SD.jsx)(oD.i, {
+                }), ("dropdown" !== TU.userInput.type || !TU.userInput.autoSubmit) && (0, cU.jsx)(QU.e, {
                   className: "ItemCostButton",
-                  disabled: !MD && null !== BD,
+                  disabled: !uU && null !== GU,
                   onClick: () => {
-                    vD()
+                    eU()
                   },
-                  children: (0, SD.jsx)(hp, {
-                    item: bD,
-                    cost: yD,
-                    currencyAmounts: wD.currencyAmounts
+                  children: (0, cU.jsx)(Np, {
+                    item: TU,
+                    cost: jU,
+                    currencyAmounts: KU.currencyAmounts
                   })
                 })]
               })]
-            }), !bD.userInput && (0, SD.jsx)("div", {
+            }), !TU.userInput && (0, cU.jsx)("div", {
               className: "ShopItemNoInputCost",
-              children: (0, SD.jsx)(hp, {
-                item: bD,
-                cost: yD,
-                currencyAmounts: wD.currencyAmounts
+              children: (0, cU.jsx)(Np, {
+                item: TU,
+                cost: jU,
+                currencyAmounts: KU.currencyAmounts
               })
-            }), tD && HD === fD && (0, SD.jsxs)("div", {
+            }), CU && nU === PU && (0, cU.jsxs)("div", {
               className: "ShopItemEnchantInfo SmallTextBold",
-              children: [(0, SD.jsx)(HI.c, {
-                text: ZD
-              }), (0, SD.jsx)("div", {
+              children: [(0, cU.jsx)(nt.e, {
+                text: hU
+              }), (0, cU.jsx)("div", {
                 className: "ShopItemEnchantInfoDescription",
-                children: (0, SD.jsx)(HI.c, {
-                  text: (0, nI.d)("", tD.enchantments, tD.enchantmentData)
+                children: (0, cU.jsx)(nt.e, {
+                  text: (0, It.e)("", CU.enchantments, CU.enchantmentData)
                 })
               })]
             })]
-          }, fD)
+          }, PU)
         },
-        sD = function(DD) {
-          for (const CD in DD)
-            if (DD[CD].smp) return !0;
+        AU = function(UU) {
+          for (const RU in UU)
+            if (UU[RU].smp) return !0;
           return !1
-        }(wD.shopInfo),
-        ED = rI(wD.shopInfo, dD);
-      return (0, SD.jsx)(NI.c, {
+        }(KU.shopInfo),
+        zU = lt(KU.shopInfo, kU);
+      return (0, cU.jsx)(Wt.c, {
         className: "Menu ShopBody",
-        show: pD,
-        children: 0 !== Object.keys(wD.shopInfo).length && (0, SD.jsxs)(SD.Fragment, {
-          children: [(0, SD.jsxs)("div", {
+        show: pU,
+        children: 0 !== Object.keys(KU.shopInfo).length && (0, cU.jsxs)(cU.Fragment, {
+          children: [(0, cU.jsxs)("div", {
             className: "MenuSideBar",
-            children: [(0, SD.jsx)(BD, {
-              items: aI(wD.shopInfo).map((DD => {
-                var CD;
+            children: [(0, cU.jsx)(GU, {
+              items: Vt(KU.shopInfo).map((UU => {
+                var RU;
                 return {
-                  id: DD,
-                  title: null !== (CD = wD.shopInfo[DD].customTitle) && void 0 !== CD ? CD : DD,
-                  redDot: wD.redDotInfo.categoryHasRedDot(DD)
+                  id: UU,
+                  title: null !== (RU = KU.shopInfo[UU].customTitle) && void 0 !== RU ? RU : UU,
+                  redDot: KU.redDotInfo.categoryHasRedDot(UU)
                 }
               })),
-              selectedItemId: dD,
-              onClick: RD,
-              padStartsOnTab: (0, KI.e)(dD)
-            }), (0, SD.jsx)("div", {
+              selectedItemId: kU,
+              onClick: sU,
+              padStartsOnTab: (0, Bt.e)(kU)
+            }), (0, cU.jsx)("div", {
               className: "MenuSideBarFooter",
-              children: wD.currencyAmounts && Object.keys(wD.currencyAmounts).map((DD => {
-                var CD;
-                const cD = wD.currencyAmounts[DD];
-                return cD.hidden ? null : (0, SD.jsxs)("div", {
-                  className: "ShopCurrencyDiv " + (JD ? "SmallText" : ""),
-                  children: [(0, SD.jsxs)("div", {
+              children: KU.currencyAmounts && Object.keys(KU.currencyAmounts).map((UU => {
+                var RU;
+                const gU = KU.currencyAmounts[UU];
+                return gU.hidden ? null : (0, cU.jsxs)("div", {
+                  className: "ShopCurrencyDiv " + (aU ? "SmallText" : ""),
+                  children: [(0, cU.jsxs)("div", {
                     className: "ShopCurrencyDetails",
-                    children: [(0, SD.jsx)("div", {
+                    children: [(0, cU.jsx)("div", {
                       className: "ShopCurrencyAmtIcon",
                       style: {
-                        color: cD.iconColour
+                        color: gU.iconColour
                       },
-                      children: (0, SD.jsx)(Ci, {
-                        iconName: cD.icon
+                      children: (0, cU.jsx)(gE, {
+                        iconName: gU.icon
                       })
-                    }), "\xa0", (0, XI.e)(cD.amount, 6)]
-                  }), (null === (CD = cD.subtext) || void 0 === CD ? void 0 : CD.length) > 0 && (0, SD.jsx)("div", {
+                    }), "\xa0", (0, xt.c)(gU.amount, 6)]
+                  }), (null === (RU = gU.subtext) || void 0 === RU ? void 0 : RU.length) > 0 && (0, cU.jsx)("div", {
                     className: "ShopCurrencySubtext",
-                    children: (0, SD.jsx)(HI.c, {
-                      text: cD.subtext
+                    children: (0, cU.jsx)(nt.e, {
+                      text: gU.subtext
                     })
                   })]
-                }, DD)
+                }, UU)
               }))
             })]
-          }), (0, SD.jsxs)("div", {
+          }), (0, cU.jsxs)("div", {
             className: "MenuBody ShopMenuBody",
-            children: [sD && (0, SD.jsx)(kp, {
-              show: pD,
-              shopInfo: wD.shopInfo,
-              selectedCategoryKey: dD,
-              buy: (DD, CD, cD) => {
-                LD(DD, CD, cD)
+            children: [AU && (0, cU.jsx)(Fp, {
+              show: pU,
+              shopInfo: KU.shopInfo,
+              selectedCategoryKey: kU,
+              buy: (UU, RU, gU) => {
+                dU(UU, RU, gU)
               },
-              canAfford: YD,
-              message: wD.onBoughtInfo
-            }), null === ED && (0, SD.jsxs)(SD.Fragment, {
-              children: [(0, SD.jsx)("div", {
-                className: iD()("ShopOnBoughtInfo", {
-                  ShopOnBoughtInfoShow: null !== wD.onBoughtInfo
+              canAfford: FU,
+              message: KU.onBoughtInfo
+            }), null === zU && (0, cU.jsxs)(cU.Fragment, {
+              children: [(0, cU.jsx)("div", {
+                className: EU()("ShopOnBoughtInfo", {
+                  ShopOnBoughtInfoShow: null !== KU.onBoughtInfo
                 }),
-                children: (0, SD.jsx)(HI.c, {
-                  text: MD.current
+                children: (0, cU.jsx)(nt.e, {
+                  text: uU.current
                 })
-              }), (0, SD.jsx)("div", {
+              }), (0, cU.jsx)("div", {
                 className: "ShopItemsWrapper",
-                children: (0, SD.jsxs)("div", {
+                children: (0, cU.jsxs)("div", {
                   className: "ShopItemsInner",
-                  children: [(null === (CD = wD.shopInfo[dD]) || void 0 === CD ? void 0 : CD.description) && (0, SD.jsx)("div", {
+                  children: [(null === (RU = KU.shopInfo[kU]) || void 0 === RU ? void 0 : RU.description) && (0, cU.jsx)("div", {
                     className: "ShopCategoryDescription",
-                    children: (0, SD.jsx)(HI.c, {
-                      text: wD.shopInfo[dD].description
+                    children: (0, cU.jsx)(nt.e, {
+                      text: KU.shopInfo[kU].description
                     })
-                  }), pD && (0, SD.jsx)("div", {
+                  }), pU && (0, cU.jsx)("div", {
                     className: "ShopItems",
-                    ref: vD,
+                    ref: eU,
                     "data-pad-initial-area": !0,
-                    children: aI(null === (cD = wD.shopInfo[dD]) || void 0 === cD ? void 0 : cD.items).map(((DD, CD) => WD(DD, CD)))
+                    children: Vt(null === (gU = KU.shopInfo[kU]) || void 0 === gU ? void 0 : gU.items).map(((UU, RU) => iU(UU, RU)))
                   })]
                 })
               })]
@@ -5051,777 +5051,777 @@ export const modules = {
       })
     }));
 
-    function Ep(DD) {
+    function Dp(UU) {
       let {
-        item: CD,
-        minWidth: cD,
-        minHeight: ID
-      } = DD;
+        item: RU,
+        minWidth: gU,
+        minHeight: tU
+      } = UU;
       const {
-        image: pD,
-        schematicId: iD,
-        imageColour: fD
-      } = CD;
-      if (iD) return (0, SD.jsx)("div", {
+        image: pU,
+        schematicId: EU,
+        imageColour: PU
+      } = RU;
+      if (EU) return (0, cU.jsx)("div", {
         className: "ShopSchematic",
         style: {
-          width: `${cD}rem`,
-          height: `${ID}rem`
+          width: `${gU}rem`,
+          height: `${tU}rem`
         },
-        children: (0, SD.jsx)(UI.e, {
+        children: (0, cU.jsx)(bt.c, {
           game: {
-            schematicId: iD
+            schematicId: EU
           }
         })
       });
-      var QD, wD;
-      if ((0, PI.g)(pD)) return (0, SD.jsx)("div", {
+      var qU, KU;
+      if ((0, wt.f)(pU)) return (0, cU.jsx)("div", {
         className: "ShopBlock",
         style: {
-          minWidth: `${cD}rem`,
+          minWidth: `${gU}rem`,
           height: "0",
-          minHeight: `${ID}rem`
+          minHeight: `${tU}rem`
         },
-        children: (0, SD.jsx)(PI.d, {
-          itemName: pD,
-          amount: null !== (QD = CD.amount) && void 0 !== QD ? QD : 0,
-          amountFontSize: ID / 4 + "rem",
-          enchantmentTier: null === (wD = CD.enchant) || void 0 === wD ? void 0 : wD.tier
+        children: (0, cU.jsx)(wt.c, {
+          itemName: pU,
+          amount: null !== (qU = RU.amount) && void 0 !== qU ? qU : 0,
+          amountFontSize: tU / 4 + "rem",
+          enchantmentTier: null === (KU = RU.enchant) || void 0 === KU ? void 0 : KU.tier
         })
       });
-      const BD = pD.slice(-4);
-      return ".jpg" === BD || ".png" === BD ? (0, SD.jsx)(ep, {
-        image: pD,
-        minWidth: cD
-      }) : (0, SD.jsx)(bD.c, {
-        name: pD,
+      const GU = pU.slice(-4);
+      return ".jpg" === GU || ".png" === GU ? (0, cU.jsx)(Lp, {
+        image: pU,
+        minWidth: gU
+      }) : (0, cU.jsx)(TU.c, {
+        name: pU,
         className: "SelectedItemImage",
         style: {
-          color: fD
+          color: PU
         }
       })
     }
 
-    function ep(DD) {
+    function Lp(UU) {
       let {
-        image: CD,
-        minWidth: cD
-      } = DD;
+        image: RU,
+        minWidth: gU
+      } = UU;
       const {
-        gameNameWithVariation: ID
-      } = (0, hc.h)("connectedGame"), pD = CD.endsWith(".jpg");
-      return (0, SD.jsx)("img", {
-        className: iD()({
-          ShopPixelImage: !pD
+        gameNameWithVariation: tU
+      } = (0, Lg.k)("connectedGame"), pU = RU.endsWith(".jpg");
+      return (0, cU.jsx)("img", {
+        className: EU()({
+          ShopPixelImage: !pU
         }),
         style: {
-          width: `${pD?1.6*cD:cD}rem`,
+          width: `${pU?1.6*gU:gU}rem`,
           height: "auto",
           fontSize: "1.25rem"
         },
-        src: `/textures/games/${(0,TD.Vb)(ID)}/${CD}`,
-        alt: CD,
+        src: `/textures/games/${(0,HU.Wb)(tU)}/${RU}`,
+        alt: RU,
         draggable: !1
       })
     }
 
-    function hp(DD) {
+    function Np(UU) {
       let {
-        item: CD,
-        cost: cD,
-        currencyAmounts: ID
-      } = DD;
-      const pD = !isNaN(cD) && 0 !== cD && Wp(ID, CD.currency);
-      let iD = null;
-      return CD.buyButtonText ? iD = CD.buyButtonText : pD ? (iD = cD, CD.sell && (iD = -1 * cD), iD = iD.toString()) : 0 === cD ? iD = "Free" : CD.isRewardedAd && (iD = "Watch ad"), (0, dC.C)(iD) || " " === iD ? null : (0, SD.jsxs)("div", {
+        item: RU,
+        cost: gU,
+        currencyAmounts: tU
+      } = UU;
+      const pU = !isNaN(gU) && 0 !== gU && zp(tU, RU.currency);
+      let EU = null;
+      return RU.buyButtonText ? EU = RU.buyButtonText : pU ? (EU = gU, RU.sell && (EU = -1 * gU), EU = EU.toString()) : 0 === gU ? EU = "Free" : RU.isRewardedAd && (EU = "Watch ad"), (0, kR.E)(EU) || " " === EU ? null : (0, cU.jsxs)("div", {
         className: "BuyItemCostAndIcon",
-        children: [pD && (0, SD.jsx)("div", {
+        children: [pU && (0, cU.jsx)("div", {
           style: {
-            color: ID[CD.currency].iconColour
+            color: tU[RU.currency].iconColour
           },
           className: "BuyItemIcon",
-          children: (0, SD.jsx)(Ci, {
-            iconName: ID[CD.currency].icon
+          children: (0, cU.jsx)(gE, {
+            iconName: tU[RU.currency].icon
           })
-        }), (0, SD.jsx)("div", {
+        }), (0, cU.jsx)("div", {
           className: "BuyItemCost",
-          children: (0, SD.jsx)(HI.c, {
-            text: iD
+          children: (0, cU.jsx)(nt.e, {
+            text: EU
           })
         })]
       })
     }
 
-    function rp(DD) {
+    function lp(UU) {
       let {
-        item: CD,
-        currInput: cD,
-        updateInput: pD,
-        onSubmit: iD
-      } = DD;
+        item: RU,
+        currInput: gU,
+        updateInput: pU,
+        onSubmit: EU
+      } = UU;
       const {
-        t: bD
-      } = (0, fD.F)(), QD = (0, ID.useRef)(null);
-      if ((0, ID.useEffect)((() => {
-          const DD = QD.current;
-          DD && DD.value !== cD && document.activeElement !== DD && (DD.value = null !== cD && void 0 !== cD ? cD : "")
-        }), [cD]), !CD.userInput) return null;
-      let wD = CD.userInput;
-      if (vD.featureFlags.sanitizeShopInput && "text" === CD.userInput.type && (wD = {
+        t: TU
+      } = (0, PU.B)(), qU = (0, tU.useRef)(null);
+      if ((0, tU.useEffect)((() => {
+          const UU = qU.current;
+          UU && UU.value !== gU && document.activeElement !== UU && (UU.value = null !== gU && void 0 !== gU ? gU : "")
+        }), [gU]), !RU.userInput) return null;
+      let KU = RU.userInput;
+      if (eU.featureFlags.sanitizeShopInput && "text" === RU.userInput.type && (KU = {
           type: "number",
           placeholderText: "Numbers Only"
-        }), "text" === wD.type || "number" === wD.type) {
-        var BD, yD;
-        console.assert(void 0 !== cD, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(CD)}`);
-        const DD = "text" === wD.type && wD.wordCharsOnly;
-        return (0, SD.jsx)("div", {
+        }), "text" === KU.type || "number" === KU.type) {
+        var GU, jU;
+        console.assert(void 0 !== gU, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(RU)}`);
+        const UU = "text" === KU.type && KU.wordCharsOnly;
+        return (0, cU.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputTextWrapper",
-          children: (0, SD.jsx)(mD.b, {
+          children: (0, cU.jsx)(mU.d, {
             className: "ShopItemUserInputText",
-            placeholderText: bD(wD.placeholderText),
-            defaultValue: cD,
-            domRef: QD,
-            onValueChange: (CD, cD) => {
-              !0 === DD && (CD = (0, qI.kb)(CD)), QD.current.value = CD, pD(CD)
+            placeholderText: TU(KU.placeholderText),
+            defaultValue: gU,
+            domRef: qU,
+            onValueChange: (RU, gU) => {
+              !0 === UU && (RU = (0, Zt.gb)(RU)), qU.current.value = RU, pU(RU)
             },
-            onEnter: iD,
-            type: wD.type
-          }, (null !== (BD = wD.initialValue) && void 0 !== BD ? BD : "") + (null !== (yD = wD.placeholderText) && void 0 !== yD ? yD : ""))
+            onEnter: EU,
+            type: KU.type
+          }, (null !== (GU = KU.initialValue) && void 0 !== GU ? GU : "") + (null !== (jU = KU.placeholderText) && void 0 !== jU ? jU : ""))
         })
       }
-      if ("dropdown" === wD.type) {
-        console.assert(void 0 !== cD, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(CD)}`);
-        const DD = wD.autoSubmit;
-        return (0, SD.jsx)("div", {
+      if ("dropdown" === KU.type) {
+        console.assert(void 0 !== gU, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(RU)}`);
+        const UU = KU.autoSubmit;
+        return (0, cU.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputDropdown",
-          children: (0, SD.jsx)(mC.b, {
-            options: wD.dropdownOptions.map((DD => (0, mI.d)(DD))),
-            value: cD,
-            onChange: CD => {
+          children: (0, cU.jsx)(mR.c, {
+            options: KU.dropdownOptions.map((UU => (0, mt.h)(UU))),
+            value: gU,
+            onChange: RU => {
               let {
-                value: cD
-              } = CD;
-              pD(cD), DD && iD(cD)
+                value: gU
+              } = RU;
+              pU(gU), UU && EU(gU)
             }
           })
         })
       }
-      return "player" === wD.type ? (0, SD.jsx)(Ap, {
-        userInput: wD,
-        currInput: cD,
-        updateInput: pD
-      }) : "color" === wD.type ? (0, SD.jsx)("div", {
+      return "player" === KU.type ? (0, cU.jsx)(Op, {
+        userInput: KU,
+        currInput: gU,
+        updateInput: pU
+      }) : "color" === KU.type ? (0, cU.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputColor",
-        children: (0, SD.jsx)("input", {
+        children: (0, cU.jsx)("input", {
           type: "color",
-          value: cD,
-          onChange: DD => {
-            pD(DD.target.value)
+          value: gU,
+          onChange: UU => {
+            pU(UU.target.value)
           }
         })
       }) : null
     }
 
-    function Ap(DD) {
+    function Op(UU) {
       let {
-        userInput: CD,
-        currInput: cD,
-        updateInput: ID
-      } = DD;
-      const pD = (0, hc.h)("players"),
-        iD = (0, hc.h)("hiddenPlayerNames"),
-        fD = (0, mI.f)(pD.ids, pD.localId, CD);
-      return (0, SD.jsx)("div", {
+        userInput: RU,
+        currInput: gU,
+        updateInput: tU
+      } = UU;
+      const pU = (0, Lg.k)("players"),
+        EU = (0, Lg.k)("hiddenPlayerNames"),
+        PU = (0, mt.i)(pU.ids, pU.localId, RU);
+      return (0, cU.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputDropdown",
-        children: (0, SD.jsx)(mC.b, {
-          options: fD.map((DD => {
+        children: (0, cU.jsx)(mR.c, {
+          options: PU.map((UU => {
             const {
-              name: CD
-            } = pD.byId[DD];
+              name: RU
+            } = pU.byId[UU];
             return {
-              value: DD,
-              label: null === CD ? "" : (0, xI.f)(CD, iD)
+              value: UU,
+              label: null === RU ? "" : (0, ot.e)(RU, EU)
             }
           })),
-          value: cD,
-          onChange: DD => {
+          value: gU,
+          onChange: UU => {
             let {
-              value: CD
-            } = DD;
-            ID(CD)
+              value: RU
+            } = UU;
+            tU(RU)
           }
         })
       })
     }
 
-    function Fp(DD) {
+    function UE(UU) {
       let {
-        ids: CD
-      } = DD;
-      return CD
+        ids: RU
+      } = UU;
+      return RU
     }
 
-    function Di(DD) {
+    function RE(UU) {
       let {
-        localId: CD
-      } = DD;
-      return CD
+        localId: RU
+      } = UU;
+      return RU
     }
 
-    function Ci(DD) {
+    function gE(UU) {
       let {
-        iconName: CD
-      } = DD;
-      return ND.gameBridge.lookup("isItemName", CD) ? (0, SD.jsx)(PI.d, {
-        itemName: CD,
+        iconName: RU
+      } = UU;
+      return WU.gameBridge.lookup("isItemName", RU) ? (0, cU.jsx)(wt.c, {
+        itemName: RU,
         amount: 1
-      }) : (0, SD.jsx)(bD.c, {
-        name: CD,
+      }) : (0, cU.jsx)(TU.c, {
+        name: RU,
         className: "2x"
       })
     }
-    var ci = cD(1627);
-    const Ii = (0, cD(1403).e)((DD => DD.PadLobbyShortcuts)),
-      ii = (0, ID.lazy)((() => Promise.resolve().then((() => cD(4452))).then((DD => ({
-        default: DD.Lobbyleaderboard
+    var tE = gU(1567);
+    const pE = (0, gU(1376).i)((UU => UU.PadLobbyShortcuts)),
+      EE = (0, tU.lazy)((() => Promise.resolve().then((() => gU(4318))).then((UU => ({
+        default: UU.Lobbyleaderboard
       })))));
 
-    function fi(DD) {
+    function PE(UU) {
       let {
-        show: CD
-      } = DD;
-      return CD ? (0, SD.jsxs)(SD.Fragment, {
-        children: [(0, SD.jsx)(Ii, {}), (0, SD.jsx)(ID.Suspense, {
-          fallback: (0, SD.jsx)("div", {
+        show: RU
+      } = UU;
+      return RU ? (0, cU.jsxs)(cU.Fragment, {
+        children: [(0, cU.jsx)(pE, {}), (0, cU.jsx)(tU.Suspense, {
+          fallback: (0, cU.jsx)("div", {
             className: "CharacterCustomisationLoading",
-            children: (0, SD.jsx)(nD.e, {})
+            children: (0, cU.jsx)(IU.d, {})
           }),
-          children: (0, SD.jsx)(ii, {})
+          children: (0, cU.jsx)(EE, {})
         })]
       }) : null
     }
-    var bi = cD(1556),
-      Qi = cD(2813),
-      wi = cD(1701),
-      Si = cD(2879),
-      Bi = cD(2567),
-      yi = cD(1488),
-      Mi = cD(1444),
-      ti = cD(2788),
-      Zi = cD(2805),
-      oi = cD(2280);
-    const vi = "storeRecentGiftRecipients",
-      Ni = new Map;
+    var TE = gU(1514),
+      qE = gU(2710),
+      KE = gU(1637),
+      cE = gU(2760),
+      GE = gU(2474),
+      jE = gU(1457),
+      uE = gU(1420),
+      CE = gU(2685),
+      hE = gU(2703),
+      QE = gU(2169);
+    const eE = "storeRecentGiftRecipients",
+      WE = new Map;
 
-    function gi() {
+    function fE() {
       try {
-        const DD = sC.h.getItem(vi);
-        return Array.isArray(DD) ? DD.filter((DD => "string" === typeof(null === DD || void 0 === DD ? void 0 : DD.name) && DD.name.length > 0)).map((DD => ({
-          name: DD.name,
-          cosmetics: DD.cosmetics && "object" === typeof DD.cosmetics ? DD.cosmetics : null
+        const UU = AR.k.getItem(eE);
+        return Array.isArray(UU) ? UU.filter((UU => "string" === typeof(null === UU || void 0 === UU ? void 0 : UU.name) && UU.name.length > 0)).map((UU => ({
+          name: UU.name,
+          cosmetics: UU.cosmetics && "object" === typeof UU.cosmetics ? UU.cosmetics : null
         }))) : []
       } catch {
         return []
       }
     }
 
-    function Xi(DD) {
-      var CD;
-      const [cD, pD] = (0, ID.useState)(""), [iD, fD] = (0, ID.useState)("search"), [bD, QD] = (0, ID.useState)(null), [wD, SD] = (0, ID.useState)(null), BD = (0, ID.useRef)(null), yD = (0, ID.useRef)(null);
-      (0, ID.useEffect)((() => () => {
-        BD.current && clearTimeout(BD.current)
+    function xE(UU) {
+      var RU;
+      const [gU, pU] = (0, tU.useState)(""), [EU, PU] = (0, tU.useState)("search"), [TU, qU] = (0, tU.useState)(null), [KU, cU] = (0, tU.useState)(null), GU = (0, tU.useRef)(null), jU = (0, tU.useRef)(null);
+      (0, tU.useEffect)((() => () => {
+        GU.current && clearTimeout(GU.current)
       }), []);
-      const MD = null !== (CD = null === bD || void 0 === bD ? void 0 : bD.name) && void 0 !== CD ? CD : null;
+      const uU = null !== (RU = null === TU || void 0 === TU ? void 0 : TU.name) && void 0 !== RU ? RU : null;
 
-      function tD() {
-        BD.current && (clearTimeout(BD.current), BD.current = null)
-      }(0, ID.useEffect)((() => {
-        if (null === MD || DD === qD.NULL_USER_CONTEXT) return;
-        const CD = MD.toLowerCase();
-        if (CD === DD.getPlayerName().toLowerCase()) return void SD({
-          name: MD,
+      function CU() {
+        GU.current && (clearTimeout(GU.current), GU.current = null)
+      }(0, tU.useEffect)((() => {
+        if (null === uU || UU === ZU.NULL_USER_CONTEXT) return;
+        const RU = uU.toLowerCase();
+        if (RU === UU.getPlayerName().toLowerCase()) return void cU({
+          name: uU,
           result: {
             giftRecipientFound: !1,
             giftRecipientError: "store:giftRecipientIsYou"
           }
         });
-        const cD = Ni.get(CD);
-        if (cD) return void SD({
-          name: MD,
-          result: cD
+        const gU = WE.get(RU);
+        if (gU) return void cU({
+          name: uU,
+          result: gU
         });
-        let ID = !1;
-        return async function(DD, CD) {
+        let tU = !1;
+        return async function(UU, RU) {
           try {
-            const cD = await (0, qD.postJsonWithMetricsCookiesAndJsonResponse)(`${JD.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
-              giftRecipientName: CD
+            const gU = await (0, ZU.postJsonWithMetricsCookiesAndJsonResponse)(`${aU.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
+              giftRecipientName: RU
             }, {
               retries: 1
-            }, DD.getMetricsCookies());
-            if ("boolean" !== typeof(null === cD || void 0 === cD ? void 0 : cD.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(cD)}`);
-            return cD
-          } catch (cD) {
-            return console.error("Failed to look up gift recipient:", cD), {
+            }, UU.getMetricsCookies());
+            if ("boolean" !== typeof(null === gU || void 0 === gU ? void 0 : gU.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(gU)}`);
+            return gU
+          } catch (gU) {
+            return console.error("Failed to look up gift recipient:", gU), {
               giftRecipientFound: !1,
               giftRecipientError: "store:giftRecipientLookupFailed"
             }
           }
-        }(DD, MD).catch((DD => (console.error("Gift recipient lookup failed:", DD), {
+        }(UU, uU).catch((UU => (console.error("Gift recipient lookup failed:", UU), {
           giftRecipientFound: !1,
           giftRecipientError: "store:giftRecipientLookupFailed"
-        }))).then((DD => {
-          !0 !== DD.giftRecipientFound && "store:giftRecipientLookupFailed" === DD.giftRecipientError || Ni.set(CD, DD), ID || SD({
-            name: MD,
-            result: DD
+        }))).then((UU => {
+          !0 !== UU.giftRecipientFound && "store:giftRecipientLookupFailed" === UU.giftRecipientError || WE.set(RU, UU), tU || cU({
+            name: uU,
+            result: UU
           })
         })), () => {
-          ID = !0
+          tU = !0
         }
-      }), [MD, DD]);
-      const ZD = (0, ID.useMemo)((() => {
-        const DD = cD.trim();
-        if (!DD) return {
+      }), [uU, UU]);
+      const hU = (0, tU.useMemo)((() => {
+        const UU = gU.trim();
+        if (!UU) return {
           status: "none"
         };
-        if (!bD || bD.name !== DD || (null === wD || void 0 === wD ? void 0 : wD.name) !== bD.name) return {
+        if (!TU || TU.name !== UU || (null === KU || void 0 === KU ? void 0 : KU.name) !== TU.name) return {
           status: "pending",
-          name: DD
+          name: UU
         };
-        const CD = wD.result;
-        return !1 === CD.giftRecipientFound ? {
+        const RU = KU.result;
+        return !1 === RU.giftRecipientFound ? {
           status: "error",
-          name: bD.name,
-          error: CD.giftRecipientError
+          name: TU.name,
+          error: RU.giftRecipientError
         } : {
           status: "found",
-          name: CD.giftRecipientName,
-          ownedPacks: CD.giftRecipientOwnedPacks,
-          hasSuperRank: CD.giftRecipientHasSuperRank,
-          isSubscriber: CD.giftRecipientIsSubscriber
+          name: RU.giftRecipientName,
+          ownedPacks: RU.giftRecipientOwnedPacks,
+          hasSuperRank: RU.giftRecipientHasSuperRank,
+          isSubscriber: RU.giftRecipientIsSubscriber
         }
-      }), [cD, bD, wD]);
-      (0, ID.useEffect)((() => {
-        "found" === ZD.status && "typed" === (null === bD || void 0 === bD ? void 0 : bD.source) && yD.current !== ZD.name && (yD.current = ZD.name, (0, AD.reportAnalyticsClick)({
+      }), [gU, TU, KU]);
+      (0, tU.useEffect)((() => {
+        "found" === hU.status && "typed" === (null === TU || void 0 === TU ? void 0 : TU.source) && jU.current !== hU.name && (jU.current = hU.name, (0, lU.reportAnalyticsClick)({
           id: "store.gift_recipient",
           value: "typed"
         }))
-      }), [ZD, bD]);
-      const oD = (null === wD || void 0 === wD ? void 0 : wD.name) === (null === bD || void 0 === bD ? void 0 : bD.name) ? null === wD || void 0 === wD ? void 0 : wD.result : null,
-        vD = !0 === (null === oD || void 0 === oD ? void 0 : oD.giftRecipientFound) ? oD.giftRecipientCosmetics : null;
+      }), [hU, TU]);
+      const QU = (null === KU || void 0 === KU ? void 0 : KU.name) === (null === TU || void 0 === TU ? void 0 : TU.name) ? null === KU || void 0 === KU ? void 0 : KU.result : null,
+        eU = !0 === (null === QU || void 0 === QU ? void 0 : QU.giftRecipientFound) ? QU.giftRecipientCosmetics : null;
       return {
-        query: cD,
-        via: iD,
-        recipient: ZD,
-        recipientCosmetics: vD,
-        type: function(DD) {
-          pD(DD), fD("search"), tD();
-          const CD = DD.trim();
-          CD ? BD.current = setTimeout((() => {
-            QD({
-              name: CD,
+        query: gU,
+        via: EU,
+        recipient: hU,
+        recipientCosmetics: eU,
+        type: function(UU) {
+          pU(UU), PU("search"), CU();
+          const RU = UU.trim();
+          RU ? GU.current = setTimeout((() => {
+            qU({
+              name: RU,
               source: "typed"
             })
-          }), 400) : QD(null)
+          }), 400) : qU(null)
         },
-        choose: function(DD, CD) {
-          tD(), pD(DD), fD("typed" === CD ? "search" : "prefilled" === CD ? "prefilled" : "suggestion"), QD({
-            name: DD,
-            source: CD
-          }), "typed" !== CD && "prefilled" !== CD && (0, AD.reportAnalyticsClick)({
+        choose: function(UU, RU) {
+          CU(), pU(UU), PU("typed" === RU ? "search" : "prefilled" === RU ? "prefilled" : "suggestion"), qU({
+            name: UU,
+            source: RU
+          }), "typed" !== RU && "prefilled" !== RU && (0, lU.reportAnalyticsClick)({
             id: "store.gift_recipient",
-            value: CD
+            value: RU
           })
         },
         clear: function() {
-          tD(), pD(""), fD("search"), QD(null)
+          CU(), pU(""), PU("search"), qU(null)
         },
-        recordGift: function(DD, CD) {
-          ! function(DD) {
-            Ni.delete(DD.toLowerCase())
-          }(DD), SD((cD => {
-            if (!cD || cD.name.toLowerCase() !== DD.toLowerCase() || !0 !== cD.result.giftRecipientFound || "superRank" === CD) return cD;
-            const ID = cD.result.giftRecipientOwnedPacks;
+        recordGift: function(UU, RU) {
+          ! function(UU) {
+            WE.delete(UU.toLowerCase())
+          }(UU), cU((gU => {
+            if (!gU || gU.name.toLowerCase() !== UU.toLowerCase() || !0 !== gU.result.giftRecipientFound || "superRank" === RU) return gU;
+            const tU = gU.result.giftRecipientOwnedPacks;
             return {
-              ...cD,
+              ...gU,
               result: {
-                ...cD.result,
-                giftRecipientOwnedPacks: ID.includes(CD) ? ID : [...ID, CD]
+                ...gU.result,
+                giftRecipientOwnedPacks: tU.includes(RU) ? tU : [...tU, RU]
               }
             }
           }))
         }
       }
     }
-    var mi = cD(2272),
-      ni = cD(4459),
-      Oi = cD(266),
-      Pi = cD(2908);
-    const Hi = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
-    var Ui = cD(2235),
-      xi = cD(611),
-      qi = cD(2308),
-      Ji = cD(2466);
+    var mE = gU(2167),
+      IE = gU(4320),
+      JE = gU(249),
+      wE = gU(2811);
+    const nE = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
+    var bE = gU(2103),
+      oE = gU(562),
+      ZE = gU(2198),
+      aE = gU(2374);
 
-    function Ki(DD) {
+    function YE(UU) {
       let {
-        cosmetics: CD
-      } = DD;
-      return (0, SD.jsx)("span", {
+        cosmetics: RU
+      } = UU;
+      return (0, cU.jsx)("span", {
         className: "StoreRecipientAvatar",
-        children: (0, SD.jsx)(qi.e, {
-          cosmetics: CD
+        children: (0, cU.jsx)(ZE.d, {
+          cosmetics: RU
         })
       })
     }
 
-    function ai(DD, CD) {
-      var cD, ID;
-      const pD = null !== (cD = DD.friend) && void 0 !== cD ? cD : {
+    function BE(UU, RU) {
+      var gU, tU;
+      const pU = null !== (gU = UU.friend) && void 0 !== gU ? gU : {
         isError: !1,
-        name: DD.name,
+        name: UU.name,
         ranks: [],
-        cosmetics: null !== (ID = DD.cosmetics) && void 0 !== ID ? ID : {},
-        nameColour: xi.b,
+        cosmetics: null !== (tU = UU.cosmetics) && void 0 !== tU ? tU : {},
+        nameColour: oE.b,
         location: {
           status: "noGamePlayed"
         }
       };
-      return CD ? {
-        ...pD,
-        cosmetics: CD
-      } : pD
+      return RU ? {
+        ...pU,
+        cosmetics: RU
+      } : pU
     }
 
-    function Vi(DD) {
+    function VE(UU) {
       let {
-        recipient: CD
-      } = DD;
-      return "pending" === CD.status ? (0, SD.jsx)("span", {
+        recipient: RU
+      } = UU;
+      return "pending" === RU.status ? (0, cU.jsx)("span", {
         className: "StoreRecipientStatus",
-        children: (0, SD.jsx)(nD.e, {})
-      }) : "found" === CD.status ? (0, SD.jsx)(bD.c, {
+        children: (0, cU.jsx)(IU.d, {})
+      }) : "found" === RU.status ? (0, cU.jsx)(TU.c, {
         name: "check",
         className: "StoreRecipientStatus StoreRecipientStatusFound"
       }) : null
     }
 
-    function zi(DD) {
-      var CD;
+    function rE(UU) {
+      var RU;
       let {
-        selfName: cD,
-        giftRecipient: pD,
-        suggestionsVersion: QD,
-        pulseSignal: wD,
-        disabled: BD
-      } = DD;
+        selfName: gU,
+        giftRecipient: pU,
+        suggestionsVersion: qU,
+        pulseSignal: KU,
+        disabled: GU
+      } = UU;
       const {
-        t: yD
-      } = (0, fD.F)(), MD = (0, dD.m)(), tD = (0, ID.useRef)(null), ZD = (0, ID.useRef)(null), {
-        query: ND,
-        via: gD,
-        recipient: XD,
-        recipientCosmetics: nD
-      } = pD, OD = (0, oi.o)(ND), PD = (0, ID.useMemo)((() => {
-        const DD = vD.featureFlags.useSocialFeatures ? MD.friends.filter((DD => !DD.isError)) : [];
-        return (0, oi.g)({
-          onlineFriends: (0, dD.f)(DD),
-          recentRecipients: gi(),
-          friends: DD,
-          selfName: cD,
+        t: jU
+      } = (0, PU.B)(), uU = (0, kU.g)(), CU = (0, tU.useRef)(null), hU = (0, tU.useRef)(null), {
+        query: WU,
+        via: fU,
+        recipient: xU,
+        recipientCosmetics: IU
+      } = pU, JU = (0, QE.n)(WU), wU = (0, tU.useMemo)((() => {
+        const UU = eU.featureFlags.useSocialFeatures ? uU.friends.filter((UU => !UU.isError)) : [];
+        return (0, QE.j)({
+          onlineFriends: (0, kU.e)(UU),
+          recentRecipients: fE(),
+          friends: UU,
+          selfName: gU,
           max: 8
         })
-      }), [MD.friends, cD, QD]), HD = ND.trim().toLowerCase(), UD = "search" !== gD && HD ? PD.find((DD => DD.name.toLowerCase() === HD)) : void 0, xD = UD && "prefilled" === gD ? [UD, ...PD.filter((DD => DD !== UD))] : PD, qD = "" !== HD && !UD, JD = qD ? ND : "", KD = xD.length > 0;
-      (0, ID.useEffect)((() => {
-        tD.current && tD.current.value !== JD && (tD.current.value = JD)
-      }), [JD]), (0, ID.useEffect)((() => {
-        tD.current && (tD.current.disabled = BD)
-      }), [BD, wD]);
-      const aD = (0, ID.useRef)(0);
+      }), [uU.friends, gU, qU]), nU = WU.trim().toLowerCase(), bU = "search" !== fU && nU ? wU.find((UU => UU.name.toLowerCase() === nU)) : void 0, oU = bU && "prefilled" === fU ? [bU, ...wU.filter((UU => UU !== bU))] : wU, ZU = "" !== nU && !bU, aU = ZU ? WU : "", YU = oU.length > 0;
+      (0, tU.useEffect)((() => {
+        CU.current && CU.current.value !== aU && (CU.current.value = aU)
+      }), [aU]), (0, tU.useEffect)((() => {
+        CU.current && (CU.current.disabled = GU)
+      }), [GU, KU]);
+      const BU = (0, tU.useRef)(0);
 
-      function zD() {
-        "self" !== OD && (0, AD.reportAnalyticsClick)({
+      function rU() {
+        "self" !== JU && (0, lU.reportAnalyticsClick)({
           id: "store.mode",
           value: "self"
-        }), pD.clear()
+        }), pU.clear()
       }
 
-      function jD(DD) {
-        var CD, cD;
-        if (BD) return;
-        if (" " === DD.key || "Enter" === DD.key) return DD.preventDefault(), void DD.currentTarget.click();
-        const ID = Array.from(null !== (CD = null === (cD = ZD.current) || void 0 === cD ? void 0 : cD.querySelectorAll("[role=radio]")) && void 0 !== CD ? CD : []),
-          pD = ID.indexOf(DD.currentTarget);
-        let iD;
-        "ArrowRight" === DD.key || "ArrowDown" === DD.key ? iD = ID[(pD + 1) % ID.length] : "ArrowLeft" === DD.key || "ArrowUp" === DD.key ? iD = ID[(pD - 1 + ID.length) % ID.length] : "Home" === DD.key ? iD = ID[0] : "End" === DD.key && (iD = ID[ID.length - 1]), iD && (DD.preventDefault(), iD.focus(), iD.click())
-      }(0, ID.useEffect)((() => {
-        var DD;
-        wD > aD.current && !BD && (aD.current = wD, null === (DD = tD.current) || void 0 === DD || DD.focus())
-      }), [wD, BD]);
-      const lD = "self" === OD,
-        LD = null !== (CD = null === UD || void 0 === UD ? void 0 : UD.name) && void 0 !== CD ? CD : null,
-        TD = "error" === XD.status ? XD.error : null,
-        GD = "store:giftRecipientLookupFailed" === TD;
-      return (0, SD.jsxs)("div", {
-        className: iD()("StoreRecipientStrip", {
-          StoreRecipientStripDisabled: BD,
-          StoreRecipientStripNoChips: !KD
+      function XU(UU) {
+        var RU, gU;
+        if (GU) return;
+        if (" " === UU.key || "Enter" === UU.key) return UU.preventDefault(), void UU.currentTarget.click();
+        const tU = Array.from(null !== (RU = null === (gU = hU.current) || void 0 === gU ? void 0 : gU.querySelectorAll("[role=radio]")) && void 0 !== RU ? RU : []),
+          pU = tU.indexOf(UU.currentTarget);
+        let EU;
+        "ArrowRight" === UU.key || "ArrowDown" === UU.key ? EU = tU[(pU + 1) % tU.length] : "ArrowLeft" === UU.key || "ArrowUp" === UU.key ? EU = tU[(pU - 1 + tU.length) % tU.length] : "Home" === UU.key ? EU = tU[0] : "End" === UU.key && (EU = tU[tU.length - 1]), EU && (UU.preventDefault(), EU.focus(), EU.click())
+      }(0, tU.useEffect)((() => {
+        var UU;
+        KU > BU.current && !GU && (BU.current = KU, null === (UU = CU.current) || void 0 === UU || UU.focus())
+      }), [KU, GU]);
+      const vU = "self" === JU,
+        dU = null !== (RU = null === bU || void 0 === bU ? void 0 : bU.name) && void 0 !== RU ? RU : null,
+        HU = "error" === xU.status ? xU.error : null,
+        SU = "store:giftRecipientLookupFailed" === HU;
+      return (0, cU.jsxs)("div", {
+        className: EU()("StoreRecipientStrip", {
+          StoreRecipientStripDisabled: GU,
+          StoreRecipientStripNoChips: !YU
         }),
-        children: [(0, SD.jsx)("span", {
+        children: [(0, cU.jsx)("span", {
           className: "StoreRecipientLabel",
           "aria-hidden": !0,
-          children: yD("store:buyingFor")
-        }), (0, SD.jsxs)("div", {
-          ref: ZD,
+          children: jU("store:buyingFor")
+        }), (0, cU.jsxs)("div", {
+          ref: hU,
           className: "StoreRecipientRadios",
           role: "radiogroup",
-          "aria-label": yD("store:whoIsItFor"),
-          children: [(0, SD.jsxs)("div", {
+          "aria-label": jU("store:whoIsItFor"),
+          children: [(0, cU.jsxs)("div", {
             role: "radio",
             "data-pad-focusable": !0,
-            "aria-checked": lD,
-            tabIndex: BD || !lD && null !== LD ? -1 : 0,
-            className: iD()("StoreRecipientMe", {
-              StoreRecipientChecked: lD
+            "aria-checked": vU,
+            tabIndex: GU || !vU && null !== dU ? -1 : 0,
+            className: EU()("StoreRecipientMe", {
+              StoreRecipientChecked: vU
             }),
             onClick: () => {
-              BD || zD()
+              GU || rU()
             },
-            onKeyDown: jD,
-            children: [(0, SD.jsx)(bD.c, {
+            onKeyDown: XU,
+            children: [(0, cU.jsx)(TU.c, {
               name: "user"
-            }), " ", yD("store:me")]
-          }), KD && (0, SD.jsx)("div", {
+            }), " ", jU("store:me")]
+          }), YU && (0, cU.jsx)("div", {
             className: "StoreRecipientChips",
-            children: xD.map((DD => {
-              const CD = DD === UD;
-              return (0, SD.jsx)("div", {
+            children: oU.map((UU => {
+              const RU = UU === bU;
+              return (0, cU.jsx)("div", {
                 role: "radio",
                 "data-pad-focusable": !0,
-                "aria-checked": CD,
-                tabIndex: !BD && CD ? 0 : -1,
-                title: DD.name,
-                className: iD()("StoreRecipientChip", {
-                  StoreRecipientChecked: CD
+                "aria-checked": RU,
+                tabIndex: !GU && RU ? 0 : -1,
+                title: UU.name,
+                className: EU()("StoreRecipientChip", {
+                  StoreRecipientChecked: RU
                 }),
                 onClick: () => {
-                  BD || function(DD) {
-                    "gift" !== OD && (0, AD.reportAnalyticsClick)({
+                  GU || function(UU) {
+                    "gift" !== JU && (0, lU.reportAnalyticsClick)({
                       id: "store.mode",
                       value: "gift"
-                    }), pD.choose(DD.name, DD.kind)
-                  }(DD)
+                    }), pU.choose(UU.name, UU.kind)
+                  }(UU)
                 },
-                onKeyDown: jD,
-                children: (0, SD.jsx)(Ji.h, {
-                  playerSocialPreview: ai(DD, CD ? nD : null),
+                onKeyDown: XU,
+                children: (0, cU.jsx)(aE.d, {
+                  playerSocialPreview: BE(UU, RU ? IU : null),
                   opensProfileCard: !1,
-                  isFriend: null !== DD.friend,
+                  isFriend: null !== UU.friend,
                   hideFriendBadge: !0,
-                  showLocation: null !== DD.friend,
-                  status: null === DD.friend ? null : void 0,
-                  trailing: CD ? (0, SD.jsx)(Vi, {
-                    recipient: XD
+                  showLocation: null !== UU.friend,
+                  status: null === UU.friend ? null : void 0,
+                  trailing: RU ? (0, cU.jsx)(VE, {
+                    recipient: xU
                   }) : void 0
                 })
-              }, DD.name)
+              }, UU.name)
             }))
           })]
-        }), (0, SD.jsxs)("div", {
-          className: iD()("StoreRecipientSearch", {
-            StoreRecipientChecked: qD,
-            StoreRecipientSearchPulse: wD > 0 && !qD,
-            StoreRecipientSearchError: null !== TD && !GD
+        }), (0, cU.jsxs)("div", {
+          className: EU()("StoreRecipientSearch", {
+            StoreRecipientChecked: ZU,
+            StoreRecipientSearchPulse: KU > 0 && !ZU,
+            StoreRecipientSearchError: null !== HU && !SU
           }),
           onClick: () => {
-            var DD;
-            null === (DD = tD.current) || void 0 === DD || DD.focus()
+            var UU;
+            null === (UU = CU.current) || void 0 === UU || UU.focus()
           },
-          children: [qD && "found" === XD.status && nD && (0, SD.jsx)(Ki, {
-            cosmetics: nD
-          }), !(qD && "found" === XD.status && nD) && (0, SD.jsx)(bD.c, {
+          children: [ZU && "found" === xU.status && IU && (0, cU.jsx)(YE, {
+            cosmetics: IU
+          }), !(ZU && "found" === xU.status && IU) && (0, cU.jsx)(TU.c, {
             name: "magnifying-glass",
             className: "StoreRecipientSearchIcon"
-          }), (0, SD.jsx)(mD.b, {
+          }), (0, cU.jsx)(mU.d, {
             className: "StoreRecipientSearchInput",
-            domRef: tD,
-            placeholderText: yD("store:searchName"),
-            defaultValue: JD,
-            maxLength: VD.i,
-            onValueChange: function(DD) {
-              "gift" !== OD && DD.trim() && (0, AD.reportAnalyticsClick)({
+            domRef: CU,
+            placeholderText: jU("store:searchName"),
+            defaultValue: aU,
+            maxLength: VU.h,
+            onValueChange: function(UU) {
+              "gift" !== JU && UU.trim() && (0, lU.reportAnalyticsClick)({
                 id: "store.mode",
                 value: "gift"
-              }), pD.type(DD)
+              }), pU.type(UU)
             },
             onEnter: () => {
-              var DD;
-              const CD = null === (DD = tD.current) || void 0 === DD ? void 0 : DD.value.trim();
-              CD && pD.choose(CD, "typed")
+              var UU;
+              const RU = null === (UU = CU.current) || void 0 === UU ? void 0 : UU.value.trim();
+              RU && pU.choose(RU, "typed")
             },
             blurOnEnter: !0
-          }), qD && (0, SD.jsx)(Vi, {
-            recipient: XD
-          }), qD && (0, SD.jsx)("div", {
-            ...(0, oD.U)({
-              disabled: BD
+          }), ZU && (0, cU.jsx)(VE, {
+            recipient: xU
+          }), ZU && (0, cU.jsx)("div", {
+            ...(0, QU.R)({
+              disabled: GU
             }),
-            "aria-label": yD("store:clearRecipient"),
-            title: yD("store:clearRecipient"),
+            "aria-label": jU("store:clearRecipient"),
+            title: jU("store:clearRecipient"),
             className: "StoreRecipientClear",
-            onClick: DD => {
-              DD.stopPropagation(), BD || zD()
+            onClick: UU => {
+              UU.stopPropagation(), GU || rU()
             },
-            children: (0, SD.jsx)(bD.c, {
+            children: (0, cU.jsx)(TU.c, {
               name: "xmark"
             })
           })]
-        }, wD), TD && (0, SD.jsx)("div", {
-          className: iD()("StoreRecipientPopover", {
-            StoreRecipientPopoverSoft: GD
+        }, KU), HU && (0, cU.jsx)("div", {
+          className: EU()("StoreRecipientPopover", {
+            StoreRecipientPopoverSoft: SU
           }),
           role: "status",
-          children: yD(TD)
+          children: jU(HU)
         })]
       })
     }
-    var ji = cD(2268),
-      li = cD(2209),
-      Li = cD(3389),
-      Ti = cD(2911),
-      Gi = cD(2245);
-    const Ri = cD.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
+    var XE = gU(2159),
+      vE = gU(2080),
+      dE = gU(3266),
+      HE = gU(2819),
+      SE = gU(2116);
+    const sE = gU.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
 
-    function ki() {
-      (0, Gi.f)(Ri, {
+    function yE() {
+      (0, SE.h)(sE, {
         lowPriority: !1
       })
     }
 
-    function di(DD) {
+    function kE(UU) {
       let {
-        onBack: CD,
-        cta: cD,
-        recipient: pD,
-        afterCta: iD
-      } = DD;
+        onBack: RU,
+        cta: gU,
+        recipient: pU,
+        afterCta: EU
+      } = UU;
       const {
-        t: QD
-      } = (0, fD.F)(), [wD, BD] = (0, ID.useState)("starting"), yD = (0, ID.useRef)(null), MD = (0, KC.d)(), tD = (0, ID.useRef)(null), ZD = (0, ID.useCallback)((() => {
-        const DD = yD.current;
-        null !== DD.error && DD.load();
-        const CD = DD.play();
-        tD.current = CD, CD.catch((DD => {
-          (0, Li.d)("Failed to play Super Rank video", DD), MD.current && tD.current === CD && BD("failed")
+        t: qU
+      } = (0, PU.B)(), [KU, GU] = (0, tU.useState)("starting"), jU = (0, tU.useRef)(null), uU = (0, YR.b)(), CU = (0, tU.useRef)(null), hU = (0, tU.useCallback)((() => {
+        const UU = jU.current;
+        null !== UU.error && UU.load();
+        const RU = UU.play();
+        CU.current = RU, RU.catch((UU => {
+          (0, dE.b)("Failed to play Super Rank video", UU), uU.current && CU.current === RU && GU("failed")
         }))
-      }), [MD]);
-      return (0, ID.useEffect)((() => {
-        const DD = yD.current;
-        let CD;
+      }), [uU]);
+      return (0, tU.useEffect)((() => {
+        const UU = jU.current;
+        let RU;
 
-        function cD() {
-          clearTimeout(CD), CD = setTimeout(ZD, 3e3)
+        function gU() {
+          clearTimeout(RU), RU = setTimeout(hU, 3e3)
         }
-        return ZD(), DD.addEventListener("ended", cD), () => {
-          clearTimeout(CD), DD.removeEventListener("ended", cD)
+        return hU(), UU.addEventListener("ended", gU), () => {
+          clearTimeout(RU), UU.removeEventListener("ended", gU)
         }
-      }), [ZD]), (0, SD.jsxs)("div", {
+      }), [hU]), (0, cU.jsxs)("div", {
         className: "StoreSuperRankDetail",
-        children: [(0, SD.jsxs)("div", {
+        children: [(0, cU.jsxs)("div", {
           className: "StoreDetailHeader",
-          children: [(0, SD.jsx)(oD.e, {
+          children: [(0, cU.jsx)(QU.d, {
             className: "StoreDetailBackButton",
-            onClick: CD,
+            onClick: RU,
             padBack: !0,
-            children: QD("general:back")
-          }), (0, SD.jsxs)("div", {
+            children: qU("general:back")
+          }), (0, cU.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, SD.jsx)(bD.c, {
+            children: [(0, cU.jsx)(TU.c, {
               name: "bolt"
-            }), " ", QD("homePage:superRank")]
-          }), pD]
-        }), (0, SD.jsxs)("div", {
+            }), " ", qU("homePage:superRank")]
+          }), pU]
+        }), (0, cU.jsxs)("div", {
           className: "StoreSuperRankDetailBody",
-          children: [(0, SD.jsxs)("div", {
+          children: [(0, cU.jsxs)("div", {
             className: "StoreSuperRankVideo",
-            children: [(0, SD.jsx)("video", {
-              ref: yD,
-              src: `${JD.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
-              poster: Ri,
+            children: [(0, cU.jsx)("video", {
+              ref: jU,
+              src: `${aU.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
+              poster: sE,
               muted: !0,
               playsInline: !0,
-              controls: "playing" === wD,
+              controls: "playing" === KU,
               onPlaying: () => {
-                BD("playing")
+                GU("playing")
               },
               onError: () => {
-                BD("failed")
+                GU("failed")
               }
-            }), ("failed" === wD || "loading" === wD) && (0, SD.jsx)("div", {
+            }), ("failed" === KU || "loading" === KU) && (0, cU.jsx)("div", {
               className: "StoreSuperRankPlay",
-              children: (0, SD.jsx)(oD.i, {
-                ariaLabel: QD("general:play"),
-                loading: "loading" === wD,
+              children: (0, cU.jsx)(QU.e, {
+                ariaLabel: qU("general:play"),
+                loading: "loading" === KU,
                 onClick: () => {
-                  BD("loading"), ZD()
+                  GU("loading"), hU()
                 },
                 touchPressOn: "pointerup",
-                children: (0, SD.jsx)(bD.c, {
+                children: (0, cU.jsx)(TU.c, {
                   name: "play"
                 })
               })
             })]
-          }), (0, SD.jsxs)("div", {
+          }), (0, cU.jsxs)("div", {
             className: "StoreSuperRankDetailSide",
-            children: [(0, SD.jsx)("div", {
+            children: [(0, cU.jsx)("div", {
               className: "StoreSuperRankDetailTable",
-              children: (0, SD.jsx)(Ti.d, {})
-            }), (0, SD.jsxs)("div", {
+              children: (0, cU.jsx)(HE.b, {})
+            }), (0, cU.jsxs)("div", {
               className: "StoreTileActions",
-              children: [cD, iD]
+              children: [gU, EU]
             })]
           })]
         })]
       })
     }
-    var Yi = cD(2478),
-      Wi = cD(3344),
-      si = cD(2901),
-      Ei = cD(2906);
-    const ei = [xi.p.yellow, xi.p.green, xi.p.aqua, xi.p.blue, xi.p.purple, xi.p.red];
+    var FE = gU(2393),
+      iE = gU(3229),
+      AE = gU(2800),
+      zE = gU(2806);
+    const ME = [oE.n.yellow, oE.n.green, oE.n.aqua, oE.n.blue, oE.n.purple, oE.n.red];
 
-    function ui(DD) {
-      return "needsRecipient" === DD || "lookingUp" === DD || "gift" === DD || "recipientOwns" === DD || "recipientSharesOwned" === DD || "recipientSubscribed" === DD
+    function DE(UU) {
+      return "needsRecipient" === UU || "lookingUp" === UU || "gift" === UU || "recipientOwns" === UU || "recipientSharesOwned" === UU || "recipientSubscribed" === UU
     }
 
-    function ri(DD) {
+    function LE(UU) {
       const {
-        onKeyDown: CD,
-        ...cD
-      } = (0, oD.U)();
+        onKeyDown: RU,
+        ...gU
+      } = (0, QU.R)();
       return {
-        ...cD,
-        "aria-label": DD,
-        onKeyDown: DD => {
-          DD.target === DD.currentTarget && (null === CD || void 0 === CD || CD(DD))
+        ...gU,
+        "aria-label": UU,
+        onKeyDown: UU => {
+          UU.target === UU.currentTarget && (null === RU || void 0 === RU || RU(UU))
         }
       }
     }
 
-    function Ai(DD) {
+    function NE(UU) {
       let {
-        text: CD
-      } = DD;
-      return (0, SD.jsx)("span", {
+        text: RU
+      } = UU;
+      return (0, cU.jsx)("span", {
         className: "StoreRainbowText",
-        children: Array.from(CD).map(((DD, CD) => (0, SD.jsx)("span", {
+        children: Array.from(RU).map(((UU, RU) => (0, cU.jsx)("span", {
           style: {
-            color: ei[CD % ei.length]
+            color: ME[RU % ME.length]
           },
-          children: DD
-        }, CD)))
+          children: UU
+        }, RU)))
       })
     }
-    const Fi = {
+    const lE = {
       recipientOwns: "store:alreadyOwns",
       sharesOwned: "store:sharesOwned",
       recipientSharesOwned: "store:recipientSharesOwned",
@@ -5829,67 +5829,67 @@ export const modules = {
       recipientSubscribed: "store:recipientSubscribed"
     };
 
-    function Df(DD) {
+    function OE(UU) {
       let {
-        state: CD,
-        item: cD,
-        price: ID,
-        busy: pD,
-        highlight: QD = !1,
-        onAct: wD,
-        onNeedRecipient: BD,
-        onLogin: yD
-      } = DD;
+        state: RU,
+        item: gU,
+        price: tU,
+        busy: pU,
+        highlight: qU = !1,
+        onAct: KU,
+        onNeedRecipient: GU,
+        onLogin: jU
+      } = UU;
       const {
-        t: MD
-      } = (0, fD.F)(), tD = "superRank" === cD ? jD.g.product.days : null, ZD = DD => null === tD ? MD(DD ? "general:gift" : "general:buy") : MD(DD ? "store:giftDays" : "store:buyDays", {
-        days: tD
-      }), vD = (DD, CD) => (0, SD.jsxs)(SD.Fragment, {
-        children: [CD && (0, SD.jsx)("span", {
+        t: uU
+      } = (0, PU.B)(), CU = "superRank" === gU ? XU.l.product.days : null, hU = UU => null === CU ? uU(UU ? "general:gift" : "general:buy") : uU(UU ? "store:giftDays" : "store:buyDays", {
+        days: CU
+      }), eU = (UU, RU) => (0, cU.jsxs)(cU.Fragment, {
+        children: [RU && (0, cU.jsx)("span", {
           className: "StoreCtaIcon",
-          children: CD
-        }), null === DD && (0, SD.jsx)("span", {
+          children: RU
+        }), null === UU && (0, cU.jsx)("span", {
           className: "StoreCtaLabel StoreCtaLabelPending"
-        }), null !== DD && (0, SD.jsx)("span", {
+        }), null !== UU && (0, cU.jsx)("span", {
           className: "StoreCtaLabel",
-          title: DD,
-          children: DD
-        }), (0, SD.jsxs)("span", {
+          title: UU,
+          children: UU
+        }), (0, cU.jsxs)("span", {
           className: "StoreCtaPrice",
-          children: ["\xb7", (0, SD.jsx)(li.d, {
-            amount: ID
+          children: ["\xb7", (0, cU.jsx)(vE.d, {
+            amount: tU
           })]
         })]
       });
-      let ND;
-      switch (CD) {
+      let WU;
+      switch (RU) {
         case "pending":
-          ND = (0, SD.jsx)(oD.o, {
+          WU = (0, cU.jsx)(QU.j, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: vD(null)
+            children: eU(null)
           });
           break;
         case "login":
-          ND = (0, SD.jsx)(oD.o, {
+          WU = (0, cU.jsx)(QU.j, {
             className: "StoreCtaButton",
-            onClick: yD,
-            children: vD(ZD(!1))
+            onClick: jU,
+            children: eU(hU(!1))
           });
           break;
         case "owned":
-          ND = (0, SD.jsx)(oD.k, {
+          WU = (0, cU.jsx)(QU.g, {
             className: "StoreCtaButton",
             onClick: () => {
-              PD.d.set({
-                openEverythingMenuName: wC.q.CUSTOMISATION
+              wU.b.set({
+                openEverythingMenuName: KR.n.CUSTOMISATION
               })
             },
-            children: (0, SD.jsxs)("span", {
+            children: (0, cU.jsxs)("span", {
               className: "StoreCtaLabel",
-              children: [(0, SD.jsx)(bD.c, {
+              children: [(0, cU.jsx)(TU.c, {
                 name: "shirt"
-              }), " ", MD("store:equip")]
+              }), " ", uU("store:equip")]
             })
           });
           break;
@@ -5898,205 +5898,205 @@ export const modules = {
         case "recipientSharesOwned":
         case "subscribed":
         case "recipientSubscribed":
-          ND = (0, SD.jsx)(oD.o, {
+          WU = (0, cU.jsx)(QU.j, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: (0, SD.jsx)("span", {
+            children: (0, cU.jsx)("span", {
               className: "StoreCtaLabel",
-              children: MD(Fi[CD])
+              children: uU(lE[RU])
             })
           });
           break;
         case "needsRecipient":
         case "lookingUp":
         case "gift":
-          ND = (0, SD.jsx)(oD.o, {
+          WU = (0, cU.jsx)(QU.j, {
             className: "StoreCtaButton",
-            disabled: "needsRecipient" === CD || null === ID,
-            loading: "lookingUp" === CD || pD,
-            onClick: wD,
+            disabled: "needsRecipient" === RU || null === tU,
+            loading: "lookingUp" === RU || pU,
+            onClick: KU,
             analyticsClick: {
               id: "store.gift",
-              value: cD
+              value: gU
             },
-            children: vD(ZD(!0), oi.c)
+            children: eU(hU(!0), QE.c)
           });
           break;
         case "buy":
         case "recharge":
-          ND = (0, SD.jsx)(oD.o, {
+          WU = (0, cU.jsx)(QU.j, {
             className: "StoreCtaButton",
-            loading: pD,
-            disabled: null === ID,
-            onClick: wD,
+            loading: pU,
+            disabled: null === tU,
+            onClick: KU,
             analyticsClick: {
               id: "store.buy",
-              value: cD
+              value: gU
             },
-            children: vD(ZD(!1))
+            children: eU(hU(!1))
           })
       }
-      return (0, SD.jsx)("div", {
-        className: iD()("StoreCta", {
-          StoreCtaHighlight: QD
+      return (0, cU.jsx)("div", {
+        className: EU()("StoreCta", {
+          StoreCtaHighlight: qU
         }),
-        onClick: DD => {
-          DD.stopPropagation(), "needsRecipient" === CD && BD()
+        onClick: UU => {
+          UU.stopPropagation(), "needsRecipient" === RU && GU()
         },
-        children: ND
+        children: WU
       })
     }
 
-    function Cf() {
+    function UP() {
       const {
-        t: DD
-      } = (0, fD.F)();
-      return (0, SD.jsxs)("ul", {
+        t: UU
+      } = (0, PU.B)();
+      return (0, cU.jsxs)("ul", {
         className: "StorePerks",
-        children: [(0, SD.jsxs)("li", {
-          children: [(0, SD.jsx)(bD.c, {
+        children: [(0, cU.jsxs)("li", {
+          children: [(0, cU.jsx)(TU.c, {
             name: "check"
-          }), (0, SD.jsx)(Ai, {
-            text: DD("store:colourfulNames")
+          }), (0, cU.jsx)(NE, {
+            text: UU("store:colourfulNames")
           })]
-        }), (0, SD.jsxs)("li", {
-          children: [(0, SD.jsx)(bD.c, {
+        }), (0, cU.jsxs)("li", {
+          children: [(0, cU.jsx)(TU.c, {
             name: "check"
-          }), DD("store:perkCapes")]
-        }), (0, SD.jsxs)("li", {
-          children: [(0, SD.jsx)(bD.c, {
+          }), UU("store:perkCapes")]
+        }), (0, cU.jsxs)("li", {
+          children: [(0, cU.jsx)(TU.c, {
             name: "check"
-          }), DD("store:perkNoAdverts")]
-        }), (0, SD.jsxs)("li", {
-          children: [(0, SD.jsx)(bD.c, {
+          }), UU("store:perkNoAdverts")]
+        }), (0, cU.jsxs)("li", {
+          children: [(0, cU.jsx)(TU.c, {
             name: "check"
-          }), DD("store:perkFriends", {
-            count: (0, hD.e)(["super"])
+          }), UU("store:perkFriends", {
+            count: (0, LU.e)(["super"])
           })]
         })]
       })
     }
 
-    function If(DD) {
+    function RP(UU) {
       let {
-        daysLeft: CD,
-        totalDays: cD,
-        urgent: ID
-      } = DD;
+        daysLeft: RU,
+        totalDays: gU,
+        urgent: tU
+      } = UU;
       const {
-        t: pD
-      } = (0, fD.F)(), bD = cD > 0 ? Math.min(1, Math.max(.03, CD / cD)) : 1;
-      return (0, SD.jsxs)("div", {
-        className: iD()("StoreSuperRankMeterArea", {
-          StoreSuperRankMeterUrgent: ID
+        t: pU
+      } = (0, PU.B)(), TU = gU > 0 ? Math.min(1, Math.max(.03, RU / gU)) : 1;
+      return (0, cU.jsxs)("div", {
+        className: EU()("StoreSuperRankMeterArea", {
+          StoreSuperRankMeterUrgent: tU
         }),
-        children: [(0, SD.jsx)("span", {
+        children: [(0, cU.jsx)("span", {
           className: "StoreSuperRankDaysLeft",
-          children: 1 === CD ? pD("store:oneDayLeft") : pD("store:daysLeft", {
-            days: CD
+          children: 1 === RU ? pU("store:oneDayLeft") : pU("store:daysLeft", {
+            days: RU
           })
-        }), (0, SD.jsx)("div", {
+        }), (0, cU.jsx)("div", {
           className: "StoreSuperRankMeter",
-          children: (0, SD.jsx)("i", {
+          children: (0, cU.jsx)("i", {
             style: {
-              width: 100 * bD + "%"
+              width: 100 * TU + "%"
             }
           })
         })]
       })
     }
 
-    function pf(DD) {
+    function gP(UU) {
       let {
-        state: CD,
-        urgent: cD,
-        daysLeft: ID,
-        totalDays: pD,
-        recipientHasSuperRank: QD,
-        busy: wD,
-        highlight: BD,
-        onOpen: yD,
-        onAct: MD,
-        onNeedRecipient: tD,
-        onLogin: ZD
-      } = DD;
+        state: RU,
+        urgent: gU,
+        daysLeft: tU,
+        totalDays: pU,
+        recipientHasSuperRank: qU,
+        busy: KU,
+        highlight: GU,
+        onOpen: jU,
+        onAct: uU,
+        onNeedRecipient: CU,
+        onLogin: hU
+      } = UU;
       const {
-        t: oD
-      } = (0, fD.F)(), vD = ui(CD), {
-        days: ND
-      } = jD.g.product, gD = oD("store:recipientHasSuperRank", {
-        giftDays: ND
-      }), XD = eD("subscribed" === CD);
-      return (0, SD.jsxs)("div", {
-        className: iD()("StoreTile StoreSuperRankTile", {
-          StoreTileGift: vD,
-          StoreSuperRankTileUrgent: "recharge" === CD && cD,
-          StoreSuperRankTileWithChip: QD,
-          StoreSuperRankTileGiftReady: "gift" === CD
+        t: QU
+      } = (0, PU.B)(), eU = DE(RU), {
+        days: WU
+      } = XU.l.product, fU = QU("store:recipientHasSuperRank", {
+        giftDays: WU
+      }), xU = MU("subscribed" === RU);
+      return (0, cU.jsxs)("div", {
+        className: EU()("StoreTile StoreSuperRankTile", {
+          StoreTileGift: eU,
+          StoreSuperRankTileUrgent: "recharge" === RU && gU,
+          StoreSuperRankTileWithChip: qU,
+          StoreSuperRankTileGiftReady: "gift" === RU
         }),
-        ...ri(oD("homePage:superRank")),
+        ...LE(QU("homePage:superRank")),
         "data-store-item": "superRank",
-        onPointerEnter: ki,
-        onFocus: ki,
-        onClick: yD,
-        children: [(0, SD.jsx)("div", {
+        onPointerEnter: yE,
+        onFocus: yE,
+        onClick: jU,
+        children: [(0, cU.jsx)("div", {
           className: "StoreSuperRankArt",
           style: {
-            backgroundImage: `url(${Ui.i})`
+            backgroundImage: `url(${bE.e})`
           }
-        }), vD && (0, SD.jsx)("div", {
+        }), eU && (0, cU.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, SD.jsxs)("div", {
+        }), (0, cU.jsxs)("div", {
           className: "StoreTileContent",
-          children: [QD && (0, SD.jsx)("span", {
+          children: [qU && (0, cU.jsx)("span", {
             className: "StoreChip StoreChipGift",
-            title: gD,
-            children: gD
-          }), (0, SD.jsxs)("div", {
+            title: fU,
+            children: fU
+          }), (0, cU.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, SD.jsx)(bD.c, {
+            children: [(0, cU.jsx)(TU.c, {
               name: "bolt"
-            }), " ", oD("homePage:superRank")]
-          }), vD && (0, SD.jsx)("div", {
+            }), " ", QU("homePage:superRank")]
+          }), eU && (0, cU.jsx)("div", {
             className: "StoreTilePitch",
-            children: oD("store:giftPitch", {
-              days: ND
+            children: QU("store:giftPitch", {
+              days: WU
             })
-          }), "recharge" === CD && (0, SD.jsx)(If, {
-            daysLeft: ID,
-            totalDays: pD,
-            urgent: cD
-          }), XD && (0, SD.jsx)("div", {
+          }), "recharge" === RU && (0, cU.jsx)(RP, {
+            daysLeft: tU,
+            totalDays: pU,
+            urgent: gU
+          }), xU && (0, cU.jsx)("div", {
             className: "StoreSuperRankMeterArea",
-            children: (0, SD.jsx)("span", {
+            children: (0, cU.jsx)("span", {
               className: "StoreSuperRankDaysLeft",
-              children: XD
+              children: xU
             })
-          }), (0, SD.jsx)(Cf, {}), (0, SD.jsxs)("div", {
+          }), (0, cU.jsx)(UP, {}), (0, cU.jsxs)("div", {
             className: "StoreTileActions",
-            children: [(0, SD.jsx)(Df, {
-              state: CD,
+            children: [(0, cU.jsx)(OE, {
+              state: RU,
               item: "superRank",
-              price: jD.g.price,
-              busy: wD,
-              highlight: BD,
-              onAct: MD,
-              onNeedRecipient: tD,
-              onLogin: ZD
-            }), "needsRecipient" === CD && (0, SD.jsx)("span", {
+              price: XU.l.price,
+              busy: KU,
+              highlight: GU,
+              onAct: uU,
+              onNeedRecipient: CU,
+              onLogin: hU
+            }), "needsRecipient" === RU && (0, cU.jsx)("span", {
               className: "StoreTileNote StoreTileNoteGift",
-              children: oD("store:pickRecipientFirst")
-            }), "recharge" === CD && cD && (0, SD.jsx)("span", {
+              children: QU("store:pickRecipientFirst")
+            }), "recharge" === RU && gU && (0, cU.jsx)("span", {
               className: "StoreTileNote StoreSuperRankEnding",
-              children: 1 === ID ? oD("store:endsInOneDay") : oD("store:endsInDays", {
-                days: ID
+              children: 1 === tU ? QU("store:endsInOneDay") : QU("store:endsInDays", {
+                days: tU
               })
             })]
           })]
         })]
       })
     }
-    const ff = {
+    const tP = {
       common: "StorePackTileCommon",
       rare: "StorePackTileRare",
       epic: "StorePackTileEpic",
@@ -6104,403 +6104,403 @@ export const modules = {
       mythic: "StorePackTileMythic"
     };
 
-    function bf(DD) {
-      var CD;
+    function pP(UU) {
+      var RU;
       let {
-        pack: cD,
-        state: pD,
-        busy: QD,
-        onOpen: wD,
-        onAct: BD,
-        onNeedRecipient: yD,
-        onLogin: MD
-      } = DD;
+        pack: gU,
+        state: pU,
+        busy: qU,
+        onOpen: KU,
+        onAct: GU,
+        onNeedRecipient: jU,
+        onLogin: uU
+      } = UU;
       const {
-        t: tD
-      } = (0, fD.F)(), ZD = bi.c[cD], oD = ti.i[cD], vD = (0, Ui.p)(cD), ND = (0, ID.useRef)(null);
-      (0, si.h)(cD, ND);
-      const gD = ui(pD),
-        XD = null !== (CD = ZD.displayName) && void 0 !== CD ? CD : cD,
-        mD = (0, Wi.d)((() => {
-          (0, Yi.f)();
-          const DD = (0, si.e)(cD);
-          void 0 !== DD && (0, Gi.f)((0, si.d)(DD))
+        t: CU
+      } = (0, PU.B)(), hU = TE.b[gU], QU = CE.k[gU], eU = (0, bE.l)(gU), WU = (0, tU.useRef)(null);
+      (0, AE.i)(gU, WU);
+      const fU = DE(pU),
+        xU = null !== (RU = hU.displayName) && void 0 !== RU ? RU : gU,
+        mU = (0, iE.d)((() => {
+          (0, FE.f)();
+          const UU = (0, AE.d)(gU);
+          void 0 !== UU && (0, SE.h)((0, AE.c)(UU))
         })),
-        [nD] = (0, ID.useState)(Pi.j);
-      return (0, SD.jsxs)("div", {
-        className: iD()("StoreTile StorePackTile", ff[ZD.tier], {
-          StorePackTileOwned: "owned" === pD,
-          StorePackTileRecipientOwns: "recipientOwns" === pD,
-          StoreTileGift: gD
+        [IU] = (0, tU.useState)(wE.j);
+      return (0, cU.jsxs)("div", {
+        className: EU()("StoreTile StorePackTile", tP[hU.tier], {
+          StorePackTileOwned: "owned" === pU,
+          StorePackTileRecipientOwns: "recipientOwns" === pU,
+          StoreTileGift: fU
         }),
-        ...ri(XD),
-        ref: ND,
-        "data-store-item": cD,
-        onClick: wD,
-        onPointerMove: DD => {
-          "mouse" !== DD.pointerType || 0 === DD.movementX && 0 === DD.movementY || nD || mD.start()
+        ...LE(xU),
+        ref: WU,
+        "data-store-item": gU,
+        onClick: KU,
+        onPointerMove: UU => {
+          "mouse" !== UU.pointerType || 0 === UU.movementX && 0 === UU.movementY || IU || mU.start()
         },
-        onPointerLeave: mD.cancel,
-        children: [oD && (0, SD.jsx)(oD, {}), (0, SD.jsx)("div", {
+        onPointerLeave: mU.cancel,
+        children: [QU && (0, cU.jsx)(QU, {}), (0, cU.jsx)("div", {
           className: "StorePackCharacters",
-          children: vD.map((DD => (0, SD.jsx)("div", {
+          children: eU.map((UU => (0, cU.jsx)("div", {
             className: "StorePackCharacter",
             style: {
-              backgroundImage: `url(${(0,Ui.k)(DD)})`
+              backgroundImage: `url(${(0,bE.h)(UU)})`
             }
-          }, DD)))
-        }), (0, SD.jsx)("div", {
+          }, UU)))
+        }), (0, cU.jsx)("div", {
           className: "StoreTileScrim"
-        }), gD && (0, SD.jsx)("div", {
+        }), fU && (0, cU.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, SD.jsxs)("div", {
+        }), (0, cU.jsxs)("div", {
           className: "StoreTileContent",
-          children: [(0, SD.jsx)("div", {
+          children: [(0, cU.jsx)("div", {
             className: "StoreTileTitle",
-            children: XD
-          }), (0, SD.jsxs)("div", {
+            children: xU
+          }), (0, cU.jsxs)("div", {
             className: "StoreTileMeta",
-            children: [(0, SD.jsx)(Ei.d, {
-              tier: ZD.tier
-            }), " \xb7 ", tD("store:itemCount", {
-              count: (0, ji.h)(cD)
-            }), "owned" === pD && (0, SD.jsxs)("span", {
+            children: [(0, cU.jsx)(zE.c, {
+              tier: hU.tier
+            }), " \xb7 ", CU("store:itemCount", {
+              count: (0, XE.i)(gU)
+            }), "owned" === pU && (0, cU.jsxs)("span", {
               className: "StoreTileOwned",
-              children: [" \xb7 ", (0, SD.jsx)(bD.c, {
+              children: [" \xb7 ", (0, cU.jsx)(TU.c, {
                 name: "check"
-              }), " ", tD("general:owned")]
+              }), " ", CU("general:owned")]
             })]
-          }), (0, SD.jsx)(Df, {
-            state: pD,
-            item: cD,
-            price: (0, jD.d)(cD),
-            busy: QD,
-            onAct: BD,
-            onNeedRecipient: yD,
-            onLogin: MD
+          }), (0, cU.jsx)(OE, {
+            state: pU,
+            item: gU,
+            price: (0, XU.g)(gU),
+            busy: qU,
+            onAct: GU,
+            onNeedRecipient: jU,
+            onLogin: uU
           })]
         })]
       })
     }
-    var Qf = cD(2881),
-      wf = cD(1548),
-      Sf = cD(1451),
-      Bf = cD(3378);
+    var EP = gU(2767),
+      PP = gU(1505),
+      TP = gU(1425),
+      qP = gU(3248);
 
-    function yf() {
-      return (0, SD.jsx)("span", {
+    function KP() {
+      return (0, cU.jsx)("span", {
         className: "NewBadge",
         children: "NEW"
       })
     }
-    var Mf = cD(1331),
-      tf = cD(1562),
-      Zf = cD(9074);
+    var cP = gU(1328),
+      GP = gU(1517),
+      jP = gU(9027);
 
-    function of(DD) {
+    function uP(UU) {
       let {
-        character: CD,
-        drawn: cD,
-        onDrawn: pD
-      } = DD;
-      const fD = (0, ID.useRef)(null),
-        bD = (0, Zf.e)(CD);
-      return (0, SD.jsx)("div", {
-        className: iD()("StoreCharacterLive", {
-          StoreCharacterLiveDrawn: cD
+        character: RU,
+        drawn: gU,
+        onDrawn: pU
+      } = UU;
+      const PU = (0, tU.useRef)(null),
+        TU = (0, jP.f)(RU);
+      return (0, cU.jsx)("div", {
+        className: EU()("StoreCharacterLive", {
+          StoreCharacterLiveDrawn: gU
         }),
-        children: (0, SD.jsx)(ID.Suspense, {
+        children: (0, cU.jsx)(tU.Suspense, {
           fallback: null,
-          children: (0, SD.jsx)(Yi.d, {
-            ref: fD,
+          children: (0, cU.jsx)(FE.b, {
+            ref: PU,
             framing: "store",
-            turntableFromYaw: cD ? bD.yaw : null,
+            turntableFromYaw: gU ? TU.yaw : null,
             onReady: () => {
-              var DD, cD;
-              null === (DD = fD.current) || void 0 === DD || DD.setOrbit(bD), null === (cD = fD.current) || void 0 === cD || cD.setAllCosmetics(tf.c[CD].cosmetics)
+              var UU, gU;
+              null === (UU = PU.current) || void 0 === UU || UU.setOrbit(TU), null === (gU = PU.current) || void 0 === gU || gU.setAllCosmetics(GP.d[RU].cosmetics)
             },
-            onDrawn: pD
+            onDrawn: pU
           })
         })
       })
     }
-    const vf = {
+    const CP = {
         common: "StoreCharacterCardCommon",
         rare: "StoreCharacterCardRare",
         epic: "StoreCharacterCardEpic",
         legendary: "StoreCharacterCardLegendary",
         mythic: "StoreCharacterCardMythic"
       },
-      Nf = new Set(["wildSpirits"]);
+      hP = new Set(["wildSpirits"]);
 
-    function gf(DD) {
-      var CD;
+    function QP(UU) {
+      var RU;
       let {
-        tile: cD,
-        design: pD,
-        canGoLive: QD,
-        live: wD,
-        busy: BD,
-        highlight: yD,
-        onLiveStart: MD,
-        onLiveEnd: tD,
-        onOpen: ZD,
-        onAct: oD,
-        onNeedRecipient: vD,
-        onLogin: ND
-      } = DD;
+        tile: gU,
+        design: pU,
+        canGoLive: qU,
+        live: KU,
+        busy: GU,
+        highlight: jU,
+        onLiveStart: uU,
+        onLiveEnd: CU,
+        onOpen: hU,
+        onAct: QU,
+        onNeedRecipient: eU,
+        onLogin: WU
+      } = UU;
       const {
-        t: gD
-      } = (0, fD.F)(), {
-        pack: XD,
-        state: mD
-      } = cD, nD = bi.c[XD], OD = (0, bi.e)(XD), PD = (0, Ui.n)(XD), HD = ti.i[PD], UD = Nf.has(PD), {
-        tier: xD
-      } = nD, qD = "legendary" === xD || "mythic" === xD, JD = (0, ID.useRef)(null);
-      (0, Mf.b)(JD, "epic" === xD || qD || UD);
-      const [KD, VD] = (0, ID.useState)(!1);
-      return !wD && KD && VD(!1), (0, SD.jsxs)("div", {
-        ref: JD,
-        className: iD()("StoreCharacterCard", `StoreCharacterCard${pD}`, vf[xD], {
-          StoreCharacterCardOwned: "owned" === mD || "recipientOwns" === mD,
-          StoreCharacterCardGift: ui(mD),
-          StoreCharacterCardItem: void 0 === OD
+        t: fU
+      } = (0, PU.B)(), {
+        pack: xU,
+        state: mU
+      } = gU, IU = TE.b[xU], JU = (0, TE.e)(xU), wU = (0, bE.k)(xU), nU = CE.k[wU], bU = hP.has(wU), {
+        tier: oU
+      } = IU, ZU = "legendary" === oU || "mythic" === oU, aU = (0, tU.useRef)(null);
+      (0, cP.b)(aU, "epic" === oU || ZU || bU);
+      const [YU, VU] = (0, tU.useState)(!1);
+      return !KU && YU && VU(!1), (0, cU.jsxs)("div", {
+        ref: aU,
+        className: EU()("StoreCharacterCard", `StoreCharacterCard${pU}`, CP[oU], {
+          StoreCharacterCardOwned: "owned" === mU || "recipientOwns" === mU,
+          StoreCharacterCardGift: DE(mU),
+          StoreCharacterCardItem: void 0 === JU
         }),
-        onPointerMove: DD => {
-          "mouse" !== DD.pointerType || 0 === DD.movementX && 0 === DD.movementY || !QD || wD || void 0 === OD || MD()
+        onPointerMove: UU => {
+          "mouse" !== UU.pointerType || 0 === UU.movementX && 0 === UU.movementY || !qU || KU || void 0 === JU || uU()
         },
-        onPointerLeave: tD,
-        children: [(0, SD.jsx)("div", {
+        onPointerLeave: CU,
+        children: [(0, cU.jsx)("div", {
           className: "StoreCharacterBackdrop",
-          children: HD && (0, SD.jsx)(HD, {
+          children: nU && (0, cU.jsx)(nU, {
             simple: !0
           })
-        }), qD && (0, SD.jsx)("div", {
+        }), ZU && (0, cU.jsx)("div", {
           className: "StoreCharacterRays"
-        }), (0, SD.jsxs)(aD.LinkPreserveSearch, {
+        }), (0, cU.jsxs)(BU.LinkPreserveSearch, {
           className: "StoreCharacterLink",
-          to: (0, wf.d)({
+          to: (0, PP.f)({
             kind: "pack",
-            pack: XD
+            pack: xU
           }),
-          "data-store-item": XD,
-          onClick: DD => {
-            (0, Sf.d)(DD) && (DD.preventDefault(), ZD())
+          "data-store-item": xU,
+          onClick: UU => {
+            (0, TP.c)(UU) && (UU.preventDefault(), hU())
           },
-          children: [(0, SD.jsxs)("div", {
+          children: [(0, cU.jsxs)("div", {
             className: "StoreCharacterStage",
-            children: [(0, SD.jsx)("div", {
+            children: [(0, cU.jsx)("div", {
               className: "StoreCharacterHalo"
-            }), (0, SD.jsx)("div", {
-              className: iD()("StoreCharacterFigure", {
-                StoreCharacterFigureCovered: KD
+            }), (0, cU.jsx)("div", {
+              className: EU()("StoreCharacterFigure", {
+                StoreCharacterFigureCovered: YU
               }),
               style: {
-                backgroundImage: `url(${(0,Ui.s)(XD)})`
+                backgroundImage: `url(${(0,bE.r)(xU)})`
               }
-            }), wD && void 0 !== OD && (0, SD.jsx)(of, {
-              character: OD,
-              drawn: KD,
+            }), KU && void 0 !== JU && (0, cU.jsx)(uP, {
+              character: JU,
+              drawn: YU,
               onDrawn: () => {
-                VD(!0)
+                VU(!0)
               }
             })]
-          }), (0, SD.jsx)("div", {
+          }), (0, cU.jsx)("div", {
             className: "StoreCharacterName",
-            children: null !== (CD = nD.displayName) && void 0 !== CD ? CD : XD
-          }), (0, SD.jsx)(Ei.d, {
-            tier: xD,
+            children: null !== (RU = IU.displayName) && void 0 !== RU ? RU : xU
+          }), (0, cU.jsx)(zE.c, {
+            tier: oU,
             className: "StoreCharacterTier"
           })]
-        }), (0, SD.jsx)("div", {
+        }), (0, cU.jsx)("div", {
           className: "StoreCharacterScrim"
-        }), UD && (0, SD.jsx)("span", {
+        }), bU && (0, cU.jsx)("span", {
           className: "StoreCharacterNew",
-          children: (0, SD.jsx)(yf, {})
-        }), "owned" === mD && (0, SD.jsx)("span", {
+          children: (0, cU.jsx)(KP, {})
+        }), "owned" === mU && (0, cU.jsx)("span", {
           className: "StoreCharacterOwned",
-          title: gD("general:owned"),
-          "aria-label": gD("general:owned"),
-          children: (0, SD.jsx)(bD.c, {
+          title: fU("general:owned"),
+          "aria-label": fU("general:owned"),
+          children: (0, cU.jsx)(TU.c, {
             name: "check"
           })
-        }), (0, SD.jsx)("div", {
+        }), (0, cU.jsx)("div", {
           className: "StoreCharacterPlate",
-          children: (0, SD.jsx)(Df, {
-            state: mD,
-            item: XD,
-            price: (0, jD.d)(XD),
-            busy: BD,
-            highlight: yD,
-            onAct: oD,
-            onNeedRecipient: vD,
-            onLogin: ND
+          children: (0, cU.jsx)(OE, {
+            state: mU,
+            item: xU,
+            price: (0, XU.g)(xU),
+            busy: GU,
+            highlight: jU,
+            onAct: QU,
+            onNeedRecipient: eU,
+            onLogin: WU
           })
         })]
       })
     }
 
-    function Xf(DD) {
+    function eP(UU) {
       let {
-        tiles: CD,
-        busy: cD,
-        highlightItem: pD,
-        onOpen: iD,
-        onAct: fD,
-        onNeedRecipient: bD,
-        onLogin: QD
-      } = DD;
-      const wD = (0, Bf.h)("storeCharacterCardFoil"),
-        BD = (0, Bf.h)("storeCharacterCardSpotlight"),
-        yD = wD ? "Foil" : BD ? "Spotlight" : "Showcase",
-        [MD] = (0, ID.useState)(Pi.j),
-        [tD, ZD] = (0, ID.useState)(null);
-      return (0, SD.jsx)("div", {
+        tiles: RU,
+        busy: gU,
+        highlightItem: pU,
+        onOpen: EU,
+        onAct: PU,
+        onNeedRecipient: TU,
+        onLogin: qU
+      } = UU;
+      const KU = (0, qP.k)("storeCharacterCardFoil"),
+        GU = (0, qP.k)("storeCharacterCardSpotlight"),
+        jU = KU ? "Foil" : GU ? "Spotlight" : "Showcase",
+        [uU] = (0, tU.useState)(wE.j),
+        [CU, hU] = (0, tU.useState)(null);
+      return (0, cU.jsx)("div", {
         className: "StoreCharacterGrid",
-        children: CD.map((DD => (0, SD.jsx)(gf, {
-          tile: DD,
-          design: yD,
-          canGoLive: !MD,
-          live: tD === DD.pack,
-          busy: cD,
-          highlight: pD === DD.pack,
+        children: RU.map((UU => (0, cU.jsx)(QP, {
+          tile: UU,
+          design: jU,
+          canGoLive: !uU,
+          live: CU === UU.pack,
+          busy: gU,
+          highlight: pU === UU.pack,
           onLiveStart: () => {
-            ZD(DD.pack)
+            hU(UU.pack)
           },
           onLiveEnd: () => {
-            ZD((CD => CD === DD.pack ? null : CD))
+            hU((RU => RU === UU.pack ? null : RU))
           },
           onOpen: () => {
-            iD(DD.pack)
+            EU(UU.pack)
           },
           onAct: () => {
-            fD(DD.pack)
+            PU(UU.pack)
           },
-          onNeedRecipient: bD,
+          onNeedRecipient: TU,
           onLogin: () => {
-            QD(DD.pack)
+            qU(UU.pack)
           }
-        }, DD.pack)))
+        }, UU.pack)))
       })
     }
-    var mf = cD(9084);
+    var WP = gU(9033);
 
-    function nf(DD) {
+    function fP(UU) {
       let {
-        title: CD
-      } = DD;
-      return (0, SD.jsx)("h2", {
+        title: RU
+      } = UU;
+      return (0, cU.jsx)("h2", {
         className: "StoreSectionDivider",
-        children: (0, SD.jsx)("span", {
+        children: (0, cU.jsx)("span", {
           className: "StoreSectionDividerTitle",
-          children: CD
+          children: RU
         })
       })
     }
 
-    function Of(DD) {
+    function xP(UU) {
       let {
-        mountAtOnce: CD,
-        children: cD
-      } = DD;
-      const pD = (0, ID.useRef)(null),
-        [iD, fD] = (0, ID.useState)(CD),
-        bD = (0, mf.d)();
-      return (0, ID.useLayoutEffect)((() => {
-        const DD = pD.current;
-        DD && DD.getBoundingClientRect().top < DD.parentElement.getBoundingClientRect().bottom && fD(!0)
-      }), []), iD || bD ? (0, SD.jsx)(SD.Fragment, {
-        children: cD
-      }) : (0, SD.jsx)("div", {
-        ref: pD
+        mountAtOnce: RU,
+        children: gU
+      } = UU;
+      const pU = (0, tU.useRef)(null),
+        [EU, PU] = (0, tU.useState)(RU),
+        TU = (0, WP.d)();
+      return (0, tU.useLayoutEffect)((() => {
+        const UU = pU.current;
+        UU && UU.getBoundingClientRect().top < UU.parentElement.getBoundingClientRect().bottom && PU(!0)
+      }), []), EU || TU ? (0, cU.jsx)(cU.Fragment, {
+        children: gU
+      }) : (0, cU.jsx)("div", {
+        ref: pU
       })
     }
 
-    function Pf(DD) {
+    function mP(UU) {
       let {
-        layout: CD,
-        mountAtOnce: cD,
-        bundleGift: ID,
-        superRankTotalDays: pD,
-        busy: iD,
-        highlightItem: bD,
-        onOpen: QD,
-        onAct: wD,
-        onNeedRecipient: BD,
-        onLogin: yD
-      } = DD;
+        layout: RU,
+        mountAtOnce: gU,
+        bundleGift: tU,
+        superRankTotalDays: pU,
+        busy: EU,
+        highlightItem: TU,
+        onOpen: qU,
+        onAct: KU,
+        onNeedRecipient: GU,
+        onLogin: jU
+      } = UU;
       const {
-        t: MD
-      } = (0, fD.F)(), tD = CD.packs.filter((DD => void 0 === (0, bi.e)(DD.pack) && !(0, bi.h)(DD.pack))), ZD = CD.packs.filter((DD => void 0 !== (0, bi.e)(DD.pack))), oD = CD.packs.filter((DD => (0, bi.h)(DD.pack)));
-      return (0, SD.jsxs)(SD.Fragment, {
-        children: [(0, SD.jsx)(Qf.d, {
+        t: uU
+      } = (0, PU.B)(), CU = RU.packs.filter((UU => void 0 === (0, TE.e)(UU.pack) && !(0, TE.l)(UU.pack))), hU = RU.packs.filter((UU => void 0 !== (0, TE.e)(UU.pack))), QU = RU.packs.filter((UU => (0, TE.l)(UU.pack)));
+      return (0, cU.jsxs)(cU.Fragment, {
+        children: [(0, cU.jsx)(EP.b, {
           className: "StoreSuperGems",
-          gift: ID,
-          highlightSku: bD
-        }), (0, SD.jsx)(nf, {
-          title: MD("store:rank")
-        }), (0, SD.jsx)(pf, {
-          state: CD.superRank.state,
-          urgent: CD.superRank.urgent,
-          daysLeft: CD.superRankDaysLeft,
-          totalDays: pD,
-          recipientHasSuperRank: CD.recipientHasSuperRank,
-          busy: iD,
-          highlight: "superRank" === bD,
+          gift: tU,
+          highlightSku: TU
+        }), (0, cU.jsx)(fP, {
+          title: uU("store:rank")
+        }), (0, cU.jsx)(gP, {
+          state: RU.superRank.state,
+          urgent: RU.superRank.urgent,
+          daysLeft: RU.superRankDaysLeft,
+          totalDays: pU,
+          recipientHasSuperRank: RU.recipientHasSuperRank,
+          busy: EU,
+          highlight: "superRank" === TU,
           onOpen: () => {
-            QD("superRank")
+            qU("superRank")
           },
           onAct: () => {
-            wD("superRank")
+            KU("superRank")
           },
-          onNeedRecipient: BD,
+          onNeedRecipient: GU,
           onLogin: () => {
-            yD("superRank")
+            jU("superRank")
           }
-        }), (0, SD.jsxs)(Of, {
-          mountAtOnce: cD,
-          children: [(0, SD.jsx)(nf, {
-            title: MD("store:bundles")
-          }), (0, SD.jsx)("div", {
+        }), (0, cU.jsxs)(xP, {
+          mountAtOnce: gU,
+          children: [(0, cU.jsx)(fP, {
+            title: uU("store:bundles")
+          }), (0, cU.jsx)("div", {
             className: "StorePackGrid",
-            children: tD.map((DD => (0, SD.jsx)(bf, {
-              pack: DD.pack,
-              state: DD.state,
-              busy: iD,
+            children: CU.map((UU => (0, cU.jsx)(pP, {
+              pack: UU.pack,
+              state: UU.state,
+              busy: EU,
               onOpen: () => {
-                QD(DD.pack)
+                qU(UU.pack)
               },
               onAct: () => {
-                wD(DD.pack)
+                KU(UU.pack)
               },
-              onNeedRecipient: BD,
+              onNeedRecipient: GU,
               onLogin: () => {
-                yD(DD.pack)
+                jU(UU.pack)
               }
-            }, DD.pack)))
-          }), (0, SD.jsxs)(Of, {
-            mountAtOnce: cD,
-            children: [(0, SD.jsx)(nf, {
-              title: MD("store:characters")
-            }), (0, SD.jsx)(Xf, {
-              tiles: ZD,
-              busy: iD,
-              highlightItem: bD,
-              onOpen: QD,
-              onAct: wD,
-              onNeedRecipient: BD,
-              onLogin: yD
-            }), oD.length > 0 && (0, SD.jsxs)(SD.Fragment, {
-              children: [(0, SD.jsx)(nf, {
-                title: MD("store:premiumItems")
-              }), (0, SD.jsx)(Xf, {
-                tiles: oD,
-                busy: iD,
-                highlightItem: bD,
-                onOpen: QD,
-                onAct: wD,
-                onNeedRecipient: BD,
-                onLogin: yD
+            }, UU.pack)))
+          }), (0, cU.jsxs)(xP, {
+            mountAtOnce: gU,
+            children: [(0, cU.jsx)(fP, {
+              title: uU("store:characters")
+            }), (0, cU.jsx)(eP, {
+              tiles: hU,
+              busy: EU,
+              highlightItem: TU,
+              onOpen: qU,
+              onAct: KU,
+              onNeedRecipient: GU,
+              onLogin: jU
+            }), QU.length > 0 && (0, cU.jsxs)(cU.Fragment, {
+              children: [(0, cU.jsx)(fP, {
+                title: uU("store:premiumItems")
+              }), (0, cU.jsx)(eP, {
+                tiles: QU,
+                busy: EU,
+                highlightItem: TU,
+                onOpen: qU,
+                onAct: KU,
+                onNeedRecipient: GU,
+                onLogin: jU
               })]
             })]
           })]
@@ -6508,780 +6508,780 @@ export const modules = {
       })
     }
 
-    function Hf(DD) {
+    function IP(UU) {
       let {
-        state: CD,
-        mode: cD,
-        giftName: ID,
-        busy: pD,
-        highlight: iD,
-        purchaseError: bD,
-        onBack: QD,
-        onChooseRecipient: wD,
-        onAct: BD,
-        onLogin: yD
-      } = DD;
+        state: RU,
+        mode: gU,
+        giftName: tU,
+        busy: pU,
+        highlight: EU,
+        purchaseError: TU,
+        onBack: qU,
+        onChooseRecipient: KU,
+        onAct: GU,
+        onLogin: jU
+      } = UU;
       const {
-        t: MD
-      } = (0, fD.F)(), tD = eD("gift" !== cD);
-      return (0, SD.jsx)(di, {
-        onBack: QD,
-        recipient: "gift" === cD && (0, SD.jsxs)(SD.Fragment, {
-          children: [ID && (0, SD.jsxs)("span", {
+        t: uU
+      } = (0, PU.B)(), CU = MU("gift" !== gU);
+      return (0, cU.jsx)(kE, {
+        onBack: qU,
+        recipient: "gift" === gU && (0, cU.jsxs)(cU.Fragment, {
+          children: [tU && (0, cU.jsxs)("span", {
             className: "StoreDetailRecipient",
-            title: MD("store:giftFor", {
-              name: ID
+            title: uU("store:giftFor", {
+              name: tU
             }),
-            children: [oi.c, " ", MD("store:giftFor", {
-              name: ID
+            children: [QE.c, " ", uU("store:giftFor", {
+              name: tU
             })]
-          }), !ID && (0, SD.jsxs)("div", {
-            ...(0, oD.U)(),
+          }), !tU && (0, cU.jsxs)("div", {
+            ...(0, QU.R)(),
             className: "StoreDetailRecipient StoreDetailRecipientChoose",
-            onClick: wD,
-            children: [oi.c, " ", MD("store:chooseRecipient")]
+            onClick: KU,
+            children: [QE.c, " ", uU("store:chooseRecipient")]
           })]
         }),
-        cta: (0, SD.jsx)(Df, {
-          state: CD,
+        cta: (0, cU.jsx)(OE, {
+          state: RU,
           item: "superRank",
-          price: jD.g.price,
-          busy: pD,
-          highlight: iD,
-          onAct: BD,
-          onNeedRecipient: wD,
-          onLogin: yD
+          price: XU.l.price,
+          busy: pU,
+          highlight: EU,
+          onAct: GU,
+          onNeedRecipient: KU,
+          onLogin: jU
         }),
-        afterCta: (0, SD.jsxs)(SD.Fragment, {
-          children: [tD && (0, SD.jsx)("span", {
+        afterCta: (0, cU.jsxs)(cU.Fragment, {
+          children: [CU && (0, cU.jsx)("span", {
             className: "StoreTileNote",
-            children: tD
-          }), bD && (0, SD.jsx)("span", {
+            children: CU
+          }), TU && (0, cU.jsx)("span", {
             className: "StoreTileNote StoreTileNoteError",
-            children: MD(bD)
+            children: uU(TU)
           })]
         })
       })
     }
-    var Uf = cD(136);
-    const xf = Uf.o("kind", [Uf.y({
-      kind: Uf.t("refused"),
-      heldTierId: Uf.O(),
-      until: Uf.v()
-    }), Uf.y({
-      kind: Uf.t("refund"),
-      tierId: Uf.O(),
-      refundedMs: Uf.v(),
-      forfeitedMs: Uf.v(),
-      premiumCurrency: Uf.v()
-    }), Uf.y({
-      kind: Uf.t("none")
+    var JP = gU(149);
+    const wP = JP.m("kind", [JP.G({
+      kind: JP.w("refused"),
+      heldTierId: JP.X(),
+      until: JP.D()
+    }), JP.G({
+      kind: JP.w("refund"),
+      tierId: JP.X(),
+      refundedMs: JP.D(),
+      forfeitedMs: JP.D(),
+      premiumCurrency: JP.D()
+    }), JP.G({
+      kind: JP.w("none")
     })]);
-    async function qf(DD) {
-      const CD = await (0, qD.postJsonWithMetricsCookiesAndJsonResponse)(`${JD.clientSideServerUrls.indexUrl}/index/ranks/subscribe-preview`, {
-        productId: DD
+    async function nP(UU) {
+      const RU = await (0, ZU.postJsonWithMetricsCookiesAndJsonResponse)(`${aU.clientSideServerUrls.indexUrl}/index/ranks/subscribe-preview`, {
+        productId: UU
       }, {
         retries: 1
       });
-      return xf.parse(CD)
+      return wP.parse(RU)
     }
-    var Jf = cD(2852),
-      Kf = cD(2884);
+    var bP = gU(2730),
+      oP = gU(2772);
 
-    function af(DD, CD) {
-      const cD = Math.max(1, Math.round(CD / TD.i));
-      return [1 === cD ? `${DD}OneDay` : DD, {
-        days: cD.toLocaleString()
+    function ZP(UU, RU) {
+      const gU = Math.max(1, Math.round(RU / HU.f));
+      return [1 === gU ? `${UU}OneDay` : UU, {
+        days: gU.toLocaleString()
       }]
     }
 
-    function Vf() {
-      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && (0, RD.purchasesAllowed)() ? (0, SD.jsx)(zf, {}) : null
+    function aP() {
+      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && (0, sU.purchasesAllowed)() ? (0, cU.jsx)(YP, {}) : null
     }
 
-    function zf() {
+    function YP() {
       const {
-        t: DD
-      } = (0, fD.F)(), {
-        userContext: CD
-      } = (0, MD.c)(), {
-        purchaseUnderWay: cD,
-        notice: pD,
-        subscribe: iD
-      } = (0, Jf.c)(), [bD, QD] = (0, ID.useState)(null), [wD, BD] = (0, ID.useState)(0), [yD, tD] = (0, ID.useState)(!1), ZD = (0, ID.useRef)(!0), vD = CD !== qD.NULL_USER_CONTEXT, ND = null !== bD && bD.loadedFor === CD ? bD.offer : null, gD = null === pD || void 0 === pD ? void 0 : pD.pendingIntentId, XD = (0, ID.useRef)(gD);
+        t: UU
+      } = (0, PU.B)(), {
+        userContext: RU
+      } = (0, uU.e)(), {
+        purchaseUnderWay: gU,
+        notice: pU,
+        subscribe: EU
+      } = (0, bP.e)(), [TU, qU] = (0, tU.useState)(null), [KU, GU] = (0, tU.useState)(0), [jU, CU] = (0, tU.useState)(!1), hU = (0, tU.useRef)(!0), eU = RU !== ZU.NULL_USER_CONTEXT, WU = null !== TU && TU.loadedFor === RU ? TU.offer : null, fU = null === pU || void 0 === pU ? void 0 : pU.pendingIntentId, xU = (0, tU.useRef)(fU);
 
-      function mD() {
-        BD((DD => DD + 1))
+      function mU() {
+        GU((UU => UU + 1))
       }
-      async function nD(DD) {
-        tD(!1), await iD(DD), ZD.current && mD()
+      async function IU(UU) {
+        CU(!1), await EU(UU), hU.current && mU()
       }
-      if ((0, ID.useEffect)((() => (ZD.current = !0, () => {
-          ZD.current = !1
-        })), []), (0, ID.useEffect)((() => {
-          void 0 !== XD.current && void 0 === gD && mD(), XD.current = gD
-        }), [gD]), (0, ID.useEffect)((() => {
-          if (!vD) return;
-          let DD = !1;
-          return tD(!1), async function() {
+      if ((0, tU.useEffect)((() => (hU.current = !0, () => {
+          hU.current = !1
+        })), []), (0, tU.useEffect)((() => {
+          void 0 !== xU.current && void 0 === fU && mU(), xU.current = fU
+        }), [fU]), (0, tU.useEffect)((() => {
+          if (!eU) return;
+          let UU = !1;
+          return CU(!1), async function() {
             const {
-              offering: DD
-            } = await (0, bC.h)().getOfferings("superRankPage"), CD = null === DD || void 0 === DD ? void 0 : DD.packages.find((DD => null !== DD.price));
-            return void 0 === CD ? {
+              offering: UU
+            } = await (0, TR.g)().getOfferings("superRankPage"), RU = null === UU || void 0 === UU ? void 0 : UU.packages.find((UU => null !== UU.price));
+            return void 0 === RU ? {
               kind: "unavailable"
             } : {
               kind: "loaded",
-              pkg: CD,
-              preview: await qf(CD.productId)
+              pkg: RU,
+              preview: await nP(RU.productId)
             }
-          }().catch((DD => (console.error("Billing: loading the Super Rank subscription or its preview failed:", DD), {
+          }().catch((UU => (console.error("Billing: loading the Super Rank subscription or its preview failed:", UU), {
             kind: "loadFailed"
-          }))).then((cD => {
-            DD || QD((DD => "loadFailed" === cD.kind && (null === DD || void 0 === DD ? void 0 : DD.loadedFor) === CD ? DD : {
-              loadedFor: CD,
-              offer: cD
+          }))).then((gU => {
+            UU || qU((UU => "loadFailed" === gU.kind && (null === UU || void 0 === UU ? void 0 : UU.loadedFor) === RU ? UU : {
+              loadedFor: RU,
+              offer: gU
             }))
           })), () => {
-            DD = !0
+            UU = !0
           }
-        }), [CD, vD, wD]), null === ND) return null;
-      if ("loaded" !== ND.kind) return (0, SD.jsx)(Kf.j, {
+        }), [RU, eU, KU]), null === WU) return null;
+      if ("loaded" !== WU.kind) return (0, cU.jsx)(oP.k, {
         notice: {
           kind: "error",
-          key: "unavailable" === ND.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
+          key: "unavailable" === WU.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
       const {
-        pkg: OD,
-        preview: PD
-      } = ND;
-      if ("refused" === PD.kind) return (0, SD.jsx)(Kf.j, {
+        pkg: JU,
+        preview: wU
+      } = WU;
+      if ("refused" === wU.kind) return (0, cU.jsx)(oP.k, {
         notice: {
           kind: "error",
           key: "payments:subscribeRefusedGemRank",
           values: {
-            date: new Date(PD.until).toLocaleDateString()
+            date: new Date(wU.until).toLocaleDateString()
           }
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
-      const HD = (0, Qf.g)(OD.price);
-      if (yD && "refund" === PD.kind) {
+      const nU = (0, EP.f)(JU.price);
+      if (jU && "refund" === wU.kind) {
         const {
-          refundedMs: CD,
-          forfeitedMs: ID,
-          premiumCurrency: pD
-        } = PD, iD = ID + (0 === pD ? CD : 0), [fD, bD] = af("payments:subscribeRefundsGemRank", CD), [QD, wD] = af("payments:subscribeForfeitsGemRank", iD);
-        return (0, SD.jsxs)("div", {
+          refundedMs: RU,
+          forfeitedMs: tU,
+          premiumCurrency: pU
+        } = wU, EU = tU + (0 === pU ? RU : 0), [PU, TU] = ZP("payments:subscribeRefundsGemRank", RU), [qU, KU] = ZP("payments:subscribeForfeitsGemRank", EU);
+        return (0, cU.jsxs)("div", {
           className: "StoreTempSubscribe SmallTextBold",
-          children: [(0, SD.jsx)("div", {
-            children: DD("payments:subscribeEndsGemRank")
-          }), pD > 0 && (0, SD.jsx)("div", {
-            children: DD(fD, {
-              ...bD,
-              amount: pD.toLocaleString()
+          children: [(0, cU.jsx)("div", {
+            children: UU("payments:subscribeEndsGemRank")
+          }), pU > 0 && (0, cU.jsx)("div", {
+            children: UU(PU, {
+              ...TU,
+              amount: pU.toLocaleString()
             })
-          }), iD > 0 && (0, SD.jsx)("div", {
-            children: DD(QD, wD)
-          }), (0, SD.jsxs)("div", {
+          }), EU > 0 && (0, cU.jsx)("div", {
+            children: UU(qU, KU)
+          }), (0, cU.jsxs)("div", {
             className: "StoreTempSubscribeButtons",
-            children: [(0, SD.jsx)(oD.k, {
+            children: [(0, cU.jsx)(QU.g, {
               onClick: () => {
-                tD(!1)
+                CU(!1)
               },
-              children: DD("general:cancel")
-            }), (0, SD.jsx)(oD.o, {
+              children: UU("general:cancel")
+            }), (0, cU.jsx)(QU.j, {
               onClick: () => {
-                nD(OD)
+                IU(JU)
               },
-              loading: cD,
-              children: DD("payments:subscribeContinue", {
-                price: HD
+              loading: gU,
+              children: UU("payments:subscribeContinue", {
+                price: nU
               })
             })]
           })]
         })
       }
-      return (0, SD.jsxs)("div", {
+      return (0, cU.jsxs)("div", {
         className: "StoreTempSubscribe",
-        children: [(0, SD.jsx)(Kf.j, {
-          notice: pD,
+        children: [(0, cU.jsx)(oP.k, {
+          notice: pU,
           className: "SmallTextBold"
-        }), (0, SD.jsx)(Kf.d, {
+        }), (0, cU.jsx)(oP.d, {
           className: "SmallTextBold"
-        }), (0, SD.jsx)(oD.o, {
+        }), (0, cU.jsx)(QU.j, {
           onClick: () => {
-            "refund" === PD.kind ? tD(!0) : nD(OD)
+            "refund" === wU.kind ? CU(!0) : IU(JU)
           },
-          disabled: void 0 !== gD,
-          loading: cD,
-          children: DD("payments:subscribeToSuperRank", {
-            price: HD
+          disabled: void 0 !== fU,
+          loading: gU,
+          children: UU("payments:subscribeToSuperRank", {
+            price: nU
           })
         })]
       })
     }
-    const jf = {
+    const BP = {
       kind: "board"
     };
-    let lf = !1;
+    let VP = !1;
 
-    function Lf(DD) {
-      return "found" === DD.status || "error" === DD.status && "store:giftRecipientLookupFailed" === DD.error ? DD.name : null
-    }(0, GD.z)(Qi.prefetchBillingOfferings);
-    const Tf = (0, ID.memo)((function(DD) {
-      var CD;
+    function rP(UU) {
+      return "found" === UU.status || "error" === UU.status && "store:giftRecipientLookupFailed" === UU.error ? UU.name : null
+    }(0, SU.t)(qE.prefetchBillingOfferings);
+    const XP = (0, tU.memo)((function(UU) {
+      var RU;
       let {
-        show: pD
-      } = DD;
+        show: pU
+      } = UU;
       const {
-        t: bD
-      } = (0, fD.F)(), {
-        userContext: QD
-      } = (0, MD.c)(), wD = QD !== qD.NULL_USER_CONTEXT, BD = Xi(QD), [yD, tD] = (0, ZD.b)(), {
-        page: oD,
-        urlMode: vD,
-        goTo: ND
-      } = (0, mi.e)(), gD = function(DD) {
-        return "superRank" === DD.kind ? "superRank" : "pack" === DD.kind ? DD.pack : null
-      }(oD), {
-        openEverythingMenuName: XD,
-        gameState: mD
-      } = (0, PD.o)(["openEverythingMenuName", "gameState"]), nD = null !== XD;
-      ! function(DD, CD) {
-        const [pD] = (0, ID.useState)(Pi.j), [iD, fD] = (0, ID.useState)(!1);
-        pD && CD && !iD && fD(!0);
-        const bD = (0, iI.p)(),
-          QD = pD && iD && DD && !bD;
-        (0, ID.useEffect)((() => {
-          if (!QD) return;
-          let DD = null,
-            CD = null,
-            ID = null;
-          const pD = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, bC.h)().purchaseUnderWay,
-            iD = () => {
-              var cD;
-              null === (cD = ID) || void 0 === cD || cD(), ID = null, null !== DD && (clearTimeout(DD), DD = null), null !== CD && (clearTimeout(CD), CD = null)
+        t: TU
+      } = (0, PU.B)(), {
+        userContext: qU
+      } = (0, uU.e)(), KU = qU !== ZU.NULL_USER_CONTEXT, GU = xE(qU), [jU, CU] = (0, hU.d)(), {
+        page: QU,
+        urlMode: eU,
+        goTo: WU
+      } = (0, mE.d)(), fU = function(UU) {
+        return "superRank" === UU.kind ? "superRank" : "pack" === UU.kind ? UU.pack : null
+      }(QU), {
+        openEverythingMenuName: xU,
+        gameState: mU
+      } = (0, wU.l)(["openEverythingMenuName", "gameState"]), IU = null !== xU;
+      ! function(UU, RU) {
+        const [pU] = (0, tU.useState)(wE.j), [EU, PU] = (0, tU.useState)(!1);
+        pU && RU && !EU && PU(!0);
+        const TU = (0, Et.o)(),
+          qU = pU && EU && UU && !TU;
+        (0, tU.useEffect)((() => {
+          if (!qU) return;
+          let UU = null,
+            RU = null,
+            tU = null;
+          const pU = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, TR.g)().purchaseUnderWay,
+            EU = () => {
+              var gU;
+              null === (gU = tU) || void 0 === gU || gU(), tU = null, null !== UU && (clearTimeout(UU), UU = null), null !== RU && (clearTimeout(RU), RU = null)
             },
-            fD = () => {
-              (0, ni.t)(!1), (0, ni.s)(!1), iD(), DD = setTimeout((() => {
-                DD = null, ID = (0, Oi.e)((() => {
-                  ID = null, pD() ? fD() : ((0, ni.t)(!0), CD = setTimeout((() => {
-                    CD = null, ID = (0, Oi.e)((() => {
-                      ID = null, pD() ? fD() : (0, ni.s)(!0)
+            PU = () => {
+              (0, IE.n)(!1), (0, IE.m)(!1), EU(), UU = setTimeout((() => {
+                UU = null, tU = (0, JE.e)((() => {
+                  tU = null, pU() ? PU() : ((0, IE.n)(!0), RU = setTimeout((() => {
+                    RU = null, tU = (0, JE.e)((() => {
+                      tU = null, pU() ? PU() : (0, IE.m)(!0)
                     }))
-                  }), 3e3), Promise.resolve().then((() => cD(4452))).then((DD => {
-                    DD.startBackgroundGameSetup()
-                  }), (DD => {
-                    console.warn("Background game setup: its chunk failed to load", DD)
+                  }), 3e3), Promise.resolve().then((() => gU(4318))).then((UU => {
+                    UU.startBackgroundGameSetup()
+                  }), (UU => {
+                    console.warn("Background game setup: its chunk failed to load", UU)
                   })))
                 }))
               }), 2e3)
             };
-          for (const cD of Hi) window.addEventListener(cD, fD, {
+          for (const gU of nE) window.addEventListener(gU, PU, {
             capture: !0,
             passive: !0
           });
-          return fD(), () => {
-            for (const DD of Hi) window.removeEventListener(DD, fD, {
+          return PU(), () => {
+            for (const UU of nE) window.removeEventListener(UU, PU, {
               capture: !0
             });
-            iD(), (0, ni.t)(!1), (0, ni.s)(!1)
+            EU(), (0, IE.n)(!1), (0, IE.m)(!1)
           }
-        }), [QD])
-      }(pD && nD, "pack" === oD.kind);
-      const OD = "landingPage" === mD;
-      (0, ID.useEffect)((() => {
-        nD && (0, Qi.prefetchBillingOfferings)()
-      }), [nD]), (0, ID.useEffect)((() => {
-        nD && !pD && OD && (0, Ui.t)()
-      }), [nD, pD, OD]);
-      const [HD, UD] = (0, ID.useState)(0), [xD, JD] = (0, ID.useState)(null), [KD, aD] = (0, ID.useState)(null), [VD, zD] = (0, ID.useState)(null), [lD, LD] = (0, ID.useState)(null), TD = (0, ID.useRef)(null), kD = (0, ID.useRef)(null), dD = (0, ID.useRef)(!1), YD = (0, GD.F)(), WD = (0, ID.useRef)(0), sD = (0, ID.useRef)(!1);
+        }), [qU])
+      }(pU && IU, "pack" === QU.kind);
+      const JU = "landingPage" === mU;
+      (0, tU.useEffect)((() => {
+        IU && (0, qE.prefetchBillingOfferings)()
+      }), [IU]), (0, tU.useEffect)((() => {
+        IU && !pU && JU && (0, bE.u)()
+      }), [IU, pU, JU]);
+      const [nU, bU] = (0, tU.useState)(0), [oU, aU] = (0, tU.useState)(null), [YU, BU] = (0, tU.useState)(null), [VU, rU] = (0, tU.useState)(null), [vU, dU] = (0, tU.useState)(null), HU = (0, tU.useRef)(null), yU = (0, tU.useRef)(null), kU = (0, tU.useRef)(!1), FU = (0, SU.C)(), iU = (0, tU.useRef)(0), AU = (0, tU.useRef)(!1);
 
-      function ED() {
-        UD((DD => DD + 1))
-      }(0, ID.useEffect)((() => {
-        if (pD) {
-          if (lf = !0, (0, GD.o)(), YD && YD.seq !== WD.current) {
-            var DD;
-            WD.current = YD.seq, "loginResume" !== YD.source && (0, GD.B)();
-            const CD = (0, GD.e)(YD);
-            vD || ND(CD), LD(null !== (DD = YD.highlight) && void 0 !== DD ? DD : null), aD(null), "gift" === YD.mode && YD.giftRecipientName ? BD.choose(YD.giftRecipientName, "prefilled") : "current" !== YD.mode && BD.clear(), "gift" !== YD.mode || YD.giftRecipientName || ED(), (0, AD.reportAnalyticsClick)({
+      function zU() {
+        bU((UU => UU + 1))
+      }(0, tU.useEffect)((() => {
+        if (pU) {
+          if (VP = !0, (0, SU.k)(), FU && FU.seq !== iU.current) {
+            var UU;
+            iU.current = FU.seq, "loginResume" !== FU.source && (0, SU.z)();
+            const RU = (0, SU.d)(FU);
+            eU || WU(RU), dU(null !== (UU = FU.highlight) && void 0 !== UU ? UU : null), BU(null), "gift" === FU.mode && FU.giftRecipientName ? GU.choose(FU.giftRecipientName, "prefilled") : "current" !== FU.mode && GU.clear(), "gift" !== FU.mode || FU.giftRecipientName || zU(), (0, lU.reportAnalyticsClick)({
               id: "store.open",
-              value: YD.source
+              value: FU.source
             })
-          } else sD.current || (0, AD.reportAnalyticsClick)({
+          } else AU.current || (0, lU.reportAnalyticsClick)({
             id: "store.open",
             value: "menuTab"
           });
-          sD.current = !0
-        } else sD.current = !1
-      }), [pD, YD]), (0, ID.useEffect)((() => {
-        if (!lD) return;
-        const DD = setTimeout((() => {
-          LD(null)
+          AU.current = !0
+        } else AU.current = !1
+      }), [pU, FU]), (0, tU.useEffect)((() => {
+        if (!vU) return;
+        const UU = setTimeout((() => {
+          dU(null)
         }), 4e3);
         return () => {
-          clearTimeout(DD)
+          clearTimeout(UU)
         }
-      }), [lD]), (0, ID.useEffect)((() => {
-        const DD = TD.current;
-        var CD;
-        if (pD && DD) {
-          if (gD) kD.current = gD, null === (CD = DD.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === CD || CD.focus();
-          else if (kD.current) {
-            var cD;
-            null === (cD = DD.querySelector(`[data-store-item="${kD.current}"]`)) || void 0 === cD || cD.focus(), kD.current = null
+      }), [vU]), (0, tU.useEffect)((() => {
+        const UU = HU.current;
+        var RU;
+        if (pU && UU) {
+          if (fU) yU.current = fU, null === (RU = UU.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === RU || RU.focus();
+          else if (yU.current) {
+            var gU;
+            null === (gU = UU.querySelector(`[data-store-item="${yU.current}"]`)) || void 0 === gU || gU.focus(), yU.current = null
           }
-        } else kD.current = null
-      }), [gD, pD]), (0, ID.useEffect)((() => {
-        aD(null)
-      }), [BD.query]), (0, ID.useEffect)((() => {
-        if (!VD) return;
-        const DD = setTimeout((() => {
-          zD(null)
+        } else yU.current = null
+      }), [fU, pU]), (0, tU.useEffect)((() => {
+        BU(null)
+      }), [GU.query]), (0, tU.useEffect)((() => {
+        if (!VU) return;
+        const UU = setTimeout((() => {
+          rU(null)
         }), 8e3);
         return () => {
-          clearTimeout(DD)
+          clearTimeout(UU)
         }
-      }), [VD]);
-      const eD = QD.superRankInfo,
-        uD = QD.isLoggedIn() || (0, RD.guestsMayBuy)(),
-        hD = QD.getOwnedCosmeticPacks(),
-        rD = (0, oi.o)(BD.query),
-        FD = (0, oi.f)({
-          mode: rD,
-          loggedIn: wD ? uD : null,
-          superRankInfo: eD,
+      }), [VU]);
+      const MU = qU.superRankInfo,
+        DU = qU.isLoggedIn() || (0, sU.guestsMayBuy)(),
+        LU = qU.getOwnedCosmeticPacks(),
+        NU = (0, QE.n)(GU.query),
+        OU = (0, QE.f)({
+          mode: NU,
+          loggedIn: KU ? DU : null,
+          superRankInfo: MU,
           now: Date.now(),
-          ownedPacks: hD,
-          packs: bi.r,
-          recipient: BD.recipient
+          ownedPacks: LU,
+          packs: TE.s,
+          recipient: GU.recipient
         });
-      (0, ID.useEffect)((() => {
-        if (!uD || !pD) return;
-        const DD = (0, GD.B)(),
-          CD = DD && (0, oi.k)(DD, bi.r);
-        DD && CD && ((0, AD.reportAnalyticsClick)({
+      (0, tU.useEffect)((() => {
+        if (!DU || !pU) return;
+        const UU = (0, SU.z)(),
+          RU = UU && (0, QE.m)(UU, TE.s);
+        UU && RU && ((0, lU.reportAnalyticsClick)({
           id: "store.login_resume",
-          value: DD.item
-        }), (0, GD.p)(CD))
-      }), [uD, pD]);
-      const DC = (0, oi.s)({
-        superRankDaysLeft: FD.superRankDaysLeft,
-        openedThisSession: lf || pD,
-        seenNewItems: (0, GD.l)()
+          value: UU.item
+        }), (0, SU.m)(RU))
+      }), [DU, pU]);
+      const UR = (0, QE.r)({
+        superRankDaysLeft: OU.superRankDaysLeft,
+        openedThisSession: VP || pU,
+        seenNewItems: (0, SU.g)()
       });
-      if ((0, ID.useEffect)((() => {
-          (0, GD.A)(DC)
-        }), [DC]), !pD || !(0, RD.purchasesAllowed)()) return null;
-      const CC = tD > yD && yD <= 700,
-        cC = !CC && tD <= 420,
-        IC = "gift" === rD ? Lf(BD.recipient) : null,
-        pC = null !== xD;
+      if ((0, tU.useEffect)((() => {
+          (0, SU.v)(UR)
+        }), [UR]), !pU || !(0, sU.purchasesAllowed)()) return null;
+      const RR = CU > jU && jU <= 700,
+        gR = !RR && CU <= 420,
+        tR = "gift" === NU ? rP(GU.recipient) : null,
+        pR = null !== oU;
 
-      function iC(DD) {
-        (0, Si.d)(DD, "gift" === rD ? BD.query.trim() : null)
+      function ER(UU) {
+        (0, cE.e)(UU, "gift" === NU ? GU.query.trim() : null)
       }
 
-      function fC(DD, CD) {
-        (0, AD.reportAnalyticsClick)({
+      function PR(UU, RU) {
+        (0, lU.reportAnalyticsClick)({
           id: "store.purchase_done",
-          value: `${CD?"gift":"self"}:${DD}`
-        }), CD && (BD.recordGift(CD.name, DD), QC(CD))
+          value: `${RU?"gift":"self"}:${UU}`
+        }), RU && (GU.recordGift(RU.name, UU), qR(RU))
       }
 
-      function QC(DD) {
-        ! function(DD) {
+      function qR(UU) {
+        ! function(UU) {
           try {
-            sC.h.setItem(vi, (0, oi.D)(gi(), DD))
+            AR.k.setItem(eE, (0, QE.w)(fE(), UU))
           } catch {}
         }({
-          name: DD.name,
-          cosmetics: DD.cosmetics
-        }), ND(jf), zD((CD => {
-          var cD;
+          name: UU.name,
+          cosmetics: UU.cosmetics
+        }), WU(BP), rU((RU => {
+          var gU;
           return {
-            name: DD.name,
-            seq: (null !== (cD = null === CD || void 0 === CD ? void 0 : CD.seq) && void 0 !== cD ? cD : 0) + 1
+            name: UU.name,
+            seq: (null !== (gU = null === RU || void 0 === RU ? void 0 : RU.seq) && void 0 !== gU ? gU : 0) + 1
           }
         }))
       }
-      async function wC(DD) {
-        var CD, cD;
-        if (dD.current) return;
-        if (!uD) return void iC(DD);
-        aD(null), LD(null);
-        const ID = "gift" === rD ? {
-          name: Lf(BD.recipient),
-          cosmetics: BD.recipientCosmetics
+      async function KR(UU) {
+        var RU, gU;
+        if (kU.current) return;
+        if (!DU) return void ER(UU);
+        BU(null), dU(null);
+        const tU = "gift" === NU ? {
+          name: rP(GU.recipient),
+          cosmetics: GU.recipientCosmetics
         } : null;
-        if (ID && !ID.name) return void ED();
-        const pD = "superRank" === DD ? jD.g.id : (0, jD.c)(DD);
-        dD.current = !0;
-        const iD = await (0, Zi.d)(pD, null !== (CD = null === ID || void 0 === ID ? void 0 : ID.name) && void 0 !== CD ? CD : null);
-        if (dD.current = !1, !iD) return;
-        JD(DD);
-        const fD = await Bi.e.purchase(pD, null !== (cD = null === ID || void 0 === ID ? void 0 : ID.name) && void 0 !== cD ? cD : null);
-        JD(null), fD ? aD(fD) : (fC(DD, ID), ID || (await (0, yi.flushClientAnalyticsEvents)(), (0, wi.refreshWithoutConfirmation)("superRank" === DD ? "/super-rank-welcome" : `/pack-welcome/${DD}`)))
+        if (tU && !tU.name) return void zU();
+        const pU = "superRank" === UU ? XU.l.id : (0, XU.e)(UU);
+        kU.current = !0;
+        const EU = await (0, hE.d)(pU, null !== (RU = null === tU || void 0 === tU ? void 0 : tU.name) && void 0 !== RU ? RU : null);
+        if (kU.current = !1, !EU) return;
+        aU(UU);
+        const PU = await GE.d.purchase(pU, null !== (gU = null === tU || void 0 === tU ? void 0 : tU.name) && void 0 !== gU ? gU : null);
+        aU(null), PU ? BU(PU) : (PR(UU, tU), tU || (await (0, jE.flushClientAnalyticsEvents)(), (0, KE.refreshWithoutConfirmation)("superRank" === UU ? "/super-rank-welcome" : `/pack-welcome/${UU}`)))
       }
-      const SC = iD()("Store", {
-        StoreGift: "gift" === rD,
-        StorePortrait: CC,
-        StoreCompact: cC
+      const cR = EU()("Store", {
+        StoreGift: "gift" === NU,
+        StorePortrait: RR,
+        StoreCompact: gR
       });
-      if ("pack" === oD.kind) {
-        const DD = oD.pack,
-          CD = FD.packs.find((CD => CD.pack === DD));
-        return (0, SD.jsx)("div", {
-          ref: TD,
+      if ("pack" === QU.kind) {
+        const UU = QU.pack,
+          RU = OU.packs.find((RU => RU.pack === UU));
+        return (0, cU.jsx)("div", {
+          ref: HU,
           className: "CosmeticShopContainer",
-          children: (0, SD.jsx)(ti.f, {
-            pack: DD,
+          children: (0, cU.jsx)(CE.e, {
+            pack: UU,
             onBack: () => {
-              ND(jf)
+              WU(BP)
             },
-            onPurchased: CD => {
-              fC(DD, CD ? {
-                name: CD,
+            onPurchased: RU => {
+              PR(UU, RU ? {
+                name: RU,
                 cosmetics: null
               } : null)
             },
-            giftCta: "gift" === rD && IC && CD && (0, SD.jsxs)(SD.Fragment, {
-              children: [(0, SD.jsx)(Df, {
-                state: CD.state,
-                item: DD,
-                price: (BC = DD, "superRank" === BC ? jD.g.price : (0, jD.d)(BC)),
-                busy: pC,
+            giftCta: "gift" === NU && tR && RU && (0, cU.jsxs)(cU.Fragment, {
+              children: [(0, cU.jsx)(OE, {
+                state: RU.state,
+                item: UU,
+                price: (GR = UU, "superRank" === GR ? XU.l.price : (0, XU.g)(GR)),
+                busy: pR,
                 onAct: () => {
-                  wC(DD)
+                  KR(UU)
                 },
                 onNeedRecipient: () => {
-                  ND(jf), ED()
+                  WU(BP), zU()
                 },
                 onLogin: () => {
-                  iC(DD)
+                  ER(UU)
                 },
-                highlight: lD === DD
-              }), KD && (0, SD.jsx)("span", {
+                highlight: vU === UU
+              }), YU && (0, cU.jsx)("span", {
                 className: "CosmeticShopGiftError SmallTextBold",
-                children: bD(KD)
+                children: TU(YU)
               })]
             }),
-            ownedPacks: hD,
-            startAsGift: "gift" === rD,
-            initialGiftRecipient: "gift" === rD ? null !== IC && void 0 !== IC ? IC : BD.query.trim() : "",
-            highlightCta: lD === DD
-          }, DD)
+            ownedPacks: LU,
+            startAsGift: "gift" === NU,
+            initialGiftRecipient: "gift" === NU ? null !== tR && void 0 !== tR ? tR : GU.query.trim() : "",
+            highlightCta: vU === UU
+          }, UU)
         })
       }
-      var BC;
-      return "superRank" === oD.kind ? (0, SD.jsx)("div", {
-        ref: TD,
-        className: iD()(SC, "StoreDetailView"),
-        children: (0, SD.jsx)(Hf, {
-          state: FD.superRank.state,
-          mode: rD,
-          giftName: IC,
-          busy: pC,
-          highlight: "superRank" === lD,
-          purchaseError: KD,
+      var GR;
+      return "superRank" === QU.kind ? (0, cU.jsx)("div", {
+        ref: HU,
+        className: EU()(cR, "StoreDetailView"),
+        children: (0, cU.jsx)(IP, {
+          state: OU.superRank.state,
+          mode: NU,
+          giftName: tR,
+          busy: pR,
+          highlight: "superRank" === vU,
+          purchaseError: YU,
           onBack: () => {
-            ND(jf)
+            WU(BP)
           },
           onChooseRecipient: () => {
-            ND(jf), ED()
+            WU(BP), zU()
           },
           onAct: () => {
-            wC("superRank")
+            KR("superRank")
           },
           onLogin: () => {
-            iC("superRank")
+            ER("superRank")
           }
         })
-      }) : (0, SD.jsxs)("div", {
-        ref: TD,
-        className: SC,
-        children: [(0, SD.jsx)("div", {
+      }) : (0, cU.jsxs)("div", {
+        ref: HU,
+        className: cR,
+        children: [(0, cU.jsx)("div", {
           className: "StoreTopRow",
-          children: (0, SD.jsx)(zi, {
-            selfName: wD ? QD.getPlayerName() : "",
-            giftRecipient: BD,
-            suggestionsVersion: null !== (CD = null === VD || void 0 === VD ? void 0 : VD.seq) && void 0 !== CD ? CD : 0,
-            pulseSignal: HD,
-            disabled: pC || !wD
+          children: (0, cU.jsx)(rE, {
+            selfName: KU ? qU.getPlayerName() : "",
+            giftRecipient: GU,
+            suggestionsVersion: null !== (RU = null === VU || void 0 === VU ? void 0 : VU.seq) && void 0 !== RU ? RU : 0,
+            pulseSignal: nU,
+            disabled: pR || !KU
           })
-        }), VD && (0, SD.jsxs)("div", {
+        }), VU && (0, cU.jsxs)("div", {
           className: "StoreNotice StoreNoticeGiftSent",
           onClick: () => {
-            zD(null)
+            rU(null)
           },
-          children: [(0, SD.jsx)(Mi.c, {
-            showSignal: VD.seq
-          }), oi.c, " ", bD("store:giftSent", {
-            name: VD.name
+          children: [(0, cU.jsx)(uE.c, {
+            showSignal: VU.seq
+          }), QE.c, " ", TU("store:giftSent", {
+            name: VU.name
           })]
-        }, VD.seq), !VD && KD && (0, SD.jsx)("div", {
+        }, VU.seq), !VU && YU && (0, cU.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: bD(KD)
-        }), (0, SD.jsx)(Pf, {
-          layout: FD,
-          mountAtOnce: null !== kD.current,
-          bundleGift: "gift" === rD ? {
-            recipientName: IC,
-            lookingUp: "pending" === BD.recipient.status,
-            busy: pC,
-            onNeedRecipient: ED,
-            onSent: DD => {
-              (0, AD.reportAnalyticsClick)({
+          children: TU(YU)
+        }), (0, cU.jsx)(mP, {
+          layout: OU,
+          mountAtOnce: null !== yU.current,
+          bundleGift: "gift" === NU ? {
+            recipientName: tR,
+            lookingUp: "pending" === GU.recipient.status,
+            busy: pR,
+            onNeedRecipient: zU,
+            onSent: UU => {
+              (0, lU.reportAnalyticsClick)({
                 id: "store.purchase_done",
                 value: "gift:superGems"
-              }), QC({
-                name: DD,
-                cosmetics: BD.recipientCosmetics
+              }), qR({
+                name: UU,
+                cosmetics: GU.recipientCosmetics
               })
             }
           } : null,
-          superRankTotalDays: (0, oi.w)(eD),
-          busy: pC,
-          highlightItem: lD,
-          onOpen: function(DD) {
-            (0, AD.reportAnalyticsClick)({
+          superRankTotalDays: (0, QE.s)(MU),
+          busy: pR,
+          highlightItem: vU,
+          onOpen: function(UU) {
+            (0, lU.reportAnalyticsClick)({
               id: "store.item_open",
-              value: DD
-            }), ND((0, GD.i)(DD))
+              value: UU
+            }), WU((0, SU.f)(UU))
           },
-          onAct: wC,
-          onNeedRecipient: ED,
-          onLogin: iC
-        }), "gift" !== rD && (0, SD.jsx)(Vf, {})]
+          onAct: KR,
+          onNeedRecipient: zU,
+          onLogin: ER
+        }), "gift" !== NU && (0, cU.jsx)(aP, {})]
       })
     }));
-    var Gf = cD(2560),
-      Rf = cD(8545),
-      kf = cD(2619),
-      df = cD(2456),
-      Yf = cD(2501),
-      Wf = cD(2515),
-      sf = cD(2519),
-      Ef = cD(2607),
-      ef = cD(2600),
-      uf = cD(2293),
-      hf = cD(2328),
-      rf = cD(2317),
-      Af = cD(2010),
-      Ff = cD(2528),
-      Db = cD(2335);
+    var vP = gU(2471),
+      dP = gU(8470),
+      HP = gU(2525),
+      SP = gU(2360),
+      sP = gU(2419),
+      yP = gU(2433),
+      kP = gU(2440),
+      FP = gU(2514),
+      iP = gU(2500),
+      AP = gU(2183),
+      zP = gU(2218),
+      MP = gU(2203),
+      DP = gU(1884),
+      LP = gU(2442),
+      NP = gU(2224);
 
-    function Cb(DD) {
+    function lP(UU) {
       let {
-        show: CD
-      } = DD;
-      return CD ? (0, SD.jsx)(cb, {}) : null
+        show: RU
+      } = UU;
+      return RU ? (0, cU.jsx)(OP, {}) : null
     }
 
-    function cb() {
+    function OP() {
       const {
-        t: DD
-      } = (0, fD.F)(), {
-        followsLeader: CD
-      } = (0, df.d)(), {
-        loading: cD,
-        friends: pD,
-        requests: QD,
-        invites: wD
-      } = (0, dD.m)(), {
-        userContext: BD
-      } = (0, MD.c)(), [yD, tD] = (0, ID.useState)(Db.k);
-      (0, ID.useEffect)((() => {
-        (0, Db.c)()
+        t: UU
+      } = (0, PU.B)(), {
+        followsLeader: RU
+      } = (0, SP.g)(), {
+        loading: gU,
+        friends: pU,
+        requests: qU,
+        invites: KU
+      } = (0, kU.g)(), {
+        userContext: GU
+      } = (0, uU.e)(), [jU, CU] = (0, tU.useState)(NP.l);
+      (0, tU.useEffect)((() => {
+        (0, NP.d)()
       }), []);
-      const ZD = QD.map((DD => DD.name)),
+      const hU = qU.map((UU => UU.name)),
         {
-          state: vD,
-          recentRequesters: ND
-        } = (0, ef.m)(),
-        gD = new Map([...("loaded" === vD.status ? vD.recentPlayers : []).map((DD => [DD.preview.name, DD])), ...ND.map((DD => [DD.name, DD]))]),
-        XD = (0, ID.useRef)(null),
-        [OD, PD] = (0, ID.useState)(""),
-        [HD, UD] = (0, ID.useState)("Enter"),
-        [xD, qD] = (0, ID.useState)(null);
+          state: eU,
+          recentRequesters: WU
+        } = (0, iP.j)(),
+        fU = new Map([...("loaded" === eU.status ? eU.recentPlayers : []).map((UU => [UU.preview.name, UU])), ...WU.map((UU => [UU.name, UU]))]),
+        xU = (0, tU.useRef)(null),
+        [JU, wU] = (0, tU.useState)(""),
+        [nU, bU] = (0, tU.useState)("Enter"),
+        [oU, ZU] = (0, tU.useState)(null);
 
-      function JD() {
-        OD && (UD("Loading"), (0, rf.d)(OD, "social_menu").then((DD => {
-          if (XD.current) switch (DD.kind) {
+      function aU() {
+        JU && (bU("Loading"), (0, MP.i)(JU, "social_menu").then((UU => {
+          if (xU.current) switch (UU.kind) {
             case "sent":
-              UD("Success");
+              bU("Success");
               break;
             case "becameFriends":
-              UD("BecameFriends");
+              bU("BecameFriends");
               break;
             case "failed":
-              qD(DD.message), UD("Error")
+              ZU(UU.message), bU("Error")
           }
         })))
       }
-      return (0, ID.useEffect)((() => {
-        if ("Enter" === HD || "Loading" === HD) return;
-        const DD = setTimeout((() => {
-          XD.current.value = "", PD(""), UD("Enter")
-        }), "Success" === HD ? 1e3 : 4e3);
+      return (0, tU.useEffect)((() => {
+        if ("Enter" === nU || "Loading" === nU) return;
+        const UU = setTimeout((() => {
+          xU.current.value = "", wU(""), bU("Enter")
+        }), "Success" === nU ? 1e3 : 4e3);
         return () => {
-          clearTimeout(DD)
+          clearTimeout(UU)
         }
-      }), [HD]), (0, SD.jsx)("div", {
+      }), [nU]), (0, cU.jsx)("div", {
         className: "SocialMenu",
-        children: (0, SD.jsxs)("div", {
+        children: (0, cU.jsxs)("div", {
           className: "SocialMenuInner",
-          children: [(0, SD.jsxs)("div", {
+          children: [(0, cU.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, SD.jsxs)("div", {
+            children: [(0, cU.jsxs)("div", {
               className: "SocialMenuBox SocialMenuAddFriend",
-              children: [(0, SD.jsx)(sf.d, {
-                label: DD("socialBar:addFriend")
-              }), (0, SD.jsxs)("div", {
+              children: [(0, cU.jsx)(kP.b, {
+                label: UU("socialBar:addFriend")
+              }), (0, cU.jsxs)("div", {
                 className: "AddFriendBody",
-                children: [(0, SD.jsxs)("div", {
-                  className: iD()("AddFriendBodyOverlay", {
-                    [`AddFriendBodyOverlay${HD}`]: !0
+                children: [(0, cU.jsxs)("div", {
+                  className: EU()("AddFriendBodyOverlay", {
+                    [`AddFriendBodyOverlay${nU}`]: !0
                   }),
-                  children: ["Loading" === HD && (0, SD.jsx)(nD.e, {}), "Success" === HD && (0, SD.jsx)(bD.c, {
+                  children: ["Loading" === nU && (0, cU.jsx)(IU.d, {}), "Success" === nU && (0, cU.jsx)(TU.c, {
                     name: "check"
-                  }), "BecameFriends" === HD && (0, SD.jsx)(SD.Fragment, {
-                    children: DD("socialBar:nowFriends", {
-                      playerName: OD
+                  }), "BecameFriends" === nU && (0, cU.jsx)(cU.Fragment, {
+                    children: UU("socialBar:nowFriends", {
+                      playerName: JU
                     })
-                  }), "Error" === HD && xD && (0, SD.jsx)(SD.Fragment, {
-                    children: DD(xD.translationKey, xD.params)
+                  }), "Error" === nU && oU && (0, cU.jsx)(cU.Fragment, {
+                    children: UU(oU.translationKey, oU.params)
                   })]
-                }), (0, SD.jsxs)("div", {
+                }), (0, cU.jsxs)("div", {
                   className: "PlayerSearch",
-                  children: [(0, SD.jsx)(mD.b, {
+                  children: [(0, cU.jsx)(mU.d, {
                     className: "PlayerSearchInput",
-                    placeholderText: DD("socialBar:enterPlayerName"),
-                    domRef: XD,
-                    onValueChange: DD => {
-                      PD((0, VD.o)(DD)), XD.current.value = (0, VD.o)(DD)
+                    placeholderText: UU("socialBar:enterPlayerName"),
+                    domRef: xU,
+                    onValueChange: UU => {
+                      wU((0, VU.q)(UU)), xU.current.value = (0, VU.q)(UU)
                     },
                     onEnter: () => {
-                      OD && (0, AD.reportAnalyticsClick)({
+                      JU && (0, lU.reportAnalyticsClick)({
                         id: "social.add_friend",
                         value: "social_menu"
-                      }), JD()
+                      }), aU()
                     }
-                  }), (0, SD.jsxs)(oD.i, {
+                  }), (0, cU.jsxs)(QU.e, {
                     className: "PlayerSearchInputButton SmallTextLight",
                     onClick: () => {
-                      JD()
+                      aU()
                     },
                     analyticsClick: {
                       id: "social.add_friend",
                       value: "social_menu"
                     },
-                    children: [(0, SD.jsx)(bD.c, {
+                    children: [(0, cU.jsx)(TU.c, {
                       name: "user-plus"
-                    }), " ", DD("socialBar:sendRequest")]
+                    }), " ", UU("socialBar:sendRequest")]
                   })]
                 })]
-              }), (0, SD.jsx)(Ff.b, {
+              }), (0, cU.jsx)(LP.e, {
                 surface: "social_menu",
                 prefetchOnMount: !0
               })]
-            }), wD.length > 0 && (0, SD.jsxs)("div", {
+            }), KU.length > 0 && (0, cU.jsxs)("div", {
               className: "SocialMenuBox SocialMenuInvites",
-              children: [(0, SD.jsx)(sf.d, {
-                label: DD("socialBar:invites"),
-                meta: wD.length
-              }), wD.map((CD => (0, SD.jsxs)("div", {
+              children: [(0, cU.jsx)(kP.b, {
+                label: UU("socialBar:invites"),
+                meta: KU.length
+              }), KU.map((RU => (0, cU.jsxs)("div", {
                 className: "SocialMenuInvite",
-                children: [(0, SD.jsx)("div", {
+                children: [(0, cU.jsx)("div", {
                   className: "SocialMenuInviteIcon",
-                  children: (0, SD.jsx)(uf.b, {
-                    invite: CD
+                  children: (0, cU.jsx)(AP.b, {
+                    invite: RU
                   })
-                }), (0, SD.jsx)("div", {
+                }), (0, cU.jsx)("div", {
                   className: "SocialMenuInviteText",
-                  children: (0, SD.jsx)(uf.f, {
-                    invite: CD
+                  children: (0, cU.jsx)(AP.d, {
+                    invite: RU
                   })
-                }), (0, SD.jsx)(oD.o, {
+                }), (0, cU.jsx)(QU.j, {
                   className: "SocialMenuInviteJoin SmallTextLight",
                   onClick: () => {
-                    (0, hf.e)(CD)
+                    (0, zP.e)(RU)
                   },
                   analyticsClick: {
                     id: "social.accept_invite",
-                    value: `social_menu:${CD.destination.kind}`
+                    value: `social_menu:${RU.destination.kind}`
                   },
-                  children: DD("general:join")
-                }), (0, SD.jsx)(uD.f, {
-                  tooltipInner: (0, SD.jsx)(SD.Fragment, {
-                    children: DD("general:decline")
+                  children: UU("general:join")
+                }), (0, cU.jsx)(DU.g, {
+                  tooltipInner: (0, cU.jsx)(cU.Fragment, {
+                    children: UU("general:decline")
                   }),
                   delayShow: 0,
-                  children: (0, SD.jsx)(oD.k, {
+                  children: (0, cU.jsx)(QU.g, {
                     className: "SocialMenuInviteDecline",
-                    padDefaultFocus: "invite" === (null === yD || void 0 === yD ? void 0 : yD.kind) && yD.inviteId === CD.id,
+                    padDefaultFocus: "invite" === (null === jU || void 0 === jU ? void 0 : jU.kind) && jU.inviteId === RU.id,
                     onClick: () => {
-                      dD.e.declineInvite(CD.id)
+                      kU.b.declineInvite(RU.id)
                     },
                     analyticsClick: {
                       id: "social.decline_invite",
-                      value: `social_menu:${CD.destination.kind}`
+                      value: `social_menu:${RU.destination.kind}`
                     },
-                    children: (0, SD.jsx)(bD.c, {
+                    children: (0, cU.jsx)(TU.c, {
                       name: "xmark"
                     })
                   })
                 })]
-              }, CD.id)))]
-            }), (0, SD.jsxs)("div", {
-              className: iD()("SocialMenuBox SocialMenuRequests", {
-                SocialMenuBoxEmpty: !cD && 0 === QD.length
+              }, RU.id)))]
+            }), (0, cU.jsxs)("div", {
+              className: EU()("SocialMenuBox SocialMenuRequests", {
+                SocialMenuBoxEmpty: !gU && 0 === qU.length
               }),
-              children: [(0, SD.jsx)(sf.d, {
-                label: (0, SD.jsxs)(SD.Fragment, {
-                  children: [(0, SD.jsx)(bD.c, {
-                    name: Af.e
-                  }), " ", DD("socialBar:requests")]
+              children: [(0, cU.jsx)(kP.b, {
+                label: (0, cU.jsxs)(cU.Fragment, {
+                  children: [(0, cU.jsx)(TU.c, {
+                    name: DP.f
+                  }), " ", UU("socialBar:requests")]
                 }),
-                meta: (0, SD.jsxs)(SD.Fragment, {
-                  children: [QD.length, QD.length === hD.s && (0, SD.jsx)("span", {
+                meta: (0, cU.jsxs)(cU.Fragment, {
+                  children: [qU.length, qU.length === LU.u && (0, cU.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: DD("socialBar:limitReached")
+                    children: UU("socialBar:limitReached")
                   })]
                 })
-              }), cD && (0, SD.jsx)("div", {
+              }), gU && (0, cU.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, SD.jsx)(nD.e, {})
-              }), !cD && 0 === QD.length && (0, SD.jsx)("div", {
+                children: (0, cU.jsx)(IU.d, {})
+              }), !gU && 0 === qU.length && (0, cU.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: DD("socialBar:noFriendRequests")
-              }), !cD && QD.length > 0 && (0, SD.jsx)("div", {
+                children: UU("socialBar:noFriendRequests")
+              }), !gU && qU.length > 0 && (0, cU.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, SD.jsx)(Bp.c, {
+                children: (0, cU.jsx)(jp.d, {
                   lazyLoadedClassName: "SocialMenuRequestsLazy",
-                  observerUpdateDeps: [QD],
-                  children: QD.map(((CD, cD) => {
-                    const ID = gD.get(CD.name);
-                    return (0, SD.jsxs)(Wf.d, {
-                      playerSocialPreview: CD,
-                      zIndex: QD.length - cD,
-                      padDefaultFocus: (0, Db.h)(yD, CD.name, cD),
-                      status: ID && (0, SD.jsx)(Ef.b, {
-                        gameNameWithVariation: ID.gameNameWithVariation,
-                        isPrivateLobby: ID.isPrivateLobby
+                  observerUpdateDeps: [qU],
+                  children: qU.map(((RU, gU) => {
+                    const tU = fU.get(RU.name);
+                    return (0, cU.jsxs)(yP.c, {
+                      playerSocialPreview: RU,
+                      zIndex: qU.length - gU,
+                      padDefaultFocus: (0, NP.h)(jU, RU.name, gU),
+                      status: tU && (0, cU.jsx)(FP.d, {
+                        gameNameWithVariation: tU.gameNameWithVariation,
+                        isPrivateLobby: tU.isPrivateLobby
                       }),
-                      children: [(0, SD.jsx)(uD.f, {
-                        tooltipInner: (0, SD.jsx)(SD.Fragment, {
-                          children: DD("general:accept")
+                      children: [(0, cU.jsx)(DU.g, {
+                        tooltipInner: (0, cU.jsx)(cU.Fragment, {
+                          children: UU("general:accept")
                         }),
                         delayShow: 0,
-                        children: (0, SD.jsx)(oD.i, {
+                        children: (0, cU.jsx)(QU.e, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            tD((0, Db.e)(ZD, cD)), (0, rf.c)(CD.name, !0, {
+                            CU((0, NP.f)(hU, gU)), (0, MP.h)(RU.name, !0, {
                               source: "social_menu",
                               announceFriend: !1
                             })
@@ -7290,19 +7290,19 @@ export const modules = {
                             id: "social.accept_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, SD.jsx)(bD.c, {
+                          children: (0, cU.jsx)(TU.c, {
                             name: "check"
                           })
                         })
-                      }), (0, SD.jsx)(uD.f, {
-                        tooltipInner: (0, SD.jsx)(SD.Fragment, {
-                          children: DD("general:decline")
+                      }), (0, cU.jsx)(DU.g, {
+                        tooltipInner: (0, cU.jsx)(cU.Fragment, {
+                          children: UU("general:decline")
                         }),
                         delayShow: 0,
-                        children: (0, SD.jsx)(oD.k, {
+                        children: (0, cU.jsx)(QU.g, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            tD((0, Db.e)(ZD, cD)), (0, rf.c)(CD.name, !1, {
+                            CU((0, NP.f)(hU, gU)), (0, MP.h)(RU.name, !1, {
                               source: "social_menu"
                             })
                           },
@@ -7310,62 +7310,62 @@ export const modules = {
                             id: "social.decline_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, SD.jsx)(bD.c, {
+                          children: (0, cU.jsx)(TU.c, {
                             name: "xmark"
                           })
                         })
                       })]
-                    }, `${CD.name}_${CD.isError}`)
+                    }, `${RU.name}_${RU.isError}`)
                   }))
                 })
               })]
-            }), (0, SD.jsx)(Ef.f, {})]
-          }), (0, SD.jsxs)("div", {
+            }), (0, cU.jsx)(FP.k, {})]
+          }), (0, cU.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, SD.jsxs)("div", {
+            children: [(0, cU.jsxs)("div", {
               className: "SocialMenuBox SocialMenuParty",
-              children: [(0, SD.jsx)(sf.d, {
-                label: DD("socialBar:party")
-              }), (0, SD.jsx)(Yf.e, {})]
-            }), (0, SD.jsxs)("div", {
+              children: [(0, cU.jsx)(kP.b, {
+                label: UU("socialBar:party")
+              }), (0, cU.jsx)(sP.c, {})]
+            }), (0, cU.jsxs)("div", {
               className: "SocialMenuBox SocialMenuFriends",
-              children: [(0, SD.jsx)(sf.d, {
-                label: (0, SD.jsxs)(SD.Fragment, {
-                  children: [(0, SD.jsx)(bD.c, {
-                    name: Af.d
-                  }), " ", DD("socialBar:friends")]
+              children: [(0, cU.jsx)(kP.b, {
+                label: (0, cU.jsxs)(cU.Fragment, {
+                  children: [(0, cU.jsx)(TU.c, {
+                    name: DP.b
+                  }), " ", UU("socialBar:friends")]
                 }),
-                meta: (0, SD.jsxs)(SD.Fragment, {
-                  children: [pD.length, pD.length >= (0, hD.e)(BD.getPlayerRanks()) && (0, SD.jsx)("span", {
+                meta: (0, cU.jsxs)(cU.Fragment, {
+                  children: [pU.length, pU.length >= (0, LU.e)(GU.getPlayerRanks()) && (0, cU.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: DD("socialBar:limitReached")
+                    children: UU("socialBar:limitReached")
                   })]
                 })
-              }), cD && (0, SD.jsx)("div", {
+              }), gU && (0, cU.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, SD.jsx)(nD.e, {})
-              }), !cD && 0 === pD.length && (0, SD.jsx)("div", {
+                children: (0, cU.jsx)(IU.d, {})
+              }), !gU && 0 === pU.length && (0, cU.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: DD("socialBar:noFriends")
-              }), !cD && pD.length > 0 && (0, SD.jsx)("div", {
+                children: UU("socialBar:noFriends")
+              }), !gU && pU.length > 0 && (0, cU.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, SD.jsx)(Bp.c, {
+                children: (0, cU.jsx)(jp.d, {
                   lazyLoadedClassName: "SocialMenuFriendsLazy",
-                  observerUpdateDeps: [pD],
-                  children: pD.map(((DD, cD) => (0, SD.jsx)(Wf.d, {
-                    playerSocialPreview: DD,
+                  observerUpdateDeps: [pU],
+                  children: pU.map(((UU, gU) => (0, cU.jsx)(yP.c, {
+                    playerSocialPreview: UU,
                     isFriend: !0,
                     hideFriendBadge: !0,
-                    onFriendRemoved: DD => {
-                      dD.e.removeFriendFromState(DD)
+                    onFriendRemoved: UU => {
+                      kU.b.removeFriendFromState(UU)
                     },
-                    zIndex: pD.length - cD,
-                    children: (0, SD.jsx)(Wf.c, {
-                      friend: DD,
-                      followsLeader: CD,
+                    zIndex: pU.length - gU,
+                    children: (0, cU.jsx)(yP.b, {
+                      friend: UU,
+                      followsLeader: RU,
                       analyticsSurface: "social_menu"
                     })
-                  }, `${DD.name}_${DD.isError}`)))
+                  }, `${UU.name}_${UU.isError}`)))
                 })
               })]
             })]
@@ -7373,231 +7373,231 @@ export const modules = {
         })
       })
     }
-    var Ib = cD(2442);
-    const pb = DD => {
+    var UT = gU(2341);
+    const RT = UU => {
         let {
-          action: CD,
-          padAction: cD
-        } = DD;
+          action: RU,
+          padAction: gU
+        } = UU;
         const {
-          isTouchScreen: ID
-        } = (0, PD.o)(["isTouchScreen"]), pD = (0, iI.p)();
-        return ID && !pD ? null : (0, SD.jsx)(Ac.d, {
+          isTouchScreen: tU
+        } = (0, wU.l)(["isTouchScreen"]), pU = (0, Et.o)();
+        return tU && !pU ? null : (0, cU.jsx)(lg.b, {
           className: "EverythingMenuTabKey",
-          noaAction: CD,
+          noaAction: RU,
           padHidesKey: !0,
-          padMenuShortcut: cD
+          padMenuShortcut: gU
         })
       },
-      ib = (0, ID.memo)((function() {
+      gT = (0, tU.memo)((function() {
         const {
-          t: DD
-        } = (0, fD.F)(), {
-          gameState: CD,
-          openEverythingMenuName: cD,
-          initSdkSelectorFinished: pD,
-          crosshairGameView: bD
-        } = (0, PD.o)(["gameState", "openEverythingMenuName", "initSdkSelectorFinished", "crosshairGameView"]), {
-          userContext: QD
-        } = (0, MD.c)(), wD = (0, RD.purchasesAllowed)(), BD = (0, GD.I)(), yD = (DD, CD) => (0, SD.jsx)(pb, {
-          action: DD,
-          padAction: CD
-        }), [tD, ZD] = (0, ID.useState)(null), ND = (0, ID.useRef)(null), gD = {
-          ..."inGame" === CD ? {} : (0, oD.U)({
+          t: UU
+        } = (0, PU.B)(), {
+          gameState: RU,
+          openEverythingMenuName: gU,
+          initSdkSelectorFinished: pU,
+          crosshairGameView: TU
+        } = (0, wU.l)(["gameState", "openEverythingMenuName", "initSdkSelectorFinished", "crosshairGameView"]), {
+          userContext: qU
+        } = (0, uU.e)(), KU = (0, sU.purchasesAllowed)(), GU = (0, SU.G)(), jU = (UU, RU) => (0, cU.jsx)(RT, {
+          action: UU,
+          padAction: RU
+        }), [CU, hU] = (0, tU.useState)(null), WU = (0, tU.useRef)(null), fU = {
+          ..."inGame" === RU ? {} : (0, QU.R)({
             focusOnClick: !1
           }),
-          ...ZI.h
-        }, XD = null !== cD, mD = cD !== wC.q.COSMETIC_SHOP && !bD;
-        async function nD() {
+          ...ht.h
+        }, xU = null !== gU, mU = gU !== KR.n.COSMETIC_SHOP && !TU;
+        async function IU() {
           await async function() {
-            if (!tD) return;
-            await tD(), ZD(null)
-          }(), PD.d.set({
+            if (!CU) return;
+            await CU(), hU(null)
+          }(), wU.b.set({
             openEverythingMenuName: null
           })
         }
-        const OD = (0, ID.useMemo)((() => "inGame" === CD ? {
-          text: DD("settingsMenu:exitGame"),
+        const JU = (0, tU.useMemo)((() => "inGame" === RU ? {
+          text: UU("settingsMenu:exitGame"),
           onClick: () => {
-            (0, Rf.c)()
+            (0, dP.e)()
           }
-        } : (0, xD.c)() ? {
-          text: DD("settingsMenu:exitGame"),
+        } : (0, oU.e)() ? {
+          text: UU("settingsMenu:exitGame"),
           onClick: () => {
-            iC.i.discordActivity().then((DD => {
-              DD.exit("User exited the game")
+            ER.m.discordActivity().then((UU => {
+              UU.exit("User exited the game")
             }))
           }
-        } : null), [CD, DD]);
-        const HD = (0, SD.jsx)("div", {
+        } : null), [RU, UU]);
+        const nU = (0, cU.jsx)("div", {
           className: "EverythingMenuCloseButtonClickZone",
           onClick: () => {
-            nD()
+            IU()
           },
-          children: (0, SD.jsx)(oD.l, {
+          children: (0, cU.jsx)(QU.h, {
             className: "EverythingMenuCloseButton"
           })
         });
-        return (0, SD.jsx)(oI.c, {
-          showing: XD,
+        return (0, cU.jsx)(Qt.d, {
+          showing: xU,
           globallyUniqueKey: "EverythingMenu",
           alwaysMountChildren: !0,
-          keepsMovement: cD === wC.q.SHOP,
-          doGameplayStartStopOnShow: "inGame" === CD,
-          children: (0, SD.jsx)(NI.c, {
+          keepsMovement: gU === KR.n.SHOP,
+          doGameplayStartStopOnShow: "inGame" === RU,
+          children: (0, cU.jsx)(Wt.c, {
             className: "EverythingMenuContainer",
-            show: XD && !bD,
-            children: (0, SD.jsx)(vI.e, {
+            show: xU && !TU,
+            children: (0, cU.jsx)(et.d, {
               close: () => {
-                nD()
+                IU()
               },
               togglePointerLock: !1,
-              children: (0, SD.jsxs)("div", {
+              children: (0, cU.jsxs)("div", {
                 className: "EverythingMenu",
-                children: [!(0, ci.n)(cD) && (0, SD.jsxs)("div", {
+                children: [!(0, tE.k)(gU) && (0, cU.jsxs)("div", {
                   className: "EverythingMenuTabList",
-                  children: [(0, SD.jsxs)("div", {
+                  children: [(0, cU.jsxs)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerStart",
-                    children: [OD && (0, SD.jsx)(oD.e, {
+                    children: [JU && (0, cU.jsx)(QU.d, {
                       className: "EverythingMenuBackButton",
                       padDestructive: !0,
                       onClick: () => {
-                        OD.onClick()
+                        JU.onClick()
                       },
-                      children: OD.text
-                    }), XD && wD && (0, SD.jsx)("div", {
-                      ...gD,
+                      children: JU.text
+                    }), xU && KU && (0, cU.jsx)("div", {
+                      ...fU,
                       className: "EverythingMenuWallet",
-                      title: DD("homePage:getPremiumCurrency"),
+                      title: UU("homePage:getPremiumCurrency"),
                       onClick: () => {
-                        (0, GD.p)({
+                        (0, SU.m)({
                           mode: "current",
                           source: "menuWallet"
                         })
                       },
-                      children: (0, SD.jsx)(Gf.e, {})
+                      children: (0, cU.jsx)(vP.e, {})
                     })]
-                  }), (0, SD.jsxs)("div", {
+                  }), (0, cU.jsxs)("div", {
                     className: "EverythingMenuTabListInner",
                     "data-pad-tabs": "1",
-                    children: [(0, SD.jsxs)("div", {
-                      ...gD,
+                    children: [(0, cU.jsxs)("div", {
+                      ...fU,
                       "data-pad-tab": !0,
-                      "data-pad-selected": cD === wC.q.SETTINGS ? "true" : void 0,
-                      className: iD()("EverythingMenuTab", {
-                        EverythingMenuTabActive: cD === wC.q.SETTINGS
+                      "data-pad-selected": gU === KR.n.SETTINGS ? "true" : void 0,
+                      className: EU()("EverythingMenuTab", {
+                        EverythingMenuTabActive: gU === KR.n.SETTINGS
                       }),
                       onClick: () => {
-                        PD.d.set({
-                          openEverythingMenuName: wC.q.SETTINGS
+                        wU.b.set({
+                          openEverythingMenuName: KR.n.SETTINGS
                         })
                       },
-                      children: [DD("general:settings"), yD("OpenSettings", "pause")]
-                    }), (0, SD.jsxs)("div", {
-                      ...gD,
+                      children: [UU("general:settings"), jU("OpenSettings", "pause")]
+                    }), (0, cU.jsxs)("div", {
+                      ...fU,
                       "data-pad-tab": !0,
-                      "data-pad-selected": cD === wC.q.CUSTOMISATION ? "true" : void 0,
-                      className: iD()("EverythingMenuTab", {
-                        EverythingMenuTabActive: cD === wC.q.CUSTOMISATION
+                      "data-pad-selected": gU === KR.n.CUSTOMISATION ? "true" : void 0,
+                      className: EU()("EverythingMenuTab", {
+                        EverythingMenuTabActive: gU === KR.n.CUSTOMISATION
                       }),
                       onClick: () => {
-                        PD.d.set({
-                          openEverythingMenuName: wC.q.CUSTOMISATION
+                        wU.b.set({
+                          openEverythingMenuName: KR.n.CUSTOMISATION
                         })
                       },
-                      children: [DD("general:player"), yD("OpenCharacterCustomization")]
-                    }), vD.featureFlags.useSocialFeatures && (0, SD.jsxs)("div", {
-                      ...gD,
+                      children: [UU("general:player"), jU("OpenCharacterCustomization")]
+                    }), eU.featureFlags.useSocialFeatures && (0, cU.jsxs)("div", {
+                      ...fU,
                       "data-pad-tab": !0,
-                      "data-pad-selected": cD === wC.q.SOCIAL ? "true" : void 0,
-                      className: iD()("EverythingMenuTab", {
-                        EverythingMenuTabActive: cD === wC.q.SOCIAL
+                      "data-pad-selected": gU === KR.n.SOCIAL ? "true" : void 0,
+                      className: EU()("EverythingMenuTab", {
+                        EverythingMenuTabActive: gU === KR.n.SOCIAL
                       }),
-                      ...(0, AD.c)({
+                      ...(0, lU.d)({
                         id: "social.open_menu",
                         value: "menu_tab"
-                      }, cD === wC.q.SOCIAL),
+                      }, gU === KR.n.SOCIAL),
                       onClick: () => {
-                        PD.d.set({
-                          openEverythingMenuName: wC.q.SOCIAL
+                        wU.b.set({
+                          openEverythingMenuName: KR.n.SOCIAL
                         })
                       },
-                      children: [DD("socialBar:social"), (0, SD.jsx)(Ib.b, {})]
-                    }), wD && (0, SD.jsxs)("div", {
-                      ...gD,
+                      children: [UU("socialBar:social"), (0, cU.jsx)(UT.e, {})]
+                    }), KU && (0, cU.jsxs)("div", {
+                      ...fU,
                       "data-pad-tab": !0,
-                      "data-pad-selected": cD === wC.q.COSMETIC_SHOP ? "true" : void 0,
-                      className: iD()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
-                        EverythingMenuTabActive: cD === wC.q.COSMETIC_SHOP
+                      "data-pad-selected": gU === KR.n.COSMETIC_SHOP ? "true" : void 0,
+                      className: EU()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
+                        EverythingMenuTabActive: gU === KR.n.COSMETIC_SHOP
                       }),
                       onClick: () => {
-                        PD.d.set({
-                          openEverythingMenuName: wC.q.COSMETIC_SHOP
+                        wU.b.set({
+                          openEverythingMenuName: KR.n.COSMETIC_SHOP
                         })
                       },
-                      children: [(0, SD.jsx)("span", {
+                      children: [(0, cU.jsx)("span", {
                         className: "EverythingMenuTabCosmeticShopText",
-                        children: DD("store:title")
-                      }), "new" === BD && (0, SD.jsx)(yf, {}), "dot" === BD && (0, SD.jsx)("span", {
+                        children: UU("store:title")
+                      }), "new" === GU && (0, cU.jsx)(KP, {}), "dot" === GU && (0, cU.jsx)("span", {
                         className: "EverythingMenuTabStoreBadge EverythingMenuTabStoreDot"
                       })]
-                    }), "inGame" === CD && (0, SD.jsxs)("div", {
-                      ...gD,
+                    }), "inGame" === RU && (0, cU.jsxs)("div", {
+                      ...fU,
                       "data-pad-tab": !0,
-                      "data-pad-selected": cD === wC.q.LOBBY_LEADERBOARD ? "true" : void 0,
-                      className: iD()("EverythingMenuTab", {
-                        EverythingMenuTabActive: cD === wC.q.LOBBY_LEADERBOARD
+                      "data-pad-selected": gU === KR.n.LOBBY_LEADERBOARD ? "true" : void 0,
+                      className: EU()("EverythingMenuTab", {
+                        EverythingMenuTabActive: gU === KR.n.LOBBY_LEADERBOARD
                       }),
                       onClick: () => {
-                        PD.d.set({
-                          openEverythingMenuName: wC.q.LOBBY_LEADERBOARD
+                        wU.b.set({
+                          openEverythingMenuName: KR.n.LOBBY_LEADERBOARD
                         })
                       },
-                      children: [DD("general:lobby"), yD("OpenLobbyLeaderboard", "leaderboard")]
+                      children: [UU("general:lobby"), jU("OpenLobbyLeaderboard", "leaderboard")]
                     })]
-                  }), (0, SD.jsx)("div", {
+                  }), (0, cU.jsx)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerEnd",
-                    children: HD
+                    children: nU
                   })]
-                }), (0, ci.n)(cD) && HD, (0, SD.jsxs)("div", {
+                }), (0, tE.k)(gU) && nU, (0, cU.jsxs)("div", {
                   className: "EverythingMenuBody",
                   "data-pad-initial-area": !0,
                   style: {
-                    "--everythingMenuBodyBackgroundOpacity": "inGame" === CD ? "0.85" : "1"
+                    "--everythingMenuBodyBackgroundOpacity": "inGame" === RU ? "0.85" : "1"
                   },
-                  children: [(0, SD.jsx)(SI, {
-                    show: cD === wC.q.SETTINGS,
-                    setBeforeResumeCallback: ZD
-                  }), (0, SD.jsx)(tI, {
-                    show: cD === wC.q.CUSTOMISATION
-                  }), (0, SD.jsx)(ID.Suspense, {
+                  children: [(0, cU.jsx)(ct, {
+                    show: gU === KR.n.SETTINGS,
+                    setBeforeResumeCallback: hU
+                  }), (0, cU.jsx)(Ct, {
+                    show: gU === KR.n.CUSTOMISATION
+                  }), (0, cU.jsx)(tU.Suspense, {
                     fallback: null,
-                    children: (0, SD.jsx)(sp, {
-                      show: cD === wC.q.SHOP
+                    children: (0, cU.jsx)(Mp, {
+                      show: gU === KR.n.SHOP
                     })
-                  }), (0, SD.jsx)(fi, {
-                    show: cD === wC.q.LOBBY_LEADERBOARD
-                  }), (0, SD.jsx)(Tf, {
-                    show: cD === wC.q.COSMETIC_SHOP
-                  }), (0, SD.jsx)(Cb, {
-                    show: cD === wC.q.SOCIAL
+                  }), (0, cU.jsx)(PE, {
+                    show: gU === KR.n.LOBBY_LEADERBOARD
+                  }), (0, cU.jsx)(XP, {
+                    show: gU === KR.n.COSMETIC_SHOP
+                  }), (0, cU.jsx)(lP, {
+                    show: gU === KR.n.SOCIAL
                   })]
-                }), !(0, vD.isMobileApp)() && (0, gI.e)(QD.getPlayerRanks()) && (0, SD.jsx)(NI.c, {
-                  ref: ND,
+                }), !(0, eU.isMobileApp)() && (0, ft.h)(qU.getPlayerRanks()) && (0, cU.jsx)(Wt.c, {
+                  ref: WU,
                   className: "EverythingMenuBannerDiv",
-                  show: mD,
+                  show: mU,
                   "data-pad-hint-bar-avoid": !0,
                   "data-pad-no-step-in": !0,
-                  children: (0, SD.jsx)(kf.b, {
+                  children: (0, cU.jsx)(HP.b, {
                     info: {
                       adId: 2,
                       adType: "leaderboard",
                       adAlias: "banner_shop"
                     },
                     sizeInfo: {
-                      parentRef: ND
+                      parentRef: WU
                     },
-                    showing: XD && mD,
+                    showing: xU && mU,
                     verticalAlign: "center",
                     horizontalAlign: "center",
                     noFillShowBloxdAdProbability: 1
@@ -7609,135 +7609,135 @@ export const modules = {
         })
       }))
   },
-  9045: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => iD
+  8991: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => EU
     });
-    var ID = cD(326),
-      pD = cD(9050);
+    var tU = gU(311),
+      pU = gU(8994);
 
-    function iD(DD, CD, cD) {
-      const iD = Object.entries(CD).sort(((DD, CD) => CD[1] - DD[1])),
-        fD = (0, ID.tb)(DD);
-      fD.push(DD ? "\n\n" : "\n");
-      for (const [pD, tD] of iD) {
-        var bD, QD, wD;
-        const DD = null !== (bD = null === cD || void 0 === cD || null === (QD = cD[pD]) || void 0 === QD ? void 0 : QD.icon) && void 0 !== bD ? bD : `${pD} Enchantment`;
-        fD.push({
-          icon: DD,
+    function EU(UU, RU, gU) {
+      const EU = Object.entries(RU).sort(((UU, RU) => RU[1] - UU[1])),
+        PU = (0, tU.xb)(UU);
+      PU.push(UU ? "\n\n" : "\n");
+      for (const [pU, CU] of EU) {
+        var TU, qU, KU;
+        const UU = null !== (TU = null === gU || void 0 === gU || null === (qU = gU[pU]) || void 0 === qU ? void 0 : qU.icon) && void 0 !== TU ? TU : `${pU} Enchantment`;
+        PU.push({
+          icon: UU,
           style: {
             fontSize: "1.5rem"
           }
-        }), fD.push({
-          str: `${pD} ${null!==(wD=(0,ID.S)(tD))&&void 0!==wD?wD:tD}\n`
+        }), PU.push({
+          str: `${pU} ${null!==(KU=(0,tU.V)(CU))&&void 0!==KU?KU:CU}\n`
         })
       }
-      fD.push({
+      PU.push({
         str: "\n"
       });
-      for (const [ID, tD] of iD) {
-        var SD, BD, yD, MD;
-        const DD = null !== (SD = null === cD || void 0 === cD || null === (BD = cD[ID]) || void 0 === BD ? void 0 : BD.icon) && void 0 !== SD ? SD : `${ID} Enchantment`,
-          CD = null !== (yD = null === cD || void 0 === cD || null === (MD = cD[ID]) || void 0 === MD ? void 0 : MD.description) && void 0 !== yD ? yD : (0, pD.j)(ID);
-        fD.push({
-          icon: DD,
+      for (const [tU, CU] of EU) {
+        var cU, GU, jU, uU;
+        const UU = null !== (cU = null === gU || void 0 === gU || null === (GU = gU[tU]) || void 0 === GU ? void 0 : GU.icon) && void 0 !== cU ? cU : `${tU} Enchantment`,
+          RU = null !== (jU = null === gU || void 0 === gU || null === (uU = gU[tU]) || void 0 === uU ? void 0 : uU.description) && void 0 !== jU ? jU : (0, pU.m)(tU);
+        PU.push({
+          icon: UU,
           style: {
             fontSize: "1.25rem",
             opacity: .75
           }
-        }), fD.push({
-          str: CD,
+        }), PU.push({
+          str: RU,
           style: {
             fontSize: "0.8em",
             fontWeight: "normal",
             opacity: .75
           }
-        }), fD.push({
+        }), PU.push({
           str: "\n"
         })
       }
-      return fD
+      return PU
     }
   },
-  9057: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => wD,
-      f: () => ND,
-      h: () => oD,
-      i: () => QD,
-      l: () => vD,
-      n: () => SD,
-      r: () => yD,
-      t: () => ZD,
-      w: () => BD
+  9001: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => KU,
+      d: () => WU,
+      e: () => QU,
+      f: () => qU,
+      i: () => eU,
+      l: () => cU,
+      m: () => jU,
+      q: () => hU,
+      t: () => GU
     });
-    var ID = cD(312),
-      pD = cD(624),
-      iD = cD(326),
-      fD = cD(4070),
-      bD = cD(9045);
+    var tU = gU(299),
+      pU = gU(581),
+      EU = gU(311),
+      PU = gU(3931),
+      TU = gU(8991);
 
-    function QD(DD, CD) {
-      var cD;
+    function qU(UU, RU) {
+      var gU;
       let {
-        player: ID,
-        chestOrCreative: pD
-      } = DD;
-      var iD;
-      return CD < ID.length ? null !== (iD = ID[CD]) && void 0 !== iD ? iD : null : null !== (cD = pD[CD - ID.length]) && void 0 !== cD ? cD : null
+        player: tU,
+        chestOrCreative: pU
+      } = UU;
+      var EU;
+      return RU < tU.length ? null !== (EU = tU[RU]) && void 0 !== EU ? EU : null : null !== (gU = pU[RU - tU.length]) && void 0 !== gU ? gU : null
     }
 
-    function wD(DD) {
-      var CD;
-      return null !== (CD = DD.amount) && void 0 !== CD ? CD : 0
+    function KU(UU) {
+      var RU;
+      return null !== (RU = UU.amount) && void 0 !== RU ? RU : 0
     }
 
-    function SD(DD) {
-      return 0 === DD.button || void 0 === DD.button
+    function cU(UU) {
+      return 0 === UU.button || void 0 === UU.button
     }
 
-    function BD(DD) {
-      return !!DD.shiftKey
+    function GU(UU) {
+      return !!UU.shiftKey
     }
 
-    function yD(DD) {
-      return "touches" in DD || "touch" === DD.pointerType || "pen" === DD.pointerType
+    function jU(UU) {
+      return "touches" in UU || "touch" === UU.pointerType || "pen" === UU.pointerType
     }
-    const MD = new Set,
-      tD = 50;
+    const uU = new Set,
+      CU = 50;
 
-    function ZD(DD, CD) {
-      var cD;
-      const ID = null === (cD = DD[CD]) || void 0 === cD ? void 0 : cD.displayName;
-      return (0, pD.C)(ID) ? "string" !== typeof CD ? "" : (!MD.has(CD) && MD.size < tD && (MD.add(CD), console.warn(`No item called "${CD}", so its hover shows the name as given`)), CD) : ID
+    function hU(UU, RU) {
+      var gU;
+      const tU = null === (gU = UU[RU]) || void 0 === gU ? void 0 : gU.displayName;
+      return (0, pU.E)(tU) ? "string" !== typeof RU ? "" : (!uU.has(RU) && uU.size < CU && (uU.add(RU), console.warn(`No item called "${RU}", so its hover shows the name as given`)), RU) : tU
     }
 
-    function oD(DD, CD, cD) {
-      var QD, wD, SD, BD, yD, MD, tD, oD, vD, ND, gD, XD, mD, nD;
-      const OD = DD.attributes,
-        PD = null !== (QD = null === (wD = CD[DD.name]) || void 0 === wD ? void 0 : wD.rootName) && void 0 !== QD ? QD : DD.name,
-        HD = null !== (SD = null !== (BD = OD.customDisplayName) && void 0 !== BD ? BD : null === (yD = CD[DD.name]) || void 0 === yD ? void 0 : yD.displayName) && void 0 !== SD ? SD : ZD(CD, PD);
-      let UD = HD;
-      const xD = null === (MD = OD.customAttributes) || void 0 === MD ? void 0 : MD.enchantmentTier;
-      xD && (UD = (0, iD.tb)(HD, {
-        colour: iD.lb[xD]
+    function QU(UU, RU, gU) {
+      var qU, KU, cU, GU, jU, uU, CU, QU, eU, WU, fU, xU, mU, IU;
+      const JU = UU.attributes,
+        wU = null !== (qU = null === (KU = RU[UU.name]) || void 0 === KU ? void 0 : KU.rootName) && void 0 !== qU ? qU : UU.name,
+        nU = null !== (cU = null !== (GU = JU.customDisplayName) && void 0 !== GU ? GU : null === (jU = RU[UU.name]) || void 0 === jU ? void 0 : jU.displayName) && void 0 !== cU ? cU : hU(RU, wU);
+      let bU = nU;
+      const oU = null === (uU = JU.customAttributes) || void 0 === uU ? void 0 : uU.enchantmentTier;
+      oU && (bU = (0, EU.xb)(nU, {
+        colour: EU.sb[oU]
       }));
-      const qD = null !== (tD = null !== (oD = null !== (vD = function(DD, CD) {
-        var cD;
-        if (void 0 === DD || null !== (cD = CD.customAttributes) && void 0 !== cD && cD.author) return DD;
-        const pD = (0, ID.bc)(DD);
-        return pD.every((DD => "string" === typeof DD)) ? DD : pD.map((DD => "string" === typeof DD ? DD : {
-          icon: DD.icon,
+      const ZU = null !== (CU = null !== (QU = null !== (eU = function(UU, RU) {
+        var gU;
+        if (void 0 === UU || null !== (gU = RU.customAttributes) && void 0 !== gU && gU.author) return UU;
+        const pU = (0, tU.dc)(UU);
+        return pU.every((UU => "string" === typeof UU)) ? UU : pU.map((UU => "string" === typeof UU ? UU : {
+          icon: UU.icon,
           style: {
             fontSize: "1.5em"
           }
         }))
-      }(OD.customDescription, OD)) && void 0 !== vD ? vD : null === (ND = CD[DD.name]) || void 0 === ND ? void 0 : ND.description) && void 0 !== oD ? oD : null === (gD = CD[PD]) || void 0 === gD ? void 0 : gD.description) && void 0 !== tD ? tD : "";
-      let JD = qD;
-      if (null !== (XD = OD.customAttributes) && void 0 !== XD && XD.enchantments) JD = (0, bD.d)(qD, OD.customAttributes.enchantments, OD.customAttributes.enchantmentData);
-      else if (cD[PD]) JD = (0, iD.tb)(qD), JD.push({
+      }(JU.customDescription, JU)) && void 0 !== eU ? eU : null === (WU = RU[UU.name]) || void 0 === WU ? void 0 : WU.description) && void 0 !== QU ? QU : null === (fU = RU[wU]) || void 0 === fU ? void 0 : fU.description) && void 0 !== CU ? CU : "";
+      let aU = ZU;
+      if (null !== (xU = JU.customAttributes) && void 0 !== xU && xU.enchantments) aU = (0, TU.e)(ZU, JU.customAttributes.enchantments, JU.customAttributes.enchantmentData);
+      else if (gU[wU]) aU = (0, EU.xb)(ZU), aU.push({
         str: "\n"
-      }), JD.push({
+      }), aU.push({
         str: "Enchantable",
         style: {
           fontSize: "0.8em",
@@ -7745,373 +7745,373 @@ export const modules = {
           opacity: .4
         }
       });
-      else if (null !== (mD = OD.customAttributes) && void 0 !== mD && mD.mobSettings) {
-        var KD, aD;
-        const DD = OD.customAttributes.mobSettings;
-        var VD, zD;
-        if (JD = [], (0, pD.C)(OD.customAttributes.health) || (JD.push({
+      else if (null !== (mU = JU.customAttributes) && void 0 !== mU && mU.mobSettings) {
+        var YU, BU;
+        const UU = JU.customAttributes.mobSettings;
+        var VU, rU;
+        if (aU = [], (0, pU.E)(JU.customAttributes.health) || (aU.push({
             str: "\n"
-          }), JD.push({
+          }), aU.push({
             icon: "Health",
             style: {
               fontSize: "1.5em"
             }
-          }), JD.push({
+          }), aU.push({
             str: " "
-          }), JD.push({
-            str: OD.customAttributes.health.toString()
-          }), (0, pD.C)(DD.maxHealth) || (JD.push({
+          }), aU.push({
+            str: JU.customAttributes.health.toString()
+          }), (0, pU.E)(UU.maxHealth) || (aU.push({
             str: "/"
-          }), JD.push({
-            str: DD.maxHealth.toString()
-          }))), !(0, pD.C)(DD.attackDamage) && DD.attackDamage > 0 && (JD.push({
+          }), aU.push({
+            str: UU.maxHealth.toString()
+          }))), !(0, pU.E)(UU.attackDamage) && UU.attackDamage > 0 && (aU.push({
             str: "\n"
-          }), JD.push({
+          }), aU.push({
             icon: "Iron Sword",
             style: {
               fontSize: "1.5em"
             }
-          }), JD.push({
+          }), aU.push({
             str: " "
-          }), JD.push({
-            str: DD.attackDamage.toString()
-          })), !(0, pD.C)(DD.secondaryAttackDamage) && DD.secondaryAttackDamage > 0 && (JD.push({
+          }), aU.push({
+            str: UU.attackDamage.toString()
+          })), !(0, pU.E)(UU.secondaryAttackDamage) && UU.secondaryAttackDamage > 0 && (aU.push({
             str: "\n"
-          }), JD.push({
+          }), aU.push({
             icon: "Stone Crossbow",
             style: {
               fontSize: "1.5em"
             }
-          }), JD.push({
+          }), aU.push({
             str: " "
-          }), JD.push({
-            str: DD.secondaryAttackDamage.toString()
-          })), (0, pD.C)(DD.baseRunningSpeed) || (JD.push({
+          }), aU.push({
+            str: UU.secondaryAttackDamage.toString()
+          })), (0, pU.E)(UU.baseRunningSpeed) || (aU.push({
             str: "\n"
-          }), JD.push({
+          }), aU.push({
             icon: "Speed",
             style: {
               fontSize: "1.5em"
             }
-          }), JD.push({
+          }), aU.push({
             str: " "
-          }), JD.push({
-            str: DD.baseRunningSpeed.toFixed(2)
-          })), "Saddled" === DD.metaInfo) JD.push({
+          }), aU.push({
+            str: UU.baseRunningSpeed.toFixed(2)
+          })), "Saddled" === UU.metaInfo) aU.push({
           str: "\n"
-        }), JD.push({
+        }), aU.push({
           str: {
             translationKey: "general:has"
           }
-        }), JD.push({
+        }), aU.push({
           str: " "
-        }), JD.push({
-          icon: null !== (VD = null === (zD = DD.tameInfo) || void 0 === zD ? void 0 : zD.saddleItemName) && void 0 !== VD ? VD : "Saddle",
+        }), aU.push({
+          icon: null !== (VU = null === (rU = UU.tameInfo) || void 0 === rU ? void 0 : rU.saddleItemName) && void 0 !== VU ? VU : "Saddle",
           style: {
             fontSize: "1.5em"
           }
         });
-        if (JD.push({
+        if (aU.push({
             str: "\n"
-          }), JD.push({
+          }), aU.push({
             str: "\n"
-          }), DD.petInfo && null !== (KD = DD.tameInfo) && void 0 !== KD && KD.supportsFriendship) {
-          const CD = fD.b.getIconsFromFriendshipPoints(DD.petInfo.friendshipPoints);
-          for (const DD of CD) JD.push({
-            icon: DD,
+          }), UU.petInfo && null !== (YU = UU.tameInfo) && void 0 !== YU && YU.supportsFriendship) {
+          const RU = PU.b.getIconsFromFriendshipPoints(UU.petInfo.friendshipPoints);
+          for (const UU of RU) aU.push({
+            icon: UU,
             style: {
               fontSize: "1.5em"
             }
           });
-          JD.push({
+          aU.push({
             str: "\n"
           });
-          const cD = fD.b.getMobHungerLevel(DD.petInfo.lastFedAt);
-          for (const DD of fD.b.hungerLevelIcons[cD]) JD.push({
-            icon: DD,
+          const gU = PU.b.getMobHungerLevel(UU.petInfo.lastFedAt);
+          for (const UU of PU.b.hungerLevelIcons[gU]) aU.push({
+            icon: UU,
             style: {
               fontSize: "1.5em"
             }
           });
-          JD.push({
+          aU.push({
             str: " "
-          }), JD.push({
-            str: fD.b.hungerLevelTranslations[cD],
+          }), aU.push({
+            str: PU.b.hungerLevelTranslations[gU],
             style: {
               fontWeight: "bolder"
             }
           })
         }
-        if (DD.tameInfo && null !== (aD = DD.tameInfo) && void 0 !== aD && aD.supportsFriendship) {
-          var jD, lD;
-          let CD = null !== (jD = DD.tameInfo.likedFoods) && void 0 !== jD ? jD : [];
-          JD.push({
+        if (UU.tameInfo && null !== (BU = UU.tameInfo) && void 0 !== BU && BU.supportsFriendship) {
+          var XU, vU;
+          let RU = null !== (XU = UU.tameInfo.likedFoods) && void 0 !== XU ? XU : [];
+          aU.push({
             str: "\n"
-          }), JD.push({
+          }), aU.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: fD.b.feedTextColours[fD.b.MobFoodType.Superliked]
+              color: PU.b.feedTextColours[PU.b.MobFoodType.Superliked]
             }
-          }), JD.push({
+          }), aU.push({
             str: " "
-          }), null !== (lD = DD.petInfo) && void 0 !== lD && lD.superlikedFoodKnown ? (JD.push({
-            icon: DD.petInfo.superlikedFood,
+          }), null !== (vU = UU.petInfo) && void 0 !== vU && vU.superlikedFoodKnown ? (aU.push({
+            icon: UU.petInfo.superlikedFood,
             style: {
               fontSize: "1.5em"
             }
-          }), CD = CD.filter((CD => CD !== DD.petInfo.superlikedFood))) : JD.push({
+          }), RU = RU.filter((RU => RU !== UU.petInfo.superlikedFood))) : aU.push({
             icon: "Question Mark",
             style: {
               fontSize: "1.5em"
             }
-          }), JD.push({
+          }), aU.push({
             str: "\n"
-          }), JD.push({
+          }), aU.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: fD.b.feedTextColours[fD.b.MobFoodType.Liked]
+              color: PU.b.feedTextColours[PU.b.MobFoodType.Liked]
             }
-          }), JD.push({
+          }), aU.push({
             str: " "
           });
-          for (const DD of CD) JD.push({
-            icon: DD,
+          for (const UU of RU) aU.push({
+            icon: UU,
             style: {
               fontSize: "1.5em"
             }
           });
-          JD.push({
+          aU.push({
             str: "\n"
-          }), JD.push({
+          }), aU.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: fD.b.feedTextColours[fD.b.MobFoodType.Neutral]
+              color: PU.b.feedTextColours[PU.b.MobFoodType.Neutral]
             }
-          }), JD.push({
+          }), aU.push({
             str: " "
           });
-          for (const cD of null !== (LD = DD.tameInfo.neutralFoods) && void 0 !== LD ? LD : []) {
-            var LD;
-            JD.push({
-              icon: cD,
+          for (const gU of null !== (dU = UU.tameInfo.neutralFoods) && void 0 !== dU ? dU : []) {
+            var dU;
+            aU.push({
+              icon: gU,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
-          JD.push({
+          aU.push({
             str: "\n"
-          }), JD.push({
+          }), aU.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: fD.b.feedTextColours[fD.b.MobFoodType.Disliked]
+              color: PU.b.feedTextColours[PU.b.MobFoodType.Disliked]
             }
-          }), JD.push({
+          }), aU.push({
             str: " "
           });
-          for (const cD of null !== (TD = DD.tameInfo.dislikedFoods) && void 0 !== TD ? TD : []) {
-            var TD;
-            JD.push({
-              icon: cD,
+          for (const gU of null !== (HU = UU.tameInfo.dislikedFoods) && void 0 !== HU ? HU : []) {
+            var HU;
+            aU.push({
+              icon: gU,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
         }
-        JD.length > 0 ? (JD.shift(), JD.unshift(...(0, iD.tb)(qD))) : JD = (0, iD.tb)(qD)
+        aU.length > 0 ? (aU.shift(), aU.unshift(...(0, EU.xb)(ZU))) : aU = (0, EU.xb)(ZU)
       }
       return {
-        name: UD,
-        desc: JD,
-        fontStyle: null !== (nD = OD.customAttributes) && void 0 !== nD && nD.author ? "italic" : "normal"
+        name: bU,
+        desc: aU,
+        fontStyle: null !== (IU = JU.customAttributes) && void 0 !== IU && IU.author ? "italic" : "normal"
       }
     }
 
-    function vD(DD, CD, cD, ID) {
-      const pD = QD(DD, cD),
-        iD = QD(DD, ID);
-      if (!pD) return !1;
-      const fD = CD[pD.name].armourReduction,
-        bD = CD[iD.name].armourReduction;
-      if (bD === fD) {
-        var wD, SD, BD, yD;
-        const DD = null !== (wD = null === (SD = pD.attributes.customAttributes) || void 0 === SD ? void 0 : SD.enchantmentTier) && void 0 !== wD ? wD : "Tier 0",
-          CD = null !== (BD = null === (yD = iD.attributes.customAttributes) || void 0 === yD ? void 0 : yD.enchantmentTier) && void 0 !== BD ? BD : "Tier 0";
-        return parseInt(DD.replace("Tier ", "")) >= parseInt(CD.replace("Tier ", ""))
+    function eU(UU, RU, gU, tU) {
+      const pU = qU(UU, gU),
+        EU = qU(UU, tU);
+      if (!pU) return !1;
+      const PU = RU[pU.name].armourReduction,
+        TU = RU[EU.name].armourReduction;
+      if (TU === PU) {
+        var KU, cU, GU, jU;
+        const UU = null !== (KU = null === (cU = pU.attributes.customAttributes) || void 0 === cU ? void 0 : cU.enchantmentTier) && void 0 !== KU ? KU : "Tier 0",
+          RU = null !== (GU = null === (jU = EU.attributes.customAttributes) || void 0 === jU ? void 0 : jU.enchantmentTier) && void 0 !== GU ? GU : "Tier 0";
+        return parseInt(UU.replace("Tier ", "")) >= parseInt(RU.replace("Tier ", ""))
       }
-      return fD > bD
+      return PU > TU
     }
 
-    function ND(DD) {
-      let CD;
-      if ("number" === typeof DD) {
-        const cD = document.querySelector(`[data-inven-idx="${DD}"]`);
-        if (!cD) return null;
-        CD = cD.getBoundingClientRect()
-      } else CD = DD.getBoundingClientRect();
+    function WU(UU) {
+      let RU;
+      if ("number" === typeof UU) {
+        const gU = document.querySelector(`[data-inven-idx="${UU}"]`);
+        if (!gU) return null;
+        RU = gU.getBoundingClientRect()
+      } else RU = UU.getBoundingClientRect();
       return {
-        x: CD.left + CD.width / 2,
-        y: CD.top + CD.height / 2
+        x: RU.left + RU.width / 2,
+        y: RU.top + RU.height / 2
       }
     }
   },
-  8940: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => MD,
-      h: () => tD,
-      k: () => ZD
+  8893: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => uU,
+      d: () => CU,
+      h: () => hU
     });
-    var ID = cD(1442),
-      pD = cD(53),
-      iD = cD(1305),
-      fD = cD(4325),
-      bD = cD(2295),
-      QD = cD(1192),
-      wD = cD(90),
-      SD = cD(1954),
-      BD = cD(1328),
-      yD = cD(1093);
+    var tU = gU(1412),
+      pU = gU(56),
+      EU = gU(1305),
+      PU = gU(4195),
+      TU = gU(2185),
+      qU = gU(1181),
+      KU = gU(96),
+      cU = gU(1834),
+      GU = gU(1326),
+      jU = gU(1090);
 
-    function MD(DD) {
+    function uU(UU) {
       let {
-        show: CD,
-        onClose: cD
-      } = DD;
+        show: RU,
+        onClose: gU
+      } = UU;
       const {
-        requestedGameNameWithVariation: ID,
-        lobbyName: pD,
-        shownLobbyName: iD
-      } = (0, SD.h)("connectedGame"), QD = (0, bD.b)(ID, pD, !1);
-      return wD.featureFlags.canUseInviteLinks && (0, yD.jsx)(fD.e, {
-        show: CD,
-        close: cD,
+        requestedGameNameWithVariation: tU,
+        lobbyName: pU,
+        shownLobbyName: EU
+      } = (0, cU.k)("connectedGame"), qU = (0, TU.d)(tU, pU, !1);
+      return KU.featureFlags.canUseInviteLinks && (0, jU.jsx)(PU.d, {
+        show: RU,
+        close: gU,
         padShowsHud: !0,
         togglePointerLock: !1,
         globallyUniqueKey: "InviteLinkBox",
         doGameplayStartStopOnShow: !0,
-        children: (0, yD.jsxs)("div", {
+        children: (0, jU.jsxs)("div", {
           className: "InviteLinkBox AnimFadeInScaleUp",
-          children: [(0, yD.jsx)("div", {
+          children: [(0, jU.jsx)("div", {
             className: "InviteLinkBoxHeader SmallTextBold",
             children: "Invite Friends"
-          }), (0, yD.jsxs)("div", {
+          }), (0, jU.jsxs)("div", {
             className: "InviteLinkBoxDescription SmallTextLight",
-            children: [(0, yD.jsx)("div", {
+            children: [(0, jU.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: '"Join Lobby Name" Button Info'
-            }), "Game: ", null === QD ? (0, yD.jsx)(BD.e, {}) : QD, (0, yD.jsx)("br", {}), "Lobby Name: ", iD, (0, yD.jsx)("br", {}), (0, yD.jsx)("br", {}), (0, yD.jsx)("br", {}), (0, yD.jsx)("div", {
+            }), "Game: ", null === qU ? (0, jU.jsx)(GU.d, {}) : qU, (0, jU.jsx)("br", {}), "Lobby Name: ", EU, (0, jU.jsx)("br", {}), (0, jU.jsx)("br", {}), (0, jU.jsx)("br", {}), (0, jU.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: "Link"
             })]
-          }), (0, yD.jsx)(tD, {})]
+          }), (0, jU.jsx)(CU, {})]
         })
       })
     }
 
-    function tD() {
-      var DD;
+    function CU() {
+      var UU;
       const {
-        t: CD
-      } = (0, QD.F)(), cD = null !== (DD = ZD(wD.featureFlags.canUseInviteLinks)) && void 0 !== DD ? DD : "Loading Link...", [iD, fD] = (0, pD.useState)(0), [bD, SD] = (0, pD.useReducer)((DD => DD + 1), 0);
-      return (0, pD.useEffect)((() => {
-        const DD = setTimeout((() => {
-          SD()
+        t: RU
+      } = (0, qU.B)(), gU = null !== (UU = hU(KU.featureFlags.canUseInviteLinks)) && void 0 !== UU ? UU : "Loading Link...", [EU, PU] = (0, pU.useState)(0), [TU, cU] = (0, pU.useReducer)((UU => UU + 1), 0);
+      return (0, pU.useEffect)((() => {
+        const UU = setTimeout((() => {
+          cU()
         }), 1100);
         return () => {
-          clearTimeout(DD)
+          clearTimeout(UU)
         }
-      }), [iD]), wD.featureFlags.canUseInviteLinks && (0, yD.jsxs)("div", {
+      }), [EU]), KU.featureFlags.canUseInviteLinks && (0, jU.jsxs)("div", {
         className: "InviteLinkInnerWrapper",
-        children: [(0, yD.jsx)("div", {
+        children: [(0, jU.jsx)("div", {
           className: "InviteLinkInner",
-          children: cD
-        }), (0, yD.jsx)(ID.i, {
+          children: gU
+        }), (0, jU.jsx)(tU.e, {
           className: "InviteLinkCopyButton",
           onClick: () => {
-            navigator.clipboard.writeText(cD).catch((DD => {
-              console.error("Failed to copy invite link:", DD)
-            })), fD(Date.now())
+            navigator.clipboard.writeText(gU).catch((UU => {
+              console.error("Failed to copy invite link:", UU)
+            })), PU(Date.now())
           },
-          disabled: Date.now() - iD < 1e3,
-          children: Date.now() - iD < 1e3 ? CD("general:copied") : CD("general:copy")
+          disabled: Date.now() - EU < 1e3,
+          children: Date.now() - EU < 1e3 ? RU("general:copied") : RU("general:copy")
         })]
       })
     }
 
-    function ZD(DD) {
-      const [CD, cD] = (0, pD.useState)(null);
-      return (0, pD.useEffect)((() => {
-        if (!DD) return;
-        let CD = !0;
-        return (0, iD.u)().then((DD => {
-          CD && cD(DD)
-        })).catch((DD => {
-          console.error("Failed to get invite link:", DD)
+    function hU(UU) {
+      const [RU, gU] = (0, pU.useState)(null);
+      return (0, pU.useEffect)((() => {
+        if (!UU) return;
+        let RU = !0;
+        return (0, EU.D)().then((UU => {
+          RU && gU(UU)
+        })).catch((UU => {
+          console.error("Failed to get invite link:", UU)
         })), () => {
-          CD = !1
+          RU = !1
         }
-      }), [DD]), CD
+      }), [UU]), RU
     }
   },
-  9039: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => wD
+  8978: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => KU
     });
-    var ID = cD(53),
-      pD = cD(1049),
-      iD = cD.n(pD),
-      fD = cD(1954),
-      bD = cD(1093);
+    var tU = gU(56),
+      pU = gU(1037),
+      EU = gU.n(pU),
+      PU = gU(1834),
+      TU = gU(1090);
 
-    function QD(DD) {
-      const CD = Math.floor(DD / 3600),
-        cD = Math.floor(DD % 3600 / 60),
-        ID = Math.floor(DD % 60),
-        pD = `${cD.toString().padStart(2,"0")}:${ID.toString().padStart(2,"0")}`;
-      return CD > 0 ? `${CD}:${pD}` : pD
+    function qU(UU) {
+      const RU = Math.floor(UU / 3600),
+        gU = Math.floor(UU % 3600 / 60),
+        tU = Math.floor(UU % 60),
+        pU = `${gU.toString().padStart(2,"0")}:${tU.toString().padStart(2,"0")}`;
+      return RU > 0 ? `${RU}:${pU}` : pU
     }
-    const wD = (0, ID.memo)((function(DD) {
+    const KU = (0, tU.memo)((function(UU) {
       let {
-        className: CD
-      } = DD;
+        className: RU
+      } = UU;
       const {
-        recording: cD,
-        seconds: ID
-      } = (0, fD.h)("replayRecorder");
-      return cD ? (0, bD.jsxs)("div", {
-        className: iD()("RecordingIndicator", CD),
-        children: [(0, bD.jsx)("span", {
+        recording: gU,
+        seconds: tU
+      } = (0, PU.k)("replayRecorder");
+      return gU ? (0, TU.jsxs)("div", {
+        className: EU()("RecordingIndicator", RU),
+        children: [(0, TU.jsx)("span", {
           className: "RecordingIndicatorDot"
-        }), (0, bD.jsx)("span", {
+        }), (0, TU.jsx)("span", {
           className: "RecordingIndicatorLabel",
           children: "REC"
-        }), (0, bD.jsx)("span", {
+        }), (0, TU.jsx)("span", {
           className: "RecordingIndicatorTime",
-          children: QD(ID)
+          children: qU(tU)
         })]
       }) : null
     }))
   },
-  4648: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => oD
+  4540: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => QU
     });
-    var ID = cD(1049),
-      pD = cD.n(ID),
-      iD = cD(4438),
-      fD = cD(1192),
-      bD = cD(1064),
-      QD = cD(1442),
-      wD = cD(1497),
-      SD = cD(1340),
-      BD = cD(2421),
-      yD = cD(1093);
-    const MD = {
+    var tU = gU(1037),
+      pU = gU.n(tU),
+      EU = gU(4307),
+      PU = gU(1181),
+      TU = gU(1049),
+      qU = gU(1412),
+      KU = gU(1461),
+      cU = gU(1333),
+      GU = gU(2309),
+      jU = gU(1090);
+    const uU = {
       youtube: {
         icon: "youtube",
         color: "#FF0033",
@@ -8139,354 +8139,354 @@ export const modules = {
       }
     };
 
-    function tD(DD) {
+    function CU(UU) {
       let {
-        platform: CD
-      } = DD;
-      const cD = "youtube" === CD;
-      return (0, yD.jsxs)("span", {
-        className: pD()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: cD
+        platform: RU
+      } = UU;
+      const gU = "youtube" === RU;
+      return (0, jU.jsxs)("span", {
+        className: pU()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: gU
         }),
-        children: [cD && (0, yD.jsx)(BD.c, {
+        children: [gU && (0, jU.jsx)(GU.b, {
           variant: "white"
-        }), !cD && (0, yD.jsx)(bD.c, {
-          name: MD[CD].icon,
+        }), !gU && (0, jU.jsx)(TU.c, {
+          name: uU[RU].icon,
           kit: "brands"
         })]
       })
     }
 
-    function ZD(DD) {
+    function hU(UU) {
       let {
-        platform: CD,
-        link: cD,
-        editable: ID,
-        userContext: pD,
-        onLinksUpdated: BD
-      } = DD;
+        platform: RU,
+        link: gU,
+        editable: tU,
+        userContext: pU,
+        onLinksUpdated: GU
+      } = UU;
       const {
-        t: ZD
-      } = (0, fD.F)(), oD = MD[CD];
-      if (!cD && !ID) return null;
+        t: hU
+      } = (0, PU.B)(), QU = uU[RU];
+      if (!gU && !tU) return null;
 
-      function vD() {
-        var DD;
-        if (!pD || !BD) return;
-        SD.NotificationProvider.showInputPopup({
+      function eU() {
+        var UU;
+        if (!pU || !GU) return;
+        cU.NotificationProvider.showInputPopup({
           title: "homePage:profileSocialLinkEditTitle",
           textOpts: {
             title: {
-              platform: oD.name
+              platform: QU.name
             }
           },
-          prefixText: iD.x[CD],
+          prefixText: EU.y[RU],
           placeholderText: "playBloxd",
-          initialValue: null !== (DD = null === cD || void 0 === cD ? void 0 : cD.handle) && void 0 !== DD ? DD : "",
+          initialValue: null !== (UU = null === gU || void 0 === gU ? void 0 : gU.handle) && void 0 !== UU ? UU : "",
           maxLength: 30,
           submitText: "general:save",
-          secondaryButtonText: cD ? "general:remove" : void 0
-        }).getResult().then((async DD => {
-          if ("notificationTornDown" !== DD && null !== DD) try {
-            "submit" === DD.type ? await wD.c.setSocialLink(pD, CD, DD.value) : await wD.c.clearSocialLink(pD, CD), BD()
-          } catch (cD) {
-            console.error("Failed to update social link", cD), SD.NotificationProvider.showAlertPopup({
-              title: cD.errorMessageForUser,
+          secondaryButtonText: gU ? "general:remove" : void 0
+        }).getResult().then((async UU => {
+          if ("notificationTornDown" !== UU && null !== UU) try {
+            "submit" === UU.type ? await KU.c.setSocialLink(pU, RU, UU.value) : await KU.c.clearSocialLink(pU, RU), GU()
+          } catch (gU) {
+            console.error("Failed to update social link", gU), cU.NotificationProvider.showAlertPopup({
+              title: gU.errorMessageForUser,
               confirmText: "general:ok"
             })
           }
         }))
       }
-      if (cD) {
-        const DD = `@${cD.handle}`;
-        return (0, yD.jsxs)("a", {
+      if (gU) {
+        const UU = `@${gU.handle}`;
+        return (0, jU.jsxs)("a", {
           className: "PlayerProfileSocialLink",
           style: {
-            background: oD.color
+            background: QU.color
           },
-          href: cD.profileUrl,
+          href: gU.profileUrl,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: [(0, yD.jsxs)("div", {
+          children: [(0, jU.jsxs)("div", {
             className: "PlayerProfileSocialLinkMain",
-            children: [(0, yD.jsx)(tD, {
-              platform: CD
-            }), (0, yD.jsx)("span", {
+            children: [(0, jU.jsx)(CU, {
+              platform: RU
+            }), (0, jU.jsx)("span", {
               className: "PlayerProfileSocialLinkText",
-              children: (0, yD.jsx)("span", {
+              children: (0, jU.jsx)("span", {
                 className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: DD
+                children: UU
               })
             })]
-          }), ID && (0, yD.jsx)("button", {
+          }), tU && (0, jU.jsx)("button", {
             type: "button",
             className: "PlayerProfileSocialLinkEditButton",
-            ...(0, QD.U)({
+            ...(0, qU.R)({
               stopPropagation: !0
             }),
-            onClick: DD => {
-              DD.stopPropagation(), DD.preventDefault(), vD()
+            onClick: UU => {
+              UU.stopPropagation(), UU.preventDefault(), eU()
             },
-            children: (0, yD.jsx)(bD.c, {
+            children: (0, jU.jsx)(TU.c, {
               name: "pen-to-square"
             })
-          }), !ID && (0, yD.jsx)("span", {
+          }), !tU && (0, jU.jsx)("span", {
             className: "PlayerProfileSocialLinkArrow",
-            children: (0, yD.jsx)(bD.c, {
+            children: (0, jU.jsx)(TU.c, {
               name: "arrow-up-right-from-square"
             })
           })]
         })
       }
-      return (0, yD.jsxs)("button", {
+      return (0, jU.jsxs)("button", {
         type: "button",
         className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
         style: {
-          background: oD.color
+          background: QU.color
         },
-        ...(0, QD.U)(),
+        ...(0, qU.R)(),
         onClick: () => {
-          vD()
+          eU()
         },
-        children: [(0, yD.jsx)(tD, {
-          platform: CD
-        }), (0, yD.jsxs)("span", {
+        children: [(0, jU.jsx)(CU, {
+          platform: RU
+        }), (0, jU.jsxs)("span", {
           className: "PlayerProfileSocialLinkText",
-          children: [(0, yD.jsx)("span", {
+          children: [(0, jU.jsx)("span", {
             className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: oD.name
-          }), (0, yD.jsx)("span", {
+            children: QU.name
+          }), (0, jU.jsx)("span", {
             className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: ZD("homePage:profileSocialLinkAdd")
+            children: hU("homePage:profileSocialLinkAdd")
           })]
-        }), (0, yD.jsx)("span", {
+        }), (0, jU.jsx)("span", {
           className: "PlayerProfileSocialLinkEditButton",
-          children: (0, yD.jsx)(bD.c, {
+          children: (0, jU.jsx)(TU.c, {
             name: "pen-to-square"
           })
         })]
       })
     }
 
-    function oD(DD) {
+    function QU(UU) {
       let {
-        socialLinks: CD,
-        editable: cD = !1,
-        userContext: ID,
-        onLinksUpdated: pD
-      } = DD;
-      if (!cD && 0 === CD.length) return null;
-      const fD = new Map(CD.map((DD => [DD.platform, DD]))),
-        bD = cD ? iD.u : CD.map((DD => DD.platform));
-      return (0, yD.jsx)("div", {
+        socialLinks: RU,
+        editable: gU = !1,
+        userContext: tU,
+        onLinksUpdated: pU
+      } = UU;
+      if (!gU && 0 === RU.length) return null;
+      const PU = new Map(RU.map((UU => [UU.platform, UU]))),
+        TU = gU ? EU.u : RU.map((UU => UU.platform));
+      return (0, jU.jsx)("div", {
         className: "PlayerProfileSocialLinks",
-        children: (0, yD.jsx)("div", {
+        children: (0, jU.jsx)("div", {
           className: "PlayerProfileSocialLinksList",
-          children: bD.map((DD => (0, yD.jsx)(ZD, {
-            platform: DD,
-            link: fD.get(DD),
-            editable: cD,
-            userContext: ID,
-            onLinksUpdated: pD
-          }, DD)))
+          children: TU.map((UU => (0, jU.jsx)(hU, {
+            platform: UU,
+            link: PU.get(UU),
+            editable: gU,
+            userContext: tU,
+            onLinksUpdated: pU
+          }, UU)))
         })
       })
     }
   },
-  9041: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => iD
+  8982: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => EU
     });
-    var ID = cD(4329),
-      pD = cD(4337);
+    var tU = gU(4200),
+      pU = gU(4206);
 
-    function iD(DD) {
+    function EU(UU) {
       let {
-        children: CD,
-        showing: cD,
-        globallyUniqueKey: iD,
-        alwaysMountChildren: fD = !1,
-        doGameplayStartStopOnShow: bD = !0,
-        keepsMovement: QD = !1
-      } = DD;
-      return (0, pD.e)(!0, cD, iD, QD), (0, ID.b)(bD, cD), cD || fD ? CD : null
+        children: RU,
+        showing: gU,
+        globallyUniqueKey: EU,
+        alwaysMountChildren: PU = !1,
+        doGameplayStartStopOnShow: TU = !0,
+        keepsMovement: qU = !1
+      } = UU;
+      return (0, pU.e)(!0, gU, EU, qU), (0, tU.c)(TU, gU), gU || PU ? RU : null
     }
   },
-  9084: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => iD
+  9033: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => EU
     });
-    var ID = cD(53),
-      pD = cD(3387);
+    var tU = gU(56),
+      pU = gU(3262);
 
-    function iD() {
-      const [DD, CD] = (0, ID.useState)(!1);
-      return (0, ID.useLayoutEffect)((() => {
-        let DD = !0;
-        return (0, pD.d)().then((() => {
-          DD && CD(!0)
+    function EU() {
+      const [UU, RU] = (0, tU.useState)(!1);
+      return (0, tU.useLayoutEffect)((() => {
+        let UU = !0;
+        return (0, pU.e)().then((() => {
+          UU && RU(!0)
         })), () => {
-          DD = !1
+          UU = !1
         }
-      }), []), DD
+      }), []), UU
     }
   },
-  6320: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => iD
+  6239: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => EU
     });
-    var ID = cD(53),
-      pD = cD(36);
+    var tU = gU(56),
+      pU = gU(34);
 
-    function iD(DD, CD) {
-      var cD;
-      const [iD, fD] = (0, ID.useState)(null !== (cD = pD.h.getItem(DD)) && void 0 !== cD ? cD : CD);
-      return [iD, CD => {
-        pD.h.setItem(DD, CD), fD(CD)
+    function EU(UU, RU) {
+      var gU;
+      const [EU, PU] = (0, tU.useState)(null !== (gU = pU.k.getItem(UU)) && void 0 !== gU ? gU : RU);
+      return [EU, RU => {
+        pU.k.setItem(UU, RU), PU(RU)
       }]
     }
   },
-  9021: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => yD,
-      h: () => BD
+  8953: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => jU,
+      i: () => GU
     });
-    cD(9026);
-    var ID = cD(1049),
-      pD = cD.n(ID),
-      iD = cD(53),
-      fD = cD(8991);
+    gU(8962);
+    var tU = gU(1037),
+      pU = gU.n(tU),
+      EU = gU(56),
+      PU = gU(8927);
 
-    function bD(DD, CD) {
-      return Math.max(1, Math.round(DD * CD))
+    function TU(UU, RU) {
+      return Math.max(1, Math.round(UU * RU))
     }
 
-    function QD(DD, CD, cD) {
-      const ID = 2 * cD >= CD - 1;
+    function qU(UU, RU, gU) {
+      const tU = 2 * gU >= RU - 1;
       return {
-        x: DD,
-        y: DD,
-        size: CD,
-        border: Math.min(cD, Math.floor(CD / 2)),
-        filled: ID
+        x: UU,
+        y: UU,
+        size: RU,
+        border: Math.min(gU, Math.floor(RU / 2)),
+        filled: tU
       }
     }
-    var wD = cD(1093);
-    const SD = 1.4;
+    var KU = gU(1090);
+    const cU = 1.4;
 
-    function BD(DD, CD) {
-      return DD && CD ? `scale(${SD})` : "scale(1)"
+    function GU(UU, RU) {
+      return UU && RU ? `scale(${cU})` : "scale(1)"
     }
 
-    function yD(DD) {
-      return "classic" === DD.settings.style ? (0, wD.jsx)(ZD, {
-        ...DD
-      }) : (0, wD.jsx)(nD, {
-        ...DD
+    function jU(UU) {
+      return "classic" === UU.settings.style ? (0, KU.jsx)(hU, {
+        ...UU
+      }) : (0, KU.jsx)(IU, {
+        ...UU
       })
     }
-    const MD = .125;
+    const uU = .125;
 
-    function tD(DD, CD) {
-      const cD = {};
-      if (DD.color !== fD.h.color && (cD.color = (0, fD.o)(DD.color)), DD.opacity !== fD.h.opacity && (cD.opacity = DD.opacity / 100), DD.outline !== fD.h.outline || DD.outlineColor !== fD.h.outlineColor) {
-        const CD = DD.outline,
-          ID = (0, fD.o)(DD.outlineColor);
-        cD.textShadow = CD > 0 ? `-${CD}px 0 ${ID}, 0 ${CD}px ${ID}, ${CD}px 0 ${ID}, 0 -${CD}px ${ID}` : "none"
+    function CU(UU, RU) {
+      const gU = {};
+      if (UU.color !== PU.d.color && (gU.color = (0, PU.j)(UU.color)), UU.opacity !== PU.d.opacity && (gU.opacity = UU.opacity / 100), UU.outline !== PU.d.outline || UU.outlineColor !== PU.d.outlineColor) {
+        const RU = UU.outline,
+          tU = (0, PU.j)(UU.outlineColor);
+        gU.textShadow = RU > 0 ? `-${RU}px 0 ${tU}, 0 ${RU}px ${tU}, ${RU}px 0 ${tU}, 0 -${RU}px ${tU}` : "none"
       }
-      if (DD.size !== fD.h.size) {
-        const ID = DD.size / 100;
-        cD.fontSize = CD ? `calc(max(1.3rem, 18px) * ${ID})` : `calc(1.3rem * ${ID})`, cD.marginTop = `-${MD}em`, cD.transformOrigin = `50% calc(50% + ${MD}em)`
+      if (UU.size !== PU.d.size) {
+        const tU = UU.size / 100;
+        gU.fontSize = RU ? `calc(max(1.3rem, 18px) * ${tU})` : `calc(1.3rem * ${tU})`, gU.marginTop = `-${uU}em`, gU.transformOrigin = `50% calc(50% + ${uU}em)`
       }
-      return cD
+      return gU
     }
 
-    function ZD(DD) {
+    function hU(UU) {
       let {
-        settings: CD,
-        touch: cD,
-        inPreview: ID,
-        inEditor: iD,
-        pressed: fD = !1,
-        pressRef: bD
-      } = DD;
-      return (0, wD.jsx)("div", {
-        className: pD()("Crosshair", {
-          Touch: cD,
-          CrosshairInPreview: ID,
-          CrosshairInEditor: iD || ID
+        settings: RU,
+        touch: gU,
+        inPreview: tU,
+        inEditor: EU,
+        pressed: PU = !1,
+        pressRef: TU
+      } = UU;
+      return (0, KU.jsx)("div", {
+        className: pU()("Crosshair", {
+          Touch: gU,
+          CrosshairInPreview: tU,
+          CrosshairInEditor: EU || tU
         }),
-        ref: bD,
+        ref: TU,
         style: {
-          transform: BD(fD, CD.growOnClick),
-          ...tD(CD, cD)
+          transform: GU(PU, RU.growOnClick),
+          ...CU(RU, gU)
         },
         children: "+"
       })
     }
 
-    function oD(DD, CD) {
-      return DD / CD + "px"
+    function QU(UU, RU) {
+      return UU / RU + "px"
     }
 
-    function vD(DD, CD, cD, ID) {
+    function eU(UU, RU, gU, tU) {
       return {
-        ...XD(DD, CD, cD),
-        width: oD(DD.w, cD),
-        height: oD(DD.h, cD),
-        background: ID
+        ...xU(UU, RU, gU),
+        width: QU(UU.w, gU),
+        height: QU(UU.h, gU),
+        background: tU
       }
     }
 
-    function ND(DD, CD, cD) {
+    function WU(UU, RU, gU) {
       return {
-        left: oD(DD.x, CD),
-        top: oD(DD.y, CD),
-        width: oD(DD.size, CD),
-        height: oD(DD.size, CD),
-        borderWidth: oD(DD.border, CD),
-        borderColor: cD,
-        background: DD.filled ? cD : void 0
+        left: QU(UU.x, RU),
+        top: QU(UU.y, RU),
+        width: QU(UU.size, RU),
+        height: QU(UU.size, RU),
+        borderWidth: QU(UU.border, RU),
+        borderColor: gU,
+        background: UU.filled ? gU : void 0
       }
     }
-    const gD = {
+    const fU = {
       left: [-1, 0],
       right: [1, 0],
       up: [0, -1],
       down: [0, 1]
     };
 
-    function XD(DD, CD, cD) {
-      const [ID, pD] = DD.arm ? gD[DD.arm] : [0, 0], iD = Math.round(CD * cD);
+    function xU(UU, RU, gU) {
+      const [tU, pU] = UU.arm ? fU[UU.arm] : [0, 0], EU = Math.round(RU * gU);
       return {
-        left: oD(DD.x + ID * iD, cD),
-        top: oD(DD.y + pD * iD, cD)
+        left: QU(UU.x + tU * EU, gU),
+        top: QU(UU.y + pU * EU, gU)
       }
     }
 
-    function mD(DD) {
-      return DD.arm ? {
-        "data-arm": DD.arm,
-        "data-x": DD.x,
-        "data-y": DD.y
+    function mU(UU) {
+      return UU.arm ? {
+        "data-arm": UU.arm,
+        "data-x": UU.x,
+        "data-y": UU.y
       } : {}
     }
 
-    function nD(DD) {
+    function IU(UU) {
       let {
-        settings: CD,
-        inPreview: cD,
-        inEditor: ID,
-        pressed: BD = !1,
-        spread: yD,
-        spreadRef: MD
-      } = DD;
-      const tD = (0, iD.useRef)(null),
+        settings: RU,
+        inPreview: gU,
+        inEditor: tU,
+        pressed: GU = !1,
+        spread: jU,
+        spreadRef: uU
+      } = UU;
+      const CU = (0, EU.useRef)(null),
         {
-          box: ZD,
-          dpr: oD
-        } = function(DD) {
-          const [CD, cD] = (0, iD.useState)({
+          box: hU,
+          dpr: QU
+        } = function(UU) {
+          const [RU, gU] = (0, EU.useState)({
             box: {
               left: 0,
               top: 0,
@@ -8495,282 +8495,282 @@ export const modules = {
             },
             dpr: 1
           });
-          return (0, iD.useLayoutEffect)((() => {
-            const CD = DD.current;
-            if (!CD) return;
-            const ID = () => {
-              const DD = CD.getBoundingClientRect(),
-                ID = window.devicePixelRatio || 1;
-              cD((CD => CD.dpr === ID && CD.box.left === DD.left && CD.box.top === DD.top && CD.box.width === DD.width && CD.box.height === DD.height ? CD : {
+          return (0, EU.useLayoutEffect)((() => {
+            const RU = UU.current;
+            if (!RU) return;
+            const tU = () => {
+              const UU = RU.getBoundingClientRect(),
+                tU = window.devicePixelRatio || 1;
+              gU((RU => RU.dpr === tU && RU.box.left === UU.left && RU.box.top === UU.top && RU.box.width === UU.width && RU.box.height === UU.height ? RU : {
                 box: {
-                  left: DD.left,
-                  top: DD.top,
-                  width: DD.width,
-                  height: DD.height
+                  left: UU.left,
+                  top: UU.top,
+                  width: UU.width,
+                  height: UU.height
                 },
-                dpr: ID
+                dpr: tU
               }))
             };
-            ID();
-            const pD = new ResizeObserver(ID);
-            return pD.observe(CD), window.addEventListener("resize", ID), window.addEventListener("scroll", ID, !0), () => {
-              pD.disconnect(), window.removeEventListener("resize", ID), window.removeEventListener("scroll", ID, !0)
+            tU();
+            const pU = new ResizeObserver(tU);
+            return pU.observe(RU), window.addEventListener("resize", tU), window.addEventListener("scroll", tU, !0), () => {
+              pU.disconnect(), window.removeEventListener("resize", tU), window.removeEventListener("scroll", tU, !0)
             }
-          }), [DD]), CD
-        }(tD),
-        gD = (0, iD.useRef)(oD);
-      gD.current = oD;
-      const nD = function(DD, CD) {
-          const cD = bD(DD.lineThickness, CD),
-            ID = bD(DD.lineLength, CD),
-            pD = Math.round(DD.gap * CD),
-            iD = bD(DD.dotSize, CD),
-            fD = DD.outline > 0 ? bD(DD.outline, CD) : 0,
-            wD = bD(DD.circleThickness, CD),
-            SD = DD.circle ? Math.round(DD.circleRadius * CD * 2 + wD) : 0,
-            BD = function(DD, CD, cD, ID) {
-              return DD.lines ? CD : DD.dot ? cD : DD.circle && ID % 2 === 0 ? 2 : 1
-            }(DD, cD, iD, SD),
-            yD = [];
-          if (DD.lines && (yD.push({
-              x: BD + pD,
+          }), [UU]), RU
+        }(CU),
+        fU = (0, EU.useRef)(QU);
+      fU.current = QU;
+      const IU = function(UU, RU) {
+          const gU = TU(UU.lineThickness, RU),
+            tU = TU(UU.lineLength, RU),
+            pU = Math.round(UU.gap * RU),
+            EU = TU(UU.dotSize, RU),
+            PU = UU.outline > 0 ? TU(UU.outline, RU) : 0,
+            KU = TU(UU.circleThickness, RU),
+            cU = UU.circle ? Math.round(UU.circleRadius * RU * 2 + KU) : 0,
+            GU = function(UU, RU, gU, tU) {
+              return UU.lines ? RU : UU.dot ? gU : UU.circle && tU % 2 === 0 ? 2 : 1
+            }(UU, gU, EU, cU),
+            jU = [];
+          if (UU.lines && (jU.push({
+              x: GU + pU,
               y: 0,
-              w: ID,
-              h: cD,
+              w: tU,
+              h: gU,
               arm: "right"
-            }), yD.push({
-              x: -pD - ID,
+            }), jU.push({
+              x: -pU - tU,
               y: 0,
-              w: ID,
-              h: cD,
+              w: tU,
+              h: gU,
               arm: "left"
-            }), yD.push({
+            }), jU.push({
               x: 0,
-              y: BD + pD,
-              w: cD,
-              h: ID,
+              y: GU + pU,
+              w: gU,
+              h: tU,
               arm: "down"
-            }), DD.tStyle || yD.push({
+            }), UU.tStyle || jU.push({
               x: 0,
-              y: -pD - ID,
-              w: cD,
-              h: ID,
+              y: -pU - tU,
+              w: gU,
+              h: tU,
               arm: "up"
-            }), 0 === pD && yD.push({
+            }), 0 === pU && jU.push({
               x: 0,
               y: 0,
-              w: cD,
-              h: cD
-            })), DD.dot) {
-            const DD = Math.floor((BD - iD) / 2);
-            yD.push({
-              x: DD,
-              y: DD,
-              w: iD,
-              h: iD
+              w: gU,
+              h: gU
+            })), UU.dot) {
+            const UU = Math.floor((GU - EU) / 2);
+            jU.push({
+              x: UU,
+              y: UU,
+              w: EU,
+              h: EU
             })
           }
-          const MD = yD.map((DD => ({
-            ...DD,
-            x: DD.x - fD,
-            y: DD.y - fD,
-            w: DD.w + 2 * fD,
-            h: DD.h + 2 * fD
+          const uU = jU.map((UU => ({
+            ...UU,
+            x: UU.x - PU,
+            y: UU.y - PU,
+            w: UU.w + 2 * PU,
+            h: UU.h + 2 * PU
           })));
-          let tD = null,
-            ZD = null;
-          if (DD.circle) {
-            const DD = SD + ((SD - BD) % 2 === 0 ? 0 : 1),
-              CD = (BD - DD) / 2;
-            tD = QD(CD, DD, wD), fD > 0 && (ZD = QD(CD - fD, DD + 2 * fD, wD + 2 * fD))
+          let CU = null,
+            hU = null;
+          if (UU.circle) {
+            const UU = cU + ((cU - GU) % 2 === 0 ? 0 : 1),
+              RU = (GU - UU) / 2;
+            CU = qU(RU, UU, KU), PU > 0 && (hU = qU(RU - PU, UU + 2 * PU, KU + 2 * PU))
           }
           return {
-            cell: BD,
-            fills: yD,
-            outlines: fD > 0 ? MD : [],
-            ring: tD,
-            ringOutline: ZD
+            cell: GU,
+            fills: jU,
+            outlines: PU > 0 ? uU : [],
+            ring: CU,
+            ringOutline: hU
           }
-        }(BD && CD.growOnClick ? function(DD, CD) {
+        }(GU && RU.growOnClick ? function(UU, RU) {
           return {
-            ...DD,
-            outline: DD.outline * CD,
-            lineLength: DD.lineLength * CD,
-            lineThickness: DD.lineThickness * CD,
-            gap: DD.gap * CD,
-            dotSize: DD.dotSize * CD,
-            circleRadius: DD.circleRadius * CD,
-            circleThickness: DD.circleThickness * CD
+            ...UU,
+            outline: UU.outline * RU,
+            lineLength: UU.lineLength * RU,
+            lineThickness: UU.lineThickness * RU,
+            gap: UU.gap * RU,
+            dotSize: UU.dotSize * RU,
+            circleRadius: UU.circleRadius * RU,
+            circleThickness: UU.circleThickness * RU
           }
-        }(CD, SD) : CD, oD),
-        OD = function(DD, CD, cD) {
-          const ID = Math.round((DD.left + DD.width / 2) * cD - CD / 2),
-            pD = Math.round((DD.top + DD.height / 2) * cD - CD / 2);
+        }(RU, cU) : RU, QU),
+        JU = function(UU, RU, gU) {
+          const tU = Math.round((UU.left + UU.width / 2) * gU - RU / 2),
+            pU = Math.round((UU.top + UU.height / 2) * gU - RU / 2);
           return {
-            x: ID / cD - DD.left,
-            y: pD / cD - DD.top
+            x: tU / gU - UU.left,
+            y: pU / gU - UU.top
           }
-        }(ZD, nD.cell, oD),
-        PD = (0, fD.o)(CD.color),
-        HD = (0, fD.o)(CD.outlineColor),
-        UD = (0, iD.useRef)(0);
-      (0, iD.useLayoutEffect)((() => {
-        if (MD) return MD.current = DD => {
-          var CD;
-          UD.current = DD, null === (CD = tD.current) || void 0 === CD || CD.querySelectorAll("[data-arm]").forEach((CD => {
-            Object.assign(CD.style, XD(function(DD) {
+        }(hU, IU.cell, QU),
+        wU = (0, PU.j)(RU.color),
+        nU = (0, PU.j)(RU.outlineColor),
+        bU = (0, EU.useRef)(0);
+      (0, EU.useLayoutEffect)((() => {
+        if (uU) return uU.current = UU => {
+          var RU;
+          bU.current = UU, null === (RU = CU.current) || void 0 === RU || RU.querySelectorAll("[data-arm]").forEach((RU => {
+            Object.assign(RU.style, xU(function(UU) {
               return {
-                x: Number(DD.dataset.x),
-                y: Number(DD.dataset.y),
-                arm: DD.dataset.arm
+                x: Number(UU.dataset.x),
+                y: Number(UU.dataset.y),
+                arm: UU.dataset.arm
               }
-            }(CD), DD, gD.current))
+            }(RU), UU, fU.current))
           }))
         }, () => {
-          MD.current = null
+          uU.current = null
         }
-      }), [MD]);
-      const xD = null !== yD && void 0 !== yD ? yD : UD.current;
-      return (0, wD.jsx)("div", {
-        ref: tD,
-        className: pD()("CrosshairShapes", {
-          CrosshairInPreview: cD,
-          CrosshairInEditor: ID || cD,
-          CrosshairSpreads: void 0 !== MD
+      }), [uU]);
+      const oU = null !== jU && void 0 !== jU ? jU : bU.current;
+      return (0, KU.jsx)("div", {
+        ref: CU,
+        className: pU()("CrosshairShapes", {
+          CrosshairInPreview: gU,
+          CrosshairInEditor: tU || gU,
+          CrosshairSpreads: void 0 !== uU
         }),
-        children: (0, wD.jsx)("div", {
+        children: (0, KU.jsx)("div", {
           className: "CrosshairShapesOrigin",
           style: {
-            left: OD.x,
-            top: OD.y,
-            opacity: CD.opacity / 100
+            left: JU.x,
+            top: JU.y,
+            opacity: RU.opacity / 100
           },
-          children: (0, wD.jsxs)("div", {
+          children: (0, KU.jsxs)("div", {
             className: "CrosshairShapesPress",
-            children: [nD.ringOutline && (0, wD.jsx)("div", {
+            children: [IU.ringOutline && (0, KU.jsx)("div", {
               className: "CrosshairRing",
-              style: ND(nD.ringOutline, oD, HD)
-            }), nD.outlines.map(((DD, CD) => (0, wD.jsx)("div", {
+              style: WU(IU.ringOutline, QU, nU)
+            }), IU.outlines.map(((UU, RU) => (0, KU.jsx)("div", {
               className: "CrosshairPart",
-              ...mD(DD),
-              style: vD(DD, xD, oD, HD)
-            }, `o${CD}`))), nD.ring && (0, wD.jsx)("div", {
+              ...mU(UU),
+              style: eU(UU, oU, QU, nU)
+            }, `o${RU}`))), IU.ring && (0, KU.jsx)("div", {
               className: "CrosshairRing",
-              style: ND(nD.ring, oD, PD)
-            }), nD.fills.map(((DD, CD) => (0, wD.jsx)("div", {
+              style: WU(IU.ring, QU, wU)
+            }), IU.fills.map(((UU, RU) => (0, KU.jsx)("div", {
               className: "CrosshairPart",
-              ...mD(DD),
-              style: vD(DD, xD, oD, PD)
-            }, `f${CD}`)))]
+              ...mU(UU),
+              style: eU(UU, oU, QU, wU)
+            }, `f${RU}`)))]
           })
         })
       })
     }
   },
-  9028: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => SD,
-      e: () => oD,
-      g: () => ZD
+  8966: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => cU,
+      d: () => QU,
+      g: () => hU
     });
-    var ID = cD(8991);
-    const pD = "XH1-",
-      iD = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      fD = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      bD = ["color", "outlineColor"],
-      QD = 1 + 3 * bD.length + fD.length + 1,
-      wD = Math.ceil(8 * QD / Math.log2(62)),
-      SD = pD.length + wD;
+    var tU = gU(8927);
+    const pU = "XH1-",
+      EU = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      PU = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      TU = ["color", "outlineColor"],
+      qU = 1 + 3 * TU.length + PU.length + 1,
+      KU = Math.ceil(8 * qU / Math.log2(62)),
+      cU = pU.length + KU;
 
-    function BD(DD) {
-      let CD = 90;
-      for (const cD of DD) CD = 31 * CD + cD & 255;
-      return CD
+    function GU(UU) {
+      let RU = 90;
+      for (const gU of UU) RU = 31 * RU + gU & 255;
+      return RU
     }
-    const yD = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      MD = BigInt(yD.length);
+    const jU = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      uU = BigInt(jU.length);
 
-    function tD(DD, CD) {
-      let cD = 0n;
-      for (const pD of DD) {
-        const DD = yD.indexOf(pD);
-        if (DD < 0) return null;
-        cD = cD * MD + BigInt(DD)
+    function CU(UU, RU) {
+      let gU = 0n;
+      for (const pU of UU) {
+        const UU = jU.indexOf(pU);
+        if (UU < 0) return null;
+        gU = gU * uU + BigInt(UU)
       }
-      if (cD >> BigInt(8 * CD) !== 0n) return null;
-      const ID = [];
-      for (let pD = 0; pD < CD; pD++) ID.unshift(Number(0xffn & cD)), cD >>= 8n;
-      return ID
+      if (gU >> BigInt(8 * RU) !== 0n) return null;
+      const tU = [];
+      for (let pU = 0; pU < RU; pU++) tU.unshift(Number(0xffn & gU)), gU >>= 8n;
+      return tU
     }
 
-    function ZD(DD) {
-      let CD = "shapes" === DD.style ? 1 : 0;
-      iD.forEach(((cD, ID) => {
-        DD[cD] && (CD |= 1 << ID + 1)
+    function hU(UU) {
+      let RU = "shapes" === UU.style ? 1 : 0;
+      EU.forEach(((gU, tU) => {
+        UU[gU] && (RU |= 1 << tU + 1)
       }));
-      const cD = [CD];
-      for (const pD of bD) {
-        const CD = (0, ID.l)(pD, DD[pD]);
-        cD.push(CD >> 16 & 255, CD >> 8 & 255, 255 & CD)
+      const gU = [RU];
+      for (const pU of TU) {
+        const RU = (0, tU.g)(pU, UU[pU]);
+        gU.push(RU >> 16 & 255, RU >> 8 & 255, 255 & RU)
       }
-      for (const pD of fD) {
+      for (const pU of PU) {
         const {
-          min: CD,
-          step: iD
-        } = ID.e[pD];
-        cD.push(Math.round(((0, ID.l)(pD, DD[pD]) - CD) / iD))
+          min: RU,
+          step: EU
+        } = tU.c[pU];
+        gU.push(Math.round(((0, tU.g)(pU, UU[pU]) - RU) / EU))
       }
-      return cD.push(BD(cD)), pD + function(DD, CD) {
-        let cD = 0n;
-        for (const pD of DD) cD = cD << 8n | BigInt(pD);
-        let ID = "";
-        for (let pD = 0; pD < CD; pD++) ID = yD[Number(cD % MD)] + ID, cD /= MD;
-        return ID
-      }(cD, wD)
+      return gU.push(GU(gU)), pU + function(UU, RU) {
+        let gU = 0n;
+        for (const pU of UU) gU = gU << 8n | BigInt(pU);
+        let tU = "";
+        for (let pU = 0; pU < RU; pU++) tU = jU[Number(gU % uU)] + tU, gU /= uU;
+        return tU
+      }(gU, KU)
     }
 
-    function oD(DD) {
-      for (const CD of DD.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${wD}})`, "gi"))) {
-        const DD = vD(tD(CD[1], QD));
-        if (DD) return DD
+    function QU(UU) {
+      for (const RU of UU.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${KU}})`, "gi"))) {
+        const UU = eU(CU(RU[1], qU));
+        if (UU) return UU
       }
       return null
     }
 
-    function vD(DD) {
-      if (!DD || DD.length !== QD || BD(DD.slice(0, -1)) !== DD[DD.length - 1]) return null;
-      const CD = DD[0],
-        cD = {
-          ...ID.h,
-          style: 1 & CD ? "shapes" : "classic"
+    function eU(UU) {
+      if (!UU || UU.length !== qU || GU(UU.slice(0, -1)) !== UU[UU.length - 1]) return null;
+      const RU = UU[0],
+        gU = {
+          ...tU.d,
+          style: 1 & RU ? "shapes" : "classic"
         };
-      iD.forEach(((DD, ID) => {
-        cD[DD] = 0 !== (CD & 1 << ID + 1)
+      EU.forEach(((UU, tU) => {
+        gU[UU] = 0 !== (RU & 1 << tU + 1)
       }));
-      let pD = 1;
-      for (const ID of bD) cD[ID] = DD[pD] << 16 | DD[pD + 1] << 8 | DD[pD + 2], pD += 3;
-      for (const iD of fD) {
+      let pU = 1;
+      for (const tU of TU) gU[tU] = UU[pU] << 16 | UU[pU + 1] << 8 | UU[pU + 2], pU += 3;
+      for (const EU of PU) {
         const {
-          min: CD,
-          step: fD
-        } = ID.e[iD];
-        cD[iD] = (0, ID.l)(iD, CD + DD[pD] * fD), pD++
+          min: RU,
+          step: PU
+        } = tU.c[EU];
+        gU[EU] = (0, tU.g)(EU, RU + UU[pU] * PU), pU++
       }
-      return cD
+      return gU
     }
   },
-  8991: (DD, CD, cD) => {
-    cD.d(CD, {
-      A: () => fD,
-      e: () => ID,
-      h: () => pD,
-      l: () => iD,
-      o: () => wD,
-      s: () => QD,
-      u: () => SD,
-      w: () => bD
+  8927: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => tU,
+      d: () => pU,
+      g: () => EU,
+      j: () => KU,
+      k: () => qU,
+      n: () => cU,
+      r: () => TU,
+      s: () => PU
     });
-    const ID = {
+    const tU = {
         opacity: {
           min: 5,
           max: 100,
@@ -8827,7 +8827,7 @@ export const modules = {
           step: 1
         }
       },
-      pD = Object.freeze({
+      pU = Object.freeze({
         style: "classic",
         color: 16777215,
         opacity: 100,
@@ -8848,271 +8848,271 @@ export const modules = {
         forGuns: !1
       });
 
-    function iD(DD, CD) {
-      var cD;
+    function EU(UU, RU) {
+      var gU;
       const {
-        min: iD,
-        max: fD,
-        step: bD
-      } = ID[DD];
-      if (!Number.isFinite(CD)) return pD[DD];
-      const QD = (null !== (cD = String(bD).split(".")[1]) && void 0 !== cD ? cD : "").length,
-        wD = Number((Math.round(CD / bD) * bD).toFixed(QD));
-      return Math.min(fD, Math.max(iD, wD))
+        min: EU,
+        max: PU,
+        step: TU
+      } = tU[UU];
+      if (!Number.isFinite(RU)) return pU[UU];
+      const qU = (null !== (gU = String(TU).split(".")[1]) && void 0 !== gU ? gU : "").length,
+        KU = Number((Math.round(RU / TU) * TU).toFixed(qU));
+      return Math.min(PU, Math.max(EU, KU))
     }
 
-    function fD(DD, CD, cD) {
-      const ID = "number" === typeof cD ? iD(CD, cD) : cD;
+    function PU(UU, RU, gU) {
+      const tU = "number" === typeof gU ? EU(RU, gU) : gU;
       return {
-        ...DD,
-        [CD]: ID
+        ...UU,
+        [RU]: tU
       }
     }
 
-    function bD(DD, CD) {
-      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(pD).every((ID => cD.includes(ID) || DD[ID] === CD[ID]))
+    function TU(UU, RU) {
+      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(pU).every((tU => gU.includes(tU) || UU[tU] === RU[tU]))
     }
 
-    function QD(DD) {
-      return bD(DD, pD)
+    function qU(UU) {
+      return TU(UU, pU)
     }
 
-    function wD(DD) {
-      return `#${DD.toString(16).padStart(6,"0")}`
+    function KU(UU) {
+      return `#${UU.toString(16).padStart(6,"0")}`
     }
 
-    function SD(DD) {
-      const CD = /^#?([0-9a-f]{6})$/i.exec(DD.trim());
-      return CD ? parseInt(CD[1], 16) : null
+    function cU(UU) {
+      const RU = /^#?([0-9a-f]{6})$/i.exec(UU.trim());
+      return RU ? parseInt(RU[1], 16) : null
     }
   },
-  9037: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => BD,
-      h: () => yD
+  8969: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => GU,
+      h: () => jU
     });
-    var ID = cD(53),
-      pD = cD(36),
-      iD = cD(9028),
-      fD = cD(8991);
-    const bD = "crosshairCode";
-    let QD = null;
-    const wD = new Set;
+    var tU = gU(56),
+      pU = gU(34),
+      EU = gU(8966),
+      PU = gU(8927);
+    const TU = "crosshairCode";
+    let qU = null;
+    const KU = new Set;
 
-    function SD() {
-      if (null === QD) {
-        var DD;
-        const CD = pD.h.getItem(bD);
-        QD = null !== (DD = "string" === typeof CD ? (0, iD.e)(CD) : null) && void 0 !== DD ? DD : fD.h
+    function cU() {
+      if (null === qU) {
+        var UU;
+        const RU = pU.k.getItem(TU);
+        qU = null !== (UU = "string" === typeof RU ? (0, EU.d)(RU) : null) && void 0 !== UU ? UU : PU.d
       }
-      return QD
+      return qU
     }
 
-    function BD(DD) {
-      QD = DD, (0, fD.s)(DD) ? pD.h.removeItem(bD) : pD.h.setItem(bD, (0, iD.g)(DD));
-      for (const CD of wD) CD()
+    function GU(UU) {
+      qU = UU, (0, PU.k)(UU) ? pU.k.removeItem(TU) : pU.k.setItem(TU, (0, EU.g)(UU));
+      for (const RU of KU) RU()
     }
 
-    function yD() {
-      const [DD, CD] = (0, ID.useState)(SD);
-      return (0, ID.useEffect)((() => {
-        const DD = () => {
-          CD(SD())
+    function jU() {
+      const [UU, RU] = (0, tU.useState)(cU);
+      return (0, tU.useEffect)((() => {
+        const UU = () => {
+          RU(cU())
         };
-        return DD(), cD = DD, wD.add(cD), () => {
-          wD.delete(cD)
+        return UU(), gU = UU, KU.add(gU), () => {
+          KU.delete(gU)
         };
-        var cD
-      }), []), DD
+        var gU
+      }), []), UU
     }
   },
-  8591: (DD, CD, cD) => {
-    function ID(DD) {
+  8516: (UU, RU, gU) => {
+    function tU(UU) {
       return {
-        x: (DD.left + DD.right) / 2,
-        y: (DD.top + DD.bottom) / 2
+        x: (UU.left + UU.right) / 2,
+        y: (UU.top + UU.bottom) / 2
       }
     }
 
-    function pD(DD) {
-      return 0 === DD.length ? null : DD.reduce(((DD, CD) => ({
-        left: Math.min(DD.left, CD.left),
-        top: Math.min(DD.top, CD.top),
-        right: Math.max(DD.right, CD.right),
-        bottom: Math.max(DD.bottom, CD.bottom)
+    function pU(UU) {
+      return 0 === UU.length ? null : UU.reduce(((UU, RU) => ({
+        left: Math.min(UU.left, RU.left),
+        top: Math.min(UU.top, RU.top),
+        right: Math.max(UU.right, RU.right),
+        bottom: Math.max(UU.bottom, RU.bottom)
       })))
     }
 
-    function iD(DD, CD) {
-      const cD = Math.max(0, (CD - (DD.right - DD.left)) / 2),
-        ID = Math.max(0, (CD - (DD.bottom - DD.top)) / 2);
+    function EU(UU, RU) {
+      const gU = Math.max(0, (RU - (UU.right - UU.left)) / 2),
+        tU = Math.max(0, (RU - (UU.bottom - UU.top)) / 2);
       return {
-        left: DD.left - cD,
-        top: DD.top - ID,
-        right: DD.right + cD,
-        bottom: DD.bottom + ID
+        left: UU.left - gU,
+        top: UU.top - tU,
+        right: UU.right + gU,
+        bottom: UU.bottom + tU
       }
     }
 
-    function fD(DD, CD) {
-      return CD.x >= DD.left && CD.x <= DD.right && CD.y >= DD.top && CD.y <= DD.bottom
+    function PU(UU, RU) {
+      return RU.x >= UU.left && RU.x <= UU.right && RU.y >= UU.top && RU.y <= UU.bottom
     }
 
-    function bD(DD, CD, cD) {
-      let pD = null,
-        bD = 1 / 0;
+    function TU(UU, RU, gU) {
+      let pU = null,
+        TU = 1 / 0;
       for (const {
-          id: ID,
-          box: iD
+          id: tU,
+          box: EU
         }
-        of CD) {
-        const CD = (iD.right - iD.left) * (iD.bottom - iD.top);
-        fD(iD, DD) && CD < bD && (bD = CD, pD = ID)
+        of RU) {
+        const RU = (EU.right - EU.left) * (EU.bottom - EU.top);
+        PU(EU, UU) && RU < TU && (TU = RU, pU = tU)
       }
-      if (null !== pD) return pD;
-      let QD = 1 / 0;
+      if (null !== pU) return pU;
+      let qU = 1 / 0;
       for (const {
-          id: wD,
-          box: SD
+          id: KU,
+          box: cU
         }
-        of CD) {
-        if (!fD(iD(SD, cD), DD)) continue;
-        const CD = ID(SD),
-          bD = Math.hypot(DD.x - CD.x, DD.y - CD.y);
-        bD < QD && (QD = bD, pD = wD)
+        of RU) {
+        if (!PU(EU(cU, gU), UU)) continue;
+        const RU = tU(cU),
+          TU = Math.hypot(UU.x - RU.x, UU.y - RU.y);
+        TU < qU && (qU = TU, pU = KU)
       }
-      return pD
+      return pU
     }
 
-    function QD(DD, CD, cD) {
+    function qU(UU, RU, gU) {
       return {
-        left: cD.left,
-        top: cD.top,
-        right: DD - cD.right,
-        bottom: CD - cD.bottom
+        left: gU.left,
+        top: gU.top,
+        right: UU - gU.right,
+        bottom: RU - gU.bottom
       }
     }
 
-    function wD(DD, CD, cD, ID) {
-      const pD = (DD, CD, cD) => Math.max(Math.min(CD, 0), Math.min(Math.max(cD, 0), DD));
+    function KU(UU, RU, gU, tU) {
+      const pU = (UU, RU, gU) => Math.max(Math.min(RU, 0), Math.min(Math.max(gU, 0), UU));
       return {
-        x: pD(CD, ID.left - DD.left, ID.right - DD.right),
-        y: pD(cD, ID.top - DD.top, ID.bottom - DD.bottom)
+        x: pU(RU, tU.left - UU.left, tU.right - UU.right),
+        y: pU(gU, tU.top - UU.top, tU.bottom - UU.bottom)
       }
     }
 
-    function SD(DD, CD, cD, ID, pD) {
-      const iD = DD.dx * ID + CD,
-        fD = DD.dy * pD + cD,
-        bD = DD => Math.max(-1, Math.min(1, DD));
+    function cU(UU, RU, gU, tU, pU) {
+      const EU = UU.dx * tU + RU,
+        PU = UU.dy * pU + gU,
+        TU = UU => Math.max(-1, Math.min(1, UU));
       return {
-        dx: bD(iD / ID),
-        dy: bD(fD / pD)
+        dx: TU(EU / tU),
+        dy: TU(PU / pU)
       }
     }
 
-    function BD(DD, CD, cD, ID) {
-      return CD <= 0 || cD <= 0 ? 1 : Math.max(.05, Math.min(1, DD / CD, ID / cD))
+    function GU(UU, RU, gU, tU) {
+      return RU <= 0 || gU <= 0 ? 1 : Math.max(.05, Math.min(1, UU / RU, tU / gU))
     }
 
-    function yD(DD, CD, cD) {
-      return Math.min(DD.right, CD.right) - Math.max(DD.left, CD.left) > cD && Math.min(DD.bottom, CD.bottom) - Math.max(DD.top, CD.top) > cD
+    function jU(UU, RU, gU) {
+      return Math.min(UU.right, RU.right) - Math.max(UU.left, RU.left) > gU && Math.min(UU.bottom, RU.bottom) - Math.max(UU.top, RU.top) > gU
     }
 
-    function MD(DD, CD) {
-      const cD = (DD, CD, cD, ID) => CD - DD > ID - cD ? cD - DD > CD - ID ? ID - CD : cD - DD : DD < cD ? cD - DD : CD > ID ? ID - CD : 0;
+    function uU(UU, RU) {
+      const gU = (UU, RU, gU, tU) => RU - UU > tU - gU ? gU - UU > RU - tU ? tU - RU : gU - UU : UU < gU ? gU - UU : RU > tU ? tU - RU : 0;
       return {
-        x: cD(DD.left, DD.right, CD.left, CD.right),
-        y: cD(DD.top, DD.bottom, CD.top, CD.bottom)
+        x: gU(UU.left, UU.right, RU.left, RU.right),
+        y: gU(UU.top, UU.bottom, RU.top, RU.bottom)
       }
     }
 
-    function tD(DD, CD) {
+    function CU(UU, RU) {
       let {
-        avoid: cD = null,
-        bounds: ID = null
-      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, pD = 0, iD = 1 / 0;
-      return DD.forEach(((DD, fD) => {
-        const bD = CD.filter((CD => yD(DD, CD, 0))).length,
-          QD = null !== ID && (DD.left < ID.left || DD.top < ID.top || DD.right > ID.right || DD.bottom > ID.bottom),
-          wD = bD + (cD && yD(DD, cD, 0) ? 1e3 : 0) + (QD ? 1e6 : 0);
-        wD < iD && (pD = fD, iD = wD)
-      })), pD
+        avoid: gU = null,
+        bounds: tU = null
+      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, pU = 0, EU = 1 / 0;
+      return UU.forEach(((UU, PU) => {
+        const TU = RU.filter((RU => jU(UU, RU, 0))).length,
+          qU = null !== tU && (UU.left < tU.left || UU.top < tU.top || UU.right > tU.right || UU.bottom > tU.bottom),
+          KU = TU + (gU && jU(UU, gU, 0) ? 1e3 : 0) + (qU ? 1e6 : 0);
+        KU < EU && (pU = PU, EU = KU)
+      })), pU
     }
-    cD.d(CD, {
-      B: () => BD,
-      F: () => QD,
-      I: () => MD,
-      J: () => pD,
-      c: () => ID,
-      f: () => fD,
-      j: () => yD,
-      m: () => wD,
-      q: () => iD,
-      s: () => tD,
-      v: () => SD,
-      y: () => bD
+    gU.d(RU, {
+      A: () => uU,
+      D: () => pU,
+      e: () => tU,
+      f: () => PU,
+      i: () => jU,
+      j: () => KU,
+      n: () => EU,
+      r: () => CU,
+      s: () => cU,
+      t: () => TU,
+      u: () => GU,
+      w: () => qU
     })
   },
-  8986: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => iD,
-      g: () => pD
+  8925: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => EU,
+      h: () => pU
     });
-    var ID = cD(16);
+    var tU = gU(21);
 
-    function pD(DD, CD) {
-      return DD && !CD
+    function pU(UU, RU) {
+      return UU && !RU
     }
 
-    function iD() {
-      return pD(ID.d.get("isTouchScreen"), ID.d.get("clientEscMenuOptions").touchActionButtons)
+    function EU() {
+      return pU(tU.b.get("isTouchScreen"), tU.b.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  8934: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => ID
+  8887: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => tU
     });
-    const ID = new Set(["chunkBorders"])
+    const tU = new Set(["chunkBorders"])
   },
-  8925: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      ALL_DEV_TOOLS: () => fD,
-      coreDevTools: () => wD,
-      devTools: () => QD
+  8880: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      ALL_DEV_TOOLS: () => PU,
+      coreDevTools: () => KU,
+      devTools: () => qU
     });
-    var ID = cD(646),
-      pD = cD(1294),
-      iD = cD(8934);
-    const fD = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function bD() {
+    var tU = gU(603),
+      pU = gU(1293),
+      EU = gU(8887);
+    const PU = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function TU() {
       const {
-        noaDevTools: DD
-      } = await cD.e(230).then((() => cD(40148)));
-      return DD
+        noaDevTools: UU
+      } = await gU.e(230).then((() => gU(40455)));
+      return UU
     }
-    const QD = new class {
+    const qU = new class {
         constructor() {
-          this.loadHost = bD, this.tools = fD
+          this.loadHost = TU, this.tools = PU
         }
-        setHost(DD) {
-          this.tools = null === DD ? fD : DD.tools, this.loadHost = null === DD ? bD : async () => DD
+        setHost(UU) {
+          this.tools = null === UU ? PU : UU.tools, this.loadHost = null === UU ? TU : async () => UU
         }
-        supports(DD) {
-          return this.tools.has(DD)
+        supports(UU) {
+          return this.tools.has(UU)
         }
-        async downloadScene(DD, CD) {
-          const cD = await this.loadHost();
-          await cD.downloadScene(DD, CD)
+        async downloadScene(UU, RU) {
+          const gU = await this.loadHost();
+          await gU.downloadScene(UU, RU)
         }
-        async setAmbientLightIntensity(DD) {
-          const CD = await this.loadHost();
-          await CD.setAmbientLightIntensity(DD)
+        async setAmbientLightIntensity(UU) {
+          const RU = await this.loadHost();
+          await RU.setAmbientLightIntensity(UU)
         }
       },
-      wD = {
-        tools: iD.d,
+      KU = {
+        tools: EU.b,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -9120,121 +9120,121 @@ export const modules = {
           throw new Error("This client can't set the ambient light")
         }
       };
-    ID.q && QD.setHost(wD), (0, pD.s)((() => {
-      QD.setHost(wD)
+    tU.u && qU.setHost(KU), (0, pU.x)((() => {
+      qU.setHost(KU)
     }))
   },
-  9080: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => fD,
-      g: () => pD,
-      h: () => SD
+  9030: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => PU,
+      h: () => pU,
+      i: () => cU
     });
-    var ID = cD(1562);
+    var tU = gU(1517);
 
-    function pD(DD) {
-      var CD;
+    function pU(UU) {
+      var RU;
       return {
-        ...fD.store,
-        yaw: fD.store.yaw + (null !== (CD = ID.c[DD].previewYaw) && void 0 !== CD ? CD : 0)
+        ...PU.store,
+        yaw: PU.store.yaw + (null !== (RU = tU.d[UU].previewYaw) && void 0 !== RU ? RU : 0)
       }
     }
-    const iD = {
+    const EU = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      fD = {
-        player: iD,
+      PU = {
+        player: EU,
         store: {
-          ...iD,
+          ...EU,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function bD(DD, CD) {
-      DD instanceof Promise ? DD.then(CD).catch((DD => {
-        console.error("Couldn't open the preview", DD)
-      })) : CD(DD)
+    function TU(UU, RU) {
+      UU instanceof Promise ? UU.then(RU).catch((UU => {
+        console.error("Couldn't open the preview", UU)
+      })) : RU(UU)
     }
-    class QD {
-      constructor(DD) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, bD(DD, (DD => {
-          this.closed ? DD.close() : (this.opened = DD, null !== this.size && DD.resize(this.size.width, this.size.height), null !== this.view && DD.show(this.view))
+    class qU {
+      constructor(UU) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, TU(UU, (UU => {
+          this.closed ? UU.close() : (this.opened = UU, null !== this.size && UU.resize(this.size.width, this.size.height), null !== this.view && UU.show(this.view))
         }))
       }
-      show(DD) {
-        var CD;
-        this.view = DD, null === (CD = this.opened) || void 0 === CD || CD.show(DD)
+      show(UU) {
+        var RU;
+        this.view = UU, null === (RU = this.opened) || void 0 === RU || RU.show(UU)
       }
-      resize(DD, CD) {
-        var cD;
+      resize(UU, RU) {
+        var gU;
         this.size = {
-          width: DD,
-          height: CD
-        }, null === (cD = this.opened) || void 0 === cD || cD.resize(DD, CD)
+          width: UU,
+          height: RU
+        }, null === (gU = this.opened) || void 0 === gU || gU.resize(UU, RU)
       }
       close() {
-        var DD;
-        this.closed = !0, null === (DD = this.opened) || void 0 === DD || DD.close(), this.opened = null
+        var UU;
+        this.closed = !0, null === (UU = this.opened) || void 0 === UU || UU.close(), this.opened = null
       }
     }
-    class wD {
-      constructor(DD) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(DD).then((DD => DD.ready)), bD(DD, (DD => {
-          this.closed ? DD.close() : (this.opened = DD, null !== this.size && DD.resize(this.size.width, this.size.height))
+    class KU {
+      constructor(UU) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(UU).then((UU => UU.ready)), TU(UU, (UU => {
+          this.closed ? UU.close() : (this.opened = UU, null !== this.size && UU.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var DD, CD;
-        return null !== (DD = null === (CD = this.opened) || void 0 === CD ? void 0 : CD.isReady()) && void 0 !== DD && DD
+        var UU, RU;
+        return null !== (UU = null === (RU = this.opened) || void 0 === RU ? void 0 : RU.isReady()) && void 0 !== UU && UU
       }
-      setCosmetic(DD, CD) {
-        var cD;
-        null === (cD = this.opened) || void 0 === cD || cD.setCosmetic(DD, CD)
+      setCosmetic(UU, RU) {
+        var gU;
+        null === (gU = this.opened) || void 0 === gU || gU.setCosmetic(UU, RU)
       }
-      playEmote(DD) {
-        var CD;
-        null === (CD = this.opened) || void 0 === CD || CD.playEmote(DD)
+      playEmote(UU) {
+        var RU;
+        null === (RU = this.opened) || void 0 === RU || RU.playEmote(UU)
       }
-      setOrbit(DD) {
-        var CD;
-        null === (CD = this.opened) || void 0 === CD || CD.setOrbit(DD)
+      setOrbit(UU) {
+        var RU;
+        null === (RU = this.opened) || void 0 === RU || RU.setOrbit(UU)
       }
       resetCamera() {
-        var DD;
-        null === (DD = this.opened) || void 0 === DD || DD.resetCamera()
+        var UU;
+        null === (UU = this.opened) || void 0 === UU || UU.resetCamera()
       }
-      async untilDrawn(DD) {
-        var CD;
-        await this.ready, await (null === (CD = this.opened) || void 0 === CD ? void 0 : CD.untilDrawn(DD))
+      async untilDrawn(UU) {
+        var RU;
+        await this.ready, await (null === (RU = this.opened) || void 0 === RU ? void 0 : RU.untilDrawn(UU))
       }
-      resize(DD, CD) {
-        var cD;
+      resize(UU, RU) {
+        var gU;
         this.size = {
-          width: DD,
-          height: CD
-        }, null === (cD = this.opened) || void 0 === cD || cD.resize(DD, CD)
+          width: UU,
+          height: RU
+        }, null === (gU = this.opened) || void 0 === gU || gU.resize(UU, RU)
       }
       close() {
-        var DD;
-        this.closed = !0, null === (DD = this.opened) || void 0 === DD || DD.close(), this.opened = null
+        var UU;
+        this.closed = !0, null === (UU = this.opened) || void 0 === UU || UU.close(), this.opened = null
       }
     }
-    const SD = new class {
+    const cU = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(DD) {
-        this.host = DD
+      setHost(UU) {
+        this.host = UU
       }
-      setDefaultHost(DD) {
-        this.makeDefault = DD
+      setDefaultHost(UU) {
+        this.makeDefault = UU
       }
       current() {
         if (null === this.host) {
@@ -9243,99 +9243,99 @@ export const modules = {
         }
         return this.host
       }
-      openMob(DD) {
-        return new QD(this.current().openMob(DD))
+      openMob(UU) {
+        return new qU(this.current().openMob(UU))
       }
-      openPet(DD) {
-        return new QD(this.current().openPet(DD))
+      openPet(UU) {
+        return new qU(this.current().openPet(UU))
       }
-      openMobLineup(DD) {
-        return new QD(this.current().openMobLineup(DD))
+      openMobLineup(UU) {
+        return new qU(this.current().openMobLineup(UU))
       }
-      openCharacter(DD, CD) {
-        return new wD(this.current().openCharacter(DD, CD))
+      openCharacter(UU, RU) {
+        return new KU(this.current().openCharacter(UU, RU))
       }
     }
   },
-  9074: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => ID.c,
-      e: () => ID.g,
-      f: () => ID.h
+  9027: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => tU.e,
+      f: () => tU.h,
+      g: () => tU.i
     });
-    var ID = cD(9080);
-    class pD {
-      constructor(DD) {
-        this.load = DD, this.loaded = null, this.loading = null
+    var tU = gU(9030);
+    class pU {
+      constructor(UU) {
+        this.load = UU, this.loaded = null, this.loading = null
       }
-      run(DD) {
-        return null !== this.loaded ? DD(this.loaded) : (this.loading ??= this.load().then((DD => (this.loaded = DD, DD)), (DD => {
-          throw this.loading = null, DD
-        })), this.loading.then(DD))
+      run(UU) {
+        return null !== this.loaded ? UU(this.loaded) : (this.loading ??= this.load().then((UU => (this.loaded = UU, UU)), (UU => {
+          throw this.loading = null, UU
+        })), this.loading.then(UU))
       }
     }
-    class iD {
+    class EU {
       constructor() {
-        this.mobScene = new pD((() => Promise.all([cD.e(69), cD.e(226), cD.e(225), cD.e(244), cD.e(94), cD.e(245), cD.e(72), cD.e(71), cD.e(242), cD.e(70), cD.e(252), cD.e(246), cD.e(251), cD.e(249), cD.e(241), cD.e(218), cD.e(264), cD.e(222), cD.e(236), cD.e(247), cD.e(250), cD.e(74), cD.e(196), cD.e(215), cD.e(219), cD.e(93), cD.e(113), cD.e(234), cD.e(73), cD.e(112), cD.e(153)]).then((() => cD(40157))))), this.characterScene = new pD((() => Promise.all([cD.e(69), cD.e(226), cD.e(225), cD.e(244), cD.e(94), cD.e(245), cD.e(72), cD.e(71), cD.e(242), cD.e(70), cD.e(252), cD.e(246), cD.e(251), cD.e(249), cD.e(241), cD.e(218), cD.e(264), cD.e(222), cD.e(236), cD.e(247), cD.e(250), cD.e(74), cD.e(196), cD.e(215), cD.e(219), cD.e(93), cD.e(113), cD.e(234), cD.e(73), cD.e(112), cD.e(152)]).then((() => cD(40228)))))
+        this.mobScene = new pU((() => Promise.all([gU.e(69), gU.e(226), gU.e(225), gU.e(244), gU.e(94), gU.e(245), gU.e(72), gU.e(71), gU.e(242), gU.e(70), gU.e(252), gU.e(246), gU.e(251), gU.e(249), gU.e(241), gU.e(218), gU.e(264), gU.e(222), gU.e(236), gU.e(247), gU.e(250), gU.e(74), gU.e(196), gU.e(215), gU.e(219), gU.e(93), gU.e(113), gU.e(234), gU.e(73), gU.e(112), gU.e(153)]).then((() => gU(40461))))), this.characterScene = new pU((() => Promise.all([gU.e(69), gU.e(226), gU.e(225), gU.e(244), gU.e(94), gU.e(245), gU.e(72), gU.e(71), gU.e(242), gU.e(70), gU.e(252), gU.e(246), gU.e(251), gU.e(249), gU.e(241), gU.e(218), gU.e(264), gU.e(222), gU.e(236), gU.e(247), gU.e(250), gU.e(74), gU.e(196), gU.e(215), gU.e(219), gU.e(93), gU.e(113), gU.e(234), gU.e(73), gU.e(112), gU.e(152)]).then((() => gU(40554)))))
       }
-      openMob(DD) {
-        return this.mobScene.run((CD => CD.openMobPreview(DD)))
+      openMob(UU) {
+        return this.mobScene.run((RU => RU.openMobPreview(UU)))
       }
-      openPet(DD) {
-        return this.mobScene.run((CD => CD.openPetPreview(DD)))
+      openPet(UU) {
+        return this.mobScene.run((RU => RU.openPetPreview(UU)))
       }
-      openMobLineup(DD) {
-        return this.mobScene.run((CD => CD.openMobLineupPreview(DD)))
+      openMobLineup(UU) {
+        return this.mobScene.run((RU => RU.openMobLineupPreview(UU)))
       }
-      openCharacter(DD, CD) {
-        return this.characterScene.run((cD => cD.openCharacterPreview(DD, CD)))
+      openCharacter(UU, RU) {
+        return this.characterScene.run((gU => gU.openCharacterPreview(UU, RU)))
       }
     }
-    ID.h.setDefaultHost((() => new iD))
+    tU.i.setDefaultHost((() => new EU))
   },
-  6409: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => pD,
-      d: () => iD
+  6339: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => pU,
+      e: () => EU
     });
-    var ID = cD(36);
-    const pD = "shaderPack";
-    async function iD() {
-      var DD;
-      let CD = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (DD = await ID.f.getItem(pD, CD)) && void 0 !== DD ? DD : null
+    var tU = gU(34);
+    const pU = "shaderPack";
+    async function EU() {
+      var UU;
+      let RU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (UU = await tU.g.getItem(pU, RU)) && void 0 !== UU ? UU : null
     }
   },
-  8950: (DD, CD, cD) => {
-    function ID(DD, CD) {
-      return DD && !CD
+  8902: (UU, RU, gU) => {
+    function tU(UU, RU) {
+      return UU && !RU
     }
-    cD.d(CD, {
-      e: () => ID
+    gU.d(RU, {
+      c: () => tU
     })
   },
-  8983: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => iD
+  8919: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => EU
     });
-    var ID = cD(1077);
+    var tU = gU(1064);
 
-    function pD() {
-      var DD, CD;
-      return null !== (DD = null === (CD = screen.orientation) || void 0 === CD ? void 0 : CD.type) && void 0 !== DD ? DD : innerWidth > innerHeight ? "landscape" : "portrait"
+    function pU() {
+      var UU, RU;
+      return null !== (UU = null === (RU = screen.orientation) || void 0 === RU ? void 0 : RU.type) && void 0 !== UU ? UU : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const iD = new class {
+    const EU = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && pD() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && pU() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = pD(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, ID.WZ)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = pU(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, tU.Kh)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -9343,34 +9343,34 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const DD of this.resizers) DD()
+            for (const UU of this.resizers) UU()
           }
         }), 1e3)
       }
-      heldSizer(DD) {
-        let CD = !1;
+      heldSizer(UU) {
+        let RU = !1;
         return () => {
-          if (CD && this.isHeld()) return null;
-          const cD = DD();
-          return CD ||= null !== cD, cD
+          if (RU && this.isHeld()) return null;
+          const gU = UU();
+          return RU ||= null !== gU, gU
         }
       }
-      onRelease(DD) {
-        return this.resizers.add(DD), () => {
-          this.resizers.delete(DD)
+      onRelease(UU) {
+        return this.resizers.add(UU), () => {
+          this.resizers.delete(UU)
         }
       }
     }
   },
-  8583: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => bD,
-      d: () => QD
+  8512: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => TU,
+      d: () => qU
     });
-    var ID = cD(16),
-      pD = cD(1317),
-      iD = cD(90);
-    const fD = {
+    var tU = gU(21),
+      pU = gU(1316),
+      EU = gU(96);
+    const PU = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -9413,111 +9413,111 @@ export const modules = {
       }
     };
 
-    function bD() {
-      return (0, iD.isMobile)() && "function" === typeof navigator.vibrate
+    function TU() {
+      return (0, EU.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const QD = new class {
-      constructor(DD) {
-        this.deps = DD, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const qU = new class {
+      constructor(UU) {
+        this.deps = UU, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(DD, CD) {
-        var cD;
+      play(UU, RU) {
+        var gU;
         if (!this.deps.enabled()) return;
-        const ID = fD[DD],
-          pD = null !== CD && void 0 !== CD ? CD : ID.pattern;
-        if (null === pD) return void console.warn("No vibration pattern for", DD);
-        const iD = this.deps.now();
-        iD - this.lastAnyAt < 40 && ID.priority < this.playingPriority || iD - (null !== (cD = this.lastAt.get(DD)) && void 0 !== cD ? cD : -1 / 0) < ID.minGapMs || iD < this.playingUntil && ID.priority < this.playingPriority || (this.lastAt.set(DD, iD), this.lastAnyAt = iD, this.playingUntil = iD + pD.reduce(((DD, CD) => DD + CD), 0), this.playingPriority = ID.priority, this.deps.vibrate(pD))
+        const tU = PU[UU],
+          pU = null !== RU && void 0 !== RU ? RU : tU.pattern;
+        if (null === pU) return void console.warn("No vibration pattern for", UU);
+        const EU = this.deps.now();
+        EU - this.lastAnyAt < 40 && tU.priority < this.playingPriority || EU - (null !== (gU = this.lastAt.get(UU)) && void 0 !== gU ? gU : -1 / 0) < tU.minGapMs || EU < this.playingUntil && tU.priority < this.playingPriority || (this.lastAt.set(UU, EU), this.lastAnyAt = EU, this.playingUntil = EU + pU.reduce(((UU, RU) => UU + RU), 0), this.playingPriority = tU.priority, this.deps.vibrate(pU))
       }
     }({
-      vibrate: DD => {
-        navigator.vibrate([...DD])
+      vibrate: UU => {
+        navigator.vibrate([...UU])
       },
       now: () => performance.now(),
-      enabled: () => bD() && ID.d.get("isTouchScreen") && ID.d.get("clientEscMenuOptions").vibration && !(0, pD.c)()
+      enabled: () => TU() && tU.b.get("isTouchScreen") && tU.b.get("clientEscMenuOptions").vibration && !(0, pU.h)()
     })
   },
-  8944: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => MD,
-      g: () => yD
+  8896: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => uU,
+      h: () => jU
     });
-    var ID = cD(16),
-      pD = cD(1664),
-      iD = cD(36),
-      fD = cD(1340),
-      bD = cD(3474),
-      QD = cD(1471),
-      wD = cD(1388);
-    const SD = 2592e5,
-      BD = "notificationOptInLastPromptedAt";
-    async function yD() {
-      var DD;
-      const CD = await MD();
-      if (null === CD) return;
-      const cD = null !== (DD = iD.h.getItem(BD)) && void 0 !== DD ? DD : 0;
-      if (Date.now() - cD < SD) return;
-      if ((0, wD.e)()) return;
-      const ID = await fD.NotificationProvider.showPromptPopup({
+    var tU = gU(21),
+      pU = gU(1614),
+      EU = gU(34),
+      PU = gU(1333),
+      TU = gU(3329),
+      qU = gU(1444),
+      KU = gU(1362);
+    const cU = 2592e5,
+      GU = "notificationOptInLastPromptedAt";
+    async function jU() {
+      var UU;
+      const RU = await uU();
+      if (null === RU) return;
+      const gU = null !== (UU = EU.k.getItem(GU)) && void 0 !== UU ? UU : 0;
+      if (Date.now() - gU < cU) return;
+      if ((0, KU.g)()) return;
+      const tU = await PU.NotificationProvider.showPromptPopup({
         icon: "bell",
         title: "mobilePushNotifications:optInTitle",
-        subtitle: pD.b.supports("notifications") ? "mobilePushNotifications:optInSubtitle" : "mobilePushNotifications:optInSubtitleBrowser",
+        subtitle: pU.b.supports("notifications") ? "mobilePushNotifications:optInSubtitle" : "mobilePushNotifications:optInSubtitleBrowser",
         confirmText: "mobilePushNotifications:optInConfirm",
         cancelText: "mobilePushNotifications:optInCancel",
         padStartsOn: "cancel"
       }).getResult();
-      "notificationTornDown" !== ID && (iD.h.setItem(BD, Date.now()), (0, QD.reportAnalyticsClick)({
-        id: !0 === ID ? "push.allow" : "push.deny",
-        value: pD.b.supports("notifications") ? "app" : "browser"
-      }), !0 === ID && CD().catch((DD => {
-        console.error("Failed to ask for push notifications:", DD)
+      "notificationTornDown" !== tU && (EU.k.setItem(GU, Date.now()), (0, qU.reportAnalyticsClick)({
+        id: !0 === tU ? "push.allow" : "push.deny",
+        value: pU.b.supports("notifications") ? "app" : "browser"
+      }), !0 === tU && RU().catch((UU => {
+        console.error("Failed to ask for push notifications:", UU)
       })))
     }
-    async function MD() {
-      return await pD.b.ready, pD.b.supports("notifications") ? ID.d.get("mobilePushNotificationsCanAsk") ? async () => {
-        pD.b.request("notifications.requestPermission", {}).then((DD => {
+    async function uU() {
+      return await pU.b.ready, pU.b.supports("notifications") ? tU.b.get("mobilePushNotificationsCanAsk") ? async () => {
+        pU.b.request("notifications.requestPermission", {}).then((UU => {
           let {
-            canAsk: CD
-          } = DD;
-          ID.d.set({
-            mobilePushNotificationsCanAsk: CD
+            canAsk: RU
+          } = UU;
+          tU.b.set({
+            mobilePushNotificationsCanAsk: RU
           })
-        }), (DD => {
-          console.error("The app couldn't ask for push notifications:", DD)
+        }), (UU => {
+          console.error("The app couldn't ask for push notifications:", UU)
         }))
-      }: null: await bD.c.canAsk() ? () => bD.c.requestPermission() : null
+      }: null: await TU.b.canAsk() ? () => TU.b.requestPermission() : null
     }
   },
-  8958: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => bD,
-      f: () => QD
+  8908: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => TU,
+      f: () => qU
     });
-    var ID = cD(16);
-    const pD = 24,
-      iD = "farNametags",
-      fD = 1e5;
+    var tU = gU(21);
+    const pU = 24,
+      EU = "farNametags",
+      PU = 1e5;
 
-    function bD() {
-      var DD;
-      return null === (DD = ID.d.get("showDistantNametags")) || void 0 === DD || DD
+    function TU() {
+      var UU;
+      return null === (UU = tU.b.get("showDistantNametags")) || void 0 === UU || UU
     }
 
-    function QD() {
-      var DD;
-      return null !== (DD = function() {
-        const DD = new URLSearchParams(window.location.search).get(iD),
-          CD = null === DD || "" === DD ? NaN : Number(DD);
-        return Number.isFinite(CD) && CD >= 0 ? Math.min(CD, fD) : null
-      }()) && void 0 !== DD ? DD : bD() ? 0 : pD
+    function qU() {
+      var UU;
+      return null !== (UU = function() {
+        const UU = new URLSearchParams(window.location.search).get(EU),
+          RU = null === UU || "" === UU ? NaN : Number(UU);
+        return Number.isFinite(RU) && RU >= 0 ? Math.min(RU, PU) : null
+      }()) && void 0 !== UU ? UU : TU() ? 0 : pU
     }
   },
-  9065: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => pD,
-      g: () => fD
+  9012: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => pU,
+      d: () => PU
     });
-    const ID = [{
+    const tU = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -9699,79 +9699,79 @@ export const modules = {
       suffix: "K"
     }];
 
-    function pD(DD) {
-      let CD, cD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof DD) {
-        if (!Number.isFinite(DD)) return "0";
-        if (Math.abs(DD) < 100) {
-          const CD = DD < 0 ? "-" : "",
-            cD = Math.abs(DD);
-          return cD >= 10 ? `${CD}${cD.toFixed(1).replace(/\.0$/,"")}` : `${CD}${cD.toFixed(2).replace(/\.?0+$/,"")}`
+    function pU(UU) {
+      let RU, gU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof UU) {
+        if (!Number.isFinite(UU)) return "0";
+        if (Math.abs(UU) < 100) {
+          const RU = UU < 0 ? "-" : "",
+            gU = Math.abs(UU);
+          return gU >= 10 ? `${RU}${gU.toFixed(1).replace(/\.0$/,"")}` : `${RU}${gU.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        CD = BigInt(Math.floor(DD))
-      } else CD = DD;
-      const pD = CD < 0n ? -CD : CD,
-        iD = CD < 0n ? "-" : "",
-        fD = pD.toString();
-      if (fD.length <= cD) return `${iD}${fD}`;
-      const bD = 3 * Math.floor((fD.length - 1) / 3);
-      if (bD < 3) return `${iD}${fD}`;
-      if (bD > 3 * ID.length) {
-        const DD = fD[0],
-          CD = fD.slice(1, 3).replace(/0+$/, "");
-        return `${iD}${CD?`${DD}.${CD}`:DD}e${fD.length-1}`
+        RU = BigInt(Math.floor(UU))
+      } else RU = UU;
+      const pU = RU < 0n ? -RU : RU,
+        EU = RU < 0n ? "-" : "",
+        PU = pU.toString();
+      if (PU.length <= gU) return `${EU}${PU}`;
+      const TU = 3 * Math.floor((PU.length - 1) / 3);
+      if (TU < 3) return `${EU}${PU}`;
+      if (TU > 3 * tU.length) {
+        const UU = PU[0],
+          RU = PU.slice(1, 3).replace(/0+$/, "");
+        return `${EU}${RU?`${UU}.${RU}`:UU}e${PU.length-1}`
       }
       const {
-        threshold: QD,
-        suffix: wD
-      } = ID[ID.length - bD / 3], SD = pD / QD, BD = Number(1000n * (pD % QD) / QD), yD = Number(SD) + BD / 1e3;
-      let MD;
-      return MD = yD >= 100 ? Math.floor(yD).toString() : yD >= 10 ? yD.toFixed(1).replace(/\.0$/, "") : yD.toFixed(2).replace(/\.?0+$/, ""), `${iD}${MD}${wD}`
+        threshold: qU,
+        suffix: KU
+      } = tU[tU.length - TU / 3], cU = pU / qU, GU = Number(1000n * (pU % qU) / qU), jU = Number(cU) + GU / 1e3;
+      let uU;
+      return uU = jU >= 100 ? Math.floor(jU).toString() : jU >= 10 ? jU.toFixed(1).replace(/\.0$/, "") : jU.toFixed(2).replace(/\.?0+$/, ""), `${EU}${uU}${KU}`
     }
-    const iD = ID.map((DD => {
+    const EU = tU.map((UU => {
       let {
-        threshold: CD,
-        suffix: cD
-      } = DD;
+        threshold: RU,
+        suffix: gU
+      } = UU;
       return {
-        threshold: Number(CD),
-        suffix: cD
+        threshold: Number(RU),
+        suffix: gU
       }
-    })).filter((DD => {
+    })).filter((UU => {
       let {
-        threshold: CD
-      } = DD;
-      return Number.isFinite(CD)
+        threshold: RU
+      } = UU;
+      return Number.isFinite(RU)
     }));
 
-    function fD(DD) {
-      const CD = Math.abs(DD),
-        cD = DD < 0 ? "-" : "";
+    function PU(UU) {
+      const RU = Math.abs(UU),
+        gU = UU < 0 ? "-" : "";
       for (const {
-          threshold: ID,
-          suffix: pD
+          threshold: tU,
+          suffix: pU
         }
-        of iD)
-        if (CD >= ID) {
-          const DD = CD / ID;
-          if (DD >= 1e3) return `${cD}${CD.toExponential(2).replace("e+","e")}`;
-          let iD;
-          return iD = DD >= 100 ? Math.floor(DD).toString() : DD >= 10 ? DD.toFixed(1).replace(/\.0$/, "") : DD.toFixed(2).replace(/\.?0+$/, ""), `${cD}${iD}${pD}`
-        } return `${cD}${CD}`
+        of EU)
+        if (RU >= tU) {
+          const UU = RU / tU;
+          if (UU >= 1e3) return `${gU}${RU.toExponential(2).replace("e+","e")}`;
+          let EU;
+          return EU = UU >= 100 ? Math.floor(UU).toString() : UU >= 10 ? UU.toFixed(1).replace(/\.0$/, "") : UU.toFixed(2).replace(/\.?0+$/, ""), `${gU}${EU}${pU}`
+        } return `${gU}${RU}`
     }
   },
-  9050: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => SD,
-      f: () => yD,
-      i: () => BD,
-      j: () => fD,
-      l: () => wD,
-      n: () => QD
+  8994: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => cU,
+      f: () => jU,
+      i: () => GU,
+      m: () => PU,
+      q: () => KU,
+      u: () => qU
     });
-    var ID = cD(326);
-    const pD = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
-      iD = {
+    var tU = gU(311);
+    const pU = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
+      EU = {
         Damage: {
           translationKey: "enchantments:damageDescription"
         },
@@ -9846,13 +9846,13 @@ export const modules = {
         }
       };
 
-    function fD(DD) {
-      var CD;
-      return null !== (CD = iD[DD]) && void 0 !== CD ? CD : {
+    function PU(UU) {
+      var RU;
+      return null !== (RU = EU[UU]) && void 0 !== RU ? RU : {
         translationKey: ""
       }
     }
-    const bD = {
+    const TU = {
       "Wood Enchanting Table": [{
         min: 1,
         max: 2
@@ -9905,107 +9905,107 @@ export const modules = {
       }]
     };
 
-    function QD(DD) {
-      return pD.includes(DD)
+    function qU(UU) {
+      return pU.includes(UU)
     }
 
-    function wD(DD) {
-      var CD;
-      return !0 === (null === DD || void 0 === DD || null === (CD = DD.customAttributes) || void 0 === CD ? void 0 : CD.cannotEnchant)
+    function KU(UU) {
+      var RU;
+      return !0 === (null === UU || void 0 === UU || null === (RU = UU.customAttributes) || void 0 === RU ? void 0 : RU.cannotEnchant)
     }
 
-    function SD(DD, CD) {
+    function cU(UU, RU) {
       const {
-        max: cD
-      } = bD[DD].at(-1);
-      return CD <= cD
+        max: gU
+      } = TU[UU].at(-1);
+      return RU <= gU
     }
 
-    function BD(DD) {
-      const CD = Math.sin(DD / 80),
-        cD = DD => {
-          if (DD <= 0) return 0;
-          if (DD > 1) return 1;
-          let CD = 0;
-          const cD = [1, 7, 21, 35, 35, 21, 7, 1];
-          for (let ID = 0; ID < cD.length; ID++) {
-            CD += (ID % 2 === 0 ? 1 : -1) * cD[ID] * Math.pow(DD, 2 + ID) / (2 + ID)
+    function GU(UU) {
+      const RU = Math.sin(UU / 80),
+        gU = UU => {
+          if (UU <= 0) return 0;
+          if (UU > 1) return 1;
+          let RU = 0;
+          const gU = [1, 7, 21, 35, 35, 21, 7, 1];
+          for (let tU = 0; tU < gU.length; tU++) {
+            RU += (tU % 2 === 0 ? 1 : -1) * gU[tU] * Math.pow(UU, 2 + tU) / (2 + tU)
           }
-          return 72 * CD
+          return 72 * RU
         },
-        ID = .3 - .78 * CD,
-        pD = .5 - .78 * CD,
-        iD = .6 - .7 * CD,
-        fD = .8 - .6 * CD;
-      let bD = cD(ID),
-        QD = cD(pD) - bD,
-        wD = cD(iD) - QD - bD,
-        SD = cD(fD) - wD - QD - bD;
-      ID < .041 && (QD /= 1 - bD, wD /= 1 - bD, SD /= 1 - bD, bD = 0), pD < .041 && (bD /= 1 - QD, wD /= 1 - QD, SD /= 1 - QD, QD = 0), iD < .041 && (bD /= 1 - wD, QD /= 1 - wD, SD /= 1 - wD, wD = 0), fD < .041 && (bD /= 1 - SD, QD /= 1 - SD, wD /= 1 - SD, SD = 0);
+        tU = .3 - .78 * RU,
+        pU = .5 - .78 * RU,
+        EU = .6 - .7 * RU,
+        PU = .8 - .6 * RU;
+      let TU = gU(tU),
+        qU = gU(pU) - TU,
+        KU = gU(EU) - qU - TU,
+        cU = gU(PU) - KU - qU - TU;
+      tU < .041 && (qU /= 1 - TU, KU /= 1 - TU, cU /= 1 - TU, TU = 0), pU < .041 && (TU /= 1 - qU, KU /= 1 - qU, cU /= 1 - qU, qU = 0), EU < .041 && (TU /= 1 - KU, qU /= 1 - KU, cU /= 1 - KU, KU = 0), PU < .041 && (TU /= 1 - cU, qU /= 1 - cU, KU /= 1 - cU, cU = 0);
       return {
-        commonProb: bD,
-        uncommonProb: QD,
-        rareProb: wD,
-        epicProb: SD,
-        legendaryProb: 1 - (SD + wD + QD + bD)
+        commonProb: TU,
+        uncommonProb: qU,
+        rareProb: KU,
+        epicProb: cU,
+        legendaryProb: 1 - (cU + KU + qU + TU)
       }
     }
 
-    function yD(DD, CD) {
+    function jU(UU, RU) {
       const {
-        min: cD,
-        max: pD
-      } = bD[DD][CD], iD = ID.e.sampleUniformIntDistribution(cD, pD, "includeMax");
+        min: gU,
+        max: pU
+      } = TU[UU][RU], EU = tU.c.sampleUniformIntDistribution(gU, pU, "includeMax");
       return {
-        ...BD(iD),
-        level: iD
+        ...GU(EU),
+        level: EU
       }
     }
   },
-  8463: (DD, CD, cD) => {
-    function ID(DD, CD) {
-      return !DD.hidden && (CD || !DD.isRewardedAd)
+  8405: (UU, RU, gU) => {
+    function tU(UU, RU) {
+      return !UU.hidden && (RU || !UU.isRewardedAd)
     }
 
-    function pD(DD) {
-      return "object" === typeof DD ? DD.option : DD
+    function pU(UU) {
+      return "object" === typeof UU ? UU.option : UU
     }
 
-    function iD(DD, CD) {
-      var cD;
-      if ("dropdown" === (null === (cD = DD.userInput) || void 0 === cD ? void 0 : cD.type) && "object" === typeof DD.userInput.dropdownOptions[0]) {
-        for (const cD of DD.userInput.dropdownOptions)
-          if (pD(cD) === CD) return "object" === typeof cD ? cD.cost : DD.cost;
-        console.error("Didn't find matching option for dropdown item. Item:", DD, "input:", CD)
+    function EU(UU, RU) {
+      var gU;
+      if ("dropdown" === (null === (gU = UU.userInput) || void 0 === gU ? void 0 : gU.type) && "object" === typeof UU.userInput.dropdownOptions[0]) {
+        for (const gU of UU.userInput.dropdownOptions)
+          if (pU(gU) === RU) return "object" === typeof gU ? gU.cost : UU.cost;
+        console.error("Didn't find matching option for dropdown item. Item:", UU, "input:", RU)
       }
-      return DD.cost
+      return UU.cost
     }
 
-    function fD(DD, CD, cD) {
-      var ID;
-      const pD = null !== (ID = cD.excludedPlayers) && void 0 !== ID ? ID : [CD];
-      return DD.filter((DD => !pD.includes(DD)))
+    function PU(UU, RU, gU) {
+      var tU;
+      const pU = null !== (tU = gU.excludedPlayers) && void 0 !== tU ? tU : [RU];
+      return UU.filter((UU => !pU.includes(UU)))
     }
-    cD.d(CD, {
-      c: () => iD,
-      d: () => pD,
-      f: () => fD,
-      i: () => ID
+    gU.d(RU, {
+      e: () => EU,
+      h: () => pU,
+      i: () => PU,
+      l: () => tU
     })
   },
-  9026: () => {},
-  8998: DD => {
-    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
+  8962: () => {},
+  8933: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
   },
-  9003: DD => {
-    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
+  8936: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
   },
-  9012: DD => {
-    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
+  8942: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
   },
-  9014: DD => {
-    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
+  8947: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

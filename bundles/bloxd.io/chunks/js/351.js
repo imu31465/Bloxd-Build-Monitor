@@ -1,27 +1,27 @@
 export const id = 351;
 export const ids = [351];
 export const modules = {
-  60490: (DD, CD, cD) => {
-    function ID(DD, CD, cD, ID, pD, iD, fD) {
-      const bD = CD,
-        QD = ID,
-        wD = cD;
-      DD[wD + 0] = bD[QD + 0], DD[wD + 1] = bD[QD + 1], DD[wD + 2] = bD[QD + 2], DD[wD + 3] = bD[QD + 3], DD[wD + 4] = bD[QD + 4], DD[wD + 5] = bD[QD + 5], DD[wD + 6] = bD[QD + 6], DD[wD + 7] = bD[QD + 7], DD[wD + 8] = bD[QD + 8], DD[wD + 9] = bD[QD + 9], DD[wD + 10] = bD[QD + 10], DD[wD + 11] = bD[QD + 11], DD[wD + 12] = bD[QD + 12] - pD, DD[wD + 13] = bD[QD + 13] - iD, DD[wD + 14] = bD[QD + 14] - fD, DD[wD + 15] = bD[QD + 15]
+  60625: (UU, RU, gU) => {
+    function tU(UU, RU, gU, tU, pU, EU, PU) {
+      const TU = RU,
+        qU = tU,
+        KU = gU;
+      UU[KU + 0] = TU[qU + 0], UU[KU + 1] = TU[qU + 1], UU[KU + 2] = TU[qU + 2], UU[KU + 3] = TU[qU + 3], UU[KU + 4] = TU[qU + 4], UU[KU + 5] = TU[qU + 5], UU[KU + 6] = TU[qU + 6], UU[KU + 7] = TU[qU + 7], UU[KU + 8] = TU[qU + 8], UU[KU + 9] = TU[qU + 9], UU[KU + 10] = TU[qU + 10], UU[KU + 11] = TU[qU + 11], UU[KU + 12] = TU[qU + 12] - pU, UU[KU + 13] = TU[qU + 13] - EU, UU[KU + 14] = TU[qU + 14] - PU, UU[KU + 15] = TU[qU + 15]
     }
 
-    function pD(DD) {
-      return (CD, cD, pD, iD) => {
-        const fD = DD.camera;
-        if (!fD) return void ID(CD, cD, pD, iD, 0, 0, 0);
-        const bD = fD.worldMatrix;
-        ID(CD, cD, pD, iD, bD[12], bD[13], bD[14])
+    function pU(UU) {
+      return (RU, gU, pU, EU) => {
+        const PU = UU.camera;
+        if (!PU) return void tU(RU, gU, pU, EU, 0, 0, 0);
+        const TU = PU.worldMatrix;
+        tU(RU, gU, pU, EU, TU[12], TU[13], TU[14])
       }
     }
-    cD.r(CD), cD.d(CD, {
-      makePackMeshWorld: () => pD,
-      packMat4IntoF32WithOffset: () => ID
+    gU.r(RU), gU.d(RU, {
+      makePackMeshWorld: () => pU,
+      packMat4IntoF32WithOffset: () => tU
     })
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

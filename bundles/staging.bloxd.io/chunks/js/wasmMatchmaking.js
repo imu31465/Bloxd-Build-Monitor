@@ -1,30 +1,30 @@
-/*! For license information please see wd13r.wasmMatchmaking.d258d6f1.chunk.js.LICENSE.txt */
+/*! For license information please see eulrrq.wasmMatchmaking.1a3f027d.chunk.js.LICENSE.txt */
 export const id = 59;
 export const ids = [59, 91];
 export const modules = {
-  35944: (DD, CD) => {
-    function cD(DD) {
-      if (DD && "object" === typeof DD) {
-        var CD = DD.which || DD.keyCode || DD.charCode;
-        CD && (DD = CD)
+  36127: (UU, RU) => {
+    function gU(UU) {
+      if (UU && "object" === typeof UU) {
+        var RU = UU.which || UU.keyCode || UU.charCode;
+        RU && (UU = RU)
       }
-      if ("number" === typeof DD) return fD[DD];
-      var cD, iD = String(DD);
-      return (cD = ID[iD.toLowerCase()]) ? cD : (cD = pD[iD.toLowerCase()]) || (1 === iD.length ? iD.charCodeAt(0) : void 0)
+      if ("number" === typeof UU) return PU[UU];
+      var gU, EU = String(UU);
+      return (gU = tU[EU.toLowerCase()]) ? gU : (gU = pU[EU.toLowerCase()]) || (1 === EU.length ? EU.charCodeAt(0) : void 0)
     }
-    cD.isEventKey = function(DD, CD) {
-      if (DD && "object" === typeof DD) {
-        var cD = DD.which || DD.keyCode || DD.charCode;
-        if (null === cD || void 0 === cD) return !1;
-        if ("string" === typeof CD) {
-          var iD;
-          if (iD = ID[CD.toLowerCase()]) return iD === cD;
-          if (iD = pD[CD.toLowerCase()]) return iD === cD
-        } else if ("number" === typeof CD) return CD === cD;
+    gU.isEventKey = function(UU, RU) {
+      if (UU && "object" === typeof UU) {
+        var gU = UU.which || UU.keyCode || UU.charCode;
+        if (null === gU || void 0 === gU) return !1;
+        if ("string" === typeof RU) {
+          var EU;
+          if (EU = tU[RU.toLowerCase()]) return EU === gU;
+          if (EU = pU[RU.toLowerCase()]) return EU === gU
+        } else if ("number" === typeof RU) return RU === gU;
         return !1
       }
     };
-    var ID = (CD = DD.exports = cD).code = CD.codes = {
+    var tU = (RU = UU.exports = gU).code = RU.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -69,7 +69,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      pD = CD.aliases = {
+      pU = RU.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -91,47 +91,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (iD = 97; iD < 123; iD++) ID[String.fromCharCode(iD)] = iD - 32;
-    for (var iD = 48; iD < 58; iD++) ID[iD - 48] = iD;
-    for (iD = 1; iD < 13; iD++) ID["f" + iD] = iD + 111;
-    for (iD = 0; iD < 10; iD++) ID["numpad " + iD] = iD + 96;
-    var fD = CD.names = CD.title = {};
-    for (iD in ID) fD[ID[iD]] = iD;
-    for (var bD in pD) ID[bD] = pD[bD]
+    for (EU = 97; EU < 123; EU++) tU[String.fromCharCode(EU)] = EU - 32;
+    for (var EU = 48; EU < 58; EU++) tU[EU - 48] = EU;
+    for (EU = 1; EU < 13; EU++) tU["f" + EU] = EU + 111;
+    for (EU = 0; EU < 10; EU++) tU["numpad " + EU] = EU + 96;
+    var PU = RU.names = RU.title = {};
+    for (EU in tU) PU[tU[EU]] = EU;
+    for (var TU in pU) tU[TU] = pU[TU]
   },
-  36099: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => fD
+  36292: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => PU
     });
-    var ID = cD(53);
-    const pD = ID.useLayoutEffect;
-    const iD = function(DD) {
-      var CD = (0, ID.useRef)(DD);
-      return pD((function() {
-        CD.current = DD
-      })), CD
+    var tU = gU(56);
+    const pU = tU.useLayoutEffect;
+    const EU = function(UU) {
+      var RU = (0, tU.useRef)(UU);
+      return pU((function() {
+        RU.current = UU
+      })), RU
     };
-    var fD = function(DD) {
-      var CD = iD(DD);
-      (0, ID.useEffect)((function() {
-        var DD = function(DD) {
-          var cD;
-          if (null != CD.current && (cD = CD.current(DD)), DD.defaultPrevented && (DD.returnValue = ""), "string" === typeof cD) return DD.returnValue = cD, cD
+    var PU = function(UU) {
+      var RU = EU(UU);
+      (0, tU.useEffect)((function() {
+        var UU = function(UU) {
+          var gU;
+          if (null != RU.current && (gU = RU.current(UU)), UU.defaultPrevented && (UU.returnValue = ""), "string" === typeof gU) return UU.returnValue = gU, gU
         };
-        return window.addEventListener("beforeunload", DD),
+        return window.addEventListener("beforeunload", UU),
           function() {
-            window.removeEventListener("beforeunload", DD)
+            window.removeEventListener("beforeunload", UU)
           }
       }), [])
     }
   },
-  35987: DD => {
-    var CD, cD = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      ID = /OS X/.test(cD),
-      pD = /Opera/.test(cD),
-      iD = !/like Gecko/.test(cD) && !pD,
-      fD = DD.exports = {
-        0: ID ? "<menu>" : "<UNK>",
+  36174: UU => {
+    var RU, gU = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      tU = /OS X/.test(gU),
+      pU = /Opera/.test(gU),
+      EU = !/like Gecko/.test(gU) && !pU,
+      PU = UU.exports = {
+        0: tU ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -174,7 +174,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: ID ? "<meta>" : "<menu>",
+        93: tU ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -197,7 +197,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: ID && iD ? "-" : "<volume-mute>",
+        173: tU && EU ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -223,7 +223,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: pD ? "`" : "<unicode>",
+        231: pU ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -234,454 +234,454 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (CD = 58; CD < 65; ++CD) fD[CD] = String.fromCharCode(CD);
-    for (CD = 48; CD < 58; ++CD) fD[CD] = CD - 48 + "";
-    for (CD = 65; CD < 91; ++CD) fD[CD] = String.fromCharCode(CD);
-    for (CD = 96; CD < 106; ++CD) fD[CD] = "<num-" + (CD - 96) + ">";
-    for (CD = 112; CD < 136; ++CD) fD[CD] = "F" + (CD - 111)
+    for (RU = 58; RU < 65; ++RU) PU[RU] = String.fromCharCode(RU);
+    for (RU = 48; RU < 58; ++RU) PU[RU] = RU - 48 + "";
+    for (RU = 65; RU < 91; ++RU) PU[RU] = String.fromCharCode(RU);
+    for (RU = 96; RU < 106; ++RU) PU[RU] = "<num-" + (RU - 96) + ">";
+    for (RU = 112; RU < 136; ++RU) PU[RU] = "F" + (RU - 111)
   },
-  36010: (DD, CD, cD) => {
-    function ID(DD, CD, cD, ID) {
-      return !(cD && !DD.aimable) && (!CD || DD.gun && "head" !== ID)
+  36203: (UU, RU, gU) => {
+    function tU(UU, RU, gU, tU) {
+      return !(gU && !UU.aimable) && (!RU || UU.gun && "head" !== tU)
     }
 
-    function pD(DD) {
-      return Math.max(.1 * DD, 1)
+    function pU(UU) {
+      return Math.max(.1 * UU, 1)
     }
 
-    function iD(DD, CD) {
-      return !DD && CD
+    function EU(UU, RU) {
+      return !UU && RU
     }
-    cD.d(CD, {
-      e: () => iD,
-      g: () => pD,
-      i: () => ID
+    gU.d(RU, {
+      b: () => EU,
+      d: () => pU,
+      e: () => tU
     })
   },
-  36018: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => bD,
-      c: () => fD
+  36209: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => TU,
+      f: () => PU
     });
-    let ID = null;
-    const pD = {
+    let tU = null;
+    const pU = {
         crosshairAccuracy: [],
         turnDamageIndicators: []
       },
-      iD = {
-        crosshairAccuracy: DD => {
-          const CD = pD.crosshairAccuracy.at(-1);
-          CD ? CD.hook(DD) : ID = DD
+      EU = {
+        crosshairAccuracy: UU => {
+          const RU = pU.crosshairAccuracy.at(-1);
+          RU ? RU.hook(UU) : tU = UU
         },
-        turnDamageIndicators: DD => {
-          var CD;
-          null === (CD = pD.turnDamageIndicators.at(-1)) || void 0 === CD || CD.hook(DD)
+        turnDamageIndicators: UU => {
+          var RU;
+          null === (RU = pU.turnDamageIndicators.at(-1)) || void 0 === RU || RU.hook(UU)
         }
       };
 
-    function fD(DD, CD) {
-      const cD = {
-          hook: CD
+    function PU(UU, RU) {
+      const gU = {
+          hook: RU
         },
-        fD = pD[DD];
-      if (fD.push(cD), "crosshairAccuracy" === DD && null !== ID) {
-        const DD = ID;
-        ID = null, iD.crosshairAccuracy(DD)
+        PU = pU[UU];
+      if (PU.push(gU), "crosshairAccuracy" === UU && null !== tU) {
+        const UU = tU;
+        tU = null, EU.crosshairAccuracy(UU)
       }
       return () => {
-        const DD = fD.indexOf(cD); - 1 !== DD && fD.splice(DD, 1)
+        const UU = PU.indexOf(gU); - 1 !== UU && PU.splice(UU, 1)
       }
     }
 
-    function bD() {
-      return iD
+    function TU() {
+      return EU
     }
   },
-  6409: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => pD,
-      d: () => iD
+  6339: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => pU,
+      e: () => EU
     });
-    var ID = cD(36);
-    const pD = "shaderPack";
-    async function iD() {
-      var DD;
-      let CD = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (DD = await ID.f.getItem(pD, CD)) && void 0 !== DD ? DD : null
+    var tU = gU(34);
+    const pU = "shaderPack";
+    async function EU() {
+      var UU;
+      let RU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (UU = await tU.g.getItem(pU, RU)) && void 0 !== UU ? UU : null
     }
   },
-  8606: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => iD,
-      d: () => pD
+  8536: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => EU,
+      e: () => pU
     });
-    let ID = !1;
+    let tU = !1;
 
-    function pD() {
-      ID = !0
+    function pU() {
+      tU = !0
     }
 
-    function iD() {
-      return ID
+    function EU() {
+      return tU
     }
   },
-  35869: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      InGameUi: () => gD.e,
-      LobbyLeaderboard: () => XD.c,
-      loadCharacterCustomisationUI: () => mD,
-      loadCharacterPreview: () => nD,
-      matchmakeAndPlay: () => UD,
-      setUpGame: () => OD
+  36018: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      InGameUi: () => fU.e,
+      LobbyLeaderboard: () => xU.d,
+      loadCharacterCustomisationUI: () => mU,
+      loadCharacterPreview: () => IU,
+      matchmakeAndPlay: () => bU,
+      setUpGame: () => JU
     });
-    var ID = cD(1243),
-      pD = cD(162),
-      iD = cD(16),
-      fD = cD(35872),
-      bD = cD(35875),
-      QD = cD(1928),
-      wD = cD(35906);
+    var tU = gU(1240),
+      pU = gU(165),
+      EU = gU(21),
+      PU = gU(36022),
+      TU = gU(36024),
+      qU = gU(1821),
+      KU = gU(36066);
 
-    function SD() {
-      return !1 !== QD.d.get("canCustomiseChar")
+    function cU() {
+      return !1 !== qU.b.get("canCustomiseChar")
     }
-    let BD = !1;
-    var yD = cD(1317),
-      MD = cD(1250),
-      tD = cD(712),
-      ZD = cD(8606);
-    var oD = cD(8602),
-      vD = cD(3387),
-      ND = cD(1779);
-    var gD = cD(35912),
-      XD = cD(36382);
+    let GU = !1;
+    var jU = gU(1316),
+      uU = gU(1249),
+      CU = gU(668),
+      hU = gU(8536);
+    var QU = gU(8529),
+      eU = gU(3262),
+      WU = gU(1688);
+    var fU = gU(36081),
+      xU = gU(36531);
 
-    function mD() {
-      return Promise.all([cD.e(281), cD.e(387)]).then((() => cD(40345)))
-    }
-
-    function nD() {
-      return cD.e(282).then((() => cD(40352)))
+    function mU() {
+      return Promise.all([gU.e(281), gU.e(387)]).then((() => gU(40669)))
     }
 
-    function OD() {
-      return (0, oD.g)()
+    function IU() {
+      return gU.e(282).then((() => gU(40675)))
     }
-    BD || (BD = !0, document.addEventListener("keydown", (DD => {
-        (0, wD.e)(DD, SD)
+
+    function JU() {
+      return (0, QU.f)()
+    }
+    GU || (GU = !0, document.addEventListener("keydown", (UU => {
+        (0, KU.b)(UU, cU)
       }))),
-      function(DD) {
-        var CD;
-        return !0 !== (null === DD || void 0 === DD ? void 0 : DD.saveData) && !/2g$/.test(null !== (CD = null === DD || void 0 === DD ? void 0 : DD.effectiveType) && void 0 !== CD ? CD : "")
-      }(navigator.connection) && (0, tD.e)((() => {
-        (0, ZD.b)() || Promise.all([cD.e(74), cD.e(132), cD.e(87), cD.e(55)]).then((() => cD(39831))).then((DD => {
-          (0, ZD.b)() || DD.startLoadAheadOfJoin({
-            joinStarted: ZD.b,
-            language: MD.e.get().getCurrentLanguageCode()
+      function(UU) {
+        var RU;
+        return !0 !== (null === UU || void 0 === UU ? void 0 : UU.saveData) && !/2g$/.test(null !== (RU = null === UU || void 0 === UU ? void 0 : UU.effectiveType) && void 0 !== RU ? RU : "")
+      }(navigator.connection) && (0, CU.e)((() => {
+        (0, hU.b)() || Promise.all([gU.e(74), gU.e(132), gU.e(87), gU.e(55)]).then((() => gU(40145))).then((UU => {
+          (0, hU.b)() || UU.startLoadAheadOfJoin({
+            joinStarted: hU.b,
+            language: uU.g.get().getCurrentLanguageCode()
           })
-        }), (DD => {
-          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", DD)
+        }), (UU => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", UU)
         }))
       }));
-    const PD = iD.d.get("router");
-    null === PD ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function DD(CD) {
-      if ((0, ND.e)(CD.state.location.pathname)) return void(0, oD.c)().catch((() => {}));
-      const cD = CD.subscribe((ID => {
-        (0, ND.e)(ID.location.pathname) && (cD(), (0, vD.d)().then((() => {
-          DD(CD)
+    const wU = EU.b.get("router");
+    null === wU ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function UU(RU) {
+      if ((0, WU.c)(RU.state.location.pathname)) return void(0, QU.d)().catch((() => {}));
+      const gU = RU.subscribe((tU => {
+        (0, WU.c)(tU.location.pathname) && (gU(), (0, eU.e)().then((() => {
+          UU(RU)
         })))
       }))
-    }(PD), (0, fD.c)();
-    const HD = (0, bD.b)((async function(DD, CD) {
+    }(wU), (0, PU.c)();
+    const nU = (0, TU.e)((async function(UU, RU) {
       let {
-        place: cD,
-        userContext: iD,
-        direct: fD,
-        rematch: bD
-      } = DD;
-      const QD = fD ? 1 / 0 : performance.now();
-      let wD;
+        place: gU,
+        userContext: EU,
+        direct: PU,
+        rematch: TU
+      } = UU;
+      const qU = PU ? 1 / 0 : performance.now();
+      let KU;
       try {
-        wD = await (0, oD.c)()
-      } catch (SD) {
-        return console.error("The wasm client did not load:", SD), (0, yD.o)({
+        KU = await (0, QU.d)()
+      } catch (cU) {
+        return console.error("The wasm client did not load:", cU), (0, jU.m)({
           websocketUrl: null
-        }), ID.e.errorWithCode(String(SD), pD.o.CONNECT_TO_GAME_SERVER, {
-          error: SD,
-          severity: CD.aborted ? "low" : "medium",
-          tc: CD.aborted
+        }), tU.c.errorWithCode(String(cU), pU.l.CONNECT_TO_GAME_SERVER, {
+          error: cU,
+          severity: RU.aborted ? "low" : "medium",
+          cg: RU.aborted
         })
       }
-      return wD.playWasmGame({
-        userContext: iD,
-        place: cD,
-        matchedAt: QD,
-        rematch: bD
-      }, CD)
+      return KU.playWasmGame({
+        userContext: EU,
+        place: gU,
+        matchedAt: qU,
+        rematch: TU
+      }, RU)
     }));
 
-    function UD() {
-      return (0, oD.c)().catch((() => {})), HD(...arguments)
+    function bU() {
+      return (0, QU.d)().catch((() => {})), nU(...arguments)
     }
   },
-  8602: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => SD,
-      g: () => BD
+  8529: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => cU,
+      f: () => GU
     });
-    var ID = cD(2946),
-      pD = cD(2245),
-      iD = cD(2981),
-      fD = cD(4444),
-      bD = cD(3314),
-      QD = cD(8606);
-    let wD = null;
+    var tU = gU(2840),
+      pU = gU(2116),
+      EU = gU(2886),
+      PU = gU(4310),
+      TU = gU(3194),
+      qU = gU(8536);
+    let KU = null;
 
-    function SD() {
-      return fD.d.cancelDownloadForJoin(), (0, bD.b)(), (0, pD.e)(), (0, QD.d)(), (0, iD.h)(), Promise.all([cD.e(69), cD.e(72), cD.e(71), cD.e(70), cD.e(83), cD.e(259), cD.e(199), cD.e(216), cD.e(237), cD.e(212), cD.e(46)]).then((() => cD(39760))).catch((() => {})), Promise.all([cD.e(74), cD.e(132), cD.e(87), cD.e(55)]).then((() => cD(39831))).then((DD => {
+    function cU() {
+      return PU.d.cancelDownloadForJoin(), (0, TU.d)(), (0, pU.g)(), (0, qU.e)(), (0, EU.f)(), Promise.all([gU.e(69), gU.e(72), gU.e(71), gU.e(70), gU.e(83), gU.e(259), gU.e(199), gU.e(216), gU.e(237), gU.e(212), gU.e(46)]).then((() => gU(40061))).catch((() => {})), Promise.all([gU.e(74), gU.e(132), gU.e(87), gU.e(55)]).then((() => gU(40145))).then((UU => {
         let {
-          startJoinLoad: CD
-        } = DD;
-        CD()
-      }), (() => {})), wD ??= Promise.all([cD.e(71), cD.e(74), cD.e(129), cD.e(73), cD.e(132), cD.e(262), cD.e(186), cD.e(87), cD.e(86), cD.e(85), cD.e(212), cD.e(60)]).then((() => cD(39933))).then((DD => (DD.startWasmPlay(), DD.followPageUiPack((DD => {
-        ID.e.showGamePack(DD)
-      })), DD)), (DD => {
-        throw wD = null, DD
-      })), wD
+          startJoinLoad: RU
+        } = UU;
+        RU()
+      }), (() => {})), KU ??= Promise.all([gU.e(71), gU.e(74), gU.e(129), gU.e(73), gU.e(132), gU.e(262), gU.e(186), gU.e(87), gU.e(86), gU.e(85), gU.e(212), gU.e(60)]).then((() => gU(40241))).then((UU => (UU.startWasmPlay(), UU.followPageUiPack((UU => {
+        tU.e.showGamePack(UU)
+      })), UU)), (UU => {
+        throw KU = null, UU
+      })), KU
     }
 
-    function BD() {
-      return Promise.all([cD.e(71), cD.e(74), cD.e(129), cD.e(73), cD.e(132), cD.e(262), cD.e(186), cD.e(87), cD.e(86), cD.e(85), cD.e(212), cD.e(60)]).then((() => cD(39933))).then((DD => {
-        DD.startWasmPreviews(), DD.prefetchWasmPreviews()
+    function GU() {
+      return Promise.all([gU.e(71), gU.e(74), gU.e(129), gU.e(73), gU.e(132), gU.e(262), gU.e(186), gU.e(87), gU.e(86), gU.e(85), gU.e(212), gU.e(60)]).then((() => gU(40241))).then((UU => {
+        UU.startWasmPreviews(), UU.prefetchWasmPreviews()
       }))
     }
   },
-  4621: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      Howl: () => pD.Howl,
-      Howler: () => pD.Howler,
-      iosAudio: () => QD,
-      musicOutput: () => oD,
-      readyAudioContext: () => vD
+  4512: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      Howl: () => pU.Howl,
+      Howler: () => pU.Howler,
+      iosAudio: () => qU,
+      musicOutput: () => QU,
+      readyAudioContext: () => eU
     });
-    var ID, pD = cD(4626),
-      iD = cD(90);
-    const fD = pD.Howler;
-    let bD;
+    var tU, pU = gU(4518),
+      EU = gU(96);
+    const PU = pU.Howler;
+    let TU;
 
-    function QD() {
-      return bD ??= "ios" === (0, iD.getOperatingSystem)(), bD
+    function qU() {
+      return TU ??= "ios" === (0, EU.getOperatingSystem)(), TU
     }
 
-    function wD() {
-      var DD, CD;
-      if (fD.ctx || !fD.usingWebAudio || "undefined" === typeof AudioContext || !QD()) return;
-      const cD = navigator.audioSession;
-      let ID;
-      "auto" === (null === cD || void 0 === cD ? void 0 : cD.type) && (cD.type = "ambient");
+    function KU() {
+      var UU, RU;
+      if (PU.ctx || !PU.usingWebAudio || "undefined" === typeof AudioContext || !qU()) return;
+      const gU = navigator.audioSession;
+      let tU;
+      "auto" === (null === gU || void 0 === gU ? void 0 : gU.type) && (gU.type = "ambient");
       try {
-        ID = new AudioContext({
+        tU = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const pD = ID.createGain();
-      pD.gain.setValueAtTime(fD._muted ? 0 : null !== (DD = fD._volume) && void 0 !== DD ? DD : 1, ID.currentTime), pD.connect(ID.destination), fD.ctx = ID, fD.masterGain = pD, null === (CD = fD._setup) || void 0 === CD || CD.call(fD)
+      const pU = tU.createGain();
+      pU.gain.setValueAtTime(PU._muted ? 0 : null !== (UU = PU._volume) && void 0 !== UU ? UU : 1, tU.currentTime), pU.connect(tU.destination), PU.ctx = tU, PU.masterGain = pU, null === (RU = PU._setup) || void 0 === RU || RU.call(PU)
     }
-    fD._mobileUnloaded = !0;
-    const SD = fD.volume.bind(pD.Howler);
-    fD.volume = function() {
-      return wD(), SD(...arguments)
+    PU._mobileUnloaded = !0;
+    const cU = PU.volume.bind(pU.Howler);
+    PU.volume = function() {
+      return KU(), cU(...arguments)
     };
-    const BD = fD.mute.bind(pD.Howler);
-    fD.mute = DD => (wD(), BD(DD));
-    const yD = pD.Howl.prototype,
-      MD = yD.init;
-    yD.init = function(DD) {
-      return wD(), MD.call(this, DD)
+    const GU = PU.mute.bind(pU.Howler);
+    PU.mute = UU => (KU(), GU(UU));
+    const jU = pU.Howl.prototype,
+      uU = jU.init;
+    jU.init = function(UU) {
+      return KU(), uU.call(this, UU)
     };
-    let tD = 0;
-    const ZD = null === (ID = fD._autoSuspend) || void 0 === ID ? void 0 : ID.bind(pD.Howler);
+    let CU = 0;
+    const hU = null === (tU = PU._autoSuspend) || void 0 === tU ? void 0 : tU.bind(pU.Howler);
 
-    function oD() {
-      vD();
+    function QU() {
+      eU();
       const {
-        ctx: DD,
-        masterGain: CD
-      } = fD;
-      return DD && CD ? {
-        ctx: DD,
-        destination: CD,
-        holdAwake: DD => {
-          var CD, cD;
-          (tD += DD ? 1 : -1, DD) ? null === (CD = fD._autoResume) || void 0 === CD || CD.call(fD): null === (cD = fD._autoSuspend) || void 0 === cD || cD.call(fD)
+        ctx: UU,
+        masterGain: RU
+      } = PU;
+      return UU && RU ? {
+        ctx: UU,
+        destination: RU,
+        holdAwake: UU => {
+          var RU, gU;
+          (CU += UU ? 1 : -1, UU) ? null === (RU = PU._autoResume) || void 0 === RU || RU.call(PU): null === (gU = PU._autoSuspend) || void 0 === gU || gU.call(PU)
         },
         wake: () => {
-          var CD;
-          "running" !== DD.state && (null === (CD = fD._autoResume) || void 0 === CD || CD.call(fD), DD.resume().catch((() => {})))
+          var RU;
+          "running" !== UU.state && (null === (RU = PU._autoResume) || void 0 === RU || RU.call(PU), UU.resume().catch((() => {})))
         }
       } : null
     }
 
-    function vD() {
-      var DD;
-      (fD.volume(), fD.ctx && fD.autoUnlock) && (null === (DD = fD._unlockAudio) || void 0 === DD || DD.call(fD))
+    function eU() {
+      var UU;
+      (PU.volume(), PU.ctx && PU.autoUnlock) && (null === (UU = PU._unlockAudio) || void 0 === UU || UU.call(PU))
     }
-    ZD && (fD._autoSuspend = () => tD > 0 ? pD.Howler : ZD())
+    hU && (PU._autoSuspend = () => CU > 0 ? pU.Howler : hU())
   },
-  36133: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => fD,
-      e: () => pD,
-      g: () => ID
+  36319: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => PU,
+      f: () => pU,
+      g: () => tU
     });
 
-    function ID(DD) {
-      return DD.replace(/[_\-\s]*\d+$/, "") || DD
+    function tU(UU) {
+      return UU.replace(/[_\-\s]*\d+$/, "") || UU
     }
 
-    function pD(DD, CD, cD) {
-      return cD <= 0 ? 0 : DD * cD / Math.max(CD, cD)
+    function pU(UU, RU, gU) {
+      return gU <= 0 ? 0 : UU * gU / Math.max(RU, gU)
     }
 
-    function iD(DD, CD) {
-      const cD = DD.getDurationMs();
-      return cD > 0 ? DD.loudness * Math.max(0, 1 - (CD - DD.startMs) / cD) : 0
+    function EU(UU, RU) {
+      const gU = UU.getDurationMs();
+      return gU > 0 ? UU.loudness * Math.max(0, 1 - (RU - UU.startMs) / gU) : 0
     }
-    class fD {
+    class PU {
       constructor() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
-          CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
-        this.maxVoices = DD, this.maxPerGroup = CD, this.voices = []
+        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
+          RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
+        this.maxVoices = UU, this.maxPerGroup = RU, this.voices = []
       }
-      admit(DD) {
-        if (this.voices = this.voices.filter((DD => DD.isAlive())), null !== DD.group) {
-          const CD = this.voices.filter((CD => CD.group === DD.group));
-          if (CD.length >= this.maxPerGroup && !this.dropLeastWorth(CD, DD)) return !1
+      admit(UU) {
+        if (this.voices = this.voices.filter((UU => UU.isAlive())), null !== UU.group) {
+          const RU = this.voices.filter((RU => RU.group === UU.group));
+          if (RU.length >= this.maxPerGroup && !this.dropLeastWorth(RU, UU)) return !1
         }
-        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, DD)) && (this.voices.push(DD), !0)
+        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, UU)) && (this.voices.push(UU), !0)
       }
-      dropLeastWorth(DD, CD) {
-        let cD = null,
-          ID = 1 / 0;
-        for (const pD of DD) {
-          if (!pD.canStop()) continue;
-          const DD = iD(pD, CD.startMs);
-          DD < ID && (cD = pD, ID = DD)
+      dropLeastWorth(UU, RU) {
+        let gU = null,
+          tU = 1 / 0;
+        for (const pU of UU) {
+          if (!pU.canStop()) continue;
+          const UU = EU(pU, RU.startMs);
+          UU < tU && (gU = pU, tU = UU)
         }
-        return !(!cD || CD.loudness < ID) && (this.voices.splice(this.voices.indexOf(cD), 1), cD.stop(), !0)
+        return !(!gU || RU.loudness < tU) && (this.voices.splice(this.voices.indexOf(gU), 1), gU.stop(), !0)
       }
     }
   },
-  36144: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => iD,
-      f: () => fD,
-      i: () => ID
+  36329: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => EU,
+      d: () => PU,
+      e: () => tU
     });
-    class ID {
-      constructor(DD) {
-        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = DD
+    class tU {
+      constructor(UU) {
+        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = UU
       }
-      setMultiplierType(DD, CD) {
-        var cD;
-        this.multipliers[DD] = CD, null === (cD = this._onUpdate) || void 0 === cD || cD.call(this)
+      setMultiplierType(UU, RU) {
+        var gU;
+        this.multipliers[UU] = RU, null === (gU = this._onUpdate) || void 0 === gU || gU.call(this)
       }
-      removeMultiplier(DD) {
-        var CD;
-        delete this.multipliers[DD], null === (CD = this._onUpdate) || void 0 === CD || CD.call(this)
+      removeMultiplier(UU) {
+        var RU;
+        delete this.multipliers[UU], null === (RU = this._onUpdate) || void 0 === RU || RU.call(this)
       }
-      getMultiplierType(DD) {
-        return this.multipliers[DD]
+      getMultiplierType(UU) {
+        return this.multipliers[UU]
       }
       getTotalMultipliedVal() {
-        let DD = 1;
-        for (const CD in this.multipliers) DD *= this.multipliers[CD];
-        return DD
+        let UU = 1;
+        for (const RU in this.multipliers) UU *= this.multipliers[RU];
+        return UU
       }
     }
-    class pD {
+    class pU {
       constructor() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = DD
+        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = UU
       }
-      setBooleanType(DD, CD) {
-        const cD = this._getTotalBooleanVal();
-        this.booleans[DD] = !!CD;
-        const ID = this.getTotalBooleanVal();
-        var pD;
-        ID !== cD && (null === (pD = this._onUpdate) || void 0 === pD || pD.call(this, ID, this.booleans));
-        return ID
+      setBooleanType(UU, RU) {
+        const gU = this._getTotalBooleanVal();
+        this.booleans[UU] = !!RU;
+        const tU = this.getTotalBooleanVal();
+        var pU;
+        tU !== gU && (null === (pU = this._onUpdate) || void 0 === pU || pU.call(this, tU, this.booleans));
+        return tU
       }
-      removeBoolean(DD) {
-        const CD = this._getTotalBooleanVal();
-        delete this.booleans[DD];
-        const cD = this._getTotalBooleanVal();
-        var ID;
-        null !== cD && cD !== CD && (null === (ID = this._onUpdate) || void 0 === ID || ID.call(this, cD, this.booleans));
-        return null !== cD && void 0 !== cD && cD
+      removeBoolean(UU) {
+        const RU = this._getTotalBooleanVal();
+        delete this.booleans[UU];
+        const gU = this._getTotalBooleanVal();
+        var tU;
+        null !== gU && gU !== RU && (null === (tU = this._onUpdate) || void 0 === tU || tU.call(this, gU, this.booleans));
+        return null !== gU && void 0 !== gU && gU
       }
-      getBooleanType(DD) {
-        return this.booleans[DD]
+      getBooleanType(UU) {
+        return this.booleans[UU]
       }
       getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
       forceUpdate() {
-        var DD;
-        null === (DD = this._onUpdate) || void 0 === DD || DD.call(this, this.getTotalBooleanVal(), this.booleans)
+        var UU;
+        null === (UU = this._onUpdate) || void 0 === UU || UU.call(this, this.getTotalBooleanVal(), this.booleans)
       }
       _getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
     }
-    class iD extends pD {
+    class EU extends pU {
       getTotalBooleanVal() {
-        const DD = this._getTotalBooleanVal();
-        if (null === DD) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return DD
+        const UU = this._getTotalBooleanVal();
+        if (null === UU) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return UU
       }
       _getTotalBooleanVal() {
-        let DD = !1,
-          CD = !0;
-        for (const cD in this.booleans) DD = !0, CD &&= this.booleans[cD];
-        return DD ? CD : null
+        let UU = !1,
+          RU = !0;
+        for (const gU in this.booleans) UU = !0, RU &&= this.booleans[gU];
+        return UU ? RU : null
       }
     }
-    class fD extends pD {
+    class PU extends pU {
       getTotalBooleanVal() {
-        const DD = this._getTotalBooleanVal();
-        if (null === DD) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return DD
+        const UU = this._getTotalBooleanVal();
+        if (null === UU) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return UU
       }
       _getTotalBooleanVal() {
-        let DD = !1,
-          CD = !1;
-        for (const cD in this.booleans) DD = !0, CD ||= this.booleans[cD];
-        return DD ? CD : null
+        let UU = !1,
+          RU = !1;
+        for (const gU in this.booleans) UU = !0, RU ||= this.booleans[gU];
+        return UU ? RU : null
       }
     }
   },
-  9237: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => pD,
-      g: () => iD
+  9155: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => pU,
+      f: () => EU
     });
-    var ID = cD(9189);
-    const pD = "Air",
-      iD = Object.freeze(new ID.d(pD, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var tU = gU(9121);
+    const pU = "Air",
+      EU = Object.freeze(new tU.h(pU, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  36139: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => iD,
-      f: () => ID,
-      h: () => pD
+  36324: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => EU,
+      d: () => tU,
+      e: () => pU
     });
-    const ID = 15,
-      pD = 3,
-      iD = 30
+    const tU = 15,
+      pU = 3,
+      EU = 30
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

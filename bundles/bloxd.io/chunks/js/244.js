@@ -1,83 +1,83 @@
 export const id = 244;
 export const ids = [244];
 export const modules = {
-  39213: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => yD,
-      f: () => BD,
-      j: () => QD,
-      k: () => MD,
-      o: () => wD,
-      r: () => bD,
-      u: () => SD
+  39437: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => jU,
+      g: () => GU,
+      i: () => qU,
+      k: () => uU,
+      n: () => KU,
+      o: () => TU,
+      r: () => cU
     });
-    var ID = cD(38048),
-      pD = cD(39215);
+    var tU = gU(38236),
+      pU = gU(39442);
 
-    function iD(DD, CD, cD, ID) {
-      switch (CD) {
+    function EU(UU, RU, gU, tU) {
+      switch (RU) {
         case 5120: {
-          let CD = DD.getInt8(cD);
-          return ID && (CD = Math.max(CD / 127, -1)), CD
+          let RU = UU.getInt8(gU);
+          return tU && (RU = Math.max(RU / 127, -1)), RU
         }
         case 5121: {
-          let CD = DD.getUint8(cD);
-          return ID && (CD /= 255), CD
+          let RU = UU.getUint8(gU);
+          return tU && (RU /= 255), RU
         }
         case 5122: {
-          let CD = DD.getInt16(cD, !0);
-          return ID && (CD = Math.max(CD / 32767, -1)), CD
+          let RU = UU.getInt16(gU, !0);
+          return tU && (RU = Math.max(RU / 32767, -1)), RU
         }
         case 5123: {
-          let CD = DD.getUint16(cD, !0);
-          return ID && (CD /= 65535), CD
+          let RU = UU.getUint16(gU, !0);
+          return tU && (RU /= 65535), RU
         }
         case 5131:
-          return (0, pD.c)(DD.getUint16(cD, !0));
+          return (0, pU.c)(UU.getUint16(gU, !0));
         case 5124:
-          return DD.getInt32(cD, !0);
+          return UU.getInt32(gU, !0);
         case 5125:
-          return DD.getUint32(cD, !0);
+          return UU.getUint32(gU, !0);
         case 5126:
-          return DD.getFloat32(cD, !0);
+          return UU.getFloat32(gU, !0);
         default:
-          throw new Error(`Invalid component type ${CD}`)
+          throw new Error(`Invalid component type ${RU}`)
       }
     }
 
-    function fD(DD, CD, cD, ID, iD) {
-      switch (CD) {
+    function PU(UU, RU, gU, tU, EU) {
+      switch (RU) {
         case 5120:
-          ID && (iD = Math.round(127 * iD)), DD.setInt8(cD, iD);
+          tU && (EU = Math.round(127 * EU)), UU.setInt8(gU, EU);
           break;
         case 5121:
-          ID && (iD = Math.round(255 * iD)), DD.setUint8(cD, iD);
+          tU && (EU = Math.round(255 * EU)), UU.setUint8(gU, EU);
           break;
         case 5122:
-          ID && (iD = Math.round(32767 * iD)), DD.setInt16(cD, iD, !0);
+          tU && (EU = Math.round(32767 * EU)), UU.setInt16(gU, EU, !0);
           break;
         case 5123:
-          ID && (iD = Math.round(65535 * iD)), DD.setUint16(cD, iD, !0);
+          tU && (EU = Math.round(65535 * EU)), UU.setUint16(gU, EU, !0);
           break;
         case 5131:
-          DD.setUint16(cD, (0, pD.i)(iD), !0);
+          UU.setUint16(gU, (0, pU.f)(EU), !0);
           break;
         case 5124:
-          DD.setInt32(cD, iD, !0);
+          UU.setInt32(gU, EU, !0);
           break;
         case 5125:
-          DD.setUint32(cD, iD, !0);
+          UU.setUint32(gU, EU, !0);
           break;
         case 5126:
-          DD.setFloat32(cD, iD, !0);
+          UU.setFloat32(gU, EU, !0);
           break;
         default:
-          throw new Error(`Invalid component type ${CD}`)
+          throw new Error(`Invalid component type ${RU}`)
       }
     }
 
-    function bD(DD) {
-      switch (DD) {
+    function TU(UU) {
+      switch (UU) {
         case 5120:
         case 5121:
           return 1;
@@ -90,61 +90,61 @@ export const modules = {
         case 5126:
           return 4;
         default:
-          throw new Error(`Invalid type '${DD}'`)
+          throw new Error(`Invalid type '${UU}'`)
       }
     }
 
-    function QD(DD, CD, cD, ID, pD, QD, wD, SD) {
-      const BD = new Array(ID),
-        yD = new Array(ID);
-      if (DD instanceof Array) {
-        let pD = CD / 4;
-        const iD = cD / 4;
-        for (let CD = 0; CD < QD; CD += ID) {
-          for (let CD = 0; CD < ID; CD++) BD[CD] = yD[CD] = DD[pD + CD];
-          SD(yD, CD);
-          for (let CD = 0; CD < ID; CD++) BD[CD] !== yD[CD] && (DD[pD + CD] = yD[CD]);
-          pD += iD
+    function qU(UU, RU, gU, tU, pU, qU, KU, cU) {
+      const GU = new Array(tU),
+        jU = new Array(tU);
+      if (UU instanceof Array) {
+        let pU = RU / 4;
+        const EU = gU / 4;
+        for (let RU = 0; RU < qU; RU += tU) {
+          for (let RU = 0; RU < tU; RU++) GU[RU] = jU[RU] = UU[pU + RU];
+          cU(jU, RU);
+          for (let RU = 0; RU < tU; RU++) GU[RU] !== jU[RU] && (UU[pU + RU] = jU[RU]);
+          pU += EU
         }
       } else {
-        const MD = ArrayBuffer.isView(DD) ? new DataView(DD.buffer, DD.byteOffset, DD.byteLength) : new DataView(DD),
-          tD = bD(pD);
-        for (let DD = 0; DD < QD; DD += ID) {
-          for (let DD = 0, cD = CD; DD < ID; DD++, cD += tD) BD[DD] = yD[DD] = iD(MD, pD, cD, wD);
-          SD(yD, DD);
-          for (let DD = 0, cD = CD; DD < ID; DD++, cD += tD) BD[DD] !== yD[DD] && fD(MD, pD, cD, wD, yD[DD]);
-          CD += cD
+        const uU = ArrayBuffer.isView(UU) ? new DataView(UU.buffer, UU.byteOffset, UU.byteLength) : new DataView(UU),
+          CU = TU(pU);
+        for (let UU = 0; UU < qU; UU += tU) {
+          for (let UU = 0, gU = RU; UU < tU; UU++, gU += CU) GU[UU] = jU[UU] = EU(uU, pU, gU, KU);
+          cU(jU, UU);
+          for (let UU = 0, gU = RU; UU < tU; UU++, gU += CU) GU[UU] !== jU[UU] && PU(uU, pU, gU, KU, jU[UU]);
+          RU += gU
         }
       }
     }
 
-    function wD(DD, CD, cD, pD, iD, fD, wD, SD) {
-      const BD = CD * bD(cD),
-        yD = wD * CD;
-      if (5126 !== cD || iD !== BD) {
-        const ID = new Float32Array(yD);
-        return QD(DD, pD, iD, CD, cD, yD, fD, ((DD, cD) => {
-          for (let pD = 0; pD < CD; pD++) ID[cD + pD] = DD[pD]
-        })), ID
+    function KU(UU, RU, gU, pU, EU, PU, KU, cU) {
+      const GU = RU * TU(gU),
+        jU = KU * RU;
+      if (5126 !== gU || EU !== GU) {
+        const tU = new Float32Array(jU);
+        return qU(UU, pU, EU, RU, gU, jU, PU, ((UU, gU) => {
+          for (let pU = 0; pU < RU; pU++) tU[gU + pU] = UU[pU]
+        })), tU
       }
-      if (!(DD instanceof Array || DD instanceof Float32Array) || 0 !== pD || DD.length !== yD) {
-        if (DD instanceof Array) {
-          const CD = pD / 4;
-          return DD.slice(CD, CD + yD)
+      if (!(UU instanceof Array || UU instanceof Float32Array) || 0 !== pU || UU.length !== jU) {
+        if (UU instanceof Array) {
+          const RU = pU / 4;
+          return UU.slice(RU, RU + jU)
         }
-        if (ArrayBuffer.isView(DD)) {
-          const CD = DD.byteOffset + pD;
-          return 0 !== (3 & CD) && (ID.e.Warn("Float array must be aligned to 4-bytes border"), SD = !0), SD ? new Float32Array(DD.buffer.slice(CD, CD + yD * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(DD.buffer, CD, yD)
+        if (ArrayBuffer.isView(UU)) {
+          const RU = UU.byteOffset + pU;
+          return 0 !== (3 & RU) && (tU.e.Warn("Float array must be aligned to 4-bytes border"), cU = !0), cU ? new Float32Array(UU.buffer.slice(RU, RU + jU * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(UU.buffer, RU, jU)
         }
-        return new Float32Array(DD, pD, yD)
+        return new Float32Array(UU, pU, jU)
       }
-      return SD ? DD.slice() : DD
+      return cU ? UU.slice() : UU
     }
 
-    function SD(DD, CD, cD, pD, iD, fD, wD) {
-      const SD = bD(cD),
-        BD = function(DD) {
-          switch (DD) {
+    function cU(UU, RU, gU, pU, EU, PU, KU) {
+      const cU = TU(gU),
+        GU = function(UU) {
+          switch (UU) {
             case 5120:
               return Int8Array;
             case 5121:
@@ -161,120 +161,120 @@ export const modules = {
             case 5126:
               return Float32Array;
             default:
-              throw new Error(`Invalid component type '${DD}'`)
+              throw new Error(`Invalid component type '${UU}'`)
           }
-        }(cD),
-        yD = fD * CD;
-      if (Array.isArray(DD)) {
-        if (0 !== (3 & pD) || 0 !== (3 & iD)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
-        const ID = pD / 4,
-          bD = iD / 4;
-        if (ID + (fD - 1) * bD + CD > DD.length) throw new Error("Last accessed index is out of bounds.");
-        if (bD < CD) throw new Error("Data stride cannot be smaller than the component size.");
-        if (bD !== CD) {
-          const ID = new BD(yD);
-          return QD(DD, pD, iD, CD, cD, yD, !1, ((DD, cD) => {
-            for (let pD = 0; pD < CD; pD++) ID[cD + pD] = DD[pD]
-          })), ID
+        }(gU),
+        jU = PU * RU;
+      if (Array.isArray(UU)) {
+        if (0 !== (3 & pU) || 0 !== (3 & EU)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
+        const tU = pU / 4,
+          TU = EU / 4;
+        if (tU + (PU - 1) * TU + RU > UU.length) throw new Error("Last accessed index is out of bounds.");
+        if (TU < RU) throw new Error("Data stride cannot be smaller than the component size.");
+        if (TU !== RU) {
+          const tU = new GU(jU);
+          return qU(UU, pU, EU, RU, gU, jU, !1, ((UU, gU) => {
+            for (let pU = 0; pU < RU; pU++) tU[gU + pU] = UU[pU]
+          })), tU
         }
-        return new BD(DD.slice(ID, ID + yD))
+        return new GU(UU.slice(tU, tU + jU))
       }
-      let MD, tD = pD;
-      ArrayBuffer.isView(DD) ? (MD = DD.buffer, tD += DD.byteOffset) : MD = DD;
-      if (tD + (fD - 1) * iD + CD * SD > MD.byteLength) throw new Error("Last accessed byte is out of bounds.");
-      const ZD = CD * SD;
-      if (iD < ZD) throw new Error("Byte stride cannot be smaller than the component's byte size.");
-      if (iD !== ZD) {
-        const DD = new BD(yD),
-          cD = new Uint8Array(MD, tD),
-          ID = new Uint8Array(DD.buffer),
-          pD = CD * SD;
-        for (let CD = 0, bD = 0, QD = 0; CD < fD; CD++, bD += iD, QD += pD) ID.set(cD.subarray(bD, bD + pD), QD);
-        return DD
+      let uU, CU = pU;
+      ArrayBuffer.isView(UU) ? (uU = UU.buffer, CU += UU.byteOffset) : uU = UU;
+      if (CU + (PU - 1) * EU + RU * cU > uU.byteLength) throw new Error("Last accessed byte is out of bounds.");
+      const hU = RU * cU;
+      if (EU < hU) throw new Error("Byte stride cannot be smaller than the component's byte size.");
+      if (EU !== hU) {
+        const UU = new GU(jU),
+          gU = new Uint8Array(uU, CU),
+          tU = new Uint8Array(UU.buffer),
+          pU = RU * cU;
+        for (let RU = 0, TU = 0, qU = 0; RU < PU; RU++, TU += EU, qU += pU) tU.set(gU.subarray(TU, TU + pU), qU);
+        return UU
       }
-      return 1 !== SD && 0 !== (tD & SD - 1) && (ID.e.Warn("Array must be aligned to border of element size. Data will be copied."), wD = !0), wD ? new BD(MD.slice(tD, tD + yD * SD)) : new BD(MD, tD, yD)
+      return 1 !== cU && 0 !== (CU & cU - 1) && (tU.e.Warn("Array must be aligned to border of element size. Data will be copied."), KU = !0), KU ? new GU(uU.slice(CU, CU + jU * cU)) : new GU(uU, CU, jU)
     }
 
-    function BD(DD, CD, cD, pD, iD, fD, wD, SD) {
-      const BD = CD * bD(cD),
-        yD = wD * CD;
-      if (SD.length !== yD) throw new Error("Output length is not valid");
-      if (5126 === cD && iD === BD)
-        if (DD instanceof Array) {
-          const CD = pD / 4;
-          SD.set(DD, CD)
-        } else if (ArrayBuffer.isView(DD)) {
-        const CD = DD.byteOffset + pD;
-        if (0 !== (3 & CD)) return ID.e.Warn("Float array must be aligned to 4-bytes border"), void SD.set(new Float32Array(DD.buffer.slice(CD, CD + yD * Float32Array.BYTES_PER_ELEMENT)));
-        const cD = new Float32Array(DD.buffer, CD, yD);
-        SD.set(cD)
+    function GU(UU, RU, gU, pU, EU, PU, KU, cU) {
+      const GU = RU * TU(gU),
+        jU = KU * RU;
+      if (cU.length !== jU) throw new Error("Output length is not valid");
+      if (5126 === gU && EU === GU)
+        if (UU instanceof Array) {
+          const RU = pU / 4;
+          cU.set(UU, RU)
+        } else if (ArrayBuffer.isView(UU)) {
+        const RU = UU.byteOffset + pU;
+        if (0 !== (3 & RU)) return tU.e.Warn("Float array must be aligned to 4-bytes border"), void cU.set(new Float32Array(UU.buffer.slice(RU, RU + jU * Float32Array.BYTES_PER_ELEMENT)));
+        const gU = new Float32Array(UU.buffer, RU, jU);
+        cU.set(gU)
       } else {
-        const CD = new Float32Array(DD, pD, yD);
-        SD.set(CD)
-      } else QD(DD, pD, iD, CD, cD, yD, fD, ((DD, cD) => {
-        for (let ID = 0; ID < CD; ID++) SD[cD + ID] = DD[ID]
+        const RU = new Float32Array(UU, pU, jU);
+        cU.set(RU)
+      } else qU(UU, pU, EU, RU, gU, jU, PU, ((UU, gU) => {
+        for (let tU = 0; tU < RU; tU++) cU[gU + tU] = UU[tU]
       }))
     }
 
-    function yD(DD, CD) {
-      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      if (Array.isArray(DD)) {
-        for (let pD = 0; pD < CD; pD++)
-          if (DD[cD + pD] - ID > 65535) return !0;
+    function jU(UU, RU) {
+      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      if (Array.isArray(UU)) {
+        for (let pU = 0; pU < RU; pU++)
+          if (UU[gU + pU] - tU > 65535) return !0;
         return !1
       }
-      return 4 === DD.BYTES_PER_ELEMENT
+      return 4 === UU.BYTES_PER_ELEMENT
     }
 
-    function MD(DD) {
-      const CD = DD.buffer;
-      if (CD instanceof ArrayBuffer) return DD;
-      const cD = new ArrayBuffer(DD.byteLength);
-      return new Uint8Array(cD).set(new Uint8Array(CD, DD.byteOffset, DD.byteLength)), cD
+    function uU(UU) {
+      const RU = UU.buffer;
+      if (RU instanceof ArrayBuffer) return UU;
+      const gU = new ArrayBuffer(UU.byteLength);
+      return new Uint8Array(gU).set(new Uint8Array(RU, UU.byteOffset, UU.byteLength)), gU
     }
   },
-  39035: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => PD,
-      c: () => nD,
-      k: () => OD,
-      g: () => aD,
-      o: () => VD
+  39265: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => wU,
+      g: () => IU,
+      l: () => JU,
+      i: () => BU,
+      m: () => VU
     });
-    class ID {
+    class tU {
       constructor() {
         this.children = []
       }
-      isValid(DD) {
+      isValid(UU) {
         return !0
       }
-      process(DD, CD, cD) {
-        let ID = "";
+      process(UU, RU, gU) {
+        let tU = "";
         if (this.line) {
-          let cD = this.line;
-          const pD = CD.processor;
-          if (pD) {
-            pD.lineProcessor && (cD = pD.lineProcessor(cD, CD.isFragment, CD.processingContext));
-            const ID = CD.processor?.attributeKeywordName ?? "attribute",
-              iD = CD.isFragment && CD.processor?.varyingFragmentKeywordName ? CD.processor?.varyingFragmentKeywordName : !CD.isFragment && CD.processor?.varyingVertexKeywordName ? CD.processor?.varyingVertexKeywordName : "varying";
-            if (!CD.isFragment && pD.attributeProcessor && this.line.startsWith(ID)) cD = pD.attributeProcessor(this.line, DD, CD.processingContext);
-            else if (pD.varyingProcessor && (pD.varyingCheck?.(this.line, CD.isFragment) || !pD.varyingCheck && this.line.startsWith(iD))) cD = pD.varyingProcessor(this.line, CD.isFragment, DD, CD.processingContext);
-            else if (pD.uniformProcessor && pD.uniformRegexp && pD.uniformRegexp.test(this.line)) CD.lookForClosingBracketForUniformBuffer || (cD = pD.uniformProcessor(this.line, CD.isFragment, DD, CD.processingContext));
-            else if (pD.uniformBufferProcessor && pD.uniformBufferRegexp && pD.uniformBufferRegexp.test(this.line)) CD.lookForClosingBracketForUniformBuffer || (cD = pD.uniformBufferProcessor(this.line, CD.isFragment, CD.processingContext), CD.lookForClosingBracketForUniformBuffer = !0);
-            else if (pD.textureProcessor && pD.textureRegexp && pD.textureRegexp.test(this.line)) cD = pD.textureProcessor(this.line, CD.isFragment, DD, CD.processingContext);
-            else if ((pD.uniformProcessor || pD.uniformBufferProcessor) && this.line.startsWith("uniform") && !CD.lookForClosingBracketForUniformBuffer) {
-              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? pD.uniformProcessor && (cD = pD.uniformProcessor(this.line, CD.isFragment, DD, CD.processingContext)) : pD.uniformBufferProcessor && (cD = pD.uniformBufferProcessor(this.line, CD.isFragment, CD.processingContext), CD.lookForClosingBracketForUniformBuffer = !0)
+          let gU = this.line;
+          const pU = RU.processor;
+          if (pU) {
+            pU.lineProcessor && (gU = pU.lineProcessor(gU, RU.isFragment, RU.processingContext));
+            const tU = RU.processor?.attributeKeywordName ?? "attribute",
+              EU = RU.isFragment && RU.processor?.varyingFragmentKeywordName ? RU.processor?.varyingFragmentKeywordName : !RU.isFragment && RU.processor?.varyingVertexKeywordName ? RU.processor?.varyingVertexKeywordName : "varying";
+            if (!RU.isFragment && pU.attributeProcessor && this.line.startsWith(tU)) gU = pU.attributeProcessor(this.line, UU, RU.processingContext);
+            else if (pU.varyingProcessor && (pU.varyingCheck?.(this.line, RU.isFragment) || !pU.varyingCheck && this.line.startsWith(EU))) gU = pU.varyingProcessor(this.line, RU.isFragment, UU, RU.processingContext);
+            else if (pU.uniformProcessor && pU.uniformRegexp && pU.uniformRegexp.test(this.line)) RU.lookForClosingBracketForUniformBuffer || (gU = pU.uniformProcessor(this.line, RU.isFragment, UU, RU.processingContext));
+            else if (pU.uniformBufferProcessor && pU.uniformBufferRegexp && pU.uniformBufferRegexp.test(this.line)) RU.lookForClosingBracketForUniformBuffer || (gU = pU.uniformBufferProcessor(this.line, RU.isFragment, RU.processingContext), RU.lookForClosingBracketForUniformBuffer = !0);
+            else if (pU.textureProcessor && pU.textureRegexp && pU.textureRegexp.test(this.line)) gU = pU.textureProcessor(this.line, RU.isFragment, UU, RU.processingContext);
+            else if ((pU.uniformProcessor || pU.uniformBufferProcessor) && this.line.startsWith("uniform") && !RU.lookForClosingBracketForUniformBuffer) {
+              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? pU.uniformProcessor && (gU = pU.uniformProcessor(this.line, RU.isFragment, UU, RU.processingContext)) : pU.uniformBufferProcessor && (gU = pU.uniformBufferProcessor(this.line, RU.isFragment, RU.processingContext), RU.lookForClosingBracketForUniformBuffer = !0)
             }
-            CD.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (CD.lookForClosingBracketForUniformBuffer = !1, pD.endOfUniformBufferProcessor && (cD = pD.endOfUniformBufferProcessor(this.line, CD.isFragment, CD.processingContext)))
+            RU.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (RU.lookForClosingBracketForUniformBuffer = !1, pU.endOfUniformBufferProcessor && (gU = pU.endOfUniformBufferProcessor(this.line, RU.isFragment, RU.processingContext)))
           }
-          ID += cD + "\n"
+          tU += gU + "\n"
         }
-        for (const pD of this.children) ID += pD.process(DD, CD, cD);
-        return this.additionalDefineKey && (DD[this.additionalDefineKey] = this.additionalDefineValue || "true", cD[this.additionalDefineKey] = DD[this.additionalDefineKey]), ID
+        for (const pU of this.children) tU += pU.process(UU, RU, gU);
+        return this.additionalDefineKey && (UU[this.additionalDefineKey] = this.additionalDefineValue || "true", gU[this.additionalDefineKey] = UU[this.additionalDefineKey]), tU
       }
     }
-    class pD {
+    class pU {
       constructor() {
         this._lines = []
       }
@@ -284,273 +284,273 @@ export const modules = {
       get canRead() {
         return this.lineIndex < this._lines.length - 1
       }
-      set lines(DD) {
+      set lines(UU) {
         this._lines.length = 0;
-        for (const CD of DD) {
-          if (!CD || "\r" === CD) continue;
-          if ("#" === CD[0]) {
-            this._lines.push(CD);
+        for (const RU of UU) {
+          if (!RU || "\r" === RU) continue;
+          if ("#" === RU[0]) {
+            this._lines.push(RU);
             continue
           }
-          const DD = CD.trim();
-          if (!DD) continue;
-          if (DD.startsWith("//")) {
-            this._lines.push(CD);
+          const UU = RU.trim();
+          if (!UU) continue;
+          if (UU.startsWith("//")) {
+            this._lines.push(RU);
             continue
           }
-          const cD = DD.indexOf(";");
-          if (-1 === cD) this._lines.push(DD);
-          else if (cD === DD.length - 1) DD.length > 1 && this._lines.push(DD);
+          const gU = UU.indexOf(";");
+          if (-1 === gU) this._lines.push(UU);
+          else if (gU === UU.length - 1) UU.length > 1 && this._lines.push(UU);
           else {
-            const DD = CD.split(";");
-            for (let CD = 0; CD < DD.length; CD++) {
-              let cD = DD[CD];
-              cD && (cD = cD.trim(), cD && this._lines.push(cD + (CD !== DD.length - 1 ? ";" : "")))
+            const UU = RU.split(";");
+            for (let RU = 0; RU < UU.length; RU++) {
+              let gU = UU[RU];
+              gU && (gU = gU.trim(), gU && this._lines.push(gU + (RU !== UU.length - 1 ? ";" : "")))
             }
           }
         }
       }
     }
-    class iD extends ID {
-      process(DD, CD, cD) {
-        for (let ID = 0; ID < this.children.length; ID++) {
-          const pD = this.children[ID];
-          if (pD.isValid(DD)) return pD.process(DD, CD, cD)
+    class EU extends tU {
+      process(UU, RU, gU) {
+        for (let tU = 0; tU < this.children.length; tU++) {
+          const pU = this.children[tU];
+          if (pU.isValid(UU)) return pU.process(UU, RU, gU)
         }
         return ""
       }
     }
-    class fD extends ID {
-      isValid(DD) {
-        return this.testExpression.isTrue(DD)
+    class PU extends tU {
+      isValid(UU) {
+        return this.testExpression.isTrue(UU)
       }
     }
-    class bD {
-      isTrue(DD) {
+    class TU {
+      isTrue(UU) {
         return !0
       }
-      static postfixToInfix(DD) {
-        const CD = [];
-        for (const cD of DD)
-          if (void 0 === bD._OperatorPriority[cD]) CD.push(cD);
+      static postfixToInfix(UU) {
+        const RU = [];
+        for (const gU of UU)
+          if (void 0 === TU._OperatorPriority[gU]) RU.push(gU);
           else {
-            const DD = CD[CD.length - 1],
-              ID = CD[CD.length - 2];
-            CD.length -= 2, CD.push(`(${ID}${cD}${DD})`)
-          } return CD[CD.length - 1]
+            const UU = RU[RU.length - 1],
+              tU = RU[RU.length - 2];
+            RU.length -= 2, RU.push(`(${tU}${gU}${UU})`)
+          } return RU[RU.length - 1]
       }
-      static infixToPostfix(DD) {
-        const CD = bD._InfixToPostfixCache.get(DD);
-        if (CD) return CD.accessTime = Date.now(), CD.result;
-        if (!DD.includes("&&") && !DD.includes("||") && !DD.includes(")") && !DD.includes("(")) return [DD];
-        const cD = [];
-        let ID = -1;
-        const pD = () => {
-            SD = SD.trim(), "" !== SD && (cD.push(SD), SD = "")
+      static infixToPostfix(UU) {
+        const RU = TU._InfixToPostfixCache.get(UU);
+        if (RU) return RU.accessTime = Date.now(), RU.result;
+        if (!UU.includes("&&") && !UU.includes("||") && !UU.includes(")") && !UU.includes("(")) return [UU];
+        const gU = [];
+        let tU = -1;
+        const pU = () => {
+            cU = cU.trim(), "" !== cU && (gU.push(cU), cU = "")
           },
-          iD = DD => {
-            ID < bD._Stack.length - 1 && (bD._Stack[++ID] = DD)
+          EU = UU => {
+            tU < TU._Stack.length - 1 && (TU._Stack[++tU] = UU)
           },
-          fD = () => bD._Stack[ID],
-          QD = () => -1 === ID ? "!!INVALID EXPRESSION!!" : bD._Stack[ID--];
-        let wD = 0,
-          SD = "";
-        for (; wD < DD.length;) {
-          const CD = DD.charAt(wD),
-            BD = wD < DD.length - 1 ? DD.substring(wD, 2 + wD) : "";
-          if ("(" === CD) SD = "", iD(CD);
-          else if (")" === CD) {
-            for (pD(); - 1 !== ID && "(" !== fD();) cD.push(QD());
-            QD()
-          } else if (bD._OperatorPriority[BD] > 1) {
-            for (pD(); - 1 !== ID && bD._OperatorPriority[fD()] >= bD._OperatorPriority[BD];) cD.push(QD());
-            iD(BD), wD++
-          } else SD += CD;
-          wD++
+          PU = () => TU._Stack[tU],
+          qU = () => -1 === tU ? "!!INVALID EXPRESSION!!" : TU._Stack[tU--];
+        let KU = 0,
+          cU = "";
+        for (; KU < UU.length;) {
+          const RU = UU.charAt(KU),
+            GU = KU < UU.length - 1 ? UU.substring(KU, 2 + KU) : "";
+          if ("(" === RU) cU = "", EU(RU);
+          else if (")" === RU) {
+            for (pU(); - 1 !== tU && "(" !== PU();) gU.push(qU());
+            qU()
+          } else if (TU._OperatorPriority[GU] > 1) {
+            for (pU(); - 1 !== tU && TU._OperatorPriority[PU()] >= TU._OperatorPriority[GU];) gU.push(qU());
+            EU(GU), KU++
+          } else cU += RU;
+          KU++
         }
-        for (pD(); - 1 !== ID;) "(" === fD() ? QD() : cD.push(QD());
-        return bD._InfixToPostfixCache.size >= bD.InfixToPostfixCacheLimitSize && bD.ClearCache(), bD._InfixToPostfixCache.set(DD, {
-          result: cD,
+        for (pU(); - 1 !== tU;) "(" === PU() ? qU() : gU.push(qU());
+        return TU._InfixToPostfixCache.size >= TU.InfixToPostfixCacheLimitSize && TU.ClearCache(), TU._InfixToPostfixCache.set(UU, {
+          result: gU,
           accessTime: Date.now()
-        }), cD
+        }), gU
       }
       static ClearCache() {
-        const DD = Array.from(bD._InfixToPostfixCache.entries()).sort(((DD, CD) => DD[1].accessTime - CD[1].accessTime));
-        for (let CD = 0; CD < bD.InfixToPostfixCacheCleanupSize; CD++) bD._InfixToPostfixCache.delete(DD[CD][0])
+        const UU = Array.from(TU._InfixToPostfixCache.entries()).sort(((UU, RU) => UU[1].accessTime - RU[1].accessTime));
+        for (let RU = 0; RU < TU.InfixToPostfixCacheCleanupSize; RU++) TU._InfixToPostfixCache.delete(UU[RU][0])
       }
     }
-    bD.InfixToPostfixCacheLimitSize = 5e4, bD.InfixToPostfixCacheCleanupSize = 25e3, bD._InfixToPostfixCache = new Map, bD._OperatorPriority = {
+    TU.InfixToPostfixCacheLimitSize = 5e4, TU.InfixToPostfixCacheCleanupSize = 25e3, TU._InfixToPostfixCache = new Map, TU._OperatorPriority = {
       ")": 0,
       "(": 1,
       "||": 2,
       "&&": 3
-    }, bD._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
-    class QD extends bD {
-      constructor(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        super(), this.define = DD, this.not = CD
+    }, TU._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
+    class qU extends TU {
+      constructor(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        super(), this.define = UU, this.not = RU
       }
-      isTrue(DD) {
-        let CD = void 0 !== DD[this.define];
-        return this.not && (CD = !CD), CD
-      }
-    }
-    class wD extends bD {
-      isTrue(DD) {
-        return this.leftOperand.isTrue(DD) || this.rightOperand.isTrue(DD)
+      isTrue(UU) {
+        let RU = void 0 !== UU[this.define];
+        return this.not && (RU = !RU), RU
       }
     }
-    class SD extends bD {
-      isTrue(DD) {
-        return this.leftOperand.isTrue(DD) && this.rightOperand.isTrue(DD)
+    class KU extends TU {
+      isTrue(UU) {
+        return this.leftOperand.isTrue(UU) || this.rightOperand.isTrue(UU)
       }
     }
-    class BD extends bD {
-      constructor(DD, CD, cD) {
-        super(), this.define = DD, this.operand = CD, this.testValue = cD
+    class cU extends TU {
+      isTrue(UU) {
+        return this.leftOperand.isTrue(UU) && this.rightOperand.isTrue(UU)
+      }
+    }
+    class GU extends TU {
+      constructor(UU, RU, gU) {
+        super(), this.define = UU, this.operand = RU, this.testValue = gU
       }
       toString() {
         return `${this.define} ${this.operand} ${this.testValue}`
       }
-      isTrue(DD) {
-        let CD = !1;
-        const cD = parseInt(void 0 != DD[this.define] ? DD[this.define] : this.define),
-          ID = parseInt(void 0 != DD[this.testValue] ? DD[this.testValue] : this.testValue);
-        if (isNaN(cD) || isNaN(ID)) return !1;
+      isTrue(UU) {
+        let RU = !1;
+        const gU = parseInt(void 0 != UU[this.define] ? UU[this.define] : this.define),
+          tU = parseInt(void 0 != UU[this.testValue] ? UU[this.testValue] : this.testValue);
+        if (isNaN(gU) || isNaN(tU)) return !1;
         switch (this.operand) {
           case ">":
-            CD = cD > ID;
+            RU = gU > tU;
             break;
           case "<":
-            CD = cD < ID;
+            RU = gU < tU;
             break;
           case "<=":
-            CD = cD <= ID;
+            RU = gU <= tU;
             break;
           case ">=":
-            CD = cD >= ID;
+            RU = gU >= tU;
             break;
           case "==":
-            CD = cD === ID;
+            RU = gU === tU;
             break;
           case "!=":
-            CD = cD !== ID
+            RU = gU !== tU
         }
-        return CD
+        return RU
       }
     }
-    var yD = cD(39027),
-      MD = cD(39023);
-    const tD = /defined\s*?\((.+?)\)/g,
-      ZD = /defined\s*?\[(.+?)\]/g,
-      oD = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
-      vD = /__decl__/,
-      ND = /light\{X\}.(\w*)/g,
-      gD = /\{X\}/g,
-      XD = [],
-      mD = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
+    var jU = gU(39256),
+      uU = gU(39248);
+    const CU = /defined\s*?\((.+?)\)/g,
+      hU = /defined\s*?\[(.+?)\]/g,
+      QU = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
+      eU = /__decl__/,
+      WU = /light\{X\}.(\w*)/g,
+      fU = /\{X\}/g,
+      xU = [],
+      mU = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
 
-    function nD(DD) {
-      DD.processor && DD.processor.initializeShaders && DD.processor.initializeShaders(DD.processingContext)
+    function IU(UU) {
+      UU.processor && UU.processor.initializeShaders && UU.processor.initializeShaders(UU.processingContext)
     }
 
-    function OD(DD, CD, cD, ID) {
-      CD.processor?.preProcessShaderCode && (DD = CD.processor.preProcessShaderCode(DD, CD.isFragment)), aD(DD, CD, (DD => {
-        CD.processCodeAfterIncludes && (DD = CD.processCodeAfterIncludes(CD.isFragment ? "fragment" : "vertex", DD, CD.defines));
-        const pD = function(DD, CD, cD) {
-          let ID = function(DD, CD) {
-            if (CD.processor?.noPrecision) return DD;
-            const cD = CD.shouldUseHighPrecisionShader; - 1 === DD.indexOf("precision highp float") ? DD = cD ? "precision highp float;\n" + DD : "precision mediump float;\n" + DD : cD || (DD = DD.replace("precision highp float", "precision mediump float"));
-            return DD
-          }(DD, CD);
-          if (!CD.processor) return ID;
-          if (0 === CD.processor.shaderLanguage && -1 !== ID.indexOf("#version 3") && (ID = ID.replace("#version 300 es", ""), !CD.processor.parseGLES3)) return ID;
-          const pD = CD.defines,
-            iD = KD(CD, cD);
-          CD.processor.preProcessor && (ID = CD.processor.preProcessor(ID, pD, iD, CD.isFragment, CD.processingContext));
-          const fD = {};
-          ID = JD(ID, iD, CD, fD), CD.processor.postProcessor && (ID = CD.processor.postProcessor(ID, pD, CD.isFragment, CD.processingContext, cD ? {
-            drawBuffersExtensionDisabled: !cD.getCaps().drawBuffersExtension
-          } : {}, iD, fD));
-          cD?._features.needShaderCodeInlining && (ID = cD.inlineShaderCode(ID));
-          return ID
-        }(DD, CD, ID);
-        cD(pD, DD)
+    function JU(UU, RU, gU, tU) {
+      RU.processor?.preProcessShaderCode && (UU = RU.processor.preProcessShaderCode(UU, RU.isFragment)), BU(UU, RU, (UU => {
+        RU.processCodeAfterIncludes && (UU = RU.processCodeAfterIncludes(RU.isFragment ? "fragment" : "vertex", UU, RU.defines));
+        const pU = function(UU, RU, gU) {
+          let tU = function(UU, RU) {
+            if (RU.processor?.noPrecision) return UU;
+            const gU = RU.shouldUseHighPrecisionShader; - 1 === UU.indexOf("precision highp float") ? UU = gU ? "precision highp float;\n" + UU : "precision mediump float;\n" + UU : gU || (UU = UU.replace("precision highp float", "precision mediump float"));
+            return UU
+          }(UU, RU);
+          if (!RU.processor) return tU;
+          if (0 === RU.processor.shaderLanguage && -1 !== tU.indexOf("#version 3") && (tU = tU.replace("#version 300 es", ""), !RU.processor.parseGLES3)) return tU;
+          const pU = RU.defines,
+            EU = YU(RU, gU);
+          RU.processor.preProcessor && (tU = RU.processor.preProcessor(tU, pU, EU, RU.isFragment, RU.processingContext));
+          const PU = {};
+          tU = aU(tU, EU, RU, PU), RU.processor.postProcessor && (tU = RU.processor.postProcessor(tU, pU, RU.isFragment, RU.processingContext, gU ? {
+            drawBuffersExtensionDisabled: !gU.getCaps().drawBuffersExtension
+          } : {}, EU, PU));
+          gU?._features.needShaderCodeInlining && (tU = gU.inlineShaderCode(tU));
+          return tU
+        }(UU, RU, tU);
+        gU(pU, UU)
       }))
     }
 
-    function PD(DD, CD, cD) {
-      return cD.processor && cD.processor.finalizeShaders ? cD.processor.finalizeShaders(DD, CD, cD.processingContext) : {
-        vertexCode: DD,
-        fragmentCode: CD
+    function wU(UU, RU, gU) {
+      return gU.processor && gU.processor.finalizeShaders ? gU.processor.finalizeShaders(UU, RU, gU.processingContext) : {
+        vertexCode: UU,
+        fragmentCode: RU
       }
     }
 
-    function HD(DD) {
-      const CD = /defined\((.+)\)/.exec(DD);
-      if (CD && CD.length) return new QD(CD[1].trim(), "!" === DD[0]);
-      const cD = ["==", "!=", ">=", "<=", "<", ">"];
-      let ID = "",
-        pD = 0;
-      for (ID of cD)
-        if (pD = DD.indexOf(ID), pD > -1) break;
-      if (-1 === pD) return new QD(DD);
-      const iD = DD.substring(0, pD).trim(),
-        fD = DD.substring(pD + ID.length).trim();
-      return new BD(iD, ID, fD)
+    function nU(UU) {
+      const RU = /defined\((.+)\)/.exec(UU);
+      if (RU && RU.length) return new qU(RU[1].trim(), "!" === UU[0]);
+      const gU = ["==", "!=", ">=", "<=", "<", ">"];
+      let tU = "",
+        pU = 0;
+      for (tU of gU)
+        if (pU = UU.indexOf(tU), pU > -1) break;
+      if (-1 === pU) return new qU(UU);
+      const EU = UU.substring(0, pU).trim(),
+        PU = UU.substring(pU + tU.length).trim();
+      return new GU(EU, tU, PU)
     }
 
-    function UD(DD, CD) {
-      const cD = new fD,
-        ID = DD.substring(0, CD);
-      let pD = DD.substring(CD);
-      return pD = pD.substring(0, (pD.indexOf("//") + 1 || pD.length + 1) - 1).trim(), cD.testExpression = "#ifdef" === ID ? new QD(pD) : "#ifndef" === ID ? new QD(pD, !0) : function(DD) {
-        DD = DD.replace(tD, "defined[$1]");
-        const CD = bD.infixToPostfix(DD),
-          cD = [];
-        for (const pD of CD)
-          if ("||" !== pD && "&&" !== pD) cD.push(pD);
-          else if (cD.length >= 2) {
-          let DD = cD[cD.length - 1],
-            CD = cD[cD.length - 2];
-          cD.length -= 2;
-          const ID = "&&" == pD ? new SD : new wD;
-          "string" === typeof DD && (DD = DD.replace(ZD, "defined($1)")), "string" === typeof CD && (CD = CD.replace(ZD, "defined($1)")), ID.leftOperand = "string" === typeof CD ? HD(CD) : CD, ID.rightOperand = "string" === typeof DD ? HD(DD) : DD, cD.push(ID)
+    function bU(UU, RU) {
+      const gU = new PU,
+        tU = UU.substring(0, RU);
+      let pU = UU.substring(RU);
+      return pU = pU.substring(0, (pU.indexOf("//") + 1 || pU.length + 1) - 1).trim(), gU.testExpression = "#ifdef" === tU ? new qU(pU) : "#ifndef" === tU ? new qU(pU, !0) : function(UU) {
+        UU = UU.replace(CU, "defined[$1]");
+        const RU = TU.infixToPostfix(UU),
+          gU = [];
+        for (const pU of RU)
+          if ("||" !== pU && "&&" !== pU) gU.push(pU);
+          else if (gU.length >= 2) {
+          let UU = gU[gU.length - 1],
+            RU = gU[gU.length - 2];
+          gU.length -= 2;
+          const tU = "&&" == pU ? new cU : new KU;
+          "string" === typeof UU && (UU = UU.replace(hU, "defined($1)")), "string" === typeof RU && (RU = RU.replace(hU, "defined($1)")), tU.leftOperand = "string" === typeof RU ? nU(RU) : RU, tU.rightOperand = "string" === typeof UU ? nU(UU) : UU, gU.push(tU)
         }
-        let ID = cD[cD.length - 1];
-        return "string" === typeof ID && (ID = ID.replace(ZD, "defined($1)")), "string" === typeof ID ? HD(ID) : ID
-      }(pD), cD
+        let tU = gU[gU.length - 1];
+        return "string" === typeof tU && (tU = tU.replace(hU, "defined($1)")), "string" === typeof tU ? nU(tU) : tU
+      }(pU), gU
     }
 
-    function xD(DD, CD, cD, pD) {
-      let iD;
-      for (; qD(DD, cD, pD);) {
-        iD = DD.currentLine;
-        const fD = iD.substring(0, 5).toLowerCase();
-        if ("#else" === fD) {
-          const cD = new ID;
-          return CD.children.push(cD), void qD(DD, cD, pD)
+    function oU(UU, RU, gU, pU) {
+      let EU;
+      for (; ZU(UU, gU, pU);) {
+        EU = UU.currentLine;
+        const PU = EU.substring(0, 5).toLowerCase();
+        if ("#else" === PU) {
+          const gU = new tU;
+          return RU.children.push(gU), void ZU(UU, gU, pU)
         }
-        if ("#elif" === fD) {
-          const DD = UD(iD, 5);
-          CD.children.push(DD), cD = DD
+        if ("#elif" === PU) {
+          const UU = bU(EU, 5);
+          RU.children.push(UU), gU = UU
         }
       }
     }
 
-    function qD(DD, CD, cD) {
-      for (; DD.canRead;) {
-        DD.lineIndex++;
-        const pD = DD.currentLine;
-        if (pD.indexOf("#") >= 0) {
-          const ID = mD.exec(pD);
-          if (ID && ID.length) {
-            switch (ID[0]) {
+    function ZU(UU, RU, gU) {
+      for (; UU.canRead;) {
+        UU.lineIndex++;
+        const pU = UU.currentLine;
+        if (pU.indexOf("#") >= 0) {
+          const tU = mU.exec(pU);
+          if (tU && tU.length) {
+            switch (tU[0]) {
               case "#ifdef": {
-                const ID = new iD;
-                CD.children.push(ID);
-                const fD = UD(pD, 6);
-                ID.children.push(fD), xD(DD, ID, fD, cD);
+                const tU = new EU;
+                RU.children.push(tU);
+                const PU = bU(pU, 6);
+                tU.children.push(PU), oU(UU, tU, PU, gU);
                 break
               }
               case "#else":
@@ -559,155 +559,155 @@ export const modules = {
               case "#endif":
                 return !1;
               case "#ifndef": {
-                const ID = new iD;
-                CD.children.push(ID);
-                const fD = UD(pD, 7);
-                ID.children.push(fD), xD(DD, ID, fD, cD);
+                const tU = new EU;
+                RU.children.push(tU);
+                const PU = bU(pU, 7);
+                tU.children.push(PU), oU(UU, tU, PU, gU);
                 break
               }
               case "#if": {
-                const ID = new iD,
-                  fD = UD(pD, 3);
-                CD.children.push(ID), ID.children.push(fD), xD(DD, ID, fD, cD);
+                const tU = new EU,
+                  PU = bU(pU, 3);
+                RU.children.push(tU), tU.children.push(PU), oU(UU, tU, PU, gU);
                 break
               }
             }
             continue
           }
         }
-        const fD = new ID;
-        if (fD.line = pD, CD.children.push(fD), "#" === pD[0] && "d" === pD[1]) {
-          const DD = pD.replace(";", "").split(" ");
-          fD.additionalDefineKey = DD[1], 3 === DD.length && (fD.additionalDefineValue = DD[2])
+        const PU = new tU;
+        if (PU.line = pU, RU.children.push(PU), "#" === pU[0] && "d" === pU[1]) {
+          const UU = pU.replace(";", "").split(" ");
+          PU.additionalDefineKey = UU[1], 3 === UU.length && (PU.additionalDefineValue = UU[2])
         }
       }
       return !1
     }
 
-    function JD(DD, CD, cD, iD) {
-      const fD = new ID,
-        bD = new pD;
-      return bD.lineIndex = -1, bD.lines = DD.split("\n"), qD(bD, fD, iD), fD.process(CD, cD, iD)
+    function aU(UU, RU, gU, EU) {
+      const PU = new tU,
+        TU = new pU;
+      return TU.lineIndex = -1, TU.lines = UU.split("\n"), ZU(TU, PU, EU), PU.process(RU, gU, EU)
     }
 
-    function KD(DD, CD) {
-      const cD = DD.defines,
-        ID = {};
-      for (const pD of cD) {
-        const DD = pD.replace("#define", "").replace(";", "").trim().split(" ");
-        ID[DD[0]] = DD.length > 1 ? DD[1] : ""
+    function YU(UU, RU) {
+      const gU = UU.defines,
+        tU = {};
+      for (const pU of gU) {
+        const UU = pU.replace("#define", "").replace(";", "").trim().split(" ");
+        tU[UU[0]] = UU.length > 1 ? UU[1] : ""
       }
-      return 0 === DD.processor?.shaderLanguage && (ID.GL_ES = "true"), ID.__VERSION__ = DD.version, ID[DD.platformName] = "true", (0, MD.l)(ID, CD?.isNDCHalfZRange, CD?.vcD, CD?.useExactSrgbConversions), ID
+      return 0 === UU.processor?.shaderLanguage && (tU.GL_ES = "true"), tU.__VERSION__ = UU.version, tU[UU.platformName] = "true", (0, uU.j)(tU, RU?.isNDCHalfZRange, RU?.VgU, RU?.useExactSrgbConversions), tU
     }
 
-    function aD(DD, CD, cD) {
-      let ID;
-      for (XD.length = 0; null !== (ID = oD.exec(DD));) XD.push(ID);
-      let pD = [DD],
-        iD = !1;
-      for (const bD of XD) {
-        let DD = bD[1];
-        if (-1 !== DD.indexOf("__decl__") && (DD = DD.replace(vD, ""), CD.supportsUniformBuffers && (DD = DD.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), DD += "Declaration"), !CD.includesShadersStore[DD]) {
-          const ID = CD.shadersRepository + "ShadersInclude/" + DD + ".fx";
-          return void VD.loadFile(ID, (ID => {
-            CD.includesShadersStore[DD] = ID, aD(pD.join(""), CD, cD)
+    function BU(UU, RU, gU) {
+      let tU;
+      for (xU.length = 0; null !== (tU = QU.exec(UU));) xU.push(tU);
+      let pU = [UU],
+        EU = !1;
+      for (const TU of xU) {
+        let UU = TU[1];
+        if (-1 !== UU.indexOf("__decl__") && (UU = UU.replace(eU, ""), RU.supportsUniformBuffers && (UU = UU.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), UU += "Declaration"), !RU.includesShadersStore[UU]) {
+          const tU = RU.shadersRepository + "ShadersInclude/" + UU + ".fx";
+          return void VU.loadFile(tU, (tU => {
+            RU.includesShadersStore[UU] = tU, BU(pU.join(""), RU, gU)
           }))
         } {
-          let cD = CD.includesShadersStore[DD];
-          if (bD[2]) {
-            const DD = bD[3].split(",");
-            for (let CD = 0; CD < DD.length; CD += 2) {
-              const ID = new RegExp(DD[CD], "g"),
-                pD = DD[CD + 1];
-              cD = cD.replace(ID, pD)
+          let gU = RU.includesShadersStore[UU];
+          if (TU[2]) {
+            const UU = TU[3].split(",");
+            for (let RU = 0; RU < UU.length; RU += 2) {
+              const tU = new RegExp(UU[RU], "g"),
+                pU = UU[RU + 1];
+              gU = gU.replace(tU, pU)
             }
           }
-          if (bD[4]) {
-            const DD = bD[5];
-            if (-1 !== DD.indexOf("..")) {
-              const ID = DD.split(".."),
-                pD = parseInt(ID[0]);
-              let iD = parseInt(ID[1]),
-                fD = cD.slice(0);
-              cD = "", isNaN(iD) && (iD = CD.indexParameters[ID[1]]);
-              for (let DD = pD; DD < iD; DD++) CD.supportsUniformBuffers || (fD = fD.replace(ND, ((DD, CD) => CD + "{X}"))), cD += fD.replace(gD, DD.toString()) + "\n"
-            } else CD.supportsUniformBuffers || (cD = cD.replace(ND, ((DD, CD) => CD + "{X}"))), cD = cD.replace(gD, DD)
+          if (TU[4]) {
+            const UU = TU[5];
+            if (-1 !== UU.indexOf("..")) {
+              const tU = UU.split(".."),
+                pU = parseInt(tU[0]);
+              let EU = parseInt(tU[1]),
+                PU = gU.slice(0);
+              gU = "", isNaN(EU) && (EU = RU.indexParameters[tU[1]]);
+              for (let UU = pU; UU < EU; UU++) RU.supportsUniformBuffers || (PU = PU.replace(WU, ((UU, RU) => RU + "{X}"))), gU += PU.replace(fU, UU.toString()) + "\n"
+            } else RU.supportsUniformBuffers || (gU = gU.replace(WU, ((UU, RU) => RU + "{X}"))), gU = gU.replace(fU, UU)
           }
-          const ID = [];
-          for (const DD of pD) {
-            const CD = DD.split(bD[0]);
-            for (let DD = 0; DD < CD.length - 1; DD++) ID.push(CD[DD]), ID.push(cD);
-            ID.push(CD[CD.length - 1])
+          const tU = [];
+          for (const UU of pU) {
+            const RU = UU.split(TU[0]);
+            for (let UU = 0; UU < RU.length - 1; UU++) tU.push(RU[UU]), tU.push(gU);
+            tU.push(RU[RU.length - 1])
           }
-          pD = ID, iD = iD || cD.indexOf("#include<") >= 0 || cD.indexOf("#include <") >= 0
+          pU = tU, EU = EU || gU.indexOf("#include<") >= 0 || gU.indexOf("#include <") >= 0
         }
       }
-      XD.length = 0;
-      const fD = pD.join("");
-      iD ? aD(fD.toString(), CD, cD) : cD(fD)
+      xU.length = 0;
+      const PU = pU.join("");
+      EU ? BU(PU.toString(), RU, gU) : gU(PU)
     }
-    const VD = {
-      loadFile: (DD, CD, cD, ID, pD, iD) => {
-        throw (0, yD.m)("FileTools")
+    const VU = {
+      loadFile: (UU, RU, gU, tU, pU, EU) => {
+        throw (0, jU.n)("FileTools")
       }
     }
   },
-  39023: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => pD,
-      h: () => iD,
-      l: () => bD,
-      n: () => fD,
-      p: () => QD
+  39248: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => pU,
+      f: () => EU,
+      j: () => TU,
+      m: () => PU,
+      o: () => qU
     });
-    var ID = cD(39027);
-    const pD = {};
+    var tU = gU(39256);
+    const pU = {};
 
-    function iD(DD, CD) {
-      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (CD ? CD + "\n" : "") + DD
+    function EU(UU, RU) {
+      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (RU ? RU + "\n" : "") + UU
     }
 
-    function fD(DD, CD, cD, iD, fD, bD, QD) {
-      const wD = QD || pD.loadFile;
-      if (!wD) throw (0, ID.m)("FileTools");
-      return wD(DD, CD, cD, iD, fD, bD)
+    function PU(UU, RU, gU, EU, PU, TU, qU) {
+      const KU = qU || pU.loadFile;
+      if (!KU) throw (0, tU.n)("FileTools");
+      return KU(UU, RU, gU, EU, PU, TU)
     }
 
-    function bD(DD, CD, cD, ID) {
-      if (DD) return CD ? DD.IS_NDC_HALF_ZRANGE = "" : delete DD.IS_NDC_HALF_ZRANGE, cD ? DD.USE_REVERSE_DEPTHBUFFER = "" : delete DD.USE_REVERSE_DEPTHBUFFER, void(ID ? DD.USE_EXACT_SRGB_CONVERSIONS = "" : delete DD.USE_EXACT_SRGB_CONVERSIONS);
+    function TU(UU, RU, gU, tU) {
+      if (UU) return RU ? UU.IS_NDC_HALF_ZRANGE = "" : delete UU.IS_NDC_HALF_ZRANGE, gU ? UU.USE_REVERSE_DEPTHBUFFER = "" : delete UU.USE_REVERSE_DEPTHBUFFER, void(tU ? UU.USE_EXACT_SRGB_CONVERSIONS = "" : delete UU.USE_EXACT_SRGB_CONVERSIONS);
       {
-        let DD = "";
-        return CD && (DD += "#define IS_NDC_HALF_ZRANGE"), cD && (DD && (DD += "\n"), DD += "#define USE_REVERSE_DEPTHBUFFER"), ID && (DD && (DD += "\n"), DD += "#define USE_EXACT_SRGB_CONVERSIONS"), DD
+        let UU = "";
+        return RU && (UU += "#define IS_NDC_HALF_ZRANGE"), gU && (UU && (UU += "\n"), UU += "#define USE_REVERSE_DEPTHBUFFER"), tU && (UU && (UU += "\n"), UU += "#define USE_EXACT_SRGB_CONVERSIONS"), UU
       }
     }
 
-    function QD(DD, CD) {
-      let cD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        ID = arguments.length > 3 ? arguments[3] : void 0;
-      switch (DD) {
+    function qU(UU, RU) {
+      let gU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        tU = arguments.length > 3 ? arguments[3] : void 0;
+      switch (UU) {
         case 3: {
-          const DD = new Int8Array(CD);
-          return ID && DD.set(new Int8Array(ID)), DD
+          const UU = new Int8Array(RU);
+          return tU && UU.set(new Int8Array(tU)), UU
         }
         case 0: {
-          const DD = new Uint8Array(CD);
-          return ID && DD.set(new Uint8Array(ID)), DD
+          const UU = new Uint8Array(RU);
+          return tU && UU.set(new Uint8Array(tU)), UU
         }
         case 4: {
-          const DD = "number" !== typeof CD ? new Int16Array(CD) : new Int16Array(cD ? CD / 2 : CD);
-          return ID && DD.set(new Int16Array(ID)), DD
+          const UU = "number" !== typeof RU ? new Int16Array(RU) : new Int16Array(gU ? RU / 2 : RU);
+          return tU && UU.set(new Int16Array(tU)), UU
         }
         case 5:
         case 8:
         case 9:
         case 10:
         case 2: {
-          const DD = "number" !== typeof CD ? new Uint16Array(CD) : new Uint16Array(cD ? CD / 2 : CD);
-          return ID && DD.set(new Uint16Array(ID)), DD
+          const UU = "number" !== typeof RU ? new Uint16Array(RU) : new Uint16Array(gU ? RU / 2 : RU);
+          return tU && UU.set(new Uint16Array(tU)), UU
         }
         case 6: {
-          const DD = "number" !== typeof CD ? new Int32Array(CD) : new Int32Array(cD ? CD / 4 : CD);
-          return ID && DD.set(new Int32Array(ID)), DD
+          const UU = "number" !== typeof RU ? new Int32Array(RU) : new Int32Array(gU ? RU / 4 : RU);
+          return tU && UU.set(new Int32Array(tU)), UU
         }
         case 7:
         case 11:
@@ -715,55 +715,55 @@ export const modules = {
         case 13:
         case 14:
         case 15: {
-          const DD = "number" !== typeof CD ? new Uint32Array(CD) : new Uint32Array(cD ? CD / 4 : CD);
-          return ID && DD.set(new Uint32Array(ID)), DD
+          const UU = "number" !== typeof RU ? new Uint32Array(RU) : new Uint32Array(gU ? RU / 4 : RU);
+          return tU && UU.set(new Uint32Array(tU)), UU
         }
         case 1: {
-          const DD = "number" !== typeof CD ? new Float32Array(CD) : new Float32Array(cD ? CD / 4 : CD);
-          return ID && DD.set(new Float32Array(ID)), DD
+          const UU = "number" !== typeof RU ? new Float32Array(RU) : new Float32Array(gU ? RU / 4 : RU);
+          return tU && UU.set(new Float32Array(tU)), UU
         }
       }
-      const pD = new Uint8Array(CD);
-      return ID && pD.set(new Uint8Array(ID)), pD
+      const pU = new Uint8Array(RU);
+      return tU && pU.set(new Uint8Array(tU)), pU
     }
   },
-  39027: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => wD,
-      g: () => SD,
-      j: () => QD,
-      m: () => pD
+  39256: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => KU,
+      i: () => cU,
+      m: () => qU,
+      n: () => pU
     });
-    const ID = {};
+    const tU = {};
 
-    function pD(DD) {
-      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !ID[DD]) return ID[DD] = !0, `${DD} needs to be imported before as it contains a side-effect required by your code.`
+    function pU(UU) {
+      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !tU[UU]) return tU[UU] = !0, `${UU} needs to be imported before as it contains a side-effect required by your code.`
     }
-    const iD = {};
-    let fD = !1,
-      bD = 0;
+    const EU = {};
+    let PU = !1,
+      TU = 0;
 
-    function QD(DD, CD) {
-      let cD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const ID = function() {
-        if ((cD || fD) && 0 === bD) {
-          const cD = `${DD}.${CD}`;
-          iD[cD] || (iD[cD] = !0, console.warn(`[Babylon.js] ${cD}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
+    function qU(UU, RU) {
+      let gU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const tU = function() {
+        if ((gU || PU) && 0 === TU) {
+          const gU = `${UU}.${RU}`;
+          EU[gU] || (EU[gU] = !0, console.warn(`[Babylon.js] ${gU}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
         }
       };
-      return ID.__isSideEffectStub = !0, ID
+      return tU.__isSideEffectStub = !0, tU
     }
 
-    function wD(DD) {
-      return !!DD && !DD.__isSideEffectStub
+    function KU(UU) {
+      return !!UU && !UU.__isSideEffectStub
     }
 
-    function SD(DD, CD) {
+    function cU(UU, RU) {
       return {
         get() {},
-        set(DD) {
-          Object.defineProperty(this, CD, {
-            value: DD,
+        set(UU) {
+          Object.defineProperty(this, RU, {
+            value: UU,
             writable: !0,
             configurable: !0,
             enumerable: !0
@@ -774,41 +774,41 @@ export const modules = {
       }
     }
   },
-  39010: (DD, CD, cD) => {
-    function ID() {
+  39231: (UU, RU, gU) => {
+    function tU() {
       return "undefined" !== typeof window
     }
 
-    function pD() {
+    function pU() {
       return "undefined" !== typeof navigator
     }
 
-    function iD() {
+    function EU() {
       return "undefined" !== typeof document
     }
 
-    function fD(DD) {
-      let CD = "",
-        cD = DD.firstChild;
-      for (; cD;) 3 === cD.nodeType && (CD += cD.textContent), cD = cD.nextSibling;
-      return CD
+    function PU(UU) {
+      let RU = "",
+        gU = UU.firstChild;
+      for (; gU;) 3 === gU.nodeType && (RU += gU.textContent), gU = gU.nextSibling;
+      return RU
     }
-    cD.d(CD, {
-      c: () => fD,
-      e: () => iD,
-      i: () => pD,
-      m: () => ID
+    gU.d(RU, {
+      c: () => PU,
+      g: () => EU,
+      h: () => pU,
+      k: () => tU
     })
   },
-  39206: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => ID,
-      c: () => pD,
-      f: () => iD
+  39429: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => tU,
+      c: () => pU,
+      d: () => EU
     });
-    class ID extends Error {}
-    ID._setPrototypeOf = Object.setPrototypeOf || ((DD, CD) => (DD.__proto__ = CD, DD));
-    const pD = {
+    class tU extends Error {}
+    tU._setPrototypeOf = Object.setPrototypeOf || ((UU, RU) => (UU.__proto__ = RU, UU));
+    const pU = {
       MeshInvalidPositionsError: 0,
       UnsupportedTextureError: 1e3,
       GLTFLoaderUnexpectedMagicError: 2e3,
@@ -817,339 +817,339 @@ export const modules = {
       RequestFileError: 4001,
       ReadFileError: 4002
     };
-    class iD extends ID {
-      constructor(DD, CD, cD) {
-        super(DD), this.errorCode = CD, this.innerError = cD, this.name = "RuntimeError", ID._setPrototypeOf(this, iD.prototype)
+    class EU extends tU {
+      constructor(UU, RU, gU) {
+        super(UU), this.errorCode = RU, this.innerError = gU, this.name = "RuntimeError", tU._setPrototypeOf(this, EU.prototype)
       }
     }
   },
-  39193: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => KD,
-      f: () => gD,
-      i: () => UD,
-      m: () => qD,
-      n: () => PD,
-      q: () => nD,
-      s: () => OD,
-      t: () => lD,
-      u: () => HD,
-      v: () => XD
+  39424: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => YU,
+      g: () => fU,
+      h: () => bU,
+      l: () => ZU,
+      m: () => wU,
+      p: () => IU,
+      r: () => JU,
+      t: () => vU,
+      w: () => nU,
+      A: () => xU
     });
-    var ID = cD(39198),
-      pD = cD(39010),
-      iD = cD(36473);
-    class fD {}
-    fD.FilesToLoad = {};
-    var bD = cD(39206),
-      QD = cD(39208),
-      wD = cD(36464),
-      SD = cD(39023),
-      BD = cD(39035),
-      yD = cD(38048),
-      MD = cD(39039),
-      tD = cD(39213);
-    const ZD = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
-    class oD extends bD.f {
-      constructor(DD, CD) {
-        super(DD, bD.c.LoadFileError), this.name = "LoadFileError", bD.b._setPrototypeOf(this, oD.prototype), CD instanceof ID.b ? this.request = CD : this.file = CD
+    var tU = gU(39427),
+      pU = gU(39231),
+      EU = gU(36624);
+    class PU {}
+    PU.FilesToLoad = {};
+    var TU = gU(39429),
+      qU = gU(39434),
+      KU = gU(36622),
+      cU = gU(39248),
+      GU = gU(39265),
+      jU = gU(38236),
+      uU = gU(39268),
+      CU = gU(39437);
+    const hU = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
+    class QU extends TU.d {
+      constructor(UU, RU) {
+        super(UU, TU.c.LoadFileError), this.name = "LoadFileError", TU.b._setPrototypeOf(this, QU.prototype), RU instanceof tU.e ? this.request = RU : this.file = RU
       }
     }
-    class vD extends bD.f {
-      constructor(DD, CD) {
-        super(DD, bD.c.RequestFileError), this.request = CD, this.name = "RequestFileError", bD.b._setPrototypeOf(this, vD.prototype)
+    class eU extends TU.d {
+      constructor(UU, RU) {
+        super(UU, TU.c.RequestFileError), this.request = RU, this.name = "RequestFileError", TU.b._setPrototypeOf(this, eU.prototype)
       }
     }
-    class ND extends bD.f {
-      constructor(DD, CD) {
-        super(DD, bD.c.ReadFileError), this.file = CD, this.name = "ReadFileError", bD.b._setPrototypeOf(this, ND.prototype)
+    class WU extends TU.d {
+      constructor(UU, RU) {
+        super(UU, TU.c.ReadFileError), this.file = RU, this.name = "ReadFileError", TU.b._setPrototypeOf(this, WU.prototype)
       }
     }
-    const gD = {
+    const fU = {
         DefaultRetryStrategy: class {
           static ExponentialBackoff() {
-            let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
-              CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
-            return (cD, ID, pD) => 0 !== ID.status || pD >= DD || -1 !== cD.indexOf("file:") ? -1 : Math.pow(2, pD) * CD
+            let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
+              RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
+            return (gU, tU, pU) => 0 !== tU.status || pU >= UU || -1 !== gU.indexOf("file:") ? -1 : Math.pow(2, pU) * RU
           }
         }.ExponentialBackoff(),
         BaseUrl: "",
         CorsBehavior: "anonymous",
-        PreprocessUrl: DD => DD,
+        PreprocessUrl: UU => UU,
         ScriptBaseUrl: "",
-        ScriptPreprocessUrl: DD => DD,
-        CleanUrl: DD => DD = DD.replace(/#/gm, "%23")
+        ScriptPreprocessUrl: UU => UU,
+        CleanUrl: UU => UU = UU.replace(/#/gm, "%23")
       },
-      XD = (DD, CD) => {
-        if ((!DD || 0 !== DD.indexOf("data:")) && gD.CorsBehavior)
-          if ("string" === typeof gD.CorsBehavior || gD.CorsBehavior instanceof String) CD.crossOrigin = gD.CorsBehavior;
+      xU = (UU, RU) => {
+        if ((!UU || 0 !== UU.indexOf("data:")) && fU.CorsBehavior)
+          if ("string" === typeof fU.CorsBehavior || fU.CorsBehavior instanceof String) RU.crossOrigin = fU.CorsBehavior;
           else {
-            const cD = gD.CorsBehavior(DD);
-            cD && (CD.crossOrigin = cD)
+            const gU = fU.CorsBehavior(UU);
+            gU && (RU.crossOrigin = gU)
           }
       },
-      mD = {
+      mU = {
         getRequiredSize: null
       },
-      nD = function(DD, CD, cD, pD) {
-        let iD, bD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-          SD = arguments.length > 5 ? arguments[5] : void 0,
-          BD = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : wD.b.LastCreatedEngine;
-        if ("undefined" === typeof HTMLImageElement && !BD?._features.forceBitmapOverHTMLImageElement) return cD("LoadImage is only supported in web or BabylonNative environments."), null;
-        if (BD?._features.forceBitmapOverHTMLImageElement && "string" !== typeof DD && "undefined" !== typeof Blob) {
-          let ID;
-          if (DD instanceof Blob) ID = DD;
+      IU = function(UU, RU, gU, pU) {
+        let EU, TU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
+          cU = arguments.length > 5 ? arguments[5] : void 0,
+          GU = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : KU.c.LastCreatedEngine;
+        if ("undefined" === typeof HTMLImageElement && !GU?._features.forceBitmapOverHTMLImageElement) return gU("LoadImage is only supported in web or BabylonNative environments."), null;
+        if (GU?._features.forceBitmapOverHTMLImageElement && "string" !== typeof UU && "undefined" !== typeof Blob) {
+          let tU;
+          if (UU instanceof Blob) tU = UU;
           else {
-            const CD = DD instanceof ArrayBuffer ? DD : (0, tD.k)(DD);
-            ID = new Blob([CD], {
-              type: bD
+            const RU = UU instanceof ArrayBuffer ? UU : (0, CU.k)(UU);
+            tU = new Blob([RU], {
+              type: TU
             })
           }
-          return BD.createImageBitmap(ID, {
+          return GU.createImageBitmap(tU, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...SD
-          }).then(CD).catch((CD => {
-            cD && cD("Error while trying to load image: " + DD, CD)
+            ...cU
+          }).then(RU).catch((RU => {
+            gU && gU("Error while trying to load image: " + UU, RU)
           })), null
         }
-        let yD = !1;
-        if (DD instanceof ArrayBuffer || ArrayBuffer.isView(DD))
+        let jU = !1;
+        if (UU instanceof ArrayBuffer || ArrayBuffer.isView(UU))
           if ("undefined" !== typeof Blob && "undefined" !== typeof URL) {
-            let CD;
-            CD = DD instanceof ArrayBuffer ? DD : (0, tD.k)(DD), iD = URL.createObjectURL(new Blob([CD], {
-              type: bD
-            })), yD = !0
-          } else iD = `data:${bD};base64,` + (0, QD.k)(DD);
-        else DD instanceof Blob ? (iD = URL.createObjectURL(DD), yD = !0) : (iD = gD.CleanUrl(DD), iD = gD.PreprocessUrl(iD));
-        const MD = CD => {
-          if (cD) {
-            const ID = iD || DD.toString();
-            cD(`Error while trying to load image: ${0===ID.indexOf("http")||ID.length<=128?ID:ID.slice(0,128)+"..."}`, CD)
+            let RU;
+            RU = UU instanceof ArrayBuffer ? UU : (0, CU.k)(UU), EU = URL.createObjectURL(new Blob([RU], {
+              type: TU
+            })), jU = !0
+          } else EU = `data:${TU};base64,` + (0, qU.d)(UU);
+        else UU instanceof Blob ? (EU = URL.createObjectURL(UU), jU = !0) : (EU = fU.CleanUrl(UU), EU = fU.PreprocessUrl(EU));
+        const uU = RU => {
+          if (gU) {
+            const tU = EU || UU.toString();
+            gU(`Error while trying to load image: ${0===tU.indexOf("http")||tU.length<=128?tU:tU.slice(0,128)+"..."}`, RU)
           }
         };
-        if (BD?._features.forceBitmapOverHTMLImageElement) return PD(iD, (ID => {
-          BD.createImageBitmap(new Blob([ID], {
-            type: bD
+        if (GU?._features.forceBitmapOverHTMLImageElement) return wU(EU, (tU => {
+          GU.createImageBitmap(new Blob([tU], {
+            type: TU
           }), {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...SD
-          }).then((DD => {
-            CD(DD), yD && URL.revokeObjectURL(iD)
-          })).catch((CD => {
-            cD && cD("Error while trying to load image: " + DD, CD)
+            ...cU
+          }).then((UU => {
+            RU(UU), jU && URL.revokeObjectURL(EU)
+          })).catch((RU => {
+            gU && gU("Error while trying to load image: " + UU, RU)
           }))
-        }), void 0, pD || void 0, !0, ((DD, CD) => {
-          MD(CD)
+        }), void 0, pU || void 0, !0, ((UU, RU) => {
+          uU(RU)
         })), null;
-        const ZD = new Image;
-        if (mD.getRequiredSize) {
-          const CD = mD.getRequiredSize(DD);
-          CD.width && (ZD.width = CD.width), CD.height && (ZD.height = CD.height)
+        const hU = new Image;
+        if (mU.getRequiredSize) {
+          const RU = mU.getRequiredSize(UU);
+          RU.width && (hU.width = RU.width), RU.height && (hU.height = RU.height)
         }
-        XD(iD, ZD);
-        const oD = [],
-          vD = () => {
-            for (const DD of oD) DD.target.removeEventListener(DD.name, DD.handler);
-            oD.length = 0
+        xU(EU, hU);
+        const QU = [],
+          eU = () => {
+            for (const UU of QU) UU.target.removeEventListener(UU.name, UU.handler);
+            QU.length = 0
           };
-        oD.push({
-          target: ZD,
+        QU.push({
+          target: hU,
           name: "load",
           handler: () => {
-            vD(), CD(ZD), yD && ZD.src && URL.revokeObjectURL(ZD.src)
+            eU(), RU(hU), jU && hU.src && URL.revokeObjectURL(hU.src)
           }
-        }), oD.push({
-          target: ZD,
+        }), QU.push({
+          target: hU,
           name: "error",
-          handler: DD => {
-            vD(), MD(DD), yD && ZD.src && URL.revokeObjectURL(ZD.src)
+          handler: UU => {
+            eU(), uU(UU), jU && hU.src && URL.revokeObjectURL(hU.src)
           }
-        }), oD.push({
+        }), QU.push({
           target: document,
           name: "securitypolicyviolation",
-          handler: DD => {
-            if (DD.blockedURI !== ZD.src || "Nt" === DD.disposition) return;
-            vD();
-            const CD = new Error(`CSP violation of policy ${DD.effectiveDirective} ${DD.blockedURI}. Current policy is ${DD.originalPolicy}`);
-            wD.b.UseFallbackTexture = !1, MD(CD), yD && ZD.src && URL.revokeObjectURL(ZD.src), ZD.src = ""
+          handler: UU => {
+            if (UU.blockedURI !== hU.src || "ku" === UU.disposition) return;
+            eU();
+            const RU = new Error(`CSP violation of policy ${UU.effectiveDirective} ${UU.blockedURI}. Current policy is ${UU.originalPolicy}`);
+            KU.c.UseFallbackTexture = !1, uU(RU), jU && hU.src && URL.revokeObjectURL(hU.src), hU.src = ""
           }
         }), (() => {
-          for (const DD of oD) DD.target.addEventListener(DD.name, DD.handler)
+          for (const UU of QU) UU.target.addEventListener(UU.name, UU.handler)
         })();
-        const ND = "blob:" === iD.substring(0, 5),
-          nD = "data:" === iD.substring(0, 5),
-          OD = () => {
-            ND || nD || !ID.b.IsCustomRequestAvailable ? ZD.src = iD : PD(iD, ((DD, CD, cD) => {
-              const ID = new Blob([DD], {
-                  type: !bD && cD ? cD : bD
+        const WU = "blob:" === EU.substring(0, 5),
+          IU = "data:" === EU.substring(0, 5),
+          JU = () => {
+            WU || IU || !tU.e.IsCustomRequestAvailable ? hU.src = EU : wU(EU, ((UU, RU, gU) => {
+              const tU = new Blob([UU], {
+                  type: !TU && gU ? gU : TU
                 }),
-                pD = URL.createObjectURL(ID);
-              yD = !0, ZD.src = pD
-            }), void 0, pD || void 0, !0, ((DD, CD) => {
-              MD(CD)
+                pU = URL.createObjectURL(tU);
+              jU = !0, hU.src = pU
+            }), void 0, pU || void 0, !0, ((UU, RU) => {
+              uU(RU)
             }))
           },
-          HD = () => {
-            pD && pD.loadImage(iD, ZD)
+          nU = () => {
+            pU && pU.loadImage(EU, hU)
           };
-        if (!ND && !nD && pD && pD.enableTexturesOffline) pD.open(HD, OD);
+        if (!WU && !IU && pU && pU.enableTexturesOffline) pU.open(nU, JU);
         else {
-          if (-1 !== iD.indexOf("file:")) {
-            const DD = decodeURIComponent(iD.substring(5).toLowerCase());
-            if (fD.FilesToLoad[DD] && "undefined" !== typeof URL) {
+          if (-1 !== EU.indexOf("file:")) {
+            const UU = decodeURIComponent(EU.substring(5).toLowerCase());
+            if (PU.FilesToLoad[UU] && "undefined" !== typeof URL) {
               try {
-                let CD;
+                let RU;
                 try {
-                  CD = URL.createObjectURL(fD.FilesToLoad[DD])
-                } catch (UD) {
-                  CD = URL.createObjectURL(fD.FilesToLoad[DD])
+                  RU = URL.createObjectURL(PU.FilesToLoad[UU])
+                } catch (bU) {
+                  RU = URL.createObjectURL(PU.FilesToLoad[UU])
                 }
-                ZD.src = CD, yD = !0
-              } catch (xD) {
-                ZD.src = ""
+                hU.src = RU, jU = !0
+              } catch (oU) {
+                hU.src = ""
               }
-              return ZD
+              return hU
             }
           }
-          OD()
+          JU()
         }
-        return ZD
+        return hU
       },
-      OD = (DD, CD, cD, ID, pD) => {
-        const fD = new FileReader,
-          bD = {
-            onCompleteObservable: new iD.c,
-            abort: () => fD.abort()
+      JU = (UU, RU, gU, tU, pU) => {
+        const PU = new FileReader,
+          TU = {
+            onCompleteObservable: new EU.b,
+            abort: () => PU.abort()
           };
-        return fD.onloadend = () => bD.onCompleteObservable.notifyObservers(bD), pD && (fD.onerror = () => {
-          pD(new ND(`Unable to read ${DD.name}`, DD))
-        }), fD.onload = DD => {
-          CD(DD.target.result)
-        }, cD && (fD.onprogress = cD), ID ? fD.readAsArrayBuffer(DD) : fD.readAsText(DD), bD
+        return PU.onloadend = () => TU.onCompleteObservable.notifyObservers(TU), pU && (PU.onerror = () => {
+          pU(new WU(`Unable to read ${UU.name}`, UU))
+        }), PU.onload = UU => {
+          RU(UU.target.result)
+        }, gU && (PU.onprogress = gU), tU ? PU.readAsArrayBuffer(UU) : PU.readAsText(UU), TU
       },
-      PD = (DD, CD, cD, ID, pD, QD, wD) => {
-        if (DD.name) return OD(DD, CD, cD, pD, QD ? DD => {
-          QD(void 0, DD)
+      wU = (UU, RU, gU, tU, pU, qU, KU) => {
+        if (UU.name) return JU(UU, RU, gU, pU, qU ? UU => {
+          qU(void 0, UU)
         } : void 0);
-        const SD = DD;
-        if (-1 !== SD.indexOf("file:")) {
-          let DD = decodeURIComponent(SD.substring(5).toLowerCase());
-          0 === DD.indexOf("./") && (DD = DD.substring(2));
-          const ID = fD.FilesToLoad[DD];
-          if (ID) return OD(ID, CD, cD, pD, QD ? DD => QD(void 0, new oD(DD.message, DD.file)) : void 0)
+        const cU = UU;
+        if (-1 !== cU.indexOf("file:")) {
+          let UU = decodeURIComponent(cU.substring(5).toLowerCase());
+          0 === UU.indexOf("./") && (UU = UU.substring(2));
+          const tU = PU.FilesToLoad[UU];
+          if (tU) return JU(tU, RU, gU, pU, qU ? UU => qU(void 0, new QU(UU.message, UU.file)) : void 0)
         }
         const {
-          match: BD,
-          type: tD
-        } = JD(SD);
-        if (BD) {
-          const DD = {
-            onCompleteObservable: new iD.c,
+          match: GU,
+          type: CU
+        } = aU(cU);
+        if (GU) {
+          const UU = {
+            onCompleteObservable: new EU.b,
             abort: () => () => {}
           };
           try {
-            const DD = pD ? KD(SD) : aD(SD);
-            CD(DD, void 0, tD)
-          } catch (bD) {
-            QD ? QD(void 0, bD) : yD.e.Error(bD.message || "Failed to parse the Data URL")
+            const UU = pU ? YU(cU) : BU(cU);
+            RU(UU, void 0, CU)
+          } catch (TU) {
+            qU ? qU(void 0, TU) : jU.e.Error(TU.message || "Failed to parse the Data URL")
           }
-          return MD.d.SetImmediate((() => {
-            DD.onCompleteObservable.notifyObservers(DD)
-          })), DD
+          return uU.b.SetImmediate((() => {
+            UU.onCompleteObservable.notifyObservers(UU)
+          })), UU
         }
-        return HD(SD, ((DD, cD) => {
-          CD(DD, cD?.responseURL, cD?.getResponseHeader("content-type"))
-        }), cD, ID, pD, QD ? DD => {
-          QD(DD.request, new oD(DD.message, DD.request))
-        } : void 0, wD)
+        return nU(cU, ((UU, gU) => {
+          RU(UU, gU?.responseURL, gU?.getResponseHeader("content-type"))
+        }), gU, tU, pU, qU ? UU => {
+          qU(UU.request, new QU(UU.message, UU.request))
+        } : void 0, KU)
       },
-      HD = (DD, CD, cD, fD, bD, QD, SD) => {
-        null !== fD && (fD ?? (fD = wD.b.LastCreatedScene?.offlineProvider)), DD = gD.CleanUrl(DD), DD = gD.PreprocessUrl(DD);
-        const BD = gD.BaseUrl + DD;
-        let MD = !1;
-        const tD = {
-            onCompleteObservable: new iD.c,
-            abort: () => MD = !0
+      nU = (UU, RU, gU, PU, TU, qU, cU) => {
+        null !== PU && (PU ?? (PU = KU.c.LastCreatedScene?.offlineProvider)), UU = fU.CleanUrl(UU), UU = fU.PreprocessUrl(UU);
+        const GU = fU.BaseUrl + UU;
+        let uU = !1;
+        const CU = {
+            onCompleteObservable: new EU.b,
+            abort: () => uU = !0
           },
-          ZD = () => {
-            let DD, iD = new ID.b,
-              fD = null;
-            const wD = () => {
-              iD && (cD && iD.removeEventListener("progress", cD), DD && iD.removeEventListener("readystatechange", DD), iD.removeEventListener("loadend", ZD))
+          hU = () => {
+            let UU, EU = new tU.e,
+              PU = null;
+            const KU = () => {
+              EU && (gU && EU.removeEventListener("progress", gU), UU && EU.removeEventListener("readystatechange", UU), EU.removeEventListener("loadend", hU))
             };
-            let ZD = () => {
-              wD(), tD.onCompleteObservable.notifyObservers(tD), tD.onCompleteObservable.clear(), cD = void 0, DD = null, ZD = null, QD = void 0, SD = void 0, CD = void 0
+            let hU = () => {
+              KU(), CU.onCompleteObservable.notifyObservers(CU), CU.onCompleteObservable.clear(), gU = void 0, UU = null, hU = null, qU = void 0, cU = void 0, RU = void 0
             };
-            tD.abort = () => {
-              MD = !0, ZD && ZD(), iD && iD.readyState !== (XMLHttpRequest.DONE || 4) && iD.abort(), null !== fD && (clearTimeout(fD), fD = null), iD = null
+            CU.abort = () => {
+              uU = !0, hU && hU(), EU && EU.readyState !== (XMLHttpRequest.DONE || 4) && EU.abort(), null !== PU && (clearTimeout(PU), PU = null), EU = null
             };
-            const oD = DD => {
-                const CD = DD.message || "Unknown error";
-                QD && iD ? QD(new vD(CD, iD)) : yD.e.Error(CD)
+            const QU = UU => {
+                const RU = UU.message || "Unknown error";
+                qU && EU ? qU(new eU(RU, EU)) : jU.e.Error(RU)
               },
-              ND = yD => {
-                if (iD) {
-                  if (iD.open("GET", BD), SD) try {
-                    SD(iD)
-                  } catch (tD) {
-                    return void oD(tD)
+              WU = jU => {
+                if (EU) {
+                  if (EU.open("GET", GU), cU) try {
+                    cU(EU)
+                  } catch (CU) {
+                    return void QU(CU)
                   }
-                  bD && (iD.responseType = "arraybuffer"), cD && iD.addEventListener("progress", cD), ZD && iD.addEventListener("loadend", ZD), DD = () => {
-                    if (!MD && iD && iD.readyState === (XMLHttpRequest.DONE || 4)) {
-                      if (DD && iD.removeEventListener("readystatechange", DD), iD.status >= 200 && iD.status < 300 || 0 === iD.status && (!(0, pD.m)() || xD())) {
-                        const DD = bD ? iD.response : iD.responseText;
-                        if (null !== DD) {
+                  TU && (EU.responseType = "arraybuffer"), gU && EU.addEventListener("progress", gU), hU && EU.addEventListener("loadend", hU), UU = () => {
+                    if (!uU && EU && EU.readyState === (XMLHttpRequest.DONE || 4)) {
+                      if (UU && EU.removeEventListener("readystatechange", UU), EU.status >= 200 && EU.status < 300 || 0 === EU.status && (!(0, pU.k)() || oU())) {
+                        const UU = TU ? EU.response : EU.responseText;
+                        if (null !== UU) {
                           try {
-                            CD && CD(DD, iD)
-                          } catch (tD) {
-                            oD(tD)
+                            RU && RU(UU, EU)
+                          } catch (CU) {
+                            QU(CU)
                           }
                           return
                         }
                       }
-                      const cD = gD.DefaultRetryStrategy;
-                      if (cD) {
-                        const DD = cD(BD, iD, yD);
-                        if (-1 !== DD) return wD(), iD = new ID.b, void(fD = setTimeout((() => ND(yD + 1)), DD))
+                      const gU = fU.DefaultRetryStrategy;
+                      if (gU) {
+                        const UU = gU(GU, EU, jU);
+                        if (-1 !== UU) return KU(), EU = new tU.e, void(PU = setTimeout((() => WU(jU + 1)), UU))
                       }
-                      const SD = new vD("Error status: " + iD.status + " " + iD.statusText + " - Unable to load " + BD, iD);
-                      QD && QD(SD)
+                      const cU = new eU("Error status: " + EU.status + " " + EU.statusText + " - Unable to load " + GU, EU);
+                      qU && qU(cU)
                     }
-                  }, iD.addEventListener("readystatechange", DD), iD.send()
+                  }, EU.addEventListener("readystatechange", UU), EU.send()
                 }
               };
-            ND(0)
+            WU(0)
           };
-        if (fD && fD.enableSceneOffline && !DD.startsWith("blob:")) {
-          const ID = DD => {
-              DD && DD.status > 400 ? QD && QD(DD) : ZD()
+        if (PU && PU.enableSceneOffline && !UU.startsWith("blob:")) {
+          const tU = UU => {
+              UU && UU.status > 400 ? qU && qU(UU) : hU()
             },
-            pD = () => {
-              fD && fD.loadFile(gD.BaseUrl + DD, (DD => {
-                !MD && CD && CD(DD), tD.onCompleteObservable.notifyObservers(tD)
-              }), cD ? DD => {
-                !MD && cD && cD(DD)
-              } : void 0, ID, bD)
+            pU = () => {
+              PU && PU.loadFile(fU.BaseUrl + UU, (UU => {
+                !uU && RU && RU(UU), CU.onCompleteObservable.notifyObservers(CU)
+              }), gU ? UU => {
+                !uU && gU && gU(UU)
+              } : void 0, tU, TU)
             };
-          fD.open(pD, ID)
-        } else ZD();
-        return tD
+          PU.open(pU, tU)
+        } else hU();
+        return CU
       },
-      UD = DD => {
+      bU = UU => {
         const {
-          match: CD,
-          type: cD
-        } = JD(DD);
-        if (CD) return cD || void 0;
-        const ID = DD.lastIndexOf(".");
-        switch (DD.substring(ID + 1).toLowerCase()) {
+          match: RU,
+          type: gU
+        } = aU(UU);
+        if (RU) return gU || void 0;
+        const tU = UU.lastIndexOf(".");
+        switch (UU.substring(tU + 1).toLowerCase()) {
           case "glb":
             return "model/gltf-binary";
           case "bin":
             return "application/octet-stream";
-          case "Jq":
+          case "eZ":
             return "model/gltf+json";
           case "jpg":
           case "jpeg":
@@ -1168,275 +1168,275 @@ export const modules = {
             return
         }
       },
-      xD = () => "undefined" !== typeof location && "file:" === location.protocol,
-      qD = DD => ZD.test(DD),
-      JD = DD => {
-        const CD = ZD.exec(DD);
-        if (null === CD || 0 === CD.length) return {
+      oU = () => "undefined" !== typeof location && "file:" === location.protocol,
+      ZU = UU => hU.test(UU),
+      aU = UU => {
+        const RU = hU.exec(UU);
+        if (null === RU || 0 === RU.length) return {
           match: !1,
           type: ""
         };
         return {
           match: !0,
-          type: CD[0].replace("data:", "").replace(";base64,", "")
+          type: RU[0].replace("data:", "").replace(";base64,", "")
         }
       };
 
-    function KD(DD) {
-      return (0, QD.e)(DD.split(",")[1])
+    function YU(UU) {
+      return (0, qU.b)(UU.split(",")[1])
     }
-    const aD = DD => (0, QD.h)(DD.split(",")[1]);
-    let VD;
-    const zD = (DD, CD, cD, ID, pD, iD, fD, bD, QD, wD) => {
-      VD = {
-        DecodeBase64UrlToBinary: DD,
-        DecodeBase64UrlToString: CD,
-        DefaultRetryStrategy: cD.DefaultRetryStrategy,
-        BaseUrl: cD.BaseUrl,
-        CorsBehavior: cD.CorsBehavior,
-        PreprocessUrl: cD.PreprocessUrl,
-        IsBase64DataUrl: ID,
-        IsFileURL: pD,
-        LoadFile: iD,
-        LoadImage: fD,
-        ReadFile: bD,
-        RequestFile: QD,
-        SetCorsBehavior: wD
-      }, Object.defineProperty(VD, "DefaultRetryStrategy", {
+    const BU = UU => (0, qU.c)(UU.split(",")[1]);
+    let VU;
+    const rU = (UU, RU, gU, tU, pU, EU, PU, TU, qU, KU) => {
+      VU = {
+        DecodeBase64UrlToBinary: UU,
+        DecodeBase64UrlToString: RU,
+        DefaultRetryStrategy: gU.DefaultRetryStrategy,
+        BaseUrl: gU.BaseUrl,
+        CorsBehavior: gU.CorsBehavior,
+        PreprocessUrl: gU.PreprocessUrl,
+        IsBase64DataUrl: tU,
+        IsFileURL: pU,
+        LoadFile: EU,
+        LoadImage: PU,
+        ReadFile: TU,
+        RequestFile: qU,
+        SetCorsBehavior: KU
+      }, Object.defineProperty(VU, "DefaultRetryStrategy", {
         get: function() {
-          return cD.DefaultRetryStrategy
+          return gU.DefaultRetryStrategy
         },
-        set: function(DD) {
-          cD.DefaultRetryStrategy = DD
+        set: function(UU) {
+          gU.DefaultRetryStrategy = UU
         }
-      }), Object.defineProperty(VD, "BaseUrl", {
+      }), Object.defineProperty(VU, "BaseUrl", {
         get: function() {
-          return cD.BaseUrl
+          return gU.BaseUrl
         },
-        set: function(DD) {
-          cD.BaseUrl = DD
+        set: function(UU) {
+          gU.BaseUrl = UU
         }
-      }), Object.defineProperty(VD, "PreprocessUrl", {
+      }), Object.defineProperty(VU, "PreprocessUrl", {
         get: function() {
-          return cD.PreprocessUrl
+          return gU.PreprocessUrl
         },
-        set: function(DD) {
-          cD.PreprocessUrl = DD
+        set: function(UU) {
+          gU.PreprocessUrl = UU
         }
-      }), Object.defineProperty(VD, "CorsBehavior", {
+      }), Object.defineProperty(VU, "CorsBehavior", {
         get: function() {
-          return cD.CorsBehavior
+          return gU.CorsBehavior
         },
-        set: function(DD) {
-          cD.CorsBehavior = DD
+        set: function(UU) {
+          gU.CorsBehavior = UU
         }
       })
     };
-    let jD = !1;
+    let XU = !1;
 
-    function lD() {
-      jD || (jD = !0, zD(KD, aD, gD, qD, xD, PD, nD, OD, HD, XD), SD.d.loadFile = PD, SD.d.loadImage = nD, BD.o.loadFile = PD)
+    function vU() {
+      XU || (XU = !0, rU(YU, BU, fU, ZU, oU, wU, IU, JU, nU, xU), cU.e.loadFile = wU, cU.e.loadImage = IU, GU.m.loadFile = wU)
     }
   },
-  39215: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => bD,
-      f: () => iD,
-      i: () => fD
+  39442: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => TU,
+      d: () => EU,
+      f: () => PU
     });
-    let ID = null;
+    let tU = null;
 
-    function pD() {
-      if (ID) return ID;
-      const DD = new ArrayBuffer(4),
-        CD = new Float32Array(DD),
-        cD = new Uint32Array(DD),
-        pD = new Uint32Array(512),
-        iD = new Uint32Array(512);
-      for (let ID = 0; ID < 256; ++ID) {
-        const DD = ID - 127;
-        DD < -24 ? (pD[ID] = 0, pD[256 | ID] = 32768, iD[ID] = 24, iD[256 | ID] = 24) : DD < -14 ? (pD[ID] = 1024 >> -DD - 14, pD[256 | ID] = 1024 >> -DD - 14 | 32768, iD[ID] = -DD - 1, iD[256 | ID] = -DD - 1) : DD <= 15 ? (pD[ID] = DD + 15 << 10, pD[256 | ID] = DD + 15 << 10 | 32768, iD[ID] = 13, iD[256 | ID] = 13) : DD < 128 ? (pD[ID] = 31744, pD[256 | ID] = 64512, iD[ID] = 24, iD[256 | ID] = 24) : (pD[ID] = 31744, pD[256 | ID] = 64512, iD[ID] = 13, iD[256 | ID] = 13)
+    function pU() {
+      if (tU) return tU;
+      const UU = new ArrayBuffer(4),
+        RU = new Float32Array(UU),
+        gU = new Uint32Array(UU),
+        pU = new Uint32Array(512),
+        EU = new Uint32Array(512);
+      for (let tU = 0; tU < 256; ++tU) {
+        const UU = tU - 127;
+        UU < -24 ? (pU[tU] = 0, pU[256 | tU] = 32768, EU[tU] = 24, EU[256 | tU] = 24) : UU < -14 ? (pU[tU] = 1024 >> -UU - 14, pU[256 | tU] = 1024 >> -UU - 14 | 32768, EU[tU] = -UU - 1, EU[256 | tU] = -UU - 1) : UU <= 15 ? (pU[tU] = UU + 15 << 10, pU[256 | tU] = UU + 15 << 10 | 32768, EU[tU] = 13, EU[256 | tU] = 13) : UU < 128 ? (pU[tU] = 31744, pU[256 | tU] = 64512, EU[tU] = 24, EU[256 | tU] = 24) : (pU[tU] = 31744, pU[256 | tU] = 64512, EU[tU] = 13, EU[256 | tU] = 13)
       }
-      const fD = new Uint32Array(2048),
-        bD = new Uint32Array(64),
-        QD = new Uint32Array(64);
-      for (let ID = 1; ID < 1024; ++ID) {
-        let DD = ID << 13,
-          CD = 0;
-        for (; 0 === (8388608 & DD);) DD <<= 1, CD -= 8388608;
-        DD &= -8388609, CD += 947912704, fD[ID] = DD | CD
+      const PU = new Uint32Array(2048),
+        TU = new Uint32Array(64),
+        qU = new Uint32Array(64);
+      for (let tU = 1; tU < 1024; ++tU) {
+        let UU = tU << 13,
+          RU = 0;
+        for (; 0 === (8388608 & UU);) UU <<= 1, RU -= 8388608;
+        UU &= -8388609, RU += 947912704, PU[tU] = UU | RU
       }
-      for (let ID = 1024; ID < 2048; ++ID) fD[ID] = 939524096 + (ID - 1024 << 13);
-      for (let ID = 1; ID < 31; ++ID) bD[ID] = ID << 23;
-      bD[31] = 1199570944, bD[32] = 2147483648;
-      for (let ID = 33; ID < 63; ++ID) bD[ID] = 2147483648 + (ID - 32 << 23);
-      bD[63] = 3347054592;
-      for (let ID = 1; ID < 64; ++ID) 32 !== ID && (QD[ID] = 1024);
-      return ID = {
-        floatView: CD,
-        uint32View: cD,
-        baseTable: pD,
-        shiftTable: iD,
-        mantissaTable: fD,
-        exponentTable: bD,
-        offsetTable: QD
-      }, ID
+      for (let tU = 1024; tU < 2048; ++tU) PU[tU] = 939524096 + (tU - 1024 << 13);
+      for (let tU = 1; tU < 31; ++tU) TU[tU] = tU << 23;
+      TU[31] = 1199570944, TU[32] = 2147483648;
+      for (let tU = 33; tU < 63; ++tU) TU[tU] = 2147483648 + (tU - 32 << 23);
+      TU[63] = 3347054592;
+      for (let tU = 1; tU < 64; ++tU) 32 !== tU && (qU[tU] = 1024);
+      return tU = {
+        floatView: RU,
+        uint32View: gU,
+        baseTable: pU,
+        shiftTable: EU,
+        mantissaTable: PU,
+        exponentTable: TU,
+        offsetTable: qU
+      }, tU
     }
-    const iD = 65504;
+    const EU = 65504;
 
-    function fD(DD) {
-      const CD = pD();
-      CD.floatView[0] = DD;
-      const cD = CD.uint32View[0],
-        ID = cD >> 23 & 511;
-      return CD.baseTable[ID] + ((8388607 & cD) >> CD.shiftTable[ID])
+    function PU(UU) {
+      const RU = pU();
+      RU.floatView[0] = UU;
+      const gU = RU.uint32View[0],
+        tU = gU >> 23 & 511;
+      return RU.baseTable[tU] + ((8388607 & gU) >> RU.shiftTable[tU])
     }
 
-    function bD(DD) {
-      const CD = pD();
-      return CD.uint32View[0] = CD.mantissaTable[CD.offsetTable[DD >> 10] + (1023 & DD)] + CD.exponentTable[DD >> 10], CD.floatView[0]
+    function TU(UU) {
+      const RU = pU();
+      return RU.uint32View[0] = RU.mantissaTable[RU.offsetTable[UU >> 10] + (1023 & UU)] + RU.exponentTable[UU >> 10], RU.floatView[0]
     }
   },
-  39208: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => iD,
-      h: () => pD,
-      k: () => ID
+  39434: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => EU,
+      c: () => pU,
+      d: () => tU
     });
-    const ID = DD => {
-        const CD = ArrayBuffer.isView(DD) ? new Uint8Array(DD.buffer, DD.byteOffset, DD.byteLength) : new Uint8Array(DD);
-        return "function" === typeof CD.toBase64 ? CD.toBase64() : function(DD) {
-          const CD = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-          let cD, ID, pD, iD, fD, bD, QD, wD = "",
-            SD = 0;
-          for (; SD < DD.length;) cD = DD[SD++], ID = SD < DD.length ? DD[SD++] : Number.NaN, pD = SD < DD.length ? DD[SD++] : Number.NaN, iD = cD >> 2, fD = (3 & cD) << 4 | ID >> 4, bD = (15 & ID) << 2 | pD >> 6, QD = 63 & pD, isNaN(ID) ? bD = QD = 64 : isNaN(pD) && (QD = 64), wD += CD.charAt(iD) + CD.charAt(fD) + CD.charAt(bD) + CD.charAt(QD);
-          return wD
-        }(CD)
+    const tU = UU => {
+        const RU = ArrayBuffer.isView(UU) ? new Uint8Array(UU.buffer, UU.byteOffset, UU.byteLength) : new Uint8Array(UU);
+        return "function" === typeof RU.toBase64 ? RU.toBase64() : function(UU) {
+          const RU = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+          let gU, tU, pU, EU, PU, TU, qU, KU = "",
+            cU = 0;
+          for (; cU < UU.length;) gU = UU[cU++], tU = cU < UU.length ? UU[cU++] : Number.NaN, pU = cU < UU.length ? UU[cU++] : Number.NaN, EU = gU >> 2, PU = (3 & gU) << 4 | tU >> 4, TU = (15 & tU) << 2 | pU >> 6, qU = 63 & pU, isNaN(tU) ? TU = qU = 64 : isNaN(pU) && (qU = 64), KU += RU.charAt(EU) + RU.charAt(PU) + RU.charAt(TU) + RU.charAt(qU);
+          return KU
+        }(RU)
       },
-      pD = DD => atob(DD),
-      iD = DD => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(DD).buffer : function(DD) {
-        const CD = pD(DD),
-          cD = CD.length,
-          ID = new Uint8Array(new ArrayBuffer(cD));
-        for (let pD = 0; pD < cD; pD++) ID[pD] = CD.charCodeAt(pD);
-        return ID.buffer
-      }(DD)
+      pU = UU => atob(UU),
+      EU = UU => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(UU).buffer : function(UU) {
+        const RU = pU(UU),
+          gU = RU.length,
+          tU = new Uint8Array(new ArrayBuffer(gU));
+        for (let pU = 0; pU < gU; pU++) tU[pU] = RU.charCodeAt(pU);
+        return tU.buffer
+      }(UU)
   },
-  39039: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => pD,
-      e: () => fD
+  39268: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => pU,
+      c: () => PU
     });
-    let ID = [];
-    class pD {
-      static SetImmediate(DD) {
-        0 === ID.length && setTimeout((() => {
-          const DD = ID;
-          ID = [];
-          for (const CD of DD) CD()
-        }), 1), ID.push(DD)
+    let tU = [];
+    class pU {
+      static SetImmediate(UU) {
+        0 === tU.length && setTimeout((() => {
+          const UU = tU;
+          tU = [];
+          for (const RU of UU) RU()
+        }), 1), tU.push(UU)
       }
     }
 
-    function iD(DD, CD, cD) {
+    function EU(UU, RU, gU) {
       try {
-        if (DD()) return CD(), !0
-      } catch (ID) {
-        return cD?.(ID), !0
+        if (UU()) return RU(), !0
+      } catch (tU) {
+        return gU?.(tU), !0
       }
       return !1
     }
-    const fD = function(DD, CD, cD) {
-      let ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
-        pD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
-        fD = arguments.length > 6 ? arguments[6] : void 0;
-      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && iD(DD, CD, cD)) return null;
-      const bD = setInterval((() => {
-        iD(DD, CD, cD) ? clearInterval(bD) : (pD -= ID, pD < 0 && (clearInterval(bD), cD?.(new Error("Operation timed out after maximum retries. " + (fD || "")), !0)))
-      }), ID);
-      return () => clearInterval(bD)
+    const PU = function(UU, RU, gU) {
+      let tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
+        pU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
+        PU = arguments.length > 6 ? arguments[6] : void 0;
+      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && EU(UU, RU, gU)) return null;
+      const TU = setInterval((() => {
+        EU(UU, RU, gU) ? clearInterval(TU) : (pU -= tU, pU < 0 && (clearInterval(TU), gU?.(new Error("Operation timed out after maximum retries. " + (PU || "")), !0)))
+      }), tU);
+      return () => clearInterval(TU)
     }
   },
-  39198: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => ID
+  39427: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => tU
     });
-    class ID {
+    class tU {
       constructor() {
         this._xhr = "undefined" !== typeof _native && _native.XMLHttpRequest ? new _native.XMLHttpRequest : new XMLHttpRequest, this._requestURL = ""
       }
       static get IsCustomRequestAvailable() {
-        return Object.keys(ID.CustomRequestHeaders).length > 0 || ID.CustomRequestModifiers.length > 0
+        return Object.keys(tU.CustomRequestHeaders).length > 0 || tU.CustomRequestModifiers.length > 0
       }
-      static _CleanUrl(DD) {
-        return DD = (DD = DD.replace("file:http:", "http:")).replace("file:https:", "https:")
+      static _CleanUrl(UU) {
+        return UU = (UU = UU.replace("file:http:", "http:")).replace("file:https:", "https:")
       }
-      static _ShouldSkipRequestModifications(DD) {
-        return ID.SkipRequestModificationForBabylonCDN && (DD.includes("preview.babylonjs.com") || DD.includes("cdn.babylonjs.com"))
+      static _ShouldSkipRequestModifications(UU) {
+        return tU.SkipRequestModificationForBabylonCDN && (UU.includes("preview.babylonjs.com") || UU.includes("cdn.babylonjs.com"))
       }
-      static _CollectCustomizations(DD) {
-        const CD = {
+      static _CollectCustomizations(UU) {
+        const RU = {
           ...arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}
         };
-        if (ID._ShouldSkipRequestModifications(DD)) return {
-          url: DD,
-          headers: CD
+        if (tU._ShouldSkipRequestModifications(UU)) return {
+          url: UU,
+          headers: RU
         };
-        for (const pD in ID.CustomRequestHeaders) {
-          const DD = ID.CustomRequestHeaders[pD];
-          DD && (CD[pD] = DD)
+        for (const pU in tU.CustomRequestHeaders) {
+          const UU = tU.CustomRequestHeaders[pU];
+          UU && (RU[pU] = UU)
         }
-        const cD = {
-          setRequestHeader: (DD, cD) => {
-            CD[DD] = cD
+        const gU = {
+          setRequestHeader: (UU, gU) => {
+            RU[UU] = gU
           }
         };
-        for (const pD of ID.CustomRequestModifiers) {
-          if (ID._ShouldSkipRequestModifications(DD)) break;
-          const CD = pD(cD, DD);
-          "string" === typeof CD && (DD = CD)
+        for (const pU of tU.CustomRequestModifiers) {
+          if (tU._ShouldSkipRequestModifications(UU)) break;
+          const RU = pU(gU, UU);
+          "string" === typeof RU && (UU = RU)
         }
         return {
-          url: DD,
-          headers: CD
+          url: UU,
+          headers: RU
         }
       }
-      static async FetchAsync(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const cD = CD.method ?? "GET";
+      static async FetchAsync(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const gU = RU.method ?? "GET";
         if ("undefined" !== typeof fetch) {
           const {
-            url: pD,
-            headers: iD
-          } = ID._CollectCustomizations(ID._CleanUrl(DD), CD.headers ?? {});
-          return await fetch(pD, {
-            method: cD,
-            headers: iD,
-            body: CD.body ?? void 0
+            url: pU,
+            headers: EU
+          } = tU._CollectCustomizations(tU._CleanUrl(UU), RU.headers ?? {});
+          return await fetch(pU, {
+            method: gU,
+            headers: EU,
+            body: RU.body ?? void 0
           })
         }
-        return await new Promise(((pD, iD) => {
-          const fD = new ID;
-          fD.responseType = "arraybuffer", fD.addEventListener("readystatechange", (() => {
-            if (4 === fD.readyState)
-              if (fD.status >= 200 && fD.status < 300) {
-                const DD = "undefined" !== typeof Headers ? new Headers : void 0,
-                  CD = fD.getResponseHeader("Content-Type");
-                CD && DD && DD.set("Content-Type", CD), "undefined" !== typeof Response ? pD(new Response(fD.response, {
-                  status: fD.status,
-                  statusText: fD.statusText,
-                  headers: DD
-                })) : pD({
+        return await new Promise(((pU, EU) => {
+          const PU = new tU;
+          PU.responseType = "arraybuffer", PU.addEventListener("readystatechange", (() => {
+            if (4 === PU.readyState)
+              if (PU.status >= 200 && PU.status < 300) {
+                const UU = "undefined" !== typeof Headers ? new Headers : void 0,
+                  RU = PU.getResponseHeader("Content-Type");
+                RU && UU && UU.set("Content-Type", RU), "undefined" !== typeof Response ? pU(new Response(PU.response, {
+                  status: PU.status,
+                  statusText: PU.statusText,
+                  headers: UU
+                })) : pU({
                   ok: !0,
-                  status: fD.status,
-                  statusText: fD.statusText,
+                  status: PU.status,
+                  statusText: PU.statusText,
                   headers: {
-                    get: DD => fD.getResponseHeader(DD)
+                    get: UU => PU.getResponseHeader(UU)
                   },
-                  arrayBuffer: async () => await Promise.resolve(fD.response)
+                  arrayBuffer: async () => await Promise.resolve(PU.response)
                 })
-              } else iD(new Error(`HTTP ${fD.status} loading '${fD.requestURL}': ${fD.statusText}`))
-          })), fD.open(cD, DD, CD.headers), fD.send(CD.body ?? null)
+              } else EU(new Error(`HTTP ${PU.status} loading '${PU.requestURL}': ${PU.statusText}`))
+          })), PU.open(gU, UU, RU.headers), PU.send(RU.body ?? null)
         }))
       }
       get requestURL() {
@@ -1445,8 +1445,8 @@ export const modules = {
       get onprogress() {
         return this._xhr.onprogress
       }
-      set onprogress(DD) {
-        this._xhr.onprogress = DD
+      set onprogress(UU) {
+        this._xhr.onprogress = UU
       }
       get readyState() {
         return this._xhr.readyState
@@ -1469,44 +1469,44 @@ export const modules = {
       get responseType() {
         return this._xhr.responseType
       }
-      set responseType(DD) {
-        this._xhr.responseType = DD
+      set responseType(UU) {
+        this._xhr.responseType = UU
       }
       get timeout() {
         return this._xhr.timeout
       }
-      set timeout(DD) {
-        this._xhr.timeout = DD
+      set timeout(UU) {
+        this._xhr.timeout = UU
       }
-      addEventListener(DD, CD, cD) {
-        this._xhr.addEventListener(DD, CD, cD)
+      addEventListener(UU, RU, gU) {
+        this._xhr.addEventListener(UU, RU, gU)
       }
-      removeEventListener(DD, CD, cD) {
-        this._xhr.removeEventListener(DD, CD, cD)
+      removeEventListener(UU, RU, gU) {
+        this._xhr.removeEventListener(UU, RU, gU)
       }
       abort() {
         this._xhr.abort()
       }
-      send(DD) {
-        this._xhr.send(DD)
+      send(UU) {
+        this._xhr.send(UU)
       }
-      open(DD, CD, cD) {
+      open(UU, RU, gU) {
         const {
-          url: pD,
-          headers: iD
-        } = ID._CollectCustomizations(CD, cD);
-        this._requestURL = ID._CleanUrl(pD), this._xhr.open(DD, this._requestURL, !0);
-        for (const ID in iD) this._xhr.setRequestHeader(ID, iD[ID])
+          url: pU,
+          headers: EU
+        } = tU._CollectCustomizations(RU, gU);
+        this._requestURL = tU._CleanUrl(pU), this._xhr.open(UU, this._requestURL, !0);
+        for (const tU in EU) this._xhr.setRequestHeader(tU, EU[tU])
       }
-      setRequestHeader(DD, CD) {
-        this._xhr.setRequestHeader(DD, CD)
+      setRequestHeader(UU, RU) {
+        this._xhr.setRequestHeader(UU, RU)
       }
-      getResponseHeader(DD) {
-        return this._xhr.getResponseHeader(DD)
+      getResponseHeader(UU) {
+        return this._xhr.getResponseHeader(UU)
       }
     }
-    ID.CustomRequestHeaders = {}, ID.CustomRequestModifiers = new Array, ID.SkipRequestModificationForBabylonCDN = !0
+    tU.CustomRequestHeaders = {}, tU.CustomRequestModifiers = new Array, tU.SkipRequestModificationForBabylonCDN = !0
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

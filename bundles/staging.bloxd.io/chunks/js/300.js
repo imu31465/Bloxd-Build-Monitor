@@ -1,289 +1,289 @@
 export const id = 300;
 export const ids = [300];
 export const modules = {
-  40879: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      _BasisTextureLoader: () => ND
+  41134: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      _BasisTextureLoader: () => WU
     });
-    var ID, pD = cD(39245),
-      iD = cD(38048),
-      fD = cD(39595),
-      bD = cD(38979);
+    var tU, pU = gU(39473),
+      EU = gU(38236),
+      PU = gU(39855),
+      TU = gU(39203);
 
-    function QD() {
-      const DD = 0,
-        CD = 1,
-        cD = 2,
-        ID = 3,
-        pD = 6,
-        iD = 8,
-        fD = 9,
-        bD = 10,
-        QD = 14;
-      let wD = null;
+    function qU() {
+      const UU = 0,
+        RU = 1,
+        gU = 2,
+        tU = 3,
+        pU = 6,
+        EU = 8,
+        PU = 9,
+        TU = 10,
+        qU = 14;
+      let KU = null;
 
-      function SD(DD, CD, cD, ID, pD) {
-        const iD = DD.getImageTranscodedSizeInBytes(CD, cD, ID);
-        let fD = new Uint8Array(iD);
-        if (!DD.transcodeImage(fD, CD, cD, ID, 1, 0)) return null;
-        if (pD) {
-          fD = function(DD, CD, cD, ID) {
-            const pD = new Uint16Array(4),
-              iD = new Uint16Array(cD * ID),
-              fD = cD / 4,
-              bD = ID / 4;
-            for (let QD = 0; QD < bD; QD++)
-              for (let ID = 0; ID < fD; ID++) {
-                const bD = CD + 8 * (QD * fD + ID);
-                pD[0] = DD[bD] | DD[bD + 1] << 8, pD[1] = DD[bD + 2] | DD[bD + 3] << 8, pD[2] = (2 * (31 & pD[0]) + 1 * (31 & pD[1])) / 3 | (2 * (2016 & pD[0]) + 1 * (2016 & pD[1])) / 3 & 2016 | (2 * (63488 & pD[0]) + 1 * (63488 & pD[1])) / 3 & 63488, pD[3] = (2 * (31 & pD[1]) + 1 * (31 & pD[0])) / 3 | (2 * (2016 & pD[1]) + 1 * (2016 & pD[0])) / 3 & 2016 | (2 * (63488 & pD[1]) + 1 * (63488 & pD[0])) / 3 & 63488;
-                for (let CD = 0; CD < 4; CD++) {
-                  const fD = DD[bD + 4 + CD];
-                  let wD = (4 * QD + CD) * cD + 4 * ID;
-                  iD[wD++] = pD[3 & fD], iD[wD++] = pD[fD >> 2 & 3], iD[wD++] = pD[fD >> 4 & 3], iD[wD] = pD[fD >> 6 & 3]
+      function cU(UU, RU, gU, tU, pU) {
+        const EU = UU.getImageTranscodedSizeInBytes(RU, gU, tU);
+        let PU = new Uint8Array(EU);
+        if (!UU.transcodeImage(PU, RU, gU, tU, 1, 0)) return null;
+        if (pU) {
+          PU = function(UU, RU, gU, tU) {
+            const pU = new Uint16Array(4),
+              EU = new Uint16Array(gU * tU),
+              PU = gU / 4,
+              TU = tU / 4;
+            for (let qU = 0; qU < TU; qU++)
+              for (let tU = 0; tU < PU; tU++) {
+                const TU = RU + 8 * (qU * PU + tU);
+                pU[0] = UU[TU] | UU[TU + 1] << 8, pU[1] = UU[TU + 2] | UU[TU + 3] << 8, pU[2] = (2 * (31 & pU[0]) + 1 * (31 & pU[1])) / 3 | (2 * (2016 & pU[0]) + 1 * (2016 & pU[1])) / 3 & 2016 | (2 * (63488 & pU[0]) + 1 * (63488 & pU[1])) / 3 & 63488, pU[3] = (2 * (31 & pU[1]) + 1 * (31 & pU[0])) / 3 | (2 * (2016 & pU[1]) + 1 * (2016 & pU[0])) / 3 & 2016 | (2 * (63488 & pU[1]) + 1 * (63488 & pU[0])) / 3 & 63488;
+                for (let RU = 0; RU < 4; RU++) {
+                  const PU = UU[TU + 4 + RU];
+                  let KU = (4 * qU + RU) * gU + 4 * tU;
+                  EU[KU++] = pU[3 & PU], EU[KU++] = pU[PU >> 2 & 3], EU[KU++] = pU[PU >> 4 & 3], EU[KU] = pU[PU >> 6 & 3]
                 }
               }
-            return iD
-          }(fD, 0, DD.getImageWidth(CD, cD) + 3 & -4, DD.getImageHeight(CD, cD) + 3 & -4)
+            return EU
+          }(PU, 0, UU.getImageWidth(RU, gU) + 3 & -4, UU.getImageHeight(RU, gU) + 3 & -4)
         }
-        return fD
+        return PU
       }
-      onmessage = BD => {
-        if ("init" === BD.data.action) {
-          if (BD.data.url) try {
-            importScripts(BD.data.url)
-          } catch (yD) {
+      onmessage = GU => {
+        if ("init" === GU.data.action) {
+          if (GU.data.url) try {
+            importScripts(GU.data.url)
+          } catch (jU) {
             postMessage({
               action: "error",
-              error: yD
+              error: jU
             })
           }
-          wD || (wD = BASIS({
-            wasmBinary: BD.data.wasmBinary
-          })), null !== wD && wD.then((DD => {
-            BASIS = DD, DD.initializeBasis(), postMessage({
+          KU || (KU = BASIS({
+            wasmBinary: GU.data.wasmBinary
+          })), null !== KU && KU.then((UU => {
+            BASIS = UU, UU.initializeBasis(), postMessage({
               action: "init"
             })
           }))
-        } else if ("transcode" === BD.data.action) {
-          const wD = BD.data.config,
-            yD = BD.data.imageData,
-            MD = new BASIS.BasisFile(yD),
-            tD = function(DD) {
-              const CD = DD.getHasAlpha(),
-                cD = DD.getNumImages(),
-                ID = [];
-              for (let pD = 0; pD < cD; pD++) {
-                const CD = {
+        } else if ("transcode" === GU.data.action) {
+          const KU = GU.data.config,
+            jU = GU.data.imageData,
+            uU = new BASIS.BasisFile(jU),
+            CU = function(UU) {
+              const RU = UU.getHasAlpha(),
+                gU = UU.getNumImages(),
+                tU = [];
+              for (let pU = 0; pU < gU; pU++) {
+                const RU = {
                     levels: []
                   },
-                  cD = DD.getNumLevels(pD);
-                for (let ID = 0; ID < cD; ID++) {
-                  const cD = {
-                    width: DD.getImageWidth(pD, ID),
-                    height: DD.getImageHeight(pD, ID)
+                  gU = UU.getNumLevels(pU);
+                for (let tU = 0; tU < gU; tU++) {
+                  const gU = {
+                    width: UU.getImageWidth(pU, tU),
+                    height: UU.getImageHeight(pU, tU)
                   };
-                  CD.levels.push(cD)
+                  RU.levels.push(gU)
                 }
-                ID.push(CD)
+                tU.push(RU)
               }
               return {
-                hasAlpha: CD,
-                images: ID
+                hasAlpha: RU,
+                images: tU
               }
-            }(MD);
-          let ZD = BD.data.ignoreSupportedFormats ? null : function(wD, SD) {
-              let BD = null;
-              wD.supportedCompressionFormats && (BD = wD.supportedCompressionFormats.astc ? bD : wD.supportedCompressionFormats.bc7 ? pD : wD.supportedCompressionFormats.s3tc ? SD.hasAlpha ? ID : cD : wD.supportedCompressionFormats.pvrtc ? SD.hasAlpha ? fD : iD : wD.supportedCompressionFormats.etc2 ? CD : wD.supportedCompressionFormats.etc1 ? DD : QD);
-              return BD
-            }(BD.data.config, tD),
-            oD = !1;
-          null === ZD && (oD = !0, ZD = tD.hasAlpha ? ID : cD);
-          let vD = !0;
-          MD.startTranscoding() || (vD = !1);
-          const ND = [];
-          for (let DD = 0; DD < tD.images.length && vD; DD++) {
-            const CD = tD.images[DD];
-            if (void 0 === wD.loadSingleImage || wD.loadSingleImage === DD) {
-              let cD = CD.levels.length;
-              !1 === wD.loadMipmapLevels && (cD = 1);
-              for (let ID = 0; ID < cD; ID++) {
-                const cD = CD.levels[ID],
-                  pD = SD(MD, DD, ID, ZD, oD);
-                if (!pD) {
-                  vD = !1;
+            }(uU);
+          let hU = GU.data.ignoreSupportedFormats ? null : function(KU, cU) {
+              let GU = null;
+              KU.supportedCompressionFormats && (GU = KU.supportedCompressionFormats.astc ? TU : KU.supportedCompressionFormats.bc7 ? pU : KU.supportedCompressionFormats.s3tc ? cU.hasAlpha ? tU : gU : KU.supportedCompressionFormats.pvrtc ? cU.hasAlpha ? PU : EU : KU.supportedCompressionFormats.etc2 ? RU : KU.supportedCompressionFormats.etc1 ? UU : qU);
+              return GU
+            }(GU.data.config, CU),
+            QU = !1;
+          null === hU && (QU = !0, hU = CU.hasAlpha ? tU : gU);
+          let eU = !0;
+          uU.startTranscoding() || (eU = !1);
+          const WU = [];
+          for (let UU = 0; UU < CU.images.length && eU; UU++) {
+            const RU = CU.images[UU];
+            if (void 0 === KU.loadSingleImage || KU.loadSingleImage === UU) {
+              let gU = RU.levels.length;
+              !1 === KU.loadMipmapLevels && (gU = 1);
+              for (let tU = 0; tU < gU; tU++) {
+                const gU = RU.levels[tU],
+                  pU = cU(uU, UU, tU, hU, QU);
+                if (!pU) {
+                  eU = !1;
                   break
                 }
-                cD.transcodedPixels = pD, ND.push(cD.transcodedPixels.buffer)
+                gU.transcodedPixels = pU, WU.push(gU.transcodedPixels.buffer)
               }
             }
           }
-          MD.close(), MD.delete(), oD && (ZD = -1), vD ? postMessage({
+          uU.close(), uU.delete(), QU && (hU = -1), eU ? postMessage({
             action: "transcode",
-            success: vD,
-            id: BD.data.id,
-            fileInfo: tD,
-            format: ZD
-          }, ND) : postMessage({
+            success: eU,
+            id: GU.data.id,
+            fileInfo: CU,
+            format: hU
+          }, WU) : postMessage({
             action: "transcode",
-            success: vD,
-            id: BD.data.id
+            success: eU,
+            id: GU.data.id
           })
         }
       }
-    }! function(DD) {
-      DD[DD.cTFETC1 = 0] = "cTFETC1", DD[DD.cTFETC2 = 1] = "cTFETC2", DD[DD.cTFBC1 = 2] = "cTFBC1", DD[DD.cTFBC3 = 3] = "cTFBC3", DD[DD.cTFBC4 = 4] = "cTFBC4", DD[DD.cTFBC5 = 5] = "cTFBC5", DD[DD.cTFBC7 = 6] = "cTFBC7", DD[DD.cTFPVRTC1_4_RGB = 8] = "cTFPVRTC1_4_RGB", DD[DD.cTFPVRTC1_4_RGBA = 9] = "cTFPVRTC1_4_RGBA", DD[DD.cTFASTC_4x4 = 10] = "cTFASTC_4x4", DD[DD.cTFATC_RGB = 11] = "cTFATC_RGB", DD[DD.cTFATC_RGBA_INTERPOLATED_ALPHA = 12] = "cTFATC_RGBA_INTERPOLATED_ALPHA", DD[DD.cTFRGBA32 = 13] = "cTFRGBA32", DD[DD.cTFRGB565 = 14] = "cTFRGB565", DD[DD.cTFBGR565 = 15] = "cTFBGR565", DD[DD.cTFRGBA4444 = 16] = "cTFRGBA4444", DD[DD.cTFFXT1_RGB = 17] = "cTFFXT1_RGB", DD[DD.cTFPVRTC2_4_RGB = 18] = "cTFPVRTC2_4_RGB", DD[DD.cTFPVRTC2_4_RGBA = 19] = "cTFPVRTC2_4_RGBA", DD[DD.cTFETC2_EAC_R11 = 20] = "cTFETC2_EAC_R11", DD[DD.cTFETC2_EAC_RG11 = 21] = "cTFETC2_EAC_RG11"
-    }(ID || (ID = {}));
-    const wD = {
-      JSModuleURL: `${pD.g._DefaultCdnUrl}/basisTranscoder/1/basis_transcoder.js`,
-      WasmModuleURL: `${pD.g._DefaultCdnUrl}/basisTranscoder/1/basis_transcoder.wasm`
+    }! function(UU) {
+      UU[UU.cTFETC1 = 0] = "cTFETC1", UU[UU.cTFETC2 = 1] = "cTFETC2", UU[UU.cTFBC1 = 2] = "cTFBC1", UU[UU.cTFBC3 = 3] = "cTFBC3", UU[UU.cTFBC4 = 4] = "cTFBC4", UU[UU.cTFBC5 = 5] = "cTFBC5", UU[UU.cTFBC7 = 6] = "cTFBC7", UU[UU.cTFPVRTC1_4_RGB = 8] = "cTFPVRTC1_4_RGB", UU[UU.cTFPVRTC1_4_RGBA = 9] = "cTFPVRTC1_4_RGBA", UU[UU.cTFASTC_4x4 = 10] = "cTFASTC_4x4", UU[UU.cTFATC_RGB = 11] = "cTFATC_RGB", UU[UU.cTFATC_RGBA_INTERPOLATED_ALPHA = 12] = "cTFATC_RGBA_INTERPOLATED_ALPHA", UU[UU.cTFRGBA32 = 13] = "cTFRGBA32", UU[UU.cTFRGB565 = 14] = "cTFRGB565", UU[UU.cTFBGR565 = 15] = "cTFBGR565", UU[UU.cTFRGBA4444 = 16] = "cTFRGBA4444", UU[UU.cTFFXT1_RGB = 17] = "cTFFXT1_RGB", UU[UU.cTFPVRTC2_4_RGB = 18] = "cTFPVRTC2_4_RGB", UU[UU.cTFPVRTC2_4_RGBA = 19] = "cTFPVRTC2_4_RGBA", UU[UU.cTFETC2_EAC_R11 = 20] = "cTFETC2_EAC_R11", UU[UU.cTFETC2_EAC_RG11 = 21] = "cTFETC2_EAC_RG11"
+    }(tU || (tU = {}));
+    const KU = {
+      JSModuleURL: `${pU.g._DefaultCdnUrl}/basisTranscoder/1/basis_transcoder.js`,
+      WasmModuleURL: `${pU.g._DefaultCdnUrl}/basisTranscoder/1/basis_transcoder.wasm`
     };
-    let SD = null,
-      BD = null,
-      yD = 0;
-    const MD = async () => (SD || (SD = new Promise(((DD, CD) => {
-      BD ? DD(BD) : pD.g.LoadFileAsync(pD.g.GetBabylonScriptURL(wD.WasmModuleURL)).then((cD => {
-        if ("function" !== typeof URL) return CD("Basis transcoder requires an environment with a URL constructor");
-        const ID = URL.createObjectURL(new Blob([`(${QD})()`], {
+    let cU = null,
+      GU = null,
+      jU = 0;
+    const uU = async () => (cU || (cU = new Promise(((UU, RU) => {
+      GU ? UU(GU) : pU.g.LoadFileAsync(pU.g.GetBabylonScriptURL(KU.WasmModuleURL)).then((gU => {
+        if ("function" !== typeof URL) return RU("Basis transcoder requires an environment with a URL constructor");
+        const tU = URL.createObjectURL(new Blob([`(${qU})()`], {
           type: "application/javascript"
         }));
-        BD = new Worker(ID), async function(DD, CD, cD) {
-          return await new Promise(((ID, iD) => {
-            const fD = CD => {
-              "init" === CD.data.action ? (DD.removeEventListener("message", fD), ID(DD)) : "error" === CD.data.action && iD(CD.data.error || "error initializing worker")
+        GU = new Worker(tU), async function(UU, RU, gU) {
+          return await new Promise(((tU, EU) => {
+            const PU = RU => {
+              "init" === RU.data.action ? (UU.removeEventListener("message", PU), tU(UU)) : "error" === RU.data.action && EU(RU.data.error || "error initializing worker")
             };
-            DD.addEventListener("message", fD), DD.postMessage({
+            UU.addEventListener("message", PU), UU.postMessage({
               action: "init",
-              url: cD ? pD.g.GetBabylonScriptURL(cD) : void 0,
-              wasmBinary: CD
-            }, [CD])
+              url: gU ? pU.g.GetBabylonScriptURL(gU) : void 0,
+              wasmBinary: RU
+            }, [RU])
           }))
-        }(BD, cD, wD.JSModuleURL).then(DD, CD)
-      })).catch(CD)
-    }))), await SD), tD = async (DD, CD) => {
-      const cD = DD instanceof ArrayBuffer ? new Uint8Array(DD) : DD;
-      return await new Promise(((DD, ID) => {
-        MD().then((() => {
-          const pD = yD++,
-            iD = CD => {
-              "transcode" === CD.data.action && CD.data.id === pD && (BD.removeEventListener("message", iD), CD.data.success ? DD(CD.data) : ID("Transcode is not supported on this device"))
+        }(GU, gU, KU.JSModuleURL).then(UU, RU)
+      })).catch(RU)
+    }))), await cU), CU = async (UU, RU) => {
+      const gU = UU instanceof ArrayBuffer ? new Uint8Array(UU) : UU;
+      return await new Promise(((UU, tU) => {
+        uU().then((() => {
+          const pU = jU++,
+            EU = RU => {
+              "transcode" === RU.data.action && RU.data.id === pU && (GU.removeEventListener("message", EU), RU.data.success ? UU(RU.data) : tU("Transcode is not supported on this device"))
             };
-          BD.addEventListener("message", iD);
-          const fD = new Uint8Array(cD.byteLength);
-          fD.set(new Uint8Array(cD.buffer, cD.byteOffset, cD.byteLength)), BD.postMessage({
+          GU.addEventListener("message", EU);
+          const PU = new Uint8Array(gU.byteLength);
+          PU.set(new Uint8Array(gU.buffer, gU.byteOffset, gU.byteLength)), GU.postMessage({
             action: "transcode",
-            id: pD,
-            imageData: fD,
-            config: CD,
+            id: pU,
+            imageData: PU,
+            config: RU,
             ignoreSupportedFormats: false
-          }, [fD.buffer])
-        }), (DD => {
-          ID(DD)
+          }, [PU.buffer])
+        }), (UU => {
+          tU(UU)
         }))
       }))
-    }, ZD = (DD, CD) => {
-      let cD = CD._gl?.TEXTURE_2D;
-      DD.isCube && (cD = CD._gl?.TEXTURE_CUBE_MAP), CD._bindTextureDirectly(cD, DD, !0)
-    }, oD = (DD, CD) => {
-      const cD = DD.DZ();
-      for (let pD = 0; pD < CD.fileInfo.images.length; pD++) {
-        const QD = CD.fileInfo.images[pD].levels[0];
-        if (DD._invertVScale = DD.invertY, -1 === CD.format || CD.format === ID.cTFRGB565)
-          if (DD.type = 10, DD.format = 4, !cD._features.basisNeedsPOT || Math.log2(QD.width) % 1 === 0 && Math.log2(QD.height) % 1 === 0) DD._invertVScale = !DD.invertY, DD.width = QD.width + 3 & -4, DD.height = QD.height + 3 & -4, DD.samplingMode = 2, ZD(DD, cD), cD._uploadDataToTextureDirectly(DD, new Uint16Array(QD.transcodedPixels.buffer), pD, 0, 4, !0);
+    }, hU = (UU, RU) => {
+      let gU = RU._gl?.TEXTURE_2D;
+      UU.isCube && (gU = RU._gl?.TEXTURE_CUBE_MAP), RU._bindTextureDirectly(gU, UU, !0)
+    }, QU = (UU, RU) => {
+      const gU = UU.WC();
+      for (let pU = 0; pU < RU.fileInfo.images.length; pU++) {
+        const qU = RU.fileInfo.images[pU].levels[0];
+        if (UU._invertVScale = UU.invertY, -1 === RU.format || RU.format === tU.cTFRGB565)
+          if (UU.type = 10, UU.format = 4, !gU._features.basisNeedsPOT || Math.log2(qU.width) % 1 === 0 && Math.log2(qU.height) % 1 === 0) UU._invertVScale = !UU.invertY, UU.width = qU.width + 3 & -4, UU.height = qU.height + 3 & -4, UU.samplingMode = 2, hU(UU, gU), gU._uploadDataToTextureDirectly(UU, new Uint16Array(qU.transcodedPixels.buffer), pU, 0, 4, !0);
           else {
-            const CD = new bD.c(cD, 2);
-            DD._invertVScale = DD.invertY, CD.type = 10, CD.format = 4, CD.width = QD.width + 3 & -4, CD.height = QD.height + 3 & -4, ZD(CD, cD), cD._uploadDataToTextureDirectly(CD, new Uint16Array(QD.transcodedPixels.buffer), pD, 0, 4, !0), cD._rescaleTexture(CD, DD, cD.scenes[0], cD._getInternalFormat(4), (() => {
-              cD._releaseTexture(CD), ZD(DD, cD)
+            const RU = new TU.d(gU, 2);
+            UU._invertVScale = UU.invertY, RU.type = 10, RU.format = 4, RU.width = qU.width + 3 & -4, RU.height = qU.height + 3 & -4, hU(RU, gU), gU._uploadDataToTextureDirectly(RU, new Uint16Array(qU.transcodedPixels.buffer), pU, 0, 4, !0), gU._rescaleTexture(RU, UU, gU.scenes[0], gU._getInternalFormat(4), (() => {
+              gU._releaseTexture(RU), hU(UU, gU)
             }))
           }
         else {
-          DD.width = QD.width, DD.height = QD.height, DD.generateMipMaps = CD.fileInfo.images[pD].levels.length > 1;
-          const ID = vD.GetInternalFormatFromBasisFormat(CD.format, cD);
-          DD.format = ID, ZD(DD, cD);
-          const bD = CD.fileInfo.images[pD].levels;
-          for (let CD = 0; CD < bD.length; CD++) {
-            const iD = bD[CD];
-            cD._uploadCompressedDataToTextureDirectly(DD, ID, iD.width, iD.height, iD.transcodedPixels, pD, CD)
-          }!cD._features.basisNeedsPOT || Math.log2(DD.width) % 1 === 0 && Math.log2(DD.height) % 1 === 0 || (iD.e.Warn("Loaded .basis texture width and height are not a power of two. Texture wrapping will be set to Texture.CLAMP_ADDRESSMODE as other modes are not supported with non power of two dimensions in webGL 1."), DD._cachedWrapU = fD.c.CLAMP_ADDRESSMODE, DD._cachedWrapV = fD.c.CLAMP_ADDRESSMODE)
+          UU.width = qU.width, UU.height = qU.height, UU.generateMipMaps = RU.fileInfo.images[pU].levels.length > 1;
+          const tU = eU.GetInternalFormatFromBasisFormat(RU.format, gU);
+          UU.format = tU, hU(UU, gU);
+          const TU = RU.fileInfo.images[pU].levels;
+          for (let RU = 0; RU < TU.length; RU++) {
+            const EU = TU[RU];
+            gU._uploadCompressedDataToTextureDirectly(UU, tU, EU.width, EU.height, EU.transcodedPixels, pU, RU)
+          }!gU._features.basisNeedsPOT || Math.log2(UU.width) % 1 === 0 && Math.log2(UU.height) % 1 === 0 || (EU.e.Warn("Loaded .basis texture width and height are not a power of two. Texture wrapping will be set to Texture.CLAMP_ADDRESSMODE as other modes are not supported with non power of two dimensions in webGL 1."), UU._cachedWrapU = PU.e.CLAMP_ADDRESSMODE, UU._cachedWrapV = PU.e.CLAMP_ADDRESSMODE)
         }
       }
-    }, vD = {
-      JSModuleURL: wD.JSModuleURL,
-      WasmModuleURL: wD.WasmModuleURL,
-      GetInternalFormatFromBasisFormat: (DD, CD) => {
-        let cD;
-        switch (DD) {
-          case ID.cTFETC1:
-            cD = 36196;
+    }, eU = {
+      JSModuleURL: KU.JSModuleURL,
+      WasmModuleURL: KU.WasmModuleURL,
+      GetInternalFormatFromBasisFormat: (UU, RU) => {
+        let gU;
+        switch (UU) {
+          case tU.cTFETC1:
+            gU = 36196;
             break;
-          case ID.cTFBC1:
-            cD = 33776;
+          case tU.cTFBC1:
+            gU = 33776;
             break;
-          case ID.cTFBC4:
-            cD = 33779;
+          case tU.cTFBC4:
+            gU = 33779;
             break;
-          case ID.cTFASTC_4x4:
-            cD = 37808;
+          case tU.cTFASTC_4x4:
+            gU = 37808;
             break;
-          case ID.cTFETC2:
-            cD = 37496;
+          case tU.cTFETC2:
+            gU = 37496;
             break;
-          case ID.cTFBC7:
-            cD = 36492
+          case tU.cTFBC7:
+            gU = 36492
         }
-        if (void 0 === cD) throw "The chosen Basis transcoder format is not currently supported";
-        return cD
+        if (void 0 === gU) throw "The chosen Basis transcoder format is not currently supported";
+        return gU
       },
-      TranscodeAsync: tD,
-      LoadTextureFromTranscodeResult: oD
+      TranscodeAsync: CU,
+      LoadTextureFromTranscodeResult: QU
     };
-    class ND {
+    class WU {
       constructor() {
         this.supportCascades = !1
       }
-      loadCubeData(DD, CD, cD, ID, iD) {
-        if (Array.isArray(DD)) return;
-        const fD = CD.DZ().getCaps(),
-          bD = {
+      loadCubeData(UU, RU, gU, tU, EU) {
+        if (Array.isArray(UU)) return;
+        const PU = RU.WC().getCaps(),
+          TU = {
             supportedCompressionFormats: {
-              etc1: !!fD.etc1,
-              s3tc: !!fD.s3tc,
-              pvrtc: !!fD.pvrtc,
-              etc2: !!fD.etc2,
-              astc: !!fD.astc,
-              bc7: !!fD.bptc
+              etc1: !!PU.etc1,
+              s3tc: !!PU.s3tc,
+              pvrtc: !!PU.pvrtc,
+              etc2: !!PU.etc2,
+              astc: !!PU.astc,
+              bc7: !!PU.bptc
             }
           };
-        tD(DD, bD).then((DD => {
-          const cD = DD.fileInfo.images[0].levels.length > 1 && CD.generateMipMaps;
-          oD(CD, DD), CD.DZ()._setCubeMapTextureParams(CD, cD), CD.isReady = !0, CD.onLoadedObservable.notifyObservers(CD), CD.onLoadedObservable.clear(), ID && ID()
-        })).catch((DD => {
-          pD.g.Warn("Failed to transcode Basis file, transcoding may not be supported on this device"), CD.isReady = !0, iD && iD(DD)
+        CU(UU, TU).then((UU => {
+          const gU = UU.fileInfo.images[0].levels.length > 1 && RU.generateMipMaps;
+          QU(RU, UU), RU.WC()._setCubeMapTextureParams(RU, gU), RU.isReady = !0, RU.onLoadedObservable.notifyObservers(RU), RU.onLoadedObservable.clear(), tU && tU()
+        })).catch((UU => {
+          pU.g.Warn("Failed to transcode Basis file, transcoding may not be supported on this device"), RU.isReady = !0, EU && EU(UU)
         }))
       }
-      loadData(DD, CD, cD) {
-        const ID = CD.DZ().getCaps(),
-          iD = {
+      loadData(UU, RU, gU) {
+        const tU = RU.WC().getCaps(),
+          EU = {
             supportedCompressionFormats: {
-              etc1: !!ID.etc1,
-              s3tc: !!ID.s3tc,
-              pvrtc: !!ID.pvrtc,
-              etc2: !!ID.etc2,
-              astc: !!ID.astc,
-              bc7: !!ID.bptc
+              etc1: !!tU.etc1,
+              s3tc: !!tU.s3tc,
+              pvrtc: !!tU.pvrtc,
+              etc2: !!tU.etc2,
+              astc: !!tU.astc,
+              bc7: !!tU.bptc
             }
           };
-        tD(DD, iD).then((DD => {
-          const ID = DD.fileInfo.images[0].levels[0],
-            pD = DD.fileInfo.images[0].levels.length > 1 && CD.generateMipMaps;
-          cD(ID.width, ID.height, pD, -1 !== DD.format, (() => {
-            oD(CD, DD)
+        CU(UU, EU).then((UU => {
+          const tU = UU.fileInfo.images[0].levels[0],
+            pU = UU.fileInfo.images[0].levels.length > 1 && RU.generateMipMaps;
+          gU(tU.width, tU.height, pU, -1 !== UU.format, (() => {
+            QU(RU, UU)
           }))
-        })).catch((DD => {
-          pD.g.Warn("Failed to transcode Basis file, transcoding may not be supported on this device"), pD.g.Warn(`Failed to transcode Basis file: ${DD}`), cD(0, 0, !1, !1, (() => {}), !0)
+        })).catch((UU => {
+          pU.g.Warn("Failed to transcode Basis file, transcoding may not be supported on this device"), pU.g.Warn(`Failed to transcode Basis file: ${UU}`), gU(0, 0, !1, !1, (() => {}), !0)
         }))
       }
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

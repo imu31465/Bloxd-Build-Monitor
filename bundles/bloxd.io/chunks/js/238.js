@@ -1,25 +1,25 @@
 export const id = 238;
 export const ids = [238];
 export const modules = {
-  38757: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      default: () => Fc
+  38986: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      default: () => Og
     });
-    const ID = [0, 90, 180, 270],
-      pD = "plotsblueprint";
-    var iD = cD(53),
-      fD = cD(35996),
-      bD = cD(16),
-      QD = cD(1627),
-      wD = cD(1701),
-      SD = cD(20);
-    const BD = [
+    const tU = [0, 90, 180, 270],
+      pU = "plotsblueprint";
+    var EU = gU(56),
+      PU = gU(36191),
+      TU = gU(21),
+      qU = gU(1567),
+      KU = gU(1637),
+      cU = gU(24);
+    const GU = [
         ["farm_hut", "farm_house", "farm_barn"],
         ["rusticHome_tent", "rusticHome_cabin", "rusticHome_house"],
         ["market_stand", "market_stall", "market_shop"],
         ["castle_wall", "castle_gate", "castle_tower"]
       ],
-      yD = {
+      jU = {
         farm_hut: {
           displayName: {
             translationKey: "plotsGame:blueprintFarmHut"
@@ -93,18 +93,18 @@ export const modules = {
           tier: "large"
         }
       },
-      MD = ["small", "medium", "large"].flatMap((DD => BD.flat().filter((CD => yD[CD].tier === DD))));
+      uU = ["small", "medium", "large"].flatMap((UU => GU.flat().filter((RU => jU[RU].tier === UU))));
 
-    function tD(DD) {
-      return yD[DD]
+    function CU(UU) {
+      return jU[UU]
     }
-    const ZD = new Map(BD.flatMap((DD => DD.slice(1).map(((CD, cD) => [CD, DD[cD]])))));
+    const hU = new Map(GU.flatMap((UU => UU.slice(1).map(((RU, gU) => [RU, UU[gU]])))));
 
-    function oD(DD) {
-      var CD;
-      return null !== (CD = ZD.get(DD)) && void 0 !== CD ? CD : null
+    function QU(UU) {
+      var RU;
+      return null !== (RU = hU.get(UU)) && void 0 !== RU ? RU : null
     }
-    const vD = {
+    const eU = {
       farm_hut: "plotsGame:journalNoteFarmHut",
       rusticHome_tent: "plotsGame:journalNoteRusticHomeTent",
       castle_tower: "plotsGame:journalNoteCastleTower",
@@ -112,180 +112,180 @@ export const modules = {
       farm_barn: "plotsGame:journalNoteFarmBarn"
     };
 
-    function ND(DD, CD) {
-      const cD = new Set(DD),
-        ID = function(DD) {
-          const CD = new Set(DD);
-          return new Set(MD.filter((DD => {
-            const cD = oD(DD);
-            return null === cD || CD.has(cD)
+    function WU(UU, RU) {
+      const gU = new Set(UU),
+        tU = function(UU) {
+          const RU = new Set(UU);
+          return new Set(uU.filter((UU => {
+            const gU = QU(UU);
+            return null === gU || RU.has(gU)
           })))
-        }(cD);
-      return MD.map((DD => {
-        const pD = DD === CD;
-        return cD.has(DD) ? {
-          id: DD,
-          active: pD,
+        }(gU);
+      return uU.map((UU => {
+        const pU = UU === RU;
+        return gU.has(UU) ? {
+          id: UU,
+          active: pU,
           state: "completed",
           unlockedBy: null
-        } : ID.has(DD) ? {
-          id: DD,
-          active: pD,
+        } : tU.has(UU) ? {
+          id: UU,
+          active: pU,
           state: "open",
           unlockedBy: null
         } : {
-          id: DD,
-          active: pD,
+          id: UU,
+          active: pU,
           state: "locked",
-          unlockedBy: oD(DD)
+          unlockedBy: QU(UU)
         }
       }))
     }
-    const gD = "plotsJournalChanged";
-    class XD {
-      constructor(DD, CD) {
-        this.api = DD, this.placement = CD, this.pages = null, this.openRequested = !1, this.reported = new Set, this.onOpened = () => {
-          this.placement.stop(), this.Nt("journal_opened")
-        }, this.build = DD => {
-          this.Nt("placement_started"), this.placement.start(DD), (0, fD.e)()
+    const fU = "plotsJournalChanged";
+    class xU {
+      constructor(UU, RU) {
+        this.api = UU, this.placement = RU, this.pages = null, this.openRequested = !1, this.reported = new Set, this.onOpened = () => {
+          this.placement.stop(), this.ku("journal_opened")
+        }, this.build = UU => {
+          this.ku("placement_started"), this.placement.start(UU), (0, PU.h)()
         }, this.putAway = () => {
-          this.api.sendCommand(`${pD} cancel`)
+          this.api.sendCommand(`${pU} cancel`)
         }
       }
       getPages() {
         return this.pages
       }
-      kt(DD) {
-        let [, CD, cD] = DD;
-        this.pages = ND(CD, cD), SD.i.Uo(gD, this.pages, !0)
+      qC(UU) {
+        let [, RU, gU] = UU;
+        this.pages = WU(RU, gU), cU.p.yh(fU, this.pages, !0)
       }
       openFromServer() {
-        this.openRequested = !0, this.wy()
+        this.openRequested = !0, this.HG()
       }
-      wy() {
-        this.openRequested && !bD.d.get("loadingOverlayVisible") && (this.openRequested = !1, null === this.pages || (0, QD.s)() || (0, wD.isTypingInInput)() || null !== this.placement.getView() || (0, fD.s)())
+      HG() {
+        this.openRequested && !TU.b.get("loadingOverlayVisible") && (this.openRequested = !1, null === this.pages || (0, qU.q)() || (0, KU.isTypingInInput)() || null !== this.placement.getView() || (0, PU.w)())
       }
-      Nt(DD) {
-        this.reported.has(DD) || (this.reported.add(DD), this.api.sendCommand(`${pD} report ${DD}`))
+      ku(UU) {
+        this.reported.has(UU) || (this.reported.add(UU), this.api.sendCommand(`${pU} report ${UU}`))
       }
     }
-    var mD = cD(1049),
-      nD = cD.n(mD),
-      OD = cD(1064),
-      PD = cD(1442),
-      HD = cD(4325),
-      UD = cD(3209),
-      xD = cD(1440),
-      qD = cD(2050),
-      JD = cD(1192),
-      KD = cD(9141);
-    const aD = [0, 90, 180, 270],
-      VD = /^(meta\|rot\d)\|([lrud]+)$/,
-      zD = "nesw",
-      jD = /^meta\|([nesw]*)\|?(Stacked)?$/,
-      lD = function(DD) {
-        const CD = new WeakMap;
-        return (cD, ID) => {
-          let pD = CD.get(cD);
-          return void 0 === pD && (pD = DD(cD, ID), CD.set(cD, pD)), pD
+    var mU = gU(1037),
+      IU = gU.n(mU),
+      JU = gU(1049),
+      wU = gU(1412),
+      nU = gU(4195),
+      bU = gU(3111),
+      oU = gU(1410),
+      ZU = gU(1943),
+      aU = gU(1181),
+      YU = gU(9078);
+    const BU = [0, 90, 180, 270],
+      VU = /^(meta\|rot\d)\|([lrud]+)$/,
+      rU = "nesw",
+      XU = /^meta\|([nesw]*)\|?(Stacked)?$/,
+      vU = function(UU) {
+        const RU = new WeakMap;
+        return (gU, tU) => {
+          let pU = RU.get(gU);
+          return void 0 === pU && (pU = UU(gU, tU), RU.set(gU, pU)), pU
         }
-      }((DD => new LD(DD)));
-    class LD {
-      constructor(DD) {
-        this.blockMetadata = DD, this.blockIdMappings = new Map, this.maxBlockId = void 0;
-        const CD = new Set(Object.keys(DD).map((CD => DD[CD].id)));
-        CD.add(0), this.maxBlockId = Math.max(...CD)
+      }((UU => new dU(UU)));
+    class dU {
+      constructor(UU) {
+        this.blockMetadata = UU, this.blockIdMappings = new Map, this.maxBlockId = void 0;
+        const RU = new Set(Object.keys(UU).map((RU => UU[RU].id)));
+        RU.add(0), this.maxBlockId = Math.max(...RU)
       }
       static
-      for (DD) {
-        return lD(DD)
+      for (UU) {
+        return vU(UU)
       }
-      getBlockIdMapping(DD, CD) {
-        const cD = this.getBlockIdMappingKey(DD, CD);
-        let ID = this.blockIdMappings.get(cD);
-        return void 0 === ID && aD.includes(DD) && (ID = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, DD, CD), this.blockIdMappings.set(cD, ID)), ID
+      getBlockIdMapping(UU, RU) {
+        const gU = this.getBlockIdMappingKey(UU, RU);
+        let tU = this.blockIdMappings.get(gU);
+        return void 0 === tU && BU.includes(UU) && (tU = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, UU, RU), this.blockIdMappings.set(gU, tU)), tU
       }
-      turnBlockId(DD, CD, cD) {
-        return this.mapBlockId(this.blockMetadata[DD], CD, this.getRotationMapping(CD, cD), cD)
+      turnBlockId(UU, RU, gU) {
+        return this.mapBlockId(this.blockMetadata[UU], RU, this.getRotationMapping(RU, gU), gU)
       }
-      getBlockIdMappingKey(DD, CD) {
-        return `r${DD}|m${Number(CD)}`
+      getBlockIdMappingKey(UU, RU) {
+        return `r${UU}|m${Number(RU)}`
       }
-      createBlockIdMapping(DD, CD, cD, ID) {
-        const pD = new Uint16Array(CD + 1),
-          iD = this.getRotationMapping(cD, ID);
-        for (const fD in DD) {
-          const CD = DD[fD];
-          pD[CD.id] = this.mapBlockId(CD, cD, iD, ID)
+      createBlockIdMapping(UU, RU, gU, tU) {
+        const pU = new Uint16Array(RU + 1),
+          EU = this.getRotationMapping(gU, tU);
+        for (const PU in UU) {
+          const RU = UU[PU];
+          pU[RU.id] = this.mapBlockId(RU, gU, EU, tU)
         }
-        return pD
+        return pU
       }
-      getRotationMapping(DD, CD) {
-        const cD = Math.round(DD / 90),
-          ID = new Uint8Array(4);
-        for (let pD = 0; pD < 4; pD++) ID[pD] = (4 + pD - cD) % 4;
-        if (CD) {
-          let DD = ID[0];
-          ID[0] = ID[1], ID[1] = DD, DD = ID[2], ID[2] = ID[3], ID[3] = DD
+      getRotationMapping(UU, RU) {
+        const gU = Math.round(UU / 90),
+          tU = new Uint8Array(4);
+        for (let pU = 0; pU < 4; pU++) tU[pU] = (4 + pU - gU) % 4;
+        if (RU) {
+          let UU = tU[0];
+          tU[0] = tU[1], tU[1] = UU, UU = tU[2], tU[2] = tU[3], tU[3] = UU
         }
-        return ID
+        return tU
       }
-      mapBlockId(DD, CD, cD, ID) {
-        var pD;
+      mapBlockId(UU, RU, gU, tU) {
+        var pU;
         const {
-          blockMetadata: iD
-        } = this, fD = Math.round(CD / 90), {
-          id: bD,
-          meta: QD
-        } = DD, {
-          rot: wD,
-          rootName: SD,
-          metaStr: BD
-        } = QD;
-        let yD;
-        const [, MD, tD] = null !== (pD = jD.exec(BD)) && void 0 !== pD ? pD : [];
-        if (void 0 !== MD) {
-          var ZD, oD;
-          yD = null !== (ZD = null === (oD = iD[`${SD}|meta|${[zD.split("").filter(((DD,CD)=>MD.split("").some((DD=>{const cD=zD.indexOf(DD);return((ID?3-cD:cD)+fD)%4===CD})))).join(""),tD].filter(Boolean).join("|")}`]) || void 0 === oD ? void 0 : oD.id) && void 0 !== ZD ? ZD : bD
-        } else if (null === wD) yD = bD;
+          blockMetadata: EU
+        } = this, PU = Math.round(RU / 90), {
+          id: TU,
+          meta: qU
+        } = UU, {
+          rot: KU,
+          rootName: cU,
+          metaStr: GU
+        } = qU;
+        let jU;
+        const [, uU, CU] = null !== (pU = XU.exec(GU)) && void 0 !== pU ? pU : [];
+        if (void 0 !== uU) {
+          var hU, QU;
+          jU = null !== (hU = null === (QU = EU[`${cU}|meta|${[rU.split("").filter(((UU,RU)=>uU.split("").some((UU=>{const gU=rU.indexOf(UU);return((tU?3-gU:gU)+PU)%4===RU})))).join(""),CU].filter(Boolean).join("|")}`]) || void 0 === QU ? void 0 : QU.id) && void 0 !== hU ? hU : TU
+        } else if (null === KU) jU = TU;
         else {
-          var vD, ND;
-          const DD = cD[wD - 1] + 1;
-          let CD = BD.replace(`rot${wD}`, `rot${DD}`);
-          ID && QD.stairsCorner && (CD = CD.replace(/(Left|Right)$/, (DD => "Left" === DD ? "Right" : "Left"))), ID && "Chest" === SD && (CD = CD.replace(/\|(left|right)$/, ((DD, CD) => "left" === CD ? "|right" : "|left")));
-          const pD = VD.exec(CD);
-          if (ID && null !== pD) {
-            const DD = "lrud".split("").filter((DD => pD[2].includes("l" === DD ? "r" : "r" === DD ? "l" : DD)));
-            CD = `${pD[1]}|${DD.join("")}`
+          var eU, WU;
+          const UU = gU[KU - 1] + 1;
+          let RU = GU.replace(`rot${KU}`, `rot${UU}`);
+          tU && qU.stairsCorner && (RU = RU.replace(/(Left|Right)$/, (UU => "Left" === UU ? "Right" : "Left"))), tU && "Chest" === cU && (RU = RU.replace(/\|(left|right)$/, ((UU, RU) => "left" === RU ? "|right" : "|left")));
+          const pU = VU.exec(RU);
+          if (tU && null !== pU) {
+            const UU = "lrud".split("").filter((UU => pU[2].includes("l" === UU ? "r" : "r" === UU ? "l" : UU)));
+            RU = `${pU[1]}|${UU.join("")}`
           }
-          const fD = `${SD}|${CD}`;
-          if (yD = null !== (vD = null === (ND = iD[fD]) || void 0 === ND ? void 0 : ND.id) && void 0 !== vD ? vD : null, null === yD) {
-            const DD = iD[SD];
-            yD = DD.rootMetaDesc === fD ? DD.id : bD
+          const PU = `${cU}|${RU}`;
+          if (jU = null !== (eU = null === (WU = EU[PU]) || void 0 === WU ? void 0 : WU.id) && void 0 !== eU ? eU : null, null === jU) {
+            const UU = EU[cU];
+            jU = UU.rootMetaDesc === PU ? UU.id : TU
           }
         }
-        return yD
+        return jU
       }
     }
 
-    function TD(DD, CD, cD) {
+    function HU(UU, RU, gU) {
       let {
-        xRotationMappedOrigin: ID,
-        shouldSwapXZ: pD
-      } = cD;
-      const iD = pD ? CD : DD;
-      return null === ID ? iD : ID - iD
+        xRotationMappedOrigin: tU,
+        shouldSwapXZ: pU
+      } = gU;
+      const EU = pU ? RU : UU;
+      return null === tU ? EU : tU - EU
     }
 
-    function GD(DD, CD, cD) {
+    function SU(UU, RU, gU) {
       let {
-        zRotationMappedOrigin: ID,
-        shouldSwapXZ: pD
-      } = cD;
-      const iD = pD ? DD : CD;
-      return null === ID ? iD : ID - iD
+        zRotationMappedOrigin: tU,
+        shouldSwapXZ: pU
+      } = gU;
+      const EU = pU ? UU : RU;
+      return null === tU ? EU : tU - EU
     }
-    const RD = {
+    const sU = {
         farm_hut: {
           size: [7, 7, 7],
           palette: ["Aspen Wood Planks", "Messy Stone", "Barkless Aspen Log", "Red Planks", "Glass", "Barkless Pine Log", "Maple Wood Planks", "Smooth Stone"],
@@ -347,493 +347,493 @@ export const modules = {
           layers: ["aaaaaaaaa accccccca accccccca accccccca accccccca accccccca accccccca accccccca aaaaaaaaa", "bbbb.bbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbb.bbba b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b abbbbbbba", "bbbbabbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbbbbbb b.......b b.......b b.......b b...d...b b.......b b.......b b.......b bbbbbbbbb", "ab.bbb.ba b.......b ......... b.......b b...d...b b.......b ......... b.......b ab.bbb.ba", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....a.... ......... ......... ......... ........."]
         }
       },
-      kD = new Map;
+      yU = new Map;
 
-    function dD(DD, CD) {
-      const cD = `${DD}|${CD}`;
-      let ID = kD.get(cD);
-      if (void 0 === ID) {
+    function kU(UU, RU) {
+      const gU = `${UU}|${RU}`;
+      let tU = yU.get(gU);
+      if (void 0 === tU) {
         const {
-          size: pD,
-          palette: iD,
-          layers: fD
-        } = RD[DD], bD = 90 === CD || 270 === CD, [QD, wD] = bD ? [pD[2], pD[0]] : [pD[0], pD[2]], SD = function(DD, CD, cD) {
-          let ID = null,
-            pD = null,
-            iD = !1;
-          switch (DD) {
+          size: pU,
+          palette: EU,
+          layers: PU
+        } = sU[UU], TU = 90 === RU || 270 === RU, [qU, KU] = TU ? [pU[2], pU[0]] : [pU[0], pU[2]], cU = function(UU, RU, gU) {
+          let tU = null,
+            pU = null,
+            EU = !1;
+          switch (UU) {
             case 0:
               break;
             case 90:
-              ID = CD - 1, iD = !0;
+              tU = RU - 1, EU = !0;
               break;
             case 180:
-              ID = CD - 1, pD = cD - 1;
+              tU = RU - 1, pU = gU - 1;
               break;
             case 270:
-              pD = cD - 1, iD = !0;
+              pU = gU - 1, EU = !0;
               break;
             default:
-              throw new Error(`Invalid rotation: ${DD}`)
+              throw new Error(`Invalid rotation: ${UU}`)
           }
           return {
-            xRotationMappedOrigin: ID,
-            zRotationMappedOrigin: pD,
-            shouldSwapXZ: iD
+            xRotationMappedOrigin: tU,
+            zRotationMappedOrigin: pU,
+            shouldSwapXZ: EU
           }
-        }(CD, QD, wD), BD = LD.for(KD.g), yD = iD.map((DD => (0, KD.f)(BD.turnBlockId((0, KD.k)(DD), CD, !1)))), MD = [];
-        fD.forEach(((DD, CD) => {
-          DD.split(" ").forEach(((DD, cD) => {
-            for (let ID = 0; ID < DD.length; ID++)
-              if ("." !== DD[ID]) {
-                const pD = [TD(ID, cD, SD), CD, GD(ID, cD, SD)];
-                MD.push({
-                  offset: pD,
-                  block: yD[DD.charCodeAt(ID) - "a".charCodeAt(0)]
+        }(RU, qU, KU), GU = dU.for(YU.f), jU = EU.map((UU => (0, YU.e)(GU.turnBlockId((0, YU.i)(UU), RU, !1)))), uU = [];
+        PU.forEach(((UU, RU) => {
+          UU.split(" ").forEach(((UU, gU) => {
+            for (let tU = 0; tU < UU.length; tU++)
+              if ("." !== UU[tU]) {
+                const pU = [HU(tU, gU, cU), RU, SU(tU, gU, cU)];
+                uU.push({
+                  offset: pU,
+                  block: jU[UU.charCodeAt(tU) - "a".charCodeAt(0)]
                 })
               }
           }))
-        })), ID = {
-          size: [QD, pD[1], wD],
-          cells: MD
-        }, kD.set(cD, ID)
+        })), tU = {
+          size: [qU, pU[1], KU],
+          cells: uU
+        }, yU.set(gU, tU)
       }
-      return ID
+      return tU
     }
-    const YD = {
-      farm_hut: cD.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
-      farm_house: cD.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
-      farm_barn: cD.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
-      rusticHome_tent: cD.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
-      rusticHome_cabin: cD.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
-      rusticHome_house: cD.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
-      market_stand: cD.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
-      market_stall: cD.p + "static/media/market_stall.9a562807f9dff591618a.webp",
-      market_shop: cD.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
-      castle_wall: cD.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
-      castle_gate: cD.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
-      castle_tower: cD.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
+    const FU = {
+      farm_hut: gU.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
+      farm_house: gU.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
+      farm_barn: gU.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
+      rusticHome_tent: gU.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
+      rusticHome_cabin: gU.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
+      rusticHome_house: gU.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
+      market_stand: gU.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
+      market_stall: gU.p + "static/media/market_stall.9a562807f9dff591618a.webp",
+      market_shop: gU.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
+      castle_wall: gU.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
+      castle_gate: gU.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
+      castle_tower: gU.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
     };
-    var WD = cD(1093);
-    const sD = {
+    var iU = gU(1090);
+    const AU = {
       small: "plotsGame:journalTierSmall",
       medium: "plotsGame:journalTierMedium",
       large: "plotsGame:journalTierLarge"
     };
 
-    function ED(DD) {
+    function zU(UU) {
       let {
-        page: CD,
-        building: cD,
-        onBuild: ID,
-        onPutAway: pD
-      } = DD;
+        page: RU,
+        building: gU,
+        onBuild: tU,
+        onPutAway: pU
+      } = UU;
       const {
-        t: iD
-      } = (0, JD.F)(), {
-        displayName: fD,
-        tier: bD
-      } = tD(CD.id), QD = dD(CD.id, 0).cells.length, wD = vD[CD.id], SD = "locked" === CD.state, BD = cD ? PD.i : PD.o;
-      return (0, WD.jsxs)("article", {
-        className: nD()("PlotsJournalPage", {
-          Locked: SD
+        t: EU
+      } = (0, aU.B)(), {
+        displayName: PU,
+        tier: TU
+      } = CU(RU.id), qU = kU(RU.id, 0).cells.length, KU = eU[RU.id], cU = "locked" === RU.state, GU = gU ? wU.e : wU.j;
+      return (0, iU.jsxs)("article", {
+        className: IU()("PlotsJournalPage", {
+          Locked: cU
         }),
-        children: [(0, WD.jsx)("h3", {
+        children: [(0, iU.jsx)("h3", {
           className: "PlotsJournalPageName",
-          children: iD(fD.translationKey)
-        }), (0, WD.jsxs)("div", {
+          children: EU(PU.translationKey)
+        }), (0, iU.jsxs)("div", {
           className: "PlotsJournalPageMeta",
-          children: [iD(sD[bD]), " \xb7 ", iD("plotsGame:journalBlocks", {
-            blocks: String(QD)
+          children: [EU(AU[TU]), " \xb7 ", EU("plotsGame:journalBlocks", {
+            blocks: String(qU)
           })]
-        }), (0, WD.jsxs)("div", {
+        }), (0, iU.jsxs)("div", {
           className: "PlotsJournalSketch",
-          children: [MD.map((DD => (0, WD.jsx)("img", {
-            className: nD()({
-              Shown: DD === CD.id
+          children: [uU.map((UU => (0, iU.jsx)("img", {
+            className: IU()({
+              Shown: UU === RU.id
             }),
-            src: YD[DD],
+            src: FU[UU],
             alt: "",
             draggable: !1
-          }, DD))), "completed" === CD.state && (0, WD.jsx)("span", {
+          }, UU))), "completed" === RU.state && (0, iU.jsx)("span", {
             className: "PlotsJournalStamp",
-            children: iD("plotsGame:journalBuilt")
-          }), SD && (0, WD.jsx)("span", {
+            children: EU("plotsGame:journalBuilt")
+          }), cU && (0, iU.jsx)("span", {
             className: "PlotsJournalLock",
-            children: (0, WD.jsx)(OD.c, {
+            children: (0, iU.jsx)(JU.c, {
               name: "lock"
             })
           })]
-        }), void 0 !== wD && "completed" !== CD.state && (0, WD.jsx)("p", {
+        }), void 0 !== KU && "completed" !== RU.state && (0, iU.jsx)("p", {
           className: "PlotsJournalNote",
-          children: iD(wD)
-        }), (0, WD.jsxs)("div", {
+          children: EU(KU)
+        }), (0, iU.jsxs)("div", {
           className: "PlotsJournalPageAction",
-          children: ["locked" === CD.state && (0, WD.jsx)("p", {
+          children: ["locked" === RU.state && (0, iU.jsx)("p", {
             className: "PlotsJournalHint",
-            children: iD("plotsGame:journalLocked", {
-              name: iD(tD(CD.unlockedBy).displayName.translationKey)
+            children: EU("plotsGame:journalLocked", {
+              name: EU(CU(RU.unlockedBy).displayName.translationKey)
             })
-          }), CD.active && (0, WD.jsxs)(WD.Fragment, {
-            children: [(0, WD.jsx)("p", {
+          }), RU.active && (0, iU.jsxs)(iU.Fragment, {
+            children: [(0, iU.jsx)("p", {
               className: "PlotsJournalHint Building",
-              children: iD("plotsGame:journalBuilding")
-            }), (0, WD.jsx)(PD.k, {
-              onClick: pD,
-              children: iD("plotsGame:journalPutAway")
+              children: EU("plotsGame:journalBuilding")
+            }), (0, iU.jsx)(wU.g, {
+              onClick: pU,
+              children: EU("plotsGame:journalPutAway")
             })]
-          }), !SD && !CD.active && (0, WD.jsx)(BD, {
+          }), !cU && !RU.active && (0, iU.jsx)(GU, {
             onClick: () => {
-              ID(CD.id)
+              tU(RU.id)
             },
-            children: iD("plotsGame:placementBuild")
+            children: EU("plotsGame:placementBuild")
           })]
         })]
       })
     }
 
-    function eD(DD) {
+    function MU(UU) {
       let {
-        className: CD,
-        page: cD,
-        hidden: ID,
-        building: pD,
-        journal: iD
-      } = DD;
-      return (0, WD.jsxs)("div", {
-        ref: DD => {
-          null !== DD && (DD.inert = ID)
+        className: RU,
+        page: gU,
+        hidden: tU,
+        building: pU,
+        journal: EU
+      } = UU;
+      return (0, iU.jsxs)("div", {
+        ref: UU => {
+          null !== UU && (UU.inert = tU)
         },
-        className: nD()("PlotsJournalSide", CD),
-        children: [void 0 !== cD && (0, WD.jsx)(ED, {
-          page: cD,
-          building: pD,
-          onBuild: iD.build,
-          onPutAway: iD.putAway
-        }), void 0 === cD && (0, WD.jsx)("div", {
+        className: IU()("PlotsJournalSide", RU),
+        children: [void 0 !== gU && (0, iU.jsx)(zU, {
+          page: gU,
+          building: pU,
+          onBuild: EU.build,
+          onPutAway: EU.putAway
+        }), void 0 === gU && (0, iU.jsx)("div", {
           className: "PlotsJournalPage"
         })]
       })
     }
-    var uD = cD(326),
-      hD = cD(1865);
+    var DU = gU(311),
+      LU = gU(1771);
 
-    function rD(DD) {
-      return Math.cos((0, hD.o)(DD))
+    function NU(UU) {
+      return Math.cos((0, LU.j)(UU))
     }
 
-    function AD(DD) {
-      return (0, hD.A)(Math.acos(uD.e.clamp(DD, -1, 1)))
+    function lU(UU) {
+      return (0, LU.F)(Math.acos(DU.c.clamp(UU, -1, 1)))
     }
 
-    function FD(DD, CD, cD, ID, pD) {
-      const iD = Math.abs(CD - DD),
-        fD = (0, hD.A)(pD / (cD * Math.abs(Math.sin((0, hD.o)(DD))))),
-        bD = 450 * Math.min(1, iD / ID),
-        QD = fD > 0 ? 3 * iD / fD : 1 / 0;
-      return Math.round(Math.max(120, Math.min(bD, QD)))
+    function OU(UU, RU, gU, tU, pU) {
+      const EU = Math.abs(RU - UU),
+        PU = (0, LU.F)(pU / (gU * Math.abs(Math.sin((0, LU.j)(UU))))),
+        TU = 450 * Math.min(1, EU / tU),
+        qU = PU > 0 ? 3 * EU / PU : 1 / 0;
+      return Math.round(Math.max(120, Math.min(TU, qU)))
     }
-    class DC {
+    class UR {
       constructor() {
         this.samples = []
       }
-      add(DD, CD) {
+      add(UU, RU) {
         for (this.samples.push({
-            x: DD,
-            at: CD
-          }); CD - this.samples[0].at > 100;) this.samples.shift()
+            x: UU,
+            at: RU
+          }); RU - this.samples[0].at > 100;) this.samples.shift()
       }
       get() {
-        const DD = this.samples[0],
-          CD = this.samples[this.samples.length - 1];
-        return CD.at > DD.at ? (CD.x - DD.x) / (CD.at - DD.at) : 0
+        const UU = this.samples[0],
+          RU = this.samples[this.samples.length - 1];
+        return RU.at > UU.at ? (RU.x - UU.x) / (RU.at - UU.at) : 0
       }
     }
 
-    function CC(DD, CD) {
-      return DD > CD && DD >= 600
+    function RR(UU, RU) {
+      return UU > RU && UU >= 600
     }
 
-    function cC(DD) {
-      return AD(new DOMMatrixReadOnly(getComputedStyle(DD).transform).m11)
+    function gR(UU) {
+      return lU(new DOMMatrixReadOnly(getComputedStyle(UU).transform).m11)
     }
 
-    function IC(DD, CD) {
-      DD.style.transform = `rotateY(${-CD}deg)`, DD.classList.add("Turning")
+    function tR(UU, RU) {
+      UU.style.transform = `rotateY(${-RU}deg)`, UU.classList.add("Turning")
     }
 
-    function pC(DD) {
+    function pR(UU) {
       let {
-        journal: CD
-      } = DD;
+        journal: RU
+      } = UU;
       const {
-        t: cD
-      } = (0, JD.F)(), ID = (0, xD.g)(gD, CD.getPages()), pD = (0, qD.b)(CC), [bD, QD] = (0, iD.useState)((() => function(DD) {
-        const CD = DD.findIndex((DD => DD.active));
-        return -1 !== CD ? CD : Math.max(0, DD.findIndex((DD => "open" === DD.state)))
-      }(ID))), SD = (0, iD.useRef)(null), BD = (0, iD.useRef)(null), yD = (0, iD.useRef)({
+        t: gU
+      } = (0, aU.B)(), tU = (0, oU.h)(fU, RU.getPages()), pU = (0, ZU.e)(RR), [TU, qU] = (0, EU.useState)((() => function(UU) {
+        const RU = UU.findIndex((UU => UU.active));
+        return -1 !== RU ? RU : Math.max(0, UU.findIndex((UU => "open" === UU.state)))
+      }(tU))), cU = (0, EU.useRef)(null), GU = (0, EU.useRef)(null), jU = (0, EU.useRef)({
         Forward: null,
         Back: null
-      }), MD = pD ? 2 : 1, tD = pD ? 180 : 90, ZD = bD - bD % MD, oD = ZD > 0, vD = ZD + MD < ID.length, ND = (0, iD.useCallback)((() => {
-        const DD = BD.current;
-        return null === DD ? ZD : (BD.current = null, DD.animation.cancel(), (CD = yD.current[DD.direction]).style.transform = "", CD.classList.remove("Turning"), null === DD.next ? ZD : (QD(DD.next), DD.next));
-        var CD
-      }), [ZD]), XD = (0, iD.useCallback)(((DD, CD, cD, ID) => {
-        const pD = yD.current[DD],
-          iD = cC(pD),
-          fD = CD === ("Forward" === DD) ? tD : 0;
-        IC(pD, fD);
-        const bD = pD.animate([{
-          transform: `rotateY(${-iD}deg)`
+      }), uU = pU ? 2 : 1, CU = pU ? 180 : 90, hU = TU - TU % uU, QU = hU > 0, eU = hU + uU < tU.length, WU = (0, EU.useCallback)((() => {
+        const UU = GU.current;
+        return null === UU ? hU : (GU.current = null, UU.animation.cancel(), (RU = jU.current[UU.direction]).style.transform = "", RU.classList.remove("Turning"), null === UU.next ? hU : (qU(UU.next), UU.next));
+        var RU
+      }), [hU]), xU = (0, EU.useCallback)(((UU, RU, gU, tU) => {
+        const pU = jU.current[UU],
+          EU = gR(pU),
+          PU = RU === ("Forward" === UU) ? CU : 0;
+        tR(pU, PU);
+        const TU = pU.animate([{
+          transform: `rotateY(${-EU}deg)`
         }, {
-          transform: `rotateY(${-fD}deg)`
+          transform: `rotateY(${-PU}deg)`
         }], {
-          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : FD(iD, fD, pD.offsetWidth, tD, fD > iD ? -cD : cD),
+          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : OU(EU, PU, pU.offsetWidth, CU, PU > EU ? -gU : gU),
           easing: "cubic-bezier(0.25, 0.75, 0.5, 1)"
         });
-        BD.current = {
-          direction: DD,
-          animation: bD,
-          next: CD ? ID + ("Forward" === DD ? MD : -MD) : null
-        }, bD.onfinish = () => {
-          var DD;
-          (null === (DD = BD.current) || void 0 === DD ? void 0 : DD.animation) === bD && ND()
+        GU.current = {
+          direction: UU,
+          animation: TU,
+          next: RU ? tU + ("Forward" === UU ? uU : -uU) : null
+        }, TU.onfinish = () => {
+          var UU;
+          (null === (UU = GU.current) || void 0 === UU ? void 0 : UU.animation) === TU && WU()
         }
-      }), [MD, tD, ND]), mD = (0, iD.useCallback)((DD => {
-        if (null !== SD.current) return;
-        const CD = ND();
-        ("Forward" === DD ? CD + MD < ID.length : CD > 0) && XD(DD, !0, 0, CD)
-      }), [ND, XD, MD, ID.length]);
-      (0, iD.useEffect)((() => {
-        CD.onOpened()
-      }), [CD]), (0, iD.useEffect)((() => () => {
-        var DD;
-        null === (DD = BD.current) || void 0 === DD || DD.animation.cancel()
-      }), []), (0, iD.useEffect)((() => {
-        const DD = DD => {
-          var CD;
-          DD.pointerId !== (null === (CD = SD.current) || void 0 === CD ? void 0 : CD.pointerId) || SD.current.following || (SD.current = null)
+      }), [uU, CU, WU]), mU = (0, EU.useCallback)((UU => {
+        if (null !== cU.current) return;
+        const RU = WU();
+        ("Forward" === UU ? RU + uU < tU.length : RU > 0) && xU(UU, !0, 0, RU)
+      }), [WU, xU, uU, tU.length]);
+      (0, EU.useEffect)((() => {
+        RU.onOpened()
+      }), [RU]), (0, EU.useEffect)((() => () => {
+        var UU;
+        null === (UU = GU.current) || void 0 === UU || UU.animation.cancel()
+      }), []), (0, EU.useEffect)((() => {
+        const UU = UU => {
+          var RU;
+          UU.pointerId !== (null === (RU = cU.current) || void 0 === RU ? void 0 : RU.pointerId) || cU.current.following || (cU.current = null)
         };
-        return window.addEventListener("pointerup", DD), () => {
-          window.removeEventListener("pointerup", DD)
+        return window.addEventListener("pointerup", UU), () => {
+          window.removeEventListener("pointerup", UU)
         }
-      }), []), (0, UD.e)((DD => ("ArrowLeft" === DD.code || "ArrowRight" === DD.code) && !(0, wD.isTypingInInput)()), (DD => {
-        DD.stopPropagation(), mD("ArrowLeft" === DD.code ? "Back" : "Forward")
+      }), []), (0, bU.d)((UU => ("ArrowLeft" === UU.code || "ArrowRight" === UU.code) && !(0, KU.isTypingInInput)()), (UU => {
+        UU.stopPropagation(), mU("ArrowLeft" === UU.code ? "Back" : "Forward")
       }));
-      const OD = (DD, CD, cD) => {
-          const ID = function(DD, CD, cD, ID) {
-            return (DD < 0 ? cD : ID) ? uD.e.clampAbs(DD, CD) : Math.sign(DD) * CD * (1 - 1 / (.55 * Math.abs(DD) / CD + 1))
-          }(DD.base + cD, MD * DD.width, vD, oD);
-          return "Forward" === CD ? Math.min(ID, 0) : Math.max(ID, 0)
+      const JU = (UU, RU, gU) => {
+          const tU = function(UU, RU, gU, tU) {
+            return (UU < 0 ? gU : tU) ? DU.c.clampAbs(UU, RU) : Math.sign(UU) * RU * (1 - 1 / (.55 * Math.abs(UU) / RU + 1))
+          }(UU.base + gU, uU * UU.width, eU, QU);
+          return "Forward" === RU ? Math.min(tU, 0) : Math.max(tU, 0)
         },
-        KD = (DD, CD) => {
-          const cD = SD.current;
-          if (SD.current = null, null === cD.direction) return;
-          cD.speed.add(DD, CD);
-          const ID = cD.speed.get(),
-            pD = OD(cD, cD.direction, DD - cD.x);
-          XD(cD.direction, null !== function(DD, CD, cD, ID, pD) {
-            if (Math.abs(CD) >= .3 ? Math.sign(CD) !== Math.sign(DD) : Math.abs(DD) < .5 * cD) return null;
-            const iD = DD < 0 ? "Forward" : "Back";
-            return ("Forward" === iD ? ID : pD) ? iD : null
-          }(pD, ID, MD * cD.width, vD, oD), ID, ZD)
+        YU = (UU, RU) => {
+          const gU = cU.current;
+          if (cU.current = null, null === gU.direction) return;
+          gU.speed.add(UU, RU);
+          const tU = gU.speed.get(),
+            pU = JU(gU, gU.direction, UU - gU.x);
+          xU(gU.direction, null !== function(UU, RU, gU, tU, pU) {
+            if (Math.abs(RU) >= .3 ? Math.sign(RU) !== Math.sign(UU) : Math.abs(UU) < .5 * gU) return null;
+            const EU = UU < 0 ? "Forward" : "Back";
+            return ("Forward" === EU ? tU : pU) ? EU : null
+          }(pU, tU, uU * gU.width, eU, QU), tU, hU)
         },
-        aD = ID.some((DD => DD.active)),
-        VD = (DD, cD, pD) => (0, WD.jsx)(eD, {
-          className: DD,
-          page: cD >= 0 && cD < ID.length ? ID[cD] : void 0,
-          hidden: pD,
-          building: aD,
-          journal: CD
+        BU = tU.some((UU => UU.active)),
+        VU = (UU, gU, pU) => (0, iU.jsx)(MU, {
+          className: UU,
+          page: gU >= 0 && gU < tU.length ? tU[gU] : void 0,
+          hidden: pU,
+          building: BU,
+          journal: RU
         });
-      return (0, WD.jsx)(HD.e, {
-        close: fD.i,
+      return (0, iU.jsx)(nU.d, {
+        close: PU.l,
         togglePointerLock: !1,
         className: "PlotsJournalOverlay",
-        children: (0, WD.jsxs)("section", {
-          className: nD()("PlotsJournal", {
-            Spread: pD
+        children: (0, iU.jsxs)("section", {
+          className: IU()("PlotsJournal", {
+            Spread: pU
           }),
           role: "dialog",
           "aria-modal": "true",
-          "aria-label": cD("plotsGame:journalTitle"),
-          children: [(0, WD.jsx)(PD.l, {
+          "aria-label": gU("plotsGame:journalTitle"),
+          children: [(0, iU.jsx)(wU.h, {
             className: "PlotsJournalClose",
-            onClick: fD.i
-          }), (0, WD.jsx)(iC, {
+            onClick: PU.l
+          }), (0, iU.jsx)(ER, {
             direction: "Back",
-            disabled: !oD,
-            onTurn: mD
-          }), (0, WD.jsx)("div", {
+            disabled: !QU,
+            onTurn: mU
+          }), (0, iU.jsx)("div", {
             className: "PlotsJournalBookPages",
-            onPointerDown: DD => {
-              var CD;
-              if (!DD.isPrimary || 0 !== DD.button || null !== BD.current && null !== DD.target.closest("button")) return;
-              const cD = new DC;
-              cD.add(DD.clientX, DD.timeStamp);
-              const ID = yD.current.Forward.offsetWidth,
-                pD = BD.current;
-              BD.current = null;
-              let iD = 0;
-              if (null !== pD) {
-                const CD = yD.current[pD.direction],
-                  cD = cC(CD);
-                pD.animation.cancel(), IC(CD, cD), iD = function(DD, CD, cD, ID) {
-                  return (DD < 0 ? cD : ID) ? DD : Math.sign(DD) * CD * (1 / (1 - Math.min(Math.abs(DD) / CD, .99)) - 1) / .55
-                }(function(DD, CD, cD, ID) {
-                  return cD * (rD(CD) - rD("Forward" === DD ? 0 : ID))
-                }(pD.direction, cD, ID, tD), MD * ID, vD, oD), DD.currentTarget.setPointerCapture(DD.pointerId)
+            onPointerDown: UU => {
+              var RU;
+              if (!UU.isPrimary || 0 !== UU.button || null !== GU.current && null !== UU.target.closest("button")) return;
+              const gU = new UR;
+              gU.add(UU.clientX, UU.timeStamp);
+              const tU = jU.current.Forward.offsetWidth,
+                pU = GU.current;
+              GU.current = null;
+              let EU = 0;
+              if (null !== pU) {
+                const RU = jU.current[pU.direction],
+                  gU = gR(RU);
+                pU.animation.cancel(), tR(RU, gU), EU = function(UU, RU, gU, tU) {
+                  return (UU < 0 ? gU : tU) ? UU : Math.sign(UU) * RU * (1 / (1 - Math.min(Math.abs(UU) / RU, .99)) - 1) / .55
+                }(function(UU, RU, gU, tU) {
+                  return gU * (NU(RU) - NU("Forward" === UU ? 0 : tU))
+                }(pU.direction, gU, tU, CU), uU * tU, eU, QU), UU.currentTarget.setPointerCapture(UU.pointerId)
               }
-              SD.current = {
-                pointerId: DD.pointerId,
-                x: DD.clientX,
-                y: DD.clientY,
-                base: iD,
-                width: ID,
-                following: null !== pD,
-                direction: null !== (CD = null === pD || void 0 === pD ? void 0 : pD.direction) && void 0 !== CD ? CD : null,
-                speed: cD
+              cU.current = {
+                pointerId: UU.pointerId,
+                x: UU.clientX,
+                y: UU.clientY,
+                base: EU,
+                width: tU,
+                following: null !== pU,
+                direction: null !== (RU = null === pU || void 0 === pU ? void 0 : pU.direction) && void 0 !== RU ? RU : null,
+                speed: gU
               }
             },
-            onPointerMove: DD => {
-              const CD = SD.current;
-              if (null === CD || DD.pointerId !== CD.pointerId) return;
-              if (0 === DD.buttons) return void KD(DD.clientX, DD.timeStamp);
-              const cD = DD.clientX - CD.x;
-              !CD.following && function(DD, CD) {
-                return Math.abs(DD) > 8 && Math.abs(DD) > Math.abs(CD)
-              }(cD, DD.clientY - CD.y) && (CD.following = !0, CD.direction = cD < 0 ? "Forward" : "Back", DD.currentTarget.setPointerCapture(DD.pointerId)), null !== CD.direction && (CD.speed.add(DD.clientX, DD.timeStamp), IC(yD.current[CD.direction], function(DD, CD, cD, ID) {
-                const pD = cD * rD("Forward" === DD ? 0 : ID) + CD;
-                return uD.e.clamp(AD(pD / cD), 0, ID)
-              }(CD.direction, OD(CD, CD.direction, cD), CD.width, tD)))
+            onPointerMove: UU => {
+              const RU = cU.current;
+              if (null === RU || UU.pointerId !== RU.pointerId) return;
+              if (0 === UU.buttons) return void YU(UU.clientX, UU.timeStamp);
+              const gU = UU.clientX - RU.x;
+              !RU.following && function(UU, RU) {
+                return Math.abs(UU) > 8 && Math.abs(UU) > Math.abs(RU)
+              }(gU, UU.clientY - RU.y) && (RU.following = !0, RU.direction = gU < 0 ? "Forward" : "Back", UU.currentTarget.setPointerCapture(UU.pointerId)), null !== RU.direction && (RU.speed.add(UU.clientX, UU.timeStamp), tR(jU.current[RU.direction], function(UU, RU, gU, tU) {
+                const pU = gU * NU("Forward" === UU ? 0 : tU) + RU;
+                return DU.c.clamp(lU(pU / gU), 0, tU)
+              }(RU.direction, JU(RU, RU.direction, gU), RU.width, CU)))
             },
-            onPointerUp: DD => {
-              var CD;
-              DD.pointerId === (null === (CD = SD.current) || void 0 === CD ? void 0 : CD.pointerId) && KD(DD.clientX, DD.timeStamp)
+            onPointerUp: UU => {
+              var RU;
+              UU.pointerId === (null === (RU = cU.current) || void 0 === RU ? void 0 : RU.pointerId) && YU(UU.clientX, UU.timeStamp)
             },
-            onPointerCancel: DD => {
-              const CD = SD.current;
-              DD.pointerId === (null === CD || void 0 === CD ? void 0 : CD.pointerId) && (SD.current = null, null !== CD.direction && XD(CD.direction, !1, 0, ZD))
+            onPointerCancel: UU => {
+              const RU = cU.current;
+              UU.pointerId === (null === RU || void 0 === RU ? void 0 : RU.pointerId) && (cU.current = null, null !== RU.direction && xU(RU.direction, !1, 0, hU))
             },
-            children: (0, WD.jsxs)("div", {
+            children: (0, iU.jsxs)("div", {
               className: "PlotsJournalSheet",
-              children: [pD && VD("Left", ZD - 2, !0), VD("Right", ZD + 2 * MD - 1, !0), (0, WD.jsxs)("div", {
-                ref: DD => {
-                  yD.current.Back = DD
+              children: [pU && VU("Left", hU - 2, !0), VU("Right", hU + 2 * uU - 1, !0), (0, iU.jsxs)("div", {
+                ref: UU => {
+                  jU.current.Back = UU
                 },
                 className: "PlotsJournalLeaf Back",
-                children: [VD("Recto", ZD - 1, !0), pD && VD("Verso", ZD, !1)]
-              }), (0, WD.jsxs)("div", {
-                ref: DD => {
-                  yD.current.Forward = DD
+                children: [VU("Recto", hU - 1, !0), pU && VU("Verso", hU, !1)]
+              }), (0, iU.jsxs)("div", {
+                ref: UU => {
+                  jU.current.Forward = UU
                 },
                 className: "PlotsJournalLeaf Forward",
-                children: [VD("Recto", ZD + MD - 1, !1), pD && VD("Verso", ZD + MD, !0)]
+                children: [VU("Recto", hU + uU - 1, !1), pU && VU("Verso", hU + uU, !0)]
               })]
             })
-          }), (0, WD.jsx)(iC, {
+          }), (0, iU.jsx)(ER, {
             direction: "Forward",
-            disabled: !vD,
-            onTurn: mD
+            disabled: !eU,
+            onTurn: mU
           })]
         })
       })
     }
 
-    function iC(DD) {
+    function ER(UU) {
       let {
-        direction: CD,
-        disabled: cD,
-        onTurn: ID
-      } = DD;
+        direction: RU,
+        disabled: gU,
+        onTurn: tU
+      } = UU;
       const {
-        t: pD
-      } = (0, JD.F)();
-      return (0, WD.jsx)("div", {
-        className: nD()("PlotsJournalArrow", CD),
-        children: (0, WD.jsx)(PD.i, {
-          disabled: cD,
-          ariaLabel: pD("Forward" === CD ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
+        t: pU
+      } = (0, aU.B)();
+      return (0, iU.jsx)("div", {
+        className: IU()("PlotsJournalArrow", RU),
+        children: (0, iU.jsx)(wU.e, {
+          disabled: gU,
+          ariaLabel: pU("Forward" === RU ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
           onClick: () => {
-            ID(CD)
+            tU(RU)
           },
-          children: (0, WD.jsx)(OD.c, {
+          children: (0, iU.jsx)(JU.c, {
             name: "angle-up"
           })
         })
       })
     }
-    var fC = cD(35994),
-      bC = cD(1893),
-      QC = cD(1957);
-    const wC = "plotsStepChanged",
-      SC = "plotsPlotChanged";
-    class BC {
+    var PR = gU(36187),
+      TR = gU(1790),
+      qR = gU(1836);
+    const KR = "plotsStepChanged",
+      cR = "plotsPlotChanged";
+    class GR {
       constructor() {
         this.step = ["none"], this.plot = ["none"]
       }
       getStep() {
         return this.step
       }
-      receiveStep(DD) {
-        this.step = DD, SD.i.Uo(wC, DD, !0)
+      receiveStep(UU) {
+        this.step = UU, cU.p.yh(KR, UU, !0)
       }
       getPlot() {
         return this.plot
       }
-      receivePlot(DD) {
-        this.plot = DD, SD.i.Uo(SC, DD, !0)
+      receivePlot(UU) {
+        this.plot = UU, cU.p.yh(cR, UU, !0)
       }
     }
-    const yC = "KeyJ";
+    const jR = "KeyJ";
 
-    function MC(DD) {
+    function uR(UU) {
       let {
-        hud: CD,
-        journal: cD
-      } = DD;
-      const ID = (0, xD.g)(gD, cD.getPages()),
-        pD = (0, xD.g)(wC, CD.getStep()),
+        hud: RU,
+        journal: gU
+      } = UU;
+      const tU = (0, oU.h)(fU, gU.getPages()),
+        pU = (0, oU.h)(KR, RU.getStep()),
         {
-          isTouchScreen: iD
-        } = (0, bD.o)(["isTouchScreen"]),
+          isTouchScreen: EU
+        } = (0, TU.l)(["isTouchScreen"]),
         {
-          t: SD
-        } = (0, JD.F)(),
-        BD = null !== ID && "none" === pD[0];
-      return (0, UD.e)((DD => null !== ID && DD.code === yC && !DD.repeat && !(0, wD.isTypingInInput)()), (DD => {
-        (0, QD.B)(DD, BD, fD.s)
-      })), BD ? (0, WD.jsx)(fC.e, {
+          t: cU
+        } = (0, aU.B)(),
+        GU = null !== tU && "none" === pU[0];
+      return (0, bU.d)((UU => null !== tU && UU.code === jR && !UU.repeat && !(0, KU.isTypingInInput)()), (UU => {
+        (0, qU.A)(UU, GU, PU.w)
+      })), GU ? (0, iU.jsx)(PR.e, {
         placement: "topRight",
-        children: (0, WD.jsx)("div", {
+        children: (0, iU.jsx)("div", {
           className: "PlotsJournalButtonContainer",
-          children: (0, WD.jsxs)("button", {
+          children: (0, iU.jsxs)("button", {
             type: "button",
-            className: nD()("PlotsJournalButton SmallTextBold", {
-              Touch: iD
+            className: IU()("PlotsJournalButton SmallTextBold", {
+              Touch: EU
             }),
-            onClick: fD.s,
-            children: [(0, WD.jsx)("span", {
+            onClick: PU.w,
+            children: [(0, iU.jsx)("span", {
               className: "PlotsJournalButtonIcon",
-              children: (0, WD.jsx)(bC.d, {
+              children: (0, iU.jsx)(TR.c, {
                 itemName: "Book",
                 amount: 0
               })
-            }), SD("plotsGame:journalButton"), !iD && (0, WD.jsx)(QC.d, {
+            }), cU("plotsGame:journalButton"), !EU && (0, iU.jsx)(qR.b, {
               className: "PlotsJournalButtonKey",
-              keyCode: yC
+              keyCode: jR
             })]
           })
         })
       }) : null
     }
-    var tC = cD(37789),
-      ZC = cD(37548),
-      oC = cD(36292),
-      vC = cD(9173),
-      NC = cD(9198),
-      gC = cD(37194);
-    const XC = new Map([
+    var CR = gU(37980),
+      hR = gU(37740),
+      QR = gU(36467),
+      eR = gU(9110),
+      WR = gU(9125),
+      fR = gU(37335);
+    const xR = new Map([
         ["Aspen Wood Planks", [.78, .706, .502]],
         ["Barkless Aspen Log", [.792, .718, .518]],
         ["Barkless Pine Log", [.49, .353, .275]],
@@ -858,791 +858,791 @@ export const modules = {
         ["White Concrete", [.89, .894, .894]],
         ["White Wool", [.98, .98, .98]]
       ]),
-      mC = [...oC.b.blockRemoveActionRoots, ...ZC.c, ...vC.g, "Board", "Code Block", "Custom Lobby Block"],
-      nC = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
-    let OC = null;
+      mR = [...QR.c.blockRemoveActionRoots, ...hR.b, ...eR.i, "Board", "Code Block", "Custom Lobby Block"],
+      IR = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
+    let JR = null;
 
-    function PC() {
-      return OC ??= function() {
-        const DD = HC(),
-          CD = Math.max(...DD.map((DD => KD.g[DD].id))) + 1,
-          cD = new Int32Array(CD),
-          ID = new Int32Array(CD),
-          pD = new Uint8Array(CD).fill(1),
-          iD = new Uint8Array(CD),
-          fD = new Uint8Array(CD),
-          bD = new Array(CD).fill("Air"),
-          QD = new Map,
-          wD = DD => {
-            let CD = QD.get(DD);
-            return void 0 === CD && (CD = QD.size + 1, QD.set(DD, CD)), CD
+    function wR() {
+      return JR ??= function() {
+        const UU = nR(),
+          RU = Math.max(...UU.map((UU => YU.f[UU].id))) + 1,
+          gU = new Int32Array(RU),
+          tU = new Int32Array(RU),
+          pU = new Uint8Array(RU).fill(1),
+          EU = new Uint8Array(RU),
+          PU = new Uint8Array(RU),
+          TU = new Array(RU).fill("Air"),
+          qU = new Map,
+          KU = UU => {
+            let RU = qU.get(UU);
+            return void 0 === RU && (RU = qU.size + 1, qU.set(UU, RU)), RU
           },
-          SD = new Set(mC);
-        for (const yD of DD) {
-          var BD;
+          cU = new Set(mR);
+        for (const jU of UU) {
+          var GU;
           const {
-            id: DD,
-            meta: CD,
-            altActionable: QD,
-            canBePlacedOver: MD
-          } = KD.g[yD];
-          cD[DD] = wD(UC(yD));
-          const tD = CD.stairsCorner;
-          if (null === tD) ID[DD] = cD[DD];
+            id: UU,
+            meta: RU,
+            altActionable: qU,
+            canBePlacedOver: uU
+          } = YU.f[jU];
+          gU[UU] = KU(bR(jU));
+          const CU = RU.stairsCorner;
+          if (null === CU) tU[UU] = gU[UU];
           else {
-            const cD = tD.endsWith("Right");
-            ID[DD] = wD(`${CD.rootName}|rot${cD?CD.rot%4+1:CD.rot}|${CD.halfblockPlacement}|${tD.replace("Right","Left")}`)
+            const gU = CU.endsWith("Right");
+            tU[UU] = KU(`${RU.rootName}|rot${gU?RU.rot%4+1:RU.rot}|${RU.halfblockPlacement}|${CU.replace("Right","Left")}`)
           }
-          pD[DD] = MD ? 1 : 0, iD[DD] = QD || null !== CD.open || yD in gC.e || SD.has(CD.rootName) || void 0 !== (0, ZC.g)(CD.rootName) ? 1 : 0;
+          pU[UU] = uU ? 1 : 0, EU[UU] = qU || null !== RU.open || jU in fR.c || cU.has(RU.rootName) || void 0 !== (0, hR.f)(RU.rootName) ? 1 : 0;
           const {
-            rootName: ZD
-          } = CD;
-          fD[DD] = null !== CD.open || ZC.c.includes(ZD) || ZD.includes("Bookshelf") || ZD.includes("Mailbox") ? 1 : 0, bD[DD] = null !== (BD = (0, tC.f)(DD)) && void 0 !== BD ? BD : ZD
+            rootName: hU
+          } = RU;
+          PU[UU] = null !== RU.open || hR.b.includes(hU) || hU.includes("Bookshelf") || hU.includes("Mailbox") ? 1 : 0, TU[UU] = null !== (GU = (0, CR.e)(UU)) && void 0 !== GU ? GU : hU
         }
         return {
-          kinds: cD,
-          shapes: ID,
-          empty: pD,
-          inUse: iD,
-          ownAltActionMessage: fD,
-          placingItems: bD
+          kinds: gU,
+          shapes: tU,
+          empty: pU,
+          inUse: EU,
+          ownAltActionMessage: PU,
+          placingItems: TU
         }
-      }(), OC
+      }(), JR
     }
 
-    function HC() {
-      return Object.keys(KD.g).filter((DD => KD.g[DD].name === DD))
+    function nR() {
+      return Object.keys(YU.f).filter((UU => YU.f[UU].name === UU))
     }
 
-    function UC(DD) {
-      var CD;
-      const cD = KD.g[DD],
+    function bR(UU) {
+      var RU;
+      const gU = YU.f[UU],
         {
-          rootName: ID,
-          rot: pD
-        } = cD.meta,
-        [, ...iD] = (null !== (CD = cD.rootMetaDesc) && void 0 !== CD ? CD : DD).split("|"),
-        fD = iD.filter((DD => !("meta" === DD || nC.test(DD) || (0, NC.y)(cD) && /^[nesw]+$/.test(DD) || vC.g.includes(ID) && /^[lrud]+$/.test(DD) || uD.I.includes(ID) && /^(left|right)$/.test(DD))));
-      return [ID, ...fD].map((DD => "fenceGate" === cD.model && DD === `rot${pD}` ? "rot" + ((pD - 1) % 2 + 1) : DD)).join("|")
+          rootName: tU,
+          rot: pU
+        } = gU.meta,
+        [, ...EU] = (null !== (RU = gU.rootMetaDesc) && void 0 !== RU ? RU : UU).split("|"),
+        PU = EU.filter((UU => !("meta" === UU || IR.test(UU) || (0, WR.A)(gU) && /^[nesw]+$/.test(UU) || eR.i.includes(tU) && /^[lrud]+$/.test(UU) || DU.J.includes(tU) && /^(left|right)$/.test(UU))));
+      return [tU, ...PU].map((UU => "fenceGate" === gU.model && UU === `rot${pU}` ? "rot" + ((pU - 1) % 2 + 1) : UU)).join("|")
     }
 
-    function xC(DD, CD) {
+    function oR(UU, RU) {
       const {
-        kinds: cD,
-        shapes: ID
-      } = PC();
-      return cD[DD] === cD[CD] || ID[DD] === ID[CD]
+        kinds: gU,
+        shapes: tU
+      } = wR();
+      return gU[UU] === gU[RU] || tU[UU] === tU[RU]
     }
 
-    function qC(DD) {
-      return 1 === PC().empty[DD]
+    function ZR(UU) {
+      return 1 === wR().empty[UU]
     }
 
-    function JC(DD) {
-      return PC().placingItems[DD]
+    function aR(UU) {
+      return wR().placingItems[UU]
     }
 
-    function KC(DD) {
-      return XC.get(KD.g[DD].meta.rootName)
+    function YR(UU) {
+      return xR.get(YU.f[UU].meta.rootName)
     }
-    var aC = cD(9170),
-      VC = cD(9189);
-    const zC = [0, 0, 0, 1, 1, 1],
-      jC = (0, aC.e)([
+    var BR = gU(9106),
+      VR = gU(9121);
+    const rR = [0, 0, 0, 1, 1, 1],
+      XR = (0, BR.c)([
         [2, 0, 2, 6, 6, 6]
       ]),
-      lC = (0, aC.e)([
+      vR = (0, BR.c)([
         [3, 0, 3, 5, 5, 5]
       ]),
-      LC = (0, aC.e)([
+      dR = (0, BR.c)([
         [3, 3, 3, 5, 8, 5]
       ]),
-      TC = [0, 1, 2, 3].map((DD => (0, aC.e)((0, aC.p)([
+      HR = [0, 1, 2, 3].map((UU => (0, BR.c)((0, BR.m)([
         [3, 2, 0, 5, 7, 3]
-      ], DD))));
+      ], UU))));
 
-    function GC(DD) {
+    function SR(UU) {
       const {
-        wb: CD,
-        model: cD,
-        blockModel: ID,
-        meta: pD
-      } = KD.g[DD];
-      return void 0 !== CD ? CD : "CentreCross" === cD ? jC : null !== ID && void 0 !== ID && ID.startsWith("torch") ? pD.halfblockPlacement === VC.b.side ? TC[pD.rot - 1] : pD.halfblockPlacement === VC.b.top ? LC : lC : zC
+        du: RU,
+        model: gU,
+        blockModel: tU,
+        meta: pU
+      } = YU.f[UU];
+      return void 0 !== RU ? RU : "CentreCross" === gU ? XR : null !== tU && void 0 !== tU && tU.startsWith("torch") ? pU.halfblockPlacement === VR.d.side ? HR[pU.rot - 1] : pU.halfblockPlacement === VR.d.top ? dR : vR : rR
     }
-    var RC = cD(36252),
-      kC = cD(194);
+    var sR = gU(36437),
+      yR = gU(189);
 
-    function dC(DD, CD) {
-      const cD = kC.h.vN / 2;
-      return DD[0] < CD[0] + cD && DD[0] + 1 > CD[0] - cD && DD[1] < CD[1] + kC.h.XN && DD[1] + 1 > CD[1] && DD[2] < CD[2] + cD && DD[2] + 1 > CD[2] - cD
+    function kR(UU, RU) {
+      const gU = yR.e.dW / 2;
+      return UU[0] < RU[0] + gU && UU[0] + 1 > RU[0] - gU && UU[1] < RU[1] + yR.e.FW && UU[1] + 1 > RU[1] && UU[2] < RU[2] + gU && UU[2] + 1 > RU[2] - gU
     }
 
-    function YC(DD, CD, cD, ID, pD) {
-      const iD = Math.hypot(...CD.dir);
-      if (!Number.isFinite(iD) || 0 === iD) return -1;
+    function FR(UU, RU, gU, tU, pU) {
+      const EU = Math.hypot(...RU.dir);
+      if (!Number.isFinite(EU) || 0 === EU) return -1;
       const {
-        from: fD,
-        reach: bD,
-        solid: QD
-      } = CD, wD = [CD.dir[0] / iD, CD.dir[1] / iD, CD.dir[2] / iD], SD = null === QD ? bD : Math.min(bD, function(DD, CD, cD) {
-        const ID = WC(DD, CD, cD);
-        if (ID !== 1 / 0) return ID;
-        return (cD[0] + .5 - DD[0]) * CD[0] + (cD[1] + .5 - DD[1]) * CD[1] + (cD[2] + .5 - DD[2]) * CD[2]
-      }(fD, wD, QD) + .75);
-      let BD = -1,
-        yD = 1 / 0,
-        MD = 1 / 0;
-      for (let tD = 0; tD < DD.length; tD += 4) {
-        const CD = [DD[tD], DD[tD + 1], DD[tD + 2]],
-          iD = pD(tD) ? bD : SD;
-        let QD = -1,
-          ZD = WC(fD, wD, CD);
-        if (ZD > iD) {
-          const DD = [CD[0] + .5 - fD[0], CD[1] + .5 - fD[1], CD[2] + .5 - fD[2]];
-          if (ZD = DD[0] * wD[0] + DD[1] * wD[1] + DD[2] * wD[2], ZD <= 0 || ZD > iD) continue;
-          if (QD = Math.hypot(DD[0] - ZD * wD[0], DD[1] - ZD * wD[1], DD[2] - ZD * wD[2]), QD > .7 || !ID(tD)) continue
-        }(QD < yD || QD === yD && ZD < MD) && cD(tD) && (BD = tD, yD = QD, MD = ZD)
+        from: PU,
+        reach: TU,
+        solid: qU
+      } = RU, KU = [RU.dir[0] / EU, RU.dir[1] / EU, RU.dir[2] / EU], cU = null === qU ? TU : Math.min(TU, function(UU, RU, gU) {
+        const tU = iR(UU, RU, gU);
+        if (tU !== 1 / 0) return tU;
+        return (gU[0] + .5 - UU[0]) * RU[0] + (gU[1] + .5 - UU[1]) * RU[1] + (gU[2] + .5 - UU[2]) * RU[2]
+      }(PU, KU, qU) + .75);
+      let GU = -1,
+        jU = 1 / 0,
+        uU = 1 / 0;
+      for (let CU = 0; CU < UU.length; CU += 4) {
+        const RU = [UU[CU], UU[CU + 1], UU[CU + 2]],
+          EU = pU(CU) ? TU : cU;
+        let qU = -1,
+          hU = iR(PU, KU, RU);
+        if (hU > EU) {
+          const UU = [RU[0] + .5 - PU[0], RU[1] + .5 - PU[1], RU[2] + .5 - PU[2]];
+          if (hU = UU[0] * KU[0] + UU[1] * KU[1] + UU[2] * KU[2], hU <= 0 || hU > EU) continue;
+          if (qU = Math.hypot(UU[0] - hU * KU[0], UU[1] - hU * KU[1], UU[2] - hU * KU[2]), qU > .7 || !tU(CU)) continue
+        }(qU < jU || qU === jU && hU < uU) && gU(CU) && (GU = CU, jU = qU, uU = hU)
       }
-      return BD
+      return GU
     }
 
-    function WC(DD, CD, cD) {
-      let ID = 0,
-        pD = 1 / 0;
-      for (let iD = 0; iD < 3; iD++) {
-        const fD = cD[iD] - DD[iD];
-        if (0 === CD[iD]) {
-          if (fD > 0 || fD + 1 < 0) return 1 / 0;
+    function iR(UU, RU, gU) {
+      let tU = 0,
+        pU = 1 / 0;
+      for (let EU = 0; EU < 3; EU++) {
+        const PU = gU[EU] - UU[EU];
+        if (0 === RU[EU]) {
+          if (PU > 0 || PU + 1 < 0) return 1 / 0;
           continue
         }
-        const bD = fD / CD[iD],
-          QD = (fD + 1) / CD[iD];
-        ID = Math.max(ID, Math.min(bD, QD)), pD = Math.min(pD, Math.max(bD, QD))
+        const TU = PU / RU[EU],
+          qU = (PU + 1) / RU[EU];
+        tU = Math.max(tU, Math.min(TU, qU)), pU = Math.min(pU, Math.max(TU, qU))
       }
-      return ID <= pD ? ID : 1 / 0
+      return tU <= pU ? tU : 1 / 0
     }
-    var sC = cD(37448),
-      EC = cD(37892);
-    const eC = [1, 1, 1];
-    class uC {
-      constructor(DD) {
-        this.api = DD, this.meshes = null, this.shown = null
+    var AR = gU(37598),
+      zR = gU(38069);
+    const MR = [1, 1, 1];
+    class DR {
+      constructor(UU) {
+        this.api = UU, this.meshes = null, this.shown = null
       }
-      show(DD) {
-        if (!(0, RC.f)(DD, this.shown))
-          if (this.shown = null === DD ? null : [DD[0], DD[1], DD[2]], null !== this.meshes)
-            for (const CD of this.meshes) this.api.setGameMesh(CD, null === DD ? {
+      show(UU) {
+        if (!(0, sR.c)(UU, this.shown))
+          if (this.shown = null === UU ? null : [UU[0], UU[1], UU[2]], null !== this.meshes)
+            for (const RU of this.meshes) this.api.setGameMesh(RU, null === UU ? {
               visible: !1
             } : {
-              anchor: DD,
+              anchor: UU,
               visible: !0
             });
-          else if (null !== DD) {
-          const CD = [sC.g, sC.g, sC.g, 0, 0, 0];
-          this.meshes = [this.build([CD], sC.h, DD), this.build((0, sC.c)(), sC.p, DD)]
+          else if (null !== UU) {
+          const RU = [AR.g, AR.g, AR.g, 0, 0, 0];
+          this.meshes = [this.build([RU], AR.i, UU), this.build((0, AR.e)(), AR.m, UU)]
         }
       }
       dispose() {
-        for (const CD of null !== (DD = this.meshes) && void 0 !== DD ? DD : []) {
-          var DD;
-          this.api.disposeGameMesh(CD)
+        for (const RU of null !== (UU = this.meshes) && void 0 !== UU ? UU : []) {
+          var UU;
+          this.api.disposeGameMesh(RU)
         }
         this.meshes = null, this.shown = null
       }
-      build(DD, CD, cD) {
-        const ID = [],
-          pD = [];
-        for (const [iD, fD, bD, QD, wD, SD] of DD)(0, EC.g)(ID, pD, [QD + .5, wD + .5, SD + .5], [iD, fD, bD]);
+      build(UU, RU, gU) {
+        const tU = [],
+          pU = [];
+        for (const [EU, PU, TU, qU, KU, cU] of UU)(0, zR.f)(tU, pU, [qU + .5, KU + .5, cU + .5], [EU, PU, TU]);
         return this.api.createGameMesh({
-          positions: ID,
-          indices: pD
+          positions: tU,
+          indices: pU
         }, {
-          rgb: eC,
-          alpha: CD,
+          rgb: MR,
+          alpha: RU,
           onTop: !0
-        }, cD)
+        }, gU)
       }
     }
-    class hC {
-      constructor(DD) {
-        this.api = DD, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
+    class LR {
+      constructor(UU) {
+        this.api = UU, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
       }
-      watch(DD) {
-        const CD = kC.h.Wt;
+      watch(UU) {
+        const RU = yR.e.jC;
         this.chunks = [];
-        for (let cD = 0; cD < DD.length; cD += 3) {
-          const ID = Math.floor(DD[cD] / CD),
-            pD = Math.floor(DD[cD + 1] / CD),
-            iD = Math.floor(DD[cD + 2] / CD);
-          this.watches(ID, pD, iD) || this.chunks.push(ID, pD, iD)
+        for (let gU = 0; gU < UU.length; gU += 3) {
+          const tU = Math.floor(UU[gU] / RU),
+            pU = Math.floor(UU[gU + 1] / RU),
+            EU = Math.floor(UU[gU + 2] / RU);
+          this.watches(tU, pU, EU) || this.chunks.push(tU, pU, EU)
         }
         this.versions = [], this.lastCheckMs = -1 / 0, this.changed()
       }
       changed() {
-        const DD = performance.now();
-        if (DD - this.lastCheckMs < 100) return !1;
-        this.lastCheckMs = DD;
-        let CD = !1;
-        for (let cD = 0; cD < this.chunks.length; cD += 3) {
-          const DD = this.api.getChunkVersion(this.chunks[cD], this.chunks[cD + 1], this.chunks[cD + 2]);
-          this.versions[cD / 3] !== DD && (this.versions[cD / 3] = DD, CD = !0)
+        const UU = performance.now();
+        if (UU - this.lastCheckMs < 100) return !1;
+        this.lastCheckMs = UU;
+        let RU = !1;
+        for (let gU = 0; gU < this.chunks.length; gU += 3) {
+          const UU = this.api.getChunkVersion(this.chunks[gU], this.chunks[gU + 1], this.chunks[gU + 2]);
+          this.versions[gU / 3] !== UU && (this.versions[gU / 3] = UU, RU = !0)
         }
-        return CD
+        return RU
       }
-      watches(DD, CD, cD) {
-        for (let ID = 0; ID < this.chunks.length; ID += 3)
-          if (this.chunks[ID] === DD && this.chunks[ID + 1] === CD && this.chunks[ID + 2] === cD) return !0;
+      watches(UU, RU, gU) {
+        for (let tU = 0; tU < this.chunks.length; tU += 3)
+          if (this.chunks[tU] === UU && this.chunks[tU + 1] === RU && this.chunks[tU + 2] === gU) return !0;
         return !1
       }
     }
-    const rC = .35,
-      AC = {
+    const NR = .35,
+      lR = {
         size: .9,
         alpha: .35,
         crossed: !1
       },
-      FC = {
+      OR = {
         size: 1.04,
         alpha: .45,
         crossed: !0
       },
-      Dc = [.95, .2, .15];
-    class Cc {
+      Ug = [.95, .2, .15];
+    class Rg {
       constructor() {
         this.groups = []
       }
-      add(DD, CD, cD, ID, pD) {
-        let iD = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : zC;
-        for (const fD of this.groups)
-          if (pc(fD, ID, pD)) return fD.cells.push(DD, CD, cD), void fD.boxes.push(iD);
+      add(UU, RU, gU, tU, pU) {
+        let EU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : rR;
+        for (const PU of this.groups)
+          if (pg(PU, tU, pU)) return PU.cells.push(UU, RU, gU), void PU.boxes.push(EU);
         this.groups.push({
-          rgb: ID,
-          look: pD,
-          cells: [DD, CD, cD],
-          boxes: [iD]
+          rgb: tU,
+          look: pU,
+          cells: [UU, RU, gU],
+          boxes: [EU]
         })
       }
       toArray() {
         return this.groups
       }
     }
-    class cc {
-      constructor(DD) {
-        this.api = DD, this.shown = []
+    class gg {
+      constructor(UU) {
+        this.api = UU, this.shown = []
       }
-      show(DD) {
-        const CD = [];
-        for (const cD of DD) {
-          const DD = this.shown.findIndex((DD => {
+      show(UU) {
+        const RU = [];
+        for (const gU of UU) {
+          const UU = this.shown.findIndex((UU => {
             let {
-              group: CD
-            } = DD;
-            return pc(CD, cD.rgb, cD.look) && ic(CD, cD)
-          })); - 1 === DD ? CD.push(this.build(cD)) : (CD.push(this.shown[DD]), this.shown.splice(DD, 1))
+              group: RU
+            } = UU;
+            return pg(RU, gU.rgb, gU.look) && Eg(RU, gU)
+          })); - 1 === UU ? RU.push(this.build(gU)) : (RU.push(this.shown[UU]), this.shown.splice(UU, 1))
         }
-        this.dispose(), this.shown = CD
+        this.dispose(), this.shown = RU
       }
       dispose() {
         for (const {
-            meshes: DD
+            meshes: UU
           }
           of this.shown)
-          for (const CD of DD) this.api.disposeGameMesh(CD);
+          for (const RU of UU) this.api.disposeGameMesh(RU);
         this.shown = []
       }
-      build(DD) {
+      build(UU) {
         const {
-          rgb: CD,
-          look: cD,
-          boxes: ID
-        } = DD, pD = [CD[0] + (1 - CD[0]) * rC, CD[1] + (1 - CD[1]) * rC, CD[2] + (1 - CD[2]) * rC], iD = [this.buildMesh(DD.cells, CD, cD.alpha, ((DD, CD, pD, iD) => {
-          Ic(DD, CD, pD, ID[iD], cD.size, !1)
-        })), this.buildMesh(DD.cells, pD, cD.alpha, ((DD, CD, pD, iD) => {
-          Ic(DD, CD, pD, ID[iD], cD.size, !0)
+          rgb: RU,
+          look: gU,
+          boxes: tU
+        } = UU, pU = [RU[0] + (1 - RU[0]) * NR, RU[1] + (1 - RU[1]) * NR, RU[2] + (1 - RU[2]) * NR], EU = [this.buildMesh(UU.cells, RU, gU.alpha, ((UU, RU, pU, EU) => {
+          tg(UU, RU, pU, tU[EU], gU.size, !1)
+        })), this.buildMesh(UU.cells, pU, gU.alpha, ((UU, RU, pU, EU) => {
+          tg(UU, RU, pU, tU[EU], gU.size, !0)
         }))];
-        return cD.crossed && iD.push(this.buildMesh(DD.cells, CD, .9, ((DD, CD, ID) => {
-          (0, EC.j)(DD, CD, ID, cD.size + .01, .12)
+        return gU.crossed && EU.push(this.buildMesh(UU.cells, RU, .9, ((UU, RU, tU) => {
+          (0, zR.j)(UU, RU, tU, gU.size + .01, .12)
         }))), {
-          group: DD,
-          meshes: iD
+          group: UU,
+          meshes: EU
         }
       }
-      buildMesh(DD, CD, cD, ID) {
-        const pD = [DD[0], DD[1], DD[2]],
-          iD = [],
-          fD = [];
-        for (let bD = 0; bD < DD.length; bD += 3) ID(iD, fD, [DD[bD] - pD[0] + .5, DD[bD + 1] - pD[1] + .5, DD[bD + 2] - pD[2] + .5], bD / 3);
+      buildMesh(UU, RU, gU, tU) {
+        const pU = [UU[0], UU[1], UU[2]],
+          EU = [],
+          PU = [];
+        for (let TU = 0; TU < UU.length; TU += 3) tU(EU, PU, [UU[TU] - pU[0] + .5, UU[TU + 1] - pU[1] + .5, UU[TU + 2] - pU[2] + .5], TU / 3);
         return this.api.createGameMesh({
-          positions: iD,
-          indices: fD
+          positions: EU,
+          indices: PU
         }, {
-          rgb: [CD[0], CD[1], CD[2]],
-          alpha: cD
-        }, pD)
+          rgb: [RU[0], RU[1], RU[2]],
+          alpha: gU
+        }, pU)
       }
     }
 
-    function Ic(DD, CD, cD, ID, pD, iD) {
-      for (let fD = 0; fD < ID.length; fD += 6) {
-        const bD = [0, 0, 0],
-          QD = [0, 0, 0];
-        for (let DD = 0; DD < 3; DD++) bD[DD] = cD[DD] + ((ID[fD + DD] + ID[fD + DD + 3]) / 2 - .5) * pD, QD[DD] = (ID[fD + DD + 3] - ID[fD + DD]) * pD;
-        (0, EC.d)(DD, CD, bD, QD, iD)
+    function tg(UU, RU, gU, tU, pU, EU) {
+      for (let PU = 0; PU < tU.length; PU += 6) {
+        const TU = [0, 0, 0],
+          qU = [0, 0, 0];
+        for (let UU = 0; UU < 3; UU++) TU[UU] = gU[UU] + ((tU[PU + UU] + tU[PU + UU + 3]) / 2 - .5) * pU, qU[UU] = (tU[PU + UU + 3] - tU[PU + UU]) * pU;
+        (0, zR.b)(UU, RU, TU, qU, EU)
       }
     }
 
-    function pc(DD, CD, cD) {
-      return DD.rgb[0] === CD[0] && DD.rgb[1] === CD[1] && DD.rgb[2] === CD[2] && DD.look === cD
+    function pg(UU, RU, gU) {
+      return UU.rgb[0] === RU[0] && UU.rgb[1] === RU[1] && UU.rgb[2] === RU[2] && UU.look === gU
     }
 
-    function ic(DD, CD) {
-      if (DD.cells.length !== CD.cells.length) return !1;
-      for (let cD = 0; cD < DD.cells.length; cD++)
-        if (DD.cells[cD] !== CD.cells[cD]) return !1;
-      return DD.boxes.every(((DD, cD) => DD === CD.boxes[cD]))
+    function Eg(UU, RU) {
+      if (UU.cells.length !== RU.cells.length) return !1;
+      for (let gU = 0; gU < UU.cells.length; gU++)
+        if (UU.cells[gU] !== RU.cells[gU]) return !1;
+      return UU.boxes.every(((UU, gU) => UU === RU.boxes[gU]))
     }
 
-    function fc(DD, CD) {
-      return DD.getClientOption(CD, "blockReach") + 1
+    function Pg(UU, RU) {
+      return UU.getClientOption(RU, "blockReach") + 1
     }
-    class bc {
-      constructor(DD, CD, cD) {
-        this.api = DD, this.localPlayerId = CD, this.pickNext = cD, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
+    class Tg {
+      constructor(UU, RU, gU) {
+        this.api = UU, this.localPlayerId = RU, this.pickNext = gU, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
       }
-      look(DD) {
-        const [CD, , cD] = DD.cameraDirection, ID = Math.hypot(CD, cD);
-        ID > .001 && (this.heading = [CD / ID, cD / ID])
+      look(UU) {
+        const [RU, , gU] = UU.cameraDirection, tU = Math.hypot(RU, gU);
+        tU > .001 && (this.heading = [RU / tU, gU / tU])
       }
-      tapped(DD, CD, cD) {
-        const ID = fc(this.api, this.localPlayerId),
+      tapped(UU, RU, gU) {
+        const tU = Pg(this.api, this.localPlayerId),
           {
-            origin: pD,
-            direction: iD
+            origin: pU,
+            direction: EU
           } = this.api.getActionRay(),
-          fD = [...pD],
-          bD = [
-            [fD, [fD[0] + iD[0] * ID, fD[1] + iD[1] * ID, fD[2] + iD[2] * ID]]
+          PU = [...pU],
+          TU = [
+            [PU, [PU[0] + EU[0] * tU, PU[1] + EU[1] * tU, PU[2] + EU[2] * tU]]
           ];
-        null !== DD && bD.push([fD, (0, RC.b)(DD)]), this.tap = {
-          lines: bD,
-          next: CD,
-          ms: cD
+        null !== UU && TU.push([PU, (0, sR.b)(UU)]), this.tap = {
+          lines: TU,
+          next: RU,
+          ms: gU
         }
       }
-      filled(DD, CD) {
-        this.tap = null, this.turnFrom(DD, CD), this.retry(CD)
+      filled(UU, RU) {
+        this.tap = null, this.turnFrom(UU, RU), this.retry(RU)
       }
-      arrived(DD, CD) {
+      arrived(UU, RU) {
         const {
-          tap: cD
+          tap: gU
         } = this;
-        if (null === cD || CD - cD.ms > 1500) return null;
-        const ID = (0, RC.b)(DD);
-        return (0, RC.f)(cD.next, DD) || cD.lines.some((DD => {
-          let [CD, cD] = DD;
-          return function(DD, CD, cD) {
-            const ID = [cD[0] - CD[0], cD[1] - CD[1], cD[2] - CD[2]],
-              pD = [DD[0] - CD[0], DD[1] - CD[1], DD[2] - CD[2]],
-              iD = ID[0] ** 2 + ID[1] ** 2 + ID[2] ** 2,
-              fD = 0 === iD ? 0 : Math.min(1, Math.max(0, (pD[0] * ID[0] + pD[1] * ID[1] + pD[2] * ID[2]) / iD));
-            return Math.hypot(pD[0] - ID[0] * fD, pD[1] - ID[1] * fD, pD[2] - ID[2] * fD)
-          }(ID, CD, cD) <= .9
-        })) ? (this.tap = null, this.turnFrom(DD, CD), cD.ms) : null
+        if (null === gU || RU - gU.ms > 1500) return null;
+        const tU = (0, sR.b)(UU);
+        return (0, sR.c)(gU.next, UU) || gU.lines.some((UU => {
+          let [RU, gU] = UU;
+          return function(UU, RU, gU) {
+            const tU = [gU[0] - RU[0], gU[1] - RU[1], gU[2] - RU[2]],
+              pU = [UU[0] - RU[0], UU[1] - RU[1], UU[2] - RU[2]],
+              EU = tU[0] ** 2 + tU[1] ** 2 + tU[2] ** 2,
+              PU = 0 === EU ? 0 : Math.min(1, Math.max(0, (pU[0] * tU[0] + pU[1] * tU[1] + pU[2] * tU[2]) / EU));
+            return Math.hypot(pU[0] - tU[0] * PU, pU[1] - tU[1] * PU, pU[2] - tU[2] * PU)
+          }(tU, RU, gU) <= .9
+        })) ? (this.tap = null, this.turnFrom(UU, RU), gU.ms) : null
       }
-      turnFrom(DD, CD) {
+      turnFrom(UU, RU) {
         this.pending = {
-          from: DD,
-          ms: CD,
-          turnMs: Math.max(50, Math.min(250, CD - this.lastFillMs))
-        }, this.lastFillMs = CD
+          from: UU,
+          ms: RU,
+          turnMs: Math.max(50, Math.min(250, RU - this.lastFillMs))
+        }, this.lastFillMs = RU
       }
-      retry(DD) {
+      retry(UU) {
         const {
-          pending: CD
+          pending: RU
         } = this;
-        if (null === CD) return;
-        if (DD - CD.ms > 1500) return void(this.pending = null);
-        const cD = this.pickNext((0, RC.b)(CD.from), (DD => (0, RC.f)(DD, CD.from)));
-        if (null === cD) return;
+        if (null === RU) return;
+        if (UU - RU.ms > 1500) return void(this.pending = null);
+        const gU = this.pickNext((0, sR.b)(RU.from), (UU => (0, sR.c)(UU, RU.from)));
+        if (null === gU) return;
         this.pending = null;
         const {
-          turning: ID
+          turning: tU
         } = this;
-        if (null !== ID && DD < ID.endMs && (0, RC.f)(ID.to, cD)) return;
-        const pD = this.api.getActionRay().origin,
-          iD = [cD[0] + .5 - pD[0], cD[1] + .5 - pD[1], cD[2] + .5 - pD[2]],
-          fD = Math.hypot(iD[0], iD[2]);
-        if (fD < .3) {
-          const DD = Math.max(fD, .001);
-          iD[0] = this.heading[0] * DD, iD[2] = this.heading[1] * DD
+        if (null !== tU && UU < tU.endMs && (0, sR.c)(tU.to, gU)) return;
+        const pU = this.api.getActionRay().origin,
+          EU = [gU[0] + .5 - pU[0], gU[1] + .5 - pU[1], gU[2] + .5 - pU[2]],
+          PU = Math.hypot(EU[0], EU[2]);
+        if (PU < .3) {
+          const UU = Math.max(PU, .001);
+          EU[0] = this.heading[0] * UU, EU[2] = this.heading[1] * UU
         }
-        this.api.turnCamera(iD, CD.turnMs), this.turning = {
-          to: cD,
-          endMs: DD + CD.turnMs
+        this.api.turnCamera(EU, RU.turnMs), this.turning = {
+          to: gU,
+          endMs: UU + RU.turnMs
         }
       }
     }
-    class Qc {
-      constructor(DD, CD, cD) {
-        this.api = DD, this.localPlayerId = CD, this.juice = cD, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.nextCells = [], this.lastFilled = null, this.lastSeenFilled = null, this.playerCells = [], this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = null, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new hC(DD), this.meshes = new cc(DD), this.outline = new uC(DD), this.turn = new bc(DD, CD, ((DD, CD) => this.pickNext(DD, CD)))
+    class qg {
+      constructor(UU, RU, gU) {
+        this.api = UU, this.localPlayerId = RU, this.juice = gU, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.nextCells = [], this.lastFilled = null, this.lastSeenFilled = null, this.playerCells = [], this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = null, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new LR(UU), this.meshes = new gg(UU), this.outline = new DR(UU), this.turn = new Tg(UU, RU, ((UU, RU) => this.pickNext(UU, RU)))
       }
-      kt(DD) {
-        const CD = "active" === DD[0] ? `${DD[1]}|${DD[3]}|${DD[4]}|${DD[5]}|${DD[6]}` : "";
-        if ("active" !== DD[0]) "built" === DD[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
+      qC(UU) {
+        const RU = "active" === UU[0] ? `${UU[1]}|${UU[3]}|${UU[4]}|${UU[5]}|${UU[6]}` : "";
+        if ("active" !== UU[0]) "built" === UU[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
         else {
-          const [, , , , , , , cD, ID, pD, iD] = DD;
-          CD !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = cD) : cD === this.layerY ? this.burstUnlisted(ID) : cD > this.layerY && this.finishLayer(cD), this.layerY = cD, this.layerCells.has(cD) || this.layerCells.set(cD, ID.filter(Sc)), this.ghostCells = ID, this.palette = pD, this.occupiedCells = iD
+          const [, , , , , , , gU, tU, pU, EU] = UU;
+          RU !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = gU) : gU === this.layerY ? this.burstUnlisted(tU) : gU > this.layerY && this.finishLayer(gU), this.layerY = gU, this.layerCells.has(gU) || this.layerCells.set(gU, tU.filter(cg)), this.ghostCells = tU, this.palette = pU, this.occupiedCells = EU
         }
-        CD !== this.blueprint && (this.blueprint = CD, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((DD => this.api.blockNameToBlockId(DD))), this.chunkWatch.watch([...this.ghostCells.filter(Sc), ...this.occupiedCells]), this.refresh()
+        RU !== this.blueprint && (this.blueprint = RU, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((UU => this.api.blockNameToBlockId(UU))), this.chunkWatch.watch([...this.ghostCells.filter(cg), ...this.occupiedCells]), this.refresh()
       }
-      finishLayer(DD) {
-        this.burstUnlisted([]), DD > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = DD)
+      finishLayer(UU) {
+        this.burstUnlisted([]), UU > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = UU)
       }
-      wy() {
+      HG() {
         if (this.chunkWatch.changed()) return void this.refresh();
-        const DD = performance.now();
-        let CD = !1;
-        for (const [pD, iD] of this.foreseen) {
-          var cD;
-          if (DD - iD > 1e3) this.foreseen.delete(pD), CD = !0, (null === (cD = this.lastFilled) || void 0 === cD ? void 0 : cD.join()) === pD && (this.lastFilled = this.lastSeenFilled)
+        const UU = performance.now();
+        let RU = !1;
+        for (const [pU, EU] of this.foreseen) {
+          var gU;
+          if (UU - EU > 1e3) this.foreseen.delete(pU), RU = !0, (null === (gU = this.lastFilled) || void 0 === gU ? void 0 : gU.join()) === pU && (this.lastFilled = this.lastSeenFilled)
         }
-        const ID = wc(this.api.getPositionView(this.localPlayerId));
-        (CD || ID.some(((DD, CD) => DD !== this.playerCells[CD]))) && this.showNext()
+        const tU = Kg(this.api.getPositionView(this.localPlayerId));
+        (RU || tU.some(((UU, RU) => UU !== this.playerCells[RU]))) && this.showNext()
       }
       dispose() {
         this.meshes.dispose(), this.outline.dispose()
       }
-      burstUnlisted(DD) {
-        const CD = new Set;
-        for (let pD = 0; pD < DD.length; pD += 4) CD.add(`${DD[pD]},${DD[pD+1]},${DD[pD+2]}`);
-        const cD = [],
+      burstUnlisted(UU) {
+        const RU = new Set;
+        for (let pU = 0; pU < UU.length; pU += 4) RU.add(`${UU[pU]},${UU[pU+1]},${UU[pU+2]}`);
+        const gU = [],
           {
-            ghostCells: ID
+            ghostCells: tU
           } = this;
-        for (let pD = 0; pD < ID.length; pD += 4) {
-          const DD = `${ID[pD]},${ID[pD+1]},${ID[pD+2]}`;
-          !CD.has(DD) && this.open.delete(DD) && cD.push(this.filledCell(pD))
+        for (let pU = 0; pU < tU.length; pU += 4) {
+          const UU = `${tU[pU]},${tU[pU+1]},${tU[pU+2]}`;
+          !RU.has(UU) && this.open.delete(UU) && gU.push(this.filledCell(pU))
         }
-        this.burst(cD)
+        this.burst(gU)
       }
       refresh() {
         const {
-          ghostCells: DD,
-          palette: CD,
-          occupiedCells: cD
-        } = this, ID = new Cc, pD = new Set, iD = [], fD = [];
-        for (let bD = 0; bD < DD.length; bD += 4) {
-          const [cD, QD, wD, SD] = [DD[bD], DD[bD + 1], DD[bD + 2], DD[bD + 3]], BD = this.api.getBlockId(cD, QD, wD), yD = `${cD},${QD},${wD}`, MD = xC(this.blockIds[SD], BD);
-          !MD && qC(BD) ? ID.add(cD, QD, wD, KC(CD[SD]), AC, GC(CD[SD])) : MD ? this.open.has(yD) && iD.push(this.filledCell(bD)) : ID.add(cD, QD, wD, Dc, FC), !MD && this.api.isBlockInLoadedChunk(cD, QD, wD) && (pD.add(yD), fD.push(cD, QD, wD, qC(BD) ? 0 : 1))
+          ghostCells: UU,
+          palette: RU,
+          occupiedCells: gU
+        } = this, tU = new Rg, pU = new Set, EU = [], PU = [];
+        for (let TU = 0; TU < UU.length; TU += 4) {
+          const [gU, qU, KU, cU] = [UU[TU], UU[TU + 1], UU[TU + 2], UU[TU + 3]], GU = this.api.getBlockId(gU, qU, KU), jU = `${gU},${qU},${KU}`, uU = oR(this.blockIds[cU], GU);
+          !uU && ZR(GU) ? tU.add(gU, qU, KU, YR(RU[cU]), lR, SR(RU[cU])) : uU ? this.open.has(jU) && EU.push(this.filledCell(TU)) : tU.add(gU, qU, KU, Ug, OR), !uU && this.api.isBlockInLoadedChunk(gU, qU, KU) && (pU.add(jU), PU.push(gU, qU, KU, ZR(GU) ? 0 : 1))
         }
-        this.open = pD, this.nextCells = fD;
-        for (let bD = 0; bD < cD.length; bD += 3) {
-          const [DD, CD, pD] = [cD[bD], cD[bD + 1], cD[bD + 2]];
-          qC(this.api.getBlockId(DD, CD, pD)) || ID.add(DD, CD, pD, Dc, FC)
+        this.open = pU, this.nextCells = PU;
+        for (let TU = 0; TU < gU.length; TU += 3) {
+          const [UU, RU, pU] = [gU[TU], gU[TU + 1], gU[TU + 2]];
+          ZR(this.api.getBlockId(UU, RU, pU)) || tU.add(UU, RU, pU, Ug, OR)
         }
-        this.meshes.show(ID.toArray()), this.burst(iD), this.showNext(), this.turn.retry(performance.now())
+        this.meshes.show(tU.toArray()), this.burst(EU), this.showNext(), this.turn.retry(performance.now())
       }
-      burst(DD) {
-        const CD = performance.now(),
-          cD = [];
-        for (const [pD, iD, fD] of DD) {
-          const DD = [pD, iD, fD];
-          this.lastSeenFilled = DD, this.foreseen.delete(DD.join()) || cD.push(DD)
+      burst(UU) {
+        const RU = performance.now(),
+          gU = [];
+        for (const [pU, EU, PU] of UU) {
+          const UU = [pU, EU, PU];
+          this.lastSeenFilled = UU, this.foreseen.delete(UU.join()) || gU.push(UU)
         }
-        const ID = this.isHolding(CD);
-        for (const pD of cD) {
-          if (this.lastFilled = pD, ID && this.pressFilled) {
-            this.turn.filled(pD, CD);
+        const tU = this.isHolding(RU);
+        for (const pU of gU) {
+          if (this.lastFilled = pU, tU && this.pressFilled) {
+            this.turn.filled(pU, RU);
             continue
           }
-          const DD = this.turn.arrived(pD, CD);
-          if (null !== DD) {
-            this.pressFilled = ID;
-            for (const [CD, cD] of this.foreseen) cD <= DD && this.foreseen.delete(CD)
+          const UU = this.turn.arrived(pU, RU);
+          if (null !== UU) {
+            this.pressFilled = tU;
+            for (const [RU, gU] of this.foreseen) gU <= UU && this.foreseen.delete(RU)
           }
         }
-        this.juice.filled(DD)
+        this.juice.filled(UU)
       }
       showNext() {
-        var DD;
-        const CD = this.api.getPositionView(this.localPlayerId);
-        this.playerCells.splice(0, 1 / 0, ...wc(CD));
-        const cD = this.lastFilled;
-        this.nextCell = this.pickNext(null === cD ? [CD[0], CD[1] + 1, CD[2]] : (0, RC.b)(cD), (() => !1)), this.outline.show(null !== (DD = this.aimed) && void 0 !== DD ? DD : this.nextCell)
+        var UU;
+        const RU = this.api.getPositionView(this.localPlayerId);
+        this.playerCells.splice(0, 1 / 0, ...Kg(RU));
+        const gU = this.lastFilled;
+        this.nextCell = this.pickNext(null === gU ? [RU[0], RU[1] + 1, RU[2]] : (0, sR.b)(gU), (() => !1)), this.outline.show(null !== (UU = this.aimed) && void 0 !== UU ? UU : this.nextCell)
       }
-      pickNext(DD, CD) {
-        const cD = this.api.getPositionView(this.localPlayerId),
-          ID = [cD[0], cD[1] + kC.h.XN * kC.h.playerEyeToHeightRatio, cD[2]],
-          pD = fc(this.api, this.localPlayerId),
+      pickNext(UU, RU) {
+        const gU = this.api.getPositionView(this.localPlayerId),
+          tU = [gU[0], gU[1] + yR.e.FW * yR.e.playerEyeToHeightRatio, gU[2]],
+          pU = Pg(this.api, this.localPlayerId),
           {
-            nextCells: iD
+            nextCells: EU
           } = this,
-          fD = DD => [iD[DD], iD[DD + 1], iD[DD + 2]],
-          bD = function(DD, CD, cD, ID, pD, iD) {
-            let fD = -1,
-              bD = -1,
-              QD = 1 / 0;
-            for (let wD = 0; wD < DD.length; wD += CD) {
-              const CD = (iD(wD) ? 2 : 0) + (ID(wD) ? 1 : 0);
-              if (CD < bD || pD(wD)) continue;
-              const SD = (DD[wD] + .5 - cD[0]) ** 2 + (DD[wD + 1] + .5 - cD[1]) ** 2 + (DD[wD + 2] + .5 - cD[2]) ** 2;
-              (CD > bD || SD < QD) && (fD = wD, bD = CD, QD = SD)
+          PU = UU => [EU[UU], EU[UU + 1], EU[UU + 2]],
+          TU = function(UU, RU, gU, tU, pU, EU) {
+            let PU = -1,
+              TU = -1,
+              qU = 1 / 0;
+            for (let KU = 0; KU < UU.length; KU += RU) {
+              const RU = (EU(KU) ? 2 : 0) + (tU(KU) ? 1 : 0);
+              if (RU < TU || pU(KU)) continue;
+              const cU = (UU[KU] + .5 - gU[0]) ** 2 + (UU[KU + 1] + .5 - gU[1]) ** 2 + (UU[KU + 2] + .5 - gU[2]) ** 2;
+              (RU > TU || cU < qU) && (PU = KU, TU = RU, qU = cU)
             }
-            return fD
-          }(iD, 4, DD, (DD => 1 === iD[DD + 3]), (DD => {
-            const ID = fD(DD);
-            return dC(ID, cD) || this.foreseen.has(ID.join()) || CD(ID)
-          }), (DD => function(DD, CD, cD) {
-            return (CD[0] + .5 - DD[0]) ** 2 + (CD[1] + .5 - DD[1]) ** 2 + (CD[2] + .5 - DD[2]) ** 2 <= cD ** 2
-          }(ID, fD(DD), pD)));
-        return -1 === bD ? null : fD(bD)
+            return PU
+          }(EU, 4, UU, (UU => 1 === EU[UU + 3]), (UU => {
+            const tU = PU(UU);
+            return kR(tU, gU) || this.foreseen.has(tU.join()) || RU(tU)
+          }), (UU => function(UU, RU, gU) {
+            return (RU[0] + .5 - UU[0]) ** 2 + (RU[1] + .5 - UU[1]) ** 2 + (RU[2] + .5 - UU[2]) ** 2 <= gU ** 2
+          }(tU, PU(UU), pU)));
+        return -1 === TU ? null : PU(TU)
       }
-      afterRender(DD) {
-        var CD;
-        this.turn.look(DD);
-        const cD = this.api.getTargetedBlock();
-        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === cD ? null : cD.position), this.outline.show(null !== (CD = this.aimed) && void 0 !== CD ? CD : this.nextCell)
+      afterRender(UU) {
+        var RU;
+        this.turn.look(UU);
+        const gU = this.api.getTargetedBlock();
+        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === gU ? null : gU.position), this.outline.show(null !== (RU = this.aimed) && void 0 !== RU ? RU : this.nextCell)
       }
-      isHolding(DD) {
-        return null !== this.altMs && DD - this.altMs <= 500
+      isHolding(UU) {
+        return null !== this.altMs && UU - this.altMs <= 500
       }
-      attemptAltAction(DD) {
-        const CD = performance.now();
-        if (this.isHolding(CD) || (this.pressFilled = !1), this.altMs = CD, this.pressFilled) return "preventPlacement";
-        const cD = this.findAimed(DD);
-        if (null !== cD) return this.foreseen.set(cD.join(), CD), this.lastFilled = cD, this.aimed = null, this.showNext(), this.turn.filled(cD, CD), this.pressFilled = !0, "preventPlacement";
-        null !== this.nextCell && this.turn.tapped(DD, this.nextCell, CD)
+      attemptAltAction(UU) {
+        const RU = performance.now();
+        if (this.isHolding(RU) || (this.pressFilled = !1), this.altMs = RU, this.pressFilled) return "preventPlacement";
+        const gU = this.findAimed(UU);
+        if (null !== gU) return this.foreseen.set(gU.join(), RU), this.lastFilled = gU, this.aimed = null, this.showNext(), this.turn.filled(gU, RU), this.pressFilled = !0, "preventPlacement";
+        null !== this.nextCell && this.turn.tapped(UU, this.nextCell, RU)
       }
-      findAimed(DD) {
-        return function(DD, CD, cD, ID, pD, iD, fD) {
-          const bD = DD.FDD(CD),
-            QD = null === bD || null === DD.blockNameToBlockId(bD.name, !0) ? null : bD.name,
-            wD = DD.getPositionView(CD),
+      findAimed(UU) {
+        return function(UU, RU, gU, tU, pU, EU, PU) {
+          const TU = UU.QRU(RU),
+            qU = null === TU || null === UU.blockNameToBlockId(TU.name, !0) ? null : TU.name,
+            KU = UU.getPositionView(RU),
             {
-              origin: SD,
-              direction: BD
-            } = DD.getActionRay(),
-            yD = YC(ID, {
-              from: SD,
-              dir: BD,
-              reach: fc(DD, CD),
-              solid: cD
-            }, (CD => {
-              const cD = [ID[CD], ID[CD + 1], ID[CD + 2]];
-              return !xC(pD[ID[CD + 3]], DD.getBlockId(...cD)) && !fD.has(cD.join()) && DD.isBlockInLoadedChunk(...cD) && !dC(cD, wD)
-            }), (DD => null === QD || QD === JC(pD[ID[DD + 3]])), (DD => null !== iD && ID[DD] === iD[0] && ID[DD + 1] === iD[1] && ID[DD + 2] === iD[2]));
-          return -1 === yD ? null : [ID[yD], ID[yD + 1], ID[yD + 2]]
-        }(this.api, this.localPlayerId, DD, this.ghostCells, this.blockIds, this.nextCell, this.foreseen)
+              origin: cU,
+              direction: GU
+            } = UU.getActionRay(),
+            jU = FR(tU, {
+              from: cU,
+              dir: GU,
+              reach: Pg(UU, RU),
+              solid: gU
+            }, (RU => {
+              const gU = [tU[RU], tU[RU + 1], tU[RU + 2]];
+              return !oR(pU[tU[RU + 3]], UU.getBlockId(...gU)) && !PU.has(gU.join()) && UU.isBlockInLoadedChunk(...gU) && !kR(gU, KU)
+            }), (UU => null === qU || qU === aR(pU[tU[UU + 3]])), (UU => null !== EU && tU[UU] === EU[0] && tU[UU + 1] === EU[1] && tU[UU + 2] === EU[2]));
+          return -1 === jU ? null : [tU[jU], tU[jU + 1], tU[jU + 2]]
+        }(this.api, this.localPlayerId, UU, this.ghostCells, this.blockIds, this.nextCell, this.foreseen)
       }
       endPress() {
         this.altMs = null, this.pressFilled = !1
       }
-      filledCell(DD) {
+      filledCell(UU) {
         const {
-          ghostCells: CD
-        } = this, [cD, ID, pD] = KC(this.palette[CD[DD + 3]]);
-        return [CD[DD], CD[DD + 1], CD[DD + 2], cD, ID, pD]
+          ghostCells: RU
+        } = this, [gU, tU, pU] = YR(this.palette[RU[UU + 3]]);
+        return [RU[UU], RU[UU + 1], RU[UU + 2], gU, tU, pU]
       }
     }
 
-    function wc(DD) {
-      let [CD, cD, ID] = DD;
-      const pD = kC.h.vN / 2;
-      return [Math.floor(CD), Math.floor(cD), Math.floor(ID), Math.floor(CD - pD), Math.floor(CD + pD), Math.floor(cD + kC.h.XN), Math.floor(ID - pD), Math.floor(ID + pD)]
+    function Kg(UU) {
+      let [RU, gU, tU] = UU;
+      const pU = yR.e.dW / 2;
+      return [Math.floor(RU), Math.floor(gU), Math.floor(tU), Math.floor(RU - pU), Math.floor(RU + pU), Math.floor(gU + yR.e.FW), Math.floor(tU - pU), Math.floor(tU + pU)]
     }
 
-    function Sc(DD, CD) {
-      return CD % 4 !== 3
+    function cg(UU, RU) {
+      return RU % 4 !== 3
     }
 
-    function Bc(DD, CD, cD, ID, pD) {
-      if (!DD.isBlockInLoadedChunk(CD, ID - 6, cD) || !DD.isBlockInLoadedChunk(CD, ID + 6 + pD, cD) || !DD.canModifyBlockAt(CD, ID, cD)) return NaN;
-      let iD = ID - 1;
-      if (0 !== DD.getBlockId(CD, iD, cD)) {
-        for (; iD < ID + 6 && 0 !== DD.getBlockId(CD, iD + 1, cD);) iD++;
-        return iD
+    function Gg(UU, RU, gU, tU, pU) {
+      if (!UU.isBlockInLoadedChunk(RU, tU - 6, gU) || !UU.isBlockInLoadedChunk(RU, tU + 6 + pU, gU) || !UU.canModifyBlockAt(RU, tU, gU)) return NaN;
+      let EU = tU - 1;
+      if (0 !== UU.getBlockId(RU, EU, gU)) {
+        for (; EU < tU + 6 && 0 !== UU.getBlockId(RU, EU + 1, gU);) EU++;
+        return EU
       }
-      for (; iD > ID - 6;)
-        if (iD--, 0 !== DD.getBlockId(CD, iD, cD)) return iD;
+      for (; EU > tU - 6;)
+        if (EU--, 0 !== UU.getBlockId(RU, EU, gU)) return EU;
       return NaN
     }
 
-    function yc(DD, CD, cD, ID, pD) {
-      let iD = 0;
-      for (let fD = ID + 1; fD <= ID + pD; fD++) 0 !== DD.getBlockId(CD, fD, cD) && iD++;
-      return iD
+    function jg(UU, RU, gU, tU, pU) {
+      let EU = 0;
+      for (let PU = tU + 1; PU <= tU + pU; PU++) 0 !== UU.getBlockId(RU, PU, gU) && EU++;
+      return EU
     }
 
-    function Mc(DD) {
-      const CD = new Map;
-      for (const fD of DD) {
-        var cD;
-        if (Number.isNaN(fD)) return null;
-        CD.set(fD, (null !== (cD = CD.get(fD)) && void 0 !== cD ? cD : 0) + 1)
+    function ug(UU) {
+      const RU = new Map;
+      for (const PU of UU) {
+        var gU;
+        if (Number.isNaN(PU)) return null;
+        RU.set(PU, (null !== (gU = RU.get(PU)) && void 0 !== gU ? gU : 0) + 1)
       }
-      let ID = NaN,
-        pD = 0;
-      for (const [fD, bD] of CD)(bD > pD || bD === pD && fD < ID) && (ID = fD, pD = bD);
-      let iD = 0;
-      for (const fD of DD) iD += Math.abs(fD - ID);
-      return iD
+      let tU = NaN,
+        pU = 0;
+      for (const [PU, TU] of RU)(TU > pU || TU === pU && PU < tU) && (tU = PU, pU = TU);
+      let EU = 0;
+      for (const PU of UU) EU += Math.abs(PU - tU);
+      return EU
     }
 
-    function tc(DD, CD, cD, ID) {
+    function Cg(UU, RU, gU, tU) {
       const {
-        eye: pD,
-        forward: iD,
-        tanHalfFovX: fD,
-        tanHalfFovY: bD
-      } = DD, [QD, wD] = function(DD) {
-        let [CD, cD, ID] = DD;
-        const pD = Math.hypot(CD, ID),
-          [iD, fD] = [ID / pD, -CD / pD];
+        eye: pU,
+        forward: EU,
+        tanHalfFovX: PU,
+        tanHalfFovY: TU
+      } = UU, [qU, KU] = function(UU) {
+        let [RU, gU, tU] = UU;
+        const pU = Math.hypot(RU, tU),
+          [EU, PU] = [tU / pU, -RU / pU];
         return [
-          [iD, 0, fD],
-          [cD * fD, ID * iD - CD * fD, -cD * iD]
+          [EU, 0, PU],
+          [gU * PU, tU * EU - RU * PU, -gU * EU]
         ]
-      }(iD), [SD, BD] = [CD * fD, cD * bD], yD = iD[0] + SD * QD[0] + BD * wD[0], MD = iD[1] + BD * wD[1], tD = iD[2] + SD * QD[2] + BD * wD[2], ZD = (ID - pD[1]) / MD;
-      return ZD > 0 && ZD < 1 / 0 ? [pD[0] + ZD * yD, pD[2] + ZD * tD] : null
+      }(EU), [cU, GU] = [RU * PU, gU * TU], jU = EU[0] + cU * qU[0] + GU * KU[0], uU = EU[1] + GU * KU[1], CU = EU[2] + cU * qU[2] + GU * KU[2], hU = (tU - pU[1]) / uU;
+      return hU > 0 && hU < 1 / 0 ? [pU[0] + hU * jU, pU[2] + hU * CU] : null
     }
-    const Zc = "plotsBlueprintPlacementChanged",
-      oc = {
+    const hg = "plotsBlueprintPlacementChanged",
+      Qg = {
         size: .9,
         alpha: .2,
         crossed: !1
       };
-    class vc {
-      constructor(DD, CD) {
-        this.api = DD, this.localPlayerId = CD, this.placing = null, this.view = null, this.camera = {
+    class eg {
+      constructor(UU, RU) {
+        this.api = UU, this.localPlayerId = RU, this.placing = null, this.view = null, this.camera = {
           eye: [0, 0, 0],
           forward: [0, 0, 1],
           tanHalfFovX: 1,
           tanHalfFovY: 1
-        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = DD => {
-          var CD, cD, ID, iD;
-          const fD = null !== (CD = null === (cD = this.placing) || void 0 === cD ? void 0 : cD.rotation) && void 0 !== CD ? CD : 0,
+        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = UU => {
+          var RU, gU, tU, EU;
+          const PU = null !== (RU = null === (gU = this.placing) || void 0 === gU ? void 0 : gU.rotation) && void 0 !== RU ? RU : 0,
             {
-              size: bD
-            } = dD(DD, fD),
-            QD = this.api.FX(this.localPlayerId),
-            [wD, SD] = null !== (ID = null !== (iD = function(DD, CD, cD) {
-              const [ID, pD, iD] = CD, [fD, bD, QD] = [Math.floor(cD[0]), Math.floor(cD[1]), Math.floor(cD[2])], wD = 6 + Math.max(ID, iD) / 2, [SD, BD] = [Math.ceil(wD + ID / 2), Math.ceil(wD + iD / 2)], [yD, MD] = [fD - SD, QD - BD], [tD, ZD] = [2 * SD + 1, 2 * BD + 1], oD = new Float64Array(tD * ZD), vD = new Uint16Array(tD * ZD);
-              for (let mD = 0; mD < tD; mD++)
-                for (let CD = 0; CD < ZD; CD++) {
-                  const cD = Bc(DD, yD + mD, MD + CD, bD, pD);
-                  oD[mD * ZD + CD] = cD, Number.isNaN(cD) || (vD[mD * ZD + CD] = yc(DD, yD + mD, MD + CD, cD, pD))
+              size: TU
+            } = kU(UU, PU),
+            qU = this.api.Hx(this.localPlayerId),
+            [KU, cU] = null !== (tU = null !== (EU = function(UU, RU, gU) {
+              const [tU, pU, EU] = RU, [PU, TU, qU] = [Math.floor(gU[0]), Math.floor(gU[1]), Math.floor(gU[2])], KU = 6 + Math.max(tU, EU) / 2, [cU, GU] = [Math.ceil(KU + tU / 2), Math.ceil(KU + EU / 2)], [jU, uU] = [PU - cU, qU - GU], [CU, hU] = [2 * cU + 1, 2 * GU + 1], QU = new Float64Array(CU * hU), eU = new Uint16Array(CU * hU);
+              for (let mU = 0; mU < CU; mU++)
+                for (let RU = 0; RU < hU; RU++) {
+                  const gU = Gg(UU, jU + mU, uU + RU, TU, pU);
+                  QU[mU * hU + RU] = gU, Number.isNaN(gU) || (eU[mU * hU + RU] = jg(UU, jU + mU, uU + RU, gU, pU))
                 }
-              const ND = [];
-              let gD = null,
-                XD = 1 / 0;
-              for (let mD = 0; mD + ID <= tD; mD++)
-                for (let DD = 0; DD + iD <= ZD; DD++) {
-                  const [CD, pD] = [yD + mD, MD + DD], bD = Math.hypot(CD + ID / 2 - cD[0], pD + iD / 2 - cD[2]);
-                  if (bD > wD || fD >= CD - 2 && fD < CD + ID + 2 && QD >= pD - 2 && QD < pD + iD + 2) continue;
-                  ND.length = 0;
-                  let SD = 0;
-                  for (let cD = 0; cD < ID; cD++)
-                    for (let CD = 0; CD < iD; CD++) ND.push(oD[(mD + cD) * ZD + DD + CD]), SD += vD[(mD + cD) * ZD + DD + CD];
-                  const BD = Mc(ND);
-                  if (null === BD) continue;
-                  const tD = bD + 3 * (BD + SD);
-                  tD < XD && (XD = tD, gD = [CD, pD])
+              const WU = [];
+              let fU = null,
+                xU = 1 / 0;
+              for (let mU = 0; mU + tU <= CU; mU++)
+                for (let UU = 0; UU + EU <= hU; UU++) {
+                  const [RU, pU] = [jU + mU, uU + UU], TU = Math.hypot(RU + tU / 2 - gU[0], pU + EU / 2 - gU[2]);
+                  if (TU > KU || PU >= RU - 2 && PU < RU + tU + 2 && qU >= pU - 2 && qU < pU + EU + 2) continue;
+                  WU.length = 0;
+                  let cU = 0;
+                  for (let gU = 0; gU < tU; gU++)
+                    for (let RU = 0; RU < EU; RU++) WU.push(QU[(mU + gU) * hU + UU + RU]), cU += eU[(mU + gU) * hU + UU + RU];
+                  const GU = ug(WU);
+                  if (null === GU) continue;
+                  const CU = TU + 3 * (GU + cU);
+                  CU < xU && (xU = CU, fU = [RU, pU])
                 }
-              return gD
-            }(this.api, bD, QD)) && void 0 !== iD ? iD : this.cornerOnTarget(bD)) && void 0 !== ID ? ID : [Math.floor(QD[0]) + 2, Math.floor(QD[2])];
+              return fU
+            }(this.api, TU, qU)) && void 0 !== EU ? EU : this.cornerOnTarget(TU)) && void 0 !== tU ? tU : [Math.floor(qU[0]) + 2, Math.floor(qU[2])];
           this.placing = {
-            id: DD,
-            rotation: fD,
-            corner: [wD, this.playerLevel(), SD],
+            id: UU,
+            rotation: PU,
+            corner: [KU, this.playerLevel(), cU],
             sent: null,
             refusals: 0,
             hover: null,
             drag: null
-          }, this.update(), this.api.sendCommand(`${pD} preview`)
+          }, this.update(), this.api.sendCommand(`${pU} preview`)
         }, this.rotate = () => {
           const {
-            id: DD,
-            rotation: CD,
-            corner: cD
-          } = this.placing, pD = ID[(ID.indexOf(CD) + 1) % ID.length], [iD, , fD] = dD(DD, CD).size, [bD, , QD] = dD(DD, pD).size;
-          this.moveTo(cD[0] + Math.floor(iD / 2) - Math.floor(bD / 2), cD[2] + Math.floor(fD / 2) - Math.floor(QD / 2), pD)
-        }, this.hoverAt = (DD, CD) => {
-          this.placing.hover = [DD, CD], this.moveCentreTo(this.camera, DD, CD)
+            id: UU,
+            rotation: RU,
+            corner: gU
+          } = this.placing, pU = tU[(tU.indexOf(RU) + 1) % tU.length], [EU, , PU] = kU(UU, RU).size, [TU, , qU] = kU(UU, pU).size;
+          this.moveTo(gU[0] + Math.floor(EU / 2) - Math.floor(TU / 2), gU[2] + Math.floor(PU / 2) - Math.floor(qU / 2), pU)
+        }, this.hoverAt = (UU, RU) => {
+          this.placing.hover = [UU, RU], this.moveCentreTo(this.camera, UU, RU)
         }, this.endHover = () => {
           this.placing.hover = null
-        }, this.beginDrag = (DD, CD) => {
-          const cD = this.placing,
+        }, this.beginDrag = (UU, RU) => {
+          const gU = this.placing,
             {
-              eye: ID,
-              forward: pD,
-              tanHalfFovX: iD,
-              tanHalfFovY: fD
+              eye: tU,
+              forward: pU,
+              tanHalfFovX: EU,
+              tanHalfFovY: PU
             } = this.camera,
-            bD = {
-              eye: [ID[0], ID[1], ID[2]],
-              forward: [pD[0], pD[1], pD[2]],
-              tanHalfFovX: iD,
-              tanHalfFovY: fD
+            TU = {
+              eye: [tU[0], tU[1], tU[2]],
+              forward: [pU[0], pU[1], pU[2]],
+              tanHalfFovX: EU,
+              tanHalfFovY: PU
             },
-            QD = cD.corner[1],
-            wD = tc(bD, DD, CD, QD);
-          cD.hover = null, cD.drag = wD && {
-            view: bD,
-            ground: wD,
-            corner: [cD.corner[0], cD.corner[2]],
-            level: QD
+            qU = gU.corner[1],
+            KU = Cg(TU, UU, RU, qU);
+          gU.hover = null, gU.drag = KU && {
+            view: TU,
+            ground: KU,
+            corner: [gU.corner[0], gU.corner[2]],
+            level: qU
           }
-        }, this.dragTo = (DD, CD) => {
-          const cD = this.placing.drag,
-            ID = cD && tc(cD.view, DD, CD, cD.level);
-          null !== cD && null !== ID && this.moveTo(cD.corner[0] + Math.round(ID[0] - cD.ground[0]), cD.corner[1] + Math.round(ID[1] - cD.ground[1]))
+        }, this.dragTo = (UU, RU) => {
+          const gU = this.placing.drag,
+            tU = gU && Cg(gU.view, UU, RU, gU.level);
+          null !== gU && null !== tU && this.moveTo(gU.corner[0] + Math.round(tU[0] - gU.ground[0]), gU.corner[1] + Math.round(tU[1] - gU.ground[1]))
         }, this.endDrag = () => {
           this.placing.drag = null
         }, this.tap = () => {
-          const DD = this.view;
-          DD.waiting || (DD.blocked ? this.Uo({
-            ...DD,
+          const UU = this.view;
+          UU.waiting || (UU.blocked ? this.yh({
+            ...UU,
             refusals: ++this.placing.refusals
           }) : this.build())
         }, this.build = () => {
-          const DD = this.placing,
+          const UU = this.placing,
             {
-              id: CD,
-              rotation: cD,
-              corner: ID
-            } = DD;
-          this.api.sendCommand(`${pD} place ${CD} ${ID.join(" ")} ${cD}`), DD.sent = {
+              id: RU,
+              rotation: gU,
+              corner: tU
+            } = UU;
+          this.api.sendCommand(`${pU} place ${RU} ${tU.join(" ")} ${gU}`), UU.sent = {
             atMs: performance.now(),
-            corner: [...ID],
-            rotation: cD,
+            corner: [...tU],
+            rotation: gU,
             timedOut: !1
           }, this.update()
         }, this.stop = () => {
-          null !== this.placing && (this.close(), this.api.sendCommand(`${pD} preview off`))
-        }, this.chunkWatch = new hC(DD), this.meshes = new cc(DD)
+          null !== this.placing && (this.close(), this.api.sendCommand(`${pU} preview off`))
+        }, this.chunkWatch = new LR(UU), this.meshes = new gg(UU)
       }
       getView() {
         return this.view
       }
-      wy() {
-        const DD = this.placing;
-        null !== DD && (null !== DD.sent && !DD.sent.timedOut && performance.now() - DD.sent.atMs > 3e3 ? (DD.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(DD) || this.chunkWatch.changed()) && this.update())
+      HG() {
+        const UU = this.placing;
+        null !== UU && (null !== UU.sent && !UU.sent.timedOut && performance.now() - UU.sent.atMs > 3e3 ? (UU.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(UU) || this.chunkWatch.changed()) && this.update())
       }
-      afterRender(DD) {
-        const CD = this.placing;
-        null !== CD && (! function(DD, CD) {
-          for (let cD = 0; cD < 3; cD++) CD.eye[cD] = DD.cameraPosition[cD], CD.forward[cD] = DD.cameraDirection[cD];
-          CD.tanHalfFovX = DD.tanHalfFovX, CD.tanHalfFovY = DD.tanHalfFovY
-        }(DD, this.camera), null !== CD.hover && this.moveCentreTo(this.camera, CD.hover[0], CD.hover[1]))
+      afterRender(UU) {
+        const RU = this.placing;
+        null !== RU && (! function(UU, RU) {
+          for (let gU = 0; gU < 3; gU++) RU.eye[gU] = UU.cameraPosition[gU], RU.forward[gU] = UU.cameraDirection[gU];
+          RU.tanHalfFovX = UU.tanHalfFovX, RU.tanHalfFovY = UU.tanHalfFovY
+        }(UU, this.camera), null !== RU.hover && this.moveCentreTo(this.camera, RU.hover[0], RU.hover[1]))
       }
-      kt(DD) {
-        const CD = this.placing;
-        if (null === CD || null === CD.sent || "active" !== DD[0]) return;
+      qC(UU) {
+        const RU = this.placing;
+        if (null === RU || null === RU.sent || "active" !== UU[0]) return;
         const {
-          sent: cD
-        } = CD, [, ID, pD, iD, fD, bD, QD] = DD;
-        pD && ID === CD.id && QD === cD.rotation && iD === cD.corner[0] && fD === cD.corner[1] && bD === cD.corner[2] && this.close()
+          sent: gU
+        } = RU, [, tU, pU, EU, PU, TU, qU] = UU;
+        pU && tU === RU.id && qU === gU.rotation && EU === gU.corner[0] && PU === gU.corner[1] && TU === gU.corner[2] && this.close()
       }
       endFromServer() {
         null !== this.placing && this.close()
@@ -1650,142 +1650,142 @@ export const modules = {
       dispose() {
         this.meshes.dispose()
       }
-      cornerOnTarget(DD) {
-        let [CD, , cD] = DD;
-        const ID = this.api.getTargetedBlock();
-        if (null === ID) return null;
-        const [pD, , iD] = ID.position;
-        return [pD - Math.floor(CD / 2), iD - Math.floor(cD / 2)]
+      cornerOnTarget(UU) {
+        let [RU, , gU] = UU;
+        const tU = this.api.getTargetedBlock();
+        if (null === tU) return null;
+        const [pU, , EU] = tU.position;
+        return [pU - Math.floor(RU / 2), EU - Math.floor(gU / 2)]
       }
       playerLevel() {
-        var DD;
-        const [CD, cD, ID] = this.api.FX(this.localPlayerId);
-        if (null !== (DD = this.api.getLocalPlayerMovement()) && void 0 !== DD && DD.onGround) return Math.ceil(cD - .01);
-        const [pD, iD, fD] = [Math.floor(CD), Math.floor(cD), Math.floor(ID)];
-        for (let bD = iD; bD >= iD - 2; bD--)
-          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(pD, bD, fD))) return bD + 1;
-        return iD
+        var UU;
+        const [RU, gU, tU] = this.api.Hx(this.localPlayerId);
+        if (null !== (UU = this.api.getLocalPlayerMovement()) && void 0 !== UU && UU.onGround) return Math.ceil(gU - .01);
+        const [pU, EU, PU] = [Math.floor(RU), Math.floor(gU), Math.floor(tU)];
+        for (let TU = EU; TU >= EU - 2; TU--)
+          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(pU, TU, PU))) return TU + 1;
+        return EU
       }
-      followPlayerLevel(DD) {
-        if (Nc(DD)) return !1;
-        const CD = this.playerLevel();
-        return CD !== DD.corner[1] && (DD.corner[1] = CD, !0)
+      followPlayerLevel(UU) {
+        if (Wg(UU)) return !1;
+        const RU = this.playerLevel();
+        return RU !== UU.corner[1] && (UU.corner[1] = RU, !0)
       }
-      moveCentreTo(DD, CD, cD) {
-        const ID = this.placing,
-          pD = tc(DD, CD, cD, ID.corner[1]);
-        if (null !== pD) {
-          const [DD, , CD] = dD(ID.id, ID.rotation).size;
-          this.moveTo(Math.round(pD[0] - DD / 2), Math.round(pD[1] - CD / 2))
+      moveCentreTo(UU, RU, gU) {
+        const tU = this.placing,
+          pU = Cg(UU, RU, gU, tU.corner[1]);
+        if (null !== pU) {
+          const [UU, , RU] = kU(tU.id, tU.rotation).size;
+          this.moveTo(Math.round(pU[0] - UU / 2), Math.round(pU[1] - RU / 2))
         }
       }
-      moveTo(DD, CD) {
-        let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
-        const ID = this.placing;
-        if (Nc(ID)) return;
-        const [pD, iD, fD] = ID.corner;
-        if (this.centreOnPlot(pD, fD) && !this.centreOnPlot(DD, CD, cD))
-          if (this.centreOnPlot(DD, fD, cD)) CD = fD;
+      moveTo(UU, RU) {
+        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+        const tU = this.placing;
+        if (Wg(tU)) return;
+        const [pU, EU, PU] = tU.corner;
+        if (this.centreOnPlot(pU, PU) && !this.centreOnPlot(UU, RU, gU))
+          if (this.centreOnPlot(UU, PU, gU)) RU = PU;
           else {
-            if (!this.centreOnPlot(pD, CD, cD)) return;
-            DD = pD
-          } DD === pD && CD === fD && cD === ID.rotation || (ID.rotation = cD, ID.corner = [DD, iD, CD], this.update())
+            if (!this.centreOnPlot(pU, RU, gU)) return;
+            UU = pU
+          } UU === pU && RU === PU && gU === tU.rotation || (tU.rotation = gU, tU.corner = [UU, EU, RU], this.update())
       }
-      centreOnPlot(DD, CD) {
-        let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+      centreOnPlot(UU, RU) {
+        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
         const {
-          id: ID,
-          corner: pD
-        } = this.placing, [iD, , fD] = dD(ID, cD).size;
-        return this.api.canModifyBlockAt(DD + Math.floor(iD / 2), pD[1], CD + Math.floor(fD / 2))
+          id: tU,
+          corner: pU
+        } = this.placing, [EU, , PU] = kU(tU, gU).size;
+        return this.api.canModifyBlockAt(UU + Math.floor(EU / 2), pU[1], RU + Math.floor(PU / 2))
       }
       close() {
-        this.placing = null, this.meshes.dispose(), this.Uo(null)
+        this.placing = null, this.meshes.dispose(), this.yh(null)
       }
       update() {
         const {
-          id: DD,
-          rotation: CD,
-          corner: cD,
-          refusals: ID
-        } = this.placing, pD = new Cc, iD = [];
-        let fD = !1,
-          bD = 0;
+          id: UU,
+          rotation: RU,
+          corner: gU,
+          refusals: tU
+        } = this.placing, pU = new Rg, EU = [];
+        let PU = !1,
+          TU = 0;
         for (const {
-            offset: SD,
-            block: BD
+            offset: cU,
+            block: GU
           }
-          of dD(DD, CD).cells) {
-          const [DD, CD, ID] = [cD[0] + SD[0], cD[1] + SD[1], cD[2] + SD[2]];
-          iD.push(DD, CD, ID);
-          const QD = !this.api.canModifyBlockAt(DD, CD, ID),
-            wD = this.api.getBlockId(DD, CD, ID),
-            yD = !qC(wD) && !xC(this.api.blockNameToBlockId(BD), wD);
-          fD ||= QD, bD += yD ? 1 : 0, QD || yD ? pD.add(DD, CD, ID, Dc, FC) : pD.add(DD, CD, ID, KC(BD), oc, GC(BD))
+          of kU(UU, RU).cells) {
+          const [UU, RU, tU] = [gU[0] + cU[0], gU[1] + cU[1], gU[2] + cU[2]];
+          EU.push(UU, RU, tU);
+          const qU = !this.api.canModifyBlockAt(UU, RU, tU),
+            KU = this.api.getBlockId(UU, RU, tU),
+            jU = !ZR(KU) && !oR(this.api.blockNameToBlockId(GU), KU);
+          PU ||= qU, TU += jU ? 1 : 0, qU || jU ? pU.add(UU, RU, tU, Ug, OR) : pU.add(UU, RU, tU, YR(GU), Qg, SR(GU))
         }
-        this.chunkWatch.watch(iD), this.meshes.show(pD.toArray());
-        const QD = this.view,
-          wD = Nc(this.placing);
-        (null === QD || void 0 === QD ? void 0 : QD.id) === DD && QD.blocked === fD && QD.toClear === bD && QD.waiting === wD && QD.refusals === ID || this.Uo({
-          id: DD,
-          blocked: fD,
-          toClear: bD,
-          waiting: wD,
-          refusals: ID
+        this.chunkWatch.watch(EU), this.meshes.show(pU.toArray());
+        const qU = this.view,
+          KU = Wg(this.placing);
+        (null === qU || void 0 === qU ? void 0 : qU.id) === UU && qU.blocked === PU && qU.toClear === TU && qU.waiting === KU && qU.refusals === tU || this.yh({
+          id: UU,
+          blocked: PU,
+          toClear: TU,
+          waiting: KU,
+          refusals: tU
         })
       }
-      Uo(DD) {
-        this.view = DD, SD.i.Uo(Zc, DD, !0)
+      yh(UU) {
+        this.view = UU, cU.p.yh(hg, UU, !0)
       }
     }
 
-    function Nc(DD) {
+    function Wg(UU) {
       let {
-        sent: CD
-      } = DD;
-      return null !== CD && !CD.timedOut
+        sent: RU
+      } = UU;
+      return null !== RU && !RU.timedOut
     }
-    var gc = cD(4081),
-      Xc = cD(38478);
+    var fg = gU(3937),
+      xg = gU(38696);
 
-    function mc(DD, CD, cD) {
-      const ID = [255 * DD, 255 * CD, 255 * cD],
-        [pD, iD, fD] = ID.map((DD => DD + .4 * (255 - DD)));
+    function mg(UU, RU, gU) {
+      const tU = [255 * UU, 255 * RU, 255 * gU],
+        [pU, EU, PU] = tU.map((UU => UU + .4 * (255 - UU)));
       return {
         texture: "square_particle",
-        LB: 48,
-        minLifeTime: .3 / Xc.c,
-        maxLifeTime: .55 / Xc.c,
+        hG: 48,
+        minLifeTime: .3 / xg.e,
+        maxLifeTime: .55 / xg.e,
         minSize: .07,
         maxSize: .14,
         minEmitPower: 1,
         maxEmitPower: 1,
         emitRate: 0,
-        gravity: [0, -14 * Xc.c * Xc.c, 0],
+        gravity: [0, -14 * xg.e * xg.e, 0],
         colorGradients: [{
           timeFraction: 0,
-          minColor: [...ID, 1],
-          maxColor: [pD, iD, fD, 1]
+          minColor: [...tU, 1],
+          maxColor: [pU, EU, PU, 1]
         }, {
           timeFraction: 1,
-          minColor: [...ID, 0],
-          maxColor: [pD, iD, fD, 0]
+          minColor: [...tU, 0],
+          maxColor: [pU, EU, PU, 0]
         }],
-        blendMode: gc.c.Standard
+        blendMode: fg.g.Standard
       }
     }
-    const nc = {
+    const Ig = {
       texture: "glint",
       mipmaps: !1,
-      LB: 96,
-      minLifeTime: .5 / Xc.c,
-      maxLifeTime: .9 / Xc.c,
+      hG: 96,
+      minLifeTime: .5 / xg.e,
+      maxLifeTime: .9 / xg.e,
       minSize: .15,
       maxSize: .3,
       minEmitPower: 1,
       maxEmitPower: 1,
       emitRate: 0,
-      gravity: [0, 2 * Xc.c * Xc.c, 0],
+      gravity: [0, 2 * xg.e * xg.e, 0],
       colorGradients: [{
         timeFraction: 0,
         minColor: [255, 224, 97, 1],
@@ -1794,601 +1794,601 @@ export const modules = {
         timeFraction: 1,
         minColor: [0, 0, 0, 1]
       }],
-      blendMode: gc.c.OneOne
+      blendMode: fg.g.OneOne
     };
-    class Oc {
-      constructor(DD, CD) {
-        this.api = DD, this.localPlayerId = CD, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
+    class Jg {
+      constructor(UU, RU) {
+        this.api = UU, this.localPlayerId = RU, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
       }
-      filled(DD) {
+      filled(UU) {
         if (this.api.particlesEnabled())
-          for (const [CD, cD, ID, pD, iD, fD] of DD.slice(0, 3)) {
-            const DD = `${pD},${iD},${fD}`;
-            let bD = this.chips.get(DD);
-            void 0 === bD && (bD = this.api.createParticles(mc(pD, iD, fD), {
-              pos: [CD + .5, cD + .5, ID + .5]
-            }), this.chips.set(DD, bD));
-            for (let CD = 0; CD < 8; CD++) this.setPoint(CD, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
-            bD.emitPoints([CD + .5, cD + .5, ID + .5], this.points, 8)
+          for (const [RU, gU, tU, pU, EU, PU] of UU.slice(0, 3)) {
+            const UU = `${pU},${EU},${PU}`;
+            let TU = this.chips.get(UU);
+            void 0 === TU && (TU = this.api.createParticles(mg(pU, EU, PU), {
+              pos: [RU + .5, gU + .5, tU + .5]
+            }), this.chips.set(UU, TU));
+            for (let RU = 0; RU < 8; RU++) this.setPoint(RU, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
+            TU.emitPoints([RU + .5, gU + .5, tU + .5], this.points, 8)
           }
       }
-      layerDone(DD) {
+      layerDone(UU) {
         this.api.playSound(this.localPlayerId, "magicAccent2", .7, 1.1);
-        const CD = DD.length / 3;
-        if (0 === CD || !this.api.particlesEnabled()) return;
-        const cD = Math.min(CD, 48),
-          [ID, pD, iD] = [DD[0] + .5, DD[1] + 1, DD[2] + .5];
-        let fD = 0;
-        for (let bD = 0; bD < cD; bD++) {
-          const QD = 3 * Math.floor(bD * CD / cD);
-          for (let CD = 0; CD < 2; CD++) this.setPoint(fD++, DD[QD] + Math.random() - ID, DD[QD + 1] + 1 - pD, DD[QD + 2] + Math.random() - iD, .6 + .8 * Math.random())
+        const RU = UU.length / 3;
+        if (0 === RU || !this.api.particlesEnabled()) return;
+        const gU = Math.min(RU, 48),
+          [tU, pU, EU] = [UU[0] + .5, UU[1] + 1, UU[2] + .5];
+        let PU = 0;
+        for (let TU = 0; TU < gU; TU++) {
+          const qU = 3 * Math.floor(TU * RU / gU);
+          for (let RU = 0; RU < 2; RU++) this.setPoint(PU++, UU[qU] + Math.random() - tU, UU[qU + 1] + 1 - pU, UU[qU + 2] + Math.random() - EU, .6 + .8 * Math.random())
         }
-        this.sparkles ??= this.api.createParticles(nc, {
-          pos: [ID, pD, iD]
-        }), this.sparkles.emitPoints([ID, pD, iD], this.points, fD)
+        this.sparkles ??= this.api.createParticles(Ig, {
+          pos: [tU, pU, EU]
+        }), this.sparkles.emitPoints([tU, pU, EU], this.points, PU)
       }
       dispose() {
-        var DD;
-        for (const CD of this.chips.values()) CD.stop();
-        this.chips.clear(), null === (DD = this.sparkles) || void 0 === DD || DD.stop(), this.sparkles = null
+        var UU;
+        for (const RU of this.chips.values()) RU.stop();
+        this.chips.clear(), null === (UU = this.sparkles) || void 0 === UU || UU.stop(), this.sparkles = null
       }
-      setPoint(DD, CD, cD, ID, pD) {
-        const iD = 4 * DD;
-        this.points[iD] = CD, this.points[iD + 1] = cD, this.points[iD + 2] = ID, this.points[iD + 3] = pD
+      setPoint(UU, RU, gU, tU, pU) {
+        const EU = 4 * UU;
+        this.points[EU] = RU, this.points[EU + 1] = gU, this.points[EU + 2] = tU, this.points[EU + 3] = pU
       }
     }
-    var Pc = cD(1961);
-    const Hc = "SpecialAction1",
-      Uc = "KeyY",
-      xc = "KeyX";
+    var wg = gU(1844);
+    const ng = "SpecialAction1",
+      bg = "KeyY",
+      og = "KeyX";
 
-    function qc(DD) {
+    function Zg(UU) {
       let {
-        placement: CD
-      } = DD;
-      const cD = (0, xD.g)(Zc, CD.getView()),
+        placement: RU
+      } = UU;
+      const gU = (0, oU.h)(hg, RU.getView()),
         {
-          t: ID
-        } = (0, JD.F)(),
+          t: tU
+        } = (0, aU.B)(),
         {
-          isTouchScreen: pD
-        } = (0, bD.o)(["isTouchScreen"]),
-        iD = null !== cD,
-        fD = iD && !cD.blocked && !cD.waiting;
-      if ((0, UD.e)((DD => iD && !DD.repeat && !(0, wD.isTypingInInput)() && !(0, QD.s)() && !pD), (DD => {
-          const cD = function(DD, CD, cD) {
-            if (DD === xc) return CD.stop;
-            if (DD === Uc) return cD ? CD.build : Kc;
-            return Pc.q[Hc].includes(DD) ? CD.rotate : null
-          }(DD.code, CD, fD);
-          null !== cD && (DD.stopPropagation(), cD())
-        })), !iD) return null;
-      let SD = pD ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
-      return cD.blocked ? SD = "plotsGame:placementOffPlot" : cD.toClear > 0 && (SD = "plotsGame:placementClear"), (0, WD.jsx)(fC.e, {
+          isTouchScreen: pU
+        } = (0, TU.l)(["isTouchScreen"]),
+        EU = null !== gU,
+        PU = EU && !gU.blocked && !gU.waiting;
+      if ((0, bU.d)((UU => EU && !UU.repeat && !(0, KU.isTypingInInput)() && !(0, qU.q)() && !pU), (UU => {
+          const gU = function(UU, RU, gU) {
+            if (UU === og) return RU.stop;
+            if (UU === bg) return gU ? RU.build : Yg;
+            return wg.r[ng].includes(UU) ? RU.rotate : null
+          }(UU.code, RU, PU);
+          null !== gU && (UU.stopPropagation(), gU())
+        })), !EU) return null;
+      let cU = pU ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
+      return gU.blocked ? cU = "plotsGame:placementOffPlot" : gU.toClear > 0 && (cU = "plotsGame:placementClear"), (0, iU.jsx)(PR.e, {
         placement: "bottom",
-        children: (0, WD.jsxs)("div", {
+        children: (0, iU.jsxs)("div", {
           className: "PlotsPlacementCard",
-          children: [(0, WD.jsx)("div", {
+          children: [(0, iU.jsx)("div", {
             className: "PlotsPlacementCardTitle SmallTextBold",
-            children: ID(tD(cD.id).displayName.translationKey)
-          }), (0, WD.jsx)("div", {
-            className: nD()("PlotsPlacementCardHint SmallTextLight", {
-              Nudge: cD.refusals > 0
+            children: tU(CU(gU.id).displayName.translationKey)
+          }), (0, iU.jsx)("div", {
+            className: IU()("PlotsPlacementCardHint SmallTextLight", {
+              Nudge: gU.refusals > 0
             }),
-            children: ID(SD)
-          }, cD.refusals), (0, WD.jsxs)("div", {
+            children: tU(cU)
+          }, gU.refusals), (0, iU.jsxs)("div", {
             className: "PlotsPlacementCardButtons",
-            children: [(0, WD.jsxs)(PD.i, {
-              onClick: CD.rotate,
-              children: [(0, WD.jsx)(Jc, {
-                noaAction: Hc
-              }), ID("plotsGame:placementRotate")]
-            }), (0, WD.jsxs)(PD.J, {
-              onClick: CD.stop,
-              children: [(0, WD.jsx)(Jc, {
-                keyCode: xc
-              }), ID("general:cancel")]
-            }), (0, WD.jsxs)(PD.o, {
-              disabled: !fD,
-              onClick: CD.build,
-              children: [(0, WD.jsx)(Jc, {
-                keyCode: Uc
-              }), ID("plotsGame:placementBuild")]
+            children: [(0, iU.jsxs)(wU.e, {
+              onClick: RU.rotate,
+              children: [(0, iU.jsx)(ag, {
+                noaAction: ng
+              }), tU("plotsGame:placementRotate")]
+            }), (0, iU.jsxs)(wU.E, {
+              onClick: RU.stop,
+              children: [(0, iU.jsx)(ag, {
+                keyCode: og
+              }), tU("general:cancel")]
+            }), (0, iU.jsxs)(wU.j, {
+              disabled: !PU,
+              onClick: RU.build,
+              children: [(0, iU.jsx)(ag, {
+                keyCode: bg
+              }), tU("plotsGame:placementBuild")]
             })]
           })]
         })
       })
     }
 
-    function Jc(DD) {
-      return (0, WD.jsx)(QC.d, {
+    function ag(UU) {
+      return (0, iU.jsx)(qR.b, {
         className: "PlotsPlacementKey",
-        ...DD
+        ...UU
       })
     }
 
-    function Kc() {}
-    var ac = cD(4337);
-    class Vc {
-      constructor(DD) {
-        this.placement = DD, this.press = null
+    function Yg() {}
+    var Bg = gU(4206);
+    class Vg {
+      constructor(UU) {
+        this.placement = UU, this.press = null
       }
-      down(DD) {
+      down(UU) {
         if (null !== this.press) return !1;
         const {
-          id: CD,
-          mouse: cD,
-          x: ID,
-          y: pD,
-          atMs: iD
-        } = DD;
+          id: RU,
+          mouse: gU,
+          x: tU,
+          y: pU,
+          atMs: EU
+        } = UU;
         return this.press = {
-          id: CD,
-          mouse: cD,
-          x: ID,
-          y: pD,
-          atMs: iD,
+          id: RU,
+          mouse: gU,
+          x: tU,
+          y: pU,
+          atMs: EU,
           moved: !1
-        }, cD || this.placement.beginDrag(DD.ndcX, DD.ndcY), !0
+        }, gU || this.placement.beginDrag(UU.ndcX, UU.ndcY), !0
       }
-      move(DD) {
-        const CD = this.press;
-        null !== CD && CD.id === DD.id && (CD.moved ||= Math.hypot(DD.x - CD.x, DD.y - CD.y) > 8), DD.mouse ? this.placement.hoverAt(DD.ndcX, DD.ndcY) : (null === CD || void 0 === CD ? void 0 : CD.id) === DD.id && this.placement.dragTo(DD.ndcX, DD.ndcY)
+      move(UU) {
+        const RU = this.press;
+        null !== RU && RU.id === UU.id && (RU.moved ||= Math.hypot(UU.x - RU.x, UU.y - RU.y) > 8), UU.mouse ? this.placement.hoverAt(UU.ndcX, UU.ndcY) : (null === RU || void 0 === RU ? void 0 : RU.id) === UU.id && this.placement.dragTo(UU.ndcX, UU.ndcY)
       }
-      up(DD) {
-        const CD = this.press;
-        (null === CD || void 0 === CD ? void 0 : CD.id) === DD.id && (this.move(DD), this.end(), !CD.moved && (CD.mouse || DD.atMs - CD.atMs <= 250) && this.placement.tap())
+      up(UU) {
+        const RU = this.press;
+        (null === RU || void 0 === RU ? void 0 : RU.id) === UU.id && (this.move(UU), this.end(), !RU.moved && (RU.mouse || UU.atMs - RU.atMs <= 250) && this.placement.tap())
       }
-      cancel(DD) {
-        var CD;
-        (null === (CD = this.press) || void 0 === CD ? void 0 : CD.id) === DD && this.end()
+      cancel(UU) {
+        var RU;
+        (null === (RU = this.press) || void 0 === RU ? void 0 : RU.id) === UU && this.end()
       }
-      leave(DD) {
+      leave(UU) {
         let {
-          id: CD,
-          mouse: cD
-        } = DD;
-        cD && this.placement.endHover(), this.cancel(CD)
+          id: RU,
+          mouse: gU
+        } = UU;
+        gU && this.placement.endHover(), this.cancel(RU)
       }
       end() {
         this.press.mouse || this.placement.endDrag(), this.press = null
       }
     }
 
-    function zc(DD) {
+    function rg(UU) {
       let {
-        placement: CD
-      } = DD;
-      return null === (0, xD.g)(Zc, CD.getView()) ? null : (0, WD.jsx)(jc, {
-        placement: CD
+        placement: RU
+      } = UU;
+      return null === (0, oU.h)(hg, RU.getView()) ? null : (0, iU.jsx)(Xg, {
+        placement: RU
       })
     }
 
-    function jc(DD) {
+    function Xg(UU) {
       let {
-        placement: CD
-      } = DD;
-      (0, ac.e)(!0, !0, "PlotsPlacementLayer");
-      const cD = (0, iD.useMemo)((() => new Vc(CD)), [CD]);
-      return (0, WD.jsx)("div", {
+        placement: RU
+      } = UU;
+      (0, Bg.e)(!0, !0, "PlotsPlacementLayer");
+      const gU = (0, EU.useMemo)((() => new Vg(RU)), [RU]);
+      return (0, iU.jsx)("div", {
         className: "PlotsPlacementLayer",
-        onPointerDown: DD => {
-          "mouse" === DD.pointerType && 0 !== DD.button || !cD.down(lc(DD)) || DD.currentTarget.setPointerCapture(DD.pointerId)
+        onPointerDown: UU => {
+          "mouse" === UU.pointerType && 0 !== UU.button || !gU.down(vg(UU)) || UU.currentTarget.setPointerCapture(UU.pointerId)
         },
-        onPointerMove: DD => {
-          cD.move(lc(DD))
+        onPointerMove: UU => {
+          gU.move(vg(UU))
         },
-        onPointerUp: DD => {
-          cD.up(lc(DD))
+        onPointerUp: UU => {
+          gU.up(vg(UU))
         },
-        onPointerCancel: DD => {
-          cD.cancel(DD.pointerId)
+        onPointerCancel: UU => {
+          gU.cancel(UU.pointerId)
         },
-        onLostPointerCapture: DD => {
-          cD.cancel(DD.pointerId)
+        onLostPointerCapture: UU => {
+          gU.cancel(UU.pointerId)
         },
-        onPointerLeave: DD => {
-          cD.leave(lc(DD))
+        onPointerLeave: UU => {
+          gU.leave(vg(UU))
         },
         "aria-hidden": !0
       })
     }
 
-    function lc(DD) {
+    function vg(UU) {
       const {
-        left: CD,
-        top: cD,
-        width: ID,
-        height: pD
-      } = DD.currentTarget.getBoundingClientRect();
+        left: RU,
+        top: gU,
+        width: tU,
+        height: pU
+      } = UU.currentTarget.getBoundingClientRect();
       return {
-        id: DD.pointerId,
-        mouse: "mouse" === DD.pointerType,
-        x: DD.clientX,
-        y: DD.clientY,
-        ndcX: (DD.clientX - CD) / ID * 2 - 1,
-        ndcY: 1 - (DD.clientY - cD) / pD * 2,
-        atMs: DD.timeStamp
+        id: UU.pointerId,
+        mouse: "mouse" === UU.pointerType,
+        x: UU.clientX,
+        y: UU.clientY,
+        ndcX: (UU.clientX - RU) / tU * 2 - 1,
+        ndcY: 1 - (UU.clientY - gU) / pU * 2,
+        atMs: UU.timeStamp
       }
     }
-    var Lc = cD(2308),
-      Tc = cD(36085),
-      Gc = cD(1954),
-      Rc = cD(1260);
-    const kc = {
+    var dg = gU(2198),
+      Hg = gU(36280),
+      Sg = gU(1834),
+      sg = gU(1265);
+    const yg = {
       own: "crown",
       shared: "user-group",
       other: "house"
     };
 
-    function dc(DD) {
+    function kg(UU) {
       let {
-        hud: CD
-      } = DD;
-      const cD = (0, xD.g)(SC, CD.getPlot()),
-        [ID, pD] = (0, iD.useState)(null),
-        fD = (0, Tc.i)(ID);
-      if ("none" === cD[0]) return null;
-      const [, bD, QD, wD, SD, BD] = cD;
-      return (0, WD.jsx)("div", {
-        className: nD()("PlotsPlotBannerContainer", {
-          Below: fD
+        hud: RU
+      } = UU;
+      const gU = (0, oU.h)(cR, RU.getPlot()),
+        [tU, pU] = (0, EU.useState)(null),
+        PU = (0, Hg.m)(tU);
+      if ("none" === gU[0]) return null;
+      const [, TU, qU, KU, cU, GU] = gU;
+      return (0, iU.jsx)("div", {
+        className: IU()("PlotsPlotBannerContainer", {
+          Below: PU
         }),
-        children: (0, WD.jsx)(Yc, {
-          plotX: bD,
-          plotZ: QD,
-          ownerName: wD,
-          ownerId: SD,
-          relation: BD,
-          plaqueRef: pD
-        }, `${bD},${QD}`)
+        children: (0, iU.jsx)(Fg, {
+          plotX: TU,
+          plotZ: qU,
+          ownerName: KU,
+          ownerId: cU,
+          relation: GU,
+          plaqueRef: pU
+        }, `${TU},${qU}`)
       })
     }
 
-    function Yc(DD) {
-      var CD, cD;
+    function Fg(UU) {
+      var RU, gU;
       let {
-        plotX: ID,
-        plotZ: pD,
-        ownerName: iD,
-        ownerId: fD,
-        relation: bD,
-        plaqueRef: QD
-      } = DD;
+        plotX: tU,
+        plotZ: pU,
+        ownerName: EU,
+        ownerId: PU,
+        relation: TU,
+        plaqueRef: qU
+      } = UU;
       const {
-        t: wD
-      } = (0, JD.F)(), SD = (0, Gc.h)("hiddenPlayerNames"), BD = (0, Gc.h)("players"), yD = null === fD ? null : null !== (CD = null === (cD = BD.byId[fD]) || void 0 === cD ? void 0 : cD.cosmetics) && void 0 !== CD ? CD : null, MD = wD("plotsGame:plotBannerCoords", {
-        x: ID,
-        z: pD
-      }), tD = "own" === bD || null !== iD;
-      return (0, WD.jsxs)("div", {
-        ref: QD,
-        className: nD()("PlotsPlotBanner", {
-          Own: "own" === bD,
-          Shared: "shared" === bD
+        t: KU
+      } = (0, aU.B)(), cU = (0, Sg.k)("hiddenPlayerNames"), GU = (0, Sg.k)("players"), jU = null === PU ? null : null !== (RU = null === (gU = GU.byId[PU]) || void 0 === gU ? void 0 : gU.cosmetics) && void 0 !== RU ? RU : null, uU = KU("plotsGame:plotBannerCoords", {
+        x: tU,
+        z: pU
+      }), CU = "own" === TU || null !== EU;
+      return (0, iU.jsxs)("div", {
+        ref: qU,
+        className: IU()("PlotsPlotBanner", {
+          Own: "own" === TU,
+          Shared: "shared" === TU
         }),
         role: "status",
-        children: [(0, WD.jsxs)("span", {
-          className: nD()("PlotsPlotBannerSeal", {
-            Face: null !== yD
+        children: [(0, iU.jsxs)("span", {
+          className: IU()("PlotsPlotBannerSeal", {
+            Face: null !== jU
           }),
-          children: [null !== yD && (0, WD.jsx)(Lc.e, {
-            cosmetics: yD
-          }), null === yD && (0, WD.jsx)(OD.c, {
-            name: kc[bD]
+          children: [null !== jU && (0, iU.jsx)(dg.d, {
+            cosmetics: jU
+          }), null === jU && (0, iU.jsx)(JU.c, {
+            name: yg[TU]
           })]
-        }), (0, WD.jsxs)("div", {
+        }), (0, iU.jsxs)("div", {
           className: "PlotsPlotBannerText",
-          children: [(0, WD.jsxs)("div", {
+          children: [(0, iU.jsxs)("div", {
             className: "PlotsPlotBannerTitle SmallTextBold",
-            children: ["own" === bD && wD("plotsGame:plotBannerYours"), "own" !== bD && null !== iD && wD("plotsGame:plotBannerOwner", {
-              name: (0, Rc.f)(iD, SD)
-            }), !tD && MD]
-          }), tD && (0, WD.jsxs)("div", {
+            children: ["own" === TU && KU("plotsGame:plotBannerYours"), "own" !== TU && null !== EU && KU("plotsGame:plotBannerOwner", {
+              name: (0, sg.e)(EU, cU)
+            }), !CU && uU]
+          }), CU && (0, iU.jsxs)("div", {
             className: "PlotsPlotBannerCoords SmallTextLight",
-            children: [MD, "shared" === bD && (0, WD.jsx)("span", {
+            children: [uU, "shared" === TU && (0, iU.jsx)("span", {
               className: "PlotsPlotBannerBadge",
-              children: wD("plotsGame:plotBannerShared")
+              children: KU("plotsGame:plotBannerShared")
             })]
           })]
         })]
       })
     }
 
-    function Wc(DD) {
+    function ig(UU) {
       let {
-        progress: CD,
-        goal: cD
-      } = DD;
-      const ID = Math.min(CD, cD);
-      return (0, WD.jsxs)("div", {
+        progress: RU,
+        goal: gU
+      } = UU;
+      const tU = Math.min(RU, gU);
+      return (0, iU.jsxs)("div", {
         className: "PlotsProgress",
-        children: [(0, WD.jsx)("div", {
+        children: [(0, iU.jsx)("div", {
           className: "PlotsProgressBar",
           role: "progressbar",
           "aria-valuemin": 0,
-          "aria-valuemax": cD,
-          "aria-valuenow": ID,
-          children: (0, WD.jsx)("div", {
+          "aria-valuemax": gU,
+          "aria-valuenow": tU,
+          children: (0, iU.jsx)("div", {
             className: "PlotsProgressBarFill",
             style: {
-              transform: `scaleX(${ID/cD})`
+              transform: `scaleX(${tU/gU})`
             }
           })
-        }), (0, WD.jsxs)("span", {
+        }), (0, iU.jsxs)("span", {
           className: "PlotsProgressCount",
-          children: [ID, "/", cD]
+          children: [tU, "/", gU]
         })]
       })
     }
 
-    function sc(DD) {
+    function Ag(UU) {
       return {
-        translationKey: `plotsGame:${DD}`,
+        translationKey: `plotsGame:${UU}`,
         actions: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []
       }
     }
-    const Ec = {
+    const zg = {
       house: {
         icon: "house",
         titleKey: "plotsGame:starterLotHouseTitle",
-        desktop: sc("starterLotHouseHint", ["alt-fire"]),
-        touch: sc("starterLotHouseHint", ["alt-fire"]),
+        desktop: Ag("starterLotHouseHint", ["alt-fire"]),
+        touch: Ag("starterLotHouseHint", ["alt-fire"]),
         plainKey: "plotsGame:starterLotHousePlain"
       },
       garden: {
         icon: "sparkle",
         titleKey: "plotsGame:starterLotGarden",
-        desktop: sc("starterLotGardenHint", ["alt-fire"]),
-        touch: sc("starterLotGardenHint", ["alt-fire"]),
+        desktop: Ag("starterLotGardenHint", ["alt-fire"]),
+        touch: Ag("starterLotGardenHint", ["alt-fire"]),
         plainKey: "plotsGame:starterLotGardenPlain"
       },
       boulder: {
         icon: "hammer",
         titleKey: "plotsGame:starterLotBoulder",
-        desktop: sc("starterLotBreakHint", ["primary-fire"]),
-        touch: sc("starterLotBreakHintTouch"),
+        desktop: Ag("starterLotBreakHint", ["primary-fire"]),
+        touch: Ag("starterLotBreakHintTouch"),
         plainKey: "plotsGame:starterLotBreakPlain"
       },
       fly: {
         icon: "angles-up",
         titleKey: "plotsGame:starterLotFly",
-        desktop: sc("starterLotFlyHint", ["jump"]),
-        touch: sc("starterLotFlyHintTouch"),
+        desktop: Ag("starterLotFlyHint", ["jump"]),
+        touch: Ag("starterLotFlyHintTouch"),
         plainKey: "plotsGame:starterLotFlyPlain"
       },
       backpack: {
         icon: "backpack",
         titleKey: "plotsGame:starterLotBackpack",
-        desktop: sc("starterLotBackpackHint", ["OpenInventory"]),
-        touch: sc("starterLotBackpackHintTouch"),
+        desktop: Ag("starterLotBackpackHint", ["OpenInventory"]),
+        touch: Ag("starterLotBackpackHintTouch"),
         plainKey: "plotsGame:starterLotBackpackPlain"
       },
       neighbour: {
         icon: "person",
         titleKey: "plotsGame:starterLotNeighbour",
-        desktop: sc("starterLotNeighbourHint", ["forward", "left", "backward", "right"]),
-        touch: sc("starterLotNeighbourHintTouch"),
+        desktop: Ag("starterLotNeighbourHint", ["forward", "left", "backward", "right"]),
+        touch: Ag("starterLotNeighbourHintTouch"),
         plainKey: "plotsGame:starterLotNeighbourPlain"
       }
     };
 
-    function ec(DD, CD, cD) {
+    function Mg(UU, RU, gU) {
       const {
-        translationKey: ID,
-        actions: pD
-      } = cD ? CD.touch : CD.desktop;
-      if (0 === pD.length) return DD(ID);
-      const iD = [];
-      for (const fD of pD) {
-        const ID = (0, Pc.p)(fD, cD),
-          pD = Pc.q[fD][0];
-        if (null === ID && void 0 === pD) return DD(CD.plainKey);
-        iD.push(null === ID ? (0, Pc.m)(pD) : DD(ID.translationKey))
+        translationKey: tU,
+        actions: pU
+      } = gU ? RU.touch : RU.desktop;
+      if (0 === pU.length) return UU(tU);
+      const EU = [];
+      for (const PU of pU) {
+        const tU = (0, wg.q)(PU, gU),
+          pU = wg.r[PU][0];
+        if (null === tU && void 0 === pU) return UU(RU.plainKey);
+        EU.push(null === tU ? (0, wg.m)(pU) : UU(tU.translationKey))
       }
-      return DD(ID, {
-        key: iD.join("")
+      return UU(tU, {
+        key: EU.join("")
       })
     }
 
-    function uc(DD) {
+    function Dg(UU) {
       let {
-        hud: CD
-      } = DD;
-      const cD = (0, xD.g)(wC, CD.getStep()),
+        hud: RU
+      } = UU;
+      const gU = (0, oU.h)(KR, RU.getStep()),
         {
-          t: ID
-        } = (0, JD.F)();
-      return (0, WD.jsxs)(fC.e, {
+          t: tU
+        } = (0, aU.B)();
+      return (0, iU.jsxs)(PR.e, {
         placement: "bottom",
-        children: ["step" === cD[0] && (0, WD.jsx)(hc, {
-          step: cD[1],
-          progress: cD[2],
-          goal: cD[3]
-        }, cD[1]), "celebrate" === cD[0] && (0, WD.jsx)(rc, {
-          className: nD()("Celebrate", {
-            Gold: "house" === cD[1]
+        children: ["step" === gU[0] && (0, iU.jsx)(Lg, {
+          step: gU[1],
+          progress: gU[2],
+          goal: gU[3]
+        }, gU[1]), "celebrate" === gU[0] && (0, iU.jsx)(Ng, {
+          className: IU()("Celebrate", {
+            Gold: "house" === gU[1]
           }),
           icon: "star",
-          title: ID("house" === cD[1] ? "plotsGame:starterLotYourPlot" : "plotsGame:starterLotBriefDone")
-        }, `celebrate-${cD[1]}`)]
+          title: tU("house" === gU[1] ? "plotsGame:starterLotYourPlot" : "plotsGame:starterLotBriefDone")
+        }, `celebrate-${gU[1]}`)]
       })
     }
 
-    function hc(DD) {
+    function Lg(UU) {
       let {
-        step: CD,
-        progress: cD,
-        goal: ID
-      } = DD;
+        step: RU,
+        progress: gU,
+        goal: tU
+      } = UU;
       const {
-        isTouchScreen: pD
-      } = (0, bD.o)(["isTouchScreen"]), {
-        t: iD
-      } = (0, JD.F)(), fD = Ec[CD];
-      return (0, WD.jsxs)(rc, {
-        icon: fD.icon,
-        title: iD(fD.titleKey),
-        children: [(0, WD.jsx)("div", {
+        isTouchScreen: pU
+      } = (0, TU.l)(["isTouchScreen"]), {
+        t: EU
+      } = (0, aU.B)(), PU = zg[RU];
+      return (0, iU.jsxs)(Ng, {
+        icon: PU.icon,
+        title: EU(PU.titleKey),
+        children: [(0, iU.jsx)("div", {
           className: "PlotsStepCardHint SmallTextLight",
-          children: ec(iD, fD, pD)
-        }), ID > 1 && (0, WD.jsx)(Wc, {
-          progress: cD,
-          goal: ID
-        }), "backpack" === CD && pD && (0, WD.jsx)(Ac, {})]
+          children: Mg(EU, PU, pU)
+        }), tU > 1 && (0, iU.jsx)(ig, {
+          progress: gU,
+          goal: tU
+        }), "backpack" === RU && pU && (0, iU.jsx)(lg, {})]
       })
     }
 
-    function rc(DD) {
+    function Ng(UU) {
       let {
-        className: CD,
-        icon: cD,
-        title: ID,
-        children: pD
-      } = DD;
-      return (0, WD.jsxs)("div", {
-        className: nD()("PlotsStepCard", CD),
+        className: RU,
+        icon: gU,
+        title: tU,
+        children: pU
+      } = UU;
+      return (0, iU.jsxs)("div", {
+        className: IU()("PlotsStepCard", RU),
         role: "status",
-        children: [(0, WD.jsx)("span", {
+        children: [(0, iU.jsx)("span", {
           className: "PlotsStepCardIcon",
-          children: (0, WD.jsx)(OD.c, {
-            name: cD
+          children: (0, iU.jsx)(JU.c, {
+            name: gU
           })
-        }), (0, WD.jsxs)("div", {
+        }), (0, iU.jsxs)("div", {
           className: "PlotsStepCardBody",
-          children: [(0, WD.jsx)("div", {
+          children: [(0, iU.jsx)("div", {
             className: "PlotsStepCardTitle SmallTextBold",
-            children: ID
-          }), pD]
+            children: tU
+          }), pU]
         })]
       })
     }
 
-    function Ac() {
-      return (0, iD.useEffect)((() => (bD.d.set({
+    function lg() {
+      return (0, EU.useEffect)((() => (TU.b.set({
         backpackPointerRequested: !0
       }), () => {
-        bD.d.set({
+        TU.b.set({
           backpackPointerRequested: !1
         })
       })), []), null
     }
-    const Fc = function(DD, CD, cD, ID) {
+    const Og = function(UU, RU, gU, tU) {
       let {
-        localPlayerId: pD
-      } = ID;
-      const bD = new BC;
-      let QD = null,
-        wD = null,
-        SD = null,
-        BD = null,
-        yD = null;
-      const MD = [];
+        localPlayerId: pU
+      } = tU;
+      const TU = new GR;
+      let qU = null,
+        KU = null,
+        cU = null,
+        GU = null,
+        jU = null;
+      const uU = [];
       return {
-        onCreate: DD => {
-          QD = new Oc(DD, pD), wD = new Qc(DD, pD, QD), SD = new Qc(DD, pD, QD), BD = new vc(DD, pD), yD = new XD(DD, BD), MD.push((0, fD.v)((0, iD.createElement)(iD.Fragment, null, (0, iD.createElement)(dc, {
-            hud: bD
-          }), (0, iD.createElement)(uc, {
-            hud: bD
-          }), (0, iD.createElement)(MC, {
-            hud: bD,
-            journal: yD
-          }), (0, iD.createElement)(zc, {
-            placement: BD
-          }), (0, iD.createElement)(qc, {
-            placement: BD
+        onCreate: UU => {
+          qU = new Jg(UU, pU), KU = new qg(UU, pU, qU), cU = new qg(UU, pU, qU), GU = new eg(UU, pU), jU = new xU(UU, GU), uU.push((0, PU.y)((0, EU.createElement)(EU.Fragment, null, (0, EU.createElement)(kg, {
+            hud: TU
+          }), (0, EU.createElement)(Dg, {
+            hud: TU
+          }), (0, EU.createElement)(uR, {
+            hud: TU,
+            journal: jU
+          }), (0, EU.createElement)(rg, {
+            placement: GU
+          }), (0, EU.createElement)(Zg, {
+            placement: GU
           })), {
-            content: (0, iD.createElement)(pC, {
-              journal: yD
+            content: (0, EU.createElement)(pR, {
+              journal: jU
             })
           }))
         },
-        wy: () => {
-          wD.wy(), SD.wy(), BD.wy(), yD.wy()
+        HG: () => {
+          KU.HG(), cU.HG(), GU.HG(), jU.HG()
         },
-        onPlayerAttemptAltAction: (DD, CD, cD, ID, pD, iD) => {
-          var fD;
-          if (null !== iD) return;
-          const bD = void 0 === CD ? null : [CD, cD, ID];
-          return null !== (fD = wD.attemptAltAction(bD)) && void 0 !== fD ? fD : SD.attemptAltAction(bD)
+        onPlayerAttemptAltAction: (UU, RU, gU, tU, pU, EU) => {
+          var PU;
+          if (null !== EU) return;
+          const TU = void 0 === RU ? null : [RU, gU, tU];
+          return null !== (PU = KU.attemptAltAction(TU)) && void 0 !== PU ? PU : cU.attemptAltAction(TU)
         },
         onPlayerClickUp: () => {
-          wD.endPress(), SD.endPress()
+          KU.endPress(), cU.endPress()
         },
-        onAfterRender: (DD, CD) => {
-          BD.afterRender(CD), wD.afterRender(CD), SD.afterRender(CD)
+        onAfterRender: (UU, RU) => {
+          GU.afterRender(RU), KU.afterRender(RU), cU.afterRender(RU)
         },
         onClose: () => {
-          for (const DD of MD) DD();
-          QD.dispose(), wD.dispose(), SD.dispose(), BD.dispose(), QD = null, wD = null, SD = null, BD = null, yD = null
+          for (const UU of uU) UU();
+          qU.dispose(), KU.dispose(), cU.dispose(), GU.dispose(), qU = null, KU = null, cU = null, GU = null, jU = null
         },
-        onReceivedMessageFromServer: (DD, CD) => {
-          if ("plotsStarterLot" === DD) bD.receiveStep(CD);
-          else if ("plotsPlot" === DD) bD.receivePlot(CD);
-          else if ("plotsStarterHouse" === DD) wD.kt(CD);
-          else if ("plotsBlueprint" === DD) {
-            const DD = CD;
-            SD.kt(DD), BD.kt(DD)
-          } else "plotsJournal" === DD ? yD.kt(CD) : "plotsJournalOpen" === DD ? yD.openFromServer() : "plotsPreviewEnd" === DD && BD.endFromServer()
+        onReceivedMessageFromServer: (UU, RU) => {
+          if ("plotsStarterLot" === UU) TU.receiveStep(RU);
+          else if ("plotsPlot" === UU) TU.receivePlot(RU);
+          else if ("plotsStarterHouse" === UU) KU.qC(RU);
+          else if ("plotsBlueprint" === UU) {
+            const UU = RU;
+            cU.qC(UU), GU.qC(UU)
+          } else "plotsJournal" === UU ? jU.qC(RU) : "plotsJournalOpen" === UU ? jU.openFromServer() : "plotsPreviewEnd" === UU && GU.endFromServer()
         }
       }
     }
   },
-  38478: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => ID,
-      f: () => iD
+  38696: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => tU,
+      g: () => EU
     });
-    const ID = 1 / .6,
-      pD = {
+    const tU = 1 / .6,
+      pU = {
         kind: "smokePuff"
       };
-    class iD {
-      constructor(DD, CD, cD) {
-        this.style = DD, this.LB = CD, this.half = cD, this.particles = null, this.lastFrame = -1
+    class EU {
+      constructor(UU, RU, gU) {
+        this.style = UU, this.hG = RU, this.half = gU, this.particles = null, this.lastFrame = -1
       }
-      emit(DD, CD, cD) {
-        let iD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return cD !== this.lastFrame && (this.lastFrame = cD, this.particles || (this.particles = DD.createParticles(function(DD, CD) {
+      emit(UU, RU, gU) {
+        let EU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return gU !== this.lastFrame && (this.lastFrame = gU, this.particles || (this.particles = UU.createParticles(function(UU, RU) {
           const [
-            [cD, iD, fD],
-            [bD, QD, wD]
-          ] = DD.colours;
+            [gU, EU, PU],
+            [TU, qU, KU]
+          ] = UU.colours;
           return {
-            texture: DD.soft ? pD : "square_particle",
-            LB: CD,
-            minLifeTime: DD.life[0] / ID,
-            maxLifeTime: DD.life[1] / ID,
-            minEmitPower: DD.power[0] * ID,
-            maxEmitPower: DD.power[1] * ID,
-            minSize: DD.size[0],
-            maxSize: DD.size[1],
+            texture: UU.soft ? pU : "square_particle",
+            hG: RU,
+            minLifeTime: UU.life[0] / tU,
+            maxLifeTime: UU.life[1] / tU,
+            minEmitPower: UU.power[0] * tU,
+            maxEmitPower: UU.power[1] * tU,
+            minSize: UU.size[0],
+            maxSize: UU.size[1],
             emitRate: 0,
-            gravity: [0, DD.lift * ID * ID, 0],
-            dir1: [-DD.spread, 1, -DD.spread],
-            dir2: [DD.spread, 1, DD.spread],
+            gravity: [0, UU.lift * tU * tU, 0],
+            dir1: [-UU.spread, 1, -UU.spread],
+            dir2: [UU.spread, 1, UU.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [cD, iD, fD, DD.alpha],
-              maxColor: [bD, QD, wD, DD.alpha]
+              minColor: [gU, EU, PU, UU.alpha],
+              maxColor: [TU, qU, KU, UU.alpha]
             }, {
               timeFraction: 1,
-              minColor: [cD, iD, fD, 0],
-              maxColor: [bD, QD, wD, 0]
+              minColor: [gU, EU, PU, 0],
+              maxColor: [TU, qU, KU, 0]
             }],
-            blendMode: DD.blendMode
+            blendMode: UU.blendMode
           }
-        }(this.style, this.LB), {
-          pos: CD,
+        }(this.style, this.hG), {
+          pos: RU,
           half: this.half
-        })), this.particles.moveTo(CD, this.half), this.particles.emit(iD), !0)
+        })), this.particles.moveTo(RU, this.half), this.particles.emit(EU), !0)
       }
       dispose() {
-        var DD;
-        null === (DD = this.particles) || void 0 === DD || DD.stop(), this.particles = null
+        var UU;
+        null === (UU = this.particles) || void 0 === UU || UU.stop(), this.particles = null
       }
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

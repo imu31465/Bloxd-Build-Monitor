@@ -1,582 +1,582 @@
 export const id = 305;
 export const ids = [305];
 export const modules = {
-  40976: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      ReadExrDataAsync: () => BC,
-      _ExrTextureLoader: () => SC
+  41214: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      ReadExrDataAsync: () => GR,
+      _ExrTextureLoader: () => cR
     });
-    var ID = cD(38048),
-      pD = cD(36479),
-      iD = cD(39215);
-    const fD = 4,
-      bD = 4,
-      QD = 1,
-      wD = 2,
-      SD = 8,
-      BD = 65536,
-      yD = BD >> 3,
-      MD = 14,
-      tD = 65537,
-      ZD = 1 << MD,
-      oD = ZD - 1,
-      vD = 59,
-      ND = 63,
-      gD = 2 + ND - vD;
-    var XD, mD;
+    var tU = gU(38236),
+      pU = gU(36626),
+      EU = gU(39442);
+    const PU = 4,
+      TU = 4,
+      qU = 1,
+      KU = 2,
+      cU = 8,
+      GU = 65536,
+      jU = GU >> 3,
+      uU = 14,
+      CU = 65537,
+      hU = 1 << uU,
+      QU = hU - 1,
+      eU = 59,
+      WU = 63,
+      fU = 2 + WU - eU;
+    var xU, mU;
 
-    function nD(DD, CD) {
-      const cD = new Uint8Array(DD);
-      let ID = 0;
-      for (; 0 != cD[CD.value + ID];) ID += 1;
-      const pD = (new TextDecoder).decode(cD.slice(CD.value, CD.value + ID));
-      return CD.value = CD.value + ID + 1, pD
+    function IU(UU, RU) {
+      const gU = new Uint8Array(UU);
+      let tU = 0;
+      for (; 0 != gU[RU.value + tU];) tU += 1;
+      const pU = (new TextDecoder).decode(gU.slice(RU.value, RU.value + tU));
+      return RU.value = RU.value + tU + 1, pU
     }
 
-    function OD(DD, CD) {
-      const cD = DD.getInt32(CD.value, !0);
-      return CD.value += fD, cD
+    function JU(UU, RU) {
+      const gU = UU.getInt32(RU.value, !0);
+      return RU.value += PU, gU
     }
 
-    function PD(DD, CD) {
-      const cD = DD.getUint32(CD.value, !0);
-      return CD.value += fD, cD
+    function wU(UU, RU) {
+      const gU = UU.getUint32(RU.value, !0);
+      return RU.value += PU, gU
     }
 
-    function HD(DD, CD) {
-      const cD = DD.getUint8(CD.value);
-      return CD.value += QD, cD
+    function nU(UU, RU) {
+      const gU = UU.getUint8(RU.value);
+      return RU.value += qU, gU
     }
 
-    function UD(DD, CD) {
-      const cD = DD.getUint16(CD.value, !0);
-      return CD.value += wD, cD
+    function bU(UU, RU) {
+      const gU = UU.getUint16(RU.value, !0);
+      return RU.value += KU, gU
     }
 
-    function xD(DD, CD) {
-      const cD = DD[CD.value];
-      return CD.value += QD, cD
+    function oU(UU, RU) {
+      const gU = UU[RU.value];
+      return RU.value += qU, gU
     }
 
-    function qD(DD, CD) {
-      let cD;
-      return cD = "getBigInt64" in DataView.prototype ? Number(DD.getBigInt64(CD.value, !0)) : DD.getUint32(CD.value + 4, !0) + Number(DD.getUint32(CD.value, !0) << 32), CD.value += SD, cD
+    function ZU(UU, RU) {
+      let gU;
+      return gU = "getBigInt64" in DataView.prototype ? Number(UU.getBigInt64(RU.value, !0)) : UU.getUint32(RU.value + 4, !0) + Number(UU.getUint32(RU.value, !0) << 32), RU.value += cU, gU
     }
 
-    function JD(DD, CD) {
-      const cD = DD.getFloat32(CD.value, !0);
-      return CD.value += bD, cD
+    function aU(UU, RU) {
+      const gU = UU.getFloat32(RU.value, !0);
+      return RU.value += TU, gU
     }
 
-    function KD(DD, CD) {
-      return (0, iD.c)(UD(DD, CD))
+    function YU(UU, RU) {
+      return (0, EU.c)(bU(UU, RU))
     }
 
-    function aD(DD, CD) {
-      return (0, iD.i)((0, pD.Clamp)(JD(DD, CD), -iD.f, iD.f))
+    function BU(UU, RU) {
+      return (0, EU.f)((0, pU.Clamp)(aU(UU, RU), -EU.d, EU.d))
     }
 
-    function VD(DD, CD, cD, ID) {
-      switch (cD) {
+    function VU(UU, RU, gU, tU) {
+      switch (gU) {
         case "string":
         case "stringvector":
         case "iccProfile":
-          return function(DD, CD, cD) {
-            const ID = (new TextDecoder).decode(new Uint8Array(DD).slice(CD.value, CD.value + cD));
-            return CD.value = CD.value + cD, ID
-          }(DD.buffer, CD, ID);
+          return function(UU, RU, gU) {
+            const tU = (new TextDecoder).decode(new Uint8Array(UU).slice(RU.value, RU.value + gU));
+            return RU.value = RU.value + gU, tU
+          }(UU.buffer, RU, tU);
         case "chlist":
-          return function(DD, CD, cD) {
-            const ID = CD.value,
-              pD = [];
-            for (; CD.value < ID + cD - 1;) {
-              const cD = nD(DD.buffer, CD),
-                ID = OD(DD, CD),
-                iD = HD(DD, CD);
-              CD.value += 3;
-              const fD = OD(DD, CD),
-                bD = OD(DD, CD);
-              pD.push({
-                name: cD,
-                pixelType: ID,
-                pLinear: iD,
-                xSampling: fD,
-                ySampling: bD
+          return function(UU, RU, gU) {
+            const tU = RU.value,
+              pU = [];
+            for (; RU.value < tU + gU - 1;) {
+              const gU = IU(UU.buffer, RU),
+                tU = JU(UU, RU),
+                EU = nU(UU, RU);
+              RU.value += 3;
+              const PU = JU(UU, RU),
+                TU = JU(UU, RU);
+              pU.push({
+                name: gU,
+                pixelType: tU,
+                pLinear: EU,
+                xSampling: PU,
+                ySampling: TU
               })
             }
-            return CD.value += 1, pD
-          }(DD, CD, ID);
+            return RU.value += 1, pU
+          }(UU, RU, tU);
         case "chromaticities":
-          return function(DD, CD) {
+          return function(UU, RU) {
             return {
-              redX: JD(DD, CD),
-              redY: JD(DD, CD),
-              greenX: JD(DD, CD),
-              greenY: JD(DD, CD),
-              blueX: JD(DD, CD),
-              blueY: JD(DD, CD),
-              whiteX: JD(DD, CD),
-              whiteY: JD(DD, CD)
+              redX: aU(UU, RU),
+              redY: aU(UU, RU),
+              greenX: aU(UU, RU),
+              greenY: aU(UU, RU),
+              blueX: aU(UU, RU),
+              blueY: aU(UU, RU),
+              whiteX: aU(UU, RU),
+              whiteY: aU(UU, RU)
             }
-          }(DD, CD);
+          }(UU, RU);
         case "compression":
-          return function(DD, CD) {
-            return HD(DD, CD)
-          }(DD, CD);
+          return function(UU, RU) {
+            return nU(UU, RU)
+          }(UU, RU);
         case "box2i":
-          return function(DD, CD) {
+          return function(UU, RU) {
             return {
-              xMin: OD(DD, CD),
-              yMin: OD(DD, CD),
-              xMax: OD(DD, CD),
-              yMax: OD(DD, CD)
+              xMin: JU(UU, RU),
+              yMin: JU(UU, RU),
+              xMax: JU(UU, RU),
+              yMax: JU(UU, RU)
             }
-          }(DD, CD);
+          }(UU, RU);
         case "lineOrder":
-          return function(DD, CD) {
-            const cD = HD(DD, CD);
-            return mD[cD]
-          }(DD, CD);
+          return function(UU, RU) {
+            const gU = nU(UU, RU);
+            return mU[gU]
+          }(UU, RU);
         case "float":
-          return JD(DD, CD);
+          return aU(UU, RU);
         case "v2f":
-          return function(DD, CD) {
-            return [JD(DD, CD), JD(DD, CD)]
-          }(DD, CD);
+          return function(UU, RU) {
+            return [aU(UU, RU), aU(UU, RU)]
+          }(UU, RU);
         case "v3f":
-          return function(DD, CD) {
-            return [JD(DD, CD), JD(DD, CD), JD(DD, CD)]
-          }(DD, CD);
+          return function(UU, RU) {
+            return [aU(UU, RU), aU(UU, RU), aU(UU, RU)]
+          }(UU, RU);
         case "int":
-          return OD(DD, CD);
+          return JU(UU, RU);
         case "rational":
-          return function(DD, CD) {
-            return [OD(DD, CD), PD(DD, CD)]
-          }(DD, CD);
+          return function(UU, RU) {
+            return [JU(UU, RU), wU(UU, RU)]
+          }(UU, RU);
         case "timecode":
-          return function(DD, CD) {
-            return [PD(DD, CD), PD(DD, CD)]
-          }(DD, CD);
+          return function(UU, RU) {
+            return [wU(UU, RU), wU(UU, RU)]
+          }(UU, RU);
         case "preview":
-          return CD.value += ID, "skipped";
+          return RU.value += tU, "skipped";
         default:
-          return void(CD.value += ID)
+          return void(RU.value += tU)
       }
     }
 
-    function zD(DD) {
-      for (let CD = 1; CD < DD.length; CD++) {
-        const cD = DD[CD - 1] + DD[CD] - 128;
-        DD[CD] = cD
+    function rU(UU) {
+      for (let RU = 1; RU < UU.length; RU++) {
+        const gU = UU[RU - 1] + UU[RU] - 128;
+        UU[RU] = gU
       }
     }
 
-    function jD(DD, CD) {
-      let cD = 0,
-        ID = Math.floor((DD.length + 1) / 2),
-        pD = 0;
-      const iD = DD.length - 1;
-      for (; !(pD > iD) && (CD[pD++] = DD[cD++], !(pD > iD));) CD[pD++] = DD[ID++]
-    }! function(DD) {
-      DD[DD.NO_COMPRESSION = 0] = "NO_COMPRESSION", DD[DD.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", DD[DD.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", DD[DD.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", DD[DD.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", DD[DD.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
-    }(XD || (XD = {})),
-    function(DD) {
-      DD[DD.INCREASING_Y = 0] = "INCREASING_Y", DD[DD.DECREASING_Y = 1] = "DECREASING_Y"
-    }(mD || (mD = {}));
-    const lD = 20000630;
+    function XU(UU, RU) {
+      let gU = 0,
+        tU = Math.floor((UU.length + 1) / 2),
+        pU = 0;
+      const EU = UU.length - 1;
+      for (; !(pU > EU) && (RU[pU++] = UU[gU++], !(pU > EU));) RU[pU++] = UU[tU++]
+    }! function(UU) {
+      UU[UU.NO_COMPRESSION = 0] = "NO_COMPRESSION", UU[UU.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", UU[UU.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", UU[UU.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", UU[UU.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", UU[UU.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
+    }(xU || (xU = {})),
+    function(UU) {
+      UU[UU.INCREASING_Y = 0] = "INCREASING_Y", UU[UU.DECREASING_Y = 1] = "DECREASING_Y"
+    }(mU || (mU = {}));
+    const vU = 20000630;
 
-    function LD(DD, CD) {
-      if (DD.getUint32(0, !0) != lD) throw new Error("Incorrect OpenEXR format");
-      const cD = DD.getUint8(4),
-        pD = DD.getUint8(5),
-        iD = {
-          singleTile: !!(2 & pD),
-          longName: !!(4 & pD),
-          deepFormat: !!(8 & pD),
-          multiPart: !!(16 & pD)
+    function dU(UU, RU) {
+      if (UU.getUint32(0, !0) != vU) throw new Error("Incorrect OpenEXR format");
+      const gU = UU.getUint8(4),
+        pU = UU.getUint8(5),
+        EU = {
+          singleTile: !!(2 & pU),
+          longName: !!(4 & pU),
+          deepFormat: !!(8 & pU),
+          multiPart: !!(16 & pU)
         };
-      CD.value = 8;
-      const fD = {};
-      let bD = !0;
-      for (; bD;) {
-        const cD = nD(DD.buffer, CD);
-        if (cD) {
-          const pD = nD(DD.buffer, CD),
-            iD = VD(DD, CD, pD, PD(DD, CD));
-          void 0 === iD ? ID.e.Warn(`Unknown header attribute type ${pD}'.`) : fD[cD] = iD
-        } else bD = !1
+      RU.value = 8;
+      const PU = {};
+      let TU = !0;
+      for (; TU;) {
+        const gU = IU(UU.buffer, RU);
+        if (gU) {
+          const pU = IU(UU.buffer, RU),
+            EU = VU(UU, RU, pU, wU(UU, RU));
+          void 0 === EU ? tU.e.Warn(`Unknown header attribute type ${pU}'.`) : PU[gU] = EU
+        } else TU = !1
       }
-      if (0 != (-5 & pD)) throw new Error("Unsupported file format");
+      if (0 != (-5 & pU)) throw new Error("Unsupported file format");
       return {
-        version: cD,
-        spec: iD,
-        ...fD
-      }
-    }
-    const TD = 32768,
-      GD = 65535;
-
-    function RD(DD, CD, cD, ID, pD) {
-      for (; cD < DD;) CD = CD << 8 | xD(ID, pD), cD += 8;
-      return {
-        l: CD >> (cD -= DD) & (1 << DD) - 1,
-        c: CD,
-        lc: cD
+        version: gU,
+        spec: EU,
+        ...PU
       }
     }
+    const HU = 32768,
+      SU = 65535;
 
-    function kD(DD, CD, cD, ID) {
+    function sU(UU, RU, gU, tU, pU) {
+      for (; gU < UU;) RU = RU << 8 | oU(tU, pU), gU += 8;
       return {
-        c: DD = DD << 8 | xD(cD, ID),
-        lc: CD += 8
+        l: RU >> (gU -= UU) & (1 << UU) - 1,
+        c: RU,
+        lc: gU
       }
     }
 
-    function dD(DD, CD, cD, ID, pD, iD, fD, bD, QD) {
-      if (DD == CD) {
-        if (ID < 8) {
-          const DD = kD(cD, ID, pD, iD);
-          cD = DD.c, ID = DD.lc
+    function yU(UU, RU, gU, tU) {
+      return {
+        c: UU = UU << 8 | oU(gU, tU),
+        lc: RU += 8
+      }
+    }
+
+    function kU(UU, RU, gU, tU, pU, EU, PU, TU, qU) {
+      if (UU == RU) {
+        if (tU < 8) {
+          const UU = yU(gU, tU, pU, EU);
+          gU = UU.c, tU = UU.lc
         }
-        let DD = cD >> (ID -= 8);
-        if (DD = new Uint8Array([DD])[0], bD.value + DD > QD) return null;
-        const CD = fD[bD.value - 1];
-        for (; DD-- > 0;) fD[bD.value++] = CD
+        let UU = gU >> (tU -= 8);
+        if (UU = new Uint8Array([UU])[0], TU.value + UU > qU) return null;
+        const RU = PU[TU.value - 1];
+        for (; UU-- > 0;) PU[TU.value++] = RU
       } else {
-        if (!(bD.value < QD)) return null;
-        fD[bD.value++] = DD
+        if (!(TU.value < qU)) return null;
+        PU[TU.value++] = UU
       }
       return {
-        c: cD,
-        lc: ID
+        c: gU,
+        lc: tU
       }
     }
-    const YD = new Array(59);
+    const FU = new Array(59);
 
-    function WD(DD, CD, cD, ID, pD, iD) {
-      const fD = CD;
-      let bD = 0,
-        QD = 0;
-      for (; ID <= pD; ID++) {
-        if (fD.value - CD.value > cD) return;
-        let wD = RD(6, bD, QD, DD, fD);
-        const SD = wD.l;
-        if (bD = wD.c, QD = wD.lc, iD[ID] = SD, SD == ND) {
-          if (fD.value - CD.value > cD) throw new Error("Error in HufUnpackEncTable");
-          wD = RD(8, bD, QD, DD, fD);
-          let SD = wD.l + gD;
-          if (bD = wD.c, QD = wD.lc, ID + SD > pD + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; SD--;) iD[ID++] = 0;
-          ID--
-        } else if (SD >= vD) {
-          let DD = SD - vD + 2;
-          if (ID + DD > pD + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; DD--;) iD[ID++] = 0;
-          ID--
+    function iU(UU, RU, gU, tU, pU, EU) {
+      const PU = RU;
+      let TU = 0,
+        qU = 0;
+      for (; tU <= pU; tU++) {
+        if (PU.value - RU.value > gU) return;
+        let KU = sU(6, TU, qU, UU, PU);
+        const cU = KU.l;
+        if (TU = KU.c, qU = KU.lc, EU[tU] = cU, cU == WU) {
+          if (PU.value - RU.value > gU) throw new Error("Error in HufUnpackEncTable");
+          KU = sU(8, TU, qU, UU, PU);
+          let cU = KU.l + fU;
+          if (TU = KU.c, qU = KU.lc, tU + cU > pU + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; cU--;) EU[tU++] = 0;
+          tU--
+        } else if (cU >= eU) {
+          let UU = cU - eU + 2;
+          if (tU + UU > pU + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; UU--;) EU[tU++] = 0;
+          tU--
         }
-      }! function(DD) {
-        for (let cD = 0; cD <= 58; ++cD) YD[cD] = 0;
-        for (let cD = 0; cD < tD; ++cD) YD[DD[cD]] += 1;
-        let CD = 0;
-        for (let cD = 58; cD > 0; --cD) {
-          const DD = CD + YD[cD] >> 1;
-          YD[cD] = CD, CD = DD
+      }! function(UU) {
+        for (let gU = 0; gU <= 58; ++gU) FU[gU] = 0;
+        for (let gU = 0; gU < CU; ++gU) FU[UU[gU]] += 1;
+        let RU = 0;
+        for (let gU = 58; gU > 0; --gU) {
+          const UU = RU + FU[gU] >> 1;
+          FU[gU] = RU, RU = UU
         }
-        for (let cD = 0; cD < tD; ++cD) {
-          const CD = DD[cD];
-          CD > 0 && (DD[cD] = CD | YD[CD]++ << 6)
+        for (let gU = 0; gU < CU; ++gU) {
+          const RU = UU[gU];
+          RU > 0 && (UU[gU] = RU | FU[RU]++ << 6)
         }
-      }(iD)
+      }(EU)
     }
 
-    function sD(DD) {
-      return 63 & DD
+    function AU(UU) {
+      return 63 & UU
     }
 
-    function ED(DD) {
-      return DD >> 6
+    function zU(UU) {
+      return UU >> 6
     }
 
-    function eD(DD, CD, cD, ID, pD, iD) {
-      const fD = cD.value,
-        bD = PD(CD, cD),
-        QD = PD(CD, cD);
-      cD.value += 4;
-      const wD = PD(CD, cD);
-      if (cD.value += 4, bD < 0 || bD >= tD || QD < 0 || QD >= tD) throw new Error("Wrong HUF_ENCSIZE");
-      const SD = new Array(tD),
-        BD = new Array(ZD);
-      ! function(DD) {
-        for (let CD = 0; CD < ZD; CD++) DD[CD] = {}, DD[CD].len = 0, DD[CD].lit = 0, DD[CD].p = null
-      }(BD);
-      if (WD(DD, cD, ID - (cD.value - fD), bD, QD, SD), wD > 8 * (ID - (cD.value - fD))) throw new Error("Wrong hufUncompress");
-      ! function(DD, CD, cD, ID) {
-        for (; CD <= cD; CD++) {
-          const cD = ED(DD[CD]),
-            pD = sD(DD[CD]);
-          if (cD >> pD) throw new Error("Invalid table entry");
-          if (pD > MD) {
-            const DD = ID[cD >> pD - MD];
-            if (DD.len) throw new Error("Invalid table entry");
-            if (DD.lit++, DD.p) {
-              const CD = DD.p;
-              DD.p = new Array(DD.lit);
-              for (let cD = 0; cD < DD.lit - 1; ++cD) DD.p[cD] = CD[cD]
-            } else DD.p = new Array(1);
-            DD.p[DD.lit - 1] = CD
-          } else if (pD) {
-            let DD = 0;
-            for (let iD = 1 << MD - pD; iD > 0; iD--) {
-              const iD = ID[(cD << MD - pD) + DD];
-              if (iD.len || iD.p) throw new Error("Invalid table entry");
-              iD.len = pD, iD.lit = CD, DD++
+    function MU(UU, RU, gU, tU, pU, EU) {
+      const PU = gU.value,
+        TU = wU(RU, gU),
+        qU = wU(RU, gU);
+      gU.value += 4;
+      const KU = wU(RU, gU);
+      if (gU.value += 4, TU < 0 || TU >= CU || qU < 0 || qU >= CU) throw new Error("Wrong HUF_ENCSIZE");
+      const cU = new Array(CU),
+        GU = new Array(hU);
+      ! function(UU) {
+        for (let RU = 0; RU < hU; RU++) UU[RU] = {}, UU[RU].len = 0, UU[RU].lit = 0, UU[RU].p = null
+      }(GU);
+      if (iU(UU, gU, tU - (gU.value - PU), TU, qU, cU), KU > 8 * (tU - (gU.value - PU))) throw new Error("Wrong hufUncompress");
+      ! function(UU, RU, gU, tU) {
+        for (; RU <= gU; RU++) {
+          const gU = zU(UU[RU]),
+            pU = AU(UU[RU]);
+          if (gU >> pU) throw new Error("Invalid table entry");
+          if (pU > uU) {
+            const UU = tU[gU >> pU - uU];
+            if (UU.len) throw new Error("Invalid table entry");
+            if (UU.lit++, UU.p) {
+              const RU = UU.p;
+              UU.p = new Array(UU.lit);
+              for (let gU = 0; gU < UU.lit - 1; ++gU) UU.p[gU] = RU[gU]
+            } else UU.p = new Array(1);
+            UU.p[UU.lit - 1] = RU
+          } else if (pU) {
+            let UU = 0;
+            for (let EU = 1 << uU - pU; EU > 0; EU--) {
+              const EU = tU[(gU << uU - pU) + UU];
+              if (EU.len || EU.p) throw new Error("Invalid table entry");
+              EU.len = pU, EU.lit = RU, UU++
             }
           }
         }
-      }(SD, bD, QD, BD),
-      function(DD, CD, cD, ID, pD, iD, fD, bD, QD) {
-        let wD = 0,
-          SD = 0;
-        const BD = fD,
-          yD = Math.trunc(ID.value + (pD + 7) / 8);
-        for (; ID.value < yD;) {
-          let pD = kD(wD, SD, cD, ID);
-          for (wD = pD.c, SD = pD.lc; SD >= MD;) {
-            const fD = CD[wD >> SD - MD & oD];
-            if (fD.len) {
-              SD -= fD.len;
-              const DD = dD(fD.lit, iD, wD, SD, cD, ID, bD, QD, BD);
-              DD && (wD = DD.c, SD = DD.lc)
+      }(cU, TU, qU, GU),
+      function(UU, RU, gU, tU, pU, EU, PU, TU, qU) {
+        let KU = 0,
+          cU = 0;
+        const GU = PU,
+          jU = Math.trunc(tU.value + (pU + 7) / 8);
+        for (; tU.value < jU;) {
+          let pU = yU(KU, cU, gU, tU);
+          for (KU = pU.c, cU = pU.lc; cU >= uU;) {
+            const PU = RU[KU >> cU - uU & QU];
+            if (PU.len) {
+              cU -= PU.len;
+              const UU = kU(PU.lit, EU, KU, cU, gU, tU, TU, qU, GU);
+              UU && (KU = UU.c, cU = UU.lc)
             } else {
-              if (!fD.p) throw new Error("hufDecode issues");
-              let CD;
-              for (CD = 0; CD < fD.lit; CD++) {
-                const MD = sD(DD[fD.p[CD]]);
-                for (; SD < MD && ID.value < yD;) pD = kD(wD, SD, cD, ID), wD = pD.c, SD = pD.lc;
-                if (SD >= MD && ED(DD[fD.p[CD]]) == (wD >> SD - MD & (1 << MD) - 1)) {
-                  SD -= MD;
-                  const DD = dD(fD.p[CD], iD, wD, SD, cD, ID, bD, QD, BD);
-                  DD && (wD = DD.c, SD = DD.lc);
+              if (!PU.p) throw new Error("hufDecode issues");
+              let RU;
+              for (RU = 0; RU < PU.lit; RU++) {
+                const uU = AU(UU[PU.p[RU]]);
+                for (; cU < uU && tU.value < jU;) pU = yU(KU, cU, gU, tU), KU = pU.c, cU = pU.lc;
+                if (cU >= uU && zU(UU[PU.p[RU]]) == (KU >> cU - uU & (1 << uU) - 1)) {
+                  cU -= uU;
+                  const UU = kU(PU.p[RU], EU, KU, cU, gU, tU, TU, qU, GU);
+                  UU && (KU = UU.c, cU = UU.lc);
                   break
                 }
               }
-              if (CD == fD.lit) throw new Error("HufDecode issues")
+              if (RU == PU.lit) throw new Error("HufDecode issues")
             }
           }
         }
-        const tD = 8 - pD & 7;
-        for (wD >>= tD, SD -= tD; SD > 0;) {
-          const DD = CD[wD << MD - SD & oD];
-          if (!DD.len) throw new Error("HufDecode issues");
+        const CU = 8 - pU & 7;
+        for (KU >>= CU, cU -= CU; cU > 0;) {
+          const UU = RU[KU << uU - cU & QU];
+          if (!UU.len) throw new Error("HufDecode issues");
           {
-            SD -= DD.len;
-            const CD = dD(DD.lit, iD, wD, SD, cD, ID, bD, QD, BD);
-            CD && (wD = CD.c, SD = CD.lc)
+            cU -= UU.len;
+            const RU = kU(UU.lit, EU, KU, cU, gU, tU, TU, qU, GU);
+            RU && (KU = RU.c, cU = RU.lc)
           }
         }
-      }(SD, BD, DD, cD, wD, QD, iD, pD, {
+      }(cU, GU, UU, gU, KU, qU, EU, pU, {
         value: 0
       })
     }
 
-    function uD(DD) {
-      return 65535 & DD
+    function DU(UU) {
+      return 65535 & UU
     }
 
-    function hD(DD) {
-      const CD = uD(DD);
-      return CD > 32767 ? CD - 65536 : CD
+    function LU(UU) {
+      const RU = DU(UU);
+      return RU > 32767 ? RU - 65536 : RU
     }
 
-    function rD(DD, CD) {
-      const cD = hD(DD),
-        ID = hD(CD),
-        pD = cD + (1 & ID) + (ID >> 1);
+    function NU(UU, RU) {
+      const gU = LU(UU),
+        tU = LU(RU),
+        pU = gU + (1 & tU) + (tU >> 1);
       return {
-        a: pD,
-        b: pD - ID
+        a: pU,
+        b: pU - tU
       }
     }
 
-    function AD(DD, CD) {
-      const cD = uD(DD),
-        ID = uD(CD),
-        pD = cD - (ID >> 1) & GD;
+    function lU(UU, RU) {
+      const gU = DU(UU),
+        tU = DU(RU),
+        pU = gU - (tU >> 1) & SU;
       return {
-        a: ID + pD - TD & GD,
-        b: pD
+        a: tU + pU - HU & SU,
+        b: pU
       }
     }
 
-    function FD(DD, CD, cD, ID, pD, iD, fD) {
-      const bD = fD < 16384,
-        QD = cD > pD ? pD : cD;
-      let wD, SD, BD = 1;
-      for (; BD <= QD;) BD <<= 1;
-      for (BD >>= 1, wD = BD, BD >>= 1; BD >= 1;) {
-        SD = 0;
-        const fD = SD + iD * (pD - wD),
-          QD = iD * BD,
-          yD = iD * wD,
-          MD = ID * BD,
-          tD = ID * wD;
-        let ZD, oD, vD, ND;
-        for (; SD <= fD; SD += yD) {
-          let pD = SD;
-          const iD = SD + ID * (cD - wD);
-          for (; pD <= iD; pD += tD) {
-            const cD = pD + MD,
-              ID = pD + QD,
-              iD = ID + MD;
-            if (bD) {
-              let fD = rD(DD[pD + CD], DD[ID + CD]);
-              ZD = fD.a, vD = fD.b, fD = rD(DD[cD + CD], DD[iD + CD]), oD = fD.a, ND = fD.b, fD = rD(ZD, oD), DD[pD + CD] = fD.a, DD[cD + CD] = fD.b, fD = rD(vD, ND), DD[ID + CD] = fD.a, DD[iD + CD] = fD.b
+    function OU(UU, RU, gU, tU, pU, EU, PU) {
+      const TU = PU < 16384,
+        qU = gU > pU ? pU : gU;
+      let KU, cU, GU = 1;
+      for (; GU <= qU;) GU <<= 1;
+      for (GU >>= 1, KU = GU, GU >>= 1; GU >= 1;) {
+        cU = 0;
+        const PU = cU + EU * (pU - KU),
+          qU = EU * GU,
+          jU = EU * KU,
+          uU = tU * GU,
+          CU = tU * KU;
+        let hU, QU, eU, WU;
+        for (; cU <= PU; cU += jU) {
+          let pU = cU;
+          const EU = cU + tU * (gU - KU);
+          for (; pU <= EU; pU += CU) {
+            const gU = pU + uU,
+              tU = pU + qU,
+              EU = tU + uU;
+            if (TU) {
+              let PU = NU(UU[pU + RU], UU[tU + RU]);
+              hU = PU.a, eU = PU.b, PU = NU(UU[gU + RU], UU[EU + RU]), QU = PU.a, WU = PU.b, PU = NU(hU, QU), UU[pU + RU] = PU.a, UU[gU + RU] = PU.b, PU = NU(eU, WU), UU[tU + RU] = PU.a, UU[EU + RU] = PU.b
             } else {
-              let fD = AD(DD[pD + CD], DD[ID + CD]);
-              ZD = fD.a, vD = fD.b, fD = AD(DD[cD + CD], DD[iD + CD]), oD = fD.a, ND = fD.b, fD = AD(ZD, oD), DD[pD + CD] = fD.a, DD[cD + CD] = fD.b, fD = AD(vD, ND), DD[ID + CD] = fD.a, DD[iD + CD] = fD.b
+              let PU = lU(UU[pU + RU], UU[tU + RU]);
+              hU = PU.a, eU = PU.b, PU = lU(UU[gU + RU], UU[EU + RU]), QU = PU.a, WU = PU.b, PU = lU(hU, QU), UU[pU + RU] = PU.a, UU[gU + RU] = PU.b, PU = lU(eU, WU), UU[tU + RU] = PU.a, UU[EU + RU] = PU.b
             }
           }
-          if (cD & BD) {
-            const cD = pD + QD;
-            let ID;
-            ID = bD ? rD(DD[pD + CD], DD[cD + CD]) : AD(DD[pD + CD], DD[cD + CD]), ZD = ID.a, DD[cD + CD] = ID.b, DD[pD + CD] = ZD
+          if (gU & GU) {
+            const gU = pU + qU;
+            let tU;
+            tU = TU ? NU(UU[pU + RU], UU[gU + RU]) : lU(UU[pU + RU], UU[gU + RU]), hU = tU.a, UU[gU + RU] = tU.b, UU[pU + RU] = hU
           }
         }
-        if (pD & BD) {
-          let pD = SD;
-          const iD = SD + ID * (cD - wD);
-          for (; pD <= iD; pD += tD) {
-            const cD = pD + MD;
-            let ID;
-            ID = bD ? rD(DD[pD + CD], DD[cD + CD]) : AD(DD[pD + CD], DD[cD + CD]), ZD = ID.a, DD[cD + CD] = ID.b, DD[pD + CD] = ZD
+        if (pU & GU) {
+          let pU = cU;
+          const EU = cU + tU * (gU - KU);
+          for (; pU <= EU; pU += CU) {
+            const gU = pU + uU;
+            let tU;
+            tU = TU ? NU(UU[pU + RU], UU[gU + RU]) : lU(UU[pU + RU], UU[gU + RU]), hU = tU.a, UU[gU + RU] = tU.b, UU[pU + RU] = hU
           }
         }
-        wD = BD, BD >>= 1
+        KU = GU, GU >>= 1
       }
-      return SD
+      return cU
     }
 
-    function DC(DD) {
-      return new DataView(DD.array.buffer, DD.offset.value, DD.size)
+    function UR(UU) {
+      return new DataView(UU.array.buffer, UU.offset.value, UU.size)
     }
 
-    function CC(DD) {
-      const CD = DD.viewer.buffer.slice(DD.offset.value, DD.offset.value + DD.size),
-        cD = new Uint8Array(function(DD) {
-          let CD = DD.byteLength;
-          const cD = [];
-          let ID = 0;
-          const pD = new DataView(DD);
-          for (; CD > 0;) {
-            const DD = pD.getInt8(ID++);
-            if (DD < 0) {
-              const iD = -DD;
-              CD -= iD + 1;
-              for (let DD = 0; DD < iD; DD++) cD.push(pD.getUint8(ID++))
+    function RR(UU) {
+      const RU = UU.viewer.buffer.slice(UU.offset.value, UU.offset.value + UU.size),
+        gU = new Uint8Array(function(UU) {
+          let RU = UU.byteLength;
+          const gU = [];
+          let tU = 0;
+          const pU = new DataView(UU);
+          for (; RU > 0;) {
+            const UU = pU.getInt8(tU++);
+            if (UU < 0) {
+              const EU = -UU;
+              RU -= EU + 1;
+              for (let UU = 0; UU < EU; UU++) gU.push(pU.getUint8(tU++))
             } else {
-              const iD = DD;
-              CD -= 2;
-              const fD = pD.getUint8(ID++);
-              for (let DD = 0; DD < iD + 1; DD++) cD.push(fD)
+              const EU = UU;
+              RU -= 2;
+              const PU = pU.getUint8(tU++);
+              for (let UU = 0; UU < EU + 1; UU++) gU.push(PU)
             }
           }
-          return cD
-        }(CD)),
-        ID = new Uint8Array(cD.length);
-      return zD(cD), jD(cD, ID), new DataView(ID.buffer)
+          return gU
+        }(RU)),
+        tU = new Uint8Array(gU.length);
+      return rU(gU), XU(gU, tU), new DataView(tU.buffer)
     }
 
-    function cC(DD) {
-      const CD = DD.array.slice(DD.offset.value, DD.offset.value + DD.size),
-        cD = fflate.unzlibSync(CD),
-        ID = new Uint8Array(cD.length);
-      return zD(cD), jD(cD, ID), new DataView(ID.buffer)
+    function gR(UU) {
+      const RU = UU.array.slice(UU.offset.value, UU.offset.value + UU.size),
+        gU = fflate.unzlibSync(RU),
+        tU = new Uint8Array(gU.length);
+      return rU(gU), XU(gU, tU), new DataView(tU.buffer)
     }
 
-    function IC(DD) {
-      const CD = DD.array.slice(DD.offset.value, DD.offset.value + DD.size),
-        cD = fflate.unzlibSync(CD),
-        ID = DD.lines * DD.channels * DD.width,
-        pD = 1 == DD.type ? new Uint16Array(ID) : new Uint32Array(ID);
-      let iD = 0,
-        fD = 0;
-      const bD = new Array(4);
-      for (let QD = 0; QD < DD.lines; QD++)
-        for (let CD = 0; CD < DD.channels; CD++) {
-          let CD = 0;
-          switch (DD.type) {
+    function tR(UU) {
+      const RU = UU.array.slice(UU.offset.value, UU.offset.value + UU.size),
+        gU = fflate.unzlibSync(RU),
+        tU = UU.lines * UU.channels * UU.width,
+        pU = 1 == UU.type ? new Uint16Array(tU) : new Uint32Array(tU);
+      let EU = 0,
+        PU = 0;
+      const TU = new Array(4);
+      for (let qU = 0; qU < UU.lines; qU++)
+        for (let RU = 0; RU < UU.channels; RU++) {
+          let RU = 0;
+          switch (UU.type) {
             case 1:
-              bD[0] = iD, bD[1] = bD[0] + DD.width, iD = bD[1] + DD.width;
-              for (let ID = 0; ID < DD.width; ++ID) {
-                CD += cD[bD[0]++] << 8 | cD[bD[1]++], pD[fD] = CD, fD++
+              TU[0] = EU, TU[1] = TU[0] + UU.width, EU = TU[1] + UU.width;
+              for (let tU = 0; tU < UU.width; ++tU) {
+                RU += gU[TU[0]++] << 8 | gU[TU[1]++], pU[PU] = RU, PU++
               }
               break;
             case 2:
-              bD[0] = iD, bD[1] = bD[0] + DD.width, bD[2] = bD[1] + DD.width, iD = bD[2] + DD.width;
-              for (let ID = 0; ID < DD.width; ++ID) {
-                CD += cD[bD[0]++] << 24 | cD[bD[1]++] << 16 | cD[bD[2]++] << 8, pD[fD] = CD, fD++
+              TU[0] = EU, TU[1] = TU[0] + UU.width, TU[2] = TU[1] + UU.width, EU = TU[2] + UU.width;
+              for (let tU = 0; tU < UU.width; ++tU) {
+                RU += gU[TU[0]++] << 24 | gU[TU[1]++] << 16 | gU[TU[2]++] << 8, pU[PU] = RU, PU++
               }
           }
         }
-      return new DataView(pD.buffer)
+      return new DataView(pU.buffer)
     }
 
-    function pC(DD) {
-      const CD = DD.viewer,
-        cD = {
-          value: DD.offset.value
+    function pR(UU) {
+      const RU = UU.viewer,
+        gU = {
+          value: UU.offset.value
         },
-        ID = new Uint16Array(DD.width * DD.scanlineBlockSize * (DD.channels * DD.type)),
-        pD = new Uint8Array(yD);
-      let iD = 0;
-      const fD = new Array(DD.channels);
-      for (let wD = 0; wD < DD.channels; wD++) fD[wD] = {}, fD[wD].start = iD, fD[wD].end = fD[wD].start, fD[wD].nx = DD.width, fD[wD].ny = DD.lines, fD[wD].size = DD.type, iD += fD[wD].nx * fD[wD].ny * fD[wD].size;
-      const bD = UD(CD, cD),
-        QD = UD(CD, cD);
-      if (QD >= yD) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
-      if (bD <= QD)
-        for (let wD = 0; wD < QD - bD + 1; wD++) pD[wD + bD] = HD(CD, cD);
-      const SD = new Uint16Array(BD),
-        MD = function(DD, CD) {
-          let cD = 0;
-          for (let pD = 0; pD < BD; ++pD)(0 == pD || DD[pD >> 3] & 1 << (7 & pD)) && (CD[cD++] = pD);
-          const ID = cD - 1;
-          for (; cD < BD;) CD[cD++] = 0;
-          return ID
-        }(pD, SD),
-        tD = PD(CD, cD);
-      eD(DD.array, CD, cD, tD, ID, iD);
-      for (let wD = 0; wD < DD.channels; ++wD) {
-        const DD = fD[wD];
-        for (let CD = 0; CD < fD[wD].size; ++CD) FD(ID, DD.start + CD, DD.nx, DD.size, DD.ny, DD.nx * DD.size, MD)
-      }! function(DD, CD, cD) {
-        for (let ID = 0; ID < cD; ++ID) CD[ID] = DD[CD[ID]]
-      }(SD, ID, iD);
-      let ZD = 0;
-      const oD = new Uint8Array(ID.buffer.byteLength);
-      for (let BD = 0; BD < DD.lines; BD++)
-        for (let CD = 0; CD < DD.channels; CD++) {
-          const DD = fD[CD],
-            cD = DD.nx * DD.size,
-            pD = new Uint8Array(ID.buffer, DD.end * wD, cD * wD);
-          oD.set(pD, ZD), ZD += cD * wD, DD.end += cD
+        tU = new Uint16Array(UU.width * UU.scanlineBlockSize * (UU.channels * UU.type)),
+        pU = new Uint8Array(jU);
+      let EU = 0;
+      const PU = new Array(UU.channels);
+      for (let KU = 0; KU < UU.channels; KU++) PU[KU] = {}, PU[KU].start = EU, PU[KU].end = PU[KU].start, PU[KU].nx = UU.width, PU[KU].ny = UU.lines, PU[KU].size = UU.type, EU += PU[KU].nx * PU[KU].ny * PU[KU].size;
+      const TU = bU(RU, gU),
+        qU = bU(RU, gU);
+      if (qU >= jU) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
+      if (TU <= qU)
+        for (let KU = 0; KU < qU - TU + 1; KU++) pU[KU + TU] = nU(RU, gU);
+      const cU = new Uint16Array(GU),
+        uU = function(UU, RU) {
+          let gU = 0;
+          for (let pU = 0; pU < GU; ++pU)(0 == pU || UU[pU >> 3] & 1 << (7 & pU)) && (RU[gU++] = pU);
+          const tU = gU - 1;
+          for (; gU < GU;) RU[gU++] = 0;
+          return tU
+        }(pU, cU),
+        CU = wU(RU, gU);
+      MU(UU.array, RU, gU, CU, tU, EU);
+      for (let KU = 0; KU < UU.channels; ++KU) {
+        const UU = PU[KU];
+        for (let RU = 0; RU < PU[KU].size; ++RU) OU(tU, UU.start + RU, UU.nx, UU.size, UU.ny, UU.nx * UU.size, uU)
+      }! function(UU, RU, gU) {
+        for (let tU = 0; tU < gU; ++tU) RU[tU] = UU[RU[tU]]
+      }(cU, tU, EU);
+      let hU = 0;
+      const QU = new Uint8Array(tU.buffer.byteLength);
+      for (let GU = 0; GU < UU.lines; GU++)
+        for (let RU = 0; RU < UU.channels; RU++) {
+          const UU = PU[RU],
+            gU = UU.nx * UU.size,
+            pU = new Uint8Array(tU.buffer, UU.end * KU, gU * KU);
+          QU.set(pU, hU), hU += gU * KU, UU.end += gU
         }
-      return new DataView(oD.buffer)
+      return new DataView(QU.buffer)
     }
-    var iC, fC = cD(39245);
-    ! function(DD) {
-      DD[DD.Float = 0] = "Float", DD[DD.HalfFloat = 1] = "HalfFloat"
-    }(iC || (iC = {}));
-    class bC {}
-    async function QC(DD, CD, cD, ID) {
-      const pD = {
+    var ER, PR = gU(39473);
+    ! function(UU) {
+      UU[UU.Float = 0] = "Float", UU[UU.HalfFloat = 1] = "HalfFloat"
+    }(ER || (ER = {}));
+    class TR {}
+    async function qR(UU, RU, gU, tU) {
+      const pU = {
         size: 0,
-        viewer: CD,
-        array: new Uint8Array(CD.buffer),
-        offset: cD,
-        width: DD.dataWindow.xMax - DD.dataWindow.xMin + 1,
-        height: DD.dataWindow.yMax - DD.dataWindow.yMin + 1,
-        channels: DD.channels.length,
+        viewer: RU,
+        array: new Uint8Array(RU.buffer),
+        offset: gU,
+        width: UU.dataWindow.xMax - UU.dataWindow.xMin + 1,
+        height: UU.dataWindow.yMax - UU.dataWindow.yMin + 1,
+        channels: UU.channels.length,
         channelLineOffsets: {},
         scanOrder: () => 0,
         bytesPerLine: 0,
@@ -595,174 +595,174 @@ export const modules = {
         linearSpace: !1,
         textureType: 0
       };
-      switch (DD.compression) {
-        case XD.NO_COMPRESSION:
-          pD.lines = 1, pD.uncompress = DC;
+      switch (UU.compression) {
+        case xU.NO_COMPRESSION:
+          pU.lines = 1, pU.uncompress = UR;
           break;
-        case XD.RLE_COMPRESSION:
-          pD.lines = 1, pD.uncompress = CC;
+        case xU.RLE_COMPRESSION:
+          pU.lines = 1, pU.uncompress = RR;
           break;
-        case XD.ZIPS_COMPRESSION:
-          pD.lines = 1, pD.uncompress = cC, await fC.g.LoadScriptAsync(bC.FFLATEUrl);
+        case xU.ZIPS_COMPRESSION:
+          pU.lines = 1, pU.uncompress = gR, await PR.g.LoadScriptAsync(TR.FFLATEUrl);
           break;
-        case XD.ZIP_COMPRESSION:
-          pD.lines = 16, pD.uncompress = cC, await fC.g.LoadScriptAsync(bC.FFLATEUrl);
+        case xU.ZIP_COMPRESSION:
+          pU.lines = 16, pU.uncompress = gR, await PR.g.LoadScriptAsync(TR.FFLATEUrl);
           break;
-        case XD.PIZ_COMPRESSION:
-          pD.lines = 32, pD.uncompress = pC;
+        case xU.PIZ_COMPRESSION:
+          pU.lines = 32, pU.uncompress = pR;
           break;
-        case XD.PXR24_COMPRESSION:
-          pD.lines = 16, pD.uncompress = IC, await fC.g.LoadScriptAsync(bC.FFLATEUrl);
+        case xU.PXR24_COMPRESSION:
+          pU.lines = 16, pU.uncompress = tR, await PR.g.LoadScriptAsync(TR.FFLATEUrl);
           break;
         default:
-          throw new Error(XD[DD.compression] + " is unsupported")
+          throw new Error(xU[UU.compression] + " is unsupported")
       }
-      pD.scanlineBlockSize = pD.lines;
-      const iD = {};
-      for (const bD of DD.channels) switch (bD.name) {
+      pU.scanlineBlockSize = pU.lines;
+      const EU = {};
+      for (const TU of UU.channels) switch (TU.name) {
         case "R":
         case "G":
         case "B":
         case "A":
         case "Y":
-          iD[bD.name] = !0, pD.type = bD.pixelType
+          EU[TU.name] = !0, pU.type = TU.pixelType
       }
-      let fD = !1;
-      if (iD.R && iD.G && iD.B && iD.A) pD.outputChannels = 4, pD.decodeChannels = {
+      let PU = !1;
+      if (EU.R && EU.G && EU.B && EU.A) pU.outputChannels = 4, pU.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (iD.R && iD.G && iD.B) fD = !0, pD.outputChannels = 4, pD.decodeChannels = {
+      else if (EU.R && EU.G && EU.B) PU = !0, pU.outputChannels = 4, pU.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (iD.R && iD.G) pD.outputChannels = 2, pD.decodeChannels = {
+      else if (EU.R && EU.G) pU.outputChannels = 2, pU.decodeChannels = {
         R: 0,
         G: 1
       };
-      else if (iD.R) pD.outputChannels = 1, pD.decodeChannels = {
+      else if (EU.R) pU.outputChannels = 1, pU.decodeChannels = {
         R: 0
       };
       else {
-        if (!iD.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
-        pD.outputChannels = 1, pD.decodeChannels = {
+        if (!EU.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
+        pU.outputChannels = 1, pU.decodeChannels = {
           Y: 0
         }
       }
-      if (1 === pD.type) switch (ID) {
-        case iC.Float:
-          pD.getter = KD, pD.inputSize = wD;
+      if (1 === pU.type) switch (tU) {
+        case ER.Float:
+          pU.getter = YU, pU.inputSize = KU;
           break;
-        case iC.HalfFloat:
-          pD.getter = UD, pD.inputSize = wD
+        case ER.HalfFloat:
+          pU.getter = bU, pU.inputSize = KU
       } else {
-        if (2 !== pD.type) throw new Error("Unsupported pixelType " + pD.type + " for " + DD.compression);
-        switch (ID) {
-          case iC.Float:
-            pD.getter = JD, pD.inputSize = bD;
+        if (2 !== pU.type) throw new Error("Unsupported pixelType " + pU.type + " for " + UU.compression);
+        switch (tU) {
+          case ER.Float:
+            pU.getter = aU, pU.inputSize = TU;
             break;
-          case iC.HalfFloat:
-            pD.getter = aD, pD.inputSize = bD
+          case ER.HalfFloat:
+            pU.getter = BU, pU.inputSize = TU
         }
       }
-      pD.blockCount = pD.height / pD.scanlineBlockSize;
-      for (let bD = 0; bD < pD.blockCount; bD++) qD(CD, cD);
-      const QD = pD.width * pD.height * pD.outputChannels;
-      switch (ID) {
-        case iC.Float:
-          pD.byteArray = new Float32Array(QD), pD.textureType = 1, fD && pD.byteArray.fill(1, 0, QD);
+      pU.blockCount = pU.height / pU.scanlineBlockSize;
+      for (let TU = 0; TU < pU.blockCount; TU++) ZU(RU, gU);
+      const qU = pU.width * pU.height * pU.outputChannels;
+      switch (tU) {
+        case ER.Float:
+          pU.byteArray = new Float32Array(qU), pU.textureType = 1, PU && pU.byteArray.fill(1, 0, qU);
           break;
-        case iC.HalfFloat:
-          pD.byteArray = new Uint16Array(QD), pD.textureType = 2, fD && pD.byteArray.fill(15360, 0, QD);
+        case ER.HalfFloat:
+          pU.byteArray = new Uint16Array(qU), pU.textureType = 2, PU && pU.byteArray.fill(15360, 0, qU);
           break;
         default:
-          throw new Error("Unsupported type: " + ID)
+          throw new Error("Unsupported type: " + tU)
       }
-      let SD = 0;
-      for (const bD of DD.channels) void 0 !== pD.decodeChannels[bD.name] && (pD.channelLineOffsets[bD.name] = SD * pD.width), SD += 2 * bD.pixelType;
-      return pD.bytesPerLine = pD.width * SD, pD.outLineWidth = pD.width * pD.outputChannels, "INCREASING_Y" === DD.lineOrder ? pD.scanOrder = DD => DD : pD.scanOrder = DD => pD.height - 1 - DD, 4 == pD.outputChannels ? (pD.format = 5, pD.linearSpace = !0) : (pD.format = 6, pD.linearSpace = !1), pD
+      let cU = 0;
+      for (const TU of UU.channels) void 0 !== pU.decodeChannels[TU.name] && (pU.channelLineOffsets[TU.name] = cU * pU.width), cU += 2 * TU.pixelType;
+      return pU.bytesPerLine = pU.width * cU, pU.outLineWidth = pU.width * pU.outputChannels, "INCREASING_Y" === UU.lineOrder ? pU.scanOrder = UU => UU : pU.scanOrder = UU => pU.height - 1 - UU, 4 == pU.outputChannels ? (pU.format = 5, pU.linearSpace = !0) : (pU.format = 6, pU.linearSpace = !1), pU
     }
 
-    function wC(DD, CD, cD, ID) {
-      const pD = {
+    function KR(UU, RU, gU, tU) {
+      const pU = {
         value: 0
       };
-      for (let iD = 0; iD < DD.height / DD.scanlineBlockSize; iD++) {
-        const fD = OD(cD, ID) - CD.dataWindow.yMin;
-        DD.size = PD(cD, ID), DD.lines = fD + DD.scanlineBlockSize > DD.height ? DD.height - fD : DD.scanlineBlockSize;
-        const bD = DD.size < DD.lines * DD.bytesPerLine && DD.uncompress ? DD.uncompress(DD) : DC(DD);
-        ID.value += DD.size;
-        for (let cD = 0; cD < DD.scanlineBlockSize; cD++) {
-          const ID = iD * DD.scanlineBlockSize,
-            fD = cD + DD.scanOrder(ID);
-          if (fD >= DD.height) continue;
-          const QD = cD * DD.bytesPerLine,
-            wD = (DD.height - 1 - fD) * DD.outLineWidth;
-          for (let cD = 0; cD < DD.channels; cD++) {
-            const ID = CD.channels[cD].name,
-              iD = DD.channelLineOffsets[ID],
-              fD = DD.decodeChannels[ID];
-            if (void 0 !== fD) {
-              pD.value = QD + iD;
-              for (let CD = 0; CD < DD.width; CD++) {
-                const cD = wD + CD * DD.outputChannels + fD;
-                DD.byteArray && (DD.byteArray[cD] = DD.getter(bD, pD))
+      for (let EU = 0; EU < UU.height / UU.scanlineBlockSize; EU++) {
+        const PU = JU(gU, tU) - RU.dataWindow.yMin;
+        UU.size = wU(gU, tU), UU.lines = PU + UU.scanlineBlockSize > UU.height ? UU.height - PU : UU.scanlineBlockSize;
+        const TU = UU.size < UU.lines * UU.bytesPerLine && UU.uncompress ? UU.uncompress(UU) : UR(UU);
+        tU.value += UU.size;
+        for (let gU = 0; gU < UU.scanlineBlockSize; gU++) {
+          const tU = EU * UU.scanlineBlockSize,
+            PU = gU + UU.scanOrder(tU);
+          if (PU >= UU.height) continue;
+          const qU = gU * UU.bytesPerLine,
+            KU = (UU.height - 1 - PU) * UU.outLineWidth;
+          for (let gU = 0; gU < UU.channels; gU++) {
+            const tU = RU.channels[gU].name,
+              EU = UU.channelLineOffsets[tU],
+              PU = UU.decodeChannels[tU];
+            if (void 0 !== PU) {
+              pU.value = qU + EU;
+              for (let RU = 0; RU < UU.width; RU++) {
+                const gU = KU + RU * UU.outputChannels + PU;
+                UU.byteArray && (UU.byteArray[gU] = UU.getter(TU, pU))
               }
             }
           }
         }
       }
     }
-    bC.DefaultOutputType = iC.HalfFloat, bC.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
-    class SC {
+    TR.DefaultOutputType = ER.HalfFloat, TR.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
+    class cR {
       constructor() {
         this.supportCascades = !1
       }
-      loadCubeData(DD, CD, cD, ID, pD) {
+      loadCubeData(UU, RU, gU, tU, pU) {
         throw ".exr not supported in Cube."
       }
-      loadData(DD, CD, cD) {
-        const pD = new DataView(DD.buffer),
-          iD = {
+      loadData(UU, RU, gU) {
+        const pU = new DataView(UU.buffer),
+          EU = {
             value: 0
           },
-          fD = LD(pD, iD);
-        QC(fD, pD, iD, bC.DefaultOutputType).then((DD => {
-          wC(DD, fD, pD, iD);
-          const ID = fD.dataWindow.xMax - fD.dataWindow.xMin + 1,
-            bD = fD.dataWindow.yMax - fD.dataWindow.yMin + 1;
-          cD(ID, bD, CD.generateMipMaps, !1, (() => {
-            const cD = CD.DZ();
-            CD.format = fD.format, CD.type = DD.textureType, CD.invertY = !1, CD._gammaSpace = !fD.linearSpace, DD.byteArray && cD._uploadDataToTextureDirectly(CD, DD.byteArray, 0, 0, void 0, !0)
+          PU = dU(pU, EU);
+        qR(PU, pU, EU, TR.DefaultOutputType).then((UU => {
+          KR(UU, PU, pU, EU);
+          const tU = PU.dataWindow.xMax - PU.dataWindow.xMin + 1,
+            TU = PU.dataWindow.yMax - PU.dataWindow.yMin + 1;
+          gU(tU, TU, RU.generateMipMaps, !1, (() => {
+            const gU = RU.WC();
+            RU.format = PU.format, RU.type = UU.textureType, RU.invertY = !1, RU._gammaSpace = !PU.linearSpace, UU.byteArray && gU._uploadDataToTextureDirectly(RU, UU.byteArray, 0, 0, void 0, !0)
           }))
-        })).catch((DD => {
-          ID.e.Error("Failed to load EXR texture: ", DD)
+        })).catch((UU => {
+          tU.e.Error("Failed to load EXR texture: ", UU)
         }))
       }
     }
-    async function BC(DD) {
-      const CD = new DataView(DD),
-        cD = {
+    async function GR(UU) {
+      const RU = new DataView(UU),
+        gU = {
           value: 0
         },
-        pD = LD(CD, cD);
+        pU = dU(RU, gU);
       try {
-        const DD = await QC(pD, CD, cD, iC.Float);
-        return wC(DD, pD, CD, cD), DD.byteArray ? {
-          width: pD.dataWindow.xMax - pD.dataWindow.xMin + 1,
-          height: pD.dataWindow.yMax - pD.dataWindow.yMin + 1,
-          data: new Float32Array(DD.byteArray)
-        } : (ID.e.Error("Failed to decode EXR data: No byte array available."), {
+        const UU = await qR(pU, RU, gU, ER.Float);
+        return KR(UU, pU, RU, gU), UU.byteArray ? {
+          width: pU.dataWindow.xMax - pU.dataWindow.xMin + 1,
+          height: pU.dataWindow.yMax - pU.dataWindow.yMin + 1,
+          data: new Float32Array(UU.byteArray)
+        } : (tU.e.Error("Failed to decode EXR data: No byte array available."), {
           width: 0,
           height: 0,
           data: null
         })
-      } catch (iD) {
-        ID.e.Error("Failed to load EXR data: ", iD)
+      } catch (EU) {
+        tU.e.Error("Failed to load EXR data: ", EU)
       }
       return {
         width: 0,
@@ -773,4 +773,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

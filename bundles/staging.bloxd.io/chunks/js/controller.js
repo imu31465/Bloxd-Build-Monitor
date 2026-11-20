@@ -1,328 +1,328 @@
 export const id = 28;
 export const ids = [28];
 export const modules = {
-  4770: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => tD,
-      g: () => gD,
-      i: () => ZD,
-      j: () => ND
+  4670: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => CU,
+      d: () => fU,
+      h: () => hU,
+      l: () => WU
     });
-    var ID = cD(53),
-      pD = cD(4774),
-      iD = cD(4182),
-      fD = cD(1356),
-      bD = cD(4799),
-      QD = cD(1049),
-      wD = cD.n(QD),
-      SD = cD(1340),
-      BD = cD(1701),
-      yD = cD(4806),
-      MD = cD(1093);
+    var tU = gU(56),
+      pU = gU(4679),
+      EU = gU(4040),
+      PU = gU(1344),
+      TU = gU(4693),
+      qU = gU(1037),
+      KU = gU.n(qU),
+      cU = gU(1333),
+      GU = gU(1637),
+      jU = gU(4701),
+      uU = gU(1090);
 
-    function tD(DD) {
+    function CU(UU) {
       let {
-        label: CD,
-        onClick: cD,
-        checked: ID,
-        circleInfoText: pD,
-        className: bD,
-        disabled: QD,
-        note: SD
-      } = DD;
-      return (0, MD.jsxs)("div", {
-        "aria-disabled": QD || void 0,
+        label: RU,
+        onClick: gU,
+        checked: tU,
+        circleInfoText: pU,
+        className: TU,
+        disabled: qU,
+        note: cU
+      } = UU;
+      return (0, uU.jsxs)("div", {
+        "aria-disabled": qU || void 0,
         "data-pad-focusable": !0,
-        className: wD()("SettingBox CheckboxContainer", {
-          [bD]: bD,
-          SettingBoxDisabled: QD
+        className: KU()("SettingBox CheckboxContainer", {
+          [TU]: TU,
+          SettingBoxDisabled: qU
         }),
         onClick: () => {
-          QD || cD(!ID)
+          qU || gU(!tU)
         },
-        children: [(0, MD.jsxs)("div", {
+        children: [(0, uU.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, MD.jsx)("label", {
+          children: [(0, uU.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, MD.jsx)(iD.e, {
+            children: (0, uU.jsx)(EU.d, {
               className: "SettingsCheckbox",
-              checked: ID,
-              disabled: QD,
+              checked: tU,
+              disabled: qU,
               onChange: () => {}
             })
-          }), (0, MD.jsxs)("div", {
+          }), (0, uU.jsxs)("div", {
             className: "CheckboxText",
-            children: [CD, pD && (0, MD.jsx)("span", {
-              onClick: DD => DD.stopPropagation(),
-              children: (0, MD.jsx)(fD.d, {
+            children: [RU, pU && (0, uU.jsx)("span", {
+              onClick: UU => UU.stopPropagation(),
+              children: (0, uU.jsx)(PU.d, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: pD
+                hoverInfo: pU
               })
             })]
           })]
-        }), SD && (0, MD.jsx)("div", {
+        }), cU && (0, uU.jsx)("div", {
           className: "SettingNote",
-          children: SD
+          children: cU
         })]
       })
     }
 
-    function ZD(DD) {
+    function hU(UU) {
       let {
-        name: CD,
-        onChange: cD,
-        min: pD,
-        max: iD,
-        step: bD,
-        initValue: QD,
-        circleInfoText: SD,
-        format: BD,
-        className: yD,
-        padStep: tD,
-        disabled: ZD = !1,
-        selectableMax: oD,
-        cappedNote: ND,
-        onChangeComplete: gD
-      } = DD;
-      const [XD, mD] = (0, ID.useState)(QD), nD = (0, ID.useRef)(QD);
-      (0, ID.useEffect)((() => {
-        nD.current = QD, mD(QD)
-      }), [QD]);
-      const OD = void 0 !== oD && oD < iD,
-        PD = OD ? {
-          "--slider-selectable": (oD - pD) / (iD - pD)
+        name: RU,
+        onChange: gU,
+        min: pU,
+        max: EU,
+        step: TU,
+        initValue: qU,
+        circleInfoText: cU,
+        format: GU,
+        className: jU,
+        padStep: CU,
+        disabled: hU = !1,
+        selectableMax: QU,
+        cappedNote: WU,
+        onChangeComplete: fU
+      } = UU;
+      const [xU, mU] = (0, tU.useState)(qU), IU = (0, tU.useRef)(qU);
+      (0, tU.useEffect)((() => {
+        IU.current = qU, mU(qU)
+      }), [qU]);
+      const JU = void 0 !== QU && QU < EU,
+        wU = JU ? {
+          "--slider-selectable": (QU - pU) / (EU - pU)
         } : void 0;
-      return (0, MD.jsxs)("div", {
-        className: wD()("SettingBox SettingsSliderDiv", {
-          [yD]: yD,
-          SettingBoxDisabled: ZD,
-          SliderCapped: OD
+      return (0, uU.jsxs)("div", {
+        className: KU()("SettingBox SettingsSliderDiv", {
+          [jU]: jU,
+          SettingBoxDisabled: hU,
+          SliderCapped: JU
         }),
-        style: PD,
-        children: [(0, MD.jsxs)("div", {
+        style: wU,
+        children: [(0, uU.jsxs)("div", {
           className: "SliderText",
-          children: [`${CD}: ${BD?BD(XD):XD}`, SD && (0, MD.jsx)(fD.d, {
+          children: [`${RU}: ${GU?GU(xU):xU}`, cU && (0, uU.jsx)(PU.d, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: SD
+            hoverInfo: cU
           })]
-        }), (0, MD.jsx)("div", {
+        }), (0, uU.jsx)("div", {
           className: "SliderDiv",
-          children: (0, MD.jsx)(vD, {
-            value: XD,
-            min: pD,
-            max: iD,
-            step: bD,
-            onChange: DD => {
-              if (OD && DD >= oD && XD === oD) return;
-              const CD = OD ? Math.min(DD, oD) : DD;
-              nD.current = CD, mD(CD), cD(CD)
+          children: (0, uU.jsx)(eU, {
+            value: xU,
+            min: pU,
+            max: EU,
+            step: TU,
+            onChange: UU => {
+              if (JU && UU >= QU && xU === QU) return;
+              const RU = JU ? Math.min(UU, QU) : UU;
+              IU.current = RU, mU(RU), gU(RU)
             },
-            onChangeComplete: gD && (() => {
-              gD(nD.current)
+            onChangeComplete: fU && (() => {
+              fU(IU.current)
             }),
-            format: BD,
-            padStep: tD,
-            disabled: ZD
+            format: GU,
+            padStep: CU,
+            disabled: hU
           })
-        }), OD && ND && (0, MD.jsx)("div", {
+        }), JU && WU && (0, uU.jsx)("div", {
           className: "SettingNote",
-          children: ND
+          children: WU
         })]
       })
     }
-    const oD = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const QU = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function vD(DD) {
-      var CD;
+    function eU(UU) {
+      var RU;
       let {
-        value: cD,
-        min: iD,
-        max: fD,
-        step: bD,
-        onChange: QD,
-        orientation: wD,
-        reverse: SD,
-        setIsChanging: BD,
-        tooltip: tD,
-        labels: ZD,
-        handleLabel: vD,
-        format: ND,
-        onChangeStart: gD,
-        onChangeComplete: XD,
-        padStep: mD,
-        disabled: nD = !1
-      } = DD;
-      const OD = (0, ID.useRef)(null),
-        PD = (0, ID.useRef)(null);
-      (0, ID.useLayoutEffect)((() => {
-        var DD, CD, cD;
-        const ID = null !== (DD = null === (CD = OD.current) || void 0 === CD ? void 0 : CD.querySelector(".rangeslider")) && void 0 !== DD ? DD : null;
-        null === ID || void 0 === ID || ID.setAttribute("data-pad-slider", ""), null === ID || void 0 === ID || ID.setAttribute("data-pad-focusable", ""), null === ID || void 0 === ID || null === (cD = ID.querySelector(".rangeslider__handle")) || void 0 === cD || cD.setAttribute("data-pad-slider-handle", ""), PD.current = ID
-      }), []), (0, ID.useLayoutEffect)((() => {
-        var DD, CD;
-        nD ? null === (DD = PD.current) || void 0 === DD || DD.setAttribute("aria-disabled", "true") : null === (CD = PD.current) || void 0 === CD || CD.removeAttribute("aria-disabled")
-      }), [nD]);
-      const HD = (null !== (CD = String(bD).split(".")[1]) && void 0 !== CD ? CD : "").length,
-        UD = DD => {
-          const CD = Number((Math.round((DD - iD) / bD) * bD + iD).toFixed(HD));
-          return Math.min(fD, Math.max(iD, CD))
+        value: gU,
+        min: EU,
+        max: PU,
+        step: TU,
+        onChange: qU,
+        orientation: KU,
+        reverse: cU,
+        setIsChanging: GU,
+        tooltip: CU,
+        labels: hU,
+        handleLabel: eU,
+        format: WU,
+        onChangeStart: fU,
+        onChangeComplete: xU,
+        padStep: mU,
+        disabled: IU = !1
+      } = UU;
+      const JU = (0, tU.useRef)(null),
+        wU = (0, tU.useRef)(null);
+      (0, tU.useLayoutEffect)((() => {
+        var UU, RU, gU;
+        const tU = null !== (UU = null === (RU = JU.current) || void 0 === RU ? void 0 : RU.querySelector(".rangeslider")) && void 0 !== UU ? UU : null;
+        null === tU || void 0 === tU || tU.setAttribute("data-pad-slider", ""), null === tU || void 0 === tU || tU.setAttribute("data-pad-focusable", ""), null === tU || void 0 === tU || null === (gU = tU.querySelector(".rangeslider__handle")) || void 0 === gU || gU.setAttribute("data-pad-slider-handle", ""), wU.current = tU
+      }), []), (0, tU.useLayoutEffect)((() => {
+        var UU, RU;
+        IU ? null === (UU = wU.current) || void 0 === UU || UU.setAttribute("aria-disabled", "true") : null === (RU = wU.current) || void 0 === RU || RU.removeAttribute("aria-disabled")
+      }), [IU]);
+      const nU = (null !== (RU = String(TU).split(".")[1]) && void 0 !== RU ? RU : "").length,
+        bU = UU => {
+          const RU = Number((Math.round((UU - EU) / TU) * TU + EU).toFixed(nU));
+          return Math.min(PU, Math.max(EU, RU))
         },
-        xD = (0, ID.useRef)(XD);
-      xD.current = XD, (0, ID.useEffect)((() => {
-        const DD = OD.current;
-        if (!DD) return;
-        const CD = DD => {
-          var CD;
-          oD.has(DD.key) && (null === (CD = xD.current) || void 0 === CD || CD.call(xD))
+        oU = (0, tU.useRef)(xU);
+      oU.current = xU, (0, tU.useEffect)((() => {
+        const UU = JU.current;
+        if (!UU) return;
+        const RU = UU => {
+          var RU;
+          QU.has(UU.key) && (null === (RU = oU.current) || void 0 === RU || RU.call(oU))
         };
-        return DD.addEventListener("keyup", CD), () => {
-          DD.removeEventListener("keyup", CD)
+        return UU.addEventListener("keyup", RU), () => {
+          UU.removeEventListener("keyup", RU)
         }
       }), []);
-      const qD = (0, ID.useRef)(!1);
-      return (0, yD.g)(PD, {
-        adjust: DD => {
-          if (nD) return;
-          const CD = null !== mD && void 0 !== mD ? mD : Math.max(bD, Math.round((fD - iD) / 20 / bD) * bD),
-            ID = UD(cD + DD * CD * (SD ? -1 : 1));
-          ID !== cD && (null === gD || void 0 === gD || gD(), QD(ID), null === XD || void 0 === XD || XD())
+      const ZU = (0, tU.useRef)(!1);
+      return (0, jU.e)(wU, {
+        adjust: UU => {
+          if (IU) return;
+          const RU = null !== mU && void 0 !== mU ? mU : Math.max(TU, Math.round((PU - EU) / 20 / TU) * TU),
+            tU = bU(gU + UU * RU * (cU ? -1 : 1));
+          tU !== gU && (null === fU || void 0 === fU || fU(), qU(tU), null === xU || void 0 === xU || xU())
         },
-        setFraction: DD => {
-          if (nD) return;
-          const CD = UD(iD + (SD ? 1 - DD : DD) * (fD - iD));
-          CD !== cD && (qD.current || (qD.current = !0, null === gD || void 0 === gD || gD()), QD(CD))
+        setFraction: UU => {
+          if (IU) return;
+          const RU = bU(EU + (cU ? 1 - UU : UU) * (PU - EU));
+          RU !== gU && (ZU.current || (ZU.current = !0, null === fU || void 0 === fU || fU()), qU(RU))
         },
         endDrag: () => {
-          qD.current && (qD.current = !1, null === XD || void 0 === XD || XD())
+          ZU.current && (ZU.current = !1, null === xU || void 0 === xU || xU())
         }
-      }), (0, MD.jsx)("div", {
-        ref: OD,
+      }), (0, uU.jsx)("div", {
+        ref: JU,
         style: {
           display: "contents"
         },
-        children: (0, MD.jsx)(pD.e, {
-          value: cD,
-          min: iD,
-          max: fD,
-          step: bD,
-          onChange: QD,
-          orientation: wD,
-          reverse: SD,
-          tooltip: tD,
-          labels: ZD,
-          handleLabel: vD,
-          format: ND,
+        children: (0, uU.jsx)(pU.d, {
+          value: gU,
+          min: EU,
+          max: PU,
+          step: TU,
+          onChange: qU,
+          orientation: KU,
+          reverse: cU,
+          tooltip: CU,
+          labels: hU,
+          handleLabel: eU,
+          format: WU,
           onChangeStart: () => {
-            null === gD || void 0 === gD || gD(), null === BD || void 0 === BD || BD(!0)
+            null === fU || void 0 === fU || fU(), null === GU || void 0 === GU || GU(!0)
           },
           onChangeComplete: () => {
-            null === BD || void 0 === BD || BD(!1), null === XD || void 0 === XD || XD()
+            null === GU || void 0 === GU || GU(!1), null === xU || void 0 === xU || xU()
           }
         })
       })
     }
-    async function ND() {
-      let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-      const CD = SD.NotificationProvider.showPromptPopup({
+    async function WU() {
+      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+      const RU = cU.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
         confirmTooltip: "",
         cancelText: "general:cancel",
         cancelTooltip: "",
-        unlockPointerKey: DD
+        unlockPointerKey: UU
       });
-      !0 === await CD.getResult() && (0, BD.reloadBloxd)()
+      !0 === await RU.getResult() && (0, GU.reloadBloxd)()
     }
 
-    function gD(DD) {
+    function fU(UU) {
       let {
-        label: CD,
-        options: cD,
-        value: ID,
-        onChange: pD,
-        circleInfoText: iD
-      } = DD;
-      return (0, MD.jsxs)("div", {
+        label: RU,
+        options: gU,
+        value: tU,
+        onChange: pU,
+        circleInfoText: EU
+      } = UU;
+      return (0, uU.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, MD.jsxs)("div", {
+        children: [(0, uU.jsxs)("div", {
           className: "SliderText",
-          children: [CD, iD && (0, MD.jsx)(fD.d, {
+          children: [RU, EU && (0, uU.jsx)(PU.d, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: iD
+            hoverInfo: EU
           })]
-        }), (0, MD.jsx)(bD.b, {
-          ariaLabel: CD,
-          options: cD,
-          value: ID,
-          onChange: pD
+        }), (0, uU.jsx)(TU.d, {
+          ariaLabel: RU,
+          options: gU,
+          value: tU,
+          onChange: pU
         })]
       })
     }
   },
-  4799: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => fD
+  4693: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => PU
     });
-    var ID = cD(1049),
-      pD = cD.n(ID),
-      iD = cD(1093);
+    var tU = gU(1037),
+      pU = gU.n(tU),
+      EU = gU(1090);
 
-    function fD(DD) {
+    function PU(UU) {
       let {
-        options: CD,
-        value: cD,
-        onChange: ID,
-        ariaLabel: fD,
-        className: bD,
-        reselectable: QD = !1,
-        keepsFocus: wD = !1
-      } = DD;
-      return (0, iD.jsx)("div", {
-        className: pD()("SegmentedToggle", bD),
+        options: RU,
+        value: gU,
+        onChange: tU,
+        ariaLabel: PU,
+        className: TU,
+        reselectable: qU = !1,
+        keepsFocus: KU = !1
+      } = UU;
+      return (0, EU.jsx)("div", {
+        className: pU()("SegmentedToggle", TU),
         role: "group",
-        "aria-label": fD,
-        children: CD.map((DD => {
-          const CD = DD.value === cD;
-          return (0, iD.jsx)("button", {
+        "aria-label": PU,
+        children: RU.map((UU => {
+          const RU = UU.value === gU;
+          return (0, EU.jsx)("button", {
             type: "button",
-            "aria-pressed": CD,
-            "aria-label": DD.ariaLabel,
-            title: DD.ariaLabel,
-            className: pD()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: CD
+            "aria-pressed": RU,
+            "aria-label": UU.ariaLabel,
+            title: UU.ariaLabel,
+            className: pU()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: RU
             }),
-            onMouseDown: wD ? DD => {
-              DD.preventDefault()
+            onMouseDown: KU ? UU => {
+              UU.preventDefault()
             } : void 0,
             onClick: () => {
-              CD && !QD || ID(DD.value)
+              RU && !qU || tU(UU.value)
             },
-            children: DD.label
-          }, DD.value)
+            children: UU.label
+          }, UU.value)
         }))
       })
     }
   },
-  7860: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => pD,
-      f: () => iD,
-      i: () => yD,
-      l: () => BD,
-      p: () => wD,
-      s: () => bD,
-      t: () => ID,
-      u: () => MD,
-      w: () => tD
+  7826: (UU, RU, gU) => {
+    gU.d(RU, {
+      C: () => CU,
+      e: () => pU,
+      i: () => EU,
+      l: () => jU,
+      p: () => GU,
+      r: () => KU,
+      v: () => TU,
+      x: () => tU,
+      z: () => uU
     });
-    const ID = ["menuConfirm", "menuBack", "menuTabPrevious", "menuTabNext", "menuPageUp", "menuPageDown", "menuSecondary", "menuToggleCursor"],
-      pD = [{
+    const tU = ["menuConfirm", "menuBack", "menuTabPrevious", "menuTabNext", "menuPageUp", "menuPageDown", "menuSecondary", "menuToggleCursor"],
+      pU = [{
         group: "gameplay",
         actions: ["jump", "sneak", "sneakToggle", "sprint", "attack", "use", "hotbarPrevious", "hotbarNext", "inventory", "actionButton", "perspective", "pickBlock", "drop", "emoteWheel", "chat", "pause", "leaderboard"]
       }, {
         group: "menu",
-        actions: ID
+        actions: tU
       }, {
         group: "inventory",
         actions: ["inventoryPrimary", "inventorySecondary", "inventoryQuickMove", "inventoryClose", "inventoryPanelPrevious", "inventoryPanelNext", "inventoryDrop", "inventoryHotbarSwap"]
@@ -330,7 +330,7 @@ export const modules = {
         group: "keyboard",
         actions: ["keyboardType", "keyboardBackspace", "keyboardSpace", "keyboardCaretLeft", "keyboardCaretRight", "keyboardShift", "keyboardSymbols", "keyboardSubmit", "keyboardClose", "keyboardChannel"]
       }],
-      iD = {
+      EU = {
         jump: "A",
         sneak: "B",
         sneakToggle: "RS",
@@ -375,29 +375,29 @@ export const modules = {
         keyboardClose: "B",
         keyboardChannel: "View"
       },
-      fD = ["pickBlock", "perspective"],
-      bD = DD => fD.includes(DD) ? fD : [DD],
-      QD = Object.fromEntries(pD.flatMap((DD => {
+      PU = ["pickBlock", "perspective"],
+      TU = UU => PU.includes(UU) ? PU : [UU],
+      qU = Object.fromEntries(pU.flatMap((UU => {
         let {
-          group: CD,
-          actions: cD
-        } = DD;
-        return cD.map((DD => [DD, CD]))
+          group: RU,
+          actions: gU
+        } = UU;
+        return gU.map((UU => [UU, RU]))
       }))),
-      wD = DD => QD[DD],
-      SD = {
+      KU = UU => qU[UU],
+      cU = {
         pause: ["menu"],
         leaderboard: ["menu"],
         inventory: ["menu"],
         menuPageUp: ["inventory"],
         menuPageDown: ["inventory"]
       },
-      BD = DD => {
-        var CD;
-        return [wD(DD), ...null !== (CD = SD[DD]) && void 0 !== CD ? CD : []]
+      GU = UU => {
+        var RU;
+        return [KU(UU), ...null !== (RU = cU[UU]) && void 0 !== RU ? RU : []]
       },
-      yD = new Set(["menu", "inventory", "keyboard"]),
-      MD = {
+      jU = new Set(["menu", "inventory", "keyboard"]),
+      uU = {
         jump: "jump",
         crouch: "sneak",
         sprint: "sprint",
@@ -415,92 +415,92 @@ export const modules = {
         OpenShop: "leaderboard",
         OpenEmoteWheel: "emoteWheel"
       },
-      tD = new Set(["forward", "backward", "left", "right"])
+      CU = new Set(["forward", "backward", "left", "right"])
   },
-  7851: (DD, CD, cD) => {
-    cD.d(CD, {
-      B: () => PD,
-      D: () => gD,
-      E: () => UD,
-      G: () => SD,
-      I: () => HD,
-      M: () => JD,
-      e: () => ND,
-      f: () => mD,
-      h: () => yD,
-      k: () => MD,
-      m: () => aD,
-      q: () => qD,
-      u: () => xD,
-      v: () => XD,
-      z: () => KD
+  7820: (UU, RU, gU) => {
+    gU.d(RU, {
+      C: () => bU,
+      D: () => cU,
+      E: () => nU,
+      H: () => aU,
+      b: () => WU,
+      d: () => mU,
+      f: () => jU,
+      g: () => uU,
+      j: () => BU,
+      m: () => ZU,
+      o: () => oU,
+      r: () => xU,
+      u: () => YU,
+      x: () => wU,
+      z: () => fU
     });
-    var ID = cD(7860),
-      pD = cD(7865),
-      iD = cD(7839),
-      fD = cD(7883);
-    const bD = DD => "pickBlock" === DD ? "perspective" : DD,
-      QD = (DD, CD) => {
-        var cD;
-        const pD = bD(CD);
-        return null !== (cD = DD[pD]) && void 0 !== cD ? cD : ID.f[pD]
+    var tU = gU(7826),
+      pU = gU(7828),
+      EU = gU(7807),
+      PU = gU(7843);
+    const TU = UU => "pickBlock" === UU ? "perspective" : UU,
+      qU = (UU, RU) => {
+        var gU;
+        const pU = TU(RU);
+        return null !== (gU = UU[pU]) && void 0 !== gU ? gU : tU.i[pU]
       },
-      wD = new Map([
+      KU = new Map([
         ["menuConfirm", "menuBack"],
         ["inventoryPrimary", "inventoryClose"],
         ["keyboardType", "keyboardClose"]
-      ].flatMap((DD => {
-        let [CD, cD] = DD;
+      ].flatMap((UU => {
+        let [RU, gU] = UU;
         return [
-          [CD, cD],
-          [cD, CD]
+          [RU, gU],
+          [gU, RU]
         ]
       }))),
-      SD = (DD, CD) => null !== DD && void 0 !== DD ? DD : "nintendo" === CD,
-      BD = DD => SD((0, pD.h)().swapConfirmBack, (0, pD.i)()) && wD.get(DD) || DD,
-      yD = DD => QD((0, pD.h)().bindings, BD(DD)),
-      MD = DD => ID.f[BD(DD)],
-      tD = Object.keys(ID.f),
-      ZD = DD => "gameplay" === (0, ID.p)(DD) ? ["gameplay"] : (0, ID.l)(DD),
-      oD = (DD, CD) => {
-        const cD = ZD(CD);
-        return ZD(DD).some((DD => cD.includes(DD)))
+      cU = (UU, RU) => null !== UU && void 0 !== UU ? UU : "nintendo" === RU,
+      GU = UU => cU((0, pU.h)().swapConfirmBack, (0, pU.i)()) && KU.get(UU) || UU,
+      jU = UU => qU((0, pU.h)().bindings, GU(UU)),
+      uU = UU => tU.i[GU(UU)],
+      CU = Object.keys(tU.i),
+      hU = UU => "gameplay" === (0, tU.r)(UU) ? ["gameplay"] : (0, tU.p)(UU),
+      QU = (UU, RU) => {
+        const gU = hU(RU);
+        return hU(UU).some((UU => gU.includes(UU)))
       },
-      vD = (DD, CD, cD) => {
-        const pD = QD(DD, CD),
-          fD = new Set((0, ID.s)(CD)),
-          wD = [...fD];
-        for (let ID = wD.pop(); ID; ID = wD.pop())
-          for (const CD of tD) {
-            const iD = QD(DD, CD);
-            fD.has(CD) || iD !== cD && iD !== pD || !oD(ID, CD) || (fD.add(CD), wD.push(CD))
+      eU = (UU, RU, gU) => {
+        const pU = qU(UU, RU),
+          PU = new Set((0, tU.v)(RU)),
+          KU = [...PU];
+        for (let tU = KU.pop(); tU; tU = KU.pop())
+          for (const RU of CU) {
+            const EU = qU(UU, RU);
+            PU.has(RU) || EU !== gU && EU !== pU || !QU(tU, RU) || (PU.add(RU), KU.push(RU))
           }
-        const SD = {
-          ...DD
+        const cU = {
+          ...UU
         };
-        for (const BD of fD) {
-          const CD = QD(DD, BD) === pD ? cD : pD,
-            fD = (0, ID.l)(BD).some((DD => ID.i.has(DD)));
-          if ((0, iD.C)(CD) && fD) return null;
-          SD[bD(BD)] = CD
+        for (const GU of PU) {
+          const RU = qU(UU, GU) === pU ? gU : pU,
+            PU = (0, tU.p)(GU).some((UU => tU.l.has(UU)));
+          if ((0, EU.B)(RU) && PU) return null;
+          cU[TU(GU)] = RU
         }
-        for (const iD of Object.keys(SD)) SD[iD] === ID.f[iD] && delete SD[iD];
-        return SD
+        for (const EU of Object.keys(cU)) cU[EU] === tU.i[EU] && delete cU[EU];
+        return cU
       },
-      ND = (DD, CD) => null !== vD((0, pD.h)().bindings, BD(DD), CD),
-      gD = (DD, CD) => {
-        if (yD(DD) === CD) return !0;
-        const cD = vD((0, pD.h)().bindings, BD(DD), CD);
-        return !!cD && ((0, pD.j)({
-          bindings: cD
+      WU = (UU, RU) => null !== eU((0, pU.h)().bindings, GU(UU), RU),
+      fU = (UU, RU) => {
+        if (jU(UU) === RU) return !0;
+        const gU = eU((0, pU.h)().bindings, GU(UU), RU);
+        return !!gU && ((0, pU.k)({
+          bindings: gU
         }), !0)
       },
-      XD = (DD, CD) => {
-        const cD = (0, ID.s)(CD);
-        return tD.filter((CD => bD(CD) === CD && !cD.includes(CD) && QD(DD, BD(CD)) !== yD(CD)))
+      xU = (UU, RU) => {
+        const gU = (0, tU.v)(RU);
+        return CU.filter((RU => TU(RU) === RU && !gU.includes(RU) && qU(UU, GU(RU)) !== jU(RU)))
       },
-      mD = ["southpaw", "triggersSwapped"],
-      nD = {
+      mU = ["southpaw", "triggersSwapped"],
+      IU = {
         southpaw: {
           sprint: "RS",
           sneakToggle: "LS"
@@ -510,820 +510,820 @@ export const modules = {
           use: "RT"
         }
       },
-      OD = DD => Object.keys(nD[DD]),
-      PD = (DD, CD) => "southpaw" === DD ? CD.swapSticks : OD(DD).every((cD => QD(CD.bindings, cD) === nD[DD][cD])),
-      HD = (DD, CD) => {
-        const cD = (0, pD.h)();
-        let iD = cD.bindings;
-        for (const pD of OD(DD)) {
-          const cD = CD ? nD[DD][pD] : ID.f[pD];
-          if (iD = vD(iD, pD, cD), !iD) return !1
+      JU = UU => Object.keys(IU[UU]),
+      wU = (UU, RU) => "southpaw" === UU ? RU.swapSticks : JU(UU).every((gU => qU(RU.bindings, gU) === IU[UU][gU])),
+      nU = (UU, RU) => {
+        const gU = (0, pU.h)();
+        let EU = gU.bindings;
+        for (const pU of JU(UU)) {
+          const gU = RU ? IU[UU][pU] : tU.i[pU];
+          if (EU = eU(EU, pU, gU), !EU) return !1
         }
-        return (0, pD.j)({
-          swapSticks: "southpaw" === DD ? CD : cD.swapSticks,
-          bindings: iD
+        return (0, pU.k)({
+          swapSticks: "southpaw" === UU ? RU : gU.swapSticks,
+          bindings: EU
         }), !0
       },
-      UD = () => {
-        (0, pD.j)({
+      bU = () => {
+        (0, pU.k)({
           swapSticks: !1,
           bindings: {}
         })
       },
-      xD = () => (0, pD.h)().swapSticks ? "RightStick" : "LeftStick",
-      qD = () => (0, pD.h)().swapSticks ? "LeftStick" : "RightStick",
-      JD = DD => (0, pD.h)().swapSticks && (0, iD.C)(DD),
-      KD = DD => JD(DD) ? xD() : qD(),
-      aD = DD => {
-        if (ID.w.has(DD)) return xD();
-        const CD = ID.u[DD];
-        return CD && ("leaderboard" !== CD || (0, fD.d)(DD, (0, fD.b)())) ? yD(CD) : null
+      oU = () => (0, pU.h)().swapSticks ? "RightStick" : "LeftStick",
+      ZU = () => (0, pU.h)().swapSticks ? "LeftStick" : "RightStick",
+      aU = UU => (0, pU.h)().swapSticks && (0, EU.B)(UU),
+      YU = UU => aU(UU) ? oU() : ZU(),
+      BU = UU => {
+        if (tU.C.has(UU)) return oU();
+        const RU = tU.z[UU];
+        return RU && ("leaderboard" !== RU || (0, PU.e)(UU, (0, PU.b)())) ? jU(RU) : null
       }
   },
-  7829: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      ControllerCategory: () => MQ,
-      ControllerGlyph: () => Zi,
-      ControllerRoot: () => Mb,
-      PadLobbyShortcuts: () => Jb,
-      PadSneakChip: () => Xb,
-      PadTooltip: () => nb,
-      attachPressToContinue: () => Tb,
-      getBoundButton: () => SD.h,
-      getControllerSettings: () => yD.h,
-      getGlyphForNoaAction: () => SD.m,
-      getInventoryCursorState: () => ZQ,
-      getMenuShortcutButton: () => jI,
-      getPadGlyphIconName: () => vb,
-      getPadGlyphIconUrl: () => Nb,
-      getPadRepeatTiming: () => ZD.e,
-      handOverPadFocus: () => vQ,
-      hasActivePad: () => tQ,
-      isPadSteppingSlots: () => oQ
+  7799: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      ControllerCategory: () => cq,
+      ControllerGlyph: () => hE,
+      ControllerRoot: () => cT,
+      PadLobbyShortcuts: () => bT,
+      PadSneakChip: () => eT,
+      PadTooltip: () => fT,
+      attachPressToContinue: () => XT,
+      getBoundButton: () => cU.f,
+      getControllerSettings: () => jU.h,
+      getGlyphForNoaAction: () => cU.j,
+      getInventoryCursorState: () => jq,
+      getMenuShortcutButton: () => vt,
+      getPadGlyphIconName: () => CT,
+      getPadGlyphIconUrl: () => hT,
+      getPadRepeatTiming: () => hU.i,
+      handOverPadFocus: () => Cq,
+      hasActivePad: () => Gq,
+      isPadSteppingSlots: () => uq
     });
-    const ID = JSON.parse('{"controller":{"inventoryTake":"Take","inventoryTakeHalf":"Take half","inventoryPlace":"Place","inventoryPlaceOne":"Place one","inventoryQuickMove":"Quick move","inventoryToHotbar":"To hotbar","inventoryPutBack":"Put back","inventoryHotbarSwap":"Swap with hotbar","inventorySwapHere":"Swap here","inventoryCancel":"Cancel","inventoryClose":"Close","inventoryDrop":"Drop (hold: stack)","inventorySelect":"Select","inventoryCraft":"Craft (hold to repeat)","inventoryCraftAll":"Craft all","inventoryChooseRecipe":"Choose","inventoryBackToRecipes":"Back to recipes","inventoryType":"Type","inventoryPanels":"Switch panel","inventoryCategory":"Category","inventoryPage":"Page","disconnected":"Controller disconnected","gameplayReload":"Reload","gameplayActionWheelHint":"(hold for more)","gameplaySneaking":"Sneaking","gameplayLoadFailedTitle":"Controller unavailable","gameplayLoadFailedSubtitle":"Reload the page to play with your controller.","gameplayDropStack":"Keep holding to drop the stack","gameplayAttackLatched":"Attacking","gameplayPickBlock":"Pick block","padButtonView":"View","padButtonMenu":"Menu","padButtonHome":"Home","padButtonCreate":"Create","padButtonOptions":"Options","padButtonDpadUp":"D-pad \u2191","padButtonDpadDown":"D-pad \u2193","padButtonDpadLeft":"D-pad \u2190","padButtonDpadRight":"D-pad \u2192","padButtonLeftStick":"L Stick","padButtonRightStick":"R Stick","settingsLook":"Look","settingsLookSensitivityX":"Look sensitivity (horizontal)","settingsLookSensitivityY":"Look sensitivity (vertical)","settingsAimLookSensitivity":"Look sensitivity while aiming (use held)","settingsInvertLookX":"Invert horizontal look","settingsInvertLookY":"Invert vertical look","settingsLookCurve":"Look curve","settingsLookCurveHint":"Steep gives finer aim near the centre, Linear turns at an even rate, and Boost turns faster when you hold the stick all the way.","settingsCurveExponential":"Steep","settingsCurveLinear":"Linear","settingsCurveBoost":"Boost","settingsLookDeadzone":"Look deadzone","settingsGyro":"Gyro aiming","settingsGyroToggle":"Aim by moving the controller","settingsGyroToggleInfo":"Turn and tilt the controller to aim, on top of the right stick.","settingsGyroTogglePhone":"Aim by moving your phone or tablet","settingsGyroToggleInfoPhone":"Turn and tilt your phone or tablet to aim, on top of the right stick.","settingsGyroUnsupported":"Gyro aiming needs Chrome or Edge.","settingsGyroBlocked":"Gyro aiming isn\'t available on this site.","settingsGyroPhoneNeedsController":"Connect a controller to aim by moving your phone or tablet.","settingsGyroSteamHint":"If Steam already turns your gyro into mouse movement, leave this off.","settingsGyroConnect":"Connect motion controller","settingsGyroConnectHint":"Works with DualSense, DualShock 4 and Switch controllers.","settingsGyroConnectNeedsClick":"Click Connect with your mouse: the browser asks before sharing a controller.","settingsGyroOpenFailed":"Another app is using the controller. Close apps such as Steam or DS4Windows, then try again.","settingsGyroConnected":"Aiming with {{name}}.","settingsGyroAllowMotion":"Allow motion sensor","settingsGyroAllowNeedsTap":"Tap Allow motion sensor on your screen to turn it on.","settingsGyroPhoneOn":"Aiming with this device\'s motion sensor.","settingsGyroPhoneWaiting":"Waiting for this device\'s motion sensor\u2026","settingsGyroPhoneNoSensor":"No motion sensor found on this device.","settingsGyroPhoneDenied":"Motion access is blocked. Allow it in your browser settings.","settingsGyroSensitivity":"Gyro sensitivity","settingsGyroActivation":"Gyro turns on","settingsGyroAlways":"Always","settingsGyroWhileAiming":"While aiming","settingsGyroWhileButton":"While holding a button","settingsGyroAimingHint":"Hold {{button}} to aim with motion.","settingsGyroButton":"Gyro button","settingsGyroButtonHint":"While gyro aiming is on, this button only turns the gyro on in game, so pick one you rarely use.","settingsMovement":"Movement","settingsMoveDeadzone":"Move deadzone","settingsAutoSprint":"Sprint at full tilt","settingsAutoSprintInfo":"Push the movement stick all the way to sprint.","settingsSneak":"Sneak","settingsSneakHold":"Hold","settingsSneakToggle":"Toggle","settingsButtons":"Buttons","settingsPromptFamily":"Button prompts","settingsPromptAuto":"Match my controller","settingsPromptXbox":"Xbox","settingsPromptPlayStation":"PlayStation","settingsPromptNintendo":"Nintendo","settingsPromptSteamDeck":"Steam Deck","settingsPromptGeneric":"Generic","settingsHideButtonHints":"Hide button hints","settingsVibration":"Vibration","settingsCursorSpeed":"Virtual cursor speed","settingsCursorMagnetism":"Cursor snaps onto buttons","settingsMenuBackToCategories":"Back returns to the category list first","settingsAccessibility":"Accessibility","settingsSwapConfirmBack":"Swap confirm and back","settingsSwapToast":"Select and Back have swapped buttons.","settingsLayoutRefusedToast":"This layout doesn\'t fit your current buttons. Reset them to use it.","settingsSwapConfirmBackInfo":"Select with the right face button and go back with the bottom one, in menus, the inventory and the on-screen keyboard. On by default for Nintendo controllers.","settingsButtonRepeat":"Button repeat","settingsButtonRepeatHint":"How a held button repeats in menus, sliders, the on-screen keyboard and crafting. Off acts once per press, and holding drop in game drops just one item.","settingsButtonRepeatDefault":"Default","settingsButtonRepeatSlow":"Slow (0.8 s, then 4 a second)","settingsButtonRepeatOff":"Off (once per press)","settingsTapHoldTime":"Tap/hold time","settingsTapHoldTimeHint":"How long to hold the chat, emote or action button to open its wheel, or the view button to change view where a tap picks a block. Dropping a whole stack takes 0.8, 1 or 1.3 s.","settingsTapHoldShort":"Short (0.25 s)","settingsTapHoldMedium":"Medium (0.5 s)","settingsTapHoldLong":"Long (0.8 s)","settingsEmoteButton":"Emote button","settingsEmoteButtonTapHoldHint":"Tap to repeat your last emote, or hold to open the emote wheel.","settingsEmoteButtonWheelHint":"Any press opens the emote wheel, with no hold to time. Pick with the stick, then select.","settingsEmoteButtonTapHold":"Tap repeats, hold opens wheel","settingsEmoteButtonWheel":"Opens the wheel","settingsAttackMode":"Attack / mine","settingsAttackHoldHint":"Hold attack to keep attacking or mining.","settingsAttackToggleHint":"Press attack once to keep attacking or mining, and again to stop.","settingsAttackHold":"Hold","settingsAttackToggle":"Toggle","settingsLargePointer":"Large pointer and focus","settingsLargePointerInfo":"A bigger menu cursor, thicker selection brackets and bigger button hints.","settingsRemap":"Remap buttons","settingsRemapHint":"Select an action, then press a button. If that button is taken, the two swap.","settingsLayoutSouthpaw":"Southpaw (move with the right stick)","settingsLayoutTriggersSwapped":"Triggers swapped (attack with the left trigger)","settingsCapturePrompt":"Press a button","settingsCaptureCancelHint":"Press {{button}} to cancel","settingsCaptureCancelOrBindHint":"Tap {{button}} to cancel, or hold it to choose it","settingsReset":"Reset","settingsSwapNotice":"{{action}} moved to {{button}}","settingsResetAll":"Reset all buttons and sticks","settingsGroupGameplay":"Movement & gameplay","settingsGroupMenus":"Menus","settingsGroupInventory":"Inventory","settingsGroupKeyboard":"On-screen keyboard","settingsActionMove":"Move","settingsActionLook":"Look around","settingsActionJump":"Jump","settingsActionSneak":"Sneak","settingsActionSneakToggle":"Toggle sneak","settingsActionSprint":"Sprint","settingsActionAttack":"Attack / mine","settingsActionUse":"Use / place","settingsActionHotbarPrevious":"Previous hotbar slot","settingsActionHotbarNext":"Next hotbar slot","settingsActionInventory":"Inventory","settingsActionActionButton":"Game action","settingsActionPerspective":"Change view","settingsActionPickBlock":"Pick block (creative)","settingsActionDrop":"Drop item","settingsActionEmoteWheel":"Emotes","settingsActionChat":"Chat","settingsActionPause":"Pause menu","settingsActionLeaderboard":"Shop / leaderboard","settingsActionMenuConfirm":"Select","settingsActionMenuBack":"Back","settingsActionMenuTabPrevious":"Previous tab","settingsActionMenuTabNext":"Next tab","settingsActionMenuPageUp":"Page up","settingsActionMenuPageDown":"Page down","settingsActionMenuSecondary":"Secondary action","settingsActionMenuToggleCursor":"Switch to virtual cursor","settingsActionInventoryPrimary":"Pick up / place","settingsActionInventorySecondary":"Pick up half / place one","settingsActionInventoryQuickMove":"Quick move","settingsActionInventoryHotbarSwap":"Swap with hotbar slot","settingsActionInventoryClose":"Close","settingsActionInventoryPanelPrevious":"Previous panel","settingsActionInventoryPanelNext":"Next panel","settingsActionInventoryDrop":"Drop item","settingsActionKeyboardType":"Type key","settingsActionKeyboardBackspace":"Backspace","settingsActionKeyboardSpace":"Space","settingsActionKeyboardCaretLeft":"Move cursor left","settingsActionKeyboardCaretRight":"Move cursor right","settingsActionKeyboardShift":"Shift","settingsActionKeyboardSymbols":"Accents and symbols","settingsActionKeyboardSubmit":"Send","settingsActionKeyboardClose":"Close keyboard","settingsActionKeyboardChannel":"Chat channel","settingsAlternatives":"Try alternatives","settingsAlternativesHint":"Try each way of playing and keep the one that feels best.","settingsMenuNavigation":"Menu navigation","settingsMenuNavigationHint":"Steer a cursor with the stick and jump between buttons with the D-pad, or use just one.","settingsNavHybrid":"Cursor and D-pad","settingsMenuNavFocus":"Jump between buttons","settingsVirtualCursor":"Virtual cursor","settingsInventoryNavigation":"Inventory","settingsInventoryNavigationHint":"Steer a cursor with the stick and step slot by slot with the D-pad, or use just one.","settingsInventoryNavSlot":"Slot by slot","settingsQuickChat":"Hold chat button","settingsQuickChatHint":"Hold the chat button to pick a quick phrase. Tapping it still opens chat.","settingsQuickChatWheel":"Quick chat wheel","settingsQuickChatOff":"Off","settingsLeaderboardButton":"Shop / leaderboard button","settingsLeaderboardButtonHint":"Open the shop in one press in games that have one. The lobby leaderboard is still in the pause menu.","settingsLeaderboardButtonShop":"Shop, in games with one","settingsLeaderboardButtonLeaderboard":"Always the leaderboard","settingsTester":"Gamepad tester","settingsTesterNoPad":"Connect a gamepad and press any button to test it.","settingsTesterFamily":"Detected: {{family}}","settingsTesterHint":"Start a test to try every button and stick without moving through the menu.","settingsTesterStart":"Start test","settingsTesterStop":"Stop test","settingsTesterTesting":"Press anything to see it light up. To stop, hold {{button}} or press it three times.","settingsControlsNote":"Playing with a gamepad? Change its buttons and feel in Gamepad settings.","settingsOpenController":"Gamepad settings","keyboardSpace":"Space","keyboardSend":"Send","keyboardDone":"Done","keyboardTargetChat":"Chat","keyboardTargetSign":"Sign","keyboardTargetNameTag":"Name tag","keyboardTargetBook":"Book page","keyboardTargetBookTitle":"Book title","keyboardTargetText":"Text","keyboardPhraseGg":"gg","keyboardPhraseHi":"hi","keyboardPhraseThanks":"thanks","keyboardPhraseGl":"gl","keyboardPhraseBrb":"brb","keyboardPhraseYes":"yes","keyboardPhraseNo":"no","keyboardPhraseHelp":"help!","quickChatPick":"Pick a phrase","actionWheelPick":"Pick an action","wheelReleaseToPick":"Release to pick","wheelClose":"Close","wheelChoose":"Choose","menusSelect":"Select","menusBack":"Back","menusClose":"Close","menusQuickChat":"Quick chat (hold)","menusSkipTutorial":"Skip tutorial","menusTabs":"Tabs","menusRows":"Rows","menusCursorMode":"Cursor","menusFocusMode":"Focus","menusClick":"Click","menusRightClick":"Right-click","menusScroll":"Scroll","menusFriends":"Friends","menusSearch":"Search","menusSettings":"Settings","menusLeaveGameTitle":"Leave the game?","menusLeaveGameLeave":"Leave","menusLeaveGameStay":"Stay","menusNotifications":"Notifications","menusLobby":"Lobby","menusShop":"Shop","menusTasks":"Tasks & leaderboards","menusInvite":"Invite friends","menusAdjust":"Adjust","menusFavourite":"Favourite","screensPressToContinue":"Press {{button}} to continue","screensPressToEnterGame":"Press {{button}} to enter game","screensEnterGame":"Enter game","screensBackToGames":"Back to games","tutorialMine":"Mine","tutorialPlace":"Place / Use","tutorialInventory":"Inventory","tutorialPause":"Pause","menusUseMouse":"Use a mouse or touch here"}}');
-    var pD = cD(1192),
-      iD = cD(1403),
-      fD = cD(7834),
-      bD = cD(62),
-      QD = cD(16),
-      wD = cD(20),
-      SD = cD(7851),
-      BD = cD(7890),
-      yD = cD(7865),
-      MD = cD(7893),
-      tD = cD(7839),
-      ZD = cD(8339),
-      oD = cD(8347),
-      vD = cD(1645);
-    const ND = (DD, CD, cD) => Math.max(CD, Math.min(cD, DD)),
-      gD = DD => Math.min(DD.width, DD.height) / 720,
-      XD = DD => Math.max(.15, DD);
-    class mD {
+    const tU = JSON.parse('{"controller":{"inventoryTake":"Take","inventoryTakeHalf":"Take half","inventoryPlace":"Place","inventoryPlaceOne":"Place one","inventoryQuickMove":"Quick move","inventoryToHotbar":"To hotbar","inventoryPutBack":"Put back","inventoryHotbarSwap":"Swap with hotbar","inventorySwapHere":"Swap here","inventoryCancel":"Cancel","inventoryClose":"Close","inventoryDrop":"Drop (hold: stack)","inventorySelect":"Select","inventoryCraft":"Craft (hold to repeat)","inventoryCraftAll":"Craft all","inventoryChooseRecipe":"Choose","inventoryBackToRecipes":"Back to recipes","inventoryType":"Type","inventoryPanels":"Switch panel","inventoryCategory":"Category","inventoryPage":"Page","disconnected":"Controller disconnected","gameplayReload":"Reload","gameplayActionWheelHint":"(hold for more)","gameplaySneaking":"Sneaking","gameplayLoadFailedTitle":"Controller unavailable","gameplayLoadFailedSubtitle":"Reload the page to play with your controller.","gameplayDropStack":"Keep holding to drop the stack","gameplayAttackLatched":"Attacking","gameplayPickBlock":"Pick block","padButtonView":"View","padButtonMenu":"Menu","padButtonHome":"Home","padButtonCreate":"Create","padButtonOptions":"Options","padButtonDpadUp":"D-pad \u2191","padButtonDpadDown":"D-pad \u2193","padButtonDpadLeft":"D-pad \u2190","padButtonDpadRight":"D-pad \u2192","padButtonLeftStick":"L Stick","padButtonRightStick":"R Stick","settingsLook":"Look","settingsLookSensitivityX":"Look sensitivity (horizontal)","settingsLookSensitivityY":"Look sensitivity (vertical)","settingsAimLookSensitivity":"Look sensitivity while aiming (use held)","settingsInvertLookX":"Invert horizontal look","settingsInvertLookY":"Invert vertical look","settingsLookCurve":"Look curve","settingsLookCurveHint":"Steep gives finer aim near the centre, Linear turns at an even rate, and Boost turns faster when you hold the stick all the way.","settingsCurveExponential":"Steep","settingsCurveLinear":"Linear","settingsCurveBoost":"Boost","settingsLookDeadzone":"Look deadzone","settingsGyro":"Gyro aiming","settingsGyroToggle":"Aim by moving the controller","settingsGyroToggleInfo":"Turn and tilt the controller to aim, on top of the right stick.","settingsGyroTogglePhone":"Aim by moving your phone or tablet","settingsGyroToggleInfoPhone":"Turn and tilt your phone or tablet to aim, on top of the right stick.","settingsGyroUnsupported":"Gyro aiming needs Chrome or Edge.","settingsGyroBlocked":"Gyro aiming isn\'t available on this site.","settingsGyroPhoneNeedsController":"Connect a controller to aim by moving your phone or tablet.","settingsGyroSteamHint":"If Steam already turns your gyro into mouse movement, leave this off.","settingsGyroConnect":"Connect motion controller","settingsGyroConnectHint":"Works with DualSense, DualShock 4 and Switch controllers.","settingsGyroConnectNeedsClick":"Click Connect with your mouse: the browser asks before sharing a controller.","settingsGyroOpenFailed":"Another app is using the controller. Close apps such as Steam or DS4Windows, then try again.","settingsGyroConnected":"Aiming with {{name}}.","settingsGyroAllowMotion":"Allow motion sensor","settingsGyroAllowNeedsTap":"Tap Allow motion sensor on your screen to turn it on.","settingsGyroPhoneOn":"Aiming with this device\'s motion sensor.","settingsGyroPhoneWaiting":"Waiting for this device\'s motion sensor\u2026","settingsGyroPhoneNoSensor":"No motion sensor found on this device.","settingsGyroPhoneDenied":"Motion access is blocked. Allow it in your browser settings.","settingsGyroSensitivity":"Gyro sensitivity","settingsGyroActivation":"Gyro turns on","settingsGyroAlways":"Always","settingsGyroWhileAiming":"While aiming","settingsGyroWhileButton":"While holding a button","settingsGyroAimingHint":"Hold {{button}} to aim with motion.","settingsGyroButton":"Gyro button","settingsGyroButtonHint":"While gyro aiming is on, this button only turns the gyro on in game, so pick one you rarely use.","settingsMovement":"Movement","settingsMoveDeadzone":"Move deadzone","settingsAutoSprint":"Sprint at full tilt","settingsAutoSprintInfo":"Push the movement stick all the way to sprint.","settingsSneak":"Sneak","settingsSneakHold":"Hold","settingsSneakToggle":"Toggle","settingsButtons":"Buttons","settingsPromptFamily":"Button prompts","settingsPromptAuto":"Match my controller","settingsPromptXbox":"Xbox","settingsPromptPlayStation":"PlayStation","settingsPromptNintendo":"Nintendo","settingsPromptSteamDeck":"Steam Deck","settingsPromptGeneric":"Generic","settingsHideButtonHints":"Hide button hints","settingsVibration":"Vibration","settingsCursorSpeed":"Virtual cursor speed","settingsCursorMagnetism":"Cursor snaps onto buttons","settingsMenuBackToCategories":"Back returns to the category list first","settingsAccessibility":"Accessibility","settingsSwapConfirmBack":"Swap confirm and back","settingsSwapToast":"Select and Back have swapped buttons.","settingsLayoutRefusedToast":"This layout doesn\'t fit your current buttons. Reset them to use it.","settingsSwapConfirmBackInfo":"Select with the right face button and go back with the bottom one, in menus, the inventory and the on-screen keyboard. On by default for Nintendo controllers.","settingsButtonRepeat":"Button repeat","settingsButtonRepeatHint":"How a held button repeats in menus, sliders, the on-screen keyboard and crafting. Off acts once per press, and holding drop in game drops just one item.","settingsButtonRepeatDefault":"Default","settingsButtonRepeatSlow":"Slow (0.8 s, then 4 a second)","settingsButtonRepeatOff":"Off (once per press)","settingsTapHoldTime":"Tap/hold time","settingsTapHoldTimeHint":"How long to hold the chat, emote or action button to open its wheel, or the view button to change view where a tap picks a block. Dropping a whole stack takes 0.8, 1 or 1.3 s.","settingsTapHoldShort":"Short (0.25 s)","settingsTapHoldMedium":"Medium (0.5 s)","settingsTapHoldLong":"Long (0.8 s)","settingsEmoteButton":"Emote button","settingsEmoteButtonTapHoldHint":"Tap to repeat your last emote, or hold to open the emote wheel.","settingsEmoteButtonWheelHint":"Any press opens the emote wheel, with no hold to time. Pick with the stick, then select.","settingsEmoteButtonTapHold":"Tap repeats, hold opens wheel","settingsEmoteButtonWheel":"Opens the wheel","settingsAttackMode":"Attack / mine","settingsAttackHoldHint":"Hold attack to keep attacking or mining.","settingsAttackToggleHint":"Press attack once to keep attacking or mining, and again to stop.","settingsAttackHold":"Hold","settingsAttackToggle":"Toggle","settingsLargePointer":"Large pointer and focus","settingsLargePointerInfo":"A bigger menu cursor, thicker selection brackets and bigger button hints.","settingsRemap":"Remap buttons","settingsRemapHint":"Select an action, then press a button. If that button is taken, the two swap.","settingsLayoutSouthpaw":"Southpaw (move with the right stick)","settingsLayoutTriggersSwapped":"Triggers swapped (attack with the left trigger)","settingsCapturePrompt":"Press a button","settingsCaptureCancelHint":"Press {{button}} to cancel","settingsCaptureCancelOrBindHint":"Tap {{button}} to cancel, or hold it to choose it","settingsReset":"Reset","settingsSwapNotice":"{{action}} moved to {{button}}","settingsResetAll":"Reset all buttons and sticks","settingsGroupGameplay":"Movement & gameplay","settingsGroupMenus":"Menus","settingsGroupInventory":"Inventory","settingsGroupKeyboard":"On-screen keyboard","settingsActionMove":"Move","settingsActionLook":"Look around","settingsActionJump":"Jump","settingsActionSneak":"Sneak","settingsActionSneakToggle":"Toggle sneak","settingsActionSprint":"Sprint","settingsActionAttack":"Attack / mine","settingsActionUse":"Use / place","settingsActionHotbarPrevious":"Previous hotbar slot","settingsActionHotbarNext":"Next hotbar slot","settingsActionInventory":"Inventory","settingsActionActionButton":"Game action","settingsActionPerspective":"Change view","settingsActionPickBlock":"Pick block (creative)","settingsActionDrop":"Drop item","settingsActionEmoteWheel":"Emotes","settingsActionChat":"Chat","settingsActionPause":"Pause menu","settingsActionLeaderboard":"Shop / leaderboard","settingsActionMenuConfirm":"Select","settingsActionMenuBack":"Back","settingsActionMenuTabPrevious":"Previous tab","settingsActionMenuTabNext":"Next tab","settingsActionMenuPageUp":"Page up","settingsActionMenuPageDown":"Page down","settingsActionMenuSecondary":"Secondary action","settingsActionMenuToggleCursor":"Switch to virtual cursor","settingsActionInventoryPrimary":"Pick up / place","settingsActionInventorySecondary":"Pick up half / place one","settingsActionInventoryQuickMove":"Quick move","settingsActionInventoryHotbarSwap":"Swap with hotbar slot","settingsActionInventoryClose":"Close","settingsActionInventoryPanelPrevious":"Previous panel","settingsActionInventoryPanelNext":"Next panel","settingsActionInventoryDrop":"Drop item","settingsActionKeyboardType":"Type key","settingsActionKeyboardBackspace":"Backspace","settingsActionKeyboardSpace":"Space","settingsActionKeyboardCaretLeft":"Move cursor left","settingsActionKeyboardCaretRight":"Move cursor right","settingsActionKeyboardShift":"Shift","settingsActionKeyboardSymbols":"Accents and symbols","settingsActionKeyboardSubmit":"Send","settingsActionKeyboardClose":"Close keyboard","settingsActionKeyboardChannel":"Chat channel","settingsAlternatives":"Try alternatives","settingsAlternativesHint":"Try each way of playing and keep the one that feels best.","settingsMenuNavigation":"Menu navigation","settingsMenuNavigationHint":"Steer a cursor with the stick and jump between buttons with the D-pad, or use just one.","settingsNavHybrid":"Cursor and D-pad","settingsMenuNavFocus":"Jump between buttons","settingsVirtualCursor":"Virtual cursor","settingsInventoryNavigation":"Inventory","settingsInventoryNavigationHint":"Steer a cursor with the stick and step slot by slot with the D-pad, or use just one.","settingsInventoryNavSlot":"Slot by slot","settingsQuickChat":"Hold chat button","settingsQuickChatHint":"Hold the chat button to pick a quick phrase. Tapping it still opens chat.","settingsQuickChatWheel":"Quick chat wheel","settingsQuickChatOff":"Off","settingsLeaderboardButton":"Shop / leaderboard button","settingsLeaderboardButtonHint":"Open the shop in one press in games that have one. The lobby leaderboard is still in the pause menu.","settingsLeaderboardButtonShop":"Shop, in games with one","settingsLeaderboardButtonLeaderboard":"Always the leaderboard","settingsTester":"Gamepad tester","settingsTesterNoPad":"Connect a gamepad and press any button to test it.","settingsTesterFamily":"Detected: {{family}}","settingsTesterHint":"Start a test to try every button and stick without moving through the menu.","settingsTesterStart":"Start test","settingsTesterStop":"Stop test","settingsTesterTesting":"Press anything to see it light up. To stop, hold {{button}} or press it three times.","settingsControlsNote":"Playing with a gamepad? Change its buttons and feel in Gamepad settings.","settingsOpenController":"Gamepad settings","keyboardSpace":"Space","keyboardSend":"Send","keyboardDone":"Done","keyboardTargetChat":"Chat","keyboardTargetSign":"Sign","keyboardTargetNameTag":"Name tag","keyboardTargetBook":"Book page","keyboardTargetBookTitle":"Book title","keyboardTargetText":"Text","keyboardPhraseGg":"gg","keyboardPhraseHi":"hi","keyboardPhraseThanks":"thanks","keyboardPhraseGl":"gl","keyboardPhraseBrb":"brb","keyboardPhraseYes":"yes","keyboardPhraseNo":"no","keyboardPhraseHelp":"help!","quickChatPick":"Pick a phrase","actionWheelPick":"Pick an action","wheelReleaseToPick":"Release to pick","wheelClose":"Close","wheelChoose":"Choose","menusSelect":"Select","menusBack":"Back","menusClose":"Close","menusQuickChat":"Quick chat (hold)","menusSkipTutorial":"Skip tutorial","menusTabs":"Tabs","menusRows":"Rows","menusCursorMode":"Cursor","menusFocusMode":"Focus","menusClick":"Click","menusRightClick":"Right-click","menusScroll":"Scroll","menusFriends":"Friends","menusSearch":"Search","menusSettings":"Settings","menusLeaveGameTitle":"Leave the game?","menusLeaveGameLeave":"Leave","menusLeaveGameStay":"Stay","menusNotifications":"Notifications","menusLobby":"Lobby","menusShop":"Shop","menusTasks":"Tasks & leaderboards","menusInvite":"Invite friends","menusAdjust":"Adjust","menusFavourite":"Favourite","screensPressToContinue":"Press {{button}} to continue","screensPressToEnterGame":"Press {{button}} to enter game","screensEnterGame":"Enter game","screensBackToGames":"Back to games","tutorialMine":"Mine","tutorialPlace":"Place / Use","tutorialInventory":"Inventory","tutorialPause":"Pause","menusUseMouse":"Use a mouse or touch here"}}');
+    var pU = gU(1181),
+      EU = gU(1376),
+      PU = gU(7801),
+      TU = gU(74),
+      qU = gU(21),
+      KU = gU(24),
+      cU = gU(7820),
+      GU = gU(7849),
+      jU = gU(7828),
+      uU = gU(7854),
+      CU = gU(7807),
+      hU = gU(8298),
+      QU = gU(8303),
+      eU = gU(1591);
+    const WU = (UU, RU, gU) => Math.max(RU, Math.min(gU, UU)),
+      fU = UU => Math.min(UU.width, UU.height) / 720,
+      xU = UU => Math.max(.15, UU);
+    class mU {
       constructor() {
         this.locked = !1
       }
       lock() {
         this.locked = !0
       }
-      update(DD, CD) {
-        const cD = Math.hypot(DD.x, DD.y) >= (DD => Math.max(.3, DD))(CD);
-        return this.locked ? (this.locked = cD, !1) : cD
+      update(UU, RU) {
+        const gU = Math.hypot(UU.x, UU.y) >= (UU => Math.max(.3, UU))(RU);
+        return this.locked ? (this.locked = gU, !1) : gU
       }
     }
-    const nD = (DD, CD) => {
-        const cD = ND(CD.dtMs, 0, 100),
-          ID = cD / 1e3,
-          pD = gD(CD.viewport) * (CD.cursorSpeedPercent / 100),
-          iD = (0, tD.i)(CD.stick, XD(CD.moveDeadzone)),
-          fD = Math.hypot(iD.x, iD.y),
-          bD = ((DD, CD, cD) => {
-            if (CD < .3) return 0;
-            const ID = cD / 350;
-            return CD >= .85 ? Math.min(1, DD + ID) : Math.max(0, DD - ID)
-          })(DD.speedRamp, fD, cD);
-        let QD = DD.x,
-          wD = DD.y;
-        if (fD > 0) {
-          const DD = .45 + .55 * bD,
-            cD = CD.context.overInteractive ? .45 : 1,
-            SD = 1400 * (DD => {
-              const CD = ND(DD, 0, 1);
-              return .3 * CD + .7 * CD * CD
-            })(fD) * pD * DD * cD;
-          QD += iD.x / fD * SD * ID, wD += iD.y / fD * SD * ID
+    const IU = (UU, RU) => {
+        const gU = WU(RU.dtMs, 0, 100),
+          tU = gU / 1e3,
+          pU = fU(RU.viewport) * (RU.cursorSpeedPercent / 100),
+          EU = (0, CU.g)(RU.stick, xU(RU.moveDeadzone)),
+          PU = Math.hypot(EU.x, EU.y),
+          TU = ((UU, RU, gU) => {
+            if (RU < .3) return 0;
+            const tU = gU / 350;
+            return RU >= .85 ? Math.min(1, UU + tU) : Math.max(0, UU - tU)
+          })(UU.speedRamp, PU, gU);
+        let qU = UU.x,
+          KU = UU.y;
+        if (PU > 0) {
+          const UU = .45 + .55 * TU,
+            gU = RU.context.overInteractive ? .45 : 1,
+            cU = 1400 * (UU => {
+              const RU = WU(UU, 0, 1);
+              return .3 * RU + .7 * RU * RU
+            })(PU) * pU * UU * gU;
+          qU += EU.x / PU * cU * tU, KU += EU.y / PU * cU * tU
         }
-        const SD = Math.hypot(CD.dpad.x, CD.dpad.y);
-        if (SD > 0) {
-          const DD = 500 * pD;
-          QD += CD.dpad.x / SD * DD * ID, wD += CD.dpad.y / SD * DD * ID
+        const cU = Math.hypot(RU.dpad.x, RU.dpad.y);
+        if (cU > 0) {
+          const UU = 500 * pU;
+          qU += RU.dpad.x / cU * UU * tU, KU += RU.dpad.y / cU * UU * tU
         }
-        const BD = CD.context.magnetTarget;
-        if (BD && fD < .3 && 0 === SD) {
-          const DD = ((DD, CD, cD, ID, pD) => {
-            const iD = CD.x - DD.x,
-              fD = CD.y - DD.y,
-              bD = Math.hypot(iD, fD);
-            if (0 === bD) return {
+        const GU = RU.context.magnetTarget;
+        if (GU && PU < .3 && 0 === cU) {
+          const UU = ((UU, RU, gU, tU, pU) => {
+            const EU = RU.x - UU.x,
+              PU = RU.y - UU.y,
+              TU = Math.hypot(EU, PU);
+            if (0 === TU) return {
               x: 0,
               y: 0
             };
-            const QD = Math.min(bD, pD * (1 - ID / .3));
-            let wD = iD / bD * QD,
-              SD = fD / bD * QD;
-            if (ID > 0) {
-              const DD = cD.x / ID,
-                CD = cD.y / ID,
-                pD = wD * DD + SD * CD;
-              pD < 0 && (wD -= pD * DD, SD -= pD * CD)
+            const qU = Math.min(TU, pU * (1 - tU / .3));
+            let KU = EU / TU * qU,
+              cU = PU / TU * qU;
+            if (tU > 0) {
+              const UU = gU.x / tU,
+                RU = gU.y / tU,
+                pU = KU * UU + cU * RU;
+              pU < 0 && (KU -= pU * UU, cU -= pU * RU)
             }
             return {
-              x: wD,
-              y: SD
+              x: KU,
+              y: cU
             }
           })({
-            x: QD,
-            y: wD
-          }, BD, iD, fD, 120 * gD(CD.viewport) * ID);
-          QD += DD.x, wD += DD.y
+            x: qU,
+            y: KU
+          }, GU, EU, PU, 120 * fU(RU.viewport) * tU);
+          qU += UU.x, KU += UU.y
         }
         return {
-          x: ND(QD, 0, Math.max(0, CD.viewport.width - 1)),
-          y: ND(wD, 0, Math.max(0, CD.viewport.height - 1)),
-          speedRamp: bD
+          x: WU(qU, 0, Math.max(0, RU.viewport.width - 1)),
+          y: WU(KU, 0, Math.max(0, RU.viewport.height - 1)),
+          speedRamp: TU
         }
       },
-      OD = DD => {
-        const CD = (0, tD.i)(DD, .2);
-        return 0 !== CD.x || 0 !== CD.y
+      JU = UU => {
+        const RU = (0, CU.g)(UU, .2);
+        return 0 !== RU.x || 0 !== RU.y
       },
-      PD = (DD, CD) => {
-        const cD = (0, tD.i)(DD, .2),
-          ID = Math.hypot(cD.x, cD.y);
-        if (0 === ID) return {
+      wU = (UU, RU) => {
+        const gU = (0, CU.g)(UU, .2),
+          tU = Math.hypot(gU.x, gU.y);
+        if (0 === tU) return {
           x: 0,
           y: 0
         };
-        const pD = ID * ID * 1600,
-          iD = ND(CD, 0, 100) / 1e3;
+        const pU = tU * tU * 1600,
+          EU = WU(RU, 0, 100) / 1e3;
         return {
-          x: cD.x / ID * pD * iD,
-          y: cD.y / ID * pD * iD
+          x: gU.x / tU * pU * EU,
+          y: gU.y / tU * pU * EU
         }
       },
-      HD = (DD, CD) => "y" === CD ? DD.scrollHeight > DD.clientHeight + 1 : DD.scrollWidth > DD.clientWidth + 1,
-      UD = (DD, CD) => {
-        if (!HD(DD, CD)) return !1;
-        const cD = getComputedStyle(DD),
-          ID = "y" === CD ? cD.overflowY : cD.overflowX;
-        return "auto" === ID || "scroll" === ID
+      nU = (UU, RU) => "y" === RU ? UU.scrollHeight > UU.clientHeight + 1 : UU.scrollWidth > UU.clientWidth + 1,
+      bU = (UU, RU) => {
+        if (!nU(UU, RU)) return !1;
+        const gU = getComputedStyle(UU),
+          tU = "y" === RU ? gU.overflowY : gU.overflowX;
+        return "auto" === tU || "scroll" === tU
       },
-      xD = (DD, CD, cD) => {
-        for (let iD = DD instanceof HTMLElement ? DD : null !== (ID = null === DD || void 0 === DD ? void 0 : DD.parentElement) && void 0 !== ID ? ID : null; iD; iD = iD.parentElement) {
-          var ID;
-          if (UD(iD, CD)) return iD;
-          if (iD === cD) return null
+      oU = (UU, RU, gU) => {
+        for (let EU = UU instanceof HTMLElement ? UU : null !== (tU = null === UU || void 0 === UU ? void 0 : UU.parentElement) && void 0 !== tU ? tU : null; EU; EU = EU.parentElement) {
+          var tU;
+          if (bU(EU, RU)) return EU;
+          if (EU === gU) return null
         }
-        if (cD) return null;
-        const pD = document.scrollingElement;
-        return pD instanceof HTMLElement && HD(pD, CD) ? pD : null
+        if (gU) return null;
+        const pU = document.scrollingElement;
+        return pU instanceof HTMLElement && nU(pU, RU) ? pU : null
       },
-      qD = new WeakMap,
-      JD = (DD, CD) => {
-        const cD = performance.now(),
-          ID = qD.get(DD);
-        if (ID && ID.axis === CD && cD - ID.atMs < 500 && (!ID.container || ID.container.isConnected)) return ID.container;
-        const pD = KD(DD, CD);
-        return qD.set(DD, {
-          axis: CD,
-          atMs: cD,
-          container: pD
-        }), pD
+      ZU = new WeakMap,
+      aU = (UU, RU) => {
+        const gU = performance.now(),
+          tU = ZU.get(UU);
+        if (tU && tU.axis === RU && gU - tU.atMs < 500 && (!tU.container || tU.container.isConnected)) return tU.container;
+        const pU = YU(UU, RU);
+        return ZU.set(UU, {
+          axis: RU,
+          atMs: gU,
+          container: pU
+        }), pU
       },
-      KD = (DD, CD) => {
-        let cD = UD(DD, CD) ? DD : null,
-          ID = cD ? cD.clientWidth * cD.clientHeight : 0;
-        for (const pD of DD.querySelectorAll("*")) {
-          const DD = pD.clientWidth * pD.clientHeight;
-          DD > ID && UD(pD, CD) && (cD = pD, ID = DD)
+      YU = (UU, RU) => {
+        let gU = bU(UU, RU) ? UU : null,
+          tU = gU ? gU.clientWidth * gU.clientHeight : 0;
+        for (const pU of UU.querySelectorAll("*")) {
+          const UU = pU.clientWidth * pU.clientHeight;
+          UU > tU && bU(pU, RU) && (gU = pU, tU = UU)
         }
-        return cD
+        return gU
       },
-      aD = (DD, CD, cD) => "y" === CD ? cD < 0 ? DD.scrollTop > 0 : DD.scrollTop + DD.clientHeight < DD.scrollHeight - 1 : cD < 0 ? DD.scrollLeft > 0 : DD.scrollLeft + DD.clientWidth < DD.scrollWidth - 1,
-      VD = (DD, CD, cD) => {
-        "y" === CD ? DD.scrollBy({
-          top: cD,
+      BU = (UU, RU, gU) => "y" === RU ? gU < 0 ? UU.scrollTop > 0 : UU.scrollTop + UU.clientHeight < UU.scrollHeight - 1 : gU < 0 ? UU.scrollLeft > 0 : UU.scrollLeft + UU.clientWidth < UU.scrollWidth - 1,
+      VU = (UU, RU, gU) => {
+        "y" === RU ? UU.scrollBy({
+          top: gU,
           behavior: "instant"
-        }) : DD.scrollBy({
-          left: cD,
+        }) : UU.scrollBy({
+          left: gU,
           behavior: "instant"
         })
       },
-      zD = DD => {
-        if (!DD || DD === document.scrollingElement) return new DOMRect(0, 0, window.innerWidth, window.innerHeight);
-        const CD = DD.getBoundingClientRect(),
-          cD = Math.max(0, CD.left),
-          ID = Math.max(0, CD.top);
-        return new DOMRect(cD, ID, Math.min(window.innerWidth, CD.right) - cD, Math.min(window.innerHeight, CD.bottom) - ID)
+      rU = UU => {
+        if (!UU || UU === document.scrollingElement) return new DOMRect(0, 0, window.innerWidth, window.innerHeight);
+        const RU = UU.getBoundingClientRect(),
+          gU = Math.max(0, RU.left),
+          tU = Math.max(0, RU.top);
+        return new DOMRect(gU, tU, Math.min(window.innerWidth, RU.right) - gU, Math.min(window.innerHeight, RU.bottom) - tU)
       },
-      jD = (DD, CD) => DD.left < CD.right && CD.left < DD.right && DD.top < CD.bottom && CD.top < DD.bottom;
-    var lD = cD(53),
-      LD = cD(1049),
-      TD = cD.n(LD),
-      GD = cD(1093);
-    let RD = 0,
-      kD = !1;
-    class dD {
+      XU = (UU, RU) => UU.left < RU.right && RU.left < UU.right && UU.top < RU.bottom && RU.top < UU.bottom;
+    var vU = gU(56),
+      dU = gU(1037),
+      HU = gU.n(dU),
+      SU = gU(1090);
+    let sU = 0,
+      yU = !1;
+    class kU {
       constructor() {
         this.element = null, this.shownKey = "", this.gap = null
       }
-      setElement(DD) {
-        this.element = DD, this.shownKey = "", this.gap = null
+      setElement(UU) {
+        this.element = UU, this.shownKey = "", this.gap = null
       }
-      show(DD) {
-        const CD = this.element;
-        if (!CD) return;
-        const cD = DD ? this.keepOnScreen(CD, DD) : null,
-          ID = cD ? `${cD.left},${cD.top},${cD.width},${cD.height}` : "";
-        if (ID === this.shownKey) return;
-        const pD = "" === this.shownKey;
-        this.shownKey = ID, CD.classList.toggle("Visible", null !== cD), cD && (CD.classList.toggle("Snap", pD), CD.style.width = `${cD.width}px`, CD.style.height = `${cD.height}px`, CD.style.transform = `translate(${cD.left}px, ${cD.top}px)`, pD && (CD.offsetWidth, CD.classList.remove("Snap")))
+      show(UU) {
+        const RU = this.element;
+        if (!RU) return;
+        const gU = UU ? this.keepOnScreen(RU, UU) : null,
+          tU = gU ? `${gU.left},${gU.top},${gU.width},${gU.height}` : "";
+        if (tU === this.shownKey) return;
+        const pU = "" === this.shownKey;
+        this.shownKey = tU, RU.classList.toggle("Visible", null !== gU), gU && (RU.classList.toggle("Snap", pU), RU.style.width = `${gU.width}px`, RU.style.height = `${gU.height}px`, RU.style.transform = `translate(${gU.left}px, ${gU.top}px)`, pU && (RU.offsetWidth, RU.classList.remove("Snap")))
       }
       hide() {
         this.show(null)
       }
-      keepOnScreen(DD, CD) {
-        var cD;
-        const ID = `${window.innerWidth}x${window.innerHeight}@${(()=>{if("undefined"===typeof ResizeObserver)return getComputedStyle(document.documentElement).fontSize;if(!kD){kD=!0;const DD=document.createElement("div");DD.setAttribute("aria-hidden","true"),DD.style.cssText="position: fixed; top: 0; left: 0; width: 1rem; height: 0; visibility: hidden; pointer-events: none",document.body.appendChild(DD),new ResizeObserver((()=>{RD++})).observe(DD)}return String(RD)})()}`;
-        (null === (cD = this.gap) || void 0 === cD ? void 0 : cD.key) !== ID && (this.gap = {
-          px: parseFloat(getComputedStyle(DD).paddingLeft) || 0,
-          key: ID
+      keepOnScreen(UU, RU) {
+        var gU;
+        const tU = `${window.innerWidth}x${window.innerHeight}@${(()=>{if("undefined"===typeof ResizeObserver)return getComputedStyle(document.documentElement).fontSize;if(!yU){yU=!0;const UU=document.createElement("div");UU.setAttribute("aria-hidden","true"),UU.style.cssText="position: fixed; top: 0; left: 0; width: 1rem; height: 0; visibility: hidden; pointer-events: none",document.body.appendChild(UU),new ResizeObserver((()=>{sU++})).observe(UU)}return String(sU)})()}`;
+        (null === (gU = this.gap) || void 0 === gU ? void 0 : gU.key) !== tU && (this.gap = {
+          px: parseFloat(getComputedStyle(UU).paddingLeft) || 0,
+          key: tU
         });
-        const pD = this.gap.px + 2,
-          iD = Math.max(CD.left, pD),
-          fD = Math.max(CD.top, pD),
-          bD = Math.min(CD.left + CD.width, window.innerWidth - pD),
-          QD = Math.min(CD.top + CD.height, window.innerHeight - pD);
-        return bD <= iD || QD <= fD ? CD : {
-          left: iD,
-          top: fD,
-          width: bD - iD,
-          height: QD - fD
+        const pU = this.gap.px + 2,
+          EU = Math.max(RU.left, pU),
+          PU = Math.max(RU.top, pU),
+          TU = Math.min(RU.left + RU.width, window.innerWidth - pU),
+          qU = Math.min(RU.top + RU.height, window.innerHeight - pU);
+        return TU <= EU || qU <= PU ? RU : {
+          left: EU,
+          top: PU,
+          width: TU - EU,
+          height: qU - PU
         }
       }
     }
-    const YD = DD => {
+    const FU = UU => {
       let {
-        placer: CD,
-        className: cD
-      } = DD;
-      const ID = (0, lD.useCallback)((DD => {
-        CD.setElement(DD)
-      }), [CD]);
-      return (0, GD.jsx)("div", {
-        ref: ID,
-        className: TD()("PadReticle", cD),
+        placer: RU,
+        className: gU
+      } = UU;
+      const tU = (0, vU.useCallback)((UU => {
+        RU.setElement(UU)
+      }), [RU]);
+      return (0, SU.jsx)("div", {
+        ref: tU,
+        className: HU()("PadReticle", gU),
         "aria-hidden": !0
       })
     };
-    var WD = cD(8355),
-      sD = cD(1710);
-    const ED = DD => DD >= 56320 && DD <= 57343,
-      eD = DD => DD >= 55296 && DD <= 56319,
-      uD = (DD, CD) => CD >= 2 && ED(DD.charCodeAt(CD - 1)) && eD(DD.charCodeAt(CD - 2)) ? CD - 2 : Math.max(0, CD - 1),
-      hD = (DD, CD) => {
-        let cD;
-        var ID, pD;
-        return cD = DD.start !== DD.end ? CD < 0 ? DD.start : DD.end : CD < 0 ? uD(DD.value, DD.start) : (ID = DD.value, (pD = DD.start) + 1 < ID.length && eD(ID.charCodeAt(pD)) && ED(ID.charCodeAt(pD + 1)) ? pD + 2 : Math.min(ID.length, pD + 1)), {
-          value: DD.value,
-          start: cD,
-          end: cD
+    var iU = gU(8307),
+      AU = gU(1640);
+    const zU = UU => UU >= 56320 && UU <= 57343,
+      MU = UU => UU >= 55296 && UU <= 56319,
+      DU = (UU, RU) => RU >= 2 && zU(UU.charCodeAt(RU - 1)) && MU(UU.charCodeAt(RU - 2)) ? RU - 2 : Math.max(0, RU - 1),
+      LU = (UU, RU) => {
+        let gU;
+        var tU, pU;
+        return gU = UU.start !== UU.end ? RU < 0 ? UU.start : UU.end : RU < 0 ? DU(UU.value, UU.start) : (tU = UU.value, (pU = UU.start) + 1 < tU.length && MU(tU.charCodeAt(pU)) && zU(tU.charCodeAt(pU + 1)) ? pU + 2 : Math.min(tU.length, pU + 1)), {
+          value: UU.value,
+          start: gU,
+          end: gU
         }
       },
-      rD = ["text", "search", "url", "email", "tel", "password", "number"],
-      AD = DD => !(!(0, sD.e)(DD) || DD.isContentEditable || DD.hasAttribute("data-pad-no-osk")) && (DD instanceof HTMLTextAreaElement || DD instanceof HTMLInputElement && rD.includes(DD.type)),
-      FD = DD => null !== DD.selectionStart,
-      DC = DD => {
-        var CD, cD;
+      NU = ["text", "search", "url", "email", "tel", "password", "number"],
+      lU = UU => !(!(0, AU.b)(UU) || UU.isContentEditable || UU.hasAttribute("data-pad-no-osk")) && (UU instanceof HTMLTextAreaElement || UU instanceof HTMLInputElement && NU.includes(UU.type)),
+      OU = UU => null !== UU.selectionStart,
+      UR = UU => {
+        var RU, gU;
         const {
-          value: ID
-        } = DD;
+          value: tU
+        } = UU;
         return {
-          value: ID,
-          start: null !== (CD = DD.selectionStart) && void 0 !== CD ? CD : ID.length,
-          end: null !== (cD = DD.selectionEnd) && void 0 !== cD ? cD : ID.length
+          value: tU,
+          start: null !== (RU = UU.selectionStart) && void 0 !== RU ? RU : tU.length,
+          end: null !== (gU = UU.selectionEnd) && void 0 !== gU ? gU : tU.length
         }
       },
-      CC = (DD, CD, cD) => {
-        if (DD.readOnly) return;
-        const ID = DD instanceof HTMLTextAreaElement ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
-        Object.getOwnPropertyDescriptor(ID, "value").set.call(DD, CD.value), FD(DD) && DD.setSelectionRange(CD.start, CD.end), (0, vD.h)(DD, new InputEvent("input", {
+      RR = (UU, RU, gU) => {
+        if (UU.readOnly) return;
+        const tU = UU instanceof HTMLTextAreaElement ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
+        Object.getOwnPropertyDescriptor(tU, "value").set.call(UU, RU.value), OU(UU) && UU.setSelectionRange(RU.start, RU.end), (0, eU.g)(UU, new InputEvent("input", {
           bubbles: !0,
-          inputType: cD
+          inputType: gU
         }))
       };
-    let cC = !1;
-    const IC = (DD, CD) => !!document.execCommand(DD, !1, CD) || (cC || (cC = !0, console.warn(`execCommand("${DD}") failed; the on-screen keyboard is setting the value directly`)), !1),
-      pC = (DD, CD) => {
-        IC("insertText", CD) || CC(DD, function(DD, CD) {
-          let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
-          const ID = DD.value.slice(0, DD.start),
-            pD = DD.value.slice(DD.end);
-          let iD = cD < 0 ? CD.length : Math.max(0, cD - ID.length - pD.length);
-          iD > 0 && iD < CD.length && eD(CD.charCodeAt(iD - 1)) && iD--;
-          const fD = CD.slice(0, iD),
-            bD = ID.length + fD.length;
+    let gR = !1;
+    const tR = (UU, RU) => !!document.execCommand(UU, !1, RU) || (gR || (gR = !0, console.warn(`execCommand("${UU}") failed; the on-screen keyboard is setting the value directly`)), !1),
+      pR = (UU, RU) => {
+        tR("insertText", RU) || RR(UU, function(UU, RU) {
+          let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
+          const tU = UU.value.slice(0, UU.start),
+            pU = UU.value.slice(UU.end);
+          let EU = gU < 0 ? RU.length : Math.max(0, gU - tU.length - pU.length);
+          EU > 0 && EU < RU.length && MU(RU.charCodeAt(EU - 1)) && EU--;
+          const PU = RU.slice(0, EU),
+            TU = tU.length + PU.length;
           return {
-            value: ID + fD + pD,
-            start: bD,
-            end: bD
+            value: tU + PU + pU,
+            start: TU,
+            end: TU
           }
-        }(DC(DD), CD, DD.maxLength), "insertText")
+        }(UR(UU), RU, UU.maxLength), "insertText")
       },
-      iC = DD => {
-        IC("delete") || CC(DD, (DD => {
-          const CD = DD.start === DD.end ? uD(DD.value, DD.start) : DD.start;
+      ER = UU => {
+        tR("delete") || RR(UU, (UU => {
+          const RU = UU.start === UU.end ? DU(UU.value, UU.start) : UU.start;
           return {
-            value: DD.value.slice(0, CD) + DD.value.slice(DD.end),
-            start: CD,
-            end: CD
+            value: UU.value.slice(0, RU) + UU.value.slice(UU.end),
+            start: RU,
+            end: RU
           }
-        })(DC(DD)), "deleteContentBackward")
+        })(UR(UU)), "deleteContentBackward")
       },
-      fC = (DD, CD) => {
-        if (!FD(DD)) return;
-        const cD = hD(DC(DD), CD);
-        DD.setSelectionRange(cD.start, cD.end)
+      PR = (UU, RU) => {
+        if (!OU(UU)) return;
+        const gU = LU(UR(UU), RU);
+        UU.setSelectionRange(gU.start, gU.end)
       },
-      bC = ["button", "a[href]", "input:not([type=hidden])", "textarea", "select", "[role=button]", "[role=tab]", "[role=switch]", "[role=checkbox]", "[role=option]", "[role=menuitem]", "[data-pad-focusable]", "[data-pad-tab]", ".Dropdown-control", ".Dropdown-option"].join(","),
-      QC = (DD, CD) => {
-        if ("function" === typeof DD.checkVisibility) return !DD.checkVisibility({
+      TR = ["button", "a[href]", "input:not([type=hidden])", "textarea", "select", "[role=button]", "[role=tab]", "[role=switch]", "[role=checkbox]", "[role=option]", "[role=menuitem]", "[data-pad-focusable]", "[data-pad-tab]", ".Dropdown-control", ".Dropdown-option"].join(","),
+      qR = (UU, RU) => {
+        if ("function" === typeof UU.checkVisibility) return !UU.checkVisibility({
           visibilityProperty: !0,
           checkVisibilityCSS: !0,
-          opacityProperty: CD,
-          checkOpacity: CD
+          opacityProperty: RU,
+          checkOpacity: RU
         });
         const {
-          visibility: cD
-        } = getComputedStyle(DD);
-        if ("hidden" === cD || "collapse" === cD) return !0;
-        if (!CD) return !1;
-        for (let ID = DD; ID; ID = ID.parentElement)
-          if ("0" === getComputedStyle(ID).opacity) return !0;
+          visibility: gU
+        } = getComputedStyle(UU);
+        if ("hidden" === gU || "collapse" === gU) return !0;
+        if (!RU) return !1;
+        for (let tU = UU; tU; tU = tU.parentElement)
+          if ("0" === getComputedStyle(tU).opacity) return !0;
         return !1
       },
-      wC = DD => {
-        if (!DD.isConnected || QC(DD, !0)) return !1;
-        const CD = DD.getBoundingClientRect();
-        return CD.width > 0 && CD.height > 0
+      KR = UU => {
+        if (!UU.isConnected || qR(UU, !0)) return !1;
+        const RU = UU.getBoundingClientRect();
+        return RU.width > 0 && RU.height > 0
       },
-      SC = DD => !!DD.matches(":disabled, [aria-disabled='true']") || "button" === DD.getAttribute("role") && "-1" === DD.getAttribute("tabindex"),
-      BC = DD => {
-        var CD;
-        if (DD.closest("[data-pad-ignore]")) return !0;
-        return !!(null === (CD = DD.parentElement) || void 0 === CD ? void 0 : CD.closest("[data-pad-focusable]"))
+      cR = UU => !!UU.matches(":disabled, [aria-disabled='true']") || "button" === UU.getAttribute("role") && "-1" === UU.getAttribute("tabindex"),
+      GR = UU => {
+        var RU;
+        if (UU.closest("[data-pad-ignore]")) return !0;
+        return !!(null === (RU = UU.parentElement) || void 0 === RU ? void 0 : RU.closest("[data-pad-focusable]"))
       },
-      yC = DD => {
-        const CD = DD.querySelectorAll(bC);
-        return DD.matches(bC) ? [DD, ...CD] : CD
+      jR = UU => {
+        const RU = UU.querySelectorAll(TR);
+        return UU.matches(TR) ? [UU, ...RU] : RU
       },
-      MC = DD => {
-        const CD = [];
-        for (const cD of yC(DD)) !BC(cD) && wC(cD) && CD.push(cD);
-        return CD
+      uR = UU => {
+        const RU = [];
+        for (const gU of jR(UU)) !GR(gU) && KR(gU) && RU.push(gU);
+        return RU
       },
-      tC = new WeakMap,
-      ZC = DD => {
-        const CD = tC.get(DD);
-        if (CD && oC(CD, DD)) return !0;
-        for (const cD of yC(DD))
-          if (!BC(cD) && wC(cD)) return tC.set(DD, cD), !0;
-        return tC.delete(DD), !1
+      CR = new WeakMap,
+      hR = UU => {
+        const RU = CR.get(UU);
+        if (RU && QR(RU, UU)) return !0;
+        for (const gU of jR(UU))
+          if (!GR(gU) && KR(gU)) return CR.set(UU, gU), !0;
+        return CR.delete(UU), !1
       },
-      oC = (DD, CD) => CD.contains(DD) && DD.matches(bC) && !BC(DD) && wC(DD),
-      vC = (DD, CD) => oC(DD, CD) && !SC(DD),
-      NC = DD => {
-        const CD = CD => {
-          let cD = 0;
-          for (let ID = CD.parentElement; ID && ID !== DD; ID = ID.parentElement) cD++;
-          return cD
+      QR = (UU, RU) => RU.contains(UU) && UU.matches(TR) && !GR(UU) && KR(UU),
+      eR = (UU, RU) => QR(UU, RU) && !cR(UU),
+      WR = UU => {
+        const RU = RU => {
+          let gU = 0;
+          for (let tU = RU.parentElement; tU && tU !== UU; tU = tU.parentElement) gU++;
+          return gU
         };
-        return [...DD.querySelectorAll("[data-pad-initial-area]")].filter(wC).sort(((DD, cD) => CD(cD) - CD(DD)))
+        return [...UU.querySelectorAll("[data-pad-initial-area]")].filter(KR).sort(((UU, gU) => RU(gU) - RU(UU)))
       },
-      gC = DD => AD(DD),
-      XC = DD => {
-        const CD = DD.getBoundingClientRect();
+      fR = UU => lU(UU),
+      xR = UU => {
+        const RU = UU.getBoundingClientRect();
         return {
-          x: CD.left + CD.width / 2,
-          y: CD.top + CD.height / 2
+          x: RU.left + RU.width / 2,
+          y: RU.top + RU.height / 2
         }
       },
-      mC = (DD, CD, cD) => ({
+      mR = (UU, RU, gU) => ({
         bubbles: !0,
         cancelable: !0,
         composed: !0,
         view: window,
-        clientX: DD.x,
-        clientY: DD.y,
-        screenX: DD.x,
-        screenY: DD.y,
-        button: CD,
-        buttons: cD,
+        clientX: UU.x,
+        clientY: UU.y,
+        screenX: UU.x,
+        screenY: UU.y,
+        button: RU,
+        buttons: gU,
         pointerId: 1,
         pointerType: "mouse",
         isPrimary: !0
       }),
-      nC = (DD, CD) => {
-        (0, vD.h)(DD, CD)
+      IR = (UU, RU) => {
+        (0, eU.g)(UU, RU)
       },
-      OC = function(DD, CD) {
-        let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        const ID = 0 === cD ? 1 : 2;
-        nC(DD, new PointerEvent("pointerdown", mC(CD, cD, ID))), nC(DD, new MouseEvent("mousedown", mC(CD, cD, ID)))
+      JR = function(UU, RU) {
+        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        const tU = 0 === gU ? 1 : 2;
+        IR(UU, new PointerEvent("pointerdown", mR(RU, gU, tU))), IR(UU, new MouseEvent("mousedown", mR(RU, gU, tU)))
       },
-      PC = function(DD, CD) {
-        let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        nC(DD, new PointerEvent("pointerup", mC(CD, cD, 0))), nC(DD, new MouseEvent("mouseup", mC(CD, cD, 0)))
+      wR = function(UU, RU) {
+        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        IR(UU, new PointerEvent("pointerup", mR(RU, gU, 0))), IR(UU, new MouseEvent("mouseup", mR(RU, gU, 0)))
       },
-      HC = function(DD, CD) {
-        let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        OC(DD, CD, cD), PC(DD, CD, cD), nC(DD, 0 === cD ? new MouseEvent("click", mC(CD, 0, 0)) : new MouseEvent("contextmenu", mC(CD, 2, 0)))
+      nR = function(UU, RU) {
+        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        JR(UU, RU, gU), wR(UU, RU, gU), IR(UU, 0 === gU ? new MouseEvent("click", mR(RU, 0, 0)) : new MouseEvent("contextmenu", mR(RU, 2, 0)))
       },
-      UC = function(DD, CD, cD) {
+      bR = function(UU, RU, gU) {
         let {
-          leaveBelow: ID = null,
-          enterBelow: pD = null
+          leaveBelow: tU = null,
+          enterBelow: pU = null
         } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        if (DD !== CD) {
-          if (null !== DD && void 0 !== DD && DD.isConnected) {
-            const pD = {
-              ...mC(cD, 0, 0),
-              relatedTarget: CD
+        if (UU !== RU) {
+          if (null !== UU && void 0 !== UU && UU.isConnected) {
+            const pU = {
+              ...mR(gU, 0, 0),
+              relatedTarget: RU
             };
-            nC(DD, new PointerEvent("pointerout", pD)), nC(DD, new MouseEvent("mouseout", pD));
-            const iD = DD => !!CD && DD.contains(CD) || !!ID && DD.contains(ID);
-            for (let CD = DD; CD && !iD(CD); CD = CD.parentElement) nC(CD, new PointerEvent("pointerleave", {
-              ...pD,
+            IR(UU, new PointerEvent("pointerout", pU)), IR(UU, new MouseEvent("mouseout", pU));
+            const EU = UU => !!RU && UU.contains(RU) || !!tU && UU.contains(tU);
+            for (let RU = UU; RU && !EU(RU); RU = RU.parentElement) IR(RU, new PointerEvent("pointerleave", {
+              ...pU,
               bubbles: !1
-            })), nC(CD, new MouseEvent("mouseleave", {
-              ...pD,
+            })), IR(RU, new MouseEvent("mouseleave", {
+              ...pU,
               bubbles: !1
             }))
           }
-          if (CD) {
-            const ID = {
-              ...mC(cD, 0, 0),
-              relatedTarget: DD
+          if (RU) {
+            const tU = {
+              ...mR(gU, 0, 0),
+              relatedTarget: UU
             };
-            nC(CD, new PointerEvent("pointerover", ID)), nC(CD, new MouseEvent("mouseover", ID));
-            const iD = [],
-              fD = CD => !(null === DD || void 0 === DD || !DD.isConnected) && CD.contains(DD) || !!pD && CD.contains(pD);
-            for (let DD = CD; DD && !fD(DD); DD = DD.parentElement) iD.push(DD);
-            for (const DD of iD.reverse()) nC(DD, new PointerEvent("pointerenter", {
-              ...ID,
+            IR(RU, new PointerEvent("pointerover", tU)), IR(RU, new MouseEvent("mouseover", tU));
+            const EU = [],
+              PU = RU => !(null === UU || void 0 === UU || !UU.isConnected) && RU.contains(UU) || !!pU && RU.contains(pU);
+            for (let UU = RU; UU && !PU(UU); UU = UU.parentElement) EU.push(UU);
+            for (const UU of EU.reverse()) IR(UU, new PointerEvent("pointerenter", {
+              ...tU,
               bubbles: !1
-            })), nC(DD, new MouseEvent("mouseenter", {
-              ...ID,
+            })), IR(UU, new MouseEvent("mouseenter", {
+              ...tU,
               bubbles: !1
             }));
-            nC(CD, new PointerEvent("pointermove", mC(cD, 0, 0))), nC(CD, new MouseEvent("mousemove", mC(cD, 0, 0)))
+            IR(RU, new PointerEvent("pointermove", mR(gU, 0, 0))), IR(RU, new MouseEvent("mousemove", mR(gU, 0, 0)))
           }
-        } else CD && (nC(CD, new PointerEvent("pointermove", mC(cD, 0, 0))), nC(CD, new MouseEvent("mousemove", mC(cD, 0, 0))))
+        } else RU && (IR(RU, new PointerEvent("pointermove", mR(gU, 0, 0))), IR(RU, new MouseEvent("mousemove", mR(gU, 0, 0))))
       },
-      xC = DD => {
-        wD.i.Uo(WD.f, DD)
+      oR = UU => {
+        KU.p.yh(iU.d, UU)
       },
-      qC = DD => {
-        if (gC(DD)) return void xC(DD);
-        const CD = DD.hasAttribute("data-pad-focusable") ? DD.querySelector("a[href]") : null,
-          cD = null !== CD && void 0 !== CD ? CD : DD;
-        HC(cD, XC(cD))
+      ZR = UU => {
+        if (fR(UU)) return void oR(UU);
+        const RU = UU.hasAttribute("data-pad-focusable") ? UU.querySelector("a[href]") : null,
+          gU = null !== RU && void 0 !== RU ? RU : UU;
+        nR(gU, xR(gU))
       },
-      JC = ".Dropdown-root.is-open",
-      KC = DD => {
-        const CD = DD.querySelector(".Dropdown-control");
-        return qC(CD), CD
+      aR = ".Dropdown-root.is-open",
+      YR = UU => {
+        const RU = UU.querySelector(".Dropdown-control");
+        return ZR(RU), RU
       },
-      aC = DD => {
-        var CD;
-        const cD = null !== (CD = DD.closest(JC)) && void 0 !== CD ? CD : DD.querySelector(JC);
-        return cD ? KC(cD) : null
+      BR = UU => {
+        var RU;
+        const gU = null !== (RU = UU.closest(aR)) && void 0 !== RU ? RU : UU.querySelector(aR);
+        return gU ? YR(gU) : null
       },
-      VC = DD => {
-        for (const CD of document.querySelectorAll(JC)) CD.contains(DD) || KC(CD)
+      VR = UU => {
+        for (const RU of document.querySelectorAll(aR)) RU.contains(UU) || YR(RU)
       },
-      zC = DD => null !== DD.closest("input[type=color], input[type=file], [data-pad-mouse-only]"),
-      jC = DD => {
-        const CD = DD ? document.elementFromPoint(DD.x, DD.y) : null;
-        return !(null === CD || void 0 === CD || !CD.closest("[data-pad-repeat]"))
+      rR = UU => null !== UU.closest("input[type=color], input[type=file], [data-pad-mouse-only]"),
+      XR = UU => {
+        const RU = UU ? document.elementFromPoint(UU.x, UU.y) : null;
+        return !(null === RU || void 0 === RU || !RU.closest("[data-pad-repeat]"))
       },
-      lC = DD => {
-        var CD;
-        return null !== (CD = [...DD.querySelectorAll("[data-pad-back]")].find(wC)) && void 0 !== CD ? CD : null
+      vR = UU => {
+        var RU;
+        return null !== (RU = [...UU.querySelectorAll("[data-pad-back]")].find(KR)) && void 0 !== RU ? RU : null
       },
-      LC = DD => {
-        const CD = lC(DD);
-        return !!CD && (qC(CD), !0)
+      dR = UU => {
+        const RU = vR(UU);
+        return !!RU && (ZR(RU), !0)
       },
-      TC = DD => {
-        var CD, cD, ID, pD;
-        return null !== (CD = null !== (cD = null !== (ID = DD.getAttribute("data-pad-key")) && void 0 !== ID ? ID : DD.getAttribute("href")) && void 0 !== cD ? cD : null === (pD = DD.querySelector("a[href]")) || void 0 === pD ? void 0 : pD.getAttribute("href")) && void 0 !== CD ? CD : null
+      HR = UU => {
+        var RU, gU, tU, pU;
+        return null !== (RU = null !== (gU = null !== (tU = UU.getAttribute("data-pad-key")) && void 0 !== tU ? tU : UU.getAttribute("href")) && void 0 !== gU ? gU : null === (pU = UU.querySelector("a[href]")) || void 0 === pU ? void 0 : pU.getAttribute("href")) && void 0 !== RU ? RU : null
       },
-      GC = {
+      SR = {
         x: 0,
         y: 0,
         visible: !1,
         pressed: !1
       };
-    const RC = new class {
+    const sR = new class {
         constructor() {
-          this.state = GC, this.listeners = new Set
+          this.state = SR, this.listeners = new Set
         }
         get() {
           return this.state
         }
-        set(DD) {
-          if (CD = this.state, cD = DD, (CD.visible || cD.visible) && (CD.visible !== cD.visible || CD.x !== cD.x || CD.y !== cD.y || CD.pressed !== cD.pressed)) {
-            var CD, cD;
-            this.state = DD;
-            for (const CD of this.listeners) CD(DD)
+        set(UU) {
+          if (RU = this.state, gU = UU, (RU.visible || gU.visible) && (RU.visible !== gU.visible || RU.x !== gU.x || RU.y !== gU.y || RU.pressed !== gU.pressed)) {
+            var RU, gU;
+            this.state = UU;
+            for (const RU of this.listeners) RU(UU)
           }
         }
         hide() {
-          this.set(GC)
+          this.set(SR)
         }
-        subscribe(DD) {
-          return this.listeners.add(DD), () => {
-            this.listeners.delete(DD)
+        subscribe(UU) {
+          return this.listeners.add(UU), () => {
+            this.listeners.delete(UU)
           }
         }
       },
-      kC = (DD, CD) => {
+      yR = (UU, RU) => {
         let {
-          kind: cD,
-          holding: ID,
-          hasPress: pD,
-          hasBack: iD,
-          slotHasItem: fD
-        } = CD;
-        switch (DD) {
+          kind: gU,
+          holding: tU,
+          hasPress: pU,
+          hasBack: EU,
+          slotHasItem: PU
+        } = RU;
+        switch (UU) {
           case "primary":
-            return "slot" === cD ? "slotPrimary" : "recipe" === cD || "button" === cD ? pD ? "pressPrimary" : "click" : "textField" === cD ? "openKeyboard" : null;
+            return "slot" === gU ? "slotPrimary" : "recipe" === gU || "button" === gU ? pU ? "pressPrimary" : "click" : "textField" === gU ? "openKeyboard" : null;
           case "secondary":
-            return "slot" === cD ? "slotSecondary" : "button" !== cD && "recipe" !== cD || !pD ? null : "pressSecondary";
+            return "slot" === gU ? "slotSecondary" : "button" !== gU && "recipe" !== gU || !pU ? null : "pressSecondary";
           case "quickMove":
-            return "slot" === cD && fD ? "slotQuickMove" : null;
+            return "slot" === gU && PU ? "slotQuickMove" : null;
           case "hotbarSwap":
-            return "slot" === cD && fD && !ID ? "hotbarPick" : null;
+            return "slot" === gU && PU && !tU ? "hotbarPick" : null;
           case "openButton":
             return "close";
           case "back":
-            return ID ? "cancel" : iD ? "pressBack" : "close"
+            return tU ? "cancel" : EU ? "pressBack" : "close"
         }
       },
-      dC = DD => {
-        const CD = [];
-        if (DD.hotbarPicking) return CD.push({
+      kR = UU => {
+        const RU = [];
+        if (UU.hotbarPicking) return RU.push({
           actions: ["inventoryPrimary", "inventoryHotbarSwap"],
           labelKey: "inventorySwapHere"
-        }), CD.push({
+        }), RU.push({
           actions: ["inventoryClose"],
           labelKey: "inventoryCancel"
-        }), CD;
-        if (DD.holding) "slot" === DD.kind ? (CD.push({
+        }), RU;
+        if (UU.holding) "slot" === UU.kind ? (RU.push({
           actions: ["inventoryPrimary"],
           labelKey: "inventoryPlace"
-        }), CD.push({
+        }), RU.push({
           actions: ["inventorySecondary"],
           labelKey: "inventoryPlaceOne"
-        })) : "textField" === DD.kind && CD.push({
+        })) : "textField" === UU.kind && RU.push({
           actions: ["inventoryPrimary"],
           labelKey: "inventoryType"
-        }), CD.push({
+        }), RU.push({
           actions: ["inventoryClose"],
           labelKey: "inventoryPutBack"
-        }), CD.push({
+        }), RU.push({
           actions: ["inventoryDrop"],
           labelKey: "inventoryDrop"
-        }), DD.openButtonCloses && CD.push({
+        }), UU.openButtonCloses && RU.push({
           actions: ["inventory"],
           labelKey: "inventoryClose"
         });
         else {
-          var cD;
-          "slot" === DD.kind && DD.slotHasItem ? (CD.push({
+          var gU;
+          "slot" === UU.kind && UU.slotHasItem ? (RU.push({
             actions: ["inventoryPrimary"],
             labelKey: "inventoryTake"
-          }), CD.push({
+          }), RU.push({
             actions: ["inventorySecondary"],
             labelKey: "inventoryTakeHalf"
-          }), CD.push({
+          }), RU.push({
             actions: ["inventoryQuickMove"],
-            labelKey: DD.quickMoveToHotbar ? "inventoryToHotbar" : "inventoryQuickMove"
-          }), CD.push({
+            labelKey: UU.quickMoveToHotbar ? "inventoryToHotbar" : "inventoryQuickMove"
+          }), RU.push({
             actions: ["inventoryHotbarSwap"],
             labelKey: "inventoryHotbarSwap"
-          }), CD.push({
+          }), RU.push({
             actions: ["inventoryDrop"],
             labelKey: "inventoryDrop"
-          })) : "button" !== DD.kind && "recipe" !== DD.kind || !DD.pressHints ? "button" === DD.kind || "recipe" === DD.kind ? CD.push({
+          })) : "button" !== UU.kind && "recipe" !== UU.kind || !UU.pressHints ? "button" === UU.kind || "recipe" === UU.kind ? RU.push({
             actions: ["inventoryPrimary"],
             labelKey: "inventorySelect"
-          }) : "textField" === DD.kind && CD.push({
+          }) : "textField" === UU.kind && RU.push({
             actions: ["inventoryPrimary"],
             labelKey: "inventoryType"
-          }) : (DD.pressHints.primary && CD.push({
+          }) : (UU.pressHints.primary && RU.push({
             actions: ["inventoryPrimary"],
-            labelKey: DD.pressHints.primary
-          }), DD.pressHints.secondary && CD.push({
+            labelKey: UU.pressHints.primary
+          }), UU.pressHints.secondary && RU.push({
             actions: ["inventorySecondary"],
-            labelKey: DD.pressHints.secondary
+            labelKey: UU.pressHints.secondary
           }));
-          const ID = null === (cD = DD.pressHints) || void 0 === cD ? void 0 : cD.back;
-          ID && CD.push({
+          const tU = null === (gU = UU.pressHints) || void 0 === gU ? void 0 : gU.back;
+          tU && RU.push({
             actions: ["inventoryClose"],
-            labelKey: ID
+            labelKey: tU
           });
-          const pD = [];
-          DD.openButtonCloses && pD.push("inventory"), ID || pD.push("inventoryClose"), pD.length > 0 && CD.push({
-            actions: pD,
+          const pU = [];
+          UU.openButtonCloses && pU.push("inventory"), tU || pU.push("inventoryClose"), pU.length > 0 && RU.push({
+            actions: pU,
             labelKey: "inventoryClose"
           })
         }
-        return CD.push({
+        return RU.push({
           actions: ["inventoryPanelPrevious", "inventoryPanelNext"],
           labelKey: "inventoryPanels"
-        }), DD.hasCategories ? CD.push({
+        }), UU.hasCategories ? RU.push({
           actions: ["menuPageUp", "menuPageDown"],
           labelKey: "inventoryCategory"
-        }) : DD.hasList && CD.push({
+        }) : UU.hasList && RU.push({
           actions: ["menuPageUp", "menuPageDown"],
           labelKey: "inventoryPage"
-        }), CD
+        }), RU
       };
-    var YC = cD(8363);
-    class WC {
-      constructor(DD) {
-        this.probes = DD, this.byContainer = new Map, this.byParent = new Map
+    var FR = gU(8316);
+    class iR {
+      constructor(UU) {
+        this.probes = UU, this.byContainer = new Map, this.byParent = new Map
       }
-      find(DD, CD) {
-        const cD = xD(DD, "y", CD);
-        if (!cD) return null;
-        let ID = this.byContainer.get(cD);
-        return ID || (this.probes.push({
-          element: cD,
-          rect: uC(cD.getBoundingClientRect())
-        }), ID = {
-          container: cD,
-          box: zD(cD),
-          group: eC(cD)
-        }, this.byContainer.set(cD, ID)), ID
+      find(UU, RU) {
+        const gU = oU(UU, "y", RU);
+        if (!gU) return null;
+        let tU = this.byContainer.get(gU);
+        return tU || (this.probes.push({
+          element: gU,
+          rect: DR(gU.getBoundingClientRect())
+        }), tU = {
+          container: gU,
+          box: rU(gU),
+          group: MR(gU)
+        }, this.byContainer.set(gU, tU)), tU
       }
-      findForParent(DD, CD) {
-        let cD = this.byParent.get(DD);
-        return void 0 === cD && (cD = this.find(DD, CD), this.byParent.set(DD, cD)), cD
+      findForParent(UU, RU) {
+        let gU = this.byParent.get(UU);
+        return void 0 === gU && (gU = this.find(UU, RU), this.byParent.set(UU, gU)), gU
       }
     }
-    const sC = new WeakMap;
-    let EC = 0;
-    const eC = DD => {
-        let CD = sC.get(DD);
-        return CD || (CD = "el:" + EC++, sC.set(DD, CD)), CD
+    const AR = new WeakMap;
+    let zR = 0;
+    const MR = UU => {
+        let RU = AR.get(UU);
+        return RU || (RU = "el:" + zR++, AR.set(UU, RU)), RU
       },
-      uC = DD => ({
-        left: DD.left,
-        top: DD.top,
-        width: DD.width,
-        height: DD.height
+      DR = UU => ({
+        left: UU.left,
+        top: UU.top,
+        width: UU.width,
+        height: UU.height
       }),
-      hC = DD => DD.width > 0 && DD.height > 0,
-      rC = (DD, CD) => hC(DD) && DD.left + DD.width > 0 && DD.top + DD.height > 0 && DD.left < CD.width && DD.top < CD.height,
-      AC = (DD, CD, cD) => {
-        const ID = DD.top + DD.height / 2;
-        return rC(DD, CD) && (!cD || ID >= cD.top && ID <= cD.bottom)
+      LR = UU => UU.width > 0 && UU.height > 0,
+      NR = (UU, RU) => LR(UU) && UU.left + UU.width > 0 && UU.top + UU.height > 0 && UU.left < RU.width && UU.top < RU.height,
+      lR = (UU, RU, gU) => {
+        const tU = UU.top + UU.height / 2;
+        return NR(UU, RU) && (!gU || tU >= gU.top && tU <= gU.bottom)
       },
-      FC = DD => ({
-        x: DD.left + DD.width / 2,
-        y: DD.top + DD.height / 2
+      OR = UU => ({
+        x: UU.left + UU.width / 2,
+        y: UU.top + UU.height / 2
       }),
-      Dc = (DD, CD, cD) => DD < 0 ? cD >= 0 ? 0 : CD - 1 : ((DD + cD) % CD + CD) % CD,
-      Cc = DD => "Left" === DD || "Right" === DD,
-      cc = (DD, CD, cD) => {
-        const ID = Cc(cD),
-          pD = ID ? DD.top : DD.left,
-          iD = ID ? DD.height : DD.width,
-          fD = ID ? CD.top : CD.left,
-          bD = ID ? CD.height : CD.width,
-          QD = Math.max(0, Math.max(fD - (pD + iD), pD - (fD + bD)));
-        return iD > 1.5 * bD ? {
-          gap: QD,
-          offset: Math.max(0, fD - pD) + .1 * Math.max(0, pD - fD)
+      Ug = (UU, RU, gU) => UU < 0 ? gU >= 0 ? 0 : RU - 1 : ((UU + gU) % RU + RU) % RU,
+      Rg = UU => "Left" === UU || "Right" === UU,
+      gg = (UU, RU, gU) => {
+        const tU = Rg(gU),
+          pU = tU ? UU.top : UU.left,
+          EU = tU ? UU.height : UU.width,
+          PU = tU ? RU.top : RU.left,
+          TU = tU ? RU.height : RU.width,
+          qU = Math.max(0, Math.max(PU - (pU + EU), pU - (PU + TU)));
+        return EU > 1.5 * TU ? {
+          gap: qU,
+          offset: Math.max(0, PU - pU) + .1 * Math.max(0, pU - PU)
         } : {
-          gap: QD,
-          offset: Math.abs(fD + bD / 2 - (pD + iD / 2))
+          gap: qU,
+          offset: Math.abs(PU + TU / 2 - (pU + EU / 2))
         }
       },
-      Ic = (DD, CD, cD) => {
-        const ID = ((DD, CD, cD) => {
-          const ID = FC(DD),
-            pD = FC(CD),
-            iD = Cc(cD) ? Math.min(DD.width, CD.width) / 4 : Math.min(DD.height, CD.height) / 4;
-          switch (cD) {
+      tg = (UU, RU, gU) => {
+        const tU = ((UU, RU, gU) => {
+          const tU = OR(UU),
+            pU = OR(RU),
+            EU = Rg(gU) ? Math.min(UU.width, RU.width) / 4 : Math.min(UU.height, RU.height) / 4;
+          switch (gU) {
             case "Right":
-              return pD.x - ID.x >= iD ? Math.max(0, CD.left - (DD.left + DD.width)) : null;
+              return pU.x - tU.x >= EU ? Math.max(0, RU.left - (UU.left + UU.width)) : null;
             case "Left":
-              return ID.x - pD.x >= iD ? Math.max(0, DD.left - (CD.left + CD.width)) : null;
+              return tU.x - pU.x >= EU ? Math.max(0, UU.left - (RU.left + RU.width)) : null;
             case "Down":
-              return pD.y - ID.y >= iD ? Math.max(0, CD.top - (DD.top + DD.height)) : null;
+              return pU.y - tU.y >= EU ? Math.max(0, RU.top - (UU.top + UU.height)) : null;
             case "Up":
-              return ID.y - pD.y >= iD ? Math.max(0, DD.top - (CD.top + CD.height)) : null
+              return tU.y - pU.y >= EU ? Math.max(0, UU.top - (RU.top + RU.height)) : null
           }
-        })(DD, CD, cD);
-        if (null === ID) return null;
-        const pD = cc(DD, CD, cD);
-        return ID + 3 * pD.gap + .5 * pD.offset
+        })(UU, RU, gU);
+        if (null === tU) return null;
+        const pU = gg(UU, RU, gU);
+        return tU + 3 * pU.gap + .5 * pU.offset
       },
-      pc = (DD, CD) => CD.visible || null !== CD.scrollGroup && CD.scrollGroup === DD.scrollGroup,
-      ic = (DD, CD, cD, ID) => {
-        let pD = null,
-          iD = 1 / 0;
-        for (const fD of CD) {
-          if (fD.key === DD.key || !pc(DD, fD) || !ID(fD)) continue;
-          const CD = Ic(DD.rect, fD.rect, cD);
-          null !== CD && CD < iD && (pD = fD, iD = CD)
+      pg = (UU, RU) => RU.visible || null !== RU.scrollGroup && RU.scrollGroup === UU.scrollGroup,
+      Eg = (UU, RU, gU, tU) => {
+        let pU = null,
+          EU = 1 / 0;
+        for (const PU of RU) {
+          if (PU.key === UU.key || !pg(UU, PU) || !tU(PU)) continue;
+          const RU = tg(UU.rect, PU.rect, gU);
+          null !== RU && RU < EU && (pU = PU, EU = RU)
         }
-        return pD
+        return pU
       },
-      fc = (DD, CD, cD) => {
-        const ID = ic(DD, CD, cD, (() => !0));
-        if (!ID || Cc(cD) || null === DD.scrollGroup || ID.scrollGroup === DD.scrollGroup) return ID;
-        const pD = ic(DD, CD, cD, (CD => 0 === cc(DD.rect, CD.rect, cD).gap));
-        return null !== pD && void 0 !== pD ? pD : ID
+      Pg = (UU, RU, gU) => {
+        const tU = Eg(UU, RU, gU, (() => !0));
+        if (!tU || Rg(gU) || null === UU.scrollGroup || tU.scrollGroup === UU.scrollGroup) return tU;
+        const pU = Eg(UU, RU, gU, (RU => 0 === gg(UU.rect, RU.rect, gU).gap));
+        return null !== pU && void 0 !== pU ? pU : tU
       },
-      bc = (DD, CD, cD) => {
-        let ID = null,
-          pD = 1 / 0;
-        for (const iD of CD) {
-          if (!iD.visible || cD && !cD(iD)) continue;
-          const CD = FC(iD.rect),
-            fD = Math.hypot(CD.x - DD.x, CD.y - DD.y);
-          fD < pD && (ID = iD, pD = fD)
+      Tg = (UU, RU, gU) => {
+        let tU = null,
+          pU = 1 / 0;
+        for (const EU of RU) {
+          if (!EU.visible || gU && !gU(EU)) continue;
+          const RU = OR(EU.rect),
+            PU = Math.hypot(RU.x - UU.x, RU.y - UU.y);
+          PU < pU && (tU = EU, pU = PU)
         }
-        return ID
+        return tU
       },
-      Qc = DD => {
+      qg = UU => {
         const {
-          rect: CD,
-          clip: cD
-        } = DD;
-        if (!cD) return CD;
-        const ID = Math.max(CD.left, cD.left),
-          pD = Math.max(CD.top, cD.top);
+          rect: RU,
+          clip: gU
+        } = UU;
+        if (!gU) return RU;
+        const tU = Math.max(RU.left, gU.left),
+          pU = Math.max(RU.top, gU.top);
         return {
-          left: ID,
-          top: pD,
-          width: Math.min(CD.left + CD.width, cD.left + cD.width) - ID,
-          height: Math.min(CD.top + CD.height, cD.top + cD.height) - pD
+          left: tU,
+          top: pU,
+          width: Math.min(RU.left + RU.width, gU.left + gU.width) - tU,
+          height: Math.min(RU.top + RU.height, gU.top + gU.height) - pU
         }
       },
-      wc = (DD, CD) => CD.x >= DD.left && CD.x < DD.left + DD.width && CD.y >= DD.top && CD.y < DD.top + DD.height,
-      Sc = (DD, CD) => {
-        let cD = null,
-          ID = 1 / 0;
-        for (const pD of CD) {
-          const CD = Qc(pD);
-          (pD.visible || pD.clip) && wc(CD, DD) && (CD.width * CD.height < ID && (cD = pD, ID = CD.width * CD.height))
+      Kg = (UU, RU) => RU.x >= UU.left && RU.x < UU.left + UU.width && RU.y >= UU.top && RU.y < UU.top + UU.height,
+      cg = (UU, RU) => {
+        let gU = null,
+          tU = 1 / 0;
+        for (const pU of RU) {
+          const RU = qg(pU);
+          (pU.visible || pU.clip) && Kg(RU, UU) && (RU.width * RU.height < tU && (gU = pU, tU = RU.width * RU.height))
         }
-        return cD
+        return gU
       },
-      Bc = DD => {
-        let CD = null;
-        for (const cD of DD) {
-          if (!cD.visible) continue;
-          if (!CD) {
-            CD = cD;
+      Gg = UU => {
+        let RU = null;
+        for (const gU of UU) {
+          if (!gU.visible) continue;
+          if (!RU) {
+            RU = gU;
             continue
           }
-          const DD = Math.min(CD.rect.height, cD.rect.height) / 2,
-            ID = cD.rect.top - CD.rect.top;
-          (ID < -DD || Math.abs(ID) <= DD && cD.rect.left < CD.rect.left) && (CD = cD)
+          const UU = Math.min(RU.rect.height, gU.rect.height) / 2,
+            tU = gU.rect.top - RU.rect.top;
+          (tU < -UU || Math.abs(tU) <= UU && gU.rect.left < RU.rect.left) && (RU = gU)
         }
-        return CD
+        return RU
       },
-      yc = (DD, CD, cD, ID, pD) => {
-        const iD = pD % CD,
-          fD = Math.floor(pD / CD);
+      jg = (UU, RU, gU, tU, pU) => {
+        const EU = pU % RU,
+          PU = Math.floor(pU / RU);
         return {
-          left: DD.left + iD * cD,
-          top: DD.top + fD * ID,
-          width: DD.width,
-          height: DD.height
+          left: UU.left + EU * gU,
+          top: UU.top + PU * tU,
+          width: UU.width,
+          height: UU.height
         }
       },
-      Mc = ".EntireInventoryWrapper .Inventory, .HotBarGameItemsContainer",
-      tc = ".LazyLoadedItemWrapper",
-      Zc = ["[data-inven-idx]", "[data-recipe-key]", "[role=button]", "button", "input:not([type=hidden])", "textarea", ".CreativeCategoryTab", ".CreativeCategoryDropdownButton", ".CreativeCategoryDropdownOption", "[data-craft-ingredient]"].join(","),
-      oc = [
+      ug = ".EntireInventoryWrapper .Inventory, .HotBarGameItemsContainer",
+      Cg = ".LazyLoadedItemWrapper",
+      hg = ["[data-inven-idx]", "[data-recipe-key]", "[role=button]", "button", "input:not([type=hidden])", "textarea", ".CreativeCategoryTab", ".CreativeCategoryDropdownButton", ".CreativeCategoryDropdownOption", "[data-craft-ingredient]"].join(","),
+      Qg = [
         ["hotbar", ".HotBarGameItemsContainer"],
         ["gameButtons", ".ClientGameInventoryButtons"],
         ["categories", ".CreativeCategoryRail"],
@@ -1332,219 +1332,219 @@ export const modules = {
         ["main", ".InvenBodyRight"],
         ["left", ".InvenLeftSide"]
       ],
-      vc = ["gameButtons", "categories", "left", "recipe", "armour", "main", "hotbar"],
-      Nc = DD => DD.hasAttribute("data-inven-idx") ? "slot" : DD.hasAttribute("data-recipe-key") ? "recipe" : DD.hasAttribute("data-craft-ingredient") || SC(DD) ? "info" : gC(DD) ? "textField" : "button",
-      gc = (DD, CD) => "slot" === CD ? Number(DD.getAttribute("data-inven-idx")) : null,
-      Xc = DD => DD.matches(tc) ? DD.querySelector(Zc) : DD,
-      mc = DD => {
-        var CD, cD;
+      eg = ["gameButtons", "categories", "left", "recipe", "armour", "main", "hotbar"],
+      Wg = UU => UU.hasAttribute("data-inven-idx") ? "slot" : UU.hasAttribute("data-recipe-key") ? "recipe" : UU.hasAttribute("data-craft-ingredient") || cR(UU) ? "info" : fR(UU) ? "textField" : "button",
+      fg = (UU, RU) => "slot" === RU ? Number(UU.getAttribute("data-inven-idx")) : null,
+      xg = UU => UU.matches(Cg) ? UU.querySelector(hg) : UU,
+      mg = UU => {
+        var RU, gU;
         return {
-          element: DD,
-          recipe: null !== (CD = DD && (null === (cD = Xc(DD)) || void 0 === cD ? void 0 : cD.getAttribute("data-recipe-key"))) && void 0 !== CD ? CD : null
+          element: UU,
+          recipe: null !== (RU = UU && (null === (gU = xg(UU)) || void 0 === gU ? void 0 : gU.getAttribute("data-recipe-key"))) && void 0 !== RU ? RU : null
         }
       },
-      nc = DD => {
-        const CD = Xc(DD);
-        if (!CD) return {
+      Ig = UU => {
+        const RU = xg(UU);
+        if (!RU) return {
           kind: "pending",
           idx: null
         };
-        const cD = Nc(CD);
+        const gU = Wg(RU);
         return {
-          kind: cD,
-          idx: gc(CD, cD)
+          kind: gU,
+          idx: fg(RU, gU)
         }
       },
-      Oc = DD => {
-        const CD = [];
-        for (const [cD, ID] of oc) {
-          DD.matches(ID) && CD.push([cD, DD]);
-          for (const pD of DD.querySelectorAll(ID)) CD.push([cD, pD])
+      Jg = UU => {
+        const RU = [];
+        for (const [gU, tU] of Qg) {
+          UU.matches(tU) && RU.push([gU, UU]);
+          for (const pU of UU.querySelectorAll(tU)) RU.push([gU, pU])
         }
-        return CD
+        return RU
       },
-      Pc = (DD, CD) => {
-        for (const [cD, ID] of DD)
-          if (ID.contains(CD)) return cD;
+      wg = (UU, RU) => {
+        for (const [gU, tU] of UU)
+          if (tU.contains(RU)) return gU;
         return "other"
       },
-      Hc = (DD, CD, cD, ID, pD, iD, fD, bD) => {
-        var QD;
-        const wD = DD.children,
-          SD = uC(wD[0].getBoundingClientRect()),
-          BD = [{
-            element: wD[0],
-            rect: SD
+      ng = (UU, RU, gU, tU, pU, EU, PU, TU) => {
+        var qU;
+        const KU = UU.children,
+          cU = DR(KU[0].getBoundingClientRect()),
+          GU = [{
+            element: KU[0],
+            rect: cU
           }];
-        if (iD.push(BD[0]), 0 === SD.width || 0 === SD.height) return;
-        let yD = 1;
-        for (; yD < wD.length && Math.abs(wD[yD].getBoundingClientRect().top - SD.top) < 1;) yD++;
-        const MD = DD => {
-            const CD = {
-              element: wD[DD],
-              rect: uC(wD[DD].getBoundingClientRect())
+        if (EU.push(GU[0]), 0 === cU.width || 0 === cU.height) return;
+        let jU = 1;
+        for (; jU < KU.length && Math.abs(KU[jU].getBoundingClientRect().top - cU.top) < 1;) jU++;
+        const uU = UU => {
+            const RU = {
+              element: KU[UU],
+              rect: DR(KU[UU].getBoundingClientRect())
             };
-            return iD.push(CD), BD.push(CD), CD.rect
+            return EU.push(RU), GU.push(RU), RU.rect
           },
-          tD = yD > 1 ? MD(1).left - SD.left : SD.width,
-          ZD = wD.length > yD ? MD(yD).top - SD.top : SD.height,
-          oD = fD.find(DD, CD);
-        let vD = null;
-        if (oD) {
-          var ND;
+          CU = jU > 1 ? uU(1).left - cU.left : cU.width,
+          hU = KU.length > jU ? uU(jU).top - cU.top : cU.height,
+          QU = PU.find(UU, RU);
+        let eU = null;
+        if (QU) {
+          var WU;
           const {
-            container: DD,
-            box: CD
-          } = oD;
-          vD = null !== (ND = bD.get(DD)) && void 0 !== ND ? ND : null, vD || (vD = {
-            top: DD.scrollTop,
-            left: DD.scrollLeft,
-            box: CD,
-            viewport: ID,
+            container: UU,
+            box: RU
+          } = QU;
+          eU = null !== (WU = TU.get(UU)) && void 0 !== WU ? WU : null, eU || (eU = {
+            top: UU.scrollTop,
+            left: UU.scrollLeft,
+            box: RU,
+            viewport: tU,
             targets: [],
             probes: [],
             holdsOthers: !1
-          }, bD.set(DD, vD)), vD.probes.push(...BD)
+          }, TU.set(UU, eU)), eU.probes.push(...GU)
         }
-        const gD = pD.length;
-        for (let OD = 0; OD < wD.length; OD++) {
-          var XD, mD, nD;
-          const DD = wD[OD],
-            CD = yc(SD, yD, tD, ZD, OD),
-            iD = DD.firstElementChild ? DD.querySelector(Zc) : null,
-            fD = iD ? Nc(iD) : "pending";
-          pD.push({
-            key: eC(DD),
-            rect: CD,
-            panel: cD,
-            scrollGroup: null !== (XD = null === oD || void 0 === oD ? void 0 : oD.group) && void 0 !== XD ? XD : null,
-            visible: AC(CD, ID, null === oD || void 0 === oD ? void 0 : oD.box),
-            clip: null !== (mD = null === oD || void 0 === oD ? void 0 : oD.box) && void 0 !== mD ? mD : null,
-            element: DD,
-            kind: fD,
-            idx: iD ? gc(iD, fD) : null,
-            scrollContainer: null !== (nD = null === oD || void 0 === oD ? void 0 : oD.container) && void 0 !== nD ? nD : null
+        const fU = pU.length;
+        for (let JU = 0; JU < KU.length; JU++) {
+          var xU, mU, IU;
+          const UU = KU[JU],
+            RU = jg(cU, jU, CU, hU, JU),
+            EU = UU.firstElementChild ? UU.querySelector(hg) : null,
+            PU = EU ? Wg(EU) : "pending";
+          pU.push({
+            key: MR(UU),
+            rect: RU,
+            panel: gU,
+            scrollGroup: null !== (xU = null === QU || void 0 === QU ? void 0 : QU.group) && void 0 !== xU ? xU : null,
+            visible: lR(RU, tU, null === QU || void 0 === QU ? void 0 : QU.box),
+            clip: null !== (mU = null === QU || void 0 === QU ? void 0 : QU.box) && void 0 !== mU ? mU : null,
+            element: UU,
+            kind: PU,
+            idx: EU ? fg(EU, PU) : null,
+            scrollContainer: null !== (IU = null === QU || void 0 === QU ? void 0 : QU.container) && void 0 !== IU ? IU : null
           })
         }
-        null === (QD = vD) || void 0 === QD || QD.targets.push(...pD.slice(gD))
+        null === (qU = eU) || void 0 === qU || qU.targets.push(...pU.slice(fU))
       },
-      Uc = DD => DD instanceof Element && null !== DD.closest(tc),
-      xc = DD => null !== DD.scrollContainer && Uc(DD.element);
-    class qc {
+      bg = UU => UU instanceof Element && null !== UU.closest(Cg),
+      og = UU => null !== UU.scrollContainer && bg(UU.element);
+    class Zg {
       constructor() {
         this.latched = null, this.presses = 0
       }
-      press(DD, CD, cD, ID) {
+      press(UU, RU, gU, tU) {
         this.latched = {
-          source: DD,
-          focusKey: CD,
-          sinceMs: cD,
+          source: UU,
+          focusKey: RU,
+          sinceMs: gU,
           hold: {
             id: ++this.presses,
-            holdMs: ID
+            holdMs: tU
           }
         }
       }
-      update(DD, CD, cD) {
-        const ID = this.latched;
-        return ID ? DD && CD === ID.focusKey ? cD - ID.sinceMs < ID.hold.holdMs ? null : (this.latched = null, ID.source) : (this.latched = null, null) : null
+      update(UU, RU, gU) {
+        const tU = this.latched;
+        return tU ? UU && RU === tU.focusKey ? gU - tU.sinceMs < tU.hold.holdMs ? null : (this.latched = null, tU.source) : (this.latched = null, null) : null
       }
       getHold() {
-        var DD, CD;
-        return null !== (DD = null === (CD = this.latched) || void 0 === CD ? void 0 : CD.hold) && void 0 !== DD ? DD : null
+        var UU, RU;
+        return null !== (UU = null === (RU = this.latched) || void 0 === RU ? void 0 : RU.hold) && void 0 !== UU ? UU : null
       }
       reset() {
         this.latched = null
       }
     }
-    var Jc = cD(8369);
-    const Kc = {
+    var ag = gU(8319);
+    const Yg = {
         kind: "none"
       },
-      ac = DD => ({
-        x: DD.clientX,
-        y: DD.clientY
+      Bg = UU => ({
+        x: UU.clientX,
+        y: UU.clientY
       }),
-      Vc = () => 2 * (parseFloat(getComputedStyle(document.documentElement).fontSize) || 16);
-    class zc {
+      Vg = () => 2 * (parseFloat(getComputedStyle(document.documentElement).fontSize) || 16);
+    class rg {
       constructor() {
-        this.hovered = Kc, this.signature = "", this.holding = !1, this.lastPoint = {
+        this.hovered = Yg, this.signature = "", this.holding = !1, this.lastPoint = {
           clientX: 0,
           clientY: 0
         }
       }
-      sync(DD, CD, cD, ID, pD) {
-        const iD = null !== CD ? {
+      sync(UU, RU, gU, tU, pU) {
+        const EU = null !== RU ? {
             kind: "slot",
-            idx: CD
-          } : cD ? {
+            idx: RU
+          } : gU ? {
             kind: "element",
-            element: cD
-          } : Kc,
-          fD = `${pD}|${Math.round(ID.clientX)},${Math.round(ID.clientY)}`,
-          bD = (QD = this.hovered, wD = iD, "slot" === QD.kind && "slot" === wD.kind ? QD.idx === wD.idx : "element" === QD.kind && "element" === wD.kind ? QD.element === wD.element : QD.kind === wD.kind);
-        var QD, wD;
-        if (bD && fD === this.signature) return;
-        const SD = !bD || pD !== this.holding || "" === this.signature;
-        this.signature = fD, this.holding = pD, this.lastPoint = ID;
-        const BD = this.hovered;
-        if (this.hovered = iD, "slot" === iD.kind) return this.leaveElement(BD, null, ID), void(SD ? DD.hover(iD.idx, ID) : DD.moveTo(ID));
-        if (bD) return void("element" === iD.kind ? UC(iD.element, iD.element, ac(ID)) : DD.hover(null, ID));
-        DD.hover(null, ID);
-        const yD = "element" === iD.kind ? iD.element : null;
-        "element" === BD.kind ? UC(BD.element, yD, ac(ID)) : yD && UC(null, yD, ac(ID))
+            element: gU
+          } : Yg,
+          PU = `${pU}|${Math.round(tU.clientX)},${Math.round(tU.clientY)}`,
+          TU = (qU = this.hovered, KU = EU, "slot" === qU.kind && "slot" === KU.kind ? qU.idx === KU.idx : "element" === qU.kind && "element" === KU.kind ? qU.element === KU.element : qU.kind === KU.kind);
+        var qU, KU;
+        if (TU && PU === this.signature) return;
+        const cU = !TU || pU !== this.holding || "" === this.signature;
+        this.signature = PU, this.holding = pU, this.lastPoint = tU;
+        const GU = this.hovered;
+        if (this.hovered = EU, "slot" === EU.kind) return this.leaveElement(GU, null, tU), void(cU ? UU.hover(EU.idx, tU) : UU.moveTo(tU));
+        if (TU) return void("element" === EU.kind ? bR(EU.element, EU.element, Bg(tU)) : UU.hover(null, tU));
+        UU.hover(null, tU);
+        const jU = "element" === EU.kind ? EU.element : null;
+        "element" === GU.kind ? bR(GU.element, jU, Bg(tU)) : jU && bR(null, jU, Bg(tU))
       }
       invalidate() {
         this.signature = ""
       }
-      clear(DD) {
-        const CD = this.hovered;
-        this.hovered = Kc, this.signature = "", "none" !== CD.kind && (this.leaveElement(CD, null, this.lastPoint), DD && "slot" === CD.kind && DD.hover(null, this.lastPoint))
+      clear(UU) {
+        const RU = this.hovered;
+        this.hovered = Yg, this.signature = "", "none" !== RU.kind && (this.leaveElement(RU, null, this.lastPoint), UU && "slot" === RU.kind && UU.hover(null, this.lastPoint))
       }
-      leaveElement(DD, CD, cD) {
-        "element" === DD.kind && UC(DD.element, CD, ac(cD))
+      leaveElement(UU, RU, gU) {
+        "element" === UU.kind && bR(UU.element, RU, Bg(gU))
       }
     }
-    class jc {
+    class Xg {
       constructor() {
         this.lastTiltedMs = -1 / 0
       }
-      update(DD, CD) {
-        OD(DD) && (this.lastTiltedMs = CD)
+      update(UU, RU) {
+        JU(UU) && (this.lastTiltedMs = RU)
       }
-      allowsClick(DD) {
-        return DD - this.lastTiltedMs > 150
+      allowsClick(UU) {
+        return UU - this.lastTiltedMs > 150
       }
     }
-    class lc {
+    class vg {
       constructor() {
         this.remainder = 0, this.container = null
       }
-      isScrolling(DD) {
-        return 0 !== (0, tD.i)(DD, .2).y
+      isScrolling(UU) {
+        return 0 !== (0, CU.g)(UU, .2).y
       }
-      step(DD, CD, cD) {
-        DD !== this.container && (this.container = DD, this.remainder = 0);
-        const ID = PD(CD, cD).y;
-        if (0 === ID) return this.remainder = 0, !1;
-        const pD = this.remainder + ID,
-          iD = Math.trunc(pD);
-        if (this.remainder = pD - iD, 0 === iD) return !1;
-        const fD = DD.scrollTop;
-        return DD.scrollTop = fD + iD, DD.scrollTop !== fD
+      step(UU, RU, gU) {
+        UU !== this.container && (this.container = UU, this.remainder = 0);
+        const tU = wU(RU, gU).y;
+        if (0 === tU) return this.remainder = 0, !1;
+        const pU = this.remainder + tU,
+          EU = Math.trunc(pU);
+        if (this.remainder = pU - EU, 0 === EU) return !1;
+        const PU = UU.scrollTop;
+        return UU.scrollTop = PU + EU, UU.scrollTop !== PU
       }
       current() {
-        var DD;
-        return null !== (DD = this.container) && void 0 !== DD && DD.isConnected ? this.container : null
+        var UU;
+        return null !== (UU = this.container) && void 0 !== UU && UU.isConnected ? this.container : null
       }
       reset() {
         this.remainder = 0, this.container = null
       }
     }
-    var Lc = cD(8372);
-    const Tc = "[data-pad-inventory-default]",
-      Gc = ".HotBarGameItemsContainer .InvenItem.Selected",
-      Rc = {
+    var dg = gU(8321);
+    const Hg = "[data-pad-inventory-default]",
+      Sg = ".HotBarGameItemsContainer .InvenItem.Selected",
+      sg = {
         Up: {
           x: 0,
           y: -1
@@ -1562,7 +1562,7 @@ export const modules = {
           y: 0
         }
       },
-      kc = [
+      yg = [
         ["primary", "inventoryPrimary"],
         ["secondary", "inventorySecondary"],
         ["quickMove", "inventoryQuickMove"],
@@ -1570,102 +1570,102 @@ export const modules = {
         ["back", "inventoryClose"],
         ["openButton", "inventory"]
       ],
-      dc = ["inventoryPrimary", "inventorySecondary", "inventoryQuickMove", "inventoryHotbarSwap", "inventoryClose", "inventoryDrop"],
-      Yc = ["inventoryPanelPrevious", "inventoryPanelNext", "menuPageUp", "menuPageDown"],
-      Wc = [...dc, ...Yc],
-      sc = () => {
-        return DD = (0, SD.h)("inventory"), !Wc.map(SD.h).includes(DD) && !(0, tD.C)(DD);
-        var DD
+      kg = ["inventoryPrimary", "inventorySecondary", "inventoryQuickMove", "inventoryHotbarSwap", "inventoryClose", "inventoryDrop"],
+      Fg = ["inventoryPanelPrevious", "inventoryPanelNext", "menuPageUp", "menuPageDown"],
+      ig = [...kg, ...Fg],
+      Ag = () => {
+        return UU = (0, cU.f)("inventory"), !ig.map(cU.f).includes(UU) && !(0, CU.B)(UU);
+        var UU
       },
-      Ec = new Set(["slotPrimary", "slotSecondary", "slotQuickMove", "pressPrimary", "pressSecondary", "openKeyboard"]),
-      ec = (DD, CD) => {
-        const cD = !(null === CD || void 0 === CD || !CD.isHolding());
-        return function(DD, CD) {
-          const cD = DD.find((DD => DD.visible && CD(DD)));
-          if (cD) return cD;
-          for (var ID = arguments.length, pD = new Array(ID > 2 ? ID - 2 : 0), iD = 2; iD < ID; iD++) pD[iD - 2] = arguments[iD];
-          for (const fD of pD) {
-            const CD = Bc(DD.filter(fD));
-            if (CD) return CD
+      zg = new Set(["slotPrimary", "slotSecondary", "slotQuickMove", "pressPrimary", "pressSecondary", "openKeyboard"]),
+      Mg = (UU, RU) => {
+        const gU = !(null === RU || void 0 === RU || !RU.isHolding());
+        return function(UU, RU) {
+          const gU = UU.find((UU => UU.visible && RU(UU)));
+          if (gU) return gU;
+          for (var tU = arguments.length, pU = new Array(tU > 2 ? tU - 2 : 0), EU = 2; EU < tU; EU++) pU[EU - 2] = arguments[EU];
+          for (const PU of pU) {
+            const RU = Gg(UU.filter(PU));
+            if (RU) return RU
           }
-          return Bc(DD)
-        }(DD, (DD => {
+          return Gg(UU)
+        }(UU, (UU => {
           const {
-            element: CD
-          } = DD;
-          return CD.matches(Tc) || null !== CD.querySelector(Tc) || CD.matches(Gc)
-        }), (DD => "slot" === DD.kind ? cD || null !== DD.idx && !(null === CD || void 0 === CD || !CD.hasItemAt(DD.idx)) : "recipe" === DD.kind || "pending" === DD.kind), (DD => "slot" === DD.kind || "button" === DD.kind))
+            element: RU
+          } = UU;
+          return RU.matches(Hg) || null !== RU.querySelector(Hg) || RU.matches(Sg)
+        }), (UU => "slot" === UU.kind ? gU || null !== UU.idx && !(null === RU || void 0 === RU || !RU.hasItemAt(UU.idx)) : "recipe" === UU.kind || "pending" === UU.kind), (UU => "slot" === UU.kind || "button" === UU.kind))
       };
-    class uc {
+    class Dg {
       constructor() {
-        this.set = null, this.observer = new MutationObserver((DD => {
-          DD.some((DD => !Uc(DD.target))) && (this.set = null)
+        this.set = null, this.observer = new MutationObserver((UU => {
+          UU.some((UU => !bg(UU.target))) && (this.set = null)
         })), this.invalidate = () => {
           this.set = null
-        }, this.onScroll = DD => {
-          this.scrolled(DD.target)
+        }, this.onScroll = UU => {
+          this.scrolled(UU.target)
         }
       }
       get() {
         if (!this.set) {
           this.set = (() => {
-            const DD = [],
-              CD = [];
-            let cD = !1;
-            const ID = {
+            const UU = [],
+              RU = [];
+            let gU = !1;
+            const tU = {
                 width: window.innerWidth,
                 height: window.innerHeight
               },
-              pD = new Map,
-              iD = new WC(CD);
-            for (const BD of document.querySelectorAll(Mc)) {
-              const SD = Oc(BD);
-              cD ||= null !== BD.querySelector(".CreativeCategoryTab");
-              for (const cD of BD.querySelectorAll(`${tc}:first-child`)) {
-                const fD = cD.parentElement;
-                Hc(fD, BD, Pc(SD, fD), ID, DD, CD, iD, pD)
+              pU = new Map,
+              EU = new iR(RU);
+            for (const GU of document.querySelectorAll(ug)) {
+              const cU = Jg(GU);
+              gU ||= null !== GU.querySelector(".CreativeCategoryTab");
+              for (const gU of GU.querySelectorAll(`${Cg}:first-child`)) {
+                const PU = gU.parentElement;
+                ng(PU, GU, wg(cU, PU), tU, UU, RU, EU, pU)
               }
-              for (const cD of BD.querySelectorAll(Zc)) {
-                var fD, bD, QD, wD;
-                if (cD.closest(tc) || cD.closest("[data-pad-ignore]")) continue;
-                const yD = null === (fD = cD.parentElement) || void 0 === fD ? void 0 : fD.closest(Zc);
-                if (yD && BD.contains(yD)) continue;
-                const MD = Nc(cD),
-                  tD = gc(cD, MD);
-                if (-1 === tD) continue;
-                const ZD = uC(cD.getBoundingClientRect());
-                CD.push({
-                  element: cD,
-                  rect: ZD
+              for (const gU of GU.querySelectorAll(hg)) {
+                var PU, TU, qU, KU;
+                if (gU.closest(Cg) || gU.closest("[data-pad-ignore]")) continue;
+                const jU = null === (PU = gU.parentElement) || void 0 === PU ? void 0 : PU.closest(hg);
+                if (jU && GU.contains(jU)) continue;
+                const uU = Wg(gU),
+                  CU = fg(gU, uU);
+                if (-1 === CU) continue;
+                const hU = DR(gU.getBoundingClientRect());
+                RU.push({
+                  element: gU,
+                  rect: hU
                 });
-                const oD = iD.findForParent(cD.parentElement, BD),
-                  vD = oD && !pD.has(oD.container) ? oD : null;
-                (vD ? hC(ZD) : rC(ZD, ID)) && DD.push({
-                  key: eC(cD),
-                  rect: ZD,
-                  panel: Pc(SD, cD),
-                  scrollGroup: null !== (bD = null === vD || void 0 === vD ? void 0 : vD.group) && void 0 !== bD ? bD : null,
-                  visible: AC(ZD, ID, null === vD || void 0 === vD ? void 0 : vD.box),
-                  clip: null !== (QD = null === vD || void 0 === vD ? void 0 : vD.box) && void 0 !== QD ? QD : null,
-                  element: cD,
-                  kind: MD,
-                  idx: tD,
-                  scrollContainer: null !== (wD = null === vD || void 0 === vD ? void 0 : vD.container) && void 0 !== wD ? wD : null
+                const QU = EU.findForParent(gU.parentElement, GU),
+                  eU = QU && !pU.has(QU.container) ? QU : null;
+                (eU ? LR(hU) : NR(hU, tU)) && UU.push({
+                  key: MR(gU),
+                  rect: hU,
+                  panel: wg(cU, gU),
+                  scrollGroup: null !== (TU = null === eU || void 0 === eU ? void 0 : eU.group) && void 0 !== TU ? TU : null,
+                  visible: lR(hU, tU, null === eU || void 0 === eU ? void 0 : eU.box),
+                  clip: null !== (qU = null === eU || void 0 === eU ? void 0 : eU.box) && void 0 !== qU ? qU : null,
+                  element: gU,
+                  kind: uU,
+                  idx: CU,
+                  scrollContainer: null !== (KU = null === eU || void 0 === eU ? void 0 : eU.container) && void 0 !== KU ? KU : null
                 })
               }
             }
-            for (const [BD, yD] of pD) yD.holdsOthers = CD.some((DD => DD.element !== BD && BD.contains(DD.element) && !DD.element.closest(tc)));
-            const SD = new Map;
-            for (const BD of DD) SD.set(BD.element, BD);
+            for (const [GU, jU] of pU) jU.holdsOthers = RU.some((UU => UU.element !== GU && GU.contains(UU.element) && !UU.element.closest(Cg)));
+            const cU = new Map;
+            for (const GU of UU) cU.set(GU.element, GU);
             return {
-              targets: DD,
-              byElement: SD,
-              hasCategories: cD,
-              probes: CD,
-              scrollers: pD
+              targets: UU,
+              byElement: cU,
+              hasCategories: gU,
+              probes: RU,
+              scrollers: pU
             }
           })(), this.observer.disconnect();
-          for (const DD of document.querySelectorAll(Mc)) this.observer.observe(DD, {
+          for (const UU of document.querySelectorAll(ug)) this.observer.observe(UU, {
             childList: !0,
             subtree: !0,
             attributes: !0,
@@ -1674,242 +1674,242 @@ export const modules = {
         }
         return this.set
       }
-      scrolled(DD) {
-        !this.set || DD instanceof Element && ((DD, CD) => {
-          const cD = DD.scrollers.get(CD);
-          if (!cD || cD.holdsOthers || CD.scrollLeft !== cD.left) return !1;
-          const ID = CD.scrollTop - cD.top;
-          if (0 === ID) return !0;
-          cD.top = CD.scrollTop;
-          for (const pD of cD.probes) pD.rect.top -= ID;
-          for (const pD of cD.targets) pD.rect.top -= ID, pD.visible = AC(pD.rect, cD.viewport, cD.box);
+      scrolled(UU) {
+        !this.set || UU instanceof Element && ((UU, RU) => {
+          const gU = UU.scrollers.get(RU);
+          if (!gU || gU.holdsOthers || RU.scrollLeft !== gU.left) return !1;
+          const tU = RU.scrollTop - gU.top;
+          if (0 === tU) return !0;
+          gU.top = RU.scrollTop;
+          for (const pU of gU.probes) pU.rect.top -= tU;
+          for (const pU of gU.targets) pU.rect.top -= tU, pU.visible = lR(pU.rect, gU.viewport, gU.box);
           return !0
-        })(this.set, DD) || (this.set = null)
+        })(this.set, UU) || (this.set = null)
       }
       revalidate() {
-        this.set && this.set.probes.some((DD => {
-          return CD = DD.rect, cD = DD.element.getBoundingClientRect(), !(CD.left === cD.left && CD.top === cD.top && CD.width === cD.width && CD.height === cD.height);
-          var CD, cD
+        this.set && this.set.probes.some((UU => {
+          return RU = UU.rect, gU = UU.element.getBoundingClientRect(), !(RU.left === gU.left && RU.top === gU.top && RU.width === gU.width && RU.height === gU.height);
+          var RU, gU
         })) && (this.set = null)
       }
       disconnect() {
         this.observer.disconnect(), this.set = null
       }
     }
-    const hc = new class {
+    const Lg = new class {
         constructor() {
-          this.focused = null, this.focusTarget = null, this.lastRect = null, this.panelMemory = new Map, this.reopenSlotIdx = null, this.dpadTimers = new Map(tD.x.map((DD => [DD, (0, ZD.b)(tD.z)]))), this.stickRepeat = new tD.b((0, ZD.b)(tD.bb)), this.pageUpTimer = (0, ZD.b)(tD.X), this.pageDownTimer = (0, ZD.b)(tD.X), this.stickGate = new mD, this.pointer = null, this.activePress = null, this.dropLatch = new qc, this.scroller = new lc, this.scrollStickClick = new jc, this.hover = new zc, this.lastRealPointer = null, this.placeAfterCategory = null, this.hotbarPick = null, this.ring = new dD, this.targets = new uc, this.hasCategories = !1, this.wasShowing = !1, this.state = Jc.c, this.isActive = () => (0, YC.h)(), this.isShowing = () => "inventory" === BD.d.getActiveConsumerName() && (0, MD.i)(), this.getState = () => this.state, this.isSteppingSlots = () => this.isShowing() && null === this.pointer, this.onDeactivate = () => {
-            this.endInteraction((0, YC.g)()), (0, YC.h)() || this.forgetSurface()
+          this.focused = null, this.focusTarget = null, this.lastRect = null, this.panelMemory = new Map, this.reopenSlotIdx = null, this.dpadTimers = new Map(CU.w.map((UU => [UU, (0, hU.e)(CU.x)]))), this.stickRepeat = new CU.c((0, hU.e)(CU.U)), this.pageUpTimer = (0, hU.e)(CU.Q), this.pageDownTimer = (0, hU.e)(CU.Q), this.stickGate = new mU, this.pointer = null, this.activePress = null, this.dropLatch = new Zg, this.scroller = new vg, this.scrollStickClick = new Xg, this.hover = new rg, this.lastRealPointer = null, this.placeAfterCategory = null, this.hotbarPick = null, this.ring = new kU, this.targets = new Dg, this.hasCategories = !1, this.wasShowing = !1, this.state = ag.d, this.isActive = () => (0, FR.j)(), this.isShowing = () => "inventory" === GU.e.getActiveConsumerName() && (0, uU.i)(), this.getState = () => this.state, this.isSteppingSlots = () => this.isShowing() && null === this.pointer, this.onDeactivate = () => {
+            this.endInteraction((0, FR.h)()), (0, FR.j)() || this.forgetSurface()
           }, this.forgetSurface = () => {
-            var DD;
-            this.reopenSlotIdx = null !== (DD = this.focused ? nc(this.focused).idx : null) && void 0 !== DD ? DD : this.reopenSlotIdx, this.focused = null, this.focusTarget = null, this.lastRect = null, this.placeAfterCategory = null, (0, YC.r)(), this.panelMemory.clear(), this.targets.disconnect()
-          }, this.onFrame = DD => {
-            (0, bD.unstable_batchedUpdates)((() => {
-              this.frame(DD)
+            var UU;
+            this.reopenSlotIdx = null !== (UU = this.focused ? Ig(this.focused).idx : null) && void 0 !== UU ? UU : this.reopenSlotIdx, this.focused = null, this.focusTarget = null, this.lastRect = null, this.placeAfterCategory = null, (0, FR.s)(), this.panelMemory.clear(), this.targets.disconnect()
+          }, this.onFrame = UU => {
+            (0, TU.unstable_batchedUpdates)((() => {
+              this.frame(UU)
             }))
-          }, this.shouldBlockRealPointer = DD => DD.isTrusted && !(0, vD.t)(DD) && this.isShowing(), this.noteRealPointer = DD => {
-            DD instanceof MouseEvent && DD.isTrusted && !(0, vD.t)(DD) && (this.lastRealPointer ??= {
+          }, this.shouldBlockRealPointer = UU => UU.isTrusted && !(0, eU.t)(UU) && this.isShowing(), this.noteRealPointer = UU => {
+            UU instanceof MouseEvent && UU.isTrusted && !(0, eU.t)(UU) && (this.lastRealPointer ??= {
               x: 0,
               y: 0
-            }, this.lastRealPointer.x = DD.clientX, this.lastRealPointer.y = DD.clientY)
-          }, this.wakePressActs = DD => {
-            var CD;
-            return DD === (0, SD.h)("inventoryClose") ? !(null !== (CD = (0, YC.g)()) && void 0 !== CD && CD.isHolding()) : !(DD !== (0, SD.h)("inventory") || !sc()) || ((0, tD.C)(DD) ? this.isNavButton(DD) : Yc.some((CD => (0, SD.h)(CD) === DD)))
+            }, this.lastRealPointer.x = UU.clientX, this.lastRealPointer.y = UU.clientY)
+          }, this.wakePressActs = UU => {
+            var RU;
+            return UU === (0, cU.f)("inventoryClose") ? !(null !== (RU = (0, FR.h)()) && void 0 !== RU && RU.isHolding()) : !(UU !== (0, cU.f)("inventory") || !Ag()) || ((0, CU.B)(UU) ? this.isNavButton(UU) : Fg.some((RU => (0, cU.f)(RU) === UU)))
           }
         }
-        frame(DD) {
-          var CD, cD, ID, pD, iD;
-          const fD = (0, YC.g)();
-          if (!(0, MD.i)()) return void(this.wasShowing && (this.endInteraction(fD), this.rehoverRealPointer()));
-          this.wasShowing = !0, this.applyFocusRequest(), DD.wokeDevice && this.focusWakePointer(!(null === fD || void 0 === fD || !fD.isHolding())), this.applyCategoryPlace(), this.ensureFocus(), "cursor" !== (0, yD.h)().inventoryNavigation || this.pointer || this.engagePointer();
-          const bD = performance.now();
-          this.handleNavigation(DD, bD), this.handlePanels(DD), this.handlePaging(DD, bD), this.handleScroll(DD), this.handleButtons(DD, bD, fD), this.applyFocusRequest(), this.pointer && this.hoverAtPointer();
-          const QD = this.ensureFocus(),
-            wD = this.focusContext(fD);
-          this.ring.show(QD);
-          const BD = "slot" === wD.kind ? wD.idx : null,
-            tD = null !== (CD = null === (cD = wD.actionElement) || void 0 === cD ? void 0 : cD.querySelector(".DoCraftItem")) && void 0 !== CD ? CD : wD.actionElement;
-          this.pointer ? (this.hover.sync(fD, BD, tD, ((DD, CD) => {
-            const cD = CD ? Vc() : 0;
+        frame(UU) {
+          var RU, gU, tU, pU, EU;
+          const PU = (0, FR.h)();
+          if (!(0, uU.i)()) return void(this.wasShowing && (this.endInteraction(PU), this.rehoverRealPointer()));
+          this.wasShowing = !0, this.applyFocusRequest(), UU.wokeDevice && this.focusWakePointer(!(null === PU || void 0 === PU || !PU.isHolding())), this.applyCategoryPlace(), this.ensureFocus(), "cursor" !== (0, jU.h)().inventoryNavigation || this.pointer || this.engagePointer();
+          const TU = performance.now();
+          this.handleNavigation(UU, TU), this.handlePanels(UU), this.handlePaging(UU, TU), this.handleScroll(UU), this.handleButtons(UU, TU, PU), this.applyFocusRequest(), this.pointer && this.hoverAtPointer();
+          const qU = this.ensureFocus(),
+            KU = this.focusContext(PU);
+          this.ring.show(qU);
+          const GU = "slot" === KU.kind ? KU.idx : null,
+            CU = null !== (RU = null === (gU = KU.actionElement) || void 0 === gU ? void 0 : gU.querySelector(".DoCraftItem")) && void 0 !== RU ? RU : KU.actionElement;
+          this.pointer ? (this.hover.sync(PU, GU, CU, ((UU, RU) => {
+            const gU = RU ? Vg() : 0;
             return {
-              clientX: DD.x - cD,
-              clientY: DD.y - cD
+              clientX: UU.x - gU,
+              clientY: UU.y - gU
             }
-          })(this.pointer, wD.holding), wD.holding), RC.set({
+          })(this.pointer, KU.holding), KU.holding), sR.set({
             x: this.pointer.x,
             y: this.pointer.y,
             visible: !0,
-            pressed: DD.isHeld((0, SD.h)("inventoryPrimary"))
-          })) : QD && this.focused && this.hover.sync(fD, BD, tD, ((DD, CD) => {
-            if (!CD) return {
-              clientX: DD.left + DD.width - 10,
-              clientY: DD.top + DD.height / 2 - 10
+            pressed: UU.isHeld((0, cU.f)("inventoryPrimary"))
+          })) : qU && this.focused && this.hover.sync(PU, GU, CU, ((UU, RU) => {
+            if (!RU) return {
+              clientX: UU.left + UU.width - 10,
+              clientY: UU.top + UU.height / 2 - 10
             };
-            const cD = Vc();
+            const gU = Vg();
             return {
-              clientX: DD.left + DD.width / 2 - cD,
-              clientY: DD.top + DD.height / 2 - cD
+              clientX: UU.left + UU.width / 2 - gU,
+              clientY: UU.top + UU.height / 2 - gU
             }
-          })(QD, wD.holding), wD.holding), this.publishState({
+          })(qU, KU.holding), KU.holding), this.publishState({
             showing: !0,
-            kind: wD.kind,
-            holding: wD.holding,
-            slotHasItem: wD.slotHasItem,
-            pressHints: null !== (ID = null === (pD = wD.press) || void 0 === pD ? void 0 : pD.hints) && void 0 !== ID ? ID : null,
+            kind: KU.kind,
+            holding: KU.holding,
+            slotHasItem: KU.slotHasItem,
+            pressHints: null !== (tU = null === (pU = KU.press) || void 0 === pU ? void 0 : pU.hints) && void 0 !== tU ? tU : null,
             hasCategories: this.hasCategories,
-            hasList: !!this.focusTarget && xc(this.focusTarget),
-            openButtonCloses: sc(),
+            hasList: !!this.focusTarget && og(this.focusTarget),
+            openButtonCloses: Ag(),
             steppingSlots: null === this.pointer,
-            quickMoveToHotbar: "slot" === wD.kind && !(null === (iD = wD.actionElement) || void 0 === iD || !iD.closest(".CreativeItemSlots")),
+            quickMoveToHotbar: "slot" === KU.kind && !(null === (EU = KU.actionElement) || void 0 === EU || !EU.closest(".CreativeItemSlots")),
             dropStackHold: this.dropLatch.getHold(),
             hotbarPicking: null !== this.hotbarPick
           })
         }
-        focusWakePointer(DD) {
-          var CD;
-          const cD = (0, MD.c)();
-          if (!cD) return;
+        focusWakePointer(UU) {
+          var RU;
+          const gU = (0, uU.c)();
+          if (!gU) return;
           this.targets.revalidate();
-          const ID = this.getTargets().targets;
-          this.setFocus(null !== (CD = Sc(cD, ID)) && void 0 !== CD ? CD : DD ? bc(cD, ID, (DD => {
+          const tU = this.getTargets().targets;
+          this.setFocus(null !== (RU = cg(gU, tU)) && void 0 !== RU ? RU : UU ? Tg(gU, tU, (UU => {
             let {
-              rect: CD
-            } = DD;
-            const ID = Math.max(CD.left - cD.x, 0, cD.x - (CD.left + CD.width)),
-              pD = Math.max(CD.top - cD.y, 0, cD.y - (CD.top + CD.height));
-            return Math.hypot(ID, pD) <= Math.min(CD.width, CD.height) / 2
-          })) : null, !1), "cursor" === (0, yD.h)().inventoryNavigation && (this.pointer = {
-            x: cD.x,
-            y: cD.y,
+              rect: RU
+            } = UU;
+            const tU = Math.max(RU.left - gU.x, 0, gU.x - (RU.left + RU.width)),
+              pU = Math.max(RU.top - gU.y, 0, gU.y - (RU.top + RU.height));
+            return Math.hypot(tU, pU) <= Math.min(RU.width, RU.height) / 2
+          })) : null, !1), "cursor" === (0, jU.h)().inventoryNavigation && (this.pointer = {
+            x: gU.x,
+            y: gU.y,
             speedRamp: 0
           })
         }
         rehoverRealPointer() {
-          const DD = this.lastRealPointer;
-          if (!DD || "keyboardMouse" !== QD.d.get("activeInputDevice")) return;
-          const CD = document.elementFromPoint(DD.x, DD.y);
-          CD && UC(null, CD, DD)
+          const UU = this.lastRealPointer;
+          if (!UU || "keyboardMouse" !== qU.b.get("activeInputDevice")) return;
+          const RU = document.elementFromPoint(UU.x, UU.y);
+          RU && bR(null, RU, UU)
         }
-        endInteraction(DD) {
+        endInteraction(UU) {
           this.wasShowing = !1, this.hotbarPick = null, this.releasePress(), this.dropLatch.reset(), this.scroller.reset();
-          for (const CD of this.dpadTimers.values()) CD.reset();
-          this.stickRepeat.reset(), this.pageUpTimer.reset(), this.pageDownTimer.reset(), this.hover.clear(DD), this.ring.hide(), this.releasePointer(), this.publishState(Jc.c)
+          for (const RU of this.dpadTimers.values()) RU.reset();
+          this.stickRepeat.reset(), this.pageUpTimer.reset(), this.pageDownTimer.reset(), this.hover.clear(UU), this.ring.hide(), this.releasePointer(), this.publishState(ag.d)
         }
         getTargets() {
-          const DD = this.targets.get();
-          return this.hasCategories = DD.hasCategories, DD
+          const UU = this.targets.get();
+          return this.hasCategories = UU.hasCategories, UU
         }
         currentTarget() {
-          var DD;
-          return this.focused && null !== (DD = this.getTargets().byElement.get(this.focused)) && void 0 !== DD ? DD : null
+          var UU;
+          return this.focused && null !== (UU = this.getTargets().byElement.get(this.focused)) && void 0 !== UU ? UU : null
         }
         readFocusRect() {
-          const DD = this.focused;
-          if (null === DD || void 0 === DD || !DD.isConnected || !DD.closest(Mc)) return null;
-          const CD = DD.getBoundingClientRect();
-          return CD.width > 0 && CD.height > 0 ? {
-            left: CD.left,
-            top: CD.top,
-            width: CD.width,
-            height: CD.height
+          const UU = this.focused;
+          if (null === UU || void 0 === UU || !UU.isConnected || !UU.closest(ug)) return null;
+          const RU = UU.getBoundingClientRect();
+          return RU.width > 0 && RU.height > 0 ? {
+            left: RU.left,
+            top: RU.top,
+            width: RU.width,
+            height: RU.height
           } : null
         }
         ensureFocus() {
-          const DD = this.readFocusRect();
-          if (DD || this.pointer) return DD;
+          const UU = this.readFocusRect();
+          if (UU || this.pointer) return UU;
           const {
-            targets: CD,
-            byElement: cD
+            targets: RU,
+            byElement: gU
           } = this.getTargets();
-          let ID = null,
-            pD = !1;
-          if (this.lastRect) ID = bc(FC(this.lastRect), CD);
+          let tU = null,
+            pU = !1;
+          if (this.lastRect) tU = Tg(OR(this.lastRect), RU);
           else {
-            var iD, fD;
-            const DD = ((DD, CD) => {
-                const cD = document.querySelector(".EntireInventoryWrapper [data-pad-inventory-start]");
-                return cD ? ec(DD.filter((DD => cD.contains(DD.element))), CD) : null
-              })(CD, (0, YC.g)()),
-              bD = CD.find((DD => null !== DD.idx && DD.idx === this.reopenSlotIdx)),
-              QD = document.querySelector(Gc);
-            pD = null !== DD || void 0 !== bD, ID = null !== (iD = null !== (fD = null !== DD && void 0 !== DD ? DD : bD) && void 0 !== fD ? fD : QD && cD.get(QD)) && void 0 !== iD ? iD : Bc(CD)
+            var EU, PU;
+            const UU = ((UU, RU) => {
+                const gU = document.querySelector(".EntireInventoryWrapper [data-pad-inventory-start]");
+                return gU ? Mg(UU.filter((UU => gU.contains(UU.element))), RU) : null
+              })(RU, (0, FR.h)()),
+              TU = RU.find((UU => null !== UU.idx && UU.idx === this.reopenSlotIdx)),
+              qU = document.querySelector(Sg);
+            pU = null !== UU || void 0 !== TU, tU = null !== (EU = null !== (PU = null !== UU && void 0 !== UU ? UU : TU) && void 0 !== PU ? PU : qU && gU.get(qU)) && void 0 !== EU ? EU : Gg(RU)
           }
-          return this.setFocus(ID, pD), this.lastRect
+          return this.setFocus(tU, pU), this.lastRect
         }
-        setFocus(DD) {
-          let CD = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          DD && (this.focused = DD.element, this.focusTarget = DD, this.panelMemory.set(DD.panel, DD.element), CD && DD.scrollContainer && ((DD, CD) => {
-            const cD = DD.getBoundingClientRect(),
-              ID = zD(CD),
-              pD = CD.scrollTop;
-            return cD.top < ID.top ? CD.scrollTop -= ID.top - cD.top : cD.bottom > ID.bottom && (CD.scrollTop += cD.bottom - ID.bottom), CD.scrollTop !== pD
-          })(DD.element, DD.scrollContainer) && this.targets.invalidate(), this.lastRect = this.readFocusRect(), this.followFocusJump())
+        setFocus(UU) {
+          let RU = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          UU && (this.focused = UU.element, this.focusTarget = UU, this.panelMemory.set(UU.panel, UU.element), RU && UU.scrollContainer && ((UU, RU) => {
+            const gU = UU.getBoundingClientRect(),
+              tU = rU(RU),
+              pU = RU.scrollTop;
+            return gU.top < tU.top ? RU.scrollTop -= tU.top - gU.top : gU.bottom > tU.bottom && (RU.scrollTop += gU.bottom - tU.bottom), RU.scrollTop !== pU
+          })(UU.element, UU.scrollContainer) && this.targets.invalidate(), this.lastRect = this.readFocusRect(), this.followFocusJump())
         }
         followFocusJump() {
           if (this.pointer)
-            if ("cursor" === (0, yD.h)().inventoryNavigation) {
+            if ("cursor" === (0, jU.h)().inventoryNavigation) {
               if (this.lastRect) {
-                const DD = FC(this.lastRect);
+                const UU = OR(this.lastRect);
                 this.pointer = {
-                  x: DD.x,
-                  y: DD.y,
+                  x: UU.x,
+                  y: UU.y,
                   speedRamp: 0
                 }
               }
             } else this.releasePointer()
         }
         engagePointer() {
-          const DD = this.lastRect ? FC(this.lastRect) : {
+          const UU = this.lastRect ? OR(this.lastRect) : {
             x: window.innerWidth / 2,
             y: window.innerHeight / 2
           };
           this.pointer = {
-            x: DD.x,
-            y: DD.y,
+            x: UU.x,
+            y: UU.y,
             speedRamp: 0
           }
         }
         releasePointer() {
-          this.pointer = null, RC.hide()
+          this.pointer = null, sR.hide()
         }
         hoverAtPointer() {
-          var DD;
-          const CD = Sc(this.pointer, this.getTargets().targets);
-          this.focusTarget = CD, (null === CD || void 0 === CD ? void 0 : CD.element) !== this.focused && (this.focused = null !== (DD = null === CD || void 0 === CD ? void 0 : CD.element) && void 0 !== DD ? DD : null, CD && (this.panelMemory.set(CD.panel, CD.element), this.lastRect = this.readFocusRect()))
+          var UU;
+          const RU = cg(this.pointer, this.getTargets().targets);
+          this.focusTarget = RU, (null === RU || void 0 === RU ? void 0 : RU.element) !== this.focused && (this.focused = null !== (UU = null === RU || void 0 === RU ? void 0 : RU.element) && void 0 !== UU ? UU : null, RU && (this.panelMemory.set(RU.panel, RU.element), this.lastRect = this.readFocusRect()))
         }
-        moveCursor(DD, CD) {
-          const cD = this.focusTarget,
-            ID = cD && (0, yD.h)().cursorMagnetism ? FC(Qc(cD)) : null;
-          this.pointer = nD(this.pointer, {
-            stick: DD.leftStick,
-            moveDeadzone: (0, yD.h)().moveDeadzone,
-            dpad: CD,
-            dtMs: DD.dtMs,
-            cursorSpeedPercent: (0, yD.h)().cursorSpeed,
+        moveCursor(UU, RU) {
+          const gU = this.focusTarget,
+            tU = gU && (0, jU.h)().cursorMagnetism ? OR(qg(gU)) : null;
+          this.pointer = IU(this.pointer, {
+            stick: UU.leftStick,
+            moveDeadzone: (0, jU.h)().moveDeadzone,
+            dpad: RU,
+            dtMs: UU.dtMs,
+            cursorSpeedPercent: (0, jU.h)().cursorSpeed,
             viewport: {
               width: window.innerWidth,
               height: window.innerHeight
             },
             context: {
               overInteractive: !1,
-              magnetTarget: ID
+              magnetTarget: tU
             }
           })
         }
-        move(DD) {
+        move(UU) {
           this.targets.revalidate();
-          const CD = this.currentTarget();
-          CD && this.setFocus(fc(CD, this.getTargets().targets, DD))
+          const RU = this.currentTarget();
+          RU && this.setFocus(Pg(RU, this.getTargets().targets, UU))
         }
-        step(DD) {
-          const CD = this.pointer;
-          if (CD && (this.releasePointer(), !this.focused)) return this.targets.revalidate(), void this.setFocus(((DD, CD, cD) => {
-            var ID;
-            const pD = {
+        step(UU) {
+          const RU = this.pointer;
+          if (RU && (this.releasePointer(), !this.focused)) return this.targets.revalidate(), void this.setFocus(((UU, RU, gU) => {
+            var tU;
+            const pU = {
               key: "",
               rect: {
-                left: DD.x,
-                top: DD.y,
+                left: UU.x,
+                top: UU.y,
                 width: 0,
                 height: 0
               },
@@ -1918,981 +1918,981 @@ export const modules = {
               visible: !0,
               clip: null
             };
-            return null !== (ID = fc(pD, CD, cD)) && void 0 !== ID ? ID : bc(DD, CD)
-          })(CD, this.getTargets().targets, DD));
-          this.move(DD)
+            return null !== (tU = Pg(pU, RU, gU)) && void 0 !== tU ? tU : Tg(UU, RU)
+          })(RU, this.getTargets().targets, UU));
+          this.move(UU)
         }
-        isNavButton(DD) {
-          return !dc.some((CD => (0, SD.h)(CD) === DD)) && !(DD === (0, SD.h)("inventory") && sc())
+        isNavButton(UU) {
+          return !kg.some((RU => (0, cU.f)(RU) === UU)) && !(UU === (0, cU.f)("inventory") && Ag())
         }
-        handleNavigation(DD, CD) {
-          const cD = (0, yD.h)().inventoryNavigation,
-            ID = {
+        handleNavigation(UU, RU) {
+          const gU = (0, jU.h)().inventoryNavigation,
+            tU = {
               x: 0,
               y: 0
             };
-          let pD = null;
-          for (const QD of tD.x) {
-            const iD = this.isNavButton(QD) && DD.isHeld(QD);
-            iD && (ID.x += Rc[QD].x, ID.y += Rc[QD].y), this.dpadTimers.get(QD).update(iD, CD) && "cursor" !== cD && (pD ??= QD)
+          let pU = null;
+          for (const qU of CU.w) {
+            const EU = this.isNavButton(qU) && UU.isHeld(qU);
+            EU && (tU.x += sg[qU].x, tU.y += sg[qU].y), this.dpadTimers.get(qU).update(EU, RU) && "cursor" !== gU && (pU ??= qU)
           }
-          const iD = this.stickGate.update(DD.leftStick, (0, yD.h)().moveDeadzone);
-          if (pD && (this.step(pD), this.stickGate.lock()), "slot" !== cD) {
-            const CD = ((DD, CD, cD, ID) => "hybrid" !== DD ? "cursor" === DD : !ID && (CD || cD))(cD, null !== this.pointer, iD, null !== pD);
-            return CD && !this.pointer && this.engagePointer(), void(this.pointer && this.moveCursor(DD, "cursor" === cD ? ID : {
+          const EU = this.stickGate.update(UU.leftStick, (0, jU.h)().moveDeadzone);
+          if (pU && (this.step(pU), this.stickGate.lock()), "slot" !== gU) {
+            const RU = ((UU, RU, gU, tU) => "hybrid" !== UU ? "cursor" === UU : !tU && (RU || gU))(gU, null !== this.pointer, EU, null !== pU);
+            return RU && !this.pointer && this.engagePointer(), void(this.pointer && this.moveCursor(UU, "cursor" === gU ? tU : {
               x: 0,
               y: 0
             }))
           }
-          const fD = (0, tD.i)(DD.leftStick, (0, yD.h)().moveDeadzone),
-            bD = this.stickRepeat.update(iD ? (0, tD.db)(fD) : null, CD);
-          bD && this.move(bD)
+          const PU = (0, CU.g)(UU.leftStick, (0, jU.h)().moveDeadzone),
+            TU = this.stickRepeat.update(EU ? (0, CU.V)(PU) : null, RU);
+          TU && this.move(TU)
         }
         applyCategoryPlace() {
-          const DD = this.placeAfterCategory;
-          if (!DD) return;
+          const UU = this.placeAfterCategory;
+          if (!UU) return;
           this.placeAfterCategory = null, this.targets.invalidate();
-          const CD = bc(FC(DD.rect), this.getTargets().targets, (CD => CD.scrollGroup === DD.scrollGroup));
-          this.setFocus(CD, !1)
+          const RU = Tg(OR(UU.rect), this.getTargets().targets, (RU => RU.scrollGroup === UU.scrollGroup));
+          this.setFocus(RU, !1)
         }
         applyFocusRequest() {
-          const DD = (0, YC.r)();
-          DD && (this.targets.invalidate(), this.setFocus((0, YC.c)(this.getTargets().targets, DD)))
+          const UU = (0, FR.s)();
+          UU && (this.targets.invalidate(), this.setFocus((0, FR.d)(this.getTargets().targets, UU)))
         }
-        handlePanels(DD) {
-          var CD, cD, ID;
-          const pD = DD.wasPressed((0, SD.h)("inventoryPanelPrevious")),
-            iD = DD.wasPressed((0, SD.h)("inventoryPanelNext"));
-          if (!pD && !iD) return;
+        handlePanels(UU) {
+          var RU, gU, tU;
+          const pU = UU.wasPressed((0, cU.f)("inventoryPanelPrevious")),
+            EU = UU.wasPressed((0, cU.f)("inventoryPanelNext"));
+          if (!pU && !EU) return;
           const {
-            targets: fD
-          } = this.getTargets(), bD = (QD = ((DD, CD) => {
-            const cD = [];
-            for (const pD of DD) pD.visible && !cD.includes(pD.panel) && cD.push(pD.panel);
-            const ID = DD => {
-              const ID = CD.indexOf(DD);
-              return -1 === ID ? CD.length + cD.indexOf(DD) : ID
+            targets: PU
+          } = this.getTargets(), TU = (qU = ((UU, RU) => {
+            const gU = [];
+            for (const pU of UU) pU.visible && !gU.includes(pU.panel) && gU.push(pU.panel);
+            const tU = UU => {
+              const tU = RU.indexOf(UU);
+              return -1 === tU ? RU.length + gU.indexOf(UU) : tU
             };
-            return cD.sort(((DD, CD) => ID(DD) - ID(CD)))
-          })(fD, vc), wD = null !== (CD = null === (cD = this.focusTarget) || void 0 === cD ? void 0 : cD.panel) && void 0 !== CD ? CD : null, BD = iD ? 1 : -1, 0 === QD.length ? null : QD[Dc(null === wD ? -1 : QD.indexOf(wD), QD.length, BD)]);
-          var QD, wD, BD;
-          if (null === bD) return;
-          const yD = this.panelMemory.get(bD),
-            MD = fD.filter((DD => DD.panel === bD)),
-            tD = null !== (ID = MD.find((DD => DD.element === yD && DD.visible))) && void 0 !== ID ? ID : ec(MD, (0, YC.g)());
-          this.setFocus(tD)
+            return gU.sort(((UU, RU) => tU(UU) - tU(RU)))
+          })(PU, eg), KU = null !== (RU = null === (gU = this.focusTarget) || void 0 === gU ? void 0 : gU.panel) && void 0 !== RU ? RU : null, GU = EU ? 1 : -1, 0 === qU.length ? null : qU[Ug(null === KU ? -1 : qU.indexOf(KU), qU.length, GU)]);
+          var qU, KU, GU;
+          if (null === TU) return;
+          const jU = this.panelMemory.get(TU),
+            uU = PU.filter((UU => UU.panel === TU)),
+            CU = null !== (tU = uU.find((UU => UU.element === jU && UU.visible))) && void 0 !== tU ? tU : Mg(uU, (0, FR.h)());
+          this.setFocus(CU)
         }
-        handlePaging(DD, CD) {
-          const cD = (0, SD.h)("menuPageUp"),
-            ID = (0, SD.h)("menuPageDown"),
-            pD = this.pageUpTimer.update(DD.isHeld(cD), CD),
-            iD = this.pageDownTimer.update(DD.isHeld(ID), CD);
-          if (!pD && !iD) return;
-          const fD = iD ? 1 : -1;
-          if (!DD.wasPressed(iD ? ID : cD) && this.hasCategories) return;
-          if ((DD => {
-              const CD = Array.from(document.querySelectorAll(".EntireInventoryWrapper .CreativeCategoryTab"));
-              if (0 === CD.length) return !1;
-              const cD = CD.findIndex((DD => DD.classList.contains("Selected"))),
-                ID = CD[Dc(cD, CD.length, DD)];
-              return HC(ID, XC(ID)), !0
-            })(fD)) {
-            var bD, QD;
+        handlePaging(UU, RU) {
+          const gU = (0, cU.f)("menuPageUp"),
+            tU = (0, cU.f)("menuPageDown"),
+            pU = this.pageUpTimer.update(UU.isHeld(gU), RU),
+            EU = this.pageDownTimer.update(UU.isHeld(tU), RU);
+          if (!pU && !EU) return;
+          const PU = EU ? 1 : -1;
+          if (!UU.wasPressed(EU ? tU : gU) && this.hasCategories) return;
+          if ((UU => {
+              const RU = Array.from(document.querySelectorAll(".EntireInventoryWrapper .CreativeCategoryTab"));
+              if (0 === RU.length) return !1;
+              const gU = RU.findIndex((UU => UU.classList.contains("Selected"))),
+                tU = RU[Ug(gU, RU.length, UU)];
+              return nR(tU, xR(tU)), !0
+            })(PU)) {
+            var TU, qU;
             this.targets.invalidate();
-            const DD = null !== (bD = null === (QD = this.focusTarget) || void 0 === QD ? void 0 : QD.scrollGroup) && void 0 !== bD ? bD : null,
-              CD = this.readFocusRect();
-            return void(this.placeAfterCategory = null !== DD && CD && !this.pointer ? {
-              rect: CD,
-              scrollGroup: DD
+            const UU = null !== (TU = null === (qU = this.focusTarget) || void 0 === qU ? void 0 : qU.scrollGroup) && void 0 !== TU ? TU : null,
+              RU = this.readFocusRect();
+            return void(this.placeAfterCategory = null !== UU && RU && !this.pointer ? {
+              rect: RU,
+              scrollGroup: UU
             } : null)
           }
           const {
-            targets: wD
-          } = this.getTargets(), BD = this.currentTarget(), yD = BD && xc(BD) ? BD : wD.find((DD => xc(DD) && DD.visible));
-          if (!yD) return;
-          const MD = ((DD, CD, cD, ID) => {
-            if (null === DD.scrollGroup) return null;
-            const pD = FC(DD.rect),
-              iD = pD.x,
-              fD = pD.y + ("Down" === cD ? ID : -ID);
-            let bD = null,
-              QD = 1 / 0;
-            for (const wD of CD) {
-              if (wD.scrollGroup !== DD.scrollGroup || wD.key === DD.key) continue;
-              const CD = FC(wD.rect);
-              if ("Down" === cD ? CD.y <= pD.y : CD.y >= pD.y) continue;
-              const ID = Math.hypot(CD.x - iD, CD.y - fD);
-              ID < QD && (bD = wD, QD = ID)
+            targets: KU
+          } = this.getTargets(), GU = this.currentTarget(), jU = GU && og(GU) ? GU : KU.find((UU => og(UU) && UU.visible));
+          if (!jU) return;
+          const uU = ((UU, RU, gU, tU) => {
+            if (null === UU.scrollGroup) return null;
+            const pU = OR(UU.rect),
+              EU = pU.x,
+              PU = pU.y + ("Down" === gU ? tU : -tU);
+            let TU = null,
+              qU = 1 / 0;
+            for (const KU of RU) {
+              if (KU.scrollGroup !== UU.scrollGroup || KU.key === UU.key) continue;
+              const RU = OR(KU.rect);
+              if ("Down" === gU ? RU.y <= pU.y : RU.y >= pU.y) continue;
+              const tU = Math.hypot(RU.x - EU, RU.y - PU);
+              tU < qU && (TU = KU, qU = tU)
             }
-            return bD
-          })(yD, wD, fD > 0 ? "Down" : "Up", yD.scrollContainer.clientHeight);
-          this.setFocus(null !== MD && void 0 !== MD ? MD : yD)
+            return TU
+          })(jU, KU, PU > 0 ? "Down" : "Up", jU.scrollContainer.clientHeight);
+          this.setFocus(null !== uU && void 0 !== uU ? uU : jU)
         }
-        handleScroll(DD) {
-          var CD, cD, ID, pD, iD, fD;
-          if (!this.scroller.isScrolling(DD.rightStick)) return void this.scroller.reset();
+        handleScroll(UU) {
+          var RU, gU, tU, pU, EU, PU;
+          if (!this.scroller.isScrolling(UU.rightStick)) return void this.scroller.reset();
           const {
-            targets: bD
-          } = this.getTargets(), QD = this.pointer, wD = !QD && this.focusTarget && xc(this.focusTarget) ? this.focusTarget.scrollContainer : null, SD = QD && (null === (CD = bD.find((DD => DD.clip && wc(DD.clip, QD)))) || void 0 === CD ? void 0 : CD.scrollContainer), BD = null !== (cD = null !== (ID = null !== (pD = this.scroller.current()) && void 0 !== pD ? pD : SD) && void 0 !== ID ? ID : wD) && void 0 !== cD ? cD : null === (iD = bD.find(xc)) || void 0 === iD ? void 0 : iD.scrollContainer;
-          if (!BD || !this.scroller.step(BD, DD.rightStick, DD.dtMs)) return;
-          this.targets.scrolled(BD);
-          const yD = QD || (null === (fD = this.focusTarget) || void 0 === fD ? void 0 : fD.scrollContainer) !== BD ? null : this.readFocusRect();
-          if (!yD) return;
-          const MD = zD(BD),
-            tD = FC(yD);
-          if (tD.y < MD.top || tD.y > MD.bottom) {
-            const DD = this.focusTarget.scrollGroup,
-              CD = bc(tD, this.getTargets().targets, (CD => CD.scrollGroup === DD));
-            this.setFocus(CD, !1)
+            targets: TU
+          } = this.getTargets(), qU = this.pointer, KU = !qU && this.focusTarget && og(this.focusTarget) ? this.focusTarget.scrollContainer : null, cU = qU && (null === (RU = TU.find((UU => UU.clip && Kg(UU.clip, qU)))) || void 0 === RU ? void 0 : RU.scrollContainer), GU = null !== (gU = null !== (tU = null !== (pU = this.scroller.current()) && void 0 !== pU ? pU : cU) && void 0 !== tU ? tU : KU) && void 0 !== gU ? gU : null === (EU = TU.find(og)) || void 0 === EU ? void 0 : EU.scrollContainer;
+          if (!GU || !this.scroller.step(GU, UU.rightStick, UU.dtMs)) return;
+          this.targets.scrolled(GU);
+          const jU = qU || (null === (PU = this.focusTarget) || void 0 === PU ? void 0 : PU.scrollContainer) !== GU ? null : this.readFocusRect();
+          if (!jU) return;
+          const uU = rU(GU),
+            CU = OR(jU);
+          if (CU.y < uU.top || CU.y > uU.bottom) {
+            const UU = this.focusTarget.scrollGroup,
+              RU = Tg(CU, this.getTargets().targets, (RU => RU.scrollGroup === UU));
+            this.setFocus(RU, !1)
           }
         }
-        focusContext(DD) {
+        focusContext(UU) {
           const {
-            kind: CD,
-            idx: cD
-          } = this.focused ? nc(this.focused) : {
+            kind: RU,
+            idx: gU
+          } = this.focused ? Ig(this.focused) : {
             kind: null,
             idx: null
-          }, ID = this.focused ? Xc(this.focused) : null, pD = ID ? (0, Lc.e)(ID) : null;
+          }, tU = this.focused ? xg(this.focused) : null, pU = tU ? (0, dg.c)(tU) : null;
           return {
-            kind: CD,
-            idx: cD,
-            actionElement: ID,
-            press: pD,
-            hasPress: null !== pD,
-            hasBack: !(null === pD || void 0 === pD || !pD.back),
-            holding: DD.isHolding(),
-            slotHasItem: null !== cD && DD.hasItemAt(cD)
+            kind: RU,
+            idx: gU,
+            actionElement: tU,
+            press: pU,
+            hasPress: null !== pU,
+            hasBack: !(null === pU || void 0 === pU || !pU.back),
+            holding: UU.isHolding(),
+            slotHasItem: null !== gU && UU.hasItemAt(gU)
           }
         }
-        handleButtons(DD, CD, cD) {
-          var ID, pD;
-          if (!this.activePress || DD.isHeld(this.activePress.button) && (ID = this.activePress.target, pD = this.focused, null !== ID.recipe ? mc(pD).recipe === ID.recipe : pD === ID.element) || this.releasePress(), this.scrollStickClick.update(DD.rightStick, CD), !this.handleHotbarPick(DD, cD)) {
-            for (const [ID, pD] of kc) {
-              const iD = (0, SD.h)(pD);
-              if (!DD.wasPressed(iD) || "openButton" === ID && !sc()) continue;
-              if ("RS" === iD && !this.scrollStickClick.allowsClick(CD)) continue;
-              const fD = this.focusContext(cD),
-                bD = kC(ID, fD);
-              bD && this.runIntent(bD, fD, iD, cD)
+        handleButtons(UU, RU, gU) {
+          var tU, pU;
+          if (!this.activePress || UU.isHeld(this.activePress.button) && (tU = this.activePress.target, pU = this.focused, null !== tU.recipe ? mg(pU).recipe === tU.recipe : pU === tU.element) || this.releasePress(), this.scrollStickClick.update(UU.rightStick, RU), !this.handleHotbarPick(UU, gU)) {
+            for (const [tU, pU] of yg) {
+              const EU = (0, cU.f)(pU);
+              if (!UU.wasPressed(EU) || "openButton" === tU && !Ag()) continue;
+              if ("RS" === EU && !this.scrollStickClick.allowsClick(RU)) continue;
+              const PU = this.focusContext(gU),
+                TU = yR(tU, PU);
+              TU && this.runIntent(TU, PU, EU, gU)
             }
-            this.handleDrop(DD, CD, cD)
+            this.handleDrop(UU, RU, gU)
           }
         }
-        handleHotbarPick(DD, CD) {
-          const cD = this.hotbarPick;
-          if (!cD) return !1;
-          const ID = DD.wasPressed((0, SD.h)("inventoryPrimary")) || DD.wasPressed((0, SD.h)("inventoryHotbarSwap"));
-          if (!ID && !DD.wasPressed((0, SD.h)("inventoryClose")) && !CD.isHolding()) return !(DD.wasPressed((0, SD.h)("inventory")) && sc());
-          const pD = this.focusTarget;
-          ID && "hotbar" === (null === pD || void 0 === pD ? void 0 : pD.panel) && null !== pD.idx && pD.idx !== cD.idx && (CD.swapWithHotbar(pD.idx, cD.idx), this.afterAction()), this.hotbarPick = null;
-          const iD = cD.element.isConnected ? this.getTargets().byElement.get(cD.element) : void 0;
-          return iD && this.setFocus(iD), !0
+        handleHotbarPick(UU, RU) {
+          const gU = this.hotbarPick;
+          if (!gU) return !1;
+          const tU = UU.wasPressed((0, cU.f)("inventoryPrimary")) || UU.wasPressed((0, cU.f)("inventoryHotbarSwap"));
+          if (!tU && !UU.wasPressed((0, cU.f)("inventoryClose")) && !RU.isHolding()) return !(UU.wasPressed((0, cU.f)("inventory")) && Ag());
+          const pU = this.focusTarget;
+          tU && "hotbar" === (null === pU || void 0 === pU ? void 0 : pU.panel) && null !== pU.idx && pU.idx !== gU.idx && (RU.swapWithHotbar(pU.idx, gU.idx), this.afterAction()), this.hotbarPick = null;
+          const EU = gU.element.isConnected ? this.getTargets().byElement.get(gU.element) : void 0;
+          return EU && this.setFocus(EU), !0
         }
-        startHotbarPick(DD) {
-          var CD;
+        startHotbarPick(UU) {
+          var RU;
           const {
-            targets: cD,
-            byElement: ID
-          } = this.getTargets(), pD = document.querySelector(Gc), iD = null !== (CD = pD && ID.get(pD)) && void 0 !== CD ? CD : cD.find((DD => "hotbar" === DD.panel));
-          iD && this.focused && (this.hotbarPick = {
-            idx: DD,
+            targets: gU,
+            byElement: tU
+          } = this.getTargets(), pU = document.querySelector(Sg), EU = null !== (RU = pU && tU.get(pU)) && void 0 !== RU ? RU : gU.find((UU => "hotbar" === UU.panel));
+          EU && this.focused && (this.hotbarPick = {
+            idx: UU,
             element: this.focused
-          }, this.setFocus(iD))
+          }, this.setFocus(EU))
         }
         focusKey() {
-          return this.focused ? eC(this.focused) : null
+          return this.focused ? MR(this.focused) : null
         }
-        handleDrop(DD, CD, cD) {
-          const ID = (0, SD.h)("inventoryDrop");
-          if (DD.wasPressed(ID)) {
-            const DD = (pD = this.focusContext(cD)).holding ? {
-              kind: "Lb"
-            } : "slot" === pD.kind && pD.slotHasItem && null !== pD.idx ? {
+        handleDrop(UU, RU, gU) {
+          const tU = (0, cU.f)("inventoryDrop");
+          if (UU.wasPressed(tU)) {
+            const UU = (pU = this.focusContext(gU)).holding ? {
+              kind: "WT"
+            } : "slot" === pU.kind && pU.slotHasItem && null !== pU.idx ? {
               kind: "slot",
-              idx: pD.idx
+              idx: pU.idx
             } : null;
-            return void(DD && (this.dropFrom(DD, !1, cD), this.dropLatch.press(DD, this.focusKey(), CD, oD.c[(0, yD.h)().tapHoldTime].dropStackMs), this.afterAction()))
+            return void(UU && (this.dropFrom(UU, !1, gU), this.dropLatch.press(UU, this.focusKey(), RU, QU.d[(0, jU.h)().tapHoldTime].dropStackMs), this.afterAction()))
           }
-          var pD;
-          const iD = this.dropLatch.update(DD.isHeld(ID), this.focusKey(), CD);
-          iD && ((DD, CD, cD) => "Lb" === DD.kind ? CD : !CD && cD(DD.idx))(iD, cD.isHolding(), cD.hasItemAt) && (this.dropFrom(iD, !0, cD), this.afterAction())
+          var pU;
+          const EU = this.dropLatch.update(UU.isHeld(tU), this.focusKey(), RU);
+          EU && ((UU, RU, gU) => "WT" === UU.kind ? RU : !RU && gU(UU.idx))(EU, gU.isHolding(), gU.hasItemAt) && (this.dropFrom(EU, !0, gU), this.afterAction())
         }
-        dropFrom(DD, CD, cD) {
-          "Lb" === DD.kind ? cD.dropHeld(CD, this.slotPoint()) : cD.dropSlot(DD.idx, CD)
+        dropFrom(UU, RU, gU) {
+          "WT" === UU.kind ? gU.dropHeld(RU, this.slotPoint()) : gU.dropSlot(UU.idx, RU)
         }
         slotPoint() {
           return this.pointer ? {
             clientX: this.pointer.x,
             clientY: this.pointer.y
-          } : this.lastRect ? (DD => {
-            const CD = FC(DD);
+          } : this.lastRect ? (UU => {
+            const RU = OR(UU);
             return {
-              clientX: CD.x,
-              clientY: CD.y
+              clientX: RU.x,
+              clientY: RU.y
             }
           })(this.lastRect) : {
             clientX: 0,
             clientY: 0
           }
         }
-        runIntent(DD, CD, cD, ID) {
-          const pD = CD.idx,
-            iD = CD.actionElement;
-          switch (iD && Ec.has(DD) && (0, vD.u)(iD), DD) {
+        runIntent(UU, RU, gU, tU) {
+          const pU = RU.idx,
+            EU = RU.actionElement;
+          switch (EU && zg.has(UU) && (0, eU.u)(EU), UU) {
             case "slotPrimary":
-              ID.primary(pD, this.slotPoint());
+              tU.primary(pU, this.slotPoint());
               break;
             case "slotSecondary":
-              ID.secondary(pD, this.slotPoint());
+              tU.secondary(pU, this.slotPoint());
               break;
             case "slotQuickMove":
-              ID.quickMove(pD, this.slotPoint());
+              tU.quickMove(pU, this.slotPoint());
               break;
             case "hotbarPick":
-              this.startHotbarPick(pD);
+              this.startHotbarPick(pU);
               break;
             case "pressPrimary":
             case "pressSecondary":
-              this.startPress(CD.press, "pressPrimary" === DD ? "primary" : "secondary", cD);
+              this.startPress(RU.press, "pressPrimary" === UU ? "primary" : "secondary", gU);
               break;
             case "click":
-              HC(iD, XC(iD));
+              nR(EU, xR(EU));
               break;
             case "openKeyboard":
-              gC(iD) && xC(iD);
+              fR(EU) && oR(EU);
               break;
             case "pressBack":
-              CD.press.back();
+              RU.press.back();
               break;
             case "cancel":
-              ID.cancel();
+              tU.cancel();
               break;
             case "close":
-              return this.releasePress(), void ID.close()
+              return this.releasePress(), void tU.close()
           }
           this.afterAction()
         }
-        startPress(DD, CD, cD) {
-          this.releasePress(), DD.press(CD) && (this.activePress = {
-            handlers: DD,
-            button: cD,
-            target: mc(this.focused)
+        startPress(UU, RU, gU) {
+          this.releasePress(), UU.press(RU) && (this.activePress = {
+            handlers: UU,
+            button: gU,
+            target: mg(this.focused)
           })
         }
         releasePress() {
-          var DD, CD, cD;
-          null === (DD = this.activePress) || void 0 === DD || null === (CD = (cD = DD.handlers).release) || void 0 === CD || CD.call(cD), this.activePress = null
+          var UU, RU, gU;
+          null === (UU = this.activePress) || void 0 === UU || null === (RU = (gU = UU.handlers).release) || void 0 === RU || RU.call(gU), this.activePress = null
         }
         afterAction() {
           this.targets.invalidate(), this.hover.invalidate()
         }
-        publishState(DD) {
-          ((DD, CD) => {
-            var cD, ID, pD, iD, fD, bD;
-            return DD.showing === CD.showing && DD.kind === CD.kind && DD.holding === CD.holding && DD.slotHasItem === CD.slotHasItem && (null === (cD = DD.pressHints) || void 0 === cD ? void 0 : cD.primary) === (null === (ID = CD.pressHints) || void 0 === ID ? void 0 : ID.primary) && (null === (pD = DD.pressHints) || void 0 === pD ? void 0 : pD.secondary) === (null === (iD = CD.pressHints) || void 0 === iD ? void 0 : iD.secondary) && (null === (fD = DD.pressHints) || void 0 === fD ? void 0 : fD.back) === (null === (bD = CD.pressHints) || void 0 === bD ? void 0 : bD.back) && DD.hasCategories === CD.hasCategories && DD.hasList === CD.hasList && DD.openButtonCloses === CD.openButtonCloses && DD.steppingSlots === CD.steppingSlots && DD.hotbarPicking === CD.hotbarPicking && DD.quickMoveToHotbar === CD.quickMoveToHotbar && DD.dropStackHold === CD.dropStackHold
-          })(DD, this.state) || (this.state = DD, wD.i.Uo(Jc.f, DD))
+        publishState(UU) {
+          ((UU, RU) => {
+            var gU, tU, pU, EU, PU, TU;
+            return UU.showing === RU.showing && UU.kind === RU.kind && UU.holding === RU.holding && UU.slotHasItem === RU.slotHasItem && (null === (gU = UU.pressHints) || void 0 === gU ? void 0 : gU.primary) === (null === (tU = RU.pressHints) || void 0 === tU ? void 0 : tU.primary) && (null === (pU = UU.pressHints) || void 0 === pU ? void 0 : pU.secondary) === (null === (EU = RU.pressHints) || void 0 === EU ? void 0 : EU.secondary) && (null === (PU = UU.pressHints) || void 0 === PU ? void 0 : PU.back) === (null === (TU = RU.pressHints) || void 0 === TU ? void 0 : TU.back) && UU.hasCategories === RU.hasCategories && UU.hasList === RU.hasList && UU.openButtonCloses === RU.openButtonCloses && UU.steppingSlots === RU.steppingSlots && UU.hotbarPicking === RU.hotbarPicking && UU.quickMoveToHotbar === RU.quickMoveToHotbar && UU.dropStackHold === RU.dropStackHold
+          })(UU, this.state) || (this.state = UU, KU.p.yh(ag.f, UU))
         }
       },
-      rc = ["pointermove", "pointerover", "pointerout", "mouseover", "mouseout"];
-    var Ac = cD(8379),
-      Fc = cD(312),
-      DI = cD(1627),
-      CI = cD(7860);
-    const cI = "[data-pad-secondary]",
-      II = DD => DD instanceof HTMLElement && wC(DD) && !SC(DD),
-      pI = DD => {
-        const CD = DD.querySelector(cI);
-        if (CD && II(CD)) return CD;
-        for (const pD of null !== (cD = null === (ID = DD.parentElement) || void 0 === ID ? void 0 : ID.children) && void 0 !== cD ? cD : []) {
-          var cD, ID;
-          if (pD !== DD && pD.matches(cI) && II(pD)) return pD
+      Ng = ["pointermove", "pointerover", "pointerout", "mouseover", "mouseout"];
+    var lg = gU(8326),
+      Og = gU(299),
+      Ut = gU(1567),
+      Rt = gU(7826);
+    const gt = "[data-pad-secondary]",
+      tt = UU => UU instanceof HTMLElement && KR(UU) && !cR(UU),
+      pt = UU => {
+        const RU = UU.querySelector(gt);
+        if (RU && tt(RU)) return RU;
+        for (const pU of null !== (gU = null === (tU = UU.parentElement) || void 0 === tU ? void 0 : tU.children) && void 0 !== gU ? gU : []) {
+          var gU, tU;
+          if (pU !== UU && pU.matches(gt) && tt(pU)) return pU
         }
         return null
       },
-      iI = (DD, CD, cD, ID) => Math.max(0, Math.max(DD, cD) - Math.min(CD, ID)),
-      fI = (DD, CD, cD, ID) => Math.max(0, Math.min(CD, ID) - Math.max(DD, cD)),
-      bI = (DD, CD, cD) => {
-        const ID = (DD.left + DD.right) / 2,
-          pD = (DD.top + DD.bottom) / 2,
-          iD = (CD.left + CD.right) / 2,
-          fD = (CD.top + CD.bottom) / 2;
-        if ("Left" === cD || "Right" === cD) {
-          const bD = "Right" === cD ? 1 : -1;
+      Et = (UU, RU, gU, tU) => Math.max(0, Math.max(UU, gU) - Math.min(RU, tU)),
+      Pt = (UU, RU, gU, tU) => Math.max(0, Math.min(RU, tU) - Math.max(UU, gU)),
+      Tt = (UU, RU, gU) => {
+        const tU = (UU.left + UU.right) / 2,
+          pU = (UU.top + UU.bottom) / 2,
+          EU = (RU.left + RU.right) / 2,
+          PU = (RU.top + RU.bottom) / 2;
+        if ("Left" === gU || "Right" === gU) {
+          const TU = "Right" === gU ? 1 : -1;
           return {
-            forwardGap: "Right" === cD ? CD.left - DD.right : DD.left - CD.right,
-            centreForward: (iD - ID) * bD,
-            sidewaysGap: iI(DD.top, DD.bottom, CD.top, CD.bottom),
-            sidewaysOverlap: fI(DD.top, DD.bottom, CD.top, CD.bottom),
-            centreSideways: Math.abs(fD - pD),
-            startSideways: Math.abs(CD.top - DD.top),
-            fromSidewaysSize: DD.bottom - DD.top,
-            toSidewaysSize: CD.bottom - CD.top,
-            toLength: CD.right - CD.left
+            forwardGap: "Right" === gU ? RU.left - UU.right : UU.left - RU.right,
+            centreForward: (EU - tU) * TU,
+            sidewaysGap: Et(UU.top, UU.bottom, RU.top, RU.bottom),
+            sidewaysOverlap: Pt(UU.top, UU.bottom, RU.top, RU.bottom),
+            centreSideways: Math.abs(PU - pU),
+            startSideways: Math.abs(RU.top - UU.top),
+            fromSidewaysSize: UU.bottom - UU.top,
+            toSidewaysSize: RU.bottom - RU.top,
+            toLength: RU.right - RU.left
           }
         }
-        const bD = "Down" === cD ? 1 : -1;
+        const TU = "Down" === gU ? 1 : -1;
         return {
-          forwardGap: "Down" === cD ? CD.top - DD.bottom : DD.top - CD.bottom,
-          centreForward: (fD - pD) * bD,
-          sidewaysGap: iI(DD.left, DD.right, CD.left, CD.right),
-          sidewaysOverlap: fI(DD.left, DD.right, CD.left, CD.right),
-          centreSideways: Math.abs(iD - ID),
-          startSideways: Math.abs(CD.left - DD.left),
-          fromSidewaysSize: DD.right - DD.left,
-          toSidewaysSize: CD.right - CD.left,
-          toLength: CD.bottom - CD.top
+          forwardGap: "Down" === gU ? RU.top - UU.bottom : UU.top - RU.bottom,
+          centreForward: (PU - pU) * TU,
+          sidewaysGap: Et(UU.left, UU.right, RU.left, RU.right),
+          sidewaysOverlap: Pt(UU.left, UU.right, RU.left, RU.right),
+          centreSideways: Math.abs(EU - tU),
+          startSideways: Math.abs(RU.left - UU.left),
+          fromSidewaysSize: UU.right - UU.left,
+          toSidewaysSize: RU.right - RU.left,
+          toLength: RU.bottom - RU.top
         }
       },
-      QI = DD => DD.centreForward > .5 && DD.forwardGap >= -DD.toLength / 2,
-      wI = DD => {
-        const CD = DD.sidewaysOverlap > 0 ? 0 : 2 * DD.fromSidewaysSize,
-          cD = DD.fromSidewaysSize > 1.5 * DD.toSidewaysSize ? DD.startSideways : DD.centreSideways;
-        return Math.max(0, DD.forwardGap) + 3 * DD.sidewaysGap + CD + .1 * cD
+      qt = UU => UU.centreForward > .5 && UU.forwardGap >= -UU.toLength / 2,
+      Kt = UU => {
+        const RU = UU.sidewaysOverlap > 0 ? 0 : 2 * UU.fromSidewaysSize,
+          gU = UU.fromSidewaysSize > 1.5 * UU.toSidewaysSize ? UU.startSideways : UU.centreSideways;
+        return Math.max(0, UU.forwardGap) + 3 * UU.sidewaysGap + RU + .1 * gU
       },
-      SI = (DD, CD) => fI(DD.top, DD.bottom, CD.top, CD.bottom) > 0 || CD.bottom - CD.top > CD.right - CD.left,
-      BI = (DD, CD, cD, ID, pD, iD) => {
-        const fD = pD ? MI(DD, CD, cD, pD) : new Set,
-          bD = ZI(DD, CD, cD, fD);
-        return bD < 0 && fD.size > 0 && iD ? yI(DD, CD, cD, iD) : ID && bD >= 0 ? tI(DD, CD, cD, ID, bD, fD) : bD
+      ct = (UU, RU) => Pt(UU.top, UU.bottom, RU.top, RU.bottom) > 0 || RU.bottom - RU.top > RU.right - RU.left,
+      Gt = (UU, RU, gU, tU, pU, EU) => {
+        const PU = pU ? ut(UU, RU, gU, pU) : new Set,
+          TU = ht(UU, RU, gU, PU);
+        return TU < 0 && PU.size > 0 && EU ? jt(UU, RU, gU, EU) : tU && TU >= 0 ? Ct(UU, RU, gU, tU, TU, PU) : TU
       },
-      yI = (DD, CD, cD, ID) => {
-        const pD = new Set,
-          iD = ZI(DD, CD, "Up", pD) >= 0,
-          fD = ZI(DD, CD, "Down", pD) >= 0,
-          bD = new Set;
-        return CD.forEach(((CD, cD) => {
-          const pD = CD.top + CD.bottom < DD.top + DD.bottom;
-          ID[cD] && !(pD ? iD : fD) || bD.add(cD)
-        })), ZI(DD, CD, cD, bD)
+      jt = (UU, RU, gU, tU) => {
+        const pU = new Set,
+          EU = ht(UU, RU, "Up", pU) >= 0,
+          PU = ht(UU, RU, "Down", pU) >= 0,
+          TU = new Set;
+        return RU.forEach(((RU, gU) => {
+          const pU = RU.top + RU.bottom < UU.top + UU.bottom;
+          tU[gU] && !(pU ? EU : PU) || TU.add(gU)
+        })), ht(UU, RU, gU, TU)
       },
-      MI = (DD, CD, cD, ID) => {
-        const pD = new Set;
-        return "Left" !== cD && "Right" !== cD || CD.forEach(((CD, cD) => {
-          ID[cD] && fI(DD.top, DD.bottom, CD.top, CD.bottom) <= 0 && pD.add(cD)
-        })), pD
+      ut = (UU, RU, gU, tU) => {
+        const pU = new Set;
+        return "Left" !== gU && "Right" !== gU || RU.forEach(((RU, gU) => {
+          tU[gU] && Pt(UU.top, UU.bottom, RU.top, RU.bottom) <= 0 && pU.add(gU)
+        })), pU
       },
-      tI = (DD, CD, cD, ID, pD, iD) => {
-        const fD = bI(DD, CD[pD], cD).forwardGap;
-        let bD = pD,
-          QD = ID[pD],
-          wD = 1 / 0;
-        return CD.forEach(((CD, SD) => {
-          const BD = ID[SD];
-          if (iD.has(SD) || BD < QD || BD === QD && bD === pD) return;
-          const yD = bI(DD, CD, cD);
-          if (!QI(yD) || yD.forwardGap < 0 || yD.forwardGap >= fD) return;
-          const MD = wI(yD);
-          (BD > QD || MD < wD) && (bD = SD, QD = BD, wD = MD)
-        })), bD
+      Ct = (UU, RU, gU, tU, pU, EU) => {
+        const PU = Tt(UU, RU[pU], gU).forwardGap;
+        let TU = pU,
+          qU = tU[pU],
+          KU = 1 / 0;
+        return RU.forEach(((RU, cU) => {
+          const GU = tU[cU];
+          if (EU.has(cU) || GU < qU || GU === qU && TU === pU) return;
+          const jU = Tt(UU, RU, gU);
+          if (!qt(jU) || jU.forwardGap < 0 || jU.forwardGap >= PU) return;
+          const uU = Kt(jU);
+          (GU > qU || uU < KU) && (TU = cU, qU = GU, KU = uU)
+        })), TU
       },
-      ZI = (DD, CD, cD, ID) => {
-        let pD = -1,
-          iD = 1 / 0;
-        if (CD.forEach(((CD, fD) => {
-            const bD = ((DD, CD, cD) => {
-              const ID = bI(DD, CD, cD);
-              if (!QI(ID)) return null;
-              const pD = Math.max(0, ID.forwardGap);
-              return ID.sidewaysOverlap <= 0 && ID.sidewaysGap > 2 * (pD + 1) ? null : wI(ID)
-            })(DD, CD, cD);
-            null !== bD && bD < iD && !ID.has(fD) && (iD = bD, pD = fD)
-          })), pD < 0) return -1;
-        const fD = CD[pD],
-          bD = bI(DD, fD, cD).forwardGap;
-        let QD = bD,
-          wD = pD;
-        return CD.forEach(((CD, iD) => {
-          if (iD === pD || ID.has(iD) || !((DD, CD, cD) => {
-              const ID = "Left" === cD || "Right" === cD,
-                pD = ID ? fI(DD.top, DD.bottom, CD.top, CD.bottom) : fI(DD.left, DD.right, CD.left, CD.right),
-                iD = ID ? Math.min(DD.bottom - DD.top, CD.bottom - CD.top) : Math.min(DD.right - DD.left, CD.right - CD.left);
-              return pD > 0 && pD >= iD / 2
-            })(CD, fD, cD)) return;
-          const SD = bI(DD, CD, cD);
-          QI(SD) && SD.forwardGap + SD.toLength <= bD + 1 && SD.forwardGap < QD && (QD = SD.forwardGap, wD = iD)
-        })), wD
+      ht = (UU, RU, gU, tU) => {
+        let pU = -1,
+          EU = 1 / 0;
+        if (RU.forEach(((RU, PU) => {
+            const TU = ((UU, RU, gU) => {
+              const tU = Tt(UU, RU, gU);
+              if (!qt(tU)) return null;
+              const pU = Math.max(0, tU.forwardGap);
+              return tU.sidewaysOverlap <= 0 && tU.sidewaysGap > 2 * (pU + 1) ? null : Kt(tU)
+            })(UU, RU, gU);
+            null !== TU && TU < EU && !tU.has(PU) && (EU = TU, pU = PU)
+          })), pU < 0) return -1;
+        const PU = RU[pU],
+          TU = Tt(UU, PU, gU).forwardGap;
+        let qU = TU,
+          KU = pU;
+        return RU.forEach(((RU, EU) => {
+          if (EU === pU || tU.has(EU) || !((UU, RU, gU) => {
+              const tU = "Left" === gU || "Right" === gU,
+                pU = tU ? Pt(UU.top, UU.bottom, RU.top, RU.bottom) : Pt(UU.left, UU.right, RU.left, RU.right),
+                EU = tU ? Math.min(UU.bottom - UU.top, RU.bottom - RU.top) : Math.min(UU.right - UU.left, RU.right - RU.left);
+              return pU > 0 && pU >= EU / 2
+            })(RU, PU, gU)) return;
+          const cU = Tt(UU, RU, gU);
+          qt(cU) && cU.forwardGap + cU.toLength <= TU + 1 && cU.forwardGap < qU && (qU = cU.forwardGap, KU = EU)
+        })), KU
       },
-      oI = (DD, CD) => {
-        let cD = -1,
-          ID = 1 / 0;
-        return CD.forEach(((CD, pD) => {
-          const iD = Math.max(CD.left - DD.x, 0, DD.x - CD.right),
-            fD = Math.max(CD.top - DD.y, 0, DD.y - CD.bottom),
-            bD = Math.hypot(iD, fD);
-          bD < ID && (ID = bD, cD = pD)
-        })), cD
+      Qt = (UU, RU) => {
+        let gU = -1,
+          tU = 1 / 0;
+        return RU.forEach(((RU, pU) => {
+          const EU = Math.max(RU.left - UU.x, 0, UU.x - RU.right),
+            PU = Math.max(RU.top - UU.y, 0, UU.y - RU.bottom),
+            TU = Math.hypot(EU, PU);
+          TU < tU && (tU = TU, gU = pU)
+        })), gU
       },
-      vI = (DD, CD) => {
-        const cD = Math.min(DD.bottom - DD.top, CD.bottom - CD.top) / 2;
-        return Math.abs(DD.top - CD.top) > cD ? DD.top - CD.top : DD.left - CD.left
+      et = (UU, RU) => {
+        const gU = Math.min(UU.bottom - UU.top, RU.bottom - RU.top) / 2;
+        return Math.abs(UU.top - RU.top) > gU ? UU.top - RU.top : UU.left - RU.left
       },
-      NI = DD => {
-        let CD = -1;
-        for (let cD = 0; cD < DD.length; cD++)(CD < 0 || vI(DD[cD], DD[CD]) < 0) && (CD = cD);
-        return CD
+      Wt = UU => {
+        let RU = -1;
+        for (let gU = 0; gU < UU.length; gU++)(RU < 0 || et(UU[gU], UU[RU]) < 0) && (RU = gU);
+        return RU
       };
-    var gI = cD(1660),
-      XI = cD(8384),
-      mI = cD(8391);
-    const nI = DD => {
-        if ("death" !== DD || "inGame" !== QD.d.get("gameState") || "off" === (0, yD.h)().quickChat || null === (0, gI.c)()) return !1;
-        const CD = (0, SD.h)("chat");
-        return CD !== (0, SD.h)("menuConfirm") && CD !== (0, SD.h)("menuBack")
+    var ft = gU(1609),
+      xt = gU(8331),
+      mt = gU(8336);
+    const It = UU => {
+        if ("death" !== UU || "inGame" !== qU.b.get("gameState") || "off" === (0, jU.h)().quickChat || null === (0, ft.c)()) return !1;
+        const RU = (0, cU.f)("chat");
+        return RU !== (0, cU.f)("menuConfirm") && RU !== (0, cU.f)("menuBack")
       },
-      OI = new XI.e;
-    var PI = cD(4134),
-      HI = cD(8394);
-    const UI = DD => {
-        let CD = null;
-        for (const cD of DD.querySelectorAll("[data-pad-tabs]")) wC(cD) && (!CD || Number(cD.dataset.padTabs) < Number(CD.dataset.padTabs)) && (CD = cD);
-        return CD
+      Jt = new xt.b;
+    var wt = gU(3984),
+      nt = gU(8340);
+    const bt = UU => {
+        let RU = null;
+        for (const gU of UU.querySelectorAll("[data-pad-tabs]")) KR(gU) && (!RU || Number(gU.dataset.padTabs) < Number(RU.dataset.padTabs)) && (RU = gU);
+        return RU
       },
-      xI = (DD, CD, cD, ID) => {
-        DD.focusWhenFound((() => {
-          const pD = DD.pickInitial(CD);
-          if (pD && !cD.has(pD) && (null === ID || void 0 === ID || !ID.contains(pD))) return pD;
-          const iD = ((DD, CD) => {
-              const cD = CD => DD.getEnabledCandidates(CD).filter((DD => !DD.closest("[data-pad-tabs]")));
-              for (const ID of NC(CD)) {
-                const DD = cD(ID);
-                if (DD.length > 0) return DD
+      ot = (UU, RU, gU, tU) => {
+        UU.focusWhenFound((() => {
+          const pU = UU.pickInitial(RU);
+          if (pU && !gU.has(pU) && (null === tU || void 0 === tU || !tU.contains(pU))) return pU;
+          const EU = ((UU, RU) => {
+              const gU = RU => UU.getEnabledCandidates(RU).filter((UU => !UU.closest("[data-pad-tabs]")));
+              for (const tU of WR(RU)) {
+                const UU = gU(tU);
+                if (UU.length > 0) return UU
               }
-              return cD(CD)
-            })(DD, CD).filter((DD => !cD.has(DD))),
-            fD = NI(iD.map((DD => DD.getBoundingClientRect())));
-          return fD >= 0 ? iD[fD] : null
+              return gU(RU)
+            })(UU, RU).filter((UU => !gU.has(UU))),
+            PU = Wt(EU.map((UU => UU.getBoundingClientRect())));
+          return PU >= 0 ? EU[PU] : null
         }), 3e3)
       },
-      qI = (DD, CD, cD, ID) => {
-        var pD;
-        const iD = ((DD, CD) => {
-          if (0 === DD.length) return null;
-          const cD = DD.findIndex((DD => "true" === DD.dataset.padSelected));
-          return cD < 0 ? CD > 0 ? DD[0] : DD[DD.length - 1] : DD[(cD + CD + DD.length) % DD.length]
-        })([...cD.querySelectorAll("[data-pad-tab]")].filter((DD => wC(DD) && !SC(DD))), ID);
-        if (!iD) return;
-        const fD = null !== (pD = null === DD || void 0 === DD ? void 0 : DD.getFocused()) && void 0 !== pD ? pD : null,
-          bD = !(null === fD || void 0 === fD || !fD.isConnected) && cD.contains(fD),
-          QD = DD && !bD ? new Set(DD.getEnabledCandidates(CD)) : null;
-        qC(iD), DD && (QD ? xI(DD, CD, QD, cD) : DD.setFocus(iD, {
+      Zt = (UU, RU, gU, tU) => {
+        var pU;
+        const EU = ((UU, RU) => {
+          if (0 === UU.length) return null;
+          const gU = UU.findIndex((UU => "true" === UU.dataset.padSelected));
+          return gU < 0 ? RU > 0 ? UU[0] : UU[UU.length - 1] : UU[(gU + RU + UU.length) % UU.length]
+        })([...gU.querySelectorAll("[data-pad-tab]")].filter((UU => KR(UU) && !cR(UU))), tU);
+        if (!EU) return;
+        const PU = null !== (pU = null === UU || void 0 === UU ? void 0 : UU.getFocused()) && void 0 !== pU ? pU : null,
+          TU = !(null === PU || void 0 === PU || !PU.isConnected) && gU.contains(PU),
+          qU = UU && !TU ? new Set(UU.getEnabledCandidates(RU)) : null;
+        ZR(EU), UU && (qU ? ot(UU, RU, qU, gU) : UU.setFocus(EU, {
           byUser: !0
         }))
       },
-      JI = DD => {
-        var CD;
-        const cD = zD(null !== (CD = xD(DD, "x")) && void 0 !== CD ? CD : DD),
-          ID = MC(DD).filter((DD => !SC(DD))),
-          pD = ID.filter((DD => jD(DD.getBoundingClientRect(), cD)));
-        return (pD.length > 0 ? pD : ID).sort(((DD, CD) => vI(DD.getBoundingClientRect(), CD.getBoundingClientRect())))
+      Yt = UU => {
+        var RU;
+        const gU = rU(null !== (RU = oU(UU, "x")) && void 0 !== RU ? RU : UU),
+          tU = uR(UU).filter((UU => !cR(UU))),
+          pU = tU.filter((UU => XU(UU.getBoundingClientRect(), gU)));
+        return (pU.length > 0 ? pU : tU).sort(((UU, RU) => et(UU.getBoundingClientRect(), RU.getBoundingClientRect())))
       },
-      KI = (DD, CD, cD) => {
-        const ID = [...CD.querySelectorAll("[data-pad-row]")].filter(wC),
-          pD = DD.getFocused(),
-          iD = pD ? ID.findIndex((DD => DD.contains(pD))) : -1;
-        let fD = 0,
-          bD = cD > 0 ? 0 : ID.length - 1;
-        if (iD >= 0 && pD) fD = Math.max(0, JI(ID[iD]).indexOf(pD)), bD = iD + cD;
-        else if (pD) {
-          const DD = pD.getBoundingClientRect(),
-            CD = ID.map((CD => {
-              const ID = CD.getBoundingClientRect();
-              return cD > 0 ? ID.top >= DD.top : ID.bottom <= DD.bottom
+      Bt = (UU, RU, gU) => {
+        const tU = [...RU.querySelectorAll("[data-pad-row]")].filter(KR),
+          pU = UU.getFocused(),
+          EU = pU ? tU.findIndex((UU => UU.contains(pU))) : -1;
+        let PU = 0,
+          TU = gU > 0 ? 0 : tU.length - 1;
+        if (EU >= 0 && pU) PU = Math.max(0, Yt(tU[EU]).indexOf(pU)), TU = EU + gU;
+        else if (pU) {
+          const UU = pU.getBoundingClientRect(),
+            RU = tU.map((RU => {
+              const tU = RU.getBoundingClientRect();
+              return gU > 0 ? tU.top >= UU.top : tU.bottom <= UU.bottom
             }));
-          bD = cD > 0 ? CD.indexOf(!0) : CD.lastIndexOf(!0)
+          TU = gU > 0 ? RU.indexOf(!0) : RU.lastIndexOf(!0)
         }
-        for (let QD = bD; QD >= 0 && QD < ID.length; QD += cD) {
-          const CD = JI(ID[QD]);
-          if (CD.length > 0) return void DD.setFocus(CD[Math.min(fD, CD.length - 1)], {
+        for (let qU = TU; qU >= 0 && qU < tU.length; qU += gU) {
+          const RU = Yt(tU[qU]);
+          if (RU.length > 0) return void UU.setFocus(RU[Math.min(PU, RU.length - 1)], {
             byUser: !0
           })
         }
       },
-      aI = (DD, CD, cD) => {
-        var ID, pD;
-        const iD = null !== (ID = null === DD || void 0 === DD ? void 0 : DD.getFocused()) && void 0 !== ID ? ID : null,
-          fD = null !== iD && void 0 !== iD && iD.closest("[data-pad-row]") ? "x" : "y",
-          bD = null !== (pD = iD ? xD(iD, fD, CD) : null) && void 0 !== pD ? pD : JD(CD, fD);
-        if (!bD) return;
-        const QD = iD ? XC(iD) : null;
-        if (VD(bD, fD, cD * ("y" === fD ? bD.clientHeight : bD.clientWidth) * .85), !DD || !QD) return;
-        const wD = zD(bD),
-          SD = DD.getEnabledCandidates(CD).filter((DD => bD.contains(DD) && jD(DD.getBoundingClientRect(), wD))),
-          BD = oI(QD, SD.map((DD => DD.getBoundingClientRect())));
-        BD >= 0 && DD.setFocus(SD[BD], {
+      Vt = (UU, RU, gU) => {
+        var tU, pU;
+        const EU = null !== (tU = null === UU || void 0 === UU ? void 0 : UU.getFocused()) && void 0 !== tU ? tU : null,
+          PU = null !== EU && void 0 !== EU && EU.closest("[data-pad-row]") ? "x" : "y",
+          TU = null !== (pU = EU ? oU(EU, PU, RU) : null) && void 0 !== pU ? pU : aU(RU, PU);
+        if (!TU) return;
+        const qU = EU ? xR(EU) : null;
+        if (VU(TU, PU, gU * ("y" === PU ? TU.clientHeight : TU.clientWidth) * .85), !UU || !qU) return;
+        const KU = rU(TU),
+          cU = UU.getEnabledCandidates(RU).filter((UU => TU.contains(UU) && XU(UU.getBoundingClientRect(), KU))),
+          GU = Qt(qU, cU.map((UU => UU.getBoundingClientRect())));
+        GU >= 0 && UU.setFocus(cU[GU], {
           scroll: !1,
           byUser: !0
         })
       };
-    let VI = null;
-    const zI = (DD, CD) => {
-        var cD, ID;
-        const pD = CD.querySelector("[data-pad-friends-column]"),
-          iD = DD.getFocused();
-        if (!pD || !iD || !pD.contains(iD)) return !1;
-        const fD = DD.getEnabledCandidates(CD).filter((DD => !pD.contains(DD))),
-          bD = oI(XC(iD), fD.map((DD => DD.getBoundingClientRect()))),
-          QD = null === (cD = VI) || void 0 === cD ? void 0 : cD.deref();
-        return DD.setFocus(null !== QD && void 0 !== QD && QD.isConnected ? QD : null !== (ID = fD[bD]) && void 0 !== ID ? ID : null, {
+    let rt = null;
+    const Xt = (UU, RU) => {
+        var gU, tU;
+        const pU = RU.querySelector("[data-pad-friends-column]"),
+          EU = UU.getFocused();
+        if (!pU || !EU || !pU.contains(EU)) return !1;
+        const PU = UU.getEnabledCandidates(RU).filter((UU => !pU.contains(UU))),
+          TU = Qt(xR(EU), PU.map((UU => UU.getBoundingClientRect()))),
+          qU = null === (gU = rt) || void 0 === gU ? void 0 : gU.deref();
+        return UU.setFocus(null !== qU && void 0 !== qU && qU.isConnected ? qU : null !== (tU = PU[TU]) && void 0 !== tU ? tU : null, {
           byUser: !0
         }), !0
       },
-      jI = DD => {
-        const CD = (0, SD.h)(DD);
-        return (0, tD.C)(CD) || CI.t.some((DD => (0, SD.h)(DD) === CD)) ? null : CD
+      vt = UU => {
+        const RU = (0, cU.f)(UU);
+        return (0, CU.B)(RU) || Rt.x.some((UU => (0, cU.f)(UU) === RU)) ? null : RU
       },
-      lI = (DD, CD) => {
-        const cD = jI(CD);
-        return null !== cD && DD.wasPressed(cD)
+      dt = (UU, RU) => {
+        const gU = vt(RU);
+        return null !== gU && UU.wasPressed(gU)
       },
-      LI = function(DD, CD, cD) {
-        let ID = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const pD = (DD => {
-            var CD, cD;
-            return null !== (CD = null === (cD = UI(DD)) || void 0 === cD ? void 0 : cD.querySelector("[data-pad-tab][data-pad-selected='true']")) && void 0 !== CD ? CD : null
-          })(CD),
-          iD = DD && pD ? new Set(DD.getEnabledCandidates(CD)) : null;
-        (0, Ac.d)(), cD === Fc.q.SETTINGS && (0, DI.n)(QD.d.get("openEverythingMenuName")) ? QD.d.set({
-          openEverythingMenuName: cD
-        }) : (0, DI.y)(new Event("padMenuShortcut"), cD, ID), DD && iD && pD && xI(DD, CD, iD, pD.closest("[data-pad-tabs]"))
+      Ht = function(UU, RU, gU) {
+        let tU = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const pU = (UU => {
+            var RU, gU;
+            return null !== (RU = null === (gU = bt(UU)) || void 0 === gU ? void 0 : gU.querySelector("[data-pad-tab][data-pad-selected='true']")) && void 0 !== RU ? RU : null
+          })(RU),
+          EU = UU && pU ? new Set(UU.getEnabledCandidates(RU)) : null;
+        (0, lg.c)(), gU === Og.n.SETTINGS && (0, Ut.k)(qU.b.get("openEverythingMenuName")) ? qU.b.set({
+          openEverythingMenuName: gU
+        }) : (0, Ut.w)(new Event("padMenuShortcut"), gU, tU), UU && EU && pU && ot(UU, RU, EU, pU.closest("[data-pad-tabs]"))
       },
-      TI = DD => null !== DD.closest(".Dropdown-root") || null !== DD.querySelector(".Dropdown-root.is-open"),
-      GI = DD => null !== (0, HI.e)() && "popup" !== DD.layer.kind && !UI(DD.root) && !TI(DD.root),
-      RI = (0, ZD.b)(tD.X),
-      kI = (0, ZD.b)(tD.X),
-      dI = (DD, CD, cD) => {
-        if (((DD, CD) => {
-            const cD = (0, SD.h)("chat");
-            return nI(CD) && DD.isHeld(cD) ? "hold" === OI.update(DD.wasPressed(cD), DD.isHeld(cD), performance.now(), oD.c[(0, yD.h)().tapHoldTime].wheelMs) && (BD.d.consumeButton(cD), wD.i.Uo(mI.o), !0) : (OI.release(), !1)
-          })(CD, cD.layer.kind)) return !0;
-        const ID = cD.root;
-        for (const [fD, bD] of [
+      St = UU => null !== UU.closest(".Dropdown-root") || null !== UU.querySelector(".Dropdown-root.is-open"),
+      st = UU => null !== (0, nt.e)() && "popup" !== UU.layer.kind && !bt(UU.root) && !St(UU.root),
+      yt = (0, hU.e)(CU.Q),
+      kt = (0, hU.e)(CU.Q),
+      Ft = (UU, RU, gU) => {
+        if (((UU, RU) => {
+            const gU = (0, cU.f)("chat");
+            return It(RU) && UU.isHeld(gU) ? "hold" === Jt.update(UU.wasPressed(gU), UU.isHeld(gU), performance.now(), QU.d[(0, jU.h)().tapHoldTime].wheelMs) && (GU.e.consumeButton(gU), KU.p.yh(mt.o), !0) : (Jt.release(), !1)
+          })(RU, gU.layer.kind)) return !0;
+        const tU = gU.root;
+        for (const [PU, TU] of [
             ["menuTabPrevious", -1],
             ["menuTabNext", 1]
           ])
-          if (CD.wasPressed((0, SD.h)(fD))) {
-            const CD = TI(ID) ? null : UI(ID);
-            if (CD) qI(DD, ID, CD, bD);
-            else if (GI(cD)) {
-              var pD;
-              const CD = DD ? new Set(DD.getEnabledCandidates(ID)) : null;
-              null !== (pD = (0, HI.e)()) && void 0 !== pD && pD(bD) && DD && CD && xI(DD, ID, CD, null)
-            } else DD && KI(DD, ID, bD);
+          if (RU.wasPressed((0, cU.f)(PU))) {
+            const RU = St(tU) ? null : bt(tU);
+            if (RU) Zt(UU, tU, RU, TU);
+            else if (st(gU)) {
+              var pU;
+              const RU = UU ? new Set(UU.getEnabledCandidates(tU)) : null;
+              null !== (pU = (0, nt.e)()) && void 0 !== pU && pU(TU) && UU && RU && ot(UU, tU, RU, null)
+            } else UU && Bt(UU, tU, TU);
             return !0
-          } for (const [fD, bD, QD] of [
-            ["menuPageUp", -1, RI],
-            ["menuPageDown", 1, kI]
+          } for (const [PU, TU, qU] of [
+            ["menuPageUp", -1, yt],
+            ["menuPageDown", 1, kt]
           ]) {
-          const cD = (0, SD.h)(fD);
-          if (CD.wasPressed(cD) && QD.reset(), QD.update(CD.isHeld(cD), performance.now())) return aI(DD, ID, bD), !0
+          const gU = (0, cU.f)(PU);
+          if (RU.wasPressed(gU) && qU.reset(), qU.update(RU.isHeld(gU), performance.now())) return Vt(UU, tU, TU), !0
         }
-        const iD = "popup" === cD.layer.kind;
-        return lI(CD, "pause") ? (iD || (0, DI.v)() && "menu" !== cD.layer.kind || LI(DD, ID, (0, DI.v)() ? Fc.q.SETTINGS : (0, PI.b)()), !0) : !!lI(CD, "leaderboard") && ("home" === cD.layer.kind ? (DD => {
-          const CD = [...DD.querySelectorAll("[data-pad-notifications]")].find(wC);
-          CD && qC(CD)
-        })(ID) : iD || LI(DD, ID, Fc.q.LOBBY_LEADERBOARD, "inGame" === QD.d.get("gameState")), !0)
+        const EU = "popup" === gU.layer.kind;
+        return dt(RU, "pause") ? (EU || (0, Ut.s)() && "menu" !== gU.layer.kind || Ht(UU, tU, (0, Ut.s)() ? Og.n.SETTINGS : (0, wt.d)()), !0) : !!dt(RU, "leaderboard") && ("home" === gU.layer.kind ? (UU => {
+          const RU = [...UU.querySelectorAll("[data-pad-notifications]")].find(KR);
+          RU && ZR(RU)
+        })(tU) : EU || Ht(UU, tU, Og.n.LOBBY_LEADERBOARD, "inGame" === qU.b.get("gameState")), !0)
       },
-      YI = (DD, CD, cD) => {
-        if (dI(DD, CD, cD)) return !0;
-        const ID = "home" === cD.layer.kind;
-        if (CD.wasPressed((0, SD.h)("menuSecondary"))) {
-          const CD = DD.getFocused(),
-            pD = CD ? pI(CD) : null;
-          if (pD) return qC(pD), !0;
-          if (ID) {
-            const CD = cD.root.querySelector("[data-pad-search] input");
-            return CD && vC(CD, cD.root) ? (DD.setFocus(CD, {
+      it = (UU, RU, gU) => {
+        if (Ft(UU, RU, gU)) return !0;
+        const tU = "home" === gU.layer.kind;
+        if (RU.wasPressed((0, cU.f)("menuSecondary"))) {
+          const RU = UU.getFocused(),
+            pU = RU ? pt(RU) : null;
+          if (pU) return ZR(pU), !0;
+          if (tU) {
+            const RU = gU.root.querySelector("[data-pad-search] input");
+            return RU && eR(RU, gU.root) ? (UU.setFocus(RU, {
               byUser: !0
-            }), qC(CD)) : QD.d.set({
+            }), ZR(RU)) : qU.b.set({
               searchOpen: !0
             }), !0
           }
         }
-        return !(!ID || !lI(CD, "inventory")) && (((DD, CD) => {
-          var cD, ID;
-          const pD = CD.querySelector("[data-pad-friends-column]");
-          if (!pD || !wC(pD)) return void(0, DI.y)(new Event("padMenuShortcut"), Fc.q.SOCIAL);
-          if (zI(DD, CD)) return;
-          const iD = null !== (cD = null === (ID = pD.querySelector("[data-pad-friends-start]")) || void 0 === ID ? void 0 : ID.getBoundingClientRect().top) && void 0 !== cD ? cD : -1 / 0,
-            fD = DD.getEnabledCandidates(pD),
-            bD = fD.filter((DD => DD.getBoundingClientRect().top >= iD)),
-            QD = bD.length > 0 ? bD : fD,
-            wD = NI(QD.map((DD => DD.getBoundingClientRect())));
-          DD.setFocus(wD >= 0 ? QD[wD] : null, {
+        return !(!tU || !dt(RU, "inventory")) && (((UU, RU) => {
+          var gU, tU;
+          const pU = RU.querySelector("[data-pad-friends-column]");
+          if (!pU || !KR(pU)) return void(0, Ut.w)(new Event("padMenuShortcut"), Og.n.SOCIAL);
+          if (Xt(UU, RU)) return;
+          const EU = null !== (gU = null === (tU = pU.querySelector("[data-pad-friends-start]")) || void 0 === tU ? void 0 : tU.getBoundingClientRect().top) && void 0 !== gU ? gU : -1 / 0,
+            PU = UU.getEnabledCandidates(pU),
+            TU = PU.filter((UU => UU.getBoundingClientRect().top >= EU)),
+            qU = TU.length > 0 ? TU : PU,
+            KU = Wt(qU.map((UU => UU.getBoundingClientRect())));
+          UU.setFocus(KU >= 0 ? qU[KU] : null, {
             byUser: !0
           })
-        })(DD, cD.root), !0)
+        })(UU, gU.root), !0)
       },
-      WI = DD => {
-        var CD, cD, ID;
-        const pD = TC(DD);
-        if (null !== pD) return pD;
-        const iD = (null !== (CD = null !== (cD = null !== (ID = DD.getAttribute("aria-label")) && void 0 !== ID ? ID : DD.getAttribute("title")) && void 0 !== cD ? cD : DD.textContent) && void 0 !== CD ? CD : "").replace(/\s+/g, " ").trim();
-        return iD ? `${DD.tagName}:${iD.slice(0,100)}` : null
+      At = UU => {
+        var RU, gU, tU;
+        const pU = HR(UU);
+        if (null !== pU) return pU;
+        const EU = (null !== (RU = null !== (gU = null !== (tU = UU.getAttribute("aria-label")) && void 0 !== tU ? tU : UU.getAttribute("title")) && void 0 !== gU ? gU : UU.textContent) && void 0 !== RU ? RU : "").replace(/\s+/g, " ").trim();
+        return EU ? `${UU.tagName}:${EU.slice(0,100)}` : null
       };
-    class sI {
+    class zt {
       constructor() {
         this.remembered = new Map, this.history = []
       }
-      enter(DD) {
-        const CD = this.history.indexOf(DD);
-        if (CD >= 0) {
-          for (const DD of this.history.splice(CD + 1)) this.remembered.delete(DD);
+      enter(UU) {
+        const RU = this.history.indexOf(UU);
+        if (RU >= 0) {
+          for (const UU of this.history.splice(RU + 1)) this.remembered.delete(UU);
           return !0
         }
-        return this.remembered.delete(DD), this.history.push(DD), this.history.length > 32 && this.forget(this.history[0]), !1
+        return this.remembered.delete(UU), this.history.push(UU), this.history.length > 32 && this.forget(this.history[0]), !1
       }
-      forget(DD) {
-        this.remembered.delete(DD);
-        const CD = this.history.indexOf(DD);
-        CD >= 0 && this.history.splice(CD, 1)
+      forget(UU) {
+        this.remembered.delete(UU);
+        const RU = this.history.indexOf(UU);
+        RU >= 0 && this.history.splice(RU, 1)
       }
-      remember(DD, CD, cD, ID) {
-        const pD = WI(CD),
-          iD = TC(CD),
-          fD = null !== iD && ((DD, CD) => {
-            let cD = 0;
-            for (const ID of DD.querySelectorAll("[data-pad-key], [href]"))
-              if ((ID.getAttribute("data-pad-key") === CD || ID.getAttribute("href") === CD) && (cD++, cD > 1)) return !0;
+      remember(UU, RU, gU, tU) {
+        const pU = At(RU),
+          EU = HR(RU),
+          PU = null !== EU && ((UU, RU) => {
+            let gU = 0;
+            for (const tU of UU.querySelectorAll("[data-pad-key], [href]"))
+              if ((tU.getAttribute("data-pad-key") === RU || tU.getAttribute("href") === RU) && (gU++, gU > 1)) return !0;
             return !1
-          })(cD, iD) ? Math.max(0, this.twins(ID(), iD).indexOf(CD)) : 0;
-        this.remembered.set(DD, {
-          element: new WeakRef(CD),
-          identity: pD,
-          ordinal: fD
+          })(gU, EU) ? Math.max(0, this.twins(tU(), EU).indexOf(RU)) : 0;
+        this.remembered.set(UU, {
+          element: new WeakRef(RU),
+          identity: pU,
+          ordinal: PU
         })
       }
-      has(DD) {
-        return this.remembered.has(DD)
+      has(UU) {
+        return this.remembered.has(UU)
       }
-      recall(DD, CD) {
-        var cD, ID;
-        const pD = this.remembered.get(DD);
-        if (!pD) return null;
-        const iD = pD.element.deref();
-        if (iD && CD.includes(iD)) return iD;
-        if (null === pD.identity) return null;
-        const fD = this.twins(CD, pD.identity);
-        return null !== (cD = null !== (ID = fD[pD.ordinal]) && void 0 !== ID ? ID : fD[0]) && void 0 !== cD ? cD : null
+      recall(UU, RU) {
+        var gU, tU;
+        const pU = this.remembered.get(UU);
+        if (!pU) return null;
+        const EU = pU.element.deref();
+        if (EU && RU.includes(EU)) return EU;
+        if (null === pU.identity) return null;
+        const PU = this.twins(RU, pU.identity);
+        return null !== (gU = null !== (tU = PU[pU.ordinal]) && void 0 !== tU ? tU : PU[0]) && void 0 !== gU ? gU : null
       }
-      twins(DD, CD) {
-        return DD.filter((DD => WI(DD) === CD))
+      twins(UU, RU) {
+        return UU.filter((UU => At(UU) === RU))
       }
     }
-    var EI = cD(1280);
-    const eI = DD => {
-        const CD = [];
-        let cD = DD;
-        for (; cD && cD !== document.body;) {
-          const DD = getComputedStyle(cD).zIndex;
-          "auto" !== DD && CD.push(Number(DD) || 0), cD = cD.parentElement
+    var Mt = gU(1283);
+    const Dt = UU => {
+        const RU = [];
+        let gU = UU;
+        for (; gU && gU !== document.body;) {
+          const UU = getComputedStyle(gU).zIndex;
+          "auto" !== UU && RU.push(Number(UU) || 0), gU = gU.parentElement
         }
-        return CD.reverse()
+        return RU.reverse()
       },
-      uI = (DD, CD) => {
-        const cD = ((DD, CD) => {
-          const cD = Math.max(DD.length, CD.length);
-          for (let iD = 0; iD < cD; iD++) {
-            var ID, pD;
-            const cD = (null !== (ID = DD[iD]) && void 0 !== ID ? ID : 0) - (null !== (pD = CD[iD]) && void 0 !== pD ? pD : 0);
-            if (0 !== cD) return cD
+      Lt = (UU, RU) => {
+        const gU = ((UU, RU) => {
+          const gU = Math.max(UU.length, RU.length);
+          for (let EU = 0; EU < gU; EU++) {
+            var tU, pU;
+            const gU = (null !== (tU = UU[EU]) && void 0 !== tU ? tU : 0) - (null !== (pU = RU[EU]) && void 0 !== pU ? pU : 0);
+            if (0 !== gU) return gU
           }
           return 0
-        })(eI(DD), eI(CD));
-        if (0 !== cD) return cD > 0;
-        if (DD.contains(CD)) return !1;
-        if (CD.contains(DD)) return !0;
-        const ID = DD.compareDocumentPosition(CD);
-        return !!(ID & Node.DOCUMENT_POSITION_PRECEDING) || !(ID & Node.DOCUMENT_POSITION_FOLLOWING) && null
+        })(Dt(UU), Dt(RU));
+        if (0 !== gU) return gU > 0;
+        if (UU.contains(RU)) return !1;
+        if (RU.contains(UU)) return !0;
+        const tU = UU.compareDocumentPosition(RU);
+        return !!(tU & Node.DOCUMENT_POSITION_PRECEDING) || !(tU & Node.DOCUMENT_POSITION_FOLLOWING) && null
       },
-      hI = (DD, CD) => {
-        var cD;
-        return null !== (cD = uI(DD.root, CD.root)) && void 0 !== cD ? cD : DD.order > CD.order
+      Nt = (UU, RU) => {
+        var gU;
+        return null !== (gU = Lt(UU.root, RU.root)) && void 0 !== gU ? gU : UU.order > RU.order
       },
-      rI = (DD, CD) => CD.some((CD => !CD.contains(DD) && !DD.contains(CD) && !0 === uI(CD, DD)));
-    let AI = null,
-      FI = null,
-      Dp = -1;
-    const Cp = () => {
-        var DD;
-        const CD = null === (DD = document.timeline) || void 0 === DD ? void 0 : DD.currentTime,
-          cD = "number" === typeof CD ? CD : null;
-        if (null !== cD && cD === FI && Dp === (0, EI.e)()) return AI;
-        let ID = null;
-        const pD = [],
-          iD = [...document.querySelectorAll("[data-pad-covers]")].filter(wC);
-        for (const fD of (0, EI.i)()) {
-          const DD = fD.getRoot(),
-            CD = !!DD && wC(DD) && !rI(DD, iD);
-          if (fD.shown && !CD && pD.push(fD), fD.shown = CD, !DD || !CD) continue;
-          const cD = {
-            layer: fD,
-            root: DD,
-            order: fD.order
+      lt = (UU, RU) => RU.some((RU => !RU.contains(UU) && !UU.contains(RU) && !0 === Lt(RU, UU)));
+    let Ot = null,
+      Up = null,
+      Rp = -1;
+    const gp = () => {
+        var UU;
+        const RU = null === (UU = document.timeline) || void 0 === UU ? void 0 : UU.currentTime,
+          gU = "number" === typeof RU ? RU : null;
+        if (null !== gU && gU === Up && Rp === (0, Mt.c)()) return Ot;
+        let tU = null;
+        const pU = [],
+          EU = [...document.querySelectorAll("[data-pad-covers]")].filter(KR);
+        for (const PU of (0, Mt.f)()) {
+          const UU = PU.getRoot(),
+            RU = !!UU && KR(UU) && !lt(UU, EU);
+          if (PU.shown && !RU && pU.push(PU), PU.shown = RU, !UU || !RU) continue;
+          const gU = {
+            layer: PU,
+            root: UU,
+            order: PU.order
           };
-          ID && !hI(cD, ID) || (ID = cD)
+          tU && !Nt(gU, tU) || (tU = gU)
         }
-        AI = ID, FI = cD, Dp = (0, EI.e)();
-        for (const fD of pD)(0, EI.m)(fD);
-        return AI
+        Ot = tU, Up = gU, Rp = (0, Mt.c)();
+        for (const PU of pU)(0, Mt.h)(PU);
+        return Ot
       },
-      cp = () => {
-        const DD = Cp();
-        return !(null === DD || void 0 === DD || !DD.layer.close) && (DD.layer.close(), FI = null, !0)
+      tp = () => {
+        const UU = gp();
+        return !(null === UU || void 0 === UU || !UU.layer.close) && (UU.layer.close(), Up = null, !0)
       },
-      Ip = () => {
-        var DD, CD;
-        return null !== (DD = null === (CD = Cp()) || void 0 === CD ? void 0 : CD.root) && void 0 !== DD ? DD : null
+      pp = () => {
+        var UU, RU;
+        return null !== (UU = null === (RU = gp()) || void 0 === RU ? void 0 : RU.root) && void 0 !== UU ? UU : null
       },
-      pp = DD => DD ? {
-        ...DD,
-        root: Ip()
+      Ep = UU => UU ? {
+        ...UU,
+        root: pp()
       } : null;
-    let ip = null,
-      fp = null,
-      bp = (0, yD.h)().menuNavigation,
-      Qp = null;
-    const wp = new mD;
-    let Sp = null;
-    wD.i.subscribe(yD.f, (() => {
-      const DD = (0, yD.h)().menuNavigation;
-      DD !== bp && (bp = DD, ip = null, fp = null)
+    let Pp = null,
+      Tp = null,
+      qp = (0, jU.h)().menuNavigation,
+      Kp = null;
+    const cp = new mU;
+    let Gp = null;
+    KU.p.subscribe(jU.e, (() => {
+      const UU = (0, jU.h)().menuNavigation;
+      UU !== qp && (qp = UU, Pp = null, Tp = null)
     }));
-    const Bp = () => {
-        var DD;
-        return null !== (DD = ip) && void 0 !== DD ? DD : (0, yD.h)().menuNavigation
+    const jp = () => {
+        var UU;
+        return null !== (UU = Pp) && void 0 !== UU ? UU : (0, jU.h)().menuNavigation
       },
-      yp = DD => {
-        if (op()) {
-          if (Qp = pp(DD), "hybrid" === Bp()) return wp.lock(), void(fp = fp ? null : Ip());
-          ip = "focus" === Bp() ? "cursor" : "focus"
+      Cp = UU => {
+        if (Wp()) {
+          if (Kp = Ep(UU), "hybrid" === jp()) return cp.lock(), void(Tp = Tp ? null : pp());
+          Pp = "focus" === jp() ? "cursor" : "focus"
         }
       },
-      Mp = () => {
-        const DD = Qp;
-        return Qp = null, DD
+      hp = () => {
+        const UU = Kp;
+        return Kp = null, UU
       };
-    let tp = {
+    let Qp = {
       root: null,
       firstSeenMs: -1 / 0,
       atMs: -1 / 0,
       has: !1
     };
-    const Zp = function(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
-        const cD = tp.root === DD,
-          ID = cD ? tp.firstSeenMs : CD,
-          pD = tp.has || CD - ID > 1e3;
-        return (!cD || !pD || CD - tp.atMs > 250) && (tp = {
-          root: DD,
-          firstSeenMs: ID,
-          atMs: CD,
-          has: ZC(DD)
-        }), tp.has
+    const ep = function(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
+        const gU = Qp.root === UU,
+          tU = gU ? Qp.firstSeenMs : RU,
+          pU = Qp.has || RU - tU > 1e3;
+        return (!gU || !pU || RU - Qp.atMs > 250) && (Qp = {
+          root: UU,
+          firstSeenMs: tU,
+          atMs: RU,
+          has: hR(UU)
+        }), Qp.has
       },
-      op = () => {
-        const DD = Ip();
-        return null !== DD && Zp(DD)
+      Wp = () => {
+        const UU = pp();
+        return null !== UU && ep(UU)
       },
-      vp = () => {
-        const DD = Cp();
-        return fp && (null === DD || void 0 === DD ? void 0 : DD.root) !== fp && (fp = null), (DD => {
+      fp = () => {
+        const UU = gp();
+        return Tp && (null === UU || void 0 === UU ? void 0 : UU.root) !== Tp && (Tp = null), (UU => {
           let {
-            mode: CD,
-            hasLayer: cD,
-            hasCandidates: ID,
-            hybridCursorEngaged: pD
-          } = DD;
-          return cD ? "cursor" !== CD && ID() ? "hybrid" === CD && pD ? "cursor" : "focus" : "cursor" : null
+            mode: RU,
+            hasLayer: gU,
+            hasCandidates: tU,
+            hybridCursorEngaged: pU
+          } = UU;
+          return gU ? "cursor" !== RU && tU() ? "hybrid" === RU && pU ? "cursor" : "focus" : "cursor" : null
         })({
-          mode: Bp(),
-          hasLayer: null !== DD,
-          hasCandidates: () => null !== DD && Zp(DD.root),
-          hybridCursorEngaged: null !== fp
+          mode: jp(),
+          hasLayer: null !== UU,
+          hasCandidates: () => null !== UU && ep(UU.root),
+          hybridCursorEngaged: null !== Tp
         })
       },
-      Np = () => "hybrid" === Bp() && op(),
-      gp = "pad-focused";
-    var Xp = cD(4340),
-      mp = cD(4806);
-    const np = "[data-pad-destructive]",
-      Op = `${np}, [data-pad-back]`,
-      Pp = DD => ({
-        rect: DD.getBoundingClientRect(),
-        destructive: DD.matches(np),
-        closes: null !== DD.closest("[data-pad-close-button]"),
-        unavailable: DD.matches("[data-pad-unavailable]")
+      xp = () => "hybrid" === jp() && Wp(),
+      mp = "pad-focused";
+    var Ip = gU(4209),
+      Jp = gU(4701);
+    const wp = "[data-pad-destructive]",
+      np = `${wp}, [data-pad-back]`,
+      bp = UU => ({
+        rect: UU.getBoundingClientRect(),
+        destructive: UU.matches(wp),
+        closes: null !== UU.closest("[data-pad-close-button]"),
+        unavailable: UU.matches("[data-pad-unavailable]")
       }),
-      Hp = DD => {
+      op = UU => {
         let {
-          destructive: CD,
-          closes: cD,
-          unavailable: ID
-        } = DD;
-        return CD ? cD ? 2 : 3 : ID ? 1 : 0
+          destructive: RU,
+          closes: gU,
+          unavailable: tU
+        } = UU;
+        return RU ? gU ? 2 : 3 : tU ? 1 : 0
       },
-      Up = DD => {
-        let CD = -1;
-        for (let cD = 0; cD < DD.length; cD++) {
-          if (CD < 0) {
-            CD = cD;
+      Zp = UU => {
+        let RU = -1;
+        for (let gU = 0; gU < UU.length; gU++) {
+          if (RU < 0) {
+            RU = gU;
             continue
           }
-          const ID = DD[cD],
-            pD = DD[CD];
-          Hp(ID) === Hp(pD) ? vI(ID.rect, pD.rect) < 0 && (CD = cD) : Hp(ID) < Hp(pD) && (CD = cD)
+          const tU = UU[gU],
+            pU = UU[RU];
+          op(tU) === op(pU) ? et(tU.rect, pU.rect) < 0 && (RU = gU) : op(tU) < op(pU) && (RU = gU)
         }
-        return CD
+        return RU
       },
-      xp = "[data-pad-tabs]",
-      qp = "[data-pad-tab]",
-      Jp = (DD, CD) => {
-        const cD = DD.querySelector(`${qp}[data-pad-selected='true']`);
-        return cD && CD.includes(cD) ? cD : null
+      ap = "[data-pad-tabs]",
+      Yp = "[data-pad-tab]",
+      Bp = (UU, RU) => {
+        const gU = UU.querySelector(`${Yp}[data-pad-selected='true']`);
+        return gU && RU.includes(gU) ? gU : null
       },
-      Kp = (DD, CD) => {
-        let cD = CD;
-        for (let ID = CD.parentElement; ID && !ID.contains(DD); ID = ID.parentElement) cD = ID;
-        return cD
+      Vp = (UU, RU) => {
+        let gU = RU;
+        for (let tU = RU.parentElement; tU && !tU.contains(UU); tU = tU.parentElement) gU = tU;
+        return gU
       };
-    class ap {
+    class rp {
       constructor() {
         this.contentReturn = null
       }
-      redirect(DD, CD, cD, ID) {
-        var pD, iD;
-        const fD = DD.closest(xp),
-          bD = CD.closest(xp);
-        var QD;
-        if (bD && bD !== fD) return fD || (this.contentReturn = new WeakRef(DD)), null !== (QD = Jp(bD, cD)) && void 0 !== QD ? QD : CD;
-        if (!fD || bD) return CD;
-        const wD = Kp(DD, CD),
-          SD = null === (pD = this.contentReturn) || void 0 === pD ? void 0 : pD.deref();
-        return SD && wD.contains(SD) && cD.includes(SD) ? SD : null !== (iD = this.pickRegionStart(wD, xD(CD, "y", ID), cD)) && void 0 !== iD ? iD : CD
+      redirect(UU, RU, gU, tU) {
+        var pU, EU;
+        const PU = UU.closest(ap),
+          TU = RU.closest(ap);
+        var qU;
+        if (TU && TU !== PU) return PU || (this.contentReturn = new WeakRef(UU)), null !== (qU = Bp(TU, gU)) && void 0 !== qU ? qU : RU;
+        if (!PU || TU) return RU;
+        const KU = Vp(UU, RU),
+          cU = null === (pU = this.contentReturn) || void 0 === pU ? void 0 : pU.deref();
+        return cU && KU.contains(cU) && gU.includes(cU) ? cU : null !== (EU = this.pickRegionStart(KU, oU(RU, "y", tU), gU)) && void 0 !== EU ? EU : RU
       }
-      findTabContent(DD, CD, cD) {
-        const ID = DD.closest(xp);
-        if (!ID || !DD.matches(qp) || ID.contains(CD)) return null;
-        const pD = CD.closest(xp);
-        if (pD && Number(pD.dataset.padTabs) <= Number(ID.dataset.padTabs)) return null;
-        const iD = Kp(DD, CD);
-        return cD.some((DD => iD.contains(DD) && !DD.closest(Op))) || !CD.closest(Op) ? iD : null
+      findTabContent(UU, RU, gU) {
+        const tU = UU.closest(ap);
+        if (!tU || !UU.matches(Yp) || tU.contains(RU)) return null;
+        const pU = RU.closest(ap);
+        if (pU && Number(pU.dataset.padTabs) <= Number(tU.dataset.padTabs)) return null;
+        const EU = Vp(UU, RU);
+        return gU.some((UU => EU.contains(UU) && !UU.closest(np))) || !RU.closest(np) ? EU : null
       }
-      pickContentStart(DD, CD, cD) {
-        return this.contentReturn = null, this.pickRegionStart(DD, xD(DD, "y", cD), CD)
+      pickContentStart(UU, RU, gU) {
+        return this.contentReturn = null, this.pickRegionStart(UU, oU(UU, "y", gU), RU)
       }
-      pickReplacedContentStart(DD, CD, cD, ID) {
-        if (!CD.contains(DD)) return null;
-        const pD = Kp(CD, DD),
-          iD = cD.filter((DD => CD.contains(DD) && !pD.contains(DD) && !DD.closest(Op)));
-        return 0 === iD.length ? null : (this.contentReturn = null, this.pickRegionStart(CD, xD(iD[0], "y", ID), iD))
+      pickReplacedContentStart(UU, RU, gU, tU) {
+        if (!RU.contains(UU)) return null;
+        const pU = Vp(RU, UU),
+          EU = gU.filter((UU => RU.contains(UU) && !pU.contains(UU) && !UU.closest(np)));
+        return 0 === EU.length ? null : (this.contentReturn = null, this.pickRegionStart(RU, oU(EU[0], "y", tU), EU))
       }
-      backToStrip(DD, CD, cD) {
-        if (DD.closest(xp)) return null;
-        const ID = UI(cD);
-        for (const pD of cD.querySelectorAll(xp)) {
-          if (Number(pD.dataset.padTabs) <= 1 || pD === ID) continue;
-          const iD = Jp(pD, CD),
-            fD = iD ? Kp(DD, pD).parentElement : null;
-          if (iD && fD && fD !== cD && cD.contains(fD)) return this.contentReturn = new WeakRef(DD), iD
+      backToStrip(UU, RU, gU) {
+        if (UU.closest(ap)) return null;
+        const tU = bt(gU);
+        for (const pU of gU.querySelectorAll(ap)) {
+          if (Number(pU.dataset.padTabs) <= 1 || pU === tU) continue;
+          const EU = Bp(pU, RU),
+            PU = EU ? Vp(UU, pU).parentElement : null;
+          if (EU && PU && PU !== gU && gU.contains(PU)) return this.contentReturn = new WeakRef(UU), EU
         }
         return null
       }
-      pickRegionStart(DD, CD, cD) {
-        const ID = zD(CD),
-          pD = DD => {
-            const CD = cD.filter((CD => DD.contains(CD) && !CD.closest(xp) && jD(CD.getBoundingClientRect(), ID))),
-              pD = Up(CD.map(Pp));
-            return pD >= 0 ? CD[pD] : null
+      pickRegionStart(UU, RU, gU) {
+        const tU = rU(RU),
+          pU = UU => {
+            const RU = gU.filter((RU => UU.contains(RU) && !RU.closest(ap) && XU(RU.getBoundingClientRect(), tU))),
+              pU = Zp(RU.map(bp));
+            return pU >= 0 ? RU[pU] : null
           };
-        for (const iD of NC(DD)) {
-          const DD = pD(iD);
-          if (DD) return DD
+        for (const EU of WR(UU)) {
+          const UU = pU(EU);
+          if (UU) return UU
         }
-        for (const iD of DD.querySelectorAll(xp)) {
-          const DD = Jp(iD, cD);
-          if (DD) return DD
+        for (const EU of UU.querySelectorAll(ap)) {
+          const UU = Bp(EU, gU);
+          if (UU) return UU
         }
-        return pD(DD)
+        return pU(UU)
       }
     }
-    const Vp = "[data-pad-default-focus], .Dropdown-option.is-selected",
-      zp = ".Dropdown-root.is-open > .Dropdown-menu",
-      jp = "[data-pad-no-step-in]",
-      lp = "[data-pad-tabs]",
-      Lp = "[data-pad-press-area]",
-      Tp = DD => {
-        let CD = DD;
-        for (let cD = 0; CD && cD <= 4; cD++, CD = CD.parentElement) {
-          const cD = CD.querySelector(".CircleInfo");
-          if (cD) return CD === DD || CD.querySelectorAll(bC).length <= 1 ? cD : null;
-          if (CD !== DD && CD.querySelectorAll(bC).length > 1) return null
+    const Xp = "[data-pad-default-focus], .Dropdown-option.is-selected",
+      vp = ".Dropdown-root.is-open > .Dropdown-menu",
+      dp = "[data-pad-no-step-in]",
+      Hp = "[data-pad-tabs]",
+      Sp = "[data-pad-press-area]",
+      sp = UU => {
+        let RU = UU;
+        for (let gU = 0; RU && gU <= 4; gU++, RU = RU.parentElement) {
+          const gU = RU.querySelector(".CircleInfo");
+          if (gU) return RU === UU || RU.querySelectorAll(TR).length <= 1 ? gU : null;
+          if (RU !== UU && RU.querySelectorAll(TR).length > 1) return null
         }
         return null
       },
-      Gp = (DD, CD, cD) => {
-        UC(DD, CD, cD);
-        const ID = null !== DD && void 0 !== DD && DD.isConnected ? Tp(DD) : null,
-          pD = Tp(CD);
-        ID !== pD && UC(ID, pD, pD ? XC(pD) : cD, {
-          leaveBelow: DD,
-          enterBelow: CD
+      yp = (UU, RU, gU) => {
+        bR(UU, RU, gU);
+        const tU = null !== UU && void 0 !== UU && UU.isConnected ? sp(UU) : null,
+          pU = sp(RU);
+        tU !== pU && bR(tU, pU, pU ? xR(pU) : gU, {
+          leaveBelow: UU,
+          enterBelow: RU
         })
       },
-      Rp = DD => DD.getBoundingClientRect(),
-      kp = (DD, CD, cD) => {
-        const ID = new Set(cD);
-        for (let pD = DD; pD; pD = pD === CD ? null : pD.parentElement)
-          if (ID.has(pD)) return pD;
+      kp = UU => UU.getBoundingClientRect(),
+      Fp = (UU, RU, gU) => {
+        const tU = new Set(gU);
+        for (let pU = UU; pU; pU = pU === RU ? null : pU.parentElement)
+          if (tU.has(pU)) return pU;
         return null
       },
-      dp = (DD, CD) => !DD.root || DD.root === CD || CD.matches(zp) && DD.root.contains(CD);
-    const Yp = new class {
+      ip = (UU, RU) => !UU.root || UU.root === RU || RU.matches(vp) && UU.root.contains(RU);
+    const Ap = new class {
       constructor() {
-        this.focused = null, this.layerKey = null, this.layerRoot = null, this.memory = new sI, this.tabStripNav = new ap, this.movedInLayer = !1, this.scrolledInLayer = !1, this.restoredFromMemory = !1, this.restoreOnFocusLoss = !1, this.confirmPressedOn = null, this.confirmRepeatKey = null, this.confirmRepeated = !1, this.confirmRepeat = (0, ZD.b)(tD.r), this.dpadRepeats = new Map(tD.x.map((DD => [DD, (0, ZD.b)(tD.z)]))), this.stickRepeat = new tD.b((0, ZD.b)(tD.bb)), this.lastRefocusCheckMs = -1 / 0, this.enteredLayerAtMs = 0, this.lastFocusedCentre = null, this.lastActivatedKey = null, this.lastActivated = null, this.lastActivatedAtMs = -1 / 0, this.pendingFocus = null, this.tabOpenWait = null, this.retryMove = null, this.scrollRemainder = {
+        this.focused = null, this.layerKey = null, this.layerRoot = null, this.memory = new zt, this.tabStripNav = new rp, this.movedInLayer = !1, this.scrolledInLayer = !1, this.restoredFromMemory = !1, this.restoreOnFocusLoss = !1, this.confirmPressedOn = null, this.confirmRepeatKey = null, this.confirmRepeated = !1, this.confirmRepeat = (0, hU.e)(CU.p), this.dpadRepeats = new Map(CU.w.map((UU => [UU, (0, hU.e)(CU.x)]))), this.stickRepeat = new CU.c((0, hU.e)(CU.U)), this.lastRefocusCheckMs = -1 / 0, this.enteredLayerAtMs = 0, this.lastFocusedCentre = null, this.lastActivatedKey = null, this.lastActivated = null, this.lastActivatedAtMs = -1 / 0, this.pendingFocus = null, this.tabOpenWait = null, this.retryMove = null, this.scrollRemainder = {
           x: 0,
           y: 0
         }, this.wasActive = !1, this.layerKind = null, this.pressGuardUntilMs = -1 / 0, this.pressGuardExtends = !1, this.listeners = new Set, this.dropdownLayers = new WeakMap, this.dropdownLayerCounter = 0
       }
       install() {
-        const DD = BD.d.register({
+        const UU = GU.e.register({
             name: "focus",
-            isActive: () => (0, MD.i)() && "focus" === vp(),
-            onFrame: DD => {
-              this.onFrame(DD)
+            isActive: () => (0, uU.i)() && "focus" === fp(),
+            onFrame: UU => {
+              this.onFrame(UU)
             },
             onDeactivate: () => {
               this.deactivate()
             },
-            wakePressActs: DD => (0, BD.g)(DD) || DD === (0, SD.h)("menuConfirm") && jC((0, MD.c)())
+            wakePressActs: UU => (0, GU.i)(UU) || UU === (0, cU.f)("menuConfirm") && XR((0, uU.c)())
           }),
-          CD = (0, EI.n)((DD => {
-            const CD = (0, EI.q)(DD);
-            null === DD.memoryKey && this.memory.forget(CD), CD === this.layerKey && (this.layerKey = null)
+          RU = (0, Mt.k)((UU => {
+            const RU = (0, Mt.p)(UU);
+            null === UU.memoryKey && this.memory.forget(RU), RU === this.layerKey && (this.layerKey = null)
           }));
-        let cD = -1 / 0;
-        const ID = fD.e.onFrame((DD => {
-            (0, MD.i)() || DD.timestampMs - cD < 100 || (cD = DD.timestampMs, Cp())
+        let gU = -1 / 0;
+        const tU = PU.g.onFrame((UU => {
+            (0, uU.i)() || UU.timestampMs - gU < 100 || (gU = UU.timestampMs, gp())
           })),
-          pD = DD => {
-            DD.isTrusted && DD.target instanceof Element && fD.e.getActivePad() && this.noteChosenStop(DD.target)
+          pU = UU => {
+            UU.isTrusted && UU.target instanceof Element && PU.g.getActivePad() && this.noteChosenStop(UU.target)
           };
-        return document.addEventListener("click", pD, !0), () => {
-          DD(), CD(), ID(), document.removeEventListener("click", pD, !0), this.deactivate()
+        return document.addEventListener("click", pU, !0), () => {
+          UU(), RU(), tU(), document.removeEventListener("click", pU, !0), this.deactivate()
         }
       }
-      noteChosenStop(DD) {
-        var CD, cD;
-        const ID = Cp();
-        if (!ID || !ID.root.contains(DD)) return;
-        const pD = null !== (CD = null === (cD = DD.closest(".Dropdown-root")) || void 0 === cD ? void 0 : cD.querySelector(".Dropdown-control")) && void 0 !== CD ? CD : DD,
-          iD = kp(pD, ID.root, this.getEnabledCandidates(ID.root));
-        if (!iD) return;
-        const fD = (0, EI.q)(ID.layer);
-        fD === this.layerKey && ID.root === this.layerRoot || this.beginLayer(ID, fD), this.wasActive ? this.setFocus(iD, {
+      noteChosenStop(UU) {
+        var RU, gU;
+        const tU = gp();
+        if (!tU || !tU.root.contains(UU)) return;
+        const pU = null !== (RU = null === (gU = UU.closest(".Dropdown-root")) || void 0 === gU ? void 0 : gU.querySelector(".Dropdown-control")) && void 0 !== RU ? RU : UU,
+          EU = Fp(pU, tU.root, this.getEnabledCandidates(tU.root));
+        if (!EU) return;
+        const PU = (0, Mt.p)(tU.layer);
+        PU === this.layerKey && tU.root === this.layerRoot || this.beginLayer(tU, PU), this.wasActive ? this.setFocus(EU, {
           scroll: !1,
           byUser: !0
-        }) : (this.pendingFocus = null, this.movedInLayer = !0, this.restoredFromMemory = !1, this.restoreOnFocusLoss = !1, this.focused = iD, this.lastFocusedCentre = XC(iD), this.rememberFocus(iD), this.notify())
+        }) : (this.pendingFocus = null, this.movedInLayer = !0, this.restoredFromMemory = !1, this.restoreOnFocusLoss = !1, this.focused = EU, this.lastFocusedCentre = xR(EU), this.rememberFocus(EU), this.notify())
       }
       getFocused() {
         return this.focused
@@ -2900,518 +2900,518 @@ export const modules = {
       isActive() {
         return this.wasActive
       }
-      onChange(DD) {
-        return this.listeners.add(DD), () => {
-          this.listeners.delete(DD)
+      onChange(UU) {
+        return this.listeners.add(UU), () => {
+          this.listeners.delete(UU)
         }
       }
       notify() {
-        for (const DD of this.listeners) DD()
+        for (const UU of this.listeners) UU()
       }
       deactivate() {
-        var DD;
+        var UU;
         if (this.wasActive) {
           this.wasActive = !1, this.layerKind = null, this.confirmPressedOn = null, this.retryMove = null, this.pendingFocus = null;
-          for (const DD of this.dpadRepeats.values()) DD.reset();
-          this.stickRepeat.reset(), null !== (DD = this.focused) && void 0 !== DD && DD.isConnected && Gp(this.focused, null, XC(this.focused)), this.notify()
+          for (const UU of this.dpadRepeats.values()) UU.reset();
+          this.stickRepeat.reset(), null !== (UU = this.focused) && void 0 !== UU && UU.isConnected && yp(this.focused, null, xR(this.focused)), this.notify()
         }
       }
-      setFocus(DD) {
-        var CD;
+      setFocus(UU) {
+        var RU;
         let {
-          scroll: cD = !0,
-          byUser: ID = !1
+          scroll: gU = !0,
+          byUser: tU = !1
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (ID && (this.pendingFocus = null, this.movedInLayer = !0, this.restoredFromMemory = !1, this.restoreOnFocusLoss = !1), DD === this.focused) return;
-        const pD = null !== (CD = this.focused) && void 0 !== CD && CD.isConnected ? this.focused : null;
-        if (this.focused = DD, DD) {
-          cD && (DD.classList.add(gp), DD.scrollIntoView({
+        if (tU && (this.pendingFocus = null, this.movedInLayer = !0, this.restoredFromMemory = !1, this.restoreOnFocusLoss = !1), UU === this.focused) return;
+        const pU = null !== (RU = this.focused) && void 0 !== RU && RU.isConnected ? this.focused : null;
+        if (this.focused = UU, UU) {
+          gU && (UU.classList.add(mp), UU.scrollIntoView({
             block: "nearest",
             inline: "nearest",
             behavior: "instant"
-          })), ID && ((DD, CD) => {
-            const cD = CD.closest("[data-pad-friends-column]");
-            cD && DD && !cD.contains(DD) && (VI = new WeakRef(DD))
-          })(pD, DD);
-          const CD = XC(DD);
-          this.lastFocusedCentre = CD, this.movedInLayer && this.rememberFocus(DD), Gp(pD, DD, CD), "false" === DD.getAttribute("aria-pressed") && DD.closest("[data-pad-select-on-focus]") && qC(DD)
-        } else pD && Gp(pD, null, XC(pD));
+          })), tU && ((UU, RU) => {
+            const gU = RU.closest("[data-pad-friends-column]");
+            gU && UU && !gU.contains(UU) && (rt = new WeakRef(UU))
+          })(pU, UU);
+          const RU = xR(UU);
+          this.lastFocusedCentre = RU, this.movedInLayer && this.rememberFocus(UU), yp(pU, UU, RU), "false" === UU.getAttribute("aria-pressed") && UU.closest("[data-pad-select-on-focus]") && ZR(UU)
+        } else pU && yp(pU, null, xR(pU));
         this.notify()
       }
-      rememberFocus(DD) {
-        const CD = this.layerRoot;
-        this.layerKey && CD && this.memory.remember(this.layerKey, DD, CD, (() => this.getEnabledCandidates(CD)))
+      rememberFocus(UU) {
+        const RU = this.layerRoot;
+        this.layerKey && RU && this.memory.remember(this.layerKey, UU, RU, (() => this.getEnabledCandidates(RU)))
       }
-      noteCursorActivation(DD) {
-        const CD = Cp();
-        if (!CD || !CD.root.contains(DD)) return;
-        const cD = this.getEnabledCandidates(CD.root),
-          ID = new Set(cD);
-        let pD = DD;
-        for (; pD && !ID.has(pD);) pD = pD === CD.root ? null : pD.parentElement;
-        if (!(pD instanceof HTMLElement)) return;
-        const iD = (0, EI.q)(CD.layer);
-        this.memory.enter(iD), this.memory.remember(iD, pD, CD.root, (() => cD))
+      noteCursorActivation(UU) {
+        const RU = gp();
+        if (!RU || !RU.root.contains(UU)) return;
+        const gU = this.getEnabledCandidates(RU.root),
+          tU = new Set(gU);
+        let pU = UU;
+        for (; pU && !tU.has(pU);) pU = pU === RU.root ? null : pU.parentElement;
+        if (!(pU instanceof HTMLElement)) return;
+        const EU = (0, Mt.p)(RU.layer);
+        this.memory.enter(EU), this.memory.remember(EU, pU, RU.root, (() => gU))
       }
-      notePageEnteredByCursor(DD) {
-        return this.memory.enter(DD)
+      notePageEnteredByCursor(UU) {
+        return this.memory.enter(UU)
       }
-      recallStop(DD, CD) {
-        return this.findRemembered(DD, CD)
+      recallStop(UU, RU) {
+        return this.findRemembered(UU, RU)
       }
-      focusWhenFound(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500,
-          cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      focusWhenFound(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500,
+          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
         this.pendingFocus = {
-          find: DD,
-          untilMs: performance.now() + CD,
-          holdWhile: cD
+          find: UU,
+          untilMs: performance.now() + RU,
+          holdWhile: gU
         }
       }
-      getEnabledCandidates(DD) {
-        return MC(DD).filter((DD => !SC(DD)))
+      getEnabledCandidates(UU) {
+        return uR(UU).filter((UU => !cR(UU)))
       }
-      onFrame(DD) {
-        var CD;
-        const cD = Cp();
-        if (!cD) return;
-        const ID = null !== (CD = this.findOpenDropdown(cD)) && void 0 !== CD ? CD : cD,
-          pD = performance.now(),
-          iD = (0, EI.q)(ID.layer);
-        if (iD !== this.layerKey || ID.root !== this.layerRoot) {
-          const CD = this.focused;
-          if (null !== this.layerKey && ID.root === this.layerRoot && CD && vC(CD, ID.root)) this.continueLayer(iD, CD), this.wasActive || this.resume(ID.root, pD);
+      onFrame(UU) {
+        var RU;
+        const gU = gp();
+        if (!gU) return;
+        const tU = null !== (RU = this.findOpenDropdown(gU)) && void 0 !== RU ? RU : gU,
+          pU = performance.now(),
+          EU = (0, Mt.p)(tU.layer);
+        if (EU !== this.layerKey || tU.root !== this.layerRoot) {
+          const RU = this.focused;
+          if (null !== this.layerKey && tU.root === this.layerRoot && RU && eR(RU, tU.root)) this.continueLayer(EU, RU), this.wasActive || this.resume(tU.root, pU);
           else {
-            const CD = !this.wasActive && !DD.wokeDevice,
-              fD = "death" === this.layerKind || CD,
-              bD = this.enterLayer(ID, iD);
-            "popup" !== ID.layer.kind || ID !== cD || bD ? "menu" === ID.layer.kind && fD && "inGame" === QD.d.get("gameState") && !(0, Ac.g)(3e3) && (this.pressGuardExtends = !0, this.pressGuardUntilMs = pD + Xp.c) : (this.pressGuardExtends = CD, this.pressGuardUntilMs = pD + (CD ? Xp.c : fD ? 500 : 250))
+            const RU = !this.wasActive && !UU.wokeDevice,
+              PU = "death" === this.layerKind || RU,
+              TU = this.enterLayer(tU, EU);
+            "popup" !== tU.layer.kind || tU !== gU || TU ? "menu" === tU.layer.kind && PU && "inGame" === qU.b.get("gameState") && !(0, lg.d)(3e3) && (this.pressGuardExtends = !0, this.pressGuardUntilMs = pU + Ip.c) : (this.pressGuardExtends = RU, this.pressGuardUntilMs = pU + (RU ? Ip.c : PU ? 500 : 250))
           }
-        } else this.wasActive || this.resume(ID.root, pD);
-        if (this.layerKind = ID.layer.kind, this.wasActive || (this.wasActive = !0, this.notify()), DD.wokeDevice && this.focusPointedStop(ID.root), this.validateFocus(ID, pD), pD < this.pressGuardUntilMs && this.pressGuardExtends && (DD.wasPressed((0, SD.h)("menuConfirm")) || DD.wasPressed((0, SD.h)("menuBack"))) && (this.pressGuardUntilMs = pD + Xp.c), pD >= this.pressGuardUntilMs && this.handleButtons(DD, ID)) return;
-        const fD = "hybrid" === Bp();
-        if (fD && (DD => {
-            const CD = Ip();
-            return CD !== Sp && (Sp = CD, wp.lock()), wp.update(DD, (0, yD.h)().moveDeadzone)
-          })(DD.leftStick)) return bD = this.getHandoff(), Qp = pp(bD), fp = Ip(), void BD.d.handOffHeldInput();
-        var bD;
-        this.handleDirections(DD, ID, pD, !fD), this.handleScroll(DD, ID)
+        } else this.wasActive || this.resume(tU.root, pU);
+        if (this.layerKind = tU.layer.kind, this.wasActive || (this.wasActive = !0, this.notify()), UU.wokeDevice && this.focusPointedStop(tU.root), this.validateFocus(tU, pU), pU < this.pressGuardUntilMs && this.pressGuardExtends && (UU.wasPressed((0, cU.f)("menuConfirm")) || UU.wasPressed((0, cU.f)("menuBack"))) && (this.pressGuardUntilMs = pU + Ip.c), pU >= this.pressGuardUntilMs && this.handleButtons(UU, tU)) return;
+        const PU = "hybrid" === jp();
+        if (PU && (UU => {
+            const RU = pp();
+            return RU !== Gp && (Gp = RU, cp.lock()), cp.update(UU, (0, jU.h)().moveDeadzone)
+          })(UU.leftStick)) return TU = this.getHandoff(), Kp = Ep(TU), Tp = pp(), void GU.e.handOffHeldInput();
+        var TU;
+        this.handleDirections(UU, tU, pU, !PU), this.handleScroll(UU, tU)
       }
-      findOpenDropdown(DD) {
-        const CD = DD.root.querySelector(zp);
-        if (!CD || !wC(CD)) return null;
-        let cD = this.dropdownLayers.get(CD);
-        return cD || (this.dropdownLayerCounter++, cD = {
+      findOpenDropdown(UU) {
+        const RU = UU.root.querySelector(vp);
+        if (!RU || !KR(RU)) return null;
+        let gU = this.dropdownLayers.get(RU);
+        return gU || (this.dropdownLayerCounter++, gU = {
           id: `dropdown-${this.dropdownLayerCounter}`,
-          kind: DD.layer.kind,
-          getRoot: () => CD,
+          kind: UU.layer.kind,
+          getRoot: () => RU,
           close: () => {
-            aC(CD)
+            BR(RU)
           },
           memoryKey: null
-        }, this.dropdownLayers.set(CD, cD)), {
-          layer: cD,
-          root: CD,
-          order: DD.order
+        }, this.dropdownLayers.set(RU, gU)), {
+          layer: gU,
+          root: RU,
+          order: UU.order
         }
       }
-      focusPointedStop(DD) {
-        const CD = (0, MD.c)(),
-          cD = CD ? document.elementFromPoint(CD.x, CD.y) : null;
-        if (!cD || !DD.contains(cD)) return;
-        const ID = kp(cD, DD, this.getEnabledCandidates(DD));
-        ID && this.setFocus(ID, {
+      focusPointedStop(UU) {
+        const RU = (0, uU.c)(),
+          gU = RU ? document.elementFromPoint(RU.x, RU.y) : null;
+        if (!gU || !UU.contains(gU)) return;
+        const tU = Fp(gU, UU, this.getEnabledCandidates(UU));
+        tU && this.setFocus(tU, {
           scroll: !1,
           byUser: !0
         })
       }
-      enterLayer(DD, CD) {
-        const cD = this.beginLayer(DD, CD),
-          ID = Mp();
-        return ID && dp(ID, DD.root) ? (this.takeOver(DD.root, ID, this.enteredLayerAtMs), cD) : (this.restoreLayerFocus(DD.root, cD), cD)
+      enterLayer(UU, RU) {
+        const gU = this.beginLayer(UU, RU),
+          tU = hp();
+        return tU && ip(tU, UU.root) ? (this.takeOver(UU.root, tU, this.enteredLayerAtMs), gU) : (this.restoreLayerFocus(UU.root, gU), gU)
       }
-      beginLayer(DD, CD) {
-        return this.layerKey = CD, this.layerRoot = DD.root, this.lastActivatedKey = null, this.movedInLayer = !1, this.scrolledInLayer = !1, this.restoreOnFocusLoss = !1, this.retryMove = null, this.pendingFocus = null, this.confirmPressedOn = null, this.lastRefocusCheckMs = -1 / 0, this.pressGuardUntilMs = -1 / 0, this.pressGuardExtends = !1, this.enteredLayerAtMs = performance.now(), this.lastFocusedCentre = null, this.memory.enter(CD)
+      beginLayer(UU, RU) {
+        return this.layerKey = RU, this.layerRoot = UU.root, this.lastActivatedKey = null, this.movedInLayer = !1, this.scrolledInLayer = !1, this.restoreOnFocusLoss = !1, this.retryMove = null, this.pendingFocus = null, this.confirmPressedOn = null, this.lastRefocusCheckMs = -1 / 0, this.pressGuardUntilMs = -1 / 0, this.pressGuardExtends = !1, this.enteredLayerAtMs = performance.now(), this.lastFocusedCentre = null, this.memory.enter(RU)
       }
-      restoreLayerFocus(DD, CD) {
-        const cD = CD && this.layerKey ? this.findRemembered(DD, this.layerKey) : null;
-        this.restoredFromMemory = null !== cD, this.setFocus(null !== cD && void 0 !== cD ? cD : this.pickInitial(DD, {
+      restoreLayerFocus(UU, RU) {
+        const gU = RU && this.layerKey ? this.findRemembered(UU, this.layerKey) : null;
+        this.restoredFromMemory = null !== gU, this.setFocus(null !== gU && void 0 !== gU ? gU : this.pickInitial(UU, {
           waitForContent: !0
         }))
       }
-      continueLayer(DD, CD) {
-        this.layerKey = DD;
-        const cD = this.memory.enter(DD);
-        this.restoreOnFocusLoss = cD, this.movedInLayer && !cD && this.rememberFocus(CD)
+      continueLayer(UU, RU) {
+        this.layerKey = UU;
+        const gU = this.memory.enter(UU);
+        this.restoreOnFocusLoss = gU, this.movedInLayer && !gU && this.rememberFocus(RU)
       }
-      resume(DD, CD) {
-        var cD;
-        const ID = Mp();
-        ID && dp(ID, DD) ? this.takeOver(DD, ID, CD) : null !== (cD = this.focused) && void 0 !== cD && cD.isConnected && Gp(null, this.focused, XC(this.focused))
+      resume(UU, RU) {
+        var gU;
+        const tU = hp();
+        tU && ip(tU, UU) ? this.takeOver(UU, tU, RU) : null !== (gU = this.focused) && void 0 !== gU && gU.isConnected && yp(null, this.focused, xR(this.focused))
       }
-      pickPreferred(DD) {
-        var CD;
-        return null !== (CD = this.layerKey ? this.findRemembered(DD, this.layerKey) : null) && void 0 !== CD ? CD : this.pickInitial(DD, {
+      pickPreferred(UU) {
+        var RU;
+        return null !== (RU = this.layerKey ? this.findRemembered(UU, this.layerKey) : null) && void 0 !== RU ? RU : this.pickInitial(UU, {
           waitForContent: !0
         })
       }
-      findRemembered(DD, CD) {
-        return this.memory.has(CD) ? this.memory.recall(CD, this.getEnabledCandidates(DD)) : null
+      findRemembered(UU, RU) {
+        return this.memory.has(RU) ? this.memory.recall(RU, this.getEnabledCandidates(UU)) : null
       }
       getHandoff() {
-        var DD, CD, cD;
-        const ID = null !== (DD = this.focused) && void 0 !== DD && DD.isConnected ? this.focused : null,
-          pD = null !== (CD = this.layerRoot) && void 0 !== CD && CD.isConnected ? this.layerRoot : null;
+        var UU, RU, gU;
+        const tU = null !== (UU = this.focused) && void 0 !== UU && UU.isConnected ? this.focused : null,
+          pU = null !== (RU = this.layerRoot) && void 0 !== RU && RU.isConnected ? this.layerRoot : null;
         return {
-          point: ID ? XC(ID) : null !== (cD = this.lastFocusedCentre) && void 0 !== cD ? cD : this.getLayerStartPoint(pD),
-          element: ID,
+          point: tU ? xR(tU) : null !== (gU = this.lastFocusedCentre) && void 0 !== gU ? gU : this.getLayerStartPoint(pU),
+          element: tU,
           direction: null
         }
       }
-      getLayerStartPoint(DD) {
-        if (!DD) return {
+      getLayerStartPoint(UU) {
+        if (!UU) return {
           x: window.innerWidth / 2,
           y: window.innerHeight / 2
         };
-        const CD = this.pickInitial(DD, {
+        const RU = this.pickInitial(UU, {
           includeDisabled: !0
         });
-        return XC(null !== CD && void 0 !== CD ? CD : DD)
+        return xR(null !== RU && void 0 !== RU ? RU : UU)
       }
-      takeOver(DD, CD, cD) {
+      takeOver(UU, RU, gU) {
         const {
-          element: ID,
-          direction: pD,
-          point: iD
-        } = CD, fD = ID instanceof HTMLElement && vC(ID, DD) ? ID : null;
-        if (!pD) {
-          const CD = this.focused;
-          return fD ? this.setFocus(fD, {
+          element: tU,
+          direction: pU,
+          point: EU
+        } = RU, PU = tU instanceof HTMLElement && eR(tU, UU) ? tU : null;
+        if (!pU) {
+          const RU = this.focused;
+          return PU ? this.setFocus(PU, {
             scroll: !1,
             byUser: !0
-          }) : this.focusNearest(DD, iD), void(this.focused && this.focused === CD && this.focused.isConnected && Gp(null, this.focused, XC(this.focused)))
+          }) : this.focusNearest(UU, EU), void(this.focused && this.focused === RU && this.focused.isConnected && yp(null, this.focused, xR(this.focused)))
         }
-        if (this.dpadRepeats.get(pD).update(!0, cD), fD) return this.setFocus(fD, {
+        if (this.dpadRepeats.get(pU).update(!0, gU), PU) return this.setFocus(PU, {
           scroll: !1,
           byUser: !0
-        }), void this.move(DD, pD, cD, !0);
-        const bD = this.getEnabledCandidates(DD),
-          QD = bD.map(Rp),
-          wD = BI(new DOMRect(iD.x, iD.y, 0, 0), QD, pD),
-          SD = wD >= 0 ? wD : oI(iD, QD);
-        this.setFocus(SD >= 0 ? bD[SD] : this.pickInitial(DD), {
+        }), void this.move(UU, pU, gU, !0);
+        const TU = this.getEnabledCandidates(UU),
+          qU = TU.map(kp),
+          KU = Gt(new DOMRect(EU.x, EU.y, 0, 0), qU, pU),
+          cU = KU >= 0 ? KU : Qt(EU, qU);
+        this.setFocus(cU >= 0 ? TU[cU] : this.pickInitial(UU), {
           byUser: !0
         })
       }
-      focusNearest(DD, CD) {
-        const cD = this.getEnabledCandidates(DD),
-          ID = oI(CD, cD.map(Rp));
-        this.setFocus(ID >= 0 ? cD[ID] : this.pickInitial(DD), {
+      focusNearest(UU, RU) {
+        const gU = this.getEnabledCandidates(UU),
+          tU = Qt(RU, gU.map(kp));
+        this.setFocus(tU >= 0 ? gU[tU] : this.pickInitial(UU), {
           byUser: !0
         })
       }
-      pickDefault(DD) {
+      pickDefault(UU) {
         let {
-          includeDisabled: CD = !1,
-          exclude: cD = null
+          includeDisabled: RU = !1,
+          exclude: gU = null
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const ID = [...DD.querySelectorAll(Vp)].filter((ID => (null === cD || void 0 === cD || !cD.has(ID)) && (CD ? oC(ID, DD) : vC(ID, DD)))),
-          pD = Up(ID.map(Pp));
-        return pD >= 0 ? ID[pD] : null
+        const tU = [...UU.querySelectorAll(Xp)].filter((tU => (null === gU || void 0 === gU || !gU.has(tU)) && (RU ? QR(tU, UU) : eR(tU, UU)))),
+          pU = Zp(tU.map(bp));
+        return pU >= 0 ? tU[pU] : null
       }
-      pickNewAreaStart(DD, CD) {
-        const cD = [...DD.querySelectorAll(Lp)].filter(wC);
-        for (const ID of [...NC(DD), ...cD]) {
-          if (CD.has(ID)) continue;
-          const DD = this.getEnabledCandidates(ID),
-            cD = Up(DD.map(Pp));
-          if (cD >= 0) return DD[cD]
+      pickNewAreaStart(UU, RU) {
+        const gU = [...UU.querySelectorAll(Sp)].filter(KR);
+        for (const tU of [...WR(UU), ...gU]) {
+          if (RU.has(tU)) continue;
+          const UU = this.getEnabledCandidates(tU),
+            gU = Zp(UU.map(bp));
+          if (gU >= 0) return UU[gU]
         }
         return null
       }
-      pickInitial(DD) {
+      pickInitial(UU) {
         let {
-          includeDisabled: CD = !1,
-          waitForContent: cD = !1,
-          enteredAtMs: ID = this.enteredLayerAtMs
+          includeDisabled: RU = !1,
+          waitForContent: gU = !1,
+          enteredAtMs: tU = this.enteredLayerAtMs
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const pD = this.pickDefault(DD, {
-          includeDisabled: CD
+        const pU = this.pickDefault(UU, {
+          includeDisabled: RU
         });
-        if (pD) return pD;
-        const iD = DD => CD ? MC(DD) : this.getEnabledCandidates(DD);
-        let fD = [];
-        for (const yD of NC(DD))
-          if (fD = iD(yD), fD.length > 0) break;
-        if (0 === fD.length) {
-          if (cD && performance.now() - ID < 1e4 && (DD => {
-              for (const CD of DD.querySelectorAll("[data-pad-initial-area]"))
-                if (!QC(CD, !1)) return !0;
+        if (pU) return pU;
+        const EU = UU => RU ? uR(UU) : this.getEnabledCandidates(UU);
+        let PU = [];
+        for (const jU of WR(UU))
+          if (PU = EU(jU), PU.length > 0) break;
+        if (0 === PU.length) {
+          if (gU && performance.now() - tU < 1e4 && (UU => {
+              for (const RU of UU.querySelectorAll("[data-pad-initial-area]"))
+                if (!qR(RU, !1)) return !0;
               return !1
-            })(DD)) return null;
-          fD = iD(DD)
+            })(UU)) return null;
+          PU = EU(UU)
         }
-        const bD = fD.map(Rp),
-          QD = zD(null),
-          wD = fD.filter(((DD, CD) => jD(bD[CD], QD))),
-          SD = wD.length > 0 ? wD : fD,
-          BD = Up(SD.map(Pp));
-        return BD >= 0 ? SD[BD] : null
+        const TU = PU.map(kp),
+          qU = rU(null),
+          KU = PU.filter(((UU, RU) => XU(TU[RU], qU))),
+          cU = KU.length > 0 ? KU : PU,
+          GU = Zp(cU.map(bp));
+        return GU >= 0 ? cU[GU] : null
       }
-      validateFocus(DD, CD) {
+      validateFocus(UU, RU) {
         if (this.pendingFocus) {
-          var cD, ID;
-          const pD = this.pendingFocus.find();
-          if (pD && vC(pD, DD.root)) return this.pendingFocus = null, void this.setFocus(pD, {
+          var gU, tU;
+          const pU = this.pendingFocus.find();
+          if (pU && eR(pU, UU.root)) return this.pendingFocus = null, void this.setFocus(pU, {
             byUser: !0
           });
-          CD > this.pendingFocus.untilMs && (null === (cD = (ID = this.pendingFocus).holdWhile) || void 0 === cD || !cD.call(ID)) && (this.pendingFocus = null)
+          RU > this.pendingFocus.untilMs && (null === (gU = (tU = this.pendingFocus).holdWhile) || void 0 === gU || !gU.call(tU)) && (this.pendingFocus = null)
         }
-        const pD = this.focused,
-          iD = !!pD && vC(pD, DD.root);
-        if (!(!iD && pD && pD === this.lastActivated && CD - this.lastActivatedAtMs < 5e3 && DD.root.contains(pD) && wC(pD) && SC(pD))) {
-          if (!iD && this.restoreOnFocusLoss && this.layerKey) return this.restoreOnFocusLoss = !1, this.movedInLayer = !1, this.scrolledInLayer = !1, this.enteredLayerAtMs = CD, void this.restoreLayerFocus(DD.root, !0);
-          if ((!iD || !this.movedInLayer && !this.scrolledInLayer) && !(CD - this.lastRefocusCheckMs < (iD ? 200 : 50)))
-            if (this.lastRefocusCheckMs = CD, iD) {
-              const cD = CD - this.enteredLayerAtMs < 15e3 ? this.pickPreferred(DD.root) : null,
-                ID = null !== cD && void 0 !== cD ? cD : this.restoredFromMemory ? null : this.pickDefault(DD.root);
-              ID && ID !== pD && this.setFocus(ID)
+        const pU = this.focused,
+          EU = !!pU && eR(pU, UU.root);
+        if (!(!EU && pU && pU === this.lastActivated && RU - this.lastActivatedAtMs < 5e3 && UU.root.contains(pU) && KR(pU) && cR(pU))) {
+          if (!EU && this.restoreOnFocusLoss && this.layerKey) return this.restoreOnFocusLoss = !1, this.movedInLayer = !1, this.scrolledInLayer = !1, this.enteredLayerAtMs = RU, void this.restoreLayerFocus(UU.root, !0);
+          if ((!EU || !this.movedInLayer && !this.scrolledInLayer) && !(RU - this.lastRefocusCheckMs < (EU ? 200 : 50)))
+            if (this.lastRefocusCheckMs = RU, EU) {
+              const gU = RU - this.enteredLayerAtMs < 15e3 ? this.pickPreferred(UU.root) : null,
+                tU = null !== gU && void 0 !== gU ? gU : this.restoredFromMemory ? null : this.pickDefault(UU.root);
+              tU && tU !== pU && this.setFocus(tU)
             } else {
               if (this.lastFocusedCentre && this.movedInLayer) {
-                const CD = this.pendingFocus;
-                return this.focusNearest(DD.root, this.lastFocusedCentre), void(this.pendingFocus = CD)
+                const RU = this.pendingFocus;
+                return this.focusNearest(UU.root, this.lastFocusedCentre), void(this.pendingFocus = RU)
               }
-              this.setFocus(this.pickPreferred(DD.root))
+              this.setFocus(this.pickPreferred(UU.root))
             }
         }
       }
-      handleButtons(DD, CD) {
-        if (DD.wasPressed((0, SD.h)("menuToggleCursor"))) return yp(this.getHandoff()), !0;
-        if (DD.wasPressed((0, SD.h)("menuBack"))) {
-          const DD = aC(CD.root);
-          return DD ? this.setFocus(DD, {
+      handleButtons(UU, RU) {
+        if (UU.wasPressed((0, cU.f)("menuToggleCursor"))) return Cp(this.getHandoff()), !0;
+        if (UU.wasPressed((0, cU.f)("menuBack"))) {
+          const UU = BR(RU.root);
+          return UU ? this.setFocus(UU, {
             byUser: !0
-          }) : zI(this, CD.root) || (LC(CD.root) ? this.returnToOpener(CD.root) : this.backToStrip(CD.root) || cp()), !0
+          }) : Xt(this, RU.root) || (dR(RU.root) ? this.returnToOpener(RU.root) : this.backToStrip(RU.root) || tp()), !0
         }
-        const cD = (0, SD.h)("menuConfirm");
-        var ID, pD;
-        DD.wasPressed(cD) && (this.confirmPressedOn = this.focused, this.confirmRepeatKey = null !== (ID = null === (pD = this.focused) || void 0 === pD ? void 0 : pD.getAttribute("data-pad-repeat")) && void 0 !== ID ? ID : null, this.confirmRepeated = DD.wokeDevice, this.confirmRepeat.reset(), this.confirmRepeat.update(!0, performance.now()));
-        if (DD.wasReleased(cD)) {
-          const DD = this.confirmPressedOn;
-          if (this.confirmPressedOn = null, DD && !this.confirmRepeated && DD === this.focused && DD.isConnected && !SC(DD)) {
-            const cD = DD.matches("[data-pad-tab]") ? DD.closest(lp) : null;
-            cD ? this.enterTab(DD, cD, CD.root, performance.now()) : this.activate(DD)
+        const gU = (0, cU.f)("menuConfirm");
+        var tU, pU;
+        UU.wasPressed(gU) && (this.confirmPressedOn = this.focused, this.confirmRepeatKey = null !== (tU = null === (pU = this.focused) || void 0 === pU ? void 0 : pU.getAttribute("data-pad-repeat")) && void 0 !== tU ? tU : null, this.confirmRepeated = UU.wokeDevice, this.confirmRepeat.reset(), this.confirmRepeat.update(!0, performance.now()));
+        if (UU.wasReleased(gU)) {
+          const UU = this.confirmPressedOn;
+          if (this.confirmPressedOn = null, UU && !this.confirmRepeated && UU === this.focused && UU.isConnected && !cR(UU)) {
+            const gU = UU.matches("[data-pad-tab]") ? UU.closest(Hp) : null;
+            gU ? this.enterTab(UU, gU, RU.root, performance.now()) : this.activate(UU)
           }
           return !0
         }
-        return this.repeatConfirm(DD, cD), YI(this, DD, CD)
+        return this.repeatConfirm(UU, gU), it(this, UU, RU)
       }
-      repeatConfirm(DD, CD) {
-        const cD = this.confirmPressedOn;
-        cD && null !== this.confirmRepeatKey && DD.isHeld(CD) && (cD === this.focused && cD.isConnected && !SC(cD) && cD.getAttribute("data-pad-repeat") === this.confirmRepeatKey ? cD.hasAttribute("data-pad-repeat-wait") || this.confirmRepeat.update(!0, performance.now()) && (this.confirmRepeated = !0, this.activate(cD)) : this.confirmRepeatKey = null)
+      repeatConfirm(UU, RU) {
+        const gU = this.confirmPressedOn;
+        gU && null !== this.confirmRepeatKey && UU.isHeld(RU) && (gU === this.focused && gU.isConnected && !cR(gU) && gU.getAttribute("data-pad-repeat") === this.confirmRepeatKey ? gU.hasAttribute("data-pad-repeat-wait") || this.confirmRepeat.update(!0, performance.now()) && (this.confirmRepeated = !0, this.activate(gU)) : this.confirmRepeatKey = null)
       }
-      backToStrip(DD) {
-        const CD = this.focused;
-        if (!(0, yD.h)().menuBackToCategories) return !1;
-        const cD = null !== CD && void 0 !== CD && CD.isConnected ? this.tabStripNav.backToStrip(CD, this.getEnabledCandidates(DD), DD) : null;
-        return cD && this.setFocus(cD, {
+      backToStrip(UU) {
+        const RU = this.focused;
+        if (!(0, jU.h)().menuBackToCategories) return !1;
+        const gU = null !== RU && void 0 !== RU && RU.isConnected ? this.tabStripNav.backToStrip(RU, this.getEnabledCandidates(UU), UU) : null;
+        return gU && this.setFocus(gU, {
           byUser: !0
-        }), null !== cD
+        }), null !== gU
       }
-      returnToOpener(DD) {
-        const CD = this.lastActivatedKey;
-        CD && (this.lastActivatedKey = null, this.focusWhenFound((() => {
-          var cD;
-          return null !== (cD = this.getEnabledCandidates(DD).find((DD => TC(DD) === CD))) && void 0 !== cD ? cD : null
+      returnToOpener(UU) {
+        const RU = this.lastActivatedKey;
+        RU && (this.lastActivatedKey = null, this.focusWhenFound((() => {
+          var gU;
+          return null !== (gU = this.getEnabledCandidates(UU).find((UU => HR(UU) === RU))) && void 0 !== gU ? gU : null
         })))
       }
-      activate(DD) {
-        var CD;
-        if ((0, mp.c)(DD) || zC(DD)) return;
-        this.lastActivatedKey = null !== (CD = TC(DD)) && void 0 !== CD ? CD : this.lastActivatedKey, this.lastActivated = DD, this.lastActivatedAtMs = performance.now(), this.rememberFocus(DD);
-        const cD = this.layerRoot;
-        if (cD) {
-          const CD = new Set(cD.querySelectorAll(Vp)),
-            ID = new Set(cD.querySelectorAll(`[data-pad-initial-area], ${Lp}`)),
-            pD = this.lastActivatedAtMs;
+      activate(UU) {
+        var RU;
+        if ((0, Jp.b)(UU) || rR(UU)) return;
+        this.lastActivatedKey = null !== (RU = HR(UU)) && void 0 !== RU ? RU : this.lastActivatedKey, this.lastActivated = UU, this.lastActivatedAtMs = performance.now(), this.rememberFocus(UU);
+        const gU = this.layerRoot;
+        if (gU) {
+          const RU = new Set(gU.querySelectorAll(Xp)),
+            tU = new Set(gU.querySelectorAll(`[data-pad-initial-area], ${Sp}`)),
+            pU = this.lastActivatedAtMs;
           this.focusWhenFound((() => {
-            var pD;
-            return vC(DD, cD) ? null : null !== (pD = this.pickDefault(cD, {
-              exclude: CD
-            })) && void 0 !== pD ? pD : this.pickNewAreaStart(cD, ID)
-          }), 5e3, (() => DD.isConnected && SC(DD) && performance.now() - pD < 6e4))
+            var pU;
+            return eR(UU, gU) ? null : null !== (pU = this.pickDefault(gU, {
+              exclude: RU
+            })) && void 0 !== pU ? pU : this.pickNewAreaStart(gU, tU)
+          }), 5e3, (() => UU.isConnected && cR(UU) && performance.now() - pU < 6e4))
         }
-        qC(DD), VC(DD)
+        ZR(UU), VR(UU)
       }
-      handleDirections(DD, CD, cD, ID) {
-        const pD = nI(CD.layer.kind) ? (0, SD.h)("chat") : null;
-        for (const bD of tD.x) {
-          this.dpadRepeats.get(bD).update(DD.isHeld(bD), cD) && (bD !== pD || DD.wasPressed(bD)) && this.move(CD.root, bD, cD, !0)
+      handleDirections(UU, RU, gU, tU) {
+        const pU = It(RU.layer.kind) ? (0, cU.f)("chat") : null;
+        for (const TU of CU.w) {
+          this.dpadRepeats.get(TU).update(UU.isHeld(TU), gU) && (TU !== pU || UU.wasPressed(TU)) && this.move(RU.root, TU, gU, !0)
         }
-        const iD = ID ? (0, tD.i)(DD.leftStick, (0, yD.h)().moveDeadzone) : {
+        const EU = tU ? (0, CU.g)(UU.leftStick, (0, jU.h)().moveDeadzone) : {
             x: 0,
             y: 0
           },
-          fD = this.stickRepeat.update((0, tD.db)(iD), cD);
-        if (fD && this.move(CD.root, fD, cD, !0), this.retryMove && cD >= this.retryMove.atMs) {
+          PU = this.stickRepeat.update((0, CU.V)(EU), gU);
+        if (PU && this.move(RU.root, PU, gU, !0), this.retryMove && gU >= this.retryMove.atMs) {
           const {
-            direction: DD
+            direction: UU
           } = this.retryMove;
-          this.retryMove = null, this.move(CD.root, DD, cD, !1)
+          this.retryMove = null, this.move(RU.root, UU, gU, !1)
         }
       }
-      move(DD, CD, cD, ID) {
-        var pD;
-        let iD = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        if (this.pendingFocus && this.pendingFocus === (null === (pD = this.tabOpenWait) || void 0 === pD ? void 0 : pD.wait) && CD === this.tabOpenWait.direction) return;
+      move(UU, RU, gU, tU) {
+        var pU;
+        let EU = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        if (this.pendingFocus && this.pendingFocus === (null === (pU = this.tabOpenWait) || void 0 === pU ? void 0 : pU.wait) && RU === this.tabOpenWait.direction) return;
         this.pendingFocus = null;
-        const fD = this.focused;
-        if (!fD || !fD.isConnected) {
-          const CD = this.pickInitial(DD);
-          return void(CD && this.setFocus(CD, {
+        const PU = this.focused;
+        if (!PU || !PU.isConnected) {
+          const RU = this.pickInitial(UU);
+          return void(RU && this.setFocus(RU, {
             byUser: !0
           }))
         }
-        const bD = "Left" === CD || "Right" === CD,
-          QD = bD ? (0, mp.c)(fD) : null;
-        if (QD) return void QD.adjust("Left" === CD ? -1 : 1);
-        const wD = DD => null !== DD.closest("[data-pad-friends-column]"),
-          SD = wD(fD),
-          BD = Rp(fD),
-          yD = bD || fD.closest(lp) ? null : (DD => {
-            const CD = new Map;
-            return cD => {
-              const ID = cD.closest(lp);
-              if (!ID) return !1;
-              let pD = CD.get(ID);
-              if (void 0 === pD) {
-                const cD = Rp(ID);
-                pD = SI(DD, cD) && (cD.right <= DD.left || cD.left >= DD.right), CD.set(ID, pD)
+        const TU = "Left" === RU || "Right" === RU,
+          qU = TU ? (0, Jp.b)(PU) : null;
+        if (qU) return void qU.adjust("Left" === RU ? -1 : 1);
+        const KU = UU => null !== UU.closest("[data-pad-friends-column]"),
+          cU = KU(PU),
+          GU = kp(PU),
+          jU = TU || PU.closest(Hp) ? null : (UU => {
+            const RU = new Map;
+            return gU => {
+              const tU = gU.closest(Hp);
+              if (!tU) return !1;
+              let pU = RU.get(tU);
+              if (void 0 === pU) {
+                const gU = kp(tU);
+                pU = ct(UU, gU) && (gU.right <= UU.left || gU.left >= UU.right), RU.set(tU, pU)
               }
-              return pD
+              return pU
             }
-          })(BD),
-          MD = null !== fD.closest(jp),
-          tD = this.getEnabledCandidates(DD).filter((DD => DD !== fD && (bD || wD(DD) === SD) && !(null !== yD && void 0 !== yD && yD(DD)) && (MD || !DD.closest(jp)))),
-          ZD = tD.map(Rp),
-          oD = xD(fD, "y", DD),
-          vD = zD(oD);
-        if (!iD && !jD(BD, vD)) {
-          const DD = tD.filter(((DD, CD) => jD(ZD[CD], vD)));
-          if (DD.length > 0) {
-            const CD = {
-              x: vD.left + vD.width / 2,
-              y: vD.top + vD.height / 2
+          })(GU),
+          uU = null !== PU.closest(dp),
+          CU = this.getEnabledCandidates(UU).filter((UU => UU !== PU && (TU || KU(UU) === cU) && !(null !== jU && void 0 !== jU && jU(UU)) && (uU || !UU.closest(dp)))),
+          hU = CU.map(kp),
+          QU = oU(PU, "y", UU),
+          eU = rU(QU);
+        if (!EU && !XU(GU, eU)) {
+          const UU = CU.filter(((UU, RU) => XU(hU[RU], eU)));
+          if (UU.length > 0) {
+            const RU = {
+              x: eU.left + eU.width / 2,
+              y: eU.top + eU.height / 2
             };
-            return void this.setFocus(DD[oI(CD, DD.map(Rp))], {
+            return void this.setFocus(UU[Qt(RU, UU.map(kp))], {
               byUser: !0
             })
           }
         }
-        const ND = bD ? ((DD, CD, cD) => {
-            const ID = Rp(DD),
-              pD = DD.closest(lp),
-              iD = pD ? Rp(pD) : null;
-            return CD.map(((CD, fD) => {
-              const bD = cD[fD];
-              if (bD.bottom > ID.top && bD.top < ID.bottom) return !0;
-              const QD = CD.closest(lp);
-              if (pD && iD) return QD !== pD && (null !== QD || bD.bottom <= iD.top || bD.top >= iD.bottom);
-              if (QD) return !SI(ID, Rp(QD));
-              let wD = DD;
-              for (let cD = DD.parentElement; cD && !cD.contains(CD); cD = cD.parentElement) wD = cD;
-              const SD = Rp(wD);
-              return bD.right > SD.left && bD.left < SD.right
+        const WU = TU ? ((UU, RU, gU) => {
+            const tU = kp(UU),
+              pU = UU.closest(Hp),
+              EU = pU ? kp(pU) : null;
+            return RU.map(((RU, PU) => {
+              const TU = gU[PU];
+              if (TU.bottom > tU.top && TU.top < tU.bottom) return !0;
+              const qU = RU.closest(Hp);
+              if (pU && EU) return qU !== pU && (null !== qU || TU.bottom <= EU.top || TU.top >= EU.bottom);
+              if (qU) return !ct(tU, kp(qU));
+              let KU = UU;
+              for (let gU = UU.parentElement; gU && !gU.contains(RU); gU = gU.parentElement) KU = gU;
+              const cU = kp(KU);
+              return TU.right > cU.left && TU.left < cU.right
             }))
-          })(fD, tD, ZD) : void 0,
-          gD = bD && !fD.closest(lp) ? (DD => DD.map((DD => !DD.closest(Op))))(tD) : void 0,
-          XD = ((DD, CD) => {
-            const cD = [];
-            for (let pD = DD; pD; pD = pD.parentElement) cD.push(pD);
-            const ID = new Map;
-            return cD.forEach(((DD, CD) => {
-              ID.set(DD, cD.length - 1 - CD)
-            })), CD.map((DD => {
-              for (let CD = DD; CD; CD = CD.parentElement) {
-                const DD = ID.get(CD);
-                if (void 0 !== DD) return DD
+          })(PU, CU, hU) : void 0,
+          fU = TU && !PU.closest(Hp) ? (UU => UU.map((UU => !UU.closest(np))))(CU) : void 0,
+          xU = ((UU, RU) => {
+            const gU = [];
+            for (let pU = UU; pU; pU = pU.parentElement) gU.push(pU);
+            const tU = new Map;
+            return gU.forEach(((UU, RU) => {
+              tU.set(UU, gU.length - 1 - RU)
+            })), RU.map((UU => {
+              for (let RU = UU; RU; RU = RU.parentElement) {
+                const UU = tU.get(RU);
+                if (void 0 !== UU) return UU
               }
               return -1
             }))
-          })(fD, tD),
-          mD = bD ? "x" : "y",
-          nD = xD(fD, mD, DD);
-        let OD = BI(BD, ZD, CD, XD, ND, gD);
-        if (OD >= 0 && nD && !nD.contains(tD[OD])) {
-          const DD = tD.flatMap(((DD, CD) => nD.contains(DD) ? [CD] : [])),
-            cD = CD => CD && DD.map((DD => CD[DD])),
-            ID = BI(BD, DD.map((DD => ZD[DD])), CD, DD.map((DD => XD[DD])), cD(ND), cD(gD));
-          OD = ID >= 0 ? DD[ID] : OD
+          })(PU, CU),
+          mU = TU ? "x" : "y",
+          IU = oU(PU, mU, UU);
+        let JU = Gt(GU, hU, RU, xU, WU, fU);
+        if (JU >= 0 && IU && !IU.contains(CU[JU])) {
+          const UU = CU.flatMap(((UU, RU) => IU.contains(UU) ? [RU] : [])),
+            gU = RU => RU && UU.map((UU => RU[UU])),
+            tU = Gt(GU, UU.map((UU => hU[UU])), RU, UU.map((UU => xU[UU])), gU(WU), gU(fU));
+          JU = tU >= 0 ? UU[tU] : JU
         }
-        if (OD >= 0) return void this.moveTo(fD, tD[OD], tD, DD, CD, iD);
-        if (!ID) return;
-        const PD = "Right" === CD || "Down" === CD ? 1 : -1;
-        if (nD && aD(nD, mD, PD)) {
-          const DD = "y" === mD ? nD.clientHeight : nD.clientWidth;
-          VD(nD, mD, PD * DD * .5), this.retryMove = {
-            direction: CD,
-            atMs: cD + 80
+        if (JU >= 0) return void this.moveTo(PU, CU[JU], CU, UU, RU, EU);
+        if (!tU) return;
+        const wU = "Right" === RU || "Down" === RU ? 1 : -1;
+        if (IU && BU(IU, mU, wU)) {
+          const UU = "y" === mU ? IU.clientHeight : IU.clientWidth;
+          VU(IU, mU, wU * UU * .5), this.retryMove = {
+            direction: RU,
+            atMs: gU + 80
           }
         }
       }
-      moveTo(DD, CD, cD, ID, pD, iD) {
-        const fD = this.tabStripNav.findTabContent(DD, CD, cD);
-        fD && "true" !== DD.dataset.padSelected ? this.openTab(DD, fD, ID, pD) : iD && !fD || this.setFocus(this.tabStripNav.redirect(DD, CD, cD, ID), {
+      moveTo(UU, RU, gU, tU, pU, EU) {
+        const PU = this.tabStripNav.findTabContent(UU, RU, gU);
+        PU && "true" !== UU.dataset.padSelected ? this.openTab(UU, PU, tU, pU) : EU && !PU || this.setFocus(this.tabStripNav.redirect(UU, RU, gU, tU), {
           byUser: !0
         })
       }
-      openTab(DD, CD, cD, ID) {
-        const pD = CD.parentElement;
-        qC(DD), this.focusWhenFound((() => "true" !== DD.dataset.padSelected ? null : CD.isConnected ? this.tabStripNav.pickContentStart(CD, this.getEnabledCandidates(cD), cD) : pD ? this.tabStripNav.pickReplacedContentStart(DD, pD, this.getEnabledCandidates(cD), cD) : null), 3e3), this.tabOpenWait = {
+      openTab(UU, RU, gU, tU) {
+        const pU = RU.parentElement;
+        ZR(UU), this.focusWhenFound((() => "true" !== UU.dataset.padSelected ? null : RU.isConnected ? this.tabStripNav.pickContentStart(RU, this.getEnabledCandidates(gU), gU) : pU ? this.tabStripNav.pickReplacedContentStart(UU, pU, this.getEnabledCandidates(gU), gU) : null), 3e3), this.tabOpenWait = {
           wait: this.pendingFocus,
-          direction: ID
+          direction: tU
         }
       }
-      enterTab(DD, CD, cD, ID) {
-        this.move(cD, (DD => {
-          const CD = [...DD.querySelectorAll(qp)].filter((CD => CD.closest(xp) === DD));
-          if (CD.length >= 2) {
-            const DD = CD[0].getBoundingClientRect(),
-              cD = CD[1].getBoundingClientRect();
-            return Math.abs(cD.top - DD.top) > Math.abs(cD.left - DD.left) ? "Right" : "Down"
+      enterTab(UU, RU, gU, tU) {
+        this.move(gU, (UU => {
+          const RU = [...UU.querySelectorAll(Yp)].filter((RU => RU.closest(ap) === UU));
+          if (RU.length >= 2) {
+            const UU = RU[0].getBoundingClientRect(),
+              gU = RU[1].getBoundingClientRect();
+            return Math.abs(gU.top - UU.top) > Math.abs(gU.left - UU.left) ? "Right" : "Down"
           }
-          const cD = DD.getBoundingClientRect();
-          return cD.height > cD.width ? "Right" : "Down"
-        })(CD), ID, !1, !0), this.focused !== DD || this.pendingFocus || this.activate(DD)
+          const gU = UU.getBoundingClientRect();
+          return gU.height > gU.width ? "Right" : "Down"
+        })(RU), tU, !1, !0), this.focused !== UU || this.pendingFocus || this.activate(UU)
       }
-      handleScroll(DD, CD) {
-        const cD = (0, tD.i)(DD.rightStick, .2);
-        if (0 === cD.x && 0 === cD.y) return void(this.scrollRemainder = {
+      handleScroll(UU, RU) {
+        const gU = (0, CU.g)(UU.rightStick, .2);
+        if (0 === gU.x && 0 === gU.y) return void(this.scrollRemainder = {
           x: 0,
           y: 0
         });
-        const ID = DD.dtMs / 1e3;
-        for (const iD of ["x", "y"]) {
-          var pD;
-          const DD = cD[iD];
-          if (0 === DD) continue;
-          const fD = null !== (pD = xD(this.focused, iD, CD.root)) && void 0 !== pD ? pD : JD(CD.root, iD);
-          if (!fD) continue;
-          const bD = Math.sign(DD) * DD * DD * 1500 * ID + this.scrollRemainder[iD],
-            QD = Math.trunc(bD);
-          this.scrollRemainder[iD] = bD - QD, 0 !== QD && (VD(fD, iD, QD), this.scrolledInLayer = !0)
+        const tU = UU.dtMs / 1e3;
+        for (const EU of ["x", "y"]) {
+          var pU;
+          const UU = gU[EU];
+          if (0 === UU) continue;
+          const PU = null !== (pU = oU(this.focused, EU, RU.root)) && void 0 !== pU ? pU : aU(RU.root, EU);
+          if (!PU) continue;
+          const TU = Math.sign(UU) * UU * UU * 1500 * tU + this.scrollRemainder[EU],
+            qU = Math.trunc(TU);
+          this.scrollRemainder[EU] = TU - qU, 0 !== qU && (VU(PU, EU, qU), this.scrolledInLayer = !0)
         }
       }
     };
-    var Wp = cD(7899);
-    var sp = cD(8402);
-    const Ep = {
+    var zp = gU(7862);
+    var Mp = gU(8346);
+    const Dp = {
         duration: 80,
         strongMagnitude: .2,
         weakMagnitude: .2,
         needsPadInUse: !1
       },
-      ep = {
+      Lp = {
         damage: {
           duration: 120,
           strongMagnitude: .45,
@@ -3434,82 +3434,82 @@ export const modules = {
           needsPadInUse: !0
         },
         connect: {
-          ...Ep,
+          ...Dp,
           minIntervalMs: 1e3
         },
         preview: {
-          ...Ep,
+          ...Dp,
           minIntervalMs: 0
         }
       };
-    const hp = new class {
-        constructor(DD) {
-          this.deps = DD, this.lastPlayedMs = {}, this.loggedFailure = !1, this.logFailure = DD => {
-            this.loggedFailure || (this.loggedFailure = !0, console.warn("Controller vibration failed; further failures are not logged.", DD))
+    const Np = new class {
+        constructor(UU) {
+          this.deps = UU, this.lastPlayedMs = {}, this.loggedFailure = !1, this.logFailure = UU => {
+            this.loggedFailure || (this.loggedFailure = !0, console.warn("Controller vibration failed; further failures are not logged.", UU))
           }
         }
-        play(DD, CD) {
-          const cD = ep[DD];
-          if (!this.deps.isVibrationOn() || cD.needsPadInUse && !this.deps.isPadInUse()) return !1;
-          const ID = this.lastPlayedMs[DD];
-          if (void 0 !== ID && CD - ID < cD.minIntervalMs) return !1;
-          const pD = this.deps.getActuator();
-          if (!pD) return !1;
-          this.lastPlayedMs[DD] = CD;
+        play(UU, RU) {
+          const gU = Lp[UU];
+          if (!this.deps.isVibrationOn() || gU.needsPadInUse && !this.deps.isPadInUse()) return !1;
+          const tU = this.lastPlayedMs[UU];
+          if (void 0 !== tU && RU - tU < gU.minIntervalMs) return !1;
+          const pU = this.deps.getActuator();
+          if (!pU) return !1;
+          this.lastPlayedMs[UU] = RU;
           const {
-            duration: iD,
-            strongMagnitude: fD,
-            weakMagnitude: bD
-          } = cD;
+            duration: EU,
+            strongMagnitude: PU,
+            weakMagnitude: TU
+          } = gU;
           try {
-            pD.playEffect("dual-rumble", {
-              duration: iD,
-              strongMagnitude: fD,
-              weakMagnitude: bD
+            pU.playEffect("dual-rumble", {
+              duration: EU,
+              strongMagnitude: PU,
+              weakMagnitude: TU
             }).catch(this.logFailure)
-          } catch (QD) {
-            this.logFailure(QD)
+          } catch (qU) {
+            this.logFailure(qU)
           }
           return !0
         }
       }({
-        getActuator: () => (DD => {
-          const CD = null === DD || void 0 === DD ? void 0 : DD.vibrationActuator;
-          return "function" === typeof(null === CD || void 0 === CD ? void 0 : CD.playEffect) ? CD : null
-        })(fD.e.getActiveGamepad()),
-        isVibrationOn: () => (0, yD.h)().vibration,
-        isPadInUse: MD.i
+        getActuator: () => (UU => {
+          const RU = null === UU || void 0 === UU ? void 0 : UU.vibrationActuator;
+          return "function" === typeof(null === RU || void 0 === RU ? void 0 : RU.playEffect) ? RU : null
+        })(PU.g.getActiveGamepad()),
+        isVibrationOn: () => (0, jU.h)().vibration,
+        isPadInUse: uU.i
       }),
-      rp = DD => {
-        hp.play(DD, performance.now())
+      lp = UU => {
+        Np.play(UU, performance.now())
       };
-    var Ap = cD(7906),
-      Fp = cD(2737),
-      Di = cD(107),
-      Ci = cD(36),
-      ci = cD(659);
-    class Ii {
-      constructor(DD) {
-        this.deps = DD
+    var Op = gU(7865),
+      UE = gU(2644),
+      RE = gU(115),
+      gE = gU(34),
+      tE = gU(623);
+    class pE {
+      constructor(UU) {
+        this.deps = UU
       }
       check() {
-        let DD = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        const CD = this.deps.isPadActive() ? this.deps.getPadFamily() : null;
-        if (!CD) return "skipped";
-        const cD = DD ? this.deps.getVisitId() : this.deps.peekVisitId();
-        return null === cD || this.deps.readReportedVisitId() === cD ? "skipped" : this.deps.canReport() ? (this.deps.writeReportedVisitId(cD), this.deps.Nt(CD, this.deps.getInputType()), "reported") : "notReady"
+        let UU = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        const RU = this.deps.isPadActive() ? this.deps.getPadFamily() : null;
+        if (!RU) return "skipped";
+        const gU = UU ? this.deps.getVisitId() : this.deps.peekVisitId();
+        return null === gU || this.deps.readReportedVisitId() === gU ? "skipped" : this.deps.canReport() ? (this.deps.writeReportedVisitId(gU), this.deps.ku(RU, this.deps.getInputType()), "reported") : "notReady"
       }
     }
-    const ii = "controllerUsageReportedVisit";
-    var fi = cD(1340),
-      bi = cD(1701),
-      Qi = cD(646),
-      wi = cD(1440),
-      Si = cD(1250);
-    const Bi = DD => ({
-        translationKey: `controller:${DD}`
+    const EE = "controllerUsageReportedVisit";
+    var PE = gU(1333),
+      TE = gU(1637),
+      qE = gU(603),
+      KE = gU(1410),
+      cE = gU(1249);
+    const GE = UU => ({
+        translationKey: `controller:${UU}`
       }),
-      yi = {
+      jE = {
         A: "A",
         B: "B",
         X: "X",
@@ -3518,19 +3518,19 @@ export const modules = {
         RB: "RB",
         LT: "LT",
         RT: "RT",
-        View: Bi("padButtonView"),
-        Menu: Bi("padButtonMenu"),
+        View: GE("padButtonView"),
+        Menu: GE("padButtonMenu"),
         LS: "L3",
         RS: "R3",
-        Up: Bi("padButtonDpadUp"),
-        Down: Bi("padButtonDpadDown"),
-        Left: Bi("padButtonDpadLeft"),
-        Right: Bi("padButtonDpadRight"),
-        Home: Bi("padButtonHome"),
-        LeftStick: Bi("padButtonLeftStick"),
-        RightStick: Bi("padButtonRightStick")
+        Up: GE("padButtonDpadUp"),
+        Down: GE("padButtonDpadDown"),
+        Left: GE("padButtonDpadLeft"),
+        Right: GE("padButtonDpadRight"),
+        Home: GE("padButtonHome"),
+        LeftStick: GE("padButtonLeftStick"),
+        RightStick: GE("padButtonRightStick")
       },
-      Mi = {
+      uE = {
         xbox: {
           LS: "LS",
           RS: "RS"
@@ -3551,8 +3551,8 @@ export const modules = {
           RB: "R1",
           LT: "L2",
           RT: "R2",
-          View: Bi("padButtonCreate"),
-          Menu: Bi("padButtonOptions")
+          View: GE("padButtonCreate"),
+          Menu: GE("padButtonOptions")
         },
         nintendo: {
           A: "B",
@@ -3567,252 +3567,252 @@ export const modules = {
           Menu: "+"
         }
       },
-      ti = (DD, CD) => {
-        var cD;
-        const ID = null !== (cD = Mi[DD][CD]) && void 0 !== cD ? cD : yi[CD];
-        return "string" === typeof ID ? ID : (0, pD.y)(Si.e.get().getCurrentLanguageCode(), ID.translationKey)
+      CE = (UU, RU) => {
+        var gU;
+        const tU = null !== (gU = uE[UU][RU]) && void 0 !== gU ? gU : jE[RU];
+        return "string" === typeof tU ? tU : (0, pU.x)(cE.g.get().getCurrentLanguageCode(), tU.translationKey)
       },
-      Zi = DD => {
+      hE = UU => {
         let {
-          glyph: CD,
-          family: cD,
-          className: ID
-        } = DD;
-        const pD = (0, MD.B)(),
-          iD = null !== cD && void 0 !== cD ? cD : pD,
-          fD = (0, Ap.c)(iD, CD);
-        return (0, GD.jsx)("span", {
-          className: TD()("ControllerGlyph", ID),
+          glyph: RU,
+          family: gU,
+          className: tU
+        } = UU;
+        const pU = (0, uU.z)(),
+          EU = null !== gU && void 0 !== gU ? gU : pU,
+          PU = (0, Op.g)(EU, RU);
+        return (0, SU.jsx)("span", {
+          className: HU()("ControllerGlyph", tU),
           role: "img",
-          "aria-label": ti(iD, CD),
+          "aria-label": CE(EU, RU),
           style: {
-            "--pad-glyph-mask": `url(${fD})`,
-            "--pad-glyph-aspect": (0, Ap.b)(iD, CD)
+            "--pad-glyph-mask": `url(${PU})`,
+            "--pad-glyph-aspect": (0, Op.d)(EU, RU)
           }
         })
       };
-    var oi = cD(1872);
-    const vi = DD => {
+    var QE = gU(1777);
+    const eE = UU => {
       let {
-        action: CD
-      } = DD;
+        action: RU
+      } = UU;
       const {
-        t: cD
-      } = (0, pD.F)();
-      switch (CD.kind) {
+        t: gU
+      } = (0, pU.B)();
+      switch (RU.kind) {
         case "reload":
-          return (0, GD.jsx)("span", {
-            children: cD("controller:gameplayReload")
+          return (0, SU.jsx)("span", {
+            children: gU("controller:gameplayReload")
           });
         case "specialAction":
           return null;
         case "customButton":
-          return (0, GD.jsx)(oi.c, {
-            text: CD.description ? [{
-              icon: CD.icon
-            }, ` ${CD.description}`] : [{
-              icon: CD.icon
+          return (0, SU.jsx)(QE.e, {
+            text: RU.description ? [{
+              icon: RU.icon
+            }, ` ${RU.description}`] : [{
+              icon: RU.icon
             }]
           });
         case "touchButton":
-          return (0, GD.jsx)(oi.c, {
-            text: CD.label
+          return (0, SU.jsx)(QE.e, {
+            text: RU.label
           })
       }
     };
-    var Ni = cD(8409);
-    const gi = DD => {
+    var WE = gU(8355);
+    const fE = UU => {
       let {
-        hold: CD
-      } = DD;
-      return (0, GD.jsx)("div", {
+        hold: RU
+      } = UU;
+      return (0, SU.jsx)("div", {
         className: "DropStackFillTrack",
         style: {
-          "--pad-drop-stack-hold": `${CD.holdMs}ms`
+          "--pad-drop-stack-hold": `${RU.holdMs}ms`
         },
-        children: (0, GD.jsx)("div", {
+        children: (0, SU.jsx)("div", {
           className: "DropStackFillBar"
         })
-      }, CD.id)
+      }, RU.id)
     };
-    var Xi = cD(8430),
-      mi = cD(8439),
-      ni = cD(8448),
-      Oi = cD(8428);
-    const Pi = () => {
+    var xE = gU(8382),
+      mE = gU(8385),
+      IE = gU(8391),
+      JE = gU(8376);
+    const wE = () => {
         const {
-          gameState: DD
-        } = (0, QD.o)(["gameState"]), CD = (0, MD.z)(), [ID, pD] = (0, lD.useState)(!1), [iD, fD] = (0, lD.useState)(!1);
-        return (0, lD.useEffect)((() => {
-          "inGame" === DD && pD(!0)
-        }), [DD]), (0, lD.useEffect)((() => {
-          if (!ID) return;
-          let DD = null,
-            CD = !1;
-          return (Qi.q ? Promise.all([cD.e(69), cD.e(259), cD.e(199), cD.e(217), cD.e(216), cD.e(84)]).then((() => cD(39650))).then((DD => DD.startWasmPadGameplay)) : Promise.all([cD.e(69), cD.e(226), cD.e(225), cD.e(94), cD.e(72), cD.e(71), cD.e(70), cD.e(218), cD.e(182), cD.e(222), cD.e(74), cD.e(196), cD.e(215), cD.e(219), cD.e(93), cD.e(83), cD.e(113), cD.e(234), cD.e(73), cD.e(112), cD.e(155), cD.e(217), cD.e(188)]).then((() => cD(39757))).then((DD => DD.startPadGameplay))).then((cD => {
-            CD || (DD = cD())
-          })).catch((DD => {
-            console.error("Pad gameplay failed to load", DD), CD || fD(!0)
+          gameState: UU
+        } = (0, qU.l)(["gameState"]), RU = (0, uU.v)(), [tU, pU] = (0, vU.useState)(!1), [EU, PU] = (0, vU.useState)(!1);
+        return (0, vU.useEffect)((() => {
+          "inGame" === UU && pU(!0)
+        }), [UU]), (0, vU.useEffect)((() => {
+          if (!tU) return;
+          let UU = null,
+            RU = !1;
+          return (qE.u ? Promise.all([gU.e(69), gU.e(259), gU.e(199), gU.e(217), gU.e(216), gU.e(84)]).then((() => gU(39915))).then((UU => UU.startWasmPadGameplay)) : Promise.all([gU.e(69), gU.e(226), gU.e(225), gU.e(94), gU.e(72), gU.e(71), gU.e(70), gU.e(218), gU.e(182), gU.e(222), gU.e(74), gU.e(196), gU.e(215), gU.e(219), gU.e(93), gU.e(83), gU.e(113), gU.e(234), gU.e(73), gU.e(112), gU.e(155), gU.e(217), gU.e(188)]).then((() => gU(40054))).then((UU => UU.startPadGameplay))).then((gU => {
+            RU || (UU = gU())
+          })).catch((UU => {
+            console.error("Pad gameplay failed to load", UU), RU || PU(!0)
           })), () => {
-            var cD;
-            CD = !0, null === (cD = DD) || void 0 === cD || cD()
+            var gU;
+            RU = !0, null === (gU = UU) || void 0 === gU || gU()
           }
-        }), [ID]), (0, lD.useEffect)((() => {
-          iD && CD && (fD(!1), fi.NotificationProvider.showPromptPopup({
+        }), [tU]), (0, vU.useEffect)((() => {
+          EU && RU && (PU(!1), PE.NotificationProvider.showPromptPopup({
             title: "controller:gameplayLoadFailedTitle",
             subtitle: "controller:gameplayLoadFailedSubtitle",
             confirmText: "settingsMenu:reloadPagePopupConfirm",
             confirmTooltip: "",
             cancelText: "general:cancel",
             cancelTooltip: ""
-          }).getResult().then((DD => {
-            !0 === DD && (0, bi.reloadBloxd)()
+          }).getResult().then((UU => {
+            !0 === UU && (0, TE.reloadBloxd)()
           })))
-        }), [iD, CD]), (0, GD.jsxs)(GD.Fragment, {
-          children: [(0, GD.jsx)(Hi, {}), (0, GD.jsx)(Ui, {}), (0, GD.jsx)(xi, {})]
+        }), [EU, RU]), (0, SU.jsxs)(SU.Fragment, {
+          children: [(0, SU.jsx)(nE, {}), (0, SU.jsx)(bE, {}), (0, SU.jsx)(oE, {})]
         })
       },
-      Hi = () => {
+      nE = () => {
         const {
-          t: DD
-        } = (0, pD.F)(), CD = (0, MD.z)(), {
-          gameState: cD,
-          isUiHidden: ID
-        } = (0, QD.o)(["gameState", "isUiHidden"]), {
-          hideButtonHints: iD
-        } = (0, yD.l)(), fD = (0, Ni.j)(), bD = (0, Ni.n)(), [wD, BD] = (0, lD.useState)(ni.b);
-        return (0, wi.f)(Oi.t, BD), !CD || iD || ID || "inGame" !== cD || !fD && !wD ? null : (0, GD.jsxs)("div", {
+          t: UU
+        } = (0, pU.B)(), RU = (0, uU.v)(), {
+          gameState: gU,
+          isUiHidden: tU
+        } = (0, qU.l)(["gameState", "isUiHidden"]), {
+          hideButtonHints: EU
+        } = (0, jU.n)(), PU = (0, WE.h)(), TU = (0, WE.j)(), [KU, GU] = (0, vU.useState)(IE.b);
+        return (0, KE.e)(JE.p, GU), !RU || EU || tU || "inGame" !== gU || !PU && !KU ? null : (0, SU.jsxs)("div", {
           className: "PadActionHint SmallTextBold",
-          children: [fD && (0, GD.jsxs)("span", {
+          children: [PU && (0, SU.jsxs)("span", {
             className: "PadActionHintEntry",
-            children: [(0, GD.jsx)(Zi, {
-              glyph: (0, SD.h)("actionButton")
-            }), (0, GD.jsx)(vi, {
-              action: fD
-            }), bD && (0, GD.jsx)("span", {
+            children: [(0, SU.jsx)(hE, {
+              glyph: (0, cU.f)("actionButton")
+            }), (0, SU.jsx)(eE, {
+              action: PU
+            }), TU && (0, SU.jsx)("span", {
               className: "PadActionHintMore",
-              children: DD("controller:gameplayActionWheelHint")
+              children: UU("controller:gameplayActionWheelHint")
             })]
-          }), wD && (0, GD.jsxs)("span", {
+          }), KU && (0, SU.jsxs)("span", {
             className: "PadActionHintEntry",
-            children: [(0, GD.jsx)(Zi, {
-              glyph: (0, SD.h)("pickBlock")
-            }), (0, GD.jsx)("span", {
-              children: DD("controller:gameplayPickBlock")
+            children: [(0, SU.jsx)(hE, {
+              glyph: (0, cU.f)("pickBlock")
+            }), (0, SU.jsx)("span", {
+              children: UU("controller:gameplayPickBlock")
             })]
           })]
         })
       },
-      Ui = () => {
+      bE = () => {
         const {
-          t: DD
-        } = (0, pD.F)(), CD = (0, MD.z)(), {
-          gameState: cD,
-          isUiHidden: ID
-        } = (0, QD.o)(["gameState", "isUiHidden"]), [iD, fD] = (0, lD.useState)(Xi.c);
-        return (0, wi.f)(Oi.p, fD), CD && !ID && "inGame" === cD && iD ? (0, GD.jsxs)("div", {
+          t: UU
+        } = (0, pU.B)(), RU = (0, uU.v)(), {
+          gameState: gU,
+          isUiHidden: tU
+        } = (0, qU.l)(["gameState", "isUiHidden"]), [EU, PU] = (0, vU.useState)(xE.b);
+        return (0, KE.e)(JE.m, PU), RU && !tU && "inGame" === gU && EU ? (0, SU.jsxs)("div", {
           className: "PadDropStackFill SmallTextBold",
-          children: [(0, GD.jsx)("span", {
-            children: DD("controller:gameplayDropStack")
-          }), (0, GD.jsx)(gi, {
-            hold: iD
+          children: [(0, SU.jsx)("span", {
+            children: UU("controller:gameplayDropStack")
+          }), (0, SU.jsx)(fE, {
+            hold: EU
           })]
         }) : null
       },
-      xi = () => {
+      oE = () => {
         const {
-          t: DD
-        } = (0, pD.F)(), CD = (0, MD.z)(), {
-          gameState: cD,
-          isUiHidden: ID
-        } = (0, QD.o)(["gameState", "isUiHidden"]), {
-          hideButtonHints: iD
-        } = (0, yD.l)(), [fD, bD] = (0, lD.useState)(mi.e);
-        return (0, wi.f)(Oi.m, bD), CD && !ID && "inGame" === cD && fD ? (0, GD.jsxs)("div", {
+          t: UU
+        } = (0, pU.B)(), RU = (0, uU.v)(), {
+          gameState: gU,
+          isUiHidden: tU
+        } = (0, qU.l)(["gameState", "isUiHidden"]), {
+          hideButtonHints: EU
+        } = (0, jU.n)(), [PU, TU] = (0, vU.useState)(mE.b);
+        return (0, KE.e)(JE.k, TU), RU && !tU && "inGame" === gU && PU ? (0, SU.jsxs)("div", {
           className: "PadAttackLatchedHint SmallTextBold",
-          children: [!iD && (0, GD.jsx)(Zi, {
-            glyph: (0, SD.h)("attack")
-          }), (0, GD.jsx)("span", {
-            children: DD("controller:gameplayAttackLatched")
+          children: [!EU && (0, SU.jsx)(hE, {
+            glyph: (0, cU.f)("attack")
+          }), (0, SU.jsx)("span", {
+            children: UU("controller:gameplayAttackLatched")
           })]
         }) : null
       };
-    var qi = cD(8456),
-      Ji = cD(1928),
-      Ki = cD(2358),
-      ai = cD(7883);
-    const Vi = DD => DD && !(0, qi.b)(Ji.d.get("shopInfo")),
-      zi = () => {
-        const DD = "inGame" === (0, QD.o)(["gameState"]).gameState;
-        return (0, Ki.e)("shopInfo", (() => {
-          (0, ai.f)(Vi(DD))
-        })), (0, lD.useEffect)((() => {
-          (0, ai.f)(Vi(DD))
-        }), [DD]), null
+    var ZE = gU(8400),
+      aE = gU(1821),
+      YE = gU(2254),
+      BE = gU(7843);
+    const VE = UU => UU && !(0, ZE.c)(aE.b.get("shopInfo")),
+      rE = () => {
+        const UU = "inGame" === (0, qU.l)(["gameState"]).gameState;
+        return (0, YE.f)("shopInfo", (() => {
+          (0, BE.h)(VE(UU))
+        })), (0, vU.useEffect)((() => {
+          (0, BE.h)(VE(UU))
+        }), [UU]), null
       },
-      ji = () => {
+      XE = () => {
         const {
-          t: DD
-        } = (0, pD.F)(), {
-          hideButtonHints: CD
-        } = (0, yD.l)();
-        (0, MD.B)();
-        const cD = (0, Jc.i)();
-        return (0, lD.useEffect)((() => (() => {
-          const DD = BD.d.register({
+          t: UU
+        } = (0, pU.B)(), {
+          hideButtonHints: RU
+        } = (0, jU.n)();
+        (0, uU.z)();
+        const gU = (0, ag.h)();
+        return (0, vU.useEffect)((() => (() => {
+          const UU = GU.e.register({
               name: "inventory",
-              isActive: hc.isActive,
-              onFrame: hc.onFrame,
-              onDeactivate: hc.onDeactivate,
-              wakePressActs: hc.wakePressActs
+              isActive: Lg.isActive,
+              onFrame: Lg.onFrame,
+              onDeactivate: Lg.onDeactivate,
+              wakePressActs: Lg.wakePressActs
             }),
-            CD = DD => {
-              hc.noteRealPointer(DD), hc.shouldBlockRealPointer(DD) && DD.stopPropagation()
+            RU = UU => {
+              Lg.noteRealPointer(UU), Lg.shouldBlockRealPointer(UU) && UU.stopPropagation()
             };
-          for (const fD of rc) window.addEventListener(fD, CD, !0);
-          const cD = (0, YC.i)((() => {
-              "inventory" !== BD.d.getActiveConsumerName() && hc.forgetSurface()
+          for (const PU of Ng) window.addEventListener(PU, RU, !0);
+          const gU = (0, FR.l)((() => {
+              "inventory" !== GU.e.getActiveConsumerName() && Lg.forgetSurface()
             })),
-            ID = DD => {
-              const CD = DD.target;
-              (0, MD.i)() && AD(CD) && CD.closest(Mc) && (0, YC.h)() && (0, YC.p)(CD)
+            tU = UU => {
+              const RU = UU.target;
+              (0, uU.i)() && lU(RU) && RU.closest(ug) && (0, FR.j)() && (0, FR.q)(RU)
             };
-          document.addEventListener("focusout", ID, !0);
+          document.addEventListener("focusout", tU, !0);
           const {
-            invalidate: pD,
-            onScroll: iD
-          } = hc.targets;
-          return document.addEventListener("scroll", iD, !0), window.addEventListener("resize", pD), () => {
-            DD(), cD();
-            for (const DD of rc) window.removeEventListener(DD, CD, !0);
-            document.removeEventListener("scroll", iD, !0), document.removeEventListener("focusout", ID, !0), window.removeEventListener("resize", pD), hc.targets.disconnect()
+            invalidate: pU,
+            onScroll: EU
+          } = Lg.targets;
+          return document.addEventListener("scroll", EU, !0), window.addEventListener("resize", pU), () => {
+            UU(), gU();
+            for (const UU of Ng) window.removeEventListener(UU, RU, !0);
+            document.removeEventListener("scroll", EU, !0), document.removeEventListener("focusout", tU, !0), window.removeEventListener("resize", pU), Lg.targets.disconnect()
           }
-        })()), []), (0, GD.jsxs)(GD.Fragment, {
-          children: [(0, GD.jsx)(YD, {
-            placer: hc.ring,
+        })()), []), (0, SU.jsxs)(SU.Fragment, {
+          children: [(0, SU.jsx)(FU, {
+            placer: Lg.ring,
             className: "InventorySlotCursorRing"
-          }), cD.showing && !CD && (0, GD.jsx)("div", {
+          }), gU.showing && !RU && (0, SU.jsx)("div", {
             className: "InventorySlotCursorHints SmallTextBold",
-            children: dC(cD).map((CD => {
+            children: kR(gU).map((RU => {
               let {
-                actions: ID,
-                labelKey: pD
-              } = CD;
-              return (0, GD.jsxs)("div", {
+                actions: tU,
+                labelKey: pU
+              } = RU;
+              return (0, SU.jsxs)("div", {
                 className: "InventorySlotCursorHint",
-                children: [ID.map((DD => (0, GD.jsx)(Zi, {
-                  glyph: (0, SD.h)(DD)
-                }, DD))), (0, GD.jsx)("span", {
-                  children: DD(`controller:${pD}`)
-                }), "inventoryDrop" === pD && cD.dropStackHold && (0, GD.jsx)(gi, {
-                  hold: cD.dropStackHold
+                children: [tU.map((UU => (0, SU.jsx)(hE, {
+                  glyph: (0, cU.f)(UU)
+                }, UU))), (0, SU.jsx)("span", {
+                  children: UU(`controller:${pU}`)
+                }), "inventoryDrop" === pU && gU.dropStackHold && (0, SU.jsx)(fE, {
+                  hold: gU.dropStackHold
                 })]
-              }, pD)
+              }, pU)
             }))
           })]
         })
       },
-      li = [{
+      vE = [{
         command: "close",
         action: "keyboardClose",
         repeats: !1
@@ -3849,35 +3849,35 @@ export const modules = {
         action: "keyboardChannel",
         repeats: !1
       }],
-      Li = DD => Array.from(DD).map((DD => ({
+      dE = UU => Array.from(UU).map((UU => ({
         type: "char",
-        char: DD,
+        char: UU,
         width: 1
       }))),
-      Ti = function(DD) {
+      HE = function(UU) {
         return {
           type: "command",
-          command: DD,
+          command: UU,
           width: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1
         }
       },
-      Gi = [Ti("page", 2), Ti("otherPage"), Ti("caretLeft"), Ti("space", 3), Ti("caretRight"), Ti("close", 1.5), Ti("submit", 1.5)],
-      Ri = [Ti("page", 2), Ti("otherPage"), Ti("caretLeft"), Ti("space", 2), Ti("caretRight"), Ti("newline"), Ti("close", 1.5), Ti("submit", 1.5)],
-      ki = [
-        [...Li("1234567890"), Ti("backspace")], Li("qwertyuiop/"), Li("asdfghjkl'?"), [Ti("shift", 2), ...Li("zxcvbnm,.")]
+      SE = [HE("page", 2), HE("otherPage"), HE("caretLeft"), HE("space", 3), HE("caretRight"), HE("close", 1.5), HE("submit", 1.5)],
+      sE = [HE("page", 2), HE("otherPage"), HE("caretLeft"), HE("space", 2), HE("caretRight"), HE("newline"), HE("close", 1.5), HE("submit", 1.5)],
+      yE = [
+        [...dE("1234567890"), HE("backspace")], dE("qwertyuiop/"), dE("asdfghjkl'?"), [HE("shift", 2), ...dE("zxcvbnm,.")]
       ],
-      di = [
-        [...Li("1234567890"), Ti("backspace")], Li("!@#$%^&*()/"), Li('-_=+[]{};:"'), Li("~`|\\<>'\u20ac\xa3,.")
+      kE = [
+        [...dE("1234567890"), HE("backspace")], dE("!@#$%^&*()/"), dE('-_=+[]{};:"'), dE("~`|\\<>'\u20ac\xa3,.")
       ],
-      Yi = {
-        letters: ki,
+      FE = {
+        letters: yE,
         accents: [
-          [...Li("1234567890"), Ti("backspace")], Li("\xe1\xe9\xed\xf3\xfa\xe0\xe8\xec\xf2\xf9\xf1"), Li("\xe2\xea\xee\xf4\xfb\xe4\xeb\xef\xf6\xfc\xe7"), [Ti("shift", 2), ...Li("\xe3\xf5\xdf\u0153\u011f\u015f\u0131\xbf\xa1")]
+          [...dE("1234567890"), HE("backspace")], dE("\xe1\xe9\xed\xf3\xfa\xe0\xe8\xec\xf2\xf9\xf1"), dE("\xe2\xea\xee\xf4\xfb\xe4\xeb\xef\xf6\xfc\xe7"), [HE("shift", 2), ...dE("\xe3\xf5\xdf\u0153\u011f\u015f\u0131\xbf\xa1")]
         ],
-        symbols: di
+        symbols: kE
       },
-      Wi = new Set(["de", "es", "fr", "it", "nl", "pt", "pt-BR", "tr", "vi"]),
-      si = (DD, CD) => "letters" === DD ? CD ? {
+      iE = new Set(["de", "es", "fr", "it", "nl", "pt", "pt-BR", "tr", "vi"]),
+      AE = (UU, RU) => "letters" === UU ? RU ? {
         page: "accents",
         otherPage: "symbols"
       } : {
@@ -3885,65 +3885,65 @@ export const modules = {
         otherPage: "accents"
       } : {
         page: "letters",
-        otherPage: "accents" === DD ? "symbols" : "accents"
+        otherPage: "accents" === UU ? "symbols" : "accents"
       },
-      Ei = function(DD, CD) {
-        const cD = ((DD, CD) => [...Yi[DD], CD ? Ri : Gi])(DD, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]);
-        if (0 === CD) return cD;
-        const ID = Math.min(2, ei(cD[0]) / CD);
+      zE = function(UU, RU) {
+        const gU = ((UU, RU) => [...FE[UU], RU ? sE : SE])(UU, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]);
+        if (0 === RU) return gU;
+        const tU = Math.min(2, ME(gU[0]) / RU);
         return [Array.from({
-          length: CD
-        }, ((DD, CD) => ({
+          length: RU
+        }, ((UU, RU) => ({
           type: "phrase",
-          phraseIndex: CD,
-          width: ID
-        }))), ...cD]
+          phraseIndex: RU,
+          width: tU
+        }))), ...gU]
       },
-      ei = DD => DD.reduce(((DD, CD) => DD + CD.width), 0),
-      ui = DD => Math.max(...DD.map(ei)),
-      ri = (DD, CD) => {
-        const cD = DD[CD.row];
-        let ID = (ui(DD) - ei(cD)) / 2;
-        for (let pD = 0; pD < CD.col; pD++) ID += cD[pD].width;
-        return ID + cD[CD.col].width / 2
+      ME = UU => UU.reduce(((UU, RU) => UU + RU.width), 0),
+      DE = UU => Math.max(...UU.map(ME)),
+      LE = (UU, RU) => {
+        const gU = UU[RU.row];
+        let tU = (DE(UU) - ME(gU)) / 2;
+        for (let pU = 0; pU < RU.col; pU++) tU += gU[pU].width;
+        return tU + gU[RU.col].width / 2
       },
-      Ai = (DD, CD, cD) => {
-        let ID = 0,
-          pD = 1 / 0;
-        for (let iD = 0; iD < DD[CD].length; iD++) {
-          const fD = Math.abs(ri(DD, {
-            row: CD,
-            col: iD
-          }) - cD);
-          fD < pD - 1e-9 && (ID = iD, pD = fD)
+      NE = (UU, RU, gU) => {
+        let tU = 0,
+          pU = 1 / 0;
+        for (let EU = 0; EU < UU[RU].length; EU++) {
+          const PU = Math.abs(LE(UU, {
+            row: RU,
+            col: EU
+          }) - gU);
+          PU < pU - 1e-9 && (tU = EU, pU = PU)
         }
-        return ID
+        return tU
       },
-      Fi = (DD, CD) => {
-        const cD = Math.max(0, Math.min(DD.length - 1, CD.row));
+      lE = (UU, RU) => {
+        const gU = Math.max(0, Math.min(UU.length - 1, RU.row));
         return {
-          row: cD,
-          col: Math.max(0, Math.min(DD[cD].length - 1, CD.col))
+          row: gU,
+          col: Math.max(0, Math.min(UU[gU].length - 1, RU.col))
         }
       },
-      Df = (DD, CD, cD) => "once" === DD && CD - cD <= 400 ? "caps" : "off" === DD ? "once" : "off",
-      Cf = (DD, CD) => "once" === DD && (DD => DD.toLowerCase() !== DD.toUpperCase())(CD) ? "off" : DD,
-      If = (DD, CD, cD) => {
-        if ("symbols" === CD || "off" === cD) return DD;
-        const ID = DD.toUpperCase();
-        return 1 === ID.length ? ID : DD
+      OE = (UU, RU, gU) => "once" === UU && RU - gU <= 400 ? "caps" : "off" === UU ? "once" : "off",
+      UP = (UU, RU) => "once" === UU && (UU => UU.toLowerCase() !== UU.toUpperCase())(RU) ? "off" : UU,
+      RP = (UU, RU, gU) => {
+        if ("symbols" === RU || "off" === gU) return UU;
+        const tU = UU.toUpperCase();
+        return 1 === tU.length ? tU : UU
       };
-    var pf = cD(8336);
-    const ff = ["controller:keyboardPhraseGg", "controller:keyboardPhraseHi", "controller:keyboardPhraseThanks", "controller:keyboardPhraseGl", "controller:keyboardPhraseBrb", "controller:keyboardPhraseYes", "controller:keyboardPhraseNo", "controller:keyboardPhraseHelp"];
-    const bf = new class {
+    var gP = gU(8290);
+    const tP = ["controller:keyboardPhraseGg", "controller:keyboardPhraseHi", "controller:keyboardPhraseThanks", "controller:keyboardPhraseGl", "controller:keyboardPhraseBrb", "controller:keyboardPhraseYes", "controller:keyboardPhraseNo", "controller:keyboardPhraseHelp"];
+    const pP = new class {
         constructor() {
           this.lastSendMs = -1 / 0
         }
-        claim(DD) {
-          return !(DD - this.lastSendMs < 2e3) && (this.lastSendMs = DD, !0)
+        claim(UU) {
+          return !(UU - this.lastSendMs < 2e3) && (this.lastSendMs = UU, !0)
         }
       },
-      Qf = {
+      EP = {
         visible: !1,
         target: null,
         kind: null,
@@ -3958,77 +3958,77 @@ export const modules = {
         placement: "bottom",
         maxHeightPx: 0
       },
-      wf = ["Vb", "nameTag"],
-      Sf = DD => {
-        const CD = DD.target instanceof HTMLTextAreaElement && !wf.includes(DD.kind);
-        return Ei(DD.page, "chat" === DD.kind ? ff.length : 0, CD)
+      PP = ["hT", "nameTag"],
+      TP = UU => {
+        const RU = UU.target instanceof HTMLTextAreaElement && !PP.includes(UU.kind);
+        return zE(UU.page, "chat" === UU.kind ? tP.length : 0, RU)
       },
-      Bf = DD => {
-        const CD = DD.getBoundingClientRect(),
-          cD = window.innerHeight,
-          ID = CD.top + CD.height / 2 < cD / 2 ? "bottom" : "top",
-          pD = "bottom" === ID ? cD - CD.bottom - 6 : CD.top - 6;
+      qP = UU => {
+        const RU = UU.getBoundingClientRect(),
+          gU = window.innerHeight,
+          tU = RU.top + RU.height / 2 < gU / 2 ? "bottom" : "top",
+          pU = "bottom" === tU ? gU - RU.bottom - 6 : RU.top - 6;
         return {
-          placement: ID,
-          maxHeightPx: Math.min(.46 * cD, Math.max(.3 * cD, pD))
+          placement: tU,
+          maxHeightPx: Math.min(.46 * gU, Math.max(.3 * gU, pU))
         }
       },
-      yf = DD => {
-        (0, gI.k)(DD) ? (0, gI.c)().close(): (Yp.noteChosenStop(DD), DD.blur())
+      KP = UU => {
+        (0, ft.j)(UU) ? (0, ft.c)().close(): (Ap.noteChosenStop(UU), UU.blur())
       };
-    class Mf {
-      constructor(DD) {
-        this.host = DD, this.lastShiftPressMs = -1 / 0, this.phraseTexts = [], this.phrasesFill = !1
+    class cP {
+      constructor(UU) {
+        this.host = UU, this.lastShiftPressMs = -1 / 0, this.phraseTexts = [], this.phrasesFill = !1
       }
-      setPhraseRow(DD, CD) {
-        this.phraseTexts = DD, this.phrasesFill = CD
+      setPhraseRow(UU, RU) {
+        this.phraseTexts = UU, this.phrasesFill = RU
       }
-      pressKey(DD) {
-        const CD = this.host.getState(),
-          cD = Sf(CD),
-          ID = cD[DD.row][DD.col];
+      pressKey(UU) {
+        const RU = this.host.getState(),
+          gU = TP(RU),
+          tU = gU[UU.row][UU.col];
         this.host.setState({
-          ...CD,
-          focus: DD,
-          preferredX: ri(cD, DD)
-        }), "char" === ID.type ? this.typeChar(ID.char) : "command" === ID.type ? this.runCommand(ID.command) : this.sendPhrase(ID.phraseIndex)
+          ...RU,
+          focus: UU,
+          preferredX: LE(gU, UU)
+        }), "char" === tU.type ? this.typeChar(tU.char) : "command" === tU.type ? this.runCommand(tU.command) : this.sendPhrase(tU.phraseIndex)
       }
-      runCommand(DD) {
-        const CD = this.host.getState();
-        switch (DD) {
+      runCommand(UU) {
+        const RU = this.host.getState();
+        switch (UU) {
           case "backspace":
-            iC(CD.target);
+            ER(RU.target);
             break;
           case "space":
-            pC(CD.target, " ");
+            pR(RU.target, " ");
             break;
           case "newline":
-            pC(CD.target, "\n");
+            pR(RU.target, "\n");
             break;
           case "caretLeft":
-            fC(CD.target, -1);
+            PR(RU.target, -1);
             break;
           case "caretRight":
-            fC(CD.target, 1);
+            PR(RU.target, 1);
             break;
           case "shift": {
-            const DD = performance.now();
+            const UU = performance.now();
             this.host.setState({
-              ...CD,
-              shift: Df(CD.shift, DD, this.lastShiftPressMs)
-            }), this.lastShiftPressMs = DD;
+              ...RU,
+              shift: OE(RU.shift, UU, this.lastShiftPressMs)
+            }), this.lastShiftPressMs = UU;
             break
           }
           case "page":
           case "otherPage": {
-            const cD = si(CD.page, CD.accentsFirst)[DD];
+            const gU = AE(RU.page, RU.accentsFirst)[UU];
             this.host.setState({
-              ...CD,
-              page: cD,
-              focus: Fi(Sf({
-                ...CD,
-                page: cD
-              }), CD.focus)
+              ...RU,
+              page: gU,
+              focus: lE(TP({
+                ...RU,
+                page: gU
+              }), RU.focus)
             });
             break
           }
@@ -4039,363 +4039,363 @@ export const modules = {
             this.close();
             break;
           case "channel":
-            (0, gI.k)(CD.target) && (0, gI.c)().selectNextChannel()
+            (0, ft.j)(RU.target) && (0, ft.c)().selectNextChannel()
         }
       }
       submit() {
-        var DD, CD;
+        var UU, RU;
         const {
-          target: cD
+          target: gU
         } = this.host.getState();
-        this.host.hide(), (0, gI.k)(cD) ? (0, gI.c)().submit() : (Yp.noteChosenStop(cD), null === (DD = (CD = (0, gI.g)(cD)).submit) || void 0 === DD || DD.call(CD), document.activeElement === cD && cD.blur())
+        this.host.hide(), (0, ft.j)(gU) ? (0, ft.c)().submit() : (Ap.noteChosenStop(gU), null === (UU = (RU = (0, ft.f)(gU)).submit) || void 0 === UU || UU.call(RU), document.activeElement === gU && gU.blur())
       }
       close() {
         const {
-          target: DD
+          target: UU
         } = this.host.getState();
-        this.host.hide(), yf(DD)
+        this.host.hide(), KP(UU)
       }
-      typeChar(DD) {
+      typeChar(UU) {
         const {
-          target: CD,
-          page: cD,
-          shift: ID
+          target: RU,
+          page: gU,
+          shift: tU
         } = this.host.getState();
-        pC(CD, If(DD, cD, ID)), this.host.setState({
+        pR(RU, RP(UU, gU, tU)), this.host.setState({
           ...this.host.getState(),
-          shift: Cf(ID, DD)
+          shift: UP(tU, UU)
         })
       }
-      sendPhrase(DD) {
+      sendPhrase(UU) {
         if (this.phrasesFill) {
           const {
-            target: CD
-          } = this.host.getState(), cD = this.phraseTexts[DD];
-          cD && (CD.setSelectionRange(0, CD.value.length), pC(CD, cD))
-        } else bf.claim(performance.now()) && (this.host.hide(), (0, gI.c)().sendLine(this.phraseTexts[DD]))
+            target: RU
+          } = this.host.getState(), gU = this.phraseTexts[UU];
+          gU && (RU.setSelectionRange(0, RU.value.length), pR(RU, gU))
+        } else pP.claim(performance.now()) && (this.host.hide(), (0, ft.c)().sendLine(this.phraseTexts[UU]))
       }
     }
-    const tf = {
+    const GP = {
         initialDelayMs: 380,
         intervalMs: 85
       },
-      Zf = {
+      jP = {
         initialDelayMs: 400,
         intervalMs: 55
       };
-    class of {
-      constructor(DD, CD) {
-        this.host = DD, this.editor = CD, this.lastDirection = null, this.navRepeat = new tD.b((0, ZD.b)(tf)), this.commandRepeats = new Map(li.filter((DD => {
+    class uP {
+      constructor(UU, RU) {
+        this.host = UU, this.editor = RU, this.lastDirection = null, this.navRepeat = new CU.c((0, hU.e)(GP)), this.commandRepeats = new Map(vE.filter((UU => {
           let {
-            repeats: CD
-          } = DD;
-          return CD
-        })).map((DD => {
+            repeats: RU
+          } = UU;
+          return RU
+        })).map((UU => {
           let {
-            command: CD
-          } = DD;
-          return [CD, (0, ZD.b)(Zf)]
+            command: RU
+          } = UU;
+          return [RU, (0, hU.e)(jP)]
         })))
       }
       reset() {
         this.navRepeat.reset();
-        for (const DD of this.commandRepeats.values()) DD.reset()
+        for (const UU of this.commandRepeats.values()) UU.reset()
       }
-      onVisibleFrame(DD) {
-        const CD = performance.now();
+      onVisibleFrame(UU) {
+        const RU = performance.now();
         for (const {
-            command: pD,
-            action: iD
+            command: pU,
+            action: EU
           }
-          of li) {
-          const cD = (0, SD.h)(iD),
-            ID = this.commandRepeats.get(pD);
-          if ((ID ? ID.update(DD.isHeld(cD), CD) : DD.wasPressed(cD)) && (this.editor.runCommand(pD), !this.host.getState().visible)) return
+          of vE) {
+          const gU = (0, cU.f)(EU),
+            tU = this.commandRepeats.get(pU);
+          if ((tU ? tU.update(UU.isHeld(gU), RU) : UU.wasPressed(gU)) && (this.editor.runCommand(pU), !this.host.getState().visible)) return
         }
-        if (DD.wasPressed((0, SD.h)("keyboardType")) && (this.editor.pressKey(this.host.getState().focus), !this.host.getState().visible)) return;
-        const cD = this.readNavDirection(DD);
-        this.lastDirection = cD;
-        const ID = this.navRepeat.update(cD, CD);
-        ID && this.navigate(ID)
+        if (UU.wasPressed((0, cU.f)("keyboardType")) && (this.editor.pressKey(this.host.getState().focus), !this.host.getState().visible)) return;
+        const gU = this.readNavDirection(UU);
+        this.lastDirection = gU;
+        const tU = this.navRepeat.update(gU, RU);
+        tU && this.navigate(tU)
       }
-      onHiddenFrame(DD, CD) {
-        var cD;
-        if (DD.wasPressed((0, SD.h)("keyboardClose"))) return void yf(CD);
-        const ID = (0, SD.h)("keyboardType");
-        if (DD.wasPressed(ID)) return BD.d.consumeButton(ID), void this.host.open(CD);
-        const pD = this.readNavDirection(DD),
-          iD = null !== pD && pD !== this.lastDirection;
-        if (this.lastDirection = pD, !iD || (0, gI.k)(CD)) return;
-        const fD = (null === (cD = Cp()) || void 0 === cD ? void 0 : cD.root.contains(CD)) || null !== CD.closest(".EntireInventoryWrapper");
-        yf(CD), fD && BD.d.handOffHeldInput()
+      onHiddenFrame(UU, RU) {
+        var gU;
+        if (UU.wasPressed((0, cU.f)("keyboardClose"))) return void KP(RU);
+        const tU = (0, cU.f)("keyboardType");
+        if (UU.wasPressed(tU)) return GU.e.consumeButton(tU), void this.host.open(RU);
+        const pU = this.readNavDirection(UU),
+          EU = null !== pU && pU !== this.lastDirection;
+        if (this.lastDirection = pU, !EU || (0, ft.j)(RU)) return;
+        const PU = (null === (gU = gp()) || void 0 === gU ? void 0 : gU.root.contains(RU)) || null !== RU.closest(".EntireInventoryWrapper");
+        KP(RU), PU && GU.e.handOffHeldInput()
       }
-      navigate(DD) {
-        const CD = this.host.getState();
-        if ("Up" === DD && 0 === CD.focus.row && "chat" === CD.kind) return (0, gI.c)().stepHistory(), void this.host.setState({
-          ...CD
+      navigate(UU) {
+        const RU = this.host.getState();
+        if ("Up" === UU && 0 === RU.focus.row && "chat" === RU.kind) return (0, ft.c)().stepHistory(), void this.host.setState({
+          ...RU
         });
-        const cD = ((DD, CD, cD, ID) => {
-          if ("Left" === cD || "Right" === cD) {
-            const ID = DD[CD.row].length,
-              pD = (CD.col + ("Right" === cD ? 1 : -1) + ID) % ID,
-              iD = {
-                row: CD.row,
-                col: pD
+        const gU = ((UU, RU, gU, tU) => {
+          if ("Left" === gU || "Right" === gU) {
+            const tU = UU[RU.row].length,
+              pU = (RU.col + ("Right" === gU ? 1 : -1) + tU) % tU,
+              EU = {
+                row: RU.row,
+                col: pU
               };
             return {
-              pos: iD,
-              preferredX: ri(DD, iD)
+              pos: EU,
+              preferredX: LE(UU, EU)
             }
           }
-          const pD = (CD.row + ("Down" === cD ? 1 : -1) + DD.length) % DD.length;
+          const pU = (RU.row + ("Down" === gU ? 1 : -1) + UU.length) % UU.length;
           return {
             pos: {
-              row: pD,
-              col: Ai(DD, pD, ID)
+              row: pU,
+              col: NE(UU, pU, tU)
             },
-            preferredX: ID
+            preferredX: tU
           }
-        })(Sf(CD), CD.focus, DD, CD.preferredX);
+        })(TP(RU), RU.focus, UU, RU.preferredX);
         this.host.setState({
-          ...CD,
-          focus: cD.pos,
-          preferredX: cD.preferredX
+          ...RU,
+          focus: gU.pos,
+          preferredX: gU.preferredX
         })
       }
-      readNavDirection(DD) {
-        for (const CD of tD.x)
-          if (DD.isHeld(CD)) return CD;
-        return (0, tD.db)((0, tD.i)(DD.leftStick, (0, yD.h)().moveDeadzone))
+      readNavDirection(UU) {
+        for (const RU of CU.w)
+          if (UU.isHeld(RU)) return RU;
+        return (0, CU.V)((0, CU.g)(UU.leftStick, (0, jU.h)().moveDeadzone))
       }
     }
-    const vf = ["Up", "Down", "Left", "Right"],
-      Nf = new Set(["CapsLock", "Control", "Fn", "FnLock", "Hyper", "NumLock", "ScrollLock", "Shift", "Super"]);
-    const gf = new class {
+    const CP = ["Up", "Down", "Left", "Right"],
+      hP = new Set(["CapsLock", "Control", "Fn", "FnLock", "Hyper", "NumLock", "ScrollLock", "Shift", "Super"]);
+    const QP = new class {
       constructor() {
-        this.state = Qf, this.listeners = new Set, this.ownedField = null, this.pendingChatInput = null, this.pendingChatTimeout = 0, this.savedInputMode = null, this.editor = new Mf(this), this.padInput = new of(this, this.editor)
+        this.state = EP, this.listeners = new Set, this.ownedField = null, this.pendingChatInput = null, this.pendingChatTimeout = 0, this.savedInputMode = null, this.editor = new cP(this), this.padInput = new uP(this, this.editor)
       }
       getState() {
         return this.state
       }
-      setState(DD) {
-        const CD = DD.visible !== this.state.visible;
-        this.state = DD;
-        for (const cD of this.listeners) cD();
-        CD && wD.i.Uo(WD.c, DD.visible)
+      setState(UU) {
+        const RU = UU.visible !== this.state.visible;
+        this.state = UU;
+        for (const gU of this.listeners) gU();
+        RU && KU.p.yh(iU.c, UU.visible)
       }
-      subscribe(DD) {
-        return this.listeners.add(DD), () => {
-          this.listeners.delete(DD)
+      subscribe(UU) {
+        return this.listeners.add(UU), () => {
+          this.listeners.delete(UU)
         }
       }
       install() {
-        const DD = BD.d.register({
+        const UU = GU.e.register({
             name: "keyboard",
-            isActive: () => this.state.visible || AD(document.activeElement),
-            onFrame: DD => {
-              this.onFrame(DD)
+            isActive: () => this.state.visible || lU(document.activeElement),
+            onFrame: UU => {
+              this.onFrame(UU)
             },
             onDeactivate: () => {
               this.padInput.reset()
             },
-            wakePressActs: DD => vf.includes(DD) || !this.state.visible && DD === (0, SD.h)("keyboardType")
+            wakePressActs: UU => CP.includes(UU) || !this.state.visible && UU === (0, cU.f)("keyboardType")
           }),
-          CD = DD => {
-            const CD = DD.target;
-            AD(CD) && (CD === this.pendingChatInput || (0, MD.i)() ? this.open(CD) : this.state.visible && CD !== this.state.target && (this.ownedField = null, this.hide()))
+          RU = UU => {
+            const RU = UU.target;
+            lU(RU) && (RU === this.pendingChatInput || (0, uU.i)() ? this.open(RU) : this.state.visible && RU !== this.state.target && (this.ownedField = null, this.hide()))
           },
-          cD = () => {
+          gU = () => {
             setTimeout((() => {
               this.releaseLostField()
             }), 0)
           },
-          ID = DD => {
-            DD.isTrusted && this.state.visible && (DD => !DD.repeat && !Nf.has(DD.key) && !(0, pf.e)(DD.key) && !/^(Audio|Media|Browser|Launch|Gamepad)/.test(DD.key))(DD) && this.hide()
+          tU = UU => {
+            UU.isTrusted && this.state.visible && (UU => !UU.repeat && !hP.has(UU.key) && !(0, gP.e)(UU.key) && !/^(Audio|Media|Browser|Launch|Gamepad)/.test(UU.key))(UU) && this.hide()
           },
-          pD = () => {
+          pU = () => {
             this.state.visible && this.setState({
               ...this.state,
-              ...Bf(this.state.target)
+              ...qP(this.state.target)
             })
           };
-        document.addEventListener("focusin", CD, !0), document.addEventListener("focusout", cD, !0), window.addEventListener("keydown", ID, !0), window.addEventListener("resize", pD);
-        const iD = wD.i.subscribe(Oi.e, (() => {
+        document.addEventListener("focusin", RU, !0), document.addEventListener("focusout", gU, !0), window.addEventListener("keydown", tU, !0), window.addEventListener("resize", pU);
+        const EU = KU.p.subscribe(JE.c, (() => {
             this.openChat()
           })),
-          fD = wD.i.subscribe(WD.f, (DD => {
-            this.openForField(DD)
+          PU = KU.p.subscribe(iU.d, (UU => {
+            this.openForField(UU)
           }));
         return () => {
-          DD(), document.removeEventListener("focusin", CD, !0), document.removeEventListener("focusout", cD, !0), window.removeEventListener("keydown", ID, !0), window.removeEventListener("resize", pD), wD.i.unsubscribe(iD), wD.i.unsubscribe(fD), this.clearPendingChat(), this.hide(), this.ownedField = null
+          UU(), document.removeEventListener("focusin", RU, !0), document.removeEventListener("focusout", gU, !0), window.removeEventListener("keydown", tU, !0), window.removeEventListener("resize", pU), KU.p.unsubscribe(EU), KU.p.unsubscribe(PU), this.clearPendingChat(), this.hide(), this.ownedField = null
         }
       }
       openChat() {
-        const DD = (0, gI.c)();
-        DD ? document.activeElement !== DD.input ? (this.clearPendingChat(), this.pendingChatInput = DD.input, this.pendingChatTimeout = window.setTimeout((() => {
+        const UU = (0, ft.c)();
+        UU ? document.activeElement !== UU.input ? (this.clearPendingChat(), this.pendingChatInput = UU.input, this.pendingChatTimeout = window.setTimeout((() => {
           this.pendingChatInput = null
-        }), 250), DD.open()) : this.open(DD.input) : console.warn("controllerOpenChat with no chat mounted")
+        }), 250), UU.open()) : this.open(UU.input) : console.warn("controllerOpenChat with no chat mounted")
       }
-      openForField(DD) {
-        AD(DD) ? (document.activeElement !== DD && DD.focus(), document.activeElement === DD && this.open(DD)) : console.warn("controllerOpenKeyboard needs an editable input or textarea", DD)
+      openForField(UU) {
+        lU(UU) ? (document.activeElement !== UU && UU.focus(), document.activeElement === UU && this.open(UU)) : console.warn("controllerOpenKeyboard needs an editable input or textarea", UU)
       }
-      open(DD) {
-        var CD;
-        if (this.clearPendingChat(), this.ownedField = DD, this.state.visible && this.state.target === DD) return;
-        this.restoreInputMode(), (DD => {
-          FD(DD) && 0 === DD.selectionStart && 0 === DD.selectionEnd && DD.setSelectionRange(DD.value.length, DD.value.length)
-        })(DD), this.savedInputMode = DD.getAttribute("inputmode"), DD.setAttribute("inputmode", "none");
-        const cD = {
-          ...Qf,
+      open(UU) {
+        var RU;
+        if (this.clearPendingChat(), this.ownedField = UU, this.state.visible && this.state.target === UU) return;
+        this.restoreInputMode(), (UU => {
+          OU(UU) && 0 === UU.selectionStart && 0 === UU.selectionEnd && UU.setSelectionRange(UU.value.length, UU.value.length)
+        })(UU), this.savedInputMode = UU.getAttribute("inputmode"), UU.setAttribute("inputmode", "none");
+        const gU = {
+          ...EP,
           visible: !0,
-          target: DD,
-          kind: (0, gI.k)(DD) ? "chat" : null !== (CD = (0, gI.g)(DD).kind) && void 0 !== CD ? CD : null,
-          accentsFirst: (ID = Si.e.get().getCurrentLanguageCode(), Wi.has(ID)),
-          ...Bf(DD)
+          target: UU,
+          kind: (0, ft.j)(UU) ? "chat" : null !== (RU = (0, ft.f)(UU).kind) && void 0 !== RU ? RU : null,
+          accentsFirst: (tU = cE.g.get().getCurrentLanguageCode(), iE.has(tU)),
+          ...qP(UU)
         };
-        var ID;
-        const pD = Sf(cD),
-          iD = ((DD, CD) => {
-            for (let cD = 0; cD < DD.length; cD++) {
-              const ID = DD[cD].findIndex((DD => "char" === DD.type && DD.char === CD));
-              if (-1 !== ID) return {
-                row: cD,
-                col: ID
+        var tU;
+        const pU = TP(gU),
+          EU = ((UU, RU) => {
+            for (let gU = 0; gU < UU.length; gU++) {
+              const tU = UU[gU].findIndex((UU => "char" === UU.type && UU.char === RU));
+              if (-1 !== tU) return {
+                row: gU,
+                col: tU
               }
             }
             return null
-          })(pD, "q");
+          })(pU, "q");
         this.padInput.reset(), this.setState({
-          ...cD,
-          focus: iD,
-          preferredX: ri(pD, iD)
+          ...gU,
+          focus: EU,
+          preferredX: LE(pU, EU)
         })
       }
       hide() {
-        this.state.visible && (this.restoreInputMode(), this.padInput.reset(), this.setState(Qf))
+        this.state.visible && (this.restoreInputMode(), this.padInput.reset(), this.setState(EP))
       }
-      onFrame(DD) {
+      onFrame(UU) {
         if (this.releaseLostField()) return;
-        const CD = document.activeElement;
-        this.state.visible ? this.padInput.onVisibleFrame(DD) : AD(CD) && this.padInput.onHiddenFrame(DD, CD)
+        const RU = document.activeElement;
+        this.state.visible ? this.padInput.onVisibleFrame(UU) : lU(RU) && this.padInput.onHiddenFrame(UU, RU)
       }
       releaseLostField() {
-        const DD = this.ownedField;
-        return !(null === DD || DD.isConnected && document.activeElement === DD) && (this.ownedField = null, this.hide(), !0)
+        const UU = this.ownedField;
+        return !(null === UU || UU.isConnected && document.activeElement === UU) && (this.ownedField = null, this.hide(), !0)
       }
       clearPendingChat() {
         window.clearTimeout(this.pendingChatTimeout), this.pendingChatInput = null
       }
       restoreInputMode() {
         const {
-          target: DD
+          target: UU
         } = this.state;
-        DD && (null === this.savedInputMode ? DD.removeAttribute("inputmode") : DD.setAttribute("inputmode", this.savedInputMode), this.savedInputMode = null)
+        UU && (null === this.savedInputMode ? UU.removeAttribute("inputmode") : UU.setAttribute("inputmode", this.savedInputMode), this.savedInputMode = null)
       }
     };
-    var Xf = cD(8472);
-    const mf = new Map(li.map((DD => {
+    var eP = gU(8412);
+    const WP = new Map(vE.map((UU => {
         let {
-          command: CD,
-          action: cD
-        } = DD;
-        return [CD, cD]
+          command: RU,
+          action: gU
+        } = UU;
+        return [RU, gU]
       }))),
-      nf = {
+      fP = {
         letters: "ABC",
         accents: "\xe0\xe9",
         symbols: "&123"
       },
-      Of = {
+      xP = {
         chat: "controller:keyboardTargetChat",
         sign: "controller:keyboardTargetSign",
         nameTag: "controller:keyboardTargetNameTag",
         book: "controller:keyboardTargetBook",
-        Vb: "controller:keyboardTargetBookTitle"
+        hT: "controller:keyboardTargetBookTitle"
       },
-      Pf = DD => {
-        const CD = (() => {
-          const [, DD] = (0, lD.useReducer)((DD => DD + 1), 0);
-          return DD
+      mP = UU => {
+        const RU = (() => {
+          const [, UU] = (0, vU.useReducer)((UU => UU + 1), 0);
+          return UU
         })();
-        (0, lD.useEffect)((() => {
-          if (!DD) return;
-          const cD = ["input", "select", "selectionchange", "keyup", "pointerup"];
-          for (const pD of cD) DD.addEventListener(pD, CD);
-          document.addEventListener("selectionchange", CD);
-          const ID = new MutationObserver(CD);
-          return ID.observe(DD, {
+        (0, vU.useEffect)((() => {
+          if (!UU) return;
+          const gU = ["input", "select", "selectionchange", "keyup", "pointerup"];
+          for (const pU of gU) UU.addEventListener(pU, RU);
+          document.addEventListener("selectionchange", RU);
+          const tU = new MutationObserver(RU);
+          return tU.observe(UU, {
             attributeFilter: ["placeholder"]
           }), () => {
-            ID.disconnect();
-            for (const ID of cD) DD.removeEventListener(ID, CD);
-            document.removeEventListener("selectionchange", CD)
+            tU.disconnect();
+            for (const tU of gU) UU.removeEventListener(tU, RU);
+            document.removeEventListener("selectionchange", RU)
           }
-        }), [DD, CD])
+        }), [UU, RU])
       },
-      Hf = DD => {
-        DD.preventDefault()
+      IP = UU => {
+        UU.preventDefault()
       },
-      Uf = DD => {
-        "mouse" !== DD.pointerType && DD.preventDefault()
+      JP = UU => {
+        "mouse" !== UU.pointerType && UU.preventDefault()
       },
-      xf = () => {
-        var DD;
+      wP = () => {
+        var UU;
         const {
-          t: CD
-        } = (0, pD.F)(), cD = (() => {
-          const [DD, CD] = (0, lD.useState)(gf.getState());
-          return (0, lD.useEffect)((() => gf.subscribe((() => {
-            CD(gf.getState())
-          }))), []), DD
-        })(), ID = (0, MD.z)(), iD = (0, lD.useRef)(null);
-        (0, yD.l)(), (0, MD.B)(), (0, lD.useEffect)((() => {
-          const DD = gf.install(),
-            CD = null;
+          t: RU
+        } = (0, pU.B)(), gU = (() => {
+          const [UU, RU] = (0, vU.useState)(QP.getState());
+          return (0, vU.useEffect)((() => QP.subscribe((() => {
+            RU(QP.getState())
+          }))), []), UU
+        })(), tU = (0, uU.v)(), EU = (0, vU.useRef)(null);
+        (0, jU.n)(), (0, uU.z)(), (0, vU.useEffect)((() => {
+          const UU = QP.install(),
+            RU = null;
           return () => {
-            DD(), null === CD || void 0 === CD || CD()
+            UU(), null === RU || void 0 === RU || RU()
           }
         }), []);
-        const fD = (0, lD.useMemo)((() => ff.map((DD => CD(DD)))), [CD]),
-          bD = cD.visible && "chat" === cD.kind ? cD.target : null;
-        Pf(bD);
-        const QD = null !== (DD = null === bD || void 0 === bD ? void 0 : bD.value) && void 0 !== DD ? DD : "",
-          wD = ((DD, CD, cD) => {
-            if (!DD.startsWith("/")) return [];
-            const ID = [];
-            for (let pD = CD.length - 1; pD >= 0 && ID.length < cD; pD--) {
-              const cD = CD[pD].trim();
-              cD.startsWith(DD) && cD !== DD && !ID.includes(cD) && ID.push(cD)
+        const PU = (0, vU.useMemo)((() => tP.map((UU => RU(UU)))), [RU]),
+          TU = gU.visible && "chat" === gU.kind ? gU.target : null;
+        mP(TU);
+        const qU = null !== (UU = null === TU || void 0 === TU ? void 0 : TU.value) && void 0 !== UU ? UU : "",
+          KU = ((UU, RU, gU) => {
+            if (!UU.startsWith("/")) return [];
+            const tU = [];
+            for (let pU = RU.length - 1; pU >= 0 && tU.length < gU; pU--) {
+              const gU = RU[pU].trim();
+              gU.startsWith(UU) && gU !== UU && !tU.includes(gU) && tU.push(gU)
             }
-            return ID
-          })(QD, QD.startsWith("/") ? (0, Xf.e)() : [], ff.length),
-          BD = QD.startsWith("/"),
-          tD = BD ? ff.map(((DD, CD) => {
-            var cD;
-            return null !== (cD = wD[CD]) && void 0 !== cD ? cD : ""
-          })) : fD;
-        if ((0, lD.useEffect)((() => {
-            gf.editor.setPhraseRow(tD, BD)
-          })), (0, lD.useEffect)((() => {
-            const DD = iD.current;
-            if (DD) return DD.addEventListener("touchstart", Hf, {
+            return tU
+          })(qU, qU.startsWith("/") ? (0, eP.g)() : [], tP.length),
+          GU = qU.startsWith("/"),
+          CU = GU ? tP.map(((UU, RU) => {
+            var gU;
+            return null !== (gU = KU[RU]) && void 0 !== gU ? gU : ""
+          })) : PU;
+        if ((0, vU.useEffect)((() => {
+            QP.editor.setPhraseRow(CU, GU)
+          })), (0, vU.useEffect)((() => {
+            const UU = EU.current;
+            if (UU) return UU.addEventListener("touchstart", IP, {
               passive: !1
             }), () => {
-              DD.removeEventListener("touchstart", Hf)
+              UU.removeEventListener("touchstart", IP)
             }
-          }), [cD.visible]), !cD.visible) return null;
-        const ZD = Sf(cD),
-          oD = ui(ZD),
-          vD = DD => "char" === DD.type ? If(DD.char, cD.page, cD.shift) : "phrase" === DD.type ? tD[DD.phraseIndex] : (DD => {
-            switch (DD) {
+          }), [gU.visible]), !gU.visible) return null;
+        const hU = TP(gU),
+          QU = DE(hU),
+          eU = UU => "char" === UU.type ? RP(UU.char, gU.page, gU.shift) : "phrase" === UU.type ? CU[UU.phraseIndex] : (UU => {
+            switch (UU) {
               case "backspace":
                 return "\u232b";
               case "shift":
-                return "caps" === cD.shift ? "\u21ea" : "\u21e7";
+                return "caps" === gU.shift ? "\u21ea" : "\u21e7";
               case "page":
               case "otherPage":
-                return nf[si(cD.page, cD.accentsFirst)[DD]];
+                return fP[AE(gU.page, gU.accentsFirst)[UU]];
               case "space":
-                return CD("controller:keyboardSpace");
+                return RU("controller:keyboardSpace");
               case "caretLeft":
                 return "\u2190";
               case "caretRight":
@@ -4403,384 +4403,384 @@ export const modules = {
               case "newline":
                 return "\u21b5";
               case "submit":
-                return CD("chat" === cD.kind ? "controller:keyboardSend" : "controller:keyboardDone");
+                return RU("chat" === gU.kind ? "controller:keyboardSend" : "controller:keyboardDone");
               case "close":
                 return "\u2715";
               case "channel":
                 return "\u21c4"
             }
-          })(DD.command),
-          ND = DD => {
-            gf.editor.pressKey(DD)
+          })(UU.command),
+          WU = UU => {
+            QP.editor.pressKey(UU)
           };
-        return (0, GD.jsxs)("div", {
-          ref: iD,
-          className: TD()(gI.o, "top" === cD.placement ? "PadKeyboardTop" : "PadKeyboardBottom", {
-            PadKeyboardMultiline: cD.target instanceof HTMLTextAreaElement
+        return (0, SU.jsxs)("div", {
+          ref: EU,
+          className: HU()(ft.q, "top" === gU.placement ? "PadKeyboardTop" : "PadKeyboardBottom", {
+            PadKeyboardMultiline: gU.target instanceof HTMLTextAreaElement
           }),
           style: {
-            "--pad-keyboard-rows": ZD.length,
-            "--pad-keyboard-height": `${cD.maxHeightPx}px`
+            "--pad-keyboard-rows": hU.length,
+            "--pad-keyboard-height": `${gU.maxHeightPx}px`
           },
-          onPointerDown: Uf,
-          onMouseDown: Hf,
-          children: [(0, GD.jsx)(qf, {
-            target: cD.target,
-            label: cD.kind ? CD(Of[cD.kind]) : cD.target.placeholder || CD("controller:keyboardTargetText")
-          }), (0, GD.jsx)("div", {
+          onPointerDown: JP,
+          onMouseDown: IP,
+          children: [(0, SU.jsx)(nP, {
+            target: gU.target,
+            label: gU.kind ? RU(xP[gU.kind]) : gU.target.placeholder || RU("controller:keyboardTargetText")
+          }), (0, SU.jsx)("div", {
             className: "PadKeyboardRows",
-            children: ZD.map(((DD, CD) => (0, GD.jsx)("div", {
-              className: TD()("PadKeyboardRow", {
-                PadKeyboardPhraseRow: "phrase" === DD[0].type
+            children: hU.map(((UU, RU) => (0, SU.jsx)("div", {
+              className: HU()("PadKeyboardRow", {
+                PadKeyboardPhraseRow: "phrase" === UU[0].type
               }),
-              children: DD.map(((DD, pD) => {
-                const iD = ID && cD.focus.row === CD && cD.focus.col === pD,
-                  fD = "command" === DD.type ? mf.get(DD.command) : void 0;
-                return (0, GD.jsx)("div", {
+              children: UU.map(((UU, pU) => {
+                const EU = tU && gU.focus.row === RU && gU.focus.col === pU,
+                  PU = "command" === UU.type ? WP.get(UU.command) : void 0;
+                return (0, SU.jsx)("div", {
                   className: "PadKeyboardKeySlot",
                   style: {
-                    width: DD.width / oD * 100 + "%"
+                    width: UU.width / QU * 100 + "%"
                   },
-                  children: (0, GD.jsxs)("div", {
-                    className: TD()("PadKeyboardKey", {
-                      PadKeyboardKeyFocused: iD,
-                      PadKeyboardKeyCommand: "command" === DD.type,
-                      PadKeyboardKeyPhrase: "phrase" === DD.type,
-                      PadKeyboardKeyActive: "command" === DD.type && "shift" === DD.command && "off" !== cD.shift,
-                      PadKeyboardKeySubmit: "command" === DD.type && "submit" === DD.command
+                  children: (0, SU.jsxs)("div", {
+                    className: HU()("PadKeyboardKey", {
+                      PadKeyboardKeyFocused: EU,
+                      PadKeyboardKeyCommand: "command" === UU.type,
+                      PadKeyboardKeyPhrase: "phrase" === UU.type,
+                      PadKeyboardKeyActive: "command" === UU.type && "shift" === UU.command && "off" !== gU.shift,
+                      PadKeyboardKeySubmit: "command" === UU.type && "submit" === UU.command
                     }),
                     role: "button",
                     onClick: () => {
-                      ND({
-                        row: CD,
-                        col: pD
+                      WU({
+                        row: RU,
+                        col: pU
                       })
                     },
-                    onTouchEnd: DD => {
-                      var cD, ID;
-                      DD.preventDefault(), cD = DD.changedTouches[0], ID = DD.currentTarget.getBoundingClientRect(), cD && cD.clientX >= ID.left && cD.clientX <= ID.right && cD.clientY >= ID.top && cD.clientY <= ID.bottom && ND({
-                        row: CD,
-                        col: pD
+                    onTouchEnd: UU => {
+                      var gU, tU;
+                      UU.preventDefault(), gU = UU.changedTouches[0], tU = UU.currentTarget.getBoundingClientRect(), gU && gU.clientX >= tU.left && gU.clientX <= tU.right && gU.clientY >= tU.top && gU.clientY <= tU.bottom && WU({
+                        row: RU,
+                        col: pU
                       })
                     },
-                    children: [(0, GD.jsx)("span", {
+                    children: [(0, SU.jsx)("span", {
                       className: "PadKeyboardKeyLabel",
-                      children: vD(DD)
-                    }), ID && fD && (0, GD.jsx)(Zi, {
+                      children: eU(UU)
+                    }), tU && PU && (0, SU.jsx)(hE, {
                       className: "PadKeyboardKeyGlyph",
-                      glyph: (0, SD.h)(fD)
+                      glyph: (0, cU.f)(PU)
                     })]
                   })
-                }, pD)
+                }, pU)
               }))
-            }, CD)))
+            }, RU)))
           })]
         })
       },
-      qf = DD => {
+      nP = UU => {
         let {
-          target: CD,
-          label: cD
-        } = DD;
-        Pf(CD);
-        const ID = (0, lD.useRef)(null),
-          pD = (0, lD.useRef)(null),
-          iD = CD instanceof HTMLTextAreaElement;
-        (0, lD.useLayoutEffect)((() => {
-          const DD = ID.current,
-            CD = pD.current;
-          iD ? DD.scrollTop = CD.offsetTop - DD.clientHeight / 2 : DD.scrollLeft = CD.offsetLeft - DD.clientWidth / 2
+          target: RU,
+          label: gU
+        } = UU;
+        mP(RU);
+        const tU = (0, vU.useRef)(null),
+          pU = (0, vU.useRef)(null),
+          EU = RU instanceof HTMLTextAreaElement;
+        (0, vU.useLayoutEffect)((() => {
+          const UU = tU.current,
+            RU = pU.current;
+          EU ? UU.scrollTop = RU.offsetTop - UU.clientHeight / 2 : UU.scrollLeft = RU.offsetLeft - UU.clientWidth / 2
         }));
         const {
-          value: fD,
-          start: bD,
-          end: QD
-        } = DC(CD), wD = "password" === CD.type ? "\u2022".repeat(fD.length) : fD;
-        return (0, GD.jsxs)("div", {
+          value: PU,
+          start: TU,
+          end: qU
+        } = UR(RU), KU = "password" === RU.type ? "\u2022".repeat(PU.length) : PU;
+        return (0, SU.jsxs)("div", {
           className: "PadKeyboardPreview",
-          children: [(0, GD.jsx)("div", {
+          children: [(0, SU.jsx)("div", {
             className: "PadKeyboardPreviewLabel SmallTextBold",
-            children: cD
-          }), (0, GD.jsxs)("div", {
-            ref: ID,
-            className: TD()("PadKeyboardPreviewText", {
-              PadKeyboardPreviewMultiline: iD
+            children: gU
+          }), (0, SU.jsxs)("div", {
+            ref: tU,
+            className: HU()("PadKeyboardPreviewText", {
+              PadKeyboardPreviewMultiline: EU
             }),
-            children: [(0, GD.jsx)("span", {
-              children: wD.slice(0, bD)
-            }), (0, GD.jsx)("span", {
-              ref: pD,
+            children: [(0, SU.jsx)("span", {
+              children: KU.slice(0, TU)
+            }), (0, SU.jsx)("span", {
+              ref: pU,
               className: "PadKeyboardCaret"
-            }), bD !== QD && (0, GD.jsx)("span", {
+            }), TU !== qU && (0, SU.jsx)("span", {
               className: "PadKeyboardPreviewSelection",
-              children: wD.slice(bD, QD)
-            }), (0, GD.jsx)("span", {
-              children: wD.slice(QD)
-            }), 0 === wD.length && CD.placeholder && CD.placeholder !== cD && (0, GD.jsx)("span", {
+              children: KU.slice(TU, qU)
+            }), (0, SU.jsx)("span", {
+              children: KU.slice(qU)
+            }), 0 === KU.length && RU.placeholder && RU.placeholder !== gU && (0, SU.jsx)("span", {
               className: "PadKeyboardPreviewPlaceholder",
-              children: CD.placeholder
+              children: RU.placeholder
             })]
           })]
         })
       };
-    var Jf = cD(1388),
-      Kf = cD(3220);
-    const af = function() {
-        for (var DD = arguments.length, CD = new Array(DD), cD = 0; cD < DD; cD++) CD[cD] = arguments[cD];
-        return CD.map(SD.h)
+    var bP = gU(1362),
+      oP = gU(3123);
+    const ZP = function() {
+        for (var UU = arguments.length, RU = new Array(UU), gU = 0; gU < UU; gU++) RU[gU] = arguments[gU];
+        return RU.map(cU.f)
       },
-      Vf = (DD, CD) => {
-        const cD = jI(DD);
-        return cD ? [{
-          glyphs: [cD],
-          labelKey: CD
+      aP = (UU, RU) => {
+        const gU = vt(UU);
+        return gU ? [{
+          glyphs: [gU],
+          labelKey: RU
         }] : []
       },
-      zf = [".BottomMiddleElements", ".BottomLeftElements > *", ".BottomRightElements > *", ".MiddleTextBottom .MiddleText"],
-      jf = "--pad-hint-bar-clearance",
-      lf = "[data-pad-hint-bar-avoid]",
-      Lf = DD => {
-        const CD = [];
-        for (const cD of DD) wC(cD) && CD.push(cD.getBoundingClientRect());
-        return CD
+      YP = [".BottomMiddleElements", ".BottomLeftElements > *", ".BottomRightElements > *", ".MiddleTextBottom .MiddleText"],
+      BP = "--pad-hint-bar-clearance",
+      VP = "[data-pad-hint-bar-avoid]",
+      rP = UU => {
+        const RU = [];
+        for (const gU of UU) KR(gU) && RU.push(gU.getBoundingClientRect());
+        return RU
       },
-      Tf = DD => {
-        if (!DD) return null;
-        const CD = Cp(),
-          cD = CD ? Lf(((DD, CD) => {
-            const cD = DD.closest(lf);
-            return cD ? [cD] : ("popup" === CD ? document : DD).querySelectorAll(lf)
-          })(CD.root, CD.layer.kind)) : [],
-          ID = !CD || CD.root.hasAttribute("data-pad-shows-hud");
-        if (((0, Kf.i)(null === CD || void 0 === CD ? void 0 : CD.layer.kind, (0, Kf.m)()) || ID) && cD.push(...Lf(document.querySelectorAll(zf.join(",")))), 0 === cD.length) return null;
+      XP = UU => {
+        if (!UU) return null;
+        const RU = gp(),
+          gU = RU ? rP(((UU, RU) => {
+            const gU = UU.closest(VP);
+            return gU ? [gU] : ("popup" === RU ? document : UU).querySelectorAll(VP)
+          })(RU.root, RU.layer.kind)) : [],
+          tU = !RU || RU.root.hasAttribute("data-pad-shows-hud");
+        if (((0, oP.l)(null === RU || void 0 === RU ? void 0 : RU.layer.kind, (0, oP.m)()) || tU) && gU.push(...rP(document.querySelectorAll(YP.join(",")))), 0 === gU.length) return null;
         const {
-          width: pD,
-          height: iD
-        } = DD.getBoundingClientRect(), fD = window.innerHeight - 8, bD = (0, Kf.p)(fD, {
-          width: pD,
-          height: iD
-        }, window.innerWidth / 2, cD, 8);
-        return bD === fD ? null : Math.round(window.innerHeight - bD)
+          width: pU,
+          height: EU
+        } = UU.getBoundingClientRect(), PU = window.innerHeight - 8, TU = (0, oP.u)(PU, {
+          width: pU,
+          height: EU
+        }, window.innerWidth / 2, gU, 8);
+        return TU === PU ? null : Math.round(window.innerHeight - TU)
       },
-      Gf = DD => {
-        const CD = document.documentElement.style,
-          cD = DD ? `${Math.round(window.innerHeight-DD.getBoundingClientRect().top)}px` : "";
-        CD.getPropertyValue(jf) !== cD && (cD ? CD.setProperty(jf, cD) : CD.removeProperty(jf))
+      vP = UU => {
+        const RU = document.documentElement.style,
+          gU = UU ? `${Math.round(window.innerHeight-UU.getBoundingClientRect().top)}px` : "";
+        RU.getPropertyValue(BP) !== gU && (gU ? RU.setProperty(BP, gU) : RU.removeProperty(BP))
       },
-      Rf = () => {
+      dP = () => {
         const {
-          t: DD
-        } = (0, pD.F)(), {
-          hideButtonHints: CD
-        } = (0, yD.l)(), cD = (0, MD.z)(), [ID, iD] = (0, lD.useState)(!1), [fD, wD] = (0, lD.useState)([]), [ZD, oD] = (0, lD.useState)(null), vD = (0, lD.useRef)(null), ND = (0, lD.useRef)(null);
-        (0, wi.f)(WD.c, (DD => {
-          iD(DD)
-        })), (0, wi.f)(Kf.o, (() => {
-          var DD;
-          null === (DD = ND.current) || void 0 === DD || DD.call(ND)
+          t: UU
+        } = (0, pU.B)(), {
+          hideButtonHints: RU
+        } = (0, jU.n)(), gU = (0, uU.v)(), [tU, EU] = (0, vU.useState)(!1), [PU, KU] = (0, vU.useState)([]), [hU, QU] = (0, vU.useState)(null), eU = (0, vU.useRef)(null), WU = (0, vU.useRef)(null);
+        (0, KE.e)(iU.c, (UU => {
+          EU(UU)
+        })), (0, KE.e)(oP.q, (() => {
+          var UU;
+          null === (UU = WU.current) || void 0 === UU || UU.call(WU)
         }));
-        const gD = cD && !CD && !ID;
-        return (0, lD.useEffect)((() => {
-          if (!gD) return;
-          let DD = null;
-          const CD = () => {
-            const CD = (() => {
-                var DD;
-                const CD = BD.d.getActiveConsumerName(),
-                  cD = (0, Kf.f)();
-                if (cD) {
-                  const DD = (0, SD.h)(cD),
-                    CD = "emoteWheel" === cD && "wheel" === (0, yD.h)().emoteButton || !(0, tD.D)(BD.d.getLastFrame().values, DD) ? {
-                      glyphs: af("menuConfirm"),
+        const fU = gU && !RU && !tU;
+        return (0, vU.useEffect)((() => {
+          if (!fU) return;
+          let UU = null;
+          const RU = () => {
+            const RU = (() => {
+                var UU;
+                const RU = GU.e.getActiveConsumerName(),
+                  gU = (0, oP.h)();
+                if (gU) {
+                  const UU = (0, cU.f)(gU),
+                    RU = "emoteWheel" === gU && "wheel" === (0, jU.h)().emoteButton || !(0, CU.C)(GU.e.getLastFrame().values, UU) ? {
+                      glyphs: ZP("menuConfirm"),
                       labelKey: "controller:menusSelect"
                     } : {
-                      glyphs: [DD],
+                      glyphs: [UU],
                       labelKey: "controller:wheelReleaseToPick"
                     };
                   return [{
-                    glyphs: [(0, SD.z)(DD)],
+                    glyphs: [(0, cU.u)(UU)],
                     labelKey: "controller:wheelChoose"
-                  }, CD, {
-                    glyphs: af("menuBack"),
+                  }, RU, {
+                    glyphs: ZP("menuBack"),
                     labelKey: "controller:wheelClose"
                   }]
                 }
-                const ID = Cp();
-                if (!ID || "focus" !== CD && "cursor" !== CD) return (0, Kf.c)(SD.h);
-                const pD = [],
-                  iD = {
-                    glyphs: af("menuBack"),
+                const tU = gp();
+                if (!tU || "focus" !== RU && "cursor" !== RU) return (0, oP.e)(cU.f);
+                const pU = [],
+                  EU = {
+                    glyphs: ZP("menuBack"),
                     labelKey: "controller:menusBack"
                   },
-                  fD = lC(ID.root),
-                  bD = fD ? !SC(fD) : Boolean(ID.layer.close),
-                  wD = !fD && ID.layer.closeLabelKey ? ID.layer.closeLabelKey : iD.labelKey,
-                  MD = bD ? [{
-                    ...iD,
-                    labelKey: wD
+                  PU = vR(tU.root),
+                  TU = PU ? !cR(PU) : Boolean(tU.layer.close),
+                  KU = !PU && tU.layer.closeLabelKey ? tU.layer.closeLabelKey : EU.labelKey,
+                  uU = TU ? [{
+                    ...EU,
+                    labelKey: KU
                   }] : [],
-                  ZD = nI(ID.layer.kind) ? [{
-                    glyphs: af("chat"),
+                  hU = It(tU.layer.kind) ? [{
+                    glyphs: ZP("chat"),
                     labelKey: "controller:menusQuickChat"
                   }] : [];
-                if ("cursor" === CD) return pD.push({
-                  glyphs: af("menuConfirm"),
+                if ("cursor" === RU) return pU.push({
+                  glyphs: ZP("menuConfirm"),
                   labelKey: "controller:menusClick"
-                }), pD.push({
-                  glyphs: af("menuSecondary"),
+                }), pU.push({
+                  glyphs: ZP("menuSecondary"),
                   labelKey: "controller:menusRightClick"
-                }), pD.push(...MD), pD.push(...ZD), pD.push({
+                }), pU.push(...uU), pU.push(...hU), pU.push({
                   glyphs: ["RightStick"],
                   labelKey: "controller:menusScroll"
-                }), op() && pD.push({
-                  glyphs: af("menuToggleCursor"),
+                }), Wp() && pU.push({
+                  glyphs: ZP("menuToggleCursor"),
                   labelKey: "controller:menusFocusMode"
-                }), pD;
-                const oD = Yp.getFocused();
-                oD && (0, mp.c)(oD) ? pD.push({
+                }), pU;
+                const QU = Ap.getFocused();
+                QU && (0, Jp.b)(QU) ? pU.push({
                   glyphs: ["Left", "Right"],
                   labelKey: "controller:menusAdjust"
-                }) : oD && zC(oD) ? pD.push({
+                }) : QU && rR(QU) ? pU.push({
                   glyphs: [],
                   labelKey: "controller:menusUseMouse"
-                }) : pD.push({
-                  glyphs: af("menuConfirm"),
+                }) : pU.push({
+                  glyphs: ZP("menuConfirm"),
                   labelKey: "controller:menusSelect"
                 });
-                const vD = oD ? null === (DD = pI(oD)) || void 0 === DD ? void 0 : DD.dataset.padSecondary : void 0;
-                vD && pD.push({
-                  glyphs: af("menuSecondary"),
-                  labelKey: vD
-                }), pD.push(...null !== oD && void 0 !== oD && oD.closest("[data-pad-friends-column]") ? [iD] : MD), pD.push(...ZD);
-                const ND = "home" === ID.layer.kind;
-                TI(ID.root) || !UI(ID.root) && !GI(ID) ? ND && pD.push({
-                  glyphs: af("menuTabPrevious", "menuTabNext"),
+                const eU = QU ? null === (UU = pt(QU)) || void 0 === UU ? void 0 : UU.dataset.padSecondary : void 0;
+                eU && pU.push({
+                  glyphs: ZP("menuSecondary"),
+                  labelKey: eU
+                }), pU.push(...null !== QU && void 0 !== QU && QU.closest("[data-pad-friends-column]") ? [EU] : uU), pU.push(...hU);
+                const WU = "home" === tU.layer.kind;
+                St(tU.root) || !bt(tU.root) && !st(tU) ? WU && pU.push({
+                  glyphs: ZP("menuTabPrevious", "menuTabNext"),
                   labelKey: "controller:menusRows"
-                }) : pD.push({
-                  glyphs: af("menuTabPrevious", "menuTabNext"),
+                }) : pU.push({
+                  glyphs: ZP("menuTabPrevious", "menuTabNext"),
                   labelKey: "controller:menusTabs"
-                }), ND && (pD.push(...Vf("inventory", "controller:menusFriends")), vD || pD.push({
-                  glyphs: af("menuSecondary"),
+                }), WU && (pU.push(...aP("inventory", "controller:menusFriends")), eU || pU.push({
+                  glyphs: ZP("menuSecondary"),
                   labelKey: "controller:menusSearch"
-                }), pD.push(...Vf("pause", "controller:menusSettings")), pD.push(...Vf("leaderboard", "controller:menusNotifications")));
-                const gD = QD.d.get("openEverythingMenuName");
-                return "inGame" === QD.d.get("gameState") && "popup" !== ID.layer.kind && null !== gD && ((0, DI.n)(gD) ? pD.push(...Vf("leaderboard", "controller:menusClose")) : gD !== Fc.q.LOBBY_LEADERBOARD && pD.push(...Vf("leaderboard", "controller:menusLobby"))), pD.push({
-                  glyphs: af("menuToggleCursor"),
+                }), pU.push(...aP("pause", "controller:menusSettings")), pU.push(...aP("leaderboard", "controller:menusNotifications")));
+                const fU = qU.b.get("openEverythingMenuName");
+                return "inGame" === qU.b.get("gameState") && "popup" !== tU.layer.kind && null !== fU && ((0, Ut.k)(fU) ? pU.push(...aP("leaderboard", "controller:menusClose")) : fU !== Og.n.LOBBY_LEADERBOARD && pU.push(...aP("leaderboard", "controller:menusLobby"))), pU.push({
+                  glyphs: ZP("menuToggleCursor"),
                   labelKey: "controller:menusCursorMode"
-                }), pD
+                }), pU
               })(),
-              cD = Tf(vD.current),
-              ID = ((DD, CD) => `${DD.map((DD=>`${DD.glyphs.join("+")}:${DD.labelKey}`)).join("|")}@${CD}`)(CD, cD);
-            ID !== DD && (DD = ID, (0, bD.unstable_batchedUpdates)((() => {
-              wD(CD), oD(cD)
-            }))), Gf(vD.current)
+              gU = XP(eU.current),
+              tU = ((UU, RU) => `${UU.map((UU=>`${UU.glyphs.join("+")}:${UU.labelKey}`)).join("|")}@${RU}`)(RU, gU);
+            tU !== UU && (UU = tU, (0, TU.unstable_batchedUpdates)((() => {
+              KU(RU), QU(gU)
+            }))), vP(eU.current)
           };
-          CD(), ND.current = CD;
-          const cD = requestAnimationFrame(CD),
-            ID = setInterval(CD, 150);
+          RU(), WU.current = RU;
+          const gU = requestAnimationFrame(RU),
+            tU = setInterval(RU, 150);
           return () => {
-            ND.current = null, cancelAnimationFrame(cD), clearInterval(ID), Gf(null)
+            WU.current = null, cancelAnimationFrame(gU), clearInterval(tU), vP(null)
           }
-        }), [gD]), (0, lD.useLayoutEffect)((() => {
-          if (!gD) return;
-          if (0 === fD.length) return void Gf(null);
-          const DD = Tf(vD.current);
-          DD === ZD ? Gf(vD.current) : oD(DD)
-        }), [gD, fD, ZD]), gD && 0 !== fD.length ? (0, GD.jsx)("div", {
-          ref: vD,
+        }), [fU]), (0, vU.useLayoutEffect)((() => {
+          if (!fU) return;
+          if (0 === PU.length) return void vP(null);
+          const UU = XP(eU.current);
+          UU === hU ? vP(eU.current) : QU(UU)
+        }), [fU, PU, hU]), fU && 0 !== PU.length ? (0, SU.jsx)("div", {
+          ref: eU,
           className: "PadButtonHintBar SmallTextBold",
-          style: null === ZD ? void 0 : {
-            bottom: ZD
+          style: null === hU ? void 0 : {
+            bottom: hU
           },
           "aria-hidden": !0,
-          children: fD.map((CD => (0, GD.jsxs)("div", {
+          children: PU.map((RU => (0, SU.jsxs)("div", {
             className: "PadButtonHint",
-            children: [CD.glyphs.map((DD => (0, GD.jsx)(Zi, {
-              glyph: DD,
+            children: [RU.glyphs.map((UU => (0, SU.jsx)(hE, {
+              glyph: UU,
               className: "PadButtonHintGlyph"
-            }, DD))), (0, GD.jsx)("span", {
-              children: DD(CD.labelKey)
+            }, UU))), (0, SU.jsx)("span", {
+              children: UU(RU.labelKey)
             })]
-          }, CD.labelKey)))
+          }, RU.labelKey)))
         }) : null
       },
-      kf = [bC, "label", "[data-pad-slider]"].join(","),
-      df = "data-pad-cursor-probe",
-      Yf = DD => {
-        var CD;
-        const cD = (DD => {
-          const CD = [];
-          for (let ID = DD; ID && ID !== document.body && ID !== document.documentElement && (CD.push(ID), !(CD.length > 8)); ID = ID.parentElement);
-          const cD = document.documentElement.classList.contains(MD.p) ? CD[CD.length - 1] : void 0;
-          null === cD || void 0 === cD || cD.setAttribute(df, "");
+      HP = [TR, "label", "[data-pad-slider]"].join(","),
+      SP = "data-pad-cursor-probe",
+      sP = UU => {
+        var RU;
+        const gU = (UU => {
+          const RU = [];
+          for (let tU = UU; tU && tU !== document.body && tU !== document.documentElement && (RU.push(tU), !(RU.length > 8)); tU = tU.parentElement);
+          const gU = document.documentElement.classList.contains(uU.q) ? RU[RU.length - 1] : void 0;
+          null === gU || void 0 === gU || gU.setAttribute(SP, "");
           try {
-            return CD.map((DD => ({
-              element: DD,
-              cursor: getComputedStyle(DD).cursor
+            return RU.map((UU => ({
+              element: UU,
+              cursor: getComputedStyle(UU).cursor
             })))
           } finally {
-            null === cD || void 0 === cD || cD.removeAttribute(df)
+            null === gU || void 0 === gU || gU.removeAttribute(SP)
           }
-        })(DD);
-        if ("pointer" !== (null === (CD = cD[0]) || void 0 === CD ? void 0 : CD.cursor)) return null;
-        let ID = 0;
-        for (; ID + 1 < cD.length && "pointer" === cD[ID + 1].cursor;) ID++;
-        return cD[ID].element
+        })(UU);
+        if ("pointer" !== (null === (RU = gU[0]) || void 0 === RU ? void 0 : RU.cursor)) return null;
+        let tU = 0;
+        for (; tU + 1 < gU.length && "pointer" === gU[tU + 1].cursor;) tU++;
+        return gU[tU].element
       },
-      Wf = (DD, CD, cD, ID) => {
-        const pD = ID.root.contains(DD) ? ID.root : null;
-        for (let iD = DD; iD && iD !== document.body && iD !== document.documentElement; iD = iD.parentElement) {
-          if (iD instanceof HTMLElement && UD(iD, CD) && aD(iD, CD, cD)) return iD;
-          if (iD === pD) break
+      yP = (UU, RU, gU, tU) => {
+        const pU = tU.root.contains(UU) ? tU.root : null;
+        for (let EU = UU; EU && EU !== document.body && EU !== document.documentElement; EU = EU.parentElement) {
+          if (EU instanceof HTMLElement && bU(EU, RU) && BU(EU, RU, gU)) return EU;
+          if (EU === pU) break
         }
-        return "home" === ID.layer.kind || "gamePage" === ID.layer.kind ? ((DD, CD) => {
-          const cD = document.scrollingElement;
-          return cD instanceof HTMLElement && ![document.documentElement, document.body].some((CD => {
-            const cD = getComputedStyle(CD),
-              ID = "y" === DD ? cD.overflowY : cD.overflowX;
-            return "hidden" === ID || "clip" === ID
-          })) && aD(cD, DD, CD) ? cD : null
-        })(CD, cD) : null
+        return "home" === tU.layer.kind || "gamePage" === tU.layer.kind ? ((UU, RU) => {
+          const gU = document.scrollingElement;
+          return gU instanceof HTMLElement && ![document.documentElement, document.body].some((RU => {
+            const gU = getComputedStyle(RU),
+              tU = "y" === UU ? gU.overflowY : gU.overflowX;
+            return "hidden" === tU || "clip" === tU
+          })) && BU(gU, UU, RU) ? gU : null
+        })(RU, gU) : null
       };
-    const sf = new class {
+    const kP = new class {
         constructor() {
           this.state = {
             x: 0,
             y: 0,
             speedRamp: 0
-          }, this.hasPosition = !1, this.active = !1, this.hidden = !1, this.hit = null, this.interactive = null, this.magnet = null, this.lastHitTestMs = -1 / 0, this.press = null, this.draggedSlider = null, this.repeatStop = null, this.repeatKey = null, this.repeated = !1, this.confirmRepeat = (0, ZD.b)(tD.r), this.secondaryArmed = !1, this.scrollRemainder = {
+          }, this.hasPosition = !1, this.active = !1, this.hidden = !1, this.hit = null, this.interactive = null, this.magnet = null, this.lastHitTestMs = -1 / 0, this.press = null, this.draggedSlider = null, this.repeatStop = null, this.repeatKey = null, this.repeated = !1, this.confirmRepeat = (0, hU.e)(CU.p), this.secondaryArmed = !1, this.scrollRemainder = {
             x: 0,
             y: 0
           }, this.layerRoot = null, this.layerOrder = 0, this.layerPoints = new WeakMap, this.page = null, this.pendingPageStart = null
         }
         install() {
-          const DD = BD.d.register({
+          const UU = GU.e.register({
               name: "cursor",
-              isActive: () => "cursor" === vp(),
-              onFrame: DD => {
-                this.onFrame(DD)
+              isActive: () => "cursor" === fp(),
+              onFrame: UU => {
+                this.onFrame(UU)
               },
               onDeactivate: () => {
                 this.deactivate()
               },
-              wakePressActs: DD => (0, BD.g)(DD) || DD === (0, SD.h)("menuConfirm") && jC((0, MD.c)())
+              wakePressActs: UU => (0, GU.i)(UU) || UU === (0, cU.f)("menuConfirm") && XR((0, uU.c)())
             }),
-            CD = (0, EI.n)((DD => {
-              const CD = DD.getRoot();
-              CD && this.layerPoints.delete(CD), CD === this.layerRoot && (this.layerRoot = null)
+            RU = (0, Mt.k)((UU => {
+              const RU = UU.getRoot();
+              RU && this.layerPoints.delete(RU), RU === this.layerRoot && (this.layerRoot = null)
             })),
-            cD = wD.i.subscribe("appManagerUpdated|activeInputDevice", (DD => {
-              "gamepad" !== DD && this.active && !this.hidden && this.hide()
+            gU = KU.p.subscribe("appManagerUpdated|activeInputDevice", (UU => {
+              "gamepad" !== UU && this.active && !this.hidden && this.hide()
             }));
           return () => {
-            DD(), CD(), wD.i.unsubscribe(cD), this.deactivate()
+            UU(), RU(), KU.p.unsubscribe(gU), this.deactivate()
           }
         }
         getHighlighted() {
           return this.isVisible() ? this.interactive : null
         }
         isVisible() {
-          return this.active && !this.hidden && (0, MD.i)()
+          return this.active && !this.hidden && (0, uU.i)()
         }
         getPoint() {
           return {
@@ -4789,20 +4789,20 @@ export const modules = {
           }
         }
         hide() {
-          this.hidden = !0, this.cancelPress(), this.secondaryArmed = !1, this.clearHover(), this.Uo()
+          this.hidden = !0, this.cancelPress(), this.secondaryArmed = !1, this.clearHover(), this.yh()
         }
-        activate(DD) {
+        activate(UU) {
           this.active = !0, this.hidden = !1;
-          const CD = Mp();
-          !CD || CD.root && CD.root !== DD.root ? this.jumpTo(this.hasPosition ? this.getPoint() : {
+          const RU = hp();
+          !RU || RU.root && RU.root !== UU.root ? this.jumpTo(this.hasPosition ? this.getPoint() : {
             x: window.innerWidth / 2,
             y: window.innerHeight / 2
-          }) : (this.setLayer(DD), this.jumpTo(CD.point))
+          }) : (this.setLayer(UU), this.jumpTo(RU.point))
         }
-        jumpTo(DD) {
+        jumpTo(UU) {
           this.state = {
-            x: DD.x,
-            y: DD.y,
+            x: UU.x,
+            y: UU.y,
             speedRamp: 0
           }, this.hasPosition = !0, this.lastHitTestMs = -1 / 0
         }
@@ -4810,306 +4810,306 @@ export const modules = {
           this.active && (this.active = !1, this.page = null, this.pendingPageStart = null, this.cancelPress(), this.clearHover(), this.draggedSlider = null, this.secondaryArmed = !1, this.scrollRemainder = {
             x: 0,
             y: 0
-          }, this.Uo())
+          }, this.yh())
         }
-        onFrame(DD) {
-          const CD = Cp();
-          if (!CD) return;
-          if (this.active || this.activate(CD), this.followPage(CD)) return;
-          this.followLayer(CD);
-          const cD = DD.wokeDevice ? (0, MD.c)() : null;
-          if (cD && this.jumpTo(cD), !(0, MD.i)()) return void this.hide();
-          const ID = (0, SD.h)("menuToggleCursor");
-          if (DD.wasPressed(ID)) return BD.d.consumeButton(ID), void yp(this.getHandoff(null));
-          if (this.handBackToFocus(DD)) return;
-          const pD = (0, SD.h)("menuConfirm"),
-            iD = (0, SD.h)("menuSecondary");
-          if (DD.wasPressed((0, SD.h)("menuBack"))) return aC(CD.root) || LC(CD.root) || cp(), void this.Uo();
-          if (dI(null, DD, CD)) return DD.wasReleased(pD) && this.press && (this.updateHit(!1), this.updateConfirm(DD, pD)), void this.Uo();
+        onFrame(UU) {
+          const RU = gp();
+          if (!RU) return;
+          if (this.active || this.activate(RU), this.followPage(RU)) return;
+          this.followLayer(RU);
+          const gU = UU.wokeDevice ? (0, uU.c)() : null;
+          if (gU && this.jumpTo(gU), !(0, uU.i)()) return void this.hide();
+          const tU = (0, cU.f)("menuToggleCursor");
+          if (UU.wasPressed(tU)) return GU.e.consumeButton(tU), void Cp(this.getHandoff(null));
+          if (this.handBackToFocus(UU)) return;
+          const pU = (0, cU.f)("menuConfirm"),
+            EU = (0, cU.f)("menuSecondary");
+          if (UU.wasPressed((0, cU.f)("menuBack"))) return BR(RU.root) || dR(RU.root) || tp(), void this.yh();
+          if (Ft(null, UU, RU)) return UU.wasReleased(pU) && this.press && (this.updateHit(!1), this.updateConfirm(UU, pU)), void this.yh();
           if (document.pointerLockElement) return void this.hide();
-          const fD = Np() ? {
+          const PU = xp() ? {
               x: 0,
               y: 0
-            } : (DD => {
-              const CD = (DD, CD) => (DD ? 1 : 0) - (CD ? 1 : 0);
+            } : (UU => {
+              const RU = (UU, RU) => (UU ? 1 : 0) - (RU ? 1 : 0);
               return {
-                x: CD(DD.isHeld("Right"), DD.isHeld("Left")),
-                y: CD(DD.isHeld("Down"), DD.isHeld("Up"))
+                x: RU(UU.isHeld("Right"), UU.isHeld("Left")),
+                y: RU(UU.isHeld("Down"), UU.isHeld("Up"))
               }
-            })(DD),
-            bD = (0, yD.h)().moveDeadzone,
-            QD = ((DD, CD) => {
-              const cD = (0, tD.i)(DD, XD(CD));
-              return Math.hypot(cD.x, cD.y)
-            })(DD.leftStick, bD) > 0 || 0 !== fD.x || 0 !== fD.y;
+            })(UU),
+            TU = (0, jU.h)().moveDeadzone,
+            qU = ((UU, RU) => {
+              const gU = (0, CU.g)(UU, xU(RU));
+              return Math.hypot(gU.x, gU.y)
+            })(UU.leftStick, TU) > 0 || 0 !== PU.x || 0 !== PU.y;
           if (this.hidden) {
-            const CD = DD.wasPressed(pD),
-              cD = DD.wasPressed(iD);
-            if (!QD && !OD(DD.rightStick) && !CD && !cD && !DD.wokeDevice) return void this.Uo();
-            if (this.hidden = !1, this.updateHit(!1), CD || cD) return CD && (this.press = {
+            const RU = UU.wasPressed(pU),
+              gU = UU.wasPressed(EU);
+            if (!qU && !JU(UU.rightStick) && !RU && !gU && !UU.wokeDevice) return void this.yh();
+            if (this.hidden = !1, this.updateHit(!1), RU || gU) return RU && (this.press = {
               kind: "ignored"
-            }, DD.wokeDevice && this.beginRepeat()), this.secondaryArmed = !1, void this.Uo()
+            }, UU.wokeDevice && this.beginRepeat()), this.secondaryArmed = !1, void this.yh()
           }
-          this.movePendingPageStart(QD);
-          const wD = this.getPoint();
-          this.state = nD(this.state, {
-            stick: DD.leftStick,
-            moveDeadzone: bD,
-            dpad: fD,
-            dtMs: DD.dtMs,
-            cursorSpeedPercent: (0, yD.h)().cursorSpeed,
+          this.movePendingPageStart(qU);
+          const KU = this.getPoint();
+          this.state = IU(this.state, {
+            stick: UU.leftStick,
+            moveDeadzone: TU,
+            dpad: PU,
+            dtMs: UU.dtMs,
+            cursorSpeedPercent: (0, jU.h)().cursorSpeed,
             viewport: {
               width: window.innerWidth,
               height: window.innerHeight
             },
             context: this.getAssistContext()
           });
-          const ZD = this.state.x !== wD.x || this.state.y !== wD.y,
-            oD = [pD, iD].some((CD => DD.wasPressed(CD) || DD.wasReleased(CD)));
-          (ZD || oD || performance.now() - this.lastHitTestMs >= 100) && this.updateHit(ZD), this.updateConfirm(DD, pD), this.updateSecondary(DD, iD), this.updateScroll(DD, CD), this.Uo()
+          const hU = this.state.x !== KU.x || this.state.y !== KU.y,
+            QU = [pU, EU].some((RU => UU.wasPressed(RU) || UU.wasReleased(RU)));
+          (hU || QU || performance.now() - this.lastHitTestMs >= 100) && this.updateHit(hU), this.updateConfirm(UU, pU), this.updateSecondary(UU, EU), this.updateScroll(UU, RU), this.yh()
         }
-        followPage(DD) {
-          const CD = "home" === DD.layer.kind || "gamePage" === DD.layer.kind,
-            cD = this.page;
-          if (this.page = CD ? {
-              key: (0, EI.q)(DD.layer),
-              root: DD.root
-            } : null, !this.page || !cD || cD.root !== DD.root || cD.key === this.page.key) return !1;
-          if (this.cancelPress(), this.secondaryArmed = !1, this.setLayer(DD), "hybrid" === Bp()) return Qp = null, fp = null, wp.lock(), !0;
+        followPage(UU) {
+          const RU = "home" === UU.layer.kind || "gamePage" === UU.layer.kind,
+            gU = this.page;
+          if (this.page = RU ? {
+              key: (0, Mt.p)(UU.layer),
+              root: UU.root
+            } : null, !this.page || !gU || gU.root !== UU.root || gU.key === this.page.key) return !1;
+          if (this.cancelPress(), this.secondaryArmed = !1, this.setLayer(UU), "hybrid" === jp()) return Kp = null, Tp = null, cp.lock(), !0;
           const {
-            key: ID
+            key: tU
           } = this.page;
           return this.pendingPageStart = {
-            root: DD.root,
-            key: ID,
-            returning: Yp.notePageEnteredByCursor(ID),
+            root: UU.root,
+            key: tU,
+            returning: Ap.notePageEnteredByCursor(tU),
             enteredAtMs: performance.now()
           }, !1
         }
-        movePendingPageStart(DD) {
-          const CD = this.pendingPageStart;
-          if (!CD) return;
-          if (DD || CD.root !== this.layerRoot) return void(this.pendingPageStart = null);
-          const cD = CD.returning ? Yp.recallStop(CD.root, CD.key) : null;
-          if (!cD && CD.returning && performance.now() - CD.enteredAtMs < 1e3) return;
-          const ID = null !== cD && void 0 !== cD ? cD : Yp.pickInitial(CD.root, {
+        movePendingPageStart(UU) {
+          const RU = this.pendingPageStart;
+          if (!RU) return;
+          if (UU || RU.root !== this.layerRoot) return void(this.pendingPageStart = null);
+          const gU = RU.returning ? Ap.recallStop(RU.root, RU.key) : null;
+          if (!gU && RU.returning && performance.now() - RU.enteredAtMs < 1e3) return;
+          const tU = null !== gU && void 0 !== gU ? gU : Ap.pickInitial(RU.root, {
             includeDisabled: !0,
             waitForContent: !0,
-            enteredAtMs: CD.enteredAtMs
+            enteredAtMs: RU.enteredAtMs
           });
-          ID && (this.pendingPageStart = null, this.jumpTo(XC(ID)))
+          tU && (this.pendingPageStart = null, this.jumpTo(xR(tU)))
         }
-        setLayer(DD) {
-          this.layerRoot = DD.root, this.layerOrder = DD.order
+        setLayer(UU) {
+          this.layerRoot = UU.root, this.layerOrder = UU.order
         }
-        followLayer(DD) {
-          var CD;
-          if (DD.root === this.layerRoot) return;
-          null !== (CD = this.layerRoot) && void 0 !== CD && CD.isConnected && this.layerPoints.set(this.layerRoot, this.getPoint()), this.cancelPress(), this.draggedSlider = null, this.secondaryArmed = !1;
-          const cD = this.layerPoints.get(DD.root),
-            ID = cD && DD.order <= this.layerOrder ? cD : Yp.getLayerStartPoint(DD.root);
-          this.setLayer(DD), this.jumpTo(ID)
+        followLayer(UU) {
+          var RU;
+          if (UU.root === this.layerRoot) return;
+          null !== (RU = this.layerRoot) && void 0 !== RU && RU.isConnected && this.layerPoints.set(this.layerRoot, this.getPoint()), this.cancelPress(), this.draggedSlider = null, this.secondaryArmed = !1;
+          const gU = this.layerPoints.get(UU.root),
+            tU = gU && UU.order <= this.layerOrder ? gU : Ap.getLayerStartPoint(UU.root);
+          this.setLayer(UU), this.jumpTo(tU)
         }
-        getHandoff(DD) {
-          var CD;
+        getHandoff(UU) {
+          var RU;
           return {
             point: this.getPoint(),
-            element: null !== (CD = this.interactive) && void 0 !== CD ? CD : this.findDraggedSliderNearby(),
-            direction: DD
+            element: null !== (RU = this.interactive) && void 0 !== RU ? RU : this.findDraggedSliderNearby(),
+            direction: UU
           }
         }
         findDraggedSliderNearby() {
-          const DD = this.draggedSlider;
-          if (null === DD || void 0 === DD || !DD.isConnected) return null;
-          const CD = DD.getBoundingClientRect(),
+          const UU = this.draggedSlider;
+          if (null === UU || void 0 === UU || !UU.isConnected) return null;
+          const RU = UU.getBoundingClientRect(),
             {
-              y: cD
+              y: gU
             } = this.getPoint();
-          return cD >= CD.top - 40 && cD <= CD.bottom + 40 ? DD : null
+          return gU >= RU.top - 40 && gU <= RU.bottom + 40 ? UU : null
         }
-        handBackToFocus(DD) {
-          if (!Np()) return !1;
-          const CD = tD.x.find((CD => DD.wasPressed(CD)));
-          return !!CD && (cD = this.getHandoff(CD), Qp = pp(cD), fp = null, wp.lock(), BD.d.handOffHeldInput(), !0);
-          var cD
+        handBackToFocus(UU) {
+          if (!xp()) return !1;
+          const RU = CU.w.find((RU => UU.wasPressed(RU)));
+          return !!RU && (gU = this.getHandoff(RU), Kp = Ep(gU), Tp = null, cp.lock(), GU.e.handOffHeldInput(), !0);
+          var gU
         }
         getAssistContext() {
-          const DD = this.interactive;
-          if (null === DD || void 0 === DD || !DD.isConnected) return {
+          const UU = this.interactive;
+          if (null === UU || void 0 === UU || !UU.isConnected) return {
             overInteractive: !1,
             magnetTarget: null
           };
-          const CD = DD.getBoundingClientRect();
-          if (CD.width > .4 * window.innerWidth || CD.height > .4 * window.innerHeight) return {
+          const RU = UU.getBoundingClientRect();
+          if (RU.width > .4 * window.innerWidth || RU.height > .4 * window.innerHeight) return {
             overInteractive: !1,
             magnetTarget: null
           };
-          const cD = (0, yD.h)().cursorMagnetism && !(0, sD.e)(DD) && !DD.closest("[data-pad-slider]"),
-            ID = this.magnet && this.magnet !== DD && this.magnet.isConnected ? this.magnet.getBoundingClientRect() : CD;
+          const gU = (0, jU.h)().cursorMagnetism && !(0, AU.b)(UU) && !UU.closest("[data-pad-slider]"),
+            tU = this.magnet && this.magnet !== UU && this.magnet.isConnected ? this.magnet.getBoundingClientRect() : RU;
           return {
             overInteractive: !0,
-            magnetTarget: cD ? {
-              x: ID.left + ID.width / 2,
-              y: ID.top + ID.height / 2
+            magnetTarget: gU ? {
+              x: tU.left + tU.width / 2,
+              y: tU.top + tU.height / 2
             } : null
           }
         }
-        updateHit(DD) {
+        updateHit(UU) {
           this.lastHitTestMs = performance.now();
-          const CD = this.getPoint(),
-            cD = document.elementFromPoint(CD.x, CD.y),
-            ID = cD && !(0, vD.r)(cD) && (DD => {
-              var CD;
-              const cD = Cp();
-              return !(cD && !cD.root.contains(DD) && !DD.closest(".tooltip-container")) || !(null !== (CD = document.getElementById("root")) && void 0 !== CD && CD.contains(DD))
-            })(cD) ? cD : null;
-          if (ID !== this.hit) return UC(this.hit, ID, CD), this.hit = ID, void this.setInteractive(ID ? (DD => {
-            const CD = DD.closest(kf);
-            if (CD) {
-              var cD, ID;
-              const DD = null !== (cD = null === (ID = CD.parentElement) || void 0 === ID ? void 0 : ID.closest("[data-pad-focusable]")) && void 0 !== cD ? cD : CD;
-              return SC(DD) ? {
+          const RU = this.getPoint(),
+            gU = document.elementFromPoint(RU.x, RU.y),
+            tU = gU && !(0, eU.q)(gU) && (UU => {
+              var RU;
+              const gU = gp();
+              return !(gU && !gU.root.contains(UU) && !UU.closest(".tooltip-container")) || !(null !== (RU = document.getElementById("root")) && void 0 !== RU && RU.contains(UU))
+            })(gU) ? gU : null;
+          if (tU !== this.hit) return bR(this.hit, tU, RU), this.hit = tU, void this.setInteractive(tU ? (UU => {
+            const RU = UU.closest(HP);
+            if (RU) {
+              var gU, tU;
+              const UU = null !== (gU = null === (tU = RU.parentElement) || void 0 === tU ? void 0 : tU.closest("[data-pad-focusable]")) && void 0 !== gU ? gU : RU;
+              return cR(UU) ? {
                 element: null,
                 magnet: null
               } : {
-                element: DD,
-                magnet: CD
+                element: UU,
+                magnet: RU
               }
             }
-            const pD = Yf(DD);
+            const pU = sP(UU);
             return {
-              element: pD,
-              magnet: pD
+              element: pU,
+              magnet: pU
             }
-          })(ID) : {
+          })(tU) : {
             element: null,
             magnet: null
           });
-          DD && ID && UC(ID, ID, CD)
+          UU && tU && bR(tU, tU, RU)
         }
-        setInteractive(DD) {
+        setInteractive(UU) {
           let {
-            element: CD,
-            magnet: cD
-          } = DD;
-          this.interactive = CD, this.magnet = cD
+            element: RU,
+            magnet: gU
+          } = UU;
+          this.interactive = RU, this.magnet = gU
         }
         clearHover() {
-          this.hit && UC(this.hit, null, this.getPoint()), this.hit = null, this.setInteractive({
+          this.hit && bR(this.hit, null, this.getPoint()), this.hit = null, this.setInteractive({
             element: null,
             magnet: null
           })
         }
         beginPress() {
-          const DD = this.hit;
-          if (!DD || zC(DD)) return {
+          const UU = this.hit;
+          if (!UU || rR(UU)) return {
             kind: "ignored"
           };
-          const CD = (0, mp.c)(DD),
-            cD = DD.closest("[data-pad-slider]");
-          return CD && cD ? {
+          const RU = (0, Jp.b)(UU),
+            gU = UU.closest("[data-pad-slider]");
+          return RU && gU ? {
             kind: "slider",
-            slider: cD,
-            adjuster: CD
-          } : (OC(DD, this.getPoint()), {
+            slider: gU,
+            adjuster: RU
+          } : (JR(UU, this.getPoint()), {
             kind: "pointer",
-            target: DD
+            target: UU
           })
         }
-        applySliderFraction(DD) {
-          var CD;
-          const cD = DD.slider.getBoundingClientRect(),
-            ID = cD.height > cD.width,
-            pD = null === (CD = DD.slider.querySelector("[data-pad-slider-handle]")) || void 0 === CD ? void 0 : CD.getBoundingClientRect(),
-            iD = pD ? ID ? pD.height : pD.width : 0,
-            fD = (ID ? cD.height : cD.width) - iD;
-          if (fD <= 0) return;
-          const bD = ID ? cD.bottom - iD / 2 - this.state.y : this.state.x - cD.left - iD / 2;
-          DD.adjuster.setFraction(Math.max(0, Math.min(1, bD / fD)))
+        applySliderFraction(UU) {
+          var RU;
+          const gU = UU.slider.getBoundingClientRect(),
+            tU = gU.height > gU.width,
+            pU = null === (RU = UU.slider.querySelector("[data-pad-slider-handle]")) || void 0 === RU ? void 0 : RU.getBoundingClientRect(),
+            EU = pU ? tU ? pU.height : pU.width : 0,
+            PU = (tU ? gU.height : gU.width) - EU;
+          if (PU <= 0) return;
+          const TU = tU ? gU.bottom - EU / 2 - this.state.y : this.state.x - gU.left - EU / 2;
+          UU.adjuster.setFraction(Math.max(0, Math.min(1, TU / PU)))
         }
-        updateConfirm(DD, CD) {
-          DD.wasPressed(CD) && (this.press = DD.wokeDevice ? {
+        updateConfirm(UU, RU) {
+          UU.wasPressed(RU) && (this.press = UU.wokeDevice ? {
             kind: "ignored"
           } : this.beginPress(), this.draggedSlider = "slider" === this.press.kind ? this.press.slider : null, this.beginRepeat());
-          const cD = this.press;
-          if (!cD) return;
-          if (DD.isHeld(CD)) return "slider" === cD.kind && this.applySliderFraction(cD), void this.updateRepeat();
+          const gU = this.press;
+          if (!gU) return;
+          if (UU.isHeld(RU)) return "slider" === gU.kind && this.applySliderFraction(gU), void this.updateRepeat();
           this.press = null;
-          const ID = this.repeated;
-          if (this.endRepeat(), !DD.wasReleased(CD)) return void this.endPressWithoutClick(cD);
-          const pD = this.getPoint(),
-            iD = this.hit;
-          if ("slider" === cD.kind && cD.adjuster.endDrag(), "pointer" === cD.kind) {
-            const DD = null !== iD && void 0 !== iD ? iD : cD.target.isConnected ? cD.target : null;
-            DD && PC(DD, pD);
-            const CD = iD && cD.target.isConnected && !ID ? ((DD, CD) => {
-              for (let cD = DD; cD; cD = cD.parentElement)
-                if (cD.contains(CD)) return cD;
+          const tU = this.repeated;
+          if (this.endRepeat(), !UU.wasReleased(RU)) return void this.endPressWithoutClick(gU);
+          const pU = this.getPoint(),
+            EU = this.hit;
+          if ("slider" === gU.kind && gU.adjuster.endDrag(), "pointer" === gU.kind) {
+            const UU = null !== EU && void 0 !== EU ? EU : gU.target.isConnected ? gU.target : null;
+            UU && wR(UU, pU);
+            const RU = EU && gU.target.isConnected && !tU ? ((UU, RU) => {
+              for (let gU = UU; gU; gU = gU.parentElement)
+                if (gU.contains(RU)) return gU;
               return null
-            })(cD.target, iD) : null;
-            CD && (Yp.noteCursorActivation(CD), (0, vD.h)(CD, new MouseEvent("click", mC(pD, 0, 0))), VC(CD), gC(CD) && xC(CD))
+            })(gU.target, EU) : null;
+            RU && (Ap.noteCursorActivation(RU), (0, eU.g)(RU, new MouseEvent("click", mR(pU, 0, 0))), VR(RU), fR(RU) && oR(RU))
           }
         }
         beginRepeat() {
-          var DD, CD, cD;
-          const ID = null !== (DD = null === (CD = this.hit) || void 0 === CD ? void 0 : CD.closest("[data-pad-repeat]")) && void 0 !== DD ? DD : null;
-          this.repeatStop = ID, this.repeatKey = null !== (cD = null === ID || void 0 === ID ? void 0 : ID.getAttribute("data-pad-repeat")) && void 0 !== cD ? cD : null, this.repeated = !1, this.confirmRepeat.reset(), this.confirmRepeat.update(!0, performance.now())
+          var UU, RU, gU;
+          const tU = null !== (UU = null === (RU = this.hit) || void 0 === RU ? void 0 : RU.closest("[data-pad-repeat]")) && void 0 !== UU ? UU : null;
+          this.repeatStop = tU, this.repeatKey = null !== (gU = null === tU || void 0 === tU ? void 0 : tU.getAttribute("data-pad-repeat")) && void 0 !== gU ? gU : null, this.repeated = !1, this.confirmRepeat.reset(), this.confirmRepeat.update(!0, performance.now())
         }
         updateRepeat() {
-          const DD = this.repeatStop;
-          if (!DD) return;
-          const CD = this.hit;
-          DD.isConnected && !SC(DD) && DD.getAttribute("data-pad-repeat") === this.repeatKey && CD && DD.contains(CD) ? DD.hasAttribute("data-pad-repeat-wait") || this.confirmRepeat.update(!0, performance.now()) && (this.repeated = !0, Yp.noteCursorActivation(DD), (0, vD.h)(DD, new MouseEvent("click", mC(this.getPoint(), 0, 0)))) : this.repeatStop = null
+          const UU = this.repeatStop;
+          if (!UU) return;
+          const RU = this.hit;
+          UU.isConnected && !cR(UU) && UU.getAttribute("data-pad-repeat") === this.repeatKey && RU && UU.contains(RU) ? UU.hasAttribute("data-pad-repeat-wait") || this.confirmRepeat.update(!0, performance.now()) && (this.repeated = !0, Ap.noteCursorActivation(UU), (0, eU.g)(UU, new MouseEvent("click", mR(this.getPoint(), 0, 0)))) : this.repeatStop = null
         }
         endRepeat() {
           this.repeatStop = null, this.repeated = !1
         }
-        endPressWithoutClick(DD) {
-          "slider" === DD.kind && DD.adjuster.endDrag(), "pointer" === DD.kind && DD.target.isConnected && PC(DD.target, this.getPoint())
+        endPressWithoutClick(UU) {
+          "slider" === UU.kind && UU.adjuster.endDrag(), "pointer" === UU.kind && UU.target.isConnected && wR(UU.target, this.getPoint())
         }
         cancelPress() {
           this.endRepeat(), this.press && (this.endPressWithoutClick(this.press), this.press = null)
         }
-        updateSecondary(DD, CD) {
-          DD.wasPressed(CD) && (this.secondaryArmed = null !== this.hit), this.secondaryArmed && !DD.isHeld(CD) && (this.secondaryArmed = !1, DD.wasReleased(CD) && this.hit && HC(this.hit, this.getPoint(), 2))
+        updateSecondary(UU, RU) {
+          UU.wasPressed(RU) && (this.secondaryArmed = null !== this.hit), this.secondaryArmed && !UU.isHeld(RU) && (this.secondaryArmed = !1, UU.wasReleased(RU) && this.hit && nR(this.hit, this.getPoint(), 2))
         }
-        updateScroll(DD, CD) {
-          const cD = PD(DD.rightStick, DD.dtMs);
-          if (0 === cD.x && 0 === cD.y) return void(this.scrollRemainder = {
+        updateScroll(UU, RU) {
+          const gU = wU(UU.rightStick, UU.dtMs);
+          if (0 === gU.x && 0 === gU.y) return void(this.scrollRemainder = {
             x: 0,
             y: 0
           });
           this.scrollRemainder = {
-            x: this.scrollRemainder.x + cD.x,
-            y: this.scrollRemainder.y + cD.y
+            x: this.scrollRemainder.x + gU.x,
+            y: this.scrollRemainder.y + gU.y
           };
-          const ID = Math.trunc(this.scrollRemainder.x),
-            pD = Math.trunc(this.scrollRemainder.y);
+          const tU = Math.trunc(this.scrollRemainder.x),
+            pU = Math.trunc(this.scrollRemainder.y);
           this.scrollRemainder = {
-            x: this.scrollRemainder.x - ID,
-            y: this.scrollRemainder.y - pD
+            x: this.scrollRemainder.x - tU,
+            y: this.scrollRemainder.y - pU
           };
-          const iD = this.hit;
-          if (!iD) return;
-          let fD = !1;
-          if (0 !== pD) {
-            const DD = Wf(iD, "y", pD > 0 ? 1 : -1, CD);
-            DD && (DD.scrollBy({
-              top: pD,
+          const EU = this.hit;
+          if (!EU) return;
+          let PU = !1;
+          if (0 !== pU) {
+            const UU = yP(EU, "y", pU > 0 ? 1 : -1, RU);
+            UU && (UU.scrollBy({
+              top: pU,
               behavior: "instant"
-            }), fD = !0)
+            }), PU = !0)
           }
-          if (0 !== ID) {
-            const DD = Wf(iD, "x", ID > 0 ? 1 : -1, CD);
-            DD && (DD.scrollBy({
-              left: ID,
+          if (0 !== tU) {
+            const UU = yP(EU, "x", tU > 0 ? 1 : -1, RU);
+            UU && (UU.scrollBy({
+              left: tU,
               behavior: "instant"
-            }), fD = !0)
+            }), PU = !0)
           }
-          fD && (this.lastHitTestMs = -1 / 0)
+          PU && (this.lastHitTestMs = -1 / 0)
         }
-        Uo() {
-          RC.set({
+        yh() {
+          sR.set({
             x: this.state.x,
             y: this.state.y,
             visible: this.isVisible(),
@@ -5117,502 +5117,502 @@ export const modules = {
           })
         }
       },
-      Ef = () => {
-        const DD = (0, lD.useMemo)((() => new dD), []),
-          CD = (0, MD.z)();
-        return (0, lD.useEffect)((() => {
-          if (!CD) return;
-          let cD = 0,
-            ID = {
+      FP = () => {
+        const UU = (0, vU.useMemo)((() => new kU), []),
+          RU = (0, uU.v)();
+        return (0, vU.useEffect)((() => {
+          if (!RU) return;
+          let gU = 0,
+            tU = {
               of: null,
               atMs: 0,
               list: []
             };
-          const pD = document.getElementsByClassName(gp),
-            iD = DD => {
-              for (const CD of [...pD]) CD !== DD && CD.classList.remove(gp)
+          const pU = document.getElementsByClassName(mp),
+            EU = UU => {
+              for (const RU of [...pU]) RU !== UU && RU.classList.remove(mp)
             },
-            fD = () => {
-              var CD;
-              cD = requestAnimationFrame(fD);
-              const pD = (() => {
-                const DD = Yp.getFocused();
-                if (Yp.isActive() && null !== DD && void 0 !== DD && DD.isConnected) return DD;
-                const CD = sf.getHighlighted();
-                return null !== CD && void 0 !== CD && CD.isConnected ? CD : null
+            PU = () => {
+              var RU;
+              gU = requestAnimationFrame(PU);
+              const pU = (() => {
+                const UU = Ap.getFocused();
+                if (Ap.isActive() && null !== UU && void 0 !== UU && UU.isConnected) return UU;
+                const RU = kP.getHighlighted();
+                return null !== RU && void 0 !== RU && RU.isConnected ? RU : null
               })();
-              iD(pD), pD && !pD.classList.contains(gp) && pD.classList.add(gp);
-              const bD = null !== (CD = null === pD || void 0 === pD ? void 0 : pD.closest("[data-pad-reticle-box]")) && void 0 !== CD ? CD : pD;
-              DD.show(bD ? ((DD, CD) => {
-                let cD = DD.left,
-                  ID = DD.top,
-                  pD = DD.right,
-                  iD = DD.bottom;
-                for (const fD of CD) {
-                  if (!fD) continue;
-                  const DD = zD(fD);
-                  cD = Math.max(cD, DD.left), ID = Math.max(ID, DD.top), pD = Math.min(pD, DD.right), iD = Math.min(iD, DD.bottom)
+              EU(pU), pU && !pU.classList.contains(mp) && pU.classList.add(mp);
+              const TU = null !== (RU = null === pU || void 0 === pU ? void 0 : pU.closest("[data-pad-reticle-box]")) && void 0 !== RU ? RU : pU;
+              UU.show(TU ? ((UU, RU) => {
+                let gU = UU.left,
+                  tU = UU.top,
+                  pU = UU.right,
+                  EU = UU.bottom;
+                for (const PU of RU) {
+                  if (!PU) continue;
+                  const UU = rU(PU);
+                  gU = Math.max(gU, UU.left), tU = Math.max(tU, UU.top), pU = Math.min(pU, UU.right), EU = Math.min(EU, UU.bottom)
                 }
-                return pD <= cD || iD <= ID ? null : {
-                  left: cD,
-                  top: ID,
-                  width: pD - cD,
-                  height: iD - ID
+                return pU <= gU || EU <= tU ? null : {
+                  left: gU,
+                  top: tU,
+                  width: pU - gU,
+                  height: EU - tU
                 }
-              })(bD.getBoundingClientRect(), (DD => {
-                const CD = performance.now();
-                return (ID.of !== DD || CD - ID.atMs > 500) && (ID = {
-                  of: DD,
-                  atMs: CD,
-                  list: [xD(DD, "y"), xD(DD, "x")]
-                }), ID.list
-              })(bD)) : null)
+              })(TU.getBoundingClientRect(), (UU => {
+                const RU = performance.now();
+                return (tU.of !== UU || RU - tU.atMs > 500) && (tU = {
+                  of: UU,
+                  atMs: RU,
+                  list: [oU(UU, "y"), oU(UU, "x")]
+                }), tU.list
+              })(TU)) : null)
             };
-          return cD = requestAnimationFrame(fD), () => {
-            cancelAnimationFrame(cD), iD(null), DD.hide()
+          return gU = requestAnimationFrame(PU), () => {
+            cancelAnimationFrame(gU), EU(null), UU.hide()
           }
-        }), [CD, DD]), (0, GD.jsx)(YD, {
-          placer: DD,
+        }), [RU, UU]), (0, SU.jsx)(FU, {
+          placer: UU,
           className: "PadFocusRing"
         })
       },
-      ef = (DD, CD) => {
-        DD.style.transform = `translate3d(${CD.x}px, ${CD.y}px, 0)`, DD.classList.toggle("Visible", CD.visible), DD.classList.toggle("Pressed", CD.pressed)
+      iP = (UU, RU) => {
+        UU.style.transform = `translate3d(${RU.x}px, ${RU.y}px, 0)`, UU.classList.toggle("Visible", RU.visible), UU.classList.toggle("Pressed", RU.pressed)
       },
-      uf = () => {
-        const DD = (0, lD.useRef)(null);
-        return (0, lD.useEffect)((() => {
-          const CD = RC.subscribe((CD => {
-            DD.current && ef(DD.current, CD)
+      AP = () => {
+        const UU = (0, vU.useRef)(null);
+        return (0, vU.useEffect)((() => {
+          const RU = sR.subscribe((RU => {
+            UU.current && iP(UU.current, RU)
           }));
-          return DD.current && ef(DD.current, RC.get()), CD
-        }), []), (0, GD.jsx)("div", {
-          ref: DD,
+          return UU.current && iP(UU.current, sR.get()), RU
+        }), []), (0, SU.jsx)("div", {
+          ref: UU,
           className: "PadCursorView",
           "aria-hidden": "true",
-          children: (0, GD.jsx)("div", {
+          children: (0, SU.jsx)("div", {
             className: "PadCursorGlyph",
             children: "+"
           })
         })
       },
-      hf = "#ncmp__modal.ncmp__active",
-      rf = [{
+      zP = "#ncmp__modal.ncmp__active",
+      MP = [{
         id: "nitro-consent-banner",
-        find: () => document.querySelector(hf) ? null : document.querySelector("#ncmp__tool > .ncmp__banner.ncmp__active"),
+        find: () => document.querySelector(zP) ? null : document.querySelector("#ncmp__tool > .ncmp__banner.ncmp__active"),
         startSelectors: ["[data-ncmp-cmd='reject']", "[data-ncmp-cmd='showModal']"]
       }, {
         id: "nitro-consent-modal",
-        find: () => document.querySelector(hf),
+        find: () => document.querySelector(zP),
         startSelectors: ["[data-ncmp-cmd='reject']"]
       }, {
         id: "google-consent",
         find: () => document.querySelector(".fc-consent-root"),
         startSelectors: [".fc-cta-do-not-consent", ".fc-cta-manage-options"]
       }],
-      Af = "PadOverThirdParty",
-      Ff = new Set(rf.map((DD => DD.id))),
-      Db = () => {
-        const DD = rf.map((DD => {
+      DP = "PadOverThirdParty",
+      LP = new Set(MP.map((UU => UU.id))),
+      NP = () => {
+        const UU = MP.map((UU => {
             let {
-              id: CD,
-              find: cD,
-              startSelectors: ID
-            } = DD;
-            return (0, EI.o)({
-              id: CD,
+              id: RU,
+              find: gU,
+              startSelectors: tU
+            } = UU;
+            return (0, Mt.l)({
+              id: RU,
               kind: "popup",
               getRoot: () => {
-                const DD = cD(),
-                  CD = DD ? ((DD, CD) => {
-                    var cD;
-                    for (const ID of CD) {
-                      const CD = DD.querySelector(ID);
-                      if (CD) return CD
+                const UU = gU(),
+                  RU = UU ? ((UU, RU) => {
+                    var gU;
+                    for (const tU of RU) {
+                      const RU = UU.querySelector(tU);
+                      if (RU) return RU
                     }
-                    return null !== (cD = [...DD.querySelectorAll("button")].find((DD => !DD.matches(".fc-cta-consent, [data-ncmp-cmd='save']")))) && void 0 !== cD ? cD : null
-                  })(DD, ID) : null;
-                if (DD && CD && !CD.hasAttribute("data-pad-default-focus")) {
-                  for (const CD of DD.querySelectorAll("[data-pad-default-focus]")) CD.removeAttribute("data-pad-default-focus");
-                  for (const CD of DD.querySelectorAll("[data-pad-hint-bar-avoid]")) CD.removeAttribute("data-pad-hint-bar-avoid");
-                  CD.setAttribute("data-pad-default-focus", ""), ((DD, CD) => {
-                    let cD = DD;
-                    for (let ID = DD.parentElement; ID && CD.contains(ID) && !(ID.getBoundingClientRect().height >= window.innerHeight / 2); ID = ID.parentElement) cD = ID;
-                    return cD
-                  })(CD, DD).setAttribute("data-pad-hint-bar-avoid", "")
+                    return null !== (gU = [...UU.querySelectorAll("button")].find((UU => !UU.matches(".fc-cta-consent, [data-ncmp-cmd='save']")))) && void 0 !== gU ? gU : null
+                  })(UU, tU) : null;
+                if (UU && RU && !RU.hasAttribute("data-pad-default-focus")) {
+                  for (const RU of UU.querySelectorAll("[data-pad-default-focus]")) RU.removeAttribute("data-pad-default-focus");
+                  for (const RU of UU.querySelectorAll("[data-pad-hint-bar-avoid]")) RU.removeAttribute("data-pad-hint-bar-avoid");
+                  RU.setAttribute("data-pad-default-focus", ""), ((UU, RU) => {
+                    let gU = UU;
+                    for (let tU = UU.parentElement; tU && RU.contains(tU) && !(tU.getBoundingClientRect().height >= window.innerHeight / 2); tU = tU.parentElement) gU = tU;
+                    return gU
+                  })(RU, UU).setAttribute("data-pad-hint-bar-avoid", "")
                 }
-                return DD
+                return UU
               },
               close: null,
               memoryKey: null
             })
           })),
-          CD = document.documentElement,
-          cD = fD.e.onFrame((() => {
-            const DD = (0, MD.i)() ? Cp() : null,
-              cD = !!DD && (ID = DD.layer, Ff.has(ID.id));
-            var ID;
-            CD.classList.contains(Af) !== cD && CD.classList.toggle(Af, cD)
+          RU = document.documentElement,
+          gU = PU.g.onFrame((() => {
+            const UU = (0, uU.i)() ? gp() : null,
+              gU = !!UU && (tU = UU.layer, LP.has(tU.id));
+            var tU;
+            RU.classList.contains(DP) !== gU && RU.classList.toggle(DP, gU)
           }));
         return () => {
-          for (const CD of DD) CD();
-          cD(), CD.classList.remove(Af)
+          for (const RU of UU) RU();
+          gU(), RU.classList.remove(DP)
         }
       },
-      Cb = "PadLargePointer",
-      cb = () => {
-        (0, lD.useEffect)((() => {
-          const DD = (0, vD.p)(document.body),
-            CD = Yp.install(),
-            cD = sf.install(),
-            ID = Db();
+      lP = "PadLargePointer",
+      OP = () => {
+        (0, vU.useEffect)((() => {
+          const UU = (0, eU.n)(document.body),
+            RU = Ap.install(),
+            gU = kP.install(),
+            tU = NP();
           return () => {
-            DD(), CD(), cD(), ID()
+            UU(), RU(), gU(), tU()
           }
         }), []);
         const {
-          largePointer: DD
-        } = (0, yD.l)(), CD = (0, Jf.p)() && DD;
-        return (0, lD.useEffect)((() => {
-          if (CD) return document.documentElement.classList.add(Cb), () => {
-            document.documentElement.classList.remove(Cb)
+          largePointer: UU
+        } = (0, jU.n)(), RU = (0, bP.o)() && UU;
+        return (0, vU.useEffect)((() => {
+          if (RU) return document.documentElement.classList.add(lP), () => {
+            document.documentElement.classList.remove(lP)
           }
-        }), [CD]), (0, bD.createPortal)((0, GD.jsxs)(GD.Fragment, {
-          children: [(0, GD.jsx)(Rf, {}), (0, GD.jsx)(Ef, {}), (0, GD.jsx)(uf, {})]
+        }), [RU]), (0, TU.createPortal)((0, SU.jsxs)(SU.Fragment, {
+          children: [(0, SU.jsx)(dP, {}), (0, SU.jsx)(FP, {}), (0, SU.jsx)(AP, {})]
         }), document.body)
       };
-    var Ib = cD(8482),
-      pb = cD(8506),
-      ib = cD(8492);
-    cD(8514);
-    const fb = (DD, CD) => {
-        const [cD, ID] = (0, lD.useState)(!1), [pD, iD] = (0, lD.useState)(null), fD = (0, lD.useRef)(null), bD = (0, lD.useCallback)((DD => {
-          fD.current = DD, iD(DD)
-        }), []), QD = (0, lD.useCallback)((() => {
-          ID(!1), bD(null)
-        }), [bD]), SD = (0, lD.useCallback)((() => {
-          ID(!0)
-        }), []), BD = (0, lD.useCallback)(((DD, CD) => {
-          bD((0, ib.F)(DD, CD, fD.current))
-        }), [bD]);
-        (0, lD.useLayoutEffect)((() => (CD(cD), (0, Kf.t)(DD, cD), wD.i.Uo(Kf.o), () => {
-          CD(!1), (0, Kf.t)(DD, !1), wD.i.Uo(Kf.o)
-        })), [cD, DD, CD]), (0, wi.f)("appManagerUpdated|activeInputDevice", (DD => {
-          "gamepad" !== DD && QD()
-        })), (0, wi.f)("appManagerUpdated|gameState", (DD => {
-          "inGame" !== DD && QD()
+    var UT = gU(8425),
+      RT = gU(8442),
+      gT = gU(8431);
+    gU(8444);
+    const tT = (UU, RU) => {
+        const [gU, tU] = (0, vU.useState)(!1), [pU, EU] = (0, vU.useState)(null), PU = (0, vU.useRef)(null), TU = (0, vU.useCallback)((UU => {
+          PU.current = UU, EU(UU)
+        }), []), qU = (0, vU.useCallback)((() => {
+          tU(!1), TU(null)
+        }), [TU]), cU = (0, vU.useCallback)((() => {
+          tU(!0)
+        }), []), GU = (0, vU.useCallback)(((UU, RU) => {
+          TU((0, gT.A)(UU, RU, PU.current))
+        }), [TU]);
+        (0, vU.useLayoutEffect)((() => (RU(gU), (0, oP.z)(UU, gU), KU.p.yh(oP.q), () => {
+          RU(!1), (0, oP.z)(UU, !1), KU.p.yh(oP.q)
+        })), [gU, UU, RU]), (0, KE.e)("appManagerUpdated|activeInputDevice", (UU => {
+          "gamepad" !== UU && qU()
+        })), (0, KE.e)("appManagerUpdated|gameState", (UU => {
+          "inGame" !== UU && qU()
         }));
-        const yD = () => {
-          (0, DI.s)() && QD()
+        const jU = () => {
+          (0, Ut.q)() && qU()
         };
-        return (0, wi.f)("appManagerUpdated|openEverythingMenuName", yD), (0, wi.f)("appManagerUpdated|openInGameMenuName", yD), {
-          open: cD,
-          picked: pD,
-          pickedRef: fD,
-          show: SD,
-          aim: BD,
-          close: QD
+        return (0, KE.e)("appManagerUpdated|openEverythingMenuName", jU), (0, KE.e)("appManagerUpdated|openInGameMenuName", jU), {
+          open: gU,
+          picked: pU,
+          pickedRef: PU,
+          show: cU,
+          aim: GU,
+          close: qU
         }
       },
-      bb = DD => {
+      pT = UU => {
         let {
-          className: CD,
-          slotCount: cD,
-          picked: ID,
-          slotLabel: pD,
-          renderSlot: iD,
-          centre: fD
-        } = DD;
-        const bD = Array.from({
-          length: cD
-        }, ((DD, CD) => CD));
-        return (0, GD.jsx)("div", {
-          className: TD()("EmoteWheelOverlay PadRadialWheel", CD),
-          children: (0, GD.jsxs)("div", {
+          className: RU,
+          slotCount: gU,
+          picked: tU,
+          slotLabel: pU,
+          renderSlot: EU,
+          centre: PU
+        } = UU;
+        const TU = Array.from({
+          length: gU
+        }, ((UU, RU) => RU));
+        return (0, SU.jsx)("div", {
+          className: HU()("EmoteWheelOverlay PadRadialWheel", RU),
+          children: (0, SU.jsxs)("div", {
             className: "EmoteWheel",
             style: {
-              width: 2 * ib.p + "rem",
-              height: 2 * ib.p + "rem"
+              width: 2 * gT.l + "rem",
+              height: 2 * gT.l + "rem"
             },
-            children: [(0, GD.jsxs)("svg", {
+            children: [(0, SU.jsxs)("svg", {
               className: "EmoteWheelSvg",
-              viewBox: `0 0 ${ib.j} ${ib.j}`,
-              children: [bD.map((DD => (0, GD.jsx)("path", {
-                d: (0, ib.t)(DD, cD, ib.c, ib.e, ib.f),
-                className: TD()("EmoteWheelWedge", {
-                  EmoteWheelWedgeHighlighted: DD === ID
+              viewBox: `0 0 ${gT.i} ${gT.i}`,
+              children: [TU.map((UU => (0, SU.jsx)("path", {
+                d: (0, gT.p)(UU, gU, gT.d, gT.e, gT.h),
+                className: HU()("EmoteWheelWedge", {
+                  EmoteWheelWedgeHighlighted: UU === tU
                 }),
-                "aria-label": pD(DD)
-              }, DD))), (0, GD.jsx)("circle", {
+                "aria-label": pU(UU)
+              }, UU))), (0, SU.jsx)("circle", {
                 className: "EmoteWheelOuterRing",
-                cx: ib.c,
-                cy: ib.c,
-                r: ib.f
-              }), (0, GD.jsx)("circle", {
+                cx: gT.d,
+                cy: gT.d,
+                r: gT.h
+              }), (0, SU.jsx)("circle", {
                 className: "EmoteWheelInnerRing",
-                cx: ib.c,
-                cy: ib.c,
-                r: ib.e
-              }), null !== ID && (0, GD.jsx)("path", {
+                cx: gT.d,
+                cy: gT.d,
+                r: gT.e
+              }), null !== tU && (0, SU.jsx)("path", {
                 className: "EmoteWheelWedgeOutline",
-                d: (0, ib.t)(ID, cD, ib.c, ib.e, ib.f)
+                d: (0, gT.p)(tU, gU, gT.d, gT.e, gT.h)
               })]
-            }), bD.map((DD => {
-              const CD = (0, ib.y)(DD, cD);
-              return (0, GD.jsx)("div", {
-                className: TD()("PadRadialWheelSlot SmallTextBold", {
-                  PadRadialWheelSlotPicked: DD === ID
+            }), TU.map((UU => {
+              const RU = (0, gT.v)(UU, gU);
+              return (0, SU.jsx)("div", {
+                className: HU()("PadRadialWheelSlot SmallTextBold", {
+                  PadRadialWheelSlotPicked: UU === tU
                 }),
                 style: {
-                  left: `calc(50% + ${ib.b*Math.cos(CD)}rem)`,
-                  top: `calc(50% + ${ib.b*Math.sin(CD)}rem)`
+                  left: `calc(50% + ${gT.c*Math.cos(RU)}rem)`,
+                  top: `calc(50% + ${gT.c*Math.sin(RU)}rem)`
                 },
                 "aria-hidden": !0,
-                children: iD(DD)
-              }, DD)
-            })), (0, GD.jsx)("div", {
+                children: EU(UU)
+              }, UU)
+            })), (0, SU.jsx)("div", {
               className: "EmoteWheelHint SmallTextBold",
-              children: fD
+              children: PU
             })]
           })
         })
       },
-      Qb = ff.length,
-      wb = () => {
+      ET = tP.length,
+      PT = () => {
         const {
-          t: DD
-        } = (0, pD.F)(), CD = fb("chat", mI.q), cD = (0, lD.useMemo)((() => ff.map((CD => DD(CD)))), [DD]);
-        return (0, wi.f)(mI.o, (() => {
-          CD.open || (0, Ib.g)() || (0, pb.q)() || "inGame" !== QD.d.get("gameState") || (0, DI.s)() || !(0, gI.c)() || CD.show()
-        })), (0, wi.f)(mI.g, (DD => {
-          CD.open && CD.aim(DD, Qb)
-        })), (0, wi.f)(mI.l, (() => {
-          var DD;
-          if (!CD.open) return;
-          const ID = CD.pickedRef.current;
-          null !== ID ? bf.claim(performance.now()) && (CD.close(), null === (DD = (0, gI.c)()) || void 0 === DD || DD.sendLine(cD[ID])) : CD.close()
-        })), (0, wi.f)(mI.j, CD.close), CD.open ? (0, GD.jsx)(bb, {
+          t: UU
+        } = (0, pU.B)(), RU = tT("chat", mt.r), gU = (0, vU.useMemo)((() => tP.map((RU => UU(RU)))), [UU]);
+        return (0, KE.e)(mt.o, (() => {
+          RU.open || (0, UT.h)() || (0, RT.v)() || "inGame" !== qU.b.get("gameState") || (0, Ut.q)() || !(0, ft.c)() || RU.show()
+        })), (0, KE.e)(mt.f, (UU => {
+          RU.open && RU.aim(UU, ET)
+        })), (0, KE.e)(mt.k, (() => {
+          var UU;
+          if (!RU.open) return;
+          const tU = RU.pickedRef.current;
+          null !== tU ? pP.claim(performance.now()) && (RU.close(), null === (UU = (0, ft.c)()) || void 0 === UU || UU.sendLine(gU[tU])) : RU.close()
+        })), (0, KE.e)(mt.i, RU.close), RU.open ? (0, SU.jsx)(pT, {
           className: "QuickChatWheel",
-          slotCount: Qb,
-          picked: CD.picked,
-          slotLabel: DD => cD[DD],
-          renderSlot: DD => cD[DD],
-          centre: null !== CD.picked ? cD[CD.picked] : DD("controller:quickChatPick")
+          slotCount: ET,
+          picked: RU.picked,
+          slotLabel: UU => gU[UU],
+          renderSlot: UU => gU[UU],
+          centre: null !== RU.picked ? gU[RU.picked] : UU("controller:quickChatPick")
         }) : null
       },
-      Sb = () => {
+      TT = () => {
         const {
-          t: DD
-        } = (0, pD.F)(), CD = fb("actionButton", pb.s), [cD, ID] = (0, lD.useState)([]);
-        if ((0, wi.f)(pb.k, (DD => {
-            CD.open || (0, Ib.g)() || (0, mI.e)() || "inGame" !== QD.d.get("gameState") || (0, DI.s)() || (ID(DD), CD.show())
-          })), (0, wi.f)(pb.e, (DD => {
-            CD.open && CD.aim(DD, cD.length)
-          })), (0, wi.f)(pb.i, (() => {
-            if (!CD.open) return;
-            const DD = CD.pickedRef.current;
-            CD.close(), null !== DD && wD.i.Uo(pb.o, cD[DD])
-          })), (0, wi.f)(pb.g, CD.close), !CD.open) return null;
-        const iD = null !== CD.picked ? cD[CD.picked] : null;
-        return (0, GD.jsx)(bb, {
+          t: UU
+        } = (0, pU.B)(), RU = tT("actionButton", RT.z), [gU, tU] = (0, vU.useState)([]);
+        if ((0, KE.e)(RT.n, (UU => {
+            RU.open || (0, UT.h)() || (0, mt.d)() || "inGame" !== qU.b.get("gameState") || (0, Ut.q)() || (tU(UU), RU.show())
+          })), (0, KE.e)(RT.d, (UU => {
+            RU.open && RU.aim(UU, gU.length)
+          })), (0, KE.e)(RT.j, (() => {
+            if (!RU.open) return;
+            const UU = RU.pickedRef.current;
+            RU.close(), null !== UU && KU.p.yh(RT.r, gU[UU])
+          })), (0, KE.e)(RT.f, RU.close), !RU.open) return null;
+        const EU = null !== RU.picked ? gU[RU.picked] : null;
+        return (0, SU.jsx)(pT, {
           className: "ActionWheel",
-          slotCount: cD.length,
-          picked: CD.picked,
-          slotLabel: CD => {
-            const ID = cD[CD];
-            return "reload" === ID.kind ? DD("controller:gameplayReload") : "customButton" === ID.kind ? ID.description || ID.icon : "touchButton" === ID.kind && "string" === typeof ID.label ? ID.label : ""
+          slotCount: gU.length,
+          picked: RU.picked,
+          slotLabel: RU => {
+            const tU = gU[RU];
+            return "reload" === tU.kind ? UU("controller:gameplayReload") : "customButton" === tU.kind ? tU.description || tU.icon : "touchButton" === tU.kind && "string" === typeof tU.label ? tU.label : ""
           },
-          renderSlot: DD => (0, GD.jsx)(vi, {
-            action: cD[DD]
+          renderSlot: UU => (0, SU.jsx)(eE, {
+            action: gU[UU]
           }),
-          centre: iD ? (0, GD.jsx)(vi, {
-            action: iD
-          }) : DD("controller:actionWheelPick")
+          centre: EU ? (0, SU.jsx)(eE, {
+            action: EU
+          }) : UU("controller:actionWheelPick")
         })
       };
-    var Bb = cD(90);
-    const yb = () => ((0, lD.useEffect)((() => {
-        var DD, CD;
-        const cD = (0, vD.p)(document.getElementById("root")),
-          ID = (0, MD.e)(),
-          pD = (() => {
-            const DD = [wD.i.subscribe(sp.d, (() => {
-                rp("blockBreak")
-              })), wD.i.subscribe("damagedByOtherPlayer", (() => {
-                rp("damage")
-              })), wD.i.subscribe("yourAttackHit", (DD => {
+    var qT = gU(96);
+    const KT = () => ((0, vU.useEffect)((() => {
+        var UU, RU;
+        const gU = (0, eU.n)(document.getElementById("root")),
+          tU = (0, uU.d)(),
+          pU = (() => {
+            const UU = [KU.p.subscribe(Mp.g, (() => {
+                lp("blockBreak")
+              })), KU.p.subscribe("damagedByOtherPlayer", (() => {
+                lp("damage")
+              })), KU.p.subscribe("yourAttackHit", (UU => {
                 let {
-                  hitSelf: CD
-                } = DD;
-                CD || rp("hit")
+                  hitSelf: RU
+                } = UU;
+                RU || lp("hit")
               }))],
-              CD = fD.e.onActivePadChanged((DD => {
-                DD && rp("connect")
+              RU = PU.g.onActivePadChanged((UU => {
+                UU && lp("connect")
               }));
             return () => {
-              for (const CD of DD) wD.i.unsubscribe(CD);
-              CD()
+              for (const RU of UU) KU.p.unsubscribe(RU);
+              RU()
             }
           })(),
-          iD = (() => {
-            const DD = new Ii({
-              getVisitId: ci.b,
-              peekVisitId: ci.peekVisitSessionId,
+          EU = (() => {
+            const UU = new pE({
+              getVisitId: tE.c,
+              peekVisitId: tE.peekVisitSessionId,
               readReportedVisitId: () => {
-                const DD = Ci.j.getItem(ii);
-                return "string" === typeof DD ? DD : null
+                const UU = gE.l.getItem(EE);
+                return "string" === typeof UU ? UU : null
               },
-              writeReportedVisitId: DD => {
-                Ci.j.setItem(ii, DD)
+              writeReportedVisitId: UU => {
+                gE.l.setItem(EE, UU)
               },
-              isPadActive: MD.i,
+              isPadActive: uU.i,
               getPadFamily: () => {
-                var DD, CD;
-                return null !== (DD = null === (CD = fD.e.getActivePad()) || void 0 === CD ? void 0 : CD.family) && void 0 !== DD ? DD : null
+                var UU, RU;
+                return null !== (UU = null === (RU = PU.g.getActivePad()) || void 0 === RU ? void 0 : RU.family) && void 0 !== UU ? UU : null
               },
-              canReport: Fp.g,
-              getInputType: Di.d,
-              Nt: Fp.m
+              canReport: UE.j,
+              getInputType: RE.b,
+              ku: UE.r
             });
-            let CD = 0,
-              cD = null;
-            const ID = pD => {
-                null === cD && ("notReady" !== DD.check(pD) || null !== cD || CD >= 20 || (CD++, cD = setTimeout((() => {
-                  cD = null, ID(!1)
+            let RU = 0,
+              gU = null;
+            const tU = pU => {
+                null === gU && ("notReady" !== UU.check(pU) || null !== gU || RU >= 20 || (RU++, gU = setTimeout((() => {
+                  gU = null, tU(!1)
                 }), 3e3)))
               },
-              pD = wD.i.subscribe("appManagerUpdated|activeInputDevice", (() => {
-                ID(!0)
+              pU = KU.p.subscribe("appManagerUpdated|activeInputDevice", (() => {
+                tU(!0)
               })),
-              iD = (0, ci.f)((() => {
-                CD = 0, ID(!0)
+              EU = (0, tE.g)((() => {
+                RU = 0, tU(!0)
               }));
             return () => {
-              wD.i.unsubscribe(pD), iD(), null !== cD && clearTimeout(cD)
+              KU.p.unsubscribe(pU), EU(), null !== gU && clearTimeout(gU)
             }
           })(),
-          bD = fD.e.onFrame(((DD, CD) => {
-            const cD = (0, MD.o)(DD);
-            BD.d.dispatch(DD, CD, cD)
+          TU = PU.g.onFrame(((UU, RU) => {
+            const gU = (0, uU.p)(UU);
+            GU.e.dispatch(UU, RU, gU)
           }));
-        let SD = null !== (DD = null === (CD = fD.e.getActivePad()) || void 0 === CD ? void 0 : CD.family) && void 0 !== DD ? DD : null;
-        const tD = fD.e.onActivePadChanged((DD => {
-            var CD, cD;
-            (BD.d.reset(), (0, MD.r)(), wD.i.Uo(fD.c, DD), (null !== (CD = null === DD || void 0 === DD ? void 0 : DD.family) && void 0 !== CD ? CD : null) !== SD) && (SD = null !== (cD = null === DD || void 0 === DD ? void 0 : DD.family) && void 0 !== cD ? cD : null, wD.i.Uo(yD.b, (0, yD.h)()));
-            !DD && (0, MD.i)() && (0, MD.v)(QD.d.get("isTouchScreen") ? "touch" : "keyboardMouse")
+        let cU = null !== (UU = null === (RU = PU.g.getActivePad()) || void 0 === RU ? void 0 : RU.family) && void 0 !== UU ? UU : null;
+        const CU = PU.g.onActivePadChanged((UU => {
+            var RU, gU;
+            (GU.e.reset(), (0, uU.s)(), KU.p.yh(PU.e, UU), (null !== (RU = null === UU || void 0 === UU ? void 0 : UU.family) && void 0 !== RU ? RU : null) !== cU) && (cU = null !== (gU = null === UU || void 0 === UU ? void 0 : UU.family) && void 0 !== gU ? gU : null, KU.p.yh(jU.d, (0, jU.h)()));
+            !UU && (0, uU.i)() && (0, uU.t)(qU.b.get("isTouchScreen") ? "touch" : "keyboardMouse")
           })),
-          ZD = () => {
-            "visible" !== document.visibilityState && BD.d.clear()
+          hU = () => {
+            "visible" !== document.visibilityState && GU.e.clear()
           },
-          oD = () => {
-            BD.d.clear()
+          QU = () => {
+            GU.e.clear()
           };
-        document.addEventListener("visibilitychange", ZD), window.addEventListener("blur", oD), fD.e.start(), (0, Ap.j)();
-        const ND = null;
+        document.addEventListener("visibilitychange", hU), window.addEventListener("blur", QU), PU.g.start(), (0, Op.o)();
+        const WU = null;
         return () => {
-          cD(), ID(), pD(), iD(), bD(), tD(), document.removeEventListener("visibilitychange", ZD), window.removeEventListener("blur", oD), fD.e.stop(), null === ND || void 0 === ND || ND()
+          gU(), tU(), pU(), EU(), TU(), CU(), document.removeEventListener("visibilitychange", hU), window.removeEventListener("blur", QU), PU.g.stop(), null === WU || void 0 === WU || WU()
         }
-      }), []), (0, GD.jsxs)("div", {
+      }), []), (0, SU.jsxs)("div", {
         className: "ControllerRoot",
-        children: [(0, GD.jsx)(Pi, {}), (0, GD.jsx)(zi, {}), (0, GD.jsx)(ji, {}), (0, GD.jsx)(xf, {}), (0, GD.jsx)(cb, {}), (0, GD.jsx)(wb, {}), (0, GD.jsx)(Sb, {})]
+        children: [(0, SU.jsx)(wE, {}), (0, SU.jsx)(rE, {}), (0, SU.jsx)(XE, {}), (0, SU.jsx)(wP, {}), (0, SU.jsx)(OP, {}), (0, SU.jsx)(PT, {}), (0, SU.jsx)(TT, {})]
       })),
-      Mb = () => Bb.featureFlags.useControllerSupport ? (0, GD.jsx)(yb, {}) : null;
-    var tb = cD(7873),
-      Zb = cD(8528);
-    const ob = new Set(Ap.g),
-      vb = DD => `${Zb.n}${(0,yD.i)()}/${DD}`,
-      Nb = DD => {
-        if (!(0, Zb.j)(DD)) return null;
-        const [CD, cD] = DD.slice(Zb.n.length).split("/");
-        return (0, tb.d)(CD) && ob.has(cD) ? (0, Ap.c)(CD, cD) : null
+      cT = () => qT.featureFlags.useControllerSupport ? (0, SU.jsx)(KT, {}) : null;
+    var GT = gU(7834),
+      jT = gU(8454);
+    const uT = new Set(Op.k),
+      CT = UU => `${jT.n}${(0,jU.i)()}/${UU}`,
+      hT = UU => {
+        if (!(0, jT.l)(UU)) return null;
+        const [RU, gU] = UU.slice(jT.n.length).split("/");
+        return (0, GT.f)(RU) && uT.has(gU) ? (0, Op.g)(RU, gU) : null
       };
-    var gb = cD(8534);
-    const Xb = () => {
+    var QT = gU(8457);
+    const eT = () => {
         const {
-          t: DD
-        } = (0, pD.F)(), CD = (0, MD.z)(), {
-          gameState: cD,
-          isUiHidden: ID
-        } = (0, QD.o)(["gameState", "isUiHidden"]), {
-          hideButtonHints: iD,
-          sneakMode: fD
-        } = (0, yD.l)(), [bD, wD] = (0, lD.useState)(gb.c);
-        return (0, wi.f)(Oi.x, wD), CD && !ID && "inGame" === cD && bD ? (0, GD.jsxs)("div", {
+          t: UU
+        } = (0, pU.B)(), RU = (0, uU.v)(), {
+          gameState: gU,
+          isUiHidden: tU
+        } = (0, qU.l)(["gameState", "isUiHidden"]), {
+          hideButtonHints: EU,
+          sneakMode: PU
+        } = (0, jU.n)(), [TU, KU] = (0, vU.useState)(QT.d);
+        return (0, KE.e)(JE.s, KU), RU && !tU && "inGame" === gU && TU ? (0, SU.jsxs)("div", {
           className: "PadSneakChip SmallTextBold",
-          children: [!iD && (0, GD.jsx)(Zi, {
-            glyph: (0, SD.h)("toggle" === fD ? "sneak" : "sneakToggle")
-          }), (0, GD.jsx)("span", {
-            children: DD("controller:gameplaySneaking")
+          children: [!EU && (0, SU.jsx)(hE, {
+            glyph: (0, cU.f)("toggle" === PU ? "sneak" : "sneakToggle")
+          }), (0, SU.jsx)("span", {
+            children: UU("controller:gameplaySneaking")
           })]
         }) : null
       },
-      mb = 12,
-      nb = DD => {
+      WT = 12,
+      fT = UU => {
         let {
-          trigger: CD,
-          className: cD,
-          children: ID
-        } = DD;
-        const pD = (0, lD.useRef)(null);
-        return (0, lD.useEffect)((() => {
-          let DD = 0;
-          const cD = xD(CD, "y"),
-            ID = () => {
-              DD = requestAnimationFrame(ID);
-              const iD = pD.current;
-              if (!iD || null === CD || void 0 === CD || !CD.isConnected) return;
+          trigger: RU,
+          className: gU,
+          children: tU
+        } = UU;
+        const pU = (0, vU.useRef)(null);
+        return (0, vU.useEffect)((() => {
+          let UU = 0;
+          const gU = oU(RU, "y"),
+            tU = () => {
+              UU = requestAnimationFrame(tU);
+              const EU = pU.current;
+              if (!EU || null === RU || void 0 === RU || !RU.isConnected) return;
               const {
-                left: fD,
-                top: bD
-              } = function(DD, CD, cD) {
-                let ID = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-                  pD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-                const iD = DD.left + DD.width / 2,
-                  fD = Math.max(mb, cD.width - mb - CD.width),
-                  bD = Math.min(Math.max(iD - CD.width / 2, mb), fD),
-                  QD = cD.height - ID;
-                let wD = 0,
-                  SD = QD;
-                if (pD) {
-                  const DD = Math.max(0, pD.top),
-                    ID = Math.min(QD, pD.bottom);
-                  ID - DD >= Math.max(cD.height / 2, CD.height + 24) && (wD = DD, SD = ID)
+                left: PU,
+                top: TU
+              } = function(UU, RU, gU) {
+                let tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+                  pU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+                const EU = UU.left + UU.width / 2,
+                  PU = Math.max(WT, gU.width - WT - RU.width),
+                  TU = Math.min(Math.max(EU - RU.width / 2, WT), PU),
+                  qU = gU.height - tU;
+                let KU = 0,
+                  cU = qU;
+                if (pU) {
+                  const UU = Math.max(0, pU.top),
+                    tU = Math.min(qU, pU.bottom);
+                  tU - UU >= Math.max(gU.height / 2, RU.height + 24) && (KU = UU, cU = tU)
                 }
-                const BD = DD.top + DD.height / 2 < (wD + SD) / 2 ? SD - mb - CD.height : wD + mb;
+                const GU = UU.top + UU.height / 2 < (KU + cU) / 2 ? cU - WT - RU.height : KU + WT;
                 return {
-                  left: bD,
-                  top: Math.max(mb, BD)
+                  left: TU,
+                  top: Math.max(WT, GU)
                 }
-              }(CD.getBoundingClientRect(), {
-                width: iD.offsetWidth,
-                height: iD.offsetHeight
+              }(RU.getBoundingClientRect(), {
+                width: EU.offsetWidth,
+                height: EU.offsetHeight
               }, {
                 width: window.innerWidth,
                 height: window.innerHeight
-              }, parseFloat(document.documentElement.style.getPropertyValue(jf)) || 0, null !== cD && void 0 !== cD && cD.isConnected ? cD.getBoundingClientRect() : null);
-              iD.style.transform = `translate3d(${Math.round(fD)}px, ${Math.round(bD)}px, 0)`, iD.style.visibility = "visible"
+              }, parseFloat(document.documentElement.style.getPropertyValue(BP)) || 0, null !== gU && void 0 !== gU && gU.isConnected ? gU.getBoundingClientRect() : null);
+              EU.style.transform = `translate3d(${Math.round(PU)}px, ${Math.round(TU)}px, 0)`, EU.style.visibility = "visible"
             };
-          return ID(), () => {
-            cancelAnimationFrame(DD)
+          return tU(), () => {
+            cancelAnimationFrame(UU)
           }
-        }), [CD]), (0, GD.jsx)("div", {
-          ref: pD,
-          className: cD,
+        }), [RU]), (0, SU.jsx)("div", {
+          ref: pU,
+          className: gU,
           style: {
             position: "fixed",
             left: 0,
             top: 0,
             visibility: "hidden"
           },
-          children: ID
+          children: tU
         })
       };
-    var Ob = cD(1064),
-      Pb = cD(8537),
-      Hb = cD(1442),
-      Ub = cD(8545),
-      xb = cD(8548);
-    const qb = {
+    var xT = gU(1049),
+      mT = gU(8461),
+      IT = gU(1412),
+      JT = gU(8470),
+      wT = gU(8475);
+    const nT = {
         shop: {
           icon: "cart-shopping",
           labelKey: "controller:menusShop"
@@ -5630,539 +5630,539 @@ export const modules = {
           labelKey: "settingsMenu:exitGame"
         }
       },
-      Jb = () => {
+      bT = () => {
         const {
-          t: DD
-        } = (0, pD.F)(), CD = (0, MD.z)(), cD = (0, Pb.c)(), ID = (0, Ki.h)("_tasks"), iD = (0, Ki.h)("_availableLeaderboards");
-        if (!CD) return null;
-        const fD = (DD => {
+          t: UU
+        } = (0, pU.B)(), RU = (0, uU.v)(), gU = (0, mT.e)(), tU = (0, YE.g)("_tasks"), EU = (0, YE.g)("_availableLeaderboards");
+        if (!RU) return null;
+        const PU = (UU => {
           let {
-            hasShop: CD,
-            hasTasksOrLeaderboards: cD,
-            canInvite: ID
-          } = DD;
-          const pD = [];
-          return CD && pD.push("shop"), cD && pD.push("tasks"), ID && pD.push("invite"), pD.push("leave"), pD
+            hasShop: RU,
+            hasTasksOrLeaderboards: gU,
+            canInvite: tU
+          } = UU;
+          const pU = [];
+          return RU && pU.push("shop"), gU && pU.push("tasks"), tU && pU.push("invite"), pU.push("leave"), pU
         })({
-          hasShop: cD,
-          hasTasksOrLeaderboards: !(!ID && !iD),
-          canInvite: !!Bb.featureFlags.canUseInviteLinks
+          hasShop: gU,
+          hasTasksOrLeaderboards: !(!tU && !EU),
+          canInvite: !!qT.featureFlags.canUseInviteLinks
         });
-        return (0, GD.jsx)("div", {
+        return (0, SU.jsx)("div", {
           className: "PadLobbyShortcuts",
-          children: fD.map((CD => {
+          children: PU.map((RU => {
             const {
-              icon: cD,
-              labelKey: ID
-            } = qb[CD], pD = "leave" === CD ? Hb.J : Hb.i;
-            return (0, GD.jsx)(pD, {
+              icon: gU,
+              labelKey: tU
+            } = nT[RU], pU = "leave" === RU ? IT.E : IT.e;
+            return (0, SU.jsx)(pU, {
               className: "PadLobbyShortcut",
               onClick: () => {
-                (DD => {
-                  switch (DD) {
+                (UU => {
+                  switch (UU) {
                     case "shop":
-                      return wD.i.Uo(xb.j), void QD.d.set({
-                        openEverythingMenuName: Fc.q.SHOP
+                      return KU.p.yh(wT.j), void qU.b.set({
+                        openEverythingMenuName: Og.n.SHOP
                       });
                     case "tasks":
-                      return void wD.i.Uo("toggleMenu", "retentionFeatures");
+                      return void KU.p.yh("toggleMenu", "retentionFeatures");
                     case "invite":
-                      return void wD.i.Uo("toggleMenu", "inviteLink");
+                      return void KU.p.yh("toggleMenu", "inviteLink");
                     case "leave":
-                      (0, Ub.c)()
+                      (0, JT.e)()
                   }
-                })(CD)
+                })(RU)
               },
-              children: (0, GD.jsxs)("div", {
+              children: (0, SU.jsxs)("div", {
                 className: "PadLobbyShortcutInner",
-                children: [(0, GD.jsx)(Ob.c, {
-                  name: cD
-                }), (0, GD.jsx)("span", {
-                  children: DD(ID)
+                children: [(0, SU.jsx)(xT.c, {
+                  name: gU
+                }), (0, SU.jsx)("span", {
+                  children: UU(tU)
                 })]
               })
-            }, CD)
+            }, RU)
           }))
         })
       };
-    var Kb = cD(1961);
-    const ab = tD.w,
-      Vb = ["forward", "backward", "left", "right", "sprint"],
-      zb = DD => DD.ctrlKey || DD.altKey || "Alt" === DD.key || "ArrowUp" === DD.key || "ArrowDown" === DD.key || "Tab" === DD.code || "/" === DD.key || "Slash" === DD.code;
-    class jb {
+    var oT = gU(1844);
+    const ZT = CU.u,
+      aT = ["forward", "backward", "left", "right", "sprint"],
+      YT = UU => UU.ctrlKey || UU.altKey || "Alt" === UU.key || "ArrowUp" === UU.key || "ArrowDown" === UU.key || "Tab" === UU.code || "/" === UU.key || "Slash" === UU.code;
+    class BT {
       constructor() {
-        this.armed = !1, this.swallowedKeys = new Set, this.previousHeld = new Array(tD.R).fill(!1), this.leftStickWasPressed = !1, this.rightStickWasPressed = !1, this.consumeNextFrame = !1, this.consumeAfterContinue = !1
+        this.armed = !1, this.swallowedKeys = new Set, this.previousHeld = new Array(CU.N).fill(!1), this.leftStickWasPressed = !1, this.rightStickWasPressed = !1, this.consumeNextFrame = !1, this.consumeAfterContinue = !1
       }
-      setArmed(DD) {
-        this.armed = DD
+      setArmed(UU) {
+        this.armed = UU
       }
       blocksGameplay() {
         return this.armed || this.consumeNextFrame
       }
-      onKeyDown(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          cD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        return !this.armed || CD ? !DD.repeat && this.swallowedKeys.delete(DD.code) ? {
+      onKeyDown(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          gU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        return !this.armed || RU ? !UU.repeat && this.swallowedKeys.delete(UU.code) ? {
           swallow: !1,
           continues: !1
         } : {
-          swallow: this.swallowedKeys.has(DD.code),
+          swallow: this.swallowedKeys.has(UU.code),
           continues: !1
-        } : "Escape" === DD.key || DD.repeat && !this.swallowedKeys.has(DD.code) ? {
+        } : "Escape" === UU.key || UU.repeat && !this.swallowedKeys.has(UU.code) ? {
           swallow: !1,
           continues: !1
-        } : cD ? {
+        } : gU ? {
           swallow: !1,
           continues: !0
-        } : (this.swallowedKeys.add(DD.code), {
+        } : (this.swallowedKeys.add(UU.code), {
           swallow: !0,
-          continues: (0, MD.h)(DD)
+          continues: (0, uU.g)(UU)
         })
       }
-      onKeyUp(DD) {
-        return this.swallowedKeys.delete(DD.code)
+      onKeyUp(UU) {
+        return this.swallowedKeys.delete(UU.code)
       }
       forgetKeys() {
         this.swallowedKeys.clear()
       }
-      onPadFrame(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          ID = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        const pD = (0, tD.p)(DD.values, this.previousHeld),
-          iD = null === cD ? -1 : (0, tD.m)(cD),
-          fD = iD >= 0 && pD[iD] && !this.previousHeld[iD],
-          bD = pD.some(((DD, CD) => DD && !this.previousHeld[CD] && CD !== iD)),
-          QD = Math.hypot(DD.leftStick.x, DD.leftStick.y) >= ab,
-          wD = Math.hypot(DD.rightStick.x, DD.rightStick.y) >= ab,
-          SD = QD && !this.leftStickWasPressed || wD && !this.rightStickWasPressed;
-        this.previousHeld = pD, this.leftStickWasPressed = QD, this.rightStickWasPressed = wD;
-        let BD = !1;
-        this.consumeNextFrame && (this.consumeNextFrame = !1, BD = !0);
-        const yD = !CD && fD && !ID,
-          MD = !yD && this.armed && !CD && (bD || SD);
-        return (yD || MD) && (this.consumeNextFrame = !0, this.consumeAfterContinue = MD, BD = !0), {
-          continues: MD,
-          back: yD,
-          consumeHeld: BD
+      onPadFrame(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          tU = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        const pU = (0, CU.o)(UU.values, this.previousHeld),
+          EU = null === gU ? -1 : (0, CU.j)(gU),
+          PU = EU >= 0 && pU[EU] && !this.previousHeld[EU],
+          TU = pU.some(((UU, RU) => UU && !this.previousHeld[RU] && RU !== EU)),
+          qU = Math.hypot(UU.leftStick.x, UU.leftStick.y) >= ZT,
+          KU = Math.hypot(UU.rightStick.x, UU.rightStick.y) >= ZT,
+          cU = qU && !this.leftStickWasPressed || KU && !this.rightStickWasPressed;
+        this.previousHeld = pU, this.leftStickWasPressed = qU, this.rightStickWasPressed = KU;
+        let GU = !1;
+        this.consumeNextFrame && (this.consumeNextFrame = !1, GU = !0);
+        const jU = !RU && PU && !tU,
+          uU = !jU && this.armed && !RU && (TU || cU);
+        return (jU || uU) && (this.consumeNextFrame = !0, this.consumeAfterContinue = uU, GU = !0), {
+          continues: uU,
+          back: jU,
+          consumeHeld: GU
         }
       }
       consumeLeavesMoveStick() {
         return this.consumeAfterContinue
       }
     }
-    const lb = new Set([...Kb.l, ...Kb.x]),
-      Lb = DD => ((DD, CD, cD) => {
-        const ID = Object.keys(CD).filter((ID => !cD.has(ID) && CD[ID].includes(DD)));
-        return ID.length > 0 && ID.every((DD => Vb.includes(DD)))
-      })(DD, Kb.q, lb),
-      Tb = (DD, CD, cD) => {
-        const ID = new jb,
-          pD = DD => {
-            if (!DD.isTrusted) return;
+    const VT = new Set([...oT.l, ...oT.C]),
+      rT = UU => ((UU, RU, gU) => {
+        const tU = Object.keys(RU).filter((tU => !gU.has(tU) && RU[tU].includes(UU)));
+        return tU.length > 0 && tU.every((UU => aT.includes(UU)))
+      })(UU, oT.r, VT),
+      XT = (UU, RU, gU) => {
+        const tU = new BT,
+          pU = UU => {
+            if (!UU.isTrusted) return;
             const {
-              swallow: cD,
-              continues: pD
-            } = ID.onKeyDown(DD, !(0, MD.D)(DD) || (0, Wp.m)() || (0, DI.s)(), Lb(DD.code));
-            cD && (DD.stopImmediatePropagation(), zb(DD) && DD.preventDefault()), pD && ((0, MD.v)("keyboardMouse"), CD())
+              swallow: gU,
+              continues: pU
+            } = tU.onKeyDown(UU, !(0, uU.B)(UU) || (0, zp.h)() || (0, Ut.q)(), rT(UU.code));
+            gU && (UU.stopImmediatePropagation(), YT(UU) && UU.preventDefault()), pU && ((0, uU.t)("keyboardMouse"), RU())
           },
-          iD = DD => {
-            DD.isTrusted && ID.onKeyUp(DD) && (DD.stopImmediatePropagation(), zb(DD) && DD.preventDefault())
+          EU = UU => {
+            UU.isTrusted && tU.onKeyUp(UU) && (UU.stopImmediatePropagation(), YT(UU) && UU.preventDefault())
           },
-          bD = () => {
-            ID.forgetKeys()
+          TU = () => {
+            tU.forgetKeys()
           };
-        window.addEventListener("keydown", pD, !0), window.addEventListener("keyup", iD, !0), window.addEventListener("blur", bD);
-        const QD = fD.e.onFrame((DD => {
-            const pD = BD.d.getActiveConsumerName(),
-              iD = cD(),
-              fD = iD ? (0, SD.h)("menuBack") : null,
-              bD = null !== pD && "gameplay" !== pD,
+        window.addEventListener("keydown", pU, !0), window.addEventListener("keyup", EU, !0), window.addEventListener("blur", TU);
+        const qU = PU.g.onFrame((UU => {
+            const pU = GU.e.getActiveConsumerName(),
+              EU = gU(),
+              PU = EU ? (0, cU.f)("menuBack") : null,
+              TU = null !== pU && "gameplay" !== pU,
               {
-                continues: QD,
-                back: wD,
-                consumeHeld: tD
-              } = ID.onPadFrame(DD, bD, fD, (0, MD.l)(DD));
-            if (tD) {
-              const DD = (0, yD.h)().swapSticks ? "right" : "left";
-              BD.d.consumeAllHeld(ID.consumeLeavesMoveStick() ? DD : null)
+                continues: qU,
+                back: KU,
+                consumeHeld: CU
+              } = tU.onPadFrame(UU, TU, PU, (0, uU.m)(UU));
+            if (CU) {
+              const UU = (0, jU.h)().swapSticks ? "right" : "left";
+              GU.e.consumeAllHeld(tU.consumeLeavesMoveStick() ? UU : null)
             }
-            wD ? null === iD || void 0 === iD || iD() : QD && CD()
+            KU ? null === EU || void 0 === EU || EU() : qU && RU()
           })),
-          wD = (0, Wp.p)(`pressToContinue:${DD}`, (() => ID.blocksGameplay()));
+          KU = (0, zp.l)(`pressToContinue:${UU}`, (() => tU.blocksGameplay()));
         return {
-          setArmed: DD => {
-            ID.setArmed(DD)
+          setArmed: UU => {
+            tU.setArmed(UU)
           },
           dispose: () => {
-            window.removeEventListener("keydown", pD, !0), window.removeEventListener("keyup", iD, !0), window.removeEventListener("blur", bD), QD(), wD()
+            window.removeEventListener("keydown", pU, !0), window.removeEventListener("keyup", EU, !0), window.removeEventListener("blur", TU), qU(), KU()
           }
         }
       };
-    var Gb = cD(4770),
-      Rb = cD(3227),
-      kb = cD(2921),
-      db = cD(7881);
-    const Yb = DD => {
+    var vT = gU(4670),
+      dT = gU(3129),
+      HT = gU(2825),
+      ST = gU(7836);
+    const sT = UU => {
         let {
-          text: CD
-        } = DD;
-        return (0, GD.jsx)("div", {
+          text: RU
+        } = UU;
+        return (0, SU.jsx)("div", {
           className: "ControllerSettingsHeading",
-          children: CD
+          children: RU
         })
       },
-      Wb = DD => {
+      yT = UU => {
         let {
-          label: CD,
-          hint: cD,
-          options: ID,
-          value: iD,
-          onChange: fD
-        } = DD;
+          label: RU,
+          hint: gU,
+          options: tU,
+          value: EU,
+          onChange: PU
+        } = UU;
         const {
-          t: bD
-        } = (0, pD.F)();
-        return (0, GD.jsx)("div", {
+          t: TU
+        } = (0, pU.B)();
+        return (0, SU.jsx)("div", {
           className: "SettingBox ControllerChoiceSetting",
-          children: (0, GD.jsxs)("div", {
+          children: (0, SU.jsxs)("div", {
             className: "ControllerChoiceRow",
-            children: [(0, GD.jsxs)("div", {
+            children: [(0, SU.jsxs)("div", {
               className: "ControllerChoiceText",
-              children: [(0, GD.jsx)("div", {
+              children: [(0, SU.jsx)("div", {
                 className: "SliderText",
-                children: CD
-              }), cD && (0, GD.jsx)("div", {
+                children: RU
+              }), gU && (0, SU.jsx)("div", {
                 className: "ControllerSettingsHint",
-                children: cD
+                children: gU
               })]
-            }), (0, GD.jsx)(kb.b, {
-              options: ID.map((DD => ({
-                label: "label" in DD ? DD.label : bD(DD.labelKey),
-                value: DD.value
+            }), (0, SU.jsx)(HT.c, {
+              options: tU.map((UU => ({
+                label: "label" in UU ? UU.label : TU(UU.labelKey),
+                value: UU.value
               }))),
-              value: iD,
-              onChange: DD => {
-                fD(DD.value)
+              value: EU,
+              onChange: UU => {
+                PU(UU.value)
               }
             })]
           })
         })
       },
-      sb = DD => {
+      kT = UU => {
         let {
-          settingKey: CD,
-          label: cD,
-          range: ID,
-          format: pD
-        } = DD;
-        const iD = (0, yD.l)();
-        return (0, GD.jsx)(Gb.i, {
-          name: cD,
-          min: ID.min,
-          max: ID.max,
-          step: ID.step,
-          padStep: ID.step,
-          initValue: iD[CD],
-          format: pD,
-          onChange: DD => {
-            (0, yD.j)({
-              [CD]: (0, db.x)(DD, ID)
+          settingKey: RU,
+          label: gU,
+          range: tU,
+          format: pU
+        } = UU;
+        const EU = (0, jU.n)();
+        return (0, SU.jsx)(vT.h, {
+          name: gU,
+          min: tU.min,
+          max: tU.max,
+          step: tU.step,
+          padStep: tU.step,
+          initValue: EU[RU],
+          format: pU,
+          onChange: UU => {
+            (0, jU.k)({
+              [RU]: (0, ST.u)(UU, tU)
             })
           }
         })
       };
-    var Eb = cD(8555),
-      eb = cD(8559);
-    const ub = DD => DD instanceof DOMException && ("SecurityError" === DD.name || "NotAllowedError" === DD.name),
-      hb = DD => {
-        const [CD] = [...DD.controllers].sort(((DD, CD) => eb.o[DD] - eb.o[CD]));
-        return eb.l[CD]
+    var FT = gU(8480),
+      iT = gU(8483);
+    const AT = UU => UU instanceof DOMException && ("SecurityError" === UU.name || "NotAllowedError" === UU.name),
+      zT = UU => {
+        const [RU] = [...UU.controllers].sort(((UU, RU) => iT.p[UU] - iT.p[RU]));
+        return iT.o[RU]
       },
-      rb = DD => {
-        (0, Eb.c)().allowPhoneMotion().catch((CD => {
-          DD && ub(CD) ? DD() : console.warn("Could not enable the motion sensor", CD)
+      MT = UU => {
+        (0, FT.c)().allowPhoneMotion().catch((RU => {
+          UU && AT(RU) ? UU() : console.warn("Could not enable the motion sensor", RU)
         }))
       },
-      Ab = {
+      DT = {
         waiting: "controller:settingsGyroPhoneWaiting",
         noSensor: "controller:settingsGyroPhoneNoSensor",
         on: "controller:settingsGyroPhoneOn",
         denied: "controller:settingsGyroPhoneDenied"
       },
-      Fb = DD => {
+      LT = UU => {
         let {
-          status: CD
-        } = DD;
+          status: RU
+        } = UU;
         const {
-          t: cD
-        } = (0, pD.F)(), [ID, iD] = (0, lD.useState)(null), fD = `${CD.controllers.join(",")}|${CD.phoneMotion}`;
-        (0, lD.useEffect)((() => {
-          iD(null)
-        }), [fD]);
-        const bD = () => {
-          (0, Eb.c)().connectController().then((DD => {
-            iD(DD > 0 ? "openFailed" : null)
-          })).catch((DD => {
-            ub(DD) ? iD("needsClick") : console.warn("Could not connect motion controller", DD)
+          t: gU
+        } = (0, pU.B)(), [tU, EU] = (0, vU.useState)(null), PU = `${RU.controllers.join(",")}|${RU.phoneMotion}`;
+        (0, vU.useEffect)((() => {
+          EU(null)
+        }), [PU]);
+        const TU = () => {
+          (0, FT.c)().connectController().then((UU => {
+            EU(UU > 0 ? "openFailed" : null)
+          })).catch((UU => {
+            AT(UU) ? EU("needsClick") : console.warn("Could not connect motion controller", UU)
           }))
         };
-        if (CD.hidSupported) {
-          let DD = cD("controller:settingsGyroConnectHint");
-          return "needsClick" === ID ? DD = cD("controller:settingsGyroConnectNeedsClick") : "openFailed" === ID ? DD = cD("controller:settingsGyroOpenFailed") : CD.controllers.length > 0 && (DD = cD("controller:settingsGyroConnected", {
-            name: hb(CD)
-          })), (0, GD.jsx)("div", {
+        if (RU.hidSupported) {
+          let UU = gU("controller:settingsGyroConnectHint");
+          return "needsClick" === tU ? UU = gU("controller:settingsGyroConnectNeedsClick") : "openFailed" === tU ? UU = gU("controller:settingsGyroOpenFailed") : RU.controllers.length > 0 && (UU = gU("controller:settingsGyroConnected", {
+            name: zT(RU)
+          })), (0, SU.jsx)("div", {
             className: "SettingBox ControllerChoiceSetting",
-            children: (0, GD.jsxs)("div", {
+            children: (0, SU.jsxs)("div", {
               className: "ControllerChoiceRow",
-              children: [(0, GD.jsx)("div", {
+              children: [(0, SU.jsx)("div", {
                 className: "ControllerSettingsHint",
-                children: DD
-              }), (0, GD.jsx)(Hb.i, {
-                onClick: bD,
-                children: cD("controller:settingsGyroConnect")
+                children: UU
+              }), (0, SU.jsx)(IT.e, {
+                onClick: TU,
+                children: gU("controller:settingsGyroConnect")
               })]
             })
           })
         }
-        if ("needsPermission" === CD.phoneMotion) return (0, GD.jsx)("div", {
+        if ("needsPermission" === RU.phoneMotion) return (0, SU.jsx)("div", {
           className: "SettingBox ControllerChoiceSetting",
-          children: (0, GD.jsxs)("div", {
+          children: (0, SU.jsxs)("div", {
             className: "ControllerChoiceRow",
-            children: ["needsTap" === ID && (0, GD.jsx)("div", {
+            children: ["needsTap" === tU && (0, SU.jsx)("div", {
               className: "ControllerSettingsHint",
-              children: cD("controller:settingsGyroAllowNeedsTap")
-            }), (0, GD.jsx)(Hb.i, {
+              children: gU("controller:settingsGyroAllowNeedsTap")
+            }), (0, SU.jsx)(IT.e, {
               onClick: () => {
-                rb((() => {
-                  iD("needsTap")
+                MT((() => {
+                  EU("needsTap")
                 }))
               },
-              children: cD("controller:settingsGyroAllowMotion")
+              children: gU("controller:settingsGyroAllowMotion")
             })]
           })
         });
-        const QD = Ab[CD.phoneMotion];
-        return QD ? (0, GD.jsx)("div", {
+        const qU = DT[RU.phoneMotion];
+        return qU ? (0, SU.jsx)("div", {
           className: "ControllerSettingsHint",
-          children: cD(QD)
+          children: gU(qU)
         }) : null
       },
-      DQ = () => {
+      NT = () => {
         const {
-          t: DD
-        } = (0, pD.F)(), CD = (0, yD.l)(), cD = (0, Eb.d)(), ID = (0, MD.B)(), iD = !cD.hidSupported && cD.phoneSupported && !cD.padConnected, fD = (cD.hidSupported || cD.phoneSupported) && !iD, bD = (0, SD.h)("pause");
-        return (0, GD.jsxs)(GD.Fragment, {
-          children: [(0, GD.jsx)(Yb, {
-            text: DD("controller:settingsGyro")
-          }), iD && (0, GD.jsx)("div", {
+          t: UU
+        } = (0, pU.B)(), RU = (0, jU.n)(), gU = (0, FT.e)(), tU = (0, uU.z)(), EU = !gU.hidSupported && gU.phoneSupported && !gU.padConnected, PU = (gU.hidSupported || gU.phoneSupported) && !EU, TU = (0, cU.f)("pause");
+        return (0, SU.jsxs)(SU.Fragment, {
+          children: [(0, SU.jsx)(sT, {
+            text: UU("controller:settingsGyro")
+          }), EU && (0, SU.jsx)("div", {
             className: "ControllerSettingsHint",
-            children: DD("controller:settingsGyroPhoneNeedsController")
-          }), !fD && !iD && (0, GD.jsx)("div", {
+            children: UU("controller:settingsGyroPhoneNeedsController")
+          }), !PU && !EU && (0, SU.jsx)("div", {
             className: "ControllerSettingsHint",
-            children: DD(cD.hidBlocked || cD.phoneBlocked ? "controller:settingsGyroBlocked" : "controller:settingsGyroUnsupported")
-          }), fD && (0, GD.jsx)(Gb.e, {
-            label: DD(cD.hidSupported ? "controller:settingsGyroToggle" : "controller:settingsGyroTogglePhone"),
-            checked: CD.gyroAiming,
-            onClick: DD => {
-              var CD, cD;
-              (0, yD.j)({
-                gyroAiming: DD
+            children: UU(gU.hidBlocked || gU.phoneBlocked ? "controller:settingsGyroBlocked" : "controller:settingsGyroUnsupported")
+          }), PU && (0, SU.jsx)(vT.b, {
+            label: UU(gU.hidSupported ? "controller:settingsGyroToggle" : "controller:settingsGyroTogglePhone"),
+            checked: RU.gyroAiming,
+            onClick: UU => {
+              var RU, gU;
+              (0, jU.k)({
+                gyroAiming: UU
               });
-              const ID = null === (CD = null === (cD = navigator.userActivation) || void 0 === cD ? void 0 : cD.isActive) || void 0 === CD || CD;
-              if (!DD || !ID) return;
-              const pD = (0, Eb.c)(),
-                iD = pD.getStatus();
-              iD.hidSupported ? pD.connectControllerIfNoneGranted().catch((DD => {
-                console.warn("Motion controller picker unavailable", DD)
-              })) : "needsPermission" === iD.phoneMotion && rb()
+              const tU = null === (RU = null === (gU = navigator.userActivation) || void 0 === gU ? void 0 : gU.isActive) || void 0 === RU || RU;
+              if (!UU || !tU) return;
+              const pU = (0, FT.c)(),
+                EU = pU.getStatus();
+              EU.hidSupported ? pU.connectControllerIfNoneGranted().catch((UU => {
+                console.warn("Motion controller picker unavailable", UU)
+              })) : "needsPermission" === EU.phoneMotion && MT()
             },
-            circleInfoText: DD(cD.hidSupported ? "controller:settingsGyroToggleInfo" : "controller:settingsGyroToggleInfoPhone")
-          }), fD && cD.hidSupported && (0, GD.jsx)("div", {
+            circleInfoText: UU(gU.hidSupported ? "controller:settingsGyroToggleInfo" : "controller:settingsGyroToggleInfoPhone")
+          }), PU && gU.hidSupported && (0, SU.jsx)("div", {
             className: "ControllerSettingsHint",
-            children: DD("controller:settingsGyroSteamHint")
-          }), fD && CD.gyroAiming && (0, GD.jsxs)(GD.Fragment, {
-            children: [(0, GD.jsx)(Fb, {
-              status: cD
-            }), (0, GD.jsx)(sb, {
+            children: UU("controller:settingsGyroSteamHint")
+          }), PU && RU.gyroAiming && (0, SU.jsxs)(SU.Fragment, {
+            children: [(0, SU.jsx)(LT, {
+              status: gU
+            }), (0, SU.jsx)(kT, {
               settingKey: "gyroSensitivity",
-              label: DD("controller:settingsGyroSensitivity"),
-              range: db.P,
-              format: db.I
-            }), (0, GD.jsx)(Wb, {
-              label: DD("controller:settingsGyroActivation"),
-              hint: "aiming" === CD.gyroActivation && (0, GD.jsx)(Rb.e, {
-                text: DD("controller:settingsGyroAimingHint", {
-                  button: Rb.h
+              label: UU("controller:settingsGyroSensitivity"),
+              range: ST.S,
+              format: ST.J
+            }), (0, SU.jsx)(yT, {
+              label: UU("controller:settingsGyroActivation"),
+              hint: "aiming" === RU.gyroActivation && (0, SU.jsx)(dT.d, {
+                text: UU("controller:settingsGyroAimingHint", {
+                  button: dT.f
                 }),
-                glyph: (0, SD.h)("use")
+                glyph: (0, cU.f)("use")
               }),
-              options: db.M,
-              value: CD.gyroActivation,
-              onChange: DD => {
-                (0, yD.j)({
-                  gyroActivation: DD
+              options: ST.Q,
+              value: RU.gyroActivation,
+              onChange: UU => {
+                (0, jU.k)({
+                  gyroActivation: UU
                 })
               }
-            }), "button" === CD.gyroActivation && (0, GD.jsx)(Wb, {
-              label: DD("controller:settingsGyroButton"),
-              hint: DD("controller:settingsGyroButtonHint"),
-              options: db.s.filter((DD => DD !== bD || DD === CD.gyroButton)).map((DD => ({
-                label: ti(ID, DD),
-                value: DD
+            }), "button" === RU.gyroActivation && (0, SU.jsx)(yT, {
+              label: UU("controller:settingsGyroButton"),
+              hint: UU("controller:settingsGyroButtonHint"),
+              options: ST.r.filter((UU => UU !== TU || UU === RU.gyroButton)).map((UU => ({
+                label: CE(tU, UU),
+                value: UU
               }))),
-              value: CD.gyroButton,
-              onChange: DD => {
-                (0, yD.j)({
-                  gyroButton: DD
+              value: RU.gyroButton,
+              onChange: UU => {
+                (0, jU.k)({
+                  gyroButton: UU
                 })
               }
             })]
           })]
         })
       };
-    var CQ = cD(1825);
-    const cQ = () => {
+    var lT = gU(1733);
+    const OT = () => {
       const {
-        t: DD
-      } = (0, pD.F)(), CD = (0, yD.l)(), cD = (0, MD.B)();
-      return (0, GD.jsxs)(GD.Fragment, {
-        children: [(0, GD.jsx)(Yb, {
-          text: DD("controller:settingsAccessibility")
-        }), (0, GD.jsx)(Gb.e, {
-          label: DD("controller:settingsSwapConfirmBack"),
-          checked: (0, SD.G)(CD.swapConfirmBack, cD),
-          onClick: DD => {
-            (0, yD.j)({
-              swapConfirmBack: DD === (0, SD.G)(null, cD) ? null : DD
-            }), CQ.g.showMessage({
+        t: UU
+      } = (0, pU.B)(), RU = (0, jU.n)(), gU = (0, uU.z)();
+      return (0, SU.jsxs)(SU.Fragment, {
+        children: [(0, SU.jsx)(sT, {
+          text: UU("controller:settingsAccessibility")
+        }), (0, SU.jsx)(vT.b, {
+          label: UU("controller:settingsSwapConfirmBack"),
+          checked: (0, cU.D)(RU.swapConfirmBack, gU),
+          onClick: UU => {
+            (0, jU.k)({
+              swapConfirmBack: UU === (0, cU.D)(null, gU) ? null : UU
+            }), lT.f.showMessage({
               translationKey: "controller:settingsSwapToast"
             })
           },
-          circleInfoText: DD("controller:settingsSwapConfirmBackInfo")
-        }), (0, GD.jsx)(Wb, {
-          label: DD("controller:settingsButtonRepeat"),
-          hint: DD("controller:settingsButtonRepeatHint"),
-          options: db.r,
-          value: CD.buttonRepeat,
-          onChange: DD => {
-            (0, yD.j)({
-              buttonRepeat: DD
+          circleInfoText: UU("controller:settingsSwapConfirmBackInfo")
+        }), (0, SU.jsx)(yT, {
+          label: UU("controller:settingsButtonRepeat"),
+          hint: UU("controller:settingsButtonRepeatHint"),
+          options: ST.p,
+          value: RU.buttonRepeat,
+          onChange: UU => {
+            (0, jU.k)({
+              buttonRepeat: UU
             })
           }
-        }), (0, GD.jsx)(Wb, {
-          label: DD("controller:settingsTapHoldTime"),
-          hint: DD("controller:settingsTapHoldTimeHint"),
-          options: db.sb,
-          value: CD.tapHoldTime,
-          onChange: DD => {
-            (0, yD.j)({
-              tapHoldTime: DD
+        }), (0, SU.jsx)(yT, {
+          label: UU("controller:settingsTapHoldTime"),
+          hint: UU("controller:settingsTapHoldTimeHint"),
+          options: ST.wb,
+          value: RU.tapHoldTime,
+          onChange: UU => {
+            (0, jU.k)({
+              tapHoldTime: UU
             })
           }
-        }), (0, GD.jsx)(Wb, {
-          label: DD("controller:settingsEmoteButton"),
-          hint: DD("wheel" === CD.emoteButton ? "controller:settingsEmoteButtonWheelHint" : "controller:settingsEmoteButtonTapHoldHint"),
-          options: db.E,
-          value: CD.emoteButton,
-          onChange: DD => {
-            (0, yD.j)({
-              emoteButton: DD
+        }), (0, SU.jsx)(yT, {
+          label: UU("controller:settingsEmoteButton"),
+          hint: UU("wheel" === RU.emoteButton ? "controller:settingsEmoteButtonWheelHint" : "controller:settingsEmoteButtonTapHoldHint"),
+          options: ST.C,
+          value: RU.emoteButton,
+          onChange: UU => {
+            (0, jU.k)({
+              emoteButton: UU
             })
           }
-        }), (0, GD.jsx)(Wb, {
-          label: DD("controller:settingsAttackMode"),
-          hint: DD("toggle" === CD.attackMode ? "controller:settingsAttackToggleHint" : "controller:settingsAttackHoldHint"),
-          options: db.o,
-          value: CD.attackMode,
-          onChange: DD => {
-            (0, yD.j)({
-              attackMode: DD
+        }), (0, SU.jsx)(yT, {
+          label: UU("controller:settingsAttackMode"),
+          hint: UU("toggle" === RU.attackMode ? "controller:settingsAttackToggleHint" : "controller:settingsAttackHoldHint"),
+          options: ST.l,
+          value: RU.attackMode,
+          onChange: UU => {
+            (0, jU.k)({
+              attackMode: UU
             })
           }
-        }), (0, GD.jsx)(Gb.e, {
-          label: DD("controller:settingsLargePointer"),
-          checked: CD.largePointer,
-          onClick: DD => {
-            (0, yD.j)({
-              largePointer: DD
+        }), (0, SU.jsx)(vT.b, {
+          label: UU("controller:settingsLargePointer"),
+          checked: RU.largePointer,
+          onClick: UU => {
+            (0, jU.k)({
+              largePointer: UU
             })
           },
-          circleInfoText: DD("controller:settingsLargePointerInfo")
+          circleInfoText: UU("controller:settingsLargePointerInfo")
         })]
       })
     };
-    var IQ = cD(8564);
-    const pQ = new class {
-        constructor(DD) {
-          this.router = DD, this.current = null
+    var Uq = gU(8492);
+    const Rq = new class {
+        constructor(UU) {
+          this.router = UU, this.current = null
         }
-        claim(DD, CD) {
-          const cD = this.current;
-          cD && (this.current = null, cD.release(), cD.onTakenOver());
-          const ID = this.router.register({
-              ...DD,
+        claim(UU, RU) {
+          const gU = this.current;
+          gU && (this.current = null, gU.release(), gU.onTakenOver());
+          const tU = this.router.register({
+              ...UU,
               name: "capture"
             }),
-            pD = {
-              release: ID,
-              onTakenOver: CD
+            pU = {
+              release: tU,
+              onTakenOver: RU
             };
-          return this.current = pD, () => {
-            this.current === pD && (this.current = null), ID()
+          return this.current = pU, () => {
+            this.current === pU && (this.current = null), tU()
           }
         }
-      }(BD.d),
-      iQ = DD => {
-        (0, lD.useEffect)((() => {
-          if (!DD) return;
-          const CD = DD();
-          let cD = !1;
-          const ID = () => {
-              cD || (cD = !0, CD.onEnd())
+      }(GU.e),
+      gq = UU => {
+        (0, vU.useEffect)((() => {
+          if (!UU) return;
+          const RU = UU();
+          let gU = !1;
+          const tU = () => {
+              gU || (gU = !0, RU.onEnd())
             },
-            pD = pQ.claim({
-              isActive: () => !cD,
-              onFrame: DD => {
-                CD.onFrame(DD, ID)
+            pU = Rq.claim({
+              isActive: () => !gU,
+              onFrame: UU => {
+                RU.onFrame(UU, tU)
               }
-            }, ID),
-            iD = void 0 === CD.timeoutMs ? void 0 : window.setTimeout(ID, CD.timeoutMs),
-            fD = DD => {
-              "Escape" === DD.key && (DD.preventDefault(), DD.stopPropagation(), ID())
+            }, tU),
+            EU = void 0 === RU.timeoutMs ? void 0 : window.setTimeout(tU, RU.timeoutMs),
+            PU = UU => {
+              "Escape" === UU.key && (UU.preventDefault(), UU.stopPropagation(), tU())
             };
-          return window.addEventListener("keydown", fD, !0), () => {
-            cD = !0, pD(), window.clearTimeout(iD), window.removeEventListener("keydown", fD, !0)
+          return window.addEventListener("keydown", PU, !0), () => {
+            gU = !0, pU(), window.clearTimeout(EU), window.removeEventListener("keydown", PU, !0)
           }
-        }), [DD])
+        }), [UU])
       },
-      fQ = DD => {
+      tq = UU => {
         let {
-          row: CD,
-          capturing: cD,
-          onCapture: ID,
-          holdFillRef: iD,
-          onRebind: fD,
-          swapped: bD
-        } = DD;
+          row: RU,
+          capturing: gU,
+          onCapture: tU,
+          holdFillRef: EU,
+          onRebind: PU,
+          swapped: TU
+        } = UU;
         const {
-          t: QD
-        } = (0, pD.F)();
-        if ("fixed" === CD.kind) return (0, GD.jsx)("div", {
+          t: qU
+        } = (0, pU.B)();
+        if ("fixed" === RU.kind) return (0, SU.jsx)("div", {
           className: "ControlRow PadControlRow PadControlRowFixed",
-          children: (0, GD.jsxs)("div", {
+          children: (0, SU.jsxs)("div", {
             className: "ControlRowInner",
-            children: [(0, GD.jsx)("div", {
+            children: [(0, SU.jsx)("div", {
               className: "ControlName",
-              children: QD(CD.labelKey)
-            }), (0, GD.jsx)("div", {
+              children: qU(RU.labelKey)
+            }), (0, SU.jsx)("div", {
               className: "ControlBindingsContainer",
-              children: (0, GD.jsx)("div", {
+              children: (0, SU.jsx)("div", {
                 className: "ControlBindingsList",
-                children: (0, GD.jsx)("div", {
+                children: (0, SU.jsx)("div", {
                   className: "ControlBinding PadBinding",
-                  children: (0, GD.jsx)(Zi, {
-                    glyph: "move" === CD.stick ? (0, SD.u)() : (0, SD.q)()
+                  children: (0, SU.jsx)(hE, {
+                    glyph: "move" === RU.stick ? (0, cU.o)() : (0, cU.m)()
                   })
                 })
               })
@@ -6170,602 +6170,602 @@ export const modules = {
           })
         });
         const {
-          action: wD
-        } = CD, BD = (0, SD.h)(wD), yD = (0, SD.k)(wD), MD = BD !== yD && (0, SD.e)(wD, yD);
-        return (0, GD.jsxs)("div", {
-          className: TD()("ControlRow PadControlRow", {
-            Capturing: cD
+          action: KU
+        } = RU, GU = (0, cU.f)(KU), jU = (0, cU.g)(KU), uU = GU !== jU && (0, cU.b)(KU, jU);
+        return (0, SU.jsxs)("div", {
+          className: HU()("ControlRow PadControlRow", {
+            Capturing: gU
           }),
-          children: [(0, GD.jsxs)("div", {
+          children: [(0, SU.jsxs)("div", {
             className: "ControlRowInner",
-            children: [(0, GD.jsx)("div", {
+            children: [(0, SU.jsx)("div", {
               className: "ControlName",
-              children: QD(db.k[wD])
-            }), (0, GD.jsxs)("div", {
+              children: qU(ST.g[KU])
+            }), (0, SU.jsxs)("div", {
               className: "ControlBindingsContainer",
-              children: [!cD && (0, GD.jsxs)("div", {
+              children: [!gU && (0, SU.jsxs)("div", {
                 className: "ControlBindingsList",
-                children: [(0, GD.jsx)("div", {
+                children: [(0, SU.jsx)("div", {
                   className: "ControlBinding PadBinding",
                   "data-pad-focusable": !0,
                   onClick: () => {
-                    ID(wD)
+                    tU(KU)
                   },
-                  children: (0, GD.jsx)(Zi, {
-                    glyph: BD
+                  children: (0, SU.jsx)(hE, {
+                    glyph: GU
                   })
-                }), MD && (0, GD.jsx)("div", {
+                }), uU && (0, SU.jsx)("div", {
                   className: "ControlBinding PadBindingReset",
-                  title: QD("controller:settingsReset"),
+                  title: qU("controller:settingsReset"),
                   "data-pad-focusable": !0,
                   onClick: () => {
-                    fD(wD, yD)
+                    PU(KU, jU)
                   },
-                  children: (0, GD.jsx)(Ob.c, {
+                  children: (0, SU.jsx)(xT.c, {
                     name: "arrows-rotate"
                   })
                 })]
-              }), cD && (0, GD.jsxs)("div", {
+              }), gU && (0, SU.jsxs)("div", {
                 className: "ControlBindingAddInput",
-                children: [(0, GD.jsxs)("div", {
+                children: [(0, SU.jsxs)("div", {
                   className: "PadCaptureBox",
-                  children: [(0, GD.jsx)("span", {
-                    children: QD("controller:settingsCapturePrompt")
-                  }), (0, GD.jsx)("div", {
-                    ref: iD,
+                  children: [(0, SU.jsx)("span", {
+                    children: qU("controller:settingsCapturePrompt")
+                  }), (0, SU.jsx)("div", {
+                    ref: EU,
                     className: "PadCaptureHoldFill"
                   })]
-                }), (0, GD.jsx)("div", {
+                }), (0, SU.jsx)("div", {
                   className: "ControlBindingAddCancel",
                   "data-pad-focusable": !0,
                   onClick: () => {
-                    ID(null)
+                    tU(null)
                   },
                   children: "\xd7"
                 })]
-              }), cD && (0, GD.jsx)("div", {
+              }), gU && (0, SU.jsx)("div", {
                 className: "PadCaptureHint",
-                children: (0, GD.jsx)(Rb.e, {
-                  text: QD((0, SD.e)(wD, (0, SD.h)("menuBack")) ? "controller:settingsCaptureCancelOrBindHint" : "controller:settingsCaptureCancelHint", {
-                    button: Rb.h
+                children: (0, SU.jsx)(dT.d, {
+                  text: qU((0, cU.b)(KU, (0, cU.f)("menuBack")) ? "controller:settingsCaptureCancelOrBindHint" : "controller:settingsCaptureCancelHint", {
+                    button: dT.f
                   }),
-                  glyph: (0, SD.h)("menuBack")
+                  glyph: (0, cU.f)("menuBack")
                 })
               })]
             })]
-          }), bD.map((DD => (0, GD.jsx)("div", {
+          }), TU.map((UU => (0, SU.jsx)("div", {
             className: "ControlRowWarning PadSwapNotice",
-            children: (0, GD.jsx)(Rb.e, {
-              text: QD("controller:settingsSwapNotice", {
-                action: QD(db.k[DD]),
-                button: Rb.h
+            children: (0, SU.jsx)(dT.d, {
+              text: qU("controller:settingsSwapNotice", {
+                action: qU(ST.g[UU]),
+                button: dT.f
               }),
-              glyph: (0, SD.h)(DD)
+              glyph: (0, cU.f)(UU)
             })
-          }, DD))), cD && (0, GD.jsx)("div", {
+          }, UU))), gU && (0, SU.jsx)("div", {
             className: "PadCaptureTimer",
             style: {
-              animationDuration: `${db.w}ms`
+              animationDuration: `${ST.t}ms`
             }
           })]
         })
       },
-      bQ = [],
-      QQ = DD => {
+      pq = [],
+      Eq = UU => {
         let {
-          layoutSetting: CD
-        } = DD;
+          layoutSetting: RU
+        } = UU;
         const {
-          t: cD
-        } = (0, pD.F)(), ID = (0, yD.l)();
-        (0, MD.B)();
-        const iD = (0, lD.useRef)(null),
-          [fD, bD] = (0, lD.useState)(null),
-          QD = (0, lD.useCallback)(((DD, CD) => {
-            const cD = (0, yD.h)().bindings;
-            (0, SD.D)(DD, CD);
-            const ID = (0, SD.v)(cD, DD);
-            bD(ID.length > 0 ? {
-              action: DD,
-              swapped: ID
+          t: gU
+        } = (0, pU.B)(), tU = (0, jU.n)();
+        (0, uU.z)();
+        const EU = (0, vU.useRef)(null),
+          [PU, TU] = (0, vU.useState)(null),
+          qU = (0, vU.useCallback)(((UU, RU) => {
+            const gU = (0, jU.h)().bindings;
+            (0, cU.z)(UU, RU);
+            const tU = (0, cU.r)(gU, UU);
+            TU(tU.length > 0 ? {
+              action: UU,
+              swapped: tU
             } : null)
           }), []),
-          [wD, ZD] = ((DD, CD) => {
-            const [cD, ID] = (0, lD.useState)(null), pD = (0, lD.useMemo)((() => cD ? () => {
-              const pD = (0, SD.h)("menuBack"),
-                iD = new db.e(pD, (0, SD.h)("menuConfirm"), (DD => (0, SD.e)(cD, DD)));
+          [KU, hU] = ((UU, RU) => {
+            const [gU, tU] = (0, vU.useState)(null), pU = (0, vU.useMemo)((() => gU ? () => {
+              const pU = (0, cU.f)("menuBack"),
+                EU = new ST.c(pU, (0, cU.f)("menuConfirm"), (UU => (0, cU.b)(gU, UU)));
               return {
-                onFrame: (ID, fD) => {
-                  var bD;
-                  const QD = ID.frame.timestampMs,
-                    wD = iD.update({
-                      ...ID,
-                      isDown: DD => (0, tD.D)(ID.frame.values, DD)
-                    }, QD);
-                  null === (bD = DD.current) || void 0 === bD || bD.style.setProperty("width", 100 * iD.getBindHoldProgress(QD) + "%"), wD && ("bind" === wD.kind ? (BD.d.consumeButton(wD.button), CD(cD, wD.button)) : BD.d.consumeButton(pD), fD())
+                onFrame: (tU, PU) => {
+                  var TU;
+                  const qU = tU.frame.timestampMs,
+                    KU = EU.update({
+                      ...tU,
+                      isDown: UU => (0, CU.C)(tU.frame.values, UU)
+                    }, qU);
+                  null === (TU = UU.current) || void 0 === TU || TU.style.setProperty("width", 100 * EU.getBindHoldProgress(qU) + "%"), KU && ("bind" === KU.kind ? (GU.e.consumeButton(KU.button), RU(gU, KU.button)) : GU.e.consumeButton(pU), PU())
                 },
                 onEnd: () => {
-                  ID(null)
+                  tU(null)
                 },
-                timeoutMs: db.w
+                timeoutMs: ST.t
               }
-            } : null), [cD, DD, CD]);
-            return iQ(pD), [cD, ID]
-          })(iD, QD),
-          oD = DD => {
-            DD && bD(null), ZD(DD)
+            } : null), [gU, UU, RU]);
+            return gq(pU), [gU, tU]
+          })(EU, qU),
+          QU = UU => {
+            UU && TU(null), hU(UU)
           };
-        (0, lD.useEffect)((() => {
-          if (!fD) return;
-          const DD = window.setTimeout((() => {
-            bD(null)
-          }), db.ob);
+        (0, vU.useEffect)((() => {
+          if (!PU) return;
+          const UU = window.setTimeout((() => {
+            TU(null)
+          }), ST.ub);
           return () => {
-            window.clearTimeout(DD)
+            window.clearTimeout(UU)
           }
-        }), [fD]);
-        const vD = !ID.swapSticks && 0 === Object.keys(ID.bindings).length;
-        return (0, GD.jsxs)("div", {
+        }), [PU]);
+        const eU = !tU.swapSticks && 0 === Object.keys(tU.bindings).length;
+        return (0, SU.jsxs)("div", {
           className: "ControlsContainer PadControlsContainer",
-          children: [(0, GD.jsx)("div", {
+          children: [(0, SU.jsx)("div", {
             className: "SliderText",
-            children: cD("controller:settingsRemap")
-          }), (0, GD.jsx)("div", {
+            children: gU("controller:settingsRemap")
+          }), (0, SU.jsx)("div", {
             className: "ControllerSettingsHint",
-            children: cD("controller:settingsRemapHint")
-          }), (0, GD.jsx)(Hb.J, {
+            children: gU("controller:settingsRemapHint")
+          }), (0, SU.jsx)(IT.E, {
             className: "ResetBindingsButton PadResetAllButton",
-            disabled: vD,
+            disabled: eU,
             onClick: () => {
-              oD(null), bD(null), (0, SD.E)()
+              QU(null), TU(null), (0, cU.C)()
             },
-            children: cD("controller:settingsResetAll")
-          }), CD, db.jb.map(((DD, CD) => (0, GD.jsx)(IQ.d, {
-            title: cD(DD.titleKey),
-            defaultOpen: 0 === CD,
-            children: DD.rows.map((DD => (0, GD.jsx)(fQ, {
-              row: DD,
-              capturing: "action" === DD.kind && DD.action === wD,
-              onCapture: oD,
-              holdFillRef: iD,
-              onRebind: QD,
-              swapped: "action" === DD.kind && (null === fD || void 0 === fD ? void 0 : fD.action) === DD.action ? fD.swapped : bQ
-            }, "action" === DD.kind ? DD.action : DD.labelKey)))
-          }, DD.titleKey)))]
+            children: gU("controller:settingsResetAll")
+          }), RU, ST.ob.map(((UU, RU) => (0, SU.jsx)(Uq.c, {
+            title: gU(UU.titleKey),
+            defaultOpen: 0 === RU,
+            children: UU.rows.map((UU => (0, SU.jsx)(tq, {
+              row: UU,
+              capturing: "action" === UU.kind && UU.action === KU,
+              onCapture: QU,
+              holdFillRef: EU,
+              onRebind: qU,
+              swapped: "action" === UU.kind && (null === PU || void 0 === PU ? void 0 : PU.action) === UU.action ? PU.swapped : pq
+            }, "action" === UU.kind ? UU.action : UU.labelKey)))
+          }, UU.titleKey)))]
         })
       },
-      wQ = DD => {
+      Pq = UU => {
         let {
-          deadzone: CD,
-          dotRef: cD,
-          labelKey: ID
-        } = DD;
+          deadzone: RU,
+          dotRef: gU,
+          labelKey: tU
+        } = UU;
         const {
-          t: iD
-        } = (0, pD.F)();
-        return (0, GD.jsxs)("div", {
+          t: EU
+        } = (0, pU.B)();
+        return (0, SU.jsxs)("div", {
           className: "ControllerTesterStick",
-          children: [(0, GD.jsxs)("div", {
+          children: [(0, SU.jsxs)("div", {
             className: "ControllerTesterStickCircle",
-            children: [(0, GD.jsx)("div", {
+            children: [(0, SU.jsx)("div", {
               className: "ControllerTesterDeadzone",
               style: {
-                width: 100 * CD + "%",
-                height: 100 * CD + "%"
+                width: 100 * RU + "%",
+                height: 100 * RU + "%"
               }
-            }), (0, GD.jsx)("div", {
-              ref: cD,
+            }), (0, SU.jsx)("div", {
+              ref: gU,
               className: "ControllerTesterDot"
             })]
-          }), (0, GD.jsx)("div", {
+          }), (0, SU.jsx)("div", {
             className: "ControllerTesterStickLabel",
-            children: iD(ID)
+            children: EU(tU)
           })]
         })
       },
-      SQ = (DD, CD, cD, ID) => {
-        var pD;
-        DD && (DD.style.left = 50 + 50 * Math.max(-1, Math.min(1, CD.x)) + "%", DD.style.top = 50 + 50 * Math.max(-1, Math.min(1, CD.y)) + "%", null === (pD = DD.parentElement) || void 0 === pD || pD.classList.toggle("Active", ID || Math.hypot(CD.x, CD.y) > cD))
+      Tq = (UU, RU, gU, tU) => {
+        var pU;
+        UU && (UU.style.left = 50 + 50 * Math.max(-1, Math.min(1, RU.x)) + "%", UU.style.top = 50 + 50 * Math.max(-1, Math.min(1, RU.y)) + "%", null === (pU = UU.parentElement) || void 0 === pU || pU.classList.toggle("Active", tU || Math.hypot(RU.x, RU.y) > gU))
       },
-      BQ = DD => {
-        const CD = {
-            deadzone: DD.moveDeadzone,
+      qq = UU => {
+        const RU = {
+            deadzone: UU.moveDeadzone,
             labelKey: "controller:settingsActionMove"
           },
-          cD = {
-            deadzone: DD.lookDeadzone,
+          gU = {
+            deadzone: UU.lookDeadzone,
             labelKey: "controller:settingsActionLook"
           };
-        return DD.swapSticks ? {
-          left: cD,
-          right: CD
+        return UU.swapSticks ? {
+          left: gU,
+          right: RU
         } : {
-          left: CD,
-          right: cD
+          left: RU,
+          right: gU
         }
       },
-      yQ = () => {
+      Kq = () => {
         const {
-          t: DD
-        } = (0, pD.F)(), CD = (() => {
-          const [DD, CD] = (0, lD.useState)((() => fD.e.getActivePad()));
-          return (0, wi.f)(fD.c, (() => {
-            CD(fD.e.getActivePad())
-          })), DD
-        })(), cD = BQ((0, yD.l)()), ID = (0, lD.useRef)(null), iD = (0, lD.useRef)(null), bD = (0, lD.useRef)([]), QD = (0, lD.useRef)(null), wD = (0, lD.useRef)(null), [MD, ZD] = (DD => {
-          const [CD, cD] = (0, lD.useState)(!1), ID = (0, lD.useMemo)((() => CD ? () => {
-            const CD = (0, SD.h)("menuBack"),
-              ID = new db.i;
+          t: UU
+        } = (0, pU.B)(), RU = (() => {
+          const [UU, RU] = (0, vU.useState)((() => PU.g.getActivePad()));
+          return (0, KE.e)(PU.e, (() => {
+            RU(PU.g.getActivePad())
+          })), UU
+        })(), gU = qq((0, jU.n)()), tU = (0, vU.useRef)(null), EU = (0, vU.useRef)(null), TU = (0, vU.useRef)([]), qU = (0, vU.useRef)(null), KU = (0, vU.useRef)(null), [uU, hU] = (UU => {
+          const [RU, gU] = (0, vU.useState)(!1), tU = (0, vU.useMemo)((() => RU ? () => {
+            const RU = (0, cU.f)("menuBack"),
+              tU = new ST.e;
             return {
-              onFrame: (cD, pD) => {
-                var iD;
-                const fD = ID.update({
-                  pressed: cD.wasPressed(CD),
-                  Lb: cD.isHeld(CD)
-                }, cD.frame.timestampMs);
-                null === (iD = DD.current) || void 0 === iD || iD.style.setProperty("width", 100 * fD + "%"), fD >= 1 && (BD.d.consumeButton(CD), pD())
+              onFrame: (gU, pU) => {
+                var EU;
+                const PU = tU.update({
+                  pressed: gU.wasPressed(RU),
+                  WT: gU.isHeld(RU)
+                }, gU.frame.timestampMs);
+                null === (EU = UU.current) || void 0 === EU || EU.style.setProperty("width", 100 * PU + "%"), PU >= 1 && (GU.e.consumeButton(RU), pU())
               },
               onEnd: () => {
-                cD(!1)
+                gU(!1)
               }
             }
-          } : null), [CD, DD]);
-          return iQ(ID), [CD, cD]
-        })(iD);
-        (0, lD.useEffect)((() => {
-          const DD = DD => {
-            for (const cD of tD.V) {
-              const CD = (0, tD.m)(cD),
-                ID = bD.current[CD];
-              if (!ID) continue;
-              const pD = DD.values[CD];
-              ID.classList.toggle("Pressed", pD >= tD.w), (0, tD.H)(CD) && ID.style.setProperty("--trigger-fill", `${Math.round(100*pD)}%`)
+          } : null), [RU, UU]);
+          return gq(tU), [RU, gU]
+        })(EU);
+        (0, vU.useEffect)((() => {
+          const UU = UU => {
+            for (const gU of CU.O) {
+              const RU = (0, CU.j)(gU),
+                tU = TU.current[RU];
+              if (!tU) continue;
+              const pU = UU.values[RU];
+              tU.classList.toggle("Pressed", pU >= CU.u), (0, CU.E)(RU) && tU.style.setProperty("--trigger-fill", `${Math.round(100*pU)}%`)
             }
-            const CD = BQ((0, yD.h)());
-            SQ(QD.current, DD.leftStick, CD.left.deadzone, DD.values[(0, tD.m)("LS")] >= tD.w), SQ(wD.current, DD.rightStick, CD.right.deadzone, DD.values[(0, tD.m)("RS")] >= tD.w)
+            const RU = qq((0, jU.h)());
+            Tq(qU.current, UU.leftStick, RU.left.deadzone, UU.values[(0, CU.j)("LS")] >= CU.u), Tq(KU.current, UU.rightStick, RU.right.deadzone, UU.values[(0, CU.j)("RS")] >= CU.u)
           };
-          return CD || DD((0, tD.t)()), fD.e.onFrame(DD)
-        }), [CD]), (0, lD.useEffect)((() => {
-          CD || ZD(!1)
-        }), [CD, ZD]), (0, lD.useEffect)((() => {
-          var DD;
-          MD && (null === (DD = ID.current) || void 0 === DD || DD.scrollIntoView({
+          return RU || UU((0, CU.t)()), PU.g.onFrame(UU)
+        }), [RU]), (0, vU.useEffect)((() => {
+          RU || hU(!1)
+        }), [RU, hU]), (0, vU.useEffect)((() => {
+          var UU;
+          uU && (null === (UU = tU.current) || void 0 === UU || UU.scrollIntoView({
             block: "nearest"
           }))
-        }), [MD]);
-        const oD = db.fb.find((DD => DD.value === (null === CD || void 0 === CD ? void 0 : CD.family)));
-        return (0, GD.jsxs)("div", {
-          ref: ID,
-          className: TD()("SettingBox ControllerTester", {
-            Testing: MD
+        }), [uU]);
+        const QU = ST.gb.find((UU => UU.value === (null === RU || void 0 === RU ? void 0 : RU.family)));
+        return (0, SU.jsxs)("div", {
+          ref: tU,
+          className: HU()("SettingBox ControllerTester", {
+            Testing: uU
           }),
-          children: [(0, GD.jsxs)("div", {
+          children: [(0, SU.jsxs)("div", {
             className: "ControllerTesterHeader",
-            children: [(0, GD.jsxs)("div", {
+            children: [(0, SU.jsxs)("div", {
               className: "ControllerTesterInfo",
-              children: [CD && (0, GD.jsx)("div", {
-                children: DD("controller:settingsTesterFamily", {
-                  family: oD ? DD(oD.labelKey) : CD.family
+              children: [RU && (0, SU.jsx)("div", {
+                children: UU("controller:settingsTesterFamily", {
+                  family: QU ? UU(QU.labelKey) : RU.family
                 })
-              }), CD && (0, GD.jsx)("div", {
+              }), RU && (0, SU.jsx)("div", {
                 className: "ControllerTesterPadId",
-                children: CD.id
-              }), !CD && (0, GD.jsx)("div", {
-                children: DD("controller:settingsTesterNoPad")
+                children: RU.id
+              }), !RU && (0, SU.jsx)("div", {
+                children: UU("controller:settingsTesterNoPad")
               })]
-            }), (CD || MD) && (0, GD.jsx)(Hb.i, {
+            }), (RU || uU) && (0, SU.jsx)(IT.e, {
               className: "ControllerTesterToggle",
               onClick: () => {
-                ZD(!MD)
+                hU(!uU)
               },
-              children: DD(MD ? "controller:settingsTesterStop" : "controller:settingsTesterStart")
+              children: UU(uU ? "controller:settingsTesterStop" : "controller:settingsTesterStart")
             })]
-          }), CD && !MD && (0, GD.jsx)("div", {
+          }), RU && !uU && (0, SU.jsx)("div", {
             className: "ControllerSettingsHint",
-            children: DD("controller:settingsTesterHint")
-          }), MD && (0, GD.jsxs)("div", {
+            children: UU("controller:settingsTesterHint")
+          }), uU && (0, SU.jsxs)("div", {
             className: "ControllerTesterBanner",
-            children: [(0, GD.jsx)(Rb.e, {
-              text: DD("controller:settingsTesterTesting", {
-                button: Rb.h
+            children: [(0, SU.jsx)(dT.d, {
+              text: UU("controller:settingsTesterTesting", {
+                button: dT.f
               }),
-              glyph: (0, SD.h)("menuBack")
-            }), (0, GD.jsx)("div", {
-              ref: iD,
+              glyph: (0, cU.f)("menuBack")
+            }), (0, SU.jsx)("div", {
+              ref: EU,
               className: "ControllerTesterExitFill"
             })]
-          }), (0, GD.jsxs)("div", {
+          }), (0, SU.jsxs)("div", {
             className: "ControllerTesterBody",
-            children: [(0, GD.jsx)(wQ, {
-              deadzone: cD.left.deadzone,
-              dotRef: QD,
-              labelKey: cD.left.labelKey
-            }), (0, GD.jsx)("div", {
+            children: [(0, SU.jsx)(Pq, {
+              deadzone: gU.left.deadzone,
+              dotRef: qU,
+              labelKey: gU.left.labelKey
+            }), (0, SU.jsx)("div", {
               className: "ControllerTesterButtons",
-              children: tD.V.map((DD => {
-                const cD = (0, tD.m)(DD);
-                return (0, GD.jsx)("div", {
-                  ref: DD => {
-                    bD.current[cD] = DD
+              children: CU.O.map((UU => {
+                const gU = (0, CU.j)(UU);
+                return (0, SU.jsx)("div", {
+                  ref: UU => {
+                    TU.current[gU] = UU
                   },
-                  className: (0, tD.H)(cD) ? "ControllerTesterButton ControllerTesterTrigger" : "ControllerTesterButton",
-                  children: (0, GD.jsx)(Zi, {
-                    glyph: DD,
-                    family: null === CD || void 0 === CD ? void 0 : CD.family
+                  className: (0, CU.E)(gU) ? "ControllerTesterButton ControllerTesterTrigger" : "ControllerTesterButton",
+                  children: (0, SU.jsx)(hE, {
+                    glyph: UU,
+                    family: null === RU || void 0 === RU ? void 0 : RU.family
                   })
-                }, DD)
+                }, UU)
               }))
-            }), (0, GD.jsx)(wQ, {
-              deadzone: cD.right.deadzone,
-              dotRef: wD,
-              labelKey: cD.right.labelKey
+            }), (0, SU.jsx)(Pq, {
+              deadzone: gU.right.deadzone,
+              dotRef: KU,
+              labelKey: gU.right.labelKey
             })]
           })]
         })
       },
-      MQ = (0, lD.memo)((function() {
+      cq = (0, vU.memo)((function() {
         const {
-          t: DD
-        } = (0, pD.F)(), CD = (0, yD.l)(), [cD, ID] = (0, lD.useState)(!1);
-        return (0, lD.useEffect)((() => {
-          if (!cD) return;
-          const DD = window.setTimeout((() => {
-            ID(!1)
-          }), db.ob);
+          t: UU
+        } = (0, pU.B)(), RU = (0, jU.n)(), [gU, tU] = (0, vU.useState)(!1);
+        return (0, vU.useEffect)((() => {
+          if (!gU) return;
+          const UU = window.setTimeout((() => {
+            tU(!1)
+          }), ST.ub);
           return () => {
-            window.clearTimeout(DD)
+            window.clearTimeout(UU)
           }
-        }), [cD]), (0, GD.jsxs)("div", {
+        }), [gU]), (0, SU.jsxs)("div", {
           className: "SettingsMenuRightInner ControllerCategory",
-          children: [(0, GD.jsx)(Yb, {
-            text: DD("controller:settingsLook")
-          }), (0, GD.jsx)(sb, {
+          children: [(0, SU.jsx)(sT, {
+            text: UU("controller:settingsLook")
+          }), (0, SU.jsx)(kT, {
             settingKey: "lookSensitivityX",
-            label: DD("controller:settingsLookSensitivityX"),
-            range: db.lb,
-            format: db.J
-          }), (0, GD.jsx)(sb, {
+            label: UU("controller:settingsLookSensitivityX"),
+            range: ST.pb,
+            format: ST.N
+          }), (0, SU.jsx)(kT, {
             settingKey: "lookSensitivityY",
-            label: DD("controller:settingsLookSensitivityY"),
-            range: db.lb,
-            format: db.J
-          }), (0, GD.jsx)(sb, {
+            label: UU("controller:settingsLookSensitivityY"),
+            range: ST.pb,
+            format: ST.N
+          }), (0, SU.jsx)(kT, {
             settingKey: "aimLookSensitivity",
-            label: DD("controller:settingsAimLookSensitivity"),
-            range: db.n,
-            format: db.J
-          }), (0, GD.jsx)(Wb, {
-            label: DD("controller:settingsLookCurve"),
-            hint: DD("controller:settingsLookCurveHint"),
-            options: db.ab,
-            value: CD.lookCurve,
-            onChange: DD => {
-              (0, yD.j)({
-                lookCurve: DD
+            label: UU("controller:settingsAimLookSensitivity"),
+            range: ST.j,
+            format: ST.N
+          }), (0, SU.jsx)(yT, {
+            label: UU("controller:settingsLookCurve"),
+            hint: UU("controller:settingsLookCurveHint"),
+            options: ST.bb,
+            value: RU.lookCurve,
+            onChange: UU => {
+              (0, jU.k)({
+                lookCurve: UU
               })
             }
-          }), (0, GD.jsx)(Gb.e, {
-            label: DD("controller:settingsInvertLookX"),
-            checked: CD.invertLookX,
-            onClick: DD => {
-              (0, yD.j)({
-                invertLookX: DD
+          }), (0, SU.jsx)(vT.b, {
+            label: UU("controller:settingsInvertLookX"),
+            checked: RU.invertLookX,
+            onClick: UU => {
+              (0, jU.k)({
+                invertLookX: UU
               })
             }
-          }), (0, GD.jsx)(Gb.e, {
-            label: DD("controller:settingsInvertLookY"),
-            checked: CD.invertLookY,
-            onClick: DD => {
-              (0, yD.j)({
-                invertLookY: DD
+          }), (0, SU.jsx)(vT.b, {
+            label: UU("controller:settingsInvertLookY"),
+            checked: RU.invertLookY,
+            onClick: UU => {
+              (0, jU.k)({
+                invertLookY: UU
               })
             }
-          }), (0, GD.jsx)(sb, {
+          }), (0, SU.jsx)(kT, {
             settingKey: "lookDeadzone",
-            label: DD("controller:settingsLookDeadzone"),
-            range: db.C,
-            format: db.G
-          }), (0, GD.jsx)(DQ, {}), (0, GD.jsx)(Yb, {
-            text: DD("controller:settingsMovement")
-          }), (0, GD.jsx)(sb, {
+            label: UU("controller:settingsLookDeadzone"),
+            range: ST.y,
+            format: ST.F
+          }), (0, SU.jsx)(NT, {}), (0, SU.jsx)(sT, {
+            text: UU("controller:settingsMovement")
+          }), (0, SU.jsx)(kT, {
             settingKey: "moveDeadzone",
-            label: DD("controller:settingsMoveDeadzone"),
-            range: db.C,
-            format: db.G
-          }), (0, GD.jsx)(Gb.e, {
-            label: DD("controller:settingsAutoSprint"),
-            checked: CD.autoSprint,
-            onClick: DD => {
-              (0, yD.j)({
-                autoSprint: DD
+            label: UU("controller:settingsMoveDeadzone"),
+            range: ST.y,
+            format: ST.F
+          }), (0, SU.jsx)(vT.b, {
+            label: UU("controller:settingsAutoSprint"),
+            checked: RU.autoSprint,
+            onClick: UU => {
+              (0, jU.k)({
+                autoSprint: UU
               })
             },
-            circleInfoText: DD("controller:settingsAutoSprintInfo")
-          }), (0, GD.jsx)(Wb, {
-            label: DD("controller:settingsSneak"),
-            options: db.nb,
-            value: CD.sneakMode,
-            onChange: DD => {
-              (0, yD.j)({
-                sneakMode: DD
+            circleInfoText: UU("controller:settingsAutoSprintInfo")
+          }), (0, SU.jsx)(yT, {
+            label: UU("controller:settingsSneak"),
+            options: ST.tb,
+            value: RU.sneakMode,
+            onChange: UU => {
+              (0, jU.k)({
+                sneakMode: UU
               })
             }
-          }), (0, GD.jsx)(Yb, {
-            text: DD("controller:settingsButtons")
-          }), (0, GD.jsx)(Wb, {
-            label: DD("controller:settingsPromptFamily"),
-            options: db.fb,
-            value: CD.promptFamily,
-            onChange: DD => {
-              (0, yD.j)({
-                promptFamily: DD
+          }), (0, SU.jsx)(sT, {
+            text: UU("controller:settingsButtons")
+          }), (0, SU.jsx)(yT, {
+            label: UU("controller:settingsPromptFamily"),
+            options: ST.gb,
+            value: RU.promptFamily,
+            onChange: UU => {
+              (0, jU.k)({
+                promptFamily: UU
               })
             }
-          }), (0, GD.jsx)(Gb.e, {
-            label: DD("controller:settingsHideButtonHints"),
-            checked: CD.hideButtonHints,
-            onClick: DD => {
-              (0, yD.j)({
-                hideButtonHints: DD
+          }), (0, SU.jsx)(vT.b, {
+            label: UU("controller:settingsHideButtonHints"),
+            checked: RU.hideButtonHints,
+            onClick: UU => {
+              (0, jU.k)({
+                hideButtonHints: UU
               })
             }
-          }), (0, GD.jsx)(Gb.e, {
-            label: DD("controller:settingsVibration"),
-            checked: CD.vibration,
-            onClick: DD => {
-              (0, yD.j)({
-                vibration: DD
-              }), DD && rp("preview")
+          }), (0, SU.jsx)(vT.b, {
+            label: UU("controller:settingsVibration"),
+            checked: RU.vibration,
+            onClick: UU => {
+              (0, jU.k)({
+                vibration: UU
+              }), UU && lp("preview")
             }
-          }), (0, GD.jsx)(sb, {
+          }), (0, SU.jsx)(kT, {
             settingKey: "cursorSpeed",
-            label: DD("controller:settingsCursorSpeed"),
-            range: db.y,
-            format: db.J
-          }), (0, GD.jsx)(Gb.e, {
-            label: DD("controller:settingsCursorMagnetism"),
-            checked: CD.cursorMagnetism,
-            onClick: DD => {
-              (0, yD.j)({
-                cursorMagnetism: DD
+            label: UU("controller:settingsCursorSpeed"),
+            range: ST.w,
+            format: ST.N
+          }), (0, SU.jsx)(vT.b, {
+            label: UU("controller:settingsCursorMagnetism"),
+            checked: RU.cursorMagnetism,
+            onClick: UU => {
+              (0, jU.k)({
+                cursorMagnetism: UU
               })
             }
-          }), (0, GD.jsx)(Gb.e, {
-            label: DD("controller:settingsMenuBackToCategories"),
-            checked: CD.menuBackToCategories,
-            onClick: DD => {
-              (0, yD.j)({
-                menuBackToCategories: DD
+          }), (0, SU.jsx)(vT.b, {
+            label: UU("controller:settingsMenuBackToCategories"),
+            checked: RU.menuBackToCategories,
+            onClick: UU => {
+              (0, jU.k)({
+                menuBackToCategories: UU
               })
             }
-          }), (0, GD.jsx)(QQ, {
-            layoutSetting: (0, GD.jsxs)(GD.Fragment, {
-              children: [SD.f.map((cD => (0, GD.jsx)(Gb.e, {
-                label: DD(db.W[cD]),
-                checked: (0, SD.B)(cD, CD),
-                onClick: DD => {
-                  ID(!(0, SD.I)(cD, DD))
+          }), (0, SU.jsx)(Eq, {
+            layoutSetting: (0, SU.jsxs)(SU.Fragment, {
+              children: [cU.d.map((gU => (0, SU.jsx)(vT.b, {
+                label: UU(ST.Y[gU]),
+                checked: (0, cU.x)(gU, RU),
+                onClick: UU => {
+                  tU(!(0, cU.E)(gU, UU))
                 }
-              }, cD))), cD && (0, GD.jsx)("div", {
+              }, gU))), gU && (0, SU.jsx)("div", {
                 className: "PadLayoutRefusedNotice",
                 role: "status",
-                children: DD("controller:settingsLayoutRefusedToast")
+                children: UU("controller:settingsLayoutRefusedToast")
               })]
             })
-          }), (0, GD.jsx)(cQ, {}), (0, GD.jsx)(Yb, {
-            text: DD("controller:settingsAlternatives")
-          }), (0, GD.jsx)("div", {
+          }), (0, SU.jsx)(OT, {}), (0, SU.jsx)(sT, {
+            text: UU("controller:settingsAlternatives")
+          }), (0, SU.jsx)("div", {
             className: "ControllerSettingsHint",
-            children: DD("controller:settingsAlternativesHint")
-          }), (0, GD.jsx)(Wb, {
-            label: DD("controller:settingsMenuNavigation"),
-            hint: DD("controller:settingsMenuNavigationHint"),
-            options: db.bb,
-            value: CD.menuNavigation,
-            onChange: DD => {
-              (0, yD.j)({
-                menuNavigation: DD
+            children: UU("controller:settingsAlternativesHint")
+          }), (0, SU.jsx)(yT, {
+            label: UU("controller:settingsMenuNavigation"),
+            hint: UU("controller:settingsMenuNavigationHint"),
+            options: ST.db,
+            value: RU.menuNavigation,
+            onChange: UU => {
+              (0, jU.k)({
+                menuNavigation: UU
               })
             }
-          }), (0, GD.jsx)(Wb, {
-            label: DD("controller:settingsInventoryNavigation"),
-            hint: DD("controller:settingsInventoryNavigationHint"),
-            options: db.S,
-            value: CD.inventoryNavigation,
-            onChange: DD => {
-              (0, yD.j)({
-                inventoryNavigation: DD
+          }), (0, SU.jsx)(yT, {
+            label: UU("controller:settingsInventoryNavigation"),
+            hint: UU("controller:settingsInventoryNavigationHint"),
+            options: ST.V,
+            value: RU.inventoryNavigation,
+            onChange: UU => {
+              (0, jU.k)({
+                inventoryNavigation: UU
               })
             }
-          }), (0, GD.jsx)(Wb, {
-            label: DD("controller:settingsQuickChat"),
-            hint: DD("controller:settingsQuickChatHint"),
-            options: db.ib,
-            value: CD.quickChat,
-            onChange: DD => {
-              (0, yD.j)({
-                quickChat: DD
+          }), (0, SU.jsx)(yT, {
+            label: UU("controller:settingsQuickChat"),
+            hint: UU("controller:settingsQuickChatHint"),
+            options: ST.kb,
+            value: RU.quickChat,
+            onChange: UU => {
+              (0, jU.k)({
+                quickChat: UU
               })
             }
-          }), (0, GD.jsx)(Wb, {
-            label: DD("controller:settingsLeaderboardButton"),
-            hint: DD("controller:settingsLeaderboardButtonHint"),
-            options: db._,
-            value: CD.leaderboardButton,
-            onChange: DD => {
-              (0, yD.j)({
-                leaderboardButton: DD
+          }), (0, SU.jsx)(yT, {
+            label: UU("controller:settingsLeaderboardButton"),
+            hint: UU("controller:settingsLeaderboardButtonHint"),
+            options: ST.ab,
+            value: RU.leaderboardButton,
+            onChange: UU => {
+              (0, jU.k)({
+                leaderboardButton: UU
               })
             }
-          }), (0, GD.jsx)(Yb, {
-            text: DD("controller:settingsTester")
-          }), (0, GD.jsx)(yQ, {})]
+          }), (0, SU.jsx)(sT, {
+            text: UU("controller:settingsTester")
+          }), (0, SU.jsx)(Kq, {})]
         })
       }));
-    (0, pD.c)(ID);
-    for (const NQ of (0, iD.o)()) NQ.connected ? fD.e.handleConnectionEvent(NQ) : fD.e.handleDisconnectionEvent(NQ);
-    const tQ = () => null !== fD.e.getActivePad(),
-      ZQ = () => hc.getState(),
-      oQ = () => hc.isSteppingSlots(),
-      vQ = (DD, CD) => {
-        const cD = Yp.getFocused();
-        Yp.isActive() && cD && DD.contains(cD) && Yp.setFocus(CD, {
+    (0, pU.d)(tU);
+    for (const hq of (0, EU.r)()) hq.connected ? PU.g.handleConnectionEvent(hq) : PU.g.handleDisconnectionEvent(hq);
+    const Gq = () => null !== PU.g.getActivePad(),
+      jq = () => Lg.getState(),
+      uq = () => Lg.isSteppingSlots(),
+      Cq = (UU, RU) => {
+        const gU = Ap.getFocused();
+        Ap.isActive() && gU && UU.contains(gU) && Ap.setFocus(RU, {
           scroll: !1
         })
       }
   },
-  7842: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => QD,
-      h: () => wD
+  7813: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => qU,
+      f: () => KU
     });
-    var ID = cD(1414),
-      pD = cD(1412);
-    const iD = {
+    var tU = gU(1388),
+      pU = gU(1384);
+    const EU = {
         "054c": "playstation",
         "057e": "nintendo"
       },
-      fD = "28de",
-      bD = new Set(["1205"]),
-      QD = (DD, CD) => {
-        const cD = (0, ID.e)(DD);
-        if ((null === cD || void 0 === cD ? void 0 : cD.vendor) === fD) return bD.has(cD.product) ? "steamdeck" : "xbox";
-        if (cD && iD[cD.vendor]) return iD[cD.vendor];
-        if ((0, pD.e)(DD)) return "nintendo";
-        const QD = `${DD} ${null!==CD&&void 0!==CD?CD:""}`.toLowerCase();
-        return /dualsense|dualshock|playstation|sony/.test(QD) ? "playstation" : /nintendo|switch|joy-con|pro controller/.test(QD) ? "nintendo" : /steam deck/.test(QD) ? "steamdeck" : "xbox"
+      PU = "28de",
+      TU = new Set(["1205"]),
+      qU = (UU, RU) => {
+        const gU = (0, tU.e)(UU);
+        if ((null === gU || void 0 === gU ? void 0 : gU.vendor) === PU) return TU.has(gU.product) ? "steamdeck" : "xbox";
+        if (gU && EU[gU.vendor]) return EU[gU.vendor];
+        if ((0, pU.e)(UU)) return "nintendo";
+        const qU = `${UU} ${null!==RU&&void 0!==RU?RU:""}`.toLowerCase();
+        return /dualsense|dualshock|playstation|sony/.test(qU) ? "playstation" : /nintendo|switch|joy-con|pro controller/.test(qU) ? "nintendo" : /steam deck/.test(qU) ? "steamdeck" : "xbox"
       },
-      wD = DD => {
-        var CD;
-        return (null === (CD = (0, ID.e)(DD)) || void 0 === CD ? void 0 : CD.vendor) === fD
+      KU = UU => {
+        var RU;
+        return (null === (RU = (0, tU.e)(UU)) || void 0 === RU ? void 0 : RU.vendor) === PU
       }
   },
-  7890: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => wD,
-      g: () => bD
+  7849: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => KU,
+      i: () => TU
     });
-    var ID = cD(7839);
-    const pD = ["capture", "keyboard", "wheel", "inventory", "cursor", "focus", "gameplay"],
-      iD = new Set(["capture", "gameplay"]),
-      fD = ["Up", "Down", "Left", "Right"],
-      bD = DD => fD.includes(DD),
-      QD = .25;
-    const wD = new class {
+    var tU = gU(7807);
+    const pU = ["capture", "keyboard", "wheel", "inventory", "cursor", "focus", "gameplay"],
+      EU = new Set(["capture", "gameplay"]),
+      PU = ["Up", "Down", "Left", "Right"],
+      TU = UU => PU.includes(UU),
+      qU = .25;
+    const KU = new class {
       constructor() {
-        this.consumers = new Map, this.activeName = null, this.Lb = new Array(ID.R).fill(!1), this.previousHeld = new Array(ID.R).fill(!1), this.consumedButtons = new Array(ID.R).fill(!1), this.suppressedReleases = new Array(ID.R).fill(!1), this.wakeOwned = new Array(ID.R).fill(!1), this.leftStickConsumed = !1, this.rightStickConsumed = !1, this.handOffPending = !1, this.idleResume = null, this.peek = null, this.lastFrame = (0, ID.t)()
+        this.consumers = new Map, this.activeName = null, this.WT = new Array(tU.N).fill(!1), this.previousHeld = new Array(tU.N).fill(!1), this.consumedButtons = new Array(tU.N).fill(!1), this.suppressedReleases = new Array(tU.N).fill(!1), this.wakeOwned = new Array(tU.N).fill(!1), this.leftStickConsumed = !1, this.rightStickConsumed = !1, this.handOffPending = !1, this.idleResume = null, this.peek = null, this.lastFrame = (0, tU.t)()
       }
-      register(DD) {
-        return this.consumers.has(DD.name) && console.warn(`Controller consumer "${DD.name}" registered twice; the newer one replaces it.`), this.consumers.set(DD.name, DD), () => {
-          var CD;
-          this.consumers.get(DD.name) === DD && (this.activeName === DD.name ? (this.deactivateCurrent(), this.activeName = null, this.consumeAllHeld()) : (null === (CD = this.peek) || void 0 === CD ? void 0 : CD.over) === DD.name && (this.peek = null), this.consumers.delete(DD.name))
+      register(UU) {
+        return this.consumers.has(UU.name) && console.warn(`Controller consumer "${UU.name}" registered twice; the newer one replaces it.`), this.consumers.set(UU.name, UU), () => {
+          var RU;
+          this.consumers.get(UU.name) === UU && (this.activeName === UU.name ? (this.deactivateCurrent(), this.activeName = null, this.consumeAllHeld()) : (null === (RU = this.peek) || void 0 === RU ? void 0 : RU.over) === UU.name && (this.peek = null), this.consumers.delete(UU.name))
         }
       }
       getActiveConsumerName() {
         return this.activeName
       }
-      isButtonHeld(DD) {
-        return this.Lb[(0, ID.m)(DD)]
+      isButtonHeld(UU) {
+        return this.WT[(0, tU.j)(UU)]
       }
       getLastFrame() {
         return this.lastFrame
@@ -6774,135 +6774,135 @@ export const modules = {
         this.deactivateCurrent(), this.activeName = null, this.consumeAllHeld()
       }
       reset() {
-        this.deactivateCurrent(), this.activeName = null, this.Lb = new Array(ID.R).fill(!1), this.previousHeld = new Array(ID.R).fill(!1), this.consumedButtons.fill(!1), this.suppressedReleases.fill(!1), this.wakeOwned.fill(!1), this.leftStickConsumed = !1, this.rightStickConsumed = !1, this.handOffPending = !1, this.idleResume = null, this.lastFrame = (0, ID.t)()
+        this.deactivateCurrent(), this.activeName = null, this.WT = new Array(tU.N).fill(!1), this.previousHeld = new Array(tU.N).fill(!1), this.consumedButtons.fill(!1), this.suppressedReleases.fill(!1), this.wakeOwned.fill(!1), this.leftStickConsumed = !1, this.rightStickConsumed = !1, this.handOffPending = !1, this.idleResume = null, this.lastFrame = (0, tU.t)()
       }
-      dispatch(DD, CD) {
-        let cD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        this.lastFrame = DD, this.previousHeld = this.Lb, this.Lb = (0, ID.p)(DD.values, this.previousHeld);
-        for (let iD = 0; iD < ID.R; iD++) this.suppressedReleases[iD] = !this.Lb[iD] && this.consumedButtons[iD], this.Lb[iD] || (this.consumedButtons[iD] = !1), this.wakeOwned[iD] && (this.Lb[iD] ? (this.consumedButtons[iD] = !0, this.wakeOwned[iD] = !1) : DD.values[iD] < ID.P && (this.wakeOwned[iD] = !1));
-        Math.hypot(DD.leftStick.x, DD.leftStick.y) < QD && (this.leftStickConsumed = !1), Math.hypot(DD.rightStick.x, DD.rightStick.y) < QD && (this.rightStickConsumed = !1);
-        const pD = this.pickActive();
-        if ((null === pD || void 0 === pD ? void 0 : pD.name) !== this.activeName) {
-          var fD, bD, wD, SD, BD, yD;
-          const DD = this.activeName,
-            CD = {
+      dispatch(UU, RU) {
+        let gU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        this.lastFrame = UU, this.previousHeld = this.WT, this.WT = (0, tU.o)(UU.values, this.previousHeld);
+        for (let EU = 0; EU < tU.N; EU++) this.suppressedReleases[EU] = !this.WT[EU] && this.consumedButtons[EU], this.WT[EU] || (this.consumedButtons[EU] = !1), this.wakeOwned[EU] && (this.WT[EU] ? (this.consumedButtons[EU] = !0, this.wakeOwned[EU] = !1) : UU.values[EU] < tU.L && (this.wakeOwned[EU] = !1));
+        Math.hypot(UU.leftStick.x, UU.leftStick.y) < qU && (this.leftStickConsumed = !1), Math.hypot(UU.rightStick.x, UU.rightStick.y) < qU && (this.rightStickConsumed = !1);
+        const pU = this.pickActive();
+        if ((null === pU || void 0 === pU ? void 0 : pU.name) !== this.activeName) {
+          var PU, TU, KU, cU, GU, jU;
+          const UU = this.activeName,
+            RU = {
               left: !this.leftStickConsumed,
               right: !this.rightStickConsumed
             },
-            cD = null !== (fD = null === pD || void 0 === pD || null === (bD = pD.peek) || void 0 === bD ? void 0 : bD.call(pD)) && void 0 !== fD ? fD : null,
-            iD = null === DD && !!cD && !(null === (wD = this.consumers.get(cD.over)) || void 0 === wD || !wD.onPeekFrame),
-            QD = cD && (cD.over === DD || iD) ? cD : null,
-            MD = null !== this.peek && this.peek.over === (null === pD || void 0 === pD ? void 0 : pD.name) ? this.peek : null;
-          this.deactivateCurrent(null !== QD, null !== MD), this.activeName = null !== (SD = null === pD || void 0 === pD ? void 0 : pD.name) && void 0 !== SD ? SD : null, null === DD || this.handOffPending || this.consumeAllHeld();
-          const tD = null === (BD = null !== QD && void 0 !== QD ? QD : MD) || void 0 === BD ? void 0 : BD.stick;
-          "left" === tD && CD.left ? this.leftStickConsumed = !1 : "right" === tD && CD.right && (this.rightStickConsumed = !1), this.peek = QD, pD || null === DD ? pD && (null === (yD = this.idleResume) || void 0 === yD ? void 0 : yD.name) === pD.name && (this.idleResume.left && (this.leftStickConsumed = !1), this.idleResume.right && (this.rightStickConsumed = !1)) : this.idleResume = {
-            name: DD,
-            left: CD.left && this.leftStickConsumed,
-            right: CD.right && this.rightStickConsumed
-          }, pD && (this.idleResume = null);
-          for (let pD = 0; pD < ID.R; pD++) this.previousHeld[pD] && !this.Lb[pD] && (this.suppressedReleases[pD] = !0)
+            gU = null !== (PU = null === pU || void 0 === pU || null === (TU = pU.peek) || void 0 === TU ? void 0 : TU.call(pU)) && void 0 !== PU ? PU : null,
+            EU = null === UU && !!gU && !(null === (KU = this.consumers.get(gU.over)) || void 0 === KU || !KU.onPeekFrame),
+            qU = gU && (gU.over === UU || EU) ? gU : null,
+            uU = null !== this.peek && this.peek.over === (null === pU || void 0 === pU ? void 0 : pU.name) ? this.peek : null;
+          this.deactivateCurrent(null !== qU, null !== uU), this.activeName = null !== (cU = null === pU || void 0 === pU ? void 0 : pU.name) && void 0 !== cU ? cU : null, null === UU || this.handOffPending || this.consumeAllHeld();
+          const CU = null === (GU = null !== qU && void 0 !== qU ? qU : uU) || void 0 === GU ? void 0 : GU.stick;
+          "left" === CU && RU.left ? this.leftStickConsumed = !1 : "right" === CU && RU.right && (this.rightStickConsumed = !1), this.peek = qU, pU || null === UU ? pU && (null === (jU = this.idleResume) || void 0 === jU ? void 0 : jU.name) === pU.name && (this.idleResume.left && (this.leftStickConsumed = !1), this.idleResume.right && (this.rightStickConsumed = !1)) : this.idleResume = {
+            name: UU,
+            left: RU.left && this.leftStickConsumed,
+            right: RU.right && this.rightStickConsumed
+          }, pU && (this.idleResume = null);
+          for (let pU = 0; pU < tU.N; pU++) this.previousHeld[pU] && !this.WT[pU] && (this.suppressedReleases[pU] = !0)
         }
-        var MD, tD;
-        (this.handOffPending = !1, pD) && (cD && !iD.has(pD.name) && this.consumeWakePress(pD), pD.onFrame(this.buildInput(DD, CD, cD)), this.peek && (null === (MD = this.consumers.get(this.peek.over)) || void 0 === MD || null === (tD = MD.onPeekFrame) || void 0 === tD || tD.call(MD, this.buildInput(DD, CD, !1, this.peek.stick))))
+        var uU, CU;
+        (this.handOffPending = !1, pU) && (gU && !EU.has(pU.name) && this.consumeWakePress(pU), pU.onFrame(this.buildInput(UU, RU, gU)), this.peek && (null === (uU = this.consumers.get(this.peek.over)) || void 0 === uU || null === (CU = uU.onPeekFrame) || void 0 === CU || CU.call(uU, this.buildInput(UU, RU, !1, this.peek.stick))))
       }
-      consumeWakePress(DD) {
-        for (let pD = 0; pD < ID.R; pD++) {
-          var CD, cD;
-          const iD = ID.V[pD];
-          (null !== (CD = null === (cD = DD.wakePressActs) || void 0 === cD ? void 0 : cD.call(DD, iD)) && void 0 !== CD ? CD : fD.includes(iD)) || (this.Lb[pD] ? this.consumedButtons[pD] = !0 : this.lastFrame.values[pD] >= ID.N && (this.wakeOwned[pD] = !0))
+      consumeWakePress(UU) {
+        for (let pU = 0; pU < tU.N; pU++) {
+          var RU, gU;
+          const EU = tU.O[pU];
+          (null !== (RU = null === (gU = UU.wakePressActs) || void 0 === gU ? void 0 : gU.call(UU, EU)) && void 0 !== RU ? RU : PU.includes(EU)) || (this.WT[pU] ? this.consumedButtons[pU] = !0 : this.lastFrame.values[pU] >= tU.K && (this.wakeOwned[pU] = !0))
         }
       }
       pickActive() {
-        for (const DD of pD) {
-          const CD = this.consumers.get(DD);
-          if (CD && CD.isActive()) return CD
+        for (const UU of pU) {
+          const RU = this.consumers.get(UU);
+          if (RU && RU.isActive()) return RU
         }
         return null
       }
       deactivateCurrent() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          CD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        var cD, ID, pD, iD;
-        this.activeName && (null === (cD = this.consumers.get(this.activeName)) || void 0 === cD || null === (ID = cD.onDeactivate) || void 0 === ID || ID.call(cD, DD));
-        this.peek && !CD && (null === (pD = this.consumers.get(this.peek.over)) || void 0 === pD || null === (iD = pD.onDeactivate) || void 0 === iD || iD.call(pD, !1));
+        let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        var gU, tU, pU, EU;
+        this.activeName && (null === (gU = this.consumers.get(this.activeName)) || void 0 === gU || null === (tU = gU.onDeactivate) || void 0 === tU || tU.call(gU, UU));
+        this.peek && !RU && (null === (pU = this.consumers.get(this.peek.over)) || void 0 === pU || null === (EU = pU.onDeactivate) || void 0 === EU || EU.call(pU, !1));
         this.peek = null
       }
       consumeAllHeld() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
         this.idleResume = null;
-        for (let pD = 0; pD < ID.R; pD++) this.Lb[pD] && (this.consumedButtons[pD] = !0);
+        for (let pU = 0; pU < tU.N; pU++) this.WT[pU] && (this.consumedButtons[pU] = !0);
         const {
-          leftStick: CD,
-          rightStick: cD
+          leftStick: RU,
+          rightStick: gU
         } = this.lastFrame;
-        this.leftStickConsumed = "left" !== DD && (this.leftStickConsumed || Math.hypot(CD.x, CD.y) >= QD), this.rightStickConsumed = "right" !== DD && (this.rightStickConsumed || Math.hypot(cD.x, cD.y) >= QD)
+        this.leftStickConsumed = "left" !== UU && (this.leftStickConsumed || Math.hypot(RU.x, RU.y) >= qU), this.rightStickConsumed = "right" !== UU && (this.rightStickConsumed || Math.hypot(gU.x, gU.y) >= qU)
       }
       handOffHeldInput() {
         this.handOffPending = !0
       }
-      consumeButton(DD) {
-        const CD = (0, ID.m)(DD);
-        this.Lb[CD] && (this.consumedButtons[CD] = !0)
+      consumeButton(UU) {
+        const RU = (0, tU.j)(UU);
+        this.WT[RU] && (this.consumedButtons[RU] = !0)
       }
-      buildInput(DD, CD, cD, pD) {
-        const iD = this.Lb,
-          fD = this.previousHeld,
-          bD = pD ? new Array(ID.R).fill(!0) : [...this.consumedButtons],
-          QD = pD ? bD : [...this.suppressedReleases],
-          wD = !this.leftStickConsumed && (!pD || "left" === pD),
-          SD = !this.rightStickConsumed && (!pD || "right" === pD);
+      buildInput(UU, RU, gU, pU) {
+        const EU = this.WT,
+          PU = this.previousHeld,
+          TU = pU ? new Array(tU.N).fill(!0) : [...this.consumedButtons],
+          qU = pU ? TU : [...this.suppressedReleases],
+          KU = !this.leftStickConsumed && (!pU || "left" === pU),
+          cU = !this.rightStickConsumed && (!pU || "right" === pU);
         return {
-          frame: DD,
-          dtMs: CD,
-          isHeld: DD => {
-            const CD = (0, ID.m)(DD);
-            return iD[CD] && !bD[CD]
+          frame: UU,
+          dtMs: RU,
+          isHeld: UU => {
+            const RU = (0, tU.j)(UU);
+            return EU[RU] && !TU[RU]
           },
-          wasPressed: DD => {
-            const CD = (0, ID.m)(DD);
-            return iD[CD] && !fD[CD] && !bD[CD]
+          wasPressed: UU => {
+            const RU = (0, tU.j)(UU);
+            return EU[RU] && !PU[RU] && !TU[RU]
           },
-          wasReleased: DD => {
-            const CD = (0, ID.m)(DD);
-            return !iD[CD] && fD[CD] && !QD[CD]
+          wasReleased: UU => {
+            const RU = (0, tU.j)(UU);
+            return !EU[RU] && PU[RU] && !qU[RU]
           },
-          value: CD => {
-            const cD = (0, ID.m)(CD);
-            return bD[cD] ? 0 : DD.values[cD]
+          value: RU => {
+            const gU = (0, tU.j)(RU);
+            return TU[gU] ? 0 : UU.values[gU]
           },
-          leftStick: wD ? DD.leftStick : {
+          leftStick: KU ? UU.leftStick : {
             x: 0,
             y: 0
           },
-          rightStick: SD ? DD.rightStick : {
+          rightStick: cU ? UU.rightStick : {
             x: 0,
             y: 0
           },
-          wokeDevice: cD
+          wokeDevice: gU
         }
       }
     }
   },
-  7865: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => BD.d,
-      f: () => BD.g,
-      h: () => xD,
-      i: () => qD,
-      j: () => JD,
-      l: () => KD
+  7828: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => GU.f,
+      e: () => GU.g,
+      h: () => oU,
+      i: () => ZU,
+      k: () => aU,
+      n: () => YU
     });
-    var ID = cD(53),
-      pD = cD(20),
-      iD = cD(1440),
-      fD = cD(36),
-      bD = cD(7873),
-      QD = cD(7839),
-      wD = cD(7860),
-      SD = cD(7834),
-      BD = cD(1988),
-      yD = cD(7881);
-    const MD = {
+    var tU = gU(56),
+      pU = gU(24),
+      EU = gU(1410),
+      PU = gU(34),
+      TU = gU(7834),
+      qU = gU(7807),
+      KU = gU(7826),
+      cU = gU(7801),
+      GU = gU(1864),
+      jU = gU(7836);
+    const uU = {
         lookSensitivityX: 100,
         lookSensitivityY: 100,
         aimLookSensitivity: 100,
@@ -6936,47 +6936,47 @@ export const modules = {
         emoteButton: "tapHold",
         bindings: {}
       },
-      tD = "controllerSettings",
-      ZD = ["bindings", "promptFamily", "hideButtonHints", "swapSticks", "swapConfirmBack", "leaderboardButton"],
-      oD = ["auto", ...bD.c],
-      vD = (DD, CD) => "string" === typeof CD && DD.includes(CD),
-      ND = DD => CD => "number" === typeof CD && Number.isFinite(CD) ? (0, yD.x)(CD, DD) : void 0,
-      gD = DD => "boolean" === typeof DD ? DD : void 0,
-      XD = DD => CD => vD(DD, CD) ? CD : void 0,
-      mD = {
-        lookSensitivityX: ND(yD.lb),
-        lookSensitivityY: ND(yD.lb),
-        aimLookSensitivity: ND(yD.n),
-        invertLookX: gD,
-        invertLookY: gD,
-        lookCurve: XD(QD.K),
-        lookDeadzone: ND(yD.C),
-        moveDeadzone: ND(yD.C),
-        swapSticks: gD,
-        autoSprint: gD,
-        sneakMode: XD(["toggle", "hold"]),
-        tapHoldTime: XD(["short", "medium", "long"]),
-        attackMode: XD(["hold", "toggle"]),
-        promptFamily: XD(oD),
-        hideButtonHints: gD,
-        vibration: gD,
-        cursorSpeed: ND(yD.y),
-        cursorMagnetism: gD,
-        buttonRepeat: XD(QD.o),
-        largePointer: gD,
-        menuBackToCategories: gD,
-        swapConfirmBack: gD,
-        menuNavigation: XD(["hybrid", "focus", "cursor"]),
-        inventoryNavigation: XD(["hybrid", "slot", "cursor"]),
-        quickChat: XD(["wheel", "off"]),
-        leaderboardButton: XD(["shop", "leaderboard"]),
-        gyroAiming: gD,
-        gyroSensitivity: ND(yD.P),
-        gyroActivation: XD(["always", "aiming", "button"]),
-        gyroButton: XD(QD.V),
-        emoteButton: XD(["tapHold", "wheel"])
+      CU = "controllerSettings",
+      hU = ["bindings", "promptFamily", "hideButtonHints", "swapSticks", "swapConfirmBack", "leaderboardButton"],
+      QU = ["auto", ...TU.e],
+      eU = (UU, RU) => "string" === typeof RU && UU.includes(RU),
+      WU = UU => RU => "number" === typeof RU && Number.isFinite(RU) ? (0, jU.u)(RU, UU) : void 0,
+      fU = UU => "boolean" === typeof UU ? UU : void 0,
+      xU = UU => RU => eU(UU, RU) ? RU : void 0,
+      mU = {
+        lookSensitivityX: WU(jU.pb),
+        lookSensitivityY: WU(jU.pb),
+        aimLookSensitivity: WU(jU.j),
+        invertLookX: fU,
+        invertLookY: fU,
+        lookCurve: xU(qU.G),
+        lookDeadzone: WU(jU.y),
+        moveDeadzone: WU(jU.y),
+        swapSticks: fU,
+        autoSprint: fU,
+        sneakMode: xU(["toggle", "hold"]),
+        tapHoldTime: xU(["short", "medium", "long"]),
+        attackMode: xU(["hold", "toggle"]),
+        promptFamily: xU(QU),
+        hideButtonHints: fU,
+        vibration: fU,
+        cursorSpeed: WU(jU.w),
+        cursorMagnetism: fU,
+        buttonRepeat: xU(qU.m),
+        largePointer: fU,
+        menuBackToCategories: fU,
+        swapConfirmBack: fU,
+        menuNavigation: xU(["hybrid", "focus", "cursor"]),
+        inventoryNavigation: xU(["hybrid", "slot", "cursor"]),
+        quickChat: xU(["wheel", "off"]),
+        leaderboardButton: xU(["shop", "leaderboard"]),
+        gyroAiming: fU,
+        gyroSensitivity: WU(jU.S),
+        gyroActivation: xU(["always", "aiming", "button"]),
+        gyroButton: xU(qU.O),
+        emoteButton: xU(["tapHold", "wheel"])
       },
-      nD = [{
+      IU = [{
         param: "padMenuNav",
         key: "menuNavigation"
       }, {
@@ -6995,195 +6995,195 @@ export const modules = {
         param: "padLeaderboardButton",
         key: "leaderboardButton"
       }],
-      OD = DD => {
-        const CD = {};
-        if ("object" !== typeof DD || null === DD) return CD;
-        for (const [cD, ID] of Object.entries(DD)) Object.prototype.hasOwnProperty.call(wD.f, cD) && vD(QD.V, ID) && (CD[cD] = ID);
-        return CD
+      JU = UU => {
+        const RU = {};
+        if ("object" !== typeof UU || null === UU) return RU;
+        for (const [gU, tU] of Object.entries(UU)) Object.prototype.hasOwnProperty.call(KU.i, gU) && eU(qU.O, tU) && (RU[gU] = tU);
+        return RU
       },
-      PD = DD => {
-        const CD = {};
-        for (const cD of Object.keys(MD))("bindings" === cD ? Object.keys(DD.bindings).length > 0 : DD[cD] !== MD[cD]) && (CD[cD] = DD[cD]);
-        0 !== Object.keys(CD).length ? fD.h.setItem(tD, CD) : fD.h.removeItem(tD)
+      wU = UU => {
+        const RU = {};
+        for (const gU of Object.keys(uU))("bindings" === gU ? Object.keys(UU.bindings).length > 0 : UU[gU] !== uU[gU]) && (RU[gU] = UU[gU]);
+        0 !== Object.keys(RU).length ? PU.k.setItem(CU, RU) : PU.k.removeItem(CU)
       };
-    let HD = (() => {
-        const DD = fD.h.getItem(tD),
-          CD = (DD => {
-            const CD = "object" === typeof DD && null !== DD ? DD : {},
-              cD = {
-                ...MD,
-                bindings: OD(CD.bindings)
+    let nU = (() => {
+        const UU = PU.k.getItem(CU),
+          RU = (UU => {
+            const RU = "object" === typeof UU && null !== UU ? UU : {},
+              gU = {
+                ...uU,
+                bindings: JU(RU.bindings)
               };
-            for (const pD of Object.keys(mD)) {
-              const DD = mD[pD](CD[pD]);
-              void 0 !== DD && (cD[pD] = DD)
+            for (const pU of Object.keys(mU)) {
+              const UU = mU[pU](RU[pU]);
+              void 0 !== UU && (gU[pU] = UU)
             }
-            const ID = Object.keys(CD).filter((DD => !!Object.prototype.hasOwnProperty.call(MD, DD) && ("bindings" === DD ? "object" !== typeof CD.bindings || null === CD.bindings || Object.keys(CD.bindings).length !== Object.keys(cD.bindings).length : cD[DD] !== CD[DD])));
-            return ID.length > 0 && console.warn(`Stored controller settings had invalid values, replaced with defaults: ${ID.join(", ")}`), cD
-          })(DD);
-        return null !== DD && void 0 !== DD && PD(CD), CD
+            const tU = Object.keys(RU).filter((UU => !!Object.prototype.hasOwnProperty.call(uU, UU) && ("bindings" === UU ? "object" !== typeof RU.bindings || null === RU.bindings || Object.keys(RU.bindings).length !== Object.keys(gU.bindings).length : gU[UU] !== RU[UU])));
+            return tU.length > 0 && console.warn(`Stored controller settings had invalid values, replaced with defaults: ${tU.join(", ")}`), gU
+          })(UU);
+        return null !== UU && void 0 !== UU && wU(RU), RU
       })(),
-      UD = {
-        ...HD,
+      bU = {
+        ...nU,
         ...(() => {
           if ("undefined" === typeof window) return {};
-          const DD = {},
-            CD = new URLSearchParams(window.location.search);
+          const UU = {},
+            RU = new URLSearchParams(window.location.search);
           for (const {
-              param: cD,
-              key: ID
+              param: gU,
+              key: tU
             }
-            of nD) {
-            const pD = mD[ID](CD.get(cD));
-            void 0 !== pD && (DD[ID] = pD)
+            of IU) {
+            const pU = mU[tU](RU.get(gU));
+            void 0 !== pU && (UU[tU] = pU)
           }
-          return DD
+          return UU
         })()
       };
-    const xD = () => UD,
-      qD = () => {
-        var DD, CD;
-        const cD = xD().promptFamily;
-        return "auto" !== cD ? cD : null !== (DD = null === (CD = SD.e.getActivePad()) || void 0 === CD ? void 0 : CD.family) && void 0 !== DD ? DD : "xbox"
+    const oU = () => bU,
+      ZU = () => {
+        var UU, RU;
+        const gU = oU().promptFamily;
+        return "auto" !== gU ? gU : null !== (UU = null === (RU = cU.g.getActivePad()) || void 0 === RU ? void 0 : RU.family) && void 0 !== UU ? UU : "xbox"
       },
-      JD = DD => {
-        const CD = UD;
-        HD = {
-          ...HD,
-          ...DD
-        }, PD(HD), UD = {
-          ...UD,
-          ...DD
-        }, (DD => {
-          pD.i.Uo(BD.g, UD), ZD.some((CD => DD[CD] !== UD[CD])) && pD.i.Uo(BD.d, UD)
-        })(CD)
+      aU = UU => {
+        const RU = bU;
+        nU = {
+          ...nU,
+          ...UU
+        }, wU(nU), bU = {
+          ...bU,
+          ...UU
+        }, (UU => {
+          pU.p.yh(GU.g, bU), hU.some((RU => UU[RU] !== bU[RU])) && pU.p.yh(GU.f, bU)
+        })(RU)
       },
-      KD = () => {
-        const [DD, CD] = (0, ID.useState)(UD);
-        return (0, iD.f)(BD.g, CD), DD
+      YU = () => {
+        const [UU, RU] = (0, tU.useState)(bU);
+        return (0, EU.e)(GU.g, RU), UU
       }
   },
-  8336: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => pD
+  8290: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => pU
     });
-    const ID = new Set(["Alt", "AltGraph", "Meta", "OS", "AudioVolumeUp", "AudioVolumeDown", "AudioVolumeMute", "MediaPlayPause", "MediaPlay", "MediaPause", "MediaStop", "MediaTrackNext", "MediaTrackPrevious", "BrowserBack", "BrowserForward", "BrowserHome", "GoBack", "LaunchApplication1", "LaunchApplication2", "LaunchMail", "PrintScreen", "Unidentified"]),
-      pD = DD => ID.has(DD)
+    const tU = new Set(["Alt", "AltGraph", "Meta", "OS", "AudioVolumeUp", "AudioVolumeDown", "AudioVolumeMute", "MediaPlayPause", "MediaPlay", "MediaPause", "MediaStop", "MediaTrackNext", "MediaTrackPrevious", "BrowserBack", "BrowserForward", "BrowserHome", "GoBack", "LaunchApplication1", "LaunchApplication2", "LaunchMail", "PrintScreen", "Unidentified"]),
+      pU = UU => tU.has(UU)
   },
-  7834: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => ZD.b,
-      e: () => gD
+  7801: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => hU.c,
+      g: () => fU
     });
-    var ID = cD(7839),
-      pD = cD(7842);
-    const iD = .1,
-      fD = .3;
-    class bD {
+    var tU = gU(7807),
+      pU = gU(7813);
+    const EU = .1,
+      PU = .3;
+    class TU {
       constructor() {
         this.deadzone = 0, this.anchor = null, this.steadyMs = 0, this.lastMs = null, this.returning = !0, this.anchorLearned = !1
       }
-      observe(DD, CD) {
-        const cD = null === this.lastMs ? 0 : Math.min(Math.max(0, CD - this.lastMs), 100);
-        this.lastMs = CD;
-        const ID = Math.hypot(DD.x, DD.y);
-        if (ID >= fD) return this.anchor = null, void(this.returning = !0);
-        ID >= iD || (this.returning = !1);
-        const pD = this.anchor;
-        if (!pD || Math.hypot(DD.x - pD.x, DD.y - pD.y) > .03) return this.anchorLearned && (this.returning = !1), this.anchor = {
-          x: DD.x,
-          y: DD.y
+      observe(UU, RU) {
+        const gU = null === this.lastMs ? 0 : Math.min(Math.max(0, RU - this.lastMs), 100);
+        this.lastMs = RU;
+        const tU = Math.hypot(UU.x, UU.y);
+        if (tU >= PU) return this.anchor = null, void(this.returning = !0);
+        tU >= EU || (this.returning = !1);
+        const pU = this.anchor;
+        if (!pU || Math.hypot(UU.x - pU.x, UU.y - pU.y) > .03) return this.anchorLearned && (this.returning = !1), this.anchor = {
+          x: UU.x,
+          y: UU.y
         }, this.steadyMs = 0, void(this.anchorLearned = !1);
-        if (this.steadyMs += cD, this.steadyMs < 1e3) return;
-        const bD = Math.max(ID, Math.hypot(pD.x, pD.y));
-        bD < iD ? this.deadzone = 0 : this.returning && (this.deadzone = bD + .05, this.anchorLearned = !0)
+        if (this.steadyMs += gU, this.steadyMs < 1e3) return;
+        const TU = Math.max(tU, Math.hypot(pU.x, pU.y));
+        TU < EU ? this.deadzone = 0 : this.returning && (this.deadzone = TU + .05, this.anchorLearned = !0)
       }
       getDeadzone() {
         return this.deadzone
       }
-      apply(DD) {
-        return Math.hypot(DD.x, DD.y) < this.deadzone ? {
+      apply(UU) {
+        return Math.hypot(UU.x, UU.y) < this.deadzone ? {
           x: 0,
           y: 0
-        } : DD
+        } : UU
       }
     }
-    const QD = (DD, CD) => {
-        var cD, ID;
-        return null !== (cD = DD && (null === (ID = Object.getOwnPropertyDescriptor(DD, CD)) || void 0 === ID ? void 0 : ID.get)) && void 0 !== cD ? cD : null
+    const qU = (UU, RU) => {
+        var gU, tU;
+        return null !== (gU = UU && (null === (tU = Object.getOwnPropertyDescriptor(UU, RU)) || void 0 === tU ? void 0 : tU.get)) && void 0 !== gU ? gU : null
       },
-      wD = DD => {
-        const CD = DD.vendorName;
-        return "string" === typeof CD ? CD : void 0
+      KU = UU => {
+        const RU = UU.vendorName;
+        return "string" === typeof RU ? RU : void 0
       },
-      SD = ((DD, CD) => {
-        const cD = QD(DD, "index"),
-          ID = QD(DD, "id"),
-          pD = QD(DD, "connected"),
-          iD = QD(DD, "mapping"),
-          fD = QD(DD, "buttons"),
-          bD = QD(DD, "axes"),
-          SD = QD(CD, "pressed"),
-          BD = QD(CD, "value");
-        return cD && ID && pD && iD && fD && bD && SD && BD ? DD => {
-          const CD = fD.call(DD),
-            QD = bD.call(DD),
-            yD = {
-              index: Number(cD.call(DD)),
-              id: String(ID.call(DD)),
-              connected: !0 === pD.call(DD),
-              mapping: String(iD.call(DD)),
+      cU = ((UU, RU) => {
+        const gU = qU(UU, "index"),
+          tU = qU(UU, "id"),
+          pU = qU(UU, "connected"),
+          EU = qU(UU, "mapping"),
+          PU = qU(UU, "buttons"),
+          TU = qU(UU, "axes"),
+          cU = qU(RU, "pressed"),
+          GU = qU(RU, "value");
+        return gU && tU && pU && EU && PU && TU && cU && GU ? UU => {
+          const RU = PU.call(UU),
+            qU = TU.call(UU),
+            jU = {
+              index: Number(gU.call(UU)),
+              id: String(tU.call(UU)),
+              connected: !0 === pU.call(UU),
+              mapping: String(EU.call(UU)),
               buttons: [],
               axes: [],
-              vendorName: wD(DD)
+              vendorName: KU(UU)
             };
-          for (let cD = 0; cD < CD.length; cD++) yD.buttons.push({
-            pressed: !0 === SD.call(CD[cD]),
-            value: Number(BD.call(CD[cD]))
+          for (let gU = 0; gU < RU.length; gU++) jU.buttons.push({
+            pressed: !0 === cU.call(RU[gU]),
+            value: Number(GU.call(RU[gU]))
           });
-          for (let cD = 0; cD < QD.length; cD++) yD.axes.push(Number(QD[cD]));
-          return yD
+          for (let gU = 0; gU < qU.length; gU++) jU.axes.push(Number(qU[gU]));
+          return jU
         } : null
       })("undefined" === typeof Gamepad ? null : Gamepad.prototype, "undefined" === typeof GamepadButton ? null : GamepadButton.prototype),
-      BD = "undefined" === typeof Navigator ? null : Navigator.prototype.getGamepads;
-    var yD = cD(1407),
-      MD = cD(1412);
-    const tD = DD => ({
-      pressed: DD,
-      value: DD ? 1 : 0
+      GU = "undefined" === typeof Navigator ? null : Navigator.prototype.getGamepads;
+    var jU = gU(1378),
+      uU = gU(1384);
+    const CU = UU => ({
+      pressed: UU,
+      value: UU ? 1 : 0
     });
-    var ZD = cD(1988);
-    const oD = fD,
-      vD = DD => {
-        const CD = new Array(ID.R).fill(0);
-        for (let cD = 0; cD < ID.R && cD < DD.buttons.length; cD++) {
-          const pD = DD.buttons[cD];
-          CD[cD] = pD.pressed && !(0, ID.H)(cD) ? Math.max(pD.value, ID.w) : pD.value
+    var hU = gU(1864);
+    const QU = PU,
+      eU = UU => {
+        const RU = new Array(tU.N).fill(0);
+        for (let gU = 0; gU < tU.N && gU < UU.buttons.length; gU++) {
+          const pU = UU.buttons[gU];
+          RU[gU] = pU.pressed && !(0, tU.E)(gU) ? Math.max(pU.value, tU.u) : pU.value
         }
-        return CD
+        return RU
       },
-      ND = (DD, CD) => {
-        var cD, ID;
+      WU = (UU, RU) => {
+        var gU, tU;
         return {
-          x: null !== (cD = DD.axes[CD]) && void 0 !== cD ? cD : 0,
-          y: null !== (ID = DD.axes[CD + 1]) && void 0 !== ID ? ID : 0
+          x: null !== (gU = UU.axes[RU]) && void 0 !== gU ? gU : 0,
+          y: null !== (tU = UU.axes[RU + 1]) && void 0 !== tU ? tU : 0
         }
       };
-    const gD = new class {
-      constructor(DD, CD) {
-        let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : SD;
-        this.readGamepads = DD, this.requireTrustedPads = CD, this.nativeReader = cD, this.running = !1, this.listening = !1, this.rafId = 0, this.lastTimestampMs = 0, this.activeInfo = null, this.slots = [], this.trustedIndices = new Set, this.warnedNonStandardIds = new Set, this.loggedReadError = !1, this.frameListeners = new Set, this.connectionListeners = new Set, this.anyPadConnected = !1, this.connectedListeners = new Set, this.handleConnectionEvent = DD => {
-          DD.isTrusted && this.trustedIndices.add(DD.gamepad.index), this.wake()
-        }, this.handleDisconnectionEvent = DD => {
-          this.trustedIndices.delete(DD.gamepad.index)
-        }, this.wy = DD => {
+    const fU = new class {
+      constructor(UU, RU) {
+        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : cU;
+        this.readGamepads = UU, this.requireTrustedPads = RU, this.nativeReader = gU, this.running = !1, this.listening = !1, this.rafId = 0, this.lastTimestampMs = 0, this.activeInfo = null, this.slots = [], this.trustedIndices = new Set, this.warnedNonStandardIds = new Set, this.loggedReadError = !1, this.frameListeners = new Set, this.connectionListeners = new Set, this.anyPadConnected = !1, this.connectedListeners = new Set, this.handleConnectionEvent = UU => {
+          UU.isTrusted && this.trustedIndices.add(UU.gamepad.index), this.wake()
+        }, this.handleDisconnectionEvent = UU => {
+          this.trustedIndices.delete(UU.gamepad.index)
+        }, this.HG = UU => {
           if (this.rafId = 0, !this.running) return;
-          const CD = 0 === this.lastTimestampMs ? 16 : Math.min(100, DD - this.lastTimestampMs);
-          this.lastTimestampMs = DD;
+          const RU = 0 === this.lastTimestampMs ? 16 : Math.min(100, UU - this.lastTimestampMs);
+          this.lastTimestampMs = UU;
           try {
-            this.poll(DD, CD)
+            this.poll(UU, RU)
           } finally {
-            this.anyPadConnected && (this.rafId = requestAnimationFrame(this.wy))
+            this.anyPadConnected && (this.rafId = requestAnimationFrame(this.HG))
           }
         }
       }
@@ -7196,14 +7196,14 @@ export const modules = {
       listenForConnections() {
         this.listening || "undefined" === typeof window || (this.listening = !0, window.addEventListener("gamepadconnected", this.handleConnectionEvent), window.addEventListener("gamepaddisconnected", this.handleDisconnectionEvent))
       }
-      onFrame(DD) {
-        return this.frameListeners.add(DD), () => {
-          this.frameListeners.delete(DD)
+      onFrame(UU) {
+        return this.frameListeners.add(UU), () => {
+          this.frameListeners.delete(UU)
         }
       }
-      onActivePadChanged(DD) {
-        return this.connectionListeners.add(DD), () => {
-          this.connectionListeners.delete(DD)
+      onActivePadChanged(UU) {
+        return this.connectionListeners.add(UU), () => {
+          this.connectionListeners.delete(UU)
         }
       }
       getActivePad() {
@@ -7212,168 +7212,168 @@ export const modules = {
       hasConnectedPad() {
         return this.anyPadConnected
       }
-      onConnectedPadsChanged(DD) {
-        return this.connectedListeners.add(DD), () => {
-          this.connectedListeners.delete(DD)
+      onConnectedPadsChanged(UU) {
+        return this.connectedListeners.add(UU), () => {
+          this.connectedListeners.delete(UU)
         }
       }
       getActiveGamepad() {
         if (!this.activeInfo) return null;
-        const DD = this.readPads()[this.activeInfo.index],
-          CD = DD ? this.readPad(DD) : null;
-        return CD && CD.id === this.activeInfo.id ? DD : null
+        const UU = this.readPads()[this.activeInfo.index],
+          RU = UU ? this.readPad(UU) : null;
+        return RU && RU.id === this.activeInfo.id ? UU : null
       }
-      poll(DD, CD) {
-        var cD, pD;
-        const iD = this.readPads();
-        let fD = null,
-          QD = !1;
-        const wD = [],
-          SD = Math.max(iD.length, this.slots.length);
-        for (let gD = 0; gD < SD; gD++) {
-          var BD;
-          const CD = gD < iD.length ? iD[gD] : null,
-            cD = CD ? this.readPad(CD) : null;
-          if (!cD || !cD.connected || !this.isUsable(cD)) {
-            this.slots[gD] = null;
+      poll(UU, RU) {
+        var gU, pU;
+        const EU = this.readPads();
+        let PU = null,
+          qU = !1;
+        const KU = [],
+          cU = Math.max(EU.length, this.slots.length);
+        for (let fU = 0; fU < cU; fU++) {
+          var GU;
+          const RU = fU < EU.length ? EU[fU] : null,
+            gU = RU ? this.readPad(RU) : null;
+          if (!gU || !gU.connected || !this.isUsable(gU)) {
+            this.slots[fU] = null;
             continue
           }
-          let pD = this.slots[gD];
-          pD && pD.id === cD.id || (pD = {
-            id: cD.id,
-            Lb: [],
+          let pU = this.slots[fU];
+          pU && pU.id === gU.id || (pU = {
+            id: gU.id,
+            WT: [],
             leftSettled: !1,
             rightSettled: !1,
-            leftRest: new bD,
-            rightRest: new bD
-          }, this.slots[gD] = pD);
-          const SD = ND(cD, 0),
-            yD = ND(cD, 2);
-          !pD.leftSettled && Math.hypot(SD.x, SD.y) < oD && (pD.leftSettled = !0), !pD.rightSettled && Math.hypot(yD.x, yD.y) < oD && (pD.rightSettled = !0), pD.leftRest.observe(SD, DD), pD.rightRest.observe(yD, DD);
-          const MD = vD(cD),
-            tD = (0, ID.p)(MD, pD.Lb),
-            ZD = pD.Lb,
-            XD = tD.map(((DD, CD) => DD && !ZD[CD]));
-          pD.Lb = tD;
-          const mD = {
-            pad: cD,
-            slot: pD,
-            values: MD
+            leftRest: new TU,
+            rightRest: new TU
+          }, this.slots[fU] = pU);
+          const cU = WU(gU, 0),
+            jU = WU(gU, 2);
+          !pU.leftSettled && Math.hypot(cU.x, cU.y) < QU && (pU.leftSettled = !0), !pU.rightSettled && Math.hypot(jU.x, jU.y) < QU && (pU.rightSettled = !0), pU.leftRest.observe(cU, UU), pU.rightRest.observe(jU, UU);
+          const uU = eU(gU),
+            CU = (0, tU.o)(uU, pU.WT),
+            hU = pU.WT,
+            xU = CU.map(((UU, RU) => UU && !hU[RU]));
+          pU.WT = CU;
+          const mU = {
+            pad: gU,
+            slot: pU,
+            values: uU
           };
-          gD === (null === (BD = this.activeInfo) || void 0 === BD ? void 0 : BD.index) && cD.id === this.activeInfo.id ? (fD = mD, QD = XD.includes(!0)) : XD.includes(!0) && wD.push({
-            polled: mD,
-            rose: XD
+          fU === (null === (GU = this.activeInfo) || void 0 === GU ? void 0 : GU.index) && gU.id === this.activeInfo.id ? (PU = mU, qU = xU.includes(!0)) : xU.includes(!0) && KU.push({
+            polled: mU,
+            rose: xU
           })
         }
-        const yD = this.slots.some((DD => null !== DD));
-        if (yD !== this.anyPadConnected) {
-          this.anyPadConnected = yD;
-          for (const DD of this.connectedListeners) DD()
+        const jU = this.slots.some((UU => null !== UU));
+        if (jU !== this.anyPadConnected) {
+          this.anyPadConnected = jU;
+          for (const UU of this.connectedListeners) UU()
         }
-        const MD = null !== (cD = null === (pD = fD) || void 0 === pD ? void 0 : pD.slot.Lb) && void 0 !== cD ? cD : [],
-          tD = QD ? void 0 : wD.find((DD => {
+        const uU = null !== (gU = null === (pU = PU) || void 0 === pU ? void 0 : pU.slot.WT) && void 0 !== gU ? gU : [],
+          CU = qU ? void 0 : KU.find((UU => {
             let {
-              rose: CD
-            } = DD;
-            return CD.some(((DD, CD) => DD && !MD[CD]))
+              rose: RU
+            } = UU;
+            return RU.some(((UU, RU) => UU && !uU[RU]))
           }));
-        if (tD ? (fD = tD.polled, this.setActive(tD.polled.pad)) : this.activeInfo && !fD && this.setActive(null), !fD || !this.activeInfo) return;
-        const ZD = ((DD, CD) => {
+        if (CU ? (PU = CU.polled, this.setActive(CU.polled.pad)) : this.activeInfo && !PU && this.setActive(null), !PU || !this.activeInfo) return;
+        const hU = ((UU, RU) => {
           let {
-            pad: cD,
-            slot: pD,
-            values: iD
-          } = DD;
-          const fD = (0, ID.t)(CD);
-          return fD.values = iD, pD.leftSettled && (fD.leftStick = pD.leftRest.apply(ND(cD, 0))), pD.rightSettled && (fD.rightStick = pD.rightRest.apply(ND(cD, 2))), fD
-        })(fD, DD);
-        for (const ID of this.frameListeners) ID(ZD, CD, this.activeInfo)
+            pad: gU,
+            slot: pU,
+            values: EU
+          } = UU;
+          const PU = (0, tU.t)(RU);
+          return PU.values = EU, pU.leftSettled && (PU.leftStick = pU.leftRest.apply(WU(gU, 0))), pU.rightSettled && (PU.rightStick = pU.rightRest.apply(WU(gU, 2))), PU
+        })(PU, UU);
+        for (const tU of this.frameListeners) tU(hU, RU, this.activeInfo)
       }
-      readPad(DD) {
-        const CD = this.readSnapshot(DD);
-        return CD && (0, MD.h)(CD) ? (DD => {
-          const CD = CD => {
-              var cD;
-              return null !== (cD = DD.buttons[CD]) && void 0 !== cD ? cD : tD(!1)
+      readPad(UU) {
+        const RU = this.readSnapshot(UU);
+        return RU && (0, uU.h)(RU) ? (UU => {
+          const RU = RU => {
+              var gU;
+              return null !== (gU = UU.buttons[RU]) && void 0 !== gU ? gU : CU(!1)
             },
-            cD = CD => {
-              var cD;
-              return null !== (cD = DD.axes[CD]) && void 0 !== cD ? cD : 0
+            gU = RU => {
+              var gU;
+              return null !== (gU = UU.axes[RU]) && void 0 !== gU ? gU : 0
             },
-            ID = DD.axes.length > 9,
-            pD = ID ? (DD => {
-              const CD = 0 !== DD;
+            tU = UU.axes.length > 9,
+            pU = tU ? (UU => {
+              const RU = 0 !== UU;
               return {
-                up: CD && (DD >= -1 && DD < -.7 || DD >= .95 && DD <= 1),
-                right: CD && DD >= -.75 && DD < -.1,
-                down: CD && DD >= -.2 && DD < .45,
-                left: CD && DD >= .4 && DD <= 1
+                up: RU && (UU >= -1 && UU < -.7 || UU >= .95 && UU <= 1),
+                right: RU && UU >= -.75 && UU < -.1,
+                down: RU && UU >= -.2 && UU < .45,
+                left: RU && UU >= .4 && UU <= 1
               }
-            })(cD(9)) : {
-              up: cD(5) < -.5,
-              down: cD(5) > .5,
-              left: cD(4) < -.5,
-              right: cD(4) > .5
+            })(gU(9)) : {
+              up: gU(5) < -.5,
+              down: gU(5) > .5,
+              left: gU(4) < -.5,
+              right: gU(4) > .5
             };
           return {
-            ...DD,
+            ...UU,
             mapping: "standard",
-            buttons: [CD(1), CD(2), CD(0), CD(3), CD(4), CD(5), CD(6), CD(7), CD(8), CD(9), CD(10), CD(11), tD(pD.up), tD(pD.down), tD(pD.left), tD(pD.right), CD(12)],
-            axes: [cD(0), cD(1), cD(2), cD(ID ? 5 : 3)]
+            buttons: [RU(1), RU(2), RU(0), RU(3), RU(4), RU(5), RU(6), RU(7), RU(8), RU(9), RU(10), RU(11), CU(pU.up), CU(pU.down), CU(pU.left), CU(pU.right), RU(12)],
+            axes: [gU(0), gU(1), gU(2), gU(tU ? 5 : 3)]
           }
-        })(CD) : CD
+        })(RU) : RU
       }
-      readSnapshot(DD) {
+      readSnapshot(UU) {
         if (this.nativeReader) try {
-          return this.nativeReader(DD)
+          return this.nativeReader(UU)
         } catch {
           if (this.requireTrustedPads) return null
         }
-        return this.requireTrustedPads ? null : (DD => {
-          const CD = DD;
+        return this.requireTrustedPads ? null : (UU => {
+          const RU = UU;
           return {
-            index: CD.index,
-            id: CD.id,
-            connected: CD.connected,
-            mapping: CD.mapping,
-            buttons: Array.from(CD.buttons, (DD => ({
-              pressed: DD.pressed,
-              value: DD.value
+            index: RU.index,
+            id: RU.id,
+            connected: RU.connected,
+            mapping: RU.mapping,
+            buttons: Array.from(RU.buttons, (UU => ({
+              pressed: UU.pressed,
+              value: UU.value
             }))),
-            axes: Array.from(CD.axes),
-            vendorName: wD(DD)
+            axes: Array.from(RU.axes),
+            vendorName: KU(UU)
           }
-        })(DD)
+        })(UU)
       }
-      isUsable(DD) {
-        return !(0, yD.h)(DD.id) && ("standard" !== DD.mapping ? (this.warnedNonStandardIds.has(DD.id) || (this.warnedNonStandardIds.add(DD.id), console.warn(`Controller "${DD.id}" has no standard button mapping, so it is ignored.`)), !1) : !this.requireTrustedPads || this.trustedIndices.has(DD.index))
+      isUsable(UU) {
+        return !(0, jU.h)(UU.id) && ("standard" !== UU.mapping ? (this.warnedNonStandardIds.has(UU.id) || (this.warnedNonStandardIds.add(UU.id), console.warn(`Controller "${UU.id}" has no standard button mapping, so it is ignored.`)), !1) : !this.requireTrustedPads || this.trustedIndices.has(UU.index))
       }
-      setActive(DD) {
-        this.activeInfo = DD ? {
-          index: DD.index,
-          id: DD.id,
-          family: (0, pD.e)(DD.id, DD.vendorName)
+      setActive(UU) {
+        this.activeInfo = UU ? {
+          index: UU.index,
+          id: UU.id,
+          family: (0, pU.b)(UU.id, UU.vendorName)
         } : null;
-        for (const CD of this.connectionListeners) CD(this.activeInfo)
+        for (const RU of this.connectionListeners) RU(this.activeInfo)
       }
       readPads() {
         try {
           return this.readGamepads()
-        } catch (DD) {
-          return this.loggedReadError || (this.loggedReadError = !0, console.warn("Reading gamepads failed; controller input is unavailable.", DD)), []
+        } catch (UU) {
+          return this.loggedReadError || (this.loggedReadError = !0, console.warn("Reading gamepads failed; controller input is unavailable.", UU)), []
         }
       }
       wake() {
-        this.running && 0 === this.rafId && (this.lastTimestampMs = 0, this.rafId = requestAnimationFrame(this.wy))
+        this.running && 0 === this.rafId && (this.lastTimestampMs = 0, this.rafId = requestAnimationFrame(this.HG))
       }
-    }((() => BD ? BD.call(navigator) : []), !0);
-    gD.listenForConnections()
+    }((() => GU ? GU.call(navigator) : []), !0);
+    fU.listenForConnections()
   },
-  8347: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => ID
+  8303: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => tU
     });
-    const ID = {
+    const tU = {
       short: {
         wheelMs: 250,
         dropStackMs: 800
@@ -7388,109 +7388,109 @@ export const modules = {
       }
     }
   },
-  8439: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => fD,
-      f: () => bD
+  8385: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => PU,
+      e: () => TU
     });
-    var ID = cD(20),
-      pD = cD(8428);
-    let iD = !1;
-    const fD = () => iD,
-      bD = DD => {
-        DD !== iD && (iD = DD, ID.i.Uo(pD.m, iD))
+    var tU = gU(24),
+      pU = gU(8376);
+    let EU = !1;
+    const PU = () => EU,
+      TU = UU => {
+        UU !== EU && (EU = UU, tU.p.yh(pU.k, EU))
       }
   },
-  8430: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => bD,
-      f: () => QD
+  8382: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => TU,
+      d: () => qU
     });
-    var ID = cD(20),
-      pD = cD(8428);
-    let iD = null,
-      fD = 0;
-    const bD = () => iD,
-      QD = DD => {
-        null === DD && null === iD || (iD = null === DD ? null : {
-          id: ++fD,
-          holdMs: DD
-        }, ID.i.Uo(pD.p, iD))
+    var tU = gU(24),
+      pU = gU(8376);
+    let EU = null,
+      PU = 0;
+    const TU = () => EU,
+      qU = UU => {
+        null === UU && null === EU || (EU = null === UU ? null : {
+          id: ++PU,
+          holdMs: UU
+        }, tU.p.yh(pU.m, EU))
       }
   },
-  8448: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => fD,
-      d: () => bD
+  8391: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => PU,
+      c: () => TU
     });
-    var ID = cD(20),
-      pD = cD(8428);
-    let iD = !1;
-    const fD = () => iD,
-      bD = DD => {
-        DD !== iD && (iD = DD, ID.i.Uo(pD.t, iD))
+    var tU = gU(24),
+      pU = gU(8376);
+    let EU = !1;
+    const PU = () => EU,
+      TU = UU => {
+        UU !== EU && (EU = UU, tU.p.yh(pU.p, EU))
       }
   },
-  8534: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => fD,
-      g: () => bD
+  8457: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => PU,
+      h: () => TU
     });
-    var ID = cD(20),
-      pD = cD(8428);
-    let iD = !1;
-    const fD = () => iD,
-      bD = DD => {
-        DD !== iD && (iD = DD, ID.i.Uo(pD.x, iD))
+    var tU = gU(24),
+      pU = gU(8376);
+    let EU = !1;
+    const PU = () => EU,
+      TU = UU => {
+        UU !== EU && (EU = UU, tU.p.yh(pU.s, EU))
       }
   },
-  8384: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => ID
+  8331: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => tU
     });
-    class ID {
+    class tU {
       constructor() {
         this.downAtMs = null
       }
-      update(DD, CD, cD, ID) {
-        if (DD) return this.downAtMs = cD, null;
+      update(UU, RU, gU, tU) {
+        if (UU) return this.downAtMs = gU, null;
         if (null === this.downAtMs) return null;
-        const pD = cD - this.downAtMs >= ID;
-        return CD ? pD ? (this.downAtMs = null, "hold") : null : (this.downAtMs = null, pD ? "hold" : "tap")
+        const pU = gU - this.downAtMs >= tU;
+        return RU ? pU ? (this.downAtMs = null, "hold") : null : (this.downAtMs = null, pU ? "hold" : "tap")
       }
       release() {
         this.downAtMs = null
       }
     }
   },
-  7906: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => BD,
-      c: () => yD,
-      g: () => bD,
-      j: () => gD,
-      m: () => ND
+  7865: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => GU,
+      g: () => jU,
+      k: () => TU,
+      o: () => fU,
+      s: () => WU
     });
-    var ID = cD(36),
-      pD = cD(7873),
-      iD = cD(7839);
-    const fD = (() => {
+    var tU = gU(34),
+      pU = gU(7834),
+      EU = gU(7807);
+    const PU = (() => {
         try {
-          return cD(7913)
+          return gU(7868)
         } catch {
           return null
         }
       })(),
-      bD = [...iD.V, "LeftStick", "RightStick"],
-      QD = new Map,
-      wD = {
+      TU = [...EU.O, "LeftStick", "RightStick"],
+      qU = new Map,
+      KU = {
         xbox: "xbox",
         playstation: "playstation",
         nintendo: "nintendo",
         steamdeck: "steamdeck",
         generic: "xbox"
       },
-      SD = (new Set(Object.values(wD)), {
+      cU = (new Set(Object.values(KU)), {
         xbox: {
           LB: 1.5,
           RB: 1.5
@@ -7501,115 +7501,115 @@ export const modules = {
           View: 2
         }
       }),
-      BD = (DD, CD) => {
-        var cD, ID;
-        return null !== (cD = null === (ID = SD[wD[DD]]) || void 0 === ID ? void 0 : ID[CD]) && void 0 !== cD ? cD : 1
+      GU = (UU, RU) => {
+        var gU, tU;
+        return null !== (gU = null === (tU = cU[KU[UU]]) || void 0 === tU ? void 0 : tU[RU]) && void 0 !== gU ? gU : 1
       },
-      yD = (DD, CD) => {
-        const cD = `./${wD[DD]}/${CD}.svg`;
-        let ID = QD.get(cD);
-        return void 0 === ID && (ID = fD ? fD(cD) : "", QD.set(cD, ID)), ID
+      jU = (UU, RU) => {
+        const gU = `./${KU[UU]}/${RU}.svg`;
+        let tU = qU.get(gU);
+        return void 0 === tU && (tU = PU ? PU(gU) : "", qU.set(gU, tU)), tU
       },
-      MD = new Set,
-      tD = [],
-      ZD = DD => {
-        if (!MD.has(DD)) {
-          MD.add(DD);
-          for (const CD of bD) {
-            const cD = yD(DD, CD);
-            if (cD) {
-              const DD = new Image;
-              DD.crossOrigin = "anonymous", DD.src = cD, tD.push(DD)
+      uU = new Set,
+      CU = [],
+      hU = UU => {
+        if (!uU.has(UU)) {
+          uU.add(UU);
+          for (const RU of TU) {
+            const gU = jU(UU, RU);
+            if (gU) {
+              const UU = new Image;
+              UU.crossOrigin = "anonymous", UU.src = gU, CU.push(UU)
             }
           }
         }
       },
-      oD = "controllerGlyphFamily";
-    let vD = null;
-    const ND = DD => {
-        DD !== vD && (vD = DD, ID.h.setItem(oD, DD), ZD(DD))
+      QU = "controllerGlyphFamily";
+    let eU = null;
+    const WU = UU => {
+        UU !== eU && (eU = UU, tU.k.setItem(QU, UU), hU(UU))
       },
-      gD = () => {
-        const DD = ID.h.getItem(oD);
-        (0, pD.d)(DD) && DD !== vD && (vD = DD, ZD(DD))
+      fU = () => {
+        const UU = tU.k.getItem(QU);
+        (0, pU.f)(UU) && UU !== eU && (eU = UU, hU(UU))
       }
   },
-  8555: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => TD,
-      d: () => GD
+  8480: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => HU,
+      e: () => SU
     });
-    var ID = cD(53),
-      pD = cD(20),
-      iD = cD(1440),
-      fD = cD(7851),
-      bD = cD(7834),
-      QD = cD(7890),
-      wD = cD(7865);
-    const SD = {
+    var tU = gU(56),
+      pU = gU(24),
+      EU = gU(1410),
+      PU = gU(7820),
+      TU = gU(7801),
+      qU = gU(7849),
+      KU = gU(7828);
+    const cU = {
         x: 0,
         y: 0,
         z: 0
       },
-      BD = Math.PI / 180,
-      yD = DD => Math.hypot(DD.x, DD.y, DD.z),
-      MD = (DD, CD) => ({
-        x: DD.x * CD,
-        y: DD.y * CD,
-        z: DD.z * CD
+      GU = Math.PI / 180,
+      jU = UU => Math.hypot(UU.x, UU.y, UU.z),
+      uU = (UU, RU) => ({
+        x: UU.x * RU,
+        y: UU.y * RU,
+        z: UU.z * RU
       }),
-      tD = (DD, CD) => ({
-        x: DD.x + CD.x,
-        y: DD.y + CD.y,
-        z: DD.z + CD.z
+      CU = (UU, RU) => ({
+        x: UU.x + RU.x,
+        y: UU.y + RU.y,
+        z: UU.z + RU.z
       }),
-      ZD = (DD, CD) => ({
-        x: DD.x - CD.x,
-        y: DD.y - CD.y,
-        z: DD.z - CD.z
+      hU = (UU, RU) => ({
+        x: UU.x - RU.x,
+        y: UU.y - RU.y,
+        z: UU.z - RU.z
       }),
-      oD = DD => {
-        const CD = yD(DD);
-        return 0 === CD ? SD : MD(DD, 1 / CD)
+      QU = UU => {
+        const RU = jU(UU);
+        return 0 === RU ? cU : uU(UU, 1 / RU)
       },
-      vD = DD => ({
+      eU = UU => ({
         min: {
-          ...DD
+          ...UU
         },
         max: {
-          ...DD
+          ...UU
         }
       }),
-      ND = (DD, CD) => ({
+      WU = (UU, RU) => ({
         min: {
-          x: Math.min(DD.min.x, CD.x),
-          y: Math.min(DD.min.y, CD.y),
-          z: Math.min(DD.min.z, CD.z)
+          x: Math.min(UU.min.x, RU.x),
+          y: Math.min(UU.min.y, RU.y),
+          z: Math.min(UU.min.z, RU.z)
         },
         max: {
-          x: Math.max(DD.max.x, CD.x),
-          y: Math.max(DD.max.y, CD.y),
-          z: Math.max(DD.max.z, CD.z)
+          x: Math.max(UU.max.x, RU.x),
+          y: Math.max(UU.max.y, RU.y),
+          z: Math.max(UU.max.z, RU.z)
         }
       }),
-      gD = (DD, CD) => DD.max.x - DD.min.x <= CD && DD.max.y - DD.min.y <= CD && DD.max.z - DD.min.z <= CD;
-    class XD {
+      fU = (UU, RU) => UU.max.x - UU.min.x <= RU && UU.max.y - UU.min.y <= RU && UU.max.z - UU.min.z <= RU;
+    class xU {
       constructor() {
-        this.bias = SD, this.calibrated = !1, this.gyroRange = null, this.accelRange = null, this.sum = SD, this.windowSec = 0
+        this.bias = cU, this.calibrated = !1, this.gyroRange = null, this.accelRange = null, this.sum = cU, this.windowSec = 0
       }
-      update(DD) {
-        const CD = this.gyroRange ? ND(this.gyroRange, DD.gyro) : vD(DD.gyro),
-          cD = DD.accel ? this.accelRange ? ND(this.accelRange, DD.accel) : vD(DD.accel) : null;
-        if (!gD(CD, 1) || cD && !gD(cD, .01)) return void this.restartWindow(DD);
-        if (this.gyroRange = CD, this.accelRange = cD, this.sum = tD(this.sum, MD(DD.gyro, DD.dtSec)), this.windowSec += DD.dtSec, this.windowSec < 1) return;
-        const ID = MD(this.sum, 1 / this.windowSec);
-        if (yD(ID) > 5) return;
-        const pD = ZD(ID, this.bias);
-        let iD = 0;
-        !this.calibrated || this.windowSec >= 3 ? iD = 1 : yD(pD) <= 1 && (iD = Math.min(1, DD.dtSec / 1)), this.bias = tD(this.bias, MD(pD, iD)), this.calibrated = this.calibrated || iD > 0
+      update(UU) {
+        const RU = this.gyroRange ? WU(this.gyroRange, UU.gyro) : eU(UU.gyro),
+          gU = UU.accel ? this.accelRange ? WU(this.accelRange, UU.accel) : eU(UU.accel) : null;
+        if (!fU(RU, 1) || gU && !fU(gU, .01)) return void this.restartWindow(UU);
+        if (this.gyroRange = RU, this.accelRange = gU, this.sum = CU(this.sum, uU(UU.gyro, UU.dtSec)), this.windowSec += UU.dtSec, this.windowSec < 1) return;
+        const tU = uU(this.sum, 1 / this.windowSec);
+        if (jU(tU) > 5) return;
+        const pU = hU(tU, this.bias);
+        let EU = 0;
+        !this.calibrated || this.windowSec >= 3 ? EU = 1 : jU(pU) <= 1 && (EU = Math.min(1, UU.dtSec / 1)), this.bias = CU(this.bias, uU(pU, EU)), this.calibrated = this.calibrated || EU > 0
       }
-      correct(DD) {
-        return ZD(DD, this.bias)
+      correct(UU) {
+        return hU(UU, this.bias)
       }
       getBias() {
         return this.bias
@@ -7618,98 +7618,98 @@ export const modules = {
         return this.calibrated
       }
       reset() {
-        this.bias = SD, this.calibrated = !1, this.gyroRange = null, this.accelRange = null, this.sum = SD, this.windowSec = 0
+        this.bias = cU, this.calibrated = !1, this.gyroRange = null, this.accelRange = null, this.sum = cU, this.windowSec = 0
       }
-      restartWindow(DD) {
-        this.gyroRange = vD(DD.gyro), this.accelRange = DD.accel ? vD(DD.accel) : null, this.sum = SD, this.windowSec = 0
+      restartWindow(UU) {
+        this.gyroRange = eU(UU.gyro), this.accelRange = UU.accel ? eU(UU.accel) : null, this.sum = cU, this.windowSec = 0
       }
     }
-    class mD {
+    class mU {
       constructor() {
         this.down = null
       }
-      update(DD, CD, cD) {
-        const ID = oD(MD(CD, -1));
-        if (!this.down) return this.down = ID, ID;
-        const pD = MD(DD, BD * cD),
-          iD = this.down,
-          fD = {
-            x: iD.x - (pD.y * iD.z - pD.z * iD.y),
-            y: iD.y - (pD.z * iD.x - pD.x * iD.z),
-            z: iD.z - (pD.x * iD.y - pD.y * iD.x)
+      update(UU, RU, gU) {
+        const tU = QU(uU(RU, -1));
+        if (!this.down) return this.down = tU, tU;
+        const pU = uU(UU, GU * gU),
+          EU = this.down,
+          PU = {
+            x: EU.x - (pU.y * EU.z - pU.z * EU.y),
+            y: EU.y - (pU.z * EU.x - pU.x * EU.z),
+            z: EU.z - (pU.x * EU.y - pU.y * EU.x)
           },
-          bD = 0 === yD(ID) ? 0 : Math.min(1, cD / .25);
-        var QD, wD;
-        return this.down = oD((wD = bD, tD(QD = fD, MD(ZD(ID, QD), wD)))), this.down
+          TU = 0 === jU(tU) ? 0 : Math.min(1, gU / .25);
+        var qU, KU;
+        return this.down = QU((KU = TU, CU(qU = PU, uU(hU(tU, qU), KU)))), this.down
       }
       reset() {
         this.down = null
       }
     }
-    class nD {
+    class IU {
       constructor() {
         this.entries = [], this.windowSec = 0
       }
-      apply(DD, CD, cD) {
-        const ID = Math.hypot(DD, CD),
-          pD = Math.max(0, Math.min(1, (ID - 2) / 2)),
-          iD = {
-            yaw: DD * (1 - pD),
-            pitch: CD * (1 - pD),
-            dtSec: cD
+      apply(UU, RU, gU) {
+        const tU = Math.hypot(UU, RU),
+          pU = Math.max(0, Math.min(1, (tU - 2) / 2)),
+          EU = {
+            yaw: UU * (1 - pU),
+            pitch: RU * (1 - pU),
+            dtSec: gU
           };
-        for (this.entries.push(iD), this.windowSec += cD; this.entries.length > 1 && this.windowSec - this.entries[0].dtSec >= .125;) this.windowSec -= this.entries[0].dtSec, this.entries.shift();
-        let fD = 0,
-          bD = 0;
-        for (const wD of this.entries) fD += wD.yaw * wD.dtSec, bD += wD.pitch * wD.dtSec;
-        const QD = this.windowSec > 0 ? {
-          yaw: fD / this.windowSec,
-          pitch: bD / this.windowSec
+        for (this.entries.push(EU), this.windowSec += gU; this.entries.length > 1 && this.windowSec - this.entries[0].dtSec >= .125;) this.windowSec -= this.entries[0].dtSec, this.entries.shift();
+        let PU = 0,
+          TU = 0;
+        for (const KU of this.entries) PU += KU.yaw * KU.dtSec, TU += KU.pitch * KU.dtSec;
+        const qU = this.windowSec > 0 ? {
+          yaw: PU / this.windowSec,
+          pitch: TU / this.windowSec
         } : {
-          yaw: iD.yaw,
-          pitch: iD.pitch
+          yaw: EU.yaw,
+          pitch: EU.pitch
         };
         return {
-          yaw: DD * pD + QD.yaw,
-          pitch: CD * pD + QD.pitch
+          yaw: UU * pU + qU.yaw,
+          pitch: RU * pU + qU.pitch
         }
       }
       reset() {
         this.entries = [], this.windowSec = 0
       }
     }
-    class OD {
+    class JU {
       constructor() {
-        this.calibrator = new XD, this.gravity = new mD, this.smoother = new nD
+        this.calibrator = new xU, this.gravity = new mU, this.smoother = new IU
       }
-      process(DD, CD, cD) {
-        const ID = Math.max(0, Math.min(.05, CD));
+      process(UU, RU, gU) {
+        const tU = Math.max(0, Math.min(.05, RU));
         this.calibrator.update({
-          ...DD,
-          dtSec: ID
+          ...UU,
+          dtSec: tU
         });
-        const pD = this.calibrator.correct(DD.gyro);
-        let iD = pD.y;
-        "player" === cD && DD.accel && (iD = ((DD, CD) => {
-          const cD = DD.y * CD.y + DD.z * CD.z;
-          return -Math.sign(cD) * Math.min(1.41 * Math.abs(cD), Math.hypot(DD.y, DD.z))
-        })(pD, this.gravity.update(pD, DD.accel, ID)));
-        const fD = this.smoother.apply(iD, pD.x, ID),
-          bD = ((DD, CD) => {
-            const cD = Math.hypot(DD, CD);
-            if (cD >= 1) return {
-              yaw: DD,
-              pitch: CD
+        const pU = this.calibrator.correct(UU.gyro);
+        let EU = pU.y;
+        "player" === gU && UU.accel && (EU = ((UU, RU) => {
+          const gU = UU.y * RU.y + UU.z * RU.z;
+          return -Math.sign(gU) * Math.min(1.41 * Math.abs(gU), Math.hypot(UU.y, UU.z))
+        })(pU, this.gravity.update(pU, UU.accel, tU)));
+        const PU = this.smoother.apply(EU, pU.x, tU),
+          TU = ((UU, RU) => {
+            const gU = Math.hypot(UU, RU);
+            if (gU >= 1) return {
+              yaw: UU,
+              pitch: RU
             };
-            const ID = cD / 1;
+            const tU = gU / 1;
             return {
-              yaw: DD * ID,
-              pitch: CD * ID
+              yaw: UU * tU,
+              pitch: RU * tU
             }
-          })(fD.yaw, fD.pitch);
+          })(PU.yaw, PU.pitch);
         return {
-          yawDeg: bD.yaw * ID,
-          pitchDeg: bD.pitch * ID
+          yawDeg: TU.yaw * tU,
+          pitchDeg: TU.pitch * tU
         }
       }
       getCalibration() {
@@ -7722,165 +7722,165 @@ export const modules = {
         this.calibrator.reset(), this.gravity.reset(), this.smoother.reset()
       }
     }
-    const PD = (DD, CD) => {
-      var cD, ID, pD;
-      const iD = CD * BD,
-        fD = null !== (cD = DD.beta) && void 0 !== cD ? cD : 0,
-        bD = null !== (ID = DD.gamma) && void 0 !== ID ? ID : 0;
+    const wU = (UU, RU) => {
+      var gU, tU, pU;
+      const EU = RU * GU,
+        PU = null !== (gU = UU.beta) && void 0 !== gU ? gU : 0,
+        TU = null !== (tU = UU.gamma) && void 0 !== tU ? tU : 0;
       return {
-        x: fD * Math.cos(iD) - bD * Math.sin(iD),
-        y: fD * Math.sin(iD) + bD * Math.cos(iD),
-        z: null !== (pD = DD.alpha) && void 0 !== pD ? pD : 0
+        x: PU * Math.cos(EU) - TU * Math.sin(EU),
+        y: PU * Math.sin(EU) + TU * Math.cos(EU),
+        z: null !== (pU = UU.alpha) && void 0 !== pU ? pU : 0
       }
     };
-    var HD = cD(8559);
-    class UD {
-      constructor(DD, CD, cD) {
-        this.hid = DD, this.sink = CD, this.onControllersChanged = cD, this.controllers = new Map, this.running = !1, this.openedCount = 0, this.opening = new Set, this.disconnectedWhileOpening = new Set, this.switchPacketCounter = 0, this.onConnect = DD => {
-          this.openController(DD.device).catch((DD => {
-            console.warn("Could not open motion controller", DD)
+    var nU = gU(8483);
+    class bU {
+      constructor(UU, RU, gU) {
+        this.hid = UU, this.sink = RU, this.onControllersChanged = gU, this.controllers = new Map, this.running = !1, this.openedCount = 0, this.opening = new Set, this.disconnectedWhileOpening = new Set, this.switchPacketCounter = 0, this.onConnect = UU => {
+          this.openController(UU.device).catch((UU => {
+            console.warn("Could not open motion controller", UU)
           }))
-        }, this.onDisconnect = DD => {
-          this.opening.has(DD.device) && this.disconnectedWhileOpening.add(DD.device);
-          const CD = this.controllers.get(DD.device);
-          CD && (this.forget(CD), this.onControllersChanged())
+        }, this.onDisconnect = UU => {
+          this.opening.has(UU.device) && this.disconnectedWhileOpening.add(UU.device);
+          const RU = this.controllers.get(UU.device);
+          RU && (this.forget(RU), this.onControllersChanged())
         }
       }
       async start() {
         if (this.running) return;
         this.running = !0, this.hid.addEventListener("connect", this.onConnect), this.hid.addEventListener("disconnect", this.onDisconnect);
-        const DD = await this.hid.getDevices();
-        for (const CD of DD) await this.openController(CD).catch((DD => {
-          console.warn("Could not open motion controller", DD)
+        const UU = await this.hid.getDevices();
+        for (const RU of UU) await this.openController(RU).catch((UU => {
+          console.warn("Could not open motion controller", UU)
         }))
       }
       stop() {
         this.running = !1, this.hid.removeEventListener("connect", this.onConnect), this.hid.removeEventListener("disconnect", this.onDisconnect);
-        for (const DD of [...this.controllers.values()]) this.forget(DD);
+        for (const UU of [...this.controllers.values()]) this.forget(UU);
         this.onControllersChanged()
       }
       async request() {
-        const DD = await this.hid.requestDevice({
-          filters: HD.k
+        const UU = await this.hid.requestDevice({
+          filters: nU.k
         });
-        let CD = 0;
-        for (const cD of DD) await this.openController(cD).catch((DD => {
-          console.warn("Could not open motion controller", DD), CD++
+        let RU = 0;
+        for (const gU of UU) await this.openController(gU).catch((UU => {
+          console.warn("Could not open motion controller", UU), RU++
         }));
-        return CD
+        return RU
       }
       async hasGrantedController() {
-        return (await this.hid.getDevices()).some((DD => null !== (0, HD.f)(DD.vendorId, DD.productId)))
+        return (await this.hid.getDevices()).some((UU => null !== (0, nU.f)(UU.vendorId, UU.productId)))
       }
       getConnectedKinds() {
-        return [...this.controllers.values()].map((DD => DD.kind))
+        return [...this.controllers.values()].map((UU => UU.kind))
       }
-      forget(DD) {
-        DD.device.removeEventListener("inputreport", DD.onReport), this.controllers.get(DD.device) === DD && this.controllers.delete(DD.device)
+      forget(UU) {
+        UU.device.removeEventListener("inputreport", UU.onReport), this.controllers.get(UU.device) === UU && this.controllers.delete(UU.device)
       }
-      async openController(DD) {
-        const CD = (0, HD.f)(DD.vendorId, DD.productId);
-        if (!CD || !this.running || this.controllers.has(DD) || this.opening.has(DD)) return;
-        this.opening.add(DD);
-        let cD = !1;
+      async openController(UU) {
+        const RU = (0, nU.f)(UU.vendorId, UU.productId);
+        if (!RU || !this.running || this.controllers.has(UU) || this.opening.has(UU)) return;
+        this.opening.add(UU);
+        let gU = !1;
         try {
-          DD.opened || await DD.open()
+          UU.opened || await UU.open()
         } finally {
-          this.opening.delete(DD), cD = this.disconnectedWhileOpening.delete(DD)
+          this.opening.delete(UU), gU = this.disconnectedWhileOpening.delete(UU)
         }
-        if (cD) return void DD.close().catch((DD => {
-          console.debug("Could not close an unplugged motion controller", DD)
+        if (gU) return void UU.close().catch((UU => {
+          console.debug("Could not close an unplugged motion controller", UU)
         }));
         if (!this.running) return;
-        const ID = {
-          device: DD,
-          kind: CD,
+        const tU = {
+          device: UU,
+          kind: RU,
           lastClock: null,
           lastEventMs: null,
           lastReadingMs: -1 / 0,
           openedOrder: this.openedCount++,
-          onReport: DD => {
-            this.onReport(ID, DD)
+          onReport: UU => {
+            this.onReport(tU, UU)
           }
         };
-        this.controllers.set(DD, ID), DD.addEventListener("inputreport", ID.onReport), this.onControllersChanged();
+        this.controllers.set(UU, tU), UU.addEventListener("inputreport", tU.onReport), this.onControllersChanged();
         try {
-          await this.enableMotion(ID)
-        } catch (pD) {
-          console.warn(`Could not turn on motion for ${CD}`, pD), this.controllers.get(DD) === ID && (this.forget(ID), this.onControllersChanged())
+          await this.enableMotion(tU)
+        } catch (pU) {
+          console.warn(`Could not turn on motion for ${RU}`, pU), this.controllers.get(UU) === tU && (this.forget(tU), this.onControllersChanged())
         }
       }
-      async enableMotion(DD) {
+      async enableMotion(UU) {
         let {
-          device: CD,
-          kind: cD
-        } = DD;
-        if ((0, HD.i)(cD))
-          for (const ID of HD.y[cD]) await CD.receiveFeatureReport(ID).catch((DD => {
-            console.debug(`Motion controller feature report ${ID} unavailable`, DD)
+          device: RU,
+          kind: gU
+        } = UU;
+        if ((0, nU.h)(gU))
+          for (const tU of nU.x[gU]) await RU.receiveFeatureReport(tU).catch((UU => {
+            console.debug(`Motion controller feature report ${tU} unavailable`, UU)
           }));
         else
-          for (let ID = 0; ID < 2; ID++)
+          for (let tU = 0; tU < 2; tU++)
             for (const {
-                subcommand: DD,
-                args: cD
+                subcommand: UU,
+                args: gU
               }
-              of HD.B) await CD.sendReport(HD.E, (0, HD.e)(this.switchPacketCounter++, DD, cD)), await new Promise((DD => {
-              setTimeout(DD, 60)
+              of nU.z) await RU.sendReport(nU.D, (0, nU.d)(this.switchPacketCounter++, UU, gU)), await new Promise((UU => {
+              setTimeout(UU, 60)
             }))
       }
-      onReport(DD, CD) {
-        const cD = (0, HD.q)(DD.kind, CD.reportId, CD.data, DD.device.productId);
-        if (!cD) return;
-        const ID = null === DD.lastEventMs ? 0 : (CD.timeStamp - DD.lastEventMs) / 1e3;
-        DD.lastEventMs = CD.timeStamp;
-        let pD = cD.dtSec;
-        if (null !== pD && ID > 0 && (pD = Math.max(.001, Math.min(.017, ID / cD.readings.length))), null === pD && null !== cD.sensorClock && (0, HD.i)(DD.kind)) {
-          const CD = (0, HD.u)(DD.kind, DD.lastClock, cD.sensorClock);
-          DD.lastClock = cD.sensorClock, pD = 0 === CD ? null : CD
+      onReport(UU, RU) {
+        const gU = (0, nU.q)(UU.kind, RU.reportId, RU.data, UU.device.productId);
+        if (!gU) return;
+        const tU = null === UU.lastEventMs ? 0 : (RU.timeStamp - UU.lastEventMs) / 1e3;
+        UU.lastEventMs = RU.timeStamp;
+        let pU = gU.dtSec;
+        if (null !== pU && tU > 0 && (pU = Math.max(.001, Math.min(.017, tU / gU.readings.length))), null === pU && null !== gU.sensorClock && (0, nU.h)(UU.kind)) {
+          const RU = (0, nU.t)(UU.kind, UU.lastClock, gU.sensorClock);
+          UU.lastClock = gU.sensorClock, pU = 0 === RU ? null : RU
         }
-        if (DD.lastReadingMs = CD.timeStamp, this.isPreferred(DD, CD.timeStamp))
-          for (const fD of cD.readings) {
-            var iD;
-            this.sink(fD, null !== (iD = pD) && void 0 !== iD ? iD : ID, `hid${DD.openedOrder}`)
+        if (UU.lastReadingMs = RU.timeStamp, this.isPreferred(UU, RU.timeStamp))
+          for (const PU of gU.readings) {
+            var EU;
+            this.sink(PU, null !== (EU = pU) && void 0 !== EU ? EU : tU, `hid${UU.openedOrder}`)
           }
       }
-      isPreferred(DD, CD) {
-        const cD = DD => 1e6 * HD.o[DD.kind] + DD.openedOrder;
-        for (const ID of this.controllers.values())
-          if (ID !== DD && CD - ID.lastReadingMs < 500 && cD(ID) < cD(DD)) return !1;
+      isPreferred(UU, RU) {
+        const gU = UU => 1e6 * nU.p[UU.kind] + UU.openedOrder;
+        for (const tU of this.controllers.values())
+          if (tU !== UU && RU - tU.lastReadingMs < 500 && gU(tU) < gU(UU)) return !1;
         return !0
       }
     }
-    var xD = cD(90);
-    const qD = () => DeviceMotionEvent,
-      JD = () => "undefined" !== typeof window && "undefined" !== typeof DeviceMotionEvent && window.isSecureContext && (0, xD.isMobile)(),
-      KD = () => {
-        var DD;
-        const CD = null === (DD = window.screen.orientation) || void 0 === DD ? void 0 : DD.angle;
-        return "number" === typeof CD ? CD : "number" === typeof window.orientation ? window.orientation : 0
+    var oU = gU(96);
+    const ZU = () => DeviceMotionEvent,
+      aU = () => "undefined" !== typeof window && "undefined" !== typeof DeviceMotionEvent && window.isSecureContext && (0, oU.isMobile)(),
+      YU = () => {
+        var UU;
+        const RU = null === (UU = window.screen.orientation) || void 0 === UU ? void 0 : UU.angle;
+        return "number" === typeof RU ? RU : "number" === typeof window.orientation ? window.orientation : 0
       };
-    class aD {
-      constructor(DD, CD) {
-        this.sink = DD, this.onStateChanged = CD, this.state = "off", this.lastEventMs = null, this.noSensorTimer = null, this.wanted = !1, this.permissionRequest = null, this.granted = !1, this.onGesture = () => {
-          this.requestPermission().catch((DD => {
-            console.warn("Could not enable the motion sensor", DD)
+    class BU {
+      constructor(UU, RU) {
+        this.sink = UU, this.onStateChanged = RU, this.state = "off", this.lastEventMs = null, this.noSensorTimer = null, this.wanted = !1, this.permissionRequest = null, this.granted = !1, this.onGesture = () => {
+          this.requestPermission().catch((UU => {
+            console.warn("Could not enable the motion sensor", UU)
           }))
-        }, this.onMotion = DD => {
-          const CD = DD.rotationRate;
-          if (!CD || null === CD.alpha && null === CD.beta && null === CD.gamma) return;
-          const cD = null === this.lastEventMs ? 0 : (DD.timeStamp - this.lastEventMs) / 1e3;
-          this.lastEventMs = DD.timeStamp, this.clearNoSensorTimer(), this.setState("on"), this.sink({
-            gyro: PD(CD, KD()),
+        }, this.onMotion = UU => {
+          const RU = UU.rotationRate;
+          if (!RU || null === RU.alpha && null === RU.beta && null === RU.gamma) return;
+          const gU = null === this.lastEventMs ? 0 : (UU.timeStamp - this.lastEventMs) / 1e3;
+          this.lastEventMs = UU.timeStamp, this.clearNoSensorTimer(), this.setState("on"), this.sink({
+            gyro: wU(RU, YU()),
             accel: null
-          }, cD, "phone")
+          }, gU, "phone")
         }
       }
       getState() {
         return this.state
       }
       start() {
-        if (this.wanted = !0, "off" === this.state) return "function" !== typeof qD().requestPermission || this.granted ? void this.listen() : (this.setState("needsPermission"), void this.armGestureRequest())
+        if (this.wanted = !0, "off" === this.state) return "function" !== typeof ZU().requestPermission || this.granted ? void this.listen() : (this.setState("needsPermission"), void this.armGestureRequest())
       }
       requestPermission() {
         return this.permissionRequest || (this.permissionRequest = this.askPermission().finally((() => {
@@ -7888,17 +7888,17 @@ export const modules = {
         }))), this.permissionRequest
       }
       async askPermission() {
-        const DD = qD().requestPermission;
+        const UU = ZU().requestPermission;
         if (!this.wanted) return;
-        if ("function" !== typeof DD) return void this.listen();
-        let CD;
+        if ("function" !== typeof UU) return void this.listen();
+        let RU;
         this.disarmGestureRequest();
         try {
-          CD = await DD.call(DeviceMotionEvent)
-        } catch (cD) {
-          throw this.wanted && "needsPermission" === this.state && this.armGestureRequest(), cD
+          RU = await UU.call(DeviceMotionEvent)
+        } catch (gU) {
+          throw this.wanted && "needsPermission" === this.state && this.armGestureRequest(), gU
         }
-        this.wanted && ("granted" === CD ? (this.granted = !0, this.listen()) : this.setState("denied"))
+        this.wanted && ("granted" === RU ? (this.granted = !0, this.listen()) : this.setState("denied"))
       }
       stop() {
         this.wanted = !1, this.disarmGestureRequest(), window.removeEventListener("devicemotion", this.onMotion), this.clearNoSensorTimer(), this.lastEventMs = null, this.setState("off")
@@ -7917,64 +7917,64 @@ export const modules = {
       clearNoSensorTimer() {
         null !== this.noSensorTimer && (clearTimeout(this.noSensorTimer), this.noSensorTimer = null)
       }
-      setState(DD) {
-        this.state !== DD && (this.state = DD, this.onStateChanged())
+      setState(UU) {
+        this.state !== UU && (this.state = UU, this.onStateChanged())
       }
     }
-    const VD = "controllerGyroStatusChanged",
-      zD = {
-        Qq: 0,
-        wq: 0
+    const VU = "controllerGyroStatusChanged",
+      rU = {
+        Xw: 0,
+        Ow: 0
       },
-      jD = DD => {
-        var CD, cD;
-        return "undefined" === typeof document || (null === (CD = null === (cD = document.featurePolicy) || void 0 === cD ? void 0 : cD.allowsFeature(DD)) || void 0 === CD || CD)
+      XU = UU => {
+        var RU, gU;
+        return "undefined" === typeof document || (null === (RU = null === (gU = document.featurePolicy) || void 0 === gU ? void 0 : gU.allowsFeature(UU)) || void 0 === RU || RU)
       };
-    class lD {
+    class vU {
       constructor() {
-        this.processor = new OD, this.hid = void 0, this.hidBlocked = void 0, this.phone = void 0, this.phoneBlocked = void 0, this.source = null, this.pendingYawDeg = 0, this.pendingPitchDeg = 0, this.lastDrainMs = -1 / 0, this.lastHidReadingMs = -1 / 0, this.running = !1, this.phoneRunning = !1, this.syncWithSettings = DD => {
-          const CD = DD.gyroAiming && bD.e.hasConnectedPad();
-          var cD, ID;
-          CD !== this.phoneRunning && (this.phoneRunning = CD, CD ? null === (cD = this.phone) || void 0 === cD || cD.start() : null === (ID = this.phone) || void 0 === ID || ID.stop());
-          if (DD.gyroAiming !== this.running) {
-            var pD, iD;
-            if (this.running = DD.gyroAiming, this.running) null === (pD = this.hid) || void 0 === pD || pD.start().catch((DD => {
-              console.warn("Could not open motion controllers", DD)
+        this.processor = new JU, this.hid = void 0, this.hidBlocked = void 0, this.phone = void 0, this.phoneBlocked = void 0, this.source = null, this.pendingYawDeg = 0, this.pendingPitchDeg = 0, this.lastDrainMs = -1 / 0, this.lastHidReadingMs = -1 / 0, this.running = !1, this.phoneRunning = !1, this.syncWithSettings = UU => {
+          const RU = UU.gyroAiming && TU.g.hasConnectedPad();
+          var gU, tU;
+          RU !== this.phoneRunning && (this.phoneRunning = RU, RU ? null === (gU = this.phone) || void 0 === gU || gU.start() : null === (tU = this.phone) || void 0 === tU || tU.stop());
+          if (UU.gyroAiming !== this.running) {
+            var pU, EU;
+            if (this.running = UU.gyroAiming, this.running) null === (pU = this.hid) || void 0 === pU || pU.start().catch((UU => {
+              console.warn("Could not open motion controllers", UU)
             }));
-            else null === (iD = this.hid) || void 0 === iD || iD.stop(), this.processor.reset(), this.source = null, this.discardPending();
+            else null === (EU = this.hid) || void 0 === EU || EU.stop(), this.processor.reset(), this.source = null, this.discardPending();
             this.publishStatus()
           }
         }, this.publishStatus = () => {
-          pD.i.Uo(VD, this.getStatus())
+          pU.p.yh(VU, this.getStatus())
         };
-        const DD = (() => {
-            var DD;
-            return "undefined" !== typeof navigator && window.isSecureContext && null !== (DD = navigator.hid) && void 0 !== DD ? DD : null
+        const UU = (() => {
+            var UU;
+            return "undefined" !== typeof navigator && window.isSecureContext && null !== (UU = navigator.hid) && void 0 !== UU ? UU : null
           })(),
-          CD = jD("hid");
-        this.hidBlocked = null !== DD && !CD, this.hid = DD && CD ? new UD(DD, ((DD, CD, cD) => {
-          this.lastHidReadingMs = performance.now(), this.feed(DD, CD, "player", cD)
+          RU = XU("hid");
+        this.hidBlocked = null !== UU && !RU, this.hid = UU && RU ? new bU(UU, ((UU, RU, gU) => {
+          this.lastHidReadingMs = performance.now(), this.feed(UU, RU, "player", gU)
         }), this.publishStatus) : null;
-        const cD = jD("accelerometer") && jD("gyroscope");
-        this.phoneBlocked = JD() && !cD, this.phone = JD() && cD ? new aD(((DD, CD, cD) => {
-          performance.now() - this.lastHidReadingMs >= 500 && this.feed(DD, CD, "local", cD)
-        }), this.publishStatus) : null, pD.i.subscribe(wD.f, this.syncWithSettings), bD.e.onConnectedPadsChanged((() => {
-          this.syncWithSettings((0, wD.h)()), this.publishStatus()
-        })), this.syncWithSettings((0, wD.h)())
+        const gU = XU("accelerometer") && XU("gyroscope");
+        this.phoneBlocked = aU() && !gU, this.phone = aU() && gU ? new BU(((UU, RU, gU) => {
+          performance.now() - this.lastHidReadingMs >= 500 && this.feed(UU, RU, "local", gU)
+        }), this.publishStatus) : null, pU.p.subscribe(KU.e, this.syncWithSettings), TU.g.onConnectedPadsChanged((() => {
+          this.syncWithSettings((0, KU.h)()), this.publishStatus()
+        })), this.syncWithSettings((0, KU.h)())
       }
       isSupported() {
         return null !== this.hid || null !== this.phone
       }
       getStatus() {
-        var DD, CD, cD, ID;
+        var UU, RU, gU, tU;
         return {
           hidSupported: null !== this.hid,
           hidBlocked: this.hidBlocked,
           phoneSupported: null !== this.phone,
           phoneBlocked: this.phoneBlocked,
-          controllers: null !== (DD = null === (CD = this.hid) || void 0 === CD ? void 0 : CD.getConnectedKinds()) && void 0 !== DD ? DD : [],
-          phoneMotion: null !== (cD = null === (ID = this.phone) || void 0 === ID ? void 0 : ID.getState()) && void 0 !== cD ? cD : "off",
-          padConnected: bD.e.hasConnectedPad()
+          controllers: null !== (UU = null === (RU = this.hid) || void 0 === RU ? void 0 : RU.getConnectedKinds()) && void 0 !== UU ? UU : [],
+          phoneMotion: null !== (gU = null === (tU = this.phone) || void 0 === tU ? void 0 : tU.getState()) && void 0 !== gU ? gU : "off",
+          padConnected: TU.g.hasConnectedPad()
         }
       }
       async connectController() {
@@ -7984,450 +7984,450 @@ export const modules = {
         this.hid && !await this.hid.hasGrantedController() && await this.hid.request()
       }
       async allowPhoneMotion() {
-        var DD;
-        await (null === (DD = this.phone) || void 0 === DD ? void 0 : DD.requestPermission())
+        var UU;
+        await (null === (UU = this.phone) || void 0 === UU ? void 0 : UU.requestPermission())
       }
       drainLookDelta() {
-        const DD = performance.now();
-        DD - this.lastDrainMs > 500 && this.discardPending(), this.lastDrainMs = DD;
-        const CD = {
+        const UU = performance.now();
+        UU - this.lastDrainMs > 500 && this.discardPending(), this.lastDrainMs = UU;
+        const RU = {
           yawDeg: this.pendingYawDeg,
           pitchDeg: this.pendingPitchDeg
         };
         this.pendingYawDeg = 0, this.pendingPitchDeg = 0;
-        const cD = (0, wD.h)();
-        return cD.gyroAiming && (DD => {
+        const gU = (0, KU.h)();
+        return gU.gyroAiming && (UU => {
           let {
-            activation: CD,
-            isHeld: cD,
-            useButton: ID,
-            gyroButton: pD
-          } = DD;
-          return "always" === CD || cD("aiming" === CD ? ID : pD)
+            activation: RU,
+            isHeld: gU,
+            useButton: tU,
+            gyroButton: pU
+          } = UU;
+          return "always" === RU || gU("aiming" === RU ? tU : pU)
         })({
-          activation: cD.gyroActivation,
-          isHeld: DD => QD.d.isButtonHeld(DD),
-          useButton: (0, fD.h)("use"),
-          gyroButton: cD.gyroButton
-        }) ? ((DD, CD) => ({
-          Qq: -DD.yawDeg * CD * BD,
-          wq: -DD.pitchDeg * CD * BD
-        }))(CD, cD.gyroSensitivity) : zD
+          activation: gU.gyroActivation,
+          isHeld: UU => qU.e.isButtonHeld(UU),
+          useButton: (0, PU.f)("use"),
+          gyroButton: gU.gyroButton
+        }) ? ((UU, RU) => ({
+          Xw: -UU.yawDeg * RU * GU,
+          Ow: -UU.pitchDeg * RU * GU
+        }))(RU, gU.gyroSensitivity) : rU
       }
       discardPending() {
         this.pendingYawDeg = 0, this.pendingPitchDeg = 0
       }
-      injectMotion(DD, CD) {
-        this.feed(DD, CD, "local", "injected")
+      injectMotion(UU, RU) {
+        this.feed(UU, RU, "local", "injected")
       }
       getCalibration() {
         return this.processor.getCalibration()
       }
-      feed(DD, CD, cD, ID) {
-        this.source !== ID && (this.processor.reset(), this.source = ID);
-        const pD = this.processor.process(DD, CD, cD);
-        this.pendingYawDeg += pD.yawDeg, this.pendingPitchDeg += pD.pitchDeg
+      feed(UU, RU, gU, tU) {
+        this.source !== tU && (this.processor.reset(), this.source = tU);
+        const pU = this.processor.process(UU, RU, gU);
+        this.pendingYawDeg += pU.yawDeg, this.pendingPitchDeg += pU.pitchDeg
       }
     }
-    let LD = null;
-    const TD = () => (LD || (LD = new lD), LD),
-      GD = () => {
-        const [DD, CD] = (0, ID.useState)((() => TD().getStatus()));
-        return (0, iD.f)(VD, CD), (0, ID.useEffect)((() => {
-          CD(TD().getStatus())
-        }), []), DD
+    let dU = null;
+    const HU = () => (dU || (dU = new vU), dU),
+      SU = () => {
+        const [UU, RU] = (0, tU.useState)((() => HU().getStatus()));
+        return (0, EU.e)(VU, RU), (0, tU.useEffect)((() => {
+          RU(HU().getStatus())
+        }), []), UU
       }
   },
-  8559: (DD, CD, cD) => {
-    cD.d(CD, {
-      B: () => nD,
-      E: () => gD,
-      e: () => mD,
-      f: () => QD,
-      i: () => ID,
-      k: () => bD,
-      l: () => wD,
-      o: () => SD,
-      q: () => ND,
-      u: () => oD,
-      y: () => OD
+  8483: (UU, RU, gU) => {
+    gU.d(RU, {
+      D: () => fU,
+      d: () => mU,
+      f: () => qU,
+      h: () => tU,
+      k: () => TU,
+      o: () => KU,
+      p: () => cU,
+      q: () => WU,
+      t: () => QU,
+      x: () => JU,
+      z: () => IU
     });
-    const ID = DD => "dualShock4" === DD || "dualSense" === DD,
-      pD = 1356,
-      iD = 1406,
-      fD = [{
-        vendorId: pD,
+    const tU = UU => "dualShock4" === UU || "dualSense" === UU,
+      pU = 1356,
+      EU = 1406,
+      PU = [{
+        vendorId: pU,
         productId: 1476,
         kind: "dualShock4"
       }, {
-        vendorId: pD,
+        vendorId: pU,
         productId: 2508,
         kind: "dualShock4"
       }, {
-        vendorId: pD,
+        vendorId: pU,
         productId: 2976,
         kind: "dualShock4"
       }, {
-        vendorId: pD,
+        vendorId: pU,
         productId: 3302,
         kind: "dualSense"
       }, {
-        vendorId: pD,
+        vendorId: pU,
         productId: 3570,
         kind: "dualSense"
       }, {
-        vendorId: iD,
+        vendorId: EU,
         productId: 8201,
         kind: "switchPro"
       }, {
-        vendorId: iD,
+        vendorId: EU,
         productId: 8198,
         kind: "joyConLeft"
       }, {
-        vendorId: iD,
+        vendorId: EU,
         productId: 8199,
         kind: "joyConRight"
       }],
-      bD = fD.map((DD => {
+      TU = PU.map((UU => {
         let {
-          vendorId: CD,
-          productId: cD
-        } = DD;
+          vendorId: RU,
+          productId: gU
+        } = UU;
         return {
-          vendorId: CD,
-          productId: cD
+          vendorId: RU,
+          productId: gU
         }
       })),
-      QD = (DD, CD) => {
-        var cD, ID;
-        return null !== (cD = null === (ID = fD.find((cD => cD.vendorId === DD && cD.productId === CD))) || void 0 === ID ? void 0 : ID.kind) && void 0 !== cD ? cD : null
+      qU = (UU, RU) => {
+        var gU, tU;
+        return null !== (gU = null === (tU = PU.find((gU => gU.vendorId === UU && gU.productId === RU))) || void 0 === tU ? void 0 : tU.kind) && void 0 !== gU ? gU : null
       },
-      wD = {
+      KU = {
         dualShock4: "DualShock 4",
         dualSense: "DualSense",
         switchPro: "Switch Pro Controller",
         joyConLeft: "Joy-Con (L)",
         joyConRight: "Joy-Con (R)"
       },
-      SD = {
+      cU = {
         dualSense: 0,
         dualShock4: 0,
         switchPro: 0,
         joyConRight: 1,
         joyConLeft: 2
       },
-      BD = 2e3 / 32767,
-      yD = 1 / 8192,
-      MD = 936 / 13371,
-      tD = (DD, CD, cD) => ({
-        x: DD.getInt16(CD, !0) * cD,
-        y: DD.getInt16(CD + 2, !0) * cD,
-        z: DD.getInt16(CD + 4, !0) * cD
+      GU = 2e3 / 32767,
+      jU = 1 / 8192,
+      uU = 936 / 13371,
+      CU = (UU, RU, gU) => ({
+        x: UU.getInt16(RU, !0) * gU,
+        y: UU.getInt16(RU + 2, !0) * gU,
+        z: UU.getInt16(RU + 4, !0) * gU
       }),
-      ZD = DD => 0 === DD.x && 0 === DD.y && 0 === DD.z,
-      oD = (DD, CD, cD) => null === CD ? null : "dualShock4" === DD ? 16 * (cD - CD & 65535) / 3 / 1e6 : (cD - CD >>> 0) / 3 / 1e6,
-      vD = (DD, CD) => "joyConRight" === CD ? {
-        x: DD.y,
-        y: -DD.z,
-        z: -DD.x
+      hU = UU => 0 === UU.x && 0 === UU.y && 0 === UU.z,
+      QU = (UU, RU, gU) => null === RU ? null : "dualShock4" === UU ? 16 * (gU - RU & 65535) / 3 / 1e6 : (gU - RU >>> 0) / 3 / 1e6,
+      eU = (UU, RU) => "joyConRight" === RU ? {
+        x: UU.y,
+        y: -UU.z,
+        z: -UU.x
       } : {
-        x: -DD.y,
-        y: DD.z,
-        z: -DD.x
+        x: -UU.y,
+        y: UU.z,
+        z: -UU.x
       },
-      ND = (DD, CD, cD, pD) => ID(DD) ? ((DD, CD, cD, ID) => {
-        const pD = ((DD, CD, cD) => "dualShock4" === DD ? 1 === CD && cD >= 63 ? 0 : 17 === CD && cD >= 65 ? 2 : null : 1 === CD && cD >= 62 ? 0 : 49 === CD && cD >= 63 ? 1 : null)(DD, CD, cD.byteLength);
-        if (null === pD) return null;
-        if (2976 === ID && 1 === CD && 0 !== (4 & cD.getUint8(30))) return null;
-        const iD = pD + ("dualShock4" === DD ? 12 : 15),
-          fD = tD(cD, iD, BD),
-          bD = tD(cD, iD + 6, yD);
-        return ZD(fD) && ZD(bD) ? null : {
+      WU = (UU, RU, gU, pU) => tU(UU) ? ((UU, RU, gU, tU) => {
+        const pU = ((UU, RU, gU) => "dualShock4" === UU ? 1 === RU && gU >= 63 ? 0 : 17 === RU && gU >= 65 ? 2 : null : 1 === RU && gU >= 62 ? 0 : 49 === RU && gU >= 63 ? 1 : null)(UU, RU, gU.byteLength);
+        if (null === pU) return null;
+        if (2976 === tU && 1 === RU && 0 !== (4 & gU.getUint8(30))) return null;
+        const EU = pU + ("dualShock4" === UU ? 12 : 15),
+          PU = CU(gU, EU, GU),
+          TU = CU(gU, EU + 6, jU);
+        return hU(PU) && hU(TU) ? null : {
           readings: [{
-            gyro: fD,
-            accel: bD
+            gyro: PU,
+            accel: TU
           }],
           dtSec: null,
-          sensorClock: "dualShock4" === DD ? cD.getUint16(pD + 9, !0) : cD.getUint32(pD + 27, !0)
+          sensorClock: "dualShock4" === UU ? gU.getUint16(pU + 9, !0) : gU.getUint32(pU + 27, !0)
         }
-      })(DD, CD, cD, pD) : ((DD, CD, cD) => {
-        if (48 !== CD && 49 !== CD || cD.byteLength < 48) return null;
-        const ID = [];
-        for (let pD = 0; pD < 3; pD++) {
-          const CD = tD(cD, 12 + 12 * pD, 244e-6),
-            iD = tD(cD, 18 + 12 * pD, MD);
-          if (ZD(iD) && ZD(CD)) return null;
-          ID.push({
-            gyro: vD(iD, DD),
-            accel: vD(CD, DD)
+      })(UU, RU, gU, pU) : ((UU, RU, gU) => {
+        if (48 !== RU && 49 !== RU || gU.byteLength < 48) return null;
+        const tU = [];
+        for (let pU = 0; pU < 3; pU++) {
+          const RU = CU(gU, 12 + 12 * pU, 244e-6),
+            EU = CU(gU, 18 + 12 * pU, uU);
+          if (hU(EU) && hU(RU)) return null;
+          tU.push({
+            gyro: eU(EU, UU),
+            accel: eU(RU, UU)
           })
         }
         return {
-          readings: ID,
+          readings: tU,
           dtSec: .005,
           sensorClock: null
         }
-      })(DD, CD, cD),
-      gD = 1,
-      XD = [0, 1, 64, 64, 0, 1, 64, 64],
-      mD = (DD, CD, cD) => new Uint8Array([15 & DD, ...XD, CD, ...cD]),
-      nD = [{
+      })(UU, RU, gU),
+      fU = 1,
+      xU = [0, 1, 64, 64, 0, 1, 64, 64],
+      mU = (UU, RU, gU) => new Uint8Array([15 & UU, ...xU, RU, ...gU]),
+      IU = [{
         subcommand: 64,
         args: [1]
       }, {
         subcommand: 3,
         args: [48]
       }],
-      OD = {
+      JU = {
         dualShock4: [2, 5],
         dualSense: [5]
       }
   },
-  7893: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => qD,
-      e: () => lD,
-      h: () => vD,
-      i: () => MD.e,
-      l: () => aD,
-      o: () => KD,
-      p: () => ND,
-      r: () => VD,
-      v: () => MD.l,
-      z: () => MD.p,
-      B: () => LD,
-      D: () => MD.s,
-      G: () => PD
+  7854: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => ZU,
+      d: () => vU,
+      g: () => eU,
+      i: () => uU.g,
+      m: () => BU,
+      p: () => YU,
+      q: () => WU,
+      s: () => VU,
+      t: () => uU.m,
+      v: () => uU.o,
+      z: () => dU,
+      B: () => uU.r,
+      F: () => wU
     });
-    var ID = cD(53),
-      pD = cD(16),
-      iD = cD(20),
-      fD = cD(1440),
-      bD = cD(1284),
-      QD = cD(7865),
-      wD = cD(7899),
-      SD = cD(7842),
-      BD = cD(7834),
-      yD = cD(7906),
-      MD = cD(1388),
-      tD = cD(7839),
-      ZD = cD(8336),
-      oD = cD(4186);
-    const vD = DD => !DD.repeat && !(0, ZD.e)(DD.key),
-      ND = "PadHidesCursor";
-    let gD = !1;
-    const XD = DD => {
-        DD !== gD && (gD = DD, document.documentElement.classList.toggle(ND, DD))
+    var tU = gU(56),
+      pU = gU(21),
+      EU = gU(24),
+      PU = gU(1410),
+      TU = gU(1287),
+      qU = gU(7828),
+      KU = gU(7862),
+      cU = gU(7813),
+      GU = gU(7801),
+      jU = gU(7865),
+      uU = gU(1362),
+      CU = gU(7807),
+      hU = gU(8290),
+      QU = gU(4054);
+    const eU = UU => !UU.repeat && !(0, hU.e)(UU.key),
+      WU = "PadHidesCursor";
+    let fU = !1;
+    const xU = UU => {
+        UU !== fU && (fU = UU, document.documentElement.classList.toggle(WU, UU))
       },
-      mD = new class {
+      mU = new class {
         constructor() {
           this.buttonsDown = [], this.stickAnchors = [null, null], this.lastActivityMs = -1 / 0, this.onlyMovedOn = !1
         }
-        observe(DD) {
-          let CD = !1,
-            cD = !1;
-          DD.values.forEach(((DD, ID) => {
-            const pD = DD >= (this.buttonsDown[ID] ? tD.P : tD.N);
-            pD && !this.buttonsDown[ID] && (CD = !0, cD = !0), this.buttonsDown[ID] = pD
+        observe(UU) {
+          let RU = !1,
+            gU = !1;
+          UU.values.forEach(((UU, tU) => {
+            const pU = UU >= (this.buttonsDown[tU] ? CU.L : CU.K);
+            pU && !this.buttonsDown[tU] && (RU = !0, gU = !0), this.buttonsDown[tU] = pU
           }));
-          return [DD.leftStick, DD.rightStick].forEach(((DD, ID) => {
-            const pD = this.stickAnchors[ID];
-            Math.hypot(DD.x, DD.y) < (pD ? tD.P : .3) ? this.stickAnchors[ID] = null : (!pD || Math.hypot(DD.x - pD.x, DD.y - pD.y) >= .3) && (this.stickAnchors[ID] = {
-              x: DD.x,
-              y: DD.y
-            }, CD = !0, cD ||= !pD)
-          })), CD && (this.lastActivityMs = DD.timestampMs), this.onlyMovedOn = CD && !cD, CD
+          return [UU.leftStick, UU.rightStick].forEach(((UU, tU) => {
+            const pU = this.stickAnchors[tU];
+            Math.hypot(UU.x, UU.y) < (pU ? CU.L : .3) ? this.stickAnchors[tU] = null : (!pU || Math.hypot(UU.x - pU.x, UU.y - pU.y) >= .3) && (this.stickAnchors[tU] = {
+              x: UU.x,
+              y: UU.y
+            }, RU = !0, gU ||= !pU)
+          })), RU && (this.lastActivityMs = UU.timestampMs), this.onlyMovedOn = RU && !gU, RU
         }
         wasOnlyMoveOn() {
           return this.onlyMovedOn
         }
-        isHolding(DD) {
-          return !(DD - this.lastActivityMs >= 1e3) && (this.buttonsDown.some((DD => DD)) || this.stickAnchors.some((DD => null !== DD)))
+        isHolding(UU) {
+          return !(UU - this.lastActivityMs >= 1e3) && (this.buttonsDown.some((UU => UU)) || this.stickAnchors.some((UU => null !== UU)))
         }
         isStickOffRest() {
-          return this.stickAnchors.some((DD => null !== DD))
+          return this.stickAnchors.some((UU => null !== UU))
         }
         reset() {
           this.buttonsDown = [], this.stickAnchors = [null, null], this.lastActivityMs = -1 / 0, this.onlyMovedOn = !1
         }
       };
-    let nD = null,
-      OD = !1;
-    const PD = () => OD;
-    let HD = null,
-      UD = !1,
-      xD = null;
-    const qD = () => xD;
-    let JD = !1;
-    const KD = DD => {
-        if (!mD.observe(DD)) return !1;
-        if (JD && mD.wasOnlyMoveOn() && !(0, MD.e)()) return !1;
-        JD = !1, OD = !1;
-        const CD = !(0, MD.e)();
-        return CD && (nD = DD, xD = !gD && UD && HD ? {
-          ...HD
-        } : null), UD = !1, (0, MD.l)("gamepad"), XD(!0), (0, yD.m)((0, QD.i)()), CD
+    let IU = null,
+      JU = !1;
+    const wU = () => JU;
+    let nU = null,
+      bU = !1,
+      oU = null;
+    const ZU = () => oU;
+    let aU = !1;
+    const YU = UU => {
+        if (!mU.observe(UU)) return !1;
+        if (aU && mU.wasOnlyMoveOn() && !(0, uU.g)()) return !1;
+        aU = !1, JU = !1;
+        const RU = !(0, uU.g)();
+        return RU && (IU = UU, oU = !fU && bU && nU ? {
+          ...nU
+        } : null), bU = !1, (0, uU.m)("gamepad"), xU(!0), (0, jU.s)((0, qU.i)()), RU
       },
-      aD = DD => !(0, MD.e)() || DD === nD,
-      VD = () => {
-        mD.reset()
+      BU = UU => !(0, uU.g)() || UU === IU,
+      VU = () => {
+        mU.reset()
       },
-      zD = () => {
-        const DD = pD.d.get("activeInputDevice"),
-          CD = "gamepad" === DD ? BD.e.getActivePad() : null;
+      rU = () => {
+        const UU = pU.b.get("activeInputDevice"),
+          RU = "gamepad" === UU ? GU.g.getActivePad() : null;
         return {
-          device: DD,
-          inGame: (0, bD.r)(),
-          padMovesMouse: null !== CD && (0, SD.h)(CD.id)
+          device: UU,
+          inGame: (0, TU.r)(),
+          padMovesMouse: null !== RU && (0, cU.f)(RU.id)
         }
       },
-      jD = DD => {
-        document.pointerLockElement ? HD = null : (HD ??= {
+      XU = UU => {
+        document.pointerLockElement ? nU = null : (nU ??= {
           x: 0,
           y: 0
-        }, HD.x = DD.clientX, HD.y = DD.clientY)
+        }, nU.x = UU.clientX, nU.y = UU.clientY)
       },
-      lD = () => {
-        const DD = new oD.e,
-          CD = CD => {
-            DD.reset(), JD = !1, (0, MD.l)(CD)
+      vU = () => {
+        const UU = new QU.b,
+          RU = RU => {
+            UU.reset(), aU = !1, (0, uU.m)(RU)
           },
-          cD = DD => {
-            if (DD.isTrusted) {
-              if (DD instanceof KeyboardEvent) {
-                if ((0, MD.i)(DD), !vD(DD)) return;
-                OD = !0
+          gU = UU => {
+            if (UU.isTrusted) {
+              if (UU instanceof KeyboardEvent) {
+                if ((0, uU.l)(UU), !eU(UU)) return;
+                JU = !0
               }
-              if (DD instanceof PointerEvent && "touch" === DD.pointerType) return HD = null, void CD("touch");
-              DD instanceof PointerEvent && (jD(DD), UD = !0), ("pointerdown" !== DD.type || (DD => {
+              if (UU instanceof PointerEvent && "touch" === UU.pointerType) return nU = null, void RU("touch");
+              UU instanceof PointerEvent && (XU(UU), bU = !0), ("pointerdown" !== UU.type || (UU => {
                 let {
-                  device: CD,
-                  inGame: cD,
-                  padMovesMouse: ID
-                } = DD;
-                return !("gamepad" === CD && ID && cD)
-              })(zD())) && CD("keyboardMouse")
+                  device: RU,
+                  inGame: gU,
+                  padMovesMouse: tU
+                } = UU;
+                return !("gamepad" === RU && tU && gU)
+              })(rU())) && RU("keyboardMouse")
             }
           },
-          ID = DD => {
-            DD.isTrusted && (HD = null, CD("touch"))
+          tU = UU => {
+            UU.isTrusted && (nU = null, RU("touch"))
           },
-          fD = DD => {
-            DD.isTrusted && "touch" !== DD.pointerType && !DD.relatedTarget && (HD = null)
+          PU = UU => {
+            UU.isTrusted && "touch" !== UU.pointerType && !UU.relatedTarget && (nU = null)
           },
-          bD = cD => {
-            if (!cD.isTrusted || "touch" === cD.pointerType) return;
-            jD(cD);
-            const ID = cD.movementX || 0,
-              iD = cD.movementY || 0;
-            if (0 === ID && 0 === iD) return;
-            if (UD = !0, XD(!1), "keyboardMouse" === pD.d.get("activeInputDevice")) return;
-            const fD = mD.isHolding(cD.timeStamp),
-              bD = zD(),
-              QD = (DD => {
+          TU = gU => {
+            if (!gU.isTrusted || "touch" === gU.pointerType) return;
+            XU(gU);
+            const tU = gU.movementX || 0,
+              EU = gU.movementY || 0;
+            if (0 === tU && 0 === EU) return;
+            if (bU = !0, xU(!1), "keyboardMouse" === pU.b.get("activeInputDevice")) return;
+            const PU = mU.isHolding(gU.timeStamp),
+              TU = rU(),
+              qU = (UU => {
                 let {
-                  device: CD,
-                  inGame: cD,
-                  padMovesMouse: ID,
-                  padHolding: pD
-                } = DD;
-                return ("gamepad" !== CD || !ID) && "keyboardMouse" !== CD && (cD || !pD)
+                  device: RU,
+                  inGame: gU,
+                  padMovesMouse: tU,
+                  padHolding: pU
+                } = UU;
+                return ("gamepad" !== RU || !tU) && "keyboardMouse" !== RU && (gU || !pU)
               })({
-                ...bD,
-                inGame: bD.inGame && (0, wD.i)(),
-                padHolding: fD
+                ...TU,
+                inGame: TU.inGame && (0, KU.d)(),
+                padHolding: PU
               });
-            QD && DD.add(ID, iD, cD.timeStamp) && (CD("keyboardMouse"), JD = mD.isStickOffRest())
+            qU && UU.add(tU, EU, gU.timeStamp) && (RU("keyboardMouse"), aU = mU.isStickOffRest())
           },
-          QD = DD => {
-            XD("gamepad" === DD)
+          qU = UU => {
+            xU("gamepad" === UU)
           },
-          SD = {
+          cU = {
             capture: !0,
             passive: !0
           };
-        window.addEventListener("keydown", cD, SD), window.addEventListener("pointerdown", cD, SD), window.addEventListener("wheel", cD, SD), window.addEventListener("touchstart", ID, SD), window.addEventListener("pointermove", bD, SD), window.addEventListener("pointerout", fD, SD);
-        const BD = iD.i.subscribe("appManagerUpdated|activeInputDevice", QD);
-        return QD(pD.d.get("activeInputDevice")), () => {
-          window.removeEventListener("keydown", cD, SD), window.removeEventListener("pointerdown", cD, SD), window.removeEventListener("wheel", cD, SD), window.removeEventListener("touchstart", ID, SD), window.removeEventListener("pointermove", bD, SD), window.removeEventListener("pointerout", fD, SD), HD = null, iD.i.unsubscribe(BD), XD(!1)
+        window.addEventListener("keydown", gU, cU), window.addEventListener("pointerdown", gU, cU), window.addEventListener("wheel", gU, cU), window.addEventListener("touchstart", tU, cU), window.addEventListener("pointermove", TU, cU), window.addEventListener("pointerout", PU, cU);
+        const GU = EU.p.subscribe("appManagerUpdated|activeInputDevice", qU);
+        return qU(pU.b.get("activeInputDevice")), () => {
+          window.removeEventListener("keydown", gU, cU), window.removeEventListener("pointerdown", gU, cU), window.removeEventListener("wheel", gU, cU), window.removeEventListener("touchstart", tU, cU), window.removeEventListener("pointermove", TU, cU), window.removeEventListener("pointerout", PU, cU), nU = null, EU.p.unsubscribe(GU), xU(!1)
         }
       },
-      LD = () => {
-        const [DD, CD] = (0, ID.useState)(QD.i);
-        return (0, fD.f)(QD.b, (() => {
-          CD((0, QD.i)())
-        })), (0, fD.f)(BD.c, (() => {
-          CD((0, QD.i)())
-        })), DD
+      dU = () => {
+        const [UU, RU] = (0, tU.useState)(qU.i);
+        return (0, PU.e)(qU.d, (() => {
+          RU((0, qU.i)())
+        })), (0, PU.e)(GU.e, (() => {
+          RU((0, qU.i)())
+        })), UU
       }
   },
-  7873: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => ID,
-      d: () => pD
+  7834: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => tU,
+      f: () => pU
     });
-    const ID = ["xbox", "playstation", "nintendo", "steamdeck", "generic"],
-      pD = DD => ID.includes(DD)
+    const tU = ["xbox", "playstation", "nintendo", "steamdeck", "generic"],
+      pU = UU => tU.includes(UU)
   },
-  7899: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => wD,
-      i: () => SD,
-      m: () => QD,
-      p: () => bD
+  7862: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => KU,
+      d: () => cU,
+      h: () => qU,
+      l: () => TU
     });
-    var ID = cD(16),
-      pD = cD(1627),
-      iD = cD(1710);
-    const fD = new Map,
-      bD = (DD, CD) => (fD.has(DD) && console.warn(`Gameplay blocker "${DD}" registered twice; the newer one replaces it.`), fD.set(DD, CD), () => {
-        fD.get(DD) === CD && fD.delete(DD)
+    var tU = gU(21),
+      pU = gU(1567),
+      EU = gU(1640);
+    const PU = new Map,
+      TU = (UU, RU) => (PU.has(UU) && console.warn(`Gameplay blocker "${UU}" registered twice; the newer one replaces it.`), PU.set(UU, RU), () => {
+        PU.get(UU) === RU && PU.delete(UU)
       }),
-      QD = () => (0, iD.e)(document.activeElement),
-      wD = function() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        for (const [CD, cD] of fD)
-          if (!DD.includes(CD) && cD()) return CD;
+      qU = () => (0, EU.b)(document.activeElement),
+      KU = function() {
+        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        for (const [RU, gU] of PU)
+          if (!UU.includes(RU) && gU()) return RU;
         return null
       },
-      SD = function() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        return "inGame" === ID.d.get("gameState") && (!(0, pD.s)() && (!QD() && null === wD(DD)))
+      cU = function() {
+        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        return "inGame" === tU.b.get("gameState") && (!(0, pU.q)() && (!qU() && null === KU(UU)))
       }
   },
-  7839: (DD, CD, cD) => {
-    cD.d(CD, {
-      C: () => XD,
-      D: () => vD,
-      H: () => oD,
-      K: () => wD,
-      N: () => yD,
-      P: () => MD,
-      R: () => pD,
-      V: () => ID,
-      X: () => nD,
-      _: () => xD,
-      b: () => aD,
-      bb: () => KD,
-      c: () => qD,
-      db: () => mD,
-      f: () => SD,
-      i: () => QD,
-      m: () => bD,
-      o: () => PD,
-      p: () => ND,
-      r: () => OD,
-      t: () => iD,
-      w: () => BD,
-      x: () => gD,
-      z: () => JD
+  7807: (UU, RU, gU) => {
+    gU.d(RU, {
+      B: () => xU,
+      C: () => eU,
+      E: () => QU,
+      G: () => KU,
+      K: () => jU,
+      L: () => uU,
+      N: () => pU,
+      O: () => tU,
+      Q: () => IU,
+      R: () => oU,
+      U: () => YU,
+      V: () => mU,
+      c: () => BU,
+      d: () => ZU,
+      e: () => cU,
+      g: () => qU,
+      j: () => TU,
+      m: () => wU,
+      o: () => WU,
+      p: () => JU,
+      t: () => EU,
+      u: () => GU,
+      w: () => fU,
+      x: () => aU
     });
-    const ID = ["A", "B", "X", "Y", "LB", "RB", "LT", "RT", "View", "Menu", "LS", "RS", "Up", "Down", "Left", "Right", "Home"],
-      pD = ID.length,
-      iD = function() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+    const tU = ["A", "B", "X", "Y", "LB", "RB", "LT", "RT", "View", "Menu", "LS", "RS", "Up", "Down", "Left", "Right", "Home"],
+      pU = tU.length,
+      EU = function() {
+        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
         return {
-          values: new Array(pD).fill(0),
+          values: new Array(pU).fill(0),
           leftStick: {
             x: 0,
             y: 0
@@ -8436,209 +8436,209 @@ export const modules = {
             x: 0,
             y: 0
           },
-          timestampMs: DD
+          timestampMs: UU
         }
       },
-      fD = Object.fromEntries(ID.map(((DD, CD) => [DD, CD]))),
-      bD = DD => fD[DD],
-      QD = function(DD, CD) {
-        let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .95;
-        const ID = Math.hypot(DD.x, DD.y);
-        if (ID <= CD) return {
+      PU = Object.fromEntries(tU.map(((UU, RU) => [UU, RU]))),
+      TU = UU => PU[UU],
+      qU = function(UU, RU) {
+        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .95;
+        const tU = Math.hypot(UU.x, UU.y);
+        if (tU <= RU) return {
           x: 0,
           y: 0
         };
-        const pD = Math.min(1, (ID - CD) / Math.max(1e-4, cD - CD));
+        const pU = Math.min(1, (tU - RU) / Math.max(1e-4, gU - RU));
         return {
-          x: DD.x / ID * pD,
-          y: DD.y / ID * pD
+          x: UU.x / tU * pU,
+          y: UU.y / tU * pU
         }
       },
-      wD = ["exponential", "linear", "boost"],
-      SD = (DD, CD) => {
-        const cD = Math.hypot(DD.x, DD.y);
-        if (0 === cD) return {
+      KU = ["exponential", "linear", "boost"],
+      cU = (UU, RU) => {
+        const gU = Math.hypot(UU.x, UU.y);
+        if (0 === gU) return {
           x: 0,
           y: 0
         };
-        const ID = ((DD, CD) => {
-          const cD = Math.max(0, Math.min(1, DD));
-          return "linear" === CD ? cD : cD * cD
-        })(cD, CD);
+        const tU = ((UU, RU) => {
+          const gU = Math.max(0, Math.min(1, UU));
+          return "linear" === RU ? gU : gU * gU
+        })(gU, RU);
         return {
-          x: DD.x / cD * ID,
-          y: DD.y / cD * ID
+          x: UU.x / gU * tU,
+          y: UU.y / gU * tU
         }
       },
-      BD = .5,
-      yD = .3,
-      MD = .2,
-      tD = bD("LT"),
-      ZD = bD("RT"),
-      oD = DD => DD === tD || DD === ZD,
-      vD = (DD, CD) => {
-        const cD = bD(CD);
-        return oD(cD) ? DD[cD] > .35 : DD[cD] >= BD
+      GU = .5,
+      jU = .3,
+      uU = .2,
+      CU = TU("LT"),
+      hU = TU("RT"),
+      QU = UU => UU === CU || UU === hU,
+      eU = (UU, RU) => {
+        const gU = TU(RU);
+        return QU(gU) ? UU[gU] > .35 : UU[gU] >= GU
       },
-      ND = (DD, CD) => DD.map(((DD, cD) => oD(cD) ? CD[cD] ? DD > .35 : DD >= .55 : DD >= BD)),
-      gD = ["Up", "Down", "Left", "Right"],
-      XD = DD => gD.includes(DD),
-      mD = function(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : .5;
-        return Math.hypot(DD.x, DD.y) < CD ? null : Math.abs(DD.x) > Math.abs(DD.y) ? DD.x > 0 ? "Right" : "Left" : DD.y > 0 ? "Down" : "Up"
+      WU = (UU, RU) => UU.map(((UU, gU) => QU(gU) ? RU[gU] ? UU > .35 : UU >= .55 : UU >= GU)),
+      fU = ["Up", "Down", "Left", "Right"],
+      xU = UU => fU.includes(UU),
+      mU = function(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : .5;
+        return Math.hypot(UU.x, UU.y) < RU ? null : Math.abs(UU.x) > Math.abs(UU.y) ? UU.x > 0 ? "Right" : "Left" : UU.y > 0 ? "Down" : "Up"
       },
-      nD = {
+      IU = {
         initialDelayMs: 350,
         intervalMs: 120
       },
-      OD = {
+      JU = {
         initialDelayMs: 350,
         intervalMs: 150
       },
-      PD = ["default", "slow", "off"],
-      HD = 800,
-      UD = 250,
-      xD = (DD, CD) => "off" === CD ? null : "slow" === CD ? {
-        initialDelayMs: Math.max(DD.initialDelayMs, HD),
-        intervalMs: Math.max(DD.intervalMs, UD)
-      } : DD;
-    class qD {
-      constructor(DD) {
-        this.readTiming = DD, this.Lb = !1, this.timing = null, this.nextFireMs = 0
+      wU = ["default", "slow", "off"],
+      nU = 800,
+      bU = 250,
+      oU = (UU, RU) => "off" === RU ? null : "slow" === RU ? {
+        initialDelayMs: Math.max(UU.initialDelayMs, nU),
+        intervalMs: Math.max(UU.intervalMs, bU)
+      } : UU;
+    class ZU {
+      constructor(UU) {
+        this.readTiming = UU, this.WT = !1, this.timing = null, this.nextFireMs = 0
       }
-      update(DD, CD) {
-        return DD ? this.Lb ? !!(this.timing && CD >= this.nextFireMs) && (this.nextFireMs = CD + this.timing.intervalMs, !0) : (this.Lb = !0, this.timing = this.readTiming(), this.nextFireMs = CD + (null !== (cD = null === (ID = this.timing) || void 0 === ID ? void 0 : ID.initialDelayMs) && void 0 !== cD ? cD : 0), !0) : (this.Lb = !1, !1);
-        var cD, ID
+      update(UU, RU) {
+        return UU ? this.WT ? !!(this.timing && RU >= this.nextFireMs) && (this.nextFireMs = RU + this.timing.intervalMs, !0) : (this.WT = !0, this.timing = this.readTiming(), this.nextFireMs = RU + (null !== (gU = null === (tU = this.timing) || void 0 === tU ? void 0 : tU.initialDelayMs) && void 0 !== gU ? gU : 0), !0) : (this.WT = !1, !1);
+        var gU, tU
       }
       reset() {
-        this.Lb = !1
+        this.WT = !1
       }
     }
-    const JD = {
+    const aU = {
         initialDelayMs: 350,
         intervalMs: 80
       },
-      KD = {
+      YU = {
         initialDelayMs: 400,
         intervalMs: 90
       };
-    class aD {
-      constructor(DD) {
-        this.timer = DD, this.direction = null
+    class BU {
+      constructor(UU) {
+        this.timer = UU, this.direction = null
       }
-      update(DD, CD) {
-        return DD !== this.direction && (this.timer.reset(), this.direction = DD), this.timer.update(null !== DD, CD) ? DD : null
+      update(UU, RU) {
+        return UU !== this.direction && (this.timer.reset(), this.direction = UU), this.timer.update(null !== UU, RU) ? UU : null
       }
       reset() {
         this.timer.reset(), this.direction = null
       }
     }
   },
-  8379: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => pD,
-      g: () => iD
+  8326: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => pU,
+      d: () => EU
     });
-    let ID = -1 / 0;
-    const pD = () => {
-        ID = performance.now()
+    let tU = -1 / 0;
+    const pU = () => {
+        tU = performance.now()
       },
-      iD = DD => performance.now() - ID < DD
+      EU = UU => performance.now() - tU < UU
   },
-  8339: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => fD,
-      e: () => iD
+  8298: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => PU,
+      i: () => EU
     });
-    var ID = cD(7865),
-      pD = cD(7839);
-    const iD = DD => (0, pD._)(DD, (0, ID.h)().buttonRepeat),
-      fD = DD => new pD.c((() => iD(DD)))
+    var tU = gU(7828),
+      pU = gU(7807);
+    const EU = UU => (0, pU.R)(UU, (0, tU.h)().buttonRepeat),
+      PU = UU => new pU.d((() => EU(UU)))
   },
-  7883: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => QD,
-      d: () => iD,
-      f: () => bD
+  7843: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => qU,
+      e: () => EU,
+      h: () => TU
     });
-    var ID = cD(20),
-      pD = cD(7865);
-    const iD = (DD, CD) => "OpenShop" === DD ? "shop" === CD : "OpenLobbyLeaderboard" !== DD || "leaderboard" === CD;
-    let fD = !1;
-    const bD = DD => {
-        DD !== fD && (fD = DD, ID.i.Uo(pD.b, (0, pD.h)()))
+    var tU = gU(24),
+      pU = gU(7828);
+    const EU = (UU, RU) => "OpenShop" === UU ? "shop" === RU : "OpenLobbyLeaderboard" !== UU || "leaderboard" === RU;
+    let PU = !1;
+    const TU = UU => {
+        UU !== PU && (PU = UU, tU.p.yh(pU.d, (0, pU.h)()))
       },
-      QD = () => ((DD, CD) => "shop" === DD && CD ? "shop" : "leaderboard")((0, pD.h)().leaderboardButton, fD)
+      qU = () => ((UU, RU) => "shop" === UU && RU ? "shop" : "leaderboard")((0, pU.h)().leaderboardButton, PU)
   },
-  7881: (DD, CD, cD) => {
-    cD.d(CD, {
-      C: () => bD,
-      E: () => mD,
-      G: () => yD,
-      I: () => MD,
-      J: () => BD,
-      M: () => XD,
-      P: () => wD,
-      S: () => vD,
-      W: () => UD,
-      _: () => gD,
-      ab: () => ZD,
-      bb: () => oD,
-      e: () => zD,
-      fb: () => tD,
-      i: () => lD,
-      ib: () => ND,
-      jb: () => KD,
-      k: () => xD,
-      lb: () => iD,
-      n: () => fD,
-      nb: () => nD,
-      o: () => HD,
-      ob: () => jD,
-      r: () => OD,
-      s: () => aD,
-      sb: () => PD,
-      w: () => VD,
-      x: () => SD,
-      y: () => QD
+  7836: (UU, RU, gU) => {
+    gU.d(RU, {
+      C: () => mU,
+      F: () => jU,
+      J: () => uU,
+      N: () => GU,
+      Q: () => xU,
+      S: () => KU,
+      V: () => eU,
+      Y: () => bU,
+      ab: () => fU,
+      bb: () => hU,
+      c: () => rU,
+      db: () => QU,
+      e: () => vU,
+      g: () => oU,
+      gb: () => CU,
+      j: () => PU,
+      kb: () => WU,
+      l: () => nU,
+      ob: () => YU,
+      p: () => JU,
+      pb: () => EU,
+      r: () => BU,
+      t: () => VU,
+      tb: () => IU,
+      u: () => cU,
+      ub: () => XU,
+      w: () => qU,
+      wb: () => wU,
+      y: () => TU
     });
-    var ID = cD(7860),
-      pD = cD(7839);
-    const iD = {
+    var tU = gU(7826),
+      pU = gU(7807);
+    const EU = {
         min: 25,
         max: 500,
         step: 5
       },
-      fD = {
+      PU = {
         min: 25,
         max: 100,
         step: 5
       },
-      bD = {
+      TU = {
         min: 0,
         max: .4,
         step: .01
       },
-      QD = {
+      qU = {
         min: 25,
         max: 300,
         step: 5
       },
-      wD = {
+      KU = {
         min: .5,
         max: 6,
         step: .1
       },
-      SD = (DD, CD) => {
-        if (!Number.isFinite(DD)) return CD.min;
-        const cD = CD.min + Math.round((DD - CD.min) / CD.step) * CD.step,
-          ID = Math.min(CD.max, Math.max(CD.min, cD));
-        return Math.round(1e3 * ID) / 1e3
+      cU = (UU, RU) => {
+        if (!Number.isFinite(UU)) return RU.min;
+        const gU = RU.min + Math.round((UU - RU.min) / RU.step) * RU.step,
+          tU = Math.min(RU.max, Math.max(RU.min, gU));
+        return Math.round(1e3 * tU) / 1e3
       },
-      BD = DD => `${Math.round(DD)}%`,
-      yD = DD => BD(100 * DD),
-      MD = DD => `${DD.toFixed(1)}\xd7`,
-      tD = [{
+      GU = UU => `${Math.round(UU)}%`,
+      jU = UU => GU(100 * UU),
+      uU = UU => `${UU.toFixed(1)}\xd7`,
+      CU = [{
         value: "auto",
         labelKey: "controller:settingsPromptAuto"
       }, {
@@ -8657,7 +8657,7 @@ export const modules = {
         value: "generic",
         labelKey: "controller:settingsPromptGeneric"
       }],
-      ZD = [{
+      hU = [{
         value: "exponential",
         labelKey: "controller:settingsCurveExponential"
       }, {
@@ -8667,7 +8667,7 @@ export const modules = {
         value: "boost",
         labelKey: "controller:settingsCurveBoost"
       }],
-      oD = [{
+      QU = [{
         value: "hybrid",
         labelKey: "controller:settingsNavHybrid"
       }, {
@@ -8677,7 +8677,7 @@ export const modules = {
         value: "cursor",
         labelKey: "controller:settingsVirtualCursor"
       }],
-      vD = [{
+      eU = [{
         value: "hybrid",
         labelKey: "controller:settingsNavHybrid"
       }, {
@@ -8687,21 +8687,21 @@ export const modules = {
         value: "cursor",
         labelKey: "controller:settingsVirtualCursor"
       }],
-      ND = [{
+      WU = [{
         value: "wheel",
         labelKey: "controller:settingsQuickChatWheel"
       }, {
         value: "off",
         labelKey: "controller:settingsQuickChatOff"
       }],
-      gD = [{
+      fU = [{
         value: "shop",
         labelKey: "controller:settingsLeaderboardButtonShop"
       }, {
         value: "leaderboard",
         labelKey: "controller:settingsLeaderboardButtonLeaderboard"
       }],
-      XD = [{
+      xU = [{
         value: "always",
         labelKey: "controller:settingsGyroAlways"
       }, {
@@ -8711,21 +8711,21 @@ export const modules = {
         value: "button",
         labelKey: "controller:settingsGyroWhileButton"
       }],
-      mD = [{
+      mU = [{
         value: "tapHold",
         labelKey: "controller:settingsEmoteButtonTapHold"
       }, {
         value: "wheel",
         labelKey: "controller:settingsEmoteButtonWheel"
       }],
-      nD = [{
+      IU = [{
         value: "toggle",
         labelKey: "controller:settingsSneakToggle"
       }, {
         value: "hold",
         labelKey: "controller:settingsSneakHold"
       }],
-      OD = [{
+      JU = [{
         value: "default",
         labelKey: "controller:settingsButtonRepeatDefault"
       }, {
@@ -8735,7 +8735,7 @@ export const modules = {
         value: "off",
         labelKey: "controller:settingsButtonRepeatOff"
       }],
-      PD = [{
+      wU = [{
         value: "short",
         labelKey: "controller:settingsTapHoldShort"
       }, {
@@ -8745,18 +8745,18 @@ export const modules = {
         value: "long",
         labelKey: "controller:settingsTapHoldLong"
       }],
-      HD = [{
+      nU = [{
         value: "hold",
         labelKey: "controller:settingsAttackHold"
       }, {
         value: "toggle",
         labelKey: "controller:settingsAttackToggle"
       }],
-      UD = {
+      bU = {
         southpaw: "controller:settingsLayoutSouthpaw",
         triggersSwapped: "controller:settingsLayoutTriggersSwapped"
       },
-      xD = {
+      oU = {
         jump: "controller:settingsActionJump",
         sneak: "controller:settingsActionSneak",
         sneakToggle: "controller:settingsActionSneakToggle",
@@ -8801,13 +8801,13 @@ export const modules = {
         keyboardClose: "controller:settingsActionKeyboardClose",
         keyboardChannel: "controller:settingsActionKeyboardChannel"
       },
-      qD = {
+      ZU = {
         gameplay: "controller:settingsGroupGameplay",
         menu: "controller:settingsGroupMenus",
         inventory: "controller:settingsGroupInventory",
         keyboard: "controller:settingsGroupKeyboard"
       },
-      JD = [{
+      aU = [{
         kind: "fixed",
         stick: "move",
         labelKey: "controller:settingsActionMove"
@@ -8816,455 +8816,455 @@ export const modules = {
         stick: "look",
         labelKey: "controller:settingsActionLook"
       }],
-      KD = ID.c.map((DD => {
+      YU = tU.e.map((UU => {
         let {
-          group: CD,
-          actions: cD
-        } = DD;
-        const ID = cD.map((DD => ({
+          group: RU,
+          actions: gU
+        } = UU;
+        const tU = gU.map((UU => ({
           kind: "action",
-          action: DD
+          action: UU
         })));
         return {
-          titleKey: qD[CD],
-          rows: "gameplay" === CD ? [...JD, ...ID] : ID
+          titleKey: ZU[RU],
+          rows: "gameplay" === RU ? [...aU, ...tU] : tU
         }
       })),
-      aD = pD.V.filter((DD => "Home" !== DD)),
-      VD = 1e4;
-    class zD {
-      constructor(DD) {
-        let CD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => !0;
-        this.cancelButton = DD, this.openButton = CD, this.accepts = cD, this.startMs = null, this.ignoredUntilMs = new Map, this.cancelDownAtMs = null
+      BU = pU.O.filter((UU => "Home" !== UU)),
+      VU = 1e4;
+    class rU {
+      constructor(UU) {
+        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => !0;
+        this.cancelButton = UU, this.openButton = RU, this.accepts = gU, this.startMs = null, this.ignoredUntilMs = new Map, this.cancelDownAtMs = null
       }
-      update(DD, CD) {
-        var cD;
-        this.updateIgnored(DD, CD);
-        const ID = CD - (null !== (cD = this.startMs) && void 0 !== cD ? cD : CD) >= 250;
-        for (const pD of aD)
-          if (pD !== this.cancelButton && ID && !this.ignoredUntilMs.has(pD) && DD.wasPressed(pD) && this.accepts(pD)) return {
+      update(UU, RU) {
+        var gU;
+        this.updateIgnored(UU, RU);
+        const tU = RU - (null !== (gU = this.startMs) && void 0 !== gU ? gU : RU) >= 250;
+        for (const pU of BU)
+          if (pU !== this.cancelButton && tU && !this.ignoredUntilMs.has(pU) && UU.wasPressed(pU) && this.accepts(pU)) return {
             kind: "bind",
-            button: pD
+            button: pU
           };
         if (this.ignoredUntilMs.has(this.cancelButton)) return null;
-        if (DD.wasPressed(this.cancelButton)) {
+        if (UU.wasPressed(this.cancelButton)) {
           if (!this.accepts(this.cancelButton)) return {
             kind: "cancel"
           };
-          this.cancelDownAtMs = CD
+          this.cancelDownAtMs = RU
         }
-        return null === this.cancelDownAtMs ? null : DD.isHeld(this.cancelButton) && CD - this.cancelDownAtMs >= 700 ? (this.cancelDownAtMs = null, {
+        return null === this.cancelDownAtMs ? null : UU.isHeld(this.cancelButton) && RU - this.cancelDownAtMs >= 700 ? (this.cancelDownAtMs = null, {
           kind: "bind",
           button: this.cancelButton
-        }) : DD.wasReleased(this.cancelButton) ? (this.cancelDownAtMs = null, {
+        }) : UU.wasReleased(this.cancelButton) ? (this.cancelDownAtMs = null, {
           kind: "cancel"
         }) : null
       }
-      getBindHoldProgress(DD) {
-        return null === this.cancelDownAtMs ? 0 : Math.min(1, (DD - this.cancelDownAtMs) / 700)
+      getBindHoldProgress(UU) {
+        return null === this.cancelDownAtMs ? 0 : Math.min(1, (UU - this.cancelDownAtMs) / 700)
       }
-      updateIgnored(DD, CD) {
+      updateIgnored(UU, RU) {
         if (null === this.startMs) {
-          this.startMs = CD;
-          for (const CD of aD) DD.isDown(CD) && this.ignoredUntilMs.set(CD, 1 / 0);
-          this.openButton && !this.ignoredUntilMs.has(this.openButton) && this.ignoredUntilMs.set(this.openButton, CD + 250)
+          this.startMs = RU;
+          for (const RU of BU) UU.isDown(RU) && this.ignoredUntilMs.set(RU, 1 / 0);
+          this.openButton && !this.ignoredUntilMs.has(this.openButton) && this.ignoredUntilMs.set(this.openButton, RU + 250)
         }
-        for (const [cD, ID] of this.ignoredUntilMs) {
-          const pD = DD.isDown(cD);
-          ID === 1 / 0 ? pD || cD !== this.openButton ? pD || this.ignoredUntilMs.delete(cD) : this.ignoredUntilMs.set(cD, CD + 250) : CD >= ID ? this.ignoredUntilMs.delete(cD) : pD && this.ignoredUntilMs.set(cD, 1 / 0)
+        for (const [gU, tU] of this.ignoredUntilMs) {
+          const pU = UU.isDown(gU);
+          tU === 1 / 0 ? pU || gU !== this.openButton ? pU || this.ignoredUntilMs.delete(gU) : this.ignoredUntilMs.set(gU, RU + 250) : RU >= tU ? this.ignoredUntilMs.delete(gU) : pU && this.ignoredUntilMs.set(gU, 1 / 0)
         }
       }
     }
-    const jD = 6e3;
-    class lD {
+    const XU = 6e3;
+    class vU {
       constructor() {
         this.downAtMs = null, this.pressesAtMs = []
       }
-      update(DD, CD) {
+      update(UU, RU) {
         let {
-          pressed: cD,
-          Lb: ID
-        } = DD;
-        if (cD) {
-          const DD = this.pressesAtMs.at(-1);
-          if (this.pressesAtMs = void 0 !== DD && CD - DD < 1500 ? [...this.pressesAtMs, CD] : [CD], this.pressesAtMs.length >= 3) return 1
+          pressed: gU,
+          WT: tU
+        } = UU;
+        if (gU) {
+          const UU = this.pressesAtMs.at(-1);
+          if (this.pressesAtMs = void 0 !== UU && RU - UU < 1500 ? [...this.pressesAtMs, RU] : [RU], this.pressesAtMs.length >= 3) return 1
         }
-        return ID ? (this.downAtMs ??= CD, Math.min(1, (CD - this.downAtMs) / 1500)) : (this.downAtMs = null, 0)
+        return tU ? (this.downAtMs ??= RU, Math.min(1, (RU - this.downAtMs) / 1500)) : (this.downAtMs = null, 0)
       }
     }
   },
-  4806: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => iD,
-      g: () => fD
+  4701: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => EU,
+      e: () => PU
     });
-    var ID = cD(53);
-    const pD = new WeakMap,
-      iD = DD => {
-        var CD;
-        const cD = DD.closest("[data-pad-slider]");
-        return cD && null !== (CD = pD.get(cD)) && void 0 !== CD ? CD : null
+    var tU = gU(56);
+    const pU = new WeakMap,
+      EU = UU => {
+        var RU;
+        const gU = UU.closest("[data-pad-slider]");
+        return gU && null !== (RU = pU.get(gU)) && void 0 !== RU ? RU : null
       },
-      fD = (DD, CD) => {
-        const cD = (0, ID.useRef)(CD);
-        cD.current = CD, (0, ID.useEffect)((() => {
-          if (DD.current) return ((DD, CD) => (pD.set(DD, CD), () => {
-            pD.get(DD) === CD && pD.delete(DD)
-          }))(DD.current, {
-            adjust: DD => {
-              cD.current.adjust(DD)
+      PU = (UU, RU) => {
+        const gU = (0, tU.useRef)(RU);
+        gU.current = RU, (0, tU.useEffect)((() => {
+          if (UU.current) return ((UU, RU) => (pU.set(UU, RU), () => {
+            pU.get(UU) === RU && pU.delete(UU)
+          }))(UU.current, {
+            adjust: UU => {
+              gU.current.adjust(UU)
             },
-            setFraction: DD => {
-              cD.current.setFraction(DD)
+            setFraction: UU => {
+              gU.current.setFraction(UU)
             },
             endDrag: () => {
-              cD.current.endDrag()
+              gU.current.endDrag()
             }
           })
-        }), [DD])
+        }), [UU])
       }
   },
-  8402: (DD, CD, cD) => {
-    cD.d(CD, {
-      b: () => iD,
-      d: () => pD
+  8346: (UU, RU, gU) => {
+    gU.d(RU, {
+      d: () => EU,
+      g: () => pU
     });
-    var ID = cD(20);
-    const pD = "localBlockBroken";
+    var tU = gU(24);
+    const pU = "localBlockBroken";
 
-    function iD() {
+    function EU() {
       return {
-        onPlayerChangeBlock(DD, CD, cD, iD, fD, bD) {
-          "Air" === bD && ID.i.Uo(pD)
+        onPlayerChangeBlock(UU, RU, gU, EU, PU, TU) {
+          "Air" === TU && tU.p.yh(pU)
         }
       }
     }
   },
-  7913: (DD, CD, cD) => {
-    var ID = {
-      "./nintendo/A.svg": 7918,
-      "./nintendo/B.svg": 7925,
-      "./nintendo/Down.svg": 7932,
-      "./nintendo/Home.svg": 7939,
-      "./nintendo/LB.svg": 7946,
-      "./nintendo/LS.svg": 7949,
-      "./nintendo/LT.svg": 7953,
-      "./nintendo/Left.svg": 7959,
-      "./nintendo/LeftStick.svg": 7968,
-      "./nintendo/Menu.svg": 7972,
-      "./nintendo/RB.svg": 7974,
-      "./nintendo/RS.svg": 7983,
-      "./nintendo/RT.svg": 7987,
-      "./nintendo/Right.svg": 7989,
-      "./nintendo/RightStick.svg": 7996,
-      "./nintendo/Up.svg": 7998,
-      "./nintendo/View.svg": 8e3,
-      "./nintendo/X.svg": 8004,
-      "./nintendo/Y.svg": 8009,
-      "./playstation/A.svg": 8013,
-      "./playstation/B.svg": 8017,
-      "./playstation/Down.svg": 8021,
-      "./playstation/Home.svg": 8026,
-      "./playstation/LB.svg": 8033,
-      "./playstation/LS.svg": 8038,
-      "./playstation/LT.svg": 8042,
-      "./playstation/Left.svg": 8045,
-      "./playstation/LeftStick.svg": 8053,
-      "./playstation/Menu.svg": 8059,
-      "./playstation/RB.svg": 8066,
-      "./playstation/RS.svg": 8075,
-      "./playstation/RT.svg": 8082,
-      "./playstation/Right.svg": 8084,
-      "./playstation/RightStick.svg": 8090,
-      "./playstation/Up.svg": 8094,
-      "./playstation/View.svg": 8100,
-      "./playstation/X.svg": 8108,
-      "./playstation/Y.svg": 8112,
-      "./steamdeck/A.svg": 8120,
-      "./steamdeck/B.svg": 8125,
-      "./steamdeck/Down.svg": 8131,
-      "./steamdeck/Home.svg": 8136,
-      "./steamdeck/LB.svg": 8140,
-      "./steamdeck/LS.svg": 8147,
-      "./steamdeck/LT.svg": 8153,
-      "./steamdeck/Left.svg": 8158,
-      "./steamdeck/LeftStick.svg": 8160,
-      "./steamdeck/Menu.svg": 8167,
-      "./steamdeck/RB.svg": 8170,
-      "./steamdeck/RS.svg": 8179,
-      "./steamdeck/RT.svg": 8187,
-      "./steamdeck/Right.svg": 8194,
-      "./steamdeck/RightStick.svg": 8202,
-      "./steamdeck/Up.svg": 8210,
-      "./steamdeck/View.svg": 8213,
-      "./steamdeck/X.svg": 8221,
-      "./steamdeck/Y.svg": 8226,
-      "./xbox/A.svg": 8231,
-      "./xbox/B.svg": 8235,
-      "./xbox/Down.svg": 8237,
-      "./xbox/Home.svg": 8244,
-      "./xbox/LB.svg": 8246,
-      "./xbox/LS.svg": 8255,
-      "./xbox/LT.svg": 8259,
-      "./xbox/Left.svg": 8264,
-      "./xbox/LeftStick.svg": 8270,
-      "./xbox/Menu.svg": 8272,
-      "./xbox/RB.svg": 8281,
-      "./xbox/RS.svg": 8285,
-      "./xbox/RT.svg": 8293,
-      "./xbox/Right.svg": 8298,
-      "./xbox/RightStick.svg": 8300,
-      "./xbox/Up.svg": 8307,
-      "./xbox/View.svg": 8313,
-      "./xbox/X.svg": 8319,
-      "./xbox/Y.svg": 8328
+  7868: (UU, RU, gU) => {
+    var tU = {
+      "./nintendo/A.svg": 7871,
+      "./nintendo/B.svg": 7880,
+      "./nintendo/Down.svg": 7889,
+      "./nintendo/Home.svg": 7892,
+      "./nintendo/LB.svg": 7894,
+      "./nintendo/LS.svg": 7901,
+      "./nintendo/LT.svg": 7908,
+      "./nintendo/Left.svg": 7912,
+      "./nintendo/LeftStick.svg": 7914,
+      "./nintendo/Menu.svg": 7916,
+      "./nintendo/RB.svg": 7921,
+      "./nintendo/RS.svg": 7926,
+      "./nintendo/RT.svg": 7933,
+      "./nintendo/Right.svg": 7935,
+      "./nintendo/RightStick.svg": 7938,
+      "./nintendo/Up.svg": 7940,
+      "./nintendo/View.svg": 7943,
+      "./nintendo/X.svg": 7950,
+      "./nintendo/Y.svg": 7957,
+      "./playstation/A.svg": 7966,
+      "./playstation/B.svg": 7973,
+      "./playstation/Down.svg": 7978,
+      "./playstation/Home.svg": 7985,
+      "./playstation/LB.svg": 7992,
+      "./playstation/LS.svg": 7995,
+      "./playstation/LT.svg": 7997,
+      "./playstation/Left.svg": 8006,
+      "./playstation/LeftStick.svg": 8013,
+      "./playstation/Menu.svg": 8015,
+      "./playstation/RB.svg": 8023,
+      "./playstation/RS.svg": 8031,
+      "./playstation/RT.svg": 8037,
+      "./playstation/Right.svg": 8039,
+      "./playstation/RightStick.svg": 8043,
+      "./playstation/Up.svg": 8051,
+      "./playstation/View.svg": 8060,
+      "./playstation/X.svg": 8065,
+      "./playstation/Y.svg": 8073,
+      "./steamdeck/A.svg": 8076,
+      "./steamdeck/B.svg": 8084,
+      "./steamdeck/Down.svg": 8093,
+      "./steamdeck/Home.svg": 8102,
+      "./steamdeck/LB.svg": 8105,
+      "./steamdeck/LS.svg": 8108,
+      "./steamdeck/LT.svg": 8113,
+      "./steamdeck/Left.svg": 8116,
+      "./steamdeck/LeftStick.svg": 8120,
+      "./steamdeck/Menu.svg": 8129,
+      "./steamdeck/RB.svg": 8137,
+      "./steamdeck/RS.svg": 8145,
+      "./steamdeck/RT.svg": 8149,
+      "./steamdeck/Right.svg": 8157,
+      "./steamdeck/RightStick.svg": 8162,
+      "./steamdeck/Up.svg": 8168,
+      "./steamdeck/View.svg": 8173,
+      "./steamdeck/X.svg": 8175,
+      "./steamdeck/Y.svg": 8181,
+      "./xbox/A.svg": 8184,
+      "./xbox/B.svg": 8190,
+      "./xbox/Down.svg": 8194,
+      "./xbox/Home.svg": 8201,
+      "./xbox/LB.svg": 8210,
+      "./xbox/LS.svg": 8219,
+      "./xbox/LT.svg": 8224,
+      "./xbox/Left.svg": 8231,
+      "./xbox/LeftStick.svg": 8240,
+      "./xbox/Menu.svg": 8246,
+      "./xbox/RB.svg": 8248,
+      "./xbox/RS.svg": 8257,
+      "./xbox/RT.svg": 8261,
+      "./xbox/Right.svg": 8265,
+      "./xbox/RightStick.svg": 8269,
+      "./xbox/Up.svg": 8271,
+      "./xbox/View.svg": 8273,
+      "./xbox/X.svg": 8277,
+      "./xbox/Y.svg": 8286
     };
 
-    function pD(DD) {
-      var CD = iD(DD);
-      return cD(CD)
+    function pU(UU) {
+      var RU = EU(UU);
+      return gU(RU)
     }
 
-    function iD(DD) {
-      if (!cD.o(ID, DD)) {
-        var CD = new Error("Cannot find module '" + DD + "'");
-        throw CD.code = "MODULE_NOT_FOUND", CD
+    function EU(UU) {
+      if (!gU.o(tU, UU)) {
+        var RU = new Error("Cannot find module '" + UU + "'");
+        throw RU.code = "MODULE_NOT_FOUND", RU
       }
-      return ID[DD]
+      return tU[UU]
     }
-    pD.keys = function() {
-      return Object.keys(ID)
-    }, pD.resolve = iD, DD.exports = pD, pD.id = 7913
+    pU.keys = function() {
+      return Object.keys(tU)
+    }, pU.resolve = EU, UU.exports = pU, pU.id = 7868
   },
-  7918: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/A.926fb88933484dfbde14.svg"
+  7871: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/A.926fb88933484dfbde14.svg"
   },
-  7925: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/B.9f5ec099f78f84e44427.svg"
+  7880: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/B.9f5ec099f78f84e44427.svg"
   },
-  7932: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Down.b1852f687e6dd088dc83.svg"
+  7889: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Down.b1852f687e6dd088dc83.svg"
   },
-  7939: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Home.4f2ce08049843c0d68cc.svg"
+  7892: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Home.4f2ce08049843c0d68cc.svg"
   },
-  7946: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/LB.3a20b15927b55d5d8b60.svg"
+  7894: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/LB.3a20b15927b55d5d8b60.svg"
   },
-  7949: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/LS.30b6b373c0d6b7ee1753.svg"
+  7901: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/LS.30b6b373c0d6b7ee1753.svg"
   },
-  7953: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/LT.9fdc5e69011b9d41f50a.svg"
+  7908: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/LT.9fdc5e69011b9d41f50a.svg"
   },
-  7959: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Left.c380211d278e5ad37395.svg"
+  7912: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Left.c380211d278e5ad37395.svg"
   },
-  7968: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/LeftStick.572ef7fe851cd5c7c48d.svg"
+  7914: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/LeftStick.572ef7fe851cd5c7c48d.svg"
   },
-  7972: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Menu.c903a662eb685211e52e.svg"
+  7916: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Menu.c903a662eb685211e52e.svg"
   },
-  7974: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/RB.bba470ddb76ceec5d168.svg"
+  7921: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/RB.bba470ddb76ceec5d168.svg"
   },
-  7983: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/RS.faed29b08b9895ac7291.svg"
+  7926: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/RS.faed29b08b9895ac7291.svg"
   },
-  7987: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/RT.e5a9fbcc3c79550111ca.svg"
+  7933: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/RT.e5a9fbcc3c79550111ca.svg"
   },
-  7989: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Right.01eea634de7e4fea174f.svg"
+  7935: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Right.01eea634de7e4fea174f.svg"
   },
-  7996: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/RightStick.8c455f35f82d8f40b0dc.svg"
+  7938: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/RightStick.8c455f35f82d8f40b0dc.svg"
   },
-  7998: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Up.0c878a914746e22612b1.svg"
+  7940: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Up.0c878a914746e22612b1.svg"
   },
-  8e3: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/View.0c9378b5d720a636d50d.svg"
+  7943: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/View.0c9378b5d720a636d50d.svg"
   },
-  8004: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/X.c9377519af94e6dce1d7.svg"
+  7950: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/X.c9377519af94e6dce1d7.svg"
   },
-  8009: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Y.62d8c17731dd2e172426.svg"
+  7957: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Y.62d8c17731dd2e172426.svg"
   },
-  8013: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/A.958a6de9474f8d0c9caf.svg"
+  7966: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/A.958a6de9474f8d0c9caf.svg"
   },
-  8017: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/B.d05958bfa88a1162b47a.svg"
+  7973: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/B.d05958bfa88a1162b47a.svg"
   },
-  8021: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Down.db68fb3980768eb54671.svg"
+  7978: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Down.db68fb3980768eb54671.svg"
   },
-  8026: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Home.4f2ce08049843c0d68cc.svg"
+  7985: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Home.4f2ce08049843c0d68cc.svg"
   },
-  8033: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/LB.37a3c5128c958ec2a0c2.svg"
+  7992: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/LB.37a3c5128c958ec2a0c2.svg"
   },
-  8038: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/LS.15b0cc5bf3f2fe7bbd8b.svg"
+  7995: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/LS.15b0cc5bf3f2fe7bbd8b.svg"
   },
-  8042: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/LT.5412ae5222c69f8c833f.svg"
+  7997: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/LT.5412ae5222c69f8c833f.svg"
   },
-  8045: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Left.4457b2895ce94a5df32e.svg"
+  8006: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Left.4457b2895ce94a5df32e.svg"
   },
-  8053: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/LeftStick.572ef7fe851cd5c7c48d.svg"
+  8013: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/LeftStick.572ef7fe851cd5c7c48d.svg"
   },
-  8059: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Menu.1e8427f8133c9d456c53.svg"
+  8015: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Menu.1e8427f8133c9d456c53.svg"
   },
-  8066: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/RB.c96c4aa2590209e930c7.svg"
+  8023: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/RB.c96c4aa2590209e930c7.svg"
   },
-  8075: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/RS.8d70d147cf1ab136e845.svg"
+  8031: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/RS.8d70d147cf1ab136e845.svg"
   },
-  8082: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/RT.1e4691bb5a7c049693df.svg"
+  8037: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/RT.1e4691bb5a7c049693df.svg"
   },
-  8084: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Right.a1e101413040c540b879.svg"
+  8039: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Right.a1e101413040c540b879.svg"
   },
-  8090: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/RightStick.8c455f35f82d8f40b0dc.svg"
+  8043: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/RightStick.8c455f35f82d8f40b0dc.svg"
   },
-  8094: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Up.7544a65ad4f611a55775.svg"
+  8051: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Up.7544a65ad4f611a55775.svg"
   },
-  8100: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/View.003cae39de89cae0b9d8.svg"
+  8060: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/View.003cae39de89cae0b9d8.svg"
   },
-  8108: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/X.d88b6e62dd8fb4bda32a.svg"
+  8065: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/X.d88b6e62dd8fb4bda32a.svg"
   },
-  8112: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Y.428d3e70775877892f82.svg"
+  8073: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Y.428d3e70775877892f82.svg"
   },
-  8120: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/A.9f5ec099f78f84e44427.svg"
+  8076: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/A.9f5ec099f78f84e44427.svg"
   },
-  8125: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/B.926fb88933484dfbde14.svg"
+  8084: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/B.926fb88933484dfbde14.svg"
   },
-  8131: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Down.b1852f687e6dd088dc83.svg"
+  8093: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Down.b1852f687e6dd088dc83.svg"
   },
-  8136: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Home.ea8b009cfa9562aa644e.svg"
+  8102: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Home.ea8b009cfa9562aa644e.svg"
   },
-  8140: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/LB.f283d355d22fc107d6d6.svg"
+  8105: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/LB.f283d355d22fc107d6d6.svg"
   },
-  8147: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/LS.30b6b373c0d6b7ee1753.svg"
+  8108: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/LS.30b6b373c0d6b7ee1753.svg"
   },
-  8153: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/LT.13e66c122e7ee04bb876.svg"
+  8113: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/LT.13e66c122e7ee04bb876.svg"
   },
-  8158: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Left.c380211d278e5ad37395.svg"
+  8116: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Left.c380211d278e5ad37395.svg"
   },
-  8160: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/LeftStick.572ef7fe851cd5c7c48d.svg"
+  8120: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/LeftStick.572ef7fe851cd5c7c48d.svg"
   },
-  8167: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Menu.90fc4e918900eb5062a0.svg"
+  8129: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Menu.90fc4e918900eb5062a0.svg"
   },
-  8170: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/RB.918a7f16dc054d96b6f3.svg"
+  8137: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/RB.918a7f16dc054d96b6f3.svg"
   },
-  8179: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/RS.faed29b08b9895ac7291.svg"
+  8145: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/RS.faed29b08b9895ac7291.svg"
   },
-  8187: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/RT.a0523211130959598bed.svg"
+  8149: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/RT.a0523211130959598bed.svg"
   },
-  8194: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Right.01eea634de7e4fea174f.svg"
+  8157: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Right.01eea634de7e4fea174f.svg"
   },
-  8202: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/RightStick.8c455f35f82d8f40b0dc.svg"
+  8162: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/RightStick.8c455f35f82d8f40b0dc.svg"
   },
-  8210: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Up.0c878a914746e22612b1.svg"
+  8168: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Up.0c878a914746e22612b1.svg"
   },
-  8213: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/View.0bc952e292c28c3baac2.svg"
+  8173: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/View.0bc952e292c28c3baac2.svg"
   },
-  8221: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/X.62d8c17731dd2e172426.svg"
+  8175: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/X.62d8c17731dd2e172426.svg"
   },
-  8226: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Y.c9377519af94e6dce1d7.svg"
+  8181: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Y.c9377519af94e6dce1d7.svg"
   },
-  8231: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/A.9f5ec099f78f84e44427.svg"
+  8184: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/A.9f5ec099f78f84e44427.svg"
   },
-  8235: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/B.926fb88933484dfbde14.svg"
+  8190: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/B.926fb88933484dfbde14.svg"
   },
-  8237: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Down.b1852f687e6dd088dc83.svg"
+  8194: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Down.b1852f687e6dd088dc83.svg"
   },
-  8244: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Home.8898f76b20962fe52ab7.svg"
+  8201: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Home.8898f76b20962fe52ab7.svg"
   },
-  8246: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/LB.689ba3703ae248f2e4cc.svg"
+  8210: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/LB.689ba3703ae248f2e4cc.svg"
   },
-  8255: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/LS.30b6b373c0d6b7ee1753.svg"
+  8219: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/LS.30b6b373c0d6b7ee1753.svg"
   },
-  8259: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/LT.9c2d10d335ab5c590525.svg"
+  8224: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/LT.9c2d10d335ab5c590525.svg"
   },
-  8264: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Left.c380211d278e5ad37395.svg"
+  8231: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Left.c380211d278e5ad37395.svg"
   },
-  8270: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/LeftStick.572ef7fe851cd5c7c48d.svg"
+  8240: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/LeftStick.572ef7fe851cd5c7c48d.svg"
   },
-  8272: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Menu.9e485791ea97009871ca.svg"
+  8246: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Menu.9e485791ea97009871ca.svg"
   },
-  8281: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/RB.7ee5ce48dd551f993f80.svg"
+  8248: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/RB.7ee5ce48dd551f993f80.svg"
   },
-  8285: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/RS.faed29b08b9895ac7291.svg"
+  8257: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/RS.faed29b08b9895ac7291.svg"
   },
-  8293: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/RT.903ecadc55a9e9e00f07.svg"
+  8261: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/RT.903ecadc55a9e9e00f07.svg"
   },
-  8298: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Right.01eea634de7e4fea174f.svg"
+  8265: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Right.01eea634de7e4fea174f.svg"
   },
-  8300: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/RightStick.8c455f35f82d8f40b0dc.svg"
+  8269: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/RightStick.8c455f35f82d8f40b0dc.svg"
   },
-  8307: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Up.0c878a914746e22612b1.svg"
+  8271: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Up.0c878a914746e22612b1.svg"
   },
-  8313: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/View.3c5eeb34f0413bde4a65.svg"
+  8273: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/View.3c5eeb34f0413bde4a65.svg"
   },
-  8319: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/X.62d8c17731dd2e172426.svg"
+  8277: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/X.62d8c17731dd2e172426.svg"
   },
-  8328: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/Y.c9377519af94e6dce1d7.svg"
+  8286: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/Y.c9377519af94e6dce1d7.svg"
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

@@ -1,313 +1,313 @@
 export const id = 129;
 export const ids = [129, 130];
 export const modules = {
-  6356: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => ID.l,
-      e: () => pD,
-      f: () => ID.r
+  6284: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => tU.h,
+      e: () => pU,
+      i: () => tU.n
     });
-    var ID = cD(6343);
-    const pD = [!1, !0].flatMap((DD => ["terrain", "liquid", "model"].map((CD => ({
-      strict: DD,
-      program: CD
+    var tU = gU(6265);
+    const pU = [!1, !0].flatMap((UU => ["terrain", "liquid", "model"].map((RU => ({
+      strict: UU,
+      program: RU
     })))))
   },
-  38527: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      ShaderPackPage: () => QD,
-      harnessShaderPackMode: () => yD,
-      setHarnessUrlShaderPack: () => BD,
-      shaderPackPage: () => SD
+  38747: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      ShaderPackPage: () => qU,
+      harnessShaderPackMode: () => jU,
+      setHarnessUrlShaderPack: () => GU,
+      shaderPackPage: () => cU
     });
-    var ID = cD(90),
-      pD = cD(36),
-      iD = (cD(3260), cD(6356), cD(3255)),
-      fD = cD(6409);
-    cD(6379);
-    const bD = {
+    var tU = gU(96),
+      pU = gU(34),
+      EU = (gU(3153), gU(6284), gU(3151)),
+      PU = gU(6339);
+    gU(6306);
+    const TU = {
       status: "none"
     };
-    class QD {
+    class qU {
       constructor() {
         this.stored = null, this.compiling = null, this.pagePack = null, this.resolved = null
       }
       preload() {
         if (null === this.stored) {
-          if ((0, iD.k)(ID.featureFlags.settings.canUseShaderPacks)) return this.stored = Promise.resolve(null), wD().then((DD => {
-            DD && pD.h.removeItem(iD.e)
+          if ((0, EU.h)(tU.featureFlags.settings.canUseShaderPacks)) return this.stored = Promise.resolve(null), KU().then((UU => {
+            UU && pU.k.removeItem(EU.b)
           })), this.stored;
           this.prefetchHint() && this.compiler().catch((() => {})), this.stored = this.readStored()
         }
         return this.stored
       }
       prefetchHint() {
-        return (0, iD.g)(ID.featureFlags.settings.canUseShaderPacks)
+        return (0, EU.f)(tU.featureFlags.settings.canUseShaderPacks)
       }
       async loadActive() {
-        const DD = await this.load();
-        return "active" === DD.status ? DD.pack : null
+        const UU = await this.load();
+        return "active" === UU.status ? UU.pack : null
       }
       load() {
-        return this.pagePack ??= this.read().catch((DD => (console.error("Failed to load the shader pack", DD), bD))).then((DD => (this.resolved ??= DD, DD))), this.pagePack
+        return this.pagePack ??= this.read().catch((UU => (console.error("Failed to load the shader pack", UU), TU))).then((UU => (this.resolved ??= UU, UU))), this.pagePack
       }
       hasNone() {
-        var DD;
-        return "none" === (null === (DD = this.resolved) || void 0 === DD ? void 0 : DD.status)
+        var UU;
+        return "none" === (null === (UU = this.resolved) || void 0 === UU ? void 0 : UU.status)
       }
-      block(DD) {
+      block(UU) {
         this.resolved = {
           status: "blocked",
-          messageKey: DD,
+          messageKey: UU,
           variants: null
         }, this.pagePack = Promise.resolve(this.resolved)
       }
       compiler() {
-        return this.compiling ??= Promise.all([cD.e(74), cD.e(131), cD.e(134)]).then((() => cD(40843))).then((DD => (DD.prefetchCompiler(), DD))), this.compiling
+        return this.compiling ??= Promise.all([gU.e(74), gU.e(131), gU.e(134)]).then((() => gU(41104))).then((UU => (UU.prefetchCompiler(), UU))), this.compiling
       }
       async readStored() {
-        const DD = await wD();
-        return DD && this.compiler().then((DD => DD.reconcileHint())).catch((DD => {
-          console.error("Failed to correct the shader pack hint", DD)
-        })), DD
+        const UU = await KU();
+        return UU && this.compiler().then((UU => UU.reconcileHint())).catch((UU => {
+          console.error("Failed to correct the shader pack hint", UU)
+        })), UU
       }
       async read() {
-        const DD = await this.preload();
-        return DD ? (await this.compiler()).compilePagePack(DD) : bD
+        const UU = await this.preload();
+        return UU ? (await this.compiler()).compilePagePack(UU) : TU
       }
     }
-    async function wD() {
-      if (!(0, iD.o)(ID.featureFlags.settings.canUseShaderPacks)) return null;
+    async function KU() {
+      if (!(0, EU.l)(tU.featureFlags.settings.canUseShaderPacks)) return null;
       try {
-        const DD = await (0, fD.d)(!0);
-        return DD || pD.h.setItem(iD.e, !1), DD
-      } catch (DD) {
-        return console.error("Failed to read the stored shader pack", DD), pD.h.removeItem(iD.e), null
+        const UU = await (0, PU.e)(!0);
+        return UU || pU.k.setItem(EU.b, !1), UU
+      } catch (UU) {
+        return console.error("Failed to read the stored shader pack", UU), pU.k.removeItem(EU.b), null
       }
     }
-    const SD = new QD;
+    const cU = new qU;
 
-    function BD(DD, CD) {}
+    function GU(UU, RU) {}
 
-    function yD() {
+    function jU() {
       return null
     }
   },
-  6409: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => pD,
-      d: () => iD
+  6339: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => pU,
+      e: () => EU
     });
-    var ID = cD(36);
-    const pD = "shaderPack";
-    async function iD() {
-      var DD;
-      let CD = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (DD = await ID.f.getItem(pD, CD)) && void 0 !== DD ? DD : null
+    var tU = gU(34);
+    const pU = "shaderPack";
+    async function EU() {
+      var UU;
+      let RU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (UU = await tU.g.getItem(pU, RU)) && void 0 !== UU ? UU : null
     }
   },
-  6379: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      loadShaderPackTextures: () => fD,
-      shaderPackTextures: () => bD
+  6306: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      loadShaderPackTextures: () => PU,
+      shaderPackTextures: () => TU
     });
-    var ID = cD(6343);
-    let pD = null,
-      iD = null;
+    var tU = gU(6265);
+    let pU = null,
+      EU = null;
 
-    function fD() {
-      return iD ??= Promise.all([cD.e(69), cD.e(198)]).then((() => cD(39608))).then((DD => {
+    function PU() {
+      return EU ??= Promise.all([gU.e(69), gU.e(198)]).then((() => gU(39871))).then((UU => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: CD,
-          textureNameToIndex: cD,
-          textureAnimationData: iD
-        } = DD;
-        return pD ??= (0, ID.m)(cD, iD, CD), pD
-      })), iD
+          FORMER_BLOCK_IMAGE_NAMES: RU,
+          textureNameToIndex: gU,
+          textureAnimationData: EU
+        } = UU;
+        return pU ??= (0, tU.i)(gU, EU, RU), pU
+      })), EU
     }
 
-    function bD() {
-      if (null === pD) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return pD
+    function TU() {
+      if (null === pU) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return pU
     }
   },
-  6343: (DD, CD, cD) => {
-    cD.d(CD, {
-      A: () => BD,
-      d: () => fD,
-      h: () => iD,
-      l: () => ID,
-      m: () => tD,
-      n: () => SD,
-      r: () => pD,
-      s: () => QD,
-      w: () => wD
+  6265: (UU, RU, gU) => {
+    gU.d(RU, {
+      c: () => PU,
+      e: () => EU,
+      h: () => tU,
+      i: () => CU,
+      k: () => cU,
+      n: () => pU,
+      r: () => qU,
+      t: () => KU,
+      x: () => GU
     });
-    const ID = 5;
+    const tU = 5;
 
-    function pD(DD) {
-      return DD === ID
+    function pU(UU) {
+      return UU === tU
     }
-    const iD = 262144,
-      fD = 256,
-      bD = 256;
+    const EU = 262144,
+      PU = 256,
+      TU = 256;
 
-    function QD(DD) {
-      if ("object" !== typeof DD || null === DD || Array.isArray(DD)) return "The pack has no files.";
-      const CD = [];
-      for (const [cD, ID] of Object.entries(DD)) {
-        if ("string" !== typeof ID) return `${cD} isn't text.`;
-        CD.push({
-          path: cD,
-          source: ID
+    function qU(UU) {
+      if ("object" !== typeof UU || null === UU || Array.isArray(UU)) return "The pack has no files.";
+      const RU = [];
+      for (const [gU, tU] of Object.entries(UU)) {
+        if ("string" !== typeof tU) return `${gU} isn't text.`;
+        RU.push({
+          path: gU,
+          source: tU
         })
       }
-      return CD.sort(((DD, CD) => SD(DD.path, CD.path))),
-        function(DD) {
-          if (0 === DD.length) return "The pack has no .wgsl files.";
-          if (DD.length > fD) return `The pack has more than ${fD} .wgsl files.`;
-          const CD = new Set;
+      return RU.sort(((UU, RU) => cU(UU.path, RU.path))),
+        function(UU) {
+          if (0 === UU.length) return "The pack has no .wgsl files.";
+          if (UU.length > PU) return `The pack has more than ${PU} .wgsl files.`;
+          const RU = new Set;
           for (const {
-              path: cD
+              path: gU
             }
-            of DD) {
-            const DD = yD(cD);
-            if (null !== DD) return DD;
-            if (CD.has(cD)) return `The pack has two files at ${cD}.`;
-            CD.add(cD)
+            of UU) {
+            const UU = jU(gU);
+            if (null !== UU) return UU;
+            if (RU.has(gU)) return `The pack has two files at ${gU}.`;
+            RU.add(gU)
           }
-          return BD(DD) > iD ? `The pack's .wgsl files are over ${iD/1024} KB in total.` : null
-        }(CD) ?? CD
+          return GU(UU) > EU ? `The pack's .wgsl files are over ${EU/1024} KB in total.` : null
+        }(RU) ?? RU
     }
 
-    function wD(DD) {
-      const CD = {};
-      for (const cD of DD) CD[cD.path] = cD.source;
-      return CD
+    function KU(UU) {
+      const RU = {};
+      for (const gU of UU) RU[gU.path] = gU.source;
+      return RU
     }
 
-    function SD(DD, CD) {
-      return DD < CD ? -1 : DD > CD ? 1 : 0
+    function cU(UU, RU) {
+      return UU < RU ? -1 : UU > RU ? 1 : 0
     }
 
-    function BD(DD) {
-      const CD = new TextEncoder;
-      let cD = 0;
+    function GU(UU) {
+      const RU = new TextEncoder;
+      let gU = 0;
       for (const {
-          source: ID
+          source: tU
         }
-        of DD) cD += CD.encode(ID).byteLength;
-      return cD
+        of UU) gU += RU.encode(tU).byteLength;
+      return gU
     }
 
-    function yD(DD) {
-      if (!DD.toLowerCase().endsWith(".wgsl")) return `${DD} isn't a .wgsl file.`;
-      if (DD.length > bD) return `A file path is over ${bD} characters.`;
-      if (DD.includes("\\") || /[\u0000-\u001f]/.test(DD)) return `${DD} isn't a valid file path.`;
-      return DD.split("/").some((DD => "" === DD || "." === DD || ".." === DD)) ? `${DD} isn't a valid file path.` : null
+    function jU(UU) {
+      if (!UU.toLowerCase().endsWith(".wgsl")) return `${UU} isn't a .wgsl file.`;
+      if (UU.length > TU) return `A file path is over ${TU} characters.`;
+      if (UU.includes("\\") || /[\u0000-\u001f]/.test(UU)) return `${UU} isn't a valid file path.`;
+      return UU.split("/").some((UU => "" === UU || "." === UU || ".." === UU)) ? `${UU} isn't a valid file path.` : null
     }
-    const MD = /^(.*)\[rot\[([1-4])$/;
+    const uU = /^(.*)\[rot\[([1-4])$/;
 
-    function tD(DD, CD) {
-      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const ID = new Map;
-      CD.forEach(((DD, CD) => {
+    function CU(UU, RU) {
+      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const tU = new Map;
+      RU.forEach(((UU, RU) => {
         let {
-          numAnimStates: cD,
-          animStartIdx: pD
-        } = DD;
-        for (let iD = 1; iD < cD; iD++) ID.set(pD + iD - 1, CD)
+          numAnimStates: gU,
+          animStartIdx: pU
+        } = UU;
+        for (let EU = 1; EU < gU; EU++) tU.set(pU + EU - 1, RU)
       }));
-      const pD = Object.entries(DD),
-        iD = new Map;
-      for (const [ZD, oD] of pD) {
-        const DD = MD.exec(ZD);
-        "1" === DD?.[2] && iD.set(DD[1], oD + 1)
+      const pU = Object.entries(UU),
+        EU = new Map;
+      for (const [hU, QU] of pU) {
+        const UU = uU.exec(hU);
+        "1" === UU?.[2] && EU.set(UU[1], QU + 1)
       }
-      const fD = DD => {
-          const CD = MD.exec(DD);
-          return CD && iD.has(CD[1]) ? {
-            root: CD[1],
-            rotation: Number(CD[2]) - 1
+      const PU = UU => {
+          const RU = uU.exec(UU);
+          return RU && EU.has(RU[1]) ? {
+            root: RU[1],
+            rotation: Number(RU[2]) - 1
           } : null
         },
-        bD = new Set(pD.map((DD => {
-          let [CD] = DD;
-          return fD(CD)?.root ?? CD
+        TU = new Set(pU.map((UU => {
+          let [RU] = UU;
+          return PU(RU)?.root ?? RU
         }))),
-        QD = (DD, cD) => {
-          const ID = DD.replace(/_?0$/, "");
-          return (CD[cD]?.numAnimStates ?? 0) > 1 && !bD.has(ID) ? ID : DD
+        qU = (UU, gU) => {
+          const tU = UU.replace(/_?0$/, "");
+          return (RU[gU]?.numAnimStates ?? 0) > 1 && !TU.has(tU) ? tU : UU
         },
-        wD = new Map;
-      for (const [MD, ZD] of pD) wD.set(ZD, QD(fD(MD)?.root ?? MD, ZD));
-      const SD = pD.reduce(((DD, CD) => {
-          let [, cD] = CD;
-          return Math.max(DD, cD + 1)
+        KU = new Map;
+      for (const [uU, hU] of pU) KU.set(hU, qU(PU(uU)?.root ?? uU, hU));
+      const cU = pU.reduce(((UU, RU) => {
+          let [, gU] = RU;
+          return Math.max(UU, gU + 1)
         }), 0),
-        BD = Array.from({
-          length: SD
-        }, ((DD, CD) => ({
-          id: CD + 1,
+        GU = Array.from({
+          length: cU
+        }, ((UU, RU) => ({
+          id: RU + 1,
           rotation: 0
         }))),
-        yD = new Map,
-        tD = new Map;
-      for (const [MD, ZD] of pD) {
-        const DD = fD(MD),
-          CD = ID.get(ZD);
-        if (void 0 !== CD) {
-          const cD = wD.get(CD);
-          tD.set(MD, {
-            name: MD,
-            texture: cD,
+        jU = new Map,
+        CU = new Map;
+      for (const [uU, hU] of pU) {
+        const UU = PU(uU),
+          RU = tU.get(hU);
+        if (void 0 !== RU) {
+          const gU = KU.get(RU);
+          CU.set(uU, {
+            name: uU,
+            texture: gU,
             kind: "frame"
-          }), DD && !tD.has(DD.root) && tD.set(DD.root, {
-            name: DD.root,
-            texture: cD,
+          }), UU && !CU.has(UU.root) && CU.set(UU.root, {
+            name: UU.root,
+            texture: gU,
             kind: "frame"
           });
           continue
         }
-        const cD = wD.get(ZD),
-          pD = DD?.root ?? MD;
-        if (cD !== pD && tD.set(pD, {
-            name: pD,
-            texture: cD,
+        const gU = KU.get(hU),
+          pU = UU?.root ?? uU;
+        if (gU !== pU && CU.set(pU, {
+            name: pU,
+            texture: gU,
             kind: "frame"
-          }), DD) {
-          const CD = iD.get(DD.root);
-          BD[ZD] = {
-            id: CD,
-            rotation: DD.rotation
-          }, yD.set(cD, CD), tD.set(MD, {
-            name: MD,
-            texture: cD,
+          }), UU) {
+          const RU = EU.get(UU.root);
+          GU[hU] = {
+            id: RU,
+            rotation: UU.rotation
+          }, jU.set(gU, RU), CU.set(uU, {
+            name: uU,
+            texture: gU,
             kind: "rotation"
           })
-        } else yD.set(cD, ZD + 1)
+        } else jU.set(gU, hU + 1)
       }
-      for (const MD of yD.keys()) tD.delete(MD);
-      for (const [MD, ZD] of cD) {
-        const DD = yD.get(ZD);
-        void 0 === DD || yD.has(MD) || (yD.set(MD, DD), tD.delete(MD))
+      for (const uU of jU.keys()) CU.delete(uU);
+      for (const [uU, hU] of gU) {
+        const UU = jU.get(hU);
+        void 0 === UU || jU.has(uU) || (jU.set(uU, UU), CU.delete(uU))
       }
       return {
-        named: [...yD].sort(((DD, CD) => {
-          let [cD] = DD, [ID] = CD;
-          return cD < ID ? -1 : cD > ID ? 1 : 0
-        })).map((DD => {
-          let [CD, cD] = DD;
+        named: [...jU].sort(((UU, RU) => {
+          let [gU] = UU, [tU] = RU;
+          return gU < tU ? -1 : gU > tU ? 1 : 0
+        })).map((UU => {
+          let [RU, gU] = UU;
           return {
-            name: CD,
-            id: cD
+            name: RU,
+            id: gU
           }
         })),
-        aliases: [...tD.values()],
-        layers: BD
+        aliases: [...CU.values()],
+        layers: GU
       }
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

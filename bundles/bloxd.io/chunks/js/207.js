@@ -1,22 +1,22 @@
 export const id = 207;
 export const ids = [207];
 export const modules = {
-  35712: (DD, CD, cD) => {
-    cD.d(CD, {
-      reportCappedWasmFailure: () => fD,
-      reportWasmFailure: () => iD
+  35883: (UU, RU, gU) => {
+    gU.d(RU, {
+      reportCappedWasmFailure: () => PU,
+      reportWasmFailure: () => EU
     });
-    var ID = cD(3032);
-    const pD = ID.e - 4;
+    var tU = gU(2927);
+    const pU = tU.c - 4;
 
-    function iD(DD, CD, cD) {
-      (0, ID.h)(DD, CD, cD, !1)
+    function EU(UU, RU, gU) {
+      (0, tU.e)(UU, RU, gU, !1)
     }
 
-    function fD(DD, CD, cD) {
-      (0, ID.h)(DD, CD, cD, !1, pD)
+    function PU(UU, RU, gU) {
+      (0, tU.e)(UU, RU, gU, !1, pU)
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);

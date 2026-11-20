@@ -1,757 +1,757 @@
 export const id = 131;
 export const ids = [131];
 export const modules = {
-  6366: (DD, CD, cD) => {
-    cD.r(CD), cD.d(CD, {
-      loadPageShaderPackCompiler: () => yC
+  6295: (UU, RU, gU) => {
+    gU.r(RU), gU.d(RU, {
+      loadPageShaderPackCompiler: () => jR
     });
-    var ID = {};
-    cD.r(ID), cD.d(ID, {
-      KID: () => pD,
-      R6: () => iD,
-      default: () => WD,
-      aID: () => fD,
-      VID: () => bD,
-      initSync: () => YD,
-      gB: () => QD,
-      icD: () => wD,
-      zID: () => SD,
-      jID: () => BD,
-      lq: () => yD,
-      lID: () => MD,
-      zq: () => tD,
-      LID: () => ZD
+    var tU = {};
+    gU.r(tU), gU.d(tU, {
+      HtU: () => pU,
+      i_: () => EU,
+      default: () => iU,
+      StU: () => PU,
+      stU: () => TU,
+      initSync: () => FU,
+      lc: () => qU,
+      mgU: () => KU,
+      ytU: () => cU,
+      ktU: () => GU,
+      wZ: () => jU,
+      FtU: () => uU,
+      xZ: () => CU,
+      itU: () => hU
     });
-    class pD {
-      static __wrap(DD) {
-        const CD = Object.create(pD.prototype);
-        return CD.__wbg_ptr = DD, vD.register(CD, CD.__wbg_ptr, CD), CD
+    class pU {
+      static __wrap(UU) {
+        const RU = Object.create(pU.prototype);
+        return RU.__wbg_ptr = UU, eU.register(RU, RU.__wbg_ptr, RU), RU
       }
       __destroy_into_raw() {
-        const DD = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, vD.unregister(this), DD
+        const UU = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, eU.unregister(this), UU
       }
       free() {
-        const DD = this.__destroy_into_raw();
-        RD.BDuL(DD, 0)
+        const UU = this.__destroy_into_raw();
+        sU.TLg7(UU, 0)
       }
       get errorsJson() {
-        let DD, CD;
+        let UU, RU;
         try {
-          const cD = RD.IMI5(this.__wbg_ptr);
-          return DD = cD[0], CD = cD[1], OD(cD[0], cD[1])
+          const gU = sU.SB7o(this.__wbg_ptr);
+          return UU = gU[0], RU = gU[1], JU(gU[0], gU[1])
         } finally {
-          RD.FVvI(DD, CD, 1)
+          sU.bIiB(UU, RU, 1)
         }
       }
       get features() {
-        const DD = RD.Jga4(this.__wbg_ptr);
-        var CD = gD(DD[0], DD[1]);
-        return RD.FVvI(DD[0], 4 * DD[1], 4), CD
+        const UU = sU.xHwp(this.__wbg_ptr);
+        var RU = fU(UU[0], UU[1]);
+        return sU.bIiB(UU[0], 4 * UU[1], 4), RU
       }
       get hooks() {
-        const DD = RD.I2GM(this.__wbg_ptr);
-        var CD = XD(DD[0], DD[1]).slice();
-        return RD.FVvI(DD[0], 1 * DD[1], 1), CD
+        const UU = sU.oC5g(this.__wbg_ptr);
+        var RU = xU(UU[0], UU[1]).slice();
+        return sU.bIiB(UU[0], 1 * UU[1], 1), RU
       }
-      mapValidationMessage(DD, CD, cD, ID, pD) {
-        let iD, fD;
+      mapValidationMessage(UU, RU, gU, tU, pU) {
+        let EU, PU;
         try {
-          const wD = RD.fWKt(this.__wbg_ptr, DD, CD, cD, ND(ID), ND(pD));
-          var bD = wD[0],
-            QD = wD[1];
-          if (wD[3]) throw bD = 0, QD = 0, VD(wD[2]);
-          return iD = bD, fD = QD, OD(bD, QD)
+          const KU = sU.Vh5N(this.__wbg_ptr, UU, RU, gU, WU(tU), WU(pU));
+          var TU = KU[0],
+            qU = KU[1];
+          if (KU[3]) throw TU = 0, qU = 0, VU(KU[2]);
+          return EU = TU, PU = qU, JU(TU, qU)
         } finally {
-          RD.FVvI(iD, fD, 1)
+          sU.bIiB(EU, PU, 1)
         }
       }
       get moduleCodes() {
-        const DD = RD.ozSI(this.__wbg_ptr);
-        var CD = gD(DD[0], DD[1]);
-        return RD.FVvI(DD[0], 4 * DD[1], 4), CD
+        const UU = sU.uLAK(this.__wbg_ptr);
+        var RU = fU(UU[0], UU[1]);
+        return sU.bIiB(UU[0], 4 * UU[1], 4), RU
       }
       get offInStrictJson() {
-        let DD, CD;
+        let UU, RU;
         try {
-          const cD = RD.E9Yj(this.__wbg_ptr);
-          return DD = cD[0], CD = cD[1], OD(cD[0], cD[1])
+          const gU = sU.YpRJ(this.__wbg_ptr);
+          return UU = gU[0], RU = gU[1], JU(gU[0], gU[1])
         } finally {
-          RD.FVvI(DD, CD, 1)
+          sU.bIiB(UU, RU, 1)
         }
       }
       get reads() {
-        const DD = RD.uGZk(this.__wbg_ptr);
-        var CD = gD(DD[0], DD[1]);
-        return RD.FVvI(DD[0], 4 * DD[1], 4), CD
+        const UU = sU.zHYn(this.__wbg_ptr);
+        var RU = fU(UU[0], UU[1]);
+        return sU.bIiB(UU[0], 4 * UU[1], 4), RU
       }
       get validationModuleCodes() {
-        const DD = RD.DVaO(this.__wbg_ptr);
-        var CD = gD(DD[0], DD[1]);
-        return RD.FVvI(DD[0], 4 * DD[1], 4), CD
+        const UU = sU.pT2e(this.__wbg_ptr);
+        var RU = fU(UU[0], UU[1]);
+        return sU.bIiB(UU[0], 4 * UU[1], 4), RU
       }
       get validationModuleKeys() {
-        const DD = RD.zwxV(this.__wbg_ptr);
-        var CD = XD(DD[0], DD[1]).slice();
-        return RD.FVvI(DD[0], 1 * DD[1], 1), CD
+        const UU = sU.mqMG(this.__wbg_ptr);
+        var RU = xU(UU[0], UU[1]).slice();
+        return sU.bIiB(UU[0], 1 * UU[1], 1), RU
       }
       get variantFlags() {
-        const DD = RD.hrM2(this.__wbg_ptr);
-        var CD = XD(DD[0], DD[1]).slice();
-        return RD.FVvI(DD[0], 1 * DD[1], 1), CD
+        const UU = sU.ky50(this.__wbg_ptr);
+        var RU = xU(UU[0], UU[1]).slice();
+        return sU.bIiB(UU[0], 1 * UU[1], 1), RU
       }
     }
 
-    function iD(DD, CD, cD, ID, iD, fD, bD) {
-      const QD = aD(DD, RD.TnFI),
-        wD = kD,
-        SD = aD(CD, RD.TnFI),
-        BD = kD,
-        yD = aD(cD, RD.TnFI),
-        MD = kD,
-        tD = KD(ID, RD.TnFI),
-        ZD = kD,
-        oD = aD(iD, RD.TnFI),
-        vD = kD,
-        ND = aD(fD, RD.TnFI),
-        gD = kD,
-        XD = aD(bD, RD.TnFI),
-        mD = kD,
-        nD = RD.BA97(QD, wD, SD, BD, yD, MD, tD, ZD, oD, vD, ND, gD, XD, mD);
-      if (nD[2]) throw VD(nD[1]);
-      return pD.__wrap(nD[0])
+    function EU(UU, RU, gU, tU, EU, PU, TU) {
+      const qU = BU(UU, sU.BK5v),
+        KU = yU,
+        cU = BU(RU, sU.BK5v),
+        GU = yU,
+        jU = BU(gU, sU.BK5v),
+        uU = yU,
+        CU = YU(tU, sU.BK5v),
+        hU = yU,
+        QU = BU(EU, sU.BK5v),
+        eU = yU,
+        WU = BU(PU, sU.BK5v),
+        fU = yU,
+        xU = BU(TU, sU.BK5v),
+        mU = yU,
+        IU = sU.OErR(qU, KU, cU, GU, jU, uU, CU, hU, QU, eU, WU, fU, xU, mU);
+      if (IU[2]) throw VU(IU[1]);
+      return pU.__wrap(IU[0])
     }
 
-    function fD() {
-      const DD = RD.Q2gy();
-      var CD = gD(DD[0], DD[1]);
-      return RD.FVvI(DD[0], 4 * DD[1], 4), CD
+    function PU() {
+      const UU = sU.pJ8p();
+      var RU = fU(UU[0], UU[1]);
+      return sU.bIiB(UU[0], 4 * UU[1], 4), RU
     }
 
-    function bD() {
-      const DD = RD.c1gs();
-      var CD = gD(DD[0], DD[1]);
-      return RD.FVvI(DD[0], 4 * DD[1], 4), CD
+    function TU() {
+      const UU = sU.TIgN();
+      var RU = fU(UU[0], UU[1]);
+      return sU.bIiB(UU[0], 4 * UU[1], 4), RU
     }
 
-    function QD() {
-      RD.Xikd()
+    function qU() {
+      sU.a0aR()
     }
 
-    function wD(DD, CD, cD, ID, pD) {
-      let iD, fD;
+    function KU(UU, RU, gU, tU, pU) {
+      let EU, PU;
       try {
-        const wD = aD(DD, RD.TnFI),
-          SD = kD,
-          BD = KD(CD, RD.TnFI),
-          yD = kD,
-          MD = aD(cD, RD.TnFI),
-          tD = kD,
-          ZD = KD(ID, RD.TnFI),
-          oD = kD,
-          vD = function(DD, CD) {
-            const cD = CD(1 * DD.length, 1) >>> 0;
-            return UD().set(DD, cD / 1), kD = DD.length, cD
-          }(pD, RD.TnFI),
-          ND = kD,
-          gD = RD.fKbi(wD, SD, BD, yD, MD, tD, ZD, oD, vD, ND);
-        var bD = gD[0],
-          QD = gD[1];
-        if (gD[3]) throw bD = 0, QD = 0, VD(gD[2]);
-        return iD = bD, fD = QD, OD(bD, QD)
+        const KU = BU(UU, sU.BK5v),
+          cU = yU,
+          GU = YU(RU, sU.BK5v),
+          jU = yU,
+          uU = BU(gU, sU.BK5v),
+          CU = yU,
+          hU = YU(tU, sU.BK5v),
+          QU = yU,
+          eU = function(UU, RU) {
+            const gU = RU(1 * UU.length, 1) >>> 0;
+            return bU().set(UU, gU / 1), yU = UU.length, gU
+          }(pU, sU.BK5v),
+          WU = yU,
+          fU = sU.KroG(KU, cU, GU, jU, uU, CU, hU, QU, eU, WU);
+        var TU = fU[0],
+          qU = fU[1];
+        if (fU[3]) throw TU = 0, qU = 0, VU(fU[2]);
+        return EU = TU, PU = qU, JU(TU, qU)
       } finally {
-        RD.FVvI(iD, fD, 1)
+        sU.bIiB(EU, PU, 1)
       }
     }
 
-    function SD() {
-      let DD, CD;
+    function cU() {
+      let UU, RU;
       try {
-        const cD = RD.v7XO();
-        return DD = cD[0], CD = cD[1], OD(cD[0], cD[1])
+        const gU = sU.fq32();
+        return UU = gU[0], RU = gU[1], JU(gU[0], gU[1])
       } finally {
-        RD.FVvI(DD, CD, 1)
+        sU.bIiB(UU, RU, 1)
       }
     }
 
-    function BD(DD) {
-      let CD, cD;
+    function GU(UU) {
+      let RU, gU;
       try {
-        const iD = RD.w609(DD);
-        var ID = iD[0],
-          pD = iD[1];
-        if (iD[3]) throw ID = 0, pD = 0, VD(iD[2]);
-        return CD = ID, cD = pD, OD(ID, pD)
+        const EU = sU.gIUc(UU);
+        var tU = EU[0],
+          pU = EU[1];
+        if (EU[3]) throw tU = 0, pU = 0, VU(EU[2]);
+        return RU = tU, gU = pU, JU(tU, pU)
       } finally {
-        RD.FVvI(CD, cD, 1)
+        sU.bIiB(RU, gU, 1)
       }
     }
 
-    function yD() {
-      return RD.KTo5() >>> 0
+    function jU() {
+      return sU.E8qA() >>> 0
     }
 
-    function MD() {
-      let DD, CD;
+    function uU() {
+      let UU, RU;
       try {
-        const cD = RD.gSYQ();
-        return DD = cD[0], CD = cD[1], OD(cD[0], cD[1])
+        const gU = sU.akAO();
+        return UU = gU[0], RU = gU[1], JU(gU[0], gU[1])
       } finally {
-        RD.FVvI(DD, CD, 1)
+        sU.bIiB(UU, RU, 1)
       }
     }
 
-    function tD(DD, CD) {
-      let cD, ID;
+    function CU(UU, RU) {
+      let gU, tU;
       try {
-        const fD = aD(DD, RD.TnFI),
-          bD = kD,
-          QD = KD(CD, RD.TnFI),
-          wD = kD,
-          SD = RD.CH8L(fD, bD, QD, wD);
-        var pD = SD[0],
-          iD = SD[1];
-        if (SD[3]) throw pD = 0, iD = 0, VD(SD[2]);
-        return cD = pD, ID = iD, OD(pD, iD)
+        const PU = BU(UU, sU.BK5v),
+          TU = yU,
+          qU = YU(RU, sU.BK5v),
+          KU = yU,
+          cU = sU.dkFu(PU, TU, qU, KU);
+        var pU = cU[0],
+          EU = cU[1];
+        if (cU[3]) throw pU = 0, EU = 0, VU(cU[2]);
+        return gU = pU, tU = EU, JU(pU, EU)
       } finally {
-        RD.FVvI(cD, ID, 1)
+        sU.bIiB(gU, tU, 1)
       }
     }
 
-    function ZD(DD) {
-      let CD, cD;
+    function hU(UU) {
+      let RU, gU;
       try {
-        const iD = RD.wSQR(ND(DD));
-        var ID = iD[0],
-          pD = iD[1];
-        if (iD[3]) throw ID = 0, pD = 0, VD(iD[2]);
-        return CD = ID, cD = pD, OD(ID, pD)
+        const EU = sU.FNSQ(WU(UU));
+        var tU = EU[0],
+          pU = EU[1];
+        if (EU[3]) throw tU = 0, pU = 0, VU(EU[2]);
+        return RU = tU, gU = pU, JU(tU, pU)
       } finally {
-        RD.FVvI(CD, cD, 1)
+        sU.bIiB(RU, gU, 1)
       }
     }
 
-    function oD() {
+    function QU() {
       return {
         __proto__: null,
-        b1Va: {
+        hLqz: {
           __proto__: null,
-          yMpD: function(DD, CD) {
-            return ND(Error(OD(DD, CD)))
+          C9RC: function(UU, RU) {
+            return WU(Error(JU(UU, RU)))
           },
-          ORU6: function(DD) {
-            return null === xD(DD)
+          abXE: function(UU) {
+            return null === oU(UU)
           },
-          rv5e: function(DD) {
-            return "string" === typeof xD(DD)
+          ZTky: function(UU) {
+            return "string" === typeof oU(UU)
           },
-          VUKR: function(DD, CD) {
-            const cD = xD(CD),
-              ID = "string" === typeof cD ? cD : void 0;
-            var pD, iD = void 0 === (pD = ID) || null === pD ? 0 : function(DD, CD, cD) {
-                if (void 0 === cD) {
-                  const cD = LD.encode(DD),
-                    ID = CD(cD.length, 1) >>> 0;
-                  return UD().subarray(ID, ID + cD.length).set(cD), kD = cD.length, ID
+          dEd5: function(UU, RU) {
+            const gU = oU(RU),
+              tU = "string" === typeof gU ? gU : void 0;
+            var pU, EU = void 0 === (pU = tU) || null === pU ? 0 : function(UU, RU, gU) {
+                if (void 0 === gU) {
+                  const gU = dU.encode(UU),
+                    tU = RU(gU.length, 1) >>> 0;
+                  return bU().subarray(tU, tU + gU.length).set(gU), yU = gU.length, tU
                 }
-                let ID = DD.length,
-                  pD = CD(ID, 1) >>> 0;
-                const iD = UD();
-                let fD = 0;
-                for (; fD < ID; fD++) {
-                  const CD = DD.charCodeAt(fD);
-                  if (CD > 127) break;
-                  iD[pD + fD] = CD
+                let tU = UU.length,
+                  pU = RU(tU, 1) >>> 0;
+                const EU = bU();
+                let PU = 0;
+                for (; PU < tU; PU++) {
+                  const RU = UU.charCodeAt(PU);
+                  if (RU > 127) break;
+                  EU[pU + PU] = RU
                 }
-                if (fD !== ID) {
-                  0 !== fD && (DD = DD.slice(fD)), pD = cD(pD, ID, ID = fD + 3 * DD.length, 1) >>> 0;
-                  const CD = UD().subarray(pD + fD, pD + ID);
-                  fD += LD.encodeInto(DD, CD).written, pD = cD(pD, ID, fD, 1) >>> 0
+                if (PU !== tU) {
+                  0 !== PU && (UU = UU.slice(PU)), pU = gU(pU, tU, tU = PU + 3 * UU.length, 1) >>> 0;
+                  const RU = bU().subarray(pU + PU, pU + tU);
+                  PU += dU.encodeInto(UU, RU).written, pU = gU(pU, tU, PU, 1) >>> 0
                 }
-                return kD = fD, pD
-              }(ID, RD.TnFI, RD.IUZo),
-              fD = kD;
-            nD().setInt32(DD + 4, fD, !0), nD().setInt32(DD + 0, iD, !0)
+                return yU = PU, pU
+              }(tU, sU.BK5v, sU.TWkK),
+              PU = yU;
+            IU().setInt32(UU + 4, PU, !0), IU().setInt32(UU + 0, EU, !0)
           },
-          Ic88: function(DD, CD) {
-            throw new Error(OD(DD, CD))
+          whrG: function(UU, RU) {
+            throw new Error(JU(UU, RU))
           },
-          JCI2: function(DD, CD) {
-            return xD(DD).charCodeAt(CD >>> 0)
+          dj3W: function(UU, RU) {
+            return oU(UU).charCodeAt(RU >>> 0)
           },
-          mUbW: function(DD, CD) {
-            console.error(OD(DD, CD))
+          EMoQ: function(UU, RU) {
+            console.error(JU(UU, RU))
           },
-          pqF8: function(DD) {
-            return xD(DD).length
+          x2ha: function(UU) {
+            return oU(UU).length
           },
-          RAzn: function(DD, CD) {
-            return ND(OD(DD, CD))
+          PgyC: function(UU, RU) {
+            return WU(JU(UU, RU))
           },
-          rSZd: function(DD) {
-            VD(DD)
+          eMdc: function(UU) {
+            VU(UU)
           }
         }
       }
     }
-    Symbol.dispose && (pD.prototype[Symbol.dispose] = pD.prototype.free);
-    const vD = "undefined" === typeof FinalizationRegistry ? {
+    Symbol.dispose && (pU.prototype[Symbol.dispose] = pU.prototype.free);
+    const eU = "undefined" === typeof FinalizationRegistry ? {
       register: () => {},
       unregister: () => {}
-    } : new FinalizationRegistry((DD => RD.BDuL(DD, 1)));
+    } : new FinalizationRegistry((UU => sU.TLg7(UU, 1)));
 
-    function ND(DD) {
-      JD === qD.length && qD.push(qD.length + 1);
-      const CD = JD;
-      return JD = qD[CD], qD[CD] = DD, CD
+    function WU(UU) {
+      aU === ZU.length && ZU.push(ZU.length + 1);
+      const RU = aU;
+      return aU = ZU[RU], ZU[RU] = UU, RU
     }
 
-    function gD(DD, CD) {
-      DD >>>= 0;
-      const cD = nD(),
-        ID = [];
-      for (let pD = DD; pD < DD + 4 * CD; pD += 4) ID.push(VD(cD.getUint32(pD, !0)));
-      return ID
+    function fU(UU, RU) {
+      UU >>>= 0;
+      const gU = IU(),
+        tU = [];
+      for (let pU = UU; pU < UU + 4 * RU; pU += 4) tU.push(VU(gU.getUint32(pU, !0)));
+      return tU
     }
 
-    function XD(DD, CD) {
-      return DD >>>= 0, UD().subarray(DD / 1, DD / 1 + CD)
+    function xU(UU, RU) {
+      return UU >>>= 0, bU().subarray(UU / 1, UU / 1 + RU)
     }
-    let mD = null;
+    let mU = null;
 
-    function nD() {
-      return (null === mD || !0 === mD.buffer.detached || void 0 === mD.buffer.detached && mD.buffer !== RD.memory.buffer) && (mD = new DataView(RD.memory.buffer)), mD
+    function IU() {
+      return (null === mU || !0 === mU.buffer.detached || void 0 === mU.buffer.detached && mU.buffer !== sU.memory.buffer) && (mU = new DataView(sU.memory.buffer)), mU
     }
 
-    function OD(DD, CD) {
-      return function(DD, CD) {
-        lD += CD, lD >= jD && (zD = new TextDecoder("utf-8", {
+    function JU(UU, RU) {
+      return function(UU, RU) {
+        vU += RU, vU >= XU && (rU = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), zD.decode(), lD = CD);
-        return zD.decode(UD().subarray(DD, DD + CD))
-      }(DD >>> 0, CD)
+        }), rU.decode(), vU = RU);
+        return rU.decode(bU().subarray(UU, UU + RU))
+      }(UU >>> 0, RU)
     }
-    let PD = null;
-    let HD = null;
+    let wU = null;
+    let nU = null;
 
-    function UD() {
-      return null !== HD && 0 !== HD.byteLength || (HD = new Uint8Array(RD.memory.buffer)), HD
-    }
-
-    function xD(DD) {
-      return qD[DD]
-    }
-    let qD = new Array(1024).fill(void 0);
-    qD.push(void 0, null, !0, !1);
-    let JD = qD.length;
-
-    function KD(DD, CD) {
-      const cD = CD(4 * DD.length, 4) >>> 0;
-      return (null !== PD && 0 !== PD.byteLength || (PD = new Uint32Array(RD.memory.buffer)), PD).set(DD, cD / 4), kD = DD.length, cD
+    function bU() {
+      return null !== nU && 0 !== nU.byteLength || (nU = new Uint8Array(sU.memory.buffer)), nU
     }
 
-    function aD(DD, CD) {
-      const cD = CD(4 * DD.length, 4) >>> 0,
-        ID = nD();
-      for (let pD = 0; pD < DD.length; pD++) ID.setUint32(cD + 4 * pD, ND(DD[pD]), !0);
-      return kD = DD.length, cD
+    function oU(UU) {
+      return ZU[UU]
+    }
+    let ZU = new Array(1024).fill(void 0);
+    ZU.push(void 0, null, !0, !1);
+    let aU = ZU.length;
+
+    function YU(UU, RU) {
+      const gU = RU(4 * UU.length, 4) >>> 0;
+      return (null !== wU && 0 !== wU.byteLength || (wU = new Uint32Array(sU.memory.buffer)), wU).set(UU, gU / 4), yU = UU.length, gU
     }
 
-    function VD(DD) {
-      const CD = xD(DD);
-      return function(DD) {
-        DD < 1028 || (qD[DD] = JD, JD = DD)
-      }(DD), CD
+    function BU(UU, RU) {
+      const gU = RU(4 * UU.length, 4) >>> 0,
+        tU = IU();
+      for (let pU = 0; pU < UU.length; pU++) tU.setUint32(gU + 4 * pU, WU(UU[pU]), !0);
+      return yU = UU.length, gU
     }
-    let zD = new TextDecoder("utf-8", {
+
+    function VU(UU) {
+      const RU = oU(UU);
+      return function(UU) {
+        UU < 1028 || (ZU[UU] = aU, aU = UU)
+      }(UU), RU
+    }
+    let rU = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    zD.decode();
-    const jD = 2146435072;
-    let lD = 0;
-    const LD = new TextEncoder;
-    "encodeInto" in LD || (LD.encodeInto = function(DD, CD) {
-      const cD = LD.encode(DD);
-      return CD.set(cD), {
-        read: DD.length,
-        written: cD.length
+    rU.decode();
+    const XU = 2146435072;
+    let vU = 0;
+    const dU = new TextEncoder;
+    "encodeInto" in dU || (dU.encodeInto = function(UU, RU) {
+      const gU = dU.encode(UU);
+      return RU.set(gU), {
+        read: UU.length,
+        written: gU.length
       }
     });
-    let TD, GD, RD, kD = 0;
+    let HU, SU, sU, yU = 0;
 
-    function dD(DD, CD) {
-      return GD = DD, RD = DD.exports, TD = CD, mD = null, PD = null, HD = null, RD.h4Nj(), RD
+    function kU(UU, RU) {
+      return SU = UU, sU = UU.exports, HU = RU, mU = null, wU = null, nU = null, sU.YjdF(), sU
     }
 
-    function YD(DD) {
-      if (void 0 !== RD) return RD;
-      void 0 !== DD && (Object.getPrototypeOf(DD) === Object.prototype ? ({
-        module: DD
-      } = DD) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const CD = oD();
-      DD instanceof WebAssembly.Module || (DD = new WebAssembly.Module(DD));
-      return dD(new WebAssembly.Instance(DD, CD), DD)
+    function FU(UU) {
+      if (void 0 !== sU) return sU;
+      void 0 !== UU && (Object.getPrototypeOf(UU) === Object.prototype ? ({
+        module: UU
+      } = UU) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const RU = QU();
+      UU instanceof WebAssembly.Module || (UU = new WebAssembly.Module(UU));
+      return kU(new WebAssembly.Instance(UU, RU), UU)
     }
-    async function WD(DD) {
-      if (void 0 !== RD) return RD;
-      void 0 !== DD && (Object.getPrototypeOf(DD) === Object.prototype ? ({
-        module_or_path: DD
-      } = DD) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const CD = oD();
-      ("string" === typeof DD || "function" === typeof Request && DD instanceof Request || "function" === typeof URL && DD instanceof URL) && (DD = fetch(DD));
+    async function iU(UU) {
+      if (void 0 !== sU) return sU;
+      void 0 !== UU && (Object.getPrototypeOf(UU) === Object.prototype ? ({
+        module_or_path: UU
+      } = UU) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const RU = QU();
+      ("string" === typeof UU || "function" === typeof Request && UU instanceof Request || "function" === typeof URL && UU instanceof URL) && (UU = fetch(UU));
       const {
-        instance: cD,
-        module: ID
-      } = await async function(DD, CD) {
-        if ("function" === typeof Response && DD instanceof Response) {
-          if (!DD.ok) throw new Error(`failed to fetch Wasm: ${DD.status} ${DD.statusText} fetching '${DD.url}'`);
+        instance: gU,
+        module: tU
+      } = await async function(UU, RU) {
+        if ("function" === typeof Response && UU instanceof Response) {
+          if (!UU.ok) throw new Error(`failed to fetch Wasm: ${UU.status} ${UU.statusText} fetching '${UU.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(DD, CD)
-          } catch (cD) {
-            if (! function(DD) {
-                switch (DD) {
+            return await WebAssembly.instantiateStreaming(UU, RU)
+          } catch (gU) {
+            if (! function(UU) {
+                switch (UU) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(DD.type) || "application/wasm" === DD.headers.get("Content-Type")) throw cD;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", cD)
+              }(UU.type) || "application/wasm" === UU.headers.get("Content-Type")) throw gU;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", gU)
           }
-          const ID = await DD.arrayBuffer();
-          return await WebAssembly.instantiate(ID, CD)
+          const tU = await UU.arrayBuffer();
+          return await WebAssembly.instantiate(tU, RU)
         } {
-          const cD = await WebAssembly.instantiate(DD, CD);
-          return cD instanceof WebAssembly.Instance ? {
-            instance: cD,
-            module: DD
-          } : cD
+          const gU = await WebAssembly.instantiate(UU, RU);
+          return gU instanceof WebAssembly.Instance ? {
+            instance: gU,
+            module: UU
+          } : gU
         }
-      }(await DD, CD);
-      return dD(cD, ID)
+      }(await UU, RU);
+      return kU(gU, tU)
     }
-    var sD = cD(3529),
-      ED = cD(6372);
-    class eD extends Error {
+    var AU = gU(3377),
+      zU = gU(6297);
+    class MU extends Error {
       stage;
-      constructor(DD, CD) {
-        super((0, sD.D)(DD, CD), {
-          cause: CD
-        }), this.name = "BloxdShaderPackWasmLoadError", this.stage = DD
+      constructor(UU, RU) {
+        super((0, AU.z)(UU, RU), {
+          cause: RU
+        }), this.name = "BloxdShaderPackWasmLoadError", this.stage = UU
       }
     }
-    let uD = null,
-      hD = null;
+    let DU = null,
+      LU = null;
 
-    function rD() {
-      return uD ? Promise.resolve(uD) : (hD || (hD = async function() {
-        let DD;
+    function NU() {
+      return DU ? Promise.resolve(DU) : (LU || (LU = async function() {
+        let UU;
         try {
-          DD = await (0, sD.H)(new cD.U(cD(6376)), (0, ED.e)("bloxd_wasm_shader_pack"))
-        } catch (CD) {
-          throw new eD((0, sD.L)(CD), CD)
+          UU = await (0, AU.D)(new gU.U(gU(6302)), (0, zU.b)("bloxd_wasm_shader_pack"))
+        } catch (RU) {
+          throw new MU((0, AU.K)(RU), RU)
         }
         try {
-          await WD({
-            module_or_path: DD
+          await iU({
+            module_or_path: UU
           })
-        } catch (CD) {
-          throw new eD("instantiate", CD)
+        } catch (RU) {
+          throw new MU("instantiate", RU)
         }
-        return uD = ID, uD
-      }(), hD.then(void 0, (() => {
-        hD = null
-      }))), hD)
+        return DU = tU, DU
+      }(), LU.then(void 0, (() => {
+        LU = null
+      }))), LU)
     }
-    var AD = cD(6384);
+    var lU = gU(6311);
 
-    function FD(DD) {
-      let [CD, cD, ID, pD] = DD;
-      const iD = {
-        file: CD,
-        line: cD,
-        message: ID
+    function OU(UU) {
+      let [RU, gU, tU, pU] = UU;
+      const EU = {
+        file: RU,
+        line: gU,
+        message: tU
       };
-      return pD && (iD.variants = pD.map(AD.k)), iD
+      return pU && (EU.variants = pU.map(lU.j)), EU
     }
 
-    function DC(DD) {
-      return JSON.parse(DD).map(FD)
+    function UR(UU) {
+      return JSON.parse(UU).map(OU)
     }
 
-    function CC(DD, CD) {
-      if (!Number.isInteger(DD) || DD < 0 || DD > 4294967295) throw new Error(`${CD} ${DD} is not a whole number from 0 to 4294967295`);
-      return DD
+    function RR(UU, RU) {
+      if (!Number.isInteger(UU) || UU < 0 || UU > 4294967295) throw new Error(`${RU} ${UU} is not a whole number from 0 to 4294967295`);
+      return UU
     }
 
-    function cC(DD) {
-      return [DD.named.map((DD => DD.name)), Uint32Array.from(DD.named, (DD => CC(DD.id, "Texture ID")))]
+    function gR(UU) {
+      return [UU.named.map((UU => UU.name)), Uint32Array.from(UU.named, (UU => RR(UU.id, "Texture ID")))]
     }
-    const IC = new WeakMap;
-    const pC = new WeakMap,
-      iC = new WeakSet;
+    const tR = new WeakMap;
+    const pR = new WeakMap,
+      ER = new WeakSet;
 
-    function fC(DD, CD) {
-      if (iC.has(DD)) throw new Error("The shader pack compiler crashed earlier on this page, so it can't run again until a reload");
+    function PR(UU, RU) {
+      if (ER.has(UU)) throw new Error("The shader pack compiler crashed earlier on this page, so it can't run again until a reload");
       try {
-        return CD()
-      } catch (cD) {
-        throw cD instanceof WebAssembly.RuntimeError && iC.add(DD), cD
+        return RU()
+      } catch (gU) {
+        throw gU instanceof WebAssembly.RuntimeError && ER.add(UU), gU
       }
     }
 
-    function bC(DD) {
-      let CD = pC.get(DD);
-      if (!CD) {
-        let cD, ID;
-        CD = {
-          R6: (CD, cD) => fC(DD, (() => function(DD, CD, cD) {
-            const ID = DD.R6(CD.map((DD => DD.path)), CD.map((DD => DD.source)), ...cC(cD), cD.aliases.map((DD => DD.name)), cD.aliases.map((DD => DD.texture)), cD.aliases.map((DD => DD.kind)));
-            let pD = !1;
+    function TR(UU) {
+      let RU = pR.get(UU);
+      if (!RU) {
+        let gU, tU;
+        RU = {
+          i_: (RU, gU) => PR(UU, (() => function(UU, RU, gU) {
+            const tU = UU.i_(RU.map((UU => UU.path)), RU.map((UU => UU.source)), ...gR(gU), gU.aliases.map((UU => UU.name)), gU.aliases.map((UU => UU.texture)), gU.aliases.map((UU => UU.kind)));
+            let pU = !1;
             try {
-              const DD = ID.validationModuleCodes,
-                CD = Array.from(ID.validationModuleKeys, ((CD, cD) => ({
-                  key: (0, AD.k)(CD),
-                  code: DD[cD]
+              const UU = tU.validationModuleCodes,
+                RU = Array.from(tU.validationModuleKeys, ((RU, gU) => ({
+                  key: (0, lU.j)(RU),
+                  code: UU[gU]
                 }))),
-                cD = {
-                  errors: DC(ID.errorsJson),
-                  offInStrict: DC(ID.offInStrictJson),
-                  variants: (0, AD.g)(ID),
-                  validationModules: CD,
-                  features: ID.features
+                gU = {
+                  errors: UR(tU.errorsJson),
+                  offInStrict: UR(tU.offInStrictJson),
+                  variants: (0, lU.f)(tU),
+                  validationModules: RU,
+                  features: tU.features
                 };
-              return CD.forEach(((DD, CD) => {
-                IC.set(DD, {
-                  pack: ID,
-                  index: CD
+              return RU.forEach(((UU, RU) => {
+                tR.set(UU, {
+                  pack: tU,
+                  index: RU
                 })
-              })), pD = CD.length > 0, cD
+              })), pU = RU.length > 0, gU
             } finally {
-              pD || ID.free()
+              pU || tU.free()
             }
-          }(DD, CD, cD))),
-          mapValidationMessage: (CD, cD) => {
-            const ID = IC.get(CD);
-            if (!ID) throw new Error("mapValidationMessage takes a validation module this compiler made");
-            return FD(JSON.parse(fC(DD, (() => ID.pack.mapValidationMessage(ID.index, cD.lineNum, cD.linePos, cD.message, cD.type)))))
+          }(UU, RU, gU))),
+          mapValidationMessage: (RU, gU) => {
+            const tU = tR.get(RU);
+            if (!tU) throw new Error("mapValidationMessage takes a validation module this compiler made");
+            return OU(JSON.parse(PR(UU, (() => tU.pack.mapValidationMessage(tU.index, gU.lineNum, gU.linePos, gU.message, gU.type)))))
           },
-          icD: CD => fC(DD, (() => function(DD, CD) {
-            const cD = new Int32Array(CD.length),
-              ID = [];
-            return CD.forEach(((DD, CD) => {
-              cD[CD] = DD.variants ? DD.variants.length : -1;
-              for (const cD of DD.variants ?? []) ID.push((0, AD.i)(cD))
-            })), DC(DD.icD(CD.map((DD => DD.file)), Uint32Array.from(CD, (DD => CC(DD.line, "Diagnostic line"))), CD.map((DD => DD.message)), cD, Uint8Array.from(ID)))
-          }(DD, CD))),
-          zq: CD => fC(DD, (() => DD.zq(...cC(CD)))),
+          mgU: RU => PR(UU, (() => function(UU, RU) {
+            const gU = new Int32Array(RU.length),
+              tU = [];
+            return RU.forEach(((UU, RU) => {
+              gU[RU] = UU.variants ? UU.variants.length : -1;
+              for (const gU of UU.variants ?? []) tU.push((0, lU.h)(gU))
+            })), UR(UU.mgU(RU.map((UU => UU.file)), Uint32Array.from(RU, (UU => RR(UU.line, "Diagnostic line"))), RU.map((UU => UU.message)), gU, Uint8Array.from(tU)))
+          }(UU, RU))),
+          xZ: RU => PR(UU, (() => UU.xZ(...gR(RU)))),
           get SHADER_PACK_HEADER_VERSION() {
-            return cD ??= fC(DD, (() => DD.lID())), cD
+            return gU ??= PR(UU, (() => UU.FtU())), gU
           },
           get DEFAULT_SHADER_PACK_FILES() {
-            return ID ??= fC(DD, (() => {
-              const CD = DD.VID();
-              return DD.aID().map(((DD, cD) => ({
-                path: DD,
-                source: CD[cD]
+            return tU ??= PR(UU, (() => {
+              const RU = UU.stU();
+              return UU.StU().map(((UU, gU) => ({
+                path: UU,
+                source: RU[gU]
               })))
-            })), ID
+            })), tU
           },
-          LID: CD => fC(DD, (() => DD.LID(CD))),
-          resolveHeader: CD => fC(DD, (() => DD.jID((0, AD.i)(CD)))),
-          zID: () => fC(DD, (() => DD.zID()))
-        }, pC.set(DD, CD)
+          itU: RU => PR(UU, (() => UU.itU(RU))),
+          resolveHeader: RU => PR(UU, (() => UU.ktU((0, lU.h)(RU)))),
+          ytU: () => PR(UU, (() => UU.ytU()))
+        }, pR.set(UU, RU)
       }
-      return CD
+      return RU
     }
-    var QC = cD(3026),
-      wC = cD(6379);
-    const SC = "bloxdShaderPackWasmFailureReported";
-    let BC = null;
+    var qR = gU(2923),
+      KR = gU(6306);
+    const cR = "bloxdShaderPackWasmFailureReported";
+    let GR = null;
 
-    function yC() {
-      return BC ??= async function() {
-        if ("undefined" === typeof WebAssembly) return MC("unsupported", "This browser has no WebAssembly"), null;
-        const DD = (0, wC.loadShaderPackTextures)().then((() => !0), (DD => (console.error("Could not load the shader pack textures, so shader packs can't run", DD), !1)));
+    function jR() {
+      return GR ??= async function() {
+        if ("undefined" === typeof WebAssembly) return uR("unsupported", "This browser has no WebAssembly"), null;
+        const UU = (0, KR.loadShaderPackTextures)().then((() => !0), (UU => (console.error("Could not load the shader pack textures, so shader packs can't run", UU), !1)));
         try {
-          const CD = await async function() {
-            let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : rD;
-            return bC(await DD())
+          const RU = await async function() {
+            let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : NU;
+            return TR(await UU())
           }();
-          return await DD ? CD : null
-        } catch (CD) {
-          const DD = CD instanceof Error ? CD.message : String(CD);
-          return MC(QC.b[CD instanceof eD ? CD.stage : "instantiate"], DD), null
+          return await UU ? RU : null
+        } catch (RU) {
+          const UU = RU instanceof Error ? RU.message : String(RU);
+          return uR(qR.d[RU instanceof MU ? RU.stage : "instantiate"], UU), null
         }
-      }(), BC
+      }(), GR
     }
 
-    function MC(DD, CD) {
-      (0, QC.i)(SC, `Shader pack wasm ${DD}, so shader packs can't run: ${CD}`, CD, `shader_pack_${DD}`)
+    function uR(UU, RU) {
+      (0, qR.j)(cR, `Shader pack wasm ${UU}, so shader packs can't run: ${RU}`, RU, `shader_pack_${UU}`)
     }
   },
-  6376: (DD, CD, cD) => {
-    DD.exports = cD.p + "static/media/bloxd_wasm_shader_pack_bg.965c5f220de4afeacb1b.wasm"
+  6302: (UU, RU, gU) => {
+    UU.exports = gU.p + "static/media/bloxd_wasm_shader_pack_bg.6477ba64672d629480ce.wasm"
   },
-  6372: (DD, CD, cD) => {
-    cD.d(CD, {
-      e: () => fD
+  6297: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => PU
     });
-    var ID = cD(3529);
-    const pD = {
-      bloxd_wasm: () => "0d17f541f551a53f4dab724907dfd17c2f5e497131bb2f0746463cf7a85b45bd",
-      bloxd_wasm_client: () => "d6e226c9d75d445b020168abe06f72e7048eeb030e81e1c51b07a85852e3609f",
-      bloxd_wasm_workers: () => "a532339ee7770d546b5211eae4811431c5af4bef0f6bb1f1bd9d9cedfe642720",
-      bloxd_wasm_models: () => "5831b416c1ed8d38d5851a3544f33f1dbf9ce134ab804da19046d201729a0e57",
-      bloxd_wasm_webgpu: () => "f931d06e251abe5711fda5efd0c8f6b13c28366b4ac2d5d8847dd6de0a7c2502",
-      bloxd_wasm_webgl: () => "76d7d6a654e5f0a7055ecf5f60b4be1c5fa941239d1fc25cad0eeb9117a9d50d",
-      bloxd_wasm_webgl1: () => "bbb62056b165fcb2da03a0e26b34e721e5d1836ef01440ade5fd39a17ef2351f",
-      bloxd_wasm_replay: () => "ab1e675b3f2654cebc6cb9fcc2eb625d7e3becf9545d6aaec6d35e28d2b68a56",
-      bloxd_wasm_recorder: () => "191548def26c8771cc0d55137afcbedfc047ac41e34a07f34acfc4a9c88d9352",
-      bloxd_wasm_anim: () => "8df2ff23aed1fe182321a7874775d9d81cd1a481ed48f89ab986aeb54b6aba72",
-      bloxd_wasm_textures: () => "24200f89bea0ac9a6bb6d6c36427b0a05df327d7b83abe32fb2d1e0b136a1861",
-      bloxd_wasm_shader_pack: () => "7e7c31d2eef819d6f78ae283bdf7f325715093016c9b3415b5500d163bb24552"
+    var tU = gU(3377);
+    const pU = {
+      bloxd_wasm: () => "9aea991b9dfc231682f5590d3cc7b71fdc8d10d57b6fc256a691170448cb241e",
+      bloxd_wasm_client: () => "802e9a6883f55b00b2e9f994d468ef47c157db779d67da12a28169a4064f9ba2",
+      bloxd_wasm_workers: () => "6e68db7fd51b5ae0bb150a4c2fcdf448b467f8cbd8e24efcf974a9654674f1d6",
+      bloxd_wasm_models: () => "f3c8f0349e4b7cd2fe62824f818b019cb1ff9fda7d99058af5539dbe1c36e2ff",
+      bloxd_wasm_webgpu: () => "7b8aba519ce147883d63480e46db11f2a6dd62b2bdebd6ff07895ba08f395e69",
+      bloxd_wasm_webgl: () => "a107c8272b9d653c63376eb1e9164df07a85032e3f7cbbd1d972097394cfca11",
+      bloxd_wasm_webgl1: () => "2c5aabca21f20977da3990bb0cf77633b2f229a640ab72f5a52f39d28d9e0fd9",
+      bloxd_wasm_replay: () => "803e2c90d202bb5830af931fbeaac2469dcc5032d591607636dd72eecf9c8910",
+      bloxd_wasm_recorder: () => "edcf2c59dbceafb4c90033bd8006f0358827a3de806838c1aa9aa5da84f115b3",
+      bloxd_wasm_anim: () => "7a1e82ad213a41556d7866bfc1df7fce0247390479775e811f0b8f916b979482",
+      bloxd_wasm_textures: () => "bc7a7de98d207f079e8f358dc014dee940cff8bd63182b40ac7fd19938da92d8",
+      bloxd_wasm_shader_pack: () => "1e25de668a456adfdd95befe66a4ef213a16bedd08af3aac14531a1b656da9d3"
     };
-    var iD = cD(4495);
+    var EU = gU(4352);
 
-    function fD(DD) {
-      const CD = Object.prototype.hasOwnProperty.call(pD, DD) ? pD[DD]() : void 0;
-      if (void 0 !== CD) return {
-        sha256: CD,
-        onMismatch: iD.y
+    function PU(UU) {
+      const RU = Object.prototype.hasOwnProperty.call(pU, UU) ? pU[UU]() : void 0;
+      if (void 0 !== RU) return {
+        sha256: RU,
+        onMismatch: EU.E
       };
-      throw new ID.h(`${DD} has no release digest, so this build refuses it`)
+      throw new tU.j(`${UU} has no release digest, so this build refuses it`)
     }
   },
-  6384: (DD, CD, cD) => {
-    cD.d(CD, {
-      d: () => XD,
-      g: () => mD,
-      i: () => ND,
-      k: () => vD
+  6311: (UU, RU, gU) => {
+    gU.d(RU, {
+      e: () => xU,
+      f: () => mU,
+      h: () => WU,
+      j: () => eU
     });
-    var ID = cD(6393);
-    const pD = 6,
-      iD = 3,
-      fD = 1,
-      bD = 2,
-      QD = 4,
-      wD = 8,
-      SD = 16,
-      BD = 32,
-      yD = 64,
-      MD = 128,
-      tD = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var tU = gU(6316);
+    const pU = 6,
+      EU = 3,
+      PU = 1,
+      TU = 2,
+      qU = 4,
+      KU = 8,
+      cU = 16,
+      GU = 32,
+      jU = 64,
+      uU = 128,
+      CU = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function ZD(DD) {
-      if (!DD) return 0;
-      const CD = tD.indexOf(DD);
-      if (CD <= 0) throw new Error(`"${DD}" is not a shader pack hook function`);
-      return CD
+    function hU(UU) {
+      if (!UU) return 0;
+      const RU = CU.indexOf(UU);
+      if (RU <= 0) throw new Error(`"${UU}" is not a shader pack hook function`);
+      return RU
     }
 
-    function oD(DD) {
-      if (0 === DD) return null;
-      const CD = tD[DD];
-      if (void 0 === CD) throw new Error(`${DD} is not a shader pack hook function id`);
-      return CD
+    function QU(UU) {
+      if (0 === UU) return null;
+      const RU = CU[UU];
+      if (void 0 === RU) throw new Error(`${UU} is not a shader pack hook function id`);
+      return RU
     }
 
-    function vD(DD) {
-      const CD = ID.c.length;
+    function eU(UU) {
+      const RU = tU.b.length;
       return {
-        strict: DD >= CD,
-        program: ID.c[DD % CD]
+        strict: UU >= RU,
+        program: tU.b[UU % RU]
       }
     }
 
-    function ND(DD) {
-      return Number(DD.strict) * ID.c.length + ID.c.indexOf(DD.program)
+    function WU(UU) {
+      return Number(UU.strict) * tU.b.length + tU.b.indexOf(UU.program)
     }
 
-    function gD(DD) {
-      return "" === DD ? [] : DD.split(" ")
+    function fU(UU) {
+      return "" === UU ? [] : UU.split(" ")
     }
 
-    function XD(DD) {
-      const CD = {
-        variantFlags: new Uint8Array(pD),
-        hooks: new Uint8Array(pD * iD),
-        moduleCodes: Array(pD).fill(""),
-        reads: Array(2 * pD).fill("")
+    function xU(UU) {
+      const RU = {
+        variantFlags: new Uint8Array(pU),
+        hooks: new Uint8Array(pU * EU),
+        moduleCodes: Array(pU).fill(""),
+        reads: Array(2 * pU).fill("")
       };
-      for (const cD of DD) {
-        const DD = ND(cD.key),
-          ID = (DD, CD) => null === cD.hooks.surface || cD.reads.fragment.includes(DD) ? 0 : CD;
-        CD.variantFlags[DD] = (cD.sceneDepth ? fD : 0) | (cD.movesVertices ? bD : 0) | (cD.sunShadow ? QD : 0) | (cD.airShadow ? wD : 0) | (cD.discards ? SD : 0) | ID("localPosition", BD) | ID("enchantSpeed", yD) | ID("enchantTier", MD), CD.hooks[DD * iD] = ZD(cD.hooks.vertex), CD.hooks[DD * iD + 1] = ZD(cD.hooks.surface), CD.hooks[DD * iD + 2] = ZD(cD.hooks.light), CD.moduleCodes[DD] = cD.moduleCode, CD.reads[2 * DD] = cD.reads.vertex.join(" "), CD.reads[2 * DD + 1] = cD.reads.fragment.join(" ")
+      for (const gU of UU) {
+        const UU = WU(gU.key),
+          tU = (UU, RU) => null === gU.hooks.surface || gU.reads.fragment.includes(UU) ? 0 : RU;
+        RU.variantFlags[UU] = (gU.sceneDepth ? PU : 0) | (gU.movesVertices ? TU : 0) | (gU.sunShadow ? qU : 0) | (gU.airShadow ? KU : 0) | (gU.discards ? cU : 0) | tU("localPosition", GU) | tU("enchantSpeed", jU) | tU("enchantTier", uU), RU.hooks[UU * EU] = hU(gU.hooks.vertex), RU.hooks[UU * EU + 1] = hU(gU.hooks.surface), RU.hooks[UU * EU + 2] = hU(gU.hooks.light), RU.moduleCodes[UU] = gU.moduleCode, RU.reads[2 * UU] = gU.reads.vertex.join(" "), RU.reads[2 * UU + 1] = gU.reads.fragment.join(" ")
       }
-      return CD
+      return RU
     }
 
-    function mD(DD) {
+    function mU(UU) {
       const {
-        hooks: CD,
-        moduleCodes: cD,
-        reads: ID
-      } = DD;
-      return Array.from(DD.variantFlags, ((DD, pD) => {
-        const BD = pD * iD;
+        hooks: RU,
+        moduleCodes: gU,
+        reads: tU
+      } = UU;
+      return Array.from(UU.variantFlags, ((UU, pU) => {
+        const GU = pU * EU;
         return {
-          key: vD(pD),
+          key: eU(pU),
           hooks: {
-            vertex: oD(CD[BD]),
-            surface: oD(CD[BD + 1]),
-            light: oD(CD[BD + 2])
+            vertex: QU(RU[GU]),
+            surface: QU(RU[GU + 1]),
+            light: QU(RU[GU + 2])
           },
-          moduleCode: cD[pD],
-          sceneDepth: 0 !== (DD & fD),
-          sunShadow: 0 !== (DD & QD),
-          airShadow: 0 !== (DD & wD),
-          movesVertices: 0 !== (DD & bD),
-          discards: 0 !== (DD & SD),
+          moduleCode: gU[pU],
+          sceneDepth: 0 !== (UU & PU),
+          sunShadow: 0 !== (UU & qU),
+          airShadow: 0 !== (UU & KU),
+          movesVertices: 0 !== (UU & TU),
+          discards: 0 !== (UU & cU),
           reads: {
-            vertex: gD(ID[2 * pD]),
-            fragment: gD(ID[2 * pD + 1])
+            vertex: fU(tU[2 * pU]),
+            fragment: fU(tU[2 * pU + 1])
           }
         }
       }))
     }
   },
-  6393: (DD, CD, cD) => {
-    cD.d(CD, {
-      c: () => ID,
-      f: () => fD,
-      h: () => bD,
-      i: () => pD,
-      k: () => iD
+  6316: (UU, RU, gU) => {
+    gU.d(RU, {
+      b: () => tU,
+      f: () => PU,
+      i: () => TU,
+      j: () => pU,
+      k: () => EU
     });
-    const ID = ["terrain", "liquid", "model"];
+    const tU = ["terrain", "liquid", "model"];
 
-    function pD() {
-      const DD = [];
-      for (const CD of [!1, !0])
-        for (const cD of ID) DD.push({
-          strict: CD,
-          program: cD
+    function pU() {
+      const UU = [];
+      for (const RU of [!1, !0])
+        for (const gU of tU) UU.push({
+          strict: RU,
+          program: gU
         });
-      return DD
+      return UU
     }
 
-    function iD(DD) {
-      return `${DD.strict?"strict":"allow"}.${DD.program}`
+    function EU(UU) {
+      return `${UU.strict?"strict":"allow"}.${UU.program}`
     }
 
-    function fD(DD) {
-      return !DD.hooks.vertex && !DD.hooks.surface && !DD.hooks.light
+    function PU(UU) {
+      return !UU.hooks.vertex && !UU.hooks.surface && !UU.hooks.light
     }
 
-    function bD(DD, CD) {
-      return "off" !== CD && (null === DD || DD.some((DD => DD.key.strict === ("strict" === CD) && !fD(DD))))
+    function TU(UU, RU) {
+      return "off" !== RU && (null === UU || UU.some((UU => UU.key.strict === ("strict" === RU) && !PU(UU))))
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const UU in modules) Object.freeze(modules[UU]);
