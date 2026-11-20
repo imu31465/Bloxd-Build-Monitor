@@ -1,229 +1,229 @@
 export const id = 124;
 export const ids = [124];
 export const modules = {
-  6302: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      ShaderPackPublishForm: () => Gv
+  6578: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      ShaderPackPublishForm: () => ST
     });
-    var hv = Pv(52),
-      Sv = Pv(6268),
-      ev = Pv(194),
-      gv = Pv(6306),
-      pv = Pv(1042),
-      dv = Pv(1442),
-      Nv = Pv(1647),
-      lv = Pv(1108),
-      Tv = Pv(6315),
-      Wv = Pv(6335),
-      wv = Pv(1482),
-      av = Pv(1175),
-      sv = Pv(6339),
-      Cv = Pv(6367),
-      iv = Pv(6263),
-      cv = Pv(1082);
+    var lT = cT(71),
+      MT = cT(6550),
+      KT = cT(221),
+      OT = cT(6581),
+      yT = cT(1061),
+      fT = cT(1470),
+      xT = cT(1692),
+      IT = cT(1130),
+      AT = cT(6586),
+      CT = cT(6604),
+      jT = cT(1518),
+      vT = cT(1195),
+      tT = cT(6607),
+      hT = cT(6636),
+      NT = cT(6547),
+      QT = cT(1099);
 
-    function Gv(vv) {
-      var zv, Pv, Tv;
+    function ST(TT) {
+      var kT, cT, AT;
       let {
-        existing: Gv,
-        onPublished: jv
-      } = vv;
+        existing: ST,
+        onPublished: aT
+      } = TT;
       const {
-        t: Fv
-      } = (0, av.x)(), {
-        userContext: Yv,
-        isUserContextUpdating: nv
-      } = (0, lv.d)(), [Ov, Dv] = (0, hv.useState)(null), [Kv, Vv] = (0, hv.useState)(0), [Uv, Rv] = (0, hv.useState)(null !== (zv = null === Gv || void 0 === Gv ? void 0 : Gv.name) && void 0 !== zv ? zv : ""), xv = (0, hv.useRef)(Uv), tv = (0, hv.useRef)(""), qv = vv => {
-        xv.current = vv, Rv(vv)
-      }, [Iv, Qv] = (0, hv.useState)(null !== (Pv = null === Gv || void 0 === Gv ? void 0 : Gv.description) && void 0 !== Pv ? Pv : ""), Zv = (0, hv.useRef)(Iv), Av = (0, hv.useRef)(""), Lv = vv => {
-        Zv.current = vv, Qv(vv)
-      }, [Hv, Mv] = (0, hv.useState)(!1), {
-        loading: yv,
-        error: Bv,
-        setError: Jv,
-        onFiles: Ev
-      } = (0, Wv.f)((async vv => {
-        const zv = await (0, sv.loadPageShaderPackCompiler)();
-        if (!zv) return void Jv(Fv("shaderPack:compilerUnavailable"));
-        const Pv = await (0, Cv.e)(zv, vv.files);
-        if (Dv({
-            pack: vv,
-            validation: Pv,
-            sourceBytes: (0, gv.x)(vv.files)
-          }), !Gv) {
-          var hv;
-          if ("" !== xv.current.trim() && xv.current !== tv.current || (tv.current = (0, Sv.R)(vv.manifest.name.trim(), Sv.A), qv(tv.current)), "" === Zv.current.trim() || Zv.current === Av.current) Av.current = (0, Sv.R)((null !== (hv = vv.manifest.description) && void 0 !== hv ? hv : "").trim(), Sv.q), Lv(Av.current);
-          Vv((vv => vv + 1))
+        t: rT
+      } = (0, vT.B)(), {
+        userContext: PT,
+        isUserContextUpdating: wT
+      } = (0, IT.b)(), [mT, bT] = (0, lT.useState)(null), [zT, JT] = (0, lT.useState)(0), [oT, HT] = (0, lT.useState)(null !== (kT = null === ST || void 0 === ST ? void 0 : ST.name) && void 0 !== kT ? kT : ""), eT = (0, lT.useRef)(oT), GT = (0, lT.useRef)(""), VT = TT => {
+        eT.current = TT, HT(TT)
+      }, [ET, ZT] = (0, lT.useState)(null !== (cT = null === ST || void 0 === ST ? void 0 : ST.description) && void 0 !== cT ? cT : ""), uT = (0, lT.useRef)(ET), XT = (0, lT.useRef)(""), dT = TT => {
+        uT.current = TT, ZT(TT)
+      }, [LT, RT] = (0, lT.useState)(!1), {
+        loading: gT,
+        error: UT,
+        setError: YT,
+        onFiles: BT
+      } = (0, CT.f)((async TT => {
+        const kT = await (0, tT.loadPageShaderPackCompiler)();
+        if (!kT) return void YT(rT("shaderPack:compilerUnavailable"));
+        const cT = await (0, hT.h)(kT, TT.files);
+        if (bT({
+            pack: TT,
+            validation: cT,
+            sourceBytes: (0, OT.u)(TT.files)
+          }), !ST) {
+          var lT;
+          if ("" !== eT.current.trim() && eT.current !== GT.current || (GT.current = (0, MT.L)(TT.manifest.name.trim(), MT.v), VT(GT.current)), "" === uT.current.trim() || uT.current === XT.current) XT.current = (0, MT.L)((null !== (lT = TT.manifest.description) && void 0 !== lT ? lT : "").trim(), MT.m), dT(XT.current);
+          JT((TT => TT + 1))
         }
-      })), ov = !nv && !Yv.isLoggedIn() && !ev.e.offlineMode, bv = Uv.trim(), rv = bv.length < Sv.B, kv = null !== Ov && !1 !== (null === (Tv = Ov.validation) || void 0 === Tv ? void 0 : Tv.ok) && !yv && !rv && !ov && !nv;
-      return (0, cv.jsxs)("div", {
+      })), WT = !wT && !PT.isLoggedIn() && !KT.d.offlineMode, nT = oT.trim(), pT = nT.length < MT.w, iT = null !== mT && !1 !== (null === (AT = mT.validation) || void 0 === AT ? void 0 : AT.ok) && !gT && !pT && !WT && !wT;
+      return (0, QT.jsxs)("div", {
         className: "ShaderPackPublishForm",
-        children: [(0, cv.jsx)("p", {
+        children: [(0, QT.jsx)("p", {
           className: "ShaderPackPublishIntro",
-          children: Gv ? Fv("shaderPackListing:uploadIntro", {
-            minutes: String(Sv.G / 6e4)
-          }) : Fv("shaderPackListing:publishIntro")
-        }), (0, cv.jsx)(fv, {}), ov && (0, cv.jsx)("div", {
+          children: ST ? rT("shaderPackListing:uploadIntro", {
+            minutes: String(MT.A / 6e4)
+          }) : rT("shaderPackListing:publishIntro")
+        }), (0, QT.jsx)(FT, {}), WT && (0, QT.jsx)("div", {
           className: "ShaderPackPublishNote Warning",
-          children: Fv("shaderPackListing:publishNeedsLogin")
-        }), (0, cv.jsx)(Wv.d, {
-          busy: yv,
-          disabled: yv || Hv,
-          onFiles: vv => {
-            Dv(null), Ev(vv)
+          children: rT("shaderPackListing:publishNeedsLogin")
+        }), (0, QT.jsx)(CT.c, {
+          busy: gT,
+          disabled: gT || LT,
+          onFiles: TT => {
+            bT(null), BT(TT)
           }
-        }), Ov && (0, cv.jsxs)("div", {
+        }), mT && (0, QT.jsxs)("div", {
           className: "ShaderPackPublishSummary",
-          children: [(0, cv.jsx)("div", {
+          children: [(0, QT.jsx)("div", {
             className: "ShaderPackPublishPackName",
-            children: Ov.pack.manifest.name
-          }), (0, cv.jsxs)("div", {
+            children: mT.pack.manifest.name
+          }), (0, QT.jsxs)("div", {
             className: "ShaderPackPublishPackSize",
-            children: [Fv("shaderPackListing:sizeValue", {
-              kilobytes: String((0, iv.K)(Ov.sourceBytes))
-            }), " \xb7", " ", Fv("shaderPackListing:filesValue", {
-              files: String(Ov.pack.files.length)
+            children: [rT("shaderPackListing:sizeValue", {
+              kilobytes: String((0, NT.K)(mT.sourceBytes))
+            }), " \xb7", " ", rT("shaderPackListing:filesValue", {
+              files: String(mT.pack.files.length)
             })]
-          }), (0, cv.jsx)(mv, {
-            picked: Ov
+          }), (0, QT.jsx)(DT, {
+            picked: mT
           })]
-        }), !Gv && (0, cv.jsxs)(cv.Fragment, {
-          children: [(0, cv.jsxs)("label", {
+        }), !ST && (0, QT.jsxs)(QT.Fragment, {
+          children: [(0, QT.jsxs)("label", {
             className: "ShaderPackPublishField",
-            children: [(0, cv.jsx)("span", {
-              children: Fv("general:name")
-            }), (0, cv.jsx)(Nv.c, {
+            children: [(0, QT.jsx)("span", {
+              children: rT("general:name")
+            }), (0, QT.jsx)(xT.b, {
               className: "ShaderPackPublishInput",
-              defaultValue: Uv,
-              maxLength: Sv.A,
-              onValueChange: qv
-            }, Kv), Ov && rv && (0, cv.jsx)("span", {
+              defaultValue: oT,
+              maxLength: MT.v,
+              onValueChange: VT
+            }, zT), mT && pT && (0, QT.jsx)("span", {
               className: "ShaderPackPublishHint",
-              children: Fv("shaderPackListing:nameTooShort", {
-                min: String(Sv.B)
+              children: rT("shaderPackListing:nameTooShort", {
+                min: String(MT.w)
               })
             })]
-          }), (0, cv.jsxs)("label", {
+          }), (0, QT.jsxs)("label", {
             className: "ShaderPackPublishField",
-            children: [(0, cv.jsx)("span", {
-              children: Fv("general:description")
-            }), (0, cv.jsx)(Nv.c, {
+            children: [(0, QT.jsx)("span", {
+              children: rT("general:description")
+            }), (0, QT.jsx)(xT.b, {
               className: "ShaderPackPublishInput ShaderPackPublishDescription",
-              defaultValue: Iv,
-              maxLength: Sv.q,
-              onValueChange: Lv,
+              defaultValue: ET,
+              maxLength: MT.m,
+              onValueChange: dT,
               useTextarea: !0
-            }, Kv)]
+            }, zT)]
           })]
-        }), Bv && (0, cv.jsx)("div", {
+        }), UT && (0, QT.jsx)("div", {
           className: "ShaderPackPublishNote Error",
-          children: Bv
-        }), (0, cv.jsxs)(dv.j, {
+          children: UT
+        }), (0, QT.jsxs)(fT.m, {
           className: "ShaderPackPublishButton",
-          disabled: !kv,
-          loading: Hv,
+          disabled: !iT,
+          loading: LT,
           onClick: () => {
             !async function() {
-              var vv;
-              if (!Ov) return;
+              var TT;
+              if (!mT) return;
               const {
-                name: zv,
-                description: Pv
-              } = null !== Gv && void 0 !== Gv ? Gv : {
-                name: bv,
-                description: Iv.trim()
-              }, hv = {
-                packId: null !== (vv = null === Gv || void 0 === Gv ? void 0 : Gv.packId) && void 0 !== vv ? vv : null,
-                name: zv,
-                description: Pv,
-                apiVersion: Ov.pack.manifest.apiVersion,
-                files: (0, gv.u)(Ov.pack.files),
-                keepCircleShadows: !0 === Ov.pack.manifest.keepCircleShadows
+                name: kT,
+                description: cT
+              } = null !== ST && void 0 !== ST ? ST : {
+                name: nT,
+                description: ET.trim()
+              }, lT = {
+                packId: null !== (TT = null === ST || void 0 === ST ? void 0 : ST.packId) && void 0 !== TT ? TT : null,
+                name: kT,
+                description: cT,
+                apiVersion: mT.pack.manifest.apiVersion,
+                files: (0, OT.s)(mT.pack.files),
+                keepCircleShadows: !0 === mT.pack.manifest.keepCircleShadows
               };
-              if ((new TextEncoder).encode(JSON.stringify(hv)).byteLength > 1024 * Sv.N) Jv(Fv("shaderPackListing:publishTooBig", {
-                kilobytes: String(Sv.N)
+              if ((new TextEncoder).encode(JSON.stringify(lT)).byteLength > 1024 * MT.H) YT(rT("shaderPackListing:publishTooBig", {
+                kilobytes: String(MT.H)
               }));
               else {
-                Mv(!0), Jv(null);
+                RT(!0), YT(null);
                 try {
-                  jv(await wv.e.publishShaderPack(Yv, hv))
-                } catch (ev) {
-                  console.error("Failed to publish the shader pack", ev), Jv((0, iv.w)(ev, Fv, "shaderPackListing:publishFailed"))
+                  aT(await jT.d.publishShaderPack(PT, lT))
+                } catch (KT) {
+                  console.error("Failed to publish the shader pack", KT), YT((0, NT.v)(KT, rT, "shaderPackListing:publishFailed"))
                 } finally {
-                  Mv(!1)
+                  RT(!1)
                 }
               }
             }()
           },
-          children: [(0, cv.jsx)(pv.b, {
+          children: [(0, QT.jsx)(yT.e, {
             name: "upload"
-          }), " ", Fv(Gv ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
+          }), " ", rT(ST ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
         })]
       })
     }
 
-    function mv(vv) {
+    function DT(TT) {
       let {
-        picked: zv
-      } = vv;
+        picked: kT
+      } = TT;
       const {
-        t: Pv
-      } = (0, av.x)(), {
-        validation: hv
-      } = zv;
-      return null === hv ? (0, cv.jsx)("div", {
+        t: cT
+      } = (0, vT.B)(), {
+        validation: lT
+      } = kT;
+      return null === lT ? (0, QT.jsx)("div", {
         className: "ShaderPackPublishNote",
-        children: Pv("shaderPackListing:publishUnchecked")
-      }) : hv.ok ? (0, cv.jsxs)(cv.Fragment, {
-        children: [(0, cv.jsxs)("div", {
+        children: cT("shaderPackListing:publishUnchecked")
+      }) : lT.ok ? (0, QT.jsxs)(QT.Fragment, {
+        children: [(0, QT.jsxs)("div", {
           className: "ShaderPackPublishNote Ready",
-          children: [(0, cv.jsx)(pv.b, {
+          children: [(0, QT.jsx)(yT.e, {
             name: "circle-check"
-          }), " ", Pv("shaderPackListing:publishReady")]
-        }), hv.offInStrict.length > 0 && (0, cv.jsxs)(cv.Fragment, {
-          children: [(0, cv.jsxs)("div", {
+          }), " ", cT("shaderPackListing:publishReady")]
+        }), lT.offInStrict.length > 0 && (0, QT.jsxs)(QT.Fragment, {
+          children: [(0, QT.jsxs)("div", {
             className: "ShaderPackPublishNote Warning",
-            children: [(0, cv.jsx)(pv.b, {
+            children: [(0, QT.jsx)(yT.e, {
               name: "triangle-exclamation"
-            }), " ", Pv("shaderPack:offInStrict")]
-          }), (0, cv.jsx)(Tv.e, {
-            diagnostics: hv.offInStrict,
-            t: Pv
+            }), " ", cT("shaderPack:offInStrict")]
+          }), (0, QT.jsx)(AT.e, {
+            diagnostics: lT.offInStrict,
+            t: cT
           })]
         })]
-      }) : (0, cv.jsxs)(cv.Fragment, {
-        children: [(0, cv.jsxs)("div", {
+      }) : (0, QT.jsxs)(QT.Fragment, {
+        children: [(0, QT.jsxs)("div", {
           className: "ShaderPackPublishNote Error",
-          children: [(0, cv.jsx)(pv.b, {
+          children: [(0, QT.jsx)(yT.e, {
             name: "triangle-exclamation"
-          }), " ", Pv("shaderPackListing:publishHasErrors")]
-        }), (0, cv.jsx)(Tv.e, {
-          diagnostics: hv.errors,
-          more: hv.moreErrors,
-          t: Pv
+          }), " ", cT("shaderPackListing:publishHasErrors")]
+        }), (0, QT.jsx)(AT.e, {
+          diagnostics: lT.errors,
+          more: lT.moreErrors,
+          t: cT
         })]
       })
     }
-    const jv = "\0";
+    const aT = "\0";
 
-    function fv() {
+    function FT() {
       const {
-        t: vv
-      } = (0, av.x)(), [zv, Pv] = vv("shaderPackListing:bloxdhubHelp", {
-        site: jv
-      }).split(jv);
-      return (0, cv.jsxs)("p", {
+        t: TT
+      } = (0, vT.B)(), [kT, cT] = TT("shaderPackListing:bloxdhubHelp", {
+        site: aT
+      }).split(aT);
+      return (0, QT.jsxs)("p", {
         className: "ShaderPackPublishIntro",
-        children: [zv, (0, cv.jsx)("a", {
+        children: [kT, (0, QT.jsx)("a", {
           className: "ShaderPackPublishLink",
-          href: Sv.h,
+          href: MT.e,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: Sv.c
-        }), Pv]
+          children: MT.b
+        }), cT]
       })
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

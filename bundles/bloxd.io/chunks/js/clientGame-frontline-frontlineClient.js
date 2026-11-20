@@ -1,128 +1,128 @@
 export const id = 17;
 export const ids = [17];
 export const modules = {
-  36132: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => wv,
-      g: () => av,
-      i: () => Wv,
-      m: () => Tv
+  36416: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => jT,
+      g: () => vT,
+      j: () => CT,
+      k: () => AT
     });
-    var hv = Pv(8997),
-      Sv = Pv(36137),
-      ev = Pv(36139),
-      gv = Pv(8413),
-      pv = Pv(1439),
-      dv = Pv(52),
-      Nv = Pv(62),
-      lv = Pv(1082);
+    var lT = cT(9359),
+      MT = cT(36423),
+      KT = cT(36432),
+      OT = cT(8746),
+      yT = cT(1461),
+      fT = cT(71),
+      xT = cT(94),
+      IT = cT(1099);
 
-    function Tv() {
-      var vv;
-      return (0, pv.j)(Sv.d, (0, Sv.q)()), (0, lv.jsx)(lv.Fragment, {
-        children: null === (vv = (0, Sv.q)()) || void 0 === vv ? void 0 : vv.content
+    function AT() {
+      var TT;
+      return (0, yT.i)(MT.b, (0, MT.j)()), (0, IT.jsx)(IT.Fragment, {
+        children: null === (TT = (0, MT.j)()) || void 0 === TT ? void 0 : TT.content
       })
     }
 
-    function Wv(vv) {
-      var zv;
+    function CT(TT) {
+      var kT;
       let {
-        show: Pv
-      } = vv;
-      (0, pv.j)(Sv.d, (0, Sv.q)());
-      const Nv = null === (zv = (0, Sv.q)()) || void 0 === zv ? void 0 : zv.menu;
-      return (0, dv.useEffect)((() => {
-        var vv;
-        Pv || (null === Nv || void 0 === Nv || null === (vv = Nv.onClose) || void 0 === vv || vv.call(Nv), (0, ev.o)())
-      }), [Pv, Nv]), (0, dv.useEffect)((() => Pv ? (0, gv.f)(ev.y, ev.c) : void 0), [Pv]), (0, lv.jsx)(hv.d, {
-        showing: Pv,
+        show: cT
+      } = TT;
+      (0, yT.i)(MT.b, (0, MT.j)());
+      const xT = null === (kT = (0, MT.j)()) || void 0 === kT ? void 0 : kT.menu;
+      return (0, fT.useEffect)((() => {
+        var TT;
+        cT || (null === xT || void 0 === xT || null === (TT = xT.onClose) || void 0 === TT || TT.call(xT), (0, KT.q)())
+      }), [cT, xT]), (0, fT.useEffect)((() => cT ? (0, OT.e)(KT.A, KT.h) : void 0), [cT]), (0, IT.jsx)(lT.b, {
+        showing: cT,
         globallyUniqueKey: "clientGameMenu",
-        children: null === Nv || void 0 === Nv ? void 0 : Nv.content
+        children: null === xT || void 0 === xT ? void 0 : xT.content
       })
     }
 
-    function wv(vv) {
+    function jT(TT) {
       let {
-        placement: zv = "bottom"
-      } = vv;
-      return (0, lv.jsx)("div", {
-        id: `clientGameHud-${zv}`,
+        placement: kT = "bottom"
+      } = TT;
+      return (0, IT.jsx)("div", {
+        id: `clientGameHud-${kT}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function av(vv) {
+    function vT(TT) {
       let {
-        children: zv,
-        placement: Pv = "bottom"
-      } = vv;
-      const [hv, Sv] = (0, dv.useState)(null);
-      return (0, dv.useEffect)((() => {
-        Sv(document.getElementById(`clientGameHud-${Pv}`))
-      }), [Pv]), hv ? (0, Nv.createPortal)(zv, hv) : null
+        children: kT,
+        placement: cT = "bottom"
+      } = TT;
+      const [lT, MT] = (0, fT.useState)(null);
+      return (0, fT.useEffect)((() => {
+        MT(document.getElementById(`clientGameHud-${cT}`))
+      }), [cT]), lT ? (0, xT.createPortal)(kT, lT) : null
     }
   },
-  8997: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => ev
+  9359: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => KT
     });
-    var hv = Pv(4287),
-      Sv = Pv(4292);
+    var lT = cT(4521),
+      MT = cT(4528);
 
-    function ev(vv) {
+    function KT(TT) {
       let {
-        children: zv,
-        showing: Pv,
-        globallyUniqueKey: ev,
-        alwaysMountChildren: gv = !1,
-        doGameplayStartStopOnShow: pv = !0,
-        keepsMovement: dv = !1
-      } = vv;
-      return (0, Sv.e)(!0, Pv, ev, dv), (0, hv.b)(pv, Pv), Pv || gv ? zv : null
+        children: kT,
+        showing: cT,
+        globallyUniqueKey: KT,
+        alwaysMountChildren: OT = !1,
+        doGameplayStartStopOnShow: yT = !0,
+        keepsMovement: fT = !1
+      } = TT;
+      return (0, MT.c)(!0, cT, KT, fT), (0, lT.e)(yT, cT), cT || OT ? kT : null
     }
   },
-  36198: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => ev,
-      i: () => gv,
-      m: () => pv,
-      q: () => dv
+  36506: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => KT,
+      g: () => OT,
+      j: () => yT,
+      m: () => fT
     });
-    var hv = Pv(52),
-      Sv = Pv(2899);
-    const ev = 8,
-      gv = "InGameHeaderContainer",
-      pv = "TopRightElements";
+    var lT = cT(71),
+      MT = cT(3041);
+    const KT = 8,
+      OT = "InGameHeaderContainer",
+      yT = "TopRightElements";
 
-    function dv(vv) {
-      const [zv] = (0, Sv.d)(), [Pv, dv] = (0, hv.useState)(!1);
-      return (0, hv.useLayoutEffect)((() => {
-        if (!vv) return;
-        const zv = document.querySelector(`.${gv}`),
-          Pv = document.querySelector(`.${pv}`),
-          hv = () => {
-            const hv = vv.getBoundingClientRect(),
-              Sv = zv ? zv.getBoundingClientRect().right : 0,
-              gv = Pv ? Pv.getBoundingClientRect().left : window.innerWidth,
-              pv = hv.left < Sv + ev,
-              Nv = hv.right > gv - ev;
-            dv(pv || Nv)
+    function fT(TT) {
+      const [kT] = (0, MT.d)(), [cT, fT] = (0, lT.useState)(!1);
+      return (0, lT.useLayoutEffect)((() => {
+        if (!TT) return;
+        const kT = document.querySelector(`.${OT}`),
+          cT = document.querySelector(`.${yT}`),
+          lT = () => {
+            const lT = TT.getBoundingClientRect(),
+              MT = kT ? kT.getBoundingClientRect().right : 0,
+              OT = cT ? cT.getBoundingClientRect().left : window.innerWidth,
+              yT = lT.left < MT + KT,
+              xT = lT.right > OT - KT;
+            fT(yT || xT)
           };
-        hv();
-        const Sv = new ResizeObserver(hv);
-        return Sv.observe(vv), zv && Sv.observe(zv), Pv && Sv.observe(Pv), () => {
-          Sv.disconnect()
+        lT();
+        const MT = new ResizeObserver(lT);
+        return MT.observe(TT), kT && MT.observe(kT), cT && MT.observe(cT), () => {
+          MT.disconnect()
         }
-      }), [vv, zv]), Pv
+      }), [TT, kT]), cT
     }
   },
-  36193: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => Sv
+  36504: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => MT
     });
-    const hv = [{
+    const lT = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -139,214 +139,214 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function Sv(vv, zv, Pv) {
-      const Sv = Math.abs(vv - zv),
-        ev = Date.now() - Pv;
-      for (const gv of hv)
-        if (vv < gv.maxDist) return Sv >= gv.hardUpdateDist || ev > gv.timeBetweenSoftChecks && Sv >= gv.softUpdateDist;
+    function MT(TT, kT, cT) {
+      const MT = Math.abs(TT - kT),
+        KT = Date.now() - cT;
+      for (const OT of lT)
+        if (TT < OT.maxDist) return MT >= OT.hardUpdateDist || KT > OT.timeBetweenSoftChecks && MT >= OT.softUpdateDist;
       return !1
     }
   },
-  8413: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => ev,
-      f: () => Sv
+  8746: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => KT,
+      e: () => MT
     });
-    let hv = null;
-    const Sv = function(vv) {
-        const zv = {
-          cycle: vv,
+    let lT = null;
+    const MT = function(TT) {
+        const kT = {
+          cycle: TT,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return hv = zv, () => {
-          hv === zv && (hv = null)
+        return lT = kT, () => {
+          lT === kT && (lT = null)
         }
       },
-      ev = () => {
-        var vv;
-        return null !== (vv = hv) && void 0 !== vv && vv.canCycle() ? hv.cycle : null
+      KT = () => {
+        var TT;
+        return null !== (TT = lT) && void 0 !== TT && TT.canCycle() ? lT.cycle : null
       }
   },
-  38072: (vv, zv, Pv) => {
-    function hv(vv, zv, Pv) {
-      var hv;
+  38388: (TT, kT, cT) => {
+    function lT(TT, kT, cT) {
+      var lT;
       const {
-        width: Sv,
-        height: ev
-      } = Pv, gv = null !== (hv = vv.text) && void 0 !== hv ? hv : vv, pv = (gv.x / 100 - .5) * Sv, dv = (gv.y / 100 - .5) * ev, Nv = Sv / 2 - zv.x;
-      if (null !== vv.text && Math.abs(pv) <= Nv && dv >= zv.top - ev / 2 && dv <= ev / 2 - zv.bottom) return {
-        x: gv.x,
-        y: gv.y
+        width: MT,
+        height: KT
+      } = cT, OT = null !== (lT = TT.text) && void 0 !== lT ? lT : TT, yT = (OT.x / 100 - .5) * MT, fT = (OT.y / 100 - .5) * KT, xT = MT / 2 - kT.x;
+      if (null !== TT.text && Math.abs(yT) <= xT && fT >= kT.top - KT / 2 && fT <= KT / 2 - kT.bottom) return {
+        x: OT.x,
+        y: OT.y
       };
-      const lv = Math.min(0 === pv ? 1 / 0 : Nv / Math.abs(pv), dv > 0 ? (ev / 2 - zv.bottom) / dv : dv < 0 ? (zv.top - ev / 2) / dv : 1 / 0);
-      return !Number.isFinite(lv) || lv < 0 ? {
+      const IT = Math.min(0 === yT ? 1 / 0 : xT / Math.abs(yT), fT > 0 ? (KT / 2 - kT.bottom) / fT : fT < 0 ? (kT.top - KT / 2) / fT : 1 / 0);
+      return !Number.isFinite(IT) || IT < 0 ? {
         x: 50,
         y: 50
       } : {
-        x: 50 + pv * lv / Sv * 100,
-        y: 50 + dv * lv / ev * 100
+        x: 50 + yT * IT / MT * 100,
+        y: 50 + fT * IT / KT * 100
       }
     }
-    Pv.d(zv, {
-      e: () => hv
+    cT.d(kT, {
+      d: () => lT
     })
   },
-  36139: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => ev,
-      c: () => sv,
-      e: () => Cv,
-      i: () => pv,
-      k: () => Wv,
-      o: () => iv,
-      r: () => Tv,
-      u: () => Gv,
-      y: () => av,
-      z: () => cv
+  36432: (TT, kT, cT) => {
+    cT.d(kT, {
+      A: () => vT,
+      B: () => QT,
+      d: () => KT,
+      h: () => tT,
+      k: () => hT,
+      l: () => yT,
+      p: () => CT,
+      q: () => NT,
+      s: () => AT,
+      w: () => ST
     });
-    var hv = Pv(22),
-      Sv = Pv(26);
-    const ev = "clientGameInventoryButtonsChanged",
-      gv = new Map;
+    var lT = cT(31),
+      MT = cT(36);
+    const KT = "clientGameInventoryButtonsChanged",
+      OT = new Map;
 
-    function pv() {
-      return [...gv.values()].sort(((vv, zv) => {
-        var Pv, hv;
-        return (null !== (Pv = vv.order) && void 0 !== Pv ? Pv : 0) - (null !== (hv = zv.order) && void 0 !== hv ? hv : 0)
+    function yT() {
+      return [...OT.values()].sort(((TT, kT) => {
+        var cT, lT;
+        return (null !== (cT = TT.order) && void 0 !== cT ? cT : 0) - (null !== (lT = kT.order) && void 0 !== lT ? lT : 0)
       }))
     }
-    let dv = null;
+    let fT = null;
 
-    function Nv(vv) {
-      dv = vv
+    function xT(TT) {
+      fT = TT
     }
-    let lv = !1;
+    let IT = !1;
 
-    function Tv(vv) {
-      lv = !0;
+    function AT(TT) {
+      IT = !0;
       try {
-        vv.onClick()
+        TT.onClick()
       } finally {
-        lv = !1
+        IT = !1
       }
-      vv.panel && "clientGame" === hv.c.get("openInGameMenuName") && Nv(vv.id)
+      TT.panel && "clientGame" === lT.e.get("openInGameMenuName") && xT(TT.id)
     }
 
-    function Wv() {
-      return lv
+    function CT() {
+      return IT
     }
 
-    function wv() {
-      return pv().filter((vv => vv.panel && !vv.disabled))
+    function jT() {
+      return yT().filter((TT => TT.panel && !TT.disabled))
     }
 
-    function av(vv) {
-      const zv = wv(),
-        Pv = zv.findIndex((vv => vv.id === dv));
-      return !(Pv < 0 || zv.length < 2) && (Tv(zv[(Pv + vv + zv.length) % zv.length]), !0)
+    function vT(TT) {
+      const kT = jT(),
+        cT = kT.findIndex((TT => TT.id === fT));
+      return !(cT < 0 || kT.length < 2) && (AT(kT[(cT + TT + kT.length) % kT.length]), !0)
     }
 
-    function sv() {
-      return null !== dv && wv().length > 1
+    function tT() {
+      return null !== fT && jT().length > 1
     }
 
-    function Cv() {
-      Nv(null)
+    function hT() {
+      xT(null)
     }
 
-    function iv() {
-      "inventory" !== hv.c.get("openInGameMenuName") && Nv(null)
+    function NT() {
+      "inventory" !== lT.e.get("openInGameMenuName") && xT(null)
     }
 
-    function cv() {
-      const vv = dv;
-      return Nv(null), vv
+    function QT() {
+      const TT = fT;
+      return xT(null), TT
     }
 
-    function Gv(vv) {
-      return gv.set(vv.id, vv), Sv.j.zC(ev, pv(), !0), () => {
-        gv.get(vv.id) === vv && (gv.delete(vv.id), Sv.j.zC(ev, pv()))
+    function ST(TT) {
+      return OT.set(TT.id, TT), MT.k.nt(KT, yT(), !0), () => {
+        OT.get(TT.id) === TT && (OT.delete(TT.id), MT.k.nt(KT, yT()))
       }
     }
   },
-  36137: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => pv,
-      g: () => Cv,
-      j: () => iv,
-      m: () => Wv,
-      q: () => Nv,
-      r: () => sv,
-      u: () => wv,
-      w: () => lv
+  36423: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => yT,
+      d: () => hT,
+      f: () => NT,
+      h: () => CT,
+      j: () => xT,
+      m: () => tT,
+      p: () => jT,
+      q: () => IT
     });
-    var hv = Pv(22),
-      Sv = Pv(26),
-      ev = Pv(1272),
-      gv = Pv(36139);
-    const pv = "clientGameUiChanged";
-    let dv = null;
+    var lT = cT(31),
+      MT = cT(36),
+      KT = cT(1292),
+      OT = cT(36432);
+    const yT = "clientGameUiChanged";
+    let fT = null;
 
-    function Nv() {
-      return dv
+    function xT() {
+      return fT
     }
 
-    function lv(vv, zv) {
-      const Pv = {
-        content: vv,
-        menu: zv
+    function IT(TT, kT) {
+      const cT = {
+        content: TT,
+        menu: kT
       };
-      return dv = Pv, Sv.j.zC(pv, dv, !0), () => {
-        dv === Pv && (dv = null, av = !1, Cv(), Sv.j.zC(pv, null))
+      return fT = cT, MT.k.nt(yT, fT, !0), () => {
+        fT === cT && (fT = null, vT = !1, hT(), MT.k.nt(yT, null))
       }
     }
-    let Tv = null;
+    let AT = null;
 
-    function Wv() {
-      return Tv
+    function CT() {
+      return AT
     }
 
-    function wv(vv) {
-      return Tv = vv, () => {
-        Tv === vv && (Tv = null)
+    function jT(TT) {
+      return AT = TT, () => {
+        AT === TT && (AT = null)
       }
     }
-    let av = !1;
+    let vT = !1;
 
-    function sv() {
-      const vv = hv.c.get("openInGameMenuName");
-      "clientGame" !== vv && (av = "inventory" === vv), (0, gv.k)() || (0, gv.e)(), (0, ev.r)(ev.e), hv.c.set({
+    function tT() {
+      const TT = lT.e.get("openInGameMenuName");
+      "clientGame" !== TT && (vT = "inventory" === TT), (0, OT.p)() || (0, OT.k)(), (0, KT.p)(KT.c), lT.e.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function Cv() {
-      cv(!1)
+    function hT() {
+      QT(!1)
     }
 
-    function iv() {
-      cv(av)
+    function NT() {
+      QT(vT)
     }
 
-    function cv(vv) {
-      "clientGame" === hv.c.get("openInGameMenuName") && hv.c.set({
-        openInGameMenuName: vv ? "inventory" : null
-      }), vv || (0, gv.e)(), av = !1
+    function QT(TT) {
+      "clientGame" === lT.e.get("openInGameMenuName") && lT.e.set({
+        openInGameMenuName: TT ? "inventory" : null
+      }), TT || (0, OT.k)(), vT = !1
     }
   },
-  38891: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      default: () => Cz
+  39197: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      default: () => hk
     });
-    const hv = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
-    var Sv = Pv(52),
-      ev = Pv(36137),
-      gv = Pv(36542),
-      pv = Pv(36151),
-      dv = Pv(1692),
-      Nv = Pv(26);
-    const lv = {
+    const lT = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
+    var MT = cT(71),
+      KT = cT(36423),
+      OT = cT(36845),
+      yT = cT(36440),
+      fT = cT(1741),
+      xT = cT(36);
+    const IT = {
       M1911: "pistol",
       Deagle: "pistol",
       "Block-19": "pistol",
@@ -372,284 +372,284 @@ export const modules = {
       "Splash Instant Healing Potion": "throwable",
       Snowdash: "throwable"
     };
-    const Tv = 32;
+    const AT = 32;
 
-    function Wv(vv, zv, Pv, hv) {
+    function CT(TT, kT, cT, lT) {
       return {
         tag: "line",
         attrs: {
-          x1: vv,
-          y1: zv,
-          x2: Pv,
-          y2: hv,
+          x1: TT,
+          y1: kT,
+          x2: cT,
+          y2: lT,
           "stroke-width": arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 2
         }
       }
     }
 
-    function wv(vv) {
+    function jT(TT) {
       return {
         tag: "circle",
         attrs: {
-          cx: Tv,
-          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Tv,
-          r: vv,
+          cx: AT,
+          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : AT,
+          r: TT,
           class: "Fill"
         }
       }
     }
 
-    function av(vv, zv) {
+    function vT(TT, kT) {
       return {
         tag: "path",
         attrs: {
-          d: vv,
-          "stroke-width": zv
+          d: TT,
+          "stroke-width": kT
         }
       }
     }
 
-    function sv(vv, zv, Pv) {
+    function tT(TT, kT, cT) {
       return {
         tag: "circle",
         attrs: {
-          cx: Tv,
-          cy: Tv,
-          r: vv,
-          "stroke-width": zv,
-          class: Pv
+          cx: AT,
+          cy: AT,
+          r: TT,
+          "stroke-width": kT,
+          class: cT
         }
       }
     }
 
-    function Cv(vv, zv, Pv) {
+    function hT(TT, kT, cT) {
       return {
         tag: "text",
         attrs: {
-          x: vv,
-          y: zv,
+          x: TT,
+          y: kT,
           class: "Fill Label"
         },
-        text: Pv
+        text: cT
       }
     }
-    const iv = {
-      pistol: vv => [Wv(Tv, Tv - vv - 5, Tv, Tv - vv), Wv(Tv - vv - 5, Tv, Tv - vv, Tv), Wv(Tv + vv, Tv, Tv + vv + 5, Tv), wv(1.4)],
-      rifle: vv => [Wv(Tv, Tv - vv - 8, Tv, Tv - vv), Wv(Tv, Tv + vv, Tv, Tv + vv + 8), Wv(Tv - vv - 8, Tv, Tv - vv, Tv), Wv(Tv + vv, Tv, Tv + vv + 8, Tv), wv(1)],
-      smg: vv => {
-        const zv = Math.PI / 2,
-          Pv = [];
-        for (let gv = 0; gv < 4; gv++) Pv.push((Sv = gv * zv + .35, ev = (gv + 1) * zv - .35, av(`M${Tv+(hv=6+vv)*Math.cos(Sv)} ${Tv+hv*Math.sin(Sv)} A${hv} ${hv} 0 0 1 ${Tv+hv*Math.cos(ev)} ${Tv+hv*Math.sin(ev)}`, 2)));
-        var hv, Sv, ev;
-        return [...Pv, wv(1.4)]
+    const NT = {
+      pistol: TT => [CT(AT, AT - TT - 5, AT, AT - TT), CT(AT - TT - 5, AT, AT - TT, AT), CT(AT + TT, AT, AT + TT + 5, AT), jT(1.4)],
+      rifle: TT => [CT(AT, AT - TT - 8, AT, AT - TT), CT(AT, AT + TT, AT, AT + TT + 8), CT(AT - TT - 8, AT, AT - TT, AT), CT(AT + TT, AT, AT + TT + 8, AT), jT(1)],
+      smg: TT => {
+        const kT = Math.PI / 2,
+          cT = [];
+        for (let OT = 0; OT < 4; OT++) cT.push((MT = OT * kT + .35, KT = (OT + 1) * kT - .35, vT(`M${AT+(lT=6+TT)*Math.cos(MT)} ${AT+lT*Math.sin(MT)} A${lT} ${lT} 0 0 1 ${AT+lT*Math.cos(KT)} ${AT+lT*Math.sin(KT)}`, 2)));
+        var lT, MT, KT;
+        return [...cT, jT(1.4)]
       },
-      shotgun: vv => [sv(vv, 3, "Ring Outline"), sv(vv, 1.5, "Ring")],
-      marksman: vv => [av(`M${26-vv/2} ${39+vv/2} L32 33 L${38+vv/2} ${39+vv/2}`, 2), Wv(14 - vv, Tv, 24 - vv, Tv, 1.5), Wv(40 + vv, Tv, 50 + vv, Tv, 1.5), Wv(14 - vv, 30, 14 - vv, 34, 1.5), Wv(50 + vv, 30, 50 + vv, 34, 1.5)],
-      machineGun: vv => {
-        const zv = 10 + vv,
-          Pv = [];
-        for (const [hv, Sv] of [
+      shotgun: TT => [tT(TT, 3, "Ring Outline"), tT(TT, 1.5, "Ring")],
+      marksman: TT => [vT(`M${26-TT/2} ${39+TT/2} L32 33 L${38+TT/2} ${39+TT/2}`, 2), CT(14 - TT, AT, 24 - TT, AT, 1.5), CT(40 + TT, AT, 50 + TT, AT, 1.5), CT(14 - TT, 30, 14 - TT, 34, 1.5), CT(50 + TT, 30, 50 + TT, 34, 1.5)],
+      machineGun: TT => {
+        const kT = 10 + TT,
+          cT = [];
+        for (const [lT, MT] of [
             [-1, -1],
             [1, -1],
             [-1, 1],
             [1, 1]
-          ]) Pv.push(av(`M${Tv+hv*zv} ${Tv+Sv*(zv-5)} L${Tv+hv*zv} ${Tv+Sv*zv} L${Tv+hv*(zv-5)} ${Tv+Sv*zv}`, 2));
-        return [...Pv, Wv(Tv, 28, Tv, 36, 1.5), Wv(28, Tv, 36, Tv, 1.5)]
+          ]) cT.push(vT(`M${AT+lT*kT} ${AT+MT*(kT-5)} L${AT+lT*kT} ${AT+MT*kT} L${AT+lT*(kT-5)} ${AT+MT*kT}`, 2));
+        return [...cT, CT(AT, 28, AT, 36, 1.5), CT(28, AT, 36, AT, 1.5)]
       },
-      launcher: () => [Wv(14, 30, 50, 30, 1.5), Wv(Tv, 24, Tv, 52, 1.5), Wv(28, 38, 36, 38, 1.5), Wv(29, 44, 35, 44, 1.5), Wv(30, 50, 34, 50, 1.5), Cv(38, 40, "100"), Cv(37, 46, "200"), wv(1.4, 30)],
-      melee: () => [av("M32 26 L38 32 L32 38 L26 32 Z", 1.5), wv(1.2)],
-      throwable: () => [wv(1.6)]
+      launcher: () => [CT(14, 30, 50, 30, 1.5), CT(AT, 24, AT, 52, 1.5), CT(28, 38, 36, 38, 1.5), CT(29, 44, 35, 44, 1.5), CT(30, 50, 34, 50, 1.5), hT(38, 40, "100"), hT(37, 46, "200"), jT(1.4, 30)],
+      melee: () => [vT("M32 26 L38 32 L32 38 L26 32 Z", 1.5), jT(1.2)],
+      throwable: () => [jT(1.6)]
     };
 
-    function cv(vv) {
+    function QT(TT) {
       let {
-        tag: zv,
-        attrs: Pv,
-        text: hv
-      } = vv, Sv = `<${zv}`;
-      for (const [ev, gv] of Object.entries(Pv)) Sv += ` ${ev}="${gv}"`;
-      return void 0 === hv ? `${Sv}/>` : `${Sv}>${hv}</${zv}>`
+        tag: kT,
+        attrs: cT,
+        text: lT
+      } = TT, MT = `<${kT}`;
+      for (const [KT, OT] of Object.entries(cT)) MT += ` ${KT}="${OT}"`;
+      return void 0 === lT ? `${MT}/>` : `${MT}>${lT}</${kT}>`
     }
-    class Gv {
-      constructor(vv, zv) {
-        this.api = vv, this.localPlayerId = zv, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = vv => {
-          this.element = vv, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, vv && !this.enabled && (vv.style.display = "none")
+    class ST {
+      constructor(TT, kT) {
+        this.api = TT, this.localPlayerId = kT, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = TT => {
+          this.element = TT, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, TT && !this.enabled && (TT.style.display = "none")
         }, this.measure = () => {
-          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, dv.getRemInPx)()))
-        }, this.tokens = [Nv.j.subscribe("aimingOverlay", (vv => {
-          this.sniperOverlay = "sniper" === vv
-        })), Nv.j.subscribe("mouseState", (vv => {
+          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, fT.getRemInPx)()))
+        }, this.tokens = [xT.k.subscribe("aimingOverlay", (TT => {
+          this.sniperOverlay = "sniper" === TT
+        })), xT.k.subscribe("mouseState", (TT => {
           let {
-            isDown: zv
-          } = vv;
-          this.mouseDown = zv
+            isDown: kT
+          } = TT;
+          this.mouseDown = kT
         }))], window.addEventListener("resize", this.measure), this.measure()
       }
-      uF(vv) {
-        vv !== this.enabled && (this.enabled = vv, this.drawnVisible = null, vv || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
+      PD(TT) {
+        TT !== this.enabled && (this.enabled = TT, this.drawnVisible = null, TT || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
       }
-      frame(vv, zv) {
-        var Pv, hv;
+      frame(TT, kT) {
+        var cT, lT;
         if (!this.enabled) return;
         const {
-          api: Sv
-        } = this, ev = Sv.isAlive(this.localPlayerId) && null !== (Pv = null === (hv = Sv.Avv(this.localPlayerId)) || void 0 === hv ? void 0 : hv.name) && void 0 !== Pv ? Pv : null, gv = (pv = ev) && lv[pv] || null;
-        var pv;
-        if (this.setOwnsCrosshair(null !== gv), !this.element) return;
-        const dv = Sv.getHeldGunInaccuracy(),
-          Nv = null !== dv,
-          Tv = null !== gv && !this.sniperOverlay && Sv.isCrosshairShown();
-        if (Tv !== this.drawnVisible && (this.drawnVisible = Tv, this.element.style.display = Tv ? "block" : "none"), !Tv) return;
-        const Wv = Nv ? function(vv) {
-            return "launcher" === vv || "melee" === vv || "throwable" === vv ? "none" : "shotgun" === vv ? "cone" : "offset"
-          }(gv) : "none",
-          wv = null !== dv && void 0 !== dv ? dv : 0;
-        "cone" === Wv ? this.drawCone(gv, this.coneRadiusVh(wv, zv) * this.gapPerVh, vv) : (this.coneDrawn = !1, this.draw(gv, "none" === Wv ? 2 : this.offsetGap(wv)));
-        const av = !Nv && this.mouseDown;
-        av !== this.drawnPressed && (this.drawnPressed = av, this.element.classList.toggle("Pressed", av))
+          api: MT
+        } = this, KT = MT.isAlive(this.localPlayerId) && null !== (cT = null === (lT = MT.ckT(this.localPlayerId)) || void 0 === lT ? void 0 : lT.name) && void 0 !== cT ? cT : null, OT = (yT = KT) && IT[yT] || null;
+        var yT;
+        if (this.setOwnsCrosshair(null !== OT), !this.element) return;
+        const fT = MT.getHeldGunInaccuracy(),
+          xT = null !== fT,
+          AT = null !== OT && !this.sniperOverlay && MT.isCrosshairShown();
+        if (AT !== this.drawnVisible && (this.drawnVisible = AT, this.element.style.display = AT ? "block" : "none"), !AT) return;
+        const CT = xT ? function(TT) {
+            return "launcher" === TT || "melee" === TT || "throwable" === TT ? "none" : "shotgun" === TT ? "cone" : "offset"
+          }(OT) : "none",
+          jT = null !== fT && void 0 !== fT ? fT : 0;
+        "cone" === CT ? this.drawCone(OT, this.coneRadiusVh(jT, kT) * this.gapPerVh, TT) : (this.coneDrawn = !1, this.draw(OT, "none" === CT ? 2 : this.offsetGap(jT)));
+        const vT = !xT && this.mouseDown;
+        vT !== this.drawnPressed && (this.drawnPressed = vT, this.element.classList.toggle("Pressed", vT))
       }
       dispose() {
-        for (const vv of this.tokens) Nv.j.unsubscribe(vv);
+        for (const TT of this.tokens) xT.k.unsubscribe(TT);
         window.removeEventListener("resize", this.measure), this.setOwnsCrosshair(!1)
       }
-      draw(vv, zv) {
-        var Pv, hv;
-        vv !== this.drawnFamily ? (this.drawnFamily = vv, this.drawnGap = zv, this.element.innerHTML = function(vv, zv) {
-          return `<svg viewBox="0 0 64 64">${iv[vv](zv).map(cv).join("")}</svg>`
-        }(vv, zv), this.shapes = Array.from(null !== (Pv = null === (hv = this.element.firstElementChild) || void 0 === hv ? void 0 : hv.children) && void 0 !== Pv ? Pv : [])) : zv !== this.drawnGap && (this.drawnGap = zv, function(vv, zv, Pv) {
-          const hv = iv[zv](Pv);
-          for (let Sv = 0; Sv < hv.length; Sv++)
-            for (const [zv, Pv] of Object.entries(hv[Sv].attrs)) {
-              const hv = String(Pv);
-              vv[Sv].getAttribute(zv) !== hv && vv[Sv].setAttribute(zv, hv)
+      draw(TT, kT) {
+        var cT, lT;
+        TT !== this.drawnFamily ? (this.drawnFamily = TT, this.drawnGap = kT, this.element.innerHTML = function(TT, kT) {
+          return `<svg viewBox="0 0 64 64">${NT[TT](kT).map(QT).join("")}</svg>`
+        }(TT, kT), this.shapes = Array.from(null !== (cT = null === (lT = this.element.firstElementChild) || void 0 === lT ? void 0 : lT.children) && void 0 !== cT ? cT : [])) : kT !== this.drawnGap && (this.drawnGap = kT, function(TT, kT, cT) {
+          const lT = NT[kT](cT);
+          for (let MT = 0; MT < lT.length; MT++)
+            for (const [kT, cT] of Object.entries(lT[MT].attrs)) {
+              const lT = String(cT);
+              TT[MT].getAttribute(kT) !== lT && TT[MT].setAttribute(kT, lT)
             }
-        }(this.shapes, vv, zv))
+        }(this.shapes, TT, kT))
       }
-      drawCone(vv, zv, Pv) {
-        vv === this.drawnFamily && this.coneDrawn ? this.shownRadius += (zv - this.shownRadius) * (1 - Math.exp(-Pv / 80)) : this.shownRadius = zv, this.coneDrawn = !0, this.draw(vv, Math.round(4 * this.shownRadius) / 4)
+      drawCone(TT, kT, cT) {
+        TT === this.drawnFamily && this.coneDrawn ? this.shownRadius += (kT - this.shownRadius) * (1 - Math.exp(-cT / 80)) : this.shownRadius = kT, this.coneDrawn = !0, this.draw(TT, Math.round(4 * this.shownRadius) / 4)
       }
-      coneRadiusVh(vv, zv) {
-        if (!(zv > 0)) return 1;
-        const Pv = vv * gv.l / 2;
-        return Math.max(50 * Math.tan(Pv) / zv, 1)
+      coneRadiusVh(TT, kT) {
+        if (!(kT > 0)) return 1;
+        const cT = TT * OT.g / 2;
+        return Math.max(50 * Math.tan(cT) / kT, 1)
       }
-      offsetGap(vv) {
-        const zv = 2 + ((0, pv.d)(vv) - 1) * this.gapPerVh;
-        return Math.min(24, Math.round(2 * zv) / 2)
+      offsetGap(TT) {
+        const kT = 2 + ((0, yT.f)(TT) - 1) * this.gapPerVh;
+        return Math.min(24, Math.round(2 * kT) / 2)
       }
-      setOwnsCrosshair(vv) {
-        vv !== this.ownsCrosshair && (this.ownsCrosshair = vv, document.body.classList.toggle("FrontlineCustomCrosshair", vv))
+      setOwnsCrosshair(TT) {
+        TT !== this.ownsCrosshair && (this.ownsCrosshair = TT, document.body.classList.toggle("FrontlineCustomCrosshair", TT))
       }
     }
-    const mv = "FrontlineCustomDamage",
-      jv = .45,
-      fv = .2;
-    class Fv {
-      constructor(vv, zv) {
-        this.api = vv, this.localPlayerId = zv, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
+    const DT = "FrontlineCustomDamage",
+      aT = .45,
+      FT = .2;
+    class rT {
+      constructor(TT, kT) {
+        this.api = TT, this.localPlayerId = kT, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, this.maxHealth = null, this.Uv = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = vv => {
-          var zv, Pv;
-          this.clearHits(), this.root = vv, this.lowLayer = null !== (zv = null === vv || void 0 === vv ? void 0 : vv.querySelector(".FrontlineDamageLow")) && void 0 !== zv ? zv : null, this.arcLayer = null !== (Pv = null === vv || void 0 === vv ? void 0 : vv.querySelector(".FrontlineDamageArcs")) && void 0 !== Pv ? Pv : null, this.showRoot(), this.drawLow()
-        }, this.token = Nv.j.subscribe("damagedByOtherPlayer", (vv => {
+        }, this.maxHealth = null, this.JT = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = TT => {
+          var kT, cT;
+          this.clearHits(), this.root = TT, this.lowLayer = null !== (kT = null === TT || void 0 === TT ? void 0 : TT.querySelector(".FrontlineDamageLow")) && void 0 !== kT ? kT : null, this.arcLayer = null !== (cT = null === TT || void 0 === TT ? void 0 : TT.querySelector(".FrontlineDamageArcs")) && void 0 !== cT ? cT : null, this.showRoot(), this.drawLow()
+        }, this.token = xT.k.subscribe("damagedByOtherPlayer", (TT => {
           let {
-            direction: zv,
-            Kv: Pv
-          } = vv;
-          this.onHurt(zv, Pv)
-        })), this.syncHealth(), document.body.classList.add(mv)
+            direction: kT,
+            bT: cT
+          } = TT;
+          this.onHurt(kT, cT)
+        })), this.syncHealth(), document.body.classList.add(DT)
       }
-      uF(vv) {
-        vv !== this.enabled && (this.enabled = vv, document.body.classList.toggle(mv, vv), vv || this.clearHits(), this.showRoot())
+      PD(TT) {
+        TT !== this.enabled && (this.enabled = TT, document.body.classList.toggle(DT, TT), TT || this.clearHits(), this.showRoot())
       }
-      frame(vv) {
-        this.syncHealth(), this.cameraHeading = vv;
-        for (const zv of this.arcs) this.drawArcAngle(zv)
+      frame(TT) {
+        this.syncHealth(), this.cameraHeading = TT;
+        for (const kT of this.arcs) this.drawArcAngle(kT)
       }
       dispose() {
-        Nv.j.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(mv)
+        xT.k.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(DT)
       }
       showRoot() {
         this.root && (this.root.style.display = this.enabled ? "" : "none")
       }
       syncHealth() {
-        const vv = this.api.getClientOption(this.localPlayerId, "_health"),
-          zv = this.api.getClientOption(this.localPlayerId, "_shield"),
-          Pv = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
-        if (Object.is(vv, this.readHealth) && Object.is(zv, this.readShield) && Object.is(Pv, this.readMaxHealth)) return;
-        if (this.readHealth = vv, this.readShield = zv, this.readMaxHealth = Pv, null === vv || void 0 === vv || !Pv) return this.lastHealthPool = null, this.maxHealth = null, this.Uv = 1, this.dead = !1, void this.drawLow();
-        const hv = vv + (null !== zv && void 0 !== zv ? zv : 0);
-        if (null !== this.lastHealthPool && hv < this.lastHealthPool) {
-          const vv = performance.now(),
-            zv = (this.lastHealthPool - hv) / Pv;
-          this.lastDrop = vv - this.lastDrop.at < 300 ? {
-            frac: this.lastDrop.frac + zv,
+        const TT = this.api.getClientOption(this.localPlayerId, "_health"),
+          kT = this.api.getClientOption(this.localPlayerId, "_shield"),
+          cT = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
+        if (Object.is(TT, this.readHealth) && Object.is(kT, this.readShield) && Object.is(cT, this.readMaxHealth)) return;
+        if (this.readHealth = TT, this.readShield = kT, this.readMaxHealth = cT, null === TT || void 0 === TT || !cT) return this.lastHealthPool = null, this.maxHealth = null, this.JT = 1, this.dead = !1, void this.drawLow();
+        const lT = TT + (null !== kT && void 0 !== kT ? kT : 0);
+        if (null !== this.lastHealthPool && lT < this.lastHealthPool) {
+          const TT = performance.now(),
+            kT = (this.lastHealthPool - lT) / cT;
+          this.lastDrop = TT - this.lastDrop.at < 300 ? {
+            frac: this.lastDrop.frac + kT,
             at: this.lastDrop.at
           } : {
-            frac: zv,
-            at: vv
+            frac: kT,
+            at: TT
           }
         }
-        this.dead = vv <= 0, this.dead && this.clearHits(), this.lastHealthPool = hv, this.maxHealth = Pv, this.Uv = vv > 0 ? vv / Pv : 1, this.drawLow()
+        this.dead = TT <= 0, this.dead && this.clearHits(), this.lastHealthPool = lT, this.maxHealth = cT, this.JT = TT > 0 ? TT / cT : 1, this.drawLow()
       }
-      onHurt(vv, zv) {
+      onHurt(TT, kT) {
         if (this.syncHealth(), this.dead || !this.enabled) return;
-        const Pv = Math.min(1, this.takeDamageFrac(zv) / .3);
-        null !== vv && this.showArc(vv, Pv), this.flashEdge(null === vv ? null : vv - this.cameraHeading, .4 + .6 * Pv)
+        const cT = Math.min(1, this.takeDamageFrac(kT) / .3);
+        null !== TT && this.showArc(TT, cT), this.flashEdge(null === TT ? null : TT - this.cameraHeading, .4 + .6 * cT)
       }
-      takeDamageFrac(vv) {
-        if (void 0 !== vv && this.maxHealth) return vv / this.maxHealth;
+      takeDamageFrac(TT) {
+        if (void 0 !== TT && this.maxHealth) return TT / this.maxHealth;
         if (performance.now() - this.lastDrop.at >= 300) return .12;
         const {
-          frac: zv
+          frac: kT
         } = this.lastDrop;
         return this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, zv
+        }, kT
       }
       drawLow() {
         if (!this.lowLayer) return;
-        const vv = nv((jv - this.Uv) / .25),
-          zv = nv((fv - this.Uv) / .15000000000000002),
-          Pv = this.Uv < jv;
-        this.lowLayer.classList.toggle("Active", Pv), this.lowLayer.classList.toggle("Critical", this.Uv < fv), this.lowLayer.style.opacity = String(Pv ? .55 + .3 * vv + .15 * zv : 0)
+        const TT = wT((aT - this.JT) / .25),
+          kT = wT((FT - this.JT) / .15000000000000002),
+          cT = this.JT < aT;
+        this.lowLayer.classList.toggle("Active", cT), this.lowLayer.classList.toggle("Critical", this.JT < FT), this.lowLayer.style.opacity = String(cT ? .55 + .3 * TT + .15 * kT : 0)
       }
-      showArc(vv, zv) {
-        var Pv, hv;
+      showArc(TT, kT) {
+        var cT, lT;
         if (!this.arcLayer) return;
-        let Sv = this.arcs.find((zv => Yv(zv.direction, vv) < .6));
-        if (!Sv) {
-          const zv = document.createElement("div");
-          zv.className = "FrontlineDamageArc", zv.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(zv), Sv = {
-            element: zv,
-            direction: vv,
+        let MT = this.arcs.find((kT => PT(kT.direction, TT) < .6));
+        if (!MT) {
+          const kT = document.createElement("div");
+          kT.className = "FrontlineDamageArc", kT.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(kT), MT = {
+            element: kT,
+            direction: TT,
             drawnAngle: null,
             fade: null,
             pop: null
-          }, this.arcs.push(Sv)
+          }, this.arcs.push(MT)
         }
-        Sv.direction = vv, this.drawArcAngle(Sv);
-        const ev = Sv.fade ? Number(getComputedStyle(Sv.element).opacity) : 0;
-        null === (Pv = Sv.fade) || void 0 === Pv || Pv.cancel(), null === (hv = Sv.pop) || void 0 === hv || hv.cancel(), Sv.element.style.opacity = "1";
-        const gv = Sv.element.animate([{
-          opacity: ev
+        MT.direction = TT, this.drawArcAngle(MT);
+        const KT = MT.fade ? Number(getComputedStyle(MT.element).opacity) : 0;
+        null === (cT = MT.fade) || void 0 === cT || cT.cancel(), null === (lT = MT.pop) || void 0 === lT || lT.cancel(), MT.element.style.opacity = "1";
+        const OT = MT.element.animate([{
+          opacity: KT
         }, {
           opacity: 1
         }], 144);
-        Sv.fade = gv, Sv.pop = Sv.element.animate([{
-          scale: 1.1 + (1.16 - 1.1) * zv
+        MT.fade = OT, MT.pop = MT.element.animate([{
+          scale: 1.1 + (1.16 - 1.1) * kT
         }, {
           scale: 1
         }], {
           duration: 160,
           easing: "cubic-bezier(0.2, 0.7, 0.3, 1)"
         });
-        const pv = Sv;
-        gv.onfinish = () => {
-          if (pv.fade !== gv) return;
-          const vv = pv.element.animate([{
+        const yT = MT;
+        OT.onfinish = () => {
+          if (yT.fade !== OT) return;
+          const TT = yT.element.animate([{
             opacity: 1
           }, {
             opacity: 0
@@ -659,128 +659,128 @@ export const modules = {
             easing: "cubic-bezier(0.4, 0, 0.7, 1)",
             fill: "forwards"
           });
-          vv.startTime = gv.startTime, pv.fade = vv, vv.onfinish = () => {
-            pv.fade === vv && (pv.element.remove(), Ov(this.arcs, pv))
+          TT.startTime = OT.startTime, yT.fade = TT, TT.onfinish = () => {
+            yT.fade === TT && (yT.element.remove(), mT(this.arcs, yT))
           }
         }
       }
-      drawArcAngle(vv) {
-        const zv = vv.direction - this.cameraHeading;
-        (null === vv.drawnAngle || Math.abs(zv - vv.drawnAngle) > .005) && (vv.drawnAngle = zv, vv.element.style.rotate = `${zv}rad`)
+      drawArcAngle(TT) {
+        const kT = TT.direction - this.cameraHeading;
+        (null === TT.drawnAngle || Math.abs(kT - TT.drawnAngle) > .005) && (TT.drawnAngle = kT, TT.element.style.rotate = `${kT}rad`)
       }
-      flashEdge(vv, zv) {
-        var Pv, hv, Sv;
+      flashEdge(TT, kT) {
+        var cT, lT, MT;
         if (!this.root) return;
-        let ev = this.flashes.find((zv => null === zv.angle || null === vv ? zv.angle === vv : Yv(zv.angle, vv) < .5));
-        if (!ev) {
-          const zv = document.createElement("div");
-          zv.className = "FrontlineDamageFlash";
-          const Pv = zv.appendChild(document.createElement("div"));
-          Pv.className = "FrontlineDamageFlashGlow", this.root.insertBefore(zv, this.arcLayer), ev = {
-            element: zv,
-            glow: Pv,
-            angle: vv,
+        let KT = this.flashes.find((kT => null === kT.angle || null === TT ? kT.angle === TT : PT(kT.angle, TT) < .5));
+        if (!KT) {
+          const kT = document.createElement("div");
+          kT.className = "FrontlineDamageFlash";
+          const cT = kT.appendChild(document.createElement("div"));
+          cT.className = "FrontlineDamageFlashGlow", this.root.insertBefore(kT, this.arcLayer), KT = {
+            element: kT,
+            glow: cT,
+            angle: TT,
             level: 0,
             animation: null
-          }, this.flashes.push(ev)
+          }, this.flashes.push(KT)
         }
-        const gv = null === (Pv = ev.animation) || void 0 === Pv || null === (hv = Pv.effect) || void 0 === hv ? void 0 : hv.getComputedTiming().progress,
-          pv = null === gv || void 0 === gv ? 0 : ev.level * (1 - gv);
-        ev.level = Math.min(1, Math.max(zv, pv + .6 * zv)), ev.angle = vv;
+        const OT = null === (cT = KT.animation) || void 0 === cT || null === (lT = cT.effect) || void 0 === lT ? void 0 : lT.getComputedTiming().progress,
+          yT = null === OT || void 0 === OT ? 0 : KT.level * (1 - OT);
+        KT.level = Math.min(1, Math.max(kT, yT + .6 * kT)), KT.angle = TT;
         const {
-          x: dv,
-          y: Nv,
-          rx: lv,
-          ry: Tv
-        } = function(vv, zv) {
-          const Pv = window.innerWidth,
-            hv = window.innerHeight;
-          if (null === vv) return {
-            x: Pv / 2,
-            y: hv / 2,
+          x: fT,
+          y: xT,
+          rx: IT,
+          ry: AT
+        } = function(TT, kT) {
+          const cT = window.innerWidth,
+            lT = window.innerHeight;
+          if (null === TT) return {
+            x: cT / 2,
+            y: lT / 2,
             rx: 0,
             ry: 0
           };
-          const Sv = Math.sin(vv),
-            ev = -Math.cos(vv),
-            gv = Pv / 2 / Math.max(1e-6, Math.abs(Sv)),
-            pv = hv / 2 / Math.max(1e-6, Math.abs(ev)),
-            dv = Math.min(gv, pv),
-            Nv = Math.round(Pv / 2 + Sv * dv),
-            lv = Math.round(hv / 2 + ev * dv),
-            Tv = hv / 100 * (.85 + .25 * zv),
-            Wv = gv <= pv,
-            wv = Math.round((Wv ? 30 : 74) * Tv),
-            av = Math.round((Wv ? 58 : 26) * Tv);
+          const MT = Math.sin(TT),
+            KT = -Math.cos(TT),
+            OT = cT / 2 / Math.max(1e-6, Math.abs(MT)),
+            yT = lT / 2 / Math.max(1e-6, Math.abs(KT)),
+            fT = Math.min(OT, yT),
+            xT = Math.round(cT / 2 + MT * fT),
+            IT = Math.round(lT / 2 + KT * fT),
+            AT = lT / 100 * (.85 + .25 * kT),
+            CT = OT <= yT,
+            jT = Math.round((CT ? 30 : 74) * AT),
+            vT = Math.round((CT ? 58 : 26) * AT);
           return {
-            x: Nv,
-            y: lv,
-            rx: wv,
-            ry: av
+            x: xT,
+            y: IT,
+            rx: jT,
+            ry: vT
           }
-        }(vv, ev.level), {
-          style: Wv
-        } = ev.glow;
-        ev.glow.classList.toggle("Everywhere", null === vv), Wv.setProperty("--glowX", `${dv}px`), Wv.setProperty("--glowY", `${Nv}px`), Wv.setProperty("--glowRx", `${lv}px`), Wv.setProperty("--glowRy", `${Tv}px`), ev.element.style.transformOrigin = `${dv}px ${Nv}px`, null === (Sv = ev.animation) || void 0 === Sv || Sv.cancel();
-        const wv = ev.element.animate([{
+        }(TT, KT.level), {
+          style: CT
+        } = KT.glow;
+        KT.glow.classList.toggle("Everywhere", null === TT), CT.setProperty("--glowX", `${fT}px`), CT.setProperty("--glowY", `${xT}px`), CT.setProperty("--glowRx", `${IT}px`), CT.setProperty("--glowRy", `${AT}px`), KT.element.style.transformOrigin = `${fT}px ${xT}px`, null === (MT = KT.animation) || void 0 === MT || MT.cancel();
+        const jT = KT.element.animate([{
           opacity: 0,
           scale: .82,
           easing: "cubic-bezier(0.2, 0.8, 0.3, 1)"
         }, {
-          opacity: ev.level,
+          opacity: KT.level,
           scale: 1,
           offset: .12,
           easing: "linear"
         }, {
-          opacity: .8 * ev.level,
+          opacity: .8 * KT.level,
           offset: .38,
           easing: "cubic-bezier(0.4, 0, 0.7, 1)"
         }, {
           opacity: 0,
           scale: .92
         }], {
-          duration: 520 + 180 * ev.level
+          duration: 520 + 180 * KT.level
         });
-        ev.animation = wv;
-        const av = ev;
-        wv.onfinish = () => {
-          av.animation === wv && (av.element.remove(), Ov(this.flashes, av))
+        KT.animation = jT;
+        const vT = KT;
+        jT.onfinish = () => {
+          vT.animation === jT && (vT.element.remove(), mT(this.flashes, vT))
         }
       }
       clearHits() {
-        for (const hv of this.arcs) {
-          var vv, zv;
-          null === (vv = hv.fade) || void 0 === vv || vv.cancel(), hv.fade = null, null === (zv = hv.pop) || void 0 === zv || zv.cancel(), hv.element.remove()
+        for (const lT of this.arcs) {
+          var TT, kT;
+          null === (TT = lT.fade) || void 0 === TT || TT.cancel(), lT.fade = null, null === (kT = lT.pop) || void 0 === kT || kT.cancel(), lT.element.remove()
         }
         this.arcs.length = 0;
-        for (const hv of this.flashes) {
-          var Pv;
-          null === (Pv = hv.animation) || void 0 === Pv || Pv.cancel(), hv.element.remove()
+        for (const lT of this.flashes) {
+          var cT;
+          null === (cT = lT.animation) || void 0 === cT || cT.cancel(), lT.element.remove()
         }
         this.flashes.length = 0
       }
     }
 
-    function Yv(vv, zv) {
-      return Math.abs(Math.atan2(Math.sin(vv - zv), Math.cos(vv - zv)))
+    function PT(TT, kT) {
+      return Math.abs(Math.atan2(Math.sin(TT - kT), Math.cos(TT - kT)))
     }
 
-    function nv(vv) {
-      return Math.max(0, Math.min(1, vv))
+    function wT(TT) {
+      return Math.max(0, Math.min(1, TT))
     }
 
-    function Ov(vv, zv) {
-      const Pv = vv.indexOf(zv); - 1 !== Pv && vv.splice(Pv, 1)
+    function mT(TT, kT) {
+      const cT = TT.indexOf(kT); - 1 !== cT && TT.splice(cT, 1)
     }
-    var Dv = Pv(1035),
-      Kv = Pv.n(Dv),
-      Vv = Pv(36132),
-      Uv = Pv(36198),
-      Rv = Pv(1175),
-      xv = Pv(1439);
-    const tv = "frontlineHudChanged",
-      qv = "frontlineScoreboardChanged";
-    class Iv {
+    var bT = cT(1046),
+      zT = cT.n(bT),
+      JT = cT(36416),
+      oT = cT(36506),
+      HT = cT(1195),
+      eT = cT(1461);
+    const GT = "frontlineHudChanged",
+      VT = "frontlineScoreboardChanged";
+    class ET {
       constructor() {
         this.wire = ["none"], this.scoreboard = {
           wire: ["none"],
@@ -793,101 +793,101 @@ export const modules = {
       getScoreboard() {
         return this.scoreboard
       }
-      la(vv) {
-        this.wire = vv, Nv.j.zC(tv, vv, !0)
+      Av(TT) {
+        this.wire = TT, xT.k.nt(GT, TT, !0)
       }
-      receiveScoreboard(vv) {
-        let zv = "scoreboard" === vv[0] ? performance.now() + vv[5] : 0;
-        const Pv = this.scoreboard.endsAt;
-        0 !== zv && 0 !== Pv && Math.abs(zv - Pv) < 1e3 && (zv = Pv), this.scoreboard = {
-          wire: vv,
-          endsAt: zv
-        }, Nv.j.zC(qv, this.scoreboard, !0)
+      receiveScoreboard(TT) {
+        let kT = "scoreboard" === TT[0] ? performance.now() + TT[5] : 0;
+        const cT = this.scoreboard.endsAt;
+        0 !== kT && 0 !== cT && Math.abs(kT - cT) < 1e3 && (kT = cT), this.scoreboard = {
+          wire: TT,
+          endsAt: kT
+        }, xT.k.nt(VT, this.scoreboard, !0)
       }
     }
-    var Qv = Pv(1082);
-    const Zv = {
+    var ZT = cT(1099);
+    const uT = {
       Red: "frontlineHud:teamRed",
       Blue: "frontlineHud:teamBlue"
     };
 
-    function Av(vv) {
-      const [zv, Pv] = (0, Sv.useState)((() => (vv - performance.now()) / 1e3));
-      return (0, Sv.useEffect)((() => {
-        if (0 === vv) return;
-        const zv = () => {
-          Pv((vv - performance.now()) / 1e3)
+    function XT(TT) {
+      const [kT, cT] = (0, MT.useState)((() => (TT - performance.now()) / 1e3));
+      return (0, MT.useEffect)((() => {
+        if (0 === TT) return;
+        const kT = () => {
+          cT((TT - performance.now()) / 1e3)
         };
-        zv();
-        const hv = window.setInterval(zv, 250);
+        kT();
+        const lT = window.setInterval(kT, 250);
         return () => {
-          window.clearInterval(hv)
+          window.clearInterval(lT)
         }
-      }), [vv]), zv
+      }), [TT]), kT
     }
 
-    function Lv(vv) {
+    function dT(TT) {
       let {
-        className: zv,
-        point: Pv
-      } = vv;
-      const [hv, Sv, ev, gv, pv, dv] = Pv;
-      return (0, Qv.jsxs)("div", {
-        className: Kv()(zv, `Owner-${Sv||"None"}`, `Leader-${gv||"None"}`, {
-          Contested: pv,
-          Here: dv
+        className: kT,
+        point: cT
+      } = TT;
+      const [lT, MT, KT, OT, yT, fT] = cT;
+      return (0, ZT.jsxs)("div", {
+        className: zT()(kT, `Owner-${MT||"None"}`, `Leader-${OT||"None"}`, {
+          Contested: yT,
+          Here: fT
         }),
-        children: [(0, Qv.jsx)("span", {
+        children: [(0, ZT.jsx)("span", {
           className: "FrontlinePointLetter",
-          children: hv
-        }), (0, Qv.jsx)("i", {
+          children: lT
+        }), (0, ZT.jsx)("i", {
           className: "FrontlinePointFill",
           style: {
-            width: `${ev}%`
+            width: `${KT}%`
           }
         })]
       })
     }
-    const Hv = (0, Sv.memo)((function(vv) {
+    const LT = (0, MT.memo)((function(TT) {
         let {
-          points: zv,
-          markers: Pv
-        } = vv;
+          points: kT,
+          markers: cT
+        } = TT;
         const {
-          t: hv
-        } = (0, Rv.x)();
-        return zv ? (0, Qv.jsx)("div", {
+          t: lT
+        } = (0, HT.B)();
+        return kT ? (0, ZT.jsx)("div", {
           className: "FrontlinePointMarkers",
-          children: zv.map((vv => {
-            const [zv, , , , , , , Sv] = vv;
-            return (0, Qv.jsxs)("div", {
-              ref: Pv.bindMarker(zv),
+          children: kT.map((TT => {
+            const [kT, , , , , , , MT] = TT;
+            return (0, ZT.jsxs)("div", {
+              ref: cT.bindMarker(kT),
               className: "FrontlinePointMarker",
-              children: [(0, Qv.jsx)(Lv, {
+              children: [(0, ZT.jsx)(dT, {
                 className: "FrontlinePointMarkerTile",
-                point: vv
-              }), (0, Qv.jsxs)("div", {
+                point: TT
+              }), (0, ZT.jsxs)("div", {
                 className: "FrontlinePointMarkerLabels",
-                children: [Sv && (0, Qv.jsx)("span", {
-                  className: Kv()("FrontlinePointMarkerHomeTurf", `Team-${Sv}`),
-                  children: hv("frontlineHud:homeTurf", {
-                    team: hv(Zv[Sv])
+                children: [MT && (0, ZT.jsx)("span", {
+                  className: zT()("FrontlinePointMarkerHomeTurf", `Team-${MT}`),
+                  children: lT("frontlineHud:homeTurf", {
+                    team: lT(uT[MT])
                   })
-                }), (0, Qv.jsx)("span", {
+                }), (0, ZT.jsx)("span", {
                   className: "FrontlinePointMarkerDistance"
                 })]
               })]
-            }, zv)
+            }, kT)
           }))
         }) : null
       })),
-      Mv = {
+      RT = {
         capturing: "frontlineHud:capturing",
         contesting: "frontlineHud:contesting",
         defending: "frontlineHud:defending",
         captured: "frontlineHud:captured"
       },
-      yv = {
+      gT = {
         captured: "frontlineHud:capturedTag",
         lost: "frontlineHud:lostTag",
         milestone: "frontlineHud:milestoneTag",
@@ -895,321 +895,321 @@ export const modules = {
         reinforcements: "frontlineHud:reinforcementsTag"
       };
 
-    function Bv(vv) {
+    function UT(TT) {
       let {
-        hud: zv,
-        crosshair: Pv,
-        damage: hv,
-        markers: Sv
-      } = vv;
-      const ev = (0, xv.j)(tv, zv.getWire()),
-        gv = (0, xv.j)(qv, zv.getScoreboard());
-      return (0, Qv.jsxs)(Qv.Fragment, {
-        children: [(0, Qv.jsx)(Jv, {
-          damage: hv
-        }), (0, Qv.jsx)(Hv, {
-          points: "scoreboard" === gv.wire[0] ? gv.wire[6] : null,
-          markers: Sv
-        }), (0, Qv.jsx)(ov, {
-          view: gv
-        }), (0, Qv.jsx)("div", {
+        hud: kT,
+        crosshair: cT,
+        damage: lT,
+        markers: MT
+      } = TT;
+      const KT = (0, eT.i)(GT, kT.getWire()),
+        OT = (0, eT.i)(VT, kT.getScoreboard());
+      return (0, ZT.jsxs)(ZT.Fragment, {
+        children: [(0, ZT.jsx)(YT, {
+          damage: lT
+        }), (0, ZT.jsx)(LT, {
+          points: "scoreboard" === OT.wire[0] ? OT.wire[6] : null,
+          markers: MT
+        }), (0, ZT.jsx)(WT, {
+          view: OT
+        }), (0, ZT.jsx)("div", {
           className: "FrontlineReticle",
-          ref: Pv.bindElement
-        }), (0, Qv.jsx)(Vv.g, {
-          children: (0, Qv.jsx)(Ev, {
-            wire: ev
+          ref: cT.bindElement
+        }), (0, ZT.jsx)(JT.g, {
+          children: (0, ZT.jsx)(BT, {
+            wire: KT
           })
         })]
       })
     }
-    const Jv = (0, Sv.memo)((function(vv) {
+    const YT = (0, MT.memo)((function(TT) {
         let {
-          damage: zv
-        } = vv;
-        return (0, Qv.jsxs)("div", {
+          damage: kT
+        } = TT;
+        return (0, ZT.jsxs)("div", {
           className: "FrontlineDamage",
-          ref: zv.bindElement,
-          children: [(0, Qv.jsx)("div", {
+          ref: kT.bindElement,
+          children: [(0, ZT.jsx)("div", {
             className: "FrontlineDamageLow",
-            children: (0, Qv.jsx)("div", {
+            children: (0, ZT.jsx)("div", {
               className: "FrontlineDamageShade"
             })
-          }), (0, Qv.jsx)("div", {
+          }), (0, ZT.jsx)("div", {
             className: "FrontlineDamageArcs"
           })]
         })
       })),
-      Ev = (0, Sv.memo)((function(vv) {
+      BT = (0, MT.memo)((function(TT) {
         let {
-          wire: zv
-        } = vv;
+          wire: kT
+        } = TT;
         const {
-          t: Pv
-        } = (0, Rv.x)();
-        if ("capture" === zv[0]) {
-          const [, vv, hv, Sv, ev, gv, pv] = zv, dv = Math.round(Sv / 100 * 24);
-          return (0, Qv.jsxs)("div", {
-            className: Kv()("FrontlinePlate", `Status-${hv}`, `Leader-${ev||"None"}`),
-            children: [(0, Qv.jsx)(Xv, {}), (0, Qv.jsxs)("div", {
+          t: cT
+        } = (0, HT.B)();
+        if ("capture" === kT[0]) {
+          const [, TT, lT, MT, KT, OT, yT] = kT, fT = Math.round(MT / 100 * 24);
+          return (0, ZT.jsxs)("div", {
+            className: zT()("FrontlinePlate", `Status-${lT}`, `Leader-${KT||"None"}`),
+            children: [(0, ZT.jsx)(qT, {}), (0, ZT.jsxs)("div", {
               className: "FrontlinePlateRow",
-              children: [(0, Qv.jsx)("span", {
+              children: [(0, ZT.jsx)("span", {
                 className: "FrontlineObjective",
-                children: vv
-              }), (0, Qv.jsxs)("div", {
+                children: TT
+              }), (0, ZT.jsxs)("div", {
                 className: "FrontlinePlateMiddle",
-                children: [(0, Qv.jsx)("div", {
+                children: [(0, ZT.jsx)("div", {
                   className: "FrontlinePlateMeta",
-                  children: Pv("frontlineHud:objective", {
-                    point: vv,
-                    friendly: gv,
-                    enemy: pv
+                  children: cT("frontlineHud:objective", {
+                    point: TT,
+                    friendly: OT,
+                    enemy: yT
                   })
-                }), (0, Qv.jsx)("div", {
+                }), (0, ZT.jsx)("div", {
                   className: "FrontlinePlateStatus",
-                  children: Pv(Mv[hv])
+                  children: cT(RT[lT])
                 })]
-              }), (0, Qv.jsxs)("span", {
+              }), (0, ZT.jsxs)("span", {
                 className: "FrontlinePercent",
-                children: [String(Sv).padStart(3, "0"), (0, Qv.jsx)("small", {
+                children: [String(MT).padStart(3, "0"), (0, ZT.jsx)("small", {
                   children: "%"
                 })]
               })]
-            }), (0, Qv.jsx)(rv, {
+            }), (0, ZT.jsx)(pT, {
               segments: 24,
-              lit: dv
+              lit: fT
             })]
           })
         }
-        if ("alert" === zv[0]) {
-          const [, vv, hv, Sv] = zv;
-          return (0, Qv.jsxs)("div", {
-            className: Kv()("FrontlinePlate", "FrontlineAlert", `Tone-${Sv}`),
-            children: [(0, Qv.jsx)(Xv, {}), (0, Qv.jsx)("div", {
+        if ("alert" === kT[0]) {
+          const [, TT, lT, MT] = kT;
+          return (0, ZT.jsxs)("div", {
+            className: zT()("FrontlinePlate", "FrontlineAlert", `Tone-${MT}`),
+            children: [(0, ZT.jsx)(qT, {}), (0, ZT.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: Pv(yv[vv])
-            }), (0, Qv.jsx)("div", {
+              children: cT(gT[TT])
+            }), (0, ZT.jsx)("div", {
               className: "FrontlinePlateStatus",
-              children: hv
+              children: lT
             })]
           })
         }
         return null
       })),
-      ov = (0, Sv.memo)((function(vv) {
+      WT = (0, MT.memo)((function(TT) {
         let {
-          view: zv
-        } = vv;
+          view: kT
+        } = TT;
         const {
-          t: Pv
-        } = (0, Rv.x)(), hv = (0, Sv.useRef)(null), ev = function(vv, zv) {
-          const [Pv, hv] = (0, Sv.useState)(!1);
-          return (0, Sv.useLayoutEffect)((() => {
-            const zv = vv.current;
-            if (!zv) return;
-            const Pv = document.querySelector(`.${Uv.i}`),
-              Sv = document.querySelector(`.${Uv.m}`),
-              ev = () => {
-                var vv;
-                const ev = zv.querySelector(".FrontlineTeamTrack"),
-                  gv = (0, dv.getRemInPx)(),
-                  pv = zv.getBoundingClientRect().width - 2 * (null !== (vv = null === ev || void 0 === ev ? void 0 : ev.getBoundingClientRect().width) && void 0 !== vv ? vv : 0),
-                  Nv = window.innerWidth / 2,
-                  lv = Pv ? Pv.getBoundingClientRect().right : 0,
-                  Tv = Sv ? Sv.getBoundingClientRect().left : window.innerWidth,
-                  Wv = Math.min(Nv - lv, Tv - Nv) - Uv.e - pv / 2,
-                  wv = Wv < 6 * gv,
-                  av = wv ? (window.innerWidth - pv) / 2 - Uv.e : Wv;
-                zv.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(av,14*gv)))}px`), hv(wv)
+          t: cT
+        } = (0, HT.B)(), lT = (0, MT.useRef)(null), KT = function(TT, kT) {
+          const [cT, lT] = (0, MT.useState)(!1);
+          return (0, MT.useLayoutEffect)((() => {
+            const kT = TT.current;
+            if (!kT) return;
+            const cT = document.querySelector(`.${oT.g}`),
+              MT = document.querySelector(`.${oT.j}`),
+              KT = () => {
+                var TT;
+                const KT = kT.querySelector(".FrontlineTeamTrack"),
+                  OT = (0, fT.getRemInPx)(),
+                  yT = kT.getBoundingClientRect().width - 2 * (null !== (TT = null === KT || void 0 === KT ? void 0 : KT.getBoundingClientRect().width) && void 0 !== TT ? TT : 0),
+                  xT = window.innerWidth / 2,
+                  IT = cT ? cT.getBoundingClientRect().right : 0,
+                  AT = MT ? MT.getBoundingClientRect().left : window.innerWidth,
+                  CT = Math.min(xT - IT, AT - xT) - oT.c - yT / 2,
+                  jT = CT < 6 * OT,
+                  vT = jT ? (window.innerWidth - yT) / 2 - oT.c : CT;
+                kT.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(vT,14*OT)))}px`), lT(jT)
               };
-            ev();
-            const gv = new ResizeObserver(ev);
-            for (const vv of [zv, Pv, Sv]) vv && gv.observe(vv);
-            return window.addEventListener("resize", ev), () => {
-              gv.disconnect(), window.removeEventListener("resize", ev)
+            KT();
+            const OT = new ResizeObserver(KT);
+            for (const TT of [kT, cT, MT]) TT && OT.observe(TT);
+            return window.addEventListener("resize", KT), () => {
+              OT.disconnect(), window.removeEventListener("resize", KT)
             }
-          }), [vv, zv]), Pv
-        }(hv, "scoreboard" === zv.wire[0]);
-        if ("scoreboard" !== zv.wire[0]) return null;
-        const [, gv, pv, Nv, lv, , Tv] = zv.wire, Wv = "Red" === gv ? "Blue" : "Red";
-        return (0, Qv.jsxs)("div", {
-          className: Kv()("FrontlineScoreboardContainer", {
-            Below: ev
+          }), [TT, kT]), cT
+        }(lT, "scoreboard" === kT.wire[0]);
+        if ("scoreboard" !== kT.wire[0]) return null;
+        const [, OT, yT, xT, IT, , AT] = kT.wire, CT = "Red" === OT ? "Blue" : "Red";
+        return (0, ZT.jsxs)("div", {
+          className: zT()("FrontlineScoreboardContainer", {
+            Below: KT
           }),
-          children: [(0, Qv.jsxs)("div", {
-            ref: hv,
+          children: [(0, ZT.jsxs)("div", {
+            ref: lT,
             className: "FrontlineScoreboard",
-            children: [(0, Qv.jsx)(Xv, {}), (0, Qv.jsx)(bv, {
-              team: gv,
-              tickets: pv,
-              goal: lv,
+            children: [(0, ZT.jsx)(qT, {}), (0, ZT.jsx)(nT, {
+              team: OT,
+              tickets: yT,
+              goal: IT,
               side: "Friendly"
-            }), (0, Qv.jsx)("div", {
+            }), (0, ZT.jsx)("div", {
               className: "FrontlinePoints",
-              children: Tv.map((vv => (0, Qv.jsx)(Lv, {
+              children: AT.map((TT => (0, ZT.jsx)(dT, {
                 className: "FrontlinePoint",
-                point: vv
-              }, vv[0])))
-            }), (0, Qv.jsx)(bv, {
-              team: Wv,
-              tickets: Nv,
-              goal: lv,
+                point: TT
+              }, TT[0])))
+            }), (0, ZT.jsx)(nT, {
+              team: CT,
+              tickets: xT,
+              goal: IT,
               side: "Enemy"
             })]
-          }), (0, Qv.jsxs)("div", {
+          }), (0, ZT.jsxs)("div", {
             className: "FrontlineClockTab",
-            children: [(0, Qv.jsx)(kv, {
-              endsAt: zv.endsAt
-            }), (0, Qv.jsx)("div", {
+            children: [(0, ZT.jsx)(iT, {
+              endsAt: kT.endsAt
+            }), (0, ZT.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: Pv("frontlineHud:ticketGoal", {
-                goal: lv
+              children: cT("frontlineHud:ticketGoal", {
+                goal: IT
               })
             })]
           })]
         })
       }));
 
-    function bv(vv) {
+    function nT(TT) {
       let {
-        team: zv,
-        tickets: Pv,
-        goal: hv,
-        side: Sv
-      } = vv;
+        team: kT,
+        tickets: cT,
+        goal: lT,
+        side: MT
+      } = TT;
       const {
-        t: ev
-      } = (0, Rv.x)(), gv = String(Pv).padStart(3, "0"), pv = gv.search(/[1-9]/), dv = -1 === pv ? gv : gv.slice(0, pv), Nv = Math.min(20, Math.floor(Pv / hv * 20));
-      return (0, Qv.jsxs)("div", {
-        className: Kv()("FrontlineTeamScore", Sv, `Team-${zv}`),
-        children: [(0, Qv.jsxs)("div", {
+        t: KT
+      } = (0, HT.B)(), OT = String(cT).padStart(3, "0"), yT = OT.search(/[1-9]/), fT = -1 === yT ? OT : OT.slice(0, yT), xT = Math.min(20, Math.floor(cT / lT * 20));
+      return (0, ZT.jsxs)("div", {
+        className: zT()("FrontlineTeamScore", MT, `Team-${kT}`),
+        children: [(0, ZT.jsxs)("div", {
           className: "FrontlineTickets",
-          children: [(0, Qv.jsx)("span", {
+          children: [(0, ZT.jsx)("span", {
             className: "Lead",
-            children: dv
-          }), -1 !== pv && gv.slice(pv)]
-        }), (0, Qv.jsxs)("div", {
+            children: fT
+          }), -1 !== yT && OT.slice(yT)]
+        }), (0, ZT.jsxs)("div", {
           className: "FrontlineTeamTrack",
-          children: [(0, Qv.jsx)("div", {
+          children: [(0, ZT.jsx)("div", {
             className: "FrontlinePlateMeta",
-            children: ev(Zv[zv])
-          }), (0, Qv.jsx)(rv, {
+            children: KT(uT[kT])
+          }), (0, ZT.jsx)(pT, {
             segments: 20,
-            lit: Nv
+            lit: xT
           })]
         })]
       })
     }
 
-    function rv(vv) {
+    function pT(TT) {
       let {
-        segments: zv,
-        lit: Pv
-      } = vv;
-      return (0, Qv.jsx)("div", {
+        segments: kT,
+        lit: cT
+      } = TT;
+      return (0, ZT.jsx)("div", {
         className: "FrontlineBar",
         children: Array.from({
-          length: zv
-        }, ((vv, zv) => (0, Qv.jsx)("i", {
-          className: Kv()({
-            Lit: zv < Pv
+          length: kT
+        }, ((TT, kT) => (0, ZT.jsx)("i", {
+          className: zT()({
+            Lit: kT < cT
           })
-        }, zv)))
+        }, kT)))
       })
     }
 
-    function kv(vv) {
+    function iT(TT) {
       let {
-        endsAt: zv
-      } = vv;
-      const Pv = Math.max(0, Math.ceil(Av(zv)));
-      return (0, Qv.jsxs)("div", {
-        className: Kv()("FrontlineClock", {
-          Urgent: Pv <= 60
+        endsAt: kT
+      } = TT;
+      const cT = Math.max(0, Math.ceil(XT(kT)));
+      return (0, ZT.jsxs)("div", {
+        className: zT()("FrontlineClock", {
+          Urgent: cT <= 60
         }),
-        children: [Math.floor(Pv / 60), ":", String(Pv % 60).padStart(2, "0")]
+        children: [Math.floor(cT / 60), ":", String(cT % 60).padStart(2, "0")]
       })
     }
 
-    function Xv() {
-      return (0, Qv.jsxs)(Qv.Fragment, {
-        children: [(0, Qv.jsx)("i", {
+    function qT() {
+      return (0, ZT.jsxs)(ZT.Fragment, {
+        children: [(0, ZT.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, Qv.jsx)("i", {
+        }), (0, ZT.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
         })]
       })
     }
-    var uv = Pv(36193),
-      vz = Pv(1234),
-      zz = Pv(38020),
-      Pz = Pv(38072);
-    class hz {
-      constructor(vv) {
-        var zv;
-        this.hud = vv, this.markers = new Map, this.refs = new Map, this.viewport = {
+    var sT = cT(36504),
+      Tk = cT(1261),
+      kk = cT(38332),
+      ck = cT(38388);
+    class lk {
+      constructor(TT) {
+        var kT;
+        this.hud = TT, this.markers = new Map, this.refs = new Map, this.viewport = {
           width: window.innerWidth,
           height: window.innerHeight
-        }, this.render = null, this.ea = !1, this.mG = () => {
+        }, this.render = null, this.yv = !1, this.zN = () => {
           this.viewport = {
             width: window.innerWidth,
             height: window.innerHeight
           }
-        }, window.addEventListener("resize", this.mG), null === (zv = window.visualViewport) || void 0 === zv || zv.addEventListener("resize", this.mG)
+        }, window.addEventListener("resize", this.zN), null === (kT = window.visualViewport) || void 0 === kT || kT.addEventListener("resize", this.zN)
       }
-      bindMarker(vv) {
-        let zv = this.refs.get(vv);
-        return zv || (zv = zv => {
-          var Pv;
-          null === (Pv = this.markers.get(vv)) || void 0 === Pv || Pv.stopObserving(), this.markers.delete(vv), zv && !this.ea && this.markers.set(vv, this.mount(zv))
-        }, this.refs.set(vv, zv)), zv
+      bindMarker(TT) {
+        let kT = this.refs.get(TT);
+        return kT || (kT = kT => {
+          var cT;
+          null === (cT = this.markers.get(TT)) || void 0 === cT || cT.stopObserving(), this.markers.delete(TT), kT && !this.yv && this.markers.set(TT, this.mount(kT))
+        }, this.refs.set(TT, kT)), kT
       }
-      frame(vv, zv) {
-        this.render = vv;
-        const Pv = this.hud.getScoreboard().wire;
-        if ("scoreboard" === Pv[0] && 0 !== this.markers.size)
-          for (const [hv, , , , , , Sv] of Pv[6]) {
-            const vv = this.markers.get(hv);
-            vv && Sv && (vv.target ??= [0, 0, 0], vv.target[0] = Sv[0], vv.target[1] = Sv[1] + 2.5, vv.target[2] = Sv[2], this.place(vv), this.sv(vv, zv && Math.hypot(Sv[0] - zv[0], Sv[1] - zv[1], Sv[2] - zv[2])))
+      frame(TT, kT) {
+        this.render = TT;
+        const cT = this.hud.getScoreboard().wire;
+        if ("scoreboard" === cT[0] && 0 !== this.markers.size)
+          for (const [lT, , , , , , MT] of cT[6]) {
+            const TT = this.markers.get(lT);
+            TT && MT && (TT.target ??= [0, 0, 0], TT.target[0] = MT[0], TT.target[1] = MT[1] + 2.5, TT.target[2] = MT[2], this.place(TT), this.vT(TT, kT && Math.hypot(MT[0] - kT[0], MT[1] - kT[1], MT[2] - kT[2])))
           }
       }
       dispose() {
-        var vv;
-        this.ea = !0, window.removeEventListener("resize", this.mG), null === (vv = window.visualViewport) || void 0 === vv || vv.removeEventListener("resize", this.mG);
-        for (const zv of this.markers.values()) zv.stopObserving();
+        var TT;
+        this.yv = !0, window.removeEventListener("resize", this.zN), null === (TT = window.visualViewport) || void 0 === TT || TT.removeEventListener("resize", this.zN);
+        for (const kT of this.markers.values()) kT.stopObserving();
         this.markers.clear(), this.refs.clear(), this.render = null
       }
-      place(vv) {
+      place(TT) {
         const {
-          render: zv,
-          viewport: Pv
+          render: kT,
+          viewport: cT
         } = this;
-        if (!zv || !vv.target) return;
-        const hv = (50 - zv.screenBandPct.y) / 100 * Pv.height,
-          Sv = {
-            x: vv.halfSize.width + 8,
-            top: vv.halfSize.height + 8,
-            bottom: vv.halfSize.height + vv.labelsBelow + hv
+        if (!kT || !TT.target) return;
+        const lT = (50 - kT.screenBandPct.y) / 100 * cT.height,
+          MT = {
+            x: TT.halfSize.width + 8,
+            top: TT.halfSize.height + 8,
+            bottom: TT.halfSize.height + TT.labelsBelow + lT
           },
-          ev = zv.projectWorldPosToViewport(vv.target),
-          gv = null !== ev && void 0 !== ev ? ev : zv.projectWorldPosToScreenPos(vv.target),
-          pv = (0, Pz.e)({
-            x: gv.x,
-            y: gv.y,
-            text: ev
-          }, Sv, Pv);
-        (0, zz.e)(vv.root, Math.round(100 * pv.x) / 100, Math.round(100 * pv.y) / 100)
+          KT = kT.projectWorldPosToViewport(TT.target),
+          OT = null !== KT && void 0 !== KT ? KT : kT.projectWorldPosToScreenPos(TT.target),
+          yT = (0, ck.d)({
+            x: OT.x,
+            y: OT.y,
+            text: KT
+          }, MT, cT);
+        (0, kk.e)(TT.root, Math.round(100 * yT.x) / 100, Math.round(100 * yT.y) / 100)
       }
-      sv(vv, zv) {
-        if (null === zv) return void(null !== vv.metres && (vv.metres = null, vv.distance.textContent = ""));
-        const Pv = Date.now();
-        (null === vv.metres || (0, uv.b)(zv, vv.metres, vv.metresShownAt)) && (vv.metres = Math.round(zv), vv.metresShownAt = Pv, vv.distance.textContent = (0, Rv.r)(vz.f.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
-          distance: String(vv.metres)
+      vT(TT, kT) {
+        if (null === kT) return void(null !== TT.metres && (TT.metres = null, TT.distance.textContent = ""));
+        const cT = Date.now();
+        (null === TT.metres || (0, sT.c)(kT, TT.metres, TT.metresShownAt)) && (TT.metres = Math.round(kT), TT.metresShownAt = cT, TT.distance.textContent = (0, HT.w)(Tk.f.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
+          distance: String(TT.metres)
         }))
       }
-      mount(vv) {
-        const zv = {
-            root: vv,
-            distance: vv.querySelector(".FrontlinePointMarkerDistance"),
+      mount(TT) {
+        const kT = {
+            root: TT,
+            distance: TT.querySelector(".FrontlinePointMarkerDistance"),
             halfSize: {
               width: 0,
               height: 0
@@ -1220,26 +1220,26 @@ export const modules = {
             metresShownAt: 0,
             stopObserving: () => {}
           },
-          Pv = vv.querySelector(".FrontlinePointMarkerLabels"),
-          hv = new ResizeObserver((() => {
-            zv.halfSize = {
-              width: Math.max(vv.offsetWidth, Pv.offsetWidth) / 2,
-              height: vv.offsetHeight / 2
-            }, zv.labelsBelow = Pv.offsetTop + Pv.offsetHeight - vv.offsetHeight, this.place(zv)
+          cT = TT.querySelector(".FrontlinePointMarkerLabels"),
+          lT = new ResizeObserver((() => {
+            kT.halfSize = {
+              width: Math.max(TT.offsetWidth, cT.offsetWidth) / 2,
+              height: TT.offsetHeight / 2
+            }, kT.labelsBelow = cT.offsetTop + cT.offsetHeight - TT.offsetHeight, this.place(kT)
           }));
-        return hv.observe(vv, {
+        return lT.observe(TT, {
           box: "border-box"
-        }), hv.observe(Pv, {
+        }), lT.observe(cT, {
           box: "border-box"
-        }), zv.stopObserving = () => {
-          hv.disconnect()
-        }, zv
+        }), kT.stopObserving = () => {
+          lT.disconnect()
+        }, kT
       }
     }
-    var Sz = Pv(6163),
-      ez = Pv(2450);
-    const gz = "frontlineRoundEndChanged";
-    class pz {
+    var Mk = cT(6440),
+      Kk = cT(2623);
+    const Ok = "frontlineRoundEndChanged";
+    class yk {
       constructor() {
         this.view = {
           wire: ["none"],
@@ -1250,245 +1250,245 @@ export const modules = {
       getView() {
         return this.view
       }
-      la(vv) {
-        const zv = "roundEnd" === vv[0] ? performance.now() + vv[5] : 0;
+      Av(TT) {
+        const kT = "roundEnd" === TT[0] ? performance.now() + TT[5] : 0;
         this.view = {
-          wire: vv,
+          wire: TT,
           key: this.view.key + 1,
-          endsAt: zv
-        }, Nv.j.zC(gz, this.view, !0)
+          endsAt: kT
+        }, xT.k.nt(Ok, this.view, !0)
       }
     }
-    const dz = (0, Sv.lazy)((() => (0, ez.b)(Pv.e(191).then((() => Pv(41056))), (vv => vv.FrontlineMvpLineup)))),
-      Nz = [4800, 4e3, 3200],
-      lz = [1, 0, 2],
-      Tz = {
+    const fk = (0, MT.lazy)((() => (0, Kk.e)(cT.e(191).then((() => cT(41323))), (TT => TT.FrontlineMvpLineup)))),
+      xk = [4800, 4e3, 3200],
+      Ik = [1, 0, 2],
+      Ak = {
         victory: "frontlineRoundEnd:victory",
         defeat: "frontlineRoundEnd:defeat",
         draw: "frontlineRoundEnd:draw"
       },
-      Wz = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
+      Ck = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
 
-    function wz(vv) {
+    function jk(TT) {
       let {
-        controller: zv
-      } = vv;
-      const Pv = (0, xv.j)(gz, zv.getView()),
-        hv = Av(Pv.endsAt);
-      return "roundEnd" !== Pv.wire[0] || 1e3 * hv < -2e3 ? null : (0, Qv.jsx)(az, {
-        wire: Pv.wire,
-        secondsLeft: Math.max(0, Math.ceil(hv))
-      }, Pv.key)
+        controller: kT
+      } = TT;
+      const cT = (0, eT.i)(Ok, kT.getView()),
+        lT = XT(cT.endsAt);
+      return "roundEnd" !== cT.wire[0] || 1e3 * lT < -2e3 ? null : (0, ZT.jsx)(vk, {
+        wire: cT.wire,
+        secondsLeft: Math.max(0, Math.ceil(lT))
+      }, cT.key)
     }
-    const az = (0, Sv.memo)((function(vv) {
+    const vk = (0, MT.memo)((function(TT) {
       let {
-        wire: zv,
-        secondsLeft: Pv
-      } = vv;
+        wire: kT,
+        secondsLeft: cT
+      } = TT;
       const {
-        t: ev
-      } = (0, Rv.x)(), [, gv, pv, dv, Nv, , lv, Tv] = zv, Wv = (0, Sv.useMemo)((() => lz.filter((vv => vv < Tv.length))), [Tv]), wv = (0, Sv.useMemo)((() => Wv.map((vv => {
-        const [, , , , , zv, Pv] = Tv[vv];
+        t: KT
+      } = (0, HT.B)(), [, OT, yT, fT, xT, , IT, AT] = kT, CT = (0, MT.useMemo)((() => Ik.filter((TT => TT < AT.length))), [AT]), jT = (0, MT.useMemo)((() => CT.map((TT => {
+        const [, , , , , kT, cT] = AT[TT];
         return {
-          cosmetics: hv.map(((vv, Pv) => [vv, zv[Pv]])),
-          size: 0 === vv ? 1.15 : .85,
+          cosmetics: lT.map(((TT, cT) => [TT, kT[cT]])),
+          size: 0 === TT ? 1.15 : .85,
           heldGun: {
-            name: Pv,
-            aimed: 0 === vv
+            name: cT,
+            aimed: 0 === TT
           },
-          showAfterMs: Nz[vv]
+          showAfterMs: xk[TT]
         }
-      }))), [Tv, Wv]);
-      return (0, Qv.jsxs)("div", {
-        className: Kv()("FrontlineRoundEnd", `Result-${gv}`),
+      }))), [AT, CT]);
+      return (0, ZT.jsxs)("div", {
+        className: zT()("FrontlineRoundEnd", `Result-${OT}`),
         style: {
           "--titleRiseMs": "2600ms"
         },
-        children: [(0, Qv.jsx)("div", {
+        children: [(0, ZT.jsx)("div", {
           className: "FrontlineRoundEndVeil"
-        }), (0, Qv.jsxs)("div", {
+        }), (0, ZT.jsxs)("div", {
           className: "FrontlineRoundEndTitle",
-          children: [(0, Qv.jsxs)("div", {
+          children: [(0, ZT.jsxs)("div", {
             className: "FrontlineRoundEndResult",
-            children: [(0, Qv.jsx)("i", {
+            children: [(0, ZT.jsx)("i", {
               className: "FrontlineBracket TopLeft"
-            }), (0, Qv.jsx)("i", {
+            }), (0, ZT.jsx)("i", {
               className: "FrontlineBracket BottomRight"
-            }), (av = ev(Tz[gv]), /\p{Script=Arabic}/u.test(av) ? [av] : (0, Sz.c)(av)).map(((vv, zv) => (0, Qv.jsx)("span", {
+            }), (vT = KT(Ak[OT]), /\p{Script=Arabic}/u.test(vT) ? [vT] : (0, Mk.e)(vT)).map(((TT, kT) => (0, ZT.jsx)("span", {
               style: {
-                "--letter": zv
+                "--letter": kT
               },
-              children: vv
-            }, zv)))]
-          }), (0, Qv.jsxs)("div", {
+              children: TT
+            }, kT)))]
+          }), (0, ZT.jsxs)("div", {
             className: "FrontlineRoundEndScore",
-            children: [pv && "victory" === gv && (0, Qv.jsx)("span", {
+            children: [yT && "victory" === OT && (0, ZT.jsx)("span", {
               className: "FrontlineRoundEndComeback",
-              children: ev("frontlineRoundEnd:comeback")
-            }), (0, Qv.jsxs)("span", {
+              children: KT("frontlineRoundEnd:comeback")
+            }), (0, ZT.jsxs)("span", {
               className: "FrontlineRoundEndTickets",
-              children: [(0, Qv.jsx)("b", {
+              children: [(0, ZT.jsx)("b", {
                 className: "Friendly",
-                children: dv
-              }), " \u2013 ", (0, Qv.jsx)("b", {
+                children: fT
+              }), " \u2013 ", (0, ZT.jsx)("b", {
                 className: "Enemy",
-                children: Nv
+                children: xT
               })]
             })]
           })]
-        }), Wv.length > 0 && (0, Qv.jsxs)("div", {
+        }), CT.length > 0 && (0, ZT.jsxs)("div", {
           className: "FrontlineRoundEndMvps",
           style: {
-            "--columns": Wv.length
+            "--columns": CT.length
           },
-          children: [(0, Qv.jsx)(Sv.Suspense, {
+          children: [(0, ZT.jsx)(MT.Suspense, {
             fallback: null,
-            children: (0, Qv.jsx)(dz, {
+            children: (0, ZT.jsx)(fk, {
               className: "FrontlineRoundEndLineup",
-              players: wv
+              players: jT
             })
-          }), Wv.map((vv => (0, Qv.jsx)(sz, {
-            mvp: Tv[vv],
-            place: vv
-          }, vv)))]
-        }), (0, Qv.jsx)("div", {
+          }), CT.map((TT => (0, ZT.jsx)(tk, {
+            mvp: AT[TT],
+            place: TT
+          }, TT)))]
+        }), (0, ZT.jsx)("div", {
           className: "FrontlineRoundEndNext",
-          children: ev("frontlineRoundEnd:nextFront", {
-            map: lv,
-            seconds: String(Pv)
+          children: KT("frontlineRoundEnd:nextFront", {
+            map: IT,
+            seconds: String(cT)
           })
         })]
       });
-      var av
+      var vT
     }));
 
-    function sz(vv) {
+    function tk(TT) {
       let {
-        mvp: zv,
-        place: Pv
-      } = vv;
+        mvp: kT,
+        place: cT
+      } = TT;
       const {
-        t: hv
-      } = (0, Rv.x)(), [Sv, ev, gv, pv, dv] = zv, [Nv, lv] = hv(function(vv, zv) {
-        return 1 === zv && "damage" !== vv ? `frontlineRoundEnd:${vv}One` : `frontlineRoundEnd:${vv}`
-      }(gv, pv), {
+        t: lT
+      } = (0, HT.B)(), [MT, KT, OT, yT, fT] = kT, [xT, IT] = lT(function(TT, kT) {
+        return 1 === kT && "damage" !== TT ? `frontlineRoundEnd:${TT}One` : `frontlineRoundEnd:${TT}`
+      }(OT, yT), {
         name: "\0",
-        count: pv.toLocaleString()
+        count: yT.toLocaleString()
       }).split("\0");
-      return (0, Qv.jsxs)("div", {
-        className: Kv()("FrontlineMvpCard", `Place-${Pv+1}`, `Team-${ev}`),
+      return (0, ZT.jsxs)("div", {
+        className: zT()("FrontlineMvpCard", `Place-${cT+1}`, `Team-${KT}`),
         style: {
-          "--revealMs": `${Nz[Pv]}ms`
+          "--revealMs": `${xk[cT]}ms`
         },
-        children: [(0, Qv.jsx)("i", {
+        children: [(0, ZT.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, Qv.jsx)("i", {
+        }), (0, ZT.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
-        }), (0, Qv.jsx)("div", {
+        }), (0, ZT.jsx)("div", {
           className: "FrontlineMvpPlace",
-          children: hv(Wz[Pv])
-        }), (0, Qv.jsxs)("div", {
+          children: lT(Ck[cT])
+        }), (0, ZT.jsxs)("div", {
           className: "FrontlineMvpLine",
-          children: [Nv, (0, Qv.jsx)("span", {
+          children: [xT, (0, ZT.jsx)("span", {
             className: "FrontlineMvpName",
-            children: Sv
-          }), lv]
-        }), (0, Qv.jsx)("div", {
+            children: MT
+          }), IT]
+        }), (0, ZT.jsx)("div", {
           className: "FrontlineMvpKit",
-          children: dv
+          children: fT
         })]
       })
     }
-    const Cz = function(vv, zv, Pv, hv) {
+    const hk = function(TT, kT, cT, lT) {
       let {
-        localPlayerId: gv
-      } = hv;
-      const pv = new Iv,
-        dv = new pz;
-      let Nv = null,
-        lv = null,
-        Tv = null,
-        Wv = null,
-        wv = null,
-        av = [!1, !1];
-      const sv = () => {
-        var vv, zv;
-        const [Pv, hv] = av;
-        null === (vv = lv) || void 0 === vv || vv.uF(!Pv), null === (zv = Tv) || void 0 === zv || zv.uF(!hv)
+        localPlayerId: OT
+      } = lT;
+      const yT = new ET,
+        fT = new yk;
+      let xT = null,
+        IT = null,
+        AT = null,
+        CT = null,
+        jT = null,
+        vT = [!1, !1];
+      const tT = () => {
+        var TT, kT;
+        const [cT, lT] = vT;
+        null === (TT = IT) || void 0 === TT || TT.PD(!cT), null === (kT = AT) || void 0 === kT || kT.PD(!lT)
       };
       return {
-        onCreate: vv => {
-          Nv = vv, lv = new Gv(vv, gv), Tv = new Fv(vv, gv), Wv = new hz(pv), sv(), wv = (0, ev.w)((0, Sv.createElement)(Sv.Fragment, null, (0, Sv.createElement)(Bv, {
-            hud: pv,
-            crosshair: lv,
-            damage: Tv,
-            markers: Wv
-          }), (0, Sv.createElement)(wz, {
-            controller: dv
+        onCreate: TT => {
+          xT = TT, IT = new ST(TT, OT), AT = new rT(TT, OT), CT = new lk(yT), tT(), jT = (0, KT.q)((0, MT.createElement)(MT.Fragment, null, (0, MT.createElement)(UT, {
+            hud: yT,
+            crosshair: IT,
+            damage: AT,
+            markers: CT
+          }), (0, MT.createElement)(jk, {
+            controller: fT
           })))
         },
         onClose: () => {
-          var vv, zv, Pv, hv;
-          null === (vv = wv) || void 0 === vv || vv(), null === (zv = lv) || void 0 === zv || zv.dispose(), lv = null, null === (Pv = Tv) || void 0 === Pv || Pv.dispose(), Tv = null, null === (hv = Wv) || void 0 === hv || hv.dispose(), Wv = null, Nv = null
+          var TT, kT, cT, lT;
+          null === (TT = jT) || void 0 === TT || TT(), null === (kT = IT) || void 0 === kT || kT.dispose(), IT = null, null === (cT = AT) || void 0 === cT || cT.dispose(), AT = null, null === (lT = CT) || void 0 === lT || lT.dispose(), CT = null, xT = null
         },
-        onAfterRender: (vv, zv) => {
-          var Pv, hv, Sv, ev;
-          null === (Pv = lv) || void 0 === Pv || Pv.frame(vv, zv.tanHalfFovY), null === (hv = Tv) || void 0 === hv || hv.frame(zv.cameraHeading), null === (Sv = Wv) || void 0 === Sv || Sv.frame(zv, null !== (ev = Nv) && void 0 !== ev && ev.checkValid(gv) ? Nv.yG(gv) : null)
+        onAfterRender: (TT, kT) => {
+          var cT, lT, MT, KT;
+          null === (cT = IT) || void 0 === cT || cT.frame(TT, kT.tanHalfFovY), null === (lT = AT) || void 0 === lT || lT.frame(kT.cameraHeading), null === (MT = CT) || void 0 === MT || MT.frame(kT, null !== (KT = xT) && void 0 !== KT && KT.checkValid(OT) ? xT.kN(OT) : null)
         },
-        onReceivedMessageFromServer: (vv, zv) => {
-          "frontlineHud" === vv ? pv.la(zv) : "frontlineScoreboard" === vv ? pv.receiveScoreboard(zv) : "frontlineRoundEnd" === vv ? dv.la(zv) : "frontlinePrefs" === vv && (av = zv, sv())
+        onReceivedMessageFromServer: (TT, kT) => {
+          "frontlineHud" === TT ? yT.Av(kT) : "frontlineScoreboard" === TT ? yT.receiveScoreboard(kT) : "frontlineRoundEnd" === TT ? fT.Av(kT) : "frontlinePrefs" === TT && (vT = kT, tT())
         }
       }
     }
   },
-  6163: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => Sv
+  6440: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => MT
     });
-    const hv = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
+    const lT = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
       granularity: "grapheme"
     }) : null;
 
-    function Sv(vv) {
-      return null === hv ? Array.from(vv) : Array.from(hv.segment(vv), (vv => {
+    function MT(TT) {
+      return null === lT ? Array.from(TT) : Array.from(lT.segment(TT), (TT => {
         let {
-          segment: zv
-        } = vv;
-        return zv
+          segment: kT
+        } = TT;
+        return kT
       }))
     }
   },
-  38020: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => gv,
-      h: () => ev
+  38332: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => OT,
+      g: () => KT
     });
-    const hv = new WeakMap;
+    const lT = new WeakMap;
 
-    function Sv(vv) {
-      let zv = hv.get(vv);
-      return zv || (zv = {
-        hidden: vv.hidden,
+    function MT(TT) {
+      let kT = lT.get(TT);
+      return kT || (kT = {
+        hidden: TT.hidden,
         x: NaN,
         y: NaN
-      }, hv.set(vv, zv)), zv
+      }, lT.set(TT, kT)), kT
     }
 
-    function ev(vv, zv) {
-      const Pv = Sv(vv);
-      Pv.hidden !== zv && (Pv.hidden = zv, vv.hidden = zv)
+    function KT(TT, kT) {
+      const cT = MT(TT);
+      cT.hidden !== kT && (cT.hidden = kT, TT.hidden = kT)
     }
 
-    function gv(vv, zv, Pv) {
-      const hv = Sv(vv);
-      hv.x === zv && hv.y === Pv || (hv.x = zv, hv.y = Pv, vv.style.translate = `${zv}vw ${Pv}vh`)
+    function OT(TT, kT, cT) {
+      const lT = MT(TT);
+      lT.x === kT && lT.y === cT || (lT.x = kT, lT.y = cT, TT.style.translate = `${kT}vw ${cT}vh`)
     }
   },
-  36568: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => hv
+  36864: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => lT
     });
-    const hv = {
+    const lT = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -1650,4 +1650,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

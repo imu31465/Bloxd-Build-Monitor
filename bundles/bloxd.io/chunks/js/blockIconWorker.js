@@ -1,285 +1,285 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var vv = __webpack_require__.u,
-        zv = __webpack_require__.e,
-        Pv = {},
-        hv = {};
-      __webpack_require__.u = function(zv) {
-        return vv(zv) + (Pv.hasOwnProperty(zv) ? "?" + Pv[zv] : "")
-      }, __webpack_require__.e = function(Sv) {
-        return zv(Sv).catch((function(zv) {
-          var ev = hv.hasOwnProperty(Sv) ? hv[Sv] : 4;
-          if (ev < 1) {
-            var gv = vv(Sv);
-            throw zv.message = "Loading chunk " + Sv + " failed after 4 retries.\n(" + gv + ")", zv.request = gv, Pv[Sv] = "cache-bust=" + Date.now(), setTimeout((function() {
-              delete hv[Sv]
-            }), 0), zv
+      var TT = __webpack_require__.u,
+        kT = __webpack_require__.e,
+        cT = {},
+        lT = {};
+      __webpack_require__.u = function(kT) {
+        return TT(kT) + (cT.hasOwnProperty(kT) ? "?" + cT[kT] : "")
+      }, __webpack_require__.e = function(MT) {
+        return kT(MT).catch((function(kT) {
+          var KT = lT.hasOwnProperty(MT) ? lT[MT] : 4;
+          if (KT < 1) {
+            var OT = TT(MT);
+            throw kT.message = "Loading chunk " + MT + " failed after 4 retries.\n(" + OT + ")", kT.request = OT, cT[MT] = "cache-bust=" + Date.now(), setTimeout((function() {
+              delete lT[MT]
+            }), 0), kT
           }
-          return new Promise((function(vv) {
-            var zv = 4 - ev + 1;
+          return new Promise((function(TT) {
+            var kT = 4 - KT + 1;
             setTimeout((function() {
-              var zv = "cache-bust=" + Date.now();
-              Pv[Sv] = zv, hv[Sv] = ev - 1, vv(__webpack_require__.e(Sv))
-            }), function(vv) {
-              return 500 * Math.pow(2, vv)
-            }(zv))
+              var kT = "cache-bust=" + Date.now();
+              cT[MT] = kT, lT[MT] = KT - 1, TT(__webpack_require__.e(MT))
+            }), function(TT) {
+              return 500 * Math.pow(2, TT)
+            }(kT))
           }))
         }))
       }
     }
   })();
-  const vv = [15, 15, 15],
-    zv = {
+  const TT = [15, 15, 15],
+    kT = {
       top: 1,
       left: .85,
       right: .7
     };
 
-  function Pv(zv, Pv, hv) {
-    let Sv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : vv => 0 !== zv[4 * vv + 3];
-    const ev = (vv, zv) => vv < 0 || zv < 0 || vv >= Pv || zv >= Pv || !Sv(zv * Pv + vv),
-      gv = [];
-    for (let vv = 0; vv < Pv; vv++)
-      for (let zv = 0; zv < Pv; zv++)
-        if (!ev(zv, vv)) vv: for (let Sv = -hv; Sv <= hv; Sv++) {
-          const pv = hv - Math.abs(Sv);
-          for (let hv = -pv; hv <= pv; hv++)
-            if (ev(zv + hv, vv + Sv)) {
-              gv.push(vv * Pv + zv);
-              break vv
+  function cT(kT, cT, lT) {
+    let MT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : TT => 0 !== kT[4 * TT + 3];
+    const KT = (TT, kT) => TT < 0 || kT < 0 || TT >= cT || kT >= cT || !MT(kT * cT + TT),
+      OT = [];
+    for (let TT = 0; TT < cT; TT++)
+      for (let kT = 0; kT < cT; kT++)
+        if (!KT(kT, TT)) TT: for (let MT = -lT; MT <= lT; MT++) {
+          const yT = lT - Math.abs(MT);
+          for (let lT = -yT; lT <= yT; lT++)
+            if (KT(kT + lT, TT + MT)) {
+              OT.push(TT * cT + kT);
+              break TT
             }
         }
-    for (const pv of gv) zv.set(vv, 4 * pv), zv[4 * pv + 3] = 255
+    for (const yT of OT) kT.set(TT, 4 * yT), kT[4 * yT + 3] = 255
   }
-  const hv = Math.SQRT1_2,
-    Sv = Math.sqrt(3) / 2,
-    ev = {
+  const lT = Math.SQRT1_2,
+    MT = Math.sqrt(3) / 2,
+    KT = {
       boxes: [
         [0, 0, 0, 1, 1, 1]
       ],
       cropFaces: !1
     },
-    gv = {
+    OT = {
       boxes: [
         [0, 0, 0, 1, .5, 1]
       ],
       cropFaces: !1
     },
-    pv = {
+    yT = {
       boxes: [
         [0, 0, 0, 1, .5, 1],
         [0, .5, 0, .5, 1, 1]
       ],
       cropFaces: !0
     };
-  const dv = 1e-6;
+  const fT = 1e-6;
 
-  function Nv(vv, zv, Pv, hv) {
+  function xT(TT, kT, cT, lT) {
     let {
-      origin: Sv,
-      across: ev,
-      down: gv,
-      texture: pv,
-      rect: [Nv, lv, Tv, Wv],
-      shade: wv
-    } = hv;
-    const av = ev.x * gv.y - ev.y * gv.x;
-    if (Math.abs(av) < 1e-9) return;
-    const sv = [Sv.x, Sv.x + ev.x, Sv.x + gv.x, Sv.x + ev.x + gv.x],
-      Cv = [Sv.y, Sv.y + ev.y, Sv.y + gv.y, Sv.y + ev.y + gv.y],
-      iv = Math.max(0, Math.floor(Math.min(...sv))),
-      cv = Math.min(Pv - 1, Math.ceil(Math.max(...sv))),
-      Gv = Math.max(0, Math.floor(Math.min(...Cv))),
-      mv = Math.min(Pv - 1, Math.ceil(Math.max(...Cv)));
-    for (let jv = Gv; jv <= mv; jv++)
-      for (let hv = iv; hv <= cv; hv++) {
-        const sv = hv + .5 - Sv.x,
-          Cv = jv + .5 - Sv.y,
-          iv = (sv * gv.y - Cv * gv.x) / av,
-          cv = (ev.x * Cv - ev.y * sv) / av;
-        if (iv < -dv || iv > 1 + dv || cv < -dv || cv > 1 + dv) continue;
-        const Gv = jv * Pv + hv;
-        zv[Gv] = 1;
-        const mv = Nv + Math.min(Math.max(iv, 0), 1) * (Tv - Nv),
-          fv = lv + Math.min(Math.max(cv, 0), 1) * (Wv - lv),
-          Fv = Math.min(pv.width - 1, Math.floor(mv * pv.width)),
-          Yv = 4 * (Math.min(pv.height - 1, Math.floor(fv * pv.height)) * pv.width + Fv),
-          nv = pv.pixels[Yv + 3] / 255;
-        if (0 === nv) continue;
-        const Ov = 4 * Gv,
-          Dv = vv[Ov + 3] / 255 * (1 - nv),
-          Kv = nv + Dv;
-        for (let zv = 0; zv < 3; zv++) vv[Ov + zv] = (pv.pixels[Yv + zv] * wv * nv + vv[Ov + zv] * Dv) / Kv;
-        vv[Ov + 3] = 255 * Kv
+      origin: MT,
+      across: KT,
+      down: OT,
+      texture: yT,
+      rect: [xT, IT, AT, CT],
+      shade: jT
+    } = lT;
+    const vT = KT.x * OT.y - KT.y * OT.x;
+    if (Math.abs(vT) < 1e-9) return;
+    const tT = [MT.x, MT.x + KT.x, MT.x + OT.x, MT.x + KT.x + OT.x],
+      hT = [MT.y, MT.y + KT.y, MT.y + OT.y, MT.y + KT.y + OT.y],
+      NT = Math.max(0, Math.floor(Math.min(...tT))),
+      QT = Math.min(cT - 1, Math.ceil(Math.max(...tT))),
+      ST = Math.max(0, Math.floor(Math.min(...hT))),
+      DT = Math.min(cT - 1, Math.ceil(Math.max(...hT)));
+    for (let aT = ST; aT <= DT; aT++)
+      for (let lT = NT; lT <= QT; lT++) {
+        const tT = lT + .5 - MT.x,
+          hT = aT + .5 - MT.y,
+          NT = (tT * OT.y - hT * OT.x) / vT,
+          QT = (KT.x * hT - KT.y * tT) / vT;
+        if (NT < -fT || NT > 1 + fT || QT < -fT || QT > 1 + fT) continue;
+        const ST = aT * cT + lT;
+        kT[ST] = 1;
+        const DT = xT + Math.min(Math.max(NT, 0), 1) * (AT - xT),
+          FT = IT + Math.min(Math.max(QT, 0), 1) * (CT - IT),
+          rT = Math.min(yT.width - 1, Math.floor(DT * yT.width)),
+          PT = 4 * (Math.min(yT.height - 1, Math.floor(FT * yT.height)) * yT.width + rT),
+          wT = yT.pixels[PT + 3] / 255;
+        if (0 === wT) continue;
+        const mT = 4 * ST,
+          bT = TT[mT + 3] / 255 * (1 - wT),
+          zT = wT + bT;
+        for (let kT = 0; kT < 3; kT++) TT[mT + kT] = (yT.pixels[PT + kT] * jT * wT + TT[mT + kT] * bT) / zT;
+        TT[mT + 3] = 255 * zT
       }
   }
 
-  function lv(vv, zv, Pv) {
-    const hv = vv.get(zv);
-    if (void 0 === hv) throw new Error(`no ${Pv} was sent for ${zv.slice(0,100)}`);
-    return hv
+  function IT(TT, kT, cT) {
+    const lT = TT.get(kT);
+    if (void 0 === lT) throw new Error(`no ${cT} was sent for ${kT.slice(0,100)}`);
+    return lT
   }
-  const Tv = {
-      pixelsOf(vv) {
-        const zv = new OffscreenCanvas(vv.width, vv.height),
-          Pv = zv.getContext("2d");
-        if (!Pv) throw new Error("no 2D context");
-        return Pv.drawImage(vv, 0, 0), vv.close(), {
-          width: zv.width,
-          height: zv.height,
-          pixels: Pv.getImageData(0, 0, zv.width, zv.height).data
+  const AT = {
+      pixelsOf(TT) {
+        const kT = new OffscreenCanvas(TT.width, TT.height),
+          cT = kT.getContext("2d");
+        if (!cT) throw new Error("no 2D context");
+        return cT.drawImage(TT, 0, 0), TT.close(), {
+          width: kT.width,
+          height: kT.height,
+          pixels: cT.getImageData(0, 0, kT.width, kT.height).data
         }
       },
-      async encode(vv, zv) {
-        const Pv = new OffscreenCanvas(zv, zv),
-          hv = Pv.getContext("2d");
-        if (!hv) throw new Error("no 2D context");
-        hv.putImageData(new ImageData(vv, zv, zv), 0, 0);
-        const Sv = await Pv.convertToBlob();
-        return new Promise(((vv, zv) => {
-          const Pv = new FileReader;
-          Pv.onload = () => {
-            vv(Pv.result)
-          }, Pv.onerror = () => {
-            var vv;
-            zv(null !== (vv = Pv.error) && void 0 !== vv ? vv : new Error("the icon did not encode"))
-          }, Pv.readAsDataURL(Sv)
+      async encode(TT, kT) {
+        const cT = new OffscreenCanvas(kT, kT),
+          lT = cT.getContext("2d");
+        if (!lT) throw new Error("no 2D context");
+        lT.putImageData(new ImageData(TT, kT, kT), 0, 0);
+        const MT = await cT.convertToBlob();
+        return new Promise(((TT, kT) => {
+          const cT = new FileReader;
+          cT.onload = () => {
+            TT(cT.result)
+          }, cT.onerror = () => {
+            var TT;
+            kT(null !== (TT = cT.error) && void 0 !== TT ? TT : new Error("the icon did not encode"))
+          }, cT.readAsDataURL(MT)
         }))
       }
     },
-    Wv = globalThis.WorkerGlobalScope;
-  void 0 !== Wv && globalThis instanceof Wv && function(vv, dv) {
-    const Tv = new Map,
-      Wv = new Map,
-      wv = (zv, Pv, hv) => {
+    CT = globalThis.WorkerGlobalScope;
+  void 0 !== CT && globalThis instanceof CT && function(TT, fT) {
+    const AT = new Map,
+      CT = new Map,
+      jT = (kT, cT, lT) => {
         (async () => {
           try {
-            vv.postMessage({
+            TT.postMessage({
               type: "drawn",
-              id: zv,
-              url: await dv.encode(hv(), Pv)
+              id: kT,
+              url: await fT.encode(lT(), cT)
             })
-          } catch (Sv) {
-            vv.postMessage({
+          } catch (MT) {
+            TT.postMessage({
               type: "failed",
-              message: String(Sv)
+              message: String(MT)
             })
           }
         })()
       };
-    vv.onmessage = vv => {
+    TT.onmessage = TT => {
       let {
-        data: av
-      } = vv;
-      if ("texture" === av.type) Tv.set(av.url, dv.pixelsOf(av.bitmap));
-      else if ("model" === av.type) Wv.set(av.name, {
-        geometry: av.geometry,
-        texture: dv.pixelsOf(av.bitmap)
+        data: vT
+      } = TT;
+      if ("texture" === vT.type) AT.set(vT.url, fT.pixelsOf(vT.bitmap));
+      else if ("model" === vT.type) CT.set(vT.name, {
+        geometry: vT.geometry,
+        texture: fT.pixelsOf(vT.bitmap)
       });
-      else if ("draw" === av.type) {
+      else if ("draw" === vT.type) {
         const {
-          id: vv,
-          top: dv,
-          left: Wv,
-          right: sv,
-          itemType: Cv,
-          size: iv,
-          outlineWidth: cv
-        } = av;
-        wv(vv, iv, (() => function(vv, ev, gv, pv) {
-          const dv = .6 * gv,
-            lv = dv * hv,
-            Tv = dv * hv * .5,
-            Wv = dv * Sv,
-            wv = Math.max(...ev.boxes.map((vv => vv[4]))),
-            av = lv / 2 + (gv - lv) / 2,
-            sv = Tv + (gv - Tv - Tv - wv * Wv) / 2,
-            Cv = (vv, zv, Pv) => ({
-              x: av + (vv - Pv) * lv,
-              y: sv - Tv + (vv + Pv) * Tv + (wv - zv) * Wv
+          id: TT,
+          top: fT,
+          left: CT,
+          right: tT,
+          itemType: hT,
+          size: NT,
+          outlineWidth: QT
+        } = vT;
+        jT(TT, NT, (() => function(TT, KT, OT, yT) {
+          const fT = .6 * OT,
+            IT = fT * lT,
+            AT = fT * lT * .5,
+            CT = fT * MT,
+            jT = Math.max(...KT.boxes.map((TT => TT[4]))),
+            vT = IT / 2 + (OT - IT) / 2,
+            tT = AT + (OT - AT - AT - jT * CT) / 2,
+            hT = (TT, kT, cT) => ({
+              x: vT + (TT - cT) * IT,
+              y: tT - AT + (TT + cT) * AT + (jT - kT) * CT
             }),
-            iv = (vv, zv, Pv, hv, Sv, gv) => ({
-              origin: vv,
+            NT = (TT, kT, cT, lT, MT, OT) => ({
+              origin: TT,
               across: {
-                x: zv.x - vv.x,
-                y: zv.y - vv.y
+                x: kT.x - TT.x,
+                y: kT.y - TT.y
               },
               down: {
-                x: Pv.x - vv.x,
-                y: Pv.y - vv.y
+                x: cT.x - TT.x,
+                y: cT.y - TT.y
               },
-              texture: hv,
-              rect: ev.cropFaces ? Sv : [0, 0, 1, 1],
-              shade: gv
+              texture: lT,
+              rect: KT.cropFaces ? MT : [0, 0, 1, 1],
+              shade: OT
             }),
-            cv = new Uint8ClampedArray(gv * gv * 4),
-            Gv = new Uint8Array(gv * gv),
-            mv = zv;
-          for (const [zv, Pv, hv, Sv, jv, fv] of ev.boxes) {
-            const ev = iv(Cv(Sv, jv, fv), Cv(Sv, jv, hv), Cv(Sv, Pv, fv), vv.right, [1 - fv, 1 - jv, 1 - hv, 1 - Pv], mv.right),
-              pv = iv(Cv(zv, jv, fv), Cv(Sv, jv, fv), Cv(zv, Pv, fv), vv.left, [zv, 1 - jv, Sv, 1 - Pv], mv.left),
-              dv = iv(Cv(zv, jv, hv), Cv(Sv, jv, hv), Cv(zv, jv, fv), vv.top, [zv, hv, Sv, fv], mv.top);
-            for (const vv of [ev, pv, dv]) Nv(cv, Gv, gv, vv)
+            QT = new Uint8ClampedArray(OT * OT * 4),
+            ST = new Uint8Array(OT * OT),
+            DT = kT;
+          for (const [kT, cT, lT, MT, aT, FT] of KT.boxes) {
+            const KT = NT(hT(MT, aT, FT), hT(MT, aT, lT), hT(MT, cT, FT), TT.right, [1 - FT, 1 - aT, 1 - lT, 1 - cT], DT.right),
+              yT = NT(hT(kT, aT, FT), hT(MT, aT, FT), hT(kT, cT, FT), TT.left, [kT, 1 - aT, MT, 1 - cT], DT.left),
+              fT = NT(hT(kT, aT, lT), hT(MT, aT, lT), hT(kT, aT, FT), TT.top, [kT, lT, MT, FT], DT.top);
+            for (const TT of [KT, yT, fT]) xT(QT, ST, OT, TT)
           }
-          return Pv(cv, gv, pv, (vv => 1 === Gv[vv])), cv
+          return cT(QT, OT, yT, (TT => 1 === ST[TT])), QT
         }({
-          top: lv(Tv, dv, "texture"),
-          left: lv(Tv, Wv, "texture"),
-          right: lv(Tv, sv, "texture")
-        }, function(vv) {
-          return "SlabBlock" === vv ? gv : "StairsBlock" === vv ? pv : ev
-        }(Cv), iv, cv)))
+          top: IT(AT, fT, "texture"),
+          left: IT(AT, CT, "texture"),
+          right: IT(AT, tT, "texture")
+        }, function(TT) {
+          return "SlabBlock" === TT ? OT : "StairsBlock" === TT ? yT : KT
+        }(hT), NT, QT)))
       } else {
         const {
-          id: vv,
-          name: zv,
-          size: hv,
-          outlineWidth: Sv
-        } = av;
-        wv(vv, hv, (() => {
+          id: TT,
+          name: kT,
+          size: lT,
+          outlineWidth: MT
+        } = vT;
+        jT(TT, lT, (() => {
           const {
-            geometry: vv,
-            texture: ev
-          } = lv(Wv, zv, "model");
-          return function(vv, zv, hv, Sv) {
+            geometry: TT,
+            texture: KT
+          } = IT(CT, kT, "model");
+          return function(TT, kT, lT, MT) {
             const {
-              vertices: ev,
-              uvs: gv,
-              indices: pv,
-              shades: dv
-            } = vv, Nv = .03125 * hv, lv = hv - 2 * Nv, Tv = new Float32Array(ev.length);
-            for (let Pv = 0; Pv < ev.length; Pv += 3) Tv[Pv] = Nv + ev[Pv] * lv, Tv[Pv + 1] = Nv + ev[Pv + 1] * lv, Tv[Pv + 2] = ev[Pv + 2];
-            const Wv = new Float32Array(hv * hv).fill(-1 / 0),
-              wv = new Uint8ClampedArray(hv * hv * 4),
-              av = 255 * vv.alphaCutoff;
-            for (let Pv = 0; Pv < pv.length; Pv += 3) {
-              const [vv, Sv, ev] = [pv[Pv], pv[Pv + 1], pv[Pv + 2]], [Nv, lv, sv] = [3 * vv, 3 * Sv, 3 * ev], [Cv, iv, cv, Gv, mv, jv] = [Tv[Nv], Tv[Nv + 1], Tv[lv], Tv[lv + 1], Tv[sv], Tv[sv + 1]], fv = (cv - Cv) * (jv - iv) - (mv - Cv) * (Gv - iv);
-              if (Math.abs(fv) < 1e-9) continue;
-              const Fv = dv[Pv / 3],
-                [Yv, nv, Ov, Dv, Kv, Vv] = [gv[2 * vv], gv[2 * vv + 1], gv[2 * Sv], gv[2 * Sv + 1], gv[2 * ev], gv[2 * ev + 1]],
-                Uv = Math.max(0, Math.floor(Math.min(Cv, cv, mv))),
-                Rv = Math.min(hv - 1, Math.ceil(Math.max(Cv, cv, mv))),
-                xv = Math.max(0, Math.floor(Math.min(iv, Gv, jv))),
-                tv = Math.min(hv - 1, Math.ceil(Math.max(iv, Gv, jv)));
-              for (let Pv = xv; Pv <= tv; Pv++)
-                for (let vv = Uv; vv <= Rv; vv++) {
-                  const [Sv, ev] = [vv + .5, Pv + .5], gv = ((Sv - Cv) * (jv - iv) - (mv - Cv) * (ev - iv)) / fv, pv = ((cv - Cv) * (ev - iv) - (Sv - Cv) * (Gv - iv)) / fv, dv = 1 - gv - pv;
-                  if (dv < 0 || gv < 0 || pv < 0) continue;
-                  const Uv = dv * Tv[Nv + 2] + gv * Tv[lv + 2] + pv * Tv[sv + 2],
-                    Rv = Pv * hv + vv;
-                  if (Uv <= Wv[Rv]) continue;
-                  const xv = Math.max(0, Math.min(zv.width - 1, Math.floor((dv * Yv + gv * Ov + pv * Kv) * zv.width))),
-                    tv = 4 * (Math.max(0, Math.min(zv.height - 1, Math.floor((dv * nv + gv * Dv + pv * Vv) * zv.height))) * zv.width + xv);
-                  zv.pixels[tv + 3] < av || (Wv[Rv] = Uv, wv[4 * Rv] = zv.pixels[tv] * Fv, wv[4 * Rv + 1] = zv.pixels[tv + 1] * Fv, wv[4 * Rv + 2] = zv.pixels[tv + 2] * Fv, wv[4 * Rv + 3] = 255)
+              vertices: KT,
+              uvs: OT,
+              indices: yT,
+              shades: fT
+            } = TT, xT = .03125 * lT, IT = lT - 2 * xT, AT = new Float32Array(KT.length);
+            for (let cT = 0; cT < KT.length; cT += 3) AT[cT] = xT + KT[cT] * IT, AT[cT + 1] = xT + KT[cT + 1] * IT, AT[cT + 2] = KT[cT + 2];
+            const CT = new Float32Array(lT * lT).fill(-1 / 0),
+              jT = new Uint8ClampedArray(lT * lT * 4),
+              vT = 255 * TT.alphaCutoff;
+            for (let cT = 0; cT < yT.length; cT += 3) {
+              const [TT, MT, KT] = [yT[cT], yT[cT + 1], yT[cT + 2]], [xT, IT, tT] = [3 * TT, 3 * MT, 3 * KT], [hT, NT, QT, ST, DT, aT] = [AT[xT], AT[xT + 1], AT[IT], AT[IT + 1], AT[tT], AT[tT + 1]], FT = (QT - hT) * (aT - NT) - (DT - hT) * (ST - NT);
+              if (Math.abs(FT) < 1e-9) continue;
+              const rT = fT[cT / 3],
+                [PT, wT, mT, bT, zT, JT] = [OT[2 * TT], OT[2 * TT + 1], OT[2 * MT], OT[2 * MT + 1], OT[2 * KT], OT[2 * KT + 1]],
+                oT = Math.max(0, Math.floor(Math.min(hT, QT, DT))),
+                HT = Math.min(lT - 1, Math.ceil(Math.max(hT, QT, DT))),
+                eT = Math.max(0, Math.floor(Math.min(NT, ST, aT))),
+                GT = Math.min(lT - 1, Math.ceil(Math.max(NT, ST, aT)));
+              for (let cT = eT; cT <= GT; cT++)
+                for (let TT = oT; TT <= HT; TT++) {
+                  const [MT, KT] = [TT + .5, cT + .5], OT = ((MT - hT) * (aT - NT) - (DT - hT) * (KT - NT)) / FT, yT = ((QT - hT) * (KT - NT) - (MT - hT) * (ST - NT)) / FT, fT = 1 - OT - yT;
+                  if (fT < 0 || OT < 0 || yT < 0) continue;
+                  const oT = fT * AT[xT + 2] + OT * AT[IT + 2] + yT * AT[tT + 2],
+                    HT = cT * lT + TT;
+                  if (oT <= CT[HT]) continue;
+                  const eT = Math.max(0, Math.min(kT.width - 1, Math.floor((fT * PT + OT * mT + yT * zT) * kT.width))),
+                    GT = 4 * (Math.max(0, Math.min(kT.height - 1, Math.floor((fT * wT + OT * bT + yT * JT) * kT.height))) * kT.width + eT);
+                  kT.pixels[GT + 3] < vT || (CT[HT] = oT, jT[4 * HT] = kT.pixels[GT] * rT, jT[4 * HT + 1] = kT.pixels[GT + 1] * rT, jT[4 * HT + 2] = kT.pixels[GT + 2] * rT, jT[4 * HT + 3] = 255)
                 }
             }
-            return Pv(wv, hv, Sv), wv
-          }(vv, ev, hv, Sv)
+            return cT(jT, lT, MT), jT
+          }(TT, KT, lT, MT)
         }))
       }
-    }, vv.postMessage({
+    }, TT.postMessage({
       type: "started"
     })
-  }(globalThis, Tv)
+  }(globalThis, AT)
 })();

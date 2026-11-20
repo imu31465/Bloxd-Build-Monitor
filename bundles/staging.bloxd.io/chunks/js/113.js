@@ -1,66 +1,66 @@
 export const id = 113;
 export const ids = [113];
 export const modules = {
-  36148: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => sv,
-      d: () => fv
+  36434: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => tT,
+      h: () => FT
     });
-    Pv(8975);
-    var hv = Pv(52),
-      Sv = Pv(1439),
-      ev = Pv(1876),
-      gv = Pv(1923),
-      pv = Pv(22),
-      dv = Pv(2324),
-      Nv = Pv(36151),
-      lv = Pv(36153),
-      Tv = Pv(8931),
-      Wv = Pv(8970),
-      wv = Pv(8987),
-      av = Pv(1082);
-    const sv = (0, hv.memo)((function() {
-      var vv;
+    cT(9332);
+    var lT = cT(71),
+      MT = cT(1461),
+      KT = cT(1953),
+      OT = cT(1996),
+      yT = cT(31),
+      fT = cT(2462),
+      xT = cT(36440),
+      IT = cT(36445),
+      AT = cT(9298),
+      CT = cT(9329),
+      jT = cT(9346),
+      vT = cT(1099);
+    const tT = (0, lT.memo)((function() {
+      var TT;
       const {
-        isTouchScreen: zv,
-        clientEscMenuOptions: Pv,
-        scriptedCameraFacing: ev,
-        crosshairShownOverride: sv,
-        crosshairGameView: iv
-      } = (0, pv.i)(["isTouchScreen", "clientEscMenuOptions", "scriptedCameraFacing", "crosshairShownOverride", "crosshairGameView"]), cv = (0, dv.i)("gunshotOrigin"), Gv = (0, hv.useRef)(null), mv = (0, hv.useRef)(!1), [jv, Fv] = (0, hv.useState)(Cv);
-      (0, Sv.g)("cameraZoomSet", Fv), (0, hv.useEffect)((() => {
-        Fv(Cv())
+        isTouchScreen: kT,
+        clientEscMenuOptions: cT,
+        scriptedCameraFacing: KT,
+        crosshairShownOverride: tT,
+        crosshairGameView: NT
+      } = (0, yT.n)(["isTouchScreen", "clientEscMenuOptions", "scriptedCameraFacing", "crosshairShownOverride", "crosshairGameView"]), QT = (0, fT.f)("gunshotOrigin"), ST = (0, lT.useRef)(null), DT = (0, lT.useRef)(!1), [aT, rT] = (0, lT.useState)(hT);
+      (0, MT.g)("cameraZoomSet", rT), (0, lT.useEffect)((() => {
+        rT(hT())
       }), []);
-      const Yv = (0, gv.h)("heldItemAim"),
-        Ov = Yv.gun,
-        Dv = (0, wv.f)(),
-        Kv = (0, hv.useRef)(Dv);
-      Kv.current = Dv;
-      const [Vv, Uv] = (0, hv.useState)(!1);
-      (0, hv.useEffect)((() => (0, lv.c)("crosshairAccuracy", fv)), []), (0, Sv.g)("mouseState", (vv => {
+      const PT = (0, OT.h)("heldItemAim"),
+        mT = PT.gun,
+        bT = (0, jT.e)(),
+        zT = (0, lT.useRef)(bT);
+      zT.current = bT;
+      const [JT, oT] = (0, lT.useState)(!1);
+      (0, lT.useEffect)((() => (0, IT.f)("crosshairAccuracy", FT)), []), (0, MT.g)("mouseState", (TT => {
         let {
-          isDown: zv
-        } = vv;
-        mv.current = zv, Gv.current && (Gv.current.style.transform = (0, Wv.c)(zv, Kv.current.growOnClick)), "shapes" === Kv.current.style && Uv(zv)
+          isDown: kT
+        } = TT;
+        DT.current = kT, ST.current && (ST.current.style.transform = (0, CT.f)(kT, zT.current.growOnClick)), "shapes" === zT.current.style && oT(kT)
       }));
-      const Rv = (0, Tv.f)(zv, Pv.touchActionButtons);
-      return (null !== (vv = (0, Nv.b)(iv, sv)) && void 0 !== vv ? vv : (0, Nv.e)(Yv, jv > 1, Rv, cv)) ? "movement" === ev || "cursor" === ev ? null : (0, av.jsxs)(av.Fragment, {
-        children: [Ov && (0, av.jsx)(nv, {
-          custom: Dv.forGuns && "shapes" === Dv.style ? Dv : null,
-          touch: zv
-        }), !Ov && (0, av.jsx)(Wv.b, {
-          settings: Dv,
-          touch: zv,
-          pressRef: Gv,
-          pressed: "shapes" === Dv.style ? Vv : mv.current
+      const HT = (0, AT.c)(kT, cT.touchActionButtons);
+      return (null !== (TT = (0, xT.d)(NT, tT)) && void 0 !== TT ? TT : (0, xT.g)(PT, aT > 1, HT, QT)) ? "movement" === KT || "cursor" === KT ? null : (0, vT.jsxs)(vT.Fragment, {
+        children: [mT && (0, vT.jsx)(wT, {
+          custom: bT.forGuns && "shapes" === bT.style ? bT : null,
+          touch: kT
+        }), !mT && (0, vT.jsx)(CT.e, {
+          settings: bT,
+          touch: kT,
+          pressRef: ST,
+          pressed: "shapes" === bT.style ? JT : DT.current
         })]
       }) : null
     }));
 
-    function Cv() {
-      return ev.gameBridge.lookup("cameraZoom", null)
+    function hT() {
+      return KT.gameBridge.lookup("cameraZoom", null)
     }
-    const iv = [{
+    const NT = [{
         current: null
       }, {
         current: null
@@ -69,340 +69,340 @@ export const modules = {
       }, {
         current: null
       }],
-      cv = {
+      QT = {
         current: null
       },
-      Gv = {
+      ST = {
         current: null
       };
-    let mv = 0,
-      jv = 0;
+    let DT = 0,
+      aT = 0;
 
-    function fv(vv) {
-      jv = vv, iv[0].current || cv.current || Gv.current ? Yv(vv) : mv = vv
+    function FT(TT) {
+      aT = TT, NT[0].current || QT.current || ST.current ? PT(TT) : DT = TT
     }
 
-    function Fv(vv) {
-      return ((0, Nv.d)(vv) - (0, Nv.d)(0)) * window.innerHeight / 100
+    function rT(TT) {
+      return ((0, xT.f)(TT) - (0, xT.f)(0)) * window.innerHeight / 100
     }
 
-    function Yv(vv) {
-      var zv;
-      if (null === (zv = Gv.current) || void 0 === zv || zv.call(Gv, Fv(vv)), iv[0].current) {
-        const zv = `${(0,Nv.d)(vv)}vh`;
-        iv[0].current.style.transform = `translateX(calc(0px - ${zv}))`, iv[1].current.style.transform = `translateX(calc(0px + ${zv}))`, iv[2].current.style.transform = `translateY(calc(0px - ${zv}))`, iv[3].current.style.transform = `translateY(calc(0px + ${zv}))`
+    function PT(TT) {
+      var kT;
+      if (null === (kT = ST.current) || void 0 === kT || kT.call(ST, rT(TT)), NT[0].current) {
+        const kT = `${(0,xT.f)(TT)}vh`;
+        NT[0].current.style.transform = `translateX(calc(0px - ${kT}))`, NT[1].current.style.transform = `translateX(calc(0px + ${kT}))`, NT[2].current.style.transform = `translateY(calc(0px - ${kT}))`, NT[3].current.style.transform = `translateY(calc(0px + ${kT}))`
       }
-      cv.current && (cv.current.style.filter = `blur(${Math.round(vv/10)}px)`)
+      QT.current && (QT.current.style.filter = `blur(${Math.round(TT/10)}px)`)
     }
 
-    function nv(vv) {
+    function wT(TT) {
       let {
-        custom: zv,
-        touch: Pv
-      } = vv;
-      const ev = (0, Sv.j)("aimingOverlay", "none"),
-        gv = "1.2vh",
-        pv = "0.3vh";
-      (0, hv.useEffect)((() => {
-        mv && Yv(mv)
+        custom: kT,
+        touch: cT
+      } = TT;
+      const KT = (0, MT.i)("aimingOverlay", "none"),
+        OT = "1.2vh",
+        yT = "0.3vh";
+      (0, lT.useEffect)((() => {
+        DT && PT(DT)
       }), []);
-      const dv = (0, hv.useRef)(null !== zv);
-      return (0, hv.useLayoutEffect)((() => {
-        var vv;
-        zv ? null === (vv = Gv.current) || void 0 === vv || vv.call(Gv, Fv(jv)) : dv.current && Yv(jv);
-        dv.current = null !== zv
-      }), [zv]), (0, av.jsxs)(av.Fragment, {
-        children: ["sniper" === ev && (0, av.jsxs)("div", {
-          ref: cv,
+      const fT = (0, lT.useRef)(null !== kT);
+      return (0, lT.useLayoutEffect)((() => {
+        var TT;
+        kT ? null === (TT = ST.current) || void 0 === TT || TT.call(ST, rT(aT)) : fT.current && PT(aT);
+        fT.current = null !== kT
+      }), [kT]), (0, vT.jsxs)(vT.Fragment, {
+        children: ["sniper" === KT && (0, vT.jsxs)("div", {
+          ref: QT,
           className: "GunCrosshairOverlayWrapper",
-          children: [(0, av.jsx)("div", {
+          children: [(0, vT.jsx)("div", {
             className: "GunCrosshairOverlay"
-          }), (0, av.jsx)("div", {
+          }), (0, vT.jsx)("div", {
             className: "GunCrosshairOverlayLine1"
-          }), (0, av.jsx)("div", {
+          }), (0, vT.jsx)("div", {
             className: "GunCrosshairOverlayLine2"
-          }), (0, av.jsx)("div", {
+          }), (0, vT.jsx)("div", {
             className: "GunCrosshairOverlayDot"
           })]
-        }), (0, av.jsxs)("div", {
+        }), (0, vT.jsxs)("div", {
           className: "GunCrosshairWrapper",
           style: {
-            opacity: "sniper" === ev ? 0 : 1
+            opacity: "sniper" === KT ? 0 : 1
           },
-          children: [zv && (0, av.jsx)(Wv.b, {
-            settings: zv,
-            touch: Pv,
-            spreadRef: Gv
-          }), !zv && (0, av.jsxs)(av.Fragment, {
-            children: [(0, av.jsx)("div", {
+          children: [kT && (0, vT.jsx)(CT.e, {
+            settings: kT,
+            touch: cT,
+            spreadRef: ST
+          }), !kT && (0, vT.jsxs)(vT.Fragment, {
+            children: [(0, vT.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: gv,
-                height: pv,
+                width: OT,
+                height: yT,
                 top: "49.85vh",
                 left: "calc(50vw - 0.6vh)"
               },
-              ref: iv[0]
-            }), (0, av.jsx)("div", {
+              ref: NT[0]
+            }), (0, vT.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: gv,
-                height: pv,
+                width: OT,
+                height: yT,
                 top: "49.85vh",
                 left: "calc(50vw - 0.6vh)"
               },
-              ref: iv[1]
-            }), (0, av.jsx)("div", {
+              ref: NT[1]
+            }), (0, vT.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: pv,
-                height: gv,
+                width: yT,
+                height: OT,
                 top: "49.4vh",
                 left: "calc(50vw - 0.15vh)"
               },
-              ref: iv[2]
-            }), (0, av.jsx)("div", {
+              ref: NT[2]
+            }), (0, vT.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: pv,
-                height: gv,
+                width: yT,
+                height: OT,
                 top: "49.4vh",
                 left: "calc(50vw - 0.15vh)"
               },
-              ref: iv[3]
+              ref: NT[3]
             })]
           })]
         })]
       })
     }
   },
-  8970: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => sv,
-      c: () => av
+  9329: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => tT,
+      f: () => vT
     });
-    Pv(8975);
-    var hv = Pv(1035),
-      Sv = Pv.n(hv),
-      ev = Pv(52),
-      gv = Pv(8940);
+    cT(9332);
+    var lT = cT(1046),
+      MT = cT.n(lT),
+      KT = cT(71),
+      OT = cT(9302);
 
-    function pv(vv, zv) {
-      return Math.max(1, Math.round(vv * zv))
+    function yT(TT, kT) {
+      return Math.max(1, Math.round(TT * kT))
     }
 
-    function dv(vv, zv) {
-      const Pv = zv * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
-        hv = function(vv, zv) {
-          if (vv.lines) return pv(vv.lineThickness, zv) % 2;
-          if (vv.dot) return pv(vv.dotSize, zv) % 2;
-          return Nv(vv, zv) % 2
-        }(vv, zv),
-        Sv = lv(vv.lineThickness * Pv, hv),
-        ev = pv(vv.lineLength, Pv),
-        gv = Math.round(vv.gap * Pv),
-        dv = vv.outline > 0 ? pv(vv.outline, Pv) : 0,
-        Wv = [];
-      if (vv.lines && (Wv.push({
-          x: Sv + gv,
+    function fT(TT, kT) {
+      const cT = kT * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
+        lT = function(TT, kT) {
+          if (TT.lines) return yT(TT.lineThickness, kT) % 2;
+          if (TT.dot) return yT(TT.dotSize, kT) % 2;
+          return xT(TT, kT) % 2
+        }(TT, kT),
+        MT = IT(TT.lineThickness * cT, lT),
+        KT = yT(TT.lineLength, cT),
+        OT = Math.round(TT.gap * cT),
+        fT = TT.outline > 0 ? yT(TT.outline, cT) : 0,
+        CT = [];
+      if (TT.lines && (CT.push({
+          x: MT + OT,
           y: 0,
-          w: ev,
-          h: Sv,
+          w: KT,
+          h: MT,
           arm: "right"
-        }), Wv.push({
-          x: -gv - ev,
+        }), CT.push({
+          x: -OT - KT,
           y: 0,
-          w: ev,
-          h: Sv,
+          w: KT,
+          h: MT,
           arm: "left"
-        }), Wv.push({
+        }), CT.push({
           x: 0,
-          y: Sv + gv,
-          w: Sv,
-          h: ev,
+          y: MT + OT,
+          w: MT,
+          h: KT,
           arm: "down"
-        }), vv.tStyle || Wv.push({
+        }), TT.tStyle || CT.push({
           x: 0,
-          y: -gv - ev,
-          w: Sv,
-          h: ev,
+          y: -OT - KT,
+          w: MT,
+          h: KT,
           arm: "up"
-        }), 0 === gv && Wv.push({
+        }), 0 === OT && CT.push({
           x: 0,
           y: 0,
-          w: Sv,
-          h: Sv
-        })), vv.dot) {
-        const zv = lv(vv.dotSize * Pv, hv),
-          ev = vv.lines && 0 === gv && vv.dotSize > vv.lineThickness ? Math.max(zv, Sv + 2) : zv,
-          pv = (Sv - ev) / 2;
-        Wv.push({
-          x: pv,
-          y: pv,
-          w: ev,
-          h: ev
+          w: MT,
+          h: MT
+        })), TT.dot) {
+        const kT = IT(TT.dotSize * cT, lT),
+          KT = TT.lines && 0 === OT && TT.dotSize > TT.lineThickness ? Math.max(kT, MT + 2) : kT,
+          yT = (MT - KT) / 2;
+        CT.push({
+          x: yT,
+          y: yT,
+          w: KT,
+          h: KT
         })
       }
-      const wv = Wv.map((vv => ({
-        ...vv,
-        x: vv.x - dv,
-        y: vv.y - dv,
-        w: vv.w + 2 * dv,
-        h: vv.h + 2 * dv
+      const jT = CT.map((TT => ({
+        ...TT,
+        x: TT.x - fT,
+        y: TT.y - fT,
+        w: TT.w + 2 * fT,
+        h: TT.h + 2 * fT
       })));
-      let av = null,
-        sv = null;
-      if (vv.circle) {
-        const zv = pv(vv.circleThickness, Pv),
-          ev = function(vv, zv) {
-            return vv + (vv % 2 === zv ? 0 : 1)
-          }(Nv(vv, Pv), hv),
-          gv = (Sv - ev) / 2;
-        av = Tv(gv, ev, zv), dv > 0 && (sv = Tv(gv - dv, ev + 2 * dv, zv + 2 * dv))
+      let vT = null,
+        tT = null;
+      if (TT.circle) {
+        const kT = yT(TT.circleThickness, cT),
+          KT = function(TT, kT) {
+            return TT + (TT % 2 === kT ? 0 : 1)
+          }(xT(TT, cT), lT),
+          OT = (MT - KT) / 2;
+        vT = AT(OT, KT, kT), fT > 0 && (tT = AT(OT - fT, KT + 2 * fT, kT + 2 * fT))
       }
       return {
-        cell: Sv,
-        fills: Wv,
-        outlines: dv > 0 ? wv : [],
-        ring: av,
-        ringOutline: sv
+        cell: MT,
+        fills: CT,
+        outlines: fT > 0 ? jT : [],
+        ring: vT,
+        ringOutline: tT
       }
     }
 
-    function Nv(vv, zv) {
-      return Math.round(vv.circleRadius * zv * 2 + pv(vv.circleThickness, zv))
+    function xT(TT, kT) {
+      return Math.round(TT.circleRadius * kT * 2 + yT(TT.circleThickness, kT))
     }
 
-    function lv(vv, zv) {
-      return Math.max(2 - zv, 2 * Math.round((vv - zv) / 2) + zv)
+    function IT(TT, kT) {
+      return Math.max(2 - kT, 2 * Math.round((TT - kT) / 2) + kT)
     }
 
-    function Tv(vv, zv, Pv) {
-      const hv = 2 * Pv >= zv - 1;
+    function AT(TT, kT, cT) {
+      const lT = 2 * cT >= kT - 1;
       return {
-        x: vv,
-        y: vv,
-        size: zv,
-        border: Math.min(Pv, Math.floor(zv / 2)),
-        filled: hv
+        x: TT,
+        y: TT,
+        size: kT,
+        border: Math.min(cT, Math.floor(kT / 2)),
+        filled: lT
       }
     }
-    var Wv = Pv(1082);
-    const wv = 1.4;
+    var CT = cT(1099);
+    const jT = 1.4;
 
-    function av(vv, zv) {
-      return vv && zv ? `scale(${wv})` : "scale(1)"
+    function vT(TT, kT) {
+      return TT && kT ? `scale(${jT})` : "scale(1)"
     }
 
-    function sv(vv) {
-      return "classic" === vv.settings.style ? (0, Wv.jsx)(cv, {
-        ...vv
-      }) : (0, Wv.jsx)(nv, {
-        ...vv
+    function tT(TT) {
+      return "classic" === TT.settings.style ? (0, CT.jsx)(QT, {
+        ...TT
+      }) : (0, CT.jsx)(wT, {
+        ...TT
       })
     }
-    const Cv = .125;
+    const hT = .125;
 
-    function iv(vv, zv) {
-      const Pv = {};
-      if (vv.color !== gv.f.color && (Pv.color = (0, gv.m)(vv.color)), vv.opacity !== gv.f.opacity && (Pv.opacity = vv.opacity / 100), vv.outline !== gv.f.outline || vv.outlineColor !== gv.f.outlineColor) {
-        const zv = vv.outline,
-          hv = (0, gv.m)(vv.outlineColor);
-        Pv.textShadow = zv > 0 ? `-${zv}px 0 ${hv}, 0 ${zv}px ${hv}, ${zv}px 0 ${hv}, 0 -${zv}px ${hv}` : "none"
+    function NT(TT, kT) {
+      const cT = {};
+      if (TT.color !== OT.g.color && (cT.color = (0, OT.m)(TT.color)), TT.opacity !== OT.g.opacity && (cT.opacity = TT.opacity / 100), TT.outline !== OT.g.outline || TT.outlineColor !== OT.g.outlineColor) {
+        const kT = TT.outline,
+          lT = (0, OT.m)(TT.outlineColor);
+        cT.textShadow = kT > 0 ? `-${kT}px 0 ${lT}, 0 ${kT}px ${lT}, ${kT}px 0 ${lT}, 0 -${kT}px ${lT}` : "none"
       }
-      if (vv.size !== gv.f.size) {
-        const hv = vv.size / 100;
-        Pv.fontSize = zv ? `calc(max(1.3rem, 18px) * ${hv})` : `calc(1.3rem * ${hv})`, Pv.marginTop = `-${Cv}em`, Pv.transformOrigin = `50% calc(50% + ${Cv}em)`
+      if (TT.size !== OT.g.size) {
+        const lT = TT.size / 100;
+        cT.fontSize = kT ? `calc(max(1.3rem, 18px) * ${lT})` : `calc(1.3rem * ${lT})`, cT.marginTop = `-${hT}em`, cT.transformOrigin = `50% calc(50% + ${hT}em)`
       }
-      return Pv
+      return cT
     }
 
-    function cv(vv) {
+    function QT(TT) {
       let {
-        settings: zv,
-        touch: Pv,
-        inPreview: hv,
-        inEditor: ev,
-        pressed: gv = !1,
-        pressRef: pv
-      } = vv;
-      return (0, Wv.jsx)("div", {
-        className: Sv()("Crosshair", {
-          Touch: Pv,
-          CrosshairInPreview: hv,
-          CrosshairInEditor: ev || hv
+        settings: kT,
+        touch: cT,
+        inPreview: lT,
+        inEditor: KT,
+        pressed: OT = !1,
+        pressRef: yT
+      } = TT;
+      return (0, CT.jsx)("div", {
+        className: MT()("Crosshair", {
+          Touch: cT,
+          CrosshairInPreview: lT,
+          CrosshairInEditor: KT || lT
         }),
-        ref: pv,
+        ref: yT,
         style: {
-          transform: av(gv, zv.growOnClick),
-          ...iv(zv, Pv)
+          transform: vT(OT, kT.growOnClick),
+          ...NT(kT, cT)
         },
         children: "+"
       })
     }
 
-    function Gv(vv, zv) {
-      return vv / zv + "px"
+    function ST(TT, kT) {
+      return TT / kT + "px"
     }
 
-    function mv(vv, zv, Pv, hv) {
+    function DT(TT, kT, cT, lT) {
       return {
-        ...Fv(vv, zv, Pv),
-        width: Gv(vv.w, Pv),
-        height: Gv(vv.h, Pv),
-        background: hv
+        ...rT(TT, kT, cT),
+        width: ST(TT.w, cT),
+        height: ST(TT.h, cT),
+        background: lT
       }
     }
 
-    function jv(vv, zv, Pv) {
+    function aT(TT, kT, cT) {
       return {
-        left: Gv(vv.x, zv),
-        top: Gv(vv.y, zv),
-        width: Gv(vv.size, zv),
-        height: Gv(vv.size, zv),
-        borderWidth: Gv(vv.border, zv),
-        borderColor: Pv,
-        background: vv.filled ? Pv : void 0
+        left: ST(TT.x, kT),
+        top: ST(TT.y, kT),
+        width: ST(TT.size, kT),
+        height: ST(TT.size, kT),
+        borderWidth: ST(TT.border, kT),
+        borderColor: cT,
+        background: TT.filled ? cT : void 0
       }
     }
-    const fv = {
+    const FT = {
       left: [-1, 0],
       right: [1, 0],
       up: [0, -1],
       down: [0, 1]
     };
 
-    function Fv(vv, zv, Pv) {
-      const [hv, Sv] = vv.arm ? fv[vv.arm] : [0, 0], ev = Math.round(zv * Pv);
+    function rT(TT, kT, cT) {
+      const [lT, MT] = TT.arm ? FT[TT.arm] : [0, 0], KT = Math.round(kT * cT);
       return {
-        left: Gv(vv.x + hv * ev, Pv),
-        top: Gv(vv.y + Sv * ev, Pv)
+        left: ST(TT.x + lT * KT, cT),
+        top: ST(TT.y + MT * KT, cT)
       }
     }
 
-    function Yv(vv) {
-      return vv.arm ? {
-        "data-arm": vv.arm,
-        "data-x": vv.x,
-        "data-y": vv.y
+    function PT(TT) {
+      return TT.arm ? {
+        "data-arm": TT.arm,
+        "data-x": TT.x,
+        "data-y": TT.y
       } : {}
     }
 
-    function nv(vv) {
+    function wT(TT) {
       let {
-        settings: zv,
-        inPreview: Pv,
-        inEditor: hv,
-        pressed: pv = !1,
-        spread: Nv,
-        spreadRef: lv
-      } = vv;
-      const Tv = (0, ev.useRef)(null),
+        settings: kT,
+        inPreview: cT,
+        inEditor: lT,
+        pressed: yT = !1,
+        spread: xT,
+        spreadRef: IT
+      } = TT;
+      const AT = (0, KT.useRef)(null),
         {
-          box: av,
-          dpr: sv
-        } = function(vv) {
-          const [zv, Pv] = (0, ev.useState)({
+          box: vT,
+          dpr: tT
+        } = function(TT) {
+          const [kT, cT] = (0, KT.useState)({
             box: {
               left: 0,
               top: 0,
@@ -411,200 +411,200 @@ export const modules = {
             },
             dpr: 1
           });
-          return (0, ev.useLayoutEffect)((() => {
-            const zv = vv.current;
-            if (!zv) return;
-            const hv = () => {
-              const vv = zv.getBoundingClientRect(),
-                hv = window.devicePixelRatio || 1;
-              Pv((zv => zv.dpr === hv && zv.box.left === vv.left && zv.box.top === vv.top && zv.box.width === vv.width && zv.box.height === vv.height ? zv : {
+          return (0, KT.useLayoutEffect)((() => {
+            const kT = TT.current;
+            if (!kT) return;
+            const lT = () => {
+              const TT = kT.getBoundingClientRect(),
+                lT = window.devicePixelRatio || 1;
+              cT((kT => kT.dpr === lT && kT.box.left === TT.left && kT.box.top === TT.top && kT.box.width === TT.width && kT.box.height === TT.height ? kT : {
                 box: {
-                  left: vv.left,
-                  top: vv.top,
-                  width: vv.width,
-                  height: vv.height
+                  left: TT.left,
+                  top: TT.top,
+                  width: TT.width,
+                  height: TT.height
                 },
-                dpr: hv
+                dpr: lT
               }))
             };
-            hv();
-            const Sv = new ResizeObserver(hv);
-            return Sv.observe(zv), window.addEventListener("resize", hv), window.addEventListener("scroll", hv, !0), () => {
-              Sv.disconnect(), window.removeEventListener("resize", hv), window.removeEventListener("scroll", hv, !0)
+            lT();
+            const MT = new ResizeObserver(lT);
+            return MT.observe(kT), window.addEventListener("resize", lT), window.addEventListener("scroll", lT, !0), () => {
+              MT.disconnect(), window.removeEventListener("resize", lT), window.removeEventListener("scroll", lT, !0)
             }
-          }), [vv]), zv
-        }(Tv),
-        Cv = (0, ev.useRef)(sv);
-      Cv.current = sv;
-      const iv = dv(zv, sv, pv && zv.growOnClick ? wv : 1),
-        cv = function(vv, zv, Pv) {
-          const hv = Math.round((vv.left + vv.width / 2) * Pv - zv / 2),
-            Sv = Math.round((vv.top + vv.height / 2) * Pv - zv / 2);
+          }), [TT]), kT
+        }(AT),
+        hT = (0, KT.useRef)(tT);
+      hT.current = tT;
+      const NT = fT(kT, tT, yT && kT.growOnClick ? jT : 1),
+        QT = function(TT, kT, cT) {
+          const lT = Math.round((TT.left + TT.width / 2) * cT - kT / 2),
+            MT = Math.round((TT.top + TT.height / 2) * cT - kT / 2);
           return {
-            x: hv / Pv - vv.left,
-            y: Sv / Pv - vv.top
+            x: lT / cT - TT.left,
+            y: MT / cT - TT.top
           }
-        }(av, iv.cell, sv),
-        Gv = (0, gv.m)(zv.color),
-        fv = (0, gv.m)(zv.outlineColor),
-        nv = (0, ev.useRef)(0);
-      (0, ev.useLayoutEffect)((() => {
-        if (lv) return lv.current = vv => {
-          var zv;
-          nv.current = vv, null === (zv = Tv.current) || void 0 === zv || zv.querySelectorAll("[data-arm]").forEach((zv => {
-            Object.assign(zv.style, Fv(function(vv) {
+        }(vT, NT.cell, tT),
+        ST = (0, OT.m)(kT.color),
+        FT = (0, OT.m)(kT.outlineColor),
+        wT = (0, KT.useRef)(0);
+      (0, KT.useLayoutEffect)((() => {
+        if (IT) return IT.current = TT => {
+          var kT;
+          wT.current = TT, null === (kT = AT.current) || void 0 === kT || kT.querySelectorAll("[data-arm]").forEach((kT => {
+            Object.assign(kT.style, rT(function(TT) {
               return {
-                x: Number(vv.dataset.x),
-                y: Number(vv.dataset.y),
-                arm: vv.dataset.arm
+                x: Number(TT.dataset.x),
+                y: Number(TT.dataset.y),
+                arm: TT.dataset.arm
               }
-            }(zv), vv, Cv.current))
+            }(kT), TT, hT.current))
           }))
         }, () => {
-          lv.current = null
+          IT.current = null
         }
-      }), [lv]);
-      const Ov = null !== Nv && void 0 !== Nv ? Nv : nv.current;
-      return (0, Wv.jsx)("div", {
-        ref: Tv,
-        className: Sv()("CrosshairShapes", {
-          CrosshairInPreview: Pv,
-          CrosshairInEditor: hv || Pv,
-          CrosshairSpreads: void 0 !== lv
+      }), [IT]);
+      const mT = null !== xT && void 0 !== xT ? xT : wT.current;
+      return (0, CT.jsx)("div", {
+        ref: AT,
+        className: MT()("CrosshairShapes", {
+          CrosshairInPreview: cT,
+          CrosshairInEditor: lT || cT,
+          CrosshairSpreads: void 0 !== IT
         }),
-        children: (0, Wv.jsx)("div", {
+        children: (0, CT.jsx)("div", {
           className: "CrosshairShapesOrigin",
           style: {
-            left: cv.x,
-            top: cv.y,
-            opacity: zv.opacity / 100
+            left: QT.x,
+            top: QT.y,
+            opacity: kT.opacity / 100
           },
-          children: (0, Wv.jsxs)("div", {
+          children: (0, CT.jsxs)("div", {
             className: "CrosshairShapesPress",
-            children: [iv.ringOutline && (0, Wv.jsx)("div", {
+            children: [NT.ringOutline && (0, CT.jsx)("div", {
               className: "CrosshairRing",
-              style: jv(iv.ringOutline, sv, fv)
-            }), iv.outlines.map(((vv, zv) => (0, Wv.jsx)("div", {
+              style: aT(NT.ringOutline, tT, FT)
+            }), NT.outlines.map(((TT, kT) => (0, CT.jsx)("div", {
               className: "CrosshairPart",
-              ...Yv(vv),
-              style: mv(vv, Ov, sv, fv)
-            }, `o${zv}`))), iv.ring && (0, Wv.jsx)("div", {
+              ...PT(TT),
+              style: DT(TT, mT, tT, FT)
+            }, `o${kT}`))), NT.ring && (0, CT.jsx)("div", {
               className: "CrosshairRing",
-              style: jv(iv.ring, sv, Gv)
-            }), iv.fills.map(((vv, zv) => (0, Wv.jsx)("div", {
+              style: aT(NT.ring, tT, ST)
+            }), NT.fills.map(((TT, kT) => (0, CT.jsx)("div", {
               className: "CrosshairPart",
-              ...Yv(vv),
-              style: mv(vv, Ov, sv, Gv)
-            }, `f${zv}`)))]
+              ...PT(TT),
+              style: DT(TT, mT, tT, ST)
+            }, `f${kT}`)))]
           })
         })
       })
     }
   },
-  8983: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => lv,
-      h: () => Cv,
-      k: () => sv
+  9337: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => IT,
+      e: () => hT,
+      i: () => tT
     });
-    var hv = Pv(8940);
-    const Sv = "XH1-",
-      ev = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      gv = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      pv = ["color", "outlineColor"],
-      dv = 1 + 3 * pv.length + gv.length + 1,
-      Nv = Math.ceil(8 * dv / Math.log2(62)),
-      lv = Sv.length + Nv;
+    var lT = cT(9302);
+    const MT = "XH1-",
+      KT = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      OT = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      yT = ["color", "outlineColor"],
+      fT = 1 + 3 * yT.length + OT.length + 1,
+      xT = Math.ceil(8 * fT / Math.log2(62)),
+      IT = MT.length + xT;
 
-    function Tv(vv) {
-      let zv = 90;
-      for (const Pv of vv) zv = 31 * zv + Pv & 255;
-      return zv
+    function AT(TT) {
+      let kT = 90;
+      for (const cT of TT) kT = 31 * kT + cT & 255;
+      return kT
     }
-    const Wv = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      wv = BigInt(Wv.length);
+    const CT = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      jT = BigInt(CT.length);
 
-    function av(vv, zv) {
-      let Pv = 0n;
-      for (const Sv of vv) {
-        const vv = Wv.indexOf(Sv);
-        if (vv < 0) return null;
-        Pv = Pv * wv + BigInt(vv)
+    function vT(TT, kT) {
+      let cT = 0n;
+      for (const MT of TT) {
+        const TT = CT.indexOf(MT);
+        if (TT < 0) return null;
+        cT = cT * jT + BigInt(TT)
       }
-      if (Pv >> BigInt(8 * zv) !== 0n) return null;
-      const hv = [];
-      for (let Sv = 0; Sv < zv; Sv++) hv.unshift(Number(0xffn & Pv)), Pv >>= 8n;
-      return hv
+      if (cT >> BigInt(8 * kT) !== 0n) return null;
+      const lT = [];
+      for (let MT = 0; MT < kT; MT++) lT.unshift(Number(0xffn & cT)), cT >>= 8n;
+      return lT
     }
 
-    function sv(vv) {
-      let zv = "shapes" === vv.style ? 1 : 0;
-      ev.forEach(((Pv, hv) => {
-        vv[Pv] && (zv |= 1 << hv + 1)
+    function tT(TT) {
+      let kT = "shapes" === TT.style ? 1 : 0;
+      KT.forEach(((cT, lT) => {
+        TT[cT] && (kT |= 1 << lT + 1)
       }));
-      const Pv = [zv];
-      for (const Sv of pv) {
-        const zv = (0, hv.i)(Sv, vv[Sv]);
-        Pv.push(zv >> 16 & 255, zv >> 8 & 255, 255 & zv)
+      const cT = [kT];
+      for (const MT of yT) {
+        const kT = (0, lT.k)(MT, TT[MT]);
+        cT.push(kT >> 16 & 255, kT >> 8 & 255, 255 & kT)
       }
-      for (const Sv of gv) {
+      for (const MT of OT) {
         const {
-          min: zv,
-          step: ev
-        } = hv.e[Sv];
-        Pv.push(Math.round(((0, hv.i)(Sv, vv[Sv]) - zv) / ev))
+          min: kT,
+          step: KT
+        } = lT.c[MT];
+        cT.push(Math.round(((0, lT.k)(MT, TT[MT]) - kT) / KT))
       }
-      return Pv.push(Tv(Pv)), Sv + function(vv, zv) {
-        let Pv = 0n;
-        for (const Sv of vv) Pv = Pv << 8n | BigInt(Sv);
-        let hv = "";
-        for (let Sv = 0; Sv < zv; Sv++) hv = Wv[Number(Pv % wv)] + hv, Pv /= wv;
-        return hv
-      }(Pv, Nv)
+      return cT.push(AT(cT)), MT + function(TT, kT) {
+        let cT = 0n;
+        for (const MT of TT) cT = cT << 8n | BigInt(MT);
+        let lT = "";
+        for (let MT = 0; MT < kT; MT++) lT = CT[Number(cT % jT)] + lT, cT /= jT;
+        return lT
+      }(cT, xT)
     }
 
-    function Cv(vv) {
-      for (const zv of vv.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${Nv}})`, "gi"))) {
-        const vv = iv(av(zv[1], dv));
-        if (vv) return vv
+    function hT(TT) {
+      for (const kT of TT.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${xT}})`, "gi"))) {
+        const TT = NT(vT(kT[1], fT));
+        if (TT) return TT
       }
       return null
     }
 
-    function iv(vv) {
-      if (!vv || vv.length !== dv || Tv(vv.slice(0, -1)) !== vv[vv.length - 1]) return null;
-      const zv = vv[0],
-        Pv = {
-          ...hv.f,
-          style: 1 & zv ? "shapes" : "classic"
+    function NT(TT) {
+      if (!TT || TT.length !== fT || AT(TT.slice(0, -1)) !== TT[TT.length - 1]) return null;
+      const kT = TT[0],
+        cT = {
+          ...lT.g,
+          style: 1 & kT ? "shapes" : "classic"
         };
-      ev.forEach(((vv, hv) => {
-        Pv[vv] = 0 !== (zv & 1 << hv + 1)
+      KT.forEach(((TT, lT) => {
+        cT[TT] = 0 !== (kT & 1 << lT + 1)
       }));
-      let Sv = 1;
-      for (const hv of pv) Pv[hv] = vv[Sv] << 16 | vv[Sv + 1] << 8 | vv[Sv + 2], Sv += 3;
-      for (const ev of gv) {
+      let MT = 1;
+      for (const lT of yT) cT[lT] = TT[MT] << 16 | TT[MT + 1] << 8 | TT[MT + 2], MT += 3;
+      for (const KT of OT) {
         const {
-          min: zv,
-          step: gv
-        } = hv.e[ev];
-        Pv[ev] = (0, hv.i)(ev, zv + vv[Sv] * gv), Sv++
+          min: kT,
+          step: OT
+        } = lT.c[KT];
+        cT[KT] = (0, lT.k)(KT, kT + TT[MT] * OT), MT++
       }
-      return Pv
+      return cT
     }
   },
-  8940: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => hv,
-      f: () => Sv,
-      i: () => ev,
-      m: () => Nv,
-      p: () => dv,
-      t: () => lv,
-      v: () => pv,
-      x: () => gv
+  9302: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => lT,
+      g: () => MT,
+      k: () => KT,
+      m: () => xT,
+      o: () => fT,
+      r: () => IT,
+      u: () => yT,
+      x: () => OT
     });
-    const hv = {
+    const lT = {
         opacity: {
           min: 5,
           max: 100,
@@ -661,7 +661,7 @@ export const modules = {
           step: 1
         }
       },
-      Sv = Object.freeze({
+      MT = Object.freeze({
         style: "classic",
         color: 16777215,
         opacity: 100,
@@ -682,224 +682,224 @@ export const modules = {
         forGuns: !1
       });
 
-    function ev(vv, zv) {
-      var Pv;
+    function KT(TT, kT) {
+      var cT;
       const {
-        min: ev,
-        max: gv,
-        step: pv
-      } = hv[vv];
-      if (!Number.isFinite(zv)) return Sv[vv];
-      const dv = (null !== (Pv = String(pv).split(".")[1]) && void 0 !== Pv ? Pv : "").length,
-        Nv = Number((Math.round(zv / pv) * pv).toFixed(dv));
-      return Math.min(gv, Math.max(ev, Nv))
+        min: KT,
+        max: OT,
+        step: yT
+      } = lT[TT];
+      if (!Number.isFinite(kT)) return MT[TT];
+      const fT = (null !== (cT = String(yT).split(".")[1]) && void 0 !== cT ? cT : "").length,
+        xT = Number((Math.round(kT / yT) * yT).toFixed(fT));
+      return Math.min(OT, Math.max(KT, xT))
     }
 
-    function gv(vv, zv, Pv) {
-      const hv = "number" === typeof Pv ? ev(zv, Pv) : Pv;
+    function OT(TT, kT, cT) {
+      const lT = "number" === typeof cT ? KT(kT, cT) : cT;
       return {
-        ...vv,
-        [zv]: hv
+        ...TT,
+        [kT]: lT
       }
     }
 
-    function pv(vv, zv) {
-      let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(Sv).every((hv => Pv.includes(hv) || vv[hv] === zv[hv]))
+    function yT(TT, kT) {
+      let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(MT).every((lT => cT.includes(lT) || TT[lT] === kT[lT]))
     }
 
-    function dv(vv) {
-      return pv(vv, Sv)
+    function fT(TT) {
+      return yT(TT, MT)
     }
 
-    function Nv(vv) {
-      return `#${vv.toString(16).padStart(6,"0")}`
+    function xT(TT) {
+      return `#${TT.toString(16).padStart(6,"0")}`
     }
 
-    function lv(vv) {
-      const zv = /^#?([0-9a-f]{6})$/i.exec(vv.trim());
-      return zv ? parseInt(zv[1], 16) : null
+    function IT(TT) {
+      const kT = /^#?([0-9a-f]{6})$/i.exec(TT.trim());
+      return kT ? parseInt(kT[1], 16) : null
     }
   },
-  8987: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => Tv,
-      f: () => Wv
+  9346: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => AT,
+      e: () => CT
     });
-    var hv = Pv(52),
-      Sv = Pv(39),
-      ev = Pv(8983),
-      gv = Pv(8940);
-    const pv = "crosshairCode";
-    let dv = null;
-    const Nv = new Set;
+    var lT = cT(71),
+      MT = cT(47),
+      KT = cT(9337),
+      OT = cT(9302);
+    const yT = "crosshairCode";
+    let fT = null;
+    const xT = new Set;
 
-    function lv() {
-      if (null === dv) {
-        var vv;
-        const zv = Sv.h.getItem(pv);
-        dv = null !== (vv = "string" === typeof zv ? (0, ev.h)(zv) : null) && void 0 !== vv ? vv : gv.f
+    function IT() {
+      if (null === fT) {
+        var TT;
+        const kT = MT.e.getItem(yT);
+        fT = null !== (TT = "string" === typeof kT ? (0, KT.e)(kT) : null) && void 0 !== TT ? TT : OT.g
       }
-      return dv
+      return fT
     }
 
-    function Tv(vv) {
-      dv = vv, (0, gv.p)(vv) ? Sv.h.removeItem(pv) : Sv.h.setItem(pv, (0, ev.k)(vv));
-      for (const zv of Nv) zv()
+    function AT(TT) {
+      fT = TT, (0, OT.o)(TT) ? MT.e.removeItem(yT) : MT.e.setItem(yT, (0, KT.i)(TT));
+      for (const kT of xT) kT()
     }
 
-    function Wv() {
-      const [vv, zv] = (0, hv.useState)(lv);
-      return (0, hv.useEffect)((() => {
-        const vv = () => {
-          zv(lv())
+    function CT() {
+      const [TT, kT] = (0, lT.useState)(IT);
+      return (0, lT.useEffect)((() => {
+        const TT = () => {
+          kT(IT())
         };
-        return vv(), Pv = vv, Nv.add(Pv), () => {
-          Nv.delete(Pv)
+        return TT(), cT = TT, xT.add(cT), () => {
+          xT.delete(cT)
         };
-        var Pv
-      }), []), vv
+        var cT
+      }), []), TT
     }
   },
-  36284: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => ev,
-      e: () => dv,
-      g: () => gv
+  36591: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => KT,
+      e: () => fT,
+      h: () => OT
     });
-    var hv = Pv(626),
-      Sv = Pv(2599);
+    var lT = cT(617),
+      MT = cT(2790);
 
-    function ev(vv) {
-      return vv === (0, Sv.g)().W8 ? (0, Sv.g)().sV : vv
+    function KT(TT) {
+      return TT === (0, MT.f)().W9 ? (0, MT.f)().jH : TT
     }
 
-    function gv(vv) {
-      return !(0, hv.N)(vv) && ev(vv) === (0, Sv.g)().sV
+    function OT(TT) {
+      return !(0, lT.R)(TT) && KT(TT) === (0, MT.f)().jH
     }
-    const pv = "gravity";
+    const yT = "gravity";
 
-    function dv() {
-      return (0, Sv.g)().physics[pv][1]
+    function fT() {
+      return (0, MT.f)().physics[yT][1]
     }
   },
-  36269: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => Fv
+  36573: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => rT
     });
-    var hv = Pv(36271),
-      Sv = Pv(185),
-      ev = Pv(4603),
-      gv = Pv(36279),
-      pv = Pv(35980),
-      dv = Pv(36314),
-      Nv = Pv(36284),
-      lv = Pv(327),
-      Tv = Pv.n(lv),
-      Wv = Pv(1184),
-      wv = Pv(2599),
-      av = Pv(36310),
-      sv = Pv(26),
-      Cv = Pv(22),
-      iv = Pv(36290),
-      cv = Pv(36292),
-      Gv = Pv(36299);
-    const mv = new Set(["note"]);
-    const jv = {
-      stop: () => jv,
-      fade: () => jv,
-      rate: () => jv,
+    var lT = cT(36580),
+      MT = cT(218),
+      KT = cT(4820),
+      OT = cT(36584),
+      yT = cT(36242),
+      fT = cT(36619),
+      xT = cT(36591),
+      IT = cT(350),
+      AT = cT.n(IT),
+      CT = cT(1202),
+      jT = cT(2790),
+      vT = cT(36614),
+      tT = cT(36),
+      hT = cT(31),
+      NT = cT(36593),
+      QT = cT(36595),
+      ST = cT(36602);
+    const DT = new Set(["note"]);
+    const aT = {
+      stop: () => aT,
+      fade: () => aT,
+      rate: () => aT,
       stopsAtOnce: () => !1,
       isAlive: () => !1,
       getDurationMs: () => 0,
       getVolume: () => 0,
       getRelativeVolume: () => 0,
-      setRelativeVolume: () => jv,
-      setPannerAttr: () => jv,
-      setPosition: () => jv
+      setRelativeVolume: () => aT,
+      setPannerAttr: () => aT,
+      setPosition: () => aT
     };
-    class fv {
-      constructor(vv) {
-        let zv, {
-          src: Pv,
-          volumeScalar: Sv,
-          isSoundSprite: gv
-        } = vv;
-        this._howl = void 0, this._volumeMultiplier = void 0, this._spriteTrackSrc = void 0, this._loadFailed = !1, this._unloaded = !1, gv ? (zv = (0, hv.f)(Pv), this._spriteTrackSrc = zv) : zv = {
-          src: Wv.clientSideServerUrls.staticUrl + Pv
-        }, this._volumeMultiplier = new dv.j, this._volumeMultiplier.setMultiplierType("persistentScalar", Sv), this._howl = (0, pv.countDecodesAs)(new ev.Howl({
-          ...zv,
+    class FT {
+      constructor(TT) {
+        let kT, {
+          src: cT,
+          volumeScalar: MT,
+          isSoundSprite: OT
+        } = TT;
+        this._howl = void 0, this._volumeMultiplier = void 0, this._spriteTrackSrc = void 0, this._loadFailed = !1, this._unloaded = !1, OT ? (kT = (0, lT.l)(cT), this._spriteTrackSrc = kT) : kT = {
+          src: CT.clientSideServerUrls.staticUrl + cT
+        }, this._volumeMultiplier = new fT.h, this._volumeMultiplier.setMultiplierType("persistentScalar", MT), this._howl = (0, yT.countDecodesAs)(new KT.Howl({
+          ...kT,
           pool: 15
         }), "sheet"), this._howl.once("loaderror", (() => {
           this._loadFailed = !0
         }))
       }
       play() {
-        let vv, zv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0,
-          Pv = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (zv) {
-          var hv;
-          if (null === (hv = this._spriteTrackSrc) || void 0 === hv || !hv.sprite[zv]) throw new Error("No such sprite in your spritetrack");
-          vv = this._howl.play(zv)
-        } else vv = this._howl.play();
-        Pv && this._howl.loop(!0, vv);
-        let Sv = 1;
-        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), vv);
-        const ev = {
+        let TT, kT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0,
+          cT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (kT) {
+          var lT;
+          if (null === (lT = this._spriteTrackSrc) || void 0 === lT || !lT.sprite[kT]) throw new Error("No such sprite in your spritetrack");
+          TT = this._howl.play(kT)
+        } else TT = this._howl.play();
+        cT && this._howl.loop(!0, TT);
+        let MT = 1;
+        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), TT);
+        const KT = {
           stop: () => {
-            var zv;
-            return null === (zv = this.liveHowl()) || void 0 === zv || zv.stop(vv), ev
+            var kT;
+            return null === (kT = this.liveHowl()) || void 0 === kT || kT.stop(TT), KT
           },
-          fade: (zv, Pv, hv) => {
-            var Sv;
-            return null === (Sv = this.liveHowl()) || void 0 === Sv || Sv.fade(zv, Pv, hv, vv), ev
+          fade: (kT, cT, lT) => {
+            var MT;
+            return null === (MT = this.liveHowl()) || void 0 === MT || MT.fade(kT, cT, lT, TT), KT
           },
-          rate: zv => {
-            var Pv;
-            return null === (Pv = this.liveHowl()) || void 0 === Pv || Pv.rate(zv, vv), ev
+          rate: kT => {
+            var cT;
+            return null === (cT = this.liveHowl()) || void 0 === cT || cT.rate(kT, TT), KT
           },
-          stopsAtOnce: () => this._howl.playing(vv) && !this._howl._playLock,
+          stopsAtOnce: () => this._howl.playing(TT) && !this._howl._playLock,
           isAlive: () => {
-            const zv = this._howl._soundById(vv);
-            return !this._loadFailed && !!zv && !zv._ended
+            const kT = this._howl._soundById(TT);
+            return !this._loadFailed && !!kT && !kT._ended
           },
-          getDurationMs: () => this._howl._soundById(vv) ? 1e3 * this._howl.duration(vv) / this._howl.rate(vv) : 0,
-          getVolume: () => Sv * this._volumeMultiplier.getTotalMultipliedVal(),
-          getRelativeVolume: () => Sv,
-          setRelativeVolume: zv => {
-            var Pv;
-            if (zv > 1) throw new Error("Volume should be <= 1");
-            return Sv = Cv.c.get("soundOnFromAd") ? zv : 0, null === (Pv = this.liveHowl()) || void 0 === Pv || Pv.volume(Math.min(1, Sv * this._volumeMultiplier.getTotalMultipliedVal()), vv), ev
+          getDurationMs: () => this._howl._soundById(TT) ? 1e3 * this._howl.duration(TT) / this._howl.rate(TT) : 0,
+          getVolume: () => MT * this._volumeMultiplier.getTotalMultipliedVal(),
+          getRelativeVolume: () => MT,
+          setRelativeVolume: kT => {
+            var cT;
+            if (kT > 1) throw new Error("Volume should be <= 1");
+            return MT = hT.e.get("soundOnFromAd") ? kT : 0, null === (cT = this.liveHowl()) || void 0 === cT || cT.volume(Math.min(1, MT * this._volumeMultiplier.getTotalMultipliedVal()), TT), KT
           },
-          setPannerAttr: zv => {
+          setPannerAttr: kT => {
             let {
-              coneInnerAngle: Pv,
-              coneOuterAngle: hv = 360,
-              coneOuterGain: Sv,
-              distanceModel: gv,
-              maxDistance: pv,
-              panningModel: dv,
-              refDistance: Nv,
-              rolloffFactor: lv
-            } = zv;
+              coneInnerAngle: cT,
+              coneOuterAngle: lT = 360,
+              coneOuterGain: MT,
+              distanceModel: OT,
+              maxDistance: yT,
+              panningModel: fT,
+              refDistance: xT,
+              rolloffFactor: IT
+            } = kT;
             return this._setPannerAttr({
-              id: vv,
-              coneInnerAngle: Pv,
-              coneOuterAngle: hv,
-              coneOuterGain: Sv,
-              distanceModel: gv,
-              maxDistance: pv,
-              panningModel: dv,
-              refDistance: Nv,
-              rolloffFactor: lv
-            }), ev
+              id: TT,
+              coneInnerAngle: cT,
+              coneOuterAngle: lT,
+              coneOuterGain: MT,
+              distanceModel: OT,
+              maxDistance: yT,
+              panningModel: fT,
+              refDistance: xT,
+              rolloffFactor: IT
+            }), KT
           },
-          setPosition: zv => {
-            var Pv;
-            return null === (Pv = this.liveHowl()) || void 0 === Pv || Pv.pos(zv[2], zv[1], zv[0], vv), ev
+          setPosition: kT => {
+            var cT;
+            return null === (cT = this.liveHowl()) || void 0 === cT || cT.pos(kT[2], kT[1], kT[0], TT), KT
           }
         };
-        return ev
+        return KT
       }
       liveHowl() {
         return this._unloaded ? null : this._howl
@@ -908,199 +908,199 @@ export const modules = {
         return "loaded" === this._howl.state()
       }
       unloadOnceIdle() {
-        (0, gv.b)(this._howl, (() => {
+        (0, OT.c)(this._howl, (() => {
           this._unloaded = !0
         }))
       }
-      setGlobalVolume(vv) {
-        this._volumeMultiplier.setMultiplierType("globalVolume", vv), this._howl.volume(vv)
+      setGlobalVolume(TT) {
+        this._volumeMultiplier.setMultiplierType("globalVolume", TT), this._howl.volume(TT)
       }
-      _setPannerAttr(vv) {
+      _setPannerAttr(TT) {
         let {
-          id: zv,
-          coneInnerAngle: Pv = 360,
-          coneOuterAngle: hv = 360,
-          coneOuterGain: Sv = 0,
-          distanceModel: ev = "inverse",
-          maxDistance: gv = 1e3,
-          panningModel: pv = "HRTF",
-          refDistance: dv = av.e,
-          rolloffFactor: Nv = 1
-        } = vv;
-        const lv = this.liveHowl();
-        if (null === lv) return;
-        lv.pannerAttr({
-          coneOuterAngle: hv
-        }, zv);
-        const Tv = {
-          coneInnerAngle: Pv,
-          coneOuterAngle: hv,
-          coneOuterGain: Sv,
-          distanceModel: ev,
-          maxDistance: gv,
-          panningModel: pv,
-          refDistance: dv,
-          rolloffFactor: Nv
+          id: kT,
+          coneInnerAngle: cT = 360,
+          coneOuterAngle: lT = 360,
+          coneOuterGain: MT = 0,
+          distanceModel: KT = "inverse",
+          maxDistance: OT = 1e3,
+          panningModel: yT = "HRTF",
+          refDistance: fT = vT.g,
+          rolloffFactor: xT = 1
+        } = TT;
+        const IT = this.liveHowl();
+        if (null === IT) return;
+        IT.pannerAttr({
+          coneOuterAngle: lT
+        }, kT);
+        const AT = {
+          coneInnerAngle: cT,
+          coneOuterAngle: lT,
+          coneOuterGain: MT,
+          distanceModel: KT,
+          maxDistance: OT,
+          panningModel: yT,
+          refDistance: fT,
+          rolloffFactor: xT
         };
-        lv.pannerAttr(Tv, zv)
+        IT.pannerAttr(AT, kT)
       }
     }
-    const Fv = new class {
+    const rT = new class {
       constructor() {
-        this.stereoSheets = {}, this.spatialSheets = {}, this.spatialVoices = new iv.d, sv.j.subscribe("appManagerUpdated|soundVolume", (vv => {
-          const zv = Object.values(this.stereoSheets).concat(Object.values(this.spatialSheets));
-          for (const Pv of zv) Pv.setGlobalVolume(vv)
+        this.stereoSheets = {}, this.spatialSheets = {}, this.spatialVoices = new NT.c, tT.k.subscribe("appManagerUpdated|soundVolume", (TT => {
+          const kT = Object.values(this.stereoSheets).concat(Object.values(this.spatialSheets));
+          for (const cT of kT) cT.setGlobalVolume(TT)
         }))
       }
-      play(vv, zv) {
-        var Pv;
-        let ev, gv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (Pv = (0, wv.g)()) || void 0 === Pv ? void 0 : Pv.sV,
-          pv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : av.d,
-          dv = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : av.e,
-          lv = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        var Wv;
-        (0, wv.g)() ? ev = !!Array.isArray(gv) || (0, Nv.b)(gv) !== (null === (Wv = (0, wv.g)()) || void 0 === Wv ? void 0 : Wv.sV): ev = !1;
-        const sv = (0, hv.i)(vv),
-          Cv = this.loadSheet(ev ? this.spatialSheets : this.stereoSheets, sv);
-        if (!ev) {
-          const Pv = Cv.play(vv, lv);
-          return Pv.setRelativeVolume(zv), Pv
+      play(TT, kT) {
+        var cT;
+        let KT, OT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (cT = (0, jT.f)()) || void 0 === cT ? void 0 : cT.jH,
+          yT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : vT.f,
+          fT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : vT.g,
+          IT = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        var CT;
+        (0, jT.f)() ? KT = !!Array.isArray(OT) || (0, xT.b)(OT) !== (null === (CT = (0, jT.f)()) || void 0 === CT ? void 0 : CT.jH): KT = !1;
+        const tT = (0, lT.m)(TT),
+          hT = this.loadSheet(KT ? this.spatialSheets : this.stereoSheets, tT);
+        if (!KT) {
+          const cT = hT.play(TT, IT);
+          return cT.setRelativeVolume(kT), cT
         }
-        const cv = (0, wv.g)(),
-          Gv = Array.isArray(gv) ? gv : cv.Rm.yG(gv),
-          fv = cv.Rm.yG(cv.sV);
-        if (!Gv || Tv().sqrDist(Gv, fv) > pv * pv) return jv;
-        let Fv;
-        if (!lv) {
+        const QT = (0, jT.f)(),
+          ST = Array.isArray(OT) ? OT : QT.oN.kN(OT),
+          FT = QT.oN.kN(QT.jH);
+        if (!ST || AT().sqrDist(ST, FT) > yT * yT) return aT;
+        let rT;
+        if (!IT) {
           if (!this.spatialVoices.admit({
-              group: mv.has(sv) ? null : (0, iv.k)(vv),
-              loudness: (0, iv.g)(zv, Tv().Mg(Gv, fv), dv),
+              group: DT.has(tT) ? null : (0, NT.h)(TT),
+              loudness: (0, NT.f)(kT, AT().JO(ST, FT), fT),
               startMs: performance.now(),
               getDurationMs: () => {
-                var vv, zv;
-                return null !== (vv = null === (zv = Fv) || void 0 === zv ? void 0 : zv.getDurationMs()) && void 0 !== vv ? vv : 0
+                var TT, kT;
+                return null !== (TT = null === (kT = rT) || void 0 === kT ? void 0 : kT.getDurationMs()) && void 0 !== TT ? TT : 0
               },
               isAlive: () => {
-                var vv, zv;
-                return null !== (vv = null === (zv = Fv) || void 0 === zv ? void 0 : zv.isAlive()) && void 0 !== vv && vv
+                var TT, kT;
+                return null !== (TT = null === (kT = rT) || void 0 === kT ? void 0 : kT.isAlive()) && void 0 !== TT && TT
               },
               canStop: () => {
-                var vv, zv;
-                return null !== (vv = null === (zv = Fv) || void 0 === zv ? void 0 : zv.stopsAtOnce()) && void 0 !== vv && vv
+                var TT, kT;
+                return null !== (TT = null === (kT = rT) || void 0 === kT ? void 0 : kT.stopsAtOnce()) && void 0 !== TT && TT
               },
               stop: () => {
-                var vv;
-                null === (vv = Fv) || void 0 === vv || vv.stop()
+                var TT;
+                null === (TT = rT) || void 0 === TT || TT.stop()
               }
-            })) return jv
+            })) return aT
         }
-        return Fv = Cv.play(vv, lv), Fv.setRelativeVolume(zv), Fv.setPannerAttr({
-          refDistance: dv
-        }), Fv.setPosition([Gv[0], Gv[1] + Sv.f.lG * Sv.f.playerEyeToHeightRatio, Gv[2]]), Fv
+        return rT = hT.play(TT, IT), rT.setRelativeVolume(kT), rT.setPannerAttr({
+          refDistance: fT
+        }), rT.setPosition([ST[0], ST[1] + MT.f.Iw * MT.f.playerEyeToHeightRatio, ST[2]]), rT
       }
-      preload(vv) {
-        this.loadSheet(this.stereoSheets, (0, hv.i)(vv))
+      preload(TT) {
+        this.loadSheet(this.stereoSheets, (0, lT.m)(TT))
       }
-      loadSheet(vv, zv) {
-        let Pv = vv[zv];
-        return Pv || ((0, Gv.d)(zv), Pv = new fv({
-          src: zv,
+      loadSheet(TT, kT) {
+        let cT = TT[kT];
+        return cT || ((0, ST.e)(kT), cT = new FT({
+          src: kT,
           isSoundSprite: !0,
           volumeScalar: 1
-        }), Pv.setGlobalVolume(Cv.c.get("soundVolume")), vv[zv] = Pv), Pv
+        }), cT.setGlobalVolume(hT.e.get("soundVolume")), TT[kT] = cT), cT
       }
       freeSheetsAfterGame() {
-        for (const vv of [this.stereoSheets, this.spatialSheets])
-          for (const [zv, Pv] of Object.entries(vv)) !cv.b.has(zv) && Pv.loaded() && (Pv.unloadOnceIdle(), delete vv[zv])
+        for (const TT of [this.stereoSheets, this.spatialSheets])
+          for (const [kT, cT] of Object.entries(TT)) !QT.c.has(kT) && cT.loaded() && (cT.unloadOnceIdle(), delete TT[kT])
       }
     }
   },
-  36357: (vv, zv, Pv) => {
-    function hv(vv, zv) {
-      var Pv, hv, Sv, ev, gv, pv, dv, Nv;
-      return vv.name === zv.name && ((null === (Pv = vv.attributes) || void 0 === Pv || null === (hv = Pv.customAttributes) || void 0 === hv ? void 0 : hv.stackKey) === (null === (Sv = zv.attributes) || void 0 === Sv || null === (ev = Sv.customAttributes) || void 0 === ev ? void 0 : ev.stackKey) && (!0 !== (null === (gv = vv.attributes) || void 0 === gv || null === (pv = gv.customAttributes) || void 0 === pv ? void 0 : pv.unstackable) && !0 !== (null === (dv = zv.attributes) || void 0 === dv || null === (Nv = dv.customAttributes) || void 0 === Nv ? void 0 : Nv.unstackable)))
+  36669: (TT, kT, cT) => {
+    function lT(TT, kT) {
+      var cT, lT, MT, KT, OT, yT, fT, xT;
+      return TT.name === kT.name && ((null === (cT = TT.attributes) || void 0 === cT || null === (lT = cT.customAttributes) || void 0 === lT ? void 0 : lT.stackKey) === (null === (MT = kT.attributes) || void 0 === MT || null === (KT = MT.customAttributes) || void 0 === KT ? void 0 : KT.stackKey) && (!0 !== (null === (OT = TT.attributes) || void 0 === OT || null === (yT = OT.customAttributes) || void 0 === yT ? void 0 : yT.unstackable) && !0 !== (null === (fT = kT.attributes) || void 0 === fT || null === (xT = fT.customAttributes) || void 0 === xT ? void 0 : xT.unstackable)))
     }
-    Pv.d(zv, {
-      c: () => hv
+    cT.d(kT, {
+      c: () => lT
     })
   },
-  36443: (vv, zv, Pv) => {
-    function hv(vv) {
-      return vv.includes("Leaf Bed")
+  36761: (TT, kT, cT) => {
+    function lT(TT) {
+      return TT.includes("Leaf Bed")
     }
 
-    function Sv(vv) {
-      return / Bed(?: Head)?(?:\||$)/.test(vv) && !hv(vv)
+    function MT(TT) {
+      return / Bed(?: Head)?(?:\||$)/.test(TT) && !lT(TT)
     }
 
-    function ev(vv) {
-      return vv.includes(" Strongbed")
+    function KT(TT) {
+      return TT.includes(" Strongbed")
     }
 
-    function gv(vv) {
-      return hv(vv) || Sv(vv) || ev(vv)
+    function OT(TT) {
+      return lT(TT) || MT(TT) || KT(TT)
     }
-    Pv.d(zv, {
-      e: () => gv,
-      h: () => hv,
-      k: () => ev,
-      n: () => Sv
+    cT.d(kT, {
+      c: () => OT,
+      d: () => lT,
+      e: () => KT,
+      g: () => MT
     })
   },
-  36434: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => Nv
+  36756: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => xT
     });
-    var hv = Pv(36443),
-      Sv = Pv(9101);
-    const ev = [],
-      gv = [],
-      pv = [],
-      dv = [];
-    for (const lv of Object.keys(Sv.k))(0, hv.h)(lv) ? ev.push(lv) : (0, hv.n)(lv) && gv.push(lv), (0, hv.k)(lv) && pv.push(lv), (lv.includes(" Bed Head") || lv.includes(" Strongbed Head")) && dv.push(lv);
-    const Nv = {
-      leafBeds: ev,
-      woolBeds: gv,
-      strongBeds: pv,
-      beds: [...ev, ...gv, ...pv],
-      bedHeads: dv,
+    var lT = cT(36761),
+      MT = cT(9447);
+    const KT = [],
+      OT = [],
+      yT = [],
+      fT = [];
+    for (const IT of Object.keys(MT.n))(0, lT.d)(IT) ? KT.push(IT) : (0, lT.g)(IT) && OT.push(IT), (0, lT.e)(IT) && yT.push(IT), (IT.includes(" Bed Head") || IT.includes(" Strongbed Head")) && fT.push(IT);
+    const xT = {
+      leafBeds: KT,
+      woolBeds: OT,
+      strongBeds: yT,
+      beds: [...KT, ...OT, ...yT],
+      bedHeads: fT,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  6192: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => gv,
-      h: () => Sv,
-      l: () => dv,
-      n: () => ev,
-      p: () => Nv,
-      s: () => hv,
-      u: () => pv
+  6486: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => OT,
+      i: () => MT,
+      m: () => fT,
+      q: () => KT,
+      s: () => xT,
+      v: () => lT,
+      w: () => yT
     });
-    let hv = function(vv) {
-        return vv[vv.DEFAULT = 0] = "DEFAULT", vv[vv.BOAT = 1] = "BOAT", vv[vv.GLIDER = 2] = "GLIDER", vv[vv.BALLOON = 3] = "BALLOON", vv[vv.SLEEPING = 4] = "SLEEPING", vv[vv.RIDING_MOB = 5] = "RIDING_MOB", vv[vv.CAR = 6] = "CAR", vv[vv.HOVERCRAFT = 7] = "HOVERCRAFT", vv
+    let lT = function(TT) {
+        return TT[TT.DEFAULT = 0] = "DEFAULT", TT[TT.BOAT = 1] = "BOAT", TT[TT.GLIDER = 2] = "GLIDER", TT[TT.BALLOON = 3] = "BALLOON", TT[TT.SLEEPING = 4] = "SLEEPING", TT[TT.RIDING_MOB = 5] = "RIDING_MOB", TT[TT.CAR = 6] = "CAR", TT[TT.HOVERCRAFT = 7] = "HOVERCRAFT", TT
       }({}),
-      Sv = function(vv) {
-        return vv[vv.WOOD = 0] = "WOOD", vv[vv.OBSIDIAN = 1] = "OBSIDIAN", vv[vv.SPEED = 2] = "SPEED", vv
+      MT = function(TT) {
+        return TT[TT.WOOD = 0] = "WOOD", TT[TT.OBSIDIAN = 1] = "OBSIDIAN", TT[TT.SPEED = 2] = "SPEED", TT
       }({}),
-      ev = function(vv) {
-        return vv[vv.WOOD = 0] = "WOOD", vv[vv.IRON = 1] = "IRON", vv[vv.GOLD = 2] = "GOLD", vv[vv.DIAMOND = 3] = "DIAMOND", vv
+      KT = function(TT) {
+        return TT[TT.WOOD = 0] = "WOOD", TT[TT.IRON = 1] = "IRON", TT[TT.GOLD = 2] = "GOLD", TT[TT.DIAMOND = 3] = "DIAMOND", TT
       }({}),
-      gv = function(vv) {
-        return vv[vv.YELLOW = 0] = "YELLOW", vv[vv.WHITE = 1] = "WHITE", vv[vv.RED = 2] = "RED", vv[vv.PURPLE = 3] = "PURPLE", vv[vv.PINK = 4] = "PINK", vv[vv.ORANGE = 5] = "ORANGE", vv[vv.MAGENTA = 6] = "MAGENTA", vv[vv.LIME = 7] = "LIME", vv[vv.LIGHT_GRAY = 8] = "LIGHT_GRAY", vv[vv.LIGHT_BLUE = 9] = "LIGHT_BLUE", vv[vv.GREEN = 10] = "GREEN", vv[vv.GRAY = 11] = "GRAY", vv[vv.CYAN = 12] = "CYAN", vv[vv.BROWN = 13] = "BROWN", vv[vv.BLUE = 14] = "BLUE", vv[vv.BLACK = 15] = "BLACK", vv
+      OT = function(TT) {
+        return TT[TT.YELLOW = 0] = "YELLOW", TT[TT.WHITE = 1] = "WHITE", TT[TT.RED = 2] = "RED", TT[TT.PURPLE = 3] = "PURPLE", TT[TT.PINK = 4] = "PINK", TT[TT.ORANGE = 5] = "ORANGE", TT[TT.MAGENTA = 6] = "MAGENTA", TT[TT.LIME = 7] = "LIME", TT[TT.LIGHT_GRAY = 8] = "LIGHT_GRAY", TT[TT.LIGHT_BLUE = 9] = "LIGHT_BLUE", TT[TT.GREEN = 10] = "GREEN", TT[TT.GRAY = 11] = "GRAY", TT[TT.CYAN = 12] = "CYAN", TT[TT.BROWN = 13] = "BROWN", TT[TT.BLUE = 14] = "BLUE", TT[TT.BLACK = 15] = "BLACK", TT
       }({}),
-      pv = function(vv) {
-        return vv[vv.ROTATION_1 = 0] = "ROTATION_1", vv[vv.ROTATION_2 = 1] = "ROTATION_2", vv[vv.ROTATION_3 = 2] = "ROTATION_3", vv[vv.ROTATION_4 = 3] = "ROTATION_4", vv
+      yT = function(TT) {
+        return TT[TT.ROTATION_1 = 0] = "ROTATION_1", TT[TT.ROTATION_2 = 1] = "ROTATION_2", TT[TT.ROTATION_3 = 2] = "ROTATION_3", TT[TT.ROTATION_4 = 3] = "ROTATION_4", TT
       }({}),
-      dv = function(vv) {
-        return vv[vv.KART = 0] = "KART", vv[vv.OFF_ROADER = 1] = "OFF_ROADER", vv[vv.CAR = 2] = "CAR", vv[vv.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", vv[vv.ARMORED_CAR = 4] = "ARMORED_CAR", vv[vv.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", vv[vv.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", vv[vv.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", vv
+      fT = function(TT) {
+        return TT[TT.KART = 0] = "KART", TT[TT.OFF_ROADER = 1] = "OFF_ROADER", TT[TT.CAR = 2] = "CAR", TT[TT.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", TT[TT.ARMORED_CAR = 4] = "ARMORED_CAR", TT[TT.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", TT[TT.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", TT[TT.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", TT
       }({});
-    hv.DEFAULT, hv.BOAT, Sv.SPEED, hv.GLIDER, ev.DIAMOND, hv.BALLOON, gv.BLACK, hv.SLEEPING, pv.ROTATION_4, hv.RIDING_MOB, hv.CAR, dv.MOONSTONE_MINING_DRILL, hv.HOVERCRAFT;
-    let Nv = function(vv) {
-      return vv[vv.NORMAL = 0] = "NORMAL", vv[vv.GLIDING = 1] = "GLIDING", vv[vv.FLOATING = 2] = "FLOATING", vv
+    lT.DEFAULT, lT.BOAT, MT.SPEED, lT.GLIDER, KT.DIAMOND, lT.BALLOON, OT.BLACK, lT.SLEEPING, yT.ROTATION_4, lT.RIDING_MOB, lT.CAR, fT.MOONSTONE_MINING_DRILL, lT.HOVERCRAFT;
+    let xT = function(TT) {
+      return TT[TT.NORMAL = 0] = "NORMAL", TT[TT.GLIDING = 1] = "GLIDING", TT[TT.FLOATING = 2] = "FLOATING", TT
     }({})
   },
-  8975: () => {}
+  9332: () => {}
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

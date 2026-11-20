@@ -1,77 +1,77 @@
 export const id = 200;
 export const ids = [200];
 export const modules = {
-  38651: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => hv
+  38938: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => lT
     });
-    class hv {
-      constructor(vv, zv) {
-        this.read = vv, this.apply = zv, this.release = null
+    class lT {
+      constructor(TT, kT) {
+        this.read = TT, this.apply = kT, this.release = null
       }
-      turn(vv, zv) {
-        const Pv = null === this.release ? this.read() : this.release.transitionMs;
+      turn(TT, kT) {
+        const cT = null === this.release ? this.read() : this.release.transitionMs;
         this.stop(!1), this.apply({
-          forcedCameraDirectionTransitionMs: zv,
-          forcedCameraDirection: [vv[0], vv[1], vv[2]]
+          forcedCameraDirectionTransitionMs: kT,
+          forcedCameraDirection: [TT[0], TT[1], TT[2]]
         }), this.release = {
           timer: setTimeout((() => {
             this.stop(!0)
-          }), zv + 100),
-          transitionMs: Pv
+          }), kT + 100),
+          transitionMs: cT
         }
       }
       dispose() {
         this.stop(!0)
       }
-      stop(vv) {
-        null !== this.release && (clearTimeout(this.release.timer), vv && this.apply({
+      stop(TT) {
+        null !== this.release && (clearTimeout(this.release.timer), TT && this.apply({
           forcedCameraDirection: null,
           forcedCameraDirectionTransitionMs: this.release.transitionMs
         }), this.release = null)
       }
     }
   },
-  38178: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => ev,
-      h: () => Sv
+  38489: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => KT,
+      h: () => MT
     });
-    const hv = new Map;
+    const lT = new Map;
 
-    function Sv(vv, zv) {
-      hv.set(vv, zv)
+    function MT(TT, kT) {
+      lT.set(TT, kT)
     }
 
-    function ev(vv) {
-      return vv ? hv.get(vv) : void 0
+    function KT(TT) {
+      return TT ? lT.get(TT) : void 0
     }
   },
-  39065: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => Sv
+  39371: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => MT
     });
-    var hv = Pv(37753);
+    var lT = cT(38062);
 
-    function Sv(vv, zv, Pv) {
-      var Sv, ev, gv, pv, dv, Nv, lv;
-      const Tv = (0, hv.d)(vv, zv, Pv[0], Pv[1], Pv[2]),
-        Wv = Tv ? null !== (Sv = Tv.textCell) && void 0 !== Sv ? Sv : Tv.rect.anchor : Pv,
-        wv = zv(Wv[0], Wv[1], Wv[2]);
+    function MT(TT, kT, cT) {
+      var MT, KT, OT, yT, fT, xT, IT;
+      const AT = (0, lT.c)(TT, kT, cT[0], cT[1], cT[2]),
+        CT = AT ? null !== (MT = AT.textCell) && void 0 !== MT ? MT : AT.rect.anchor : cT,
+        jT = kT(CT[0], CT[1], CT[2]);
       return {
-        pos: [Pv[0], Pv[1], Pv[2]],
-        noticeboardSpan: Tv && {
-          width: Tv.rect.width,
-          height: Tv.rect.height
+        pos: [cT[0], cT[1], cT[2]],
+        noticeboardSpan: AT && {
+          width: AT.rect.width,
+          height: AT.rect.height
         },
-        text: null !== (ev = null === wv || void 0 === wv || null === (gv = wv.persisted) || void 0 === gv || null === (pv = gv.shared) || void 0 === pv ? void 0 : pv.text) && void 0 !== ev ? ev : "",
-        textSize: null !== (dv = null === wv || void 0 === wv || null === (Nv = wv.persisted) || void 0 === Nv || null === (lv = Nv.shared) || void 0 === lv ? void 0 : lv.textSize) && void 0 !== dv ? dv : null
+        text: null !== (KT = null === jT || void 0 === jT || null === (OT = jT.persisted) || void 0 === OT || null === (yT = OT.shared) || void 0 === yT ? void 0 : yT.text) && void 0 !== KT ? KT : "",
+        textSize: null !== (fT = null === jT || void 0 === jT || null === (xT = jT.persisted) || void 0 === xT || null === (IT = xT.shared) || void 0 === IT ? void 0 : IT.textSize) && void 0 !== fT ? fT : null
       }
     }
   },
-  38036: (vv, zv, Pv) => {
-    function hv(vv) {
-      switch (vv.kind) {
+  38350: (TT, kT, cT) => {
+    function lT(TT) {
+      switch (TT.kind) {
         case void 0:
         case "flatEmissive":
           return !1;
@@ -80,452 +80,452 @@ export const modules = {
           return !0
       }
     }
-    Pv.d(zv, {
-      b: () => Sv,
-      e: () => ev,
-      g: () => hv
+    cT.d(kT, {
+      e: () => MT,
+      f: () => KT,
+      i: () => lT
     });
-    const Sv = 4,
-      ev = 3
+    const MT = 4,
+      KT = 3
   },
-  38671: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => Sv,
-      g: () => ev
+  38960: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => MT,
+      e: () => KT
     });
-    var hv = Pv(312);
-    const Sv = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "luckyBedwars", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "skyIslands", "skyblock", "tsunami"]);
-    class ev {
-      constructor(vv) {
-        this.importGame = vv, this.loads = new Map, this.loaded = new Map
+    var lT = cT(339);
+    const MT = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "luckyBedwars", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "skyIslands", "skyblock", "tsunami"]);
+    class KT {
+      constructor(TT) {
+        this.importGame = TT, this.loads = new Map, this.loaded = new Map
       }
-      load(vv) {
-        const zv = (0, hv.Pb)(vv);
-        if (!Sv.has(zv)) return Promise.resolve(void 0);
-        let Pv = this.loads.get(zv);
-        return Pv || (Pv = this.importGame(zv).then((vv => {
-          const Pv = vv.default;
-          if ("function" !== typeof Pv) throw new Error(`${zv}'s client code has no default-exported factory`);
-          return this.loaded.set(zv, Pv), Pv
-        })).catch((vv => {
-          throw this.loads.delete(zv), vv
-        })), this.loads.set(zv, Pv)), Pv
+      load(TT) {
+        const kT = (0, lT.Lb)(TT);
+        if (!MT.has(kT)) return Promise.resolve(void 0);
+        let cT = this.loads.get(kT);
+        return cT || (cT = this.importGame(kT).then((TT => {
+          const cT = TT.default;
+          if ("function" !== typeof cT) throw new Error(`${kT}'s client code has no default-exported factory`);
+          return this.loaded.set(kT, cT), cT
+        })).catch((TT => {
+          throw this.loads.delete(kT), TT
+        })), this.loads.set(kT, cT)), cT
       }
-      loadedFactory(vv) {
-        const zv = (0, hv.Pb)(vv);
-        if (!Sv.has(zv)) return;
-        const Pv = this.loaded.get(zv);
-        if (!Pv) throw new Error(`${zv}'s client code started before it loaded`);
-        return Pv
+      loadedFactory(TT) {
+        const kT = (0, lT.Lb)(TT);
+        if (!MT.has(kT)) return;
+        const cT = this.loaded.get(kT);
+        if (!cT) throw new Error(`${kT}'s client code started before it loaded`);
+        return cT
       }
     }
   },
-  39070: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => gv
+  39379: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => OT
     });
-    var hv = Pv(9185),
-      Sv = Pv(9019),
-      ev = Pv(3037);
+    var lT = cT(9542),
+      MT = cT(9384),
+      KT = cT(3214);
 
-    function gv(vv) {
-      if (vv === hv.e) return 0;
-      const zv = (0, ev.c)(vv);
-      if (void 0 !== zv && zv <= Sv.MAX_BLOCK_ID) return zv;
-      const Pv = (0, ev.c)(vv.split("|")[0]);
-      if (void 0 !== Pv && Pv <= Sv.MAX_BLOCK_ID && (0, Sv.rootMetaDescOf)(Pv) === vv) return Pv;
-      throw new Error(`Invalid block name. You sent ${vv}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
+    function OT(TT) {
+      if (TT === lT.b) return 0;
+      const kT = (0, KT.e)(TT);
+      if (void 0 !== kT && kT <= MT.MAX_BLOCK_ID) return kT;
+      const cT = (0, KT.e)(TT.split("|")[0]);
+      if (void 0 !== cT && cT <= MT.MAX_BLOCK_ID && (0, MT.rootMetaDescOf)(cT) === TT) return cT;
+      throw new Error(`Invalid block name. You sent ${TT}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
     }
   },
-  38708: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => Sv
+  38998: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => MT
     });
-    var hv = Pv(22);
-    class Sv {
-      constructor(vv) {
-        this.screen = vv, this.hidesHud = !1
+    var lT = cT(31);
+    class MT {
+      constructor(TT) {
+        this.screen = TT, this.hidesHud = !1
       }
-      show(vv, zv) {
-        this.screen.setFade(vv.colour, vv.alpha), this.screen.setLetterbox(!0 === zv.letterbox, vv.alpha < 1), this.setHudHidden(!0 === zv.hideHud)
+      show(TT, kT) {
+        this.screen.setFade(TT.colour, TT.alpha), this.screen.setLetterbox(!0 === kT.letterbox, TT.alpha < 1), this.setHudHidden(!0 === kT.hideHud)
       }
       clear() {
         this.screen.clear(), this.setHudHidden(!1)
       }
-      setHudHidden(vv) {
-        this.hidesHud !== vv && (this.hidesHud = vv, hv.c.set({
-          isUiHiddenByCamera: vv
+      setHudHidden(TT) {
+        this.hidesHud !== TT && (this.hidesHud = TT, lT.e.set({
+          isUiHiddenByCamera: TT
         }))
       }
     }
   },
-  38683: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => hv,
-      g: () => Wv,
-      h: () => Tv,
-      l: () => gv,
-      m: () => av,
-      n: () => dv,
-      o: () => sv,
-      r: () => Nv,
-      s: () => pv,
-      w: () => lv
+  38972: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => lT,
+      f: () => CT,
+      h: () => AT,
+      i: () => OT,
+      l: () => vT,
+      m: () => fT,
+      p: () => tT,
+      s: () => xT,
+      t: () => yT,
+      x: () => IT
     });
-    const hv = Math.PI / 2 - .001,
-      Sv = 2 * Math.PI,
-      ev = 1e-9;
+    const lT = Math.PI / 2 - .001,
+      MT = 2 * Math.PI,
+      KT = 1e-9;
 
-    function gv(vv, zv) {
-      zv.heading = vv.heading, zv.pitch = vv.pitch
+    function OT(TT, kT) {
+      kT.heading = TT.heading, kT.pitch = TT.pitch
     }
 
-    function pv(vv, zv) {
-      const Pv = zv - vv;
-      return Pv - Sv * Math.floor((Pv + Math.PI) / Sv)
+    function yT(TT, kT) {
+      const cT = kT - TT;
+      return cT - MT * Math.floor((cT + Math.PI) / MT)
     }
 
-    function dv(vv, zv, Pv) {
-      return vv + pv(vv, zv) * Pv
+    function fT(TT, kT, cT) {
+      return TT + yT(TT, kT) * cT
     }
 
-    function Nv(vv) {
-      if (!Number.isFinite(vv)) return vv;
-      const zv = vv - Sv * Math.floor(vv / Sv);
-      return zv < Sv ? zv : 0
+    function xT(TT) {
+      if (!Number.isFinite(TT)) return TT;
+      const kT = TT - MT * Math.floor(TT / MT);
+      return kT < MT ? kT : 0
     }
 
-    function lv(vv, zv) {
-      return vv + pv(vv, zv)
+    function IT(TT, kT) {
+      return TT + yT(TT, kT)
     }
 
-    function Tv(vv) {
-      return Math.max(-hv, Math.min(hv, vv))
+    function AT(TT) {
+      return Math.max(-lT, Math.min(lT, TT))
     }
 
-    function Wv(vv, zv, Pv) {
-      const hv = Math.cos(zv);
-      return Pv[0] = hv * Math.sin(vv), Pv[1] = -Math.sin(zv), Pv[2] = hv * Math.cos(vv), Pv
+    function CT(TT, kT, cT) {
+      const lT = Math.cos(kT);
+      return cT[0] = lT * Math.sin(TT), cT[1] = -Math.sin(kT), cT[2] = lT * Math.cos(TT), cT
     }
 
-    function wv(vv, zv, Pv, hv) {
-      const Sv = Math.sqrt(vv * vv + Pv * Pv);
-      return Sv < ev && Math.abs(zv) < ev || (Sv >= ev && (hv.heading = Math.atan2(vv, Pv)), hv.pitch = Tv(Math.atan2(-zv, Sv) + 0)), hv
+    function jT(TT, kT, cT, lT) {
+      const MT = Math.sqrt(TT * TT + cT * cT);
+      return MT < KT && Math.abs(kT) < KT || (MT >= KT && (lT.heading = Math.atan2(TT, cT)), lT.pitch = AT(Math.atan2(-kT, MT) + 0)), lT
     }
 
-    function av(vv, zv) {
-      return wv(vv[0], vv[1], vv[2], zv)
+    function vT(TT, kT) {
+      return jT(TT[0], TT[1], TT[2], kT)
     }
 
-    function sv(vv, zv, Pv) {
-      return wv(zv[0] - vv[0], zv[1] - vv[1], zv[2] - vv[2], Pv)
+    function tT(TT, kT, cT) {
+      return jT(kT[0] - TT[0], kT[1] - TT[1], kT[2] - TT[2], cT)
     }
   },
-  38701: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => ev,
-      f: () => Sv
+  38990: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => KT,
+      e: () => MT
     });
-    var hv = Pv(38683);
+    var lT = cT(38972);
 
-    function Sv(vv) {
-      var zv;
-      const Pv = "default" === vv.mode ? "movement" : null !== (zv = vv.playerFacing) && void 0 !== zv ? zv : "movement";
-      return "cursor" === Pv ? {
-        facing: Pv,
+    function MT(TT) {
+      var kT;
+      const cT = "default" === TT.mode ? "movement" : null !== (kT = TT.playerFacing) && void 0 !== kT ? kT : "movement";
+      return "cursor" === cT ? {
+        facing: cT,
         mouseTurns: null
       } : {
-        facing: Pv,
-        mouseTurns: "default" !== vv.mode && void 0 !== vv.playerLook ? "look" : "view"
+        facing: cT,
+        mouseTurns: "default" !== TT.mode && void 0 !== TT.playerLook ? "look" : "view"
       }
     }
 
-    function ev(vv, zv, Pv, Sv, ev, gv) {
-      return gv.ND = 0, gv.lD = 0, gv.pointedAt = void 0, void 0 !== Sv ? ev ? (gv.pointedAt = Sv, vv) : (0, hv.r)(Sv.heading) : ev ? (gv.ND = zv, gv.lD = Pv, vv) : (0, hv.r)(vv + zv)
+    function KT(TT, kT, cT, MT, KT, OT) {
+      return OT.Rm = 0, OT.Wm = 0, OT.pointedAt = void 0, void 0 !== MT ? KT ? (OT.pointedAt = MT, TT) : (0, lT.s)(MT.heading) : KT ? (OT.Rm = kT, OT.Wm = cT, TT) : (0, lT.s)(TT + kT)
     }
   },
-  38691: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => Mv
+  38980: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => RT
     });
-    var hv = Pv(38694),
-      Sv = Pv(38683),
-      ev = Pv(36506);
+    var lT = cT(38984),
+      MT = cT(38972),
+      KT = cT(36812);
 
-    function gv(vv, zv, Pv, hv) {
-      if (!(hv > 0)) return zv;
-      const Sv = zv > vv ? Math.min(zv, vv + Pv / hv) : Math.max(zv, vv - Pv / hv);
-      return Math.abs(zv - Sv) < 1e-9 ? zv : Sv
+    function OT(TT, kT, cT, lT) {
+      if (!(lT > 0)) return kT;
+      const MT = kT > TT ? Math.min(kT, TT + cT / lT) : Math.max(kT, TT - cT / lT);
+      return Math.abs(kT - MT) < 1e-9 ? kT : MT
     }
-    class pv {
+    class yT {
       constructor() {
         this.phase = null, this.outMs = 0, this.holdMs = 0, this.inMs = 0, this.heldMs = 0, this.sinceTurnMs = 1 / 0, this.clearMs = 1 / 0, this.waiting = null, this.screen = {
-          colour: hv.h,
+          colour: lT.f,
           alpha: 0
         }
       }
       getScreen() {
         return this.screen
       }
-      fadeOut(vv) {
-        !this.isGoingOut() && this.sinceTurnMs < hv.m.minFadeTurnMs ? this.waiting = {
+      fadeOut(TT) {
+        !this.isGoingOut() && this.sinceTurnMs < lT.l.minFadeTurnMs ? this.waiting = {
           turn: "out",
-          transition: vv
-        } : (this.waiting = null, this.startOut(vv))
+          transition: TT
+        } : (this.waiting = null, this.startOut(TT))
       }
-      fadeIn(vv) {
-        this.isGoingOut() ? this.sinceTurnMs < hv.m.minFadeTurnMs ? this.waiting = {
+      fadeIn(TT) {
+        this.isGoingOut() ? this.sinceTurnMs < lT.l.minFadeTurnMs ? this.waiting = {
           turn: "in",
-          minMs: vv
-        } : (this.waiting = null, this.startIn(vv)) : this.waiting = null
+          minMs: TT
+        } : (this.waiting = null, this.startIn(TT)) : this.waiting = null
       }
-      advance(vv) {
-        const zv = this.waiting;
-        if (null === zv) return this.step(vv);
-        const Pv = hv.m.minFadeTurnMs - this.sinceTurnMs;
-        if (Pv > vv) return this.step(vv);
-        const Sv = this.step(Pv);
-        return this.waiting = null, "out" === zv.turn ? this.startOut(zv.transition) : this.startIn(zv.minMs), this.step(vv - Pv) || Sv
+      advance(TT) {
+        const kT = this.waiting;
+        if (null === kT) return this.step(TT);
+        const cT = lT.l.minFadeTurnMs - this.sinceTurnMs;
+        if (cT > TT) return this.step(TT);
+        const MT = this.step(cT);
+        return this.waiting = null, "out" === kT.turn ? this.startOut(kT.transition) : this.startIn(kT.minMs), this.step(TT - cT) || MT
       }
       isGoingOut() {
         return "out" === this.phase || "hold" === this.phase
       }
-      startOut(vv) {
-        ("in" === this.phase || null === this.phase && this.clearMs < hv.m.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = vv.colour), this.outMs = vv.outMs, this.holdMs = vv.holdMs, this.inMs = vv.inMs
+      startOut(TT) {
+        ("in" === this.phase || null === this.phase && this.clearMs < lT.l.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = TT.colour), this.outMs = TT.outMs, this.holdMs = TT.holdMs, this.inMs = TT.inMs
       }
-      startIn(vv) {
-        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(vv, this.inMs)
+      startIn(TT) {
+        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(TT, this.inMs)
       }
-      step(vv) {
-        const zv = this.screen;
-        this.sinceTurnMs += vv, null === this.phase && (this.clearMs += vv);
-        let Pv = !1,
-          Sv = vv;
+      step(TT) {
+        const kT = this.screen;
+        this.sinceTurnMs += TT, null === this.phase && (this.clearMs += TT);
+        let cT = !1,
+          MT = TT;
         if ("out" === this.phase) {
-          const hv = (1 - zv.alpha) * this.outMs;
-          if (zv.alpha = gv(zv.alpha, 1, vv, this.outMs), zv.alpha < 1) return !1;
-          this.phase = "hold", this.heldMs = 0, Sv = Math.max(0, vv - hv), Pv = !0
+          const lT = (1 - kT.alpha) * this.outMs;
+          if (kT.alpha = OT(kT.alpha, 1, TT, this.outMs), kT.alpha < 1) return !1;
+          this.phase = "hold", this.heldMs = 0, MT = Math.max(0, TT - lT), cT = !0
         }
-        let ev = vv;
+        let KT = TT;
         if ("hold" === this.phase) {
-          this.heldMs += Sv;
-          const vv = Math.min(this.heldMs - this.holdMs, this.sinceTurnMs - hv.m.minFadeTurnMs);
-          if (vv < 0 || Pv) return Pv;
-          this.phase = "in", this.sinceTurnMs = vv, ev = vv
+          this.heldMs += MT;
+          const TT = Math.min(this.heldMs - this.holdMs, this.sinceTurnMs - lT.l.minFadeTurnMs);
+          if (TT < 0 || cT) return cT;
+          this.phase = "in", this.sinceTurnMs = TT, KT = TT
         }
-        return "in" === this.phase && (zv.alpha = gv(zv.alpha, 0, ev, this.inMs), zv.alpha <= 0 && (this.phase = null, this.clearMs = 0)), Pv
+        return "in" === this.phase && (kT.alpha = OT(kT.alpha, 0, KT, this.inMs), kT.alpha <= 0 && (this.phase = null, this.clearMs = 0)), cT
       }
     }
-    var dv = Pv(38679),
-      Nv = Pv(38696),
-      lv = Pv(1855),
-      Tv = Pv(36110);
+    var fT = cT(38966),
+      xT = cT(38988),
+      IT = cT(1915),
+      AT = cT(36398);
 
-    function Wv(vv, zv) {
-      for (let Pv = 0; Pv < zv.length; Pv++) zv[Pv] = vv[Pv]
+    function CT(TT, kT) {
+      for (let cT = 0; cT < kT.length; cT++) kT[cT] = TT[cT]
     }
 
-    function wv(vv, zv) {
-      var Pv;
-      return null !== (Pv = vv.fov) && void 0 !== Pv ? Pv : zv.getDefaultFov()
+    function jT(TT, kT) {
+      var cT;
+      return null !== (cT = TT.fov) && void 0 !== cT ? cT : kT.getDefaultFov()
     }
 
-    function av(vv, zv, Pv, hv, Sv) {
-      const ev = 2 / hv,
-        gv = Math.exp(-ev * Sv);
-      for (let pv = 0; pv < vv.length; pv++) {
-        const hv = vv[pv] - Pv[pv],
-          dv = (zv[pv] + ev * hv) * Sv;
-        vv[pv] = Pv[pv] + (hv + dv) * gv, zv[pv] = (zv[pv] - ev * dv) * gv
+    function vT(TT, kT, cT, lT, MT) {
+      const KT = 2 / lT,
+        OT = Math.exp(-KT * MT);
+      for (let yT = 0; yT < TT.length; yT++) {
+        const lT = TT[yT] - cT[yT],
+          fT = (kT[yT] + KT * lT) * MT;
+        TT[yT] = cT[yT] + (lT + fT) * OT, kT[yT] = (kT[yT] - KT * fT) * OT
       }
     }
-    class sv {
-      constructor(vv, zv, Pv, hv) {
-        var ev, gv, pv, dv, Nv;
-        this.settings = vv, this.oT = zv, this.targets = Pv, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.pC = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
+    class tT {
+      constructor(TT, kT, cT, lT) {
+        var KT, OT, yT, fT, xT;
+        this.settings = TT, this.pA = kT, this.targets = cT, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.Oh = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
           heading: 0,
           pitch: 0
         }, this.points = [], this.forward = [0, 0, 0], this.base = {
-          heading: (0, Sv.r)((0, lv.k)(null !== (ev = vv.viewHeading) && void 0 !== ev ? ev : 0)),
-          pitch: (0, Sv.h)((0, lv.k)(null !== (gv = vv.viewElevation) && void 0 !== gv ? gv : 45))
-        }, this.closestDistance = null !== (pv = vv.closestDistance) && void 0 !== pv ? pv : Math.min(6, null !== (dv = vv.furthestDistance) && void 0 !== dv ? dv : 1 / 0), this.furthestDistance = null !== (Nv = vv.furthestDistance) && void 0 !== Nv ? Nv : Math.max(64, this.closestDistance);
-        const Tv = (0, Sv.g)(this.base.heading, this.base.pitch, this.forward),
-          Wv = hv.position,
-          wv = this.closestDistance;
-        this.goal = [Wv[0] + Tv[0] * wv, Wv[1] + Tv[1] * wv, Wv[2] + Tv[2] * wv, wv, this.base.heading, this.base.pitch]
+          heading: (0, MT.s)((0, IT.k)(null !== (KT = TT.viewHeading) && void 0 !== KT ? KT : 0)),
+          pitch: (0, MT.h)((0, IT.k)(null !== (OT = TT.viewElevation) && void 0 !== OT ? OT : 45))
+        }, this.closestDistance = null !== (yT = TT.closestDistance) && void 0 !== yT ? yT : Math.min(6, null !== (fT = TT.furthestDistance) && void 0 !== fT ? fT : 1 / 0), this.furthestDistance = null !== (xT = TT.furthestDistance) && void 0 !== xT ? xT : Math.max(64, this.closestDistance);
+        const AT = (0, MT.f)(this.base.heading, this.base.pitch, this.forward),
+          CT = lT.position,
+          jT = this.closestDistance;
+        this.goal = [CT[0] + AT[0] * jT, CT[1] + AT[1] * jT, CT[2] + AT[2] * jT, jT, this.base.heading, this.base.pitch]
       }
-      update(vv, zv, Pv) {
-        var hv, ev;
-        this.placeGoal(null !== (hv = this.settings.fov) && void 0 !== hv ? hv : this.oT.getBaseFov()), this.goal[4] = (0, Sv.w)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
-        const gv = null !== (ev = this.settings.smoothMs) && void 0 !== ev ? ev : 400;
-        !this.started || gv < 1 ? (Wv(this.goal, this.smoothed), this.pC.fill(0), this.started = !0) : av(this.smoothed, this.pC, this.goal, gv, vv), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, Sv.h)(this.smoothed[5]), zv.apply(this.angles, Pv);
-        const pv = (0, Sv.g)(Pv.heading, Pv.pitch, this.forward);
-        for (let Sv = 0; Sv < 3; Sv++) Pv.position[Sv] = this.smoothed[Sv] - pv[Sv] * this.smoothed[3];
-        Pv.fov = wv(this.settings, this.oT)
+      update(TT, kT, cT) {
+        var lT, KT;
+        this.placeGoal(null !== (lT = this.settings.fov) && void 0 !== lT ? lT : this.pA.getBaseFov()), this.goal[4] = (0, MT.x)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
+        const OT = null !== (KT = this.settings.smoothMs) && void 0 !== KT ? KT : 400;
+        !this.started || OT < 1 ? (CT(this.goal, this.smoothed), this.Oh.fill(0), this.started = !0) : vT(this.smoothed, this.Oh, this.goal, OT, TT), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, MT.h)(this.smoothed[5]), kT.apply(this.angles, cT);
+        const yT = (0, MT.f)(cT.heading, cT.pitch, this.forward);
+        for (let MT = 0; MT < 3; MT++) cT.position[MT] = this.smoothed[MT] - yT[MT] * this.smoothed[3];
+        cT.fov = jT(this.settings, this.pA)
       }
-      continueFrom(vv) {
-        vv instanceof sv && (Wv(vv.goal, this.goal), Wv(vv.smoothed, this.smoothed), Wv(vv.pC, this.pC), this.framedTargets = vv.framedTargets, this.started = vv.started)
+      continueFrom(TT) {
+        TT instanceof tT && (CT(TT.goal, this.goal), CT(TT.smoothed, this.smoothed), CT(TT.Oh, this.Oh), this.framedTargets = TT.framedTargets, this.started = TT.started)
       }
       reset() {
-        this.pC.fill(0), this.started = !1
+        this.Oh.fill(0), this.started = !1
       }
-      placeGoal(vv) {
-        var zv;
-        let Pv = 0;
-        for (const lv of this.settings.targets) {
-          const vv = this.targets.currentAimPoint(lv);
-          vv && (0, dv.i)(vv, this.pointAt(Pv++))
+      placeGoal(TT) {
+        var kT;
+        let cT = 0;
+        for (const IT of this.settings.targets) {
+          const TT = this.targets.currentAimPoint(IT);
+          TT && (0, fT.f)(TT, this.pointAt(cT++))
         }
-        if (Pv > 0) this.framedTargets = !0;
+        if (cT > 0) this.framedTargets = !0;
         else if (!this.framedTargets) {
-          const vv = this.targets.aimPoint(this.oT.localPlayerId);
-          vv && (0, dv.i)(vv, this.pointAt(Pv++))
+          const TT = this.targets.aimPoint(this.pA.localPlayerId);
+          TT && (0, fT.f)(TT, this.pointAt(cT++))
         }
-        const hv = this.goal;
-        if (0 === Pv) return void(hv[3] = this.withinDistances(hv[3]));
-        for (let dv = 0; dv < 3; dv++) {
-          let vv = 1 / 0,
-            zv = -1 / 0;
-          for (let hv = 0; hv < Pv; hv++) vv = Math.min(vv, this.points[hv][dv]), zv = Math.max(zv, this.points[hv][dv]);
-          hv[dv] = (vv + zv) / 2
+        const lT = this.goal;
+        if (0 === cT) return void(lT[3] = this.withinDistances(lT[3]));
+        for (let fT = 0; fT < 3; fT++) {
+          let TT = 1 / 0,
+            kT = -1 / 0;
+          for (let lT = 0; lT < cT; lT++) TT = Math.min(TT, this.points[lT][fT]), kT = Math.max(kT, this.points[lT][fT]);
+          lT[fT] = (TT + kT) / 2
         }
-        let Sv = 0;
-        for (let dv = 0; dv < Pv; dv++) {
-          const vv = this.points[dv];
-          Sv = Math.max(Sv, Math.hypot(vv[0] - hv[0], vv[1] - hv[1], vv[2] - hv[2]))
+        let MT = 0;
+        for (let fT = 0; fT < cT; fT++) {
+          const TT = this.points[fT];
+          MT = Math.max(MT, Math.hypot(TT[0] - lT[0], TT[1] - lT[1], TT[2] - lT[2]))
         }
-        const ev = Math.tan((0, lv.k)(vv) / 2),
-          gv = Math.atan(ev * (!0 === this.settings.letterbox ? Tv.e : 1)),
-          pv = Math.atan(ev * this.oT.getAspectRatio()),
-          Nv = (Sv + (null !== (zv = this.settings.padding) && void 0 !== zv ? zv : 2)) / Math.sin(Math.min(gv, pv));
-        hv[3] = this.withinDistances(Nv)
+        const KT = Math.tan((0, IT.k)(TT) / 2),
+          OT = Math.atan(KT * (!0 === this.settings.letterbox ? AT.e : 1)),
+          yT = Math.atan(KT * this.pA.getAspectRatio()),
+          xT = (MT + (null !== (kT = this.settings.padding) && void 0 !== kT ? kT : 2)) / Math.sin(Math.min(OT, yT));
+        lT[3] = this.withinDistances(xT)
       }
-      withinDistances(vv) {
-        return Math.min(this.furthestDistance, Math.max(this.closestDistance, vv))
+      withinDistances(TT) {
+        return Math.min(this.furthestDistance, Math.max(this.closestDistance, TT))
       }
-      pointAt(vv) {
-        return vv === this.points.length && this.points.push([0, 0, 0]), this.points[vv]
+      pointAt(TT) {
+        return TT === this.points.length && this.points.push([0, 0, 0]), this.points[TT]
       }
     }
-    class Cv {
-      constructor(vv) {
-        this.limits = vv, this.yawOffset = 0, this.pitchOffset = 0, this.idleMs = 0, this.pointedAt = null
+    class hT {
+      constructor(TT) {
+        this.limits = TT, this.yawOffset = 0, this.pitchOffset = 0, this.idleMs = 0, this.pointedAt = null
       }
-      continueFrom(vv) {
-        this.limits && (this.yawOffset = vv.yawOffset, this.pitchOffset = vv.pitchOffset, this.idleMs = vv.idleMs)
+      continueFrom(TT) {
+        this.limits && (this.yawOffset = TT.yawOffset, this.pitchOffset = TT.pitchOffset, this.idleMs = TT.idleMs)
       }
-      update(vv, zv) {
-        const Pv = this.limits;
-        if (!Pv) return;
-        const hv = Number.isFinite(zv.ND) ? zv.ND : 0,
-          Sv = Number.isFinite(zv.lD) ? zv.lD : 0;
-        if (zv.pointedAt) this.idleMs = 0, this.pointedAt = {
-          heading: zv.pointedAt.heading,
-          pitch: zv.pointedAt.pitch
+      update(TT, kT) {
+        const cT = this.limits;
+        if (!cT) return;
+        const lT = Number.isFinite(kT.Rm) ? kT.Rm : 0,
+          MT = Number.isFinite(kT.Wm) ? kT.Wm : 0;
+        if (kT.pointedAt) this.idleMs = 0, this.pointedAt = {
+          heading: kT.pointedAt.heading,
+          pitch: kT.pointedAt.pitch
         };
-        else if (0 !== hv || 0 !== Sv) this.idleMs = 0, this.yawOffset += hv, this.pitchOffset += Sv;
+        else if (0 !== lT || 0 !== MT) this.idleMs = 0, this.yawOffset += lT, this.pitchOffset += MT;
         else {
-          const zv = Math.max(0, this.idleMs + vv - 200) - Math.max(0, this.idleMs - 200);
-          if (this.idleMs += vv, void 0 !== Pv.returnMs && zv > 0) {
-            const vv = Pv.returnMs > 0 ? Math.exp(-3 * zv / Pv.returnMs) : 0;
-            this.yawOffset *= vv, this.pitchOffset *= vv
+          const kT = Math.max(0, this.idleMs + TT - 200) - Math.max(0, this.idleMs - 200);
+          if (this.idleMs += TT, void 0 !== cT.returnMs && kT > 0) {
+            const TT = cT.returnMs > 0 ? Math.exp(-3 * kT / cT.returnMs) : 0;
+            this.yawOffset *= TT, this.pitchOffset *= TT
           }
         }
-        this.clampOffsets(Pv)
+        this.clampOffsets(cT)
       }
-      clampOffsets(vv) {
-        if (vv.maxYaw >= 180) this.yawOffset = (0, Sv.s)(0, this.yawOffset);
+      clampOffsets(TT) {
+        if (TT.maxYaw >= 180) this.yawOffset = (0, MT.t)(0, this.yawOffset);
         else {
-          const zv = (0, lv.k)(vv.maxYaw);
-          this.yawOffset = Math.max(-zv, Math.min(zv, this.yawOffset))
+          const kT = (0, IT.k)(TT.maxYaw);
+          this.yawOffset = Math.max(-kT, Math.min(kT, this.yawOffset))
         }
-        const zv = (0, lv.k)(vv.maxPitch);
-        this.pitchOffset = Math.max(-zv, Math.min(zv, this.pitchOffset))
+        const kT = (0, IT.k)(TT.maxPitch);
+        this.pitchOffset = Math.max(-kT, Math.min(kT, this.pitchOffset))
       }
-      apply(vv, zv) {
-        this.pointedAt && this.limits && (this.yawOffset = (0, Sv.s)(vv.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - vv.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
-        const Pv = (0, Sv.h)(vv.pitch + this.pitchOffset);
-        this.pitchOffset = Pv - vv.pitch, zv.heading = (0, Sv.r)(vv.heading + this.yawOffset), zv.pitch = Pv
+      apply(TT, kT) {
+        this.pointedAt && this.limits && (this.yawOffset = (0, MT.t)(TT.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - TT.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
+        const cT = (0, MT.h)(TT.pitch + this.pitchOffset);
+        this.pitchOffset = cT - TT.pitch, kT.heading = (0, MT.s)(TT.heading + this.yawOffset), kT.pitch = cT
       }
-      unapply(vv, zv) {
-        zv.heading = (0, Sv.r)(vv.heading - this.yawOffset), zv.pitch = (0, Sv.h)(vv.pitch - this.pitchOffset)
+      unapply(TT, kT) {
+        kT.heading = (0, MT.s)(TT.heading - this.yawOffset), kT.pitch = (0, MT.h)(TT.pitch - this.pitchOffset)
       }
     }
-    const iv = 1e-6;
+    const NT = 1e-6;
 
-    function cv(vv) {
-      return Math.sqrt(vv[0] * vv[0] + vv[1] * vv[1] + vv[2] * vv[2])
+    function QT(TT) {
+      return Math.sqrt(TT[0] * TT[0] + TT[1] * TT[1] + TT[2] * TT[2])
     }
 
-    function Gv(vv, zv, Pv, hv, Sv) {
-      const ev = Sv * Sv,
-        gv = ev * Sv;
-      return (2 * gv - 3 * ev + 1) * vv + (gv - 2 * ev + Sv) * zv + (-2 * gv + 3 * ev) * Pv + (gv - ev) * hv
+    function ST(TT, kT, cT, lT, MT) {
+      const KT = MT * MT,
+        OT = KT * MT;
+      return (2 * OT - 3 * KT + 1) * TT + (OT - 2 * KT + MT) * kT + (-2 * OT + 3 * KT) * cT + (OT - KT) * lT
     }
 
-    function mv(vv, zv, Pv, hv, Sv) {
-      const ev = Sv * Sv;
-      return (6 * ev - 6 * Sv) * vv + (3 * ev - 4 * Sv + 1) * zv + (-6 * ev + 6 * Sv) * Pv + (3 * ev - 2 * Sv) * hv
+    function DT(TT, kT, cT, lT, MT) {
+      const KT = MT * MT;
+      return (6 * KT - 6 * MT) * TT + (3 * KT - 4 * MT + 1) * kT + (-6 * KT + 6 * MT) * cT + (3 * KT - 2 * MT) * lT
     }
 
-    function jv(vv, zv) {
-      const Pv = zv[0] - vv[0],
-        hv = zv[1] - vv[1],
-        Sv = zv[2] - vv[2];
-      return Math.sqrt(Pv * Pv + hv * hv + Sv * Sv)
+    function aT(TT, kT) {
+      const cT = kT[0] - TT[0],
+        lT = kT[1] - TT[1],
+        MT = kT[2] - TT[2];
+      return Math.sqrt(cT * cT + lT * lT + MT * MT)
     }
 
-    function fv(vv, zv, Pv, hv, Sv, ev) {
-      for (let gv = 0; gv < 3; gv++) ev[gv] = Sv ? vv[gv] * hv : Pv[gv] - zv[gv];
-      return Sv && function(vv, zv) {
-        const Pv = cv(vv);
-        if (Pv > zv) {
-          const hv = zv / Pv;
-          vv[0] *= hv, vv[1] *= hv, vv[2] *= hv
+    function FT(TT, kT, cT, lT, MT, KT) {
+      for (let OT = 0; OT < 3; OT++) KT[OT] = MT ? TT[OT] * lT : cT[OT] - kT[OT];
+      return MT && function(TT, kT) {
+        const cT = QT(TT);
+        if (cT > kT) {
+          const lT = kT / cT;
+          TT[0] *= lT, TT[1] *= lT, TT[2] *= lT
         }
-      }(ev, 3 * jv(zv, Pv)), ev
+      }(KT, 3 * aT(kT, cT)), KT
     }
 
-    function Fv(vv, zv, Pv, hv) {
-      for (let Sv = 0; Sv < 3; Sv++) hv[Sv] = 6 * (zv[Sv] - vv[Sv]) - 2 * Pv[Sv];
-      if (cv(hv) < iv)
-        for (let Sv = 0; Sv < 3; Sv++) hv[Sv] = zv[Sv] - vv[Sv];
-      return hv
+    function rT(TT, kT, cT, lT) {
+      for (let MT = 0; MT < 3; MT++) lT[MT] = 6 * (kT[MT] - TT[MT]) - 2 * cT[MT];
+      if (QT(lT) < NT)
+        for (let MT = 0; MT < 3; MT++) lT[MT] = kT[MT] - TT[MT];
+      return lT
     }
 
-    function Yv(vv, zv) {
-      return [2 * zv[0] - vv[0], 2 * zv[1] - vv[1], 2 * zv[2] - vv[2]]
+    function PT(TT, kT) {
+      return [2 * kT[0] - TT[0], 2 * kT[1] - TT[1], 2 * kT[2] - TT[2]]
     }
 
-    function nv(vv, zv, Pv, hv, Sv, ev, gv) {
-      if (!ev && !gv) return 0;
-      const pv = ev ? vv : 2 * zv - Pv,
-        dv = gv ? Pv : 2 * zv - vv,
-        Nv = ev ? hv : Sv,
-        lv = gv ? Sv : hv,
-        Tv = (zv - pv) / Nv,
-        Wv = (dv - zv) / lv;
-      if (Tv * Wv <= 0) return 0;
-      const wv = (dv - pv) / (Nv + lv),
-        av = 3 * Math.min(Math.abs(Tv), Math.abs(Wv));
-      return Math.max(-av, Math.min(av, wv))
+    function wT(TT, kT, cT, lT, MT, KT, OT) {
+      if (!KT && !OT) return 0;
+      const yT = KT ? TT : 2 * kT - cT,
+        fT = OT ? cT : 2 * kT - TT,
+        xT = KT ? lT : MT,
+        IT = OT ? MT : lT,
+        AT = (kT - yT) / xT,
+        CT = (fT - kT) / IT;
+      if (AT * CT <= 0) return 0;
+      const jT = (fT - yT) / (xT + IT),
+        vT = 3 * Math.min(Math.abs(AT), Math.abs(CT));
+      return Math.max(-vT, Math.min(vT, jT))
     }
 
-    function Ov(vv, zv, Pv, hv, Sv, ev, gv) {
+    function mT(TT, kT, cT, lT, MT, KT, OT) {
       const {
-        u: pv,
-        segmentMs: dv
-      } = vv;
-      if (!vv.curved) return Pv + (hv - Pv) * pv;
-      return Gv(Pv, nv(zv, Pv, hv, vv.beforeMs, dv, ev, !0) * dv, hv, nv(Pv, hv, Sv, dv, vv.afterMs, !0, gv) * dv, pv)
+        u: yT,
+        segmentMs: fT
+      } = TT;
+      if (!TT.curved) return cT + (lT - cT) * yT;
+      return ST(cT, wT(kT, cT, lT, TT.beforeMs, fT, KT, !0) * fT, lT, wT(cT, lT, MT, fT, TT.afterMs, !0, OT) * fT, yT)
     }
 
-    function Dv(vv) {
-      return Math.abs(vv.pitch) >= Sv.c
+    function bT(TT) {
+      return Math.abs(TT.pitch) >= MT.e
     }
-    class Kv {
-      constructor(vv, zv, Pv, hv, Sv) {
-        this.nodes = vv, this.prevNodes = Pv, this.nextNodes = hv, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
+    class zT {
+      constructor(TT, kT, cT, lT, MT) {
+        this.nodes = TT, this.prevNodes = cT, this.nextNodes = lT, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
           heading: 0,
           pitch: 0
         }, this.fromAngles = {
@@ -540,84 +540,84 @@ export const modules = {
         }, this.borrowedAngles = {
           heading: 0,
           pitch: 0
-        }, this.tangents = vv.map(((vv, Pv) => this.nodeTangent(zv, Sv, Pv)))
+        }, this.tangents = TT.map(((TT, cT) => this.nodeTangent(kT, MT, cT)))
       }
-      sample(vv, zv, Pv) {
+      sample(TT, kT, cT) {
         const {
-          index: hv,
-          toIndex: ev,
-          segmentMs: gv,
-          curved: pv
-        } = vv, dv = this.fromAngles, Nv = this.toAngles, lv = this.nodeAngles(hv, Pv.position, zv, dv), Tv = this.nodeAngles(ev, Pv.position, zv, Nv);
-        if (gv > 0 && "aim" !== lv && "aim" !== Tv && this.liveTangent(vv, dv)) return Pv.heading = (0, Sv.r)(dv.heading), void(Pv.pitch = dv.pitch);
-        if ("none" === lv && "none" === Tv) return;
-        !pv && gv > 0 && ("tangent" === lv && this.liveTangent(vv, dv), "tangent" === Tv && this.liveTangent(vv, Nv)), "none" === lv ? (0, Sv.l)(Nv, dv) : "none" === Tv && (0, Sv.l)(dv, Nv);
-        const Wv = pv && vv.beforeIndex >= 0 && "none" !== this.nodeAngles(vv.beforeIndex, Pv.position, zv, this.beforeAngles),
-          wv = pv && vv.afterIndex >= 0 && "none" !== this.nodeAngles(vv.afterIndex, Pv.position, zv, this.afterAngles),
-          av = (0, Sv.w)(dv.heading, Nv.heading),
-          sv = Ov(vv, Wv ? (0, Sv.w)(dv.heading, this.beforeAngles.heading) : 0, dv.heading, av, wv ? (0, Sv.w)(av, this.afterAngles.heading) : 0, Wv, wv);
-        Pv.heading = (0, Sv.r)(sv), Pv.pitch = (0, Sv.h)(Ov(vv, this.beforeAngles.pitch, dv.pitch, Nv.pitch, this.afterAngles.pitch, Wv, wv))
+          index: lT,
+          toIndex: KT,
+          segmentMs: OT,
+          curved: yT
+        } = TT, fT = this.fromAngles, xT = this.toAngles, IT = this.nodeAngles(lT, cT.position, kT, fT), AT = this.nodeAngles(KT, cT.position, kT, xT);
+        if (OT > 0 && "aim" !== IT && "aim" !== AT && this.liveTangent(TT, fT)) return cT.heading = (0, MT.s)(fT.heading), void(cT.pitch = fT.pitch);
+        if ("none" === IT && "none" === AT) return;
+        !yT && OT > 0 && ("tangent" === IT && this.liveTangent(TT, fT), "tangent" === AT && this.liveTangent(TT, xT)), "none" === IT ? (0, MT.i)(xT, fT) : "none" === AT && (0, MT.i)(fT, xT);
+        const CT = yT && TT.beforeIndex >= 0 && "none" !== this.nodeAngles(TT.beforeIndex, cT.position, kT, this.beforeAngles),
+          jT = yT && TT.afterIndex >= 0 && "none" !== this.nodeAngles(TT.afterIndex, cT.position, kT, this.afterAngles),
+          vT = (0, MT.x)(fT.heading, xT.heading),
+          tT = mT(TT, CT ? (0, MT.x)(fT.heading, this.beforeAngles.heading) : 0, fT.heading, vT, jT ? (0, MT.x)(vT, this.afterAngles.heading) : 0, CT, jT);
+        cT.heading = (0, MT.s)(tT), cT.pitch = (0, MT.h)(mT(TT, this.beforeAngles.pitch, fT.pitch, xT.pitch, this.afterAngles.pitch, CT, jT))
       }
-      nodeAngles(vv, zv, Pv, hv) {
-        const Sv = this.rawNodeAngles(vv, zv, Pv, hv);
-        return "none" !== Sv && Dv(hv) && !this.borrowHeading(this.prevNodes[vv], zv, Pv, hv) && this.borrowHeading(this.nextNodes[vv], zv, Pv, hv), Sv
+      nodeAngles(TT, kT, cT, lT) {
+        const MT = this.rawNodeAngles(TT, kT, cT, lT);
+        return "none" !== MT && bT(lT) && !this.borrowHeading(this.prevNodes[TT], kT, cT, lT) && this.borrowHeading(this.nextNodes[TT], kT, cT, lT), MT
       }
-      borrowHeading(vv, zv, Pv, hv) {
-        const Sv = this.borrowedAngles;
-        return !(vv < 0 || "none" === this.rawNodeAngles(vv, zv, Pv, Sv) || Dv(Sv)) && (hv.heading = Sv.heading, !0)
+      borrowHeading(TT, kT, cT, lT) {
+        const MT = this.borrowedAngles;
+        return !(TT < 0 || "none" === this.rawNodeAngles(TT, kT, cT, MT) || bT(MT)) && (lT.heading = MT.heading, !0)
       }
-      rawNodeAngles(vv, zv, Pv, hv) {
-        const ev = this.nodes[vv].keyframe;
-        if (ev.lookDirection) return (0, Sv.m)(ev.lookDirection, hv), "aim";
-        if (void 0 !== ev.lookAt) {
-          const vv = Pv(ev.lookAt);
-          if (vv) return (0, Sv.o)(zv, vv, hv), "aim"
+      rawNodeAngles(TT, kT, cT, lT) {
+        const KT = this.nodes[TT].keyframe;
+        if (KT.lookDirection) return (0, MT.l)(KT.lookDirection, lT), "aim";
+        if (void 0 !== KT.lookAt) {
+          const TT = cT(KT.lookAt);
+          if (TT) return (0, MT.p)(kT, TT, lT), "aim"
         }
-        const gv = this.tangents[vv];
-        return gv ? ((0, Sv.l)(gv, hv), "tangent") : "none"
+        const OT = this.tangents[TT];
+        return OT ? ((0, MT.i)(OT, lT), "tangent") : "none"
       }
-      liveTangent(vv, zv) {
-        const Pv = this.nodes[vv.index].position,
-          hv = this.nodes[vv.toIndex].position,
-          ev = this.derivative;
-        for (let Sv = 0; Sv < 3; Sv++) ev[Sv] = mv(Pv[Sv], vv.fromTangent[Sv], hv[Sv], vv.toTangent[Sv], vv.u);
-        return cv(ev) > 1e-9 ? ((0, Sv.m)(ev, zv), !0) : !(jv(Pv, hv) < iv) && ((0, Sv.m)(Fv(Pv, hv, vv.u < .5 ? vv.toTangent : vv.fromTangent, ev), zv), !0)
+      liveTangent(TT, kT) {
+        const cT = this.nodes[TT.index].position,
+          lT = this.nodes[TT.toIndex].position,
+          KT = this.derivative;
+        for (let MT = 0; MT < 3; MT++) KT[MT] = DT(cT[MT], TT.fromTangent[MT], lT[MT], TT.toTangent[MT], TT.u);
+        return QT(KT) > 1e-9 ? ((0, MT.l)(KT, kT), !0) : !(aT(cT, lT) < NT) && ((0, MT.l)(rT(cT, lT, TT.u < .5 ? TT.toTangent : TT.fromTangent, KT), kT), !0)
       }
-      nodeTangent(vv, zv, Pv) {
-        var hv;
-        const ev = vv[Pv];
-        if (cv(ev) > 1e-9) return (0, Sv.m)(ev, {
+      nodeTangent(TT, kT, cT) {
+        var lT;
+        const KT = TT[cT];
+        if (QT(KT) > 1e-9) return (0, MT.l)(KT, {
           heading: 0,
           pitch: 0
         });
-        const gv = null !== (hv = this.restDirectionTo(Pv, Pv + 1, vv, zv)) && void 0 !== hv ? hv : this.restDirectionTo(Pv, Pv - 1, vv, zv);
-        return gv ? (0, Sv.m)(gv, {
+        const OT = null !== (lT = this.restDirectionTo(cT, cT + 1, TT, kT)) && void 0 !== lT ? lT : this.restDirectionTo(cT, cT - 1, TT, kT);
+        return OT ? (0, MT.l)(OT, {
           heading: 0,
           pitch: 0
         }) : null
       }
-      restDirectionTo(vv, zv, Pv, hv) {
-        const Sv = this.nodes[vv],
-          ev = this.nodes[zv];
-        if (!ev || jv(Sv.position, ev.position) < iv) return null;
-        const [gv, pv] = zv > vv ? [Sv, ev] : [ev, Sv], dv = fv(Pv[zv], gv.position, pv.position, pv.timeMs - gv.timeMs, hv, [0, 0, 0]);
-        return Fv(gv.position, pv.position, dv, [0, 0, 0])
+      restDirectionTo(TT, kT, cT, lT) {
+        const MT = this.nodes[TT],
+          KT = this.nodes[kT];
+        if (!KT || aT(MT.position, KT.position) < NT) return null;
+        const [OT, yT] = kT > TT ? [MT, KT] : [KT, MT], fT = FT(cT[kT], OT.position, yT.position, yT.timeMs - OT.timeMs, lT, [0, 0, 0]);
+        return rT(OT.position, yT.position, fT, [0, 0, 0])
       }
     }
 
-    function Vv(vv, zv) {
-      const Pv = vv.lookDirection || zv.lookDirection ? function(vv, zv) {
-        if (!vv || !zv) return vv === zv;
-        const Pv = cv(vv),
-          hv = cv(zv);
-        return Math.hypot(vv[0] / Pv - zv[0] / hv, vv[1] / Pv - zv[1] / hv, vv[2] / Pv - zv[2] / hv) < iv
-      }(vv.lookDirection, zv.lookDirection) : (hv = vv.lookAt, Sv = zv.lookAt, "object" !== typeof hv || "object" !== typeof Sv ? hv === Sv : jv(hv, Sv) < iv);
-      var hv, Sv;
-      return jv(vv.position, zv.position) < iv && vv.fov === zv.fov && Pv
+    function JT(TT, kT) {
+      const cT = TT.lookDirection || kT.lookDirection ? function(TT, kT) {
+        if (!TT || !kT) return TT === kT;
+        const cT = QT(TT),
+          lT = QT(kT);
+        return Math.hypot(TT[0] / cT - kT[0] / lT, TT[1] / cT - kT[1] / lT, TT[2] / cT - kT[2] / lT) < NT
+      }(TT.lookDirection, kT.lookDirection) : (lT = TT.lookAt, MT = kT.lookAt, "object" !== typeof lT || "object" !== typeof MT ? lT === MT : aT(lT, MT) < NT);
+      var lT, MT;
+      return aT(TT.position, kT.position) < NT && TT.fov === kT.fov && cT
     }
-    class Uv {
-      constructor(vv, zv, Pv) {
-        if (this.smooth = zv, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
+    class oT {
+      constructor(TT, kT, cT) {
+        if (this.smooth = kT, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
             index: 0,
             toIndex: 0,
             u: 0,
@@ -629,306 +629,306 @@ export const modules = {
             afterMs: 0,
             fromTangent: [0, 0, 0],
             toTangent: [0, 0, 0]
-          }, 0 === vv.length) throw new Error("A camera path needs at least one keyframe");
-        for (let ev = 1; ev < vv.length; ev++)
-          if (!(vv[ev].timeMs > vv[ev - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
-        this.nodes = vv.map((vv => {
-          var zv;
+          }, 0 === TT.length) throw new Error("A camera path needs at least one keyframe");
+        for (let KT = 1; KT < TT.length; KT++)
+          if (!(TT[KT].timeMs > TT[KT - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
+        this.nodes = TT.map((TT => {
+          var kT;
           return {
-            timeMs: vv.timeMs,
-            position: [...vv.position],
-            keyframe: vv,
-            easing: (0, ev.m)(null !== (zv = vv.easing) && void 0 !== zv ? zv : "linear")
+            timeMs: TT.timeMs,
+            position: [...TT.position],
+            keyframe: TT,
+            easing: (0, KT.p)(null !== (kT = TT.easing) && void 0 !== kT ? kT : "linear")
           }
         }));
-        const hv = this.nodes[0],
-          Sv = this.nodes[this.nodes.length - 1],
-          gv = Pv && this.nodes.length > 1;
-        gv && !Vv(hv.keyframe, Sv.keyframe) && this.nodes.push({
-          ...hv,
-          timeMs: Sv.timeMs + (Sv.timeMs - hv.timeMs) / (this.nodes.length - 1)
-        }), this.loopMs = gv ? this.nodes[this.nodes.length - 1].timeMs - hv.timeMs : 0, this.prevNodes = this.nodes.map(((vv, zv) => this.neighbour(zv, -1))), this.nextNodes = this.nodes.map(((vv, zv) => this.neighbour(zv, 1))), this.prevGaps = this.prevNodes.map(((vv, zv) => vv >= 0 ? this.gapMs(zv, -1) : 0)), this.nextGaps = this.nextNodes.map(((vv, zv) => vv >= 0 ? this.gapMs(zv, 1) : 0)), this.velocities = this.nodes.map(((vv, zv) => {
-          const Pv = this.prevNodes[zv],
-            hv = this.nextNodes[zv];
-          return function(vv, zv, Pv, hv, Sv, ev) {
-            if (ev[0] = 0, ev[1] = 0, ev[2] = 0, !vv && !Pv) return ev;
-            const gv = null !== vv && void 0 !== vv ? vv : Yv(null !== Pv && void 0 !== Pv ? Pv : zv, zv),
-              pv = null !== Pv && void 0 !== Pv ? Pv : Yv(null !== vv && void 0 !== vv ? vv : zv, zv),
-              dv = vv ? hv : Sv,
-              Nv = Pv ? Sv : hv,
-              lv = jv(gv, zv),
-              Tv = jv(zv, pv);
-            if (lv < iv || Tv < iv) return ev;
-            const Wv = Math.sqrt(lv),
-              wv = Math.sqrt(Tv),
-              av = (Wv + wv) / (dv + Nv);
-            for (let sv = 0; sv < 3; sv++) {
-              const vv = (zv[sv] - gv[sv]) / Wv - (pv[sv] - gv[sv]) / (Wv + wv) + (pv[sv] - zv[sv]) / wv;
-              ev[sv] = vv * av
+        const lT = this.nodes[0],
+          MT = this.nodes[this.nodes.length - 1],
+          OT = cT && this.nodes.length > 1;
+        OT && !JT(lT.keyframe, MT.keyframe) && this.nodes.push({
+          ...lT,
+          timeMs: MT.timeMs + (MT.timeMs - lT.timeMs) / (this.nodes.length - 1)
+        }), this.loopMs = OT ? this.nodes[this.nodes.length - 1].timeMs - lT.timeMs : 0, this.prevNodes = this.nodes.map(((TT, kT) => this.neighbour(kT, -1))), this.nextNodes = this.nodes.map(((TT, kT) => this.neighbour(kT, 1))), this.prevGaps = this.prevNodes.map(((TT, kT) => TT >= 0 ? this.gapMs(kT, -1) : 0)), this.nextGaps = this.nextNodes.map(((TT, kT) => TT >= 0 ? this.gapMs(kT, 1) : 0)), this.velocities = this.nodes.map(((TT, kT) => {
+          const cT = this.prevNodes[kT],
+            lT = this.nextNodes[kT];
+          return function(TT, kT, cT, lT, MT, KT) {
+            if (KT[0] = 0, KT[1] = 0, KT[2] = 0, !TT && !cT) return KT;
+            const OT = null !== TT && void 0 !== TT ? TT : PT(null !== cT && void 0 !== cT ? cT : kT, kT),
+              yT = null !== cT && void 0 !== cT ? cT : PT(null !== TT && void 0 !== TT ? TT : kT, kT),
+              fT = TT ? lT : MT,
+              xT = cT ? MT : lT,
+              IT = aT(OT, kT),
+              AT = aT(kT, yT);
+            if (IT < NT || AT < NT) return KT;
+            const CT = Math.sqrt(IT),
+              jT = Math.sqrt(AT),
+              vT = (CT + jT) / (fT + xT);
+            for (let tT = 0; tT < 3; tT++) {
+              const TT = (kT[tT] - OT[tT]) / CT - (yT[tT] - OT[tT]) / (CT + jT) + (yT[tT] - kT[tT]) / jT;
+              KT[tT] = TT * vT
             }
-            return ev
-          }(Pv >= 0 ? this.nodes[Pv].position : null, vv.position, hv >= 0 ? this.nodes[hv].position : null, this.prevGaps[zv], this.nextGaps[zv], [0, 0, 0])
-        })), this.aim = new Kv(this.nodes, this.velocities, this.prevNodes, this.nextNodes, zv)
+            return KT
+          }(cT >= 0 ? this.nodes[cT].position : null, TT.position, lT >= 0 ? this.nodes[lT].position : null, this.prevGaps[kT], this.nextGaps[kT], [0, 0, 0])
+        })), this.aim = new zT(this.nodes, this.velocities, this.prevNodes, this.nextNodes, kT)
       }
-      sample(vv, zv, Pv, hv) {
-        const Sv = this.findSegment(this.pathTime(vv));
-        this.samplePosition(Sv, hv.position), this.aim.sample(Sv, zv, hv);
+      sample(TT, kT, cT, lT) {
+        const MT = this.findSegment(this.pathTime(TT));
+        this.samplePosition(MT, lT.position), this.aim.sample(MT, kT, lT);
         const {
-          beforeIndex: ev,
-          afterIndex: gv
-        } = Sv;
-        hv.fov = Ov(Sv, ev >= 0 ? this.fovAt(ev, Pv) : 0, this.fovAt(Sv.index, Pv), this.fovAt(Sv.toIndex, Pv), gv >= 0 ? this.fovAt(gv, Pv) : 0, ev >= 0, gv >= 0)
+          beforeIndex: KT,
+          afterIndex: OT
+        } = MT;
+        lT.fov = mT(MT, KT >= 0 ? this.fovAt(KT, cT) : 0, this.fovAt(MT.index, cT), this.fovAt(MT.toIndex, cT), OT >= 0 ? this.fovAt(OT, cT) : 0, KT >= 0, OT >= 0)
       }
-      pathTime(vv) {
-        const zv = this.nodes[0].timeMs;
-        if (this.loopMs <= 0 || vv <= zv) return vv;
-        const Pv = vv - zv;
-        return zv + Pv - this.loopMs * Math.floor(Pv / this.loopMs)
+      pathTime(TT) {
+        const kT = this.nodes[0].timeMs;
+        if (this.loopMs <= 0 || TT <= kT) return TT;
+        const cT = TT - kT;
+        return kT + cT - this.loopMs * Math.floor(cT / this.loopMs)
       }
-      findSegment(vv) {
-        const zv = this.nodes,
-          Pv = this.segment;
-        let hv = Pv.index;
-        for (vv < zv[hv].timeMs && (hv = 0); hv < zv.length - 2 && zv[hv + 1].timeMs <= vv;) hv++;
-        const Sv = Math.min(hv + 1, zv.length - 1),
-          gv = zv[Sv].timeMs - zv[hv].timeMs;
-        return Pv.index = hv, Pv.toIndex = Sv, Pv.segmentMs = gv, Pv.u = gv > 0 ? (0, ev.j)((vv - zv[hv].timeMs) / gv, zv[hv].easing) : 1, Pv.curved = this.smooth && gv > 0, Pv.beforeIndex = this.prevNodes[hv], Pv.afterIndex = this.nextNodes[Sv], Pv.beforeMs = this.prevGaps[hv], Pv.afterMs = this.nextGaps[Sv], Pv
+      findSegment(TT) {
+        const kT = this.nodes,
+          cT = this.segment;
+        let lT = cT.index;
+        for (TT < kT[lT].timeMs && (lT = 0); lT < kT.length - 2 && kT[lT + 1].timeMs <= TT;) lT++;
+        const MT = Math.min(lT + 1, kT.length - 1),
+          OT = kT[MT].timeMs - kT[lT].timeMs;
+        return cT.index = lT, cT.toIndex = MT, cT.segmentMs = OT, cT.u = OT > 0 ? (0, KT.n)((TT - kT[lT].timeMs) / OT, kT[lT].easing) : 1, cT.curved = this.smooth && OT > 0, cT.beforeIndex = this.prevNodes[lT], cT.afterIndex = this.nextNodes[MT], cT.beforeMs = this.prevGaps[lT], cT.afterMs = this.nextGaps[MT], cT
       }
-      samplePosition(vv, zv) {
+      samplePosition(TT, kT) {
         const {
-          fromTangent: Pv,
-          toTangent: hv,
-          curved: Sv
-        } = vv, ev = this.nodes[vv.index].position, gv = this.nodes[vv.toIndex].position;
-        fv(this.velocities[vv.index], ev, gv, vv.segmentMs, Sv, Pv), fv(this.velocities[vv.toIndex], ev, gv, vv.segmentMs, Sv, hv);
-        const pv = vv.u;
-        for (let dv = 0; dv < 3; dv++) zv[dv] = Sv ? Gv(ev[dv], Pv[dv], gv[dv], hv[dv], pv) : ev[dv] + (gv[dv] - ev[dv]) * pv
+          fromTangent: cT,
+          toTangent: lT,
+          curved: MT
+        } = TT, KT = this.nodes[TT.index].position, OT = this.nodes[TT.toIndex].position;
+        FT(this.velocities[TT.index], KT, OT, TT.segmentMs, MT, cT), FT(this.velocities[TT.toIndex], KT, OT, TT.segmentMs, MT, lT);
+        const yT = TT.u;
+        for (let fT = 0; fT < 3; fT++) kT[fT] = MT ? ST(KT[fT], cT[fT], OT[fT], lT[fT], yT) : KT[fT] + (OT[fT] - KT[fT]) * yT
       }
-      fovAt(vv, zv) {
-        var Pv;
-        return null !== (Pv = this.nodes[vv].keyframe.fov) && void 0 !== Pv ? Pv : zv
+      fovAt(TT, kT) {
+        var cT;
+        return null !== (cT = this.nodes[TT].keyframe.fov) && void 0 !== cT ? cT : kT
       }
-      neighbour(vv, zv) {
-        const Pv = this.nodes.length - 1,
-          hv = vv + zv;
-        return hv >= 0 && hv <= Pv ? hv : this.loopMs <= 0 || Pv < 2 ? -1 : hv < 0 ? Pv - 1 : 1
+      neighbour(TT, kT) {
+        const cT = this.nodes.length - 1,
+          lT = TT + kT;
+        return lT >= 0 && lT <= cT ? lT : this.loopMs <= 0 || cT < 2 ? -1 : lT < 0 ? cT - 1 : 1
       }
-      gapMs(vv, zv) {
-        const Pv = this.nodes.length - 1;
-        if (1 === zv) {
-          const zv = vv === Pv ? 0 : vv;
-          return this.nodes[zv + 1].timeMs - this.nodes[zv].timeMs
+      gapMs(TT, kT) {
+        const cT = this.nodes.length - 1;
+        if (1 === kT) {
+          const kT = TT === cT ? 0 : TT;
+          return this.nodes[kT + 1].timeMs - this.nodes[kT].timeMs
         }
-        const hv = 0 === vv ? Pv : vv;
-        return this.nodes[hv].timeMs - this.nodes[hv - 1].timeMs
+        const lT = 0 === TT ? cT : TT;
+        return this.nodes[lT].timeMs - this.nodes[lT - 1].timeMs
       }
     }
-    class Rv {
-      constructor(vv) {
-        this.oT = vv, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = zv => vv.getEntityPosition(zv), this.readAimPoint = zv => vv.getEntityAimPoint(zv)
+    class HT {
+      constructor(TT) {
+        this.pA = TT, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = kT => TT.getEntityPosition(kT), this.readAimPoint = kT => TT.getEntityAimPoint(kT)
       }
-      aimPoint(vv) {
-        return "string" !== typeof vv ? (0, dv.p)(vv, 3) ? vv : null : this.resolve(vv, this.readAimPoint, this.lastAimPoints)
+      aimPoint(TT) {
+        return "string" !== typeof TT ? (0, fT.n)(TT, 3) ? TT : null : this.resolve(TT, this.readAimPoint, this.lastAimPoints)
       }
-      currentAimPoint(vv) {
-        const zv = "string" === typeof vv ? this.oT.getEntityAimPoint(vv) : vv;
-        return zv && (0, dv.p)(zv, 3) ? zv : null
+      currentAimPoint(TT) {
+        const kT = "string" === typeof TT ? this.pA.getEntityAimPoint(TT) : TT;
+        return kT && (0, fT.n)(kT, 3) ? kT : null
       }
-      feetPosition(vv) {
-        return this.resolve(vv, this.readFeet, this.lastFeet)
+      feetPosition(TT) {
+        return this.resolve(TT, this.readFeet, this.lastFeet)
       }
-      heading(vv) {
-        const zv = this.oT.getEntityHeading(vv);
-        if (null !== zv && Number.isFinite(zv)) return this.lastHeadings.set(vv, zv), zv;
-        const Pv = this.lastHeadings.get(vv);
-        return void 0 !== Pv ? Pv : vv === this.oT.localPlayerId ? 0 : this.heading(this.oT.localPlayerId)
+      heading(TT) {
+        const kT = this.pA.getEntityHeading(TT);
+        if (null !== kT && Number.isFinite(kT)) return this.lastHeadings.set(TT, kT), kT;
+        const cT = this.lastHeadings.get(TT);
+        return void 0 !== cT ? cT : TT === this.pA.localPlayerId ? 0 : this.heading(this.pA.localPlayerId)
       }
-      resolve(vv, zv, Pv) {
-        const hv = zv(vv);
-        let Sv = Pv.get(vv);
-        return hv && (0, dv.p)(hv, 3) ? (Sv || (Sv = [0, 0, 0], Pv.set(vv, Sv)), Sv[0] = hv[0], Sv[1] = hv[1], Sv[2] = hv[2], Sv) : Sv || (vv === this.oT.localPlayerId ? null : this.resolve(this.oT.localPlayerId, zv, Pv))
+      resolve(TT, kT, cT) {
+        const lT = kT(TT);
+        let MT = cT.get(TT);
+        return lT && (0, fT.n)(lT, 3) ? (MT || (MT = [0, 0, 0], cT.set(TT, MT)), MT[0] = lT[0], MT[1] = lT[1], MT[2] = lT[2], MT) : MT || (TT === this.pA.localPlayerId ? null : this.resolve(this.pA.localPlayerId, kT, cT))
       }
     }
 
-    function xv(vv) {
+    function eT(TT) {
       return {
-        heading: vv.heading,
-        pitch: vv.pitch
+        heading: TT.heading,
+        pitch: TT.pitch
       }
     }
 
-    function tv(vv, zv) {
-      Number.isFinite(vv.heading) && Number.isFinite(vv.pitch) || (0, Sv.l)(zv, vv)
+    function GT(TT, kT) {
+      Number.isFinite(TT.heading) && Number.isFinite(TT.pitch) || (0, MT.i)(kT, TT)
     }
 
-    function qv(vv, zv, Pv, hv, ev) {
-      if (zv) return void(0, Sv.m)(zv, ev);
-      const gv = hv.aimPoint(Pv);
-      gv && (0, Sv.o)(vv, gv, ev)
+    function VT(TT, kT, cT, lT, KT) {
+      if (kT) return void(0, MT.l)(kT, KT);
+      const OT = lT.aimPoint(cT);
+      OT && (0, MT.p)(TT, OT, KT)
     }
-    class Iv {
-      constructor(vv, zv, Pv, hv) {
-        this.settings = vv, this.oT = zv, this.targets = Pv, this.base = void 0, this.base = xv(hv)
+    class ET {
+      constructor(TT, kT, cT, lT) {
+        this.settings = TT, this.pA = kT, this.targets = cT, this.base = void 0, this.base = eT(lT)
       }
-      update(vv, zv, Pv) {
-        var hv;
-        const Sv = this.settings;
-        (0, dv.i)(Sv.position, Pv.position), qv(Sv.position, Sv.lookDirection, null !== (hv = Sv.lookAt) && void 0 !== hv ? hv : this.oT.localPlayerId, this.targets, this.base), zv.apply(this.base, Pv), Pv.fov = wv(Sv, this.oT)
+      update(TT, kT, cT) {
+        var lT;
+        const MT = this.settings;
+        (0, fT.f)(MT.position, cT.position), VT(MT.position, MT.lookDirection, null !== (lT = MT.lookAt) && void 0 !== lT ? lT : this.pA.localPlayerId, this.targets, this.base), kT.apply(this.base, cT), cT.fov = jT(MT, this.pA)
       }
-      continueFrom(vv) {
-        vv instanceof Iv && (0, Sv.l)(vv.base, this.base)
+      continueFrom(TT) {
+        TT instanceof ET && (0, MT.i)(TT.base, this.base)
       }
-      reset(vv) {
-        tv(this.base, vv)
+      reset(TT) {
+        GT(this.base, TT)
       }
     }
-    class Qv {
-      constructor(vv, zv, Pv, hv) {
-        this.settings = vv, this.oT = zv, this.targets = Pv, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.pC = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.base = xv(hv), this.goal = [...hv.position]
+    class ZT {
+      constructor(TT, kT, cT, lT) {
+        this.settings = TT, this.pA = kT, this.targets = cT, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.Oh = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.base = eT(lT), this.goal = [...lT.position]
       }
-      update(vv, zv, Pv) {
-        var hv, Sv, ev;
-        const gv = this.settings,
-          pv = null !== (hv = gv.target) && void 0 !== hv ? hv : this.oT.localPlayerId,
-          Nv = this.targets.feetPosition(pv);
-        let lv = !1;
-        Nv && (lv = this.foundFeet && jv(this.lastFeet, Nv) > 32 + .1 * vv, (0, dv.i)(Nv, this.lastFeet), this.foundFeet = !0, this.placeGoal(Nv, pv));
-        const Tv = null !== (Sv = gv.smoothMs) && void 0 !== Sv ? Sv : 0;
-        !this.started || Tv < 1 || lv ? ((0, dv.i)(this.goal, this.smoothed), this.pC.fill(0), this.started = !0) : av(this.smoothed, this.pC, this.goal, Tv, vv), lv && (this.distance = -1), (0, dv.i)(this.smoothed, Pv.position);
-        const Wv = !0 === gv.avoidTerrain ? this.pullIn(pv, vv, Pv) : 1;
-        let sv = this.goal;
-        if ("target" === gv.offsetSpace) sv = Pv.position;
-        else if (Wv < 1) {
-          sv = this.aimOrigin;
-          for (let vv = 0; vv < 3; vv++) sv[vv] = Pv.position[vv] + (this.goal[vv] - this.smoothed[vv]) * Wv
+      update(TT, kT, cT) {
+        var lT, MT, KT;
+        const OT = this.settings,
+          yT = null !== (lT = OT.target) && void 0 !== lT ? lT : this.pA.localPlayerId,
+          xT = this.targets.feetPosition(yT);
+        let IT = !1;
+        xT && (IT = this.foundFeet && aT(this.lastFeet, xT) > 32 + .1 * TT, (0, fT.f)(xT, this.lastFeet), this.foundFeet = !0, this.placeGoal(xT, yT));
+        const AT = null !== (MT = OT.smoothMs) && void 0 !== MT ? MT : 0;
+        !this.started || AT < 1 || IT ? ((0, fT.f)(this.goal, this.smoothed), this.Oh.fill(0), this.started = !0) : vT(this.smoothed, this.Oh, this.goal, AT, TT), IT && (this.distance = -1), (0, fT.f)(this.smoothed, cT.position);
+        const CT = !0 === OT.avoidTerrain ? this.pullIn(yT, TT, cT) : 1;
+        let tT = this.goal;
+        if ("target" === OT.offsetSpace) tT = cT.position;
+        else if (CT < 1) {
+          tT = this.aimOrigin;
+          for (let TT = 0; TT < 3; TT++) tT[TT] = cT.position[TT] + (this.goal[TT] - this.smoothed[TT]) * CT
         }
-        qv(sv, gv.lookDirection, null !== (ev = gv.lookAt) && void 0 !== ev ? ev : pv, this.targets, this.base), zv.apply(this.base, Pv), Pv.fov = wv(gv, this.oT)
+        VT(tT, OT.lookDirection, null !== (KT = OT.lookAt) && void 0 !== KT ? KT : yT, this.targets, this.base), kT.apply(this.base, cT), cT.fov = jT(OT, this.pA)
       }
-      continueFrom(vv) {
-        vv instanceof Qv && (0, hv.t)(vv.settings.target, this.settings.target) && ((0, Sv.l)(vv.base, this.base), (0, dv.i)(vv.goal, this.goal), (0, dv.i)(vv.lastFeet, this.lastFeet), this.foundFeet = vv.foundFeet, (0, dv.i)(vv.smoothed, this.smoothed), (0, dv.i)(vv.pC, this.pC), this.started = vv.started, !0 === vv.settings.avoidTerrain && (this.distance = vv.distance))
+      continueFrom(TT) {
+        TT instanceof ZT && (0, lT.u)(TT.settings.target, this.settings.target) && ((0, MT.i)(TT.base, this.base), (0, fT.f)(TT.goal, this.goal), (0, fT.f)(TT.lastFeet, this.lastFeet), this.foundFeet = TT.foundFeet, (0, fT.f)(TT.smoothed, this.smoothed), (0, fT.f)(TT.Oh, this.Oh), this.started = TT.started, !0 === TT.settings.avoidTerrain && (this.distance = TT.distance))
       }
-      reset(vv) {
-        tv(this.base, vv), this.pC.fill(0), this.started = !1, this.distance = -1
+      reset(TT) {
+        GT(this.base, TT), this.Oh.fill(0), this.started = !1, this.distance = -1
       }
-      pullIn(vv, zv, Pv) {
-        const hv = this.targets.aimPoint(vv);
-        if (!hv) return 1;
-        const Sv = Pv.position,
-          ev = jv(hv, Sv);
-        if (!(ev > 0)) return 1;
-        const gv = this.toCamera;
-        for (let dv = 0; dv < 3; dv++) gv[dv] = (Sv[dv] - hv[dv]) / ev;
-        const pv = function(vv, zv, Pv) {
-          return vv < 0 || zv < vv ? zv : zv + (vv - zv) * Math.exp(-Pv / 150)
-        }(this.distance, function(vv, zv, Pv, hv) {
-          const Sv = vv.raycastTerrain(zv, Pv, hv);
-          return null !== Sv && Number.isFinite(Sv) ? Math.min(hv, Math.max(0, Sv - .2)) : hv
-        }(this.oT, hv, gv, ev), zv);
-        if (ev - pv < .001) return this.distance = -1, 1;
-        this.distance = pv;
-        for (let dv = 0; dv < 3; dv++) Sv[dv] = hv[dv] + gv[dv] * pv;
-        return pv / ev
+      pullIn(TT, kT, cT) {
+        const lT = this.targets.aimPoint(TT);
+        if (!lT) return 1;
+        const MT = cT.position,
+          KT = aT(lT, MT);
+        if (!(KT > 0)) return 1;
+        const OT = this.toCamera;
+        for (let fT = 0; fT < 3; fT++) OT[fT] = (MT[fT] - lT[fT]) / KT;
+        const yT = function(TT, kT, cT) {
+          return TT < 0 || kT < TT ? kT : kT + (TT - kT) * Math.exp(-cT / 150)
+        }(this.distance, function(TT, kT, cT, lT) {
+          const MT = TT.raycastTerrain(kT, cT, lT);
+          return null !== MT && Number.isFinite(MT) ? Math.min(lT, Math.max(0, MT - .2)) : lT
+        }(this.pA, lT, OT, KT), kT);
+        if (KT - yT < .001) return this.distance = -1, 1;
+        this.distance = yT;
+        for (let fT = 0; fT < 3; fT++) MT[fT] = lT[fT] + OT[fT] * yT;
+        return yT / KT
       }
-      placeGoal(vv, zv) {
-        const Pv = this.settings.offset;
-        let hv = Pv[0],
-          Sv = Pv[2];
+      placeGoal(TT, kT) {
+        const cT = this.settings.offset;
+        let lT = cT[0],
+          MT = cT[2];
         if ("target" === this.settings.offsetSpace) {
-          const vv = this.targets.heading(zv),
-            ev = Math.cos(vv),
-            gv = Math.sin(vv);
-          hv = Pv[0] * ev + Pv[2] * gv, Sv = -Pv[0] * gv + Pv[2] * ev
+          const TT = this.targets.heading(kT),
+            KT = Math.cos(TT),
+            OT = Math.sin(TT);
+          lT = cT[0] * KT + cT[2] * OT, MT = -cT[0] * OT + cT[2] * KT
         }
-        this.goal[0] = vv[0] + hv, this.goal[1] = vv[1] + Pv[1], this.goal[2] = vv[2] + Sv
+        this.goal[0] = TT[0] + lT, this.goal[1] = TT[1] + cT[1], this.goal[2] = TT[2] + MT
       }
     }
-    class Zv {
-      constructor(vv, zv, Pv, hv) {
-        var Sv, ev;
-        this.settings = vv, this.oT = zv, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = vv.keyframes.length > 0 ? new Uv(vv.keyframes, null === (Sv = vv.smooth) || void 0 === Sv || Sv, null !== (ev = vv.loop) && void 0 !== ev && ev) : null, this.base = (0, dv.g)(hv, (0, dv.m)()), this.resolveTarget = vv => Pv.aimPoint(vv)
+    class uT {
+      constructor(TT, kT, cT, lT) {
+        var MT, KT;
+        this.settings = TT, this.pA = kT, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = TT.keyframes.length > 0 ? new oT(TT.keyframes, null === (MT = TT.smooth) || void 0 === MT || MT, null !== (KT = TT.loop) && void 0 !== KT && KT) : null, this.base = (0, fT.e)(lT, (0, fT.j)()), this.resolveTarget = TT => cT.aimPoint(TT)
       }
-      update(vv, zv, Pv) {
-        this.elapsedMs += vv;
-        const hv = wv(this.settings, this.oT);
-        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, hv, this.base) : this.base.fov = hv, (0, dv.i)(this.base.position, Pv.position), Pv.fov = this.base.fov, zv.apply(this.base, Pv)
+      update(TT, kT, cT) {
+        this.elapsedMs += TT;
+        const lT = jT(this.settings, this.pA);
+        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, lT, this.base) : this.base.fov = lT, (0, fT.f)(this.base.position, cT.position), cT.fov = this.base.fov, kT.apply(this.base, cT)
       }
-      continueFrom(vv) {
-        vv instanceof Zv && (0, hv.t)(vv.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = vv.elapsedMs, (0, dv.g)(vv.base, this.base))
+      continueFrom(TT) {
+        TT instanceof uT && (0, lT.u)(TT.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = TT.elapsedMs, (0, fT.e)(TT.base, this.base))
       }
-      reset(vv) {
-        tv(this.base, vv), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
+      reset(TT) {
+        GT(this.base, TT), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
       }
     }
 
-    function Av(vv, zv) {
-      return (0, hv.x)(vv, zv)
+    function XT(TT, kT) {
+      return (0, lT.w)(TT, kT)
     }
-    class Lv {
-      constructor(vv, zv, Pv) {
-        var hv;
-        this.settings = vv, this.oT = zv, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
-        const Sv = null !== Pv && Pv.settings.mode === vv.mode,
-          ev = Sv ? Pv.pose : zv.getDefaultPose();
-        this.pose = (0, dv.g)(ev, (0, dv.m)()), this.lastGoodPose = (0, dv.g)(Sv ? Pv.lastGoodPose : ev, (0, dv.m)()), this.look = new Cv(vv.playerLook), this.targets = null !== (hv = null === Pv || void 0 === Pv ? void 0 : Pv.targets) && void 0 !== hv ? hv : new Rv(zv);
-        const gv = (0, dv.g)(ev, (0, dv.m)());
-        Sv && Pv.look.unapply(gv, gv), this.mode = function(vv, zv, Pv, hv) {
-          switch (vv.mode) {
+    class dT {
+      constructor(TT, kT, cT) {
+        var lT;
+        this.settings = TT, this.pA = kT, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
+        const MT = null !== cT && cT.settings.mode === TT.mode,
+          KT = MT ? cT.pose : kT.getDefaultPose();
+        this.pose = (0, fT.e)(KT, (0, fT.j)()), this.lastGoodPose = (0, fT.e)(MT ? cT.lastGoodPose : KT, (0, fT.j)()), this.look = new hT(TT.playerLook), this.targets = null !== (lT = null === cT || void 0 === cT ? void 0 : cT.targets) && void 0 !== lT ? lT : new HT(kT);
+        const OT = (0, fT.e)(KT, (0, fT.j)());
+        MT && cT.look.unapply(OT, OT), this.mode = function(TT, kT, cT, lT) {
+          switch (TT.mode) {
             case "fixed":
-              return new Iv(vv, zv, Pv, hv);
+              return new ET(TT, kT, cT, lT);
             case "follow":
-              return new Qv(vv, zv, Pv, hv);
+              return new ZT(TT, kT, cT, lT);
             case "path":
-              return new Zv(vv, zv, Pv, hv);
+              return new uT(TT, kT, cT, lT);
             case "frame":
-              return new sv(vv, zv, Pv, hv)
+              return new tT(TT, kT, cT, lT)
           }
-        }(vv, zv, this.targets, gv), Sv && (this.look.continueFrom(Pv.look), this.mode.continueFrom(Pv.mode))
+        }(TT, kT, this.targets, OT), MT && (this.look.continueFrom(cT.look), this.mode.continueFrom(cT.mode))
       }
-      update(vv, zv) {
-        return this.look.update(vv, zv), this.mode.update(vv, this.look, this.pose), (0, dv.n)(this.pose) ? (0, dv.g)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, dv.g)(this.lastGoodPose, this.pose), this.mode.reset((0, dv.n)(this.lastGoodPose) ? this.lastGoodPose : this.oT.getDefaultPose())), this.pose
+      update(TT, kT) {
+        return this.look.update(TT, kT), this.mode.update(TT, this.look, this.pose), (0, fT.k)(this.pose) ? (0, fT.e)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, fT.e)(this.lastGoodPose, this.pose), this.mode.reset((0, fT.k)(this.lastGoodPose) ? this.lastGoodPose : this.pA.getDefaultPose())), this.pose
       }
     }
 
-    function Hv(vv) {
-      return [0, 0, vv[2], vv[3]]
+    function LT(TT) {
+      return [0, 0, TT[2], TT[3]]
     }
-    class Mv {
-      constructor(vv) {
-        this.oT = vv, this.settings = {
+    class RT {
+      constructor(TT) {
+        this.pA = TT, this.settings = {
           mode: "default"
-        }, this.pending = null, this.fade = new pv, this.shot = null, this.blend = null, this.mixed = (0, dv.m)(), this.output = (0, dv.m)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
+        }, this.pending = null, this.fade = new yT, this.shot = null, this.blend = null, this.mixed = (0, fT.j)(), this.output = (0, fT.j)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
           length: 3
         }, (() => [0, 0, 0]))
       }
-      setSettings(vv) {
-        const zv = (0, Nv.e)(vv);
-        if ((0, hv.t)(zv, this.pending ? this.pending.settings : this.settings)) return;
-        const Pv = Av(this.settings, zv);
-        if (void 0 !== zv.transition && !Pv) return this.pending = {
-          settings: zv,
-          shot: "default" === zv.mode ? null : new Lv(zv, this.oT, null)
-        }, void this.fade.fadeOut(zv.transition);
-        const Sv = null !== this.pending;
-        this.pending = null, !Sv && Pv || this.fade.fadeIn(hv.m.minTransitionFadeMs), this.show(zv, !1)
+      setSettings(TT) {
+        const kT = (0, xT.e)(TT);
+        if ((0, lT.u)(kT, this.pending ? this.pending.settings : this.settings)) return;
+        const cT = XT(this.settings, kT);
+        if (void 0 !== kT.transition && !cT) return this.pending = {
+          settings: kT,
+          shot: "default" === kT.mode ? null : new dT(kT, this.pA, null)
+        }, void this.fade.fadeOut(kT.transition);
+        const MT = null !== this.pending;
+        this.pending = null, !MT && cT || this.fade.fadeIn(lT.l.minTransitionFadeMs), this.show(kT, !1)
       }
-      show(vv, zv) {
-        var Pv, Sv;
-        if ((0, hv.t)(vv, this.settings)) return;
-        const gv = !zv && Av(this.settings, vv);
-        this.settings = vv;
-        const pv = null !== this.blend && this.blend.elapsedMs > 0,
-          Nv = (0, dv.g)(this.hasOutput ? this.output : this.oT.getDefaultPose(), (0, dv.m)());
-        if (this.shot = "default" === vv.mode ? null : new Lv(vv, this.oT, zv ? null : this.shot), gv) return;
-        const lv = zv || !this.shot && !this.hasOutput ? 0 : null !== (Pv = vv.blendInMs) && void 0 !== Pv ? Pv : 0;
-        if (lv <= 0) return void(this.blend = null);
-        const Tv = (0, ev.m)(null !== (Sv = vv.blendEasing) && void 0 !== Sv ? Sv : "easeInOut");
+      show(TT, kT) {
+        var cT, MT;
+        if ((0, lT.u)(TT, this.settings)) return;
+        const OT = !kT && XT(this.settings, TT);
+        this.settings = TT;
+        const yT = null !== this.blend && this.blend.elapsedMs > 0,
+          xT = (0, fT.e)(this.hasOutput ? this.output : this.pA.getDefaultPose(), (0, fT.j)());
+        if (this.shot = "default" === TT.mode ? null : new dT(TT, this.pA, kT ? null : this.shot), OT) return;
+        const IT = kT || !this.shot && !this.hasOutput ? 0 : null !== (cT = TT.blendInMs) && void 0 !== cT ? cT : 0;
+        if (IT <= 0) return void(this.blend = null);
+        const AT = (0, KT.p)(null !== (MT = TT.blendEasing) && void 0 !== MT ? MT : "easeInOut");
         this.blend = {
-          from: Nv,
+          from: xT,
           fromScripted: this.hasOutput,
           headingDelta: NaN,
           elapsedMs: 0,
-          durationMs: lv,
-          easing: pv ? Hv(Tv) : Tv
+          durationMs: IT,
+          easing: yT ? LT(AT) : AT
         }
       }
       getSettings() {
@@ -943,66 +943,66 @@ export const modules = {
       isActive() {
         return null !== this.shot || null !== this.blend
       }
-      update(vv, zv) {
-        const Pv = Number.isFinite(vv) && vv > 0 ? vv : 0;
-        if (this.fade.advance(Pv) && null !== this.pending) {
+      update(TT, kT) {
+        const cT = Number.isFinite(TT) && TT > 0 ? TT : 0;
+        if (this.fade.advance(cT) && null !== this.pending) {
           const {
-            settings: vv
+            settings: TT
           } = this.pending;
-          this.pending = null, this.show(vv, !0)
+          this.pending = null, this.show(TT, !0)
         }
         this.loadingPositions.length = 0;
-        const hv = this.pending;
-        if (null !== hv && void 0 !== hv && hv.shot) {
-          const vv = "path" === hv.settings.mode ? 0 : Pv;
-          this.noteLoadingPosition(hv.shot.update(vv, dv.d).position)
+        const lT = this.pending;
+        if (null !== lT && void 0 !== lT && lT.shot) {
+          const TT = "path" === lT.settings.mode ? 0 : cT;
+          this.noteLoadingPosition(lT.shot.update(TT, fT.b).position)
         }
         if (!this.isActive()) return this.hasOutput = !1, null;
-        const gv = this.shot ? this.shot.update(Pv, zv) : this.oT.getDefaultPose();
-        this.shot && this.noteLoadingPosition(gv.position);
-        const pv = this.blend;
-        if (!pv) return this.writeOutput(gv);
-        pv.elapsedMs += Pv;
-        const Nv = Math.min(1, pv.elapsedMs / pv.durationMs);
-        if (pv.headingDelta = Number.isFinite(pv.headingDelta) ? (0, Sv.w)(pv.headingDelta, gv.heading - pv.from.heading) : (0, Sv.s)(pv.from.heading, gv.heading), (0, dv.r)(pv.from, gv, pv.headingDelta, (0, ev.j)(Nv, pv.easing), this.mixed), Nv >= 1) {
+        const OT = this.shot ? this.shot.update(cT, kT) : this.pA.getDefaultPose();
+        this.shot && this.noteLoadingPosition(OT.position);
+        const yT = this.blend;
+        if (!yT) return this.writeOutput(OT);
+        yT.elapsedMs += cT;
+        const xT = Math.min(1, yT.elapsedMs / yT.durationMs);
+        if (yT.headingDelta = Number.isFinite(yT.headingDelta) ? (0, MT.x)(yT.headingDelta, OT.heading - yT.from.heading) : (0, MT.t)(yT.from.heading, OT.heading), (0, fT.p)(yT.from, OT, yT.headingDelta, (0, KT.n)(xT, yT.easing), this.mixed), xT >= 1) {
           if (this.blend = null, !this.shot) return this.hasOutput = !1, null
-        } else pv.fromScripted && this.noteLoadingPosition(pv.from.position);
+        } else yT.fromScripted && this.noteLoadingPosition(yT.from.position);
         return this.writeOutput(this.mixed)
       }
-      noteLoadingPosition(vv) {
-        if (vv.every(Number.isFinite)) {
-          const zv = this.loadingPositions;
-          zv.push((0, dv.i)(vv, this.loadingSlots[zv.length]))
+      noteLoadingPosition(TT) {
+        if (TT.every(Number.isFinite)) {
+          const kT = this.loadingPositions;
+          kT.push((0, fT.f)(TT, this.loadingSlots[kT.length]))
         }
       }
-      writeOutput(vv) {
-        const zv = this.output;
-        (0, dv.n)(vv) ? (0, dv.g)(vv, zv) : this.hasOutput || (0, dv.g)(this.oT.getDefaultPose(), zv), zv.pitch = (0, Sv.h)(zv.pitch);
-        const Pv = this.oT.getDefaultFov(),
-          ev = Number.isFinite(Pv) && Pv > 0 && Pv < 180,
-          gv = ev ? Math.min(hv.m.minFov, Pv) : hv.m.minFov,
-          pv = ev ? Math.max(hv.m.maxFov, Pv) : hv.m.maxFov;
-        return zv.fov = Number.isFinite(zv.fov) ? Math.min(pv, Math.max(gv, zv.fov)) : pv, this.hasOutput = !0, zv
+      writeOutput(TT) {
+        const kT = this.output;
+        (0, fT.k)(TT) ? (0, fT.e)(TT, kT) : this.hasOutput || (0, fT.e)(this.pA.getDefaultPose(), kT), kT.pitch = (0, MT.h)(kT.pitch);
+        const cT = this.pA.getDefaultFov(),
+          KT = Number.isFinite(cT) && cT > 0 && cT < 180,
+          OT = KT ? Math.min(lT.l.minFov, cT) : lT.l.minFov,
+          yT = KT ? Math.max(lT.l.maxFov, cT) : lT.l.maxFov;
+        return kT.fov = Number.isFinite(kT.fov) ? Math.min(yT, Math.max(OT, kT.fov)) : yT, this.hasOutput = !0, kT
       }
     }
   },
-  38679: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => Sv,
-      g: () => pv,
-      i: () => gv,
-      m: () => ev,
-      n: () => Nv,
-      p: () => dv,
-      r: () => lv
+  38966: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => MT,
+      e: () => yT,
+      f: () => OT,
+      j: () => KT,
+      k: () => xT,
+      n: () => fT,
+      p: () => IT
     });
-    var hv = Pv(38683);
-    const Sv = {
-      ND: 0,
-      lD: 0
+    var lT = cT(38972);
+    const MT = {
+      Rm: 0,
+      Wm: 0
     };
 
-    function ev() {
+    function KT() {
       return {
         position: [0, 0, 0],
         heading: 0,
@@ -1011,196 +1011,196 @@ export const modules = {
       }
     }
 
-    function gv(vv, zv) {
-      return zv[0] = vv[0], zv[1] = vv[1], zv[2] = vv[2], zv
+    function OT(TT, kT) {
+      return kT[0] = TT[0], kT[1] = TT[1], kT[2] = TT[2], kT
     }
 
-    function pv(vv, zv) {
-      return gv(vv.position, zv.position), zv.heading = vv.heading, zv.pitch = vv.pitch, zv.fov = vv.fov, zv
+    function yT(TT, kT) {
+      return OT(TT.position, kT.position), kT.heading = TT.heading, kT.pitch = TT.pitch, kT.fov = TT.fov, kT
     }
 
-    function dv(vv, zv) {
-      return Array.isArray(vv) && vv.length === zv && vv.every(Number.isFinite)
+    function fT(TT, kT) {
+      return Array.isArray(TT) && TT.length === kT && TT.every(Number.isFinite)
     }
 
-    function Nv(vv) {
-      return dv(vv.position, 3) && Number.isFinite(vv.heading) && Number.isFinite(vv.pitch) && Number.isFinite(vv.fov)
+    function xT(TT) {
+      return fT(TT.position, 3) && Number.isFinite(TT.heading) && Number.isFinite(TT.pitch) && Number.isFinite(TT.fov)
     }
 
-    function lv(vv, zv, Pv, Sv, ev) {
-      for (let hv = 0; hv < 3; hv++) ev.position[hv] = vv.position[hv] + (zv.position[hv] - vv.position[hv]) * Sv;
-      return ev.heading = (0, hv.r)(vv.heading + Pv * Sv), ev.pitch = vv.pitch + (zv.pitch - vv.pitch) * Sv, ev.fov = vv.fov + (zv.fov - vv.fov) * Sv, ev
+    function IT(TT, kT, cT, MT, KT) {
+      for (let lT = 0; lT < 3; lT++) KT.position[lT] = TT.position[lT] + (kT.position[lT] - TT.position[lT]) * MT;
+      return KT.heading = (0, lT.s)(TT.heading + cT * MT), KT.pitch = TT.pitch + (kT.pitch - TT.pitch) * MT, KT.fov = TT.fov + (kT.fov - TT.fov) * MT, KT
     }
   },
-  38696: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => Fv,
-      h: () => Wv
+  38988: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => rT,
+      g: () => CT
     });
-    var hv = Pv(38694),
-      Sv = Pv(38679);
-    const ev = hv.i,
-      gv = hv.q;
+    var lT = cT(38984),
+      MT = cT(38966);
+    const KT = lT.j,
+      OT = lT.p;
 
-    function pv(vv, zv, Pv, hv) {
-      return Number.isFinite(vv) ? Math.min(Pv, Math.max(zv, vv)) : hv
+    function yT(TT, kT, cT, lT) {
+      return Number.isFinite(TT) ? Math.min(cT, Math.max(kT, TT)) : lT
     }
 
-    function dv(vv, zv, Pv) {
-      return void 0 !== vv && Number.isFinite(vv) ? Math.min(Pv, Math.max(zv, vv)) : void 0
+    function fT(TT, kT, cT) {
+      return void 0 !== TT && Number.isFinite(TT) ? Math.min(cT, Math.max(kT, TT)) : void 0
     }
 
-    function Nv(vv) {
-      const zv = hv.m.maxCoordinate;
-      return [Math.min(zv, Math.max(-zv, vv[0])), Math.min(zv, Math.max(-zv, vv[1])), Math.min(zv, Math.max(-zv, vv[2]))]
+    function xT(TT) {
+      const kT = lT.l.maxCoordinate;
+      return [Math.min(kT, Math.max(-kT, TT[0])), Math.min(kT, Math.max(-kT, TT[1])), Math.min(kT, Math.max(-kT, TT[2]))]
     }
 
-    function lv(vv) {
-      return "string" === typeof vv ? vv : (0, Sv.p)(vv, 3) ? Nv(vv) : void 0
+    function IT(TT) {
+      return "string" === typeof TT ? TT : (0, MT.n)(TT, 3) ? xT(TT) : void 0
     }
-    const Tv = new RegExp(hv.s);
+    const AT = new RegExp(lT.s);
 
-    function Wv(vv) {
-      return "string" === typeof vv && Tv.test(vv)
+    function CT(TT) {
+      return "string" === typeof TT && AT.test(TT)
     }
 
-    function wv(vv) {
-      const zv = [];
-      if (!Array.isArray(vv)) return zv;
-      for (const Pv of vv.slice(0, hv.m.maxFrameTargets)) {
-        const vv = lv(Pv);
-        void 0 === vv || "string" === typeof vv && !Wv(vv) || zv.push(vv)
+    function jT(TT) {
+      const kT = [];
+      if (!Array.isArray(TT)) return kT;
+      for (const cT of TT.slice(0, lT.l.maxFrameTargets)) {
+        const TT = IT(cT);
+        void 0 === TT || "string" === typeof TT && !CT(TT) || kT.push(TT)
       }
-      return zv
+      return kT
     }
 
-    function av(vv) {
-      if (!(0, Sv.p)(vv, 3)) return;
-      const zv = Math.max(Math.abs(vv[0]), Math.abs(vv[1]), Math.abs(vv[2])),
-        Pv = Math.hypot(vv[0] / zv, vv[1] / zv, vv[2] / zv);
-      return 0 === zv || zv * Pv < hv.m.minDirectionLength ? void 0 : [vv[0] / zv / Pv, vv[1] / zv / Pv, vv[2] / zv / Pv]
+    function vT(TT) {
+      if (!(0, MT.n)(TT, 3)) return;
+      const kT = Math.max(Math.abs(TT[0]), Math.abs(TT[1]), Math.abs(TT[2])),
+        cT = Math.hypot(TT[0] / kT, TT[1] / kT, TT[2] / kT);
+      return 0 === kT || kT * cT < lT.l.minDirectionLength ? void 0 : [TT[0] / kT / cT, TT[1] / kT / cT, TT[2] / kT / cT]
     }
 
-    function sv(vv) {
-      if (void 0 !== vv) return "string" === typeof vv ? ev.includes(vv) ? vv : void 0 : (0, Sv.p)(vv, 4) ? [pv(vv[0], 0, 1, 0), pv(vv[1], hv.m.minEasingY, hv.m.maxEasingY, 0), pv(vv[2], 0, 1, 1), pv(vv[3], hv.m.minEasingY, hv.m.maxEasingY, 1)] : "linear"
+    function tT(TT) {
+      if (void 0 !== TT) return "string" === typeof TT ? KT.includes(TT) ? TT : void 0 : (0, MT.n)(TT, 4) ? [yT(TT[0], 0, 1, 0), yT(TT[1], lT.l.minEasingY, lT.l.maxEasingY, 0), yT(TT[2], 0, 1, 1), yT(TT[3], lT.l.minEasingY, lT.l.maxEasingY, 1)] : "linear"
     }
 
-    function Cv(vv) {
-      if (vv) return {
-        maxYaw: pv(vv.maxYaw, 0, hv.m.maxPlayerLook, 0),
-        maxPitch: pv(vv.maxPitch, 0, hv.m.maxPlayerLook, 0),
-        returnMs: dv(vv.returnMs, 0, hv.m.maxReturnMs)
+    function hT(TT) {
+      if (TT) return {
+        maxYaw: yT(TT.maxYaw, 0, lT.l.maxPlayerLook, 0),
+        maxPitch: yT(TT.maxPitch, 0, lT.l.maxPlayerLook, 0),
+        returnMs: fT(TT.returnMs, 0, lT.l.maxReturnMs)
       }
     }
-    const iv = new RegExp(hv.e);
+    const NT = new RegExp(lT.c);
 
-    function cv(vv) {
-      var zv;
-      if ("object" !== typeof vv || null === vv) return;
-      const Pv = hv.m.maxTransitionMs,
-        Sv = hv.m.minTransitionFadeMs;
+    function QT(TT) {
+      var kT;
+      if ("object" !== typeof TT || null === TT) return;
+      const cT = lT.l.maxTransitionMs,
+        MT = lT.l.minTransitionFadeMs;
       return {
-        colour: "string" === typeof vv.colour && iv.test(vv.colour) ? vv.colour : hv.h,
-        outMs: pv(vv.outMs, Sv, Pv, Sv),
-        holdMs: pv(null !== (zv = vv.holdMs) && void 0 !== zv ? zv : 0, 0, Pv, 0),
-        inMs: pv(vv.inMs, Sv, Pv, Sv)
+        colour: "string" === typeof TT.colour && NT.test(TT.colour) ? TT.colour : lT.f,
+        outMs: yT(TT.outMs, MT, cT, MT),
+        holdMs: yT(null !== (kT = TT.holdMs) && void 0 !== kT ? kT : 0, 0, cT, 0),
+        inMs: yT(TT.inMs, MT, cT, MT)
       }
     }
 
-    function Gv(vv) {
-      return !0 === vv || void 0
+    function ST(TT) {
+      return !0 === TT || void 0
     }
 
-    function mv(vv) {
-      if ("object" !== typeof vv || null === vv) return !1;
-      const zv = vv.lookAt;
-      return Number.isFinite(vv.timeMs) && (0, Sv.p)(vv.position, 3) && (void 0 === zv || "string" === typeof zv || (0, Sv.p)(zv, 3))
+    function DT(TT) {
+      if ("object" !== typeof TT || null === TT) return !1;
+      const kT = TT.lookAt;
+      return Number.isFinite(TT.timeMs) && (0, MT.n)(TT.position, 3) && (void 0 === kT || "string" === typeof kT || (0, MT.n)(kT, 3))
     }
 
-    function jv(vv) {
+    function aT(TT) {
       return {
-        ...vv,
-        timeMs: pv(vv.timeMs, 0, hv.m.maxPathMs, 0),
-        position: Nv(vv.position),
-        lookAt: lv(vv.lookAt),
-        lookDirection: av(vv.lookDirection),
-        fov: dv(vv.fov, hv.m.minFov, hv.m.maxFov),
-        easing: sv(vv.easing)
+        ...TT,
+        timeMs: yT(TT.timeMs, 0, lT.l.maxPathMs, 0),
+        position: xT(TT.position),
+        lookAt: IT(TT.lookAt),
+        lookDirection: vT(TT.lookDirection),
+        fov: fT(TT.fov, lT.l.minFov, lT.l.maxFov),
+        easing: tT(TT.easing)
       }
     }
 
-    function fv(vv) {
-      const zv = [];
-      if (!Array.isArray(vv)) return zv;
-      for (const Pv of vv.slice(0, hv.m.maxKeyframes)) {
-        if (!mv(Pv)) continue;
-        const vv = jv(Pv);
-        (0 === zv.length || vv.timeMs > zv[zv.length - 1].timeMs) && zv.push(vv)
+    function FT(TT) {
+      const kT = [];
+      if (!Array.isArray(TT)) return kT;
+      for (const cT of TT.slice(0, lT.l.maxKeyframes)) {
+        if (!DT(cT)) continue;
+        const TT = aT(cT);
+        (0 === kT.length || TT.timeMs > kT[kT.length - 1].timeMs) && kT.push(TT)
       }
-      return zv
+      return kT
     }
 
-    function Fv(vv) {
-      if ("object" !== typeof vv || null === vv) return {
+    function rT(TT) {
+      if ("object" !== typeof TT || null === TT) return {
         mode: "default"
       };
-      const zv = {
-          blendInMs: dv(vv.blendInMs, 0, hv.m.maxBlendInMs),
-          blendEasing: sv(vv.blendEasing),
-          transition: cv(vv.transition),
-          letterbox: Gv(vv.letterbox),
-          hideHud: Gv(vv.hideHud)
+      const kT = {
+          blendInMs: fT(TT.blendInMs, 0, lT.l.maxBlendInMs),
+          blendEasing: tT(TT.blendEasing),
+          transition: QT(TT.transition),
+          letterbox: ST(TT.letterbox),
+          hideHud: ST(TT.hideHud)
         },
-        Pv = {
+        cT = {
           mode: "default",
-          ...zv
+          ...kT
         };
-      if ("default" === vv.mode || "fixed" === vv.mode && !(0, Sv.p)(vv.position, 3)) return Pv;
-      const ev = {
-        ...zv,
-        fov: dv(vv.fov, hv.m.minFov, hv.m.maxFov),
-        playerFacing: (Tv = vv.playerFacing, gv.includes(Tv) ? Tv : void 0),
-        playerLook: Cv(vv.playerLook)
+      if ("default" === TT.mode || "fixed" === TT.mode && !(0, MT.n)(TT.position, 3)) return cT;
+      const KT = {
+        ...kT,
+        fov: fT(TT.fov, lT.l.minFov, lT.l.maxFov),
+        playerFacing: (AT = TT.playerFacing, OT.includes(AT) ? AT : void 0),
+        playerLook: hT(TT.playerLook)
       };
-      var Tv, Wv;
-      switch (vv.mode) {
+      var AT, CT;
+      switch (TT.mode) {
         case "fixed":
           return {
-            ...vv, ...ev, position: Nv(vv.position), lookAt: lv(vv.lookAt), lookDirection: av(vv.lookDirection)
+            ...TT, ...KT, position: xT(TT.position), lookAt: IT(TT.lookAt), lookDirection: vT(TT.lookDirection)
           };
         case "follow":
           return {
-            ...vv, ...ev, target: "string" === typeof vv.target ? vv.target : void 0, lookAt: lv(vv.lookAt), offset: (Wv = vv.offset, Array.isArray(Wv) ? [pv(Wv[0], -hv.m.maxOffset, hv.m.maxOffset, 0), pv(Wv[1], -hv.m.maxOffset, hv.m.maxOffset, 0), pv(Wv[2], -hv.m.maxOffset, hv.m.maxOffset, 0)] : [0, 0, 0]), lookDirection: av(vv.lookDirection), smoothMs: dv(vv.smoothMs, 0, hv.m.maxSmoothMs)
+            ...TT, ...KT, target: "string" === typeof TT.target ? TT.target : void 0, lookAt: IT(TT.lookAt), offset: (CT = TT.offset, Array.isArray(CT) ? [yT(CT[0], -lT.l.maxOffset, lT.l.maxOffset, 0), yT(CT[1], -lT.l.maxOffset, lT.l.maxOffset, 0), yT(CT[2], -lT.l.maxOffset, lT.l.maxOffset, 0)] : [0, 0, 0]), lookDirection: vT(TT.lookDirection), smoothMs: fT(TT.smoothMs, 0, lT.l.maxSmoothMs)
           };
         case "path":
           return {
-            ...vv, ...ev, keyframes: fv(vv.keyframes)
+            ...TT, ...KT, keyframes: FT(TT.keyframes)
           };
         case "frame":
           return {
-            ...vv, ...ev, targets: wv(vv.targets), viewHeading: dv(vv.viewHeading, -hv.m.maxFrameHeading, hv.m.maxFrameHeading), viewElevation: dv(vv.viewElevation, 0, hv.m.maxFrameElevation), padding: dv(vv.padding, 0, hv.m.maxFrameDistance), closestDistance: dv(vv.closestDistance, 0, hv.m.maxFrameDistance), furthestDistance: dv(vv.furthestDistance, 0, hv.m.maxFrameDistance), smoothMs: dv(vv.smoothMs, 0, hv.m.maxSmoothMs)
+            ...TT, ...KT, targets: jT(TT.targets), viewHeading: fT(TT.viewHeading, -lT.l.maxFrameHeading, lT.l.maxFrameHeading), viewElevation: fT(TT.viewElevation, 0, lT.l.maxFrameElevation), padding: fT(TT.padding, 0, lT.l.maxFrameDistance), closestDistance: fT(TT.closestDistance, 0, lT.l.maxFrameDistance), furthestDistance: fT(TT.furthestDistance, 0, lT.l.maxFrameDistance), smoothMs: fT(TT.smoothMs, 0, lT.l.maxSmoothMs)
           };
         default:
-          return Pv
+          return cT
       }
     }
   },
-  38189: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => pv
+  38497: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => yT
     });
-    var hv = Pv(1209);
+    var lT = cT(1226);
 
-    function Sv(vv) {
-      const zv = /(\d*\.?\d+)px/.exec(vv);
-      return zv ? Number(zv[1]) : null
+    function MT(TT) {
+      const kT = /(\d*\.?\d+)px/.exec(TT);
+      return kT ? Number(kT[1]) : null
     }
 
-    function ev(vv) {
-      return vv.split(/[\s,]+/).pop()
+    function KT(TT) {
+      return TT.split(/[\s,]+/).pop()
     }
-    let gv = !1;
-    const pv = {
+    let OT = !1;
+    const yT = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -1211,360 +1211,360 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(vv, zv, hv, pv, dv, Nv) {
-        if (dv <= 0 || Nv <= 0 || this.fontSize <= 0) return {
+      drawText: function(TT, kT, lT, yT, fT, xT) {
+        if (fT <= 0 || xT <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: lv,
-          fontVariant: Tv,
-          fontWeight: Wv,
-          fontSize: wv,
-          font: av
-        } = this, sv = [lv, Tv, Wv, `${wv}px`, av].filter(Boolean).join(" "), Cv = [
-          [Wv, `${wv}px`, ev(av)].filter(Boolean).join(" "), `${wv}px sans-serif`
-        ], iv = vv.font, cv = function(vv, zv, Pv) {
-          for (const hv of zv) {
-            vv.font = hv;
-            const zv = Sv(vv.font),
-              gv = ev(hv);
-            if (null !== zv && Math.abs(zv - Pv) <= .5 && vv.font.toLowerCase().includes(gv.toLowerCase())) return hv
+          fontStyle: IT,
+          fontVariant: AT,
+          fontWeight: CT,
+          fontSize: jT,
+          font: vT
+        } = this, tT = [IT, AT, CT, `${jT}px`, vT].filter(Boolean).join(" "), hT = [
+          [CT, `${jT}px`, KT(vT)].filter(Boolean).join(" "), `${jT}px sans-serif`
+        ], NT = TT.font, QT = function(TT, kT, cT) {
+          for (const lT of kT) {
+            TT.font = lT;
+            const kT = MT(TT.font),
+              OT = KT(lT);
+            if (null !== kT && Math.abs(kT - cT) <= .5 && TT.font.toLowerCase().includes(OT.toLowerCase())) return lT
           }
           return null
-        }(vv, [sv, ...Cv], wv);
-        cv !== sv && function(vv, zv, hv) {
-          gv || (gv = !0, Promise.resolve().then((() => Pv(1056))).then((Pv => {
+        }(TT, [tT, ...hT], jT);
+        QT !== tT && function(TT, kT, lT) {
+          OT || (OT = !0, Promise.resolve().then((() => cT(1082))).then((cT => {
             let {
-              ws: Sv
-            } = Pv;
-            Sv(new Error("A canvas didn't take canvasTxt's font"), {
-              font: vv,
-              Yw: zv,
-              drawnWith: null !== hv && void 0 !== hv ? hv : "the kept font, scaled"
+              vt: MT
+            } = cT;
+            MT(new Error("A canvas didn't take canvasTxt's font"), {
+              font: TT,
+              wj: kT,
+              drawnWith: null !== lT && void 0 !== lT ? lT : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(sv, iv, cv);
-        const Gv = Sv(vv.font);
-        if (null === cv && null !== Gv && Gv > 0) {
-          const Pv = wv / Gv;
-          vv.save();
+        }(tT, NT, QT);
+        const ST = MT(TT.font);
+        if (null === QT && null !== ST && ST > 0) {
+          const cT = jT / ST;
+          TT.save();
           try {
-            return vv.scale(Pv, Pv), {
-              height: this.drawLines(vv, zv, hv / Pv, pv / Pv, dv / Pv, Nv / Pv, Gv).height * Pv
+            return TT.scale(cT, cT), {
+              height: this.drawLines(TT, kT, lT / cT, yT / cT, fT / cT, xT / cT, ST).height * cT
             }
           } finally {
-            vv.restore()
+            TT.restore()
           }
         }
-        return this.drawLines(vv, zv, hv, pv, dv, Nv, wv)
+        return this.drawLines(TT, kT, lT, yT, fT, xT, jT)
       },
-      drawLines: function(vv, zv, Pv, Sv, ev, gv, pv) {
-        const dv = Pv + ev,
-          Nv = Sv + gv;
-        let lv, Tv = Sv + gv / 2 + pv / 2;
-        "right" === this.align ? (lv = dv, vv.textAlign = "right") : "left" === this.align ? (lv = Pv, vv.textAlign = "left") : (lv = Pv + ev / 2, vv.textAlign = "center");
-        for (const hv of zv) {
-          vv.measureText(hv).width >= ev && (zv = zv.replace(hv, ""))
+      drawLines: function(TT, kT, cT, MT, KT, OT, yT) {
+        const fT = cT + KT,
+          xT = MT + OT;
+        let IT, AT = MT + OT / 2 + yT / 2;
+        "right" === this.align ? (IT = fT, TT.textAlign = "right") : "left" === this.align ? (IT = cT, TT.textAlign = "left") : (IT = cT + KT / 2, TT.textAlign = "center");
+        for (const lT of kT) {
+          TT.measureText(lT).width >= KT && (kT = kT.replace(lT, ""))
         }
-        zv = (0, hv.Y)(zv);
-        const Wv = [],
-          wv = zv.split("\n"),
-          av = this.justify ? vv.measureText("\u200a").width : 0;
-        wv.forEach((zv => {
-          let Pv = vv.measureText(zv).width;
-          if (Pv <= ev) Wv.push(zv);
+        kT = (0, lT.T)(kT);
+        const CT = [],
+          jT = kT.split("\n"),
+          vT = this.justify ? TT.measureText("\u200a").width : 0;
+        jT.forEach((kT => {
+          let cT = TT.measureText(kT).width;
+          if (cT <= KT) CT.push(kT);
           else {
-            let hv = zv;
-            const Sv = ev;
-            let gv, pv, dv;
-            for (Pv = vv.measureText(hv).width; Pv > Sv;) {
-              for (gv = 0, pv = 0, dv = ""; pv < Sv;) gv++, dv = hv.substr(0, gv), pv = vv.measureText(dv).width;
-              gv--, dv = dv.substr(0, gv);
-              const zv = gv;
-              if (" " !== hv.substr(gv, 1)) {
+            let lT = kT;
+            const MT = KT;
+            let OT, yT, fT;
+            for (cT = TT.measureText(lT).width; cT > MT;) {
+              for (OT = 0, yT = 0, fT = ""; yT < MT;) OT++, fT = lT.substr(0, OT), yT = TT.measureText(fT).width;
+              OT--, fT = fT.substr(0, OT);
+              const kT = OT;
+              if (" " !== lT.substr(OT, 1)) {
                 for (;
-                  " " !== hv.substr(gv, 1) && 0 !== gv;) gv--;
-                0 === gv && (gv = zv), dv = hv.substr(0, gv)
+                  " " !== lT.substr(OT, 1) && 0 !== OT;) OT--;
+                0 === OT && (OT = kT), fT = lT.substr(0, OT)
               }
-              dv = this.justify ? this.justifyLine(vv, dv, av, "\u200a", ev) : dv, hv = hv.substr(gv), Pv = vv.measureText(hv).width, Wv.push(dv)
+              fT = this.justify ? this.justifyLine(TT, fT, vT, "\u200a", KT) : fT, lT = lT.substr(OT), cT = TT.measureText(lT).width, CT.push(fT)
             }
-            Pv > 0 && Wv.push(hv)
+            cT > 0 && CT.push(lT)
           }
         }));
-        const sv = this.lineHeight ? this.lineHeight : this.getTextHeight(vv, zv),
-          Cv = sv * (Wv.length - 1),
-          iv = Cv / 2;
-        let cv = Sv;
-        "top" === this.vAlign ? Tv = Sv + pv : "bottom" === this.vAlign ? (Tv = Nv - Cv, cv = Nv) : (cv = Sv + gv / 2, Tv -= iv), Wv.forEach((zv => {
-          zv = zv.trim(), vv.fillText(zv, lv, Tv), Tv += sv
-        })), this.debug && (vv.lineWidth = 3, vv.strokeStyle = "#00909e", vv.strokeRect(Pv, Sv, ev, gv), vv.lineWidth = 2, vv.strokeStyle = "#f6d743", vv.beginPath(), vv.moveTo(lv, Sv), vv.lineTo(lv, Nv), vv.stroke(), vv.strokeStyle = "#ff6363", vv.beginPath(), vv.moveTo(Pv, cv), vv.lineTo(dv, cv), vv.stroke());
+        const tT = this.lineHeight ? this.lineHeight : this.getTextHeight(TT, kT),
+          hT = tT * (CT.length - 1),
+          NT = hT / 2;
+        let QT = MT;
+        "top" === this.vAlign ? AT = MT + yT : "bottom" === this.vAlign ? (AT = xT - hT, QT = xT) : (QT = MT + OT / 2, AT -= NT), CT.forEach((kT => {
+          kT = kT.trim(), TT.fillText(kT, IT, AT), AT += tT
+        })), this.debug && (TT.lineWidth = 3, TT.strokeStyle = "#00909e", TT.strokeRect(cT, MT, KT, OT), TT.lineWidth = 2, TT.strokeStyle = "#f6d743", TT.beginPath(), TT.moveTo(IT, MT), TT.lineTo(IT, xT), TT.stroke(), TT.strokeStyle = "#ff6363", TT.beginPath(), TT.moveTo(cT, QT), TT.lineTo(fT, QT), TT.stroke());
         return {
-          height: Cv + sv
+          height: hT + tT
         }
       },
-      getTextHeight: function(vv, zv) {
-        const Pv = vv.textBaseline;
-        vv.textBaseline = "bottom";
+      getTextHeight: function(TT, kT) {
+        const cT = TT.textBaseline;
+        TT.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: hv
-        } = vv.measureText(zv);
-        return vv.textBaseline = Pv, hv
+          actualBoundingBoxAscent: lT
+        } = TT.measureText(kT);
+        return TT.textBaseline = cT, lT
       },
-      justifyLine: function(vv, zv, Pv, hv, Sv) {
-        const ev = zv.trim(),
-          gv = vv.measureText(ev).width,
-          pv = ev.split(/\s+/).length - 1,
-          dv = Math.floor((Sv - gv) / Pv);
-        if (pv <= 0 || dv <= 0) return ev;
-        const Nv = Math.floor(dv / pv);
-        let lv = dv - pv * Nv,
-          Tv = [];
-        for (let Wv = 0; Wv < Nv; Wv++) Tv.push(hv);
-        Tv = Tv.join("");
-        return ev.replace(/\s+/g, (vv => {
-          const zv = lv > 0 ? Tv + hv : Tv;
-          return lv--, vv + zv
+      justifyLine: function(TT, kT, cT, lT, MT) {
+        const KT = kT.trim(),
+          OT = TT.measureText(KT).width,
+          yT = KT.split(/\s+/).length - 1,
+          fT = Math.floor((MT - OT) / cT);
+        if (yT <= 0 || fT <= 0) return KT;
+        const xT = Math.floor(fT / yT);
+        let IT = fT - yT * xT,
+          AT = [];
+        for (let CT = 0; CT < xT; CT++) AT.push(lT);
+        AT = AT.join("");
+        return KT.replace(/\s+/g, (TT => {
+          const kT = IT > 0 ? AT + lT : AT;
+          return IT--, TT + kT
         }))
       }
     }
   },
-  38642: (vv, zv, Pv) => {
-    function hv(vv, zv) {
-      return zv.set(vv), zv
+  38935: (TT, kT, cT) => {
+    function lT(TT, kT) {
+      return kT.set(TT), kT
     }
-    Pv.d(zv, {
-      e: () => hv
+    cT.d(kT, {
+      b: () => lT
     })
   },
-  38194: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => sv,
-      f: () => av,
-      g: () => Wv,
-      i: () => lv,
-      m: () => Tv
+  38503: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => tT,
+      e: () => vT,
+      h: () => CT,
+      k: () => IT,
+      o: () => AT
     });
-    var hv = Pv(4019),
-      Sv = Pv(312);
-    const ev = 1024,
-      gv = 1536,
-      pv = 2 * hv.j + 1,
-      dv = new Intl.NumberFormat("en", {
+    var lT = cT(4235),
+      MT = cT(339);
+    const KT = 1024,
+      OT = 1536,
+      yT = 2 * lT.j + 1,
+      fT = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      Nv = 1.5;
+      xT = 1.5;
 
-    function lv(vv, zv, Pv) {
-      if ("string" !== typeof vv) return zv;
+    function IT(TT, kT, cT) {
+      if ("string" !== typeof TT) return kT;
       try {
-        const Pv = JSON.parse(vv);
-        return Pv && "object" === typeof Pv ? Pv : zv
-      } catch (hv) {
-        return void 0 !== Pv && console.error(`Couldn't parse ${Pv}`, hv), zv
+        const cT = JSON.parse(TT);
+        return cT && "object" === typeof cT ? cT : kT
+      } catch (lT) {
+        return void 0 !== cT && console.error(`Couldn't parse ${cT}`, lT), kT
       }
     }
 
-    function Tv(vv) {
-      return lv(vv, null, "a leaderboard's rows")
+    function AT(TT) {
+      return IT(TT, null, "a leaderboard's rows")
     }
 
-    function Wv(vv, zv) {
-      var Pv, hv;
-      return null !== zv && void 0 !== zv ? zv : {
-        status: null !== (Pv = vv.status) && void 0 !== Pv ? Pv : "loading",
-        entries: null !== (hv = vv.entries) && void 0 !== hv ? hv : []
+    function CT(TT, kT) {
+      var cT, lT;
+      return null !== kT && void 0 !== kT ? kT : {
+        status: null !== (cT = TT.status) && void 0 !== cT ? cT : "loading",
+        entries: null !== (lT = TT.entries) && void 0 !== lT ? lT : []
       }
     }
 
-    function wv(vv, zv) {
-      return "number" === typeof vv && Number.isFinite(vv) && vv > 0 ? vv : zv
+    function jT(TT, kT) {
+      return "number" === typeof TT && Number.isFinite(TT) && TT > 0 ? TT : kT
     }
 
-    function av(vv, zv) {
-      const Pv = wv(vv.size, 1);
-      let hv = wv(vv.width, wv(2.5 * Pv, 2.5)),
-        Sv = wv(vv.height, wv(3.75 * Pv, 3.75));
-      Number.isFinite(ev * Sv / hv) && Number.isFinite(gv * hv / Sv) || (hv = 2.5, Sv = 3.75);
-      const pv = Sv / hv,
-        dv = Math.max(1, Math.min(ev, zv / pv));
+    function vT(TT, kT) {
+      const cT = jT(TT.size, 1);
+      let lT = jT(TT.width, jT(2.5 * cT, 2.5)),
+        MT = jT(TT.height, jT(3.75 * cT, 3.75));
+      Number.isFinite(KT * MT / lT) && Number.isFinite(OT * lT / MT) || (lT = 2.5, MT = 3.75);
+      const yT = MT / lT,
+        fT = Math.max(1, Math.min(KT, kT / yT));
       return {
-        width: hv,
-        height: Sv,
-        layoutWidth: Math.max(ev, gv / pv),
-        layoutHeight: Math.max(gv, ev * pv),
-        pixelWidth: Math.round(dv),
-        pixelHeight: Math.round(Math.max(1, Math.min(zv, dv * pv)))
+        width: lT,
+        height: MT,
+        layoutWidth: Math.max(KT, OT / yT),
+        layoutHeight: Math.max(OT, KT * yT),
+        pixelWidth: Math.round(fT),
+        pixelHeight: Math.round(Math.max(1, Math.min(kT, fT * yT)))
       }
     }
 
-    function sv(vv, zv, Pv, gv, lv, Tv) {
-      vv.setTransform(1, 0, 0, 1, 0, 0), vv.fillStyle = Sv.L.defaultNameTagBackground, vv.fillRect(0, 0, zv, Pv), vv.scale(zv / gv.layoutWidth, Pv / gv.layoutHeight), vv.translate((gv.layoutWidth - ev) / 2, 0),
-        function(vv, zv, Pv, ev) {
-          var gv, lv, Tv, Wv;
+    function tT(TT, kT, cT, OT, IT, AT) {
+      TT.setTransform(1, 0, 0, 1, 0, 0), TT.fillStyle = MT.H.defaultNameTagBackground, TT.fillRect(0, 0, kT, cT), TT.scale(kT / OT.layoutWidth, cT / OT.layoutHeight), TT.translate((OT.layoutWidth - KT) / 2, 0),
+        function(TT, kT, cT, KT) {
+          var OT, IT, AT, CT;
           const {
-            top: wv,
-            around: av,
-            showPlayerText: sv,
-            localPlayerDbId: cv
-          } = Pv, {
-            whiteUiText: Gv,
-            grayUiText: mv,
-            yellowUiText: jv
-          } = Sv.L;
-          vv.textBaseline = "middle";
-          const fv = function(zv, Pv, hv, Sv, ev, gv) {
-              let pv = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              vv.font = `bold ${Sv}px 'Jetbrains Mono', monospace`, vv.fillStyle = ev, vv.textAlign = pv;
-              let dv = zv.replace(/[\r\n\t]/g, " ");
-              if (vv.measureText(dv).width > gv) {
-                for (; dv.length > 0 && vv.measureText(`${dv}\u2026`).width > gv;) dv = dv.slice(0, -1);
-                dv += "\u2026"
+            top: jT,
+            around: vT,
+            showPlayerText: tT,
+            localPlayerDbId: QT
+          } = cT, {
+            whiteUiText: ST,
+            grayUiText: DT,
+            yellowUiText: aT
+          } = MT.H;
+          TT.textBaseline = "middle";
+          const FT = function(kT, cT, lT, MT, KT, OT) {
+              let yT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              TT.font = `bold ${MT}px 'Jetbrains Mono', monospace`, TT.fillStyle = KT, TT.textAlign = yT;
+              let fT = kT.replace(/[\r\n\t]/g, " ");
+              if (TT.measureText(fT).width > OT) {
+                for (; fT.length > 0 && TT.measureText(`${fT}\u2026`).width > OT;) fT = fT.slice(0, -1);
+                fT += "\u2026"
               }
-              vv.fillText(dv, Pv, hv)
+              TT.fillText(fT, cT, lT)
             },
-            Fv = zv => {
-              vv.fillStyle = Gv, vv.globalAlpha = .15, vv.fillRect(24, zv, 976, 2), vv.globalAlpha = 1
+            rT = kT => {
+              TT.fillStyle = ST, TT.globalAlpha = .15, TT.fillRect(24, kT, 976, 2), TT.globalAlpha = 1
             },
-            Yv = null === cv ? null : (0, Sv.hc)(cv),
-            nv = vv => null !== Yv && vv.playerHash === Yv,
-            Ov = Cv(wv.entries, hv.k),
-            Dv = "ready" === wv.status && Ov.length > 0,
-            Kv = null === av ? [] : Cv(av.entries, pv),
-            Vv = Ov.some(nv),
-            Uv = null === av ? null : function(vv) {
-              const zv = vv;
-              if (!zv || !Number.isFinite(zv.rank) || !Number.isFinite(zv.tied) || !Number.isFinite(zv.total)) return null;
-              return zv
-            }(av.standing),
-            Rv = Kv.find(nv),
-            xv = Ov.find(nv),
-            tv = null === Uv || void 0 === Rv ? null : {
-              value: Rv.value,
-              rank: Uv.rank
+            PT = null === QT ? null : (0, MT.hc)(QT),
+            wT = TT => null !== PT && TT.playerHash === PT,
+            mT = hT(jT.entries, lT.l),
+            bT = "ready" === jT.status && mT.length > 0,
+            zT = null === vT ? [] : hT(vT.entries, yT),
+            JT = mT.some(wT),
+            oT = null === vT ? null : function(TT) {
+              const kT = TT;
+              if (!kT || !Number.isFinite(kT.rank) || !Number.isFinite(kT.tied) || !Number.isFinite(kT.total)) return null;
+              return kT
+            }(vT.standing),
+            HT = zT.find(wT),
+            eT = mT.find(wT),
+            GT = null === oT || void 0 === HT ? null : {
+              value: HT.value,
+              rank: oT.rank
             },
-            qv = iv(Ov, void 0 === xv || xv.value === (null === tv || void 0 === tv ? void 0 : tv.value) ? tv : null),
-            Iv = iv(Kv, tv),
-            Qv = (vv, zv) => {
-              const Pv = vv.findIndex(nv);
-              return Pv >= 0 ? zv[Pv] : null
+            VT = NT(mT, void 0 === eT || eT.value === (null === GT || void 0 === GT ? void 0 : GT.value) ? GT : null),
+            ET = NT(zT, GT),
+            ZT = (TT, kT) => {
+              const cT = TT.findIndex(wT);
+              return cT >= 0 ? kT[cT] : null
             },
-            Zv = null !== (gv = null !== (lv = null === Uv || void 0 === Uv ? void 0 : Uv.rank) && void 0 !== lv ? lv : Qv(Kv, Iv)) && void 0 !== gv ? gv : Qv(Ov, qv);
-          vv.font = "bold 34px 'Jetbrains Mono', monospace";
-          const Av = [...Dv ? qv : [], ...Vv ? [] : Iv],
-            Lv = Math.min(280, Math.max(0, ...Av.map((zv => vv.measureText(dv.format(zv)).width)))),
-            Hv = Lv <= 80,
-            Mv = Hv ? 80 : 32 + Lv,
-            yv = Hv ? 148 : Mv + 28,
-            Bv = 660 - yv;
-          fv(`TOP ${hv.k}  /  ALL TIME`, 24, 52, 28, mv, 976), fv(sv ? String(null !== (Tv = zv.title) && void 0 !== Tv ? Tv : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, Gv, 976), fv("RANK", 32, 174, 28, mv, yv - 40), fv("PLAYER", yv, 174, 28, mv, Bv), fv(sv ? String(null !== (Wv = zv.scoreLabel) && void 0 !== Wv ? Wv : "Score").slice(0, 24) : "Score", 992, 174, 28, mv, 304, "right"), Fv(202);
-          const Jv = (ev - 232) / (hv.k + Nv + pv),
-            Ev = 208 + hv.k * Jv,
-            ov = Ev + Nv * Jv,
-            bv = (zv, Pv, hv, Sv) => {
-              const ev = nv(zv);
-              vv.fillStyle = ev ? jv : Gv, vv.globalAlpha = ev ? .15 : Sv ? .035 : 0, vv.fillRect(24, hv - Jv / 2 + 1, 976, Jv - 2), vv.globalAlpha = 1;
-              const gv = ev ? jv : Gv;
-              fv(dv.format(Pv), Mv, hv, 34, gv, Hv ? 80 : Lv, Hv ? "center" : "right"), fv(sv ? String(zv.name).slice(0, 64) : "Player", yv, hv, 34, gv, Bv);
-              const pv = dv.format(zv.value);
-              fv(vv.measureText(pv).width > 304 ? zv.value.toExponential(6) : pv, 992, hv, 34, gv, 304, "right")
+            uT = null !== (OT = null !== (IT = null === oT || void 0 === oT ? void 0 : oT.rank) && void 0 !== IT ? IT : ZT(zT, ET)) && void 0 !== OT ? OT : ZT(mT, VT);
+          TT.font = "bold 34px 'Jetbrains Mono', monospace";
+          const XT = [...bT ? VT : [], ...JT ? [] : ET],
+            dT = Math.min(280, Math.max(0, ...XT.map((kT => TT.measureText(fT.format(kT)).width)))),
+            LT = dT <= 80,
+            RT = LT ? 80 : 32 + dT,
+            gT = LT ? 148 : RT + 28,
+            UT = 660 - gT;
+          FT(`TOP ${lT.l}  /  ALL TIME`, 24, 52, 28, DT, 976), FT(tT ? String(null !== (AT = kT.title) && void 0 !== AT ? AT : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, ST, 976), FT("RANK", 32, 174, 28, DT, gT - 40), FT("PLAYER", gT, 174, 28, DT, UT), FT(tT ? String(null !== (CT = kT.scoreLabel) && void 0 !== CT ? CT : "Score").slice(0, 24) : "Score", 992, 174, 28, DT, 304, "right"), rT(202);
+          const YT = (KT - 232) / (lT.l + xT + yT),
+            BT = 208 + lT.l * YT,
+            WT = BT + xT * YT,
+            nT = (kT, cT, lT, MT) => {
+              const KT = wT(kT);
+              TT.fillStyle = KT ? aT : ST, TT.globalAlpha = KT ? .15 : MT ? .035 : 0, TT.fillRect(24, lT - YT / 2 + 1, 976, YT - 2), TT.globalAlpha = 1;
+              const OT = KT ? aT : ST;
+              FT(fT.format(cT), RT, lT, 34, OT, LT ? 80 : dT, LT ? "center" : "right"), FT(tT ? String(kT.name).slice(0, 64) : "Player", gT, lT, 34, OT, UT);
+              const yT = fT.format(kT.value);
+              FT(TT.measureText(yT).width > 304 ? kT.value.toExponential(6) : yT, 992, lT, 34, OT, 304, "right")
             };
-          if (Dv)
-            for (const [hv, Sv] of Ov.entries()) bv(Sv, qv[hv], 208 + (hv + .5) * Jv, hv % 2 === 0);
+          if (bT)
+            for (const [lT, MT] of mT.entries()) nT(MT, VT[lT], 208 + (lT + .5) * YT, lT % 2 === 0);
           else {
-            const vv = "error" === wv.status,
-              zv = vv ? "Couldn't load leaderboard" : "ready" === wv.status ? "No scores yet" : "Loading leaderboard\u2026",
-              Pv = vv ? "Trying again shortly" : "ready" === wv.status ? "Be the first on the board!" : "Fetching the top players",
-              hv = (208 + Ev) / 2;
-            fv(zv, 512, hv - 28, 40, vv ? Sv.L.redUiText : Gv, 960, "center"), fv(Pv, 512, hv + 27, 30, mv, 960, "center")
+            const TT = "error" === jT.status,
+              kT = TT ? "Couldn't load leaderboard" : "ready" === jT.status ? "No scores yet" : "Loading leaderboard\u2026",
+              cT = TT ? "Trying again shortly" : "ready" === jT.status ? "Be the first on the board!" : "Fetching the top players",
+              lT = (208 + BT) / 2;
+            FT(kT, 512, lT - 28, 40, TT ? MT.H.redUiText : ST, 960, "center"), FT(cT, 512, lT + 27, 30, DT, 960, "center")
           }
-          const rv = Ev + Nv * Jv / 2;
-          if (null === Zv) Fv(rv);
+          const pT = BT + xT * YT / 2;
+          if (null === uT) rT(pT);
           else {
-            const zv = null === Uv ? 0 : Uv.tied - 1,
-              Pv = `YOUR RANK #${dv.format(Zv)}${null===Uv?"":` of ${dv.format(Uv.total)}`}`;
-            vv.font = "bold 36px 'Jetbrains Mono', monospace";
-            const hv = Math.max(20, Math.min(36, Math.floor(34560 / vv.measureText(Pv).width)));
-            fv(Pv, 512, rv - (zv > 0 ? 15 : 0), hv, jv, 960, "center"), zv > 0 && fv(`Tied with ${dv.format(zv)} other${1===zv?"":"s"}`, 512, rv + 24, 24, mv, 960, "center")
+            const kT = null === oT ? 0 : oT.tied - 1,
+              cT = `YOUR RANK #${fT.format(uT)}${null===oT?"":` of ${fT.format(oT.total)}`}`;
+            TT.font = "bold 36px 'Jetbrains Mono', monospace";
+            const lT = Math.max(20, Math.min(36, Math.floor(34560 / TT.measureText(cT).width)));
+            FT(cT, 512, pT - (kT > 0 ? 15 : 0), lT, aT, 960, "center"), kT > 0 && FT(`Tied with ${fT.format(kT)} other${1===kT?"":"s"}`, 512, pT + 24, 24, DT, 960, "center")
           }
-          if (null === av) return;
-          const kv = ov + pv * Jv / 2;
-          if (Vv) fv(`You're in the top ${hv.k}!`, 512, kv, 40, jv, 960, "center");
-          else if (0 === Kv.length) fv("You're not on this board yet", 512, kv, 34, mv, 960, "center");
+          if (null === vT) return;
+          const iT = WT + yT * YT / 2;
+          if (JT) FT(`You're in the top ${lT.l}!`, 512, iT, 40, aT, 960, "center");
+          else if (0 === zT.length) FT("You're not on this board yet", 512, iT, 34, DT, 960, "center");
           else
-            for (const [hv, Sv] of Kv.entries()) bv(Sv, Iv[hv], ov + (hv + .5) * Jv, hv % 2 === 0)
-        }(vv, lv, Tv, gv.layoutHeight)
+            for (const [lT, MT] of zT.entries()) nT(MT, ET[lT], WT + (lT + .5) * YT, lT % 2 === 0)
+        }(TT, IT, AT, OT.layoutHeight)
     }
 
-    function Cv(vv, zv) {
-      return Array.isArray(vv) ? vv.slice(0, zv).filter((vv => vv && Number.isFinite(vv.rank) && Number.isFinite(vv.value))) : []
+    function hT(TT, kT) {
+      return Array.isArray(TT) ? TT.slice(0, kT).filter((TT => TT && Number.isFinite(TT.rank) && Number.isFinite(TT.value))) : []
     }
 
-    function iv(vv, zv) {
-      const Pv = [];
-      let hv = !1;
-      return vv.forEach(((Sv, ev) => {
-        if (null !== zv && Sv.value === zv.value) return void Pv.push(zv.rank);
-        const gv = ev > 0 && Sv.value === vv[ev - 1].value;
-        gv || (hv = 0 === ev && 1 !== Sv.rank), Pv.push(gv && !hv ? Pv[ev - 1] : Sv.rank)
-      })), Pv
+    function NT(TT, kT) {
+      const cT = [];
+      let lT = !1;
+      return TT.forEach(((MT, KT) => {
+        if (null !== kT && MT.value === kT.value) return void cT.push(kT.rank);
+        const OT = KT > 0 && MT.value === TT[KT - 1].value;
+        OT || (lT = 0 === KT && 1 !== MT.rank), cT.push(OT && !lT ? cT[KT - 1] : MT.rank)
+      })), cT
     }
   },
-  38398: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => Sv,
-      g: () => ev
+  38698: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => MT,
+      f: () => KT
     });
-    const hv = 32;
+    const lT = 32;
 
-    function Sv(vv) {
-      return Array.from(vv).length
+    function MT(TT) {
+      return Array.from(TT).length
     }
 
-    function ev(vv) {
-      const zv = [""];
-      let Pv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        Sv = "";
-      const ev = () => {
-        zv.push(""), Pv = 0, Sv = ""
+    function KT(TT) {
+      const kT = [""];
+      let cT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        MT = "";
+      const KT = () => {
+        kT.push(""), cT = 0, MT = ""
       };
-      for (const gv of vv.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(gv)) ev();
-        else if (/^\s+$/.test(gv)) Sv += gv;
-      else if (gv.length > 0) {
-        const vv = Array.from(gv);
-        Pv > 0 && Pv + Sv.length + vv.length > hv && ev(), zv[zv.length - 1] += Sv, Pv += Sv.length, Sv = "";
-        for (const Sv of vv) Pv >= hv && ev(), zv[zv.length - 1] += Sv, Pv++
+      for (const OT of TT.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(OT)) KT();
+        else if (/^\s+$/.test(OT)) MT += OT;
+      else if (OT.length > 0) {
+        const TT = Array.from(OT);
+        cT > 0 && cT + MT.length + TT.length > lT && KT(), kT[kT.length - 1] += MT, cT += MT.length, MT = "";
+        for (const MT of TT) cT >= lT && KT(), kT[kT.length - 1] += MT, cT++
       }
-      return zv[zv.length - 1] += Sv, zv
+      return kT[kT.length - 1] += MT, kT
     }
   },
-  38637: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => gv
+  38932: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => OT
     });
-    var hv = Pv(36155),
-      Sv = Pv.n(hv);
-    const ev = [1, 1, 1];
+    var lT = cT(36448),
+      MT = cT.n(lT);
+    const KT = [1, 1, 1];
 
-    function gv(vv) {
-      if (!vv) return [...ev];
+    function OT(TT) {
+      if (!TT) return [...KT];
       try {
-        const [zv, Pv, hv] = Sv()(vv).rgb().array();
-        return [zv / 255, Pv / 255, hv / 255]
-      } catch (zv) {
-        return console.warn(`Invalid groundArrowPath colour "${vv}":`, zv), [...ev]
+        const [kT, cT, lT] = MT()(TT).rgb().array();
+        return [kT / 255, cT / 255, lT / 255]
+      } catch (kT) {
+        return console.warn(`Invalid groundArrowPath colour "${TT}":`, kT), [...KT]
       }
     }
   },
-  33866: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => ev,
-      g: () => pv,
-      h: () => gv,
-      l: () => Sv,
-      n: () => hv
+  34024: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => KT,
+      c: () => yT,
+      g: () => OT,
+      k: () => MT,
+      l: () => lT
     });
-    const hv = {
+    const lT = {
         default: {
           type: "earth",
           vertexTint: [137, 207, 240]
@@ -1651,41 +1651,41 @@ export const modules = {
           pz: "/textures/skyBoxes/space_white/_pz.jpg"
         }
       },
-      Sv = "/textures/dayNight/sun.png",
-      ev = "/textures/dayNight/moon.png",
-      gv = "/textures/dayNight/stars",
-      pv = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
+      MT = "/textures/dayNight/sun.png",
+      KT = "/textures/dayNight/moon.png",
+      OT = "/textures/dayNight/stars",
+      yT = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
   },
-  38694: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => lv,
-      h: () => Tv,
-      i: () => hv,
-      m: () => dv,
-      q: () => Sv,
-      s: () => Nv,
-      t: () => pv,
-      x: () => gv
+  38984: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => IT,
+      f: () => AT,
+      j: () => lT,
+      l: () => fT,
+      p: () => MT,
+      s: () => xT,
+      u: () => yT,
+      w: () => OT
     });
-    const hv = ["linear", "easeIn", "easeOut", "easeInOut"],
-      Sv = ["movement", "camera", "cursor"],
-      ev = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
+    const lT = ["linear", "easeIn", "easeOut", "easeInOut"],
+      MT = ["movement", "camera", "cursor"],
+      KT = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
 
-    function gv(vv, zv) {
-      return pv(vv, zv, ev)
+    function OT(TT, kT) {
+      return yT(TT, kT, KT)
     }
 
-    function pv(vv, zv) {
-      let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      if (vv === zv || Number.isNaN(vv) && Number.isNaN(zv)) return !0;
-      if ("object" !== typeof vv || "object" !== typeof zv || null === vv || null === zv || Array.isArray(vv) !== Array.isArray(zv)) return !1;
-      const hv = vv,
-        Sv = zv;
-      for (const ev of new Set([...Object.keys(hv), ...Object.keys(Sv)]))
-        if (!Pv.includes(ev) && !pv(hv[ev], Sv[ev])) return !1;
+    function yT(TT, kT) {
+      let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      if (TT === kT || Number.isNaN(TT) && Number.isNaN(kT)) return !0;
+      if ("object" !== typeof TT || "object" !== typeof kT || null === TT || null === kT || Array.isArray(TT) !== Array.isArray(kT)) return !1;
+      const lT = TT,
+        MT = kT;
+      for (const KT of new Set([...Object.keys(lT), ...Object.keys(MT)]))
+        if (!cT.includes(KT) && !yT(lT[KT], MT[KT])) return !1;
       return !0
     }
-    const dv = {
+    const fT = {
         maxBlendInMs: 1e4,
         minFov: 10,
         maxFov: 120,
@@ -1707,10 +1707,10 @@ export const modules = {
         minEasingY: -1,
         maxEasingY: 2
       },
-      Nv = "^-[1-9][0-9]*$",
-      lv = "^#[0-9a-fA-F]{6}$",
-      Tv = "#000000"
+      xT = "^-[1-9][0-9]*$",
+      IT = "^#[0-9a-fA-F]{6}$",
+      AT = "#000000"
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

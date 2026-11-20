@@ -1,82 +1,82 @@
 export const id = 221;
 export const ids = [221];
 export const modules = {
-  39111: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      getBlockFaces: () => Wv,
-      getIngameIconUrl: () => sv,
-      getItemIconUrl: () => av,
-      getItemTextureUrl: () => wv,
-      getParticleTextureUrl: () => Cv
+  39426: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      getBlockFaces: () => CT,
+      getIngameIconUrl: () => tT,
+      getItemIconUrl: () => vT,
+      getItemTextureUrl: () => jT,
+      getParticleTextureUrl: () => hT
     });
-    var hv = Pv(4209),
-      Sv = Pv(36542),
-      ev = Pv(9099),
-      gv = Pv(2940);
-    const pv = new Set,
-      dv = new Set;
-    let Nv = null;
+    var lT = cT(4445),
+      MT = cT(36845),
+      KT = cT(9445),
+      OT = cT(3089);
+    const yT = new Set,
+      fT = new Set;
+    let xT = null;
 
-    function lv(vv) {
-      pv.has(vv) || (pv.add(vv), dv.add(vv), Nv ??= setTimeout((() => {
-        console.warn(`Docs gallery: no default texture for ${dv.size} names`, [...dv]), dv.clear(), Nv = null
+    function IT(TT) {
+      yT.has(TT) || (yT.add(TT), fT.add(TT), xT ??= setTimeout((() => {
+        console.warn(`Docs gallery: no default texture for ${fT.size} names`, [...fT]), fT.clear(), xT = null
       }), 1e3))
     }
 
-    function Tv(vv, zv) {
+    function AT(TT, kT) {
       try {
-        return (0, ev.getDefaultTexture)(vv, zv).url
+        return (0, KT.getDefaultTexture)(TT, kT).url
       } catch {
-        return lv(vv), null
+        return IT(TT), null
       }
     }
 
-    function Wv(vv) {
-      var zv, Pv;
-      const ev = Sv.r[vv];
-      if (!ev || ev.itemTexture || !ev.textureInfo) return null;
+    function CT(TT) {
+      var kT, cT;
+      const KT = MT.o[TT];
+      if (!KT || KT.itemTexture || !KT.textureInfo) return null;
       const {
-        textureInfo: pv,
-        texturePerSide: dv
-      } = ev, Nv = vv => {
-        return "string" === typeof(zv = dv && Array.isArray(pv) ? pv[dv[vv]] : pv) ? Tv(zv, gv.f.BLOCK) : zv && "object" === typeof zv && "animTextures" in zv ? Tv((0, hv.h)(zv), gv.f.BLOCK) : null;
-        var zv
-      }, lv = Nv(2);
-      return lv ? {
-        top: lv,
-        left: null !== (zv = Nv(4)) && void 0 !== zv ? zv : lv,
-        right: null !== (Pv = Nv(0)) && void 0 !== Pv ? Pv : lv
+        textureInfo: yT,
+        texturePerSide: fT
+      } = KT, xT = TT => {
+        return "string" === typeof(kT = fT && Array.isArray(yT) ? yT[fT[TT]] : yT) ? AT(kT, OT.h.BLOCK) : kT && "object" === typeof kT && "animTextures" in kT ? AT((0, lT.j)(kT), OT.h.BLOCK) : null;
+        var kT
+      }, IT = xT(2);
+      return IT ? {
+        top: IT,
+        left: null !== (kT = xT(4)) && void 0 !== kT ? kT : IT,
+        right: null !== (cT = xT(0)) && void 0 !== cT ? cT : IT
       } : null
     }
 
-    function wv(vv) {
-      var zv;
-      const Pv = Sv.r[vv];
-      return Tv(null !== (zv = null === Pv || void 0 === Pv ? void 0 : Pv.itemTexture) && void 0 !== zv ? zv : "string" === typeof(null === Pv || void 0 === Pv ? void 0 : Pv.textureInfo) ? Pv.textureInfo : vv, gv.f.ITEM)
+    function jT(TT) {
+      var kT;
+      const cT = MT.o[TT];
+      return AT(null !== (kT = null === cT || void 0 === cT ? void 0 : cT.itemTexture) && void 0 !== kT ? kT : "string" === typeof(null === cT || void 0 === cT ? void 0 : cT.textureInfo) ? cT.textureInfo : TT, OT.h.ITEM)
     }
 
-    function av(vv) {
-      var zv, Pv;
-      return Sv.r[vv] ? null !== (zv = null === (Pv = Wv(vv)) || void 0 === Pv ? void 0 : Pv.top) && void 0 !== zv ? zv : wv(vv) : null
+    function vT(TT) {
+      var kT, cT;
+      return MT.o[TT] ? null !== (kT = null === (cT = CT(TT)) || void 0 === cT ? void 0 : cT.top) && void 0 !== kT ? kT : jT(TT) : null
     }
 
-    function sv(vv) {
-      return Tv(vv, gv.f.ICON)
+    function tT(TT) {
+      return AT(TT, OT.h.ICON)
     }
 
-    function Cv(vv) {
+    function hT(TT) {
       try {
-        return Pv(3055)(`./${vv}.png`)
+        return cT(3244)(`./${TT}.png`)
       } catch {
-        return lv(vv), null
+        return IT(TT), null
       }
     }
   },
-  36568: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => hv
+  36864: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => lT
     });
-    const hv = {
+    const lT = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -238,4 +238,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

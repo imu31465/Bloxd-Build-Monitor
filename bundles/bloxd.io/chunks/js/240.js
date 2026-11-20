@@ -1,25 +1,25 @@
 export const id = 240;
 export const ids = [240];
 export const modules = {
-  38919: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      default: () => uP
+  39227: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      default: () => Tl
     });
-    const hv = [0, 90, 180, 270],
-      Sv = "plotsblueprint";
-    var ev = Pv(52),
-      gv = Pv(36137),
-      pv = Pv(22),
-      dv = Pv(1610),
-      Nv = Pv(1692),
-      lv = Pv(26);
-    const Tv = [
+    const lT = [0, 90, 180, 270],
+      MT = "plotsblueprint";
+    var KT = cT(71),
+      OT = cT(36423),
+      yT = cT(31),
+      fT = cT(1654),
+      xT = cT(1741),
+      IT = cT(36);
+    const AT = [
         ["farm_hut", "farm_house", "farm_barn"],
         ["rusticHome_tent", "rusticHome_cabin", "rusticHome_house"],
         ["market_stand", "market_stall", "market_shop"],
         ["castle_wall", "castle_gate", "castle_tower"]
       ],
-      Wv = {
+      CT = {
         farm_hut: {
           displayName: {
             translationKey: "plotsGame:blueprintFarmHut"
@@ -93,18 +93,18 @@ export const modules = {
           tier: "large"
         }
       },
-      wv = ["small", "medium", "large"].flatMap((vv => Tv.flat().filter((zv => Wv[zv].tier === vv))));
+      jT = ["small", "medium", "large"].flatMap((TT => AT.flat().filter((kT => CT[kT].tier === TT))));
 
-    function av(vv) {
-      return Wv[vv]
+    function vT(TT) {
+      return CT[TT]
     }
-    const sv = new Map(Tv.flatMap((vv => vv.slice(1).map(((zv, Pv) => [zv, vv[Pv]])))));
+    const tT = new Map(AT.flatMap((TT => TT.slice(1).map(((kT, cT) => [kT, TT[cT]])))));
 
-    function Cv(vv) {
-      var zv;
-      return null !== (zv = sv.get(vv)) && void 0 !== zv ? zv : null
+    function hT(TT) {
+      var kT;
+      return null !== (kT = tT.get(TT)) && void 0 !== kT ? kT : null
     }
-    const iv = {
+    const NT = {
       farm_hut: "plotsGame:journalNoteFarmHut",
       rusticHome_tent: "plotsGame:journalNoteRusticHomeTent",
       castle_tower: "plotsGame:journalNoteCastleTower",
@@ -112,180 +112,180 @@ export const modules = {
       farm_barn: "plotsGame:journalNoteFarmBarn"
     };
 
-    function cv(vv, zv) {
-      const Pv = new Set(vv),
-        hv = function(vv) {
-          const zv = new Set(vv);
-          return new Set(wv.filter((vv => {
-            const Pv = Cv(vv);
-            return null === Pv || zv.has(Pv)
+    function QT(TT, kT) {
+      const cT = new Set(TT),
+        lT = function(TT) {
+          const kT = new Set(TT);
+          return new Set(jT.filter((TT => {
+            const cT = hT(TT);
+            return null === cT || kT.has(cT)
           })))
-        }(Pv);
-      return wv.map((vv => {
-        const Sv = vv === zv;
-        return Pv.has(vv) ? {
-          id: vv,
-          active: Sv,
+        }(cT);
+      return jT.map((TT => {
+        const MT = TT === kT;
+        return cT.has(TT) ? {
+          id: TT,
+          active: MT,
           state: "completed",
           unlockedBy: null
-        } : hv.has(vv) ? {
-          id: vv,
-          active: Sv,
+        } : lT.has(TT) ? {
+          id: TT,
+          active: MT,
           state: "open",
           unlockedBy: null
         } : {
-          id: vv,
-          active: Sv,
+          id: TT,
+          active: MT,
           state: "locked",
-          unlockedBy: Cv(vv)
+          unlockedBy: hT(TT)
         }
       }))
     }
-    const Gv = "plotsJournalChanged";
-    class mv {
-      constructor(vv, zv) {
-        this.api = vv, this.placement = zv, this.pages = null, this.openRequested = !1, this.reported = new Set, this.onOpened = () => {
-          this.placement.stop(), this.yw("journal_opened")
-        }, this.build = vv => {
-          this.yw("placement_started"), this.placement.start(vv), (0, gv.g)()
+    const ST = "plotsJournalChanged";
+    class DT {
+      constructor(TT, kT) {
+        this.api = TT, this.placement = kT, this.pages = null, this.openRequested = !1, this.reported = new Set, this.onOpened = () => {
+          this.placement.stop(), this.Yj("journal_opened")
+        }, this.build = TT => {
+          this.Yj("placement_started"), this.placement.start(TT), (0, OT.d)()
         }, this.putAway = () => {
-          this.api.sendCommand(`${Sv} cancel`)
+          this.api.sendCommand(`${MT} cancel`)
         }
       }
       getPages() {
         return this.pages
       }
-      la(vv) {
-        let [, zv, Pv] = vv;
-        this.pages = cv(zv, Pv), lv.j.zC(Gv, this.pages, !0)
+      Av(TT) {
+        let [, kT, cT] = TT;
+        this.pages = QT(kT, cT), IT.k.nt(ST, this.pages, !0)
       }
       openFromServer() {
-        this.openRequested = !0, this.MT()
+        this.openRequested = !0, this.UA()
       }
-      MT() {
-        this.openRequested && !pv.c.get("loadingOverlayVisible") && (this.openRequested = !1, null === this.pages || (0, dv.o)() || (0, Nv.isTypingInInput)() || null !== this.placement.getView() || (0, gv.r)())
+      UA() {
+        this.openRequested && !yT.e.get("loadingOverlayVisible") && (this.openRequested = !1, null === this.pages || (0, fT.s)() || (0, xT.isTypingInInput)() || null !== this.placement.getView() || (0, OT.m)())
       }
-      yw(vv) {
-        this.reported.has(vv) || (this.reported.add(vv), this.api.sendCommand(`${Sv} report ${vv}`))
+      Yj(TT) {
+        this.reported.has(TT) || (this.reported.add(TT), this.api.sendCommand(`${MT} report ${TT}`))
       }
     }
-    var jv = Pv(1035),
-      fv = Pv.n(jv),
-      Fv = Pv(1042),
-      Yv = Pv(1442),
-      nv = Pv(4285),
-      Ov = Pv(3156),
-      Dv = Pv(1439),
-      Kv = Pv(1099),
-      Vv = Pv(1175),
-      Uv = Pv(9101);
-    const Rv = [0, 90, 180, 270],
-      xv = /^(meta\|rot\d)\|([lrud]+)$/,
-      tv = "nesw",
-      qv = /^meta\|([nesw]*)\|?(Stacked)?$/,
-      Iv = function(vv) {
-        const zv = new WeakMap;
-        return (Pv, hv) => {
-          let Sv = zv.get(Pv);
-          return void 0 === Sv && (Sv = vv(Pv, hv), zv.set(Pv, Sv)), Sv
+    var aT = cT(1046),
+      FT = cT.n(aT),
+      rT = cT(1061),
+      PT = cT(1470),
+      wT = cT(4515),
+      mT = cT(3352),
+      bT = cT(1461),
+      zT = cT(1122),
+      JT = cT(1195),
+      oT = cT(9447);
+    const HT = [0, 90, 180, 270],
+      eT = /^(meta\|rot\d)\|([lrud]+)$/,
+      GT = "nesw",
+      VT = /^meta\|([nesw]*)\|?(Stacked)?$/,
+      ET = function(TT) {
+        const kT = new WeakMap;
+        return (cT, lT) => {
+          let MT = kT.get(cT);
+          return void 0 === MT && (MT = TT(cT, lT), kT.set(cT, MT)), MT
         }
-      }((vv => new Qv(vv)));
-    class Qv {
-      constructor(vv) {
-        this.blockMetadata = vv, this.blockIdMappings = new Map, this.maxBlockId = void 0;
-        const zv = new Set(Object.keys(vv).map((zv => vv[zv].id)));
-        zv.add(0), this.maxBlockId = Math.max(...zv)
+      }((TT => new ZT(TT)));
+    class ZT {
+      constructor(TT) {
+        this.blockMetadata = TT, this.blockIdMappings = new Map, this.maxBlockId = void 0;
+        const kT = new Set(Object.keys(TT).map((kT => TT[kT].id)));
+        kT.add(0), this.maxBlockId = Math.max(...kT)
       }
       static
-      for (vv) {
-        return Iv(vv)
+      for (TT) {
+        return ET(TT)
       }
-      getBlockIdMapping(vv, zv) {
-        const Pv = this.getBlockIdMappingKey(vv, zv);
-        let hv = this.blockIdMappings.get(Pv);
-        return void 0 === hv && Rv.includes(vv) && (hv = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, vv, zv), this.blockIdMappings.set(Pv, hv)), hv
+      getBlockIdMapping(TT, kT) {
+        const cT = this.getBlockIdMappingKey(TT, kT);
+        let lT = this.blockIdMappings.get(cT);
+        return void 0 === lT && HT.includes(TT) && (lT = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, TT, kT), this.blockIdMappings.set(cT, lT)), lT
       }
-      turnBlockId(vv, zv, Pv) {
-        return this.mapBlockId(this.blockMetadata[vv], zv, this.getRotationMapping(zv, Pv), Pv)
+      turnBlockId(TT, kT, cT) {
+        return this.mapBlockId(this.blockMetadata[TT], kT, this.getRotationMapping(kT, cT), cT)
       }
-      getBlockIdMappingKey(vv, zv) {
-        return `r${vv}|m${Number(zv)}`
+      getBlockIdMappingKey(TT, kT) {
+        return `r${TT}|m${Number(kT)}`
       }
-      createBlockIdMapping(vv, zv, Pv, hv) {
-        const Sv = new Uint16Array(zv + 1),
-          ev = this.getRotationMapping(Pv, hv);
-        for (const gv in vv) {
-          const zv = vv[gv];
-          Sv[zv.id] = this.mapBlockId(zv, Pv, ev, hv)
+      createBlockIdMapping(TT, kT, cT, lT) {
+        const MT = new Uint16Array(kT + 1),
+          KT = this.getRotationMapping(cT, lT);
+        for (const OT in TT) {
+          const kT = TT[OT];
+          MT[kT.id] = this.mapBlockId(kT, cT, KT, lT)
         }
-        return Sv
+        return MT
       }
-      getRotationMapping(vv, zv) {
-        const Pv = Math.round(vv / 90),
-          hv = new Uint8Array(4);
-        for (let Sv = 0; Sv < 4; Sv++) hv[Sv] = (4 + Sv - Pv) % 4;
-        if (zv) {
-          let vv = hv[0];
-          hv[0] = hv[1], hv[1] = vv, vv = hv[2], hv[2] = hv[3], hv[3] = vv
+      getRotationMapping(TT, kT) {
+        const cT = Math.round(TT / 90),
+          lT = new Uint8Array(4);
+        for (let MT = 0; MT < 4; MT++) lT[MT] = (4 + MT - cT) % 4;
+        if (kT) {
+          let TT = lT[0];
+          lT[0] = lT[1], lT[1] = TT, TT = lT[2], lT[2] = lT[3], lT[3] = TT
         }
-        return hv
+        return lT
       }
-      mapBlockId(vv, zv, Pv, hv) {
-        var Sv;
+      mapBlockId(TT, kT, cT, lT) {
+        var MT;
         const {
-          blockMetadata: ev
-        } = this, gv = Math.round(zv / 90), {
-          id: pv,
-          meta: dv
-        } = vv, {
-          rot: Nv,
-          rootName: lv,
-          metaStr: Tv
-        } = dv;
-        let Wv;
-        const [, wv, av] = null !== (Sv = qv.exec(Tv)) && void 0 !== Sv ? Sv : [];
-        if (void 0 !== wv) {
-          var sv, Cv;
-          Wv = null !== (sv = null === (Cv = ev[`${lv}|meta|${[tv.split("").filter(((vv,zv)=>wv.split("").some((vv=>{const Pv=tv.indexOf(vv);return((hv?3-Pv:Pv)+gv)%4===zv})))).join(""),av].filter(Boolean).join("|")}`]) || void 0 === Cv ? void 0 : Cv.id) && void 0 !== sv ? sv : pv
-        } else if (null === Nv) Wv = pv;
+          blockMetadata: KT
+        } = this, OT = Math.round(kT / 90), {
+          id: yT,
+          meta: fT
+        } = TT, {
+          rot: xT,
+          rootName: IT,
+          metaStr: AT
+        } = fT;
+        let CT;
+        const [, jT, vT] = null !== (MT = VT.exec(AT)) && void 0 !== MT ? MT : [];
+        if (void 0 !== jT) {
+          var tT, hT;
+          CT = null !== (tT = null === (hT = KT[`${IT}|meta|${[GT.split("").filter(((TT,kT)=>jT.split("").some((TT=>{const cT=GT.indexOf(TT);return((lT?3-cT:cT)+OT)%4===kT})))).join(""),vT].filter(Boolean).join("|")}`]) || void 0 === hT ? void 0 : hT.id) && void 0 !== tT ? tT : yT
+        } else if (null === xT) CT = yT;
         else {
-          var iv, cv;
-          const vv = Pv[Nv - 1] + 1;
-          let zv = Tv.replace(`rot${Nv}`, `rot${vv}`);
-          hv && dv.stairsCorner && (zv = zv.replace(/(Left|Right)$/, (vv => "Left" === vv ? "Right" : "Left"))), hv && "Chest" === lv && (zv = zv.replace(/\|(left|right)$/, ((vv, zv) => "left" === zv ? "|right" : "|left")));
-          const Sv = xv.exec(zv);
-          if (hv && null !== Sv) {
-            const vv = "lrud".split("").filter((vv => Sv[2].includes("l" === vv ? "r" : "r" === vv ? "l" : vv)));
-            zv = `${Sv[1]}|${vv.join("")}`
+          var NT, QT;
+          const TT = cT[xT - 1] + 1;
+          let kT = AT.replace(`rot${xT}`, `rot${TT}`);
+          lT && fT.stairsCorner && (kT = kT.replace(/(Left|Right)$/, (TT => "Left" === TT ? "Right" : "Left"))), lT && "Chest" === IT && (kT = kT.replace(/\|(left|right)$/, ((TT, kT) => "left" === kT ? "|right" : "|left")));
+          const MT = eT.exec(kT);
+          if (lT && null !== MT) {
+            const TT = "lrud".split("").filter((TT => MT[2].includes("l" === TT ? "r" : "r" === TT ? "l" : TT)));
+            kT = `${MT[1]}|${TT.join("")}`
           }
-          const gv = `${lv}|${zv}`;
-          if (Wv = null !== (iv = null === (cv = ev[gv]) || void 0 === cv ? void 0 : cv.id) && void 0 !== iv ? iv : null, null === Wv) {
-            const vv = ev[lv];
-            Wv = vv.rootMetaDesc === gv ? vv.id : pv
+          const OT = `${IT}|${kT}`;
+          if (CT = null !== (NT = null === (QT = KT[OT]) || void 0 === QT ? void 0 : QT.id) && void 0 !== NT ? NT : null, null === CT) {
+            const TT = KT[IT];
+            CT = TT.rootMetaDesc === OT ? TT.id : yT
           }
         }
-        return Wv
+        return CT
       }
     }
 
-    function Zv(vv, zv, Pv) {
+    function uT(TT, kT, cT) {
       let {
-        xRotationMappedOrigin: hv,
-        shouldSwapXZ: Sv
-      } = Pv;
-      const ev = Sv ? zv : vv;
-      return null === hv ? ev : hv - ev
+        xRotationMappedOrigin: lT,
+        shouldSwapXZ: MT
+      } = cT;
+      const KT = MT ? kT : TT;
+      return null === lT ? KT : lT - KT
     }
 
-    function Av(vv, zv, Pv) {
+    function XT(TT, kT, cT) {
       let {
-        zRotationMappedOrigin: hv,
-        shouldSwapXZ: Sv
-      } = Pv;
-      const ev = Sv ? vv : zv;
-      return null === hv ? ev : hv - ev
+        zRotationMappedOrigin: lT,
+        shouldSwapXZ: MT
+      } = cT;
+      const KT = MT ? TT : kT;
+      return null === lT ? KT : lT - KT
     }
-    const Lv = {
+    const dT = {
         farm_hut: {
           size: [7, 7, 7],
           palette: ["Aspen Wood Planks", "Messy Stone", "Barkless Aspen Log", "Red Planks", "Glass", "Barkless Pine Log", "Maple Wood Planks", "Smooth Stone"],
@@ -347,493 +347,493 @@ export const modules = {
           layers: ["aaaaaaaaa accccccca accccccca accccccca accccccca accccccca accccccca accccccca aaaaaaaaa", "bbbb.bbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbb.bbba b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b abbbbbbba", "bbbbabbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbbbbbb b.......b b.......b b.......b b...d...b b.......b b.......b b.......b bbbbbbbbb", "ab.bbb.ba b.......b ......... b.......b b...d...b b.......b ......... b.......b ab.bbb.ba", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....a.... ......... ......... ......... ........."]
         }
       },
-      Hv = new Map;
+      LT = new Map;
 
-    function Mv(vv, zv) {
-      const Pv = `${vv}|${zv}`;
-      let hv = Hv.get(Pv);
-      if (void 0 === hv) {
+    function RT(TT, kT) {
+      const cT = `${TT}|${kT}`;
+      let lT = LT.get(cT);
+      if (void 0 === lT) {
         const {
-          size: Sv,
-          palette: ev,
-          layers: gv
-        } = Lv[vv], pv = 90 === zv || 270 === zv, [dv, Nv] = pv ? [Sv[2], Sv[0]] : [Sv[0], Sv[2]], lv = function(vv, zv, Pv) {
-          let hv = null,
-            Sv = null,
-            ev = !1;
-          switch (vv) {
+          size: MT,
+          palette: KT,
+          layers: OT
+        } = dT[TT], yT = 90 === kT || 270 === kT, [fT, xT] = yT ? [MT[2], MT[0]] : [MT[0], MT[2]], IT = function(TT, kT, cT) {
+          let lT = null,
+            MT = null,
+            KT = !1;
+          switch (TT) {
             case 0:
               break;
             case 90:
-              hv = zv - 1, ev = !0;
+              lT = kT - 1, KT = !0;
               break;
             case 180:
-              hv = zv - 1, Sv = Pv - 1;
+              lT = kT - 1, MT = cT - 1;
               break;
             case 270:
-              Sv = Pv - 1, ev = !0;
+              MT = cT - 1, KT = !0;
               break;
             default:
-              throw new Error(`Invalid rotation: ${vv}`)
+              throw new Error(`Invalid rotation: ${TT}`)
           }
           return {
-            xRotationMappedOrigin: hv,
-            zRotationMappedOrigin: Sv,
-            shouldSwapXZ: ev
+            xRotationMappedOrigin: lT,
+            zRotationMappedOrigin: MT,
+            shouldSwapXZ: KT
           }
-        }(zv, dv, Nv), Tv = Qv.for(Uv.g), Wv = ev.map((vv => (0, Uv.d)(Tv.turnBlockId((0, Uv.i)(vv), zv, !1)))), wv = [];
-        gv.forEach(((vv, zv) => {
-          vv.split(" ").forEach(((vv, Pv) => {
-            for (let hv = 0; hv < vv.length; hv++)
-              if ("." !== vv[hv]) {
-                const Sv = [Zv(hv, Pv, lv), zv, Av(hv, Pv, lv)];
-                wv.push({
-                  offset: Sv,
-                  block: Wv[vv.charCodeAt(hv) - "a".charCodeAt(0)]
+        }(kT, fT, xT), AT = ZT.for(oT.i), CT = KT.map((TT => (0, oT.g)(AT.turnBlockId((0, oT.l)(TT), kT, !1)))), jT = [];
+        OT.forEach(((TT, kT) => {
+          TT.split(" ").forEach(((TT, cT) => {
+            for (let lT = 0; lT < TT.length; lT++)
+              if ("." !== TT[lT]) {
+                const MT = [uT(lT, cT, IT), kT, XT(lT, cT, IT)];
+                jT.push({
+                  offset: MT,
+                  block: CT[TT.charCodeAt(lT) - "a".charCodeAt(0)]
                 })
               }
           }))
-        })), hv = {
-          size: [dv, Sv[1], Nv],
-          cells: wv
-        }, Hv.set(Pv, hv)
+        })), lT = {
+          size: [fT, MT[1], xT],
+          cells: jT
+        }, LT.set(cT, lT)
       }
-      return hv
+      return lT
     }
-    const yv = {
-      farm_hut: Pv.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
-      farm_house: Pv.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
-      farm_barn: Pv.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
-      rusticHome_tent: Pv.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
-      rusticHome_cabin: Pv.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
-      rusticHome_house: Pv.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
-      market_stand: Pv.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
-      market_stall: Pv.p + "static/media/market_stall.9a562807f9dff591618a.webp",
-      market_shop: Pv.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
-      castle_wall: Pv.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
-      castle_gate: Pv.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
-      castle_tower: Pv.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
+    const gT = {
+      farm_hut: cT.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
+      farm_house: cT.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
+      farm_barn: cT.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
+      rusticHome_tent: cT.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
+      rusticHome_cabin: cT.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
+      rusticHome_house: cT.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
+      market_stand: cT.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
+      market_stall: cT.p + "static/media/market_stall.9a562807f9dff591618a.webp",
+      market_shop: cT.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
+      castle_wall: cT.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
+      castle_gate: cT.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
+      castle_tower: cT.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
     };
-    var Bv = Pv(1082);
-    const Jv = {
+    var UT = cT(1099);
+    const YT = {
       small: "plotsGame:journalTierSmall",
       medium: "plotsGame:journalTierMedium",
       large: "plotsGame:journalTierLarge"
     };
 
-    function Ev(vv) {
+    function BT(TT) {
       let {
-        page: zv,
-        building: Pv,
-        onBuild: hv,
-        onPutAway: Sv
-      } = vv;
+        page: kT,
+        building: cT,
+        onBuild: lT,
+        onPutAway: MT
+      } = TT;
       const {
-        t: ev
-      } = (0, Vv.x)(), {
-        displayName: gv,
-        tier: pv
-      } = av(zv.id), dv = Mv(zv.id, 0).cells.length, Nv = iv[zv.id], lv = "locked" === zv.state, Tv = Pv ? Yv.d : Yv.j;
-      return (0, Bv.jsxs)("article", {
-        className: fv()("PlotsJournalPage", {
-          Locked: lv
+        t: KT
+      } = (0, JT.B)(), {
+        displayName: OT,
+        tier: yT
+      } = vT(kT.id), fT = RT(kT.id, 0).cells.length, xT = NT[kT.id], IT = "locked" === kT.state, AT = cT ? PT.e : PT.m;
+      return (0, UT.jsxs)("article", {
+        className: FT()("PlotsJournalPage", {
+          Locked: IT
         }),
-        children: [(0, Bv.jsx)("h3", {
+        children: [(0, UT.jsx)("h3", {
           className: "PlotsJournalPageName",
-          children: ev(gv.translationKey)
-        }), (0, Bv.jsxs)("div", {
+          children: KT(OT.translationKey)
+        }), (0, UT.jsxs)("div", {
           className: "PlotsJournalPageMeta",
-          children: [ev(Jv[pv]), " \xb7 ", ev("plotsGame:journalBlocks", {
-            blocks: String(dv)
+          children: [KT(YT[yT]), " \xb7 ", KT("plotsGame:journalBlocks", {
+            blocks: String(fT)
           })]
-        }), (0, Bv.jsxs)("div", {
+        }), (0, UT.jsxs)("div", {
           className: "PlotsJournalSketch",
-          children: [wv.map((vv => (0, Bv.jsx)("img", {
-            className: fv()({
-              Shown: vv === zv.id
+          children: [jT.map((TT => (0, UT.jsx)("img", {
+            className: FT()({
+              Shown: TT === kT.id
             }),
-            src: yv[vv],
+            src: gT[TT],
             alt: "",
             draggable: !1
-          }, vv))), "completed" === zv.state && (0, Bv.jsx)("span", {
+          }, TT))), "completed" === kT.state && (0, UT.jsx)("span", {
             className: "PlotsJournalStamp",
-            children: ev("plotsGame:journalBuilt")
-          }), lv && (0, Bv.jsx)("span", {
+            children: KT("plotsGame:journalBuilt")
+          }), IT && (0, UT.jsx)("span", {
             className: "PlotsJournalLock",
-            children: (0, Bv.jsx)(Fv.b, {
+            children: (0, UT.jsx)(rT.e, {
               name: "lock"
             })
           })]
-        }), void 0 !== Nv && "completed" !== zv.state && (0, Bv.jsx)("p", {
+        }), void 0 !== xT && "completed" !== kT.state && (0, UT.jsx)("p", {
           className: "PlotsJournalNote",
-          children: ev(Nv)
-        }), (0, Bv.jsxs)("div", {
+          children: KT(xT)
+        }), (0, UT.jsxs)("div", {
           className: "PlotsJournalPageAction",
-          children: ["locked" === zv.state && (0, Bv.jsx)("p", {
+          children: ["locked" === kT.state && (0, UT.jsx)("p", {
             className: "PlotsJournalHint",
-            children: ev("plotsGame:journalLocked", {
-              name: ev(av(zv.unlockedBy).displayName.translationKey)
+            children: KT("plotsGame:journalLocked", {
+              name: KT(vT(kT.unlockedBy).displayName.translationKey)
             })
-          }), zv.active && (0, Bv.jsxs)(Bv.Fragment, {
-            children: [(0, Bv.jsx)("p", {
+          }), kT.active && (0, UT.jsxs)(UT.Fragment, {
+            children: [(0, UT.jsx)("p", {
               className: "PlotsJournalHint Building",
-              children: ev("plotsGame:journalBuilding")
-            }), (0, Bv.jsx)(Yv.e, {
-              onClick: Sv,
-              children: ev("plotsGame:journalPutAway")
+              children: KT("plotsGame:journalBuilding")
+            }), (0, UT.jsx)(PT.i, {
+              onClick: MT,
+              children: KT("plotsGame:journalPutAway")
             })]
-          }), !lv && !zv.active && (0, Bv.jsx)(Tv, {
+          }), !IT && !kT.active && (0, UT.jsx)(AT, {
             onClick: () => {
-              hv(zv.id)
+              lT(kT.id)
             },
-            children: ev("plotsGame:placementBuild")
+            children: KT("plotsGame:placementBuild")
           })]
         })]
       })
     }
 
-    function ov(vv) {
+    function WT(TT) {
       let {
-        className: zv,
-        page: Pv,
-        hidden: hv,
-        building: Sv,
-        journal: ev
-      } = vv;
-      return (0, Bv.jsxs)("div", {
-        ref: vv => {
-          null !== vv && (vv.inert = hv)
+        className: kT,
+        page: cT,
+        hidden: lT,
+        building: MT,
+        journal: KT
+      } = TT;
+      return (0, UT.jsxs)("div", {
+        ref: TT => {
+          null !== TT && (TT.inert = lT)
         },
-        className: fv()("PlotsJournalSide", zv),
-        children: [void 0 !== Pv && (0, Bv.jsx)(Ev, {
-          page: Pv,
-          building: Sv,
-          onBuild: ev.build,
-          onPutAway: ev.putAway
-        }), void 0 === Pv && (0, Bv.jsx)("div", {
+        className: FT()("PlotsJournalSide", kT),
+        children: [void 0 !== cT && (0, UT.jsx)(BT, {
+          page: cT,
+          building: MT,
+          onBuild: KT.build,
+          onPutAway: KT.putAway
+        }), void 0 === cT && (0, UT.jsx)("div", {
           className: "PlotsJournalPage"
         })]
       })
     }
-    var bv = Pv(312),
-      rv = Pv(1855);
+    var nT = cT(339),
+      pT = cT(1915);
 
-    function kv(vv) {
-      return Math.cos((0, rv.k)(vv))
+    function iT(TT) {
+      return Math.cos((0, pT.k)(TT))
     }
 
-    function Xv(vv) {
-      return (0, rv.y)(Math.acos(bv.d.clamp(vv, -1, 1)))
+    function qT(TT) {
+      return (0, pT.z)(Math.acos(nT.d.clamp(TT, -1, 1)))
     }
 
-    function uv(vv, zv, Pv, hv, Sv) {
-      const ev = Math.abs(zv - vv),
-        gv = (0, rv.y)(Sv / (Pv * Math.abs(Math.sin((0, rv.k)(vv))))),
-        pv = 450 * Math.min(1, ev / hv),
-        dv = gv > 0 ? 3 * ev / gv : 1 / 0;
-      return Math.round(Math.max(120, Math.min(pv, dv)))
+    function sT(TT, kT, cT, lT, MT) {
+      const KT = Math.abs(kT - TT),
+        OT = (0, pT.z)(MT / (cT * Math.abs(Math.sin((0, pT.k)(TT))))),
+        yT = 450 * Math.min(1, KT / lT),
+        fT = OT > 0 ? 3 * KT / OT : 1 / 0;
+      return Math.round(Math.max(120, Math.min(yT, fT)))
     }
-    class vz {
+    class Tk {
       constructor() {
         this.samples = []
       }
-      add(vv, zv) {
+      add(TT, kT) {
         for (this.samples.push({
-            x: vv,
-            at: zv
-          }); zv - this.samples[0].at > 100;) this.samples.shift()
+            x: TT,
+            at: kT
+          }); kT - this.samples[0].at > 100;) this.samples.shift()
       }
       get() {
-        const vv = this.samples[0],
-          zv = this.samples[this.samples.length - 1];
-        return zv.at > vv.at ? (zv.x - vv.x) / (zv.at - vv.at) : 0
+        const TT = this.samples[0],
+          kT = this.samples[this.samples.length - 1];
+        return kT.at > TT.at ? (kT.x - TT.x) / (kT.at - TT.at) : 0
       }
     }
 
-    function zz(vv, zv) {
-      return vv > zv && vv >= 600
+    function kk(TT, kT) {
+      return TT > kT && TT >= 600
     }
 
-    function Pz(vv) {
-      return Xv(new DOMMatrixReadOnly(getComputedStyle(vv).transform).m11)
+    function ck(TT) {
+      return qT(new DOMMatrixReadOnly(getComputedStyle(TT).transform).m11)
     }
 
-    function hz(vv, zv) {
-      vv.style.transform = `rotateY(${-zv}deg)`, vv.classList.add("Turning")
+    function lk(TT, kT) {
+      TT.style.transform = `rotateY(${-kT}deg)`, TT.classList.add("Turning")
     }
 
-    function Sz(vv) {
+    function Mk(TT) {
       let {
-        journal: zv
-      } = vv;
+        journal: kT
+      } = TT;
       const {
-        t: Pv
-      } = (0, Vv.x)(), hv = (0, Dv.j)(Gv, zv.getPages()), Sv = (0, Kv.l)(zz), [pv, dv] = (0, ev.useState)((() => function(vv) {
-        const zv = vv.findIndex((vv => vv.active));
-        return -1 !== zv ? zv : Math.max(0, vv.findIndex((vv => "open" === vv.state)))
-      }(hv))), lv = (0, ev.useRef)(null), Tv = (0, ev.useRef)(null), Wv = (0, ev.useRef)({
+        t: cT
+      } = (0, JT.B)(), lT = (0, bT.i)(ST, kT.getPages()), MT = (0, zT.i)(kk), [yT, fT] = (0, KT.useState)((() => function(TT) {
+        const kT = TT.findIndex((TT => TT.active));
+        return -1 !== kT ? kT : Math.max(0, TT.findIndex((TT => "open" === TT.state)))
+      }(lT))), IT = (0, KT.useRef)(null), AT = (0, KT.useRef)(null), CT = (0, KT.useRef)({
         Forward: null,
         Back: null
-      }), wv = Sv ? 2 : 1, av = Sv ? 180 : 90, sv = pv - pv % wv, Cv = sv > 0, iv = sv + wv < hv.length, cv = (0, ev.useCallback)((() => {
-        const vv = Tv.current;
-        return null === vv ? sv : (Tv.current = null, vv.animation.cancel(), (zv = Wv.current[vv.direction]).style.transform = "", zv.classList.remove("Turning"), null === vv.next ? sv : (dv(vv.next), vv.next));
-        var zv
-      }), [sv]), mv = (0, ev.useCallback)(((vv, zv, Pv, hv) => {
-        const Sv = Wv.current[vv],
-          ev = Pz(Sv),
-          gv = zv === ("Forward" === vv) ? av : 0;
-        hz(Sv, gv);
-        const pv = Sv.animate([{
-          transform: `rotateY(${-ev}deg)`
+      }), jT = MT ? 2 : 1, vT = MT ? 180 : 90, tT = yT - yT % jT, hT = tT > 0, NT = tT + jT < lT.length, QT = (0, KT.useCallback)((() => {
+        const TT = AT.current;
+        return null === TT ? tT : (AT.current = null, TT.animation.cancel(), (kT = CT.current[TT.direction]).style.transform = "", kT.classList.remove("Turning"), null === TT.next ? tT : (fT(TT.next), TT.next));
+        var kT
+      }), [tT]), DT = (0, KT.useCallback)(((TT, kT, cT, lT) => {
+        const MT = CT.current[TT],
+          KT = ck(MT),
+          OT = kT === ("Forward" === TT) ? vT : 0;
+        lk(MT, OT);
+        const yT = MT.animate([{
+          transform: `rotateY(${-KT}deg)`
         }, {
-          transform: `rotateY(${-gv}deg)`
+          transform: `rotateY(${-OT}deg)`
         }], {
-          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : uv(ev, gv, Sv.offsetWidth, av, gv > ev ? -Pv : Pv),
+          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : sT(KT, OT, MT.offsetWidth, vT, OT > KT ? -cT : cT),
           easing: "cubic-bezier(0.25, 0.75, 0.5, 1)"
         });
-        Tv.current = {
-          direction: vv,
-          animation: pv,
-          next: zv ? hv + ("Forward" === vv ? wv : -wv) : null
-        }, pv.onfinish = () => {
-          var vv;
-          (null === (vv = Tv.current) || void 0 === vv ? void 0 : vv.animation) === pv && cv()
+        AT.current = {
+          direction: TT,
+          animation: yT,
+          next: kT ? lT + ("Forward" === TT ? jT : -jT) : null
+        }, yT.onfinish = () => {
+          var TT;
+          (null === (TT = AT.current) || void 0 === TT ? void 0 : TT.animation) === yT && QT()
         }
-      }), [wv, av, cv]), jv = (0, ev.useCallback)((vv => {
-        if (null !== lv.current) return;
-        const zv = cv();
-        ("Forward" === vv ? zv + wv < hv.length : zv > 0) && mv(vv, !0, 0, zv)
-      }), [cv, mv, wv, hv.length]);
-      (0, ev.useEffect)((() => {
-        zv.onOpened()
-      }), [zv]), (0, ev.useEffect)((() => () => {
-        var vv;
-        null === (vv = Tv.current) || void 0 === vv || vv.animation.cancel()
-      }), []), (0, ev.useEffect)((() => {
-        const vv = vv => {
-          var zv;
-          vv.pointerId !== (null === (zv = lv.current) || void 0 === zv ? void 0 : zv.pointerId) || lv.current.following || (lv.current = null)
+      }), [jT, vT, QT]), aT = (0, KT.useCallback)((TT => {
+        if (null !== IT.current) return;
+        const kT = QT();
+        ("Forward" === TT ? kT + jT < lT.length : kT > 0) && DT(TT, !0, 0, kT)
+      }), [QT, DT, jT, lT.length]);
+      (0, KT.useEffect)((() => {
+        kT.onOpened()
+      }), [kT]), (0, KT.useEffect)((() => () => {
+        var TT;
+        null === (TT = AT.current) || void 0 === TT || TT.animation.cancel()
+      }), []), (0, KT.useEffect)((() => {
+        const TT = TT => {
+          var kT;
+          TT.pointerId !== (null === (kT = IT.current) || void 0 === kT ? void 0 : kT.pointerId) || IT.current.following || (IT.current = null)
         };
-        return window.addEventListener("pointerup", vv), () => {
-          window.removeEventListener("pointerup", vv)
+        return window.addEventListener("pointerup", TT), () => {
+          window.removeEventListener("pointerup", TT)
         }
-      }), []), (0, Ov.d)((vv => ("ArrowLeft" === vv.code || "ArrowRight" === vv.code) && !(0, Nv.isTypingInInput)()), (vv => {
-        vv.stopPropagation(), jv("ArrowLeft" === vv.code ? "Back" : "Forward")
+      }), []), (0, mT.e)((TT => ("ArrowLeft" === TT.code || "ArrowRight" === TT.code) && !(0, xT.isTypingInInput)()), (TT => {
+        TT.stopPropagation(), aT("ArrowLeft" === TT.code ? "Back" : "Forward")
       }));
-      const Fv = (vv, zv, Pv) => {
-          const hv = function(vv, zv, Pv, hv) {
-            return (vv < 0 ? Pv : hv) ? bv.d.clampAbs(vv, zv) : Math.sign(vv) * zv * (1 - 1 / (.55 * Math.abs(vv) / zv + 1))
-          }(vv.base + Pv, wv * vv.width, iv, Cv);
-          return "Forward" === zv ? Math.min(hv, 0) : Math.max(hv, 0)
+      const rT = (TT, kT, cT) => {
+          const lT = function(TT, kT, cT, lT) {
+            return (TT < 0 ? cT : lT) ? nT.d.clampAbs(TT, kT) : Math.sign(TT) * kT * (1 - 1 / (.55 * Math.abs(TT) / kT + 1))
+          }(TT.base + cT, jT * TT.width, NT, hT);
+          return "Forward" === kT ? Math.min(lT, 0) : Math.max(lT, 0)
         },
-        Uv = (vv, zv) => {
-          const Pv = lv.current;
-          if (lv.current = null, null === Pv.direction) return;
-          Pv.speed.add(vv, zv);
-          const hv = Pv.speed.get(),
-            Sv = Fv(Pv, Pv.direction, vv - Pv.x);
-          mv(Pv.direction, null !== function(vv, zv, Pv, hv, Sv) {
-            if (Math.abs(zv) >= .3 ? Math.sign(zv) !== Math.sign(vv) : Math.abs(vv) < .5 * Pv) return null;
-            const ev = vv < 0 ? "Forward" : "Back";
-            return ("Forward" === ev ? hv : Sv) ? ev : null
-          }(Sv, hv, wv * Pv.width, iv, Cv), hv, sv)
+        oT = (TT, kT) => {
+          const cT = IT.current;
+          if (IT.current = null, null === cT.direction) return;
+          cT.speed.add(TT, kT);
+          const lT = cT.speed.get(),
+            MT = rT(cT, cT.direction, TT - cT.x);
+          DT(cT.direction, null !== function(TT, kT, cT, lT, MT) {
+            if (Math.abs(kT) >= .3 ? Math.sign(kT) !== Math.sign(TT) : Math.abs(TT) < .5 * cT) return null;
+            const KT = TT < 0 ? "Forward" : "Back";
+            return ("Forward" === KT ? lT : MT) ? KT : null
+          }(MT, lT, jT * cT.width, NT, hT), lT, tT)
         },
-        Rv = hv.some((vv => vv.active)),
-        xv = (vv, Pv, Sv) => (0, Bv.jsx)(ov, {
-          className: vv,
-          page: Pv >= 0 && Pv < hv.length ? hv[Pv] : void 0,
-          hidden: Sv,
-          building: Rv,
-          journal: zv
+        HT = lT.some((TT => TT.active)),
+        eT = (TT, cT, MT) => (0, UT.jsx)(WT, {
+          className: TT,
+          page: cT >= 0 && cT < lT.length ? lT[cT] : void 0,
+          hidden: MT,
+          building: HT,
+          journal: kT
         });
-      return (0, Bv.jsx)(nv.c, {
-        close: gv.j,
+      return (0, UT.jsx)(wT.c, {
+        close: OT.f,
         togglePointerLock: !1,
         className: "PlotsJournalOverlay",
-        children: (0, Bv.jsxs)("section", {
-          className: fv()("PlotsJournal", {
-            Spread: Sv
+        children: (0, UT.jsxs)("section", {
+          className: FT()("PlotsJournal", {
+            Spread: MT
           }),
           role: "dialog",
           "aria-modal": "true",
-          "aria-label": Pv("plotsGame:journalTitle"),
-          children: [(0, Bv.jsx)(Yv.i, {
+          "aria-label": cT("plotsGame:journalTitle"),
+          children: [(0, UT.jsx)(PT.l, {
             className: "PlotsJournalClose",
-            onClick: gv.j
-          }), (0, Bv.jsx)(ez, {
+            onClick: OT.f
+          }), (0, UT.jsx)(Kk, {
             direction: "Back",
-            disabled: !Cv,
-            onTurn: jv
-          }), (0, Bv.jsx)("div", {
+            disabled: !hT,
+            onTurn: aT
+          }), (0, UT.jsx)("div", {
             className: "PlotsJournalBookPages",
-            onPointerDown: vv => {
-              var zv;
-              if (!vv.isPrimary || 0 !== vv.button || null !== Tv.current && null !== vv.target.closest("button")) return;
-              const Pv = new vz;
-              Pv.add(vv.clientX, vv.timeStamp);
-              const hv = Wv.current.Forward.offsetWidth,
-                Sv = Tv.current;
-              Tv.current = null;
-              let ev = 0;
-              if (null !== Sv) {
-                const zv = Wv.current[Sv.direction],
-                  Pv = Pz(zv);
-                Sv.animation.cancel(), hz(zv, Pv), ev = function(vv, zv, Pv, hv) {
-                  return (vv < 0 ? Pv : hv) ? vv : Math.sign(vv) * zv * (1 / (1 - Math.min(Math.abs(vv) / zv, .99)) - 1) / .55
-                }(function(vv, zv, Pv, hv) {
-                  return Pv * (kv(zv) - kv("Forward" === vv ? 0 : hv))
-                }(Sv.direction, Pv, hv, av), wv * hv, iv, Cv), vv.currentTarget.setPointerCapture(vv.pointerId)
+            onPointerDown: TT => {
+              var kT;
+              if (!TT.isPrimary || 0 !== TT.button || null !== AT.current && null !== TT.target.closest("button")) return;
+              const cT = new Tk;
+              cT.add(TT.clientX, TT.timeStamp);
+              const lT = CT.current.Forward.offsetWidth,
+                MT = AT.current;
+              AT.current = null;
+              let KT = 0;
+              if (null !== MT) {
+                const kT = CT.current[MT.direction],
+                  cT = ck(kT);
+                MT.animation.cancel(), lk(kT, cT), KT = function(TT, kT, cT, lT) {
+                  return (TT < 0 ? cT : lT) ? TT : Math.sign(TT) * kT * (1 / (1 - Math.min(Math.abs(TT) / kT, .99)) - 1) / .55
+                }(function(TT, kT, cT, lT) {
+                  return cT * (iT(kT) - iT("Forward" === TT ? 0 : lT))
+                }(MT.direction, cT, lT, vT), jT * lT, NT, hT), TT.currentTarget.setPointerCapture(TT.pointerId)
               }
-              lv.current = {
-                pointerId: vv.pointerId,
-                x: vv.clientX,
-                y: vv.clientY,
-                base: ev,
-                width: hv,
-                following: null !== Sv,
-                direction: null !== (zv = null === Sv || void 0 === Sv ? void 0 : Sv.direction) && void 0 !== zv ? zv : null,
-                speed: Pv
+              IT.current = {
+                pointerId: TT.pointerId,
+                x: TT.clientX,
+                y: TT.clientY,
+                base: KT,
+                width: lT,
+                following: null !== MT,
+                direction: null !== (kT = null === MT || void 0 === MT ? void 0 : MT.direction) && void 0 !== kT ? kT : null,
+                speed: cT
               }
             },
-            onPointerMove: vv => {
-              const zv = lv.current;
-              if (null === zv || vv.pointerId !== zv.pointerId) return;
-              if (0 === vv.buttons) return void Uv(vv.clientX, vv.timeStamp);
-              const Pv = vv.clientX - zv.x;
-              !zv.following && function(vv, zv) {
-                return Math.abs(vv) > 8 && Math.abs(vv) > Math.abs(zv)
-              }(Pv, vv.clientY - zv.y) && (zv.following = !0, zv.direction = Pv < 0 ? "Forward" : "Back", vv.currentTarget.setPointerCapture(vv.pointerId)), null !== zv.direction && (zv.speed.add(vv.clientX, vv.timeStamp), hz(Wv.current[zv.direction], function(vv, zv, Pv, hv) {
-                const Sv = Pv * kv("Forward" === vv ? 0 : hv) + zv;
-                return bv.d.clamp(Xv(Sv / Pv), 0, hv)
-              }(zv.direction, Fv(zv, zv.direction, Pv), zv.width, av)))
+            onPointerMove: TT => {
+              const kT = IT.current;
+              if (null === kT || TT.pointerId !== kT.pointerId) return;
+              if (0 === TT.buttons) return void oT(TT.clientX, TT.timeStamp);
+              const cT = TT.clientX - kT.x;
+              !kT.following && function(TT, kT) {
+                return Math.abs(TT) > 8 && Math.abs(TT) > Math.abs(kT)
+              }(cT, TT.clientY - kT.y) && (kT.following = !0, kT.direction = cT < 0 ? "Forward" : "Back", TT.currentTarget.setPointerCapture(TT.pointerId)), null !== kT.direction && (kT.speed.add(TT.clientX, TT.timeStamp), lk(CT.current[kT.direction], function(TT, kT, cT, lT) {
+                const MT = cT * iT("Forward" === TT ? 0 : lT) + kT;
+                return nT.d.clamp(qT(MT / cT), 0, lT)
+              }(kT.direction, rT(kT, kT.direction, cT), kT.width, vT)))
             },
-            onPointerUp: vv => {
-              var zv;
-              vv.pointerId === (null === (zv = lv.current) || void 0 === zv ? void 0 : zv.pointerId) && Uv(vv.clientX, vv.timeStamp)
+            onPointerUp: TT => {
+              var kT;
+              TT.pointerId === (null === (kT = IT.current) || void 0 === kT ? void 0 : kT.pointerId) && oT(TT.clientX, TT.timeStamp)
             },
-            onPointerCancel: vv => {
-              const zv = lv.current;
-              vv.pointerId === (null === zv || void 0 === zv ? void 0 : zv.pointerId) && (lv.current = null, null !== zv.direction && mv(zv.direction, !1, 0, sv))
+            onPointerCancel: TT => {
+              const kT = IT.current;
+              TT.pointerId === (null === kT || void 0 === kT ? void 0 : kT.pointerId) && (IT.current = null, null !== kT.direction && DT(kT.direction, !1, 0, tT))
             },
-            children: (0, Bv.jsxs)("div", {
+            children: (0, UT.jsxs)("div", {
               className: "PlotsJournalSheet",
-              children: [Sv && xv("Left", sv - 2, !0), xv("Right", sv + 2 * wv - 1, !0), (0, Bv.jsxs)("div", {
-                ref: vv => {
-                  Wv.current.Back = vv
+              children: [MT && eT("Left", tT - 2, !0), eT("Right", tT + 2 * jT - 1, !0), (0, UT.jsxs)("div", {
+                ref: TT => {
+                  CT.current.Back = TT
                 },
                 className: "PlotsJournalLeaf Back",
-                children: [xv("Recto", sv - 1, !0), Sv && xv("Verso", sv, !1)]
-              }), (0, Bv.jsxs)("div", {
-                ref: vv => {
-                  Wv.current.Forward = vv
+                children: [eT("Recto", tT - 1, !0), MT && eT("Verso", tT, !1)]
+              }), (0, UT.jsxs)("div", {
+                ref: TT => {
+                  CT.current.Forward = TT
                 },
                 className: "PlotsJournalLeaf Forward",
-                children: [xv("Recto", sv + wv - 1, !1), Sv && xv("Verso", sv + wv, !0)]
+                children: [eT("Recto", tT + jT - 1, !1), MT && eT("Verso", tT + jT, !0)]
               })]
             })
-          }), (0, Bv.jsx)(ez, {
+          }), (0, UT.jsx)(Kk, {
             direction: "Forward",
-            disabled: !iv,
-            onTurn: jv
+            disabled: !NT,
+            onTurn: aT
           })]
         })
       })
     }
 
-    function ez(vv) {
+    function Kk(TT) {
       let {
-        direction: zv,
-        disabled: Pv,
-        onTurn: hv
-      } = vv;
+        direction: kT,
+        disabled: cT,
+        onTurn: lT
+      } = TT;
       const {
-        t: Sv
-      } = (0, Vv.x)();
-      return (0, Bv.jsx)("div", {
-        className: fv()("PlotsJournalArrow", zv),
-        children: (0, Bv.jsx)(Yv.d, {
-          disabled: Pv,
-          ariaLabel: Sv("Forward" === zv ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
+        t: MT
+      } = (0, JT.B)();
+      return (0, UT.jsx)("div", {
+        className: FT()("PlotsJournalArrow", kT),
+        children: (0, UT.jsx)(PT.e, {
+          disabled: cT,
+          ariaLabel: MT("Forward" === kT ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
           onClick: () => {
-            hv(zv)
+            lT(kT)
           },
-          children: (0, Bv.jsx)(Fv.b, {
+          children: (0, UT.jsx)(rT.e, {
             name: "angle-up"
           })
         })
       })
     }
-    var gz = Pv(36132),
-      pz = Pv(1871),
-      dz = Pv(1927);
-    const Nz = "plotsStepChanged",
-      lz = "plotsPlotChanged";
-    class Tz {
+    var Ok = cT(36416),
+      yk = cT(1943),
+      fk = cT(2002);
+    const xk = "plotsStepChanged",
+      Ik = "plotsPlotChanged";
+    class Ak {
       constructor() {
         this.step = ["none"], this.plot = ["none"]
       }
       getStep() {
         return this.step
       }
-      receiveStep(vv) {
-        this.step = vv, lv.j.zC(Nz, vv, !0)
+      receiveStep(TT) {
+        this.step = TT, IT.k.nt(xk, TT, !0)
       }
       getPlot() {
         return this.plot
       }
-      receivePlot(vv) {
-        this.plot = vv, lv.j.zC(lz, vv, !0)
+      receivePlot(TT) {
+        this.plot = TT, IT.k.nt(Ik, TT, !0)
       }
     }
-    const Wz = "KeyJ";
+    const Ck = "KeyJ";
 
-    function wz(vv) {
+    function jk(TT) {
       let {
-        hud: zv,
-        journal: Pv
-      } = vv;
-      const hv = (0, Dv.j)(Gv, Pv.getPages()),
-        Sv = (0, Dv.j)(Nz, zv.getStep()),
+        hud: kT,
+        journal: cT
+      } = TT;
+      const lT = (0, bT.i)(ST, cT.getPages()),
+        MT = (0, bT.i)(xk, kT.getStep()),
         {
-          isTouchScreen: ev
-        } = (0, pv.i)(["isTouchScreen"]),
+          isTouchScreen: KT
+        } = (0, yT.n)(["isTouchScreen"]),
         {
-          t: lv
-        } = (0, Vv.x)(),
-        Tv = null !== hv && "none" === Sv[0];
-      return (0, Ov.d)((vv => null !== hv && vv.code === Wz && !vv.repeat && !(0, Nv.isTypingInInput)()), (vv => {
-        (0, dv.w)(vv, Tv, gv.r)
-      })), Tv ? (0, Bv.jsx)(gz.g, {
+          t: IT
+        } = (0, JT.B)(),
+        AT = null !== lT && "none" === MT[0];
+      return (0, mT.e)((TT => null !== lT && TT.code === Ck && !TT.repeat && !(0, xT.isTypingInInput)()), (TT => {
+        (0, fT.D)(TT, AT, OT.m)
+      })), AT ? (0, UT.jsx)(Ok.g, {
         placement: "topRight",
-        children: (0, Bv.jsx)("div", {
+        children: (0, UT.jsx)("div", {
           className: "PlotsJournalButtonContainer",
-          children: (0, Bv.jsxs)("button", {
+          children: (0, UT.jsxs)("button", {
             type: "button",
-            className: fv()("PlotsJournalButton SmallTextBold", {
-              Touch: ev
+            className: FT()("PlotsJournalButton SmallTextBold", {
+              Touch: KT
             }),
-            onClick: gv.r,
-            children: [(0, Bv.jsx)("span", {
+            onClick: OT.m,
+            children: [(0, UT.jsx)("span", {
               className: "PlotsJournalButtonIcon",
-              children: (0, Bv.jsx)(pz.b, {
+              children: (0, UT.jsx)(yk.d, {
                 itemName: "Book",
                 amount: 0
               })
-            }), lv("plotsGame:journalButton"), !ev && (0, Bv.jsx)(dz.e, {
+            }), IT("plotsGame:journalButton"), !KT && (0, UT.jsx)(fk.b, {
               className: "PlotsJournalButtonKey",
-              keyCode: Wz
+              keyCode: Ck
             })]
           })
         })
       }) : null
     }
-    var az = Pv(37941),
-      sz = Pv(37712),
-      Cz = Pv(36434),
-      iz = Pv(9136),
-      cz = Pv(9153),
-      Gz = Pv(37330);
-    const mz = new Map([
+    var vk = cT(38251),
+      tk = cT(38028),
+      hk = cT(36756),
+      Nk = cT(9485),
+      Qk = cT(9503),
+      Sk = cT(37669);
+    const Dk = new Map([
         ["Aspen Wood Planks", [.78, .706, .502]],
         ["Barkless Aspen Log", [.792, .718, .518]],
         ["Barkless Pine Log", [.49, .353, .275]],
@@ -858,791 +858,791 @@ export const modules = {
         ["White Concrete", [.89, .894, .894]],
         ["White Wool", [.98, .98, .98]]
       ]),
-      jz = [...Cz.b.blockRemoveActionRoots, ...sz.d, ...iz.g, "Board", "Code Block", "Custom Lobby Block"],
-      fz = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
-    let Fz = null;
+      ak = [...hk.c.blockRemoveActionRoots, ...tk.c, ...Nk.f, "Board", "Code Block", "Custom Lobby Block"],
+      Fk = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
+    let rk = null;
 
-    function Yz() {
-      return Fz ??= function() {
-        const vv = nz(),
-          zv = Math.max(...vv.map((vv => Uv.g[vv].id))) + 1,
-          Pv = new Int32Array(zv),
-          hv = new Int32Array(zv),
-          Sv = new Uint8Array(zv).fill(1),
-          ev = new Uint8Array(zv),
-          gv = new Uint8Array(zv),
-          pv = new Array(zv).fill("Air"),
-          dv = new Map,
-          Nv = vv => {
-            let zv = dv.get(vv);
-            return void 0 === zv && (zv = dv.size + 1, dv.set(vv, zv)), zv
+    function Pk() {
+      return rk ??= function() {
+        const TT = wk(),
+          kT = Math.max(...TT.map((TT => oT.i[TT].id))) + 1,
+          cT = new Int32Array(kT),
+          lT = new Int32Array(kT),
+          MT = new Uint8Array(kT).fill(1),
+          KT = new Uint8Array(kT),
+          OT = new Uint8Array(kT),
+          yT = new Array(kT).fill("Air"),
+          fT = new Map,
+          xT = TT => {
+            let kT = fT.get(TT);
+            return void 0 === kT && (kT = fT.size + 1, fT.set(TT, kT)), kT
           },
-          lv = new Set(jz);
-        for (const Wv of vv) {
-          var Tv;
+          IT = new Set(ak);
+        for (const CT of TT) {
+          var AT;
           const {
-            id: vv,
-            meta: zv,
-            altActionable: dv,
-            canBePlacedOver: wv
-          } = Uv.g[Wv];
-          Pv[vv] = Nv(Oz(Wv));
-          const av = zv.stairsCorner;
-          if (null === av) hv[vv] = Pv[vv];
+            id: TT,
+            meta: kT,
+            altActionable: fT,
+            canBePlacedOver: jT
+          } = oT.i[CT];
+          cT[TT] = xT(mk(CT));
+          const vT = kT.stairsCorner;
+          if (null === vT) lT[TT] = cT[TT];
           else {
-            const Pv = av.endsWith("Right");
-            hv[vv] = Nv(`${zv.rootName}|rot${Pv?zv.rot%4+1:zv.rot}|${zv.halfblockPlacement}|${av.replace("Right","Left")}`)
+            const cT = vT.endsWith("Right");
+            lT[TT] = xT(`${kT.rootName}|rot${cT?kT.rot%4+1:kT.rot}|${kT.halfblockPlacement}|${vT.replace("Right","Left")}`)
           }
-          Sv[vv] = wv ? 1 : 0, ev[vv] = dv || null !== zv.open || Wv in Gz.c || lv.has(zv.rootName) || void 0 !== (0, sz.f)(zv.rootName) ? 1 : 0;
+          MT[TT] = jT ? 1 : 0, KT[TT] = fT || null !== kT.open || CT in Sk.c || IT.has(kT.rootName) || void 0 !== (0, tk.e)(kT.rootName) ? 1 : 0;
           const {
-            rootName: sv
-          } = zv;
-          gv[vv] = null !== zv.open || sz.d.includes(sv) || sv.includes("Bookshelf") || sv.includes("Mailbox") ? 1 : 0, pv[vv] = null !== (Tv = (0, az.e)(vv)) && void 0 !== Tv ? Tv : sv
+            rootName: tT
+          } = kT;
+          OT[TT] = null !== kT.open || tk.c.includes(tT) || tT.includes("Bookshelf") || tT.includes("Mailbox") ? 1 : 0, yT[TT] = null !== (AT = (0, vk.f)(TT)) && void 0 !== AT ? AT : tT
         }
         return {
-          kinds: Pv,
-          shapes: hv,
-          empty: Sv,
-          inUse: ev,
-          ownAltActionMessage: gv,
-          placingItems: pv
+          kinds: cT,
+          shapes: lT,
+          empty: MT,
+          inUse: KT,
+          ownAltActionMessage: OT,
+          placingItems: yT
         }
-      }(), Fz
+      }(), rk
     }
 
-    function nz() {
-      return Object.keys(Uv.g).filter((vv => Uv.g[vv].name === vv))
+    function wk() {
+      return Object.keys(oT.i).filter((TT => oT.i[TT].name === TT))
     }
 
-    function Oz(vv) {
-      var zv;
-      const Pv = Uv.g[vv],
+    function mk(TT) {
+      var kT;
+      const cT = oT.i[TT],
         {
-          rootName: hv,
-          rot: Sv
-        } = Pv.meta,
-        [, ...ev] = (null !== (zv = Pv.rootMetaDesc) && void 0 !== zv ? zv : vv).split("|"),
-        gv = ev.filter((vv => !("meta" === vv || fz.test(vv) || (0, cz.F)(Pv) && /^[nesw]+$/.test(vv) || iz.g.includes(hv) && /^[lrud]+$/.test(vv) || bv.I.includes(hv) && /^(left|right)$/.test(vv))));
-      return [hv, ...gv].map((vv => "fenceGate" === Pv.model && vv === `rot${Sv}` ? "rot" + ((Sv - 1) % 2 + 1) : vv)).join("|")
+          rootName: lT,
+          rot: MT
+        } = cT.meta,
+        [, ...KT] = (null !== (kT = cT.rootMetaDesc) && void 0 !== kT ? kT : TT).split("|"),
+        OT = KT.filter((TT => !("meta" === TT || Fk.test(TT) || (0, Qk.E)(cT) && /^[nesw]+$/.test(TT) || Nk.f.includes(lT) && /^[lrud]+$/.test(TT) || nT.G.includes(lT) && /^(left|right)$/.test(TT))));
+      return [lT, ...OT].map((TT => "fenceGate" === cT.model && TT === `rot${MT}` ? "rot" + ((MT - 1) % 2 + 1) : TT)).join("|")
     }
 
-    function Dz(vv, zv) {
+    function bk(TT, kT) {
       const {
-        kinds: Pv,
-        shapes: hv
-      } = Yz();
-      return Pv[vv] === Pv[zv] || hv[vv] === hv[zv]
+        kinds: cT,
+        shapes: lT
+      } = Pk();
+      return cT[TT] === cT[kT] || lT[TT] === lT[kT]
     }
 
-    function Kz(vv) {
-      return 1 === Yz().empty[vv]
+    function zk(TT) {
+      return 1 === Pk().empty[TT]
     }
 
-    function Vz(vv) {
-      return Yz().placingItems[vv]
+    function Jk(TT) {
+      return Pk().placingItems[TT]
     }
 
-    function Uz(vv) {
-      return mz.get(Uv.g[vv].meta.rootName)
+    function Hk(TT) {
+      return Dk.get(oT.i[TT].meta.rootName)
     }
-    var Rz = Pv(9128),
-      xz = Pv(9144);
-    const tz = [0, 0, 0, 1, 1, 1],
-      qz = (0, Rz.e)([
+    var ek = cT(9481),
+      Gk = cT(9495);
+    const Vk = [0, 0, 0, 1, 1, 1],
+      Ek = (0, ek.b)([
         [2, 0, 2, 6, 6, 6]
       ]),
-      Iz = (0, Rz.e)([
+      Zk = (0, ek.b)([
         [3, 0, 3, 5, 5, 5]
       ]),
-      Qz = (0, Rz.e)([
+      uk = (0, ek.b)([
         [3, 3, 3, 5, 8, 5]
       ]),
-      Zz = [0, 1, 2, 3].map((vv => (0, Rz.e)((0, Rz.o)([
+      Xk = [0, 1, 2, 3].map((TT => (0, ek.b)((0, ek.l)([
         [3, 2, 0, 5, 7, 3]
-      ], vv))));
+      ], TT))));
 
-    function Az(vv) {
+    function dk(TT) {
       const {
-        SC: zv,
-        model: Pv,
-        blockModel: hv,
-        meta: Sv
-      } = Uv.g[vv];
-      return void 0 !== zv ? zv : "CentreCross" === Pv ? qz : null !== hv && void 0 !== hv && hv.startsWith("torch") ? Sv.halfblockPlacement === xz.e.side ? Zz[Sv.rot - 1] : Sv.halfblockPlacement === xz.e.top ? Qz : Iz : tz
+        kh: kT,
+        model: cT,
+        blockModel: lT,
+        meta: MT
+      } = oT.i[TT];
+      return void 0 !== kT ? kT : "CentreCross" === cT ? Ek : null !== lT && void 0 !== lT && lT.startsWith("torch") ? MT.halfblockPlacement === Gk.c.side ? Xk[MT.rot - 1] : MT.halfblockPlacement === Gk.c.top ? uk : Zk : Vk
     }
-    var Lz = Pv(36395),
-      Hz = Pv(185);
+    var Lk = cT(36725),
+      Rk = cT(218);
 
-    function Mz(vv, zv) {
-      const Pv = Hz.f.pG / 2;
-      return vv[0] < zv[0] + Pv && vv[0] + 1 > zv[0] - Pv && vv[1] < zv[1] + Hz.f.lG && vv[1] + 1 > zv[1] && vv[2] < zv[2] + Pv && vv[2] + 1 > zv[2] - Pv
+    function gk(TT, kT) {
+      const cT = Rk.f.Ow / 2;
+      return TT[0] < kT[0] + cT && TT[0] + 1 > kT[0] - cT && TT[1] < kT[1] + Rk.f.Iw && TT[1] + 1 > kT[1] && TT[2] < kT[2] + cT && TT[2] + 1 > kT[2] - cT
     }
 
-    function yz(vv, zv, Pv, hv, Sv) {
-      const ev = Math.hypot(...zv.dir);
-      if (!Number.isFinite(ev) || 0 === ev) return -1;
+    function Uk(TT, kT, cT, lT, MT) {
+      const KT = Math.hypot(...kT.dir);
+      if (!Number.isFinite(KT) || 0 === KT) return -1;
       const {
-        from: gv,
-        reach: pv,
-        solid: dv
-      } = zv, Nv = [zv.dir[0] / ev, zv.dir[1] / ev, zv.dir[2] / ev], lv = null === dv ? pv : Math.min(pv, function(vv, zv, Pv) {
-        const hv = Bz(vv, zv, Pv);
-        if (hv !== 1 / 0) return hv;
-        return (Pv[0] + .5 - vv[0]) * zv[0] + (Pv[1] + .5 - vv[1]) * zv[1] + (Pv[2] + .5 - vv[2]) * zv[2]
-      }(gv, Nv, dv) + .75);
-      let Tv = -1,
-        Wv = 1 / 0,
-        wv = 1 / 0;
-      for (let av = 0; av < vv.length; av += 4) {
-        const zv = [vv[av], vv[av + 1], vv[av + 2]],
-          ev = Sv(av) ? pv : lv;
-        let dv = -1,
-          sv = Bz(gv, Nv, zv);
-        if (sv > ev) {
-          const vv = [zv[0] + .5 - gv[0], zv[1] + .5 - gv[1], zv[2] + .5 - gv[2]];
-          if (sv = vv[0] * Nv[0] + vv[1] * Nv[1] + vv[2] * Nv[2], sv <= 0 || sv > ev) continue;
-          if (dv = Math.hypot(vv[0] - sv * Nv[0], vv[1] - sv * Nv[1], vv[2] - sv * Nv[2]), dv > .7 || !hv(av)) continue
-        }(dv < Wv || dv === Wv && sv < wv) && Pv(av) && (Tv = av, Wv = dv, wv = sv)
+        from: OT,
+        reach: yT,
+        solid: fT
+      } = kT, xT = [kT.dir[0] / KT, kT.dir[1] / KT, kT.dir[2] / KT], IT = null === fT ? yT : Math.min(yT, function(TT, kT, cT) {
+        const lT = Yk(TT, kT, cT);
+        if (lT !== 1 / 0) return lT;
+        return (cT[0] + .5 - TT[0]) * kT[0] + (cT[1] + .5 - TT[1]) * kT[1] + (cT[2] + .5 - TT[2]) * kT[2]
+      }(OT, xT, fT) + .75);
+      let AT = -1,
+        CT = 1 / 0,
+        jT = 1 / 0;
+      for (let vT = 0; vT < TT.length; vT += 4) {
+        const kT = [TT[vT], TT[vT + 1], TT[vT + 2]],
+          KT = MT(vT) ? yT : IT;
+        let fT = -1,
+          tT = Yk(OT, xT, kT);
+        if (tT > KT) {
+          const TT = [kT[0] + .5 - OT[0], kT[1] + .5 - OT[1], kT[2] + .5 - OT[2]];
+          if (tT = TT[0] * xT[0] + TT[1] * xT[1] + TT[2] * xT[2], tT <= 0 || tT > KT) continue;
+          if (fT = Math.hypot(TT[0] - tT * xT[0], TT[1] - tT * xT[1], TT[2] - tT * xT[2]), fT > .7 || !lT(vT)) continue
+        }(fT < CT || fT === CT && tT < jT) && cT(vT) && (AT = vT, CT = fT, jT = tT)
       }
-      return Tv
+      return AT
     }
 
-    function Bz(vv, zv, Pv) {
-      let hv = 0,
-        Sv = 1 / 0;
-      for (let ev = 0; ev < 3; ev++) {
-        const gv = Pv[ev] - vv[ev];
-        if (0 === zv[ev]) {
-          if (gv > 0 || gv + 1 < 0) return 1 / 0;
+    function Yk(TT, kT, cT) {
+      let lT = 0,
+        MT = 1 / 0;
+      for (let KT = 0; KT < 3; KT++) {
+        const OT = cT[KT] - TT[KT];
+        if (0 === kT[KT]) {
+          if (OT > 0 || OT + 1 < 0) return 1 / 0;
           continue
         }
-        const pv = gv / zv[ev],
-          dv = (gv + 1) / zv[ev];
-        hv = Math.max(hv, Math.min(pv, dv)), Sv = Math.min(Sv, Math.max(pv, dv))
+        const yT = OT / kT[KT],
+          fT = (OT + 1) / kT[KT];
+        lT = Math.max(lT, Math.min(yT, fT)), MT = Math.min(MT, Math.max(yT, fT))
       }
-      return hv <= Sv ? hv : 1 / 0
+      return lT <= MT ? lT : 1 / 0
     }
-    var Jz = Pv(37599),
-      Ez = Pv(38051);
-    const oz = [1, 1, 1];
-    class bz {
-      constructor(vv) {
-        this.api = vv, this.meshes = null, this.shown = null
+    var Bk = cT(37902),
+      Wk = cT(38363);
+    const nk = [1, 1, 1];
+    class pk {
+      constructor(TT) {
+        this.api = TT, this.meshes = null, this.shown = null
       }
-      show(vv) {
-        if (!(0, Lz.d)(vv, this.shown))
-          if (this.shown = null === vv ? null : [vv[0], vv[1], vv[2]], null !== this.meshes)
-            for (const zv of this.meshes) this.api.setGameMesh(zv, null === vv ? {
+      show(TT) {
+        if (!(0, Lk.c)(TT, this.shown))
+          if (this.shown = null === TT ? null : [TT[0], TT[1], TT[2]], null !== this.meshes)
+            for (const kT of this.meshes) this.api.setGameMesh(kT, null === TT ? {
               visible: !1
             } : {
-              anchor: vv,
+              anchor: TT,
               visible: !0
             });
-          else if (null !== vv) {
-          const zv = [Jz.f, Jz.f, Jz.f, 0, 0, 0];
-          this.meshes = [this.build([zv], Jz.h, vv), this.build((0, Jz.e)(), Jz.l, vv)]
+          else if (null !== TT) {
+          const kT = [Bk.f, Bk.f, Bk.f, 0, 0, 0];
+          this.meshes = [this.build([kT], Bk.j, TT), this.build((0, Bk.e)(), Bk.o, TT)]
         }
       }
       dispose() {
-        for (const zv of null !== (vv = this.meshes) && void 0 !== vv ? vv : []) {
-          var vv;
-          this.api.disposeGameMesh(zv)
+        for (const kT of null !== (TT = this.meshes) && void 0 !== TT ? TT : []) {
+          var TT;
+          this.api.disposeGameMesh(kT)
         }
         this.meshes = null, this.shown = null
       }
-      build(vv, zv, Pv) {
-        const hv = [],
-          Sv = [];
-        for (const [ev, gv, pv, dv, Nv, lv] of vv)(0, Ez.g)(hv, Sv, [dv + .5, Nv + .5, lv + .5], [ev, gv, pv]);
+      build(TT, kT, cT) {
+        const lT = [],
+          MT = [];
+        for (const [KT, OT, yT, fT, xT, IT] of TT)(0, Wk.d)(lT, MT, [fT + .5, xT + .5, IT + .5], [KT, OT, yT]);
         return this.api.createGameMesh({
-          positions: hv,
-          indices: Sv
+          positions: lT,
+          indices: MT
         }, {
-          rgb: oz,
-          alpha: zv,
+          rgb: nk,
+          alpha: kT,
           onTop: !0
-        }, Pv)
+        }, cT)
       }
     }
-    class rz {
-      constructor(vv) {
-        this.api = vv, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
+    class ik {
+      constructor(TT) {
+        this.api = TT, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
       }
-      watch(vv) {
-        const zv = Hz.f.aa;
+      watch(TT) {
+        const kT = Rk.f.vv;
         this.chunks = [];
-        for (let Pv = 0; Pv < vv.length; Pv += 3) {
-          const hv = Math.floor(vv[Pv] / zv),
-            Sv = Math.floor(vv[Pv + 1] / zv),
-            ev = Math.floor(vv[Pv + 2] / zv);
-          this.watches(hv, Sv, ev) || this.chunks.push(hv, Sv, ev)
+        for (let cT = 0; cT < TT.length; cT += 3) {
+          const lT = Math.floor(TT[cT] / kT),
+            MT = Math.floor(TT[cT + 1] / kT),
+            KT = Math.floor(TT[cT + 2] / kT);
+          this.watches(lT, MT, KT) || this.chunks.push(lT, MT, KT)
         }
         this.versions = [], this.lastCheckMs = -1 / 0, this.changed()
       }
       changed() {
-        const vv = performance.now();
-        if (vv - this.lastCheckMs < 100) return !1;
-        this.lastCheckMs = vv;
-        let zv = !1;
-        for (let Pv = 0; Pv < this.chunks.length; Pv += 3) {
-          const vv = this.api.getChunkVersion(this.chunks[Pv], this.chunks[Pv + 1], this.chunks[Pv + 2]);
-          this.versions[Pv / 3] !== vv && (this.versions[Pv / 3] = vv, zv = !0)
+        const TT = performance.now();
+        if (TT - this.lastCheckMs < 100) return !1;
+        this.lastCheckMs = TT;
+        let kT = !1;
+        for (let cT = 0; cT < this.chunks.length; cT += 3) {
+          const TT = this.api.getChunkVersion(this.chunks[cT], this.chunks[cT + 1], this.chunks[cT + 2]);
+          this.versions[cT / 3] !== TT && (this.versions[cT / 3] = TT, kT = !0)
         }
-        return zv
+        return kT
       }
-      watches(vv, zv, Pv) {
-        for (let hv = 0; hv < this.chunks.length; hv += 3)
-          if (this.chunks[hv] === vv && this.chunks[hv + 1] === zv && this.chunks[hv + 2] === Pv) return !0;
+      watches(TT, kT, cT) {
+        for (let lT = 0; lT < this.chunks.length; lT += 3)
+          if (this.chunks[lT] === TT && this.chunks[lT + 1] === kT && this.chunks[lT + 2] === cT) return !0;
         return !1
       }
     }
-    const kz = .35,
-      Xz = {
+    const qk = .35,
+      sk = {
         size: .9,
         alpha: .35,
         crossed: !1
       },
-      uz = {
+      Tc = {
         size: 1.04,
         alpha: .45,
         crossed: !0
       },
-      vP = [.95, .2, .15];
-    class zP {
+      kc = [.95, .2, .15];
+    class cc {
       constructor() {
         this.groups = []
       }
-      add(vv, zv, Pv, hv, Sv) {
-        let ev = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : tz;
-        for (const gv of this.groups)
-          if (SP(gv, hv, Sv)) return gv.cells.push(vv, zv, Pv), void gv.boxes.push(ev);
+      add(TT, kT, cT, lT, MT) {
+        let KT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Vk;
+        for (const OT of this.groups)
+          if (Kc(OT, lT, MT)) return OT.cells.push(TT, kT, cT), void OT.boxes.push(KT);
         this.groups.push({
-          rgb: hv,
-          look: Sv,
-          cells: [vv, zv, Pv],
-          boxes: [ev]
+          rgb: lT,
+          look: MT,
+          cells: [TT, kT, cT],
+          boxes: [KT]
         })
       }
       toArray() {
         return this.groups
       }
     }
-    class PP {
-      constructor(vv) {
-        this.api = vv, this.shown = []
+    class lc {
+      constructor(TT) {
+        this.api = TT, this.shown = []
       }
-      show(vv) {
-        const zv = [];
-        for (const Pv of vv) {
-          const vv = this.shown.findIndex((vv => {
+      show(TT) {
+        const kT = [];
+        for (const cT of TT) {
+          const TT = this.shown.findIndex((TT => {
             let {
-              group: zv
-            } = vv;
-            return SP(zv, Pv.rgb, Pv.look) && eP(zv, Pv)
-          })); - 1 === vv ? zv.push(this.build(Pv)) : (zv.push(this.shown[vv]), this.shown.splice(vv, 1))
+              group: kT
+            } = TT;
+            return Kc(kT, cT.rgb, cT.look) && Oc(kT, cT)
+          })); - 1 === TT ? kT.push(this.build(cT)) : (kT.push(this.shown[TT]), this.shown.splice(TT, 1))
         }
-        this.dispose(), this.shown = zv
+        this.dispose(), this.shown = kT
       }
       dispose() {
         for (const {
-            meshes: vv
+            meshes: TT
           }
           of this.shown)
-          for (const zv of vv) this.api.disposeGameMesh(zv);
+          for (const kT of TT) this.api.disposeGameMesh(kT);
         this.shown = []
       }
-      build(vv) {
+      build(TT) {
         const {
-          rgb: zv,
-          look: Pv,
-          boxes: hv
-        } = vv, Sv = [zv[0] + (1 - zv[0]) * kz, zv[1] + (1 - zv[1]) * kz, zv[2] + (1 - zv[2]) * kz], ev = [this.buildMesh(vv.cells, zv, Pv.alpha, ((vv, zv, Sv, ev) => {
-          hP(vv, zv, Sv, hv[ev], Pv.size, !1)
-        })), this.buildMesh(vv.cells, Sv, Pv.alpha, ((vv, zv, Sv, ev) => {
-          hP(vv, zv, Sv, hv[ev], Pv.size, !0)
+          rgb: kT,
+          look: cT,
+          boxes: lT
+        } = TT, MT = [kT[0] + (1 - kT[0]) * qk, kT[1] + (1 - kT[1]) * qk, kT[2] + (1 - kT[2]) * qk], KT = [this.buildMesh(TT.cells, kT, cT.alpha, ((TT, kT, MT, KT) => {
+          Mc(TT, kT, MT, lT[KT], cT.size, !1)
+        })), this.buildMesh(TT.cells, MT, cT.alpha, ((TT, kT, MT, KT) => {
+          Mc(TT, kT, MT, lT[KT], cT.size, !0)
         }))];
-        return Pv.crossed && ev.push(this.buildMesh(vv.cells, zv, .9, ((vv, zv, hv) => {
-          (0, Ez.i)(vv, zv, hv, Pv.size + .01, .12)
+        return cT.crossed && KT.push(this.buildMesh(TT.cells, kT, .9, ((TT, kT, lT) => {
+          (0, Wk.f)(TT, kT, lT, cT.size + .01, .12)
         }))), {
-          group: vv,
-          meshes: ev
+          group: TT,
+          meshes: KT
         }
       }
-      buildMesh(vv, zv, Pv, hv) {
-        const Sv = [vv[0], vv[1], vv[2]],
-          ev = [],
-          gv = [];
-        for (let pv = 0; pv < vv.length; pv += 3) hv(ev, gv, [vv[pv] - Sv[0] + .5, vv[pv + 1] - Sv[1] + .5, vv[pv + 2] - Sv[2] + .5], pv / 3);
+      buildMesh(TT, kT, cT, lT) {
+        const MT = [TT[0], TT[1], TT[2]],
+          KT = [],
+          OT = [];
+        for (let yT = 0; yT < TT.length; yT += 3) lT(KT, OT, [TT[yT] - MT[0] + .5, TT[yT + 1] - MT[1] + .5, TT[yT + 2] - MT[2] + .5], yT / 3);
         return this.api.createGameMesh({
-          positions: ev,
-          indices: gv
+          positions: KT,
+          indices: OT
         }, {
-          rgb: [zv[0], zv[1], zv[2]],
-          alpha: Pv
-        }, Sv)
+          rgb: [kT[0], kT[1], kT[2]],
+          alpha: cT
+        }, MT)
       }
     }
 
-    function hP(vv, zv, Pv, hv, Sv, ev) {
-      for (let gv = 0; gv < hv.length; gv += 6) {
-        const pv = [0, 0, 0],
-          dv = [0, 0, 0];
-        for (let vv = 0; vv < 3; vv++) pv[vv] = Pv[vv] + ((hv[gv + vv] + hv[gv + vv + 3]) / 2 - .5) * Sv, dv[vv] = (hv[gv + vv + 3] - hv[gv + vv]) * Sv;
-        (0, Ez.e)(vv, zv, pv, dv, ev)
+    function Mc(TT, kT, cT, lT, MT, KT) {
+      for (let OT = 0; OT < lT.length; OT += 6) {
+        const yT = [0, 0, 0],
+          fT = [0, 0, 0];
+        for (let TT = 0; TT < 3; TT++) yT[TT] = cT[TT] + ((lT[OT + TT] + lT[OT + TT + 3]) / 2 - .5) * MT, fT[TT] = (lT[OT + TT + 3] - lT[OT + TT]) * MT;
+        (0, Wk.c)(TT, kT, yT, fT, KT)
       }
     }
 
-    function SP(vv, zv, Pv) {
-      return vv.rgb[0] === zv[0] && vv.rgb[1] === zv[1] && vv.rgb[2] === zv[2] && vv.look === Pv
+    function Kc(TT, kT, cT) {
+      return TT.rgb[0] === kT[0] && TT.rgb[1] === kT[1] && TT.rgb[2] === kT[2] && TT.look === cT
     }
 
-    function eP(vv, zv) {
-      if (vv.cells.length !== zv.cells.length) return !1;
-      for (let Pv = 0; Pv < vv.cells.length; Pv++)
-        if (vv.cells[Pv] !== zv.cells[Pv]) return !1;
-      return vv.boxes.every(((vv, Pv) => vv === zv.boxes[Pv]))
+    function Oc(TT, kT) {
+      if (TT.cells.length !== kT.cells.length) return !1;
+      for (let cT = 0; cT < TT.cells.length; cT++)
+        if (TT.cells[cT] !== kT.cells[cT]) return !1;
+      return TT.boxes.every(((TT, cT) => TT === kT.boxes[cT]))
     }
 
-    function gP(vv, zv) {
-      return vv.getClientOption(zv, "blockReach") + 1
+    function yc(TT, kT) {
+      return TT.getClientOption(kT, "blockReach") + 1
     }
-    class pP {
-      constructor(vv, zv, Pv) {
-        this.api = vv, this.localPlayerId = zv, this.pickNext = Pv, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
+    class fc {
+      constructor(TT, kT, cT) {
+        this.api = TT, this.localPlayerId = kT, this.pickNext = cT, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
       }
-      look(vv) {
-        const [zv, , Pv] = vv.cameraDirection, hv = Math.hypot(zv, Pv);
-        hv > .001 && (this.heading = [zv / hv, Pv / hv])
+      look(TT) {
+        const [kT, , cT] = TT.cameraDirection, lT = Math.hypot(kT, cT);
+        lT > .001 && (this.heading = [kT / lT, cT / lT])
       }
-      tapped(vv, zv, Pv) {
-        const hv = gP(this.api, this.localPlayerId),
+      tapped(TT, kT, cT) {
+        const lT = yc(this.api, this.localPlayerId),
           {
-            origin: Sv,
-            direction: ev
+            origin: MT,
+            direction: KT
           } = this.api.getActionRay(),
-          gv = [...Sv],
-          pv = [
-            [gv, [gv[0] + ev[0] * hv, gv[1] + ev[1] * hv, gv[2] + ev[2] * hv]]
+          OT = [...MT],
+          yT = [
+            [OT, [OT[0] + KT[0] * lT, OT[1] + KT[1] * lT, OT[2] + KT[2] * lT]]
           ];
-        null !== vv && pv.push([gv, (0, Lz.b)(vv)]), this.tap = {
-          lines: pv,
-          next: zv,
-          ms: Pv
+        null !== TT && yT.push([OT, (0, Lk.b)(TT)]), this.tap = {
+          lines: yT,
+          next: kT,
+          ms: cT
         }
       }
-      filled(vv, zv) {
-        this.tap = null, this.turnFrom(vv, zv), this.retry(zv)
+      filled(TT, kT) {
+        this.tap = null, this.turnFrom(TT, kT), this.retry(kT)
       }
-      arrived(vv, zv) {
+      arrived(TT, kT) {
         const {
-          tap: Pv
+          tap: cT
         } = this;
-        if (null === Pv || zv - Pv.ms > 1500) return null;
-        const hv = (0, Lz.b)(vv);
-        return (0, Lz.d)(Pv.next, vv) || Pv.lines.some((vv => {
-          let [zv, Pv] = vv;
-          return function(vv, zv, Pv) {
-            const hv = [Pv[0] - zv[0], Pv[1] - zv[1], Pv[2] - zv[2]],
-              Sv = [vv[0] - zv[0], vv[1] - zv[1], vv[2] - zv[2]],
-              ev = hv[0] ** 2 + hv[1] ** 2 + hv[2] ** 2,
-              gv = 0 === ev ? 0 : Math.min(1, Math.max(0, (Sv[0] * hv[0] + Sv[1] * hv[1] + Sv[2] * hv[2]) / ev));
-            return Math.hypot(Sv[0] - hv[0] * gv, Sv[1] - hv[1] * gv, Sv[2] - hv[2] * gv)
-          }(hv, zv, Pv) <= .9
-        })) ? (this.tap = null, this.turnFrom(vv, zv), Pv.ms) : null
+        if (null === cT || kT - cT.ms > 1500) return null;
+        const lT = (0, Lk.b)(TT);
+        return (0, Lk.c)(cT.next, TT) || cT.lines.some((TT => {
+          let [kT, cT] = TT;
+          return function(TT, kT, cT) {
+            const lT = [cT[0] - kT[0], cT[1] - kT[1], cT[2] - kT[2]],
+              MT = [TT[0] - kT[0], TT[1] - kT[1], TT[2] - kT[2]],
+              KT = lT[0] ** 2 + lT[1] ** 2 + lT[2] ** 2,
+              OT = 0 === KT ? 0 : Math.min(1, Math.max(0, (MT[0] * lT[0] + MT[1] * lT[1] + MT[2] * lT[2]) / KT));
+            return Math.hypot(MT[0] - lT[0] * OT, MT[1] - lT[1] * OT, MT[2] - lT[2] * OT)
+          }(lT, kT, cT) <= .9
+        })) ? (this.tap = null, this.turnFrom(TT, kT), cT.ms) : null
       }
-      turnFrom(vv, zv) {
+      turnFrom(TT, kT) {
         this.pending = {
-          from: vv,
-          ms: zv,
-          turnMs: Math.max(50, Math.min(250, zv - this.lastFillMs))
-        }, this.lastFillMs = zv
+          from: TT,
+          ms: kT,
+          turnMs: Math.max(50, Math.min(250, kT - this.lastFillMs))
+        }, this.lastFillMs = kT
       }
-      retry(vv) {
+      retry(TT) {
         const {
-          pending: zv
+          pending: kT
         } = this;
-        if (null === zv) return;
-        if (vv - zv.ms > 1500) return void(this.pending = null);
-        const Pv = this.pickNext((0, Lz.b)(zv.from), (vv => (0, Lz.d)(vv, zv.from)));
-        if (null === Pv) return;
+        if (null === kT) return;
+        if (TT - kT.ms > 1500) return void(this.pending = null);
+        const cT = this.pickNext((0, Lk.b)(kT.from), (TT => (0, Lk.c)(TT, kT.from)));
+        if (null === cT) return;
         this.pending = null;
         const {
-          turning: hv
+          turning: lT
         } = this;
-        if (null !== hv && vv < hv.endMs && (0, Lz.d)(hv.to, Pv)) return;
-        const Sv = this.api.getActionRay().origin,
-          ev = [Pv[0] + .5 - Sv[0], Pv[1] + .5 - Sv[1], Pv[2] + .5 - Sv[2]],
-          gv = Math.hypot(ev[0], ev[2]);
-        if (gv < .3) {
-          const vv = Math.max(gv, .001);
-          ev[0] = this.heading[0] * vv, ev[2] = this.heading[1] * vv
+        if (null !== lT && TT < lT.endMs && (0, Lk.c)(lT.to, cT)) return;
+        const MT = this.api.getActionRay().origin,
+          KT = [cT[0] + .5 - MT[0], cT[1] + .5 - MT[1], cT[2] + .5 - MT[2]],
+          OT = Math.hypot(KT[0], KT[2]);
+        if (OT < .3) {
+          const TT = Math.max(OT, .001);
+          KT[0] = this.heading[0] * TT, KT[2] = this.heading[1] * TT
         }
-        this.api.turnCamera(ev, zv.turnMs), this.turning = {
-          to: Pv,
-          endMs: vv + zv.turnMs
+        this.api.turnCamera(KT, kT.turnMs), this.turning = {
+          to: cT,
+          endMs: TT + kT.turnMs
         }
       }
     }
-    class dP {
-      constructor(vv, zv, Pv) {
-        this.api = vv, this.localPlayerId = zv, this.juice = Pv, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.nextCells = [], this.lastFilled = null, this.lastSeenFilled = null, this.playerCells = [], this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = null, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new rz(vv), this.meshes = new PP(vv), this.outline = new bz(vv), this.turn = new pP(vv, zv, ((vv, zv) => this.pickNext(vv, zv)))
+    class xc {
+      constructor(TT, kT, cT) {
+        this.api = TT, this.localPlayerId = kT, this.juice = cT, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.nextCells = [], this.lastFilled = null, this.lastSeenFilled = null, this.playerCells = [], this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = null, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new ik(TT), this.meshes = new lc(TT), this.outline = new pk(TT), this.turn = new fc(TT, kT, ((TT, kT) => this.pickNext(TT, kT)))
       }
-      la(vv) {
-        const zv = "active" === vv[0] ? `${vv[1]}|${vv[3]}|${vv[4]}|${vv[5]}|${vv[6]}` : "";
-        if ("active" !== vv[0]) "built" === vv[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
+      Av(TT) {
+        const kT = "active" === TT[0] ? `${TT[1]}|${TT[3]}|${TT[4]}|${TT[5]}|${TT[6]}` : "";
+        if ("active" !== TT[0]) "built" === TT[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
         else {
-          const [, , , , , , , Pv, hv, Sv, ev] = vv;
-          zv !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = Pv) : Pv === this.layerY ? this.burstUnlisted(hv) : Pv > this.layerY && this.finishLayer(Pv), this.layerY = Pv, this.layerCells.has(Pv) || this.layerCells.set(Pv, hv.filter(lP)), this.ghostCells = hv, this.palette = Sv, this.occupiedCells = ev
+          const [, , , , , , , cT, lT, MT, KT] = TT;
+          kT !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = cT) : cT === this.layerY ? this.burstUnlisted(lT) : cT > this.layerY && this.finishLayer(cT), this.layerY = cT, this.layerCells.has(cT) || this.layerCells.set(cT, lT.filter(Ac)), this.ghostCells = lT, this.palette = MT, this.occupiedCells = KT
         }
-        zv !== this.blueprint && (this.blueprint = zv, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((vv => this.api.blockNameToBlockId(vv))), this.chunkWatch.watch([...this.ghostCells.filter(lP), ...this.occupiedCells]), this.refresh()
+        kT !== this.blueprint && (this.blueprint = kT, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((TT => this.api.blockNameToBlockId(TT))), this.chunkWatch.watch([...this.ghostCells.filter(Ac), ...this.occupiedCells]), this.refresh()
       }
-      finishLayer(vv) {
-        this.burstUnlisted([]), vv > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = vv)
+      finishLayer(TT) {
+        this.burstUnlisted([]), TT > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = TT)
       }
-      MT() {
+      UA() {
         if (this.chunkWatch.changed()) return void this.refresh();
-        const vv = performance.now();
-        let zv = !1;
-        for (const [Sv, ev] of this.foreseen) {
-          var Pv;
-          if (vv - ev > 1e3) this.foreseen.delete(Sv), zv = !0, (null === (Pv = this.lastFilled) || void 0 === Pv ? void 0 : Pv.join()) === Sv && (this.lastFilled = this.lastSeenFilled)
+        const TT = performance.now();
+        let kT = !1;
+        for (const [MT, KT] of this.foreseen) {
+          var cT;
+          if (TT - KT > 1e3) this.foreseen.delete(MT), kT = !0, (null === (cT = this.lastFilled) || void 0 === cT ? void 0 : cT.join()) === MT && (this.lastFilled = this.lastSeenFilled)
         }
-        const hv = NP(this.api.getPositionView(this.localPlayerId));
-        (zv || hv.some(((vv, zv) => vv !== this.playerCells[zv]))) && this.showNext()
+        const lT = Ic(this.api.getPositionView(this.localPlayerId));
+        (kT || lT.some(((TT, kT) => TT !== this.playerCells[kT]))) && this.showNext()
       }
       dispose() {
         this.meshes.dispose(), this.outline.dispose()
       }
-      burstUnlisted(vv) {
-        const zv = new Set;
-        for (let Sv = 0; Sv < vv.length; Sv += 4) zv.add(`${vv[Sv]},${vv[Sv+1]},${vv[Sv+2]}`);
-        const Pv = [],
+      burstUnlisted(TT) {
+        const kT = new Set;
+        for (let MT = 0; MT < TT.length; MT += 4) kT.add(`${TT[MT]},${TT[MT+1]},${TT[MT+2]}`);
+        const cT = [],
           {
-            ghostCells: hv
+            ghostCells: lT
           } = this;
-        for (let Sv = 0; Sv < hv.length; Sv += 4) {
-          const vv = `${hv[Sv]},${hv[Sv+1]},${hv[Sv+2]}`;
-          !zv.has(vv) && this.open.delete(vv) && Pv.push(this.filledCell(Sv))
+        for (let MT = 0; MT < lT.length; MT += 4) {
+          const TT = `${lT[MT]},${lT[MT+1]},${lT[MT+2]}`;
+          !kT.has(TT) && this.open.delete(TT) && cT.push(this.filledCell(MT))
         }
-        this.burst(Pv)
+        this.burst(cT)
       }
       refresh() {
         const {
-          ghostCells: vv,
-          palette: zv,
-          occupiedCells: Pv
-        } = this, hv = new zP, Sv = new Set, ev = [], gv = [];
-        for (let pv = 0; pv < vv.length; pv += 4) {
-          const [Pv, dv, Nv, lv] = [vv[pv], vv[pv + 1], vv[pv + 2], vv[pv + 3]], Tv = this.api.getBlockId(Pv, dv, Nv), Wv = `${Pv},${dv},${Nv}`, wv = Dz(this.blockIds[lv], Tv);
-          !wv && Kz(Tv) ? hv.add(Pv, dv, Nv, Uz(zv[lv]), Xz, Az(zv[lv])) : wv ? this.open.has(Wv) && ev.push(this.filledCell(pv)) : hv.add(Pv, dv, Nv, vP, uz), !wv && this.api.isBlockInLoadedChunk(Pv, dv, Nv) && (Sv.add(Wv), gv.push(Pv, dv, Nv, Kz(Tv) ? 0 : 1))
+          ghostCells: TT,
+          palette: kT,
+          occupiedCells: cT
+        } = this, lT = new cc, MT = new Set, KT = [], OT = [];
+        for (let yT = 0; yT < TT.length; yT += 4) {
+          const [cT, fT, xT, IT] = [TT[yT], TT[yT + 1], TT[yT + 2], TT[yT + 3]], AT = this.api.getBlockId(cT, fT, xT), CT = `${cT},${fT},${xT}`, jT = bk(this.blockIds[IT], AT);
+          !jT && zk(AT) ? lT.add(cT, fT, xT, Hk(kT[IT]), sk, dk(kT[IT])) : jT ? this.open.has(CT) && KT.push(this.filledCell(yT)) : lT.add(cT, fT, xT, kc, Tc), !jT && this.api.isBlockInLoadedChunk(cT, fT, xT) && (MT.add(CT), OT.push(cT, fT, xT, zk(AT) ? 0 : 1))
         }
-        this.open = Sv, this.nextCells = gv;
-        for (let pv = 0; pv < Pv.length; pv += 3) {
-          const [vv, zv, Sv] = [Pv[pv], Pv[pv + 1], Pv[pv + 2]];
-          Kz(this.api.getBlockId(vv, zv, Sv)) || hv.add(vv, zv, Sv, vP, uz)
+        this.open = MT, this.nextCells = OT;
+        for (let yT = 0; yT < cT.length; yT += 3) {
+          const [TT, kT, MT] = [cT[yT], cT[yT + 1], cT[yT + 2]];
+          zk(this.api.getBlockId(TT, kT, MT)) || lT.add(TT, kT, MT, kc, Tc)
         }
-        this.meshes.show(hv.toArray()), this.burst(ev), this.showNext(), this.turn.retry(performance.now())
+        this.meshes.show(lT.toArray()), this.burst(KT), this.showNext(), this.turn.retry(performance.now())
       }
-      burst(vv) {
-        const zv = performance.now(),
-          Pv = [];
-        for (const [Sv, ev, gv] of vv) {
-          const vv = [Sv, ev, gv];
-          this.lastSeenFilled = vv, this.foreseen.delete(vv.join()) || Pv.push(vv)
+      burst(TT) {
+        const kT = performance.now(),
+          cT = [];
+        for (const [MT, KT, OT] of TT) {
+          const TT = [MT, KT, OT];
+          this.lastSeenFilled = TT, this.foreseen.delete(TT.join()) || cT.push(TT)
         }
-        const hv = this.isHolding(zv);
-        for (const Sv of Pv) {
-          if (this.lastFilled = Sv, hv && this.pressFilled) {
-            this.turn.filled(Sv, zv);
+        const lT = this.isHolding(kT);
+        for (const MT of cT) {
+          if (this.lastFilled = MT, lT && this.pressFilled) {
+            this.turn.filled(MT, kT);
             continue
           }
-          const vv = this.turn.arrived(Sv, zv);
-          if (null !== vv) {
-            this.pressFilled = hv;
-            for (const [zv, Pv] of this.foreseen) Pv <= vv && this.foreseen.delete(zv)
+          const TT = this.turn.arrived(MT, kT);
+          if (null !== TT) {
+            this.pressFilled = lT;
+            for (const [kT, cT] of this.foreseen) cT <= TT && this.foreseen.delete(kT)
           }
         }
-        this.juice.filled(vv)
+        this.juice.filled(TT)
       }
       showNext() {
-        var vv;
-        const zv = this.api.getPositionView(this.localPlayerId);
-        this.playerCells.splice(0, 1 / 0, ...NP(zv));
-        const Pv = this.lastFilled;
-        this.nextCell = this.pickNext(null === Pv ? [zv[0], zv[1] + 1, zv[2]] : (0, Lz.b)(Pv), (() => !1)), this.outline.show(null !== (vv = this.aimed) && void 0 !== vv ? vv : this.nextCell)
+        var TT;
+        const kT = this.api.getPositionView(this.localPlayerId);
+        this.playerCells.splice(0, 1 / 0, ...Ic(kT));
+        const cT = this.lastFilled;
+        this.nextCell = this.pickNext(null === cT ? [kT[0], kT[1] + 1, kT[2]] : (0, Lk.b)(cT), (() => !1)), this.outline.show(null !== (TT = this.aimed) && void 0 !== TT ? TT : this.nextCell)
       }
-      pickNext(vv, zv) {
-        const Pv = this.api.getPositionView(this.localPlayerId),
-          hv = [Pv[0], Pv[1] + Hz.f.lG * Hz.f.playerEyeToHeightRatio, Pv[2]],
-          Sv = gP(this.api, this.localPlayerId),
+      pickNext(TT, kT) {
+        const cT = this.api.getPositionView(this.localPlayerId),
+          lT = [cT[0], cT[1] + Rk.f.Iw * Rk.f.playerEyeToHeightRatio, cT[2]],
+          MT = yc(this.api, this.localPlayerId),
           {
-            nextCells: ev
+            nextCells: KT
           } = this,
-          gv = vv => [ev[vv], ev[vv + 1], ev[vv + 2]],
-          pv = function(vv, zv, Pv, hv, Sv, ev) {
-            let gv = -1,
-              pv = -1,
-              dv = 1 / 0;
-            for (let Nv = 0; Nv < vv.length; Nv += zv) {
-              const zv = (ev(Nv) ? 2 : 0) + (hv(Nv) ? 1 : 0);
-              if (zv < pv || Sv(Nv)) continue;
-              const lv = (vv[Nv] + .5 - Pv[0]) ** 2 + (vv[Nv + 1] + .5 - Pv[1]) ** 2 + (vv[Nv + 2] + .5 - Pv[2]) ** 2;
-              (zv > pv || lv < dv) && (gv = Nv, pv = zv, dv = lv)
+          OT = TT => [KT[TT], KT[TT + 1], KT[TT + 2]],
+          yT = function(TT, kT, cT, lT, MT, KT) {
+            let OT = -1,
+              yT = -1,
+              fT = 1 / 0;
+            for (let xT = 0; xT < TT.length; xT += kT) {
+              const kT = (KT(xT) ? 2 : 0) + (lT(xT) ? 1 : 0);
+              if (kT < yT || MT(xT)) continue;
+              const IT = (TT[xT] + .5 - cT[0]) ** 2 + (TT[xT + 1] + .5 - cT[1]) ** 2 + (TT[xT + 2] + .5 - cT[2]) ** 2;
+              (kT > yT || IT < fT) && (OT = xT, yT = kT, fT = IT)
             }
-            return gv
-          }(ev, 4, vv, (vv => 1 === ev[vv + 3]), (vv => {
-            const hv = gv(vv);
-            return Mz(hv, Pv) || this.foreseen.has(hv.join()) || zv(hv)
-          }), (vv => function(vv, zv, Pv) {
-            return (zv[0] + .5 - vv[0]) ** 2 + (zv[1] + .5 - vv[1]) ** 2 + (zv[2] + .5 - vv[2]) ** 2 <= Pv ** 2
-          }(hv, gv(vv), Sv)));
-        return -1 === pv ? null : gv(pv)
+            return OT
+          }(KT, 4, TT, (TT => 1 === KT[TT + 3]), (TT => {
+            const lT = OT(TT);
+            return gk(lT, cT) || this.foreseen.has(lT.join()) || kT(lT)
+          }), (TT => function(TT, kT, cT) {
+            return (kT[0] + .5 - TT[0]) ** 2 + (kT[1] + .5 - TT[1]) ** 2 + (kT[2] + .5 - TT[2]) ** 2 <= cT ** 2
+          }(lT, OT(TT), MT)));
+        return -1 === yT ? null : OT(yT)
       }
-      afterRender(vv) {
-        var zv;
-        this.turn.look(vv);
-        const Pv = this.api.getTargetedBlock();
-        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === Pv ? null : Pv.position), this.outline.show(null !== (zv = this.aimed) && void 0 !== zv ? zv : this.nextCell)
+      afterRender(TT) {
+        var kT;
+        this.turn.look(TT);
+        const cT = this.api.getTargetedBlock();
+        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === cT ? null : cT.position), this.outline.show(null !== (kT = this.aimed) && void 0 !== kT ? kT : this.nextCell)
       }
-      isHolding(vv) {
-        return null !== this.altMs && vv - this.altMs <= 500
+      isHolding(TT) {
+        return null !== this.altMs && TT - this.altMs <= 500
       }
-      attemptAltAction(vv) {
-        const zv = performance.now();
-        if (this.isHolding(zv) || (this.pressFilled = !1), this.altMs = zv, this.pressFilled) return "preventPlacement";
-        const Pv = this.findAimed(vv);
-        if (null !== Pv) return this.foreseen.set(Pv.join(), zv), this.lastFilled = Pv, this.aimed = null, this.showNext(), this.turn.filled(Pv, zv), this.pressFilled = !0, "preventPlacement";
-        null !== this.nextCell && this.turn.tapped(vv, this.nextCell, zv)
+      attemptAltAction(TT) {
+        const kT = performance.now();
+        if (this.isHolding(kT) || (this.pressFilled = !1), this.altMs = kT, this.pressFilled) return "preventPlacement";
+        const cT = this.findAimed(TT);
+        if (null !== cT) return this.foreseen.set(cT.join(), kT), this.lastFilled = cT, this.aimed = null, this.showNext(), this.turn.filled(cT, kT), this.pressFilled = !0, "preventPlacement";
+        null !== this.nextCell && this.turn.tapped(TT, this.nextCell, kT)
       }
-      findAimed(vv) {
-        return function(vv, zv, Pv, hv, Sv, ev, gv) {
-          const pv = vv.Avv(zv),
-            dv = null === pv || null === vv.blockNameToBlockId(pv.name, !0) ? null : pv.name,
-            Nv = vv.getPositionView(zv),
+      findAimed(TT) {
+        return function(TT, kT, cT, lT, MT, KT, OT) {
+          const yT = TT.ckT(kT),
+            fT = null === yT || null === TT.blockNameToBlockId(yT.name, !0) ? null : yT.name,
+            xT = TT.getPositionView(kT),
             {
-              origin: lv,
-              direction: Tv
-            } = vv.getActionRay(),
-            Wv = yz(hv, {
-              from: lv,
-              dir: Tv,
-              reach: gP(vv, zv),
-              solid: Pv
-            }, (zv => {
-              const Pv = [hv[zv], hv[zv + 1], hv[zv + 2]];
-              return !Dz(Sv[hv[zv + 3]], vv.getBlockId(...Pv)) && !gv.has(Pv.join()) && vv.isBlockInLoadedChunk(...Pv) && !Mz(Pv, Nv)
-            }), (vv => null === dv || dv === Vz(Sv[hv[vv + 3]])), (vv => null !== ev && hv[vv] === ev[0] && hv[vv + 1] === ev[1] && hv[vv + 2] === ev[2]));
-          return -1 === Wv ? null : [hv[Wv], hv[Wv + 1], hv[Wv + 2]]
-        }(this.api, this.localPlayerId, vv, this.ghostCells, this.blockIds, this.nextCell, this.foreseen)
+              origin: IT,
+              direction: AT
+            } = TT.getActionRay(),
+            CT = Uk(lT, {
+              from: IT,
+              dir: AT,
+              reach: yc(TT, kT),
+              solid: cT
+            }, (kT => {
+              const cT = [lT[kT], lT[kT + 1], lT[kT + 2]];
+              return !bk(MT[lT[kT + 3]], TT.getBlockId(...cT)) && !OT.has(cT.join()) && TT.isBlockInLoadedChunk(...cT) && !gk(cT, xT)
+            }), (TT => null === fT || fT === Jk(MT[lT[TT + 3]])), (TT => null !== KT && lT[TT] === KT[0] && lT[TT + 1] === KT[1] && lT[TT + 2] === KT[2]));
+          return -1 === CT ? null : [lT[CT], lT[CT + 1], lT[CT + 2]]
+        }(this.api, this.localPlayerId, TT, this.ghostCells, this.blockIds, this.nextCell, this.foreseen)
       }
       endPress() {
         this.altMs = null, this.pressFilled = !1
       }
-      filledCell(vv) {
+      filledCell(TT) {
         const {
-          ghostCells: zv
-        } = this, [Pv, hv, Sv] = Uz(this.palette[zv[vv + 3]]);
-        return [zv[vv], zv[vv + 1], zv[vv + 2], Pv, hv, Sv]
+          ghostCells: kT
+        } = this, [cT, lT, MT] = Hk(this.palette[kT[TT + 3]]);
+        return [kT[TT], kT[TT + 1], kT[TT + 2], cT, lT, MT]
       }
     }
 
-    function NP(vv) {
-      let [zv, Pv, hv] = vv;
-      const Sv = Hz.f.pG / 2;
-      return [Math.floor(zv), Math.floor(Pv), Math.floor(hv), Math.floor(zv - Sv), Math.floor(zv + Sv), Math.floor(Pv + Hz.f.lG), Math.floor(hv - Sv), Math.floor(hv + Sv)]
+    function Ic(TT) {
+      let [kT, cT, lT] = TT;
+      const MT = Rk.f.Ow / 2;
+      return [Math.floor(kT), Math.floor(cT), Math.floor(lT), Math.floor(kT - MT), Math.floor(kT + MT), Math.floor(cT + Rk.f.Iw), Math.floor(lT - MT), Math.floor(lT + MT)]
     }
 
-    function lP(vv, zv) {
-      return zv % 4 !== 3
+    function Ac(TT, kT) {
+      return kT % 4 !== 3
     }
 
-    function TP(vv, zv, Pv, hv, Sv) {
-      if (!vv.isBlockInLoadedChunk(zv, hv - 6, Pv) || !vv.isBlockInLoadedChunk(zv, hv + 6 + Sv, Pv) || !vv.canModifyBlockAt(zv, hv, Pv)) return NaN;
-      let ev = hv - 1;
-      if (0 !== vv.getBlockId(zv, ev, Pv)) {
-        for (; ev < hv + 6 && 0 !== vv.getBlockId(zv, ev + 1, Pv);) ev++;
-        return ev
+    function Cc(TT, kT, cT, lT, MT) {
+      if (!TT.isBlockInLoadedChunk(kT, lT - 6, cT) || !TT.isBlockInLoadedChunk(kT, lT + 6 + MT, cT) || !TT.canModifyBlockAt(kT, lT, cT)) return NaN;
+      let KT = lT - 1;
+      if (0 !== TT.getBlockId(kT, KT, cT)) {
+        for (; KT < lT + 6 && 0 !== TT.getBlockId(kT, KT + 1, cT);) KT++;
+        return KT
       }
-      for (; ev > hv - 6;)
-        if (ev--, 0 !== vv.getBlockId(zv, ev, Pv)) return ev;
+      for (; KT > lT - 6;)
+        if (KT--, 0 !== TT.getBlockId(kT, KT, cT)) return KT;
       return NaN
     }
 
-    function WP(vv, zv, Pv, hv, Sv) {
-      let ev = 0;
-      for (let gv = hv + 1; gv <= hv + Sv; gv++) 0 !== vv.getBlockId(zv, gv, Pv) && ev++;
-      return ev
+    function jc(TT, kT, cT, lT, MT) {
+      let KT = 0;
+      for (let OT = lT + 1; OT <= lT + MT; OT++) 0 !== TT.getBlockId(kT, OT, cT) && KT++;
+      return KT
     }
 
-    function wP(vv) {
-      const zv = new Map;
-      for (const gv of vv) {
-        var Pv;
-        if (Number.isNaN(gv)) return null;
-        zv.set(gv, (null !== (Pv = zv.get(gv)) && void 0 !== Pv ? Pv : 0) + 1)
+    function vc(TT) {
+      const kT = new Map;
+      for (const OT of TT) {
+        var cT;
+        if (Number.isNaN(OT)) return null;
+        kT.set(OT, (null !== (cT = kT.get(OT)) && void 0 !== cT ? cT : 0) + 1)
       }
-      let hv = NaN,
-        Sv = 0;
-      for (const [gv, pv] of zv)(pv > Sv || pv === Sv && gv < hv) && (hv = gv, Sv = pv);
-      let ev = 0;
-      for (const gv of vv) ev += Math.abs(gv - hv);
-      return ev
+      let lT = NaN,
+        MT = 0;
+      for (const [OT, yT] of kT)(yT > MT || yT === MT && OT < lT) && (lT = OT, MT = yT);
+      let KT = 0;
+      for (const OT of TT) KT += Math.abs(OT - lT);
+      return KT
     }
 
-    function aP(vv, zv, Pv, hv) {
+    function tc(TT, kT, cT, lT) {
       const {
-        eye: Sv,
-        forward: ev,
-        tanHalfFovX: gv,
-        tanHalfFovY: pv
-      } = vv, [dv, Nv] = function(vv) {
-        let [zv, Pv, hv] = vv;
-        const Sv = Math.hypot(zv, hv),
-          [ev, gv] = [hv / Sv, -zv / Sv];
+        eye: MT,
+        forward: KT,
+        tanHalfFovX: OT,
+        tanHalfFovY: yT
+      } = TT, [fT, xT] = function(TT) {
+        let [kT, cT, lT] = TT;
+        const MT = Math.hypot(kT, lT),
+          [KT, OT] = [lT / MT, -kT / MT];
         return [
-          [ev, 0, gv],
-          [Pv * gv, hv * ev - zv * gv, -Pv * ev]
+          [KT, 0, OT],
+          [cT * OT, lT * KT - kT * OT, -cT * KT]
         ]
-      }(ev), [lv, Tv] = [zv * gv, Pv * pv], Wv = ev[0] + lv * dv[0] + Tv * Nv[0], wv = ev[1] + Tv * Nv[1], av = ev[2] + lv * dv[2] + Tv * Nv[2], sv = (hv - Sv[1]) / wv;
-      return sv > 0 && sv < 1 / 0 ? [Sv[0] + sv * Wv, Sv[2] + sv * av] : null
+      }(KT), [IT, AT] = [kT * OT, cT * yT], CT = KT[0] + IT * fT[0] + AT * xT[0], jT = KT[1] + AT * xT[1], vT = KT[2] + IT * fT[2] + AT * xT[2], tT = (lT - MT[1]) / jT;
+      return tT > 0 && tT < 1 / 0 ? [MT[0] + tT * CT, MT[2] + tT * vT] : null
     }
-    const sP = "plotsBlueprintPlacementChanged",
-      CP = {
+    const hc = "plotsBlueprintPlacementChanged",
+      Nc = {
         size: .9,
         alpha: .2,
         crossed: !1
       };
-    class iP {
-      constructor(vv, zv) {
-        this.api = vv, this.localPlayerId = zv, this.placing = null, this.view = null, this.camera = {
+    class Qc {
+      constructor(TT, kT) {
+        this.api = TT, this.localPlayerId = kT, this.placing = null, this.view = null, this.camera = {
           eye: [0, 0, 0],
           forward: [0, 0, 1],
           tanHalfFovX: 1,
           tanHalfFovY: 1
-        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = vv => {
-          var zv, Pv, hv, ev;
-          const gv = null !== (zv = null === (Pv = this.placing) || void 0 === Pv ? void 0 : Pv.rotation) && void 0 !== zv ? zv : 0,
+        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = TT => {
+          var kT, cT, lT, KT;
+          const OT = null !== (kT = null === (cT = this.placing) || void 0 === cT ? void 0 : cT.rotation) && void 0 !== kT ? kT : 0,
             {
-              size: pv
-            } = Mv(vv, gv),
-            dv = this.api.yG(this.localPlayerId),
-            [Nv, lv] = null !== (hv = null !== (ev = function(vv, zv, Pv) {
-              const [hv, Sv, ev] = zv, [gv, pv, dv] = [Math.floor(Pv[0]), Math.floor(Pv[1]), Math.floor(Pv[2])], Nv = 6 + Math.max(hv, ev) / 2, [lv, Tv] = [Math.ceil(Nv + hv / 2), Math.ceil(Nv + ev / 2)], [Wv, wv] = [gv - lv, dv - Tv], [av, sv] = [2 * lv + 1, 2 * Tv + 1], Cv = new Float64Array(av * sv), iv = new Uint16Array(av * sv);
-              for (let jv = 0; jv < av; jv++)
-                for (let zv = 0; zv < sv; zv++) {
-                  const Pv = TP(vv, Wv + jv, wv + zv, pv, Sv);
-                  Cv[jv * sv + zv] = Pv, Number.isNaN(Pv) || (iv[jv * sv + zv] = WP(vv, Wv + jv, wv + zv, Pv, Sv))
+              size: yT
+            } = RT(TT, OT),
+            fT = this.api.kN(this.localPlayerId),
+            [xT, IT] = null !== (lT = null !== (KT = function(TT, kT, cT) {
+              const [lT, MT, KT] = kT, [OT, yT, fT] = [Math.floor(cT[0]), Math.floor(cT[1]), Math.floor(cT[2])], xT = 6 + Math.max(lT, KT) / 2, [IT, AT] = [Math.ceil(xT + lT / 2), Math.ceil(xT + KT / 2)], [CT, jT] = [OT - IT, fT - AT], [vT, tT] = [2 * IT + 1, 2 * AT + 1], hT = new Float64Array(vT * tT), NT = new Uint16Array(vT * tT);
+              for (let aT = 0; aT < vT; aT++)
+                for (let kT = 0; kT < tT; kT++) {
+                  const cT = Cc(TT, CT + aT, jT + kT, yT, MT);
+                  hT[aT * tT + kT] = cT, Number.isNaN(cT) || (NT[aT * tT + kT] = jc(TT, CT + aT, jT + kT, cT, MT))
                 }
-              const cv = [];
-              let Gv = null,
-                mv = 1 / 0;
-              for (let jv = 0; jv + hv <= av; jv++)
-                for (let vv = 0; vv + ev <= sv; vv++) {
-                  const [zv, Sv] = [Wv + jv, wv + vv], pv = Math.hypot(zv + hv / 2 - Pv[0], Sv + ev / 2 - Pv[2]);
-                  if (pv > Nv || gv >= zv - 2 && gv < zv + hv + 2 && dv >= Sv - 2 && dv < Sv + ev + 2) continue;
-                  cv.length = 0;
-                  let lv = 0;
-                  for (let Pv = 0; Pv < hv; Pv++)
-                    for (let zv = 0; zv < ev; zv++) cv.push(Cv[(jv + Pv) * sv + vv + zv]), lv += iv[(jv + Pv) * sv + vv + zv];
-                  const Tv = wP(cv);
-                  if (null === Tv) continue;
-                  const av = pv + 3 * (Tv + lv);
-                  av < mv && (mv = av, Gv = [zv, Sv])
+              const QT = [];
+              let ST = null,
+                DT = 1 / 0;
+              for (let aT = 0; aT + lT <= vT; aT++)
+                for (let TT = 0; TT + KT <= tT; TT++) {
+                  const [kT, MT] = [CT + aT, jT + TT], yT = Math.hypot(kT + lT / 2 - cT[0], MT + KT / 2 - cT[2]);
+                  if (yT > xT || OT >= kT - 2 && OT < kT + lT + 2 && fT >= MT - 2 && fT < MT + KT + 2) continue;
+                  QT.length = 0;
+                  let IT = 0;
+                  for (let cT = 0; cT < lT; cT++)
+                    for (let kT = 0; kT < KT; kT++) QT.push(hT[(aT + cT) * tT + TT + kT]), IT += NT[(aT + cT) * tT + TT + kT];
+                  const AT = vc(QT);
+                  if (null === AT) continue;
+                  const vT = yT + 3 * (AT + IT);
+                  vT < DT && (DT = vT, ST = [kT, MT])
                 }
-              return Gv
-            }(this.api, pv, dv)) && void 0 !== ev ? ev : this.cornerOnTarget(pv)) && void 0 !== hv ? hv : [Math.floor(dv[0]) + 2, Math.floor(dv[2])];
+              return ST
+            }(this.api, yT, fT)) && void 0 !== KT ? KT : this.cornerOnTarget(yT)) && void 0 !== lT ? lT : [Math.floor(fT[0]) + 2, Math.floor(fT[2])];
           this.placing = {
-            id: vv,
-            rotation: gv,
-            corner: [Nv, this.playerLevel(), lv],
+            id: TT,
+            rotation: OT,
+            corner: [xT, this.playerLevel(), IT],
             sent: null,
             refusals: 0,
             hover: null,
             drag: null
-          }, this.update(), this.api.sendCommand(`${Sv} preview`)
+          }, this.update(), this.api.sendCommand(`${MT} preview`)
         }, this.rotate = () => {
           const {
-            id: vv,
-            rotation: zv,
-            corner: Pv
-          } = this.placing, Sv = hv[(hv.indexOf(zv) + 1) % hv.length], [ev, , gv] = Mv(vv, zv).size, [pv, , dv] = Mv(vv, Sv).size;
-          this.moveTo(Pv[0] + Math.floor(ev / 2) - Math.floor(pv / 2), Pv[2] + Math.floor(gv / 2) - Math.floor(dv / 2), Sv)
-        }, this.hoverAt = (vv, zv) => {
-          this.placing.hover = [vv, zv], this.moveCentreTo(this.camera, vv, zv)
+            id: TT,
+            rotation: kT,
+            corner: cT
+          } = this.placing, MT = lT[(lT.indexOf(kT) + 1) % lT.length], [KT, , OT] = RT(TT, kT).size, [yT, , fT] = RT(TT, MT).size;
+          this.moveTo(cT[0] + Math.floor(KT / 2) - Math.floor(yT / 2), cT[2] + Math.floor(OT / 2) - Math.floor(fT / 2), MT)
+        }, this.hoverAt = (TT, kT) => {
+          this.placing.hover = [TT, kT], this.moveCentreTo(this.camera, TT, kT)
         }, this.endHover = () => {
           this.placing.hover = null
-        }, this.beginDrag = (vv, zv) => {
-          const Pv = this.placing,
+        }, this.beginDrag = (TT, kT) => {
+          const cT = this.placing,
             {
-              eye: hv,
-              forward: Sv,
-              tanHalfFovX: ev,
-              tanHalfFovY: gv
+              eye: lT,
+              forward: MT,
+              tanHalfFovX: KT,
+              tanHalfFovY: OT
             } = this.camera,
-            pv = {
-              eye: [hv[0], hv[1], hv[2]],
-              forward: [Sv[0], Sv[1], Sv[2]],
-              tanHalfFovX: ev,
-              tanHalfFovY: gv
+            yT = {
+              eye: [lT[0], lT[1], lT[2]],
+              forward: [MT[0], MT[1], MT[2]],
+              tanHalfFovX: KT,
+              tanHalfFovY: OT
             },
-            dv = Pv.corner[1],
-            Nv = aP(pv, vv, zv, dv);
-          Pv.hover = null, Pv.drag = Nv && {
-            view: pv,
-            ground: Nv,
-            corner: [Pv.corner[0], Pv.corner[2]],
-            level: dv
+            fT = cT.corner[1],
+            xT = tc(yT, TT, kT, fT);
+          cT.hover = null, cT.drag = xT && {
+            view: yT,
+            ground: xT,
+            corner: [cT.corner[0], cT.corner[2]],
+            level: fT
           }
-        }, this.dragTo = (vv, zv) => {
-          const Pv = this.placing.drag,
-            hv = Pv && aP(Pv.view, vv, zv, Pv.level);
-          null !== Pv && null !== hv && this.moveTo(Pv.corner[0] + Math.round(hv[0] - Pv.ground[0]), Pv.corner[1] + Math.round(hv[1] - Pv.ground[1]))
+        }, this.dragTo = (TT, kT) => {
+          const cT = this.placing.drag,
+            lT = cT && tc(cT.view, TT, kT, cT.level);
+          null !== cT && null !== lT && this.moveTo(cT.corner[0] + Math.round(lT[0] - cT.ground[0]), cT.corner[1] + Math.round(lT[1] - cT.ground[1]))
         }, this.endDrag = () => {
           this.placing.drag = null
         }, this.tap = () => {
-          const vv = this.view;
-          vv.waiting || (vv.blocked ? this.zC({
-            ...vv,
+          const TT = this.view;
+          TT.waiting || (TT.blocked ? this.nt({
+            ...TT,
             refusals: ++this.placing.refusals
           }) : this.build())
         }, this.build = () => {
-          const vv = this.placing,
+          const TT = this.placing,
             {
-              id: zv,
-              rotation: Pv,
-              corner: hv
-            } = vv;
-          this.api.sendCommand(`${Sv} place ${zv} ${hv.join(" ")} ${Pv}`), vv.sent = {
+              id: kT,
+              rotation: cT,
+              corner: lT
+            } = TT;
+          this.api.sendCommand(`${MT} place ${kT} ${lT.join(" ")} ${cT}`), TT.sent = {
             atMs: performance.now(),
-            corner: [...hv],
-            rotation: Pv,
+            corner: [...lT],
+            rotation: cT,
             timedOut: !1
           }, this.update()
         }, this.stop = () => {
-          null !== this.placing && (this.close(), this.api.sendCommand(`${Sv} preview off`))
-        }, this.chunkWatch = new rz(vv), this.meshes = new PP(vv)
+          null !== this.placing && (this.close(), this.api.sendCommand(`${MT} preview off`))
+        }, this.chunkWatch = new ik(TT), this.meshes = new lc(TT)
       }
       getView() {
         return this.view
       }
-      MT() {
-        const vv = this.placing;
-        null !== vv && (null !== vv.sent && !vv.sent.timedOut && performance.now() - vv.sent.atMs > 3e3 ? (vv.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(vv) || this.chunkWatch.changed()) && this.update())
+      UA() {
+        const TT = this.placing;
+        null !== TT && (null !== TT.sent && !TT.sent.timedOut && performance.now() - TT.sent.atMs > 3e3 ? (TT.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(TT) || this.chunkWatch.changed()) && this.update())
       }
-      afterRender(vv) {
-        const zv = this.placing;
-        null !== zv && (! function(vv, zv) {
-          for (let Pv = 0; Pv < 3; Pv++) zv.eye[Pv] = vv.cameraPosition[Pv], zv.forward[Pv] = vv.cameraDirection[Pv];
-          zv.tanHalfFovX = vv.tanHalfFovX, zv.tanHalfFovY = vv.tanHalfFovY
-        }(vv, this.camera), null !== zv.hover && this.moveCentreTo(this.camera, zv.hover[0], zv.hover[1]))
+      afterRender(TT) {
+        const kT = this.placing;
+        null !== kT && (! function(TT, kT) {
+          for (let cT = 0; cT < 3; cT++) kT.eye[cT] = TT.cameraPosition[cT], kT.forward[cT] = TT.cameraDirection[cT];
+          kT.tanHalfFovX = TT.tanHalfFovX, kT.tanHalfFovY = TT.tanHalfFovY
+        }(TT, this.camera), null !== kT.hover && this.moveCentreTo(this.camera, kT.hover[0], kT.hover[1]))
       }
-      la(vv) {
-        const zv = this.placing;
-        if (null === zv || null === zv.sent || "active" !== vv[0]) return;
+      Av(TT) {
+        const kT = this.placing;
+        if (null === kT || null === kT.sent || "active" !== TT[0]) return;
         const {
-          sent: Pv
-        } = zv, [, hv, Sv, ev, gv, pv, dv] = vv;
-        Sv && hv === zv.id && dv === Pv.rotation && ev === Pv.corner[0] && gv === Pv.corner[1] && pv === Pv.corner[2] && this.close()
+          sent: cT
+        } = kT, [, lT, MT, KT, OT, yT, fT] = TT;
+        MT && lT === kT.id && fT === cT.rotation && KT === cT.corner[0] && OT === cT.corner[1] && yT === cT.corner[2] && this.close()
       }
       endFromServer() {
         null !== this.placing && this.close()
@@ -1650,142 +1650,142 @@ export const modules = {
       dispose() {
         this.meshes.dispose()
       }
-      cornerOnTarget(vv) {
-        let [zv, , Pv] = vv;
-        const hv = this.api.getTargetedBlock();
-        if (null === hv) return null;
-        const [Sv, , ev] = hv.position;
-        return [Sv - Math.floor(zv / 2), ev - Math.floor(Pv / 2)]
+      cornerOnTarget(TT) {
+        let [kT, , cT] = TT;
+        const lT = this.api.getTargetedBlock();
+        if (null === lT) return null;
+        const [MT, , KT] = lT.position;
+        return [MT - Math.floor(kT / 2), KT - Math.floor(cT / 2)]
       }
       playerLevel() {
-        var vv;
-        const [zv, Pv, hv] = this.api.yG(this.localPlayerId);
-        if (null !== (vv = this.api.getLocalPlayerMovement()) && void 0 !== vv && vv.onGround) return Math.ceil(Pv - .01);
-        const [Sv, ev, gv] = [Math.floor(zv), Math.floor(Pv), Math.floor(hv)];
-        for (let pv = ev; pv >= ev - 2; pv--)
-          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(Sv, pv, gv))) return pv + 1;
-        return ev
+        var TT;
+        const [kT, cT, lT] = this.api.kN(this.localPlayerId);
+        if (null !== (TT = this.api.getLocalPlayerMovement()) && void 0 !== TT && TT.onGround) return Math.ceil(cT - .01);
+        const [MT, KT, OT] = [Math.floor(kT), Math.floor(cT), Math.floor(lT)];
+        for (let yT = KT; yT >= KT - 2; yT--)
+          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(MT, yT, OT))) return yT + 1;
+        return KT
       }
-      followPlayerLevel(vv) {
-        if (cP(vv)) return !1;
-        const zv = this.playerLevel();
-        return zv !== vv.corner[1] && (vv.corner[1] = zv, !0)
+      followPlayerLevel(TT) {
+        if (Sc(TT)) return !1;
+        const kT = this.playerLevel();
+        return kT !== TT.corner[1] && (TT.corner[1] = kT, !0)
       }
-      moveCentreTo(vv, zv, Pv) {
-        const hv = this.placing,
-          Sv = aP(vv, zv, Pv, hv.corner[1]);
-        if (null !== Sv) {
-          const [vv, , zv] = Mv(hv.id, hv.rotation).size;
-          this.moveTo(Math.round(Sv[0] - vv / 2), Math.round(Sv[1] - zv / 2))
+      moveCentreTo(TT, kT, cT) {
+        const lT = this.placing,
+          MT = tc(TT, kT, cT, lT.corner[1]);
+        if (null !== MT) {
+          const [TT, , kT] = RT(lT.id, lT.rotation).size;
+          this.moveTo(Math.round(MT[0] - TT / 2), Math.round(MT[1] - kT / 2))
         }
       }
-      moveTo(vv, zv) {
-        let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
-        const hv = this.placing;
-        if (cP(hv)) return;
-        const [Sv, ev, gv] = hv.corner;
-        if (this.centreOnPlot(Sv, gv) && !this.centreOnPlot(vv, zv, Pv))
-          if (this.centreOnPlot(vv, gv, Pv)) zv = gv;
+      moveTo(TT, kT) {
+        let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+        const lT = this.placing;
+        if (Sc(lT)) return;
+        const [MT, KT, OT] = lT.corner;
+        if (this.centreOnPlot(MT, OT) && !this.centreOnPlot(TT, kT, cT))
+          if (this.centreOnPlot(TT, OT, cT)) kT = OT;
           else {
-            if (!this.centreOnPlot(Sv, zv, Pv)) return;
-            vv = Sv
-          } vv === Sv && zv === gv && Pv === hv.rotation || (hv.rotation = Pv, hv.corner = [vv, ev, zv], this.update())
+            if (!this.centreOnPlot(MT, kT, cT)) return;
+            TT = MT
+          } TT === MT && kT === OT && cT === lT.rotation || (lT.rotation = cT, lT.corner = [TT, KT, kT], this.update())
       }
-      centreOnPlot(vv, zv) {
-        let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+      centreOnPlot(TT, kT) {
+        let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
         const {
-          id: hv,
-          corner: Sv
-        } = this.placing, [ev, , gv] = Mv(hv, Pv).size;
-        return this.api.canModifyBlockAt(vv + Math.floor(ev / 2), Sv[1], zv + Math.floor(gv / 2))
+          id: lT,
+          corner: MT
+        } = this.placing, [KT, , OT] = RT(lT, cT).size;
+        return this.api.canModifyBlockAt(TT + Math.floor(KT / 2), MT[1], kT + Math.floor(OT / 2))
       }
       close() {
-        this.placing = null, this.meshes.dispose(), this.zC(null)
+        this.placing = null, this.meshes.dispose(), this.nt(null)
       }
       update() {
         const {
-          id: vv,
-          rotation: zv,
-          corner: Pv,
-          refusals: hv
-        } = this.placing, Sv = new zP, ev = [];
-        let gv = !1,
-          pv = 0;
+          id: TT,
+          rotation: kT,
+          corner: cT,
+          refusals: lT
+        } = this.placing, MT = new cc, KT = [];
+        let OT = !1,
+          yT = 0;
         for (const {
-            offset: lv,
-            block: Tv
+            offset: IT,
+            block: AT
           }
-          of Mv(vv, zv).cells) {
-          const [vv, zv, hv] = [Pv[0] + lv[0], Pv[1] + lv[1], Pv[2] + lv[2]];
-          ev.push(vv, zv, hv);
-          const dv = !this.api.canModifyBlockAt(vv, zv, hv),
-            Nv = this.api.getBlockId(vv, zv, hv),
-            Wv = !Kz(Nv) && !Dz(this.api.blockNameToBlockId(Tv), Nv);
-          gv ||= dv, pv += Wv ? 1 : 0, dv || Wv ? Sv.add(vv, zv, hv, vP, uz) : Sv.add(vv, zv, hv, Uz(Tv), CP, Az(Tv))
+          of RT(TT, kT).cells) {
+          const [TT, kT, lT] = [cT[0] + IT[0], cT[1] + IT[1], cT[2] + IT[2]];
+          KT.push(TT, kT, lT);
+          const fT = !this.api.canModifyBlockAt(TT, kT, lT),
+            xT = this.api.getBlockId(TT, kT, lT),
+            CT = !zk(xT) && !bk(this.api.blockNameToBlockId(AT), xT);
+          OT ||= fT, yT += CT ? 1 : 0, fT || CT ? MT.add(TT, kT, lT, kc, Tc) : MT.add(TT, kT, lT, Hk(AT), Nc, dk(AT))
         }
-        this.chunkWatch.watch(ev), this.meshes.show(Sv.toArray());
-        const dv = this.view,
-          Nv = cP(this.placing);
-        (null === dv || void 0 === dv ? void 0 : dv.id) === vv && dv.blocked === gv && dv.toClear === pv && dv.waiting === Nv && dv.refusals === hv || this.zC({
-          id: vv,
-          blocked: gv,
-          toClear: pv,
-          waiting: Nv,
-          refusals: hv
+        this.chunkWatch.watch(KT), this.meshes.show(MT.toArray());
+        const fT = this.view,
+          xT = Sc(this.placing);
+        (null === fT || void 0 === fT ? void 0 : fT.id) === TT && fT.blocked === OT && fT.toClear === yT && fT.waiting === xT && fT.refusals === lT || this.nt({
+          id: TT,
+          blocked: OT,
+          toClear: yT,
+          waiting: xT,
+          refusals: lT
         })
       }
-      zC(vv) {
-        this.view = vv, lv.j.zC(sP, vv, !0)
+      nt(TT) {
+        this.view = TT, IT.k.nt(hc, TT, !0)
       }
     }
 
-    function cP(vv) {
+    function Sc(TT) {
       let {
-        sent: zv
-      } = vv;
-      return null !== zv && !zv.timedOut
+        sent: kT
+      } = TT;
+      return null !== kT && !kT.timedOut
     }
-    var GP = Pv(4019),
-      mP = Pv(38669);
+    var Dc = cT(4235),
+      ac = cT(38952);
 
-    function jP(vv, zv, Pv) {
-      const hv = [255 * vv, 255 * zv, 255 * Pv],
-        [Sv, ev, gv] = hv.map((vv => vv + .4 * (255 - vv)));
+    function Fc(TT, kT, cT) {
+      const lT = [255 * TT, 255 * kT, 255 * cT],
+        [MT, KT, OT] = lT.map((TT => TT + .4 * (255 - TT)));
       return {
         texture: "square_particle",
-        GT: 48,
-        minLifeTime: .3 / mP.e,
-        maxLifeTime: .55 / mP.e,
+        DA: 48,
+        minLifeTime: .3 / ac.b,
+        maxLifeTime: .55 / ac.b,
         minSize: .07,
         maxSize: .14,
         minEmitPower: 1,
         maxEmitPower: 1,
         emitRate: 0,
-        gravity: [0, -14 * mP.e * mP.e, 0],
+        gravity: [0, -14 * ac.b * ac.b, 0],
         colorGradients: [{
           timeFraction: 0,
-          minColor: [...hv, 1],
-          maxColor: [Sv, ev, gv, 1]
+          minColor: [...lT, 1],
+          maxColor: [MT, KT, OT, 1]
         }, {
           timeFraction: 1,
-          minColor: [...hv, 0],
-          maxColor: [Sv, ev, gv, 0]
+          minColor: [...lT, 0],
+          maxColor: [MT, KT, OT, 0]
         }],
-        blendMode: GP.f.Standard
+        blendMode: Dc.f.Standard
       }
     }
-    const fP = {
+    const rc = {
       texture: "glint",
       mipmaps: !1,
-      GT: 96,
-      minLifeTime: .5 / mP.e,
-      maxLifeTime: .9 / mP.e,
+      DA: 96,
+      minLifeTime: .5 / ac.b,
+      maxLifeTime: .9 / ac.b,
       minSize: .15,
       maxSize: .3,
       minEmitPower: 1,
       maxEmitPower: 1,
       emitRate: 0,
-      gravity: [0, 2 * mP.e * mP.e, 0],
+      gravity: [0, 2 * ac.b * ac.b, 0],
       colorGradients: [{
         timeFraction: 0,
         minColor: [255, 224, 97, 1],
@@ -1794,601 +1794,601 @@ export const modules = {
         timeFraction: 1,
         minColor: [0, 0, 0, 1]
       }],
-      blendMode: GP.f.OneOne
+      blendMode: Dc.f.OneOne
     };
-    class FP {
-      constructor(vv, zv) {
-        this.api = vv, this.localPlayerId = zv, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
+    class Pc {
+      constructor(TT, kT) {
+        this.api = TT, this.localPlayerId = kT, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
       }
-      filled(vv) {
+      filled(TT) {
         if (this.api.particlesEnabled())
-          for (const [zv, Pv, hv, Sv, ev, gv] of vv.slice(0, 3)) {
-            const vv = `${Sv},${ev},${gv}`;
-            let pv = this.chips.get(vv);
-            void 0 === pv && (pv = this.api.createParticles(jP(Sv, ev, gv), {
-              pos: [zv + .5, Pv + .5, hv + .5]
-            }), this.chips.set(vv, pv));
-            for (let zv = 0; zv < 8; zv++) this.setPoint(zv, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
-            pv.emitPoints([zv + .5, Pv + .5, hv + .5], this.points, 8)
+          for (const [kT, cT, lT, MT, KT, OT] of TT.slice(0, 3)) {
+            const TT = `${MT},${KT},${OT}`;
+            let yT = this.chips.get(TT);
+            void 0 === yT && (yT = this.api.createParticles(Fc(MT, KT, OT), {
+              pos: [kT + .5, cT + .5, lT + .5]
+            }), this.chips.set(TT, yT));
+            for (let kT = 0; kT < 8; kT++) this.setPoint(kT, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
+            yT.emitPoints([kT + .5, cT + .5, lT + .5], this.points, 8)
           }
       }
-      layerDone(vv) {
+      layerDone(TT) {
         this.api.playSound(this.localPlayerId, "magicAccent2", .7, 1.1);
-        const zv = vv.length / 3;
-        if (0 === zv || !this.api.particlesEnabled()) return;
-        const Pv = Math.min(zv, 48),
-          [hv, Sv, ev] = [vv[0] + .5, vv[1] + 1, vv[2] + .5];
-        let gv = 0;
-        for (let pv = 0; pv < Pv; pv++) {
-          const dv = 3 * Math.floor(pv * zv / Pv);
-          for (let zv = 0; zv < 2; zv++) this.setPoint(gv++, vv[dv] + Math.random() - hv, vv[dv + 1] + 1 - Sv, vv[dv + 2] + Math.random() - ev, .6 + .8 * Math.random())
+        const kT = TT.length / 3;
+        if (0 === kT || !this.api.particlesEnabled()) return;
+        const cT = Math.min(kT, 48),
+          [lT, MT, KT] = [TT[0] + .5, TT[1] + 1, TT[2] + .5];
+        let OT = 0;
+        for (let yT = 0; yT < cT; yT++) {
+          const fT = 3 * Math.floor(yT * kT / cT);
+          for (let kT = 0; kT < 2; kT++) this.setPoint(OT++, TT[fT] + Math.random() - lT, TT[fT + 1] + 1 - MT, TT[fT + 2] + Math.random() - KT, .6 + .8 * Math.random())
         }
-        this.sparkles ??= this.api.createParticles(fP, {
-          pos: [hv, Sv, ev]
-        }), this.sparkles.emitPoints([hv, Sv, ev], this.points, gv)
+        this.sparkles ??= this.api.createParticles(rc, {
+          pos: [lT, MT, KT]
+        }), this.sparkles.emitPoints([lT, MT, KT], this.points, OT)
       }
       dispose() {
-        var vv;
-        for (const zv of this.chips.values()) zv.stop();
-        this.chips.clear(), null === (vv = this.sparkles) || void 0 === vv || vv.stop(), this.sparkles = null
+        var TT;
+        for (const kT of this.chips.values()) kT.stop();
+        this.chips.clear(), null === (TT = this.sparkles) || void 0 === TT || TT.stop(), this.sparkles = null
       }
-      setPoint(vv, zv, Pv, hv, Sv) {
-        const ev = 4 * vv;
-        this.points[ev] = zv, this.points[ev + 1] = Pv, this.points[ev + 2] = hv, this.points[ev + 3] = Sv
+      setPoint(TT, kT, cT, lT, MT) {
+        const KT = 4 * TT;
+        this.points[KT] = kT, this.points[KT + 1] = cT, this.points[KT + 2] = lT, this.points[KT + 3] = MT
       }
     }
-    var YP = Pv(1934);
-    const nP = "SpecialAction1",
-      OP = "KeyY",
-      DP = "KeyX";
+    var wc = cT(2009);
+    const mc = "SpecialAction1",
+      bc = "KeyY",
+      zc = "KeyX";
 
-    function KP(vv) {
+    function Jc(TT) {
       let {
-        placement: zv
-      } = vv;
-      const Pv = (0, Dv.j)(sP, zv.getView()),
+        placement: kT
+      } = TT;
+      const cT = (0, bT.i)(hc, kT.getView()),
         {
-          t: hv
-        } = (0, Vv.x)(),
+          t: lT
+        } = (0, JT.B)(),
         {
-          isTouchScreen: Sv
-        } = (0, pv.i)(["isTouchScreen"]),
-        ev = null !== Pv,
-        gv = ev && !Pv.blocked && !Pv.waiting;
-      if ((0, Ov.d)((vv => ev && !vv.repeat && !(0, Nv.isTypingInInput)() && !(0, dv.o)() && !Sv), (vv => {
-          const Pv = function(vv, zv, Pv) {
-            if (vv === DP) return zv.stop;
-            if (vv === OP) return Pv ? zv.build : UP;
-            return YP.z[nP].includes(vv) ? zv.rotate : null
-          }(vv.code, zv, gv);
-          null !== Pv && (vv.stopPropagation(), Pv())
-        })), !ev) return null;
-      let lv = Sv ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
-      return Pv.blocked ? lv = "plotsGame:placementOffPlot" : Pv.toClear > 0 && (lv = "plotsGame:placementClear"), (0, Bv.jsx)(gz.g, {
+          isTouchScreen: MT
+        } = (0, yT.n)(["isTouchScreen"]),
+        KT = null !== cT,
+        OT = KT && !cT.blocked && !cT.waiting;
+      if ((0, mT.e)((TT => KT && !TT.repeat && !(0, xT.isTypingInInput)() && !(0, fT.s)() && !MT), (TT => {
+          const cT = function(TT, kT, cT) {
+            if (TT === zc) return kT.stop;
+            if (TT === bc) return cT ? kT.build : Hc;
+            return wc.y[mc].includes(TT) ? kT.rotate : null
+          }(TT.code, kT, OT);
+          null !== cT && (TT.stopPropagation(), cT())
+        })), !KT) return null;
+      let IT = MT ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
+      return cT.blocked ? IT = "plotsGame:placementOffPlot" : cT.toClear > 0 && (IT = "plotsGame:placementClear"), (0, UT.jsx)(Ok.g, {
         placement: "bottom",
-        children: (0, Bv.jsxs)("div", {
+        children: (0, UT.jsxs)("div", {
           className: "PlotsPlacementCard",
-          children: [(0, Bv.jsx)("div", {
+          children: [(0, UT.jsx)("div", {
             className: "PlotsPlacementCardTitle SmallTextBold",
-            children: hv(av(Pv.id).displayName.translationKey)
-          }), (0, Bv.jsx)("div", {
-            className: fv()("PlotsPlacementCardHint SmallTextLight", {
-              Nudge: Pv.refusals > 0
+            children: lT(vT(cT.id).displayName.translationKey)
+          }), (0, UT.jsx)("div", {
+            className: FT()("PlotsPlacementCardHint SmallTextLight", {
+              Nudge: cT.refusals > 0
             }),
-            children: hv(lv)
-          }, Pv.refusals), (0, Bv.jsxs)("div", {
+            children: lT(IT)
+          }, cT.refusals), (0, UT.jsxs)("div", {
             className: "PlotsPlacementCardButtons",
-            children: [(0, Bv.jsxs)(Yv.d, {
-              onClick: zv.rotate,
-              children: [(0, Bv.jsx)(VP, {
-                noaAction: nP
-              }), hv("plotsGame:placementRotate")]
-            }), (0, Bv.jsxs)(Yv.A, {
-              onClick: zv.stop,
-              children: [(0, Bv.jsx)(VP, {
-                keyCode: DP
-              }), hv("general:cancel")]
-            }), (0, Bv.jsxs)(Yv.j, {
-              disabled: !gv,
-              onClick: zv.build,
-              children: [(0, Bv.jsx)(VP, {
-                keyCode: OP
-              }), hv("plotsGame:placementBuild")]
+            children: [(0, UT.jsxs)(PT.e, {
+              onClick: kT.rotate,
+              children: [(0, UT.jsx)(oc, {
+                noaAction: mc
+              }), lT("plotsGame:placementRotate")]
+            }), (0, UT.jsxs)(PT.I, {
+              onClick: kT.stop,
+              children: [(0, UT.jsx)(oc, {
+                keyCode: zc
+              }), lT("general:cancel")]
+            }), (0, UT.jsxs)(PT.m, {
+              disabled: !OT,
+              onClick: kT.build,
+              children: [(0, UT.jsx)(oc, {
+                keyCode: bc
+              }), lT("plotsGame:placementBuild")]
             })]
           })]
         })
       })
     }
 
-    function VP(vv) {
-      return (0, Bv.jsx)(dz.e, {
+    function oc(TT) {
+      return (0, UT.jsx)(fk.b, {
         className: "PlotsPlacementKey",
-        ...vv
+        ...TT
       })
     }
 
-    function UP() {}
-    var RP = Pv(4292);
-    class xP {
-      constructor(vv) {
-        this.placement = vv, this.press = null
+    function Hc() {}
+    var ec = cT(4528);
+    class Gc {
+      constructor(TT) {
+        this.placement = TT, this.press = null
       }
-      down(vv) {
+      down(TT) {
         if (null !== this.press) return !1;
         const {
-          id: zv,
-          mouse: Pv,
-          x: hv,
-          y: Sv,
-          atMs: ev
-        } = vv;
+          id: kT,
+          mouse: cT,
+          x: lT,
+          y: MT,
+          atMs: KT
+        } = TT;
         return this.press = {
-          id: zv,
-          mouse: Pv,
-          x: hv,
-          y: Sv,
-          atMs: ev,
+          id: kT,
+          mouse: cT,
+          x: lT,
+          y: MT,
+          atMs: KT,
           moved: !1
-        }, Pv || this.placement.beginDrag(vv.ndcX, vv.ndcY), !0
+        }, cT || this.placement.beginDrag(TT.ndcX, TT.ndcY), !0
       }
-      move(vv) {
-        const zv = this.press;
-        null !== zv && zv.id === vv.id && (zv.moved ||= Math.hypot(vv.x - zv.x, vv.y - zv.y) > 8), vv.mouse ? this.placement.hoverAt(vv.ndcX, vv.ndcY) : (null === zv || void 0 === zv ? void 0 : zv.id) === vv.id && this.placement.dragTo(vv.ndcX, vv.ndcY)
+      move(TT) {
+        const kT = this.press;
+        null !== kT && kT.id === TT.id && (kT.moved ||= Math.hypot(TT.x - kT.x, TT.y - kT.y) > 8), TT.mouse ? this.placement.hoverAt(TT.ndcX, TT.ndcY) : (null === kT || void 0 === kT ? void 0 : kT.id) === TT.id && this.placement.dragTo(TT.ndcX, TT.ndcY)
       }
-      up(vv) {
-        const zv = this.press;
-        (null === zv || void 0 === zv ? void 0 : zv.id) === vv.id && (this.move(vv), this.end(), !zv.moved && (zv.mouse || vv.atMs - zv.atMs <= 250) && this.placement.tap())
+      up(TT) {
+        const kT = this.press;
+        (null === kT || void 0 === kT ? void 0 : kT.id) === TT.id && (this.move(TT), this.end(), !kT.moved && (kT.mouse || TT.atMs - kT.atMs <= 250) && this.placement.tap())
       }
-      cancel(vv) {
-        var zv;
-        (null === (zv = this.press) || void 0 === zv ? void 0 : zv.id) === vv && this.end()
+      cancel(TT) {
+        var kT;
+        (null === (kT = this.press) || void 0 === kT ? void 0 : kT.id) === TT && this.end()
       }
-      leave(vv) {
+      leave(TT) {
         let {
-          id: zv,
-          mouse: Pv
-        } = vv;
-        Pv && this.placement.endHover(), this.cancel(zv)
+          id: kT,
+          mouse: cT
+        } = TT;
+        cT && this.placement.endHover(), this.cancel(kT)
       }
       end() {
         this.press.mouse || this.placement.endDrag(), this.press = null
       }
     }
 
-    function tP(vv) {
+    function Vc(TT) {
       let {
-        placement: zv
-      } = vv;
-      return null === (0, Dv.j)(sP, zv.getView()) ? null : (0, Bv.jsx)(qP, {
-        placement: zv
+        placement: kT
+      } = TT;
+      return null === (0, bT.i)(hc, kT.getView()) ? null : (0, UT.jsx)(Ec, {
+        placement: kT
       })
     }
 
-    function qP(vv) {
+    function Ec(TT) {
       let {
-        placement: zv
-      } = vv;
-      (0, RP.e)(!0, !0, "PlotsPlacementLayer");
-      const Pv = (0, ev.useMemo)((() => new xP(zv)), [zv]);
-      return (0, Bv.jsx)("div", {
+        placement: kT
+      } = TT;
+      (0, ec.c)(!0, !0, "PlotsPlacementLayer");
+      const cT = (0, KT.useMemo)((() => new Gc(kT)), [kT]);
+      return (0, UT.jsx)("div", {
         className: "PlotsPlacementLayer",
-        onPointerDown: vv => {
-          "mouse" === vv.pointerType && 0 !== vv.button || !Pv.down(IP(vv)) || vv.currentTarget.setPointerCapture(vv.pointerId)
+        onPointerDown: TT => {
+          "mouse" === TT.pointerType && 0 !== TT.button || !cT.down(Zc(TT)) || TT.currentTarget.setPointerCapture(TT.pointerId)
         },
-        onPointerMove: vv => {
-          Pv.move(IP(vv))
+        onPointerMove: TT => {
+          cT.move(Zc(TT))
         },
-        onPointerUp: vv => {
-          Pv.up(IP(vv))
+        onPointerUp: TT => {
+          cT.up(Zc(TT))
         },
-        onPointerCancel: vv => {
-          Pv.cancel(vv.pointerId)
+        onPointerCancel: TT => {
+          cT.cancel(TT.pointerId)
         },
-        onLostPointerCapture: vv => {
-          Pv.cancel(vv.pointerId)
+        onLostPointerCapture: TT => {
+          cT.cancel(TT.pointerId)
         },
-        onPointerLeave: vv => {
-          Pv.leave(IP(vv))
+        onPointerLeave: TT => {
+          cT.leave(Zc(TT))
         },
         "aria-hidden": !0
       })
     }
 
-    function IP(vv) {
+    function Zc(TT) {
       const {
-        left: zv,
-        top: Pv,
-        width: hv,
-        height: Sv
-      } = vv.currentTarget.getBoundingClientRect();
+        left: kT,
+        top: cT,
+        width: lT,
+        height: MT
+      } = TT.currentTarget.getBoundingClientRect();
       return {
-        id: vv.pointerId,
-        mouse: "mouse" === vv.pointerType,
-        x: vv.clientX,
-        y: vv.clientY,
-        ndcX: (vv.clientX - zv) / hv * 2 - 1,
-        ndcY: 1 - (vv.clientY - Pv) / Sv * 2,
-        atMs: vv.timeStamp
+        id: TT.pointerId,
+        mouse: "mouse" === TT.pointerType,
+        x: TT.clientX,
+        y: TT.clientY,
+        ndcX: (TT.clientX - kT) / lT * 2 - 1,
+        ndcY: 1 - (TT.clientY - cT) / MT * 2,
+        atMs: TT.timeStamp
       }
     }
-    var QP = Pv(2279),
-      ZP = Pv(36198),
-      AP = Pv(1923),
-      LP = Pv(1243);
-    const HP = {
+    var uc = cT(2408),
+      Xc = cT(36506),
+      dc = cT(1996),
+      Lc = cT(1274);
+    const Rc = {
       own: "crown",
       shared: "user-group",
       other: "house"
     };
 
-    function MP(vv) {
+    function gc(TT) {
       let {
-        hud: zv
-      } = vv;
-      const Pv = (0, Dv.j)(lz, zv.getPlot()),
-        [hv, Sv] = (0, ev.useState)(null),
-        gv = (0, ZP.q)(hv);
-      if ("none" === Pv[0]) return null;
-      const [, pv, dv, Nv, lv, Tv] = Pv;
-      return (0, Bv.jsx)("div", {
-        className: fv()("PlotsPlotBannerContainer", {
-          Below: gv
+        hud: kT
+      } = TT;
+      const cT = (0, bT.i)(Ik, kT.getPlot()),
+        [lT, MT] = (0, KT.useState)(null),
+        OT = (0, Xc.m)(lT);
+      if ("none" === cT[0]) return null;
+      const [, yT, fT, xT, IT, AT] = cT;
+      return (0, UT.jsx)("div", {
+        className: FT()("PlotsPlotBannerContainer", {
+          Below: OT
         }),
-        children: (0, Bv.jsx)(yP, {
-          plotX: pv,
-          plotZ: dv,
-          ownerName: Nv,
-          ownerId: lv,
-          relation: Tv,
-          plaqueRef: Sv
-        }, `${pv},${dv}`)
+        children: (0, UT.jsx)(Uc, {
+          plotX: yT,
+          plotZ: fT,
+          ownerName: xT,
+          ownerId: IT,
+          relation: AT,
+          plaqueRef: MT
+        }, `${yT},${fT}`)
       })
     }
 
-    function yP(vv) {
-      var zv, Pv;
+    function Uc(TT) {
+      var kT, cT;
       let {
-        plotX: hv,
-        plotZ: Sv,
-        ownerName: ev,
-        ownerId: gv,
-        relation: pv,
-        plaqueRef: dv
-      } = vv;
+        plotX: lT,
+        plotZ: MT,
+        ownerName: KT,
+        ownerId: OT,
+        relation: yT,
+        plaqueRef: fT
+      } = TT;
       const {
-        t: Nv
-      } = (0, Vv.x)(), lv = (0, AP.h)("hiddenPlayerNames"), Tv = (0, AP.h)("players"), Wv = null === gv ? null : null !== (zv = null === (Pv = Tv.byId[gv]) || void 0 === Pv ? void 0 : Pv.cosmetics) && void 0 !== zv ? zv : null, wv = Nv("plotsGame:plotBannerCoords", {
-        x: hv,
-        z: Sv
-      }), av = "own" === pv || null !== ev;
-      return (0, Bv.jsxs)("div", {
-        ref: dv,
-        className: fv()("PlotsPlotBanner", {
-          Own: "own" === pv,
-          Shared: "shared" === pv
+        t: xT
+      } = (0, JT.B)(), IT = (0, dc.h)("hiddenPlayerNames"), AT = (0, dc.h)("players"), CT = null === OT ? null : null !== (kT = null === (cT = AT.byId[OT]) || void 0 === cT ? void 0 : cT.cosmetics) && void 0 !== kT ? kT : null, jT = xT("plotsGame:plotBannerCoords", {
+        x: lT,
+        z: MT
+      }), vT = "own" === yT || null !== KT;
+      return (0, UT.jsxs)("div", {
+        ref: fT,
+        className: FT()("PlotsPlotBanner", {
+          Own: "own" === yT,
+          Shared: "shared" === yT
         }),
         role: "status",
-        children: [(0, Bv.jsxs)("span", {
-          className: fv()("PlotsPlotBannerSeal", {
-            Face: null !== Wv
+        children: [(0, UT.jsxs)("span", {
+          className: FT()("PlotsPlotBannerSeal", {
+            Face: null !== CT
           }),
-          children: [null !== Wv && (0, Bv.jsx)(QP.e, {
-            cosmetics: Wv
-          }), null === Wv && (0, Bv.jsx)(Fv.b, {
-            name: HP[pv]
+          children: [null !== CT && (0, UT.jsx)(uc.e, {
+            cosmetics: CT
+          }), null === CT && (0, UT.jsx)(rT.e, {
+            name: Rc[yT]
           })]
-        }), (0, Bv.jsxs)("div", {
+        }), (0, UT.jsxs)("div", {
           className: "PlotsPlotBannerText",
-          children: [(0, Bv.jsxs)("div", {
+          children: [(0, UT.jsxs)("div", {
             className: "PlotsPlotBannerTitle SmallTextBold",
-            children: ["own" === pv && Nv("plotsGame:plotBannerYours"), "own" !== pv && null !== ev && Nv("plotsGame:plotBannerOwner", {
-              name: (0, LP.f)(ev, lv)
-            }), !av && wv]
-          }), av && (0, Bv.jsxs)("div", {
+            children: ["own" === yT && xT("plotsGame:plotBannerYours"), "own" !== yT && null !== KT && xT("plotsGame:plotBannerOwner", {
+              name: (0, Lc.f)(KT, IT)
+            }), !vT && jT]
+          }), vT && (0, UT.jsxs)("div", {
             className: "PlotsPlotBannerCoords SmallTextLight",
-            children: [wv, "shared" === pv && (0, Bv.jsx)("span", {
+            children: [jT, "shared" === yT && (0, UT.jsx)("span", {
               className: "PlotsPlotBannerBadge",
-              children: Nv("plotsGame:plotBannerShared")
+              children: xT("plotsGame:plotBannerShared")
             })]
           })]
         })]
       })
     }
 
-    function BP(vv) {
+    function Yc(TT) {
       let {
-        progress: zv,
-        goal: Pv
-      } = vv;
-      const hv = Math.min(zv, Pv);
-      return (0, Bv.jsxs)("div", {
+        progress: kT,
+        goal: cT
+      } = TT;
+      const lT = Math.min(kT, cT);
+      return (0, UT.jsxs)("div", {
         className: "PlotsProgress",
-        children: [(0, Bv.jsx)("div", {
+        children: [(0, UT.jsx)("div", {
           className: "PlotsProgressBar",
           role: "progressbar",
           "aria-valuemin": 0,
-          "aria-valuemax": Pv,
-          "aria-valuenow": hv,
-          children: (0, Bv.jsx)("div", {
+          "aria-valuemax": cT,
+          "aria-valuenow": lT,
+          children: (0, UT.jsx)("div", {
             className: "PlotsProgressBarFill",
             style: {
-              transform: `scaleX(${hv/Pv})`
+              transform: `scaleX(${lT/cT})`
             }
           })
-        }), (0, Bv.jsxs)("span", {
+        }), (0, UT.jsxs)("span", {
           className: "PlotsProgressCount",
-          children: [hv, "/", Pv]
+          children: [lT, "/", cT]
         })]
       })
     }
 
-    function JP(vv) {
+    function Bc(TT) {
       return {
-        translationKey: `plotsGame:${vv}`,
+        translationKey: `plotsGame:${TT}`,
         actions: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []
       }
     }
-    const EP = {
+    const Wc = {
       house: {
         icon: "house",
         titleKey: "plotsGame:starterLotHouseTitle",
-        desktop: JP("starterLotHouseHint", ["alt-fire"]),
-        touch: JP("starterLotHouseHint", ["alt-fire"]),
+        desktop: Bc("starterLotHouseHint", ["alt-fire"]),
+        touch: Bc("starterLotHouseHint", ["alt-fire"]),
         plainKey: "plotsGame:starterLotHousePlain"
       },
       garden: {
         icon: "sparkle",
         titleKey: "plotsGame:starterLotGarden",
-        desktop: JP("starterLotGardenHint", ["alt-fire"]),
-        touch: JP("starterLotGardenHint", ["alt-fire"]),
+        desktop: Bc("starterLotGardenHint", ["alt-fire"]),
+        touch: Bc("starterLotGardenHint", ["alt-fire"]),
         plainKey: "plotsGame:starterLotGardenPlain"
       },
       boulder: {
         icon: "hammer",
         titleKey: "plotsGame:starterLotBoulder",
-        desktop: JP("starterLotBreakHint", ["primary-fire"]),
-        touch: JP("starterLotBreakHintTouch"),
+        desktop: Bc("starterLotBreakHint", ["primary-fire"]),
+        touch: Bc("starterLotBreakHintTouch"),
         plainKey: "plotsGame:starterLotBreakPlain"
       },
       fly: {
         icon: "angles-up",
         titleKey: "plotsGame:starterLotFly",
-        desktop: JP("starterLotFlyHint", ["jump"]),
-        touch: JP("starterLotFlyHintTouch"),
+        desktop: Bc("starterLotFlyHint", ["jump"]),
+        touch: Bc("starterLotFlyHintTouch"),
         plainKey: "plotsGame:starterLotFlyPlain"
       },
       backpack: {
         icon: "backpack",
         titleKey: "plotsGame:starterLotBackpack",
-        desktop: JP("starterLotBackpackHint", ["OpenInventory"]),
-        touch: JP("starterLotBackpackHintTouch"),
+        desktop: Bc("starterLotBackpackHint", ["OpenInventory"]),
+        touch: Bc("starterLotBackpackHintTouch"),
         plainKey: "plotsGame:starterLotBackpackPlain"
       },
       neighbour: {
         icon: "person",
         titleKey: "plotsGame:starterLotNeighbour",
-        desktop: JP("starterLotNeighbourHint", ["forward", "left", "backward", "right"]),
-        touch: JP("starterLotNeighbourHintTouch"),
+        desktop: Bc("starterLotNeighbourHint", ["forward", "left", "backward", "right"]),
+        touch: Bc("starterLotNeighbourHintTouch"),
         plainKey: "plotsGame:starterLotNeighbourPlain"
       }
     };
 
-    function oP(vv, zv, Pv) {
+    function nc(TT, kT, cT) {
       const {
-        translationKey: hv,
-        actions: Sv
-      } = Pv ? zv.touch : zv.desktop;
-      if (0 === Sv.length) return vv(hv);
-      const ev = [];
-      for (const gv of Sv) {
-        const hv = (0, YP.x)(gv, Pv),
-          Sv = YP.z[gv][0];
-        if (null === hv && void 0 === Sv) return vv(zv.plainKey);
-        ev.push(null === hv ? (0, YP.p)(Sv) : vv(hv.translationKey))
+        translationKey: lT,
+        actions: MT
+      } = cT ? kT.touch : kT.desktop;
+      if (0 === MT.length) return TT(lT);
+      const KT = [];
+      for (const OT of MT) {
+        const lT = (0, wc.w)(OT, cT),
+          MT = wc.y[OT][0];
+        if (null === lT && void 0 === MT) return TT(kT.plainKey);
+        KT.push(null === lT ? (0, wc.q)(MT) : TT(lT.translationKey))
       }
-      return vv(hv, {
-        key: ev.join("")
+      return TT(lT, {
+        key: KT.join("")
       })
     }
 
-    function bP(vv) {
+    function pc(TT) {
       let {
-        hud: zv
-      } = vv;
-      const Pv = (0, Dv.j)(Nz, zv.getStep()),
+        hud: kT
+      } = TT;
+      const cT = (0, bT.i)(xk, kT.getStep()),
         {
-          t: hv
-        } = (0, Vv.x)();
-      return (0, Bv.jsxs)(gz.g, {
+          t: lT
+        } = (0, JT.B)();
+      return (0, UT.jsxs)(Ok.g, {
         placement: "bottom",
-        children: ["step" === Pv[0] && (0, Bv.jsx)(rP, {
-          step: Pv[1],
-          progress: Pv[2],
-          goal: Pv[3]
-        }, Pv[1]), "celebrate" === Pv[0] && (0, Bv.jsx)(kP, {
-          className: fv()("Celebrate", {
-            Gold: "house" === Pv[1]
+        children: ["step" === cT[0] && (0, UT.jsx)(ic, {
+          step: cT[1],
+          progress: cT[2],
+          goal: cT[3]
+        }, cT[1]), "celebrate" === cT[0] && (0, UT.jsx)(qc, {
+          className: FT()("Celebrate", {
+            Gold: "house" === cT[1]
           }),
           icon: "star",
-          title: hv("house" === Pv[1] ? "plotsGame:starterLotYourPlot" : "plotsGame:starterLotBriefDone")
-        }, `celebrate-${Pv[1]}`)]
+          title: lT("house" === cT[1] ? "plotsGame:starterLotYourPlot" : "plotsGame:starterLotBriefDone")
+        }, `celebrate-${cT[1]}`)]
       })
     }
 
-    function rP(vv) {
+    function ic(TT) {
       let {
-        step: zv,
-        progress: Pv,
-        goal: hv
-      } = vv;
+        step: kT,
+        progress: cT,
+        goal: lT
+      } = TT;
       const {
-        isTouchScreen: Sv
-      } = (0, pv.i)(["isTouchScreen"]), {
-        t: ev
-      } = (0, Vv.x)(), gv = EP[zv];
-      return (0, Bv.jsxs)(kP, {
-        icon: gv.icon,
-        title: ev(gv.titleKey),
-        children: [(0, Bv.jsx)("div", {
+        isTouchScreen: MT
+      } = (0, yT.n)(["isTouchScreen"]), {
+        t: KT
+      } = (0, JT.B)(), OT = Wc[kT];
+      return (0, UT.jsxs)(qc, {
+        icon: OT.icon,
+        title: KT(OT.titleKey),
+        children: [(0, UT.jsx)("div", {
           className: "PlotsStepCardHint SmallTextLight",
-          children: oP(ev, gv, Sv)
-        }), hv > 1 && (0, Bv.jsx)(BP, {
-          progress: Pv,
-          goal: hv
-        }), "backpack" === zv && Sv && (0, Bv.jsx)(XP, {})]
+          children: nc(KT, OT, MT)
+        }), lT > 1 && (0, UT.jsx)(Yc, {
+          progress: cT,
+          goal: lT
+        }), "backpack" === kT && MT && (0, UT.jsx)(sc, {})]
       })
     }
 
-    function kP(vv) {
+    function qc(TT) {
       let {
-        className: zv,
-        icon: Pv,
-        title: hv,
-        children: Sv
-      } = vv;
-      return (0, Bv.jsxs)("div", {
-        className: fv()("PlotsStepCard", zv),
+        className: kT,
+        icon: cT,
+        title: lT,
+        children: MT
+      } = TT;
+      return (0, UT.jsxs)("div", {
+        className: FT()("PlotsStepCard", kT),
         role: "status",
-        children: [(0, Bv.jsx)("span", {
+        children: [(0, UT.jsx)("span", {
           className: "PlotsStepCardIcon",
-          children: (0, Bv.jsx)(Fv.b, {
-            name: Pv
+          children: (0, UT.jsx)(rT.e, {
+            name: cT
           })
-        }), (0, Bv.jsxs)("div", {
+        }), (0, UT.jsxs)("div", {
           className: "PlotsStepCardBody",
-          children: [(0, Bv.jsx)("div", {
+          children: [(0, UT.jsx)("div", {
             className: "PlotsStepCardTitle SmallTextBold",
-            children: hv
-          }), Sv]
+            children: lT
+          }), MT]
         })]
       })
     }
 
-    function XP() {
-      return (0, ev.useEffect)((() => (pv.c.set({
+    function sc() {
+      return (0, KT.useEffect)((() => (yT.e.set({
         backpackPointerRequested: !0
       }), () => {
-        pv.c.set({
+        yT.e.set({
           backpackPointerRequested: !1
         })
       })), []), null
     }
-    const uP = function(vv, zv, Pv, hv) {
+    const Tl = function(TT, kT, cT, lT) {
       let {
-        localPlayerId: Sv
-      } = hv;
-      const pv = new Tz;
-      let dv = null,
-        Nv = null,
-        lv = null,
-        Tv = null,
-        Wv = null;
-      const wv = [];
+        localPlayerId: MT
+      } = lT;
+      const yT = new Ak;
+      let fT = null,
+        xT = null,
+        IT = null,
+        AT = null,
+        CT = null;
+      const jT = [];
       return {
-        onCreate: vv => {
-          dv = new FP(vv, Sv), Nv = new dP(vv, Sv, dv), lv = new dP(vv, Sv, dv), Tv = new iP(vv, Sv), Wv = new mv(vv, Tv), wv.push((0, gv.w)((0, ev.createElement)(ev.Fragment, null, (0, ev.createElement)(MP, {
-            hud: pv
-          }), (0, ev.createElement)(bP, {
-            hud: pv
-          }), (0, ev.createElement)(wz, {
-            hud: pv,
-            journal: Wv
-          }), (0, ev.createElement)(tP, {
-            placement: Tv
-          }), (0, ev.createElement)(KP, {
-            placement: Tv
+        onCreate: TT => {
+          fT = new Pc(TT, MT), xT = new xc(TT, MT, fT), IT = new xc(TT, MT, fT), AT = new Qc(TT, MT), CT = new DT(TT, AT), jT.push((0, OT.q)((0, KT.createElement)(KT.Fragment, null, (0, KT.createElement)(gc, {
+            hud: yT
+          }), (0, KT.createElement)(pc, {
+            hud: yT
+          }), (0, KT.createElement)(jk, {
+            hud: yT,
+            journal: CT
+          }), (0, KT.createElement)(Vc, {
+            placement: AT
+          }), (0, KT.createElement)(Jc, {
+            placement: AT
           })), {
-            content: (0, ev.createElement)(Sz, {
-              journal: Wv
+            content: (0, KT.createElement)(Mk, {
+              journal: CT
             })
           }))
         },
-        MT: () => {
-          Nv.MT(), lv.MT(), Tv.MT(), Wv.MT()
+        UA: () => {
+          xT.UA(), IT.UA(), AT.UA(), CT.UA()
         },
-        onPlayerAttemptAltAction: (vv, zv, Pv, hv, Sv, ev) => {
-          var gv;
-          if (null !== ev) return;
-          const pv = void 0 === zv ? null : [zv, Pv, hv];
-          return null !== (gv = Nv.attemptAltAction(pv)) && void 0 !== gv ? gv : lv.attemptAltAction(pv)
+        onPlayerAttemptAltAction: (TT, kT, cT, lT, MT, KT) => {
+          var OT;
+          if (null !== KT) return;
+          const yT = void 0 === kT ? null : [kT, cT, lT];
+          return null !== (OT = xT.attemptAltAction(yT)) && void 0 !== OT ? OT : IT.attemptAltAction(yT)
         },
         onPlayerClickUp: () => {
-          Nv.endPress(), lv.endPress()
+          xT.endPress(), IT.endPress()
         },
-        onAfterRender: (vv, zv) => {
-          Tv.afterRender(zv), Nv.afterRender(zv), lv.afterRender(zv)
+        onAfterRender: (TT, kT) => {
+          AT.afterRender(kT), xT.afterRender(kT), IT.afterRender(kT)
         },
         onClose: () => {
-          for (const vv of wv) vv();
-          dv.dispose(), Nv.dispose(), lv.dispose(), Tv.dispose(), dv = null, Nv = null, lv = null, Tv = null, Wv = null
+          for (const TT of jT) TT();
+          fT.dispose(), xT.dispose(), IT.dispose(), AT.dispose(), fT = null, xT = null, IT = null, AT = null, CT = null
         },
-        onReceivedMessageFromServer: (vv, zv) => {
-          if ("plotsStarterLot" === vv) pv.receiveStep(zv);
-          else if ("plotsPlot" === vv) pv.receivePlot(zv);
-          else if ("plotsStarterHouse" === vv) Nv.la(zv);
-          else if ("plotsBlueprint" === vv) {
-            const vv = zv;
-            lv.la(vv), Tv.la(vv)
-          } else "plotsJournal" === vv ? Wv.la(zv) : "plotsJournalOpen" === vv ? Wv.openFromServer() : "plotsPreviewEnd" === vv && Tv.endFromServer()
+        onReceivedMessageFromServer: (TT, kT) => {
+          if ("plotsStarterLot" === TT) yT.receiveStep(kT);
+          else if ("plotsPlot" === TT) yT.receivePlot(kT);
+          else if ("plotsStarterHouse" === TT) xT.Av(kT);
+          else if ("plotsBlueprint" === TT) {
+            const TT = kT;
+            IT.Av(TT), AT.Av(TT)
+          } else "plotsJournal" === TT ? CT.Av(kT) : "plotsJournalOpen" === TT ? CT.openFromServer() : "plotsPreviewEnd" === TT && AT.endFromServer()
         }
       }
     }
   },
-  38669: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => hv,
-      i: () => ev
+  38952: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => lT,
+      f: () => KT
     });
-    const hv = 1 / .6,
-      Sv = {
+    const lT = 1 / .6,
+      MT = {
         kind: "smokePuff"
       };
-    class ev {
-      constructor(vv, zv, Pv) {
-        this.style = vv, this.GT = zv, this.half = Pv, this.particles = null, this.lastFrame = -1
+    class KT {
+      constructor(TT, kT, cT) {
+        this.style = TT, this.DA = kT, this.half = cT, this.particles = null, this.lastFrame = -1
       }
-      emit(vv, zv, Pv) {
-        let ev = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return Pv !== this.lastFrame && (this.lastFrame = Pv, this.particles || (this.particles = vv.createParticles(function(vv, zv) {
+      emit(TT, kT, cT) {
+        let KT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return cT !== this.lastFrame && (this.lastFrame = cT, this.particles || (this.particles = TT.createParticles(function(TT, kT) {
           const [
-            [Pv, ev, gv],
-            [pv, dv, Nv]
-          ] = vv.colours;
+            [cT, KT, OT],
+            [yT, fT, xT]
+          ] = TT.colours;
           return {
-            texture: vv.soft ? Sv : "square_particle",
-            GT: zv,
-            minLifeTime: vv.life[0] / hv,
-            maxLifeTime: vv.life[1] / hv,
-            minEmitPower: vv.power[0] * hv,
-            maxEmitPower: vv.power[1] * hv,
-            minSize: vv.size[0],
-            maxSize: vv.size[1],
+            texture: TT.soft ? MT : "square_particle",
+            DA: kT,
+            minLifeTime: TT.life[0] / lT,
+            maxLifeTime: TT.life[1] / lT,
+            minEmitPower: TT.power[0] * lT,
+            maxEmitPower: TT.power[1] * lT,
+            minSize: TT.size[0],
+            maxSize: TT.size[1],
             emitRate: 0,
-            gravity: [0, vv.lift * hv * hv, 0],
-            dir1: [-vv.spread, 1, -vv.spread],
-            dir2: [vv.spread, 1, vv.spread],
+            gravity: [0, TT.lift * lT * lT, 0],
+            dir1: [-TT.spread, 1, -TT.spread],
+            dir2: [TT.spread, 1, TT.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [Pv, ev, gv, vv.alpha],
-              maxColor: [pv, dv, Nv, vv.alpha]
+              minColor: [cT, KT, OT, TT.alpha],
+              maxColor: [yT, fT, xT, TT.alpha]
             }, {
               timeFraction: 1,
-              minColor: [Pv, ev, gv, 0],
-              maxColor: [pv, dv, Nv, 0]
+              minColor: [cT, KT, OT, 0],
+              maxColor: [yT, fT, xT, 0]
             }],
-            blendMode: vv.blendMode
+            blendMode: TT.blendMode
           }
-        }(this.style, this.GT), {
-          pos: zv,
+        }(this.style, this.DA), {
+          pos: kT,
           half: this.half
-        })), this.particles.moveTo(zv, this.half), this.particles.emit(ev), !0)
+        })), this.particles.moveTo(kT, this.half), this.particles.emit(KT), !0)
       }
       dispose() {
-        var vv;
-        null === (vv = this.particles) || void 0 === vv || vv.stop(), this.particles = null
+        var TT;
+        null === (TT = this.particles) || void 0 === TT || TT.stop(), this.particles = null
       }
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

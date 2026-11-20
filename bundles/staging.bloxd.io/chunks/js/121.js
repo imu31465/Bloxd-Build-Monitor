@@ -1,203 +1,203 @@
 export const id = 121;
 export const ids = [121];
 export const modules = {
-  6276: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => pv
+  6555: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => yT
     });
-    var hv = Pv(1035),
-      Sv = Pv.n(hv),
-      ev = Pv(1175),
-      gv = Pv(1082);
+    var lT = cT(1046),
+      MT = cT.n(lT),
+      KT = cT(1195),
+      OT = cT(1099);
 
-    function pv(vv) {
+    function yT(TT) {
       let {
-        item: zv,
-        className: Pv
-      } = vv;
+        item: kT,
+        className: cT
+      } = TT;
       const {
-        t: hv
-      } = (0, ev.x)();
-      return null === zv.renderId || zv.previewsOutdated ? (0, gv.jsx)("div", {
-        className: Sv()("ShaderPackPreviewsNotice", Pv),
-        children: (0, gv.jsx)("span", {
-          children: hv(null === zv.renderId ? "shaderPackListing:screenshotsNotGenerated" : "shaderPackListing:screenshotsNotRegenerated")
+        t: lT
+      } = (0, KT.B)();
+      return null === kT.renderId || kT.previewsOutdated ? (0, OT.jsx)("div", {
+        className: MT()("ShaderPackPreviewsNotice", cT),
+        children: (0, OT.jsx)("span", {
+          children: lT(null === kT.renderId ? "shaderPackListing:screenshotsNotGenerated" : "shaderPackListing:screenshotsNotRegenerated")
         })
       }) : null
     }
   },
-  6294: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => Nv
+  6567: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => xT
     });
-    var hv = Pv(1035),
-      Sv = Pv.n(hv),
-      ev = Pv(6268),
-      gv = Pv(1175),
-      pv = Pv(6263),
-      dv = Pv(1082);
+    var lT = cT(1046),
+      MT = cT.n(lT),
+      KT = cT(6550),
+      OT = cT(1195),
+      yT = cT(6547),
+      fT = cT(1099);
 
-    function Nv(vv) {
+    function xT(TT) {
       let {
-        selected: zv,
-        onSelect: Pv,
-        imageUrl: hv
-      } = vv;
+        selected: kT,
+        onSelect: cT,
+        imageUrl: lT
+      } = TT;
       const {
-        t: Nv
-      } = (0, gv.x)();
-      return (0, dv.jsx)("div", {
+        t: xT
+      } = (0, OT.B)();
+      return (0, fT.jsx)("div", {
         className: "ShaderPackViewPicker",
-        children: ev.D.map((vv => {
-          const ev = hv(vv);
-          return (0, dv.jsxs)("button", {
+        children: KT.z.map((TT => {
+          const KT = lT(TT);
+          return (0, fT.jsxs)("button", {
             type: "button",
-            "aria-pressed": vv === zv,
-            className: Sv()("ShaderPackViewOption", {
-              Selected: vv === zv
+            "aria-pressed": TT === kT,
+            className: MT()("ShaderPackViewOption", {
+              Selected: TT === kT
             }),
             onClick: () => {
-              Pv(vv)
+              cT(TT)
             },
-            children: [null !== ev && (0, dv.jsx)("img", {
-              src: ev,
+            children: [null !== KT && (0, fT.jsx)("img", {
+              src: KT,
               alt: "",
               loading: "lazy",
               draggable: !1
-            }), (0, dv.jsx)("span", {
+            }), (0, fT.jsx)("span", {
               className: "SmallTextBold",
-              children: Nv(pv.cb[vv])
+              children: xT(yT.db[TT])
             })]
-          }, vv)
+          }, TT)
         }))
       })
     }
   },
-  6278: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => Wv,
-      e: () => wv,
-      h: () => Tv,
-      i: () => av
+  6557: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => CT,
+      f: () => jT,
+      g: () => AT,
+      j: () => vT
     });
-    var hv = Pv(52),
-      Sv = Pv(6268),
-      ev = Pv(1482),
-      gv = Pv(6263),
-      pv = Pv(6287),
-      dv = Pv(1108);
-    const Nv = "shaderPackListingView",
-      lv = "shaderPackListingFilterOpen";
+    var lT = cT(71),
+      MT = cT(6550),
+      KT = cT(1518),
+      OT = cT(6547),
+      yT = cT(6563),
+      fT = cT(1130);
+    const xT = "shaderPackListingView",
+      IT = "shaderPackListingFilterOpen";
 
-    function Tv() {
-      var vv;
-      const [zv, Pv] = (0, pv.d)(Nv, Sv.D[0]);
-      return [null !== (vv = Sv.D.find((vv => vv === zv))) && void 0 !== vv ? vv : Sv.D[0], Pv]
+    function AT() {
+      var TT;
+      const [kT, cT] = (0, yT.e)(xT, MT.z[0]);
+      return [null !== (TT = MT.z.find((TT => TT === kT))) && void 0 !== TT ? TT : MT.z[0], cT]
     }
 
-    function Wv() {
-      (0, hv.useEffect)((() => () => {
-        window.location.pathname.startsWith(gv.O) || (0, gv.l)()
+    function CT() {
+      (0, lT.useEffect)((() => () => {
+        window.location.pathname.startsWith(OT.Q) || (0, OT.k)()
       }), [])
     }
 
-    function wv() {
-      return (0, pv.d)(lv, !1)
+    function jT() {
+      return (0, yT.e)(IT, !1)
     }
 
-    function av() {
+    function vT() {
       const {
-        userContext: vv,
-        isUserContextUpdating: zv
-      } = (0, dv.d)(), [Pv, Sv] = (0, hv.useState)(null), gv = (0, hv.useRef)(new Set);
+        userContext: TT,
+        isUserContextUpdating: kT
+      } = (0, fT.b)(), [cT, MT] = (0, lT.useState)(null), OT = (0, lT.useRef)(new Set);
 
-      function pv(vv, zv) {
-        Sv((Pv => {
-          const hv = new Set(Pv);
-          return zv ? hv.add(vv) : hv.delete(vv), hv
+      function yT(TT, kT) {
+        MT((cT => {
+          const lT = new Set(cT);
+          return kT ? lT.add(TT) : lT.delete(TT), lT
         }))
       }
-      return (0, hv.useEffect)((() => {
-        if (zv) return;
-        let Pv = !1;
-        return ev.e.getFavouriteShaderPacks(vv).then((vv => {
-          Pv || Sv(new Set(vv))
-        })).catch((vv => {
-          console.error("Failed to get favourite shader packs", vv), Pv || Sv(new Set)
+      return (0, lT.useEffect)((() => {
+        if (kT) return;
+        let cT = !1;
+        return KT.d.getFavouriteShaderPacks(TT).then((TT => {
+          cT || MT(new Set(TT))
+        })).catch((TT => {
+          console.error("Failed to get favourite shader packs", TT), cT || MT(new Set)
         })), () => {
-          Pv = !0
+          cT = !0
         }
-      }), [vv, zv]), {
-        isFavourite: vv => null === Pv ? null : Pv.has(vv),
-        toggle: function(zv) {
-          if (null === Pv || gv.current.has(zv)) return;
-          gv.current.add(zv);
-          const hv = !Pv.has(zv);
-          pv(zv, hv), (hv ? ev.e.favouriteShaderPack(vv, zv) : ev.e.unfavouriteShaderPack(vv, zv)).catch((vv => {
-            console.error("Failed to change a favourite shader pack", vv), pv(zv, !hv)
+      }), [TT, kT]), {
+        isFavourite: TT => null === cT ? null : cT.has(TT),
+        toggle: function(kT) {
+          if (null === cT || OT.current.has(kT)) return;
+          OT.current.add(kT);
+          const lT = !cT.has(kT);
+          yT(kT, lT), (lT ? KT.d.favouriteShaderPack(TT, kT) : KT.d.unfavouriteShaderPack(TT, kT)).catch((TT => {
+            console.error("Failed to change a favourite shader pack", TT), yT(kT, !lT)
           })).finally((() => {
-            gv.current.delete(zv)
+            OT.current.delete(kT)
           }))
         }
       }
     }
   },
-  6263: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      B: () => iv,
-      E: () => Dv,
-      H: () => lv,
-      I: () => Vv,
-      J: () => sv,
-      K: () => Zv,
-      L: () => Iv,
-      O: () => gv,
-      R: () => Qv,
-      U: () => dv,
-      W: () => pv,
-      _: () => tv,
-      cb: () => qv,
-      e: () => cv,
-      fb: () => Gv,
-      gb: () => Kv,
-      h: () => nv,
-      k: () => Cv,
-      l: () => Wv,
-      m: () => Tv,
-      n: () => Uv,
-      q: () => wv,
-      u: () => Rv,
-      w: () => Av,
-      y: () => av
+  6547: (TT, kT, cT) => {
+    cT.d(kT, {
+      A: () => IT,
+      D: () => JT,
+      G: () => tT,
+      K: () => uT,
+      O: () => ET,
+      Q: () => OT,
+      R: () => ZT,
+      V: () => fT,
+      Y: () => yT,
+      ab: () => GT,
+      b: () => QT,
+      db: () => VT,
+      f: () => wT,
+      hb: () => ST,
+      j: () => hT,
+      k: () => CT,
+      kb: () => zT,
+      l: () => AT,
+      n: () => oT,
+      r: () => jT,
+      t: () => HT,
+      v: () => XT,
+      w: () => vT,
+      y: () => NT,
+      z: () => bT
     });
-    var hv = Pv(6268),
-      Sv = Pv(144),
-      ev = Pv(4319);
-    const gv = "/shader-packs",
-      pv = `${gv}/publish`;
+    var lT = cT(6550),
+      MT = cT(184),
+      KT = cT(4543);
+    const OT = "/shader-packs",
+      yT = `${OT}/publish`;
 
-    function dv(vv) {
-      return `${gv}/${encodeURIComponent(vv)}`
+    function fT(TT) {
+      return `${OT}/${encodeURIComponent(TT)}`
     }
-    let Nv = null;
+    let xT = null;
 
-    function lv(vv) {
-      Nv = vv
-    }
-
-    function Tv() {
-      return Nv
+    function IT(TT) {
+      xT = TT
     }
 
-    function Wv() {
-      Nv = null
+    function AT() {
+      return xT
     }
 
-    function wv(vv) {
-      return vv.playerHasRank("developer") || vv.playerHasRank("admin")
+    function CT() {
+      xT = null
     }
-    const av = ["terrain", "water", "models", "sunShadows", "strict"],
-      sv = {
+
+    function jT(TT) {
+      return TT.playerHasRank("developer") || TT.playerHasRank("admin")
+    }
+    const vT = ["terrain", "water", "models", "sunShadows", "strict"],
+      tT = {
         terrain: "shaderPackListing:filterTerrain",
         water: "shaderPackListing:filterWater",
         models: "shaderPackListing:filterModels",
@@ -205,89 +205,89 @@ export const modules = {
         strict: "shaderPackListing:filterAllGames"
       };
 
-    function Cv(vv, zv) {
-      return vv.withFeatures.includes(zv) ? "with" : vv.withoutFeatures.includes(zv) ? "without" : null
+    function hT(TT, kT) {
+      return TT.withFeatures.includes(kT) ? "with" : TT.withoutFeatures.includes(kT) ? "without" : null
     }
 
-    function iv(vv) {
-      return null === vv ? "with" : "with" === vv ? "without" : null
+    function NT(TT) {
+      return null === TT ? "with" : "with" === TT ? "without" : null
     }
 
-    function cv(vv) {
-      return "with" === vv ? "only" : null === vv ? "include" : void 0
+    function QT(TT) {
+      return "with" === TT ? "only" : null === TT ? "include" : void 0
     }
 
-    function Gv(vv, zv) {
-      const Pv = Cv(vv, zv),
-        hv = vv => vv.filter((vv => vv !== zv));
+    function ST(TT, kT) {
+      const cT = hT(TT, kT),
+        lT = TT => TT.filter((TT => TT !== kT));
       return {
-        withFeatures: null === Pv ? [...vv.withFeatures, zv] : hv(vv.withFeatures),
-        withoutFeatures: "with" === Pv ? [...vv.withoutFeatures, zv] : hv(vv.withoutFeatures)
+        withFeatures: null === cT ? [...TT.withFeatures, kT] : lT(TT.withFeatures),
+        withoutFeatures: "with" === cT ? [...TT.withoutFeatures, kT] : lT(TT.withoutFeatures)
       }
     }
-    const mv = "section",
-      jv = "sort",
-      fv = "filters",
-      Fv = "q",
-      Yv = "banned",
-      nv = "popular",
-      Ov = "strict";
+    const DT = "section",
+      aT = "sort",
+      FT = "filters",
+      rT = "q",
+      PT = "banned",
+      wT = "popular",
+      mT = "strict";
 
-    function Dv(vv) {
-      var zv, Pv, Sv;
-      const gv = vv.get(mv),
-        pv = (null !== (zv = vv.get(fv)) && void 0 !== zv ? zv : Ov).split(","),
-        dv = vv.get(Yv);
+    function bT(TT) {
+      var kT, cT, MT;
+      const OT = TT.get(DT),
+        yT = (null !== (kT = TT.get(FT)) && void 0 !== kT ? kT : mT).split(","),
+        fT = TT.get(PT);
       return {
-        section: "favourites" === gv || "mine" === gv ? gv : "explore",
-        sort: null !== (Pv = hv.z.find((zv => zv === vv.get(jv)))) && void 0 !== Pv ? Pv : nv,
-        withFeatures: av.filter((vv => pv.includes(vv) && !pv.includes(`-${vv}`))),
-        withoutFeatures: av.filter((vv => pv.includes(`-${vv}`))),
-        searchQuery: (null === (Sv = vv.get(Fv)) || void 0 === Sv ? void 0 : Sv.slice(0, hv.I)) || null,
-        pageNumber: (0, ev.f)(vv.get(ev.d)),
-        banned: "only" === dv ? "with" : "include" === dv ? null : "without"
+        section: "favourites" === OT || "mine" === OT ? OT : "explore",
+        sort: null !== (cT = lT.r.find((kT => kT === TT.get(aT)))) && void 0 !== cT ? cT : wT,
+        withFeatures: vT.filter((TT => yT.includes(TT) && !yT.includes(`-${TT}`))),
+        withoutFeatures: vT.filter((TT => yT.includes(`-${TT}`))),
+        searchQuery: (null === (MT = TT.get(rT)) || void 0 === MT ? void 0 : MT.slice(0, lT.C)) || null,
+        pageNumber: (0, KT.f)(TT.get(KT.d)),
+        banned: "only" === fT ? "with" : "include" === fT ? null : "without"
       }
     }
 
-    function Kv(vv, zv) {
-      var Pv;
-      const hv = xv(zv);
-      (0, ev.j)(vv, mv, "explore" === zv.section ? null : zv.section), (0, ev.j)(vv, jv, zv.sort === nv ? null : zv.sort), (0, ev.j)(vv, fv, hv === Ov ? null : hv), (0, ev.j)(vv, Fv, zv.searchQuery), (0, ev.j)(vv, Yv, null !== (Pv = cv(zv.banned)) && void 0 !== Pv ? Pv : null), (0, ev.n)(vv, zv.pageNumber)
+    function zT(TT, kT) {
+      var cT;
+      const lT = eT(kT);
+      (0, KT.g)(TT, DT, "explore" === kT.section ? null : kT.section), (0, KT.g)(TT, aT, kT.sort === wT ? null : kT.sort), (0, KT.g)(TT, FT, lT === mT ? null : lT), (0, KT.g)(TT, rT, kT.searchQuery), (0, KT.g)(TT, PT, null !== (cT = QT(kT.banned)) && void 0 !== cT ? cT : null), (0, KT.k)(TT, kT.pageNumber)
     }
 
-    function Vv(vv) {
-      const zv = new URLSearchParams;
-      return Kv(zv, {
+    function JT(TT) {
+      const kT = new URLSearchParams;
+      return zT(kT, {
         section: "explore",
-        sort: nv,
-        withFeatures: "strict" === vv ? [vv] : [vv, "strict"],
+        sort: wT,
+        withFeatures: "strict" === TT ? [TT] : [TT, "strict"],
         withoutFeatures: [],
         searchQuery: null,
         pageNumber: 1,
         banned: "without"
-      }), `${gv}?${zv.toString()}`
+      }), `${OT}?${kT.toString()}`
     }
 
-    function Uv(vv) {
-      return xv(vv) === Ov
+    function oT(TT) {
+      return eT(TT) === mT
     }
 
-    function Rv(vv) {
-      return null !== vv.searchQuery || "with" === vv.banned || xv(vv) !== Ov
+    function HT(TT) {
+      return null !== TT.searchQuery || "with" === TT.banned || eT(TT) !== mT
     }
 
-    function xv(vv) {
-      return av.flatMap((zv => {
-        const Pv = Cv(vv, zv);
-        return "with" === Pv ? [zv] : "without" === Pv ? [`-${zv}`] : []
+    function eT(TT) {
+      return vT.flatMap((kT => {
+        const cT = hT(TT, kT);
+        return "with" === cT ? [kT] : "without" === cT ? [`-${kT}`] : []
       })).join(",")
     }
-    const tv = {
+    const GT = {
         popular: "shaderPackListing:sortPopular",
         updated: "shaderPackListing:sortUpdated",
         newest: "shaderPackListing:sortNewest"
       },
-      qv = {
+      VT = {
         forest: "shaderPackListing:viewForest",
         desert: "shaderPackListing:viewDesert",
         water: "shaderPackListing:viewWater",
@@ -295,93 +295,93 @@ export const modules = {
         cave: "shaderPackListing:viewCave"
       };
 
-    function Iv(vv) {
-      return Math.round(100 * Math.max(0, 1 - 1 / vv))
+    function ET(TT) {
+      return Math.round(100 * Math.max(0, 1 - 1 / TT))
     }
 
-    function Qv(vv, zv, Pv, Sv) {
-      const ev = [];
-      vv.isBanned && ev.push({
+    function ZT(TT, kT, cT, MT) {
+      const KT = [];
+      TT.isBanned && KT.push({
         tone: "warning",
-        text: Sv("shaderPackListing:ownerBanned"),
+        text: MT("shaderPackListing:ownerBanned"),
         detail: null
       });
       const {
-        pending: gv
-      } = vv;
-      if (null === vv.brokenError || gv && !gv.error || ev.push({
+        pending: OT
+      } = TT;
+      if (null === TT.brokenError || OT && !OT.error || KT.push({
           tone: "warning",
-          text: Sv("shaderPackListing:ownerBroken"),
-          detail: vv.brokenError
-        }), null !== gv && void 0 !== gv && gv.error) ev.push({
+          text: MT("shaderPackListing:ownerBroken"),
+          detail: TT.brokenError
+        }), null !== OT && void 0 !== OT && OT.error) KT.push({
         tone: "warning",
-        text: Sv(zv ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, hv.k)(gv.error) ? null : gv.error
+        text: MT(kT ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, lT.f)(OT.error) ? null : OT.error
       });
-      else if (gv) {
-        const vv = null === gv.renderNotBefore ? 0 : gv.renderNotBefore - Pv,
-          hv = String(Math.ceil(vv / 6e4)),
-          pv = Sv(zv ? vv > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : vv > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: hv
+      else if (OT) {
+        const TT = null === OT.renderNotBefore ? 0 : OT.renderNotBefore - cT,
+          lT = String(Math.ceil(TT / 6e4)),
+          yT = MT(kT ? TT > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : TT > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: lT
           });
-        ev.push({
+        KT.push({
           tone: "info",
-          text: pv,
+          text: yT,
           detail: null
         })
       }
-      return vv.listed || ev.push({
+      return TT.listed || KT.push({
         tone: "info",
-        text: Sv("shaderPackListing:ownerUnlisted"),
+        text: MT("shaderPackListing:ownerUnlisted"),
         detail: null
-      }), ev
+      }), KT
     }
 
-    function Zv(vv) {
-      return Math.max(1, Math.round(vv / 1024))
+    function uT(TT) {
+      return Math.max(1, Math.round(TT / 1024))
     }
 
-    function Av(vv, zv, Pv) {
-      return vv instanceof Sv.c && vv.errorMessageForUser ? vv.errorMessageForUser : zv(Pv)
+    function XT(TT, kT, cT) {
+      return TT instanceof MT.c && TT.errorMessageForUser ? TT.errorMessageForUser : kT(cT)
     }
   },
-  6287: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => ev
+  6563: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => KT
     });
-    var hv = Pv(52),
-      Sv = Pv(39);
+    var lT = cT(71),
+      MT = cT(47);
 
-    function ev(vv, zv) {
-      var Pv;
-      const [ev, gv] = (0, hv.useState)(null !== (Pv = Sv.h.getItem(vv)) && void 0 !== Pv ? Pv : zv);
-      return [ev, zv => {
-        Sv.h.setItem(vv, zv), gv(zv)
+    function KT(TT, kT) {
+      var cT;
+      const [KT, OT] = (0, lT.useState)(null !== (cT = MT.e.getItem(TT)) && void 0 !== cT ? cT : kT);
+      return [KT, kT => {
+        MT.e.setItem(TT, kT), OT(kT)
       }]
     }
   },
-  6268: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      A: () => pv,
-      B: () => gv,
-      D: () => hv,
-      G: () => Wv,
-      I: () => lv,
-      L: () => Gv,
-      N: () => Tv,
-      R: () => Nv,
-      c: () => wv,
-      f: () => sv,
-      h: () => av,
-      k: () => cv,
-      o: () => jv,
-      q: () => dv,
-      t: () => Sv,
-      v: () => mv,
-      z: () => ev
+  6550: (TT, kT, cT) => {
+    cT.d(kT, {
+      A: () => CT,
+      C: () => IT,
+      D: () => ST,
+      H: () => AT,
+      L: () => xT,
+      b: () => jT,
+      c: () => tT,
+      e: () => vT,
+      f: () => QT,
+      i: () => aT,
+      m: () => fT,
+      o: () => MT,
+      q: () => DT,
+      r: () => KT,
+      v: () => yT,
+      w: () => OT,
+      z: () => lT
     });
-    const hv = ["forest", "desert", "water", "night", "cave"];
-    const Sv = {
+    const lT = ["forest", "desert", "water", "night", "cave"];
+    const MT = {
         full: {
           width: 3840,
           height: 2160
@@ -395,43 +395,43 @@ export const modules = {
           height: 360
         }
       },
-      ev = ["popular", "updated", "newest"],
-      gv = 3,
-      pv = 32,
-      dv = 300;
+      KT = ["popular", "updated", "newest"],
+      OT = 3,
+      yT = 32,
+      fT = 300;
 
-    function Nv(vv, zv) {
-      return vv.slice(0, zv).replace(/[\uD800-\uDBFF]$/, "")
+    function xT(TT, kT) {
+      return TT.slice(0, kT).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const lv = 64,
-      Tv = 512,
-      Wv = 18e5;
-    const wv = "Bloxdhub",
-      av = "https://bloxdhub.com/shaders";
+    const IT = 64,
+      AT = 512,
+      CT = 18e5;
+    const jT = "Bloxdhub",
+      vT = "https://bloxdhub.com/shaders";
 
-    function sv(vv) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(vv)}`
+    function tT(TT) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(TT)}`
     }
-    const Cv = "Screenshot generation failed.",
-      iv = "Its screenshots couldn't be generated:";
+    const hT = "Screenshot generation failed.",
+      NT = "Its screenshots couldn't be generated:";
 
-    function cv(vv) {
-      var zv;
-      return vv === Cv || null !== (zv = null === vv || void 0 === vv ? void 0 : vv.startsWith(iv)) && void 0 !== zv && zv
-    }
-
-    function Gv(vv, zv) {
-      return `shaderPacks/${vv}/${zv}.json`
+    function QT(TT) {
+      var kT;
+      return TT === hT || null !== (kT = null === TT || void 0 === TT ? void 0 : TT.startsWith(NT)) && void 0 !== kT && kT
     }
 
-    function mv(vv, zv, Pv, hv) {
-      return null === zv.renderId ? jv(vv, zv.baselineVersion, Pv, hv) : `${vv}/${function(vv,zv,Pv,hv){return`shaderPacks/${vv}/${zv}/${Pv}-${hv}.webp`}(zv.packId,zv.renderId,Pv,hv)}`
+    function ST(TT, kT) {
+      return `shaderPacks/${TT}/${kT}.json`
     }
 
-    function jv(vv, zv, Pv, hv) {
-      return `${vv}/${function(vv,zv,Pv){return`shaderPacks/baseline/${vv}/${zv}-${Pv}.webp`}(zv,Pv,hv)}`
+    function DT(TT, kT, cT, lT) {
+      return null === kT.renderId ? aT(TT, kT.baselineVersion, cT, lT) : `${TT}/${function(TT,kT,cT,lT){return`shaderPacks/${TT}/${kT}/${cT}-${lT}.webp`}(kT.packId,kT.renderId,cT,lT)}`
+    }
+
+    function aT(TT, kT, cT, lT) {
+      return `${TT}/${function(TT,kT,cT){return`shaderPacks/baseline/${TT}/${kT}-${cT}.webp`}(kT,cT,lT)}`
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

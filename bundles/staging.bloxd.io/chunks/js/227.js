@@ -1,39 +1,39 @@
 export const id = 227;
 export const ids = [227];
 export const modules = {
-  36751: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => Tv,
-      e: () => Wv,
-      h: () => sv,
-      k: () => wv
+  37093: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => AT,
+      g: () => CT,
+      j: () => tT,
+      k: () => jT
     });
-    var hv = Pv(36602),
-      Sv = Pv(36599),
-      ev = Pv(36620),
-      gv = Pv(36631);
+    var lT = cT(36910),
+      MT = cT(36901),
+      KT = cT(36937),
+      OT = cT(36949);
 
-    function pv(vv) {
-      return Math.pow(vv, Sv.h)
+    function yT(TT) {
+      return Math.pow(TT, MT.g)
     }
 
-    function dv(vv) {
-      return vv <= .04045 ? .0773993808 * vv : Math.pow(.947867299 * (vv + .055), 2.4)
+    function fT(TT) {
+      return TT <= .04045 ? .0773993808 * TT : Math.pow(.947867299 * (TT + .055), 2.4)
     }
 
-    function Nv(vv) {
-      return Math.pow(vv, Sv.g)
+    function xT(TT) {
+      return Math.pow(TT, MT.c)
     }
 
-    function lv(vv) {
-      return vv <= .0031308 ? 12.92 * vv : 1.055 * Math.pow(vv, .41666) - .055
+    function IT(TT) {
+      return TT <= .0031308 ? 12.92 * TT : 1.055 * Math.pow(TT, .41666) - .055
     }
-    class Tv {
+    class AT {
       constructor() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.r = vv, this.g = zv, this.b = Pv
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.r = TT, this.g = kT, this.b = cT
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + "}"
@@ -42,416 +42,416 @@ export const modules = {
         return "Color3"
       }
       getHashCode() {
-        let vv = 255 * this.r | 0;
-        return vv = 397 * vv ^ 255 * this.g, vv = 397 * vv ^ 255 * this.b, vv
+        let TT = 255 * this.r | 0;
+        return TT = 397 * TT ^ 255 * this.g, TT = 397 * TT ^ 255 * this.b, TT
       }
-      toArray(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return vv[zv] = this.r, vv[zv + 1] = this.g, vv[zv + 2] = this.b, this
+      toArray(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return TT[kT] = this.r, TT[kT + 1] = this.g, TT[kT + 2] = this.b, this
       }
-      Evv(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return Tv.FromArrayToRef(vv, zv, this), this
+      xkT(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return AT.FromArrayToRef(TT, kT, this), this
       }
       toColor4() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-        return new Wv(this.r, this.g, this.b, vv)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+        return new CT(this.r, this.g, this.b, TT)
       }
-      pPv() {
+      acT() {
         return [this.r, this.g, this.b]
       }
       toLuminance() {
         return .3 * this.r + .59 * this.g + .11 * this.b
       }
-      multiply(vv) {
-        return new Tv(this.r * vv.r, this.g * vv.g, this.b * vv.b)
+      multiply(TT) {
+        return new AT(this.r * TT.r, this.g * TT.g, this.b * TT.b)
       }
-      multiplyToRef(vv, zv) {
-        return zv.r = this.r * vv.r, zv.g = this.g * vv.g, zv.b = this.b * vv.b, zv
+      multiplyToRef(TT, kT) {
+        return kT.r = this.r * TT.r, kT.g = this.g * TT.g, kT.b = this.b * TT.b, kT
       }
-      multiplyInPlace(vv) {
-        return this.r *= vv.r, this.g *= vv.g, this.b *= vv.b, this
+      multiplyInPlace(TT) {
+        return this.r *= TT.r, this.g *= TT.g, this.b *= TT.b, this
       }
-      multiplyByFloats(vv, zv, Pv) {
-        return new Tv(this.r * vv, this.g * zv, this.b * Pv)
+      multiplyByFloats(TT, kT, cT) {
+        return new AT(this.r * TT, this.g * kT, this.b * cT)
       }
-      divide(vv) {
+      divide(TT) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(vv, zv) {
+      divideToRef(TT, kT) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideInPlace(vv) {
+      divideInPlace(TT) {
         throw new ReferenceError("Can not divide a color")
       }
-      minimizeInPlace(vv) {
-        return this.minimizeInPlaceFromFloats(vv.r, vv.g, vv.b)
+      minimizeInPlace(TT) {
+        return this.minimizeInPlaceFromFloats(TT.r, TT.g, TT.b)
       }
-      maximizeInPlace(vv) {
-        return this.maximizeInPlaceFromFloats(vv.r, vv.g, vv.b)
+      maximizeInPlace(TT) {
+        return this.maximizeInPlaceFromFloats(TT.r, TT.g, TT.b)
       }
-      minimizeInPlaceFromFloats(vv, zv, Pv) {
-        return this.r = Math.min(vv, this.r), this.g = Math.min(zv, this.g), this.b = Math.min(Pv, this.b), this
+      minimizeInPlaceFromFloats(TT, kT, cT) {
+        return this.r = Math.min(TT, this.r), this.g = Math.min(kT, this.g), this.b = Math.min(cT, this.b), this
       }
-      maximizeInPlaceFromFloats(vv, zv, Pv) {
-        return this.r = Math.max(vv, this.r), this.g = Math.max(zv, this.g), this.b = Math.max(Pv, this.b), this
+      maximizeInPlaceFromFloats(TT, kT, cT) {
+        return this.r = Math.max(TT, this.r), this.g = Math.max(kT, this.g), this.b = Math.max(cT, this.b), this
       }
-      floorToRef(vv) {
+      floorToRef(TT) {
         throw new ReferenceError("Can not floor a color")
       }
       floor() {
         throw new ReferenceError("Can not floor a color")
       }
-      fractToRef(vv) {
+      fractToRef(TT) {
         throw new ReferenceError("Can not fract a color")
       }
       fract() {
         throw new ReferenceError("Can not fract a color")
       }
-      equals(vv) {
-        return vv && this.r === vv.r && this.g === vv.g && this.b === vv.b
+      equals(TT) {
+        return TT && this.r === TT.r && this.g === TT.g && this.b === TT.b
       }
-      equalsFloats(vv, zv, Pv) {
-        return this.Mev(vv, zv, Pv)
+      equalsFloats(TT, kT, cT) {
+        return this.qKT(TT, kT, cT)
       }
-      Mev(vv, zv, Pv) {
-        return this.r === vv && this.g === zv && this.b === Pv
+      qKT(TT, kT, cT) {
+        return this.r === TT && this.g === kT && this.b === cT
       }
-      equalsWithEpsilon(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Sv.e;
-        return (0, ev.WithinEpsilon)(this.r, vv.r, zv) && (0, ev.WithinEpsilon)(this.g, vv.g, zv) && (0, ev.WithinEpsilon)(this.b, vv.b, zv)
+      equalsWithEpsilon(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : MT.b;
+        return (0, KT.WithinEpsilon)(this.r, TT.r, kT) && (0, KT.WithinEpsilon)(this.g, TT.g, kT) && (0, KT.WithinEpsilon)(this.b, TT.b, kT)
       }
-      Re() {
+      rc() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
         throw new ReferenceError("Can not negate a color")
       }
-      negateToRef(vv) {
+      negateToRef(TT) {
         throw new ReferenceError("Can not negate a color")
       }
-      scale(vv) {
-        return new Tv(this.r * vv, this.g * vv, this.b * vv)
+      scale(TT) {
+        return new AT(this.r * TT, this.g * TT, this.b * TT)
       }
-      scaleInPlace(vv) {
-        return this.r *= vv, this.g *= vv, this.b *= vv, this
+      scaleInPlace(TT) {
+        return this.r *= TT, this.g *= TT, this.b *= TT, this
       }
-      scaleToRef(vv, zv) {
-        return zv.r = this.r * vv, zv.g = this.g * vv, zv.b = this.b * vv, zv
+      scaleToRef(TT, kT) {
+        return kT.r = this.r * TT, kT.g = this.g * TT, kT.b = this.b * TT, kT
       }
-      scaleAndAddToRef(vv, zv) {
-        return zv.r += this.r * vv, zv.g += this.g * vv, zv.b += this.b * vv, zv
+      scaleAndAddToRef(TT, kT) {
+        return kT.r += this.r * TT, kT.g += this.g * TT, kT.b += this.b * TT, kT
       }
       clampToRef() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          Pv = arguments.length > 2 ? arguments[2] : void 0;
-        return Pv.r = (0, ev.Clamp)(this.r, vv, zv), Pv.g = (0, ev.Clamp)(this.g, vv, zv), Pv.b = (0, ev.Clamp)(this.b, vv, zv), Pv
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          cT = arguments.length > 2 ? arguments[2] : void 0;
+        return cT.r = (0, KT.Clamp)(this.r, TT, kT), cT.g = (0, KT.Clamp)(this.g, TT, kT), cT.b = (0, KT.Clamp)(this.b, TT, kT), cT
       }
-      add(vv) {
-        return new Tv(this.r + vv.r, this.g + vv.g, this.b + vv.b)
+      add(TT) {
+        return new AT(this.r + TT.r, this.g + TT.g, this.b + TT.b)
       }
-      addInPlace(vv) {
-        return this.r += vv.r, this.g += vv.g, this.b += vv.b, this
+      addInPlace(TT) {
+        return this.r += TT.r, this.g += TT.g, this.b += TT.b, this
       }
-      addInPlaceFromFloats(vv, zv, Pv) {
-        return this.r += vv, this.g += zv, this.b += Pv, this
+      addInPlaceFromFloats(TT, kT, cT) {
+        return this.r += TT, this.g += kT, this.b += cT, this
       }
-      addToRef(vv, zv) {
-        return zv.r = this.r + vv.r, zv.g = this.g + vv.g, zv.b = this.b + vv.b, zv
+      addToRef(TT, kT) {
+        return kT.r = this.r + TT.r, kT.g = this.g + TT.g, kT.b = this.b + TT.b, kT
       }
-      subtract(vv) {
-        return new Tv(this.r - vv.r, this.g - vv.g, this.b - vv.b)
+      subtract(TT) {
+        return new AT(this.r - TT.r, this.g - TT.g, this.b - TT.b)
       }
-      subtractToRef(vv, zv) {
-        return zv.r = this.r - vv.r, zv.g = this.g - vv.g, zv.b = this.b - vv.b, zv
+      subtractToRef(TT, kT) {
+        return kT.r = this.r - TT.r, kT.g = this.g - TT.g, kT.b = this.b - TT.b, kT
       }
-      VPv(vv) {
-        return this.r -= vv.r, this.g -= vv.g, this.b -= vv.b, this
+      gcT(TT) {
+        return this.r -= TT.r, this.g -= TT.g, this.b -= TT.b, this
       }
-      subtractFromFloats(vv, zv, Pv) {
-        return new Tv(this.r - vv, this.g - zv, this.b - Pv)
+      subtractFromFloats(TT, kT, cT) {
+        return new AT(this.r - TT, this.g - kT, this.b - cT)
       }
-      subtractFromFloatsToRef(vv, zv, Pv, hv) {
-        return hv.r = this.r - vv, hv.g = this.g - zv, hv.b = this.b - Pv, hv
+      subtractFromFloatsToRef(TT, kT, cT, lT) {
+        return lT.r = this.r - TT, lT.g = this.g - kT, lT.b = this.b - cT, lT
       }
       clone() {
-        return new Tv(this.r, this.g, this.b)
+        return new AT(this.r, this.g, this.b)
       }
-      Vzv(vv) {
-        return this.r = vv.r, this.g = vv.g, this.b = vv.b, this
+      UkT(TT) {
+        return this.r = TT.r, this.g = TT.g, this.b = TT.b, this
       }
-      f_(vv, zv, Pv) {
-        return this.r = vv, this.g = zv, this.b = Pv, this
+      I5(TT, kT, cT) {
+        return this.r = TT, this.g = kT, this.b = cT, this
       }
-      set(vv, zv, Pv) {
-        return this.f_(vv, zv, Pv)
+      set(TT, kT, cT) {
+        return this.I5(TT, kT, cT)
       }
-      Dk(vv) {
-        return this.r = this.g = this.b = vv, this
+      Xs(TT) {
+        return this.r = this.g = this.b = TT, this
       }
       toHexString() {
-        const vv = Math.round(255 * this.r),
-          zv = Math.round(255 * this.g),
-          Pv = Math.round(255 * this.b);
-        return "#" + (0, ev.ToHex)(vv) + (0, ev.ToHex)(zv) + (0, ev.ToHex)(Pv)
+        const TT = Math.round(255 * this.r),
+          kT = Math.round(255 * this.g),
+          cT = Math.round(255 * this.b);
+        return "#" + (0, KT.ToHex)(TT) + (0, KT.ToHex)(kT) + (0, KT.ToHex)(cT)
       }
-      fromHexString(vv) {
-        return "#" !== vv.substring(0, 1) || 7 !== vv.length || (this.r = parseInt(vv.substring(1, 3), 16) / 255, this.g = parseInt(vv.substring(3, 5), 16) / 255, this.b = parseInt(vv.substring(5, 7), 16) / 255), this
+      fromHexString(TT) {
+        return "#" !== TT.substring(0, 1) || 7 !== TT.length || (this.r = parseInt(TT.substring(1, 3), 16) / 255, this.g = parseInt(TT.substring(3, 5), 16) / 255, this.b = parseInt(TT.substring(5, 7), 16) / 255), this
       }
       toHSV() {
-        return this.toHSVToRef(new Tv)
+        return this.toHSVToRef(new AT)
       }
-      toHSVToRef(vv) {
-        const zv = this.r,
-          Pv = this.g,
-          hv = this.b,
-          Sv = Math.max(zv, Pv, hv),
-          ev = Math.min(zv, Pv, hv);
-        let gv = 0,
-          pv = 0;
-        const dv = Sv,
-          Nv = Sv - ev;
-        return 0 !== Sv && (pv = Nv / Sv), Sv != ev && (Sv == zv ? (gv = (Pv - hv) / Nv, Pv < hv && (gv += 6)) : Sv == Pv ? gv = (hv - zv) / Nv + 2 : Sv == hv && (gv = (zv - Pv) / Nv + 4), gv *= 60), vv.r = gv, vv.g = pv, vv.b = dv, vv
+      toHSVToRef(TT) {
+        const kT = this.r,
+          cT = this.g,
+          lT = this.b,
+          MT = Math.max(kT, cT, lT),
+          KT = Math.min(kT, cT, lT);
+        let OT = 0,
+          yT = 0;
+        const fT = MT,
+          xT = MT - KT;
+        return 0 !== MT && (yT = xT / MT), MT != KT && (MT == kT ? (OT = (cT - lT) / xT, cT < lT && (OT += 6)) : MT == cT ? OT = (lT - kT) / xT + 2 : MT == lT && (OT = (kT - cT) / xT + 4), OT *= 60), TT.r = OT, TT.g = yT, TT.b = fT, TT
       }
       toLinearSpace() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const zv = new Tv;
-        return this.toLinearSpaceToRef(zv, vv), zv
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const kT = new AT;
+        return this.toLinearSpaceToRef(kT, TT), kT
       }
-      toLinearSpaceToRef(vv) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (vv.r = dv(this.r), vv.g = dv(this.g), vv.b = dv(this.b)) : (vv.r = pv(this.r), vv.g = pv(this.g), vv.b = pv(this.b)), this
+      toLinearSpaceToRef(TT) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (TT.r = fT(this.r), TT.g = fT(this.g), TT.b = fT(this.b)) : (TT.r = yT(this.r), TT.g = yT(this.g), TT.b = yT(this.b)), this
       }
       toGammaSpace() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const zv = new Tv;
-        return this.toGammaSpaceToRef(zv, vv), zv
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const kT = new AT;
+        return this.toGammaSpaceToRef(kT, TT), kT
       }
-      toGammaSpaceToRef(vv) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (vv.r = lv(this.r), vv.g = lv(this.g), vv.b = lv(this.b)) : (vv.r = Nv(this.r), vv.g = Nv(this.g), vv.b = Nv(this.b)), this
+      toGammaSpaceToRef(TT) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (TT.r = IT(this.r), TT.g = IT(this.g), TT.b = IT(this.b)) : (TT.r = xT(this.r), TT.g = xT(this.g), TT.b = xT(this.b)), this
       }
-      static HSVtoRGBToRef(vv, zv, Pv, hv) {
-        const Sv = Pv * zv,
-          ev = vv / 60,
-          gv = Sv * (1 - Math.abs(ev % 2 - 1));
-        let pv = 0,
-          dv = 0,
-          Nv = 0;
-        ev >= 0 && ev <= 1 ? (pv = Sv, dv = gv) : ev >= 1 && ev <= 2 ? (pv = gv, dv = Sv) : ev >= 2 && ev <= 3 ? (dv = Sv, Nv = gv) : ev >= 3 && ev <= 4 ? (dv = gv, Nv = Sv) : ev >= 4 && ev <= 5 ? (pv = gv, Nv = Sv) : ev >= 5 && ev <= 6 && (pv = Sv, Nv = gv);
-        const lv = Pv - Sv;
-        return hv.r = pv + lv, hv.g = dv + lv, hv.b = Nv + lv, hv
+      static HSVtoRGBToRef(TT, kT, cT, lT) {
+        const MT = cT * kT,
+          KT = TT / 60,
+          OT = MT * (1 - Math.abs(KT % 2 - 1));
+        let yT = 0,
+          fT = 0,
+          xT = 0;
+        KT >= 0 && KT <= 1 ? (yT = MT, fT = OT) : KT >= 1 && KT <= 2 ? (yT = OT, fT = MT) : KT >= 2 && KT <= 3 ? (fT = MT, xT = OT) : KT >= 3 && KT <= 4 ? (fT = OT, xT = MT) : KT >= 4 && KT <= 5 ? (yT = OT, xT = MT) : KT >= 5 && KT <= 6 && (yT = MT, xT = OT);
+        const IT = cT - MT;
+        return lT.r = yT + IT, lT.g = fT + IT, lT.b = xT + IT, lT
       }
-      static FromHSV(vv, zv, Pv) {
-        const hv = new Tv(0, 0, 0);
-        return Tv.HSVtoRGBToRef(vv, zv, Pv, hv), hv
+      static FromHSV(TT, kT, cT) {
+        const lT = new AT(0, 0, 0);
+        return AT.HSVtoRGBToRef(TT, kT, cT, lT), lT
       }
-      static FromHexString(vv) {
-        return new Tv(0, 0, 0).fromHexString(vv)
+      static FromHexString(TT) {
+        return new AT(0, 0, 0).fromHexString(TT)
       }
-      static FromArray(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new Tv(vv[zv], vv[zv + 1], vv[zv + 2])
+      static FromArray(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new AT(TT[kT], TT[kT + 1], TT[kT + 2])
       }
-      static FromArrayToRef(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          Pv = arguments.length > 2 ? arguments[2] : void 0;
-        Pv.r = vv[zv], Pv.g = vv[zv + 1], Pv.b = vv[zv + 2]
+      static FromArrayToRef(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          cT = arguments.length > 2 ? arguments[2] : void 0;
+        cT.r = TT[kT], cT.g = TT[kT + 1], cT.b = TT[kT + 2]
       }
-      static FromInts(vv, zv, Pv) {
-        return new Tv(vv / 255, zv / 255, Pv / 255)
+      static FromInts(TT, kT, cT) {
+        return new AT(TT / 255, kT / 255, cT / 255)
       }
-      static Lerp(vv, zv, Pv) {
-        const hv = new Tv(0, 0, 0);
-        return Tv.LerpToRef(vv, zv, Pv, hv), hv
+      static Lerp(TT, kT, cT) {
+        const lT = new AT(0, 0, 0);
+        return AT.LerpToRef(TT, kT, cT, lT), lT
       }
-      static LerpToRef(vv, zv, Pv, hv) {
-        hv.r = vv.r + (zv.r - vv.r) * Pv, hv.g = vv.g + (zv.g - vv.g) * Pv, hv.b = vv.b + (zv.b - vv.b) * Pv
+      static LerpToRef(TT, kT, cT, lT) {
+        lT.r = TT.r + (kT.r - TT.r) * cT, lT.g = TT.g + (kT.g - TT.g) * cT, lT.b = TT.b + (kT.b - TT.b) * cT
       }
-      static Hermite(vv, zv, Pv, hv, Sv) {
-        const ev = Sv * Sv,
-          gv = Sv * ev,
-          pv = 2 * gv - 3 * ev + 1,
-          dv = -2 * gv + 3 * ev,
-          Nv = gv - 2 * ev + Sv,
-          lv = gv - ev,
-          Wv = vv.r * pv + Pv.r * dv + zv.r * Nv + hv.r * lv,
-          wv = vv.g * pv + Pv.g * dv + zv.g * Nv + hv.g * lv,
-          av = vv.b * pv + Pv.b * dv + zv.b * Nv + hv.b * lv;
-        return new Tv(Wv, wv, av)
+      static Hermite(TT, kT, cT, lT, MT) {
+        const KT = MT * MT,
+          OT = MT * KT,
+          yT = 2 * OT - 3 * KT + 1,
+          fT = -2 * OT + 3 * KT,
+          xT = OT - 2 * KT + MT,
+          IT = OT - KT,
+          CT = TT.r * yT + cT.r * fT + kT.r * xT + lT.r * IT,
+          jT = TT.g * yT + cT.g * fT + kT.g * xT + lT.g * IT,
+          vT = TT.b * yT + cT.b * fT + kT.b * xT + lT.b * IT;
+        return new AT(CT, jT, vT)
       }
-      static Hermite1stDerivative(vv, zv, Pv, hv, Sv) {
-        const ev = Tv.Black();
-        return this.Hermite1stDerivativeToRef(vv, zv, Pv, hv, Sv, ev), ev
+      static Hermite1stDerivative(TT, kT, cT, lT, MT) {
+        const KT = AT.Black();
+        return this.Hermite1stDerivativeToRef(TT, kT, cT, lT, MT, KT), KT
       }
-      static Hermite1stDerivativeToRef(vv, zv, Pv, hv, Sv, ev) {
-        const gv = Sv * Sv;
-        ev.r = 6 * (gv - Sv) * vv.r + (3 * gv - 4 * Sv + 1) * zv.r + 6 * (-gv + Sv) * Pv.r + (3 * gv - 2 * Sv) * hv.r, ev.g = 6 * (gv - Sv) * vv.g + (3 * gv - 4 * Sv + 1) * zv.g + 6 * (-gv + Sv) * Pv.g + (3 * gv - 2 * Sv) * hv.g, ev.b = 6 * (gv - Sv) * vv.b + (3 * gv - 4 * Sv + 1) * zv.b + 6 * (-gv + Sv) * Pv.b + (3 * gv - 2 * Sv) * hv.b
+      static Hermite1stDerivativeToRef(TT, kT, cT, lT, MT, KT) {
+        const OT = MT * MT;
+        KT.r = 6 * (OT - MT) * TT.r + (3 * OT - 4 * MT + 1) * kT.r + 6 * (-OT + MT) * cT.r + (3 * OT - 2 * MT) * lT.r, KT.g = 6 * (OT - MT) * TT.g + (3 * OT - 4 * MT + 1) * kT.g + 6 * (-OT + MT) * cT.g + (3 * OT - 2 * MT) * lT.g, KT.b = 6 * (OT - MT) * TT.b + (3 * OT - 4 * MT + 1) * kT.b + 6 * (-OT + MT) * cT.b + (3 * OT - 2 * MT) * lT.b
       }
       static Red() {
-        return new Tv(1, 0, 0)
+        return new AT(1, 0, 0)
       }
       static Green() {
-        return new Tv(0, 1, 0)
+        return new AT(0, 1, 0)
       }
       static Blue() {
-        return new Tv(0, 0, 1)
+        return new AT(0, 0, 1)
       }
       static Black() {
-        return new Tv(0, 0, 0)
+        return new AT(0, 0, 0)
       }
       static get BlackReadOnly() {
-        return Tv._BlackReadOnly
+        return AT._BlackReadOnly
       }
       static White() {
-        return new Tv(1, 1, 1)
+        return new AT(1, 1, 1)
       }
       static Purple() {
-        return new Tv(.5, 0, .5)
+        return new AT(.5, 0, .5)
       }
       static Magenta() {
-        return new Tv(1, 0, 1)
+        return new AT(1, 0, 1)
       }
       static Yellow() {
-        return new Tv(1, 1, 0)
+        return new AT(1, 1, 0)
       }
       static Gray() {
-        return new Tv(.5, .5, .5)
+        return new AT(.5, .5, .5)
       }
       static Teal() {
-        return new Tv(0, 1, 1)
+        return new AT(0, 1, 1)
       }
       static Random() {
-        return new Tv(Math.random(), Math.random(), Math.random())
+        return new AT(Math.random(), Math.random(), Math.random())
       }
     }
-    Tv._V8PerformanceHack = new Tv(.5, .5, .5), Tv._BlackReadOnly = Tv.Black();
-    class Wv {
+    AT._V8PerformanceHack = new AT(.5, .5, .5), AT._BlackReadOnly = AT.Black();
+    class CT {
       constructor() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          hv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
-        this.r = vv, this.g = zv, this.b = Pv, this.a = hv
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        this.r = TT, this.g = kT, this.b = cT, this.a = lT
       }
-      pPv() {
+      acT() {
         return [this.r, this.g, this.b, this.a]
       }
-      toArray(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return vv[zv] = this.r, vv[zv + 1] = this.g, vv[zv + 2] = this.b, vv[zv + 3] = this.a, this
+      toArray(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return TT[kT] = this.r, TT[kT + 1] = this.g, TT[kT + 2] = this.b, TT[kT + 3] = this.a, this
       }
-      Evv(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.r = vv[zv], this.g = vv[zv + 1], this.b = vv[zv + 2], this.a = vv[zv + 3], this
+      xkT(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.r = TT[kT], this.g = TT[kT + 1], this.b = TT[kT + 2], this.a = TT[kT + 3], this
       }
-      equals(vv) {
-        return vv && this.r === vv.r && this.g === vv.g && this.b === vv.b && this.a === vv.a
+      equals(TT) {
+        return TT && this.r === TT.r && this.g === TT.g && this.b === TT.b && this.a === TT.a
       }
-      add(vv) {
-        return new Wv(this.r + vv.r, this.g + vv.g, this.b + vv.b, this.a + vv.a)
+      add(TT) {
+        return new CT(this.r + TT.r, this.g + TT.g, this.b + TT.b, this.a + TT.a)
       }
-      addToRef(vv, zv) {
-        return zv.r = this.r + vv.r, zv.g = this.g + vv.g, zv.b = this.b + vv.b, zv.a = this.a + vv.a, zv
+      addToRef(TT, kT) {
+        return kT.r = this.r + TT.r, kT.g = this.g + TT.g, kT.b = this.b + TT.b, kT.a = this.a + TT.a, kT
       }
-      addInPlace(vv) {
-        return this.r += vv.r, this.g += vv.g, this.b += vv.b, this.a += vv.a, this
+      addInPlace(TT) {
+        return this.r += TT.r, this.g += TT.g, this.b += TT.b, this.a += TT.a, this
       }
-      addInPlaceFromFloats(vv, zv, Pv, hv) {
-        return this.r += vv, this.g += zv, this.b += Pv, this.a += hv, this
+      addInPlaceFromFloats(TT, kT, cT, lT) {
+        return this.r += TT, this.g += kT, this.b += cT, this.a += lT, this
       }
-      subtract(vv) {
-        return new Wv(this.r - vv.r, this.g - vv.g, this.b - vv.b, this.a - vv.a)
+      subtract(TT) {
+        return new CT(this.r - TT.r, this.g - TT.g, this.b - TT.b, this.a - TT.a)
       }
-      subtractToRef(vv, zv) {
-        return zv.r = this.r - vv.r, zv.g = this.g - vv.g, zv.b = this.b - vv.b, zv.a = this.a - vv.a, zv
+      subtractToRef(TT, kT) {
+        return kT.r = this.r - TT.r, kT.g = this.g - TT.g, kT.b = this.b - TT.b, kT.a = this.a - TT.a, kT
       }
-      VPv(vv) {
-        return this.r -= vv.r, this.g -= vv.g, this.b -= vv.b, this.a -= vv.a, this
+      gcT(TT) {
+        return this.r -= TT.r, this.g -= TT.g, this.b -= TT.b, this.a -= TT.a, this
       }
-      subtractFromFloats(vv, zv, Pv, hv) {
-        return new Wv(this.r - vv, this.g - zv, this.b - Pv, this.a - hv)
+      subtractFromFloats(TT, kT, cT, lT) {
+        return new CT(this.r - TT, this.g - kT, this.b - cT, this.a - lT)
       }
-      subtractFromFloatsToRef(vv, zv, Pv, hv, Sv) {
-        return Sv.r = this.r - vv, Sv.g = this.g - zv, Sv.b = this.b - Pv, Sv.a = this.a - hv, Sv
+      subtractFromFloatsToRef(TT, kT, cT, lT, MT) {
+        return MT.r = this.r - TT, MT.g = this.g - kT, MT.b = this.b - cT, MT.a = this.a - lT, MT
       }
-      scale(vv) {
-        return new Wv(this.r * vv, this.g * vv, this.b * vv, this.a * vv)
+      scale(TT) {
+        return new CT(this.r * TT, this.g * TT, this.b * TT, this.a * TT)
       }
-      scaleInPlace(vv) {
-        return this.r *= vv, this.g *= vv, this.b *= vv, this.a *= vv, this
+      scaleInPlace(TT) {
+        return this.r *= TT, this.g *= TT, this.b *= TT, this.a *= TT, this
       }
-      scaleToRef(vv, zv) {
-        return zv.r = this.r * vv, zv.g = this.g * vv, zv.b = this.b * vv, zv.a = this.a * vv, zv
+      scaleToRef(TT, kT) {
+        return kT.r = this.r * TT, kT.g = this.g * TT, kT.b = this.b * TT, kT.a = this.a * TT, kT
       }
-      scaleAndAddToRef(vv, zv) {
-        return zv.r += this.r * vv, zv.g += this.g * vv, zv.b += this.b * vv, zv.a += this.a * vv, zv
+      scaleAndAddToRef(TT, kT) {
+        return kT.r += this.r * TT, kT.g += this.g * TT, kT.b += this.b * TT, kT.a += this.a * TT, kT
       }
       clampToRef() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          Pv = arguments.length > 2 ? arguments[2] : void 0;
-        return Pv.r = (0, ev.Clamp)(this.r, vv, zv), Pv.g = (0, ev.Clamp)(this.g, vv, zv), Pv.b = (0, ev.Clamp)(this.b, vv, zv), Pv.a = (0, ev.Clamp)(this.a, vv, zv), Pv
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          cT = arguments.length > 2 ? arguments[2] : void 0;
+        return cT.r = (0, KT.Clamp)(this.r, TT, kT), cT.g = (0, KT.Clamp)(this.g, TT, kT), cT.b = (0, KT.Clamp)(this.b, TT, kT), cT.a = (0, KT.Clamp)(this.a, TT, kT), cT
       }
-      multiply(vv) {
-        return new Wv(this.r * vv.r, this.g * vv.g, this.b * vv.b, this.a * vv.a)
+      multiply(TT) {
+        return new CT(this.r * TT.r, this.g * TT.g, this.b * TT.b, this.a * TT.a)
       }
-      multiplyToRef(vv, zv) {
-        return zv.r = this.r * vv.r, zv.g = this.g * vv.g, zv.b = this.b * vv.b, zv.a = this.a * vv.a, zv
+      multiplyToRef(TT, kT) {
+        return kT.r = this.r * TT.r, kT.g = this.g * TT.g, kT.b = this.b * TT.b, kT.a = this.a * TT.a, kT
       }
-      multiplyInPlace(vv) {
-        return this.r *= vv.r, this.g *= vv.g, this.b *= vv.b, this.a *= vv.a, this
+      multiplyInPlace(TT) {
+        return this.r *= TT.r, this.g *= TT.g, this.b *= TT.b, this.a *= TT.a, this
       }
-      multiplyByFloats(vv, zv, Pv, hv) {
-        return new Wv(this.r * vv, this.g * zv, this.b * Pv, this.a * hv)
+      multiplyByFloats(TT, kT, cT, lT) {
+        return new CT(this.r * TT, this.g * kT, this.b * cT, this.a * lT)
       }
-      divide(vv) {
+      divide(TT) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(vv, zv) {
+      divideToRef(TT, kT) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideInPlace(vv) {
+      divideInPlace(TT) {
         throw new ReferenceError("Can not divide a color")
       }
-      minimizeInPlace(vv) {
-        return this.r = Math.min(this.r, vv.r), this.g = Math.min(this.g, vv.g), this.b = Math.min(this.b, vv.b), this.a = Math.min(this.a, vv.a), this
+      minimizeInPlace(TT) {
+        return this.r = Math.min(this.r, TT.r), this.g = Math.min(this.g, TT.g), this.b = Math.min(this.b, TT.b), this.a = Math.min(this.a, TT.a), this
       }
-      maximizeInPlace(vv) {
-        return this.r = Math.max(this.r, vv.r), this.g = Math.max(this.g, vv.g), this.b = Math.max(this.b, vv.b), this.a = Math.max(this.a, vv.a), this
+      maximizeInPlace(TT) {
+        return this.r = Math.max(this.r, TT.r), this.g = Math.max(this.g, TT.g), this.b = Math.max(this.b, TT.b), this.a = Math.max(this.a, TT.a), this
       }
-      minimizeInPlaceFromFloats(vv, zv, Pv, hv) {
-        return this.r = Math.min(vv, this.r), this.g = Math.min(zv, this.g), this.b = Math.min(Pv, this.b), this.a = Math.min(hv, this.a), this
+      minimizeInPlaceFromFloats(TT, kT, cT, lT) {
+        return this.r = Math.min(TT, this.r), this.g = Math.min(kT, this.g), this.b = Math.min(cT, this.b), this.a = Math.min(lT, this.a), this
       }
-      maximizeInPlaceFromFloats(vv, zv, Pv, hv) {
-        return this.r = Math.max(vv, this.r), this.g = Math.max(zv, this.g), this.b = Math.max(Pv, this.b), this.a = Math.max(hv, this.a), this
+      maximizeInPlaceFromFloats(TT, kT, cT, lT) {
+        return this.r = Math.max(TT, this.r), this.g = Math.max(kT, this.g), this.b = Math.max(cT, this.b), this.a = Math.max(lT, this.a), this
       }
-      floorToRef(vv) {
+      floorToRef(TT) {
         throw new ReferenceError("Can not floor a color")
       }
       floor() {
         throw new ReferenceError("Can not floor a color")
       }
-      fractToRef(vv) {
+      fractToRef(TT) {
         throw new ReferenceError("Can not fract a color")
       }
       fract() {
         throw new ReferenceError("Can not fract a color")
       }
-      Re() {
+      rc() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
         throw new ReferenceError("Can not negate a color")
       }
-      negateToRef(vv) {
+      negateToRef(TT) {
         throw new ReferenceError("Can not negate a color")
       }
-      equalsWithEpsilon(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Sv.e;
-        return (0, ev.WithinEpsilon)(this.r, vv.r, zv) && (0, ev.WithinEpsilon)(this.g, vv.g, zv) && (0, ev.WithinEpsilon)(this.b, vv.b, zv) && (0, ev.WithinEpsilon)(this.a, vv.a, zv)
+      equalsWithEpsilon(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : MT.b;
+        return (0, KT.WithinEpsilon)(this.r, TT.r, kT) && (0, KT.WithinEpsilon)(this.g, TT.g, kT) && (0, KT.WithinEpsilon)(this.b, TT.b, kT) && (0, KT.WithinEpsilon)(this.a, TT.a, kT)
       }
-      Mev(vv, zv, Pv, hv) {
-        return this.r === vv && this.g === zv && this.b === Pv && this.a === hv
+      qKT(TT, kT, cT, lT) {
+        return this.r === TT && this.g === kT && this.b === cT && this.a === lT
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + " A:" + this.a + "}"
@@ -460,346 +460,346 @@ export const modules = {
         return "Color4"
       }
       getHashCode() {
-        let vv = 255 * this.r | 0;
-        return vv = 397 * vv ^ 255 * this.g, vv = 397 * vv ^ 255 * this.b, vv = 397 * vv ^ 255 * this.a, vv
+        let TT = 255 * this.r | 0;
+        return TT = 397 * TT ^ 255 * this.g, TT = 397 * TT ^ 255 * this.b, TT = 397 * TT ^ 255 * this.a, TT
       }
       clone() {
-        return (new Wv).Vzv(this)
+        return (new CT).UkT(this)
       }
-      Vzv(vv) {
-        return this.r = vv.r, this.g = vv.g, this.b = vv.b, this.a = vv.a, this
+      UkT(TT) {
+        return this.r = TT.r, this.g = TT.g, this.b = TT.b, this.a = TT.a, this
       }
-      f_(vv, zv, Pv, hv) {
-        return this.r = vv, this.g = zv, this.b = Pv, this.a = hv, this
+      I5(TT, kT, cT, lT) {
+        return this.r = TT, this.g = kT, this.b = cT, this.a = lT, this
       }
-      set(vv, zv, Pv, hv) {
-        return this.f_(vv, zv, Pv, hv)
+      set(TT, kT, cT, lT) {
+        return this.I5(TT, kT, cT, lT)
       }
-      Dk(vv) {
-        return this.r = this.g = this.b = this.a = vv, this
+      Xs(TT) {
+        return this.r = this.g = this.b = this.a = TT, this
       }
       toHexString() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const zv = Math.round(255 * this.r),
-          Pv = Math.round(255 * this.g),
-          hv = Math.round(255 * this.b);
-        if (vv) return "#" + (0, ev.ToHex)(zv) + (0, ev.ToHex)(Pv) + (0, ev.ToHex)(hv);
-        const Sv = Math.round(255 * this.a);
-        return "#" + (0, ev.ToHex)(zv) + (0, ev.ToHex)(Pv) + (0, ev.ToHex)(hv) + (0, ev.ToHex)(Sv)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const kT = Math.round(255 * this.r),
+          cT = Math.round(255 * this.g),
+          lT = Math.round(255 * this.b);
+        if (TT) return "#" + (0, KT.ToHex)(kT) + (0, KT.ToHex)(cT) + (0, KT.ToHex)(lT);
+        const MT = Math.round(255 * this.a);
+        return "#" + (0, KT.ToHex)(kT) + (0, KT.ToHex)(cT) + (0, KT.ToHex)(lT) + (0, KT.ToHex)(MT)
       }
-      fromHexString(vv) {
-        return "#" !== vv.substring(0, 1) || 9 !== vv.length && 7 !== vv.length || (this.r = parseInt(vv.substring(1, 3), 16) / 255, this.g = parseInt(vv.substring(3, 5), 16) / 255, this.b = parseInt(vv.substring(5, 7), 16) / 255, 9 === vv.length && (this.a = parseInt(vv.substring(7, 9), 16) / 255)), this
+      fromHexString(TT) {
+        return "#" !== TT.substring(0, 1) || 9 !== TT.length && 7 !== TT.length || (this.r = parseInt(TT.substring(1, 3), 16) / 255, this.g = parseInt(TT.substring(3, 5), 16) / 255, this.b = parseInt(TT.substring(5, 7), 16) / 255, 9 === TT.length && (this.a = parseInt(TT.substring(7, 9), 16) / 255)), this
       }
       toLinearSpace() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const zv = new Wv;
-        return this.toLinearSpaceToRef(zv, vv), zv
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const kT = new CT;
+        return this.toLinearSpaceToRef(kT, TT), kT
       }
-      toLinearSpaceToRef(vv) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (vv.r = dv(this.r), vv.g = dv(this.g), vv.b = dv(this.b)) : (vv.r = pv(this.r), vv.g = pv(this.g), vv.b = pv(this.b)), vv.a = this.a, this
+      toLinearSpaceToRef(TT) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (TT.r = fT(this.r), TT.g = fT(this.g), TT.b = fT(this.b)) : (TT.r = yT(this.r), TT.g = yT(this.g), TT.b = yT(this.b)), TT.a = this.a, this
       }
       toGammaSpace() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const zv = new Wv;
-        return this.toGammaSpaceToRef(zv, vv), zv
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const kT = new CT;
+        return this.toGammaSpaceToRef(kT, TT), kT
       }
-      toGammaSpaceToRef(vv) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (vv.r = lv(this.r), vv.g = lv(this.g), vv.b = lv(this.b)) : (vv.r = Nv(this.r), vv.g = Nv(this.g), vv.b = Nv(this.b)), vv.a = this.a, this
+      toGammaSpaceToRef(TT) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (TT.r = IT(this.r), TT.g = IT(this.g), TT.b = IT(this.b)) : (TT.r = xT(this.r), TT.g = xT(this.g), TT.b = xT(this.b)), TT.a = this.a, this
       }
-      static FromHexString(vv) {
-        return "#" !== vv.substring(0, 1) || 9 !== vv.length && 7 !== vv.length ? new Wv(0, 0, 0, 0) : new Wv(0, 0, 0, 1).fromHexString(vv)
+      static FromHexString(TT) {
+        return "#" !== TT.substring(0, 1) || 9 !== TT.length && 7 !== TT.length ? new CT(0, 0, 0, 0) : new CT(0, 0, 0, 1).fromHexString(TT)
       }
-      static Lerp(vv, zv, Pv) {
-        return Wv.LerpToRef(vv, zv, Pv, new Wv)
+      static Lerp(TT, kT, cT) {
+        return CT.LerpToRef(TT, kT, cT, new CT)
       }
-      static LerpToRef(vv, zv, Pv, hv) {
-        return hv.r = vv.r + (zv.r - vv.r) * Pv, hv.g = vv.g + (zv.g - vv.g) * Pv, hv.b = vv.b + (zv.b - vv.b) * Pv, hv.a = vv.a + (zv.a - vv.a) * Pv, hv
+      static LerpToRef(TT, kT, cT, lT) {
+        return lT.r = TT.r + (kT.r - TT.r) * cT, lT.g = TT.g + (kT.g - TT.g) * cT, lT.b = TT.b + (kT.b - TT.b) * cT, lT.a = TT.a + (kT.a - TT.a) * cT, lT
       }
-      static Hermite(vv, zv, Pv, hv, Sv) {
-        const ev = Sv * Sv,
-          gv = Sv * ev,
-          pv = 2 * gv - 3 * ev + 1,
-          dv = -2 * gv + 3 * ev,
-          Nv = gv - 2 * ev + Sv,
-          lv = gv - ev,
-          Tv = vv.r * pv + Pv.r * dv + zv.r * Nv + hv.r * lv,
-          wv = vv.g * pv + Pv.g * dv + zv.g * Nv + hv.g * lv,
-          av = vv.b * pv + Pv.b * dv + zv.b * Nv + hv.b * lv,
-          sv = vv.a * pv + Pv.a * dv + zv.a * Nv + hv.a * lv;
-        return new Wv(Tv, wv, av, sv)
+      static Hermite(TT, kT, cT, lT, MT) {
+        const KT = MT * MT,
+          OT = MT * KT,
+          yT = 2 * OT - 3 * KT + 1,
+          fT = -2 * OT + 3 * KT,
+          xT = OT - 2 * KT + MT,
+          IT = OT - KT,
+          AT = TT.r * yT + cT.r * fT + kT.r * xT + lT.r * IT,
+          jT = TT.g * yT + cT.g * fT + kT.g * xT + lT.g * IT,
+          vT = TT.b * yT + cT.b * fT + kT.b * xT + lT.b * IT,
+          tT = TT.a * yT + cT.a * fT + kT.a * xT + lT.a * IT;
+        return new CT(AT, jT, vT, tT)
       }
-      static Hermite1stDerivative(vv, zv, Pv, hv, Sv) {
-        const ev = new Wv;
-        return this.Hermite1stDerivativeToRef(vv, zv, Pv, hv, Sv, ev), ev
+      static Hermite1stDerivative(TT, kT, cT, lT, MT) {
+        const KT = new CT;
+        return this.Hermite1stDerivativeToRef(TT, kT, cT, lT, MT, KT), KT
       }
-      static Hermite1stDerivativeToRef(vv, zv, Pv, hv, Sv, ev) {
-        const gv = Sv * Sv;
-        ev.r = 6 * (gv - Sv) * vv.r + (3 * gv - 4 * Sv + 1) * zv.r + 6 * (-gv + Sv) * Pv.r + (3 * gv - 2 * Sv) * hv.r, ev.g = 6 * (gv - Sv) * vv.g + (3 * gv - 4 * Sv + 1) * zv.g + 6 * (-gv + Sv) * Pv.g + (3 * gv - 2 * Sv) * hv.g, ev.b = 6 * (gv - Sv) * vv.b + (3 * gv - 4 * Sv + 1) * zv.b + 6 * (-gv + Sv) * Pv.b + (3 * gv - 2 * Sv) * hv.b, ev.a = 6 * (gv - Sv) * vv.a + (3 * gv - 4 * Sv + 1) * zv.a + 6 * (-gv + Sv) * Pv.a + (3 * gv - 2 * Sv) * hv.a
+      static Hermite1stDerivativeToRef(TT, kT, cT, lT, MT, KT) {
+        const OT = MT * MT;
+        KT.r = 6 * (OT - MT) * TT.r + (3 * OT - 4 * MT + 1) * kT.r + 6 * (-OT + MT) * cT.r + (3 * OT - 2 * MT) * lT.r, KT.g = 6 * (OT - MT) * TT.g + (3 * OT - 4 * MT + 1) * kT.g + 6 * (-OT + MT) * cT.g + (3 * OT - 2 * MT) * lT.g, KT.b = 6 * (OT - MT) * TT.b + (3 * OT - 4 * MT + 1) * kT.b + 6 * (-OT + MT) * cT.b + (3 * OT - 2 * MT) * lT.b, KT.a = 6 * (OT - MT) * TT.a + (3 * OT - 4 * MT + 1) * kT.a + 6 * (-OT + MT) * cT.a + (3 * OT - 2 * MT) * lT.a
       }
-      static FromColor3(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new Wv(vv.r, vv.g, vv.b, zv)
+      static FromColor3(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new CT(TT.r, TT.g, TT.b, kT)
       }
-      static FromArray(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new Wv(vv[zv], vv[zv + 1], vv[zv + 2], vv[zv + 3])
+      static FromArray(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new CT(TT[kT], TT[kT + 1], TT[kT + 2], TT[kT + 3])
       }
-      static FromArrayToRef(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          Pv = arguments.length > 2 ? arguments[2] : void 0;
-        Pv.r = vv[zv], Pv.g = vv[zv + 1], Pv.b = vv[zv + 2], Pv.a = vv[zv + 3]
+      static FromArrayToRef(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          cT = arguments.length > 2 ? arguments[2] : void 0;
+        cT.r = TT[kT], cT.g = TT[kT + 1], cT.b = TT[kT + 2], cT.a = TT[kT + 3]
       }
-      static FromInts(vv, zv, Pv, hv) {
-        return new Wv(vv / 255, zv / 255, Pv / 255, hv / 255)
+      static FromInts(TT, kT, cT, lT) {
+        return new CT(TT / 255, kT / 255, cT / 255, lT / 255)
       }
-      static CheckColors4(vv, zv) {
-        if (vv.length === 3 * zv) {
-          const zv = [];
-          for (let Pv = 0; Pv < vv.length; Pv += 3) {
-            const hv = Pv / 3 * 4;
-            zv[hv] = vv[Pv], zv[hv + 1] = vv[Pv + 1], zv[hv + 2] = vv[Pv + 2], zv[hv + 3] = 1
+      static CheckColors4(TT, kT) {
+        if (TT.length === 3 * kT) {
+          const kT = [];
+          for (let cT = 0; cT < TT.length; cT += 3) {
+            const lT = cT / 3 * 4;
+            kT[lT] = TT[cT], kT[lT + 1] = TT[cT + 1], kT[lT + 2] = TT[cT + 2], kT[lT + 3] = 1
           }
-          return zv
+          return kT
         }
-        return vv
+        return TT
       }
     }
-    Wv._V8PerformanceHack = new Wv(.5, .5, .5, .5);
-    class wv {}
-    wv.Color3 = (0, hv.e)(3, Tv.Black), wv.Color4 = (0, hv.e)(3, (() => new Wv(0, 0, 0, 0)));
-    let av = !1;
+    CT._V8PerformanceHack = new CT(.5, .5, .5, .5);
+    class jT {}
+    jT.Color3 = (0, lT.e)(3, AT.Black), jT.Color4 = (0, lT.e)(3, (() => new CT(0, 0, 0, 0)));
+    let vT = !1;
 
-    function sv() {
-      av || (av = !0, Object.defineProperties(Tv.prototype, {
+    function tT() {
+      vT || (vT = !0, Object.defineProperties(AT.prototype, {
         dimension: {
           value: [3]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(Wv.prototype, {
+      }), Object.defineProperties(CT.prototype, {
         dimension: {
           value: [4]
         },
         rank: {
           value: 1
         }
-      }), (0, gv.c)("BABYLON.Color3", Tv), (0, gv.c)("BABYLON.Color4", Wv))
+      }), (0, OT.g)("BABYLON.Color3", AT), (0, OT.g)("BABYLON.Color4", CT))
     }
   },
-  36599: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => ev,
-      g: () => hv,
-      h: () => Sv
+  36901: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => KT,
+      c: () => lT,
+      g: () => MT
     });
-    const hv = 1 / 2.2,
-      Sv = 2.2;
+    const lT = 1 / 2.2,
+      MT = 2.2;
     Math.sqrt(5);
-    let ev = .001
+    let KT = .001
   },
-  36620: (vv, zv, Pv) => {
-    function hv(vv) {
-      return parseInt(vv.toString().replace(/\W/g, ""))
+  36937: (TT, kT, cT) => {
+    function lT(TT) {
+      return parseInt(TT.toString().replace(/\W/g, ""))
     }
 
-    function Sv(vv, zv) {
-      let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
-      return Math.abs(vv - zv) <= Pv
+    function MT(TT, kT) {
+      let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
+      return Math.abs(TT - kT) <= cT
     }
 
-    function ev(vv, zv, Pv) {
-      let hv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
-      return vv < zv - hv || vv > Pv + hv
+    function KT(TT, kT, cT) {
+      let lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
+      return TT < kT - lT || TT > cT + lT
     }
 
-    function gv(vv, zv) {
-      return vv === zv ? vv : Math.random() * (zv - vv) + vv
+    function OT(TT, kT) {
+      return TT === kT ? TT : Math.random() * (kT - TT) + TT
     }
 
-    function pv(vv, zv, Pv) {
-      return vv + (zv - vv) * Pv
+    function yT(TT, kT, cT) {
+      return TT + (kT - TT) * cT
     }
 
-    function dv(vv, zv, Pv) {
-      let hv = Cv(zv - vv, 360);
-      return hv > 180 && (hv -= 360), vv + hv * Wv(Pv)
+    function fT(TT, kT, cT) {
+      let lT = hT(kT - TT, 360);
+      return lT > 180 && (lT -= 360), TT + lT * CT(cT)
     }
 
-    function Nv(vv, zv, Pv) {
-      let hv;
-      return hv = vv != zv ? Wv((Pv - vv) / (zv - vv)) : 0, hv
+    function xT(TT, kT, cT) {
+      let lT;
+      return lT = TT != kT ? CT((cT - TT) / (kT - TT)) : 0, lT
     }
 
-    function lv(vv, zv, Pv, hv, Sv) {
-      const ev = Sv * Sv,
-        gv = Sv * ev;
-      return vv * (2 * gv - 3 * ev + 1) + Pv * (-2 * gv + 3 * ev) + zv * (gv - 2 * ev + Sv) + hv * (gv - ev)
+    function IT(TT, kT, cT, lT, MT) {
+      const KT = MT * MT,
+        OT = MT * KT;
+      return TT * (2 * OT - 3 * KT + 1) + cT * (-2 * OT + 3 * KT) + kT * (OT - 2 * KT + MT) + lT * (OT - KT)
     }
 
-    function Tv(vv, zv, Pv, hv, Sv) {
-      const ev = Sv * Sv;
-      return 6 * (ev - Sv) * vv + (3 * ev - 4 * Sv + 1) * zv + 6 * (-ev + Sv) * Pv + (3 * ev - 2 * Sv) * hv
+    function AT(TT, kT, cT, lT, MT) {
+      const KT = MT * MT;
+      return 6 * (KT - MT) * TT + (3 * KT - 4 * MT + 1) * kT + 6 * (-KT + MT) * cT + (3 * KT - 2 * MT) * lT
     }
 
-    function Wv(vv) {
-      let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return Math.min(Pv, Math.max(zv, vv))
+    function CT(TT) {
+      let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return Math.min(cT, Math.max(kT, TT))
     }
 
-    function wv(vv) {
-      return vv -= 2 * Math.PI * Math.floor((vv + Math.PI) / (2 * Math.PI))
+    function jT(TT) {
+      return TT -= 2 * Math.PI * Math.floor((TT + Math.PI) / (2 * Math.PI))
     }
 
-    function av(vv) {
-      const zv = vv.toString(16);
-      return vv <= 15 ? ("0" + zv).toUpperCase() : zv.toUpperCase()
+    function vT(TT) {
+      const kT = TT.toString(16);
+      return TT <= 15 ? ("0" + kT).toUpperCase() : kT.toUpperCase()
     }
 
-    function sv(vv) {
-      if (Math.log2) return Math.floor(Math.log2(vv));
-      if (vv < 0) return NaN;
-      if (0 === vv) return -1 / 0;
-      let zv = 0;
-      if (vv < 1) {
-        for (; vv < 1;) zv++, vv *= 2;
-        zv = -zv
-      } else if (vv > 1)
-        for (; vv > 1;) zv++, vv = Math.floor(vv / 2);
-      return zv
+    function tT(TT) {
+      if (Math.log2) return Math.floor(Math.log2(TT));
+      if (TT < 0) return NaN;
+      if (0 === TT) return -1 / 0;
+      let kT = 0;
+      if (TT < 1) {
+        for (; TT < 1;) kT++, TT *= 2;
+        kT = -kT
+      } else if (TT > 1)
+        for (; TT > 1;) kT++, TT = Math.floor(TT / 2);
+      return kT
     }
 
-    function Cv(vv, zv) {
-      return vv - Math.floor(vv / zv) * zv
+    function hT(TT, kT) {
+      return TT - Math.floor(TT / kT) * kT
     }
 
-    function iv(vv, zv, Pv) {
-      return (vv - zv) / (Pv - zv)
+    function NT(TT, kT, cT) {
+      return (TT - kT) / (cT - kT)
     }
 
-    function cv(vv, zv, Pv) {
-      return vv * (Pv - zv) + zv
+    function QT(TT, kT, cT) {
+      return TT * (cT - kT) + kT
     }
 
-    function Gv(vv, zv) {
-      let Pv = Cv(zv - vv, 360);
-      return Pv > 180 && (Pv -= 360), Pv
+    function ST(TT, kT) {
+      let cT = hT(kT - TT, 360);
+      return cT > 180 && (cT -= 360), cT
     }
 
-    function mv(vv, zv) {
-      const Pv = Cv(vv, 2 * zv);
-      return zv - Math.abs(Pv - zv)
+    function DT(TT, kT) {
+      const cT = hT(TT, 2 * kT);
+      return kT - Math.abs(cT - kT)
     }
 
-    function jv(vv, zv, Pv) {
-      let hv = Wv(Pv);
-      return hv = -2 * hv * hv * hv + 3 * hv * hv, zv * hv + vv * (1 - hv)
+    function aT(TT, kT, cT) {
+      let lT = CT(cT);
+      return lT = -2 * lT * lT * lT + 3 * lT * lT, kT * lT + TT * (1 - lT)
     }
 
-    function fv(vv, zv, Pv) {
-      let hv;
-      return hv = Math.abs(zv - vv) <= Pv ? zv : vv + Math.sign(zv - vv) * Pv, hv
+    function FT(TT, kT, cT) {
+      let lT;
+      return lT = Math.abs(kT - TT) <= cT ? kT : TT + Math.sign(kT - TT) * cT, lT
     }
 
-    function Fv(vv, zv, Pv) {
-      const hv = Gv(vv, zv);
-      let Sv;
-      return Sv = -Pv < hv && hv < Pv ? zv : fv(vv, zv = vv + hv, Pv), Sv
+    function rT(TT, kT, cT) {
+      const lT = ST(TT, kT);
+      let MT;
+      return MT = -cT < lT && lT < cT ? kT : FT(TT, kT = TT + lT, cT), MT
     }
 
-    function Yv(vv, zv, Pv) {
-      return (vv - zv) / (Pv - zv)
+    function PT(TT, kT, cT) {
+      return (TT - kT) / (cT - kT)
     }
 
-    function nv(vv, zv, Pv) {
-      return (Pv - zv) * vv + zv
+    function wT(TT, kT, cT) {
+      return (cT - kT) * TT + kT
     }
 
-    function Ov(vv, zv) {
-      const Pv = vv % zv;
-      return 0 === Pv ? zv : Ov(zv, Pv)
+    function mT(TT, kT) {
+      const cT = TT % kT;
+      return 0 === cT ? kT : mT(kT, cT)
     }
-    Pv.r(zv), Pv.d(zv, {
-      Clamp: () => Wv,
-      DeltaAngle: () => Gv,
-      Denormalize: () => cv,
-      ExtractAsInt: () => hv,
-      Hermite: () => lv,
-      Hermite1stDerivative: () => Tv,
-      HighestCommonFactor: () => Ov,
-      ILog2: () => sv,
-      InverseLerp: () => Nv,
-      Lerp: () => pv,
-      LerpAngle: () => dv,
-      MoveTowards: () => fv,
-      MoveTowardsAngle: () => Fv,
-      Normalize: () => iv,
-      NormalizeRadians: () => wv,
-      OutsideRange: () => ev,
-      PercentToRange: () => nv,
-      PingPong: () => mv,
-      RandomRange: () => gv,
-      RangeToPercent: () => Yv,
-      Repeat: () => Cv,
-      SmoothStep: () => jv,
-      ToHex: () => av,
-      WithinEpsilon: () => Sv
+    cT.r(kT), cT.d(kT, {
+      Clamp: () => CT,
+      DeltaAngle: () => ST,
+      Denormalize: () => QT,
+      ExtractAsInt: () => lT,
+      Hermite: () => IT,
+      Hermite1stDerivative: () => AT,
+      HighestCommonFactor: () => mT,
+      ILog2: () => tT,
+      InverseLerp: () => xT,
+      Lerp: () => yT,
+      LerpAngle: () => fT,
+      MoveTowards: () => FT,
+      MoveTowardsAngle: () => rT,
+      Normalize: () => NT,
+      NormalizeRadians: () => jT,
+      OutsideRange: () => KT,
+      PercentToRange: () => wT,
+      PingPong: () => DT,
+      RandomRange: () => OT,
+      RangeToPercent: () => PT,
+      Repeat: () => hT,
+      SmoothStep: () => aT,
+      ToHex: () => vT,
+      WithinEpsilon: () => MT
     })
   },
-  36602: (vv, zv, Pv) => {
-    function hv(vv, zv) {
-      const Pv = [];
-      for (let hv = 0; hv < vv; ++hv) Pv.push(zv());
-      return Pv
+  36910: (TT, kT, cT) => {
+    function lT(TT, kT) {
+      const cT = [];
+      for (let lT = 0; lT < TT; ++lT) cT.push(kT());
+      return cT
     }
 
-    function Sv(vv, zv) {
-      return hv(vv, zv)
+    function MT(TT, kT) {
+      return lT(TT, kT)
     }
-    Pv.d(zv, {
-      e: () => hv,
-      h: () => Sv,
-      i: () => gv
+    cT.d(kT, {
+      e: () => lT,
+      f: () => MT,
+      g: () => OT
     });
-    const ev = ["push", "splice", "pop", "shift", "unshift"];
+    const KT = ["push", "splice", "pop", "shift", "unshift"];
 
-    function gv(vv, zv) {
-      const Pv = ev.map((Pv => function(vv, zv, Pv) {
-        const hv = vv[zv];
-        if ("function" !== typeof hv) return null;
-        const Sv = function() {
-          const hv = vv.length,
-            ev = Sv.previous.apply(vv, arguments);
-          return Pv(zv, hv), ev
+    function OT(TT, kT) {
+      const cT = KT.map((cT => function(TT, kT, cT) {
+        const lT = TT[kT];
+        if ("function" !== typeof lT) return null;
+        const MT = function() {
+          const lT = TT.length,
+            KT = MT.previous.apply(TT, arguments);
+          return cT(kT, lT), KT
         };
-        return hv.next = Sv, Sv.previous = hv, vv[zv] = Sv, () => {
-          const Pv = Sv.previous;
-          if (!Pv) return;
-          const hv = Sv.next;
-          hv ? (Pv.next = hv, hv.previous = Pv) : (Pv.next = void 0, vv[zv] = Pv), Sv.next = void 0, Sv.previous = void 0
+        return lT.next = MT, MT.previous = lT, TT[kT] = MT, () => {
+          const cT = MT.previous;
+          if (!cT) return;
+          const lT = MT.next;
+          lT ? (cT.next = lT, lT.previous = cT) : (cT.next = void 0, TT[kT] = cT), MT.next = void 0, MT.previous = void 0
         }
-      }(vv, Pv, zv)));
+      }(TT, cT, kT)));
       return () => {
-        for (const vv of Pv) vv?.()
+        for (const TT of cT) TT?.()
       }
     }
   },
-  36631: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => ev,
-      c: () => Sv
+  36949: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => KT,
+      g: () => MT
     });
-    const hv = {};
+    const lT = {};
 
-    function Sv(vv, zv) {
-      hv[vv] = zv
+    function MT(TT, kT) {
+      lT[TT] = kT
     }
 
-    function ev(vv) {
-      return hv[vv]
+    function KT(TT) {
+      return lT[TT]
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

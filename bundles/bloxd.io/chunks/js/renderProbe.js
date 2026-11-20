@@ -1,17 +1,17 @@
 export const id = 49;
 export const ids = [49];
 export const modules = {
-  42710: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      startRenderProbe: () => Tv
+  42819: (TT, kT, cT) => {
+    cT.d(kT, {
+      startRenderProbe: () => AT
     });
-    var hv = Pv(628),
-      Sv = Pv(4154),
-      ev = Pv(2682),
-      gv = Pv(4264);
-    const pv = 1e3,
-      dv = 36e5,
-      Nv = [{
+    var lT = cT(623),
+      MT = cT(4385),
+      KT = cT(2853),
+      OT = cT(4491);
+    const yT = 1e3,
+      fT = 36e5,
+      xT = [{
         field: "decodeProbe",
         name: "decode probe"
       }, {
@@ -19,32 +19,32 @@ export const modules = {
         name: "particle probe"
       }];
 
-    function lv(vv, zv, Pv) {
-      var Sv, ev;
-      return `${vv}; ${Pv?`os ${Pv.os}, gpu ${null!==(Sv=Pv.gpuFamily)&&void 0!==Sv?Sv:"unknown"} ${null!==(ev=Pv.gpuModel)&&void 0!==ev?ev:"unknown"}`:"device unknown"}, version ${hv.c}; ${zv}`
+    function IT(TT, kT, cT) {
+      var MT, KT;
+      return `${TT}; ${cT?`os ${cT.os}, gpu ${null!==(MT=cT.gpuFamily)&&void 0!==MT?MT:"unknown"} ${null!==(KT=cT.gpuModel)&&void 0!==KT?KT:"unknown"}`:"device unknown"}, version ${lT.d}; ${kT}`
     }
 
-    function Tv(vv) {
-      var zv;
-      const Pv = null !== (zv = null === vv || void 0 === vv ? void 0 : vv.backend) && void 0 !== zv ? zv : "none";
-      if ("webgl" !== Pv) {
-        const vv = (0, gv.f)();
+    function AT(TT) {
+      var kT;
+      const cT = null !== (kT = null === TT || void 0 === TT ? void 0 : TT.backend) && void 0 !== kT ? kT : "none";
+      if ("webgl" !== cT) {
+        const TT = (0, OT.g)();
         for (const {
-            field: zv
+            field: kT
           }
-          of Nv) delete vv[zv];
-        return void(0, ev.i)("renderprobe", `decode and particle probes not run: the renderer is ${Pv}, and they read WebGL2's draws`)
+          of xT) delete TT[kT];
+        return void(0, KT.k)("renderprobe", `decode and particle probes not run: the renderer is ${cT}, and they read WebGL2's draws`)
       }
-      const hv = (0, gv.f)();
+      const lT = (0, OT.g)();
       for (const {
-          field: Tv,
-          name: Wv
+          field: AT,
+          name: CT
         }
-        of Nv)(0, gv.g)(hv, Tv, ["1", "pending"], dv, pv).then((vv => {
-        void 0 !== vv && (0, ev.i)("renderprobe", lv(Wv, vv, (0, Sv.c)()))
+        of xT)(0, OT.h)(lT, AT, ["1", "pending"], fT, yT).then((TT => {
+        void 0 !== TT && (0, KT.k)("renderprobe", IT(CT, TT, (0, MT.b)()))
       }))
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

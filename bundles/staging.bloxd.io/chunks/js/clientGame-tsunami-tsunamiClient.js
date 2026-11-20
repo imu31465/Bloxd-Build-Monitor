@@ -1,116 +1,116 @@
 export const id = 26;
 export const ids = [26];
 export const modules = {
-  39005: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      default: () => pv
+  39311: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      default: () => yT
     });
-    var hv = Pv(9027);
-    const Sv = 1e3 / 3;
+    var lT = cT(9388);
+    const MT = 1e3 / 3;
 
-    function ev(vv, zv, Pv) {
-      if ("parenthetical-seconds" === zv) return ` (${vv}s)`;
-      const hv = `${Math.floor(vv/60)}:${(vv%60).toString().padStart(2,"0")}`;
-      return Pv ? `${Pv}${hv}` : hv
+    function KT(TT, kT, cT) {
+      if ("parenthetical-seconds" === kT) return ` (${TT}s)`;
+      const lT = `${Math.floor(TT/60)}:${(TT%60).toString().padStart(2,"0")}`;
+      return cT ? `${cT}${lT}` : lT
     }
 
-    function gv(vv, zv, Pv, Sv, ev) {
-      var gv;
-      const pv = {
-        ...Sv.baseNametag
+    function OT(TT, kT, cT, MT, KT) {
+      var OT;
+      const yT = {
+        ...MT.baseNametag
       };
-      pv.content = [...null !== (gv = Sv.baseNametag.content) && void 0 !== gv ? gv : [], {
+      yT.content = [...null !== (OT = MT.baseNametag.content) && void 0 !== OT ? OT : [], {
         str: " "
       }, {
         icon: "Gold Coin"
       }, {
-        str: `: ${(0,hv.d)(ev)}`
-      }], vv.setOtherEntitySetting(zv, Pv, "nameTagInfo", pv)
+        str: `: ${(0,lT.c)(KT)}`
+      }], TT.setOtherEntitySetting(kT, cT, "nameTagInfo", yT)
     }
-    const pv = function(vv, zv, Pv, hv) {
-      let pv, {
-        localPlayerId: dv
-      } = hv;
-      const Nv = new Map,
-        lv = new Map;
-      let Tv = 0,
-        Wv = 0;
+    const yT = function(TT, kT, cT, lT) {
+      let yT, {
+        localPlayerId: fT
+      } = lT;
+      const xT = new Map,
+        IT = new Map;
+      let AT = 0,
+        CT = 0;
       return {
-        onCreate: vv => {
-          pv = vv
+        onCreate: TT => {
+          yT = TT
         },
-        MT: vv => {
-          const zv = Date.now();
-          for (const [hv, Sv] of Nv) {
-            const vv = Math.floor((zv - Sv.startTime) / 1e3),
-              gv = Math.max(0, Sv.remainingSeconds - vv);
-            if (gv === Sv.lastRenderedSecond) continue;
-            Sv.lastRenderedSecond = gv;
-            const lv = {
-                str: ev(gv, Sv.format, Sv.prefix),
-                style: Sv.style
+        UA: TT => {
+          const kT = Date.now();
+          for (const [lT, MT] of xT) {
+            const TT = Math.floor((kT - MT.startTime) / 1e3),
+              OT = Math.max(0, MT.remainingSeconds - TT);
+            if (OT === MT.lastRenderedSecond) continue;
+            MT.lastRenderedSecond = OT;
+            const IT = {
+                str: KT(OT, MT.format, MT.prefix),
+                style: MT.style
               },
-              Tv = {
-                ...Sv.baseNametag
+              AT = {
+                ...MT.baseNametag
               };
-            var Pv;
-            if ("content" === Sv.location) Tv.content = [...null !== (Pv = Sv.baseNametag.content) && void 0 !== Pv ? Pv : [], lv];
-            else Tv.subtitle = [lv];
-            pv.setOtherEntitySetting(dv, hv, "nameTagInfo", Tv), gv <= 0 && Nv.delete(hv)
+            var cT;
+            if ("content" === MT.location) AT.content = [...null !== (cT = MT.baseNametag.content) && void 0 !== cT ? cT : [], IT];
+            else AT.subtitle = [IT];
+            yT.setOtherEntitySetting(fT, lT, "nameTagInfo", AT), OT <= 0 && xT.delete(lT)
           }
-          if (lv.size > 0 && zv - Tv >= Sv) {
-            Tv = zv, Wv = (Wv + 1) % 3;
-            let vv = 0;
-            for (const [Pv, hv] of lv) {
-              if (vv++ % 3 !== Wv) continue;
-              const Sv = Math.floor((zv - hv.startTime) / 1e3);
-              if (Sv === hv.lastRenderedSecond) continue;
-              hv.lastRenderedSecond = Sv;
-              const ev = hv.accumulatedIncome + hv.incomePerSecond * BigInt(Sv);
-              gv(pv, dv, Pv, hv, ev)
+          if (IT.size > 0 && kT - AT >= MT) {
+            AT = kT, CT = (CT + 1) % 3;
+            let TT = 0;
+            for (const [cT, lT] of IT) {
+              if (TT++ % 3 !== CT) continue;
+              const MT = Math.floor((kT - lT.startTime) / 1e3);
+              if (MT === lT.lastRenderedSecond) continue;
+              lT.lastRenderedSecond = MT;
+              const KT = lT.accumulatedIncome + lT.incomePerSecond * BigInt(MT);
+              OT(yT, fT, cT, lT, KT)
             }
           }
         },
-        onReceivedMessageFromServer: (vv, zv) => {
-          if ("startCountdown" === vv) Nv.set(zv.eId, {
-            baseNametag: zv.baseNametag,
-            remainingSeconds: zv.remainingSeconds,
+        onReceivedMessageFromServer: (TT, kT) => {
+          if ("startCountdown" === TT) xT.set(kT.eId, {
+            baseNametag: kT.baseNametag,
+            remainingSeconds: kT.remainingSeconds,
             startTime: Date.now(),
-            format: zv.format,
-            location: zv.location,
-            prefix: zv.prefix,
-            style: zv.style,
+            format: kT.format,
+            location: kT.location,
+            prefix: kT.prefix,
+            style: kT.style,
             lastRenderedSecond: -1
           });
-          else if ("stopCountdown" === vv) Nv.delete(zv.eId);
-          else if ("startIncomeTicking" === vv) {
-            const vv = {
-              baseNametag: zv.baseNametag,
-              accumulatedIncome: BigInt(zv.accumulatedIncome),
-              incomePerSecond: BigInt(zv.incomePerSecond),
+          else if ("stopCountdown" === TT) xT.delete(kT.eId);
+          else if ("startIncomeTicking" === TT) {
+            const TT = {
+              baseNametag: kT.baseNametag,
+              accumulatedIncome: BigInt(kT.accumulatedIncome),
+              incomePerSecond: BigInt(kT.incomePerSecond),
               startTime: Date.now(),
               lastRenderedSecond: -1
             };
-            lv.set(zv.eId, vv), gv(pv, dv, zv.eId, vv, vv.accumulatedIncome)
-          } else "stopIncomeTicking" === vv && lv.delete(zv.eId) && pv.setOtherEntitySetting(dv, zv.eId, "nameTagInfo", {
+            IT.set(kT.eId, TT), OT(yT, fT, kT.eId, TT, TT.accumulatedIncome)
+          } else "stopIncomeTicking" === TT && IT.delete(kT.eId) && yT.setOtherEntitySetting(fT, kT.eId, "nameTagInfo", {
             content: []
           })
         },
-        onPlayerAltAction: (vv, zv, Pv, hv, Sv, ev) => {
-          if (ev && "Mesh" === pv.getEntityType(ev)) {
-            const zv = pv.getEntityName(ev);
-            "Upgrades" === zv ? pv.openShop(vv, !1, "Upgrades") : "Items" === zv ? pv.openShop(vv, !1, "Items") : "Prestige" === zv ? pv.openShop(vv, !1, "Prestige") : "Collections" === zv ? pv.openShop(vv, !1, "Collections") : "Base Skins" === zv ? pv.openShop(vv, !1, "Base Skins") : "Gauntlet" === zv ? pv.openShop(vv, !1, "Gauntlet") : "Diamond Shop" === zv && pv.openShop(vv, !1, "Diamond Shop")
+        onPlayerAltAction: (TT, kT, cT, lT, MT, KT) => {
+          if (KT && "Mesh" === yT.getEntityType(KT)) {
+            const kT = yT.getEntityName(KT);
+            "Upgrades" === kT ? yT.openShop(TT, !1, "Upgrades") : "Items" === kT ? yT.openShop(TT, !1, "Items") : "Prestige" === kT ? yT.openShop(TT, !1, "Prestige") : "Collections" === kT ? yT.openShop(TT, !1, "Collections") : "Base Skins" === kT ? yT.openShop(TT, !1, "Base Skins") : "Gauntlet" === kT ? yT.openShop(TT, !1, "Gauntlet") : "Diamond Shop" === kT && yT.openShop(TT, !1, "Diamond Shop")
           }
         }
       }
     }
   },
-  9027: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => Sv,
-      f: () => gv
+  9388: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => MT,
+      g: () => OT
     });
-    const hv = [{
+    const lT = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -292,67 +292,67 @@ export const modules = {
       suffix: "K"
     }];
 
-    function Sv(vv) {
-      let zv, Pv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof vv) {
-        if (!Number.isFinite(vv)) return "0";
-        if (Math.abs(vv) < 100) {
-          const zv = vv < 0 ? "-" : "",
-            Pv = Math.abs(vv);
-          return Pv >= 10 ? `${zv}${Pv.toFixed(1).replace(/\.0$/,"")}` : `${zv}${Pv.toFixed(2).replace(/\.?0+$/,"")}`
+    function MT(TT) {
+      let kT, cT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof TT) {
+        if (!Number.isFinite(TT)) return "0";
+        if (Math.abs(TT) < 100) {
+          const kT = TT < 0 ? "-" : "",
+            cT = Math.abs(TT);
+          return cT >= 10 ? `${kT}${cT.toFixed(1).replace(/\.0$/,"")}` : `${kT}${cT.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        zv = BigInt(Math.floor(vv))
-      } else zv = vv;
-      const Sv = zv < 0n ? -zv : zv,
-        ev = zv < 0n ? "-" : "",
-        gv = Sv.toString();
-      if (gv.length <= Pv) return `${ev}${gv}`;
-      const pv = 3 * Math.floor((gv.length - 1) / 3);
-      if (pv < 3) return `${ev}${gv}`;
-      if (pv > 3 * hv.length) {
-        const vv = gv[0],
-          zv = gv.slice(1, 3).replace(/0+$/, "");
-        return `${ev}${zv?`${vv}.${zv}`:vv}e${gv.length-1}`
+        kT = BigInt(Math.floor(TT))
+      } else kT = TT;
+      const MT = kT < 0n ? -kT : kT,
+        KT = kT < 0n ? "-" : "",
+        OT = MT.toString();
+      if (OT.length <= cT) return `${KT}${OT}`;
+      const yT = 3 * Math.floor((OT.length - 1) / 3);
+      if (yT < 3) return `${KT}${OT}`;
+      if (yT > 3 * lT.length) {
+        const TT = OT[0],
+          kT = OT.slice(1, 3).replace(/0+$/, "");
+        return `${KT}${kT?`${TT}.${kT}`:TT}e${OT.length-1}`
       }
       const {
-        threshold: dv,
-        suffix: Nv
-      } = hv[hv.length - pv / 3], lv = Sv / dv, Tv = Number(1000n * (Sv % dv) / dv), Wv = Number(lv) + Tv / 1e3;
-      let wv;
-      return wv = Wv >= 100 ? Math.floor(Wv).toString() : Wv >= 10 ? Wv.toFixed(1).replace(/\.0$/, "") : Wv.toFixed(2).replace(/\.?0+$/, ""), `${ev}${wv}${Nv}`
+        threshold: fT,
+        suffix: xT
+      } = lT[lT.length - yT / 3], IT = MT / fT, AT = Number(1000n * (MT % fT) / fT), CT = Number(IT) + AT / 1e3;
+      let jT;
+      return jT = CT >= 100 ? Math.floor(CT).toString() : CT >= 10 ? CT.toFixed(1).replace(/\.0$/, "") : CT.toFixed(2).replace(/\.?0+$/, ""), `${KT}${jT}${xT}`
     }
-    const ev = hv.map((vv => {
+    const KT = lT.map((TT => {
       let {
-        threshold: zv,
-        suffix: Pv
-      } = vv;
+        threshold: kT,
+        suffix: cT
+      } = TT;
       return {
-        threshold: Number(zv),
-        suffix: Pv
+        threshold: Number(kT),
+        suffix: cT
       }
-    })).filter((vv => {
+    })).filter((TT => {
       let {
-        threshold: zv
-      } = vv;
-      return Number.isFinite(zv)
+        threshold: kT
+      } = TT;
+      return Number.isFinite(kT)
     }));
 
-    function gv(vv) {
-      const zv = Math.abs(vv),
-        Pv = vv < 0 ? "-" : "";
+    function OT(TT) {
+      const kT = Math.abs(TT),
+        cT = TT < 0 ? "-" : "";
       for (const {
-          threshold: hv,
-          suffix: Sv
+          threshold: lT,
+          suffix: MT
         }
-        of ev)
-        if (zv >= hv) {
-          const vv = zv / hv;
-          if (vv >= 1e3) return `${Pv}${zv.toExponential(2).replace("e+","e")}`;
-          let ev;
-          return ev = vv >= 100 ? Math.floor(vv).toString() : vv >= 10 ? vv.toFixed(1).replace(/\.0$/, "") : vv.toFixed(2).replace(/\.?0+$/, ""), `${Pv}${ev}${Sv}`
-        } return `${Pv}${zv}`
+        of KT)
+        if (kT >= lT) {
+          const TT = kT / lT;
+          if (TT >= 1e3) return `${cT}${kT.toExponential(2).replace("e+","e")}`;
+          let KT;
+          return KT = TT >= 100 ? Math.floor(TT).toString() : TT >= 10 ? TT.toFixed(1).replace(/\.0$/, "") : TT.toFixed(2).replace(/\.?0+$/, ""), `${cT}${KT}${MT}`
+        } return `${cT}${kT}`
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

@@ -1,22 +1,22 @@
 export const id = 10;
 export const ids = [10];
 export const modules = {
-  38764: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      default: () => hv
+  39058: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      default: () => lT
     });
-    const hv = function(vv, zv, Pv) {
-      let hv;
+    const lT = function(TT, kT, cT) {
+      let lT;
       return {
-        onCreate: vv => {
-          hv = vv
+        onCreate: TT => {
+          lT = TT
         },
-        onPlayerAltAction: (vv, zv, Pv, Sv, ev, gv) => {
-          gv && "Mesh" === hv.getEntityType(gv) && ("Permanent Upgrades" === hv.getEntityName(gv) ? hv.openShop(vv, !1, "Upgrades") : "Items" === hv.getEntityName(gv) ? hv.openShop(vv, !1, "Items") : "Prestige" === hv.getEntityName(gv) && hv.openShop(vv, !1, "Prestige"))
+        onPlayerAltAction: (TT, kT, cT, MT, KT, OT) => {
+          OT && "Mesh" === lT.getEntityType(OT) && ("Permanent Upgrades" === lT.getEntityName(OT) ? lT.openShop(TT, !1, "Upgrades") : "Items" === lT.getEntityName(OT) ? lT.openShop(TT, !1, "Items") : "Prestige" === lT.getEntityName(OT) && lT.openShop(TT, !1, "Prestige"))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

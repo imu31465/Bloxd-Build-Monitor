@@ -1,327 +1,327 @@
 export const id = 217;
 export const ids = [217];
 export const modules = {
-  39088: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => hv,
-      g: () => Sv
+  39408: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => lT,
+      e: () => MT
     });
-    const hv = "The world isn't loaded, so no blocks can be seen.",
-      Sv = "The world isn't loaded, so nothing in it can be seen."
+    const lT = "The world isn't loaded, so no blocks can be seen.",
+      MT = "The world isn't loaded, so nothing in it can be seen."
   },
-  38629: (vv, zv, Pv) => {
-    function hv(vv) {
-      return !(!vv.lobbyLeaderboardInfo && !vv.lobbyManage)
+  38914: (TT, kT, cT) => {
+    function lT(TT) {
+      return !(!TT.lobbyLeaderboardInfo && !TT.lobbyManage)
     }
-    Pv.d(zv, {
-      d: () => hv
+    cT.d(kT, {
+      b: () => lT
     })
   },
-  36323: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => ev,
-      f: () => Sv
+  36632: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => KT,
+      d: () => MT
     });
-    let hv = () => null;
+    let lT = () => null;
 
-    function Sv(vv) {
-      hv = vv
+    function MT(TT) {
+      lT = TT
     }
 
-    function ev(vv, zv) {
-      return hv(vv, zv)
+    function KT(TT, kT) {
+      return lT(TT, kT)
     }
   },
-  39911: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => sv,
-      f: () => Gv,
-      h: () => cv,
-      i: () => Cv
+  40222: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => tT,
+      e: () => ST,
+      g: () => QT,
+      i: () => hT
     });
-    var hv = Pv(26),
-      Sv = Pv(39918),
-      ev = Pv(39898),
-      gv = Pv(39927),
-      pv = Pv(39907),
-      dv = Pv(39933),
-      Nv = Pv(39949);
+    var lT = cT(36),
+      MT = cT(40230),
+      KT = cT(40215),
+      OT = cT(40239),
+      yT = cT(40219),
+      fT = cT(40246),
+      xT = cT(40264);
 
-    function lv(vv) {
-      var zv, Pv;
-      const hv = (0, ev.h)();
-      return hv ? null === (zv = (0, Sv.d)(hv.api, vv[0], vv[1], vv[2])) || void 0 === zv || null === (Pv = zv.persisted) || void 0 === Pv ? void 0 : Pv.shared : void 0
+    function IT(TT) {
+      var kT, cT;
+      const lT = (0, KT.g)();
+      return lT ? null === (kT = (0, MT.c)(lT.api, TT[0], TT[1], TT[2])) || void 0 === kT || null === (cT = kT.persisted) || void 0 === cT ? void 0 : cT.shared : void 0
     }
 
-    function Tv(vv) {
-      return `${vv[0]},${vv[1]},${vv[2]}`
+    function AT(TT) {
+      return `${TT[0]},${TT[1]},${TT[2]}`
     }
-    const Wv = new Map;
-    let wv = null,
-      av = 0;
+    const CT = new Map;
+    let jT = null,
+      vT = 0;
 
-    function sv() {
-      return av
+    function tT() {
+      return vT
     }
 
-    function Cv(vv) {
-      const zv = null !== wv && wv.key === Tv(vv.pos) ? wv.type : null;
-      if (null === zv) return vv;
-      let Pv = null;
-      if ("Iron" === zv) {
+    function hT(TT) {
+      const kT = null !== jT && jT.key === AT(TT.pos) ? jT.type : null;
+      if (null === kT) return TT;
+      let cT = null;
+      if ("Iron" === kT) {
         const {
-          cachedPasskey: zv,
-          ...hv
-        } = iv(vv.pos);
-        Pv = {
-          Yg: null !== zv && void 0 !== zv ? zv : [0, 0, 0, 0],
-          ...hv
+          cachedPasskey: kT,
+          ...lT
+        } = NT(TT.pos);
+        cT = {
+          CO: null !== kT && void 0 !== kT ? kT : [0, 0, 0, 0],
+          ...lT
         }
       }
       return {
-        ...vv,
-        type: zv,
-        ironChest: Pv
+        ...TT,
+        type: kT,
+        ironChest: cT
       }
     }
 
-    function iv(vv) {
-      const zv = lv(vv),
-        Pv = null === zv || void 0 === zv ? void 0 : zv.ownerDbId,
-        hv = function(vv) {
-          var zv;
-          let Pv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : lv(vv);
-          const hv = Tv(vv),
-            Sv = Wv.get(hv);
-          return Sv ? Sv.lastOpened < (null !== (zv = null === Pv || void 0 === Pv ? void 0 : Pv.passkeyLastUpdated) && void 0 !== zv ? zv : 0) ? (Wv.delete(hv), null) : [...Sv.Yg] : null
-        }(vv, zv);
-      return void 0 === Pv ? {
-        cachedPasskey: hv
+    function NT(TT) {
+      const kT = IT(TT),
+        cT = null === kT || void 0 === kT ? void 0 : kT.ownerDbId,
+        lT = function(TT) {
+          var kT;
+          let cT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : IT(TT);
+          const lT = AT(TT),
+            MT = CT.get(lT);
+          return MT ? MT.lastOpened < (null !== (kT = null === cT || void 0 === cT ? void 0 : cT.passkeyLastUpdated) && void 0 !== kT ? kT : 0) ? (CT.delete(lT), null) : [...MT.CO] : null
+        }(TT, kT);
+      return void 0 === cT ? {
+        cachedPasskey: lT
       } : {
-        ownerDbId: Pv,
-        cachedPasskey: hv
+        ownerDbId: cT,
+        cachedPasskey: lT
       }
-    }(0, Nv.m)(gv.e, (vv => {
-      const zv = (0, dv.f)(gv.e, vv);
-      if (!(0, dv.d)(zv) || zv.SS) return;
-      if (av++, !zv.uh || null === zv.PS) return void(wv = null);
-      const Pv = Tv(zv.PS);
-      wv = {
-        key: Pv,
-        type: zv.zS
-      }, null !== zv.hS && Wv.set(Pv, {
-        Yg: [...zv.hS],
+    }(0, xT.m)(OT.c, (TT => {
+      const kT = (0, fT.e)(OT.c, TT);
+      if (!(0, fT.b)(kT) || kT.kM) return;
+      if (vT++, !kT.pl || null === kT.sl) return void(jT = null);
+      const cT = AT(kT.sl);
+      jT = {
+        key: cT,
+        type: kT.ql
+      }, null !== kT.TM && CT.set(cT, {
+        CO: [...kT.TM],
         lastOpened: Date.now()
       })
-    })), (0, Nv.i)((() => {
-      Wv.clear(), wv = null, av++
-    })), (0, Nv.l)((() => {
-      null !== wv && (wv = null, av++, hv.j.zC("chestToggleFromServer", !1, !0))
+    })), (0, xT.h)((() => {
+      CT.clear(), jT = null, vT++
+    })), (0, xT.l)((() => {
+      null !== jT && (jT = null, vT++, lT.k.nt("chestToggleFromServer", !1, !0))
     }));
-    const cv = {
+    const QT = {
         boardEditRequested: {
-          watch: vv => (0, hv.l)("EditBoard", (zv => {
+          watch: TT => (0, lT.m)("EditBoard", (kT => {
             let {
-              pos: Pv
-            } = zv;
-            if (null === Pv) return void vv(null);
-            const hv = (0, ev.h)(),
-              Sv = (0, ev.s)();
-            hv && Sv && vv(Sv.readBoardToEdit(hv.api, hv.chunks, Pv))
+              pos: cT
+            } = kT;
+            if (null === cT) return void TT(null);
+            const lT = (0, KT.g)(),
+              MT = (0, KT.q)();
+            lT && MT && TT(MT.readBoardToEdit(lT.api, lT.chunks, cT))
           }))
         },
         ironChestOpenRequested: {
-          watch: vv => (0, hv.l)("OpenIronChest", (zv => {
+          watch: TT => (0, lT.m)("OpenIronChest", (kT => {
             let {
-              pos: Pv
-            } = zv;
-            vv(function(vv) {
+              pos: cT
+            } = kT;
+            TT(function(TT) {
               return {
-                pos: vv,
-                ...iv(vv)
+                pos: TT,
+                ...NT(TT)
               }
-            }(Pv))
+            }(cT))
           }))
         }
       },
-      Gv = {
-        writeOnBoard(vv) {
-          var zv;
+      ST = {
+        writeOnBoard(TT) {
+          var kT;
           let {
-            pos: Pv,
-            text: hv,
-            textSize: Sv
-          } = vv;
-          null === (zv = (0, ev.h)()) || void 0 === zv || zv.send(pv.d.UpdateBoard, (0, pv.L)({
-            BN: Pv,
-            JN: hv,
-            EN: Sv
+            pos: cT,
+            text: lT,
+            textSize: MT
+          } = TT;
+          null === (kT = (0, KT.g)()) || void 0 === kT || kT.send(yT.b.UpdateBoard, (0, yT.W)({
+            gx: cT,
+            Ux: lT,
+            Yx: MT
           }))
         },
-        writeBook(vv) {
-          var zv;
+        writeBook(TT) {
+          var kT;
           let {
-            pages: Pv,
-            title: hv,
-            published: Sv
-          } = vv;
-          null === (zv = (0, ev.h)()) || void 0 === zv || zv.send(pv.d.UpdateBook, (0, pv.P)({
-            Sl: Pv,
-            el: hv,
-            gl: Sv
+            pages: cT,
+            title: lT,
+            published: MT
+          } = TT;
+          null === (kT = (0, KT.g)()) || void 0 === kT || kT.send(yT.b.UpdateBook, (0, yT.X)({
+            MI: cT,
+            KI: lT,
+            OI: MT
           }))
         },
-        writeNameTag(vv) {
-          var zv;
-          null === (zv = (0, ev.h)()) || void 0 === zv || zv.send(pv.d.UpdateNameTag, vv)
+        writeNameTag(TT) {
+          var kT;
+          null === (kT = (0, KT.g)()) || void 0 === kT || kT.send(yT.b.UpdateNameTag, TT)
         },
-        setCustomLobbyBlock(vv) {
+        setCustomLobbyBlock(TT) {
           let {
-            pos: zv,
-            blockName: Pv
-          } = vv;
-          const hv = (0, ev.s)(),
-            Sv = (0, ev.h)();
-          hv && Sv && Sv.send(pv.d.SetCustomLobbyBlock, (0, pv.G)({
-            yN: hv.blockIdOf(Pv),
-            MN: zv
+            pos: kT,
+            blockName: cT
+          } = TT;
+          const lT = (0, KT.q)(),
+            MT = (0, KT.g)();
+          lT && MT && MT.send(yT.b.SetCustomLobbyBlock, (0, yT.I)({
+            Rx: lT.blockIdOf(cT),
+            Lx: kT
           }))
         }
       }
   },
-  39970: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => dv,
-      c: () => gv,
-      f: () => pv
+  40284: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => fT,
+      d: () => OT,
+      h: () => yT
     });
-    var hv = Pv(39889),
-      Sv = Pv(4529),
-      ev = Pv(39898);
+    var lT = cT(40204),
+      MT = cT(4748),
+      KT = cT(40215);
 
-    function gv() {
-      var vv;
-      const zv = null === (vv = (0, ev.h)()) || void 0 === vv ? void 0 : vv.api.localId;
-      return void 0 === zv || zv === hv.ad ? null : String(zv)
+    function OT() {
+      var TT;
+      const kT = null === (TT = (0, KT.g)()) || void 0 === TT ? void 0 : TT.api.localId;
+      return void 0 === kT || kT === lT.bd ? null : String(kT)
     }
 
-    function pv(vv) {
-      const zv = (0, ev.h)();
-      if (null !== zv) return vv(zv);
-      let Pv = null;
-      const hv = (0, Sv.o)((() => {
-        const zv = (0, ev.h)();
-        null !== zv && null === Pv && (hv(), Pv = vv(zv))
+    function yT(TT) {
+      const kT = (0, KT.g)();
+      if (null !== kT) return TT(kT);
+      let cT = null;
+      const lT = (0, MT.q)((() => {
+        const kT = (0, KT.g)();
+        null !== kT && null === cT && (lT(), cT = TT(kT))
       }));
       return () => {
-        var vv;
-        hv(), null === (vv = Pv) || void 0 === vv || vv()
+        var TT;
+        lT(), null === (TT = cT) || void 0 === TT || TT()
       }
     }
 
-    function dv(vv, zv, Pv) {
+    function fT(TT, kT, cT) {
       return {
         current: () => {
-          const Pv = (0, ev.h)();
-          return null === Pv ? zv : vv(Pv)()
+          const cT = (0, KT.g)();
+          return null === cT ? kT : TT(cT)()
         },
-        watch: zv => pv((hv => {
-          const Sv = vv(hv);
-          let ev = Sv();
-          return zv(ev), Pv((() => {
-            const vv = Sv();
-            vv !== ev && (ev = vv, zv(vv))
+        watch: kT => yT((lT => {
+          const MT = TT(lT);
+          let KT = MT();
+          return kT(KT), cT((() => {
+            const TT = MT();
+            TT !== KT && (KT = TT, kT(TT))
           }))
         }))
       }
     }
   },
-  39961: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => Nv
+  40281: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => xT
     });
-    var hv = Pv(39898),
-      Sv = Pv(39970),
-      ev = Pv(39973);
+    var lT = cT(40215),
+      MT = cT(40284),
+      KT = cT(40290);
 
-    function gv() {
-      var vv, zv;
-      return null !== (vv = null === (zv = (0, hv.h)()) || void 0 === zv ? void 0 : zv.itemBridgeSources) && void 0 !== vv ? vv : ev.c
+    function OT() {
+      var TT, kT;
+      return null !== (TT = null === (kT = (0, lT.g)()) || void 0 === kT ? void 0 : kT.itemBridgeSources) && void 0 !== TT ? TT : KT.b
     }
 
-    function pv(vv) {
+    function yT(TT) {
       return {
-        current: () => gv().states[vv].current(),
-        watch: zv => (0, Sv.f)((Pv => {
-          const hv = Pv.itemBridgeSources.states[vv];
-          return zv(hv.current()), hv.watch(zv)
+        current: () => OT().states[TT].current(),
+        watch: kT => (0, MT.h)((cT => {
+          const lT = cT.itemBridgeSources.states[TT];
+          return kT(lT.current()), lT.watch(kT)
         }))
       }
     }
 
-    function dv(vv) {
+    function fT(TT) {
       return {
-        watch: zv => (0, Sv.f)((Pv => Pv.itemBridgeSources.events[vv].watch(zv)))
+        watch: kT => (0, MT.h)((cT => cT.itemBridgeSources.events[TT].watch(kT)))
       }
     }
-    const Nv = {
+    const xT = {
       states: {
-        inventory: pv("inventory"),
-        hotbar: pv("hotbar"),
-        crafting: pv("crafting"),
-        heldItemAim: pv("heldItemAim")
+        inventory: yT("inventory"),
+        hotbar: yT("hotbar"),
+        crafting: yT("crafting"),
+        heldItemAim: yT("heldItemAim")
       },
       events: {
-        hotbarSlotRequested: dv("hotbarSlotRequested"),
-        hotbarScrolled: dv("hotbarScrolled"),
-        numberKeyPressed: dv("numberKeyPressed"),
-        inventoryDropRequested: dv("inventoryDropRequested"),
-        chestToggled: dv("chestToggled"),
-        chestRefreshed: dv("chestRefreshed"),
-        inventorySynced: dv("inventorySynced"),
-        enchantingTableOpened: dv("enchantingTableOpened")
+        hotbarSlotRequested: fT("hotbarSlotRequested"),
+        hotbarScrolled: fT("hotbarScrolled"),
+        numberKeyPressed: fT("numberKeyPressed"),
+        inventoryDropRequested: fT("inventoryDropRequested"),
+        chestToggled: fT("chestToggled"),
+        chestRefreshed: fT("chestRefreshed"),
+        inventorySynced: fT("inventorySynced"),
+        enchantingTableOpened: fT("enchantingTableOpened")
       },
       commands: {
-        selectHotbarSlot: vv => gv().commands.selectHotbarSlot(vv),
-        removeInventoryItem: vv => gv().commands.removeInventoryItem(vv),
-        swapInventorySlots: vv => gv().commands.swapInventorySlots(vv),
-        moveInventoryItem: vv => gv().commands.moveInventoryItem(vv),
-        quickMoveInventoryItem: vv => gv().commands.quickMoveInventoryItem(vv),
-        closeChest: vv => gv().commands.closeChest(vv),
-        focusCrafting: vv => gv().commands.focusCrafting(vv),
-        craftRecipe: vv => gv().commands.craftRecipe(vv),
-        salvageItem: vv => gv().commands.salvageItem(vv),
-        enchantItem: vv => gv().commands.enchantItem(vv)
+        selectHotbarSlot: TT => OT().commands.selectHotbarSlot(TT),
+        removeInventoryItem: TT => OT().commands.removeInventoryItem(TT),
+        swapInventorySlots: TT => OT().commands.swapInventorySlots(TT),
+        moveInventoryItem: TT => OT().commands.moveInventoryItem(TT),
+        quickMoveInventoryItem: TT => OT().commands.quickMoveInventoryItem(TT),
+        closeChest: TT => OT().commands.closeChest(TT),
+        focusCrafting: TT => OT().commands.focusCrafting(TT),
+        craftRecipe: TT => OT().commands.craftRecipe(TT),
+        salvageItem: TT => OT().commands.salvageItem(TT),
+        enchantItem: TT => OT().commands.enchantItem(TT)
       },
       queries: {
-        enchantingOffer: vv => gv().queries.enchantingOffer(vv)
+        enchantingOffer: TT => OT().queries.enchantingOffer(TT)
       }
     }
   },
-  39973: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => pv
+  40290: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => yT
     });
-    var hv = Pv(39088);
+    var lT = cT(39408);
 
-    function Sv(vv) {
+    function MT(TT) {
       return {
-        current: () => vv,
+        current: () => TT,
         watch: () => () => {}
       }
     }
 
-    function ev() {}
-    const gv = Object.freeze([0, 0, 0]),
-      pv = {
+    function KT() {}
+    const OT = Object.freeze([0, 0, 0]),
+      yT = {
         states: {
-          health: Sv({
+          health: MT({
             health: null,
             maxHealth: null,
             shield: null,
             maxShield: null
           }),
-          inventory: Sv({
+          inventory: MT({
             player: [],
             chestOrCreative: [],
             chest: null,
@@ -329,63 +329,63 @@ export const modules = {
             selectedSlot: 0,
             freeSlots: 0
           }),
-          hotbar: Sv({
+          hotbar: MT({
             items: [],
             ammo: 0,
             selectedSlot: null
           }),
-          stationItems: Sv({
+          stationItems: MT({
             enchantable: {},
             salvageable: {}
           }),
-          itemInfo: Sv({}),
-          creativeVisibility: Sv({
+          itemInfo: MT({}),
+          creativeVisibility: MT({
             publicLobby: !1,
             shownInGame: {}
           }),
-          aura: Sv(null),
-          heldItemAim: Sv({
+          aura: MT(null),
+          heldItemAim: MT({
             gun: !1,
             aimable: !1,
             chargeName: null
           }),
-          crouching: Sv(!1),
-          gliderBoostFuel: Sv(0),
-          flight: Sv({
+          crouching: MT(!1),
+          gliderBoostFuel: MT(0),
+          flight: MT({
             canFly: !1,
             flying: !1
           }),
-          crafting: Sv({
+          crafting: MT({
             focus: null,
             recipes: [],
             detail: null
           }),
-          players: Sv({
+          players: MT({
             ids: [],
             byId: {},
             localId: null
           }),
-          lobbyLeaderboardRows: Sv({}),
-          fullInventory: Sv(!1),
-          crosshairTarget: Sv({
+          lobbyLeaderboardRows: MT({}),
+          fullInventory: MT(!1),
+          crosshairTarget: MT({
             interactPrompt: null,
             blockText: null,
             neededTool: null
           }),
-          localPlayerAlive: Sv(!0),
-          freeCamera: Sv({
+          localPlayerAlive: MT(!0),
+          freeCamera: MT({
             allowed: !1,
             movesFly: !1
           }),
-          replay: Sv(null),
-          replayEdits: Sv(null),
-          replayRecorder: Sv({
+          replay: MT(null),
+          replayEdits: MT(null),
+          replayRecorder: MT({
             recording: !1,
             clipping: !1,
             hasClipBuffer: !1,
             seconds: 0
           }),
-          replayVideoExporting: Sv(!1)
+          replayVideoExporting: MT(!1)
         },
         events: {
           hotbarSlotRequested: {
@@ -447,87 +447,87 @@ export const modules = {
           }
         },
         commands: {
-          selectHotbarSlot: ev,
+          selectHotbarSlot: KT,
           removeInventoryItem: () => !1,
           swapInventorySlots: () => !1,
           moveInventoryItem: () => !1,
           quickMoveInventoryItem: () => null,
-          closeChest: ev,
-          setInventoryOpen: ev,
-          changeIronChestPasskey: ev,
-          dragReplayCamera: ev,
-          applyTemporaryThirdPerson: ev,
-          holdEmoteWheel: ev,
-          recordFlyingMiddleText: ev,
-          focusCrafting: ev,
+          closeChest: KT,
+          setInventoryOpen: KT,
+          changeIronChestPasskey: KT,
+          dragReplayCamera: KT,
+          applyTemporaryThirdPerson: KT,
+          holdEmoteWheel: KT,
+          recordFlyingMiddleText: KT,
+          focusCrafting: KT,
           craftRecipe: () => ({
-            Cp: 0,
-            Vl: null,
+            ky: 0,
+            oI: null,
             amountAddedToSlot: 0
           }),
           salvageItem: () => !1,
-          enchantItem: ev,
-          setShopOpen: ev,
-          buyShopItem: ev,
-          lobbyManage: ev,
-          sendChatMessage: ev,
-          ignorePlayer: ev,
-          reportPlayer: ev,
-          reportWorldCodeChat: ev,
-          requestDiscordReportKey: ev,
-          reportLobbyOrGame: ev,
-          playEmote: ev,
-          updateMyCosmetic: ev,
-          writeOnBoard: ev,
-          writeBook: ev,
-          writeNameTag: ev,
-          setCustomLobbyBlock: ev,
-          openIronChest: ev,
-          sendCodeCollab: ev,
-          clickCodeBlock: ev,
-          bindCustomButtonKeys: ev,
-          pressCustomButton: ev,
-          moveReplayFreecam: ev,
-          holdReplayFreecamVertical: ev,
-          respawn: ev,
-          wakeUp: ev,
-          requestLeaderboard: ev,
-          completeTask: ev,
-          setServerCookie: ev,
-          answerUiRequest: ev,
-          chooseRewardedAd: ev,
-          setCameraZoom: ev,
-          setFreeCameraMovesFly: ev,
-          setBlockHighlight: ev,
-          setCrosshairInteractPrompt: ev,
-          setLookSensitivity: ev,
-          replayAction: ev,
-          setReplayPlaying: ev,
-          seekReplay: ev,
-          setReplayCameraMode: ev,
-          syncReplayCameraMode: ev,
-          setReplayCameraKeyframe: ev,
-          moveReplayCameraKeyframe: ev,
-          deleteReplayCameraKeyframes: ev,
-          setReplayPlaybackMark: ev,
+          enchantItem: KT,
+          setShopOpen: KT,
+          buyShopItem: KT,
+          lobbyManage: KT,
+          sendChatMessage: KT,
+          ignorePlayer: KT,
+          reportPlayer: KT,
+          reportWorldCodeChat: KT,
+          requestDiscordReportKey: KT,
+          reportLobbyOrGame: KT,
+          playEmote: KT,
+          updateMyCosmetic: KT,
+          writeOnBoard: KT,
+          writeBook: KT,
+          writeNameTag: KT,
+          setCustomLobbyBlock: KT,
+          openIronChest: KT,
+          sendCodeCollab: KT,
+          clickCodeBlock: KT,
+          bindCustomButtonKeys: KT,
+          pressCustomButton: KT,
+          moveReplayFreecam: KT,
+          holdReplayFreecamVertical: KT,
+          respawn: KT,
+          wakeUp: KT,
+          requestLeaderboard: KT,
+          completeTask: KT,
+          setServerCookie: KT,
+          answerUiRequest: KT,
+          chooseRewardedAd: KT,
+          setCameraZoom: KT,
+          setFreeCameraMovesFly: KT,
+          setBlockHighlight: KT,
+          setCrosshairInteractPrompt: KT,
+          setLookSensitivity: KT,
+          replayAction: KT,
+          setReplayPlaying: KT,
+          seekReplay: KT,
+          setReplayCameraMode: KT,
+          syncReplayCameraMode: KT,
+          setReplayCameraKeyframe: KT,
+          moveReplayCameraKeyframe: KT,
+          deleteReplayCameraKeyframes: KT,
+          setReplayPlaybackMark: KT,
           cropReplay: () => !1,
-          holdReplayForShaderPackFailure: ev,
-          exportReplayVideo: ev,
-          toggleRecording: ev,
-          saveClip: ev,
-          setRecorderPrefs: ev,
-          setReplayViewerOpen: ev
+          holdReplayForShaderPackFailure: KT,
+          exportReplayVideo: KT,
+          toggleRecording: KT,
+          saveClip: KT,
+          setRecorderPrefs: KT,
+          setReplayViewerOpen: KT
         },
         queries: {
           enchantingOffer: () => ({
             perks: [],
             options: []
           }),
-          worldCodeAiChunk: () => hv.e,
-          worldCodeAiGameState: () => hv.g
+          worldCodeAiChunk: () => lT.d,
+          worldCodeAiGameState: () => lT.e
         },
         lookups: {
-          localPos: () => gv,
+          localPos: () => OT,
           targetedBlockPos: () => null,
           blockAtViewPoint: () => null,
           momentumFrac: () => 0,
@@ -545,321 +545,321 @@ export const modules = {
         }
       }
   },
-  39894: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => nv,
-      h: () => Yv,
-      j: () => Ov,
-      l: () => Fv,
-      n: () => jv
+  40210: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => wT,
+      i: () => PT,
+      j: () => mT,
+      n: () => rT,
+      q: () => aT
     });
-    var hv = Pv(38726),
-      Sv = Pv(1209),
-      ev = Pv(1903),
-      gv = Pv(1915),
-      pv = Pv(3037),
-      dv = Pv(36323),
-      Nv = Pv(1306),
-      lv = Pv(39898),
-      Tv = Pv(4561),
-      Wv = Pv(2304),
-      wv = Pv(39907),
-      av = Pv(39911),
-      sv = Pv(39961);
-    let Cv = null;
+    var lT = cT(39026),
+      MT = cT(1226),
+      KT = cT(1974),
+      OT = cT(1990),
+      yT = cT(3214),
+      fT = cT(36632),
+      xT = cT(1327),
+      IT = cT(40215),
+      AT = cT(4787),
+      CT = cT(2435),
+      jT = cT(40219),
+      vT = cT(40222),
+      tT = cT(40281);
+    let hT = null;
 
-    function iv(vv) {
-      const zv = new Map,
-        Pv = Pv => {
-          if ("string" !== typeof Pv) return;
-          let hv = zv.get(Pv);
-          return void 0 === hv && (hv = vv(Pv), void 0 !== hv && zv.set(Pv, hv)), hv
+    function NT(TT) {
+      const kT = new Map,
+        cT = cT => {
+          if ("string" !== typeof cT) return;
+          let lT = kT.get(cT);
+          return void 0 === lT && (lT = TT(cT), void 0 !== lT && kT.set(cT, lT)), lT
         };
       return new Proxy({}, {
-        get: (vv, zv) => Pv(zv),
-        has: (vv, zv) => void 0 !== Pv(zv)
+        get: (TT, kT) => cT(kT),
+        has: (TT, kT) => void 0 !== cT(kT)
       })
     }
 
-    function cv(vv) {
-      const zv = (0, pv.c)(vv);
-      return void 0 !== zv && (0, pv.e)(zv) === vv
+    function QT(TT) {
+      const kT = (0, yT.e)(TT);
+      return void 0 !== kT && (0, yT.i)(kT) === TT
     }
 
-    function Gv(vv) {
-      var zv;
-      const Pv = null === (zv = (0, lv.h)()) || void 0 === zv ? void 0 : zv.tables;
-      if (void 0 === Pv || !cv(vv)) return;
-      const hv = {
-          displayName: Pv.getDisplayName(vv)
+    function ST(TT) {
+      var kT;
+      const cT = null === (kT = (0, IT.g)()) || void 0 === kT ? void 0 : kT.tables;
+      if (void 0 === cT || !QT(TT)) return;
+      const lT = {
+          displayName: cT.getDisplayName(TT)
         },
-        Sv = Pv.getItemStat(vv, "description");
-      void 0 !== Sv && null !== Sv && (hv.description = Sv);
+        MT = cT.getItemStat(TT, "description");
+      void 0 !== MT && null !== MT && (lT.description = MT);
       const {
-        rootName: ev
-      } = Pv.getMetaInfo(vv);
-      ev !== vv && (hv.rootName = ev);
-      const gv = Pv.getItemStat(vv, "armourReduction");
-      return void 0 !== gv && null !== gv && (hv.armourReduction = gv), hv
-    }(0, lv.w)((vv => {
-      Cv = vv
+        rootName: KT
+      } = cT.getMetaInfo(TT);
+      KT !== TT && (lT.rootName = KT);
+      const OT = cT.getItemStat(TT, "armourReduction");
+      return void 0 !== OT && null !== OT && (lT.armourReduction = OT), lT
+    }(0, IT.u)((TT => {
+      hT = TT
     }));
-    const mv = (0, gv.k)("DisplayName", "Description");
+    const DT = (0, OT.e)("DisplayName", "Description");
 
-    function jv() {
-      return Boolean(ev.c.get("useInventory") && ev.c.get("useFullInventory"))
+    function aT() {
+      return Boolean(KT.b.get("useInventory") && KT.b.get("useFullInventory"))
     }
-    let fv = null;
-    const Fv = {
+    let FT = null;
+    const rT = {
         inventory: function() {
-          const vv = sv.e.states.inventory;
-          let zv = null;
-          const Pv = vv => {
-            var Pv;
-            return null === vv.chest ? vv : ((null === (Pv = zv) || void 0 === Pv ? void 0 : Pv.from) === vv && zv.chestVersion === (0, av.d)() || (zv = {
-              from: vv,
-              chestVersion: (0, av.d)(),
+          const TT = tT.e.states.inventory;
+          let kT = null;
+          const cT = TT => {
+            var cT;
+            return null === TT.chest ? TT : ((null === (cT = kT) || void 0 === cT ? void 0 : cT.from) === TT && kT.chestVersion === (0, vT.d)() || (kT = {
+              from: TT,
+              chestVersion: (0, vT.d)(),
               view: {
-                ...vv,
-                chest: (0, av.i)(vv.chest)
+                ...TT,
+                chest: (0, vT.i)(TT.chest)
               }
-            }), zv.view)
+            }), kT.view)
           };
           return {
-            current: () => Pv(vv.current()),
-            watch: zv => vv.watch((vv => {
-              zv(Pv(vv))
+            current: () => cT(TT.current()),
+            watch: kT => TT.watch((TT => {
+              kT(cT(TT))
             }))
           }
         }(),
-        crafting: sv.e.states.crafting,
+        crafting: tT.e.states.crafting,
         stationItems: {
           current() {
-            var vv;
-            return (null === (vv = fv) || void 0 === vv ? void 0 : vv.namesVersion) !== (0, pv.f)() && (fv = {
-              namesVersion: (0, pv.f)(),
+            var TT;
+            return (null === (TT = FT) || void 0 === TT ? void 0 : TT.namesVersion) !== (0, yT.k)() && (FT = {
+              namesVersion: (0, yT.k)(),
               items: {
-                enchantable: iv((vv => {
-                  const zv = (0, pv.c)(vv);
-                  return void 0 !== zv && null !== Cv && Cv.enchantmentPerksOf(zv).length > 0 || void 0
+                enchantable: NT((TT => {
+                  const kT = (0, yT.e)(TT);
+                  return void 0 !== kT && null !== hT && hT.enchantmentPerksOf(kT).length > 0 || void 0
                 })),
-                salvageable: iv((vv => !(!cv(vv) || null === (0, dv.d)(vv)) || void 0))
+                salvageable: NT((TT => !(!QT(TT) || null === (0, fT.c)(TT)) || void 0))
               }
-            }), fv.items
+            }), FT.items
           },
           watch: () => () => {}
         },
         itemInfo: function() {
-          let vv = null;
-          const zv = () => {
-            var zv;
-            return (null === (zv = vv) || void 0 === zv ? void 0 : zv.namesVersion) !== (0, pv.f)() && (vv = {
-              namesVersion: (0, pv.f)(),
-              infos: iv(Gv)
-            }), vv.infos
+          let TT = null;
+          const kT = () => {
+            var kT;
+            return (null === (kT = TT) || void 0 === kT ? void 0 : kT.namesVersion) !== (0, yT.k)() && (TT = {
+              namesVersion: (0, yT.k)(),
+              infos: NT(ST)
+            }), TT.infos
           };
           return {
-            current: zv,
-            watch: Pv => (0, gv.q)((hv => {
-              hv.some(mv) && (vv = null, Pv(zv()))
+            current: kT,
+            watch: cT => (0, OT.p)((lT => {
+              lT.some(DT) && (TT = null, cT(kT()))
             }))
           }
         }(),
-        creativeVisibility: (0, gv.o)((function() {
-          const vv = {};
-          for (const Sv of null !== (zv = null === (Pv = Cv) || void 0 === Pv ? void 0 : Pv.creativeItemIds()) && void 0 !== zv ? zv : []) {
-            var zv, Pv, gv, dv;
-            const Nv = (0, pv.e)(Sv);
-            if (void 0 === Nv) continue;
-            const lv = null !== (gv = ev.c.get((0, hv.g)(Nv, "showInCreativeInven"))) && void 0 !== gv ? gv : null === (dv = Cv) || void 0 === dv ? void 0 : dv.showInCreativeInvenOf(Sv);
-            "boolean" === typeof lv && (vv[Nv] = lv)
+        creativeVisibility: (0, OT.k)((function() {
+          const TT = {};
+          for (const MT of null !== (kT = null === (cT = hT) || void 0 === cT ? void 0 : cT.creativeItemIds()) && void 0 !== kT ? kT : []) {
+            var kT, cT, OT, fT;
+            const xT = (0, yT.i)(MT);
+            if (void 0 === xT) continue;
+            const IT = null !== (OT = KT.b.get((0, lT.e)(xT, "showInCreativeInven"))) && void 0 !== OT ? OT : null === (fT = hT) || void 0 === fT ? void 0 : fT.showInCreativeInvenOf(MT);
+            "boolean" === typeof IT && (TT[xT] = IT)
           }
           return {
-            publicLobby: (0, Sv.S)((0, Nv.c)().lobbyName),
-            shownInGame: vv
+            publicLobby: (0, MT.K)((0, xT.b)().lobbyName),
+            shownInGame: TT
           }
-        }), ["connectedGameChanged"], (0, gv.k)("ShowInCreativeInven")),
-        fullInventory: (0, gv.o)(jv, [], (0, gv.m)("useInventory", "useFullInventory"))
+        }), ["connectedGameChanged"], (0, OT.e)("ShowInCreativeInven")),
+        fullInventory: (0, OT.k)(aT, [], (0, OT.i)("useInventory", "useFullInventory"))
       },
-      Yv = {
-        inventoryDropRequested: sv.e.events.inventoryDropRequested,
-        chestToggled: sv.e.events.chestToggled,
-        chestRefreshed: sv.e.events.chestRefreshed,
-        inventorySynced: sv.e.events.inventorySynced,
-        enchantingTableOpened: sv.e.events.enchantingTableOpened
+      PT = {
+        inventoryDropRequested: tT.e.events.inventoryDropRequested,
+        chestToggled: tT.e.events.chestToggled,
+        chestRefreshed: tT.e.events.chestRefreshed,
+        inventorySynced: tT.e.events.inventorySynced,
+        enchantingTableOpened: tT.e.events.enchantingTableOpened
       },
-      nv = {
-        removeInventoryItem: sv.e.commands.removeInventoryItem,
-        swapInventorySlots: sv.e.commands.swapInventorySlots,
-        moveInventoryItem: sv.e.commands.moveInventoryItem,
-        quickMoveInventoryItem: sv.e.commands.quickMoveInventoryItem,
-        closeChest: sv.e.commands.closeChest,
-        setInventoryOpen(vv) {
-          (0, Tv.g)(Wv.u.InventoryOpen, vv ? Wv.u.InventoryOpen : 0)
+      wT = {
+        removeInventoryItem: tT.e.commands.removeInventoryItem,
+        swapInventorySlots: tT.e.commands.swapInventorySlots,
+        moveInventoryItem: tT.e.commands.moveInventoryItem,
+        quickMoveInventoryItem: tT.e.commands.quickMoveInventoryItem,
+        closeChest: tT.e.commands.closeChest,
+        setInventoryOpen(TT) {
+          (0, AT.h)(CT.s.InventoryOpen, TT ? CT.s.InventoryOpen : 0)
         },
-        focusCrafting: sv.e.commands.focusCrafting,
-        craftRecipe: sv.e.commands.craftRecipe,
-        salvageItem: sv.e.commands.salvageItem,
-        enchantItem: sv.e.commands.enchantItem,
-        changeIronChestPasskey(vv) {
-          var zv;
+        focusCrafting: tT.e.commands.focusCrafting,
+        craftRecipe: tT.e.commands.craftRecipe,
+        salvageItem: tT.e.commands.salvageItem,
+        enchantItem: tT.e.commands.enchantItem,
+        changeIronChestPasskey(TT) {
+          var kT;
           let {
-            pos: Pv,
-            Yg: hv
-          } = vv;
-          null === (zv = (0, lv.h)()) || void 0 === zv || zv.send(wv.d.ChangeIronChestPasskey, (0, wv.g)({
-            PS: Pv,
-            Yg: hv
+            pos: cT,
+            CO: lT
+          } = TT;
+          null === (kT = (0, IT.g)()) || void 0 === kT || kT.send(jT.b.ChangeIronChestPasskey, (0, jT.g)({
+            sl: cT,
+            CO: lT
           }))
         },
-        openIronChest(vv) {
-          var zv;
+        openIronChest(TT) {
+          var kT;
           let {
-            pos: Pv,
-            Yg: hv
-          } = vv;
-          null === (zv = (0, lv.h)()) || void 0 === zv || zv.send(wv.d.OpenIronChest, (0, wv.x)({
-            PS: Pv,
-            Yg: hv
+            pos: cT,
+            CO: lT
+          } = TT;
+          null === (kT = (0, IT.g)()) || void 0 === kT || kT.send(jT.b.OpenIronChest, (0, jT.x)({
+            sl: cT,
+            CO: lT
           }))
         }
       },
-      Ov = {
-        enchantingOffer: sv.e.queries.enchantingOffer
+      mT = {
+        enchantingOffer: tT.e.queries.enchantingOffer
       }
   },
-  39956: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => hv,
-      e: () => Tv,
-      h: () => pv,
-      l: () => ev,
-      o: () => Sv,
-      q: () => dv,
-      u: () => lv
+  40273: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => lT,
+      c: () => AT,
+      g: () => yT,
+      j: () => KT,
+      l: () => MT,
+      p: () => fT,
+      s: () => IT
     });
-    class hv extends Error {
+    class lT extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function Sv(vv) {
-      return vv instanceof RangeError && /call stack/i.test(vv.message) || vv instanceof Error && "InternalError" === vv.name && /recursion/i.test(vv.message)
+    function MT(TT) {
+      return TT instanceof RangeError && /call stack/i.test(TT.message) || TT instanceof Error && "InternalError" === TT.name && /recursion/i.test(TT.message)
     }
 
-    function ev(vv) {
-      return /out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(vv))
+    function KT(TT) {
+      return /out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(TT))
     }
-    const gv = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const OT = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function pv(vv) {
-      var zv;
-      return vv instanceof WebAssembly.RuntimeError || vv instanceof hv || Sv(vv) && gv.test(null !== (zv = vv.stack) && void 0 !== zv ? zv : "")
-    }
-
-    function dv(vv, zv) {
-      if (pv(vv)) throw vv;
-      console.error(zv, vv)
+    function yT(TT) {
+      var kT;
+      return TT instanceof WebAssembly.RuntimeError || TT instanceof lT || MT(TT) && OT.test(null !== (kT = TT.stack) && void 0 !== kT ? kT : "")
     }
 
-    function Nv(vv, zv, Pv, Sv, ev) {
-      if (zv % Sv !== 0 || zv + Pv > vv.byteLength) throw new hv(`${ev}: ${Pv} bytes at ${zv}, ${Sv}-aligned, outside ${vv.byteLength} bytes of memory`)
+    function fT(TT, kT) {
+      if (yT(TT)) throw TT;
+      console.error(kT, TT)
     }
 
-    function lv(vv, zv, Pv, hv, Sv) {
-      return 0 === Pv ? null : (Nv(zv, Pv, hv * vv.BYTES_PER_ELEMENT, vv.BYTES_PER_ELEMENT, Sv), new vv(zv, Pv, hv))
+    function xT(TT, kT, cT, MT, KT) {
+      if (kT % MT !== 0 || kT + cT > TT.byteLength) throw new lT(`${KT}: ${cT} bytes at ${kT}, ${MT}-aligned, outside ${TT.byteLength} bytes of memory`)
     }
 
-    function Tv(vv, zv, Pv, hv, Sv) {
-      return 0 === zv ? null : (Nv(vv, zv, Pv, hv, Sv), new DataView(vv, zv, Pv))
+    function IT(TT, kT, cT, lT, MT) {
+      return 0 === cT ? null : (xT(kT, cT, lT * TT.BYTES_PER_ELEMENT, TT.BYTES_PER_ELEMENT, MT), new TT(kT, cT, lT))
+    }
+
+    function AT(TT, kT, cT, lT, MT) {
+      return 0 === kT ? null : (xT(TT, kT, cT, lT, MT), new DataView(TT, kT, cT))
     }
   },
-  39898: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => hv,
-      f: () => iv,
-      h: () => sv,
-      j: () => Cv,
-      n: () => Wv,
-      q: () => wv,
-      s: () => lv,
-      w: () => Tv,
-      y: () => av
+  40215: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => lT,
+      f: () => NT,
+      g: () => tT,
+      j: () => hT,
+      m: () => CT,
+      p: () => jT,
+      q: () => IT,
+      u: () => AT,
+      v: () => vT
     });
-    class hv extends Error {
-      constructor(vv) {
-        super(`the join's code did not load: ${vv instanceof Error?vv.message:String(vv)}`, {
-          cause: vv
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === vv || void 0 === vv ? void 0 : vv.request
+    class lT extends Error {
+      constructor(TT) {
+        super(`the join's code did not load: ${TT instanceof Error?TT.message:String(TT)}`, {
+          cause: TT
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === TT || void 0 === TT ? void 0 : TT.request
       }
     }
-    let Sv = null,
-      ev = null,
-      gv = null;
-    const pv = [];
-    let dv = null;
+    let MT = null,
+      KT = null,
+      OT = null;
+    const yT = [];
+    let fT = null;
 
-    function Nv(vv, zv) {
+    function xT(TT, kT) {
       try {
-        vv(zv)
-      } catch (Pv) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", Pv)
+        TT(kT)
+      } catch (cT) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", cT)
       }
     }
 
-    function lv() {
-      return dv
+    function IT() {
+      return fT
     }
 
-    function Tv(vv) {
-      pv.push(vv), null !== dv && Nv(vv, dv)
+    function AT(TT) {
+      yT.push(TT), null !== fT && xT(TT, fT)
     }
 
-    function Wv(vv) {
-      return Sv ??= Promise.all([Pv.e(70), Pv.e(95), Pv.e(215), Pv.e(75), Pv.e(216), Pv.e(189), Pv.e(94), Pv.e(235), Pv.e(261), Pv.e(187), Pv.e(263), Pv.e(199), Pv.e(186), Pv.e(200), Pv.e(136), Pv.e(86), Pv.e(114), Pv.e(239), Pv.e(54)]).then((() => Pv(41893))).then((zv => {
-        zv.loadAudio(vv), dv = zv;
-        for (const vv of pv) Nv(vv, zv);
-        return zv
-      })).catch((vv => {
-        throw Sv = null, vv
-      })), Sv
+    function CT(TT) {
+      return MT ??= Promise.all([cT.e(70), cT.e(95), cT.e(215), cT.e(75), cT.e(216), cT.e(189), cT.e(94), cT.e(235), cT.e(261), cT.e(187), cT.e(263), cT.e(199), cT.e(186), cT.e(200), cT.e(136), cT.e(86), cT.e(114), cT.e(239), cT.e(54)]).then((() => cT(42124))).then((kT => {
+        kT.loadAudio(TT), fT = kT;
+        for (const TT of yT) xT(TT, kT);
+        return kT
+      })).catch((TT => {
+        throw MT = null, TT
+      })), MT
     }
-    async function wv(vv, zv) {
+    async function jT(TT, kT) {
       try {
-        const Pv = await Wv(vv);
-        await Pv.loadClientGame(zv)
-      } catch (Pv) {
-        throw new hv(Pv)
+        const cT = await CT(TT);
+        await cT.loadClientGame(kT)
+      } catch (cT) {
+        throw new lT(cT)
       }
     }
 
-    function av(vv, zv) {
-      ev = {
-        running: vv,
-        shell: zv
+    function vT(TT, kT) {
+      KT = {
+        running: TT,
+        shell: kT
       }
     }
 
-    function sv() {
-      return gv
+    function tT() {
+      return OT
     }
-    async function Cv(vv) {
-      const zv = ev;
-      if ((null === zv || void 0 === zv ? void 0 : zv.running) !== vv) throw new Error("the core's session has ended");
-      const Pv = await Wv(zv.shell.audio).catch((vv => {
-        throw new hv(vv)
+    async function hT(TT) {
+      const kT = KT;
+      if ((null === kT || void 0 === kT ? void 0 : kT.running) !== TT) throw new Error("the core's session has ended");
+      const cT = await CT(kT.shell.audio).catch((TT => {
+        throw new lT(TT)
       }));
-      if (null !== gv) return gv;
-      if (ev !== zv || vv.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (gv = Pv.startGameHost(vv, zv.shell), null === gv) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return gv
+      if (null !== OT) return OT;
+      if (KT !== kT || TT.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (OT = cT.startGameHost(TT, kT.shell), null === OT) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return OT
     }
 
-    function iv() {
-      null !== gv && (null !== dv ? dv.endGameHost(gv) : gv.closeGame()), gv = null, ev = null
+    function NT() {
+      null !== OT && (null !== fT ? fT.endGameHost(OT) : OT.closeGame()), OT = null, KT = null
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

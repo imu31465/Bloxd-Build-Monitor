@@ -1,80 +1,80 @@
 export const id = 241;
 export const ids = [241];
 export const modules = {
-  39115: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      playDocsSound: () => pv
+  39432: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      playDocsSound: () => yT
     });
-    var hv = Pv(4603),
-      Sv = Pv(36271),
-      ev = Pv(1184);
-    const gv = new Map;
+    var lT = cT(4820),
+      MT = cT(36580),
+      KT = cT(1202);
+    const OT = new Map;
 
-    function pv(vv, zv, Pv, pv, dv) {
-      let Nv, lv = null,
-        Tv = 0,
-        Wv = 0;
-      if (zv) Nv = new hv.Howl({
-        src: [`${ev.clientSideServerUrls.staticUrl}/sounds/music/${vv}.mp3`],
+    function yT(TT, kT, cT, yT, fT) {
+      let xT, IT = null,
+        AT = 0,
+        CT = 0;
+      if (kT) xT = new lT.Howl({
+        src: [`${KT.clientSideServerUrls.staticUrl}/sounds/music/${TT}.mp3`],
         html5: !0,
-        volume: Pv
+        volume: cT
       });
       else {
-        var wv;
-        lv = (0, Sv.i)(vv);
-        const zv = (0, Sv.f)(lv),
-          Pv = null !== (wv = zv.sprite[vv]) && void 0 !== wv ? wv : null;
-        if (!Pv) throw new Error(`Docs sound ${vv} is not in sprite sheet ${lv}`);
-        Tv = Pv[0] / 1e3, Wv = Pv[1] / 1e3, Nv = gv.get(lv), Nv || (Nv = new hv.Howl({
-          ...zv,
+        var jT;
+        IT = (0, MT.m)(TT);
+        const kT = (0, MT.l)(IT),
+          cT = null !== (jT = kT.sprite[TT]) && void 0 !== jT ? jT : null;
+        if (!cT) throw new Error(`Docs sound ${TT} is not in sprite sheet ${IT}`);
+        AT = cT[0] / 1e3, CT = cT[1] / 1e3, xT = OT.get(IT), xT || (xT = new lT.Howl({
+          ...kT,
           volume: 1
-        }), gv.set(lv, Nv))
+        }), OT.set(IT, xT))
       }
-      const av = zv ? Nv.play() : Nv.play(vv);
-      Nv.volume(Pv, av), pv > 0 && Nv.seek(Tv + pv, av);
-      const sv = () => zv ? Nv.duration() : Wv;
-      let Cv = !1;
-      const iv = vv => {
-          Cv || (Cv = !0, Nv.off("play", cv, av), Nv.off("end", Gv, av), Nv.off("loaderror", jv), Nv.off("playerror", mv, av), zv && Nv.unload(), dv.onEnd(vv))
+      const vT = kT ? xT.play() : xT.play(TT);
+      xT.volume(cT, vT), yT > 0 && xT.seek(AT + yT, vT);
+      const tT = () => kT ? xT.duration() : CT;
+      let hT = !1;
+      const NT = TT => {
+          hT || (hT = !0, xT.off("play", QT, vT), xT.off("end", ST, vT), xT.off("loaderror", aT), xT.off("playerror", DT, vT), kT && xT.unload(), fT.onEnd(TT))
         },
-        cv = () => {
-          dv.onPlay(sv())
+        QT = () => {
+          fT.onPlay(tT())
         },
-        Gv = () => {
-          iv(!1)
+        ST = () => {
+          NT(!1)
         },
-        mv = (zv, Pv) => {
-          console.error(`Could not play docs sound ${vv}`, Pv), iv(!0)
+        DT = (kT, cT) => {
+          console.error(`Could not play docs sound ${TT}`, cT), NT(!0)
         },
-        jv = (vv, zv) => {
-          null !== lv && gv.get(lv) === Nv && (gv.delete(lv), Nv.unload()), mv(vv, zv)
+        aT = (TT, kT) => {
+          null !== IT && OT.get(IT) === xT && (OT.delete(IT), xT.unload()), DT(TT, kT)
         };
-      return Nv.on("play", cv, av), Nv.once("end", Gv, av), Nv.once("loaderror", jv), Nv.once("playerror", mv, av), {
+      return xT.on("play", QT, vT), xT.once("end", ST, vT), xT.once("loaderror", aT), xT.once("playerror", DT, vT), {
         pause: () => {
-          Nv.pause(av)
+          xT.pause(vT)
         },
         resume: () => {
-          Nv.play(av)
+          xT.play(vT)
         },
-        seek: vv => {
-          const zv = sv(),
-            Pv = Math.max(vv, 0);
-          Nv.seek(Tv + (zv > 0 ? Math.min(Pv, zv) : Pv), av)
+        seek: TT => {
+          const kT = tT(),
+            cT = Math.max(TT, 0);
+          xT.seek(AT + (kT > 0 ? Math.min(cT, kT) : cT), vT)
         },
-        yG: () => {
-          const vv = Nv.seek(av);
-          return "number" === typeof vv ? Math.max(0, vv - Tv) : 0
+        kN: () => {
+          const TT = xT.seek(vT);
+          return "number" === typeof TT ? Math.max(0, TT - AT) : 0
         },
-        getDuration: sv,
-        setVolume: vv => {
-          Nv.volume(vv, av)
+        getDuration: tT,
+        setVolume: TT => {
+          xT.volume(TT, vT)
         },
         stop: () => {
-          Cv || (Nv.stop(av), iv(!1))
+          hT || (xT.stop(vT), NT(!1))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

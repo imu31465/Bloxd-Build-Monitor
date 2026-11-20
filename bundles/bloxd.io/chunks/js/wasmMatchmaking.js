@@ -1,30 +1,30 @@
-/*! For license information please see qepqb8.wasmMatchmaking.af55f511.chunk.js.LICENSE.txt */
+/*! For license information please see bcgkc.wasmMatchmaking.2b0a19b8.chunk.js.LICENSE.txt */
 export const id = 60;
 export const ids = [60];
 export const modules = {
-  36067: (vv, zv) => {
-    function Pv(vv) {
-      if (vv && "object" === typeof vv) {
-        var zv = vv.which || vv.keyCode || vv.charCode;
-        zv && (vv = zv)
+  36359: (TT, kT) => {
+    function cT(TT) {
+      if (TT && "object" === typeof TT) {
+        var kT = TT.which || TT.keyCode || TT.charCode;
+        kT && (TT = kT)
       }
-      if ("number" === typeof vv) return gv[vv];
-      var Pv, ev = String(vv);
-      return (Pv = hv[ev.toLowerCase()]) ? Pv : (Pv = Sv[ev.toLowerCase()]) || (1 === ev.length ? ev.charCodeAt(0) : void 0)
+      if ("number" === typeof TT) return OT[TT];
+      var cT, KT = String(TT);
+      return (cT = lT[KT.toLowerCase()]) ? cT : (cT = MT[KT.toLowerCase()]) || (1 === KT.length ? KT.charCodeAt(0) : void 0)
     }
-    Pv.isEventKey = function(vv, zv) {
-      if (vv && "object" === typeof vv) {
-        var Pv = vv.which || vv.keyCode || vv.charCode;
-        if (null === Pv || void 0 === Pv) return !1;
-        if ("string" === typeof zv) {
-          var ev;
-          if (ev = hv[zv.toLowerCase()]) return ev === Pv;
-          if (ev = Sv[zv.toLowerCase()]) return ev === Pv
-        } else if ("number" === typeof zv) return zv === Pv;
+    cT.isEventKey = function(TT, kT) {
+      if (TT && "object" === typeof TT) {
+        var cT = TT.which || TT.keyCode || TT.charCode;
+        if (null === cT || void 0 === cT) return !1;
+        if ("string" === typeof kT) {
+          var KT;
+          if (KT = lT[kT.toLowerCase()]) return KT === cT;
+          if (KT = MT[kT.toLowerCase()]) return KT === cT
+        } else if ("number" === typeof kT) return kT === cT;
         return !1
       }
     };
-    var hv = (zv = vv.exports = Pv).code = zv.codes = {
+    var lT = (kT = TT.exports = cT).code = kT.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -69,7 +69,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      Sv = zv.aliases = {
+      MT = kT.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -91,47 +91,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (ev = 97; ev < 123; ev++) hv[String.fromCharCode(ev)] = ev - 32;
-    for (var ev = 48; ev < 58; ev++) hv[ev - 48] = ev;
-    for (ev = 1; ev < 13; ev++) hv["f" + ev] = ev + 111;
-    for (ev = 0; ev < 10; ev++) hv["numpad " + ev] = ev + 96;
-    var gv = zv.names = zv.title = {};
-    for (ev in hv) gv[hv[ev]] = ev;
-    for (var pv in Sv) hv[pv] = Sv[pv]
+    for (KT = 97; KT < 123; KT++) lT[String.fromCharCode(KT)] = KT - 32;
+    for (var KT = 48; KT < 58; KT++) lT[KT - 48] = KT;
+    for (KT = 1; KT < 13; KT++) lT["f" + KT] = KT + 111;
+    for (KT = 0; KT < 10; KT++) lT["numpad " + KT] = KT + 96;
+    var OT = kT.names = kT.title = {};
+    for (KT in lT) OT[lT[KT]] = KT;
+    for (var yT in MT) lT[yT] = MT[yT]
   },
-  36206: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => gv
+  36517: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => OT
     });
-    var hv = Pv(52);
-    const Sv = hv.useLayoutEffect;
-    const ev = function(vv) {
-      var zv = (0, hv.useRef)(vv);
-      return Sv((function() {
-        zv.current = vv
-      })), zv
+    var lT = cT(71);
+    const MT = lT.useLayoutEffect;
+    const KT = function(TT) {
+      var kT = (0, lT.useRef)(TT);
+      return MT((function() {
+        kT.current = TT
+      })), kT
     };
-    var gv = function(vv) {
-      var zv = ev(vv);
-      (0, hv.useEffect)((function() {
-        var vv = function(vv) {
-          var Pv;
-          if (null != zv.current && (Pv = zv.current(vv)), vv.defaultPrevented && (vv.returnValue = ""), "string" === typeof Pv) return vv.returnValue = Pv, Pv
+    var OT = function(TT) {
+      var kT = KT(TT);
+      (0, lT.useEffect)((function() {
+        var TT = function(TT) {
+          var cT;
+          if (null != kT.current && (cT = kT.current(TT)), TT.defaultPrevented && (TT.returnValue = ""), "string" === typeof cT) return TT.returnValue = cT, cT
         };
-        return window.addEventListener("beforeunload", vv),
+        return window.addEventListener("beforeunload", TT),
           function() {
-            window.removeEventListener("beforeunload", vv)
+            window.removeEventListener("beforeunload", TT)
           }
       }), [])
     }
   },
-  36123: vv => {
-    var zv, Pv = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      hv = /OS X/.test(Pv),
-      Sv = /Opera/.test(Pv),
-      ev = !/like Gecko/.test(Pv) && !Sv,
-      gv = vv.exports = {
-        0: hv ? "<menu>" : "<UNK>",
+  36409: TT => {
+    var kT, cT = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      lT = /OS X/.test(cT),
+      MT = /Opera/.test(cT),
+      KT = !/like Gecko/.test(cT) && !MT,
+      OT = TT.exports = {
+        0: lT ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -174,7 +174,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: hv ? "<meta>" : "<menu>",
+        93: lT ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -197,7 +197,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: hv && ev ? "-" : "<volume-mute>",
+        173: lT && KT ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -223,7 +223,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: Sv ? "`" : "<unicode>",
+        231: MT ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -234,180 +234,180 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (zv = 58; zv < 65; ++zv) gv[zv] = String.fromCharCode(zv);
-    for (zv = 48; zv < 58; ++zv) gv[zv] = zv - 48 + "";
-    for (zv = 65; zv < 91; ++zv) gv[zv] = String.fromCharCode(zv);
-    for (zv = 96; zv < 106; ++zv) gv[zv] = "<num-" + (zv - 96) + ">";
-    for (zv = 112; zv < 136; ++zv) gv[zv] = "F" + (zv - 111)
+    for (kT = 58; kT < 65; ++kT) OT[kT] = String.fromCharCode(kT);
+    for (kT = 48; kT < 58; ++kT) OT[kT] = kT - 48 + "";
+    for (kT = 65; kT < 91; ++kT) OT[kT] = String.fromCharCode(kT);
+    for (kT = 96; kT < 106; ++kT) OT[kT] = "<num-" + (kT - 96) + ">";
+    for (kT = 112; kT < 136; ++kT) OT[kT] = "F" + (kT - 111)
   },
-  6377: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => Sv,
-      g: () => ev
+  6647: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => MT,
+      e: () => KT
     });
-    var hv = Pv(39);
-    const Sv = "shaderPack";
-    async function ev() {
-      var vv;
-      let zv = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (vv = await hv.f.getItem(Sv, zv)) && void 0 !== vv ? vv : null
-    }
-  },
-  8578: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => ev,
-      g: () => Sv
-    });
-    let hv = !1;
-
-    function Sv() {
-      hv = !0
-    }
-
-    function ev() {
-      return hv
+    var lT = cT(47);
+    const MT = "shaderPack";
+    async function KT() {
+      var TT;
+      let kT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (TT = await lT.d.getItem(MT, kT)) && void 0 !== TT ? TT : null
     }
   },
-  35988: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      InGameUi: () => Gv.d,
-      LobbyLeaderboard: () => mv.d,
-      loadCharacterCustomisationUI: () => jv,
-      loadCharacterPreview: () => fv,
-      matchmakeAndPlay: () => Ov,
-      setUpGame: () => Fv
+  8939: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => KT,
+      f: () => MT
     });
-    var hv = Pv(1230),
-      Sv = Pv(144),
-      ev = Pv(22),
-      gv = Pv(35993),
-      pv = Pv(35999),
-      dv = Pv(1903),
-      Nv = Pv(36027);
+    let lT = !1;
 
-    function lv() {
-      return !1 !== dv.c.get("canCustomiseChar")
-    }
-    let Tv = !1;
-    var Wv = Pv(1306),
-      wv = Pv(1234),
-      av = Pv(688),
-      sv = Pv(8578);
-    var Cv = Pv(8575),
-      iv = Pv(3329),
-      cv = Pv(1760);
-    var Gv = Pv(36038),
-      mv = Pv(36518);
-
-    function jv() {
-      return Promise.all([Pv.e(282), Pv.e(388)]).then((() => Pv(40573)))
+    function MT() {
+      lT = !0
     }
 
-    function fv() {
-      return Pv.e(283).then((() => Pv(40581)))
+    function KT() {
+      return lT
+    }
+  },
+  36254: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      InGameUi: () => ST.c,
+      LobbyLeaderboard: () => DT.e,
+      loadCharacterCustomisationUI: () => aT,
+      loadCharacterPreview: () => FT,
+      matchmakeAndPlay: () => mT,
+      setUpGame: () => rT
+    });
+    var lT = cT(1252),
+      MT = cT(184),
+      KT = cT(31),
+      OT = cT(36263),
+      yT = cT(36272),
+      fT = cT(1974),
+      xT = cT(36302);
+
+    function IT() {
+      return !1 !== fT.b.get("canCustomiseChar")
+    }
+    let AT = !1;
+    var CT = cT(1327),
+      jT = cT(1261),
+      vT = cT(698),
+      tT = cT(8939);
+    var hT = cT(8932),
+      NT = cT(3536),
+      QT = cT(1814);
+    var ST = cT(36319),
+      DT = cT(36825);
+
+    function aT() {
+      return Promise.all([cT.e(282), cT.e(388)]).then((() => cT(40917)))
     }
 
-    function Fv() {
-      return (0, Cv.e)()
+    function FT() {
+      return cT.e(283).then((() => cT(40922)))
     }
-    Tv || (Tv = !0, document.addEventListener("keydown", (vv => {
-        (0, Nv.d)(vv, lv)
+
+    function rT() {
+      return (0, hT.f)()
+    }
+    AT || (AT = !0, document.addEventListener("keydown", (TT => {
+        (0, xT.e)(TT, IT)
       }))),
-      function(vv) {
-        var zv;
-        return !0 !== (null === vv || void 0 === vv ? void 0 : vv.saveData) && !/2g$/.test(null !== (zv = null === vv || void 0 === vv ? void 0 : vv.effectiveType) && void 0 !== zv ? zv : "")
-      }(navigator.connection) && (0, av.c)((() => {
-        (0, sv.d)() || Promise.all([Pv.e(75), Pv.e(132), Pv.e(88), Pv.e(56)]).then((() => Pv(40061))).then((vv => {
-          (0, sv.d)() || vv.startLoadAheadOfJoin({
-            joinStarted: sv.d,
-            language: wv.f.get().getCurrentLanguageCode()
+      function(TT) {
+        var kT;
+        return !0 !== (null === TT || void 0 === TT ? void 0 : TT.saveData) && !/2g$/.test(null !== (kT = null === TT || void 0 === TT ? void 0 : TT.effectiveType) && void 0 !== kT ? kT : "")
+      }(navigator.connection) && (0, vT.c)((() => {
+        (0, tT.e)() || Promise.all([cT.e(75), cT.e(132), cT.e(88), cT.e(56)]).then((() => cT(40404))).then((TT => {
+          (0, tT.e)() || TT.startLoadAheadOfJoin({
+            joinStarted: tT.e,
+            language: jT.f.get().getCurrentLanguageCode()
           })
-        }), (vv => {
-          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", vv)
+        }), (TT => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", TT)
         }))
       }));
-    const Yv = ev.c.get("router");
-    null === Yv ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function vv(zv) {
-      if ((0, cv.e)(zv.state.location.pathname)) return void(0, Cv.c)().catch((() => {}));
-      const Pv = zv.subscribe((hv => {
-        (0, cv.e)(hv.location.pathname) && (Pv(), (0, iv.e)().then((() => {
-          vv(zv)
+    const PT = KT.e.get("router");
+    null === PT ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function TT(kT) {
+      if ((0, QT.b)(kT.state.location.pathname)) return void(0, hT.e)().catch((() => {}));
+      const cT = kT.subscribe((lT => {
+        (0, QT.b)(lT.location.pathname) && (cT(), (0, NT.e)().then((() => {
+          TT(kT)
         })))
       }))
-    }(Yv), (0, gv.c)();
-    const nv = (0, pv.b)((async function(vv, zv) {
+    }(PT), (0, OT.c)();
+    const wT = (0, yT.e)((async function(TT, kT) {
       let {
-        place: Pv,
-        userContext: ev,
-        direct: gv,
-        rematch: pv
-      } = vv;
-      const dv = gv ? 1 / 0 : performance.now();
-      let Nv;
+        place: cT,
+        userContext: KT,
+        direct: OT,
+        rematch: yT
+      } = TT;
+      const fT = OT ? 1 / 0 : performance.now();
+      let xT;
       try {
-        Nv = await (0, Cv.c)()
-      } catch (lv) {
-        return console.error("The wasm client did not load:", lv), (0, Wv.o)({
+        xT = await (0, hT.e)()
+      } catch (IT) {
+        return console.error("The wasm client did not load:", IT), (0, CT.l)({
           websocketUrl: null
-        }), hv.e.errorWithCode(String(lv), Sv.o.CONNECT_TO_GAME_SERVER, {
-          error: lv,
-          severity: zv.aborted ? "low" : "medium",
-          ev: zv.aborted
+        }), lT.d.errorWithCode(String(IT), MT.g.CONNECT_TO_GAME_SERVER, {
+          error: IT,
+          severity: kT.aborted ? "low" : "medium",
+          KT: kT.aborted
         })
       }
-      return Nv.playWasmGame({
-        userContext: ev,
-        place: Pv,
-        matchedAt: dv,
-        rematch: pv
-      }, zv)
+      return xT.playWasmGame({
+        userContext: KT,
+        place: cT,
+        matchedAt: fT,
+        rematch: yT
+      }, kT)
     }));
 
-    function Ov() {
-      return (0, Cv.c)().catch((() => {})), nv(...arguments)
+    function mT() {
+      return (0, hT.e)().catch((() => {})), wT(...arguments)
     }
   },
-  8575: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => lv,
-      e: () => Tv
+  8932: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => IT,
+      f: () => AT
     });
-    var hv = Pv(2934),
-      Sv = Pv(2213),
-      ev = Pv(2972),
-      gv = Pv(4402),
-      pv = Pv(3258),
-      dv = Pv(8578);
-    let Nv = null;
+    var lT = cT(3081),
+      MT = cT(2323),
+      KT = cT(3125),
+      OT = cT(4633),
+      yT = cT(3449),
+      fT = cT(8939);
+    let xT = null;
 
-    function lv() {
-      return gv.c.cancelDownloadForJoin(), (0, pv.b)(), (0, Sv.f)(), (0, dv.g)(), (0, ev.h)(), Promise.all([Pv.e(70), Pv.e(73), Pv.e(72), Pv.e(71), Pv.e(84), Pv.e(261), Pv.e(199), Pv.e(217), Pv.e(239), Pv.e(212), Pv.e(46)]).then((() => Pv(39984))).catch((() => {})), Promise.all([Pv.e(75), Pv.e(132), Pv.e(88), Pv.e(56)]).then((() => Pv(40061))).then((vv => {
+    function IT() {
+      return OT.b.cancelDownloadForJoin(), (0, yT.e)(), (0, MT.d)(), (0, fT.f)(), (0, KT.j)(), Promise.all([cT.e(70), cT.e(73), cT.e(72), cT.e(71), cT.e(84), cT.e(261), cT.e(199), cT.e(217), cT.e(239), cT.e(212), cT.e(46)]).then((() => cT(40311))).catch((() => {})), Promise.all([cT.e(75), cT.e(132), cT.e(88), cT.e(56)]).then((() => cT(40404))).then((TT => {
         let {
-          startJoinLoad: zv
-        } = vv;
-        zv()
-      }), (() => {})), Nv ??= Promise.all([Pv.e(72), Pv.e(75), Pv.e(129), Pv.e(132), Pv.e(263), Pv.e(186), Pv.e(88), Pv.e(87), Pv.e(86), Pv.e(212), Pv.e(61)]).then((() => Pv(40153))).then((vv => (vv.startWasmPlay(), vv.followPageUiPack((vv => {
-        hv.b.showGamePack(vv)
-      })), vv)), (vv => {
-        throw Nv = null, vv
-      })), Nv
+          startJoinLoad: kT
+        } = TT;
+        kT()
+      }), (() => {})), xT ??= Promise.all([cT.e(72), cT.e(75), cT.e(129), cT.e(132), cT.e(263), cT.e(186), cT.e(88), cT.e(87), cT.e(86), cT.e(212), cT.e(61)]).then((() => cT(40489))).then((TT => (TT.startWasmPlay(), TT.followPageUiPack((TT => {
+        lT.e.showGamePack(TT)
+      })), TT)), (TT => {
+        throw xT = null, TT
+      })), xT
     }
 
-    function Tv() {
-      return Promise.all([Pv.e(72), Pv.e(75), Pv.e(129), Pv.e(132), Pv.e(263), Pv.e(186), Pv.e(88), Pv.e(87), Pv.e(86), Pv.e(212), Pv.e(61)]).then((() => Pv(40153))).then((vv => {
-        vv.startWasmPreviews(), vv.prefetchWasmPreviews()
+    function AT() {
+      return Promise.all([cT.e(72), cT.e(75), cT.e(129), cT.e(132), cT.e(263), cT.e(186), cT.e(88), cT.e(87), cT.e(86), cT.e(212), cT.e(61)]).then((() => cT(40489))).then((TT => {
+        TT.startWasmPreviews(), TT.prefetchWasmPreviews()
       }))
     }
   },
-  9185: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => Sv,
-      f: () => ev
+  9542: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => MT,
+      e: () => KT
     });
-    var hv = Pv(9144);
-    const Sv = "Air",
-      ev = Object.freeze(new hv.f(Sv, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var lT = cT(9495);
+    const MT = "Air",
+      KT = Object.freeze(new lT.d(MT, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

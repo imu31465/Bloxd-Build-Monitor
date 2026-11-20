@@ -1,757 +1,757 @@
 export const id = 131;
 export const ids = [131];
 export const modules = {
-  6339: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      loadPageShaderPackCompiler: () => Wz
+  6607: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      loadPageShaderPackCompiler: () => Ck
     });
-    var hv = {};
-    Pv.r(hv), Pv.d(hv, {
-      phv: () => Sv,
-      L_: () => ev,
-      default: () => Bv,
-      dhv: () => gv,
-      Nhv: () => pv,
-      initSync: () => yv,
-      hT: () => dv,
-      Jzv: () => Nv,
-      lhv: () => lv,
-      Thv: () => Tv,
-      qD: () => Wv,
-      Whv: () => wv,
-      RD: () => av,
-      whv: () => sv
+    var lT = {};
+    cT.r(lT), cT.d(lT, {
+      DlT: () => MT,
+      k_: () => KT,
+      default: () => UT,
+      alT: () => OT,
+      FlT: () => yT,
+      initSync: () => gT,
+      MA: () => fT,
+      OcT: () => xT,
+      rlT: () => IT,
+      PlT: () => AT,
+      yJ: () => CT,
+      wlT: () => jT,
+      OJ: () => vT,
+      mlT: () => tT
     });
-    class Sv {
-      static __wrap(vv) {
-        const zv = Object.create(Sv.prototype);
-        return zv.__wbg_ptr = vv, iv.register(zv, zv.__wbg_ptr, zv), zv
+    class MT {
+      static __wrap(TT) {
+        const kT = Object.create(MT.prototype);
+        return kT.__wbg_ptr = TT, NT.register(kT, kT.__wbg_ptr, kT), kT
       }
       __destroy_into_raw() {
-        const vv = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, iv.unregister(this), vv
+        const TT = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, NT.unregister(this), TT
       }
       free() {
-        const vv = this.__destroy_into_raw();
-        Lv.t65c(vv, 0)
+        const TT = this.__destroy_into_raw();
+        dT.FrpW(TT, 0)
       }
       get errorsJson() {
-        let vv, zv;
+        let TT, kT;
         try {
-          const Pv = Lv.w1iY(this.__wbg_ptr);
-          return vv = Pv[0], zv = Pv[1], Fv(Pv[0], Pv[1])
+          const cT = dT.UGDH(this.__wbg_ptr);
+          return TT = cT[0], kT = cT[1], rT(cT[0], cT[1])
         } finally {
-          Lv.bLS9(vv, zv, 1)
+          dT.n7uV(TT, kT, 1)
         }
       }
       get features() {
-        const vv = Lv.ydfZ(this.__wbg_ptr);
-        var zv = Gv(vv[0], vv[1]);
-        return Lv.bLS9(vv[0], 4 * vv[1], 4), zv
+        const TT = dT.mWOd(this.__wbg_ptr);
+        var kT = ST(TT[0], TT[1]);
+        return dT.n7uV(TT[0], 4 * TT[1], 4), kT
       }
       get hooks() {
-        const vv = Lv.JQM6(this.__wbg_ptr);
-        var zv = mv(vv[0], vv[1]).slice();
-        return Lv.bLS9(vv[0], 1 * vv[1], 1), zv
+        const TT = dT.obSm(this.__wbg_ptr);
+        var kT = DT(TT[0], TT[1]).slice();
+        return dT.n7uV(TT[0], 1 * TT[1], 1), kT
       }
-      mapValidationMessage(vv, zv, Pv, hv, Sv) {
-        let ev, gv;
+      mapValidationMessage(TT, kT, cT, lT, MT) {
+        let KT, OT;
         try {
-          const Nv = Lv.lkDN(this.__wbg_ptr, vv, zv, Pv, cv(hv), cv(Sv));
-          var pv = Nv[0],
-            dv = Nv[1];
-          if (Nv[3]) throw pv = 0, dv = 0, xv(Nv[2]);
-          return ev = pv, gv = dv, Fv(pv, dv)
+          const xT = dT.brBp(this.__wbg_ptr, TT, kT, cT, QT(lT), QT(MT));
+          var yT = xT[0],
+            fT = xT[1];
+          if (xT[3]) throw yT = 0, fT = 0, eT(xT[2]);
+          return KT = yT, OT = fT, rT(yT, fT)
         } finally {
-          Lv.bLS9(ev, gv, 1)
+          dT.n7uV(KT, OT, 1)
         }
       }
       get moduleCodes() {
-        const vv = Lv.wcbJ(this.__wbg_ptr);
-        var zv = Gv(vv[0], vv[1]);
-        return Lv.bLS9(vv[0], 4 * vv[1], 4), zv
+        const TT = dT.IWAV(this.__wbg_ptr);
+        var kT = ST(TT[0], TT[1]);
+        return dT.n7uV(TT[0], 4 * TT[1], 4), kT
       }
       get offInStrictJson() {
-        let vv, zv;
+        let TT, kT;
         try {
-          const Pv = Lv.K7UP(this.__wbg_ptr);
-          return vv = Pv[0], zv = Pv[1], Fv(Pv[0], Pv[1])
+          const cT = dT.TtjD(this.__wbg_ptr);
+          return TT = cT[0], kT = cT[1], rT(cT[0], cT[1])
         } finally {
-          Lv.bLS9(vv, zv, 1)
+          dT.n7uV(TT, kT, 1)
         }
       }
       get reads() {
-        const vv = Lv.AmYO(this.__wbg_ptr);
-        var zv = Gv(vv[0], vv[1]);
-        return Lv.bLS9(vv[0], 4 * vv[1], 4), zv
+        const TT = dT.u6fL(this.__wbg_ptr);
+        var kT = ST(TT[0], TT[1]);
+        return dT.n7uV(TT[0], 4 * TT[1], 4), kT
       }
       get validationModuleCodes() {
-        const vv = Lv.T6QT(this.__wbg_ptr);
-        var zv = Gv(vv[0], vv[1]);
-        return Lv.bLS9(vv[0], 4 * vv[1], 4), zv
+        const TT = dT.lGMH(this.__wbg_ptr);
+        var kT = ST(TT[0], TT[1]);
+        return dT.n7uV(TT[0], 4 * TT[1], 4), kT
       }
       get validationModuleKeys() {
-        const vv = Lv.TYJ2(this.__wbg_ptr);
-        var zv = mv(vv[0], vv[1]).slice();
-        return Lv.bLS9(vv[0], 1 * vv[1], 1), zv
+        const TT = dT.kGYb(this.__wbg_ptr);
+        var kT = DT(TT[0], TT[1]).slice();
+        return dT.n7uV(TT[0], 1 * TT[1], 1), kT
       }
       get variantFlags() {
-        const vv = Lv.FGDi(this.__wbg_ptr);
-        var zv = mv(vv[0], vv[1]).slice();
-        return Lv.bLS9(vv[0], 1 * vv[1], 1), zv
+        const TT = dT.TweI(this.__wbg_ptr);
+        var kT = DT(TT[0], TT[1]).slice();
+        return dT.n7uV(TT[0], 1 * TT[1], 1), kT
       }
     }
 
-    function ev(vv, zv, Pv, hv, ev, gv, pv) {
-      const dv = Rv(vv, Lv.KYJk),
-        Nv = Hv,
-        lv = Rv(zv, Lv.KYJk),
-        Tv = Hv,
-        Wv = Rv(Pv, Lv.KYJk),
-        wv = Hv,
-        av = Uv(hv, Lv.KYJk),
-        sv = Hv,
-        Cv = Rv(ev, Lv.KYJk),
-        iv = Hv,
-        cv = Rv(gv, Lv.KYJk),
-        Gv = Hv,
-        mv = Rv(pv, Lv.KYJk),
-        jv = Hv,
-        fv = Lv.qVI4(dv, Nv, lv, Tv, Wv, wv, av, sv, Cv, iv, cv, Gv, mv, jv);
-      if (fv[2]) throw xv(fv[1]);
-      return Sv.__wrap(fv[0])
+    function KT(TT, kT, cT, lT, KT, OT, yT) {
+      const fT = HT(TT, dT.LGfS),
+        xT = LT,
+        IT = HT(kT, dT.LGfS),
+        AT = LT,
+        CT = HT(cT, dT.LGfS),
+        jT = LT,
+        vT = oT(lT, dT.LGfS),
+        tT = LT,
+        hT = HT(KT, dT.LGfS),
+        NT = LT,
+        QT = HT(OT, dT.LGfS),
+        ST = LT,
+        DT = HT(yT, dT.LGfS),
+        aT = LT,
+        FT = dT.ISGu(fT, xT, IT, AT, CT, jT, vT, tT, hT, NT, QT, ST, DT, aT);
+      if (FT[2]) throw eT(FT[1]);
+      return MT.__wrap(FT[0])
     }
 
-    function gv() {
-      const vv = Lv.DesA();
-      var zv = Gv(vv[0], vv[1]);
-      return Lv.bLS9(vv[0], 4 * vv[1], 4), zv
+    function OT() {
+      const TT = dT.TUrs();
+      var kT = ST(TT[0], TT[1]);
+      return dT.n7uV(TT[0], 4 * TT[1], 4), kT
     }
 
-    function pv() {
-      const vv = Lv.WFdD();
-      var zv = Gv(vv[0], vv[1]);
-      return Lv.bLS9(vv[0], 4 * vv[1], 4), zv
+    function yT() {
+      const TT = dT.Q97x();
+      var kT = ST(TT[0], TT[1]);
+      return dT.n7uV(TT[0], 4 * TT[1], 4), kT
     }
 
-    function dv() {
-      Lv.vsgV()
+    function fT() {
+      dT.CxXR()
     }
 
-    function Nv(vv, zv, Pv, hv, Sv) {
-      let ev, gv;
+    function xT(TT, kT, cT, lT, MT) {
+      let KT, OT;
       try {
-        const Nv = Rv(vv, Lv.KYJk),
-          lv = Hv,
-          Tv = Uv(zv, Lv.KYJk),
-          Wv = Hv,
-          wv = Rv(Pv, Lv.KYJk),
-          av = Hv,
-          sv = Uv(hv, Lv.KYJk),
-          Cv = Hv,
-          iv = function(vv, zv) {
-            const Pv = zv(1 * vv.length, 1) >>> 0;
-            return Ov().set(vv, Pv / 1), Hv = vv.length, Pv
-          }(Sv, Lv.KYJk),
-          cv = Hv,
-          Gv = Lv.LBCf(Nv, lv, Tv, Wv, wv, av, sv, Cv, iv, cv);
-        var pv = Gv[0],
-          dv = Gv[1];
-        if (Gv[3]) throw pv = 0, dv = 0, xv(Gv[2]);
-        return ev = pv, gv = dv, Fv(pv, dv)
+        const xT = HT(TT, dT.LGfS),
+          IT = LT,
+          AT = oT(kT, dT.LGfS),
+          CT = LT,
+          jT = HT(cT, dT.LGfS),
+          vT = LT,
+          tT = oT(lT, dT.LGfS),
+          hT = LT,
+          NT = function(TT, kT) {
+            const cT = kT(1 * TT.length, 1) >>> 0;
+            return mT().set(TT, cT / 1), LT = TT.length, cT
+          }(MT, dT.LGfS),
+          QT = LT,
+          ST = dT.qDda(xT, IT, AT, CT, jT, vT, tT, hT, NT, QT);
+        var yT = ST[0],
+          fT = ST[1];
+        if (ST[3]) throw yT = 0, fT = 0, eT(ST[2]);
+        return KT = yT, OT = fT, rT(yT, fT)
       } finally {
-        Lv.bLS9(ev, gv, 1)
+        dT.n7uV(KT, OT, 1)
       }
     }
 
-    function lv() {
-      let vv, zv;
+    function IT() {
+      let TT, kT;
       try {
-        const Pv = Lv.qpUi();
-        return vv = Pv[0], zv = Pv[1], Fv(Pv[0], Pv[1])
+        const cT = dT.DI40();
+        return TT = cT[0], kT = cT[1], rT(cT[0], cT[1])
       } finally {
-        Lv.bLS9(vv, zv, 1)
+        dT.n7uV(TT, kT, 1)
       }
     }
 
-    function Tv(vv) {
-      let zv, Pv;
+    function AT(TT) {
+      let kT, cT;
       try {
-        const ev = Lv.nnjL(vv);
-        var hv = ev[0],
-          Sv = ev[1];
-        if (ev[3]) throw hv = 0, Sv = 0, xv(ev[2]);
-        return zv = hv, Pv = Sv, Fv(hv, Sv)
+        const KT = dT.d5tV(TT);
+        var lT = KT[0],
+          MT = KT[1];
+        if (KT[3]) throw lT = 0, MT = 0, eT(KT[2]);
+        return kT = lT, cT = MT, rT(lT, MT)
       } finally {
-        Lv.bLS9(zv, Pv, 1)
+        dT.n7uV(kT, cT, 1)
       }
     }
 
-    function Wv() {
-      return Lv.e9Ks() >>> 0
+    function CT() {
+      return dT.VRCB() >>> 0
     }
 
-    function wv() {
-      let vv, zv;
+    function jT() {
+      let TT, kT;
       try {
-        const Pv = Lv.qC3V();
-        return vv = Pv[0], zv = Pv[1], Fv(Pv[0], Pv[1])
+        const cT = dT.PHbS();
+        return TT = cT[0], kT = cT[1], rT(cT[0], cT[1])
       } finally {
-        Lv.bLS9(vv, zv, 1)
+        dT.n7uV(TT, kT, 1)
       }
     }
 
-    function av(vv, zv) {
-      let Pv, hv;
+    function vT(TT, kT) {
+      let cT, lT;
       try {
-        const gv = Rv(vv, Lv.KYJk),
-          pv = Hv,
-          dv = Uv(zv, Lv.KYJk),
-          Nv = Hv,
-          lv = Lv.GYUl(gv, pv, dv, Nv);
-        var Sv = lv[0],
-          ev = lv[1];
-        if (lv[3]) throw Sv = 0, ev = 0, xv(lv[2]);
-        return Pv = Sv, hv = ev, Fv(Sv, ev)
+        const OT = HT(TT, dT.LGfS),
+          yT = LT,
+          fT = oT(kT, dT.LGfS),
+          xT = LT,
+          IT = dT.m3iR(OT, yT, fT, xT);
+        var MT = IT[0],
+          KT = IT[1];
+        if (IT[3]) throw MT = 0, KT = 0, eT(IT[2]);
+        return cT = MT, lT = KT, rT(MT, KT)
       } finally {
-        Lv.bLS9(Pv, hv, 1)
+        dT.n7uV(cT, lT, 1)
       }
     }
 
-    function sv(vv) {
-      let zv, Pv;
+    function tT(TT) {
+      let kT, cT;
       try {
-        const ev = Lv.t3lI(cv(vv));
-        var hv = ev[0],
-          Sv = ev[1];
-        if (ev[3]) throw hv = 0, Sv = 0, xv(ev[2]);
-        return zv = hv, Pv = Sv, Fv(hv, Sv)
+        const KT = dT.d4mh(QT(TT));
+        var lT = KT[0],
+          MT = KT[1];
+        if (KT[3]) throw lT = 0, MT = 0, eT(KT[2]);
+        return kT = lT, cT = MT, rT(lT, MT)
       } finally {
-        Lv.bLS9(zv, Pv, 1)
+        dT.n7uV(kT, cT, 1)
       }
     }
 
-    function Cv() {
+    function hT() {
       return {
         __proto__: null,
-        E2vW: {
+        HwSR: {
           __proto__: null,
-          gTey: function(vv, zv) {
-            return cv(Error(Fv(vv, zv)))
+          TQs7: function(TT, kT) {
+            return QT(Error(rT(TT, kT)))
           },
-          XrSn: function(vv) {
-            return null === Dv(vv)
+          KDYp: function(TT) {
+            return null === bT(TT)
           },
-          wsRG: function(vv) {
-            return "string" === typeof Dv(vv)
+          bFhG: function(TT) {
+            return "string" === typeof bT(TT)
           },
-          da6e: function(vv, zv) {
-            const Pv = Dv(zv),
-              hv = "string" === typeof Pv ? Pv : void 0;
-            var Sv, ev = void 0 === (Sv = hv) || null === Sv ? 0 : function(vv, zv, Pv) {
-                if (void 0 === Pv) {
-                  const Pv = Qv.encode(vv),
-                    hv = zv(Pv.length, 1) >>> 0;
-                  return Ov().subarray(hv, hv + Pv.length).set(Pv), Hv = Pv.length, hv
+          if5H: function(TT, kT) {
+            const cT = bT(kT),
+              lT = "string" === typeof cT ? cT : void 0;
+            var MT, KT = void 0 === (MT = lT) || null === MT ? 0 : function(TT, kT, cT) {
+                if (void 0 === cT) {
+                  const cT = ZT.encode(TT),
+                    lT = kT(cT.length, 1) >>> 0;
+                  return mT().subarray(lT, lT + cT.length).set(cT), LT = cT.length, lT
                 }
-                let hv = vv.length,
-                  Sv = zv(hv, 1) >>> 0;
-                const ev = Ov();
-                let gv = 0;
-                for (; gv < hv; gv++) {
-                  const zv = vv.charCodeAt(gv);
-                  if (zv > 127) break;
-                  ev[Sv + gv] = zv
+                let lT = TT.length,
+                  MT = kT(lT, 1) >>> 0;
+                const KT = mT();
+                let OT = 0;
+                for (; OT < lT; OT++) {
+                  const kT = TT.charCodeAt(OT);
+                  if (kT > 127) break;
+                  KT[MT + OT] = kT
                 }
-                if (gv !== hv) {
-                  0 !== gv && (vv = vv.slice(gv)), Sv = Pv(Sv, hv, hv = gv + 3 * vv.length, 1) >>> 0;
-                  const zv = Ov().subarray(Sv + gv, Sv + hv);
-                  gv += Qv.encodeInto(vv, zv).written, Sv = Pv(Sv, hv, gv, 1) >>> 0
+                if (OT !== lT) {
+                  0 !== OT && (TT = TT.slice(OT)), MT = cT(MT, lT, lT = OT + 3 * TT.length, 1) >>> 0;
+                  const kT = mT().subarray(MT + OT, MT + lT);
+                  OT += ZT.encodeInto(TT, kT).written, MT = cT(MT, lT, OT, 1) >>> 0
                 }
-                return Hv = gv, Sv
-              }(hv, Lv.KYJk, Lv.GMV0),
-              gv = Hv;
-            fv().setInt32(vv + 4, gv, !0), fv().setInt32(vv + 0, ev, !0)
+                return LT = OT, MT
+              }(lT, dT.LGfS, dT.o1mH),
+              OT = LT;
+            FT().setInt32(TT + 4, OT, !0), FT().setInt32(TT + 0, KT, !0)
           },
-          MZbj: function(vv, zv) {
-            throw new Error(Fv(vv, zv))
+          AFYo: function(TT, kT) {
+            throw new Error(rT(TT, kT))
           },
-          GeTw: function(vv, zv) {
-            return Dv(vv).charCodeAt(zv >>> 0)
+          YCgx: function(TT, kT) {
+            return bT(TT).charCodeAt(kT >>> 0)
           },
-          LSvx: function(vv, zv) {
-            console.error(Fv(vv, zv))
+          NoJ7: function(TT, kT) {
+            console.error(rT(TT, kT))
           },
-          Gegd: function(vv) {
-            return Dv(vv).length
+          wDTz: function(TT) {
+            return bT(TT).length
           },
-          dFzP: function(vv, zv) {
-            return cv(Fv(vv, zv))
+          P9e3: function(TT, kT) {
+            return QT(rT(TT, kT))
           },
-          H9fO: function(vv) {
-            xv(vv)
+          kknN: function(TT) {
+            eT(TT)
           }
         }
       }
     }
-    Symbol.dispose && (Sv.prototype[Symbol.dispose] = Sv.prototype.free);
-    const iv = "undefined" === typeof FinalizationRegistry ? {
+    Symbol.dispose && (MT.prototype[Symbol.dispose] = MT.prototype.free);
+    const NT = "undefined" === typeof FinalizationRegistry ? {
       register: () => {},
       unregister: () => {}
-    } : new FinalizationRegistry((vv => Lv.t65c(vv, 1)));
+    } : new FinalizationRegistry((TT => dT.FrpW(TT, 1)));
 
-    function cv(vv) {
-      Vv === Kv.length && Kv.push(Kv.length + 1);
-      const zv = Vv;
-      return Vv = Kv[zv], Kv[zv] = vv, zv
+    function QT(TT) {
+      JT === zT.length && zT.push(zT.length + 1);
+      const kT = JT;
+      return JT = zT[kT], zT[kT] = TT, kT
     }
 
-    function Gv(vv, zv) {
-      vv >>>= 0;
-      const Pv = fv(),
-        hv = [];
-      for (let Sv = vv; Sv < vv + 4 * zv; Sv += 4) hv.push(xv(Pv.getUint32(Sv, !0)));
-      return hv
+    function ST(TT, kT) {
+      TT >>>= 0;
+      const cT = FT(),
+        lT = [];
+      for (let MT = TT; MT < TT + 4 * kT; MT += 4) lT.push(eT(cT.getUint32(MT, !0)));
+      return lT
     }
 
-    function mv(vv, zv) {
-      return vv >>>= 0, Ov().subarray(vv / 1, vv / 1 + zv)
+    function DT(TT, kT) {
+      return TT >>>= 0, mT().subarray(TT / 1, TT / 1 + kT)
     }
-    let jv = null;
+    let aT = null;
 
-    function fv() {
-      return (null === jv || !0 === jv.buffer.detached || void 0 === jv.buffer.detached && jv.buffer !== Lv.memory.buffer) && (jv = new DataView(Lv.memory.buffer)), jv
+    function FT() {
+      return (null === aT || !0 === aT.buffer.detached || void 0 === aT.buffer.detached && aT.buffer !== dT.memory.buffer) && (aT = new DataView(dT.memory.buffer)), aT
     }
 
-    function Fv(vv, zv) {
-      return function(vv, zv) {
-        Iv += zv, Iv >= qv && (tv = new TextDecoder("utf-8", {
+    function rT(TT, kT) {
+      return function(TT, kT) {
+        ET += kT, ET >= VT && (GT = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), tv.decode(), Iv = zv);
-        return tv.decode(Ov().subarray(vv, vv + zv))
-      }(vv >>> 0, zv)
+        }), GT.decode(), ET = kT);
+        return GT.decode(mT().subarray(TT, TT + kT))
+      }(TT >>> 0, kT)
     }
-    let Yv = null;
-    let nv = null;
+    let PT = null;
+    let wT = null;
 
-    function Ov() {
-      return null !== nv && 0 !== nv.byteLength || (nv = new Uint8Array(Lv.memory.buffer)), nv
-    }
-
-    function Dv(vv) {
-      return Kv[vv]
-    }
-    let Kv = new Array(1024).fill(void 0);
-    Kv.push(void 0, null, !0, !1);
-    let Vv = Kv.length;
-
-    function Uv(vv, zv) {
-      const Pv = zv(4 * vv.length, 4) >>> 0;
-      return (null !== Yv && 0 !== Yv.byteLength || (Yv = new Uint32Array(Lv.memory.buffer)), Yv).set(vv, Pv / 4), Hv = vv.length, Pv
+    function mT() {
+      return null !== wT && 0 !== wT.byteLength || (wT = new Uint8Array(dT.memory.buffer)), wT
     }
 
-    function Rv(vv, zv) {
-      const Pv = zv(4 * vv.length, 4) >>> 0,
-        hv = fv();
-      for (let Sv = 0; Sv < vv.length; Sv++) hv.setUint32(Pv + 4 * Sv, cv(vv[Sv]), !0);
-      return Hv = vv.length, Pv
+    function bT(TT) {
+      return zT[TT]
+    }
+    let zT = new Array(1024).fill(void 0);
+    zT.push(void 0, null, !0, !1);
+    let JT = zT.length;
+
+    function oT(TT, kT) {
+      const cT = kT(4 * TT.length, 4) >>> 0;
+      return (null !== PT && 0 !== PT.byteLength || (PT = new Uint32Array(dT.memory.buffer)), PT).set(TT, cT / 4), LT = TT.length, cT
     }
 
-    function xv(vv) {
-      const zv = Dv(vv);
-      return function(vv) {
-        vv < 1028 || (Kv[vv] = Vv, Vv = vv)
-      }(vv), zv
+    function HT(TT, kT) {
+      const cT = kT(4 * TT.length, 4) >>> 0,
+        lT = FT();
+      for (let MT = 0; MT < TT.length; MT++) lT.setUint32(cT + 4 * MT, QT(TT[MT]), !0);
+      return LT = TT.length, cT
     }
-    let tv = new TextDecoder("utf-8", {
+
+    function eT(TT) {
+      const kT = bT(TT);
+      return function(TT) {
+        TT < 1028 || (zT[TT] = JT, JT = TT)
+      }(TT), kT
+    }
+    let GT = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    tv.decode();
-    const qv = 2146435072;
-    let Iv = 0;
-    const Qv = new TextEncoder;
-    "encodeInto" in Qv || (Qv.encodeInto = function(vv, zv) {
-      const Pv = Qv.encode(vv);
-      return zv.set(Pv), {
-        read: vv.length,
-        written: Pv.length
+    GT.decode();
+    const VT = 2146435072;
+    let ET = 0;
+    const ZT = new TextEncoder;
+    "encodeInto" in ZT || (ZT.encodeInto = function(TT, kT) {
+      const cT = ZT.encode(TT);
+      return kT.set(cT), {
+        read: TT.length,
+        written: cT.length
       }
     });
-    let Zv, Av, Lv, Hv = 0;
+    let uT, XT, dT, LT = 0;
 
-    function Mv(vv, zv) {
-      return Av = vv, Lv = vv.exports, Zv = zv, jv = null, Yv = null, nv = null, Lv.euml(), Lv
+    function RT(TT, kT) {
+      return XT = TT, dT = TT.exports, uT = kT, aT = null, PT = null, wT = null, dT.TkSs(), dT
     }
 
-    function yv(vv) {
-      if (void 0 !== Lv) return Lv;
-      void 0 !== vv && (Object.getPrototypeOf(vv) === Object.prototype ? ({
-        module: vv
-      } = vv) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const zv = Cv();
-      vv instanceof WebAssembly.Module || (vv = new WebAssembly.Module(vv));
-      return Mv(new WebAssembly.Instance(vv, zv), vv)
+    function gT(TT) {
+      if (void 0 !== dT) return dT;
+      void 0 !== TT && (Object.getPrototypeOf(TT) === Object.prototype ? ({
+        module: TT
+      } = TT) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const kT = hT();
+      TT instanceof WebAssembly.Module || (TT = new WebAssembly.Module(TT));
+      return RT(new WebAssembly.Instance(TT, kT), TT)
     }
-    async function Bv(vv) {
-      if (void 0 !== Lv) return Lv;
-      void 0 !== vv && (Object.getPrototypeOf(vv) === Object.prototype ? ({
-        module_or_path: vv
-      } = vv) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const zv = Cv();
-      ("string" === typeof vv || "function" === typeof Request && vv instanceof Request || "function" === typeof URL && vv instanceof URL) && (vv = fetch(vv));
+    async function UT(TT) {
+      if (void 0 !== dT) return dT;
+      void 0 !== TT && (Object.getPrototypeOf(TT) === Object.prototype ? ({
+        module_or_path: TT
+      } = TT) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const kT = hT();
+      ("string" === typeof TT || "function" === typeof Request && TT instanceof Request || "function" === typeof URL && TT instanceof URL) && (TT = fetch(TT));
       const {
-        instance: Pv,
-        module: hv
-      } = await async function(vv, zv) {
-        if ("function" === typeof Response && vv instanceof Response) {
-          if (!vv.ok) throw new Error(`failed to fetch Wasm: ${vv.status} ${vv.statusText} fetching '${vv.url}'`);
+        instance: cT,
+        module: lT
+      } = await async function(TT, kT) {
+        if ("function" === typeof Response && TT instanceof Response) {
+          if (!TT.ok) throw new Error(`failed to fetch Wasm: ${TT.status} ${TT.statusText} fetching '${TT.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(vv, zv)
-          } catch (Pv) {
-            if (! function(vv) {
-                switch (vv) {
+            return await WebAssembly.instantiateStreaming(TT, kT)
+          } catch (cT) {
+            if (! function(TT) {
+                switch (TT) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(vv.type) || "application/wasm" === vv.headers.get("Content-Type")) throw Pv;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", Pv)
+              }(TT.type) || "application/wasm" === TT.headers.get("Content-Type")) throw cT;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", cT)
           }
-          const hv = await vv.arrayBuffer();
-          return await WebAssembly.instantiate(hv, zv)
+          const lT = await TT.arrayBuffer();
+          return await WebAssembly.instantiate(lT, kT)
         } {
-          const Pv = await WebAssembly.instantiate(vv, zv);
-          return Pv instanceof WebAssembly.Instance ? {
-            instance: Pv,
-            module: vv
-          } : Pv
+          const cT = await WebAssembly.instantiate(TT, kT);
+          return cT instanceof WebAssembly.Instance ? {
+            instance: cT,
+            module: TT
+          } : cT
         }
-      }(await vv, zv);
-      return Mv(Pv, hv)
+      }(await TT, kT);
+      return RT(cT, lT)
     }
-    var Jv = Pv(3473),
-      Ev = Pv(6343);
-    class ov extends Error {
+    var YT = cT(3684),
+      BT = cT(6609);
+    class WT extends Error {
       stage;
-      constructor(vv, zv) {
-        super((0, Jv.D)(vv, zv), {
-          cause: zv
-        }), this.name = "BloxdShaderPackWasmLoadError", this.stage = vv
+      constructor(TT, kT) {
+        super((0, YT.F)(TT, kT), {
+          cause: kT
+        }), this.name = "BloxdShaderPackWasmLoadError", this.stage = TT
       }
     }
-    let bv = null,
-      rv = null;
+    let nT = null,
+      pT = null;
 
-    function kv() {
-      return bv ? Promise.resolve(bv) : (rv || (rv = async function() {
-        let vv;
+    function iT() {
+      return nT ? Promise.resolve(nT) : (pT || (pT = async function() {
+        let TT;
         try {
-          vv = await (0, Jv.F)(new Pv.U(Pv(6345)), (0, Ev.c)("bloxd_wasm_shader_pack"))
-        } catch (zv) {
-          throw new ov((0, Jv.M)(zv), zv)
+          TT = await (0, YT.J)(new cT.U(cT(6614)), (0, BT.e)("bloxd_wasm_shader_pack"))
+        } catch (kT) {
+          throw new WT((0, YT.R)(kT), kT)
         }
         try {
-          await Bv({
-            module_or_path: vv
+          await UT({
+            module_or_path: TT
           })
-        } catch (zv) {
-          throw new ov("instantiate", zv)
+        } catch (kT) {
+          throw new WT("instantiate", kT)
         }
-        return bv = hv, bv
-      }(), rv.then(void 0, (() => {
-        rv = null
-      }))), rv)
+        return nT = lT, nT
+      }(), pT.then(void 0, (() => {
+        pT = null
+      }))), pT)
     }
-    var Xv = Pv(6359);
+    var qT = cT(6628);
 
-    function uv(vv) {
-      let [zv, Pv, hv, Sv] = vv;
-      const ev = {
-        file: zv,
-        line: Pv,
-        message: hv
+    function sT(TT) {
+      let [kT, cT, lT, MT] = TT;
+      const KT = {
+        file: kT,
+        line: cT,
+        message: lT
       };
-      return Sv && (ev.variants = Sv.map(Xv.k)), ev
+      return MT && (KT.variants = MT.map(qT.o)), KT
     }
 
-    function vz(vv) {
-      return JSON.parse(vv).map(uv)
+    function Tk(TT) {
+      return JSON.parse(TT).map(sT)
     }
 
-    function zz(vv, zv) {
-      if (!Number.isInteger(vv) || vv < 0 || vv > 4294967295) throw new Error(`${zv} ${vv} is not a whole number from 0 to 4294967295`);
-      return vv
+    function kk(TT, kT) {
+      if (!Number.isInteger(TT) || TT < 0 || TT > 4294967295) throw new Error(`${kT} ${TT} is not a whole number from 0 to 4294967295`);
+      return TT
     }
 
-    function Pz(vv) {
-      return [vv.named.map((vv => vv.name)), Uint32Array.from(vv.named, (vv => zz(vv.id, "Texture ID")))]
+    function ck(TT) {
+      return [TT.named.map((TT => TT.name)), Uint32Array.from(TT.named, (TT => kk(TT.id, "Texture ID")))]
     }
-    const hz = new WeakMap;
-    const Sz = new WeakMap,
-      ez = new WeakSet;
+    const lk = new WeakMap;
+    const Mk = new WeakMap,
+      Kk = new WeakSet;
 
-    function gz(vv, zv) {
-      if (ez.has(vv)) throw new Error("The shader pack compiler crashed earlier on this page, so it can't run again until a reload");
+    function Ok(TT, kT) {
+      if (Kk.has(TT)) throw new Error("The shader pack compiler crashed earlier on this page, so it can't run again until a reload");
       try {
-        return zv()
-      } catch (Pv) {
-        throw Pv instanceof WebAssembly.RuntimeError && ez.add(vv), Pv
+        return kT()
+      } catch (cT) {
+        throw cT instanceof WebAssembly.RuntimeError && Kk.add(TT), cT
       }
     }
 
-    function pz(vv) {
-      let zv = Sz.get(vv);
-      if (!zv) {
-        let Pv, hv;
-        zv = {
-          L_: (zv, Pv) => gz(vv, (() => function(vv, zv, Pv) {
-            const hv = vv.L_(zv.map((vv => vv.path)), zv.map((vv => vv.source)), ...Pz(Pv), Pv.aliases.map((vv => vv.name)), Pv.aliases.map((vv => vv.texture)), Pv.aliases.map((vv => vv.kind)));
-            let Sv = !1;
+    function yk(TT) {
+      let kT = Mk.get(TT);
+      if (!kT) {
+        let cT, lT;
+        kT = {
+          k_: (kT, cT) => Ok(TT, (() => function(TT, kT, cT) {
+            const lT = TT.k_(kT.map((TT => TT.path)), kT.map((TT => TT.source)), ...ck(cT), cT.aliases.map((TT => TT.name)), cT.aliases.map((TT => TT.texture)), cT.aliases.map((TT => TT.kind)));
+            let MT = !1;
             try {
-              const vv = hv.validationModuleCodes,
-                zv = Array.from(hv.validationModuleKeys, ((zv, Pv) => ({
-                  key: (0, Xv.k)(zv),
-                  code: vv[Pv]
+              const TT = lT.validationModuleCodes,
+                kT = Array.from(lT.validationModuleKeys, ((kT, cT) => ({
+                  key: (0, qT.o)(kT),
+                  code: TT[cT]
                 }))),
-                Pv = {
-                  errors: vz(hv.errorsJson),
-                  offInStrict: vz(hv.offInStrictJson),
-                  variants: (0, Xv.f)(hv),
-                  validationModules: zv,
-                  features: hv.features
+                cT = {
+                  errors: Tk(lT.errorsJson),
+                  offInStrict: Tk(lT.offInStrictJson),
+                  variants: (0, qT.i)(lT),
+                  validationModules: kT,
+                  features: lT.features
                 };
-              return zv.forEach(((vv, zv) => {
-                hz.set(vv, {
-                  pack: hv,
-                  index: zv
+              return kT.forEach(((TT, kT) => {
+                lk.set(TT, {
+                  pack: lT,
+                  index: kT
                 })
-              })), Sv = zv.length > 0, Pv
+              })), MT = kT.length > 0, cT
             } finally {
-              Sv || hv.free()
+              MT || lT.free()
             }
-          }(vv, zv, Pv))),
-          mapValidationMessage: (zv, Pv) => {
-            const hv = hz.get(zv);
-            if (!hv) throw new Error("mapValidationMessage takes a validation module this compiler made");
-            return uv(JSON.parse(gz(vv, (() => hv.pack.mapValidationMessage(hv.index, Pv.lineNum, Pv.linePos, Pv.message, Pv.type)))))
+          }(TT, kT, cT))),
+          mapValidationMessage: (kT, cT) => {
+            const lT = lk.get(kT);
+            if (!lT) throw new Error("mapValidationMessage takes a validation module this compiler made");
+            return sT(JSON.parse(Ok(TT, (() => lT.pack.mapValidationMessage(lT.index, cT.lineNum, cT.linePos, cT.message, cT.type)))))
           },
-          Jzv: zv => gz(vv, (() => function(vv, zv) {
-            const Pv = new Int32Array(zv.length),
-              hv = [];
-            return zv.forEach(((vv, zv) => {
-              Pv[zv] = vv.variants ? vv.variants.length : -1;
-              for (const Pv of vv.variants ?? []) hv.push((0, Xv.h)(Pv))
-            })), vz(vv.Jzv(zv.map((vv => vv.file)), Uint32Array.from(zv, (vv => zz(vv.line, "Diagnostic line"))), zv.map((vv => vv.message)), Pv, Uint8Array.from(hv)))
-          }(vv, zv))),
-          RD: zv => gz(vv, (() => vv.RD(...Pz(zv)))),
+          OcT: kT => Ok(TT, (() => function(TT, kT) {
+            const cT = new Int32Array(kT.length),
+              lT = [];
+            return kT.forEach(((TT, kT) => {
+              cT[kT] = TT.variants ? TT.variants.length : -1;
+              for (const cT of TT.variants ?? []) lT.push((0, qT.k)(cT))
+            })), Tk(TT.OcT(kT.map((TT => TT.file)), Uint32Array.from(kT, (TT => kk(TT.line, "Diagnostic line"))), kT.map((TT => TT.message)), cT, Uint8Array.from(lT)))
+          }(TT, kT))),
+          OJ: kT => Ok(TT, (() => TT.OJ(...ck(kT)))),
           get SHADER_PACK_HEADER_VERSION() {
-            return Pv ??= gz(vv, (() => vv.Whv())), Pv
+            return cT ??= Ok(TT, (() => TT.wlT())), cT
           },
           get DEFAULT_SHADER_PACK_FILES() {
-            return hv ??= gz(vv, (() => {
-              const zv = vv.Nhv();
-              return vv.dhv().map(((vv, Pv) => ({
-                path: vv,
-                source: zv[Pv]
+            return lT ??= Ok(TT, (() => {
+              const kT = TT.FlT();
+              return TT.alT().map(((TT, cT) => ({
+                path: TT,
+                source: kT[cT]
               })))
-            })), hv
+            })), lT
           },
-          whv: zv => gz(vv, (() => vv.whv(zv))),
-          resolveHeader: zv => gz(vv, (() => vv.Thv((0, Xv.h)(zv)))),
-          lhv: () => gz(vv, (() => vv.lhv()))
-        }, Sz.set(vv, zv)
+          mlT: kT => Ok(TT, (() => TT.mlT(kT))),
+          resolveHeader: kT => Ok(TT, (() => TT.PlT((0, qT.k)(kT)))),
+          rlT: () => Ok(TT, (() => TT.rlT()))
+        }, Mk.set(TT, kT)
       }
-      return zv
+      return kT
     }
-    var dz = Pv(2996),
-      Nz = Pv(6351);
-    const lz = "bloxdShaderPackWasmFailureReported";
-    let Tz = null;
+    var fk = cT(3170),
+      xk = cT(6623);
+    const Ik = "bloxdShaderPackWasmFailureReported";
+    let Ak = null;
 
-    function Wz() {
-      return Tz ??= async function() {
-        if ("undefined" === typeof WebAssembly) return wz("unsupported", "This browser has no WebAssembly"), null;
-        const vv = (0, Nz.loadShaderPackTextures)().then((() => !0), (vv => (console.error("Could not load the shader pack textures, so shader packs can't run", vv), !1)));
+    function Ck() {
+      return Ak ??= async function() {
+        if ("undefined" === typeof WebAssembly) return jk("unsupported", "This browser has no WebAssembly"), null;
+        const TT = (0, xk.loadShaderPackTextures)().then((() => !0), (TT => (console.error("Could not load the shader pack textures, so shader packs can't run", TT), !1)));
         try {
-          const zv = await async function() {
-            let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : kv;
-            return pz(await vv())
+          const kT = await async function() {
+            let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : iT;
+            return yk(await TT())
           }();
-          return await vv ? zv : null
-        } catch (zv) {
-          const vv = zv instanceof Error ? zv.message : String(zv);
-          return wz(dz.b[zv instanceof ov ? zv.stage : "instantiate"], vv), null
+          return await TT ? kT : null
+        } catch (kT) {
+          const TT = kT instanceof Error ? kT.message : String(kT);
+          return jk(fk.c[kT instanceof WT ? kT.stage : "instantiate"], TT), null
         }
-      }(), Tz
+      }(), Ak
     }
 
-    function wz(vv, zv) {
-      (0, dz.g)(lz, `Shader pack wasm ${vv}, so shader packs can't run: ${zv}`, zv, `shader_pack_${vv}`)
+    function jk(TT, kT) {
+      (0, fk.i)(Ik, `Shader pack wasm ${TT}, so shader packs can't run: ${kT}`, kT, `shader_pack_${TT}`)
     }
   },
-  6345: (vv, zv, Pv) => {
-    vv.exports = Pv.p + "static/media/bloxd_wasm_shader_pack_bg.4ee54bcbea01ff402e2f.wasm"
+  6614: (TT, kT, cT) => {
+    TT.exports = cT.p + "static/media/bloxd_wasm_shader_pack_bg.8f9705dafcb99662e58e.wasm"
   },
-  6343: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => gv
+  6609: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => OT
     });
-    var hv = Pv(3473);
-    const Sv = {
-      bloxd_wasm: () => "242cfb746367816b85c0d450194bdff4c53a9ad8bf401630f6949cb63852d1be",
-      bloxd_wasm_client: () => "d02ab3ff378e3cabdd07cd9c554ec471bb49ecb41d1bcfc8f9f48d000f552813",
-      bloxd_wasm_workers: () => "8664088122d5b673ff7a8e8f0b71864091addbd11a22fd8877301ef2e1d7d7c6",
-      bloxd_wasm_models: () => "0ce508e0c3797e4d2237f5b419263b9df4627372af441dcaec1b4b4938917dcb",
-      bloxd_wasm_webgpu: () => "d02362ea4b01ac0b3094c90bd530e9d9541fd4d02dbb0cf37e62ce03b504586a",
-      bloxd_wasm_webgl: () => "5587f4c12aefda662a798fa76f5ef5f0d26531308da330b663163a4a6a353686",
-      bloxd_wasm_webgl1: () => "330ca93132b966b9f2d177baefcf1ec86106db4d42b6875043c867a4fbf8f714",
-      bloxd_wasm_replay: () => "970290489bfdef049310fc4e3d6c024c9afee7381deeccf9925d9d2bf1ad0949",
-      bloxd_wasm_recorder: () => "2118a197767ebdac164a9fab410a0150f76cd900eb0e711f4a60fc6e38ae5205",
-      bloxd_wasm_anim: () => "fb2fc3b43abfd08ad961098c6784b1c03d7af35338bbd752b5df3af261972615",
-      bloxd_wasm_textures: () => "ac6c8ff1da71e10b1ed9866e9a4eb70d166a36bb2f0e1c05cef1de7d9d6b6043",
-      bloxd_wasm_shader_pack: () => "d571fee4d34b97756c8d2b36706fa9baf34990285d56aea5ea806d4682070476"
+    var lT = cT(3684);
+    const MT = {
+      bloxd_wasm: () => "a0f424b25368d6393787ae0cadc74c38a79bf45853cbc8fe0d3b4b00ed2f3987",
+      bloxd_wasm_client: () => "0848a1ad8f1a6acd15190097c16d6c8cee3ea20961c9a5135fb70c8e5a3a8765",
+      bloxd_wasm_workers: () => "70acc026337513cb3482a9557a18f648e482d0083d7e5e1b6fe3e07bdcb2f8e3",
+      bloxd_wasm_models: () => "634d37ef8cef3ee4f695383ddf3aede7e518819fda02f111669a55711db8829c",
+      bloxd_wasm_webgpu: () => "af696a84742b4427e456975c7e2c98397cd27946ad3057ca6a41701cfdd49270",
+      bloxd_wasm_webgl: () => "47a865a6f0812bc9a2a7d464d212069d989bfc60e391a5b004c51ed9559d1e27",
+      bloxd_wasm_webgl1: () => "5aba3664c214844c153b620384afd9cea74130cc607a9c685d1bcb6b1c27c0ab",
+      bloxd_wasm_replay: () => "e3dd0cd7ff45dd407891c5abf1fcf21a49472dcaf48a1de94d52bdc122668ccb",
+      bloxd_wasm_recorder: () => "2ae924a7cec0f9372a697abc3ae0b17fe0bb9ee6dd19eec21dc29e9750c477ef",
+      bloxd_wasm_anim: () => "430af23f79668b6e0629c901770a89c5c28880e27fbfff3d39abec128e94239a",
+      bloxd_wasm_textures: () => "b21f3145552327388bc76ac1444ca300a6882c320fa905c6294cbf6b199edb5f",
+      bloxd_wasm_shader_pack: () => "8971c80e16c937b8809bd65766732ac5b19a0f1e03dd98d4cfc7cc2bf271b324"
     };
-    var ev = Pv(4451);
+    var KT = cT(4681);
 
-    function gv(vv) {
-      const zv = Object.prototype.hasOwnProperty.call(Sv, vv) ? Sv[vv]() : void 0;
-      if (void 0 !== zv) return {
-        sha256: zv,
-        onMismatch: ev.y
+    function OT(TT) {
+      const kT = Object.prototype.hasOwnProperty.call(MT, TT) ? MT[TT]() : void 0;
+      if (void 0 !== kT) return {
+        sha256: kT,
+        onMismatch: KT.x
       };
-      throw new hv.h(`${vv} has no release digest, so this build refuses it`)
+      throw new lT.f(`${TT} has no release digest, so this build refuses it`)
     }
   },
-  6359: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => mv,
-      f: () => jv,
-      h: () => cv,
-      k: () => iv
+  6628: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => DT,
+      i: () => aT,
+      k: () => QT,
+      o: () => NT
     });
-    var hv = Pv(6363);
-    const Sv = 6,
-      ev = 3,
-      gv = 1,
-      pv = 2,
-      dv = 4,
-      Nv = 8,
-      lv = 16,
-      Tv = 32,
-      Wv = 64,
-      wv = 128,
-      av = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var lT = cT(6633);
+    const MT = 6,
+      KT = 3,
+      OT = 1,
+      yT = 2,
+      fT = 4,
+      xT = 8,
+      IT = 16,
+      AT = 32,
+      CT = 64,
+      jT = 128,
+      vT = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function sv(vv) {
-      if (!vv) return 0;
-      const zv = av.indexOf(vv);
-      if (zv <= 0) throw new Error(`"${vv}" is not a shader pack hook function`);
-      return zv
+    function tT(TT) {
+      if (!TT) return 0;
+      const kT = vT.indexOf(TT);
+      if (kT <= 0) throw new Error(`"${TT}" is not a shader pack hook function`);
+      return kT
     }
 
-    function Cv(vv) {
-      if (0 === vv) return null;
-      const zv = av[vv];
-      if (void 0 === zv) throw new Error(`${vv} is not a shader pack hook function id`);
-      return zv
+    function hT(TT) {
+      if (0 === TT) return null;
+      const kT = vT[TT];
+      if (void 0 === kT) throw new Error(`${TT} is not a shader pack hook function id`);
+      return kT
     }
 
-    function iv(vv) {
-      const zv = hv.d.length;
+    function NT(TT) {
+      const kT = lT.e.length;
       return {
-        strict: vv >= zv,
-        program: hv.d[vv % zv]
+        strict: TT >= kT,
+        program: lT.e[TT % kT]
       }
     }
 
-    function cv(vv) {
-      return Number(vv.strict) * hv.d.length + hv.d.indexOf(vv.program)
+    function QT(TT) {
+      return Number(TT.strict) * lT.e.length + lT.e.indexOf(TT.program)
     }
 
-    function Gv(vv) {
-      return "" === vv ? [] : vv.split(" ")
+    function ST(TT) {
+      return "" === TT ? [] : TT.split(" ")
     }
 
-    function mv(vv) {
-      const zv = {
-        variantFlags: new Uint8Array(Sv),
-        hooks: new Uint8Array(Sv * ev),
-        moduleCodes: Array(Sv).fill(""),
-        reads: Array(2 * Sv).fill("")
+    function DT(TT) {
+      const kT = {
+        variantFlags: new Uint8Array(MT),
+        hooks: new Uint8Array(MT * KT),
+        moduleCodes: Array(MT).fill(""),
+        reads: Array(2 * MT).fill("")
       };
-      for (const Pv of vv) {
-        const vv = cv(Pv.key),
-          hv = (vv, zv) => null === Pv.hooks.surface || Pv.reads.fragment.includes(vv) ? 0 : zv;
-        zv.variantFlags[vv] = (Pv.sceneDepth ? gv : 0) | (Pv.movesVertices ? pv : 0) | (Pv.sunShadow ? dv : 0) | (Pv.airShadow ? Nv : 0) | (Pv.discards ? lv : 0) | hv("localPosition", Tv) | hv("enchantSpeed", Wv) | hv("enchantTier", wv), zv.hooks[vv * ev] = sv(Pv.hooks.vertex), zv.hooks[vv * ev + 1] = sv(Pv.hooks.surface), zv.hooks[vv * ev + 2] = sv(Pv.hooks.light), zv.moduleCodes[vv] = Pv.moduleCode, zv.reads[2 * vv] = Pv.reads.vertex.join(" "), zv.reads[2 * vv + 1] = Pv.reads.fragment.join(" ")
+      for (const cT of TT) {
+        const TT = QT(cT.key),
+          lT = (TT, kT) => null === cT.hooks.surface || cT.reads.fragment.includes(TT) ? 0 : kT;
+        kT.variantFlags[TT] = (cT.sceneDepth ? OT : 0) | (cT.movesVertices ? yT : 0) | (cT.sunShadow ? fT : 0) | (cT.airShadow ? xT : 0) | (cT.discards ? IT : 0) | lT("localPosition", AT) | lT("enchantSpeed", CT) | lT("enchantTier", jT), kT.hooks[TT * KT] = tT(cT.hooks.vertex), kT.hooks[TT * KT + 1] = tT(cT.hooks.surface), kT.hooks[TT * KT + 2] = tT(cT.hooks.light), kT.moduleCodes[TT] = cT.moduleCode, kT.reads[2 * TT] = cT.reads.vertex.join(" "), kT.reads[2 * TT + 1] = cT.reads.fragment.join(" ")
       }
-      return zv
+      return kT
     }
 
-    function jv(vv) {
+    function aT(TT) {
       const {
-        hooks: zv,
-        moduleCodes: Pv,
-        reads: hv
-      } = vv;
-      return Array.from(vv.variantFlags, ((vv, Sv) => {
-        const Tv = Sv * ev;
+        hooks: kT,
+        moduleCodes: cT,
+        reads: lT
+      } = TT;
+      return Array.from(TT.variantFlags, ((TT, MT) => {
+        const AT = MT * KT;
         return {
-          key: iv(Sv),
+          key: NT(MT),
           hooks: {
-            vertex: Cv(zv[Tv]),
-            surface: Cv(zv[Tv + 1]),
-            light: Cv(zv[Tv + 2])
+            vertex: hT(kT[AT]),
+            surface: hT(kT[AT + 1]),
+            light: hT(kT[AT + 2])
           },
-          moduleCode: Pv[Sv],
-          sceneDepth: 0 !== (vv & gv),
-          sunShadow: 0 !== (vv & dv),
-          airShadow: 0 !== (vv & Nv),
-          movesVertices: 0 !== (vv & pv),
-          discards: 0 !== (vv & lv),
+          moduleCode: cT[MT],
+          sceneDepth: 0 !== (TT & OT),
+          sunShadow: 0 !== (TT & fT),
+          airShadow: 0 !== (TT & xT),
+          movesVertices: 0 !== (TT & yT),
+          discards: 0 !== (TT & IT),
           reads: {
-            vertex: Gv(hv[2 * Sv]),
-            fragment: Gv(hv[2 * Sv + 1])
+            vertex: ST(lT[2 * MT]),
+            fragment: ST(lT[2 * MT + 1])
           }
         }
       }))
     }
   },
-  6363: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => hv,
-      h: () => gv,
-      j: () => pv,
-      k: () => Sv,
-      l: () => ev
+  6633: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => lT,
+      f: () => OT,
+      j: () => yT,
+      k: () => MT,
+      o: () => KT
     });
-    const hv = ["terrain", "liquid", "model"];
+    const lT = ["terrain", "liquid", "model"];
 
-    function Sv() {
-      const vv = [];
-      for (const zv of [!1, !0])
-        for (const Pv of hv) vv.push({
-          strict: zv,
-          program: Pv
+    function MT() {
+      const TT = [];
+      for (const kT of [!1, !0])
+        for (const cT of lT) TT.push({
+          strict: kT,
+          program: cT
         });
-      return vv
+      return TT
     }
 
-    function ev(vv) {
-      return `${vv.strict?"strict":"allow"}.${vv.program}`
+    function KT(TT) {
+      return `${TT.strict?"strict":"allow"}.${TT.program}`
     }
 
-    function gv(vv) {
-      return !vv.hooks.vertex && !vv.hooks.surface && !vv.hooks.light
+    function OT(TT) {
+      return !TT.hooks.vertex && !TT.hooks.surface && !TT.hooks.light
     }
 
-    function pv(vv, zv) {
-      return "off" !== zv && (null === vv || vv.some((vv => vv.key.strict === ("strict" === zv) && !gv(vv))))
+    function yT(TT, kT) {
+      return "off" !== kT && (null === TT || TT.some((TT => TT.key.strict === ("strict" === kT) && !OT(TT))))
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

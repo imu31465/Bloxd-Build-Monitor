@@ -1,499 +1,499 @@
 export const id = 186;
 export const ids = [186];
 export const modules = {
-  8914: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => Mv,
-      h: () => cz,
-      k: () => Gz,
-      o: () => iz,
-      p: () => jz,
-      t: () => Sz,
-      x: () => gz,
-      y: () => dz,
-      A: () => mz,
-      C: () => pz
+  9284: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => RT,
+      g: () => Qk,
+      k: () => Sk,
+      o: () => Nk,
+      p: () => ak,
+      q: () => Mk,
+      s: () => Ok,
+      u: () => fk,
+      v: () => Dk,
+      z: () => yk
     });
-    var hv = Pv(22),
-      Sv = Pv(73),
-      ev = Pv(1610),
-      gv = Pv(4176),
-      pv = Pv(2629),
-      dv = Pv(2646),
-      Nv = Pv(39);
+    var lT = cT(31),
+      MT = cT(118),
+      KT = cT(1654),
+      OT = cT(4408),
+      yT = cT(2819),
+      fT = cT(2835),
+      xT = cT(47);
     const {
-      windows: lv,
-      target: Tv,
-      stepDown: Wv,
-      stepUp: wv,
-      noGain: av
-    } = dv.c, sv = 1e3 / 60 * 1.08, Cv = 1e3 / 55, iv = 1e3 / 45, cv = 1e3 / 30 * .92, Gv = 1e3 / 30 * 1.08;
-    class mv {
+      windows: IT,
+      target: AT,
+      stepDown: CT,
+      stepUp: jT,
+      noGain: vT
+    } = fT.d, tT = 1e3 / 60 * 1.08, hT = 1e3 / 55, NT = 1e3 / 45, QT = 1e3 / 30 * .92, ST = 1e3 / 30 * 1.08;
+    class DT {
       constructor() {
         this.lastMs = -1, this.runBand = -1, this.runLength = 0, this.votes60 = 0, this.votesMid = 0, this.sumMidMs = 0, this.votes30 = 0
       }
-      frame(vv) {
-        const zv = vv - this.lastMs;
-        this.lastMs = vv;
-        const Pv = function(vv) {
-          if (vv <= 0 || vv > 100) return -1;
-          if (vv <= sv) return 0;
-          if (vv >= Cv && vv <= iv) return 1;
-          return vv >= cv && vv <= Gv ? 2 : -1
-        }(zv);
-        Pv !== this.runBand && (this.runBand = Pv, this.runLength = 0), Pv < 0 || ++this.runLength < 3 || (0 === Pv ? this.votes60++ : 1 === Pv ? (this.votesMid++, this.sumMidMs += zv) : this.votes30++)
+      frame(TT) {
+        const kT = TT - this.lastMs;
+        this.lastMs = TT;
+        const cT = function(TT) {
+          if (TT <= 0 || TT > 100) return -1;
+          if (TT <= tT) return 0;
+          if (TT >= hT && TT <= NT) return 1;
+          return TT >= QT && TT <= ST ? 2 : -1
+        }(kT);
+        cT !== this.runBand && (this.runBand = cT, this.runLength = 0), cT < 0 || ++this.runLength < 3 || (0 === cT ? this.votes60++ : 1 === cT ? (this.votesMid++, this.sumMidMs += kT) : this.votes30++)
       }
       hz() {
         return this.votes60 >= 60 ? 60 : this.votesMid >= 60 ? 1e3 * this.votesMid / this.sumMidMs : this.votes30 >= 60 ? 30 : 60
       }
     }
-    const jv = lv.windowMs,
-      fv = lv.settleMs,
-      Fv = lv.graceMs,
-      Yv = lv.minIntervals,
-      nv = 1e3 * Yv / jv,
-      Ov = av.backoffMs,
-      Dv = av.maxMs;
-    class Kv {
-      constructor(vv, zv) {
+    const aT = IT.windowMs,
+      FT = IT.settleMs,
+      rT = IT.graceMs,
+      PT = IT.minIntervals,
+      wT = 1e3 * PT / aT,
+      mT = vT.backoffMs,
+      bT = vT.maxMs;
+    class zT {
+      constructor(TT, kT) {
         let {
-          lowest: Pv,
-          startStep: hv = 0,
-          noGain: Sv = null,
-          upWait: ev = null
-        } = zv;
-        this.hooks = vv, this.step = void 0, this.lowest = void 0, this.phase = {
+          lowest: cT,
+          startStep: lT = 0,
+          noGain: MT = null,
+          upWait: KT = null
+        } = kT;
+        this.hooks = TT, this.step = void 0, this.lowest = void 0, this.phase = {
           kind: "watch"
-        }, this.noGain = void 0, this.downUntilMs = void 0, this.downBackoffMs = void 0, this.upFailures = void 0, this.upUntilMs = void 0, this.climbing = void 0, this.climbed = null, this.cleanRun = 0, this.dropRun = 0, this.dropRunMasked = !1, this.dropRunFpsSum = 0, this.refresh = new mv, this.wasMeasuring = !1, this.lastFrameMs = -1, this.resizedMs = Number.NEGATIVE_INFINITY, this.quietUntilMs = 0, this.graceUntilMs = 0, this.windowStartMs = -1, this.lastDrawnMs = 0, this.windowIntervals = 0, this.windowHeld = 0, this.windowMaxIntervalMs = 0, this.windowMasked = !1, this.slowStartMs = -1, this.slowIntervals = 0, this.log = [], this.lastTargetFps = Tv.maxFps, this.lowest = Pv, this.step = Math.min(hv, Pv), this.noGain = Sv, this.climbing = this.step > 0;
-        const gv = Pv + 1;
-        this.downUntilMs = new Array(gv).fill(0), this.downBackoffMs = new Array(gv).fill(0), this.upFailures = new Array(gv).fill(0), this.upUntilMs = new Array(gv).fill(0), null !== ev && ev.step >= 0 && ev.step < gv && (this.upUntilMs[ev.step] = ev.untilMs)
+        }, this.noGain = void 0, this.downUntilMs = void 0, this.downBackoffMs = void 0, this.upFailures = void 0, this.upUntilMs = void 0, this.climbing = void 0, this.climbed = null, this.cleanRun = 0, this.dropRun = 0, this.dropRunMasked = !1, this.dropRunFpsSum = 0, this.refresh = new DT, this.wasMeasuring = !1, this.lastFrameMs = -1, this.resizedMs = Number.NEGATIVE_INFINITY, this.quietUntilMs = 0, this.graceUntilMs = 0, this.windowStartMs = -1, this.lastDrawnMs = 0, this.windowIntervals = 0, this.windowHeld = 0, this.windowMaxIntervalMs = 0, this.windowMasked = !1, this.slowStartMs = -1, this.slowIntervals = 0, this.log = [], this.lastTargetFps = AT.maxFps, this.lowest = cT, this.step = Math.min(lT, cT), this.noGain = MT, this.climbing = this.step > 0;
+        const OT = cT + 1;
+        this.downUntilMs = new Array(OT).fill(0), this.downBackoffMs = new Array(OT).fill(0), this.upFailures = new Array(OT).fill(0), this.upUntilMs = new Array(OT).fill(0), null !== KT && KT.step >= 0 && KT.step < OT && (this.upUntilMs[KT.step] = KT.untilMs)
       }
       currentStep() {
         return this.step
       }
-      frame(vv, zv, Pv) {
-        let hv = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (this.refresh.frame(vv), !Pv) return void this.leave(vv);
-        const Sv = vv - this.lastFrameMs,
-          ev = this.resizeStall(vv);
-        if (Sv > 2e3 && !ev && this.leave(this.lastFrameMs), !this.wasMeasuring) return this.wasMeasuring = !0, this.lastFrameMs = vv, this.quietUntilMs = Math.max(this.quietUntilMs, vv + Fv), this.graceUntilMs = vv + Fv, this.windowStartMs = -1, void(this.slowStartMs = -1);
-        Sv > 500 && (this.hitch(vv), ev && (this.slowStartMs = -1)), this.lastFrameMs = vv, vv >= this.quietUntilMs && this.countWindow(vv, zv, hv) || zv && vv >= this.graceUntilMs && this.countSlow(vv)
+      frame(TT, kT, cT) {
+        let lT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        if (this.refresh.frame(TT), !cT) return void this.leave(TT);
+        const MT = TT - this.lastFrameMs,
+          KT = this.resizeStall(TT);
+        if (MT > 2e3 && !KT && this.leave(this.lastFrameMs), !this.wasMeasuring) return this.wasMeasuring = !0, this.lastFrameMs = TT, this.quietUntilMs = Math.max(this.quietUntilMs, TT + rT), this.graceUntilMs = TT + rT, this.windowStartMs = -1, void(this.slowStartMs = -1);
+        MT > 500 && (this.hitch(TT), KT && (this.slowStartMs = -1)), this.lastFrameMs = TT, TT >= this.quietUntilMs && this.countWindow(TT, kT, lT) || kT && TT >= this.graceUntilMs && this.countSlow(TT)
       }
-      countWindow(vv, zv, Pv) {
-        if (this.windowStartMs < 0) return !!zv && (this.windowStartMs = vv, this.lastDrawnMs = vv, this.windowIntervals = 0, this.windowHeld = 0, this.windowMaxIntervalMs = 0, this.windowMasked = Pv, !1);
-        if (this.windowMasked ||= Pv, !zv) return this.windowHeld++, !1;
-        this.windowIntervals++, this.windowMaxIntervalMs = Math.max(this.windowMaxIntervalMs, vv - this.lastDrawnMs), this.lastDrawnMs = vv;
-        const hv = vv - this.windowStartMs;
-        if (hv < jv) return !1;
-        const Sv = this.windowIntervals,
-          ev = 1e3 * Sv / hv,
-          gv = this.windowHeld,
-          pv = this.windowMaxIntervalMs,
-          dv = this.windowMasked;
-        if (this.windowStartMs = -1, Sv < Yv) return !1;
+      countWindow(TT, kT, cT) {
+        if (this.windowStartMs < 0) return !!kT && (this.windowStartMs = TT, this.lastDrawnMs = TT, this.windowIntervals = 0, this.windowHeld = 0, this.windowMaxIntervalMs = 0, this.windowMasked = cT, !1);
+        if (this.windowMasked ||= cT, !kT) return this.windowHeld++, !1;
+        this.windowIntervals++, this.windowMaxIntervalMs = Math.max(this.windowMaxIntervalMs, TT - this.lastDrawnMs), this.lastDrawnMs = TT;
+        const lT = TT - this.windowStartMs;
+        if (lT < aT) return !1;
+        const MT = this.windowIntervals,
+          KT = 1e3 * MT / lT,
+          OT = this.windowHeld,
+          yT = this.windowMaxIntervalMs,
+          fT = this.windowMasked;
+        if (this.windowStartMs = -1, MT < PT) return !1;
         this.slowStartMs = -1;
-        const Nv = this.targetFps(),
-          lv = ev >= Nv * Tv.cleanShare && pv <= Tv.cleanMaxIntervalMs && (0 === gv || ev >= Nv);
-        return this.decide(ev, lv, ev < Nv * Tv.dropShare, dv, vv), !0
+        const xT = this.targetFps(),
+          IT = KT >= xT * AT.cleanShare && yT <= AT.cleanMaxIntervalMs && (0 === OT || KT >= xT);
+        return this.decide(KT, IT, KT < xT * AT.dropShare, fT, TT), !0
       }
       targetFps() {
-        return this.lastTargetFps = Math.min(Tv.maxFps, this.refresh.hz()), this.lastTargetFps
+        return this.lastTargetFps = Math.min(AT.maxFps, this.refresh.hz()), this.lastTargetFps
       }
-      countSlow(vv) {
-        if (this.slowStartMs < 0) return this.slowStartMs = vv, void(this.slowIntervals = 0);
+      countSlow(TT) {
+        if (this.slowStartMs < 0) return this.slowStartMs = TT, void(this.slowIntervals = 0);
         this.slowIntervals++;
-        const zv = vv - this.slowStartMs;
-        if (zv < 1e4) return;
-        const Pv = 1e3 * this.slowIntervals / zv;
-        this.slowStartMs = -1, this.countSlow(vv), Pv < nv && (this.windowStartMs = -1, this.decide(Pv, !1, !0, !1, vv))
+        const kT = TT - this.slowStartMs;
+        if (kT < 1e4) return;
+        const cT = 1e3 * this.slowIntervals / kT;
+        this.slowStartMs = -1, this.countSlow(TT), cT < wT && (this.windowStartMs = -1, this.decide(cT, !1, !0, !1, TT))
       }
-      resizeStall(vv) {
-        return this.lastFrameMs - this.resizedMs <= fv && vv - this.lastFrameMs <= 15e3
+      resizeStall(TT) {
+        return this.lastFrameMs - this.resizedMs <= FT && TT - this.lastFrameMs <= 15e3
       }
-      paused(vv) {
-        this.refresh.frame(vv), vv - this.lastFrameMs > 2e3 && (this.quietUntilMs = Math.max(this.quietUntilMs, vv + Fv), this.graceUntilMs = vv + Fv), this.lastFrameMs = vv, this.slowStartMs = -1, this.hitch(vv)
+      paused(TT) {
+        this.refresh.frame(TT), TT - this.lastFrameMs > 2e3 && (this.quietUntilMs = Math.max(this.quietUntilMs, TT + rT), this.graceUntilMs = TT + rT), this.lastFrameMs = TT, this.slowStartMs = -1, this.hitch(TT)
       }
-      resized(vv) {
-        this.resizedMs = vv, this.hitch(vv)
+      resized(TT) {
+        this.resizedMs = TT, this.hitch(TT)
       }
       hidden() {
         this.leave(this.lastFrameMs)
       }
-      leave(vv) {
-        this.wasMeasuring && (this.wasMeasuring = !1, this.left(vv))
+      leave(TT) {
+        this.wasMeasuring && (this.wasMeasuring = !1, this.left(TT))
       }
-      hitch(vv) {
-        this.windowStartMs = -1, this.quietUntilMs = Math.max(this.quietUntilMs, vv + fv)
+      hitch(TT) {
+        this.windowStartMs = -1, this.quietUntilMs = Math.max(this.quietUntilMs, TT + FT)
       }
-      left(vv) {
+      left(TT) {
         this.windowStartMs = -1, this.slowStartMs = -1, this.cleanRun = 0, this.resetDropRun();
-        const zv = this.phase;
-        "watch" !== zv.kind && (this.phase = {
+        const kT = this.phase;
+        "watch" !== kT.kind && (this.phase = {
           kind: "watch"
-        }, "down" === zv.kind && (this.downUntilMs[zv.from] = Math.max(this.downUntilMs[zv.from], vv + Ov)), this.setStep(zv.from, 0, vv, "left"), "up" === zv.kind && (this.climbed = zv.fromClimbed))
+        }, "down" === kT.kind && (this.downUntilMs[kT.from] = Math.max(this.downUntilMs[kT.from], TT + mT)), this.setStep(kT.from, 0, TT, "left"), "up" === kT.kind && (this.climbed = kT.fromClimbed))
       }
-      decide(vv, zv, Pv, hv, Sv) {
-        const ev = this.phase;
-        switch (ev.kind) {
+      decide(TT, kT, cT, lT, MT) {
+        const KT = this.phase;
+        switch (KT.kind) {
           case "watch":
-            return void this.watch(vv, zv, Pv, hv, Sv);
+            return void this.watch(TT, kT, cT, lT, MT);
           case "down":
-            if (ev.judged++, ev.fpsSum += vv, ev.dropped ||= Pv, ev.judged < Wv.judgeWindows) return;
-            return void(!ev.dropped || ev.fpsSum / ev.judged >= ev.fromFps * Wv.keepGain ? this.keepDown(ev.from, ev.fpsSum / ev.judged, Sv) : this.noGainFrom(ev.from, ev.fromFps, Sv));
+            if (KT.judged++, KT.fpsSum += TT, KT.dropped ||= cT, KT.judged < CT.judgeWindows) return;
+            return void(!KT.dropped || KT.fpsSum / KT.judged >= KT.fromFps * CT.keepGain ? this.keepDown(KT.from, KT.fpsSum / KT.judged, MT) : this.noGainFrom(KT.from, KT.fromFps, MT));
           case "up":
-            return zv ? void(++ev.judged >= wv.trialWindows && (this.watchAt(this.step), this.climbed = {
-              from: ev.from,
+            return kT ? void(++KT.judged >= jT.trialWindows && (this.watchAt(this.step), this.climbed = {
+              from: KT.from,
               heldWindows: 0,
-              below: ev.fromClimbed
-            }, this.record(Sv, vv, "up_kept"))) : (hv ? (this.watchAt(ev.from), this.setStep(ev.from, vv, Sv, "spoiled")) : this.failUp(this.step, ev.from, vv, Sv), void(this.climbed = ev.fromClimbed))
+              below: KT.fromClimbed
+            }, this.record(MT, TT, "up_kept"))) : (lT ? (this.watchAt(KT.from), this.setStep(KT.from, TT, MT, "spoiled")) : this.failUp(this.step, KT.from, TT, MT), void(this.climbed = KT.fromClimbed))
         }
       }
-      watch(vv, zv, Pv, hv, Sv) {
-        const ev = this.climbed;
-        if (null !== ev && !Pv && !hv && ++ev.heldWindows >= wv.heldWindows && (this.climbed = null, this.record(Sv, vv, "Vp"), this.hooks.Vp(this.step)), Pv ? (this.dropRun++, this.dropRunFpsSum += vv, this.dropRunMasked ||= hv) : this.resetDropRun(), hv && zv || (this.cleanRun = zv ? this.cleanRun + 1 : 0), this.dropRun >= (this.dropRunMasked ? Wv.maskedWindows : Wv.dropWindows)) {
-          const zv = this.dropRunFpsSum / this.dropRun;
+      watch(TT, kT, cT, lT, MT) {
+        const KT = this.climbed;
+        if (null !== KT && !cT && !lT && ++KT.heldWindows >= jT.heldWindows && (this.climbed = null, this.record(MT, TT, "ty"), this.hooks.ty(this.step)), cT ? (this.dropRun++, this.dropRunFpsSum += TT, this.dropRunMasked ||= lT) : this.resetDropRun(), lT && kT || (this.cleanRun = kT ? this.cleanRun + 1 : 0), this.dropRun >= (this.dropRunMasked ? CT.maskedWindows : CT.dropWindows)) {
+          const kT = this.dropRunFpsSum / this.dropRun;
           this.resetDropRun();
-          const Pv = this.climbed;
-          return void(null !== Pv ? (this.failUp(this.step, Pv.from, vv, Sv), this.climbed = Pv.below) : this.step < this.lowest && this.downAllowed(Sv) && (this.climbing = !1, this.phase = {
+          const cT = this.climbed;
+          return void(null !== cT ? (this.failUp(this.step, cT.from, TT, MT), this.climbed = cT.below) : this.step < this.lowest && this.downAllowed(MT) && (this.climbing = !1, this.phase = {
             kind: "down",
             from: this.step,
-            fromFps: zv,
+            fromFps: kT,
             judged: 0,
             fpsSum: 0,
             dropped: !1
-          }, this.setStep(this.step + 1, vv, Sv, "down")))
+          }, this.setStep(this.step + 1, TT, MT, "down")))
         }
-        const gv = this.step - 1;
-        gv >= 0 && this.cleanRun >= (this.climbing ? wv.climbWindows : wv.cleanWindows) && this.upAllowed(gv, Sv) && (this.phase = {
+        const OT = this.step - 1;
+        OT >= 0 && this.cleanRun >= (this.climbing ? jT.climbWindows : jT.cleanWindows) && this.upAllowed(OT, MT) && (this.phase = {
           kind: "up",
           from: this.step,
           judged: 0,
           fromClimbed: this.climbed
-        }, this.setStep(gv, vv, Sv, "up"))
+        }, this.setStep(OT, TT, MT, "up"))
       }
-      downAllowed(vv) {
-        return !(0 === this.step && null !== this.noGain && vv < this.noGain.untilMs) && vv >= this.downUntilMs[this.step]
+      downAllowed(TT) {
+        return !(0 === this.step && null !== this.noGain && TT < this.noGain.untilMs) && TT >= this.downUntilMs[this.step]
       }
-      upAllowed(vv, zv) {
-        return this.upFailures[vv] <= wv.failWaitsMs.length && zv >= this.upUntilMs[vv]
+      upAllowed(TT, kT) {
+        return this.upFailures[TT] <= jT.failWaitsMs.length && kT >= this.upUntilMs[TT]
       }
-      keepDown(vv, zv, Pv) {
-        this.watchAt(this.step), this.downBackoffMs[vv] = 0, this.record(Pv, zv, "down_kept"), 0 === vv && null !== this.noGain && (this.noGain = null, this.hooks.noGain(null)), this.hooks.Yw(this.step)
+      keepDown(TT, kT, cT) {
+        this.watchAt(this.step), this.downBackoffMs[TT] = 0, this.record(cT, kT, "down_kept"), 0 === TT && null !== this.noGain && (this.noGain = null, this.hooks.noGain(null)), this.hooks.wj(this.step)
       }
-      noGainFrom(vv, zv, Pv) {
-        var hv, Sv;
-        const ev = 0 === vv ? null !== (hv = null === (Sv = this.noGain) || void 0 === Sv ? void 0 : Sv.backoffMs) && void 0 !== hv ? hv : 0 : this.downBackoffMs[vv],
-          gv = 0 === ev ? Ov : Math.min(2 * ev, Dv);
-        this.downBackoffMs[vv] = gv, this.downUntilMs[vv] = Pv + gv, 0 === vv && (this.noGain = {
-          untilMs: Pv + gv,
-          backoffMs: gv
-        }, this.hooks.noGain(this.noGain)), this.watchAt(vv), this.setStep(vv, zv, Pv, "no_gain")
+      noGainFrom(TT, kT, cT) {
+        var lT, MT;
+        const KT = 0 === TT ? null !== (lT = null === (MT = this.noGain) || void 0 === MT ? void 0 : MT.backoffMs) && void 0 !== lT ? lT : 0 : this.downBackoffMs[TT],
+          OT = 0 === KT ? mT : Math.min(2 * KT, bT);
+        this.downBackoffMs[TT] = OT, this.downUntilMs[TT] = cT + OT, 0 === TT && (this.noGain = {
+          untilMs: cT + OT,
+          backoffMs: OT
+        }, this.hooks.noGain(this.noGain)), this.watchAt(TT), this.setStep(TT, kT, cT, "no_gain")
       }
-      failUp(vv, zv, Pv, hv) {
+      failUp(TT, kT, cT, lT) {
         this.climbing = !1;
-        const Sv = ++this.upFailures[vv];
-        this.upUntilMs[vv] = Sv <= wv.failWaitsMs.length ? hv + wv.failWaitsMs[Sv - 1] : Number.POSITIVE_INFINITY, this.watchAt(zv), this.setStep(zv, Pv, hv, "up_failed"), this.hooks.upFailed(vv)
+        const MT = ++this.upFailures[TT];
+        this.upUntilMs[TT] = MT <= jT.failWaitsMs.length ? lT + jT.failWaitsMs[MT - 1] : Number.POSITIVE_INFINITY, this.watchAt(kT), this.setStep(kT, cT, lT, "up_failed"), this.hooks.upFailed(TT)
       }
-      watchAt(vv) {
+      watchAt(TT) {
         this.phase = {
           kind: "watch"
-        }, this.climbed = vv === this.step ? this.climbed : null, this.cleanRun = 0, this.resetDropRun()
+        }, this.climbed = TT === this.step ? this.climbed : null, this.cleanRun = 0, this.resetDropRun()
       }
       resetDropRun() {
         this.dropRun = 0, this.dropRunFpsSum = 0, this.dropRunMasked = !1
       }
-      setStep(vv, zv, Pv, hv) {
-        const Sv = vv !== this.step;
-        Sv && (this.climbed = null), this.step = vv, this.record(Pv, zv, hv), Sv && (this.slowStartMs = -1, this.resized(Pv), this.hooks.changed(vv))
+      setStep(TT, kT, cT, lT) {
+        const MT = TT !== this.step;
+        MT && (this.climbed = null), this.step = TT, this.record(cT, kT, lT), MT && (this.slowStartMs = -1, this.resized(cT), this.hooks.changed(TT))
       }
-      record(vv, zv, Pv) {
+      record(TT, kT, cT) {
         64 === this.log.length && this.log.shift(), this.log.push({
-          atMs: vv,
+          atMs: TT,
           step: this.step,
-          fps: Math.round(10 * zv) / 10,
+          fps: Math.round(10 * kT) / 10,
           targetFps: Math.round(10 * this.lastTargetFps) / 10,
-          why: Pv
+          why: cT
         })
       }
     }
-    var Vv = Pv(8920),
-      Uv = Pv(2904),
-      Rv = Pv(8924);
-    const xv = "autoGraphics",
-      tv = 6048e5,
-      qv = "startScale";
+    var JT = cT(9288),
+      oT = cT(3045),
+      HT = cT(9294);
+    const eT = "autoGraphics",
+      GT = 6048e5,
+      VT = "startScale";
 
-    function Iv() {
-      return (0, pv.P)(hv.c.get("clientEscMenuOptions").pixelScale) * (0, pv.M)()
+    function ET() {
+      return (0, yT.A)(lT.e.get("clientEscMenuOptions").pixelScale) * (0, yT.v)()
     }
 
-    function Qv() {
-      return (0, pv.w)(Iv())
+    function ZT() {
+      return (0, yT.i)(ET())
     }
 
-    function Zv() {
-      const vv = Nv.h.getItem(xv);
-      return "object" !== typeof vv || null === vv || "string" !== typeof vv.gpu ? null : vv
+    function uT() {
+      const TT = xT.e.getItem(eT);
+      return "object" !== typeof TT || null === TT || "string" !== typeof TT.gpu ? null : TT
     }
 
-    function Av(vv) {
+    function XT(TT) {
       return {
-        untilEpochMs: Date.now() + (vv.untilMs - performance.now()),
-        backoffMs: vv.backoffMs
+        untilEpochMs: Date.now() + (TT.untilMs - performance.now()),
+        backoffMs: TT.backoffMs
       }
     }
 
-    function Lv(vv) {
-      return vv ? {
-        untilMs: performance.now() + (vv.untilEpochMs - Date.now()),
-        backoffMs: vv.backoffMs
+    function dT(TT) {
+      return TT ? {
+        untilMs: performance.now() + (TT.untilEpochMs - Date.now()),
+        backoffMs: TT.backoffMs
       } : null
     }
-    let Hv = null;
+    let LT = null;
 
-    function Mv() {
-      if (null === Hv) {
-        const vv = new URLSearchParams(window.location.search).get("msaa");
-        Hv = hv.c.get("clientEscMenuOptions").antiAliasing && ("0" === vv || "1" !== vv && !(0, gv.c)("antiAliasing") && (0, Uv.h)())
+    function RT() {
+      if (null === LT) {
+        const TT = new URLSearchParams(window.location.search).get("msaa");
+        LT = lT.e.get("clientEscMenuOptions").antiAliasing && ("0" === TT || "1" !== TT && !(0, OT.b)("antiAliasing") && (0, oT.d)())
       }
-      return Hv
+      return LT
     }
 
-    function yv(vv) {
-      const zv = "number" === typeof vv ? Date.now() - vv : -1;
-      return zv >= 0 && zv < tv
+    function gT(TT) {
+      const kT = "number" === typeof TT ? Date.now() - TT : -1;
+      return kT >= 0 && kT < GT
     }
-    let Bv = null;
+    let UT = null;
 
-    function Jv() {
-      return Bv ??= (0, Sv.getDeviceDefaultPixelScale)(), Ev(Bv)
+    function YT() {
+      return UT ??= (0, MT.getDeviceDefaultPixelScale)(), BT(UT)
     }
 
-    function Ev(vv) {
-      const zv = hv.c.get("clientEscMenuOptions");
-      return zv.pixelSmoothing && !(0, gv.c)("pixelScale") && zv.pixelScale === vv
+    function BT(TT) {
+      const kT = lT.e.get("clientEscMenuOptions");
+      return kT.pixelSmoothing && !(0, OT.b)("pixelScale") && kT.pixelScale === TT
     }
-    let ov = null,
-      bv = 0;
+    let WT = null,
+      nT = 0;
 
-    function rv() {
-      if (null === ov || bv !== Iv()) {
-        var vv;
-        bv = Iv();
-        const zv = Number(null !== (vv = new URLSearchParams(window.location.search).get(qv)) && void 0 !== vv ? vv : ""),
-          Pv = Qv();
-        if (zv > 0 && zv <= 1) ov = (0, pv.H)(Pv, Pv[0] / zv);
+    function pT() {
+      if (null === WT || nT !== ET()) {
+        var TT;
+        nT = ET();
+        const kT = Number(null !== (TT = new URLSearchParams(window.location.search).get(VT)) && void 0 !== TT ? TT : ""),
+          cT = ZT();
+        if (kT > 0 && kT <= 1) WT = (0, yT.r)(cT, cT[0] / kT);
         else {
-          const vv = Zv(),
-            zv = (0, pv.H)(Pv, (0, pv.L)(Iv())),
-            hv = !(0, Uv.m)() && yv(null === vv || void 0 === vv ? void 0 : vv.heldAt) && (null === vv || void 0 === vv ? void 0 : vv.heldTarget) === Iv() ? null === vv || void 0 === vv ? void 0 : vv.heldN : void 0;
-          ov = "number" === typeof hv ? Math.min(zv, (0, pv.H)(Pv, hv)) : zv
+          const TT = uT(),
+            kT = (0, yT.r)(cT, (0, yT.t)(ET())),
+            lT = !(0, oT.g)() && gT(null === TT || void 0 === TT ? void 0 : TT.heldAt) && (null === TT || void 0 === TT ? void 0 : TT.heldTarget) === ET() ? null === TT || void 0 === TT ? void 0 : TT.heldN : void 0;
+          WT = "number" === typeof lT ? Math.min(kT, (0, yT.r)(cT, lT)) : kT
         }
       }
-      return ov
+      return WT
     }
 
-    function kv(vv, zv) {
-      var Pv;
-      const hv = zv.indexOf(null !== (Pv = vv.failedUpN) && void 0 !== Pv ? Pv : -1);
-      return hv >= 0 && yv(vv.failedUpAt) ? {
-        step: hv,
-        untilMs: performance.now() + dv.c.stepUp.failWaitsMs[0]
+    function iT(TT, kT) {
+      var cT;
+      const lT = kT.indexOf(null !== (cT = TT.failedUpN) && void 0 !== cT ? cT : -1);
+      return lT >= 0 && gT(TT.failedUpAt) ? {
+        step: lT,
+        untilMs: performance.now() + fT.d.stepUp.failWaitsMs[0]
       } : null
     }
-    let Xv = null,
-      uv = !1,
-      vz = "";
-    const zz = new Set;
+    let qT = null,
+      sT = !1,
+      Tk = "";
+    const kk = new Set;
 
-    function Pz() {
-      for (const vv of zz) vv()
+    function ck() {
+      for (const TT of kk) TT()
     }
 
-    function hz() {
-      return uv ? null : (Tz(), null === Xv ? (null !== Bv || null !== (0, Sv.peekGpuVendor)() ? Jv() : Ev(1)) ? rv() : null : Jv() ? Xv.currentStep() : null)
+    function lk() {
+      return sT ? null : (Ak(), null === qT ? (null !== UT || null !== (0, MT.peekGpuVendor)() ? YT() : BT(1)) ? pT() : null : YT() ? qT.currentStep() : null)
     }
 
-    function Sz() {
-      const vv = hz();
-      if (null === vv) return null;
-      const zv = Qv(),
-        Pv = zv[Math.min(vv, zv.length - 1)];
-      return Pv === ez() ? null : Pv
+    function Mk() {
+      const TT = lk();
+      if (null === TT) return null;
+      const kT = ZT(),
+        cT = kT[Math.min(TT, kT.length - 1)];
+      return cT === Kk() ? null : cT
     }
 
-    function ez() {
-      return (0, pv.C)(hv.c.get("clientEscMenuOptions").pixelScale, (0, pv.M)())
+    function Kk() {
+      return (0, yT.l)(lT.e.get("clientEscMenuOptions").pixelScale, (0, yT.v)())
     }
 
-    function gz() {
-      return null !== Xv && null !== Sz()
+    function Ok() {
+      return null !== qT && null !== Mk()
     }
 
-    function pz(vv) {
-      return zz.add(vv), () => {
-        zz.delete(vv)
+    function yk(TT) {
+      return kk.add(TT), () => {
+        kk.delete(TT)
       }
     }
 
-    function dz(vv, zv, Pv) {
-      var hv;
-      if (null !== Xv || uv || (0, Uv.m)()) return;
-      const Sv = (0, Vv.d)(vv, zv, Pv);
-      null !== Sv && (0, Uv.p)(Sv.vendor), vz = `${vv}:${(null===Sv||void 0===Sv?void 0:Sv.renderer)||(null===Sv||void 0===Sv?void 0:Sv.vendor)||""}`, (null === (hv = Zv()) || void 0 === hv ? void 0 : hv.gpu) !== vz && (Nv.h.setItem(xv, {
-        gpu: vz
-      }), ov = null), lz(), document.addEventListener("visibilitychange", (() => {
+    function fk(TT, kT, cT) {
+      var lT;
+      if (null !== qT || sT || (0, oT.g)()) return;
+      const MT = (0, JT.e)(TT, kT, cT);
+      null !== MT && (0, oT.h)(MT.vendor), Tk = `${TT}:${(null===MT||void 0===MT?void 0:MT.renderer)||(null===MT||void 0===MT?void 0:MT.vendor)||""}`, (null === (lT = uT()) || void 0 === lT ? void 0 : lT.gpu) !== Tk && (xT.e.setItem(eT, {
+        gpu: Tk
+      }), WT = null), Ik(), document.addEventListener("visibilitychange", (() => {
         if (document.hidden) try {
-          var vv;
-          null === (vv = Xv) || void 0 === vv || vv.hidden()
-        } catch (zv) {
-          mz(), console.error("The quality steps stopped", zv)
+          var TT;
+          null === (TT = qT) || void 0 === TT || TT.hidden()
+        } catch (kT) {
+          Dk(), console.error("The quality steps stopped", kT)
         }
       }))
     }
-    let Nz = 0;
+    let xk = 0;
 
-    function lz() {
-      var vv;
-      const zv = null !== (vv = Zv()) && void 0 !== vv ? vv : {
-          gpu: vz
+    function Ik() {
+      var TT;
+      const kT = null !== (TT = uT()) && void 0 !== TT ? TT : {
+          gpu: Tk
         },
-        Pv = Qv();
-      Nz = Iv(), Xv = new Kv({
-          changed: Pz,
-          Yw: () => {
-            Wz({
+        cT = ZT();
+      xk = ET(), qT = new zT({
+          changed: ck,
+          wj: () => {
+            Ck({
               heldN: void 0
             })
           },
-          Vp: vv => {
-            var zv;
-            const Pv = Qv()[vv],
-              hv = {
-                heldN: Pv,
+          ty: TT => {
+            var kT;
+            const cT = ZT()[TT],
+              lT = {
+                heldN: cT,
                 heldAt: Date.now(),
-                heldTarget: Iv()
+                heldTarget: ET()
               };
-            (null === (zv = Zv()) || void 0 === zv ? void 0 : zv.failedUpN) === Pv && (hv.failedUpN = void 0), Wz(hv)
+            (null === (kT = uT()) || void 0 === kT ? void 0 : kT.failedUpN) === cT && (lT.failedUpN = void 0), Ck(lT)
           },
-          upFailed: vv => {
-            Wz({
-              failedUpN: Qv()[vv],
+          upFailed: TT => {
+            Ck({
+              failedUpN: ZT()[TT],
               failedUpAt: Date.now()
             })
           },
-          noGain: vv => {
-            Wz({
-              noGain: null === vv ? void 0 : Av(vv)
+          noGain: TT => {
+            Ck({
+              noGain: null === TT ? void 0 : XT(TT)
             })
           }
         }, {
-          lowest: Pv.length - 1,
-          startStep: rv(),
-          noGain: Lv(zv.noGain),
-          upWait: kv(zv, Pv)
+          lowest: cT.length - 1,
+          startStep: pT(),
+          noGain: dT(kT.noGain),
+          upWait: iT(kT, cT)
         }),
-        function(vv) {
-          const zv = {
+        function(TT) {
+          const kT = {
             get step() {
-              return vv.currentStep()
+              return TT.currentStep()
             },
             get n() {
-              var vv;
-              return null !== (vv = Sz()) && void 0 !== vv ? vv : ez()
+              var TT;
+              return null !== (TT = Mk()) && void 0 !== TT ? TT : Kk()
             },
             get scale() {
-              var vv;
-              return Qv()[0] / (null !== (vv = Sz()) && void 0 !== vv ? vv : ez())
+              var TT;
+              return ZT()[0] / (null !== (TT = Mk()) && void 0 !== TT ? TT : Kk())
             },
             get msaaOff() {
-              return Mv()
+              return RT()
             },
-            log: vv.log
+            log: TT.log
           };
           Object.defineProperty(window, "__qualitySteps", {
-            value: zv,
+            value: kT,
             configurable: !0
           })
-        }(Xv), Pz()
+        }(qT), ck()
     }
 
-    function Tz() {
-      null !== Xv && Iv() !== Nz && (ov = null, lz())
+    function Ak() {
+      null !== qT && ET() !== xk && (WT = null, Ik())
     }
 
-    function Wz(vv) {
-      Nv.h.setItem(xv, {
-        ...Zv(),
-        ...vv,
-        gpu: vz
+    function Ck(TT) {
+      xT.e.setItem(eT, {
+        ...uT(),
+        ...TT,
+        gpu: Tk
       })
     }
-    let wz = 0,
-      az = 0,
-      sz = 0,
-      Cz = !1;
+    let jk = 0,
+      vk = 0,
+      tk = 0,
+      hk = !1;
 
-    function iz() {
-      wz++
+    function Nk() {
+      jk++
     }
 
-    function cz() {
-      return wz
+    function Qk() {
+      return jk
     }
 
-    function Gz(vv, zv, Pv) {
-      let hv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      Tz(), null !== Xv && (vv - sz >= 1e3 && (Cz = wz - az > dv.c.sceneChange.meshesPerSecond, az = wz, sz = vv), Rv.b.isHeld() ? Xv.paused(vv) : Xv.frame(vv, zv, Pv && !document.hidden && Jv(), Cz || hv > 0 || (0, ev.o)()))
+    function Sk(TT, kT, cT) {
+      let lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      Ak(), null !== qT && (TT - tk >= 1e3 && (hk = jk - vk > fT.d.sceneChange.meshesPerSecond, vk = jk, tk = TT), HT.b.isHeld() ? qT.paused(TT) : qT.frame(TT, kT, cT && !document.hidden && YT(), hk || lT > 0 || (0, KT.s)()))
     }
 
-    function mz() {
-      if (!uv) {
-        uv = !0, null !== Xv && (Xv = null, Wz({
+    function Dk() {
+      if (!sT) {
+        sT = !0, null !== qT && (qT = null, Ck({
           noGain: void 0
         }));
         try {
-          Pz()
-        } catch (vv) {
-          console.error("The quality steps' resize to the player's n failed", vv)
+          ck()
+        } catch (TT) {
+          console.error("The quality steps' resize to the player's n failed", TT)
         }
       }
     }
 
-    function jz() {
-      var vv;
-      null === (vv = Xv) || void 0 === vv || vv.resized(performance.now())
+    function ak() {
+      var TT;
+      null === (TT = qT) || void 0 === TT || TT.resized(performance.now())
     }
   },
-  8920: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => ev
+  9288: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => KT
     });
-    var hv = Pv(73),
-      Sv = Pv(101);
+    var lT = cT(118),
+      MT = cT(150);
 
-    function ev(vv, zv, Pv) {
-      if ("webgpu" === vv) return Pv ? ((0, hv.seedGpuVendor)(Pv), {
-        vendor: Pv,
+    function KT(TT, kT, cT) {
+      if ("webgpu" === TT) return cT ? ((0, lT.seedGpuVendor)(cT), {
+        vendor: cT,
         renderer: ""
       }) : null;
       try {
-        const Pv = "webgl" === vv ? zv.getContext("webgl2") : zv.getContext("webgl");
-        "webgl" === vv && Pv && (0, Sv.w)(Pv);
-        const ev = null === Pv || void 0 === Pv ? void 0 : Pv.getExtension("WEBGL_debug_renderer_info");
-        if (Pv && ev) {
-          const vv = String(Pv.getParameter(ev.UNMASKED_VENDOR_WEBGL)),
-            zv = String(Pv.getParameter(ev.UNMASKED_RENDERER_WEBGL));
-          return (0, hv.seedGpuVendor)(vv), (0, Sv.B)(vv, zv), {
-            vendor: vv,
-            renderer: zv
+        const cT = "webgl" === TT ? kT.getContext("webgl2") : kT.getContext("webgl");
+        "webgl" === TT && cT && (0, MT.u)(cT);
+        const KT = null === cT || void 0 === cT ? void 0 : cT.getExtension("WEBGL_debug_renderer_info");
+        if (cT && KT) {
+          const TT = String(cT.getParameter(KT.UNMASKED_VENDOR_WEBGL)),
+            kT = String(cT.getParameter(KT.UNMASKED_RENDERER_WEBGL));
+          return (0, lT.seedGpuVendor)(TT), (0, MT.A)(TT, kT), {
+            vendor: TT,
+            renderer: kT
           }
         }
-        Pv && (0, Sv.B)(String(Pv.getParameter(Pv.VENDOR)), String(Pv.getParameter(Pv.RENDERER)))
+        cT && (0, MT.A)(String(cT.getParameter(cT.VENDOR)), String(cT.getParameter(cT.RENDERER)))
       } catch {}
       return null
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

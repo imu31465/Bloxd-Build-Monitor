@@ -1,43 +1,43 @@
 export const id = 185;
 export const ids = [185];
 export const modules = {
-  8882: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      ALL_DEV_TOOLS: () => gv,
-      coreDevTools: () => Nv,
-      devTools: () => dv
+  9233: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      ALL_DEV_TOOLS: () => OT,
+      coreDevTools: () => xT,
+      devTools: () => fT
     });
-    var hv = Pv(635),
-      Sv = Pv(1285),
-      ev = Pv(8888);
-    const gv = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function pv() {
+    var lT = cT(636),
+      MT = cT(1303),
+      KT = cT(9242);
+    const OT = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function yT() {
       const {
-        noaDevTools: vv
-      } = await Pv.e(231).then((() => Pv(40363)));
-      return vv
+        noaDevTools: TT
+      } = await cT.e(231).then((() => cT(40684)));
+      return TT
     }
-    const dv = new class {
+    const fT = new class {
         constructor() {
-          this.loadHost = pv, this.tools = gv
+          this.loadHost = yT, this.tools = OT
         }
-        setHost(vv) {
-          this.tools = null === vv ? gv : vv.tools, this.loadHost = null === vv ? pv : async () => vv
+        setHost(TT) {
+          this.tools = null === TT ? OT : TT.tools, this.loadHost = null === TT ? yT : async () => TT
         }
-        supports(vv) {
-          return this.tools.has(vv)
+        supports(TT) {
+          return this.tools.has(TT)
         }
-        async downloadScene(vv, zv) {
-          const Pv = await this.loadHost();
-          await Pv.downloadScene(vv, zv)
+        async downloadScene(TT, kT) {
+          const cT = await this.loadHost();
+          await cT.downloadScene(TT, kT)
         }
-        async setAmbientLightIntensity(vv) {
-          const zv = await this.loadHost();
-          await zv.setAmbientLightIntensity(vv)
+        async setAmbientLightIntensity(TT) {
+          const kT = await this.loadHost();
+          await kT.setAmbientLightIntensity(TT)
         }
       },
-      Nv = {
-        tools: ev.e,
+      xT = {
+        tools: KT.c,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -45,10 +45,10 @@ export const modules = {
           throw new Error("This client can't set the ambient light")
         }
       };
-    hv.r && dv.setHost(Nv), (0, Sv.z)((() => {
-      dv.setHost(Nv)
+    lT.x && fT.setHost(xT), (0, MT.w)((() => {
+      fT.setHost(xT)
     }))
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

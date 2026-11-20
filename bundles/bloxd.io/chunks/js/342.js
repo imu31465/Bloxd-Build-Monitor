@@ -1,68 +1,68 @@
 export const id = 342;
 export const ids = [342];
 export const modules = {
-  41859: (vv, zv, Pv) => {
-    function hv(vv) {
-      return Math.floor(vv / 8)
+  42086: (TT, kT, cT) => {
+    function lT(TT) {
+      return Math.floor(TT / 8)
     }
 
-    function Sv(vv) {
-      return 1 << vv % 8
+    function MT(TT) {
+      return 1 << TT % 8
     }
-    Pv.d(zv, {
-      OptimizeIndices: () => gv
+    cT.d(kT, {
+      OptimizeIndices: () => OT
     });
-    class ev {
-      constructor(vv) {
-        this.size = vv, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
+    class KT {
+      constructor(TT) {
+        this.size = TT, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
       }
-      get(vv) {
-        if (vv >= this.size) throw new RangeError("Bit index out of range");
-        const zv = hv(vv),
-          Pv = Sv(vv);
-        return 0 !== (this._byteArray[zv] & Pv)
+      get(TT) {
+        if (TT >= this.size) throw new RangeError("Bit index out of range");
+        const kT = lT(TT),
+          cT = MT(TT);
+        return 0 !== (this._byteArray[kT] & cT)
       }
-      set(vv, zv) {
-        if (vv >= this.size) throw new RangeError("Bit index out of range");
-        const Pv = hv(vv),
-          ev = Sv(vv);
-        zv ? this._byteArray[Pv] |= ev : this._byteArray[Pv] &= ~ev
+      set(TT, kT) {
+        if (TT >= this.size) throw new RangeError("Bit index out of range");
+        const cT = lT(TT),
+          KT = MT(TT);
+        kT ? this._byteArray[cT] |= KT : this._byteArray[cT] &= ~KT
       }
     }
 
-    function gv(vv) {
-      const zv = [],
-        Pv = vv.length / 3;
-      for (let ev = 0; ev < Pv; ev++) zv.push([vv[3 * ev], vv[3 * ev + 1], vv[3 * ev + 2]]);
-      const hv = new Map;
-      for (let ev = 0; ev < zv.length; ev++) {
-        const vv = zv[ev];
-        for (const zv of vv) {
-          let vv = hv.get(zv);
-          vv || hv.set(zv, vv = []), vv.push(ev)
+    function OT(TT) {
+      const kT = [],
+        cT = TT.length / 3;
+      for (let KT = 0; KT < cT; KT++) kT.push([TT[3 * KT], TT[3 * KT + 1], TT[3 * KT + 2]]);
+      const lT = new Map;
+      for (let KT = 0; KT < kT.length; KT++) {
+        const TT = kT[KT];
+        for (const kT of TT) {
+          let TT = lT.get(kT);
+          TT || lT.set(kT, TT = []), TT.push(KT)
         }
       }
-      const Sv = new ev(Pv),
-        gv = [],
-        pv = vv => {
-          const Pv = [vv];
-          for (; Pv.length > 0;) {
-            const vv = Pv.pop();
-            if (!Sv.get(vv)) {
-              Sv.set(vv, !0), gv.push(zv[vv]);
-              for (const ev of zv[vv]) {
-                const vv = hv.get(ev);
-                if (!vv) return;
-                for (const zv of vv) Sv.get(zv) || Pv.push(zv)
+      const MT = new KT(cT),
+        OT = [],
+        yT = TT => {
+          const cT = [TT];
+          for (; cT.length > 0;) {
+            const TT = cT.pop();
+            if (!MT.get(TT)) {
+              MT.set(TT, !0), OT.push(kT[TT]);
+              for (const KT of kT[TT]) {
+                const TT = lT.get(KT);
+                if (!TT) return;
+                for (const kT of TT) MT.get(kT) || cT.push(kT)
               }
             }
           }
         };
-      for (let ev = 0; ev < Pv; ev++) Sv.get(ev) || pv(ev);
-      let dv = 0;
-      for (const ev of gv) vv[dv++] = ev[0], vv[dv++] = ev[1], vv[dv++] = ev[2]
+      for (let KT = 0; KT < cT; KT++) MT.get(KT) || yT(KT);
+      let fT = 0;
+      for (const KT of OT) TT[fT++] = KT[0], TT[fT++] = KT[1], TT[fT++] = KT[2]
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

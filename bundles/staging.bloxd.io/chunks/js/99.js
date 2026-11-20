@@ -1,26 +1,26 @@
 export const id = 99;
 export const ids = [99];
 export const modules = {
-  4641: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      default: () => mv
+  4845: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      default: () => DT
     });
-    var hv = Pv(1505),
-      Sv = Pv(52),
-      ev = Pv(1175),
-      gv = Pv(1108),
-      pv = Pv(1095),
-      dv = Pv(2015),
-      Nv = Pv(1492),
-      lv = Pv(1327),
-      Tv = Pv(1089),
-      Wv = Pv(22),
-      wv = Pv(1442),
-      av = Pv(1042),
-      sv = Pv(2413),
-      Cv = Pv(1529),
-      iv = Pv(1082);
-    const cv = [{
+    var lT = cT(1535),
+      MT = cT(71),
+      KT = cT(1195),
+      OT = cT(1130),
+      yT = cT(1117),
+      fT = cT(2120),
+      xT = cT(1530),
+      IT = cT(1348),
+      AT = cT(1115),
+      CT = cT(31),
+      jT = cT(1470),
+      vT = cT(1061),
+      tT = cT(2576),
+      hT = cT(1554),
+      NT = cT(1099);
+    const QT = [{
         id: "myGames",
         icon: "joystick",
         title: "studio:myGames"
@@ -33,79 +33,79 @@ export const modules = {
         icon: "file-lines",
         title: "general:docs"
       }],
-      Gv = {
+      ST = {
         myGames: "/studio",
         leaderboard: "/studio/leaderboard",
         docs: "/studio/docs"
       };
 
-    function mv() {
+    function DT() {
       const {
-        t: vv
-      } = (0, ev.x)(), zv = (0, Nv.useNavigatePreserveSearch)(), Pv = (0, hv.p)(), {
-        isUserContextUpdating: mv
-      } = (0, gv.d)(), jv = (0, dv.b)(), fv = (0, pv.i)(), Fv = (Yv = Pv.pathname).startsWith(Cv.s) ? null : Yv.startsWith(Gv.docs) ? "docs" : Yv.startsWith(Gv.leaderboard) ? "leaderboard" : "myGames";
-      var Yv;
-      const nv = function(vv) {
-        if (!vv.startsWith(Cv.s)) return {
+        t: TT
+      } = (0, KT.B)(), kT = (0, xT.useNavigatePreserveSearch)(), cT = (0, lT.s)(), {
+        isUserContextUpdating: DT
+      } = (0, OT.b)(), aT = (0, fT.e)(), FT = (0, yT.i)(), rT = (PT = cT.pathname).startsWith(hT.r) ? null : PT.startsWith(ST.docs) ? "docs" : PT.startsWith(ST.leaderboard) ? "leaderboard" : "myGames";
+      var PT;
+      const wT = function(TT) {
+        if (!TT.startsWith(hT.r)) return {
           title: "studio:leaveStudio",
           icon: "left-from-bracket",
           to: "/"
         };
-        const zv = (0, Nv.getPreviousLocation)();
+        const kT = (0, xT.getPreviousLocation)();
         return {
           title: "general:back",
           icon: "arrow-left",
-          to: null !== zv && zv.startsWith(Gv.myGames) ? -1 : Gv.myGames
+          to: null !== kT && kT.startsWith(ST.myGames) ? -1 : ST.myGames
         }
-      }(Pv.pathname);
-      return (0, Sv.useEffect)((() => {
-        Wv.c.set({
+      }(cT.pathname);
+      return (0, MT.useEffect)((() => {
+        CT.e.set({
           gameState: "studio",
           openEverythingMenuName: null
         })
-      }), []), (0, iv.jsxs)("div", {
+      }), []), (0, NT.jsxs)("div", {
         className: "StudioLayout AnimFadeIn",
-        children: [jv && (0, iv.jsx)("aside", {
+        children: [aT && (0, NT.jsx)("aside", {
           className: "StudioLayoutLeft",
-          children: (0, iv.jsx)(sv.b, {})
-        }), (0, iv.jsxs)("div", {
+          children: (0, NT.jsx)(tT.b, {})
+        }), (0, NT.jsxs)("div", {
           className: "StudioLayoutRight",
-          children: [(0, iv.jsxs)("div", {
+          children: [(0, NT.jsxs)("div", {
             className: "StudioTop",
-            children: [(0, iv.jsx)(Tv.b, {
+            children: [(0, NT.jsx)(AT.d, {
               show: !0,
-              socialBarIsDocked: jv
-            }), (0, iv.jsxs)("nav", {
+              socialBarIsDocked: aT
+            }), (0, NT.jsxs)("nav", {
               className: "StudioNav",
-              children: [(0, iv.jsx)(wv.b, {
-                icon: nv.icon,
+              children: [(0, NT.jsx)(jT.b, {
+                icon: wT.icon,
                 onClick: () => {
-                  zv(nv.to)
+                  kT(wT.to)
                 },
-                children: vv(nv.title)
-              }), (0, iv.jsx)("div", {
+                children: TT(wT.title)
+              }), (0, NT.jsx)("div", {
                 className: "StudioNavTabs",
-                children: cv.map((Pv => (0, iv.jsxs)(wv.K, {
-                  active: Fv === Pv.id,
-                  href: Gv[Pv.id],
+                children: QT.map((cT => (0, NT.jsxs)(jT.P, {
+                  active: rT === cT.id,
+                  href: ST[cT.id],
                   onClick: () => {
-                    zv(Gv[Pv.id])
+                    kT(ST[cT.id])
                   },
-                  children: [(0, iv.jsx)(av.b, {
-                    name: Pv.icon
-                  }), !fv && vv(Pv.title)]
-                }, Pv.id)))
+                  children: [(0, NT.jsx)(vT.e, {
+                    name: cT.icon
+                  }), !FT && TT(cT.title)]
+                }, cT.id)))
               })]
             })]
-          }), (0, iv.jsxs)("main", {
+          }), (0, NT.jsxs)("main", {
             className: "StudioBottom",
-            children: [mv && (0, iv.jsx)("div", {
+            children: [DT && (0, NT.jsx)("div", {
               className: "StudioCentredMessage",
-              children: (0, iv.jsx)(lv.c, {})
-            }), !mv && (0, iv.jsx)("div", {
+              children: (0, NT.jsx)(IT.d, {})
+            }), !DT && (0, NT.jsx)("div", {
               className: "StudioContent",
-              children: (0, iv.jsx)(hv.d, {})
+              children: (0, NT.jsx)(lT.i, {})
             })]
           })]
         })]
@@ -114,4 +114,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

@@ -1,132 +1,132 @@
 export const id = 211;
 export const ids = [211];
 export const modules = {
-  35931: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      default: () => Yv
+  36180: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      default: () => PT
     });
-    var hv = Pv(1035),
-      Sv = Pv.n(hv),
-      ev = Pv(1505),
-      gv = Pv(1027),
-      pv = Pv(763),
-      dv = Pv(1175),
-      Nv = Pv(1442),
-      lv = Pv(1492),
-      Tv = Pv(3312),
-      Wv = Pv(1042),
-      wv = Pv(3236),
-      av = Pv(2424),
-      sv = Pv(1082);
-    const Cv = 2;
+    var lT = cT(1046),
+      MT = cT.n(lT),
+      KT = cT(1535),
+      OT = cT(1043),
+      yT = cT(761),
+      fT = cT(1195),
+      xT = cT(1470),
+      IT = cT(1530),
+      AT = cT(3515),
+      CT = cT(1061),
+      jT = cT(3419),
+      vT = cT(2589),
+      tT = cT(1099);
+    const hT = 2;
 
-    function iv(vv) {
-      return "firstPartyGame" === vv.type ? {
+    function NT(TT) {
+      return "firstPartyGame" === TT.type ? {
         type: "game",
-        gameNameWithVariation: vv.gameNameWithVariation
+        gameNameWithVariation: TT.gameNameWithVariation
       } : {
         type: "preview",
-        preview: vv.preview
+        preview: TT.preview
       }
     }
 
-    function cv(vv) {
+    function QT(TT) {
       let {
-        game: zv,
-        disabled: Pv,
-        showPlaceholder: hv
-      } = vv;
-      return null !== zv ? (0, sv.jsx)(wv.i, {
-        source: iv(zv),
+        game: kT,
+        disabled: cT,
+        showPlaceholder: lT
+      } = TT;
+      return null !== kT ? (0, tT.jsx)(jT.d, {
+        source: NT(kT),
         gameWidth: "100%",
         useLongRatio: !0,
-        disabled: Pv,
+        disabled: cT,
         entrySource: "customGamePlace"
-      }) : hv ? (0, sv.jsx)(wv.e, {
+      }) : lT ? (0, tT.jsx)(jT.c, {
         gameWidth: "100%",
         useLongRatio: !0
       }) : null
     }
 
-    function Gv(vv) {
-      var zv;
+    function ST(TT) {
+      var kT;
       let {
-        category: Pv,
-        title: hv,
-        tintColour: Sv,
-        layout: ev,
-        games: gv,
-        landscape: pv = !1
-      } = vv;
+        category: cT,
+        title: lT,
+        tintColour: MT,
+        layout: KT,
+        games: OT,
+        landscape: yT = !1
+      } = TT;
       const {
-        followsLeader: dv
-      } = (0, av.h)(), Nv = null !== (zv = null === gv || void 0 === gv ? void 0 : gv.slice(0, ev.gameCount)) && void 0 !== zv ? zv : [], Tv = {
-        "--custom-game-place-tint": Sv
+        followsLeader: fT
+      } = (0, vT.f)(), xT = null !== (kT = null === OT || void 0 === OT ? void 0 : OT.slice(0, KT.gameCount)) && void 0 !== kT ? kT : [], AT = {
+        "--custom-game-place-tint": MT
       };
-      return (0, sv.jsxs)("div", {
+      return (0, tT.jsxs)("div", {
         className: "CustomGamePlacePanel AnimFadeIn",
-        style: Tv,
-        children: [(0, sv.jsx)("h2", {
+        style: AT,
+        children: [(0, tT.jsx)("h2", {
           className: "CustomGamePlacePanelHeading",
-          children: (0, sv.jsxs)(lv.LinkPreserveSearch, {
-            to: `/custom-games/${encodeURIComponent(Pv)}`,
+          children: (0, tT.jsxs)(IT.LinkPreserveSearch, {
+            to: `/custom-games/${encodeURIComponent(cT)}`,
             className: "CustomGamePlacePanelTitle SmallTextBold",
-            children: [(0, sv.jsx)("span", {
-              children: hv
-            }), (0, sv.jsx)(Wv.b, {
+            children: [(0, tT.jsx)("span", {
+              children: lT
+            }), (0, tT.jsx)(CT.e, {
               name: "arrow-up"
             })]
           })
-        }), (0, sv.jsx)("div", {
+        }), (0, tT.jsx)("div", {
           className: "CustomGamePlacePanelGames",
           style: {
-            gridTemplateColumns: `repeat(${pv?ev.columnCount:Cv}, ${pv?"var(--custom-game-place-tile-width)":"minmax(0, 1fr)"})`
+            gridTemplateColumns: `repeat(${yT?KT.columnCount:hT}, ${yT?"var(--custom-game-place-tile-width)":"minmax(0, 1fr)"})`
           },
           children: Array.from({
-            length: ev.gameCount
-          }, ((vv, zv) => {
-            var Pv;
-            return (0, sv.jsx)(cv, {
-              game: null !== (Pv = Nv[zv]) && void 0 !== Pv ? Pv : null,
-              disabled: dv,
-              showPlaceholder: !gv
-            }, zv)
+            length: KT.gameCount
+          }, ((TT, kT) => {
+            var cT;
+            return (0, tT.jsx)(QT, {
+              game: null !== (cT = xT[kT]) && void 0 !== cT ? cT : null,
+              disabled: fT,
+              showPlaceholder: !OT
+            }, kT)
           }))
         })]
       })
     }
 
-    function mv(vv) {
+    function DT(TT) {
       let {
-        categories: zv
-      } = vv;
+        categories: kT
+      } = TT;
 
-      function Pv(vv) {
-        const Pv = zv[vv];
-        return (0, sv.jsx)(Gv, {
-          ...Pv,
+      function cT(TT) {
+        const cT = kT[TT];
+        return (0, tT.jsx)(ST, {
+          ...cT,
           landscape: !0
-        }, Pv.id)
+        }, cT.id)
       }
-      return (0, sv.jsxs)("div", {
+      return (0, tT.jsxs)("div", {
         className: "CustomGamePlaceMosaic CustomGamePlaceMosaicLandscape AnimFadeIn",
-        children: [(0, sv.jsxs)("div", {
+        children: [(0, tT.jsxs)("div", {
           className: "CustomGamePlaceUpper",
-          children: [(0, sv.jsxs)("div", {
+          children: [(0, tT.jsxs)("div", {
             className: "CustomGamePlaceMain",
-            children: [(0, sv.jsxs)("div", {
+            children: [(0, tT.jsxs)("div", {
               className: "CustomGamePlaceRow",
-              children: [Pv(0), Pv(2)]
-            }), Pv(1)]
-          }), Pv(4)]
-        }), (0, sv.jsxs)("div", {
+              children: [cT(0), cT(2)]
+            }), cT(1)]
+          }), cT(4)]
+        }), (0, tT.jsxs)("div", {
           className: "CustomGamePlaceRow",
-          children: [Pv(3), Pv(5)]
+          children: [cT(3), cT(5)]
         })]
       })
     }
-    const jv = ["section1", "section2", "section3", "section4", "section5", "section6"],
-      fv = {
+    const aT = ["section1", "section2", "section3", "section4", "section5", "section6"],
+      FT = {
         section1: {
           gameCount: 4,
           columnCount: 2
@@ -152,67 +152,67 @@ export const modules = {
           columnCount: 4
         }
       };
-    var Fv = Pv(1095);
+    var rT = cT(1117);
 
-    function Yv() {
-      var vv;
+    function PT() {
+      var TT;
       const {
-        t: zv
-      } = (0, dv.x)(), Pv = (0, ev.B)(), hv = (0, Fv.i)(), Wv = (0, Tv.c)({
+        t: kT
+      } = (0, fT.B)(), cT = (0, KT.v)(), lT = (0, rT.i)(), CT = (0, AT.d)({
         refresh: !0
-      }), wv = Pv.customGamePlace;
-      if (!(0, gv.j)(wv)) return (0, sv.jsx)(lv.NavigatePreserveSearch, {
+      }), jT = cT.customGamePlace;
+      if (!(0, OT.l)(jT)) return (0, tT.jsx)(IT.NavigatePreserveSearch, {
         to: "/"
       });
-      const av = pv.e[wv],
-        Cv = gv.d[wv],
-        iv = null !== (vv = null === Wv || void 0 === Wv ? void 0 : Wv[wv]) && void 0 !== vv ? vv : null,
-        cv = [];
-      for (let Sv = 0; Sv < Cv.length; Sv++) {
-        var Yv;
-        const vv = jv[Sv];
-        if (!vv) continue;
-        const Pv = Cv[Sv];
-        cv.push({
-          id: Pv.id,
-          category: Pv.category,
-          title: zv(Pv.displayTranslationKey),
-          tintColour: Pv.tintColour,
-          layout: fv[vv],
-          games: null !== (Yv = null === iv || void 0 === iv ? void 0 : iv[Pv.id]) && void 0 !== Yv ? Yv : null
+      const vT = yT.e[jT],
+        hT = OT.b[jT],
+        NT = null !== (TT = null === CT || void 0 === CT ? void 0 : CT[jT]) && void 0 !== TT ? TT : null,
+        QT = [];
+      for (let MT = 0; MT < hT.length; MT++) {
+        var PT;
+        const TT = aT[MT];
+        if (!TT) continue;
+        const cT = hT[MT];
+        QT.push({
+          id: cT.id,
+          category: cT.category,
+          title: kT(cT.displayTranslationKey),
+          tintColour: cT.tintColour,
+          layout: FT[TT],
+          games: null !== (PT = null === NT || void 0 === NT ? void 0 : NT[cT.id]) && void 0 !== PT ? PT : null
         })
       }
-      return (0, sv.jsxs)("div", {
+      return (0, tT.jsxs)("div", {
         className: "CustomGamePlaceContainer AnimFadeIn",
-        children: [(0, sv.jsx)("div", {
+        children: [(0, tT.jsx)("div", {
           className: "BackgroundImage",
           style: {
-            backgroundImage: `url(/textures/games/${wv}/${av.largePicture}.png)`
+            backgroundImage: `url(/textures/games/${jT}/${vT.largePicture}.png)`
           }
-        }), (0, sv.jsx)("h1", {
+        }), (0, tT.jsx)("h1", {
           className: "VisuallyHidden",
-          children: zv(av.title)
-        }), (0, sv.jsx)("div", {
+          children: kT(vT.title)
+        }), (0, tT.jsx)("div", {
           className: "CustomGamePlaceHeaderContainer",
-          children: (0, sv.jsx)(Nv.b, {
-            onClick: () => (0, lv.navigatePreserveSearch)("/"),
-            children: zv("homePage:backToGames")
+          children: (0, tT.jsx)(xT.b, {
+            onClick: () => (0, IT.navigatePreserveSearch)("/"),
+            children: kT("homePage:backToGames")
           })
-        }), !hv && (0, sv.jsx)(mv, {
-          categories: cv
-        }), hv && (0, sv.jsx)("div", {
-          className: Sv()("CustomGamePlaceMosaic", "CustomGamePlaceMosaicPortrait"),
-          children: cv.map((vv => (0, sv.jsx)(Gv, {
-            category: vv.category,
-            title: vv.title,
-            tintColour: vv.tintColour,
-            layout: vv.layout,
-            games: vv.games
-          }, vv.id)))
+        }), !lT && (0, tT.jsx)(DT, {
+          categories: QT
+        }), lT && (0, tT.jsx)("div", {
+          className: MT()("CustomGamePlaceMosaic", "CustomGamePlaceMosaicPortrait"),
+          children: QT.map((TT => (0, tT.jsx)(ST, {
+            category: TT.category,
+            title: TT.title,
+            tintColour: TT.tintColour,
+            layout: TT.layout,
+            games: TT.games
+          }, TT.id)))
         })]
       })
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

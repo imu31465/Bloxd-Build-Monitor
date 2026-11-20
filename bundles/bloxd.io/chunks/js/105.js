@@ -1,255 +1,255 @@
 export const id = 105;
 export const ids = [105];
 export const modules = {
-  35913: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => dv
+  36166: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => fT
     });
-    var hv = Pv(1035),
-      Sv = Pv.n(hv),
-      ev = Pv(52),
-      gv = Pv(4337),
-      pv = Pv(1082);
+    var lT = cT(1046),
+      MT = cT.n(lT),
+      KT = cT(71),
+      OT = cT(4552),
+      yT = cT(1099);
 
-    function dv(vv) {
+    function fT(TT) {
       let {
-        locked: zv,
-        children: Pv
-      } = vv;
-      const hv = (0, ev.useRef)(null),
-        dv = (0, gv.e)(hv, "y");
-      return (0, pv.jsx)("div", {
-        ref: hv,
-        className: Sv()("CreateCustomLobbyBody", {
-          CreateCustomLobbyBodyMoreAbove: dv.before,
-          CreateCustomLobbyBodyMoreBelow: dv.after
+        locked: kT,
+        children: cT
+      } = TT;
+      const lT = (0, KT.useRef)(null),
+        fT = (0, OT.b)(lT, "y");
+      return (0, yT.jsx)("div", {
+        ref: lT,
+        className: MT()("CreateCustomLobbyBody", {
+          CreateCustomLobbyBodyMoreAbove: fT.before,
+          CreateCustomLobbyBodyMoreBelow: fT.after
         }),
-        "data-pad-ignore": zv || void 0,
-        children: Pv
+        "data-pad-ignore": kT || void 0,
+        children: cT
       })
     }
   },
-  35978: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      showFirstWorldSetupPopup: () => sv
+  36236: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      showFirstWorldSetupPopup: () => tT
     });
-    Pv(4685), Pv(35902);
-    var hv = Pv(4386),
-      Sv = Pv(52),
-      ev = Pv(4342),
-      gv = Pv(1175),
-      pv = Pv(1336),
-      dv = Pv(35913),
-      Nv = Pv(4694),
-      lv = Pv(1442),
-      Tv = Pv(3247),
-      Wv = Pv(35908),
-      wv = Pv(4379),
-      av = Pv(1082);
+    cT(4893), cT(36147);
+    var lT = cT(4611),
+      MT = cT(71),
+      KT = cT(4566),
+      OT = cT(1195),
+      yT = cT(1363),
+      fT = cT(36166),
+      xT = cT(4899),
+      IT = cT(1470),
+      AT = cT(3436),
+      CT = cT(36160),
+      jT = cT(4598),
+      vT = cT(1099);
 
-    function sv(vv) {
-      const zv = {
+    function tT(TT) {
+      const kT = {
         requested: !1,
         closed: !1
       };
-      pv.NotificationProvider.showCustomPopup({
-        body: Pv => (0, av.jsx)(Cv, {
-          flow: zv,
-          close: Pv,
-          ...vv
+      yT.NotificationProvider.showCustomPopup({
+        body: cT => (0, vT.jsx)(hT, {
+          flow: kT,
+          close: cT,
+          ...TT
         }),
         middleScreenPopupClassName: "CreateCustomLobbyPopup",
         onClose: () => {
-          zv.closed = !0, zv.requested || (0, wv.e)()
+          kT.closed = !0, kT.requested || (0, jT.g)()
         }
       })
     }
 
-    function Cv(vv) {
+    function hT(TT) {
       let {
-        flow: zv,
-        close: Pv,
-        onCreating: pv,
-        onCreated: sv,
-        onFailedClosed: Cv,
-        join: iv
-      } = vv;
+        flow: kT,
+        close: cT,
+        onCreating: yT,
+        onCreated: tT,
+        onFailedClosed: hT,
+        join: NT
+      } = TT;
       const {
-        t: cv
-      } = (0, gv.x)(), [Gv, mv] = (0, Sv.useState)(hv.q), [jv, fv] = (0, Sv.useState)(!1), [Fv, Yv] = (0, Sv.useState)(""), nv = (0, Tv.b)();
-      (0, Sv.useEffect)((() => {
-        (0, wv.k)()
+        t: QT
+      } = (0, OT.B)(), [ST, DT] = (0, MT.useState)(lT.y), [aT, FT] = (0, MT.useState)(!1), [rT, PT] = (0, MT.useState)(""), wT = (0, AT.b)();
+      (0, MT.useEffect)((() => {
+        (0, jT.l)()
       }), []);
-      const Ov = vv => ({
-        isEnabled: () => Gv.plugins[vv],
-        uF: zv => {
-          (0, wv.f)({
-            plugin: vv,
-            enabled: zv
-          }), mv({
-            ...Gv,
+      const mT = TT => ({
+        isEnabled: () => ST.plugins[TT],
+        PD: kT => {
+          (0, jT.i)({
+            plugin: TT,
+            enabled: kT
+          }), DT({
+            ...ST,
             plugins: {
-              ...Gv.plugins,
-              [vv]: zv
+              ...ST.plugins,
+              [TT]: kT
             }
           })
         }
       });
-      return (0, av.jsxs)("div", {
+      return (0, vT.jsxs)("div", {
         className: "CreateCustomLobby",
-        children: [(0, av.jsx)("div", {
+        children: [(0, vT.jsx)("div", {
           className: "CreateCustomLobbyTitleContainer",
-          children: (0, av.jsx)("div", {
+          children: (0, vT.jsx)("div", {
             className: "CreateCustomLobbyTitle",
-            children: cv("homePage:myWorld")
+            children: QT("homePage:myWorld")
           })
-        }), (0, av.jsx)(dv.c, {
-          locked: jv,
-          children: (0, av.jsxs)("div", {
+        }), (0, vT.jsx)(fT.b, {
+          locked: aT,
+          children: (0, vT.jsxs)("div", {
             className: "CreateCustomLobbyFields",
-            children: [(0, av.jsx)(Wv.e, {
-              value: Gv.defaultGamemode,
-              onChange: vv => {
-                (0, hv.u)(vv) && vv !== Gv.defaultGamemode && ((0, wv.f)({
-                  defaultGamemode: vv
-                }), mv({
-                  ...Gv,
-                  defaultGamemode: vv
+            children: [(0, vT.jsx)(CT.b, {
+              value: ST.defaultGamemode,
+              onChange: TT => {
+                (0, lT.z)(TT) && TT !== ST.defaultGamemode && ((0, jT.i)({
+                  defaultGamemode: TT
+                }), DT({
+                  ...ST,
+                  defaultGamemode: TT
                 }))
               },
               showAll: !1,
-              disabled: jv
-            }), (0, av.jsx)(Wv.i, {
-              mapTypes: hv.g,
-              value: Gv.mapType,
-              onChange: vv => {
-                (0, hv.x)(vv) && vv !== Gv.mapType && ((0, wv.f)({
-                  mapType: vv
-                }), mv({
-                  ...Gv,
-                  mapType: vv
+              disabled: aT
+            }), (0, vT.jsx)(CT.d, {
+              mapTypes: lT.j,
+              value: ST.mapType,
+              onChange: TT => {
+                (0, lT.A)(TT) && TT !== ST.mapType && ((0, jT.i)({
+                  mapType: TT
+                }), DT({
+                  ...ST,
+                  mapType: TT
                 }))
               },
               showAll: !1,
-              disabled: jv
-            }), (0, av.jsx)(Nv.d, {
+              disabled: aT
+            }), (0, vT.jsx)(xT.b, {
               callbacks: {
-                dayNight: Ov("dayNight"),
-                fallDamage: Ov("fallDamage"),
-                survivalGuns: Ov("survivalGuns")
+                dayNight: mT("dayNight"),
+                fallDamage: mT("fallDamage"),
+                survivalGuns: mT("survivalGuns")
               },
-              disabled: jv,
+              disabled: aT,
               advancedMode: !1
             })]
           })
-        }), (0, av.jsxs)("div", {
+        }), (0, vT.jsxs)("div", {
           className: "CreateCustomLobbyFooter",
-          children: [(0, av.jsx)(lv.j, {
+          children: [(0, vT.jsx)(IT.m, {
             className: "CreateCustomLobbyButton",
             padDefaultFocus: !0,
-            loading: jv,
+            loading: aT,
             onClick: () => {
-              zv.requested = !0, fv(!0), pv(!0), Yv(""), (0, wv.h)(Gv), ev.e.createPersonalWorld(Gv).then((vv => {
-                pv(!1);
-                const hv = sv(vv);
-                !zv.closed && nv.current ? (Pv(), iv(vv)) : hv || (0, wv.e)()
-              }), (vv => {
-                if (console.error("Failed to create personal world:", vv), pv(!1), zv.requested = !1, zv.closed || !nv.current) return (0, wv.e)(), void Cv(vv);
-                Yv(vv.message), fv(!1)
+              kT.requested = !0, FT(!0), yT(!0), PT(""), (0, jT.j)(ST), KT.c.createPersonalWorld(ST).then((TT => {
+                yT(!1);
+                const lT = tT(TT);
+                !kT.closed && wT.current ? (cT(), NT(TT)) : lT || (0, jT.g)()
+              }), (TT => {
+                if (console.error("Failed to create personal world:", TT), yT(!1), kT.requested = !1, kT.closed || !wT.current) return (0, jT.g)(), void hT(TT);
+                PT(TT.message), FT(!1)
               }))
             },
-            children: cv("general:play")
-          }), Fv && (0, av.jsx)("div", {
+            children: QT("general:play")
+          }), rT && (0, vT.jsx)("div", {
             className: "CreateCustomLobbyError AnimFadeInScaleUp",
-            children: Fv
+            children: rT
           })]
         })]
       })
     }
   },
-  4694: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => Nv
+  4899: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => xT
     });
-    var hv = Pv(1035),
-      Sv = Pv.n(hv),
-      ev = Pv(4386),
-      gv = Pv(1175),
-      pv = Pv(1082);
-    const dv = [...ev.j, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
+    var lT = cT(1046),
+      MT = cT.n(lT),
+      KT = cT(4611),
+      OT = cT(1195),
+      yT = cT(1099);
+    const fT = [...KT.n, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
 
-    function Nv(vv) {
+    function xT(TT) {
       const {
-        disabled: zv,
-        hideWrapper: Pv
-      } = vv, {
-        t: hv
-      } = (0, gv.x)(), Nv = vv.advancedMode ? dv.map((zv => [zv, vv.callbacks[zv]])) : ev.j.map((zv => [zv, vv.callbacks[zv]])), Tv = (0, pv.jsx)("div", {
-        className: Sv()("PluginsGrid", {
-          SectionBody: !Pv
+        disabled: kT,
+        hideWrapper: cT
+      } = TT, {
+        t: lT
+      } = (0, OT.B)(), xT = TT.advancedMode ? fT.map((kT => [kT, TT.callbacks[kT]])) : KT.n.map((kT => [kT, TT.callbacks[kT]])), AT = (0, yT.jsx)("div", {
+        className: MT()("PluginsGrid", {
+          SectionBody: !cT
         }),
-        children: Nv.map((vv => {
-          let [Pv, hv] = vv;
-          return (0, pv.jsx)(lv, {
-            plugin: Pv,
-            callbacks: hv,
-            disabled: zv
-          }, Pv)
+        children: xT.map((TT => {
+          let [cT, lT] = TT;
+          return (0, yT.jsx)(IT, {
+            plugin: cT,
+            callbacks: lT,
+            disabled: kT
+          }, cT)
         }))
       });
-      return Pv ? Tv : (0, pv.jsxs)("div", {
+      return cT ? AT : (0, yT.jsxs)("div", {
         className: "BloxdForm",
-        children: [(0, pv.jsx)("div", {
+        children: [(0, yT.jsx)("div", {
           className: "SectionTitle",
-          children: hv("worldBuilder:pluginsSection")
-        }), Tv]
+          children: lT("worldBuilder:pluginsSection")
+        }), AT]
       })
     }
 
-    function lv(vv) {
+    function IT(TT) {
       let {
-        plugin: zv,
+        plugin: kT,
         callbacks: {
-          isEnabled: Pv,
-          uF: hv
+          isEnabled: cT,
+          PD: lT
         },
-        disabled: ev
-      } = vv;
+        disabled: KT
+      } = TT;
       const {
-        t: dv
-      } = (0, gv.x)(), Nv = Pv();
-      return (0, pv.jsxs)("div", {
-        className: Sv()("PluginCard", {
-          PluginCardEnabled: Nv,
-          PluginCardDisabledForm: ev
+        t: fT
+      } = (0, OT.B)(), xT = cT();
+      return (0, yT.jsxs)("div", {
+        className: MT()("PluginCard", {
+          PluginCardEnabled: xT,
+          PluginCardDisabledForm: KT
         }),
         "data-pad-focusable": !0,
-        "aria-disabled": ev || void 0,
+        "aria-disabled": KT || void 0,
         onClick: () => {
-          ev || hv(!Nv)
+          KT || lT(!xT)
         },
-        children: [(0, pv.jsx)("div", {
+        children: [(0, yT.jsx)("div", {
           className: "PluginCardIcon",
-          children: (0, pv.jsx)("img", {
-            src: `/textures/games/classic/customGames/${zv}.png`,
-            alt: zv
+          children: (0, yT.jsx)("img", {
+            src: `/textures/games/classic/customGames/${kT}.png`,
+            alt: kT
           })
-        }), (0, pv.jsxs)("div", {
+        }), (0, yT.jsxs)("div", {
           className: "PluginCardBody",
-          children: [(0, pv.jsx)("div", {
+          children: [(0, yT.jsx)("div", {
             className: "PluginCardTitle",
-            children: dv(Tv[zv])
-          }), (0, pv.jsx)("div", {
+            children: fT(AT[kT])
+          }), (0, yT.jsx)("div", {
             className: "PluginCardDescription",
-            children: dv(Wv[zv])
+            children: fT(CT[kT])
           })]
-        }), (0, pv.jsx)("span", {
+        }), (0, yT.jsx)("span", {
           className: "PluginCardToggleLabel",
-          children: dv(Nv ? "general:on" : "general:off")
+          children: fT(xT ? "general:on" : "general:off")
         })]
       })
     }
-    const Tv = {
+    const AT = {
         fallDamage: "classic:enableFallDamage",
         tpRequests: "classic:enableTpRequests",
         spawnProtection: "classic:enableSpawnProtection",
@@ -258,7 +258,7 @@ export const modules = {
         survivalGuns: "classic:enableSurvivalGuns",
         dayNight: "classic:enableDayNight"
       },
-      Wv = {
+      CT = {
         fallDamage: "classic:enableFallDamageDescription",
         tpRequests: "classic:enableTpRequestsDescription",
         spawnProtection: "classic:enableSpawnProtectionDescription",
@@ -268,97 +268,97 @@ export const modules = {
         dayNight: "classic:enableDayNightDescription"
       }
   },
-  35908: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => Nv,
-      i: () => lv
+  36160: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => xT,
+      d: () => IT
     });
-    Pv(52);
-    var hv = Pv(1035),
-      Sv = Pv.n(hv),
-      ev = Pv(4386),
-      gv = Pv(302),
-      pv = Pv(1175),
-      dv = Pv(1082);
+    cT(71);
+    var lT = cT(1046),
+      MT = cT.n(lT),
+      KT = cT(4611),
+      OT = cT(328),
+      yT = cT(1195),
+      fT = cT(1099);
 
-    function Nv(vv) {
+    function xT(TT) {
       let {
-        value: zv,
-        onChange: Pv,
-        showAll: hv,
-        disabled: Nv = !1
-      } = vv;
+        value: kT,
+        onChange: cT,
+        showAll: lT,
+        disabled: xT = !1
+      } = TT;
       const {
-        t: lv
-      } = (0, pv.x)();
-      return (0, dv.jsxs)("div", {
-        className: Sv()("BloxdForm GamemodeForm", {
-          BasicOptions: !hv
+        t: IT
+      } = (0, yT.B)();
+      return (0, fT.jsxs)("div", {
+        className: MT()("BloxdForm GamemodeForm", {
+          BasicOptions: !lT
         }),
-        children: [(0, dv.jsx)("div", {
+        children: [(0, fT.jsx)("div", {
           className: "SectionTitle",
-          children: lv("classic:defaultGamemode")
-        }), (0, dv.jsx)("div", {
+          children: IT("classic:defaultGamemode")
+        }), (0, fT.jsx)("div", {
           className: "SectionBody",
-          children: ev.B.map((vv => hv || (0, ev.u)(vv) ? (0, dv.jsx)("button", {
+          children: KT.G.map((TT => lT || (0, KT.z)(TT) ? (0, fT.jsx)("button", {
             type: "button",
-            className: Sv()("WorldGamemode", {
-              Selected: zv === vv
+            className: MT()("WorldGamemode", {
+              Selected: kT === TT
             }),
-            disabled: Nv,
+            disabled: xT,
             onClick: () => {
-              Pv(vv)
+              cT(TT)
             },
             style: {
-              "--background-image": `url(${gv.s[vv]})`
+              "--background-image": `url(${OT.u[TT]})`
             },
-            children: gv.p[vv]
-          }, vv) : null))
+            children: OT.q[TT]
+          }, TT) : null))
         })]
       })
     }
 
-    function lv(vv) {
+    function IT(TT) {
       let {
-        mapTypes: zv,
-        value: Pv,
-        onChange: hv,
-        showAll: Nv,
-        disabled: lv = !1,
-        children: Tv
-      } = vv;
+        mapTypes: kT,
+        value: cT,
+        onChange: lT,
+        showAll: xT,
+        disabled: IT = !1,
+        children: AT
+      } = TT;
       const {
-        t: Wv
-      } = (0, pv.x)();
-      return (0, dv.jsxs)("div", {
-        className: Sv()("BloxdForm MapTypeForm", {
-          BasicOptions: !Nv
+        t: CT
+      } = (0, yT.B)();
+      return (0, fT.jsxs)("div", {
+        className: MT()("BloxdForm MapTypeForm", {
+          BasicOptions: !xT
         }),
-        children: [(0, dv.jsx)("div", {
+        children: [(0, fT.jsx)("div", {
           className: "SectionTitle",
-          children: Wv("customLobby:mapType")
-        }), (0, dv.jsx)("div", {
+          children: CT("customLobby:mapType")
+        }), (0, fT.jsx)("div", {
           className: "SectionBody",
-          children: zv.map((vv => Nv || (0, ev.x)(vv) ? (0, dv.jsx)("button", {
+          children: kT.map((TT => xT || (0, KT.A)(TT) ? (0, fT.jsx)("button", {
             type: "button",
-            className: Sv()("MapType", {
-              Selected: Pv === vv
+            className: MT()("MapType", {
+              Selected: cT === TT
             }),
-            disabled: lv,
+            disabled: IT,
             onClick: () => {
-              hv(vv)
+              lT(TT)
             },
             style: {
-              "--background-image": `url(${gv.l[vv]})`
+              "--background-image": `url(${OT.k[TT]})`
             },
-            children: gv.k[vv]
-          }, vv) : null))
-        }), Tv]
+            children: OT.i[TT]
+          }, TT) : null))
+        }), AT]
       })
     }
   },
-  4685: () => {},
-  35902: () => {}
+  4893: () => {},
+  36147: () => {}
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

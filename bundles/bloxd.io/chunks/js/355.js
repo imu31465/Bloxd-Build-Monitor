@@ -1,79 +1,79 @@
 export const id = 355;
 export const ids = [355];
 export const modules = {
-  60688: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      createShadowTask: () => ev
+  60663: (TT, kT, cT) => {
+    cT.d(kT, {
+      createShadowTask: () => KT
     });
-    var hv = null;
+    var lT = null;
 
-    function Sv(vv) {
-      return hv?.get(vv)
+    function MT(TT) {
+      return lT?.get(TT)
     }
 
-    function ev(vv, zv) {
-      const Pv = new Set;
+    function KT(TT, kT) {
+      const cT = new Set;
       0;
-      const hv = {
-        name: "Jw",
-        engine: vv,
-        Is: zv,
+      const lT = {
+        name: "Wj",
+        engine: TT,
+        et: kT,
         _passes: [],
         async _preload() {
-          const vv = [];
-          for (const Pv of zv.lights) {
-            const zv = Pv.shadowGenerator,
-              hv = zv ? Sv(zv) : null;
-            zv?._preloadShadowTask && hv && vv.push(gv(zv, hv))
+          const TT = [];
+          for (const cT of kT.lights) {
+            const kT = cT.shadowGenerator,
+              lT = kT ? MT(kT) : null;
+            kT?._preloadShadowTask && lT && TT.push(OT(kT, lT))
           }
-          await Promise.all(vv)
+          await Promise.all(TT)
         },
         record() {
-          hv._passes.length = 0;
-          for (const hv of zv.lights) {
-            const ev = hv.shadowGenerator,
-              gv = ev ? Sv(ev) : null;
-            if (ev?._ensureShadowTaskState && gv && !ev._preloadPending) {
-              Pv.add(ev);
-              const hv = ev._ensureShadowTaskState(vv, zv, gv),
-                Sv = zv._renderableVersion;
-              hv._task.record(), hv._recordedVersion = Sv
+          lT._passes.length = 0;
+          for (const lT of kT.lights) {
+            const KT = lT.shadowGenerator,
+              OT = KT ? MT(KT) : null;
+            if (KT?._ensureShadowTaskState && OT && !KT._preloadPending) {
+              cT.add(KT);
+              const lT = KT._ensureShadowTaskState(TT, kT, OT),
+                MT = kT._renderableVersion;
+              lT._task.record(), lT._recordedVersion = MT
             }
           }
         },
         execute() {
-          let hv = 0;
-          for (const ev of zv.lights) {
-            const gv = ev.shadowGenerator,
-              pv = gv ? Sv(gv) : null;
-            if (gv?._ensureShadowTaskState && gv._renderShadowMap && pv && !gv._preloadPending) {
-              Pv.add(gv);
-              const Sv = gv._shadowTaskState ?? null,
-                ev = gv._ensureShadowTaskState(vv, zv, pv);
-              if (ev !== Sv || ev._recordedVersion !== zv._renderableVersion) {
-                const vv = zv._renderableVersion;
-                ev._task.record(), ev._recordedVersion = vv
+          let lT = 0;
+          for (const KT of kT.lights) {
+            const OT = KT.shadowGenerator,
+              yT = OT ? MT(OT) : null;
+            if (OT?._ensureShadowTaskState && OT._renderShadowMap && yT && !OT._preloadPending) {
+              cT.add(OT);
+              const MT = OT._shadowTaskState ?? null,
+                KT = OT._ensureShadowTaskState(TT, kT, yT);
+              if (KT !== MT || KT._recordedVersion !== kT._renderableVersion) {
+                const TT = kT._renderableVersion;
+                KT._task.record(), KT._recordedVersion = TT
               }
-              hv += gv._renderShadowMap(vv, ev)
+              lT += OT._renderShadowMap(TT, KT)
             }
           }
-          return hv
+          return lT
         },
         dispose() {
-          hv._passes.length = 0;
-          for (const vv of Pv) {
-            const zv = vv._shadowTaskState;
-            zv && (zv._task.dispose(), vv._shadowTaskState = void 0)
+          lT._passes.length = 0;
+          for (const TT of cT) {
+            const kT = TT._shadowTaskState;
+            kT && (kT._task.dispose(), TT._shadowTaskState = void 0)
           }
-          Pv.clear()
+          cT.clear()
         }
       };
-      return hv
+      return lT
     }
-    async function gv(vv, zv) {
-      vv._preloadPending = zv, await (vv._preloadShadowTask?.(zv)), vv._preloadPending === zv && (vv._preloadPending = void 0)
+    async function OT(TT, kT) {
+      TT._preloadPending = kT, await (TT._preloadShadowTask?.(kT)), TT._preloadPending === kT && (TT._preloadPending = void 0)
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

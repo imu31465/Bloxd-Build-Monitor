@@ -1,162 +1,162 @@
 export const id = 93;
 export const ids = [92, 93];
 export const modules = {
-  35980: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      countDecodesAs: () => Tv,
-      decodedAudio: () => Wv
+  36242: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      countDecodesAs: () => AT,
+      decodedAudio: () => CT
     });
-    var hv = Pv(35983),
-      Sv = Pv(4603);
-    const ev = Sv.Howler,
-      gv = new Map;
-    let pv = 0;
-    const dv = {
+    var lT = cT(36247),
+      MT = cT(4820);
+    const KT = MT.Howler,
+      OT = new Map;
+    let yT = 0;
+    const fT = {
         song: 0,
         sheet: 0
       },
-      Nv = new WeakMap,
-      lv = new WeakSet;
+      xT = new WeakMap,
+      IT = new WeakSet;
 
-    function Tv(vv, zv) {
-      return Nv.set(vv, zv), vv
+    function AT(TT, kT) {
+      return xT.set(TT, kT), TT
     }
 
-    function Wv() {
+    function CT() {
       return {
-        bytes: pv,
-        songsDecoded: dv.song,
-        sheetsDecoded: dv.sheet
+        bytes: yT,
+        songsDecoded: fT.song,
+        sheetsDecoded: fT.sheet
       }
     }
 
-    function wv(vv) {
-      if (lv.has(vv)) return;
-      lv.add(vv);
-      const zv = 1 === vv.decodeAudioData.length,
-        Pv = vv.decodeAudioData.bind(vv);
-      vv.decodeAudioData = (vv, hv, Sv) => {
-        const lv = vv => {
-          const zv = ev._howls.filter((vv => "loaded" !== vv._state));
+    function jT(TT) {
+      if (IT.has(TT)) return;
+      IT.add(TT);
+      const kT = 1 === TT.decodeAudioData.length,
+        cT = TT.decodeAudioData.bind(TT);
+      TT.decodeAudioData = (TT, lT, MT) => {
+        const IT = TT => {
+          const kT = KT._howls.filter((TT => "loaded" !== TT._state));
           try {
-            null === hv || void 0 === hv || hv(vv)
+            null === lT || void 0 === lT || lT(TT)
           } finally {
-            const Pv = zv.find((vv => "loaded" === vv._state));
-            void 0 !== Pv && "string" === typeof Pv._src && function(vv, zv, Pv) {
-              var hv;
-              pv += Pv - (null !== (hv = gv.get(zv)) && void 0 !== hv ? hv : 0), gv.set(zv, Pv);
-              const Sv = Nv.get(vv);
-              void 0 !== Sv && dv[Sv]++
-            }(Pv, Pv._src, vv.length * vv.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
+            const cT = kT.find((TT => "loaded" === TT._state));
+            void 0 !== cT && "string" === typeof cT._src && function(TT, kT, cT) {
+              var lT;
+              yT += cT - (null !== (lT = OT.get(kT)) && void 0 !== lT ? lT : 0), OT.set(kT, cT);
+              const MT = xT.get(TT);
+              void 0 !== MT && fT[MT]++
+            }(cT, cT._src, TT.length * TT.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
           }
-          return vv
+          return TT
         };
-        if (!zv) return Pv(vv, lv, Sv);
-        const Tv = Pv(vv).then(lv);
-        return Tv.catch((vv => {
-          null === Sv || void 0 === Sv || Sv(vv)
-        })), Tv
+        if (!kT) return cT(TT, IT, MT);
+        const AT = cT(TT).then(IT);
+        return AT.catch((TT => {
+          null === MT || void 0 === MT || MT(TT)
+        })), AT
       }
-    }(0, hv.e)(Wv);
-    const av = Sv.Howl.prototype,
-      sv = av.init;
-    av.init = function(vv) {
-      return Sv.Howler.volume(), ev.ctx && wv(ev.ctx), sv.call(this, vv)
+    }(0, lT.f)(CT);
+    const vT = MT.Howl.prototype,
+      tT = vT.init;
+    vT.init = function(TT) {
+      return MT.Howler.volume(), KT.ctx && jT(KT.ctx), tT.call(this, TT)
     };
-    const Cv = av.unload;
-    av.unload = function() {
-      const vv = this._src,
-        zv = Cv.call(this);
-      if ("string" !== typeof vv) return zv;
-      const Pv = gv.get(vv);
-      return void 0 !== Pv && function(vv) {
-        return !ev._howls.some((zv => zv._src === vv || "string" === typeof zv._src && vv.indexOf(zv._src) >= 0))
-      }(vv) && (gv.delete(vv), pv -= Pv), zv
+    const hT = vT.unload;
+    vT.unload = function() {
+      const TT = this._src,
+        kT = hT.call(this);
+      if ("string" !== typeof TT) return kT;
+      const cT = OT.get(TT);
+      return void 0 !== cT && function(TT) {
+        return !KT._howls.some((kT => kT._src === TT || "string" === typeof kT._src && TT.indexOf(kT._src) >= 0))
+      }(TT) && (OT.delete(TT), yT -= cT), kT
     }
   },
-  35983: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => ev,
-      e: () => Sv
+  36247: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => KT,
+      f: () => MT
     });
-    let hv = null;
+    let lT = null;
 
-    function Sv(vv) {
-      hv = vv
+    function MT(TT) {
+      lT = TT
     }
 
-    function ev() {
-      return null === hv ? null : hv()
+    function KT() {
+      return null === lT ? null : lT()
     }
   },
-  4603: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      Howl: () => Sv.Howl,
-      Howler: () => Sv.Howler,
-      musicOutput: () => av,
-      readyAudioContext: () => sv
+  4820: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      Howl: () => MT.Howl,
+      Howler: () => MT.Howler,
+      musicOutput: () => vT,
+      readyAudioContext: () => tT
     });
-    var hv, Sv = Pv(4611),
-      ev = Pv(4411);
-    const gv = Sv.Howler;
+    var lT, MT = cT(4825),
+      KT = cT(4641);
+    const OT = MT.Howler;
 
-    function pv() {
-      var vv, zv;
-      if (gv.ctx || !gv.usingWebAudio || "undefined" === typeof AudioContext || !(0, ev.f)()) return;
-      const Pv = navigator.audioSession;
-      let hv;
-      "auto" === (null === Pv || void 0 === Pv ? void 0 : Pv.type) && (Pv.type = "ambient");
+    function yT() {
+      var TT, kT;
+      if (OT.ctx || !OT.usingWebAudio || "undefined" === typeof AudioContext || !(0, KT.f)()) return;
+      const cT = navigator.audioSession;
+      let lT;
+      "auto" === (null === cT || void 0 === cT ? void 0 : cT.type) && (cT.type = "ambient");
       try {
-        hv = new AudioContext({
+        lT = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const Sv = hv.createGain();
-      Sv.gain.setValueAtTime(gv._muted ? 0 : null !== (vv = gv._volume) && void 0 !== vv ? vv : 1, hv.currentTime), Sv.connect(hv.destination), gv.ctx = hv, gv.masterGain = Sv, null === (zv = gv._setup) || void 0 === zv || zv.call(gv)
+      const MT = lT.createGain();
+      MT.gain.setValueAtTime(OT._muted ? 0 : null !== (TT = OT._volume) && void 0 !== TT ? TT : 1, lT.currentTime), MT.connect(lT.destination), OT.ctx = lT, OT.masterGain = MT, null === (kT = OT._setup) || void 0 === kT || kT.call(OT)
     }
-    gv._mobileUnloaded = !0;
-    const dv = gv.volume.bind(Sv.Howler);
-    gv.volume = function() {
-      return pv(), dv(...arguments)
+    OT._mobileUnloaded = !0;
+    const fT = OT.volume.bind(MT.Howler);
+    OT.volume = function() {
+      return yT(), fT(...arguments)
     };
-    const Nv = gv.mute.bind(Sv.Howler);
-    gv.mute = vv => (pv(), Nv(vv));
-    const lv = Sv.Howl.prototype,
-      Tv = lv.init;
-    lv.init = function(vv) {
-      return pv(), Tv.call(this, vv)
+    const xT = OT.mute.bind(MT.Howler);
+    OT.mute = TT => (yT(), xT(TT));
+    const IT = MT.Howl.prototype,
+      AT = IT.init;
+    IT.init = function(TT) {
+      return yT(), AT.call(this, TT)
     };
-    let Wv = 0;
-    const wv = null === (hv = gv._autoSuspend) || void 0 === hv ? void 0 : hv.bind(Sv.Howler);
+    let CT = 0;
+    const jT = null === (lT = OT._autoSuspend) || void 0 === lT ? void 0 : lT.bind(MT.Howler);
 
-    function av() {
-      sv();
+    function vT() {
+      tT();
       const {
-        ctx: vv,
-        masterGain: zv
-      } = gv;
-      return vv && zv ? {
-        ctx: vv,
-        destination: zv,
-        holdAwake: vv => {
-          var zv, Pv;
-          (Wv += vv ? 1 : -1, vv) ? null === (zv = gv._autoResume) || void 0 === zv || zv.call(gv): null === (Pv = gv._autoSuspend) || void 0 === Pv || Pv.call(gv)
+        ctx: TT,
+        masterGain: kT
+      } = OT;
+      return TT && kT ? {
+        ctx: TT,
+        destination: kT,
+        holdAwake: TT => {
+          var kT, cT;
+          (CT += TT ? 1 : -1, TT) ? null === (kT = OT._autoResume) || void 0 === kT || kT.call(OT): null === (cT = OT._autoSuspend) || void 0 === cT || cT.call(OT)
         },
         wake: () => {
-          var zv;
-          "running" !== vv.state && (null === (zv = gv._autoResume) || void 0 === zv || zv.call(gv), vv.resume().catch((() => {})))
+          var kT;
+          "running" !== TT.state && (null === (kT = OT._autoResume) || void 0 === kT || kT.call(OT), TT.resume().catch((() => {})))
         }
       } : null
     }
 
-    function sv() {
-      var vv;
-      (gv.volume(), gv.ctx && gv.autoUnlock) && (null === (vv = gv._unlockAudio) || void 0 === vv || vv.call(gv))
+    function tT() {
+      var TT;
+      (OT.volume(), OT.ctx && OT.autoUnlock) && (null === (TT = OT._unlockAudio) || void 0 === TT || TT.call(OT))
     }
-    wv && (gv._autoSuspend = () => Wv > 0 ? Sv.Howler : wv())
+    jT && (OT._autoSuspend = () => CT > 0 ? MT.Howler : jT())
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

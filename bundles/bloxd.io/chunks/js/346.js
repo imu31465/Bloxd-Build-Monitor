@@ -1,19 +1,19 @@
 export const id = 346;
 export const ids = [346];
 export const modules = {
-  60587: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      postprocessVertexShader: () => gv
+  60569: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      postprocessVertexShader: () => OT
     });
-    var hv = Pv(39162);
-    const Sv = "postprocessVertexShader",
-      ev = "attribute vec2 position;uniform vec2 scale;varying vec2 vUV;const vec2 madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvUV=(position*madd+madd)*scale;gl_Position=vec4(position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}";
-    hv.d.ShadersStore[Sv] || (hv.d.ShadersStore[Sv] = ev);
-    const gv = {
-      name: Sv,
-      shader: ev
+    var lT = cT(39474);
+    const MT = "postprocessVertexShader",
+      KT = "attribute vec2 position;uniform vec2 scale;varying vec2 vUV;const vec2 madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvUV=(position*madd+madd)*scale;gl_Position=vec4(position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}";
+    lT.d.ShadersStore[MT] || (lT.d.ShadersStore[MT] = KT);
+    const OT = {
+      name: MT,
+      shader: KT
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

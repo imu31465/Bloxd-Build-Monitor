@@ -1,162 +1,162 @@
 export const id = 102;
 export const ids = [102];
 export const modules = {
-  4653: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => Wv
+  4861: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => CT
     });
-    var hv = Pv(1035),
-      Sv = Pv.n(hv),
-      ev = Pv(1042),
-      gv = Pv(1327),
-      pv = Pv(3258),
-      dv = Pv(108),
-      Nv = Pv(3301),
-      lv = Pv(3289),
-      Tv = Pv(1082);
+    var lT = cT(1046),
+      MT = cT.n(lT),
+      KT = cT(1061),
+      OT = cT(1348),
+      yT = cT(3449),
+      fT = cT(159),
+      xT = cT(3491),
+      IT = cT(3482),
+      AT = cT(1099);
 
-    function Wv(vv) {
+    function CT(TT) {
       let {
-        game: zv
-      } = vv;
-      const Pv = (0, dv.i)() ? "large" : "small",
-        hv = (0, Nv.g)(zv, Pv),
-        Wv = (0, pv.f)(hv),
-        wv = void 0 !== Wv.blurhash;
-      return (0, Tv.jsxs)("div", {
+        game: kT
+      } = TT;
+      const cT = (0, fT.m)() ? "large" : "small",
+        lT = (0, xT.i)(kT, cT),
+        CT = (0, yT.f)(lT),
+        jT = void 0 !== CT.blurhash;
+      return (0, AT.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [Wv.isLoading && !wv && (0, Tv.jsx)(gv.c, {
+        children: [CT.isLoading && !jT && (0, AT.jsx)(OT.d, {
           loaderType: "Secondary"
-        }), !Wv.failed && (null !== Wv.src || wv) && (0, Tv.jsx)("div", {
-          className: Sv()("SchematicImage", lv.g, {
-            SchematicImageFadeIn: Wv.fadeIn && !wv
+        }), !CT.failed && (null !== CT.src || jT) && (0, AT.jsx)("div", {
+          className: MT()("SchematicImage", IT.g, {
+            SchematicImageFadeIn: CT.fadeIn && !jT
           }),
-          style: (0, lv.e)(Wv),
-          children: (0, Tv.jsx)(lv.b, {
-            image: Wv
+          style: (0, IT.f)(CT),
+          children: (0, AT.jsx)(IT.d, {
+            image: CT
           })
-        }), Wv.failed && (0, Tv.jsx)("div", {
+        }), CT.failed && (0, AT.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, Tv.jsx)(ev.b, {
+          children: (0, AT.jsx)(KT.e, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  4782: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => wv
+  4979: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => jT
     });
-    var hv = Pv(52),
-      Sv = Pv(1035),
-      ev = Pv.n(Sv),
-      gv = Pv(4698),
-      pv = Pv(1327),
-      dv = Pv(1175),
-      Nv = Pv(2940),
-      lv = Pv(3043),
-      Tv = Pv(1042),
-      Wv = Pv(1082);
+    var lT = cT(71),
+      MT = cT(1046),
+      KT = cT.n(MT),
+      OT = cT(4909),
+      yT = cT(1348),
+      fT = cT(1195),
+      xT = cT(3089),
+      IT = cT(3226),
+      AT = cT(1061),
+      CT = cT(1099);
 
-    function wv(vv) {
+    function jT(TT) {
       let {
-        folderName: zv,
-        onTexturePackUpdated: Sv,
-        disabled: wv = !1,
-        maxFileSizeMb: av,
-        packOwner: sv
-      } = vv;
+        folderName: kT,
+        onTexturePackUpdated: MT,
+        disabled: jT = !1,
+        maxFileSizeMb: vT,
+        packOwner: tT
+      } = TT;
       const {
-        t: Cv
-      } = (0, dv.x)(), [iv, cv] = (0, hv.useState)(!1), [Gv, mv] = (0, hv.useState)(null), [jv, fv] = (0, hv.useState)(null), Fv = (0, hv.useRef)(null);
+        t: hT
+      } = (0, fT.B)(), [NT, QT] = (0, lT.useState)(!1), [ST, DT] = (0, lT.useState)(null), [aT, FT] = (0, lT.useState)(null), rT = (0, lT.useRef)(null);
       const {
-        getRootProps: Yv,
-        getInputProps: nv,
-        isDragActive: Ov
-      } = (0, gv.d)({
-        onDrop: async function(vv) {
-          cv(!0);
+        getRootProps: PT,
+        getInputProps: wT,
+        isDragActive: mT
+      } = (0, OT.c)({
+        onDrop: async function(TT) {
+          QT(!0);
           try {
-            const zv = await (0, Nv.l)(vv);
-            if ("customGame" === sv && (0, lv.m)(zv)) return void mv(Cv(lv.d));
-            if (void 0 !== av) {
-              const vv = JSON.stringify(zv).length / 1048576;
-              if (vv > av) return void mv(`File size is too large. Max size is ${av}MB. Current size is ${vv}MB.`)
+            const kT = await (0, xT.q)(TT);
+            if ("customGame" === tT && (0, IT.i)(kT)) return void DT(hT(IT.b));
+            if (void 0 !== vT) {
+              const TT = JSON.stringify(kT).length / 1048576;
+              if (TT > vT) return void DT(`File size is too large. Max size is ${vT}MB. Current size is ${TT}MB.`)
             }
-            mv(null), fv(null), Sv(zv), Fv.current = zv,
-              function(vv, zv) {
-                const hv = vv.modelOverrides;
-                hv && Promise.all([Pv.e(195), Pv.e(194)]).then((() => Pv(9074))).then((Pv => {
+            DT(null), FT(null), MT(kT), rT.current = kT,
+              function(TT, kT) {
+                const lT = TT.modelOverrides;
+                lT && Promise.all([cT.e(195), cT.e(194)]).then((() => cT(9423))).then((cT => {
                   let {
-                    packDisplayName: Sv,
-                    refusedPackModels: ev,
-                    packModelSummary: gv
-                  } = Pv;
-                  const pv = Sv(vv.metaData);
-                  zv(gv(pv, ev(pv, hv, !1)))
-                })).catch((vv => {
-                  console.error("Checking the texture pack's models failed:", vv)
+                    packDisplayName: MT,
+                    refusedPackModels: KT,
+                    packModelSummary: OT
+                  } = cT;
+                  const yT = MT(TT.metaData);
+                  kT(OT(yT, KT(yT, lT, !1)))
+                })).catch((TT => {
+                  console.error("Checking the texture pack's models failed:", TT)
                 }))
-              }(zv, (vv => {
-                Fv.current === zv && fv(vv)
+              }(kT, (TT => {
+                rT.current === kT && FT(TT)
               }))
           } catch {
-            mv("Invalid Texture Pack Folder")
+            DT("Invalid Texture Pack Folder")
           } finally {
-            cv(!1)
+            QT(!1)
           }
         },
         useFsAccessApi: !1,
-        disabled: wv
+        disabled: jT
       });
-      return (0, Wv.jsxs)("div", {
+      return (0, CT.jsxs)("div", {
         className: "CustomTexturePackContainer",
-        children: [(0, Wv.jsxs)("div", {
+        children: [(0, CT.jsxs)("div", {
           className: "CustomTextureWarning",
-          children: [Cv("settingsMenu:customTextureWarning"), ".", (0, Wv.jsx)("br", {}), Cv("settingsMenu:viewDocumentation"), ":", " ", (0, Wv.jsx)("a", {
+          children: [hT("settingsMenu:customTextureWarning"), ".", (0, CT.jsx)("br", {}), hT("settingsMenu:viewDocumentation"), ":", " ", (0, CT.jsx)("a", {
             href: "https://github.com/Bloxdy/texturePacks",
             target: "_blank",
             rel: "noreferrer",
             children: "github.com/Bloxdy/texturePacks"
           })]
-        }), Gv && (0, Wv.jsxs)("div", {
+        }), ST && (0, CT.jsxs)("div", {
           className: "CustomTextureError",
-          children: [Cv("general:error"), ": ", Gv]
-        }), jv && (0, Wv.jsx)("div", {
+          children: [hT("general:error"), ": ", ST]
+        }), aT && (0, CT.jsx)("div", {
           className: "CustomTextureError",
-          children: jv
-        }), (0, Wv.jsxs)("div", {
-          ...Yv({
-            className: ev()("CustomTextureFolderUpload", {
-              ActiveDrag: Ov,
-              Disabled: wv
+          children: aT
+        }), (0, CT.jsxs)("div", {
+          ...PT({
+            className: KT()("CustomTextureFolderUpload", {
+              ActiveDrag: mT,
+              Disabled: jT
             })
           }),
-          children: [(0, Wv.jsx)("input", {
-            ...nv({
+          children: [(0, CT.jsx)("input", {
+            ...wT({
               webkitdirectory: "true"
             })
-          }), iv && (0, Wv.jsx)("div", {
+          }), NT && (0, CT.jsx)("div", {
             className: "CustomTextureFolderUploadLoading",
-            children: (0, Wv.jsx)(pv.c, {})
-          }), !iv && !Ov && zv && (0, Wv.jsxs)(Wv.Fragment, {
-            children: [(0, Wv.jsx)("div", {
+            children: (0, CT.jsx)(yT.d, {})
+          }), !NT && !mT && kT && (0, CT.jsxs)(CT.Fragment, {
+            children: [(0, CT.jsx)("div", {
               className: "CustomTextureFolderUploadIcon Active",
-              children: (0, Wv.jsx)(Tv.b, {
+              children: (0, CT.jsx)(AT.e, {
                 name: "folder-image"
               })
-            }), (0, Wv.jsx)("div", {
+            }), (0, CT.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions Active",
-              children: zv
+              children: kT
             })]
-          }), !iv && (Ov || !zv) && (0, Wv.jsxs)(Wv.Fragment, {
-            children: [(0, Wv.jsx)("div", {
+          }), !NT && (mT || !kT) && (0, CT.jsxs)(CT.Fragment, {
+            children: [(0, CT.jsx)("div", {
               className: "CustomTextureFolderUploadIcon",
-              children: (0, Wv.jsx)(Tv.b, {
+              children: (0, CT.jsx)(AT.e, {
                 name: "up-from-bracket"
               })
-            }), (0, Wv.jsx)("div", {
+            }), (0, CT.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions",
               children: "Drag and drop a Texture Pack folder here"
             })]
@@ -165,310 +165,310 @@ export const modules = {
       })
     }
   },
-  4732: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => av,
-      f: () => Gv,
-      i: () => sv,
-      l: () => cv
+  4945: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => vT,
+      h: () => ST,
+      l: () => tT,
+      m: () => QT
     });
-    var hv = Pv(52),
-      Sv = Pv(4738),
-      ev = Pv(4129),
-      gv = Pv(1344),
-      pv = Pv(4765),
-      dv = Pv(1035),
-      Nv = Pv.n(dv),
-      lv = Pv(1336),
-      Tv = Pv(1692),
-      Wv = Pv(4773),
-      wv = Pv(1082);
+    var lT = cT(71),
+      MT = cT(4948),
+      KT = cT(4355),
+      OT = cT(1379),
+      yT = cT(4968),
+      fT = cT(1046),
+      xT = cT.n(fT),
+      IT = cT(1363),
+      AT = cT(1741),
+      CT = cT(4975),
+      jT = cT(1099);
 
-    function av(vv) {
+    function vT(TT) {
       let {
-        label: zv,
-        onClick: Pv,
-        checked: hv,
-        circleInfoText: Sv,
-        className: pv,
-        disabled: dv,
-        note: lv
-      } = vv;
-      return (0, wv.jsxs)("div", {
-        "aria-disabled": dv || void 0,
+        label: kT,
+        onClick: cT,
+        checked: lT,
+        circleInfoText: MT,
+        className: yT,
+        disabled: fT,
+        note: IT
+      } = TT;
+      return (0, jT.jsxs)("div", {
+        "aria-disabled": fT || void 0,
         "data-pad-focusable": !0,
-        className: Nv()("SettingBox CheckboxContainer", {
-          [pv]: pv,
-          SettingBoxDisabled: dv
+        className: xT()("SettingBox CheckboxContainer", {
+          [yT]: yT,
+          SettingBoxDisabled: fT
         }),
         onClick: () => {
-          dv || Pv(!hv)
+          fT || cT(!lT)
         },
-        children: [(0, wv.jsxs)("div", {
+        children: [(0, jT.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, wv.jsx)("label", {
+          children: [(0, jT.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, wv.jsx)(ev.e, {
+            children: (0, jT.jsx)(KT.d, {
               className: "SettingsCheckbox",
-              checked: hv,
-              disabled: dv,
+              checked: lT,
+              disabled: fT,
               onChange: () => {}
             })
-          }), (0, wv.jsxs)("div", {
+          }), (0, jT.jsxs)("div", {
             className: "CheckboxText",
-            children: [zv, Sv && (0, wv.jsx)("span", {
-              onClick: vv => vv.stopPropagation(),
-              children: (0, wv.jsx)(gv.d, {
+            children: [kT, MT && (0, jT.jsx)("span", {
+              onClick: TT => TT.stopPropagation(),
+              children: (0, jT.jsx)(OT.b, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: Sv
+                hoverInfo: MT
               })
             })]
           })]
-        }), lv && (0, wv.jsx)("div", {
+        }), IT && (0, jT.jsx)("div", {
           className: "SettingNote",
-          children: lv
+          children: IT
         })]
       })
     }
 
-    function sv(vv) {
+    function tT(TT) {
       let {
-        name: zv,
-        onChange: Pv,
-        min: Sv,
-        max: ev,
-        step: pv,
-        initValue: dv,
-        circleInfoText: lv,
-        format: Tv,
-        className: Wv,
-        padStep: av,
-        disabled: sv = !1,
-        selectableMax: Cv,
-        cappedNote: cv,
-        onChangeComplete: Gv
-      } = vv;
-      const [mv, jv] = (0, hv.useState)(dv), fv = (0, hv.useRef)(dv);
-      (0, hv.useEffect)((() => {
-        fv.current = dv, jv(dv)
-      }), [dv]);
-      const Fv = void 0 !== Cv && Cv < ev,
-        Yv = Fv ? {
-          "--slider-selectable": (Cv - Sv) / (ev - Sv)
+        name: kT,
+        onChange: cT,
+        min: MT,
+        max: KT,
+        step: yT,
+        initValue: fT,
+        circleInfoText: IT,
+        format: AT,
+        className: CT,
+        padStep: vT,
+        disabled: tT = !1,
+        selectableMax: hT,
+        cappedNote: QT,
+        onChangeComplete: ST
+      } = TT;
+      const [DT, aT] = (0, lT.useState)(fT), FT = (0, lT.useRef)(fT);
+      (0, lT.useEffect)((() => {
+        FT.current = fT, aT(fT)
+      }), [fT]);
+      const rT = void 0 !== hT && hT < KT,
+        PT = rT ? {
+          "--slider-selectable": (hT - MT) / (KT - MT)
         } : void 0;
-      return (0, wv.jsxs)("div", {
-        className: Nv()("SettingBox SettingsSliderDiv", {
-          [Wv]: Wv,
-          SettingBoxDisabled: sv,
-          SliderCapped: Fv
+      return (0, jT.jsxs)("div", {
+        className: xT()("SettingBox SettingsSliderDiv", {
+          [CT]: CT,
+          SettingBoxDisabled: tT,
+          SliderCapped: rT
         }),
-        style: Yv,
-        children: [(0, wv.jsxs)("div", {
+        style: PT,
+        children: [(0, jT.jsxs)("div", {
           className: "SliderText",
-          children: [`${zv}: ${Tv?Tv(mv):mv}`, lv && (0, wv.jsx)(gv.d, {
+          children: [`${kT}: ${AT?AT(DT):DT}`, IT && (0, jT.jsx)(OT.b, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: lv
+            hoverInfo: IT
           })]
-        }), (0, wv.jsx)("div", {
+        }), (0, jT.jsx)("div", {
           className: "SliderDiv",
-          children: (0, wv.jsx)(iv, {
-            value: mv,
-            min: Sv,
-            max: ev,
-            step: pv,
-            onChange: vv => {
-              if (Fv && vv >= Cv && mv === Cv) return;
-              const zv = Fv ? Math.min(vv, Cv) : vv;
-              fv.current = zv, jv(zv), Pv(zv)
+          children: (0, jT.jsx)(NT, {
+            value: DT,
+            min: MT,
+            max: KT,
+            step: yT,
+            onChange: TT => {
+              if (rT && TT >= hT && DT === hT) return;
+              const kT = rT ? Math.min(TT, hT) : TT;
+              FT.current = kT, aT(kT), cT(kT)
             },
-            onChangeComplete: Gv && (() => {
-              Gv(fv.current)
+            onChangeComplete: ST && (() => {
+              ST(FT.current)
             }),
-            format: Tv,
-            padStep: av,
-            disabled: sv
+            format: AT,
+            padStep: vT,
+            disabled: tT
           })
-        }), Fv && cv && (0, wv.jsx)("div", {
+        }), rT && QT && (0, jT.jsx)("div", {
           className: "SettingNote",
-          children: cv
+          children: QT
         })]
       })
     }
-    const Cv = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const hT = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function iv(vv) {
-      var zv;
+    function NT(TT) {
+      var kT;
       let {
-        value: Pv,
-        min: ev,
-        max: gv,
-        step: pv,
-        onChange: dv,
-        orientation: Nv,
-        reverse: lv,
-        setIsChanging: Tv,
-        tooltip: av,
-        labels: sv,
-        handleLabel: iv,
-        format: cv,
-        onChangeStart: Gv,
-        onChangeComplete: mv,
-        padStep: jv,
-        disabled: fv = !1
-      } = vv;
-      const Fv = (0, hv.useRef)(null),
-        Yv = (0, hv.useRef)(null);
-      (0, hv.useLayoutEffect)((() => {
-        var vv, zv, Pv;
-        const hv = null !== (vv = null === (zv = Fv.current) || void 0 === zv ? void 0 : zv.querySelector(".rangeslider")) && void 0 !== vv ? vv : null;
-        null === hv || void 0 === hv || hv.setAttribute("data-pad-slider", ""), null === hv || void 0 === hv || hv.setAttribute("data-pad-focusable", ""), null === hv || void 0 === hv || null === (Pv = hv.querySelector(".rangeslider__handle")) || void 0 === Pv || Pv.setAttribute("data-pad-slider-handle", ""), Yv.current = hv
-      }), []), (0, hv.useLayoutEffect)((() => {
-        var vv, zv;
-        fv ? null === (vv = Yv.current) || void 0 === vv || vv.setAttribute("aria-disabled", "true") : null === (zv = Yv.current) || void 0 === zv || zv.removeAttribute("aria-disabled")
-      }), [fv]);
-      const nv = (null !== (zv = String(pv).split(".")[1]) && void 0 !== zv ? zv : "").length,
-        Ov = vv => {
-          const zv = Number((Math.round((vv - ev) / pv) * pv + ev).toFixed(nv));
-          return Math.min(gv, Math.max(ev, zv))
+        value: cT,
+        min: KT,
+        max: OT,
+        step: yT,
+        onChange: fT,
+        orientation: xT,
+        reverse: IT,
+        setIsChanging: AT,
+        tooltip: vT,
+        labels: tT,
+        handleLabel: NT,
+        format: QT,
+        onChangeStart: ST,
+        onChangeComplete: DT,
+        padStep: aT,
+        disabled: FT = !1
+      } = TT;
+      const rT = (0, lT.useRef)(null),
+        PT = (0, lT.useRef)(null);
+      (0, lT.useLayoutEffect)((() => {
+        var TT, kT, cT;
+        const lT = null !== (TT = null === (kT = rT.current) || void 0 === kT ? void 0 : kT.querySelector(".rangeslider")) && void 0 !== TT ? TT : null;
+        null === lT || void 0 === lT || lT.setAttribute("data-pad-slider", ""), null === lT || void 0 === lT || lT.setAttribute("data-pad-focusable", ""), null === lT || void 0 === lT || null === (cT = lT.querySelector(".rangeslider__handle")) || void 0 === cT || cT.setAttribute("data-pad-slider-handle", ""), PT.current = lT
+      }), []), (0, lT.useLayoutEffect)((() => {
+        var TT, kT;
+        FT ? null === (TT = PT.current) || void 0 === TT || TT.setAttribute("aria-disabled", "true") : null === (kT = PT.current) || void 0 === kT || kT.removeAttribute("aria-disabled")
+      }), [FT]);
+      const wT = (null !== (kT = String(yT).split(".")[1]) && void 0 !== kT ? kT : "").length,
+        mT = TT => {
+          const kT = Number((Math.round((TT - KT) / yT) * yT + KT).toFixed(wT));
+          return Math.min(OT, Math.max(KT, kT))
         },
-        Dv = (0, hv.useRef)(mv);
-      Dv.current = mv, (0, hv.useEffect)((() => {
-        const vv = Fv.current;
-        if (!vv) return;
-        const zv = vv => {
-          var zv;
-          Cv.has(vv.key) && (null === (zv = Dv.current) || void 0 === zv || zv.call(Dv))
+        bT = (0, lT.useRef)(DT);
+      bT.current = DT, (0, lT.useEffect)((() => {
+        const TT = rT.current;
+        if (!TT) return;
+        const kT = TT => {
+          var kT;
+          hT.has(TT.key) && (null === (kT = bT.current) || void 0 === kT || kT.call(bT))
         };
-        return vv.addEventListener("keyup", zv), () => {
-          vv.removeEventListener("keyup", zv)
+        return TT.addEventListener("keyup", kT), () => {
+          TT.removeEventListener("keyup", kT)
         }
       }), []);
-      const Kv = (0, hv.useRef)(!1);
-      return (0, Wv.e)(Yv, {
-        adjust: vv => {
-          if (fv) return;
-          const zv = null !== jv && void 0 !== jv ? jv : Math.max(pv, Math.round((gv - ev) / 20 / pv) * pv),
-            hv = Ov(Pv + vv * zv * (lv ? -1 : 1));
-          hv !== Pv && (null === Gv || void 0 === Gv || Gv(), dv(hv), null === mv || void 0 === mv || mv())
+      const zT = (0, lT.useRef)(!1);
+      return (0, CT.d)(PT, {
+        adjust: TT => {
+          if (FT) return;
+          const kT = null !== aT && void 0 !== aT ? aT : Math.max(yT, Math.round((OT - KT) / 20 / yT) * yT),
+            lT = mT(cT + TT * kT * (IT ? -1 : 1));
+          lT !== cT && (null === ST || void 0 === ST || ST(), fT(lT), null === DT || void 0 === DT || DT())
         },
-        setFraction: vv => {
-          if (fv) return;
-          const zv = Ov(ev + (lv ? 1 - vv : vv) * (gv - ev));
-          zv !== Pv && (Kv.current || (Kv.current = !0, null === Gv || void 0 === Gv || Gv()), dv(zv))
+        setFraction: TT => {
+          if (FT) return;
+          const kT = mT(KT + (IT ? 1 - TT : TT) * (OT - KT));
+          kT !== cT && (zT.current || (zT.current = !0, null === ST || void 0 === ST || ST()), fT(kT))
         },
         endDrag: () => {
-          Kv.current && (Kv.current = !1, null === mv || void 0 === mv || mv())
+          zT.current && (zT.current = !1, null === DT || void 0 === DT || DT())
         }
-      }), (0, wv.jsx)("div", {
-        ref: Fv,
+      }), (0, jT.jsx)("div", {
+        ref: rT,
         style: {
           display: "contents"
         },
-        children: (0, wv.jsx)(Sv.d, {
-          value: Pv,
-          min: ev,
-          max: gv,
-          step: pv,
-          onChange: dv,
-          orientation: Nv,
-          reverse: lv,
-          tooltip: av,
-          labels: sv,
-          handleLabel: iv,
-          format: cv,
+        children: (0, jT.jsx)(MT.b, {
+          value: cT,
+          min: KT,
+          max: OT,
+          step: yT,
+          onChange: fT,
+          orientation: xT,
+          reverse: IT,
+          tooltip: vT,
+          labels: tT,
+          handleLabel: NT,
+          format: QT,
           onChangeStart: () => {
-            null === Gv || void 0 === Gv || Gv(), null === Tv || void 0 === Tv || Tv(!0)
+            null === ST || void 0 === ST || ST(), null === AT || void 0 === AT || AT(!0)
           },
           onChangeComplete: () => {
-            null === Tv || void 0 === Tv || Tv(!1), null === mv || void 0 === mv || mv()
+            null === AT || void 0 === AT || AT(!1), null === DT || void 0 === DT || DT()
           }
         })
       })
     }
-    async function cv() {
-      let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-      const zv = lv.NotificationProvider.showPromptPopup({
+    async function QT() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+      const kT = IT.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
         confirmTooltip: "",
         cancelText: "general:cancel",
         cancelTooltip: "",
-        unlockPointerKey: vv
+        unlockPointerKey: TT
       });
-      !0 === await zv.getResult() && (0, Tv.reloadBloxd)()
+      !0 === await kT.getResult() && (0, AT.reloadBloxd)()
     }
 
-    function Gv(vv) {
+    function ST(TT) {
       let {
-        label: zv,
-        options: Pv,
-        value: hv,
-        onChange: Sv,
-        circleInfoText: ev
-      } = vv;
-      return (0, wv.jsxs)("div", {
+        label: kT,
+        options: cT,
+        value: lT,
+        onChange: MT,
+        circleInfoText: KT
+      } = TT;
+      return (0, jT.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, wv.jsxs)("div", {
+        children: [(0, jT.jsxs)("div", {
           className: "SliderText",
-          children: [zv, ev && (0, wv.jsx)(gv.d, {
+          children: [kT, KT && (0, jT.jsx)(OT.b, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: ev
+            hoverInfo: KT
           })]
-        }), (0, wv.jsx)(pv.c, {
-          ariaLabel: zv,
-          options: Pv,
-          value: hv,
-          onChange: Sv
+        }), (0, jT.jsx)(yT.d, {
+          ariaLabel: kT,
+          options: cT,
+          value: lT,
+          onChange: MT
         })]
       })
     }
   },
-  4727: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => iv,
-      g: () => cv
+  4943: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => NT,
+      f: () => QT
     });
-    var hv = Pv(2940),
-      Sv = Pv(2944),
-      ev = Pv(52),
-      gv = Pv(1035),
-      pv = Pv.n(gv),
-      dv = Pv(1327),
-      Nv = Pv(2934),
-      lv = Pv(1336),
-      Tv = Pv(4732),
-      Wv = Pv(4782),
-      wv = Pv(635),
-      av = Pv(4786),
-      sv = Pv(1082);
+    var lT = cT(3089),
+      MT = cT(3092),
+      KT = cT(71),
+      OT = cT(1046),
+      yT = cT.n(OT),
+      fT = cT(1348),
+      xT = cT(3081),
+      IT = cT(1363),
+      AT = cT(4945),
+      CT = cT(4979),
+      jT = cT(636),
+      vT = cT(4988),
+      tT = cT(1099);
 
-    function Cv() {
-      (0, Tv.l)("texturePackPickReload")
+    function hT() {
+      (0, AT.m)("texturePackPickReload")
     }
 
-    function iv(vv) {
-      var zv;
+    function NT(TT) {
+      var kT;
       let {
-        setApplySettingsCallback: Pv
-      } = vv;
-      const [, gv] = (0, ev.useReducer)((vv => vv + 1), 0), pv = (0, ev.useRef)(!1), dv = (0, ev.useRef)(null);
+        setApplySettingsCallback: cT
+      } = TT;
+      const [, OT] = (0, KT.useReducer)((TT => TT + 1), 0), yT = (0, KT.useRef)(!1), fT = (0, KT.useRef)(null);
 
-      function iv(vv, zv) {
-        Nv.b.setFromJson(vv, "player");
-        const hv = Nv.b.saveTexturePack();
-        if (wv.r) {
-          const vv = Nv.b.toJson();
-          hv.then((zv => {
-            zv && (0, av.h)(vv, Cv)
+      function NT(TT, kT) {
+        xT.e.setFromJson(TT, "player");
+        const lT = xT.e.saveTexturePack();
+        if (jT.x) {
+          const TT = xT.e.toJson();
+          lT.then((kT => {
+            kT && (0, vT.f)(TT, hT)
           }))
-        } else pv.current ||= zv, dv.current !== Nv.b.getId() || Nv.b.getId() === Sv.j.CUSTOM && pv.current ? Pv((() => Tv.l)) : Pv(null);
-        gv()
+        } else yT.current ||= kT, fT.current !== xT.e.getId() || xT.e.getId() === MT.r.CUSTOM && yT.current ? cT((() => AT.m)) : cT(null);
+        OT()
       }
-      async function Gv(vv) {
-        if (Nv.b.getId() !== vv.metaData.id) {
-          if (Nv.b.getId() === Sv.j.CUSTOM && Nv.b.getFromFolderName()) {
-            const vv = lv.NotificationProvider.showPromptPopup({
+      async function ST(TT) {
+        if (xT.e.getId() !== TT.metaData.id) {
+          if (xT.e.getId() === MT.r.CUSTOM && xT.e.getFromFolderName()) {
+            const TT = IT.NotificationProvider.showPromptPopup({
               title: "settingsMenu:loseChangesTitle",
               subtitle: "settingsMenu:loseChangesSubtitle",
               confirmText: "general:continue",
@@ -477,29 +477,29 @@ export const modules = {
               cancelText: "general:cancel",
               cancelTooltip: ""
             });
-            if (!0 !== await vv.getResult()) return
+            if (!0 !== await TT.getResult()) return
           }
-          iv(vv, !1)
+          NT(TT, !1)
         }
-      }(0, ev.useEffect)((() => {
-        dv.current = Nv.b.getId()
+      }(0, KT.useEffect)((() => {
+        fT.current = xT.e.getId()
       }), []);
-      const mv = hv.d,
-        jv = [mv, ...Object.values(Sv.j).filter((vv => vv !== mv))];
-      return (0, sv.jsx)(sv.Fragment, {
-        children: (0, sv.jsxs)("div", {
+      const DT = lT.c,
+        aT = [DT, ...Object.values(MT.r).filter((TT => TT !== DT))];
+      return (0, tT.jsx)(tT.Fragment, {
+        children: (0, tT.jsxs)("div", {
           className: "TexturePackCategory SettingsMenuRightInner",
-          children: [(0, sv.jsx)("div", {
+          children: [(0, tT.jsx)("div", {
             className: "TexturePackList",
-            children: jv.map((vv => (0, sv.jsx)(cv, {
-              id: vv,
-              isSelected: vv === Nv.b.getId(),
-              setSelected: Gv
-            }, vv)))
-          }), Nv.b.getId() === Sv.j.CUSTOM && (0, sv.jsx)(Wv.e, {
-            folderName: null !== (zv = Nv.b.getFromFolderName()) && void 0 !== zv ? zv : null,
-            onTexturePackUpdated: function(vv) {
-              iv(vv, !0)
+            children: aT.map((TT => (0, tT.jsx)(QT, {
+              id: TT,
+              isSelected: TT === xT.e.getId(),
+              setSelected: ST
+            }, TT)))
+          }), xT.e.getId() === MT.r.CUSTOM && (0, tT.jsx)(CT.e, {
+            folderName: null !== (kT = xT.e.getFromFolderName()) && void 0 !== kT ? kT : null,
+            onTexturePackUpdated: function(TT) {
+              NT(TT, !0)
             },
             packOwner: "player"
           })]
@@ -507,169 +507,169 @@ export const modules = {
       })
     }
 
-    function cv(vv) {
+    function QT(TT) {
       let {
-        id: zv,
-        isSelected: Pv,
-        setSelected: gv,
-        disabled: Nv = !1
-      } = vv;
-      const [lv, Tv] = (0, ev.useState)(!0), [Wv, wv] = (0, ev.useState)(""), [av, Cv] = (0, ev.useState)(""), [iv, cv] = (0, ev.useState)(""), Gv = (0, ev.useRef)({});
-      return (0, ev.useEffect)((() => {
-        (0, hv.i)(zv).then((vv => {
-          var zv;
-          vv && (Gv.current = vv, Tv(!1), wv(Gv.current.metaData.name), Cv(Gv.current.metaData.author), cv(null !== (zv = Gv.current.metaData.previewImage) && void 0 !== zv ? zv : ""))
-        })).catch((vv => {
-          console.warn(`Failed to fetch texture pack ${zv}`, vv)
+        id: kT,
+        isSelected: cT,
+        setSelected: OT,
+        disabled: xT = !1
+      } = TT;
+      const [IT, AT] = (0, KT.useState)(!0), [CT, jT] = (0, KT.useState)(""), [vT, hT] = (0, KT.useState)(""), [NT, QT] = (0, KT.useState)(""), ST = (0, KT.useRef)({});
+      return (0, KT.useEffect)((() => {
+        (0, lT.m)(kT).then((TT => {
+          var kT;
+          TT && (ST.current = TT, AT(!1), jT(ST.current.metaData.name), hT(ST.current.metaData.author), QT(null !== (kT = ST.current.metaData.previewImage) && void 0 !== kT ? kT : ""))
+        })).catch((TT => {
+          console.warn(`Failed to fetch texture pack ${kT}`, TT)
         }))
-      }), [zv]), (0, sv.jsxs)("div", {
+      }), [kT]), (0, tT.jsxs)("div", {
         "data-pad-focusable": !0,
-        "aria-disabled": Nv || void 0,
-        className: pv()("TexturePack", {
-          Selected: Pv,
-          Custom: zv === Sv.j.CUSTOM,
-          Disabled: Nv
+        "aria-disabled": xT || void 0,
+        className: yT()("TexturePack", {
+          Selected: cT,
+          Custom: kT === MT.r.CUSTOM,
+          Disabled: xT
         }),
         onClick: () => {
-          lv || Nv || gv(Gv.current)
+          IT || xT || OT(ST.current)
         },
-        children: [(0, sv.jsx)("div", {
+        children: [(0, tT.jsx)("div", {
           className: "TexturePackBg",
           style: {
-            backgroundImage: iv ? `url(${iv})` : void 0
+            backgroundImage: NT ? `url(${NT})` : void 0
           }
-        }), lv && (0, sv.jsx)("div", {
+        }), IT && (0, tT.jsx)("div", {
           className: "TexturePackName",
-          children: (0, sv.jsx)(dv.c, {})
-        }), !lv && Wv && (0, sv.jsx)("div", {
+          children: (0, tT.jsx)(fT.d, {})
+        }), !IT && CT && (0, tT.jsx)("div", {
           className: "TexturePackName",
-          children: Wv
-        }), !lv && av && (0, sv.jsx)("div", {
+          children: CT
+        }), !IT && vT && (0, tT.jsx)("div", {
           className: "TexturePackAuthor",
-          children: av
+          children: vT
         })]
       })
     }
   },
-  4765: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => gv
+  4968: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => OT
     });
-    var hv = Pv(1035),
-      Sv = Pv.n(hv),
-      ev = Pv(1082);
+    var lT = cT(1046),
+      MT = cT.n(lT),
+      KT = cT(1099);
 
-    function gv(vv) {
+    function OT(TT) {
       let {
-        options: zv,
-        value: Pv,
-        onChange: hv,
-        ariaLabel: gv,
-        className: pv,
-        reselectable: dv = !1,
-        keepsFocus: Nv = !1,
-        padTabs: lv
-      } = vv;
-      const Tv = void 0 !== lv;
-      return (0, ev.jsx)("div", {
-        className: Sv()("SegmentedToggle", pv),
+        options: kT,
+        value: cT,
+        onChange: lT,
+        ariaLabel: OT,
+        className: yT,
+        reselectable: fT = !1,
+        keepsFocus: xT = !1,
+        padTabs: IT
+      } = TT;
+      const AT = void 0 !== IT;
+      return (0, KT.jsx)("div", {
+        className: MT()("SegmentedToggle", yT),
         role: "group",
-        "aria-label": gv,
-        "data-pad-tabs": lv,
-        children: zv.map((vv => {
-          const zv = vv.value === Pv;
-          return (0, ev.jsx)("button", {
+        "aria-label": OT,
+        "data-pad-tabs": IT,
+        children: kT.map((TT => {
+          const kT = TT.value === cT;
+          return (0, KT.jsx)("button", {
             type: "button",
-            "aria-pressed": zv,
-            "data-pad-tab": Tv || void 0,
-            "data-pad-selected": Tv && zv ? "true" : void 0,
-            "data-pad-default-focus": Tv && zv || void 0,
-            "aria-label": vv.ariaLabel,
-            title: vv.ariaLabel,
-            className: Sv()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: zv
+            "aria-pressed": kT,
+            "data-pad-tab": AT || void 0,
+            "data-pad-selected": AT && kT ? "true" : void 0,
+            "data-pad-default-focus": AT && kT || void 0,
+            "aria-label": TT.ariaLabel,
+            title: TT.ariaLabel,
+            className: MT()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: kT
             }),
-            onMouseDown: Nv ? vv => {
-              vv.preventDefault()
+            onMouseDown: xT ? TT => {
+              TT.preventDefault()
             } : void 0,
             onClick: () => {
-              zv && !dv || hv(vv.value)
+              kT && !fT || lT(TT.value)
             },
-            children: vv.label
-          }, vv.value)
+            children: TT.label
+          }, TT.value)
         }))
       })
     }
   },
-  4773: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => ev,
-      e: () => gv
+  4975: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => KT,
+      d: () => OT
     });
-    var hv = Pv(52);
-    const Sv = new WeakMap,
-      ev = vv => {
-        var zv;
-        const Pv = vv.closest("[data-pad-slider]");
-        return Pv && null !== (zv = Sv.get(Pv)) && void 0 !== zv ? zv : null
+    var lT = cT(71);
+    const MT = new WeakMap,
+      KT = TT => {
+        var kT;
+        const cT = TT.closest("[data-pad-slider]");
+        return cT && null !== (kT = MT.get(cT)) && void 0 !== kT ? kT : null
       },
-      gv = (vv, zv) => {
-        const Pv = (0, hv.useRef)(zv);
-        Pv.current = zv, (0, hv.useEffect)((() => {
-          if (vv.current) return ((vv, zv) => (Sv.set(vv, zv), () => {
-            Sv.get(vv) === zv && Sv.delete(vv)
-          }))(vv.current, {
-            adjust: vv => {
-              Pv.current.adjust(vv)
+      OT = (TT, kT) => {
+        const cT = (0, lT.useRef)(kT);
+        cT.current = kT, (0, lT.useEffect)((() => {
+          if (TT.current) return ((TT, kT) => (MT.set(TT, kT), () => {
+            MT.get(TT) === kT && MT.delete(TT)
+          }))(TT.current, {
+            adjust: TT => {
+              cT.current.adjust(TT)
             },
-            setFraction: vv => {
-              Pv.current.setFraction(vv)
+            setFraction: TT => {
+              cT.current.setFraction(TT)
             },
             endDrag: () => {
-              Pv.current.endDrag()
+              cT.current.endDrag()
             }
           })
-        }), [vv])
+        }), [TT])
       }
   },
-  4786: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => pv,
-      h: () => gv
+  4988: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => yT,
+      f: () => OT
     });
-    var hv = Pv(2944),
-      Sv = Pv(4788);
-    let ev = null;
+    var lT = cT(3092),
+      MT = cT(4991);
+    let KT = null;
 
-    function gv(vv, zv) {
-      ev = {
-        pack: vv.metaData.id === hv.b ? null : vv,
-        prompt: zv
+    function OT(TT, kT) {
+      KT = {
+        pack: TT.metaData.id === lT.d ? null : TT,
+        prompt: kT
       }
     }
 
-    function pv(vv, zv) {
-      const Pv = ev;
-      null !== Pv && (0, Sv.e)(Pv.pack, vv) && (ev = null, zv && Pv.prompt())
+    function yT(TT, kT) {
+      const cT = KT;
+      null !== cT && (0, MT.d)(cT.pack, TT) && (KT = null, kT && cT.prompt())
     }
   },
-  4788: (vv, zv, Pv) => {
-    function hv(vv, zv) {
-      return Sv(vv, zv)
+  4991: (TT, kT, cT) => {
+    function lT(TT, kT) {
+      return MT(TT, kT)
     }
 
-    function Sv(vv, zv) {
-      if (vv === zv) return !0;
-      if ("object" !== typeof vv || "object" !== typeof zv || null === vv || null === zv || Array.isArray(vv) !== Array.isArray(zv)) return !1;
-      const Pv = vv,
-        hv = zv,
-        ev = Object.keys(Pv);
-      return ev.length === Object.keys(hv).length && ev.every((vv => Object.prototype.hasOwnProperty.call(hv, vv) && Sv(Pv[vv], hv[vv])))
+    function MT(TT, kT) {
+      if (TT === kT) return !0;
+      if ("object" !== typeof TT || "object" !== typeof kT || null === TT || null === kT || Array.isArray(TT) !== Array.isArray(kT)) return !1;
+      const cT = TT,
+        lT = kT,
+        KT = Object.keys(cT);
+      return KT.length === Object.keys(lT).length && KT.every((TT => Object.prototype.hasOwnProperty.call(lT, TT) && MT(cT[TT], lT[TT])))
     }
-    Pv.d(zv, {
-      e: () => hv
+    cT.d(kT, {
+      d: () => lT
     })
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

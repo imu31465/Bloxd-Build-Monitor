@@ -1,17 +1,17 @@
 export const id = 139;
 export const ids = [139];
 export const modules = {
-  7777: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      BloxdFirebaseSdk: () => lv
+  8111: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      BloxdFirebaseSdk: () => IT
     });
-    var hv = Pv(1805),
-      Sv = Pv(2702),
-      ev = Pv(81),
-      gv = Pv(73),
-      pv = Pv(1657),
-      dv = Pv(1991);
-    const Nv = {
+    var lT = cT(1853),
+      MT = cT(2873),
+      KT = cT(127),
+      OT = cT(118),
+      yT = cT(1710),
+      fT = cT(2080);
+    const xT = {
       apiKey: "AIzaSyCJ-G6m_NyA3P021v-ugDmMmkcKysUebSE",
       authDomain: "bloxd-ee1aa.firebaseapp.com",
       projectId: "bloxd-ee1aa",
@@ -19,142 +19,142 @@ export const modules = {
       messagingSenderId: "758847442742",
       appId: "1:758847442742:web:7bb74eb261641e30f02d97"
     };
-    class lv {
+    class IT {
       constructor() {}
       static async setup() {
         try {
-          return await lv.setupInternal()
-        } catch (vv) {
-          return console.error("Failed to setup Firebase SDK:", vv), null
+          return await IT.setupInternal()
+        } catch (TT) {
+          return console.error("Failed to setup Firebase SDK:", TT), null
         }
       }
       static async setupInternal() {
-        const vv = await Promise.all([Pv.e(258), Pv.e(257)]).then((() => Pv(39812))),
-          zv = await Promise.all([Pv.e(258), Pv.e(259)]).then((() => Pv(39838))),
-          Tv = await Promise.all([Pv.e(258), Pv.e(260)]).then((() => Pv(39840))),
-          Wv = vv.initializeApp({
-            ...Nv,
-            measurementId: Sv.c
+        const TT = await Promise.all([cT.e(258), cT.e(257)]).then((() => cT(40133))),
+          kT = await Promise.all([cT.e(258), cT.e(259)]).then((() => cT(40157))),
+          AT = await Promise.all([cT.e(258), cT.e(260)]).then((() => cT(40160))),
+          CT = TT.initializeApp({
+            ...xT,
+            measurementId: MT.e
           });
-        (0, Sv.L)(), window.gtag("config", Sv.c), (0, Sv.F)(), window.gtag("config", "AW-16469618203");
-        const wv = zv.getAnalytics(Wv),
-          av = {
-            portal: ev.currentUrl.getSearchParam("portal") || "root",
+        (0, MT.H)(), window.gtag("config", MT.e), (0, MT.C)(), window.gtag("config", "AW-16469618203");
+        const jT = kT.getAnalytics(CT),
+          vT = {
+            portal: KT.currentUrl.getSearchParam("portal") || "root",
             loggedIn: !1
           };
-        zv.setUserProperties(wv, av);
-        const sv = Tv.getAuth();
-        Tv.useDeviceLanguage(sv);
-        const Cv = new Tv.GoogleAuthProvider;
-        Cv.setCustomParameters({
+        kT.setUserProperties(jT, vT);
+        const tT = AT.getAuth();
+        AT.useDeviceLanguage(tT);
+        const hT = new AT.GoogleAuthProvider;
+        hT.setCustomParameters({
           prompt: "select_account"
         });
-        const iv = new Tv.OAuthProvider(hv.f[hv.b.APPLE]),
-          cv = new Tv.OAuthProvider(hv.f[hv.b.MICROSOFT]);
-        cv.setCustomParameters({
+        const NT = new AT.OAuthProvider(lT.g[lT.e.APPLE]),
+          QT = new AT.OAuthProvider(lT.g[lT.e.MICROSOFT]);
+        QT.setCustomParameters({
           prompt: "select_account",
           tenant: "consumers"
         });
-        const Gv = {
-          [hv.b.GOOGLE]: Cv,
-          [hv.b.APPLE]: iv,
-          [hv.b.MICROSOFT]: cv
+        const ST = {
+          [lT.e.GOOGLE]: hT,
+          [lT.e.APPLE]: NT,
+          [lT.e.MICROSOFT]: QT
         };
         window.gtag("set", {
           cookie_flags: "SameSite=None;Secure"
-        }), await new Promise((vv => {
-          const zv = Tv.onIdTokenChanged(sv, (Pv => {
-            zv(), vv()
+        }), await new Promise((TT => {
+          const kT = AT.onIdTokenChanged(tT, (cT => {
+            kT(), TT()
           }))
         }));
-        class mv extends lv {
-          setUserProperties(vv) {
-            zv.setUserProperties(wv, vv)
+        class DT extends IT {
+          setUserProperties(TT) {
+            kT.setUserProperties(jT, TT)
           }
-          onIdTokenChanged(vv) {
-            Tv.onIdTokenChanged(sv, vv)
+          onIdTokenChanged(TT) {
+            AT.onIdTokenChanged(tT, TT)
           }
           canSignIn() {
             return !0
           }
-          async signInWithPopup(vv) {
-            var zv;
-            const Pv = await Tv.signInWithPopup(sv, Gv[vv]);
-            return null !== (zv = null === Pv || void 0 === Pv ? void 0 : Pv.user) && void 0 !== zv ? zv : null
+          async signInWithPopup(TT) {
+            var kT;
+            const cT = await AT.signInWithPopup(tT, ST[TT]);
+            return null !== (kT = null === cT || void 0 === cT ? void 0 : cT.user) && void 0 !== kT ? kT : null
           }
-          async getCurrentUser(vv) {
-            const zv = sv.currentUser;
-            if (!zv) return null;
+          async getCurrentUser(TT) {
+            const kT = tT.currentUser;
+            if (!kT) return null;
             const {
-              signInProvider: Pv
-            } = await zv.getIdTokenResult(!1);
-            return Pv === hv.f[vv] ? zv : null
+              signInProvider: cT
+            } = await kT.getIdTokenResult(!1);
+            return cT === lT.g[TT] ? kT : null
           }
-          async signOut(vv) {
-            null !== await this.getCurrentUser(vv) && await Tv.signOut(sv)
+          async signOut(TT) {
+            null !== await this.getCurrentUser(TT) && await AT.signOut(tT)
           }
         }
-        async function jv(vv, zv) {
-          const Pv = await pv.d.request(`${vv}.${zv}`, {});
-          if (null === Pv) return null;
-          const hv = "google" === vv ? Tv.GoogleAuthProvider.credential(Pv.idToken) : iv.credential({
-            idToken: Pv.idToken
+        async function aT(TT, kT) {
+          const cT = await yT.c.request(`${TT}.${kT}`, {});
+          if (null === cT) return null;
+          const lT = "google" === TT ? AT.GoogleAuthProvider.credential(cT.idToken) : NT.credential({
+            idToken: cT.idToken
           });
-          return (await Tv.signInWithCredential(sv, hv)).user
+          return (await AT.signInWithCredential(tT, lT)).user
         }
-        class fv extends lv {
-          setUserProperties(vv) {
-            zv.setUserProperties(wv, vv)
+        class FT extends IT {
+          setUserProperties(TT) {
+            kT.setUserProperties(jT, TT)
           }
-          onIdTokenChanged(vv) {
-            Tv.onIdTokenChanged(sv, vv)
+          onIdTokenChanged(TT) {
+            AT.onIdTokenChanged(tT, TT)
           }
-          canSignIn(vv) {
-            return null !== (0, dv.b)(vv)
+          canSignIn(TT) {
+            return null !== (0, fT.c)(TT)
           }
-          async signInWithPopup(vv) {
-            const zv = (0, dv.b)(vv);
-            if (null === zv) return console.warn(`The app can't sign in with ${vv}; check canSignIn first`), null;
+          async signInWithPopup(TT) {
+            const kT = (0, fT.c)(TT);
+            if (null === kT) return console.warn(`The app can't sign in with ${TT}; check canSignIn first`), null;
             try {
-              return await jv(zv, "signIn")
-            } catch (Pv) {
-              return console.error(`Failed to sign in with ${vv} in the app:`, Pv), null
+              return await aT(kT, "signIn")
+            } catch (cT) {
+              return console.error(`Failed to sign in with ${TT} in the app:`, cT), null
             }
           }
-          async getCurrentUser(vv) {
-            const zv = sv.currentUser;
-            if (zv) {
+          async getCurrentUser(TT) {
+            const kT = tT.currentUser;
+            if (kT) {
               const {
-                signInProvider: Pv
-              } = await zv.getIdTokenResult(!1);
-              if (Pv === hv.f[vv]) return zv
+                signInProvider: cT
+              } = await kT.getIdTokenResult(!1);
+              if (cT === lT.g[TT]) return kT
             }
-            const Pv = (0, dv.b)(vv);
-            if (null === Pv) return null;
+            const cT = (0, fT.c)(TT);
+            if (null === cT) return null;
             try {
-              return await jv(Pv, "getCurrentUser")
-            } catch (Sv) {
-              return console.error(`Failed to get the current ${vv} user from the app:`, Sv), null
+              return await aT(cT, "getCurrentUser")
+            } catch (MT) {
+              return console.error(`Failed to get the current ${TT} user from the app:`, MT), null
             }
           }
-          async signOut(vv) {
-            const zv = (0, dv.b)(vv);
-            null !== zv && pv.d.request(`${zv}.signOut`, {}).catch((zv => {
-              console.error(`Failed to sign out of ${vv} in the app:`, zv)
+          async signOut(TT) {
+            const kT = (0, fT.c)(TT);
+            null !== kT && yT.c.request(`${kT}.signOut`, {}).catch((kT => {
+              console.error(`Failed to sign out of ${TT} in the app:`, kT)
             }));
-            const Pv = sv.currentUser;
-            if (Pv) {
+            const cT = tT.currentUser;
+            if (cT) {
               const {
-                signInProvider: zv
-              } = await Pv.getIdTokenResult(!1);
-              zv === hv.f[vv] && await Tv.signOut(sv)
+                signInProvider: kT
+              } = await cT.getIdTokenResult(!1);
+              kT === lT.g[TT] && await AT.signOut(tT)
             }
           }
         }
-        return (0, gv.isMobileApp)() ? (await pv.d.ready, new fv) : new mv
+        return (0, OT.isMobileApp)() ? (await yT.c.ready, new FT) : new DT
       }
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

@@ -1,106 +1,106 @@
 export const id = 197;
 export const ids = [197];
 export const modules = {
-  37259: (vv, zv, Pv) => {
-    var hv = Pv(37264);
+  37597: (TT, kT, cT) => {
+    var lT = cT(37603);
 
-    function Sv(vv) {
-      for (var zv, Pv, Sv = 0, ev = vv.length, gv = 0; gv < vv.length;) {
-        for (zv = vv[gv], Pv = 0; gv < ev && vv[gv] === zv;) ++gv, ++Pv;
-        Sv += hv.log2(Pv) / 7 | 0, Sv += hv.log2(zv >>> 0) / 7 | 0, Sv += 2
+    function MT(TT) {
+      for (var kT, cT, MT = 0, KT = TT.length, OT = 0; OT < TT.length;) {
+        for (kT = TT[OT], cT = 0; OT < KT && TT[OT] === kT;) ++OT, ++cT;
+        MT += lT.log2(cT) / 7 | 0, MT += lT.log2(kT >>> 0) / 7 | 0, MT += 2
       }
-      return Sv
+      return MT
     }
-    zv.size = Sv, zv.encode = function(vv, zv) {
-      zv || (zv = new Uint8Array(Sv(vv)));
-      for (var Pv, hv, ev = 0, gv = zv.length, pv = 0; pv < vv.length;) {
-        for (Pv = vv[pv], hv = 0; pv < vv.length && vv[pv] === Pv;) ++pv, ++hv;
-        for (; ev < gv && hv >= 128;) zv[ev++] = 128 + (127 & hv), hv >>>= 7;
-        if (ev >= gv) throw new Error("RLE buffer overflow");
-        for (zv[ev++] = hv, Pv >>>= 0; ev < gv && Pv >= 128;) zv[ev++] = 128 + (127 & Pv), Pv >>>= 7;
-        if (ev >= gv) throw new Error("RLE buffer overflow");
-        zv[ev++] = Pv
+    kT.size = MT, kT.encode = function(TT, kT) {
+      kT || (kT = new Uint8Array(MT(TT)));
+      for (var cT, lT, KT = 0, OT = kT.length, yT = 0; yT < TT.length;) {
+        for (cT = TT[yT], lT = 0; yT < TT.length && TT[yT] === cT;) ++yT, ++lT;
+        for (; KT < OT && lT >= 128;) kT[KT++] = 128 + (127 & lT), lT >>>= 7;
+        if (KT >= OT) throw new Error("RLE buffer overflow");
+        for (kT[KT++] = lT, cT >>>= 0; KT < OT && cT >= 128;) kT[KT++] = 128 + (127 & cT), cT >>>= 7;
+        if (KT >= OT) throw new Error("RLE buffer overflow");
+        kT[KT++] = cT
       }
-      return zv
-    }, zv.decode = function(vv, zv) {
-      for (var Pv, hv, Sv, ev, gv = zv.length, pv = vv.length, dv = 0, Nv = 0; Nv < pv;) {
-        for (Pv = 0, hv = 0; Nv < pv && vv[Nv] >= 128;) Pv += (127 & vv[Nv++]) << hv, hv += 7;
-        if (Pv += vv[Nv++] << hv, Nv >= pv) throw new Error("RLE buffer underrun");
-        if (dv + Pv > gv) throw new Error("Chunk buffer overflow");
-        for (Sv = 0, hv = 0; Nv < pv && vv[Nv] >= 128;) Sv += (127 & vv[Nv++]) << hv, hv += 7;
-        if (Nv >= pv) throw new Error("RLE buffer underrun");
-        for (Sv += vv[Nv++] << hv, ev = 0; ev < Pv; ++ev) zv[dv++] = Sv
+      return kT
+    }, kT.decode = function(TT, kT) {
+      for (var cT, lT, MT, KT, OT = kT.length, yT = TT.length, fT = 0, xT = 0; xT < yT;) {
+        for (cT = 0, lT = 0; xT < yT && TT[xT] >= 128;) cT += (127 & TT[xT++]) << lT, lT += 7;
+        if (cT += TT[xT++] << lT, xT >= yT) throw new Error("RLE buffer underrun");
+        if (fT + cT > OT) throw new Error("Chunk buffer overflow");
+        for (MT = 0, lT = 0; xT < yT && TT[xT] >= 128;) MT += (127 & TT[xT++]) << lT, lT += 7;
+        if (xT >= yT) throw new Error("RLE buffer underrun");
+        for (MT += TT[xT++] << lT, KT = 0; KT < cT; ++KT) kT[fT++] = MT
       }
-      return zv
+      return kT
     }
   },
-  37264: (vv, zv) => {
-    function Pv(vv) {
-      var zv = 32;
-      return (vv &= -vv) && zv--, 65535 & vv && (zv -= 16), 16711935 & vv && (zv -= 8), 252645135 & vv && (zv -= 4), 858993459 & vv && (zv -= 2), 1431655765 & vv && (zv -= 1), zv
+  37603: (TT, kT) => {
+    function cT(TT) {
+      var kT = 32;
+      return (TT &= -TT) && kT--, 65535 & TT && (kT -= 16), 16711935 & TT && (kT -= 8), 252645135 & TT && (kT -= 4), 858993459 & TT && (kT -= 2), 1431655765 & TT && (kT -= 1), kT
     }
-    zv.INT_BITS = 32, zv.INT_MAX = 2147483647, zv.INT_MIN = -1 << 31, zv.sign = function(vv) {
-      return (vv > 0) - (vv < 0)
-    }, zv.abs = function(vv) {
-      var zv = vv >> 31;
-      return (vv ^ zv) - zv
-    }, zv.min = function(vv, zv) {
-      return zv ^ (vv ^ zv) & -(vv < zv)
-    }, zv.max = function(vv, zv) {
-      return vv ^ (vv ^ zv) & -(vv < zv)
-    }, zv.isPow2 = function(vv) {
-      return !(vv & vv - 1) && !!vv
-    }, zv.log2 = function(vv) {
-      var zv, Pv;
-      return zv = (vv > 65535) << 4, zv |= Pv = ((vv >>>= zv) > 255) << 3, zv |= Pv = ((vv >>>= Pv) > 15) << 2, (zv |= Pv = ((vv >>>= Pv) > 3) << 1) | (vv >>>= Pv) >> 1
-    }, zv.log10 = function(vv) {
-      return vv >= 1e9 ? 9 : vv >= 1e8 ? 8 : vv >= 1e7 ? 7 : vv >= 1e6 ? 6 : vv >= 1e5 ? 5 : vv >= 1e4 ? 4 : vv >= 1e3 ? 3 : vv >= 100 ? 2 : vv >= 10 ? 1 : 0
-    }, zv.popCount = function(vv) {
-      return 16843009 * ((vv = (858993459 & (vv -= vv >>> 1 & 1431655765)) + (vv >>> 2 & 858993459)) + (vv >>> 4) & 252645135) >>> 24
-    }, zv.countTrailingZeros = Pv, zv.nextPow2 = function(vv) {
-      return vv += 0 === vv, --vv, vv |= vv >>> 1, vv |= vv >>> 2, vv |= vv >>> 4, vv |= vv >>> 8, (vv |= vv >>> 16) + 1
-    }, zv.prevPow2 = function(vv) {
-      return vv |= vv >>> 1, vv |= vv >>> 2, vv |= vv >>> 4, vv |= vv >>> 8, (vv |= vv >>> 16) - (vv >>> 1)
-    }, zv.parity = function(vv) {
-      return vv ^= vv >>> 16, vv ^= vv >>> 8, vv ^= vv >>> 4, 27030 >>> (vv &= 15) & 1
+    kT.INT_BITS = 32, kT.INT_MAX = 2147483647, kT.INT_MIN = -1 << 31, kT.sign = function(TT) {
+      return (TT > 0) - (TT < 0)
+    }, kT.abs = function(TT) {
+      var kT = TT >> 31;
+      return (TT ^ kT) - kT
+    }, kT.min = function(TT, kT) {
+      return kT ^ (TT ^ kT) & -(TT < kT)
+    }, kT.max = function(TT, kT) {
+      return TT ^ (TT ^ kT) & -(TT < kT)
+    }, kT.isPow2 = function(TT) {
+      return !(TT & TT - 1) && !!TT
+    }, kT.log2 = function(TT) {
+      var kT, cT;
+      return kT = (TT > 65535) << 4, kT |= cT = ((TT >>>= kT) > 255) << 3, kT |= cT = ((TT >>>= cT) > 15) << 2, (kT |= cT = ((TT >>>= cT) > 3) << 1) | (TT >>>= cT) >> 1
+    }, kT.log10 = function(TT) {
+      return TT >= 1e9 ? 9 : TT >= 1e8 ? 8 : TT >= 1e7 ? 7 : TT >= 1e6 ? 6 : TT >= 1e5 ? 5 : TT >= 1e4 ? 4 : TT >= 1e3 ? 3 : TT >= 100 ? 2 : TT >= 10 ? 1 : 0
+    }, kT.popCount = function(TT) {
+      return 16843009 * ((TT = (858993459 & (TT -= TT >>> 1 & 1431655765)) + (TT >>> 2 & 858993459)) + (TT >>> 4) & 252645135) >>> 24
+    }, kT.countTrailingZeros = cT, kT.nextPow2 = function(TT) {
+      return TT += 0 === TT, --TT, TT |= TT >>> 1, TT |= TT >>> 2, TT |= TT >>> 4, TT |= TT >>> 8, (TT |= TT >>> 16) + 1
+    }, kT.prevPow2 = function(TT) {
+      return TT |= TT >>> 1, TT |= TT >>> 2, TT |= TT >>> 4, TT |= TT >>> 8, (TT |= TT >>> 16) - (TT >>> 1)
+    }, kT.parity = function(TT) {
+      return TT ^= TT >>> 16, TT ^= TT >>> 8, TT ^= TT >>> 4, 27030 >>> (TT &= 15) & 1
     };
-    var hv = new Array(256);
-    ! function(vv) {
-      for (var zv = 0; zv < 256; ++zv) {
-        var Pv = zv,
-          hv = zv,
-          Sv = 7;
-        for (Pv >>>= 1; Pv; Pv >>>= 1) hv <<= 1, hv |= 1 & Pv, --Sv;
-        vv[zv] = hv << Sv & 255
+    var lT = new Array(256);
+    ! function(TT) {
+      for (var kT = 0; kT < 256; ++kT) {
+        var cT = kT,
+          lT = kT,
+          MT = 7;
+        for (cT >>>= 1; cT; cT >>>= 1) lT <<= 1, lT |= 1 & cT, --MT;
+        TT[kT] = lT << MT & 255
       }
-    }(hv), zv.reverse = function(vv) {
-      return hv[255 & vv] << 24 | hv[vv >>> 8 & 255] << 16 | hv[vv >>> 16 & 255] << 8 | hv[vv >>> 24 & 255]
-    }, zv.interleave2 = function(vv, zv) {
-      return (vv = 1431655765 & ((vv = 858993459 & ((vv = 252645135 & ((vv = 16711935 & ((vv &= 65535) | vv << 8)) | vv << 4)) | vv << 2)) | vv << 1)) | (zv = 1431655765 & ((zv = 858993459 & ((zv = 252645135 & ((zv = 16711935 & ((zv &= 65535) | zv << 8)) | zv << 4)) | zv << 2)) | zv << 1)) << 1
-    }, zv.deinterleave2 = function(vv, zv) {
-      return (vv = 65535 & ((vv = 16711935 & ((vv = 252645135 & ((vv = 858993459 & ((vv = vv >>> zv & 1431655765) | vv >>> 1)) | vv >>> 2)) | vv >>> 4)) | vv >>> 16)) << 16 >> 16
-    }, zv.interleave3 = function(vv, zv, Pv) {
-      return vv = 1227133513 & ((vv = 3272356035 & ((vv = 251719695 & ((vv = 4278190335 & ((vv &= 1023) | vv << 16)) | vv << 8)) | vv << 4)) | vv << 2), (vv |= (zv = 1227133513 & ((zv = 3272356035 & ((zv = 251719695 & ((zv = 4278190335 & ((zv &= 1023) | zv << 16)) | zv << 8)) | zv << 4)) | zv << 2)) << 1) | (Pv = 1227133513 & ((Pv = 3272356035 & ((Pv = 251719695 & ((Pv = 4278190335 & ((Pv &= 1023) | Pv << 16)) | Pv << 8)) | Pv << 4)) | Pv << 2)) << 2
-    }, zv.deinterleave3 = function(vv, zv) {
-      return (vv = 1023 & ((vv = 4278190335 & ((vv = 251719695 & ((vv = 3272356035 & ((vv = vv >>> zv & 1227133513) | vv >>> 2)) | vv >>> 4)) | vv >>> 8)) | vv >>> 16)) << 22 >> 22
-    }, zv.nextCombination = function(vv) {
-      var zv = vv | vv - 1;
-      return zv + 1 | (~zv & -~zv) - 1 >>> Pv(vv) + 1
+    }(lT), kT.reverse = function(TT) {
+      return lT[255 & TT] << 24 | lT[TT >>> 8 & 255] << 16 | lT[TT >>> 16 & 255] << 8 | lT[TT >>> 24 & 255]
+    }, kT.interleave2 = function(TT, kT) {
+      return (TT = 1431655765 & ((TT = 858993459 & ((TT = 252645135 & ((TT = 16711935 & ((TT &= 65535) | TT << 8)) | TT << 4)) | TT << 2)) | TT << 1)) | (kT = 1431655765 & ((kT = 858993459 & ((kT = 252645135 & ((kT = 16711935 & ((kT &= 65535) | kT << 8)) | kT << 4)) | kT << 2)) | kT << 1)) << 1
+    }, kT.deinterleave2 = function(TT, kT) {
+      return (TT = 65535 & ((TT = 16711935 & ((TT = 252645135 & ((TT = 858993459 & ((TT = TT >>> kT & 1431655765) | TT >>> 1)) | TT >>> 2)) | TT >>> 4)) | TT >>> 16)) << 16 >> 16
+    }, kT.interleave3 = function(TT, kT, cT) {
+      return TT = 1227133513 & ((TT = 3272356035 & ((TT = 251719695 & ((TT = 4278190335 & ((TT &= 1023) | TT << 16)) | TT << 8)) | TT << 4)) | TT << 2), (TT |= (kT = 1227133513 & ((kT = 3272356035 & ((kT = 251719695 & ((kT = 4278190335 & ((kT &= 1023) | kT << 16)) | kT << 8)) | kT << 4)) | kT << 2)) << 1) | (cT = 1227133513 & ((cT = 3272356035 & ((cT = 251719695 & ((cT = 4278190335 & ((cT &= 1023) | cT << 16)) | cT << 8)) | cT << 4)) | cT << 2)) << 2
+    }, kT.deinterleave3 = function(TT, kT) {
+      return (TT = 1023 & ((TT = 4278190335 & ((TT = 251719695 & ((TT = 3272356035 & ((TT = TT >>> kT & 1227133513) | TT >>> 2)) | TT >>> 4)) | TT >>> 8)) | TT >>> 16)) << 22 >> 22
+    }, kT.nextCombination = function(TT) {
+      var kT = TT | TT - 1;
+      return kT + 1 | (~kT & -~kT) - 1 >>> cT(TT) + 1
     }
   },
-  39117: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      emptyColumnHeight: () => mv,
-      loadHeatmapSchematic: () => jv,
-      readSchematicBlocks: () => fv
+  39438: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      emptyColumnHeight: () => DT,
+      loadHeatmapSchematic: () => aT,
+      readSchematicBlocks: () => FT
     });
-    var hv = Pv(3546),
-      Sv = Pv.n(hv),
-      ev = Pv(3521),
-      gv = Pv(37259),
-      pv = Pv(185),
-      dv = Pv(9101);
-    const Nv = [{
+    var lT = cT(3734),
+      MT = cT.n(lT),
+      KT = cT(3719),
+      OT = cT(37597),
+      yT = cT(218),
+      fT = cT(9447);
+    const xT = [{
         name: "x",
         type: "int"
       }, {
@@ -110,20 +110,20 @@ export const modules = {
         name: "z",
         type: "int"
       }],
-      lv = [{
+      IT = [{
         name: "name",
         type: "string"
       }, {
         name: "startOffset",
         type: {
           type: "record",
-          fields: Nv
+          fields: xT
         }
       }, {
         name: "dimensions",
         type: {
           type: "record",
-          fields: Nv
+          fields: xT
         }
       }, {
         name: "chunkData",
@@ -131,26 +131,26 @@ export const modules = {
           type: "array",
           items: {
             type: "record",
-            fields: [...Nv, {
+            fields: [...xT, {
               name: "rle",
               type: "bytes"
             }]
           }
         }
       }],
-      Tv = Sv().Type.forSchema({
+      AT = MT().Type.forSchema({
         type: "record",
-        fields: lv
+        fields: IT
       }),
-      Wv = Sv().Type.forSchema({
+      CT = MT().Type.forSchema({
         type: "record",
-        fields: [...lv, {
+        fields: [...IT, {
           name: "blockData",
           type: {
             type: "array",
             items: {
               type: "record",
-              fields: [...Nv, {
+              fields: [...xT, {
                 name: "data",
                 type: "bytes"
               }]
@@ -160,187 +160,187 @@ export const modules = {
           name: "pasteOffset",
           type: {
             type: "record",
-            fields: Nv
+            fields: xT
           }
         }]
       }),
-      wv = 2,
-      av = 6,
-      sv = {
+      jT = 2,
+      vT = 6,
+      tT = {
         Water: [63, 118, 228],
         Lava: [232, 110, 30]
       },
-      Cv = [150, 150, 150],
-      iv = 16,
-      cv = 4096,
-      Gv = pv.f.aa,
-      mv = -2147483648;
-    async function jv(vv) {
-      const zv = await fv(new Uint8Array(await vv.arrayBuffer()), await async function() {
+      hT = [150, 150, 150],
+      NT = 16,
+      QT = 4096,
+      ST = yT.f.vv,
+      DT = -2147483648;
+    async function aT(TT) {
+      const kT = await FT(new Uint8Array(await TT.arrayBuffer()), await async function() {
         const {
-          averageColors: vv
-        } = await Pv.e(201).then((() => Pv(33871))), zv = new Map;
-        return Pv => {
-          var hv, Sv, ev, gv, pv;
-          const Nv = zv.get(Pv);
-          if (void 0 !== Nv) return Nv;
-          const lv = null !== (hv = null === (Sv = dv.g[Pv]) || void 0 === Sv ? void 0 : Sv.name) && void 0 !== hv ? hv : "",
-            Tv = null !== (ev = vv[lv]) && void 0 !== ev ? ev : vv[lv.split("|")[0]],
-            Wv = sv[lv.split("|")[0]],
-            wv = null !== (gv = null !== (pv = null === Tv || void 0 === Tv ? void 0 : Tv[0]) && void 0 !== pv ? pv : Wv) && void 0 !== gv ? gv : 0 === (null === Tv || void 0 === Tv ? void 0 : Tv.length) ? null : Cv;
-          return zv.set(Pv, wv), wv
+          averageColors: TT
+        } = await cT.e(201).then((() => cT(34029))), kT = new Map;
+        return cT => {
+          var lT, MT, KT, OT, yT;
+          const xT = kT.get(cT);
+          if (void 0 !== xT) return xT;
+          const IT = null !== (lT = null === (MT = fT.i[cT]) || void 0 === MT ? void 0 : MT.name) && void 0 !== lT ? lT : "",
+            AT = null !== (KT = TT[IT]) && void 0 !== KT ? KT : TT[IT.split("|")[0]],
+            CT = tT[IT.split("|")[0]],
+            jT = null !== (OT = null !== (yT = null === AT || void 0 === AT ? void 0 : AT[0]) && void 0 !== yT ? yT : CT) && void 0 !== OT ? OT : 0 === (null === AT || void 0 === AT ? void 0 : AT.length) ? null : hT;
+          return kT.set(cT, jT), jT
         }
       }());
       return {
-        surface: zv.surface,
-        topDown: Yv(zv.columnTops)
+        surface: kT.surface,
+        topDown: PT(kT.columnTops)
       }
     }
-    async function fv(vv, zv) {
-      var Pv;
-      if (vv.byteLength < 4) throw new Error("The file is too short to be a schematic.");
-      const hv = new DataView(vv.buffer, vv.byteOffset, vv.byteLength).getUint32(0, !0);
-      if (hv > av) throw new Error("The file isn't a schematic this version of Bloxd can read.");
-      const Sv = (hv >= wv ? Wv : Tv).decode(ev.Sa.from(vv.subarray(4)), 0).value;
-      if (!Sv) throw new Error("The file isn't a schematic.");
-      if (0 === Sv.chunkData.length) throw new Error("The schematic has no blocks in it.");
-      const pv = null !== (Pv = Sv.pasteOffset) && void 0 !== Pv ? Pv : {
+    async function FT(TT, kT) {
+      var cT;
+      if (TT.byteLength < 4) throw new Error("The file is too short to be a schematic.");
+      const lT = new DataView(TT.buffer, TT.byteOffset, TT.byteLength).getUint32(0, !0);
+      if (lT > vT) throw new Error("The file isn't a schematic this version of Bloxd can read.");
+      const MT = (lT >= jT ? CT : AT).decode(KT.Ov.from(TT.subarray(4)), 0).value;
+      if (!MT) throw new Error("The file isn't a schematic.");
+      if (0 === MT.chunkData.length) throw new Error("The schematic has no blocks in it.");
+      const yT = null !== (cT = MT.pasteOffset) && void 0 !== cT ? cT : {
           x: 0,
           y: 0,
           z: 0
         },
-        dv = [pv.x, pv.y, pv.z].map((vv => Math.floor(vv / Gv))),
-        Nv = Sv.chunkData.map((vv => ({
-          x: vv.x + dv[0],
-          y: vv.y + dv[1],
-          z: vv.z + dv[2],
-          rle: vv.rle
+        fT = [yT.x, yT.y, yT.z].map((TT => Math.floor(TT / ST))),
+        xT = MT.chunkData.map((TT => ({
+          x: TT.x + fT[0],
+          y: TT.y + fT[1],
+          z: TT.z + fT[2],
+          rle: TT.rle
         }))),
-        lv = new Map;
-      for (const [ev, Tv] of Nv.entries()) {
-        const vv = new Uint16Array(Gv ** 3);
-        gv.decode(Tv.rle, vv), lv.set(`${Tv.x},${Tv.y},${Tv.z}`, vv), ev % iv === iv - 1 && await nv()
+        IT = new Map;
+      for (const [KT, AT] of xT.entries()) {
+        const TT = new Uint16Array(ST ** 3);
+        OT.decode(AT.rle, TT), IT.set(`${AT.x},${AT.y},${AT.z}`, TT), KT % NT === NT - 1 && await wT()
       }
-      const sv = (vv, zv, Pv) => vv * Gv * Gv + zv * Gv + Pv,
-        Cv = (vv, zv, Pv) => {
-          var hv, Sv;
-          const ev = Math.floor(vv / Gv),
-            gv = Math.floor(zv / Gv),
-            pv = Math.floor(Pv / Gv);
-          return null !== (hv = null === (Sv = lv.get(`${ev},${gv},${pv}`)) || void 0 === Sv ? void 0 : Sv[sv(vv - ev * Gv, zv - gv * Gv, Pv - pv * Gv)]) && void 0 !== hv ? hv : 0
+      const tT = (TT, kT, cT) => TT * ST * ST + kT * ST + cT,
+        hT = (TT, kT, cT) => {
+          var lT, MT;
+          const KT = Math.floor(TT / ST),
+            OT = Math.floor(kT / ST),
+            yT = Math.floor(cT / ST);
+          return null !== (lT = null === (MT = IT.get(`${KT},${OT},${yT}`)) || void 0 === MT ? void 0 : MT[tT(TT - KT * ST, kT - OT * ST, cT - yT * ST)]) && void 0 !== lT ? lT : 0
         },
-        cv = new Map,
-        jv = [],
-        fv = [];
-      for (const [ev, gv] of Nv.entries()) {
-        const vv = lv.get(`${gv.x},${gv.y},${gv.z}`),
-          Pv = [gv.x * Gv, gv.y * Gv, gv.z * Gv],
-          hv = (zv, hv, Sv) => zv < 0 || hv < 0 || Sv < 0 || zv >= Gv || hv >= Gv || Sv >= Gv ? Cv(Pv[0] + zv, Pv[1] + hv, Pv[2] + Sv) : vv[sv(zv, hv, Sv)],
-          Sv = `${gv.x},${gv.z}`;
-        let pv = cv.get(Sv);
-        void 0 === pv && (pv = {
-          chunkX: gv.x,
-          chunkZ: gv.z,
-          heights: new Int32Array(Gv * Gv).fill(mv),
-          colours: new Uint8Array(Gv * Gv * 3)
-        }, cv.set(Sv, pv));
-        for (let ev = 0; ev < Gv; ev++)
-          for (let Sv = 0; Sv < Gv; Sv++)
-            for (let gv = 0; gv < Gv; gv++) {
-              const dv = vv[sv(ev, Sv, gv)];
-              if (0 === dv) continue;
-              const Nv = Pv[0] + ev,
-                lv = Pv[1] + Sv,
-                Tv = Pv[2] + gv,
-                Wv = zv(dv);
-              if (null === Wv) continue;
-              const wv = gv * Gv + ev;
-              lv > pv.heights[wv] && (pv.heights[wv] = lv, pv.colours.set(Wv, 3 * wv));
-              !Fv(dv) && (Fv(hv(ev + 1, Sv, gv)) || Fv(hv(ev - 1, Sv, gv)) || Fv(hv(ev, Sv + 1, gv)) || Fv(hv(ev, Sv - 1, gv)) || Fv(hv(ev, Sv, gv + 1)) || Fv(hv(ev, Sv, gv - 1))) && (jv.push(Nv, lv, Tv), fv.push(Wv[0], Wv[1], Wv[2]))
+        QT = new Map,
+        aT = [],
+        FT = [];
+      for (const [KT, OT] of xT.entries()) {
+        const TT = IT.get(`${OT.x},${OT.y},${OT.z}`),
+          cT = [OT.x * ST, OT.y * ST, OT.z * ST],
+          lT = (kT, lT, MT) => kT < 0 || lT < 0 || MT < 0 || kT >= ST || lT >= ST || MT >= ST ? hT(cT[0] + kT, cT[1] + lT, cT[2] + MT) : TT[tT(kT, lT, MT)],
+          MT = `${OT.x},${OT.z}`;
+        let yT = QT.get(MT);
+        void 0 === yT && (yT = {
+          chunkX: OT.x,
+          chunkZ: OT.z,
+          heights: new Int32Array(ST * ST).fill(DT),
+          colours: new Uint8Array(ST * ST * 3)
+        }, QT.set(MT, yT));
+        for (let KT = 0; KT < ST; KT++)
+          for (let MT = 0; MT < ST; MT++)
+            for (let OT = 0; OT < ST; OT++) {
+              const fT = TT[tT(KT, MT, OT)];
+              if (0 === fT) continue;
+              const xT = cT[0] + KT,
+                IT = cT[1] + MT,
+                AT = cT[2] + OT,
+                CT = kT(fT);
+              if (null === CT) continue;
+              const jT = OT * ST + KT;
+              IT > yT.heights[jT] && (yT.heights[jT] = IT, yT.colours.set(CT, 3 * jT));
+              !rT(fT) && (rT(lT(KT + 1, MT, OT)) || rT(lT(KT - 1, MT, OT)) || rT(lT(KT, MT + 1, OT)) || rT(lT(KT, MT - 1, OT)) || rT(lT(KT, MT, OT + 1)) || rT(lT(KT, MT, OT - 1))) && (aT.push(xT, IT, AT), FT.push(CT[0], CT[1], CT[2]))
             }
-        ev % iv === iv - 1 && await nv()
+        KT % NT === NT - 1 && await wT()
       }
-      if (0 === jv.length) throw new Error("The schematic has no blocks in it.");
+      if (0 === aT.length) throw new Error("The schematic has no blocks in it.");
       return {
-        name: Sv.name,
+        name: MT.name,
         surface: {
-          positions: Int32Array.from(jv),
-          colours: Uint8Array.from(fv),
-          count: jv.length / 3
+          positions: Int32Array.from(aT),
+          colours: Uint8Array.from(FT),
+          count: aT.length / 3
         },
-        columnTops: [...cv.values()]
+        columnTops: [...QT.values()]
       }
     }
 
-    function Fv(vv) {
-      if (0 === vv) return !0;
-      const zv = dv.g[vv];
-      return void 0 === zv || zv.zw || zv.transTex || !1 === zv.solid
+    function rT(TT) {
+      if (0 === TT) return !0;
+      const kT = fT.i[TT];
+      return void 0 === kT || kT.lj || kT.transTex || !1 === kT.solid
     }
 
-    function Yv(vv) {
-      let zv = 1 / 0,
-        Pv = -1 / 0,
-        hv = 1 / 0,
-        Sv = -1 / 0;
+    function PT(TT) {
+      let kT = 1 / 0,
+        cT = -1 / 0,
+        lT = 1 / 0,
+        MT = -1 / 0;
       for (const {
-          chunkX: av,
-          chunkZ: sv,
-          heights: Cv
+          chunkX: vT,
+          chunkZ: tT,
+          heights: hT
         }
-        of vv) Cv.forEach(((vv, ev) => {
-        if (vv === mv) return;
-        const gv = av * Gv + ev % Gv,
-          pv = sv * Gv + Math.floor(ev / Gv);
-        zv = Math.min(zv, gv), Pv = Math.max(Pv, gv), hv = Math.min(hv, pv), Sv = Math.max(Sv, pv)
+        of TT) hT.forEach(((TT, KT) => {
+        if (TT === DT) return;
+        const OT = vT * ST + KT % ST,
+          yT = tT * ST + Math.floor(KT / ST);
+        kT = Math.min(kT, OT), cT = Math.max(cT, OT), lT = Math.min(lT, yT), MT = Math.max(MT, yT)
       }));
-      const ev = Pv - zv + 1,
-        gv = Sv - hv + 1,
-        pv = Math.max(1, Math.ceil(ev / cv), Math.ceil(gv / cv)),
-        dv = Math.ceil(ev / pv),
-        Nv = Math.ceil(gv / pv),
-        lv = document.createElement("canvas");
-      lv.width = dv, lv.height = Nv;
-      const Tv = lv.getContext("2d");
-      if (!Tv) throw new Error("Couldn't draw the schematic from above.");
-      const Wv = Tv.createImageData(dv, Nv),
-        wv = new Int32Array(dv * Nv).fill(mv);
+      const KT = cT - kT + 1,
+        OT = MT - lT + 1,
+        yT = Math.max(1, Math.ceil(KT / QT), Math.ceil(OT / QT)),
+        fT = Math.ceil(KT / yT),
+        xT = Math.ceil(OT / yT),
+        IT = document.createElement("canvas");
+      IT.width = fT, IT.height = xT;
+      const AT = IT.getContext("2d");
+      if (!AT) throw new Error("Couldn't draw the schematic from above.");
+      const CT = AT.createImageData(fT, xT),
+        jT = new Int32Array(fT * xT).fill(DT);
       for (const {
-          chunkX: av,
-          chunkZ: sv,
-          heights: Cv,
-          colours: iv
+          chunkX: vT,
+          chunkZ: tT,
+          heights: hT,
+          colours: NT
         }
-        of vv) Cv.forEach(((vv, zv) => {
-        const Sv = av * Gv + zv % Gv,
-          ev = sv * Gv + Math.floor(zv / Gv),
-          gv = Math.floor((ev - hv) / pv) * dv + Math.floor((Pv - Sv) / pv);
-        vv === mv || vv <= wv[gv] || (wv[gv] = vv, Wv.data.set(iv.subarray(3 * zv, 3 * zv + 3), 4 * gv), Wv.data[4 * gv + 3] = 255)
+        of TT) hT.forEach(((TT, kT) => {
+        const MT = vT * ST + kT % ST,
+          KT = tT * ST + Math.floor(kT / ST),
+          OT = Math.floor((KT - lT) / yT) * fT + Math.floor((cT - MT) / yT);
+        TT === DT || TT <= jT[OT] || (jT[OT] = TT, CT.data.set(NT.subarray(3 * kT, 3 * kT + 3), 4 * OT), CT.data[4 * OT + 3] = 255)
       }));
-      return Tv.putImageData(Wv, 0, 0), {
-        maxX: Pv,
-        minZ: hv,
-        width: dv * pv,
-        depth: Nv * pv,
-        canvas: lv
+      return AT.putImageData(CT, 0, 0), {
+        maxX: cT,
+        minZ: lT,
+        width: fT * yT,
+        depth: xT * yT,
+        canvas: IT
       }
     }
 
-    function nv() {
-      return new Promise((vv => {
-        setTimeout(vv, 0)
+    function wT() {
+      return new Promise((TT => {
+        setTimeout(TT, 0)
       }))
     }
   },
-  9185: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => Sv,
-      f: () => ev
+  9542: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => MT,
+      e: () => KT
     });
-    var hv = Pv(9144);
-    const Sv = "Air",
-      ev = Object.freeze(new hv.f(Sv, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var lT = cT(9495);
+    const MT = "Air",
+      KT = Object.freeze(new lT.d(MT, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

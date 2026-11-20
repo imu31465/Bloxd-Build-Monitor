@@ -1,500 +1,500 @@
 export const id = 239;
 export const ids = [239];
 export const modules = {
-  40040: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => ev,
-      h: () => gv
+  40375: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => KT,
+      f: () => OT
     });
-    var hv = Pv(1889);
-    let Sv = !1;
+    var lT = cT(1964);
+    let MT = !1;
 
-    function ev() {
-      Sv = !0
+    function KT() {
+      MT = !0
     }
 
-    function gv() {
-      Sv && (Sv = !1, (0, hv.e)())
+    function OT() {
+      MT && (MT = !1, (0, lT.b)())
     }
   },
-  40038: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => gv,
-      c: () => ev,
-      g: () => pv
+  40369: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => OT,
+      g: () => KT,
+      k: () => yT
     });
-    var hv = Pv(39889),
-      Sv = Pv(39898);
+    var lT = cT(40204),
+      MT = cT(40215);
 
-    function ev(vv) {
-      if (vv.queries.drawCensus() < hv.zb.BYTES) return null;
-      const zv = vv.memoryData(vv.scratch(), hv.zb.BYTES, 4, "the draw census");
-      return null === zv ? null : {
-        terrainOpaque: hv.zb.terrainOpaque(zv, 0),
-        terrainTransparent: hv.zb.terrainTransparent(zv, 0),
-        terrainPack: hv.zb.terrainPack(zv, 0),
-        earthSky: hv.zb.earthSky(zv, 0),
-        skyMeshes: hv.zb.skyMeshes(zv, 0),
-        regular: hv.zb.regular(zv, 0),
-        thin: hv.zb.thin(zv, 0),
-        line: hv.zb.line(zv, 0),
-        text: hv.zb.text(zv, 0),
-        particles: hv.zb.particles(zv, 0),
-        terrainParts: hv.zb.terrainParts(zv, 0),
-        terrainCompiling: hv.zb.terrainCompiling(zv, 0)
+    function KT(TT) {
+      if (TT.queries.drawCensus() < lT.Kb.BYTES) return null;
+      const kT = TT.memoryData(TT.scratch(), lT.Kb.BYTES, 4, "the draw census");
+      return null === kT ? null : {
+        terrainOpaque: lT.Kb.terrainOpaque(kT, 0),
+        terrainTransparent: lT.Kb.terrainTransparent(kT, 0),
+        terrainPack: lT.Kb.terrainPack(kT, 0),
+        earthSky: lT.Kb.earthSky(kT, 0),
+        skyMeshes: lT.Kb.skyMeshes(kT, 0),
+        regular: lT.Kb.regular(kT, 0),
+        thin: lT.Kb.thin(kT, 0),
+        line: lT.Kb.line(kT, 0),
+        text: lT.Kb.text(kT, 0),
+        particles: lT.Kb.particles(kT, 0),
+        terrainParts: lT.Kb.terrainParts(kT, 0),
+        terrainCompiling: lT.Kb.terrainCompiling(kT, 0)
       }
     }
 
-    function gv(vv) {
+    function OT(TT) {
       const {
-        terrainOpaque: zv,
-        terrainTransparent: Pv,
-        earthSky: hv,
-        skyMeshes: Sv,
-        regular: ev,
-        thin: gv,
-        line: pv,
-        text: dv,
-        particles: Nv
-      } = vv;
-      return zv + Pv + hv + Sv + ev + gv + pv + dv + Nv
+        terrainOpaque: kT,
+        terrainTransparent: cT,
+        earthSky: lT,
+        skyMeshes: MT,
+        regular: KT,
+        thin: OT,
+        line: yT,
+        text: fT,
+        particles: xT
+      } = TT;
+      return kT + cT + lT + MT + KT + OT + yT + fT + xT
     }
 
-    function pv() {
-      const vv = (0, Sv.h)();
-      return !0 === (null === vv || void 0 === vv ? void 0 : vv.isCoreRunning) ? function(vv) {
-        const zv = ev(vv);
-        if (null === zv) return [];
+    function yT() {
+      const TT = (0, MT.g)();
+      return !0 === (null === TT || void 0 === TT ? void 0 : TT.isCoreRunning) ? function(TT) {
+        const kT = KT(TT);
+        if (null === kT) return [];
         const {
-          terrainOpaque: Pv,
-          terrainTransparent: hv,
-          terrainPack: Sv,
-          earthSky: pv,
-          skyMeshes: dv,
-          regular: Nv,
-          thin: lv,
-          line: Tv,
-          text: Wv,
-          particles: wv
-        } = zv;
+          terrainOpaque: cT,
+          terrainTransparent: lT,
+          terrainPack: MT,
+          earthSky: yT,
+          skyMeshes: fT,
+          regular: xT,
+          thin: IT,
+          line: AT,
+          text: CT,
+          particles: jT
+        } = kT;
         return [{
           label: "Drawn",
-          value: `${gv(zv)}`
+          value: `${OT(kT)}`
         }, {
           label: "Terrain",
-          value: `${Pv} opaque / ${hv} transparent (${Sv} shader pack)`
+          value: `${cT} opaque / ${lT} transparent (${MT} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${Nv} / ${lv}`
+          value: `${xT} / ${IT}`
         }, {
           label: "Text / Lines",
-          value: `${Wv} / ${Tv}`
+          value: `${CT} / ${AT}`
         }, {
           label: "Sky / Particles",
-          value: `${pv+dv} / ${wv}`
+          value: `${yT+fT} / ${jT}`
         }]
-      }(vv.api) : []
+      }(TT.api) : []
     }
   },
-  40007: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => av,
-      h: () => Wv,
-      i: () => wv
+  40329: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => vT,
+      f: () => CT,
+      h: () => jT
     });
-    var hv = Pv(1897),
-      Sv = Pv(1279),
-      ev = Pv(39898),
-      gv = Pv(39927),
-      pv = Pv(39933),
-      dv = Pv(39949);
-    const Nv = new Sv.c;
-    let lv = !1;
+    var lT = cT(1967),
+      MT = cT(1298),
+      KT = cT(40215),
+      OT = cT(40239),
+      yT = cT(40246),
+      fT = cT(40264);
+    const xT = new MT.e;
+    let IT = !1;
 
-    function Tv(vv) {
-      const zv = (0, ev.h)();
-      return null !== zv && +vv === zv.api.localId
+    function AT(TT) {
+      const kT = (0, KT.g)();
+      return null !== kT && +TT === kT.api.localId
     }
 
-    function Wv() {
-      lv || (lv = !0, (0, dv.m)(gv.p, (vv => {
-        var zv, Pv;
-        const hv = (0, pv.f)(gv.p, vv);
-        if (!(0, pv.d)(hv)) return;
-        const Sv = hv;
-        Tv(Sv.Cv) && wv(Sv.iv, {
-          icon: Sv.Gv,
-          level: Sv.jv,
-          displayName: null !== (zv = Sv.cv) && void 0 !== zv ? zv : null,
-          durationMs: null !== (Pv = Sv.mv) && void 0 !== Pv ? Pv : null
+    function CT() {
+      IT || (IT = !0, (0, fT.m)(OT.n, (TT => {
+        var kT, cT;
+        const lT = (0, yT.e)(OT.n, TT);
+        if (!(0, yT.b)(lT)) return;
+        const MT = lT;
+        AT(MT.tT) && jT(MT.hT, {
+          icon: MT.QT,
+          level: MT.DT,
+          displayName: null !== (kT = MT.NT) && void 0 !== kT ? kT : null,
+          durationMs: null !== (cT = MT.ST) && void 0 !== cT ? cT : null
         })
-      })), (0, dv.m)(gv._, (vv => {
-        const zv = (0, pv.f)(gv._, vv);
-        if (!(0, pv.d)(zv)) return;
-        const Pv = zv;
-        Tv(Pv.Cv) && hv.e.remove(Pv.iv)
-      })), (0, dv.i)((() => {
-        hv.e.clear()
+      })), (0, fT.m)(OT.U, (TT => {
+        const kT = (0, yT.e)(OT.U, TT);
+        if (!(0, yT.b)(kT)) return;
+        const cT = kT;
+        AT(cT.tT) && lT.c.remove(cT.hT)
+      })), (0, fT.h)((() => {
+        lT.c.clear()
       })))
     }
 
-    function wv(vv, zv) {
-      hv.e.update(vv, zv), Nv.forEach((zv => {
-        zv(vv)
+    function jT(TT, kT) {
+      lT.c.update(TT, kT), xT.forEach((kT => {
+        kT(TT)
       }))
     }
-    const av = {
+    const vT = {
       localEffectUpdated: {
-        watch: vv => Nv.add(vv)
+        watch: TT => xT.add(TT)
       }
     }
   },
-  40015: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => lv
+  40335: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => IT
     });
-    var hv = Pv(4542),
-      Sv = Pv(4535),
-      ev = Pv(39940),
-      gv = Pv(39949);
-    const pv = new Set(hv.E),
-      dv = hv.E.map((vv => (new TextEncoder).encode(vv))),
-      Nv = new Map;
+    var lT = cT(4769),
+      MT = cT(4761),
+      KT = cT(40254),
+      OT = cT(40264);
+    const yT = new Set(lT.D),
+      fT = lT.D.map((TT => (new TextEncoder).encode(TT))),
+      xT = new Map;
 
-    function lv(vv, zv) {
-      var Pv;
-      return null === (Pv = Nv.get(vv)) || void 0 === Pv ? void 0 : Pv[zv]
-    }(0, gv.m)(hv.Xb.NewOtherEntitySettings, (vv => {
-      vv.payloadKind === Sv.pc.Msgpack && dv.some((zv => function(vv, zv) {
-        const Pv = zv[0];
-        for (let hv = vv.indexOf(Pv); - 1 !== hv && hv + zv.length <= vv.length; hv = vv.indexOf(Pv, hv + 1)) {
-          let Pv = 1;
-          for (; Pv < zv.length && vv[hv + Pv] === zv[Pv];) Pv++;
-          if (Pv === zv.length) return !0
+    function IT(TT, kT) {
+      var cT;
+      return null === (cT = xT.get(TT)) || void 0 === cT ? void 0 : cT[kT]
+    }(0, OT.m)(lT.Xb.NewOtherEntitySettings, (TT => {
+      TT.payloadKind === MT.ac.Msgpack && fT.some((kT => function(TT, kT) {
+        const cT = kT[0];
+        for (let lT = TT.indexOf(cT); - 1 !== lT && lT + kT.length <= TT.length; lT = TT.indexOf(cT, lT + 1)) {
+          let cT = 1;
+          for (; cT < kT.length && TT[lT + cT] === kT[cT];) cT++;
+          if (cT === kT.length) return !0
         }
         return !1
-      }(vv.payload, zv))) && function(vv) {
-        if (null === vv || "object" !== typeof vv || null === vv.settings || "object" !== typeof vv.settings) return;
-        const zv = String(vv.eId),
-          Pv = vv.settings;
-        let hv = Nv.get(zv);
-        for (const Sv in Pv) {
-          if (!pv.has(Sv)) continue;
-          const vv = Pv[Sv];
-          null === vv || void 0 === vv ? hv && delete hv[Sv] : (hv ??= {}, hv[Sv] = vv)
+      }(TT.payload, kT))) && function(TT) {
+        if (null === TT || "object" !== typeof TT || null === TT.settings || "object" !== typeof TT.settings) return;
+        const kT = String(TT.eId),
+          cT = TT.settings;
+        let lT = xT.get(kT);
+        for (const MT in cT) {
+          if (!yT.has(MT)) continue;
+          const TT = cT[MT];
+          null === TT || void 0 === TT ? lT && delete lT[MT] : (lT ??= {}, lT[MT] = TT)
         }
-        hv && Nv.set(zv, hv)
-      }((0, ev.d)(vv.payload))
-    })), (0, gv.i)((() => {
-      Nv.clear()
+        lT && xT.set(kT, lT)
+      }((0, KT.c)(TT.payload))
+    })), (0, OT.h)((() => {
+      xT.clear()
     }))
   },
-  40002: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => wv,
-      e: () => Nv,
-      i: () => Tv
+  40325: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => jT,
+      h: () => xT,
+      j: () => AT
     });
-    var hv = Pv(38531),
-      Sv = Pv(1884),
-      ev = Pv(1279),
-      gv = Pv(39927),
-      pv = Pv(39933),
-      dv = Pv(39949);
-    const Nv = new hv.c;
-    let lv = {};
+    var lT = cT(38832),
+      MT = cT(1960),
+      KT = cT(1298),
+      OT = cT(40239),
+      yT = cT(40246),
+      fT = cT(40264);
+    const xT = new lT.d;
+    let IT = {};
 
-    function Tv(vv) {
-      return lv[vv]
+    function AT(TT) {
+      return IT[TT]
     }
-    const Wv = new ev.c;
+    const CT = new KT.e;
 
-    function wv(vv) {
-      return Wv.add(vv)
+    function jT(TT) {
+      return CT.add(TT)
     }
 
-    function av(vv) {
-      Wv.callEach(vv, "a roster listener")
-    }(0, dv.m)(gv.ib, (vv => {
-      const zv = (0, pv.f)(gv.ib, vv);
-      if (void 0 === zv) return;
-      const Pv = zv.dz.some((vv => {
+    function vT(TT) {
+      CT.callEach(TT, "a roster listener")
+    }(0, fT.m)(OT.ib, (TT => {
+      const kT = (0, yT.e)(OT.ib, TT);
+      if (void 0 === kT) return;
+      const cT = kT.yk.some((TT => {
           let {
-            Nz: zv,
-            lz: Pv
-          } = vv;
-          return null !== Pv && Nv.has(zv) && Nv.getName(zv) !== Pv
+            fk: kT,
+            xk: cT
+          } = TT;
+          return null !== cT && xT.has(kT) && xT.getName(kT) !== cT
         })),
         {
-          added: hv,
-          removed: ev,
-          settingChanges: dv
-        } = Nv.apply(zv),
-        lv = new Set;
-      for (const Sv of dv)
-        for (const vv in Sv.settings) lv.add(vv);
-      const Tv = Pv || hv.length > 0 || ev.length > 0;
-      (Tv || lv.has("hideNameSeed")) && function() {
-        const vv = new Map;
-        for (const zv of Nv.ids()) {
-          const Pv = Nv.getName(zv),
-            hv = Nv.getSetting(zv, "hideNameSeed");
-          void 0 !== Pv && void 0 !== hv && null !== hv && vv.set(Pv, hv)
+          added: lT,
+          removed: KT,
+          settingChanges: fT
+        } = xT.apply(kT),
+        IT = new Set;
+      for (const MT of fT)
+        for (const TT in MT.settings) IT.add(TT);
+      const AT = cT || lT.length > 0 || KT.length > 0;
+      (AT || IT.has("hideNameSeed")) && function() {
+        const TT = new Map;
+        for (const kT of xT.ids()) {
+          const cT = xT.getName(kT),
+            lT = xT.getSetting(kT, "hideNameSeed");
+          void 0 !== cT && void 0 !== lT && null !== lT && TT.set(cT, lT)
         }
-        Sv.b.replaceAll(vv)
-      }(), av({
+        MT.c.replaceAll(TT)
+      }(), vT({
         kind: "roster",
-        members: Tv,
-        settings: lv
+        members: AT,
+        settings: IT
       })
-    })), (0, dv.m)(gv.Y, (vv => {
-      const zv = (0, pv.f)(gv.Y, vv);
-      if (void 0 !== zv) {
+    })), (0, fT.m)(OT.Q, (TT => {
+      const kT = (0, yT.e)(OT.Q, TT);
+      if (void 0 !== kT) {
         for (const {
-            cP: vv,
-            GP: Pv,
-            mP: hv
+            Nc: TT,
+            Qc: cT,
+            Sc: lT
           }
-          of zv) lv[vv] = {
-          ...lv[vv],
-          [Pv]: hv
+          of kT) IT[TT] = {
+          ...IT[TT],
+          [cT]: lT
         };
-        av({
+        vT({
           kind: "cosmetics",
-          updates: zv
+          updates: kT
         })
       }
-    })), (0, dv.i)((() => {
-      Nv.clear(), lv = {}, Sv.b.clear(), av({
+    })), (0, fT.h)((() => {
+      xT.clear(), IT = {}, MT.c.clear(), vT({
         kind: "reset"
       })
-    })), (0, dv.l)((() => {
-      Nv.clear(), av({
+    })), (0, fT.l)((() => {
+      xT.clear(), vT({
         kind: "reset"
       })
     }))
   },
-  40025: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => Dv,
-      e: () => Cv,
-      g: () => Rv,
-      k: () => xv
+  40356: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => bT,
+      h: () => hT,
+      i: () => HT,
+      j: () => eT
     });
-    var hv = Pv(1250),
-      Sv = Pv(609),
-      ev = Pv(73),
-      gv = Pv(4542),
-      pv = Pv(39889),
-      dv = Pv(39918),
-      Nv = Pv(39898),
-      lv = Pv(40015),
-      Tv = Pv(40002),
-      Wv = Pv(39933),
-      wv = Pv(39949);
+    var lT = cT(1279),
+      MT = cT(606),
+      KT = cT(118),
+      OT = cT(4769),
+      yT = cT(40204),
+      fT = cT(40230),
+      xT = cT(40215),
+      IT = cT(40335),
+      AT = cT(40325),
+      CT = cT(40246),
+      jT = cT(40264);
 
-    function av(vv) {
+    function vT(TT) {
       let {
-        deadEId: zv,
-        killerEId: Pv,
-        killerLifeformType: hv,
-        withItem: Sv,
-        killstreak: ev
-      } = vv;
+        deadEId: kT,
+        killerEId: cT,
+        killerLifeformType: lT,
+        withItem: MT,
+        killstreak: KT
+      } = TT;
       return {
-        killer: mv({
-          eId: Pv,
-          lifeformType: hv
+        killer: DT({
+          eId: cT,
+          lifeformType: lT
         }),
-        victim: mv({
-          eId: zv
+        victim: DT({
+          eId: kT
         }),
-        withItem: Sv,
-        killstreak: ev
+        withItem: MT,
+        killstreak: KT
       }
     }
 
-    function sv(vv) {
+    function tT(TT) {
       let {
-        killer: zv,
-        victim: Pv,
-        withItem: hv
-      } = vv;
+        killer: kT,
+        victim: cT,
+        withItem: lT
+      } = TT;
       return {
-        killer: mv(zv),
-        victim: mv(Pv),
-        withItem: hv,
+        killer: DT(kT),
+        victim: DT(cT),
+        withItem: lT,
         killstreak: 0
       }
     }
 
-    function Cv(vv) {
-      Yv && Ov((() => "killed" === vv.kind ? av(vv.body) : sv(vv.body)))
+    function hT(TT) {
+      PT && mT((() => "killed" === TT.kind ? vT(TT.body) : tT(TT.body)))
     }
-    const iv = "#2727f1",
-      cv = "#912c2c";
+    const NT = "#2727f1",
+      QT = "#912c2c";
 
-    function Gv(vv, zv) {
-      var Pv;
-      return Tv.e.has(vv) ? null === (Pv = Tv.e.getSettings(vv)) || void 0 === Pv ? void 0 : Pv[zv] : (0, lv.e)(vv, zv)
+    function ST(TT, kT) {
+      var cT;
+      return AT.h.has(TT) ? null === (cT = AT.h.getSettings(TT)) || void 0 === cT ? void 0 : cT[kT] : (0, IT.e)(TT, kT)
     }
 
-    function mv(vv) {
-      var zv, Pv, gv, pv, lv;
+    function DT(TT) {
+      var kT, cT, OT, yT, IT;
       let {
-        eId: Wv,
-        name: wv,
-        colour: av,
-        lifeformType: sv
-      } = vv;
-      if (void 0 === Wv || null === Wv || "" === Wv) {
-        const vv = wv || null;
+        eId: CT,
+        name: jT,
+        colour: vT,
+        lifeformType: tT
+      } = TT;
+      if (void 0 === CT || null === CT || "" === CT) {
+        const TT = jT || null;
         return {
           id: null,
-          shownName: vv,
-          lifeformType: null === vv && null !== sv && void 0 !== sv ? sv : null,
-          colour: av || null,
+          shownName: TT,
+          lifeformType: null === TT && null !== tT && void 0 !== tT ? tT : null,
+          colour: vT || null,
           local: !1,
           realName: null
         }
       }
-      const Cv = String(Wv),
-        mv = null === (zv = (0, Nv.h)()) || void 0 === zv ? void 0 : zv.api,
-        jv = void 0 !== mv && String(mv.localId) === Cv,
-        fv = null !== (Pv = Tv.e.getName(Cv)) && void 0 !== Pv ? Pv : null,
-        Fv = null !== (gv = Gv(Cv, "hideNameSeed")) && void 0 !== gv ? gv : null;
-      let Yv = null === fv ? null : (0, hv.c)(fv, !ev.featureFlags.canSeeRealPlayerNames, Fv) || null,
-        nv = null;
-      if (null === Yv && void 0 !== mv) {
-        const vv = mv.getEntityType(Cv);
-        "Player" !== vv && (Yv = (0, dv.h)(mv, +Cv) || null), nv = Sv.i.includes(vv) ? vv : null
+      const hT = String(CT),
+        DT = null === (kT = (0, xT.g)()) || void 0 === kT ? void 0 : kT.api,
+        aT = void 0 !== DT && String(DT.localId) === hT,
+        FT = null !== (cT = AT.h.getName(hT)) && void 0 !== cT ? cT : null,
+        rT = null !== (OT = ST(hT, "hideNameSeed")) && void 0 !== OT ? OT : null;
+      let PT = null === FT ? null : (0, lT.c)(FT, !KT.featureFlags.canSeeRealPlayerNames, rT) || null,
+        wT = null;
+      if (null === PT && void 0 !== DT) {
+        const TT = DT.getEntityType(hT);
+        "Player" !== TT && (PT = (0, fT.j)(DT, +hT) || null), wT = MT.i.includes(TT) ? TT : null
       }
       return {
-        id: Cv,
-        shownName: Yv,
-        lifeformType: null === Yv && null !== (pv = null !== (lv = nv) && void 0 !== lv ? lv : sv) && void 0 !== pv ? pv : null,
-        colour: av || Gv(Cv, "killfeedColour") || (jv ? iv : cv),
-        local: jv,
-        realName: fv
+        id: hT,
+        shownName: PT,
+        lifeformType: null === PT && null !== (yT = null !== (IT = wT) && void 0 !== IT ? IT : tT) && void 0 !== yT ? yT : null,
+        colour: vT || ST(hT, "killfeedColour") || (aT ? NT : QT),
+        local: aT,
+        realName: FT
       }
     }
-    const jv = 32;
-    let fv = [],
-      Fv = null,
-      Yv = !1,
-      nv = !1;
+    const aT = 32;
+    let FT = [],
+      rT = null,
+      PT = !1,
+      wT = !1;
 
-    function Ov(vv) {
-      null === Fv ? (fv.length === jv && fv.shift(), fv.push(vv)) : Fv(vv())
+    function mT(TT) {
+      null === rT ? (FT.length === aT && FT.shift(), FT.push(TT)) : rT(TT())
     }
 
-    function Dv() {
-      nv || (nv = !0, (0, wv.m)(gv.Xb.PlayerKilled, (vv => {
-        const zv = (0, Wv.j)(vv);
-        (0, Wv.d)(zv) && Ov((() => av(zv)))
-      })), (0, wv.m)(gv.Xb.CustomKillfeed, (vv => {
-        const zv = (0, Wv.j)(vv);
-        (0, Wv.d)(zv) && (0, Wv.d)(zv.killer) && (0, Wv.d)(zv.victim) && Ov((() => sv(zv)))
-      })), (0, wv.i)((() => {
-        fv = []
+    function bT() {
+      wT || (wT = !0, (0, jT.m)(OT.Xb.PlayerKilled, (TT => {
+        const kT = (0, CT.g)(TT);
+        (0, CT.b)(kT) && mT((() => vT(kT)))
+      })), (0, jT.m)(OT.Xb.CustomKillfeed, (TT => {
+        const kT = (0, CT.g)(TT);
+        (0, CT.b)(kT) && (0, CT.b)(kT.killer) && (0, CT.b)(kT.victim) && mT((() => tT(kT)))
+      })), (0, jT.h)((() => {
+        FT = []
       })))
     }
-    const Kv = Object.freeze([0, 0, 0]),
-      Vv = [0, 0, 0],
-      Uv = [0, 0, 0],
-      Rv = {
+    const zT = Object.freeze([0, 0, 0]),
+      JT = [0, 0, 0],
+      oT = [0, 0, 0],
+      HT = {
         kill: {
-          watch(vv) {
-            if (Yv = !0, 0 === fv.length) return Fv = vv, () => {
-              Yv = !1, Fv = null
+          watch(TT) {
+            if (PT = !0, 0 === FT.length) return rT = TT, () => {
+              PT = !1, rT = null
             };
-            const zv = setTimeout((() => {
-              const zv = fv;
-              fv = [], Fv = vv;
-              for (const hv of zv) try {
-                vv(hv())
-              } catch (Pv) {
-                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", Pv)
+            const kT = setTimeout((() => {
+              const kT = FT;
+              FT = [], rT = TT;
+              for (const lT of kT) try {
+                TT(lT())
+              } catch (cT) {
+                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", cT)
               }
             }), 0);
             return () => {
-              clearTimeout(zv), Yv = !1, Fv = null
+              clearTimeout(kT), PT = !1, rT = null
             }
           }
         }
       },
-      xv = {
+      eT = {
         localPos() {
-          const vv = (0, Nv.h)();
-          if (null === vv) return Kv;
-          const zv = vv.api.apiView;
-          for (let Pv = 0; Pv < 3; Pv++) Vv[Pv] = pv.t.localPos(zv, 0, Pv);
-          return Vv
+          const TT = (0, xT.g)();
+          if (null === TT) return zT;
+          const kT = TT.api.apiView;
+          for (let cT = 0; cT < 3; cT++) JT[cT] = yT.A.localPos(kT, 0, cT);
+          return JT
         },
         targetedBlockPos() {
-          const vv = (0, Nv.h)();
-          if (null === vv || pv.t.targetBlockId(vv.api.apiView, 0) === pv.dd) return null;
-          for (let zv = 0; zv < 3; zv++) Uv[zv] = pv.t.targetBlock(vv.api.apiView, 0, zv);
-          return Uv
+          const TT = (0, xT.g)();
+          if (null === TT || yT.A.targetBlockId(TT.api.apiView, 0) === yT.dd) return null;
+          for (let kT = 0; kT < 3; kT++) oT[kT] = yT.A.targetBlock(TT.api.apiView, 0, kT);
+          return oT
         }
       }
   },
-  38531: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => hv
+  38832: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => lT
     });
-    class hv {
+    class lT {
       constructor() {
         this.members = new Map
       }
-      apply(vv) {
-        const zv = {
+      apply(TT) {
+        const kT = {
           added: [],
           removed: [],
           settingChanges: []
         };
-        for (const hv of vv.dz) {
-          let vv = this.members.get(hv.Nz);
-          if (vv || (vv = {
+        for (const lT of TT.yk) {
+          let TT = this.members.get(lT.fk);
+          if (TT || (TT = {
               name: null,
               settings: {}
-            }, this.members.set(hv.Nz, vv), zv.added.push(hv.Nz)), null !== hv.lz && (vv.name = hv.lz), null !== hv.Tz || hv.Wz.length > 0) {
-            const Pv = null === hv.Tz ? {} : JSON.parse(hv.Tz);
-            Object.assign(vv.settings, Pv);
-            for (const zv of hv.Wz) delete vv.settings[zv], Pv[zv] = void 0;
-            zv.settingChanges.push({
-              playerId: hv.Nz,
-              settings: Pv
+            }, this.members.set(lT.fk, TT), kT.added.push(lT.fk)), null !== lT.xk && (TT.name = lT.xk), null !== lT.Ik || lT.Ak.length > 0) {
+            const cT = null === lT.Ik ? {} : JSON.parse(lT.Ik);
+            Object.assign(TT.settings, cT);
+            for (const kT of lT.Ak) delete TT.settings[kT], cT[kT] = void 0;
+            kT.settingChanges.push({
+              playerId: lT.fk,
+              settings: cT
             })
           }
         }
-        for (const hv of vv.wz) {
-          const vv = this.members.get(hv);
-          var Pv;
-          if (vv) this.members.delete(hv), zv.removed.push({
-            playerId: hv,
-            name: null !== (Pv = vv.name) && void 0 !== Pv ? Pv : void 0
+        for (const lT of TT.Ck) {
+          const TT = this.members.get(lT);
+          var cT;
+          if (TT) this.members.delete(lT), kT.removed.push({
+            playerId: lT,
+            name: null !== (cT = TT.name) && void 0 !== cT ? cT : void 0
           })
         }
-        return zv
+        return kT
       }
-      has(vv) {
-        return this.members.has(vv)
+      has(TT) {
+        return this.members.has(TT)
       }
       ids() {
         return [...this.members.keys()]
       }
-      getName(vv) {
-        var zv, Pv;
-        return null !== (zv = null === (Pv = this.members.get(vv)) || void 0 === Pv ? void 0 : Pv.name) && void 0 !== zv ? zv : void 0
+      getName(TT) {
+        var kT, cT;
+        return null !== (kT = null === (cT = this.members.get(TT)) || void 0 === cT ? void 0 : cT.name) && void 0 !== kT ? kT : void 0
       }
-      getSettings(vv) {
-        var zv;
-        return null === (zv = this.members.get(vv)) || void 0 === zv ? void 0 : zv.settings
+      getSettings(TT) {
+        var kT;
+        return null === (kT = this.members.get(TT)) || void 0 === kT ? void 0 : kT.settings
       }
-      getSetting(vv, zv) {
-        var Pv;
-        return null === (Pv = this.members.get(vv)) || void 0 === Pv ? void 0 : Pv.settings[zv]
+      getSetting(TT, kT) {
+        var cT;
+        return null === (cT = this.members.get(TT)) || void 0 === cT ? void 0 : cT.settings[kT]
       }
       clear() {
         this.members.clear()
@@ -503,4 +503,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

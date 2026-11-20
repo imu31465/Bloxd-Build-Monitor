@@ -1,559 +1,559 @@
 export const id = 231;
 export const ids = [231];
 export const modules = {
-  40363: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      noaDevTools: () => Tv
+  40684: (TT, kT, cT) => {
+    cT.d(kT, {
+      noaDevTools: () => AT
     });
-    var hv = Pv(37053),
-      Sv = Pv(37030),
-      ev = Pv(2599),
-      gv = Pv(1692);
+    var lT = cT(37400),
+      MT = cT(37381),
+      KT = cT(2790),
+      OT = cT(1741);
 
-    function pv(vv) {
+    function yT(TT) {
       const {
-        Ma: zv
-      } = vv, Pv = zv.engine, hv = {
-        width: Pv.getRenderWidth(),
-        height: Pv.getRenderHeight()
+        gv: kT
+      } = TT, cT = kT.engine, lT = {
+        width: cT.getRenderWidth(),
+        height: cT.getRenderHeight()
       };
       return {
-        canvas: Pv.getRenderingCanvas(),
-        maxTextureSize: Pv.getCaps().maxTextureSize,
-        drawing: () => !vv.Am,
-        resize: (vv, zv) => {
-          Pv.setSize(vv, zv)
+        canvas: cT.getRenderingCanvas(),
+        maxTextureSize: cT.getCaps().maxTextureSize,
+        drawing: () => !TT.FQ,
+        resize: (TT, kT) => {
+          cT.setSize(TT, kT)
         },
         restoreSize: () => {
-          Pv.setSize(hv.width, hv.height), zv.resize()
+          cT.setSize(lT.width, lT.height), kT.resize()
         },
-        onFrameDrawn: zv => (vv.on("afterRender", zv), () => {
-          vv.off("afterRender", zv)
+        onFrameDrawn: kT => (TT.on("afterRender", kT), () => {
+          TT.off("afterRender", kT)
         })
       }
     }
-    var dv = Pv(40339),
-      Nv = Pv(8882);
+    var fT = cT(40665),
+      xT = cT(9233);
 
-    function lv(vv, zv) {
+    function IT(TT, kT) {
       let {
-        width: Nv,
-        height: lv,
-        colouring: Tv
-      } = zv;
-      const Wv = "normals" === Tv,
-        wv = "depth" === Tv;
-      return new Promise((zv => {
+        width: xT,
+        height: IT,
+        colouring: AT
+      } = kT;
+      const CT = "normals" === AT,
+        jT = "depth" === AT;
+      return new Promise((kT => {
         try {
-          const av = (0, ev.g)();
-          if (av.Ma.ya) return "screenshot" !== vv || null !== Tv ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void zv()) : void(0, dv.c)(pv(av), Nv, lv).finally(zv);
-          const sv = av.Ma.engine,
-            Cv = av.Ma.rD(),
-            iv = Nv,
-            cv = lv;
-          Promise.all([Promise.all([Pv.e(246), Pv.e(247), Pv.e(228)]).then((() => Pv(60565))), Promise.all([Pv.e(227), Pv.e(226), Pv.e(246), Pv.e(247), Pv.e(244), Pv.e(248), Pv.e(251), Pv.e(302), Pv.e(232)]).then((() => Pv(60567))), Promise.all([Pv.e(227), Pv.e(226), Pv.e(246), Pv.e(247), Pv.e(244), Pv.e(254), Pv.e(248), Pv.e(256), Pv.e(234)]).then((() => Pv(60574))), Pv.e(345).then((() => Pv(60579))), Promise.all([Pv.e(226), Pv.e(222)]).then((() => Pv(36591))), Pv.e(245).then((() => Pv(60587))), Pv.e(229).then((() => Pv(60592)))]).then((ev => {
+          const vT = (0, KT.f)();
+          if (vT.gv.Uv) return "screenshot" !== TT || null !== AT ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void kT()) : void(0, fT.c)(yT(vT), xT, IT).finally(kT);
+          const tT = vT.gv.engine,
+            hT = vT.gv.NJ(),
+            NT = xT,
+            QT = IT;
+          Promise.all([Promise.all([cT.e(246), cT.e(247), cT.e(228)]).then((() => cT(60548))), Promise.all([cT.e(227), cT.e(226), cT.e(246), cT.e(247), cT.e(244), cT.e(248), cT.e(251), cT.e(302), cT.e(232)]).then((() => cT(60554))), Promise.all([cT.e(227), cT.e(226), cT.e(246), cT.e(247), cT.e(244), cT.e(254), cT.e(248), cT.e(256), cT.e(234)]).then((() => cT(60556))), cT.e(345).then((() => cT(60565))), Promise.all([cT.e(226), cT.e(222)]).then((() => cT(36885))), cT.e(245).then((() => cT(60569))), cT.e(229).then((() => cT(60571)))]).then((KT => {
             const {
-              CreateScreenshotUsingRenderTarget: pv
-            } = ev[1], {
-              ShaderMaterial: dv
-            } = ev[2], {
-              ShaderLanguage: Nv
-            } = ev[3], {
-              fa: lv
-            } = ev[4], {
-              registerDevtoolsShader: Tv
-            } = ev[6], av = Nv.GLSL, Gv = new Map, mv = Cv.meshes.filter((vv => vv.material));
-            let jv = !1,
-              fv = null;
+              CreateScreenshotUsingRenderTarget: yT
+            } = KT[1], {
+              ShaderMaterial: fT
+            } = KT[2], {
+              ShaderLanguage: xT
+            } = KT[3], {
+              Fv: IT
+            } = KT[4], {
+              registerDevtoolsShader: AT
+            } = KT[6], vT = xT.GLSL, ST = new Map, DT = hT.meshes.filter((TT => TT.material));
+            let aT = !1,
+              FT = null;
 
-            function Fv() {
-              var vv;
-              jv && (jv = !1, (0, hv.i)(Cv.meshes, !1)), null === (vv = fv) || void 0 === vv || vv(), fv = null, mv.forEach((vv => {
-                const zv = Gv.get(vv);
-                zv && (vv.material = zv)
+            function rT() {
+              var TT;
+              aT && (aT = !1, (0, lT.d)(hT.meshes, !1)), null === (TT = FT) || void 0 === TT || TT(), FT = null, DT.forEach((TT => {
+                const kT = ST.get(TT);
+                kT && (TT.material = kT)
               }))
             }
-            if (Wv) {
-              const vv = [],
-                zv = [];
-              mv.forEach((Pv => {
-                const hv = Pv.name.toLowerCase(),
-                  Sv = Pv.cV().boundingBox.center,
-                  ev = Cv.activeCamera.position.subtract(Sv).length();
-                hv.includes("sky") || hv.includes("background") || hv.includes("environment") || ev > 1e3 ? zv.push(Pv) : vv.push(Pv)
-              })), Tv("devtoolsNormal", av);
-              const Pv = new dv("normalMaterial", Cv, "devtoolsNormal", {
+            if (CT) {
+              const TT = [],
+                kT = [];
+              DT.forEach((cT => {
+                const lT = cT.name.toLowerCase(),
+                  MT = cT.DH().boundingBox.center,
+                  KT = hT.activeCamera.position.subtract(MT).length();
+                lT.includes("sky") || lT.includes("background") || lT.includes("environment") || KT > 1e3 ? kT.push(cT) : TT.push(cT)
+              })), AT("devtoolsNormal", vT);
+              const cT = new fT("normalMaterial", hT, "devtoolsNormal", {
                 attributes: ["position", "normal"],
                 uniforms: ["worldViewProjection", "world"],
-                shaderLanguage: av
+                shaderLanguage: vT
               });
-              Tv("devtoolsWhite", av);
-              const hv = new dv("whiteMaterial", Cv, "devtoolsWhite", {
+              AT("devtoolsWhite", vT);
+              const lT = new fT("whiteMaterial", hT, "devtoolsWhite", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection"],
-                shaderLanguage: av
+                shaderLanguage: vT
               });
-              vv.forEach((vv => {
-                Gv.set(vv, vv.material), vv.material = Pv
-              })), zv.forEach((vv => {
-                Gv.set(vv, vv.material), vv.material = hv
+              TT.forEach((TT => {
+                ST.set(TT, TT.material), TT.material = cT
+              })), kT.forEach((TT => {
+                ST.set(TT, TT.material), TT.material = lT
               }))
-            } else if (wv) {
-              Tv("devtoolsDepth", av);
-              const vv = Cv.activeCamera.position;
-              let zv = 0,
-                Pv = 1 / 0;
-              mv.forEach((hv => {
-                const Sv = hv.name.toLowerCase();
-                if (Sv.includes("sky") || Sv.includes("background") || Sv.includes("environment")) return;
-                const ev = hv.cV().boundingBox.center,
-                  gv = lv.TransformCoordinates(ev, hv.getWorldMatrix()),
-                  pv = vv.subtract(gv).length();
-                pv > 1e3 || (zv = Math.max(zv, pv), Pv = Math.min(Pv, pv))
+            } else if (jT) {
+              AT("devtoolsDepth", vT);
+              const TT = hT.activeCamera.position;
+              let kT = 0,
+                cT = 1 / 0;
+              DT.forEach((lT => {
+                const MT = lT.name.toLowerCase();
+                if (MT.includes("sky") || MT.includes("background") || MT.includes("environment")) return;
+                const KT = lT.DH().boundingBox.center,
+                  OT = IT.TransformCoordinates(KT, lT.getWorldMatrix()),
+                  yT = TT.subtract(OT).length();
+                yT > 1e3 || (kT = Math.max(kT, yT), cT = Math.min(cT, yT))
               }));
-              const hv = zv - Pv;
-              zv += .1 * hv, Pv = Math.max(0, Pv - .1 * hv), console.log(`Depth range: min=${Pv.toFixed(2)}, max=${zv.toFixed(2)}, range=${hv.toFixed(2)}`), hv < 1 && (zv = Pv + 10);
-              const Sv = new dv("depthMaterial", Cv, "devtoolsDepth", {
+              const lT = kT - cT;
+              kT += .1 * lT, cT = Math.max(0, cT - .1 * lT), console.log(`Depth range: min=${cT.toFixed(2)}, max=${kT.toFixed(2)}, range=${lT.toFixed(2)}`), lT < 1 && (kT = cT + 10);
+              const MT = new fT("depthMaterial", hT, "devtoolsDepth", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection", "world", "cameraPosition", "maxDepth", "minDepth"],
-                shaderLanguage: av
+                shaderLanguage: vT
               });
-              Sv.setVector3("cameraPosition", vv), Sv.setFloat("maxDepth", zv), Sv.setFloat("minDepth", Pv), mv.forEach((vv => {
-                Gv.set(vv, vv.material), vv.material = Sv
+              MT.setVector3("cameraPosition", TT), MT.setFloat("maxDepth", kT), MT.setFloat("minDepth", cT), DT.forEach((TT => {
+                ST.set(TT, TT.material), TT.material = MT
               }))
             }
-            if ((0, hv.i)(Cv.meshes, !0), jv = !0, "glb" === vv && (fv = (0, Sv.c)(Cv.meshes)), "screenshot" === vv) {
-              let vv = `bloxd-screenshot-${iv}x${cv}-${Date.now()}.png`;
-              Wv ? vv = `bloxd-screenshot-normals-${iv}x${cv}-${Date.now()}.png` : wv && (vv = `bloxd-screenshot-depth-${iv}x${cv}-${Date.now()}.png`), pv(sv, Cv.activeCamera, {
-                width: iv,
-                height: cv
-              }, (function(Pv) {
-                Fv(), fetch(Pv).then((function(vv) {
-                  return vv.blob()
-                })).then((function(Pv) {
-                  (0, gv.downloadBlob)(Pv, vv), zv()
-                })).catch((function(vv) {
-                  console.error("Error processing screenshot:", vv), zv()
+            if ((0, lT.d)(hT.meshes, !0), aT = !0, "glb" === TT && (FT = (0, MT.c)(hT.meshes)), "screenshot" === TT) {
+              let TT = `bloxd-screenshot-${NT}x${QT}-${Date.now()}.png`;
+              CT ? TT = `bloxd-screenshot-normals-${NT}x${QT}-${Date.now()}.png` : jT && (TT = `bloxd-screenshot-depth-${NT}x${QT}-${Date.now()}.png`), yT(tT, hT.activeCamera, {
+                width: NT,
+                height: QT
+              }, (function(cT) {
+                rT(), fetch(cT).then((function(TT) {
+                  return TT.blob()
+                })).then((function(cT) {
+                  (0, OT.downloadBlob)(cT, TT), kT()
+                })).catch((function(TT) {
+                  console.error("Error processing screenshot:", TT), kT()
                 }))
               }), "image/png", void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, (function() {
-                console.error("Screenshot timed out"), Fv(), zv()
+                console.error("Screenshot timed out"), rT(), kT()
               }))
             } else {
-              let vv = "Is";
-              Wv ? vv = "scene-normals" : wv && (vv = "scene-depth"), Wv || wv ? setTimeout((() => {
+              let TT = "et";
+              CT ? TT = "scene-normals" : jT && (TT = "scene-depth"), CT || jT ? setTimeout((() => {
                 (async function() {
                   const {
-                    StandardMaterial: vv
-                  } = await Promise.all([Pv.e(227), Pv.e(226), Pv.e(246), Pv.e(247), Pv.e(244), Pv.e(254), Pv.e(253), Pv.e(233)]).then((() => Pv(39560))), {
-                    Color3: zv
-                  } = await Promise.all([Pv.e(227), Pv.e(230)]).then((() => Pv(36745))), hv = [], Sv = [];
-                  if (mv.forEach((vv => {
-                      const zv = vv.name.toLowerCase(),
-                        Pv = vv.cV().boundingBox.center,
-                        ev = Cv.activeCamera.position.subtract(Pv).length();
-                      zv.includes("sky") || zv.includes("background") || zv.includes("environment") || ev > 1e3 ? Sv.push(vv) : hv.push(vv)
-                    })), Wv) hv.forEach(((Pv, hv) => {
-                    const Sv = Pv.getVerticesData("normal");
-                    if (Sv) {
-                      const ev = [];
-                      for (let vv = 0; vv < Sv.length; vv += 3) {
-                        const zv = Math.abs(Sv[vv]),
-                          Pv = Math.abs(Sv[vv + 1]),
-                          hv = Math.abs(Sv[vv + 2]);
-                        ev.push(zv, Pv, hv, 1)
+                    StandardMaterial: TT
+                  } = await Promise.all([cT.e(227), cT.e(226), cT.e(246), cT.e(247), cT.e(244), cT.e(254), cT.e(253), cT.e(233)]).then((() => cT(39889))), {
+                    Color3: kT
+                  } = await Promise.all([cT.e(227), cT.e(230)]).then((() => cT(37086))), lT = [], MT = [];
+                  if (DT.forEach((TT => {
+                      const kT = TT.name.toLowerCase(),
+                        cT = TT.DH().boundingBox.center,
+                        KT = hT.activeCamera.position.subtract(cT).length();
+                      kT.includes("sky") || kT.includes("background") || kT.includes("environment") || KT > 1e3 ? MT.push(TT) : lT.push(TT)
+                    })), CT) lT.forEach(((cT, lT) => {
+                    const MT = cT.getVerticesData("normal");
+                    if (MT) {
+                      const KT = [];
+                      for (let TT = 0; TT < MT.length; TT += 3) {
+                        const kT = Math.abs(MT[TT]),
+                          cT = Math.abs(MT[TT + 1]),
+                          lT = Math.abs(MT[TT + 2]);
+                        KT.push(kT, cT, lT, 1)
                       }
-                      Pv.setVerticesData("color", ev);
-                      const gv = new vv(`vertexColorMat_${hv}`, Cv);
-                      gv.disableLighting = !0, gv.emissiveColor = new zv(1, 1, 1), gv.specularColor = new zv(0, 0, 0), Pv.material = gv
+                      cT.setVerticesData("color", KT);
+                      const OT = new TT(`vertexColorMat_${lT}`, hT);
+                      OT.disableLighting = !0, OT.emissiveColor = new kT(1, 1, 1), OT.specularColor = new kT(0, 0, 0), cT.material = OT
                     }
-                  })), Sv.forEach(((Pv, hv) => {
-                    const Sv = Pv.getVerticesData("position");
-                    if (Sv) {
-                      const ev = [],
-                        gv = Sv.length / 3;
-                      for (let vv = 0; vv < gv; vv++) ev.push(1, 1, 1, 1);
-                      Pv.setVerticesData("color", ev);
-                      const pv = new vv(`whiteMat_${hv}`, Cv);
-                      pv.disableLighting = !0, pv.emissiveColor = new zv(1, 1, 1), pv.specularColor = new zv(0, 0, 0), Pv.material = pv
+                  })), MT.forEach(((cT, lT) => {
+                    const MT = cT.getVerticesData("position");
+                    if (MT) {
+                      const KT = [],
+                        OT = MT.length / 3;
+                      for (let TT = 0; TT < OT; TT++) KT.push(1, 1, 1, 1);
+                      cT.setVerticesData("color", KT);
+                      const yT = new TT(`whiteMat_${lT}`, hT);
+                      yT.disableLighting = !0, yT.emissiveColor = new kT(1, 1, 1), yT.specularColor = new kT(0, 0, 0), cT.material = yT
                     }
                   }));
-                  else if (wv) {
-                    const Pv = Cv.activeCamera.position;
-                    let Sv = 0,
-                      ev = 1 / 0;
-                    hv.forEach((vv => {
-                      const zv = vv.cV().boundingBox.center,
-                        hv = lv.TransformCoordinates(zv, vv.getWorldMatrix()),
-                        gv = Pv.subtract(hv).length();
-                      Sv = Math.max(Sv, gv), ev = Math.min(ev, gv)
+                  else if (jT) {
+                    const cT = hT.activeCamera.position;
+                    let MT = 0,
+                      KT = 1 / 0;
+                    lT.forEach((TT => {
+                      const kT = TT.DH().boundingBox.center,
+                        lT = IT.TransformCoordinates(kT, TT.getWorldMatrix()),
+                        OT = cT.subtract(lT).length();
+                      MT = Math.max(MT, OT), KT = Math.min(KT, OT)
                     }));
-                    const gv = Sv - ev;
-                    Sv += .1 * gv, ev = Math.max(0, ev - .1 * gv), gv < 1 && (Sv = ev + 10), mv.forEach(((hv, gv) => {
-                      const pv = hv.name.toLowerCase(),
-                        dv = hv.cV().boundingBox.center,
-                        Nv = lv.TransformCoordinates(dv, hv.getWorldMatrix()),
-                        Tv = Pv.subtract(Nv).length();
-                      if (!(pv.includes("sky") || pv.includes("background") || pv.includes("environment") || Tv > 1e3)) {
-                        const Pv = 1 - Math.min(Math.max((Tv - ev) / (Sv - ev), 0), 1),
-                          pv = new vv(`depthMat_${gv}`, Cv);
-                        pv.diffuseColor = new zv(Pv, Pv, Pv), pv.specularColor = new zv(0, 0, 0), hv.material = pv
+                    const OT = MT - KT;
+                    MT += .1 * OT, KT = Math.max(0, KT - .1 * OT), OT < 1 && (MT = KT + 10), DT.forEach(((lT, OT) => {
+                      const yT = lT.name.toLowerCase(),
+                        fT = lT.DH().boundingBox.center,
+                        xT = IT.TransformCoordinates(fT, lT.getWorldMatrix()),
+                        AT = cT.subtract(xT).length();
+                      if (!(yT.includes("sky") || yT.includes("background") || yT.includes("environment") || AT > 1e3)) {
+                        const cT = 1 - Math.min(Math.max((AT - KT) / (MT - KT), 0), 1),
+                          yT = new TT(`depthMat_${OT}`, hT);
+                        yT.diffuseColor = new kT(cT, cT, cT), yT.specularColor = new kT(0, 0, 0), lT.material = yT
                       }
                     }))
                   }
-                })().then((() => Promise.all([Pv.e(227), Pv.e(226), Pv.e(246), Pv.e(247), Pv.e(244), Pv.e(254), Pv.e(248), Pv.e(253), Pv.e(251), Pv.e(243), Pv.e(256), Pv.e(265), Pv.e(302), Pv.e(238), Pv.e(255), Pv.e(225)]).then((() => Pv(60598))))).then((zv => zv.GLTF2Export.GLBAsync(Cv, vv))).then((vv => {
-                  Fv(), vv.downloadFiles(), zv()
-                })).catch((vv => {
-                  console.error("Error exporting GLB:", vv), Fv(), zv()
+                })().then((() => Promise.all([cT.e(227), cT.e(226), cT.e(246), cT.e(247), cT.e(244), cT.e(254), cT.e(248), cT.e(253), cT.e(251), cT.e(243), cT.e(256), cT.e(265), cT.e(302), cT.e(238), cT.e(255), cT.e(225)]).then((() => cT(60573))))).then((kT => kT.GLTF2Export.GLBAsync(hT, TT))).then((TT => {
+                  rT(), TT.downloadFiles(), kT()
+                })).catch((TT => {
+                  console.error("Error exporting GLB:", TT), rT(), kT()
                 }))
-              }), 100) : Promise.all([Pv.e(227), Pv.e(226), Pv.e(246), Pv.e(247), Pv.e(244), Pv.e(254), Pv.e(248), Pv.e(253), Pv.e(251), Pv.e(243), Pv.e(256), Pv.e(265), Pv.e(302), Pv.e(238), Pv.e(255), Pv.e(225)]).then((() => Pv(60598))).then((Pv => {
-                Pv.GLTF2Export.GLBAsync(Cv, vv).then((vv => {
-                  Fv(), vv.downloadFiles(), zv()
-                })).catch((vv => {
-                  console.error("Error exporting GLB:", vv), Fv(), zv()
+              }), 100) : Promise.all([cT.e(227), cT.e(226), cT.e(246), cT.e(247), cT.e(244), cT.e(254), cT.e(248), cT.e(253), cT.e(251), cT.e(243), cT.e(256), cT.e(265), cT.e(302), cT.e(238), cT.e(255), cT.e(225)]).then((() => cT(60573))).then((cT => {
+                cT.GLTF2Export.GLBAsync(hT, TT).then((TT => {
+                  rT(), TT.downloadFiles(), kT()
+                })).catch((TT => {
+                  console.error("Error exporting GLB:", TT), rT(), kT()
                 }))
-              })).catch((vv => {
-                console.error("Error importing serializers:", vv), Fv(), zv()
+              })).catch((TT => {
+                console.error("Error importing serializers:", TT), rT(), kT()
               }))
             }
-          })).catch((vv => {
-            console.error("Error downloading the scene:", vv), zv()
+          })).catch((TT => {
+            console.error("Error downloading the scene:", TT), kT()
           }))
-        } catch (av) {
-          console.error("Error taking screenshot:", av), zv()
+        } catch (vT) {
+          console.error("Error taking screenshot:", vT), kT()
         }
       }))
     }
-    const Tv = new class {
+    const AT = new class {
       constructor() {
-        this.tools = Nv.ALL_DEV_TOOLS
+        this.tools = xT.ALL_DEV_TOOLS
       }
-      downloadScene(vv, zv) {
-        return lv(vv, zv)
+      downloadScene(TT, kT) {
+        return IT(TT, kT)
       }
-      async setAmbientLightIntensity(vv) {
+      async setAmbientLightIntensity(TT) {
         const {
-          Color3: zv
-        } = await Promise.all([Pv.e(227), Pv.e(230)]).then((() => Pv(36745)));
-        (0, ev.g)().Ma.rD().ambientColor = zv.FromArray([vv, vv, vv])
+          Color3: kT
+        } = await Promise.all([cT.e(227), cT.e(230)]).then((() => cT(37086)));
+        (0, KT.f)().gv.NJ().ambientColor = kT.FromArray([TT, TT, TT])
       }
     }
   },
-  40339: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => dv
+  40665: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => fT
     });
-    var hv = Pv(1711);
-    const Sv = 33177600,
-      ev = 3e4;
-    let gv = !1;
+    var lT = cT(1758);
+    const MT = 33177600,
+      KT = 3e4;
+    let OT = !1;
 
-    function pv(vv, zv, Pv) {
-      if (!vv.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
-      if (gv) return Promise.reject(new Error("A screenshot is already being taken"));
-      gv = !0;
-      const hv = function(vv, zv, Pv) {
-        const hv = Math.max(1, vv),
-          ev = Math.max(1, zv),
-          gv = Math.min(1, Pv / Math.max(hv, ev), Math.sqrt(Sv / (hv * ev)));
+    function yT(TT, kT, cT) {
+      if (!TT.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
+      if (OT) return Promise.reject(new Error("A screenshot is already being taken"));
+      OT = !0;
+      const lT = function(TT, kT, cT) {
+        const lT = Math.max(1, TT),
+          KT = Math.max(1, kT),
+          OT = Math.min(1, cT / Math.max(lT, KT), Math.sqrt(MT / (lT * KT)));
         return {
-          width: Math.max(1, Math.floor(hv * gv)),
-          height: Math.max(1, Math.floor(ev * gv))
+          width: Math.max(1, Math.floor(lT * OT)),
+          height: Math.max(1, Math.floor(KT * OT))
         }
-      }(zv, Pv, vv.maxTextureSize);
-      return vv.resize(hv.width, hv.height), new Promise(((zv, Pv) => {
-        let hv, Sv = 2,
-          pv = null;
-        const dv = () => {
-          var zv;
-          gv = !1, null === (zv = pv) || void 0 === zv || zv(), clearTimeout(hv), vv.restoreSize()
+      }(kT, cT, TT.maxTextureSize);
+      return TT.resize(lT.width, lT.height), new Promise(((kT, cT) => {
+        let lT, MT = 2,
+          yT = null;
+        const fT = () => {
+          var kT;
+          OT = !1, null === (kT = yT) || void 0 === kT || kT(), clearTimeout(lT), TT.restoreSize()
         };
-        hv = setTimeout((() => {
-          dv(), Pv(new Error("No frame was drawn to capture"))
-        }), ev), pv = vv.onFrameDrawn((() => {
-          if (Sv--, Sv > 0) return;
+        lT = setTimeout((() => {
+          fT(), cT(new Error("No frame was drawn to capture"))
+        }), KT), yT = TT.onFrameDrawn((() => {
+          if (MT--, MT > 0) return;
           const {
-            canvas: hv
-          } = vv, ev = {
-            width: hv.width,
-            height: hv.height
+            canvas: lT
+          } = TT, KT = {
+            width: lT.width,
+            height: lT.height
           };
           try {
-            hv.toBlob((vv => {
-              vv ? zv({
-                blob: vv,
-                ...ev
-              }) : Pv(new Error("The canvas gave no image"))
+            lT.toBlob((TT => {
+              TT ? kT({
+                blob: TT,
+                ...KT
+              }) : cT(new Error("The canvas gave no image"))
             }), "image/png")
-          } catch (gv) {
-            Pv(gv)
+          } catch (OT) {
+            cT(OT)
           } finally {
-            dv()
+            fT()
           }
         }))
       }))
     }
-    async function dv(vv, zv, Pv) {
+    async function fT(TT, kT, cT) {
       try {
-        const Sv = await pv(vv, zv, Pv);
-        (0, hv.d)(Sv.blob, `bloxd-screenshot-${Sv.width}x${Sv.height}-${Date.now()}.png`)
-      } catch (Sv) {
-        console.error("Error taking screenshot:", Sv)
+        const MT = await yT(TT, kT, cT);
+        (0, lT.b)(MT.blob, `bloxd-screenshot-${MT.width}x${MT.height}-${Date.now()}.png`)
+      } catch (MT) {
+        console.error("Error taking screenshot:", MT)
       }
     }
   },
-  37053: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => Nv,
-      i: () => pv,
-      k: () => gv
+  37400: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => xT,
+      d: () => yT,
+      h: () => OT
     });
-    var hv = Pv(37044),
-      Sv = Pv(37055);
-    let ev = 0;
+    var lT = cT(37395),
+      MT = cT(37402);
+    let KT = 0;
 
-    function gv(vv, zv) {
-      const Pv = vv;
-      Pv._noaFaceGroups = null !== zv && void 0 !== zv ? zv : null, Pv._noaFaceEpoch = -1, Pv._noaFaceMask = -1, Pv._noaFaceCount = -1, Pv._noaFaceMaterial = null;
-      const hv = vv.sF;
-      hv && 1 === hv.length && (hv[0].indexStart = 0, hv[0].indexCount = vv.getTotalIndices())
+    function OT(TT, kT) {
+      const cT = TT;
+      cT._noaFaceGroups = null !== kT && void 0 !== kT ? kT : null, cT._noaFaceEpoch = -1, cT._noaFaceMask = -1, cT._noaFaceCount = -1, cT._noaFaceMaterial = null;
+      const lT = TT.kF;
+      lT && 1 === lT.length && (lT[0].indexStart = 0, lT[0].indexCount = TT.getTotalIndices())
     }
 
-    function pv(vv, zv) {
-      if (zv) {
-        ev++;
-        for (const zv of vv) {
-          const vv = zv._noaFaceGroups;
-          vv && gv(zv, vv)
+    function yT(TT, kT) {
+      if (kT) {
+        KT++;
+        for (const kT of TT) {
+          const TT = kT._noaFaceGroups;
+          TT && OT(kT, TT)
         }
-      } else ev = Math.max(0, ev - 1)
+      } else KT = Math.max(0, KT - 1)
     }
 
-    function dv(vv, zv, Pv) {
-      let Sv = -1,
-        ev = 0;
-      for (let gv = 0; gv < hv.e; gv++) {
-        const Pv = vv[gv],
-          pv = vv[gv + 1];
-        pv > Pv && zv & 1 << hv.c[gv] && (Sv < 0 && (Sv = Pv), ev = pv)
+    function fT(TT, kT, cT) {
+      let MT = -1,
+        KT = 0;
+      for (let OT = 0; OT < lT.f; OT++) {
+        const cT = TT[OT],
+          yT = TT[OT + 1];
+        yT > cT && kT & 1 << lT.b[OT] && (MT < 0 && (MT = cT), KT = yT)
       }
-      return Sv < 0 ? (Pv[0] = 0, Pv[1] = 0, 0) : (Pv[0] = Sv, Pv[1] = ev - Sv, ev - Sv)
+      return MT < 0 ? (cT[0] = 0, cT[1] = 0, 0) : (cT[0] = MT, cT[1] = KT - MT, KT - MT)
     }
-    class Nv {
-      constructor(vv, zv) {
-        this.aa = vv, this.engine = zv, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
+    class xT {
+      constructor(TT, kT) {
+        this.vv = TT, this.engine = kT, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
       }
-      apply(vv, zv) {
-        if (!zv) return;
-        const Pv = zv.getProjectionMatrix().m,
-          gv = 0 === ev && 0 === Pv[15],
-          pv = zv.globalPosition,
+      apply(TT, kT) {
+        if (!kT) return;
+        const cT = kT.getProjectionMatrix().m,
+          OT = 0 === KT && 0 === cT[15],
+          yT = kT.globalPosition,
           {
-            engine: Nv
+            engine: xT
           } = this,
-          lv = gv ? (0, Sv.e)(Pv, Nv.getRenderWidth(), Nv.getRenderHeight()) : 0;
-        pv.x === this.eyeX && pv.y === this.eyeY && pv.z === this.eyeZ && lv === this.focalPx && gv === this.culling || (this.epoch++, this.eyeX = pv.x, this.eyeY = pv.y, this.eyeZ = pv.z, this.focalPx = lv, this.culling = gv);
+          IT = OT ? (0, MT.e)(cT, xT.getRenderWidth(), xT.getRenderHeight()) : 0;
+        yT.x === this.eyeX && yT.y === this.eyeY && yT.z === this.eyeZ && IT === this.focalPx && OT === this.culling || (this.epoch++, this.eyeX = yT.x, this.eyeY = yT.y, this.eyeZ = yT.z, this.focalPx = IT, this.culling = OT);
         const {
-          epoch: Tv,
-          range: Wv
-        } = this, wv = this.aa / 2, av = wv * Math.sqrt(3), sv = vv.data, Cv = vv.length;
-        let iv = 0;
-        for (let ev = 0; ev < Cv; ev++) {
-          const vv = sv[ev],
-            zv = vv._noaFaceGroups;
-          if (zv && (vv._noaFaceEpoch !== Tv || vv._noaFaceMaterial !== vv.material)) {
-            vv._noaFaceEpoch = Tv, vv._noaFaceMaterial = vv.material;
-            const Pv = vv.sF,
-              ev = Pv && 1 === Pv.length ? Pv[0] : null;
-            let Nv = -1;
-            if (gv && ev && (0, hv.r)(vv.material)) {
-              const Pv = vv.position,
-                hv = pv.x - Pv.x,
-                ev = pv.y - Pv.y,
-                gv = pv.z - Pv.z,
-                dv = hv - wv,
-                Tv = ev - wv,
-                Wv = gv - wv,
-                sv = Math.sqrt(dv * dv + Tv * Tv + Wv * Wv) + av;
-              Nv = (0, Sv.k)(zv, hv, ev, gv, (0, Sv.f)(sv, lv))
+          epoch: AT,
+          range: CT
+        } = this, jT = this.vv / 2, vT = jT * Math.sqrt(3), tT = TT.data, hT = TT.length;
+        let NT = 0;
+        for (let KT = 0; KT < hT; KT++) {
+          const TT = tT[KT],
+            kT = TT._noaFaceGroups;
+          if (kT && (TT._noaFaceEpoch !== AT || TT._noaFaceMaterial !== TT.material)) {
+            TT._noaFaceEpoch = AT, TT._noaFaceMaterial = TT.material;
+            const cT = TT.kF,
+              KT = cT && 1 === cT.length ? cT[0] : null;
+            let xT = -1;
+            if (OT && KT && (0, lT.r)(TT.material)) {
+              const cT = TT.position,
+                lT = yT.x - cT.x,
+                KT = yT.y - cT.y,
+                OT = yT.z - cT.z,
+                fT = lT - jT,
+                AT = KT - jT,
+                CT = OT - jT,
+                tT = Math.sqrt(fT * fT + AT * AT + CT * CT) + vT;
+              xT = (0, MT.q)(kT, lT, KT, OT, (0, MT.i)(tT, IT))
             }
-            if (ev && Nv !== vv._noaFaceMask) {
-              vv._noaFaceMask = Nv;
-              let Pv = 0,
-                Sv = zv[hv.e]; - 1 !== Nv && (Sv = dv(zv, Nv, Wv), Pv = Wv[0]), vv._noaFaceCount = Sv, ev.indexStart = 6 * Pv, ev.indexCount = 6 * Sv, ev.setBoundingInfo(vv.cV())
+            if (KT && xT !== TT._noaFaceMask) {
+              TT._noaFaceMask = xT;
+              let cT = 0,
+                MT = kT[lT.f]; - 1 !== xT && (MT = fT(kT, xT, CT), cT = CT[0]), TT._noaFaceCount = MT, KT.indexStart = 6 * cT, KT.indexCount = 6 * MT, KT.setBoundingInfo(TT.DH())
             }
           }
-          zv && 0 === vv._noaFaceCount || (sv[iv++] = vv)
+          kT && 0 === TT._noaFaceCount || (tT[NT++] = TT)
         }
-        vv.length = iv
+        TT.length = NT
       }
     }
   },
-  37030: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => dv,
-      e: () => pv
+  37381: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => fT,
+      e: () => yT
     });
-    const hv = new WeakSet;
-    let Sv = 0;
-    const ev = new Set;
+    const lT = new WeakSet;
+    let MT = 0;
+    const KT = new Set;
 
-    function gv(vv, zv) {
-      vv._data = zv
+    function OT(TT, kT) {
+      TT._data = kT
     }
 
-    function pv(vv) {
-      var zv, Pv;
-      (null !== (zv = null === (Pv = vv.getBuffer()) || void 0 === Pv ? void 0 : Pv.GT) && void 0 !== zv ? zv : 0) > 0 && (hv.add(vv), 0 === Sv ? gv(vv, null) : ev.add(vv))
+    function yT(TT) {
+      var kT, cT;
+      (null !== (kT = null === (cT = TT.getBuffer()) || void 0 === cT ? void 0 : cT.DA) && void 0 !== kT ? kT : 0) > 0 && (lT.add(TT), 0 === MT ? OT(TT, null) : KT.add(TT))
     }
 
-    function dv(vv) {
-      Sv++;
-      for (const Pv of function(vv) {
-          const zv = new Set;
-          for (const Sv of vv) {
-            const vv = Sv.geometry;
-            for (const Sv of Object.values(null !== (Pv = null === vv || void 0 === vv ? void 0 : vv.getVertexBuffers()) && void 0 !== Pv ? Pv : {})) {
-              var Pv;
-              const vv = Sv.getWrapperBuffer();
-              hv.has(vv) && zv.add(vv)
+    function fT(TT) {
+      MT++;
+      for (const cT of function(TT) {
+          const kT = new Set;
+          for (const MT of TT) {
+            const TT = MT.geometry;
+            for (const MT of Object.values(null !== (cT = null === TT || void 0 === TT ? void 0 : TT.getVertexBuffers()) && void 0 !== cT ? cT : {})) {
+              var cT;
+              const TT = MT.getWrapperBuffer();
+              lT.has(TT) && kT.add(TT)
             }
           }
-          return zv
-        }(vv)) Pv.getData() || Nv(Pv), ev.add(Pv);
-      let zv = !0;
+          return kT
+        }(TT)) cT.getData() || xT(cT), KT.add(cT);
+      let kT = !0;
       return () => {
-        if (zv && (zv = !1, Sv--, 0 === Sv)) {
-          for (const vv of ev) gv(vv, null);
-          ev.clear()
+        if (kT && (kT = !1, MT--, 0 === MT)) {
+          for (const TT of KT) OT(TT, null);
+          KT.clear()
         }
       }
     }
 
-    function Nv(vv) {
-      const zv = vv.getBuffer();
-      if (!zv || !(zv.GT > 0)) return;
-      const Pv = vv._engine,
-        hv = new Uint8Array(zv.GT);
-      Pv.bindArrayBuffer(zv), Pv._gl.getBufferSubData(Pv._gl.ARRAY_BUFFER, 0, hv), Pv._resetVertexBufferBinding(), gv(vv, hv)
+    function xT(TT) {
+      const kT = TT.getBuffer();
+      if (!kT || !(kT.DA > 0)) return;
+      const cT = TT._engine,
+        lT = new Uint8Array(kT.DA);
+      cT.bindArrayBuffer(kT), cT._gl.getBufferSubData(cT._gl.ARRAY_BUFFER, 0, lT), cT._resetVertexBufferBinding(), OT(TT, lT)
     }
   },
-  37044: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => gv,
-      e: () => ev,
-      h: () => dv,
-      l: () => hv,
-      n: () => pv,
-      o: () => Sv,
-      r: () => Nv
+  37395: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => OT,
+      f: () => KT,
+      i: () => fT,
+      l: () => lT,
+      m: () => yT,
+      n: () => MT,
+      r: () => xT
     });
-    const hv = 6,
-      Sv = [0, 2, 4, 1, 3, 5, 0, 2],
-      ev = 6,
-      gv = [1, 0, 3, 2, 5, 4];
-    for (let lv = ev; lv < Sv.length; lv++)
-      if (Sv[lv] !== Sv[lv - ev]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
-    const pv = Sv.length + 1,
-      dv = (() => {
-        const vv = [];
-        for (let zv = 0; zv < ev; zv++) vv[Sv[zv]] = zv;
-        return vv
+    const lT = 6,
+      MT = [0, 2, 4, 1, 3, 5, 0, 2],
+      KT = 6,
+      OT = [1, 0, 3, 2, 5, 4];
+    for (let IT = KT; IT < MT.length; IT++)
+      if (MT[IT] !== MT[IT - KT]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
+    const yT = MT.length + 1,
+      fT = (() => {
+        const TT = [];
+        for (let kT = 0; kT < KT; kT++) TT[MT[kT]] = kT;
+        return TT
       })();
 
-    function Nv(vv) {
-      return !!vv && vv.backFaceCulling && (0 === vv.transparencyMode || 1 === vv.transparencyMode)
+    function xT(TT) {
+      return !!TT && TT.backFaceCulling && (0 === TT.transparencyMode || 1 === TT.transparencyMode)
     }
   },
-  37055: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => pv,
-      f: () => dv,
-      h: () => lv,
-      k: () => Nv,
-      m: () => av
+  37402: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => yT,
+      i: () => fT,
+      m: () => IT,
+      q: () => xT,
+      u: () => vT
     });
-    var hv = Pv(37044);
-    const Sv = 1 / 16,
-      ev = 1 / 64,
-      gv = 2048;
-    hv.l;
+    var lT = cT(37395);
+    const MT = 1 / 16,
+      KT = 1 / 64,
+      OT = 2048;
+    lT.l;
 
-    function pv(vv, zv, Pv) {
-      return Math.min(Math.abs(vv[0] * zv), Math.abs(vv[5] * Pv)) / 2
+    function yT(TT, kT, cT) {
+      return Math.min(Math.abs(TT[0] * kT), Math.abs(TT[5] * cT)) / 2
     }
 
-    function dv(vv, zv) {
-      return Sv + ev * vv * vv / zv
+    function fT(TT, kT) {
+      return MT + KT * TT * TT / kT
     }
 
-    function Nv(vv, zv, Pv, Sv, ev) {
-      const gv = hv.n;
-      return lv(vv[gv], vv[gv + 1], vv[gv + 2], vv[gv + 3], vv[gv + 4], vv[gv + 5], zv, Pv, Sv, ev)
+    function xT(TT, kT, cT, MT, KT) {
+      const OT = lT.m;
+      return IT(TT[OT], TT[OT + 1], TT[OT + 2], TT[OT + 3], TT[OT + 4], TT[OT + 5], kT, cT, MT, KT)
     }
 
-    function lv(vv, zv, Pv, hv, Sv, ev, gv, pv, dv, Nv) {
-      return (gv <= vv - Nv ? 0 : 1) | (gv >= zv + Nv ? 0 : 2) | (pv <= Pv - Nv ? 0 : 4) | (pv >= hv + Nv ? 0 : 8) | (dv <= Sv - Nv ? 0 : 16) | (dv >= ev + Nv ? 0 : 32)
+    function IT(TT, kT, cT, lT, MT, KT, OT, yT, fT, xT) {
+      return (OT <= TT - xT ? 0 : 1) | (OT >= kT + xT ? 0 : 2) | (yT <= cT - xT ? 0 : 4) | (yT >= lT + xT ? 0 : 8) | (fT <= MT - xT ? 0 : 16) | (fT >= KT + xT ? 0 : 32)
     }
-    const Tv = (() => {
-        const vv = [];
-        for (let zv = 0; zv < hv.o.length; zv++) {
-          let Pv = 0;
-          for (let Sv = zv + 1; Sv <= hv.o.length; Sv++) {
-            const ev = 1 << hv.o[Sv - 1];
-            if (Pv & ev) break;
-            Pv |= ev, vv.push({
-              start: zv,
-              end: Sv,
-              tz: Pv
+    const AT = (() => {
+        const TT = [];
+        for (let kT = 0; kT < lT.n.length; kT++) {
+          let cT = 0;
+          for (let MT = kT + 1; MT <= lT.n.length; MT++) {
+            const KT = 1 << lT.n[MT - 1];
+            if (cT & KT) break;
+            cT |= KT, TT.push({
+              start: kT,
+              end: MT,
+              Gk: cT
             })
           }
         }
-        return vv
+        return TT
       })(),
-      Wv = [];
+      CT = [];
 
-    function wv(vv, zv) {
-      const Pv = hv.h[zv];
-      return vv[Pv + 1] - vv[Pv]
+    function jT(TT, kT) {
+      const cT = lT.i[kT];
+      return TT[cT + 1] - TT[cT]
     }
 
-    function av(vv, zv, Pv) {
-      let Sv = 0;
-      for (let gv = 0; gv < hv.l; gv++) wv(vv, gv) > 0 && (Sv |= 1 << gv);
-      if (0 === (zv &= Sv)) return 0;
-      if (zv === Sv) return Pv[0] = 0, Pv[1] = vv[hv.e], 1;
-      let ev = null,
-        pv = 1 / 0;
-      for (const Nv of function(vv) {
-          let zv = Wv[vv];
-          if (zv) return zv;
-          const Pv = new Map,
-            hv = (vv, zv) => {
-              const hv = 4 * vv + zv.length / 2;
-              Pv.has(hv) || Pv.set(hv, {
-                tz: vv,
-                windows: zv
+    function vT(TT, kT, cT) {
+      let MT = 0;
+      for (let OT = 0; OT < lT.l; OT++) jT(TT, OT) > 0 && (MT |= 1 << OT);
+      if (0 === (kT &= MT)) return 0;
+      if (kT === MT) return cT[0] = 0, cT[1] = TT[lT.f], 1;
+      let KT = null,
+        yT = 1 / 0;
+      for (const xT of function(TT) {
+          let kT = CT[TT];
+          if (kT) return kT;
+          const cT = new Map,
+            lT = (TT, kT) => {
+              const lT = 4 * TT + kT.length / 2;
+              cT.has(lT) || cT.set(lT, {
+                Gk: TT,
+                windows: kT
               })
             };
-          for (const ev of Tv)
-            if ((ev.tz & vv) === vv && hv(ev.tz, [ev.start, ev.end]), 0 !== (ev.tz & vv))
-              for (const zv of Tv) zv.start < ev.end || 0 !== (ev.tz & zv.tz) || 0 === (zv.tz & vv) || ((ev.tz | zv.tz) & vv) !== vv || hv(ev.tz | zv.tz, [ev.start, ev.end, zv.start, zv.end]);
-          const Sv = [...Pv.values()];
-          return zv = Sv.filter((vv => !Sv.some((zv => zv !== vv && (zv.tz & vv.tz) === zv.tz && zv.windows.length <= vv.windows.length)))), Wv[vv] = zv, zv
-        }(zv)) {
-        let Pv = (Nv.windows.length / 2 - 1) * gv;
-        const dv = Nv.tz & ~zv & Sv;
-        for (let zv = 0; zv < hv.l; zv++) dv & 1 << zv && (Pv += wv(vv, zv));
-        Pv < pv && (ev = Nv, pv = Pv)
+          for (const KT of AT)
+            if ((KT.Gk & TT) === TT && lT(KT.Gk, [KT.start, KT.end]), 0 !== (KT.Gk & TT))
+              for (const kT of AT) kT.start < KT.end || 0 !== (KT.Gk & kT.Gk) || 0 === (kT.Gk & TT) || ((KT.Gk | kT.Gk) & TT) !== TT || lT(KT.Gk | kT.Gk, [KT.start, KT.end, kT.start, kT.end]);
+          const MT = [...cT.values()];
+          return kT = MT.filter((TT => !MT.some((kT => kT !== TT && (kT.Gk & TT.Gk) === kT.Gk && kT.windows.length <= TT.windows.length)))), CT[TT] = kT, kT
+        }(kT)) {
+        let cT = (xT.windows.length / 2 - 1) * OT;
+        const fT = xT.Gk & ~kT & MT;
+        for (let kT = 0; kT < lT.l; kT++) fT & 1 << kT && (cT += jT(TT, kT));
+        cT < yT && (KT = xT, yT = cT)
       }
-      const dv = ev.windows;
-      for (let hv = 0; hv < dv.length; hv += 2) {
-        const zv = vv[dv[hv]];
-        Pv[hv] = zv, Pv[hv + 1] = vv[dv[hv + 1]] - zv
+      const fT = KT.windows;
+      for (let lT = 0; lT < fT.length; lT += 2) {
+        const kT = TT[fT[lT]];
+        cT[lT] = kT, cT[lT + 1] = TT[fT[lT + 1]] - kT
       }
-      return dv.length / 2
+      return fT.length / 2
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

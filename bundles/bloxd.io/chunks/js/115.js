@@ -1,243 +1,243 @@
 export const id = 115;
 export const ids = [115, 390];
 export const modules = {
-  35895: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      default: () => qz
+  36130: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      default: () => Ek
     });
-    var hv = Pv(302),
-      Sv = Pv(3258),
-      ev = Pv(3301),
-      gv = Pv(3295),
-      pv = Pv(3289),
-      dv = Pv(1175),
-      Nv = Pv(39),
-      lv = Pv(1692),
-      Tv = Pv(1344),
-      Wv = Pv(1442),
-      wv = Pv(1035),
-      av = Pv.n(wv),
-      sv = Pv(1647),
-      Cv = Pv(52),
-      iv = Pv(62),
-      cv = Pv(2277),
-      Gv = Pv(1311),
-      mv = Pv(1595),
-      jv = Pv(1108),
-      fv = Pv(3156),
-      Fv = Pv(4310),
-      Yv = Pv(3241),
-      nv = Pv(1858),
-      Ov = Pv(3256),
-      Dv = Pv(1703),
-      Kv = Pv(1482),
-      Vv = Pv(2097),
-      Uv = Pv(1327),
-      Rv = Pv(2432),
-      xv = Pv(4765),
-      tv = Pv(1082);
-    const qv = 15e3,
-      Iv = 2500;
+    var lT = cT(328),
+      MT = cT(3449),
+      KT = cT(3491),
+      OT = cT(3485),
+      yT = cT(3482),
+      fT = cT(1195),
+      xT = cT(47),
+      IT = cT(1741),
+      AT = cT(1379),
+      CT = cT(1470),
+      jT = cT(1046),
+      vT = cT.n(jT),
+      tT = cT(1692),
+      hT = cT(71),
+      NT = cT(94),
+      QT = cT(2401),
+      ST = cT(1333),
+      DT = cT(1637),
+      aT = cT(1130),
+      FT = cT(3352),
+      rT = cT(4537),
+      PT = cT(3428),
+      wT = cT(1921),
+      mT = cT(3446),
+      bT = cT(1749),
+      zT = cT(1518),
+      JT = cT(2181),
+      oT = cT(1348),
+      HT = cT(2600),
+      eT = cT(4968),
+      GT = cT(1099);
+    const VT = 15e3,
+      ET = 2500;
 
-    function Qv(vv) {
-      var zv;
+    function ZT(TT) {
+      var kT;
       let {
-        eventName: Pv
-      } = vv;
+        eventName: cT
+      } = TT;
       const {
-        t: hv
-      } = (0, dv.x)(), Sv = Dv.h[Pv], [ev, gv] = (0, Cv.useState)((() => Date.now() >= Sv.endsAt.getTime())), [pv, Nv] = (0, Cv.useState)("overall"), lv = function(vv, zv) {
+        t: lT
+      } = (0, fT.B)(), MT = bT.h[cT], [KT, OT] = (0, hT.useState)((() => Date.now() >= MT.endsAt.getTime())), [yT, xT] = (0, hT.useState)("overall"), IT = function(TT, kT) {
         const {
-          userContext: Pv,
-          isUserContextUpdating: hv
-        } = (0, jv.d)(), Sv = `${vv}:${zv}`, [ev, gv] = (0, Cv.useState)({
-          requestKey: Sv,
+          userContext: cT,
+          isUserContextUpdating: lT
+        } = (0, aT.b)(), MT = `${TT}:${kT}`, [KT, OT] = (0, hT.useState)({
+          requestKey: MT,
           leaderboard: {
             status: "loading"
           }
         });
-        return (0, Cv.useEffect)((() => {
-          if (hv) return;
-          let ev, pv = !1;
-          const dv = async () => {
+        return (0, hT.useEffect)((() => {
+          if (lT) return;
+          let KT, yT = !1;
+          const fT = async () => {
             if ("visible" === document.visibilityState) try {
-              const hv = await Kv.e.getGameEventLeaderboard(Pv, {
-                event: vv,
-                scope: zv
+              const lT = await zT.d.getGameEventLeaderboard(cT, {
+                event: TT,
+                scope: kT
               });
-              pv || gv({
-                requestKey: Sv,
+              yT || OT({
+                requestKey: MT,
                 leaderboard: {
                   status: "loaded",
-                  leaderboard: hv
+                  leaderboard: lT
                 }
               })
             } catch {
-              pv || gv((vv => vv.requestKey === Sv && "loaded" === vv.leaderboard.status ? vv : {
-                requestKey: Sv,
+              yT || OT((TT => TT.requestKey === MT && "loaded" === TT.leaderboard.status ? TT : {
+                requestKey: MT,
                 leaderboard: {
                   status: "unavailable"
                 }
               }))
             }
-            pv || (ev = setTimeout(dv, qv))
+            yT || (KT = setTimeout(fT, VT))
           };
-          return dv(), () => {
-            pv = !0, clearTimeout(ev)
+          return fT(), () => {
+            yT = !0, clearTimeout(KT)
           }
-        }), [vv, zv, Sv, Pv, hv]), ev.requestKey === Sv ? ev.leaderboard : {
+        }), [TT, kT, MT, cT, lT]), KT.requestKey === MT ? KT.leaderboard : {
           status: "loading"
         }
-      }(Pv, pv), Tv = function(vv) {
-        const zv = (0, Cv.useRef)(null),
-          Pv = (0, Cv.useRef)(0),
-          hv = (0, Cv.useRef)(),
-          [Sv, ev] = (0, Cv.useState)({});
-        return (0, Cv.useEffect)((() => {
-          const Sv = null === vv || void 0 === vv ? void 0 : vv.entries;
-          if (!Sv) return;
-          const gv = new Map(Sv.map((vv => [vv.player.name, vv.value]))),
-            pv = zv.current;
-          if (zv.current = gv, null === pv) return;
-          const dv = {};
-          for (const [vv, zv] of gv) {
-            const hv = pv.get(vv);
-            void 0 !== hv && zv > hv && (dv[vv] = {
-              amount: zv - hv,
-              key: Pv.current++
+      }(cT, yT), AT = function(TT) {
+        const kT = (0, hT.useRef)(null),
+          cT = (0, hT.useRef)(0),
+          lT = (0, hT.useRef)(),
+          [MT, KT] = (0, hT.useState)({});
+        return (0, hT.useEffect)((() => {
+          const MT = null === TT || void 0 === TT ? void 0 : TT.entries;
+          if (!MT) return;
+          const OT = new Map(MT.map((TT => [TT.player.name, TT.value]))),
+            yT = kT.current;
+          if (kT.current = OT, null === yT) return;
+          const fT = {};
+          for (const [TT, kT] of OT) {
+            const lT = yT.get(TT);
+            void 0 !== lT && kT > lT && (fT[TT] = {
+              amount: kT - lT,
+              key: cT.current++
             })
           }
-          0 !== Object.keys(dv).length && (ev(dv), clearTimeout(hv.current), hv.current = setTimeout((() => {
-            ev({})
-          }), Iv))
-        }), [vv]), (0, Cv.useEffect)((() => () => {
-          clearTimeout(hv.current)
-        }), []), Sv
-      }("loaded" === lv.status ? lv.leaderboard : null), Wv = function(vv) {
-        const [zv, Pv] = (0, Cv.useState)(null), hv = "loaded" === vv.status ? vv.leaderboard.goalProgress : void 0;
-        return (0, Cv.useEffect)((() => {
-          hv && Pv(hv)
-        }), [hv]), zv
-      }(lv), wv = Vv.f[`profileEffect_${Sv.prizePack}`];
-      if (ev) return null;
-      const sv = "loaded" === lv.status ? lv.leaderboard : null,
-        iv = null !== (zv = null === sv || void 0 === sv ? void 0 : sv.entries) && void 0 !== zv ? zv : null,
-        cv = null !== sv && void 0 !== sv && sv.own && null !== iv && !iv.some((vv => vv.isOwn)) ? sv.own : null;
-      return (0, tv.jsx)("section", {
+          0 !== Object.keys(fT).length && (KT(fT), clearTimeout(lT.current), lT.current = setTimeout((() => {
+            KT({})
+          }), ET))
+        }), [TT]), (0, hT.useEffect)((() => () => {
+          clearTimeout(lT.current)
+        }), []), MT
+      }("loaded" === IT.status ? IT.leaderboard : null), CT = function(TT) {
+        const [kT, cT] = (0, hT.useState)(null), lT = "loaded" === TT.status ? TT.leaderboard.goalProgress : void 0;
+        return (0, hT.useEffect)((() => {
+          lT && cT(lT)
+        }), [lT]), kT
+      }(IT), jT = JT.f[`profileEffect_${MT.prizePack}`];
+      if (KT) return null;
+      const tT = "loaded" === IT.status ? IT.leaderboard : null,
+        NT = null !== (kT = null === tT || void 0 === tT ? void 0 : tT.entries) && void 0 !== kT ? kT : null,
+        QT = null !== tT && void 0 !== tT && tT.own && null !== NT && !NT.some((TT => TT.isOwn)) ? tT.own : null;
+      return (0, GT.jsx)("section", {
         className: "GameEventPanel AnimFadeIn",
-        children: (0, tv.jsxs)("div", {
+        children: (0, GT.jsxs)("div", {
           className: "GameEventPanelCard",
-          children: [(0, tv.jsxs)("div", {
+          children: [(0, GT.jsxs)("div", {
             className: "GameEventPanelInfo",
-            children: [(0, tv.jsxs)("div", {
+            children: [(0, GT.jsxs)("div", {
               className: "GameEventPanelStatus",
-              children: [(0, tv.jsxs)("span", {
+              children: [(0, GT.jsxs)("span", {
                 className: "GameEventPanelLive",
-                children: [(0, tv.jsx)("span", {
+                children: [(0, GT.jsx)("span", {
                   className: "GameEventPanelLiveDot"
-                }), hv("gameEvents:live")]
-              }), (0, tv.jsxs)("span", {
+                }), lT("gameEvents:live")]
+              }), (0, GT.jsxs)("span", {
                 className: "GameEventPanelEndsIn",
-                children: [hv("gameEvents:endsIn"), (0, tv.jsx)(Yv.e, {
-                  toTime: Sv.endsAt,
+                children: [lT("gameEvents:endsIn"), (0, GT.jsx)(PT.b, {
+                  toTime: MT.endsAt,
                   onReachEndOfCountdown: () => {
-                    gv(!0)
+                    OT(!0)
                   }
                 })]
               })]
-            }), (0, tv.jsx)("h2", {
+            }), (0, GT.jsx)("h2", {
               className: "GameEventPanelTitle",
-              children: hv(Sv.titleKey)
-            }), (0, tv.jsxs)("div", {
+              children: lT(MT.titleKey)
+            }), (0, GT.jsxs)("div", {
               className: "GameEventPanelPrize",
-              children: [(0, tv.jsxs)("div", {
+              children: [(0, GT.jsxs)("div", {
                 className: "GameEventPanelPrizeSummary",
-                children: [wv && (0, tv.jsx)("div", {
+                children: [jT && (0, GT.jsx)("div", {
                   className: "GameEventPanelPrizePreview",
-                  children: (0, tv.jsx)(wv, {})
-                }), (0, tv.jsxs)("div", {
+                  children: (0, GT.jsx)(jT, {})
+                }), (0, GT.jsxs)("div", {
                   className: "GameEventPanelPrizeText",
-                  children: [(0, tv.jsx)("div", {
+                  children: [(0, GT.jsx)("div", {
                     className: "GameEventPanelPrizeLabel",
-                    children: hv("gameEvents:prize")
-                  }), (0, tv.jsx)("div", {
+                    children: lT("gameEvents:prize")
+                  }), (0, GT.jsx)("div", {
                     className: "GameEventPanelPrizeName",
-                    children: hv(Sv.prizeNameKey)
+                    children: lT(MT.prizeNameKey)
                   })]
                 })]
-              }), (0, tv.jsx)(Zv, {
-                event: Sv,
-                progress: Wv
+              }), (0, GT.jsx)(uT, {
+                event: MT,
+                progress: CT
               })]
             })]
-          }), (0, tv.jsxs)("div", {
+          }), (0, GT.jsxs)("div", {
             className: "GameEventPanelLeaderboard",
-            children: [(0, tv.jsxs)("div", {
+            children: [(0, GT.jsxs)("div", {
               className: "GameEventPanelLeaderboardHeader",
-              children: [(0, tv.jsx)("h3", {
+              children: [(0, GT.jsx)("h3", {
                 className: "GameEventPanelLeaderboardTitle",
-                children: hv(Sv.leaderboard.titleKey)
-              }), (0, tv.jsx)(xv.c, {
-                ariaLabel: hv("gameEvents:leaderboardScope"),
-                options: Dv.d.map((vv => ({
-                  value: vv,
-                  label: hv(`gameEvents:${vv}Scope`)
+                children: lT(MT.leaderboard.titleKey)
+              }), (0, GT.jsx)(eT.d, {
+                ariaLabel: lT("gameEvents:leaderboardScope"),
+                options: bT.d.map((TT => ({
+                  value: TT,
+                  label: lT(`gameEvents:${TT}Scope`)
                 }))),
-                value: pv,
-                onChange: Nv
+                value: yT,
+                onChange: xT
               })]
-            }), "loading" === lv.status && (0, tv.jsx)("div", {
+            }), "loading" === IT.status && (0, GT.jsx)("div", {
               className: "GameEventPanelLeaderboardLoader AnimFadeIn",
-              children: (0, tv.jsx)(Uv.c, {})
-            }), ("unavailable" === lv.status || "loaded" === lv.status && null === iv) && (0, tv.jsx)("div", {
+              children: (0, GT.jsx)(oT.d, {})
+            }), ("unavailable" === IT.status || "loaded" === IT.status && null === NT) && (0, GT.jsx)("div", {
               className: "GameEventPanelLeaderboardMessage",
-              children: hv("gameEvents:leaderboardUnavailable")
-            }), null !== iv && 0 === iv.length && (0, tv.jsx)("div", {
+              children: lT("gameEvents:leaderboardUnavailable")
+            }), null !== NT && 0 === NT.length && (0, GT.jsx)("div", {
               className: "GameEventPanelLeaderboardMessage",
-              children: hv("friends" === pv ? "gameEvents:friendsLeaderboardEmpty" : "gameEvents:leaderboardEmpty")
-            }), null !== iv && iv.length > 0 && (0, tv.jsx)("ol", {
+              children: lT("friends" === yT ? "gameEvents:friendsLeaderboardEmpty" : "gameEvents:leaderboardEmpty")
+            }), null !== NT && NT.length > 0 && (0, GT.jsx)("ol", {
               className: "GameEventPanelRows",
-              children: iv.map((vv => {
-                const zv = Tv[vv.player.name];
-                return (0, tv.jsxs)("li", {
-                  className: av()("GameEventPanelRow", {
-                    GameEventPanelRowOwn: vv.isOwn,
-                    GameEventPanelRowTop: vv.rank <= 3
+              children: NT.map((TT => {
+                const kT = AT[TT.player.name];
+                return (0, GT.jsxs)("li", {
+                  className: vT()("GameEventPanelRow", {
+                    GameEventPanelRowOwn: TT.isOwn,
+                    GameEventPanelRowTop: TT.rank <= 3
                   }),
-                  children: [(0, tv.jsxs)("span", {
+                  children: [(0, GT.jsxs)("span", {
                     className: "GameEventPanelRank",
-                    children: ["#", vv.rank]
-                  }), (0, tv.jsx)("div", {
+                    children: ["#", TT.rank]
+                  }), (0, GT.jsx)("div", {
                     className: "GameEventPanelPlayer",
-                    children: (0, tv.jsx)(Rv.e, {
+                    children: (0, GT.jsx)(HT.h, {
                       playerSocialPreview: {
-                        ...vv.player,
+                        ...TT.player,
                         location: {
                           status: "offline"
                         }
                       },
                       showLocation: !1
                     })
-                  }), void 0 !== zv && (0, tv.jsxs)("span", {
+                  }), void 0 !== kT && (0, GT.jsxs)("span", {
                     className: "GameEventPanelGain",
-                    children: ["+", zv.amount.toLocaleString()]
-                  }, zv.key), (0, tv.jsx)("span", {
+                    children: ["+", kT.amount.toLocaleString()]
+                  }, kT.key), (0, GT.jsx)("span", {
                     className: "GameEventPanelScore",
-                    children: vv.value.toLocaleString()
+                    children: TT.value.toLocaleString()
                   })]
-                }, vv.player.name)
+                }, TT.player.name)
               }))
-            }), cv && (0, tv.jsxs)("div", {
+            }), QT && (0, GT.jsxs)("div", {
               className: "GameEventPanelRow GameEventPanelRowOwn GameEventPanelOwnRow",
-              children: [(0, tv.jsxs)("span", {
+              children: [(0, GT.jsxs)("span", {
                 className: "GameEventPanelRank",
-                children: ["#", cv.rank.toLocaleString()]
-              }), (0, tv.jsx)("span", {
+                children: ["#", QT.rank.toLocaleString()]
+              }), (0, GT.jsx)("span", {
                 className: "GameEventPanelPlayer",
-                children: hv("gameEvents:yourPlace")
-              }), (0, tv.jsx)("span", {
+                children: lT("gameEvents:yourPlace")
+              }), (0, GT.jsx)("span", {
                 className: "GameEventPanelScore",
-                children: cv.value.toLocaleString()
+                children: QT.value.toLocaleString()
               })]
             })]
           })]
@@ -245,355 +245,355 @@ export const modules = {
       })
     }
 
-    function Zv(vv) {
+    function uT(TT) {
       let {
-        event: zv,
-        progress: Pv
-      } = vv;
+        event: kT,
+        progress: cT
+      } = TT;
       const {
-        t: hv
-      } = (0, dv.x)(), Sv = null !== Pv && zv.prizeGoals.some(((vv, zv) => Pv[zv] >= vv.target));
-      return (0, tv.jsxs)("div", {
+        t: lT
+      } = (0, fT.B)(), MT = null !== cT && kT.prizeGoals.some(((TT, kT) => cT[kT] >= TT.target));
+      return (0, GT.jsxs)("div", {
         className: "GameEventPanelGoals",
-        children: [(0, tv.jsx)("div", {
+        children: [(0, GT.jsx)("div", {
           className: "GameEventPanelGoalsHeading",
-          children: hv(Sv ? "gameEvents:prizeEarned" : "gameEvents:goalsHeading")
-        }), (0, tv.jsx)("div", {
+          children: lT(MT ? "gameEvents:prizeEarned" : "gameEvents:goalsHeading")
+        }), (0, GT.jsx)("div", {
           className: "GameEventPanelGoalRow",
-          children: zv.prizeGoals.map(((vv, zv) => {
-            const Sv = null === Pv ? null : Math.min(Pv[zv], vv.target);
-            return (0, tv.jsxs)(Cv.Fragment, {
-              children: [zv > 0 && (0, tv.jsx)("div", {
+          children: kT.prizeGoals.map(((TT, kT) => {
+            const MT = null === cT ? null : Math.min(cT[kT], TT.target);
+            return (0, GT.jsxs)(hT.Fragment, {
+              children: [kT > 0 && (0, GT.jsx)("div", {
                 className: "GameEventPanelGoalsOr",
-                children: hv("gameEvents:goalsOr")
-              }), (0, tv.jsxs)("div", {
-                className: av()("GameEventPanelGoal", {
-                  GameEventPanelGoalDone: Sv === vv.target
+                children: lT("gameEvents:goalsOr")
+              }), (0, GT.jsxs)("div", {
+                className: vT()("GameEventPanelGoal", {
+                  GameEventPanelGoalDone: MT === TT.target
                 }),
-                children: [(0, tv.jsx)("span", {
+                children: [(0, GT.jsx)("span", {
                   className: "GameEventPanelGoalLabel",
-                  children: hv(vv.labelKey)
-                }), (0, tv.jsxs)("div", {
+                  children: lT(TT.labelKey)
+                }), (0, GT.jsxs)("div", {
                   className: "GameEventPanelGoalBar",
-                  children: [(0, tv.jsx)("div", {
+                  children: [(0, GT.jsx)("div", {
                     className: "GameEventPanelGoalBarFill",
                     style: {
-                      width: (null !== Sv && void 0 !== Sv ? Sv : 0) / vv.target * 100 + "%"
+                      width: (null !== MT && void 0 !== MT ? MT : 0) / TT.target * 100 + "%"
                     }
-                  }), null !== Sv && (0, tv.jsxs)("span", {
+                  }), null !== MT && (0, GT.jsxs)("span", {
                     className: "GameEventPanelGoalCount",
-                    children: [Sv.toLocaleString(), " / ", vv.target.toLocaleString()]
+                    children: [MT.toLocaleString(), " / ", TT.target.toLocaleString()]
                   })]
                 })]
               })]
-            }, vv.board)
+            }, TT.board)
           }))
         })]
       })
     }
-    var Av = Pv(1534),
-      Lv = Pv(1578),
-      Hv = Pv(1024),
-      Mv = Pv(721),
-      yv = Pv(3236);
+    var XT = cT(1559),
+      dT = cT(1616),
+      LT = cT(1035),
+      RT = cT(731),
+      gT = cT(3419);
 
-    function Bv(vv) {
+    function UT(TT) {
       let {
-        gameNameWithVariation: zv
-      } = vv;
-      const Pv = (0, Av.M)(zv),
-        [hv, Sv] = (0, Cv.useState)(null);
-      if ((0, Cv.useEffect)((() => {
-          if (!Pv) return;
-          let vv = !0;
-          return (0, Lv.e)(Pv).then((zv => {
-            vv && Sv(zv)
-          })).catch((vv => {
-            console.error(`Failed to load the page copy for ${Pv.name}`, vv)
+        gameNameWithVariation: kT
+      } = TT;
+      const cT = (0, XT.F)(kT),
+        [lT, MT] = (0, hT.useState)(null);
+      if ((0, hT.useEffect)((() => {
+          if (!cT) return;
+          let TT = !0;
+          return (0, dT.m)(cT).then((kT => {
+            TT && MT(kT)
+          })).catch((TT => {
+            console.error(`Failed to load the page copy for ${cT.name}`, TT)
           })), () => {
-            vv = !1
+            TT = !1
           }
-        }), [Pv]), !Pv || !hv || hv.name !== Pv.name) return null;
-      const ev = (0, Lv.d)(hv),
-        gv = new Set((0, Hv.d)((0, Mv.k)()).map((vv => (0, Av.C)(vv)))),
-        pv = hv.similarGames.filter((vv => gv.has((0, Av.C)(vv))));
-      return (0, tv.jsx)("div", {
+        }), [cT]), !cT || !lT || lT.name !== cT.name) return null;
+      const KT = (0, dT.i)(lT),
+        OT = new Set((0, LT.d)((0, RT.g)()).map((TT => (0, XT.u)(TT)))),
+        yT = lT.similarGames.filter((TT => OT.has((0, XT.u)(TT))));
+      return (0, GT.jsx)("div", {
         className: "GamePageContent",
-        children: (0, tv.jsxs)("div", {
+        children: (0, GT.jsxs)("div", {
           className: "GamePageContentColumns",
-          children: [(0, tv.jsxs)("section", {
+          children: [(0, GT.jsxs)("section", {
             className: "GamePageContentSection",
-            children: [(0, tv.jsx)("h2", {
-              children: ev.whatIs
-            }), hv.whatIs.map((vv => (0, tv.jsx)("p", {
-              children: vv
-            }, vv)))]
-          }), (0, tv.jsxs)("section", {
+            children: [(0, GT.jsx)("h2", {
+              children: KT.whatIs
+            }), lT.whatIs.map((TT => (0, GT.jsx)("p", {
+              children: TT
+            }, TT)))]
+          }), (0, GT.jsxs)("section", {
             className: "GamePageContentSection",
-            children: [(0, tv.jsx)("h2", {
-              children: ev.howToPlay
-            }), hv.howToPlay.map((vv => (0, tv.jsx)("p", {
-              children: vv
-            }, vv)))]
-          }), (0, tv.jsxs)("section", {
+            children: [(0, GT.jsx)("h2", {
+              children: KT.howToPlay
+            }), lT.howToPlay.map((TT => (0, GT.jsx)("p", {
+              children: TT
+            }, TT)))]
+          }), (0, GT.jsxs)("section", {
             className: "GamePageContentSection",
-            children: [(0, tv.jsx)("h2", {
-              children: ev.features
-            }), (0, tv.jsx)("ul", {
-              children: hv.features.map((vv => (0, tv.jsx)("li", {
-                children: vv
-              }, vv)))
+            children: [(0, GT.jsx)("h2", {
+              children: KT.features
+            }), (0, GT.jsx)("ul", {
+              children: lT.features.map((TT => (0, GT.jsx)("li", {
+                children: TT
+              }, TT)))
             })]
-          }), (0, tv.jsxs)("aside", {
+          }), (0, GT.jsxs)("aside", {
             className: "GamePageContentSection",
-            children: [(0, tv.jsx)("h2", {
-              children: ev.tips
-            }), (0, tv.jsx)("ul", {
-              children: hv.tips.map((vv => (0, tv.jsx)("li", {
-                children: vv
-              }, vv)))
+            children: [(0, GT.jsx)("h2", {
+              children: KT.tips
+            }), (0, GT.jsx)("ul", {
+              children: lT.tips.map((TT => (0, GT.jsx)("li", {
+                children: TT
+              }, TT)))
             })]
-          }), (0, tv.jsxs)("section", {
+          }), (0, GT.jsxs)("section", {
             className: "GamePageContentSection GamePageContentFaq",
-            children: [(0, tv.jsx)("h2", {
-              children: ev.faq
-            }), hv.faq.map((vv => {
+            children: [(0, GT.jsx)("h2", {
+              children: KT.faq
+            }), lT.faq.map((TT => {
               let {
-                question: zv,
-                answer: Pv
-              } = vv;
-              return (0, tv.jsxs)("div", {
+                question: kT,
+                answer: cT
+              } = TT;
+              return (0, GT.jsxs)("div", {
                 className: "GamePageContentFaqItem",
-                children: [(0, tv.jsx)("h3", {
-                  children: zv
-                }), (0, tv.jsx)("p", {
-                  children: Pv
+                children: [(0, GT.jsx)("h3", {
+                  children: kT
+                }), (0, GT.jsx)("p", {
+                  children: cT
                 })]
-              }, zv)
+              }, kT)
             }))]
-          }), pv.length > 0 && (0, tv.jsxs)("nav", {
+          }), yT.length > 0 && (0, GT.jsxs)("nav", {
             className: "GamePageContentSection GamePageContentSimilarGamesSection",
-            children: [(0, tv.jsx)("h2", {
-              children: ev.similarGames
-            }), (0, tv.jsx)("ul", {
+            children: [(0, GT.jsx)("h2", {
+              children: KT.similarGames
+            }), (0, GT.jsx)("ul", {
               className: "GamePageContentSimilarGames",
-              children: pv.map((vv => (0, tv.jsx)("li", {
-                children: (0, tv.jsx)(yv.i, {
+              children: yT.map((TT => (0, GT.jsx)("li", {
+                children: (0, GT.jsx)(gT.d, {
                   source: {
                     type: "game",
-                    gameNameWithVariation: vv
+                    gameNameWithVariation: TT
                   },
                   entrySource: "other",
                   gameWidth: "100%",
                   useLongRatio: !0
                 })
-              }, vv)))
+              }, TT)))
             })]
           })]
         })
       })
     }
-    var Jv = Pv(1042),
-      Ev = Pv(73),
-      ov = Pv(1114),
-      bv = Pv(9054),
-      rv = Pv(1622),
-      kv = Pv(1505),
-      Xv = Pv(1492),
-      uv = Pv(1592),
-      vz = Pv(1447),
-      zz = Pv(1336),
-      Pz = Pv(35899),
-      hz = Pv(1221),
-      Sz = Pv(1002),
-      ez = Pv(312),
-      gz = Pv(1011),
-      pz = Pv(1529),
-      dz = Pv(8580),
-      Nz = Pv(22),
-      lz = Pv(2396),
-      Tz = Pv(763),
-      Wz = Pv(1209),
-      wz = Pv(6225),
-      az = Pv(3247);
+    var YT = cT(1061),
+      BT = cT(118),
+      WT = cT(1136),
+      nT = cT(9406),
+      pT = cT(1671),
+      iT = cT(1535),
+      qT = cT(1530),
+      sT = cT(1628),
+      Tk = cT(1478),
+      kk = cT(1363),
+      ck = cT(36138),
+      lk = cT(1242),
+      Mk = cT(1018),
+      Kk = cT(339),
+      Ok = cT(1026),
+      yk = cT(1554),
+      fk = cT(8946),
+      xk = cT(31),
+      Ik = cT(2563),
+      Ak = cT(761),
+      Ck = cT(1226),
+      jk = cT(6516),
+      vk = cT(3436);
 
-    function sz(vv) {
+    function tk(TT) {
       let {
-        preview: zv,
-        isBroken: Pv
-      } = vv;
-      const hv = null === zv ? null : (0, ev.g)(zv, "small"),
-        gv = (0, Sv.f)(null !== hv && void 0 !== hv ? hv : ev.r);
-      return null === zv ? (0, tv.jsx)("div", {
-        className: av()("FeaturedGamesPopupSlotThumbnail FeaturedGamesPopupSlotThumbnailEmpty", {
-          FeaturedGamesPopupSlotThumbnailBroken: Pv
+        preview: kT,
+        isBroken: cT
+      } = TT;
+      const lT = null === kT ? null : (0, KT.i)(kT, "small"),
+        OT = (0, MT.f)(null !== lT && void 0 !== lT ? lT : KT.s);
+      return null === kT ? (0, GT.jsx)("div", {
+        className: vT()("FeaturedGamesPopupSlotThumbnail FeaturedGamesPopupSlotThumbnailEmpty", {
+          FeaturedGamesPopupSlotThumbnailBroken: cT
         }),
-        children: (0, tv.jsx)(Jv.b, {
-          name: Pv ? "triangle-exclamation" : "star"
+        children: (0, GT.jsx)(YT.e, {
+          name: cT ? "triangle-exclamation" : "star"
         })
-      }) : (0, tv.jsx)("div", {
-        className: av()("FeaturedGamesPopupSlotThumbnail", pv.g),
-        style: (0, pv.e)(gv),
+      }) : (0, GT.jsx)("div", {
+        className: vT()("FeaturedGamesPopupSlotThumbnail", yT.g),
+        style: (0, yT.f)(OT),
         role: "img",
-        "aria-label": zv.name,
-        children: (0, tv.jsx)(pv.b, {
-          image: gv
+        "aria-label": kT.name,
+        children: (0, GT.jsx)(yT.d, {
+          image: OT
         })
       })
     }
 
-    function Cz(vv) {
+    function hk(TT) {
       let {
-        schematicId: zv,
-        gameName: Pv
-      } = vv;
+        schematicId: kT,
+        gameName: cT
+      } = TT;
       const {
-        userContext: Sv
-      } = (0, jv.d)(), ev = (0, az.b)(), [gv, pv] = (0, Cv.useState)(null), [dv, Nv] = (0, Cv.useState)(null), [lv, Tv] = (0, Cv.useState)(!1), wv = (0, Cv.useCallback)((() => {
-        Nv(null), Kv.e.getFeaturedGames(Sv).then((vv => {
-          ev.current && pv(vv.slots)
-        })).catch((vv => {
-          console.error("Failed to get featured games", vv), ev.current && Nv("Failed to load featured games")
+        userContext: MT
+      } = (0, aT.b)(), KT = (0, vk.b)(), [OT, yT] = (0, hT.useState)(null), [fT, xT] = (0, hT.useState)(null), [IT, AT] = (0, hT.useState)(!1), jT = (0, hT.useCallback)((() => {
+        xT(null), zT.d.getFeaturedGames(MT).then((TT => {
+          KT.current && yT(TT.slots)
+        })).catch((TT => {
+          console.error("Failed to get featured games", TT), KT.current && xT("Failed to load featured games")
         }))
-      }), [Sv, ev]);
-      (0, Cv.useEffect)((() => {
-        wv()
-      }), [wv]);
-      const av = (vv, zv) => {
-        lv || (Tv(!0), Kv.e.setFeaturedGame(Sv, vv, zv).then((() => {
-          ev.current && wv()
-        })).catch((vv => {
-          console.error("Failed to set featured game", vv), ev.current && Nv("Failed to update the featured slot")
+      }), [MT, KT]);
+      (0, hT.useEffect)((() => {
+        jT()
+      }), [jT]);
+      const vT = (TT, kT) => {
+        IT || (AT(!0), zT.d.setFeaturedGame(MT, TT, kT).then((() => {
+          KT.current && jT()
+        })).catch((TT => {
+          console.error("Failed to set featured game", TT), KT.current && xT("Failed to update the featured slot")
         })).finally((() => {
-          ev.current && Tv(!1)
+          KT.current && AT(!1)
         })))
       };
-      return (0, tv.jsxs)("div", {
+      return (0, GT.jsxs)("div", {
         className: "FeaturedGamesPopupBody",
-        children: [(0, tv.jsx)("h1", {
+        children: [(0, GT.jsx)("h1", {
           className: "FeaturedGamesPopupTitle",
           children: "Featured Games"
-        }), !gv && !dv && (0, tv.jsx)("div", {
+        }), !OT && !fT && (0, GT.jsx)("div", {
           className: "FeaturedGamesPopupLoader",
-          children: (0, tv.jsx)(Uv.c, {})
-        }), dv && (0, tv.jsx)("div", {
+          children: (0, GT.jsx)(oT.d, {})
+        }), fT && (0, GT.jsx)("div", {
           className: "FeaturedGamesPopupError",
-          children: dv
-        }), gv && (0, tv.jsxs)(tv.Fragment, {
-          children: [(0, tv.jsx)("div", {
+          children: fT
+        }), OT && (0, GT.jsxs)(GT.Fragment, {
+          children: [(0, GT.jsx)("div", {
             className: "FeaturedGamesPopupSlots",
-            children: gv.map((vv => {
-              const Pv = vv.schematicId === zv,
-                Sv = null === vv.schematicId,
+            children: OT.map((TT => {
+              const cT = TT.schematicId === kT,
+                MT = null === TT.schematicId,
                 {
-                  categoryGroup: ev
-                } = hv.D[vv.slotId];
-              return (0, tv.jsxs)("div", {
+                  categoryGroup: KT
+                } = lT.J[TT.slotId];
+              return (0, GT.jsxs)("div", {
                 className: "FeaturedGamesPopupSlot",
-                children: [(0, tv.jsx)(sz, {
-                  preview: vv.preview,
-                  isBroken: !Sv
-                }), (0, tv.jsxs)("div", {
+                children: [(0, GT.jsx)(tk, {
+                  preview: TT.preview,
+                  isBroken: !MT
+                }), (0, GT.jsxs)("div", {
                   className: "FeaturedGamesPopupSlotText",
-                  children: [(0, tv.jsxs)("div", {
+                  children: [(0, GT.jsxs)("div", {
                     className: "FeaturedGamesPopupSlotLabel",
-                    children: [(0, hv.eb)(ev), " \xb7 position", " ", (0, hv.E)(vv.slotId, hv.Ab) + 1, " of", " ", (0, hv.zb)(ev, hv.Ab)]
-                  }), Sv && (0, tv.jsx)("div", {
+                    children: [(0, lT.Y)(KT), " \xb7 position", " ", (0, lT.L)(TT.slotId, lT.Db) + 1, " of", " ", (0, lT.Bb)(KT, lT.Db)]
+                  }), MT && (0, GT.jsx)("div", {
                     className: "FeaturedGamesPopupSlotEmpty",
                     children: "Empty"
-                  }), !Sv && null !== vv.preview && (0, tv.jsx)("div", {
+                  }), !MT && null !== TT.preview && (0, GT.jsx)("div", {
                     className: "FeaturedGamesPopupSlotGame",
-                    children: vv.preview.name
-                  }), !Sv && null === vv.preview && (0, tv.jsxs)("div", {
+                    children: TT.preview.name
+                  }), !MT && null === TT.preview && (0, GT.jsxs)("div", {
                     className: "FeaturedGamesPopupSlotMissing",
-                    children: [(0, tv.jsx)(Jv.b, {
+                    children: [(0, GT.jsx)(YT.e, {
                       name: "triangle-exclamation"
                     }), " Pinned game is no longer published"]
                   })]
-                }), (0, tv.jsxs)("div", {
+                }), (0, GT.jsxs)("div", {
                   className: "FeaturedGamesPopupSlotActions",
-                  children: [Sv && (0, tv.jsxs)(Wv.l, {
+                  children: [MT && (0, GT.jsxs)(CT.r, {
                     className: "FeaturedGamesPopupSlotButton",
                     onClick: () => {
-                      av(vv.slotId, zv)
+                      vT(TT.slotId, kT)
                     },
-                    disabled: lv,
-                    children: [(0, tv.jsx)(Jv.b, {
+                    disabled: IT,
+                    children: [(0, GT.jsx)(YT.e, {
                       name: "star"
                     }), " Feature here"]
-                  }), !Sv && !Pv && (0, tv.jsxs)(Wv.K, {
+                  }), !MT && !cT && (0, GT.jsxs)(CT.P, {
                     className: "FeaturedGamesPopupSlotButton",
                     onClick: () => {
-                      av(vv.slotId, zv)
+                      vT(TT.slotId, kT)
                     },
-                    disabled: lv,
-                    children: [(0, tv.jsx)(Jv.b, {
+                    disabled: IT,
+                    children: [(0, GT.jsx)(YT.e, {
                       name: "star"
                     }), " Replace"]
-                  }), !Sv && (0, tv.jsxs)(Wv.A, {
+                  }), !MT && (0, GT.jsxs)(CT.I, {
                     className: "FeaturedGamesPopupSlotButton",
                     onClick: () => {
-                      av(vv.slotId, null)
+                      vT(TT.slotId, null)
                     },
-                    disabled: lv,
-                    children: [(0, tv.jsx)(Jv.b, {
+                    disabled: IT,
+                    children: [(0, GT.jsx)(YT.e, {
                       name: "xmark"
                     }), " Clear"]
                   })]
                 })]
-              }, vv.slotId)
+              }, TT.slotId)
             }))
-          }), (0, tv.jsx)("p", {
+          }), (0, GT.jsx)("p", {
             className: "FeaturedGamesPopupHint",
             children: "A game leaves its slot once it ranks higher on its own."
           })]
         })]
       })
     }
-    var iz = Pv(4437),
-      cz = Pv(4351),
-      Gz = Pv(3329);
-    const mz = 8,
-      jz = 12;
+    var Nk = cT(4660),
+      Qk = cT(4572),
+      Sk = cT(3536);
+    const Dk = 8,
+      ak = 12;
 
-    function fz(vv) {
+    function Fk(TT) {
       let {
-        customLobbies: zv,
-        favouriteLobbies: Pv,
-        toggleLikeLobby: hv,
-        showReport: Sv
-      } = vv;
-      const [ev, gv] = (0, Cv.useState)(mz);
-      return (0, Cv.useEffect)((() => {
-        if (ev >= zv.length) return;
-        let vv = !0;
-        return (0, Gz.e)().then((() => {
-          vv && gv(ev + jz)
+        customLobbies: kT,
+        favouriteLobbies: cT,
+        toggleLikeLobby: lT,
+        showReport: MT
+      } = TT;
+      const [KT, OT] = (0, hT.useState)(Dk);
+      return (0, hT.useEffect)((() => {
+        if (KT >= kT.length) return;
+        let TT = !0;
+        return (0, Sk.e)().then((() => {
+          TT && OT(KT + ak)
         })), () => {
-          vv = !1
+          TT = !1
         }
-      }), [ev, zv.length]), (0, tv.jsx)(tv.Fragment, {
-        children: zv.slice(0, ev).map((vv => (0, tv.jsx)(cz.f, {
-          customLobby: vv,
-          favouriteLobbies: Pv,
-          toggleLikeLobby: hv,
-          showReport: Sv
-        }, vv.name)))
+      }), [KT, kT.length]), (0, GT.jsx)(GT.Fragment, {
+        children: kT.slice(0, KT).map((TT => (0, GT.jsx)(Qk.g, {
+          customLobby: TT,
+          favouriteLobbies: cT,
+          toggleLikeLobby: lT,
+          showReport: MT
+        }, TT.name)))
       })
     }
-    var Fz = Pv(4359),
-      Yz = Pv(4375),
-      nz = Pv(4329),
-      Oz = Pv(3322),
-      Dz = Pv(8578),
-      Kz = Pv(209);
-    const Vz = {
-      skyblock: [Pv(35922).d]
+    var rk = cT(4575),
+      Pk = cT(4590),
+      wk = cT(4550),
+      mk = cT(3527),
+      bk = cT(8939),
+      zk = cT(232);
+    const Jk = {
+      skyblock: [cT(36174).e]
     };
-    var Uz = Pv(626);
-    const Rz = {
+    var Hk = cT(617);
+    const ek = {
       listedVariations: null,
-      backgroundImage: ev.r,
+      backgroundImage: KT.s,
       badges: [],
       category: null,
       title: null,
@@ -609,363 +609,363 @@ export const modules = {
       countdownInformation: null
     };
 
-    function xz(vv, zv) {
-      const Pv = Tz.h[vv.schematicId];
+    function Gk(TT, kT) {
+      const cT = Ak.i[TT.schematicId];
       return {
         listedVariations: [],
-        backgroundImage: (0, ev.g)(vv, "large"),
+        backgroundImage: (0, KT.i)(TT, "large"),
         badges: [],
-        category: vv.gameCategory,
-        title: void 0 !== (null === Pv || void 0 === Pv ? void 0 : Pv.title) ? zv(Pv.title) : vv.name,
+        category: TT.gameCategory,
+        title: void 0 !== (null === cT || void 0 === cT ? void 0 : cT.title) ? kT(cT.title) : TT.name,
         variationTitle: null,
-        description: void 0 !== (null === Pv || void 0 === Pv ? void 0 : Pv.description) ? zv(Pv.description) : vv.description,
-        ownerSocialPreviewWithoutLocation: "owner" in vv ? vv.owner : null,
-        ccu: vv.ccu,
-        favourites: vv.favourites,
+        description: void 0 !== (null === cT || void 0 === cT ? void 0 : cT.description) ? kT(cT.description) : TT.description,
+        ownerSocialPreviewWithoutLocation: "owner" in TT ? TT.owner : null,
+        ccu: TT.ccu,
+        favourites: TT.favourites,
         isFavourite: null,
-        useRejoinLastLobbyButton: "persistWorld" in vv ? vv.persistWorld : null,
+        useRejoinLastLobbyButton: "persistWorld" in TT ? TT.persistWorld : null,
         showWorldsInsteadOfCustomLobbies: !1,
         canCreateCustomLobbies: !0,
         countdownInformation: null
       }
     }
 
-    function tz(vv) {
-      var zv, Pv, hv;
-      return null !== (zv = null !== (Pv = (0, Kz.m)() ? function(vv) {
-        for (const [zv, Pv] of Object.entries(Vz)) {
-          const hv = [zv, ...Pv.map((vv => (0, ez.Lb)(zv, vv)))];
-          if (hv.includes(vv)) return hv
+    function Vk(TT) {
+      var kT, cT, lT;
+      return null !== (kT = null !== (cT = (0, zk.l)() ? function(TT) {
+        for (const [kT, cT] of Object.entries(Jk)) {
+          const lT = [kT, ...cT.map((TT => (0, Kk.Kb)(kT, TT)))];
+          if (lT.includes(TT)) return lT
         }
         return null
-      }(vv) : null) && void 0 !== Pv ? Pv : null === (hv = Tz.e[vv]) || void 0 === hv ? void 0 : hv.listedVariations) && void 0 !== zv ? zv : null
+      }(TT) : null) && void 0 !== cT ? cT : null === (lT = Ak.e[TT]) || void 0 === lT ? void 0 : lT.listedVariations) && void 0 !== kT ? kT : null
     }
 
-    function qz() {
+    function Ek() {
       const {
-        gameNameWithVariation: vv
-      } = (0, kv.B)();
-      if ((0, Cv.useEffect)(Oz.u, []), vv && (0, hz.n)(vv)) return (0, tv.jsx)(Iz, {
-        urlId: vv
-      }, vv);
-      const zv = vv && (0, Sz.l)(vv) ? vv : "firstParty";
-      return (0, tv.jsx)(Qz, {}, zv)
+        gameNameWithVariation: TT
+      } = (0, iT.v)();
+      if ((0, hT.useEffect)(mk.o, []), TT && (0, lk.v)(TT)) return (0, GT.jsx)(Zk, {
+        urlId: TT
+      }, TT);
+      const kT = TT && (0, Mk.j)(TT) ? TT : "firstParty";
+      return (0, GT.jsx)(uk, {}, kT)
     }
 
-    function Iz(vv) {
+    function Zk(TT) {
       let {
-        urlId: zv
-      } = vv;
+        urlId: kT
+      } = TT;
       const {
-        userContext: Pv,
-        isUserContextUpdating: hv
-      } = (0, jv.d)(), Sv = (0, Cv.useMemo)((() => (0, rv.f)(zv)), [zv]);
-      (0, Cv.useMemo)((() => {
-        if (null === Sv) return;
-        const vv = ov.userContextManager.peekCurrentUserContext();
-        (null !== vv ? Kv.e.getGame(vv, Sv.schematicId) : ov.userContextManager.getCurrentUserContext().then((vv => Kv.e.getGame(vv, Sv.schematicId)))).catch((vv => {
-          console.error(`Failed to get the custom game ${Sv.schematicId}`, vv), (0, rv.c)(zv)
+        userContext: cT,
+        isUserContextUpdating: lT
+      } = (0, aT.b)(), MT = (0, hT.useMemo)((() => (0, pT.h)(kT)), [kT]);
+      (0, hT.useMemo)((() => {
+        if (null === MT) return;
+        const TT = WT.userContextManager.peekCurrentUserContext();
+        (null !== TT ? zT.d.getGame(TT, MT.schematicId) : WT.userContextManager.getCurrentUserContext().then((TT => zT.d.getGame(TT, MT.schematicId)))).catch((TT => {
+          console.error(`Failed to get the custom game ${MT.schematicId}`, TT), (0, pT.g)(kT)
         }))
-      }), [Sv, zv]);
-      const [ev, gv] = (0, Cv.useState)(null), pv = (0, bv.c)();
-      (0, Cv.useEffect)((() => {
-        if (null !== Sv || hv) return;
-        let vv = !0;
-        return Kv.e.getGameByUrlId(Pv, zv).then((Pv => {
-          vv && gv({
-            urlId: zv,
-            game: Pv
+      }), [MT, kT]);
+      const [KT, OT] = (0, hT.useState)(null), yT = (0, nT.c)();
+      (0, hT.useEffect)((() => {
+        if (null !== MT || lT) return;
+        let TT = !0;
+        return zT.d.getGameByUrlId(cT, kT).then((cT => {
+          TT && OT({
+            urlId: kT,
+            game: cT
           })
-        })).catch((Pv => {
-          console.error(`Failed to find the custom game with urlId ${zv}`, Pv), vv && (0, Xv.navigateToHomePage)()
+        })).catch((cT => {
+          console.error(`Failed to find the custom game with urlId ${kT}`, cT), TT && (0, qT.navigateToHomePage)()
         })), () => {
-          vv = !1
+          TT = !1
         }
-      }), [zv, Sv, hv, Pv]);
-      const dv = null !== Sv && void 0 !== Sv ? Sv : (null === ev || void 0 === ev ? void 0 : ev.urlId) === zv ? ev.game : null;
-      return null === dv ? (0, tv.jsx)(Uv.c, {}) : pv ? (0, tv.jsx)(Qz, {
-        gameNameWithVariation: (0, Sz.u)(dv.schematicId),
-        knownCustomGame: dv
-      }, dv.schematicId) : null
+      }), [kT, MT, lT, cT]);
+      const fT = null !== MT && void 0 !== MT ? MT : (null === KT || void 0 === KT ? void 0 : KT.urlId) === kT ? KT.game : null;
+      return null === fT ? (0, GT.jsx)(oT.d, {}) : yT ? (0, GT.jsx)(uk, {
+        gameNameWithVariation: (0, Mk.s)(fT.schematicId),
+        knownCustomGame: fT
+      }, fT.schematicId) : null
     }
 
-    function Qz(vv) {
-      var zv, Pv, gv, wv, Dv, Vv, Uv, xv;
+    function uk(TT) {
+      var kT, cT, OT, jT, bT, JT, oT, eT;
       let {
-        gameNameWithVariation: qv,
-        knownCustomGame: Iv = null
-      } = vv;
+        gameNameWithVariation: VT,
+        knownCustomGame: ET = null
+      } = TT;
       const {
-        t: Zv
-      } = (0, dv.x)();
-      (0, lz.g)();
-      const Lv = (0, lz.o)(),
+        t: uT
+      } = (0, fT.B)();
+      (0, Ik.j)();
+      const dT = (0, Ik.o)(),
         {
-          userContext: Hv,
-          isUserContextUpdating: Mv
-        } = (0, jv.d)(),
-        yv = (0, nz.h)(),
-        ov = (0, Xv.useNavigatePreserveSearch)(),
-        bv = (0, kv.B)(),
-        rv = (0, Cv.useMemo)((() => qv ? {
-          gameNameWithVariation: qv
-        } : bv), [qv, bv]),
-        vz = (0, dz.b)(rv),
-        hz = (0, Cv.useMemo)((() => {
-          const vv = function(vv) {
-            var zv, Pv;
-            const hv = tz(vv);
-            if (!hv || 0 === hv.length || hv.includes(vv)) return vv;
-            const Sv = Nv.h.getItem((0, cv.i)(vv));
-            if (Sv && hv.includes(Sv)) return Sv;
-            return null !== (zv = null === (Pv = Tz.e[vv]) || void 0 === Pv ? void 0 : Pv.defaultListedVariation) && void 0 !== zv ? zv : hv[0]
-          }(vz.gameNameWithVariation);
-          return vv === vz.gameNameWithVariation ? vz : {
-            ...vz,
-            gameNameWithVariation: vv
+          userContext: LT,
+          isUserContextUpdating: RT
+        } = (0, aT.b)(),
+        gT = (0, wk.g)(),
+        WT = (0, qT.useNavigatePreserveSearch)(),
+        nT = (0, iT.v)(),
+        pT = (0, hT.useMemo)((() => VT ? {
+          gameNameWithVariation: VT
+        } : nT), [VT, nT]),
+        Tk = (0, fk.e)(pT),
+        lk = (0, hT.useMemo)((() => {
+          const TT = function(TT) {
+            var kT, cT;
+            const lT = Vk(TT);
+            if (!lT || 0 === lT.length || lT.includes(TT)) return TT;
+            const MT = xT.e.getItem((0, QT.g)(TT));
+            if (MT && lT.includes(MT)) return MT;
+            return null !== (kT = null === (cT = Ak.e[TT]) || void 0 === cT ? void 0 : cT.defaultListedVariation) && void 0 !== kT ? kT : lT[0]
+          }(Tk.gameNameWithVariation);
+          return TT === Tk.gameNameWithVariation ? Tk : {
+            ...Tk,
+            gameNameWithVariation: TT
           }
-        }), [vz]);
-      (0, Cv.useEffect)((() => {
-        const vv = vz.gameNameWithVariation;
-        hz.gameNameWithVariation !== vv && vv !== (0, ez.Pb)(vv) && ov((0, Av.G)(hz.gameNameWithVariation), {
+        }), [Tk]);
+      (0, hT.useEffect)((() => {
+        const TT = Tk.gameNameWithVariation;
+        lk.gameNameWithVariation !== TT && TT !== (0, Kk.Lb)(TT) && WT((0, XT.x)(lk.gameNameWithVariation), {
           replace: !0
         })
-      }), [hz.gameNameWithVariation, vz.gameNameWithVariation, ov]);
-      const [az, sz] = (0, Cv.useState)(""), Gz = Cv.useRef(null), [mz, jz] = (0, Cv.useState)(), Oz = (0, Sz.l)(hz.gameNameWithVariation), Kz = (0, Cv.useMemo)((() => Oz ? null : function(vv, zv, Pv) {
-        var hv, Sv;
-        const gv = Tz.e[vv];
-        return (0, Uz.N)(gv) ? null : {
-          listedVariations: tz(vv),
-          backgroundImage: (0, ev.l)(vv, (0, ev.d)(gv)),
-          badges: (0, lv.filterBadges)(gv.badges),
-          category: gv.type,
-          title: Pv(gv.title),
-          variationTitle: gv.variationTitle ? Pv(gv.variationTitle) : null,
-          description: Pv(gv.description),
+      }), [lk.gameNameWithVariation, Tk.gameNameWithVariation, WT]);
+      const [vk, tk] = (0, hT.useState)(""), Sk = hT.useRef(null), [Dk, ak] = (0, hT.useState)(), mk = (0, Mk.j)(lk.gameNameWithVariation), zk = (0, hT.useMemo)((() => mk ? null : function(TT, kT, cT) {
+        var lT, MT;
+        const OT = Ak.e[TT];
+        return (0, Hk.R)(OT) ? null : {
+          listedVariations: Vk(TT),
+          backgroundImage: (0, KT.o)(TT, (0, KT.e)(OT)),
+          badges: (0, IT.filterBadges)(OT.badges),
+          category: OT.type,
+          title: cT(OT.title),
+          variationTitle: OT.variationTitle ? cT(OT.variationTitle) : null,
+          description: cT(OT.description),
           ownerSocialPreviewWithoutLocation: null,
-          ccu: null !== zv ? null !== (hv = zv[vv]) && void 0 !== hv ? hv : 0 : null,
+          ccu: null !== kT ? null !== (lT = kT[TT]) && void 0 !== lT ? lT : 0 : null,
           favourites: null,
           isFavourite: null,
-          useRejoinLastLobbyButton: gv.useRejoinLastLobbyButton,
-          showWorldsInsteadOfCustomLobbies: gv.showWorldsInsteadOfCustomLobbies,
-          canCreateCustomLobbies: null === (Sv = gv.canCreateCustomLobbies) || void 0 === Sv || Sv,
-          countdownInformation: (0, cv.f)(vv)
+          useRejoinLastLobbyButton: OT.useRejoinLastLobbyButton,
+          showWorldsInsteadOfCustomLobbies: OT.showWorldsInsteadOfCustomLobbies,
+          canCreateCustomLobbies: null === (MT = OT.canCreateCustomLobbies) || void 0 === MT || MT,
+          countdownInformation: (0, QT.d)(TT)
         }
-      }(hz.gameNameWithVariation, Lv, Zv)), [Oz, hz.gameNameWithVariation, Lv, Zv]), [Vz, qz] = (0, Cv.useState)(!1), [Iz, Qz] = (0, Cv.useState)((() => Iv ? xz(Iv, Zv) : Rz)), Az = null !== Kz && void 0 !== Kz ? Kz : Iz, [Lz] = (0, Cv.useState)(Az === Rz), Hz = (0, Sv.f)(Az.backgroundImage, {
+      }(lk.gameNameWithVariation, dT, uT)), [mk, lk.gameNameWithVariation, dT, uT]), [Jk, Ek] = (0, hT.useState)(!1), [Zk, uk] = (0, hT.useState)((() => ET ? Gk(ET, uT) : ek)), dk = null !== zk && void 0 !== zk ? zk : Zk, [Lk] = (0, hT.useState)(dk === ek), Rk = (0, MT.f)(dk.backgroundImage, {
         keepPrevious: !0,
         decode: !0
       }), {
-        recentlyPlayedPublicLobbies: Mz,
-        recentlyPlayedCustomLobbies: yz
-      } = (0, Cv.useMemo)((() => function(vv, zv, Pv, hv) {
-        var Sv;
-        const ev = vv => {
-            const Pv = (0, Sz.q)(vv),
-              hv = zv.find((zv => "custom" === zv.type ? zv.schematicId === Pv : zv.gameNameWithVariation === vv));
-            return hv ? [...hv.recentLobbies] : []
+        recentlyPlayedPublicLobbies: gk,
+        recentlyPlayedCustomLobbies: Uk
+      } = (0, hT.useMemo)((() => function(TT, kT, cT, lT) {
+        var MT;
+        const KT = TT => {
+            const cT = (0, Mk.n)(TT),
+              lT = kT.find((kT => "custom" === kT.type ? kT.schematicId === cT : kT.gameNameWithVariation === TT));
+            return lT ? [...lT.recentLobbies] : []
           },
-          gv = (0, lv.getRecentGameNameWithVariationLobbiesKey)(vv),
-          pv = null !== (Sv = Nv.h.getItem(gv)) && void 0 !== Sv ? Sv : [],
-          dv = [...ev(vv), ...pv],
-          Tv = [];
-        for (const Nv of dv)(0, Wz.S)(Nv) && !Tv.includes(Nv) && Tv.push(Nv);
-        let Wv = dv;
-        if (Pv) {
-          const vv = ev("classic_worlds"),
-            zv = dv.filter((zv => !vv.includes(zv)));
-          Wv = [...vv, ...zv]
+          OT = (0, IT.getRecentGameNameWithVariationLobbiesKey)(TT),
+          yT = null !== (MT = xT.e.getItem(OT)) && void 0 !== MT ? MT : [],
+          fT = [...KT(TT), ...yT],
+          AT = [];
+        for (const xT of fT)(0, Ck.K)(xT) && !AT.includes(xT) && AT.push(xT);
+        let CT = fT;
+        if (cT) {
+          const TT = KT("classic_worlds"),
+            kT = fT.filter((kT => !TT.includes(kT)));
+          CT = [...TT, ...kT]
         }
-        const wv = [],
-          av = !1 === hv ? [] : Wv;
-        for (const Nv of av)(0, Wz.S)(Nv) || wv.includes(Nv) || wv.push(Nv);
+        const jT = [],
+          vT = !1 === lT ? [] : CT;
+        for (const xT of vT)(0, Ck.K)(xT) || jT.includes(xT) || jT.push(xT);
         return {
-          recentlyPlayedPublicLobbies: Tv,
-          recentlyPlayedCustomLobbies: wv
+          recentlyPlayedPublicLobbies: AT,
+          recentlyPlayedCustomLobbies: jT
         }
-      }(hz.gameNameWithVariation, yv, Az.showWorldsInsteadOfCustomLobbies, Az.canCreateCustomLobbies)), [hz.gameNameWithVariation, yv, Az.showWorldsInsteadOfCustomLobbies, Az.canCreateCustomLobbies]), [Bz, Jz] = (0, Cv.useState)(!0), [Ez, oz] = (0, Cv.useState)([]), [bz, rz] = (0, Cv.useState)(null), [kz, Xz] = (0, Cv.useState)("explore"), uz = (0, Cv.useRef)(!1), vP = (0, Cv.useCallback)((vv => {
-        (0, iv.unstable_batchedUpdates)((() => {
-          jz(vv), Qz((zv => ({
-            ...xz(vv, Zv),
-            isFavourite: zv.isFavourite
+      }(lk.gameNameWithVariation, gT, dk.showWorldsInsteadOfCustomLobbies, dk.canCreateCustomLobbies)), [lk.gameNameWithVariation, gT, dk.showWorldsInsteadOfCustomLobbies, dk.canCreateCustomLobbies]), [Yk, Bk] = (0, hT.useState)(!0), [Wk, nk] = (0, hT.useState)([]), [pk, ik] = (0, hT.useState)(null), [qk, sk] = (0, hT.useState)("explore"), Tc = (0, hT.useRef)(!1), kc = (0, hT.useCallback)((TT => {
+        (0, NT.unstable_batchedUpdates)((() => {
+          ak(TT), uk((kT => ({
+            ...Gk(TT, uT),
+            isFavourite: kT.isFavourite
           })))
         }))
-      }), [Zv]);
-      (0, Cv.useEffect)((() => {
-        null === Nz.c.get("gameEntrySource") && (0, Nz.g)("gameInformationPageDirect")
+      }), [uT]);
+      (0, hT.useEffect)((() => {
+        null === xk.e.get("gameEntrySource") && (0, xk.l)("gameInformationPageDirect")
       }), []);
-      const zP = (0, Cv.useRef)(null);
-      (0, Cv.useEffect)((() => {
-        const vv = vv => {
-            zP.current = vv.target instanceof Element ? vv.target.closest("a, button") : null
+      const cc = (0, hT.useRef)(null);
+      (0, hT.useEffect)((() => {
+        const TT = TT => {
+            cc.current = TT.target instanceof Element ? TT.target.closest("a, button") : null
           },
-          zv = vv => {
-            "Tab" === vv.key && (zP.current = null)
+          kT = TT => {
+            "Tab" === TT.key && (cc.current = null)
           };
-        return document.addEventListener("pointerdown", vv, !0), document.addEventListener("keydown", zv, !0), () => {
-          document.removeEventListener("pointerdown", vv, !0), document.removeEventListener("keydown", zv, !0)
+        return document.addEventListener("pointerdown", TT, !0), document.addEventListener("keydown", kT, !0), () => {
+          document.removeEventListener("pointerdown", TT, !0), document.removeEventListener("keydown", kT, !0)
         }
-      }), []), (0, fv.d)("Enter", (vv => {
-        const zv = vv.target instanceof Element ? vv.target : null;
-        if (vv.defaultPrevented || null !== zv && void 0 !== zv && zv.closest("input, textarea, select")) return;
-        const Pv = null === zv || void 0 === zv ? void 0 : zv.closest("a, button");
-        Pv && Pv !== zP.current || (vv.preventDefault(), lP())
-      })), (0, Fv.c)(Xv.navigateToHomePage);
-      const PP = Mz.length > 0 || yz.length > 0,
-        hP = !Az.useRejoinLastLobbyButton || 0 === Mz.length,
-        SP = Oz && null === Az.ownerSocialPreviewWithoutLocation,
-        eP = Hv.getPlayerName() === (null === mz || void 0 === mz || null === (zv = mz.owner) || void 0 === zv ? void 0 : zv.name),
-        gP = null !== (Pv = null === (gv = Az.badges.find((vv => "event" === vv.type))) || void 0 === gv ? void 0 : gv.event) && void 0 !== Pv ? Pv : null,
-        pP = hP ? Wv.j : Wv.d,
-        dP = (0, tv.jsx)(Tv.h, {
-          tooltipInner: (0, tv.jsx)("div", {
-            children: Zv("homePage:quickPlayInfo")
+      }), []), (0, FT.e)("Enter", (TT => {
+        const kT = TT.target instanceof Element ? TT.target : null;
+        if (TT.defaultPrevented || null !== kT && void 0 !== kT && kT.closest("input, textarea, select")) return;
+        const cT = null === kT || void 0 === kT ? void 0 : kT.closest("a, button");
+        cT && cT !== cc.current || (TT.preventDefault(), Ac())
+      })), (0, rT.e)(qT.navigateToHomePage);
+      const lc = gk.length > 0 || Uk.length > 0,
+        Mc = !dk.useRejoinLastLobbyButton || 0 === gk.length,
+        Kc = mk && null === dk.ownerSocialPreviewWithoutLocation,
+        Oc = LT.getPlayerName() === (null === Dk || void 0 === Dk || null === (kT = Dk.owner) || void 0 === kT ? void 0 : kT.name),
+        yc = null !== (cT = null === (OT = dk.badges.find((TT => "event" === TT.type))) || void 0 === OT ? void 0 : OT.event) && void 0 !== cT ? cT : null,
+        fc = Mc ? CT.m : CT.e,
+        xc = (0, GT.jsx)(AT.c, {
+          tooltipInner: (0, GT.jsx)("div", {
+            children: uT("homePage:quickPlayInfo")
           }),
           hoverOnly: !0,
-          children: (0, tv.jsx)(pP, {
+          children: (0, GT.jsx)(fc, {
             className: "GameInformationButton",
-            padDefaultFocus: hP,
+            padDefaultFocus: Mc,
             showPress: !0,
             onClick: () => {
-              lP()
+              Ac()
             },
-            children: (0, tv.jsxs)("div", {
+            children: (0, GT.jsxs)("div", {
               className: "GameInformationButtonInner",
-              children: [hP && (0, tv.jsxs)(tv.Fragment, {
-                children: [(0, tv.jsx)(Jv.b, {
+              children: [Mc && (0, GT.jsxs)(GT.Fragment, {
+                children: [(0, GT.jsx)(YT.e, {
                   name: "play"
                 }), " "]
-              }), Zv("homePage:quickPlay")]
+              }), uT("homePage:quickPlay")]
             })
           })
         });
-      (0, Cv.useEffect)((() => {
-        if (!Oz || Mv) return;
-        let vv = !0;
-        const zv = (0, Sz.q)(hz.gameNameWithVariation);
-        return Kv.e.getGame(Hv, zv).then((zv => {
-          vv && vP(zv)
-        })).catch((zv => {
-          console.error("Failed to get Custom Game information", zv), vv && (0, Xv.navigateToHomePage)()
-        })), Kv.e.getFavouriteGames(Hv).then((Pv => {
-          vv && Qz((vv => ({
-            ...vv,
-            isFavourite: Pv.includes(zv)
+      (0, hT.useEffect)((() => {
+        if (!mk || RT) return;
+        let TT = !0;
+        const kT = (0, Mk.n)(lk.gameNameWithVariation);
+        return zT.d.getGame(LT, kT).then((kT => {
+          TT && kc(kT)
+        })).catch((kT => {
+          console.error("Failed to get Custom Game information", kT), TT && (0, qT.navigateToHomePage)()
+        })), zT.d.getFavouriteGames(LT).then((cT => {
+          TT && uk((TT => ({
+            ...TT,
+            isFavourite: cT.includes(kT)
           })))
-        })).catch((zv => {
-          console.error("Failed to get favourite games", zv), vv && qz(!0)
+        })).catch((kT => {
+          console.error("Failed to get favourite games", kT), TT && Ek(!0)
         })), () => {
-          vv = !1
+          TT = !1
         }
-      }), [Oz, Mv, hz.gameNameWithVariation, vP, Hv]);
-      const NP = !Oz && null === Kz;
+      }), [mk, RT, lk.gameNameWithVariation, kc, LT]);
+      const Ic = !mk && null === zk;
 
-      function lP(vv) {
-        (0, Dz.g)(), ov((0, Gv.e)(hz.gameNameWithVariation, vv))
-      }(0, Cv.useEffect)((() => {
-        NP && (0, Xv.navigateToHomePage)()
-      }), [NP]), (0, Cv.useEffect)((() => {
-        if (!1 === Az.canCreateCustomLobbies) return;
-        let vv = !0;
-        return null !== Az.showWorldsInsteadOfCustomLobbies && !1 === Mv && (Jz(!0), Kv.e.getFavouriteLobbies(Hv).then((vv => {
-          rz(vv)
-        })), Kv.e.getOpenCustomLobbies(Hv, {
-          gameNameWithVariation: Az.showWorldsInsteadOfCustomLobbies ? "classic" : hz.gameNameWithVariation,
-          onlyOwnedLobbies: "owned" === kz,
-          onlyFavouriteLobbies: "favourite" === kz
-        }).then((zv => {
-          vv && (0, iv.unstable_batchedUpdates)((() => {
-            oz(zv), Jz(!1)
+      function Ac(TT) {
+        (0, bk.f)(), WT((0, ST.c)(lk.gameNameWithVariation, TT))
+      }(0, hT.useEffect)((() => {
+        Ic && (0, qT.navigateToHomePage)()
+      }), [Ic]), (0, hT.useEffect)((() => {
+        if (!1 === dk.canCreateCustomLobbies) return;
+        let TT = !0;
+        return null !== dk.showWorldsInsteadOfCustomLobbies && !1 === RT && (Bk(!0), zT.d.getFavouriteLobbies(LT).then((TT => {
+          ik(TT)
+        })), zT.d.getOpenCustomLobbies(LT, {
+          gameNameWithVariation: dk.showWorldsInsteadOfCustomLobbies ? "classic" : lk.gameNameWithVariation,
+          onlyOwnedLobbies: "owned" === qk,
+          onlyFavouriteLobbies: "favourite" === qk
+        }).then((kT => {
+          TT && (0, NT.unstable_batchedUpdates)((() => {
+            nk(kT), Bk(!1)
           }))
-        })).catch((zv => {
-          console.error("Failed to get open custom lobbies", zv), vv && Jz(!1)
+        })).catch((kT => {
+          console.error("Failed to get open custom lobbies", kT), TT && Bk(!1)
         }))), () => {
-          vv = !1
+          TT = !1
         }
-      }), [Mv, hz, kz, Az.showWorldsInsteadOfCustomLobbies, Az.canCreateCustomLobbies, Hv]);
-      const TP = (0, Cv.useCallback)((async vv => {
+      }), [RT, lk, qk, dk.showWorldsInsteadOfCustomLobbies, dk.canCreateCustomLobbies, LT]);
+      const Cc = (0, hT.useCallback)((async TT => {
           try {
-            if (!bz) return;
-            bz.includes(vv) ? (Kv.e.unfavouriteLobby(Hv, vv), rz(bz.filter((zv => zv !== vv)))) : (Kv.e.favouriteLobby(Hv, vv).catch((vv => {
-              console.error("Failed to favourite lobby", vv)
-            })), rz([...bz, vv]))
-          } catch (zv) {
-            console.error("Failed to like lobby", zv)
+            if (!pk) return;
+            pk.includes(TT) ? (zT.d.unfavouriteLobby(LT, TT), ik(pk.filter((kT => kT !== TT)))) : (zT.d.favouriteLobby(LT, TT).catch((TT => {
+              console.error("Failed to favourite lobby", TT)
+            })), ik([...pk, TT]))
+          } catch (kT) {
+            console.error("Failed to like lobby", kT)
           }
-        }), [Hv, bz]),
-        WP = (null === mz || void 0 === mz ? void 0 : mz.schematicId) === (0, Sz.q)(vz.gameNameWithVariation) ? mz : null,
-        wP = WP && (0, Av.N)(vz.gameNameWithVariation, (vv => Zv(vv)), WP);
-      (0, uv.g)(WP && (0, Av.G)(vz.gameNameWithVariation, WP));
-      const aP = Ev.featureFlags.canUseCustomLobbies && !0 === Az.canCreateCustomLobbies,
-        sP = (0, tv.jsx)("div", {
+        }), [LT, pk]),
+        jc = (null === Dk || void 0 === Dk ? void 0 : Dk.schematicId) === (0, Mk.n)(Tk.gameNameWithVariation) ? Dk : null,
+        vc = jc && (0, XT.H)(Tk.gameNameWithVariation, (TT => uT(TT)), jc);
+      (0, sT.e)(jc && (0, XT.x)(Tk.gameNameWithVariation, jc));
+      const tc = BT.featureFlags.canUseCustomLobbies && !0 === dk.canCreateCustomLobbies,
+        hc = (0, GT.jsx)("div", {
           className: "GameInformationPageContentAnchor",
-          children: (0, tv.jsx)(Bv, {
-            gameNameWithVariation: hz.gameNameWithVariation
+          children: (0, GT.jsx)(UT, {
+            gameNameWithVariation: lk.gameNameWithVariation
           })
         });
-      return (0, tv.jsx)(tv.Fragment, {
-        children: (0, tv.jsxs)("article", {
-          className: av()("GameInformation", {
-            GameInformationFadeIn: Lz,
-            GameInformationReleaseCountdown: "releaseCountdown" === (null === (wv = Az.countdownInformation) || void 0 === wv ? void 0 : wv.type)
+      return (0, GT.jsx)(GT.Fragment, {
+        children: (0, GT.jsxs)("article", {
+          className: vT()("GameInformation", {
+            GameInformationFadeIn: Lk,
+            GameInformationReleaseCountdown: "releaseCountdown" === (null === (jT = dk.countdownInformation) || void 0 === jT ? void 0 : jT.type)
           }),
-          children: [wP && (0, tv.jsx)(mv.e, {
-            meta: wP
-          }), (0, tv.jsxs)("div", {
+          children: [vc && (0, GT.jsx)(DT.b, {
+            meta: vc
+          }), (0, GT.jsxs)("div", {
             className: "GameInformationInner",
-            children: [(0, tv.jsxs)("div", {
+            children: [(0, GT.jsxs)("div", {
               className: "GameInformationTop",
-              children: [(0, tv.jsxs)("div", {
+              children: [(0, GT.jsxs)("div", {
                 className: "GameInformationTopBackgroundContainer",
-                children: [(0, tv.jsx)("div", {
+                children: [(0, GT.jsx)("div", {
                   className: "GameInformationTopBackgroundColor"
-                }), (0, tv.jsx)("div", {
-                  className: av()("GameInformationTopBackgroundImage", pv.g),
-                  style: (0, pv.e)(Hz),
-                  children: (0, tv.jsx)(pv.b, {
-                    image: Hz
+                }), (0, GT.jsx)("div", {
+                  className: vT()("GameInformationTopBackgroundImage", yT.g),
+                  style: (0, yT.f)(Rk),
+                  children: (0, GT.jsx)(yT.d, {
+                    image: Rk
                   })
                 })]
-              }), (0, tv.jsxs)("div", {
+              }), (0, GT.jsxs)("div", {
                 className: "GameInformationTopLeft",
-                children: [(0, tv.jsx)(iz.d, {}), (0, tv.jsxs)("div", {
+                children: [(0, GT.jsx)(Nk.e, {}), (0, GT.jsxs)("div", {
                   className: "GameInformationTopLeftBody",
-                  children: [(0, tv.jsxs)("div", {
+                  children: [(0, GT.jsxs)("div", {
                     className: "GameInformationHeader",
-                    children: [(0, tv.jsxs)("div", {
-                      className: av()("GameInformationHeaderTagList", {
-                        GameInformationHeaderTagListPending: SP
+                    children: [(0, GT.jsxs)("div", {
+                      className: vT()("GameInformationHeaderTagList", {
+                        GameInformationHeaderTagListPending: Kc
                       }),
-                      children: [Az.badges.map((vv => (0, tv.jsx)("div", {
-                        className: `GameInformationHeaderTag AnimFadeInScaleUp ${vv.type}`,
-                        children: (0, tv.jsx)(Ov.e, {
-                          badge: vv
+                      children: [dk.badges.map((TT => (0, GT.jsx)("div", {
+                        className: `GameInformationHeaderTag AnimFadeInScaleUp ${TT.type}`,
+                        children: (0, GT.jsx)(mT.b, {
+                          badge: TT
                         })
-                      }, vv.type))), Oz && (0, tv.jsx)("div", {
+                      }, TT.type))), mk && (0, GT.jsx)("div", {
                         className: "GameInformationHeaderTag playerCrafted AnimFadeInScaleUp",
-                        children: (0, tv.jsx)(nv.c, {
-                          text: (0, hv.W)({
+                        children: (0, GT.jsx)(wT.b, {
+                          text: (0, lT.T)({
                             type: "playerCrafted"
                           })
                         })
-                      }), Az.category && (0, tv.jsx)("div", {
+                      }), dk.category && (0, GT.jsx)("div", {
                         className: "GameInformationHeaderTag CustomGameCategory AnimFadeInScaleUp",
-                        children: (0, tv.jsx)(nv.c, {
+                        children: (0, GT.jsx)(wT.b, {
                           text: [{
-                            str: (0, hv.Z)(Az.category).toUpperCase()
+                            str: (0, lT.W)(dk.category).toUpperCase()
                           }]
                         })
-                      }), null !== Az.ccu && (0, tv.jsxs)("div", {
+                      }), null !== dk.ccu && (0, GT.jsxs)("div", {
                         className: "CustomGameChip CustomGameChipCcu AnimFadeIn",
-                        children: [(0, tv.jsx)(Jv.b, {
+                        children: [(0, GT.jsx)(YT.e, {
                           name: "user"
-                        }), (0, Wz.X)(Az.ccu), " online"]
-                      }), null !== Az.ownerSocialPreviewWithoutLocation && (0, tv.jsxs)("div", {
+                        }), (0, Ck.P)(dk.ccu), " online"]
+                      }), null !== dk.ownerSocialPreviewWithoutLocation && (0, GT.jsxs)("div", {
                         className: "CustomGameChip CustomGameChipOwner AnimFadeIn",
-                        children: [(0, tv.jsx)("span", {
+                        children: [(0, GT.jsx)("span", {
                           children: "Made by"
-                        }), (0, tv.jsx)(Rv.e, {
+                        }), (0, GT.jsx)(HT.h, {
                           playerSocialPreview: {
-                            ...Az.ownerSocialPreviewWithoutLocation,
+                            ...dk.ownerSocialPreviewWithoutLocation,
                             location: {
                               status: "offline"
                             }
@@ -973,391 +973,391 @@ export const modules = {
                           showLocation: !1,
                           linkToProfile: !0
                         })]
-                      }), SP && (0, tv.jsxs)("div", {
+                      }), Kc && (0, GT.jsxs)("div", {
                         className: "CustomGameChip CustomGameChipOwner",
-                        children: [(0, tv.jsx)("span", {
+                        children: [(0, GT.jsx)("span", {
                           children: "Made by"
-                        }), (0, tv.jsx)("div", {
+                        }), (0, GT.jsx)("div", {
                           className: "CustomGameChipOwnerPlaceholder"
                         })]
-                      }), null !== Az.favourites && (null !== Az.isFavourite || Oz && !Vz) && (0, tv.jsx)(Wv.m, {
+                      }), null !== dk.favourites && (null !== dk.isFavourite || mk && !Jk) && (0, GT.jsx)(CT.s, {
                         onClick: () => {
                           ! function() {
-                            if (!0 !== uz.current && (uz.current = !0, null !== Az.isFavourite)) {
-                              const vv = (0, Sz.q)(hz.gameNameWithVariation);
-                              let zv;
-                              Az.isFavourite ? (zv = -1, Kv.e.unfavouriteGame(Hv, vv).catch((vv => {
-                                console.error("Failed to get unfavourite game", vv)
+                            if (!0 !== Tc.current && (Tc.current = !0, null !== dk.isFavourite)) {
+                              const TT = (0, Mk.n)(lk.gameNameWithVariation);
+                              let kT;
+                              dk.isFavourite ? (kT = -1, zT.d.unfavouriteGame(LT, TT).catch((TT => {
+                                console.error("Failed to get unfavourite game", TT)
                               })).finally((() => {
-                                uz.current = !1
-                              }))) : (zv = 1, Kv.e.favouriteGame(Hv, vv).catch((vv => {
-                                console.error("Failed to get favourite game", vv)
+                                Tc.current = !1
+                              }))) : (kT = 1, zT.d.favouriteGame(LT, TT).catch((TT => {
+                                console.error("Failed to get favourite game", TT)
                               })).finally((() => {
-                                uz.current = !1
-                              }))), Qz((vv => ({
-                                ...vv,
-                                isFavourite: !vv.isFavourite
-                              }))), Qz((vv => ({
-                                ...vv,
-                                favourites: vv.favourites + zv
+                                Tc.current = !1
+                              }))), uk((TT => ({
+                                ...TT,
+                                isFavourite: !TT.isFavourite
+                              }))), uk((TT => ({
+                                ...TT,
+                                favourites: TT.favourites + kT
                               })))
                             }
                           }()
                         },
-                        isLiked: null !== (Dv = Az.isFavourite) && void 0 !== Dv && Dv,
-                        disabled: null === Az.isFavourite,
-                        className: av()("CustomGameChip AnimFadeIn", {
-                          CustomGameChipPending: null === Az.isFavourite
+                        isLiked: null !== (bT = dk.isFavourite) && void 0 !== bT && bT,
+                        disabled: null === dk.isFavourite,
+                        className: vT()("CustomGameChip AnimFadeIn", {
+                          CustomGameChipPending: null === dk.isFavourite
                         })
-                      }, null === Az.isFavourite ? "pending" : "known"), Oz && !SP && Ev.featureFlags.useSocialFeatures && !eP && (0, tv.jsx)(Fz.b, {
+                      }, null === dk.isFavourite ? "pending" : "known"), mk && !Kc && BT.featureFlags.useSocialFeatures && !Oc && (0, GT.jsx)(rk.b, {
                         targetType: "customGame",
-                        targetId: (0, Sz.q)(hz.gameNameWithVariation),
+                        targetId: (0, Mk.n)(lk.gameNameWithVariation),
                         className: "CustomGameChip AnimFadeIn"
-                      }), (Hv.playerHasRank("developer") || Hv.playerHasRank("admin") && eP) && (0, tv.jsxs)(Wv.j, {
+                      }), (LT.playerHasRank("developer") || LT.playerHasRank("admin") && Oc) && (0, GT.jsxs)(CT.m, {
                         className: "CustomGameChip AnimFadeIn",
                         onClick: () => {
-                          ov((0, pz.o)((0, gz.i)(hz.gameNameWithVariation, !0)))
+                          WT((0, yk.o)((0, Ok.h)(lk.gameNameWithVariation, !0)))
                         },
-                        children: [(0, tv.jsx)(Jv.b, {
+                        children: [(0, GT.jsx)(YT.e, {
                           name: "star-christmas"
-                        }), " ", Zv("studio:viewInStudio")]
-                      }), Oz && Hv.playerHasRank("developer") && (0, tv.jsxs)(Wv.d, {
+                        }), " ", uT("studio:viewInStudio")]
+                      }), mk && LT.playerHasRank("developer") && (0, GT.jsxs)(CT.e, {
                         className: "CustomGameChip AnimFadeIn",
                         onClick: () => {
-                          (0, wz.e)({
-                            schematicId: (0, Sz.q)(hz.gameNameWithVariation),
+                          (0, jk.c)({
+                            schematicId: (0, Mk.n)(lk.gameNameWithVariation),
                             canOverride: !0
                           })
                         },
-                        children: [(0, tv.jsx)(Jv.b, {
+                        children: [(0, GT.jsx)(YT.e, {
                           name: "circle-info"
                         }), " Approval Info"]
-                      }), Oz && Hv.playerHasRank("developer") && (0, tv.jsxs)(Wv.d, {
+                      }), mk && LT.playerHasRank("developer") && (0, GT.jsxs)(CT.e, {
                         className: "CustomGameChip AnimFadeIn",
                         onClick: () => {
-                          zz.NotificationProvider.showCustomPopup({
-                            body: () => (0, tv.jsx)(Cz, {
-                              schematicId: (0, Sz.q)(hz.gameNameWithVariation),
-                              gameName: Az.title
+                          kk.NotificationProvider.showCustomPopup({
+                            body: () => (0, GT.jsx)(hk, {
+                              schematicId: (0, Mk.n)(lk.gameNameWithVariation),
+                              gameName: dk.title
                             }),
                             middleScreenPopupClassName: "FeaturedGamesPopup",
                             onClose: () => {},
                             unlockPointerKey: "featuredGamesPopup"
                           })
                         },
-                        children: [(0, tv.jsx)(Jv.b, {
+                        children: [(0, GT.jsx)(YT.e, {
                           name: "star"
                         }), " Featured Games"]
-                      }), "updateCountdown" === (null === (Vv = Az.countdownInformation) || void 0 === Vv ? void 0 : Vv.type) && (0, tv.jsxs)("div", {
+                      }), "updateCountdown" === (null === (JT = dk.countdownInformation) || void 0 === JT ? void 0 : JT.type) && (0, GT.jsxs)("div", {
                         className: "CustomGameChip GameChipUpdateCountdown AnimFadeIn",
-                        children: [(0, tv.jsxs)("div", {
+                        children: [(0, GT.jsxs)("div", {
                           className: "GameChipUpdateCountdownTop",
-                          children: ["Update in ", (0, tv.jsx)(Yv.e, {
-                            toTime: Az.countdownInformation.countdownToTime
+                          children: ["Update in ", (0, GT.jsx)(PT.b, {
+                            toTime: dk.countdownInformation.countdownToTime
                           })]
-                        }), (0, tv.jsx)("div", {
+                        }), (0, GT.jsx)("div", {
                           className: "GameChipUpdateCountdownBottom",
-                          children: Az.countdownInformation.previewText
+                          children: dk.countdownInformation.previewText
                         })]
                       })]
-                    }, SP ? "pending" : "shown"), (0, tv.jsxs)("header", {
+                    }, Kc ? "pending" : "shown"), (0, GT.jsxs)("header", {
                       className: "GameInformationTitle",
-                      children: [(0, tv.jsx)("div", {
+                      children: [(0, GT.jsx)("div", {
                         className: "GameInformationTitleAndChips",
-                        children: (0, tv.jsxs)("h1", {
+                        children: (0, GT.jsxs)("h1", {
                           className: "GameInformationTitleText FullyFancyText",
-                          children: [Az.title, " ", Az.variationTitle && (null === (Uv = Tz.e[hz.gameNameWithVariation]) || void 0 === Uv ? void 0 : Uv.variationThumbnailUseBigRatio) && (0, tv.jsx)("span", {
+                          children: [dk.title, " ", dk.variationTitle && (null === (oT = Ak.e[lk.gameNameWithVariation]) || void 0 === oT ? void 0 : oT.variationThumbnailUseBigRatio) && (0, GT.jsx)("span", {
                             className: "GameInformationTitleVariation",
-                            children: Az.variationTitle
+                            children: dk.variationTitle
                           })]
                         })
-                      }), Az.listedVariations && Az.listedVariations.length > 0 && (0, tv.jsx)("div", {
-                        className: av()("GameInformationVariationList", {
-                          GameInformationVariationListBig: null === (xv = Tz.e[hz.gameNameWithVariation]) || void 0 === xv ? void 0 : xv.variationThumbnailUseBigRatio
+                      }), dk.listedVariations && dk.listedVariations.length > 0 && (0, GT.jsx)("div", {
+                        className: vT()("GameInformationVariationList", {
+                          GameInformationVariationListBig: null === (eT = Ak.e[lk.gameNameWithVariation]) || void 0 === eT ? void 0 : eT.variationThumbnailUseBigRatio
                         }),
-                        children: Az.listedVariations.map((vv => {
-                          var zv, Pv;
-                          return (0, tv.jsxs)(Zz, {
-                            variation: vv,
-                            isSelected: hz.gameNameWithVariation === vv,
-                            children: [null !== Lv && (0, tv.jsx)("div", {
+                        children: dk.listedVariations.map((TT => {
+                          var kT, cT;
+                          return (0, GT.jsxs)(Xk, {
+                            variation: TT,
+                            isSelected: lk.gameNameWithVariation === TT,
+                            children: [null !== dT && (0, GT.jsx)("div", {
                               className: "GameInformationVariationCCU AnimFadeIn",
-                              children: (0, tv.jsxs)("div", {
+                              children: (0, GT.jsxs)("div", {
                                 className: "GameInformationVariationCCUInner",
-                                children: [(0, tv.jsx)(Jv.b, {
+                                children: [(0, GT.jsx)(YT.e, {
                                   name: "user"
-                                }), " ", (0, Wz.X)(null !== (zv = Lv[vv]) && void 0 !== zv ? zv : 0)]
+                                }), " ", (0, Ck.P)(null !== (kT = dT[TT]) && void 0 !== kT ? kT : 0)]
                               })
-                            }), (0, tv.jsx)("div", {
+                            }), (0, GT.jsx)("div", {
                               className: "GameInformationVariationTitle SmallTextBold",
-                              children: Zv(null !== (Pv = Tz.e[vv].variationTitle) && void 0 !== Pv ? Pv : Tz.e[vv].title)
-                            }), (0, tv.jsx)("div", {
+                              children: uT(null !== (cT = Ak.e[TT].variationTitle) && void 0 !== cT ? cT : Ak.e[TT].title)
+                            }), (0, GT.jsx)("div", {
                               className: "ThumbnailBadgesContainer",
-                              children: (0, lv.filterBadges)(Tz.e[vv].badges).map((vv => (0, tv.jsx)("div", {
-                                className: "ThumbnailBadgeContainer " + vv.type,
-                                children: (0, tv.jsx)("div", {
+                              children: (0, IT.filterBadges)(Ak.e[TT].badges).map((TT => (0, GT.jsx)("div", {
+                                className: "ThumbnailBadgeContainer " + TT.type,
+                                children: (0, GT.jsx)("div", {
                                   className: "ThumbnailBadgeMain",
-                                  children: (0, tv.jsx)(Ov.e, {
-                                    badge: vv
+                                  children: (0, GT.jsx)(mT.b, {
+                                    badge: TT
                                   })
                                 })
-                              }, vv.type)))
+                              }, TT.type)))
                             })]
-                          }, vv)
+                          }, TT)
                         }))
                       })]
-                    }), Az.description && (0, tv.jsx)("p", {
+                    }), dk.description && (0, GT.jsx)("p", {
                       className: "GameInformationDescription",
-                      children: Az.description
+                      children: dk.description
                     })]
-                  }), (0, tv.jsxs)("div", {
+                  }), (0, GT.jsxs)("div", {
                     className: "GameInformationButtonRows",
-                    children: [(0, tv.jsxs)("div", {
+                    children: [(0, GT.jsxs)("div", {
                       className: "GameInformationButtonRow GameInformationButtonRowPrimary",
-                      children: [!hP && (0, tv.jsx)(Tv.h, {
-                        tooltipInner: (0, tv.jsx)("div", {
-                          children: Zv("homePage:rejoinLobbyNumberInfo")
+                      children: [!Mc && (0, GT.jsx)(AT.c, {
+                        tooltipInner: (0, GT.jsx)("div", {
+                          children: uT("homePage:rejoinLobbyNumberInfo")
                         }),
                         hoverOnly: !0,
-                        children: (0, tv.jsx)(Wv.j, {
+                        children: (0, GT.jsx)(CT.m, {
                           className: "GameInformationButton",
                           padDefaultFocus: !0,
                           showPress: !0,
                           onClick: () => {
-                            lP(Mz[0])
+                            Ac(gk[0])
                           },
-                          children: (0, tv.jsxs)("div", {
+                          children: (0, GT.jsxs)("div", {
                             className: "GameInformationButtonInner",
-                            children: [(0, tv.jsx)(Jv.b, {
+                            children: [(0, GT.jsx)(YT.e, {
                               name: "play"
-                            }), " ", Zv("homePage:rejoinLobbyNumber", {
-                              number: Mz[0]
+                            }), " ", uT("homePage:rejoinLobbyNumber", {
+                              number: gk[0]
                             })]
                           })
                         })
-                      }), hP && dP]
-                    }), (0, tv.jsxs)("div", {
+                      }), Mc && xc]
+                    }), (0, GT.jsxs)("div", {
                       className: "GameInformationButtonRow GameInformationButtonRowSecondary",
-                      children: [!hP && dP, (0, tv.jsxs)("div", {
+                      children: [!Mc && xc, (0, GT.jsxs)("div", {
                         className: "JoinLobbyContainer",
-                        children: [(0, tv.jsx)(Jv.b, {
+                        children: [(0, GT.jsx)(YT.e, {
                           name: "magnifying-glass",
                           className: "JoinLobbyInputIcon"
-                        }), (0, tv.jsx)(sv.c, {
+                        }), (0, GT.jsx)(tT.b, {
                           className: "JoinLobbyInput",
-                          placeholderText: Zv("homePage:lobbyName"),
-                          maxLength: Wz.U,
-                          domRef: Gz,
-                          onValueChange: vv => {
-                            vv = (0, Wz.ub)(vv), sz(vv)
+                          placeholderText: uT("homePage:lobbyName"),
+                          maxLength: Ck.O,
+                          domRef: Sk,
+                          onValueChange: TT => {
+                            TT = (0, Ck.Bb)(TT), tk(TT)
                           },
                           onEnter: () => {
-                            0 === az.length ? lP(Mz[0]) : lP(az)
+                            0 === vk.length ? Ac(gk[0]) : Ac(vk)
                           }
-                        }), (0, tv.jsx)(Wv.d, {
+                        }), (0, GT.jsx)(CT.e, {
                           className: "JoinLobbyButton",
                           showPress: !0,
                           onClick: () => {
-                            0 === az.length ? lP(Mz[0]) : lP(az)
+                            0 === vk.length ? Ac(gk[0]) : Ac(vk)
                           },
-                          children: Zv("general:join")
+                          children: uT("general:join")
                         })]
                       })]
-                    }), (0, tv.jsxs)("section", {
-                      className: av()("LobbyCollection RecentLobbyCollection", {
-                        LobbyCollectionHidden: !PP
+                    }), (0, GT.jsxs)("section", {
+                      className: vT()("LobbyCollection RecentLobbyCollection", {
+                        LobbyCollectionHidden: !lc
                       }),
-                      children: [(0, tv.jsx)("div", {
+                      children: [(0, GT.jsx)("div", {
                         className: "LobbyCollectionHeader RecentLobbyCollectionHeader",
-                        children: (0, tv.jsxs)("div", {
+                        children: (0, GT.jsxs)("div", {
                           className: "LobbyCollectionTitle",
-                          children: [(0, tv.jsx)(Jv.b, {
+                          children: [(0, GT.jsx)(YT.e, {
                             name: "clock-rotate-left"
-                          }), PP && (0, tv.jsx)("h2", {
+                          }), lc && (0, GT.jsx)("h2", {
                             className: "VisuallyHidden",
-                            children: Zv("homePage:recentlyPlayedLobbies")
+                            children: uT("homePage:recentlyPlayedLobbies")
                           })]
                         })
-                      }), (0, tv.jsx)(Yz.c, {
-                        lobbyGroups: [Mz, yz],
-                        onLobbyClick: vv => {
-                          lP(vv)
+                      }), (0, GT.jsx)(Pk.b, {
+                        lobbyGroups: [gk, Uk],
+                        onLobbyClick: TT => {
+                          Ac(TT)
                         },
-                        keyPrefix: hz.gameNameWithVariation
+                        keyPrefix: lk.gameNameWithVariation
                       })]
                     })]
                   })]
                 })]
-              }), null !== gP && (0, tv.jsx)(Qv, {
-                eventName: gP
+              }), null !== yc && (0, GT.jsx)(ZT, {
+                eventName: yc
               })]
-            }), aP && (0, tv.jsx)("div", {
+            }), tc && (0, GT.jsx)("div", {
               className: "GameInformationBottom",
-              children: (0, tv.jsxs)("section", {
+              children: (0, GT.jsxs)("section", {
                 className: "LobbyCollection",
-                children: [(0, tv.jsxs)("div", {
-                  className: av()("LobbyCollectionHeader", {
-                    SandboxWorldsLobbyCollectionHeader: !0 === Az.showWorldsInsteadOfCustomLobbies
+                children: [(0, GT.jsxs)("div", {
+                  className: vT()("LobbyCollectionHeader", {
+                    SandboxWorldsLobbyCollectionHeader: !0 === dk.showWorldsInsteadOfCustomLobbies
                   }),
-                  children: [!0 === Az.showWorldsInsteadOfCustomLobbies && (0, tv.jsxs)("h2", {
+                  children: [!0 === dk.showWorldsInsteadOfCustomLobbies && (0, GT.jsxs)("h2", {
                     className: "LobbyCollectionTitle",
-                    children: [(0, tv.jsx)(Jv.b, {
+                    children: [(0, GT.jsx)(YT.e, {
                       name: "planet-ringed",
                       kit: "duotone"
-                    }), (0, tv.jsxs)("div", {
+                    }), (0, GT.jsxs)("div", {
                       className: "LobbyCollectionTitleText",
-                      children: [(0, tv.jsx)("div", {
+                      children: [(0, GT.jsx)("div", {
                         className: "LobbyCollectionTitleTextBackground"
-                      }), Zv("game:worlds")]
+                      }), uT("game:worlds")]
                     })]
-                  }), !1 === Az.showWorldsInsteadOfCustomLobbies && (0, tv.jsxs)("h2", {
+                  }), !1 === dk.showWorldsInsteadOfCustomLobbies && (0, GT.jsxs)("h2", {
                     className: "LobbyCollectionTitle",
-                    children: [(0, tv.jsx)(Jv.b, {
+                    children: [(0, GT.jsx)(YT.e, {
                       name: "joystick"
-                    }), (0, tv.jsxs)("div", {
+                    }), (0, GT.jsxs)("div", {
                       className: "LobbyCollectionTitleText",
-                      children: [(0, tv.jsx)("div", {
+                      children: [(0, GT.jsx)("div", {
                         className: "LobbyCollectionTitleTextBackground"
-                      }), Zv("homePage:customLobbies")]
+                      }), uT("homePage:customLobbies")]
                     })]
-                  }), (0, tv.jsx)(Wv.K, {
+                  }), (0, GT.jsx)(CT.P, {
                     onClick: () => {
-                      Xz("explore")
+                      sk("explore")
                     },
-                    active: "explore" === kz,
-                    children: Zv("general:explore")
-                  }), (0, tv.jsx)(Wv.K, {
+                    active: "explore" === qk,
+                    children: uT("general:explore")
+                  }), (0, GT.jsx)(CT.P, {
                     onClick: () => {
-                      Xz("favourite")
+                      sk("favourite")
                     },
-                    active: "favourite" === kz,
-                    children: Zv("homePage:favouriteLobbies")
-                  }), (0, tv.jsx)(Wv.K, {
+                    active: "favourite" === qk,
+                    children: uT("homePage:favouriteLobbies")
+                  }), (0, GT.jsx)(CT.P, {
                     onClick: () => {
-                      Xz("owned")
+                      sk("owned")
                     },
-                    active: "owned" === kz,
-                    children: Zv("homePage:ownedLobbies")
+                    active: "owned" === qk,
+                    children: uT("homePage:ownedLobbies")
                   })]
-                }), (0, tv.jsxs)("div", {
+                }), (0, GT.jsxs)("div", {
                   className: "CustomLobbyList",
-                  children: [(0, tv.jsxs)("div", {
+                  children: [(0, GT.jsxs)("div", {
                     className: "CustomLobbyListInner",
-                    children: [(0, tv.jsx)(cz.b, {
+                    children: [(0, GT.jsx)(Qk.d, {
                       label: "Create",
                       onClick: () => {
-                        zz.NotificationProvider.showCustomPopup({
-                          body: vv => (0, tv.jsx)(Pz.CreateCustomLobby, {
-                            gameNameWithVariation: hz.gameNameWithVariation,
-                            close: vv
+                        kk.NotificationProvider.showCustomPopup({
+                          body: TT => (0, GT.jsx)(ck.CreateCustomLobby, {
+                            gameNameWithVariation: lk.gameNameWithVariation,
+                            close: TT
                           }),
                           middleScreenPopupClassName: "CreateCustomLobbyPopup"
                         })
                       }
-                    }), !0 === Bz && (0, tv.jsx)(cz.g, {}), !1 === Bz && (0, tv.jsx)(fz, {
-                      customLobbies: Ez,
-                      favouriteLobbies: bz,
-                      toggleLikeLobby: TP,
-                      showReport: Ev.featureFlags.useSocialFeatures && "owned" !== kz
+                    }), !0 === Yk && (0, GT.jsx)(Qk.i, {}), !1 === Yk && (0, GT.jsx)(Fk, {
+                      customLobbies: Wk,
+                      favouriteLobbies: pk,
+                      toggleLikeLobby: Cc,
+                      showReport: BT.featureFlags.useSocialFeatures && "owned" !== qk
                     })]
-                  }), sP]
+                  }), hc]
                 })]
               })
             })]
-          }), !aP && sP]
+          }), !tc && hc]
         })
       })
     }
 
-    function Zz(vv) {
+    function Xk(TT) {
       let {
-        variation: zv,
-        isSelected: Pv,
-        children: hv
-      } = vv;
-      const dv = Tz.e[zv],
-        lv = (0, ev.l)(zv, (0, ev.n)(dv)),
-        Tv = (0, Sv.f)(lv),
-        Wv = (0, gv.e)([(0, ev.h)(zv, (0, ev.d)(dv))]);
-      return (0, tv.jsxs)(Xv.LinkPreserveSearch, {
-        to: (0, Av.G)(zv),
+        variation: kT,
+        isSelected: cT,
+        children: lT
+      } = TT;
+      const fT = Ak.e[kT],
+        IT = (0, KT.o)(kT, (0, KT.q)(fT)),
+        AT = (0, MT.f)(IT),
+        CT = (0, OT.d)([(0, KT.k)(kT, (0, KT.e)(fT))]);
+      return (0, GT.jsxs)(qT.LinkPreserveSearch, {
+        to: (0, XT.x)(kT),
         replace: !0,
-        className: av()("GameInformationVariation", pv.g, {
-          SelectedGameInformationVariation: Pv
+        className: vT()("GameInformationVariation", yT.g, {
+          SelectedGameInformationVariation: cT
         }),
-        onClick: vv => {
-          if (!(0, vz.b)(vv)) return;
-          const Pv = (0, cv.i)(zv);
-          Nv.h.setItem(Pv, zv)
+        onClick: TT => {
+          if (!(0, Tk.c)(TT)) return;
+          const cT = (0, QT.g)(kT);
+          xT.e.setItem(cT, kT)
         },
-        onMouseEnter: Wv.start,
-        onMouseLeave: Wv.cancel,
-        onFocus: Wv.start,
-        onBlur: Wv.cancel,
-        style: (0, pv.e)(Tv),
-        children: [(0, tv.jsx)(pv.b, {
-          image: Tv
-        }), hv]
+        onMouseEnter: CT.start,
+        onMouseLeave: CT.cancel,
+        onFocus: CT.start,
+        onBlur: CT.cancel,
+        style: (0, yT.f)(AT),
+        children: [(0, GT.jsx)(yT.d, {
+          image: AT
+        }), lT]
       })
     }
   },
-  6225: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => iv
+  6516: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => NT
     });
-    var hv = Pv(52),
-      Sv = Pv(1442),
-      ev = Pv(1482),
-      gv = Pv(3247),
-      pv = Pv(1108),
-      dv = Pv(1327),
-      Nv = Pv(1344),
-      lv = Pv(1042),
-      Tv = Pv(1035),
-      Wv = Pv.n(Tv),
-      wv = Pv(1082);
+    var lT = cT(71),
+      MT = cT(1470),
+      KT = cT(1518),
+      OT = cT(3436),
+      yT = cT(1130),
+      fT = cT(1348),
+      xT = cT(1379),
+      IT = cT(1061),
+      AT = cT(1046),
+      CT = cT.n(AT),
+      jT = cT(1099);
 
-    function av(vv) {
+    function vT(TT) {
       let {
-        info: zv,
-        className: Pv
-      } = vv;
-      return (0, wv.jsxs)("div", {
-        className: Wv()("GameApprovalInfoDetails", Pv),
-        children: [(0, wv.jsxs)("div", {
-          className: Wv()("GameApprovalInfoSummary", zv.overallPassed ? "Passed" : "Failed"),
-          children: [(0, wv.jsx)(lv.b, {
-            name: zv.overallPassed ? "circle-check" : "circle-xmark"
-          }), (0, wv.jsx)("span", {
-            children: zv.summary
+        info: kT,
+        className: cT
+      } = TT;
+      return (0, jT.jsxs)("div", {
+        className: CT()("GameApprovalInfoDetails", cT),
+        children: [(0, jT.jsxs)("div", {
+          className: CT()("GameApprovalInfoSummary", kT.overallPassed ? "Passed" : "Failed"),
+          children: [(0, jT.jsx)(IT.e, {
+            name: kT.overallPassed ? "circle-check" : "circle-xmark"
+          }), (0, jT.jsx)("span", {
+            children: kT.summary
           })]
-        }), zv.rows.length > 0 && (0, wv.jsx)("div", {
+        }), kT.rows.length > 0 && (0, jT.jsx)("div", {
           className: "GameApprovalInfoRows",
-          children: zv.rows.map((vv => (0, wv.jsxs)("div", {
-            className: Wv()("GameApprovalInfoRow", vv.passed ? "Passed" : "Failed"),
-            children: [(0, wv.jsx)(lv.b, {
-              name: vv.passed ? "check" : "xmark"
-            }), (0, wv.jsxs)("div", {
+          children: kT.rows.map((TT => (0, jT.jsxs)("div", {
+            className: CT()("GameApprovalInfoRow", TT.passed ? "Passed" : "Failed"),
+            children: [(0, jT.jsx)(IT.e, {
+              name: TT.passed ? "check" : "xmark"
+            }), (0, jT.jsxs)("div", {
               className: "GameApprovalInfoRowText",
-              children: [(0, wv.jsx)("div", {
+              children: [(0, jT.jsx)("div", {
                 className: "GameApprovalInfoRowLabel",
-                children: vv.label
-              }), (0, wv.jsx)("div", {
+                children: TT.label
+              }), (0, jT.jsx)("div", {
                 className: "GameApprovalInfoRowValue",
-                children: vv.valueText
+                children: TT.valueText
               })]
             })]
-          }, vv.label)))
+          }, TT.label)))
         })]
       })
     }
-    var sv = Pv(1175),
-      Cv = Pv(1336);
+    var tT = cT(1195),
+      hT = cT(1363);
 
-    function iv(vv) {
-      Cv.NotificationProvider.showCustomPopup({
-        body: () => (0, wv.jsx)(cv, {
-          ...vv
+    function NT(TT) {
+      hT.NotificationProvider.showCustomPopup({
+        body: () => (0, jT.jsx)(QT, {
+          ...TT
         }),
         middleScreenPopupClassName: "ApprovalInfoPopup",
         onClose: () => {},
@@ -1365,90 +1365,90 @@ export const modules = {
       })
     }
 
-    function cv(vv) {
+    function QT(TT) {
       let {
-        schematicId: zv,
-        canOverride: Pv,
-        onApprovalChanged: Tv
-      } = vv;
+        schematicId: kT,
+        canOverride: cT,
+        onApprovalChanged: AT
+      } = TT;
       const {
-        t: Wv
-      } = (0, sv.x)(), {
-        userContext: Cv
-      } = (0, pv.d)(), iv = (0, gv.b)(), [cv, Gv] = (0, hv.useState)(null), [mv, jv] = (0, hv.useState)(null), [fv, Fv] = (0, hv.useState)(!1), Yv = (0, hv.useCallback)((() => {
-        jv(null), ev.e.getGameApprovalInfo(Cv, zv).then((vv => {
-          iv.current && Gv(vv)
-        })).catch((vv => {
-          console.error("Failed to get game approval info", vv), iv.current && jv(Wv("studio:approvalLoadFailed"))
+        t: CT
+      } = (0, tT.B)(), {
+        userContext: hT
+      } = (0, yT.b)(), NT = (0, OT.b)(), [QT, ST] = (0, lT.useState)(null), [DT, aT] = (0, lT.useState)(null), [FT, rT] = (0, lT.useState)(!1), PT = (0, lT.useCallback)((() => {
+        aT(null), KT.d.getGameApprovalInfo(hT, kT).then((TT => {
+          NT.current && ST(TT)
+        })).catch((TT => {
+          console.error("Failed to get game approval info", TT), NT.current && aT(CT("studio:approvalLoadFailed"))
         }))
-      }), [Cv, zv, iv, Wv]);
-      (0, hv.useEffect)((() => {
-        Yv()
-      }), [Yv]);
-      const nv = vv => {
-        fv || (Fv(!0), ev.e.setGameApproval(Cv, zv, vv).then((() => {
-          null === Tv || void 0 === Tv || Tv(), iv.current && Yv()
-        })).catch((vv => {
-          console.error("Failed to set game approval", vv)
+      }), [hT, kT, NT, CT]);
+      (0, lT.useEffect)((() => {
+        PT()
+      }), [PT]);
+      const wT = TT => {
+        FT || (rT(!0), KT.d.setGameApproval(hT, kT, TT).then((() => {
+          null === AT || void 0 === AT || AT(), NT.current && PT()
+        })).catch((TT => {
+          console.error("Failed to set game approval", TT)
         })).finally((() => {
-          iv.current && Fv(!1)
+          NT.current && rT(!1)
         })))
       };
-      return (0, wv.jsxs)("div", {
+      return (0, jT.jsxs)("div", {
         className: "ApprovalInfoPopupBody",
-        children: [(0, wv.jsx)("h1", {
+        children: [(0, jT.jsx)("h1", {
           className: "ApprovalInfoPopupTitle",
-          children: Wv("studio:approvalTitle")
-        }), !cv && !mv && (0, wv.jsx)("div", {
+          children: CT("studio:approvalTitle")
+        }), !QT && !DT && (0, jT.jsx)("div", {
           className: "ApprovalInfoPopupLoader",
-          children: (0, wv.jsx)(dv.c, {})
-        }), mv && (0, wv.jsx)("div", {
+          children: (0, jT.jsx)(fT.d, {})
+        }), DT && (0, jT.jsx)("div", {
           className: "ApprovalInfoPopupError",
-          children: mv
-        }), cv && (0, wv.jsxs)(wv.Fragment, {
-          children: [(0, wv.jsx)(av, {
-            info: cv
-          }), Pv && (0, wv.jsxs)("div", {
+          children: DT
+        }), QT && (0, jT.jsxs)(jT.Fragment, {
+          children: [(0, jT.jsx)(vT, {
+            info: QT
+          }), cT && (0, jT.jsxs)("div", {
             className: "ApprovalInfoPopupActions",
-            children: [!0 !== cv.manualOverride && (0, wv.jsx)(Nv.h, {
-              tooltipInner: (0, wv.jsx)("div", {
+            children: [!0 !== QT.manualOverride && (0, jT.jsx)(xT.c, {
+              tooltipInner: (0, jT.jsx)("div", {
                 children: "Manually approve the game. This will bypass the auto-approval criteria and allow the game to be shown on the home page."
               }),
-              children: (0, wv.jsxs)(Sv.j, {
+              children: (0, jT.jsxs)(MT.m, {
                 className: "ApprovalInfoPopupActionButton",
                 onClick: () => {
-                  nv(!0)
+                  wT(!0)
                 },
-                disabled: fv,
-                children: [(0, wv.jsx)(lv.b, {
+                disabled: FT,
+                children: [(0, jT.jsx)(IT.e, {
                   name: "check"
                 }), " Manually Approve"]
               })
-            }), !1 !== cv.manualOverride && (0, wv.jsx)(Nv.h, {
-              tooltipInner: (0, wv.jsx)("div", {
+            }), !1 !== QT.manualOverride && (0, jT.jsx)(xT.c, {
+              tooltipInner: (0, jT.jsx)("div", {
                 children: "Manually deny the game. This forces the game to be hidden from the home page, even if it passes auto-approval."
               }),
-              children: (0, wv.jsxs)(Sv.A, {
+              children: (0, jT.jsxs)(MT.I, {
                 className: "ApprovalInfoPopupActionButton",
                 onClick: () => {
-                  nv(!1)
+                  wT(!1)
                 },
-                disabled: fv,
-                children: [(0, wv.jsx)(lv.b, {
+                disabled: FT,
+                children: [(0, jT.jsx)(IT.e, {
                   name: "xmark"
                 }), " Manually Deny"]
               })
-            }), null !== cv.manualOverride && (0, wv.jsx)(Nv.h, {
-              tooltipInner: (0, wv.jsx)("div", {
+            }), null !== QT.manualOverride && (0, jT.jsx)(xT.c, {
+              tooltipInner: (0, jT.jsx)("div", {
                 children: "Remove the manual override and revert the game to the auto-approval criteria."
               }),
-              children: (0, wv.jsxs)(Sv.d, {
+              children: (0, jT.jsxs)(MT.e, {
                 className: "ApprovalInfoPopupActionButton",
                 onClick: () => {
-                  nv(null)
+                  wT(null)
                 },
-                disabled: fv,
-                children: [(0, wv.jsx)(lv.b, {
+                disabled: FT,
+                children: [(0, jT.jsx)(IT.e, {
                   name: "arrows-rotate"
                 }), " Clear Override"]
               })
@@ -1458,81 +1458,81 @@ export const modules = {
       })
     }
   },
-  9054: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => ev
+  9406: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => KT
     });
-    var hv = Pv(52),
-      Sv = Pv(3329);
+    var lT = cT(71),
+      MT = cT(3536);
 
-    function ev() {
-      const [vv, zv] = (0, hv.useState)(!1);
-      return (0, hv.useLayoutEffect)((() => {
-        let vv = !0;
-        return (0, Sv.e)().then((() => {
-          vv && zv(!0)
+    function KT() {
+      const [TT, kT] = (0, lT.useState)(!1);
+      return (0, lT.useLayoutEffect)((() => {
+        let TT = !0;
+        return (0, MT.e)().then((() => {
+          TT && kT(!0)
         })), () => {
-          vv = !1
+          TT = !1
         }
-      }), []), vv
+      }), []), TT
     }
   },
-  8580: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => gv
+  8946: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => OT
     });
-    var hv = Pv(1311),
-      Sv = Pv(1209),
-      ev = Pv(626);
+    var lT = cT(1333),
+      MT = cT(1226),
+      KT = cT(617);
 
-    function gv(vv) {
-      return vv = function(vv, zv) {
-        var Pv;
-        const hv = new URLSearchParams(zv),
-          Sv = hv.get("lobby"),
-          ev = hv.get("vm"),
-          gv = null !== (Pv = Sv) && void 0 !== Pv ? Pv : vv.lobbyName,
-          pv = null !== ev && void 0 !== ev ? ev : vv.directJoinVmUrl;
-        if (gv === vv.lobbyName && pv === vv.directJoinVmUrl) return vv;
+    function OT(TT) {
+      return TT = function(TT, kT) {
+        var cT;
+        const lT = new URLSearchParams(kT),
+          MT = lT.get("lobby"),
+          KT = lT.get("vm"),
+          OT = null !== (cT = MT) && void 0 !== cT ? cT : TT.lobbyName,
+          yT = null !== KT && void 0 !== KT ? KT : TT.directJoinVmUrl;
+        if (OT === TT.lobbyName && yT === TT.directJoinVmUrl) return TT;
         return {
-          ...vv,
-          lobbyName: gv,
-          directJoinVmUrl: pv
+          ...TT,
+          lobbyName: OT,
+          directJoinVmUrl: yT
         }
-      }(vv, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), vv = function(vv) {
-        if ((0, ev.N)(vv.directJoinVmUrl)) return vv;
-        const zv = (0, Sv.db)(vv.directJoinVmUrl);
-        null === zv && (vv.directJoinVmUrl = void 0);
-        return vv
-      }(vv = function(vv) {
-        if ((0, ev.N)(vv.gameNameWithVariation)) return vv;
-        return vv.gameNameWithVariation = (0, hv.n)(vv.gameNameWithVariation), vv
-      }(vv))
+      }(TT, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), TT = function(TT) {
+        if ((0, KT.R)(TT.directJoinVmUrl)) return TT;
+        const kT = (0, MT.cb)(TT.directJoinVmUrl);
+        null === kT && (TT.directJoinVmUrl = void 0);
+        return TT
+      }(TT = function(TT) {
+        if ((0, KT.R)(TT.gameNameWithVariation)) return TT;
+        return TT.gameNameWithVariation = (0, lT.l)(TT.gameNameWithVariation), TT
+      }(TT))
     }
   },
-  8578: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => ev,
-      g: () => Sv
+  8939: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => KT,
+      f: () => MT
     });
-    let hv = !1;
+    let lT = !1;
 
-    function Sv() {
-      hv = !0
+    function MT() {
+      lT = !0
     }
 
-    function ev() {
-      return hv
+    function KT() {
+      return lT
     }
   },
-  35922: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => Sv,
-      f: () => hv
+  36174: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => MT,
+      f: () => lT
     });
-    const hv = "skyblockSkills",
-      Sv = "skills_test_gym"
+    const lT = "skyblockSkills",
+      MT = "skills_test_gym"
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

@@ -1,456 +1,456 @@
 export const id = 94;
 export const ids = [92, 93, 94];
 export const modules = {
-  36151: (vv, zv, Pv) => {
-    function hv(vv, zv, Pv, hv) {
-      return !(Pv && !vv.aimable) && (!zv || vv.gun && "head" !== hv)
+  36440: (TT, kT, cT) => {
+    function lT(TT, kT, cT, lT) {
+      return !(cT && !TT.aimable) && (!kT || TT.gun && "head" !== lT)
     }
 
-    function Sv(vv) {
-      return Math.max(.1 * vv, 1)
+    function MT(TT) {
+      return Math.max(.1 * TT, 1)
     }
 
-    function ev(vv, zv) {
-      return !vv && zv
+    function KT(TT, kT) {
+      return !TT && kT
     }
-    Pv.d(zv, {
-      b: () => ev,
-      d: () => Sv,
-      e: () => hv
+    cT.d(kT, {
+      d: () => KT,
+      f: () => MT,
+      g: () => lT
     })
   },
-  36153: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => pv,
-      c: () => gv
+  36445: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => yT,
+      f: () => OT
     });
-    let hv = null;
-    const Sv = {
+    let lT = null;
+    const MT = {
         crosshairAccuracy: [],
         turnDamageIndicators: []
       },
-      ev = {
-        crosshairAccuracy: vv => {
-          const zv = Sv.crosshairAccuracy.at(-1);
-          zv ? zv.hook(vv) : hv = vv
+      KT = {
+        crosshairAccuracy: TT => {
+          const kT = MT.crosshairAccuracy.at(-1);
+          kT ? kT.hook(TT) : lT = TT
         },
-        turnDamageIndicators: vv => {
-          var zv;
-          null === (zv = Sv.turnDamageIndicators.at(-1)) || void 0 === zv || zv.hook(vv)
+        turnDamageIndicators: TT => {
+          var kT;
+          null === (kT = MT.turnDamageIndicators.at(-1)) || void 0 === kT || kT.hook(TT)
         }
       };
 
-    function gv(vv, zv) {
-      const Pv = {
-          hook: zv
+    function OT(TT, kT) {
+      const cT = {
+          hook: kT
         },
-        gv = Sv[vv];
-      if (gv.push(Pv), "crosshairAccuracy" === vv && null !== hv) {
-        const vv = hv;
-        hv = null, ev.crosshairAccuracy(vv)
+        OT = MT[TT];
+      if (OT.push(cT), "crosshairAccuracy" === TT && null !== lT) {
+        const TT = lT;
+        lT = null, KT.crosshairAccuracy(TT)
       }
       return () => {
-        const vv = gv.indexOf(Pv); - 1 !== vv && gv.splice(vv, 1)
+        const TT = OT.indexOf(cT); - 1 !== TT && OT.splice(TT, 1)
       }
     }
 
-    function pv() {
-      return ev
+    function yT() {
+      return KT
     }
   },
-  35980: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      countDecodesAs: () => Tv,
-      decodedAudio: () => Wv
+  36242: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      countDecodesAs: () => AT,
+      decodedAudio: () => CT
     });
-    var hv = Pv(35983),
-      Sv = Pv(4603);
-    const ev = Sv.Howler,
-      gv = new Map;
-    let pv = 0;
-    const dv = {
+    var lT = cT(36247),
+      MT = cT(4820);
+    const KT = MT.Howler,
+      OT = new Map;
+    let yT = 0;
+    const fT = {
         song: 0,
         sheet: 0
       },
-      Nv = new WeakMap,
-      lv = new WeakSet;
+      xT = new WeakMap,
+      IT = new WeakSet;
 
-    function Tv(vv, zv) {
-      return Nv.set(vv, zv), vv
+    function AT(TT, kT) {
+      return xT.set(TT, kT), TT
     }
 
-    function Wv() {
+    function CT() {
       return {
-        bytes: pv,
-        songsDecoded: dv.song,
-        sheetsDecoded: dv.sheet
+        bytes: yT,
+        songsDecoded: fT.song,
+        sheetsDecoded: fT.sheet
       }
     }
 
-    function wv(vv) {
-      if (lv.has(vv)) return;
-      lv.add(vv);
-      const zv = 1 === vv.decodeAudioData.length,
-        Pv = vv.decodeAudioData.bind(vv);
-      vv.decodeAudioData = (vv, hv, Sv) => {
-        const lv = vv => {
-          const zv = ev._howls.filter((vv => "loaded" !== vv._state));
+    function jT(TT) {
+      if (IT.has(TT)) return;
+      IT.add(TT);
+      const kT = 1 === TT.decodeAudioData.length,
+        cT = TT.decodeAudioData.bind(TT);
+      TT.decodeAudioData = (TT, lT, MT) => {
+        const IT = TT => {
+          const kT = KT._howls.filter((TT => "loaded" !== TT._state));
           try {
-            null === hv || void 0 === hv || hv(vv)
+            null === lT || void 0 === lT || lT(TT)
           } finally {
-            const Pv = zv.find((vv => "loaded" === vv._state));
-            void 0 !== Pv && "string" === typeof Pv._src && function(vv, zv, Pv) {
-              var hv;
-              pv += Pv - (null !== (hv = gv.get(zv)) && void 0 !== hv ? hv : 0), gv.set(zv, Pv);
-              const Sv = Nv.get(vv);
-              void 0 !== Sv && dv[Sv]++
-            }(Pv, Pv._src, vv.length * vv.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
+            const cT = kT.find((TT => "loaded" === TT._state));
+            void 0 !== cT && "string" === typeof cT._src && function(TT, kT, cT) {
+              var lT;
+              yT += cT - (null !== (lT = OT.get(kT)) && void 0 !== lT ? lT : 0), OT.set(kT, cT);
+              const MT = xT.get(TT);
+              void 0 !== MT && fT[MT]++
+            }(cT, cT._src, TT.length * TT.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
           }
-          return vv
+          return TT
         };
-        if (!zv) return Pv(vv, lv, Sv);
-        const Tv = Pv(vv).then(lv);
-        return Tv.catch((vv => {
-          null === Sv || void 0 === Sv || Sv(vv)
-        })), Tv
+        if (!kT) return cT(TT, IT, MT);
+        const AT = cT(TT).then(IT);
+        return AT.catch((TT => {
+          null === MT || void 0 === MT || MT(TT)
+        })), AT
       }
-    }(0, hv.e)(Wv);
-    const av = Sv.Howl.prototype,
-      sv = av.init;
-    av.init = function(vv) {
-      return Sv.Howler.volume(), ev.ctx && wv(ev.ctx), sv.call(this, vv)
+    }(0, lT.f)(CT);
+    const vT = MT.Howl.prototype,
+      tT = vT.init;
+    vT.init = function(TT) {
+      return MT.Howler.volume(), KT.ctx && jT(KT.ctx), tT.call(this, TT)
     };
-    const Cv = av.unload;
-    av.unload = function() {
-      const vv = this._src,
-        zv = Cv.call(this);
-      if ("string" !== typeof vv) return zv;
-      const Pv = gv.get(vv);
-      return void 0 !== Pv && function(vv) {
-        return !ev._howls.some((zv => zv._src === vv || "string" === typeof zv._src && vv.indexOf(zv._src) >= 0))
-      }(vv) && (gv.delete(vv), pv -= Pv), zv
+    const hT = vT.unload;
+    vT.unload = function() {
+      const TT = this._src,
+        kT = hT.call(this);
+      if ("string" !== typeof TT) return kT;
+      const cT = OT.get(TT);
+      return void 0 !== cT && function(TT) {
+        return !KT._howls.some((kT => kT._src === TT || "string" === typeof kT._src && TT.indexOf(kT._src) >= 0))
+      }(TT) && (OT.delete(TT), yT -= cT), kT
     }
   },
-  35983: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => ev,
-      e: () => Sv
+  36247: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => KT,
+      f: () => MT
     });
-    let hv = null;
+    let lT = null;
 
-    function Sv(vv) {
-      hv = vv
+    function MT(TT) {
+      lT = TT
     }
 
-    function ev() {
-      return null === hv ? null : hv()
+    function KT() {
+      return null === lT ? null : lT()
     }
   },
-  36299: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => dv
+  36602: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => fT
     });
-    var hv = Pv(22),
-      Sv = Pv(36271),
-      ev = Pv(4107),
-      gv = Pv(36302),
-      pv = Pv(4603);
-    const dv = function(vv) {
-      const zv = new Set;
-      return Pv => {
-        var hv;
-        const ev = null === (hv = [...Sv.c].find((vv => {
-          let [, zv] = vv;
-          return zv.includes(Pv)
-        }))) || void 0 === hv ? void 0 : hv[0];
-        if (void 0 === ev || zv.has(ev)) return;
-        zv.add(ev);
-        ! function(vv, zv) {
+    var lT = cT(31),
+      MT = cT(36580),
+      KT = cT(4332),
+      OT = cT(36610),
+      yT = cT(4820);
+    const fT = function(TT) {
+      const kT = new Set;
+      return cT => {
+        var lT;
+        const KT = null === (lT = [...MT.d].find((TT => {
+          let [, kT] = TT;
+          return kT.includes(cT)
+        }))) || void 0 === lT ? void 0 : lT[0];
+        if (void 0 === KT || kT.has(KT)) return;
+        kT.add(KT);
+        ! function(TT, kT) {
           let {
-            afterJoin: Pv,
-            joining: hv,
-            idle: Sv,
-            fetchFile: ev
-          } = zv;
-          const gv = zv => {
-            zv >= vv.length || Pv((() => {
-              Sv((() => {
-                hv() ? gv(zv) : ev(vv[zv]).catch((() => {})).finally((() => {
-                  gv(zv + 1)
+            afterJoin: cT,
+            joining: lT,
+            idle: MT,
+            fetchFile: KT
+          } = kT;
+          const OT = kT => {
+            kT >= TT.length || cT((() => {
+              MT((() => {
+                lT() ? OT(kT) : KT(TT[kT]).catch((() => {})).finally((() => {
+                  OT(kT + 1)
                 }))
               }))
             }))
           };
-          gv(0)
-        }(Sv.c.get(ev).filter((vv => vv !== Pv)).flatMap((zv => {
-          const Pv = (hv = (0, Sv.f)(zv).src, ev = vv.canPlay, hv.find((vv => {
-            var zv;
-            const Pv = null === (zv = /\.([^.]+)$/.exec(vv.split("?", 1)[0])) || void 0 === zv ? void 0 : zv[1];
-            return void 0 !== Pv && ev(Pv.toLowerCase())
+          OT(0)
+        }(MT.d.get(KT).filter((TT => TT !== cT)).flatMap((kT => {
+          const cT = (lT = (0, MT.l)(kT).src, KT = TT.canPlay, lT.find((TT => {
+            var kT;
+            const cT = null === (kT = /\.([^.]+)$/.exec(TT.split("?", 1)[0])) || void 0 === kT ? void 0 : kT[1];
+            return void 0 !== cT && KT(cT.toLowerCase())
           })));
-          var hv, ev;
-          return void 0 === Pv ? [] : [Pv]
-        })), vv)
+          var lT, KT;
+          return void 0 === cT ? [] : [cT]
+        })), TT)
       }
     }({
-      afterJoin: vv => {
-        (0, ev.c)(hv.c.get("gameState"), vv)
+      afterJoin: TT => {
+        (0, KT.e)(lT.e.get("gameState"), TT)
       },
-      joining: () => (0, ev.d)(hv.c.get("gameState")),
-      idle: Pv(250).e,
-      fetchFile: gv.d,
-      canPlay: vv => !!pv.Howler.codecs(vv)
+      joining: () => (0, KT.f)(lT.e.get("gameState")),
+      idle: cT(275).e,
+      fetchFile: OT.b,
+      canPlay: TT => !!yT.Howler.codecs(TT)
     })
   },
-  36302: (vv, zv, Pv) => {
-    async function hv(vv) {
-      const zv = await fetch(vv, {
+  36610: (TT, kT, cT) => {
+    async function lT(TT) {
+      const kT = await fetch(TT, {
         priority: "low"
       });
-      if (!zv.ok) throw new Error(`Fetching ${vv} failed: HTTP ${zv.status}`);
-      const Pv = zv.body.getReader();
-      for (; !(await Pv.read()).done;);
+      if (!kT.ok) throw new Error(`Fetching ${TT} failed: HTTP ${kT.status}`);
+      const cT = kT.body.getReader();
+      for (; !(await cT.read()).done;);
     }
-    Pv.d(zv, {
-      d: () => hv
+    cT.d(kT, {
+      b: () => lT
     })
   },
-  36279: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => Sv
+  36584: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => MT
     });
-    const hv = ["end", "stop", "playerror"];
+    const lT = ["end", "stop", "playerror"];
 
-    function Sv(vv, zv) {
-      const Pv = () => {
-        if (function(vv) {
-            return "loaded" === vv.state() && !vv.playing() && !vv._playLock
-          }(vv)) {
-          for (const zv of hv) vv.off(zv, Pv);
-          vv.unload(), zv()
+    function MT(TT, kT) {
+      const cT = () => {
+        if (function(TT) {
+            return "loaded" === TT.state() && !TT.playing() && !TT._playLock
+          }(TT)) {
+          for (const kT of lT) TT.off(kT, cT);
+          TT.unload(), kT()
         }
       };
-      for (const Sv of hv) vv.on(Sv, Pv);
-      Pv()
+      for (const MT of lT) TT.on(MT, cT);
+      cT()
     }
   },
-  4603: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      Howl: () => Sv.Howl,
-      Howler: () => Sv.Howler,
-      musicOutput: () => av,
-      readyAudioContext: () => sv
+  4820: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      Howl: () => MT.Howl,
+      Howler: () => MT.Howler,
+      musicOutput: () => vT,
+      readyAudioContext: () => tT
     });
-    var hv, Sv = Pv(4611),
-      ev = Pv(4411);
-    const gv = Sv.Howler;
+    var lT, MT = cT(4825),
+      KT = cT(4641);
+    const OT = MT.Howler;
 
-    function pv() {
-      var vv, zv;
-      if (gv.ctx || !gv.usingWebAudio || "undefined" === typeof AudioContext || !(0, ev.f)()) return;
-      const Pv = navigator.audioSession;
-      let hv;
-      "auto" === (null === Pv || void 0 === Pv ? void 0 : Pv.type) && (Pv.type = "ambient");
+    function yT() {
+      var TT, kT;
+      if (OT.ctx || !OT.usingWebAudio || "undefined" === typeof AudioContext || !(0, KT.f)()) return;
+      const cT = navigator.audioSession;
+      let lT;
+      "auto" === (null === cT || void 0 === cT ? void 0 : cT.type) && (cT.type = "ambient");
       try {
-        hv = new AudioContext({
+        lT = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const Sv = hv.createGain();
-      Sv.gain.setValueAtTime(gv._muted ? 0 : null !== (vv = gv._volume) && void 0 !== vv ? vv : 1, hv.currentTime), Sv.connect(hv.destination), gv.ctx = hv, gv.masterGain = Sv, null === (zv = gv._setup) || void 0 === zv || zv.call(gv)
+      const MT = lT.createGain();
+      MT.gain.setValueAtTime(OT._muted ? 0 : null !== (TT = OT._volume) && void 0 !== TT ? TT : 1, lT.currentTime), MT.connect(lT.destination), OT.ctx = lT, OT.masterGain = MT, null === (kT = OT._setup) || void 0 === kT || kT.call(OT)
     }
-    gv._mobileUnloaded = !0;
-    const dv = gv.volume.bind(Sv.Howler);
-    gv.volume = function() {
-      return pv(), dv(...arguments)
+    OT._mobileUnloaded = !0;
+    const fT = OT.volume.bind(MT.Howler);
+    OT.volume = function() {
+      return yT(), fT(...arguments)
     };
-    const Nv = gv.mute.bind(Sv.Howler);
-    gv.mute = vv => (pv(), Nv(vv));
-    const lv = Sv.Howl.prototype,
-      Tv = lv.init;
-    lv.init = function(vv) {
-      return pv(), Tv.call(this, vv)
+    const xT = OT.mute.bind(MT.Howler);
+    OT.mute = TT => (yT(), xT(TT));
+    const IT = MT.Howl.prototype,
+      AT = IT.init;
+    IT.init = function(TT) {
+      return yT(), AT.call(this, TT)
     };
-    let Wv = 0;
-    const wv = null === (hv = gv._autoSuspend) || void 0 === hv ? void 0 : hv.bind(Sv.Howler);
+    let CT = 0;
+    const jT = null === (lT = OT._autoSuspend) || void 0 === lT ? void 0 : lT.bind(MT.Howler);
 
-    function av() {
-      sv();
+    function vT() {
+      tT();
       const {
-        ctx: vv,
-        masterGain: zv
-      } = gv;
-      return vv && zv ? {
-        ctx: vv,
-        destination: zv,
-        holdAwake: vv => {
-          var zv, Pv;
-          (Wv += vv ? 1 : -1, vv) ? null === (zv = gv._autoResume) || void 0 === zv || zv.call(gv): null === (Pv = gv._autoSuspend) || void 0 === Pv || Pv.call(gv)
+        ctx: TT,
+        masterGain: kT
+      } = OT;
+      return TT && kT ? {
+        ctx: TT,
+        destination: kT,
+        holdAwake: TT => {
+          var kT, cT;
+          (CT += TT ? 1 : -1, TT) ? null === (kT = OT._autoResume) || void 0 === kT || kT.call(OT): null === (cT = OT._autoSuspend) || void 0 === cT || cT.call(OT)
         },
         wake: () => {
-          var zv;
-          "running" !== vv.state && (null === (zv = gv._autoResume) || void 0 === zv || zv.call(gv), vv.resume().catch((() => {})))
+          var kT;
+          "running" !== TT.state && (null === (kT = OT._autoResume) || void 0 === kT || kT.call(OT), TT.resume().catch((() => {})))
         }
       } : null
     }
 
-    function sv() {
-      var vv;
-      (gv.volume(), gv.ctx && gv.autoUnlock) && (null === (vv = gv._unlockAudio) || void 0 === vv || vv.call(gv))
+    function tT() {
+      var TT;
+      (OT.volume(), OT.ctx && OT.autoUnlock) && (null === (TT = OT._unlockAudio) || void 0 === TT || TT.call(OT))
     }
-    wv && (gv._autoSuspend = () => Wv > 0 ? Sv.Howler : wv())
+    jT && (OT._autoSuspend = () => CT > 0 ? MT.Howler : jT())
   },
-  36292: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => hv
+  36595: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => lT
     });
-    const hv = new Set(["gunSemiAutomatic", "gunSubmachineGun", "gunShotgun", "gunRifle", "gunPistol", "gunMisc", "step", "dig", "randomItems", "randomExp", "randomCash", "randomFallsmall", "note", "rpg", "phoneAndMoney"])
+    const lT = new Set(["gunSemiAutomatic", "gunSubmachineGun", "gunShotgun", "gunRifle", "gunPistol", "gunMisc", "step", "dig", "randomItems", "randomExp", "randomCash", "randomFallsmall", "note", "rpg", "phoneAndMoney"])
   },
-  36290: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => gv,
-      g: () => Sv,
-      k: () => hv
+  36593: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => OT,
+      f: () => MT,
+      h: () => lT
     });
 
-    function hv(vv) {
-      return vv.replace(/[_\-\s]*\d+$/, "") || vv
+    function lT(TT) {
+      return TT.replace(/[_\-\s]*\d+$/, "") || TT
     }
 
-    function Sv(vv, zv, Pv) {
-      return Pv <= 0 ? 0 : vv * Pv / Math.max(zv, Pv)
+    function MT(TT, kT, cT) {
+      return cT <= 0 ? 0 : TT * cT / Math.max(kT, cT)
     }
 
-    function ev(vv, zv) {
-      const Pv = vv.getDurationMs();
-      return Pv > 0 ? vv.loudness * Math.max(0, 1 - (zv - vv.startMs) / Pv) : 0
+    function KT(TT, kT) {
+      const cT = TT.getDurationMs();
+      return cT > 0 ? TT.loudness * Math.max(0, 1 - (kT - TT.startMs) / cT) : 0
     }
-    class gv {
+    class OT {
       constructor() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
-          zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
-        this.maxVoices = vv, this.maxPerGroup = zv, this.voices = []
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
+          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
+        this.maxVoices = TT, this.maxPerGroup = kT, this.voices = []
       }
-      admit(vv) {
-        if (this.voices = this.voices.filter((vv => vv.isAlive())), null !== vv.group) {
-          const zv = this.voices.filter((zv => zv.group === vv.group));
-          if (zv.length >= this.maxPerGroup && !this.dropLeastWorth(zv, vv)) return !1
+      admit(TT) {
+        if (this.voices = this.voices.filter((TT => TT.isAlive())), null !== TT.group) {
+          const kT = this.voices.filter((kT => kT.group === TT.group));
+          if (kT.length >= this.maxPerGroup && !this.dropLeastWorth(kT, TT)) return !1
         }
-        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, vv)) && (this.voices.push(vv), !0)
+        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, TT)) && (this.voices.push(TT), !0)
       }
-      dropLeastWorth(vv, zv) {
-        let Pv = null,
-          hv = 1 / 0;
-        for (const Sv of vv) {
-          if (!Sv.canStop()) continue;
-          const vv = ev(Sv, zv.startMs);
-          vv < hv && (Pv = Sv, hv = vv)
+      dropLeastWorth(TT, kT) {
+        let cT = null,
+          lT = 1 / 0;
+        for (const MT of TT) {
+          if (!MT.canStop()) continue;
+          const TT = KT(MT, kT.startMs);
+          TT < lT && (cT = MT, lT = TT)
         }
-        return !(!Pv || zv.loudness < hv) && (this.voices.splice(this.voices.indexOf(Pv), 1), Pv.stop(), !0)
+        return !(!cT || kT.loudness < lT) && (this.voices.splice(this.voices.indexOf(cT), 1), cT.stop(), !0)
       }
     }
   },
-  36314: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => ev,
-      h: () => gv,
-      j: () => hv
+  36619: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => KT,
+      d: () => OT,
+      h: () => lT
     });
-    class hv {
-      constructor(vv) {
-        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = vv
+    class lT {
+      constructor(TT) {
+        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = TT
       }
-      setMultiplierType(vv, zv) {
-        var Pv;
-        this.multipliers[vv] = zv, null === (Pv = this._onUpdate) || void 0 === Pv || Pv.call(this)
+      setMultiplierType(TT, kT) {
+        var cT;
+        this.multipliers[TT] = kT, null === (cT = this._onUpdate) || void 0 === cT || cT.call(this)
       }
-      removeMultiplier(vv) {
-        var zv;
-        delete this.multipliers[vv], null === (zv = this._onUpdate) || void 0 === zv || zv.call(this)
+      removeMultiplier(TT) {
+        var kT;
+        delete this.multipliers[TT], null === (kT = this._onUpdate) || void 0 === kT || kT.call(this)
       }
-      getMultiplierType(vv) {
-        return this.multipliers[vv]
+      getMultiplierType(TT) {
+        return this.multipliers[TT]
       }
       getTotalMultipliedVal() {
-        let vv = 1;
-        for (const zv in this.multipliers) vv *= this.multipliers[zv];
-        return vv
+        let TT = 1;
+        for (const kT in this.multipliers) TT *= this.multipliers[kT];
+        return TT
       }
     }
-    class Sv {
+    class MT {
       constructor() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = vv
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = TT
       }
-      setBooleanType(vv, zv) {
-        const Pv = this._getTotalBooleanVal();
-        this.booleans[vv] = !!zv;
-        const hv = this.getTotalBooleanVal();
-        var Sv;
-        hv !== Pv && (null === (Sv = this._onUpdate) || void 0 === Sv || Sv.call(this, hv, this.booleans));
-        return hv
+      setBooleanType(TT, kT) {
+        const cT = this._getTotalBooleanVal();
+        this.booleans[TT] = !!kT;
+        const lT = this.getTotalBooleanVal();
+        var MT;
+        lT !== cT && (null === (MT = this._onUpdate) || void 0 === MT || MT.call(this, lT, this.booleans));
+        return lT
       }
-      removeBoolean(vv) {
-        const zv = this._getTotalBooleanVal();
-        delete this.booleans[vv];
-        const Pv = this._getTotalBooleanVal();
-        var hv;
-        null !== Pv && Pv !== zv && (null === (hv = this._onUpdate) || void 0 === hv || hv.call(this, Pv, this.booleans));
-        return null !== Pv && void 0 !== Pv && Pv
+      removeBoolean(TT) {
+        const kT = this._getTotalBooleanVal();
+        delete this.booleans[TT];
+        const cT = this._getTotalBooleanVal();
+        var lT;
+        null !== cT && cT !== kT && (null === (lT = this._onUpdate) || void 0 === lT || lT.call(this, cT, this.booleans));
+        return null !== cT && void 0 !== cT && cT
       }
-      getBooleanType(vv) {
-        return this.booleans[vv]
+      getBooleanType(TT) {
+        return this.booleans[TT]
       }
       getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
       forceUpdate() {
-        var vv;
-        null === (vv = this._onUpdate) || void 0 === vv || vv.call(this, this.getTotalBooleanVal(), this.booleans)
+        var TT;
+        null === (TT = this._onUpdate) || void 0 === TT || TT.call(this, this.getTotalBooleanVal(), this.booleans)
       }
       _getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
     }
-    class ev extends Sv {
+    class KT extends MT {
       getTotalBooleanVal() {
-        const vv = this._getTotalBooleanVal();
-        if (null === vv) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return vv
+        const TT = this._getTotalBooleanVal();
+        if (null === TT) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return TT
       }
       _getTotalBooleanVal() {
-        let vv = !1,
-          zv = !0;
-        for (const Pv in this.booleans) vv = !0, zv &&= this.booleans[Pv];
-        return vv ? zv : null
+        let TT = !1,
+          kT = !0;
+        for (const cT in this.booleans) TT = !0, kT &&= this.booleans[cT];
+        return TT ? kT : null
       }
     }
-    class gv extends Sv {
+    class OT extends MT {
       getTotalBooleanVal() {
-        const vv = this._getTotalBooleanVal();
-        if (null === vv) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return vv
+        const TT = this._getTotalBooleanVal();
+        if (null === TT) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return TT
       }
       _getTotalBooleanVal() {
-        let vv = !1,
-          zv = !1;
-        for (const Pv in this.booleans) vv = !0, zv ||= this.booleans[Pv];
-        return vv ? zv : null
+        let TT = !1,
+          kT = !1;
+        for (const cT in this.booleans) TT = !0, kT ||= this.booleans[cT];
+        return TT ? kT : null
       }
     }
   },
-  36310: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => ev,
-      d: () => hv,
-      e: () => Sv
+  36614: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => KT,
+      f: () => lT,
+      g: () => MT
     });
-    const hv = 15,
-      Sv = 3,
-      ev = 30
+    const lT = 15,
+      MT = 3,
+      KT = 30
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

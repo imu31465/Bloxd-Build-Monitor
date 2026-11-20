@@ -1,28 +1,28 @@
 export const id = 207;
 export const ids = [207];
 export const modules = {
-  35841: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => Sv,
-      reportCappedWasmFailure: () => pv,
-      reportUncappedWasmFailure: () => gv,
-      reportWasmFailure: () => ev
+  36069: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => MT,
+      reportCappedWasmFailure: () => yT,
+      reportUncappedWasmFailure: () => OT,
+      reportWasmFailure: () => KT
     });
-    var hv = Pv(2715);
-    const Sv = hv.c - 4;
+    var lT = cT(2891);
+    const MT = lT.d - 4;
 
-    function ev(vv, zv, Pv) {
-      (0, hv.e)(vv, zv, Pv, !1)
+    function KT(TT, kT, cT) {
+      (0, lT.e)(TT, kT, cT, !1)
     }
 
-    function gv(vv, zv, Pv) {
-      (0, hv.e)(vv, zv, Pv, !1, 1 / 0)
+    function OT(TT, kT, cT) {
+      (0, lT.e)(TT, kT, cT, !1, 1 / 0)
     }
 
-    function pv(vv, zv, Pv) {
-      (0, hv.e)(vv, zv, Pv, !1, Sv)
+    function yT(TT, kT, cT) {
+      (0, lT.e)(TT, kT, cT, !1, MT)
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

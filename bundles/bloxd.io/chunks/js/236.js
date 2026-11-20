@@ -1,78 +1,78 @@
 export const id = 236;
 export const ids = [236];
 export const modules = {
-  37599: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => Nv,
-      f: () => hv,
-      h: () => pv,
-      k: () => Sv,
-      l: () => gv,
-      n: () => ev
+  37902: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => xT,
+      f: () => lT,
+      j: () => yT,
+      m: () => MT,
+      o: () => OT,
+      p: () => KT
     });
-    const hv = 1.001,
-      Sv = .501,
-      ev = .025,
-      gv = .75,
-      pv = .08,
-      dv = 4;
+    const lT = 1.001,
+      MT = .501,
+      KT = .025,
+      OT = .75,
+      yT = .08,
+      fT = 4;
 
-    function Nv() {
-      const vv = Sv,
-        zv = ev,
-        Pv = vv - zv / 2,
-        hv = (2 * vv - 2 * zv) / (2 * dv - 1),
-        gv = [];
-      for (const Sv of [-Pv, Pv])
-        for (const ev of [-Pv, Pv])
-          for (let Pv = 0; Pv < dv; Pv++) {
-            const pv = -vv + zv + hv * (2 * Pv + .5);
-            gv.push([hv, zv, zv, pv, Sv, ev]), gv.push([zv, hv, zv, Sv, pv, ev]), gv.push([zv, zv, hv, Sv, ev, pv])
+    function xT() {
+      const TT = MT,
+        kT = KT,
+        cT = TT - kT / 2,
+        lT = (2 * TT - 2 * kT) / (2 * fT - 1),
+        OT = [];
+      for (const MT of [-cT, cT])
+        for (const KT of [-cT, cT])
+          for (let cT = 0; cT < fT; cT++) {
+            const yT = -TT + kT + lT * (2 * cT + .5);
+            OT.push([lT, kT, kT, yT, MT, KT]), OT.push([kT, lT, kT, MT, yT, KT]), OT.push([kT, kT, lT, MT, KT, yT])
           }
-      for (const Sv of [-Pv, Pv])
-        for (const vv of [-Pv, Pv])
-          for (const hv of [-Pv, Pv]) gv.push([zv, zv, zv, Sv, vv, hv]);
-      return gv
+      for (const MT of [-cT, cT])
+        for (const TT of [-cT, cT])
+          for (const lT of [-cT, cT]) OT.push([kT, kT, kT, MT, TT, lT]);
+      return OT
     }
   },
-  37946: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      C: () => Wv,
-      G: () => sv,
-      J: () => iv,
-      N: () => Sv,
-      c: () => lv,
-      g: () => dv,
-      h: () => Gv,
-      i: () => Nv,
-      l: () => pv,
-      m: () => gv,
-      o: () => ev,
-      p: () => Fv,
-      q: () => wv,
-      r: () => fv,
-      t: () => Yv,
-      x: () => jv,
-      z: () => mv
+  38263: (TT, kT, cT) => {
+    cT.d(kT, {
+      C: () => PT,
+      E: () => aT,
+      F: () => DT,
+      H: () => CT,
+      L: () => tT,
+      N: () => NT,
+      Q: () => MT,
+      d: () => IT,
+      e: () => fT,
+      h: () => ST,
+      j: () => xT,
+      m: () => yT,
+      o: () => OT,
+      p: () => KT,
+      t: () => rT,
+      x: () => jT,
+      y: () => FT
     });
-    var hv = Pv(9181);
+    var lT = cT(9537);
 
-    function Sv(vv) {
-      return Math.floor(vv).toLocaleString("en-US")
+    function MT(TT) {
+      return Math.floor(TT).toLocaleString("en-US")
     }
-    const ev = 2e3,
-      gv = .005,
-      pv = .001,
-      dv = 2,
-      Nv = "Fluid Tank",
-      lv = "Coolant Mixer",
-      Tv = 144;
+    const KT = 2e3,
+      OT = .005,
+      yT = .001,
+      fT = 2,
+      xT = "Fluid Tank",
+      IT = "Coolant Mixer",
+      AT = 144;
 
-    function Wv(vv) {
-      const zv = vv.split("|")[0];
-      return (0, hv.m)(zv) ? zv === hv.e ? "cryo" : "water" : null
+    function CT(TT) {
+      const kT = TT.split("|")[0];
+      return (0, lT.l)(kT) ? kT === lT.c ? "cryo" : "water" : null
     }
-    const wv = [
+    const jT = [
         [1, 0, 0],
         [-1, 0, 0],
         [0, 1, 0],
@@ -80,43 +80,43 @@ export const modules = {
         [0, 0, 1],
         [0, 0, -1]
       ],
-      av = 63;
+      vT = 63;
 
-    function sv(vv) {
-      let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const Pv = zv ? function(vv, zv, Pv) {
-        const hv = wv.findIndex((hv => {
-          let [Sv, ev, gv] = hv;
-          return Sv === vv && ev === zv && gv === Pv
+    function tT(TT) {
+      let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const cT = kT ? function(TT, kT, cT) {
+        const lT = jT.findIndex((lT => {
+          let [MT, KT, OT] = lT;
+          return MT === TT && KT === kT && OT === cT
         }));
-        return hv < 0 ? 0 : 1 << hv
-      }(zv[0], zv[1], zv[2]) : 0;
-      return "maker" === vv ? {
-        kind: vv,
-        faces: Pv
-      } : "user" === vv ? {
-        kind: vv,
-        faces: av & ~Pv
+        return lT < 0 ? 0 : 1 << lT
+      }(kT[0], kT[1], kT[2]) : 0;
+      return "maker" === TT ? {
+        kind: TT,
+        faces: cT
+      } : "user" === TT ? {
+        kind: TT,
+        faces: vT & ~cT
       } : {
-        kind: vv,
-        faces: av
+        kind: TT,
+        faces: vT
       }
     }
 
-    function Cv(vv) {
-      return "pipe" === vv || "tank" === vv || "maker" === vv
+    function hT(TT) {
+      return "pipe" === TT || "tank" === TT || "maker" === TT
     }
 
-    function iv(vv, zv, Pv) {
-      return 0 !== (vv.faces & 1 << Pv) && 0 !== (zv.faces & 1 << (1 ^ Pv)) && (Cv(vv.kind) || Cv(zv.kind))
+    function NT(TT, kT, cT) {
+      return 0 !== (TT.faces & 1 << cT) && 0 !== (kT.faces & 1 << (1 ^ cT)) && (hT(TT.kind) || hT(kT.kind))
     }
-    const cv = (vv, zv, Pv, hv) => ({
-        input: vv,
-        inputAmount: hv,
-        output: zv,
-        outputAmount: Pv
+    const QT = (TT, kT, cT, lT) => ({
+        input: TT,
+        inputAmount: lT,
+        output: kT,
+        outputAmount: cT
       }),
-      Gv = {
+      ST = {
         Condenser: {
           kind: "Condenser",
           opMs: 2e3,
@@ -135,7 +135,7 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [1, 2, 3],
-          recipes: [cv("Uranium Grit", "Uranium Pellet", 1, 12), cv("Spent Pellet", "Plutonium Pellet", 1, 4)],
+          recipes: [QT("Uranium Grit", "Uranium Pellet", 1, 12), QT("Spent Pellet", "Plutonium Pellet", 1, 4)],
           powerPerOp: 600,
           waterPerOp: 24
         },
@@ -156,36 +156,36 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [],
-          recipes: [cv("Biomass", "", 0, 1)],
+          recipes: [QT("Biomass", "", 0, 1)],
           powerPerOp: 720,
           waterPerOp: 144,
-          cryoMade: Tv,
+          cryoMade: AT,
           couplable: !0,
           couplerSlot: 1
         }
       };
 
-    function mv(vv, zv) {
-      return 1e3 * (null !== zv && void 0 !== zv ? zv : 0) / vv.opMs
+    function DT(TT, kT) {
+      return 1e3 * (null !== kT && void 0 !== kT ? kT : 0) / TT.opMs
     }
 
-    function jv(vv) {
-      let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const Pv = mv(Gv["Coolant Mixer"], Tv) * zv;
-      return vv <= 0 ? 0 : Math.ceil(vv / Pv - 1e-9)
+    function aT(TT) {
+      let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const cT = DT(ST["Coolant Mixer"], AT) * kT;
+      return TT <= 0 ? 0 : Math.ceil(TT / cT - 1e-9)
     }
-    const fv = "baf2Water",
-      Fv = "baf2waterclose",
-      Yv = "baf2wateropen"
+    const FT = "baf2Water",
+      rT = "baf2waterclose",
+      PT = "baf2wateropen"
   },
-  37941: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => xv,
-      e: () => tv
+  38251: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => eT,
+      f: () => GT
     });
-    var hv = Pv(9101),
-      Sv = Pv(9136);
-    const ev = [
+    var lT = cT(9447),
+      MT = cT(9485);
+    const KT = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
@@ -193,45 +193,45 @@ export const modules = {
       [0, 1, 0],
       [0, -1, 0]
     ];
-    var gv = Pv(9153),
-      pv = Pv(37757),
-      dv = Pv(9144);
-    const Nv = {
+    var OT = cT(9503),
+      yT = cT(38064),
+      fT = cT(9495);
+    const xT = {
       1: [0, -1],
       2: [-1, 0],
       3: [0, 1],
       4: [1, 0]
     };
 
-    function lv(vv) {
-      let [zv, Pv] = vv;
-      return [-Pv, zv]
+    function IT(TT) {
+      let [kT, cT] = TT;
+      return [-cT, kT]
     }
 
-    function Tv(vv, zv) {
-      return vv[0] === zv[0] && vv[1] === zv[1]
+    function AT(TT, kT) {
+      return TT[0] === kT[0] && TT[1] === kT[1]
     }
 
-    function Wv(vv, zv) {
-      return vv[0] * zv[0] + vv[1] * zv[1] === 0
+    function CT(TT, kT) {
+      return TT[0] * kT[0] + TT[1] * kT[1] === 0
     }
-    const wv = [
+    const jT = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
       [0, 0, -1]
     ];
-    var av = Pv(9176);
+    var vT = cT(9533);
 
-    function sv(vv, zv, Pv, hv, Sv) {
-      return zv < av.l || zv >= av.l + av.m || Math.floor(vv / av.s) === Math.floor(hv / av.s) && Math.floor(Pv / av.s) === Math.floor(Sv / av.s)
+    function tT(TT, kT, cT, lT, MT) {
+      return kT < vT.t || kT >= vT.t + vT.w || Math.floor(TT / vT.E) === Math.floor(lT / vT.E) && Math.floor(cT / vT.E) === Math.floor(MT / vT.E)
     }
-    const Cv = "Splitter",
-      iv = "Sorting Gate",
-      cv = new Set(av.G),
-      Gv = new Set([...av.G, "Belt Loader", "Fast Loader", iv]),
-      mv = new Set(av.p),
-      jv = [
+    const hT = "Splitter",
+      NT = "Sorting Gate",
+      QT = new Set(vT.T),
+      ST = new Set([...vT.T, "Belt Loader", "Fast Loader", NT]),
+      DT = new Set(vT.A),
+      aT = [
         [1, 0, 0],
         [-1, 0, 0],
         [0, 0, 1],
@@ -240,260 +240,260 @@ export const modules = {
         [0, -1, 0]
       ];
 
-    function fv(vv) {
-      var zv, Pv;
-      return null !== (zv = null === (Pv = hv.g[vv]) || void 0 === Pv ? void 0 : Pv.meta.rootName) && void 0 !== zv ? zv : ""
+    function FT(TT) {
+      var kT, cT;
+      return null !== (kT = null === (cT = lT.i[TT]) || void 0 === cT ? void 0 : cT.meta.rootName) && void 0 !== kT ? kT : ""
     }
 
-    function Fv(vv) {
-      return fv(vv) === av.i && (0, av.T)(hv.g[vv].name)
+    function rT(TT) {
+      return FT(TT) === vT.h && (0, vT.$)(lT.i[TT].name)
     }
-    var Yv = Pv(9141),
-      nv = Pv(9163);
-    const Ov = [
+    var PT = cT(9489),
+      wT = cT(9514);
+    const mT = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
       [0, 0, -1]
     ];
 
-    function Dv(vv) {
-      var zv, Pv;
-      const Sv = null === (zv = hv.g[vv]) || void 0 === zv ? void 0 : zv.meta;
-      return (null === Sv || void 0 === Sv ? void 0 : Sv.rootName) !== nv.m ? null : {
-        rot: null !== (Pv = Sv.rot) && void 0 !== Pv ? Pv : 1,
-        half: (0, nv.e)(Sv.rootName, Sv.metaStr)
+    function bT(TT) {
+      var kT, cT;
+      const MT = null === (kT = lT.i[TT]) || void 0 === kT ? void 0 : kT.meta;
+      return (null === MT || void 0 === MT ? void 0 : MT.rootName) !== wT.o ? null : {
+        rot: null !== (cT = MT.rot) && void 0 !== cT ? cT : 1,
+        half: (0, wT.g)(MT.rootName, MT.metaStr)
       }
     }
 
-    function Kv(vv, zv, Pv, hv) {
-      return Dv(vv(zv, Pv, hv))
+    function zT(TT, kT, cT, lT) {
+      return bT(TT(kT, cT, lT))
     }
 
-    function Vv(vv, zv, Pv, hv, Sv) {
+    function JT(TT, kT, cT, lT, MT) {
       let {
-        rot: ev,
-        half: gv
-      } = Sv;
-      const [pv, dv] = (0, nv.k)(ev, gv), Nv = Kv(vv, zv + pv, Pv, hv + dv);
-      return null !== Nv && Nv.rot === ev && Nv.half === nv.n[gv]
+        rot: KT,
+        half: OT
+      } = MT;
+      const [yT, fT] = (0, wT.l)(KT, OT), xT = zT(TT, kT + yT, cT, lT + fT);
+      return null !== xT && xT.rot === KT && xT.half === wT.p[OT]
     }
-    var Uv = Pv(37943);
-    const Rv = [new class {
+    var oT = cT(38258);
+    const HT = [new class {
       constructor() {
-        this.reshapeOffsets = wv
+        this.reshapeOffsets = jT
       }
-      handles(vv) {
-        var zv;
-        return "Stairs" === (null === (zv = hv.g[vv]) || void 0 === zv ? void 0 : zv.model)
+      handles(TT) {
+        var kT;
+        return "Stairs" === (null === (kT = lT.i[TT]) || void 0 === kT ? void 0 : kT.model)
       }
-      affects(vv) {
-        return this.handles(vv)
+      affects(TT) {
+        return this.handles(TT)
       }
-      shape(vv, zv, Pv, Sv, ev) {
-        const gv = this.stairsOf(ev),
-          pv = this.cornerAt(vv, zv, Pv, Sv, gv),
-          Nv = gv.half === dv.e.top ? "top" : "bot";
-        return (0, hv.i)(`${hv.g[ev].meta.rootName}|meta|rot${gv.rot}|${Nv}${null===pv?"":`|${pv}`}`)
+      shape(TT, kT, cT, MT, KT) {
+        const OT = this.stairsOf(KT),
+          yT = this.cornerAt(TT, kT, cT, MT, OT),
+          xT = OT.half === fT.c.top ? "top" : "bot";
+        return (0, lT.l)(`${lT.i[KT].meta.rootName}|meta|rot${OT.rot}|${xT}${null===yT?"":`|${yT}`}`)
       }
-      stairsOf(vv) {
+      stairsOf(TT) {
         const {
-          rot: zv,
-          halfblockPlacement: Pv
-        } = hv.g[vv].meta;
+          rot: kT,
+          halfblockPlacement: cT
+        } = lT.i[TT].meta;
         return {
-          rot: zv,
-          half: Pv
+          rot: kT,
+          half: cT
         }
       }
-      stairsAt(vv, zv, Pv, hv) {
-        const Sv = vv(zv, Pv, hv);
-        return this.handles(Sv) ? this.stairsOf(Sv) : null
+      stairsAt(TT, kT, cT, lT) {
+        const MT = TT(kT, cT, lT);
+        return this.handles(MT) ? this.stairsOf(MT) : null
       }
-      cornerAt(vv, zv, Pv, hv, Sv) {
+      cornerAt(TT, kT, cT, lT, MT) {
         let {
-          rot: ev,
-          half: gv
-        } = Sv;
-        const pv = Nv[ev],
-          dv = Sv => {
-            let [pv, dv] = Sv;
-            const Nv = this.stairsAt(vv, zv + pv, Pv, hv + dv);
-            return null !== Nv && Nv.rot === ev && Nv.half === gv
+          rot: KT,
+          half: OT
+        } = MT;
+        const yT = xT[KT],
+          fT = MT => {
+            let [yT, fT] = MT;
+            const xT = this.stairsAt(TT, kT + yT, cT, lT + fT);
+            return null !== xT && xT.rot === KT && xT.half === OT
           },
-          wv = this.stairsAt(vv, zv + pv[0], Pv, hv + pv[1]);
-        if (null !== wv && wv.half === gv) {
-          const vv = Nv[wv.rot];
-          if (Wv(pv, vv) && !dv([-vv[0], -vv[1]])) return Tv(vv, lv(pv)) ? "outerLeft" : "outerRight"
+          jT = this.stairsAt(TT, kT + yT[0], cT, lT + yT[1]);
+        if (null !== jT && jT.half === OT) {
+          const TT = xT[jT.rot];
+          if (CT(yT, TT) && !fT([-TT[0], -TT[1]])) return AT(TT, IT(yT)) ? "outerLeft" : "outerRight"
         }
-        const av = this.stairsAt(vv, zv - pv[0], Pv, hv - pv[1]);
-        if (null !== av && av.half === gv) {
-          const vv = Nv[av.rot];
-          if (Wv(pv, vv) && !dv(vv)) return Tv(vv, lv(pv)) ? "innerLeft" : "innerRight"
+        const vT = this.stairsAt(TT, kT - yT[0], cT, lT - yT[1]);
+        if (null !== vT && vT.half === OT) {
+          const TT = xT[vT.rot];
+          if (CT(yT, TT) && !fT(TT)) return AT(TT, IT(yT)) ? "innerLeft" : "innerRight"
         }
         return null
       }
     }, new class {
       constructor() {
-        this.reshapeOffsets = ev, this.rootIds = new Set(Sv.g.map((vv => (0, hv.i)(vv))))
+        this.reshapeOffsets = KT, this.rootIds = new Set(MT.f.map((TT => (0, lT.l)(TT))))
       }
-      handles(vv) {
-        var zv;
-        const Pv = null === (zv = hv.g[vv]) || void 0 === zv ? void 0 : zv.meta;
-        return void 0 !== Pv && this.rootIds.has(Pv.rootId)
+      handles(TT) {
+        var kT;
+        const cT = null === (kT = lT.i[TT]) || void 0 === kT ? void 0 : kT.meta;
+        return void 0 !== cT && this.rootIds.has(cT.rootId)
       }
-      affects(vv) {
-        return this.handles(vv)
+      affects(TT) {
+        return this.handles(TT)
       }
-      placedBy(vv) {
-        return hv.g[vv].meta.rootName === Sv.k ? null : Sv.k
+      placedBy(TT) {
+        return lT.i[TT].meta.rootName === MT.m ? null : MT.m
       }
-      shape(vv, zv, Pv, ev, gv) {
+      shape(TT, kT, cT, KT, OT) {
         const {
-          rootId: pv,
-          rootName: dv,
-          rot: Nv
-        } = hv.g[gv].meta;
-        let lv = 0;
-        return Sv.u[Nv].forEach(((Sv, gv) => {
-          var dv;
-          let [Tv, Wv, wv] = Sv;
-          const av = null === (dv = hv.g[vv(zv + Tv, Pv + Wv, ev + wv)]) || void 0 === dv ? void 0 : dv.meta;
-          (null === av || void 0 === av ? void 0 : av.rootId) === pv && av.rot === Nv && (lv |= 1 << gv)
-        })), (0, hv.i)((0, Sv.e)(dv, Nv, lv))
+          rootId: yT,
+          rootName: fT,
+          rot: xT
+        } = lT.i[OT].meta;
+        let IT = 0;
+        return MT.u[xT].forEach(((MT, OT) => {
+          var fT;
+          let [AT, CT, jT] = MT;
+          const vT = null === (fT = lT.i[TT(kT + AT, cT + CT, KT + jT)]) || void 0 === fT ? void 0 : fT.meta;
+          (null === vT || void 0 === vT ? void 0 : vT.rootId) === yT && vT.rot === xT && (IT |= 1 << OT)
+        })), (0, lT.l)((0, MT.c)(fT, xT, IT))
       }
-    }, ...gv.e.map((vv => new pv.b(vv))), new class {
+    }, ...OT.c.map((TT => new yT.b(TT))), new class {
       constructor() {
-        this.reshapeOffsets = jv
+        this.reshapeOffsets = aT
       }
-      handles(vv) {
-        const zv = fv(vv);
-        return cv.has(zv) || zv === av.i
+      handles(TT) {
+        const kT = FT(TT);
+        return QT.has(kT) || kT === vT.h
       }
-      affects(vv) {
-        const zv = fv(vv);
-        return Gv.has(zv) || mv.has(zv) || zv === Cv || zv === av.i || void 0 !== av.e[zv]
+      affects(TT) {
+        const kT = FT(TT);
+        return ST.has(kT) || DT.has(kT) || kT === hT || kT === vT.h || void 0 !== vT.c[kT]
       }
-      shape(vv, zv, Pv, Sv, ev, gv) {
+      shape(TT, kT, cT, MT, KT, OT) {
         const {
-          rootName: pv,
-          rot: dv
-        } = hv.g[ev].meta;
-        return pv === av.i ? gv ? ev : function(vv, zv, Pv, Sv, ev) {
-          const [gv, pv] = av.h[ev - 1];
-          for (let dv = 1; dv <= av.F; dv++) {
-            const [Nv, lv] = [zv - gv * dv, Sv - pv * dv], Tv = vv(Nv, Pv, lv);
-            if (fv(Tv) === av.i && hv.g[Tv].meta.rot === ev && sv(zv, Pv, Sv, Nv, lv)) return (0, hv.i)((0, av.Z)(ev, !Fv(Tv)))
+          rootName: yT,
+          rot: fT
+        } = lT.i[KT].meta;
+        return yT === vT.h ? OT ? KT : function(TT, kT, cT, MT, KT) {
+          const [OT, yT] = vT.d[KT - 1];
+          for (let fT = 1; fT <= vT.P; fT++) {
+            const [xT, IT] = [kT - OT * fT, MT - yT * fT], AT = TT(xT, cT, IT);
+            if (FT(AT) === vT.h && lT.i[AT].meta.rot === KT && tT(kT, cT, MT, xT, IT)) return (0, lT.l)((0, vT.hb)(KT, !rT(AT)))
           }
-          return (0, hv.i)((0, av.Z)(ev, !1))
-        }(vv, zv, Pv, Sv, dv) : (0, hv.i)((0, av.J)(pv, dv, function(vv, zv, Pv, Sv, ev) {
-          const [gv, pv] = av.h[ev - 1], dv = (ev, dv) => function(vv, zv, Pv, Sv, ev) {
-            var gv;
-            const pv = null === (gv = hv.g[vv]) || void 0 === gv ? void 0 : gv.meta;
-            if (!pv) return !1;
-            const dv = pv.rootName,
-              Nv = Gv.has(dv) || Fv(vv);
-            if (!Nv && !mv.has(dv) && dv !== Cv) return !1;
-            const [lv, Tv] = av.h[pv.rot - 1];
-            return Nv ? lv === -zv && Tv === -Pv : mv.has(dv) ? lv === zv && Tv === Pv : (0, av.Y)(hv.g[vv].name, lv, Tv).some((vv => {
-              let [hv, Sv] = vv;
-              return hv === -zv && Sv === -Pv
-            })) && !(Sv === zv && ev === Pv)
-          }(vv(zv + ev, Pv, Sv + dv), ev, dv, gv, pv), Nv = vv(zv - gv, Pv, Sv - pv), lv = fv(Nv) === Cv && hv.g[Nv].meta.rot === ev, Tv = 1 === av.e[fv(vv(zv, Pv - 1, Sv))] || -1 === av.e[fv(vv(zv, Pv + 1, Sv))];
-          if (Tv || lv || function(vv, zv, Pv) {
-              if (fv(vv) !== iv) return !1;
-              const [Sv, ev] = av.h[hv.g[vv].meta.rot - 1], [gv, pv] = (0, av.M)(hv.g[vv].name, Sv, ev);
-              return zv === gv && Pv === pv
-            }(Nv, gv, pv) || dv(-gv, -pv)) return null;
-          const Wv = dv(-pv, gv),
-            wv = dv(pv, -gv);
-          if (Wv === wv) return null;
-          return Wv ? "turnLeft" : "turnRight"
-        }(vv, zv, Pv, Sv, dv)))
+          return (0, lT.l)((0, vT.hb)(KT, !1))
+        }(TT, kT, cT, MT, fT) : (0, lT.l)((0, vT.W)(yT, fT, function(TT, kT, cT, MT, KT) {
+          const [OT, yT] = vT.d[KT - 1], fT = (KT, fT) => function(TT, kT, cT, MT, KT) {
+            var OT;
+            const yT = null === (OT = lT.i[TT]) || void 0 === OT ? void 0 : OT.meta;
+            if (!yT) return !1;
+            const fT = yT.rootName,
+              xT = ST.has(fT) || rT(TT);
+            if (!xT && !DT.has(fT) && fT !== hT) return !1;
+            const [IT, AT] = vT.d[yT.rot - 1];
+            return xT ? IT === -kT && AT === -cT : DT.has(fT) ? IT === kT && AT === cT : (0, vT.fb)(lT.i[TT].name, IT, AT).some((TT => {
+              let [lT, MT] = TT;
+              return lT === -kT && MT === -cT
+            })) && !(MT === kT && KT === cT)
+          }(TT(kT + KT, cT, MT + fT), KT, fT, OT, yT), xT = TT(kT - OT, cT, MT - yT), IT = FT(xT) === hT && lT.i[xT].meta.rot === KT, AT = 1 === vT.c[FT(TT(kT, cT - 1, MT))] || -1 === vT.c[FT(TT(kT, cT + 1, MT))];
+          if (AT || IT || function(TT, kT, cT) {
+              if (FT(TT) !== NT) return !1;
+              const [MT, KT] = vT.d[lT.i[TT].meta.rot - 1], [OT, yT] = (0, vT.X)(lT.i[TT].name, MT, KT);
+              return kT === OT && cT === yT
+            }(xT, OT, yT) || fT(-OT, -yT)) return null;
+          const CT = fT(-yT, OT),
+            jT = fT(yT, -OT);
+          if (CT === jT) return null;
+          return CT ? "turnLeft" : "turnRight"
+        }(TT, kT, cT, MT, fT)))
       }
     }, new class {
       constructor() {
-        this.reshapeOffsets = Ov, this.rootId = (0, hv.i)(nv.m)
+        this.reshapeOffsets = mT, this.rootId = (0, lT.l)(wT.o)
       }
-      handles(vv) {
-        var zv;
-        return (null === (zv = hv.g[vv]) || void 0 === zv ? void 0 : zv.meta.rootId) === this.rootId
+      handles(TT) {
+        var kT;
+        return (null === (kT = lT.i[TT]) || void 0 === kT ? void 0 : kT.meta.rootId) === this.rootId
       }
-      affects(vv) {
-        return this.handles(vv)
+      affects(TT) {
+        return this.handles(TT)
       }
-      shape(vv, zv, Pv, Sv, ev, gv) {
-        const pv = Dv(ev);
-        return (0, hv.i)((dv = pv.rot, null !== (Nv = gv ? this.reshapedHalf(vv, zv, Pv, Sv, pv) : this.placedHalf(vv, zv, Pv, Sv, pv.rot)) ? (0, nv.c)(nv.m, dv, Nv) : 1 === dv ? nv.m : `${nv.m}|meta|rot${dv}`));
-        var dv, Nv
+      shape(TT, kT, cT, MT, KT, OT) {
+        const yT = bT(KT);
+        return (0, lT.l)((fT = yT.rot, null !== (xT = OT ? this.reshapedHalf(TT, kT, cT, MT, yT) : this.placedHalf(TT, kT, cT, MT, yT.rot)) ? (0, wT.e)(wT.o, fT, xT) : 1 === fT ? wT.o : `${wT.o}|meta|rot${fT}`));
+        var fT, xT
       }
-      placedHalf(vv, zv, Pv, hv, Sv) {
-        const [ev, gv] = Yv.d[Sv];
-        for (const [pv, dv] of [
+      placedHalf(TT, kT, cT, lT, MT) {
+        const [KT, OT] = PT.d[MT];
+        for (const [yT, fT] of [
             ["right", 1],
             ["left", -1]
           ]) {
-          const Nv = zv + dv * ev,
-            lv = hv + dv * gv,
-            Tv = Kv(vv, Nv, Pv, lv);
-          if (null !== Tv && Tv.rot === Sv && (null === Tv.half || !Vv(vv, Nv, Pv, lv, Tv))) return pv
+          const xT = kT + fT * KT,
+            IT = lT + fT * OT,
+            AT = zT(TT, xT, cT, IT);
+          if (null !== AT && AT.rot === MT && (null === AT.half || !JT(TT, xT, cT, IT, AT))) return yT
         }
         return null
       }
-      reshapedHalf(vv, zv, Pv, hv, Sv) {
-        if (null !== Sv.half && Vv(vv, zv, Pv, hv, Sv)) return Sv.half;
-        for (const ev of ["right", "left"]) {
-          const [gv, pv] = (0, nv.k)(Sv.rot, ev), dv = Kv(vv, zv + gv, Pv, hv + pv);
-          if (null !== dv && dv.rot === Sv.rot && dv.half === nv.n[ev]) return ev
+      reshapedHalf(TT, kT, cT, lT, MT) {
+        if (null !== MT.half && JT(TT, kT, cT, lT, MT)) return MT.half;
+        for (const KT of ["right", "left"]) {
+          const [OT, yT] = (0, wT.l)(MT.rot, KT), fT = zT(TT, kT + OT, cT, lT + yT);
+          if (null !== fT && fT.rot === MT.rot && fT.half === wT.p[KT]) return KT
         }
         return null
       }
-    }, new Uv.d];
+    }, new oT.b];
 
-    function xv(vv, zv, Pv, hv, Sv) {
-      let ev = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      for (const gv of Rv)
-        if (gv.handles(Sv)) return gv.shape(vv, zv, Pv, hv, Sv, ev);
-      return Sv
+    function eT(TT, kT, cT, lT, MT) {
+      let KT = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      for (const OT of HT)
+        if (OT.handles(MT)) return OT.shape(TT, kT, cT, lT, MT, KT);
+      return MT
     }
 
-    function tv(vv) {
-      for (const hv of Rv) {
-        var zv, Pv;
-        if (hv.handles(vv)) return null !== (zv = null === (Pv = hv.placedBy) || void 0 === Pv ? void 0 : Pv.call(hv, vv)) && void 0 !== zv ? zv : null
+    function GT(TT) {
+      for (const lT of HT) {
+        var kT, cT;
+        if (lT.handles(TT)) return null !== (kT = null === (cT = lT.placedBy) || void 0 === cT ? void 0 : cT.call(lT, TT)) && void 0 !== kT ? kT : null
       }
       return null
     }
   },
-  37943: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => nv,
-      h: () => mv,
-      i: () => Gv
+  38258: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => wT,
+      d: () => DT,
+      f: () => ST
     });
-    var hv = Pv(9101),
-      Sv = Pv(9122),
-      ev = Pv(9181),
-      gv = Pv(37946),
-      pv = Pv(9176);
-    const dv = (0, gv.G)("pipe"),
-      Nv = (0, gv.G)("tank"),
-      lv = (0, gv.G)("port"),
-      Tv = "Reactor Port";
+    var lT = cT(9447),
+      MT = cT(9472),
+      KT = cT(9537),
+      OT = cT(38263),
+      yT = cT(9533);
+    const fT = (0, OT.L)("pipe"),
+      xT = (0, OT.L)("tank"),
+      IT = (0, OT.L)("port"),
+      AT = "Reactor Port";
 
-    function Wv(vv, zv, Pv) {
-      const hv = new Set([ev.f, ev.e, Tv, ...zv, ...Pv, ...vv ? [gv.i] : []]);
+    function CT(TT, kT, cT) {
+      const lT = new Set([KT.g, KT.c, AT, ...kT, ...cT, ...TT ? [OT.j] : []]);
       return {
-        makers: new Set(zv),
-        roots: hv
+        makers: new Set(kT),
+        roots: lT
       }
     }
-    const wv = {
-        water: Wv(!0, ["Condenser"], ["Centrifuge", "Synthesizer", gv.c]),
-        cryo: Wv(!1, [gv.c], [])
+    const jT = {
+        water: CT(!0, ["Condenser"], ["Centrifuge", "Synthesizer", OT.d]),
+        cryo: CT(!1, [OT.d], [])
       },
-      av = new Set([...wv.water.roots, ...wv.cryo.roots]),
-      sv = {
+      vT = new Set([...jT.water.roots, ...jT.cryo.roots]),
+      tT = {
         nx: [-1, 0, 0],
         ny: [0, -1, 0],
         nz: [0, 0, -1],
@@ -501,127 +501,127 @@ export const modules = {
         py: [0, 1, 0],
         pz: [0, 0, 1]
       },
-      Cv = Sv.h.map((vv => sv[vv])),
-      iv = Cv.map((vv => {
-        let [zv, Pv, hv] = vv;
-        return gv.q.findIndex((vv => {
-          let [Sv, ev, gv] = vv;
-          return Sv === zv && ev === Pv && gv === hv
+      hT = MT.c.map((TT => tT[TT])),
+      NT = hT.map((TT => {
+        let [kT, cT, lT] = TT;
+        return OT.x.findIndex((TT => {
+          let [MT, KT, OT] = TT;
+          return MT === kT && KT === cT && OT === lT
         }))
       }));
 
-    function cv(vv) {
-      let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
-      const Pv = hv.g[vv],
-        Sv = null === Pv || void 0 === Pv ? void 0 : Pv.meta.rootName,
-        Wv = wv[zv];
-      if (!Sv || !Wv.roots.has(Sv)) return null;
-      if ((0, ev.m)(Sv)) return (0, gv.C)(Pv.name) === zv ? dv : null;
-      if (Sv === gv.i) return Nv;
-      if (Sv === Tv) return Pv.name.endsWith("|Water") ? lv : null;
-      const [av, sv] = pv.h[(Pv.meta.rot || 1) - 1];
-      return (0, gv.G)(Wv.makers.has(Sv) ? "maker" : "user", [-av, 0, -sv])
+    function QT(TT) {
+      let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
+      const cT = lT.i[TT],
+        MT = null === cT || void 0 === cT ? void 0 : cT.meta.rootName,
+        CT = jT[kT];
+      if (!MT || !CT.roots.has(MT)) return null;
+      if ((0, KT.l)(MT)) return (0, OT.H)(cT.name) === kT ? fT : null;
+      if (MT === OT.j) return xT;
+      if (MT === AT) return cT.name.endsWith("|Water") ? IT : null;
+      const [vT, tT] = yT.d[(cT.meta.rot || 1) - 1];
+      return (0, OT.L)(CT.makers.has(MT) ? "maker" : "user", [-vT, 0, -tT])
     }
 
-    function Gv(vv, zv, Pv, Sv) {
-      let ev = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
+    function ST(TT, kT, cT, MT) {
+      let KT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
       const {
-        makers: pv
-      } = wv[ev];
-      return Cv.some(((Nv, lv) => {
-        var Tv, Wv;
-        let [wv, av, sv] = Nv;
-        const Cv = vv(zv + wv, Pv + av, Sv + sv),
-          Gv = cv(Cv, ev);
-        return null !== Gv && pv.has(null !== (Tv = null === (Wv = hv.g[Cv]) || void 0 === Wv ? void 0 : Wv.meta.rootName) && void 0 !== Tv ? Tv : "") && !(0, gv.J)(dv, Gv, iv[lv])
+        makers: yT
+      } = jT[KT];
+      return hT.some(((xT, IT) => {
+        var AT, CT;
+        let [jT, vT, tT] = xT;
+        const hT = TT(kT + jT, cT + vT, MT + tT),
+          ST = QT(hT, KT);
+        return null !== ST && yT.has(null !== (AT = null === (CT = lT.i[hT]) || void 0 === CT ? void 0 : CT.meta.rootName) && void 0 !== AT ? AT : "") && !(0, OT.N)(fT, ST, NT[IT])
       }))
     }
 
-    function mv(vv) {
-      const zv = hv.g[vv];
-      return zv ? (0, gv.C)(zv.name) : null
+    function DT(TT) {
+      const kT = lT.i[TT];
+      return kT ? (0, OT.H)(kT.name) : null
     }
-    let jv = null;
+    let aT = null;
 
-    function fv(vv) {
-      if (!jv) {
-        jv = new Map;
-        for (const vv of ["water", "cryo"])
-          for (let zv = 0; zv < 64; zv++)
-            for (const Pv of [!1, !0]) jv.set((0, ev.q)(vv, zv, Pv), {
-              zw: vv,
-              mask: zv,
-              full: Pv
+    function FT(TT) {
+      if (!aT) {
+        aT = new Map;
+        for (const TT of ["water", "cryo"])
+          for (let kT = 0; kT < 64; kT++)
+            for (const cT of [!1, !0]) aT.set((0, KT.m)(TT, kT, cT), {
+              lj: TT,
+              mask: kT,
+              full: cT
             })
       }
-      return jv.get(vv)
+      return aT.get(TT)
     }
-    const Fv = new Map(Array.from({
-      length: ev.j + 1
-    }, ((vv, zv) => [(0, ev.t)(zv), zv])));
+    const rT = new Map(Array.from({
+      length: KT.i + 1
+    }, ((TT, kT) => [(0, KT.n)(kT), kT])));
 
-    function Yv(vv, zv, Pv, Sv, ev, gv) {
-      return Cv.some(((pv, dv) => {
-        var Nv, lv, Tv;
-        let [Wv, wv, av] = pv;
-        if (0 === (gv >> dv & 1)) return !1;
-        const sv = null !== (Nv = null === (lv = hv.g[vv(zv + Wv, Pv + wv, Sv + av)]) || void 0 === lv ? void 0 : lv.name) && void 0 !== Nv ? Nv : "",
-          Cv = fv(sv);
-        return Cv ? Cv.zw === ev && Cv.full : (null !== (Tv = function(vv) {
-          var zv;
-          return null !== (zv = Fv.get(vv)) && void 0 !== zv ? zv : null
-        }(sv)) && void 0 !== Tv ? Tv : 0) > 0
+    function PT(TT, kT, cT, MT, KT, OT) {
+      return hT.some(((yT, fT) => {
+        var xT, IT, AT;
+        let [CT, jT, vT] = yT;
+        if (0 === (OT >> fT & 1)) return !1;
+        const tT = null !== (xT = null === (IT = lT.i[TT(kT + CT, cT + jT, MT + vT)]) || void 0 === IT ? void 0 : IT.name) && void 0 !== xT ? xT : "",
+          hT = FT(tT);
+        return hT ? hT.lj === KT && hT.full : (null !== (AT = function(TT) {
+          var kT;
+          return null !== (kT = rT.get(TT)) && void 0 !== kT ? kT : null
+        }(tT)) && void 0 !== AT ? AT : 0) > 0
       }))
     }
-    class nv {
+    class wT {
       constructor() {
-        this.reshapeOffsets = Cv
+        this.reshapeOffsets = hT
       }
-      handles(vv) {
-        return null !== mv(vv)
+      handles(TT) {
+        return null !== DT(TT)
       }
-      affects(vv) {
-        var zv, Pv;
-        return av.has(null !== (zv = null === (Pv = hv.g[vv]) || void 0 === Pv ? void 0 : Pv.meta.rootName) && void 0 !== zv ? zv : "")
+      affects(TT) {
+        var kT, cT;
+        return vT.has(null !== (kT = null === (cT = lT.i[TT]) || void 0 === cT ? void 0 : cT.meta.rootName) && void 0 !== kT ? kT : "")
       }
-      placedBy(vv) {
-        var zv;
-        return (null === (zv = hv.g[vv]) || void 0 === zv ? void 0 : zv.meta.rootName) === ev.e ? ev.f : null
+      placedBy(TT) {
+        var kT;
+        return (null === (kT = lT.i[TT]) || void 0 === kT ? void 0 : kT.meta.rootName) === KT.c ? KT.g : null
       }
-      shape(vv, zv, Pv, Sv, pv, Nv) {
-        var lv, Tv, Wv;
-        const wv = null !== (lv = null === (Tv = hv.g[pv]) || void 0 === Tv ? void 0 : Tv.name) && void 0 !== lv ? lv : "",
-          av = Nv || wv !== ev.f ? null !== (Wv = (0, gv.C)(wv)) && void 0 !== Wv ? Wv : "water" : function(vv, zv, Pv, hv) {
-            return Cv.some(((Sv, ev) => {
-              let [pv, Nv, lv] = Sv;
-              const Tv = cv(vv(zv + pv, Pv + Nv, hv + lv), "cryo");
-              return null !== Tv && "port" !== Tv.kind && (0, gv.J)(dv, Tv, iv[ev])
+      shape(TT, kT, cT, MT, yT, xT) {
+        var IT, AT, CT;
+        const jT = null !== (IT = null === (AT = lT.i[yT]) || void 0 === AT ? void 0 : AT.name) && void 0 !== IT ? IT : "",
+          vT = xT || jT !== KT.g ? null !== (CT = (0, OT.H)(jT)) && void 0 !== CT ? CT : "water" : function(TT, kT, cT, lT) {
+            return hT.some(((MT, KT) => {
+              let [yT, xT, IT] = MT;
+              const AT = QT(TT(kT + yT, cT + xT, lT + IT), "cryo");
+              return null !== AT && "port" !== AT.kind && (0, OT.N)(fT, AT, NT[KT])
             })) ? "cryo" : "water"
-          }(vv, zv, Pv, Sv),
-          sv = function(vv, zv, Pv, hv) {
-            let Sv = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
-              ev = 0;
-            return Cv.forEach(((pv, Nv) => {
-              let [lv, Tv, Wv] = pv;
-              const wv = cv(vv(zv + lv, Pv + Tv, hv + Wv), Sv);
-              wv && (0, gv.J)(dv, wv, iv[Nv]) && (ev |= 1 << Nv)
-            })), ev
-          }(vv, zv, Pv, Sv, av),
-          Gv = Nv ? function(vv) {
-            var zv;
-            return !0 === (null === (zv = fv(vv)) || void 0 === zv ? void 0 : zv.full)
-          }(wv) : Yv(vv, zv, Pv, Sv, av, sv);
-        return (0, hv.i)((0, ev.q)(av, sv, Gv))
+          }(TT, kT, cT, MT),
+          tT = function(TT, kT, cT, lT) {
+            let MT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
+              KT = 0;
+            return hT.forEach(((yT, xT) => {
+              let [IT, AT, CT] = yT;
+              const jT = QT(TT(kT + IT, cT + AT, lT + CT), MT);
+              jT && (0, OT.N)(fT, jT, NT[xT]) && (KT |= 1 << xT)
+            })), KT
+          }(TT, kT, cT, MT, vT),
+          ST = xT ? function(TT) {
+            var kT;
+            return !0 === (null === (kT = FT(TT)) || void 0 === kT ? void 0 : kT.full)
+          }(jT) : PT(TT, kT, cT, MT, vT, tT);
+        return (0, lT.l)((0, KT.m)(vT, tT, ST))
       }
     }
   },
-  37712: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => hv,
-      f: () => ev
+  38028: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => lT,
+      e: () => KT
     });
-    const hv = ["Chest", "Loot Chest", "Moonstone Chest"],
-      Sv = [{
+    const lT = ["Chest", "Loot Chest", "Moonstone Chest"],
+      MT = [{
         name: "Workbench",
         exactMatch: !0
       }, {
@@ -641,10 +641,10 @@ export const modules = {
         exactMatch: !1
       }];
 
-    function ev(vv) {
-      return Sv.find((zv => zv.exactMatch ? vv === zv.name : vv.includes(zv.name)))
+    function KT(TT) {
+      return MT.find((kT => kT.exactMatch ? TT === kT.name : TT.includes(kT.name)))
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

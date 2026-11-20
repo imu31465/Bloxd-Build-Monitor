@@ -1,62 +1,62 @@
 export const id = 351;
 export const ids = [351];
 export const modules = {
-  60666: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      applyLightFoOffset: () => gv,
-      getFloatingOriginOffset: () => Sv,
-      lightFoVersion: () => ev,
-      wrapRenderableForFO: () => pv
+  60636: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      applyLightFoOffset: () => OT,
+      getFloatingOriginOffset: () => MT,
+      lightFoVersion: () => KT,
+      wrapRenderableForFO: () => yT
     });
-    var hv = Pv(41037);
+    var lT = cT(41304);
 
-    function Sv(vv) {
-      const zv = vv.camera;
-      if (!zv) return {
+    function MT(TT) {
+      const kT = TT.camera;
+      if (!kT) return {
         x: 0,
         y: 0,
         z: 0
       };
-      const Pv = zv.worldMatrix;
+      const cT = kT.worldMatrix;
       return {
-        x: Pv[12],
-        y: Pv[13],
-        z: Pv[14]
+        x: cT[12],
+        y: cT[13],
+        z: cT[14]
       }
     }
 
-    function ev(vv) {
-      return vv.camera ? vv.camera.worldMatrixVersion : 0
+    function KT(TT) {
+      return TT.camera ? TT.camera.worldMatrixVersion : 0
     }
 
-    function gv(vv, zv) {
-      const Pv = zv.camera?.worldMatrix;
-      if (!Pv) return;
-      const Sv = Pv[12],
-        ev = Pv[13],
-        gv = Pv[14];
-      let pv = 0;
-      for (const dv of zv.lights) {
-        if (pv >= hv.c) break;
-        if (!dv._writeLightUbo) continue;
-        const zv = 4 + 16 * pv,
-          Pv = vv[zv + 3];
-        if (0 === Pv || 2 === Pv) {
-          const Pv = dv.worldMatrix;
-          vv[zv] = Pv[12] - Sv, vv[zv + 1] = Pv[13] - ev, vv[zv + 2] = Pv[14] - gv
+    function OT(TT, kT) {
+      const cT = kT.camera?.worldMatrix;
+      if (!cT) return;
+      const MT = cT[12],
+        KT = cT[13],
+        OT = cT[14];
+      let yT = 0;
+      for (const fT of kT.lights) {
+        if (yT >= lT.c) break;
+        if (!fT._writeLightUbo) continue;
+        const kT = 4 + 16 * yT,
+          cT = TT[kT + 3];
+        if (0 === cT || 2 === cT) {
+          const cT = fT.worldMatrix;
+          TT[kT] = cT[12] - MT, TT[kT + 1] = cT[13] - KT, TT[kT + 2] = cT[14] - OT
         }
-        pv++
+        yT++
       }
     }
 
-    function pv(vv, zv, Pv) {
-      let hv = -1;
+    function yT(TT, kT, cT) {
+      let lT = -1;
       return () => {
-        const Sv = zv.camera ? zv.camera.worldMatrixVersion : -1;
-        Sv !== hv && (Pv(), hv = Sv), vv()
+        const MT = kT.camera ? kT.camera.worldMatrixVersion : -1;
+        MT !== lT && (cT(), lT = MT), TT()
       }
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

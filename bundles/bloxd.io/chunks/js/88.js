@@ -1,54 +1,54 @@
 export const id = 88;
 export const ids = [88];
 export const modules = {
-  4542: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      $: () => nv,
-      A: () => ev,
-      C: () => av,
-      Cb: () => Uv,
-      E: () => Jv,
-      Fb: () => Zv,
-      Hb: () => xv,
-      I: () => Nv,
-      Jb: () => qv,
-      Kb: () => Iv,
-      M: () => sv,
-      Mb: () => Gv,
-      Ob: () => mv,
-      P: () => dv,
-      S: () => Wv,
-      Sb: () => Lv,
-      V: () => Tv,
-      Vb: () => Sv,
-      X: () => Fv,
-      Xb: () => Bv,
-      bb: () => Ov,
-      d: () => yv,
-      eb: () => Yv,
-      f: () => Mv,
-      fb: () => Dv,
-      g: () => lv,
-      h: () => cv,
-      ib: () => Av,
-      j: () => Hv,
-      kb: () => Qv,
-      lb: () => tv,
-      m: () => iv,
-      pb: () => Kv,
-      q: () => Cv,
-      qb: () => Rv,
-      sb: () => Vv,
-      t: () => gv,
-      u: () => pv,
-      wb: () => wv,
-      x: () => hv,
-      xb: () => fv,
-      zb: () => jv
+  4769: (TT, kT, cT) => {
+    cT.d(kT, {
+      $: () => bT,
+      Ab: () => aT,
+      B: () => KT,
+      Bb: () => oT,
+      C: () => vT,
+      D: () => YT,
+      Fb: () => uT,
+      H: () => xT,
+      Hb: () => eT,
+      K: () => tT,
+      Kb: () => VT,
+      L: () => fT,
+      Mb: () => ET,
+      O: () => CT,
+      Ob: () => ST,
+      P: () => AT,
+      R: () => rT,
+      Sb: () => DT,
+      Tb: () => dT,
+      V: () => wT,
+      Vb: () => MT,
+      Xb: () => UT,
+      Y: () => mT,
+      _: () => PT,
+      ab: () => XT,
+      cb: () => ZT,
+      d: () => gT,
+      e: () => RT,
+      g: () => IT,
+      gb: () => GT,
+      j: () => QT,
+      kb: () => zT,
+      n: () => LT,
+      ob: () => HT,
+      q: () => NT,
+      sb: () => JT,
+      t: () => hT,
+      vb: () => jT,
+      x: () => OT,
+      y: () => yT,
+      yb: () => FT,
+      z: () => lT
     });
-    const hv = 32,
-      Sv = 33.333333333333336,
-      ev = {
+    const lT = 32,
+      MT = 33.333333333333336,
+      KT = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -82,18 +82,18 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      gv = {
+      OT = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      pv = {
+      yT = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      dv = {
+      fT = {
         AheadMask: 15,
         Joining: 64,
         Tiered: 128,
@@ -101,20 +101,20 @@ export const modules = {
         SwitchesShift: 20,
         CountMask: 4095
       },
-      Nv = {
+      xT = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      lv = {
+      IT = {
         Look: 0,
         Remesh: 1
       },
-      Tv = 8,
-      Wv = 1,
-      wv = {
+      AT = 8,
+      CT = 1,
+      jT = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -123,7 +123,7 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      av = {
+      vT = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -151,12 +151,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      sv = {
+      tT = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      Cv = {
+      hT = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -208,7 +208,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      iv = {
+      NT = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -218,10 +218,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      cv = 4,
-      Gv = 4,
-      mv = 65535,
-      jv = {
+      QT = 4,
+      ST = 4,
+      DT = 65535,
+      aT = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -234,7 +234,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      fv = {
+      FT = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -242,12 +242,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      Fv = 88,
-      Yv = 0,
-      nv = 24,
-      Ov = 48,
-      Dv = 80,
-      Kv = {
+      rT = 88,
+      PT = 0,
+      wT = 24,
+      mT = 48,
+      bT = 80,
+      zT = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -258,18 +258,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      Vv = {
+      JT = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      Uv = {
+      oT = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      Rv = {
+      HT = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -287,34 +287,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      xv = {
+      eT = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      tv = 65535,
-      qv = {
+      GT = 65535,
+      VT = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      Iv = {
+      ET = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      Qv = 2,
-      Zv = {
+      ZT = 2,
+      uT = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      Av = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      Lv = {
+      XT = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      dT = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -326,7 +326,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      Hv = {
+      LT = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -353,7 +353,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      Mv = {
+      RT = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -511,8 +511,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      yv = 8,
-      Bv = {
+      gT = 8,
+      UT = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -537,147 +537,147 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      Jv = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      YT = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   },
-  40102: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => pv
+  40450: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => yT
     });
-    const hv = 1 << 20,
-      Sv = 1 << 21,
-      ev = 1024,
-      gv = 2048;
+    const lT = 1 << 20,
+      MT = 1 << 21,
+      KT = 1024,
+      OT = 2048;
 
-    function pv(vv, zv, Pv) {
-      const pv = vv + hv,
-        dv = zv + ev,
-        Nv = Pv + hv;
-      return pv < 0 || pv >= Sv || Nv < 0 || Nv >= Sv || dv < 0 || dv >= gv ? -1 : (pv * Sv + Nv) * gv + dv
+    function yT(TT, kT, cT) {
+      const yT = TT + lT,
+        fT = kT + KT,
+        xT = cT + lT;
+      return yT < 0 || yT >= MT || xT < 0 || xT >= MT || fT < 0 || fT >= OT ? -1 : (yT * MT + xT) * OT + fT
     }
   },
-  40096: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => hv,
-      h: () => gv,
-      i: () => Sv,
-      j: () => ev,
-      n: () => lv,
-      p: () => Nv,
-      r: () => dv,
-      s: () => pv
+  40443: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => lT,
+      c: () => OT,
+      d: () => MT,
+      h: () => KT,
+      k: () => IT,
+      l: () => xT,
+      n: () => fT,
+      o: () => yT
     });
-    Pv(3205);
-    Pv(40102);
+    cT(3390);
+    cT(40450);
 
-    function hv(vv) {}
+    function lT(TT) {}
 
-    function Sv(vv) {}
+    function MT(TT) {}
 
-    function ev(vv) {}
+    function KT(TT) {}
 
-    function gv(vv) {}
+    function OT(TT) {}
 
-    function pv(vv) {}
+    function yT(TT) {}
 
-    function dv(vv, zv, Pv) {}
+    function fT(TT, kT, cT) {}
 
-    function Nv(vv) {}
+    function xT(TT) {}
 
-    function lv(vv) {}
+    function IT(TT) {}
   },
-  40078: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      A: () => ez,
-      B: () => Zv,
-      E: () => Av,
-      F: () => yv,
-      G: () => vz,
-      J: () => Hv,
-      M: () => Lv,
-      N: () => Ev,
-      R: () => Jv,
-      S: () => Pz,
-      U: () => rv,
-      Y: () => Dv,
-      d: () => zz,
-      h: () => gz,
-      k: () => bv,
-      n: () => uv,
-      o: () => Bv,
-      s: () => Xv,
-      w: () => kv
+  40426: (TT, kT, cT) => {
+    cT.d(kT, {
+      A: () => gT,
+      D: () => Tk,
+      E: () => LT,
+      H: () => dT,
+      L: () => BT,
+      N: () => YT,
+      R: () => ck,
+      T: () => pT,
+      X: () => bT,
+      c: () => kk,
+      f: () => Ok,
+      h: () => nT,
+      i: () => sT,
+      l: () => UT,
+      o: () => qT,
+      q: () => iT,
+      s: () => Kk,
+      u: () => uT,
+      w: () => XT
     });
-    var hv = Pv(302),
-      Sv = Pv(263),
-      ev = Pv(266),
-      gv = Pv(22),
-      pv = Pv(2682),
-      dv = Pv(668),
-      Nv = Pv(4271),
-      lv = Pv(2623),
-      Tv = Pv(3201),
-      Wv = Pv(73),
-      wv = Pv(295),
-      av = Pv(39),
-      sv = Pv(278),
-      Cv = Pv(90),
-      iv = Pv(630),
-      cv = Pv(101),
-      Gv = Pv(93),
-      mv = Pv(4542),
-      jv = Pv(40084),
-      fv = Pv(1748),
-      Fv = Pv(40087);
-    const Yv = "bloxd-webgpuOffAfterLoss",
-      nv = "context:webgl",
-      Ov = "probe:threw";
+    var lT = cT(328),
+      MT = cT(291),
+      KT = cT(298),
+      OT = cT(31),
+      yT = cT(2853),
+      fT = cT(666),
+      xT = cT(4499),
+      IT = cT(2810),
+      AT = cT(3383),
+      CT = cT(118),
+      jT = cT(326),
+      vT = cT(47),
+      tT = cT(307),
+      hT = cT(141),
+      NT = cT(630),
+      QT = cT(150),
+      ST = cT(145),
+      DT = cT(4769),
+      aT = cT(40434),
+      FT = cT(1792),
+      rT = cT(40440);
+    const PT = "bloxd-webgpuOffAfterLoss",
+      wT = "context:webgl",
+      mT = "probe:threw";
 
-    function Dv(vv) {
-      let zv;
+    function bT(TT) {
+      let kT;
       try {
-        zv = vv.getContext("webgl", {
-          powerPreference: cv.b
+        kT = TT.getContext("webgl", {
+          powerPreference: QT.b
         })
       } catch {
-        zv = null
+        kT = null
       }
-      if (null === zv) return null;
-      let Pv = null;
+      if (null === kT) return null;
+      let cT = null;
       try {
-        const vv = zv.getParameter(zv.MAX_TEXTURE_SIZE);
-        Pv = "number" === typeof vv && vv > 0 ? vv : null
+        const TT = kT.getParameter(kT.MAX_TEXTURE_SIZE);
+        cT = "number" === typeof TT && TT > 0 ? TT : null
       } catch {
-        Pv = null
+        cT = null
       }
       try {
-        var hv;
-        null === (hv = zv.getExtension("WEBGL_lose_context")) || void 0 === hv || hv.loseContext()
+        var lT;
+        null === (lT = kT.getExtension("WEBGL_lose_context")) || void 0 === lT || lT.loseContext()
       } catch {}
-      return Pv
+      return cT
     }
-    const Kv = new Set(["android_arm", "chromeos_other", "windows_intel_low"]),
-      Vv = "mali_valhall",
-      Uv = new Set(["nvidia_pre_turing"]);
+    const zT = new Set(["android_arm", "chromeos_other", "windows_intel_low"]),
+      JT = "mali_valhall",
+      oT = new Set(["nvidia_pre_turing"]);
 
-    function Rv(vv) {
-      return function(vv) {
+    function HT(TT) {
+      return function(TT) {
         try {
-          return vv()
+          return TT()
         } catch {
           return null
         }
       }((() => {
-        var zv, Pv, hv, gv;
-        const pv = null !== (zv = null === (Pv = vv.info) || void 0 === Pv ? void 0 : Pv.vendor) && void 0 !== zv ? zv : "";
-        return "windows" === (0, Wv.getOperatingSystem)() && "" !== pv && "intel" !== (0, Wv.normaliseGpuVendor)(pv) ? null : ((0, Wv.seedGpuVendor)(pv), dv = (0, Sv.h)(), Nv = (0, ev.h)(pv, null !== (hv = null === (gv = vv.info) || void 0 === gv ? void 0 : gv.architecture) && void 0 !== hv ? hv : ""), Kv.has(dv) ? "android_arm" === dv && Nv === Vv ? "webgpu_default" : "webgl_default" : null);
-        var dv, Nv
+        var kT, cT, lT, OT;
+        const yT = null !== (kT = null === (cT = TT.info) || void 0 === cT ? void 0 : cT.vendor) && void 0 !== kT ? kT : "";
+        return "windows" === (0, CT.getOperatingSystem)() && "" !== yT && "intel" !== (0, CT.normaliseGpuVendor)(yT) ? null : ((0, CT.seedGpuVendor)(yT), fT = (0, MT.i)(), xT = (0, KT.i)(yT, null !== (lT = null === (OT = TT.info) || void 0 === OT ? void 0 : OT.architecture) && void 0 !== lT ? lT : ""), zT.has(fT) ? "android_arm" === fT && xT === JT ? "webgpu_default" : "webgl_default" : null);
+        var fT, xT
       }))
     }
 
-    function xv() {
-      var vv;
+    function eT() {
+      var TT;
       return {
-        gpu: null !== (vv = navigator.gpu) && void 0 !== vv ? vv : null,
+        gpu: null !== (TT = navigator.gpu) && void 0 !== TT ? TT : null,
         webgl2: () => {
           try {
             return null !== document.createElement("canvas").getContext("webgl2")
@@ -685,317 +685,317 @@ export const modules = {
             return !1
           }
         },
-        webgl1: () => function(vv) {
-          let zv, Pv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jv.b;
+        webgl1: () => function(TT) {
+          let kT, cT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : aT.b;
           try {
-            zv = vv.getContext("webgl")
+            kT = TT.getContext("webgl")
           } catch {
-            zv = null
+            kT = null
           }
-          if (null === zv) return [nv];
-          const hv = [];
+          if (null === kT) return [wT];
+          const lT = [];
           try {
-            for (const Sv of Pv.extensions) null === zv.getExtension(Sv) && hv.push(Sv);
-            for (const [Sv, ev] of Object.entries(Pv.limits)) {
-              const vv = zv[Sv],
-                Pv = "number" === typeof vv ? zv.getParameter(vv) : null;
-              ("number" !== typeof Pv || Pv < ev) && hv.push(`limit:${Sv}`)
+            for (const MT of cT.extensions) null === kT.getExtension(MT) && lT.push(MT);
+            for (const [MT, KT] of Object.entries(cT.limits)) {
+              const TT = kT[MT],
+                cT = "number" === typeof TT ? kT.getParameter(TT) : null;
+              ("number" !== typeof cT || cT < KT) && lT.push(`limit:${MT}`)
             }
-            const vv = zv.getShaderPrecisionFormat(zv.VERTEX_SHADER, zv.HIGH_FLOAT);
-            (null === vv || vv.precision < Pv.vertexHighFloatBits) && hv.push("precision:vertex_high_float")
+            const TT = kT.getShaderPrecisionFormat(kT.VERTEX_SHADER, kT.HIGH_FLOAT);
+            (null === TT || TT.precision < cT.vertexHighFloatBits) && lT.push("precision:vertex_high_float")
           } catch {
-            hv.push(Ov)
+            lT.push(mT)
           }
           try {
-            var Sv;
-            null === (Sv = zv.getExtension("WEBGL_lose_context")) || void 0 === Sv || Sv.loseContext()
+            var MT;
+            null === (MT = kT.getExtension("WEBGL_lose_context")) || void 0 === MT || MT.loseContext()
           } catch {}
-          return hv
+          return lT
         }(document.createElement("canvas")),
-        offAfterLoss: vv => tv((() => vv ? (0, sv.C)() : gv.c.isWebGpuOffAfterLoss())),
-        oldIntelDriver: vv => tv((() => (0, Cv.d)(vv))),
-        intelGen9: vv => tv((() => (0, Cv.i)(vv))),
-        gpuClassWebGlArm: Rv,
-        storeGpuClassVerdict: vv => {
-          av.h.setItem(Cv.t, vv)
+        offAfterLoss: TT => GT((() => TT ? (0, tT.u)() : OT.e.isWebGpuOffAfterLoss())),
+        oldIntelDriver: TT => GT((() => (0, hT.f)(TT))),
+        intelGen9: TT => GT((() => (0, hT.l)(TT))),
+        gpuClassWebGlArm: HT,
+        storeGpuClassVerdict: TT => {
+          vT.e.setItem(hT.D, TT)
         },
-        gpuClassOnWebGl: vv => (0, iv.e)(vv),
+        gpuClassOnWebGl: TT => (0, NT.b)(TT),
         override: () => function() {
-          if ((0, pv.o)("render") && "webgl1" === (0, pv.l)("renderer")) return "webgl1";
-          const vv = [() => new URLSearchParams(window.location.search).get(lv.c), () => av.h.getItem(lv.g), () => {
-            const vv = localStorage.getItem(Yv);
-            return null !== vv && localStorage.removeItem(Yv), "1" === vv ? "webgl2" : null
+          if ((0, yT.o)("render") && "webgl1" === (0, yT.m)("renderer")) return "webgl1";
+          const TT = [() => new URLSearchParams(window.location.search).get(IT.d), () => vT.e.getItem(IT.f), () => {
+            const TT = localStorage.getItem(PT);
+            return null !== TT && localStorage.removeItem(PT), "1" === TT ? "webgl2" : null
           }];
-          for (const zv of vv) {
-            let vv = null;
+          for (const kT of TT) {
+            let TT = null;
             try {
-              vv = qv(zv())
+              TT = VT(kT())
             } catch {}
-            if (null !== vv) return vv
+            if (null !== TT) return TT
           }
           return null
         }(),
-        claimed: () => qv((0, dv.m)()),
+        claimed: () => VT((0, fT.l)()),
         webGpuSetting: () => {
-          const vv = av.h.getItem(hv.bc);
-          return "boolean" === typeof vv ? vv : null
+          const TT = vT.e.getItem(lT.Sb);
+          return "boolean" === typeof TT ? TT : null
         },
-        heldBack: () => iv.i,
-        storeHoldbackSpared: vv => {
-          av.h.setItem(Cv.p, vv)
+        heldBack: () => NT.d,
+        storeHoldbackSpared: TT => {
+          vT.e.setItem(hT.B, TT)
         },
-        intelGen9OnWebGl: () => iv.k,
-        Bw: () => tv((() => (0, Tv.e)(Wv.featureFlags.settings.canUseShaderPacks))),
-        windows: () => tv((() => "windows" === (0, Wv.getOperatingSystem)()))
+        intelGen9OnWebGl: () => NT.g,
+        Bj: () => GT((() => (0, AT.g)(CT.featureFlags.settings.canUseShaderPacks))),
+        windows: () => GT((() => "windows" === (0, CT.getOperatingSystem)()))
       }
     }
 
-    function tv(vv) {
+    function GT(TT) {
       try {
-        return vv()
+        return TT()
       } catch {
         return !1
       }
     }
 
-    function qv(vv) {
-      return "lite" === vv ? "webgpu" : "webgl2" === vv || "babylon" === vv ? "webgl" : null
+    function VT(TT) {
+      return "lite" === TT ? "webgpu" : "webgl2" === TT || "babylon" === TT ? "webgl" : null
     }
-    async function Iv() {
-      let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : xv();
-      const zv = await async function(vv) {
-        const zv = function(vv) {
-            const zv = vv.override(),
-              Pv = vv.webGpuSetting(),
-              hv = null === zv && !0 !== Pv && vv.Bw(),
-              Sv = null !== zv || null !== Pv || hv ? null : vv.claimed(),
-              ev = null !== zv ? "override" : !0 === Pv ? "setting" : hv ? "pack" : !1 === Pv ? "setting" : null !== Sv ? "claim" : "default",
-              gv = function(vv) {
-                return "override" === vv || "setting" === vv
-              }(ev);
-            if ("webgl" === zv || "webgl1" === zv || "webgl" === Sv || "setting" === ev && !1 === Pv) return {
-              source: ev,
-              asked: gv,
+    async function ET() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eT();
+      const kT = await async function(TT) {
+        const kT = function(TT) {
+            const kT = TT.override(),
+              cT = TT.webGpuSetting(),
+              lT = null === kT && !0 !== cT && TT.Bj(),
+              MT = null !== kT || null !== cT || lT ? null : TT.claimed(),
+              KT = null !== kT ? "override" : !0 === cT ? "setting" : lT ? "pack" : !1 === cT ? "setting" : null !== MT ? "claim" : "default",
+              OT = function(TT) {
+                return "override" === TT || "setting" === TT
+              }(KT);
+            if ("webgl" === kT || "webgl1" === kT || "webgl" === MT || "setting" === KT && !1 === cT) return {
+              source: KT,
+              asked: OT,
               refused: "not_requested"
             };
-            if (!vv.gpu) return {
-              source: ev,
-              asked: gv,
+            if (!TT.gpu) return {
+              source: KT,
+              asked: OT,
               refused: "no_webgpu_api"
             };
-            const pv = "default" === ev && vv.heldBack();
-            if (pv && !vv.windows()) return {
-              source: ev,
-              asked: gv,
+            const yT = "default" === KT && TT.heldBack();
+            if (yT && !TT.windows()) return {
+              source: KT,
+              asked: OT,
               refused: "webgl_holdback"
             };
-            if (!gv && vv.offAfterLoss("pack" === ev)) return {
-              source: ev,
-              asked: gv,
-              refused: pv ? "webgl_holdback" : "off_after_loss"
+            if (!OT && TT.offAfterLoss("pack" === KT)) return {
+              source: KT,
+              asked: OT,
+              refused: yT ? "webgl_holdback" : "off_after_loss"
             };
             return {
-              source: ev,
-              asked: gv,
-              heldBack: pv,
-              gpu: vv.gpu
+              source: KT,
+              asked: OT,
+              heldBack: yT,
+              gpu: TT.gpu
             }
-          }(vv),
+          }(TT),
           {
-            source: Pv
-          } = zv,
-          hv = !zv.asked,
-          Sv = "gpu" in zv && zv.heldBack,
-          gv = function(vv) {
-            return Sv && "none" !== vv ? {
+            source: cT
+          } = kT,
+          lT = !kT.asked,
+          MT = "gpu" in kT && kT.heldBack,
+          OT = function(TT) {
+            return MT && "none" !== TT ? {
               reason: "webgl_holdback",
               adapter: null,
-              source: Pv
+              source: cT
             } : {
-              reason: vv,
+              reason: TT,
               adapter: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-              source: Pv
+              source: cT
             }
           };
-        if (!("gpu" in zv)) return gv(zv.refused);
-        let pv;
+        if (!("gpu" in kT)) return OT(kT.refused);
+        let yT;
         try {
-          pv = await (0, fv.j)((0, Gv.p)(zv.gpu), hz, `requestAdapter didn't settle in ${hz/1e3} s`)
+          yT = await (0, FT.m)((0, ST.k)(kT.gpu), lk, `requestAdapter didn't settle in ${lk/1e3} s`)
         } catch {
-          return gv("adapter_error")
+          return OT("adapter_error")
         }
-        if ("string" === typeof pv) return gv(pv);
-        const dv = (0, Gv.e)(pv);
-        if ((0, Gv.k)(pv)) return gv("software_adapter", dv);
-        const Nv = vv.windows() && function(vv) {
-          return Uv.has((0, ev.h)(vv.vendor, vv.architecture))
-        }(dv);
-        if (vv.storeHoldbackSpared(Nv), Sv && !Nv) return gv("webgl_holdback");
-        const lv = vv.intelGen9(pv),
-          Tv = lv ? null : vv.gpuClassWebGlArm(pv);
-        if (vv.storeGpuClassVerdict(null !== Tv && void 0 !== Tv && Tv), hv && vv.oldIntelDriver(pv)) return gv("old_intel_driver", dv);
-        if ("default" === Pv && vv.intelGen9OnWebGl() && lv) return gv("intel_gen9", dv);
-        if ("default" === Pv && null !== Tv && vv.gpuClassOnWebGl(Tv)) return gv("gpu_class_webgl", dv);
-        return gv("none", dv)
-      }(vv);
-      if ("none" === zv.reason) return {
+        if ("string" === typeof yT) return OT(yT);
+        const fT = (0, ST.b)(yT);
+        if ((0, ST.h)(yT)) return OT("software_adapter", fT);
+        const xT = TT.windows() && function(TT) {
+          return oT.has((0, KT.i)(TT.vendor, TT.architecture))
+        }(fT);
+        if (TT.storeHoldbackSpared(xT), MT && !xT) return OT("webgl_holdback");
+        const IT = TT.intelGen9(yT),
+          AT = IT ? null : TT.gpuClassWebGlArm(yT);
+        if (TT.storeGpuClassVerdict(null !== AT && void 0 !== AT && AT), lT && TT.oldIntelDriver(yT)) return OT("old_intel_driver", fT);
+        if ("default" === cT && TT.intelGen9OnWebGl() && IT) return OT("intel_gen9", fT);
+        if ("default" === cT && null !== AT && TT.gpuClassOnWebGl(AT)) return OT("gpu_class_webgl", fT);
+        return OT("none", fT)
+      }(TT);
+      if ("none" === kT.reason) return {
         backend: "webgpu",
-        ...zv
+        ...kT
       };
-      if ("webgl1" !== vv.override() && vv.webgl2()) return {
+      if ("webgl1" !== TT.override() && TT.webgl2()) return {
         backend: "webgl",
-        ...zv
+        ...kT
       };
-      const Pv = vv.webgl1();
-      return 0 === Pv.length ? {
+      const cT = TT.webgl1();
+      return 0 === cT.length ? {
         backend: "webgl1",
-        ...zv
+        ...kT
       } : {
-        missing: Pv
+        missing: cT
       }
     }
-    let Qv = !1;
-    async function Zv(vv) {
-      let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : xv();
-      if (null === vv) return null;
-      const Pv = await Iv(zv);
-      return Qv = !("missing" in Pv) && "webgpu" === Pv.backend && "claim" === Pv.source, "missing" in Pv ? Pv : {
-        ...Pv,
-        load: vv[Pv.backend]
+    let ZT = !1;
+    async function uT(TT) {
+      let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : eT();
+      if (null === TT) return null;
+      const cT = await ET(kT);
+      return ZT = !("missing" in cT) && "webgpu" === cT.backend && "claim" === cT.source, "missing" in cT ? cT : {
+        ...cT,
+        load: TT[cT.backend]
       }
     }
-    async function Av(vv, zv) {
-      let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : xv().gpu,
-        hv = arguments.length > 3 ? arguments[3] : void 0;
-      if ("webgpu" !== vv.backend) return !1;
-      const Sv = Mv(zv, "indirectDraws", "off", "on");
-      if (null !== Sv) return Sv;
-      if (null !== vv.adapter && (0, Cv.k)(vv.adapter, hv)) return !0;
-      if (null === Pv) return !1;
+    async function XT(TT, kT) {
+      let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : eT().gpu,
+        lT = arguments.length > 3 ? arguments[3] : void 0;
+      if ("webgpu" !== TT.backend) return !1;
+      const MT = RT(kT, "indirectDraws", "off", "on");
+      if (null !== MT) return MT;
+      if (null !== TT.adapter && (0, hT.o)(TT.adapter, lT)) return !0;
+      if (null === cT) return !1;
       try {
-        var ev;
-        const vv = await (0, fv.j)(Pv.requestAdapter({
+        var KT;
+        const TT = await (0, FT.m)(cT.requestAdapter({
           powerPreference: "low-power"
-        }).then((async vv => (null !== vv && await (0, Gv.h)(vv), vv))), hz, `the low-power requestAdapter didn't settle in ${hz/1e3} s`);
-        return (0, Cv.k)(null !== (ev = null === vv || void 0 === vv ? void 0 : vv.info) && void 0 !== ev ? ev : {}, hv)
-      } catch (gv) {
-        return gv instanceof fv.h
+        }).then((async TT => (null !== TT && await (0, ST.e)(TT), TT))), lk, `the low-power requestAdapter didn't settle in ${lk/1e3} s`);
+        return (0, hT.o)(null !== (KT = null === TT || void 0 === TT ? void 0 : TT.info) && void 0 !== KT ? KT : {}, lT)
+      } catch (OT) {
+        return OT instanceof FT.h
       }
     }
 
-    function Lv(vv, zv, Pv) {
-      if ("webgpu" !== vv.backend) return !1;
-      const hv = Mv(zv, "terrainFetch", "texture", "storage");
-      return null !== hv ? hv : null !== vv.adapter && (0, Cv.f)(vv.adapter, Pv)
+    function dT(TT, kT, cT) {
+      if ("webgpu" !== TT.backend) return !1;
+      const lT = RT(kT, "terrainFetch", "texture", "storage");
+      return null !== lT ? lT : null !== TT.adapter && (0, hT.i)(TT.adapter, cT)
     }
 
-    function Hv(vv, zv, Pv) {
-      if ("webgpu" !== vv.backend) return !1;
-      const hv = Mv(zv, "sceneDepth", "off", "on");
-      return null !== hv ? hv : null !== vv.adapter && (0, Cv.g)(vv.adapter, Pv)
+    function LT(TT, kT, cT) {
+      if ("webgpu" !== TT.backend) return !1;
+      const lT = RT(kT, "sceneDepth", "off", "on");
+      return null !== lT ? lT : null !== TT.adapter && (0, hT.k)(TT.adapter, cT)
     }
 
-    function Mv(vv, zv, Pv, hv) {
-      const Sv = new URLSearchParams(vv).get(zv),
-        ev = null !== Sv && void 0 !== Sv ? Sv : (0, dv.i)(zv);
-      return ev !== Pv && ev !== hv ? null : (Qv ||= null === Sv, ev === Pv)
+    function RT(TT, kT, cT, lT) {
+      const MT = new URLSearchParams(TT).get(kT),
+        KT = null !== MT && void 0 !== MT ? MT : (0, fT.h)(kT);
+      return KT !== cT && KT !== lT ? null : (ZT ||= null === MT, KT === cT)
     }
 
-    function yv(vv, zv) {
-      return "webgl" === vv.backend && (0, ev.q)(zv)
+    function gT(TT, kT) {
+      return "webgl" === TT.backend && (0, KT.n)(kT)
     }
 
-    function Bv(vv) {
-      return null !== vv && "missing" in vv
+    function UT(TT) {
+      return null !== TT && "missing" in TT
     }
 
-    function Jv(vv) {
-      let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : gv.c;
+    function YT(TT) {
+      let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : OT.e;
       try {
-        const Pv = "start_failed" === vv || "pipeline_failed" === vv,
-          hv = zv.turnOffWebGpuAfterDeviceLoss(Pv ? "visible" : (0, sv.k)((0, wv.i)()));
-        return !Qv || hv && !zv.isWebGpuOffAfterLoss() || (0, dv.z)("webgpuLoss"), zv.isWebGpuOffAfterLoss() && "webgpu" === qv(av.h.getItem(lv.g)) && av.h.removeItem(lv.g), (0, pv.o)("webgpuloss") && (0, Nv.c)((zv => {
-          zv.noteWebGpuLoss("wasm", hv ? vv : `${vv}, which storage didn't keep`, null)
-        })), hv
+        const cT = "start_failed" === TT || "pipeline_failed" === TT,
+          lT = kT.turnOffWebGpuAfterDeviceLoss(cT ? "visible" : (0, tT.j)((0, jT.f)()));
+        return !ZT || lT && !kT.isWebGpuOffAfterLoss() || (0, fT.w)("webgpuLoss"), kT.isWebGpuOffAfterLoss() && "webgpu" === VT(vT.e.getItem(IT.f)) && vT.e.removeItem(IT.f), (0, yT.o)("webgpuloss") && (0, xT.d)((kT => {
+          kT.noteWebGpuLoss("wasm", lT ? TT : `${TT}, which storage didn't keep`, null)
+        })), lT
       } catch {
         return !1
       }
     }
 
-    function Ev(vv) {
-      return (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : !rv()) ? Jv(vv) ? null : "storage won't keep WebGPU off" : "the URL asks for WebGPU"
+    function BT(TT) {
+      return (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : !pT()) ? YT(TT) ? null : "storage won't keep WebGPU off" : "the URL asks for WebGPU"
     }
-    const ov = "framePacing";
+    const WT = "framePacing";
 
-    function bv(vv) {
-      const zv = new URLSearchParams(vv).get(ov);
-      return null !== zv && /^\d{1,9}$/.test(zv) ? Number(zv) : void 0
+    function nT(TT) {
+      const kT = new URLSearchParams(TT).get(WT);
+      return null !== kT && /^\d{1,9}$/.test(kT) ? Number(kT) : void 0
     }
 
-    function rv() {
-      let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.location.search;
+    function pT() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.location.search;
       try {
-        return "webgpu" === qv(new URLSearchParams(vv).get(lv.c))
+        return "webgpu" === VT(new URLSearchParams(TT).get(IT.d))
       } catch {
         return !1
       }
     }
 
-    function kv(vv) {
-      return !!Xv(vv) || vv instanceof Error && !(vv instanceof WebAssembly.RuntimeError) && vv.message.startsWith(`${mv.f.RenderSurfaceUnusable}:`)
+    function iT(TT) {
+      return !!qT(TT) || TT instanceof Error && !(TT instanceof WebAssembly.RuntimeError) && TT.message.startsWith(`${DT.e.RenderSurfaceUnusable}:`)
     }
 
-    function Xv(vv) {
+    function qT(TT) {
       const {
-        name: zv,
-        message: Pv
-      } = null !== vv && void 0 !== vv ? vv : {};
-      return "InvalidStateError" === zv && "string" === typeof Pv && Pv.startsWith("GPUDevice.")
+        name: kT,
+        message: cT
+      } = null !== TT && void 0 !== TT ? TT : {};
+      return "InvalidStateError" === kT && "string" === typeof cT && cT.startsWith("GPUDevice.")
     }
 
-    function uv(vv) {
-      const zv = vv;
-      return "function" === typeof zv.bzv && "function" === typeof zv.rzv ? zv : null
+    function sT(TT) {
+      const kT = TT;
+      return "function" === typeof kT.xcT && "function" === typeof kT.IcT ? kT : null
     }
 
-    function vz(vv) {
-      return "function" === typeof vv.hPv ? vv : null
+    function Tk(TT) {
+      return "function" === typeof TT.NcT ? TT : null
     }
-    const zz = "openRenderer";
+    const kk = "openRenderer";
 
-    function Pz(vv) {
-      const zv = null === vv || void 0 === vv ? void 0 : vv.CSv();
-      return void 0 === zv ? void 0 : new Error(zv)
+    function ck(TT) {
+      const kT = null === TT || void 0 === TT ? void 0 : TT.HMT();
+      return void 0 === kT ? void 0 : new Error(kT)
     }
-    const hz = 5e3,
-      Sz = 15e3;
+    const lk = 5e3,
+      Mk = 15e3;
 
-    function ez(vv, zv, Pv, hv, Sv, ev) {
-      return (0, fv.j)(function(vv, zv, Pv, hv, Sv, ev) {
-        return (0, Fv.g)(vv, zv, (() => vv.hPv(Pv, hv, Sv, ev.indirectHangs, ev.storagePullBreaks, ev.splitPassBreaks, ev.framesAhead, ev.instancedTerrainSlow)))
-      }(vv, zv, Pv, hv, Sv, ev), Sz, `${mv.f.RenderSurfaceUnusable}: the renderer didn't open in ${Sz/1e3} s`, pz)
+    function Kk(TT, kT, cT, lT, MT, KT) {
+      return (0, FT.m)(function(TT, kT, cT, lT, MT, KT) {
+        return (0, rT.h)(TT, kT, (() => TT.NcT(cT, lT, MT, KT.indirectHangs, KT.storagePullBreaks, KT.splitPassBreaks, KT.framesAhead, KT.instancedTerrainSlow)))
+      }(TT, kT, cT, lT, MT, KT), Mk, `${DT.e.RenderSurfaceUnusable}: the renderer didn't open in ${Mk/1e3} s`, yk)
     }
-    async function gz(vv, zv, Pv, hv, Sv, ev) {
-      if ("function" !== typeof vv.hev) throw new Error("this core has no set_renderer");
-      const gv = await ez(zv, zz, Pv, Sv, hv, ev);
+    async function Ok(TT, kT, cT, lT, MT, KT) {
+      if ("function" !== typeof TT.DKT) throw new Error("this core has no set_renderer");
+      const OT = await Kk(kT, kk, cT, MT, lT, KT);
       try {
-        vv.hev(gv)
-      } catch (pv) {
-        throw pz(gv), pv
+        TT.DKT(OT)
+      } catch (yT) {
+        throw yk(OT), yT
       }
     }
 
-    function pz(vv) {
+    function yk(TT) {
       try {
-        vv.free()
+        TT.free()
       } catch {}
     }
   },
-  40084: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => hv
+  40434: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => lT
     });
-    const hv = {
+    const lT = {
       extensions: ["ANGLE_instanced_arrays", "OES_vertex_array_object", "OES_element_index_uint", "OES_standard_derivatives"],
       limits: {
         MAX_VERTEX_ATTRIBS: 16,
@@ -1008,361 +1008,361 @@ export const modules = {
       vertexHighFloatBits: 23
     }
   },
-  40108: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => dv,
-      i: () => pv
+  40458: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => fT,
+      g: () => yT
     });
-    var hv = Pv(680),
-      Sv = Pv(686);
+    var lT = cT(685),
+      MT = cT(694);
 
-    function ev(vv, zv) {
-      const Pv = null === zv ? void 0 : hv.d.get(zv);
-      return "all" === Pv || "webgl" === Pv && "webgpu" !== vv.backend ? zv : null
+    function KT(TT, kT) {
+      const cT = null === kT ? void 0 : lT.c.get(kT);
+      return "all" === cT || "webgl" === cT && "webgpu" !== TT.backend ? kT : null
     }
 
-    function gv(vv) {
-      return "software_adapter" === vv.reason ? null : vv.adapter
+    function OT(TT) {
+      return "software_adapter" === TT.reason ? null : TT.adapter
     }
 
-    function pv(vv, zv) {
-      const Pv = (0, hv.u)();
-      return null === Pv ? null : (0, hv.h)(gv(vv), Pv, zv ? hv.m : hv.j)
+    function yT(TT, kT) {
+      const cT = (0, lT.o)();
+      return null === cT ? null : (0, lT.f)(OT(TT), cT, kT ? lT.j : lT.i)
     }
 
-    function dv(vv, zv) {
-      let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Sv.i;
-      const hv = ev(vv, zv);
-      return null !== hv && "webgl" === vv.backend && Pv(hv) ? null : hv
+    function fT(TT, kT) {
+      let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : MT.j;
+      const lT = KT(TT, kT);
+      return null !== lT && "webgl" === TT.backend && cT(lT) ? null : lT
     }
   },
-  40087: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => Sv,
-      g: () => lv,
-      j: () => gv,
-      k: () => dv
+  40440: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => MT,
+      h: () => IT,
+      i: () => OT,
+      m: () => fT
     });
-    var hv = Pv(35852);
-    class Sv extends Error {
-      constructor(vv, zv) {
-        let Pv = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        super(`${vv}: the module trapped${Pv?" in an earlier call":""}: ${String(zv)}`, {
-          cause: zv
-        }), this.site = vv, this.trap = zv, this.earlier = Pv, this.name = "ModuleTrapError", zv instanceof Error && void 0 !== zv.stack && (this.stack = `${this.name}: ${this.message}\n${zv.stack}`)
+    var lT = cT(36089);
+    class MT extends Error {
+      constructor(TT, kT) {
+        let cT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        super(`${TT}: the module trapped${cT?" in an earlier call":""}: ${String(kT)}`, {
+          cause: kT
+        }), this.site = TT, this.trap = kT, this.earlier = cT, this.name = "ModuleTrapError", kT instanceof Error && void 0 !== kT.stack && (this.stack = `${this.name}: ${this.message}\n${kT.stack}`)
       }
     }
-    const ev = new WeakMap;
+    const KT = new WeakMap;
 
-    function gv(vv) {
-      return ev.has(vv)
+    function OT(TT) {
+      return KT.has(TT)
     }
 
-    function pv(vv, zv) {
-      ev.has(vv) || ev.set(vv, zv)
+    function yT(TT, kT) {
+      KT.has(TT) || KT.set(TT, kT)
     }
 
-    function dv(vv, zv) {
-      return !!(0, hv.h)(zv) && (pv(vv, zv), !0)
+    function fT(TT, kT) {
+      return !!(0, lT.h)(kT) && (yT(TT, kT), !0)
     }
-    const Nv = [
-      ["error", vv => vv.error],
-      ["unhandledrejection", vv => vv.reason]
+    const xT = [
+      ["error", TT => TT.error],
+      ["unhandledrejection", TT => TT.reason]
     ];
 
-    function lv(vv, zv, Pv) {
-      let gv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "function" === typeof globalThis.addEventListener ? globalThis : null;
-      return ev.has(vv) ? Promise.reject(new Sv(zv, ev.get(vv), !0)) : new Promise(((ev, dv) => {
-        const lv = Pv => {
-            pv(vv, Pv), wv(), dv(new Sv(zv, Pv))
+    function IT(TT, kT, cT) {
+      let OT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "function" === typeof globalThis.addEventListener ? globalThis : null;
+      return KT.has(TT) ? Promise.reject(new MT(kT, KT.get(TT), !0)) : new Promise(((KT, fT) => {
+        const IT = cT => {
+            yT(TT, cT), jT(), fT(new MT(kT, cT))
           },
-          Tv = vv => {
-            vv instanceof WebAssembly.RuntimeError ? lv(vv) : (wv(), dv(vv))
+          AT = TT => {
+            TT instanceof WebAssembly.RuntimeError ? IT(TT) : (jT(), fT(TT))
           },
-          Wv = Nv.map((vv => {
-            let [zv, Pv] = vv;
-            return [zv, vv => {
-              const zv = Pv(vv);
-              (0, hv.h)(zv) && lv(zv)
+          CT = xT.map((TT => {
+            let [kT, cT] = TT;
+            return [kT, TT => {
+              const kT = cT(TT);
+              (0, lT.h)(kT) && IT(kT)
             }]
           })),
-          wv = () => {
-            for (const [vv, zv] of Wv) null === gv || void 0 === gv || gv.removeEventListener(vv, zv)
+          jT = () => {
+            for (const [TT, kT] of CT) null === OT || void 0 === OT || OT.removeEventListener(TT, kT)
           };
-        for (const [vv, zv] of Wv) null === gv || void 0 === gv || gv.addEventListener(vv, zv);
-        let av;
+        for (const [TT, kT] of CT) null === OT || void 0 === OT || OT.addEventListener(TT, kT);
+        let vT;
         try {
-          av = Pv()
-        } catch (sv) {
-          return void Tv(sv)
+          vT = cT()
+        } catch (tT) {
+          return void AT(tT)
         }
-        av.then((vv => {
-          wv(), ev(vv)
-        }), Tv)
+        vT.then((TT => {
+          jT(), KT(TT)
+        }), AT)
       }))
     }
   },
-  40112: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      A: () => xv,
-      E: () => Yv,
-      H: () => Uv,
-      I: () => Rv,
-      M: () => qv,
-      O: () => Vv,
-      c: () => Fv,
-      e: () => mv,
-      f: () => Iv,
-      g: () => tv,
-      i: () => Gv,
-      j: () => fv,
-      k: () => iv,
-      o: () => Ov,
-      q: () => Kv,
-      u: () => Lv,
-      w: () => Av
+  40461: (TT, kT, cT) => {
+    cT.d(kT, {
+      C: () => mT,
+      F: () => zT,
+      H: () => dT,
+      K: () => XT,
+      O: () => eT,
+      S: () => PT,
+      V: () => oT,
+      Y: () => HT,
+      _: () => VT,
+      bb: () => JT,
+      e: () => rT,
+      i: () => DT,
+      m: () => ET,
+      o: () => GT,
+      s: () => ST,
+      v: () => FT,
+      y: () => NT
     });
-    var hv = Pv(202),
-      Sv = Pv(266),
-      ev = Pv(22),
-      gv = Pv(295),
-      pv = Pv(39),
-      dv = Pv(40078),
-      Nv = Pv(40108),
-      lv = Pv(40114),
-      Tv = (Pv(40096), Pv(40116)),
-      Wv = Pv(40125);
-    const wv = "wasmJoinBuild";
-    let av = null,
-      sv = null,
-      Cv = null;
+    var lT = cT(229),
+      MT = cT(298),
+      KT = cT(31),
+      OT = cT(326),
+      yT = cT(47),
+      fT = cT(40426),
+      xT = cT(40458),
+      IT = cT(40465),
+      AT = (cT(40443), cT(40467)),
+      CT = cT(40473);
+    const jT = "wasmJoinBuild";
+    let vT = null,
+      tT = null,
+      hT = null;
 
-    function iv(vv) {
-      Cv = vv
+    function NT(TT) {
+      hT = TT
     }
-    let cv = !1;
+    let QT = !1;
 
-    function Gv() {
-      cv = !0
-    }
-
-    function mv() {
-      return cv
-    }
-    let jv = !1;
-
-    function fv() {
-      jv = !0
+    function ST() {
+      QT = !0
     }
 
-    function Fv() {
-      return jv
+    function DT() {
+      return QT
+    }
+    let aT = !1;
+
+    function FT() {
+      aT = !0
     }
 
-    function Yv() {
-      return Cv
-    }
-    let nv = null;
-
-    function Ov(vv) {
-      nv = vv, (0, gv.b)(vv)
-    }
-    const Dv = "wasmClientRenderLost";
-
-    function Kv() {
-      pv.l.setItem(Dv, !0)
+    function rT() {
+      return aT
     }
 
-    function Vv() {
-      return !0 === pv.l.getItem(Dv)
+    function PT() {
+      return hT
+    }
+    let wT = null;
+
+    function mT(TT) {
+      wT = TT, (0, OT.b)(TT)
+    }
+    const bT = "wasmClientRenderLost";
+
+    function zT() {
+      yT.g.setItem(bT, !0)
     }
 
-    function Uv() {
-      return nv
+    function JT() {
+      return !0 === yT.g.getItem(bT)
     }
 
-    function Rv() {
-      return null === av && (pv.h.removeItem("wasmLastPick"), pv.h.removeItem("wasmGuessVerdict"), (0, gv.l)(), av = (0, dv.B)(lv.d).then((vv => (null === vv || (0, dv.o)(vv) || (sv = Tv.b[vv.backend], ev.c.followGameGpu("webgpu" === vv.backend ? vv.adapter : null), "webgpu" === vv.backend && (0, Wv.d)()), vv)))), av
+    function oT() {
+      return wT
     }
 
-    function xv() {
-      return sv
+    function HT() {
+      return null === vT && (yT.e.removeItem("wasmLastPick"), yT.e.removeItem("wasmGuessVerdict"), (0, OT.i)(), vT = (0, fT.u)(IT.i).then((TT => (null === TT || (0, fT.l)(TT) || (tT = AT.e[TT.backend], KT.e.followGameGpu("webgpu" === TT.backend ? TT.adapter : null), "webgpu" === TT.backend && (0, CT.f)()), TT)))), vT
     }
 
-    function tv(vv) {
-      return vv ? vv.load() : Promise.resolve().then((function() {
-        var vv = new Error("Cannot find module '@bloxd/wasm/client'");
-        throw vv.code = "MODULE_NOT_FOUND", vv
-      })).then((vv => vv.bloxdWasmClient))
+    function eT() {
+      return tT
     }
 
-    function qv(vv) {
-      pv.h.setItem(wv, vv)
+    function GT(TT) {
+      return TT ? TT.load() : Promise.resolve().then((function() {
+        var TT = new Error("Cannot find module '@bloxd/wasm/client'");
+        throw TT.code = "MODULE_NOT_FOUND", TT
+      })).then((TT => TT.bloxdWasmClient))
     }
-    async function Iv() {
-      if (null === lv.d) return tv(null);
-      const vv = pv.h.getItem(wv);
-      let zv = "none" === vv ? null : "webgl";
-      return null !== vv && "none" !== vv && ("string" === typeof vv && void 0 !== (0, hv.b)(lv.d, vv) ? zv = vv : console.warn(`[bloxd-wasm-client] the last join's build, ${JSON.stringify(vv)}, is none of this client's: guessing WebGL2's`)), null === zv ? null : lv.d[zv]()
-    }
-    let Qv = null,
-      Zv = null;
 
-    function Av() {
-      return Qv ??= Rv().then((async vv => {
-        var zv;
-        const Pv = null !== vv && !(0, dv.o)(vv),
-          hv = {
-            indirectHangs: Pv && await (0, dv.E)(vv, window.location.search),
-            storagePullBreaks: Pv && (0, dv.M)(vv, window.location.search),
-            splitPassBreaks: Pv && (0, dv.J)(vv, window.location.search),
-            framesAhead: (0, dv.k)(window.location.search),
-            instancedTerrainSlow: Pv && (0, dv.F)(vv, null !== (zv = (0, Nv.i)(vv, !1)) && void 0 !== zv ? zv : (0, Sv.e)())
+    function VT(TT) {
+      yT.e.setItem(jT, TT)
+    }
+    async function ET() {
+      if (null === IT.i) return GT(null);
+      const TT = yT.e.getItem(jT);
+      let kT = "none" === TT ? null : "webgl";
+      return null !== TT && "none" !== TT && ("string" === typeof TT && void 0 !== (0, lT.d)(IT.i, TT) ? kT = TT : console.warn(`[bloxd-wasm-client] the last join's build, ${JSON.stringify(TT)}, is none of this client's: guessing WebGL2's`)), null === kT ? null : IT.i[kT]()
+    }
+    let ZT = null,
+      uT = null;
+
+    function XT() {
+      return ZT ??= HT().then((async TT => {
+        var kT;
+        const cT = null !== TT && !(0, fT.l)(TT),
+          lT = {
+            indirectHangs: cT && await (0, fT.w)(TT, window.location.search),
+            storagePullBreaks: cT && (0, fT.H)(TT, window.location.search),
+            splitPassBreaks: cT && (0, fT.E)(TT, window.location.search),
+            framesAhead: (0, fT.h)(window.location.search),
+            instancedTerrainSlow: cT && (0, fT.A)(TT, null !== (kT = (0, xT.g)(TT, !1)) && void 0 !== kT ? kT : (0, MT.e)())
           };
-        return Zv = hv.indirectHangs, hv
-      })), Qv
+        return uT = lT.indirectHangs, lT
+      })), ZT
     }
 
-    function Lv() {
-      return Zv
+    function dT() {
+      return uT
     }
   },
-  40116: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => hv
+  40467: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => lT
     });
-    const hv = {
+    const lT = {
       webgpu: "rust_webgpu",
       webgl: "rust_webgl2",
       webgl1: "rust_webgl1"
     }
   },
-  40114: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => Sv,
-      d: () => hv
+  40465: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => MT,
+      i: () => lT
     });
-    const hv = {
-        webgpu: async () => (await Pv.e(8).then((() => Pv(42627)))).bloxdWasmWebgpu,
-        webgl: async () => (await Pv.e(6).then((() => Pv(42638)))).bloxdWasmWebgl,
-        webgl1: async () => (await Pv.e(7).then((() => Pv(42648)))).bloxdWasmWebgl1
+    const lT = {
+        webgpu: async () => (await cT.e(8).then((() => cT(42729)))).bloxdWasmWebgpu,
+        webgl: async () => (await cT.e(6).then((() => cT(42745)))).bloxdWasmWebgl,
+        webgl1: async () => (await cT.e(7).then((() => cT(42758)))).bloxdWasmWebgl1
       },
-      Sv = async () => (await Pv.e(5).then((() => Pv(42660)))).compileAnimationPackInWasm
+      MT = async () => (await cT.e(5).then((() => cT(42771)))).compileAnimationPackInWasm
   },
-  40134: (vv, zv, Pv) => {
-    function hv() {
-      return Pv(40139)
+  40477: (TT, kT, cT) => {
+    function lT() {
+      return cT(40479)
     }
 
-    function Sv() {
-      return Pv(40146)
+    function MT() {
+      return cT(40481)
     }
 
-    function ev(vv) {
-      return ["pl", "ru", "tr", "uk", "vi"].includes(vv)
+    function KT(TT) {
+      return ["pl", "ru", "tr", "uk", "vi"].includes(TT)
     }
-    Pv.d(zv, {
-      d: () => ev,
-      e: () => hv,
-      g: () => Sv
+    cT.d(kT, {
+      c: () => KT,
+      g: () => lT,
+      h: () => MT
     })
   },
-  40125: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => pv,
-      d: () => dv
+  40473: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => yT,
+      f: () => fT
     });
-    var hv = Pv(73);
-    const Sv = "webgpuPipeline";
+    var lT = cT(118);
+    const MT = "webgpuPipeline";
 
-    function ev(vv) {
-      return vv.split(".").slice(0, 2).join("_").replace(/[^0-9_]/g, "")
+    function KT(TT) {
+      return TT.split(".").slice(0, 2).join("_").replace(/[^0-9_]/g, "")
     }
-    let gv = null;
+    let OT = null;
 
-    function pv() {
-      if (null === gv) try {
-        vv = (0, hv.getBrowserName)(), zv = (0, hv.getBrowserVersion)(), Pv = (0, hv.getOperatingSystem)(), Sv = (0, hv.getOperatingSystemVersion)(), gv = `${vv.toLowerCase().replace(/[^a-z0-9]/g,"")}_${void 0===zv?"unknown":ev(zv)}-${Pv}${void 0===Sv?"":`_${ev(Sv)}`}`
-      } catch (pv) {
-        console.warn("The user agent couldn't be read for its browser code", pv), gv = "unknown"
+    function yT() {
+      if (null === OT) try {
+        TT = (0, lT.getBrowserName)(), kT = (0, lT.getBrowserVersion)(), cT = (0, lT.getOperatingSystem)(), MT = (0, lT.getOperatingSystemVersion)(), OT = `${TT.toLowerCase().replace(/[^a-z0-9]/g,"")}_${void 0===kT?"unknown":KT(kT)}-${cT}${void 0===MT?"":`_${KT(MT)}`}`
+      } catch (yT) {
+        console.warn("The user agent couldn't be read for its browser code", yT), OT = "unknown"
       }
-      var vv, zv, Pv, Sv;
-      return gv
+      var TT, kT, cT, MT;
+      return OT
     }
 
-    function dv() {
-      let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GPUDevice.prototype;
-      const zv = `WGPU-${pv()}`,
-        hv = (vv, hv) => {
+    function fT() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GPUDevice.prototype;
+      const kT = `WGPU-${yT()}`,
+        lT = (TT, lT) => {
           const {
-            reason: ev,
-            message: gv
-          } = hv, pv = {
-            pipeline: null !== vv && void 0 !== vv ? vv : "",
-            reason: String(ev),
-            browserMessage: String(gv)
+            reason: KT,
+            message: OT
+          } = lT, yT = {
+            pipeline: null !== TT && void 0 !== TT ? TT : "",
+            reason: String(KT),
+            browserMessage: String(OT)
           };
-          Promise.all([Pv.e(263), Pv.e(87)]).then((() => Pv(40235))).then((vv => {
+          Promise.all([cT.e(263), cT.e(87)]).then((() => cT(40557))).then((TT => {
             let {
-              reportCrash: Pv
-            } = vv;
-            Pv({
+              reportCrash: cT
+            } = TT;
+            cT({
               kind: "coreError",
-              code: zv,
-              site: Sv,
+              code: kT,
+              site: MT,
               fatal: !1,
-              message: `${pv.pipeline} ${pv.reason}: ${pv.browserMessage}`,
-              details: pv,
-              error: hv
+              message: `${yT.pipeline} ${yT.reason}: ${yT.browserMessage}`,
+              details: yT,
+              error: lT
             })
-          })).catch((vv => {
-            console.warn("A rejected WebGPU pipeline compile couldn't be reported", vv)
+          })).catch((TT => {
+            console.warn("A rejected WebGPU pipeline compile couldn't be reported", TT)
           }))
         },
-        ev = vv.createRenderPipelineAsync;
-      vv.createRenderPipelineAsync = function(vv) {
-        return ev.call(this, vv).catch((zv => {
-          throw hv(vv.label, zv), zv
+        KT = TT.createRenderPipelineAsync;
+      TT.createRenderPipelineAsync = function(TT) {
+        return KT.call(this, TT).catch((kT => {
+          throw lT(TT.label, kT), kT
         }))
       };
-      const gv = vv.createComputePipelineAsync;
-      vv.createComputePipelineAsync = function(vv) {
-        return gv.call(this, vv).catch((zv => {
-          throw hv(vv.label, zv), zv
+      const OT = TT.createComputePipelineAsync;
+      TT.createComputePipelineAsync = function(TT) {
+        return OT.call(this, TT).catch((kT => {
+          throw lT(TT.label, kT), kT
         }))
       }
     }
   },
-  40071: (vv, zv, Pv) => {
-    vv.exports = Pv.p + "static/media/bloxd_wasm_models_bg.a746cbd0227bcbe1c6b5.wasm"
+  40422: (TT, kT, cT) => {
+    TT.exports = cT.p + "static/media/bloxd_wasm_models_bg.011f7c7db56d32487826.wasm"
   },
-  40068: (vv, zv, Pv) => {
-    vv.exports = Pv.p + "static/media/bloxd_wasm_workers_bg.e7313a53d539b4250cbd.wasm"
+  40416: (TT, kT, cT) => {
+    TT.exports = cT.p + "static/media/bloxd_wasm_workers_bg.f47afb17c771c525f495.wasm"
   },
-  40139: (vv, zv, Pv) => {
-    vv.exports = Pv.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
+  40479: (TT, kT, cT) => {
+    TT.exports = cT.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
   },
-  40146: (vv, zv, Pv) => {
-    vv.exports = Pv.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
+  40481: (TT, kT, cT) => {
+    TT.exports = cT.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
   },
-  40065: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => Sv,
-      e: () => hv
+  40409: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => MT,
+      f: () => lT
     });
-    const hv = {
+    const lT = {
       name: "bloxd_wasm_workers",
       url: function() {
-        return new Pv.U(Pv(40068))
+        return new cT.U(cT(40416))
       }
     };
-    const Sv = {
+    const MT = {
       name: "bloxd_wasm_models",
       url: function() {
-        return new Pv.U(Pv(40071))
+        return new cT.U(cT(40422))
       }
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

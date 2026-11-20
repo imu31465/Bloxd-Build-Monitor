@@ -1,196 +1,196 @@
 export const id = 206;
 export const ids = [206, 207];
 export const modules = {
-  35841: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => Sv,
-      reportCappedWasmFailure: () => pv,
-      reportUncappedWasmFailure: () => gv,
-      reportWasmFailure: () => ev
+  36069: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => MT,
+      reportCappedWasmFailure: () => yT,
+      reportUncappedWasmFailure: () => OT,
+      reportWasmFailure: () => KT
     });
-    var hv = Pv(2715);
-    const Sv = hv.c - 4;
+    var lT = cT(2891);
+    const MT = lT.d - 4;
 
-    function ev(vv, zv, Pv) {
-      (0, hv.e)(vv, zv, Pv, !1)
+    function KT(TT, kT, cT) {
+      (0, lT.e)(TT, kT, cT, !1)
     }
 
-    function gv(vv, zv, Pv) {
-      (0, hv.e)(vv, zv, Pv, !1, 1 / 0)
+    function OT(TT, kT, cT) {
+      (0, lT.e)(TT, kT, cT, !1, 1 / 0)
     }
 
-    function pv(vv, zv, Pv) {
-      (0, hv.e)(vv, zv, Pv, !1, Sv)
+    function yT(TT, kT, cT) {
+      (0, lT.e)(TT, kT, cT, !1, MT)
     }
   },
-  35835: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => jv,
-      d: () => Yv,
-      h: () => nv,
-      l: () => fv
+  36065: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => aT,
+      e: () => PT,
+      i: () => wT,
+      j: () => FT
     });
-    var hv = Pv(35856),
-      Sv = Pv(3466),
-      ev = Pv(35876),
-      gv = Pv(3473),
-      pv = Pv(35841),
-      dv = Pv(2706),
-      Nv = Pv(3002),
-      lv = Pv(2996),
-      Tv = Pv(35847),
-      Wv = Pv(2715),
-      wv = Pv(35849),
-      av = Pv(35852),
-      sv = Pv(3459);
-    let Cv = !1;
-    const iv = 40;
-    var cv = Pv(688);
-    const Gv = "bloxdWasmFailureReported";
+    var lT = cT(36092),
+      MT = cT(3679),
+      KT = cT(36108),
+      OT = cT(3684),
+      yT = cT(36069),
+      fT = cT(2884),
+      xT = cT(3179),
+      IT = cT(3170),
+      AT = cT(36077),
+      CT = cT(2891),
+      jT = cT(36085),
+      vT = cT(36089),
+      tT = cT(3673);
+    let hT = !1;
+    const NT = 40;
+    var QT = cT(698);
+    const ST = "bloxdWasmFailureReported";
 
-    function mv() {
+    function DT() {
       return "undefined" === typeof WebAssembly
     }
 
-    function jv() {
-      return (0, hv.e)()
+    function aT() {
+      return (0, lT.g)()
     }
 
-    function fv() {
-      if (mv()) return "this browser has no WebAssembly";
-      const vv = (0, Sv.p)();
-      return "compile" === vv || "instantiate" === vv ? `the core wasm didn't load here (${(0,Sv.j)()})` : null
+    function FT() {
+      if (DT()) return "this browser has no WebAssembly";
+      const TT = (0, MT.n)();
+      return "compile" === TT || "instantiate" === TT ? `the core wasm didn't load here (${(0,MT.g)()})` : null
     }
-    async function Fv(vv) {
-      return await (0, ev.g)(ev.d, void 0, vv)
+    async function rT(TT) {
+      return await (0, KT.f)(KT.e, void 0, TT)
     }
 
-    function Yv() {
-      mv() || (0, cv.c)((() => {
-        Fv()
+    function PT() {
+      DT() || (0, QT.c)((() => {
+        rT()
       }))
     }
 
-    function nv() {
-      if (mv()) return async () => ((0, dv.j)("unsupported", 0), Ov("unsupported", "This browser has no WebAssembly"), !1);
-      const vv = {
+    function wT() {
+      if (DT()) return async () => ((0, fT.g)("unsupported", 0), mT("unsupported", "This browser has no WebAssembly"), !1);
+      const TT = {
         reloadFailedDownload: !0
       };
-      return Fv(vv), async () => {
-        var zv;
-        const Pv = performance.now();
-        await Fv(vv);
-        const hv = (performance.now() - Pv) / 1e3;
-        if ((0, Sv.O)()) return (0, dv.j)("ready", hv), Cv || (Cv = !0, (0, Sv.Q)((() => {
-          if ("call" !== (0, Sv.p)()) return;
-          const vv = (0, Sv.o)(),
-            zv = (0, Tv.h)(vv, Sv.E, Sv.X),
-            Pv = (0, Sv.u)().buffer.byteLength,
-            hv = (0, Tv.d)(zv.kind, zv.refusedBytes),
-            ev = hv ? "alloc_failed" : zv.kind,
-            gv = (0, wv.f)(Pv),
-            pv = hv ? `_r${Math.floor(Math.log2(zv.refusedBytes))}` : "",
-            dv = (0, sv.c)();
-          null === dv && console.warn("A JS client wasm call turned wasm off without naming its site: call markWasmFailedAt, not markBloxdWasmFailed");
-          const Nv = new Error((0, av.d)(vv, Pv, zv));
-          if (vv instanceof Error && void 0 !== vv.stack) {
-            const zv = vv.stack.split("\n"),
-              Pv = zv.length > iv ? [...zv.slice(0, iv / 2), ...zv.slice(-iv / 2)] : zv;
-            Nv.stack = Pv.join("\n")
-          }(0, Wv.e)("wasm_load", Nv, `wasm_call_${ev}_${null!==dv&&void 0!==dv?dv:"unnamed"}_m${gv}${pv}`)
-        }))), (0, gv.Q)(ev.d.url()) && (0, pv.reportCappedWasmFailure)("wasm_load", Nv.c.message, Nv.c.code), !0;
-        const cv = lv.b[null !== (zv = (0, Sv.p)()) && void 0 !== zv ? zv : "call"];
-        return (0, dv.j)(cv, hv), Ov(cv, (0, Sv.j)()), !1
+      return rT(TT), async () => {
+        var kT;
+        const cT = performance.now();
+        await rT(TT);
+        const lT = (performance.now() - cT) / 1e3;
+        if ((0, MT.K)()) return (0, fT.g)("ready", lT), hT || (hT = !0, (0, MT.O)((() => {
+          if ("call" !== (0, MT.n)()) return;
+          const TT = (0, MT.m)(),
+            kT = (0, AT.l)(TT, MT.z, MT.V),
+            cT = (0, MT.q)().buffer.byteLength,
+            lT = (0, AT.g)(kT.kind, kT.refusedBytes),
+            KT = lT ? "alloc_failed" : kT.kind,
+            OT = (0, jT.j)(cT),
+            yT = lT ? `_r${Math.floor(Math.log2(kT.refusedBytes))}` : "",
+            fT = (0, tT.c)();
+          null === fT && console.warn("A JS client wasm call turned wasm off without naming its site: call markWasmFailedAt, not markBloxdWasmFailed");
+          const xT = new Error((0, vT.e)(TT, cT, kT));
+          if (TT instanceof Error && void 0 !== TT.stack) {
+            const kT = TT.stack.split("\n"),
+              cT = kT.length > NT ? [...kT.slice(0, NT / 2), ...kT.slice(-NT / 2)] : kT;
+            xT.stack = cT.join("\n")
+          }(0, CT.e)("wasm_load", xT, `wasm_call_${KT}_${null!==fT&&void 0!==fT?fT:"unnamed"}_m${OT}${yT}`)
+        }))), (0, OT.W)(KT.e.url()) && (0, yT.reportCappedWasmFailure)("wasm_load", xT.d.message, xT.d.code), !0;
+        const QT = IT.c[null !== (kT = (0, MT.n)()) && void 0 !== kT ? kT : "call"];
+        return (0, fT.g)(QT, lT), mT(QT, (0, MT.g)()), !1
       }
     }
 
-    function Ov(vv, zv) {
-      (0, lv.g)(Gv, `Bloxd wasm ${vv}, so the game can't start: ${zv}`, zv, vv)
+    function mT(TT, kT) {
+      (0, IT.i)(ST, `Bloxd wasm ${TT}, so the game can't start: ${kT}`, kT, TT)
     }
   },
-  35888: (vv, zv, Pv) => {
-    vv.exports = Pv.p + "static/media/bloxd_wasm_bg.0ad1e69a75b1f7fb10b3.wasm"
+  36117: (TT, kT, cT) => {
+    TT.exports = cT.p + "static/media/bloxd_wasm_bg.7e706eaa39701505b511.wasm"
   },
-  35869: (vv, zv, Pv) => {
-    vv.exports = Pv.p + "static/media/bloxd_wasm_textures_bg.76a5c861c3c0e6e9a58d.wasm"
+  36104: (TT, kT, cT) => {
+    TT.exports = cT.p + "static/media/bloxd_wasm_textures_bg.ed3c45a2c71b6bf67ac7.wasm"
   },
-  35876: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => Dz,
-      g: () => Kz,
-      h: () => Vz
+  36108: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => bk,
+      f: () => zk,
+      g: () => Jk
     });
-    var hv = {};
-    Pv.r(hv), Pv.d(hv, {
-      Bl: () => Sv,
-      EnvelopeKind: () => ev,
-      Jl: () => gv,
-      PhysicsEngine: () => pv,
-      El: () => dv,
-      ol: () => Nv,
-      bl: () => lv,
-      rl: () => Tv,
-      kl: () => Wv,
-      Xl: () => wv,
-      ul: () => av,
-      vT: () => sv,
-      zT: () => Cv,
-      PT: () => iv,
-      default: () => Yz,
-      initSync: () => Fz,
-      hT: () => cv,
-      ST: () => Gv,
-      eT: () => mv,
-      gT: () => jv,
-      pT: () => fv,
-      dT: () => Fv,
-      NT: () => Yv,
-      lT: () => nv,
-      TT: () => Ov,
-      WT: () => Dv,
-      wT: () => Kv,
-      aT: () => Vv,
-      sT: () => Uv,
-      CT: () => Rv,
-      iT: () => xv
+    var lT = {};
+    cT.r(lT), cT.d(lT, {
+      YI: () => MT,
+      EnvelopeKind: () => KT,
+      BI: () => OT,
+      PhysicsEngine: () => yT,
+      WI: () => fT,
+      nI: () => xT,
+      pI: () => IT,
+      iI: () => AT,
+      qI: () => CT,
+      sI: () => jT,
+      TA: () => vT,
+      kA: () => tT,
+      cA: () => hT,
+      lA: () => NT,
+      default: () => Pk,
+      initSync: () => rk,
+      MA: () => QT,
+      KA: () => ST,
+      OA: () => DT,
+      yA: () => aT,
+      fA: () => FT,
+      xA: () => rT,
+      IA: () => PT,
+      AA: () => wT,
+      CA: () => mT,
+      jA: () => bT,
+      vA: () => zT,
+      tA: () => JT,
+      hA: () => oT,
+      NA: () => HT,
+      QA: () => eT
     });
-    class Sv {
+    class MT {
       __destroy_into_raw() {
-        const vv = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, qv.unregister(this), vv
+        const TT = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, VT.unregister(this), TT
       }
       free() {
-        const vv = this.__destroy_into_raw();
-        mz.Gevw(vv, 0)
+        const TT = this.__destroy_into_raw();
+        Dk.bw2V(TT, 0)
       }
-      cT() {
-        const vv = mz.bx2U(this.__wbg_ptr);
-        if (vv[2]) throw wz(vv[1]);
-        return vv[0] >>> 0
+      SA() {
+        const TT = Dk.DxWo(this.__wbg_ptr);
+        if (TT[2]) throw jk(TT[1]);
+        return TT[0] >>> 0
       }
-      GT() {
-        return mz.nqbD(this.__wbg_ptr) >>> 0
+      DA() {
+        return Dk.Afya(this.__wbg_ptr) >>> 0
       }
       constructor() {
-        const vv = mz.ITpI();
-        return this.__wbg_ptr = vv, qv.register(this, this.__wbg_ptr, this), this
+        const TT = Dk.ENA1();
+        return this.__wbg_ptr = TT, VT.register(this, this.__wbg_ptr, this), this
       }
-      mT() {
-        return mz.TuMe(this.__wbg_ptr) >>> 0
+      aA() {
+        return Dk.mt92(this.__wbg_ptr) >>> 0
       }
-      jT(vv) {
-        const zv = mz.jkxO(this.__wbg_ptr, vv);
-        if (zv[2]) throw wz(zv[1]);
-        return zv[0] >>> 0
+      FA(TT) {
+        const kT = Dk.nHnr(this.__wbg_ptr, TT);
+        if (kT[2]) throw jk(kT[1]);
+        return kT[0] >>> 0
       }
-      fT(vv) {
-        const zv = mz.wt7P(this.__wbg_ptr, vv);
-        if (zv[2]) throw wz(zv[1]);
-        return zv[0] >>> 0
+      rA(TT) {
+        const kT = Dk.CCBg(this.__wbg_ptr, TT);
+        if (kT[2]) throw jk(kT[1]);
+        return kT[0] >>> 0
       }
     }
-    Symbol.dispose && (Sv.prototype[Symbol.dispose] = Sv.prototype.free);
-    const ev = Object.freeze({
+    Symbol.dispose && (MT.prototype[Symbol.dispose] = MT.prototype.free);
+    const KT = Object.freeze({
       Js: 0,
       0: "Js",
       Error: 1,
@@ -212,1021 +212,1021 @@ export const modules = {
       StringType: 16,
       16: "StringType"
     });
-    class gv {
+    class OT {
       __destroy_into_raw() {
-        const vv = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, Iv.unregister(this), vv
+        const TT = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, ET.unregister(this), TT
       }
       free() {
-        const vv = this.__destroy_into_raw();
-        mz.lVRu(vv, 0)
+        const TT = this.__destroy_into_raw();
+        Dk.w7hq(TT, 0)
       }
-      nT(vv, zv) {
-        const Pv = mz.FStZ(this.__wbg_ptr, vv, zv);
-        if (Pv[2]) throw wz(Pv[1]);
-        return Pv[0] >>> 0
+      mA(TT, kT) {
+        const cT = Dk.k6jI(this.__wbg_ptr, TT, kT);
+        if (cT[2]) throw jk(cT[1]);
+        return cT[0] >>> 0
       }
-      OT(vv) {
-        const zv = mz.KAyu(this.__wbg_ptr, vv);
-        if (zv[2]) throw wz(zv[1]);
-        return zv[0] >>> 0
+      bA(TT) {
+        const kT = Dk.y4WS(this.__wbg_ptr, TT);
+        if (kT[2]) throw jk(kT[1]);
+        return kT[0] >>> 0
       }
-      DT() {
-        mz.GuoD(this.__wbg_ptr)
+      zA() {
+        Dk.lxj0(this.__wbg_ptr)
       }
-      static KT() {
-        return mz.PpIA() >>> 0
+      static JA() {
+        return Dk.jYkz() >>> 0
       }
-      VT() {
-        return mz.Aa7s(this.__wbg_ptr) >>> 0
+      oA() {
+        return Dk.O6d5(this.__wbg_ptr) >>> 0
       }
-      UT() {
-        const vv = mz.CvVM(this.__wbg_ptr);
-        return 0 === vv[0] ? void 0 : vv[1]
+      HA() {
+        const TT = Dk.baoB(this.__wbg_ptr);
+        return 0 === TT[0] ? void 0 : TT[1]
       }
-      RT() {
-        return mz.AiWD(this.__wbg_ptr) >>> 0
+      eA() {
+        return Dk.jujn(this.__wbg_ptr) >>> 0
       }
-      xT() {
-        return mz.IlZf(this.__wbg_ptr) >>> 0
+      VA() {
+        return Dk.V38R(this.__wbg_ptr) >>> 0
       }
-      static YT() {
-        return mz.QRPh() >>> 0
+      static wA() {
+        return Dk.q28k() >>> 0
       }
       constructor() {
-        const vv = mz.O9RF();
-        return this.__wbg_ptr = vv, Iv.register(this, this.__wbg_ptr, this), this
+        const TT = Dk.V8BL();
+        return this.__wbg_ptr = TT, ET.register(this, this.__wbg_ptr, this), this
       }
-      tT() {
-        return mz.V0HB(this.__wbg_ptr) >>> 0
+      EA() {
+        return Dk.cUqR(this.__wbg_ptr) >>> 0
       }
-      qT() {
-        return mz.nQKt(this.__wbg_ptr) >>> 0
+      ZA() {
+        return Dk.npaK(this.__wbg_ptr) >>> 0
       }
-      IT() {
-        return mz.RjlA(this.__wbg_ptr) >>> 0
+      uA() {
+        return Dk.hJu2(this.__wbg_ptr) >>> 0
       }
-      FT(vv) {
-        return mz.JsVK(this.__wbg_ptr, vv) >>> 0
+      PA(TT) {
+        return Dk.RM3y(this.__wbg_ptr, TT) >>> 0
       }
-      reserve(vv, zv) {
-        const Pv = mz.kRNY(this.__wbg_ptr, vv, zv);
-        if (Pv[1]) throw wz(Pv[0])
+      reserve(TT, kT) {
+        const cT = Dk.rfR9(this.__wbg_ptr, TT, kT);
+        if (cT[1]) throw jk(cT[0])
       }
-      AT(vv, zv) {
-        const Pv = Nz(vv, mz.U7Ro),
-          hv = jz;
-        mz.cPJk(this.__wbg_ptr, Pv, hv, zv)
+      LA(TT, kT) {
+        const cT = xk(TT, Dk.PFWV),
+          lT = ak;
+        Dk.zYBA(this.__wbg_ptr, cT, lT, kT)
       }
       text() {
-        let vv, zv;
+        let TT, kT;
         try {
-          const Pv = mz.xzJA(this.__wbg_ptr);
-          return vv = Pv[0], zv = Pv[1], Xv(Pv[0], Pv[1])
+          const cT = Dk.S2ca(this.__wbg_ptr);
+          return TT = cT[0], kT = cT[1], qT(cT[0], cT[1])
         } finally {
-          mz.g27U(vv, zv, 1)
+          Dk.a8Pn(TT, kT, 1)
         }
       }
     }
-    Symbol.dispose && (gv.prototype[Symbol.dispose] = gv.prototype.free);
-    class pv {
+    Symbol.dispose && (OT.prototype[Symbol.dispose] = OT.prototype.free);
+    class yT {
       __destroy_into_raw() {
-        const vv = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, Qv.unregister(this), vv
+        const TT = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, ZT.unregister(this), TT
       }
       free() {
-        const vv = this.__destroy_into_raw();
-        mz.EjMa(vv, 0)
+        const TT = this.__destroy_into_raw();
+        Dk.C9Dl(TT, 0)
       }
-      HT(vv, zv) {
-        Bv(zv, Sv);
-        const Pv = mz.JAsv(this.__wbg_ptr, vv, zv.__wbg_ptr);
-        if (Pv[2]) throw wz(Pv[1]);
-        return Pv[0] >>> 0
+      gA(TT, kT) {
+        UT(kT, MT);
+        const cT = Dk.jJ9I(this.__wbg_ptr, TT, kT.__wbg_ptr);
+        if (cT[2]) throw jk(cT[1]);
+        return cT[0] >>> 0
       }
-      yT() {
-        const vv = mz.L0AM(this.__wbg_ptr);
-        if (vv[1]) throw wz(vv[0])
+      YA() {
+        const TT = Dk.FkxI(this.__wbg_ptr);
+        if (TT[1]) throw jk(TT[0])
       }
-      bT(vv, zv, Pv, hv, Sv, ev, gv, pv, Nv, lv, Tv) {
-        Bv(vv, dv);
-        const Wv = mz.U6tl(this.__wbg_ptr, vv.__wbg_ptr, zv, Pv, hv, Sv, ev, gv, pv, Nv, lv, Tv);
-        if (Wv[2]) throw wz(Wv[1]);
-        return Wv[0]
+      iA(TT, kT, cT, lT, MT, KT, OT, yT, xT, IT, AT) {
+        UT(TT, fT);
+        const CT = Dk.lo5I(this.__wbg_ptr, TT.__wbg_ptr, kT, cT, lT, MT, KT, OT, yT, xT, IT, AT);
+        if (CT[2]) throw jk(CT[1]);
+        return CT[0]
       }
-      rT() {
-        const vv = mz.WA2Z(this.__wbg_ptr);
-        var zv = Jv(vv[0], vv[1]).slice();
-        return mz.g27U(vv[0], 8 * vv[1], 8), zv
+      qA() {
+        const TT = Dk.nHBB(this.__wbg_ptr);
+        var kT = YT(TT[0], TT[1]).slice();
+        return Dk.a8Pn(TT[0], 8 * TT[1], 8), kT
       }
-      kT() {
-        return mz.k55i(this.__wbg_ptr) >>> 0
+      sA() {
+        return Dk.GmOm(this.__wbg_ptr) >>> 0
       }
-      XT() {
-        return mz.SCov(this.__wbg_ptr) >>> 0
+      TC() {
+        return Dk.Fjsh(this.__wbg_ptr) >>> 0
       }
-      uT() {
-        return mz.meDO(this.__wbg_ptr) >>> 0
+      kC() {
+        return Dk.Rvxg(this.__wbg_ptr) >>> 0
       }
-      constructor(vv, zv, Pv, hv, Sv, ev, gv, pv) {
-        const dv = mz.NYCn(vv, zv, Pv, hv, Sv, ev, gv, pv);
-        if (dv[2]) throw wz(dv[1]);
-        return this.__wbg_ptr = dv[0], Qv.register(this, this.__wbg_ptr, this), this
+      constructor(TT, kT, cT, lT, MT, KT, OT, yT) {
+        const fT = Dk.zuFy(TT, kT, cT, lT, MT, KT, OT, yT);
+        if (fT[2]) throw jk(fT[1]);
+        return this.__wbg_ptr = fT[0], ZT.register(this, this.__wbg_ptr, this), this
       }
-      PW(vv) {
-        Bv(vv, Sv);
-        const zv = mz.mpG5(this.__wbg_ptr, vv.__wbg_ptr);
-        if (zv[2]) throw wz(zv[1]);
-        return zv[0] >>> 0
+      MC(TT) {
+        UT(TT, MT);
+        const kT = Dk.oIrj(this.__wbg_ptr, TT.__wbg_ptr);
+        if (kT[2]) throw jk(kT[1]);
+        return kT[0] >>> 0
       }
-      hW(vv) {
-        const zv = mz.NV1I(this.__wbg_ptr, vv);
-        if (zv[1]) throw wz(zv[0])
+      KC(TT) {
+        const kT = Dk.UKZm(this.__wbg_ptr, TT);
+        if (kT[1]) throw jk(kT[0])
       }
-      SW() {
-        return mz.jfo6(this.__wbg_ptr) >>> 0
+      OC() {
+        return Dk.BC2H(this.__wbg_ptr) >>> 0
       }
-      resume(vv, zv) {
-        Bv(vv, dv), Bv(zv, Sv);
-        const Pv = mz.iIyF(this.__wbg_ptr, vv.__wbg_ptr, zv.__wbg_ptr);
-        if (Pv[2]) throw wz(Pv[1]);
-        return Pv[0] >>> 0
+      resume(TT, kT) {
+        UT(TT, fT), UT(kT, MT);
+        const cT = Dk.SHUy(this.__wbg_ptr, TT.__wbg_ptr, kT.__wbg_ptr);
+        if (cT[2]) throw jk(cT[1]);
+        return cT[0] >>> 0
       }
-      NW(vv) {
-        const zv = mz.eKbT(this.__wbg_ptr, vv);
-        if (zv[1]) throw wz(zv[0])
+      AC(TT) {
+        const kT = Dk.rtFf(this.__wbg_ptr, TT);
+        if (kT[1]) throw jk(kT[0])
       }
-      WW(vv, zv) {
-        Bv(zv, Sv);
-        const Pv = mz.rh2q(this.__wbg_ptr, vv, zv.__wbg_ptr);
-        if (Pv[1]) throw wz(Pv[0])
+      vC(TT, kT) {
+        UT(kT, MT);
+        const cT = Dk.FzbI(this.__wbg_ptr, TT, kT.__wbg_ptr);
+        if (cT[1]) throw jk(cT[0])
       }
-      sW(vv) {
-        const zv = Tz(vv, mz.U7Ro),
-          Pv = jz,
-          hv = mz.BXdI(this.__wbg_ptr, zv, Pv);
-        if (hv[1]) throw wz(hv[0])
+      NC(TT) {
+        const kT = Ak(TT, Dk.PFWV),
+          cT = ak,
+          lT = Dk.F3gs(this.__wbg_ptr, kT, cT);
+        if (lT[1]) throw jk(lT[0])
       }
-      JT(vv, zv, Pv, hv, Sv, ev) {
-        const gv = mz.fqKm(this.__wbg_ptr, vv, zv, Pv, hv, Sv, ev);
-        if (gv[1]) throw wz(gv[0])
+      WA(TT, kT, cT, lT, MT, KT) {
+        const OT = Dk.xFkY(this.__wbg_ptr, TT, kT, cT, lT, MT, KT);
+        if (OT[1]) throw jk(OT[0])
       }
-      ET(vv, zv, Pv, hv) {
-        const Sv = Nz(vv, mz.U7Ro),
-          ev = jz,
-          gv = Tz(zv, mz.U7Ro),
-          pv = jz,
-          dv = Tz(Pv, mz.U7Ro),
-          Nv = jz,
-          lv = Tz(hv, mz.U7Ro),
-          Tv = jz,
-          Wv = mz.depY(this.__wbg_ptr, Sv, ev, gv, pv, dv, Nv, lv, Tv);
-        if (Wv[1]) throw wz(Wv[0])
+      nA(TT, kT, cT, lT) {
+        const MT = xk(TT, Dk.PFWV),
+          KT = ak,
+          OT = Ak(kT, Dk.PFWV),
+          yT = ak,
+          fT = Ak(cT, Dk.PFWV),
+          xT = ak,
+          IT = Ak(lT, Dk.PFWV),
+          AT = ak,
+          CT = Dk.PAiJ(this.__wbg_ptr, MT, KT, OT, yT, fT, xT, IT, AT);
+        if (CT[1]) throw jk(CT[0])
       }
-      cW(vv, zv) {
-        Bv(zv, Sv);
-        const Pv = mz.FufL(this.__wbg_ptr, vv, zv.__wbg_ptr);
-        if (Pv[1]) throw wz(Pv[0])
+      SC(TT, kT) {
+        UT(kT, MT);
+        const cT = Dk.FXVh(this.__wbg_ptr, TT, kT.__wbg_ptr);
+        if (cT[1]) throw jk(cT[0])
       }
-      zW(vv, zv, Pv) {
-        const hv = mz.oivS(this.__wbg_ptr, vv, zv, Pv);
-        if (hv[1]) throw wz(hv[0])
+      lC(TT, kT, cT) {
+        const lT = Dk.FGgH(this.__wbg_ptr, TT, kT, cT);
+        if (lT[1]) throw jk(lT[0])
       }
-      mW(vv, zv, Pv, hv, Sv, ev, gv, pv, Nv, lv) {
-        Bv(vv, dv);
-        return mz.oeuV(this.__wbg_ptr, vv.__wbg_ptr, zv, Pv, hv, Sv, ev, gv, pv, Nv, lv)
+      aC(TT, kT, cT, lT, MT, KT, OT, yT, xT, IT) {
+        UT(TT, fT);
+        return Dk.NhmY(this.__wbg_ptr, TT.__wbg_ptr, kT, cT, lT, MT, KT, OT, yT, xT, IT)
       }
     }
-    Symbol.dispose && (pv.prototype[Symbol.dispose] = pv.prototype.free);
-    class dv {
-      static __wrap(vv) {
-        const zv = Object.create(dv.prototype);
-        return zv.__wbg_ptr = vv, Zv.register(zv, zv.__wbg_ptr, zv), zv
+    Symbol.dispose && (yT.prototype[Symbol.dispose] = yT.prototype.free);
+    class fT {
+      static __wrap(TT) {
+        const kT = Object.create(fT.prototype);
+        return kT.__wbg_ptr = TT, uT.register(kT, kT.__wbg_ptr, kT), kT
       }
       __destroy_into_raw() {
-        const vv = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, Zv.unregister(this), vv
+        const TT = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, uT.unregister(this), TT
       }
       free() {
-        const vv = this.__destroy_into_raw();
-        mz.nFrC(vv, 0)
+        const TT = this.__destroy_into_raw();
+        Dk.qwqn(TT, 0)
       }
-      FW(vv) {
-        const zv = mz.BjeJ(this.__wbg_ptr, vv);
-        if (zv[2]) throw wz(zv[1]);
-        return zv[0] >>> 0
+      PC(TT) {
+        const kT = Dk.vzYw(this.__wbg_ptr, TT);
+        if (kT[2]) throw jk(kT[1]);
+        return kT[0] >>> 0
       }
-      YW(vv, zv, Pv) {
-        return mz.kr8A(this.__wbg_ptr, vv, zv, Pv)
+      wC(TT, kT, cT) {
+        return Dk.yv2E(this.__wbg_ptr, TT, kT, cT)
       }
-      nW(vv, zv, Pv) {
-        return mz.iiUY(this.__wbg_ptr, vv, zv, Pv) >>> 0
+      mC(TT, kT, cT) {
+        return Dk.kOcb(this.__wbg_ptr, TT, kT, cT) >>> 0
       }
-      OW(vv, zv, Pv, hv) {
-        return 0 !== mz.i5TB(this.__wbg_ptr, vv, zv, Pv, hv)
+      bC(TT, kT, cT, lT) {
+        return 0 !== Dk.pTR8(this.__wbg_ptr, TT, kT, cT, lT)
       }
-      DW() {
-        mz.Xz2D(this.__wbg_ptr)
+      zC() {
+        Dk.VA1u(this.__wbg_ptr)
       }
-      VW(vv) {
-        const zv = mz.Lwx4(this.__wbg_ptr, vv);
-        if (zv[3]) throw wz(zv[2]);
-        var Pv = ov(zv[0], zv[1]).slice();
-        return mz.g27U(zv[0], 1 * zv[1], 1), Pv
+      oC(TT) {
+        const kT = Dk.MOVl(this.__wbg_ptr, TT);
+        if (kT[3]) throw jk(kT[2]);
+        var cT = WT(kT[0], kT[1]).slice();
+        return Dk.a8Pn(kT[0], 1 * kT[1], 1), cT
       }
-      evict(vv, zv) {
-        return mz.lAif(this.__wbg_ptr, vv, zv) >>> 0
+      evict(TT, kT) {
+        return Dk.jFWK(this.__wbg_ptr, TT, kT) >>> 0
       }
-      UW() {
-        mz.LCHo(this.__wbg_ptr)
+      HC() {
+        Dk.AM90(this.__wbg_ptr)
       }
-      RW(vv, zv, Pv) {
-        mz.PKGB(this.__wbg_ptr, vv, zv, Pv)
+      eC(TT, kT, cT) {
+        Dk.sprD(this.__wbg_ptr, TT, kT, cT)
       }
-      xW(vv) {
-        const zv = mz.BPMw(this.__wbg_ptr, vv);
-        if (zv[1]) throw wz(zv[0])
+      VC(TT) {
+        const kT = Dk.phvC(this.__wbg_ptr, TT);
+        if (kT[1]) throw jk(kT[0])
       }
-      tW() {
-        return mz.TtNe(this.__wbg_ptr) >>> 0
+      EC() {
+        return Dk.O8WZ(this.__wbg_ptr) >>> 0
       }
-      qW() {
-        return mz.LGuR(this.__wbg_ptr) >>> 0
+      ZC() {
+        return Dk.Y6ug(this.__wbg_ptr) >>> 0
       }
-      IW(vv, zv, Pv) {
-        mz.ZMDP(this.__wbg_ptr, vv, zv, Pv)
+      uC(TT, kT, cT) {
+        Dk.F33I(this.__wbg_ptr, TT, kT, cT)
       }
-      QW(vv, zv, Pv) {
-        mz.Gbbo(this.__wbg_ptr, vv, zv, Pv)
+      XC(TT, kT, cT) {
+        Dk.TJ1O(this.__wbg_ptr, TT, kT, cT)
       }
-      ZW() {
-        return mz.ksBP(this.__wbg_ptr) >>> 0
+      dC() {
+        return Dk.DZH6(this.__wbg_ptr) >>> 0
       }
-      AW() {
-        return mz.K9VH(this.__wbg_ptr) >>> 0
+      LC() {
+        return Dk.J0zc(this.__wbg_ptr) >>> 0
       }
       constructor() {
-        const vv = mz.RJHv();
-        return this.__wbg_ptr = vv, Zv.register(this, this.__wbg_ptr, this), this
+        const TT = Dk.Yrid();
+        return this.__wbg_ptr = TT, uT.register(this, this.__wbg_ptr, this), this
       }
-      static LW() {
-        const vv = mz.KcBv();
-        return dv.__wrap(vv)
+      static RC() {
+        const TT = Dk.UcTO();
+        return fT.__wrap(TT)
       }
-      HW() {
-        return mz.r1K2(this.__wbg_ptr) >>> 0
+      gC() {
+        return Dk.aW4Z(this.__wbg_ptr) >>> 0
       }
-      MW() {
-        return mz.AGy8(this.__wbg_ptr) >>> 0
+      UC() {
+        return Dk.ipXp(this.__wbg_ptr) >>> 0
       }
-      yW(vv, zv, Pv, hv) {
-        const Sv = mz.WCdf(this.__wbg_ptr, vv, zv, Pv, hv);
-        if (Sv[1]) throw wz(Sv[0])
+      YC(TT, kT, cT, lT) {
+        const MT = Dk.esKf(this.__wbg_ptr, TT, kT, cT, lT);
+        if (MT[1]) throw jk(MT[0])
       }
-      BW() {
-        return mz.hoYa(this.__wbg_ptr) >>> 0
+      BC() {
+        return Dk.jD9n(this.__wbg_ptr) >>> 0
       }
-      JW() {
-        return mz.yqUY(this.__wbg_ptr) >>> 0
+      WC() {
+        return Dk.qt4C(this.__wbg_ptr) >>> 0
       }
-      EW(vv, zv, Pv, hv) {
-        mz.a8Sa(this.__wbg_ptr, vv, zv, Pv, hv)
+      nC(TT, kT, cT, lT) {
+        Dk.NIah(this.__wbg_ptr, TT, kT, cT, lT)
       }
-      oW(vv) {
-        mz.S4CJ(this.__wbg_ptr, vv)
+      pC(TT) {
+        Dk.KIC8(this.__wbg_ptr, TT)
       }
-      rW(vv, zv, Pv, hv, Sv) {
-        const ev = lz(zv, mz.U7Ro),
-          gv = jz,
-          pv = Nz(Pv, mz.U7Ro),
-          dv = jz,
-          Nv = Tz(hv, mz.U7Ro),
-          lv = jz,
-          Tv = mz.HQpi(this.__wbg_ptr, vv, ev, gv, pv, dv, Nv, lv, Sv);
-        if (Tv[1]) throw wz(Tv[0])
+      qC(TT, kT, cT, lT, MT) {
+        const KT = Ik(kT, Dk.PFWV),
+          OT = ak,
+          yT = xk(cT, Dk.PFWV),
+          fT = ak,
+          xT = Ak(lT, Dk.PFWV),
+          IT = ak,
+          AT = Dk.WsqD(this.__wbg_ptr, TT, KT, OT, yT, fT, xT, IT, MT);
+        if (AT[1]) throw jk(AT[0])
       }
-      bW(vv, zv, Pv, hv) {
-        const Sv = lz(vv, mz.U7Ro),
-          ev = jz,
-          gv = Nz(zv, mz.U7Ro),
-          pv = jz,
-          dv = Tz(Pv, mz.U7Ro),
-          Nv = jz,
-          lv = lz(hv, mz.U7Ro),
-          Tv = jz,
-          Wv = mz.YhEk(this.__wbg_ptr, Sv, ev, gv, pv, dv, Nv, lv, Tv);
-        if (Wv[1]) throw wz(Wv[0])
+      iC(TT, kT, cT, lT) {
+        const MT = Ik(TT, Dk.PFWV),
+          KT = ak,
+          OT = xk(kT, Dk.PFWV),
+          yT = ak,
+          fT = Ak(cT, Dk.PFWV),
+          xT = ak,
+          IT = Ik(lT, Dk.PFWV),
+          AT = ak,
+          CT = Dk.F3uW(this.__wbg_ptr, MT, KT, OT, yT, fT, xT, IT, AT);
+        if (CT[1]) throw jk(CT[0])
       }
-      hw(vv) {
-        const zv = lz(vv, mz.U7Ro),
-          Pv = jz,
-          hv = mz.ZR1Y(this.__wbg_ptr, zv, Pv);
-        if (hv[1]) throw wz(hv[0])
+      Kj(TT) {
+        const kT = Ik(TT, Dk.PFWV),
+          cT = ak,
+          lT = Dk.ubIQ(this.__wbg_ptr, kT, cT);
+        if (lT[1]) throw jk(lT[0])
       }
-      Sw() {
-        return mz.ar8i(this.__wbg_ptr) >>> 0
+      Oj() {
+        return Dk.ArAk(this.__wbg_ptr) >>> 0
       }
-      ew(vv) {
-        const zv = mz.ktR6(this.__wbg_ptr, vv);
-        if (zv[2]) throw wz(zv[1]);
-        return zv[0] >>> 0
+      yj(TT) {
+        const kT = Dk.Qill(this.__wbg_ptr, TT);
+        if (kT[2]) throw jk(kT[1]);
+        return kT[0] >>> 0
       }
       steer() {
-        return mz.kuoo(this.__wbg_ptr) >>> 0
+        return Dk.SoFL(this.__wbg_ptr) >>> 0
       }
-      gw() {
-        const vv = mz.eaTz(this.__wbg_ptr);
-        var zv = Jv(vv[0], vv[1]).slice();
-        return mz.g27U(vv[0], 8 * vv[1], 8), zv
+      fj() {
+        const TT = Dk.rDfG(this.__wbg_ptr);
+        var kT = YT(TT[0], TT[1]).slice();
+        return Dk.a8Pn(TT[0], 8 * TT[1], 8), kT
       }
-      pw() {
-        return mz.tIFU(this.__wbg_ptr) >>> 0
+      xj() {
+        return Dk.EB5n(this.__wbg_ptr) >>> 0
       }
-      gW() {
-        const vv = mz.LbZ0(this.__wbg_ptr);
-        var zv, Pv, hv = (zv = vv[0], Pv = vv[1], zv >>>= 0, (null !== kv && 0 !== kv.byteLength || (kv = new Int32Array(mz.memory.buffer)), kv).subarray(zv / 4, zv / 4 + Pv)).slice();
-        return mz.g27U(vv[0], 4 * vv[1], 4), hv
+      fC() {
+        const TT = Dk.u4w2(this.__wbg_ptr);
+        var kT, cT, lT = (kT = TT[0], cT = TT[1], kT >>>= 0, (null !== iT && 0 !== iT.byteLength || (iT = new Int32Array(Dk.memory.buffer)), iT).subarray(kT / 4, kT / 4 + cT)).slice();
+        return Dk.a8Pn(TT[0], 4 * TT[1], 4), lT
       }
     }
-    Symbol.dispose && (dv.prototype[Symbol.dispose] = dv.prototype.free);
-    class Nv {
+    Symbol.dispose && (fT.prototype[Symbol.dispose] = fT.prototype.free);
+    class xT {
       __destroy_into_raw() {
-        const vv = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, Av.unregister(this), vv
+        const TT = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, XT.unregister(this), TT
       }
       free() {
-        const vv = this.__destroy_into_raw();
-        mz.WCiQ(vv, 0)
+        const TT = this.__destroy_into_raw();
+        Dk.djVZ(TT, 0)
       }
-      dw(vv) {
-        const zv = Nz(vv, mz.U7Ro),
-          Pv = jz,
-          hv = mz.PqbI(this.__wbg_ptr, zv, Pv);
-        if (hv[1]) throw wz(hv[0])
+      Ij(TT) {
+        const kT = xk(TT, Dk.PFWV),
+          cT = ak,
+          lT = Dk.cKIX(this.__wbg_ptr, kT, cT);
+        if (lT[1]) throw jk(lT[0])
       }
-      Nw() {
-        return mz.qwkf(this.__wbg_ptr) >>> 0
+      Aj() {
+        return Dk.x96t(this.__wbg_ptr) >>> 0
       }
-      lw() {
-        return mz.YkPn(this.__wbg_ptr) >>> 0
+      Cj() {
+        return Dk.xUXZ(this.__wbg_ptr) >>> 0
       }
       constructor() {
-        const vv = mz.ceD1();
-        return this.__wbg_ptr = vv, Av.register(this, this.__wbg_ptr, this), this
+        const TT = Dk.gM4W();
+        return this.__wbg_ptr = TT, XT.register(this, this.__wbg_ptr, this), this
       }
-      run(vv, zv) {
-        Bv(vv, dv);
-        const Pv = mz.STW7(this.__wbg_ptr, vv.__wbg_ptr, zv);
-        if (Pv[2]) throw wz(Pv[1]);
-        return Pv[0] >>> 0
+      run(TT, kT) {
+        UT(TT, fT);
+        const cT = Dk.dBhk(this.__wbg_ptr, TT.__wbg_ptr, kT);
+        if (cT[2]) throw jk(cT[1]);
+        return cT[0] >>> 0
       }
-      Tw(vv) {
-        const zv = Nz(vv, mz.U7Ro),
-          Pv = jz;
-        mz.YJrX(this.__wbg_ptr, zv, Pv)
+      jj(TT) {
+        const kT = xk(TT, Dk.PFWV),
+          cT = ak;
+        Dk.s3uW(this.__wbg_ptr, kT, cT)
       }
-      Ww(vv) {
-        const zv = Nz(vv, mz.U7Ro),
-          Pv = jz;
-        mz.I7ZE(this.__wbg_ptr, zv, Pv)
+      vj(TT) {
+        const kT = xk(TT, Dk.PFWV),
+          cT = ak;
+        Dk.spfd(this.__wbg_ptr, kT, cT)
       }
     }
-    Symbol.dispose && (Nv.prototype[Symbol.dispose] = Nv.prototype.free);
-    class lv {
+    Symbol.dispose && (xT.prototype[Symbol.dispose] = xT.prototype.free);
+    class IT {
       __destroy_into_raw() {
-        const vv = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, Lv.unregister(this), vv
+        const TT = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, dT.unregister(this), TT
       }
       free() {
-        const vv = this.__destroy_into_raw();
-        mz.drpF(vv, 0)
+        const TT = this.__destroy_into_raw();
+        Dk.FTdG(TT, 0)
       }
-      aw(vv, zv) {
-        const Pv = lz(vv, mz.U7Ro),
-          hv = jz;
-        return mz.JloA(this.__wbg_ptr, Pv, hv, zv) >>> 0
+      hj(TT, kT) {
+        const cT = Ik(TT, Dk.PFWV),
+          lT = ak;
+        return Dk.jPfg(this.__wbg_ptr, cT, lT, kT) >>> 0
       }
-      sw(vv, zv, Pv) {
-        Bv(vv, dv);
-        const hv = lz(Pv, mz.U7Ro),
-          Sv = jz,
-          ev = mz.Qv4O(this.__wbg_ptr, vv.__wbg_ptr, zv, hv, Sv);
-        if (ev[2]) throw wz(ev[1]);
-        return ev[0] >>> 0
+      Nj(TT, kT, cT) {
+        UT(TT, fT);
+        const lT = Ik(cT, Dk.PFWV),
+          MT = ak,
+          KT = Dk.n5y9(this.__wbg_ptr, TT.__wbg_ptr, kT, lT, MT);
+        if (KT[2]) throw jk(KT[1]);
+        return KT[0] >>> 0
       }
-      ww(vv) {
-        return mz.XGWq(this.__wbg_ptr, vv) >>> 0
+      tj(TT) {
+        return Dk.INxY(this.__wbg_ptr, TT) >>> 0
       }
       constructor() {
-        const vv = mz.YkJc();
-        return this.__wbg_ptr = vv, Lv.register(this, this.__wbg_ptr, this), this
+        const TT = Dk.ZcLl();
+        return this.__wbg_ptr = TT, dT.register(this, this.__wbg_ptr, this), this
       }
-      scan(vv, zv) {
-        Bv(vv, dv);
-        const Pv = mz.SYhx(this.__wbg_ptr, vv.__wbg_ptr, zv);
-        if (Pv[2]) throw wz(Pv[1]);
-        return Pv[0] >>> 0
+      scan(TT, kT) {
+        UT(TT, fT);
+        const cT = Dk.AZ3q(this.__wbg_ptr, TT.__wbg_ptr, kT);
+        if (cT[2]) throw jk(cT[1]);
+        return cT[0] >>> 0
       }
-      Gw(vv) {
-        const zv = lz(vv, mz.U7Ro),
-          Pv = jz;
-        mz.Qll2(this.__wbg_ptr, zv, Pv)
+      Dj(TT) {
+        const kT = Ik(TT, Dk.PFWV),
+          cT = ak;
+        Dk.NQCI(this.__wbg_ptr, kT, cT)
       }
-      iw() {
-        return mz.Vhvl(this.__wbg_ptr) >>> 0
+      Sj() {
+        return Dk.aYqP(this.__wbg_ptr) >>> 0
       }
-      Cw() {
-        return mz.s8pe(this.__wbg_ptr) >>> 0
+      Qj() {
+        return Dk.BTDr(this.__wbg_ptr) >>> 0
       }
     }
-    Symbol.dispose && (lv.prototype[Symbol.dispose] = lv.prototype.free);
-    class Tv {
+    Symbol.dispose && (IT.prototype[Symbol.dispose] = IT.prototype.free);
+    class AT {
       __destroy_into_raw() {
-        const vv = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, Hv.unregister(this), vv
+        const TT = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, LT.unregister(this), TT
       }
       free() {
-        const vv = this.__destroy_into_raw();
-        mz.MTmJ(vv, 0)
+        const TT = this.__destroy_into_raw();
+        Dk.sFJF(TT, 0)
       }
-      jw(vv) {
-        const zv = mz.WC8B(this.__wbg_ptr, vv);
-        if (zv[2]) throw wz(zv[1]);
-        return zv[0] >>> 0
+      Fj(TT) {
+        const kT = Dk.YfJx(this.__wbg_ptr, TT);
+        if (kT[2]) throw jk(kT[1]);
+        return kT[0] >>> 0
       }
-      compute(vv, zv, Pv, hv) {
-        var Sv = pz(hv) ? 0 : Wz(hv, mz.U7Ro, mz.Y6dG),
-          ev = jz;
-        const gv = mz.OBOW(this.__wbg_ptr, vv, pz(zv) ? Number.MAX_SAFE_INTEGER : zv | 0, Pv, Sv, ev);
-        if (gv[2]) throw wz(gv[1]);
-        return gv[0] >>> 0
+      compute(TT, kT, cT, lT) {
+        var MT = yk(lT) ? 0 : Ck(lT, Dk.PFWV, Dk.pmx5),
+          KT = ak;
+        const OT = Dk.JvXs(this.__wbg_ptr, TT, yk(kT) ? Number.MAX_SAFE_INTEGER : kT | 0, cT, MT, KT);
+        if (OT[2]) throw jk(OT[1]);
+        return OT[0] >>> 0
       }
-      Fw(vv) {
-        const zv = Wz(vv, mz.U7Ro, mz.Y6dG),
-          Pv = jz;
-        mz.x83r(this.__wbg_ptr, zv, Pv)
+      Pj(TT) {
+        const kT = Ck(TT, Dk.PFWV, Dk.pmx5),
+          cT = ak;
+        Dk.aGtj(this.__wbg_ptr, kT, cT)
       }
-      nw() {
-        return mz.cPQF(this.__wbg_ptr)
+      mj() {
+        return Dk.FCwK(this.__wbg_ptr)
       }
-      Ow(vv) {
-        return mz.Jzkh(this.__wbg_ptr, vv) >>> 0
+      bj(TT) {
+        return Dk.HAqp(this.__wbg_ptr, TT) >>> 0
       }
-      Dw() {
-        return mz.gFNu(this.__wbg_ptr) >>> 0
+      zj() {
+        return Dk.Z7KI(this.__wbg_ptr) >>> 0
       }
-      Kw() {
-        return mz.XzPM(this.__wbg_ptr) >>> 0
+      Jj() {
+        return Dk.jXxP(this.__wbg_ptr) >>> 0
       }
-      Vw(vv, zv) {
-        const Pv = mz.d6KW(this.__wbg_ptr, vv, zv);
-        if (Pv[1]) throw wz(Pv[0])
+      oj(TT, kT) {
+        const cT = Dk.OkKk(this.__wbg_ptr, TT, kT);
+        if (cT[1]) throw jk(cT[0])
       }
-      Uw() {
-        return mz.Vyus(this.__wbg_ptr) >>> 0
+      Hj() {
+        return Dk.ZUEp(this.__wbg_ptr) >>> 0
       }
-      Rw() {
-        return mz.g6SG(this.__wbg_ptr) >>> 0
+      ej() {
+        return Dk.NZw7(this.__wbg_ptr) >>> 0
       }
-      xw() {
-        return mz.knQI(this.__wbg_ptr) >>> 0
+      Gj() {
+        return Dk.Abs1(this.__wbg_ptr) >>> 0
       }
-      fw(vv, zv, Pv) {
-        const hv = Nz(vv, mz.U7Ro),
-          Sv = jz,
-          ev = Nz(zv, mz.U7Ro),
-          gv = jz,
-          pv = mz.VSG1(this.__wbg_ptr, hv, Sv, ev, gv, Pv);
-        if (pv[1]) throw wz(pv[0])
+      rj(TT, kT, cT) {
+        const lT = xk(TT, Dk.PFWV),
+          MT = ak,
+          KT = xk(kT, Dk.PFWV),
+          OT = ak,
+          yT = Dk.UjPL(this.__wbg_ptr, lT, MT, KT, OT, cT);
+        if (yT[1]) throw jk(yT[0])
       }
-      qw() {
-        return mz.jPws(this.__wbg_ptr) >>> 0
+      Ej() {
+        return Dk.A4KU(this.__wbg_ptr) >>> 0
       }
-      mesh(vv, zv, Pv, hv, Sv) {
-        const ev = mz.cupU(this.__wbg_ptr, vv, zv, Pv, hv, Sv);
-        if (ev[2]) throw wz(ev[1]);
-        return ev[0] >>> 0
+      mesh(TT, kT, cT, lT, MT) {
+        const KT = Dk.ADbJ(this.__wbg_ptr, TT, kT, cT, lT, MT);
+        if (KT[2]) throw jk(KT[1]);
+        return KT[0] >>> 0
       }
-      constructor(vv, zv, Pv, hv, Sv, ev, gv, pv, dv, Nv, lv, Tv, Wv, wv, av, sv, Cv, iv, cv, Gv) {
-        const mv = dz(vv, mz.U7Ro),
-          jv = jz,
-          fv = Tz(zv, mz.U7Ro),
-          Fv = jz,
-          Yv = Nz(Pv, mz.U7Ro),
-          nv = jz,
-          Ov = lz(hv, mz.U7Ro),
-          Dv = jz,
-          Kv = lz(Sv, mz.U7Ro),
-          Vv = jz,
-          Uv = Nz(ev, mz.U7Ro),
-          Rv = jz,
-          xv = Nz(gv, mz.U7Ro),
-          tv = jz,
-          qv = Tz(pv, mz.U7Ro),
-          Iv = jz,
-          Qv = Tz(dv, mz.U7Ro),
-          Zv = jz,
-          Av = lz(Nv, mz.U7Ro),
-          Lv = jz;
-        var Mv = pz(lv) ? 0 : dz(lv, mz.U7Ro),
-          yv = jz;
-        const Bv = Nz(Tv, mz.U7Ro),
-          Jv = jz,
-          Ev = lz(Wv, mz.U7Ro),
-          ov = jz;
-        var bv = pz(wv) ? 0 : lz(wv, mz.U7Ro),
-          rv = jz;
-        const kv = Tz(av, mz.U7Ro),
-          Xv = jz,
-          uv = mz.ai16(mv, jv, fv, Fv, Yv, nv, Ov, Dv, Kv, Vv, Uv, Rv, xv, tv, qv, Iv, Qv, Zv, Av, Lv, Mv, yv, Bv, Jv, Ev, ov, bv, rv, kv, Xv, sv, Cv, iv, cv, Gv);
-        if (uv[2]) throw wz(uv[1]);
-        return this.__wbg_ptr = uv[0], Hv.register(this, this.__wbg_ptr, this), this
+      constructor(TT, kT, cT, lT, MT, KT, OT, yT, fT, xT, IT, AT, CT, jT, vT, tT, hT, NT, QT, ST) {
+        const DT = fk(TT, Dk.PFWV),
+          aT = ak,
+          FT = Ak(kT, Dk.PFWV),
+          rT = ak,
+          PT = xk(cT, Dk.PFWV),
+          wT = ak,
+          mT = Ik(lT, Dk.PFWV),
+          bT = ak,
+          zT = Ik(MT, Dk.PFWV),
+          JT = ak,
+          oT = xk(KT, Dk.PFWV),
+          HT = ak,
+          eT = xk(OT, Dk.PFWV),
+          GT = ak,
+          VT = Ak(yT, Dk.PFWV),
+          ET = ak,
+          ZT = Ak(fT, Dk.PFWV),
+          uT = ak,
+          XT = Ik(xT, Dk.PFWV),
+          dT = ak;
+        var RT = yk(IT) ? 0 : fk(IT, Dk.PFWV),
+          gT = ak;
+        const UT = xk(AT, Dk.PFWV),
+          YT = ak,
+          BT = Ik(CT, Dk.PFWV),
+          WT = ak;
+        var nT = yk(jT) ? 0 : Ik(jT, Dk.PFWV),
+          pT = ak;
+        const iT = Ak(vT, Dk.PFWV),
+          qT = ak,
+          sT = Dk.nFoC(DT, aT, FT, rT, PT, wT, mT, bT, zT, JT, oT, HT, eT, GT, VT, ET, ZT, uT, XT, dT, RT, gT, UT, YT, BT, WT, nT, pT, iT, qT, tT, hT, NT, QT, ST);
+        if (sT[2]) throw jk(sT[1]);
+        return this.__wbg_ptr = sT[0], LT.register(this, this.__wbg_ptr, this), this
       }
-      tw(vv, zv) {
-        const Pv = Nz(vv, mz.U7Ro),
-          hv = jz,
-          Sv = mz.L4cF(this.__wbg_ptr, Pv, hv, zv);
-        if (Sv[3]) throw wz(Sv[2]);
-        var ev = ov(Sv[0], Sv[1]).slice();
-        return mz.g27U(Sv[0], 1 * Sv[1], 1), ev
+      Vj(TT, kT) {
+        const cT = xk(TT, Dk.PFWV),
+          lT = ak,
+          MT = Dk.bv8s(this.__wbg_ptr, cT, lT, kT);
+        if (MT[3]) throw jk(MT[2]);
+        var KT = WT(MT[0], MT[1]).slice();
+        return Dk.a8Pn(MT[0], 1 * MT[1], 1), KT
       }
-      Iw(vv) {
-        mz.HAuW(this.__wbg_ptr, pz(vv) ? 16777215 : vv)
+      Zj(TT) {
+        Dk.kZ8W(this.__wbg_ptr, yk(TT) ? 16777215 : TT)
       }
-      Qw(vv) {
-        return mz.V4W5(this.__wbg_ptr, vv) >>> 0
+      uj(TT) {
+        return Dk.js8M(this.__wbg_ptr, TT) >>> 0
       }
-      Aw() {
-        return mz.hQdK(this.__wbg_ptr) >>> 0
+      Lj() {
+        return Dk.A6l6(this.__wbg_ptr) >>> 0
       }
-      Zw() {
-        const vv = mz.ISNh(this.__wbg_ptr);
-        if (vv[2]) throw wz(vv[1]);
-        return 0 !== vv[0]
+      Xj() {
+        const TT = Dk.dfX5(this.__wbg_ptr);
+        if (TT[2]) throw jk(TT[1]);
+        return 0 !== TT[0]
       }
-      Lw() {
-        return mz.XfdE(this.__wbg_ptr) >>> 0
+      Rj() {
+        return Dk.U159(this.__wbg_ptr) >>> 0
       }
-      Hw() {
-        return mz.C6vu(this.__wbg_ptr) >>> 0
+      gj() {
+        return Dk.sRQg(this.__wbg_ptr) >>> 0
       }
     }
-    Symbol.dispose && (Tv.prototype[Symbol.dispose] = Tv.prototype.free);
-    class Wv {
+    Symbol.dispose && (AT.prototype[Symbol.dispose] = AT.prototype.free);
+    class CT {
       __destroy_into_raw() {
-        const vv = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, Mv.unregister(this), vv
+        const TT = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, RT.unregister(this), TT
       }
       free() {
-        const vv = this.__destroy_into_raw();
-        mz.W4Lx(vv, 0)
+        const TT = this.__destroy_into_raw();
+        Dk.rtKo(TT, 0)
       }
-      compute(vv, zv, Pv, hv) {
-        var Sv = pz(hv) ? 0 : Wz(hv, mz.U7Ro, mz.Y6dG),
-          ev = jz;
-        const gv = mz.U7ik(this.__wbg_ptr, vv, pz(zv) ? Number.MAX_SAFE_INTEGER : zv | 0, Pv, Sv, ev);
-        if (gv[2]) throw wz(gv[1]);
-        return gv[0] >>> 0
+      compute(TT, kT, cT, lT) {
+        var MT = yk(lT) ? 0 : Ck(lT, Dk.PFWV, Dk.pmx5),
+          KT = ak;
+        const OT = Dk.Loup(this.__wbg_ptr, TT, yk(kT) ? Number.MAX_SAFE_INTEGER : kT | 0, cT, MT, KT);
+        if (OT[2]) throw jk(OT[1]);
+        return OT[0] >>> 0
       }
-      Fw(vv) {
-        const zv = Wz(vv, mz.U7Ro, mz.Y6dG),
-          Pv = jz;
-        mz.VEKQ(this.__wbg_ptr, zv, Pv)
+      Pj(TT) {
+        const kT = Ck(TT, Dk.PFWV, Dk.pmx5),
+          cT = ak;
+        Dk.L0a9(this.__wbg_ptr, kT, cT)
       }
-      Rw() {
-        return mz.GWqm(this.__wbg_ptr) >>> 0
+      ej() {
+        return Dk.LKUI(this.__wbg_ptr) >>> 0
       }
-      xw() {
-        return mz.Me7M(this.__wbg_ptr) >>> 0
+      Gj() {
+        return Dk.Qu74(this.__wbg_ptr) >>> 0
       }
-      Mw(vv) {
-        const zv = mz.j0Sl(this.__wbg_ptr, vv);
-        if (zv[2]) throw wz(zv[1]);
-        return zv[0] >>> 0
+      Uj(TT) {
+        const kT = Dk.UCFk(this.__wbg_ptr, TT);
+        if (kT[2]) throw jk(kT[1]);
+        return kT[0] >>> 0
       }
-      constructor(vv, zv, Pv, hv, Sv, ev) {
-        const gv = dz(vv, mz.U7Ro),
-          pv = jz,
-          dv = Tz(zv, mz.U7Ro),
-          Nv = jz,
-          lv = Nz(Pv, mz.U7Ro),
-          Tv = jz,
-          Wv = lz(hv, mz.U7Ro),
-          wv = jz,
-          av = mz.iYct(gv, pv, dv, Nv, lv, Tv, Wv, wv, Sv, ev);
-        if (av[2]) throw wz(av[1]);
-        return this.__wbg_ptr = av[0], Mv.register(this, this.__wbg_ptr, this), this
+      constructor(TT, kT, cT, lT, MT, KT) {
+        const OT = fk(TT, Dk.PFWV),
+          yT = ak,
+          fT = Ak(kT, Dk.PFWV),
+          xT = ak,
+          IT = xk(cT, Dk.PFWV),
+          AT = ak,
+          CT = Ik(lT, Dk.PFWV),
+          jT = ak,
+          vT = Dk.ovMI(OT, yT, fT, xT, IT, AT, CT, jT, MT, KT);
+        if (vT[2]) throw jk(vT[1]);
+        return this.__wbg_ptr = vT[0], RT.register(this, this.__wbg_ptr, this), this
       }
-      Aw() {
-        return mz.EDbX(this.__wbg_ptr) >>> 0
+      Lj() {
+        return Dk.ymM0(this.__wbg_ptr) >>> 0
       }
-      Zw() {
-        const vv = mz.EEXy(this.__wbg_ptr);
-        if (vv[2]) throw wz(vv[1]);
-        return 0 !== vv[0]
+      Xj() {
+        const TT = Dk.GFp3(this.__wbg_ptr);
+        if (TT[2]) throw jk(TT[1]);
+        return 0 !== TT[0]
       }
-      Lw() {
-        return mz.THmQ(this.__wbg_ptr) >>> 0
+      Rj() {
+        return Dk.F0HQ(this.__wbg_ptr) >>> 0
       }
     }
 
-    function wv() {
-      const vv = mz.QIuP();
-      var zv = Ev(vv[0], vv[1]).slice();
-      return mz.g27U(vv[0], 4 * vv[1], 4), zv
+    function jT() {
+      const TT = Dk.ljQL();
+      var kT = BT(TT[0], TT[1]).slice();
+      return Dk.a8Pn(TT[0], 4 * TT[1], 4), kT
     }
 
-    function av(vv, zv) {
-      let Pv, hv;
+    function vT(TT, kT) {
+      let cT, lT;
       try {
-        const Sv = dz(vv, mz.U7Ro),
-          ev = jz,
-          gv = Wz(zv, mz.U7Ro, mz.Y6dG),
-          pv = jz,
-          dv = mz.SluM(Sv, ev, gv, pv);
-        return Pv = dv[0], hv = dv[1], Xv(dv[0], dv[1])
+        const MT = fk(TT, Dk.PFWV),
+          KT = ak,
+          OT = Ck(kT, Dk.PFWV, Dk.pmx5),
+          yT = ak,
+          fT = Dk.lHFZ(MT, KT, OT, yT);
+        return cT = fT[0], lT = fT[1], qT(fT[0], fT[1])
       } finally {
-        mz.g27U(Pv, hv, 1)
+        Dk.a8Pn(cT, lT, 1)
       }
     }
 
-    function sv() {
-      const vv = mz.JN0d();
-      var zv = Ev(vv[0], vv[1]).slice();
-      return mz.g27U(vv[0], 4 * vv[1], 4), zv
+    function tT() {
+      const TT = Dk.CuT7();
+      var kT = BT(TT[0], TT[1]).slice();
+      return Dk.a8Pn(TT[0], 4 * TT[1], 4), kT
     }
 
-    function Cv(vv) {
-      return 0 !== mz.Mhjb(vv)
+    function hT(TT) {
+      return 0 !== Dk.njSY(TT)
     }
 
-    function iv(vv, zv) {
-      const Pv = Wz(vv, mz.U7Ro, mz.Y6dG),
-        hv = jz,
-        Sv = mz.kgrA(Pv, hv, zv);
-      if (Sv[1]) throw wz(Sv[0])
+    function NT(TT, kT) {
+      const cT = Ck(TT, Dk.PFWV, Dk.pmx5),
+        lT = ak,
+        MT = Dk.GIpJ(cT, lT, kT);
+      if (MT[1]) throw jk(MT[0])
     }
 
-    function cv() {
-      mz.BjmB()
+    function QT() {
+      Dk.mc4D()
     }
 
-    function Gv() {
-      return mz.pA95() >>> 0
+    function ST() {
+      return Dk.NZnP() >>> 0
     }
 
-    function mv(vv) {
-      return 0 !== mz.R5Yl(vv)
+    function DT(TT) {
+      return 0 !== Dk.rloU(TT)
     }
 
-    function jv(vv) {
-      return 0 !== mz.gure(vv)
+    function aT(TT) {
+      return 0 !== Dk.Nle0(TT)
     }
 
-    function fv(vv) {
-      mz.Qls7(vv)
+    function FT(TT) {
+      Dk.kyuy(TT)
     }
 
-    function Fv() {
-      return mz.nKlb() >>> 0
+    function rT() {
+      return Dk.jkYa() >>> 0
     }
 
-    function Yv() {
-      return mz.UWLK() >>> 0
+    function PT() {
+      return Dk.Cfqh() >>> 0
     }
 
-    function nv() {
-      return 0 !== mz.N9Dt()
+    function wT() {
+      return 0 !== Dk.h21v()
     }
 
-    function Ov() {
-      const vv = mz.wc4V();
-      var zv = Ev(vv[0], vv[1]).slice();
-      return mz.g27U(vv[0], 4 * vv[1], 4), zv
+    function mT() {
+      const TT = Dk.LHVt();
+      var kT = BT(TT[0], TT[1]).slice();
+      return Dk.a8Pn(TT[0], 4 * TT[1], 4), kT
     }
 
-    function Dv() {
-      const vv = mz.fs3r();
-      var zv = Ev(vv[0], vv[1]).slice();
-      return mz.g27U(vv[0], 4 * vv[1], 4), zv
+    function bT() {
+      const TT = Dk.erIG();
+      var kT = BT(TT[0], TT[1]).slice();
+      return Dk.a8Pn(TT[0], 4 * TT[1], 4), kT
     }
 
-    function Kv() {
-      const vv = mz.k1Og();
-      var zv = Ev(vv[0], vv[1]).slice();
-      return mz.g27U(vv[0], 4 * vv[1], 4), zv
+    function zT() {
+      const TT = Dk.kck2();
+      var kT = BT(TT[0], TT[1]).slice();
+      return Dk.a8Pn(TT[0], 4 * TT[1], 4), kT
     }
 
-    function Vv() {
-      return mz.RbAl() >>> 0
+    function JT() {
+      return Dk.yj09() >>> 0
     }
 
-    function Uv() {
-      mz.w3zu()
+    function oT() {
+      Dk.WnCB()
     }
 
-    function Rv() {
-      let vv, zv;
+    function HT() {
+      let TT, kT;
       try {
-        const Pv = mz.Hb0g();
-        return vv = Pv[0], zv = Pv[1], Xv(Pv[0], Pv[1])
+        const cT = Dk.ZdEB();
+        return TT = cT[0], kT = cT[1], qT(cT[0], cT[1])
       } finally {
-        mz.g27U(vv, zv, 1)
+        Dk.a8Pn(TT, kT, 1)
       }
     }
 
-    function xv(vv) {
-      mz.WZDe(yv(vv))
+    function eT(TT) {
+      Dk.aXLN(gT(TT))
     }
 
-    function tv() {
+    function GT() {
       return {
         __proto__: null,
-        iSKq: {
+        qoGU: {
           __proto__: null,
-          KUxe: function(vv, zv) {
-            return yv(Error(Xv(vv, zv)))
+          ljXP: function(TT, kT) {
+            return gT(Error(qT(TT, kT)))
           },
-          Cm5P: function(vv, zv) {
-            throw new Error(Xv(vv, zv))
+          bxFY: function(TT, kT) {
+            throw new Error(qT(TT, kT))
           },
-          UeuN: function(vv) {
-            Sz(vv).call()
+          wrjR: function(TT) {
+            Mk(TT).call()
           },
-          G9MP: function(vv, zv) {
-            console.error(Xv(vv, zv))
+          Pp8D: function(TT, kT) {
+            console.error(qT(TT, kT))
           },
-          ljFT: function() {
+          iHQM: function() {
             return performance.now()
           },
-          s5UQ: function(vv) {
-            wz(vv)
+          RiTZ: function(TT) {
+            jk(TT)
           }
         }
       }
     }
-    Symbol.dispose && (Wv.prototype[Symbol.dispose] = Wv.prototype.free);
-    const qv = "undefined" === typeof FinalizationRegistry ? {
+    Symbol.dispose && (CT.prototype[Symbol.dispose] = CT.prototype.free);
+    const VT = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((vv => mz.Gevw(vv, 1))),
-      Iv = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((TT => Dk.bw2V(TT, 1))),
+      ET = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((vv => mz.lVRu(vv, 1))),
-      Qv = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((TT => Dk.w7hq(TT, 1))),
+      ZT = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((vv => mz.EjMa(vv, 1))),
-      Zv = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((TT => Dk.C9Dl(TT, 1))),
+      uT = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((vv => mz.nFrC(vv, 1))),
-      Av = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((TT => Dk.qwqn(TT, 1))),
+      XT = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((vv => mz.WCiQ(vv, 1))),
-      Lv = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((TT => Dk.djVZ(TT, 1))),
+      dT = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((vv => mz.drpF(vv, 1))),
-      Hv = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((TT => Dk.FTdG(TT, 1))),
+      LT = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((vv => mz.MTmJ(vv, 1))),
-      Mv = "undefined" === typeof FinalizationRegistry ? {
+      } : new FinalizationRegistry((TT => Dk.sFJF(TT, 1))),
+      RT = "undefined" === typeof FinalizationRegistry ? {
         register: () => {},
         unregister: () => {}
-      } : new FinalizationRegistry((vv => mz.W4Lx(vv, 1)));
+      } : new FinalizationRegistry((TT => Dk.rtKo(TT, 1)));
 
-    function yv(vv) {
-      gz === ez.length && ez.push(ez.length + 1);
-      const zv = gz;
-      return gz = ez[zv], ez[zv] = vv, zv
+    function gT(TT) {
+      Ok === Kk.length && Kk.push(Kk.length + 1);
+      const kT = Ok;
+      return Ok = Kk[kT], Kk[kT] = TT, kT
     }
 
-    function Bv(vv, zv) {
-      if (!(vv instanceof zv)) throw new Error(`expected instance of ${zv.name}`)
+    function UT(TT, kT) {
+      if (!(TT instanceof kT)) throw new Error(`expected instance of ${kT.name}`)
     }
 
-    function Jv(vv, zv) {
-      return vv >>>= 0, rv().subarray(vv / 8, vv / 8 + zv)
+    function YT(TT, kT) {
+      return TT >>>= 0, pT().subarray(TT / 8, TT / 8 + kT)
     }
 
-    function Ev(vv, zv) {
-      return vv >>>= 0, zz().subarray(vv / 4, vv / 4 + zv)
+    function BT(TT, kT) {
+      return TT >>>= 0, kk().subarray(TT / 4, TT / 4 + kT)
     }
 
-    function ov(vv, zv) {
-      return vv >>>= 0, hz().subarray(vv / 1, vv / 1 + zv)
+    function WT(TT, kT) {
+      return TT >>>= 0, lk().subarray(TT / 1, TT / 1 + kT)
     }
-    let bv = null;
+    let nT = null;
 
-    function rv() {
-      return null !== bv && 0 !== bv.byteLength || (bv = new Float64Array(mz.memory.buffer)), bv
+    function pT() {
+      return null !== nT && 0 !== nT.byteLength || (nT = new Float64Array(Dk.memory.buffer)), nT
     }
-    let kv = null;
+    let iT = null;
 
-    function Xv(vv, zv) {
-      return function(vv, zv) {
-        Cz += zv, Cz >= sz && (az = new TextDecoder("utf-8", {
+    function qT(TT, kT) {
+      return function(TT, kT) {
+        hk += kT, hk >= tk && (vk = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), az.decode(), Cz = zv);
-        return az.decode(hz().subarray(vv, vv + zv))
-      }(vv >>> 0, zv)
+        }), vk.decode(), hk = kT);
+        return vk.decode(lk().subarray(TT, TT + kT))
+      }(TT >>> 0, kT)
     }
-    let uv = null;
-    let vz = null;
+    let sT = null;
+    let Tk = null;
 
-    function zz() {
-      return null !== vz && 0 !== vz.byteLength || (vz = new Uint32Array(mz.memory.buffer)), vz
+    function kk() {
+      return null !== Tk && 0 !== Tk.byteLength || (Tk = new Uint32Array(Dk.memory.buffer)), Tk
     }
-    let Pz = null;
+    let ck = null;
 
-    function hz() {
-      return null !== Pz && 0 !== Pz.byteLength || (Pz = new Uint8Array(mz.memory.buffer)), Pz
-    }
-
-    function Sz(vv) {
-      return ez[vv]
-    }
-    let ez = new Array(1024).fill(void 0);
-    ez.push(void 0, null, !0, !1);
-    let gz = ez.length;
-
-    function pz(vv) {
-      return void 0 === vv || null === vv
+    function lk() {
+      return null !== ck && 0 !== ck.byteLength || (ck = new Uint8Array(Dk.memory.buffer)), ck
     }
 
-    function dz(vv, zv) {
-      const Pv = zv(2 * vv.length, 2) >>> 0;
-      return (null !== uv && 0 !== uv.byteLength || (uv = new Uint16Array(mz.memory.buffer)), uv).set(vv, Pv / 2), jz = vv.length, Pv
+    function Mk(TT) {
+      return Kk[TT]
+    }
+    let Kk = new Array(1024).fill(void 0);
+    Kk.push(void 0, null, !0, !1);
+    let Ok = Kk.length;
+
+    function yk(TT) {
+      return void 0 === TT || null === TT
     }
 
-    function Nz(vv, zv) {
-      const Pv = zv(4 * vv.length, 4) >>> 0;
-      return zz().set(vv, Pv / 4), jz = vv.length, Pv
+    function fk(TT, kT) {
+      const cT = kT(2 * TT.length, 2) >>> 0;
+      return (null !== sT && 0 !== sT.byteLength || (sT = new Uint16Array(Dk.memory.buffer)), sT).set(TT, cT / 2), ak = TT.length, cT
     }
 
-    function lz(vv, zv) {
-      const Pv = zv(1 * vv.length, 1) >>> 0;
-      return hz().set(vv, Pv / 1), jz = vv.length, Pv
+    function xk(TT, kT) {
+      const cT = kT(4 * TT.length, 4) >>> 0;
+      return kk().set(TT, cT / 4), ak = TT.length, cT
     }
 
-    function Tz(vv, zv) {
-      const Pv = zv(8 * vv.length, 8) >>> 0;
-      return rv().set(vv, Pv / 8), jz = vv.length, Pv
+    function Ik(TT, kT) {
+      const cT = kT(1 * TT.length, 1) >>> 0;
+      return lk().set(TT, cT / 1), ak = TT.length, cT
     }
 
-    function Wz(vv, zv, Pv) {
-      if (void 0 === Pv) {
-        const Pv = iz.encode(vv),
-          hv = zv(Pv.length, 1) >>> 0;
-        return hz().subarray(hv, hv + Pv.length).set(Pv), jz = Pv.length, hv
+    function Ak(TT, kT) {
+      const cT = kT(8 * TT.length, 8) >>> 0;
+      return pT().set(TT, cT / 8), ak = TT.length, cT
+    }
+
+    function Ck(TT, kT, cT) {
+      if (void 0 === cT) {
+        const cT = Nk.encode(TT),
+          lT = kT(cT.length, 1) >>> 0;
+        return lk().subarray(lT, lT + cT.length).set(cT), ak = cT.length, lT
       }
-      let hv = vv.length,
-        Sv = zv(hv, 1) >>> 0;
-      const ev = hz();
-      let gv = 0;
-      for (; gv < hv; gv++) {
-        const zv = vv.charCodeAt(gv);
-        if (zv > 127) break;
-        ev[Sv + gv] = zv
+      let lT = TT.length,
+        MT = kT(lT, 1) >>> 0;
+      const KT = lk();
+      let OT = 0;
+      for (; OT < lT; OT++) {
+        const kT = TT.charCodeAt(OT);
+        if (kT > 127) break;
+        KT[MT + OT] = kT
       }
-      if (gv !== hv) {
-        0 !== gv && (vv = vv.slice(gv)), Sv = Pv(Sv, hv, hv = gv + 3 * vv.length, 1) >>> 0;
-        const zv = hz().subarray(Sv + gv, Sv + hv);
-        gv += iz.encodeInto(vv, zv).written, Sv = Pv(Sv, hv, gv, 1) >>> 0
+      if (OT !== lT) {
+        0 !== OT && (TT = TT.slice(OT)), MT = cT(MT, lT, lT = OT + 3 * TT.length, 1) >>> 0;
+        const kT = lk().subarray(MT + OT, MT + lT);
+        OT += Nk.encodeInto(TT, kT).written, MT = cT(MT, lT, OT, 1) >>> 0
       }
-      return jz = gv, Sv
+      return ak = OT, MT
     }
 
-    function wz(vv) {
-      const zv = Sz(vv);
-      return function(vv) {
-        vv < 1028 || (ez[vv] = gz, gz = vv)
-      }(vv), zv
+    function jk(TT) {
+      const kT = Mk(TT);
+      return function(TT) {
+        TT < 1028 || (Kk[TT] = Ok, Ok = TT)
+      }(TT), kT
     }
-    let az = new TextDecoder("utf-8", {
+    let vk = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    az.decode();
-    const sz = 2146435072;
-    let Cz = 0;
-    const iz = new TextEncoder;
-    "encodeInto" in iz || (iz.encodeInto = function(vv, zv) {
-      const Pv = iz.encode(vv);
-      return zv.set(Pv), {
-        read: vv.length,
-        written: Pv.length
+    vk.decode();
+    const tk = 2146435072;
+    let hk = 0;
+    const Nk = new TextEncoder;
+    "encodeInto" in Nk || (Nk.encodeInto = function(TT, kT) {
+      const cT = Nk.encode(TT);
+      return kT.set(cT), {
+        read: TT.length,
+        written: cT.length
       }
     });
-    let cz, Gz, mz, jz = 0;
+    let Qk, Sk, Dk, ak = 0;
 
-    function fz(vv, zv) {
-      return Gz = vv, mz = vv.exports, cz = zv, bv = null, kv = null, uv = null, vz = null, Pz = null, mz.xUrG(), mz
+    function Fk(TT, kT) {
+      return Sk = TT, Dk = TT.exports, Qk = kT, nT = null, iT = null, sT = null, Tk = null, ck = null, Dk.yfub(), Dk
     }
 
-    function Fz(vv) {
-      if (void 0 !== mz) return mz;
-      void 0 !== vv && (Object.getPrototypeOf(vv) === Object.prototype ? ({
-        module: vv
-      } = vv) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const zv = tv();
-      vv instanceof WebAssembly.Module || (vv = new WebAssembly.Module(vv));
-      return fz(new WebAssembly.Instance(vv, zv), vv)
+    function rk(TT) {
+      if (void 0 !== Dk) return Dk;
+      void 0 !== TT && (Object.getPrototypeOf(TT) === Object.prototype ? ({
+        module: TT
+      } = TT) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const kT = GT();
+      TT instanceof WebAssembly.Module || (TT = new WebAssembly.Module(TT));
+      return Fk(new WebAssembly.Instance(TT, kT), TT)
     }
-    async function Yz(vv) {
-      if (void 0 !== mz) return mz;
-      void 0 !== vv && (Object.getPrototypeOf(vv) === Object.prototype ? ({
-        module_or_path: vv
-      } = vv) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const zv = tv();
-      ("string" === typeof vv || "function" === typeof Request && vv instanceof Request || "function" === typeof URL && vv instanceof URL) && (vv = fetch(vv));
+    async function Pk(TT) {
+      if (void 0 !== Dk) return Dk;
+      void 0 !== TT && (Object.getPrototypeOf(TT) === Object.prototype ? ({
+        module_or_path: TT
+      } = TT) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const kT = GT();
+      ("string" === typeof TT || "function" === typeof Request && TT instanceof Request || "function" === typeof URL && TT instanceof URL) && (TT = fetch(TT));
       const {
-        instance: Pv,
-        module: hv
-      } = await async function(vv, zv) {
-        if ("function" === typeof Response && vv instanceof Response) {
-          if (!vv.ok) throw new Error(`failed to fetch Wasm: ${vv.status} ${vv.statusText} fetching '${vv.url}'`);
+        instance: cT,
+        module: lT
+      } = await async function(TT, kT) {
+        if ("function" === typeof Response && TT instanceof Response) {
+          if (!TT.ok) throw new Error(`failed to fetch Wasm: ${TT.status} ${TT.statusText} fetching '${TT.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(vv, zv)
-          } catch (Pv) {
-            if (! function(vv) {
-                switch (vv) {
+            return await WebAssembly.instantiateStreaming(TT, kT)
+          } catch (cT) {
+            if (! function(TT) {
+                switch (TT) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(vv.type) || "application/wasm" === vv.headers.get("Content-Type")) throw Pv;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", Pv)
+              }(TT.type) || "application/wasm" === TT.headers.get("Content-Type")) throw cT;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", cT)
           }
-          const hv = await vv.arrayBuffer();
-          return await WebAssembly.instantiate(hv, zv)
+          const lT = await TT.arrayBuffer();
+          return await WebAssembly.instantiate(lT, kT)
         } {
-          const Pv = await WebAssembly.instantiate(vv, zv);
-          return Pv instanceof WebAssembly.Instance ? {
-            instance: Pv,
-            module: vv
-          } : Pv
+          const cT = await WebAssembly.instantiate(TT, kT);
+          return cT instanceof WebAssembly.Instance ? {
+            instance: cT,
+            module: TT
+          } : cT
         }
-      }(await vv, zv);
-      return fz(Pv, hv)
+      }(await TT, kT);
+      return Fk(cT, lT)
     }
-    var nz = Pv(3466),
-      Oz = Pv(35885);
-    const Dz = {
-      name: nz.c,
-      url: () => new Pv.U(Pv(35888)),
-      init: Yz,
-      bindings: hv
+    var wk = cT(3679),
+      mk = cT(36113);
+    const bk = {
+      name: wk.d,
+      url: () => new cT.U(cT(36117)),
+      init: Pk,
+      bindings: lT
     };
 
-    function Kz() {
-      let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Dz,
-        zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Dz,
-        Pv = arguments.length > 2 ? arguments[2] : void 0;
-      return (0, Oz.j)(vv, zv, Pv)
+    function zk() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : bk,
+        kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bk,
+        cT = arguments.length > 2 ? arguments[2] : void 0;
+      return (0, mk.h)(TT, kT, cT)
     }
 
-    function Vz(vv) {
-      return (0, nz.I)((() => vv), hv, Dz)
+    function Jk(TT) {
+      return (0, wk.F)((() => TT), lT, bk)
     }
   },
-  35862: (vv, zv, Pv) => {
-    function hv(vv, zv) {
-      return new Error(`${vv}: ${zv instanceof Error?`${zv.name}: ${zv.message}`:String(zv)}`, {
-        cause: zv
+  36097: (TT, kT, cT) => {
+    function lT(TT, kT) {
+      return new Error(`${TT}: ${kT instanceof Error?`${kT.name}: ${kT.message}`:String(kT)}`, {
+        cause: kT
       })
     }
-    Pv.d(zv, {
-      c: () => hv
+    cT.d(kT, {
+      d: () => lT
     })
   },
-  35856: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => gv,
-      e: () => dv
+  36092: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => OT,
+      g: () => fT
     });
-    var hv = Pv(3473),
-      Sv = Pv(6343),
-      ev = Pv(35862);
+    var lT = cT(3684),
+      MT = cT(6609),
+      KT = cT(36097);
 
-    function gv() {
-      return new URL(new Pv.U(Pv(35869)).href, globalThis.location?.href).href
+    function OT() {
+      return new URL(new cT.U(cT(36104)).href, globalThis.location?.href).href
     }
-    let pv = null;
+    let yT = null;
 
-    function dv() {
-      return pv ??= (async () => (0, hv.F)(new URL(gv()), (0, Sv.c)("bloxd_wasm_textures")))().catch((vv => {
-        throw (0, ev.c)((0, hv.M)(vv), vv)
-      })), pv
+    function fT() {
+      return yT ??= (async () => (0, lT.J)(new URL(OT()), (0, MT.e)("bloxd_wasm_textures")))().catch((TT => {
+        throw (0, KT.d)((0, lT.R)(TT), TT)
+      })), yT
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

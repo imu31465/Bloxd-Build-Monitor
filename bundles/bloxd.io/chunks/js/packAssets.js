@@ -1,286 +1,286 @@
 export const id = 44;
 export const ids = [44, 194];
 export const modules = {
-  9074: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      packDisplayName: () => av,
-      packModelMessage: () => sv,
-      packModelSummary: () => iv,
-      refusedPackModels: () => Cv
+  9423: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      packDisplayName: () => vT,
+      packModelMessage: () => tT,
+      packModelSummary: () => NT,
+      refusedPackModels: () => hT
     });
-    var hv = Pv(9078),
-      Sv = Pv(9087);
-    const ev = "DRACO",
-      gv = 0,
-      pv = 1,
-      dv = 0,
-      Nv = 1,
-      lv = 32768;
+    var lT = cT(9429),
+      MT = cT(9438);
+    const KT = "DRACO",
+      OT = 0,
+      yT = 1,
+      fT = 0,
+      xT = 1,
+      IT = 32768;
 
-    function Tv(vv) {
-      const zv = new DataView(vv.buffer, vv.byteOffset, vv.byteLength);
-      let Pv = 0;
-      const hv = () => {
-          if (Pv >= vv.byteLength) throw new RangeError("past the stream");
-          return vv[Pv++]
+    function AT(TT) {
+      const kT = new DataView(TT.buffer, TT.byteOffset, TT.byteLength);
+      let cT = 0;
+      const lT = () => {
+          if (cT >= TT.byteLength) throw new RangeError("past the stream");
+          return TT[cT++]
         },
-        Sv = () => {
-          if (Pv + 4 > vv.byteLength) throw new RangeError("past the stream");
-          const hv = zv.getUint32(Pv, !0);
-          return Pv += 4, hv
+        MT = () => {
+          if (cT + 4 > TT.byteLength) throw new RangeError("past the stream");
+          const lT = kT.getUint32(cT, !0);
+          return cT += 4, lT
         },
-        Tv = () => {
-          let vv = 0;
-          for (let zv = 0; zv < 35; zv += 7) {
-            const Pv = hv();
-            if (vv += (127 & Pv) * 2 ** zv, 0 === (128 & Pv)) return vv
+        AT = () => {
+          let TT = 0;
+          for (let kT = 0; kT < 35; kT += 7) {
+            const cT = lT();
+            if (TT += (127 & cT) * 2 ** kT, 0 === (128 & cT)) return TT
           }
           throw new RangeError("varint too long")
         };
       try {
-        for (let vv = 0; vv < ev.length; vv++)
-          if (hv() !== ev.charCodeAt(vv)) return null;
-        const zv = hv(),
-          Wv = hv(),
-          wv = hv(),
-          av = hv(),
-          sv = hv() | hv() << 8;
-        if (2 !== zv) return null;
-        0 !== (sv & lv) && function(vv, zv, Pv) {
-          const hv = () => {
-              zv(Pv())
+        for (let TT = 0; TT < KT.length; TT++)
+          if (lT() !== KT.charCodeAt(TT)) return null;
+        const kT = lT(),
+          CT = lT(),
+          jT = lT(),
+          vT = lT(),
+          tT = lT() | lT() << 8;
+        if (2 !== kT) return null;
+        0 !== (tT & IT) && function(TT, kT, cT) {
+          const lT = () => {
+              kT(cT())
             },
-            Sv = () => {
-              let Pv = 1,
-                Sv = !0;
-              for (; Pv > 0;) {
-                Pv--, Sv || hv(), Sv = !1;
-                const ev = vv();
-                for (let Pv = 0; Pv < ev; Pv++) hv(), zv(vv());
-                Pv += vv()
+            MT = () => {
+              let cT = 1,
+                MT = !0;
+              for (; cT > 0;) {
+                cT--, MT || lT(), MT = !1;
+                const KT = TT();
+                for (let cT = 0; cT < KT; cT++) lT(), kT(TT());
+                cT += TT()
               }
             },
-            ev = vv();
-          for (let gv = 0; gv < ev; gv++) vv(), Sv();
-          Sv()
-        }(Tv, (zv => {
-          if (Pv + zv > vv.byteLength) throw new RangeError("past the stream");
-          Pv += zv
-        }), hv);
-        const Cv = Wv < 2 ? Sv : Tv;
-        if (wv === gv) return {
+            KT = TT();
+          for (let OT = 0; OT < KT; OT++) TT(), MT();
+          MT()
+        }(AT, (kT => {
+          if (cT + kT > TT.byteLength) throw new RangeError("past the stream");
+          cT += kT
+        }), lT);
+        const hT = CT < 2 ? MT : AT;
+        if (jT === OT) return {
           faces: 0,
-          vertices: Sv()
+          vertices: MT()
         };
-        if (wv !== pv) return null;
-        if (av === dv) {
+        if (jT !== yT) return null;
+        if (vT === fT) {
           return {
-            faces: Cv(),
-            vertices: Cv()
+            faces: hT(),
+            vertices: hT()
           }
         }
-        if (av !== Nv) return null;
-        hv(), Wv < 2 && Tv();
-        const iv = Tv();
+        if (vT !== xT) return null;
+        lT(), CT < 2 && AT();
+        const NT = AT();
         return {
-          faces: Tv(),
-          vertices: iv
+          faces: AT(),
+          vertices: NT
         }
       } catch {
         return null
       }
     }
 
-    function Wv(vv, zv, Pv) {
-      var hv, Sv;
-      if (null === (hv = null === (Sv = vv.extensionsUsed) || void 0 === Sv ? void 0 : Sv.includes("KHR_draco_mesh_compression")) || void 0 === hv || !hv) return null;
-      for (const av of null !== (ev = vv.meshes) && void 0 !== ev ? ev : []) {
-        var ev;
-        for (const hv of av.primitives) {
-          var gv, pv, dv, Nv, lv, Wv;
-          const Sv = null === (gv = hv.extensions) || void 0 === gv ? void 0 : gv.KHR_draco_mesh_compression;
-          if ("object" !== typeof Sv || null === Sv) continue;
-          const ev = null === (pv = vv.bufferViews) || void 0 === pv ? void 0 : pv[Sv.bufferView];
-          if (null === zv || void 0 === ev) return wv;
-          const av = null !== (dv = ev.byteOffset) && void 0 !== dv ? dv : 0,
-            sv = Tv(zv.subarray(av, av + ev.byteLength));
-          if (null === sv && !Pv) continue;
-          const Cv = null !== (Nv = vv.accessors) && void 0 !== Nv ? Nv : [],
-            iv = null === (lv = Cv[hv.attributes.POSITION]) || void 0 === lv ? void 0 : lv.count,
-            cv = void 0 === hv.indices ? 0 : null === (Wv = Cv[hv.indices]) || void 0 === Wv ? void 0 : Wv.count;
-          if (null === sv || void 0 === iv || void 0 === cv || 3 * sv.faces !== cv || sv.vertices > iv) return wv
+    function CT(TT, kT, cT) {
+      var lT, MT;
+      if (null === (lT = null === (MT = TT.extensionsUsed) || void 0 === MT ? void 0 : MT.includes("KHR_draco_mesh_compression")) || void 0 === lT || !lT) return null;
+      for (const vT of null !== (KT = TT.meshes) && void 0 !== KT ? KT : []) {
+        var KT;
+        for (const lT of vT.primitives) {
+          var OT, yT, fT, xT, IT, CT;
+          const MT = null === (OT = lT.extensions) || void 0 === OT ? void 0 : OT.KHR_draco_mesh_compression;
+          if ("object" !== typeof MT || null === MT) continue;
+          const KT = null === (yT = TT.bufferViews) || void 0 === yT ? void 0 : yT[MT.bufferView];
+          if (null === kT || void 0 === KT) return jT;
+          const vT = null !== (fT = KT.byteOffset) && void 0 !== fT ? fT : 0,
+            tT = AT(kT.subarray(vT, vT + KT.byteLength));
+          if (null === tT && !cT) continue;
+          const hT = null !== (xT = TT.accessors) && void 0 !== xT ? xT : [],
+            NT = null === (IT = hT[lT.attributes.POSITION]) || void 0 === IT ? void 0 : IT.count,
+            QT = void 0 === lT.indices ? 0 : null === (CT = hT[lT.indices]) || void 0 === CT ? void 0 : CT.count;
+          if (null === tT || void 0 === NT || void 0 === QT || 3 * tT.faces !== QT || tT.vertices > NT) return jT
         }
       }
       return null
     }
-    const wv = "has a Draco stream whose counts don't match its accessors";
+    const jT = "has a Draco stream whose counts don't match its accessors";
 
-    function av(vv) {
-      var zv;
-      return null !== (zv = vv.name) && void 0 !== zv ? zv : vv.fromFolderName || vv.id
+    function vT(TT) {
+      var kT;
+      return null !== (kT = TT.name) && void 0 !== kT ? kT : TT.fromFolderName || TT.id
     }
 
-    function sv(vv, zv, Pv) {
-      return `Texture pack "${vv}": model "${zv}" was not loaded because it ${Pv}. The default model is used instead.`
+    function tT(TT, kT, cT) {
+      return `Texture pack "${TT}": model "${kT}" was not loaded because it ${cT}. The default model is used instead.`
     }
 
-    function Cv(vv, zv, Pv) {
+    function hT(TT, kT, cT) {
       let {
-        strictDraco: ev = !1
+        strictDraco: KT = !1
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const gv = {};
-      for (const [pv, dv] of Object.entries(zv)) {
-        let zv;
-        if (dv.startsWith("data:")) try {
-          const vv = new Uint8Array((0, Sv.x)(dv));
-          if (zv = (0, hv.d)(vv), null === zv) {
+      const OT = {};
+      for (const [yT, fT] of Object.entries(kT)) {
+        let kT;
+        if (fT.startsWith("data:")) try {
+          const TT = new Uint8Array((0, MT.t)(fT));
+          if (kT = (0, lT.b)(TT), null === kT) {
             const {
-              json: Pv,
-              bin: hv
-            } = (0, Sv.H)(vv);
-            zv = Wv(Pv, hv, ev)
+              json: cT,
+              bin: lT
+            } = (0, MT.D)(TT);
+            kT = CT(cT, lT, KT)
           }
         } catch {
-          zv = "is not a binary glTF 2.0 file"
-        } else zv = "loads data from outside the file";
-        zv && (gv[pv] = zv, Pv && console.warn(sv(vv, pv, zv)))
+          kT = "is not a binary glTF 2.0 file"
+        } else kT = "loads data from outside the file";
+        kT && (OT[yT] = kT, cT && console.warn(tT(TT, yT, kT)))
       }
-      return gv
+      return OT
     }
 
-    function iv(vv, zv) {
-      const Pv = Object.keys(zv);
-      if (0 === Pv.length) return null;
-      if (1 === Pv.length) return sv(vv, Pv[0], zv[Pv[0]]);
-      const hv = Pv.map((vv => `"${vv}" ${zv[vv]}`)).join("; ");
-      return `Texture pack "${vv}": ${Pv.length} models were not loaded (${hv}). The default models are used instead.`
+    function NT(TT, kT) {
+      const cT = Object.keys(kT);
+      if (0 === cT.length) return null;
+      if (1 === cT.length) return tT(TT, cT[0], kT[cT[0]]);
+      const lT = cT.map((TT => `"${TT}" ${kT[TT]}`)).join("; ");
+      return `Texture pack "${TT}": ${cT.length} models were not loaded (${lT}). The default models are used instead.`
     }
   },
-  60916: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      packAssets: () => iv
+  60885: (TT, kT, cT) => {
+    cT.d(kT, {
+      packAssets: () => NT
     });
-    var hv = Pv(2944),
-      Sv = Pv(2972),
-      ev = Pv(9074),
-      gv = Pv(2987),
-      pv = Pv(3013);
+    var lT = cT(3092),
+      MT = cT(3125),
+      KT = cT(9423),
+      OT = cT(3155),
+      yT = cT(3189);
 
-    function dv(vv, zv, Pv, hv) {
-      const Sv = `${(0,gv.d)(vv,zv)}|sheets${Pv}`;
-      return hv === pv.d ? Sv : `${Sv}|layers${hv}`
+    function fT(TT, kT, cT, lT) {
+      const MT = `${(0,OT.c)(TT,kT)}|sheets${cT}`;
+      return lT === yT.d ? MT : `${MT}|layers${lT}`
     }
-    var Nv = Pv(3019),
-      lv = Pv(2960),
-      Tv = Pv(2950),
-      Wv = Pv(2992);
-    var wv = Pv(42716);
-    const av = 256;
-    let sv = null,
-      Cv = null;
+    var xT = cT(3191),
+      IT = cT(3108),
+      AT = cT(3099),
+      CT = cT(3163);
+    var jT = cT(42833);
+    const vT = 256;
+    let tT = null,
+      hT = null;
 
-    function iv(vv) {
-      var zv;
-      let Pv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pv.d;
-      if ((null === (zv = sv) || void 0 === zv ? void 0 : zv.pack) === vv.pack && sv.maxLayerWidth === Pv) return sv.assets;
-      const iv = (0, wv.h)(vv.pack, (0, wv.m)(vv));
-      if (null === iv || !(0, Sv.g)(iv)) return Promise.resolve(null);
-      const Gv = async function(vv, zv, Pv) {
-        var wv;
-        const sv = null !== (wv = vv.textureOverrides) && void 0 !== wv ? wv : {},
+    function NT(TT) {
+      var kT;
+      let cT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yT.d;
+      if ((null === (kT = tT) || void 0 === kT ? void 0 : kT.pack) === TT.pack && tT.maxLayerWidth === cT) return tT.assets;
+      const NT = (0, jT.f)(TT.pack, (0, jT.k)(TT));
+      if (null === NT || !(0, MT.g)(NT)) return Promise.resolve(null);
+      const ST = async function(TT, kT, cT) {
+        var jT;
+        const tT = null !== (jT = TT.textureOverrides) && void 0 !== jT ? jT : {},
           {
-            id: iv,
-            version: Gv
-          } = vv.metaData,
-          mv = zv && iv !== hv.j.CUSTOM,
-          jv = {};
-        mv && (Cv = jv);
-        let fv, Fv, Yv = mv ? await async function(vv, zv, Pv, hv) {
-          const Sv = dv(vv, zv, Pv, pv.d),
-            ev = dv(vv, zv, Pv, hv),
-            Nv = await (0, gv.l)((vv => vv === Sv || vv === ev));
-          return null !== Nv && (hv === pv.d || Nv.blockAtlasWidth <= hv) ? Nv : null
-        }(iv, Gv, av, Pv): null;
-        if (null === Yv) {
+            id: NT,
+            version: ST
+          } = TT.metaData,
+          DT = kT && NT !== lT.r.CUSTOM,
+          aT = {};
+        DT && (hT = aT);
+        let FT, rT, PT = DT ? await async function(TT, kT, cT, lT) {
+          const MT = fT(TT, kT, cT, yT.d),
+            KT = fT(TT, kT, cT, lT),
+            xT = await (0, OT.g)((TT => TT === MT || TT === KT));
+          return null !== xT && (lT === yT.d || xT.blockAtlasWidth <= lT) ? xT : null
+        }(NT, ST, vT, cT): null;
+        if (null === PT) {
           const {
-            blockMetadata: vv,
-            getDefaultTexture: zv,
-            textureNameToIndex: ev
-          } = await (0, Sv.l)(), pv = (0, lv.e)(vv, ((vv, Pv) => ({
-            url: cv(sv, zv, vv, "block" === Pv ? Tv.d.BLOCK : Tv.d.ITEM)
-          }))), Nv = await
-          function(vv, zv, Pv, hv, Sv, ev) {
-            return (0, Wv.d)((gv => gv.WasmTextureWorker.generateRequired(vv, zv, Pv, hv, Sv, ev)))
-          }(vv, ev, pv, iv === hv.b, Pv, av), wv = Nv.assets;
-          Yv = {
-            ...wv,
+            blockMetadata: TT,
+            getDefaultTexture: kT,
+            textureNameToIndex: KT
+          } = await (0, MT.k)(), yT = (0, IT.b)(TT, ((TT, cT) => ({
+            url: QT(tT, kT, TT, "block" === cT ? AT.f.BLOCK : AT.f.ITEM)
+          }))), xT = await
+          function(TT, kT, cT, lT, MT, KT) {
+            return (0, CT.d)((OT => OT.WasmTextureWorker.generateRequired(TT, kT, cT, lT, MT, KT)))
+          }(TT, KT, yT, NT === lT.d, cT, vT), jT = xT.assets;
+          PT = {
+            ...jT,
             averageColors: {}
-          }, fv = Nv.averageColors(), mv && (Fv = fv.then((async vv => {
-            null !== vv && Cv === jv && await
-            function(vv, zv, Pv, hv, Sv) {
-              return (0, gv.q)(dv(vv, zv, hv, Sv), Pv)
-            }(iv, Gv, {
-              ...wv,
-              averageColors: vv
-            }, av, Nv.layerCap)
+          }, FT = xT.averageColors(), DT && (rT = FT.then((async TT => {
+            null !== TT && hT === aT && await
+            function(TT, kT, cT, lT, MT) {
+              return (0, OT.i)(fT(TT, kT, lT, MT), cT)
+            }(NT, ST, {
+              ...jT,
+              averageColors: TT
+            }, vT, xT.layerCap)
           })))
         }
-        return function(vv, zv) {
-          var Pv, hv;
-          let Sv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((pv = vv.averageColors, 0 === Object.keys(null !== pv && void 0 !== pv ? pv : {}).length ? null : vv.averageColors)),
-            gv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
-          var pv;
-          const dv = null !== (Pv = zv.textureOverrides) && void 0 !== Pv ? Pv : {},
-            lv = null !== (hv = zv.modelOverrides) && void 0 !== hv ? hv : {},
-            Tv = 0 === Object.keys(lv).length ? {} : (0, ev.refusedPackModels)((0, ev.packDisplayName)(zv.metaData), lv, !0, {
+        return function(TT, kT) {
+          var cT, lT;
+          let MT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((yT = TT.averageColors, 0 === Object.keys(null !== yT && void 0 !== yT ? yT : {}).length ? null : TT.averageColors)),
+            OT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
+          var yT;
+          const fT = null !== (cT = kT.textureOverrides) && void 0 !== cT ? cT : {},
+            IT = null !== (lT = kT.modelOverrides) && void 0 !== lT ? lT : {},
+            AT = 0 === Object.keys(IT).length ? {} : (0, KT.refusedPackModels)((0, KT.packDisplayName)(kT.metaData), IT, !0, {
               strictDraco: !0
             }),
             {
-              animatedBlockTextures: Wv,
-              rotatedBlockTextures: wv
-            } = vv,
-            av = vv => {
-              var zv, Pv;
-              return null !== (zv = null !== (Pv = Wv[vv]) && void 0 !== Pv ? Pv : wv[vv]) && void 0 !== zv ? zv : null
+              animatedBlockTextures: CT,
+              rotatedBlockTextures: jT
+            } = TT,
+            vT = TT => {
+              var kT, cT;
+              return null !== (kT = null !== (cT = CT[TT]) && void 0 !== cT ? cT : jT[TT]) && void 0 !== kT ? kT : null
             };
           return {
             terrain: {
-              atlasSheets: vv.blockAtlasArr,
-              texture: av
+              atlasSheets: TT.blockAtlasArr,
+              texture: vT
             },
-            sheetPixels: [...vv.blockAtlasPixels],
-            heldUntil: gv,
-            sheetLayout: vv.imagesPerAtlas,
-            sheetWidth: vv.blockAtlasWidth,
-            armourAtlasUrl: vv.armourAtlas,
-            texture: vv => {
-              var zv, Pv;
-              return null !== (zv = null !== (Pv = av(vv)) && void 0 !== Pv ? Pv : (0, Nv.d)(dv, vv)) && void 0 !== zv ? zv : null
+            sheetPixels: [...TT.blockAtlasPixels],
+            heldUntil: OT,
+            sheetLayout: TT.imagesPerAtlas,
+            sheetWidth: TT.blockAtlasWidth,
+            armourAtlasUrl: TT.armourAtlas,
+            texture: TT => {
+              var kT, cT;
+              return null !== (kT = null !== (cT = vT(TT)) && void 0 !== cT ? cT : (0, xT.c)(fT, TT)) && void 0 !== kT ? kT : null
             },
-            model: vv => void 0 === Tv[vv] && lv[vv] || null,
-            averageColours: Sv
+            model: TT => void 0 === AT[TT] && IT[TT] || null,
+            averageColours: MT
           }
-        }(Yv, vv, fv, Fv)
-      }(iv, null === vv.gameSource, Pv), mv = {
-        pack: vv.pack,
-        maxLayerWidth: Pv,
-        assets: Gv
+        }(PT, TT, FT, rT)
+      }(NT, null === TT.gameSource, cT), DT = {
+        pack: TT.pack,
+        maxLayerWidth: cT,
+        assets: ST
       };
-      return sv = mv, Gv.catch((() => {
-        sv === mv && (sv = null)
-      })), Gv
+      return tT = DT, ST.catch((() => {
+        tT === DT && (tT = null)
+      })), ST
     }
 
-    function cv(vv, zv, hv, Sv) {
-      const ev = (0, Nv.d)(vv, hv);
-      if (ev) return ev;
+    function QT(TT, kT, lT, MT) {
+      const KT = (0, xT.c)(TT, lT);
+      if (KT) return KT;
       try {
-        return zv(hv, Sv).url
+        return kT(lT, MT).url
       } catch {
-        return Pv(3050)
+        return cT(3237)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

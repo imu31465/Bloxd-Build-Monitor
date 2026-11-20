@@ -1,2445 +1,2445 @@
 export const id = 182;
 export const ids = [182];
 export const modules = {
-  8835: (vv, zv) => {
-    zv.discordURLBuilder = function(vv) {
-      var zv;
-      const Pv = (null === (zv = null === window || void 0 === window ? void 0 : window.location) || void 0 === zv ? void 0 : zv.hostname) || "localhost",
-        hv = vv.hostname.split("."),
-        Sv = !vv.hostname.includes("trycloudflare.com") && !vv.hostname.includes("discordsays.com") && hv.length > 2 ? `/${hv[0]}` : "";
-      return vv.pathname.startsWith("/.proxy") ? `${vv.protocol}//${Pv}${Sv}${vv.pathname}${vv.search}` : `${vv.protocol}//${Pv}/.proxy/colyseus${Sv}${vv.pathname}${vv.search}`
+  9181: (TT, kT) => {
+    kT.discordURLBuilder = function(TT) {
+      var kT;
+      const cT = (null === (kT = null === window || void 0 === window ? void 0 : window.location) || void 0 === kT ? void 0 : kT.hostname) || "localhost",
+        lT = TT.hostname.split("."),
+        MT = !TT.hostname.includes("trycloudflare.com") && !TT.hostname.includes("discordsays.com") && lT.length > 2 ? `/${lT[0]}` : "";
+      return TT.pathname.startsWith("/.proxy") ? `${TT.protocol}//${cT}${MT}${TT.pathname}${TT.search}` : `${TT.protocol}//${cT}/.proxy/colyseus${MT}${TT.pathname}${TT.search}`
     }
   },
-  8823: (vv, zv, Pv) => {
-    var hv, Sv, ev, gv, pv = Pv(8746),
-      dv = Pv(8831),
-      Nv = Pv(8800);
-    hv = new WeakMap, Sv = new WeakMap, ev = new WeakMap, gv = new WeakMap, zv.Auth = class {
-      constructor(vv) {
-        this.http = vv, this.settings = {
+  9172: (TT, kT, cT) => {
+    var lT, MT, KT, OT, yT = cT(9086),
+      fT = cT(9174),
+      xT = cT(9133);
+    lT = new WeakMap, MT = new WeakMap, KT = new WeakMap, OT = new WeakMap, kT.Auth = class {
+      constructor(TT) {
+        this.http = TT, this.settings = {
           path: "/auth",
           key: "colyseus-auth-token"
-        }, hv.set(this, !1), Sv.set(this, void 0), ev.set(this, void 0), gv.set(this, Nv.createNanoEvents()), dv.getItem(this.settings.key, (vv => this.token = vv))
+        }, lT.set(this, !1), MT.set(this, void 0), KT.set(this, void 0), OT.set(this, xT.createNanoEvents()), fT.getItem(this.settings.key, (TT => this.token = TT))
       }
-      set token(vv) {
-        this.http.authToken = vv
+      set token(TT) {
+        this.http.authToken = TT
       }
       get token() {
         return this.http.authToken
       }
-      onChange(vv) {
-        const zv = pv.__classPrivateFieldGet(this, gv, "f").on("change", vv);
-        return pv.__classPrivateFieldGet(this, hv, "f") || pv.__classPrivateFieldSet(this, Sv, new Promise(((vv, zv) => {
-          this.getUserData().then((vv => {
-            this.emitChange(Object.assign(Object.assign({}, vv), {
+      onChange(TT) {
+        const kT = yT.__classPrivateFieldGet(this, OT, "f").on("change", TT);
+        return yT.__classPrivateFieldGet(this, lT, "f") || yT.__classPrivateFieldSet(this, MT, new Promise(((TT, kT) => {
+          this.getUserData().then((TT => {
+            this.emitChange(Object.assign(Object.assign({}, TT), {
               token: this.token
             }))
-          })).catch((vv => {
+          })).catch((TT => {
             this.emitChange({
               user: null,
               token: void 0
             })
           })).finally((() => {
-            vv()
+            TT()
           }))
-        })), "f"), pv.__classPrivateFieldSet(this, hv, !0, "f"), zv
+        })), "f"), yT.__classPrivateFieldSet(this, lT, !0, "f"), kT
       }
       getUserData() {
-        return pv.__awaiter(this, void 0, void 0, (function*() {
+        return yT.__awaiter(this, void 0, void 0, (function*() {
           if (this.token) return (yield this.http.get(`${this.settings.path}/userdata`)).data;
           throw new Error("missing auth.token")
         }))
       }
-      registerWithEmailAndPassword(vv, zv, Pv) {
-        return pv.__awaiter(this, void 0, void 0, (function*() {
-          const hv = (yield this.http.post(`${this.settings.path}/register`, {
+      registerWithEmailAndPassword(TT, kT, cT) {
+        return yT.__awaiter(this, void 0, void 0, (function*() {
+          const lT = (yield this.http.post(`${this.settings.path}/register`, {
             body: {
-              email: vv,
-              password: zv,
-              options: Pv
+              email: TT,
+              password: kT,
+              options: cT
             }
           })).data;
-          return this.emitChange(hv), hv
+          return this.emitChange(lT), lT
         }))
       }
-      signInWithEmailAndPassword(vv, zv) {
-        return pv.__awaiter(this, void 0, void 0, (function*() {
-          const Pv = (yield this.http.post(`${this.settings.path}/login`, {
+      signInWithEmailAndPassword(TT, kT) {
+        return yT.__awaiter(this, void 0, void 0, (function*() {
+          const cT = (yield this.http.post(`${this.settings.path}/login`, {
             body: {
-              email: vv,
-              password: zv
+              email: TT,
+              password: kT
             }
           })).data;
-          return this.emitChange(Pv), Pv
+          return this.emitChange(cT), cT
         }))
       }
-      signInAnonymously(vv) {
-        return pv.__awaiter(this, void 0, void 0, (function*() {
-          const zv = (yield this.http.post(`${this.settings.path}/anonymous`, {
+      signInAnonymously(TT) {
+        return yT.__awaiter(this, void 0, void 0, (function*() {
+          const kT = (yield this.http.post(`${this.settings.path}/anonymous`, {
             body: {
-              options: vv
+              options: TT
             }
           })).data;
-          return this.emitChange(zv), zv
+          return this.emitChange(kT), kT
         }))
       }
-      sendPasswordResetEmail(vv) {
-        return pv.__awaiter(this, void 0, void 0, (function*() {
+      sendPasswordResetEmail(TT) {
+        return yT.__awaiter(this, void 0, void 0, (function*() {
           return (yield this.http.post(`${this.settings.path}/forgot-password`, {
             body: {
-              email: vv
+              email: TT
             }
           })).data
         }))
       }
-      signInWithProvider(vv) {
-        return pv.__awaiter(this, arguments, void 0, (function*(vv) {
-          let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          return new Promise(((Pv, hv) => {
-            const Sv = zv.width || 480,
-              gv = zv.height || 768,
-              dv = this.token ? `?token=${this.token}` : "",
-              Nv = `Login with ${vv[0].toUpperCase()+vv.substring(1)}`,
-              lv = this.http.client.getHttpEndpoint(`${zv.prefix||`${this.settings.path}/provider`}/${vv}${dv}`),
-              Tv = screen.width / 2 - Sv / 2,
-              Wv = screen.height / 2 - gv / 2;
-            pv.__classPrivateFieldSet(this, ev, window.open(lv, Nv, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + Sv + ", height=" + gv + ", top=" + Wv + ", left=" + Tv), "f");
-            const wv = vv => {
-                void 0 === vv.data.user && void 0 === vv.data.token || (clearInterval(av), pv.__classPrivateFieldGet(this, ev, "f").close(), pv.__classPrivateFieldSet(this, ev, void 0, "f"), window.removeEventListener("message", wv), void 0 !== vv.data.error ? hv(vv.data.error) : (Pv(vv.data), this.emitChange(vv.data)))
+      signInWithProvider(TT) {
+        return yT.__awaiter(this, arguments, void 0, (function*(TT) {
+          let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          return new Promise(((cT, lT) => {
+            const MT = kT.width || 480,
+              OT = kT.height || 768,
+              fT = this.token ? `?token=${this.token}` : "",
+              xT = `Login with ${TT[0].toUpperCase()+TT.substring(1)}`,
+              IT = this.http.client.getHttpEndpoint(`${kT.prefix||`${this.settings.path}/provider`}/${TT}${fT}`),
+              AT = screen.width / 2 - MT / 2,
+              CT = screen.height / 2 - OT / 2;
+            yT.__classPrivateFieldSet(this, KT, window.open(IT, xT, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + MT + ", height=" + OT + ", top=" + CT + ", left=" + AT), "f");
+            const jT = TT => {
+                void 0 === TT.data.user && void 0 === TT.data.token || (clearInterval(vT), yT.__classPrivateFieldGet(this, KT, "f").close(), yT.__classPrivateFieldSet(this, KT, void 0, "f"), window.removeEventListener("message", jT), void 0 !== TT.data.error ? lT(TT.data.error) : (cT(TT.data), this.emitChange(TT.data)))
               },
-              av = setInterval((() => {
-                pv.__classPrivateFieldGet(this, ev, "f") && !pv.__classPrivateFieldGet(this, ev, "f").closed || (pv.__classPrivateFieldSet(this, ev, void 0, "f"), hv("ev"), window.removeEventListener("message", wv))
+              vT = setInterval((() => {
+                yT.__classPrivateFieldGet(this, KT, "f") && !yT.__classPrivateFieldGet(this, KT, "f").closed || (yT.__classPrivateFieldSet(this, KT, void 0, "f"), lT("KT"), window.removeEventListener("message", jT))
               }), 200);
-            window.addEventListener("message", wv)
+            window.addEventListener("message", jT)
           }))
         }))
       }
       signOut() {
-        return pv.__awaiter(this, void 0, void 0, (function*() {
+        return yT.__awaiter(this, void 0, void 0, (function*() {
           this.emitChange({
             user: null,
             token: null
           })
         }))
       }
-      emitChange(vv) {
-        void 0 !== vv.token && (this.token = vv.token, null === vv.token ? dv.removeItem(this.settings.key) : dv.setItem(this.settings.key, vv.token)), pv.__classPrivateFieldGet(this, gv, "f").emit("change", vv)
+      emitChange(TT) {
+        void 0 !== TT.token && (this.token = TT.token, null === TT.token ? fT.removeItem(this.settings.key) : fT.setItem(this.settings.key, TT.token)), yT.__classPrivateFieldGet(this, OT, "f").emit("change", TT)
       }
     }
   },
-  8743: (vv, zv, Pv) => {
-    var hv, Sv = Pv(8746),
-      ev = Pv(8753),
-      gv = Pv(8758),
-      pv = Pv(8815),
-      dv = Pv(8823),
-      Nv = Pv(8835);
-    class lv extends Error {
-      constructor(vv, zv) {
-        super(vv), this.code = zv, this.name = "MatchMakeError", Object.setPrototypeOf(this, lv.prototype)
+  9079: (TT, kT, cT) => {
+    var lT, MT = cT(9086),
+      KT = cT(9093),
+      OT = cT(9097),
+      yT = cT(9162),
+      fT = cT(9172),
+      xT = cT(9181);
+    class IT extends Error {
+      constructor(TT, kT) {
+        super(TT), this.code = kT, this.name = "MatchMakeError", Object.setPrototypeOf(this, IT.prototype)
       }
     }
-    const Tv = "undefined" !== typeof window && "undefined" !== typeof(null === (hv = null === window || void 0 === window ? void 0 : window.location) || void 0 === hv ? void 0 : hv.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
-    class Wv {
+    const AT = "undefined" !== typeof window && "undefined" !== typeof(null === (lT = null === window || void 0 === window ? void 0 : window.location) || void 0 === lT ? void 0 : lT.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
+    class CT {
       constructor() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Tv,
-          zv = arguments.length > 1 ? arguments[1] : void 0;
-        var Pv, hv;
-        if ("string" === typeof vv) {
-          const zv = vv.startsWith("/") ? new URL(vv, Tv) : new URL(vv),
-            Pv = "https:" === zv.protocol || "wss:" === zv.protocol,
-            hv = Number(zv.port || (Pv ? 443 : 80));
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : AT,
+          kT = arguments.length > 1 ? arguments[1] : void 0;
+        var cT, lT;
+        if ("string" === typeof TT) {
+          const kT = TT.startsWith("/") ? new URL(TT, AT) : new URL(TT),
+            cT = "https:" === kT.protocol || "wss:" === kT.protocol,
+            lT = Number(kT.port || (cT ? 443 : 80));
           this.settings = {
-            hostname: zv.hostname,
-            pathname: zv.pathname,
-            port: hv,
-            secure: Pv,
-            searchParams: zv.searchParams.toString() || void 0
+            hostname: kT.hostname,
+            pathname: kT.pathname,
+            port: lT,
+            secure: cT,
+            searchParams: kT.searchParams.toString() || void 0
           }
-        } else void 0 === vv.port && (vv.port = vv.secure ? 443 : 80), void 0 === vv.pathname && (vv.pathname = ""), this.settings = vv;
-        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new pv.HTTP(this, (null === zv || void 0 === zv ? void 0 : zv.headers) || {}), this.auth = new dv.Auth(this.http), this.urlBuilder = null === zv || void 0 === zv ? void 0 : zv.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (hv = null === (Pv = null === window || void 0 === window ? void 0 : window.location) || void 0 === Pv ? void 0 : Pv.hostname) || void 0 === hv ? void 0 : hv.includes("discordsays.com")) && (this.urlBuilder = Nv.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
+        } else void 0 === TT.port && (TT.port = TT.secure ? 443 : 80), void 0 === TT.pathname && (TT.pathname = ""), this.settings = TT;
+        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new yT.HTTP(this, (null === kT || void 0 === kT ? void 0 : kT.headers) || {}), this.auth = new fT.Auth(this.http), this.urlBuilder = null === kT || void 0 === kT ? void 0 : kT.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (lT = null === (cT = null === window || void 0 === window ? void 0 : window.location) || void 0 === cT ? void 0 : cT.hostname) || void 0 === lT ? void 0 : lT.includes("discordsays.com")) && (this.urlBuilder = xT.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
       }
-      joinOrCreate(vv) {
-        return Sv.__awaiter(this, arguments, void 0, (function*(vv) {
-          let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            Pv = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinOrCreate", vv, zv, Pv)
+      joinOrCreate(TT) {
+        return MT.__awaiter(this, arguments, void 0, (function*(TT) {
+          let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            cT = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinOrCreate", TT, kT, cT)
         }))
       }
-      create(vv) {
-        return Sv.__awaiter(this, arguments, void 0, (function*(vv) {
-          let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            Pv = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("create", vv, zv, Pv)
+      create(TT) {
+        return MT.__awaiter(this, arguments, void 0, (function*(TT) {
+          let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            cT = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("create", TT, kT, cT)
         }))
       }
-      join(vv) {
-        return Sv.__awaiter(this, arguments, void 0, (function*(vv) {
-          let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            Pv = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("join", vv, zv, Pv)
+      join(TT) {
+        return MT.__awaiter(this, arguments, void 0, (function*(TT) {
+          let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            cT = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("join", TT, kT, cT)
         }))
       }
-      joinById(vv) {
-        return Sv.__awaiter(this, arguments, void 0, (function*(vv) {
-          let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            Pv = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinById", vv, zv, Pv)
+      joinById(TT) {
+        return MT.__awaiter(this, arguments, void 0, (function*(TT) {
+          let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            cT = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinById", TT, kT, cT)
         }))
       }
-      reconnect(vv, zv) {
-        return Sv.__awaiter(this, void 0, void 0, (function*() {
-          if ("string" === typeof vv && "string" === typeof zv) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
-          const [Pv, hv] = vv.split(":");
-          if (!Pv || !hv) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
-          return yield this.createMatchMakeRequest("reconnect", Pv, {
-            reconnectionToken: hv
-          }, zv)
+      reconnect(TT, kT) {
+        return MT.__awaiter(this, void 0, void 0, (function*() {
+          if ("string" === typeof TT && "string" === typeof kT) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
+          const [cT, lT] = TT.split(":");
+          if (!cT || !lT) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
+          return yield this.createMatchMakeRequest("reconnect", cT, {
+            reconnectionToken: lT
+          }, kT)
         }))
       }
-      consumeSeatReservation(vv, zv, Pv) {
-        return Sv.__awaiter(this, void 0, void 0, (function*() {
-          const hv = this.createRoom(vv.room.name, zv);
-          hv.roomId = vv.room.roomId, hv.sessionId = vv.sessionId;
-          const gv = {
-            sessionId: hv.sessionId
+      consumeSeatReservation(TT, kT, cT) {
+        return MT.__awaiter(this, void 0, void 0, (function*() {
+          const lT = this.createRoom(TT.room.name, kT);
+          lT.roomId = TT.room.roomId, lT.sessionId = TT.sessionId;
+          const OT = {
+            sessionId: lT.sessionId
           };
-          vv.reconnectionToken && (gv.reconnectionToken = vv.reconnectionToken);
-          const pv = Pv || hv;
-          return hv.connect(this.buildEndpoint(vv.room, gv, vv.protocol), vv.devMode && (() => Sv.__awaiter(this, void 0, void 0, (function*() {
-            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${hv.roomId}'...`);
-            let Pv = 0;
-            const ev = () => Sv.__awaiter(this, void 0, void 0, (function*() {
-              Pv++;
+          TT.reconnectionToken && (OT.reconnectionToken = TT.reconnectionToken);
+          const yT = cT || lT;
+          return lT.connect(this.buildEndpoint(TT.room, OT, TT.protocol), TT.devMode && (() => MT.__awaiter(this, void 0, void 0, (function*() {
+            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${lT.roomId}'...`);
+            let cT = 0;
+            const KT = () => MT.__awaiter(this, void 0, void 0, (function*() {
+              cT++;
               try {
-                yield this.consumeSeatReservation(vv, zv, pv), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${hv.roomId}'`)
-              } catch (Sv) {
-                Pv < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${Pv} out of 8)`), setTimeout(ev, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
+                yield this.consumeSeatReservation(TT, kT, yT), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${lT.roomId}'`)
+              } catch (MT) {
+                cT < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${cT} out of 8)`), setTimeout(KT, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
               }
             }));
-            setTimeout(ev, 2e3)
-          }))), pv, vv, this.http.headers), new Promise(((vv, zv) => {
-            const Pv = (vv, Pv) => zv(new ev.ServerError(vv, Pv));
-            pv.onError.once(Pv), pv.onJoin.once((() => {
-              pv.onError.remove(Pv), setTimeout((() => {
+            setTimeout(KT, 2e3)
+          }))), yT, TT, this.http.headers), new Promise(((TT, kT) => {
+            const cT = (TT, cT) => kT(new KT.ServerError(TT, cT));
+            yT.onError.once(cT), yT.onJoin.once((() => {
+              yT.onError.remove(cT), setTimeout((() => {
                 try {
-                  const vv = [80, 23, 123, 35, 3, 17, 97, 255, 243, 69, 38, 136, 139, 138, 178, 103, 24, 5, 220, 99];
-                  vv && pv.FY(128, new Uint8Array(vv))
+                  const TT = [80, 23, 123, 35, 3, 17, 97, 255, 243, 69, 38, 136, 139, 138, 178, 103, 24, 5, 220, 99];
+                  TT && yT.SF(128, new Uint8Array(TT))
                 } catch {}
-              }), 3e3), vv(pv)
+              }), 3e3), TT(yT)
             }))
           }))
         }))
       }
-      createMatchMakeRequest(vv, zv) {
-        return Sv.__awaiter(this, arguments, void 0, (function*(vv, zv) {
-          let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            hv = arguments.length > 3 ? arguments[3] : void 0,
-            Sv = arguments.length > 4 ? arguments[4] : void 0;
-          const ev = (yield this.http.post(`matchmake/${vv}/${zv}`, {
+      createMatchMakeRequest(TT, kT) {
+        return MT.__awaiter(this, arguments, void 0, (function*(TT, kT) {
+          let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            lT = arguments.length > 3 ? arguments[3] : void 0,
+            MT = arguments.length > 4 ? arguments[4] : void 0;
+          const KT = (yield this.http.post(`matchmake/${TT}/${kT}`, {
             headers: {
               "X-Requested-With": "XMLHtttpRequest",
               Accept: "application/json",
               "Content-Type": "application/json"
             },
-            body: JSON.stringify(Pv)
+            body: JSON.stringify(cT)
           })).data;
-          if (ev.error) throw new lv(ev.error, ev.code);
-          return "reconnect" === vv && (ev.reconnectionToken = Pv.reconnectionToken), yield this.consumeSeatReservation(ev, hv, Sv)
+          if (KT.error) throw new IT(KT.error, KT.code);
+          return "reconnect" === TT && (KT.reconnectionToken = cT.reconnectionToken), yield this.consumeSeatReservation(KT, lT, MT)
         }))
       }
-      createRoom(vv, zv) {
-        return new gv.QT(vv, zv)
+      createRoom(TT, kT) {
+        return new OT.XA(TT, kT)
       }
-      buildEndpoint(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
-          hv = this.settings.searchParams || "";
-        this.http.authToken && (zv._authToken = this.http.authToken);
-        for (const gv in zv) zv.hasOwnProperty(gv) && (hv += (hv ? "&" : "") + `${gv}=${zv[gv]}`);
-        "h3" === Pv && (Pv = "http");
-        let Sv = this.settings.secure ? `${Pv}s://` : `${Pv}://`;
-        vv.publicAddress ? Sv += `${vv.publicAddress}` : Sv += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
-        const ev = `${Sv}/${vv.processId}/${vv.roomId}?${hv}`;
-        return this.urlBuilder ? this.urlBuilder(new URL(ev)) : ev
+      buildEndpoint(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
+          lT = this.settings.searchParams || "";
+        this.http.authToken && (kT._authToken = this.http.authToken);
+        for (const OT in kT) kT.hasOwnProperty(OT) && (lT += (lT ? "&" : "") + `${OT}=${kT[OT]}`);
+        "h3" === cT && (cT = "http");
+        let MT = this.settings.secure ? `${cT}s://` : `${cT}://`;
+        TT.publicAddress ? MT += `${TT.publicAddress}` : MT += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
+        const KT = `${MT}/${TT.processId}/${TT.roomId}?${lT}`;
+        return this.urlBuilder ? this.urlBuilder(new URL(KT)) : KT
       }
       getHttpEndpoint() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-        const zv = vv.startsWith("/") ? vv : `/${vv}`;
-        let Pv = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${zv}`;
-        return this.settings.searchParams && (Pv += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(Pv)) : Pv
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+        const kT = TT.startsWith("/") ? TT : `/${TT}`;
+        let cT = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${kT}`;
+        return this.settings.searchParams && (cT += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(cT)) : cT
       }
       getEndpointPort() {
         return 80 !== this.settings.port && 443 !== this.settings.port ? `:${this.settings.port}` : ""
       }
     }
-    Wv.VERSION = "0.16.22", zv.Client = Wv, zv.MatchMakeError = lv
+    CT.VERSION = "0.16.22", kT.Client = CT, kT.MatchMakeError = IT
   },
-  8760: (vv, zv, Pv) => {
-    var hv = Pv(8769),
-      Sv = Pv(8775);
-    zv.Connection = class {
-      constructor(vv) {
-        if (this.events = {}, "h3" === vv) this.transport = new hv.H3TransportTransport(this.events);
-        else this.transport = new Sv.WebSocketTransport(this.events)
+  9101: (TT, kT, cT) => {
+    var lT = cT(9106),
+      MT = cT(9119);
+    kT.Connection = class {
+      constructor(TT) {
+        if (this.events = {}, "h3" === TT) this.transport = new lT.H3TransportTransport(this.events);
+        else this.transport = new MT.WebSocketTransport(this.events)
       }
-      connect(vv, zv) {
-        this.transport.connect.call(this.transport, vv, zv)
+      connect(TT, kT) {
+        this.transport.connect.call(this.transport, TT, kT)
       }
-      send(vv) {
-        this.transport.send(vv)
+      send(TT) {
+        this.transport.send(TT)
       }
-      sendUnreliable(vv) {
-        this.transport.sendUnreliable(vv)
+      sendUnreliable(TT) {
+        this.transport.sendUnreliable(TT)
       }
-      close(vv, zv) {
-        this.transport.close(vv, zv)
+      close(TT, kT) {
+        this.transport.close(TT, kT)
       }
       get isOpen() {
         return this.transport.isOpen
       }
     }
   },
-  8815: (vv, zv, Pv) => {
-    var hv = Pv(8753);
+  9162: (TT, kT, cT) => {
+    var lT = cT(9093);
 
-    function Sv(vv) {
-      var zv = Object.create(null);
-      return vv && Object.keys(vv).forEach((function(Pv) {
-        if ("default" !== Pv) {
-          var hv = Object.getOwnPropertyDescriptor(vv, Pv);
-          Object.defineProperty(zv, Pv, hv.get ? hv : {
+    function MT(TT) {
+      var kT = Object.create(null);
+      return TT && Object.keys(TT).forEach((function(cT) {
+        if ("default" !== cT) {
+          var lT = Object.getOwnPropertyDescriptor(TT, cT);
+          Object.defineProperty(kT, cT, lT.get ? lT : {
             enumerable: !0,
             get: function() {
-              return vv[Pv]
+              return TT[cT]
             }
           })
         }
-      })), zv.default = vv, Object.freeze(zv)
+      })), kT.default = TT, Object.freeze(kT)
     }
-    var ev = Sv(Pv(8819));
-    zv.HTTP = class {
-      constructor(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.client = vv, this.headers = zv
+    var KT = MT(cT(9167));
+    kT.HTTP = class {
+      constructor(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.client = TT, this.headers = kT
       }
-      get(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("get", vv, zv)
+      get(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("get", TT, kT)
       }
-      post(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("post", vv, zv)
+      post(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("post", TT, kT)
       }
-      del(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("del", vv, zv)
+      del(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("del", TT, kT)
       }
-      put(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("put", vv, zv)
+      put(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("put", TT, kT)
       }
-      request(vv, zv) {
-        let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        return ev[vv](this.client.getHttpEndpoint(zv), this.getOptions(Pv)).catch((vv => {
-          var zv;
-          if (vv.aborted) throw new hv.AbortError("Request aborted");
-          const Pv = vv.statusCode,
-            Sv = (null === (zv = vv.data) || void 0 === zv ? void 0 : zv.error) || vv.statusMessage || vv.message;
-          if (!Pv && !Sv) throw vv;
-          throw new hv.ServerError(Pv, Sv)
+      request(TT, kT) {
+        let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        return KT[TT](this.client.getHttpEndpoint(kT), this.getOptions(cT)).catch((TT => {
+          var kT;
+          if (TT.aborted) throw new lT.AbortError("Request aborted");
+          const cT = TT.statusCode,
+            MT = (null === (kT = TT.data) || void 0 === kT ? void 0 : kT.error) || TT.statusMessage || TT.message;
+          if (!cT && !MT) throw TT;
+          throw new lT.ServerError(cT, MT)
         }))
       }
-      getOptions(vv) {
-        return vv.headers = Object.assign({}, this.headers, vv.headers), this.authToken && (vv.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (vv.withCredentials = !0), vv
+      getOptions(TT) {
+        return TT.headers = Object.assign({}, this.headers, TT.headers), this.authToken && (TT.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (TT.withCredentials = !0), TT
       }
     }
   },
-  8784: (vv, zv) => {
-    var Pv, hv;
-    zv.Protocol = void 0, (Pv = zv.Protocol || (zv.Protocol = {}))[Pv.HANDSHAKE = 9] = "HANDSHAKE", Pv[Pv.JOIN_ROOM = 10] = "JOIN_ROOM", Pv[Pv.ERROR = 11] = "ERROR", Pv[Pv.LEAVE_ROOM = 12] = "LEAVE_ROOM", Pv[Pv.ROOM_DATA = 13] = "ROOM_DATA", Pv[Pv.ROOM_STATE = 14] = "ROOM_STATE", Pv[Pv.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", Pv[Pv.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", Pv[Pv.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", zv.ErrorCode = void 0, (hv = zv.ErrorCode || (zv.ErrorCode = {}))[hv.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", hv[hv.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", hv[hv.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", hv[hv.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", hv[hv.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", hv[hv.AUTH_FAILED = 4215] = "AUTH_FAILED", hv[hv.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
+  9124: (TT, kT) => {
+    var cT, lT;
+    kT.Protocol = void 0, (cT = kT.Protocol || (kT.Protocol = {}))[cT.HANDSHAKE = 9] = "HANDSHAKE", cT[cT.JOIN_ROOM = 10] = "JOIN_ROOM", cT[cT.ERROR = 11] = "ERROR", cT[cT.LEAVE_ROOM = 12] = "LEAVE_ROOM", cT[cT.ROOM_DATA = 13] = "ROOM_DATA", cT[cT.ROOM_STATE = 14] = "ROOM_STATE", cT[cT.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", cT[cT.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", cT[cT.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", kT.ErrorCode = void 0, (lT = kT.ErrorCode || (kT.ErrorCode = {}))[lT.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", lT[lT.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", lT[lT.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", lT[lT.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", lT[lT.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", lT[lT.AUTH_FAILED = 4215] = "AUTH_FAILED", lT[lT.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
   },
-  8758: (vv, zv, Pv) => {
-    var hv = Pv(8760),
-      Sv = Pv(8784),
-      ev = Pv(8793),
-      gv = Pv(8800),
-      pv = Pv(8805),
-      dv = Pv(8772),
-      Nv = Pv(8808),
-      lv = Pv(8753),
-      Tv = Pv(8812);
-    class Wv {
-      constructor(vv, zv) {
-        this.onStateChange = pv.createSignal(), this.onError = pv.createSignal(), this.Tm = pv.createSignal(), this.onJoin = pv.createSignal(), this.hasJoined = !1, this.onMessageHandlers = gv.createNanoEvents(), this.roomId = null, this.name = vv, this.packr = new Tv.Packr, this.packr.encode(void 0), zv && (this.uC = new(ev.getSerializer("schema")), this.rootSchema = zv, this.uC.state = new zv), this.onError(((vv, zv) => {
-          var Pv;
-          return null === (Pv = console.warn) || void 0 === Pv ? void 0 : Pv.call(console, `colyseus.js - onError => (${vv}) ${zv}`)
-        })), this.Tm((() => this.rC()))
+  9097: (TT, kT, cT) => {
+    var lT = cT(9101),
+      MT = cT(9124),
+      KT = cT(9127),
+      OT = cT(9133),
+      yT = cT(9139),
+      fT = cT(9115),
+      xT = cT(9145),
+      IT = cT(9093),
+      AT = cT(9154);
+    class CT {
+      constructor(TT, kT) {
+        this.onStateChange = yT.createSignal(), this.onError = yT.createSignal(), this.ZF = yT.createSignal(), this.onJoin = yT.createSignal(), this.hasJoined = !1, this.onMessageHandlers = OT.createNanoEvents(), this.roomId = null, this.name = TT, this.packr = new AT.Packr, this.packr.encode(void 0), kT && (this.aN = new(KT.getSerializer("schema")), this.rootSchema = kT, this.aN.state = new kT), this.onError(((TT, kT) => {
+          var cT;
+          return null === (cT = console.warn) || void 0 === cT ? void 0 : cT.call(console, `colyseus.js - onError => (${TT}) ${kT}`)
+        })), this.ZF((() => this.hN()))
       }
-      connect(vv, zv) {
-        let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
-          Sv = arguments.length > 3 ? arguments[3] : void 0,
-          ev = arguments.length > 4 ? arguments[4] : void 0;
-        const gv = new hv.Connection(Sv.protocol);
-        if (Pv.connection = gv, gv.events.onmessage = Wv.prototype.onMessageCallback.bind(Pv), gv.events.onclose = function(vv) {
-            var hv;
-            if (!Pv.hasJoined) return null === (hv = console.warn) || void 0 === hv || hv.call(console, `Room connection was closed unexpectedly (${vv.code}): ${vv.reason}`), void Pv.onError.invoke(vv.code, vv.reason);
-            vv.code === lv.CloseCode.DEVMODE_RESTART && zv ? zv() : (Pv.Tm.invoke(vv.code, vv.reason), Pv.destroy())
-          }, gv.events.onerror = function(vv) {
-            var zv;
-            null === (zv = console.warn) || void 0 === zv || zv.call(console, `Room, onError (${vv.code}): ${vv.reason}`), Pv.onError.invoke(vv.code, vv.reason)
-          }, "h3" === Sv.protocol) {
-          const zv = new URL(vv);
-          gv.connect(zv.origin, Sv)
-        } else gv.connect(vv, ev)
+      connect(TT, kT) {
+        let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
+          MT = arguments.length > 3 ? arguments[3] : void 0,
+          KT = arguments.length > 4 ? arguments[4] : void 0;
+        const OT = new lT.Connection(MT.protocol);
+        if (cT.connection = OT, OT.events.onmessage = CT.prototype.onMessageCallback.bind(cT), OT.events.onclose = function(TT) {
+            var lT;
+            if (!cT.hasJoined) return null === (lT = console.warn) || void 0 === lT || lT.call(console, `Room connection was closed unexpectedly (${TT.code}): ${TT.reason}`), void cT.onError.invoke(TT.code, TT.reason);
+            TT.code === IT.CloseCode.DEVMODE_RESTART && kT ? kT() : (cT.ZF.invoke(TT.code, TT.reason), cT.destroy())
+          }, OT.events.onerror = function(TT) {
+            var kT;
+            null === (kT = console.warn) || void 0 === kT || kT.call(console, `Room, onError (${TT.code}): ${TT.reason}`), cT.onError.invoke(TT.code, TT.reason)
+          }, "h3" === MT.protocol) {
+          const kT = new URL(TT);
+          OT.connect(kT.origin, MT)
+        } else OT.connect(TT, KT)
       }
       leave() {
-        let vv = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return new Promise((zv => {
-          this.Tm((vv => zv(vv))), this.connection ? vv ? (this.packr.buffer[0] = Sv.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.Tm.invoke(lv.CloseCode.CONSENTED)
+        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return new Promise((kT => {
+          this.ZF((TT => kT(TT))), this.connection ? TT ? (this.packr.buffer[0] = MT.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.ZF.invoke(IT.CloseCode.CONSENTED)
         }))
       }
-      rG(vv, zv) {
-        return this.onMessageHandlers.on(this.getMessageHandlerKey(vv), zv)
+      yN(TT, kT) {
+        return this.onMessageHandlers.on(this.getMessageHandlerKey(TT), kT)
       }
-      send(vv, zv) {
-        const Pv = {
+      send(TT, kT) {
+        const cT = {
           offset: 1
         };
-        this.packr.buffer[0] = Sv.Protocol.ROOM_DATA, "string" === typeof vv ? dv.encode.string(this.packr.buffer, vv, Pv) : dv.encode.number(this.packr.buffer, vv, Pv), this.packr.position = 0;
-        const hv = void 0 !== zv ? this.packr.pack(zv, 2048 + Pv.offset) : this.packr.buffer.subarray(0, Pv.offset);
-        this.connection.send(hv)
+        this.packr.buffer[0] = MT.Protocol.ROOM_DATA, "string" === typeof TT ? fT.encode.string(this.packr.buffer, TT, cT) : fT.encode.number(this.packr.buffer, TT, cT), this.packr.position = 0;
+        const lT = void 0 !== kT ? this.packr.pack(kT, 2048 + cT.offset) : this.packr.buffer.subarray(0, cT.offset);
+        this.connection.send(lT)
       }
-      sendUnreliable(vv, zv) {
-        const Pv = {
+      sendUnreliable(TT, kT) {
+        const cT = {
           offset: 1
         };
-        this.packr.buffer[0] = Sv.Protocol.ROOM_DATA, "string" === typeof vv ? dv.encode.string(this.packr.buffer, vv, Pv) : dv.encode.number(this.packr.buffer, vv, Pv), this.packr.position = 0;
-        const hv = void 0 !== zv ? this.packr.pack(zv, 2048 + Pv.offset) : this.packr.buffer.subarray(0, Pv.offset);
-        this.connection.sendUnreliable(hv)
+        this.packr.buffer[0] = MT.Protocol.ROOM_DATA, "string" === typeof TT ? fT.encode.string(this.packr.buffer, TT, cT) : fT.encode.number(this.packr.buffer, TT, cT), this.packr.position = 0;
+        const lT = void 0 !== kT ? this.packr.pack(kT, 2048 + cT.offset) : this.packr.buffer.subarray(0, cT.offset);
+        this.connection.sendUnreliable(lT)
       }
-      FY(vv, zv) {
-        const Pv = {
+      SF(TT, kT) {
+        const cT = {
           offset: 1
         };
-        if (this.packr.buffer[0] = Sv.Protocol.ROOM_DATA_BYTES, "string" === typeof vv ? dv.encode.string(this.packr.buffer, vv, Pv) : dv.encode.number(this.packr.buffer, vv, Pv), zv.byteLength + Pv.offset > this.packr.buffer.byteLength) {
-          const vv = new Uint8Array(Pv.offset + zv.byteLength);
-          vv.set(this.packr.buffer), this.packr.useBuffer(vv)
+        if (this.packr.buffer[0] = MT.Protocol.ROOM_DATA_BYTES, "string" === typeof TT ? fT.encode.string(this.packr.buffer, TT, cT) : fT.encode.number(this.packr.buffer, TT, cT), kT.byteLength + cT.offset > this.packr.buffer.byteLength) {
+          const TT = new Uint8Array(cT.offset + kT.byteLength);
+          TT.set(this.packr.buffer), this.packr.useBuffer(TT)
         }
-        this.packr.buffer.set(zv, Pv.offset), this.connection.send(this.packr.buffer.subarray(0, Pv.offset + zv.byteLength))
+        this.packr.buffer.set(kT, cT.offset), this.connection.send(this.packr.buffer.subarray(0, cT.offset + kT.byteLength))
       }
       get state() {
-        return this.uC.getState()
+        return this.aN.getState()
       }
-      rC() {
-        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.Tm.clear(), this.onMessageHandlers.events = {}, this.uC instanceof Nv.jD && (this.uC.ow.root.callbacks = {})
+      hN() {
+        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.ZF.clear(), this.onMessageHandlers.events = {}, this.aN instanceof xT.Yz && (this.aN.pj.root.callbacks = {})
       }
-      onMessageCallback(vv) {
-        const zv = new Uint8Array(vv.data),
-          Pv = {
+      onMessageCallback(TT) {
+        const kT = new Uint8Array(TT.data),
+          cT = {
             offset: 1
           },
-          hv = zv[0];
-        if (hv === Sv.Protocol.JOIN_ROOM) {
-          const vv = dv.decode.utf8Read(zv, Pv, zv[Pv.offset++]);
-          if (this.serializerId = dv.decode.utf8Read(zv, Pv, zv[Pv.offset++]), !this.uC) {
-            const vv = ev.getSerializer(this.serializerId);
-            this.uC = new vv
+          lT = kT[0];
+        if (lT === MT.Protocol.JOIN_ROOM) {
+          const TT = fT.decode.utf8Read(kT, cT, kT[cT.offset++]);
+          if (this.serializerId = fT.decode.utf8Read(kT, cT, kT[cT.offset++]), !this.aN) {
+            const TT = KT.getSerializer(this.serializerId);
+            this.aN = new TT
           }
-          zv.byteLength > Pv.offset && this.uC.handshake && this.uC.handshake(zv, Pv), this.reconnectionToken = `${this.roomId}:${vv}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = Sv.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
-        } else if (hv === Sv.Protocol.ERROR) {
-          const vv = dv.decode.number(zv, Pv),
-            hv = dv.decode.string(zv, Pv);
-          this.onError.invoke(vv, hv)
-        } else if (hv === Sv.Protocol.LEAVE_ROOM) this.leave();
-        else if (hv === Sv.Protocol.ROOM_STATE) this.uC.setState(zv, Pv), this.onStateChange.invoke(this.uC.getState());
-        else if (hv === Sv.Protocol.ROOM_STATE_PATCH) this.uC.patch(zv, Pv), this.onStateChange.invoke(this.uC.getState());
-        else if (hv === Sv.Protocol.ROOM_DATA) {
-          const vv = dv.decode.stringCheck(zv, Pv) ? dv.decode.string(zv, Pv) : dv.decode.number(zv, Pv),
-            hv = zv.byteLength > Pv.offset ? Tv.unpack(zv, {
-              start: Pv.offset
+          kT.byteLength > cT.offset && this.aN.handshake && this.aN.handshake(kT, cT), this.reconnectionToken = `${this.roomId}:${TT}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = MT.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
+        } else if (lT === MT.Protocol.ERROR) {
+          const TT = fT.decode.number(kT, cT),
+            lT = fT.decode.string(kT, cT);
+          this.onError.invoke(TT, lT)
+        } else if (lT === MT.Protocol.LEAVE_ROOM) this.leave();
+        else if (lT === MT.Protocol.ROOM_STATE) this.aN.setState(kT, cT), this.onStateChange.invoke(this.aN.getState());
+        else if (lT === MT.Protocol.ROOM_STATE_PATCH) this.aN.patch(kT, cT), this.onStateChange.invoke(this.aN.getState());
+        else if (lT === MT.Protocol.ROOM_DATA) {
+          const TT = fT.decode.stringCheck(kT, cT) ? fT.decode.string(kT, cT) : fT.decode.number(kT, cT),
+            lT = kT.byteLength > cT.offset ? AT.unpack(kT, {
+              start: cT.offset
             }) : void 0;
-          this.dispatchMessage(vv, hv)
-        } else if (hv === Sv.Protocol.ROOM_DATA_BYTES) {
-          const vv = dv.decode.stringCheck(zv, Pv) ? dv.decode.string(zv, Pv) : dv.decode.number(zv, Pv);
-          this.dispatchMessage(vv, zv.subarray(Pv.offset))
+          this.dispatchMessage(TT, lT)
+        } else if (lT === MT.Protocol.ROOM_DATA_BYTES) {
+          const TT = fT.decode.stringCheck(kT, cT) ? fT.decode.string(kT, cT) : fT.decode.number(kT, cT);
+          this.dispatchMessage(TT, kT.subarray(cT.offset))
         }
       }
-      dispatchMessage(vv, zv) {
-        var Pv;
-        const hv = this.getMessageHandlerKey(vv);
-        this.onMessageHandlers.events[hv] ? this.onMessageHandlers.emit(hv, zv) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", vv, zv) : null === (Pv = console.warn) || void 0 === Pv || Pv.call(console, `colyseus.js: onMessage() not registered for type '${vv}'.`)
+      dispatchMessage(TT, kT) {
+        var cT;
+        const lT = this.getMessageHandlerKey(TT);
+        this.onMessageHandlers.events[lT] ? this.onMessageHandlers.emit(lT, kT) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", TT, kT) : null === (cT = console.warn) || void 0 === cT || cT.call(console, `colyseus.js: onMessage() not registered for type '${TT}'.`)
       }
       destroy() {
-        this.uC && this.uC.teardown()
+        this.aN && this.aN.teardown()
       }
-      getMessageHandlerKey(vv) {
-        switch (typeof vv) {
+      getMessageHandlerKey(TT) {
+        switch (typeof TT) {
           case "string":
-            return vv;
+            return TT;
           case "number":
-            return `i${vv}`;
+            return `i${TT}`;
           default:
             throw new Error("invalid message type.")
         }
       }
     }
-    zv.QT = Wv
+    kT.XA = CT
   },
-  8831: (vv, zv, Pv) => {
-    var hv = Pv(8746);
-    let Sv;
+  9174: (TT, kT, cT) => {
+    var lT = cT(9086);
+    let MT;
 
-    function ev() {
-      if (!Sv) try {
-        Sv = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
-      } catch (vv) {}
-      return Sv || "undefined" === typeof globalThis.indexedDB || (Sv = new gv), Sv || (Sv = {
+    function KT() {
+      if (!MT) try {
+        MT = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
+      } catch (TT) {}
+      return MT || "undefined" === typeof globalThis.indexedDB || (MT = new OT), MT || (MT = {
         cache: {},
-        setItem: function(vv, zv) {
-          this.cache[vv] = zv
+        setItem: function(TT, kT) {
+          this.cache[TT] = kT
         },
-        getItem: function(vv) {
-          this.cache[vv]
+        getItem: function(TT) {
+          this.cache[TT]
         },
-        removeItem: function(vv) {
-          delete this.cache[vv]
+        removeItem: function(TT) {
+          delete this.cache[TT]
         }
-      }), Sv
+      }), MT
     }
-    class gv {
+    class OT {
       constructor() {
-        this.dbPromise = new Promise((vv => {
-          const zv = indexedDB.open("_colyseus_storage", 1);
-          zv.onupgradeneeded = () => zv.result.createObjectStore("store"), zv.onsuccess = () => vv(zv.result)
+        this.dbPromise = new Promise((TT => {
+          const kT = indexedDB.open("_colyseus_storage", 1);
+          kT.onupgradeneeded = () => kT.result.createObjectStore("store"), kT.onsuccess = () => TT(kT.result)
         }))
       }
-      tx(vv, zv) {
-        return hv.__awaiter(this, void 0, void 0, (function*() {
-          const Pv = (yield this.dbPromise).transaction("store", vv).objectStore("store");
-          return zv(Pv)
+      tx(TT, kT) {
+        return lT.__awaiter(this, void 0, void 0, (function*() {
+          const cT = (yield this.dbPromise).transaction("store", TT).objectStore("store");
+          return kT(cT)
         }))
       }
-      setItem(vv, zv) {
-        return this.tx("readwrite", (Pv => Pv.put(zv, vv))).then()
+      setItem(TT, kT) {
+        return this.tx("readwrite", (cT => cT.put(kT, TT))).then()
       }
-      getItem(vv) {
-        return hv.__awaiter(this, void 0, void 0, (function*() {
-          const zv = yield this.tx("readonly", (zv => zv.get(vv)));
-          return new Promise((vv => {
-            zv.onsuccess = () => vv(zv.result)
+      getItem(TT) {
+        return lT.__awaiter(this, void 0, void 0, (function*() {
+          const kT = yield this.tx("readonly", (kT => kT.get(TT)));
+          return new Promise((TT => {
+            kT.onsuccess = () => TT(kT.result)
           }))
         }))
       }
-      removeItem(vv) {
-        return this.tx("readwrite", (zv => zv.delete(vv))).then()
+      removeItem(TT) {
+        return this.tx("readwrite", (kT => kT.delete(TT))).then()
       }
     }
-    zv.getItem = function(vv, zv) {
-      const Pv = ev().getItem(vv);
-      "undefined" !== typeof Promise && Pv instanceof Promise ? Pv.then((vv => zv(vv))) : zv(Pv)
-    }, zv.removeItem = function(vv) {
-      ev().removeItem(vv)
-    }, zv.setItem = function(vv, zv) {
-      ev().setItem(vv, zv)
+    kT.getItem = function(TT, kT) {
+      const cT = KT().getItem(TT);
+      "undefined" !== typeof Promise && cT instanceof Promise ? cT.then((TT => kT(TT))) : kT(cT)
+    }, kT.removeItem = function(TT) {
+      KT().removeItem(TT)
+    }, kT.setItem = function(TT, kT) {
+      KT().setItem(TT, kT)
     }
   },
-  8800: (vv, zv) => {
-    zv.createNanoEvents = () => ({
-      emit(vv) {
-        let zv = this.events[vv] || [];
-        for (var Pv = arguments.length, hv = new Array(Pv > 1 ? Pv - 1 : 0), Sv = 1; Sv < Pv; Sv++) hv[Sv - 1] = arguments[Sv];
-        for (let ev = 0, gv = zv.length; ev < gv; ev++) zv[ev](...hv)
+  9133: (TT, kT) => {
+    kT.createNanoEvents = () => ({
+      emit(TT) {
+        let kT = this.events[TT] || [];
+        for (var cT = arguments.length, lT = new Array(cT > 1 ? cT - 1 : 0), MT = 1; MT < cT; MT++) lT[MT - 1] = arguments[MT];
+        for (let KT = 0, OT = kT.length; KT < OT; KT++) kT[KT](...lT)
       },
       events: {},
-      on(vv, zv) {
-        var Pv;
-        return (null === (Pv = this.events[vv]) || void 0 === Pv ? void 0 : Pv.push(zv)) || (this.events[vv] = [zv]), () => {
-          var Pv;
-          this.events[vv] = null === (Pv = this.events[vv]) || void 0 === Pv ? void 0 : Pv.filter((vv => zv !== vv))
+      on(TT, kT) {
+        var cT;
+        return (null === (cT = this.events[TT]) || void 0 === cT ? void 0 : cT.push(kT)) || (this.events[TT] = [kT]), () => {
+          var cT;
+          this.events[TT] = null === (cT = this.events[TT]) || void 0 === cT ? void 0 : cT.filter((TT => kT !== TT))
         }
       }
     })
   },
-  8805: (vv, zv) => {
-    class Pv {
+  9139: (TT, kT) => {
+    class cT {
       constructor() {
         this.handlers = []
       }
-      register(vv) {
-        return this.handlers.push(vv), this
+      register(TT) {
+        return this.handlers.push(TT), this
       }
       invoke() {
-        for (var vv = arguments.length, zv = new Array(vv), Pv = 0; Pv < vv; Pv++) zv[Pv] = arguments[Pv];
-        this.handlers.forEach((vv => vv.apply(this, zv)))
+        for (var TT = arguments.length, kT = new Array(TT), cT = 0; cT < TT; cT++) kT[cT] = arguments[cT];
+        this.handlers.forEach((TT => TT.apply(this, kT)))
       }
       invokeAsync() {
-        for (var vv = arguments.length, zv = new Array(vv), Pv = 0; Pv < vv; Pv++) zv[Pv] = arguments[Pv];
-        return Promise.all(this.handlers.map((vv => vv.apply(this, zv))))
+        for (var TT = arguments.length, kT = new Array(TT), cT = 0; cT < TT; cT++) kT[cT] = arguments[cT];
+        return Promise.all(this.handlers.map((TT => TT.apply(this, kT))))
       }
-      remove(vv) {
-        const zv = this.handlers.indexOf(vv);
-        this.handlers[zv] = this.handlers[this.handlers.length - 1], this.handlers.pop()
+      remove(TT) {
+        const kT = this.handlers.indexOf(TT);
+        this.handlers[kT] = this.handlers[this.handlers.length - 1], this.handlers.pop()
       }
       clear() {
         this.handlers = []
       }
     }
-    zv.EventEmitter = Pv, zv.createSignal = function() {
-      const vv = new Pv;
+    kT.EventEmitter = cT, kT.createSignal = function() {
+      const TT = new cT;
 
-      function zv(zv) {
-        return vv.register(zv, null === this)
+      function kT(kT) {
+        return TT.register(kT, null === this)
       }
-      return zv.once = zv => {
-        const Pv = function() {
-          for (var hv = arguments.length, Sv = new Array(hv), ev = 0; ev < hv; ev++) Sv[ev] = arguments[ev];
-          zv.apply(this, Sv), vv.remove(Pv)
+      return kT.once = kT => {
+        const cT = function() {
+          for (var lT = arguments.length, MT = new Array(lT), KT = 0; KT < lT; KT++) MT[KT] = arguments[KT];
+          kT.apply(this, MT), TT.remove(cT)
         };
-        vv.register(Pv)
-      }, zv.remove = zv => vv.remove(zv), zv.invoke = function() {
-        return vv.invoke(...arguments)
-      }, zv.invokeAsync = function() {
-        return vv.invokeAsync(...arguments)
-      }, zv.clear = () => vv.clear(), zv
+        TT.register(cT)
+      }, kT.remove = kT => TT.remove(kT), kT.invoke = function() {
+        return TT.invoke(...arguments)
+      }, kT.invokeAsync = function() {
+        return TT.invokeAsync(...arguments)
+      }, kT.clear = () => TT.clear(), kT
     }
   },
-  8753: (vv, zv) => {
-    var Pv;
-    zv.CloseCode = void 0, (Pv = zv.CloseCode || (zv.CloseCode = {}))[Pv.CONSENTED = 4e3] = "CONSENTED", Pv[Pv.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
-    class hv extends Error {
-      constructor(vv, zv) {
-        super(zv), this.name = "ServerError", this.code = vv
+  9093: (TT, kT) => {
+    var cT;
+    kT.CloseCode = void 0, (cT = kT.CloseCode || (kT.CloseCode = {}))[cT.CONSENTED = 4e3] = "CONSENTED", cT[cT.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
+    class lT extends Error {
+      constructor(TT, kT) {
+        super(kT), this.name = "ServerError", this.code = TT
       }
     }
-    class Sv extends Error {
-      constructor(vv) {
-        super(vv), this.name = "AbortError"
+    class MT extends Error {
+      constructor(TT) {
+        super(TT), this.name = "AbortError"
       }
     }
-    zv.AbortError = Sv, zv.ServerError = hv
+    kT.AbortError = MT, kT.ServerError = lT
   },
-  8736: (vv, zv, Pv) => {
-    Pv(8738);
-    var hv = Pv(8743),
-      Sv = Pv(8784),
-      ev = Pv(8758),
-      gv = Pv(8823),
-      pv = Pv(8753),
-      dv = Pv(8808),
-      Nv = Pv(8843),
-      lv = Pv(8793);
-    lv.registerSerializer("schema", dv.jD), lv.registerSerializer("none", Nv.NoneSerializer), zv.Client = hv.Client, zv.MatchMakeError = hv.MatchMakeError, Object.defineProperty(zv, "ErrorCode", {
+  9071: (TT, kT, cT) => {
+    cT(9076);
+    var lT = cT(9079),
+      MT = cT(9124),
+      KT = cT(9097),
+      OT = cT(9172),
+      yT = cT(9093),
+      fT = cT(9145),
+      xT = cT(9186),
+      IT = cT(9127);
+    IT.registerSerializer("schema", fT.Yz), IT.registerSerializer("none", xT.NoneSerializer), kT.Client = lT.Client, kT.MatchMakeError = lT.MatchMakeError, Object.defineProperty(kT, "ErrorCode", {
       enumerable: !0,
       get: function() {
-        return Sv.ErrorCode
+        return MT.ErrorCode
       }
-    }), Object.defineProperty(zv, "Protocol", {
+    }), Object.defineProperty(kT, "Protocol", {
       enumerable: !0,
       get: function() {
-        return Sv.Protocol
+        return MT.Protocol
       }
-    }), zv.QT = ev.QT, zv.Auth = gv.Auth, zv.ServerError = pv.ServerError, zv.jD = dv.jD, zv.getStateCallbacks = dv.getStateCallbacks, zv.registerSerializer = lv.registerSerializer
+    }), kT.XA = KT.XA, kT.Auth = OT.Auth, kT.ServerError = yT.ServerError, kT.Yz = fT.Yz, kT.getStateCallbacks = fT.getStateCallbacks, kT.registerSerializer = IT.registerSerializer
   },
-  8738: () => {
-    ArrayBuffer.isView || (ArrayBuffer.isView = vv => null !== vv && "object" === typeof vv && vv.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
+  9076: () => {
+    ArrayBuffer.isView || (ArrayBuffer.isView = TT => null !== TT && "object" === typeof TT && TT.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
   },
-  8843: (vv, zv) => {
-    zv.NoneSerializer = class {
-      setState(vv) {}
+  9186: (TT, kT) => {
+    kT.NoneSerializer = class {
+      setState(TT) {}
       getState() {
         return null
       }
-      patch(vv) {}
+      patch(TT) {}
       teardown() {}
-      handshake(vv) {}
+      handshake(TT) {}
     }
   },
-  8808: (vv, zv, Pv) => {
-    var hv = Pv(8772);
-    zv.jD = class {
-      setState(vv, zv) {
-        this.ow.decode(vv, zv)
+  9145: (TT, kT, cT) => {
+    var lT = cT(9115);
+    kT.Yz = class {
+      setState(TT, kT) {
+        this.pj.decode(TT, kT)
       }
       getState() {
         return this.state
       }
-      patch(vv, zv) {
-        return this.ow.decode(vv, zv)
+      patch(TT, kT) {
+        return this.pj.decode(TT, kT)
       }
       teardown() {
-        this.ow.root.clearRefs()
+        this.pj.root.clearRefs()
       }
-      handshake(vv, zv) {
-        this.state ? (hv.Reflection.decode(vv, zv), this.ow = new hv.Decoder(this.state)) : (this.ow = hv.Reflection.decode(vv, zv), this.state = this.ow.state)
+      handshake(TT, kT) {
+        this.state ? (lT.Reflection.decode(TT, kT), this.pj = new lT.Decoder(this.state)) : (this.pj = lT.Reflection.decode(TT, kT), this.state = this.pj.state)
       }
-    }, zv.getStateCallbacks = function(vv) {
+    }, kT.getStateCallbacks = function(TT) {
       try {
-        return hv.getDecoderStateCallbacks(vv.uC.ow)
-      } catch (zv) {
+        return lT.getDecoderStateCallbacks(TT.aN.pj)
+      } catch (kT) {
         return
       }
     }
   },
-  8793: (vv, zv) => {
-    const Pv = {};
-    zv.getSerializer = function(vv) {
-      const zv = Pv[vv];
-      if (!zv) throw new Error("missing serializer: " + vv);
-      return zv
-    }, zv.registerSerializer = function(vv, zv) {
-      Pv[vv] = zv
+  9127: (TT, kT) => {
+    const cT = {};
+    kT.getSerializer = function(TT) {
+      const kT = cT[TT];
+      if (!kT) throw new Error("missing serializer: " + TT);
+      return kT
+    }, kT.registerSerializer = function(TT, kT) {
+      cT[TT] = kT
     }
   },
-  8769: (vv, zv, Pv) => {
-    var hv = Pv(8746),
-      Sv = Pv(8772);
-    zv.H3TransportTransport = class {
-      constructor(vv) {
-        this.events = vv, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
+  9106: (TT, kT, cT) => {
+    var lT = cT(9086),
+      MT = cT(9115);
+    kT.H3TransportTransport = class {
+      constructor(TT) {
+        this.events = TT, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
       }
-      connect(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const Pv = zv.fingerprint && {
+      connect(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const cT = kT.fingerprint && {
           serverCertificateHashes: [{
             algorithm: "sha-256",
-            value: new Uint8Array(zv.fingerprint).buffer
+            value: new Uint8Array(kT.fingerprint).buffer
           }]
         } || void 0;
-        this.wt = new WebTransport(vv, Pv), this.wt.ready.then((vv => {
-          console.log("WebTransport ready!", vv), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
-          this.wt.incomingBidirectionalStreams.getReader().read().then((vv => {
-            this.reader = vv.value.readable.getReader(), this.writer = vv.value.writable.getWriter(), this.sendSeatReservation(zv.room.roomId, zv.sessionId, zv.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
-          })).catch((vv => {
-            console.error("failed to read incoming stream", vv), console.error("TODO: close the connection")
+        this.wt = new WebTransport(TT, cT), this.wt.ready.then((TT => {
+          console.log("WebTransport ready!", TT), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
+          this.wt.incomingBidirectionalStreams.getReader().read().then((TT => {
+            this.reader = TT.value.readable.getReader(), this.writer = TT.value.writable.getWriter(), this.sendSeatReservation(kT.room.roomId, kT.sessionId, kT.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
+          })).catch((TT => {
+            console.error("failed to read incoming stream", TT), console.error("TODO: close the connection")
           }))
-        })).catch((vv => {
-          console.log("WebTransport not ready!", vv), this._close()
-        })), this.wt.closed.then((vv => {
-          console.log("WebTransport closed w/ success", vv), this.events.onclose({
-            code: vv.closeCode,
-            reason: vv.reason
+        })).catch((TT => {
+          console.log("WebTransport not ready!", TT), this._close()
+        })), this.wt.closed.then((TT => {
+          console.log("WebTransport closed w/ success", TT), this.events.onclose({
+            code: TT.closeCode,
+            reason: TT.reason
           })
-        })).catch((vv => {
-          console.log("WebTransport closed w/ error", vv), this.events.onerror(vv), this.events.onclose({
-            code: vv.closeCode,
-            reason: vv.reason
+        })).catch((TT => {
+          console.log("WebTransport closed w/ error", TT), this.events.onerror(TT), this.events.onclose({
+            code: TT.closeCode,
+            reason: TT.reason
           })
         })).finally((() => {
           this._close()
         }))
       }
-      send(vv) {
-        const zv = Sv.encode.number(this.lengthPrefixBuffer, vv.length, {
+      send(TT) {
+        const kT = MT.encode.number(this.lengthPrefixBuffer, TT.length, {
             offset: 0
           }),
-          Pv = new Uint8Array(zv + vv.length);
-        Pv.set(this.lengthPrefixBuffer.subarray(0, zv), 0), Pv.set(vv, zv), this.writer.write(Pv)
+          cT = new Uint8Array(kT + TT.length);
+        cT.set(this.lengthPrefixBuffer.subarray(0, kT), 0), cT.set(TT, kT), this.writer.write(cT)
       }
-      sendUnreliable(vv) {
-        const zv = Sv.encode.number(this.lengthPrefixBuffer, vv.length, {
+      sendUnreliable(TT) {
+        const kT = MT.encode.number(this.lengthPrefixBuffer, TT.length, {
             offset: 0
           }),
-          Pv = new Uint8Array(zv + vv.length);
-        Pv.set(this.lengthPrefixBuffer.subarray(0, zv), 0), Pv.set(vv, zv), this.unreliableWriter.write(Pv)
+          cT = new Uint8Array(kT + TT.length);
+        cT.set(this.lengthPrefixBuffer.subarray(0, kT), 0), cT.set(TT, kT), this.unreliableWriter.write(cT)
       }
-      close(vv, zv) {
+      close(TT, kT) {
         try {
           this.wt.close({
-            closeCode: vv,
-            reason: zv
+            closeCode: TT,
+            reason: kT
           })
-        } catch (Pv) {
-          console.error(Pv)
+        } catch (cT) {
+          console.error(cT)
         }
       }
       readIncomingData() {
-        return hv.__awaiter(this, void 0, void 0, (function*() {
-          let vv;
+        return lT.__awaiter(this, void 0, void 0, (function*() {
+          let TT;
           for (; this.isOpen;) {
             try {
-              vv = yield this.reader.read();
-              const zv = vv.value,
-                Pv = {
+              TT = yield this.reader.read();
+              const kT = TT.value,
+                cT = {
                   offset: 0
                 };
               do {
-                const vv = Sv.decode.number(zv, Pv);
+                const TT = MT.decode.number(kT, cT);
                 this.events.onmessage({
-                  data: zv.subarray(Pv.offset, Pv.offset + vv)
-                }), Pv.offset += vv
-              } while (Pv.offset < zv.length)
-            } catch (zv) {
-              -1 === zv.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", zv);
+                  data: kT.subarray(cT.offset, cT.offset + TT)
+                }), cT.offset += TT
+              } while (cT.offset < kT.length)
+            } catch (kT) {
+              -1 === kT.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", kT);
               break
             }
-            if (vv.done) break
+            if (TT.done) break
           }
         }))
       }
       readIncomingUnreliableData() {
-        return hv.__awaiter(this, void 0, void 0, (function*() {
-          let vv;
+        return lT.__awaiter(this, void 0, void 0, (function*() {
+          let TT;
           for (; this.isOpen;) {
             try {
-              vv = yield this.unreliableReader.read();
-              const zv = vv.value,
-                Pv = {
+              TT = yield this.unreliableReader.read();
+              const kT = TT.value,
+                cT = {
                   offset: 0
                 };
               do {
-                const vv = Sv.decode.number(zv, Pv);
+                const TT = MT.decode.number(kT, cT);
                 this.events.onmessage({
-                  data: zv.subarray(Pv.offset, Pv.offset + vv)
-                }), Pv.offset += vv
-              } while (Pv.offset < zv.length)
-            } catch (zv) {
-              -1 === zv.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", zv);
+                  data: kT.subarray(cT.offset, cT.offset + TT)
+                }), cT.offset += TT
+              } while (cT.offset < kT.length)
+            } catch (kT) {
+              -1 === kT.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", kT);
               break
             }
-            if (vv.done) break
+            if (TT.done) break
           }
         }))
       }
-      sendSeatReservation(vv, zv, Pv) {
-        const hv = {
+      sendSeatReservation(TT, kT, cT) {
+        const lT = {
             offset: 0
           },
-          ev = [];
-        Sv.encode.string(ev, vv, hv), Sv.encode.string(ev, zv, hv), Pv && Sv.encode.string(ev, Pv, hv), this.writer.write(new Uint8Array(ev).buffer)
+          KT = [];
+        MT.encode.string(KT, TT, lT), MT.encode.string(KT, kT, lT), cT && MT.encode.string(KT, cT, lT), this.writer.write(new Uint8Array(KT).buffer)
       }
       _close() {
         this.isOpen = !1
       }
     }
   },
-  8775: (vv, zv, Pv) => {
-    var hv = Pv(8781);
-    const Sv = globalThis.WebSocket || hv;
-    zv.WebSocketTransport = class {
-      constructor(vv) {
-        this.events = vv
+  9119: (TT, kT, cT) => {
+    var lT = cT(9121);
+    const MT = globalThis.WebSocket || lT;
+    kT.WebSocketTransport = class {
+      constructor(TT) {
+        this.events = TT
       }
-      send(vv) {
-        this.ws.send(vv)
+      send(TT) {
+        this.ws.send(TT)
       }
-      sendUnreliable(vv) {
+      sendUnreliable(TT) {
         console.warn("colyseus.js: The WebSocket transport does not support unreliable messages")
       }
-      connect(vv, zv) {
+      connect(TT, kT) {
         try {
-          this.ws = new Sv(vv, {
-            headers: zv,
+          this.ws = new MT(TT, {
+            headers: kT,
             protocols: this.protocols
           })
-        } catch (Pv) {
-          this.ws = new Sv(vv, this.protocols)
+        } catch (cT) {
+          this.ws = new MT(TT, this.protocols)
         }
         this.ws.binaryType = "arraybuffer", this.ws.onopen = this.events.onopen, this.ws.onmessage = this.events.onmessage, this.ws.onclose = this.events.onclose, this.ws.onerror = this.events.onerror
       }
-      close(vv, zv) {
-        this.ws.close(vv, zv)
+      close(TT, kT) {
+        this.ws.close(TT, kT)
       }
       get isOpen() {
-        return this.ws.readyState === Sv.OPEN
+        return this.ws.readyState === MT.OPEN
       }
     }
   },
-  8781: vv => {
-    vv.exports = function() {
+  9121: TT => {
+    TT.exports = function() {
       throw new Error("ws does not work in the browser. Browser clients must use the native WebSocket object")
     }
   },
-  8819: (vv, zv, Pv) => {
-    function hv(vv, zv) {
-      zv.headers = vv.headers || {}, zv.statusMessage = vv.statusText, zv.statusCode = vv.status, zv.data = vv.response
+  9167: (TT, kT, cT) => {
+    function lT(TT, kT) {
+      kT.headers = TT.headers || {}, kT.statusMessage = TT.statusText, kT.statusCode = TT.status, kT.data = TT.response
     }
 
-    function Sv(vv, zv, Pv) {
-      return new Promise((function(Sv, ev) {
-        Pv = Pv || {};
-        var gv, pv, dv, Nv = new XMLHttpRequest,
-          lv = Pv.body,
-          Tv = Pv.headers || {};
-        for (gv in Pv.timeout && (Nv.timeout = Pv.timeout), Nv.ontimeout = Nv.onerror = function(vv) {
-            vv.timeout = "timeout" == vv.type, ev(vv)
-          }, Nv.onabort = function(vv) {
-            vv.aborted = !0, ev(vv)
-          }, Nv.open(vv, zv.href || zv), Nv.onload = function() {
-            for (dv = Nv.getAllResponseHeaders().trim().split(/[\r\n]+/), hv(Nv, Nv); pv = dv.shift();) pv = pv.split(": "), Nv.headers[pv.shift().toLowerCase()] = pv.join(": ");
-            if ((pv = Nv.headers["content-type"]) && ~pv.indexOf("application/json")) try {
-              Nv.data = JSON.parse(Nv.data, Pv.reviver)
-            } catch (vv) {
-              return hv(Nv, vv), ev(vv)
-            }(Nv.status >= 400 ? ev : Sv)(Nv)
-          }, typeof FormData < "u" && lv instanceof FormData || lv && "object" == typeof lv && (Tv["content-type"] = "application/json", lv = JSON.stringify(lv)), Nv.withCredentials = !!Pv.withCredentials, Tv) Nv.setRequestHeader(gv, Tv[gv]);
-        Nv.send(lv), Pv.signal && Pv.signal.addEventListener("abort", (function() {
-          Nv.abort()
+    function MT(TT, kT, cT) {
+      return new Promise((function(MT, KT) {
+        cT = cT || {};
+        var OT, yT, fT, xT = new XMLHttpRequest,
+          IT = cT.body,
+          AT = cT.headers || {};
+        for (OT in cT.timeout && (xT.timeout = cT.timeout), xT.ontimeout = xT.onerror = function(TT) {
+            TT.timeout = "timeout" == TT.type, KT(TT)
+          }, xT.onabort = function(TT) {
+            TT.aborted = !0, KT(TT)
+          }, xT.open(TT, kT.href || kT), xT.onload = function() {
+            for (fT = xT.getAllResponseHeaders().trim().split(/[\r\n]+/), lT(xT, xT); yT = fT.shift();) yT = yT.split(": "), xT.headers[yT.shift().toLowerCase()] = yT.join(": ");
+            if ((yT = xT.headers["content-type"]) && ~yT.indexOf("application/json")) try {
+              xT.data = JSON.parse(xT.data, cT.reviver)
+            } catch (TT) {
+              return lT(xT, TT), KT(TT)
+            }(xT.status >= 400 ? KT : MT)(xT)
+          }, typeof FormData < "u" && IT instanceof FormData || IT && "object" == typeof IT && (AT["content-type"] = "application/json", IT = JSON.stringify(IT)), xT.withCredentials = !!cT.withCredentials, AT) xT.setRequestHeader(OT, AT[OT]);
+        xT.send(IT), cT.signal && cT.signal.addEventListener("abort", (function() {
+          xT.abort()
         }))
       }))
     }
-    Pv.r(zv), Pv.d(zv, {
-      del: () => dv,
-      get: () => ev,
-      patch: () => pv,
-      post: () => gv,
-      put: () => Nv,
-      send: () => Sv
+    cT.r(kT), cT.d(kT, {
+      del: () => fT,
+      get: () => KT,
+      patch: () => yT,
+      post: () => OT,
+      put: () => xT,
+      send: () => MT
     });
-    var ev = Sv.bind(Sv, "GET"),
-      gv = Sv.bind(Sv, "POST"),
-      pv = Sv.bind(Sv, "PATCH"),
-      dv = Sv.bind(Sv, "DELETE"),
-      Nv = Sv.bind(Sv, "PUT")
+    var KT = MT.bind(MT, "GET"),
+      OT = MT.bind(MT, "POST"),
+      yT = MT.bind(MT, "PATCH"),
+      fT = MT.bind(MT, "DELETE"),
+      xT = MT.bind(MT, "PUT")
   },
-  8812: (vv, zv, Pv) => {
-    var hv, Sv, ev;
-    Pv.r(zv), Pv.d(zv, {
-      ALWAYS: () => Ez,
-      C1: () => jv,
-      DECIMAL_FIT: () => bz,
-      DECIMAL_ROUND: () => oz,
-      Decoder: () => dz,
-      Encoder: () => Bz,
-      FLOAT32_OPTIONS: () => wz,
-      NEVER: () => Jz,
-      Packr: () => tz,
-      RESERVE_START_SPACE: () => Xz,
-      RESET_BUFFER_MODE: () => kz,
-      REUSE_BUFFER_MODE: () => rz,
-      Unpackr: () => Dv,
-      addExtension: () => Az,
-      clearSource: () => gz,
-      decode: () => Wz,
-      decodeIter: () => uz,
-      encode: () => yz,
-      encodeIter: () => vP,
-      isNativeAccelerationEnabled: () => Lv,
-      mapsAsObjects: () => PP,
-      pack: () => Mz,
-      roundFloat32: () => Gz,
-      unpack: () => lz,
-      unpackMultiple: () => Tz,
-      useRecords: () => zP
+  9154: (TT, kT, cT) => {
+    var lT, MT, KT;
+    cT.r(kT), cT.d(kT, {
+      ALWAYS: () => Wk,
+      C1: () => aT,
+      DECIMAL_FIT: () => pk,
+      DECIMAL_ROUND: () => nk,
+      Decoder: () => fk,
+      Encoder: () => Yk,
+      FLOAT32_OPTIONS: () => jk,
+      NEVER: () => Bk,
+      Packr: () => Vk,
+      RESERVE_START_SPACE: () => sk,
+      RESET_BUFFER_MODE: () => qk,
+      REUSE_BUFFER_MODE: () => ik,
+      Unpackr: () => bT,
+      addExtension: () => dk,
+      clearSource: () => Ok,
+      decode: () => Ck,
+      decodeIter: () => Tc,
+      encode: () => Uk,
+      encodeIter: () => kc,
+      isNativeAccelerationEnabled: () => dT,
+      mapsAsObjects: () => lc,
+      pack: () => gk,
+      roundFloat32: () => Sk,
+      unpack: () => Ik,
+      unpackMultiple: () => Ak,
+      useRecords: () => cc
     });
     try {
-      hv = new TextDecoder
-    } catch (hP) {}
-    var gv = 0;
-    const pv = [];
-    var dv, Nv, lv, Tv, Wv, wv = pv,
-      av = 0,
-      sv = {},
-      Cv = 0,
-      iv = 0,
-      cv = [],
-      Gv = {
+      lT = new TextDecoder
+    } catch (Mc) {}
+    var OT = 0;
+    const yT = [];
+    var fT, xT, IT, AT, CT, jT = yT,
+      vT = 0,
+      tT = {},
+      hT = 0,
+      NT = 0,
+      QT = [],
+      ST = {
         useRecords: !1,
         mapsAsObjects: !0
       };
-    class mv {}
-    const jv = new mv;
-    jv.name = "MessagePack 0xC1";
-    var fv, Fv, Yv, nv = !1,
-      Ov = 2;
+    class DT {}
+    const aT = new DT;
+    aT.name = "MessagePack 0xC1";
+    var FT, rT, PT, wT = !1,
+      mT = 2;
     try {
       new Function("")
-    } catch (hP) {
-      Ov = 1 / 0
+    } catch (Mc) {
+      mT = 1 / 0
     }
-    class Dv {
-      constructor(vv) {
-        vv && (!1 === vv.useRecords && void 0 === vv.mapsAsObjects && (vv.mapsAsObjects = !0), vv.sequential && !1 !== vv.trusted && (vv.trusted = !0, vv.structures || 0 == vv.useRecords || (vv.structures = [], vv.maxSharedStructures || (vv.maxSharedStructures = 0))), vv.structures ? vv.structures.sharedLength = vv.structures.length : vv.getStructures && ((vv.structures = []).uninitialized = !0, vv.structures.sharedLength = 0), vv.int64AsNumber && (vv.int64AsType = "number")), Object.assign(this, vv)
+    class bT {
+      constructor(TT) {
+        TT && (!1 === TT.useRecords && void 0 === TT.mapsAsObjects && (TT.mapsAsObjects = !0), TT.sequential && !1 !== TT.trusted && (TT.trusted = !0, TT.structures || 0 == TT.useRecords || (TT.structures = [], TT.maxSharedStructures || (TT.maxSharedStructures = 0))), TT.structures ? TT.structures.sharedLength = TT.structures.length : TT.getStructures && ((TT.structures = []).uninitialized = !0, TT.structures.sharedLength = 0), TT.int64AsNumber && (TT.int64AsType = "number")), Object.assign(this, TT)
       }
-      unpack(vv, zv) {
-        if (Sv) return ez((() => (gz(), this ? this.unpack(vv, zv) : Dv.prototype.unpack.call(Gv, vv, zv))));
-        vv.buffer || vv.constructor !== ArrayBuffer || (vv = "undefined" !== typeof Buffer ? Buffer.from(vv) : new Uint8Array(vv)), "object" === typeof zv ? (ev = zv.end || vv.length, gv = zv.start || 0) : (gv = 0, ev = zv > -1 ? zv : vv.length), av = 0, iv = 0, Nv = null, wv = pv, lv = null, Sv = vv;
+      unpack(TT, kT) {
+        if (MT) return Kk((() => (Ok(), this ? this.unpack(TT, kT) : bT.prototype.unpack.call(ST, TT, kT))));
+        TT.buffer || TT.constructor !== ArrayBuffer || (TT = "undefined" !== typeof Buffer ? Buffer.from(TT) : new Uint8Array(TT)), "object" === typeof kT ? (KT = kT.end || TT.length, OT = kT.start || 0) : (OT = 0, KT = kT > -1 ? kT : TT.length), vT = 0, NT = 0, xT = null, jT = yT, IT = null, MT = TT;
         try {
-          Wv = vv.dataView || (vv.dataView = new DataView(vv.buffer, vv.byteOffset, vv.byteLength))
-        } catch (hP) {
-          if (Sv = null, vv instanceof Uint8Array) throw hP;
-          throw new Error("Source must be a Uint8Array or Buffer but was a " + (vv && "object" == typeof vv ? vv.constructor.name : typeof vv))
+          CT = TT.dataView || (TT.dataView = new DataView(TT.buffer, TT.byteOffset, TT.byteLength))
+        } catch (Mc) {
+          if (MT = null, TT instanceof Uint8Array) throw Mc;
+          throw new Error("Source must be a Uint8Array or Buffer but was a " + (TT && "object" == typeof TT ? TT.constructor.name : typeof TT))
         }
-        if (this instanceof Dv) {
-          if (sv = this, this.structures) return dv = this.structures, Kv(zv);
-          (!dv || dv.length > 0) && (dv = [])
-        } else sv = Gv, (!dv || dv.length > 0) && (dv = []);
-        return Kv(zv)
+        if (this instanceof bT) {
+          if (tT = this, this.structures) return fT = this.structures, zT(kT);
+          (!fT || fT.length > 0) && (fT = [])
+        } else tT = ST, (!fT || fT.length > 0) && (fT = []);
+        return zT(kT)
       }
-      unpackMultiple(vv, zv) {
-        let Pv, hv = 0;
+      unpackMultiple(TT, kT) {
+        let cT, lT = 0;
         try {
-          nv = !0;
-          let Sv = vv.length,
-            ev = this ? this.unpack(vv, Sv) : Nz.unpack(vv, Sv);
-          if (!zv) {
-            for (Pv = [ev]; gv < Sv;) hv = gv, Pv.push(Kv());
-            return Pv
+          wT = !0;
+          let MT = TT.length,
+            KT = this ? this.unpack(TT, MT) : xk.unpack(TT, MT);
+          if (!kT) {
+            for (cT = [KT]; OT < MT;) lT = OT, cT.push(zT());
+            return cT
           }
-          if (!1 === zv(ev, hv, gv)) return;
-          for (; gv < Sv;)
-            if (hv = gv, !1 === zv(Kv(), hv, gv)) return
-        } catch (hP) {
-          throw hP.lastPosition = hv, hP.values = Pv, hP
+          if (!1 === kT(KT, lT, OT)) return;
+          for (; OT < MT;)
+            if (lT = OT, !1 === kT(zT(), lT, OT)) return
+        } catch (Mc) {
+          throw Mc.lastPosition = lT, Mc.values = cT, Mc
         } finally {
-          nv = !1, gz()
+          wT = !1, Ok()
         }
       }
-      _mergeStructures(vv, zv) {
-        Fv && (vv = Fv.call(this, vv)), vv = vv || [], Object.isFrozen(vv) && (vv = vv.map((vv => vv.slice(0))));
-        for (let Pv = 0, hv = vv.length; Pv < hv; Pv++) {
-          let zv = vv[Pv];
-          zv && (zv.isShared = !0, Pv >= 32 && (zv.highByte = Pv - 32 >> 5))
+      _mergeStructures(TT, kT) {
+        rT && (TT = rT.call(this, TT)), TT = TT || [], Object.isFrozen(TT) && (TT = TT.map((TT => TT.slice(0))));
+        for (let cT = 0, lT = TT.length; cT < lT; cT++) {
+          let kT = TT[cT];
+          kT && (kT.isShared = !0, cT >= 32 && (kT.highByte = cT - 32 >> 5))
         }
-        vv.sharedLength = vv.length;
-        for (let Pv in zv || [])
-          if (Pv >= 0) {
-            let hv = vv[Pv],
-              Sv = zv[Pv];
-            Sv && (hv && ((vv.restoreStructures || (vv.restoreStructures = []))[Pv] = hv), vv[Pv] = Sv)
-          } return this.structures = vv
+        TT.sharedLength = TT.length;
+        for (let cT in kT || [])
+          if (cT >= 0) {
+            let lT = TT[cT],
+              MT = kT[cT];
+            MT && (lT && ((TT.restoreStructures || (TT.restoreStructures = []))[cT] = lT), TT[cT] = MT)
+          } return this.structures = TT
       }
-      decode(vv, zv) {
-        return this.unpack(vv, zv)
+      decode(TT, kT) {
+        return this.unpack(TT, kT)
       }
     }
 
-    function Kv(vv) {
+    function zT(TT) {
       try {
-        if (!sv.trusted && !nv) {
-          let vv = dv.sharedLength || 0;
-          vv < dv.length && (dv.length = vv)
+        if (!tT.trusted && !wT) {
+          let TT = fT.sharedLength || 0;
+          TT < fT.length && (fT.length = TT)
         }
-        let zv;
-        if (sv.randomAccessStructure && Sv[gv] < 64 && Sv[gv] >= 32 && fv ? (zv = fv(Sv, gv, ev, sv), Sv = null, vv && vv.lazy || !zv || (zv = zv.toJSON()), gv = ev) : zv = Uv(), lv && (gv = lv.postBundlePosition, lv = null), nv && (dv.restoreStructures = null), gv == ev) dv && dv.restoreStructures && Vv(), dv = null, Sv = null, Tv && (Tv = null);
+        let kT;
+        if (tT.randomAccessStructure && MT[OT] < 64 && MT[OT] >= 32 && FT ? (kT = FT(MT, OT, KT, tT), MT = null, TT && TT.lazy || !kT || (kT = kT.toJSON()), OT = KT) : kT = oT(), IT && (OT = IT.postBundlePosition, IT = null), wT && (fT.restoreStructures = null), OT == KT) fT && fT.restoreStructures && JT(), fT = null, MT = null, AT && (AT = null);
         else {
-          if (gv > ev) throw new Error("Unexpected end of MessagePack data");
-          if (!nv) {
-            let vv;
+          if (OT > KT) throw new Error("Unexpected end of MessagePack data");
+          if (!wT) {
+            let TT;
             try {
-              vv = JSON.stringify(zv, ((vv, zv) => "bigint" === typeof zv ? `${zv}n` : zv)).slice(0, 100)
-            } catch (hP) {
-              vv = "(JSON view not available " + hP + ")"
+              TT = JSON.stringify(kT, ((TT, kT) => "bigint" === typeof kT ? `${kT}n` : kT)).slice(0, 100)
+            } catch (Mc) {
+              TT = "(JSON view not available " + Mc + ")"
             }
-            throw new Error("Data read, but end of buffer not reached " + vv)
+            throw new Error("Data read, but end of buffer not reached " + TT)
           }
         }
-        return zv
-      } catch (hP) {
-        throw dv && dv.restoreStructures && Vv(), gz(), (hP instanceof RangeError || hP.message.startsWith("Unexpected end of buffer") || gv > ev) && (hP.incomplete = !0), hP
+        return kT
+      } catch (Mc) {
+        throw fT && fT.restoreStructures && JT(), Ok(), (Mc instanceof RangeError || Mc.message.startsWith("Unexpected end of buffer") || OT > KT) && (Mc.incomplete = !0), Mc
       }
     }
 
-    function Vv() {
-      for (let vv in dv.restoreStructures) dv[vv] = dv.restoreStructures[vv];
-      dv.restoreStructures = null
+    function JT() {
+      for (let TT in fT.restoreStructures) fT[TT] = fT.restoreStructures[TT];
+      fT.restoreStructures = null
     }
 
-    function Uv() {
-      let vv = Sv[gv++];
-      if (vv < 160) {
-        if (vv < 128) {
-          if (vv < 64) return vv;
+    function oT() {
+      let TT = MT[OT++];
+      if (TT < 160) {
+        if (TT < 128) {
+          if (TT < 64) return TT;
           {
-            let zv = dv[63 & vv] || sv.getStructures && qv()[63 & vv];
-            return zv ? (zv.read || (zv.read = xv(zv, 63 & vv)), zv.read()) : vv
+            let kT = fT[63 & TT] || tT.getStructures && VT()[63 & TT];
+            return kT ? (kT.read || (kT.read = eT(kT, 63 & TT)), kT.read()) : TT
           }
         }
-        if (vv < 144) {
-          if (vv -= 128, sv.mapsAsObjects) {
-            let zv = {};
-            for (let Pv = 0; Pv < vv; Pv++) {
-              let vv = Xv();
-              "__proto__" === vv && (vv = "__proto_"), zv[vv] = Uv()
+        if (TT < 144) {
+          if (TT -= 128, tT.mapsAsObjects) {
+            let kT = {};
+            for (let cT = 0; cT < TT; cT++) {
+              let TT = qT();
+              "__proto__" === TT && (TT = "__proto_"), kT[TT] = oT()
             }
-            return zv
+            return kT
           } {
-            let zv = new Map;
-            for (let Pv = 0; Pv < vv; Pv++) zv.set(Uv(), Uv());
-            return zv
+            let kT = new Map;
+            for (let cT = 0; cT < TT; cT++) kT.set(oT(), oT());
+            return kT
           }
         } {
-          vv -= 144;
-          let zv = new Array(vv);
-          for (let Pv = 0; Pv < vv; Pv++) zv[Pv] = Uv();
-          return sv.freezeData ? Object.freeze(zv) : zv
+          TT -= 144;
+          let kT = new Array(TT);
+          for (let cT = 0; cT < TT; cT++) kT[cT] = oT();
+          return tT.freezeData ? Object.freeze(kT) : kT
         }
       }
-      if (vv < 192) {
-        let zv = vv - 160;
-        if (iv >= gv) return Nv.slice(gv - Cv, (gv += zv) - Cv);
-        if (0 == iv && ev < 140) {
-          let vv = zv < 16 ? Ev(zv) : Jv(zv);
-          if (null != vv) return vv
+      if (TT < 192) {
+        let kT = TT - 160;
+        if (NT >= OT) return xT.slice(OT - hT, (OT += kT) - hT);
+        if (0 == NT && KT < 140) {
+          let TT = kT < 16 ? BT(kT) : YT(kT);
+          if (null != TT) return TT
         }
-        return Iv(zv)
+        return ET(kT)
       } {
-        let zv;
-        switch (vv) {
+        let kT;
+        switch (TT) {
           case 192:
             return null;
           case 193:
-            return lv ? (zv = Uv(), zv > 0 ? lv[1].slice(lv.position1, lv.position1 += zv) : lv[0].slice(lv.position0, lv.position0 -= zv)) : jv;
+            return IT ? (kT = oT(), kT > 0 ? IT[1].slice(IT.position1, IT.position1 += kT) : IT[0].slice(IT.position0, IT.position0 -= kT)) : aT;
           case 194:
             return !1;
           case 195:
             return !0;
           case 196:
-            if (zv = Sv[gv++], void 0 === zv) throw new Error("Unexpected end of buffer");
-            return bv(zv);
+            if (kT = MT[OT++], void 0 === kT) throw new Error("Unexpected end of buffer");
+            return nT(kT);
           case 197:
-            return zv = Wv.getUint16(gv), gv += 2, bv(zv);
+            return kT = CT.getUint16(OT), OT += 2, nT(kT);
           case 198:
-            return zv = Wv.getUint32(gv), gv += 4, bv(zv);
+            return kT = CT.getUint32(OT), OT += 4, nT(kT);
           case 199:
-            return rv(Sv[gv++]);
+            return pT(MT[OT++]);
           case 200:
-            return zv = Wv.getUint16(gv), gv += 2, rv(zv);
+            return kT = CT.getUint16(OT), OT += 2, pT(kT);
           case 201:
-            return zv = Wv.getUint32(gv), gv += 4, rv(zv);
+            return kT = CT.getUint32(OT), OT += 4, pT(kT);
           case 202:
-            if (zv = Wv.getFloat32(gv), sv.useFloat32 > 2) {
-              let vv = pz[(127 & Sv[gv]) << 1 | Sv[gv + 1] >> 7];
-              return gv += 4, (vv * zv + (zv > 0 ? .5 : -.5) | 0) / vv
+            if (kT = CT.getFloat32(OT), tT.useFloat32 > 2) {
+              let TT = yk[(127 & MT[OT]) << 1 | MT[OT + 1] >> 7];
+              return OT += 4, (TT * kT + (kT > 0 ? .5 : -.5) | 0) / TT
             }
-            return gv += 4, zv;
+            return OT += 4, kT;
           case 203:
-            return zv = Wv.getFloat64(gv), gv += 8, zv;
+            return kT = CT.getFloat64(OT), OT += 8, kT;
           case 204:
-            return Sv[gv++];
+            return MT[OT++];
           case 205:
-            return zv = Wv.getUint16(gv), gv += 2, zv;
+            return kT = CT.getUint16(OT), OT += 2, kT;
           case 206:
-            return zv = Wv.getUint32(gv), gv += 4, zv;
+            return kT = CT.getUint32(OT), OT += 4, kT;
           case 207:
-            return "number" === sv.int64AsType ? (zv = 4294967296 * Wv.getUint32(gv), zv += Wv.getUint32(gv + 4)) : "string" === sv.int64AsType ? zv = Wv.getBigUint64(gv).toString() : "auto" === sv.int64AsType ? (zv = Wv.getBigUint64(gv), zv <= BigInt(2) << BigInt(52) && (zv = Number(zv))) : zv = Wv.getBigUint64(gv), gv += 8, zv;
+            return "number" === tT.int64AsType ? (kT = 4294967296 * CT.getUint32(OT), kT += CT.getUint32(OT + 4)) : "string" === tT.int64AsType ? kT = CT.getBigUint64(OT).toString() : "auto" === tT.int64AsType ? (kT = CT.getBigUint64(OT), kT <= BigInt(2) << BigInt(52) && (kT = Number(kT))) : kT = CT.getBigUint64(OT), OT += 8, kT;
           case 208:
-            return Wv.getInt8(gv++);
+            return CT.getInt8(OT++);
           case 209:
-            return zv = Wv.getInt16(gv), gv += 2, zv;
+            return kT = CT.getInt16(OT), OT += 2, kT;
           case 210:
-            return zv = Wv.getInt32(gv), gv += 4, zv;
+            return kT = CT.getInt32(OT), OT += 4, kT;
           case 211:
-            return "number" === sv.int64AsType ? (zv = 4294967296 * Wv.getInt32(gv), zv += Wv.getUint32(gv + 4)) : "string" === sv.int64AsType ? zv = Wv.getBigInt64(gv).toString() : "auto" === sv.int64AsType ? (zv = Wv.getBigInt64(gv), zv >= BigInt(-2) << BigInt(52) && zv <= BigInt(2) << BigInt(52) && (zv = Number(zv))) : zv = Wv.getBigInt64(gv), gv += 8, zv;
+            return "number" === tT.int64AsType ? (kT = 4294967296 * CT.getInt32(OT), kT += CT.getUint32(OT + 4)) : "string" === tT.int64AsType ? kT = CT.getBigInt64(OT).toString() : "auto" === tT.int64AsType ? (kT = CT.getBigInt64(OT), kT >= BigInt(-2) << BigInt(52) && kT <= BigInt(2) << BigInt(52) && (kT = Number(kT))) : kT = CT.getBigInt64(OT), OT += 8, kT;
           case 212:
-            if (zv = Sv[gv++], 114 == zv) return vz(63 & Sv[gv++]);
+            if (kT = MT[OT++], 114 == kT) return Tk(63 & MT[OT++]);
             {
-              let vv = cv[zv];
-              if (vv) return vv.read ? (gv++, vv.read(Uv())) : vv.noBuffer ? (gv++, vv()) : vv(Sv.subarray(gv, ++gv));
-              throw new Error("Unknown extension " + zv)
+              let TT = QT[kT];
+              if (TT) return TT.read ? (OT++, TT.read(oT())) : TT.noBuffer ? (OT++, TT()) : TT(MT.subarray(OT, ++OT));
+              throw new Error("Unknown extension " + kT)
             }
           case 213:
-            return zv = Sv[gv], 114 == zv ? (gv++, vz(63 & Sv[gv++], Sv[gv++])) : rv(2);
+            return kT = MT[OT], 114 == kT ? (OT++, Tk(63 & MT[OT++], MT[OT++])) : pT(2);
           case 214:
-            return rv(4);
+            return pT(4);
           case 215:
-            return rv(8);
+            return pT(8);
           case 216:
-            return rv(16);
+            return pT(16);
           case 217:
-            return zv = Sv[gv++], iv >= gv ? Nv.slice(gv - Cv, (gv += zv) - Cv) : Qv(zv);
+            return kT = MT[OT++], NT >= OT ? xT.slice(OT - hT, (OT += kT) - hT) : ZT(kT);
           case 218:
-            return zv = Wv.getUint16(gv), iv >= (gv += 2) ? Nv.slice(gv - Cv, (gv += zv) - Cv) : Zv(zv);
+            return kT = CT.getUint16(OT), NT >= (OT += 2) ? xT.slice(OT - hT, (OT += kT) - hT) : uT(kT);
           case 219:
-            return zv = Wv.getUint32(gv), iv >= (gv += 4) ? Nv.slice(gv - Cv, (gv += zv) - Cv) : Av(zv);
+            return kT = CT.getUint32(OT), NT >= (OT += 4) ? xT.slice(OT - hT, (OT += kT) - hT) : XT(kT);
           case 220:
-            return zv = Wv.getUint16(gv), gv += 2, Mv(zv);
+            return kT = CT.getUint16(OT), OT += 2, RT(kT);
           case 221:
-            return zv = Wv.getUint32(gv), gv += 4, Mv(zv);
+            return kT = CT.getUint32(OT), OT += 4, RT(kT);
           case 222:
-            return zv = Wv.getUint16(gv), gv += 2, yv(zv);
+            return kT = CT.getUint16(OT), OT += 2, gT(kT);
           case 223:
-            return zv = Wv.getUint32(gv), gv += 4, yv(zv);
+            return kT = CT.getUint32(OT), OT += 4, gT(kT);
           default:
-            if (vv >= 224) return vv - 256;
-            if (void 0 === vv) {
-              let vv = new Error("Unexpected end of MessagePack data");
-              throw vv.incomplete = !0, vv
+            if (TT >= 224) return TT - 256;
+            if (void 0 === TT) {
+              let TT = new Error("Unexpected end of MessagePack data");
+              throw TT.incomplete = !0, TT
             }
-            throw new Error("Unknown MessagePack token " + vv)
+            throw new Error("Unknown MessagePack token " + TT)
         }
       }
     }
-    const Rv = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
+    const HT = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
 
-    function xv(vv, zv) {
-      function Pv() {
-        if (Pv.count++ > Ov) {
-          let Pv = vv.read = new Function("r", "return function(){return " + (sv.freezeData ? "Object.freeze" : "") + "({" + vv.map((vv => "__proto__" === vv ? "__proto_:r()" : Rv.test(vv) ? vv + ":r()" : "[" + JSON.stringify(vv) + "]:r()")).join(",") + "})}")(Uv);
-          return 0 === vv.highByte && (vv.read = tv(zv, vv.read)), Pv()
+    function eT(TT, kT) {
+      function cT() {
+        if (cT.count++ > mT) {
+          let cT = TT.read = new Function("r", "return function(){return " + (tT.freezeData ? "Object.freeze" : "") + "({" + TT.map((TT => "__proto__" === TT ? "__proto_:r()" : HT.test(TT) ? TT + ":r()" : "[" + JSON.stringify(TT) + "]:r()")).join(",") + "})}")(oT);
+          return 0 === TT.highByte && (TT.read = GT(kT, TT.read)), cT()
         }
-        let hv = {};
-        for (let zv = 0, Pv = vv.length; zv < Pv; zv++) {
-          let Pv = vv[zv];
-          "__proto__" === Pv && (Pv = "__proto_"), hv[Pv] = Uv()
+        let lT = {};
+        for (let kT = 0, cT = TT.length; kT < cT; kT++) {
+          let cT = TT[kT];
+          "__proto__" === cT && (cT = "__proto_"), lT[cT] = oT()
         }
-        return sv.freezeData ? Object.freeze(hv) : hv
+        return tT.freezeData ? Object.freeze(lT) : lT
       }
-      return Pv.count = 0, 0 === vv.highByte ? tv(zv, Pv) : Pv
+      return cT.count = 0, 0 === TT.highByte ? GT(kT, cT) : cT
     }
-    const tv = (vv, zv) => function() {
-      let Pv = Sv[gv++];
-      if (0 === Pv) return zv();
-      let hv = vv < 32 ? -(vv + (Pv << 5)) : vv + (Pv << 5),
-        ev = dv[hv] || qv()[hv];
-      if (!ev) throw new Error("Record id is not defined for " + hv);
-      return ev.read || (ev.read = xv(ev, vv)), ev.read()
+    const GT = (TT, kT) => function() {
+      let cT = MT[OT++];
+      if (0 === cT) return kT();
+      let lT = TT < 32 ? -(TT + (cT << 5)) : TT + (cT << 5),
+        KT = fT[lT] || VT()[lT];
+      if (!KT) throw new Error("Record id is not defined for " + lT);
+      return KT.read || (KT.read = eT(KT, TT)), KT.read()
     };
 
-    function qv() {
-      let vv = ez((() => (Sv = null, sv.getStructures())));
-      return dv = sv._mergeStructures(vv, dv)
+    function VT() {
+      let TT = Kk((() => (MT = null, tT.getStructures())));
+      return fT = tT._mergeStructures(TT, fT)
     }
-    var Iv = Hv,
-      Qv = Hv,
-      Zv = Hv,
-      Av = Hv;
-    let Lv = !1;
+    var ET = LT,
+      ZT = LT,
+      uT = LT,
+      XT = LT;
+    let dT = !1;
 
-    function Hv(vv) {
-      let zv;
-      if (vv < 16 && (zv = Ev(vv))) return zv;
-      if (vv > 64 && hv) return hv.decode(Sv.subarray(gv, gv += vv));
-      const Pv = gv + vv,
-        ev = [];
-      for (zv = ""; gv < Pv;) {
-        const vv = Sv[gv++];
-        if (0 === (128 & vv)) ev.push(vv);
-        else if (192 === (224 & vv)) {
-          const zv = 63 & Sv[gv++];
-          ev.push((31 & vv) << 6 | zv)
-        } else if (224 === (240 & vv)) {
-          const zv = 63 & Sv[gv++],
-            Pv = 63 & Sv[gv++];
-          ev.push((31 & vv) << 12 | zv << 6 | Pv)
-        } else if (240 === (248 & vv)) {
-          let zv = (7 & vv) << 18 | (63 & Sv[gv++]) << 12 | (63 & Sv[gv++]) << 6 | 63 & Sv[gv++];
-          zv > 65535 && (zv -= 65536, ev.push(zv >>> 10 & 1023 | 55296), zv = 56320 | 1023 & zv), ev.push(zv)
-        } else ev.push(vv);
-        ev.length >= 4096 && (zv += Bv.apply(String, ev), ev.length = 0)
+    function LT(TT) {
+      let kT;
+      if (TT < 16 && (kT = BT(TT))) return kT;
+      if (TT > 64 && lT) return lT.decode(MT.subarray(OT, OT += TT));
+      const cT = OT + TT,
+        KT = [];
+      for (kT = ""; OT < cT;) {
+        const TT = MT[OT++];
+        if (0 === (128 & TT)) KT.push(TT);
+        else if (192 === (224 & TT)) {
+          const kT = 63 & MT[OT++];
+          KT.push((31 & TT) << 6 | kT)
+        } else if (224 === (240 & TT)) {
+          const kT = 63 & MT[OT++],
+            cT = 63 & MT[OT++];
+          KT.push((31 & TT) << 12 | kT << 6 | cT)
+        } else if (240 === (248 & TT)) {
+          let kT = (7 & TT) << 18 | (63 & MT[OT++]) << 12 | (63 & MT[OT++]) << 6 | 63 & MT[OT++];
+          kT > 65535 && (kT -= 65536, KT.push(kT >>> 10 & 1023 | 55296), kT = 56320 | 1023 & kT), KT.push(kT)
+        } else KT.push(TT);
+        KT.length >= 4096 && (kT += UT.apply(String, KT), KT.length = 0)
       }
-      return ev.length > 0 && (zv += Bv.apply(String, ev)), zv
+      return KT.length > 0 && (kT += UT.apply(String, KT)), kT
     }
 
-    function Mv(vv) {
-      let zv = new Array(vv);
-      for (let Pv = 0; Pv < vv; Pv++) zv[Pv] = Uv();
-      return sv.freezeData ? Object.freeze(zv) : zv
+    function RT(TT) {
+      let kT = new Array(TT);
+      for (let cT = 0; cT < TT; cT++) kT[cT] = oT();
+      return tT.freezeData ? Object.freeze(kT) : kT
     }
 
-    function yv(vv) {
-      if (sv.mapsAsObjects) {
-        let zv = {};
-        for (let Pv = 0; Pv < vv; Pv++) {
-          let vv = Xv();
-          "__proto__" === vv && (vv = "__proto_"), zv[vv] = Uv()
+    function gT(TT) {
+      if (tT.mapsAsObjects) {
+        let kT = {};
+        for (let cT = 0; cT < TT; cT++) {
+          let TT = qT();
+          "__proto__" === TT && (TT = "__proto_"), kT[TT] = oT()
         }
-        return zv
+        return kT
       } {
-        let zv = new Map;
-        for (let Pv = 0; Pv < vv; Pv++) zv.set(Uv(), Uv());
-        return zv
+        let kT = new Map;
+        for (let cT = 0; cT < TT; cT++) kT.set(oT(), oT());
+        return kT
       }
     }
-    var Bv = String.fromCharCode;
+    var UT = String.fromCharCode;
 
-    function Jv(vv) {
-      let zv = gv,
-        Pv = new Array(vv);
-      for (let hv = 0; hv < vv; hv++) {
-        const vv = Sv[gv++];
-        if ((128 & vv) > 0) return void(gv = zv);
-        Pv[hv] = vv
+    function YT(TT) {
+      let kT = OT,
+        cT = new Array(TT);
+      for (let lT = 0; lT < TT; lT++) {
+        const TT = MT[OT++];
+        if ((128 & TT) > 0) return void(OT = kT);
+        cT[lT] = TT
       }
-      return Bv.apply(String, Pv)
+      return UT.apply(String, cT)
     }
 
-    function Ev(vv) {
-      if (vv < 4) {
-        if (vv < 2) {
-          if (0 === vv) return "";
+    function BT(TT) {
+      if (TT < 4) {
+        if (TT < 2) {
+          if (0 === TT) return "";
           {
-            let vv = Sv[gv++];
-            return (128 & vv) > 1 ? void(gv -= 1) : Bv(vv)
+            let TT = MT[OT++];
+            return (128 & TT) > 1 ? void(OT -= 1) : UT(TT)
           }
         } {
-          let zv = Sv[gv++],
-            Pv = Sv[gv++];
-          if ((128 & zv) > 0 || (128 & Pv) > 0) return void(gv -= 2);
-          if (vv < 3) return Bv(zv, Pv);
-          let hv = Sv[gv++];
-          return (128 & hv) > 0 ? void(gv -= 3) : Bv(zv, Pv, hv)
+          let kT = MT[OT++],
+            cT = MT[OT++];
+          if ((128 & kT) > 0 || (128 & cT) > 0) return void(OT -= 2);
+          if (TT < 3) return UT(kT, cT);
+          let lT = MT[OT++];
+          return (128 & lT) > 0 ? void(OT -= 3) : UT(kT, cT, lT)
         }
       } {
-        let zv = Sv[gv++],
-          Pv = Sv[gv++],
-          hv = Sv[gv++],
-          ev = Sv[gv++];
-        if ((128 & zv) > 0 || (128 & Pv) > 0 || (128 & hv) > 0 || (128 & ev) > 0) return void(gv -= 4);
-        if (vv < 6) {
-          if (4 === vv) return Bv(zv, Pv, hv, ev);
+        let kT = MT[OT++],
+          cT = MT[OT++],
+          lT = MT[OT++],
+          KT = MT[OT++];
+        if ((128 & kT) > 0 || (128 & cT) > 0 || (128 & lT) > 0 || (128 & KT) > 0) return void(OT -= 4);
+        if (TT < 6) {
+          if (4 === TT) return UT(kT, cT, lT, KT);
           {
-            let vv = Sv[gv++];
-            return (128 & vv) > 0 ? void(gv -= 5) : Bv(zv, Pv, hv, ev, vv)
+            let TT = MT[OT++];
+            return (128 & TT) > 0 ? void(OT -= 5) : UT(kT, cT, lT, KT, TT)
           }
         }
-        if (vv < 8) {
-          let pv = Sv[gv++],
-            dv = Sv[gv++];
-          if ((128 & pv) > 0 || (128 & dv) > 0) return void(gv -= 6);
-          if (vv < 7) return Bv(zv, Pv, hv, ev, pv, dv);
-          let Nv = Sv[gv++];
-          return (128 & Nv) > 0 ? void(gv -= 7) : Bv(zv, Pv, hv, ev, pv, dv, Nv)
+        if (TT < 8) {
+          let yT = MT[OT++],
+            fT = MT[OT++];
+          if ((128 & yT) > 0 || (128 & fT) > 0) return void(OT -= 6);
+          if (TT < 7) return UT(kT, cT, lT, KT, yT, fT);
+          let xT = MT[OT++];
+          return (128 & xT) > 0 ? void(OT -= 7) : UT(kT, cT, lT, KT, yT, fT, xT)
         } {
-          let pv = Sv[gv++],
-            dv = Sv[gv++],
-            Nv = Sv[gv++],
-            lv = Sv[gv++];
-          if ((128 & pv) > 0 || (128 & dv) > 0 || (128 & Nv) > 0 || (128 & lv) > 0) return void(gv -= 8);
-          if (vv < 10) {
-            if (8 === vv) return Bv(zv, Pv, hv, ev, pv, dv, Nv, lv);
+          let yT = MT[OT++],
+            fT = MT[OT++],
+            xT = MT[OT++],
+            IT = MT[OT++];
+          if ((128 & yT) > 0 || (128 & fT) > 0 || (128 & xT) > 0 || (128 & IT) > 0) return void(OT -= 8);
+          if (TT < 10) {
+            if (8 === TT) return UT(kT, cT, lT, KT, yT, fT, xT, IT);
             {
-              let vv = Sv[gv++];
-              return (128 & vv) > 0 ? void(gv -= 9) : Bv(zv, Pv, hv, ev, pv, dv, Nv, lv, vv)
+              let TT = MT[OT++];
+              return (128 & TT) > 0 ? void(OT -= 9) : UT(kT, cT, lT, KT, yT, fT, xT, IT, TT)
             }
           }
-          if (vv < 12) {
-            let Tv = Sv[gv++],
-              Wv = Sv[gv++];
-            if ((128 & Tv) > 0 || (128 & Wv) > 0) return void(gv -= 10);
-            if (vv < 11) return Bv(zv, Pv, hv, ev, pv, dv, Nv, lv, Tv, Wv);
-            let wv = Sv[gv++];
-            return (128 & wv) > 0 ? void(gv -= 11) : Bv(zv, Pv, hv, ev, pv, dv, Nv, lv, Tv, Wv, wv)
+          if (TT < 12) {
+            let AT = MT[OT++],
+              CT = MT[OT++];
+            if ((128 & AT) > 0 || (128 & CT) > 0) return void(OT -= 10);
+            if (TT < 11) return UT(kT, cT, lT, KT, yT, fT, xT, IT, AT, CT);
+            let jT = MT[OT++];
+            return (128 & jT) > 0 ? void(OT -= 11) : UT(kT, cT, lT, KT, yT, fT, xT, IT, AT, CT, jT)
           } {
-            let Tv = Sv[gv++],
-              Wv = Sv[gv++],
-              wv = Sv[gv++],
-              av = Sv[gv++];
-            if ((128 & Tv) > 0 || (128 & Wv) > 0 || (128 & wv) > 0 || (128 & av) > 0) return void(gv -= 12);
-            if (vv < 14) {
-              if (12 === vv) return Bv(zv, Pv, hv, ev, pv, dv, Nv, lv, Tv, Wv, wv, av);
+            let AT = MT[OT++],
+              CT = MT[OT++],
+              jT = MT[OT++],
+              vT = MT[OT++];
+            if ((128 & AT) > 0 || (128 & CT) > 0 || (128 & jT) > 0 || (128 & vT) > 0) return void(OT -= 12);
+            if (TT < 14) {
+              if (12 === TT) return UT(kT, cT, lT, KT, yT, fT, xT, IT, AT, CT, jT, vT);
               {
-                let vv = Sv[gv++];
-                return (128 & vv) > 0 ? void(gv -= 13) : Bv(zv, Pv, hv, ev, pv, dv, Nv, lv, Tv, Wv, wv, av, vv)
+                let TT = MT[OT++];
+                return (128 & TT) > 0 ? void(OT -= 13) : UT(kT, cT, lT, KT, yT, fT, xT, IT, AT, CT, jT, vT, TT)
               }
             } {
-              let sv = Sv[gv++],
-                Cv = Sv[gv++];
-              if ((128 & sv) > 0 || (128 & Cv) > 0) return void(gv -= 14);
-              if (vv < 15) return Bv(zv, Pv, hv, ev, pv, dv, Nv, lv, Tv, Wv, wv, av, sv, Cv);
-              let iv = Sv[gv++];
-              return (128 & iv) > 0 ? void(gv -= 15) : Bv(zv, Pv, hv, ev, pv, dv, Nv, lv, Tv, Wv, wv, av, sv, Cv, iv)
+              let tT = MT[OT++],
+                hT = MT[OT++];
+              if ((128 & tT) > 0 || (128 & hT) > 0) return void(OT -= 14);
+              if (TT < 15) return UT(kT, cT, lT, KT, yT, fT, xT, IT, AT, CT, jT, vT, tT, hT);
+              let NT = MT[OT++];
+              return (128 & NT) > 0 ? void(OT -= 15) : UT(kT, cT, lT, KT, yT, fT, xT, IT, AT, CT, jT, vT, tT, hT, NT)
             }
           }
         }
       }
     }
 
-    function ov() {
-      let vv, zv = Sv[gv++];
-      if (zv < 192) vv = zv - 160;
-      else switch (zv) {
+    function WT() {
+      let TT, kT = MT[OT++];
+      if (kT < 192) TT = kT - 160;
+      else switch (kT) {
         case 217:
-          vv = Sv[gv++];
+          TT = MT[OT++];
           break;
         case 218:
-          vv = Wv.getUint16(gv), gv += 2;
+          TT = CT.getUint16(OT), OT += 2;
           break;
         case 219:
-          vv = Wv.getUint32(gv), gv += 4;
+          TT = CT.getUint32(OT), OT += 4;
           break;
         default:
           throw new Error("Expected string")
       }
-      return Hv(vv)
+      return LT(TT)
     }
 
-    function bv(vv) {
-      return sv.copyBuffers ? Uint8Array.prototype.slice.call(Sv, gv, gv += vv) : Sv.subarray(gv, gv += vv)
+    function nT(TT) {
+      return tT.copyBuffers ? Uint8Array.prototype.slice.call(MT, OT, OT += TT) : MT.subarray(OT, OT += TT)
     }
 
-    function rv(vv) {
-      let zv = Sv[gv++];
-      if (cv[zv]) {
-        let Pv;
-        return cv[zv](Sv.subarray(gv, Pv = gv += vv), (vv => {
-          gv = vv;
+    function pT(TT) {
+      let kT = MT[OT++];
+      if (QT[kT]) {
+        let cT;
+        return QT[kT](MT.subarray(OT, cT = OT += TT), (TT => {
+          OT = TT;
           try {
-            return Uv()
+            return oT()
           } finally {
-            gv = Pv
+            OT = cT
           }
         }))
       }
-      throw new Error("Unknown extension type " + zv)
+      throw new Error("Unknown extension type " + kT)
     }
-    var kv = new Array(4096);
+    var iT = new Array(4096);
 
-    function Xv() {
-      let vv = Sv[gv++];
-      if (!(vv >= 160 && vv < 192)) return gv--, uv(Uv());
-      if (vv -= 160, iv >= gv) return Nv.slice(gv - Cv, (gv += vv) - Cv);
-      if (!(0 == iv && ev < 180)) return Iv(vv);
-      let zv, Pv = 4095 & (vv << 5 ^ (vv > 1 ? Wv.getUint16(gv) : vv > 0 ? Sv[gv] : 0)),
-        hv = kv[Pv],
-        pv = gv,
-        dv = gv + vv - 3,
-        lv = 0;
-      if (hv && hv.bytes == vv) {
-        for (; pv < dv;) {
-          if (zv = Wv.getUint32(pv), zv != hv[lv++]) {
-            pv = 1879048192;
+    function qT() {
+      let TT = MT[OT++];
+      if (!(TT >= 160 && TT < 192)) return OT--, sT(oT());
+      if (TT -= 160, NT >= OT) return xT.slice(OT - hT, (OT += TT) - hT);
+      if (!(0 == NT && KT < 180)) return ET(TT);
+      let kT, cT = 4095 & (TT << 5 ^ (TT > 1 ? CT.getUint16(OT) : TT > 0 ? MT[OT] : 0)),
+        lT = iT[cT],
+        yT = OT,
+        fT = OT + TT - 3,
+        IT = 0;
+      if (lT && lT.bytes == TT) {
+        for (; yT < fT;) {
+          if (kT = CT.getUint32(yT), kT != lT[IT++]) {
+            yT = 1879048192;
             break
           }
-          pv += 4
+          yT += 4
         }
-        for (dv += 3; pv < dv;)
-          if (zv = Sv[pv++], zv != hv[lv++]) {
-            pv = 1879048192;
+        for (fT += 3; yT < fT;)
+          if (kT = MT[yT++], kT != lT[IT++]) {
+            yT = 1879048192;
             break
-          } if (pv === dv) return gv = pv, hv.string;
-        dv -= 3, pv = gv
+          } if (yT === fT) return OT = yT, lT.string;
+        fT -= 3, yT = OT
       }
-      for (hv = [], kv[Pv] = hv, hv.bytes = vv; pv < dv;) zv = Wv.getUint32(pv), hv.push(zv), pv += 4;
-      for (dv += 3; pv < dv;) zv = Sv[pv++], hv.push(zv);
-      let Tv = vv < 16 ? Ev(vv) : Jv(vv);
-      return hv.string = null != Tv ? Tv : Iv(vv)
+      for (lT = [], iT[cT] = lT, lT.bytes = TT; yT < fT;) kT = CT.getUint32(yT), lT.push(kT), yT += 4;
+      for (fT += 3; yT < fT;) kT = MT[yT++], lT.push(kT);
+      let AT = TT < 16 ? BT(TT) : YT(TT);
+      return lT.string = null != AT ? AT : ET(TT)
     }
 
-    function uv(vv) {
-      if ("string" === typeof vv) return vv;
-      if ("number" === typeof vv || "boolean" === typeof vv || "bigint" === typeof vv) return vv.toString();
-      if (null == vv) return vv + "";
-      if (sv.allowArraysInMapKeys && Array.isArray(vv) && vv.flat().every((vv => ["string", "number", "boolean", "bigint"].includes(typeof vv)))) return vv.flat().toString();
-      throw new Error("Invalid property type for record: " + typeof vv)
+    function sT(TT) {
+      if ("string" === typeof TT) return TT;
+      if ("number" === typeof TT || "boolean" === typeof TT || "bigint" === typeof TT) return TT.toString();
+      if (null == TT) return TT + "";
+      if (tT.allowArraysInMapKeys && Array.isArray(TT) && TT.flat().every((TT => ["string", "number", "boolean", "bigint"].includes(typeof TT)))) return TT.flat().toString();
+      throw new Error("Invalid property type for record: " + typeof TT)
     }
-    const vz = (vv, zv) => {
-      let Pv = Uv().map(uv),
-        hv = vv;
-      void 0 !== zv && (vv = vv < 32 ? -((zv << 5) + vv) : (zv << 5) + vv, Pv.highByte = zv);
-      let Sv = dv[vv];
-      return Sv && (Sv.isShared || nv) && ((dv.restoreStructures || (dv.restoreStructures = []))[vv] = Sv), dv[vv] = Pv, Pv.read = xv(Pv, hv), Pv.read()
+    const Tk = (TT, kT) => {
+      let cT = oT().map(sT),
+        lT = TT;
+      void 0 !== kT && (TT = TT < 32 ? -((kT << 5) + TT) : (kT << 5) + TT, cT.highByte = kT);
+      let MT = fT[TT];
+      return MT && (MT.isShared || wT) && ((fT.restoreStructures || (fT.restoreStructures = []))[TT] = MT), fT[TT] = cT, cT.read = eT(cT, lT), cT.read()
     };
-    cv[0] = () => {}, cv[0].noBuffer = !0, cv[66] = vv => {
-      let zv = vv.length,
-        Pv = BigInt(128 & vv[0] ? vv[0] - 256 : vv[0]);
-      for (let hv = 1; hv < zv; hv++) Pv <<= BigInt(8), Pv += BigInt(vv[hv]);
-      return Pv
+    QT[0] = () => {}, QT[0].noBuffer = !0, QT[66] = TT => {
+      let kT = TT.length,
+        cT = BigInt(128 & TT[0] ? TT[0] - 256 : TT[0]);
+      for (let lT = 1; lT < kT; lT++) cT <<= BigInt(8), cT += BigInt(TT[lT]);
+      return cT
     };
-    let zz = {
+    let kk = {
       Error: Error,
       TypeError: TypeError,
       ReferenceError: ReferenceError
     };
-    cv[101] = () => {
-      let vv = Uv();
-      return (zz[vv[0]] || Error)(vv[1], {
-        cause: vv[2]
+    QT[101] = () => {
+      let TT = oT();
+      return (kk[TT[0]] || Error)(TT[1], {
+        cause: TT[2]
       })
-    }, cv[105] = vv => {
-      if (!1 === sv.structuredClone) throw new Error("Structured clone extension is disabled");
-      let zv = Wv.getUint32(gv - 4);
-      Tv || (Tv = new Map);
-      let Pv, hv = Sv[gv];
-      Pv = hv >= 144 && hv < 160 || 220 == hv || 221 == hv ? [] : {};
-      let ev = {
-        target: Pv
+    }, QT[105] = TT => {
+      if (!1 === tT.structuredClone) throw new Error("Structured clone extension is disabled");
+      let kT = CT.getUint32(OT - 4);
+      AT || (AT = new Map);
+      let cT, lT = MT[OT];
+      cT = lT >= 144 && lT < 160 || 220 == lT || 221 == lT ? [] : {};
+      let KT = {
+        target: cT
       };
-      Tv.set(zv, ev);
-      let pv = Uv();
-      return ev.used ? Object.assign(Pv, pv) : (ev.target = pv, pv)
-    }, cv[112] = vv => {
-      if (!1 === sv.structuredClone) throw new Error("Structured clone extension is disabled");
-      let zv = Wv.getUint32(gv - 4),
-        Pv = Tv.get(zv);
-      return Pv.used = !0, Pv.target
-    }, cv[115] = () => new Set(Uv());
-    const Pz = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((vv => vv + "Array"));
-    let hz = "object" === typeof globalThis ? globalThis : window;
-    cv[116] = vv => {
-      let zv = vv[0],
-        Pv = Pz[zv];
-      if (!Pv) {
-        if (16 === zv) {
-          let zv = new ArrayBuffer(vv.length - 1);
-          return new Uint8Array(zv).set(vv.subarray(1)), zv
+      AT.set(kT, KT);
+      let yT = oT();
+      return KT.used ? Object.assign(cT, yT) : (KT.target = yT, yT)
+    }, QT[112] = TT => {
+      if (!1 === tT.structuredClone) throw new Error("Structured clone extension is disabled");
+      let kT = CT.getUint32(OT - 4),
+        cT = AT.get(kT);
+      return cT.used = !0, cT.target
+    }, QT[115] = () => new Set(oT());
+    const ck = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((TT => TT + "Array"));
+    let lk = "object" === typeof globalThis ? globalThis : window;
+    QT[116] = TT => {
+      let kT = TT[0],
+        cT = ck[kT];
+      if (!cT) {
+        if (16 === kT) {
+          let kT = new ArrayBuffer(TT.length - 1);
+          return new Uint8Array(kT).set(TT.subarray(1)), kT
         }
-        throw new Error("Could not find typed array for code " + zv)
+        throw new Error("Could not find typed array for code " + kT)
       }
-      return new hz[Pv](Uint8Array.prototype.slice.call(vv, 1).buffer)
-    }, cv[120] = () => {
-      let vv = Uv();
-      return new RegExp(vv[0], vv[1])
+      return new lk[cT](Uint8Array.prototype.slice.call(TT, 1).buffer)
+    }, QT[120] = () => {
+      let TT = oT();
+      return new RegExp(TT[0], TT[1])
     };
-    const Sz = [];
+    const Mk = [];
 
-    function ez(vv) {
-      Yv && Yv();
-      let zv = ev,
-        Pv = gv,
-        hv = av,
-        pv = Cv,
-        cv = iv,
-        Gv = Nv,
-        mv = wv,
-        jv = Tv,
-        fv = lv,
-        Fv = new Uint8Array(Sv.slice(0, ev)),
-        Ov = dv,
-        Dv = dv.slice(0, dv.length),
-        Kv = sv,
-        Vv = nv,
-        Uv = vv();
-      return ev = zv, gv = Pv, av = hv, Cv = pv, iv = cv, Nv = Gv, wv = mv, Tv = jv, lv = fv, Sv = Fv, nv = Vv, (dv = Ov).splice(0, dv.length, ...Dv), sv = Kv, Wv = new DataView(Sv.buffer, Sv.byteOffset, Sv.byteLength), Uv
+    function Kk(TT) {
+      PT && PT();
+      let kT = KT,
+        cT = OT,
+        lT = vT,
+        yT = hT,
+        QT = NT,
+        ST = xT,
+        DT = jT,
+        aT = AT,
+        FT = IT,
+        rT = new Uint8Array(MT.slice(0, KT)),
+        mT = fT,
+        bT = fT.slice(0, fT.length),
+        zT = tT,
+        JT = wT,
+        oT = TT();
+      return KT = kT, OT = cT, vT = lT, hT = yT, NT = QT, xT = ST, jT = DT, AT = aT, IT = FT, MT = rT, wT = JT, (fT = mT).splice(0, fT.length, ...bT), tT = zT, CT = new DataView(MT.buffer, MT.byteOffset, MT.byteLength), oT
     }
 
-    function gz() {
-      Sv = null, Tv = null, dv = null
+    function Ok() {
+      MT = null, AT = null, fT = null
     }
-    cv[98] = vv => {
-      let zv = (vv[0] << 24) + (vv[1] << 16) + (vv[2] << 8) + vv[3],
-        Pv = gv;
-      return gv += zv - vv.length, lv = Sz, (lv = [ov(), ov()]).position0 = 0, lv.position1 = 0, lv.postBundlePosition = gv, gv = Pv, Uv()
-    }, cv[255] = vv => 4 == vv.length ? new Date(1e3 * (16777216 * vv[0] + (vv[1] << 16) + (vv[2] << 8) + vv[3])) : 8 == vv.length ? new Date(((vv[0] << 22) + (vv[1] << 14) + (vv[2] << 6) + (vv[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & vv[3]) + 16777216 * vv[4] + (vv[5] << 16) + (vv[6] << 8) + vv[7])) : 12 == vv.length ? new Date(((vv[0] << 24) + (vv[1] << 16) + (vv[2] << 8) + vv[3]) / 1e6 + 1e3 * ((128 & vv[4] ? -281474976710656 : 0) + 1099511627776 * vv[6] + 4294967296 * vv[7] + 16777216 * vv[8] + (vv[9] << 16) + (vv[10] << 8) + vv[11])) : new Date("invalid");
-    const pz = new Array(147);
-    for (let SP = 0; SP < 256; SP++) pz[SP] = +("1e" + Math.floor(45.15 - .30103 * SP));
-    const dz = Dv;
-    var Nz = new Dv({
+    QT[98] = TT => {
+      let kT = (TT[0] << 24) + (TT[1] << 16) + (TT[2] << 8) + TT[3],
+        cT = OT;
+      return OT += kT - TT.length, IT = Mk, (IT = [WT(), WT()]).position0 = 0, IT.position1 = 0, IT.postBundlePosition = OT, OT = cT, oT()
+    }, QT[255] = TT => 4 == TT.length ? new Date(1e3 * (16777216 * TT[0] + (TT[1] << 16) + (TT[2] << 8) + TT[3])) : 8 == TT.length ? new Date(((TT[0] << 22) + (TT[1] << 14) + (TT[2] << 6) + (TT[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & TT[3]) + 16777216 * TT[4] + (TT[5] << 16) + (TT[6] << 8) + TT[7])) : 12 == TT.length ? new Date(((TT[0] << 24) + (TT[1] << 16) + (TT[2] << 8) + TT[3]) / 1e6 + 1e3 * ((128 & TT[4] ? -281474976710656 : 0) + 1099511627776 * TT[6] + 4294967296 * TT[7] + 16777216 * TT[8] + (TT[9] << 16) + (TT[10] << 8) + TT[11])) : new Date("invalid");
+    const yk = new Array(147);
+    for (let Kc = 0; Kc < 256; Kc++) yk[Kc] = +("1e" + Math.floor(45.15 - .30103 * Kc));
+    const fk = bT;
+    var xk = new bT({
       useRecords: !1
     });
-    const lz = Nz.unpack,
-      Tz = Nz.unpackMultiple,
-      Wz = Nz.unpack,
-      wz = {
+    const Ik = xk.unpack,
+      Ak = xk.unpackMultiple,
+      Ck = xk.unpack,
+      jk = {
         NEVER: 0,
         ALWAYS: 1,
         DECIMAL_ROUND: 3,
         DECIMAL_FIT: 4
       };
-    let az, sz, Cz, iz = new Float32Array(1),
-      cz = new Uint8Array(iz.buffer, 0, 4);
+    let vk, tk, hk, Nk = new Float32Array(1),
+      Qk = new Uint8Array(Nk.buffer, 0, 4);
 
-    function Gz(vv) {
-      iz[0] = vv;
-      let zv = pz[(127 & cz[3]) << 1 | cz[2] >> 7];
-      return (zv * vv + (vv > 0 ? .5 : -.5) | 0) / zv
+    function Sk(TT) {
+      Nk[0] = TT;
+      let kT = yk[(127 & Qk[3]) << 1 | Qk[2] >> 7];
+      return (kT * TT + (TT > 0 ? .5 : -.5) | 0) / kT
     }
     try {
-      az = new TextEncoder
-    } catch (hP) {}
-    const mz = "undefined" !== typeof Buffer,
-      jz = mz ? function(vv) {
-        return Buffer.allocUnsafeSlow(vv)
+      vk = new TextEncoder
+    } catch (Mc) {}
+    const Dk = "undefined" !== typeof Buffer,
+      ak = Dk ? function(TT) {
+        return Buffer.allocUnsafeSlow(TT)
       } : Uint8Array,
-      fz = mz ? Buffer : Uint8Array,
-      Fz = mz ? 4294967296 : 2144337920;
-    let Yz, nz, Oz, Dz, Kz, Vz = 0,
-      Uz = null;
-    const Rz = /[\u0080-\uFFFF]/,
-      xz = Symbol("record-id");
-    class tz extends Dv {
-      constructor(vv) {
-        let zv, Pv, hv, Sv;
-        super(vv), this.offset = 0;
-        let ev = fz.prototype.utf8Write ? function(vv, zv) {
-            return Yz.utf8Write(vv, zv, Yz.byteLength - zv)
-          } : !(!az || !az.encodeInto) && function(vv, zv) {
-            return az.encodeInto(vv, Yz.subarray(zv)).written
+      Fk = Dk ? Buffer : Uint8Array,
+      rk = Dk ? 4294967296 : 2144337920;
+    let Pk, wk, mk, bk, zk, Jk = 0,
+      Hk = null;
+    const ek = /[\u0080-\uFFFF]/,
+      Gk = Symbol("record-id");
+    class Vk extends bT {
+      constructor(TT) {
+        let kT, cT, lT, MT;
+        super(TT), this.offset = 0;
+        let KT = Fk.prototype.utf8Write ? function(TT, kT) {
+            return Pk.utf8Write(TT, kT, Pk.byteLength - kT)
+          } : !(!vk || !vk.encodeInto) && function(TT, kT) {
+            return vk.encodeInto(TT, Pk.subarray(kT)).written
           },
-          gv = this;
-        vv || (vv = {});
-        let pv = vv && vv.sequential,
-          dv = vv.structures || vv.saveStructures,
-          Nv = vv.maxSharedStructures;
-        if (null == Nv && (Nv = dv ? 32 : 0), Nv > 8160) throw new Error("Maximum maxSharedStructure is 8160");
-        vv.structuredClone && void 0 == vv.moreTypes && (this.moreTypes = !0);
-        let lv = vv.maxOwnStructures;
-        null == lv && (lv = dv ? 32 : 64), this.structures || 0 == vv.useRecords || (this.structures = []);
-        let Tv = Nv > 32 || lv + Nv > 64,
-          Wv = Nv + 64,
-          wv = Nv + lv + 64;
-        if (wv > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
-        let av = [],
-          sv = 0,
-          Cv = 0;
-        this.pack = this.encode = function(vv, ev) {
-          if (Yz || (Yz = new jz(8192), Oz = Yz.dataView || (Yz.dataView = new DataView(Yz.buffer, 0, 8192)), Vz = 0), Dz = Yz.length - 10, Dz - Vz < 2048 ? (Yz = new jz(Yz.length), Oz = Yz.dataView || (Yz.dataView = new DataView(Yz.buffer, 0, Yz.length)), Dz = Yz.length - 10, Vz = 0) : Vz = Vz + 7 & 2147483640, zv = Vz, ev & Xz && (Vz += 255 & ev), Sv = gv.structuredClone ? new Map : null, gv.bundleStrings && "string" !== typeof vv ? (Uz = [], Uz.size = 1 / 0) : Uz = null, hv = gv.structures, hv) {
-            hv.uninitialized && (hv = gv._mergeStructures(gv.getStructures()));
-            let vv = hv.sharedLength || 0;
-            if (vv > Nv) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + hv.sharedLength);
-            if (!hv.transitions) {
-              hv.transitions = Object.create(null);
-              for (let zv = 0; zv < vv; zv++) {
-                let vv = hv[zv];
-                if (!vv) continue;
-                let Pv, Sv = hv.transitions;
-                for (let zv = 0, hv = vv.length; zv < hv; zv++) {
-                  let hv = vv[zv];
-                  Pv = Sv[hv], Pv || (Pv = Sv[hv] = Object.create(null)), Sv = Pv
+          OT = this;
+        TT || (TT = {});
+        let yT = TT && TT.sequential,
+          fT = TT.structures || TT.saveStructures,
+          xT = TT.maxSharedStructures;
+        if (null == xT && (xT = fT ? 32 : 0), xT > 8160) throw new Error("Maximum maxSharedStructure is 8160");
+        TT.structuredClone && void 0 == TT.moreTypes && (this.moreTypes = !0);
+        let IT = TT.maxOwnStructures;
+        null == IT && (IT = fT ? 32 : 64), this.structures || 0 == TT.useRecords || (this.structures = []);
+        let AT = xT > 32 || IT + xT > 64,
+          CT = xT + 64,
+          jT = xT + IT + 64;
+        if (jT > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
+        let vT = [],
+          tT = 0,
+          hT = 0;
+        this.pack = this.encode = function(TT, KT) {
+          if (Pk || (Pk = new ak(8192), mk = Pk.dataView || (Pk.dataView = new DataView(Pk.buffer, 0, 8192)), Jk = 0), bk = Pk.length - 10, bk - Jk < 2048 ? (Pk = new ak(Pk.length), mk = Pk.dataView || (Pk.dataView = new DataView(Pk.buffer, 0, Pk.length)), bk = Pk.length - 10, Jk = 0) : Jk = Jk + 7 & 2147483640, kT = Jk, KT & sk && (Jk += 255 & KT), MT = OT.structuredClone ? new Map : null, OT.bundleStrings && "string" !== typeof TT ? (Hk = [], Hk.size = 1 / 0) : Hk = null, lT = OT.structures, lT) {
+            lT.uninitialized && (lT = OT._mergeStructures(OT.getStructures()));
+            let TT = lT.sharedLength || 0;
+            if (TT > xT) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + lT.sharedLength);
+            if (!lT.transitions) {
+              lT.transitions = Object.create(null);
+              for (let kT = 0; kT < TT; kT++) {
+                let TT = lT[kT];
+                if (!TT) continue;
+                let cT, MT = lT.transitions;
+                for (let kT = 0, lT = TT.length; kT < lT; kT++) {
+                  let lT = TT[kT];
+                  cT = MT[lT], cT || (cT = MT[lT] = Object.create(null)), MT = cT
                 }
-                Sv[xz] = zv + 64
+                MT[Gk] = kT + 64
               }
-              this.lastNamedStructuresLength = vv
+              this.lastNamedStructuresLength = TT
             }
-            pv || (hv.nextId = vv + 64)
+            yT || (lT.nextId = TT + 64)
           }
-          let dv;
-          Pv && (Pv = !1);
+          let fT;
+          cT && (cT = !1);
           try {
-            gv.randomAccessStructure && vv && vv.constructor && vv.constructor === Object ? Dv(vv) : Gv(vv);
-            let Pv = Uz;
-            if (Uz && Zz(zv, Gv, 0), Sv && Sv.idsToInsert) {
-              let vv = Sv.idsToInsert.sort(((vv, zv) => vv.offset > zv.offset ? 1 : -1)),
-                hv = vv.length,
-                ev = -1;
-              for (; Pv && hv > 0;) {
-                let Sv = vv[--hv].offset + zv;
-                Sv < Pv.stringsPosition + zv && -1 === ev && (ev = 0), Sv > Pv.position + zv ? ev >= 0 && (ev += 6) : (ev >= 0 && (Oz.setUint32(Pv.position + zv, Oz.getUint32(Pv.position + zv) + ev), ev = -1), Pv = Pv.previous, hv++)
+            OT.randomAccessStructure && TT && TT.constructor && TT.constructor === Object ? bT(TT) : ST(TT);
+            let cT = Hk;
+            if (Hk && Xk(kT, ST, 0), MT && MT.idsToInsert) {
+              let TT = MT.idsToInsert.sort(((TT, kT) => TT.offset > kT.offset ? 1 : -1)),
+                lT = TT.length,
+                KT = -1;
+              for (; cT && lT > 0;) {
+                let MT = TT[--lT].offset + kT;
+                MT < cT.stringsPosition + kT && -1 === KT && (KT = 0), MT > cT.position + kT ? KT >= 0 && (KT += 6) : (KT >= 0 && (mk.setUint32(cT.position + kT, mk.getUint32(cT.position + kT) + KT), KT = -1), cT = cT.previous, lT++)
               }
-              ev >= 0 && Pv && Oz.setUint32(Pv.position + zv, Oz.getUint32(Pv.position + zv) + ev), Vz += 6 * vv.length, Vz > Dz && Yv(Vz), gv.offset = Vz;
-              let pv = function(vv, zv) {
-                let Pv, hv = 6 * zv.length,
-                  Sv = vv.length - hv;
-                for (; Pv = zv.pop();) {
-                  let zv = Pv.offset,
-                    ev = Pv.id;
-                  vv.copyWithin(zv + hv, zv, Sv), hv -= 6;
-                  let gv = zv + hv;
-                  vv[gv++] = 214, vv[gv++] = 105, vv[gv++] = ev >> 24, vv[gv++] = ev >> 16 & 255, vv[gv++] = ev >> 8 & 255, vv[gv++] = 255 & ev, Sv = zv
+              KT >= 0 && cT && mk.setUint32(cT.position + kT, mk.getUint32(cT.position + kT) + KT), Jk += 6 * TT.length, Jk > bk && PT(Jk), OT.offset = Jk;
+              let yT = function(TT, kT) {
+                let cT, lT = 6 * kT.length,
+                  MT = TT.length - lT;
+                for (; cT = kT.pop();) {
+                  let kT = cT.offset,
+                    KT = cT.id;
+                  TT.copyWithin(kT + lT, kT, MT), lT -= 6;
+                  let OT = kT + lT;
+                  TT[OT++] = 214, TT[OT++] = 105, TT[OT++] = KT >> 24, TT[OT++] = KT >> 16 & 255, TT[OT++] = KT >> 8 & 255, TT[OT++] = 255 & KT, MT = kT
                 }
-                return vv
-              }(Yz.subarray(zv, Vz), vv);
-              return Sv = null, pv
+                return TT
+              }(Pk.subarray(kT, Jk), TT);
+              return MT = null, yT
             }
-            return gv.offset = Vz, ev & rz ? (Yz.start = zv, Yz.end = Vz, Yz) : Yz.subarray(zv, Vz)
-          } catch (hP) {
-            throw dv = hP, hP
+            return OT.offset = Jk, KT & ik ? (Pk.start = kT, Pk.end = Jk, Pk) : Pk.subarray(kT, Jk)
+          } catch (Mc) {
+            throw fT = Mc, Mc
           } finally {
-            if (hv && (iv(), Pv && gv.saveStructures)) {
-              let Pv = hv.sharedLength || 0,
-                Sv = Yz.subarray(zv, Vz),
-                pv = Lz(hv, gv);
-              if (!dv) return !1 === gv.saveStructures(pv, pv.isCompatible) ? gv.pack(vv, ev) : (gv.lastNamedStructuresLength = Pv, Yz.length > 1073741824 && (Yz = null), Sv)
+            if (lT && (NT(), cT && OT.saveStructures)) {
+              let cT = lT.sharedLength || 0,
+                MT = Pk.subarray(kT, Jk),
+                yT = Lk(lT, OT);
+              if (!fT) return !1 === OT.saveStructures(yT, yT.isCompatible) ? OT.pack(TT, KT) : (OT.lastNamedStructuresLength = cT, Pk.length > 1073741824 && (Pk = null), MT)
             }
-            Yz.length > 1073741824 && (Yz = null), ev & kz && (Vz = zv)
+            Pk.length > 1073741824 && (Pk = null), KT & qk && (Jk = kT)
           }
         };
-        const iv = () => {
-            Cv < 10 && Cv++;
-            let vv = hv.sharedLength || 0;
-            if (hv.length > vv && !pv && (hv.length = vv), sv > 1e4) hv.transitions = null, Cv = 0, sv = 0, av.length > 0 && (av = []);
-            else if (av.length > 0 && !pv) {
-              for (let vv = 0, zv = av.length; vv < zv; vv++) av[vv][xz] = 0;
-              av = []
+        const NT = () => {
+            hT < 10 && hT++;
+            let TT = lT.sharedLength || 0;
+            if (lT.length > TT && !yT && (lT.length = TT), tT > 1e4) lT.transitions = null, hT = 0, tT = 0, vT.length > 0 && (vT = []);
+            else if (vT.length > 0 && !yT) {
+              for (let TT = 0, kT = vT.length; TT < kT; TT++) vT[TT][Gk] = 0;
+              vT = []
             }
           },
-          cv = vv => {
-            var zv = vv.length;
-            zv < 16 ? Yz[Vz++] = 144 | zv : zv < 65536 ? (Yz[Vz++] = 220, Yz[Vz++] = zv >> 8, Yz[Vz++] = 255 & zv) : (Yz[Vz++] = 221, Oz.setUint32(Vz, zv), Vz += 4);
-            for (let Pv = 0; Pv < zv; Pv++) Gv(vv[Pv])
+          QT = TT => {
+            var kT = TT.length;
+            kT < 16 ? Pk[Jk++] = 144 | kT : kT < 65536 ? (Pk[Jk++] = 220, Pk[Jk++] = kT >> 8, Pk[Jk++] = 255 & kT) : (Pk[Jk++] = 221, mk.setUint32(Jk, kT), Jk += 4);
+            for (let cT = 0; cT < kT; cT++) ST(TT[cT])
           },
-          Gv = vv => {
-            Vz > Dz && (Yz = Yv(Vz));
-            var Pv, hv = typeof vv;
-            if ("string" === hv) {
-              let hv, Sv = vv.length;
-              if (Uz && Sv >= 4 && Sv < 4096) {
-                if ((Uz.size += Sv) > 21760) {
-                  let vv, Pv, hv = (Uz[0] ? 3 * Uz[0].length + Uz[1].length : 0) + 10;
-                  Vz + hv > Dz && (Yz = Yv(Vz + hv)), Uz.position ? (Pv = Uz, Yz[Vz] = 200, Vz += 3, Yz[Vz++] = 98, vv = Vz - zv, Vz += 4, Zz(zv, Gv, 0), Oz.setUint16(vv + zv - 3, Vz - zv - vv)) : (Yz[Vz++] = 214, Yz[Vz++] = 98, vv = Vz - zv, Vz += 4), Uz = ["", ""], Uz.previous = Pv, Uz.size = 0, Uz.position = vv
+          ST = TT => {
+            Jk > bk && (Pk = PT(Jk));
+            var cT, lT = typeof TT;
+            if ("string" === lT) {
+              let lT, MT = TT.length;
+              if (Hk && MT >= 4 && MT < 4096) {
+                if ((Hk.size += MT) > 21760) {
+                  let TT, cT, lT = (Hk[0] ? 3 * Hk[0].length + Hk[1].length : 0) + 10;
+                  Jk + lT > bk && (Pk = PT(Jk + lT)), Hk.position ? (cT = Hk, Pk[Jk] = 200, Jk += 3, Pk[Jk++] = 98, TT = Jk - kT, Jk += 4, Xk(kT, ST, 0), mk.setUint16(TT + kT - 3, Jk - kT - TT)) : (Pk[Jk++] = 214, Pk[Jk++] = 98, TT = Jk - kT, Jk += 4), Hk = ["", ""], Hk.previous = cT, Hk.size = 0, Hk.position = TT
                 }
-                let Pv = Rz.test(vv);
-                return Uz[Pv ? 0 : 1] += vv, Yz[Vz++] = 193, void Gv(Pv ? -Sv : Sv)
+                let cT = ek.test(TT);
+                return Hk[cT ? 0 : 1] += TT, Pk[Jk++] = 193, void ST(cT ? -MT : MT)
               }
-              hv = Sv < 32 ? 1 : Sv < 256 ? 2 : Sv < 65536 ? 3 : 5;
-              let gv = 3 * Sv;
-              if (Vz + gv > Dz && (Yz = Yv(Vz + gv)), Sv < 64 || !ev) {
-                let zv, ev, gv, pv = Vz + hv;
-                for (zv = 0; zv < Sv; zv++) ev = vv.charCodeAt(zv), ev < 128 ? Yz[pv++] = ev : ev < 2048 ? (Yz[pv++] = ev >> 6 | 192, Yz[pv++] = 63 & ev | 128) : 55296 === (64512 & ev) && 56320 === (64512 & (gv = vv.charCodeAt(zv + 1))) ? (ev = 65536 + ((1023 & ev) << 10) + (1023 & gv), zv++, Yz[pv++] = ev >> 18 | 240, Yz[pv++] = ev >> 12 & 63 | 128, Yz[pv++] = ev >> 6 & 63 | 128, Yz[pv++] = 63 & ev | 128) : (Yz[pv++] = ev >> 12 | 224, Yz[pv++] = ev >> 6 & 63 | 128, Yz[pv++] = 63 & ev | 128);
-                Pv = pv - Vz - hv
-              } else Pv = ev(vv, Vz + hv);
-              Pv < 32 ? Yz[Vz++] = 160 | Pv : Pv < 256 ? (hv < 2 && Yz.copyWithin(Vz + 2, Vz + 1, Vz + 1 + Pv), Yz[Vz++] = 217, Yz[Vz++] = Pv) : Pv < 65536 ? (hv < 3 && Yz.copyWithin(Vz + 3, Vz + 2, Vz + 2 + Pv), Yz[Vz++] = 218, Yz[Vz++] = Pv >> 8, Yz[Vz++] = 255 & Pv) : (hv < 5 && Yz.copyWithin(Vz + 5, Vz + 3, Vz + 3 + Pv), Yz[Vz++] = 219, Oz.setUint32(Vz, Pv), Vz += 4), Vz += Pv
-            } else if ("number" === hv)
-              if (vv >>> 0 === vv) vv < 32 || vv < 128 && !1 === this.useRecords || vv < 64 && !this.randomAccessStructure ? Yz[Vz++] = vv : vv < 256 ? (Yz[Vz++] = 204, Yz[Vz++] = vv) : vv < 65536 ? (Yz[Vz++] = 205, Yz[Vz++] = vv >> 8, Yz[Vz++] = 255 & vv) : (Yz[Vz++] = 206, Oz.setUint32(Vz, vv), Vz += 4);
-              else if ((vv | 0) === vv) vv >= -32 ? Yz[Vz++] = 256 + vv : vv >= -128 ? (Yz[Vz++] = 208, Yz[Vz++] = vv + 256) : vv >= -32768 ? (Yz[Vz++] = 209, Oz.setInt16(Vz, vv), Vz += 2) : (Yz[Vz++] = 210, Oz.setInt32(Vz, vv), Vz += 4);
+              lT = MT < 32 ? 1 : MT < 256 ? 2 : MT < 65536 ? 3 : 5;
+              let OT = 3 * MT;
+              if (Jk + OT > bk && (Pk = PT(Jk + OT)), MT < 64 || !KT) {
+                let kT, KT, OT, yT = Jk + lT;
+                for (kT = 0; kT < MT; kT++) KT = TT.charCodeAt(kT), KT < 128 ? Pk[yT++] = KT : KT < 2048 ? (Pk[yT++] = KT >> 6 | 192, Pk[yT++] = 63 & KT | 128) : 55296 === (64512 & KT) && 56320 === (64512 & (OT = TT.charCodeAt(kT + 1))) ? (KT = 65536 + ((1023 & KT) << 10) + (1023 & OT), kT++, Pk[yT++] = KT >> 18 | 240, Pk[yT++] = KT >> 12 & 63 | 128, Pk[yT++] = KT >> 6 & 63 | 128, Pk[yT++] = 63 & KT | 128) : (Pk[yT++] = KT >> 12 | 224, Pk[yT++] = KT >> 6 & 63 | 128, Pk[yT++] = 63 & KT | 128);
+                cT = yT - Jk - lT
+              } else cT = KT(TT, Jk + lT);
+              cT < 32 ? Pk[Jk++] = 160 | cT : cT < 256 ? (lT < 2 && Pk.copyWithin(Jk + 2, Jk + 1, Jk + 1 + cT), Pk[Jk++] = 217, Pk[Jk++] = cT) : cT < 65536 ? (lT < 3 && Pk.copyWithin(Jk + 3, Jk + 2, Jk + 2 + cT), Pk[Jk++] = 218, Pk[Jk++] = cT >> 8, Pk[Jk++] = 255 & cT) : (lT < 5 && Pk.copyWithin(Jk + 5, Jk + 3, Jk + 3 + cT), Pk[Jk++] = 219, mk.setUint32(Jk, cT), Jk += 4), Jk += cT
+            } else if ("number" === lT)
+              if (TT >>> 0 === TT) TT < 32 || TT < 128 && !1 === this.useRecords || TT < 64 && !this.randomAccessStructure ? Pk[Jk++] = TT : TT < 256 ? (Pk[Jk++] = 204, Pk[Jk++] = TT) : TT < 65536 ? (Pk[Jk++] = 205, Pk[Jk++] = TT >> 8, Pk[Jk++] = 255 & TT) : (Pk[Jk++] = 206, mk.setUint32(Jk, TT), Jk += 4);
+              else if ((TT | 0) === TT) TT >= -32 ? Pk[Jk++] = 256 + TT : TT >= -128 ? (Pk[Jk++] = 208, Pk[Jk++] = TT + 256) : TT >= -32768 ? (Pk[Jk++] = 209, mk.setInt16(Jk, TT), Jk += 2) : (Pk[Jk++] = 210, mk.setInt32(Jk, TT), Jk += 4);
             else {
-              let zv;
-              if ((zv = this.useFloat32) > 0 && vv < 4294967296 && vv >= -2147483648) {
-                let Pv;
-                if (Yz[Vz++] = 202, Oz.setFloat32(Vz, vv), zv < 4 || ((Pv = vv * pz[(127 & Yz[Vz]) << 1 | Yz[Vz + 1] >> 7]) | 0) === Pv) return void(Vz += 4);
-                Vz--
+              let kT;
+              if ((kT = this.useFloat32) > 0 && TT < 4294967296 && TT >= -2147483648) {
+                let cT;
+                if (Pk[Jk++] = 202, mk.setFloat32(Jk, TT), kT < 4 || ((cT = TT * yk[(127 & Pk[Jk]) << 1 | Pk[Jk + 1] >> 7]) | 0) === cT) return void(Jk += 4);
+                Jk--
               }
-              Yz[Vz++] = 203, Oz.setFloat64(Vz, vv), Vz += 8
-            } else if ("object" === hv || "function" === hv)
-              if (vv) {
-                if (Sv) {
-                  let Pv = Sv.get(vv);
-                  if (Pv) {
-                    if (!Pv.id) {
-                      let vv = Sv.idsToInsert || (Sv.idsToInsert = []);
-                      Pv.id = vv.push(Pv)
+              Pk[Jk++] = 203, mk.setFloat64(Jk, TT), Jk += 8
+            } else if ("object" === lT || "function" === lT)
+              if (TT) {
+                if (MT) {
+                  let cT = MT.get(TT);
+                  if (cT) {
+                    if (!cT.id) {
+                      let TT = MT.idsToInsert || (MT.idsToInsert = []);
+                      cT.id = TT.push(cT)
                     }
-                    return Yz[Vz++] = 214, Yz[Vz++] = 112, Oz.setUint32(Vz, Pv.id), void(Vz += 4)
+                    return Pk[Jk++] = 214, Pk[Jk++] = 112, mk.setUint32(Jk, cT.id), void(Jk += 4)
                   }
-                  Sv.set(vv, {
-                    offset: Vz - zv
+                  MT.set(TT, {
+                    offset: Jk - kT
                   })
                 }
-                let ev = vv.constructor;
-                if (ev === Object) Fv(vv);
-                else if (ev === Array) cv(vv);
-                else if (ev === Map)
-                  if (this.mapAsEmptyObject) Yz[Vz++] = 128;
+                let KT = TT.constructor;
+                if (KT === Object) rT(TT);
+                else if (KT === Array) QT(TT);
+                else if (KT === Map)
+                  if (this.mapAsEmptyObject) Pk[Jk++] = 128;
                   else {
-                    (Pv = vv.size) < 16 ? Yz[Vz++] = 128 | Pv : Pv < 65536 ? (Yz[Vz++] = 222, Yz[Vz++] = Pv >> 8, Yz[Vz++] = 255 & Pv) : (Yz[Vz++] = 223, Oz.setUint32(Vz, Pv), Vz += 4);
-                    for (let [zv, Pv] of vv) Gv(zv), Gv(Pv)
+                    (cT = TT.size) < 16 ? Pk[Jk++] = 128 | cT : cT < 65536 ? (Pk[Jk++] = 222, Pk[Jk++] = cT >> 8, Pk[Jk++] = 255 & cT) : (Pk[Jk++] = 223, mk.setUint32(Jk, cT), Jk += 4);
+                    for (let [kT, cT] of TT) ST(kT), ST(cT)
                   }
                 else {
-                  for (let zv = 0, Pv = sz.length; zv < Pv; zv++) {
-                    if (vv instanceof Cz[zv]) {
-                      let Pv = sz[zv];
-                      if (Pv.write) {
-                        Pv.type && (Yz[Vz++] = 212, Yz[Vz++] = Pv.type, Yz[Vz++] = 0);
-                        let zv = Pv.write.call(this, vv);
-                        return void(zv === vv ? Array.isArray(vv) ? cv(vv) : Fv(vv) : Gv(zv))
+                  for (let kT = 0, cT = tk.length; kT < cT; kT++) {
+                    if (TT instanceof hk[kT]) {
+                      let cT = tk[kT];
+                      if (cT.write) {
+                        cT.type && (Pk[Jk++] = 212, Pk[Jk++] = cT.type, Pk[Jk++] = 0);
+                        let kT = cT.write.call(this, TT);
+                        return void(kT === TT ? Array.isArray(TT) ? QT(TT) : rT(TT) : ST(kT))
                       }
-                      let hv, Sv = Yz,
-                        ev = Oz,
-                        gv = Vz;
-                      Yz = null;
+                      let lT, MT = Pk,
+                        KT = mk,
+                        OT = Jk;
+                      Pk = null;
                       try {
-                        hv = Pv.pack.call(this, vv, (vv => (Yz = Sv, Sv = null, Vz += vv, Vz > Dz && Yv(Vz), {
-                          target: Yz,
-                          targetView: Oz,
-                          position: Vz - vv
-                        })), Gv)
+                        lT = cT.pack.call(this, TT, (TT => (Pk = MT, MT = null, Jk += TT, Jk > bk && PT(Jk), {
+                          target: Pk,
+                          targetView: mk,
+                          position: Jk - TT
+                        })), ST)
                       } finally {
-                        Sv && (Yz = Sv, Oz = ev, Vz = gv, Dz = Yz.length - 10)
+                        MT && (Pk = MT, mk = KT, Jk = OT, bk = Pk.length - 10)
                       }
-                      return void(hv && (hv.length + Vz > Dz && Yv(hv.length + Vz), Vz = Qz(hv, Yz, Vz, Pv.type)))
+                      return void(lT && (lT.length + Jk > bk && PT(lT.length + Jk), Jk = uk(lT, Pk, Jk, cT.type)))
                     }
                   }
-                  if (Array.isArray(vv)) cv(vv);
+                  if (Array.isArray(TT)) QT(TT);
                   else {
-                    if (vv.toJSON) {
-                      const zv = vv.toJSON();
-                      if (zv !== vv) return Gv(zv)
+                    if (TT.toJSON) {
+                      const kT = TT.toJSON();
+                      if (kT !== TT) return ST(kT)
                     }
-                    if ("function" === hv) return Gv(this.writeFunction && this.writeFunction(vv));
-                    Fv(vv)
+                    if ("function" === lT) return ST(this.writeFunction && this.writeFunction(TT));
+                    rT(TT)
                   }
                 }
-              } else Yz[Vz++] = 192;
-            else if ("boolean" === hv) Yz[Vz++] = vv ? 195 : 194;
-            else if ("bigint" === hv) {
-              if (vv < BigInt(1) << BigInt(63) && vv >= -(BigInt(1) << BigInt(63))) Yz[Vz++] = 211, Oz.setBigInt64(Vz, vv);
-              else if (vv < BigInt(1) << BigInt(64) && vv > 0) Yz[Vz++] = 207, Oz.setBigUint64(Vz, vv);
+              } else Pk[Jk++] = 192;
+            else if ("boolean" === lT) Pk[Jk++] = TT ? 195 : 194;
+            else if ("bigint" === lT) {
+              if (TT < BigInt(1) << BigInt(63) && TT >= -(BigInt(1) << BigInt(63))) Pk[Jk++] = 211, mk.setBigInt64(Jk, TT);
+              else if (TT < BigInt(1) << BigInt(64) && TT > 0) Pk[Jk++] = 207, mk.setBigUint64(Jk, TT);
               else {
                 if (!this.largeBigIntToFloat) {
-                  if (this.largeBigIntToString) return Gv(vv.toString());
-                  if (this.useBigIntExtension && vv < BigInt(2) ** BigInt(1023) && vv > -(BigInt(2) ** BigInt(1023))) {
-                    Yz[Vz++] = 199, Vz++, Yz[Vz++] = 66;
-                    let zv, Pv = [];
+                  if (this.largeBigIntToString) return ST(TT.toString());
+                  if (this.useBigIntExtension && TT < BigInt(2) ** BigInt(1023) && TT > -(BigInt(2) ** BigInt(1023))) {
+                    Pk[Jk++] = 199, Jk++, Pk[Jk++] = 66;
+                    let kT, cT = [];
                     do {
-                      let hv = vv & BigInt(255);
-                      zv = (hv & BigInt(128)) === (vv < BigInt(0) ? BigInt(128) : BigInt(0)), Pv.push(hv), vv >>= BigInt(8)
-                    } while (vv !== BigInt(0) && vv !== BigInt(-1) || !zv);
-                    Yz[Vz - 2] = Pv.length;
-                    for (let vv = Pv.length; vv > 0;) Yz[Vz++] = Number(Pv[--vv]);
+                      let lT = TT & BigInt(255);
+                      kT = (lT & BigInt(128)) === (TT < BigInt(0) ? BigInt(128) : BigInt(0)), cT.push(lT), TT >>= BigInt(8)
+                    } while (TT !== BigInt(0) && TT !== BigInt(-1) || !kT);
+                    Pk[Jk - 2] = cT.length;
+                    for (let TT = cT.length; TT > 0;) Pk[Jk++] = Number(cT[--TT]);
                     return
                   }
-                  throw new RangeError(vv + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
+                  throw new RangeError(TT + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
                 }
-                Yz[Vz++] = 203, Oz.setFloat64(Vz, Number(vv))
+                Pk[Jk++] = 203, mk.setFloat64(Jk, Number(TT))
               }
-              Vz += 8
+              Jk += 8
             } else {
-              if ("undefined" !== hv) throw new Error("Unknown type: " + hv);
-              this.encodeUndefinedAsNil ? Yz[Vz++] = 192 : (Yz[Vz++] = 212, Yz[Vz++] = 0, Yz[Vz++] = 0)
+              if ("undefined" !== lT) throw new Error("Unknown type: " + lT);
+              this.encodeUndefinedAsNil ? Pk[Jk++] = 192 : (Pk[Jk++] = 212, Pk[Jk++] = 0, Pk[Jk++] = 0)
             }
           },
-          mv = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? vv => {
-            let zv;
+          DT = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? TT => {
+            let kT;
             if (this.skipValues) {
-              zv = [];
-              for (let Pv in vv) "function" === typeof vv.hasOwnProperty && !vv.hasOwnProperty(Pv) || this.skipValues.includes(vv[Pv]) || zv.push(Pv)
-            } else zv = Object.keys(vv);
-            let Pv, hv = zv.length;
-            if (hv < 16 ? Yz[Vz++] = 128 | hv : hv < 65536 ? (Yz[Vz++] = 222, Yz[Vz++] = hv >> 8, Yz[Vz++] = 255 & hv) : (Yz[Vz++] = 223, Oz.setUint32(Vz, hv), Vz += 4), this.coercibleKeyAsNumber)
-              for (let Sv = 0; Sv < hv; Sv++) {
-                Pv = zv[Sv];
-                let hv = Number(Pv);
-                Gv(isNaN(hv) ? Pv : hv), Gv(vv[Pv])
+              kT = [];
+              for (let cT in TT) "function" === typeof TT.hasOwnProperty && !TT.hasOwnProperty(cT) || this.skipValues.includes(TT[cT]) || kT.push(cT)
+            } else kT = Object.keys(TT);
+            let cT, lT = kT.length;
+            if (lT < 16 ? Pk[Jk++] = 128 | lT : lT < 65536 ? (Pk[Jk++] = 222, Pk[Jk++] = lT >> 8, Pk[Jk++] = 255 & lT) : (Pk[Jk++] = 223, mk.setUint32(Jk, lT), Jk += 4), this.coercibleKeyAsNumber)
+              for (let MT = 0; MT < lT; MT++) {
+                cT = kT[MT];
+                let lT = Number(cT);
+                ST(isNaN(lT) ? cT : lT), ST(TT[cT])
               } else
-                for (let Sv = 0; Sv < hv; Sv++) Gv(Pv = zv[Sv]), Gv(vv[Pv])
-          } : vv => {
-            Yz[Vz++] = 222;
-            let Pv = Vz - zv;
-            Vz += 2;
-            let hv = 0;
-            for (let zv in vv)("function" !== typeof vv.hasOwnProperty || vv.hasOwnProperty(zv)) && (Gv(zv), Gv(vv[zv]), hv++);
-            if (hv > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
-            Yz[Pv++ + zv] = hv >> 8, Yz[Pv + zv] = 255 & hv
+                for (let MT = 0; MT < lT; MT++) ST(cT = kT[MT]), ST(TT[cT])
+          } : TT => {
+            Pk[Jk++] = 222;
+            let cT = Jk - kT;
+            Jk += 2;
+            let lT = 0;
+            for (let kT in TT)("function" !== typeof TT.hasOwnProperty || TT.hasOwnProperty(kT)) && (ST(kT), ST(TT[kT]), lT++);
+            if (lT > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
+            Pk[cT++ + kT] = lT >> 8, Pk[cT + kT] = 255 & lT
           },
-          jv = !1 === this.useRecords ? mv : vv.progressiveRecords && !Tv ? vv => {
-            let Pv, Sv, ev = hv.transitions || (hv.transitions = Object.create(null)),
-              gv = Vz++ - zv;
-            for (let pv in vv)
-              if ("function" !== typeof vv.hasOwnProperty || vv.hasOwnProperty(pv)) {
-                if (Pv = ev[pv], Pv) ev = Pv;
+          aT = !1 === this.useRecords ? DT : TT.progressiveRecords && !AT ? TT => {
+            let cT, MT, KT = lT.transitions || (lT.transitions = Object.create(null)),
+              OT = Jk++ - kT;
+            for (let yT in TT)
+              if ("function" !== typeof TT.hasOwnProperty || TT.hasOwnProperty(yT)) {
+                if (cT = KT[yT], cT) KT = cT;
                 else {
-                  let dv = Object.keys(vv),
-                    Nv = ev;
-                  ev = hv.transitions;
-                  let lv = 0;
-                  for (let vv = 0, zv = dv.length; vv < zv; vv++) {
-                    let zv = dv[vv];
-                    Pv = ev[zv], Pv || (Pv = ev[zv] = Object.create(null), lv++), ev = Pv
+                  let fT = Object.keys(TT),
+                    xT = KT;
+                  KT = lT.transitions;
+                  let IT = 0;
+                  for (let TT = 0, kT = fT.length; TT < kT; TT++) {
+                    let kT = fT[TT];
+                    cT = KT[kT], cT || (cT = KT[kT] = Object.create(null), IT++), KT = cT
                   }
-                  gv + zv + 1 == Vz ? (Vz--, nv(ev, dv, lv)) : Ov(ev, dv, gv, lv), Sv = !0, ev = Nv[pv]
+                  OT + kT + 1 == Jk ? (Jk--, wT(KT, fT, IT)) : mT(KT, fT, OT, IT), MT = !0, KT = xT[yT]
                 }
-                Gv(vv[pv])
-              } if (!Sv) {
-              let Pv = ev[xz];
-              Pv ? Yz[gv + zv] = Pv : Ov(ev, Object.keys(vv), gv, 0)
+                ST(TT[yT])
+              } if (!MT) {
+              let cT = KT[Gk];
+              cT ? Pk[OT + kT] = cT : mT(KT, Object.keys(TT), OT, 0)
             }
-          } : vv => {
-            let zv, Pv = hv.transitions || (hv.transitions = Object.create(null)),
-              Sv = 0;
-            for (let hv in vv)("function" !== typeof vv.hasOwnProperty || vv.hasOwnProperty(hv)) && (zv = Pv[hv], zv || (zv = Pv[hv] = Object.create(null), Sv++), Pv = zv);
-            let ev = Pv[xz];
-            ev ? ev >= 96 && Tv ? (Yz[Vz++] = 96 + (31 & (ev -= 96)), Yz[Vz++] = ev >> 5) : Yz[Vz++] = ev : nv(Pv, Pv.__keys__ || Object.keys(vv), Sv);
-            for (let hv in vv)("function" !== typeof vv.hasOwnProperty || vv.hasOwnProperty(hv)) && Gv(vv[hv])
+          } : TT => {
+            let kT, cT = lT.transitions || (lT.transitions = Object.create(null)),
+              MT = 0;
+            for (let lT in TT)("function" !== typeof TT.hasOwnProperty || TT.hasOwnProperty(lT)) && (kT = cT[lT], kT || (kT = cT[lT] = Object.create(null), MT++), cT = kT);
+            let KT = cT[Gk];
+            KT ? KT >= 96 && AT ? (Pk[Jk++] = 96 + (31 & (KT -= 96)), Pk[Jk++] = KT >> 5) : Pk[Jk++] = KT : wT(cT, cT.__keys__ || Object.keys(TT), MT);
+            for (let lT in TT)("function" !== typeof TT.hasOwnProperty || TT.hasOwnProperty(lT)) && ST(TT[lT])
           },
-          fv = "function" == typeof this.useRecords && this.useRecords,
-          Fv = fv ? vv => {
-            fv(vv) ? jv(vv) : mv(vv)
-          } : jv,
-          Yv = vv => {
-            let Pv;
-            if (vv > 16777216) {
-              if (vv - zv > Fz) throw new Error("Packed buffer would be larger than maximum buffer size");
-              Pv = Math.min(Fz, 4096 * Math.round(Math.max((vv - zv) * (vv > 67108864 ? 1.25 : 2), 4194304) / 4096))
-            } else Pv = 1 + (Math.max(vv - zv << 2, Yz.length - 1) >> 12) << 12;
-            let hv = new jz(Pv);
-            return Oz = hv.dataView || (hv.dataView = new DataView(hv.buffer, 0, Pv)), vv = Math.min(vv, Yz.length), Yz.copy ? Yz.copy(hv, 0, zv, vv) : hv.set(Yz.slice(zv, vv)), Vz -= zv, zv = 0, Dz = hv.length - 10, Yz = hv
+          FT = "function" == typeof this.useRecords && this.useRecords,
+          rT = FT ? TT => {
+            FT(TT) ? aT(TT) : DT(TT)
+          } : aT,
+          PT = TT => {
+            let cT;
+            if (TT > 16777216) {
+              if (TT - kT > rk) throw new Error("Packed buffer would be larger than maximum buffer size");
+              cT = Math.min(rk, 4096 * Math.round(Math.max((TT - kT) * (TT > 67108864 ? 1.25 : 2), 4194304) / 4096))
+            } else cT = 1 + (Math.max(TT - kT << 2, Pk.length - 1) >> 12) << 12;
+            let lT = new ak(cT);
+            return mk = lT.dataView || (lT.dataView = new DataView(lT.buffer, 0, cT)), TT = Math.min(TT, Pk.length), Pk.copy ? Pk.copy(lT, 0, kT, TT) : lT.set(Pk.slice(kT, TT)), Jk -= kT, kT = 0, bk = lT.length - 10, Pk = lT
           },
-          nv = (vv, zv, Sv) => {
-            let ev = hv.nextId;
-            ev || (ev = 64), ev < Wv && this.shouldShareStructure && !this.shouldShareStructure(zv) ? (ev = hv.nextOwnId, ev < wv || (ev = Wv), hv.nextOwnId = ev + 1) : (ev >= wv && (ev = Wv), hv.nextId = ev + 1);
-            let gv = zv.highByte = ev >= 96 && Tv ? ev - 96 >> 5 : -1;
-            vv[xz] = ev, vv.__keys__ = zv, hv[ev - 64] = zv, ev < Wv ? (zv.isShared = !0, hv.sharedLength = ev - 63, Pv = !0, gv >= 0 ? (Yz[Vz++] = 96 + (31 & ev), Yz[Vz++] = gv) : Yz[Vz++] = ev) : (gv >= 0 ? (Yz[Vz++] = 213, Yz[Vz++] = 114, Yz[Vz++] = 96 + (31 & ev), Yz[Vz++] = gv) : (Yz[Vz++] = 212, Yz[Vz++] = 114, Yz[Vz++] = ev), Sv && (sv += Cv * Sv), av.length >= lv && (av.shift()[xz] = 0), av.push(vv), Gv(zv))
+          wT = (TT, kT, MT) => {
+            let KT = lT.nextId;
+            KT || (KT = 64), KT < CT && this.shouldShareStructure && !this.shouldShareStructure(kT) ? (KT = lT.nextOwnId, KT < jT || (KT = CT), lT.nextOwnId = KT + 1) : (KT >= jT && (KT = CT), lT.nextId = KT + 1);
+            let OT = kT.highByte = KT >= 96 && AT ? KT - 96 >> 5 : -1;
+            TT[Gk] = KT, TT.__keys__ = kT, lT[KT - 64] = kT, KT < CT ? (kT.isShared = !0, lT.sharedLength = KT - 63, cT = !0, OT >= 0 ? (Pk[Jk++] = 96 + (31 & KT), Pk[Jk++] = OT) : Pk[Jk++] = KT) : (OT >= 0 ? (Pk[Jk++] = 213, Pk[Jk++] = 114, Pk[Jk++] = 96 + (31 & KT), Pk[Jk++] = OT) : (Pk[Jk++] = 212, Pk[Jk++] = 114, Pk[Jk++] = KT), MT && (tT += hT * MT), vT.length >= IT && (vT.shift()[Gk] = 0), vT.push(TT), ST(kT))
           },
-          Ov = (vv, Pv, hv, Sv) => {
-            let ev = Yz,
-              gv = Vz,
-              pv = Dz,
-              dv = zv;
-            Yz = nz, Vz = 0, zv = 0, Yz || (nz = Yz = new jz(8192)), Dz = Yz.length - 10, nv(vv, Pv, Sv), nz = Yz;
-            let Nv = Vz;
-            if (Yz = ev, Vz = gv, Dz = pv, zv = dv, Nv > 1) {
-              let vv = Vz + Nv - 1;
-              vv > Dz && Yv(vv);
-              let Pv = hv + zv;
-              Yz.copyWithin(Pv + Nv, Pv + 1, Vz), Yz.set(nz.slice(0, Nv), Pv), Vz = vv
-            } else Yz[hv + zv] = nz[0]
+          mT = (TT, cT, lT, MT) => {
+            let KT = Pk,
+              OT = Jk,
+              yT = bk,
+              fT = kT;
+            Pk = wk, Jk = 0, kT = 0, Pk || (wk = Pk = new ak(8192)), bk = Pk.length - 10, wT(TT, cT, MT), wk = Pk;
+            let xT = Jk;
+            if (Pk = KT, Jk = OT, bk = yT, kT = fT, xT > 1) {
+              let TT = Jk + xT - 1;
+              TT > bk && PT(TT);
+              let cT = lT + kT;
+              Pk.copyWithin(cT + xT, cT + 1, Jk), Pk.set(wk.slice(0, xT), cT), Jk = TT
+            } else Pk[lT + kT] = wk[0]
           },
-          Dv = vv => {
-            let Sv = Kz(vv, Yz, zv, Vz, hv, Yv, ((vv, zv, hv) => {
-              if (hv) return Pv = !0;
-              Vz = zv;
-              let Sv = Yz;
-              return Gv(vv), iv(), Sv !== Yz ? {
-                position: Vz,
-                targetView: Oz,
-                target: Yz
-              } : Vz
+          bT = TT => {
+            let MT = zk(TT, Pk, kT, Jk, lT, PT, ((TT, kT, lT) => {
+              if (lT) return cT = !0;
+              Jk = kT;
+              let MT = Pk;
+              return ST(TT), NT(), MT !== Pk ? {
+                position: Jk,
+                targetView: mk,
+                target: Pk
+              } : Jk
             }), this);
-            if (0 === Sv) return Fv(vv);
-            Vz = Sv
+            if (0 === MT) return rT(TT);
+            Jk = MT
           }
       }
-      useBuffer(vv) {
-        Yz = vv, Oz = Yz.dataView || (Yz.dataView = new DataView(Yz.buffer, Yz.byteOffset, Yz.byteLength)), Vz = 0
+      useBuffer(TT) {
+        Pk = TT, mk = Pk.dataView || (Pk.dataView = new DataView(Pk.buffer, Pk.byteOffset, Pk.byteLength)), Jk = 0
       }
-      set position(vv) {
-        Vz = vv
+      set position(TT) {
+        Jk = TT
       }
       get position() {
-        return Vz
+        return Jk
       }
-      set buffer(vv) {
-        Yz = vv
+      set buffer(TT) {
+        Pk = TT
       }
       get buffer() {
-        return Yz
+        return Pk
       }
       clearSharedData() {
         this.structures && (this.structures = []), this.typedStructs && (this.typedStructs = [])
       }
     }
 
-    function qz(vv, zv, Pv, hv) {
-      let Sv = vv.byteLength;
-      if (Sv + 1 < 256) {
+    function Ek(TT, kT, cT, lT) {
+      let MT = TT.byteLength;
+      if (MT + 1 < 256) {
         var {
-          target: ev,
-          position: gv
-        } = Pv(4 + Sv);
-        ev[gv++] = 199, ev[gv++] = Sv + 1
-      } else if (Sv + 1 < 65536) {
+          target: KT,
+          position: OT
+        } = cT(4 + MT);
+        KT[OT++] = 199, KT[OT++] = MT + 1
+      } else if (MT + 1 < 65536) {
         var {
-          target: ev,
-          position: gv
-        } = Pv(5 + Sv);
-        ev[gv++] = 200, ev[gv++] = Sv + 1 >> 8, ev[gv++] = Sv + 1 & 255
+          target: KT,
+          position: OT
+        } = cT(5 + MT);
+        KT[OT++] = 200, KT[OT++] = MT + 1 >> 8, KT[OT++] = MT + 1 & 255
       } else {
         var {
-          target: ev,
-          position: gv,
-          targetView: pv
-        } = Pv(7 + Sv);
-        ev[gv++] = 201, pv.setUint32(gv, Sv + 1), gv += 4
+          target: KT,
+          position: OT,
+          targetView: yT
+        } = cT(7 + MT);
+        KT[OT++] = 201, yT.setUint32(OT, MT + 1), OT += 4
       }
-      ev[gv++] = 116, ev[gv++] = zv, vv.buffer || (vv = new Uint8Array(vv)), ev.set(new Uint8Array(vv.buffer, vv.byteOffset, vv.byteLength), gv)
+      KT[OT++] = 116, KT[OT++] = kT, TT.buffer || (TT = new Uint8Array(TT)), KT.set(new Uint8Array(TT.buffer, TT.byteOffset, TT.byteLength), OT)
     }
 
-    function Iz(vv, zv) {
-      let Pv = vv.byteLength;
-      var hv, Sv;
-      if (Pv < 256) {
+    function Zk(TT, kT) {
+      let cT = TT.byteLength;
+      var lT, MT;
+      if (cT < 256) {
         var {
-          target: hv,
-          position: Sv
-        } = zv(Pv + 2);
-        hv[Sv++] = 196, hv[Sv++] = Pv
-      } else if (Pv < 65536) {
+          target: lT,
+          position: MT
+        } = kT(cT + 2);
+        lT[MT++] = 196, lT[MT++] = cT
+      } else if (cT < 65536) {
         var {
-          target: hv,
-          position: Sv
-        } = zv(Pv + 3);
-        hv[Sv++] = 197, hv[Sv++] = Pv >> 8, hv[Sv++] = 255 & Pv
+          target: lT,
+          position: MT
+        } = kT(cT + 3);
+        lT[MT++] = 197, lT[MT++] = cT >> 8, lT[MT++] = 255 & cT
       } else {
         var {
-          target: hv,
-          position: Sv,
-          targetView: ev
-        } = zv(Pv + 5);
-        hv[Sv++] = 198, ev.setUint32(Sv, Pv), Sv += 4
+          target: lT,
+          position: MT,
+          targetView: KT
+        } = kT(cT + 5);
+        lT[MT++] = 198, KT.setUint32(MT, cT), MT += 4
       }
-      hv.set(vv, Sv)
+      lT.set(TT, MT)
     }
 
-    function Qz(vv, zv, Pv, hv) {
-      let Sv = vv.length;
-      switch (Sv) {
+    function uk(TT, kT, cT, lT) {
+      let MT = TT.length;
+      switch (MT) {
         case 1:
-          zv[Pv++] = 212;
+          kT[cT++] = 212;
           break;
         case 2:
-          zv[Pv++] = 213;
+          kT[cT++] = 213;
           break;
         case 4:
-          zv[Pv++] = 214;
+          kT[cT++] = 214;
           break;
         case 8:
-          zv[Pv++] = 215;
+          kT[cT++] = 215;
           break;
         case 16:
-          zv[Pv++] = 216;
+          kT[cT++] = 216;
           break;
         default:
-          Sv < 256 ? (zv[Pv++] = 199, zv[Pv++] = Sv) : Sv < 65536 ? (zv[Pv++] = 200, zv[Pv++] = Sv >> 8, zv[Pv++] = 255 & Sv) : (zv[Pv++] = 201, zv[Pv++] = Sv >> 24, zv[Pv++] = Sv >> 16 & 255, zv[Pv++] = Sv >> 8 & 255, zv[Pv++] = 255 & Sv)
+          MT < 256 ? (kT[cT++] = 199, kT[cT++] = MT) : MT < 65536 ? (kT[cT++] = 200, kT[cT++] = MT >> 8, kT[cT++] = 255 & MT) : (kT[cT++] = 201, kT[cT++] = MT >> 24, kT[cT++] = MT >> 16 & 255, kT[cT++] = MT >> 8 & 255, kT[cT++] = 255 & MT)
       }
-      return zv[Pv++] = hv, zv.set(vv, Pv), Pv += Sv
+      return kT[cT++] = lT, kT.set(TT, cT), cT += MT
     }
 
-    function Zz(vv, zv, Pv) {
-      if (Uz.length > 0) {
-        Oz.setUint32(Uz.position + vv, Vz + Pv - Uz.position - vv), Uz.stringsPosition = Vz - vv;
-        let hv = Uz;
-        Uz = null, zv(hv[0]), zv(hv[1])
+    function Xk(TT, kT, cT) {
+      if (Hk.length > 0) {
+        mk.setUint32(Hk.position + TT, Jk + cT - Hk.position - TT), Hk.stringsPosition = Jk - TT;
+        let lT = Hk;
+        Hk = null, kT(lT[0]), kT(lT[1])
       }
     }
 
-    function Az(vv) {
-      if (vv.Class) {
-        if (!vv.pack && !vv.write) throw new Error("Extension has no pack or write function");
-        if (vv.pack && !vv.type) throw new Error("Extension has no type (numeric code to identify the extension)");
-        Cz.unshift(vv.Class), sz.unshift(vv)
-      }! function(vv) {
-        vv.unpack ? cv[vv.type] = vv.unpack : cv[vv.type] = vv
-      }(vv)
+    function dk(TT) {
+      if (TT.Class) {
+        if (!TT.pack && !TT.write) throw new Error("Extension has no pack or write function");
+        if (TT.pack && !TT.type) throw new Error("Extension has no type (numeric code to identify the extension)");
+        hk.unshift(TT.Class), tk.unshift(TT)
+      }! function(TT) {
+        TT.unpack ? QT[TT.type] = TT.unpack : QT[TT.type] = TT
+      }(TT)
     }
 
-    function Lz(vv, zv) {
-      return vv.isCompatible = vv => {
-        let Pv = !vv || (zv.lastNamedStructuresLength || 0) === vv.length;
-        return Pv || zv._mergeStructures(vv), Pv
-      }, vv
+    function Lk(TT, kT) {
+      return TT.isCompatible = TT => {
+        let cT = !TT || (kT.lastNamedStructuresLength || 0) === TT.length;
+        return cT || kT._mergeStructures(TT), cT
+      }, TT
     }
-    Cz = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, mv], sz = [{
-      pack(vv, zv, Pv) {
-        let hv = vv.getTime() / 1e3;
-        if ((this.useTimestamp32 || 0 === vv.getMilliseconds()) && hv >= 0 && hv < 4294967296) {
+    hk = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, DT], tk = [{
+      pack(TT, kT, cT) {
+        let lT = TT.getTime() / 1e3;
+        if ((this.useTimestamp32 || 0 === TT.getMilliseconds()) && lT >= 0 && lT < 4294967296) {
           let {
-            target: vv,
-            targetView: Pv,
-            position: Sv
-          } = zv(6);
-          vv[Sv++] = 214, vv[Sv++] = 255, Pv.setUint32(Sv, hv)
-        } else if (hv > 0 && hv < 4294967296) {
+            target: TT,
+            targetView: cT,
+            position: MT
+          } = kT(6);
+          TT[MT++] = 214, TT[MT++] = 255, cT.setUint32(MT, lT)
+        } else if (lT > 0 && lT < 4294967296) {
           let {
-            target: Pv,
-            targetView: Sv,
-            position: ev
-          } = zv(10);
-          Pv[ev++] = 215, Pv[ev++] = 255, Sv.setUint32(ev, 4e6 * vv.getMilliseconds() + (hv / 1e3 / 4294967296 | 0)), Sv.setUint32(ev + 4, hv)
-        } else if (isNaN(hv)) {
-          if (this.onInvalidDate) return zv(0), Pv(this.onInvalidDate());
+            target: cT,
+            targetView: MT,
+            position: KT
+          } = kT(10);
+          cT[KT++] = 215, cT[KT++] = 255, MT.setUint32(KT, 4e6 * TT.getMilliseconds() + (lT / 1e3 / 4294967296 | 0)), MT.setUint32(KT + 4, lT)
+        } else if (isNaN(lT)) {
+          if (this.onInvalidDate) return kT(0), cT(this.onInvalidDate());
           let {
-            target: vv,
-            targetView: hv,
-            position: Sv
-          } = zv(3);
-          vv[Sv++] = 212, vv[Sv++] = 255, vv[Sv++] = 255
+            target: TT,
+            targetView: lT,
+            position: MT
+          } = kT(3);
+          TT[MT++] = 212, TT[MT++] = 255, TT[MT++] = 255
         } else {
           let {
-            target: Pv,
-            targetView: Sv,
-            position: ev
-          } = zv(15);
-          Pv[ev++] = 199, Pv[ev++] = 12, Pv[ev++] = 255, Sv.setUint32(ev, 1e6 * vv.getMilliseconds()), Sv.setBigInt64(ev + 4, BigInt(Math.floor(hv)))
+            target: cT,
+            targetView: MT,
+            position: KT
+          } = kT(15);
+          cT[KT++] = 199, cT[KT++] = 12, cT[KT++] = 255, MT.setUint32(KT, 1e6 * TT.getMilliseconds()), MT.setBigInt64(KT + 4, BigInt(Math.floor(lT)))
         }
       }
     }, {
-      pack(vv, zv, Pv) {
-        if (this.setAsEmptyObject) return zv(0), Pv({});
-        let hv = Array.from(vv),
+      pack(TT, kT, cT) {
+        if (this.setAsEmptyObject) return kT(0), cT({});
+        let lT = Array.from(TT),
           {
-            target: Sv,
-            position: ev
-          } = zv(this.moreTypes ? 3 : 0);
-        this.moreTypes && (Sv[ev++] = 212, Sv[ev++] = 115, Sv[ev++] = 0), Pv(hv)
+            target: MT,
+            position: KT
+          } = kT(this.moreTypes ? 3 : 0);
+        this.moreTypes && (MT[KT++] = 212, MT[KT++] = 115, MT[KT++] = 0), cT(lT)
       }
     }, {
-      pack(vv, zv, Pv) {
+      pack(TT, kT, cT) {
         let {
-          target: hv,
-          position: Sv
-        } = zv(this.moreTypes ? 3 : 0);
-        this.moreTypes && (hv[Sv++] = 212, hv[Sv++] = 101, hv[Sv++] = 0), Pv([vv.name, vv.message, vv.cause])
+          target: lT,
+          position: MT
+        } = kT(this.moreTypes ? 3 : 0);
+        this.moreTypes && (lT[MT++] = 212, lT[MT++] = 101, lT[MT++] = 0), cT([TT.name, TT.message, TT.cause])
       }
     }, {
-      pack(vv, zv, Pv) {
+      pack(TT, kT, cT) {
         let {
-          target: hv,
-          position: Sv
-        } = zv(this.moreTypes ? 3 : 0);
-        this.moreTypes && (hv[Sv++] = 212, hv[Sv++] = 120, hv[Sv++] = 0), Pv([vv.source, vv.flags])
+          target: lT,
+          position: MT
+        } = kT(this.moreTypes ? 3 : 0);
+        this.moreTypes && (lT[MT++] = 212, lT[MT++] = 120, lT[MT++] = 0), cT([TT.source, TT.flags])
       }
     }, {
-      pack(vv, zv) {
-        this.moreTypes ? qz(vv, 16, zv) : Iz(mz ? Buffer.from(vv) : new Uint8Array(vv), zv)
+      pack(TT, kT) {
+        this.moreTypes ? Ek(TT, 16, kT) : Zk(Dk ? Buffer.from(TT) : new Uint8Array(TT), kT)
       }
     }, {
-      pack(vv, zv) {
-        let Pv = vv.constructor;
-        Pv !== fz && this.moreTypes ? qz(vv, Pz.indexOf(Pv.name), zv) : Iz(vv, zv)
+      pack(TT, kT) {
+        let cT = TT.constructor;
+        cT !== Fk && this.moreTypes ? Ek(TT, ck.indexOf(cT.name), kT) : Zk(TT, kT)
       }
     }, {
-      pack(vv, zv) {
+      pack(TT, kT) {
         let {
-          target: Pv,
-          position: hv
-        } = zv(1);
-        Pv[hv] = 193
+          target: cT,
+          position: lT
+        } = kT(1);
+        cT[lT] = 193
       }
     }];
-    let Hz = new tz({
+    let Rk = new Vk({
       useRecords: !1
     });
-    const Mz = Hz.pack,
-      yz = Hz.pack,
-      Bz = tz,
+    const gk = Rk.pack,
+      Uk = Rk.pack,
+      Yk = Vk,
       {
-        NEVER: Jz,
-        ALWAYS: Ez,
-        DECIMAL_ROUND: oz,
-        DECIMAL_FIT: bz
-      } = wz,
-      rz = 512,
-      kz = 1024,
-      Xz = 2048;
-    const uz = function(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!vv || "object" !== typeof vv) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
-        const Pv = new Dv(zv);
-        let hv;
-        const Sv = vv => {
-          let zv;
-          hv && (vv = Buffer.concat([hv, vv]), hv = void 0);
+        NEVER: Bk,
+        ALWAYS: Wk,
+        DECIMAL_ROUND: nk,
+        DECIMAL_FIT: pk
+      } = jk,
+      ik = 512,
+      qk = 1024,
+      sk = 2048;
+    const Tc = function(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!TT || "object" !== typeof TT) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
+        const cT = new bT(kT);
+        let lT;
+        const MT = TT => {
+          let kT;
+          lT && (TT = Buffer.concat([lT, TT]), lT = void 0);
           try {
-            zv = Pv.unpackMultiple(vv)
-          } catch (Sv) {
-            if (!Sv.incomplete) throw Sv;
-            hv = vv.slice(Sv.lastPosition), zv = Sv.values
+            kT = cT.unpackMultiple(TT)
+          } catch (MT) {
+            if (!MT.incomplete) throw MT;
+            lT = TT.slice(MT.lastPosition), kT = MT.values
           }
-          return zv
+          return kT
         };
-        return "function" === typeof vv[Symbol.iterator] ? function*() {
-          for (const zv of vv) yield* Sv(zv)
-        }() : "function" === typeof vv[Symbol.asyncIterator] ? async function*() {
-          for await (const zv of vv) yield* Sv(zv)
+        return "function" === typeof TT[Symbol.iterator] ? function*() {
+          for (const kT of TT) yield* MT(kT)
+        }() : "function" === typeof TT[Symbol.asyncIterator] ? async function*() {
+          for await (const kT of TT) yield* MT(kT)
         }(): void 0
       },
-      vP = function(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (vv && "object" === typeof vv) {
-          if ("function" === typeof vv[Symbol.iterator]) return function*(vv, zv) {
-            const Pv = new tz(zv);
-            for (const hv of vv) yield Pv.pack(hv)
-          }(vv, zv);
-          if ("function" === typeof vv.then || "function" === typeof vv[Symbol.asyncIterator]) return async function*(vv, zv) {
-            const Pv = new tz(zv);
-            for await (const hv of vv) yield Pv.pack(hv)
-          }(vv, zv);
+      kc = function(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (TT && "object" === typeof TT) {
+          if ("function" === typeof TT[Symbol.iterator]) return function*(TT, kT) {
+            const cT = new Vk(kT);
+            for (const lT of TT) yield cT.pack(lT)
+          }(TT, kT);
+          if ("function" === typeof TT.then || "function" === typeof TT[Symbol.asyncIterator]) return async function*(TT, kT) {
+            const cT = new Vk(kT);
+            for await (const lT of TT) yield cT.pack(lT)
+          }(TT, kT);
           throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a Promise")
         }
         throw new Error("first argument must be an Iterable, Async Iterable, or a Promise for an Async Iterable")
       },
-      zP = !1,
-      PP = !0
+      cc = !1,
+      lc = !0
   },
-  8772: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      $changes: () => sv,
-      $childType: () => Cv,
-      $decoder: () => lv,
-      $deleteByIndex: () => wv,
-      $encoder: () => Nv,
-      $filter: () => Tv,
-      $getByIndex: () => Wv,
-      $numFields: () => Ov,
-      $refId: () => pv,
-      $track: () => dv,
-      $values: () => jv,
-      ArraySchema: () => Ph,
-      Callbacks: () => PS,
-      ChangeTree: () => VP,
-      CollectionSchema: () => eh,
-      Decoder: () => oh,
-      Encoder: () => yh,
-      FieldBuilder: () => dh,
-      MapSchema: () => Sh,
-      Metadata: () => oz,
-      OPERATION: () => Sv,
-      Reflection: () => Xh,
-      ReflectionField: () => rh,
-      ReflectionType: () => kh,
-      Root: () => Uh,
-      Schema: () => Kh,
-      SetSchema: () => gh,
-      StateCallbackStrategy: () => zS,
-      StateView: () => Ih,
-      StreamSchema: () => ph,
-      TypeContext: () => Lz,
-      createPool: () => SS,
-      decode: () => Gz,
-      decodeKeyValueOperation: () => rP,
-      decodeSchemaOperation: () => bP,
-      defineCustomTypes: () => Fz,
-      defineTypes: () => nh,
-      deprecated: () => Fh,
-      dumpChanges: () => Dh,
-      encode: () => zz,
-      encodeArray: () => ZP,
-      encodeIndexedEntry: () => IP,
-      encodeKeyValueOperation: () => QP,
-      encodeMapEntry: () => qP,
-      encodeSchemaOperation: () => tP,
-      Xw: () => sh,
-      fullStateOnly: () => Gh,
-      getDecoderStateCallbacks: () => uh,
-      getEncodeDescriptor: () => vP,
-      getRawChangesCallback: () => vS,
-      isBuilder: () => Nh,
-      patchOnly: () => ch,
-      registerType: () => fz,
-      schema: () => Oh,
-      t: () => wh,
-      type: () => mh,
-      unreliable: () => ih,
-      view: () => Ch
+  9115: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      $changes: () => tT,
+      $childType: () => hT,
+      $decoder: () => IT,
+      $deleteByIndex: () => jT,
+      $encoder: () => xT,
+      $filter: () => AT,
+      $getByIndex: () => CT,
+      $numFields: () => mT,
+      $refId: () => yT,
+      $track: () => fT,
+      $values: () => aT,
+      ArraySchema: () => ll,
+      Callbacks: () => lM,
+      ChangeTree: () => oc,
+      CollectionSchema: () => Ol,
+      Decoder: () => nl,
+      Encoder: () => Ul,
+      FieldBuilder: () => xl,
+      MapSchema: () => Kl,
+      Metadata: () => nk,
+      OPERATION: () => MT,
+      Reflection: () => sl,
+      ReflectionField: () => il,
+      ReflectionType: () => ql,
+      Root: () => Hl,
+      Schema: () => Jl,
+      SetSchema: () => yl,
+      StateCallbackStrategy: () => cM,
+      StateView: () => Zl,
+      StreamSchema: () => fl,
+      TypeContext: () => Lk,
+      createPool: () => KM,
+      decode: () => Sk,
+      decodeKeyValueOperation: () => ic,
+      decodeSchemaOperation: () => pc,
+      defineCustomTypes: () => rk,
+      defineTypes: () => ml,
+      deprecated: () => Pl,
+      dumpChanges: () => zl,
+      encode: () => kk,
+      encodeArray: () => Xc,
+      encodeIndexedEntry: () => Zc,
+      encodeKeyValueOperation: () => uc,
+      encodeMapEntry: () => Ec,
+      encodeSchemaOperation: () => Vc,
+      Tv: () => hl,
+      fullStateOnly: () => Dl,
+      getDecoderStateCallbacks: () => TM,
+      getEncodeDescriptor: () => kc,
+      getRawChangesCallback: () => kM,
+      isBuilder: () => Il,
+      patchOnly: () => Sl,
+      registerType: () => Fk,
+      schema: () => bl,
+      t: () => vl,
+      type: () => al,
+      unreliable: () => Ql,
+      view: () => Nl
     });
-    const hv = 255;
-    var Sv;
+    const lT = 255;
+    var MT;
 
-    function ev(vv) {
-      Object.defineProperty(vv, Symbol.metadata, {
+    function KT(TT) {
+      Object.defineProperty(TT, Symbol.metadata, {
         value: void 0,
         writable: !0,
         configurable: !0,
         enumerable: !1
       })
-    }! function(vv) {
-      vv[vv.ADD = 128] = "ADD", vv[vv.REPLACE = 0] = "REPLACE", vv[vv.DELETE = 64] = "DELETE", vv[vv.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", vv[vv.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", vv[vv.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", vv[vv.CLEAR = 10] = "CLEAR", vv[vv.REVERSE = 15] = "REVERSE", vv[vv.MOVE = 32] = "MOVE", vv[vv.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", vv[vv.ADD_BY_REFID = 129] = "ADD_BY_REFID"
-    }(Sv || (Sv = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
-    const gv = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
+    }! function(TT) {
+      TT[TT.ADD = 128] = "ADD", TT[TT.REPLACE = 0] = "REPLACE", TT[TT.DELETE = 64] = "DELETE", TT[TT.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", TT[TT.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", TT[TT.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", TT[TT.CLEAR = 10] = "CLEAR", TT[TT.REVERSE = 15] = "REVERSE", TT[TT.MOVE = 32] = "MOVE", TT[TT.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", TT[TT.ADD_BY_REFID = 129] = "ADD_BY_REFID"
+    }(MT || (MT = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
+    const OT = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
     if ("function" === typeof Symbol && "function" !== typeof Symbol.for) {
-      const vv = "colyseus.symbolRegistry",
-        zv = gv[vv] || (gv[vv] = Object.create(null));
-      Symbol.for = function(vv) {
-        return zv[vv] || (zv[vv] = Symbol(vv))
-      }, Symbol.keyFor = function(vv) {
-        for (const Pv in zv)
-          if (zv[Pv] === vv) return Pv
+      const TT = "colyseus.symbolRegistry",
+        kT = OT[TT] || (OT[TT] = Object.create(null));
+      Symbol.for = function(TT) {
+        return kT[TT] || (kT[TT] = Symbol(TT))
+      }, Symbol.keyFor = function(TT) {
+        for (const cT in kT)
+          if (kT[cT] === TT) return cT
       }
     }
-    const pv = Symbol.for("$refId"),
-      dv = "~track",
-      Nv = "~encoder",
-      lv = "~decoder",
-      Tv = "~filter",
-      Wv = "~getByIndex",
-      wv = "~deleteByIndex",
-      av = "~resyncPrune",
-      sv = Symbol.for("$changes"),
-      Cv = Symbol.for("$childType"),
-      iv = Symbol.for("$proxyTarget"),
-      cv = "~onEncodeEnd",
-      Gv = "~reset",
-      mv = "~onDecodeEnd",
-      jv = Symbol.for("$values"),
-      fv = "~builder",
-      Fv = "~descriptors",
-      Yv = "~__encodeDescriptor",
-      nv = "~encoders",
-      Ov = "~__numFields",
-      Dv = "~__refTypeFieldIndexes",
-      Kv = "~__viewFieldIndexes",
-      Vv = "$__fieldIndexesByViewTag",
-      Uv = "~__unreliableFieldIndexes",
-      Rv = "~__patchOnlyFieldIndexes",
-      xv = "~__fullSyncSkipIndexes",
-      tv = "~__fullStateOnlyFieldIndexes",
-      qv = "~__streamFieldIndexes",
-      Iv = "~__streamPriorities";
-    let Qv;
+    const yT = Symbol.for("$refId"),
+      fT = "~track",
+      xT = "~encoder",
+      IT = "~decoder",
+      AT = "~filter",
+      CT = "~getByIndex",
+      jT = "~deleteByIndex",
+      vT = "~resyncPrune",
+      tT = Symbol.for("$changes"),
+      hT = Symbol.for("$childType"),
+      NT = Symbol.for("$proxyTarget"),
+      QT = "~onEncodeEnd",
+      ST = "~reset",
+      DT = "~onDecodeEnd",
+      aT = Symbol.for("$values"),
+      FT = "~builder",
+      rT = "~descriptors",
+      PT = "~__encodeDescriptor",
+      wT = "~encoders",
+      mT = "~__numFields",
+      bT = "~__refTypeFieldIndexes",
+      zT = "~__viewFieldIndexes",
+      JT = "$__fieldIndexesByViewTag",
+      oT = "~__unreliableFieldIndexes",
+      HT = "~__patchOnlyFieldIndexes",
+      eT = "~__fullSyncSkipIndexes",
+      GT = "~__fullStateOnlyFieldIndexes",
+      VT = "~__streamFieldIndexes",
+      ET = "~__streamPriorities";
+    let ZT;
     try {
-      Qv = new TextEncoder
-    } catch (eS) {}
-    const Zv = new ArrayBuffer(8),
-      Av = new Int32Array(Zv),
-      Lv = new Float32Array(Zv),
-      Hv = new Float64Array(Zv),
-      Mv = new BigInt64Array(Zv),
-      yv = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(vv, zv) {
-        for (var Pv = 0, hv = 0, Sv = 0, ev = vv.length; Sv < ev; Sv++)(Pv = vv.charCodeAt(Sv)) < 128 ? hv += 1 : Pv < 2048 ? hv += 2 : Pv < 55296 || Pv >= 57344 ? hv += 3 : (Sv++, hv += 4);
-        return hv
+      ZT = new TextEncoder
+    } catch (OM) {}
+    const uT = new ArrayBuffer(8),
+      XT = new Int32Array(uT),
+      dT = new Float32Array(uT),
+      LT = new Float64Array(uT),
+      RT = new BigInt64Array(uT),
+      gT = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(TT, kT) {
+        for (var cT = 0, lT = 0, MT = 0, KT = TT.length; MT < KT; MT++)(cT = TT.charCodeAt(MT)) < 128 ? lT += 1 : cT < 2048 ? lT += 2 : cT < 55296 || cT >= 57344 ? lT += 3 : (MT++, lT += 4);
+        return lT
       };
 
-    function Bv(vv, zv, Pv) {
-      for (var hv = 0, Sv = 0, ev = zv.length; Sv < ev; Sv++)(hv = zv.charCodeAt(Sv)) < 128 ? vv[Pv.offset++] = hv : hv < 2048 ? (vv[Pv.offset] = 192 | hv >> 6, vv[Pv.offset + 1] = 128 | 63 & hv, Pv.offset += 2) : hv < 55296 || hv >= 57344 ? (vv[Pv.offset] = 224 | hv >> 12, vv[Pv.offset + 1] = 128 | hv >> 6 & 63, vv[Pv.offset + 2] = 128 | 63 & hv, Pv.offset += 3) : (Sv++, hv = 65536 + ((1023 & hv) << 10 | 1023 & zv.charCodeAt(Sv)), vv[Pv.offset] = 240 | hv >> 18, vv[Pv.offset + 1] = 128 | hv >> 12 & 63, vv[Pv.offset + 2] = 128 | hv >> 6 & 63, vv[Pv.offset + 3] = 128 | 63 & hv, Pv.offset += 4)
+    function UT(TT, kT, cT) {
+      for (var lT = 0, MT = 0, KT = kT.length; MT < KT; MT++)(lT = kT.charCodeAt(MT)) < 128 ? TT[cT.offset++] = lT : lT < 2048 ? (TT[cT.offset] = 192 | lT >> 6, TT[cT.offset + 1] = 128 | 63 & lT, cT.offset += 2) : lT < 55296 || lT >= 57344 ? (TT[cT.offset] = 224 | lT >> 12, TT[cT.offset + 1] = 128 | lT >> 6 & 63, TT[cT.offset + 2] = 128 | 63 & lT, cT.offset += 3) : (MT++, lT = 65536 + ((1023 & lT) << 10 | 1023 & kT.charCodeAt(MT)), TT[cT.offset] = 240 | lT >> 18, TT[cT.offset + 1] = 128 | lT >> 12 & 63, TT[cT.offset + 2] = 128 | lT >> 6 & 63, TT[cT.offset + 3] = 128 | 63 & lT, cT.offset += 4)
     }
 
-    function Jv(vv, zv, Pv) {
-      vv[Pv.offset++] = 255 & zv
+    function YT(TT, kT, cT) {
+      TT[cT.offset++] = 255 & kT
     }
 
-    function Ev(vv, zv, Pv) {
-      vv[Pv.offset++] = 255 & zv, vv[Pv.offset++] = zv >> 8 & 255
+    function BT(TT, kT, cT) {
+      TT[cT.offset++] = 255 & kT, TT[cT.offset++] = kT >> 8 & 255
     }
 
-    function ov(vv, zv, Pv) {
-      vv[Pv.offset++] = 255 & zv, vv[Pv.offset++] = zv >> 8 & 255
+    function WT(TT, kT, cT) {
+      TT[cT.offset++] = 255 & kT, TT[cT.offset++] = kT >> 8 & 255
     }
 
-    function bv(vv, zv, Pv) {
-      vv[Pv.offset++] = 255 & zv, vv[Pv.offset++] = zv >> 8 & 255, vv[Pv.offset++] = zv >> 16 & 255, vv[Pv.offset++] = zv >> 24 & 255
+    function nT(TT, kT, cT) {
+      TT[cT.offset++] = 255 & kT, TT[cT.offset++] = kT >> 8 & 255, TT[cT.offset++] = kT >> 16 & 255, TT[cT.offset++] = kT >> 24 & 255
     }
 
-    function rv(vv, zv, Pv) {
-      const hv = zv >> 24,
-        Sv = zv >> 16,
-        ev = zv >> 8,
-        gv = zv;
-      vv[Pv.offset++] = 255 & gv, vv[Pv.offset++] = 255 & ev, vv[Pv.offset++] = 255 & Sv, vv[Pv.offset++] = 255 & hv
+    function pT(TT, kT, cT) {
+      const lT = kT >> 24,
+        MT = kT >> 16,
+        KT = kT >> 8,
+        OT = kT;
+      TT[cT.offset++] = 255 & OT, TT[cT.offset++] = 255 & KT, TT[cT.offset++] = 255 & MT, TT[cT.offset++] = 255 & lT
     }
 
-    function kv(vv, zv, Pv) {
-      const hv = Math.floor(zv / Math.pow(2, 32));
-      rv(vv, zv >>> 0, Pv), rv(vv, hv, Pv)
+    function iT(TT, kT, cT) {
+      const lT = Math.floor(kT / Math.pow(2, 32));
+      pT(TT, kT >>> 0, cT), pT(TT, lT, cT)
     }
 
-    function Xv(vv, zv, Pv) {
-      const hv = zv / Math.pow(2, 32) | 0;
-      rv(vv, zv >>> 0, Pv), rv(vv, hv, Pv)
+    function qT(TT, kT, cT) {
+      const lT = kT / Math.pow(2, 32) | 0;
+      pT(TT, kT >>> 0, cT), pT(TT, lT, cT)
     }
 
-    function uv(vv, zv, Pv) {
-      Lv[0] = zv, bv(vv, Av[0], Pv)
+    function sT(TT, kT, cT) {
+      dT[0] = kT, nT(TT, XT[0], cT)
     }
 
-    function vz(vv, zv, Pv) {
-      Hv[0] = zv, bv(vv, Av[0], Pv), bv(vv, Av[1], Pv)
+    function Tk(TT, kT, cT) {
+      LT[0] = kT, nT(TT, XT[0], cT), nT(TT, XT[1], cT)
     }
-    const zz = {
-        int8: Jv,
-        uint8: function(vv, zv, Pv) {
-          vv[Pv.offset++] = 255 & zv
+    const kk = {
+        int8: YT,
+        uint8: function(TT, kT, cT) {
+          TT[cT.offset++] = 255 & kT
         },
-        int16: Ev,
-        uint16: ov,
-        int32: bv,
-        uint32: rv,
-        int64: kv,
-        uint64: Xv,
-        bigint64: function(vv, zv, Pv) {
-          Mv[0] = BigInt.asIntN(64, zv), bv(vv, Av[0], Pv), bv(vv, Av[1], Pv)
+        int16: BT,
+        uint16: WT,
+        int32: nT,
+        uint32: pT,
+        int64: iT,
+        uint64: qT,
+        bigint64: function(TT, kT, cT) {
+          RT[0] = BigInt.asIntN(64, kT), nT(TT, XT[0], cT), nT(TT, XT[1], cT)
         },
-        biguint64: function(vv, zv, Pv) {
-          Mv[0] = BigInt.asIntN(64, zv), bv(vv, Av[0], Pv), bv(vv, Av[1], Pv)
+        biguint64: function(TT, kT, cT) {
+          RT[0] = BigInt.asIntN(64, kT), nT(TT, XT[0], cT), nT(TT, XT[1], cT)
         },
-        float32: uv,
-        float64: vz,
-        boolean: function(vv, zv, Pv) {
-          vv[Pv.offset++] = zv ? 1 : 0
+        float32: sT,
+        float64: Tk,
+        boolean: function(TT, kT, cT) {
+          TT[cT.offset++] = kT ? 1 : 0
         },
-        string: function(vv, zv, Pv) {
-          zv || (zv = "");
-          let hv = yv(zv, "utf8"),
-            Sv = 0;
-          if (hv < 32) vv[Pv.offset++] = 160 | hv, Sv = 1;
-          else if (hv < 256) vv[Pv.offset++] = 217, vv[Pv.offset++] = hv, Sv = 2;
-          else if (hv < 65536) vv[Pv.offset++] = 218, ov(vv, hv, Pv), Sv = 3;
+        string: function(TT, kT, cT) {
+          kT || (kT = "");
+          let lT = gT(kT, "utf8"),
+            MT = 0;
+          if (lT < 32) TT[cT.offset++] = 160 | lT, MT = 1;
+          else if (lT < 256) TT[cT.offset++] = 217, TT[cT.offset++] = lT, MT = 2;
+          else if (lT < 65536) TT[cT.offset++] = 218, WT(TT, lT, cT), MT = 3;
           else {
-            if (!(hv < 4294967296)) throw new Error("String too long");
-            vv[Pv.offset++] = 219, rv(vv, hv, Pv), Sv = 5
+            if (!(lT < 4294967296)) throw new Error("String too long");
+            TT[cT.offset++] = 219, pT(TT, lT, cT), MT = 5
           }
-          return Bv(vv, zv, Pv), Sv + hv
+          return UT(TT, kT, cT), MT + lT
         },
-        number: function vv(zv, Pv, hv) {
-          return isNaN(Pv) ? vv(zv, 0, hv) : isFinite(Pv) ? Pv !== (0 | Pv) ? Math.abs(Pv) <= 34028235e31 && (Lv[0] = Pv, Math.abs(Math.abs(Lv[0]) - Math.abs(Pv)) < 1e-4) ? (zv[hv.offset++] = 202, uv(zv, Pv, hv), 5) : (zv[hv.offset++] = 203, vz(zv, Pv, hv), 9) : Pv >= 0 ? Pv < 128 ? (zv[hv.offset++] = 255 & Pv, 1) : Pv < 256 ? (zv[hv.offset++] = 204, zv[hv.offset++] = 255 & Pv, 2) : Pv < 65536 ? (zv[hv.offset++] = 205, ov(zv, Pv, hv), 3) : Pv < 4294967296 ? (zv[hv.offset++] = 206, rv(zv, Pv, hv), 5) : (zv[hv.offset++] = 207, Xv(zv, Pv, hv), 9) : Pv >= -32 ? (zv[hv.offset++] = 224 | Pv + 32, 1) : Pv >= -128 ? (zv[hv.offset++] = 208, Jv(zv, Pv, hv), 2) : Pv >= -32768 ? (zv[hv.offset++] = 209, Ev(zv, Pv, hv), 3) : Pv >= -2147483648 ? (zv[hv.offset++] = 210, bv(zv, Pv, hv), 5) : (zv[hv.offset++] = 211, kv(zv, Pv, hv), 9) : vv(zv, Pv > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, hv)
+        number: function TT(kT, cT, lT) {
+          return isNaN(cT) ? TT(kT, 0, lT) : isFinite(cT) ? cT !== (0 | cT) ? Math.abs(cT) <= 34028235e31 && (dT[0] = cT, Math.abs(Math.abs(dT[0]) - Math.abs(cT)) < 1e-4) ? (kT[lT.offset++] = 202, sT(kT, cT, lT), 5) : (kT[lT.offset++] = 203, Tk(kT, cT, lT), 9) : cT >= 0 ? cT < 128 ? (kT[lT.offset++] = 255 & cT, 1) : cT < 256 ? (kT[lT.offset++] = 204, kT[lT.offset++] = 255 & cT, 2) : cT < 65536 ? (kT[lT.offset++] = 205, WT(kT, cT, lT), 3) : cT < 4294967296 ? (kT[lT.offset++] = 206, pT(kT, cT, lT), 5) : (kT[lT.offset++] = 207, qT(kT, cT, lT), 9) : cT >= -32 ? (kT[lT.offset++] = 224 | cT + 32, 1) : cT >= -128 ? (kT[lT.offset++] = 208, YT(kT, cT, lT), 2) : cT >= -32768 ? (kT[lT.offset++] = 209, BT(kT, cT, lT), 3) : cT >= -2147483648 ? (kT[lT.offset++] = 210, nT(kT, cT, lT), 5) : (kT[lT.offset++] = 211, iT(kT, cT, lT), 9) : TT(kT, cT > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, lT)
         },
-        utf8Write: Bv,
-        utf8Length: yv
+        utf8Write: UT,
+        utf8Length: gT
       },
-      Pz = new ArrayBuffer(8),
-      hz = new Int32Array(Pz),
-      Sz = new Float32Array(Pz),
-      ez = new Float64Array(Pz),
-      gz = new BigUint64Array(Pz),
-      pz = new BigInt64Array(Pz);
+      ck = new ArrayBuffer(8),
+      lk = new Int32Array(ck),
+      Mk = new Float32Array(ck),
+      Kk = new Float64Array(ck),
+      Ok = new BigUint64Array(ck),
+      yk = new BigInt64Array(ck);
 
-    function dz(vv, zv, Pv) {
-      Pv > vv.length - zv.offset && (Pv = vv.length - zv.offset);
-      for (var hv = "", Sv = 0, ev = zv.offset, gv = zv.offset + Pv; ev < gv; ev++) {
-        var pv = vv[ev];
-        if (0 !== (128 & pv))
-          if (192 !== (224 & pv))
-            if (224 !== (240 & pv)) {
-              if (240 !== (248 & pv)) {
-                console.error("decode.utf8Read(): Invalid byte " + pv + " at offset " + ev + ". Skip to end of string: " + (zv.offset + Pv));
+    function fk(TT, kT, cT) {
+      cT > TT.length - kT.offset && (cT = TT.length - kT.offset);
+      for (var lT = "", MT = 0, KT = kT.offset, OT = kT.offset + cT; KT < OT; KT++) {
+        var yT = TT[KT];
+        if (0 !== (128 & yT))
+          if (192 !== (224 & yT))
+            if (224 !== (240 & yT)) {
+              if (240 !== (248 & yT)) {
+                console.error("decode.utf8Read(): Invalid byte " + yT + " at offset " + KT + ". Skip to end of string: " + (kT.offset + cT));
                 break
-              }(Sv = (7 & pv) << 18 | (63 & vv[++ev]) << 12 | (63 & vv[++ev]) << 6 | 63 & vv[++ev]) >= 65536 ? (Sv -= 65536, hv += String.fromCharCode(55296 + (Sv >>> 10), 56320 + (1023 & Sv))) : hv += String.fromCharCode(Sv)
-            } else hv += String.fromCharCode((15 & pv) << 12 | (63 & vv[++ev]) << 6 | 63 & vv[++ev]);
-        else hv += String.fromCharCode((31 & pv) << 6 | 63 & vv[++ev]);
-        else hv += String.fromCharCode(pv)
+              }(MT = (7 & yT) << 18 | (63 & TT[++KT]) << 12 | (63 & TT[++KT]) << 6 | 63 & TT[++KT]) >= 65536 ? (MT -= 65536, lT += String.fromCharCode(55296 + (MT >>> 10), 56320 + (1023 & MT))) : lT += String.fromCharCode(MT)
+            } else lT += String.fromCharCode((15 & yT) << 12 | (63 & TT[++KT]) << 6 | 63 & TT[++KT]);
+        else lT += String.fromCharCode((31 & yT) << 6 | 63 & TT[++KT]);
+        else lT += String.fromCharCode(yT)
       }
-      return zv.offset += Pv, hv
+      return kT.offset += cT, lT
     }
 
-    function Nz(vv, zv) {
-      return lz(vv, zv) << 24 >> 24
+    function xk(TT, kT) {
+      return Ik(TT, kT) << 24 >> 24
     }
 
-    function lz(vv, zv) {
-      return vv[zv.offset++]
+    function Ik(TT, kT) {
+      return TT[kT.offset++]
     }
 
-    function Tz(vv, zv) {
-      return Wz(vv, zv) << 16 >> 16
+    function Ak(TT, kT) {
+      return Ck(TT, kT) << 16 >> 16
     }
 
-    function Wz(vv, zv) {
-      return vv[zv.offset++] | vv[zv.offset++] << 8
+    function Ck(TT, kT) {
+      return TT[kT.offset++] | TT[kT.offset++] << 8
     }
 
-    function wz(vv, zv) {
-      return vv[zv.offset++] | vv[zv.offset++] << 8 | vv[zv.offset++] << 16 | vv[zv.offset++] << 24
+    function jk(TT, kT) {
+      return TT[kT.offset++] | TT[kT.offset++] << 8 | TT[kT.offset++] << 16 | TT[kT.offset++] << 24
     }
 
-    function az(vv, zv) {
-      return wz(vv, zv) >>> 0
+    function vk(TT, kT) {
+      return jk(TT, kT) >>> 0
     }
 
-    function sz(vv, zv) {
-      return hz[0] = wz(vv, zv), Sz[0]
+    function tk(TT, kT) {
+      return lk[0] = jk(TT, kT), Mk[0]
     }
 
-    function Cz(vv, zv) {
-      return hz[0] = wz(vv, zv), hz[1] = wz(vv, zv), ez[0]
+    function hk(TT, kT) {
+      return lk[0] = jk(TT, kT), lk[1] = jk(TT, kT), Kk[0]
     }
 
-    function iz(vv, zv) {
-      const Pv = az(vv, zv);
-      return wz(vv, zv) * Math.pow(2, 32) + Pv
+    function Nk(TT, kT) {
+      const cT = vk(TT, kT);
+      return jk(TT, kT) * Math.pow(2, 32) + cT
     }
 
-    function cz(vv, zv) {
-      const Pv = az(vv, zv);
-      return az(vv, zv) * Math.pow(2, 32) + Pv
+    function Qk(TT, kT) {
+      const cT = vk(TT, kT);
+      return vk(TT, kT) * Math.pow(2, 32) + cT
     }
-    const Gz = {
-        utf8Read: dz,
-        int8: Nz,
-        uint8: lz,
-        int16: Tz,
-        uint16: Wz,
-        int32: wz,
-        uint32: az,
-        float32: sz,
-        float64: Cz,
-        int64: iz,
-        uint64: cz,
-        bigint64: function(vv, zv) {
-          return hz[0] = wz(vv, zv), hz[1] = wz(vv, zv), pz[0]
+    const Sk = {
+        utf8Read: fk,
+        int8: xk,
+        uint8: Ik,
+        int16: Ak,
+        uint16: Ck,
+        int32: jk,
+        uint32: vk,
+        float32: tk,
+        float64: hk,
+        int64: Nk,
+        uint64: Qk,
+        bigint64: function(TT, kT) {
+          return lk[0] = jk(TT, kT), lk[1] = jk(TT, kT), yk[0]
         },
-        biguint64: function(vv, zv) {
-          return hz[0] = wz(vv, zv), hz[1] = wz(vv, zv), gz[0]
+        biguint64: function(TT, kT) {
+          return lk[0] = jk(TT, kT), lk[1] = jk(TT, kT), Ok[0]
         },
-        boolean: function(vv, zv) {
-          return lz(vv, zv) > 0
+        boolean: function(TT, kT) {
+          return Ik(TT, kT) > 0
         },
-        string: function(vv, zv) {
-          const Pv = vv[zv.offset++];
-          let hv;
-          return Pv < 192 ? hv = 31 & Pv : 217 === Pv ? hv = lz(vv, zv) : 218 === Pv ? hv = Wz(vv, zv) : 219 === Pv && (hv = az(vv, zv)), dz(vv, zv, hv)
+        string: function(TT, kT) {
+          const cT = TT[kT.offset++];
+          let lT;
+          return cT < 192 ? lT = 31 & cT : 217 === cT ? lT = Ik(TT, kT) : 218 === cT ? lT = Ck(TT, kT) : 219 === cT && (lT = vk(TT, kT)), fk(TT, kT, lT)
         },
-        number: function(vv, zv) {
-          const Pv = vv[zv.offset++];
-          return Pv < 128 ? Pv : 202 === Pv ? sz(vv, zv) : 203 === Pv ? Cz(vv, zv) : 204 === Pv ? lz(vv, zv) : 205 === Pv ? Wz(vv, zv) : 206 === Pv ? az(vv, zv) : 207 === Pv ? cz(vv, zv) : 208 === Pv ? Nz(vv, zv) : 209 === Pv ? Tz(vv, zv) : 210 === Pv ? wz(vv, zv) : 211 === Pv ? iz(vv, zv) : Pv > 223 ? -1 * (255 - Pv + 1) : void 0
+        number: function(TT, kT) {
+          const cT = TT[kT.offset++];
+          return cT < 128 ? cT : 202 === cT ? tk(TT, kT) : 203 === cT ? hk(TT, kT) : 204 === cT ? Ik(TT, kT) : 205 === cT ? Ck(TT, kT) : 206 === cT ? vk(TT, kT) : 207 === cT ? Qk(TT, kT) : 208 === cT ? xk(TT, kT) : 209 === cT ? Ak(TT, kT) : 210 === cT ? jk(TT, kT) : 211 === cT ? Nk(TT, kT) : cT > 223 ? -1 * (255 - cT + 1) : void 0
         },
-        stringCheck: function(vv, zv) {
-          const Pv = vv[zv.offset];
-          return Pv < 192 && Pv > 160 || 217 === Pv || 218 === Pv || 219 === Pv
+        stringCheck: function(TT, kT) {
+          const cT = TT[kT.offset];
+          return cT < 192 && cT > 160 || 217 === cT || 218 === cT || 219 === cT
         }
       },
-      mz = {},
-      jz = new Map;
+      Dk = {},
+      ak = new Map;
 
-    function fz(vv, zv) {
-      zv.constructor && (Object.prototype.hasOwnProperty.call(zv, "constructor") && null == zv.constructor[Symbol.metadata] && ev(zv.constructor), jz.set(zv.constructor, vv), mz[vv] = zv), zv.encode && (zz[vv] = zv.encode), zv.decode && (Gz[vv] = zv.decode)
+    function Fk(TT, kT) {
+      kT.constructor && (Object.prototype.hasOwnProperty.call(kT, "constructor") && null == kT.constructor[Symbol.metadata] && KT(kT.constructor), ak.set(kT.constructor, TT), Dk[TT] = kT), kT.encode && (kk[TT] = kT.encode), kT.decode && (Sk[TT] = kT.decode)
     }
 
-    function Fz(vv) {
-      for (const zv in vv) fz(zv, vv[zv]);
-      return vv => mh(vv)
+    function rk(TT) {
+      for (const kT in TT) Fk(kT, TT[kT]);
+      return TT => al(TT)
     }
-    const Yz = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
+    const Pk = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
 
-    function nz() {
+    function wk() {
       return {
         pendingByView: new Map,
         sentByView: new Map,
@@ -2450,160 +2450,160 @@ export const modules = {
       }
     }
 
-    function Oz(vv) {
-      return vv._stream ??= nz()
+    function mk(TT) {
+      return TT._stream ??= wk()
     }
 
-    function Dz(vv, zv, Pv) {
-      0 === zv.activeViews.size && Oz(vv).broadcastPending.add(Pv)
+    function bk(TT, kT, cT) {
+      0 === kT.activeViews.size && mk(TT).broadcastPending.add(cT)
     }
 
-    function Kz(vv, zv, Pv, hv) {
-      const ev = vv._stream;
-      if (void 0 === ev) return !0;
-      let gv = !1;
-      return ev.broadcastPending.delete(hv) ? gv = !0 : ev.sentBroadcast.delete(hv) && ev.broadcastDeletes.add(hv), zv.forEachActiveView((vv => {
-        const zv = ev.pendingByView.get(vv.id);
-        if (zv?.has(hv)) return zv.delete(hv), void(gv = !0);
-        const pv = ev.sentByView.get(vv.id);
-        if (pv?.has(hv)) {
-          pv.delete(hv);
-          let zv = vv.changes.get(Pv);
-          void 0 === zv && (zv = new Map, vv.changes.set(Pv, zv)), zv.set(hv, Sv.DELETE)
+    function zk(TT, kT, cT, lT) {
+      const KT = TT._stream;
+      if (void 0 === KT) return !0;
+      let OT = !1;
+      return KT.broadcastPending.delete(lT) ? OT = !0 : KT.sentBroadcast.delete(lT) && KT.broadcastDeletes.add(lT), kT.forEachActiveView((TT => {
+        const kT = KT.pendingByView.get(TT.id);
+        if (kT?.has(lT)) return kT.delete(lT), void(OT = !0);
+        const yT = KT.sentByView.get(TT.id);
+        if (yT?.has(lT)) {
+          yT.delete(lT);
+          let kT = TT.changes.get(cT);
+          void 0 === kT && (kT = new Map, TT.changes.set(cT, kT)), kT.set(lT, MT.DELETE)
         }
-      })), gv
+      })), OT
     }
 
-    function Vz(vv, zv) {
-      const Pv = vv._stream?.pendingByView;
-      if (void 0 === Pv) return !1;
-      for (const [hv, Sv] of Pv)
-        if (Sv.size > 0 && void 0 !== zv.activeViews.get(hv)?.deref()) return !0;
+    function Jk(TT, kT) {
+      const cT = TT._stream?.pendingByView;
+      if (void 0 === cT) return !1;
+      for (const [lT, MT] of cT)
+        if (MT.size > 0 && void 0 !== kT.activeViews.get(lT)?.deref()) return !0;
       return !1
     }
 
-    function Uz(vv) {
-      const zv = vv._stream;
-      return void 0 !== zv && (zv.broadcastPending.size > 0 || zv.broadcastDeletes.size > 0)
+    function Hk(TT) {
+      const kT = TT._stream;
+      return void 0 !== kT && (kT.broadcastPending.size > 0 || kT.broadcastDeletes.size > 0)
     }
 
-    function Rz(vv, zv, Pv) {
-      const hv = Oz(vv);
-      let Sv = hv.pendingByView.get(zv);
-      void 0 === Sv && (Sv = new Set, hv.pendingByView.set(zv, Sv)), Sv.add(Pv)
+    function ek(TT, kT, cT) {
+      const lT = mk(TT);
+      let MT = lT.pendingByView.get(kT);
+      void 0 === MT && (MT = new Set, lT.pendingByView.set(kT, MT)), MT.add(cT)
     }
 
-    function xz(vv, zv) {
-      const Pv = vv._stream;
-      void 0 !== Pv && (Pv.pendingByView.delete(zv), Pv.sentByView.delete(zv), Pv.priorityByView?.delete(zv))
+    function Gk(TT, kT) {
+      const cT = TT._stream;
+      void 0 !== cT && (cT.pendingByView.delete(kT), cT.sentByView.delete(kT), cT.priorityByView?.delete(kT))
     }
-    const tz = {
+    const Vk = {
       8: "uint8",
       16: "uint16",
       32: "uint32"
     };
 
-    function qz(vv) {
-      if (null == vv || "object" !== typeof vv) throw new Error("t.quantized(): options object with { min, max } is required.");
+    function Ek(TT) {
+      if (null == TT || "object" !== typeof TT) throw new Error("t.quantized(): options object with { min, max } is required.");
       const {
-        min: zv,
-        max: Pv
-      } = vv;
-      if ("number" !== typeof zv || "number" !== typeof Pv || !(Pv > zv) || !Number.isFinite(zv) || !Number.isFinite(Pv)) throw new Error(`t.quantized(): require finite min < max (got min=${zv}, max=${Pv}).`);
-      const hv = vv.bits ?? 16;
-      if (8 !== hv && 16 !== hv && 32 !== hv) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${hv}).`);
-      const Sv = vv.mode ?? "clamp";
-      if ("clamp" !== Sv && "wrap" !== Sv) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(Sv)}).`);
-      const ev = "wrap" === Sv,
-        gv = Math.pow(2, hv);
+        min: kT,
+        max: cT
+      } = TT;
+      if ("number" !== typeof kT || "number" !== typeof cT || !(cT > kT) || !Number.isFinite(kT) || !Number.isFinite(cT)) throw new Error(`t.quantized(): require finite min < max (got min=${kT}, max=${cT}).`);
+      const lT = TT.bits ?? 16;
+      if (8 !== lT && 16 !== lT && 32 !== lT) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${lT}).`);
+      const MT = TT.mode ?? "clamp";
+      if ("clamp" !== MT && "wrap" !== MT) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(MT)}).`);
+      const KT = "wrap" === MT,
+        OT = Math.pow(2, lT);
       return {
-        min: zv,
-        max: Pv,
-        bits: hv,
-        wrap: ev,
-        wire: tz[hv],
-        range: Pv - zv,
-        span: ev ? gv : zv === -Pv ? gv - 2 : gv - 1
+        min: kT,
+        max: cT,
+        bits: lT,
+        wrap: KT,
+        wire: Vk[lT],
+        range: cT - kT,
+        span: KT ? OT : kT === -cT ? OT - 2 : OT - 1
       }
     }
 
-    function Iz(vv) {
-      return null !== vv && "object" === typeof vv && void 0 !== vv.quantized
+    function Zk(TT) {
+      return null !== TT && "object" === typeof TT && void 0 !== TT.quantized
     }
 
-    function Qz(vv, zv) {
-      if (vv.wrap) {
-        if (!Number.isFinite(zv)) return 0;
-        const Pv = vv.range;
-        let hv = (zv - vv.min) % Pv;
-        hv < 0 && (hv += Pv);
-        const Sv = vv.span;
-        return Math.floor(hv / Pv * Sv + .5) % Sv
+    function uk(TT, kT) {
+      if (TT.wrap) {
+        if (!Number.isFinite(kT)) return 0;
+        const cT = TT.range;
+        let lT = (kT - TT.min) % cT;
+        lT < 0 && (lT += cT);
+        const MT = TT.span;
+        return Math.floor(lT / cT * MT + .5) % MT
       }
-      if (zv !== zv) return 0;
-      const Pv = zv < vv.min ? vv.min : zv > vv.max ? vv.max : zv;
-      return Math.floor((Pv - vv.min) / vv.range * vv.span + .5)
+      if (kT !== kT) return 0;
+      const cT = kT < TT.min ? TT.min : kT > TT.max ? TT.max : kT;
+      return Math.floor((cT - TT.min) / TT.range * TT.span + .5)
     }
 
-    function Zz(vv, zv) {
-      return vv.min + zv / vv.span * vv.range
+    function Xk(TT, kT) {
+      return TT.min + kT / TT.span * TT.range
     }
 
-    function Az(vv) {
-      const zv = zz[vv.wire];
-      return (Pv, hv, Sv) => zv(Pv, Qz(vv, hv), Sv)
+    function dk(TT) {
+      const kT = kk[TT.wire];
+      return (cT, lT, MT) => kT(cT, uk(TT, lT), MT)
     }
-    class Lz {
+    class Lk {
       types = {};
       schemas = new Map;
       hasFilters = !1;
       static inheritedTypes = new WeakMap;
       static cachedContexts = new WeakMap;
-      static register(vv) {
-        const zv = Object.getPrototypeOf(vv);
-        if (zv !== Kh) {
-          let Pv = Lz.inheritedTypes.get(zv);
-          Pv || (Pv = new Set, Lz.inheritedTypes.set(zv, Pv)), Pv.add(vv)
+      static register(TT) {
+        const kT = Object.getPrototypeOf(TT);
+        if (kT !== Jl) {
+          let cT = Lk.inheritedTypes.get(kT);
+          cT || (cT = new Set, Lk.inheritedTypes.set(kT, cT)), cT.add(TT)
         }
       }
-      static cache(vv) {
-        let zv = Lz.cachedContexts.get(vv);
-        return zv || (zv = new Lz(vv), Lz.cachedContexts.set(vv, zv)), zv
+      static cache(TT) {
+        let kT = Lk.cachedContexts.get(TT);
+        return kT || (kT = new Lk(TT), Lk.cachedContexts.set(TT, kT)), kT
       }
-      constructor(vv) {
-        vv && this.discoverTypes(vv)
+      constructor(TT) {
+        TT && this.discoverTypes(TT)
       }
-      has(vv) {
-        return this.schemas.has(vv)
+      has(TT) {
+        return this.schemas.has(TT)
       }
-      get(vv) {
-        return this.types[vv]
+      get(TT) {
+        return this.types[TT]
       }
-      add(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
-        return !this.schemas.has(vv) && (this.types[zv] = vv, null == vv[Symbol.metadata] && oz.initialize(vv), this.schemas.set(vv, zv), !0)
+      add(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
+        return !this.schemas.has(TT) && (this.types[kT] = TT, null == TT[Symbol.metadata] && nk.initialize(TT), this.schemas.set(TT, kT), !0)
       }
-      getTypeId(vv) {
-        return this.schemas.get(vv)
+      getTypeId(TT) {
+        return this.schemas.get(TT)
       }
-      discoverTypes(vv) {
-        if (!this.add(vv)) return;
-        Lz.inheritedTypes.get(vv)?.forEach((vv => {
-          this.discoverTypes(vv)
+      discoverTypes(TT) {
+        if (!this.add(TT)) return;
+        Lk.inheritedTypes.get(TT)?.forEach((TT => {
+          this.discoverTypes(TT)
         }));
-        let zv = vv;
+        let kT = TT;
         for (;
-          (zv = Object.getPrototypeOf(zv)) && zv !== Kh && zv !== Function.prototype;) this.discoverTypes(zv);
-        const Pv = vv[Symbol.metadata];
-        (Pv[Kv] || Pv[qv]) && (this.hasFilters = !0);
-        for (const hv in Pv) {
-          const vv = Pv[hv].type;
-          if ("string" !== typeof vv && !Iz(vv))
-            if ("function" === typeof vv) this.discoverTypes(vv);
+          (kT = Object.getPrototypeOf(kT)) && kT !== Jl && kT !== Function.prototype;) this.discoverTypes(kT);
+        const cT = TT[Symbol.metadata];
+        (cT[zT] || cT[VT]) && (this.hasFilters = !0);
+        for (const lT in cT) {
+          const TT = cT[lT].type;
+          if ("string" !== typeof TT && !Zk(TT))
+            if ("function" === typeof TT) this.discoverTypes(TT);
             else {
-              const zv = Object.values(vv)[0];
-              if ("string" === typeof zv) continue;
-              this.discoverTypes(zv)
+              const kT = Object.values(TT)[0];
+              if ("string" === typeof kT) continue;
+              this.discoverTypes(kT)
             }
         }
       }
@@ -2612,303 +2612,303 @@ export const modules = {
       }
     }
 
-    function Hz(vv) {
-      const zv = yz(vv);
-      return zv ? {
-        complexTypeKlass: mz[zv],
-        childType: vv[zv]
+    function Rk(TT) {
+      const kT = Uk(TT);
+      return kT ? {
+        complexTypeKlass: Dk[kT],
+        childType: TT[kT]
       } : {
         complexTypeKlass: !1,
-        childType: vv
+        childType: TT
       }
     }
 
-    function Mz(vv, zv) {
-      const Pv = Bz(vv),
-        hv = yz(Pv),
-        Sv = hv && yz(Pv[hv]);
-      if (Sv) throw new Error(`${zv?`${zv}: `:""}@colyseus/schema: nested collections are not supported ("${hv}" of "${Sv}"). Collections can only hold primitive types or Schema classes, wrap the inner ${Sv} in a Schema class.`);
-      return Pv
+    function gk(TT, kT) {
+      const cT = Yk(TT),
+        lT = Uk(cT),
+        MT = lT && Uk(cT[lT]);
+      if (MT) throw new Error(`${kT?`${kT}: `:""}@colyseus/schema: nested collections are not supported ("${lT}" of "${MT}"). Collections can only hold primitive types or Schema classes, wrap the inner ${MT} in a Schema class.`);
+      return cT
     }
 
-    function yz(vv) {
-      return "object" === typeof vv && null !== vv ? Object.keys(vv).find((vv => void 0 !== mz[vv])) : void 0
+    function Uk(TT) {
+      return "object" === typeof TT && null !== TT ? Object.keys(TT).find((TT => void 0 !== Dk[TT])) : void 0
     }
 
-    function Bz(vv) {
-      if ("object" !== typeof vv || null === vv) return vv;
-      if (Array.isArray(vv)) return {
-        array: Bz(vv[0])
+    function Yk(TT) {
+      if ("object" !== typeof TT || null === TT) return TT;
+      if (Array.isArray(TT)) return {
+        array: Yk(TT[0])
       };
-      const zv = function(vv) {
-        const zv = Object.keys(vv),
-          Pv = zv.filter((vv => /\d+/.test(vv)));
-        if (Pv.length > 0 && Pv.length === zv.length / 2 && vv[vv[Pv[0]]] == Pv[0]) return "number";
-        if (zv.length > 0 && zv.every((zv => vv[zv] === zv))) return "string"
-      }(vv);
-      if (zv) return zv;
-      if (Iz(vv)) return "string" === typeof vv.quantized.wire ? vv : {
-        quantized: qz(vv.quantized)
+      const kT = function(TT) {
+        const kT = Object.keys(TT),
+          cT = kT.filter((TT => /\d+/.test(TT)));
+        if (cT.length > 0 && cT.length === kT.length / 2 && TT[TT[cT[0]]] == cT[0]) return "number";
+        if (kT.length > 0 && kT.every((kT => TT[kT] === kT))) return "string"
+      }(TT);
+      if (kT) return kT;
+      if (Zk(TT)) return "string" === typeof TT.quantized.wire ? TT : {
+        quantized: Ek(TT.quantized)
       };
-      if (void 0 !== vv.type) return Bz(vv.type);
-      const Pv = yz(vv);
-      return Pv && (vv[Pv] = Bz(vv[Pv])), vv
+      if (void 0 !== TT.type) return Yk(TT.type);
+      const cT = Uk(TT);
+      return cT && (TT[cT] = Yk(TT[cT])), TT
     }
-    const Jz = [Dv, Uv, Rv, xv, tv, qv, nv];
+    const Bk = [bT, oT, HT, eT, GT, VT, wT];
 
-    function Ez(vv, zv, Pv) {
-      vv[zv] || Object.defineProperty(vv, zv, {
+    function Wk(TT, kT, cT) {
+      TT[kT] || Object.defineProperty(TT, kT, {
         value: [],
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), vv[zv].push(Pv)
+      }), TT[kT].push(cT)
     }
-    const oz = {
-        addField(vv, zv, Pv, hv, Sv) {
-          if (zv >= 63) throw new Error(`Can't define field '${Pv}'.\nSchema instances may only have up to 63 fields.`);
-          vv[zv] = Object.assign(vv[zv] || {}, {
-            type: hv,
-            index: zv,
-            name: Pv
-          }), Object.defineProperty(vv, Fv, {
-            value: vv[Fv] || {},
+    const nk = {
+        addField(TT, kT, cT, lT, MT) {
+          if (kT >= 63) throw new Error(`Can't define field '${cT}'.\nSchema instances may only have up to 63 fields.`);
+          TT[kT] = Object.assign(TT[kT] || {}, {
+            type: lT,
+            index: kT,
+            name: cT
+          }), Object.defineProperty(TT, rT, {
+            value: TT[rT] || {},
             enumerable: !1,
             configurable: !0
-          }), vv[Fv][Pv] = Sv || {
+          }), TT[rT][cT] = MT || {
             value: void 0,
             writable: !0,
             enumerable: !0,
             configurable: !0
-          }, Object.defineProperty(vv, Ov, {
-            value: zv,
+          }, Object.defineProperty(TT, mT, {
+            value: kT,
             enumerable: !1,
             configurable: !0
-          }), Object.defineProperty(vv, Pv, {
-            value: zv,
+          }), Object.defineProperty(TT, cT, {
+            value: kT,
             enumerable: !1,
             configurable: !0
-          }), "string" === typeof vv[zv].type || Iz(vv[zv].type) || (void 0 === vv[Dv] && Object.defineProperty(vv, Dv, {
+          }), "string" === typeof TT[kT].type || Zk(TT[kT].type) || (void 0 === TT[bT] && Object.defineProperty(TT, bT, {
             value: [],
             enumerable: !1,
             configurable: !0
-          }), vv[Dv].push(zv));
-          const ev = vv[zv].type;
-          if (ev && "object" === typeof ev && void 0 !== ev.stream) {
-            if (void 0 !== ev.array) throw new Error(Yz);
-            vv[zv].stream = !0, vv[qv] || Object.defineProperty(vv, qv, {
+          }), TT[bT].push(kT));
+          const KT = TT[kT].type;
+          if (KT && "object" === typeof KT && void 0 !== KT.stream) {
+            if (void 0 !== KT.array) throw new Error(Pk);
+            TT[kT].stream = !0, TT[VT] || Object.defineProperty(TT, VT, {
               value: [],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), vv[qv].includes(zv) || vv[qv].push(zv);
-            const Sv = hv?.priority;
-            "function" === typeof Sv && oz.setStreamPriority(vv, Pv, Sv)
+            }), TT[VT].includes(kT) || TT[VT].push(kT);
+            const MT = lT?.priority;
+            "function" === typeof MT && nk.setStreamPriority(TT, cT, MT)
           }
         },
-        setTag(vv, zv, Pv) {
-          const hv = vv[zv];
-          if (vv[hv].tag = Pv, vv[Kv] || (Object.defineProperty(vv, Kv, {
+        setTag(TT, kT, cT) {
+          const lT = TT[kT];
+          if (TT[lT].tag = cT, TT[zT] || (Object.defineProperty(TT, zT, {
               value: [],
               enumerable: !1,
               configurable: !0
-            }), Object.defineProperty(vv, Vv, {
+            }), Object.defineProperty(TT, JT, {
               value: {},
               enumerable: !1,
               configurable: !0
-            })), vv[Kv].push(hv), Pv < 0) vv[Vv][Pv] || (vv[Vv][Pv] = []), vv[Vv][Pv].push(hv);
+            })), TT[zT].push(lT), cT < 0) TT[JT][cT] || (TT[JT][cT] = []), TT[JT][cT].push(lT);
           else
-            for (let Sv = Pv; Sv > 0; Sv &= Sv - 1) {
-              const zv = Sv & -Sv;
-              vv[Vv][zv] || (vv[Vv][zv] = []), vv[Vv][zv].push(hv)
+            for (let MT = cT; MT > 0; MT &= MT - 1) {
+              const kT = MT & -MT;
+              TT[JT][kT] || (TT[JT][kT] = []), TT[JT][kT].push(lT)
             }
         },
-        setUnreliable(vv, zv) {
-          const Pv = vv[zv];
-          if ("string" !== typeof vv[Pv].type) throw new Error(`@unreliable cannot be applied to ref-type field "${zv}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
-          vv[Pv].unreliable = !0, vv[Uv] || Object.defineProperty(vv, Uv, {
+        setUnreliable(TT, kT) {
+          const cT = TT[kT];
+          if ("string" !== typeof TT[cT].type) throw new Error(`@unreliable cannot be applied to ref-type field "${kT}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
+          TT[cT].unreliable = !0, TT[oT] || Object.defineProperty(TT, oT, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), vv[Uv].push(Pv)
+          }), TT[oT].push(cT)
         },
-        setPatchOnly(vv, zv) {
-          const Pv = vv[zv];
-          if (vv[Pv].fullStateOnly) throw new Error(`field "${zv}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          vv[Pv].patchOnly = !0, Ez(vv, Rv, Pv), Ez(vv, xv, Pv)
+        setPatchOnly(TT, kT) {
+          const cT = TT[kT];
+          if (TT[cT].fullStateOnly) throw new Error(`field "${kT}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          TT[cT].patchOnly = !0, Wk(TT, HT, cT), Wk(TT, eT, cT)
         },
-        setDeprecated(vv, zv) {
-          const Pv = vv[zv];
-          vv[Pv].deprecated = !0, Ez(vv, xv, Pv), Object.defineProperty(vv, Pv, {
-            value: vv[Pv],
+        setDeprecated(TT, kT) {
+          const cT = TT[kT];
+          TT[cT].deprecated = !0, Wk(TT, eT, cT), Object.defineProperty(TT, cT, {
+            value: TT[cT],
             enumerable: !1,
             configurable: !0
           })
         },
-        setFullStateOnly(vv, zv) {
-          const Pv = vv[zv];
-          if (vv[Pv].patchOnly) throw new Error(`field "${zv}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          vv[Pv].fullStateOnly = !0, Ez(vv, tv, Pv)
+        setFullStateOnly(TT, kT) {
+          const cT = TT[kT];
+          if (TT[cT].patchOnly) throw new Error(`field "${kT}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          TT[cT].fullStateOnly = !0, Wk(TT, GT, cT)
         },
-        setStream(vv, zv) {
-          const Pv = vv[zv];
-          vv[Pv].stream = !0, vv[qv] || Object.defineProperty(vv, qv, {
+        setStream(TT, kT) {
+          const cT = TT[kT];
+          TT[cT].stream = !0, TT[VT] || Object.defineProperty(TT, VT, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), vv[qv].push(Pv)
+          }), TT[VT].push(cT)
         },
-        setStreamPriority(vv, zv, Pv) {
-          const hv = vv[zv];
-          vv[Iv] || Object.defineProperty(vv, Iv, {
+        setStreamPriority(TT, kT, cT) {
+          const lT = TT[kT];
+          TT[ET] || Object.defineProperty(TT, ET, {
             value: {},
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), vv[Iv][hv] = Pv
+          }), TT[ET][lT] = cT
         },
-        getStreamPriority: (vv, zv) => vv?.[Iv]?.[zv],
-        defineField(vv, zv, Pv, hv, Sv) {
-          const ev = Mz(Sv, `${vv.name}.${hv}`),
+        getStreamPriority: (TT, kT) => TT?.[ET]?.[kT],
+        defineField(TT, kT, cT, lT, MT) {
+          const KT = gk(MT, `${TT.name}.${lT}`),
             {
-              complexTypeKlass: gv,
-              childType: pv
-            } = Hz(ev);
-          oz.addField(zv, Pv, hv, ev, fh(hv, Pv, pv, gv)), zv[Fv][hv] && Object.defineProperty(vv.prototype, hv, zv[Fv][hv]), ("string" === typeof ev || Iz(ev)) && (zv[nv] || Object.defineProperty(zv, nv, {
+              complexTypeKlass: OT,
+              childType: yT
+            } = Rk(KT);
+          nk.addField(kT, cT, lT, KT, rl(lT, cT, yT, OT)), kT[rT][lT] && Object.defineProperty(TT.prototype, lT, kT[rT][lT]), ("string" === typeof KT || Zk(KT)) && (kT[wT] || Object.defineProperty(kT, wT, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), zv[nv][Pv] = "string" === typeof ev ? zz[ev] : Az(ev.quantized))
+          }), kT[wT][cT] = "string" === typeof KT ? kk[KT] : dk(KT.quantized))
         },
-        setFields(vv, zv) {
-          const Pv = vv.prototype.constructor;
-          Lz.register(Pv);
-          const hv = Object.getPrototypeOf(Pv),
-            Sv = hv && hv[Symbol.metadata],
-            ev = oz.initialize(Pv);
-          Pv[dv] || (Pv[dv] = Kh[dv]), Pv[Nv] || (Pv[Nv] = Kh[Nv]), Pv[lv] || (Pv[lv] = Kh[lv]), Pv.prototype.toJSON || (Pv.prototype.toJSON = Kh.prototype.toJSON);
-          let gv = ev[Ov] ?? (Sv && Sv[Ov]) ?? -1;
-          gv++, ev[nv] || Object.defineProperty(ev, nv, {
-            value: Sv?.[nv] ? [...Sv[nv]] : [],
+        setFields(TT, kT) {
+          const cT = TT.prototype.constructor;
+          Lk.register(cT);
+          const lT = Object.getPrototypeOf(cT),
+            MT = lT && lT[Symbol.metadata],
+            KT = nk.initialize(cT);
+          cT[fT] || (cT[fT] = Jl[fT]), cT[xT] || (cT[xT] = Jl[xT]), cT[IT] || (cT[IT] = Jl[IT]), cT.prototype.toJSON || (cT.prototype.toJSON = Jl.prototype.toJSON);
+          let OT = KT[mT] ?? (MT && MT[mT]) ?? -1;
+          OT++, KT[wT] || Object.defineProperty(KT, wT, {
+            value: MT?.[wT] ? [...MT[wT]] : [],
             enumerable: !1,
             configurable: !0,
             writable: !0
           });
-          for (const pv in zv) {
-            if (void 0 !== ev[pv]) throw new Error(`@colyseus/schema: Duplicate '${pv}' definition on '${Pv.name||"(anonymous)"}'.`);
-            oz.defineField(Pv, ev, gv, pv, zv[pv]), gv++
+          for (const yT in kT) {
+            if (void 0 !== KT[yT]) throw new Error(`@colyseus/schema: Duplicate '${yT}' definition on '${cT.name||"(anonymous)"}'.`);
+            nk.defineField(cT, KT, OT, yT, kT[yT]), OT++
           }
-          return vv
+          return TT
         },
-        isDeprecated: (vv, zv) => !0 === vv[zv].deprecated,
-        initialize(vv) {
-          const zv = Object.getPrototypeOf(vv),
-            Pv = zv[Symbol.metadata];
-          let hv = vv[Symbol.metadata] ?? Object.create(null);
-          if (zv !== Kh && hv === Pv && (hv = Object.create(null), Pv)) {
-            Object.setPrototypeOf(hv, Pv), Object.defineProperty(hv, Ov, {
-              value: Pv[Ov],
+        isDeprecated: (TT, kT) => !0 === TT[kT].deprecated,
+        initialize(TT) {
+          const kT = Object.getPrototypeOf(TT),
+            cT = kT[Symbol.metadata];
+          let lT = TT[Symbol.metadata] ?? Object.create(null);
+          if (kT !== Jl && lT === cT && (lT = Object.create(null), cT)) {
+            Object.setPrototypeOf(lT, cT), Object.defineProperty(lT, mT, {
+              value: cT[mT],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), void 0 !== Pv[Kv] && (Object.defineProperty(hv, Kv, {
-              value: [...Pv[Kv]],
+            }), void 0 !== cT[zT] && (Object.defineProperty(lT, zT, {
+              value: [...cT[zT]],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), Object.defineProperty(hv, Vv, {
+            }), Object.defineProperty(lT, JT, {
               value: {
-                ...Pv[Vv]
+                ...cT[JT]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             }));
-            for (const vv of Jz) {
-              const zv = Pv[vv];
-              void 0 !== zv && Object.defineProperty(hv, vv, {
-                value: [...zv],
+            for (const TT of Bk) {
+              const kT = cT[TT];
+              void 0 !== kT && Object.defineProperty(lT, TT, {
+                value: [...kT],
                 enumerable: !1,
                 configurable: !0,
                 writable: !0
               })
             }
-            Object.defineProperty(hv, Fv, {
+            Object.defineProperty(lT, rT, {
               value: {
-                ...Pv[Fv]
+                ...cT[rT]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             })
           }
-          return Object.defineProperty(vv, Symbol.metadata, {
-            value: hv,
+          return Object.defineProperty(TT, Symbol.metadata, {
+            value: lT,
             writable: !1,
             configurable: !0
-          }), hv
+          }), lT
         },
-        isValidInstance: vv => vv.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(vv.constructor[Symbol.metadata], Ov),
-        getFields(vv) {
-          const zv = vv[Symbol.metadata],
-            Pv = {};
-          for (let hv = 0; hv <= zv[Ov]; hv++) Pv[zv[hv].name] = zv[hv].type;
-          return Pv
+        isValidInstance: TT => TT.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(TT.constructor[Symbol.metadata], mT),
+        getFields(TT) {
+          const kT = TT[Symbol.metadata],
+            cT = {};
+          for (let lT = 0; lT <= kT[mT]; lT++) cT[kT[lT].name] = kT[lT].type;
+          return cT
         },
-        hasViewTagAtIndex: (vv, zv) => vv?.[Kv]?.includes(zv),
-        hasUnreliableAtIndex: (vv, zv) => vv?.[Uv]?.includes(zv),
-        hasPatchOnlyAtIndex: (vv, zv) => vv?.[Rv]?.includes(zv),
-        hasFullStateOnlyAtIndex: (vv, zv) => vv?.[tv]?.includes(zv),
-        hasStreamAtIndex: (vv, zv) => vv?.[qv]?.includes(zv)
+        hasViewTagAtIndex: (TT, kT) => TT?.[zT]?.includes(kT),
+        hasUnreliableAtIndex: (TT, kT) => TT?.[oT]?.includes(kT),
+        hasPatchOnlyAtIndex: (TT, kT) => TT?.[HT]?.includes(kT),
+        hasFullStateOnlyAtIndex: (TT, kT) => TT?.[GT]?.includes(kT),
+        hasStreamAtIndex: (TT, kT) => TT?.[VT]?.includes(kT)
       },
-      bz = (vv, zv, Pv) => vv(zv, Pv);
-    class rz {
+      pk = (TT, kT, cT) => TT(kT, cT);
+    class ik {
       dirtyLow = 0;
       dirtyHigh = 0;
       ops;
-      constructor(vv) {
-        this.ops = new Uint8Array(Math.max(vv + 1, 1))
+      constructor(TT) {
+        this.ops = new Uint8Array(Math.max(TT + 1, 1))
       }
-      record(vv, zv) {
-        const Pv = this.ops[vv];
-        0 === Pv ? this.ops[vv] = zv : (Pv === Sv.DELETE || Pv === Sv.ADD && zv === Sv.DELETE_AND_ADD) && (this.ops[vv] = Sv.DELETE_AND_ADD), vv < 32 ? this.dirtyLow |= 1 << vv : this.dirtyHigh |= 1 << vv - 32
+      record(TT, kT) {
+        const cT = this.ops[TT];
+        0 === cT ? this.ops[TT] = kT : (cT === MT.DELETE || cT === MT.ADD && kT === MT.DELETE_AND_ADD) && (this.ops[TT] = MT.DELETE_AND_ADD), TT < 32 ? this.dirtyLow |= 1 << TT : this.dirtyHigh |= 1 << TT - 32
       }
-      recordDelete(vv, zv) {
-        this.ops[vv] = zv, vv < 32 ? this.dirtyLow |= 1 << vv : this.dirtyHigh |= 1 << vv - 32
+      recordDelete(TT, kT) {
+        this.ops[TT] = kT, TT < 32 ? this.dirtyLow |= 1 << TT : this.dirtyHigh |= 1 << TT - 32
       }
-      recordRaw(vv, zv) {
-        this.record(vv, zv)
+      recordRaw(TT, kT) {
+        this.record(TT, kT)
       }
-      operationAt(vv) {
-        const zv = this.ops[vv];
-        return 0 === zv ? void 0 : zv
+      operationAt(TT) {
+        const kT = this.ops[TT];
+        return 0 === kT ? void 0 : kT
       }
-      setOperationAt(vv, zv) {
-        this.ops[vv] = zv
+      setOperationAt(TT, kT) {
+        this.ops[TT] = kT
       }
-      forEach(vv) {
-        this.forEachWithCtx(vv, bz)
+      forEach(TT) {
+        this.forEachWithCtx(TT, pk)
       }
-      forEachWithCtx(vv, zv) {
-        let Pv = this.dirtyLow,
-          hv = this.dirtyHigh;
-        const Sv = this.ops;
-        for (; 0 !== Pv;) {
-          const hv = Pv & -Pv,
-            ev = 31 - Math.clz32(hv);
-          Pv ^= hv, zv(vv, ev, Sv[ev])
+      forEachWithCtx(TT, kT) {
+        let cT = this.dirtyLow,
+          lT = this.dirtyHigh;
+        const MT = this.ops;
+        for (; 0 !== cT;) {
+          const lT = cT & -cT,
+            KT = 31 - Math.clz32(lT);
+          cT ^= lT, kT(TT, KT, MT[KT])
         }
-        for (; 0 !== hv;) {
-          const Pv = hv & -hv,
-            ev = 31 - Math.clz32(Pv) + 32;
-          hv ^= Pv, zv(vv, ev, Sv[ev])
+        for (; 0 !== lT;) {
+          const cT = lT & -lT,
+            KT = 31 - Math.clz32(cT) + 32;
+          lT ^= cT, kT(TT, KT, MT[KT])
         }
       }
       size() {
-        return Xz(this.dirtyLow) + Xz(this.dirtyHigh)
+        return sk(this.dirtyLow) + sk(this.dirtyHigh)
       }
       has() {
         return 0 !== (this.dirtyLow | this.dirtyHigh)
@@ -2917,359 +2917,359 @@ export const modules = {
         this.dirtyLow = 0, this.dirtyHigh = 0, this.ops.fill(0)
       }
     }
-    class kz {
-      Da = new Map;
+    class qk {
+      bv = new Map;
       pureOps = [];
-      record(vv, zv) {
-        const Pv = this.Da.get(vv);
-        void 0 === Pv ? this.Da.set(vv, zv) : (Pv === Sv.DELETE || Pv === Sv.ADD && zv === Sv.DELETE_AND_ADD) && this.Da.set(vv, Sv.DELETE_AND_ADD)
+      record(TT, kT) {
+        const cT = this.bv.get(TT);
+        void 0 === cT ? this.bv.set(TT, kT) : (cT === MT.DELETE || cT === MT.ADD && kT === MT.DELETE_AND_ADD) && this.bv.set(TT, MT.DELETE_AND_ADD)
       }
-      recordDelete(vv, zv) {
-        this.Da.set(vv, zv)
+      recordDelete(TT, kT) {
+        this.bv.set(TT, kT)
       }
-      recordRaw(vv, zv) {
-        this.Da.set(vv, zv)
+      recordRaw(TT, kT) {
+        this.bv.set(TT, kT)
       }
-      recordPure(vv) {
-        this.pureOps.push([this.Da.size, vv])
+      recordPure(TT) {
+        this.pureOps.push([this.bv.size, TT])
       }
-      operationAt(vv) {
-        return this.Da.get(vv)
+      operationAt(TT) {
+        return this.bv.get(TT)
       }
-      setOperationAt(vv, zv) {
-        this.Da.has(vv) && this.Da.set(vv, zv)
+      setOperationAt(TT, kT) {
+        this.bv.has(TT) && this.bv.set(TT, kT)
       }
-      forEach(vv) {
-        this.forEachWithCtx(vv, bz)
+      forEach(TT) {
+        this.forEachWithCtx(TT, pk)
       }
-      forEachWithCtx(vv, zv) {
-        const Pv = this.pureOps;
-        if (Pv.length > 0) {
-          let hv = 0,
-            Sv = 0;
-          for (const [ev, gv] of this.Da) {
-            for (; hv < Pv.length && Pv[hv][0] <= Sv;) {
-              const Sv = Pv[hv++][1];
-              zv(vv, -Sv, Sv)
+      forEachWithCtx(TT, kT) {
+        const cT = this.pureOps;
+        if (cT.length > 0) {
+          let lT = 0,
+            MT = 0;
+          for (const [KT, OT] of this.bv) {
+            for (; lT < cT.length && cT[lT][0] <= MT;) {
+              const MT = cT[lT++][1];
+              kT(TT, -MT, MT)
             }
-            zv(vv, ev, gv), Sv++
+            kT(TT, KT, OT), MT++
           }
-          for (; hv < Pv.length;) {
-            const Sv = Pv[hv++][1];
-            zv(vv, -Sv, Sv)
+          for (; lT < cT.length;) {
+            const MT = cT[lT++][1];
+            kT(TT, -MT, MT)
           }
         } else
-          for (const [hv, Sv] of this.Da) zv(vv, hv, Sv)
+          for (const [lT, MT] of this.bv) kT(TT, lT, MT)
       }
       size() {
-        return this.Da.size + this.pureOps.length
+        return this.bv.size + this.pureOps.length
       }
       has() {
-        return this.Da.size > 0 || this.pureOps.length > 0
+        return this.bv.size > 0 || this.pureOps.length > 0
       }
       reset() {
-        this.Da.clear(), this.pureOps.length = 0
+        this.bv.clear(), this.pureOps.length = 0
       }
-      shift(vv) {
-        const zv = new Map;
-        for (const [Pv, hv] of this.Da) zv.set(Pv + vv, hv);
-        this.Da = zv
+      shift(TT) {
+        const kT = new Map;
+        for (const [cT, lT] of this.bv) kT.set(cT + TT, lT);
+        this.bv = kT
       }
     }
 
-    function Xz(vv) {
-      return 16843009 * ((vv = (858993459 & (vv -= vv >>> 1 & 1431655765)) + (vv >>> 2 & 858993459)) + (vv >>> 4) & 252645135) >>> 24
+    function sk(TT) {
+      return 16843009 * ((TT = (858993459 & (TT -= TT >>> 1 & 1431655765)) + (TT >>> 2 & 858993459)) + (TT >>> 4) & 252645135) >>> 24
     }
 
-    function uz(vv) {
-      if (void 0 === vv) return 0;
-      let zv = 0;
-      for (let Pv = 0, hv = vv.length; Pv < hv; Pv++) {
-        const hv = vv[Pv];
-        hv < 32 && (zv |= 1 << hv)
+    function Tc(TT) {
+      if (void 0 === TT) return 0;
+      let kT = 0;
+      for (let cT = 0, lT = TT.length; cT < lT; cT++) {
+        const lT = TT[cT];
+        lT < 32 && (kT |= 1 << lT)
       }
-      return zv
+      return kT
     }
 
-    function vP(vv) {
-      const zv = vv.constructor;
-      if (Object.prototype.hasOwnProperty.call(zv, Yv)) return zv[Yv];
-      const Pv = zv[Symbol.metadata],
-        hv = oz.isValidInstance(vv),
-        Sv = (Pv?.[Kv]?.length ?? 0) > 0,
-        ev = function(vv) {
-          const zv = [],
-            Pv = [],
-            hv = [],
-            Sv = [],
-            ev = vv?.[Ov];
-          if (void 0 === ev) return {
-            names: zv,
-            types: Pv,
-            tags: hv,
-            encoders: Sv
+    function kc(TT) {
+      const kT = TT.constructor;
+      if (Object.prototype.hasOwnProperty.call(kT, PT)) return kT[PT];
+      const cT = kT[Symbol.metadata],
+        lT = nk.isValidInstance(TT),
+        MT = (cT?.[zT]?.length ?? 0) > 0,
+        KT = function(TT) {
+          const kT = [],
+            cT = [],
+            lT = [],
+            MT = [],
+            KT = TT?.[mT];
+          if (void 0 === KT) return {
+            names: kT,
+            types: cT,
+            tags: lT,
+            encoders: MT
           };
-          const gv = vv[nv];
-          for (let pv = 0; pv <= ev; pv++) {
-            const ev = vv[pv];
-            void 0 !== ev ? (zv[pv] = ev.name, Pv[pv] = ev.type, hv[pv] = ev.tag, Sv[pv] = gv?.[pv]) : (zv[pv] = void 0, Pv[pv] = void 0, hv[pv] = void 0, Sv[pv] = void 0)
+          const OT = TT[wT];
+          for (let yT = 0; yT <= KT; yT++) {
+            const KT = TT[yT];
+            void 0 !== KT ? (kT[yT] = KT.name, cT[yT] = KT.type, lT[yT] = KT.tag, MT[yT] = OT?.[yT]) : (kT[yT] = void 0, cT[yT] = void 0, lT[yT] = void 0, MT[yT] = void 0)
           }
           return {
-            names: zv,
-            types: Pv,
-            tags: hv,
-            encoders: Sv
+            names: kT,
+            types: cT,
+            tags: lT,
+            encoders: MT
           }
-        }(Pv),
-        gv = hv && !Sv ? void 0 : zv[Tv],
-        pv = {
-          encoder: zv[Nv],
-          filter: gv,
-          metadata: Pv,
-          isSchema: hv,
-          filterBitmask: hv ? uz(Pv?.[Kv]) : 0,
-          hasAnyFullStateOnly: (Pv?.[tv]?.length ?? 0) > 0,
-          hasAnyUnreliable: (Pv?.[Uv]?.length ?? 0) > 0,
-          hasAnyStream: (Pv?.[qv]?.length ?? 0) > 0,
-          hasAnyView: Sv,
-          fullStateOnlyBitmask: uz(Pv?.[tv]),
-          unreliableBitmask: uz(Pv?.[Uv]),
-          streamBitmask: uz(Pv?.[qv]),
-          names: ev.names,
-          types: ev.types,
-          tags: ev.tags,
-          encoders: ev.encoders
+        }(cT),
+        OT = lT && !MT ? void 0 : kT[AT],
+        yT = {
+          encoder: kT[xT],
+          filter: OT,
+          metadata: cT,
+          isSchema: lT,
+          filterBitmask: lT ? Tc(cT?.[zT]) : 0,
+          hasAnyFullStateOnly: (cT?.[GT]?.length ?? 0) > 0,
+          hasAnyUnreliable: (cT?.[oT]?.length ?? 0) > 0,
+          hasAnyStream: (cT?.[VT]?.length ?? 0) > 0,
+          hasAnyView: MT,
+          fullStateOnlyBitmask: Tc(cT?.[GT]),
+          unreliableBitmask: Tc(cT?.[oT]),
+          streamBitmask: Tc(cT?.[VT]),
+          names: KT.names,
+          types: KT.types,
+          tags: KT.tags,
+          encoders: KT.encoders
         };
-      return Object.defineProperty(zv, Yv, {
-        value: pv,
+      return Object.defineProperty(kT, PT, {
+        value: yT,
         enumerable: !1,
         writable: !0,
         configurable: !0
-      }), pv
+      }), yT
     }
 
-    function zP(vv, zv) {
-      if (void 0 !== vv.parentRef && zv(vv.parentRef, vv._parentIndex)) return !0;
-      for (let Pv = vv.extraParents; void 0 !== Pv; Pv = Pv.next)
-        if (zv(Pv.ref, Pv.index)) return !0;
+    function cc(TT, kT) {
+      if (void 0 !== TT.parentRef && kT(TT.parentRef, TT._parentIndex)) return !0;
+      for (let cT = TT.extraParents; void 0 !== cT; cT = cT.next)
+        if (kT(cT.ref, cT.index)) return !0;
       return !1
     }
-    const PP = (vv, zv) => {
-        vv.isFieldUnreliable(zv) ? vv.ensureUnreliableRecorder().record(zv, Sv.ADD) : vv.record(zv, Sv.ADD)
+    const lc = (TT, kT) => {
+        TT.isFieldUnreliable(kT) ? TT.ensureUnreliableRecorder().record(kT, MT.ADD) : TT.record(kT, MT.ADD)
       },
-      hP = (vv, zv) => vv(zv);
+      Mc = (TT, kT) => TT(kT);
 
-    function SP(vv, zv, Pv) {
-      const hv = vv.refTarget;
-      if (void 0 !== hv[Cv]) {
-        if (vv.isPatchOnly) return;
-        if (Array.isArray(hv.items)) {
-          const vv = hv.items;
-          for (let hv = 0, Sv = vv.length; hv < Sv; hv++) void 0 !== vv[hv] && Pv(zv, hv)
-        } else if (void 0 !== hv.journal)
-          for (const [vv, Sv] of hv.journal.keyByIndex) hv.$items.has(Sv) && Pv(zv, vv);
-        else if (void 0 !== hv.$items)
-          for (const vv of hv.$items.keys()) Pv(zv, vv)
+    function Kc(TT, kT, cT) {
+      const lT = TT.refTarget;
+      if (void 0 !== lT[hT]) {
+        if (TT.isPatchOnly) return;
+        if (Array.isArray(lT.items)) {
+          const TT = lT.items;
+          for (let lT = 0, MT = TT.length; lT < MT; lT++) void 0 !== TT[lT] && cT(kT, lT)
+        } else if (void 0 !== lT.journal)
+          for (const [TT, MT] of lT.journal.keyByIndex) lT.$items.has(MT) && cT(kT, TT);
+        else if (void 0 !== lT.$items)
+          for (const TT of lT.$items.keys()) cT(kT, TT)
       } else {
-        const Sv = vv.metadata;
-        if (!Sv) return;
-        const ev = Sv[Ov] ?? -1,
-          gv = Sv[xv],
-          pv = vv.encDescriptor.names;
-        for (let vv = 0; vv <= ev; vv++) {
-          const Sv = pv[vv];
-          if (void 0 === Sv) continue;
-          if (gv && gv.includes(vv)) continue;
-          const ev = hv[Sv];
-          void 0 !== ev && null !== ev && Pv(zv, vv)
+        const MT = TT.metadata;
+        if (!MT) return;
+        const KT = MT[mT] ?? -1,
+          OT = MT[eT],
+          yT = TT.encDescriptor.names;
+        for (let TT = 0; TT <= KT; TT++) {
+          const MT = yT[TT];
+          if (void 0 === MT) continue;
+          if (OT && OT.includes(TT)) continue;
+          const KT = lT[MT];
+          void 0 !== KT && null !== KT && cT(kT, TT)
         }
       }
     }
 
-    function eP(vv, zv, Pv, hv) {
-      ! function(vv, zv, Pv) {
-        if (!zv) return;
-        const hv = zv[sv],
-          Sv = !hv._isSchema;
-        let ev;
-        Sv ? (zv = hv.parent, Pv = hv.parentIndex, ev = zv?.[sv].metadata) : ev = hv.metadata;
-        const gv = (ev?.[Rv]?.includes(Pv) ? YP : 0) | (ev?.[tv]?.includes(Pv) ? nP : 0),
-          pv = hv.flags & KP | gv,
-          dv = vv.flags;
-        vv.flags = dv | pv;
-        pv & ~dv & nP && (vv.reset(), vv.unreliableRecorder?.reset());
-        const Nv = vv.root?.types;
-        if (!Nv?.hasFilters) return;
-        const lv = ev?.[Kv]?.includes(Pv) ?? !1,
-          Tv = ev?.[qv]?.includes(Pv) ?? !1,
-          Wv = hv.isFiltered || lv || Tv;
-        if (vv.isFiltered = Wv, Tv && !Sv) {
-          vv.isStreamCollection = !0;
-          const zv = Oz(vv.ref);
-          if (void 0 === zv.priority) {
-            const vv = oz.getStreamPriority(ev, Pv);
-            void 0 !== vv && (zv.priority = vv)
+    function Oc(TT, kT, cT, lT) {
+      ! function(TT, kT, cT) {
+        if (!kT) return;
+        const lT = kT[tT],
+          MT = !lT._isSchema;
+        let KT;
+        MT ? (kT = lT.parent, cT = lT.parentIndex, KT = kT?.[tT].metadata) : KT = lT.metadata;
+        const OT = (KT?.[HT]?.includes(cT) ? wc : 0) | (KT?.[GT]?.includes(cT) ? mc : 0),
+          yT = lT.flags & Jc | OT,
+          fT = TT.flags;
+        TT.flags = fT | yT;
+        yT & ~fT & mc && (TT.reset(), TT.unreliableRecorder?.reset());
+        const xT = TT.root?.types;
+        if (!xT?.hasFilters) return;
+        const IT = KT?.[zT]?.includes(cT) ?? !1,
+          AT = KT?.[VT]?.includes(cT) ?? !1,
+          CT = lT.isFiltered || IT || AT;
+        if (TT.isFiltered = CT, AT && !MT) {
+          TT.isStreamCollection = !0;
+          const kT = mk(TT.ref);
+          if (void 0 === kT.priority) {
+            const TT = nk.getStreamPriority(KT, cT);
+            void 0 !== TT && (kT.priority = TT)
           }
-          vv.root?.registerStream(vv.ref)
+          TT.root?.registerStream(TT.ref)
         }
-        if (Wv) {
-          const zv = pP(vv);
-          vv.isVisibilitySharedWithParent = hv.isFiltered && zv && !Tv && (!lv || Sv && ev[Pv].tag !== ah)
+        if (CT) {
+          const kT = fc(TT);
+          TT.isVisibilitySharedWithParent = lT.isFiltered && kT && !AT && (!IT || MT && KT[cT].tag !== tl)
         }
-      }(vv, zv, Pv), vv.isFullStateOnly || (vv.has() && vv.root?.enqueueChangeTree(vv), vv.unreliableRecorder?.has() && vv.root?.enqueueUnreliable(vv), vv.has() || vv.unreliableRecorder?.has() || vv.root?.enqueueChangeTree(vv))
+      }(TT, kT, cT), TT.isFullStateOnly || (TT.has() && TT.root?.enqueueChangeTree(TT), TT.unreliableRecorder?.has() && TT.root?.enqueueUnreliable(TT), TT.has() || TT.unreliableRecorder?.has() || TT.root?.enqueueChangeTree(TT))
     }
 
-    function gP(vv) {
-      const zv = vv.pendingFilterRefresh;
-      for (let Pv = 0; Pv < zv.length; Pv++) {
-        const vv = zv[Pv];
-        0 !== (vv.flags & DP) && dP(vv)
+    function yc(TT) {
+      const kT = TT.pendingFilterRefresh;
+      for (let cT = 0; cT < kT.length; cT++) {
+        const TT = kT[cT];
+        0 !== (TT.flags & zc) && xc(TT)
       }
-      zv.length = 0
+      kT.length = 0
     }
 
-    function pP(vv) {
-      return vv._isSchema || "string" !== typeof vv.refTarget[Cv]
+    function fc(TT) {
+      return TT._isSchema || "string" !== typeof TT.refTarget[hT]
     }
 
-    function dP(vv) {
-      vv.flags &= ~DP;
-      const zv = vv.root;
-      if (void 0 === zv || void 0 === vv.parentRef) return;
-      const Pv = pP(vv);
-      let hv = wP(vv, vv.parentRef, vv._parentIndex, Pv);
-      for (let ev = vv.extraParents; void 0 !== ev && hv !== WP; ev = ev.next) hv |= wP(vv, ev.ref, ev.index, Pv);
-      if (0 === hv) return;
-      vv.isVisibilitySharedWithParent = 0 !== (hv & TP);
-      const Sv = 0 === (hv & lP);
-      Sv !== vv.isFiltered && (vv.isFiltered = Sv, Sv || vv.isFullStateOnly || (vv.forEachLiveWithCtx(vv, PP), vv.has() && zv.enqueueChangeTree(vv), vv.unreliableRecorder?.has() && zv.enqueueUnreliable(vv)), vv.forEachChildWithCtx(vv, aP))
+    function xc(TT) {
+      TT.flags &= ~zc;
+      const kT = TT.root;
+      if (void 0 === kT || void 0 === TT.parentRef) return;
+      const cT = fc(TT);
+      let lT = vc(TT, TT.parentRef, TT._parentIndex, cT);
+      for (let KT = TT.extraParents; void 0 !== KT && lT !== jc; KT = KT.next) lT |= vc(TT, KT.ref, KT.index, cT);
+      if (0 === lT) return;
+      TT.isVisibilitySharedWithParent = 0 !== (lT & Cc);
+      const MT = 0 === (lT & Ac);
+      MT !== TT.isFiltered && (TT.isFiltered = MT, MT || TT.isFullStateOnly || (TT.forEachLiveWithCtx(TT, lc), TT.has() && kT.enqueueChangeTree(TT), TT.unreliableRecorder?.has() && kT.enqueueUnreliable(TT)), TT.forEachChildWithCtx(TT, tc))
     }
-    const NP = 1,
-      lP = 2,
-      TP = 4,
-      WP = NP | lP | TP;
+    const Ic = 1,
+      Ac = 2,
+      Cc = 4,
+      jc = Ic | Ac | Cc;
 
-    function wP(vv, zv, Pv, hv) {
-      const Sv = zv[sv];
-      if (Sv.root !== vv.root || ! function(vv, zv, Pv) {
-          const hv = zv.refTarget;
-          if (zv.isArray) {
-            const zv = hv.items,
-              Sv = zv[Pv];
-            if (void 0 !== Sv && Sv[sv] === vv) return !0;
-            for (let Pv = 0, hv = zv.length; Pv < hv; Pv++) {
-              const hv = zv[Pv];
-              if (void 0 !== hv && hv[sv] === vv) return !0
+    function vc(TT, kT, cT, lT) {
+      const MT = kT[tT];
+      if (MT.root !== TT.root || ! function(TT, kT, cT) {
+          const lT = kT.refTarget;
+          if (kT.isArray) {
+            const kT = lT.items,
+              MT = kT[cT];
+            if (void 0 !== MT && MT[tT] === TT) return !0;
+            for (let cT = 0, lT = kT.length; cT < lT; cT++) {
+              const lT = kT[cT];
+              if (void 0 !== lT && lT[tT] === TT) return !0
             }
             return !1
           }
-          const Sv = zv.getValue(Pv);
-          return void 0 !== Sv && Sv[sv] === vv
-        }(vv, Sv, Pv)) return 0;
-      Sv.flags & DP && dP(Sv);
-      let ev = NP;
-      if (Sv._isSchema) {
-        void 0 !== Sv.encDescriptor.tags[Pv] || Sv.isFieldStream(Pv) || (Sv.isFiltered ? hv && (ev |= TP) : ev |= lP)
-      } else if (Sv.isFiltered) {
-        if (hv && !Sv.isStreamCollection) {
-          const vv = Sv.parent?.[sv];
-          (vv?._isSchema ? vv.encDescriptor.tags[Sv.parentIndex] : void 0) !== ah && (ev |= TP)
+          const MT = kT.getValue(cT);
+          return void 0 !== MT && MT[tT] === TT
+        }(TT, MT, cT)) return 0;
+      MT.flags & zc && xc(MT);
+      let KT = Ic;
+      if (MT._isSchema) {
+        void 0 !== MT.encDescriptor.tags[cT] || MT.isFieldStream(cT) || (MT.isFiltered ? lT && (KT |= Cc) : KT |= Ac)
+      } else if (MT.isFiltered) {
+        if (lT && !MT.isStreamCollection) {
+          const TT = MT.parent?.[tT];
+          (TT?._isSchema ? TT.encDescriptor.tags[MT.parentIndex] : void 0) !== tl && (KT |= Cc)
         }
-      } else ev |= lP;
-      return ev
+      } else KT |= Ac;
+      return KT
     }
-    const aP = (vv, zv, Pv) => {
-      dP(zv)
+    const tc = (TT, kT, cT) => {
+      xc(kT)
     };
 
-    function sP(vv, zv, Pv, hv) {
-      if (vv.addParent(zv, hv), !Pv) return;
-      const Sv = Pv.add(vv);
-      Pv !== vv.root && (vv.root = Pv, eP(vv, zv, hv));
-      const ev = zv?.[sv];
-      if (void 0 !== ev && void 0 !== ev.subscribedViews && void 0 !== zv[Cv] && function(vv, zv, Pv, hv) {
-          const Sv = vv.subscribedViews;
-          if (void 0 === Sv) return;
-          const ev = vv.isStreamCollection,
-            gv = ev ? vv.ref : void 0,
-            pv = ev ? void 0 : Pv[sv];
-          for (let dv = 0, Nv = Sv.length; dv < Nv; dv++) {
-            let vv = Sv[dv];
-            for (; 0 !== vv;) {
-              const Pv = vv & -vv;
-              vv ^= Pv;
-              const Nv = 32 * dv + (31 - Math.clz32(Pv)),
-                lv = hv.activeViews.get(Nv),
-                Tv = lv?.deref();
-              void 0 !== Tv ? ev ? Rz(gv, Nv, zv) : void 0 !== pv && Tv.markVisible(pv) : Sv[dv] &= ~Pv
+    function hc(TT, kT, cT, lT) {
+      if (TT.addParent(kT, lT), !cT) return;
+      const MT = cT.add(TT);
+      cT !== TT.root && (TT.root = cT, Oc(TT, kT, lT));
+      const KT = kT?.[tT];
+      if (void 0 !== KT && void 0 !== KT.subscribedViews && void 0 !== kT[hT] && function(TT, kT, cT, lT) {
+          const MT = TT.subscribedViews;
+          if (void 0 === MT) return;
+          const KT = TT.isStreamCollection,
+            OT = KT ? TT.ref : void 0,
+            yT = KT ? void 0 : cT[tT];
+          for (let fT = 0, xT = MT.length; fT < xT; fT++) {
+            let TT = MT[fT];
+            for (; 0 !== TT;) {
+              const cT = TT & -TT;
+              TT ^= cT;
+              const xT = 32 * fT + (31 - Math.clz32(cT)),
+                IT = lT.activeViews.get(xT),
+                AT = IT?.deref();
+              void 0 !== AT ? KT ? ek(OT, xT, kT) : void 0 !== yT && AT.markVisible(yT) : MT[fT] &= ~cT
             }
           }
-        }(ev, hv, vv.ref, Pv), Sv) {
-        let zv = GP[mP];
-        void 0 === zv && (zv = {
+        }(KT, lT, TT.ref, cT), MT) {
+        let kT = Dc[ac];
+        void 0 === kT && (kT = {
           parentRef: void 0,
           root: void 0
-        }, GP[mP] = zv), zv.parentRef = vv.ref, zv.root = Pv, mP++, iP(vv, zv, jP), mP--
+        }, Dc[ac] = kT), kT.parentRef = TT.ref, kT.root = cT, ac++, Qc(TT, kT, Fc), ac--
       }
     }
 
-    function CP(vv, zv, Pv) {
-      vv(zv, Pv)
+    function Nc(TT, kT, cT) {
+      TT(kT, cT)
     }
 
-    function iP(vv, zv, Pv) {
-      const hv = vv.refTarget;
-      if (hv[Cv]) {
-        if ("string" !== typeof hv[Cv]) {
-          const vv = hv.items;
-          if (void 0 !== vv)
-            for (let hv = 0, Sv = vv.length; hv < Sv; hv++) {
-              const Sv = vv[hv];
-              Sv && Pv(zv, Sv[sv], hv)
+    function Qc(TT, kT, cT) {
+      const lT = TT.refTarget;
+      if (lT[hT]) {
+        if ("string" !== typeof lT[hT]) {
+          const TT = lT.items;
+          if (void 0 !== TT)
+            for (let lT = 0, MT = TT.length; lT < MT; lT++) {
+              const MT = TT[lT];
+              MT && cT(kT, MT[tT], lT)
             } else {
-              const vv = hv.$items,
-                Sv = hv._collectionIndexes;
-              for (const hv of vv.keys()) {
-                const ev = vv.get(hv);
-                ev && Pv(zv, ev[sv], Sv?.[hv] ?? hv)
+              const TT = lT.$items,
+                MT = lT._collectionIndexes;
+              for (const lT of TT.keys()) {
+                const KT = TT.get(lT);
+                KT && cT(kT, KT[tT], MT?.[lT] ?? lT)
               }
             }
         }
       } else {
-        const Sv = vv.metadata,
-          ev = Sv?.[Dv];
-        if (!ev) return;
-        const gv = vv.encDescriptor.names;
-        for (let vv = 0, pv = ev.length; vv < pv; vv++) {
-          const Sv = ev[vv],
-            pv = hv[gv[Sv]];
-          pv && Pv(zv, pv[sv], Sv)
+        const MT = TT.metadata,
+          KT = MT?.[bT];
+        if (!KT) return;
+        const OT = TT.encDescriptor.names;
+        for (let TT = 0, yT = KT.length; TT < yT; TT++) {
+          const MT = KT[TT],
+            yT = lT[OT[MT]];
+          yT && cT(kT, yT[tT], MT)
         }
       }
     }
 
-    function cP(vv, zv, Pv) {
-      zv.root !== vv ? zv.setRoot(vv) : vv.add(zv)
+    function Sc(TT, kT, cT) {
+      kT.root !== TT ? kT.setRoot(TT) : TT.add(kT)
     }
-    const GP = [];
-    let mP = 0;
+    const Dc = [];
+    let ac = 0;
 
-    function jP(vv, zv, Pv) {
-      if (zv.root === vv.root) return vv.root.add(zv), void vv.root.moveNextToParent(zv);
-      zv.setParent(vv.parentRef, vv.root, Pv)
+    function Fc(TT, kT, cT) {
+      if (kT.root === TT.root) return TT.root.add(kT), void TT.root.moveNextToParent(kT);
+      kT.setParent(TT.parentRef, TT.root, cT)
     }
 
-    function fP(vv, zv, Pv) {
-      const hv = (3 & Pv) << 3;
-      return Pv < 4 ? vv >>> hv & 255 : zv >>> hv & 255
+    function rc(TT, kT, cT) {
+      const lT = (3 & cT) << 3;
+      return cT < 4 ? TT >>> lT & 255 : kT >>> lT & 255
     }
-    const FP = (vv, zv, Pv) => vv(zv, Pv);
-    const YP = 16,
-      nP = 32,
-      OP = 128,
-      DP = 256,
-      KP = YP | nP;
-    class VP {
+    const Pc = (TT, kT, cT) => TT(kT, cT);
+    const wc = 16,
+      mc = 32,
+      bc = 128,
+      zc = 256,
+      Jc = wc | mc;
+    class oc {
       ref;
       refTarget;
       get isArray() {
@@ -3302,183 +3302,183 @@ export const modules = {
       get isFiltered() {
         return 0 !== (1 & this.flags)
       }
-      set isFiltered(vv) {
-        this.flags = vv ? 1 | this.flags : -2 & this.flags
+      set isFiltered(TT) {
+        this.flags = TT ? 1 | this.flags : -2 & this.flags
       }
       get isVisibilitySharedWithParent() {
         return 0 !== (2 & this.flags)
       }
-      set isVisibilitySharedWithParent(vv) {
-        this.flags = vv ? 2 | this.flags : -3 & this.flags
+      set isVisibilitySharedWithParent(TT) {
+        this.flags = TT ? 2 | this.flags : -3 & this.flags
       }
       get isNew() {
         return 0 !== (4 & this.flags)
       }
-      set isNew(vv) {
-        this.flags = vv ? 4 | this.flags : -5 & this.flags
+      set isNew(TT) {
+        this.flags = TT ? 4 | this.flags : -5 & this.flags
       }
       get isUnreliable() {
         return 0 !== (8 & this.flags)
       }
-      set isUnreliable(vv) {
-        this.flags = vv ? 8 | this.flags : -9 & this.flags
+      set isUnreliable(TT) {
+        this.flags = TT ? 8 | this.flags : -9 & this.flags
       }
       get isPatchOnly() {
-        return 0 !== (this.flags & YP)
+        return 0 !== (this.flags & wc)
       }
-      set isPatchOnly(vv) {
-        this.flags = vv ? this.flags | YP : this.flags & ~YP
+      set isPatchOnly(TT) {
+        this.flags = TT ? this.flags | wc : this.flags & ~wc
       }
       get isFullStateOnly() {
-        return 0 !== (this.flags & nP)
+        return 0 !== (this.flags & mc)
       }
-      set isFullStateOnly(vv) {
-        this.flags = vv ? this.flags | nP : this.flags & ~nP
+      set isFullStateOnly(TT) {
+        this.flags = TT ? this.flags | mc : this.flags & ~mc
       }
       get isStreamCollection() {
         return 0 !== (64 & this.flags)
       }
-      set isStreamCollection(vv) {
-        this.flags = vv ? 64 | this.flags : -65 & this.flags
+      set isStreamCollection(TT) {
+        this.flags = TT ? 64 | this.flags : -65 & this.flags
       }
       get needsRestage() {
-        return 0 !== (this.flags & OP)
+        return 0 !== (this.flags & bc)
       }
-      set needsRestage(vv) {
-        this.flags = vv ? this.flags | OP : -129 & this.flags
+      set needsRestage(TT) {
+        this.flags = TT ? this.flags | bc : -129 & this.flags
       }
       get hasFilteredFields() {
         return this.isFiltered || this.encDescriptor.hasAnyView
       }
       ensureUnreliableRecorder() {
-        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new rz(this.metadata?.[Ov] ?? 0) : new kz), this.unreliableRecorder
+        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new ik(this.metadata?.[mT] ?? 0) : new qk), this.unreliableRecorder
       }
-      isFieldUnreliable(vv) {
-        const zv = this.encDescriptor;
-        return !!zv.hasAnyUnreliable && (vv < 32 ? 0 !== (zv.unreliableBitmask & 1 << vv) : oz.hasUnreliableAtIndex(this.metadata, vv))
+      isFieldUnreliable(TT) {
+        const kT = this.encDescriptor;
+        return !!kT.hasAnyUnreliable && (TT < 32 ? 0 !== (kT.unreliableBitmask & 1 << TT) : nk.hasUnreliableAtIndex(this.metadata, TT))
       }
-      isFieldFullStateOnly(vv) {
+      isFieldFullStateOnly(TT) {
         if (this.isFullStateOnly) return !0;
-        const zv = this.encDescriptor;
-        return !!zv.hasAnyFullStateOnly && (vv < 32 ? 0 !== (zv.fullStateOnlyBitmask & 1 << vv) : oz.hasFullStateOnlyAtIndex(this.metadata, vv))
+        const kT = this.encDescriptor;
+        return !!kT.hasAnyFullStateOnly && (TT < 32 ? 0 !== (kT.fullStateOnlyBitmask & 1 << TT) : nk.hasFullStateOnlyAtIndex(this.metadata, TT))
       }
-      isFieldStream(vv) {
-        const zv = this.encDescriptor;
-        return !!zv.hasAnyStream && (vv < 32 ? 0 !== (zv.streamBitmask & 1 << vv) : oz.hasStreamAtIndex(this.metadata, vv))
+      isFieldStream(TT) {
+        const kT = this.encDescriptor;
+        return !!kT.hasAnyStream && (TT < 32 ? 0 !== (kT.streamBitmask & 1 << TT) : nk.hasStreamAtIndex(this.metadata, TT))
       }
-      constructor(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vv;
-        this.ref = vv, this.refTarget = zv;
-        const Pv = vP(vv);
-        this.encDescriptor = Pv, this.metadata = Pv.metadata;
-        const hv = Pv.isSchema;
-        if (this._isSchema = hv, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, hv) {
-          const vv = this.metadata?.[Ov] ?? 0;
-          vv > 7 && (this.ops = new Uint8Array(vv + 1))
+      constructor(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : TT;
+        this.ref = TT, this.refTarget = kT;
+        const cT = kc(TT);
+        this.encDescriptor = cT, this.metadata = cT.metadata;
+        const lT = cT.isSchema;
+        if (this._isSchema = lT, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, lT) {
+          const TT = this.metadata?.[mT] ?? 0;
+          TT > 7 && (this.ops = new Uint8Array(TT + 1))
         } else this.collDirty = new Map
       }
-      _opAt(vv) {
-        const zv = this.ops;
-        if (void 0 !== zv) return zv[vv];
-        const Pv = (3 & vv) << 3;
-        return vv < 4 ? this.opsLow >>> Pv & 255 : this.opsHigh >>> Pv & 255
+      _opAt(TT) {
+        const kT = this.ops;
+        if (void 0 !== kT) return kT[TT];
+        const cT = (3 & TT) << 3;
+        return TT < 4 ? this.opsLow >>> cT & 255 : this.opsHigh >>> cT & 255
       }
-      _opPut(vv, zv) {
-        const Pv = this.ops;
-        if (void 0 !== Pv) return void(Pv[vv] = zv);
-        const hv = (3 & vv) << 3,
-          Sv = ~(255 << hv);
-        vv < 4 ? this.opsLow = this.opsLow & Sv | zv << hv : this.opsHigh = this.opsHigh & Sv | zv << hv
+      _opPut(TT, kT) {
+        const cT = this.ops;
+        if (void 0 !== cT) return void(cT[TT] = kT);
+        const lT = (3 & TT) << 3,
+          MT = ~(255 << lT);
+        TT < 4 ? this.opsLow = this.opsLow & MT | kT << lT : this.opsHigh = this.opsHigh & MT | kT << lT
       }
-      _markDirty(vv) {
-        vv < 32 ? this.dirtyLow |= 1 << vv : this.dirtyHigh |= 1 << vv - 32
+      _markDirty(TT) {
+        TT < 32 ? this.dirtyLow |= 1 << TT : this.dirtyHigh |= 1 << TT - 32
       }
-      record(vv, zv) {
+      record(TT, kT) {
         if (this._isSchema) {
-          const Pv = this._opAt(vv);
-          0 === Pv ? this._opPut(vv, zv) : (Pv === Sv.DELETE || Pv === Sv.ADD && zv === Sv.DELETE_AND_ADD) && this._opPut(vv, Sv.DELETE_AND_ADD), this._markDirty(vv)
+          const cT = this._opAt(TT);
+          0 === cT ? this._opPut(TT, kT) : (cT === MT.DELETE || cT === MT.ADD && kT === MT.DELETE_AND_ADD) && this._opPut(TT, MT.DELETE_AND_ADD), this._markDirty(TT)
         } else {
-          const Pv = this.collDirty,
-            hv = Pv.get(vv);
-          let ev;
-          ev = void 0 === hv ? zv : hv === Sv.DELETE || hv === Sv.ADD && zv === Sv.DELETE_AND_ADD ? Sv.DELETE_AND_ADD : hv, Pv.set(vv, ev)
+          const cT = this.collDirty,
+            lT = cT.get(TT);
+          let KT;
+          KT = void 0 === lT ? kT : lT === MT.DELETE || lT === MT.ADD && kT === MT.DELETE_AND_ADD ? MT.DELETE_AND_ADD : lT, cT.set(TT, KT)
         }
       }
-      recordDelete(vv, zv) {
-        this._isSchema ? (this._opPut(vv, zv), this._markDirty(vv)) : this.collDirty.set(vv, zv)
+      recordDelete(TT, kT) {
+        this._isSchema ? (this._opPut(TT, kT), this._markDirty(TT)) : this.collDirty.set(TT, kT)
       }
-      recordRaw(vv, zv) {
-        this._isSchema ? (this._opPut(vv, zv), this._markDirty(vv)) : this.collDirty.set(vv, zv)
+      recordRaw(TT, kT) {
+        this._isSchema ? (this._opPut(TT, kT), this._markDirty(TT)) : this.collDirty.set(TT, kT)
       }
-      recordPure(vv) {
+      recordPure(TT) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): pure operations are not supported");
-        (this.collPureOps ??= []).push([this.collDirty.size, vv])
+        (this.collPureOps ??= []).push([this.collDirty.size, TT])
       }
-      operationAt(vv) {
+      operationAt(TT) {
         if (this._isSchema) {
-          const zv = this._opAt(vv);
-          return 0 === zv ? void 0 : zv
+          const kT = this._opAt(TT);
+          return 0 === kT ? void 0 : kT
         }
-        return this.collDirty.get(vv)
+        return this.collDirty.get(TT)
       }
-      setOperationAt(vv, zv) {
-        if (this._isSchema) this._opPut(vv, zv);
+      setOperationAt(TT, kT) {
+        if (this._isSchema) this._opPut(TT, kT);
         else {
-          const Pv = this.collDirty;
-          Pv.has(vv) && Pv.set(vv, zv)
+          const cT = this.collDirty;
+          cT.has(TT) && cT.set(TT, kT)
         }
       }
-      forEach(vv) {
-        this.forEachWithCtx(vv, FP)
+      forEach(TT) {
+        this.forEachWithCtx(TT, Pc)
       }
-      forEachWithCtx(vv, zv) {
+      forEachWithCtx(TT, kT) {
         if (this._isSchema) {
-          let Pv = this.dirtyLow,
-            hv = this.dirtyHigh;
-          const Sv = this.ops;
-          if (void 0 !== Sv) {
-            for (; 0 !== Pv;) {
-              const hv = Pv & -Pv,
-                ev = 31 - Math.clz32(hv);
-              Pv ^= hv, zv(vv, ev, Sv[ev])
+          let cT = this.dirtyLow,
+            lT = this.dirtyHigh;
+          const MT = this.ops;
+          if (void 0 !== MT) {
+            for (; 0 !== cT;) {
+              const lT = cT & -cT,
+                KT = 31 - Math.clz32(lT);
+              cT ^= lT, kT(TT, KT, MT[KT])
             }
-            for (; 0 !== hv;) {
-              const Pv = hv & -hv,
-                ev = 31 - Math.clz32(Pv) + 32;
-              hv ^= Pv, zv(vv, ev, Sv[ev])
+            for (; 0 !== lT;) {
+              const cT = lT & -lT,
+                KT = 31 - Math.clz32(cT) + 32;
+              lT ^= cT, kT(TT, KT, MT[KT])
             }
           } else {
-            const hv = this.opsLow,
-              Sv = this.opsHigh;
-            for (; 0 !== Pv;) {
-              const ev = Pv & -Pv,
-                gv = 31 - Math.clz32(ev);
-              Pv ^= ev, zv(vv, gv, fP(hv, Sv, gv))
+            const lT = this.opsLow,
+              MT = this.opsHigh;
+            for (; 0 !== cT;) {
+              const KT = cT & -cT,
+                OT = 31 - Math.clz32(KT);
+              cT ^= KT, kT(TT, OT, rc(lT, MT, OT))
             }
           }
           return
         }
-        const Pv = this.collDirty,
-          hv = this.collPureOps;
-        if (void 0 !== hv && hv.length > 0) {
-          let Sv = 0,
-            ev = 0;
-          for (const [gv, pv] of Pv) {
-            for (; Sv < hv.length && hv[Sv][0] <= ev;) {
-              const Pv = hv[Sv++][1];
-              zv(vv, -Pv, Pv)
+        const cT = this.collDirty,
+          lT = this.collPureOps;
+        if (void 0 !== lT && lT.length > 0) {
+          let MT = 0,
+            KT = 0;
+          for (const [OT, yT] of cT) {
+            for (; MT < lT.length && lT[MT][0] <= KT;) {
+              const cT = lT[MT++][1];
+              kT(TT, -cT, cT)
             }
-            zv(vv, gv, pv), ev++
+            kT(TT, OT, yT), KT++
           }
-          for (; Sv < hv.length;) {
-            const Pv = hv[Sv++][1];
-            zv(vv, -Pv, Pv)
+          for (; MT < lT.length;) {
+            const cT = lT[MT++][1];
+            kT(TT, -cT, cT)
           }
         } else
-          for (const [Sv, ev] of Pv) zv(vv, Sv, ev)
+          for (const [MT, KT] of cT) kT(TT, MT, KT)
       }
       size() {
-        return this._isSchema ? Xz(this.dirtyLow) + Xz(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
+        return this._isSchema ? sk(this.dirtyLow) + sk(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
       }
       has() {
         return this._isSchema ? 0 !== (this.dirtyLow | this.dirtyHigh) : this.collDirty.size > 0 || void 0 !== this.collPureOps && this.collPureOps.length > 0
@@ -3491,81 +3491,81 @@ export const modules = {
         if (void 0 !== this.root) throw new Error(`@colyseus/schema: cannot recycle an attached ChangeTree (${this.ref?.constructor?.name}). Remove the instance from its parent collection before releasing it to a pool.`);
         this.reset(), this.unreliableRecorder?.reset(), this.flags = 132, this._fullSyncGen = 0, this.parentRef = void 0, this._parentIndex = void 0, this.extraParents = void 0, this.changesNode = void 0, this.unreliableChangesNode = void 0, this.paused = !1, this.visibleViews = void 0, this.tagViews = void 0, this.subscribedViews = void 0
       }
-      insertAt(vv, zv) {
+      insertAt(TT, kT) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): insertAt is not supported");
-        const Pv = this.collDirty,
-          hv = new Map,
-          ev = !this.paused && !this.isFullStateOnly;
-        if (vv > 0)
-          for (const [Sv, gv] of Pv) Sv < vv && hv.set(Sv, gv);
-        if (ev)
-          for (let gv = 0; gv < zv; gv++) hv.set(vv + gv, Sv.ADD);
-        for (const [Sv, gv] of Pv) Sv >= vv && hv.set(Sv + zv, gv);
-        this.collDirty = hv, ev && this.root?.enqueueChangeTree(this)
+        const cT = this.collDirty,
+          lT = new Map,
+          KT = !this.paused && !this.isFullStateOnly;
+        if (TT > 0)
+          for (const [MT, OT] of cT) MT < TT && lT.set(MT, OT);
+        if (KT)
+          for (let OT = 0; OT < kT; OT++) lT.set(TT + OT, MT.ADD);
+        for (const [MT, OT] of cT) MT >= TT && lT.set(MT + kT, OT);
+        this.collDirty = lT, KT && this.root?.enqueueChangeTree(this)
       }
-      removeAt(vv, zv) {
+      removeAt(TT, kT) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): removeAt is not supported");
-        const Pv = this.collDirty,
-          hv = vv + zv;
-        let Sv = !1;
-        for (const gv of Pv.keys())
-          if (gv >= hv) {
-            Sv = !0;
+        const cT = this.collDirty,
+          lT = TT + kT;
+        let MT = !1;
+        for (const OT of cT.keys())
+          if (OT >= lT) {
+            MT = !0;
             break
-          } if (!Sv) {
-          for (let zv = vv; zv < hv; zv++) Pv.delete(zv);
+          } if (!MT) {
+          for (let kT = TT; kT < lT; kT++) cT.delete(kT);
           return
         }
-        const ev = new Map;
-        for (const [gv, pv] of Pv) gv < vv ? ev.set(gv, pv) : gv >= hv && ev.set(gv - zv, pv);
-        this.collDirty = ev
+        const KT = new Map;
+        for (const [OT, yT] of cT) OT < TT ? KT.set(OT, yT) : OT >= lT && KT.set(OT - kT, yT);
+        this.collDirty = KT
       }
-      unshift(vv) {
-        this.insertAt(0, vv)
+      unshift(TT) {
+        this.insertAt(0, TT)
       }
-      setRoot(vv) {
-        ! function(vv, zv) {
-          vv.root = zv;
-          const Pv = zv.add(vv);
-          eP(vv, vv.parent, vv.parentIndex), Pv && iP(vv, zv, cP)
-        }(this, vv)
+      setRoot(TT) {
+        ! function(TT, kT) {
+          TT.root = kT;
+          const cT = kT.add(TT);
+          Oc(TT, TT.parent, TT.parentIndex), cT && Qc(TT, kT, Sc)
+        }(this, TT)
       }
-      setParent(vv, zv, Pv) {
-        sP(this, vv, zv, Pv)
+      setParent(TT, kT, cT) {
+        hc(this, TT, kT, cT)
       }
-      forEachChild(vv) {
-        iP(this, vv, CP)
+      forEachChild(TT) {
+        Qc(this, TT, Nc)
       }
-      forEachChildWithCtx(vv, zv) {
-        iP(this, vv, zv)
+      forEachChildWithCtx(TT, kT) {
+        Qc(this, TT, kT)
       }
-      forEachLive(vv) {
-        SP(this, vv, hP)
+      forEachLive(TT) {
+        Kc(this, TT, Mc)
       }
-      forEachLiveWithCtx(vv, zv) {
-        SP(this, vv, zv)
+      forEachLiveWithCtx(TT, kT) {
+        Kc(this, TT, kT)
       }
-      operation(vv) {
-        this.paused || this.isFullStateOnly || (this.recordPure(vv), this.root?.enqueueChangeTree(this))
+      operation(TT) {
+        this.paused || this.isFullStateOnly || (this.recordPure(TT), this.root?.enqueueChangeTree(this))
       }
-      _routeAndRecord(vv, zv, Pv) {
-        if (!this.paused && !this.isFieldFullStateOnly(vv)) {
-          if (this.isFieldUnreliable(vv) && !this.isNew) {
-            const hv = this.ensureUnreliableRecorder();
-            return Pv ? hv.recordRaw(vv, zv) : hv.record(vv, zv), void this.root?.enqueueUnreliable(this)
+      _routeAndRecord(TT, kT, cT) {
+        if (!this.paused && !this.isFieldFullStateOnly(TT)) {
+          if (this.isFieldUnreliable(TT) && !this.isNew) {
+            const lT = this.ensureUnreliableRecorder();
+            return cT ? lT.recordRaw(TT, kT) : lT.record(TT, kT), void this.root?.enqueueUnreliable(this)
           }
-          Pv ? this.recordRaw(vv, zv) : this.record(vv, zv), this.root?.enqueueChangeTree(this)
+          cT ? this.recordRaw(TT, kT) : this.record(TT, kT), this.root?.enqueueChangeTree(this)
         }
       }
-      change(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Sv.ADD;
-        this._routeAndRecord(vv, zv, !1)
+      change(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : MT.ADD;
+        this._routeAndRecord(TT, kT, !1)
       }
-      indexedOperation(vv, zv) {
-        this._routeAndRecord(vv, zv, !0)
+      indexedOperation(TT, kT) {
+        this._routeAndRecord(TT, kT, !0)
       }
-      getChange(vv) {
-        return this.operationAt(vv)
+      getChange(TT) {
+        return this.operationAt(TT)
       }
       pause() {
         this.paused = !0
@@ -3573,60 +3573,60 @@ export const modules = {
       resume() {
         this.paused = !1
       }
-      untracked(vv) {
-        const zv = this.paused;
+      untracked(TT) {
+        const kT = this.paused;
         this.paused = !0;
         try {
-          return vv()
+          return TT()
         } finally {
-          this.paused = zv
+          this.paused = kT
         }
       }
-      markDirty(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Sv.ADD;
-        const Pv = this.paused;
+      markDirty(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : MT.ADD;
+        const cT = this.paused;
         this.paused = !1;
         try {
-          this.change(vv, zv)
+          this.change(TT, kT)
         } finally {
-          this.paused = Pv
+          this.paused = cT
         }
       }
-      getValue(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.refTarget[Wv](vv, zv)
+      getValue(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.refTarget[CT](TT, kT)
       }
-      delete(vv, zv) {
-        if (void 0 === vv) {
+      delete(TT, kT) {
+        if (void 0 === TT) {
           try {
-            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${vv}'`)
-          } catch (eS) {
-            console.warn(eS)
+            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${TT}'`)
+          } catch (OM) {
+            console.warn(OM)
           }
           return
         }
-        if (this.paused || this.isFieldFullStateOnly(vv)) return this.getValue(vv);
-        const Pv = this.isFieldUnreliable(vv) && !this.isNew;
-        Pv ? this.ensureUnreliableRecorder().recordDelete(vv, zv ?? Sv.DELETE) : this.recordDelete(vv, zv ?? Sv.DELETE);
-        const hv = this.getValue(vv);
-        return hv && hv[sv] && this.root?.remove(hv[sv]), Pv ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), hv
+        if (this.paused || this.isFieldFullStateOnly(TT)) return this.getValue(TT);
+        const cT = this.isFieldUnreliable(TT) && !this.isNew;
+        cT ? this.ensureUnreliableRecorder().recordDelete(TT, kT ?? MT.DELETE) : this.recordDelete(TT, kT ?? MT.DELETE);
+        const lT = this.getValue(TT);
+        return lT && lT[tT] && this.root?.remove(lT[tT]), cT ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), lT
       }
       endEncode() {
-        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[cv]?.(), this.isNew = !1
+        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[QT]?.(), this.isNew = !1
       }
       endEncodeUnreliable() {
-        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[cv]?.()
+        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[QT]?.()
       }
       discard() {
-        this._isSchema || this.refTarget[cv]?.(), this.reset(), this.unreliableRecorder?.reset()
+        this._isSchema || this.refTarget[QT]?.(), this.reset(), this.unreliableRecorder?.reset()
       }
       discardAll() {
-        const vv = vv => {
-          if (vv < 0) return;
-          const zv = this.getValue(vv);
-          zv && zv[sv] && zv[sv].discardAll()
+        const TT = TT => {
+          if (TT < 0) return;
+          const kT = this.getValue(TT);
+          kT && kT[tT] && kT[tT].discardAll()
         };
-        this.forEach(vv), this.unreliableRecorder?.forEach(vv), this.discard()
+        this.forEach(TT), this.unreliableRecorder?.forEach(TT), this.discard()
       }
       get changed() {
         return this.has() || (this.unreliableRecorder?.has() ?? !1)
@@ -3637,89 +3637,89 @@ export const modules = {
       get parentIndex() {
         return this._parentIndex
       }
-      addParent(vv, zv) {
-        ! function(vv, zv, Pv) {
-          if (vv.parentRef) {
-            if (vv.parentRef[sv] === zv[sv]) return void(vv._parentIndex = Pv);
-            if (zP(vv, ((vv, Pv) => vv[sv] === zv[sv]))) return void(vv._parentIndex = Pv)
+      addParent(TT, kT) {
+        ! function(TT, kT, cT) {
+          if (TT.parentRef) {
+            if (TT.parentRef[tT] === kT[tT]) return void(TT._parentIndex = cT);
+            if (cc(TT, ((TT, cT) => TT[tT] === kT[tT]))) return void(TT._parentIndex = cT)
           }
-          void 0 === vv.parentRef ? (vv.parentRef = zv, vv._parentIndex = Pv) : (vv.extraParents = {
-            ref: vv.parentRef,
-            index: vv._parentIndex,
-            next: vv.extraParents
-          }, vv.parentRef = zv, vv._parentIndex = Pv)
-        }(this, vv, zv)
+          void 0 === TT.parentRef ? (TT.parentRef = kT, TT._parentIndex = cT) : (TT.extraParents = {
+            ref: TT.parentRef,
+            index: TT._parentIndex,
+            next: TT.extraParents
+          }, TT.parentRef = kT, TT._parentIndex = cT)
+        }(this, TT, kT)
       }
-      setParentIndex(vv, zv) {
-        ! function(vv, zv, Pv) {
-          if (void 0 !== vv.extraParents)
-            if (vv.parentRef[sv] !== zv[sv]) {
-              for (let hv = vv.extraParents; void 0 !== hv; hv = hv.next)
-                if (hv.ref[sv] === zv[sv]) return void(hv.index = Pv)
-            } else vv._parentIndex = Pv;
-          else vv._parentIndex = Pv
-        }(this, vv, zv)
+      setParentIndex(TT, kT) {
+        ! function(TT, kT, cT) {
+          if (void 0 !== TT.extraParents)
+            if (TT.parentRef[tT] !== kT[tT]) {
+              for (let lT = TT.extraParents; void 0 !== lT; lT = lT.next)
+                if (lT.ref[tT] === kT[tT]) return void(lT.index = cT)
+            } else TT._parentIndex = cT;
+          else TT._parentIndex = cT
+        }(this, TT, kT)
       }
       removeParent() {
-        return function(vv, zv) {
-          if (vv.parentRef && vv.parentRef[sv] === zv[sv]) return vv.extraParents ? (vv.parentRef = vv.extraParents.ref, vv._parentIndex = vv.extraParents.index, vv.extraParents = vv.extraParents.next) : (vv.parentRef = void 0, vv._parentIndex = void 0), !0;
-          let Pv = vv.extraParents,
-            hv = null;
-          for (; Pv;) {
-            if (Pv.ref[sv] === zv[sv]) return hv ? hv.next = Pv.next : vv.extraParents = Pv.next, !0;
-            hv = Pv, Pv = Pv.next
+        return function(TT, kT) {
+          if (TT.parentRef && TT.parentRef[tT] === kT[tT]) return TT.extraParents ? (TT.parentRef = TT.extraParents.ref, TT._parentIndex = TT.extraParents.index, TT.extraParents = TT.extraParents.next) : (TT.parentRef = void 0, TT._parentIndex = void 0), !0;
+          let cT = TT.extraParents,
+            lT = null;
+          for (; cT;) {
+            if (cT.ref[tT] === kT[tT]) return lT ? lT.next = cT.next : TT.extraParents = cT.next, !0;
+            lT = cT, cT = cT.next
           }
-          return void 0 === vv.parentRef
+          return void 0 === TT.parentRef
         }(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.parent)
       }
-      findParent(vv) {
-        return function(vv, zv) {
-          if (void 0 !== vv.parentRef && zv(vv.parentRef, vv._parentIndex)) return {
-            ref: vv.parentRef,
-            index: vv._parentIndex
+      findParent(TT) {
+        return function(TT, kT) {
+          if (void 0 !== TT.parentRef && kT(TT.parentRef, TT._parentIndex)) return {
+            ref: TT.parentRef,
+            index: TT._parentIndex
           };
-          for (let Pv = vv.extraParents; void 0 !== Pv; Pv = Pv.next)
-            if (zv(Pv.ref, Pv.index)) return {
-              ref: Pv.ref,
-              index: Pv.index
+          for (let cT = TT.extraParents; void 0 !== cT; cT = cT.next)
+            if (kT(cT.ref, cT.index)) return {
+              ref: cT.ref,
+              index: cT.index
             }
-        }(this, vv)
+        }(this, TT)
       }
-      hasParent(vv) {
-        return zP(this, vv)
+      hasParent(TT) {
+        return cc(this, TT)
       }
-      indexInParent(vv) {
-        return function(vv, zv) {
-          if (vv.parentRef && vv.parentRef[sv] === zv[sv]) return vv._parentIndex;
-          for (let Pv = vv.extraParents; void 0 !== Pv; Pv = Pv.next)
-            if (Pv.ref[sv] === zv[sv]) return Pv.index
-        }(this, vv)
+      indexInParent(TT) {
+        return function(TT, kT) {
+          if (TT.parentRef && TT.parentRef[tT] === kT[tT]) return TT._parentIndex;
+          for (let cT = TT.extraParents; void 0 !== cT; cT = cT.next)
+            if (cT.ref[tT] === kT[tT]) return cT.index
+        }(this, TT)
       }
       getAllParents() {
-        return function(vv) {
-          const zv = [];
-          vv.parentRef && zv.push({
-            ref: vv.parentRef,
-            index: vv._parentIndex
+        return function(TT) {
+          const kT = [];
+          TT.parentRef && kT.push({
+            ref: TT.parentRef,
+            index: TT._parentIndex
           });
-          let Pv = vv.extraParents;
-          for (; Pv;) zv.push({
-            ref: Pv.ref,
-            index: Pv.index
-          }), Pv = Pv.next;
-          return zv
+          let cT = TT.extraParents;
+          for (; cT;) kT.push({
+            ref: cT.ref,
+            index: cT.index
+          }), cT = cT.next;
+          return kT
         }(this)
       }
     }
-    class UP {
+    class Hc {
       ref;
       root = void 0;
       parentRef = void 0;
       paused = !1;
       isNew = !1;
       flags = 0;
-      constructor(vv) {
-        this.ref = vv
+      constructor(TT) {
+        this.ref = TT
       }
       change() {}
       delete() {}
@@ -3738,606 +3738,606 @@ export const modules = {
       discardAll() {}
       pause() {}
       resume() {}
-      untracked(vv) {
-        return vv()
+      untracked(TT) {
+        return TT()
       }
       markDirty() {}
-      forEachChild(vv) {
-        const zv = this.ref;
-        if (zv[Cv]) {
-          if ("string" !== typeof zv[Cv])
-            for (const [Pv, hv] of zv.entries()) hv && vv(hv[sv], zv._collectionIndexes?.[Pv] ?? Pv);
+      forEachChild(TT) {
+        const kT = this.ref;
+        if (kT[hT]) {
+          if ("string" !== typeof kT[hT])
+            for (const [cT, lT] of kT.entries()) lT && TT(lT[tT], kT._collectionIndexes?.[cT] ?? cT);
           return
         }
-        const Pv = zv.constructor,
-          hv = Pv?.[Symbol.metadata];
-        if (!hv) return;
-        const Sv = hv[Dv] ?? [];
-        for (let ev = 0; ev < Sv.length; ev++) {
-          const Pv = Sv[ev],
-            gv = zv[hv[Pv].name];
-          gv && vv(gv[sv], Pv)
+        const cT = kT.constructor,
+          lT = cT?.[Symbol.metadata];
+        if (!lT) return;
+        const MT = lT[bT] ?? [];
+        for (let KT = 0; KT < MT.length; KT++) {
+          const cT = MT[KT],
+            OT = kT[lT[cT].name];
+          OT && TT(OT[tT], cT)
         }
       }
-      forEachChildWithCtx(vv, zv) {
-        this.forEachChild(((Pv, hv) => zv(vv, Pv, hv)))
+      forEachChildWithCtx(TT, kT) {
+        this.forEachChild(((cT, lT) => kT(TT, cT, lT)))
       }
       forEachLive() {}
       forEachLiveWithCtx() {}
       forEach() {}
     }
 
-    function RP(vv) {
-      let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vv;
-      var Pv;
-      Object.defineProperty(vv, sv, {
-        value: (Pv = zv, new UP(Pv)),
+    function ec(TT) {
+      let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : TT;
+      var cT;
+      Object.defineProperty(TT, tT, {
+        value: (cT = kT, new Hc(cT)),
         enumerable: !1,
         writable: !0
       })
     }
 
-    function xP(vv, zv, Pv, hv, ev, gv, dv) {
-      void 0 !== dv ? dv(zv, hv, gv) : "string" === typeof Pv ? zz[Pv]?.(zv, hv, gv) : null != Pv[Symbol.metadata] ? (zz.number(zv, hv[pv], gv), (ev & Sv.ADD) === Sv.ADD && vv.tryEncodeTypeId(zv, Pv, hv.constructor, gv)) : zz.number(zv, hv[pv], gv)
+    function Gc(TT, kT, cT, lT, KT, OT, fT) {
+      void 0 !== fT ? fT(kT, lT, OT) : "string" === typeof cT ? kk[cT]?.(kT, lT, OT) : null != cT[Symbol.metadata] ? (kk.number(kT, lT[yT], OT), (KT & MT.ADD) === MT.ADD && TT.tryEncodeTypeId(kT, cT, lT.constructor, OT)) : kk.number(kT, lT[yT], OT)
     }
-    const tP = function(vv, zv, Pv, hv, ev, gv, pv, dv) {
-        if (zv[gv.offset++] = 255 & (hv | ev), ev === Sv.DELETE) return;
-        const Nv = Pv.encDescriptor,
-          lv = Pv.ref,
-          Tv = lv[jv][hv] ?? lv[Nv.names[hv]];
-        xP(vv, zv, Nv.types[hv], Tv, ev, gv, Nv.encoders[hv])
+    const Vc = function(TT, kT, cT, lT, KT, OT, yT, fT) {
+        if (kT[OT.offset++] = 255 & (lT | KT), KT === MT.DELETE) return;
+        const xT = cT.encDescriptor,
+          IT = cT.ref,
+          AT = IT[aT][lT] ?? IT[xT.names[lT]];
+        Gc(TT, kT, xT.types[lT], AT, KT, OT, xT.encoders[lT])
       },
-      qP = function(vv, zv, Pv, hv, ev, gv) {
-        if (zv[gv.offset++] = 255 & ev, zz.number(zv, hv, gv), ev === Sv.DELETE) return;
-        const pv = Pv.ref;
-        if ((ev & Sv.ADD) === Sv.ADD) {
-          const vv = pv.$indexes.get(hv);
-          zz.string(zv, vv, gv)
+      Ec = function(TT, kT, cT, lT, KT, OT) {
+        if (kT[OT.offset++] = 255 & KT, kk.number(kT, lT, OT), KT === MT.DELETE) return;
+        const yT = cT.ref;
+        if ((KT & MT.ADD) === MT.ADD) {
+          const TT = yT.$indexes.get(lT);
+          kk.string(kT, TT, OT)
         }
-        xP(vv, zv, pv[Cv], pv[Wv](hv), ev, gv)
+        Gc(TT, kT, yT[hT], yT[CT](lT), KT, OT)
       },
-      IP = function(vv, zv, Pv, hv, ev, gv) {
-        if (zv[gv.offset++] = 255 & ev, zz.number(zv, hv, gv), ev === Sv.DELETE) return;
-        const pv = Pv.ref;
-        xP(vv, zv, pv[Cv], pv[Wv](hv), ev, gv)
+      Zc = function(TT, kT, cT, lT, KT, OT) {
+        if (kT[OT.offset++] = 255 & KT, kk.number(kT, lT, OT), KT === MT.DELETE) return;
+        const yT = cT.ref;
+        Gc(TT, kT, yT[hT], yT[CT](lT), KT, OT)
       },
-      QP = function(vv, zv, Pv, hv, ev, gv) {
-        const pv = Pv.ref;
-        (ev & Sv.ADD) === Sv.ADD && "function" === typeof pv.set ? qP(vv, zv, Pv, hv, ev, gv) : IP(vv, zv, Pv, hv, ev, gv)
+      uc = function(TT, kT, cT, lT, KT, OT) {
+        const yT = cT.ref;
+        (KT & MT.ADD) === MT.ADD && "function" === typeof yT.set ? Ec(TT, kT, cT, lT, KT, OT) : Zc(TT, kT, cT, lT, KT, OT)
       },
-      ZP = function(vv, zv, Pv, hv, ev, gv, dv, Nv) {
-        const lv = Pv.refTarget,
-          Tv = lv[Cv],
-          wv = "string" !== typeof Tv;
-        let av;
-        if (Nv && Pv.isFiltered && wv) {
-          const vv = lv.tmpItems[hv];
-          if (!vv) return;
-          if (av = vv[pv], ev === Sv.DELETE) ev = Sv.DELETE_BY_REFID;
-          else if ((ev & Sv.ADD) === Sv.ADD) ev = Sv.ADD_BY_REFID;
-          else if ((ev & Sv.MOVE) === Sv.MOVE) return
-        } else if (ev === Sv.DELETE && wv) {
-          const vv = lv.tmpItems[hv];
-          if (!vv) return;
-          av = vv[pv], ev = Sv.DELETE_BY_REFID
-        } else av = hv;
-        if (zv[gv.offset++] = 255 & ev, zz.number(zv, av, gv), ev === Sv.DELETE || ev === Sv.DELETE_BY_REFID) return;
-        xP(vv, zv, Tv, lv[Wv](hv, dv), ev, gv)
+      Xc = function(TT, kT, cT, lT, KT, OT, fT, xT) {
+        const IT = cT.refTarget,
+          AT = IT[hT],
+          jT = "string" !== typeof AT;
+        let vT;
+        if (xT && cT.isFiltered && jT) {
+          const TT = IT.tmpItems[lT];
+          if (!TT) return;
+          if (vT = TT[yT], KT === MT.DELETE) KT = MT.DELETE_BY_REFID;
+          else if ((KT & MT.ADD) === MT.ADD) KT = MT.ADD_BY_REFID;
+          else if ((KT & MT.MOVE) === MT.MOVE) return
+        } else if (KT === MT.DELETE && jT) {
+          const TT = IT.tmpItems[lT];
+          if (!TT) return;
+          vT = TT[yT], KT = MT.DELETE_BY_REFID
+        } else vT = lT;
+        if (kT[OT.offset++] = 255 & KT, kk.number(kT, vT, OT), KT === MT.DELETE || KT === MT.DELETE_BY_REFID) return;
+        Gc(TT, kT, AT, IT[CT](lT, fT), KT, OT)
       };
 
-    function AP(vv, zv, Pv, hv, ev, gv, dv) {
-      const Nv = vv.resyncVisited;
-      let lv = Nv.get(vv.currentRefId);
-      if (void 0 === lv && Nv.set(vv.currentRefId, lv = new Set), lv.add(hv), void 0 !== ev && Pv === Sv.ADD && ev !== gv) {
-        const Pv = ev[pv];
-        void 0 !== Pv && (vv.root.removeRef(Pv), dv?.push({
-          ref: zv,
-          refId: vv.currentRefId,
-          op: Sv.DELETE,
-          dynamicIndex: hv,
+    function dc(TT, kT, cT, lT, KT, OT, fT) {
+      const xT = TT.resyncVisited;
+      let IT = xT.get(TT.currentRefId);
+      if (void 0 === IT && xT.set(TT.currentRefId, IT = new Set), IT.add(lT), void 0 !== KT && cT === MT.ADD && KT !== OT) {
+        const cT = KT[yT];
+        void 0 !== cT && (TT.root.removeRef(cT), fT?.push({
+          ref: kT,
+          refId: TT.currentRefId,
+          op: MT.DELETE,
+          dynamicIndex: lT,
           value: void 0,
-          previousValue: ev
+          previousValue: KT
         }))
       }
     }
 
-    function LP(vv, zv, Pv, hv) {
-      const Sv = zv[pv];
-      if (void 0 === Sv || Pv.has(Sv)) return;
-      Pv.add(Sv);
-      const ev = zv.constructor[Symbol.metadata],
-        gv = ev?.[Dv];
-      if (void 0 === gv) return;
-      const dv = ev[Rv];
-      for (let pv = 0; pv < gv.length; pv++) {
-        const Sv = gv[pv];
-        if (void 0 !== dv && dv.includes(Sv)) continue;
-        const Nv = ev[Sv],
-          lv = zv[Nv.name];
-        lv && (Kh.is(Nv.type) ? LP(vv, lv, Pv, hv) : HP(vv, lv, Pv, hv))
+    function Lc(TT, kT, cT, lT) {
+      const MT = kT[yT];
+      if (void 0 === MT || cT.has(MT)) return;
+      cT.add(MT);
+      const KT = kT.constructor[Symbol.metadata],
+        OT = KT?.[bT];
+      if (void 0 === OT) return;
+      const fT = KT[HT];
+      for (let yT = 0; yT < OT.length; yT++) {
+        const MT = OT[yT];
+        if (void 0 !== fT && fT.includes(MT)) continue;
+        const xT = KT[MT],
+          IT = kT[xT.name];
+        IT && (Jl.is(xT.type) ? Lc(TT, IT, cT, lT) : Rc(TT, IT, cT, lT))
       }
     }
 
-    function HP(vv, zv, Pv, hv) {
-      const ev = zv[iv] ?? zv,
-        gv = ev[pv];
-      if (void 0 === gv || Pv.has(gv)) return;
-      Pv.add(gv);
-      const dv = vv.resyncVisited.get(gv);
-      if (void 0 === dv) return;
-      const Nv = vv.root;
-      ev[av](dv, ((vv, Pv) => {
-        hv?.push({
-          ref: zv,
-          refId: gv,
-          op: Sv.DELETE,
-          dynamicIndex: Pv,
+    function Rc(TT, kT, cT, lT) {
+      const KT = kT[NT] ?? kT,
+        OT = KT[yT];
+      if (void 0 === OT || cT.has(OT)) return;
+      cT.add(OT);
+      const fT = TT.resyncVisited.get(OT);
+      if (void 0 === fT) return;
+      const xT = TT.root;
+      KT[vT](fT, ((TT, cT) => {
+        lT?.push({
+          ref: kT,
+          refId: OT,
+          op: MT.DELETE,
+          dynamicIndex: cT,
           value: void 0,
-          previousValue: vv
+          previousValue: TT
         });
-        const ev = vv?.[pv];
-        void 0 !== ev && Nv.removeRef(ev)
-      }), (zv => {
-        Kh.isSchema(zv) && LP(vv, zv, Pv, hv)
+        const KT = TT?.[yT];
+        void 0 !== KT && xT.removeRef(KT)
+      }), (kT => {
+        Jl.isSchema(kT) && Lc(TT, kT, cT, lT)
       }))
     }
-    const MP = 1,
-      yP = 2,
-      BP = 3,
-      JP = 4,
-      EP = 5;
+    const gc = 1,
+      Uc = 2,
+      Yc = 3,
+      Bc = 4,
+      Wc = 5;
 
-    function oP(vv, zv, Pv, hv, ev, gv, dv, Nv, lv) {
-      const Tv = vv.root;
-      let Wv;
-      if ((zv & Sv.DELETE) === Sv.DELETE) {
-        const vv = ev?.[pv];
-        void 0 !== vv && Tv.removeRef(vv), zv !== Sv.DELETE_AND_ADD && Pv[wv](hv), Wv = void 0
+    function nc(TT, kT, cT, lT, KT, OT, fT, xT, IT) {
+      const AT = TT.root;
+      let CT;
+      if ((kT & MT.DELETE) === MT.DELETE) {
+        const TT = KT?.[yT];
+        void 0 !== TT && AT.removeRef(TT), kT !== MT.DELETE_AND_ADD && cT[jT](lT), CT = void 0
       }
-      if (zv === Sv.DELETE);
-      else if ("string" === typeof gv) Wv = Gz[gv](dv, Nv);
-      else if (Iz(gv)) Wv = function(vv, zv, Pv) {
-        return Zz(vv, (0, Gz[vv.wire])(zv, Pv))
-      }(gv.quantized, dv, Nv);
-      else if (Kh.is(gv)) {
-        const Pv = Gz.number(dv, Nv);
-        if (Wv = Tv.refs.get(Pv), (zv & Sv.ADD) === Sv.ADD) {
-          const hv = vv.getInstanceType(dv, Nv, gv);
-          Wv || (Wv = vv.createInstanceOfType(hv)), Tv.addRef(Pv, Wv, Wv !== ev || zv === Sv.DELETE_AND_ADD && Wv === ev)
+      if (kT === MT.DELETE);
+      else if ("string" === typeof OT) CT = Sk[OT](fT, xT);
+      else if (Zk(OT)) CT = function(TT, kT, cT) {
+        return Xk(TT, (0, Sk[TT.wire])(kT, cT))
+      }(OT.quantized, fT, xT);
+      else if (Jl.is(OT)) {
+        const cT = Sk.number(fT, xT);
+        if (CT = AT.refs.get(cT), (kT & MT.ADD) === MT.ADD) {
+          const lT = TT.getInstanceType(fT, xT, OT);
+          CT || (CT = TT.createInstanceOfType(lT)), AT.addRef(cT, CT, CT !== KT || kT === MT.DELETE_AND_ADD && CT === KT)
         }
       } else {
-        const Pv = (av = Object.keys(gv)[0], mz[av]),
-          hv = Gz.number(dv, Nv);
-        null !== vv.resyncVisited && function(vv, zv) {
-          const Pv = vv.resyncVisited;
-          Pv.has(zv) || Pv.set(zv, new Set)
-        }(vv, hv);
-        const wv = Tv.refs.has(hv) ? ev || Tv.refs.get(hv) : Pv.constructor.initializeForDecoder();
-        if (Wv = wv.clone(!0), Wv[Cv] = Object.values(gv)[0], ev) {
-          let vv = ev[pv];
-          if (void 0 !== vv && hv !== vv) {
-            (zv & Sv.DELETE) !== Sv.DELETE && Tv.removeRef(vv);
-            const Pv = ev.entries();
-            let hv;
+        const cT = (vT = Object.keys(OT)[0], Dk[vT]),
+          lT = Sk.number(fT, xT);
+        null !== TT.resyncVisited && function(TT, kT) {
+          const cT = TT.resyncVisited;
+          cT.has(kT) || cT.set(kT, new Set)
+        }(TT, lT);
+        const jT = AT.refs.has(lT) ? KT || AT.refs.get(lT) : cT.constructor.initializeForDecoder();
+        if (CT = jT.clone(!0), CT[hT] = Object.values(OT)[0], KT) {
+          let TT = KT[yT];
+          if (void 0 !== TT && lT !== TT) {
+            (kT & MT.DELETE) !== MT.DELETE && AT.removeRef(TT);
+            const cT = KT.entries();
+            let lT;
             for (;
-              (hv = Pv.next()) && !hv.done;) {
-              const [zv, Pv] = hv.value;
-              "object" === typeof Pv && (vv = Pv[pv]), lv?.push({
-                ref: ev,
-                refId: vv,
-                op: Sv.DELETE,
-                field: zv,
+              (lT = cT.next()) && !lT.done;) {
+              const [kT, cT] = lT.value;
+              "object" === typeof cT && (TT = cT[yT]), IT?.push({
+                ref: KT,
+                refId: TT,
+                op: MT.DELETE,
+                field: kT,
                 value: void 0,
-                previousValue: Pv
+                previousValue: cT
               })
             }
           }
         }
-        Tv.addRef(hv, Wv, wv !== ev || zv === Sv.DELETE_AND_ADD && wv === ev)
+        AT.addRef(lT, CT, jT !== KT || kT === MT.DELETE_AND_ADD && jT === KT)
       }
-      var av;
-      return Wv
+      var vT;
+      return CT
     }
-    const bP = function(vv, zv, Pv, hv, Sv) {
-        const ev = zv[Pv.offset++],
-          gv = hv.constructor[Symbol.metadata],
-          pv = ev >> 6 << 6,
-          dv = ev % (pv || 255),
-          Nv = gv[dv];
-        if (void 0 === Nv) return console.warn("@colyseus/schema: field not defined at", {
-          index: dv,
-          ref: hv.constructor.name,
-          metadata: gv
+    const pc = function(TT, kT, cT, lT, MT) {
+        const KT = kT[cT.offset++],
+          OT = lT.constructor[Symbol.metadata],
+          yT = KT >> 6 << 6,
+          fT = KT % (yT || 255),
+          xT = OT[fT];
+        if (void 0 === xT) return console.warn("@colyseus/schema: field not defined at", {
+          index: fT,
+          ref: lT.constructor.name,
+          metadata: OT
         }), -1;
-        const lv = !0 === Nv.deprecated,
-          Tv = lv ? void 0 : hv[Wv](dv),
-          wv = oP(vv, pv, hv, dv, Tv, Nv.type, zv, Pv, Sv);
-        lv || (null !== wv && void 0 !== wv && (hv[Nv.name] = wv), Tv !== wv && Sv?.push({
-          ref: hv,
-          refId: vv.currentRefId,
-          op: pv,
-          field: Nv.name,
-          value: wv,
-          previousValue: Tv
+        const IT = !0 === xT.deprecated,
+          AT = IT ? void 0 : lT[CT](fT),
+          jT = nc(TT, yT, lT, fT, AT, xT.type, kT, cT, MT);
+        IT || (null !== jT && void 0 !== jT && (lT[xT.name] = jT), AT !== jT && MT?.push({
+          ref: lT,
+          refId: TT.currentRefId,
+          op: yT,
+          field: xT.name,
+          value: jT,
+          previousValue: AT
         }))
       },
-      rP = function(vv, zv, Pv, hv, ev) {
-        const gv = hv[iv] ?? hv,
-          pv = zv[Pv.offset++];
-        if (pv === Sv.CLEAR) return vv.removeChildRefs(gv, ev), void gv.clear();
-        const dv = Gz.number(zv, Pv),
-          Nv = gv[Cv],
-          lv = gv.constructor.COLLECTION_KIND;
-        let Tv;
-        (pv & Sv.ADD) === Sv.ADD ? lv === MP ? (Tv = Gz.string(zv, Pv), gv.setIndex(dv, Tv)) : Tv = dv : Tv = gv.getIndex(dv);
-        const wv = gv[Wv](dv),
-          av = oP(vv, pv, hv, dv, wv, Nv, zv, Pv, ev);
-        if (null !== vv.resyncVisited && AP(vv, hv, pv, Tv, wv, av, ev), null !== av && void 0 !== av) switch (lv) {
-          case MP:
-            gv.$items.set(Tv, av);
+      ic = function(TT, kT, cT, lT, KT) {
+        const OT = lT[NT] ?? lT,
+          yT = kT[cT.offset++];
+        if (yT === MT.CLEAR) return TT.removeChildRefs(OT, KT), void OT.clear();
+        const fT = Sk.number(kT, cT),
+          xT = OT[hT],
+          IT = OT.constructor.COLLECTION_KIND;
+        let AT;
+        (yT & MT.ADD) === MT.ADD ? IT === gc ? (AT = Sk.string(kT, cT), OT.setIndex(fT, AT)) : AT = fT : AT = OT.getIndex(fT);
+        const jT = OT[CT](fT),
+          vT = nc(TT, yT, lT, fT, jT, xT, kT, cT, KT);
+        if (null !== TT.resyncVisited && dc(TT, lT, yT, AT, jT, vT, KT), null !== vT && void 0 !== vT) switch (IT) {
+          case gc:
+            OT.$items.set(AT, vT);
             break;
-          case yP:
-            gv.$setAt(dv, av, null !== vv.resyncVisited && pv === Sv.ADD ? Sv.REPLACE : pv);
+          case Uc:
+            OT.$setAt(fT, vT, null !== TT.resyncVisited && yT === MT.ADD ? MT.REPLACE : yT);
             break;
-          case BP:
-          case JP:
-          case EP:
-            gv.$items.has(dv) || (gv.$items.set(dv, av), "number" === typeof gv.$refId && dv >= gv.$refId && (gv.$refId = dv + 1));
+          case Yc:
+          case Bc:
+          case Wc:
+            OT.$items.has(fT) || (OT.$items.set(fT, vT), "number" === typeof OT.$refId && fT >= OT.$refId && (OT.$refId = fT + 1));
             break;
           default:
-            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${gv.constructor?.name} \u2014 item at index ${dv} was not stored.`)
+            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${OT.constructor?.name} \u2014 item at index ${fT} was not stored.`)
         }
-        wv !== av && ev?.push({
-          ref: hv,
-          refId: vv.currentRefId,
-          op: pv,
-          dynamicIndex: Tv,
-          value: av,
-          previousValue: wv
+        jT !== vT && KT?.push({
+          ref: lT,
+          refId: TT.currentRefId,
+          op: yT,
+          dynamicIndex: AT,
+          value: vT,
+          previousValue: jT
         })
       },
-      kP = function(vv, zv, Pv, hv, ev) {
-        const gv = hv[iv] ?? hv;
-        let pv, dv = zv[Pv.offset++];
-        if (dv === Sv.CLEAR) return vv.removeChildRefs(gv, ev), void gv.clear();
-        if (dv === Sv.REVERSE) return void gv.items.reverse();
-        if (dv === Sv.DELETE_BY_REFID) {
-          const dv = Gz.number(zv, Pv),
-            Nv = vv.root.refs.get(dv);
-          if (void 0 === Nv) return;
-          if (vv.root.removeRef(dv), pv = gv.findIndex((vv => vv === Nv)), -1 === pv) return;
-          return gv[wv](pv), void ev?.push({
-            ref: hv,
-            refId: vv.currentRefId,
-            op: Sv.DELETE,
-            dynamicIndex: pv,
+      qc = function(TT, kT, cT, lT, KT) {
+        const OT = lT[NT] ?? lT;
+        let yT, fT = kT[cT.offset++];
+        if (fT === MT.CLEAR) return TT.removeChildRefs(OT, KT), void OT.clear();
+        if (fT === MT.REVERSE) return void OT.items.reverse();
+        if (fT === MT.DELETE_BY_REFID) {
+          const fT = Sk.number(kT, cT),
+            xT = TT.root.refs.get(fT);
+          if (void 0 === xT) return;
+          if (TT.root.removeRef(fT), yT = OT.findIndex((TT => TT === xT)), -1 === yT) return;
+          return OT[jT](yT), void KT?.push({
+            ref: lT,
+            refId: TT.currentRefId,
+            op: MT.DELETE,
+            dynamicIndex: yT,
             value: void 0,
-            previousValue: Nv
+            previousValue: xT
           })
         }
-        if (dv === Sv.ADD_BY_REFID) {
-          const hv = Gz.number(zv, Pv),
-            Sv = vv.root.refs.get(hv);
-          Sv && (pv = gv.findIndex((vv => vv === Sv))), -1 !== pv && void 0 !== pv || (pv = gv.length)
-        } else pv = Gz.number(zv, Pv);
-        const Nv = gv[Cv];
-        let lv = pv;
-        const Tv = gv.items[pv],
-          Wv = oP(vv, dv, hv, pv, Tv, Nv, zv, Pv, ev);
-        null !== vv.resyncVisited && AP(vv, hv, dv, pv, Tv, Wv, ev), null !== Wv && void 0 !== Wv && Wv !== Tv && gv.$setAt(pv, Wv, null !== vv.resyncVisited && dv === Sv.ADD ? Sv.REPLACE : dv), Tv !== Wv && ev?.push({
-          ref: hv,
-          refId: vv.currentRefId,
-          op: dv,
-          dynamicIndex: lv,
-          value: Wv,
-          previousValue: Tv
+        if (fT === MT.ADD_BY_REFID) {
+          const lT = Sk.number(kT, cT),
+            MT = TT.root.refs.get(lT);
+          MT && (yT = OT.findIndex((TT => TT === MT))), -1 !== yT && void 0 !== yT || (yT = OT.length)
+        } else yT = Sk.number(kT, cT);
+        const xT = OT[hT];
+        let IT = yT;
+        const AT = OT.items[yT],
+          CT = nc(TT, fT, lT, yT, AT, xT, kT, cT, KT);
+        null !== TT.resyncVisited && dc(TT, lT, fT, yT, AT, CT, KT), null !== CT && void 0 !== CT && CT !== AT && OT.$setAt(yT, CT, null !== TT.resyncVisited && fT === MT.ADD ? MT.REPLACE : fT), AT !== CT && KT?.push({
+          ref: lT,
+          refId: TT.currentRefId,
+          op: fT,
+          dynamicIndex: IT,
+          value: CT,
+          previousValue: AT
         })
       };
-    class XP extends Error {}
+    class sc extends Error {}
 
-    function uP(vv, zv, Pv, hv) {
-      if (!(vv instanceof zv)) throw new XP(`a '${zv.name}' was expected, but '${vv&&vv.constructor.name}' was provided in ${Pv.constructor.name}#${hv}`)
+    function Tl(TT, kT, cT, lT) {
+      if (!(TT instanceof kT)) throw new sc(`a '${kT.name}' was expected, but '${TT&&TT.constructor.name}' was provided in ${cT.constructor.name}#${lT}`)
     }
-    const vh = (vv, zv) => {
-        const Pv = vv.toString(),
-          hv = zv.toString();
-        return Pv < hv ? -1 : Pv > hv ? 1 : 0
+    const kl = (TT, kT) => {
+        const cT = TT.toString(),
+          lT = kT.toString();
+        return cT < lT ? -1 : cT > lT ? 1 : 0
       },
-      zh = {
-        get: (vv, zv) => "symbol" === typeof zv || isNaN(zv) ? Reflect.get(vv, zv) : vv.items[zv],
-        set: (vv, zv, Pv) => {
-          if ("symbol" !== typeof zv && !isNaN(zv)) {
-            if (void 0 === Pv || null === Pv) vv.$deleteAt(zv);
+      cl = {
+        get: (TT, kT) => "symbol" === typeof kT || isNaN(kT) ? Reflect.get(TT, kT) : TT.items[kT],
+        set: (TT, kT, cT) => {
+          if ("symbol" !== typeof kT && !isNaN(kT)) {
+            if (void 0 === cT || null === cT) TT.$deleteAt(kT);
             else {
-              let hv;
-              if (Pv[sv]) {
-                uP(Pv, vv[Cv], vv, zv);
-                const ev = vv.items[zv];
-                vv.isMovingItems ? (hv = vv.$wireIndex(Number(zv)), void 0 !== ev ? Pv[sv].isNew ? vv[sv].indexedOperation(hv, Sv.MOVE_AND_ADD) : (vv[sv].getChange(hv) & Sv.DELETE) === Sv.DELETE ? vv[sv].indexedOperation(hv, Sv.DELETE_AND_MOVE) : vv[sv].indexedOperation(hv, Sv.MOVE) : Pv[sv].isNew && vv[sv].indexedOperation(hv, Sv.ADD), Pv[sv].setParent(vv, vv[sv].root, hv)) : hv = vv.$changeAt(Number(zv), Pv), void 0 !== ev && ev[sv].root?.remove(ev[sv])
-              } else hv = vv.$changeAt(Number(zv), Pv);
-              vv.items[zv] = Pv, void 0 !== hv && (vv.tmpItems[hv] = Pv)
+              let lT;
+              if (cT[tT]) {
+                Tl(cT, TT[hT], TT, kT);
+                const KT = TT.items[kT];
+                TT.isMovingItems ? (lT = TT.$wireIndex(Number(kT)), void 0 !== KT ? cT[tT].isNew ? TT[tT].indexedOperation(lT, MT.MOVE_AND_ADD) : (TT[tT].getChange(lT) & MT.DELETE) === MT.DELETE ? TT[tT].indexedOperation(lT, MT.DELETE_AND_MOVE) : TT[tT].indexedOperation(lT, MT.MOVE) : cT[tT].isNew && TT[tT].indexedOperation(lT, MT.ADD), cT[tT].setParent(TT, TT[tT].root, lT)) : lT = TT.$changeAt(Number(kT), cT), void 0 !== KT && KT[tT].root?.remove(KT[tT])
+              } else lT = TT.$changeAt(Number(kT), cT);
+              TT.items[kT] = cT, void 0 !== lT && (TT.tmpItems[lT] = cT)
             }
             return !0
           }
-          return Reflect.set(vv, zv, Pv)
+          return Reflect.set(TT, kT, cT)
         },
-        deleteProperty: (vv, zv) => ("number" === typeof zv ? vv.$deleteAt(zv) : delete vv[zv], !0),
-        has: (vv, zv) => "symbol" === typeof zv || isNaN(Number(zv)) ? Reflect.has(vv, zv) : Reflect.has(vv.items, zv)
+        deleteProperty: (TT, kT) => ("number" === typeof kT ? TT.$deleteAt(kT) : delete TT[kT], !0),
+        has: (TT, kT) => "symbol" === typeof kT || isNaN(Number(kT)) ? Reflect.has(TT, kT) : Reflect.has(TT.items, kT)
       };
-    class Ph {
-      [sv];
-      [pv];
-      [iv];
-      [Cv];
+    class ll {
+      [tT];
+      [yT];
+      [NT];
+      [hT];
       items = [];
       tmpItems = [];
       deletedIndexes = [];
       isMovingItems = !1;
       _needsCompaction = !1;
-      static[Nv] = ZP;
-      static[lv] = kP;
-      static COLLECTION_KIND = yP;
-      static[Tv](vv, zv, Pv) {
-        if (!Pv) return !0;
-        const hv = vv[iv] ?? vv;
-        return "string" === typeof hv[Cv] || Pv.isChangeTreeVisible(hv.tmpItems[zv]?.[sv])
+      static[xT] = Xc;
+      static[IT] = qc;
+      static COLLECTION_KIND = Uc;
+      static[AT](TT, kT, cT) {
+        if (!cT) return !0;
+        const lT = TT[NT] ?? TT;
+        return "string" === typeof lT[hT] || cT.isChangeTreeVisible(lT.tmpItems[kT]?.[tT])
       }
-      static is(vv) {
-        return Array.isArray(vv) || void 0 !== vv.array
+      static is(TT) {
+        return Array.isArray(TT) || void 0 !== TT.array
       }
-      static from(vv) {
-        return new Ph(...Array.from(vv))
+      static from(TT) {
+        return new ll(...Array.from(TT))
       }
       constructor() {
-        this[Cv] = void 0, this[iv] = this;
-        const vv = new Proxy(this, zh);
-        return Object.defineProperty(this, sv, {
-          value: new VP(vv, this),
+        this[hT] = void 0, this[NT] = this;
+        const TT = new Proxy(this, cl);
+        return Object.defineProperty(this, tT, {
+          value: new oc(TT, this),
           enumerable: !1,
           writable: !0
-        }), arguments.length > 0 && this.push(...arguments), vv
+        }), arguments.length > 0 && this.push(...arguments), TT
       }
       static initializeForDecoder() {
-        const vv = Object.create(Ph.prototype);
-        vv.items = [], vv.isMovingItems = !1, vv._needsCompaction = !1, vv[Cv] = void 0, vv[iv] = vv;
-        const zv = new Proxy(vv, zh);
-        return RP(vv, zv), zv
+        const TT = Object.create(ll.prototype);
+        TT.items = [], TT.isMovingItems = !1, TT._needsCompaction = !1, TT[hT] = void 0, TT[NT] = TT;
+        const kT = new Proxy(TT, cl);
+        return ec(TT, kT), kT
       }
-      set length(vv) {
-        0 === vv ? this.clear() : vv < this.items.length ? this.splice(vv, this.length - vv) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
+      set length(TT) {
+        0 === TT ? this.clear() : TT < this.items.length ? this.splice(TT, this.length - TT) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
       }
       get length() {
         return this.items.length
       }
       pauseTracking() {
-        this[sv].pause()
+        this[tT].pause()
       }
       resumeTracking() {
-        this[sv].resume()
+        this[tT].resume()
       }
-      untracked(vv) {
-        return this[sv].untracked(vv)
+      untracked(TT) {
+        return this[tT].untracked(TT)
       }
       get isTrackingPaused() {
-        return this[sv].paused
+        return this[tT].paused
       }
       push() {
-        const vv = this[iv],
-          zv = vv.items,
-          Pv = vv.tmpItems,
-          hv = vv[sv],
-          ev = vv[Cv];
-        let gv = Pv.length;
-        for (let pv = 0, dv = arguments.length; pv < dv; pv++, gv++) {
-          const dv = pv < 0 || arguments.length <= pv ? void 0 : arguments[pv];
-          if (void 0 === dv || null === dv) return;
-          "object" === typeof dv && ev && uP(dv, ev, vv, pv), hv.indexedOperation(gv, Sv.ADD), zv.push(dv), Pv.push(dv), dv[sv]?.setParent(this, hv.root, gv)
+        const TT = this[NT],
+          kT = TT.items,
+          cT = TT.tmpItems,
+          lT = TT[tT],
+          KT = TT[hT];
+        let OT = cT.length;
+        for (let yT = 0, fT = arguments.length; yT < fT; yT++, OT++) {
+          const fT = yT < 0 || arguments.length <= yT ? void 0 : arguments[yT];
+          if (void 0 === fT || null === fT) return;
+          "object" === typeof fT && KT && Tl(fT, KT, TT, yT), lT.indexedOperation(OT, MT.ADD), kT.push(fT), cT.push(fT), fT[tT]?.setParent(this, lT.root, OT)
         }
-        return gv
+        return OT
       }
       pop() {
-        const vv = this[iv],
-          zv = vv.tmpItems,
-          Pv = vv.deletedIndexes;
-        let hv = -1;
-        for (let ev = zv.length - 1; ev >= 0; ev--)
-          if (!0 !== Pv[ev]) {
-            hv = ev;
+        const TT = this[NT],
+          kT = TT.tmpItems,
+          cT = TT.deletedIndexes;
+        let lT = -1;
+        for (let KT = kT.length - 1; KT >= 0; KT--)
+          if (!0 !== cT[KT]) {
+            lT = KT;
             break
-          } if (hv < 0) return;
-        const Sv = vv.$isUnsentAdd(hv);
-        return vv[sv].delete(hv), Sv ? vv.$cancelAdd(hv) : Pv[hv] = !0, vv.items.pop()
+          } if (lT < 0) return;
+        const MT = TT.$isUnsentAdd(lT);
+        return TT[tT].delete(lT), MT ? TT.$cancelAdd(lT) : cT[lT] = !0, TT.items.pop()
       }
-      at(vv) {
-        return vv < 0 && (vv += this.length), this.items[vv]
+      at(TT) {
+        return TT < 0 && (TT += this.length), this.items[TT]
       }
-      $wireIndex(vv) {
-        const zv = this.deletedIndexes;
-        if (0 === zv.length) return vv;
-        const Pv = this.tmpItems;
-        let hv = 0;
-        for (let Sv = 0; Sv < Pv.length; Sv++)
-          if (!0 !== zv[Sv]) {
-            if (hv === vv) return Sv;
-            hv++
-          } return Pv.length + (vv - hv)
+      $wireIndex(TT) {
+        const kT = this.deletedIndexes;
+        if (0 === kT.length) return TT;
+        const cT = this.tmpItems;
+        let lT = 0;
+        for (let MT = 0; MT < cT.length; MT++)
+          if (!0 !== kT[MT]) {
+            if (lT === TT) return MT;
+            lT++
+          } return cT.length + (TT - lT)
       }
-      $isUnsentAdd(vv) {
-        const zv = this[sv];
-        return 0 === (576 & zv.flags) && !zv.paused && "string" !== typeof this[Cv] && zv.operationAt(vv) === Sv.ADD
+      $isUnsentAdd(TT) {
+        const kT = this[tT];
+        return 0 === (576 & kT.flags) && !kT.paused && "string" !== typeof this[hT] && kT.operationAt(TT) === MT.ADD
       }
-      $cancelAdd(vv) {
-        let zv = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const Pv = this[sv],
-          hv = this.tmpItems[vv];
-        this.tmpItems.splice(vv, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(vv, 1), Pv.removeAt(vv, 1);
-        const Sv = hv?.[sv];
-        void 0 !== Sv && void 0 === Sv.root && Sv.removeParent(this), zv && this.$reindexChildren(vv)
+      $cancelAdd(TT) {
+        let kT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const cT = this[tT],
+          lT = this.tmpItems[TT];
+        this.tmpItems.splice(TT, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(TT, 1), cT.removeAt(TT, 1);
+        const MT = lT?.[tT];
+        void 0 !== MT && void 0 === MT.root && MT.removeParent(this), kT && this.$reindexChildren(TT)
       }
-      $reindexChildren(vv, zv) {
-        if (!this[sv].hasFilteredFields) return;
-        if ("string" === typeof this[Cv]) return;
-        const Pv = this.tmpItems,
-          hv = Pv.length;
-        if (void 0 !== zv)
-          for (; vv < hv && Pv[vv] === zv[vv];) vv++;
-        for (let Sv = vv; Sv < hv; Sv++) Pv[Sv]?.[sv]?.setParentIndex(this, Sv)
+      $reindexChildren(TT, kT) {
+        if (!this[tT].hasFilteredFields) return;
+        if ("string" === typeof this[hT]) return;
+        const cT = this.tmpItems,
+          lT = cT.length;
+        if (void 0 !== kT)
+          for (; TT < lT && cT[TT] === kT[TT];) TT++;
+        for (let MT = TT; MT < lT; MT++) cT[MT]?.[tT]?.setParentIndex(this, MT)
       }
-      $changeAt(vv, zv) {
-        if (void 0 === zv || null === zv) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
-        if (this.items[vv] === zv) return;
-        const Pv = void 0 !== this.items[vv] ? "object" === typeof zv ? Sv.DELETE_AND_ADD : Sv.REPLACE : Sv.ADD,
-          hv = this.$wireIndex(vv),
-          ev = this[sv];
-        return ev.change(hv, Pv), zv[sv]?.setParent(this, ev.root, hv), hv
+      $changeAt(TT, kT) {
+        if (void 0 === kT || null === kT) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
+        if (this.items[TT] === kT) return;
+        const cT = void 0 !== this.items[TT] ? "object" === typeof kT ? MT.DELETE_AND_ADD : MT.REPLACE : MT.ADD,
+          lT = this.$wireIndex(TT),
+          KT = this[tT];
+        return KT.change(lT, cT), kT[tT]?.setParent(this, KT.root, lT), lT
       }
-      $deleteAt(vv, zv) {
-        this[sv].delete(this.$wireIndex(vv), zv)
+      $deleteAt(TT, kT) {
+        this[tT].delete(this.$wireIndex(TT), kT)
       }
-      $setAt(vv, zv, Pv) {
-        Pv === Sv.ADD && void 0 !== this.items[vv] ? this.items.splice(vv, 0, zv) : Pv === Sv.DELETE_AND_MOVE ? (this.items.splice(vv, 1), this.items[vv] = zv) : (vv > this.items.length && (this._needsCompaction = !0), this.items[vv] = zv)
+      $setAt(TT, kT, cT) {
+        cT === MT.ADD && void 0 !== this.items[TT] ? this.items.splice(TT, 0, kT) : cT === MT.DELETE_AND_MOVE ? (this.items.splice(TT, 1), this.items[TT] = kT) : (TT > this.items.length && (this._needsCompaction = !0), this.items[TT] = kT)
       }
       clear() {
-        const vv = this[iv];
-        if (0 === vv.items.length) return;
-        const zv = vv[sv];
-        zv.forEachChild(((vv, Pv) => {
-          zv.root?.remove(vv)
-        })), zv.discard(), zv.operation(Sv.CLEAR), vv.items.length = 0, vv.tmpItems.length = 0
-      } [Gv]() {
-        const vv = this[iv] ?? this,
-          zv = vv[sv];
-        if (zv.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
-        const Pv = vv.items;
-        for (let hv = 0; hv < Pv.length; hv++) Pv[hv]?.[Gv]?.();
-        vv.items.length = 0, vv.tmpItems.length = 0, vv.deletedIndexes.length = 0, zv.recycle(), vv[pv] = void 0
+        const TT = this[NT];
+        if (0 === TT.items.length) return;
+        const kT = TT[tT];
+        kT.forEachChild(((TT, cT) => {
+          kT.root?.remove(TT)
+        })), kT.discard(), kT.operation(MT.CLEAR), TT.items.length = 0, TT.tmpItems.length = 0
+      } [ST]() {
+        const TT = this[NT] ?? this,
+          kT = TT[tT];
+        if (kT.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
+        const cT = TT.items;
+        for (let lT = 0; lT < cT.length; lT++) cT[lT]?.[ST]?.();
+        TT.items.length = 0, TT.tmpItems.length = 0, TT.deletedIndexes.length = 0, kT.recycle(), TT[yT] = void 0
       }
       concat() {
-        return new Ph(...this.items.concat(...arguments))
+        return new ll(...this.items.concat(...arguments))
       }
-      join(vv) {
-        return this.items.join(vv)
+      join(TT) {
+        return this.items.join(TT)
       }
       reverse() {
-        const vv = this[iv],
-          zv = vv[sv];
-        if (zv.has() || vv.deletedIndexes.length > 0) {
-          const zv = vv.items.slice().reverse();
-          return this.clear(), this.push(...zv), this
+        const TT = this[NT],
+          kT = TT[tT];
+        if (kT.has() || TT.deletedIndexes.length > 0) {
+          const kT = TT.items.slice().reverse();
+          return this.clear(), this.push(...kT), this
         }
-        return zv.operation(Sv.REVERSE), vv.items.reverse(), vv.tmpItems.reverse(), vv.$reindexChildren(0), this
+        return kT.operation(MT.REVERSE), TT.items.reverse(), TT.tmpItems.reverse(), TT.$reindexChildren(0), this
       }
       shift() {
-        const vv = this[iv],
-          zv = vv.items;
-        if (0 === zv.length) return;
-        const Pv = vv[sv],
-          hv = vv.deletedIndexes;
-        let ev = 0;
-        for (; !0 === hv[ev];) ev++;
-        const gv = vv.$isUnsentAdd(ev);
-        return Pv.delete(ev, Sv.DELETE), gv ? vv.$cancelAdd(ev) : hv[ev] = !0, zv.shift()
+        const TT = this[NT],
+          kT = TT.items;
+        if (0 === kT.length) return;
+        const cT = TT[tT],
+          lT = TT.deletedIndexes;
+        let KT = 0;
+        for (; !0 === lT[KT];) KT++;
+        const OT = TT.$isUnsentAdd(KT);
+        return cT.delete(KT, MT.DELETE), OT ? TT.$cancelAdd(KT) : lT[KT] = !0, kT.shift()
       }
-      slice(vv, zv) {
-        const Pv = new Ph;
-        return Pv.push(...this.items.slice(vv, zv)), Pv
+      slice(TT, kT) {
+        const cT = new ll;
+        return cT.push(...this.items.slice(TT, kT)), cT
       }
       sort() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : vh;
-        const zv = this[iv];
-        zv.isMovingItems = !0;
-        const Pv = zv[sv];
-        return zv.items.sort(vv).forEach(((vv, zv) => Pv.change(zv, Sv.REPLACE))), zv.tmpItems.sort(vv), zv.$reindexChildren(0), zv.isMovingItems = !1, this
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : kl;
+        const kT = this[NT];
+        kT.isMovingItems = !0;
+        const cT = kT[tT];
+        return kT.items.sort(TT).forEach(((TT, kT) => cT.change(kT, MT.REPLACE))), kT.tmpItems.sort(TT), kT.$reindexChildren(0), kT.isMovingItems = !1, this
       }
-      splice(vv, zv) {
-        const Pv = this[iv],
-          hv = Pv[sv],
-          ev = Pv.items,
-          gv = Pv.tmpItems,
-          pv = Pv.deletedIndexes,
-          dv = ev.length,
-          Nv = gv.length;
-        for (var lv = arguments.length, Tv = new Array(lv > 2 ? lv - 2 : 0), Wv = 2; Wv < lv; Wv++) Tv[Wv - 2] = arguments[Wv];
-        const wv = Tv.length,
-          av = [];
-        for (let Sv = 0; Sv < Nv; Sv++) !0 !== pv[Sv] && av.push(Sv);
-        let Cv;
-        if (dv > vv) {
-          void 0 === zv && (zv = dv - vv);
-          for (let ev = vv; ev < vv + zv; ev++) {
-            const vv = av[ev],
-              zv = Pv.$isUnsentAdd(vv);
-            hv.delete(vv, Sv.DELETE), zv ? (Cv ??= []).push(vv) : pv[vv] = !0
+      splice(TT, kT) {
+        const cT = this[NT],
+          lT = cT[tT],
+          KT = cT.items,
+          OT = cT.tmpItems,
+          yT = cT.deletedIndexes,
+          fT = KT.length,
+          xT = OT.length;
+        for (var IT = arguments.length, AT = new Array(IT > 2 ? IT - 2 : 0), CT = 2; CT < IT; CT++) AT[CT - 2] = arguments[CT];
+        const jT = AT.length,
+          vT = [];
+        for (let MT = 0; MT < xT; MT++) !0 !== yT[MT] && vT.push(MT);
+        let hT;
+        if (fT > TT) {
+          void 0 === kT && (kT = fT - TT);
+          for (let KT = TT; KT < TT + kT; KT++) {
+            const TT = vT[KT],
+              kT = cT.$isUnsentAdd(TT);
+            lT.delete(TT, MT.DELETE), kT ? (hT ??= []).push(TT) : yT[TT] = !0
           }
-        } else zv = 0;
-        if (wv > 0) {
-          const ev = av[vv] ?? dv,
-            Nv = Math.min(wv, zv);
-          for (let vv = 0; vv < Nv; vv++) {
-            const zv = ev + vv;
-            let Pv;
-            const dv = void 0 !== Cv ? Cv.indexOf(zv) : -1; - 1 !== dv ? (Cv.splice(dv, 1), Pv = Sv.ADD) : Pv = pv[zv] ? Sv.DELETE_AND_ADD : Sv.ADD, hv.indexedOperation(zv, Pv), gv[zv] = Tv[vv], pv[zv] = !1, Tv[vv][sv]?.setParent(this, hv.root, zv)
+        } else kT = 0;
+        if (jT > 0) {
+          const KT = vT[TT] ?? fT,
+            xT = Math.min(jT, kT);
+          for (let TT = 0; TT < xT; TT++) {
+            const kT = KT + TT;
+            let cT;
+            const fT = void 0 !== hT ? hT.indexOf(kT) : -1; - 1 !== fT ? (hT.splice(fT, 1), cT = MT.ADD) : cT = yT[kT] ? MT.DELETE_AND_ADD : MT.ADD, lT.indexedOperation(kT, cT), OT[kT] = AT[TT], yT[kT] = !1, AT[TT][tT]?.setParent(this, lT.root, kT)
           }
-          const lv = wv - Nv;
-          if (lv > 0) {
-            const vv = ev + Nv;
-            hv.insertAt(vv, lv);
-            for (let zv = 0; zv < lv; zv++) Tv[Nv + zv][sv]?.setParent(this, hv.root, vv + zv);
-            pv.length > 0 && pv.splice(vv, 0, ...new Array(lv).fill(!1)), gv.splice(vv, 0, ...Tv.slice(Nv)), Pv.$reindexChildren(vv + lv)
+          const IT = jT - xT;
+          if (IT > 0) {
+            const TT = KT + xT;
+            lT.insertAt(TT, IT);
+            for (let kT = 0; kT < IT; kT++) AT[xT + kT][tT]?.setParent(this, lT.root, TT + kT);
+            yT.length > 0 && yT.splice(TT, 0, ...new Array(IT).fill(!1)), OT.splice(TT, 0, ...AT.slice(xT)), cT.$reindexChildren(TT + IT)
           }
         }
-        if (void 0 !== Cv && Cv.length > 0) {
-          for (let vv = Cv.length - 1; vv >= 0; vv--) Pv.$cancelAdd(Cv[vv], !1);
-          Pv.$reindexChildren(Cv[0])
+        if (void 0 !== hT && hT.length > 0) {
+          for (let TT = hT.length - 1; TT >= 0; TT--) cT.$cancelAdd(hT[TT], !1);
+          cT.$reindexChildren(hT[0])
         }
-        return hv.root?.enqueueChangeTree(hv), ev.splice(vv, zv, ...Tv)
+        return lT.root?.enqueueChangeTree(lT), KT.splice(TT, kT, ...AT)
       }
       unshift() {
-        const vv = this[iv],
-          zv = vv[sv];
-        zv.unshift(arguments.length);
-        for (let hv = 0; hv < arguments.length; hv++)(hv < 0 || arguments.length <= hv ? void 0 : arguments[hv])?.[sv]?.setParent(this, zv.root, hv);
-        const Pv = vv.deletedIndexes;
-        return Pv.length > 0 && Pv.unshift(...new Array(arguments.length).fill(!1)), vv.tmpItems.unshift(...arguments), vv.$reindexChildren(arguments.length), vv.items.unshift(...arguments)
+        const TT = this[NT],
+          kT = TT[tT];
+        kT.unshift(arguments.length);
+        for (let lT = 0; lT < arguments.length; lT++)(lT < 0 || arguments.length <= lT ? void 0 : arguments[lT])?.[tT]?.setParent(this, kT.root, lT);
+        const cT = TT.deletedIndexes;
+        return cT.length > 0 && cT.unshift(...new Array(arguments.length).fill(!1)), TT.tmpItems.unshift(...arguments), TT.$reindexChildren(arguments.length), TT.items.unshift(...arguments)
       }
-      indexOf(vv, zv) {
-        return this.items.indexOf(vv, zv)
+      indexOf(TT, kT) {
+        return this.items.indexOf(TT, kT)
       }
-      lastIndexOf(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
-        return this.items.lastIndexOf(vv, zv)
+      lastIndexOf(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
+        return this.items.lastIndexOf(TT, kT)
       }
-      every(vv, zv) {
-        return this.items.every(vv, zv)
+      every(TT, kT) {
+        return this.items.every(TT, kT)
       }
-      some(vv, zv) {
-        return this.items.some(vv, zv)
+      some(TT, kT) {
+        return this.items.some(TT, kT)
       }
-      forEach(vv, zv) {
-        return this.items.forEach(vv, zv)
+      forEach(TT, kT) {
+        return this.items.forEach(TT, kT)
       }
-      map(vv, zv) {
-        return this.items.map(vv, zv)
+      map(TT, kT) {
+        return this.items.map(TT, kT)
       }
-      filter(vv, zv) {
-        return this.items.filter(vv, zv)
+      filter(TT, kT) {
+        return this.items.filter(TT, kT)
       }
-      reduce(vv, zv) {
+      reduce(TT, kT) {
         return this.items.reduce.apply(this.items, arguments)
       }
-      reduceRight(vv, zv) {
+      reduceRight(TT, kT) {
         return this.items.reduceRight.apply(this.items, arguments)
       }
-      find(vv, zv) {
-        return this.items.find(vv, zv)
+      find(TT, kT) {
+        return this.items.find(TT, kT)
       }
-      findIndex(vv, zv) {
-        return this.items.findIndex(vv, zv)
+      findIndex(TT, kT) {
+        return this.items.findIndex(TT, kT)
       }
-      fill(vv, zv, Pv) {
+      fill(TT, kT, cT) {
         throw new Error("ArraySchema#fill() not implemented")
       }
-      copyWithin(vv, zv, Pv) {
+      copyWithin(TT, kT, cT) {
         throw new Error("ArraySchema#copyWithin() not implemented")
       }
       toString() {
@@ -4349,7 +4349,7 @@ export const modules = {
         return this.items[Symbol.iterator]()
       }
       static get[Symbol.species]() {
-        return Ph
+        return ll
       } [Symbol.unscopables];
       entries() {
         return this.items.entries()
@@ -4360,118 +4360,118 @@ export const modules = {
       values() {
         return this.items.values()
       }
-      includes(vv, zv) {
-        return this.items.includes(vv, zv)
+      includes(TT, kT) {
+        return this.items.includes(TT, kT)
       }
-      flatMap(vv, zv) {
+      flatMap(TT, kT) {
         throw new Error("ArraySchema#flatMap() is not supported.")
       }
-      flat(vv) {
+      flat(TT) {
         throw new Error("ArraySchema#flat() is not supported.")
       }
       findLast() {
         return this.items.findLast.apply(this.items, arguments)
       }
       findLastIndex() {
-        for (var vv = arguments.length, zv = new Array(vv), Pv = 0; Pv < vv; Pv++) zv[Pv] = arguments[Pv];
+        for (var TT = arguments.length, kT = new Array(TT), cT = 0; cT < TT; cT++) kT[cT] = arguments[cT];
         return this.items.findLastIndex.apply(this.items, arguments)
       }
-      with(vv, zv) {
-        const Pv = this.items.slice();
-        return vv < 0 && (vv += this.length), Pv[vv] = zv, new Ph(...Pv)
+      with(TT, kT) {
+        const cT = this.items.slice();
+        return TT < 0 && (TT += this.length), cT[TT] = kT, new ll(...cT)
       }
       toReversed() {
         return this.items.slice().reverse()
       }
-      toSorted(vv) {
-        return this.items.slice().sort(vv)
+      toSorted(TT) {
+        return this.items.slice().sort(TT)
       }
-      toSpliced(vv, zv) {
-        for (var Pv = arguments.length, hv = new Array(Pv > 2 ? Pv - 2 : 0), Sv = 2; Sv < Pv; Sv++) hv[Sv - 2] = arguments[Sv];
-        const ev = this.items.slice();
-        return ev.splice.apply(ev, arguments), ev
+      toSpliced(TT, kT) {
+        for (var cT = arguments.length, lT = new Array(cT > 2 ? cT - 2 : 0), MT = 2; MT < cT; MT++) lT[MT - 2] = arguments[MT];
+        const KT = this.items.slice();
+        return KT.splice.apply(KT, arguments), KT
       }
       shuffle() {
-        return this.move((vv => {
-          let zv = this.items.length;
-          for (; 0 != zv;) {
-            let vv = Math.floor(Math.random() * zv);
-            zv--, [this[zv], this[vv]] = [this[vv], this[zv]]
+        return this.move((TT => {
+          let kT = this.items.length;
+          for (; 0 != kT;) {
+            let TT = Math.floor(Math.random() * kT);
+            kT--, [this[kT], this[TT]] = [this[TT], this[kT]]
           }
         }))
       }
-      move(vv) {
-        return this.isMovingItems = !0, vv(this), this.isMovingItems = !1, this
-      } [Wv](vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const Pv = this[iv] ?? this;
-        return zv || Pv.deletedIndexes[vv] ? Pv.items[vv] : Pv.tmpItems[vv] || Pv.items[vv]
-      } [wv](vv) {
-        const zv = this[iv] ?? this;
-        zv.items[vv] = void 0, zv._needsCompaction = !0
-      } [cv]() {
-        const vv = this.tmpItems;
-        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, vv), this.deletedIndexes.length = 0)
-      } [mv]() {
-        const vv = this[iv] ?? this;
-        vv._needsCompaction && (vv._needsCompaction = !1, vv.items = vv.items.filter((vv => void 0 !== vv)))
-      } [av](vv, zv, Pv) {
-        const hv = this[iv] ?? this,
-          Sv = hv.items;
-        let ev = !1;
-        for (let gv = 0; gv < Sv.length; gv++) {
-          const pv = Sv[gv];
-          vv.has(gv) ? Pv(pv) : (ev = !0, zv(pv, gv), hv[wv](gv))
+      move(TT) {
+        return this.isMovingItems = !0, TT(this), this.isMovingItems = !1, this
+      } [CT](TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const cT = this[NT] ?? this;
+        return kT || cT.deletedIndexes[TT] ? cT.items[TT] : cT.tmpItems[TT] || cT.items[TT]
+      } [jT](TT) {
+        const kT = this[NT] ?? this;
+        kT.items[TT] = void 0, kT._needsCompaction = !0
+      } [QT]() {
+        const TT = this.tmpItems;
+        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, TT), this.deletedIndexes.length = 0)
+      } [DT]() {
+        const TT = this[NT] ?? this;
+        TT._needsCompaction && (TT._needsCompaction = !1, TT.items = TT.items.filter((TT => void 0 !== TT)))
+      } [vT](TT, kT, cT) {
+        const lT = this[NT] ?? this,
+          MT = lT.items;
+        let KT = !1;
+        for (let OT = 0; OT < MT.length; OT++) {
+          const yT = MT[OT];
+          TT.has(OT) ? cT(yT) : (KT = !0, kT(yT, OT), lT[jT](OT))
         }
-        ev && hv[mv]()
+        KT && lT[DT]()
       }
       toArray() {
         return this.items.slice(0)
       }
       toJSON() {
-        return this.toArray().map((vv => "function" === typeof vv.toJSON ? vv.toJSON() : vv))
+        return this.toArray().map((TT => "function" === typeof TT.toJSON ? TT.toJSON() : TT))
       }
-      clone(vv) {
-        let zv;
-        return vv ? (zv = new Ph, zv.push(...this.items)) : zv = new Ph(...this.map((vv => vv[sv] ? vv.clone() : vv))), zv
+      clone(TT) {
+        let kT;
+        return TT ? (kT = new ll, kT.push(...this.items)) : kT = new ll(...this.map((TT => TT[tT] ? TT.clone() : TT))), kT
       }
     }
-    fz("array", {
-      constructor: Ph
+    Fk("array", {
+      constructor: ll
     });
-    class hh {
+    class Ml {
       keyByIndex = new Map;
       indexByKey = Object.create(null);
       nextIndex = 0;
       snapshots;
-      indexOf(vv) {
-        const zv = this.indexByKey[vv];
-        return void 0 === zv ? void 0 : zv
+      indexOf(TT) {
+        const kT = this.indexByKey[TT];
+        return void 0 === kT ? void 0 : kT
       }
-      assign(vv) {
-        const zv = this.nextIndex++;
-        return this.indexByKey[vv] = zv, this.keyByIndex.set(zv, vv), zv
+      assign(TT) {
+        const kT = this.nextIndex++;
+        return this.indexByKey[TT] = kT, this.keyByIndex.set(kT, TT), kT
       }
-      snapshot(vv, zv) {
-        (this.snapshots ??= new Map).set(vv, zv)
+      snapshot(TT, kT) {
+        (this.snapshots ??= new Map).set(TT, kT)
       }
-      forgetSnapshot(vv) {
-        this.snapshots?.delete(vv)
+      forgetSnapshot(TT) {
+        this.snapshots?.delete(TT)
       }
-      snapshotAt(vv) {
-        return this.snapshots?.get(vv)
+      snapshotAt(TT) {
+        return this.snapshots?.get(TT)
       }
-      setIndex(vv, zv) {
-        this.keyByIndex.set(vv, zv), this.indexByKey[zv] = vv
+      setIndex(TT, kT) {
+        this.keyByIndex.set(TT, kT), this.indexByKey[kT] = TT
       }
-      keyOf(vv) {
-        return this.keyByIndex.get(vv)
+      keyOf(TT) {
+        return this.keyByIndex.get(TT)
       }
       cleanupAfterEncode() {
         if (void 0 !== this.snapshots) {
-          for (const [vv] of this.snapshots) {
-            const zv = this.keyByIndex.get(vv);
-            void 0 !== zv && (delete this.indexByKey[zv], this.keyByIndex.delete(vv))
+          for (const [TT] of this.snapshots) {
+            const kT = this.keyByIndex.get(TT);
+            void 0 !== kT && (delete this.indexByKey[kT], this.keyByIndex.delete(TT))
           }
           this.snapshots.clear()
         }
@@ -4480,25 +4480,25 @@ export const modules = {
         this.indexByKey = Object.create(null), this.keyByIndex.clear(), this.snapshots?.clear(), this.nextIndex = 0
       }
     }
-    class Sh {
-      [sv];
-      [pv];
+    class Kl {
+      [tT];
+      [yT];
       childType;
-      [Cv];
+      [hT];
       $items = new Map;
-      journal = new hh;
+      journal = new Ml;
       _stream;
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(vv) {
-        (this._stream ??= nz()).maxPerTick = vv
+      set maxPerTick(TT) {
+        (this._stream ??= wk()).maxPerTick = TT
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(vv) {
-        (this._stream ??= nz()).priority = vv
+      set priority(TT) {
+        (this._stream ??= wk()).priority = TT
       }
       get $indexes() {
         return this.journal.keyByIndex
@@ -4506,30 +4506,30 @@ export const modules = {
       get _collectionIndexes() {
         return this.journal.indexByKey
       }
-      static[Nv] = qP;
-      static[lv] = rP;
-      static COLLECTION_KIND = MP;
-      static[Tv](vv, zv, Pv) {
-        if (!Pv || "string" === typeof vv[Cv]) return !0;
-        const hv = vv[Wv](zv) ?? vv.journal.snapshotAt(zv);
-        return Pv.isChangeTreeVisible(hv[sv])
+      static[xT] = Ec;
+      static[IT] = ic;
+      static COLLECTION_KIND = gc;
+      static[AT](TT, kT, cT) {
+        if (!cT || "string" === typeof TT[hT]) return !0;
+        const lT = TT[CT](kT) ?? TT.journal.snapshotAt(kT);
+        return cT.isChangeTreeVisible(lT[tT])
       }
-      static is(vv) {
-        return void 0 !== vv.map
+      static is(TT) {
+        return void 0 !== TT.map
       }
-      constructor(vv) {
-        if (Object.defineProperty(this, sv, {
-            value: new VP(this),
+      constructor(TT) {
+        if (Object.defineProperty(this, tT, {
+            value: new oc(this),
             enumerable: !1,
             writable: !0
-          }), this[Cv] = void 0, vv)
-          if (vv instanceof Map || vv instanceof Sh) vv.forEach(((vv, zv) => this.set(zv, vv)));
+          }), this[hT] = void 0, TT)
+          if (TT instanceof Map || TT instanceof Kl) TT.forEach(((TT, kT) => this.set(kT, TT)));
           else
-            for (const zv in vv) this.set(zv, vv[zv])
+            for (const kT in TT) this.set(kT, TT[kT])
       }
       static initializeForDecoder() {
-        const vv = Object.create(Sh.prototype);
-        return vv.$items = new Map, vv.journal = new hh, vv[Cv] = void 0, RP(vv), vv
+        const TT = Object.create(Kl.prototype);
+        return TT.$items = new Map, TT.journal = new Ml, TT[hT] = void 0, ec(TT), TT
       } [Symbol.iterator]() {
         return this.$items[Symbol.iterator]()
       }
@@ -4537,61 +4537,61 @@ export const modules = {
         return this.$items[Symbol.toStringTag]
       }
       static get[Symbol.species]() {
-        return Sh
+        return Kl
       }
-      set(vv, zv) {
-        if (void 0 === zv || null === zv) throw new Error(`MapSchema#set('${vv}', ${zv}): trying to set ${zv} value on '${vv}'.`);
-        "object" === typeof zv && this[Cv] && uP(zv, this[Cv], this, vv), vv = vv.toString();
-        const Pv = this[sv],
-          hv = void 0 !== zv[sv],
-          ev = this.journal;
-        let gv, pv = ev.indexOf(vv);
-        if (void 0 !== pv) {
-          gv = Sv.REPLACE;
-          const Pv = this.$items.get(vv);
-          if (Pv === zv) return;
-          hv && (gv = Sv.DELETE_AND_ADD, void 0 !== Pv && Pv[sv].root?.remove(Pv[sv])), void 0 !== ev.snapshotAt(pv) && ev.forgetSnapshot(pv)
-        } else pv = ev.assign(vv), gv = Sv.ADD;
-        return this.$items.set(vv, zv), gv === Sv.ADD && Pv.isStreamCollection ? void 0 !== Pv.root && Dz(this, Pv.root, pv) : Pv.change(pv, gv), hv && zv[sv].setParent(this, Pv.root, pv), this
+      set(TT, kT) {
+        if (void 0 === kT || null === kT) throw new Error(`MapSchema#set('${TT}', ${kT}): trying to set ${kT} value on '${TT}'.`);
+        "object" === typeof kT && this[hT] && Tl(kT, this[hT], this, TT), TT = TT.toString();
+        const cT = this[tT],
+          lT = void 0 !== kT[tT],
+          KT = this.journal;
+        let OT, yT = KT.indexOf(TT);
+        if (void 0 !== yT) {
+          OT = MT.REPLACE;
+          const cT = this.$items.get(TT);
+          if (cT === kT) return;
+          lT && (OT = MT.DELETE_AND_ADD, void 0 !== cT && cT[tT].root?.remove(cT[tT])), void 0 !== KT.snapshotAt(yT) && KT.forgetSnapshot(yT)
+        } else yT = KT.assign(TT), OT = MT.ADD;
+        return this.$items.set(TT, kT), OT === MT.ADD && cT.isStreamCollection ? void 0 !== cT.root && bk(this, cT.root, yT) : cT.change(yT, OT), lT && kT[tT].setParent(this, cT.root, yT), this
       }
-      get(vv) {
-        return this.$items.get(vv)
+      get(TT) {
+        return this.$items.get(TT)
       }
-      getOrInsert(vv, zv) {
-        return this.$items.has(vv) ? this.$items.get(vv) : (this.set(vv, zv), zv)
+      getOrInsert(TT, kT) {
+        return this.$items.has(TT) ? this.$items.get(TT) : (this.set(TT, kT), kT)
       }
-      getOrInsertComputed(vv, zv) {
-        if (this.$items.has(vv)) return this.$items.get(vv);
-        const Pv = zv(vv);
-        return this.set(vv, Pv), Pv
+      getOrInsertComputed(TT, kT) {
+        if (this.$items.has(TT)) return this.$items.get(TT);
+        const cT = kT(TT);
+        return this.set(TT, cT), cT
       }
-      delete(vv) {
-        if (!this.$items.has(vv)) return !1;
-        const zv = this.journal.indexOf(vv),
-          Pv = this.$items.get(vv),
-          hv = this[sv];
-        if (hv.isStreamCollection) {
-          const Sv = hv.root;
-          let ev = !1;
-          return void 0 !== Sv && (ev = Kz(this, Sv, this[pv], zv)), void 0 !== Pv?.[sv] && Sv?.remove(Pv[sv]), this.$items.delete(vv), ev || this.journal.snapshot(zv, Pv), !0
+      delete(TT) {
+        if (!this.$items.has(TT)) return !1;
+        const kT = this.journal.indexOf(TT),
+          cT = this.$items.get(TT),
+          lT = this[tT];
+        if (lT.isStreamCollection) {
+          const MT = lT.root;
+          let KT = !1;
+          return void 0 !== MT && (KT = zk(this, MT, this[yT], kT)), void 0 !== cT?.[tT] && MT?.remove(cT[tT]), this.$items.delete(TT), KT || this.journal.snapshot(kT, cT), !0
         }
-        return this.journal.snapshot(zv, Pv), hv.delete(zv), this.$items.delete(vv)
+        return this.journal.snapshot(kT, cT), lT.delete(kT), this.$items.delete(TT)
       }
       clear() {
-        const vv = this[sv];
-        vv.discard(), vv.forEachChild(((zv, Pv) => {
-          vv.root?.remove(zv)
-        })), this.journal.reset(), this.$items.clear(), vv.operation(Sv.CLEAR)
-      } [Gv]() {
-        const vv = this[sv];
-        if (vv.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
-        this.$items.forEach((vv => vv?.[Gv]?.())), this.$items.clear(), this.journal.reset(), vv.recycle(), this[pv] = void 0
+        const TT = this[tT];
+        TT.discard(), TT.forEachChild(((kT, cT) => {
+          TT.root?.remove(kT)
+        })), this.journal.reset(), this.$items.clear(), TT.operation(MT.CLEAR)
+      } [ST]() {
+        const TT = this[tT];
+        if (TT.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
+        this.$items.forEach((TT => TT?.[ST]?.())), this.$items.clear(), this.journal.reset(), TT.recycle(), this[yT] = void 0
       }
-      has(vv) {
-        return this.$items.has(vv)
+      has(TT) {
+        return this.$items.has(TT)
       }
-      forEach(vv) {
-        this.$items.forEach(vv)
+      forEach(TT) {
+        this.$items.forEach(TT)
       }
       entries() {
         return this.$items.entries()
@@ -4606,69 +4606,69 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[sv].pause()
+        this[tT].pause()
       }
       resumeTracking() {
-        this[sv].resume()
+        this[tT].resume()
       }
-      untracked(vv) {
-        return this[sv].untracked(vv)
+      untracked(TT) {
+        return this[tT].untracked(TT)
       }
       get isTrackingPaused() {
-        return this[sv].paused
+        return this[tT].paused
       }
-      setIndex(vv, zv) {
-        this.journal.setIndex(vv, zv)
+      setIndex(TT, kT) {
+        this.journal.setIndex(TT, kT)
       }
-      getIndex(vv) {
-        return this.journal.keyOf(vv)
-      } [Wv](vv) {
-        const zv = this.journal.keyOf(vv);
-        return void 0 !== zv ? this.$items.get(zv) : void 0
-      } [wv](vv) {
-        const zv = this.journal.keyOf(vv);
-        void 0 !== zv && (this.$items.delete(zv), this.journal.keyByIndex.delete(vv))
-      } [av](vv, zv, Pv) {
-        let hv = null;
-        if (this.$items.forEach(((Sv, ev) => {
-            vv.has(ev) ? Pv(Sv) : ((hv ??= new Set).add(ev), zv(Sv, ev))
-          })), null !== hv) {
-          hv.forEach((vv => {
-            this.$items.delete(vv), delete this.journal.indexByKey[vv]
+      getIndex(TT) {
+        return this.journal.keyOf(TT)
+      } [CT](TT) {
+        const kT = this.journal.keyOf(TT);
+        return void 0 !== kT ? this.$items.get(kT) : void 0
+      } [jT](TT) {
+        const kT = this.journal.keyOf(TT);
+        void 0 !== kT && (this.$items.delete(kT), this.journal.keyByIndex.delete(TT))
+      } [vT](TT, kT, cT) {
+        let lT = null;
+        if (this.$items.forEach(((MT, KT) => {
+            TT.has(KT) ? cT(MT) : ((lT ??= new Set).add(KT), kT(MT, KT))
+          })), null !== lT) {
+          lT.forEach((TT => {
+            this.$items.delete(TT), delete this.journal.indexByKey[TT]
           }));
-          const vv = [];
-          this.journal.keyByIndex.forEach(((zv, Pv) => {
-            hv.has(zv) && vv.push(Pv)
+          const TT = [];
+          this.journal.keyByIndex.forEach(((kT, cT) => {
+            lT.has(kT) && TT.push(cT)
           }));
-          for (let zv = 0; zv < vv.length; zv++) this.journal.keyByIndex.delete(vv[zv])
+          for (let kT = 0; kT < TT.length; kT++) this.journal.keyByIndex.delete(TT[kT])
         }
-      } [cv]() {
+      } [QT]() {
         this.journal.cleanupAfterEncode()
       }
-      _dropView(vv) {
-        xz(this, vv)
+      _dropView(TT) {
+        Gk(this, TT)
       }
       _unregister() {}
       toJSON() {
-        return Object.fromEntries(Array.from(this, (vv => {
-          let [zv, Pv] = vv;
-          return [zv, "function" === typeof Pv.toJSON ? Pv.toJSON() : Pv]
+        return Object.fromEntries(Array.from(this, (TT => {
+          let [kT, cT] = TT;
+          return [kT, "function" === typeof cT.toJSON ? cT.toJSON() : cT]
         })))
       }
-      clone(vv) {
-        let zv;
-        return vv ? zv = Object.assign(new Sh, this) : (zv = new Sh, this.forEach(((vv, Pv) => {
-          vv[sv] ? zv.set(Pv, vv.clone()) : zv.set(Pv, vv)
-        }))), zv
+      clone(TT) {
+        let kT;
+        return TT ? kT = Object.assign(new Kl, this) : (kT = new Kl, this.forEach(((TT, cT) => {
+          TT[tT] ? kT.set(cT, TT.clone()) : kT.set(cT, TT)
+        }))), kT
       }
     }
-    fz("map", {
-      constructor: Sh
+    Fk("map", {
+      constructor: Kl
     });
-    class eh {
-      [sv];
-      [pv];
-      [Cv];
+    class Ol {
+      [tT];
+      [yT];
+      [hT];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4676,79 +4676,79 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(vv) {
-        (this._stream ??= nz()).maxPerTick = vv
+      set maxPerTick(TT) {
+        (this._stream ??= wk()).maxPerTick = TT
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(vv) {
-        (this._stream ??= nz()).priority = vv
+      set priority(TT) {
+        (this._stream ??= wk()).priority = TT
       }
-      static[Nv] = IP;
-      static[lv] = rP;
-      static COLLECTION_KIND = JP;
-      static[Tv](vv, zv, Pv) {
-        return !Pv || "string" === typeof vv[Cv] || Pv.isChangeTreeVisible((vv[Wv](zv) ?? vv.deletedItems[zv])[sv])
+      static[xT] = Zc;
+      static[IT] = ic;
+      static COLLECTION_KIND = Bc;
+      static[AT](TT, kT, cT) {
+        return !cT || "string" === typeof TT[hT] || cT.isChangeTreeVisible((TT[CT](kT) ?? TT.deletedItems[kT])[tT])
       }
-      static is(vv) {
-        return void 0 !== vv.collection
+      static is(TT) {
+        return void 0 !== TT.collection
       }
-      constructor(vv) {
-        Object.defineProperty(this, sv, {
-          value: new VP(this),
+      constructor(TT) {
+        Object.defineProperty(this, tT, {
+          value: new oc(this),
           enumerable: !1,
           writable: !0
-        }), this[Cv] = void 0, vv && vv.forEach((vv => this.add(vv)))
+        }), this[hT] = void 0, TT && TT.forEach((TT => this.add(TT)))
       }
       static initializeForDecoder() {
-        const vv = Object.create(eh.prototype);
-        return vv.$items = new Map, vv.deletedItems = {}, vv.$refId = 0, vv[Cv] = void 0, RP(vv), vv
+        const TT = Object.create(Ol.prototype);
+        return TT.$items = new Map, TT.deletedItems = {}, TT.$refId = 0, TT[hT] = void 0, ec(TT), TT
       }
-      add(vv) {
-        const zv = this.$refId++,
-          Pv = this[sv];
-        return this.$items.set(zv, vv), Pv.isStreamCollection ? void 0 !== Pv.root && Dz(this, Pv.root, zv) : Pv.change(zv), void 0 !== vv[sv] && vv[sv].setParent(this, Pv.root, zv), zv
+      add(TT) {
+        const kT = this.$refId++,
+          cT = this[tT];
+        return this.$items.set(kT, TT), cT.isStreamCollection ? void 0 !== cT.root && bk(this, cT.root, kT) : cT.change(kT), void 0 !== TT[tT] && TT[tT].setParent(this, cT.root, kT), kT
       }
-      at(vv) {
-        const zv = Array.from(this.$items.keys())[vv];
-        return this.$items.get(zv)
+      at(TT) {
+        const kT = Array.from(this.$items.keys())[TT];
+        return this.$items.get(kT)
       }
       entries() {
         return this.$items.entries()
       }
-      delete(vv) {
-        const zv = this.$items.entries();
-        let Pv, hv;
+      delete(TT) {
+        const kT = this.$items.entries();
+        let cT, lT;
         for (;
-          (hv = zv.next()) && !hv.done;)
-          if (vv === hv.value[1]) {
-            Pv = hv.value[0];
+          (lT = kT.next()) && !lT.done;)
+          if (TT === lT.value[1]) {
+            cT = lT.value[0];
             break
-          } if (void 0 === Pv) return !1;
-        const Sv = this[sv];
-        if (Sv.isStreamCollection) {
-          const vv = Sv.root,
-            zv = this.$items.get(Pv);
-          return void 0 !== vv && Kz(this, vv, this[pv], Pv), void 0 !== zv?.[sv] && vv?.remove(zv[sv]), this.deletedItems[Pv] = zv, this.$items.delete(Pv)
+          } if (void 0 === cT) return !1;
+        const MT = this[tT];
+        if (MT.isStreamCollection) {
+          const TT = MT.root,
+            kT = this.$items.get(cT);
+          return void 0 !== TT && zk(this, TT, this[yT], cT), void 0 !== kT?.[tT] && TT?.remove(kT[tT]), this.deletedItems[cT] = kT, this.$items.delete(cT)
         }
-        return this.deletedItems[Pv] = Sv.delete(Pv), this.$items.delete(Pv)
+        return this.deletedItems[cT] = MT.delete(cT), this.$items.delete(cT)
       }
       clear() {
-        const vv = this[sv];
-        vv.discard(), vv.forEachChild(((zv, Pv) => {
-          vv.root?.remove(zv)
-        })), this.$items.clear(), vv.operation(Sv.CLEAR)
-      } [Gv]() {
-        const vv = this[sv];
-        if (vv.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
-        this.$items.forEach((vv => vv?.[Gv]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, vv.recycle(), this[pv] = void 0
+        const TT = this[tT];
+        TT.discard(), TT.forEachChild(((kT, cT) => {
+          TT.root?.remove(kT)
+        })), this.$items.clear(), TT.operation(MT.CLEAR)
+      } [ST]() {
+        const TT = this[tT];
+        if (TT.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
+        this.$items.forEach((TT => TT?.[ST]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, TT.recycle(), this[yT] = void 0
       }
-      has(vv) {
-        return Array.from(this.$items.values()).some((zv => zv === vv))
+      has(TT) {
+        return Array.from(this.$items.values()).some((kT => kT === TT))
       }
-      forEach(vv) {
-        this.$items.forEach(((zv, Pv, hv) => vv(zv, Pv, this)))
+      forEach(TT) {
+        this.$items.forEach(((kT, cT, lT) => TT(kT, cT, this)))
       }
       values() {
         return this.$items.values()
@@ -4757,62 +4757,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[sv].pause()
+        this[tT].pause()
       }
       resumeTracking() {
-        this[sv].resume()
+        this[tT].resume()
       }
-      untracked(vv) {
-        return this[sv].untracked(vv)
+      untracked(TT) {
+        return this[tT].untracked(TT)
       }
       get isTrackingPaused() {
-        return this[sv].paused
+        return this[tT].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(vv, zv) {}
-      getIndex(vv) {
-        return vv
-      } [Wv](vv) {
-        return this.$items.get(vv)
-      } [wv](vv) {
-        this.$items.delete(vv)
-      } [av](vv, zv, Pv) {
-        let hv = null;
-        if (this.$items.forEach(((Sv, ev) => {
-            vv.has(ev) ? Pv(Sv) : ((hv ??= []).push(ev), zv(Sv, ev))
-          })), null !== hv)
-          for (let Sv = 0; Sv < hv.length; Sv++) this[wv](hv[Sv])
-      } [cv]() {
-        for (const vv in this.deletedItems) delete this.deletedItems[vv]
+      setIndex(TT, kT) {}
+      getIndex(TT) {
+        return TT
+      } [CT](TT) {
+        return this.$items.get(TT)
+      } [jT](TT) {
+        this.$items.delete(TT)
+      } [vT](TT, kT, cT) {
+        let lT = null;
+        if (this.$items.forEach(((MT, KT) => {
+            TT.has(KT) ? cT(MT) : ((lT ??= []).push(KT), kT(MT, KT))
+          })), null !== lT)
+          for (let MT = 0; MT < lT.length; MT++) this[jT](lT[MT])
+      } [QT]() {
+        for (const TT in this.deletedItems) delete this.deletedItems[TT]
       }
-      _dropView(vv) {
-        xz(this, vv)
+      _dropView(TT) {
+        Gk(this, TT)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const vv = [];
-        return this.forEach(((zv, Pv) => {
-          vv.push("function" === typeof zv.toJSON ? zv.toJSON() : zv)
-        })), vv
+        const TT = [];
+        return this.forEach(((kT, cT) => {
+          TT.push("function" === typeof kT.toJSON ? kT.toJSON() : kT)
+        })), TT
       }
-      clone(vv) {
-        let zv;
-        return vv ? zv = Object.assign(new eh, this) : (zv = new eh, this.forEach((vv => {
-          vv[sv] ? zv.add(vv.clone()) : zv.add(vv)
-        }))), zv
+      clone(TT) {
+        let kT;
+        return TT ? kT = Object.assign(new Ol, this) : (kT = new Ol, this.forEach((TT => {
+          TT[tT] ? kT.add(TT.clone()) : kT.add(TT)
+        }))), kT
       }
     }
-    fz("collection", {
-      constructor: eh
+    Fk("collection", {
+      constructor: Ol
     });
-    class gh {
-      [sv];
-      [pv];
-      [Cv];
+    class yl {
+      [tT];
+      [yT];
+      [hT];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4820,81 +4820,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(vv) {
-        (this._stream ??= nz()).maxPerTick = vv
+      set maxPerTick(TT) {
+        (this._stream ??= wk()).maxPerTick = TT
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(vv) {
-        (this._stream ??= nz()).priority = vv
+      set priority(TT) {
+        (this._stream ??= wk()).priority = TT
       }
-      static[Nv] = IP;
-      static[lv] = rP;
-      static COLLECTION_KIND = BP;
-      static[Tv](vv, zv, Pv) {
-        return !Pv || "string" === typeof vv[Cv] || Pv.isVisible((vv[Wv](zv) ?? vv.deletedItems[zv])[sv])
+      static[xT] = Zc;
+      static[IT] = ic;
+      static COLLECTION_KIND = Yc;
+      static[AT](TT, kT, cT) {
+        return !cT || "string" === typeof TT[hT] || cT.isVisible((TT[CT](kT) ?? TT.deletedItems[kT])[tT])
       }
-      static is(vv) {
-        return void 0 !== vv.set
+      static is(TT) {
+        return void 0 !== TT.set
       }
-      constructor(vv) {
-        Object.defineProperty(this, sv, {
-          value: new VP(this),
+      constructor(TT) {
+        Object.defineProperty(this, tT, {
+          value: new oc(this),
           enumerable: !1,
           writable: !0
-        }), this[Cv] = void 0, vv && vv.forEach((vv => this.add(vv)))
+        }), this[hT] = void 0, TT && TT.forEach((TT => this.add(TT)))
       }
       static initializeForDecoder() {
-        const vv = Object.create(gh.prototype);
-        return vv.$items = new Map, vv.deletedItems = {}, vv.$refId = 0, vv[Cv] = void 0, RP(vv), vv
+        const TT = Object.create(yl.prototype);
+        return TT.$items = new Map, TT.deletedItems = {}, TT.$refId = 0, TT[hT] = void 0, ec(TT), TT
       }
-      add(vv) {
-        if (this.has(vv)) return !1;
-        const zv = this.$refId++,
-          Pv = this[sv];
-        return this.$items.set(zv, vv), Pv.isStreamCollection ? void 0 !== Pv.root && Dz(this, Pv.root, zv) : Pv.change(zv, Sv.ADD), void 0 !== vv[sv] && vv[sv].setParent(this, Pv.root, zv), zv
+      add(TT) {
+        if (this.has(TT)) return !1;
+        const kT = this.$refId++,
+          cT = this[tT];
+        return this.$items.set(kT, TT), cT.isStreamCollection ? void 0 !== cT.root && bk(this, cT.root, kT) : cT.change(kT, MT.ADD), void 0 !== TT[tT] && TT[tT].setParent(this, cT.root, kT), kT
       }
       entries() {
         return this.$items.entries()
       }
-      delete(vv) {
-        const zv = this.$items.entries();
-        let Pv, hv;
+      delete(TT) {
+        const kT = this.$items.entries();
+        let cT, lT;
         for (;
-          (hv = zv.next()) && !hv.done;)
-          if (vv === hv.value[1]) {
-            Pv = hv.value[0];
+          (lT = kT.next()) && !lT.done;)
+          if (TT === lT.value[1]) {
+            cT = lT.value[0];
             break
-          } if (void 0 === Pv) return !1;
-        const Sv = this[sv];
-        if (Sv.isStreamCollection) {
-          const vv = Sv.root,
-            zv = this.$items.get(Pv);
-          return void 0 !== vv && Kz(this, vv, this[pv], Pv), void 0 !== zv?.[sv] && vv?.remove(zv[sv]), this.deletedItems[Pv] = zv, this.$items.delete(Pv)
+          } if (void 0 === cT) return !1;
+        const MT = this[tT];
+        if (MT.isStreamCollection) {
+          const TT = MT.root,
+            kT = this.$items.get(cT);
+          return void 0 !== TT && zk(this, TT, this[yT], cT), void 0 !== kT?.[tT] && TT?.remove(kT[tT]), this.deletedItems[cT] = kT, this.$items.delete(cT)
         }
-        return this.deletedItems[Pv] = Sv.delete(Pv), this.$items.delete(Pv)
+        return this.deletedItems[cT] = MT.delete(cT), this.$items.delete(cT)
       }
       clear() {
-        const vv = this[sv];
-        vv.discard(), this.$items.clear(), vv.operation(Sv.CLEAR)
-      } [Gv]() {
-        const vv = this[sv];
-        if (vv.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
-        this.$items.forEach((vv => vv?.[Gv]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, vv.recycle(), this[pv] = void 0
+        const TT = this[tT];
+        TT.discard(), this.$items.clear(), TT.operation(MT.CLEAR)
+      } [ST]() {
+        const TT = this[tT];
+        if (TT.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
+        this.$items.forEach((TT => TT?.[ST]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, TT.recycle(), this[yT] = void 0
       }
-      has(vv) {
-        const zv = this.$items.values();
-        let Pv, hv = !1;
+      has(TT) {
+        const kT = this.$items.values();
+        let cT, lT = !1;
         for (;
-          (Pv = zv.next()) && !Pv.done;)
-          if (vv === Pv.value) {
-            hv = !0;
+          (cT = kT.next()) && !cT.done;)
+          if (TT === cT.value) {
+            lT = !0;
             break
-          } return hv
+          } return lT
       }
-      forEach(vv) {
-        this.$items.forEach(((zv, Pv, hv) => vv(zv, Pv, this)))
+      forEach(TT) {
+        this.$items.forEach(((kT, cT, lT) => TT(kT, cT, this)))
       }
       values() {
         return this.$items.values()
@@ -4903,62 +4903,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[sv].pause()
+        this[tT].pause()
       }
       resumeTracking() {
-        this[sv].resume()
+        this[tT].resume()
       }
-      untracked(vv) {
-        return this[sv].untracked(vv)
+      untracked(TT) {
+        return this[tT].untracked(TT)
       }
       get isTrackingPaused() {
-        return this[sv].paused
+        return this[tT].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(vv, zv) {}
-      getIndex(vv) {
-        return vv
-      } [Wv](vv) {
-        return this.$items.get(vv)
-      } [wv](vv) {
-        this.$items.delete(vv)
-      } [av](vv, zv, Pv) {
-        let hv = null;
-        if (this.$items.forEach(((Sv, ev) => {
-            vv.has(ev) ? Pv(Sv) : ((hv ??= []).push(ev), zv(Sv, ev))
-          })), null !== hv)
-          for (let Sv = 0; Sv < hv.length; Sv++) this[wv](hv[Sv])
-      } [cv]() {
-        for (const vv in this.deletedItems) delete this.deletedItems[vv]
+      setIndex(TT, kT) {}
+      getIndex(TT) {
+        return TT
+      } [CT](TT) {
+        return this.$items.get(TT)
+      } [jT](TT) {
+        this.$items.delete(TT)
+      } [vT](TT, kT, cT) {
+        let lT = null;
+        if (this.$items.forEach(((MT, KT) => {
+            TT.has(KT) ? cT(MT) : ((lT ??= []).push(KT), kT(MT, KT))
+          })), null !== lT)
+          for (let MT = 0; MT < lT.length; MT++) this[jT](lT[MT])
+      } [QT]() {
+        for (const TT in this.deletedItems) delete this.deletedItems[TT]
       }
-      _dropView(vv) {
-        xz(this, vv)
+      _dropView(TT) {
+        Gk(this, TT)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const vv = [];
-        return this.forEach(((zv, Pv) => {
-          vv.push("function" === typeof zv.toJSON ? zv.toJSON() : zv)
-        })), vv
+        const TT = [];
+        return this.forEach(((kT, cT) => {
+          TT.push("function" === typeof kT.toJSON ? kT.toJSON() : kT)
+        })), TT
       }
-      clone(vv) {
-        let zv;
-        return vv ? zv = Object.assign(new gh, this) : (zv = new gh, this.forEach((vv => {
-          vv[sv] ? zv.add(vv.clone()) : zv.add(vv)
-        }))), zv
+      clone(TT) {
+        let kT;
+        return TT ? kT = Object.assign(new yl, this) : (kT = new yl, this.forEach((TT => {
+          TT[tT] ? kT.add(TT.clone()) : kT.add(TT)
+        }))), kT
       }
     }
-    fz("set", {
-      constructor: gh
+    Fk("set", {
+      constructor: yl
     });
-    class ph {
-      [sv];
-      [pv];
-      [Cv];
+    class fl {
+      [tT];
+      [yT];
+      [hT];
       $items = new Map;
       $nextPosition = 0;
       _itemIndex = new Map;
@@ -4966,81 +4966,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(vv) {
-        (this._stream ??= nz()).maxPerTick = vv
+      set maxPerTick(TT) {
+        (this._stream ??= wk()).maxPerTick = TT
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(vv) {
-        (this._stream ??= nz()).priority = vv
+      set priority(TT) {
+        (this._stream ??= wk()).priority = TT
       }
       static $isStream = !0;
-      static[Nv] = IP;
-      static[lv] = rP;
-      static COLLECTION_KIND = EP;
-      static[Tv](vv, zv, Pv) {
-        if (!Pv) return !0;
-        const hv = vv[Wv](zv);
-        return void 0 !== hv && Pv.isVisible(hv[sv])
+      static[xT] = Zc;
+      static[IT] = ic;
+      static COLLECTION_KIND = Wc;
+      static[AT](TT, kT, cT) {
+        if (!cT) return !0;
+        const lT = TT[CT](kT);
+        return void 0 !== lT && cT.isVisible(lT[tT])
       }
-      static is(vv) {
-        return vv && void 0 !== vv.stream
+      static is(TT) {
+        return TT && void 0 !== TT.stream
       }
       constructor() {
-        Object.defineProperty(this, sv, {
-          value: new VP(this),
+        Object.defineProperty(this, tT, {
+          value: new oc(this),
           enumerable: !1,
           writable: !0
-        }), this[Cv] = void 0
+        }), this[hT] = void 0
       }
       static initializeForDecoder() {
-        const vv = Object.create(ph.prototype);
-        return vv.$items = new Map, vv.$nextPosition = 0, vv._itemIndex = new Map, vv[Cv] = void 0, RP(vv), vv
+        const TT = Object.create(fl.prototype);
+        return TT.$items = new Map, TT.$nextPosition = 0, TT._itemIndex = new Map, TT[hT] = void 0, ec(TT), TT
       }
-      add(vv) {
-        if (this._itemIndex.has(vv)) return -1;
-        const zv = this.$nextPosition++;
-        this.$items.set(zv, vv), this._itemIndex.set(vv, zv);
-        const Pv = this[sv].root;
-        return void 0 !== vv[sv] && vv[sv].setParent(this, Pv, zv), void 0 !== Pv && Dz(this, Pv, zv), zv
+      add(TT) {
+        if (this._itemIndex.has(TT)) return -1;
+        const kT = this.$nextPosition++;
+        this.$items.set(kT, TT), this._itemIndex.set(TT, kT);
+        const cT = this[tT].root;
+        return void 0 !== TT[tT] && TT[tT].setParent(this, cT, kT), void 0 !== cT && bk(this, cT, kT), kT
       }
-      remove(vv) {
-        const zv = this._itemIndex.get(vv);
-        if (void 0 === zv) return !1;
-        this._itemIndex.delete(vv), this.$items.delete(zv);
-        const Pv = this[sv].root;
-        return void 0 !== Pv && (Kz(this, Pv, this[pv], zv), void 0 !== vv[sv] && Pv.remove(vv[sv])), !0
+      remove(TT) {
+        const kT = this._itemIndex.get(TT);
+        if (void 0 === kT) return !1;
+        this._itemIndex.delete(TT), this.$items.delete(kT);
+        const cT = this[tT].root;
+        return void 0 !== cT && (zk(this, cT, this[yT], kT), void 0 !== TT[tT] && cT.remove(TT[tT])), !0
       }
-      has(vv) {
-        return this._itemIndex.has(vv)
+      has(TT) {
+        return this._itemIndex.has(TT)
       }
       clear() {
-        const vv = this[sv].root;
-        if (void 0 !== vv) {
-          ! function(vv, zv, Pv) {
-            const hv = vv._stream;
-            if (void 0 !== hv) {
-              hv.broadcastPending.clear();
-              for (const vv of hv.sentBroadcast) hv.broadcastDeletes.add(vv);
-              hv.sentBroadcast.clear(), zv.forEachActiveView((vv => {
-                hv.pendingByView.get(vv.id)?.clear();
-                const zv = hv.sentByView.get(vv.id);
-                if (void 0 !== zv && zv.size > 0) {
-                  let hv = vv.changes.get(Pv);
-                  void 0 === hv && (hv = new Map, vv.changes.set(Pv, hv));
-                  for (const vv of zv) hv.set(vv, Sv.DELETE);
-                  zv.clear()
+        const TT = this[tT].root;
+        if (void 0 !== TT) {
+          ! function(TT, kT, cT) {
+            const lT = TT._stream;
+            if (void 0 !== lT) {
+              lT.broadcastPending.clear();
+              for (const TT of lT.sentBroadcast) lT.broadcastDeletes.add(TT);
+              lT.sentBroadcast.clear(), kT.forEachActiveView((TT => {
+                lT.pendingByView.get(TT.id)?.clear();
+                const kT = lT.sentByView.get(TT.id);
+                if (void 0 !== kT && kT.size > 0) {
+                  let lT = TT.changes.get(cT);
+                  void 0 === lT && (lT = new Map, TT.changes.set(cT, lT));
+                  for (const TT of kT) lT.set(TT, MT.DELETE);
+                  kT.clear()
                 }
               }))
             }
-          }(this, vv, this[pv]);
-          for (const zv of this.$items.values()) void 0 !== zv[sv] && vv.remove(zv[sv])
+          }(this, TT, this[yT]);
+          for (const kT of this.$items.values()) void 0 !== kT[tT] && TT.remove(kT[tT])
         }
         this.$items.clear(), this._itemIndex.clear()
       }
-      forEach(vv) {
-        for (const [zv, Pv] of this.$items) vv(Pv, zv, this)
+      forEach(TT) {
+        for (const [kT, cT] of this.$items) TT(cT, kT, this)
       }
       values() {
         return this.$items.values()
@@ -5056,43 +5056,43 @@ export const modules = {
       get length() {
         return this.$items.size
       }
-      setIndex(vv, zv) {}
-      getIndex(vv) {
-        return vv
-      } [Wv](vv) {
-        return this.$items.get(vv)
-      } [wv](vv) {
-        const zv = this.$items.get(vv);
-        void 0 !== zv && (this._itemIndex.delete(zv), this.$items.delete(vv))
-      } [av]() {} [cv]() {}
+      setIndex(TT, kT) {}
+      getIndex(TT) {
+        return TT
+      } [CT](TT) {
+        return this.$items.get(TT)
+      } [jT](TT) {
+        const kT = this.$items.get(TT);
+        void 0 !== kT && (this._itemIndex.delete(kT), this.$items.delete(TT))
+      } [vT]() {} [QT]() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const vv = [];
-        return this.forEach((zv => {
-          vv.push("function" === typeof zv?.toJSON ? zv.toJSON() : zv)
-        })), vv
+        const TT = [];
+        return this.forEach((kT => {
+          TT.push("function" === typeof kT?.toJSON ? kT.toJSON() : kT)
+        })), TT
       }
-      clone(vv) {
-        if (vv) {
-          return Object.assign(new ph, this)
+      clone(TT) {
+        if (TT) {
+          return Object.assign(new fl, this)
         }
-        const zv = new ph;
-        return zv.maxPerTick = this.maxPerTick, this.forEach((vv => {
-          zv.add("function" === typeof vv?.clone ? vv.clone() : vv)
-        })), zv
+        const kT = new fl;
+        return kT.maxPerTick = this.maxPerTick, this.forEach((TT => {
+          kT.add("function" === typeof TT?.clone ? TT.clone() : TT)
+        })), kT
       }
-      _dropView(vv) {
-        xz(this, vv)
+      _dropView(TT) {
+        Gk(this, TT)
       }
       _unregister() {}
     }
-    fz("stream", {
-      constructor: ph
+    Fk("stream", {
+      constructor: fl
     });
-    class dh {
-      [fv] = !0;
+    class xl {
+      [FT] = !0;
       _type;
       _default = void 0;
       _hasDefault = !1;
@@ -5106,14 +5106,14 @@ export const modules = {
       _optional = !1;
       _noSync = !1;
       _streamPriority = void 0;
-      constructor(vv) {
-        this._type = vv
+      constructor(TT) {
+        this._type = TT
       }
-      default (vv) {
-        return this._default = vv, this._hasDefault = !0, this
+      default (TT) {
+        return this._default = TT, this._hasDefault = !0, this
       }
-      view(vv) {
-        return this._view = vv ?? -1, this
+      view(TT) {
+        return this._view = TT ?? -1, this
       }
       unreliable() {
         return this._unreliable = !0, this
@@ -5128,16 +5128,16 @@ export const modules = {
         return this._noSync = !0, this
       }
       stream() {
-        const vv = this._type;
-        if (vv && "object" === typeof vv && void 0 !== vv.array) throw new Error(Yz);
+        const TT = this._type;
+        if (TT && "object" === typeof TT && void 0 !== TT.array) throw new Error(Pk);
         return this._stream = !0, this
       }
-      priority(vv) {
-        return this._streamPriority = vv, this
+      priority(TT) {
+        return this._streamPriority = TT, this
       }
       deprecated() {
-        let vv = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return this._deprecated = !0, this._deprecatedThrows = vv, this
+        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return this._deprecated = !0, this._deprecatedThrows = TT, this
       }
       optional() {
         return this._optional = !0, this
@@ -5161,135 +5161,135 @@ export const modules = {
       }
     }
 
-    function Nh(vv) {
-      return null != vv && !0 === vv[fv]
+    function Il(TT) {
+      return null != TT && !0 === TT[FT]
     }
 
-    function lh(vv) {
-      return () => new dh(vv)
+    function Al(TT) {
+      return () => new xl(TT)
     }
 
-    function Th(vv) {
-      if (Nh(vv)) {
-        const zv = vv._type;
-        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof zv?`use the type name instead: t.array("${zv}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
+    function Cl(TT) {
+      if (Il(TT)) {
+        const kT = TT._type;
+        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof kT?`use the type name instead: t.array("${kT}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
       }
-      return vv
+      return TT
     }
 
-    function Wh(vv) {
-      return new dh({
-        quantized: qz(vv)
+    function jl(TT) {
+      return new xl({
+        quantized: Ek(TT)
       })
     }
-    const wh = Object.freeze({
-        string: lh("string"),
-        number: lh("number"),
-        boolean: lh("boolean"),
-        int8: lh("int8"),
-        uint8: lh("uint8"),
-        int16: lh("int16"),
-        uint16: lh("uint16"),
-        int32: lh("int32"),
-        uint32: lh("uint32"),
-        int64: lh("int64"),
-        uint64: lh("uint64"),
-        float32: lh("float32"),
-        float64: lh("float64"),
-        bigint64: lh("bigint64"),
-        biguint64: lh("biguint64"),
-        ref: vv => new dh(vv),
-        array: vv => new dh({
-          array: Th(vv)
+    const vl = Object.freeze({
+        string: Al("string"),
+        number: Al("number"),
+        boolean: Al("boolean"),
+        int8: Al("int8"),
+        uint8: Al("uint8"),
+        int16: Al("int16"),
+        uint16: Al("uint16"),
+        int32: Al("int32"),
+        uint32: Al("uint32"),
+        int64: Al("int64"),
+        uint64: Al("uint64"),
+        float32: Al("float32"),
+        float64: Al("float64"),
+        bigint64: Al("bigint64"),
+        biguint64: Al("biguint64"),
+        ref: TT => new xl(TT),
+        array: TT => new xl({
+          array: Cl(TT)
         }),
-        map: vv => new dh({
-          map: Th(vv)
+        map: TT => new xl({
+          map: Cl(TT)
         }),
-        set: vv => new dh({
-          set: Th(vv)
+        set: TT => new xl({
+          set: Cl(TT)
         }),
-        collection: vv => new dh({
-          collection: Th(vv)
+        collection: TT => new xl({
+          collection: Cl(TT)
         }),
-        stream: vv => {
-          const zv = new dh({
-            stream: Th(vv)
+        stream: TT => {
+          const kT = new xl({
+            stream: Cl(TT)
           });
-          return zv._stream = !0, zv
+          return kT._stream = !0, kT
         },
-        quantized: Wh,
-        angle: vv => Wh({
+        quantized: jl,
+        angle: TT => jl({
           min: 0,
           max: 2 * Math.PI,
           mode: "wrap",
-          bits: vv?.bits ?? 16
+          bits: TT?.bits ?? 16
         })
       }),
-      ah = -1;
+      tl = -1;
 
-    function sh(vv) {
-      return Lz.register(vv), vv
+    function hl(TT) {
+      return Lk.register(TT), TT
     }
 
-    function Ch() {
-      let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ah;
-      return function(zv, Pv) {
-        const hv = oz.initialize(zv.constructor);
-        oz.setTag(hv, Pv, vv)
+    function Nl() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : tl;
+      return function(kT, cT) {
+        const lT = nk.initialize(kT.constructor);
+        nk.setTag(lT, cT, TT)
       }
     }
 
-    function ih(vv, zv) {
-      const Pv = oz.initialize(vv.constructor);
-      oz.setUnreliable(Pv, zv)
+    function Ql(TT, kT) {
+      const cT = nk.initialize(TT.constructor);
+      nk.setUnreliable(cT, kT)
     }
 
-    function ch(vv, zv) {
-      const Pv = oz.initialize(vv.constructor);
-      oz.setPatchOnly(Pv, zv)
+    function Sl(TT, kT) {
+      const cT = nk.initialize(TT.constructor);
+      nk.setPatchOnly(cT, kT)
     }
 
-    function Gh(vv, zv) {
-      const Pv = oz.initialize(vv.constructor);
-      oz.setFullStateOnly(Pv, zv)
+    function Dl(TT, kT) {
+      const cT = nk.initialize(TT.constructor);
+      nk.setFullStateOnly(cT, kT)
     }
 
-    function mh(vv, zv) {
-      return function(Pv, hv) {
-        const Sv = Pv.constructor;
-        if (!vv) throw new Error(`${Sv.name}: @type() reference provided for "${hv}" is undefined. Make sure you don't have any circular dependencies.`);
-        vv = Mz(vv, `${Sv.name}.${hv}`), Lz.register(Sv);
-        const ev = Object.getPrototypeOf(Sv)[Symbol.metadata],
-          gv = oz.initialize(Sv);
-        let pv = gv[hv];
-        if (void 0 !== gv[pv]) {
-          if (gv[pv].deprecated) return;
-          if (void 0 !== gv[pv].type) {
-            const vv = new Error(`@colyseus/schema: Duplicate '${hv}' definition on '${Sv.name}'.\nCheck @type() annotation`);
-            throw new Error(`${vv.message} ${vv.stack.split("\n")[4].trim()}`)
+    function al(TT, kT) {
+      return function(cT, lT) {
+        const MT = cT.constructor;
+        if (!TT) throw new Error(`${MT.name}: @type() reference provided for "${lT}" is undefined. Make sure you don't have any circular dependencies.`);
+        TT = gk(TT, `${MT.name}.${lT}`), Lk.register(MT);
+        const KT = Object.getPrototypeOf(MT)[Symbol.metadata],
+          OT = nk.initialize(MT);
+        let yT = OT[lT];
+        if (void 0 !== OT[yT]) {
+          if (OT[yT].deprecated) return;
+          if (void 0 !== OT[yT].type) {
+            const TT = new Error(`@colyseus/schema: Duplicate '${lT}' definition on '${MT.name}'.\nCheck @type() annotation`);
+            throw new Error(`${TT.message} ${TT.stack.split("\n")[4].trim()}`)
           }
-        } else pv = gv[Ov] ?? (ev && ev[Ov]) ?? -1, pv++;
-        if (zv && zv.manual) oz.addField(gv, pv, hv, vv, {
+        } else yT = OT[mT] ?? (KT && KT[mT]) ?? -1, yT++;
+        if (kT && kT.manual) nk.addField(OT, yT, lT, TT, {
           enumerable: !0,
           configurable: !0,
           writable: !0
         });
         else {
           const {
-            complexTypeKlass: zv,
-            childType: Pv
-          } = Hz(vv);
-          oz.addField(gv, pv, hv, vv, fh(hv, pv, Pv, zv))
+            complexTypeKlass: kT,
+            childType: cT
+          } = Rk(TT);
+          nk.addField(OT, yT, lT, TT, rl(lT, yT, cT, kT))
         }
-        gv[Fv][hv] && Object.defineProperty(Pv, hv, gv[Fv][hv]), ("string" === typeof vv || Iz(vv)) && (gv[nv] || Object.defineProperty(gv, nv, {
+        OT[rT][lT] && Object.defineProperty(cT, lT, OT[rT][lT]), ("string" === typeof TT || Zk(TT)) && (OT[wT] || Object.defineProperty(OT, wT, {
           value: [],
           enumerable: !1,
           configurable: !0,
           writable: !0
-        }), gv[nv][pv] = "string" === typeof vv ? zz[vv] : Az(vv.quantized))
+        }), OT[wT][yT] = "string" === typeof TT ? kk[TT] : dk(TT.quantized))
       }
     }
-    const jh = {
+    const Fl = {
       number: "number",
       int8: "number",
       uint8: "number",
@@ -5307,432 +5307,432 @@ export const modules = {
       boolean: "boolean"
     };
 
-    function fh(vv, zv, Pv, hv) {
-      let ev;
-      return ev = hv ? function(vv, zv, Pv, hv) {
-        const ev = hv.constructor === Ph,
-          gv = hv.constructor === Sh;
-        return function(vv) {
-          const hv = this[jv],
-            pv = hv[zv];
-          if (vv !== pv) {
-            if (void 0 !== vv && null !== vv) {
-              if (!ev || vv instanceof Ph)
-                if (!gv || vv instanceof Sh) vv[Cv] = Pv;
+    function rl(TT, kT, cT, lT) {
+      let KT;
+      return KT = lT ? function(TT, kT, cT, lT) {
+        const KT = lT.constructor === ll,
+          OT = lT.constructor === Kl;
+        return function(TT) {
+          const lT = this[aT],
+            yT = lT[kT];
+          if (TT !== yT) {
+            if (void 0 !== TT && null !== TT) {
+              if (!KT || TT instanceof ll)
+                if (!OT || TT instanceof Kl) TT[hT] = cT;
                 else {
-                  const zv = new Sh;
-                  if (zv[Cv] = Pv, vv instanceof Map) vv.forEach(((vv, Pv) => zv.set(Pv, vv)));
+                  const kT = new Kl;
+                  if (kT[hT] = cT, TT instanceof Map) TT.forEach(((TT, cT) => kT.set(cT, TT)));
                   else
-                    for (const Pv in vv) zv.set(Pv, vv[Pv]);
-                  vv = zv
+                    for (const cT in TT) kT.set(cT, TT[cT]);
+                  TT = kT
                 }
               else {
-                const zv = new Ph;
-                zv[Cv] = Pv, zv.push(...vv), vv = zv
+                const kT = new ll;
+                kT[hT] = cT, kT.push(...TT), TT = kT
               }
-              const hv = this[sv],
-                Nv = this.constructor;
-              void 0 !== pv && null !== pv && pv[sv] ? (hv.root?.remove(pv[sv]), Nv[dv](hv, zv, Sv.DELETE_AND_ADD)) : Nv[dv](hv, zv, Sv.ADD), vv[sv]?.setParent(this, hv.root, zv)
-            } else void 0 !== pv && null !== pv && this[sv].delete(zv);
-            hv[zv] = vv
+              const lT = this[tT],
+                xT = this.constructor;
+              void 0 !== yT && null !== yT && yT[tT] ? (lT.root?.remove(yT[tT]), xT[fT](lT, kT, MT.DELETE_AND_ADD)) : xT[fT](lT, kT, MT.ADD), TT[tT]?.setParent(this, lT.root, kT)
+            } else void 0 !== yT && null !== yT && this[tT].delete(kT);
+            lT[kT] = TT
           }
         }
-      }(0, zv, Pv, hv) : "string" === typeof Pv ? function(vv, zv, Pv) {
-        const hv = jh[Pv],
-          ev = "string" === Pv,
-          gv = "boolean" === Pv;
-        return function(Pv) {
-          const pv = this[jv],
-            Nv = pv[zv];
-          if (Pv !== Nv) {
-            if (void 0 !== Pv && null !== Pv) {
-              if (!gv && void 0 !== hv && typeof Pv !== hv && (!ev || null !== Pv)) {
-                const zv = Pv && Pv.constructor ? ` (${Pv.constructor.name})` : "";
-                throw new XP(`a '${hv}' was expected, but '${JSON.stringify(Pv)}'${zv} was provided in ${this.constructor.name}#${vv}`)
+      }(0, kT, cT, lT) : "string" === typeof cT ? function(TT, kT, cT) {
+        const lT = Fl[cT],
+          KT = "string" === cT,
+          OT = "boolean" === cT;
+        return function(cT) {
+          const yT = this[aT],
+            xT = yT[kT];
+          if (cT !== xT) {
+            if (void 0 !== cT && null !== cT) {
+              if (!OT && void 0 !== lT && typeof cT !== lT && (!KT || null !== cT)) {
+                const kT = cT && cT.constructor ? ` (${cT.constructor.name})` : "";
+                throw new sc(`a '${lT}' was expected, but '${JSON.stringify(cT)}'${kT} was provided in ${this.constructor.name}#${TT}`)
               }
-              this.constructor[dv](this[sv], zv, Sv.ADD)
-            } else void 0 !== Nv && null !== Nv && this[sv].delete(zv);
-            pv[zv] = Pv
+              this.constructor[fT](this[tT], kT, MT.ADD)
+            } else void 0 !== xT && null !== xT && this[tT].delete(kT);
+            yT[kT] = cT
           }
         }
-      }(vv, zv, Pv) : Iz(Pv) ? function(vv, zv, Pv) {
-        return function(hv) {
-          const ev = this[jv],
-            gv = ev[zv];
-          if (void 0 !== hv && null !== hv) {
-            if ("number" !== typeof hv) throw new XP(`a 'number' was expected, but '${JSON.stringify(hv)}' was provided in ${this.constructor.name}#${vv}`);
-            if ((hv = Zz(Pv, Qz(Pv, hv))) === gv) return;
-            this.constructor[dv](this[sv], zv, Sv.ADD)
+      }(TT, kT, cT) : Zk(cT) ? function(TT, kT, cT) {
+        return function(lT) {
+          const KT = this[aT],
+            OT = KT[kT];
+          if (void 0 !== lT && null !== lT) {
+            if ("number" !== typeof lT) throw new sc(`a 'number' was expected, but '${JSON.stringify(lT)}' was provided in ${this.constructor.name}#${TT}`);
+            if ((lT = Xk(cT, uk(cT, lT))) === OT) return;
+            this.constructor[fT](this[tT], kT, MT.ADD)
           } else {
-            if (hv === gv) return;
-            void 0 !== gv && null !== gv && this[sv].delete(zv)
+            if (lT === OT) return;
+            void 0 !== OT && null !== OT && this[tT].delete(kT)
           }
-          ev[zv] = hv
+          KT[kT] = lT
         }
-      }(vv, zv, Pv.quantized) : function(vv, zv, Pv) {
-        return function(hv) {
-          const ev = this[jv],
-            gv = ev[zv];
-          if (hv !== gv) {
-            if (void 0 !== hv && null !== hv) {
-              uP(hv, Pv, this, vv);
-              const ev = this[sv],
-                pv = this.constructor;
-              void 0 !== gv && null !== gv && gv[sv] ? (ev.root?.remove(gv[sv]), pv[dv](ev, zv, Sv.DELETE_AND_ADD)) : pv[dv](ev, zv, Sv.ADD), hv[sv]?.setParent(this, ev.root, zv)
-            } else void 0 !== gv && null !== gv && this[sv].delete(zv);
-            ev[zv] = hv
+      }(TT, kT, cT.quantized) : function(TT, kT, cT) {
+        return function(lT) {
+          const KT = this[aT],
+            OT = KT[kT];
+          if (lT !== OT) {
+            if (void 0 !== lT && null !== lT) {
+              Tl(lT, cT, this, TT);
+              const KT = this[tT],
+                yT = this.constructor;
+              void 0 !== OT && null !== OT && OT[tT] ? (KT.root?.remove(OT[tT]), yT[fT](KT, kT, MT.DELETE_AND_ADD)) : yT[fT](KT, kT, MT.ADD), lT[tT]?.setParent(this, KT.root, kT)
+            } else void 0 !== OT && null !== OT && this[tT].delete(kT);
+            KT[kT] = lT
           }
         }
-      }(vv, zv, Pv), {
+      }(TT, kT, cT), {
         get: function() {
-          return this[jv][zv]
+          return this[aT][kT]
         },
-        set: ev,
+        set: KT,
         enumerable: !0,
         configurable: !0
       }
     }
 
-    function Fh() {
-      let vv = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-      return function(zv, Pv) {
-        const hv = oz.initialize(zv.constructor);
-        oz.setDeprecated(hv, Pv), vv && (hv[Fv] ??= {}, hv[Fv][Pv] = {
+    function Pl() {
+      let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+      return function(kT, cT) {
+        const lT = nk.initialize(kT.constructor);
+        nk.setDeprecated(lT, cT), TT && (lT[rT] ??= {}, lT[rT][cT] = {
           get: function() {
-            throw new Error(`${Pv} is deprecated.`)
+            throw new Error(`${cT} is deprecated.`)
           },
-          set: function(vv) {},
+          set: function(TT) {},
           enumerable: !1,
           configurable: !0
-        }, Object.defineProperty(zv, Pv, hv[Fv][Pv]))
+        }, Object.defineProperty(kT, cT, lT[rT][cT]))
       }
     }
-    let Yh = !1;
+    let wl = !1;
 
-    function nh(vv, zv, Pv) {
-      Yh || (Yh = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
-      for (let hv in zv) mh(zv[hv], Pv)(vv.prototype, hv);
-      return vv
+    function ml(TT, kT, cT) {
+      wl || (wl = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
+      for (let lT in kT) al(kT[lT], cT)(TT.prototype, lT);
+      return TT
     }
 
-    function Oh(vv, zv) {
-      let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Kh;
-      if (null == vv || "object" !== typeof vv) throw new Error(`schema(): first argument must be a fields object (got ${typeof vv}).`);
-      const hv = {},
-        Sv = {},
-        ev = {},
-        gv = {},
-        pv = (vv, zv) => {
-          if (zv.hasDefault)((vv, zv) => {
-            "function" === typeof zv ? gv[vv] = zv : zv && "function" === typeof zv.clone ? gv[vv] = () => zv.clone() : ev[vv] = zv
-          })(vv, zv.default);
-          else if (!zv.optional) {
-            const Pv = function(vv) {
-              if (vv && "object" === typeof vv) {
-                if (void 0 !== vv.array) return () => new Ph;
-                if (void 0 !== vv.map) return () => new Sh;
-                if (void 0 !== vv.set) return () => new gh;
-                if (void 0 !== vv.collection) return () => new eh;
-                if (void 0 !== vv.stream) return () => new ph
-              } else if ("function" === typeof vv && Kh.is(vv) && (!vv.prototype.initialize || 0 === vv.prototype.initialize.length)) return () => new vv
-            }(zv.type);
-            Pv && (gv[vv] = Pv)
+    function bl(TT, kT) {
+      let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Jl;
+      if (null == TT || "object" !== typeof TT) throw new Error(`schema(): first argument must be a fields object (got ${typeof TT}).`);
+      const lT = {},
+        MT = {},
+        KT = {},
+        OT = {},
+        yT = (TT, kT) => {
+          if (kT.hasDefault)((TT, kT) => {
+            "function" === typeof kT ? OT[TT] = kT : kT && "function" === typeof kT.clone ? OT[TT] = () => kT.clone() : KT[TT] = kT
+          })(TT, kT.default);
+          else if (!kT.optional) {
+            const cT = function(TT) {
+              if (TT && "object" === typeof TT) {
+                if (void 0 !== TT.array) return () => new ll;
+                if (void 0 !== TT.map) return () => new Kl;
+                if (void 0 !== TT.set) return () => new yl;
+                if (void 0 !== TT.collection) return () => new Ol;
+                if (void 0 !== TT.stream) return () => new fl
+              } else if ("function" === typeof TT && Jl.is(TT) && (!TT.prototype.initialize || 0 === TT.prototype.initialize.length)) return () => new TT
+            }(kT.type);
+            cT && (OT[TT] = cT)
           }
         },
-        dv = {},
-        Nv = [],
-        lv = [],
-        Tv = {},
-        Wv = [],
-        wv = [],
-        av = {},
-        sv = [];
-      for (const jv in vv) {
-        const Pv = vv[jv],
-          ev = `schema(${zv?`'${zv}'`:""}): field '${jv}'`;
-        if (Nh(Pv)) {
-          const vv = Pv.toDefinition();
-          if (vv.noSync) {
-            if (void 0 !== vv.view || vv.unreliable || vv.patchOnly || vv.fullStateOnly || vv.stream) throw new Error(`${ev} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
-            pv(jv, vv);
+        fT = {},
+        xT = [],
+        IT = [],
+        AT = {},
+        CT = [],
+        jT = [],
+        vT = {},
+        tT = [];
+      for (const aT in TT) {
+        const cT = TT[aT],
+          KT = `schema(${kT?`'${kT}'`:""}): field '${aT}'`;
+        if (Il(cT)) {
+          const TT = cT.toDefinition();
+          if (TT.noSync) {
+            if (void 0 !== TT.view || TT.unreliable || TT.patchOnly || TT.fullStateOnly || TT.stream) throw new Error(`${KT} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
+            yT(aT, TT);
             continue
           }
-          if (vv.patchOnly && vv.fullStateOnly) throw new Error(`${ev} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
-          const zv = Mz(vv.type, ev);
-          if ("function" === typeof zv && !Kh.is(zv)) throw new Error(`${ev} is a synced ref to non-Schema class '${zv.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
-          hv[jv] = zv, void 0 !== vv.view && (dv[jv] = vv.view), vv.unreliable && Nv.push(jv), vv.patchOnly && lv.push(jv), vv.deprecated && (Tv[jv] = vv.deprecatedThrows), vv.fullStateOnly && Wv.push(jv), vv.stream && wv.push(jv), void 0 !== vv.streamPriority && (av[jv] = vv.streamPriority), vv.optional && sv.push(jv), pv(jv, vv)
+          if (TT.patchOnly && TT.fullStateOnly) throw new Error(`${KT} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
+          const kT = gk(TT.type, KT);
+          if ("function" === typeof kT && !Jl.is(kT)) throw new Error(`${KT} is a synced ref to non-Schema class '${kT.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
+          lT[aT] = kT, void 0 !== TT.view && (fT[aT] = TT.view), TT.unreliable && xT.push(aT), TT.patchOnly && IT.push(aT), TT.deprecated && (AT[aT] = TT.deprecatedThrows), TT.fullStateOnly && CT.push(aT), TT.stream && jT.push(aT), void 0 !== TT.streamPriority && (vT[aT] = TT.streamPriority), TT.optional && tT.push(aT), yT(aT, TT)
         } else {
-          if ("function" !== typeof Pv) throw new Error(`${ev} must be a t.* builder, Schema subclass, or method (got ${typeof Pv}).`);
-          Kh.is(Pv) ? (hv[jv] = Pv, Pv.prototype.initialize && 0 !== Pv.prototype.initialize.length || (gv[jv] = () => new Pv)) : Sv[jv] = Pv
+          if ("function" !== typeof cT) throw new Error(`${KT} must be a t.* builder, Schema subclass, or method (got ${typeof cT}).`);
+          Jl.is(cT) ? (lT[aT] = cT, cT.prototype.initialize && 0 !== cT.prototype.initialize.length || (OT[aT] = () => new cT)) : MT[aT] = cT
         }
       }
-      const Cv = vv => {
-          for (const zv in ev) vv[zv] = ev[zv];
-          for (const zv in gv) vv[zv] = gv[zv]()
+      const hT = TT => {
+          for (const kT in KT) TT[kT] = KT[kT];
+          for (const kT in OT) TT[kT] = OT[kT]()
         },
-        iv = () => {
-          const vv = {};
-          return Cv(vv), vv
+        NT = () => {
+          const TT = {};
+          return hT(TT), TT
         },
-        cv = "function" === typeof Sv.initialize,
-        Gv = Sv.initialize ?? Pv._initialize,
-        mv = class extends Pv {
+        QT = "function" === typeof MT.initialize,
+        ST = MT.initialize ?? cT._initialize,
+        DT = class extends cT {
           constructor() {
-            for (var vv = arguments.length, zv = new Array(vv), Pv = 0; Pv < vv; Pv++) zv[Pv] = arguments[Pv];
-            const Sv = zv[0];
-            void 0 === Sv ? (super(), Cv(this)) : super(Object.assign(iv(), cv ? (vv => {
-              const zv = Object.keys(hv),
-                Pv = {};
-              for (const hv in vv) zv.includes(hv) || (Pv[hv] = vv[hv]);
-              return Pv
-            })(Sv) : Sv)), Gv && new.target === mv && Gv.apply(this, zv)
+            for (var TT = arguments.length, kT = new Array(TT), cT = 0; cT < TT; cT++) kT[cT] = arguments[cT];
+            const MT = kT[0];
+            void 0 === MT ? (super(), hT(this)) : super(Object.assign(NT(), QT ? (TT => {
+              const kT = Object.keys(lT),
+                cT = {};
+              for (const lT in TT) kT.includes(lT) || (cT[lT] = TT[lT]);
+              return cT
+            })(MT) : MT)), ST && new.target === DT && ST.apply(this, kT)
           }
         };
-      zv && Object.defineProperty(mv, "name", {
-        value: zv
-      }), oz.setFields(mv, hv), mv._getDefaultValues = iv, mv._initialize = Gv, Object.assign(mv.prototype, Sv);
-      for (const jv in dv) Ch(dv[jv])(mv.prototype, jv);
-      for (const jv of Nv) ih(mv.prototype, jv);
-      for (const jv of lv) ch(mv.prototype, jv);
-      for (const jv in Tv) Fh(Tv[jv])(mv.prototype, jv);
-      if (Wv.length > 0 || wv.length > 0) {
-        const vv = mv[Symbol.metadata];
-        for (const zv of Wv) oz.setFullStateOnly(vv, zv);
-        for (const zv of wv) oz.setStream(vv, zv);
-        for (const zv in av) oz.setStreamPriority(vv, zv, av[zv])
+      kT && Object.defineProperty(DT, "name", {
+        value: kT
+      }), nk.setFields(DT, lT), DT._getDefaultValues = NT, DT._initialize = ST, Object.assign(DT.prototype, MT);
+      for (const aT in fT) Nl(fT[aT])(DT.prototype, aT);
+      for (const aT of xT) Ql(DT.prototype, aT);
+      for (const aT of IT) Sl(DT.prototype, aT);
+      for (const aT in AT) Pl(AT[aT])(DT.prototype, aT);
+      if (CT.length > 0 || jT.length > 0) {
+        const TT = DT[Symbol.metadata];
+        for (const kT of CT) nk.setFullStateOnly(TT, kT);
+        for (const kT of jT) nk.setStream(TT, kT);
+        for (const kT in vT) nk.setStreamPriority(TT, kT, vT[kT])
       }
-      if (sv.length > 0) {
-        const vv = mv[Symbol.metadata];
-        for (const zv of sv) vv[vv[zv]].optional = !0
+      if (tT.length > 0) {
+        const TT = DT[Symbol.metadata];
+        for (const kT of tT) TT[TT[kT]].optional = !0
       }
-      return mv.extend = (vv, zv) => Oh(vv, zv, mv), mv
+      return DT.extend = (TT, kT) => bl(TT, kT, DT), DT
     }
 
-    function Dh(vv) {
-      const zv = vv[sv].root,
-        Pv = {
+    function zl(TT) {
+      const kT = TT[tT].root,
+        cT = {
           ops: {},
           refs: []
         };
-      let hv = zv.changes.next;
-      for (; hv;) {
-        const vv = hv.changeTree;
-        void 0 !== vv ? (Pv.refs.push(`refId#${vv.ref[pv]}`), vv.forEach(((vv, zv) => {
-          if (vv < 0 || !zv) return;
-          const hv = Sv[zv];
-          Pv.ops[hv] || (Pv.ops[hv] = 0), Pv.ops[hv]++
-        })), hv = hv.next) : hv = hv.next
+      let lT = kT.changes.next;
+      for (; lT;) {
+        const TT = lT.changeTree;
+        void 0 !== TT ? (cT.refs.push(`refId#${TT.ref[yT]}`), TT.forEach(((TT, kT) => {
+          if (TT < 0 || !kT) return;
+          const lT = MT[kT];
+          cT.ops[lT] || (cT.ops[lT] = 0), cT.ops[lT]++
+        })), lT = lT.next) : lT = lT.next
       }
-      return Pv
+      return cT
     }
-    class Kh {
-      static[Nv] = tP;
-      static[lv] = bP;
-      [pv];
-      [jv];
-      static initialize(vv) {
-        Object.defineProperty(vv, sv, {
-          value: new VP(vv),
+    class Jl {
+      static[xT] = Vc;
+      static[IT] = pc;
+      [yT];
+      [aT];
+      static initialize(TT) {
+        Object.defineProperty(TT, tT, {
+          value: new oc(TT),
           enumerable: !1,
           writable: !0
-        }), vv[jv] = []
+        }), TT[aT] = []
       }
       static initializeForDecoder() {
-        const vv = Object.create(this.prototype);
-        return RP(vv), vv[jv] = [], vv
+        const TT = Object.create(this.prototype);
+        return ec(TT), TT[aT] = [], TT
       }
-      static reset(vv) {
-        const zv = vv?.[sv];
-        if (void 0 === zv || "function" !== typeof zv.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
-        if (void 0 !== zv.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${vv.constructor.name}) with multiple parents.`);
-        vv[Gv]()
-      } [Gv]() {
-        const vv = this.constructor[Symbol.metadata],
-          zv = vv?.[Dv] ?? [],
-          Pv = this[jv];
-        for (let hv = 0; hv < zv.length; hv++) {
-          const vv = Pv[zv[hv]];
-          vv?.[Gv]?.()
+      static reset(TT) {
+        const kT = TT?.[tT];
+        if (void 0 === kT || "function" !== typeof kT.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
+        if (void 0 !== kT.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${TT.constructor.name}) with multiple parents.`);
+        TT[ST]()
+      } [ST]() {
+        const TT = this.constructor[Symbol.metadata],
+          kT = TT?.[bT] ?? [],
+          cT = this[aT];
+        for (let lT = 0; lT < kT.length; lT++) {
+          const TT = cT[kT[lT]];
+          TT?.[ST]?.()
         }
-        this[sv].recycle(), this[pv] = void 0
+        this[tT].recycle(), this[yT] = void 0
       }
-      static is(vv) {
-        const zv = vv[Symbol.metadata];
-        return "object" === typeof zv && null !== zv
+      static is(TT) {
+        const kT = TT[Symbol.metadata];
+        return "object" === typeof kT && null !== kT
       }
-      static isSchema(vv) {
-        return "function" === typeof vv?.assign
+      static isSchema(TT) {
+        return "function" === typeof TT?.assign
       }
-      static[dv](vv, zv) {
-        let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Sv.ADD;
-        vv.change(zv, Pv)
+      static[fT](TT, kT) {
+        let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : MT.ADD;
+        TT.change(kT, cT)
       }
-      static[Tv](vv, zv, Pv) {
-        const hv = vv.constructor[Symbol.metadata],
-          Sv = hv[zv]?.tag;
-        return void 0 === Pv ? void 0 === Sv : void 0 === Sv || (Sv === ah ? Pv.isChangeTreeVisible(vv[sv]) : Pv.hasTagOnTree(vv[sv], Sv))
+      static[AT](TT, kT, cT) {
+        const lT = TT.constructor[Symbol.metadata],
+          MT = lT[kT]?.tag;
+        return void 0 === cT ? void 0 === MT : void 0 === MT || (MT === tl ? cT.isChangeTreeVisible(TT[tT]) : cT.hasTagOnTree(TT[tT], MT))
       }
-      constructor(vv) {
-        Kh.initialize(this), vv && Kh.assignProps(this, vv)
+      constructor(TT) {
+        Jl.initialize(this), TT && Jl.assignProps(this, TT)
       }
-      assign(vv) {
-        return Kh.assignProps(this, vv), this
+      assign(TT) {
+        return Jl.assignProps(this, TT), this
       }
-      static assignProps(vv, zv) {
-        const Pv = vv.constructor[Symbol.metadata];
-        if (Pv && void 0 !== Pv[Ov])
-          for (let Sv = 0; Sv <= Pv[Ov]; Sv++) {
-            const hv = Pv[Sv];
-            if (!hv) continue;
-            const ev = zv[hv.name];
-            void 0 !== ev && (vv[hv.name] = ev)
+      static assignProps(TT, kT) {
+        const cT = TT.constructor[Symbol.metadata];
+        if (cT && void 0 !== cT[mT])
+          for (let MT = 0; MT <= cT[mT]; MT++) {
+            const lT = cT[MT];
+            if (!lT) continue;
+            const KT = kT[lT.name];
+            void 0 !== KT && (TT[lT.name] = KT)
           }
-        const hv = Object.keys(zv);
-        for (let Sv = 0; Sv < hv.length; Sv++) {
-          const ev = hv[Sv];
-          Pv && void 0 !== Pv[ev] || (vv[ev] = zv[ev])
+        const lT = Object.keys(kT);
+        for (let MT = 0; MT < lT.length; MT++) {
+          const KT = lT[MT];
+          cT && void 0 !== cT[KT] || (TT[KT] = kT[KT])
         }
       }
-      restore(vv) {
-        const zv = this.constructor[Symbol.metadata];
-        for (const Pv in zv) {
-          const hv = zv[Pv],
-            Sv = hv.name,
-            ev = hv.type,
-            gv = vv[Sv];
-          if (void 0 !== gv && null !== gv)
-            if ("string" === typeof ev) this[Sv] = gv;
-            else if (Kh.is(ev)) {
-            const vv = new ev;
-            vv.restore(gv), this[Sv] = vv
-          } else if ("object" === typeof ev) {
-            const vv = Object.keys(ev)[0],
-              zv = ev[vv];
-            if ("map" === vv) {
-              const vv = this[Sv];
-              for (const Pv in gv)
-                if (Kh.is(zv)) {
-                  const hv = new zv;
-                  hv.restore(gv[Pv]), vv.set(Pv, hv)
-                } else vv.set(Pv, gv[Pv])
-            } else if ("array" === vv) {
-              const vv = this[Sv];
-              for (let Pv = 0; Pv < gv.length; Pv++)
-                if (Kh.is(zv)) {
-                  const hv = new zv;
-                  hv.restore(gv[Pv]), vv.push(hv)
-                } else vv.push(gv[Pv])
+      restore(TT) {
+        const kT = this.constructor[Symbol.metadata];
+        for (const cT in kT) {
+          const lT = kT[cT],
+            MT = lT.name,
+            KT = lT.type,
+            OT = TT[MT];
+          if (void 0 !== OT && null !== OT)
+            if ("string" === typeof KT) this[MT] = OT;
+            else if (Jl.is(KT)) {
+            const TT = new KT;
+            TT.restore(OT), this[MT] = TT
+          } else if ("object" === typeof KT) {
+            const TT = Object.keys(KT)[0],
+              kT = KT[TT];
+            if ("map" === TT) {
+              const TT = this[MT];
+              for (const cT in OT)
+                if (Jl.is(kT)) {
+                  const lT = new kT;
+                  lT.restore(OT[cT]), TT.set(cT, lT)
+                } else TT.set(cT, OT[cT])
+            } else if ("array" === TT) {
+              const TT = this[MT];
+              for (let cT = 0; cT < OT.length; cT++)
+                if (Jl.is(kT)) {
+                  const lT = new kT;
+                  lT.restore(OT[cT]), TT.push(lT)
+                } else TT.push(OT[cT])
             }
           }
         }
         return this
       }
-      setDirty(vv, zv) {
-        const Pv = this.constructor[Symbol.metadata];
-        this[sv].change(Pv[Pv[vv]].index, zv)
+      setDirty(TT, kT) {
+        const cT = this.constructor[Symbol.metadata];
+        this[tT].change(cT[cT[TT]].index, kT)
       }
       pauseTracking() {
-        this[sv].pause()
+        this[tT].pause()
       }
       resumeTracking() {
-        this[sv].resume()
+        this[tT].resume()
       }
-      untracked(vv) {
-        return this[sv].untracked(vv)
+      untracked(TT) {
+        return this[tT].untracked(TT)
       }
       get isTrackingPaused() {
-        return this[sv].paused
+        return this[tT].paused
       }
       clone() {
-        const vv = Object.create(this.constructor.prototype);
-        Kh.initialize(vv);
-        const zv = this.constructor[Symbol.metadata];
-        for (const Pv in zv) {
-          const hv = zv[Pv].name;
-          "object" === typeof this[hv] && "function" === typeof this[hv]?.clone ? vv[hv] = this[hv].clone() : vv[hv] = this[hv]
+        const TT = Object.create(this.constructor.prototype);
+        Jl.initialize(TT);
+        const kT = this.constructor[Symbol.metadata];
+        for (const cT in kT) {
+          const lT = kT[cT].name;
+          "object" === typeof this[lT] && "function" === typeof this[lT]?.clone ? TT[lT] = this[lT].clone() : TT[lT] = this[lT]
         }
-        return vv
+        return TT
       }
       toJSON() {
-        const vv = {},
-          zv = this.constructor[Symbol.metadata];
-        for (const Pv in zv) {
-          const hv = zv[Pv],
-            Sv = hv.name;
-          hv.deprecated || null === this[Sv] || "undefined" === typeof this[Sv] || (vv[Sv] = "function" === typeof this[Sv].toJSON ? this[Sv].toJSON() : this[Sv])
+        const TT = {},
+          kT = this.constructor[Symbol.metadata];
+        for (const cT in kT) {
+          const lT = kT[cT],
+            MT = lT.name;
+          lT.deprecated || null === this[MT] || "undefined" === typeof this[MT] || (TT[MT] = "function" === typeof this[MT].toJSON ? this[MT].toJSON() : this[MT])
         }
-        return vv
+        return TT
       }
       discardAllChanges() {
-        this[sv].discardAll()
-      } [Wv](vv) {
-        return this[this.constructor[Symbol.metadata][vv].name]
-      } [wv](vv) {
-        this[this.constructor[Symbol.metadata][vv].name] = void 0
+        this[tT].discardAll()
+      } [CT](TT) {
+        return this[this.constructor[Symbol.metadata][TT].name]
+      } [jT](TT) {
+        this[this.constructor[Symbol.metadata][TT].name] = void 0
       }
-      static debugRefIds(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          hv = arguments.length > 3 ? arguments[3] : void 0,
-          Sv = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
-        const ev = zv ? ` - ${JSON.stringify(vv.toJSON())}` : "",
-          gv = vv[sv],
-          dv = vv[pv],
-          Nv = hv ? hv.root.refCount[dv] : gv.refCount,
-          lv = Nv > 1 ? ` [\xd7${Nv}]` : "";
-        let Tv = `${function(vv){return new Array(vv).fill(0).map(((zv,Pv)=>Pv===vv-1?"\u2514\u2500 ":"   ")).join("")}(Pv)}${Sv}${vv.constructor.name} (refId: ${dv})${lv}${ev}\n`;
-        return gv.forEachChild(((Sv, ev) => {
-          let gv = ev;
-          "number" === typeof ev && vv.$indexes && (gv = vv.$indexes.get(ev) ?? ev);
-          const pv = void 0 !== vv.forEach && void 0 !== gv ? `["${gv}"]: ` : "";
-          Tv += this.debugRefIds(Sv.ref, zv, Pv + 1, hv, pv)
-        })), Tv
+      static debugRefIds(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          lT = arguments.length > 3 ? arguments[3] : void 0,
+          MT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
+        const KT = kT ? ` - ${JSON.stringify(TT.toJSON())}` : "",
+          OT = TT[tT],
+          fT = TT[yT],
+          xT = lT ? lT.root.refCount[fT] : OT.refCount,
+          IT = xT > 1 ? ` [\xd7${xT}]` : "";
+        let AT = `${function(TT){return new Array(TT).fill(0).map(((kT,cT)=>cT===TT-1?"\u2514\u2500 ":"   ")).join("")}(cT)}${MT}${TT.constructor.name} (refId: ${fT})${IT}${KT}\n`;
+        return OT.forEachChild(((MT, KT) => {
+          let OT = KT;
+          "number" === typeof KT && TT.$indexes && (OT = TT.$indexes.get(KT) ?? KT);
+          const yT = void 0 !== TT.forEach && void 0 !== OT ? `["${OT}"]: ` : "";
+          AT += this.debugRefIds(MT.ref, kT, cT + 1, lT, yT)
+        })), AT
       }
-      static debugRefIdEncodingOrder(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
-        const Pv = [],
-          hv = vv[sv];
-        if ("changes" === zv) {
-          let vv = hv.root.changes?.next;
-          for (; vv;) vv.changeTree && Pv.push(vv.changeTree.ref[pv]), vv = vv.next;
-          return Pv
+      static debugRefIdEncodingOrder(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
+        const cT = [],
+          lT = TT[tT];
+        if ("changes" === kT) {
+          let TT = lT.root.changes?.next;
+          for (; TT;) TT.changeTree && cT.push(TT.changeTree.ref[yT]), TT = TT.next;
+          return cT
         }
-        const Sv = "allFilteredChanges" === zv,
-          ev = new Set,
-          gv = vv => {
-            ev.has(vv) || (ev.add(vv), vv.isFiltered === Sv && Pv.push(vv.ref[pv]), vv.forEachChild(((vv, zv) => gv(vv))))
+        const MT = "allFilteredChanges" === kT,
+          KT = new Set,
+          OT = TT => {
+            KT.has(TT) || (KT.add(TT), TT.isFiltered === MT && cT.push(TT.ref[yT]), TT.forEachChild(((TT, kT) => OT(TT))))
           };
-        return gv(hv), Pv
+        return OT(lT), cT
       }
-      static debugRefIdsFromDecoder(vv) {
-        return this.debugRefIds(vv.state, !1, 0, vv)
+      static debugRefIdsFromDecoder(TT) {
+        return this.debugRefIds(TT.state, !1, 0, TT)
       }
-      static debugChanges(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const Pv = vv[sv],
-          hv = zv ? "allChanges" : "changes";
-        let ev = `${vv.constructor.name} (${vv[pv]}) -> .${hv}:\n`;
-        return zv ? Pv.forEachLive((vv => {
-          ev += `- [${vv}]: ADD (${JSON.stringify(Pv.getValue(Number(vv),!0))})\n`
-        })) : Pv.forEach(((vv, zv) => {
-          vv < 0 || !zv || (ev += `- [${vv}]: ${Sv[zv]} (${JSON.stringify(Pv.getValue(Number(vv),!1))})\n`)
-        })), ev
+      static debugChanges(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const cT = TT[tT],
+          lT = kT ? "allChanges" : "changes";
+        let KT = `${TT.constructor.name} (${TT[yT]}) -> .${lT}:\n`;
+        return kT ? cT.forEachLive((TT => {
+          KT += `- [${TT}]: ADD (${JSON.stringify(cT.getValue(Number(TT),!0))})\n`
+        })) : cT.forEach(((TT, kT) => {
+          TT < 0 || !kT || (KT += `- [${TT}]: ${MT[kT]} (${JSON.stringify(cT.getValue(Number(TT),!1))})\n`)
+        })), KT
       }
     }
-    ev(Kh);
-    const Vh = {
+    KT(Jl);
+    const ol = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class Uh {
+    class Hl {
       types;
       nextUniqueId = 0;
       changeTrees = {};
       get refCount() {
-        const vv = {};
-        for (const zv in this.changeTrees) vv[zv] = this.changeTrees[zv].refCount;
-        return vv
+        const TT = {};
+        for (const kT in this.changeTrees) TT[kT] = this.changeTrees[kT].refCount;
+        return TT
       }
       changes = {
         next: void 0,
@@ -5745,8 +5745,8 @@ export const modules = {
         nextPosition: 0
       };
       pendingFilterRefresh = [];
-      enqueueFilterRefresh(vv) {
-        this.types.hasFilters && (vv.flags & DP || (vv.flags |= DP, this.pendingFilterRefresh.push(vv)))
+      enqueueFilterRefresh(TT) {
+        this.types.hasFilters && (TT.flags & zc || (TT.flags |= zc, this.pendingFilterRefresh.push(TT)))
       }
       _nodePool = [];
       _nextViewId = 0;
@@ -5754,144 +5754,144 @@ export const modules = {
       acquireViewId() {
         return this._freeViewIds.length > 0 ? this._freeViewIds.pop() : this._nextViewId++
       }
-      releaseViewId(vv) {
-        this._freeViewIds.push(vv)
+      releaseViewId(TT) {
+        this._freeViewIds.push(TT)
       }
       activeViews = new Map;
       streamTrees = new Set;
-      registerView(vv) {
-        this.activeViews.set(vv.id, new WeakRef(vv))
+      registerView(TT) {
+        this.activeViews.set(TT.id, new WeakRef(TT))
       }
-      unregisterView(vv) {
-        this.activeViews.delete(vv.id);
-        const zv = vv.id;
-        for (const Pv of this.streamTrees) Pv._dropView(zv)
+      unregisterView(TT) {
+        this.activeViews.delete(TT.id);
+        const kT = TT.id;
+        for (const cT of this.streamTrees) cT._dropView(kT)
       }
-      forEachActiveView(vv) {
-        for (const [zv, Pv] of this.activeViews) {
-          const hv = Pv.deref();
-          if (void 0 !== hv) vv(hv);
+      forEachActiveView(TT) {
+        for (const [kT, cT] of this.activeViews) {
+          const lT = cT.deref();
+          if (void 0 !== lT) TT(lT);
           else {
-            this.activeViews.delete(zv);
-            for (const vv of this.streamTrees) vv._dropView(zv)
+            this.activeViews.delete(kT);
+            for (const TT of this.streamTrees) TT._dropView(kT)
           }
         }
       }
-      registerStream(vv) {
-        this.streamTrees.add(vv)
+      registerStream(TT) {
+        this.streamTrees.add(TT)
       }
-      unregisterStream(vv) {
-        this.streamTrees.delete(vv)
+      unregisterStream(TT) {
+        this.streamTrees.delete(TT)
       }
-      constructor(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this.types = vv, this.nextUniqueId = zv
+      constructor(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this.types = TT, this.nextUniqueId = kT
       }
-      add(vv) {
-        const zv = vv.ref;
-        void 0 === zv[pv] && (Vh.value = this.nextUniqueId++, Object.defineProperty(zv, pv, Vh));
-        const Pv = zv[pv],
-          hv = void 0 === this.changeTrees[Pv];
-        hv && (this.changeTrees[Pv] = vv), vv.needsRestage && (vv.needsRestage = !1, vv.forEachLiveWithCtx(vv, PP));
-        const Sv = hv ? 0 : vv.refCount;
-        return vv.refCount = Sv + 1, Sv > 0 && this.enqueueFilterRefresh(vv), hv
+      add(TT) {
+        const kT = TT.ref;
+        void 0 === kT[yT] && (ol.value = this.nextUniqueId++, Object.defineProperty(kT, yT, ol));
+        const cT = kT[yT],
+          lT = void 0 === this.changeTrees[cT];
+        lT && (this.changeTrees[cT] = TT), TT.needsRestage && (TT.needsRestage = !1, TT.forEachLiveWithCtx(TT, lc));
+        const MT = lT ? 0 : TT.refCount;
+        return TT.refCount = MT + 1, MT > 0 && this.enqueueFilterRefresh(TT), lT
       }
-      remove(vv) {
-        const zv = vv.refCount - 1;
-        if (zv <= 0) {
-          if (vv.root = void 0, delete this.changeTrees[vv.ref[pv]], vv.isStreamCollection) {
-            const zv = vv.ref;
-            zv._unregister?.(), this.unregisterStream(zv)
+      remove(TT) {
+        const kT = TT.refCount - 1;
+        if (kT <= 0) {
+          if (TT.root = void 0, delete this.changeTrees[TT.ref[yT]], TT.isStreamCollection) {
+            const kT = TT.ref;
+            kT._unregister?.(), this.unregisterStream(kT)
           }
-          this.removeFromQueue(vv), this.removeFromUnreliableQueue(vv), vv.refCount = 0, vv.needsRestage = !0, vv.forEachChild(((zv, Pv) => {
-            zv.removeParent(vv.ref) && (void 0 === zv.parentRef || zv.refCount > 0 ? this.remove(zv) : this.moveNextToParent(zv))
+          this.removeFromQueue(TT), this.removeFromUnreliableQueue(TT), TT.refCount = 0, TT.needsRestage = !0, TT.forEachChild(((kT, cT) => {
+            kT.removeParent(TT.ref) && (void 0 === kT.parentRef || kT.refCount > 0 ? this.remove(kT) : this.moveNextToParent(kT))
           }))
-        } else vv.refCount = zv, this.enqueueFilterRefresh(vv), this.recursivelyMoveNextToParent(vv);
-        return zv
+        } else TT.refCount = kT, this.enqueueFilterRefresh(TT), this.recursivelyMoveNextToParent(TT);
+        return kT
       }
-      recursivelyMoveNextToParent(vv) {
-        this.moveNextToParent(vv), vv.forEachChild(((vv, zv) => this.recursivelyMoveNextToParent(vv)))
+      recursivelyMoveNextToParent(TT) {
+        this.moveNextToParent(TT), TT.forEachChild(((TT, kT) => this.recursivelyMoveNextToParent(TT)))
       }
-      moveNextToParent(vv) {
-        vv.changesNode && this._moveNextToParentInList(this.changes, vv, vv.changesNode, "changesNode"), vv.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, vv, vv.unreliableChangesNode, "unreliableChangesNode")
+      moveNextToParent(TT) {
+        TT.changesNode && this._moveNextToParentInList(this.changes, TT, TT.changesNode, "changesNode"), TT.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, TT, TT.unreliableChangesNode, "unreliableChangesNode")
       }
-      _moveNextToParentInList(vv, zv, Pv, hv) {
-        const Sv = zv.parent;
-        if (!Sv || !Sv[sv]) return;
-        const ev = Sv[sv][hv];
-        ev && ev !== Pv && (Pv.position > ev.position || (Pv.prev ? Pv.prev.next = Pv.next : vv.next = Pv.next, Pv.next ? Pv.next.prev = Pv.prev : vv.tail = Pv.prev, Pv.prev = vv.tail, Pv.next = void 0, vv.tail.next = Pv, vv.tail = Pv, Pv.position = vv.nextPosition++))
+      _moveNextToParentInList(TT, kT, cT, lT) {
+        const MT = kT.parent;
+        if (!MT || !MT[tT]) return;
+        const KT = MT[tT][lT];
+        KT && KT !== cT && (cT.position > KT.position || (cT.prev ? cT.prev.next = cT.next : TT.next = cT.next, cT.next ? cT.next.prev = cT.prev : TT.tail = cT.prev, cT.prev = TT.tail, cT.next = void 0, TT.tail.next = cT, TT.tail = cT, cT.position = TT.nextPosition++))
       }
-      enqueueChangeTree(vv) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vv.changesNode) || (vv.changesNode = this._appendToList(this.changes, vv))
+      enqueueChangeTree(TT) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : TT.changesNode) || (TT.changesNode = this._appendToList(this.changes, TT))
       }
-      enqueueUnreliable(vv) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vv.unreliableChangesNode) || (vv.unreliableChangesNode = this._appendToList(this.unreliableChanges, vv))
+      enqueueUnreliable(TT) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : TT.unreliableChangesNode) || (TT.unreliableChangesNode = this._appendToList(this.unreliableChanges, TT))
       }
-      _appendToList(vv, zv) {
-        const Pv = this._nodePool;
-        let hv;
-        return Pv.length > 0 ? (hv = Pv.pop(), hv.changeTree = zv, hv.next = void 0, hv.prev = void 0) : hv = {
-          changeTree: zv,
+      _appendToList(TT, kT) {
+        const cT = this._nodePool;
+        let lT;
+        return cT.length > 0 ? (lT = cT.pop(), lT.changeTree = kT, lT.next = void 0, lT.prev = void 0) : lT = {
+          changeTree: kT,
           next: void 0,
           prev: void 0,
           position: 0
-        }, vv.next ? (hv.prev = vv.tail, vv.tail.next = hv, vv.tail = hv) : (vv.nextPosition = 0, vv.next = hv, vv.tail = hv), hv.position = vv.nextPosition++, hv
+        }, TT.next ? (lT.prev = TT.tail, TT.tail.next = lT, TT.tail = lT) : (TT.nextPosition = 0, TT.next = lT, TT.tail = lT), lT.position = TT.nextPosition++, lT
       }
-      releaseNode(vv) {
-        vv.changeTree = void 0, vv.prev = void 0, vv.next = void 0, this._nodePool.push(vv)
+      releaseNode(TT) {
+        TT.changeTree = void 0, TT.prev = void 0, TT.next = void 0, this._nodePool.push(TT)
       }
-      removeFromQueue(vv) {
-        return this._removeNode(this.changes, vv, vv.changesNode, "changesNode")
+      removeFromQueue(TT) {
+        return this._removeNode(this.changes, TT, TT.changesNode, "changesNode")
       }
-      removeFromUnreliableQueue(vv) {
-        return this._removeNode(this.unreliableChanges, vv, vv.unreliableChangesNode, "unreliableChangesNode")
+      removeFromUnreliableQueue(TT) {
+        return this._removeNode(this.unreliableChanges, TT, TT.unreliableChangesNode, "unreliableChangesNode")
       }
-      _removeNode(vv, zv, Pv, hv) {
-        return !(!Pv || Pv.changeTree !== zv) && (Pv.prev ? Pv.prev.next = Pv.next : vv.next = Pv.next, Pv.next ? Pv.next.prev = Pv.prev : vv.tail = Pv.prev, zv[hv] = void 0, this.releaseNode(Pv), !0)
+      _removeNode(TT, kT, cT, lT) {
+        return !(!cT || cT.changeTree !== kT) && (cT.prev ? cT.prev.next = cT.next : TT.next = cT.next, cT.next ? cT.next.prev = cT.prev : TT.tail = cT.prev, kT[lT] = void 0, this.releaseNode(cT), !0)
       }
     }
 
-    function Rh(vv, zv) {
-      if (-1 === zv || zv >= vv.length) return !1;
-      const Pv = vv.length - 1;
-      for (let hv = zv; hv < Pv; hv++) vv[hv] = vv[hv + 1];
-      return vv.length = Pv, !0
+    function el(TT, kT) {
+      if (-1 === kT || kT >= TT.length) return !1;
+      const cT = TT.length - 1;
+      for (let lT = kT; lT < cT; lT++) TT[lT] = TT[lT + 1];
+      return TT.length = cT, !0
     }
 
-    function xh(vv, zv, Pv) {
-      const hv = ~Pv,
-        Sv = vv.changeTrees;
-      for (const ev in Sv) {
-        const vv = Sv[ev],
-          Pv = vv.visibleViews;
-        void 0 !== Pv && zv < Pv.length && (Pv[zv] &= hv);
-        const gv = vv.subscribedViews;
-        void 0 !== gv && zv < gv.length && (gv[zv] &= hv);
-        const pv = vv.tagViews;
-        void 0 !== pv && pv.forEach((vv => {
-          zv < vv.length && (vv[zv] &= hv)
+    function Gl(TT, kT, cT) {
+      const lT = ~cT,
+        MT = TT.changeTrees;
+      for (const KT in MT) {
+        const TT = MT[KT],
+          cT = TT.visibleViews;
+        void 0 !== cT && kT < cT.length && (cT[kT] &= lT);
+        const OT = TT.subscribedViews;
+        void 0 !== OT && kT < OT.length && (OT[kT] &= lT);
+        const yT = TT.tagViews;
+        void 0 !== yT && yT.forEach((TT => {
+          kT < TT.length && (TT[kT] &= lT)
         }))
       }
     }
-    const th = new FinalizationRegistry((vv => {
+    const Vl = new FinalizationRegistry((TT => {
       let {
-        root: zv,
-        id: Pv,
-        slot: hv,
-        bit: Sv
-      } = vv;
-      xh(zv, hv, Sv), zv.activeViews.delete(Pv);
-      for (const ev of zv.streamTrees) ev._dropView(Pv);
-      zv.releaseViewId(Pv)
+        root: kT,
+        id: cT,
+        slot: lT,
+        bit: MT
+      } = TT;
+      Gl(kT, lT, MT), kT.activeViews.delete(cT);
+      for (const KT of kT.streamTrees) KT._dropView(cT);
+      kT.releaseViewId(cT)
     }));
 
-    function qh(vv) {
-      if (void 0 === vv) return "undefined";
-      if (null === vv) return "null";
-      const zv = typeof vv;
-      return "string" === zv ? JSON.stringify(vv.length > 30 ? `${vv.slice(0,30)}\u2026` : vv) : "object" !== zv && "function" !== zv ? `${zv} ${String(vv)}` : Array.isArray(vv) ? `Array(${vv.length})` : vv.constructor?.name ?? "Object"
+    function El(TT) {
+      if (void 0 === TT) return "undefined";
+      if (null === TT) return "null";
+      const kT = typeof TT;
+      return "string" === kT ? JSON.stringify(TT.length > 30 ? `${TT.slice(0,30)}\u2026` : TT) : "object" !== kT && "function" !== kT ? `${kT} ${String(TT)}` : Array.isArray(TT) ? `Array(${TT.length})` : TT.constructor?.name ?? "Object"
     }
-    class Ih {
+    class Zl {
       iterable;
       items;
       id = -1;
@@ -5900,385 +5900,385 @@ export const modules = {
       _bit = 0;
       changes = new Map;
       constructor() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this.iterable = vv, vv && (this.items = [])
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this.iterable = TT, TT && (this.items = [])
       }
-      _bindRoot(vv) {
-        void 0 === this._root && (this._root = vv, this.id = vv.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), vv.registerView(this), th.register(this, {
-          root: vv,
+      _bindRoot(TT) {
+        void 0 === this._root && (this._root = TT, this.id = TT.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), TT.registerView(this), Vl.register(this, {
+          root: TT,
           id: this.id,
           slot: this._slot,
           bit: this._bit
         }, this))
       }
       dispose() {
-        void 0 !== this._root && (this._root.unregisterView(this), xh(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), th.unregister(this), this._root = void 0, this.id = -1)
+        void 0 !== this._root && (this._root.unregisterView(this), Gl(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), Vl.unregister(this), this._root = void 0, this.id = -1)
       }
-      isVisible(vv) {
-        const zv = vv.visibleViews,
-          Pv = this._slot;
-        return void 0 !== zv && Pv < zv.length && 0 !== (zv[Pv] & this._bit)
+      isVisible(TT) {
+        const kT = TT.visibleViews,
+          cT = this._slot;
+        return void 0 !== kT && cT < kT.length && 0 !== (kT[cT] & this._bit)
       }
-      markVisible(vv) {
-        const zv = this._slot;
-        let Pv = vv.visibleViews;
-        for (void 0 === Pv && (Pv = vv.visibleViews = []); Pv.length <= zv;) Pv.push(0);
-        Pv[zv] |= this._bit
+      markVisible(TT) {
+        const kT = this._slot;
+        let cT = TT.visibleViews;
+        for (void 0 === cT && (cT = TT.visibleViews = []); cT.length <= kT;) cT.push(0);
+        cT[kT] |= this._bit
       }
-      unmarkVisible(vv) {
-        const zv = vv.visibleViews;
-        if (void 0 === zv) return;
-        const Pv = this._slot;
-        Pv < zv.length && (zv[Pv] &= ~this._bit)
+      unmarkVisible(TT) {
+        const kT = TT.visibleViews;
+        if (void 0 === kT) return;
+        const cT = this._slot;
+        cT < kT.length && (kT[cT] &= ~this._bit)
       }
-      isSubscribed(vv) {
-        const zv = vv.subscribedViews,
-          Pv = this._slot;
-        return void 0 !== zv && Pv < zv.length && 0 !== (zv[Pv] & this._bit)
+      isSubscribed(TT) {
+        const kT = TT.subscribedViews,
+          cT = this._slot;
+        return void 0 !== kT && cT < kT.length && 0 !== (kT[cT] & this._bit)
       }
-      _setSubscribed(vv) {
-        const zv = this._slot;
-        let Pv = vv.subscribedViews;
-        for (void 0 === Pv && (Pv = vv.subscribedViews = []); Pv.length <= zv;) Pv.push(0);
-        Pv[zv] |= this._bit
+      _setSubscribed(TT) {
+        const kT = this._slot;
+        let cT = TT.subscribedViews;
+        for (void 0 === cT && (cT = TT.subscribedViews = []); cT.length <= kT;) cT.push(0);
+        cT[kT] |= this._bit
       }
-      _clearSubscribed(vv) {
-        const zv = vv.subscribedViews;
-        if (void 0 === zv) return;
-        const Pv = this._slot;
-        Pv < zv.length && (zv[Pv] &= ~this._bit)
+      _clearSubscribed(TT) {
+        const kT = TT.subscribedViews;
+        if (void 0 === kT) return;
+        const cT = this._slot;
+        cT < kT.length && (kT[cT] &= ~this._bit)
       }
-      hasTagOnTree(vv, zv) {
-        const Pv = vv.tagViews;
-        if (void 0 === Pv) return !1;
-        const hv = this._slot,
-          Sv = this._bit;
-        for (let ev = zv; 0 !== ev; ev &= ev - 1) {
-          const vv = Pv.get(ev & -ev);
-          if (void 0 !== vv && hv < vv.length && 0 !== (vv[hv] & Sv)) return !0
+      hasTagOnTree(TT, kT) {
+        const cT = TT.tagViews;
+        if (void 0 === cT) return !1;
+        const lT = this._slot,
+          MT = this._bit;
+        for (let KT = kT; 0 !== KT; KT &= KT - 1) {
+          const TT = cT.get(KT & -KT);
+          if (void 0 !== TT && lT < TT.length && 0 !== (TT[lT] & MT)) return !0
         }
         return !1
       }
-      addTag(vv, zv) {
-        if (zv === ah) return;
-        let Pv = vv.tagViews;
-        void 0 === Pv && (Pv = vv.tagViews = new Map);
-        const hv = this._slot,
-          Sv = this._bit;
-        for (let ev = zv; ev > 0; ev &= ev - 1) {
-          const vv = ev & -ev;
-          let zv = Pv.get(vv);
-          for (void 0 === zv && (zv = [], Pv.set(vv, zv)); zv.length <= hv;) zv.push(0);
-          zv[hv] |= Sv
+      addTag(TT, kT) {
+        if (kT === tl) return;
+        let cT = TT.tagViews;
+        void 0 === cT && (cT = TT.tagViews = new Map);
+        const lT = this._slot,
+          MT = this._bit;
+        for (let KT = kT; KT > 0; KT &= KT - 1) {
+          const TT = KT & -KT;
+          let kT = cT.get(TT);
+          for (void 0 === kT && (kT = [], cT.set(TT, kT)); kT.length <= lT;) kT.push(0);
+          kT[lT] |= MT
         }
       }
-      removeTag(vv, zv) {
-        if (zv === ah) return;
-        const Pv = vv.tagViews;
-        if (void 0 === Pv) return;
-        const hv = this._slot,
-          Sv = ~this._bit;
-        for (let ev = zv; ev > 0; ev &= ev - 1) {
-          const vv = Pv.get(ev & -ev);
-          void 0 !== vv && hv < vv.length && (vv[hv] &= Sv)
+      removeTag(TT, kT) {
+        if (kT === tl) return;
+        const cT = TT.tagViews;
+        if (void 0 === cT) return;
+        const lT = this._slot,
+          MT = ~this._bit;
+        for (let KT = kT; KT > 0; KT &= KT - 1) {
+          const TT = cT.get(KT & -KT);
+          void 0 !== TT && lT < TT.length && (TT[lT] &= MT)
         }
       }
-      removeAllTagsOnTree(vv) {
-        const zv = vv.tagViews;
-        if (void 0 === zv) return;
-        const Pv = this._slot,
-          hv = ~this._bit;
-        zv.forEach((vv => {
-          Pv < vv.length && (vv[Pv] &= hv)
+      removeAllTagsOnTree(TT) {
+        const kT = TT.tagViews;
+        if (void 0 === kT) return;
+        const cT = this._slot,
+          lT = ~this._bit;
+        kT.forEach((TT => {
+          cT < TT.length && (TT[cT] &= lT)
         }))
       }
-      add(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ah,
-          Pv = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        return this._add(vv, zv, Pv, !1)
+      add(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tl,
+          cT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        return this._add(TT, kT, cT, !1)
       }
-      _addImmediate(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ah;
-        this._add(vv, zv, !0, !0)
+      _addImmediate(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tl;
+        this._add(TT, kT, !0, !0)
       }
-      _add(vv, zv, Pv, hv) {
-        const ev = vv?.[sv];
-        if (!ev) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${qh(vv)}`), !1;
-        const gv = ev.parent;
-        if (!gv && 0 !== vv[pv]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${ev.ref.constructor.name}" instance to the state before calling view.add()`);
-        void 0 === this._root && void 0 !== ev.root && this._bindRoot(ev.root);
-        const dv = gv?.[sv];
-        if (!hv && dv?.isStreamCollection) return Rz(gv, this.id, ev.parentIndex), !0;
-        const Nv = vv.constructor[Symbol.metadata],
-          lv = this.isVisible(ev);
-        if (!this.iterable || !Pv || lv && -1 !== this.items.indexOf(vv) || this.items.push(vv), this.markVisible(ev), Pv && gv && this.addParentOf(ev, zv), !hv && ev.isStreamCollection) return !0;
-        if (zv === ah && ev.isNew) return this._markSubtreeVisible(ev, zv), !1;
-        let Tv = this.changes.get(vv[pv]);
-        void 0 === Tv && (Tv = new Map, this.changes.set(vv[pv], Tv));
-        let Wv = !1;
-        const wv = ev.encDescriptor.tags;
-        if (ev.forEachChild(((vv, Pv) => {
-            const hv = wv[Pv];
-            if (void 0 !== hv) {
-              if (!(hv === ah || zv !== ah && 0 !== (hv & zv))) return
+      _add(TT, kT, cT, lT) {
+        const KT = TT?.[tT];
+        if (!KT) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${El(TT)}`), !1;
+        const OT = KT.parent;
+        if (!OT && 0 !== TT[yT]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${KT.ref.constructor.name}" instance to the state before calling view.add()`);
+        void 0 === this._root && void 0 !== KT.root && this._bindRoot(KT.root);
+        const fT = OT?.[tT];
+        if (!lT && fT?.isStreamCollection) return ek(OT, this.id, KT.parentIndex), !0;
+        const xT = TT.constructor[Symbol.metadata],
+          IT = this.isVisible(KT);
+        if (!this.iterable || !cT || IT && -1 !== this.items.indexOf(TT) || this.items.push(TT), this.markVisible(KT), cT && OT && this.addParentOf(KT, kT), !lT && KT.isStreamCollection) return !0;
+        if (kT === tl && KT.isNew) return this._markSubtreeVisible(KT, kT), !1;
+        let AT = this.changes.get(TT[yT]);
+        void 0 === AT && (AT = new Map, this.changes.set(TT[yT], AT));
+        let CT = !1;
+        const jT = KT.encDescriptor.tags;
+        if (KT.forEachChild(((TT, cT) => {
+            const lT = jT[cT];
+            if (void 0 !== lT) {
+              if (!(lT === tl || kT !== tl && 0 !== (lT & kT))) return
             }
-            this.add(vv.ref, zv, !1) && (Wv = !0)
-          })), zv !== ah) {
-          this.addTag(ev, zv);
-          const vv = Nv?.[Vv];
-          if (void 0 !== vv)
-            for (let Pv = zv; Pv > 0; Pv &= Pv - 1) vv[Pv & -Pv]?.forEach((vv => {
-              ev.getChange(vv) !== Sv.DELETE && Tv.set(vv, Sv.ADD)
+            this.add(TT.ref, kT, !1) && (CT = !0)
+          })), kT !== tl) {
+          this.addTag(KT, kT);
+          const TT = xT?.[JT];
+          if (void 0 !== TT)
+            for (let cT = kT; cT > 0; cT &= cT - 1) TT[cT & -cT]?.forEach((TT => {
+              KT.getChange(TT) !== MT.DELETE && AT.set(TT, MT.ADD)
             }))
         }
-        if ((zv === ah || !lv) && (!ev.isNew || Wv))
-          if (ev.isArray && "string" !== typeof ev.refTarget[Cv]) ev.refTarget.items.length > 0 && (Tv.set(-1, Sv.ADD), Wv = !0);
+        if ((kT === tl || !IT) && (!KT.isNew || CT))
+          if (KT.isArray && "string" !== typeof KT.refTarget[hT]) KT.refTarget.items.length > 0 && (AT.set(-1, MT.ADD), CT = !0);
           else {
-            const vv = ev.encDescriptor.tags;
-            ev.forEachLive((Pv => {
-              const hv = vv[Pv];
-              (void 0 === hv || hv === ah || zv !== ah && 0 !== (hv & zv)) && (Tv.set(Pv, Sv.ADD), Wv = !0)
+            const TT = KT.encDescriptor.tags;
+            KT.forEachLive((cT => {
+              const lT = TT[cT];
+              (void 0 === lT || lT === tl || kT !== tl && 0 !== (lT & kT)) && (AT.set(cT, MT.ADD), CT = !0)
             }))
-          } return Wv
+          } return CT
       }
-      _markSubtreeVisible(vv, zv) {
-        const Pv = vv.encDescriptor.tags;
-        vv.forEachChild(((vv, hv) => {
-          const Sv = Pv[hv];
-          if (void 0 !== Sv) {
-            if (!(Sv === ah || zv !== ah && 0 !== (Sv & zv))) return
+      _markSubtreeVisible(TT, kT) {
+        const cT = TT.encDescriptor.tags;
+        TT.forEachChild(((TT, lT) => {
+          const MT = cT[lT];
+          if (void 0 !== MT) {
+            if (!(MT === tl || kT !== tl && 0 !== (MT & kT))) return
           }
-          vv.isNew ? (this.markVisible(vv), this._markSubtreeVisible(vv, zv)) : this._add(vv.ref, zv, !1, !1)
+          TT.isNew ? (this.markVisible(TT), this._markSubtreeVisible(TT, kT)) : this._add(TT.ref, kT, !1, !1)
         }))
       }
-      addParentOf(vv, zv) {
-        const Pv = vv.parent[sv],
-          hv = vv.parentIndex;
-        this.isVisible(Pv) || this.markVisible(Pv);
-        const ev = Pv.parent?.[sv];
-        if (ev && this.addParentOf(Pv, zv), Pv.hasFilteredFields && Pv.getChange(hv) !== Sv.DELETE) {
-          let ev = this.changes.get(Pv.ref[pv]);
-          void 0 === ev && (ev = new Map, this.changes.set(Pv.ref[pv], ev));
-          const gv = Pv.encDescriptor.tags[hv];
-          void 0 !== gv && gv !== ah && 0 !== (gv & zv) && this.addTag(Pv, zv), ev.set(Pv.isArray ? vv : hv, Sv.ADD)
+      addParentOf(TT, kT) {
+        const cT = TT.parent[tT],
+          lT = TT.parentIndex;
+        this.isVisible(cT) || this.markVisible(cT);
+        const KT = cT.parent?.[tT];
+        if (KT && this.addParentOf(cT, kT), cT.hasFilteredFields && cT.getChange(lT) !== MT.DELETE) {
+          let KT = this.changes.get(cT.ref[yT]);
+          void 0 === KT && (KT = new Map, this.changes.set(cT.ref[yT], KT));
+          const OT = cT.encDescriptor.tags[lT];
+          void 0 !== OT && OT !== tl && 0 !== (OT & kT) && this.addTag(cT, kT), KT.set(cT.isArray ? TT : lT, MT.ADD)
         }
       }
-      _touchAncestorsOf(vv) {
-        let zv = vv.parent?.[sv];
-        if (void 0 === zv) return;
-        const Pv = [];
-        for (; void 0 !== zv;) {
-          if (zv.hasFilteredFields) {
-            const vv = zv.ref[pv];
-            if (this.changes.has(vv)) break;
-            Pv.push(zv)
+      _touchAncestorsOf(TT) {
+        let kT = TT.parent?.[tT];
+        if (void 0 === kT) return;
+        const cT = [];
+        for (; void 0 !== kT;) {
+          if (kT.hasFilteredFields) {
+            const TT = kT.ref[yT];
+            if (this.changes.has(TT)) break;
+            cT.push(kT)
           }
-          zv = zv.parent?.[sv]
+          kT = kT.parent?.[tT]
         }
-        for (let hv = Pv.length - 1; hv >= 0; hv--) this.changes.set(Pv[hv].ref[pv], new Map)
+        for (let lT = cT.length - 1; lT >= 0; lT--) this.changes.set(cT[lT].ref[yT], new Map)
       }
-      remove(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ah,
-          Pv = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const hv = vv?.[sv];
-        if (!hv) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${qh(vv)}`), this;
-        const ev = hv.parent?.[sv];
-        if (ev?.isStreamCollection) return this.unmarkVisible(hv), this.iterable && !Pv && Rh(this.items, this.items.indexOf(vv)),
-          function(vv, zv, Pv, hv, ev) {
-            const gv = vv._stream;
-            if (void 0 === gv) return !1;
-            const pv = gv.pendingByView.get(zv);
-            if (pv?.has(hv)) return pv.delete(hv), !1;
-            const dv = gv.sentByView.get(zv);
-            if (dv?.has(hv)) {
-              dv.delete(hv);
-              let vv = ev.get(Pv);
-              return void 0 === vv && (vv = new Map, ev.set(Pv, vv)), vv.set(hv, Sv.DELETE), !0
+      remove(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tl,
+          cT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const lT = TT?.[tT];
+        if (!lT) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${El(TT)}`), this;
+        const KT = lT.parent?.[tT];
+        if (KT?.isStreamCollection) return this.unmarkVisible(lT), this.iterable && !cT && el(this.items, this.items.indexOf(TT)),
+          function(TT, kT, cT, lT, KT) {
+            const OT = TT._stream;
+            if (void 0 === OT) return !1;
+            const yT = OT.pendingByView.get(kT);
+            if (yT?.has(lT)) return yT.delete(lT), !1;
+            const fT = OT.sentByView.get(kT);
+            if (fT?.has(lT)) {
+              fT.delete(lT);
+              let TT = KT.get(cT);
+              return void 0 === TT && (TT = new Map, KT.set(cT, TT)), TT.set(lT, MT.DELETE), !0
             }
-          }(hv.parent, this.id, hv.parent[pv], hv.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(hv), this;
-        if (hv.isStreamCollection) {
-          this.unmarkVisible(hv), this.iterable && !Pv && Rh(this.items, this.items.indexOf(vv));
-          const zv = hv.ref,
-            ev = zv._stream;
-          if (void 0 !== ev) {
-            ev.pendingByView.get(this.id)?.clear();
-            const vv = ev.sentByView.get(this.id);
-            if (void 0 !== vv && vv.size > 0) {
-              const Pv = zv[pv];
-              let hv = this.changes.get(Pv);
-              void 0 === hv && (hv = new Map, this.changes.set(Pv, hv));
-              for (const zv of vv) hv.set(zv, Sv.DELETE);
-              vv.clear()
+          }(lT.parent, this.id, lT.parent[yT], lT.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(lT), this;
+        if (lT.isStreamCollection) {
+          this.unmarkVisible(lT), this.iterable && !cT && el(this.items, this.items.indexOf(TT));
+          const kT = lT.ref,
+            KT = kT._stream;
+          if (void 0 !== KT) {
+            KT.pendingByView.get(this.id)?.clear();
+            const TT = KT.sentByView.get(this.id);
+            if (void 0 !== TT && TT.size > 0) {
+              const cT = kT[yT];
+              let lT = this.changes.get(cT);
+              void 0 === lT && (lT = new Map, this.changes.set(cT, lT));
+              for (const kT of TT) lT.set(kT, MT.DELETE);
+              TT.clear()
             }
           }
           return this
         }
-        this.unmarkVisible(hv), this.iterable && !Pv && Rh(this.items, this.items.indexOf(vv));
-        const gv = hv.ref,
-          dv = gv.constructor[Symbol.metadata],
-          Nv = gv[pv];
-        this._touchAncestorsOf(hv);
-        let lv = this.changes.get(Nv);
-        if (void 0 === lv && (lv = new Map, this.changes.set(Nv, lv)), zv === ah) {
-          const vv = hv.parent;
-          if (vv && !oz.isValidInstance(vv) && hv.isFiltered) {
-            const zv = ev.isArray ? hv : hv.parentIndex,
-              Pv = vv[pv];
-            let gv = this.changes.get(Pv);
-            void 0 === gv ? (gv = new Map, this.changes.set(Pv, gv)) : gv.get(zv) === Sv.ADD && this._dropPendingEntries(hv), gv.set(zv, Sv.DELETE), this._recursiveDeleteVisibleChangeTree(hv)
-          } else dv?.[Kv]?.forEach((vv => this._removeViewField(hv, lv, vv)))
+        this.unmarkVisible(lT), this.iterable && !cT && el(this.items, this.items.indexOf(TT));
+        const OT = lT.ref,
+          fT = OT.constructor[Symbol.metadata],
+          xT = OT[yT];
+        this._touchAncestorsOf(lT);
+        let IT = this.changes.get(xT);
+        if (void 0 === IT && (IT = new Map, this.changes.set(xT, IT)), kT === tl) {
+          const TT = lT.parent;
+          if (TT && !nk.isValidInstance(TT) && lT.isFiltered) {
+            const kT = KT.isArray ? lT : lT.parentIndex,
+              cT = TT[yT];
+            let OT = this.changes.get(cT);
+            void 0 === OT ? (OT = new Map, this.changes.set(cT, OT)) : OT.get(kT) === MT.ADD && this._dropPendingEntries(lT), OT.set(kT, MT.DELETE), this._recursiveDeleteVisibleChangeTree(lT)
+          } else fT?.[zT]?.forEach((TT => this._removeViewField(lT, IT, TT)))
         } else {
-          const vv = dv?.[Vv];
-          if (void 0 !== vv)
-            for (let Pv = zv; Pv > 0; Pv &= Pv - 1) vv[Pv & -Pv]?.forEach((vv => this._removeViewField(hv, lv, vv)))
+          const TT = fT?.[JT];
+          if (void 0 !== TT)
+            for (let cT = kT; cT > 0; cT &= cT - 1) TT[cT & -cT]?.forEach((TT => this._removeViewField(lT, IT, TT)))
         }
-        return void 0 === zv ? this.removeAllTagsOnTree(hv) : this.removeTag(hv, zv), this
+        return void 0 === kT ? this.removeAllTagsOnTree(lT) : this.removeTag(lT, kT), this
       }
-      has(vv) {
-        return this.isVisible(vv[sv])
+      has(TT) {
+        return this.isVisible(TT[tT])
       }
-      hasTag(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ah;
-        return this.hasTagOnTree(vv[sv], zv)
+      hasTag(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tl;
+        return this.hasTagOnTree(TT[tT], kT)
       }
-      subscribe(vv, zv) {
-        const Pv = vv?.[sv];
-        if (!Pv) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${qh(vv)}`), this;
-        if (void 0 === this._root && void 0 !== Pv.root && this._bindRoot(Pv.root), void 0 !== zv)
-          if (Pv.isStreamCollection) {
-            const Pv = Oz(vv);
-            null === zv ? Pv.priorityByView?.delete(this.id) : (Pv.priorityByView ??= new Map).set(this.id, zv)
+      subscribe(TT, kT) {
+        const cT = TT?.[tT];
+        if (!cT) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${El(TT)}`), this;
+        if (void 0 === this._root && void 0 !== cT.root && this._bindRoot(cT.root), void 0 !== kT)
+          if (cT.isStreamCollection) {
+            const cT = mk(TT);
+            null === kT ? cT.priorityByView?.delete(this.id) : (cT.priorityByView ??= new Map).set(this.id, kT)
           } else {
-            const zv = vv?.constructor?.name ?? "collection",
-              hv = Pv.parent;
-            if (void 0 === hv) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${zv} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
+            const kT = TT?.constructor?.name ?? "collection",
+              lT = cT.parent;
+            if (void 0 === lT) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${kT} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
             else {
-              const vv = hv?.constructor?.[Symbol.metadata]?.[Pv.parentIndex]?.name,
-                Sv = vv ? `${hv.constructor.name}#${vv}` : zv;
-              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${Sv} is a ${zv}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
+              const TT = lT?.constructor?.[Symbol.metadata]?.[cT.parentIndex]?.name,
+                MT = TT ? `${lT.constructor.name}#${TT}` : kT;
+              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${MT} is a ${kT}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
             }
-          } if (this.isSubscribed(Pv)) return this;
-        const hv = void 0 !== Pv.parent && !this.isVisible(Pv);
-        if (hv ? (this.addParentOf(Pv, ah), this._add(vv, ah, !1, !1)) : this.markVisible(Pv), this._setSubscribed(Pv), Pv.isStreamCollection) {
-          const zv = vv;
-          Pv.forEachChild(((vv, Pv) => {
-            Rz(zv, this.id, Pv)
+          } if (this.isSubscribed(cT)) return this;
+        const lT = void 0 !== cT.parent && !this.isVisible(cT);
+        if (lT ? (this.addParentOf(cT, tl), this._add(TT, tl, !1, !1)) : this.markVisible(cT), this._setSubscribed(cT), cT.isStreamCollection) {
+          const kT = TT;
+          cT.forEachChild(((TT, cT) => {
+            ek(kT, this.id, cT)
           }))
-        } else hv || Pv.forEachChild((vv => {
-          this.markVisible(vv)
+        } else lT || cT.forEachChild((TT => {
+          this.markVisible(TT)
         }));
         return this
       }
-      unsubscribe(vv) {
-        const zv = vv?.[sv];
-        if (!zv) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${qh(vv)}`), this;
-        if (!this.isSubscribed(zv)) return this;
-        this._clearSubscribed(zv);
-        const Pv = zv.ref[pv];
-        if (zv.isStreamCollection) {
-          const zv = vv._stream;
-          if (void 0 !== zv) {
-            zv.pendingByView.get(this.id)?.clear();
-            const vv = zv.sentByView.get(this.id);
-            if (void 0 !== vv && vv.size > 0) {
-              let zv = this.changes.get(Pv);
-              void 0 === zv && (zv = new Map, this.changes.set(Pv, zv));
-              for (const Pv of vv) zv.set(Pv, Sv.DELETE);
-              vv.clear()
+      unsubscribe(TT) {
+        const kT = TT?.[tT];
+        if (!kT) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${El(TT)}`), this;
+        if (!this.isSubscribed(kT)) return this;
+        this._clearSubscribed(kT);
+        const cT = kT.ref[yT];
+        if (kT.isStreamCollection) {
+          const kT = TT._stream;
+          if (void 0 !== kT) {
+            kT.pendingByView.get(this.id)?.clear();
+            const TT = kT.sentByView.get(this.id);
+            if (void 0 !== TT && TT.size > 0) {
+              let kT = this.changes.get(cT);
+              void 0 === kT && (kT = new Map, this.changes.set(cT, kT));
+              for (const cT of TT) kT.set(cT, MT.DELETE);
+              TT.clear()
             }
           }
         } else {
-          const vv = zv.isArray;
-          let hv = this.changes.get(Pv);
-          zv.forEachChild(((zv, ev) => {
-            void 0 === hv && (hv = new Map, this.changes.set(Pv, hv)), hv.set(vv ? zv : ev, Sv.DELETE), this.unmarkVisible(zv)
+          const TT = kT.isArray;
+          let lT = this.changes.get(cT);
+          kT.forEachChild(((kT, KT) => {
+            void 0 === lT && (lT = new Map, this.changes.set(cT, lT)), lT.set(TT ? kT : KT, MT.DELETE), this.unmarkVisible(kT)
           }))
         }
-        return this.unmarkVisible(zv), this
+        return this.unmarkVisible(kT), this
       }
       clear() {
         if (!this.iterable) throw new Error("StateView#clear() is only available for iterable StateView's. Use StateView(iterable: true) constructor.");
-        for (let vv = 0, zv = this.items.length; vv < zv; vv++) this.remove(this.items[vv], ah, !0);
+        for (let TT = 0, kT = this.items.length; TT < kT; TT++) this.remove(this.items[TT], tl, !0);
         this.items.length = 0
       }
-      isChangeTreeVisible(vv) {
-        let zv = this.isVisible(vv);
-        if (!zv && vv.isVisibilitySharedWithParent)
-          if (this.isVisible(vv.parent[sv])) this.markVisible(vv), zv = !0;
+      isChangeTreeVisible(TT) {
+        let kT = this.isVisible(TT);
+        if (!kT && TT.isVisibilitySharedWithParent)
+          if (this.isVisible(TT.parent[tT])) this.markVisible(TT), kT = !0;
           else
-            for (let Pv = vv.extraParents; void 0 !== Pv; Pv = Pv.next) {
-              const hv = Pv.ref[sv];
-              if (hv.isFiltered && this.isVisible(hv)) {
-                this.markVisible(vv), zv = !0;
+            for (let cT = TT.extraParents; void 0 !== cT; cT = cT.next) {
+              const lT = cT.ref[tT];
+              if (lT.isFiltered && this.isVisible(lT)) {
+                this.markVisible(TT), kT = !0;
                 break
               }
             }
-        return zv
+        return kT
       }
-      _recursiveDeleteVisibleChangeTree(vv) {
-        vv.forEachChild((vv => {
-          this.unmarkVisible(vv), this._recursiveDeleteVisibleChangeTree(vv)
+      _recursiveDeleteVisibleChangeTree(TT) {
+        TT.forEachChild((TT => {
+          this.unmarkVisible(TT), this._recursiveDeleteVisibleChangeTree(TT)
         }))
       }
-      _dropPendingEntries(vv) {
-        this.changes.delete(vv.ref[pv]), vv.forEachChild((vv => this._dropPendingEntries(vv)))
+      _dropPendingEntries(TT) {
+        this.changes.delete(TT.ref[yT]), TT.forEachChild((TT => this._dropPendingEntries(TT)))
       }
-      _removeViewField(vv, zv, Pv) {
-        const hv = zv.get(Pv) === Sv.ADD;
-        zv.set(Pv, Sv.DELETE);
-        const ev = vv.ref[vv.encDescriptor.names[Pv]],
-          gv = ev?.[sv];
-        gv && (this.unmarkVisible(gv), this._recursiveDeleteVisibleChangeTree(gv), hv && this._dropPendingEntries(gv))
+      _removeViewField(TT, kT, cT) {
+        const lT = kT.get(cT) === MT.ADD;
+        kT.set(cT, MT.DELETE);
+        const KT = TT.ref[TT.encDescriptor.names[cT]],
+          OT = KT?.[tT];
+        OT && (this.unmarkVisible(OT), this._recursiveDeleteVisibleChangeTree(OT), lT && this._dropPendingEntries(OT))
       }
     }
 
-    function Qh(vv) {
-      vv.structSwitchEmitted || (vv.shouldEmitSwitch && (vv.buffer[vv.it.offset++] = 255, zz.number(vv.buffer, vv.ref[pv], vv.it)), vv.structSwitchEmitted = !0)
+    function ul(TT) {
+      TT.structSwitchEmitted || (TT.shouldEmitSwitch && (TT.buffer[TT.it.offset++] = 255, kk.number(TT.buffer, TT.ref[yT], TT.it)), TT.structSwitchEmitted = !0)
     }
 
-    function Zh(vv, zv) {
-      Hh(vv, zv, Sv.ADD)
+    function Xl(TT, kT) {
+      Rl(TT, kT, MT.ADD)
     }
 
-    function Ah(vv, zv) {
-      if (zv._fullSyncGen === vv.gen) return;
-      zv._fullSyncGen = vv.gen;
-      if (!vv.hasView || vv.view.isChangeTreeVisible(zv)) {
-        const Pv = zv.encDescriptor;
-        vv.changeTree = zv, vv.ref = zv.ref, vv.encoder = Pv.encoder, vv.filter = Pv.filter, vv.metadata = Pv.metadata, vv.treeIsFiltered = zv.isFiltered, vv.isSchema = Pv.isSchema, vv.filterBitmask = Pv.filterBitmask, vv.tags = Pv.tags, vv.structSwitchEmitted = !1, vv.shouldEmitSwitch = vv.hasView || vv.it.offset > vv.initialOffset || zv !== vv.rootChangeTree, zv.isArray && zv.collDirty.size > 0 && (zv.flags |= 512), SP(zv, vv, Zh)
+    function dl(TT, kT) {
+      if (kT._fullSyncGen === TT.gen) return;
+      kT._fullSyncGen = TT.gen;
+      if (!TT.hasView || TT.view.isChangeTreeVisible(kT)) {
+        const cT = kT.encDescriptor;
+        TT.changeTree = kT, TT.ref = kT.ref, TT.encoder = cT.encoder, TT.filter = cT.filter, TT.metadata = cT.metadata, TT.treeIsFiltered = kT.isFiltered, TT.isSchema = cT.isSchema, TT.filterBitmask = cT.filterBitmask, TT.tags = cT.tags, TT.structSwitchEmitted = !1, TT.shouldEmitSwitch = TT.hasView || TT.it.offset > TT.initialOffset || kT !== TT.rootChangeTree, kT.isArray && kT.collDirty.size > 0 && (kT.flags |= 512), Kc(kT, TT, Xl)
       }
-      iP(zv, vv, Lh)
+      Qc(kT, TT, Ll)
     }
 
-    function Lh(vv, zv, Pv) {
-      Ah(vv, zv)
+    function Ll(TT, kT, cT) {
+      dl(TT, kT)
     }
 
-    function Hh(vv, zv, Pv) {
-      if (zv < 0) {
-        if (vv.treeIsFiltered !== vv.emitFiltered) return;
-        return Qh(vv), void(vv.buffer[vv.it.offset++] = 255 & Math.abs(zv))
+    function Rl(TT, kT, cT) {
+      if (kT < 0) {
+        if (TT.treeIsFiltered !== TT.emitFiltered) return;
+        return ul(TT), void(TT.buffer[TT.it.offset++] = 255 & Math.abs(kT))
       }
-      if ((vv.isSchema ? vv.treeIsFiltered || (zv < 32 ? 0 !== (vv.filterBitmask & 1 << zv) : void 0 !== vv.tags[zv]) : vv.treeIsFiltered) !== vv.emitFiltered) return;
-      const hv = vv.isEncodeAll ? Sv.ADD : Pv;
-      void 0 !== hv && (void 0 === vv.filter || vv.filter(vv.ref, zv, vv.view)) && (Qh(vv), vv.encoder(vv.self, vv.buffer, vv.changeTree, zv, hv, vv.it, vv.isEncodeAll, vv.hasView, vv.metadata))
+      if ((TT.isSchema ? TT.treeIsFiltered || (kT < 32 ? 0 !== (TT.filterBitmask & 1 << kT) : void 0 !== TT.tags[kT]) : TT.treeIsFiltered) !== TT.emitFiltered) return;
+      const lT = TT.isEncodeAll ? MT.ADD : cT;
+      void 0 !== lT && (void 0 === TT.filter || TT.filter(TT.ref, kT, TT.view)) && (ul(TT), TT.encoder(TT.self, TT.buffer, TT.changeTree, kT, lT, TT.it, TT.isEncodeAll, TT.hasView, TT.metadata))
     }
 
-    function Mh(vv, zv) {
-      const Pv = new Uint8Array(vv.length + zv.length);
-      return Pv.set(vv, 0), Pv.set(zv, vv.length), Pv
+    function gl(TT, kT) {
+      const cT = new Uint8Array(TT.length + kT.length);
+      return cT.set(TT, 0), cT.set(kT, TT.length), cT
     }
-    class yh {
+    class Ul {
       static BUFFER_SIZE = 16384;
-      sharedBuffer = new Uint8Array(yh.BUFFER_SIZE);
+      sharedBuffer = new Uint8Array(Ul.BUFFER_SIZE);
       context;
       state;
       root;
-      constructor(vv, zv) {
-        this.context = Lz.cache(vv.constructor), this.root = zv ?? new Uh(this.context), this.setState(vv)
+      constructor(TT, kT) {
+        this.context = Lk.cache(TT.constructor), this.root = kT ?? new Hl(this.context), this.setState(TT)
       }
-      setState(vv) {
-        this.state = vv, this.state[sv].setRoot(this.root)
+      setState(TT) {
+        this.state = TT, this.state[tT].setRoot(this.root)
       }
       _encodeCtx = {
         self: void 0,
@@ -6306,271 +6306,271 @@ export const modules = {
       };
       _fullSyncGen = 0;
       encode() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          zv = arguments.length > 1 ? arguments[1] : void 0,
-          Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          hv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : vv.offset;
-        return this._encodeChannel(vv, zv, Pv, hv, !1)
+          kT = arguments.length > 1 ? arguments[1] : void 0,
+          cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : TT.offset;
+        return this._encodeChannel(TT, kT, cT, lT, !1)
       }
       encodeUnreliable() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          zv = arguments.length > 1 ? arguments[1] : void 0,
-          Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          hv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : vv.offset;
-        return this._encodeChannel(vv, zv, Pv, hv, !0)
+          kT = arguments.length > 1 ? arguments[1] : void 0,
+          cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : TT.offset;
+        return this._encodeChannel(TT, kT, cT, lT, !0)
       }
-      _encodeChannel(vv, zv, Pv, hv, Sv) {
-        this.root.pendingFilterRefresh.length > 0 && gP(this.root);
-        const ev = void 0 !== zv,
-          gv = this.state[sv],
-          pv = this._encodeCtx;
-        pv.self = this, pv.buffer = Pv, pv.it = vv, pv.view = zv, pv.isEncodeAll = !1, pv.hasView = ev, pv.emitFiltered = ev;
-        let dv = Sv ? this.root.unreliableChanges : this.root.changes;
-        for (; dv = dv.next;) {
-          const Pv = dv.changeTree;
-          if (ev && !zv.isChangeTreeVisible(Pv)) continue;
-          const Nv = Sv ? Pv.unreliableRecorder : Pv;
-          if (!Nv || !Nv.has()) continue;
-          const lv = Pv.encDescriptor;
-          pv.changeTree = Pv, pv.ref = Pv.ref, pv.encoder = lv.encoder, pv.filter = lv.filter, pv.metadata = lv.metadata, pv.treeIsFiltered = Pv.isFiltered, pv.isSchema = lv.isSchema, pv.filterBitmask = lv.filterBitmask, pv.tags = lv.tags, pv.structSwitchEmitted = !1, pv.isRootTree = Pv === gv, pv.shouldEmitSwitch = ev || vv.offset > hv || !pv.isRootTree, Nv.forEachWithCtx(pv, Hh)
+      _encodeChannel(TT, kT, cT, lT, MT) {
+        this.root.pendingFilterRefresh.length > 0 && yc(this.root);
+        const KT = void 0 !== kT,
+          OT = this.state[tT],
+          yT = this._encodeCtx;
+        yT.self = this, yT.buffer = cT, yT.it = TT, yT.view = kT, yT.isEncodeAll = !1, yT.hasView = KT, yT.emitFiltered = KT;
+        let fT = MT ? this.root.unreliableChanges : this.root.changes;
+        for (; fT = fT.next;) {
+          const cT = fT.changeTree;
+          if (KT && !kT.isChangeTreeVisible(cT)) continue;
+          const xT = MT ? cT.unreliableRecorder : cT;
+          if (!xT || !xT.has()) continue;
+          const IT = cT.encDescriptor;
+          yT.changeTree = cT, yT.ref = cT.ref, yT.encoder = IT.encoder, yT.filter = IT.filter, yT.metadata = IT.metadata, yT.treeIsFiltered = cT.isFiltered, yT.isSchema = IT.isSchema, yT.filterBitmask = IT.filterBitmask, yT.tags = IT.tags, yT.structSwitchEmitted = !1, yT.isRootTree = cT === OT, yT.shouldEmitSwitch = KT || TT.offset > lT || !yT.isRootTree, xT.forEachWithCtx(yT, Rl)
         }
-        return Sv || ev || !this._isStreamBroadcastMode || this._emitStreamBroadcast(Pv, vv), vv.offset > Pv.byteLength ? (Pv = this._resizeBuffer(Pv, vv.offset), vv.offset = hv, this._encodeChannel(vv, zv, Pv, hv, Sv)) : Pv.subarray(0, vv.offset)
+        return MT || KT || !this._isStreamBroadcastMode || this._emitStreamBroadcast(cT, TT), TT.offset > cT.byteLength ? (cT = this._resizeBuffer(cT, TT.offset), TT.offset = lT, this._encodeChannel(TT, kT, cT, lT, MT)) : cT.subarray(0, TT.offset)
       }
-      encodeFullSync(vv, zv, Pv, hv) {
-        let Sv = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : vv.offset;
-        this.root.pendingFilterRefresh.length > 0 && gP(this.root);
-        const ev = void 0 !== hv,
-          gv = this.state[sv],
-          pv = this._encodeCtx;
-        return pv.self = this, pv.buffer = zv, pv.it = vv, pv.view = hv, pv.isEncodeAll = !0, pv.hasView = ev, pv.emitFiltered = Pv, pv.gen = ++this._fullSyncGen, pv.initialOffset = Sv, pv.rootChangeTree = gv, Ah(pv, gv), vv.offset > zv.byteLength ? (zv = this._resizeBuffer(zv, vv.offset), vv.offset = Sv, this.encodeFullSync(vv, zv, Pv, hv, Sv)) : zv.subarray(0, vv.offset)
+      encodeFullSync(TT, kT, cT, lT) {
+        let MT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : TT.offset;
+        this.root.pendingFilterRefresh.length > 0 && yc(this.root);
+        const KT = void 0 !== lT,
+          OT = this.state[tT],
+          yT = this._encodeCtx;
+        return yT.self = this, yT.buffer = kT, yT.it = TT, yT.view = lT, yT.isEncodeAll = !0, yT.hasView = KT, yT.emitFiltered = cT, yT.gen = ++this._fullSyncGen, yT.initialOffset = MT, yT.rootChangeTree = OT, dl(yT, OT), TT.offset > kT.byteLength ? (kT = this._resizeBuffer(kT, TT.offset), TT.offset = MT, this.encodeFullSync(TT, kT, cT, lT, MT)) : kT.subarray(0, TT.offset)
       }
-      _resizeBuffer(vv, zv) {
-        const Pv = Math.ceil(zv / yh.BUFFER_SIZE) * yh.BUFFER_SIZE,
-          hv = new Uint8Array(Pv);
-        return hv.set(vv), vv === this.sharedBuffer && (this.sharedBuffer = hv), hv
+      _resizeBuffer(TT, kT) {
+        const cT = Math.ceil(kT / Ul.BUFFER_SIZE) * Ul.BUFFER_SIZE,
+          lT = new Uint8Array(cT);
+        return lT.set(TT), TT === this.sharedBuffer && (this.sharedBuffer = lT), lT
       }
       encodeAll() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
-        return this.encodeFullSync(vv, zv, !1)
+          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
+        return this.encodeFullSync(TT, kT, !1)
       }
-      encodeAllView(vv, zv, Pv) {
-        let hv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const Sv = Pv.offset;
-        return hv = this.encodeFullSync(Pv, hv, !0, vv, Sv), Mh(hv.subarray(0, zv), hv.subarray(Sv, Pv.offset))
+      encodeAllView(TT, kT, cT) {
+        let lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const MT = cT.offset;
+        return lT = this.encodeFullSync(cT, lT, !0, TT, MT), gl(lT.subarray(0, kT), lT.subarray(MT, cT.offset))
       }
-      ensureCapacity(vv, zv) {
-        if (zv + yh.BUFFER_SIZE <= vv.byteLength) return vv;
-        const Pv = Math.ceil((zv + yh.BUFFER_SIZE) / yh.BUFFER_SIZE) * yh.BUFFER_SIZE,
-          hv = new Uint8Array(Pv);
-        return hv.set(vv.subarray(0, zv)), vv === this.sharedBuffer && (this.sharedBuffer = hv), hv
+      ensureCapacity(TT, kT) {
+        if (kT + Ul.BUFFER_SIZE <= TT.byteLength) return TT;
+        const cT = Math.ceil((kT + Ul.BUFFER_SIZE) / Ul.BUFFER_SIZE) * Ul.BUFFER_SIZE,
+          lT = new Uint8Array(cT);
+        return lT.set(TT.subarray(0, kT)), TT === this.sharedBuffer && (this.sharedBuffer = lT), lT
       }
-      encodeView(vv, zv, Pv) {
-        let hv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
-          ev = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-        const gv = Pv.offset;
-        this._emitStreamPriority(vv);
-        for (const dv of vv.changes.keys()) {
-          const zv = vv.changes.get(dv),
-            ev = this.root.changeTrees[dv];
-          if (void 0 === ev) {
-            vv.changes.delete(dv);
+      encodeView(TT, kT, cT) {
+        let lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
+          KT = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+        const OT = cT.offset;
+        this._emitStreamPriority(TT);
+        for (const fT of TT.changes.keys()) {
+          const kT = TT.changes.get(fT),
+            KT = this.root.changeTrees[fT];
+          if (void 0 === KT) {
+            TT.changes.delete(fT);
             continue
           }
-          if (0 === zv.size) continue;
-          const gv = ev.encDescriptor,
-            Nv = gv.encoder,
-            lv = gv.metadata,
-            Tv = ev.ref,
-            wv = ev.refTarget;
-          hv = this.ensureCapacity(hv, Pv.offset), hv[Pv.offset++] = 255, zz.number(hv, Tv[pv], Pv);
-          for (const [dv, av] of zv) {
-            let zv;
-            if (-1 === dv) {
-              const vv = wv.tmpItems,
-                zv = wv.deletedIndexes;
-              for (let gv = 0; gv < vv.length; gv++) void 0 !== vv[gv] && !0 !== zv[gv] && Nv(this, hv, ev, gv, Sv.ADD, Pv, !1, !0, lv);
+          if (0 === kT.size) continue;
+          const OT = KT.encDescriptor,
+            xT = OT.encoder,
+            IT = OT.metadata,
+            AT = KT.ref,
+            jT = KT.refTarget;
+          lT = this.ensureCapacity(lT, cT.offset), lT[cT.offset++] = 255, kk.number(lT, AT[yT], cT);
+          for (const [fT, vT] of kT) {
+            let kT;
+            if (-1 === fT) {
+              const TT = jT.tmpItems,
+                kT = jT.deletedIndexes;
+              for (let OT = 0; OT < TT.length; OT++) void 0 !== TT[OT] && !0 !== kT[OT] && xT(this, lT, KT, OT, MT.ADD, cT, !1, !0, IT);
               continue
             }
-            if ("number" === typeof dv) zv = dv;
+            if ("number" === typeof fT) kT = fT;
             else {
-              const Pv = dv.indexInParent(Tv);
-              if (void 0 === Pv) continue;
-              if (zv = Pv, av === Sv.ADD && ev.getChange(zv) === Sv.DELETE) {
-                vv.changes.delete(dv.ref[pv]);
+              const cT = fT.indexInParent(AT);
+              if (void 0 === cT) continue;
+              if (kT = cT, vT === MT.ADD && KT.getChange(kT) === MT.DELETE) {
+                TT.changes.delete(fT.ref[yT]);
                 continue
               }
             }
-            Nv(this, hv, ev, zv, void 0 !== wv[Wv](zv) && av || Sv.DELETE, Pv, !1, !0, lv)
+            xT(this, lT, KT, kT, void 0 !== jT[CT](kT) && vT || MT.DELETE, cT, !1, !0, IT)
           }
         }
-        return vv.changes.clear(), hv = this.encode(Pv, vv, hv), ev ? Mh(hv.subarray(0, zv), hv.subarray(gv, Pv.offset)) : hv.subarray(gv, Pv.offset)
+        return TT.changes.clear(), lT = this.encode(cT, TT, lT), KT ? gl(lT.subarray(0, kT), lT.subarray(OT, cT.offset)) : lT.subarray(OT, cT.offset)
       }
-      encodeUnreliableView(vv, zv, Pv) {
-        let hv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const Sv = Pv.offset;
-        return hv = this.encodeUnreliable(Pv, vv, hv, Sv), Mh(hv.subarray(0, zv), hv.subarray(Sv, Pv.offset))
+      encodeUnreliableView(TT, kT, cT) {
+        let lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const MT = cT.offset;
+        return lT = this.encodeUnreliable(cT, TT, lT, MT), gl(lT.subarray(0, kT), lT.subarray(MT, cT.offset))
       }
-      _emitStreamBroadcast(vv, zv) {
-        const Pv = this.root.streamTrees;
-        for (const hv of Pv) {
-          const Pv = hv,
-            ev = Pv[sv],
-            gv = Pv[pv];
-          if (void 0 === gv) continue;
-          const dv = Pv._stream,
-            Nv = dv.broadcastDeletes,
-            lv = dv.broadcastPending,
-            Tv = dv.sentBroadcast,
-            wv = Nv.size > 0,
-            av = lv.size > 0,
-            Cv = ev.encDescriptor,
-            iv = Cv.encoder,
-            cv = Cv.metadata;
-          if (wv || av) {
-            if (vv[zv.offset++] = 255, zz.number(vv, gv, zv), wv) {
-              for (const Pv of Nv) iv(this, vv, ev, Pv, Sv.DELETE, zv, !1, !1, cv);
-              Nv.clear()
+      _emitStreamBroadcast(TT, kT) {
+        const cT = this.root.streamTrees;
+        for (const lT of cT) {
+          const cT = lT,
+            KT = cT[tT],
+            OT = cT[yT];
+          if (void 0 === OT) continue;
+          const fT = cT._stream,
+            xT = fT.broadcastDeletes,
+            IT = fT.broadcastPending,
+            AT = fT.sentBroadcast,
+            jT = xT.size > 0,
+            vT = IT.size > 0,
+            hT = KT.encDescriptor,
+            NT = hT.encoder,
+            QT = hT.metadata;
+          if (jT || vT) {
+            if (TT[kT.offset++] = 255, kk.number(TT, OT, kT), jT) {
+              for (const cT of xT) NT(this, TT, KT, cT, MT.DELETE, kT, !1, !1, QT);
+              xT.clear()
             }
-            const hv = dv.maxPerTick,
-              av = [];
-            let Cv = 0;
-            const Gv = [];
-            for (const gv of lv) {
-              if (Cv >= hv) break;
-              const pv = Pv[Wv](gv);
-              void 0 !== pv ? (iv(this, vv, ev, gv, Sv.ADD, zv, !1, !1, cv), Tv.add(gv), av.push(pv), Gv.push(gv), Cv++) : Gv.push(gv)
+            const lT = fT.maxPerTick,
+              vT = [];
+            let hT = 0;
+            const ST = [];
+            for (const OT of IT) {
+              if (hT >= lT) break;
+              const yT = cT[CT](OT);
+              void 0 !== yT ? (NT(this, TT, KT, OT, MT.ADD, kT, !1, !1, QT), AT.add(OT), vT.push(yT), ST.push(OT), hT++) : ST.push(OT)
             }
-            for (const vv of Gv) lv.delete(vv);
-            for (const Pv of av) {
-              const hv = Pv[sv];
-              if (void 0 === hv) continue;
-              const ev = Pv[pv];
-              if (void 0 === ev) continue;
-              vv[zv.offset++] = 255, zz.number(vv, ev, zv);
-              const gv = hv.encDescriptor,
-                dv = gv.encoder,
-                Nv = gv.metadata;
-              hv.forEachLive((Pv => {
-                oz.hasUnreliableAtIndex(Nv, Pv) || dv(this, vv, hv, Pv, Sv.ADD, zv, !1, !1, Nv)
+            for (const TT of ST) IT.delete(TT);
+            for (const cT of vT) {
+              const lT = cT[tT];
+              if (void 0 === lT) continue;
+              const KT = cT[yT];
+              if (void 0 === KT) continue;
+              TT[kT.offset++] = 255, kk.number(TT, KT, kT);
+              const OT = lT.encDescriptor,
+                fT = OT.encoder,
+                xT = OT.metadata;
+              lT.forEachLive((cT => {
+                nk.hasUnreliableAtIndex(xT, cT) || fT(this, TT, lT, cT, MT.ADD, kT, !1, !1, xT)
               }))
             }
           }
-          for (const hv of Tv) {
-            const Sv = Pv[Wv](hv);
-            if (void 0 === Sv) continue;
-            const ev = Sv[sv];
-            if (void 0 === ev || !ev.has()) continue;
-            const gv = Sv[pv];
-            if (void 0 === gv) continue;
-            vv[zv.offset++] = 255, zz.number(vv, gv, zv);
-            const dv = ev.encDescriptor,
-              Nv = dv.encoder,
-              lv = dv.metadata;
-            ev.forEach(((Pv, hv) => {
-              Pv < 0 || oz.hasUnreliableAtIndex(lv, Pv) || Nv(this, vv, ev, Pv, hv, zv, !1, !1, lv)
+          for (const lT of AT) {
+            const MT = cT[CT](lT);
+            if (void 0 === MT) continue;
+            const KT = MT[tT];
+            if (void 0 === KT || !KT.has()) continue;
+            const OT = MT[yT];
+            if (void 0 === OT) continue;
+            TT[kT.offset++] = 255, kk.number(TT, OT, kT);
+            const fT = KT.encDescriptor,
+              xT = fT.encoder,
+              IT = fT.metadata;
+            KT.forEach(((cT, lT) => {
+              cT < 0 || nk.hasUnreliableAtIndex(IT, cT) || xT(this, TT, KT, cT, lT, kT, !1, !1, IT)
             }))
           }
         }
       }
-      _emitStreamPriority(vv) {
-        const zv = this.root.streamTrees;
-        if (0 === zv.size) return;
-        const Pv = vv.id;
-        for (const hv of zv) {
-          const zv = hv,
-            ev = zv._stream,
-            gv = ev.pendingByView.get(Pv);
-          if (void 0 === gv || 0 === gv.size) continue;
-          const dv = ev.priorityByView?.get(Pv),
-            Nv = void 0 !== dv,
-            lv = ev.priority,
-            Tv = ev.maxPerTick,
-            wv = [],
-            av = [];
-          if (Nv || void 0 !== lv) {
-            const Pv = [],
-              hv = [];
-            let Sv = 0;
-            for (const ev of gv) {
-              const gv = zv[Wv](ev);
-              if (void 0 === gv) {
-                av.push(ev);
+      _emitStreamPriority(TT) {
+        const kT = this.root.streamTrees;
+        if (0 === kT.size) return;
+        const cT = TT.id;
+        for (const lT of kT) {
+          const kT = lT,
+            KT = kT._stream,
+            OT = KT.pendingByView.get(cT);
+          if (void 0 === OT || 0 === OT.size) continue;
+          const fT = KT.priorityByView?.get(cT),
+            xT = void 0 !== fT,
+            IT = KT.priority,
+            AT = KT.maxPerTick,
+            jT = [],
+            vT = [];
+          if (xT || void 0 !== IT) {
+            const cT = [],
+              lT = [];
+            let MT = 0;
+            for (const KT of OT) {
+              const OT = kT[CT](KT);
+              if (void 0 === OT) {
+                vT.push(KT);
                 continue
               }
-              const pv = Nv ? dv(gv) : lv(vv, gv);
-              if (Sv < Tv) {
-                let vv = Sv++;
-                for (; vv > 0 && hv[vv - 1] < pv;) hv[vv] = hv[vv - 1], Pv[vv] = Pv[vv - 1], vv--;
-                hv[vv] = pv, Pv[vv] = ev
-              } else if (pv > hv[Tv - 1]) {
-                let vv = Tv - 1;
-                for (; vv > 0 && hv[vv - 1] < pv;) hv[vv] = hv[vv - 1], Pv[vv] = Pv[vv - 1], vv--;
-                hv[vv] = pv, Pv[vv] = ev
+              const yT = xT ? fT(OT) : IT(TT, OT);
+              if (MT < AT) {
+                let TT = MT++;
+                for (; TT > 0 && lT[TT - 1] < yT;) lT[TT] = lT[TT - 1], cT[TT] = cT[TT - 1], TT--;
+                lT[TT] = yT, cT[TT] = KT
+              } else if (yT > lT[AT - 1]) {
+                let TT = AT - 1;
+                for (; TT > 0 && lT[TT - 1] < yT;) lT[TT] = lT[TT - 1], cT[TT] = cT[TT - 1], TT--;
+                lT[TT] = yT, cT[TT] = KT
               }
             }
-            for (let vv = 0; vv < Sv; vv++) wv.push(Pv[vv])
+            for (let TT = 0; TT < MT; TT++) jT.push(cT[TT])
           } else
-            for (const vv of gv) {
-              if (wv.length >= Tv) break;
-              wv.push(vv)
+            for (const TT of OT) {
+              if (jT.length >= AT) break;
+              jT.push(TT)
             }
-          for (const vv of av) gv.delete(vv);
-          const Cv = wv.length;
-          let iv = ev.sentByView.get(Pv);
-          void 0 === iv && (iv = new Set, ev.sentByView.set(Pv, iv));
-          for (let Pv = 0; Pv < Cv; Pv++) {
-            const hv = wv[Pv],
-              ev = zv[Wv](hv);
-            if (void 0 === ev) {
-              gv.delete(hv);
+          for (const TT of vT) OT.delete(TT);
+          const hT = jT.length;
+          let NT = KT.sentByView.get(cT);
+          void 0 === NT && (NT = new Set, KT.sentByView.set(cT, NT));
+          for (let cT = 0; cT < hT; cT++) {
+            const lT = jT[cT],
+              KT = kT[CT](lT);
+            if (void 0 === KT) {
+              OT.delete(lT);
               continue
             }
-            vv._addImmediate(ev);
-            const dv = ev[sv];
-            if (void 0 !== dv) {
-              const zv = ev[pv];
-              let Pv = vv.changes.get(zv);
-              void 0 === Pv && (Pv = new Map, vv.changes.set(zv, Pv));
-              const hv = dv.metadata;
-              dv.forEachLive((vv => {
-                oz.hasUnreliableAtIndex(hv, vv) || Pv.set(vv, Sv.ADD)
+            TT._addImmediate(KT);
+            const fT = KT[tT];
+            if (void 0 !== fT) {
+              const kT = KT[yT];
+              let cT = TT.changes.get(kT);
+              void 0 === cT && (cT = new Map, TT.changes.set(kT, cT));
+              const lT = fT.metadata;
+              fT.forEachLive((TT => {
+                nk.hasUnreliableAtIndex(lT, TT) || cT.set(TT, MT.ADD)
               }))
             }
-            gv.delete(hv), iv.add(hv)
+            OT.delete(lT), NT.add(lT)
           }
         }
       }
       discardChanges() {
-        const vv = this.root.changes;
-        let zv = vv.next;
-        const Pv = this.root;
-        for (; zv;) {
-          const vv = zv.next;
-          zv.changeTree.endEncode(), Pv.releaseNode(zv), zv = vv
+        const TT = this.root.changes;
+        let kT = TT.next;
+        const cT = this.root;
+        for (; kT;) {
+          const TT = kT.next;
+          kT.changeTree.endEncode(), cT.releaseNode(kT), kT = TT
         }
-        vv.next = void 0, vv.tail = void 0
+        TT.next = void 0, TT.tail = void 0
       }
       discardUnreliableChanges() {
-        const vv = this.root.unreliableChanges;
-        let zv = vv.next;
-        const Pv = this.root;
-        for (; zv;) {
-          const vv = zv.next;
-          zv.changeTree.endEncodeUnreliable(), Pv.releaseNode(zv), zv = vv
+        const TT = this.root.unreliableChanges;
+        let kT = TT.next;
+        const cT = this.root;
+        for (; kT;) {
+          const TT = kT.next;
+          kT.changeTree.endEncodeUnreliable(), cT.releaseNode(kT), kT = TT
         }
-        vv.next = void 0, vv.tail = void 0
+        TT.next = void 0, TT.tail = void 0
       }
-      tryEncodeTypeId(vv, zv, Pv, hv) {
-        const Sv = this.context.getTypeId(zv),
-          ev = this.context.getTypeId(Pv);
-        void 0 !== ev ? Sv !== ev && (vv[hv.offset++] = 213, zz.number(vv, ev, hv)) : console.warn(`@colyseus/schema WARNING: Class "${Pv.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
+      tryEncodeTypeId(TT, kT, cT, lT) {
+        const MT = this.context.getTypeId(kT),
+          KT = this.context.getTypeId(cT);
+        void 0 !== KT ? MT !== KT && (TT[lT.offset++] = 213, kk.number(TT, KT, lT)) : console.warn(`@colyseus/schema WARNING: Class "${cT.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
       }
       get hasChanges() {
         return void 0 !== this.root.changes.next || this._hasStreamBacklog()
@@ -6579,28 +6579,28 @@ export const modules = {
         return 0 === this.root.activeViews.size && this.root.streamTrees.size > 0
       }
       _hasStreamBacklog() {
-        const vv = this.root;
-        if (0 === vv.streamTrees.size) return !1;
-        const zv = 0 === vv.activeViews.size;
-        for (const Pv of vv.streamTrees)
-          if (zv ? Uz(Pv) : Vz(Pv, vv)) return !0;
+        const TT = this.root;
+        if (0 === TT.streamTrees.size) return !1;
+        const kT = 0 === TT.activeViews.size;
+        for (const cT of TT.streamTrees)
+          if (kT ? Hk(cT) : Jk(cT, TT)) return !0;
         return !1
       }
       get hasUnreliableChanges() {
         return void 0 !== this.root.unreliableChanges.next
       }
     }
-    class Bh extends Error {
-      constructor(vv) {
-        super(vv), this.name = "DecodingWarning"
+    class Yl extends Error {
+      constructor(TT) {
+        super(TT), this.name = "DecodingWarning"
       }
     }
-    const Jh = {
+    const Bl = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class Eh {
+    class Wl {
       refs = new Map;
       refCount = {};
       deletedRefs = new Set;
@@ -6609,1181 +6609,1181 @@ export const modules = {
       getNextUniqueId() {
         return this.nextUniqueId++
       }
-      addRef(vv, zv) {
-        let Pv = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this.refs.set(vv, zv), void 0 === zv[pv] ? (Jh.value = vv, Object.defineProperty(zv, pv, Jh)) : zv[pv] !== vv && (zv[pv] = vv), Pv && (this.refCount[vv] = (this.refCount[vv] || 0) + 1), this.deletedRefs.has(vv) && this.deletedRefs.delete(vv)
+      addRef(TT, kT) {
+        let cT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        this.refs.set(TT, kT), void 0 === kT[yT] ? (Bl.value = TT, Object.defineProperty(kT, yT, Bl)) : kT[yT] !== TT && (kT[yT] = TT), cT && (this.refCount[TT] = (this.refCount[TT] || 0) + 1), this.deletedRefs.has(TT) && this.deletedRefs.delete(TT)
       }
-      removeRef(vv) {
-        const zv = this.refCount[vv];
-        if (void 0 !== zv)
-          if (0 !== zv)(this.refCount[vv] = zv - 1) <= 0 && this.deletedRefs.add(vv);
+      removeRef(TT) {
+        const kT = this.refCount[TT];
+        if (void 0 !== kT)
+          if (0 !== kT)(this.refCount[TT] = kT - 1) <= 0 && this.deletedRefs.add(TT);
           else try {
-            const zv = this.refs.get(vv);
-            throw new Bh(`trying to remove refId '${vv}' with 0 refCount (${zv.constructor.name}: ${JSON.stringify(zv)})`)
-          } catch (eS) {
-            console.warn(eS)
+            const kT = this.refs.get(TT);
+            throw new Yl(`trying to remove refId '${TT}' with 0 refCount (${kT.constructor.name}: ${JSON.stringify(kT)})`)
+          } catch (OM) {
+            console.warn(OM)
           } else try {
-            throw new Bh("trying to remove refId that doesn't exist: " + vv)
-          } catch (eS) {
-            console.warn(eS)
+            throw new Yl("trying to remove refId that doesn't exist: " + TT)
+          } catch (OM) {
+            console.warn(OM)
           }
       }
       clearRefs() {
         this.refs.clear(), this.deletedRefs.clear(), this.callbacks = {}, this.refCount = {}
       }
       garbageCollectDeletedRefs() {
-        this.deletedRefs.forEach((vv => {
-          if (this.refCount[vv] > 0) return;
-          const zv = this.refs.get(vv),
-            Pv = zv.constructor[Symbol.metadata];
-          if (null != Pv)
-            for (const hv in Pv) {
-              const vv = zv[Pv[hv].name];
-              if ("object" === typeof vv && vv) {
-                const zv = vv[pv];
-                void 0 === zv || this.deletedRefs.has(zv) || this.removeRef(zv)
+        this.deletedRefs.forEach((TT => {
+          if (this.refCount[TT] > 0) return;
+          const kT = this.refs.get(TT),
+            cT = kT.constructor[Symbol.metadata];
+          if (null != cT)
+            for (const lT in cT) {
+              const TT = kT[cT[lT].name];
+              if ("object" === typeof TT && TT) {
+                const kT = TT[yT];
+                void 0 === kT || this.deletedRefs.has(kT) || this.removeRef(kT)
               }
-            } else "function" === typeof zv[Cv] && Array.from(zv.values()).forEach((vv => {
-              const zv = vv[pv];
-              void 0 === zv || this.deletedRefs.has(zv) || this.removeRef(zv)
+            } else "function" === typeof kT[hT] && Array.from(kT.values()).forEach((TT => {
+              const kT = TT[yT];
+              void 0 === kT || this.deletedRefs.has(kT) || this.removeRef(kT)
             }));
-          this.refs.delete(vv), delete this.refCount[vv], delete this.callbacks[vv]
+          this.refs.delete(TT), delete this.refCount[TT], delete this.callbacks[TT]
         })), this.deletedRefs.clear()
       }
-      addCallback(vv, zv, Pv) {
-        if (void 0 === vv) {
-          const vv = "number" === typeof zv ? Sv[zv] : zv;
-          throw new Error(`Can't addCallback on '${vv}' (refId is undefined)`)
+      addCallback(TT, kT, cT) {
+        if (void 0 === TT) {
+          const TT = "number" === typeof kT ? MT[kT] : kT;
+          throw new Error(`Can't addCallback on '${TT}' (refId is undefined)`)
         }
-        return this.callbacks[vv] || (this.callbacks[vv] = {}), this.callbacks[vv][zv] || (this.callbacks[vv][zv] = []), this.callbacks[vv][zv].push(Pv), () => this.removeCallback(vv, zv, Pv)
+        return this.callbacks[TT] || (this.callbacks[TT] = {}), this.callbacks[TT][kT] || (this.callbacks[TT][kT] = []), this.callbacks[TT][kT].push(cT), () => this.removeCallback(TT, kT, cT)
       }
-      removeCallback(vv, zv, Pv) {
-        const hv = this.callbacks?.[vv]?.[zv]?.indexOf(Pv);
-        void 0 !== hv && -1 !== hv && Rh(this.callbacks[vv][zv], hv)
+      removeCallback(TT, kT, cT) {
+        const lT = this.callbacks?.[TT]?.[kT]?.indexOf(cT);
+        void 0 !== lT && -1 !== lT && el(this.callbacks[TT][kT], lT)
       }
     }
-    class oh {
+    class nl {
       context;
       state;
       root;
       currentRefId = 0;
-      fD;
+      MJ;
       resyncVisited = null;
       resyncDamaged = !1;
-      constructor(vv, zv) {
-        this.setState(vv), this.context = zv || new Lz(vv.constructor)
+      constructor(TT, kT) {
+        this.setState(TT), this.context = kT || new Lk(TT.constructor)
       }
-      setState(vv) {
-        this.state = vv, this.root = new Eh, this.root.addRef(0, vv)
+      setState(TT) {
+        this.state = TT, this.root = new Wl, this.root.addRef(0, TT)
       }
-      decode(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decode(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
             offset: 0
           },
-          Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
-        const Sv = void 0 !== this.fD ? [] : null,
-          ev = this.root,
-          gv = vv.byteLength;
-        let pv = Pv.constructor[lv];
-        for (this.currentRefId = 0; zv.offset < gv;) {
-          if (vv[zv.offset] == hv) {
-            zv.offset++, Pv[mv]?.();
-            const hv = Gz.number(vv, zv),
-              Sv = ev.refs.get(hv);
-            Sv ? (Pv = Sv, pv = Pv.constructor[lv], this.currentRefId = hv) : (console.error(`"refId" not found: ${hv}`, {
-              previousRef: Pv,
+          cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
+        const MT = void 0 !== this.MJ ? [] : null,
+          KT = this.root,
+          OT = TT.byteLength;
+        let yT = cT.constructor[IT];
+        for (this.currentRefId = 0; kT.offset < OT;) {
+          if (TT[kT.offset] == lT) {
+            kT.offset++, cT[DT]?.();
+            const lT = Sk.number(TT, kT),
+              MT = KT.refs.get(lT);
+            MT ? (cT = MT, yT = cT.constructor[IT], this.currentRefId = lT) : (console.error(`"refId" not found: ${lT}`, {
+              previousRef: cT,
               previousRefId: this.currentRefId
-            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(vv, zv, gv));
+            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(TT, kT, OT));
             continue
-          } - 1 !== pv(this, vv, zv, Pv, Sv) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(vv, zv, gv))
+          } - 1 !== yT(this, TT, kT, cT, MT) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(TT, kT, OT))
         }
-        return Pv[mv]?.(), null !== this.resyncVisited && function(vv, zv) {
-          vv.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : LP(vv, vv.state, new Set, zv)
-        }(this, Sv), null !== Sv && this.fD?.(Sv), ev.garbageCollectDeletedRefs(), Sv
+        return cT[DT]?.(), null !== this.resyncVisited && function(TT, kT) {
+          TT.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : Lc(TT, TT.state, new Set, kT)
+        }(this, MT), null !== MT && this.MJ?.(MT), KT.garbageCollectDeletedRefs(), MT
       }
-      decodeResync(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decodeResync(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
           offset: 0
         };
         this.resyncVisited = new Map, this.resyncDamaged = !1;
         try {
-          return this.decode(vv, zv)
+          return this.decode(TT, kT)
         } finally {
           this.resyncVisited = null
         }
       }
-      skipCurrentStructure(vv, zv, Pv) {
+      skipCurrentStructure(TT, kT, cT) {
         null !== this.resyncVisited && (this.resyncDamaged = !0);
-        const Sv = {
-          offset: zv.offset
+        const MT = {
+          offset: kT.offset
         };
-        for (; zv.offset < Pv && (vv[zv.offset] !== hv || (Sv.offset = zv.offset + 1, !this.root.refs.has(Gz.number(vv, Sv))));) zv.offset++
+        for (; kT.offset < cT && (TT[kT.offset] !== lT || (MT.offset = kT.offset + 1, !this.root.refs.has(Sk.number(TT, MT))));) kT.offset++
       }
-      getInstanceType(vv, zv, Pv) {
-        let hv;
-        if (213 === vv[zv.offset]) {
-          zv.offset++;
-          const Pv = Gz.number(vv, zv);
-          hv = this.context.get(Pv)
+      getInstanceType(TT, kT, cT) {
+        let lT;
+        if (213 === TT[kT.offset]) {
+          kT.offset++;
+          const cT = Sk.number(TT, kT);
+          lT = this.context.get(cT)
         }
-        return hv || Pv
+        return lT || cT
       }
-      createInstanceOfType(vv) {
-        return vv.initializeForDecoder()
+      createInstanceOfType(TT) {
+        return TT.initializeForDecoder()
       }
-      removeChildRefs(vv, zv) {
-        const Pv = "string" !== typeof vv[Cv],
-          hv = vv[pv];
-        vv.forEach(((ev, gv) => {
-          zv?.push({
-            ref: vv,
-            refId: hv,
-            op: Sv.DELETE,
-            field: gv,
+      removeChildRefs(TT, kT) {
+        const cT = "string" !== typeof TT[hT],
+          lT = TT[yT];
+        TT.forEach(((KT, OT) => {
+          kT?.push({
+            ref: TT,
+            refId: lT,
+            op: MT.DELETE,
+            field: OT,
             value: void 0,
-            previousValue: ev
-          }), Pv && this.root.removeRef(ev[pv])
+            previousValue: KT
+          }), cT && this.root.removeRef(KT[yT])
         }))
       }
     }
-    const bh = Oh({
-        min: wh.float64(),
-        max: wh.float64(),
-        bits: wh.uint8(),
-        mode: wh.uint8()
+    const pl = bl({
+        min: vl.float64(),
+        max: vl.float64(),
+        bits: vl.uint8(),
+        mode: vl.uint8()
       }, "QuantizedDescriptor"),
-      rh = Oh({
-        name: wh.string(),
-        type: wh.string(),
-        referencedType: wh.number(),
-        childPrimitive: wh.string(),
-        quantized: wh.ref(bh).optional()
+      il = bl({
+        name: vl.string(),
+        type: vl.string(),
+        referencedType: vl.number(),
+        childPrimitive: vl.string(),
+        quantized: vl.ref(pl).optional()
       }, "ReflectionField"),
-      kh = Oh({
-        id: wh.number(),
-        extendsId: wh.number(),
-        fields: wh.array(rh)
+      ql = bl({
+        id: vl.number(),
+        extendsId: vl.number(),
+        fields: vl.array(il)
       }, "ReflectionType"),
-      Xh = Oh({
-        types: wh.array(kh),
-        rootType: wh.number()
+      sl = bl({
+        types: vl.array(ql),
+        rootType: vl.number()
       }, "Reflection");
 
-    function uh(vv) {
-      const zv = vv.root,
-        Pv = zv.callbacks,
-        hv = new WeakMap;
-      let ev;
+    function TM(TT) {
+      const kT = TT.root,
+        cT = kT.callbacks,
+        lT = new WeakMap;
+      let KT;
 
-      function gv(vv, Pv) {
-        let Nv = Pv.instance?.constructor[Symbol.metadata] || vv,
-          lv = Pv.instance && "function" === typeof Pv.instance.forEach || vv && !Kh.is(vv);
-        if (Nv && !lv) {
-          const vv = function(vv, Sv, gv, dv) {
-            return dv && void 0 !== Pv.instance[Sv] && !hv.has(ev) && gv(Pv.instance[Sv], void 0), zv.addCallback(vv[pv], Sv, gv)
+      function OT(TT, cT) {
+        let xT = cT.instance?.constructor[Symbol.metadata] || TT,
+          IT = cT.instance && "function" === typeof cT.instance.forEach || TT && !Jl.is(TT);
+        if (xT && !IT) {
+          const TT = function(TT, MT, OT, fT) {
+            return fT && void 0 !== cT.instance[MT] && !lT.has(KT) && OT(cT.instance[MT], void 0), kT.addCallback(TT[yT], MT, OT)
           };
           return new Proxy({
-            listen: function(zv, Sv) {
-              let gv = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-              if (Pv.instance) return vv(Pv.instance, zv, Sv, gv);
+            listen: function(kT, MT) {
+              let OT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+              if (cT.instance) return TT(cT.instance, kT, MT, OT);
               {
-                let pv = () => {};
-                return Pv.onInstanceAvailable(((Pv, dv) => {
-                  pv = vv(Pv, zv, Sv, gv && dv && !hv.has(ev))
-                })), () => pv()
+                let yT = () => {};
+                return cT.onInstanceAvailable(((cT, fT) => {
+                  yT = TT(cT, kT, MT, OT && fT && !lT.has(KT))
+                })), () => yT()
               }
             },
-            onChange: function(vv) {
-              return zv.addCallback(Pv.instance[pv], Sv.REPLACE, vv)
+            onChange: function(TT) {
+              return kT.addCallback(cT.instance[yT], MT.REPLACE, TT)
             },
-            bindTo: function(vv, hv) {
-              return hv || (hv = Object.keys(Nv).map((vv => Nv[vv].name))), zv.addCallback(Pv.instance[pv], Sv.REPLACE, (() => {
-                hv.forEach((zv => vv[zv] = Pv.instance[zv]))
+            bindTo: function(TT, lT) {
+              return lT || (lT = Object.keys(xT).map((TT => xT[TT].name))), kT.addCallback(cT.instance[yT], MT.REPLACE, (() => {
+                lT.forEach((kT => TT[kT] = cT.instance[kT]))
               }))
             }
           }, {
-            get(vv, zv) {
-              const hv = Nv[Nv[zv]];
-              if (hv) {
-                const vv = Pv.instance?.[zv],
-                  Sv = hv => {
-                    const Sv = dv(Pv.instance).listen(zv, ((vv, zv) => {
-                      hv(vv, !1), Sv?.()
+            get(TT, kT) {
+              const lT = xT[xT[kT]];
+              if (lT) {
+                const TT = cT.instance?.[kT],
+                  MT = lT => {
+                    const MT = fT(cT.instance).listen(kT, ((TT, kT) => {
+                      lT(TT, !1), MT?.()
                     }), !1);
-                    void 0 !== vv?.[pv] && hv(vv, !0)
+                    void 0 !== TT?.[yT] && lT(TT, !0)
                   };
-                return gv(hv.type, {
-                  instance: void 0 !== vv?.[pv] && vv,
-                  parentInstance: Pv.instance,
-                  onInstanceAvailable: Sv
+                return OT(lT.type, {
+                  instance: void 0 !== TT?.[yT] && TT,
+                  parentInstance: cT.instance,
+                  onInstanceAvailable: MT
                 })
               }
-              return vv[zv]
+              return TT[kT]
             },
-            has: (vv, zv) => void 0 !== Nv[zv],
-            set(vv, zv, Pv) {
+            has: (TT, kT) => void 0 !== xT[kT],
+            set(TT, kT, cT) {
               throw new Error("not allowed")
             },
-            deleteProperty(vv, zv) {
+            deleteProperty(TT, kT) {
               throw new Error("not allowed")
             }
           })
         } {
-          const vv = function(vv, Pv, gv) {
-              return gv && vv.forEach(((vv, zv) => Pv(vv, zv))), zv.addCallback(vv[pv], Sv.ADD, ((vv, zv) => {
-                hv.set(Pv, !0), ev = Pv, Pv(vv, zv), hv.delete(Pv), ev = void 0
+          const TT = function(TT, cT, OT) {
+              return OT && TT.forEach(((TT, kT) => cT(TT, kT))), kT.addCallback(TT[yT], MT.ADD, ((TT, kT) => {
+                lT.set(cT, !0), KT = cT, cT(TT, kT), lT.delete(cT), KT = void 0
               }))
             },
-            gv = function(vv, Pv) {
-              return zv.addCallback(vv[pv], Sv.DELETE, Pv)
+            OT = function(TT, cT) {
+              return kT.addCallback(TT[yT], MT.DELETE, cT)
             },
-            dv = function(vv, Pv) {
-              return zv.addCallback(vv[pv], Sv.REPLACE, Pv)
+            fT = function(TT, cT) {
+              return kT.addCallback(TT[yT], MT.REPLACE, cT)
             };
           return new Proxy({
-            Km: function(zv) {
-              let Sv = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-              if (Pv.instance) return vv(Pv.instance, zv, Sv && !hv.has(ev));
-              if (Pv.onInstanceAvailable) {
-                let gv = () => {};
-                return Pv.onInstanceAvailable(((Pv, pv) => {
-                  gv = vv(Pv, zv, Sv && pv && !hv.has(ev))
-                })), () => gv()
+            uF: function(kT) {
+              let MT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+              if (cT.instance) return TT(cT.instance, kT, MT && !lT.has(KT));
+              if (cT.onInstanceAvailable) {
+                let OT = () => {};
+                return cT.onInstanceAvailable(((cT, yT) => {
+                  OT = TT(cT, kT, MT && yT && !lT.has(KT))
+                })), () => OT()
               }
             },
-            HO: function(vv) {
-              if (Pv.instance) return gv(Pv.instance, vv);
-              if (Pv.onInstanceAvailable) {
-                let zv = () => {};
-                return Pv.onInstanceAvailable((Pv => {
-                  zv = gv(Pv, vv)
-                })), () => zv()
+            Om: function(TT) {
+              if (cT.instance) return OT(cT.instance, TT);
+              if (cT.onInstanceAvailable) {
+                let kT = () => {};
+                return cT.onInstanceAvailable((cT => {
+                  kT = OT(cT, TT)
+                })), () => kT()
               }
             },
-            onChange: function(vv) {
-              if (Pv.instance) return dv(Pv.instance, vv);
-              if (Pv.onInstanceAvailable) {
-                let zv = () => {};
-                return Pv.onInstanceAvailable((Pv => {
-                  zv = dv(Pv, vv)
-                })), () => zv()
+            onChange: function(TT) {
+              if (cT.instance) return fT(cT.instance, TT);
+              if (cT.onInstanceAvailable) {
+                let kT = () => {};
+                return cT.onInstanceAvailable((cT => {
+                  kT = fT(cT, TT)
+                })), () => kT()
               }
             }
           }, {
-            get(vv, zv) {
-              if (!vv[zv]) throw new Error(`Can't access '${zv}' through callback proxy. access the instance directly.`);
-              return vv[zv]
+            get(TT, kT) {
+              if (!TT[kT]) throw new Error(`Can't access '${kT}' through callback proxy. access the instance directly.`);
+              return TT[kT]
             },
-            has: (vv, zv) => void 0 !== vv[zv],
-            set(vv, zv, Pv) {
+            has: (TT, kT) => void 0 !== TT[kT],
+            set(TT, kT, cT) {
               throw new Error("not allowed")
             },
-            deleteProperty(vv, zv) {
+            deleteProperty(TT, kT) {
               throw new Error("not allowed")
             }
           })
         }
       }
 
-      function dv(vv) {
-        return gv(void 0, {
-          instance: vv
+      function fT(TT) {
+        return OT(void 0, {
+          instance: TT
         })
       }
-      return vv.fD = function(vv) {
-        const zv = new Set;
-        for (let hv = 0, ev = vv.length; hv < ev; hv++) {
-          const ev = vv[hv],
-            gv = ev.refId,
-            dv = ev.ref,
-            Nv = Pv[gv];
-          if (Nv) {
-            if ((ev.op & Sv.DELETE) === Sv.DELETE && Kh.isSchema(ev.previousValue)) {
-              const vv = Pv[ev.previousValue[pv]]?.[Sv.DELETE];
-              for (let zv = vv?.length - 1; zv >= 0; zv--) vv[zv]()
+      return TT.MJ = function(TT) {
+        const kT = new Set;
+        for (let lT = 0, KT = TT.length; lT < KT; lT++) {
+          const KT = TT[lT],
+            OT = KT.refId,
+            fT = KT.ref,
+            xT = cT[OT];
+          if (xT) {
+            if ((KT.op & MT.DELETE) === MT.DELETE && Jl.isSchema(KT.previousValue)) {
+              const TT = cT[KT.previousValue[yT]]?.[MT.DELETE];
+              for (let kT = TT?.length - 1; kT >= 0; kT--) TT[kT]()
             }
-            if (Kh.isSchema(dv)) {
-              if (!zv.has(gv)) {
-                const vv = Nv?.[Sv.REPLACE];
-                for (let zv = vv?.length - 1; zv >= 0; zv--) vv[zv]()
+            if (Jl.isSchema(fT)) {
+              if (!kT.has(OT)) {
+                const TT = xT?.[MT.REPLACE];
+                for (let kT = TT?.length - 1; kT >= 0; kT--) TT[kT]()
               }
-              if (Nv.hasOwnProperty(ev.field)) {
-                const vv = Nv[ev.field];
-                for (let zv = vv?.length - 1; zv >= 0; zv--) vv[zv](ev.value, ev.previousValue)
+              if (xT.hasOwnProperty(KT.field)) {
+                const TT = xT[KT.field];
+                for (let kT = TT?.length - 1; kT >= 0; kT--) TT[kT](KT.value, KT.previousValue)
               }
             } else {
-              if ((ev.op & Sv.DELETE) === Sv.DELETE) {
-                if (void 0 !== ev.previousValue) {
-                  const vv = Nv[Sv.DELETE];
-                  for (let zv = vv?.length - 1; zv >= 0; zv--) vv[zv](ev.previousValue, ev.dynamicIndex ?? ev.field)
+              if ((KT.op & MT.DELETE) === MT.DELETE) {
+                if (void 0 !== KT.previousValue) {
+                  const TT = xT[MT.DELETE];
+                  for (let kT = TT?.length - 1; kT >= 0; kT--) TT[kT](KT.previousValue, KT.dynamicIndex ?? KT.field)
                 }
-                if ((ev.op & Sv.ADD) === Sv.ADD) {
-                  const vv = Nv[Sv.ADD];
-                  for (let zv = vv?.length - 1; zv >= 0; zv--) vv[zv](ev.value, ev.dynamicIndex ?? ev.field)
+                if ((KT.op & MT.ADD) === MT.ADD) {
+                  const TT = xT[MT.ADD];
+                  for (let kT = TT?.length - 1; kT >= 0; kT--) TT[kT](KT.value, KT.dynamicIndex ?? KT.field)
                 }
-              } else if ((ev.op & Sv.ADD) === Sv.ADD && ev.previousValue !== ev.value) {
-                const vv = Nv[Sv.ADD];
-                for (let zv = vv?.length - 1; zv >= 0; zv--) vv[zv](ev.value, ev.dynamicIndex ?? ev.field)
+              } else if ((KT.op & MT.ADD) === MT.ADD && KT.previousValue !== KT.value) {
+                const TT = xT[MT.ADD];
+                for (let kT = TT?.length - 1; kT >= 0; kT--) TT[kT](KT.value, KT.dynamicIndex ?? KT.field)
               }
-              if (ev.value !== ev.previousValue && (void 0 !== ev.value || void 0 !== ev.previousValue)) {
-                const vv = Nv[Sv.REPLACE];
-                for (let zv = vv?.length - 1; zv >= 0; zv--) vv[zv](ev.value, ev.dynamicIndex ?? ev.field)
+              if (KT.value !== KT.previousValue && (void 0 !== KT.value || void 0 !== KT.previousValue)) {
+                const TT = xT[MT.REPLACE];
+                for (let kT = TT?.length - 1; kT >= 0; kT--) TT[kT](KT.value, KT.dynamicIndex ?? KT.field)
               }
             }
-            zv.add(gv)
+            kT.add(OT)
           }
         }
-      }, dv
+      }, fT
     }
 
-    function vS(vv, zv) {
-      vv.fD = zv
+    function kM(TT, kT) {
+      TT.MJ = kT
     }
-    Xh.encode = function(vv) {
-      let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    sl.encode = function(TT) {
+      let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         offset: 0
       };
-      const Pv = vv.context,
-        hv = new Xh,
-        Sv = new yh(hv),
-        ev = Pv.schemas.get(vv.state.constructor);
-      ev > 0 && (hv.rootType = ev);
-      const gv = new Set,
-        pv = {},
-        dv = vv => {
-          if (void 0 === vv.extendsId || gv.has(vv.extendsId)) {
-            gv.add(vv.id), hv.types.push(vv);
-            const zv = pv[vv.id];
-            void 0 !== zv && (delete pv[vv.id], zv.forEach((vv => dv(vv))))
-          } else void 0 === pv[vv.extendsId] && (pv[vv.extendsId] = []), pv[vv.extendsId].push(vv)
+      const cT = TT.context,
+        lT = new sl,
+        MT = new Ul(lT),
+        KT = cT.schemas.get(TT.state.constructor);
+      KT > 0 && (lT.rootType = KT);
+      const OT = new Set,
+        yT = {},
+        fT = TT => {
+          if (void 0 === TT.extendsId || OT.has(TT.extendsId)) {
+            OT.add(TT.id), lT.types.push(TT);
+            const kT = yT[TT.id];
+            void 0 !== kT && (delete yT[TT.id], kT.forEach((TT => fT(TT))))
+          } else void 0 === yT[TT.extendsId] && (yT[TT.extendsId] = []), yT[TT.extendsId].push(TT)
         };
-      Pv.schemas.forEach(((vv, zv) => {
-        const hv = new kh;
-        hv.id = Number(vv);
-        const Sv = Object.getPrototypeOf(zv);
-        Sv !== Kh && (hv.extendsId = Pv.schemas.get(Sv));
-        const ev = zv[Symbol.metadata];
-        if (ev !== Sv[Symbol.metadata]) {
-          const vv = ev[Ov] ?? -1;
-          for (let zv = 0; zv <= vv; zv++) {
-            const vv = ev[zv];
-            if (void 0 === vv) continue;
-            const Sv = vv.name;
-            if (!Object.prototype.hasOwnProperty.call(ev, Sv)) continue;
-            const gv = new rh;
-            let pv;
-            if (gv.name = Sv, "string" === typeof vv.type) pv = vv.type;
-            else if (Iz(vv.type)) {
-              const zv = vv.type.quantized;
-              pv = "quantized";
-              const Pv = new bh;
-              Pv.min = zv.min, Pv.max = zv.max, Pv.bits = zv.bits, Pv.mode = zv.wrap ? 1 : 0, gv.quantized = Pv
+      cT.schemas.forEach(((TT, kT) => {
+        const lT = new ql;
+        lT.id = Number(TT);
+        const MT = Object.getPrototypeOf(kT);
+        MT !== Jl && (lT.extendsId = cT.schemas.get(MT));
+        const KT = kT[Symbol.metadata];
+        if (KT !== MT[Symbol.metadata]) {
+          const TT = KT[mT] ?? -1;
+          for (let kT = 0; kT <= TT; kT++) {
+            const TT = KT[kT];
+            if (void 0 === TT) continue;
+            const MT = TT.name;
+            if (!Object.prototype.hasOwnProperty.call(KT, MT)) continue;
+            const OT = new il;
+            let yT;
+            if (OT.name = MT, "string" === typeof TT.type) yT = TT.type;
+            else if (Zk(TT.type)) {
+              const kT = TT.type.quantized;
+              yT = "quantized";
+              const cT = new pl;
+              cT.min = kT.min, cT.max = kT.max, cT.bits = kT.bits, cT.mode = kT.wrap ? 1 : 0, OT.quantized = cT
             } else {
-              let zv;
-              Kh.is(vv.type) ? (pv = "ref", zv = vv.type) : (pv = Object.keys(vv.type)[0], "string" === typeof vv.type[pv] ? gv.childPrimitive = vv.type[pv] : zv = vv.type[pv]), gv.referencedType = zv ? Pv.getTypeId(zv) : -1
+              let kT;
+              Jl.is(TT.type) ? (yT = "ref", kT = TT.type) : (yT = Object.keys(TT.type)[0], "string" === typeof TT.type[yT] ? OT.childPrimitive = TT.type[yT] : kT = TT.type[yT]), OT.referencedType = kT ? cT.getTypeId(kT) : -1
             }
-            gv.type = pv, hv.fields.push(gv)
+            OT.type = yT, lT.fields.push(OT)
           }
         }
-        dv(hv)
+        fT(lT)
       }));
-      for (const Nv in pv) pv[Nv].forEach((vv => hv.types.push(vv)));
-      return Sv.encodeAll(zv).slice(0, zv.offset)
-    }, Xh.decode = function(vv, zv) {
-      const Pv = new Xh;
-      new oh(Pv).decode(vv, zv);
-      const hv = new Lz;
-      Pv.types.forEach((vv => {
-        const zv = hv.get(vv.extendsId) ?? Kh,
-          Pv = class extends zv {};
-        Lz.register(Pv), hv.add(Pv, vv.id)
+      for (const xT in yT) yT[xT].forEach((TT => lT.types.push(TT)));
+      return MT.encodeAll(kT).slice(0, kT.offset)
+    }, sl.decode = function(TT, kT) {
+      const cT = new sl;
+      new nl(cT).decode(TT, kT);
+      const lT = new Lk;
+      cT.types.forEach((TT => {
+        const kT = lT.get(TT.extendsId) ?? Jl,
+          cT = class extends kT {};
+        Lk.register(cT), lT.add(cT, TT.id)
       }), {});
-      Pv.types.forEach((vv => {
-        const zv = hv.get(vv.id),
-          Sv = oz.initialize(zv),
-          ev = [];
-        let gv = vv;
+      cT.types.forEach((TT => {
+        const kT = lT.get(TT.id),
+          MT = nk.initialize(kT),
+          KT = [];
+        let OT = TT;
         do {
-          ev.push(gv), gv = Pv.types.find((vv => vv.id === gv.extendsId))
-        } while (gv);
-        let pv = 0;
-        ev.reverse().forEach((vv => {
-          ((vv, zv, Pv) => {
-            zv.fields.forEach(((zv, Sv) => {
-              const ev = Pv + Sv;
-              if (void 0 !== zv.quantized) {
-                const Pv = zv.quantized;
-                oz.addField(vv, ev, zv.name, {
-                  quantized: qz({
-                    min: Pv.min,
-                    max: Pv.max,
-                    bits: Pv.bits,
-                    mode: 1 === Pv.mode ? "wrap" : "clamp"
+          KT.push(OT), OT = cT.types.find((TT => TT.id === OT.extendsId))
+        } while (OT);
+        let yT = 0;
+        KT.reverse().forEach((TT => {
+          ((TT, kT, cT) => {
+            kT.fields.forEach(((kT, MT) => {
+              const KT = cT + MT;
+              if (void 0 !== kT.quantized) {
+                const cT = kT.quantized;
+                nk.addField(TT, KT, kT.name, {
+                  quantized: Ek({
+                    min: cT.min,
+                    max: cT.max,
+                    bits: cT.bits,
+                    mode: 1 === cT.mode ? "wrap" : "clamp"
                   })
                 })
-              } else if (void 0 !== zv.referencedType) {
-                const Pv = zv.type,
-                  Sv = hv.get(zv.referencedType) ?? zv.childPrimitive;
-                "ref" === Pv ? oz.addField(vv, ev, zv.name, Sv) : oz.addField(vv, ev, zv.name, {
-                  [Pv]: Sv
+              } else if (void 0 !== kT.referencedType) {
+                const cT = kT.type,
+                  MT = lT.get(kT.referencedType) ?? kT.childPrimitive;
+                "ref" === cT ? nk.addField(TT, KT, kT.name, MT) : nk.addField(TT, KT, kT.name, {
+                  [cT]: MT
                 })
-              } else oz.addField(vv, ev, zv.name, zv.type)
+              } else nk.addField(TT, KT, kT.name, kT.type)
             }))
-          })(Sv, vv, pv), pv += vv.fields.length
+          })(MT, TT, yT), yT += TT.fields.length
         }))
       }));
-      const Sv = new(hv.get(Pv.rootType || 0));
-      return new oh(Sv, hv)
-    }, Xh.makeEncodable = function(vv) {
-      const zv = vv[Symbol.metadata];
-      if (!zv) return vv;
-      const Pv = zv[Ov];
-      if (void 0 === Pv) return vv;
-      for (let hv = 0; hv <= Pv; hv++) {
-        const Pv = zv[hv];
-        Pv && oz.defineField(vv, zv, hv, Pv.name, Pv.type)
+      const MT = new(lT.get(cT.rootType || 0));
+      return new nl(MT, lT)
+    }, sl.makeEncodable = function(TT) {
+      const kT = TT[Symbol.metadata];
+      if (!kT) return TT;
+      const cT = kT[mT];
+      if (void 0 === cT) return TT;
+      for (let lT = 0; lT <= cT; lT++) {
+        const cT = kT[lT];
+        cT && nk.defineField(TT, kT, lT, cT.name, cT.type)
       }
-      return Object.prototype.hasOwnProperty.call(vv, Yv) && delete vv[Yv], vv
+      return Object.prototype.hasOwnProperty.call(TT, PT) && delete TT[PT], TT
     };
-    class zS {
-      ow;
+    class cM {
+      pj;
       uniqueRefIds = new Set;
       isTriggering = !1;
-      constructor(vv) {
-        this.ow = vv, this.ow.fD = this.fD.bind(this)
+      constructor(TT) {
+        this.pj = TT, this.pj.MJ = this.MJ.bind(this)
       }
       get callbacks() {
-        return this.ow.root.callbacks
+        return this.pj.root.callbacks
       }
       get state() {
-        return this.ow.state
+        return this.pj.state
       }
-      addCallback(vv, zv, Pv) {
-        return this.ow.root.addCallback(vv, zv, Pv)
+      addCallback(TT, kT, cT) {
+        return this.pj.root.addCallback(TT, kT, cT)
       }
-      addCallbackOrWaitCollectionAvailable(vv, zv, Pv, hv) {
-        let ev = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          gv = () => {};
-        const dv = () => gv(),
-          Nv = vv[zv];
-        if (Nv && void 0 !== Nv[pv]) return ev = ev && !1 === this.isTriggering, Pv === Sv.ADD && ev && Nv.forEach(((vv, zv) => {
-          hv(vv, zv)
-        })), this.addCallback(Nv[pv], Pv, hv);
+      addCallbackOrWaitCollectionAvailable(TT, kT, cT, lT) {
+        let KT = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          OT = () => {};
+        const fT = () => OT(),
+          xT = TT[kT];
+        if (xT && void 0 !== xT[yT]) return KT = KT && !1 === this.isTriggering, cT === MT.ADD && KT && xT.forEach(((TT, kT) => {
+          lT(TT, kT)
+        })), this.addCallback(xT[yT], cT, lT);
         {
-          let Sv;
-          return Sv = this.addCallback(vv[pv], zv, ((vv, zv) => {
-            null !== vv && void 0 !== vv && (Sv(), gv = this.addCallback(vv[pv], Pv, hv))
-          })), gv = Sv, dv
+          let MT;
+          return MT = this.addCallback(TT[yT], kT, ((TT, kT) => {
+            null !== TT && void 0 !== TT && (MT(), OT = this.addCallback(TT[yT], cT, lT))
+          })), OT = MT, fT
         }
       }
       listen() {
         return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.listenInstance(this.state, arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2]) : this.listenInstance(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2], arguments.length <= 3 ? void 0 : arguments[3])
       }
-      listenInstance(vv, zv, Pv) {
-        let hv = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        hv = hv && !1 === this.isTriggering;
-        const Sv = vv[zv];
-        return hv && null !== Sv && void 0 !== Sv && Pv(Sv, void 0), this.addCallback(vv[pv], zv, Pv)
+      listenInstance(TT, kT, cT) {
+        let lT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        lT = lT && !1 === this.isTriggering;
+        const MT = TT[kT];
+        return lT && null !== MT && void 0 !== MT && cT(MT, void 0), this.addCallback(TT[yT], kT, cT)
       }
       onChange() {
         if (2 === arguments.length && "string" !== typeof(arguments.length <= 0 ? void 0 : arguments[0])) {
-          const vv = arguments.length <= 0 ? void 0 : arguments[0],
-            zv = arguments.length <= 1 ? void 0 : arguments[1];
-          return this.addCallback(vv[pv], Sv.REPLACE, zv)
+          const TT = arguments.length <= 0 ? void 0 : arguments[0],
+            kT = arguments.length <= 1 ? void 0 : arguments[1];
+          return this.addCallback(TT[yT], MT.REPLACE, kT)
         }
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Sv.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Sv.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], MT.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], MT.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      Km() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Sv.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Sv.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
+      uF() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], MT.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], MT.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
       }
-      HO() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Sv.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Sv.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
+      Om() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], MT.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], MT.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      bindTo(vv, zv, Pv) {
-        let hv = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const ev = vv.constructor[Symbol.metadata];
-        Pv || (Pv = Object.keys(ev).filter((vv => !isNaN(Number(vv)))).map((vv => ev[vv].name)));
-        const gv = () => {
-          for (const hv of Pv) {
-            const Pv = vv[hv];
-            void 0 !== Pv && (zv[hv] = Pv)
+      bindTo(TT, kT, cT) {
+        let lT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const KT = TT.constructor[Symbol.metadata];
+        cT || (cT = Object.keys(KT).filter((TT => !isNaN(Number(TT)))).map((TT => KT[TT].name)));
+        const OT = () => {
+          for (const lT of cT) {
+            const cT = TT[lT];
+            void 0 !== cT && (kT[lT] = cT)
           }
         };
-        return hv && gv(), this.addCallback(vv[pv], Sv.REPLACE, gv)
+        return lT && OT(), this.addCallback(TT[yT], MT.REPLACE, OT)
       }
-      fD(vv) {
+      MJ(TT) {
         this.uniqueRefIds.clear(), this.isTriggering = !0;
-        for (let zv = 0, Pv = vv.length; zv < Pv; zv++) {
-          const Pv = vv[zv],
-            hv = Pv.refId,
-            ev = Pv.ref,
-            gv = this.callbacks[hv];
-          if (gv) {
-            if ((Pv.op & Sv.DELETE) === Sv.DELETE && Kh.isSchema(Pv.previousValue)) {
-              const vv = Pv.previousValue[pv],
-                zv = this.callbacks[vv]?.[Sv.DELETE];
-              if (zv)
-                for (let Pv = zv.length - 1; Pv >= 0; Pv--) try {
-                  zv[Pv]()
-                } catch (eS) {
-                  console.error(eS)
+        for (let kT = 0, cT = TT.length; kT < cT; kT++) {
+          const cT = TT[kT],
+            lT = cT.refId,
+            KT = cT.ref,
+            OT = this.callbacks[lT];
+          if (OT) {
+            if ((cT.op & MT.DELETE) === MT.DELETE && Jl.isSchema(cT.previousValue)) {
+              const TT = cT.previousValue[yT],
+                kT = this.callbacks[TT]?.[MT.DELETE];
+              if (kT)
+                for (let cT = kT.length - 1; cT >= 0; cT--) try {
+                  kT[cT]()
+                } catch (OM) {
+                  console.error(OM)
                 }
             }
-            if (Kh.isSchema(ev)) {
-              if (!this.uniqueRefIds.has(hv)) {
-                const vv = gv[Sv.REPLACE];
-                if (vv)
-                  for (let zv = vv.length - 1; zv >= 0; zv--) try {
-                    vv[zv]()
-                  } catch (eS) {
-                    console.error(eS)
+            if (Jl.isSchema(KT)) {
+              if (!this.uniqueRefIds.has(lT)) {
+                const TT = OT[MT.REPLACE];
+                if (TT)
+                  for (let kT = TT.length - 1; kT >= 0; kT--) try {
+                    TT[kT]()
+                  } catch (OM) {
+                    console.error(OM)
                   }
               }
-              const vv = gv[Pv.field];
-              if (vv)
-                for (let zv = vv.length - 1; zv >= 0; zv--) try {
-                  vv[zv](Pv.value, Pv.previousValue)
-                } catch (eS) {
-                  console.error(eS)
+              const TT = OT[cT.field];
+              if (TT)
+                for (let kT = TT.length - 1; kT >= 0; kT--) try {
+                  TT[kT](cT.value, cT.previousValue)
+                } catch (OM) {
+                  console.error(OM)
                 }
             } else {
-              const vv = Pv.dynamicIndex ?? Pv.field;
-              if ((Pv.op & Sv.DELETE) === Sv.DELETE) {
-                if (void 0 !== Pv.previousValue) {
-                  const zv = gv[Sv.DELETE];
-                  if (zv)
-                    for (let hv = zv.length - 1; hv >= 0; hv--) try {
-                      zv[hv](Pv.previousValue, vv)
-                    } catch (eS) {
-                      console.error(eS)
+              const TT = cT.dynamicIndex ?? cT.field;
+              if ((cT.op & MT.DELETE) === MT.DELETE) {
+                if (void 0 !== cT.previousValue) {
+                  const kT = OT[MT.DELETE];
+                  if (kT)
+                    for (let lT = kT.length - 1; lT >= 0; lT--) try {
+                      kT[lT](cT.previousValue, TT)
+                    } catch (OM) {
+                      console.error(OM)
                     }
                 }
-                if ((Pv.op & Sv.ADD) === Sv.ADD) {
-                  const zv = gv[Sv.ADD];
-                  if (zv)
-                    for (let hv = zv.length - 1; hv >= 0; hv--) try {
-                      zv[hv](Pv.value, vv)
-                    } catch (eS) {
-                      console.error(eS)
+                if ((cT.op & MT.ADD) === MT.ADD) {
+                  const kT = OT[MT.ADD];
+                  if (kT)
+                    for (let lT = kT.length - 1; lT >= 0; lT--) try {
+                      kT[lT](cT.value, TT)
+                    } catch (OM) {
+                      console.error(OM)
                     }
                 }
-              } else if ((Pv.op & Sv.ADD) === Sv.ADD && Pv.previousValue !== Pv.value) {
-                const zv = gv[Sv.ADD];
-                if (zv)
-                  for (let hv = zv.length - 1; hv >= 0; hv--) try {
-                    zv[hv](Pv.value, vv)
-                  } catch (eS) {
-                    console.error(eS)
+              } else if ((cT.op & MT.ADD) === MT.ADD && cT.previousValue !== cT.value) {
+                const kT = OT[MT.ADD];
+                if (kT)
+                  for (let lT = kT.length - 1; lT >= 0; lT--) try {
+                    kT[lT](cT.value, TT)
+                  } catch (OM) {
+                    console.error(OM)
                   }
               }
-              if (Pv.value !== Pv.previousValue) {
-                const zv = gv[Sv.REPLACE];
-                if (zv)
-                  for (let hv = zv.length - 1; hv >= 0; hv--) try {
-                    zv[hv](vv, Pv.value)
-                  } catch (eS) {
-                    console.error(eS)
+              if (cT.value !== cT.previousValue) {
+                const kT = OT[MT.REPLACE];
+                if (kT)
+                  for (let lT = kT.length - 1; lT >= 0; lT--) try {
+                    kT[lT](TT, cT.value)
+                  } catch (OM) {
+                    console.error(OM)
                   }
               }
             }
-            this.uniqueRefIds.add(hv)
+            this.uniqueRefIds.add(lT)
           }
         }
         this.isTriggering = !1
       }
     }
-    const PS = {
-      get(vv) {
-        if (vv instanceof oh) return new zS(vv);
-        if ("ow" in vv.uC) return new zS(vv.uC.ow);
+    const lM = {
+      get(TT) {
+        if (TT instanceof nl) return new cM(TT);
+        if ("pj" in TT.aN) return new cM(TT.aN.pj);
         throw new Error("Invalid room or decoder")
       },
-      getLegacy(vv) {
-        if (vv instanceof oh) return uh(vv);
-        if ("ow" in vv.uC) return uh(vv.uC.ow);
+      getLegacy(TT) {
+        if (TT instanceof nl) return TM(TT);
+        if ("pj" in TT.aN) return TM(TT.aN.pj);
         throw new Error("Invalid room or decoder")
       },
-      getRawChanges: (vv, zv) => vS(vv, zv)
+      getRawChanges: (TT, kT) => kM(TT, kT)
     };
-    class hS {
+    class MM {
       _free = [];
       _factory;
       _maxSize;
-      constructor(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this._factory = vv, this._maxSize = zv.maxSize ?? 1 / 0;
-        const Pv = zv.preallocate ?? 0;
-        for (let hv = 0; hv < Pv; hv++) this._free.push(vv())
+      constructor(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this._factory = TT, this._maxSize = kT.maxSize ?? 1 / 0;
+        const cT = kT.preallocate ?? 0;
+        for (let lT = 0; lT < cT; lT++) this._free.push(TT())
       }
       acquire() {
         return this._free.length > 0 ? this._free.pop() : this._factory()
       }
-      release(vv) {
-        Kh.reset(vv), this._free.length < this._maxSize && this._free.push(vv)
+      release(TT) {
+        Jl.reset(TT), this._free.length < this._maxSize && this._free.push(TT)
       }
       get size() {
         return this._free.length
       }
     }
 
-    function SS(vv) {
-      return new hS((() => new vv), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
+    function KM(TT) {
+      return new MM((() => new TT), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
     }
-    fz("map", {
-      constructor: Sh
-    }), fz("array", {
-      constructor: Ph
-    }), fz("set", {
-      constructor: gh
-    }), fz("collection", {
-      constructor: eh
+    Fk("map", {
+      constructor: Kl
+    }), Fk("array", {
+      constructor: ll
+    }), Fk("set", {
+      constructor: yl
+    }), Fk("collection", {
+      constructor: Ol
     })
   },
-  8746: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      __addDisposableResource: () => Iv,
-      __assign: () => ev,
-      __asyncDelegator: () => nv,
-      __asyncGenerator: () => Yv,
-      __asyncValues: () => Ov,
-      __await: () => Fv,
-      __awaiter: () => av,
-      __classPrivateFieldGet: () => xv,
-      __classPrivateFieldIn: () => qv,
-      __classPrivateFieldSet: () => tv,
-      __createBinding: () => Cv,
-      __decorate: () => pv,
-      __disposeResources: () => Zv,
-      __esDecorate: () => Nv,
-      __exportStar: () => iv,
-      __extends: () => Sv,
-      __generator: () => sv,
-      __importDefault: () => Rv,
-      __importStar: () => Uv,
-      __makeTemplateObject: () => Dv,
-      __metadata: () => wv,
-      __param: () => dv,
-      __propKey: () => Tv,
-      __read: () => Gv,
-      __rest: () => gv,
-      __rewriteRelativeImportExtension: () => Av,
-      __runInitializers: () => lv,
-      __setFunctionName: () => Wv,
-      __spread: () => mv,
-      __spreadArray: () => fv,
-      __spreadArrays: () => jv,
-      __values: () => cv,
-      default: () => Lv
+  9086: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      __addDisposableResource: () => ET,
+      __assign: () => KT,
+      __asyncDelegator: () => wT,
+      __asyncGenerator: () => PT,
+      __asyncValues: () => mT,
+      __await: () => rT,
+      __awaiter: () => vT,
+      __classPrivateFieldGet: () => eT,
+      __classPrivateFieldIn: () => VT,
+      __classPrivateFieldSet: () => GT,
+      __createBinding: () => hT,
+      __decorate: () => yT,
+      __disposeResources: () => uT,
+      __esDecorate: () => xT,
+      __exportStar: () => NT,
+      __extends: () => MT,
+      __generator: () => tT,
+      __importDefault: () => HT,
+      __importStar: () => oT,
+      __makeTemplateObject: () => bT,
+      __metadata: () => jT,
+      __param: () => fT,
+      __propKey: () => AT,
+      __read: () => ST,
+      __rest: () => OT,
+      __rewriteRelativeImportExtension: () => XT,
+      __runInitializers: () => IT,
+      __setFunctionName: () => CT,
+      __spread: () => DT,
+      __spreadArray: () => FT,
+      __spreadArrays: () => aT,
+      __values: () => QT,
+      default: () => dT
     });
-    var hv = function(vv, zv) {
-      return hv = Object.setPrototypeOf || {
+    var lT = function(TT, kT) {
+      return lT = Object.setPrototypeOf || {
         __proto__: []
       }
-      instanceof Array && function(vv, zv) {
-        vv.__proto__ = zv
-      } || function(vv, zv) {
-        for (var Pv in zv) Object.prototype.hasOwnProperty.call(zv, Pv) && (vv[Pv] = zv[Pv])
-      }, hv(vv, zv)
+      instanceof Array && function(TT, kT) {
+        TT.__proto__ = kT
+      } || function(TT, kT) {
+        for (var cT in kT) Object.prototype.hasOwnProperty.call(kT, cT) && (TT[cT] = kT[cT])
+      }, lT(TT, kT)
     };
 
-    function Sv(vv, zv) {
-      if ("function" !== typeof zv && null !== zv) throw new TypeError("Class extends value " + String(zv) + " is not a constructor or null");
+    function MT(TT, kT) {
+      if ("function" !== typeof kT && null !== kT) throw new TypeError("Class extends value " + String(kT) + " is not a constructor or null");
 
-      function Pv() {
-        this.constructor = vv
+      function cT() {
+        this.constructor = TT
       }
-      hv(vv, zv), vv.prototype = null === zv ? Object.create(zv) : (Pv.prototype = zv.prototype, new Pv)
+      lT(TT, kT), TT.prototype = null === kT ? Object.create(kT) : (cT.prototype = kT.prototype, new cT)
     }
-    var ev = function() {
-      return ev = Object.assign || function(vv) {
-        for (var zv, Pv = 1, hv = arguments.length; Pv < hv; Pv++)
-          for (var Sv in zv = arguments[Pv]) Object.prototype.hasOwnProperty.call(zv, Sv) && (vv[Sv] = zv[Sv]);
-        return vv
-      }, ev.apply(this, arguments)
+    var KT = function() {
+      return KT = Object.assign || function(TT) {
+        for (var kT, cT = 1, lT = arguments.length; cT < lT; cT++)
+          for (var MT in kT = arguments[cT]) Object.prototype.hasOwnProperty.call(kT, MT) && (TT[MT] = kT[MT]);
+        return TT
+      }, KT.apply(this, arguments)
     };
 
-    function gv(vv, zv) {
-      var Pv = {};
-      for (var hv in vv) Object.prototype.hasOwnProperty.call(vv, hv) && zv.indexOf(hv) < 0 && (Pv[hv] = vv[hv]);
-      if (null != vv && "function" === typeof Object.getOwnPropertySymbols) {
-        var Sv = 0;
-        for (hv = Object.getOwnPropertySymbols(vv); Sv < hv.length; Sv++) zv.indexOf(hv[Sv]) < 0 && Object.prototype.propertyIsEnumerable.call(vv, hv[Sv]) && (Pv[hv[Sv]] = vv[hv[Sv]])
+    function OT(TT, kT) {
+      var cT = {};
+      for (var lT in TT) Object.prototype.hasOwnProperty.call(TT, lT) && kT.indexOf(lT) < 0 && (cT[lT] = TT[lT]);
+      if (null != TT && "function" === typeof Object.getOwnPropertySymbols) {
+        var MT = 0;
+        for (lT = Object.getOwnPropertySymbols(TT); MT < lT.length; MT++) kT.indexOf(lT[MT]) < 0 && Object.prototype.propertyIsEnumerable.call(TT, lT[MT]) && (cT[lT[MT]] = TT[lT[MT]])
       }
-      return Pv
+      return cT
     }
 
-    function pv(vv, zv, Pv, hv) {
-      var Sv, ev = arguments.length,
-        gv = ev < 3 ? zv : null === hv ? hv = Object.getOwnPropertyDescriptor(zv, Pv) : hv;
-      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) gv = Reflect.decorate(vv, zv, Pv, hv);
+    function yT(TT, kT, cT, lT) {
+      var MT, KT = arguments.length,
+        OT = KT < 3 ? kT : null === lT ? lT = Object.getOwnPropertyDescriptor(kT, cT) : lT;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) OT = Reflect.decorate(TT, kT, cT, lT);
       else
-        for (var pv = vv.length - 1; pv >= 0; pv--)(Sv = vv[pv]) && (gv = (ev < 3 ? Sv(gv) : ev > 3 ? Sv(zv, Pv, gv) : Sv(zv, Pv)) || gv);
-      return ev > 3 && gv && Object.defineProperty(zv, Pv, gv), gv
+        for (var yT = TT.length - 1; yT >= 0; yT--)(MT = TT[yT]) && (OT = (KT < 3 ? MT(OT) : KT > 3 ? MT(kT, cT, OT) : MT(kT, cT)) || OT);
+      return KT > 3 && OT && Object.defineProperty(kT, cT, OT), OT
     }
 
-    function dv(vv, zv) {
-      return function(Pv, hv) {
-        zv(Pv, hv, vv)
+    function fT(TT, kT) {
+      return function(cT, lT) {
+        kT(cT, lT, TT)
       }
     }
 
-    function Nv(vv, zv, Pv, hv, Sv, ev) {
-      function gv(vv) {
-        if (void 0 !== vv && "function" !== typeof vv) throw new TypeError("Function expected");
-        return vv
+    function xT(TT, kT, cT, lT, MT, KT) {
+      function OT(TT) {
+        if (void 0 !== TT && "function" !== typeof TT) throw new TypeError("Function expected");
+        return TT
       }
-      for (var pv, dv = hv.kind, Nv = "getter" === dv ? "get" : "setter" === dv ? "set" : "value", lv = !zv && vv ? hv.static ? vv : vv.prototype : null, Tv = zv || (lv ? Object.getOwnPropertyDescriptor(lv, hv.name) : {}), Wv = !1, wv = Pv.length - 1; wv >= 0; wv--) {
-        var av = {};
-        for (var sv in hv) av[sv] = "access" === sv ? {} : hv[sv];
-        for (var sv in hv.access) av.access[sv] = hv.access[sv];
-        av.addInitializer = function(vv) {
-          if (Wv) throw new TypeError("Cannot add initializers after decoration has completed");
-          ev.push(gv(vv || null))
+      for (var yT, fT = lT.kind, xT = "getter" === fT ? "get" : "setter" === fT ? "set" : "value", IT = !kT && TT ? lT.static ? TT : TT.prototype : null, AT = kT || (IT ? Object.getOwnPropertyDescriptor(IT, lT.name) : {}), CT = !1, jT = cT.length - 1; jT >= 0; jT--) {
+        var vT = {};
+        for (var tT in lT) vT[tT] = "access" === tT ? {} : lT[tT];
+        for (var tT in lT.access) vT.access[tT] = lT.access[tT];
+        vT.addInitializer = function(TT) {
+          if (CT) throw new TypeError("Cannot add initializers after decoration has completed");
+          KT.push(OT(TT || null))
         };
-        var Cv = (0, Pv[wv])("accessor" === dv ? {
-          get: Tv.get,
-          set: Tv.set
-        } : Tv[Nv], av);
-        if ("accessor" === dv) {
-          if (void 0 === Cv) continue;
-          if (null === Cv || "object" !== typeof Cv) throw new TypeError("Object expected");
-          (pv = gv(Cv.get)) && (Tv.get = pv), (pv = gv(Cv.set)) && (Tv.set = pv), (pv = gv(Cv.init)) && Sv.unshift(pv)
-        } else(pv = gv(Cv)) && ("field" === dv ? Sv.unshift(pv) : Tv[Nv] = pv)
+        var hT = (0, cT[jT])("accessor" === fT ? {
+          get: AT.get,
+          set: AT.set
+        } : AT[xT], vT);
+        if ("accessor" === fT) {
+          if (void 0 === hT) continue;
+          if (null === hT || "object" !== typeof hT) throw new TypeError("Object expected");
+          (yT = OT(hT.get)) && (AT.get = yT), (yT = OT(hT.set)) && (AT.set = yT), (yT = OT(hT.init)) && MT.unshift(yT)
+        } else(yT = OT(hT)) && ("field" === fT ? MT.unshift(yT) : AT[xT] = yT)
       }
-      lv && Object.defineProperty(lv, hv.name, Tv), Wv = !0
+      IT && Object.defineProperty(IT, lT.name, AT), CT = !0
     }
 
-    function lv(vv, zv, Pv) {
-      for (var hv = arguments.length > 2, Sv = 0; Sv < zv.length; Sv++) Pv = hv ? zv[Sv].call(vv, Pv) : zv[Sv].call(vv);
-      return hv ? Pv : void 0
+    function IT(TT, kT, cT) {
+      for (var lT = arguments.length > 2, MT = 0; MT < kT.length; MT++) cT = lT ? kT[MT].call(TT, cT) : kT[MT].call(TT);
+      return lT ? cT : void 0
     }
 
-    function Tv(vv) {
-      return "symbol" === typeof vv ? vv : "".concat(vv)
+    function AT(TT) {
+      return "symbol" === typeof TT ? TT : "".concat(TT)
     }
 
-    function Wv(vv, zv, Pv) {
-      return "symbol" === typeof zv && (zv = zv.description ? "[".concat(zv.description, "]") : ""), Object.defineProperty(vv, "name", {
+    function CT(TT, kT, cT) {
+      return "symbol" === typeof kT && (kT = kT.description ? "[".concat(kT.description, "]") : ""), Object.defineProperty(TT, "name", {
         configurable: !0,
-        value: Pv ? "".concat(Pv, " ", zv) : zv
+        value: cT ? "".concat(cT, " ", kT) : kT
       })
     }
 
-    function wv(vv, zv) {
-      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(vv, zv)
+    function jT(TT, kT) {
+      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(TT, kT)
     }
 
-    function av(vv, zv, Pv, hv) {
-      return new(Pv || (Pv = Promise))((function(Sv, ev) {
-        function gv(vv) {
+    function vT(TT, kT, cT, lT) {
+      return new(cT || (cT = Promise))((function(MT, KT) {
+        function OT(TT) {
           try {
-            dv(hv.next(vv))
-          } catch (zv) {
-            ev(zv)
+            fT(lT.next(TT))
+          } catch (kT) {
+            KT(kT)
           }
         }
 
-        function pv(vv) {
+        function yT(TT) {
           try {
-            dv(hv.throw(vv))
-          } catch (zv) {
-            ev(zv)
+            fT(lT.throw(TT))
+          } catch (kT) {
+            KT(kT)
           }
         }
 
-        function dv(vv) {
-          var zv;
-          vv.done ? Sv(vv.value) : (zv = vv.value, zv instanceof Pv ? zv : new Pv((function(vv) {
-            vv(zv)
-          }))).then(gv, pv)
+        function fT(TT) {
+          var kT;
+          TT.done ? MT(TT.value) : (kT = TT.value, kT instanceof cT ? kT : new cT((function(TT) {
+            TT(kT)
+          }))).then(OT, yT)
         }
-        dv((hv = hv.apply(vv, zv || [])).next())
+        fT((lT = lT.apply(TT, kT || [])).next())
       }))
     }
 
-    function sv(vv, zv) {
-      var Pv, hv, Sv, ev = {
+    function tT(TT, kT) {
+      var cT, lT, MT, KT = {
           label: 0,
           sent: function() {
-            if (1 & Sv[0]) throw Sv[1];
-            return Sv[1]
+            if (1 & MT[0]) throw MT[1];
+            return MT[1]
           },
           trys: [],
           ops: []
         },
-        gv = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
-      return gv.next = pv(0), gv.throw = pv(1), gv.return = pv(2), "function" === typeof Symbol && (gv[Symbol.iterator] = function() {
+        OT = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
+      return OT.next = yT(0), OT.throw = yT(1), OT.return = yT(2), "function" === typeof Symbol && (OT[Symbol.iterator] = function() {
         return this
-      }), gv;
+      }), OT;
 
-      function pv(pv) {
-        return function(dv) {
-          return function(pv) {
-            if (Pv) throw new TypeError("Generator is already executing.");
-            for (; gv && (gv = 0, pv[0] && (ev = 0)), ev;) try {
-              if (Pv = 1, hv && (Sv = 2 & pv[0] ? hv.return : pv[0] ? hv.throw || ((Sv = hv.return) && Sv.call(hv), 0) : hv.next) && !(Sv = Sv.call(hv, pv[1])).done) return Sv;
-              switch (hv = 0, Sv && (pv = [2 & pv[0], Sv.value]), pv[0]) {
+      function yT(yT) {
+        return function(fT) {
+          return function(yT) {
+            if (cT) throw new TypeError("Generator is already executing.");
+            for (; OT && (OT = 0, yT[0] && (KT = 0)), KT;) try {
+              if (cT = 1, lT && (MT = 2 & yT[0] ? lT.return : yT[0] ? lT.throw || ((MT = lT.return) && MT.call(lT), 0) : lT.next) && !(MT = MT.call(lT, yT[1])).done) return MT;
+              switch (lT = 0, MT && (yT = [2 & yT[0], MT.value]), yT[0]) {
                 case 0:
                 case 1:
-                  Sv = pv;
+                  MT = yT;
                   break;
                 case 4:
-                  return ev.label++, {
-                    value: pv[1],
+                  return KT.label++, {
+                    value: yT[1],
                     done: !1
                   };
                 case 5:
-                  ev.label++, hv = pv[1], pv = [0];
+                  KT.label++, lT = yT[1], yT = [0];
                   continue;
                 case 7:
-                  pv = ev.ops.pop(), ev.trys.pop();
+                  yT = KT.ops.pop(), KT.trys.pop();
                   continue;
                 default:
-                  if (!(Sv = (Sv = ev.trys).length > 0 && Sv[Sv.length - 1]) && (6 === pv[0] || 2 === pv[0])) {
-                    ev = 0;
+                  if (!(MT = (MT = KT.trys).length > 0 && MT[MT.length - 1]) && (6 === yT[0] || 2 === yT[0])) {
+                    KT = 0;
                     continue
                   }
-                  if (3 === pv[0] && (!Sv || pv[1] > Sv[0] && pv[1] < Sv[3])) {
-                    ev.label = pv[1];
+                  if (3 === yT[0] && (!MT || yT[1] > MT[0] && yT[1] < MT[3])) {
+                    KT.label = yT[1];
                     break
                   }
-                  if (6 === pv[0] && ev.label < Sv[1]) {
-                    ev.label = Sv[1], Sv = pv;
+                  if (6 === yT[0] && KT.label < MT[1]) {
+                    KT.label = MT[1], MT = yT;
                     break
                   }
-                  if (Sv && ev.label < Sv[2]) {
-                    ev.label = Sv[2], ev.ops.push(pv);
+                  if (MT && KT.label < MT[2]) {
+                    KT.label = MT[2], KT.ops.push(yT);
                     break
                   }
-                  Sv[2] && ev.ops.pop(), ev.trys.pop();
+                  MT[2] && KT.ops.pop(), KT.trys.pop();
                   continue
               }
-              pv = zv.call(vv, ev)
-            } catch (dv) {
-              pv = [6, dv], hv = 0
+              yT = kT.call(TT, KT)
+            } catch (fT) {
+              yT = [6, fT], lT = 0
             } finally {
-              Pv = Sv = 0
+              cT = MT = 0
             }
-            if (5 & pv[0]) throw pv[1];
+            if (5 & yT[0]) throw yT[1];
             return {
-              value: pv[0] ? pv[1] : void 0,
+              value: yT[0] ? yT[1] : void 0,
               done: !0
             }
-          }([pv, dv])
+          }([yT, fT])
         }
       }
     }
-    var Cv = Object.create ? function(vv, zv, Pv, hv) {
-      void 0 === hv && (hv = Pv);
-      var Sv = Object.getOwnPropertyDescriptor(zv, Pv);
-      Sv && !("get" in Sv ? !zv.__esModule : Sv.writable || Sv.configurable) || (Sv = {
+    var hT = Object.create ? function(TT, kT, cT, lT) {
+      void 0 === lT && (lT = cT);
+      var MT = Object.getOwnPropertyDescriptor(kT, cT);
+      MT && !("get" in MT ? !kT.__esModule : MT.writable || MT.configurable) || (MT = {
         enumerable: !0,
         get: function() {
-          return zv[Pv]
+          return kT[cT]
         }
-      }), Object.defineProperty(vv, hv, Sv)
-    } : function(vv, zv, Pv, hv) {
-      void 0 === hv && (hv = Pv), vv[hv] = zv[Pv]
+      }), Object.defineProperty(TT, lT, MT)
+    } : function(TT, kT, cT, lT) {
+      void 0 === lT && (lT = cT), TT[lT] = kT[cT]
     };
 
-    function iv(vv, zv) {
-      for (var Pv in vv) "default" === Pv || Object.prototype.hasOwnProperty.call(zv, Pv) || Cv(zv, vv, Pv)
+    function NT(TT, kT) {
+      for (var cT in TT) "default" === cT || Object.prototype.hasOwnProperty.call(kT, cT) || hT(kT, TT, cT)
     }
 
-    function cv(vv) {
-      var zv = "function" === typeof Symbol && Symbol.iterator,
-        Pv = zv && vv[zv],
-        hv = 0;
-      if (Pv) return Pv.call(vv);
-      if (vv && "number" === typeof vv.length) return {
+    function QT(TT) {
+      var kT = "function" === typeof Symbol && Symbol.iterator,
+        cT = kT && TT[kT],
+        lT = 0;
+      if (cT) return cT.call(TT);
+      if (TT && "number" === typeof TT.length) return {
         next: function() {
-          return vv && hv >= vv.length && (vv = void 0), {
-            value: vv && vv[hv++],
-            done: !vv
+          return TT && lT >= TT.length && (TT = void 0), {
+            value: TT && TT[lT++],
+            done: !TT
           }
         }
       };
-      throw new TypeError(zv ? "Object is not iterable." : "Symbol.iterator is not defined.")
+      throw new TypeError(kT ? "Object is not iterable." : "Symbol.iterator is not defined.")
     }
 
-    function Gv(vv, zv) {
-      var Pv = "function" === typeof Symbol && vv[Symbol.iterator];
-      if (!Pv) return vv;
-      var hv, Sv, ev = Pv.call(vv),
-        gv = [];
+    function ST(TT, kT) {
+      var cT = "function" === typeof Symbol && TT[Symbol.iterator];
+      if (!cT) return TT;
+      var lT, MT, KT = cT.call(TT),
+        OT = [];
       try {
         for (;
-          (void 0 === zv || zv-- > 0) && !(hv = ev.next()).done;) gv.push(hv.value)
-      } catch (pv) {
-        Sv = {
-          error: pv
+          (void 0 === kT || kT-- > 0) && !(lT = KT.next()).done;) OT.push(lT.value)
+      } catch (yT) {
+        MT = {
+          error: yT
         }
       } finally {
         try {
-          hv && !hv.done && (Pv = ev.return) && Pv.call(ev)
+          lT && !lT.done && (cT = KT.return) && cT.call(KT)
         } finally {
-          if (Sv) throw Sv.error
+          if (MT) throw MT.error
         }
       }
-      return gv
+      return OT
     }
 
-    function mv() {
-      for (var vv = [], zv = 0; zv < arguments.length; zv++) vv = vv.concat(Gv(arguments[zv]));
-      return vv
+    function DT() {
+      for (var TT = [], kT = 0; kT < arguments.length; kT++) TT = TT.concat(ST(arguments[kT]));
+      return TT
     }
 
-    function jv() {
-      for (var vv = 0, zv = 0, Pv = arguments.length; zv < Pv; zv++) vv += arguments[zv].length;
-      var hv = Array(vv),
-        Sv = 0;
-      for (zv = 0; zv < Pv; zv++)
-        for (var ev = arguments[zv], gv = 0, pv = ev.length; gv < pv; gv++, Sv++) hv[Sv] = ev[gv];
-      return hv
+    function aT() {
+      for (var TT = 0, kT = 0, cT = arguments.length; kT < cT; kT++) TT += arguments[kT].length;
+      var lT = Array(TT),
+        MT = 0;
+      for (kT = 0; kT < cT; kT++)
+        for (var KT = arguments[kT], OT = 0, yT = KT.length; OT < yT; OT++, MT++) lT[MT] = KT[OT];
+      return lT
     }
 
-    function fv(vv, zv, Pv) {
-      if (Pv || 2 === arguments.length)
-        for (var hv, Sv = 0, ev = zv.length; Sv < ev; Sv++) !hv && Sv in zv || (hv || (hv = Array.prototype.slice.call(zv, 0, Sv)), hv[Sv] = zv[Sv]);
-      return vv.concat(hv || Array.prototype.slice.call(zv))
+    function FT(TT, kT, cT) {
+      if (cT || 2 === arguments.length)
+        for (var lT, MT = 0, KT = kT.length; MT < KT; MT++) !lT && MT in kT || (lT || (lT = Array.prototype.slice.call(kT, 0, MT)), lT[MT] = kT[MT]);
+      return TT.concat(lT || Array.prototype.slice.call(kT))
     }
 
-    function Fv(vv) {
-      return this instanceof Fv ? (this.v = vv, this) : new Fv(vv)
+    function rT(TT) {
+      return this instanceof rT ? (this.v = TT, this) : new rT(TT)
     }
 
-    function Yv(vv, zv, Pv) {
+    function PT(TT, kT, cT) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var hv, Sv = Pv.apply(vv, zv || []),
-        ev = [];
-      return hv = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), gv("next"), gv("throw"), gv("return", (function(vv) {
-        return function(zv) {
-          return Promise.resolve(zv).then(vv, Nv)
+      var lT, MT = cT.apply(TT, kT || []),
+        KT = [];
+      return lT = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), OT("next"), OT("throw"), OT("return", (function(TT) {
+        return function(kT) {
+          return Promise.resolve(kT).then(TT, xT)
         }
-      })), hv[Symbol.asyncIterator] = function() {
+      })), lT[Symbol.asyncIterator] = function() {
         return this
-      }, hv;
+      }, lT;
 
-      function gv(vv, zv) {
-        Sv[vv] && (hv[vv] = function(zv) {
-          return new Promise((function(Pv, hv) {
-            ev.push([vv, zv, Pv, hv]) > 1 || pv(vv, zv)
+      function OT(TT, kT) {
+        MT[TT] && (lT[TT] = function(kT) {
+          return new Promise((function(cT, lT) {
+            KT.push([TT, kT, cT, lT]) > 1 || yT(TT, kT)
           }))
-        }, zv && (hv[vv] = zv(hv[vv])))
+        }, kT && (lT[TT] = kT(lT[TT])))
       }
 
-      function pv(vv, zv) {
+      function yT(TT, kT) {
         try {
-          (Pv = Sv[vv](zv)).value instanceof Fv ? Promise.resolve(Pv.value.v).then(dv, Nv) : lv(ev[0][2], Pv)
-        } catch (hv) {
-          lv(ev[0][3], hv)
+          (cT = MT[TT](kT)).value instanceof rT ? Promise.resolve(cT.value.v).then(fT, xT) : IT(KT[0][2], cT)
+        } catch (lT) {
+          IT(KT[0][3], lT)
         }
-        var Pv
+        var cT
       }
 
-      function dv(vv) {
-        pv("next", vv)
+      function fT(TT) {
+        yT("next", TT)
       }
 
-      function Nv(vv) {
-        pv("throw", vv)
+      function xT(TT) {
+        yT("throw", TT)
       }
 
-      function lv(vv, zv) {
-        vv(zv), ev.shift(), ev.length && pv(ev[0][0], ev[0][1])
+      function IT(TT, kT) {
+        TT(kT), KT.shift(), KT.length && yT(KT[0][0], KT[0][1])
       }
     }
 
-    function nv(vv) {
-      var zv, Pv;
-      return zv = {}, hv("next"), hv("throw", (function(vv) {
-        throw vv
-      })), hv("return"), zv[Symbol.iterator] = function() {
+    function wT(TT) {
+      var kT, cT;
+      return kT = {}, lT("next"), lT("throw", (function(TT) {
+        throw TT
+      })), lT("return"), kT[Symbol.iterator] = function() {
         return this
-      }, zv;
+      }, kT;
 
-      function hv(hv, Sv) {
-        zv[hv] = vv[hv] ? function(zv) {
-          return (Pv = !Pv) ? {
-            value: Fv(vv[hv](zv)),
+      function lT(lT, MT) {
+        kT[lT] = TT[lT] ? function(kT) {
+          return (cT = !cT) ? {
+            value: rT(TT[lT](kT)),
             done: !1
-          } : Sv ? Sv(zv) : zv
-        } : Sv
+          } : MT ? MT(kT) : kT
+        } : MT
       }
     }
 
-    function Ov(vv) {
+    function mT(TT) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var zv, Pv = vv[Symbol.asyncIterator];
-      return Pv ? Pv.call(vv) : (vv = cv(vv), zv = {}, hv("next"), hv("throw"), hv("return"), zv[Symbol.asyncIterator] = function() {
+      var kT, cT = TT[Symbol.asyncIterator];
+      return cT ? cT.call(TT) : (TT = QT(TT), kT = {}, lT("next"), lT("throw"), lT("return"), kT[Symbol.asyncIterator] = function() {
         return this
-      }, zv);
+      }, kT);
 
-      function hv(Pv) {
-        zv[Pv] = vv[Pv] && function(zv) {
-          return new Promise((function(hv, Sv) {
-            (function(vv, zv, Pv, hv) {
-              Promise.resolve(hv).then((function(zv) {
-                vv({
-                  value: zv,
-                  done: Pv
+      function lT(cT) {
+        kT[cT] = TT[cT] && function(kT) {
+          return new Promise((function(lT, MT) {
+            (function(TT, kT, cT, lT) {
+              Promise.resolve(lT).then((function(kT) {
+                TT({
+                  value: kT,
+                  done: cT
                 })
-              }), zv)
-            })(hv, Sv, (zv = vv[Pv](zv)).done, zv.value)
+              }), kT)
+            })(lT, MT, (kT = TT[cT](kT)).done, kT.value)
           }))
         }
       }
     }
 
-    function Dv(vv, zv) {
-      return Object.defineProperty ? Object.defineProperty(vv, "raw", {
-        value: zv
-      }) : vv.raw = zv, vv
+    function bT(TT, kT) {
+      return Object.defineProperty ? Object.defineProperty(TT, "raw", {
+        value: kT
+      }) : TT.raw = kT, TT
     }
-    var Kv = Object.create ? function(vv, zv) {
-        Object.defineProperty(vv, "default", {
+    var zT = Object.create ? function(TT, kT) {
+        Object.defineProperty(TT, "default", {
           enumerable: !0,
-          value: zv
+          value: kT
         })
-      } : function(vv, zv) {
-        vv.default = zv
+      } : function(TT, kT) {
+        TT.default = kT
       },
-      Vv = function(vv) {
-        return Vv = Object.getOwnPropertyNames || function(vv) {
-          var zv = [];
-          for (var Pv in vv) Object.prototype.hasOwnProperty.call(vv, Pv) && (zv[zv.length] = Pv);
-          return zv
-        }, Vv(vv)
+      JT = function(TT) {
+        return JT = Object.getOwnPropertyNames || function(TT) {
+          var kT = [];
+          for (var cT in TT) Object.prototype.hasOwnProperty.call(TT, cT) && (kT[kT.length] = cT);
+          return kT
+        }, JT(TT)
       };
 
-    function Uv(vv) {
-      if (vv && vv.__esModule) return vv;
-      var zv = {};
-      if (null != vv)
-        for (var Pv = Vv(vv), hv = 0; hv < Pv.length; hv++) "default" !== Pv[hv] && Cv(zv, vv, Pv[hv]);
-      return Kv(zv, vv), zv
+    function oT(TT) {
+      if (TT && TT.__esModule) return TT;
+      var kT = {};
+      if (null != TT)
+        for (var cT = JT(TT), lT = 0; lT < cT.length; lT++) "default" !== cT[lT] && hT(kT, TT, cT[lT]);
+      return zT(kT, TT), kT
     }
 
-    function Rv(vv) {
-      return vv && vv.__esModule ? vv : {
-        default: vv
+    function HT(TT) {
+      return TT && TT.__esModule ? TT : {
+        default: TT
       }
     }
 
-    function xv(vv, zv, Pv, hv) {
-      if ("a" === Pv && !hv) throw new TypeError("Private accessor was defined without a getter");
-      if ("function" === typeof zv ? vv !== zv || !hv : !zv.has(vv)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
-      return "m" === Pv ? hv : "a" === Pv ? hv.call(vv) : hv ? hv.value : zv.get(vv)
+    function eT(TT, kT, cT, lT) {
+      if ("a" === cT && !lT) throw new TypeError("Private accessor was defined without a getter");
+      if ("function" === typeof kT ? TT !== kT || !lT : !kT.has(TT)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+      return "m" === cT ? lT : "a" === cT ? lT.call(TT) : lT ? lT.value : kT.get(TT)
     }
 
-    function tv(vv, zv, Pv, hv, Sv) {
-      if ("m" === hv) throw new TypeError("Private method is not writable");
-      if ("a" === hv && !Sv) throw new TypeError("Private accessor was defined without a setter");
-      if ("function" === typeof zv ? vv !== zv || !Sv : !zv.has(vv)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
-      return "a" === hv ? Sv.call(vv, Pv) : Sv ? Sv.value = Pv : zv.set(vv, Pv), Pv
+    function GT(TT, kT, cT, lT, MT) {
+      if ("m" === lT) throw new TypeError("Private method is not writable");
+      if ("a" === lT && !MT) throw new TypeError("Private accessor was defined without a setter");
+      if ("function" === typeof kT ? TT !== kT || !MT : !kT.has(TT)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+      return "a" === lT ? MT.call(TT, cT) : MT ? MT.value = cT : kT.set(TT, cT), cT
     }
 
-    function qv(vv, zv) {
-      if (null === zv || "object" !== typeof zv && "function" !== typeof zv) throw new TypeError("Cannot use 'in' operator on non-object");
-      return "function" === typeof vv ? zv === vv : vv.has(zv)
+    function VT(TT, kT) {
+      if (null === kT || "object" !== typeof kT && "function" !== typeof kT) throw new TypeError("Cannot use 'in' operator on non-object");
+      return "function" === typeof TT ? kT === TT : TT.has(kT)
     }
 
-    function Iv(vv, zv, Pv) {
-      if (null !== zv && void 0 !== zv) {
-        if ("object" !== typeof zv && "function" !== typeof zv) throw new TypeError("Object expected.");
-        var hv, Sv;
-        if (Pv) {
+    function ET(TT, kT, cT) {
+      if (null !== kT && void 0 !== kT) {
+        if ("object" !== typeof kT && "function" !== typeof kT) throw new TypeError("Object expected.");
+        var lT, MT;
+        if (cT) {
           if (!Symbol.asyncDispose) throw new TypeError("Symbol.asyncDispose is not defined.");
-          hv = zv[Symbol.asyncDispose]
+          lT = kT[Symbol.asyncDispose]
         }
-        if (void 0 === hv) {
+        if (void 0 === lT) {
           if (!Symbol.dispose) throw new TypeError("Symbol.dispose is not defined.");
-          hv = zv[Symbol.dispose], Pv && (Sv = hv)
+          lT = kT[Symbol.dispose], cT && (MT = lT)
         }
-        if ("function" !== typeof hv) throw new TypeError("Object not disposable.");
-        Sv && (hv = function() {
+        if ("function" !== typeof lT) throw new TypeError("Object not disposable.");
+        MT && (lT = function() {
           try {
-            Sv.call(this)
-          } catch (vv) {
-            return Promise.reject(vv)
+            MT.call(this)
+          } catch (TT) {
+            return Promise.reject(TT)
           }
-        }), vv.stack.push({
-          value: zv,
-          dispose: hv,
-          async: Pv
+        }), TT.stack.push({
+          value: kT,
+          dispose: lT,
+          async: cT
         })
-      } else Pv && vv.stack.push({
+      } else cT && TT.stack.push({
         async: !0
       });
-      return zv
+      return kT
     }
-    var Qv = "function" === typeof SuppressedError ? SuppressedError : function(vv, zv, Pv) {
-      var hv = new Error(Pv);
-      return hv.name = "SuppressedError", hv.error = vv, hv.suppressed = zv, hv
+    var ZT = "function" === typeof SuppressedError ? SuppressedError : function(TT, kT, cT) {
+      var lT = new Error(cT);
+      return lT.name = "SuppressedError", lT.error = TT, lT.suppressed = kT, lT
     };
 
-    function Zv(vv) {
-      function zv(zv) {
-        vv.error = vv.hasError ? new Qv(zv, vv.error, "An error was suppressed during disposal.") : zv, vv.hasError = !0
+    function uT(TT) {
+      function kT(kT) {
+        TT.error = TT.hasError ? new ZT(kT, TT.error, "An error was suppressed during disposal.") : kT, TT.hasError = !0
       }
-      var Pv, hv = 0;
-      return function Sv() {
-        for (; Pv = vv.stack.pop();) try {
-          if (!Pv.async && 1 === hv) return hv = 0, vv.stack.push(Pv), Promise.resolve().then(Sv);
-          if (Pv.dispose) {
-            var ev = Pv.dispose.call(Pv.value);
-            if (Pv.async) return hv |= 2, Promise.resolve(ev).then(Sv, (function(vv) {
-              return zv(vv), Sv()
+      var cT, lT = 0;
+      return function MT() {
+        for (; cT = TT.stack.pop();) try {
+          if (!cT.async && 1 === lT) return lT = 0, TT.stack.push(cT), Promise.resolve().then(MT);
+          if (cT.dispose) {
+            var KT = cT.dispose.call(cT.value);
+            if (cT.async) return lT |= 2, Promise.resolve(KT).then(MT, (function(TT) {
+              return kT(TT), MT()
             }))
-          } else hv |= 1
-        } catch (gv) {
-          zv(gv)
+          } else lT |= 1
+        } catch (OT) {
+          kT(OT)
         }
-        if (1 === hv) return vv.hasError ? Promise.reject(vv.error) : Promise.resolve();
-        if (vv.hasError) throw vv.error
+        if (1 === lT) return TT.hasError ? Promise.reject(TT.error) : Promise.resolve();
+        if (TT.hasError) throw TT.error
       }()
     }
 
-    function Av(vv, zv) {
-      return "string" === typeof vv && /^\.\.?\//.test(vv) ? vv.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(vv, Pv, hv, Sv, ev) {
-        return Pv ? zv ? ".jsx" : ".js" : !hv || Sv && ev ? hv + Sv + "." + ev.toLowerCase() + "js" : vv
-      })) : vv
+    function XT(TT, kT) {
+      return "string" === typeof TT && /^\.\.?\//.test(TT) ? TT.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(TT, cT, lT, MT, KT) {
+        return cT ? kT ? ".jsx" : ".js" : !lT || MT && KT ? lT + MT + "." + KT.toLowerCase() + "js" : TT
+      })) : TT
     }
-    const Lv = {
-      __extends: Sv,
-      __assign: ev,
-      __rest: gv,
-      __decorate: pv,
-      __param: dv,
-      __esDecorate: Nv,
-      __runInitializers: lv,
-      __propKey: Tv,
-      __setFunctionName: Wv,
-      __metadata: wv,
-      __awaiter: av,
-      __generator: sv,
-      __createBinding: Cv,
-      __exportStar: iv,
-      __values: cv,
-      __read: Gv,
-      __spread: mv,
-      __spreadArrays: jv,
-      __spreadArray: fv,
-      __await: Fv,
-      __asyncGenerator: Yv,
-      __asyncDelegator: nv,
-      __asyncValues: Ov,
-      __makeTemplateObject: Dv,
-      __importStar: Uv,
-      __importDefault: Rv,
-      __classPrivateFieldGet: xv,
-      __classPrivateFieldSet: tv,
-      __classPrivateFieldIn: qv,
-      __addDisposableResource: Iv,
-      __disposeResources: Zv,
-      __rewriteRelativeImportExtension: Av
+    const dT = {
+      __extends: MT,
+      __assign: KT,
+      __rest: OT,
+      __decorate: yT,
+      __param: fT,
+      __esDecorate: xT,
+      __runInitializers: IT,
+      __propKey: AT,
+      __setFunctionName: CT,
+      __metadata: jT,
+      __awaiter: vT,
+      __generator: tT,
+      __createBinding: hT,
+      __exportStar: NT,
+      __values: QT,
+      __read: ST,
+      __spread: DT,
+      __spreadArrays: aT,
+      __spreadArray: FT,
+      __await: rT,
+      __asyncGenerator: PT,
+      __asyncDelegator: wT,
+      __asyncValues: mT,
+      __makeTemplateObject: bT,
+      __importStar: oT,
+      __importDefault: HT,
+      __classPrivateFieldGet: eT,
+      __classPrivateFieldSet: GT,
+      __classPrivateFieldIn: VT,
+      __addDisposableResource: ET,
+      __disposeResources: uT,
+      __rewriteRelativeImportExtension: XT
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

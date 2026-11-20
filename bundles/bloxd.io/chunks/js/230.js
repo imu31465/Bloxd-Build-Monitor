@@ -1,14 +1,14 @@
 export const id = 230;
 export const ids = [230];
 export const modules = {
-  36745: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      Color3: () => hv.b,
-      d: () => hv.e
+  37086: (TT, kT, cT) => {
+    cT.d(kT, {
+      Color3: () => lT.c,
+      e: () => lT.g
     });
-    var hv = Pv(36751);
-    (0, hv.h)()
+    var lT = cT(37093);
+    (0, lT.j)()
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

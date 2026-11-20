@@ -1,23 +1,23 @@
 export const id = 253;
 export const ids = [253];
 export const modules = {
-  39705: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => Sv
+  40014: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => MT
     });
-    var hv = Pv(39303);
+    var lT = cT(39631);
 
-    function Sv(vv) {
-      return class extends vv {
+    function MT(TT) {
+      return class extends TT {
         constructor() {
           super(...arguments);
-          const vv = new.target;
-          if (!vv[Symbol.metadata]) {
-            const zv = Object.getPrototypeOf(vv)?.[Symbol.metadata];
-            vv[Symbol.metadata] = zv ? Object.create(zv) : {}
+          const TT = new.target;
+          if (!TT[Symbol.metadata]) {
+            const kT = Object.getPrototypeOf(TT)?.[Symbol.metadata];
+            TT[Symbol.metadata] = kT ? Object.create(kT) : {}
           }
-          const zv = (0, hv.d)(vv[Symbol.metadata]);
-          zv._imageProcessingConfiguration || (zv._imageProcessingConfiguration = {
+          const kT = (0, lT.d)(TT[Symbol.metadata]);
+          kT._imageProcessingConfiguration || (kT._imageProcessingConfiguration = {
             type: 9,
             sourceName: void 0
           })
@@ -25,128 +25,128 @@ export const modules = {
         get imageProcessingConfiguration() {
           return this._imageProcessingConfiguration
         }
-        set imageProcessingConfiguration(vv) {
-          this._attachImageProcessingConfiguration(vv), this._markAllSubMeshesAsImageProcessingDirty && this._markAllSubMeshesAsImageProcessingDirty()
+        set imageProcessingConfiguration(TT) {
+          this._attachImageProcessingConfiguration(TT), this._markAllSubMeshesAsImageProcessingDirty && this._markAllSubMeshesAsImageProcessingDirty()
         }
-        _attachImageProcessingConfiguration(vv) {
-          vv !== this._imageProcessingConfiguration && (this._imageProcessingConfiguration && this._imageProcessingObserver && this._imageProcessingConfiguration.onUpdateParameters.remove(this._imageProcessingObserver), !vv && this.rD ? this._imageProcessingConfiguration = this.rD().imageProcessingConfiguration : vv && (this._imageProcessingConfiguration = vv), this._imageProcessingConfiguration && (this._imageProcessingObserver = this._imageProcessingConfiguration.onUpdateParameters.add((() => {
+        _attachImageProcessingConfiguration(TT) {
+          TT !== this._imageProcessingConfiguration && (this._imageProcessingConfiguration && this._imageProcessingObserver && this._imageProcessingConfiguration.onUpdateParameters.remove(this._imageProcessingObserver), !TT && this.NJ ? this._imageProcessingConfiguration = this.NJ().imageProcessingConfiguration : TT && (this._imageProcessingConfiguration = TT), this._imageProcessingConfiguration && (this._imageProcessingObserver = this._imageProcessingConfiguration.onUpdateParameters.add((() => {
             this._markAllSubMeshesAsImageProcessingDirty && this._markAllSubMeshesAsImageProcessingDirty()
           }))))
         }
         get cameraColorCurvesEnabled() {
           return this.imageProcessingConfiguration.colorCurvesEnabled
         }
-        set cameraColorCurvesEnabled(vv) {
-          this.imageProcessingConfiguration.colorCurvesEnabled = vv
+        set cameraColorCurvesEnabled(TT) {
+          this.imageProcessingConfiguration.colorCurvesEnabled = TT
         }
         get cameraColorGradingEnabled() {
           return this.imageProcessingConfiguration.colorGradingEnabled
         }
-        set cameraColorGradingEnabled(vv) {
-          this.imageProcessingConfiguration.colorGradingEnabled = vv
+        set cameraColorGradingEnabled(TT) {
+          this.imageProcessingConfiguration.colorGradingEnabled = TT
         }
         get cameraToneMappingEnabled() {
           return this._imageProcessingConfiguration.toneMappingEnabled
         }
-        set cameraToneMappingEnabled(vv) {
-          this._imageProcessingConfiguration.toneMappingEnabled = vv
+        set cameraToneMappingEnabled(TT) {
+          this._imageProcessingConfiguration.toneMappingEnabled = TT
         }
         get cameraExposure() {
           return this._imageProcessingConfiguration.exposure
         }
-        set cameraExposure(vv) {
-          this._imageProcessingConfiguration.exposure = vv
+        set cameraExposure(TT) {
+          this._imageProcessingConfiguration.exposure = TT
         }
         get cameraContrast() {
           return this._imageProcessingConfiguration.contrast
         }
-        set cameraContrast(vv) {
-          this._imageProcessingConfiguration.contrast = vv
+        set cameraContrast(TT) {
+          this._imageProcessingConfiguration.contrast = TT
         }
         get cameraColorGradingTexture() {
           return this._imageProcessingConfiguration.colorGradingTexture
         }
-        set cameraColorGradingTexture(vv) {
-          this._imageProcessingConfiguration.colorGradingTexture = vv
+        set cameraColorGradingTexture(TT) {
+          this._imageProcessingConfiguration.colorGradingTexture = TT
         }
         get cameraColorCurves() {
           return this._imageProcessingConfiguration.colorCurves
         }
-        set cameraColorCurves(vv) {
-          this._imageProcessingConfiguration.colorCurves = vv
+        set cameraColorCurves(TT) {
+          this._imageProcessingConfiguration.colorCurves = TT
         }
       }
     }
   },
-  39580: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => ev,
-      f: () => Sv
+  39900: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => KT,
+      g: () => MT
     });
-    var hv = Pv(39588);
+    var lT = cT(39902);
 
-    function Sv(vv) {
-      return class extends vv {
+    function MT(TT) {
+      return class extends TT {
         constructor() {
           super(...arguments), this.IMAGEPROCESSING = !1, this.WHITEBALANCE = !1, this.VIGNETTE = !1, this.VIGNETTEBLENDMODEMULTIPLY = !1, this.VIGNETTEBLENDMODEOPAQUE = !1, this.TONEMAPPING = 0, this.CONTRAST = !1, this.COLORCURVES = !1, this.COLORGRADING = !1, this.COLORGRADING3D = !1, this.SAMPLER3DGREENDEPTH = !1, this.SAMPLER3DBGRMAP = !1, this.DITHER = !1, this.IMAGEPROCESSINGPOSTPROCESS = !1, this.SKIPFINALCOLORCLAMP = !1, this.EXPOSURE = !1
         }
       }
     }
-    class ev extends hv.c {
+    class KT extends lT.e {
       constructor() {
         super(), this.IMAGEPROCESSING = !1, this.WHITEBALANCE = !1, this.VIGNETTE = !1, this.VIGNETTEBLENDMODEMULTIPLY = !1, this.VIGNETTEBLENDMODEOPAQUE = !1, this.TONEMAPPING = 0, this.CONTRAST = !1, this.COLORCURVES = !1, this.COLORGRADING = !1, this.COLORGRADING3D = !1, this.SAMPLER3DGREENDEPTH = !1, this.SAMPLER3DBGRMAP = !1, this.DITHER = !1, this.IMAGEPROCESSINGPOSTPROCESS = !1, this.EXPOSURE = !1, this.SKIPFINALCOLORCLAMP = !1, this.rebuild()
       }
     }
   },
-  39665: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => Tv
+  39975: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => AT
     });
-    var hv = Pv(39295),
-      Sv = Pv(39593),
-      ev = Pv(39300),
-      gv = Pv(39644),
-      pv = Pv(39588),
-      dv = Pv(39670),
-      Nv = Pv(39629);
-    class lv extends pv.c {
+    var lT = cT(39620),
+      MT = cT(39908),
+      KT = cT(39624),
+      OT = cT(39959),
+      yT = cT(39902),
+      fT = cT(39980),
+      xT = cT(39943);
+    class IT extends yT.e {
       constructor() {
         super(...arguments), this.DETAIL = !1, this.DETAILDIRECTUV = 0, this.DETAIL_NORMALBLENDMETHOD = 0
       }
     }
-    let Tv = (() => {
-      var vv, zv, Pv, pv;
-      let Tv, Wv, wv, av, sv, Cv, iv = dv.d,
-        cv = [],
-        Gv = [],
-        mv = [],
-        jv = [],
-        fv = [],
-        Fv = [],
-        Yv = [],
-        nv = [],
-        Ov = [],
-        Dv = [],
-        Kv = [],
-        Vv = [];
-      return vv = class extends iv {
+    let AT = (() => {
+      var TT, kT, cT, yT;
+      let AT, CT, jT, vT, tT, hT, NT = fT.b,
+        QT = [],
+        ST = [],
+        DT = [],
+        aT = [],
+        FT = [],
+        rT = [],
+        PT = [],
+        wT = [],
+        mT = [],
+        bT = [],
+        zT = [],
+        JT = [];
+      return TT = class extends NT {
         get texture() {
-          return (0, hv.c)(this, zv, "f")
+          return (0, lT.b)(this, kT, "f")
         }
-        set texture(vv) {
-          (0, hv.d)(this, zv, vv, "f")
+        set texture(TT) {
+          (0, lT.d)(this, kT, TT, "f")
         }
         get normalBlendMethod() {
-          return (0, hv.c)(this, Pv, "f")
+          return (0, lT.b)(this, cT, "f")
         }
-        set normalBlendMethod(vv) {
-          (0, hv.d)(this, Pv, vv, "f")
+        set normalBlendMethod(TT) {
+          (0, lT.d)(this, cT, TT, "f")
         }
         get isEnabled() {
-          return (0, hv.c)(this, pv, "f")
+          return (0, lT.b)(this, yT, "f")
         }
-        set isEnabled(vv) {
-          (0, hv.d)(this, pv, vv, "f")
+        set isEnabled(TT) {
+          (0, lT.d)(this, yT, TT, "f")
         }
         _markAllSubMeshesAsTexturesDirty() {
           this._enable(this._isEnabled), this._internalMarkAllSubMeshesAsTexturesDirty()
@@ -154,42 +154,42 @@ export const modules = {
         isCompatible() {
           return !0
         }
-        constructor(vv) {
-          let ev = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          super(vv, "DetailMap", 140, new lv, ev), this._texture = null, zv.set(this, (0, hv.f)(this, cv, void 0)), this.diffuseBlendLevel = ((0, hv.f)(this, Gv), (0, hv.f)(this, mv, 1)), this.roughnessBlendLevel = ((0, hv.f)(this, jv), (0, hv.f)(this, fv, 1)), this.bumpLevel = ((0, hv.f)(this, Fv), (0, hv.f)(this, Yv, 1)), this._normalBlendMethod = ((0, hv.f)(this, nv), Sv.b.MATERIAL_NORMALBLENDMETHOD_WHITEOUT), Pv.set(this, (0, hv.f)(this, Ov, void 0)), this._isEnabled = ((0, hv.f)(this, Dv), !1), pv.set(this, (0, hv.f)(this, Kv, !1)), this._internalMarkAllSubMeshesAsTexturesDirty = (0, hv.f)(this, Vv), this._internalMarkAllSubMeshesAsTexturesDirty = vv._dirtyCallbacks[1]
+        constructor(TT) {
+          let KT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          super(TT, "DetailMap", 140, new IT, KT), this._texture = null, kT.set(this, (0, lT.h)(this, QT, void 0)), this.diffuseBlendLevel = ((0, lT.h)(this, ST), (0, lT.h)(this, DT, 1)), this.roughnessBlendLevel = ((0, lT.h)(this, aT), (0, lT.h)(this, FT, 1)), this.bumpLevel = ((0, lT.h)(this, rT), (0, lT.h)(this, PT, 1)), this._normalBlendMethod = ((0, lT.h)(this, wT), MT.e.MATERIAL_NORMALBLENDMETHOD_WHITEOUT), cT.set(this, (0, lT.h)(this, mT, void 0)), this._isEnabled = ((0, lT.h)(this, bT), !1), yT.set(this, (0, lT.h)(this, zT, !1)), this._internalMarkAllSubMeshesAsTexturesDirty = (0, lT.h)(this, JT), this._internalMarkAllSubMeshesAsTexturesDirty = TT._dirtyCallbacks[1]
         }
-        isReadyForSubMesh(vv, zv, Pv) {
-          return !this._isEnabled || !(vv._areTexturesDirty && zv.texturesEnabled && Pv.getCaps().standardDerivatives && this._texture && gv.e.DetailTextureEnabled && !this._texture.isReady())
+        isReadyForSubMesh(TT, kT, cT) {
+          return !this._isEnabled || !(TT._areTexturesDirty && kT.texturesEnabled && cT.getCaps().standardDerivatives && this._texture && OT.b.DetailTextureEnabled && !this._texture.isReady())
         }
-        prepareDefines(vv, zv) {
+        prepareDefines(TT, kT) {
           if (this._isEnabled) {
-            vv.DETAIL_NORMALBLENDMETHOD = this._normalBlendMethod;
-            const Pv = zv.ma();
-            vv._areTexturesDirty && (Pv.getCaps().standardDerivatives && this._texture && gv.e.DetailTextureEnabled && this._isEnabled ? ((0, Nv._)(this._texture, vv, "DETAIL"), vv.DETAIL_NORMALBLENDMETHOD = this._normalBlendMethod) : vv.DETAIL = !1)
-          } else vv.DETAIL = !1
+            TT.DETAIL_NORMALBLENDMETHOD = this._normalBlendMethod;
+            const cT = kT.Dv();
+            TT._areTexturesDirty && (cT.getCaps().standardDerivatives && this._texture && OT.b.DetailTextureEnabled && this._isEnabled ? ((0, xT.V)(this._texture, TT, "DETAIL"), TT.DETAIL_NORMALBLENDMETHOD = this._normalBlendMethod) : TT.DETAIL = !1)
+          } else TT.DETAIL = !1
         }
-        bindForSubMesh(vv, zv) {
+        bindForSubMesh(TT, kT) {
           if (!this._isEnabled) return;
-          const Pv = this._material.isFrozen;
-          vv.useUbo && Pv && vv.isSync || this._texture && gv.e.DetailTextureEnabled && (vv.updateFloat4("vDetailInfos", this._texture.coordinatesIndex, this.diffuseBlendLevel, this.bumpLevel, this.roughnessBlendLevel), (0, Nv.A)(this._texture, vv, "detail")), zv.texturesEnabled && this._texture && gv.e.DetailTextureEnabled && vv.setTexture("detailSampler", this._texture)
+          const cT = this._material.isFrozen;
+          TT.useUbo && cT && TT.isSync || this._texture && OT.b.DetailTextureEnabled && (TT.updateFloat4("vDetailInfos", this._texture.coordinatesIndex, this.diffuseBlendLevel, this.bumpLevel, this.roughnessBlendLevel), (0, xT.v)(this._texture, TT, "detail")), kT.texturesEnabled && this._texture && OT.b.DetailTextureEnabled && TT.setTexture("detailSampler", this._texture)
         }
-        hasTexture(vv) {
-          return this._texture === vv
+        hasTexture(TT) {
+          return this._texture === TT
         }
-        getActiveTextures(vv) {
-          this._texture && vv.push(this._texture)
+        getActiveTextures(TT) {
+          this._texture && TT.push(this._texture)
         }
-        getAnimatables(vv) {
-          this._texture && this._texture.animations && this._texture.animations.length > 0 && vv.push(this._texture)
+        getAnimatables(TT) {
+          this._texture && this._texture.animations && this._texture.animations.length > 0 && TT.push(this._texture)
         }
-        dispose(vv) {
-          vv && this._texture?.dispose()
+        dispose(TT) {
+          TT && this._texture?.dispose()
         }
         getClassName() {
           return "DetailMapConfiguration"
         }
-        getSamplers(vv) {
-          vv.push("detailSampler")
+        getSamplers(TT) {
+          TT.push("detailSampler")
         }
         getUniforms() {
           return {
@@ -204,103 +204,103 @@ export const modules = {
             }]
           }
         }
-      }, zv = new WeakMap, Pv = new WeakMap, pv = new WeakMap, (() => {
-        const zv = "function" === typeof Symbol && Symbol.metadata ? Object.create(iv[Symbol.metadata] ?? null) : void 0;
-        Tv = [(0, ev.E)("detailTexture"), (0, ev.e)("_markAllSubMeshesAsTexturesDirty")], Wv = [(0, ev.L)()], wv = [(0, ev.L)()], av = [(0, ev.L)()], sv = [(0, ev.L)(), (0, ev.e)("_markAllSubMeshesAsTexturesDirty")], Cv = [(0, ev.L)(), (0, ev.e)("_markAllSubMeshesAsTexturesDirty")], (0, hv.e)(vv, null, Tv, {
+      }, kT = new WeakMap, cT = new WeakMap, yT = new WeakMap, (() => {
+        const kT = "function" === typeof Symbol && Symbol.metadata ? Object.create(NT[Symbol.metadata] ?? null) : void 0;
+        AT = [(0, KT.A)("detailTexture"), (0, KT.c)("_markAllSubMeshesAsTexturesDirty")], CT = [(0, KT.J)()], jT = [(0, KT.J)()], vT = [(0, KT.J)()], tT = [(0, KT.J)(), (0, KT.c)("_markAllSubMeshesAsTexturesDirty")], hT = [(0, KT.J)(), (0, KT.c)("_markAllSubMeshesAsTexturesDirty")], (0, lT.e)(TT, null, AT, {
           kind: "accessor",
           name: "texture",
           static: !1,
           private: !1,
           access: {
-            has: vv => "texture" in vv,
-            get: vv => vv.texture,
-            set: (vv, zv) => {
-              vv.texture = zv
+            has: TT => "texture" in TT,
+            get: TT => TT.texture,
+            set: (TT, kT) => {
+              TT.texture = kT
             }
           },
-          metadata: zv
-        }, cv, Gv), (0, hv.e)(vv, null, sv, {
+          metadata: kT
+        }, QT, ST), (0, lT.e)(TT, null, tT, {
           kind: "accessor",
           name: "normalBlendMethod",
           static: !1,
           private: !1,
           access: {
-            has: vv => "normalBlendMethod" in vv,
-            get: vv => vv.normalBlendMethod,
-            set: (vv, zv) => {
-              vv.normalBlendMethod = zv
+            has: TT => "normalBlendMethod" in TT,
+            get: TT => TT.normalBlendMethod,
+            set: (TT, kT) => {
+              TT.normalBlendMethod = kT
             }
           },
-          metadata: zv
-        }, Ov, Dv), (0, hv.e)(vv, null, Cv, {
+          metadata: kT
+        }, mT, bT), (0, lT.e)(TT, null, hT, {
           kind: "accessor",
           name: "isEnabled",
           static: !1,
           private: !1,
           access: {
-            has: vv => "isEnabled" in vv,
-            get: vv => vv.isEnabled,
-            set: (vv, zv) => {
-              vv.isEnabled = zv
+            has: TT => "isEnabled" in TT,
+            get: TT => TT.isEnabled,
+            set: (TT, kT) => {
+              TT.isEnabled = kT
             }
           },
-          metadata: zv
-        }, Kv, Vv), (0, hv.e)(null, null, Wv, {
+          metadata: kT
+        }, zT, JT), (0, lT.e)(null, null, CT, {
           kind: "field",
           name: "diffuseBlendLevel",
           static: !1,
           private: !1,
           access: {
-            has: vv => "diffuseBlendLevel" in vv,
-            get: vv => vv.diffuseBlendLevel,
-            set: (vv, zv) => {
-              vv.diffuseBlendLevel = zv
+            has: TT => "diffuseBlendLevel" in TT,
+            get: TT => TT.diffuseBlendLevel,
+            set: (TT, kT) => {
+              TT.diffuseBlendLevel = kT
             }
           },
-          metadata: zv
-        }, mv, jv), (0, hv.e)(null, null, wv, {
+          metadata: kT
+        }, DT, aT), (0, lT.e)(null, null, jT, {
           kind: "field",
           name: "roughnessBlendLevel",
           static: !1,
           private: !1,
           access: {
-            has: vv => "roughnessBlendLevel" in vv,
-            get: vv => vv.roughnessBlendLevel,
-            set: (vv, zv) => {
-              vv.roughnessBlendLevel = zv
+            has: TT => "roughnessBlendLevel" in TT,
+            get: TT => TT.roughnessBlendLevel,
+            set: (TT, kT) => {
+              TT.roughnessBlendLevel = kT
             }
           },
-          metadata: zv
-        }, fv, Fv), (0, hv.e)(null, null, av, {
+          metadata: kT
+        }, FT, rT), (0, lT.e)(null, null, vT, {
           kind: "field",
           name: "bumpLevel",
           static: !1,
           private: !1,
           access: {
-            has: vv => "bumpLevel" in vv,
-            get: vv => vv.bumpLevel,
-            set: (vv, zv) => {
-              vv.bumpLevel = zv
+            has: TT => "bumpLevel" in TT,
+            get: TT => TT.bumpLevel,
+            set: (TT, kT) => {
+              TT.bumpLevel = kT
             }
           },
-          metadata: zv
-        }, Yv, nv), zv && Object.defineProperty(vv, Symbol.metadata, {
+          metadata: kT
+        }, PT, wT), kT && Object.defineProperty(TT, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: zv
+          value: kT
         })
-      })(), vv
+      })(), TT
     })()
   },
-  39588: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => hv
+  39902: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => lT
     });
-    class hv {
-      constructor(vv) {
-        if (this.VERTEXOUTPUT_INVARIANT = !1, this._keys = [], this._isDirty = !0, this._areLightsDirty = !0, this._areLightsDisposed = !1, this._areAttributesDirty = !0, this._areTexturesDirty = !0, this._areFresnelDirty = !0, this._areMiscDirty = !0, this._arePrePassDirty = !0, this._areImageProcessingDirty = !0, this._normals = !1, this._uvs = !1, this._needNormals = !1, this._needUVs = !1, this._externalProperties = vv, vv)
-          for (const zv in vv) Object.prototype.hasOwnProperty.call(vv, zv) && this._setDefaultValue(zv)
+    class lT {
+      constructor(TT) {
+        if (this.VERTEXOUTPUT_INVARIANT = !1, this._keys = [], this._isDirty = !0, this._areLightsDirty = !0, this._areLightsDisposed = !1, this._areAttributesDirty = !0, this._areTexturesDirty = !0, this._areFresnelDirty = !0, this._areMiscDirty = !0, this._arePrePassDirty = !0, this._areImageProcessingDirty = !0, this._normals = !1, this._uvs = !1, this._needNormals = !1, this._needUVs = !1, this._externalProperties = TT, TT)
+          for (const kT in TT) Object.prototype.hasOwnProperty.call(TT, kT) && this._setDefaultValue(kT)
       }
       get isDirty() {
         return this._isDirty
@@ -318,8 +318,8 @@ export const modules = {
         this._areImageProcessingDirty = !0, this._isDirty = !0
       }
       markAsLightDirty() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this._areLightsDirty = !0, this._areLightsDisposed = this._areLightsDisposed || vv, this._isDirty = !0
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this._areLightsDirty = !0, this._areLightsDisposed = this._areLightsDisposed || TT, this._isDirty = !0
       }
       markAsAttributesDirty() {
         this._areAttributesDirty = !0, this._isDirty = !0
@@ -338,192 +338,192 @@ export const modules = {
       }
       rebuild() {
         this._keys.length = 0;
-        for (const vv of Object.keys(this)) "_" !== vv[0] && this._keys.push(vv);
+        for (const TT of Object.keys(this)) "_" !== TT[0] && this._keys.push(TT);
         if (this._externalProperties)
-          for (const vv in this._externalProperties) - 1 === this._keys.indexOf(vv) && this._keys.push(vv)
+          for (const TT in this._externalProperties) - 1 === this._keys.indexOf(TT) && this._keys.push(TT)
       }
-      isEqual(vv) {
-        if (this._keys.length !== vv._keys.length) return !1;
-        for (let zv = 0; zv < this._keys.length; zv++) {
-          const Pv = this._keys[zv];
-          if (this[Pv] !== vv[Pv]) return !1
+      isEqual(TT) {
+        if (this._keys.length !== TT._keys.length) return !1;
+        for (let kT = 0; kT < this._keys.length; kT++) {
+          const cT = this._keys[kT];
+          if (this[cT] !== TT[cT]) return !1
         }
         return !0
       }
-      cloneTo(vv) {
-        this._keys.length !== vv._keys.length && (vv._keys = this._keys.slice(0));
-        for (let zv = 0; zv < this._keys.length; zv++) {
-          const Pv = this._keys[zv];
-          vv[Pv] = this[Pv]
+      cloneTo(TT) {
+        this._keys.length !== TT._keys.length && (TT._keys = this._keys.slice(0));
+        for (let kT = 0; kT < this._keys.length; kT++) {
+          const cT = this._keys[kT];
+          TT[cT] = this[cT]
         }
       }
       reset() {
-        for (const vv of this._keys) this._setDefaultValue(vv)
+        for (const TT of this._keys) this._setDefaultValue(TT)
       }
-      _setDefaultValue(vv) {
-        const zv = this._externalProperties?.[vv]?.type ?? typeof this[vv],
-          Pv = this._externalProperties?.[vv]?.default;
-        switch (zv) {
+      _setDefaultValue(TT) {
+        const kT = this._externalProperties?.[TT]?.type ?? typeof this[TT],
+          cT = this._externalProperties?.[TT]?.default;
+        switch (kT) {
           case "number":
-            this[vv] = Pv ?? 0;
+            this[TT] = cT ?? 0;
             break;
           case "string":
-            this[vv] = Pv ?? "";
+            this[TT] = cT ?? "";
             break;
           default:
-            this[vv] = Pv ?? !1
+            this[TT] = cT ?? !1
         }
       }
       toString() {
-        let vv = "";
-        for (let zv = 0; zv < this._keys.length; zv++) {
-          const Pv = this._keys[zv],
-            hv = this[Pv];
-          switch (typeof hv) {
+        let TT = "";
+        for (let kT = 0; kT < this._keys.length; kT++) {
+          const cT = this._keys[kT],
+            lT = this[cT];
+          switch (typeof lT) {
             case "number":
             case "string":
-              vv += "#define " + Pv + " " + hv + "\n";
+              TT += "#define " + cT + " " + lT + "\n";
               break;
             default:
-              hv && (vv += "#define " + Pv + "\n")
+              lT && (TT += "#define " + cT + "\n")
           }
         }
-        return vv
+        return TT
       }
     }
   },
-  39686: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => pv,
-      f: () => gv,
-      g: () => ev
+  39997: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => yT,
+      h: () => OT,
+      i: () => KT
     });
-    var hv, Sv = Pv(36594);
+    var lT, MT = cT(36892);
 
-    function ev(vv, zv) {
-      let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 16777215;
-      const hv = zv(vv);
-      if (!Number.isInteger(hv) || hv < 0 || hv > Pv) throw new Error(`Invalid geometry object ID ${hv} for mesh "${vv.name}". Object IDs must be integers between 0 and 0x${Pv.toString(16).toUpperCase()}.`);
-      return hv
+    function KT(TT, kT) {
+      let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 16777215;
+      const lT = kT(TT);
+      if (!Number.isInteger(lT) || lT < 0 || lT > cT) throw new Error(`Invalid geometry object ID ${lT} for mesh "${TT.name}". Object IDs must be integers between 0 and 0x${cT.toString(16).toUpperCase()}.`);
+      return lT
     }
 
-    function gv(vv, zv) {
-      const Pv = zv(vv);
-      if (!Number.isInteger(Pv) || Pv < 0 || Pv > 255 || 0 !== Pv && 0 === (63 & Pv)) throw new Error(`Invalid geometry mesh-blending tag ${Pv} for mesh "${vv.name}". Tags must be 0 or contain a group ID between 1 and 63.`);
-      return Pv
-    }! function(vv) {
-      vv[vv.Zero = 0] = "Zero", vv[vv.One = 1] = "One", vv[vv.MaxViewZ = 2] = "MaxViewZ", vv[vv.NoClear = 3] = "NoClear"
-    }(hv || (hv = {}));
-    class pv {
-      static CreateConfiguration(vv) {
-        return pv._Configurations[vv] = {
+    function OT(TT, kT) {
+      const cT = kT(TT);
+      if (!Number.isInteger(cT) || cT < 0 || cT > 255 || 0 !== cT && 0 === (63 & cT)) throw new Error(`Invalid geometry mesh-blending tag ${cT} for mesh "${TT.name}". Tags must be 0 or contain a group ID between 1 and 63.`);
+      return cT
+    }! function(TT) {
+      TT[TT.Zero = 0] = "Zero", TT[TT.One = 1] = "One", TT[TT.MaxViewZ = 2] = "MaxViewZ", TT[TT.NoClear = 3] = "NoClear"
+    }(lT || (lT = {}));
+    class yT {
+      static CreateConfiguration(TT) {
+        return yT._Configurations[TT] = {
           defines: {},
           previousWorldMatrices: {},
-          previousViewProjection: Sv.c.Zero(),
-          currentViewProjection: Sv.c.Zero(),
+          previousViewProjection: MT.d.Zero(),
+          currentViewProjection: MT.d.Zero(),
           previousBones: {},
           lastUpdateFrameId: -1,
           excludedSkinnedMesh: [],
           reverseCulling: !1,
           objectIdIsRedFormat: !1
-        }, pv._Configurations[vv]
+        }, yT._Configurations[TT]
       }
-      static DeleteConfiguration(vv) {
-        delete pv._Configurations[vv]
+      static DeleteConfiguration(TT) {
+        delete yT._Configurations[TT]
       }
-      static GetConfiguration(vv) {
-        return pv._Configurations[vv]
+      static GetConfiguration(TT) {
+        return yT._Configurations[TT]
       }
-      static _PrepareConfiguration(vv, zv, Pv) {
-        const hv = pv._Configurations[vv];
-        hv._attachments = zv, hv._colorAttachments = Pv, hv._mrtCount = zv.length;
-        let Sv = "#define PREPASS\n";
-        for (const ev of pv.GeometryTextureDescriptions) {
-          const vv = hv.defines[ev.defineIndex];
-          void 0 !== vv && (Sv += `#define ${ev.define}\n#define ${ev.defineIndex} ${vv}\n`)
+      static _PrepareConfiguration(TT, kT, cT) {
+        const lT = yT._Configurations[TT];
+        lT._attachments = kT, lT._colorAttachments = cT, lT._mrtCount = kT.length;
+        let MT = "#define PREPASS\n";
+        for (const KT of yT.GeometryTextureDescriptions) {
+          const TT = lT.defines[KT.defineIndex];
+          void 0 !== TT && (MT += `#define ${KT.define}\n#define ${KT.defineIndex} ${TT}\n`)
         }
-        hv.objectIdIsRedFormat && (Sv += "#define PREPASS_OBJECT_ID_R8\n"), hv._defines = Sv + `#define SCENE_MRT_COUNT ${zv.length}\n`
+        lT.objectIdIsRedFormat && (MT += "#define PREPASS_OBJECT_ID_R8\n"), lT._defines = MT + `#define SCENE_MRT_COUNT ${kT.length}\n`
       }
-      static _PrepareStringDefines(vv, zv) {
-        const Pv = pv._Configurations[vv];
-        return !!Pv?._defines && (zv.push(Pv._defines), !0)
+      static _PrepareStringDefines(TT, kT) {
+        const cT = yT._Configurations[TT];
+        return !!cT?._defines && (kT.push(cT._defines), !0)
       }
-      static _BindAttachmentsForEffect(vv, zv) {
-        const Pv = pv._Configurations[vv.currentRenderPassId];
-        return !Pv?._attachments || (vv.bindAttachments(zv._multiTarget ? Pv._attachments : Pv._colorAttachments), zv._multiTarget || void 0 !== Pv.defines.PREPASS_COLOR_INDEX)
+      static _BindAttachmentsForEffect(TT, kT) {
+        const cT = yT._Configurations[TT.currentRenderPassId];
+        return !cT?._attachments || (TT.bindAttachments(kT._multiTarget ? cT._attachments : cT._colorAttachments), kT._multiTarget || void 0 !== cT.defines.PREPASS_COLOR_INDEX)
       }
-      static _RestoreAttachments(vv) {
-        const zv = pv._Configurations[vv.currentRenderPassId];
-        zv?._colorAttachments && vv.bindAttachments(zv._colorAttachments)
+      static _RestoreAttachments(TT) {
+        const kT = yT._Configurations[TT.currentRenderPassId];
+        kT?._colorAttachments && TT.bindAttachments(kT._colorAttachments)
       }
-      static _BindColorAttachments(vv) {
-        const zv = pv._Configurations[vv.currentRenderPassId];
-        return !zv?._colorAttachments || (vv.bindAttachments(zv._colorAttachments), void 0 !== zv.defines.PREPASS_COLOR_INDEX)
+      static _BindColorAttachments(TT) {
+        const kT = yT._Configurations[TT.currentRenderPassId];
+        return !kT?._colorAttachments || (TT.bindAttachments(kT._colorAttachments), void 0 !== kT.defines.PREPASS_COLOR_INDEX)
       }
-      static _IsColorAttachmentEnabled(vv) {
-        const zv = pv._Configurations[vv.currentRenderPassId];
-        return !zv?._colorAttachments || void 0 !== zv.defines.PREPASS_COLOR_INDEX
+      static _IsColorAttachmentEnabled(TT) {
+        const kT = yT._Configurations[TT.currentRenderPassId];
+        return !kT?._colorAttachments || void 0 !== kT.defines.PREPASS_COLOR_INDEX
       }
-      static _BindZeroAlphaDiscard(vv, zv) {
-        const Pv = pv._Configurations[vv.currentRenderPassId];
-        if (!Pv) return;
-        const hv = vv.getAlphaMode(),
-          Sv = void 0 === Pv.defines.PREPASS_COLOR_INDEX || 2 === hv || 1 === hv || 17 === hv;
-        zv.setFloat("geometryZeroAlphaDiscard", Sv ? 1 : 0)
+      static _BindZeroAlphaDiscard(TT, kT) {
+        const cT = yT._Configurations[TT.currentRenderPassId];
+        if (!cT) return;
+        const lT = TT.getAlphaMode(),
+          MT = void 0 === cT.defines.PREPASS_COLOR_INDEX || 2 === lT || 1 === lT || 17 === lT;
+        kT.setFloat("geometryZeroAlphaDiscard", MT ? 1 : 0)
       }
-      static AddUniformsAndSamplers(vv, zv) {
-        vv.push("previousWorld", "previousViewProjection", "mPreviousBones", "objectId", "meshBlendTag")
+      static AddUniformsAndSamplers(TT, kT) {
+        TT.push("previousWorld", "previousViewProjection", "mPreviousBones", "objectId", "meshBlendTag")
       }
-      static MarkAsDirty(vv, zv) {
-        for (const Pv of zv)
-          if (Pv.sF)
-            for (const zv of Pv.sF) zv._removeDrawWrapper(vv)
+      static MarkAsDirty(TT, kT) {
+        for (const cT of kT)
+          if (cT.kF)
+            for (const kT of cT.kF) kT._removeDrawWrapper(TT)
       }
-      static PrepareDefines(vv, zv, Pv) {
-        if (!Pv._arePrePassDirty) return;
-        const hv = pv._Configurations[vv];
-        if (!hv) return;
-        Pv.PREPASS = !0;
-        let Sv = 0;
-        for (let ev = 0; ev < pv.GeometryTextureDescriptions.length; ev++) {
-          const vv = pv.GeometryTextureDescriptions[ev],
-            zv = vv.define,
-            gv = vv.defineIndex,
-            dv = hv.defines[gv];
-          void 0 !== dv ? (Pv[zv] = !0, Pv[gv] = dv, Sv++) : (Pv[zv] = !1, delete Pv[gv])
+      static PrepareDefines(TT, kT, cT) {
+        if (!cT._arePrePassDirty) return;
+        const lT = yT._Configurations[TT];
+        if (!lT) return;
+        cT.PREPASS = !0;
+        let MT = 0;
+        for (let KT = 0; KT < yT.GeometryTextureDescriptions.length; KT++) {
+          const TT = yT.GeometryTextureDescriptions[KT],
+            kT = TT.define,
+            OT = TT.defineIndex,
+            fT = lT.defines[OT];
+          void 0 !== fT ? (cT[kT] = !0, cT[OT] = fT, MT++) : (cT[kT] = !1, delete cT[OT])
         }
-        Pv.PREPASS_OBJECT_ID_R8 = hv.objectIdIsRedFormat, Pv.SCENE_MRT_COUNT = hv._mrtCount ?? Sv, Pv.BONES_VELOCITY_ENABLED = zv.useBones && zv.computeBonesUsingShaders && zv.skeleton && !zv.skeleton.isUsingTextureForMatrices && -1 === hv.excludedSkinnedMesh.indexOf(zv)
+        cT.PREPASS_OBJECT_ID_R8 = lT.objectIdIsRedFormat, cT.SCENE_MRT_COUNT = lT._mrtCount ?? MT, cT.BONES_VELOCITY_ENABLED = kT.useBones && kT.computeBonesUsingShaders && kT.skeleton && !kT.skeleton.isUsingTextureForMatrices && -1 === lT.excludedSkinnedMesh.indexOf(kT)
       }
-      static Bind(vv, zv, Pv, hv, Sv) {
-        const dv = pv._Configurations[vv];
-        if (!dv) return;
-        const Nv = Pv.rD(),
-          lv = Nv.ma();
-        if (dv.reverseCulling && lv.setStateCullFaceType(Nv._mirroredCameraPosition ? Sv.cullBackFaces : !Sv.cullBackFaces), void 0 !== dv.defines.PREPASS_OBJECT_ID_INDEX) {
-          const vv = dv.objectIdIsRedFormat ? 255 : 16777215;
-          let hv = Pv.uniqueId;
-          if (dv.objectIdProvider) hv = ev(Pv, dv.objectIdProvider, vv);
-          else if (hv > vv) throw new Error(`Invalid geometry object ID ${hv} for mesh "${Pv.name}". Object IDs must be integers between 0 and 0x${vv.toString(16).toUpperCase()}.`);
-          zv.setFloat("objectId", hv)
+      static Bind(TT, kT, cT, lT, MT) {
+        const fT = yT._Configurations[TT];
+        if (!fT) return;
+        const xT = cT.NJ(),
+          IT = xT.Dv();
+        if (fT.reverseCulling && IT.setStateCullFaceType(xT._mirroredCameraPosition ? MT.cullBackFaces : !MT.cullBackFaces), void 0 !== fT.defines.PREPASS_OBJECT_ID_INDEX) {
+          const TT = fT.objectIdIsRedFormat ? 255 : 16777215;
+          let lT = cT.uniqueId;
+          if (fT.objectIdProvider) lT = KT(cT, fT.objectIdProvider, TT);
+          else if (lT > TT) throw new Error(`Invalid geometry object ID ${lT} for mesh "${cT.name}". Object IDs must be integers between 0 and 0x${TT.toString(16).toUpperCase()}.`);
+          kT.setFloat("objectId", lT)
         }
-        if (void 0 !== dv.defines.PREPASS_MESH_BLEND_TAG_INDEX) {
-          const vv = dv.meshBlendTagProvider ? gv(Pv, dv.meshBlendTagProvider) : Pv.meshBlendingTag;
-          zv.setInt("meshBlendTag", vv)
+        if (void 0 !== fT.defines.PREPASS_MESH_BLEND_TAG_INDEX) {
+          const TT = fT.meshBlendTagProvider ? OT(cT, fT.meshBlendTagProvider) : cT.meshBlendingTag;
+          kT.setInt("meshBlendTag", TT)
         }
-        if (void 0 !== dv.defines.PREPASS_VELOCITY_INDEX || void 0 !== dv.defines.PREPASS_VELOCITY_LINEAR_INDEX) {
-          const vv = dv._currentWorldMatrices ?? (dv._currentWorldMatrices = {}),
-            Sv = dv._worldMatrixFrameIds ?? (dv._worldMatrixFrameIds = {});
-          if (vv[Pv.uniqueId] || (vv[Pv.uniqueId] = hv.clone(), dv.previousWorldMatrices[Pv.uniqueId] = hv.clone()), Sv[Pv.uniqueId] !== lv.frameId && (dv.previousWorldMatrices[Pv.uniqueId].Vzv(vv[Pv.uniqueId]), Sv[Pv.uniqueId] = lv.frameId), vv[Pv.uniqueId].Vzv(hv), -1 === dv.lastUpdateFrameId ? (dv.lastUpdateFrameId = lv.frameId, dv.previousViewProjection.Vzv(Nv.getTransformMatrix()), dv.currentViewProjection.Vzv(Nv.getTransformMatrix())) : dv.currentViewProjection.updateFlag !== Nv.getTransformMatrix().updateFlag ? (dv.lastUpdateFrameId = lv.frameId, dv.previousViewProjection.Vzv(dv.currentViewProjection), dv.currentViewProjection.Vzv(Nv.getTransformMatrix())) : dv.lastUpdateFrameId !== lv.frameId && (dv.lastUpdateFrameId = lv.frameId, dv.previousViewProjection.Vzv(dv.currentViewProjection)), zv.setMatrix("previousWorld", dv.previousWorldMatrices[Pv.uniqueId]), zv.setMatrix("previousViewProjection", dv.previousViewProjection), Pv.useBones && Pv.computeBonesUsingShaders && Pv.skeleton) {
-            const vv = Pv.skeleton;
-            if (!vv.isUsingTextureForMatrices || -1 === zv.getUniformIndex("boneTextureInfo")) {
-              const hv = vv.getTransformMatrices(Pv);
-              hv && (dv.previousBones[Pv.uniqueId] || (dv.previousBones[Pv.uniqueId] = hv.slice()), zv.setMatrices("mPreviousBones", dv.previousBones[Pv.uniqueId]), dv.previousBones[Pv.uniqueId].set(hv))
+        if (void 0 !== fT.defines.PREPASS_VELOCITY_INDEX || void 0 !== fT.defines.PREPASS_VELOCITY_LINEAR_INDEX) {
+          const TT = fT._currentWorldMatrices ?? (fT._currentWorldMatrices = {}),
+            MT = fT._worldMatrixFrameIds ?? (fT._worldMatrixFrameIds = {});
+          if (TT[cT.uniqueId] || (TT[cT.uniqueId] = lT.clone(), fT.previousWorldMatrices[cT.uniqueId] = lT.clone()), MT[cT.uniqueId] !== IT.frameId && (fT.previousWorldMatrices[cT.uniqueId].UkT(TT[cT.uniqueId]), MT[cT.uniqueId] = IT.frameId), TT[cT.uniqueId].UkT(lT), -1 === fT.lastUpdateFrameId ? (fT.lastUpdateFrameId = IT.frameId, fT.previousViewProjection.UkT(xT.getTransformMatrix()), fT.currentViewProjection.UkT(xT.getTransformMatrix())) : fT.currentViewProjection.updateFlag !== xT.getTransformMatrix().updateFlag ? (fT.lastUpdateFrameId = IT.frameId, fT.previousViewProjection.UkT(fT.currentViewProjection), fT.currentViewProjection.UkT(xT.getTransformMatrix())) : fT.lastUpdateFrameId !== IT.frameId && (fT.lastUpdateFrameId = IT.frameId, fT.previousViewProjection.UkT(fT.currentViewProjection)), kT.setMatrix("previousWorld", fT.previousWorldMatrices[cT.uniqueId]), kT.setMatrix("previousViewProjection", fT.previousViewProjection), cT.useBones && cT.computeBonesUsingShaders && cT.skeleton) {
+            const TT = cT.skeleton;
+            if (!TT.isUsingTextureForMatrices || -1 === kT.getUniformIndex("boneTextureInfo")) {
+              const lT = TT.getTransformMatrices(cT);
+              lT && (fT.previousBones[cT.uniqueId] || (fT.previousBones[cT.uniqueId] = lT.slice()), kT.setMatrices("mPreviousBones", fT.previousBones[cT.uniqueId]), fT.previousBones[cT.uniqueId].set(lT))
             }
           }
         }
       }
     }
-    pv.GeometryTextureDescriptions = [{
+    yT.GeometryTextureDescriptions = [{
       type: 0,
       name: "IrradianceLegacy",
       clearType: 0,
@@ -625,777 +625,777 @@ export const modules = {
       clearType: 0,
       define: "PREPASS_MESH_BLEND_TAG",
       defineIndex: "PREPASS_MESH_BLEND_TAG_INDEX"
-    }], pv._Configurations = {}
+    }], yT._Configurations = {}
   },
-  39670: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => Wv,
-      g: () => av
+  39980: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => CT,
+      c: () => vT
     });
-    var hv = Pv(39295),
-      Sv = Pv(39300),
-      ev = Pv(39196),
-      gv = Pv(39162);
-    const pv = new RegExp("^([gimus]+)!");
-    class dv {
-      constructor(vv) {
-        this._plugins = [], this._activePlugins = [], this._activePluginsForExtraEvents = [], this._material = vv, this._scene = vv.rD(), this._engine = this._scene.ma()
+    var lT = cT(39620),
+      MT = cT(39624),
+      KT = cT(39509),
+      OT = cT(39474);
+    const yT = new RegExp("^([gimus]+)!");
+    class fT {
+      constructor(TT) {
+        this._plugins = [], this._activePlugins = [], this._activePluginsForExtraEvents = [], this._material = TT, this._scene = TT.NJ(), this._engine = this._scene.Dv()
       }
-      _addPlugin(vv) {
-        for (let hv = 0; hv < this._plugins.length; ++hv)
-          if (this._plugins[hv].name === vv.name) return !1;
-        if (this._material._uniformBufferLayoutBuilt && (this._material.resetDrawCache(), this._material._createUniformBuffer()), !vv.isCompatible(this._material.shaderLanguage)) throw `The plugin "${vv.name}" can't be added to the material "${this._material.name}" because the plugin is not compatible with the shader language of the material.`;
-        const zv = vv.getClassName();
-        dv._MaterialPluginClassToMainDefine[zv] || (dv._MaterialPluginClassToMainDefine[zv] = "MATERIALPLUGIN_" + ++dv._MaterialPluginCounter), this._material._callbackPluginEventGeneric = (vv, zv) => this._handlePluginEvent(vv, zv), this._plugins.push(vv), this._plugins.sort(((vv, zv) => vv.priority - zv.priority)), this._codeInjectionPoints = {};
-        const Pv = {};
-        Pv[dv._MaterialPluginClassToMainDefine[zv]] = {
+      _addPlugin(TT) {
+        for (let lT = 0; lT < this._plugins.length; ++lT)
+          if (this._plugins[lT].name === TT.name) return !1;
+        if (this._material._uniformBufferLayoutBuilt && (this._material.resetDrawCache(), this._material._createUniformBuffer()), !TT.isCompatible(this._material.shaderLanguage)) throw `The plugin "${TT.name}" can't be added to the material "${this._material.name}" because the plugin is not compatible with the shader language of the material.`;
+        const kT = TT.getClassName();
+        fT._MaterialPluginClassToMainDefine[kT] || (fT._MaterialPluginClassToMainDefine[kT] = "MATERIALPLUGIN_" + ++fT._MaterialPluginCounter), this._material._callbackPluginEventGeneric = (TT, kT) => this._handlePluginEvent(TT, kT), this._plugins.push(TT), this._plugins.sort(((TT, kT) => TT.priority - kT.priority)), this._codeInjectionPoints = {};
+        const cT = {};
+        cT[fT._MaterialPluginClassToMainDefine[kT]] = {
           type: "boolean",
           default: !0
         };
-        for (const hv of this._plugins) hv.collectDefines(Pv), this._collectPointNames("vertex", hv.getCustomCode("vertex", this._material.shaderLanguage)), this._collectPointNames("fragment", hv.getCustomCode("fragment", this._material.shaderLanguage));
-        return this._defineNamesFromPlugins = Pv, !0
+        for (const lT of this._plugins) lT.collectDefines(cT), this._collectPointNames("vertex", lT.getCustomCode("vertex", this._material.shaderLanguage)), this._collectPointNames("fragment", lT.getCustomCode("fragment", this._material.shaderLanguage));
+        return this._defineNamesFromPlugins = cT, !0
       }
-      _activatePlugin(vv) {
-        -1 === this._activePlugins.indexOf(vv) && (this._activePlugins.push(vv), this._activePlugins.sort(((vv, zv) => vv.priority - zv.priority)), this._material._callbackPluginEventIsReadyForSubMesh = this._handlePluginEventIsReadyForSubMesh.bind(this), this._material._callbackPluginEventPrepareDefinesBeforeAttributes = this._handlePluginEventPrepareDefinesBeforeAttributes.bind(this), this._material._callbackPluginEventPrepareDefines = this._handlePluginEventPrepareDefines.bind(this), this._material._callbackPluginEventBindForSubMesh = this._handlePluginEventBindForSubMesh.bind(this), vv.registerForExtraEvents && (this._activePluginsForExtraEvents.push(vv), this._activePluginsForExtraEvents.sort(((vv, zv) => vv.priority - zv.priority)), this._material._callbackPluginEventHasRenderTargetTextures = this._handlePluginEventHasRenderTargetTextures.bind(this), this._material._callbackPluginEventFillRenderTargetTextures = this._handlePluginEventFillRenderTargetTextures.bind(this), this._material._callbackPluginEventHardBindForSubMesh = this._handlePluginEventHardBindForSubMesh.bind(this)))
+      _activatePlugin(TT) {
+        -1 === this._activePlugins.indexOf(TT) && (this._activePlugins.push(TT), this._activePlugins.sort(((TT, kT) => TT.priority - kT.priority)), this._material._callbackPluginEventIsReadyForSubMesh = this._handlePluginEventIsReadyForSubMesh.bind(this), this._material._callbackPluginEventPrepareDefinesBeforeAttributes = this._handlePluginEventPrepareDefinesBeforeAttributes.bind(this), this._material._callbackPluginEventPrepareDefines = this._handlePluginEventPrepareDefines.bind(this), this._material._callbackPluginEventBindForSubMesh = this._handlePluginEventBindForSubMesh.bind(this), TT.registerForExtraEvents && (this._activePluginsForExtraEvents.push(TT), this._activePluginsForExtraEvents.sort(((TT, kT) => TT.priority - kT.priority)), this._material._callbackPluginEventHasRenderTargetTextures = this._handlePluginEventHasRenderTargetTextures.bind(this), this._material._callbackPluginEventFillRenderTargetTextures = this._handlePluginEventFillRenderTargetTextures.bind(this), this._material._callbackPluginEventHardBindForSubMesh = this._handlePluginEventHardBindForSubMesh.bind(this)))
       }
-      getPlugin(vv) {
-        for (let zv = 0; zv < this._plugins.length; ++zv)
-          if (this._plugins[zv].name === vv) return this._plugins[zv];
+      getPlugin(TT) {
+        for (let kT = 0; kT < this._plugins.length; ++kT)
+          if (this._plugins[kT].name === TT) return this._plugins[kT];
         return null
       }
-      _handlePluginEventIsReadyForSubMesh(vv) {
-        let zv = !0;
-        for (const Pv of this._activePlugins) zv = zv && Pv.isReadyForSubMesh(vv.defines, this._scene, this._engine, vv.subMesh);
-        vv.isReadyForSubMesh = zv
+      _handlePluginEventIsReadyForSubMesh(TT) {
+        let kT = !0;
+        for (const cT of this._activePlugins) kT = kT && cT.isReadyForSubMesh(TT.defines, this._scene, this._engine, TT.subMesh);
+        TT.isReadyForSubMesh = kT
       }
-      _handlePluginEventPrepareDefinesBeforeAttributes(vv) {
-        for (const zv of this._activePlugins) zv.prepareDefinesBeforeAttributes(vv.defines, this._scene, vv.mesh)
+      _handlePluginEventPrepareDefinesBeforeAttributes(TT) {
+        for (const kT of this._activePlugins) kT.prepareDefinesBeforeAttributes(TT.defines, this._scene, TT.mesh)
       }
-      _handlePluginEventPrepareDefines(vv) {
-        for (const zv of this._activePlugins) zv.prepareDefines(vv.defines, this._scene, vv.mesh)
+      _handlePluginEventPrepareDefines(TT) {
+        for (const kT of this._activePlugins) kT.prepareDefines(TT.defines, this._scene, TT.mesh)
       }
-      _handlePluginEventHardBindForSubMesh(vv) {
-        for (const zv of this._activePluginsForExtraEvents) zv.hardBindForSubMesh(this._material._uniformBuffer, this._scene, this._engine, vv.subMesh)
+      _handlePluginEventHardBindForSubMesh(TT) {
+        for (const kT of this._activePluginsForExtraEvents) kT.hardBindForSubMesh(this._material._uniformBuffer, this._scene, this._engine, TT.subMesh)
       }
-      _handlePluginEventBindForSubMesh(vv) {
-        for (const zv of this._activePlugins) zv.bindForSubMesh(this._material._uniformBuffer, this._scene, this._engine, vv.subMesh)
+      _handlePluginEventBindForSubMesh(TT) {
+        for (const kT of this._activePlugins) kT.bindForSubMesh(this._material._uniformBuffer, this._scene, this._engine, TT.subMesh)
       }
-      _handlePluginEventHasRenderTargetTextures(vv) {
-        let zv = !1;
-        for (const Pv of this._activePluginsForExtraEvents)
-          if (zv = Pv.hasRenderTargetTextures(), zv) break;
-        vv.hasRenderTargetTextures = zv
+      _handlePluginEventHasRenderTargetTextures(TT) {
+        let kT = !1;
+        for (const cT of this._activePluginsForExtraEvents)
+          if (kT = cT.hasRenderTargetTextures(), kT) break;
+        TT.hasRenderTargetTextures = kT
       }
-      _handlePluginEventFillRenderTargetTextures(vv) {
-        for (const zv of this._activePluginsForExtraEvents) zv.fillRenderTargetTextures(vv.renderTargets)
+      _handlePluginEventFillRenderTargetTextures(TT) {
+        for (const kT of this._activePluginsForExtraEvents) kT.fillRenderTargetTextures(TT.renderTargets)
       }
-      _handlePluginEvent(vv, zv) {
-        switch (vv) {
+      _handlePluginEvent(TT, kT) {
+        switch (TT) {
           case 512: {
-            const vv = zv;
-            for (const zv of this._activePlugins) zv.getActiveTextures(vv.activeTextures);
+            const TT = kT;
+            for (const kT of this._activePlugins) kT.getActiveTextures(TT.activeTextures);
             break
           }
           case 256: {
-            const vv = zv;
-            for (const zv of this._activePlugins) zv.getAnimatables(vv.animatables);
+            const TT = kT;
+            for (const kT of this._activePlugins) kT.getAnimatables(TT.animatables);
             break
           }
           case 1024: {
-            const vv = zv;
-            let Pv = !1;
-            for (const zv of this._activePlugins)
-              if (Pv = zv.hasTexture(vv.texture), Pv) break;
-            vv.hasTexture = Pv;
+            const TT = kT;
+            let cT = !1;
+            for (const kT of this._activePlugins)
+              if (cT = kT.hasTexture(TT.texture), cT) break;
+            TT.hasTexture = cT;
             break
           }
           case 2: {
-            const vv = zv;
-            for (const zv of this._plugins) zv.dispose(vv.forceDisposeTextures);
+            const TT = kT;
+            for (const kT of this._plugins) kT.dispose(TT.forceDisposeTextures);
             break
           }
           case 4:
-            zv.defineNames = this._defineNamesFromPlugins;
+            kT.defineNames = this._defineNamesFromPlugins;
             break;
           case 128: {
-            const vv = zv;
-            for (const zv of this._activePlugins) vv.fallbackRank = zv.addFallbacks(vv.defines, vv.fallbacks, vv.fallbackRank), zv.getAttributes(vv.attributes, this._scene, vv.mesh);
-            this._uniformList.length > 0 && vv.uniforms.push(...this._uniformList), this._samplerList.length > 0 && vv.samplers.push(...this._samplerList), this._uboList.length > 0 && vv.uniformBuffersNames.push(...this._uboList), vv.customCode = this._injectCustomCode(vv, vv.customCode);
+            const TT = kT;
+            for (const kT of this._activePlugins) TT.fallbackRank = kT.addFallbacks(TT.defines, TT.fallbacks, TT.fallbackRank), kT.getAttributes(TT.attributes, this._scene, TT.mesh);
+            this._uniformList.length > 0 && TT.uniforms.push(...this._uniformList), this._samplerList.length > 0 && TT.samplers.push(...this._samplerList), this._uboList.length > 0 && TT.uniformBuffersNames.push(...this._uboList), TT.customCode = this._injectCustomCode(TT, TT.customCode);
             break
           }
           case 8: {
-            const vv = zv;
+            const TT = kT;
             this._uboDeclaration = "", this._vertexDeclaration = "", this._fragmentDeclaration = "", this._uniformList = [], this._samplerList = [], this._uboList = [];
-            const Pv = 1 === this._material.shaderLanguage;
-            for (const zv of this._plugins) {
-              const hv = zv.getUniforms(this._material.shaderLanguage);
-              if (hv) {
-                if (hv.ubo)
-                  for (const zv of hv.ubo) {
-                    if (zv.size && zv.type) {
-                      const hv = zv.arraySize ?? 0;
-                      if (vv.ubo.addUniform(zv.name, zv.size, hv), Pv) {
-                        let vv;
-                        switch (zv.type) {
+            const cT = 1 === this._material.shaderLanguage;
+            for (const kT of this._plugins) {
+              const lT = kT.getUniforms(this._material.shaderLanguage);
+              if (lT) {
+                if (lT.ubo)
+                  for (const kT of lT.ubo) {
+                    if (kT.size && kT.type) {
+                      const lT = kT.arraySize ?? 0;
+                      if (TT.ubo.addUniform(kT.name, kT.size, lT), cT) {
+                        let TT;
+                        switch (kT.type) {
                           case "mat4":
-                            vv = "mat4x4f";
+                            TT = "mat4x4f";
                             break;
                           case "float":
-                            vv = "f32";
+                            TT = "f32";
                             break;
                           default:
-                            vv = `${zv.type}f`
+                            TT = `${kT.type}f`
                         }
-                        this._uboDeclaration += hv > 0 ? `uniform ${zv.name}: array<${vv}, ${hv}>;\n` : `uniform ${zv.name}: ${vv};\n`
-                      } else this._uboDeclaration += `${zv.type} ${zv.name}${hv>0?`[${hv}]`:""};\n`
+                        this._uboDeclaration += lT > 0 ? `uniform ${kT.name}: array<${TT}, ${lT}>;\n` : `uniform ${kT.name}: ${TT};\n`
+                      } else this._uboDeclaration += `${kT.type} ${kT.name}${lT>0?`[${lT}]`:""};\n`
                     }
-                    this._uniformList.push(zv.name)
+                    this._uniformList.push(kT.name)
                   }
-                hv.vertex && (this._vertexDeclaration += hv.vertex + "\n"), hv.fragment && (this._fragmentDeclaration += hv.fragment + "\n"), hv.externalUniforms && this._uniformList.push(...hv.externalUniforms)
+                lT.vertex && (this._vertexDeclaration += lT.vertex + "\n"), lT.fragment && (this._fragmentDeclaration += lT.fragment + "\n"), lT.externalUniforms && this._uniformList.push(...lT.externalUniforms)
               }
-              zv.getSamplers(this._samplerList), zv.getUniformBuffersNames(this._uboList)
+              kT.getSamplers(this._samplerList), kT.getUniformBuffersNames(this._uboList)
             }
             break
           }
         }
       }
-      _collectPointNames(vv, zv) {
-        if (zv)
-          for (const Pv in zv) this._codeInjectionPoints[vv] || (this._codeInjectionPoints[vv] = {}), this._codeInjectionPoints[vv][Pv] = !0
+      _collectPointNames(TT, kT) {
+        if (kT)
+          for (const cT in kT) this._codeInjectionPoints[TT] || (this._codeInjectionPoints[TT] = {}), this._codeInjectionPoints[TT][cT] = !0
       }
-      _injectCustomCode(vv, zv) {
-        return (Pv, hv) => {
-          zv && (hv = zv(Pv, hv)), this._uboDeclaration && (hv = hv.replace("#define ADDITIONAL_UBO_DECLARATION", this._uboDeclaration)), this._vertexDeclaration && (hv = hv.replace("#define ADDITIONAL_VERTEX_DECLARATION", this._vertexDeclaration)), this._fragmentDeclaration && (hv = hv.replace("#define ADDITIONAL_FRAGMENT_DECLARATION", this._fragmentDeclaration));
-          const Sv = this._codeInjectionPoints?.[Pv];
-          if (!Sv) return hv;
-          let dv = null;
-          for (let zv in Sv) {
-            let Sv = "";
-            for (const hv of this._activePlugins) {
-              const pv = this._material.shaderLanguage;
-              let Nv = hv.getCustomCode(Pv, pv)?.[zv];
-              Nv && (hv.resolveIncludes && (null === dv && (dv = {
+      _injectCustomCode(TT, kT) {
+        return (cT, lT) => {
+          kT && (lT = kT(cT, lT)), this._uboDeclaration && (lT = lT.replace("#define ADDITIONAL_UBO_DECLARATION", this._uboDeclaration)), this._vertexDeclaration && (lT = lT.replace("#define ADDITIONAL_VERTEX_DECLARATION", this._vertexDeclaration)), this._fragmentDeclaration && (lT = lT.replace("#define ADDITIONAL_FRAGMENT_DECLARATION", this._fragmentDeclaration));
+          const MT = this._codeInjectionPoints?.[cT];
+          if (!MT) return lT;
+          let fT = null;
+          for (let kT in MT) {
+            let MT = "";
+            for (const lT of this._activePlugins) {
+              const yT = this._material.shaderLanguage;
+              let xT = lT.getCustomCode(cT, yT)?.[kT];
+              xT && (lT.resolveIncludes && (null === fT && (fT = {
                 defines: [],
-                indexParameters: vv.indexParameters,
+                indexParameters: TT.indexParameters,
                 isFragment: !1,
                 shouldUseHighPrecisionShader: this._engine._shouldUseHighPrecisionShader,
                 processor: void 0,
                 supportsUniformBuffers: this._engine.supportsUniformBuffers,
-                shadersRepository: gv.d.GetShadersRepository(pv),
-                includesShadersStore: gv.d.GetIncludesShadersStore(pv),
+                shadersRepository: OT.d.GetShadersRepository(yT),
+                includesShadersStore: OT.d.GetIncludesShadersStore(yT),
                 version: void 0,
                 platformName: this._engine.shaderPlatformName,
                 processingContext: void 0,
                 isNDCHalfZRange: this._engine.isNDCHalfZRange,
-                SPv: this._engine.SPv,
+                QcT: this._engine.QcT,
                 processCodeAfterIncludes: void 0
-              }), dv.isFragment = "fragment" === Pv, (0, ev.g)(Nv, dv, (vv => Nv = vv))), Sv += Nv + "\n")
+              }), fT.isFragment = "fragment" === cT, (0, KT.g)(xT, fT, (TT => xT = TT))), MT += xT + "\n")
             }
-            if (Sv.length > 0)
-              if ("!" === zv.charAt(0)) {
-                zv = zv.substring(1);
-                let vv = "g";
-                if ("!" === zv.charAt(0)) vv = "", zv = zv.substring(1);
+            if (MT.length > 0)
+              if ("!" === kT.charAt(0)) {
+                kT = kT.substring(1);
+                let TT = "g";
+                if ("!" === kT.charAt(0)) TT = "", kT = kT.substring(1);
                 else {
-                  const Pv = pv.exec(zv);
-                  Pv && Pv.length >= 2 && (vv = Pv[1], zv = zv.substring(vv.length + 1))
+                  const cT = yT.exec(kT);
+                  cT && cT.length >= 2 && (TT = cT[1], kT = kT.substring(TT.length + 1))
                 }
-                vv.indexOf("g") < 0 && (vv += "g");
-                const Pv = new RegExp(zv, vv);
-                let ev = Pv.exec(hv);
-                for (; null !== ev;) {
+                TT.indexOf("g") < 0 && (TT += "g");
+                const cT = new RegExp(kT, TT);
+                let KT = cT.exec(lT);
+                for (; null !== KT;) {
                   const {
-                    index: vv
-                  } = ev, zv = Nv(Sv, ev);
-                  hv = hv.substring(0, vv) + zv + hv.substring(vv + ev[0].length), Pv.lastIndex = vv + zv.length, ev = Pv.exec(hv)
+                    index: TT
+                  } = KT, kT = xT(MT, KT);
+                  lT = lT.substring(0, TT) + kT + lT.substring(TT + KT[0].length), cT.lastIndex = TT + kT.length, KT = cT.exec(lT)
                 }
               } else {
-                const vv = "#define " + zv;
-                hv = hv.replace(vv, "\n" + Sv + "\n" + vv)
+                const TT = "#define " + kT;
+                lT = lT.replace(TT, "\n" + MT + "\n" + TT)
               }
           }
-          return hv
+          return lT
         }
       }
     }
-    dv._MaterialPluginClassToMainDefine = {}, dv._MaterialPluginCounter = 0;
+    fT._MaterialPluginClassToMainDefine = {}, fT._MaterialPluginCounter = 0;
 
-    function Nv(vv, zv) {
-      return vv.replace(/\$(\d+)/g, ((vv, Pv) => {
-        const hv = Number(Pv);
-        return hv < zv.length ? zv[hv] : ""
+    function xT(TT, kT) {
+      return TT.replace(/\$(\d+)/g, ((TT, cT) => {
+        const lT = Number(cT);
+        return lT < kT.length ? kT[lT] : ""
       }))
     }
-    var lv = Pv(39312),
-      Tv = Pv(36631);
-    let Wv = (() => {
-        var vv;
-        let zv, Pv, ev, gv, pv = [],
-          Nv = [],
-          Tv = [],
-          Wv = [],
-          wv = [],
-          av = [],
-          sv = [],
-          Cv = [];
-        return vv = class {
-          isCompatible(vv) {
-            return 0 === vv
+    var IT = cT(39645),
+      AT = cT(36949);
+    let CT = (() => {
+        var TT;
+        let kT, cT, KT, OT, yT = [],
+          xT = [],
+          AT = [],
+          CT = [],
+          jT = [],
+          vT = [],
+          tT = [],
+          hT = [];
+        return TT = class {
+          isCompatible(TT) {
+            return 0 === TT
           }
-          _enable(vv) {
-            vv && this._pluginManager._activatePlugin(this)
+          _enable(TT) {
+            TT && this._pluginManager._activatePlugin(this)
           }
-          constructor(vv, zv, Pv, Sv) {
-            let ev = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-              gv = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-              lv = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-            this.name = (0, hv.f)(this, pv, void 0), this.priority = ((0, hv.f)(this, Nv), (0, hv.f)(this, Tv, 500)), this.resolveIncludes = ((0, hv.f)(this, Wv), (0, hv.f)(this, wv, !1)), this.registerForExtraEvents = ((0, hv.f)(this, av), (0, hv.f)(this, sv, !1)), this.doNotSerialize = ((0, hv.f)(this, Cv), !1), this._material = vv, this.name = zv, this.priority = Pv, this.resolveIncludes = lv, vv.pluginManager || (vv.pluginManager = new dv(vv), vv.uD.add((() => {
-              vv.pluginManager = void 0
-            }))), this._pluginDefineNames = Sv, this._pluginManager = vv.pluginManager, ev && this._pluginManager._addPlugin(this), gv && this._enable(!0), this.markAllDefinesAsDirty = vv._dirtyCallbacks[127]
+          constructor(TT, kT, cT, MT) {
+            let KT = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+              OT = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+              IT = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+            this.name = (0, lT.h)(this, yT, void 0), this.priority = ((0, lT.h)(this, xT), (0, lT.h)(this, AT, 500)), this.resolveIncludes = ((0, lT.h)(this, CT), (0, lT.h)(this, jT, !1)), this.registerForExtraEvents = ((0, lT.h)(this, vT), (0, lT.h)(this, tT, !1)), this.doNotSerialize = ((0, lT.h)(this, hT), !1), this._material = TT, this.name = kT, this.priority = cT, this.resolveIncludes = IT, TT.pluginManager || (TT.pluginManager = new fT(TT), TT.QJ.add((() => {
+              TT.pluginManager = void 0
+            }))), this._pluginDefineNames = MT, this._pluginManager = TT.pluginManager, KT && this._pluginManager._addPlugin(this), OT && this._enable(!0), this.markAllDefinesAsDirty = TT._dirtyCallbacks[127]
           }
           getClassName() {
             return "MaterialPluginBase"
           }
-          isReadyForSubMesh(vv, zv, Pv, hv) {
+          isReadyForSubMesh(TT, kT, cT, lT) {
             return !0
           }
-          hardBindForSubMesh(vv, zv, Pv, hv) {}
-          bindForSubMesh(vv, zv, Pv, hv) {}
-          dispose(vv) {}
-          getCustomCode(vv) {
+          hardBindForSubMesh(TT, kT, cT, lT) {}
+          bindForSubMesh(TT, kT, cT, lT) {}
+          dispose(TT) {}
+          getCustomCode(TT) {
             return null
           }
-          collectDefines(vv) {
+          collectDefines(TT) {
             if (this._pluginDefineNames)
-              for (const zv of Object.keys(this._pluginDefineNames)) {
-                if ("_" === zv[0]) continue;
-                const Pv = typeof this._pluginDefineNames[zv];
-                vv[zv] = {
-                  type: "number" === Pv ? "number" : "string" === Pv ? "string" : "boolean" === Pv ? "boolean" : "object",
-                  default: this._pluginDefineNames[zv]
+              for (const kT of Object.keys(this._pluginDefineNames)) {
+                if ("_" === kT[0]) continue;
+                const cT = typeof this._pluginDefineNames[kT];
+                TT[kT] = {
+                  type: "number" === cT ? "number" : "string" === cT ? "string" : "boolean" === cT ? "boolean" : "object",
+                  default: this._pluginDefineNames[kT]
                 }
               }
           }
-          prepareDefinesBeforeAttributes(vv, zv, Pv) {}
-          prepareDefines(vv, zv, Pv) {}
-          hasTexture(vv) {
+          prepareDefinesBeforeAttributes(TT, kT, cT) {}
+          prepareDefines(TT, kT, cT) {}
+          hasTexture(TT) {
             return !1
           }
           hasRenderTargetTextures() {
             return !1
           }
-          fillRenderTargetTextures(vv) {}
-          getActiveTextures(vv) {}
-          getAnimatables(vv) {}
-          addFallbacks(vv, zv, Pv) {
-            return Pv
+          fillRenderTargetTextures(TT) {}
+          getActiveTextures(TT) {}
+          getAnimatables(TT) {}
+          addFallbacks(TT, kT, cT) {
+            return cT
           }
-          getSamplers(vv) {}
-          getAttributes(vv, zv, Pv) {}
-          getUniformBuffersNames(vv) {}
+          getSamplers(TT) {}
+          getAttributes(TT, kT, cT) {}
+          getUniformBuffersNames(TT) {}
           getUniforms() {
             return {}
           }
-          copyTo(vv) {
-            lv.c.Clone((() => vv), this)
+          copyTo(TT) {
+            IT.d.Clone((() => TT), this)
           }
           serialize() {
-            return lv.c.Serialize(this)
+            return IT.d.Serialize(this)
           }
-          parse(vv, zv, Pv) {
-            lv.c.Parse((() => this), vv, zv, Pv)
+          parse(TT, kT, cT) {
+            IT.d.Parse((() => this), TT, kT, cT)
           }
         }, (() => {
-          const dv = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-          zv = [(0, Sv.L)()], Pv = [(0, Sv.L)()], ev = [(0, Sv.L)()], gv = [(0, Sv.L)()], (0, hv.e)(null, null, zv, {
+          const fT = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+          kT = [(0, MT.J)()], cT = [(0, MT.J)()], KT = [(0, MT.J)()], OT = [(0, MT.J)()], (0, lT.e)(null, null, kT, {
             kind: "field",
             name: "name",
             static: !1,
             private: !1,
             access: {
-              has: vv => "name" in vv,
-              get: vv => vv.name,
-              set: (vv, zv) => {
-                vv.name = zv
+              has: TT => "name" in TT,
+              get: TT => TT.name,
+              set: (TT, kT) => {
+                TT.name = kT
               }
             },
-            metadata: dv
-          }, pv, Nv), (0, hv.e)(null, null, Pv, {
+            metadata: fT
+          }, yT, xT), (0, lT.e)(null, null, cT, {
             kind: "field",
             name: "priority",
             static: !1,
             private: !1,
             access: {
-              has: vv => "priority" in vv,
-              get: vv => vv.priority,
-              set: (vv, zv) => {
-                vv.priority = zv
+              has: TT => "priority" in TT,
+              get: TT => TT.priority,
+              set: (TT, kT) => {
+                TT.priority = kT
               }
             },
-            metadata: dv
-          }, Tv, Wv), (0, hv.e)(null, null, ev, {
+            metadata: fT
+          }, AT, CT), (0, lT.e)(null, null, KT, {
             kind: "field",
             name: "resolveIncludes",
             static: !1,
             private: !1,
             access: {
-              has: vv => "resolveIncludes" in vv,
-              get: vv => vv.resolveIncludes,
-              set: (vv, zv) => {
-                vv.resolveIncludes = zv
+              has: TT => "resolveIncludes" in TT,
+              get: TT => TT.resolveIncludes,
+              set: (TT, kT) => {
+                TT.resolveIncludes = kT
               }
             },
-            metadata: dv
-          }, wv, av), (0, hv.e)(null, null, gv, {
+            metadata: fT
+          }, jT, vT), (0, lT.e)(null, null, OT, {
             kind: "field",
             name: "registerForExtraEvents",
             static: !1,
             private: !1,
             access: {
-              has: vv => "registerForExtraEvents" in vv,
-              get: vv => vv.registerForExtraEvents,
-              set: (vv, zv) => {
-                vv.registerForExtraEvents = zv
+              has: TT => "registerForExtraEvents" in TT,
+              get: TT => TT.registerForExtraEvents,
+              set: (TT, kT) => {
+                TT.registerForExtraEvents = kT
               }
             },
-            metadata: dv
-          }, sv, Cv), dv && Object.defineProperty(vv, Symbol.metadata, {
+            metadata: fT
+          }, tT, hT), fT && Object.defineProperty(TT, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: dv
+            value: fT
           })
-        })(), vv
+        })(), TT
       })(),
-      wv = !1;
+      jT = !1;
 
-    function av() {
-      wv || (wv = !0, (0, Tv.c)("BABYLON.MaterialPluginBase", Wv))
+    function vT() {
+      jT || (jT = !0, (0, AT.g)("BABYLON.MaterialPluginBase", CT))
     }
   },
-  39571: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => hv
+  39898: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => lT
     });
-    class hv {
+    class lT {
       constructor() {
         this.previousWorldMatrices = {}, this.previousBones = {}
       }
-      static AddUniforms(vv) {
-        vv.push("previousWorld", "previousViewProjection", "mPreviousBones")
+      static AddUniforms(TT) {
+        TT.push("previousWorld", "previousViewProjection", "mPreviousBones")
       }
-      static AddSamplers(vv) {}
-      bindForSubMesh(vv, zv, Pv, hv, Sv) {
-        if (zv.prePassRenderer && zv.prePassRenderer.enabled && zv.prePassRenderer.currentRTisSceneRT && (-1 !== zv.prePassRenderer.getIndex(2) || -1 !== zv.prePassRenderer.getIndex(11))) {
-          this.previousWorldMatrices[Pv.uniqueId] || (this.previousWorldMatrices[Pv.uniqueId] = hv.clone()), this.previousViewProjection || (this.previousViewProjection = zv.getTransformMatrix().clone(), this.currentViewProjection = zv.getTransformMatrix().clone());
-          const Sv = zv.ma();
-          this.currentViewProjection.updateFlag !== zv.getTransformMatrix().updateFlag ? (this._lastUpdateFrameId = Sv.frameId, this.previousViewProjection.Vzv(this.currentViewProjection), this.currentViewProjection.Vzv(zv.getTransformMatrix())) : this._lastUpdateFrameId !== Sv.frameId && (this._lastUpdateFrameId = Sv.frameId, this.previousViewProjection.Vzv(this.currentViewProjection)), vv.setMatrix("previousWorld", this.previousWorldMatrices[Pv.uniqueId]), vv.setMatrix("previousViewProjection", this.previousViewProjection), this.previousWorldMatrices[Pv.uniqueId] = hv.clone()
+      static AddSamplers(TT) {}
+      bindForSubMesh(TT, kT, cT, lT, MT) {
+        if (kT.prePassRenderer && kT.prePassRenderer.enabled && kT.prePassRenderer.currentRTisSceneRT && (-1 !== kT.prePassRenderer.getIndex(2) || -1 !== kT.prePassRenderer.getIndex(11))) {
+          this.previousWorldMatrices[cT.uniqueId] || (this.previousWorldMatrices[cT.uniqueId] = lT.clone()), this.previousViewProjection || (this.previousViewProjection = kT.getTransformMatrix().clone(), this.currentViewProjection = kT.getTransformMatrix().clone());
+          const MT = kT.Dv();
+          this.currentViewProjection.updateFlag !== kT.getTransformMatrix().updateFlag ? (this._lastUpdateFrameId = MT.frameId, this.previousViewProjection.UkT(this.currentViewProjection), this.currentViewProjection.UkT(kT.getTransformMatrix())) : this._lastUpdateFrameId !== MT.frameId && (this._lastUpdateFrameId = MT.frameId, this.previousViewProjection.UkT(this.currentViewProjection)), TT.setMatrix("previousWorld", this.previousWorldMatrices[cT.uniqueId]), TT.setMatrix("previousViewProjection", this.previousViewProjection), this.previousWorldMatrices[cT.uniqueId] = lT.clone()
         }
       }
     }
   },
-  39697: (vv, zv, Pv) => {
-    function hv(vv) {
-      return class extends vv {
+  40007: (TT, kT, cT) => {
+    function lT(TT) {
+      return class extends TT {
         constructor() {
           super(...arguments), this.PREPASS = !1, this.PREPASS_COLOR = !1, this.PREPASS_COLOR_INDEX = -1, this.PREPASS_IRRADIANCE_LEGACY = !1, this.PREPASS_IRRADIANCE_LEGACY_INDEX = -1, this.PREPASS_IRRADIANCE = !1, this.PREPASS_IRRADIANCE_INDEX = -1, this.PREPASS_ALBEDO = !1, this.PREPASS_ALBEDO_INDEX = -1, this.PREPASS_ALBEDO_SQRT = !1, this.PREPASS_ALBEDO_SQRT_INDEX = -1, this.PREPASS_DEPTH = !1, this.PREPASS_DEPTH_INDEX = -1, this.PREPASS_SCREENSPACE_DEPTH = !1, this.PREPASS_SCREENSPACE_DEPTH_INDEX = -1, this.PREPASS_NORMALIZED_VIEW_DEPTH = !1, this.PREPASS_NORMALIZED_VIEW_DEPTH_INDEX = -1, this.PREPASS_NORMAL = !1, this.PREPASS_NORMAL_INDEX = -1, this.PREPASS_NORMAL_WORLDSPACE = !1, this.PREPASS_WORLD_NORMAL = !1, this.PREPASS_WORLD_NORMAL_INDEX = -1, this.PREPASS_POSITION = !1, this.PREPASS_POSITION_INDEX = -1, this.PREPASS_LOCAL_POSITION = !1, this.PREPASS_LOCAL_POSITION_INDEX = -1, this.PREPASS_VELOCITY = !1, this.PREPASS_VELOCITY_INDEX = -1, this.PREPASS_VELOCITY_LINEAR = !1, this.PREPASS_VELOCITY_LINEAR_INDEX = -1, this.PREPASS_REFLECTIVITY = !1, this.PREPASS_REFLECTIVITY_INDEX = -1, this.PREPASS_OBJECT_ID = !1, this.PREPASS_OBJECT_ID_INDEX = -1, this.PREPASS_OBJECT_ID_R8 = !1, this.PREPASS_MESH_BLEND_TAG = !1, this.PREPASS_MESH_BLEND_TAG_INDEX = -1, this.SCENE_MRT_COUNT = 0
         }
       }
     }
-    Pv.d(zv, {
-      b: () => hv
+    cT.d(kT, {
+      b: () => lT
     })
   },
-  39560: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      StandardMaterial: () => hv.i
+  39889: (TT, kT, cT) => {
+    cT.d(kT, {
+      StandardMaterial: () => lT.f
     });
-    var hv = Pv(39564);
-    (0, hv.e)()
+    var lT = cT(39896);
+    (0, lT.d)()
   },
-  39564: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => Iv,
-      i: () => tv
+  39896: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => ET,
+      f: () => GT
     });
-    var hv = Pv(39295),
-      Sv = Pv(39300),
-      ev = Pv(39413),
-      gv = Pv(39395),
-      pv = Pv(36751),
-      dv = Pv(39441),
-      Nv = Pv(39571),
-      lv = Pv(39580),
-      Tv = Pv(39420),
-      Wv = Pv(39593),
-      wv = Pv(39588),
-      av = Pv(39647),
-      sv = Pv(39644),
-      Cv = Pv(39656),
-      iv = Pv(39665),
-      cv = Pv(39636),
-      Gv = Pv(39676),
-      mv = Pv(39629),
-      jv = Pv(39312),
-      fv = Pv(39682),
-      Fv = Pv(39686),
-      Yv = Pv(39694),
-      nv = Pv(39697),
-      Ov = Pv(39705),
-      Dv = Pv(36631),
-      Kv = Pv(39190);
-    const Vv = {
+    var lT = cT(39620),
+      MT = cT(39624),
+      KT = cT(39741),
+      OT = cT(39720),
+      yT = cT(37093),
+      fT = cT(39782),
+      xT = cT(39898),
+      IT = cT(39900),
+      AT = cT(39746),
+      CT = cT(39908),
+      jT = cT(39902),
+      vT = cT(39967),
+      tT = cT(39959),
+      hT = cT(39970),
+      NT = cT(39975),
+      QT = cT(39951),
+      ST = cT(39985),
+      DT = cT(39943),
+      aT = cT(39645),
+      FT = cT(39989),
+      rT = cT(39997),
+      PT = cT(40004),
+      wT = cT(40007),
+      mT = cT(40014),
+      bT = cT(36949),
+      zT = cT(39500);
+    const JT = {
       effect: null,
       subMesh: null
     };
-    class Uv extends((0, nv.b)((0, Yv.b)(wv.c))) {}
-    class Rv extends((0, lv.f)(Uv)) {
-      constructor(vv) {
-        super(vv), this.DIFFUSE = !1, this.DIFFUSEDIRECTUV = 0, this.BAKED_VERTEX_ANIMATION_TEXTURE = !1, this.AMBIENT = !1, this.AMBIENTDIRECTUV = 0, this.OPACITY = !1, this.OPACITYDIRECTUV = 0, this.OPACITYRGB = !1, this.REFLECTION = !1, this.EMISSIVE = !1, this.EMISSIVEDIRECTUV = 0, this.SPECULAR = !1, this.SPECULARDIRECTUV = 0, this.BUMP = !1, this.BUMPDIRECTUV = 0, this.PARALLAX = !1, this.PARALLAX_RHS = !1, this.PARALLAXOCCLUSION = !1, this.SPECULAROVERALPHA = !1, this.CLIPPLANE = !1, this.CLIPPLANE2 = !1, this.CLIPPLANE3 = !1, this.CLIPPLANE4 = !1, this.CLIPPLANE5 = !1, this.CLIPPLANE6 = !1, this.ALPHATEST = !1, this.DEPTHPREPASS = !1, this.ALPHAFROMDIFFUSE = !1, this.POINTSIZE = !1, this.FOG = !1, this.SPECULARTERM = !1, this.DIFFUSEFRESNEL = !1, this.OPACITYFRESNEL = !1, this.REFLECTIONFRESNEL = !1, this.REFRACTIONFRESNEL = !1, this.EMISSIVEFRESNEL = !1, this.FRESNEL = !1, this.NORMAL = !1, this.TANGENT = !1, this.VERTEXCOLOR = !1, this.VERTEXALPHA = !1, this.NUM_BONE_INFLUENCERS = 0, this.BonesPerMesh = 0, this.BONETEXTURE = !1, this.BONES_VELOCITY_ENABLED = !1, this.INSTANCES = !1, this.THIN_INSTANCES = !1, this.INSTANCESCOLOR = !1, this.GLOSSINESS = !1, this.ROUGHNESS = !1, this.EMISSIVEASILLUMINATION = !1, this.LINKEMISSIVEWITHDIFFUSE = !1, this.REFLECTIONFRESNELFROMSPECULAR = !1, this.LIGHTMAP = !1, this.LIGHTMAPDIRECTUV = 0, this.OBJECTSPACE_NORMALMAP = !1, this.USELIGHTMAPASSHADOWMAP = !1, this.REFLECTIONMAP_3D = !1, this.REFLECTIONMAP_SPHERICAL = !1, this.REFLECTIONMAP_PLANAR = !1, this.REFLECTIONMAP_CUBIC = !1, this.USE_LOCAL_REFLECTIONMAP_CUBIC = !1, this.USE_LOCAL_REFRACTIONMAP_CUBIC = !1, this.REFLECTIONMAP_PROJECTION = !1, this.REFLECTIONMAP_SKYBOX = !1, this.REFLECTIONMAP_EXPLICIT = !1, this.REFLECTIONMAP_EQUIRECTANGULAR = !1, this.REFLECTIONMAP_EQUIRECTANGULAR_FIXED = !1, this.REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED = !1, this.REFLECTIONMAP_OPPOSITEZ = !1, this.INVERTCUBICMAP = !1, this.LOGARITHMICDEPTH = !1, this.REFRACTION = !1, this.REFRACTIONMAP_3D = !1, this.REFLECTIONOVERALPHA = !1, this.TWOSIDEDLIGHTING = !1, this.SHADOWFLOAT = !1, this.MORPHTARGETS = !1, this.MORPHTARGETS_POSITION = !1, this.MORPHTARGETS_NORMAL = !1, this.MORPHTARGETS_TANGENT = !1, this.MORPHTARGETS_UV = !1, this.MORPHTARGETS_UV2 = !1, this.MORPHTARGETS_COLOR = !1, this.MORPHTARGETTEXTURE_HASPOSITIONS = !1, this.MORPHTARGETTEXTURE_HASNORMALS = !1, this.MORPHTARGETTEXTURE_HASTANGENTS = !1, this.MORPHTARGETTEXTURE_HASUVS = !1, this.MORPHTARGETTEXTURE_HASUV2S = !1, this.MORPHTARGETTEXTURE_HASCOLORS = !1, this.NUM_MORPH_INFLUENCERS = 0, this.MORPHTARGETS_TEXTURE = !1, this.NONUNIFORMSCALING = !1, this.PREMULTIPLYALPHA = !1, this.ALPHATEST_AFTERALLALPHACOMPUTATIONS = !1, this.ALPHABLEND = !0, this.RGBDLIGHTMAP = !1, this.RGBDREFLECTION = !1, this.RGBDREFRACTION = !1, this.MULTIVIEW = !1, this.ORDER_INDEPENDENT_TRANSPARENCY = !1, this.ORDER_INDEPENDENT_TRANSPARENCY_16BITS = !1, this.CAMERA_ORTHOGRAPHIC = !1, this.CAMERA_PERSPECTIVE = !1, this.AREALIGHTSUPPORTED = !0, this.USE_VERTEX_PULLING = !1, this.VERTEX_PULLING_USE_INDEX_BUFFER = !1, this.VERTEX_PULLING_INDEX_BUFFER_32BITS = !1, this.RIGHT_HANDED = !1, this.CLUSTLIGHT_SLICES = 0, this.CLUSTLIGHT_BATCH = 0, this.IS_REFLECTION_LINEAR = !1, this.IS_REFRACTION_LINEAR = !1, this.DECAL_AFTER_DETAIL = !1, this.TEXTURE_REPETITION_MODE = 0, this.rebuild()
+    class oT extends((0, wT.b)((0, PT.c)(jT.e))) {}
+    class HT extends((0, IT.g)(oT)) {
+      constructor(TT) {
+        super(TT), this.DIFFUSE = !1, this.DIFFUSEDIRECTUV = 0, this.BAKED_VERTEX_ANIMATION_TEXTURE = !1, this.AMBIENT = !1, this.AMBIENTDIRECTUV = 0, this.OPACITY = !1, this.OPACITYDIRECTUV = 0, this.OPACITYRGB = !1, this.REFLECTION = !1, this.EMISSIVE = !1, this.EMISSIVEDIRECTUV = 0, this.SPECULAR = !1, this.SPECULARDIRECTUV = 0, this.BUMP = !1, this.BUMPDIRECTUV = 0, this.PARALLAX = !1, this.PARALLAX_RHS = !1, this.PARALLAXOCCLUSION = !1, this.SPECULAROVERALPHA = !1, this.CLIPPLANE = !1, this.CLIPPLANE2 = !1, this.CLIPPLANE3 = !1, this.CLIPPLANE4 = !1, this.CLIPPLANE5 = !1, this.CLIPPLANE6 = !1, this.ALPHATEST = !1, this.DEPTHPREPASS = !1, this.ALPHAFROMDIFFUSE = !1, this.POINTSIZE = !1, this.FOG = !1, this.SPECULARTERM = !1, this.DIFFUSEFRESNEL = !1, this.OPACITYFRESNEL = !1, this.REFLECTIONFRESNEL = !1, this.REFRACTIONFRESNEL = !1, this.EMISSIVEFRESNEL = !1, this.FRESNEL = !1, this.NORMAL = !1, this.TANGENT = !1, this.VERTEXCOLOR = !1, this.VERTEXALPHA = !1, this.NUM_BONE_INFLUENCERS = 0, this.BonesPerMesh = 0, this.BONETEXTURE = !1, this.BONES_VELOCITY_ENABLED = !1, this.INSTANCES = !1, this.THIN_INSTANCES = !1, this.INSTANCESCOLOR = !1, this.GLOSSINESS = !1, this.ROUGHNESS = !1, this.EMISSIVEASILLUMINATION = !1, this.LINKEMISSIVEWITHDIFFUSE = !1, this.REFLECTIONFRESNELFROMSPECULAR = !1, this.LIGHTMAP = !1, this.LIGHTMAPDIRECTUV = 0, this.OBJECTSPACE_NORMALMAP = !1, this.USELIGHTMAPASSHADOWMAP = !1, this.REFLECTIONMAP_3D = !1, this.REFLECTIONMAP_SPHERICAL = !1, this.REFLECTIONMAP_PLANAR = !1, this.REFLECTIONMAP_CUBIC = !1, this.USE_LOCAL_REFLECTIONMAP_CUBIC = !1, this.USE_LOCAL_REFRACTIONMAP_CUBIC = !1, this.REFLECTIONMAP_PROJECTION = !1, this.REFLECTIONMAP_SKYBOX = !1, this.REFLECTIONMAP_EXPLICIT = !1, this.REFLECTIONMAP_EQUIRECTANGULAR = !1, this.REFLECTIONMAP_EQUIRECTANGULAR_FIXED = !1, this.REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED = !1, this.REFLECTIONMAP_OPPOSITEZ = !1, this.INVERTCUBICMAP = !1, this.LOGARITHMICDEPTH = !1, this.REFRACTION = !1, this.REFRACTIONMAP_3D = !1, this.REFLECTIONOVERALPHA = !1, this.TWOSIDEDLIGHTING = !1, this.SHADOWFLOAT = !1, this.MORPHTARGETS = !1, this.MORPHTARGETS_POSITION = !1, this.MORPHTARGETS_NORMAL = !1, this.MORPHTARGETS_TANGENT = !1, this.MORPHTARGETS_UV = !1, this.MORPHTARGETS_UV2 = !1, this.MORPHTARGETS_COLOR = !1, this.MORPHTARGETTEXTURE_HASPOSITIONS = !1, this.MORPHTARGETTEXTURE_HASNORMALS = !1, this.MORPHTARGETTEXTURE_HASTANGENTS = !1, this.MORPHTARGETTEXTURE_HASUVS = !1, this.MORPHTARGETTEXTURE_HASUV2S = !1, this.MORPHTARGETTEXTURE_HASCOLORS = !1, this.NUM_MORPH_INFLUENCERS = 0, this.MORPHTARGETS_TEXTURE = !1, this.NONUNIFORMSCALING = !1, this.PREMULTIPLYALPHA = !1, this.ALPHATEST_AFTERALLALPHACOMPUTATIONS = !1, this.ALPHABLEND = !0, this.RGBDLIGHTMAP = !1, this.RGBDREFLECTION = !1, this.RGBDREFRACTION = !1, this.MULTIVIEW = !1, this.ORDER_INDEPENDENT_TRANSPARENCY = !1, this.ORDER_INDEPENDENT_TRANSPARENCY_16BITS = !1, this.CAMERA_ORTHOGRAPHIC = !1, this.CAMERA_PERSPECTIVE = !1, this.AREALIGHTSUPPORTED = !0, this.USE_VERTEX_PULLING = !1, this.VERTEX_PULLING_USE_INDEX_BUFFER = !1, this.VERTEX_PULLING_INDEX_BUFFER_32BITS = !1, this.RIGHT_HANDED = !1, this.CLUSTLIGHT_SLICES = 0, this.CLUSTLIGHT_BATCH = 0, this.IS_REFLECTION_LINEAR = !1, this.IS_REFRACTION_LINEAR = !1, this.DECAL_AFTER_DETAIL = !1, this.TEXTURE_REPETITION_MODE = 0, this.rebuild()
       }
     }
-    class xv extends((0, Ov.d)(av.d)) {}
-    let tv = (() => {
-        var vv, zv, lv, wv, Yv, nv, Ov, Dv, Kv, Uv, tv, qv, Iv, Qv, Zv, Av, Lv, Hv, Mv, yv, Bv, Jv, Ev, ov, bv, rv, kv, Xv, uv, vz, zz, Pz, hz;
-        let Sz, ez, gz, pz, dz, Nz, lz, Tz, Wz, wz, az, sz, Cz, iz, cz, Gz, mz, jz, fz, Fz, Yz, nz, Oz, Dz, Kz, Vz, Uz, Rz, xz, tz, qz, Iz, Qz, Zz, Az, Lz, Hz, Mz, yz, Bz, Jz, Ez, oz, bz, rz, kz, Xz, uz, vP, zP, PP, hP, SP, eP, gP, pP, dP, NP, lP, TP, WP, wP, aP, sP, CP, iP, cP, GP, mP, jP, fP, FP, YP, nP = xv,
-          OP = [],
-          DP = [],
-          KP = [],
-          VP = [],
-          UP = [],
-          RP = [],
-          xP = [],
-          tP = [],
-          qP = [],
-          IP = [],
-          QP = [],
-          ZP = [],
-          AP = [],
-          LP = [],
-          HP = [],
-          MP = [],
-          yP = [],
-          BP = [],
-          JP = [],
-          EP = [],
-          oP = [],
-          bP = [],
-          rP = [],
-          kP = [],
-          XP = [],
-          uP = [],
-          vh = [],
-          zh = [],
-          Ph = [],
-          hh = [],
-          Sh = [],
-          eh = [],
-          gh = [],
-          ph = [],
-          dh = [],
-          Nh = [],
-          lh = [],
-          Th = [],
-          Wh = [],
-          wh = [],
-          ah = [],
-          sh = [],
-          Ch = [],
-          ih = [],
-          ch = [],
-          Gh = [],
-          mh = [],
-          jh = [],
-          fh = [],
-          Fh = [],
-          Yh = [],
-          nh = [],
-          Oh = [],
-          Dh = [],
-          Kh = [],
-          Vh = [],
-          Uh = [],
-          Rh = [],
-          xh = [],
-          th = [],
-          qh = [],
-          Ih = [],
-          Qh = [],
-          Zh = [],
-          Ah = [],
-          Lh = [],
-          Hh = [],
-          Mh = [],
-          yh = [],
-          Bh = [],
-          Jh = [],
-          Eh = [],
-          oh = [],
-          bh = [],
-          rh = [],
-          kh = [],
-          Xh = [],
-          uh = [],
-          vS = [],
-          zS = [],
-          PS = [],
-          hS = [],
-          SS = [],
-          eS = [],
-          gS = [],
-          pS = [],
-          dS = [],
-          NS = [],
-          lS = [],
-          TS = [],
-          WS = [],
-          wS = [],
-          aS = [],
-          sS = [],
-          CS = [],
-          iS = [],
-          cS = [],
-          GS = [],
-          mS = [],
-          jS = [],
-          fS = [],
-          FS = [],
-          YS = [],
-          nS = [],
-          OS = [],
-          DS = [],
-          KS = [],
-          VS = [],
-          US = [],
-          RS = [],
-          xS = [],
-          tS = [],
-          qS = [],
-          IS = [],
-          QS = [],
-          ZS = [],
-          AS = [],
-          LS = [],
-          HS = [],
-          MS = [],
-          yS = [],
-          BS = [],
-          JS = [],
-          ES = [],
-          oS = [],
-          bS = [],
-          rS = [],
-          kS = [],
-          XS = [],
-          uS = [],
-          ve = [],
-          ze = [],
-          Pe = [],
-          he = [],
-          Se = [],
-          ee = [],
-          ge = [],
-          pe = [],
-          de = [],
-          Ne = [],
-          le = [],
-          Te = [],
-          We = [],
-          we = [],
-          ae = [],
-          se = [];
-        return vv = class extends nP {
+    class eT extends((0, mT.c)(vT.e)) {}
+    let GT = (() => {
+        var TT, kT, IT, jT, PT, wT, mT, bT, zT, oT, GT, VT, ET, ZT, uT, XT, dT, LT, RT, gT, UT, YT, BT, WT, nT, pT, iT, qT, sT, Tk, kk, ck, lk;
+        let Mk, Kk, Ok, yk, fk, xk, Ik, Ak, Ck, jk, vk, tk, hk, Nk, Qk, Sk, Dk, ak, Fk, rk, Pk, wk, mk, bk, zk, Jk, Hk, ek, Gk, Vk, Ek, Zk, uk, Xk, dk, Lk, Rk, gk, Uk, Yk, Bk, Wk, nk, pk, ik, qk, sk, Tc, kc, cc, lc, Mc, Kc, Oc, yc, fc, xc, Ic, Ac, Cc, jc, vc, tc, hc, Nc, Qc, Sc, Dc, ac, Fc, rc, Pc, wc, mc = eT,
+          bc = [],
+          zc = [],
+          Jc = [],
+          oc = [],
+          Hc = [],
+          ec = [],
+          Gc = [],
+          Vc = [],
+          Ec = [],
+          Zc = [],
+          uc = [],
+          Xc = [],
+          dc = [],
+          Lc = [],
+          Rc = [],
+          gc = [],
+          Uc = [],
+          Yc = [],
+          Bc = [],
+          Wc = [],
+          nc = [],
+          pc = [],
+          ic = [],
+          qc = [],
+          sc = [],
+          Tl = [],
+          kl = [],
+          cl = [],
+          ll = [],
+          Ml = [],
+          Kl = [],
+          Ol = [],
+          yl = [],
+          fl = [],
+          xl = [],
+          Il = [],
+          Al = [],
+          Cl = [],
+          jl = [],
+          vl = [],
+          tl = [],
+          hl = [],
+          Nl = [],
+          Ql = [],
+          Sl = [],
+          Dl = [],
+          al = [],
+          Fl = [],
+          rl = [],
+          Pl = [],
+          wl = [],
+          ml = [],
+          bl = [],
+          zl = [],
+          Jl = [],
+          ol = [],
+          Hl = [],
+          el = [],
+          Gl = [],
+          Vl = [],
+          El = [],
+          Zl = [],
+          ul = [],
+          Xl = [],
+          dl = [],
+          Ll = [],
+          Rl = [],
+          gl = [],
+          Ul = [],
+          Yl = [],
+          Bl = [],
+          Wl = [],
+          nl = [],
+          pl = [],
+          il = [],
+          ql = [],
+          sl = [],
+          TM = [],
+          kM = [],
+          cM = [],
+          lM = [],
+          MM = [],
+          KM = [],
+          OM = [],
+          yM = [],
+          fM = [],
+          xM = [],
+          IM = [],
+          AM = [],
+          CM = [],
+          jM = [],
+          vM = [],
+          tM = [],
+          hM = [],
+          NM = [],
+          QM = [],
+          SM = [],
+          DM = [],
+          aM = [],
+          FM = [],
+          rM = [],
+          PM = [],
+          wM = [],
+          mM = [],
+          bM = [],
+          zM = [],
+          JM = [],
+          oM = [],
+          HM = [],
+          eM = [],
+          GM = [],
+          VM = [],
+          EM = [],
+          ZM = [],
+          uM = [],
+          XM = [],
+          dM = [],
+          LM = [],
+          RM = [],
+          gM = [],
+          UM = [],
+          YM = [],
+          BM = [],
+          WM = [],
+          nM = [],
+          pM = [],
+          iM = [],
+          qM = [],
+          sM = [],
+          TK = [],
+          kK = [],
+          cK = [],
+          lK = [],
+          MK = [],
+          KK = [],
+          OK = [],
+          yK = [],
+          fK = [],
+          xK = [],
+          IK = [],
+          AK = [],
+          CK = [],
+          jK = [],
+          vK = [],
+          tK = [],
+          hK = [];
+        return TT = class extends mc {
           get diffuseTexture() {
-            return (0, hv.c)(this, zv, "f")
+            return (0, lT.b)(this, kT, "f")
           }
-          set diffuseTexture(vv) {
-            (0, hv.d)(this, zv, vv, "f")
+          set diffuseTexture(TT) {
+            (0, lT.d)(this, kT, TT, "f")
           }
           get ambientTexture() {
-            return (0, hv.c)(this, lv, "f")
+            return (0, lT.b)(this, IT, "f")
           }
-          set ambientTexture(vv) {
-            (0, hv.d)(this, lv, vv, "f")
+          set ambientTexture(TT) {
+            (0, lT.d)(this, IT, TT, "f")
           }
           get opacityTexture() {
-            return (0, hv.c)(this, wv, "f")
+            return (0, lT.b)(this, jT, "f")
           }
-          set opacityTexture(vv) {
-            (0, hv.d)(this, wv, vv, "f")
+          set opacityTexture(TT) {
+            (0, lT.d)(this, jT, TT, "f")
           }
           get reflectionTexture() {
-            return (0, hv.c)(this, Yv, "f")
+            return (0, lT.b)(this, PT, "f")
           }
-          set reflectionTexture(vv) {
-            (0, hv.d)(this, Yv, vv, "f")
+          set reflectionTexture(TT) {
+            (0, lT.d)(this, PT, TT, "f")
           }
           get emissiveTexture() {
-            return (0, hv.c)(this, nv, "f")
+            return (0, lT.b)(this, wT, "f")
           }
-          set emissiveTexture(vv) {
-            (0, hv.d)(this, nv, vv, "f")
+          set emissiveTexture(TT) {
+            (0, lT.d)(this, wT, TT, "f")
           }
           get specularTexture() {
-            return (0, hv.c)(this, Ov, "f")
+            return (0, lT.b)(this, mT, "f")
           }
-          set specularTexture(vv) {
-            (0, hv.d)(this, Ov, vv, "f")
+          set specularTexture(TT) {
+            (0, lT.d)(this, mT, TT, "f")
           }
           get bumpTexture() {
-            return (0, hv.c)(this, Dv, "f")
+            return (0, lT.b)(this, bT, "f")
           }
-          set bumpTexture(vv) {
-            (0, hv.d)(this, Dv, vv, "f")
+          set bumpTexture(TT) {
+            (0, lT.d)(this, bT, TT, "f")
           }
           get lightmapTexture() {
-            return (0, hv.c)(this, Kv, "f")
+            return (0, lT.b)(this, zT, "f")
           }
-          set lightmapTexture(vv) {
-            (0, hv.d)(this, Kv, vv, "f")
+          set lightmapTexture(TT) {
+            (0, lT.d)(this, zT, TT, "f")
           }
           get refractionTexture() {
-            return (0, hv.c)(this, Uv, "f")
+            return (0, lT.b)(this, oT, "f")
           }
-          set refractionTexture(vv) {
-            (0, hv.d)(this, Uv, vv, "f")
+          set refractionTexture(TT) {
+            (0, lT.d)(this, oT, TT, "f")
           }
           get useAlphaFromDiffuseTexture() {
-            return (0, hv.c)(this, tv, "f")
+            return (0, lT.b)(this, GT, "f")
           }
-          set useAlphaFromDiffuseTexture(vv) {
-            (0, hv.d)(this, tv, vv, "f")
+          set useAlphaFromDiffuseTexture(TT) {
+            (0, lT.d)(this, GT, TT, "f")
           }
           get useEmissiveAsIllumination() {
-            return (0, hv.c)(this, qv, "f")
+            return (0, lT.b)(this, VT, "f")
           }
-          set useEmissiveAsIllumination(vv) {
-            (0, hv.d)(this, qv, vv, "f")
+          set useEmissiveAsIllumination(TT) {
+            (0, lT.d)(this, VT, TT, "f")
           }
           get linkEmissiveWithDiffuse() {
-            return (0, hv.c)(this, Iv, "f")
+            return (0, lT.b)(this, ET, "f")
           }
-          set linkEmissiveWithDiffuse(vv) {
-            (0, hv.d)(this, Iv, vv, "f")
+          set linkEmissiveWithDiffuse(TT) {
+            (0, lT.d)(this, ET, TT, "f")
           }
           get useSpecularOverAlpha() {
-            return (0, hv.c)(this, Qv, "f")
+            return (0, lT.b)(this, ZT, "f")
           }
-          set useSpecularOverAlpha(vv) {
-            (0, hv.d)(this, Qv, vv, "f")
+          set useSpecularOverAlpha(TT) {
+            (0, lT.d)(this, ZT, TT, "f")
           }
           get useReflectionOverAlpha() {
-            return (0, hv.c)(this, Zv, "f")
+            return (0, lT.b)(this, uT, "f")
           }
-          set useReflectionOverAlpha(vv) {
-            (0, hv.d)(this, Zv, vv, "f")
+          set useReflectionOverAlpha(TT) {
+            (0, lT.d)(this, uT, TT, "f")
           }
           get disableLighting() {
-            return (0, hv.c)(this, Av, "f")
+            return (0, lT.b)(this, XT, "f")
           }
-          set disableLighting(vv) {
-            (0, hv.d)(this, Av, vv, "f")
+          set disableLighting(TT) {
+            (0, lT.d)(this, XT, TT, "f")
           }
           get useObjectSpaceNormalMap() {
-            return (0, hv.c)(this, Lv, "f")
+            return (0, lT.b)(this, dT, "f")
           }
-          set useObjectSpaceNormalMap(vv) {
-            (0, hv.d)(this, Lv, vv, "f")
+          set useObjectSpaceNormalMap(TT) {
+            (0, lT.d)(this, dT, TT, "f")
           }
           get useParallax() {
-            return (0, hv.c)(this, Hv, "f")
+            return (0, lT.b)(this, LT, "f")
           }
-          set useParallax(vv) {
-            (0, hv.d)(this, Hv, vv, "f")
+          set useParallax(TT) {
+            (0, lT.d)(this, LT, TT, "f")
           }
           get useParallaxOcclusion() {
-            return (0, hv.c)(this, Mv, "f")
+            return (0, lT.b)(this, RT, "f")
           }
-          set useParallaxOcclusion(vv) {
-            (0, hv.d)(this, Mv, vv, "f")
+          set useParallaxOcclusion(TT) {
+            (0, lT.d)(this, RT, TT, "f")
           }
           get roughness() {
-            return (0, hv.c)(this, yv, "f")
+            return (0, lT.b)(this, gT, "f")
           }
-          set roughness(vv) {
-            (0, hv.d)(this, yv, vv, "f")
+          set roughness(TT) {
+            (0, lT.d)(this, gT, TT, "f")
           }
           get useLightmapAsShadowmap() {
-            return (0, hv.c)(this, Bv, "f")
+            return (0, lT.b)(this, UT, "f")
           }
-          set useLightmapAsShadowmap(vv) {
-            (0, hv.d)(this, Bv, vv, "f")
+          set useLightmapAsShadowmap(TT) {
+            (0, lT.d)(this, UT, TT, "f")
           }
           get diffuseFresnelParameters() {
-            return (0, hv.c)(this, Jv, "f")
+            return (0, lT.b)(this, YT, "f")
           }
-          set diffuseFresnelParameters(vv) {
-            (0, hv.d)(this, Jv, vv, "f")
+          set diffuseFresnelParameters(TT) {
+            (0, lT.d)(this, YT, TT, "f")
           }
           get opacityFresnelParameters() {
-            return (0, hv.c)(this, Ev, "f")
+            return (0, lT.b)(this, BT, "f")
           }
-          set opacityFresnelParameters(vv) {
-            (0, hv.d)(this, Ev, vv, "f")
+          set opacityFresnelParameters(TT) {
+            (0, lT.d)(this, BT, TT, "f")
           }
           get reflectionFresnelParameters() {
-            return (0, hv.c)(this, ov, "f")
+            return (0, lT.b)(this, WT, "f")
           }
-          set reflectionFresnelParameters(vv) {
-            (0, hv.d)(this, ov, vv, "f")
+          set reflectionFresnelParameters(TT) {
+            (0, lT.d)(this, WT, TT, "f")
           }
           get refractionFresnelParameters() {
-            return (0, hv.c)(this, bv, "f")
+            return (0, lT.b)(this, nT, "f")
           }
-          set refractionFresnelParameters(vv) {
-            (0, hv.d)(this, bv, vv, "f")
+          set refractionFresnelParameters(TT) {
+            (0, lT.d)(this, nT, TT, "f")
           }
           get emissiveFresnelParameters() {
-            return (0, hv.c)(this, rv, "f")
+            return (0, lT.b)(this, pT, "f")
           }
-          set emissiveFresnelParameters(vv) {
-            (0, hv.d)(this, rv, vv, "f")
+          set emissiveFresnelParameters(TT) {
+            (0, lT.d)(this, pT, TT, "f")
           }
           get useReflectionFresnelFromSpecular() {
-            return (0, hv.c)(this, kv, "f")
+            return (0, lT.b)(this, iT, "f")
           }
-          set useReflectionFresnelFromSpecular(vv) {
-            (0, hv.d)(this, kv, vv, "f")
+          set useReflectionFresnelFromSpecular(TT) {
+            (0, lT.d)(this, iT, TT, "f")
           }
           get useGlossinessFromSpecularMapAlpha() {
-            return (0, hv.c)(this, Xv, "f")
+            return (0, lT.b)(this, qT, "f")
           }
-          set useGlossinessFromSpecularMapAlpha(vv) {
-            (0, hv.d)(this, Xv, vv, "f")
+          set useGlossinessFromSpecularMapAlpha(TT) {
+            (0, lT.d)(this, qT, TT, "f")
           }
           get maxSimultaneousLights() {
-            return (0, hv.c)(this, uv, "f")
+            return (0, lT.b)(this, sT, "f")
           }
-          set maxSimultaneousLights(vv) {
-            (0, hv.d)(this, uv, vv, "f")
+          set maxSimultaneousLights(TT) {
+            (0, lT.d)(this, sT, TT, "f")
           }
           get invertNormalMapX() {
-            return (0, hv.c)(this, vz, "f")
+            return (0, lT.b)(this, Tk, "f")
           }
-          set invertNormalMapX(vv) {
-            (0, hv.d)(this, vz, vv, "f")
+          set invertNormalMapX(TT) {
+            (0, lT.d)(this, Tk, TT, "f")
           }
           get invertNormalMapY() {
-            return (0, hv.c)(this, zz, "f")
+            return (0, lT.b)(this, kk, "f")
           }
-          set invertNormalMapY(vv) {
-            (0, hv.d)(this, zz, vv, "f")
+          set invertNormalMapY(TT) {
+            (0, lT.d)(this, kk, TT, "f")
           }
           get twoSidedLighting() {
-            return (0, hv.c)(this, Pz, "f")
+            return (0, lT.b)(this, ck, "f")
           }
-          set twoSidedLighting(vv) {
-            (0, hv.d)(this, Pz, vv, "f")
+          set twoSidedLighting(TT) {
+            (0, lT.d)(this, ck, TT, "f")
           }
           get applyDecalMapAfterDetailMap() {
-            return (0, hv.c)(this, hz, "f")
+            return (0, lT.b)(this, lk, "f")
           }
-          set applyDecalMapAfterDetailMap(vv) {
-            (0, hv.d)(this, hz, vv, "f")
+          set applyDecalMapAfterDetailMap(TT) {
+            (0, lT.d)(this, lk, TT, "f")
           }
           get isPrePassCapable() {
             return !this.disableDepthWrite
@@ -1403,11 +1403,11 @@ export const modules = {
           get canRenderToMRT() {
             return !0
           }
-          constructor(Pv, Sv) {
-            super(Pv, Sv, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] || vv.ForceGLSL), this._diffuseTexture = (0, hv.f)(this, OP, null), zv.set(this, ((0, hv.f)(this, DP), (0, hv.f)(this, KP, void 0))), this._ambientTexture = ((0, hv.f)(this, VP), (0, hv.f)(this, UP, null)), lv.set(this, ((0, hv.f)(this, RP), (0, hv.f)(this, xP, void 0))), this._opacityTexture = ((0, hv.f)(this, tP), (0, hv.f)(this, qP, null)), wv.set(this, ((0, hv.f)(this, IP), (0, hv.f)(this, QP, void 0))), this._reflectionTexture = ((0, hv.f)(this, ZP), (0, hv.f)(this, AP, null)), Yv.set(this, ((0, hv.f)(this, LP), (0, hv.f)(this, HP, void 0))), this._emissiveTexture = ((0, hv.f)(this, MP), (0, hv.f)(this, yP, null)), nv.set(this, ((0, hv.f)(this, BP), (0, hv.f)(this, JP, void 0))), this._specularTexture = ((0, hv.f)(this, EP), (0, hv.f)(this, oP, null)), Ov.set(this, ((0, hv.f)(this, bP), (0, hv.f)(this, rP, void 0))), this._bumpTexture = ((0, hv.f)(this, kP), (0, hv.f)(this, XP, null)), Dv.set(this, ((0, hv.f)(this, uP), (0, hv.f)(this, vh, void 0))), this._lightmapTexture = ((0, hv.f)(this, zh), (0, hv.f)(this, Ph, null)), Kv.set(this, ((0, hv.f)(this, hh), (0, hv.f)(this, Sh, void 0))), this._refractionTexture = ((0, hv.f)(this, eh), (0, hv.f)(this, gh, null)), Uv.set(this, ((0, hv.f)(this, ph), (0, hv.f)(this, dh, void 0))), this.ambientColor = ((0, hv.f)(this, Nh), (0, hv.f)(this, lh, new pv.b(0, 0, 0))), this.diffuseColor = ((0, hv.f)(this, Th), (0, hv.f)(this, Wh, new pv.b(1, 1, 1))), this.specularColor = ((0, hv.f)(this, wh), (0, hv.f)(this, ah, new pv.b(1, 1, 1))), this.emissiveColor = ((0, hv.f)(this, sh), (0, hv.f)(this, Ch, new pv.b(0, 0, 0))), this.specularPower = ((0, hv.f)(this, ih), (0, hv.f)(this, ch, 64)), this._useAlphaFromDiffuseTexture = ((0, hv.f)(this, Gh), (0, hv.f)(this, mh, !1)), tv.set(this, ((0, hv.f)(this, jh), (0, hv.f)(this, fh, void 0))), this._useEmissiveAsIllumination = ((0, hv.f)(this, Fh), (0, hv.f)(this, Yh, !1)), qv.set(this, ((0, hv.f)(this, nh), (0, hv.f)(this, Oh, void 0))), this._linkEmissiveWithDiffuse = ((0, hv.f)(this, Dh), (0, hv.f)(this, Kh, !1)), Iv.set(this, ((0, hv.f)(this, Vh), (0, hv.f)(this, Uh, void 0))), this._useSpecularOverAlpha = ((0, hv.f)(this, Rh), (0, hv.f)(this, xh, !1)), Qv.set(this, ((0, hv.f)(this, th), (0, hv.f)(this, qh, void 0))), this._useReflectionOverAlpha = ((0, hv.f)(this, Ih), (0, hv.f)(this, Qh, !1)), Zv.set(this, ((0, hv.f)(this, Zh), (0, hv.f)(this, Ah, void 0))), this._disableLighting = ((0, hv.f)(this, Lh), (0, hv.f)(this, Hh, !1)), Av.set(this, ((0, hv.f)(this, Mh), (0, hv.f)(this, yh, void 0))), this._useObjectSpaceNormalMap = ((0, hv.f)(this, Bh), (0, hv.f)(this, Jh, !1)), Lv.set(this, ((0, hv.f)(this, Eh), (0, hv.f)(this, oh, void 0))), this._useParallax = ((0, hv.f)(this, bh), (0, hv.f)(this, rh, !1)), Hv.set(this, ((0, hv.f)(this, kh), (0, hv.f)(this, Xh, void 0))), this._useParallaxOcclusion = ((0, hv.f)(this, uh), (0, hv.f)(this, vS, !1)), Mv.set(this, ((0, hv.f)(this, zS), (0, hv.f)(this, PS, void 0))), this.parallaxScaleBias = ((0, hv.f)(this, hS), (0, hv.f)(this, SS, .05)), this._roughness = ((0, hv.f)(this, eS), (0, hv.f)(this, gS, 0)), yv.set(this, ((0, hv.f)(this, pS), (0, hv.f)(this, dS, void 0))), this.indexOfRefraction = ((0, hv.f)(this, NS), (0, hv.f)(this, lS, .98)), this.invertRefractionY = ((0, hv.f)(this, TS), (0, hv.f)(this, WS, !0)), this.alphaCutOff = ((0, hv.f)(this, wS), (0, hv.f)(this, aS, .4)), this._useLightmapAsShadowmap = ((0, hv.f)(this, sS), (0, hv.f)(this, CS, !1)), Bv.set(this, ((0, hv.f)(this, iS), (0, hv.f)(this, cS, void 0))), this._diffuseFresnelParameters = ((0, hv.f)(this, GS), (0, hv.f)(this, mS, void 0)), Jv.set(this, ((0, hv.f)(this, jS), (0, hv.f)(this, fS, void 0))), this._opacityFresnelParameters = ((0, hv.f)(this, FS), (0, hv.f)(this, YS, void 0)), Ev.set(this, ((0, hv.f)(this, nS), (0, hv.f)(this, OS, void 0))), this._reflectionFresnelParameters = ((0, hv.f)(this, DS), (0, hv.f)(this, KS, void 0)), ov.set(this, ((0, hv.f)(this, VS), (0, hv.f)(this, US, void 0))), this._refractionFresnelParameters = ((0, hv.f)(this, RS), (0, hv.f)(this, xS, void 0)), bv.set(this, ((0, hv.f)(this, tS), (0, hv.f)(this, qS, void 0))), this._emissiveFresnelParameters = ((0, hv.f)(this, IS), (0, hv.f)(this, QS, void 0)), rv.set(this, ((0, hv.f)(this, ZS), (0, hv.f)(this, AS, void 0))), this._useReflectionFresnelFromSpecular = ((0, hv.f)(this, LS), (0, hv.f)(this, HS, !1)), kv.set(this, ((0, hv.f)(this, MS), (0, hv.f)(this, yS, void 0))), this._useGlossinessFromSpecularMapAlpha = ((0, hv.f)(this, BS), (0, hv.f)(this, JS, !1)), Xv.set(this, ((0, hv.f)(this, ES), (0, hv.f)(this, oS, void 0))), this._maxSimultaneousLights = ((0, hv.f)(this, bS), (0, hv.f)(this, rS, 4)), uv.set(this, ((0, hv.f)(this, kS), (0, hv.f)(this, XS, void 0))), this._invertNormalMapX = ((0, hv.f)(this, uS), (0, hv.f)(this, ve, !1)), vz.set(this, ((0, hv.f)(this, ze), (0, hv.f)(this, Pe, void 0))), this._invertNormalMapY = ((0, hv.f)(this, he), (0, hv.f)(this, Se, !1)), zz.set(this, ((0, hv.f)(this, ee), (0, hv.f)(this, ge, void 0))), this._twoSidedLighting = ((0, hv.f)(this, pe), (0, hv.f)(this, de, !1)), Pz.set(this, ((0, hv.f)(this, Ne), (0, hv.f)(this, le, void 0))), this._applyDecalMapAfterDetailMap = ((0, hv.f)(this, Te), (0, hv.f)(this, We, !1)), hz.set(this, ((0, hv.f)(this, we), (0, hv.f)(this, ae, void 0))), this._vertexPullingMetadata = ((0, hv.f)(this, se), null), this._renderTargets = new ev.g(16), this._globalAmbientColor = new pv.b(0, 0, 0), this._cacheHasRenderTargetTextures = !1, this.detailMap = new iv.b(this), this._attachImageProcessingConfiguration(null), this.prePassConfiguration = new Nv.b, this.getRenderTargetTextures = () => (this._renderTargets.reset(), vv.ReflectionTextureEnabled && this._reflectionTexture && this._reflectionTexture.isRenderTarget && this._renderTargets.push(this._reflectionTexture), vv.RefractionTextureEnabled && this._refractionTexture && this._refractionTexture.isRenderTarget && this._renderTargets.push(this._refractionTexture), this._eventInfo.renderTargets = this._renderTargets, this._callbackPluginEventFillRenderTargetTextures(this._eventInfo), this._renderTargets)
+          constructor(cT, MT) {
+            super(cT, MT, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] || TT.ForceGLSL), this._diffuseTexture = (0, lT.h)(this, bc, null), kT.set(this, ((0, lT.h)(this, zc), (0, lT.h)(this, Jc, void 0))), this._ambientTexture = ((0, lT.h)(this, oc), (0, lT.h)(this, Hc, null)), IT.set(this, ((0, lT.h)(this, ec), (0, lT.h)(this, Gc, void 0))), this._opacityTexture = ((0, lT.h)(this, Vc), (0, lT.h)(this, Ec, null)), jT.set(this, ((0, lT.h)(this, Zc), (0, lT.h)(this, uc, void 0))), this._reflectionTexture = ((0, lT.h)(this, Xc), (0, lT.h)(this, dc, null)), PT.set(this, ((0, lT.h)(this, Lc), (0, lT.h)(this, Rc, void 0))), this._emissiveTexture = ((0, lT.h)(this, gc), (0, lT.h)(this, Uc, null)), wT.set(this, ((0, lT.h)(this, Yc), (0, lT.h)(this, Bc, void 0))), this._specularTexture = ((0, lT.h)(this, Wc), (0, lT.h)(this, nc, null)), mT.set(this, ((0, lT.h)(this, pc), (0, lT.h)(this, ic, void 0))), this._bumpTexture = ((0, lT.h)(this, qc), (0, lT.h)(this, sc, null)), bT.set(this, ((0, lT.h)(this, Tl), (0, lT.h)(this, kl, void 0))), this._lightmapTexture = ((0, lT.h)(this, cl), (0, lT.h)(this, ll, null)), zT.set(this, ((0, lT.h)(this, Ml), (0, lT.h)(this, Kl, void 0))), this._refractionTexture = ((0, lT.h)(this, Ol), (0, lT.h)(this, yl, null)), oT.set(this, ((0, lT.h)(this, fl), (0, lT.h)(this, xl, void 0))), this.ambientColor = ((0, lT.h)(this, Il), (0, lT.h)(this, Al, new yT.c(0, 0, 0))), this.diffuseColor = ((0, lT.h)(this, Cl), (0, lT.h)(this, jl, new yT.c(1, 1, 1))), this.specularColor = ((0, lT.h)(this, vl), (0, lT.h)(this, tl, new yT.c(1, 1, 1))), this.emissiveColor = ((0, lT.h)(this, hl), (0, lT.h)(this, Nl, new yT.c(0, 0, 0))), this.specularPower = ((0, lT.h)(this, Ql), (0, lT.h)(this, Sl, 64)), this._useAlphaFromDiffuseTexture = ((0, lT.h)(this, Dl), (0, lT.h)(this, al, !1)), GT.set(this, ((0, lT.h)(this, Fl), (0, lT.h)(this, rl, void 0))), this._useEmissiveAsIllumination = ((0, lT.h)(this, Pl), (0, lT.h)(this, wl, !1)), VT.set(this, ((0, lT.h)(this, ml), (0, lT.h)(this, bl, void 0))), this._linkEmissiveWithDiffuse = ((0, lT.h)(this, zl), (0, lT.h)(this, Jl, !1)), ET.set(this, ((0, lT.h)(this, ol), (0, lT.h)(this, Hl, void 0))), this._useSpecularOverAlpha = ((0, lT.h)(this, el), (0, lT.h)(this, Gl, !1)), ZT.set(this, ((0, lT.h)(this, Vl), (0, lT.h)(this, El, void 0))), this._useReflectionOverAlpha = ((0, lT.h)(this, Zl), (0, lT.h)(this, ul, !1)), uT.set(this, ((0, lT.h)(this, Xl), (0, lT.h)(this, dl, void 0))), this._disableLighting = ((0, lT.h)(this, Ll), (0, lT.h)(this, Rl, !1)), XT.set(this, ((0, lT.h)(this, gl), (0, lT.h)(this, Ul, void 0))), this._useObjectSpaceNormalMap = ((0, lT.h)(this, Yl), (0, lT.h)(this, Bl, !1)), dT.set(this, ((0, lT.h)(this, Wl), (0, lT.h)(this, nl, void 0))), this._useParallax = ((0, lT.h)(this, pl), (0, lT.h)(this, il, !1)), LT.set(this, ((0, lT.h)(this, ql), (0, lT.h)(this, sl, void 0))), this._useParallaxOcclusion = ((0, lT.h)(this, TM), (0, lT.h)(this, kM, !1)), RT.set(this, ((0, lT.h)(this, cM), (0, lT.h)(this, lM, void 0))), this.parallaxScaleBias = ((0, lT.h)(this, MM), (0, lT.h)(this, KM, .05)), this._roughness = ((0, lT.h)(this, OM), (0, lT.h)(this, yM, 0)), gT.set(this, ((0, lT.h)(this, fM), (0, lT.h)(this, xM, void 0))), this.indexOfRefraction = ((0, lT.h)(this, IM), (0, lT.h)(this, AM, .98)), this.invertRefractionY = ((0, lT.h)(this, CM), (0, lT.h)(this, jM, !0)), this.alphaCutOff = ((0, lT.h)(this, vM), (0, lT.h)(this, tM, .4)), this._useLightmapAsShadowmap = ((0, lT.h)(this, hM), (0, lT.h)(this, NM, !1)), UT.set(this, ((0, lT.h)(this, QM), (0, lT.h)(this, SM, void 0))), this._diffuseFresnelParameters = ((0, lT.h)(this, DM), (0, lT.h)(this, aM, void 0)), YT.set(this, ((0, lT.h)(this, FM), (0, lT.h)(this, rM, void 0))), this._opacityFresnelParameters = ((0, lT.h)(this, PM), (0, lT.h)(this, wM, void 0)), BT.set(this, ((0, lT.h)(this, mM), (0, lT.h)(this, bM, void 0))), this._reflectionFresnelParameters = ((0, lT.h)(this, zM), (0, lT.h)(this, JM, void 0)), WT.set(this, ((0, lT.h)(this, oM), (0, lT.h)(this, HM, void 0))), this._refractionFresnelParameters = ((0, lT.h)(this, eM), (0, lT.h)(this, GM, void 0)), nT.set(this, ((0, lT.h)(this, VM), (0, lT.h)(this, EM, void 0))), this._emissiveFresnelParameters = ((0, lT.h)(this, ZM), (0, lT.h)(this, uM, void 0)), pT.set(this, ((0, lT.h)(this, XM), (0, lT.h)(this, dM, void 0))), this._useReflectionFresnelFromSpecular = ((0, lT.h)(this, LM), (0, lT.h)(this, RM, !1)), iT.set(this, ((0, lT.h)(this, gM), (0, lT.h)(this, UM, void 0))), this._useGlossinessFromSpecularMapAlpha = ((0, lT.h)(this, YM), (0, lT.h)(this, BM, !1)), qT.set(this, ((0, lT.h)(this, WM), (0, lT.h)(this, nM, void 0))), this._maxSimultaneousLights = ((0, lT.h)(this, pM), (0, lT.h)(this, iM, 4)), sT.set(this, ((0, lT.h)(this, qM), (0, lT.h)(this, sM, void 0))), this._invertNormalMapX = ((0, lT.h)(this, TK), (0, lT.h)(this, kK, !1)), Tk.set(this, ((0, lT.h)(this, cK), (0, lT.h)(this, lK, void 0))), this._invertNormalMapY = ((0, lT.h)(this, MK), (0, lT.h)(this, KK, !1)), kk.set(this, ((0, lT.h)(this, OK), (0, lT.h)(this, yK, void 0))), this._twoSidedLighting = ((0, lT.h)(this, fK), (0, lT.h)(this, xK, !1)), ck.set(this, ((0, lT.h)(this, IK), (0, lT.h)(this, AK, void 0))), this._applyDecalMapAfterDetailMap = ((0, lT.h)(this, CK), (0, lT.h)(this, jK, !1)), lk.set(this, ((0, lT.h)(this, vK), (0, lT.h)(this, tK, void 0))), this._vertexPullingMetadata = ((0, lT.h)(this, hK), null), this._renderTargets = new KT.g(16), this._globalAmbientColor = new yT.c(0, 0, 0), this._cacheHasRenderTargetTextures = !1, this.detailMap = new NT.d(this), this._attachImageProcessingConfiguration(null), this.prePassConfiguration = new xT.c, this.getRenderTargetTextures = () => (this._renderTargets.reset(), TT.ReflectionTextureEnabled && this._reflectionTexture && this._reflectionTexture.isRenderTarget && this._renderTargets.push(this._reflectionTexture), TT.RefractionTextureEnabled && this._refractionTexture && this._refractionTexture.isRenderTarget && this._renderTargets.push(this._refractionTexture), this._eventInfo.renderTargets = this._renderTargets, this._callbackPluginEventFillRenderTargetTextures(this._eventInfo), this._renderTargets)
           }
           get hasRenderTargetTextures() {
-            return !!(vv.ReflectionTextureEnabled && this._reflectionTexture && this._reflectionTexture.isRenderTarget) || (!!(vv.RefractionTextureEnabled && this._refractionTexture && this._refractionTexture.isRenderTarget) || this._cacheHasRenderTargetTextures)
+            return !!(TT.ReflectionTextureEnabled && this._reflectionTexture && this._reflectionTexture.isRenderTarget) || (!!(TT.RefractionTextureEnabled && this._refractionTexture && this._refractionTexture.isRenderTarget) || this._cacheHasRenderTargetTextures)
           }
           getClassName() {
             return "StandardMaterial"
@@ -1416,10 +1416,10 @@ export const modules = {
             return this._hasTransparencyMode ? this._transparencyModeIsBlend : !this._disableAlphaBlending && (this.alpha < 1 || null != this._opacityTexture || this._shouldUseAlphaFromDiffuseTexture() || this._opacityFresnelParameters && this._opacityFresnelParameters.isEnabled)
           }
           needAlphaTesting() {
-            return this._hasTransparencyMode ? this._transparencyModeIsTest : this._hasAlphaChannel() && (null == this._transparencyMode || this._transparencyMode === Wv.b.MATERIAL_ALPHATEST)
+            return this._hasTransparencyMode ? this._transparencyModeIsTest : this._hasAlphaChannel() && (null == this._transparencyMode || this._transparencyMode === CT.e.MATERIAL_ALPHATEST)
           }
           _shouldUseAlphaFromDiffuseTexture() {
-            return null != this._diffuseTexture && this._diffuseTexture.hasAlpha && this._useAlphaFromDiffuseTexture && this._transparencyMode !== Wv.b.MATERIAL_OPAQUE
+            return null != this._diffuseTexture && this._diffuseTexture.hasAlpha && this._useAlphaFromDiffuseTexture && this._transparencyMode !== CT.e.MATERIAL_OPAQUE
           }
           _hasAlphaChannel() {
             return null != this._diffuseTexture && this._diffuseTexture.hasAlpha || null != this._opacityTexture
@@ -1427,1308 +1427,1308 @@ export const modules = {
           getAlphaTestTexture() {
             return this._diffuseTexture
           }
-          isReadyForSubMesh(zv, Pv) {
-            let hv = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          isReadyForSubMesh(kT, cT) {
+            let lT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
             this._uniformBufferLayoutBuilt || this.buildUniformLayout();
-            const Sv = Pv._drawWrapper;
-            if (Sv.effect && this.isFrozen && Sv._wasPreviouslyReady && Sv._wasPreviouslyUsingInstances === hv) return !0;
-            Pv.materialDefines || (this._callbackPluginEventGeneric(4, this._eventInfo), Pv.materialDefines = new Rv(this._eventInfo.defineNames));
-            const ev = this.rD(),
-              gv = Pv.materialDefines;
-            if (this._isReadyForSubMesh(Pv)) return !0;
-            const pv = ev.ma();
-            if (gv._needNormals = (0, mv.W)(ev, zv, gv, !0, this._maxSimultaneousLights, this._disableLighting), !(0, mv.d)(ev, zv, this._maxSimultaneousLights, this._disableLighting)) return !1;
-            (0, mv.cb)(ev, gv);
-            const lv = this.needAlphaBlendingForMesh(zv) && this.rD().useOrderIndependentTransparency;
-            if ((0, mv.ib)(ev, gv, this.canRenderToMRT && !lv), (0, mv.eb)(ev, gv, lv), Fv.d.PrepareDefines(pv.currentRenderPassId, zv, gv), gv._areTexturesDirty) {
-              this._eventInfo.hasRenderTargetTextures = !1, this._callbackPluginEventHasRenderTargetTextures(this._eventInfo), this._cacheHasRenderTargetTextures = this._eventInfo.hasRenderTargetTextures, gv._needUVs = !1;
-              for (let vv = 1; vv <= 6; ++vv) gv["MAINUV" + vv] = !1;
-              if (ev.texturesEnabled) {
-                if (gv.DIFFUSEDIRECTUV = 0, gv.BUMPDIRECTUV = 0, gv.AMBIENTDIRECTUV = 0, gv.OPACITYDIRECTUV = 0, gv.EMISSIVEDIRECTUV = 0, gv.SPECULARDIRECTUV = 0, gv.LIGHTMAPDIRECTUV = 0, this._diffuseTexture && vv.DiffuseTextureEnabled) {
+            const MT = cT._drawWrapper;
+            if (MT.effect && this.isFrozen && MT._wasPreviouslyReady && MT._wasPreviouslyUsingInstances === lT) return !0;
+            cT.materialDefines || (this._callbackPluginEventGeneric(4, this._eventInfo), cT.materialDefines = new HT(this._eventInfo.defineNames));
+            const KT = this.NJ(),
+              OT = cT.materialDefines;
+            if (this._isReadyForSubMesh(cT)) return !0;
+            const yT = KT.Dv();
+            if (OT._needNormals = (0, DT.U)(KT, kT, OT, !0, this._maxSimultaneousLights, this._disableLighting), !(0, DT.d)(KT, kT, this._maxSimultaneousLights, this._disableLighting)) return !1;
+            (0, DT._)(KT, OT);
+            const IT = this.needAlphaBlendingForMesh(kT) && this.NJ().useOrderIndependentTransparency;
+            if ((0, DT.fb)(KT, OT, this.canRenderToMRT && !IT), (0, DT.bb)(KT, OT, IT), rT.d.PrepareDefines(yT.currentRenderPassId, kT, OT), OT._areTexturesDirty) {
+              this._eventInfo.hasRenderTargetTextures = !1, this._callbackPluginEventHasRenderTargetTextures(this._eventInfo), this._cacheHasRenderTargetTextures = this._eventInfo.hasRenderTargetTextures, OT._needUVs = !1;
+              for (let TT = 1; TT <= 6; ++TT) OT["MAINUV" + TT] = !1;
+              if (KT.texturesEnabled) {
+                if (OT.DIFFUSEDIRECTUV = 0, OT.BUMPDIRECTUV = 0, OT.AMBIENTDIRECTUV = 0, OT.OPACITYDIRECTUV = 0, OT.EMISSIVEDIRECTUV = 0, OT.SPECULARDIRECTUV = 0, OT.LIGHTMAPDIRECTUV = 0, this._diffuseTexture && TT.DiffuseTextureEnabled) {
                   if (!this._diffuseTexture.isReadyOrNotBlocking()) return !1;
-                  (0, mv._)(this._diffuseTexture, gv, "DIFFUSE")
-                } else gv.DIFFUSE = !1;
-                if (this._ambientTexture && vv.AmbientTextureEnabled) {
+                  (0, DT.V)(this._diffuseTexture, OT, "DIFFUSE")
+                } else OT.DIFFUSE = !1;
+                if (this._ambientTexture && TT.AmbientTextureEnabled) {
                   if (!this._ambientTexture.isReadyOrNotBlocking()) return !1;
-                  (0, mv._)(this._ambientTexture, gv, "AMBIENT")
-                } else gv.AMBIENT = !1;
-                if (this._opacityTexture && vv.OpacityTextureEnabled) {
+                  (0, DT.V)(this._ambientTexture, OT, "AMBIENT")
+                } else OT.AMBIENT = !1;
+                if (this._opacityTexture && TT.OpacityTextureEnabled) {
                   if (!this._opacityTexture.isReadyOrNotBlocking()) return !1;
-                  (0, mv._)(this._opacityTexture, gv, "OPACITY"), gv.OPACITYRGB = this._opacityTexture.getAlphaFromRGB
-                } else gv.OPACITY = !1;
-                if (this._reflectionTexture && vv.ReflectionTextureEnabled ? (gv.ROUGHNESS = this._roughness > 0, gv.REFLECTIONOVERALPHA = this._useReflectionOverAlpha) : (gv.ROUGHNESS = !1, gv.REFLECTIONOVERALPHA = !1), !(0, mv.T)(ev, this._reflectionTexture, gv)) return !1;
-                if (this._emissiveTexture && vv.EmissiveTextureEnabled) {
+                  (0, DT.V)(this._opacityTexture, OT, "OPACITY"), OT.OPACITYRGB = this._opacityTexture.getAlphaFromRGB
+                } else OT.OPACITY = !1;
+                if (this._reflectionTexture && TT.ReflectionTextureEnabled ? (OT.ROUGHNESS = this._roughness > 0, OT.REFLECTIONOVERALPHA = this._useReflectionOverAlpha) : (OT.ROUGHNESS = !1, OT.REFLECTIONOVERALPHA = !1), !(0, DT.Q)(KT, this._reflectionTexture, OT)) return !1;
+                if (this._emissiveTexture && TT.EmissiveTextureEnabled) {
                   if (!this._emissiveTexture.isReadyOrNotBlocking()) return !1;
-                  (0, mv._)(this._emissiveTexture, gv, "EMISSIVE")
-                } else gv.EMISSIVE = !1;
-                if (this._lightmapTexture && vv.LightmapTextureEnabled) {
+                  (0, DT.V)(this._emissiveTexture, OT, "EMISSIVE")
+                } else OT.EMISSIVE = !1;
+                if (this._lightmapTexture && TT.LightmapTextureEnabled) {
                   if (!this._lightmapTexture.isReadyOrNotBlocking()) return !1;
-                  (0, mv._)(this._lightmapTexture, gv, "LIGHTMAP"), gv.USELIGHTMAPASSHADOWMAP = this._useLightmapAsShadowmap, gv.RGBDLIGHTMAP = this._lightmapTexture.isRGBD
-                } else gv.LIGHTMAP = !1;
-                if (this._specularTexture && vv.SpecularTextureEnabled) {
+                  (0, DT.V)(this._lightmapTexture, OT, "LIGHTMAP"), OT.USELIGHTMAPASSHADOWMAP = this._useLightmapAsShadowmap, OT.RGBDLIGHTMAP = this._lightmapTexture.isRGBD
+                } else OT.LIGHTMAP = !1;
+                if (this._specularTexture && TT.SpecularTextureEnabled) {
                   if (!this._specularTexture.isReadyOrNotBlocking()) return !1;
-                  (0, mv._)(this._specularTexture, gv, "SPECULAR"), gv.GLOSSINESS = this._useGlossinessFromSpecularMapAlpha
-                } else gv.SPECULAR = !1;
-                if (ev.ma().getCaps().standardDerivatives && this._bumpTexture && vv.BumpTextureEnabled) {
+                  (0, DT.V)(this._specularTexture, OT, "SPECULAR"), OT.GLOSSINESS = this._useGlossinessFromSpecularMapAlpha
+                } else OT.SPECULAR = !1;
+                if (KT.Dv().getCaps().standardDerivatives && this._bumpTexture && TT.BumpTextureEnabled) {
                   if (!this._bumpTexture.isReady()) return !1;
-                  (0, mv._)(this._bumpTexture, gv, "BUMP"), gv.PARALLAX = this._useParallax, gv.PARALLAX_RHS = ev.useRightHandedSystem, gv.PARALLAXOCCLUSION = this._useParallaxOcclusion, gv.OBJECTSPACE_NORMALMAP = this._useObjectSpaceNormalMap
-                } else gv.BUMP = !1, gv.PARALLAX = !1, gv.PARALLAX_RHS = !1, gv.PARALLAXOCCLUSION = !1;
-                if (this._refractionTexture && vv.RefractionTextureEnabled) {
+                  (0, DT.V)(this._bumpTexture, OT, "BUMP"), OT.PARALLAX = this._useParallax, OT.PARALLAX_RHS = KT.useRightHandedSystem, OT.PARALLAXOCCLUSION = this._useParallaxOcclusion, OT.OBJECTSPACE_NORMALMAP = this._useObjectSpaceNormalMap
+                } else OT.BUMP = !1, OT.PARALLAX = !1, OT.PARALLAX_RHS = !1, OT.PARALLAXOCCLUSION = !1;
+                if (this._refractionTexture && TT.RefractionTextureEnabled) {
                   if (!this._refractionTexture.isReadyOrNotBlocking()) return !1;
-                  gv._needUVs = !0, gv.REFRACTION = !0, gv.REFRACTIONMAP_3D = this._refractionTexture.isCube, gv.RGBDREFRACTION = this._refractionTexture.isRGBD, gv.USE_LOCAL_REFRACTIONMAP_CUBIC = !!this._refractionTexture.boundingBoxSize
-                } else gv.REFRACTION = !1;
-                gv.TWOSIDEDLIGHTING = !this._backFaceCulling && this._twoSidedLighting
-              } else gv.DIFFUSE = !1, gv.AMBIENT = !1, gv.OPACITY = !1, gv.REFLECTION = !1, gv.EMISSIVE = !1, gv.LIGHTMAP = !1, gv.BUMP = !1, gv.REFRACTION = !1;
-              gv.ALPHAFROMDIFFUSE = this._shouldUseAlphaFromDiffuseTexture(), gv.EMISSIVEASILLUMINATION = this._useEmissiveAsIllumination, gv.LINKEMISSIVEWITHDIFFUSE = this._linkEmissiveWithDiffuse, gv.SPECULAROVERALPHA = this._useSpecularOverAlpha, gv.PREMULTIPLYALPHA = 7 === this.alphaMode || 8 === this.alphaMode, gv.ALPHATEST_AFTERALLALPHACOMPUTATIONS = null !== this.transparencyMode, gv.ALPHABLEND = null === this.transparencyMode || this.needAlphaBlendingForMesh(zv), gv.TEXTURE_REPETITION_MODE = pv.version > 1 || pv.isWebGPU ? this.textureRepetitionMode : 0
+                  OT._needUVs = !0, OT.REFRACTION = !0, OT.REFRACTIONMAP_3D = this._refractionTexture.isCube, OT.RGBDREFRACTION = this._refractionTexture.isRGBD, OT.USE_LOCAL_REFRACTIONMAP_CUBIC = !!this._refractionTexture.boundingBoxSize
+                } else OT.REFRACTION = !1;
+                OT.TWOSIDEDLIGHTING = !this._backFaceCulling && this._twoSidedLighting
+              } else OT.DIFFUSE = !1, OT.AMBIENT = !1, OT.OPACITY = !1, OT.REFLECTION = !1, OT.EMISSIVE = !1, OT.LIGHTMAP = !1, OT.BUMP = !1, OT.REFRACTION = !1;
+              OT.ALPHAFROMDIFFUSE = this._shouldUseAlphaFromDiffuseTexture(), OT.EMISSIVEASILLUMINATION = this._useEmissiveAsIllumination, OT.LINKEMISSIVEWITHDIFFUSE = this._linkEmissiveWithDiffuse, OT.SPECULAROVERALPHA = this._useSpecularOverAlpha, OT.PREMULTIPLYALPHA = 7 === this.alphaMode || 8 === this.alphaMode, OT.ALPHATEST_AFTERALLALPHACOMPUTATIONS = null !== this.transparencyMode, OT.ALPHABLEND = null === this.transparencyMode || this.needAlphaBlendingForMesh(kT), OT.TEXTURE_REPETITION_MODE = yT.version > 1 || yT.isWebGPU ? this.textureRepetitionMode : 0
             }
-            if (this._eventInfo.isReadyForSubMesh = !0, this._eventInfo.defines = gv, this._eventInfo.subMesh = Pv, this._callbackPluginEventIsReadyForSubMesh(this._eventInfo), !this._eventInfo.isReadyForSubMesh) return !1;
-            if (gv._areImageProcessingDirty && this._imageProcessingConfiguration) {
+            if (this._eventInfo.isReadyForSubMesh = !0, this._eventInfo.defines = OT, this._eventInfo.subMesh = cT, this._callbackPluginEventIsReadyForSubMesh(this._eventInfo), !this._eventInfo.isReadyForSubMesh) return !1;
+            if (OT._areImageProcessingDirty && this._imageProcessingConfiguration) {
               if (!this._imageProcessingConfiguration.isReady()) return !1;
-              this._imageProcessingConfiguration.prepareDefines(gv), gv.IS_REFLECTION_LINEAR = null != this.reflectionTexture && !this.reflectionTexture.gammaSpace, gv.IS_REFRACTION_LINEAR = null != this.refractionTexture && !this.refractionTexture.gammaSpace
+              this._imageProcessingConfiguration.prepareDefines(OT), OT.IS_REFLECTION_LINEAR = null != this.reflectionTexture && !this.reflectionTexture.gammaSpace, OT.IS_REFRACTION_LINEAR = null != this.refractionTexture && !this.refractionTexture.gammaSpace
             }
-            if (gv._areFresnelDirty && (vv.FresnelEnabled ? (this._diffuseFresnelParameters || this._opacityFresnelParameters || this._emissiveFresnelParameters || this._refractionFresnelParameters || this._reflectionFresnelParameters) && (gv.DIFFUSEFRESNEL = this._diffuseFresnelParameters && this._diffuseFresnelParameters.isEnabled, gv.OPACITYFRESNEL = this._opacityFresnelParameters && this._opacityFresnelParameters.isEnabled, gv.REFLECTIONFRESNEL = this._reflectionFresnelParameters && this._reflectionFresnelParameters.isEnabled, gv.REFLECTIONFRESNELFROMSPECULAR = this._useReflectionFresnelFromSpecular, gv.REFRACTIONFRESNEL = this._refractionFresnelParameters && this._refractionFresnelParameters.isEnabled, gv.EMISSIVEFRESNEL = this._emissiveFresnelParameters && this._emissiveFresnelParameters.isEnabled, gv._needNormals = !0, gv.FRESNEL = !0) : gv.FRESNEL = !1), gv.AREALIGHTUSED || gv.CLUSTLIGHT_BATCH)
-              for (let vv = 0; vv < zv.lightSources.length; vv++)
-                if (!zv.lightSources[vv]._isReady()) return !1;
-            (0, mv.$)(zv, ev, this._useLogarithmicDepth, this.pointsCloud, this.fogEnabled, this.needAlphaTestingForMesh(zv), gv, this._applyDecalMapAfterDetailMap, this._useVertexPulling, Pv.getRenderingMesh(), this._isVertexOutputInvariant), (0, mv.S)(ev, pv, this, gv, hv, null, Pv.getRenderingMesh().hasThinInstances), this._eventInfo.defines = gv, this._eventInfo.mesh = zv, this._callbackPluginEventPrepareDefinesBeforeAttributes(this._eventInfo), (0, mv.P)(zv, gv, !0, !0, !0), this._callbackPluginEventPrepareDefines(this._eventInfo);
-            let Wv = !1;
-            if (gv.isDirty) {
-              const hv = gv._areLightsDisposed;
-              gv.markAsProcessed();
-              const Sv = new Cv.e;
-              gv.REFLECTION && Sv.addFallback(0, "REFLECTION"), gv.SPECULAR && Sv.addFallback(0, "SPECULAR"), gv.BUMP && Sv.addFallback(0, "BUMP"), gv.PARALLAX && Sv.addFallback(1, "PARALLAX"), gv.PARALLAX_RHS && Sv.addFallback(1, "PARALLAX_RHS"), gv.PARALLAXOCCLUSION && Sv.addFallback(0, "PARALLAXOCCLUSION"), gv.SPECULAROVERALPHA && Sv.addFallback(0, "SPECULAROVERALPHA"), gv.FOG && Sv.addFallback(1, "FOG"), gv.POINTSIZE && Sv.addFallback(0, "POINTSIZE"), gv.LOGARITHMICDEPTH && Sv.addFallback(0, "LOGARITHMICDEPTH"), (0, mv.B)(gv, Sv, this._maxSimultaneousLights), gv.SPECULARTERM && Sv.addFallback(0, "SPECULARTERM"), gv.DIFFUSEFRESNEL && Sv.addFallback(1, "DIFFUSEFRESNEL"), gv.OPACITYFRESNEL && Sv.addFallback(2, "OPACITYFRESNEL"), gv.REFLECTIONFRESNEL && Sv.addFallback(3, "REFLECTIONFRESNEL"), gv.EMISSIVEFRESNEL && Sv.addFallback(4, "EMISSIVEFRESNEL"), gv.FRESNEL && Sv.addFallback(4, "FRESNEL"), gv.MULTIVIEW && Sv.addFallback(0, "MULTIVIEW");
-              const lv = [dv.k.PositionKind];
-              gv.NORMAL && lv.push(dv.k.NormalKind), gv.TANGENT && lv.push(dv.k.TangentKind);
-              for (let vv = 1; vv <= 6; ++vv) gv["UV" + vv] && lv.push(`uv${1===vv?"":vv}`);
-              gv.VERTEXCOLOR && lv.push(dv.k.ColorKind), (0, mv.G)(lv, zv, gv, Sv), (0, mv.J)(lv, gv), (0, mv.L)(lv, zv, gv), (0, mv.F)(lv, zv, gv);
-              let wv = "default";
-              const av = ["world", "view", "viewProjection", "vEyePosition", "vLightsType", "vAmbientColor", "vDiffuseColor", "vSpecularColor", "vEmissiveColor", "visibility", "vFogInfos", "vFogColor", "pointSize", "vDiffuseInfos", "vAmbientInfos", "vOpacityInfos", "vEmissiveInfos", "vSpecularInfos", "vBumpInfos", "vLightmapInfos", "vRefractionInfos", "mBones", "diffuseMatrix", "ambientMatrix", "opacityMatrix", "emissiveMatrix", "specularMatrix", "bumpMatrix", "normalMatrix", "lightmapMatrix", "refractionMatrix", "diffuseLeftColor", "diffuseRightColor", "opacityParts", "reflectionLeftColor", "reflectionRightColor", "emissiveLeftColor", "emissiveRightColor", "refractionLeftColor", "refractionRightColor", "vRefractionPosition", "vRefractionSize", "logarithmicDepthConstant", "vTangentSpaceParams", "alphaCutOff", "boneTextureInfo", "morphTargetTextureInfo", "morphTargetTextureIndices", "cameraInfo", "vTextureRepetitionHexTilingParams"],
-                sv = ["diffuseSampler", "ambientSampler", "opacitySampler", "reflectionCubeSampler", "reflection2DSampler", "emissiveSampler", "specularSampler", "bumpSampler", "lightmapSampler", "refractionCubeSampler", "refraction2DSampler", "boneSampler", "morphTargets", "oitDepthSampler", "oitFrontColorSampler", "areaLightsLTC1Sampler", "areaLightsLTC2Sampler"];
-              (0, mv.kb)(av, sv, !1);
-              const iv = ["Material", "Scene", "Mesh"],
-                jv = {
+            if (OT._areFresnelDirty && (TT.FresnelEnabled ? (this._diffuseFresnelParameters || this._opacityFresnelParameters || this._emissiveFresnelParameters || this._refractionFresnelParameters || this._reflectionFresnelParameters) && (OT.DIFFUSEFRESNEL = this._diffuseFresnelParameters && this._diffuseFresnelParameters.isEnabled, OT.OPACITYFRESNEL = this._opacityFresnelParameters && this._opacityFresnelParameters.isEnabled, OT.REFLECTIONFRESNEL = this._reflectionFresnelParameters && this._reflectionFresnelParameters.isEnabled, OT.REFLECTIONFRESNELFROMSPECULAR = this._useReflectionFresnelFromSpecular, OT.REFRACTIONFRESNEL = this._refractionFresnelParameters && this._refractionFresnelParameters.isEnabled, OT.EMISSIVEFRESNEL = this._emissiveFresnelParameters && this._emissiveFresnelParameters.isEnabled, OT._needNormals = !0, OT.FRESNEL = !0) : OT.FRESNEL = !1), OT.AREALIGHTUSED || OT.CLUSTLIGHT_BATCH)
+              for (let TT = 0; TT < kT.lightSources.length; TT++)
+                if (!kT.lightSources[TT]._isReady()) return !1;
+            (0, DT.X)(kT, KT, this._useLogarithmicDepth, this.pointsCloud, this.fogEnabled, this.needAlphaTestingForMesh(kT), OT, this._applyDecalMapAfterDetailMap, this._useVertexPulling, cT.getRenderingMesh(), this._isVertexOutputInvariant), (0, DT.O)(KT, yT, this, OT, lT, null, cT.getRenderingMesh().hasThinInstances), this._eventInfo.defines = OT, this._eventInfo.mesh = kT, this._callbackPluginEventPrepareDefinesBeforeAttributes(this._eventInfo), (0, DT.N)(kT, OT, !0, !0, !0), this._callbackPluginEventPrepareDefines(this._eventInfo);
+            let CT = !1;
+            if (OT.isDirty) {
+              const lT = OT._areLightsDisposed;
+              OT.markAsProcessed();
+              const MT = new hT.e;
+              OT.REFLECTION && MT.addFallback(0, "REFLECTION"), OT.SPECULAR && MT.addFallback(0, "SPECULAR"), OT.BUMP && MT.addFallback(0, "BUMP"), OT.PARALLAX && MT.addFallback(1, "PARALLAX"), OT.PARALLAX_RHS && MT.addFallback(1, "PARALLAX_RHS"), OT.PARALLAXOCCLUSION && MT.addFallback(0, "PARALLAXOCCLUSION"), OT.SPECULAROVERALPHA && MT.addFallback(0, "SPECULAROVERALPHA"), OT.FOG && MT.addFallback(1, "FOG"), OT.POINTSIZE && MT.addFallback(0, "POINTSIZE"), OT.LOGARITHMICDEPTH && MT.addFallback(0, "LOGARITHMICDEPTH"), (0, DT.z)(OT, MT, this._maxSimultaneousLights), OT.SPECULARTERM && MT.addFallback(0, "SPECULARTERM"), OT.DIFFUSEFRESNEL && MT.addFallback(1, "DIFFUSEFRESNEL"), OT.OPACITYFRESNEL && MT.addFallback(2, "OPACITYFRESNEL"), OT.REFLECTIONFRESNEL && MT.addFallback(3, "REFLECTIONFRESNEL"), OT.EMISSIVEFRESNEL && MT.addFallback(4, "EMISSIVEFRESNEL"), OT.FRESNEL && MT.addFallback(4, "FRESNEL"), OT.MULTIVIEW && MT.addFallback(0, "MULTIVIEW");
+              const IT = [fT.l.PositionKind];
+              OT.NORMAL && IT.push(fT.l.NormalKind), OT.TANGENT && IT.push(fT.l.TangentKind);
+              for (let TT = 1; TT <= 6; ++TT) OT["UV" + TT] && IT.push(`uv${1===TT?"":TT}`);
+              OT.VERTEXCOLOR && IT.push(fT.l.ColorKind), (0, DT.F)(IT, kT, OT, MT), (0, DT.G)(IT, OT), (0, DT.I)(IT, kT, OT), (0, DT.D)(IT, kT, OT);
+              let jT = "default";
+              const vT = ["world", "view", "viewProjection", "vEyePosition", "vLightsType", "vAmbientColor", "vDiffuseColor", "vSpecularColor", "vEmissiveColor", "visibility", "vFogInfos", "vFogColor", "pointSize", "vDiffuseInfos", "vAmbientInfos", "vOpacityInfos", "vEmissiveInfos", "vSpecularInfos", "vBumpInfos", "vLightmapInfos", "vRefractionInfos", "mBones", "diffuseMatrix", "ambientMatrix", "opacityMatrix", "emissiveMatrix", "specularMatrix", "bumpMatrix", "normalMatrix", "lightmapMatrix", "refractionMatrix", "diffuseLeftColor", "diffuseRightColor", "opacityParts", "reflectionLeftColor", "reflectionRightColor", "emissiveLeftColor", "emissiveRightColor", "refractionLeftColor", "refractionRightColor", "vRefractionPosition", "vRefractionSize", "logarithmicDepthConstant", "vTangentSpaceParams", "alphaCutOff", "boneTextureInfo", "morphTargetTextureInfo", "morphTargetTextureIndices", "cameraInfo", "vTextureRepetitionHexTilingParams"],
+                tT = ["diffuseSampler", "ambientSampler", "opacitySampler", "reflectionCubeSampler", "reflection2DSampler", "emissiveSampler", "specularSampler", "bumpSampler", "lightmapSampler", "refractionCubeSampler", "refraction2DSampler", "boneSampler", "morphTargets", "oitDepthSampler", "oitFrontColorSampler", "areaLightsLTC1Sampler", "areaLightsLTC2Sampler"];
+              (0, DT.nb)(vT, tT, !1);
+              const NT = ["Material", "Scene", "Mesh"],
+                aT = {
                   maxSimultaneousLights: this._maxSimultaneousLights,
-                  maxSimultaneousMorphTargets: gv.NUM_MORPH_INFLUENCERS
+                  maxSimultaneousMorphTargets: OT.NUM_MORPH_INFLUENCERS
                 };
-              if (this._eventInfo.fallbacks = Sv, this._eventInfo.fallbackRank = 0, this._eventInfo.defines = gv, this._eventInfo.uniforms = av, this._eventInfo.attributes = lv, this._eventInfo.samplers = sv, this._eventInfo.uniformBuffersNames = iv, this._eventInfo.customCode = void 0, this._eventInfo.mesh = zv, this._eventInfo.indexParameters = jv, this._callbackPluginEventGeneric(128, this._eventInfo), Fv.d.AddUniformsAndSamplers(av, sv), Nv.b.AddUniforms(av), Nv.b.AddSamplers(sv), Tv.b && (Tv.b.PrepareUniforms(av, gv), Tv.b.PrepareSamplers(sv, gv)), (0, mv.lb)({
-                  uniformsNames: av,
-                  uniformBuffersNames: iv,
-                  samplers: sv,
-                  defines: gv,
+              if (this._eventInfo.fallbacks = MT, this._eventInfo.fallbackRank = 0, this._eventInfo.defines = OT, this._eventInfo.uniforms = vT, this._eventInfo.attributes = IT, this._eventInfo.samplers = tT, this._eventInfo.uniformBuffersNames = NT, this._eventInfo.customCode = void 0, this._eventInfo.mesh = kT, this._eventInfo.indexParameters = aT, this._callbackPluginEventGeneric(128, this._eventInfo), rT.d.AddUniformsAndSamplers(vT, tT), xT.c.AddUniforms(vT), xT.c.AddSamplers(tT), AT.c && (AT.c.PrepareUniforms(vT, OT), AT.c.PrepareSamplers(tT, OT)), (0, DT.qb)({
+                  uniformsNames: vT,
+                  uniformBuffersNames: NT,
+                  samplers: tT,
+                  defines: OT,
                   maxSimultaneousLights: this._maxSimultaneousLights,
                   shaderLanguage: this._shaderLanguage
-                }), (0, cv.c)(av), this._useVertexPulling) {
-                const vv = Pv.getRenderingMesh(),
-                  zv = vv?.geometry;
-                zv && (this._vertexPullingMetadata = (0, Gv.e)(zv), this._vertexPullingMetadata && this._vertexPullingMetadata.forEach(((vv, zv) => {
-                  av.push(`vp_${zv}_info`)
+                }), (0, QT.e)(vT), this._useVertexPulling) {
+                const TT = cT.getRenderingMesh(),
+                  kT = TT?.geometry;
+                kT && (this._vertexPullingMetadata = (0, ST.f)(kT), this._vertexPullingMetadata && this._vertexPullingMetadata.forEach(((TT, kT) => {
+                  vT.push(`vp_${kT}_info`)
                 })))
               } else this._vertexPullingMetadata = null;
-              const fv = {};
-              this.customShaderNameResolve && (wv = this.customShaderNameResolve(wv, av, iv, sv, gv, lv, fv));
-              const Yv = gv.toString(),
-                nv = Pv.effect,
-                Ov = ev.ma().createEffect(wv, {
-                  attributes: lv,
-                  uniformsNames: av,
-                  uniformBuffersNames: iv,
-                  samplers: sv,
-                  defines: Yv,
-                  fallbacks: Sv,
+              const FT = {};
+              this.customShaderNameResolve && (jT = this.customShaderNameResolve(jT, vT, NT, tT, OT, IT, FT));
+              const PT = OT.toString(),
+                wT = cT.effect,
+                mT = KT.Dv().createEffect(jT, {
+                  attributes: IT,
+                  uniformsNames: vT,
+                  uniformBuffersNames: NT,
+                  samplers: tT,
+                  defines: PT,
+                  fallbacks: MT,
                   onCompiled: this.onCompiled,
                   onError: this.onError,
-                  indexParameters: jv,
-                  processFinalCode: fv.processFinalCode,
+                  indexParameters: aT,
+                  processFinalCode: FT.processFinalCode,
                   processCodeAfterIncludes: this._eventInfo.customCode,
-                  multiTarget: gv.PREPASS,
+                  multiTarget: OT.PREPASS,
                   shaderLanguage: this._shaderLanguage,
-                  extraInitializationsAsync: vv._ShaderLoader.getLoadCallback(this._shaderLanguage)
-                }, pv);
-              if (this._eventInfo.customCode = void 0, Ov)
-                if (this._onEffectCreatedObservable && (Vv.effect = Ov, Vv.subMesh = Pv, this._onEffectCreatedObservable.notifyObservers(Vv)), this.allowShaderHotSwapping && nv && !Ov.isReady()) {
-                  if (gv.markAsUnprocessed(), Wv = this.isFrozen, hv) return gv._areLightsDisposed = !0, !1
-                } else ev.resetCachedMaterial(), Pv.setEffect(Ov, gv, this._materialContext)
+                  extraInitializationsAsync: TT._ShaderLoader.getLoadCallback(this._shaderLanguage)
+                }, yT);
+              if (this._eventInfo.customCode = void 0, mT)
+                if (this._onEffectCreatedObservable && (JT.effect = mT, JT.subMesh = cT, this._onEffectCreatedObservable.notifyObservers(JT)), this.allowShaderHotSwapping && wT && !mT.isReady()) {
+                  if (OT.markAsUnprocessed(), CT = this.isFrozen, lT) return OT._areLightsDisposed = !0, !1
+                } else KT.resetCachedMaterial(), cT.setEffect(mT, OT, this._materialContext)
             }
-            return !(!Pv.effect || !Pv.effect.isReady()) && (gv._renderId = ev.getRenderId(), Sv._wasPreviouslyReady = !Wv, Sv._wasPreviouslyUsingInstances = hv, this._checkScenePerformancePriority(), !0)
+            return !(!cT.effect || !cT.effect.isReady()) && (OT._renderId = KT.getRenderId(), MT._wasPreviouslyReady = !CT, MT._wasPreviouslyUsingInstances = lT, this._checkScenePerformancePriority(), !0)
           }
           buildUniformLayout() {
-            const vv = this._uniformBuffer;
-            vv.addUniform("diffuseLeftColor", 4), vv.addUniform("diffuseRightColor", 4), vv.addUniform("opacityParts", 4), vv.addUniform("reflectionLeftColor", 4), vv.addUniform("reflectionRightColor", 4), vv.addUniform("refractionLeftColor", 4), vv.addUniform("refractionRightColor", 4), vv.addUniform("emissiveLeftColor", 4), vv.addUniform("emissiveRightColor", 4), vv.addUniform("vDiffuseInfos", 2), vv.addUniform("vAmbientInfos", 2), vv.addUniform("vOpacityInfos", 2), vv.addUniform("vEmissiveInfos", 2), vv.addUniform("vLightmapInfos", 2), vv.addUniform("vSpecularInfos", 2), vv.addUniform("vBumpInfos", 3), vv.addUniform("diffuseMatrix", 16), vv.addUniform("ambientMatrix", 16), vv.addUniform("opacityMatrix", 16), vv.addUniform("emissiveMatrix", 16), vv.addUniform("lightmapMatrix", 16), vv.addUniform("specularMatrix", 16), vv.addUniform("bumpMatrix", 16), vv.addUniform("vTangentSpaceParams", 2), vv.addUniform("pointSize", 1), vv.addUniform("alphaCutOff", 1), vv.addUniform("refractionMatrix", 16), vv.addUniform("vRefractionInfos", 4), vv.addUniform("vRefractionPosition", 3), vv.addUniform("vRefractionSize", 3), vv.addUniform("vSpecularColor", 4), vv.addUniform("vEmissiveColor", 3), vv.addUniform("vDiffuseColor", 4), vv.addUniform("vAmbientColor", 3), vv.addUniform("cameraInfo", 4), vv.addUniform("vTextureRepetitionHexTilingParams", 4), (0, mv.jb)(vv, !1, !0), super.buildUniformLayout()
+            const TT = this._uniformBuffer;
+            TT.addUniform("diffuseLeftColor", 4), TT.addUniform("diffuseRightColor", 4), TT.addUniform("opacityParts", 4), TT.addUniform("reflectionLeftColor", 4), TT.addUniform("reflectionRightColor", 4), TT.addUniform("refractionLeftColor", 4), TT.addUniform("refractionRightColor", 4), TT.addUniform("emissiveLeftColor", 4), TT.addUniform("emissiveRightColor", 4), TT.addUniform("vDiffuseInfos", 2), TT.addUniform("vAmbientInfos", 2), TT.addUniform("vOpacityInfos", 2), TT.addUniform("vEmissiveInfos", 2), TT.addUniform("vLightmapInfos", 2), TT.addUniform("vSpecularInfos", 2), TT.addUniform("vBumpInfos", 3), TT.addUniform("diffuseMatrix", 16), TT.addUniform("ambientMatrix", 16), TT.addUniform("opacityMatrix", 16), TT.addUniform("emissiveMatrix", 16), TT.addUniform("lightmapMatrix", 16), TT.addUniform("specularMatrix", 16), TT.addUniform("bumpMatrix", 16), TT.addUniform("vTangentSpaceParams", 2), TT.addUniform("pointSize", 1), TT.addUniform("alphaCutOff", 1), TT.addUniform("refractionMatrix", 16), TT.addUniform("vRefractionInfos", 4), TT.addUniform("vRefractionPosition", 3), TT.addUniform("vRefractionSize", 3), TT.addUniform("vSpecularColor", 4), TT.addUniform("vEmissiveColor", 3), TT.addUniform("vDiffuseColor", 4), TT.addUniform("vAmbientColor", 3), TT.addUniform("cameraInfo", 4), TT.addUniform("vTextureRepetitionHexTilingParams", 4), (0, DT.jb)(TT, !1, !0), super.buildUniformLayout()
           }
-          bindForSubMesh(zv, Pv, hv) {
-            const Sv = this.rD(),
-              ev = hv.materialDefines;
-            if (!ev) return;
-            const dv = hv.effect;
-            if (!dv) return;
-            this._activeEffect = dv, Pv.getMeshUniformBuffer().bindToEffect(dv, "Mesh"), Pv.transferToEffect(zv), this._uniformBuffer.bindToEffect(dv, "Material"), this.prePassConfiguration.bindForSubMesh(this._activeEffect, Sv, Pv, zv, this.isFrozen), Fv.d.Bind(Sv.ma().currentRenderPassId, this._activeEffect, Pv, zv, this);
-            const Nv = Sv.activeCamera;
-            Nv ? this._uniformBuffer.updateFloat4("cameraInfo", Nv.minZ, Nv.maxZ, 0, 0) : this._uniformBuffer.updateFloat4("cameraInfo", 0, 0, 0, 0);
-            const lv = this.textureRepetitionHexTilingParams;
-            this._uniformBuffer.updateFloat4("vTextureRepetitionHexTilingParams", lv[0], lv[1], lv[2], lv[3]), this._eventInfo.subMesh = hv, this._callbackPluginEventHardBindForSubMesh(this._eventInfo), ev.OBJECTSPACE_NORMALMAP && (zv.toNormalMatrix(this._normalMatrix), this.bindOnlyNormalMatrix(this._normalMatrix));
-            const Tv = this._mustRebind(Sv, dv, hv, Pv.visibility),
-              Wv = Sv.ma()._features.needToAlwaysBindUniformBuffers;
-            (0, mv.e)(Pv, dv), this._vertexPullingMetadata && (0, Gv.d)(dv, this._vertexPullingMetadata);
-            const wv = this._uniformBuffer;
-            if (Tv) {
-              if (this.bindViewProjection(dv), !wv.useUbo || !this.isFrozen || !wv.isSync || hv._drawWrapper._forceRebindOnNextCall) {
-                if (vv.FresnelEnabled && ev.FRESNEL) {
-                  if (this.diffuseFresnelParameters && this.diffuseFresnelParameters.isEnabled && (wv.updateColor4("diffuseLeftColor", this.diffuseFresnelParameters.leftColor, this.diffuseFresnelParameters.power), wv.updateColor4("diffuseRightColor", this.diffuseFresnelParameters.rightColor, this.diffuseFresnelParameters.bias)), this.opacityFresnelParameters && this.opacityFresnelParameters.isEnabled) {
-                    const vv = pv.k.Color3[0];
-                    vv.set(this.opacityFresnelParameters.leftColor.toLuminance(), this.opacityFresnelParameters.rightColor.toLuminance(), this.opacityFresnelParameters.bias), wv.updateColor4("opacityParts", vv, this.opacityFresnelParameters.power)
+          bindForSubMesh(kT, cT, lT) {
+            const MT = this.NJ(),
+              KT = lT.materialDefines;
+            if (!KT) return;
+            const fT = lT.effect;
+            if (!fT) return;
+            this._activeEffect = fT, cT.getMeshUniformBuffer().bindToEffect(fT, "Mesh"), cT.transferToEffect(kT), this._uniformBuffer.bindToEffect(fT, "Material"), this.prePassConfiguration.bindForSubMesh(this._activeEffect, MT, cT, kT, this.isFrozen), rT.d.Bind(MT.Dv().currentRenderPassId, this._activeEffect, cT, kT, this);
+            const xT = MT.activeCamera;
+            xT ? this._uniformBuffer.updateFloat4("cameraInfo", xT.minZ, xT.maxZ, 0, 0) : this._uniformBuffer.updateFloat4("cameraInfo", 0, 0, 0, 0);
+            const IT = this.textureRepetitionHexTilingParams;
+            this._uniformBuffer.updateFloat4("vTextureRepetitionHexTilingParams", IT[0], IT[1], IT[2], IT[3]), this._eventInfo.subMesh = lT, this._callbackPluginEventHardBindForSubMesh(this._eventInfo), KT.OBJECTSPACE_NORMALMAP && (kT.toNormalMatrix(this._normalMatrix), this.bindOnlyNormalMatrix(this._normalMatrix));
+            const AT = this._mustRebind(MT, fT, lT, cT.visibility),
+              CT = MT.Dv()._features.needToAlwaysBindUniformBuffers;
+            (0, DT.e)(cT, fT), this._vertexPullingMetadata && (0, ST.c)(fT, this._vertexPullingMetadata);
+            const jT = this._uniformBuffer;
+            if (AT) {
+              if (this.bindViewProjection(fT), !jT.useUbo || !this.isFrozen || !jT.isSync || lT._drawWrapper._forceRebindOnNextCall) {
+                if (TT.FresnelEnabled && KT.FRESNEL) {
+                  if (this.diffuseFresnelParameters && this.diffuseFresnelParameters.isEnabled && (jT.updateColor4("diffuseLeftColor", this.diffuseFresnelParameters.leftColor, this.diffuseFresnelParameters.power), jT.updateColor4("diffuseRightColor", this.diffuseFresnelParameters.rightColor, this.diffuseFresnelParameters.bias)), this.opacityFresnelParameters && this.opacityFresnelParameters.isEnabled) {
+                    const TT = yT.k.Color3[0];
+                    TT.set(this.opacityFresnelParameters.leftColor.toLuminance(), this.opacityFresnelParameters.rightColor.toLuminance(), this.opacityFresnelParameters.bias), jT.updateColor4("opacityParts", TT, this.opacityFresnelParameters.power)
                   }
-                  this.reflectionFresnelParameters && this.reflectionFresnelParameters.isEnabled && (wv.updateColor4("reflectionLeftColor", this.reflectionFresnelParameters.leftColor, this.reflectionFresnelParameters.power), wv.updateColor4("reflectionRightColor", this.reflectionFresnelParameters.rightColor, this.reflectionFresnelParameters.bias)), this.refractionFresnelParameters && this.refractionFresnelParameters.isEnabled && (wv.updateColor4("refractionLeftColor", this.refractionFresnelParameters.leftColor, this.refractionFresnelParameters.power), wv.updateColor4("refractionRightColor", this.refractionFresnelParameters.rightColor, this.refractionFresnelParameters.bias)), this.emissiveFresnelParameters && this.emissiveFresnelParameters.isEnabled && (wv.updateColor4("emissiveLeftColor", this.emissiveFresnelParameters.leftColor, this.emissiveFresnelParameters.power), wv.updateColor4("emissiveRightColor", this.emissiveFresnelParameters.rightColor, this.emissiveFresnelParameters.bias))
+                  this.reflectionFresnelParameters && this.reflectionFresnelParameters.isEnabled && (jT.updateColor4("reflectionLeftColor", this.reflectionFresnelParameters.leftColor, this.reflectionFresnelParameters.power), jT.updateColor4("reflectionRightColor", this.reflectionFresnelParameters.rightColor, this.reflectionFresnelParameters.bias)), this.refractionFresnelParameters && this.refractionFresnelParameters.isEnabled && (jT.updateColor4("refractionLeftColor", this.refractionFresnelParameters.leftColor, this.refractionFresnelParameters.power), jT.updateColor4("refractionRightColor", this.refractionFresnelParameters.rightColor, this.refractionFresnelParameters.bias)), this.emissiveFresnelParameters && this.emissiveFresnelParameters.isEnabled && (jT.updateColor4("emissiveLeftColor", this.emissiveFresnelParameters.leftColor, this.emissiveFresnelParameters.power), jT.updateColor4("emissiveRightColor", this.emissiveFresnelParameters.rightColor, this.emissiveFresnelParameters.bias))
                 }
-                if (ev.ALPHATEST && wv.updateFloat("alphaCutOff", this.alphaCutOff), Sv.texturesEnabled && (this._diffuseTexture && vv.DiffuseTextureEnabled && (wv.updateFloat2("vDiffuseInfos", this._diffuseTexture.coordinatesIndex, this._diffuseTexture.level), (0, mv.A)(this._diffuseTexture, wv, "diffuse")), this._ambientTexture && vv.AmbientTextureEnabled && (wv.updateFloat2("vAmbientInfos", this._ambientTexture.coordinatesIndex, this._ambientTexture.level), (0, mv.A)(this._ambientTexture, wv, "ambient")), this._opacityTexture && vv.OpacityTextureEnabled && (wv.updateFloat2("vOpacityInfos", this._opacityTexture.coordinatesIndex, this._opacityTexture.level), (0, mv.A)(this._opacityTexture, wv, "opacity")), (0, mv.j)(Sv, ev, wv, pv.b.White(), this._reflectionTexture, !1, !1, !0, !1, !1, !1, this.roughness), this._reflectionTexture && vv.ReflectionTextureEnabled || wv.updateFloat2("vReflectionInfos", 0, this.roughness), this._emissiveTexture && vv.EmissiveTextureEnabled && (wv.updateFloat2("vEmissiveInfos", this._emissiveTexture.coordinatesIndex, this._emissiveTexture.level), (0, mv.A)(this._emissiveTexture, wv, "emissive")), this._lightmapTexture && vv.LightmapTextureEnabled && (wv.updateFloat2("vLightmapInfos", this._lightmapTexture.coordinatesIndex, this._lightmapTexture.level), (0, mv.A)(this._lightmapTexture, wv, "lightmap")), this._specularTexture && vv.SpecularTextureEnabled && (wv.updateFloat2("vSpecularInfos", this._specularTexture.coordinatesIndex, this._specularTexture.level), (0, mv.A)(this._specularTexture, wv, "specular")), this._bumpTexture && Sv.ma().getCaps().standardDerivatives && vv.BumpTextureEnabled && (wv.updateFloat3("vBumpInfos", this._bumpTexture.coordinatesIndex, 1 / this._bumpTexture.level, this.parallaxScaleBias), (0, mv.A)(this._bumpTexture, wv, "bump"), Sv._mirroredCameraPosition ? wv.updateFloat2("vTangentSpaceParams", this._invertNormalMapX ? 1 : -1, this._invertNormalMapY ? 1 : -1) : wv.updateFloat2("vTangentSpaceParams", this._invertNormalMapX ? -1 : 1, this._invertNormalMapY ? -1 : 1)), this._refractionTexture && vv.RefractionTextureEnabled)) {
-                  let vv = 1;
-                  if (this._refractionTexture.isCube || (wv.Xu("refractionMatrix", this._refractionTexture.getReflectionTextureMatrix()), this._refractionTexture.depth && (vv = this._refractionTexture.depth)), wv.updateFloat4("vRefractionInfos", this._refractionTexture.level, this.indexOfRefraction, vv, this.invertRefractionY ? -1 : 1), this._refractionTexture.boundingBoxSize) {
-                    const vv = this._refractionTexture;
-                    wv.updateVector3("vRefractionPosition", vv.boundingBoxPosition), wv.updateVector3("vRefractionSize", vv.boundingBoxSize)
+                if (KT.ALPHATEST && jT.updateFloat("alphaCutOff", this.alphaCutOff), MT.texturesEnabled && (this._diffuseTexture && TT.DiffuseTextureEnabled && (jT.updateFloat2("vDiffuseInfos", this._diffuseTexture.coordinatesIndex, this._diffuseTexture.level), (0, DT.v)(this._diffuseTexture, jT, "diffuse")), this._ambientTexture && TT.AmbientTextureEnabled && (jT.updateFloat2("vAmbientInfos", this._ambientTexture.coordinatesIndex, this._ambientTexture.level), (0, DT.v)(this._ambientTexture, jT, "ambient")), this._opacityTexture && TT.OpacityTextureEnabled && (jT.updateFloat2("vOpacityInfos", this._opacityTexture.coordinatesIndex, this._opacityTexture.level), (0, DT.v)(this._opacityTexture, jT, "opacity")), (0, DT.j)(MT, KT, jT, yT.c.White(), this._reflectionTexture, !1, !1, !0, !1, !1, !1, this.roughness), this._reflectionTexture && TT.ReflectionTextureEnabled || jT.updateFloat2("vReflectionInfos", 0, this.roughness), this._emissiveTexture && TT.EmissiveTextureEnabled && (jT.updateFloat2("vEmissiveInfos", this._emissiveTexture.coordinatesIndex, this._emissiveTexture.level), (0, DT.v)(this._emissiveTexture, jT, "emissive")), this._lightmapTexture && TT.LightmapTextureEnabled && (jT.updateFloat2("vLightmapInfos", this._lightmapTexture.coordinatesIndex, this._lightmapTexture.level), (0, DT.v)(this._lightmapTexture, jT, "lightmap")), this._specularTexture && TT.SpecularTextureEnabled && (jT.updateFloat2("vSpecularInfos", this._specularTexture.coordinatesIndex, this._specularTexture.level), (0, DT.v)(this._specularTexture, jT, "specular")), this._bumpTexture && MT.Dv().getCaps().standardDerivatives && TT.BumpTextureEnabled && (jT.updateFloat3("vBumpInfos", this._bumpTexture.coordinatesIndex, 1 / this._bumpTexture.level, this.parallaxScaleBias), (0, DT.v)(this._bumpTexture, jT, "bump"), MT._mirroredCameraPosition ? jT.updateFloat2("vTangentSpaceParams", this._invertNormalMapX ? 1 : -1, this._invertNormalMapY ? 1 : -1) : jT.updateFloat2("vTangentSpaceParams", this._invertNormalMapX ? -1 : 1, this._invertNormalMapY ? -1 : 1)), this._refractionTexture && TT.RefractionTextureEnabled)) {
+                  let TT = 1;
+                  if (this._refractionTexture.isCube || (jT.X3("refractionMatrix", this._refractionTexture.getReflectionTextureMatrix()), this._refractionTexture.depth && (TT = this._refractionTexture.depth)), jT.updateFloat4("vRefractionInfos", this._refractionTexture.level, this.indexOfRefraction, TT, this.invertRefractionY ? -1 : 1), this._refractionTexture.boundingBoxSize) {
+                    const TT = this._refractionTexture;
+                    jT.updateVector3("vRefractionPosition", TT.boundingBoxPosition), jT.updateVector3("vRefractionSize", TT.boundingBoxSize)
                   }
                 }
-                this.pointsCloud && wv.updateFloat("pointSize", this.pointSize), wv.updateColor4("vSpecularColor", this.specularColor, this.specularPower), wv.updateColor3("vEmissiveColor", vv.EmissiveTextureEnabled ? this.emissiveColor : pv.b.BlackReadOnly), wv.updateColor4("vDiffuseColor", this.diffuseColor, this.alpha), Sv.ambientColor.multiplyToRef(this.ambientColor, this._globalAmbientColor), wv.updateColor3("vAmbientColor", this._globalAmbientColor)
+                this.pointsCloud && jT.updateFloat("pointSize", this.pointSize), jT.updateColor4("vSpecularColor", this.specularColor, this.specularPower), jT.updateColor3("vEmissiveColor", TT.EmissiveTextureEnabled ? this.emissiveColor : yT.c.BlackReadOnly), jT.updateColor4("vDiffuseColor", this.diffuseColor, this.alpha), MT.ambientColor.multiplyToRef(this.ambientColor, this._globalAmbientColor), jT.updateColor3("vAmbientColor", this._globalAmbientColor)
               }
-              Sv.texturesEnabled && (this._diffuseTexture && vv.DiffuseTextureEnabled && dv.setTexture("diffuseSampler", this._diffuseTexture), this._ambientTexture && vv.AmbientTextureEnabled && dv.setTexture("ambientSampler", this._ambientTexture), this._opacityTexture && vv.OpacityTextureEnabled && dv.setTexture("opacitySampler", this._opacityTexture), this._reflectionTexture && vv.ReflectionTextureEnabled && (this._reflectionTexture.isCube ? dv.setTexture("reflectionCubeSampler", this._reflectionTexture) : dv.setTexture("reflection2DSampler", this._reflectionTexture)), this._emissiveTexture && vv.EmissiveTextureEnabled && dv.setTexture("emissiveSampler", this._emissiveTexture), this._lightmapTexture && vv.LightmapTextureEnabled && dv.setTexture("lightmapSampler", this._lightmapTexture), this._specularTexture && vv.SpecularTextureEnabled && dv.setTexture("specularSampler", this._specularTexture), this._bumpTexture && Sv.ma().getCaps().standardDerivatives && vv.BumpTextureEnabled && dv.setTexture("bumpSampler", this._bumpTexture), this._refractionTexture && vv.RefractionTextureEnabled && (this._refractionTexture.isCube ? dv.setTexture("refractionCubeSampler", this._refractionTexture) : dv.setTexture("refraction2DSampler", this._refractionTexture))), this.rD().useOrderIndependentTransparency && this.needAlphaBlendingForMesh(Pv) && this.rD().depthPeelingRenderer.bind(dv), this._eventInfo.subMesh = hv, this._callbackPluginEventBindForSubMesh(this._eventInfo), (0, cv.e)(dv, this, Sv), this.bindEyePosition(dv)
-            } else Wv && (this._needToBindSceneUbo = !0);
-            !Tv && this.isFrozen && !Wv || !Sv.lightsEnabled || this._disableLighting || (0, mv.r)(Sv, Pv, dv, ev, this._maxSimultaneousLights), !Tv && this.isFrozen || ((Sv.fogEnabled && Pv.applyFog && Sv.fogMode !== gv.g.FOGMODE_NONE || this._reflectionTexture || this._refractionTexture || Pv.receiveShadows || ev.PREPASS || ev.CLUSTLIGHT_BATCH) && this.bindView(dv), (0, mv.g)(Sv, Pv, dv), ev.NUM_MORPH_INFLUENCERS && (0, mv.v)(Pv, dv), ev.BAKED_VERTEX_ANIMATION_TEXTURE && Pv.bakedVertexAnimationManager?.bind(dv, ev.INSTANCES), this.useLogarithmicDepth && (0, mv.u)(ev, dv, Sv), this._imageProcessingConfiguration && !this._imageProcessingConfiguration.applyByPostProcess && this._imageProcessingConfiguration.bind(this._activeEffect)), this._afterBind(Pv, this._activeEffect, hv), wv.update()
+              MT.texturesEnabled && (this._diffuseTexture && TT.DiffuseTextureEnabled && fT.setTexture("diffuseSampler", this._diffuseTexture), this._ambientTexture && TT.AmbientTextureEnabled && fT.setTexture("ambientSampler", this._ambientTexture), this._opacityTexture && TT.OpacityTextureEnabled && fT.setTexture("opacitySampler", this._opacityTexture), this._reflectionTexture && TT.ReflectionTextureEnabled && (this._reflectionTexture.isCube ? fT.setTexture("reflectionCubeSampler", this._reflectionTexture) : fT.setTexture("reflection2DSampler", this._reflectionTexture)), this._emissiveTexture && TT.EmissiveTextureEnabled && fT.setTexture("emissiveSampler", this._emissiveTexture), this._lightmapTexture && TT.LightmapTextureEnabled && fT.setTexture("lightmapSampler", this._lightmapTexture), this._specularTexture && TT.SpecularTextureEnabled && fT.setTexture("specularSampler", this._specularTexture), this._bumpTexture && MT.Dv().getCaps().standardDerivatives && TT.BumpTextureEnabled && fT.setTexture("bumpSampler", this._bumpTexture), this._refractionTexture && TT.RefractionTextureEnabled && (this._refractionTexture.isCube ? fT.setTexture("refractionCubeSampler", this._refractionTexture) : fT.setTexture("refraction2DSampler", this._refractionTexture))), this.NJ().useOrderIndependentTransparency && this.needAlphaBlendingForMesh(cT) && this.NJ().depthPeelingRenderer.bind(fT), this._eventInfo.subMesh = lT, this._callbackPluginEventBindForSubMesh(this._eventInfo), (0, QT.g)(fT, this, MT), this.bindEyePosition(fT)
+            } else CT && (this._needToBindSceneUbo = !0);
+            !AT && this.isFrozen && !CT || !MT.lightsEnabled || this._disableLighting || (0, DT.m)(MT, cT, fT, KT, this._maxSimultaneousLights), !AT && this.isFrozen || ((MT.fogEnabled && cT.applyFog && MT.fogMode !== OT.f.FOGMODE_NONE || this._reflectionTexture || this._refractionTexture || cT.receiveShadows || KT.PREPASS || KT.CLUSTLIGHT_BATCH) && this.bindView(fT), (0, DT.f)(MT, cT, fT), KT.NUM_MORPH_INFLUENCERS && (0, DT.q)(cT, fT), KT.BAKED_VERTEX_ANIMATION_TEXTURE && cT.bakedVertexAnimationManager?.bind(fT, KT.INSTANCES), this.useLogarithmicDepth && (0, DT.p)(KT, fT, MT), this._imageProcessingConfiguration && !this._imageProcessingConfiguration.applyByPostProcess && this._imageProcessingConfiguration.bind(this._activeEffect)), this._afterBind(cT, this._activeEffect, lT), jT.update()
           }
-          _canBindRunFollower(zv, Pv, hv, Sv, ev) {
-            const gv = zv.prePassRenderer;
-            return this.isFrozen && this._storeEffectOnSubMeshes && this._uniformBufferLayoutBuilt && !this._needToBindSceneUbo && this.isReadyForSubMesh === vv.prototype.isReadyForSubMesh && this.bindForSubMesh === vv.prototype.bindForSubMesh && this._mustRebind === av.d.prototype._mustRebind && !(!this.backFaceCulling && this.separateCullingPass) && !(this.pluginManager && 0 !== this.pluginManager._activePluginsForExtraEvents.length) && !this._vertexPullingMetadata && !Pv._features.needToAlwaysBindUniformBuffers && !(gv && gv.enabled && gv.currentRTisSceneRT) && !Fv.d._Configurations[Pv.currentRenderPassId] && !Sv.materialDefines?.OBJECTSPACE_NORMALMAP && !hv.skeleton && !ev._bonesComputationForcedToCPU
+          _canBindRunFollower(kT, cT, lT, MT, KT) {
+            const OT = kT.prePassRenderer;
+            return this.isFrozen && this._storeEffectOnSubMeshes && this._uniformBufferLayoutBuilt && !this._needToBindSceneUbo && this.isReadyForSubMesh === TT.prototype.isReadyForSubMesh && this.bindForSubMesh === TT.prototype.bindForSubMesh && this._mustRebind === vT.e.prototype._mustRebind && !(!this.backFaceCulling && this.separateCullingPass) && !(this.pluginManager && 0 !== this.pluginManager._activePluginsForExtraEvents.length) && !this._vertexPullingMetadata && !cT._features.needToAlwaysBindUniformBuffers && !(OT && OT.enabled && OT.currentRTisSceneRT) && !rT.d._Configurations[cT.currentRenderPassId] && !MT.materialDefines?.OBJECTSPACE_NORMALMAP && !lT.skeleton && !KT._bonesComputationForcedToCPU
           }
-          _bindRunFollower(vv, zv, Pv, hv) {
-            this._activeEffect = hv, zv.getMeshUniformBuffer().bindToEffect(hv, "Mesh"), zv.transferToEffect(vv);
-            const Sv = this._uniformBuffer;
-            Sv.bindToEffect(hv, "Material");
-            const ev = this._scene.activeCamera;
-            ev ? Sv.updateFloat4("cameraInfo", ev.minZ, ev.maxZ, 0, 0) : Sv.updateFloat4("cameraInfo", 0, 0, 0, 0);
-            const gv = this.textureRepetitionHexTilingParams;
-            Sv.updateFloat4("vTextureRepetitionHexTilingParams", gv[0], gv[1], gv[2], gv[3]), this._afterBind(zv, hv, Pv), Sv.update()
+          _bindRunFollower(TT, kT, cT, lT) {
+            this._activeEffect = lT, kT.getMeshUniformBuffer().bindToEffect(lT, "Mesh"), kT.transferToEffect(TT);
+            const MT = this._uniformBuffer;
+            MT.bindToEffect(lT, "Material");
+            const KT = this._scene.activeCamera;
+            KT ? MT.updateFloat4("cameraInfo", KT.minZ, KT.maxZ, 0, 0) : MT.updateFloat4("cameraInfo", 0, 0, 0, 0);
+            const OT = this.textureRepetitionHexTilingParams;
+            MT.updateFloat4("vTextureRepetitionHexTilingParams", OT[0], OT[1], OT[2], OT[3]), this._afterBind(kT, lT, cT), MT.update()
           }
           getAnimatables() {
-            const vv = super.getAnimatables();
-            return this._diffuseTexture && this._diffuseTexture.animations && this._diffuseTexture.animations.length > 0 && vv.push(this._diffuseTexture), this._ambientTexture && this._ambientTexture.animations && this._ambientTexture.animations.length > 0 && vv.push(this._ambientTexture), this._opacityTexture && this._opacityTexture.animations && this._opacityTexture.animations.length > 0 && vv.push(this._opacityTexture), this._reflectionTexture && this._reflectionTexture.animations && this._reflectionTexture.animations.length > 0 && vv.push(this._reflectionTexture), this._emissiveTexture && this._emissiveTexture.animations && this._emissiveTexture.animations.length > 0 && vv.push(this._emissiveTexture), this._specularTexture && this._specularTexture.animations && this._specularTexture.animations.length > 0 && vv.push(this._specularTexture), this._bumpTexture && this._bumpTexture.animations && this._bumpTexture.animations.length > 0 && vv.push(this._bumpTexture), this._lightmapTexture && this._lightmapTexture.animations && this._lightmapTexture.animations.length > 0 && vv.push(this._lightmapTexture), this._refractionTexture && this._refractionTexture.animations && this._refractionTexture.animations.length > 0 && vv.push(this._refractionTexture), vv
+            const TT = super.getAnimatables();
+            return this._diffuseTexture && this._diffuseTexture.animations && this._diffuseTexture.animations.length > 0 && TT.push(this._diffuseTexture), this._ambientTexture && this._ambientTexture.animations && this._ambientTexture.animations.length > 0 && TT.push(this._ambientTexture), this._opacityTexture && this._opacityTexture.animations && this._opacityTexture.animations.length > 0 && TT.push(this._opacityTexture), this._reflectionTexture && this._reflectionTexture.animations && this._reflectionTexture.animations.length > 0 && TT.push(this._reflectionTexture), this._emissiveTexture && this._emissiveTexture.animations && this._emissiveTexture.animations.length > 0 && TT.push(this._emissiveTexture), this._specularTexture && this._specularTexture.animations && this._specularTexture.animations.length > 0 && TT.push(this._specularTexture), this._bumpTexture && this._bumpTexture.animations && this._bumpTexture.animations.length > 0 && TT.push(this._bumpTexture), this._lightmapTexture && this._lightmapTexture.animations && this._lightmapTexture.animations.length > 0 && TT.push(this._lightmapTexture), this._refractionTexture && this._refractionTexture.animations && this._refractionTexture.animations.length > 0 && TT.push(this._refractionTexture), TT
           }
           getActiveTextures() {
-            const vv = super.getActiveTextures();
-            return this._diffuseTexture && vv.push(this._diffuseTexture), this._ambientTexture && vv.push(this._ambientTexture), this._opacityTexture && vv.push(this._opacityTexture), this._reflectionTexture && vv.push(this._reflectionTexture), this._emissiveTexture && vv.push(this._emissiveTexture), this._specularTexture && vv.push(this._specularTexture), this._bumpTexture && vv.push(this._bumpTexture), this._lightmapTexture && vv.push(this._lightmapTexture), this._refractionTexture && vv.push(this._refractionTexture), vv
+            const TT = super.getActiveTextures();
+            return this._diffuseTexture && TT.push(this._diffuseTexture), this._ambientTexture && TT.push(this._ambientTexture), this._opacityTexture && TT.push(this._opacityTexture), this._reflectionTexture && TT.push(this._reflectionTexture), this._emissiveTexture && TT.push(this._emissiveTexture), this._specularTexture && TT.push(this._specularTexture), this._bumpTexture && TT.push(this._bumpTexture), this._lightmapTexture && TT.push(this._lightmapTexture), this._refractionTexture && TT.push(this._refractionTexture), TT
           }
-          hasTexture(vv) {
-            return !!super.hasTexture(vv) || (this._diffuseTexture === vv || (this._ambientTexture === vv || (this._opacityTexture === vv || (this._reflectionTexture === vv || (this._emissiveTexture === vv || (this._specularTexture === vv || (this._bumpTexture === vv || (this._lightmapTexture === vv || this._refractionTexture === vv))))))))
+          hasTexture(TT) {
+            return !!super.hasTexture(TT) || (this._diffuseTexture === TT || (this._ambientTexture === TT || (this._opacityTexture === TT || (this._reflectionTexture === TT || (this._emissiveTexture === TT || (this._specularTexture === TT || (this._bumpTexture === TT || (this._lightmapTexture === TT || this._refractionTexture === TT))))))))
           }
-          dispose(vv, zv) {
-            zv && (this._diffuseTexture?.dispose(), this._ambientTexture?.dispose(), this._opacityTexture?.dispose(), this._reflectionTexture?.dispose(), this._emissiveTexture?.dispose(), this._specularTexture?.dispose(), this._bumpTexture?.dispose(), this._lightmapTexture?.dispose(), this._refractionTexture?.dispose()), this._imageProcessingConfiguration && this._imageProcessingObserver && this._imageProcessingConfiguration.onUpdateParameters.remove(this._imageProcessingObserver), super.dispose(vv, zv)
+          dispose(TT, kT) {
+            kT && (this._diffuseTexture?.dispose(), this._ambientTexture?.dispose(), this._opacityTexture?.dispose(), this._reflectionTexture?.dispose(), this._emissiveTexture?.dispose(), this._specularTexture?.dispose(), this._bumpTexture?.dispose(), this._lightmapTexture?.dispose(), this._refractionTexture?.dispose()), this._imageProcessingConfiguration && this._imageProcessingObserver && this._imageProcessingConfiguration.onUpdateParameters.remove(this._imageProcessingObserver), super.dispose(TT, kT)
           }
-          clone(zv) {
-            let Pv = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-              hv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-            const Sv = jv.c.Clone((() => new vv(zv, this.rD())), this, {
-              cloneTexturesOnlyOnce: Pv
+          clone(kT) {
+            let cT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+              lT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+            const MT = aT.d.Clone((() => new TT(kT, this.NJ())), this, {
+              cloneTexturesOnlyOnce: cT
             });
-            return Sv.name = zv, Sv.id = zv, this.stencil.copyTo(Sv.stencil), this._clonePlugins(Sv, hv), Sv
+            return MT.name = kT, MT.id = kT, this.stencil.copyTo(MT.stencil), this._clonePlugins(MT, lT), MT
           }
-          static Parse(zv, Pv, hv) {
-            const Sv = jv.c.Parse((() => new vv(zv.name, Pv)), zv, Pv, hv);
-            return zv.stencil && Sv.stencil.parse(zv.stencil, Pv, hv), Wv.b._ParsePlugins(zv, Sv, Pv, hv), Sv
+          static Parse(kT, cT, lT) {
+            const MT = aT.d.Parse((() => new TT(kT.name, cT)), kT, cT, lT);
+            return kT.stencil && MT.stencil.parse(kT.stencil, cT, lT), CT.e._ParsePlugins(kT, MT, cT, lT), MT
           }
           static get DiffuseTextureEnabled() {
-            return sv.e.DiffuseTextureEnabled
+            return tT.b.DiffuseTextureEnabled
           }
-          static set DiffuseTextureEnabled(vv) {
-            sv.e.DiffuseTextureEnabled = vv
+          static set DiffuseTextureEnabled(TT) {
+            tT.b.DiffuseTextureEnabled = TT
           }
           static get DetailTextureEnabled() {
-            return sv.e.DetailTextureEnabled
+            return tT.b.DetailTextureEnabled
           }
-          static set DetailTextureEnabled(vv) {
-            sv.e.DetailTextureEnabled = vv
+          static set DetailTextureEnabled(TT) {
+            tT.b.DetailTextureEnabled = TT
           }
           static get AmbientTextureEnabled() {
-            return sv.e.AmbientTextureEnabled
+            return tT.b.AmbientTextureEnabled
           }
-          static set AmbientTextureEnabled(vv) {
-            sv.e.AmbientTextureEnabled = vv
+          static set AmbientTextureEnabled(TT) {
+            tT.b.AmbientTextureEnabled = TT
           }
           static get OpacityTextureEnabled() {
-            return sv.e.OpacityTextureEnabled
+            return tT.b.OpacityTextureEnabled
           }
-          static set OpacityTextureEnabled(vv) {
-            sv.e.OpacityTextureEnabled = vv
+          static set OpacityTextureEnabled(TT) {
+            tT.b.OpacityTextureEnabled = TT
           }
           static get ReflectionTextureEnabled() {
-            return sv.e.ReflectionTextureEnabled
+            return tT.b.ReflectionTextureEnabled
           }
-          static set ReflectionTextureEnabled(vv) {
-            sv.e.ReflectionTextureEnabled = vv
+          static set ReflectionTextureEnabled(TT) {
+            tT.b.ReflectionTextureEnabled = TT
           }
           static get EmissiveTextureEnabled() {
-            return sv.e.EmissiveTextureEnabled
+            return tT.b.EmissiveTextureEnabled
           }
-          static set EmissiveTextureEnabled(vv) {
-            sv.e.EmissiveTextureEnabled = vv
+          static set EmissiveTextureEnabled(TT) {
+            tT.b.EmissiveTextureEnabled = TT
           }
           static get SpecularTextureEnabled() {
-            return sv.e.SpecularTextureEnabled
+            return tT.b.SpecularTextureEnabled
           }
-          static set SpecularTextureEnabled(vv) {
-            sv.e.SpecularTextureEnabled = vv
+          static set SpecularTextureEnabled(TT) {
+            tT.b.SpecularTextureEnabled = TT
           }
           static get BumpTextureEnabled() {
-            return sv.e.BumpTextureEnabled
+            return tT.b.BumpTextureEnabled
           }
-          static set BumpTextureEnabled(vv) {
-            sv.e.BumpTextureEnabled = vv
+          static set BumpTextureEnabled(TT) {
+            tT.b.BumpTextureEnabled = TT
           }
           static get LightmapTextureEnabled() {
-            return sv.e.LightmapTextureEnabled
+            return tT.b.LightmapTextureEnabled
           }
-          static set LightmapTextureEnabled(vv) {
-            sv.e.LightmapTextureEnabled = vv
+          static set LightmapTextureEnabled(TT) {
+            tT.b.LightmapTextureEnabled = TT
           }
           static get RefractionTextureEnabled() {
-            return sv.e.RefractionTextureEnabled
+            return tT.b.RefractionTextureEnabled
           }
-          static set RefractionTextureEnabled(vv) {
-            sv.e.RefractionTextureEnabled = vv
+          static set RefractionTextureEnabled(TT) {
+            tT.b.RefractionTextureEnabled = TT
           }
           static get ColorGradingTextureEnabled() {
-            return sv.e.ColorGradingTextureEnabled
+            return tT.b.ColorGradingTextureEnabled
           }
-          static set ColorGradingTextureEnabled(vv) {
-            sv.e.ColorGradingTextureEnabled = vv
+          static set ColorGradingTextureEnabled(TT) {
+            tT.b.ColorGradingTextureEnabled = TT
           }
           static get FresnelEnabled() {
-            return sv.e.FresnelEnabled
+            return tT.b.FresnelEnabled
           }
-          static set FresnelEnabled(vv) {
-            sv.e.FresnelEnabled = vv
+          static set FresnelEnabled(TT) {
+            tT.b.FresnelEnabled = TT
           }
-        }, zv = new WeakMap, lv = new WeakMap, wv = new WeakMap, Yv = new WeakMap, nv = new WeakMap, Ov = new WeakMap, Dv = new WeakMap, Kv = new WeakMap, Uv = new WeakMap, tv = new WeakMap, qv = new WeakMap, Iv = new WeakMap, Qv = new WeakMap, Zv = new WeakMap, Av = new WeakMap, Lv = new WeakMap, Hv = new WeakMap, Mv = new WeakMap, yv = new WeakMap, Bv = new WeakMap, Jv = new WeakMap, Ev = new WeakMap, ov = new WeakMap, bv = new WeakMap, rv = new WeakMap, kv = new WeakMap, Xv = new WeakMap, uv = new WeakMap, vz = new WeakMap, zz = new WeakMap, Pz = new WeakMap, hz = new WeakMap, (() => {
-          const zv = "function" === typeof Symbol && Symbol.metadata ? Object.create(nP[Symbol.metadata] ?? null) : void 0;
-          Sz = [(0, Sv.E)("diffuseTexture")], ez = [(0, Sv.e)("_markAllSubMeshesAsTexturesAndMiscDirty")], gz = [(0, Sv.E)("ambientTexture")], pz = [(0, Sv.e)("_markAllSubMeshesAsTexturesDirty")], dz = [(0, Sv.E)("opacityTexture")], Nz = [(0, Sv.e)("_markAllSubMeshesAsTexturesAndMiscDirty")], lz = [(0, Sv.E)("reflectionTexture")], Tz = [(0, Sv.e)("_markAllSubMeshesAsTexturesDirty")], Wz = [(0, Sv.E)("emissiveTexture")], wz = [(0, Sv.e)("_markAllSubMeshesAsTexturesDirty")], az = [(0, Sv.E)("specularTexture")], sz = [(0, Sv.e)("_markAllSubMeshesAsTexturesDirty")], Cz = [(0, Sv.E)("bumpTexture")], iz = [(0, Sv.e)("_markAllSubMeshesAsTexturesDirty")], cz = [(0, Sv.E)("lightmapTexture")], Gz = [(0, Sv.e)("_markAllSubMeshesAsTexturesDirty")], mz = [(0, Sv.E)("refractionTexture")], jz = [(0, Sv.e)("_markAllSubMeshesAsTexturesDirty")], fz = [(0, Sv.n)("ambient")], Fz = [(0, Sv.n)("diffuse")], Yz = [(0, Sv.n)("specular")], nz = [(0, Sv.n)("emissive")], Oz = [(0, Sv.L)()], Dz = [(0, Sv.L)("useAlphaFromDiffuseTexture")], Kz = [() => ({
-            init(vv) {
-              return void 0 === vv && "_useAlphaFromDiffuseTexture" in this || (this._useAlphaFromDiffuseTexture = vv), vv
+        }, kT = new WeakMap, IT = new WeakMap, jT = new WeakMap, PT = new WeakMap, wT = new WeakMap, mT = new WeakMap, bT = new WeakMap, zT = new WeakMap, oT = new WeakMap, GT = new WeakMap, VT = new WeakMap, ET = new WeakMap, ZT = new WeakMap, uT = new WeakMap, XT = new WeakMap, dT = new WeakMap, LT = new WeakMap, RT = new WeakMap, gT = new WeakMap, UT = new WeakMap, YT = new WeakMap, BT = new WeakMap, WT = new WeakMap, nT = new WeakMap, pT = new WeakMap, iT = new WeakMap, qT = new WeakMap, sT = new WeakMap, Tk = new WeakMap, kk = new WeakMap, ck = new WeakMap, lk = new WeakMap, (() => {
+          const kT = "function" === typeof Symbol && Symbol.metadata ? Object.create(mc[Symbol.metadata] ?? null) : void 0;
+          Mk = [(0, MT.A)("diffuseTexture")], Kk = [(0, MT.c)("_markAllSubMeshesAsTexturesAndMiscDirty")], Ok = [(0, MT.A)("ambientTexture")], yk = [(0, MT.c)("_markAllSubMeshesAsTexturesDirty")], fk = [(0, MT.A)("opacityTexture")], xk = [(0, MT.c)("_markAllSubMeshesAsTexturesAndMiscDirty")], Ik = [(0, MT.A)("reflectionTexture")], Ak = [(0, MT.c)("_markAllSubMeshesAsTexturesDirty")], Ck = [(0, MT.A)("emissiveTexture")], jk = [(0, MT.c)("_markAllSubMeshesAsTexturesDirty")], vk = [(0, MT.A)("specularTexture")], tk = [(0, MT.c)("_markAllSubMeshesAsTexturesDirty")], hk = [(0, MT.A)("bumpTexture")], Nk = [(0, MT.c)("_markAllSubMeshesAsTexturesDirty")], Qk = [(0, MT.A)("lightmapTexture")], Sk = [(0, MT.c)("_markAllSubMeshesAsTexturesDirty")], Dk = [(0, MT.A)("refractionTexture")], ak = [(0, MT.c)("_markAllSubMeshesAsTexturesDirty")], Fk = [(0, MT.m)("ambient")], rk = [(0, MT.m)("diffuse")], Pk = [(0, MT.m)("specular")], wk = [(0, MT.m)("emissive")], mk = [(0, MT.J)()], bk = [(0, MT.J)("useAlphaFromDiffuseTexture")], zk = [() => ({
+            init(TT) {
+              return void 0 === TT && "_useAlphaFromDiffuseTexture" in this || (this._useAlphaFromDiffuseTexture = TT), TT
             },
             get() {
               return this._useAlphaFromDiffuseTexture
             },
-            set(vv) {
-              this._useAlphaFromDiffuseTexture = vv
+            set(TT) {
+              this._useAlphaFromDiffuseTexture = TT
             }
-          })], Vz = [(0, Sv.L)("useEmissiveAsIllumination")], Uz = [(0, Sv.e)("_markAllSubMeshesAsTexturesDirty")], Rz = [(0, Sv.L)("linkEmissiveWithDiffuse")], xz = [(0, Sv.e)("_markAllSubMeshesAsTexturesDirty")], tz = [(0, Sv.L)("useSpecularOverAlpha")], qz = [(0, Sv.e)("_markAllSubMeshesAsTexturesDirty")], Iz = [(0, Sv.L)("useReflectionOverAlpha")], Qz = [(0, Sv.e)("_markAllSubMeshesAsTexturesDirty")], Zz = [(0, Sv.L)("disableLighting")], Az = [(0, Sv.e)("_markAllSubMeshesAsLightsDirty")], Lz = [(0, Sv.L)("useObjectSpaceNormalMap")], Hz = [(0, Sv.e)("_markAllSubMeshesAsTexturesDirty")], Mz = [(0, Sv.L)("useParallax")], yz = [(0, Sv.e)("_markAllSubMeshesAsTexturesDirty")], Bz = [(0, Sv.L)("useParallaxOcclusion")], Jz = [(0, Sv.e)("_markAllSubMeshesAsTexturesDirty")], Ez = [(0, Sv.L)()], oz = [(0, Sv.L)("roughness")], bz = [(0, Sv.e)("_markAllSubMeshesAsTexturesDirty")], rz = [(0, Sv.L)()], kz = [(0, Sv.L)()], Xz = [(0, Sv.L)()], uz = [(0, Sv.L)("useLightmapAsShadowmap")], vP = [(0, Sv.e)("_markAllSubMeshesAsTexturesDirty")], zP = [(0, Sv.t)("diffuseFresnelParameters")], PP = [(0, Sv.e)("_markAllSubMeshesAsFresnelDirty")], hP = [(0, Sv.t)("opacityFresnelParameters")], SP = [(0, Sv.e)("_markAllSubMeshesAsFresnelAndMiscDirty")], eP = [(0, Sv.t)("reflectionFresnelParameters")], gP = [(0, Sv.e)("_markAllSubMeshesAsFresnelDirty")], pP = [(0, Sv.t)("refractionFresnelParameters")], dP = [(0, Sv.e)("_markAllSubMeshesAsFresnelDirty")], NP = [(0, Sv.t)("emissiveFresnelParameters")], lP = [(0, Sv.e)("_markAllSubMeshesAsFresnelDirty")], TP = [(0, Sv.L)("useReflectionFresnelFromSpecular")], WP = [(0, Sv.e)("_markAllSubMeshesAsFresnelDirty")], wP = [(0, Sv.L)("useGlossinessFromSpecularMapAlpha")], aP = [(0, Sv.e)("_markAllSubMeshesAsTexturesDirty")], sP = [(0, Sv.L)("maxSimultaneousLights")], CP = [(0, Sv.e)("_markAllSubMeshesAsLightsDirty")], iP = [(0, Sv.L)("invertNormalMapX")], cP = [(0, Sv.e)("_markAllSubMeshesAsTexturesDirty")], GP = [(0, Sv.L)("invertNormalMapY")], mP = [(0, Sv.e)("_markAllSubMeshesAsTexturesDirty")], jP = [(0, Sv.L)("twoSidedLighting")], fP = [(0, Sv.e)("_markAllSubMeshesAsTexturesDirty")], FP = [(0, Sv.L)("applyDecalMapAfterDetailMap")], YP = [(0, Sv.e)("_markAllSubMeshesAsMiscDirty")], (0, hv.e)(vv, null, ez, {
+          })], Jk = [(0, MT.J)("useEmissiveAsIllumination")], Hk = [(0, MT.c)("_markAllSubMeshesAsTexturesDirty")], ek = [(0, MT.J)("linkEmissiveWithDiffuse")], Gk = [(0, MT.c)("_markAllSubMeshesAsTexturesDirty")], Vk = [(0, MT.J)("useSpecularOverAlpha")], Ek = [(0, MT.c)("_markAllSubMeshesAsTexturesDirty")], Zk = [(0, MT.J)("useReflectionOverAlpha")], uk = [(0, MT.c)("_markAllSubMeshesAsTexturesDirty")], Xk = [(0, MT.J)("disableLighting")], dk = [(0, MT.c)("_markAllSubMeshesAsLightsDirty")], Lk = [(0, MT.J)("useObjectSpaceNormalMap")], Rk = [(0, MT.c)("_markAllSubMeshesAsTexturesDirty")], gk = [(0, MT.J)("useParallax")], Uk = [(0, MT.c)("_markAllSubMeshesAsTexturesDirty")], Yk = [(0, MT.J)("useParallaxOcclusion")], Bk = [(0, MT.c)("_markAllSubMeshesAsTexturesDirty")], Wk = [(0, MT.J)()], nk = [(0, MT.J)("roughness")], pk = [(0, MT.c)("_markAllSubMeshesAsTexturesDirty")], ik = [(0, MT.J)()], qk = [(0, MT.J)()], sk = [(0, MT.J)()], Tc = [(0, MT.J)("useLightmapAsShadowmap")], kc = [(0, MT.c)("_markAllSubMeshesAsTexturesDirty")], cc = [(0, MT.p)("diffuseFresnelParameters")], lc = [(0, MT.c)("_markAllSubMeshesAsFresnelDirty")], Mc = [(0, MT.p)("opacityFresnelParameters")], Kc = [(0, MT.c)("_markAllSubMeshesAsFresnelAndMiscDirty")], Oc = [(0, MT.p)("reflectionFresnelParameters")], yc = [(0, MT.c)("_markAllSubMeshesAsFresnelDirty")], fc = [(0, MT.p)("refractionFresnelParameters")], xc = [(0, MT.c)("_markAllSubMeshesAsFresnelDirty")], Ic = [(0, MT.p)("emissiveFresnelParameters")], Ac = [(0, MT.c)("_markAllSubMeshesAsFresnelDirty")], Cc = [(0, MT.J)("useReflectionFresnelFromSpecular")], jc = [(0, MT.c)("_markAllSubMeshesAsFresnelDirty")], vc = [(0, MT.J)("useGlossinessFromSpecularMapAlpha")], tc = [(0, MT.c)("_markAllSubMeshesAsTexturesDirty")], hc = [(0, MT.J)("maxSimultaneousLights")], Nc = [(0, MT.c)("_markAllSubMeshesAsLightsDirty")], Qc = [(0, MT.J)("invertNormalMapX")], Sc = [(0, MT.c)("_markAllSubMeshesAsTexturesDirty")], Dc = [(0, MT.J)("invertNormalMapY")], ac = [(0, MT.c)("_markAllSubMeshesAsTexturesDirty")], Fc = [(0, MT.J)("twoSidedLighting")], rc = [(0, MT.c)("_markAllSubMeshesAsTexturesDirty")], Pc = [(0, MT.J)("applyDecalMapAfterDetailMap")], wc = [(0, MT.c)("_markAllSubMeshesAsMiscDirty")], (0, lT.e)(TT, null, Kk, {
             kind: "accessor",
             name: "diffuseTexture",
             static: !1,
             private: !1,
             access: {
-              has: vv => "diffuseTexture" in vv,
-              get: vv => vv.diffuseTexture,
-              set: (vv, zv) => {
-                vv.diffuseTexture = zv
+              has: TT => "diffuseTexture" in TT,
+              get: TT => TT.diffuseTexture,
+              set: (TT, kT) => {
+                TT.diffuseTexture = kT
               }
             },
-            metadata: zv
-          }, KP, VP), (0, hv.e)(vv, null, pz, {
+            metadata: kT
+          }, Jc, oc), (0, lT.e)(TT, null, yk, {
             kind: "accessor",
             name: "ambientTexture",
             static: !1,
             private: !1,
             access: {
-              has: vv => "ambientTexture" in vv,
-              get: vv => vv.ambientTexture,
-              set: (vv, zv) => {
-                vv.ambientTexture = zv
+              has: TT => "ambientTexture" in TT,
+              get: TT => TT.ambientTexture,
+              set: (TT, kT) => {
+                TT.ambientTexture = kT
               }
             },
-            metadata: zv
-          }, xP, tP), (0, hv.e)(vv, null, Nz, {
+            metadata: kT
+          }, Gc, Vc), (0, lT.e)(TT, null, xk, {
             kind: "accessor",
             name: "opacityTexture",
             static: !1,
             private: !1,
             access: {
-              has: vv => "opacityTexture" in vv,
-              get: vv => vv.opacityTexture,
-              set: (vv, zv) => {
-                vv.opacityTexture = zv
+              has: TT => "opacityTexture" in TT,
+              get: TT => TT.opacityTexture,
+              set: (TT, kT) => {
+                TT.opacityTexture = kT
               }
             },
-            metadata: zv
-          }, QP, ZP), (0, hv.e)(vv, null, Tz, {
+            metadata: kT
+          }, uc, Xc), (0, lT.e)(TT, null, Ak, {
             kind: "accessor",
             name: "reflectionTexture",
             static: !1,
             private: !1,
             access: {
-              has: vv => "reflectionTexture" in vv,
-              get: vv => vv.reflectionTexture,
-              set: (vv, zv) => {
-                vv.reflectionTexture = zv
+              has: TT => "reflectionTexture" in TT,
+              get: TT => TT.reflectionTexture,
+              set: (TT, kT) => {
+                TT.reflectionTexture = kT
               }
             },
-            metadata: zv
-          }, HP, MP), (0, hv.e)(vv, null, wz, {
+            metadata: kT
+          }, Rc, gc), (0, lT.e)(TT, null, jk, {
             kind: "accessor",
             name: "emissiveTexture",
             static: !1,
             private: !1,
             access: {
-              has: vv => "emissiveTexture" in vv,
-              get: vv => vv.emissiveTexture,
-              set: (vv, zv) => {
-                vv.emissiveTexture = zv
+              has: TT => "emissiveTexture" in TT,
+              get: TT => TT.emissiveTexture,
+              set: (TT, kT) => {
+                TT.emissiveTexture = kT
               }
             },
-            metadata: zv
-          }, JP, EP), (0, hv.e)(vv, null, sz, {
+            metadata: kT
+          }, Bc, Wc), (0, lT.e)(TT, null, tk, {
             kind: "accessor",
             name: "specularTexture",
             static: !1,
             private: !1,
             access: {
-              has: vv => "specularTexture" in vv,
-              get: vv => vv.specularTexture,
-              set: (vv, zv) => {
-                vv.specularTexture = zv
+              has: TT => "specularTexture" in TT,
+              get: TT => TT.specularTexture,
+              set: (TT, kT) => {
+                TT.specularTexture = kT
               }
             },
-            metadata: zv
-          }, rP, kP), (0, hv.e)(vv, null, iz, {
+            metadata: kT
+          }, ic, qc), (0, lT.e)(TT, null, Nk, {
             kind: "accessor",
             name: "bumpTexture",
             static: !1,
             private: !1,
             access: {
-              has: vv => "bumpTexture" in vv,
-              get: vv => vv.bumpTexture,
-              set: (vv, zv) => {
-                vv.bumpTexture = zv
+              has: TT => "bumpTexture" in TT,
+              get: TT => TT.bumpTexture,
+              set: (TT, kT) => {
+                TT.bumpTexture = kT
               }
             },
-            metadata: zv
-          }, vh, zh), (0, hv.e)(vv, null, Gz, {
+            metadata: kT
+          }, kl, cl), (0, lT.e)(TT, null, Sk, {
             kind: "accessor",
             name: "lightmapTexture",
             static: !1,
             private: !1,
             access: {
-              has: vv => "lightmapTexture" in vv,
-              get: vv => vv.lightmapTexture,
-              set: (vv, zv) => {
-                vv.lightmapTexture = zv
+              has: TT => "lightmapTexture" in TT,
+              get: TT => TT.lightmapTexture,
+              set: (TT, kT) => {
+                TT.lightmapTexture = kT
               }
             },
-            metadata: zv
-          }, Sh, eh), (0, hv.e)(vv, null, jz, {
+            metadata: kT
+          }, Kl, Ol), (0, lT.e)(TT, null, ak, {
             kind: "accessor",
             name: "refractionTexture",
             static: !1,
             private: !1,
             access: {
-              has: vv => "refractionTexture" in vv,
-              get: vv => vv.refractionTexture,
-              set: (vv, zv) => {
-                vv.refractionTexture = zv
+              has: TT => "refractionTexture" in TT,
+              get: TT => TT.refractionTexture,
+              set: (TT, kT) => {
+                TT.refractionTexture = kT
               }
             },
-            metadata: zv
-          }, dh, Nh), (0, hv.e)(vv, null, Kz, {
+            metadata: kT
+          }, xl, Il), (0, lT.e)(TT, null, zk, {
             kind: "accessor",
             name: "useAlphaFromDiffuseTexture",
             static: !1,
             private: !1,
             access: {
-              has: vv => "useAlphaFromDiffuseTexture" in vv,
-              get: vv => vv.useAlphaFromDiffuseTexture,
-              set: (vv, zv) => {
-                vv.useAlphaFromDiffuseTexture = zv
+              has: TT => "useAlphaFromDiffuseTexture" in TT,
+              get: TT => TT.useAlphaFromDiffuseTexture,
+              set: (TT, kT) => {
+                TT.useAlphaFromDiffuseTexture = kT
               }
             },
-            metadata: zv
-          }, fh, Fh), (0, hv.e)(vv, null, Uz, {
+            metadata: kT
+          }, rl, Pl), (0, lT.e)(TT, null, Hk, {
             kind: "accessor",
             name: "useEmissiveAsIllumination",
             static: !1,
             private: !1,
             access: {
-              has: vv => "useEmissiveAsIllumination" in vv,
-              get: vv => vv.useEmissiveAsIllumination,
-              set: (vv, zv) => {
-                vv.useEmissiveAsIllumination = zv
+              has: TT => "useEmissiveAsIllumination" in TT,
+              get: TT => TT.useEmissiveAsIllumination,
+              set: (TT, kT) => {
+                TT.useEmissiveAsIllumination = kT
               }
             },
-            metadata: zv
-          }, Oh, Dh), (0, hv.e)(vv, null, xz, {
+            metadata: kT
+          }, bl, zl), (0, lT.e)(TT, null, Gk, {
             kind: "accessor",
             name: "linkEmissiveWithDiffuse",
             static: !1,
             private: !1,
             access: {
-              has: vv => "linkEmissiveWithDiffuse" in vv,
-              get: vv => vv.linkEmissiveWithDiffuse,
-              set: (vv, zv) => {
-                vv.linkEmissiveWithDiffuse = zv
+              has: TT => "linkEmissiveWithDiffuse" in TT,
+              get: TT => TT.linkEmissiveWithDiffuse,
+              set: (TT, kT) => {
+                TT.linkEmissiveWithDiffuse = kT
               }
             },
-            metadata: zv
-          }, Uh, Rh), (0, hv.e)(vv, null, qz, {
+            metadata: kT
+          }, Hl, el), (0, lT.e)(TT, null, Ek, {
             kind: "accessor",
             name: "useSpecularOverAlpha",
             static: !1,
             private: !1,
             access: {
-              has: vv => "useSpecularOverAlpha" in vv,
-              get: vv => vv.useSpecularOverAlpha,
-              set: (vv, zv) => {
-                vv.useSpecularOverAlpha = zv
+              has: TT => "useSpecularOverAlpha" in TT,
+              get: TT => TT.useSpecularOverAlpha,
+              set: (TT, kT) => {
+                TT.useSpecularOverAlpha = kT
               }
             },
-            metadata: zv
-          }, qh, Ih), (0, hv.e)(vv, null, Qz, {
+            metadata: kT
+          }, El, Zl), (0, lT.e)(TT, null, uk, {
             kind: "accessor",
             name: "useReflectionOverAlpha",
             static: !1,
             private: !1,
             access: {
-              has: vv => "useReflectionOverAlpha" in vv,
-              get: vv => vv.useReflectionOverAlpha,
-              set: (vv, zv) => {
-                vv.useReflectionOverAlpha = zv
+              has: TT => "useReflectionOverAlpha" in TT,
+              get: TT => TT.useReflectionOverAlpha,
+              set: (TT, kT) => {
+                TT.useReflectionOverAlpha = kT
               }
             },
-            metadata: zv
-          }, Ah, Lh), (0, hv.e)(vv, null, Az, {
+            metadata: kT
+          }, dl, Ll), (0, lT.e)(TT, null, dk, {
             kind: "accessor",
             name: "disableLighting",
             static: !1,
             private: !1,
             access: {
-              has: vv => "disableLighting" in vv,
-              get: vv => vv.disableLighting,
-              set: (vv, zv) => {
-                vv.disableLighting = zv
+              has: TT => "disableLighting" in TT,
+              get: TT => TT.disableLighting,
+              set: (TT, kT) => {
+                TT.disableLighting = kT
               }
             },
-            metadata: zv
-          }, yh, Bh), (0, hv.e)(vv, null, Hz, {
+            metadata: kT
+          }, Ul, Yl), (0, lT.e)(TT, null, Rk, {
             kind: "accessor",
             name: "useObjectSpaceNormalMap",
             static: !1,
             private: !1,
             access: {
-              has: vv => "useObjectSpaceNormalMap" in vv,
-              get: vv => vv.useObjectSpaceNormalMap,
-              set: (vv, zv) => {
-                vv.useObjectSpaceNormalMap = zv
+              has: TT => "useObjectSpaceNormalMap" in TT,
+              get: TT => TT.useObjectSpaceNormalMap,
+              set: (TT, kT) => {
+                TT.useObjectSpaceNormalMap = kT
               }
             },
-            metadata: zv
-          }, oh, bh), (0, hv.e)(vv, null, yz, {
+            metadata: kT
+          }, nl, pl), (0, lT.e)(TT, null, Uk, {
             kind: "accessor",
             name: "useParallax",
             static: !1,
             private: !1,
             access: {
-              has: vv => "useParallax" in vv,
-              get: vv => vv.useParallax,
-              set: (vv, zv) => {
-                vv.useParallax = zv
+              has: TT => "useParallax" in TT,
+              get: TT => TT.useParallax,
+              set: (TT, kT) => {
+                TT.useParallax = kT
               }
             },
-            metadata: zv
-          }, Xh, uh), (0, hv.e)(vv, null, Jz, {
+            metadata: kT
+          }, sl, TM), (0, lT.e)(TT, null, Bk, {
             kind: "accessor",
             name: "useParallaxOcclusion",
             static: !1,
             private: !1,
             access: {
-              has: vv => "useParallaxOcclusion" in vv,
-              get: vv => vv.useParallaxOcclusion,
-              set: (vv, zv) => {
-                vv.useParallaxOcclusion = zv
+              has: TT => "useParallaxOcclusion" in TT,
+              get: TT => TT.useParallaxOcclusion,
+              set: (TT, kT) => {
+                TT.useParallaxOcclusion = kT
               }
             },
-            metadata: zv
-          }, PS, hS), (0, hv.e)(vv, null, bz, {
+            metadata: kT
+          }, lM, MM), (0, lT.e)(TT, null, pk, {
             kind: "accessor",
             name: "roughness",
             static: !1,
             private: !1,
             access: {
-              has: vv => "roughness" in vv,
-              get: vv => vv.roughness,
-              set: (vv, zv) => {
-                vv.roughness = zv
+              has: TT => "roughness" in TT,
+              get: TT => TT.roughness,
+              set: (TT, kT) => {
+                TT.roughness = kT
               }
             },
-            metadata: zv
-          }, dS, NS), (0, hv.e)(vv, null, vP, {
+            metadata: kT
+          }, xM, IM), (0, lT.e)(TT, null, kc, {
             kind: "accessor",
             name: "useLightmapAsShadowmap",
             static: !1,
             private: !1,
             access: {
-              has: vv => "useLightmapAsShadowmap" in vv,
-              get: vv => vv.useLightmapAsShadowmap,
-              set: (vv, zv) => {
-                vv.useLightmapAsShadowmap = zv
+              has: TT => "useLightmapAsShadowmap" in TT,
+              get: TT => TT.useLightmapAsShadowmap,
+              set: (TT, kT) => {
+                TT.useLightmapAsShadowmap = kT
               }
             },
-            metadata: zv
-          }, cS, GS), (0, hv.e)(vv, null, PP, {
+            metadata: kT
+          }, SM, DM), (0, lT.e)(TT, null, lc, {
             kind: "accessor",
             name: "diffuseFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: vv => "diffuseFresnelParameters" in vv,
-              get: vv => vv.diffuseFresnelParameters,
-              set: (vv, zv) => {
-                vv.diffuseFresnelParameters = zv
+              has: TT => "diffuseFresnelParameters" in TT,
+              get: TT => TT.diffuseFresnelParameters,
+              set: (TT, kT) => {
+                TT.diffuseFresnelParameters = kT
               }
             },
-            metadata: zv
-          }, fS, FS), (0, hv.e)(vv, null, SP, {
+            metadata: kT
+          }, rM, PM), (0, lT.e)(TT, null, Kc, {
             kind: "accessor",
             name: "opacityFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: vv => "opacityFresnelParameters" in vv,
-              get: vv => vv.opacityFresnelParameters,
-              set: (vv, zv) => {
-                vv.opacityFresnelParameters = zv
+              has: TT => "opacityFresnelParameters" in TT,
+              get: TT => TT.opacityFresnelParameters,
+              set: (TT, kT) => {
+                TT.opacityFresnelParameters = kT
               }
             },
-            metadata: zv
-          }, OS, DS), (0, hv.e)(vv, null, gP, {
+            metadata: kT
+          }, bM, zM), (0, lT.e)(TT, null, yc, {
             kind: "accessor",
             name: "reflectionFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: vv => "reflectionFresnelParameters" in vv,
-              get: vv => vv.reflectionFresnelParameters,
-              set: (vv, zv) => {
-                vv.reflectionFresnelParameters = zv
+              has: TT => "reflectionFresnelParameters" in TT,
+              get: TT => TT.reflectionFresnelParameters,
+              set: (TT, kT) => {
+                TT.reflectionFresnelParameters = kT
               }
             },
-            metadata: zv
-          }, US, RS), (0, hv.e)(vv, null, dP, {
+            metadata: kT
+          }, HM, eM), (0, lT.e)(TT, null, xc, {
             kind: "accessor",
             name: "refractionFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: vv => "refractionFresnelParameters" in vv,
-              get: vv => vv.refractionFresnelParameters,
-              set: (vv, zv) => {
-                vv.refractionFresnelParameters = zv
+              has: TT => "refractionFresnelParameters" in TT,
+              get: TT => TT.refractionFresnelParameters,
+              set: (TT, kT) => {
+                TT.refractionFresnelParameters = kT
               }
             },
-            metadata: zv
-          }, qS, IS), (0, hv.e)(vv, null, lP, {
+            metadata: kT
+          }, EM, ZM), (0, lT.e)(TT, null, Ac, {
             kind: "accessor",
             name: "emissiveFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: vv => "emissiveFresnelParameters" in vv,
-              get: vv => vv.emissiveFresnelParameters,
-              set: (vv, zv) => {
-                vv.emissiveFresnelParameters = zv
+              has: TT => "emissiveFresnelParameters" in TT,
+              get: TT => TT.emissiveFresnelParameters,
+              set: (TT, kT) => {
+                TT.emissiveFresnelParameters = kT
               }
             },
-            metadata: zv
-          }, AS, LS), (0, hv.e)(vv, null, WP, {
+            metadata: kT
+          }, dM, LM), (0, lT.e)(TT, null, jc, {
             kind: "accessor",
             name: "useReflectionFresnelFromSpecular",
             static: !1,
             private: !1,
             access: {
-              has: vv => "useReflectionFresnelFromSpecular" in vv,
-              get: vv => vv.useReflectionFresnelFromSpecular,
-              set: (vv, zv) => {
-                vv.useReflectionFresnelFromSpecular = zv
+              has: TT => "useReflectionFresnelFromSpecular" in TT,
+              get: TT => TT.useReflectionFresnelFromSpecular,
+              set: (TT, kT) => {
+                TT.useReflectionFresnelFromSpecular = kT
               }
             },
-            metadata: zv
-          }, yS, BS), (0, hv.e)(vv, null, aP, {
+            metadata: kT
+          }, UM, YM), (0, lT.e)(TT, null, tc, {
             kind: "accessor",
             name: "useGlossinessFromSpecularMapAlpha",
             static: !1,
             private: !1,
             access: {
-              has: vv => "useGlossinessFromSpecularMapAlpha" in vv,
-              get: vv => vv.useGlossinessFromSpecularMapAlpha,
-              set: (vv, zv) => {
-                vv.useGlossinessFromSpecularMapAlpha = zv
+              has: TT => "useGlossinessFromSpecularMapAlpha" in TT,
+              get: TT => TT.useGlossinessFromSpecularMapAlpha,
+              set: (TT, kT) => {
+                TT.useGlossinessFromSpecularMapAlpha = kT
               }
             },
-            metadata: zv
-          }, oS, bS), (0, hv.e)(vv, null, CP, {
+            metadata: kT
+          }, nM, pM), (0, lT.e)(TT, null, Nc, {
             kind: "accessor",
             name: "maxSimultaneousLights",
             static: !1,
             private: !1,
             access: {
-              has: vv => "maxSimultaneousLights" in vv,
-              get: vv => vv.maxSimultaneousLights,
-              set: (vv, zv) => {
-                vv.maxSimultaneousLights = zv
+              has: TT => "maxSimultaneousLights" in TT,
+              get: TT => TT.maxSimultaneousLights,
+              set: (TT, kT) => {
+                TT.maxSimultaneousLights = kT
               }
             },
-            metadata: zv
-          }, XS, uS), (0, hv.e)(vv, null, cP, {
+            metadata: kT
+          }, sM, TK), (0, lT.e)(TT, null, Sc, {
             kind: "accessor",
             name: "invertNormalMapX",
             static: !1,
             private: !1,
             access: {
-              has: vv => "invertNormalMapX" in vv,
-              get: vv => vv.invertNormalMapX,
-              set: (vv, zv) => {
-                vv.invertNormalMapX = zv
+              has: TT => "invertNormalMapX" in TT,
+              get: TT => TT.invertNormalMapX,
+              set: (TT, kT) => {
+                TT.invertNormalMapX = kT
               }
             },
-            metadata: zv
-          }, Pe, he), (0, hv.e)(vv, null, mP, {
+            metadata: kT
+          }, lK, MK), (0, lT.e)(TT, null, ac, {
             kind: "accessor",
             name: "invertNormalMapY",
             static: !1,
             private: !1,
             access: {
-              has: vv => "invertNormalMapY" in vv,
-              get: vv => vv.invertNormalMapY,
-              set: (vv, zv) => {
-                vv.invertNormalMapY = zv
+              has: TT => "invertNormalMapY" in TT,
+              get: TT => TT.invertNormalMapY,
+              set: (TT, kT) => {
+                TT.invertNormalMapY = kT
               }
             },
-            metadata: zv
-          }, ge, pe), (0, hv.e)(vv, null, fP, {
+            metadata: kT
+          }, yK, fK), (0, lT.e)(TT, null, rc, {
             kind: "accessor",
             name: "twoSidedLighting",
             static: !1,
             private: !1,
             access: {
-              has: vv => "twoSidedLighting" in vv,
-              get: vv => vv.twoSidedLighting,
-              set: (vv, zv) => {
-                vv.twoSidedLighting = zv
+              has: TT => "twoSidedLighting" in TT,
+              get: TT => TT.twoSidedLighting,
+              set: (TT, kT) => {
+                TT.twoSidedLighting = kT
               }
             },
-            metadata: zv
-          }, le, Te), (0, hv.e)(vv, null, YP, {
+            metadata: kT
+          }, AK, CK), (0, lT.e)(TT, null, wc, {
             kind: "accessor",
             name: "applyDecalMapAfterDetailMap",
             static: !1,
             private: !1,
             access: {
-              has: vv => "applyDecalMapAfterDetailMap" in vv,
-              get: vv => vv.applyDecalMapAfterDetailMap,
-              set: (vv, zv) => {
-                vv.applyDecalMapAfterDetailMap = zv
+              has: TT => "applyDecalMapAfterDetailMap" in TT,
+              get: TT => TT.applyDecalMapAfterDetailMap,
+              set: (TT, kT) => {
+                TT.applyDecalMapAfterDetailMap = kT
               }
             },
-            metadata: zv
-          }, ae, se), (0, hv.e)(null, null, Sz, {
+            metadata: kT
+          }, tK, hK), (0, lT.e)(null, null, Mk, {
             kind: "field",
             name: "_diffuseTexture",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_diffuseTexture" in vv,
-              get: vv => vv._diffuseTexture,
-              set: (vv, zv) => {
-                vv._diffuseTexture = zv
+              has: TT => "_diffuseTexture" in TT,
+              get: TT => TT._diffuseTexture,
+              set: (TT, kT) => {
+                TT._diffuseTexture = kT
               }
             },
-            metadata: zv
-          }, OP, DP), (0, hv.e)(null, null, gz, {
+            metadata: kT
+          }, bc, zc), (0, lT.e)(null, null, Ok, {
             kind: "field",
             name: "_ambientTexture",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_ambientTexture" in vv,
-              get: vv => vv._ambientTexture,
-              set: (vv, zv) => {
-                vv._ambientTexture = zv
+              has: TT => "_ambientTexture" in TT,
+              get: TT => TT._ambientTexture,
+              set: (TT, kT) => {
+                TT._ambientTexture = kT
               }
             },
-            metadata: zv
-          }, UP, RP), (0, hv.e)(null, null, dz, {
+            metadata: kT
+          }, Hc, ec), (0, lT.e)(null, null, fk, {
             kind: "field",
             name: "_opacityTexture",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_opacityTexture" in vv,
-              get: vv => vv._opacityTexture,
-              set: (vv, zv) => {
-                vv._opacityTexture = zv
+              has: TT => "_opacityTexture" in TT,
+              get: TT => TT._opacityTexture,
+              set: (TT, kT) => {
+                TT._opacityTexture = kT
               }
             },
-            metadata: zv
-          }, qP, IP), (0, hv.e)(null, null, lz, {
+            metadata: kT
+          }, Ec, Zc), (0, lT.e)(null, null, Ik, {
             kind: "field",
             name: "_reflectionTexture",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_reflectionTexture" in vv,
-              get: vv => vv._reflectionTexture,
-              set: (vv, zv) => {
-                vv._reflectionTexture = zv
+              has: TT => "_reflectionTexture" in TT,
+              get: TT => TT._reflectionTexture,
+              set: (TT, kT) => {
+                TT._reflectionTexture = kT
               }
             },
-            metadata: zv
-          }, AP, LP), (0, hv.e)(null, null, Wz, {
+            metadata: kT
+          }, dc, Lc), (0, lT.e)(null, null, Ck, {
             kind: "field",
             name: "_emissiveTexture",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_emissiveTexture" in vv,
-              get: vv => vv._emissiveTexture,
-              set: (vv, zv) => {
-                vv._emissiveTexture = zv
+              has: TT => "_emissiveTexture" in TT,
+              get: TT => TT._emissiveTexture,
+              set: (TT, kT) => {
+                TT._emissiveTexture = kT
               }
             },
-            metadata: zv
-          }, yP, BP), (0, hv.e)(null, null, az, {
+            metadata: kT
+          }, Uc, Yc), (0, lT.e)(null, null, vk, {
             kind: "field",
             name: "_specularTexture",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_specularTexture" in vv,
-              get: vv => vv._specularTexture,
-              set: (vv, zv) => {
-                vv._specularTexture = zv
+              has: TT => "_specularTexture" in TT,
+              get: TT => TT._specularTexture,
+              set: (TT, kT) => {
+                TT._specularTexture = kT
               }
             },
-            metadata: zv
-          }, oP, bP), (0, hv.e)(null, null, Cz, {
+            metadata: kT
+          }, nc, pc), (0, lT.e)(null, null, hk, {
             kind: "field",
             name: "_bumpTexture",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_bumpTexture" in vv,
-              get: vv => vv._bumpTexture,
-              set: (vv, zv) => {
-                vv._bumpTexture = zv
+              has: TT => "_bumpTexture" in TT,
+              get: TT => TT._bumpTexture,
+              set: (TT, kT) => {
+                TT._bumpTexture = kT
               }
             },
-            metadata: zv
-          }, XP, uP), (0, hv.e)(null, null, cz, {
+            metadata: kT
+          }, sc, Tl), (0, lT.e)(null, null, Qk, {
             kind: "field",
             name: "_lightmapTexture",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_lightmapTexture" in vv,
-              get: vv => vv._lightmapTexture,
-              set: (vv, zv) => {
-                vv._lightmapTexture = zv
+              has: TT => "_lightmapTexture" in TT,
+              get: TT => TT._lightmapTexture,
+              set: (TT, kT) => {
+                TT._lightmapTexture = kT
               }
             },
-            metadata: zv
-          }, Ph, hh), (0, hv.e)(null, null, mz, {
+            metadata: kT
+          }, ll, Ml), (0, lT.e)(null, null, Dk, {
             kind: "field",
             name: "_refractionTexture",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_refractionTexture" in vv,
-              get: vv => vv._refractionTexture,
-              set: (vv, zv) => {
-                vv._refractionTexture = zv
+              has: TT => "_refractionTexture" in TT,
+              get: TT => TT._refractionTexture,
+              set: (TT, kT) => {
+                TT._refractionTexture = kT
               }
             },
-            metadata: zv
-          }, gh, ph), (0, hv.e)(null, null, fz, {
+            metadata: kT
+          }, yl, fl), (0, lT.e)(null, null, Fk, {
             kind: "field",
             name: "ambientColor",
             static: !1,
             private: !1,
             access: {
-              has: vv => "ambientColor" in vv,
-              get: vv => vv.ambientColor,
-              set: (vv, zv) => {
-                vv.ambientColor = zv
+              has: TT => "ambientColor" in TT,
+              get: TT => TT.ambientColor,
+              set: (TT, kT) => {
+                TT.ambientColor = kT
               }
             },
-            metadata: zv
-          }, lh, Th), (0, hv.e)(null, null, Fz, {
+            metadata: kT
+          }, Al, Cl), (0, lT.e)(null, null, rk, {
             kind: "field",
             name: "diffuseColor",
             static: !1,
             private: !1,
             access: {
-              has: vv => "diffuseColor" in vv,
-              get: vv => vv.diffuseColor,
-              set: (vv, zv) => {
-                vv.diffuseColor = zv
+              has: TT => "diffuseColor" in TT,
+              get: TT => TT.diffuseColor,
+              set: (TT, kT) => {
+                TT.diffuseColor = kT
               }
             },
-            metadata: zv
-          }, Wh, wh), (0, hv.e)(null, null, Yz, {
+            metadata: kT
+          }, jl, vl), (0, lT.e)(null, null, Pk, {
             kind: "field",
             name: "specularColor",
             static: !1,
             private: !1,
             access: {
-              has: vv => "specularColor" in vv,
-              get: vv => vv.specularColor,
-              set: (vv, zv) => {
-                vv.specularColor = zv
+              has: TT => "specularColor" in TT,
+              get: TT => TT.specularColor,
+              set: (TT, kT) => {
+                TT.specularColor = kT
               }
             },
-            metadata: zv
-          }, ah, sh), (0, hv.e)(null, null, nz, {
+            metadata: kT
+          }, tl, hl), (0, lT.e)(null, null, wk, {
             kind: "field",
             name: "emissiveColor",
             static: !1,
             private: !1,
             access: {
-              has: vv => "emissiveColor" in vv,
-              get: vv => vv.emissiveColor,
-              set: (vv, zv) => {
-                vv.emissiveColor = zv
+              has: TT => "emissiveColor" in TT,
+              get: TT => TT.emissiveColor,
+              set: (TT, kT) => {
+                TT.emissiveColor = kT
               }
             },
-            metadata: zv
-          }, Ch, ih), (0, hv.e)(null, null, Oz, {
+            metadata: kT
+          }, Nl, Ql), (0, lT.e)(null, null, mk, {
             kind: "field",
             name: "specularPower",
             static: !1,
             private: !1,
             access: {
-              has: vv => "specularPower" in vv,
-              get: vv => vv.specularPower,
-              set: (vv, zv) => {
-                vv.specularPower = zv
+              has: TT => "specularPower" in TT,
+              get: TT => TT.specularPower,
+              set: (TT, kT) => {
+                TT.specularPower = kT
               }
             },
-            metadata: zv
-          }, ch, Gh), (0, hv.e)(null, null, Dz, {
+            metadata: kT
+          }, Sl, Dl), (0, lT.e)(null, null, bk, {
             kind: "field",
             name: "_useAlphaFromDiffuseTexture",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_useAlphaFromDiffuseTexture" in vv,
-              get: vv => vv._useAlphaFromDiffuseTexture,
-              set: (vv, zv) => {
-                vv._useAlphaFromDiffuseTexture = zv
+              has: TT => "_useAlphaFromDiffuseTexture" in TT,
+              get: TT => TT._useAlphaFromDiffuseTexture,
+              set: (TT, kT) => {
+                TT._useAlphaFromDiffuseTexture = kT
               }
             },
-            metadata: zv
-          }, mh, jh), (0, hv.e)(null, null, Vz, {
+            metadata: kT
+          }, al, Fl), (0, lT.e)(null, null, Jk, {
             kind: "field",
             name: "_useEmissiveAsIllumination",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_useEmissiveAsIllumination" in vv,
-              get: vv => vv._useEmissiveAsIllumination,
-              set: (vv, zv) => {
-                vv._useEmissiveAsIllumination = zv
+              has: TT => "_useEmissiveAsIllumination" in TT,
+              get: TT => TT._useEmissiveAsIllumination,
+              set: (TT, kT) => {
+                TT._useEmissiveAsIllumination = kT
               }
             },
-            metadata: zv
-          }, Yh, nh), (0, hv.e)(null, null, Rz, {
+            metadata: kT
+          }, wl, ml), (0, lT.e)(null, null, ek, {
             kind: "field",
             name: "_linkEmissiveWithDiffuse",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_linkEmissiveWithDiffuse" in vv,
-              get: vv => vv._linkEmissiveWithDiffuse,
-              set: (vv, zv) => {
-                vv._linkEmissiveWithDiffuse = zv
+              has: TT => "_linkEmissiveWithDiffuse" in TT,
+              get: TT => TT._linkEmissiveWithDiffuse,
+              set: (TT, kT) => {
+                TT._linkEmissiveWithDiffuse = kT
               }
             },
-            metadata: zv
-          }, Kh, Vh), (0, hv.e)(null, null, tz, {
+            metadata: kT
+          }, Jl, ol), (0, lT.e)(null, null, Vk, {
             kind: "field",
             name: "_useSpecularOverAlpha",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_useSpecularOverAlpha" in vv,
-              get: vv => vv._useSpecularOverAlpha,
-              set: (vv, zv) => {
-                vv._useSpecularOverAlpha = zv
+              has: TT => "_useSpecularOverAlpha" in TT,
+              get: TT => TT._useSpecularOverAlpha,
+              set: (TT, kT) => {
+                TT._useSpecularOverAlpha = kT
               }
             },
-            metadata: zv
-          }, xh, th), (0, hv.e)(null, null, Iz, {
+            metadata: kT
+          }, Gl, Vl), (0, lT.e)(null, null, Zk, {
             kind: "field",
             name: "_useReflectionOverAlpha",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_useReflectionOverAlpha" in vv,
-              get: vv => vv._useReflectionOverAlpha,
-              set: (vv, zv) => {
-                vv._useReflectionOverAlpha = zv
+              has: TT => "_useReflectionOverAlpha" in TT,
+              get: TT => TT._useReflectionOverAlpha,
+              set: (TT, kT) => {
+                TT._useReflectionOverAlpha = kT
               }
             },
-            metadata: zv
-          }, Qh, Zh), (0, hv.e)(null, null, Zz, {
+            metadata: kT
+          }, ul, Xl), (0, lT.e)(null, null, Xk, {
             kind: "field",
             name: "_disableLighting",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_disableLighting" in vv,
-              get: vv => vv._disableLighting,
-              set: (vv, zv) => {
-                vv._disableLighting = zv
+              has: TT => "_disableLighting" in TT,
+              get: TT => TT._disableLighting,
+              set: (TT, kT) => {
+                TT._disableLighting = kT
               }
             },
-            metadata: zv
-          }, Hh, Mh), (0, hv.e)(null, null, Lz, {
+            metadata: kT
+          }, Rl, gl), (0, lT.e)(null, null, Lk, {
             kind: "field",
             name: "_useObjectSpaceNormalMap",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_useObjectSpaceNormalMap" in vv,
-              get: vv => vv._useObjectSpaceNormalMap,
-              set: (vv, zv) => {
-                vv._useObjectSpaceNormalMap = zv
+              has: TT => "_useObjectSpaceNormalMap" in TT,
+              get: TT => TT._useObjectSpaceNormalMap,
+              set: (TT, kT) => {
+                TT._useObjectSpaceNormalMap = kT
               }
             },
-            metadata: zv
-          }, Jh, Eh), (0, hv.e)(null, null, Mz, {
+            metadata: kT
+          }, Bl, Wl), (0, lT.e)(null, null, gk, {
             kind: "field",
             name: "_useParallax",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_useParallax" in vv,
-              get: vv => vv._useParallax,
-              set: (vv, zv) => {
-                vv._useParallax = zv
+              has: TT => "_useParallax" in TT,
+              get: TT => TT._useParallax,
+              set: (TT, kT) => {
+                TT._useParallax = kT
               }
             },
-            metadata: zv
-          }, rh, kh), (0, hv.e)(null, null, Bz, {
+            metadata: kT
+          }, il, ql), (0, lT.e)(null, null, Yk, {
             kind: "field",
             name: "_useParallaxOcclusion",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_useParallaxOcclusion" in vv,
-              get: vv => vv._useParallaxOcclusion,
-              set: (vv, zv) => {
-                vv._useParallaxOcclusion = zv
+              has: TT => "_useParallaxOcclusion" in TT,
+              get: TT => TT._useParallaxOcclusion,
+              set: (TT, kT) => {
+                TT._useParallaxOcclusion = kT
               }
             },
-            metadata: zv
-          }, vS, zS), (0, hv.e)(null, null, Ez, {
+            metadata: kT
+          }, kM, cM), (0, lT.e)(null, null, Wk, {
             kind: "field",
             name: "parallaxScaleBias",
             static: !1,
             private: !1,
             access: {
-              has: vv => "parallaxScaleBias" in vv,
-              get: vv => vv.parallaxScaleBias,
-              set: (vv, zv) => {
-                vv.parallaxScaleBias = zv
+              has: TT => "parallaxScaleBias" in TT,
+              get: TT => TT.parallaxScaleBias,
+              set: (TT, kT) => {
+                TT.parallaxScaleBias = kT
               }
             },
-            metadata: zv
-          }, SS, eS), (0, hv.e)(null, null, oz, {
+            metadata: kT
+          }, KM, OM), (0, lT.e)(null, null, nk, {
             kind: "field",
             name: "_roughness",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_roughness" in vv,
-              get: vv => vv._roughness,
-              set: (vv, zv) => {
-                vv._roughness = zv
+              has: TT => "_roughness" in TT,
+              get: TT => TT._roughness,
+              set: (TT, kT) => {
+                TT._roughness = kT
               }
             },
-            metadata: zv
-          }, gS, pS), (0, hv.e)(null, null, rz, {
+            metadata: kT
+          }, yM, fM), (0, lT.e)(null, null, ik, {
             kind: "field",
             name: "indexOfRefraction",
             static: !1,
             private: !1,
             access: {
-              has: vv => "indexOfRefraction" in vv,
-              get: vv => vv.indexOfRefraction,
-              set: (vv, zv) => {
-                vv.indexOfRefraction = zv
+              has: TT => "indexOfRefraction" in TT,
+              get: TT => TT.indexOfRefraction,
+              set: (TT, kT) => {
+                TT.indexOfRefraction = kT
               }
             },
-            metadata: zv
-          }, lS, TS), (0, hv.e)(null, null, kz, {
+            metadata: kT
+          }, AM, CM), (0, lT.e)(null, null, qk, {
             kind: "field",
             name: "invertRefractionY",
             static: !1,
             private: !1,
             access: {
-              has: vv => "invertRefractionY" in vv,
-              get: vv => vv.invertRefractionY,
-              set: (vv, zv) => {
-                vv.invertRefractionY = zv
+              has: TT => "invertRefractionY" in TT,
+              get: TT => TT.invertRefractionY,
+              set: (TT, kT) => {
+                TT.invertRefractionY = kT
               }
             },
-            metadata: zv
-          }, WS, wS), (0, hv.e)(null, null, Xz, {
+            metadata: kT
+          }, jM, vM), (0, lT.e)(null, null, sk, {
             kind: "field",
             name: "alphaCutOff",
             static: !1,
             private: !1,
             access: {
-              has: vv => "alphaCutOff" in vv,
-              get: vv => vv.alphaCutOff,
-              set: (vv, zv) => {
-                vv.alphaCutOff = zv
+              has: TT => "alphaCutOff" in TT,
+              get: TT => TT.alphaCutOff,
+              set: (TT, kT) => {
+                TT.alphaCutOff = kT
               }
             },
-            metadata: zv
-          }, aS, sS), (0, hv.e)(null, null, uz, {
+            metadata: kT
+          }, tM, hM), (0, lT.e)(null, null, Tc, {
             kind: "field",
             name: "_useLightmapAsShadowmap",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_useLightmapAsShadowmap" in vv,
-              get: vv => vv._useLightmapAsShadowmap,
-              set: (vv, zv) => {
-                vv._useLightmapAsShadowmap = zv
+              has: TT => "_useLightmapAsShadowmap" in TT,
+              get: TT => TT._useLightmapAsShadowmap,
+              set: (TT, kT) => {
+                TT._useLightmapAsShadowmap = kT
               }
             },
-            metadata: zv
-          }, CS, iS), (0, hv.e)(null, null, zP, {
+            metadata: kT
+          }, NM, QM), (0, lT.e)(null, null, cc, {
             kind: "field",
             name: "_diffuseFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_diffuseFresnelParameters" in vv,
-              get: vv => vv._diffuseFresnelParameters,
-              set: (vv, zv) => {
-                vv._diffuseFresnelParameters = zv
+              has: TT => "_diffuseFresnelParameters" in TT,
+              get: TT => TT._diffuseFresnelParameters,
+              set: (TT, kT) => {
+                TT._diffuseFresnelParameters = kT
               }
             },
-            metadata: zv
-          }, mS, jS), (0, hv.e)(null, null, hP, {
+            metadata: kT
+          }, aM, FM), (0, lT.e)(null, null, Mc, {
             kind: "field",
             name: "_opacityFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_opacityFresnelParameters" in vv,
-              get: vv => vv._opacityFresnelParameters,
-              set: (vv, zv) => {
-                vv._opacityFresnelParameters = zv
+              has: TT => "_opacityFresnelParameters" in TT,
+              get: TT => TT._opacityFresnelParameters,
+              set: (TT, kT) => {
+                TT._opacityFresnelParameters = kT
               }
             },
-            metadata: zv
-          }, YS, nS), (0, hv.e)(null, null, eP, {
+            metadata: kT
+          }, wM, mM), (0, lT.e)(null, null, Oc, {
             kind: "field",
             name: "_reflectionFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_reflectionFresnelParameters" in vv,
-              get: vv => vv._reflectionFresnelParameters,
-              set: (vv, zv) => {
-                vv._reflectionFresnelParameters = zv
+              has: TT => "_reflectionFresnelParameters" in TT,
+              get: TT => TT._reflectionFresnelParameters,
+              set: (TT, kT) => {
+                TT._reflectionFresnelParameters = kT
               }
             },
-            metadata: zv
-          }, KS, VS), (0, hv.e)(null, null, pP, {
+            metadata: kT
+          }, JM, oM), (0, lT.e)(null, null, fc, {
             kind: "field",
             name: "_refractionFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_refractionFresnelParameters" in vv,
-              get: vv => vv._refractionFresnelParameters,
-              set: (vv, zv) => {
-                vv._refractionFresnelParameters = zv
+              has: TT => "_refractionFresnelParameters" in TT,
+              get: TT => TT._refractionFresnelParameters,
+              set: (TT, kT) => {
+                TT._refractionFresnelParameters = kT
               }
             },
-            metadata: zv
-          }, xS, tS), (0, hv.e)(null, null, NP, {
+            metadata: kT
+          }, GM, VM), (0, lT.e)(null, null, Ic, {
             kind: "field",
             name: "_emissiveFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_emissiveFresnelParameters" in vv,
-              get: vv => vv._emissiveFresnelParameters,
-              set: (vv, zv) => {
-                vv._emissiveFresnelParameters = zv
+              has: TT => "_emissiveFresnelParameters" in TT,
+              get: TT => TT._emissiveFresnelParameters,
+              set: (TT, kT) => {
+                TT._emissiveFresnelParameters = kT
               }
             },
-            metadata: zv
-          }, QS, ZS), (0, hv.e)(null, null, TP, {
+            metadata: kT
+          }, uM, XM), (0, lT.e)(null, null, Cc, {
             kind: "field",
             name: "_useReflectionFresnelFromSpecular",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_useReflectionFresnelFromSpecular" in vv,
-              get: vv => vv._useReflectionFresnelFromSpecular,
-              set: (vv, zv) => {
-                vv._useReflectionFresnelFromSpecular = zv
+              has: TT => "_useReflectionFresnelFromSpecular" in TT,
+              get: TT => TT._useReflectionFresnelFromSpecular,
+              set: (TT, kT) => {
+                TT._useReflectionFresnelFromSpecular = kT
               }
             },
-            metadata: zv
-          }, HS, MS), (0, hv.e)(null, null, wP, {
+            metadata: kT
+          }, RM, gM), (0, lT.e)(null, null, vc, {
             kind: "field",
             name: "_useGlossinessFromSpecularMapAlpha",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_useGlossinessFromSpecularMapAlpha" in vv,
-              get: vv => vv._useGlossinessFromSpecularMapAlpha,
-              set: (vv, zv) => {
-                vv._useGlossinessFromSpecularMapAlpha = zv
+              has: TT => "_useGlossinessFromSpecularMapAlpha" in TT,
+              get: TT => TT._useGlossinessFromSpecularMapAlpha,
+              set: (TT, kT) => {
+                TT._useGlossinessFromSpecularMapAlpha = kT
               }
             },
-            metadata: zv
-          }, JS, ES), (0, hv.e)(null, null, sP, {
+            metadata: kT
+          }, BM, WM), (0, lT.e)(null, null, hc, {
             kind: "field",
             name: "_maxSimultaneousLights",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_maxSimultaneousLights" in vv,
-              get: vv => vv._maxSimultaneousLights,
-              set: (vv, zv) => {
-                vv._maxSimultaneousLights = zv
+              has: TT => "_maxSimultaneousLights" in TT,
+              get: TT => TT._maxSimultaneousLights,
+              set: (TT, kT) => {
+                TT._maxSimultaneousLights = kT
               }
             },
-            metadata: zv
-          }, rS, kS), (0, hv.e)(null, null, iP, {
+            metadata: kT
+          }, iM, qM), (0, lT.e)(null, null, Qc, {
             kind: "field",
             name: "_invertNormalMapX",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_invertNormalMapX" in vv,
-              get: vv => vv._invertNormalMapX,
-              set: (vv, zv) => {
-                vv._invertNormalMapX = zv
+              has: TT => "_invertNormalMapX" in TT,
+              get: TT => TT._invertNormalMapX,
+              set: (TT, kT) => {
+                TT._invertNormalMapX = kT
               }
             },
-            metadata: zv
-          }, ve, ze), (0, hv.e)(null, null, GP, {
+            metadata: kT
+          }, kK, cK), (0, lT.e)(null, null, Dc, {
             kind: "field",
             name: "_invertNormalMapY",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_invertNormalMapY" in vv,
-              get: vv => vv._invertNormalMapY,
-              set: (vv, zv) => {
-                vv._invertNormalMapY = zv
+              has: TT => "_invertNormalMapY" in TT,
+              get: TT => TT._invertNormalMapY,
+              set: (TT, kT) => {
+                TT._invertNormalMapY = kT
               }
             },
-            metadata: zv
-          }, Se, ee), (0, hv.e)(null, null, jP, {
+            metadata: kT
+          }, KK, OK), (0, lT.e)(null, null, Fc, {
             kind: "field",
             name: "_twoSidedLighting",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_twoSidedLighting" in vv,
-              get: vv => vv._twoSidedLighting,
-              set: (vv, zv) => {
-                vv._twoSidedLighting = zv
+              has: TT => "_twoSidedLighting" in TT,
+              get: TT => TT._twoSidedLighting,
+              set: (TT, kT) => {
+                TT._twoSidedLighting = kT
               }
             },
-            metadata: zv
-          }, de, Ne), (0, hv.e)(null, null, FP, {
+            metadata: kT
+          }, xK, IK), (0, lT.e)(null, null, Pc, {
             kind: "field",
             name: "_applyDecalMapAfterDetailMap",
             static: !1,
             private: !1,
             access: {
-              has: vv => "_applyDecalMapAfterDetailMap" in vv,
-              get: vv => vv._applyDecalMapAfterDetailMap,
-              set: (vv, zv) => {
-                vv._applyDecalMapAfterDetailMap = zv
+              has: TT => "_applyDecalMapAfterDetailMap" in TT,
+              get: TT => TT._applyDecalMapAfterDetailMap,
+              set: (TT, kT) => {
+                TT._applyDecalMapAfterDetailMap = kT
               }
             },
-            metadata: zv
-          }, We, we), zv && Object.defineProperty(vv, Symbol.metadata, {
+            metadata: kT
+          }, jK, vK), kT && Object.defineProperty(TT, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: zv
+            value: kT
           })
-        })(), vv.ForceGLSL = !1, vv._ShaderLoader = new fv.e((() => [Promise.all([Pv.e(308), Pv.e(307)]).then((() => Pv(41193))), Promise.all([Pv.e(313), Pv.e(309), Pv.e(322), Pv.e(312)]).then((() => Pv(41379)))]), (() => [Promise.all([Pv.e(329), Pv.e(324)]).then((() => Pv(41536))), Promise.all([Pv.e(330), Pv.e(340), Pv.e(326)]).then((() => Pv(41728)))])), vv
+        })(), TT.ForceGLSL = !1, TT._ShaderLoader = new FT.e((() => [Promise.all([cT.e(308), cT.e(307)]).then((() => cT(41423))), Promise.all([cT.e(313), cT.e(309), cT.e(322), cT.e(312)]).then((() => cT(41619)))]), (() => [Promise.all([cT.e(329), cT.e(324)]).then((() => cT(41757))), Promise.all([cT.e(330), cT.e(340), cT.e(326)]).then((() => cT(41953)))])), TT
       })(),
-      qv = !1;
+      VT = !1;
 
-    function Iv() {
-      qv || (qv = !0, (0, Tv.f)(), (0, Dv.c)("BABYLON.StandardMaterial", tv), gv.g.DefaultMaterialFactory = vv => new tv("default material", vv))
+    function ET() {
+      VT || (VT = !0, (0, AT.g)(), (0, bT.g)("BABYLON.StandardMaterial", GT), OT.f.DefaultMaterialFactory = TT => new GT("default material", TT))
     }
-    Object.getOwnPropertyDescriptor(tv.prototype, "decalMap") || Object.defineProperty(tv.prototype, "decalMap", (0, Kv.g)("StandardMaterial", "decalMap"))
+    Object.getOwnPropertyDescriptor(GT.prototype, "decalMap") || Object.defineProperty(GT.prototype, "decalMap", (0, zT.d)("StandardMaterial", "decalMap"))
   },
-  39694: (vv, zv, Pv) => {
-    function hv(vv) {
-      return class extends vv {
+  40004: (TT, kT, cT) => {
+    function lT(TT) {
+      return class extends TT {
         constructor() {
           super(...arguments), this.MAINUV1 = !1, this.MAINUV2 = !1, this.MAINUV3 = !1, this.MAINUV4 = !1, this.MAINUV5 = !1, this.MAINUV6 = !1, this.UV1 = !1, this.UV2 = !1, this.UV3 = !1, this.UV4 = !1, this.UV5 = !1, this.UV6 = !1
         }
       }
     }
-    Pv.d(zv, {
-      b: () => hv
+    cT.d(kT, {
+      c: () => lT
     })
   },
-  39682: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => hv
+  39989: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => lT
     });
-    class hv {
-      constructor(vv, zv) {
+    class lT {
+      constructor(TT, kT) {
         this._webGL = {
-          load: vv,
+          load: TT,
           loaded: !1,
           loadPromise: null
         }, this._webGPU = {
-          load: zv,
+          load: kT,
           loaded: !1,
           loadPromise: null
         }
       }
-      getLoadCallback(vv) {
-        const zv = 1 === vv ? this._webGPU : this._webGL;
-        return zv.loaded ? void 0 : async () => {
-          await this._loadAsync(zv)
+      getLoadCallback(TT) {
+        const kT = 1 === TT ? this._webGPU : this._webGL;
+        return kT.loaded ? void 0 : async () => {
+          await this._loadAsync(kT)
         }
       }
-      async _loadAsync(vv) {
-        if (vv.loaded) return;
-        let zv = vv.loadPromise;
-        const Pv = null === zv;
-        Pv && (zv = Promise.all(vv.load()), vv.loadPromise = zv);
-        let hv = !1;
+      async _loadAsync(TT) {
+        if (TT.loaded) return;
+        let kT = TT.loadPromise;
+        const cT = null === kT;
+        cT && (kT = Promise.all(TT.load()), TT.loadPromise = kT);
+        let lT = !1;
         try {
-          await zv, hv = !0
+          await kT, lT = !0
         } finally {
-          Pv && this._completeLoad(vv, hv)
+          cT && this._completeLoad(TT, lT)
         }
       }
-      _completeLoad(vv, zv) {
-        vv.loaded = zv, vv.loadPromise = null
+      _completeLoad(TT, kT) {
+        TT.loaded = kT, TT.loadPromise = null
       }
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

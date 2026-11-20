@@ -1,117 +1,117 @@
 export const id = 100;
 export const ids = [100];
 export const modules = {
-  4653: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => Wv
+  4861: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => CT
     });
-    var hv = Pv(1035),
-      Sv = Pv.n(hv),
-      ev = Pv(1042),
-      gv = Pv(1327),
-      pv = Pv(3258),
-      dv = Pv(108),
-      Nv = Pv(3301),
-      lv = Pv(3289),
-      Tv = Pv(1082);
+    var lT = cT(1046),
+      MT = cT.n(lT),
+      KT = cT(1061),
+      OT = cT(1348),
+      yT = cT(3449),
+      fT = cT(159),
+      xT = cT(3491),
+      IT = cT(3482),
+      AT = cT(1099);
 
-    function Wv(vv) {
+    function CT(TT) {
       let {
-        game: zv
-      } = vv;
-      const Pv = (0, dv.i)() ? "large" : "small",
-        hv = (0, Nv.g)(zv, Pv),
-        Wv = (0, pv.f)(hv),
-        wv = void 0 !== Wv.blurhash;
-      return (0, Tv.jsxs)("div", {
+        game: kT
+      } = TT;
+      const cT = (0, fT.m)() ? "large" : "small",
+        lT = (0, xT.i)(kT, cT),
+        CT = (0, yT.f)(lT),
+        jT = void 0 !== CT.blurhash;
+      return (0, AT.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [Wv.isLoading && !wv && (0, Tv.jsx)(gv.c, {
+        children: [CT.isLoading && !jT && (0, AT.jsx)(OT.d, {
           loaderType: "Secondary"
-        }), !Wv.failed && (null !== Wv.src || wv) && (0, Tv.jsx)("div", {
-          className: Sv()("SchematicImage", lv.g, {
-            SchematicImageFadeIn: Wv.fadeIn && !wv
+        }), !CT.failed && (null !== CT.src || jT) && (0, AT.jsx)("div", {
+          className: MT()("SchematicImage", IT.g, {
+            SchematicImageFadeIn: CT.fadeIn && !jT
           }),
-          style: (0, lv.e)(Wv),
-          children: (0, Tv.jsx)(lv.b, {
-            image: Wv
+          style: (0, IT.f)(CT),
+          children: (0, AT.jsx)(IT.d, {
+            image: CT
           })
-        }), Wv.failed && (0, Tv.jsx)("div", {
+        }), CT.failed && (0, AT.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, Tv.jsx)(ev.b, {
+          children: (0, AT.jsx)(KT.e, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  4645: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      default: () => nv
+  4848: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      default: () => wT
     });
-    Pv(4650);
-    var hv = Pv(52),
-      Sv = Pv(1035),
-      ev = Pv.n(Sv),
-      gv = Pv(302),
-      pv = Pv(1011),
-      dv = Pv(1209),
-      Nv = Pv(1175),
-      lv = Pv(1108),
-      Tv = Pv(1482),
-      Wv = Pv(4653),
-      wv = Pv(1442),
-      av = Pv(4662),
-      sv = Pv(1327),
-      Cv = Pv(1492),
-      iv = Pv(4389),
-      cv = Pv(1042),
-      Gv = Pv(997),
-      mv = Pv(2396),
-      jv = Pv(4668),
-      fv = Pv(1529),
-      Fv = Pv(1082);
+    cT(4855);
+    var lT = cT(71),
+      MT = cT(1046),
+      KT = cT.n(MT),
+      OT = cT(328),
+      yT = cT(1026),
+      fT = cT(1226),
+      xT = cT(1195),
+      IT = cT(1130),
+      AT = cT(1518),
+      CT = cT(4861),
+      jT = cT(1470),
+      vT = cT(4864),
+      tT = cT(1348),
+      hT = cT(1530),
+      NT = cT(4618),
+      QT = cT(1061),
+      ST = cT(1009),
+      DT = cT(2563),
+      aT = cT(4867),
+      FT = cT(1554),
+      rT = cT(1099);
 
-    function Yv() {
+    function PT() {
       const {
-        t: vv
-      } = (0, Nv.x)(), zv = (0, Cv.useNavigatePreserveSearch)(), Pv = (0, mv.o)(), Sv = (0, hv.useMemo)((() => [...Gv.c].sort(((zv, hv) => {
-        var Sv, ev;
-        const gv = (null !== (Sv = (0, mv.c)(hv, Pv)) && void 0 !== Sv ? Sv : 0) - (null !== (ev = (0, mv.c)(zv, Pv)) && void 0 !== ev ? ev : 0);
-        return 0 !== gv ? gv : (0, fv.n)(zv, vv).localeCompare((0, fv.n)(hv, vv))
-      }))), [Pv, vv]);
-      return (0, Fv.jsxs)(Fv.Fragment, {
-        children: [(0, Fv.jsx)("div", {
+        t: TT
+      } = (0, xT.B)(), kT = (0, hT.useNavigatePreserveSearch)(), cT = (0, DT.o)(), MT = (0, lT.useMemo)((() => [...ST.b].sort(((kT, lT) => {
+        var MT, KT;
+        const OT = (null !== (MT = (0, DT.e)(lT, cT)) && void 0 !== MT ? MT : 0) - (null !== (KT = (0, DT.e)(kT, cT)) && void 0 !== KT ? KT : 0);
+        return 0 !== OT ? OT : (0, FT.m)(kT, TT).localeCompare((0, FT.m)(lT, TT))
+      }))), [cT, TT]);
+      return (0, rT.jsxs)(rT.Fragment, {
+        children: [(0, rT.jsx)("div", {
           className: "StudioPageHeader",
-          children: (0, Fv.jsx)("h1", {
+          children: (0, rT.jsx)("h1", {
             className: "StudioPageTitle",
-            children: vv("studio:firstPartyGames")
+            children: TT("studio:firstPartyGames")
           })
-        }), (0, Fv.jsx)(av.e, {
+        }), (0, rT.jsx)(vT.d, {
           className: "StudioTable AnimFadeIn",
           columns: [{
             key: "game",
-            header: vv("general:game")
+            header: TT("general:game")
           }, {
             key: "ccu",
-            header: vv("studio:metricCcu")
+            header: TT("studio:metricCcu")
           }],
-          rows: Sv,
-          getRowKey: vv => vv,
-          renderRow: hv => {
-            var Sv;
-            return (0, Fv.jsxs)("tr", {
+          rows: MT,
+          getRowKey: TT => TT,
+          renderRow: lT => {
+            var MT;
+            return (0, rT.jsxs)("tr", {
               onClick: () => {
-                zv((0, fv.o)((0, pv.i)(hv, !0)))
+                kT((0, FT.o)((0, yT.h)(lT, !0)))
               },
-              children: [(0, Fv.jsx)("td", {
-                children: (0, Fv.jsx)(jv.i, {
-                  thumbnail: (0, Fv.jsx)(jv.e, {
-                    game: hv
+              children: [(0, rT.jsx)("td", {
+                children: (0, rT.jsx)(aT.e, {
+                  thumbnail: (0, rT.jsx)(aT.b, {
+                    game: lT
                   }),
-                  name: (0, fv.n)(hv, vv)
+                  name: (0, FT.m)(lT, TT)
                 })
-              }), (0, Fv.jsx)("td", {
-                children: (0, dv.X)(null !== (Sv = (0, mv.c)(hv, Pv)) && void 0 !== Sv ? Sv : 0)
+              }), (0, rT.jsx)("td", {
+                children: (0, fT.P)(null !== (MT = (0, DT.e)(lT, cT)) && void 0 !== MT ? MT : 0)
               })]
             })
           }
@@ -119,18 +119,18 @@ export const modules = {
       })
     }
 
-    function nv() {
+    function wT() {
       const {
-        t: vv
-      } = (0, Nv.x)(), zv = (0, Cv.useNavigatePreserveSearch)(), {
-        userContext: Pv,
-        isUserContextUpdating: Sv
-      } = (0, lv.d)(), {
-        isCreating: Gv,
-        create: mv
-      } = (0, iv.f)(), [nv, Ov] = (0, hv.useState)(null), [Dv, Kv] = (0, hv.useState)(null), [Vv, Uv] = (0, hv.useState)(!1);
-      (0, hv.useEffect)((() => {
-        Sv || (Uv(!1), Tv.e.getPublishedGamePreviews(Pv, {
+        t: TT
+      } = (0, xT.B)(), kT = (0, hT.useNavigatePreserveSearch)(), {
+        userContext: cT,
+        isUserContextUpdating: MT
+      } = (0, IT.b)(), {
+        isCreating: ST,
+        create: DT
+      } = (0, NT.f)(), [wT, mT] = (0, lT.useState)(null), [bT, zT] = (0, lT.useState)(null), [JT, oT] = (0, lT.useState)(!1);
+      (0, lT.useEffect)((() => {
+        MT || (oT(!1), AT.d.getPublishedGamePreviews(cT, {
           searchQuery: null,
           pageNumber: 1,
           pageSize: 50,
@@ -140,162 +140,162 @@ export const modules = {
           schematicIdsToExclude: [],
           gameCategories: [],
           upAndComing: !1
-        }).then((vv => {
-          Ov({
-            ...vv,
-            results: (0, gv.V)(vv.results)
+        }).then((TT => {
+          mT({
+            ...TT,
+            results: (0, OT.R)(TT.results)
           })
-        })).catch((vv => {
-          console.error("Failed to get owned published games", vv), Uv(!0)
-        })), Tv.e.getOwnedUnpublishedGames(Pv).then((vv => {
-          Kv(vv)
-        })).catch((vv => {
-          console.error("Failed to get owned unpublished games", vv), Uv(!0)
+        })).catch((TT => {
+          console.error("Failed to get owned published games", TT), oT(!0)
+        })), AT.d.getOwnedUnpublishedGames(cT).then((TT => {
+          zT(TT)
+        })).catch((TT => {
+          console.error("Failed to get owned unpublished games", TT), oT(!0)
         })))
-      }), [Sv, Pv]);
-      const Rv = null !== nv && null !== Dv ? [...nv.results, ...Dv] : [],
-        xv = !Vv && (null === nv || null === Dv),
-        tv = !xv && !Vv && 0 === Rv.length,
-        qv = !Sv && Pv.playerHasRank("developer");
-      return (0, Fv.jsxs)("div", {
+      }), [MT, cT]);
+      const HT = null !== wT && null !== bT ? [...wT.results, ...bT] : [],
+        eT = !JT && (null === wT || null === bT),
+        GT = !eT && !JT && 0 === HT.length,
+        VT = !MT && cT.playerHasRank("developer");
+      return (0, rT.jsxs)("div", {
         className: "StudioPage StudioGameList",
-        children: [(0, Fv.jsxs)("div", {
+        children: [(0, rT.jsxs)("div", {
           className: "StudioPageHeader",
-          children: [(0, Fv.jsx)("h1", {
+          children: [(0, rT.jsx)("h1", {
             className: "StudioPageTitle",
-            children: vv("studio:myGames")
-          }), (0, Fv.jsxs)(wv.j, {
-            onClick: mv,
-            loading: Gv,
-            children: [(0, Fv.jsx)(cv.b, {
+            children: TT("studio:myGames")
+          }), (0, rT.jsxs)(jT.m, {
+            onClick: DT,
+            loading: ST,
+            children: [(0, rT.jsx)(QT.e, {
               name: "plus"
-            }), " ", vv("homePage:createCustomGame")]
+            }), " ", TT("homePage:createCustomGame")]
           })]
-        }), xv && (0, Fv.jsx)("div", {
+        }), eT && (0, rT.jsx)("div", {
           className: "StudioPageLoader AnimFadeIn",
-          children: (0, Fv.jsx)(sv.c, {})
-        }), Vv && (0, Fv.jsx)("div", {
+          children: (0, rT.jsx)(tT.d, {})
+        }), JT && (0, rT.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: vv("studio:failedToLoadGames")
-        }), tv && (0, Fv.jsx)("div", {
+          children: TT("studio:failedToLoadGames")
+        }), GT && (0, rT.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: vv("studio:noGamesYet")
-        }), !xv && !Vv && !tv && (0, Fv.jsx)(av.e, {
+          children: TT("studio:noGamesYet")
+        }), !eT && !JT && !GT && (0, rT.jsx)(vT.d, {
           className: "StudioTable AnimFadeIn",
           columns: [{
             key: "game",
-            header: vv("general:game")
+            header: TT("general:game")
           }, {
             key: "status",
-            header: vv("general:status")
+            header: TT("general:status")
           }, {
             key: "ccu",
-            header: vv("studio:metricCcu")
+            header: TT("studio:metricCcu")
           }, {
             key: "favourites",
-            header: vv("general:favourites")
+            header: TT("general:favourites")
           }],
-          rows: Rv,
-          getRowKey: vv => vv.schematicId,
-          renderRow: Pv => (0, Fv.jsxs)("tr", {
+          rows: HT,
+          getRowKey: TT => TT.schematicId,
+          renderRow: cT => (0, rT.jsxs)("tr", {
             onClick: () => {
-              var vv;
-              vv = Pv.schematicId, zv((0, fv.o)((0, pv.e)(vv)))
+              var TT;
+              TT = cT.schematicId, kT((0, FT.o)((0, yT.e)(TT)))
             },
-            children: [(0, Fv.jsx)("td", {
-              children: (0, Fv.jsx)(jv.i, {
-                thumbnail: (0, Fv.jsx)(Wv.e, {
-                  game: Pv
+            children: [(0, rT.jsx)("td", {
+              children: (0, rT.jsx)(aT.e, {
+                thumbnail: (0, rT.jsx)(CT.e, {
+                  game: cT
                 }),
-                name: Pv.name
+                name: cT.name
               })
-            }), (0, Fv.jsx)("td", {
-              children: (0, Fv.jsx)("span", {
-                className: ev()("StudioGameListStatusChip", {
-                  StudioGameListStatusChipPublished: Pv.gamePublished
+            }), (0, rT.jsx)("td", {
+              children: (0, rT.jsx)("span", {
+                className: KT()("StudioGameListStatusChip", {
+                  StudioGameListStatusChipPublished: cT.gamePublished
                 }),
-                children: Pv.gamePublished ? vv("general:published") : vv("general:draft")
+                children: cT.gamePublished ? TT("general:published") : TT("general:draft")
               })
-            }), (0, Fv.jsx)("td", {
-              children: (0, dv.X)(Pv.ccu)
-            }), (0, Fv.jsx)("td", {
-              children: (0, dv.X)(Pv.favourites)
+            }), (0, rT.jsx)("td", {
+              children: (0, fT.P)(cT.ccu)
+            }), (0, rT.jsx)("td", {
+              children: (0, fT.P)(cT.favourites)
             })]
           })
-        }), qv && (0, Fv.jsx)(Yv, {})]
+        }), VT && (0, rT.jsx)(PT, {})]
       })
     }
   },
-  4668: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => gv,
-      i: () => ev
+  4867: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => OT,
+      e: () => KT
     });
-    var hv = Pv(1529),
-      Sv = Pv(1082);
+    var lT = cT(1554),
+      MT = cT(1099);
 
-    function ev(vv) {
+    function KT(TT) {
       let {
-        thumbnail: zv,
-        name: Pv
-      } = vv;
-      return (0, Sv.jsxs)("div", {
+        thumbnail: kT,
+        name: cT
+      } = TT;
+      return (0, MT.jsxs)("div", {
         className: "StudioTableGameCell",
-        children: [(0, Sv.jsx)("div", {
+        children: [(0, MT.jsx)("div", {
           className: "StudioTableThumbnail",
-          children: zv
-        }), (0, Sv.jsx)("span", {
+          children: kT
+        }), (0, MT.jsx)("span", {
           className: "StudioTableGameName",
-          children: Pv
+          children: cT
         })]
       })
     }
 
-    function gv(vv) {
+    function OT(TT) {
       let {
-        game: zv
-      } = vv;
-      return (0, Sv.jsx)("img", {
+        game: kT
+      } = TT;
+      return (0, MT.jsx)("img", {
         className: "StudioTableThumbnailImage",
-        src: (0, hv.l)(zv),
+        src: (0, lT.k)(kT),
         alt: ""
       })
     }
   },
-  4662: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => pv
+  4864: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => yT
     });
-    var hv = Pv(52),
-      Sv = Pv(1035),
-      ev = Pv.n(Sv),
-      gv = Pv(1082);
+    var lT = cT(71),
+      MT = cT(1046),
+      KT = cT.n(MT),
+      OT = cT(1099);
 
-    function pv(vv) {
+    function yT(TT) {
       let {
-        columns: zv,
-        rows: Pv,
-        getRowKey: Sv,
-        renderRow: pv,
-        className: dv
-      } = vv;
-      return (0, gv.jsxs)("table", {
-        className: ev()("Table", dv),
-        children: [(0, gv.jsx)("thead", {
-          children: (0, gv.jsx)("tr", {
-            children: zv.map((vv => (0, gv.jsx)("th", {
-              children: vv.header
-            }, vv.key)))
+        columns: kT,
+        rows: cT,
+        getRowKey: MT,
+        renderRow: yT,
+        className: fT
+      } = TT;
+      return (0, OT.jsxs)("table", {
+        className: KT()("Table", fT),
+        children: [(0, OT.jsx)("thead", {
+          children: (0, OT.jsx)("tr", {
+            children: kT.map((TT => (0, OT.jsx)("th", {
+              children: TT.header
+            }, TT.key)))
           })
-        }), (0, gv.jsx)("tbody", {
-          children: Pv.map((vv => (0, gv.jsx)(hv.Fragment, {
-            children: pv(vv)
-          }, Sv(vv))))
+        }), (0, OT.jsx)("tbody", {
+          children: cT.map((TT => (0, OT.jsx)(lT.Fragment, {
+            children: yT(TT)
+          }, MT(TT))))
         })]
       })
     }
   },
-  4650: () => {}
+  4855: () => {}
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

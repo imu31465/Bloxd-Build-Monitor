@@ -1,143 +1,143 @@
 export const id = 42;
 export const ids = [42];
 export const modules = {
-  40789: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => gv
+  41101: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => OT
     });
-    var hv = Pv(108),
-      Sv = Pv(1192);
+    var lT = cT(159),
+      MT = cT(1210);
 
-    function ev(vv) {
-      return (0, hv.b)() ? `https://${Sv.b.discordDomain}/${vv.href}` : vv.href
+    function KT(TT) {
+      return (0, lT.c)() ? `https://${MT.c.discordDomain}/${TT.href}` : TT.href
     }
-    const gv = {
-      scriptUrl: ev(new Pv.U(Pv(40794))),
-      wasmBinaryUrl: ev(new Pv.U(Pv(40803)))
+    const OT = {
+      scriptUrl: KT(new cT.U(cT(41103))),
+      wasmBinaryUrl: KT(new cT.U(cT(41106)))
     }
   },
-  9093: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => Sv,
-      g: () => ev,
-      k: () => gv
+  9440: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => MT,
+      e: () => KT,
+      g: () => OT
     });
-    const hv = 1179937895,
-      Sv = 1313821514;
+    const lT = 1179937895,
+      MT = 1313821514;
 
-    function ev(vv) {
-      const zv = new DataView(vv.buffer, vv.byteOffset, vv.byteLength);
-      if (vv.byteLength < 20 || zv.getUint32(0, !0) !== hv || 2 !== zv.getUint32(4, !0)) return null;
-      const Pv = Math.min(zv.getUint32(8, !0), vv.byteLength),
-        ev = zv.getUint32(12, !0);
-      if (zv.getUint32(16, !0) !== Sv || 20 + ev > Pv) return null;
-      let gv;
+    function KT(TT) {
+      const kT = new DataView(TT.buffer, TT.byteOffset, TT.byteLength);
+      if (TT.byteLength < 20 || kT.getUint32(0, !0) !== lT || 2 !== kT.getUint32(4, !0)) return null;
+      const cT = Math.min(kT.getUint32(8, !0), TT.byteLength),
+        KT = kT.getUint32(12, !0);
+      if (kT.getUint32(16, !0) !== MT || 20 + KT > cT) return null;
+      let OT;
       try {
-        gv = JSON.parse((new TextDecoder).decode(vv.subarray(20, 20 + ev)))
+        OT = JSON.parse((new TextDecoder).decode(TT.subarray(20, 20 + KT)))
       } catch {
         return null
       }
-      return "object" === typeof gv && null !== gv ? {
-        json: gv,
-        jsonEnd: 20 + ev,
-        length: Pv
+      return "object" === typeof OT && null !== OT ? {
+        json: OT,
+        jsonEnd: 20 + KT,
+        length: cT
       } : null
     }
 
-    function gv(vv) {
-      var zv;
-      const Pv = null === (zv = ev(vv)) || void 0 === zv ? void 0 : zv.json;
-      if (void 0 === Pv || !Array.isArray(Pv.extensionsUsed) || !Pv.extensionsUsed.includes("KHR_draco_mesh_compression")) return !1;
-      const hv = Pv.meshes;
-      return Array.isArray(hv) && hv.some((vv => {
-        const zv = null === vv || void 0 === vv ? void 0 : vv.primitives;
-        return Array.isArray(zv) && zv.some((vv => {
-          const zv = null === vv || void 0 === vv ? void 0 : vv.extensions;
-          return null != (null === zv || void 0 === zv ? void 0 : zv.KHR_draco_mesh_compression)
+    function OT(TT) {
+      var kT;
+      const cT = null === (kT = KT(TT)) || void 0 === kT ? void 0 : kT.json;
+      if (void 0 === cT || !Array.isArray(cT.extensionsUsed) || !cT.extensionsUsed.includes("KHR_draco_mesh_compression")) return !1;
+      const lT = cT.meshes;
+      return Array.isArray(lT) && lT.some((TT => {
+        const kT = null === TT || void 0 === TT ? void 0 : TT.primitives;
+        return Array.isArray(kT) && kT.some((TT => {
+          const kT = null === TT || void 0 === TT ? void 0 : TT.extensions;
+          return null != (null === kT || void 0 === kT ? void 0 : kT.KHR_draco_mesh_compression)
         }))
       }))
     }
   },
-  42755: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      MODELS_MODULE_RETRY_DELAYS_MS: () => iv,
-      pageModelPool: () => mv
+  42867: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      MODELS_MODULE_RETRY_DELAYS_MS: () => NT,
+      pageModelPool: () => DT
     });
-    var hv = Pv(3473),
-      Sv = Pv(35885),
-      ev = Pv(40065),
-      gv = Pv(40789),
-      pv = Pv(35852);
+    var lT = cT(3684),
+      MT = cT(36113),
+      KT = cT(40409),
+      OT = cT(41101),
+      yT = cT(36089);
     Error;
-    class dv extends Error {
-      constructor(vv, zv) {
-        let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          hv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        super(`Draco ${vv}: ${zv}`), this.stage = vv, this.url = Pv, this.status = hv, this.name = "DracoLoadError"
+    class fT extends Error {
+      constructor(TT, kT) {
+        let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        super(`Draco ${TT}: ${kT}`), this.stage = TT, this.url = cT, this.status = lT, this.name = "DracoLoadError"
       }
       get goneUrl() {
         return 404 === this.status || 410 === this.status ? this.url : null
       }
     }
 
-    function Nv(vv, zv) {
-      let Pv = null,
-        Sv = !1;
+    function xT(TT, kT) {
+      let cT = null,
+        MT = !1;
       return {
         get: () => {
-          if (null === Pv) {
-            const ev = async function(vv, zv) {
+          if (null === cT) {
+            const KT = async function(TT, kT) {
               try {
-                return (await (0, hv.I)(vv)).buffer
-              } catch (Pv) {
-                throw new dv(zv, (0, pv.j)(Pv), vv, Pv instanceof hv.g ? Pv.status : null)
+                return (await (0, lT.N)(TT)).buffer
+              } catch (cT) {
+                throw new fT(kT, (0, yT.k)(cT), TT, cT instanceof lT.c ? cT.status : null)
               }
-            }(vv, zv);
-            Pv = ev, ev.then((() => {
-              Sv = Pv === ev
+            }(TT, kT);
+            cT = KT, KT.then((() => {
+              MT = cT === KT
             }), (() => {
-              Pv = null
+              cT = null
             }))
           }
-          return Pv
+          return cT
         },
         forget: () => {
-          Sv && (Pv = null, Sv = !1)
+          MT && (cT = null, MT = !1)
         }
       }
     }
 
-    function lv(vv, zv) {
-      const Pv = Nv(zv, "wasm"),
-        hv = Nv(vv, "script");
+    function IT(TT, kT) {
+      const cT = xT(kT, "wasm"),
+        lT = xT(TT, "script");
       return async function() {
-        arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (Pv.forget(), hv.forget());
-        const [vv, zv] = await Promise.all([Pv.get(), hv.get()]);
+        arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (cT.forget(), lT.forget());
+        const [TT, kT] = await Promise.all([cT.get(), lT.get()]);
         return {
-          script: zv,
-          wasmBinary: vv
+          script: kT,
+          wasmBinary: TT
         }
       }
     }
-    var Tv = Pv(9093),
-      Wv = Pv(2904),
-      wv = Pv(40265),
-      av = Pv(40304);
-    class sv extends Error {
-      constructor(vv) {
-        super(`no model worker could install it: ${vv}`), this.name = "DracoInstallError"
+    var AT = cT(9440),
+      CT = cT(3045),
+      jT = cT(40590),
+      vT = cT(40627);
+    class tT extends Error {
+      constructor(TT) {
+        super(`no model worker could install it: ${TT}`), this.name = "DracoInstallError"
       }
     }
-    class Cv {
-      constructor(vv) {
-        this.opts = vv, this.queue = [], this.slots = [], this.stopped = null, this.create = null, this.ow = null, this.downloads = 0, this.installFailure = "", this.nextSeq = 0, this.jobLosses = 0;
-        for (let zv = 0; zv < Math.max(1, vv.count); zv++) this.slots.push({
+    class hT {
+      constructor(TT) {
+        this.opts = TT, this.queue = [], this.slots = [], this.stopped = null, this.create = null, this.pj = null, this.downloads = 0, this.installFailure = "", this.nextSeq = 0, this.jobLosses = 0;
+        for (let kT = 0; kT < Math.max(1, TT.count); kT++) this.slots.push({
           worker: null,
           starting: !1,
           timer: null,
           job: null,
           seq: 0,
-          ow: "none",
+          pj: "none",
           installSeq: 0,
           failedDownload: 0,
           losses: 0,
@@ -147,18 +147,18 @@ export const modules = {
         this.downloadDecoder(), this.pump()
       }
       get pending() {
-        return this.queue.length + this.slots.filter((vv => null !== vv.job)).length
+        return this.queue.length + this.slots.filter((TT => null !== TT.job)).length
       }
-      build(vv, zv) {
-        if (null !== this.stopped) return Promise.resolve((0, wv.r)(vv, this.stopped));
-        const Pv = (0, Tv.k)(zv);
-        return Pv && this.downloadDecoder(), new Promise((hv => {
+      build(TT, kT) {
+        if (null !== this.stopped) return Promise.resolve((0, jT.o)(TT, this.stopped));
+        const cT = (0, AT.g)(kT);
+        return cT && this.downloadDecoder(), new Promise((lT => {
           this.queue.push({
-            word: vv,
-            glb: zv,
-            draco: Pv,
+            word: TT,
+            glb: kT,
+            draco: cT,
             attempts: 0,
-            resolve: hv
+            resolve: lT
           }), this.pump()
         }))
       }
@@ -166,218 +166,218 @@ export const modules = {
         this.fail(null)
       }
       files() {
-        return "object" === typeof this.ow ? this.ow : null
+        return "object" === typeof this.pj ? this.pj : null
       }
       pump() {
-        const vv = this.files();
-        for (const zv of this.slots) {
+        const TT = this.files();
+        for (const kT of this.slots) {
           if (null !== this.stopped) return;
-          if (zv.gaveUp || zv.starting) continue;
-          if (null === zv.worker) {
-            this.start(zv);
+          if (kT.gaveUp || kT.starting) continue;
+          if (null === kT.worker) {
+            this.start(kT);
             continue
           }
-          if (null !== vv && "none" === zv.ow && zv.failedDownload !== this.downloads && this.install(zv, zv.worker, vv), null !== zv.job) continue;
-          const Pv = this.queue.findIndex((vv => "installed" === zv.ow || !vv.draco));
-          Pv >= 0 && this.run(zv, zv.worker, this.queue.splice(Pv, 1)[0])
+          if (null !== TT && "none" === kT.pj && kT.failedDownload !== this.downloads && this.install(kT, kT.worker, TT), null !== kT.job) continue;
+          const cT = this.queue.findIndex((TT => "installed" === kT.pj || !TT.draco));
+          cT >= 0 && this.run(kT, kT.worker, this.queue.splice(cT, 1)[0])
         }
         null === this.stopped && this.checkDecoder()
       }
       checkDecoder() {
         if (null === this.files()) return;
-        this.slots.some((vv => !vv.gaveUp && ("none" !== vv.ow || vv.failedDownload !== this.downloads))) || (this.ow = "uninstallable", this.decoderFailed(new sv(this.installFailure)))
+        this.slots.some((TT => !TT.gaveUp && ("none" !== TT.pj || TT.failedDownload !== this.downloads))) || (this.pj = "uninstallable", this.decoderFailed(new tT(this.installFailure)))
       }
-      start(vv) {
-        if (vv.losses >= 6) return vv.gaveUp = !0, void(this.slots.every((vv => vv.gaveUp)) && this.fail(new Error("every model worker went 6 times with no file built")));
-        vv.starting = !0, this.create ??= this.opts.loadWorker(), Promise.all([this.create, this.opts.module]).then((zv => {
-          let [Pv, hv] = zv;
-          null === this.stopped && this.launch(vv, Pv, hv)
-        }), (vv => {
-          this.fail(vv)
+      start(TT) {
+        if (TT.losses >= 6) return TT.gaveUp = !0, void(this.slots.every((TT => TT.gaveUp)) && this.fail(new Error("every model worker went 6 times with no file built")));
+        TT.starting = !0, this.create ??= this.opts.loadWorker(), Promise.all([this.create, this.opts.module]).then((kT => {
+          let [cT, lT] = kT;
+          null === this.stopped && this.launch(TT, cT, lT)
+        }), (TT => {
+          this.fail(TT)
         }))
       }
-      launch(vv, zv, Pv) {
-        let hv;
+      launch(TT, kT, cT) {
+        let lT;
         try {
-          hv = zv()
-        } catch (Sv) {
-          return void this.lose(vv, `a model worker could not be created (${String(Sv)})`)
+          lT = kT()
+        } catch (MT) {
+          return void this.lose(TT, `a model worker could not be created (${String(MT)})`)
         }
-        vv.worker = hv, this.startTimer(vv, 3e4, (zv => {
-          this.lose(vv, `a model worker did not start: ${(0,av.n)(zv)}`)
-        })), hv.onmessage = zv => {
+        TT.worker = lT, this.startTimer(TT, 3e4, (kT => {
+          this.lose(TT, `a model worker did not start: ${(0,vT.h)(kT)}`)
+        })), lT.onmessage = kT => {
           let {
-            data: Pv
-          } = zv;
-          this.answered(vv, hv, Pv)
-        }, hv.onerror = zv => {
-          this.lose(vv, vv.starting ? `a model worker failed to start: ${zv.message}` : `a model worker failed: ${zv.message}`)
-        }, hv.postMessage({
+            data: cT
+          } = kT;
+          this.answered(TT, lT, cT)
+        }, lT.onerror = kT => {
+          this.lose(TT, TT.starting ? `a model worker failed to start: ${kT.message}` : `a model worker failed: ${kT.message}`)
+        }, lT.postMessage({
           type: "start",
-          module: Pv
+          module: cT
         })
       }
-      startTimer(vv, zv, Pv) {
-        vv.timer = new av.k(zv, (zv => {
-          vv.timer = null, Pv(zv)
+      startTimer(TT, kT, cT) {
+        TT.timer = new vT.g(kT, (kT => {
+          TT.timer = null, cT(kT)
         }), void 0, this.opts.visibility)
       }
-      clearTimer(vv) {
-        var zv;
-        null === (zv = vv.timer) || void 0 === zv || zv.cancel(), vv.timer = null
+      clearTimer(TT) {
+        var kT;
+        null === (kT = TT.timer) || void 0 === kT || kT.cancel(), TT.timer = null
       }
-      answered(vv, zv, Pv) {
-        if ("lost" === Pv.type) return void this.lose(vv, Pv.reason);
-        if (vv.starting) return "started" !== Pv.type ? void this.lose(vv, `a model worker answered ${Pv.type} before it started`) : (this.clearTimer(vv), vv.starting = !1, vv.startedAt = performance.now(), void this.pump());
-        if ("dracoInstalled" === Pv.type || "dracoFailed" === Pv.type) {
-          if (Pv.seq !== vv.installSeq) return;
-          return void("installing" === vv.ow ? (this.clearTimer(vv), "dracoInstalled" === Pv.type ? (vv.ow = "installed", this.pump()) : this.installFailed(vv, Pv.reason)) : "dracoInstalled" === Pv.type && "none" === vv.ow && vv.failedDownload === this.downloads && (vv.ow = "installed", this.pump()))
+      answered(TT, kT, cT) {
+        if ("lost" === cT.type) return void this.lose(TT, cT.reason);
+        if (TT.starting) return "started" !== cT.type ? void this.lose(TT, `a model worker answered ${cT.type} before it started`) : (this.clearTimer(TT), TT.starting = !1, TT.startedAt = performance.now(), void this.pump());
+        if ("dracoInstalled" === cT.type || "dracoFailed" === cT.type) {
+          if (cT.seq !== TT.installSeq) return;
+          return void("installing" === TT.pj ? (this.clearTimer(TT), "dracoInstalled" === cT.type ? (TT.pj = "installed", this.pump()) : this.installFailed(TT, cT.reason)) : "dracoInstalled" === cT.type && "none" === TT.pj && TT.failedDownload === this.downloads && (TT.pj = "installed", this.pump()))
         }
-        const hv = vv.job;
-        null !== hv && "started" !== Pv.type && Pv.seq === vv.seq && ("trapped" !== Pv.type ? (vv.job = null, vv.losses = 0, this.jobLosses = 0, hv.resolve(new Uint8Array(Pv.record)), this.pump()) : this.lose(vv, Pv.trap, !0))
+        const lT = TT.job;
+        null !== lT && "started" !== cT.type && cT.seq === TT.seq && ("trapped" !== cT.type ? (TT.job = null, TT.losses = 0, this.jobLosses = 0, lT.resolve(new Uint8Array(cT.record)), this.pump()) : this.lose(TT, cT.trap, !0))
       }
-      install(vv, zv, Pv) {
-        const hv = this.nextSeq++;
-        vv.ow = "installing", vv.installSeq = hv, this.startTimer(vv, 3e4, (zv => {
-          this.installFailed(vv, `no install within ${Math.round(zv)} ms`)
+      install(TT, kT, cT) {
+        const lT = this.nextSeq++;
+        TT.pj = "installing", TT.installSeq = lT, this.startTimer(TT, 3e4, (kT => {
+          this.installFailed(TT, `no install within ${Math.round(kT)} ms`)
         }));
-        const Sv = Pv.script.slice(0),
-          ev = Pv.wasmBinary.slice(0);
-        zv.postMessage({
+        const MT = cT.script.slice(0),
+          KT = cT.wasmBinary.slice(0);
+        kT.postMessage({
           type: "installDraco",
-          seq: hv,
-          script: Sv,
-          wasmBinary: ev
-        }, [Sv, ev])
+          seq: lT,
+          script: MT,
+          wasmBinary: KT
+        }, [MT, KT])
       }
-      installFailed(vv, zv) {
-        console.warn(`[modelPool] a model worker could not install the Draco decoder: ${zv}`), this.noInstall(vv, zv), this.pump()
+      installFailed(TT, kT) {
+        console.warn(`[modelPool] a model worker could not install the Draco decoder: ${kT}`), this.noInstall(TT, kT), this.pump()
       }
-      noInstall(vv, zv) {
-        vv.ow = "none", vv.failedDownload = this.downloads, this.installFailure = zv
+      noInstall(TT, kT) {
+        TT.pj = "none", TT.failedDownload = this.downloads, this.installFailure = kT
       }
       downloadDecoder() {
-        if (null !== this.stopped || "downloading" === this.ow || null !== this.files()) return;
-        const vv = "uninstallable" === this.ow;
-        this.ow = "downloading", this.opts.downloadFiles(vv).then((vv => {
-          null === this.stopped && (this.ow = vv, this.downloads++, this.pump())
-        }), (vv => {
-          this.ow = null, this.decoderFailed(vv)
+        if (null !== this.stopped || "downloading" === this.pj || null !== this.files()) return;
+        const TT = "uninstallable" === this.pj;
+        this.pj = "downloading", this.opts.downloadFiles(TT).then((TT => {
+          null === this.stopped && (this.pj = TT, this.downloads++, this.pump())
+        }), (TT => {
+          this.pj = null, this.decoderFailed(TT)
         }))
       }
-      decoderFailed(vv) {
+      decoderFailed(TT) {
         if (null !== this.stopped) return;
-        const zv = (0, pv.j)(vv);
-        let Pv = 0;
-        for (const hv of this.queue.splice(0)) hv.draco ? (hv.resolve((0, wv.j)(hv.word, zv)), Pv++) : this.queue.push(hv);
-        Pv > 0 && this.opts.onDecoderFailed(vv)
+        const kT = (0, yT.k)(TT);
+        let cT = 0;
+        for (const lT of this.queue.splice(0)) lT.draco ? (lT.resolve((0, jT.j)(lT.word, kT)), cT++) : this.queue.push(lT);
+        cT > 0 && this.opts.onDecoderFailed(TT)
       }
-      run(vv, zv, Pv) {
-        const hv = this.nextSeq++;
-        vv.seq = hv, vv.job = Pv, Pv.attempts++;
-        const Sv = Pv.glb.slice();
-        zv.postMessage({
+      run(TT, kT, cT) {
+        const lT = this.nextSeq++;
+        TT.seq = lT, TT.job = cT, cT.attempts++;
+        const MT = cT.glb.slice();
+        kT.postMessage({
           type: "job",
-          seq: hv,
-          word: Pv.word,
-          glb: Sv.buffer
-        }, [Sv.buffer])
+          seq: lT,
+          word: cT.word,
+          glb: MT.buffer
+        }, [MT.buffer])
       }
-      lose(vv, zv) {
-        let Pv = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        this.clearTimer(vv);
-        const hv = vv.worker;
-        null !== hv && (hv.onmessage = null, hv.onerror = null, hv.terminate());
-        const Sv = !Pv && "installing" === vv.ow;
-        vv.worker = null, vv.starting = !1, vv.ow = "none", Sv && this.noInstall(vv, zv), void 0 !== vv.startedAt && performance.now() - vv.startedAt >= 6e4 && (vv.losses = 0), vv.startedAt = void 0;
-        const ev = vv.job;
-        if (vv.job = null, null !== ev || Sv || vv.losses++, this.opts.onWorkerLost(zv), null !== ev && Sv) ev.attempts--, this.queue.unshift(ev);
-        else if (null !== ev && (ev.attempts < 2 ? this.queue.unshift(ev) : ev.resolve((0, wv.p)(ev.word, zv)), this.jobLosses++, this.jobLosses >= 32)) return void this.fail(new Error("model workers were lost on 32 jobs with no file built"));
+      lose(TT, kT) {
+        let cT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        this.clearTimer(TT);
+        const lT = TT.worker;
+        null !== lT && (lT.onmessage = null, lT.onerror = null, lT.terminate());
+        const MT = !cT && "installing" === TT.pj;
+        TT.worker = null, TT.starting = !1, TT.pj = "none", MT && this.noInstall(TT, kT), void 0 !== TT.startedAt && performance.now() - TT.startedAt >= 6e4 && (TT.losses = 0), TT.startedAt = void 0;
+        const KT = TT.job;
+        if (TT.job = null, null !== KT || MT || TT.losses++, this.opts.onWorkerLost(kT), null !== KT && MT) KT.attempts--, this.queue.unshift(KT);
+        else if (null !== KT && (KT.attempts < 2 ? this.queue.unshift(KT) : KT.resolve((0, jT.m)(KT.word, kT)), this.jobLosses++, this.jobLosses >= 32)) return void this.fail(new Error("model workers were lost on 32 jobs with no file built"));
         this.pump()
       }
-      fail(vv) {
+      fail(TT) {
         if (null !== this.stopped) return;
-        this.stopped = null === vv ? "the model workers stopped" : `the model workers could not start: ${(0,pv.j)(vv)}`;
-        const zv = this.stopped,
-          Pv = vv => {
-            vv.resolve((0, wv.r)(vv.word, zv))
+        this.stopped = null === TT ? "the model workers stopped" : `the model workers could not start: ${(0,yT.k)(TT)}`;
+        const kT = this.stopped,
+          cT = TT => {
+            TT.resolve((0, jT.o)(TT.word, kT))
           };
-        for (const Sv of this.slots) {
-          var hv;
-          this.clearTimer(Sv), null === (hv = Sv.worker) || void 0 === hv || hv.terminate(), Sv.worker = null, null !== Sv.job && Pv(Sv.job), Sv.job = null
+        for (const MT of this.slots) {
+          var lT;
+          this.clearTimer(MT), null === (lT = MT.worker) || void 0 === lT || lT.terminate(), MT.worker = null, null !== MT.job && cT(MT.job), MT.job = null
         }
-        this.queue.splice(0).forEach(Pv), null !== vv && this.opts.onUnavailable(vv)
+        this.queue.splice(0).forEach(cT), null !== TT && this.opts.onUnavailable(TT)
       }
     }
-    const iv = [...hv.q, 5e3, 15e3, 3e4];
-    let cv = null;
-    const Gv = new Set;
+    const NT = [...lT.q, 5e3, 15e3, 3e4];
+    let QT = null;
+    const ST = new Set;
 
-    function mv(vv) {
-      return Gv.add(vv), cv ??= function() {
-        let vv = (zv = navigator.hardwareConcurrency, pv = "deviceMemory" in navigator ? navigator.deviceMemory : void 0, zv > 2 && !(0, Wv.s)(pv) ? 2 : 1);
-        var zv, pv;
-        const Nv = new Cv({
-          module: (0, Sv.f)(ev.c, {
-            delays: iv,
-            onRetry: (vv, zv) => {
-              cv === Nv && jv((Pv => {
-                Pv.onModuleRetry(vv, zv)
+    function DT(TT) {
+      return ST.add(TT), QT ??= function() {
+        let TT = (kT = navigator.hardwareConcurrency, yT = "deviceMemory" in navigator ? navigator.deviceMemory : void 0, kT > 2 && !(0, CT.i)(yT) ? 2 : 1);
+        var kT, yT;
+        const xT = new hT({
+          module: (0, MT.d)(KT.e, {
+            delays: NT,
+            onRetry: (TT, kT) => {
+              QT === xT && aT((cT => {
+                cT.onModuleRetry(TT, kT)
               }))
             }
           }),
-          downloadFiles: lv(gv.e.scriptUrl, gv.e.wasmBinaryUrl),
-          loadWorker: async () => (await Pv.e(43).then((() => Pv(60925)))).createModelWorker,
-          count: vv,
-          onUnavailable: vv => {
-            if (cv === Nv) {
-              cv = null;
-              const zv = function(vv) {
-                return vv instanceof hv.d ? [ev.c.url().href] : void 0
-              }(vv);
-              jv((Pv => {
-                Pv.onUnavailable(vv, zv)
+          downloadFiles: IT(OT.b.scriptUrl, OT.b.wasmBinaryUrl),
+          loadWorker: async () => (await cT.e(43).then((() => cT(60889)))).createModelWorker,
+          count: TT,
+          onUnavailable: TT => {
+            if (QT === xT) {
+              QT = null;
+              const kT = function(TT) {
+                return TT instanceof lT.b ? [KT.e.url().href] : void 0
+              }(TT);
+              aT((cT => {
+                cT.onUnavailable(TT, kT)
               }))
             }
           },
-          onDecoderFailed: vv => {
-            if (cv === Nv) {
-              const zv = vv instanceof dv ? vv.goneUrl : null,
-                Pv = null === zv ? void 0 : [zv];
-              jv((zv => {
-                zv.onDecoderFailed(vv, Pv)
+          onDecoderFailed: TT => {
+            if (QT === xT) {
+              const kT = TT instanceof fT ? TT.goneUrl : null,
+                cT = null === kT ? void 0 : [kT];
+              aT((kT => {
+                kT.onDecoderFailed(TT, cT)
               }))
             }
           },
-          onWorkerLost: vv => {
-            cv === Nv && jv((zv => {
-              zv.onWorkerLost(vv)
+          onWorkerLost: TT => {
+            QT === xT && aT((kT => {
+              kT.onWorkerLost(TT)
             }))
           }
         });
-        return Nv
+        return xT
       }(), {
-        pool: cv,
+        pool: QT,
         unlisten: () => {
-          Gv.delete(vv)
+          ST.delete(TT)
         }
       }
     }
 
-    function jv(vv) {
-      for (const Pv of [...Gv]) try {
-        vv(Pv)
-      } catch (zv) {
-        console.error("[pageModelPool] a listener threw", zv)
+    function aT(TT) {
+      for (const cT of [...ST]) try {
+        TT(cT)
+      } catch (kT) {
+        console.error("[pageModelPool] a listener threw", kT)
       }
     }
   },
-  40803: (vv, zv, Pv) => {
-    vv.exports = Pv.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
+  41103: (TT, kT, cT) => {
+    TT.exports = cT.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
   },
-  40794: (vv, zv, Pv) => {
-    vv.exports = Pv.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
+  41106: (TT, kT, cT) => {
+    TT.exports = cT.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

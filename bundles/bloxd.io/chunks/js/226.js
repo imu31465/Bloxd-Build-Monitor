@@ -1,12 +1,12 @@
 export const id = 226;
 export const ids = [226];
 export const modules = {
-  36615: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => Sv
+  36925: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => MT
     });
-    var hv = Pv(36618);
-    class Sv {
+    var lT = cT(36932);
+    class MT {
       static get LastCreatedEngine() {
         return 0 === this.Instances.length ? null : this.Instances[this.Instances.length - 1]
       }
@@ -14,178 +14,178 @@ export const modules = {
         return this._LastCreatedScene
       }
     }
-    Sv.Instances = [], Sv.OnEnginesDisposedObservable = new hv.c, Sv._LastCreatedScene = null, Sv.UseFallbackTexture = !0, Sv.FallbackTexture = ""
+    MT.Instances = [], MT.OnEnginesDisposedObservable = new lT.b, MT._LastCreatedScene = null, MT.UseFallbackTexture = !0, MT.FallbackTexture = ""
   },
-  36610: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => hv
+  36918: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => lT
     });
-    class hv {
-      static SetMatrixPrecision(vv) {
-        if (hv.MatrixTrackPrecisionChange = !1, vv && !hv.MatrixUse64Bits && hv.MatrixTrackedMatrices)
-          for (let zv = 0; zv < hv.MatrixTrackedMatrices.length; ++zv) {
-            const vv = hv.MatrixTrackedMatrices[zv],
-              Pv = vv._m;
-            vv._m = new Array(16);
-            for (let zv = 0; zv < 16; ++zv) vv._m[zv] = Pv[zv]
+    class lT {
+      static SetMatrixPrecision(TT) {
+        if (lT.MatrixTrackPrecisionChange = !1, TT && !lT.MatrixUse64Bits && lT.MatrixTrackedMatrices)
+          for (let kT = 0; kT < lT.MatrixTrackedMatrices.length; ++kT) {
+            const TT = lT.MatrixTrackedMatrices[kT],
+              cT = TT._m;
+            TT._m = new Array(16);
+            for (let kT = 0; kT < 16; ++kT) TT._m[kT] = cT[kT]
           }
-        hv.MatrixUse64Bits = vv, hv.MatrixCurrentType = hv.MatrixUse64Bits ? Array : Float32Array, hv.MatrixTrackedMatrices = null
+        lT.MatrixUse64Bits = TT, lT.MatrixCurrentType = lT.MatrixUse64Bits ? Array : Float32Array, lT.MatrixTrackedMatrices = null
       }
     }
-    hv.MatrixUse64Bits = !1, hv.MatrixTrackPrecisionChange = !0, hv.MatrixCurrentType = Float32Array, hv.MatrixTrackedMatrices = []
+    lT.MatrixUse64Bits = !1, lT.MatrixTrackPrecisionChange = !0, lT.MatrixCurrentType = Float32Array, lT.MatrixTrackedMatrices = []
   },
-  36627: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => pv,
-      h: () => Nv,
-      j: () => dv,
-      k: () => hv,
-      o: () => ev,
-      p: () => gv
+  36942: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => yT,
+      h: () => xT,
+      k: () => fT,
+      m: () => lT,
+      o: () => KT,
+      r: () => OT
     });
-    class hv {}
+    class lT {}
 
-    function Sv(vv) {
-      vv.updateFlag = hv._UpdateFlagSeed++
+    function MT(TT) {
+      TT.updateFlag = lT._UpdateFlagSeed++
     }
 
-    function ev(vv, zv, Pv) {
-      let hv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      const Sv = vv.pPv(),
-        ev = zv.pPv(),
-        gv = Sv[0],
-        pv = Sv[1],
-        dv = Sv[2],
-        Nv = Sv[3],
-        lv = Sv[4],
-        Tv = Sv[5],
-        Wv = Sv[6],
-        wv = Sv[7],
-        av = Sv[8],
-        sv = Sv[9],
-        Cv = Sv[10],
-        iv = Sv[11],
-        cv = Sv[12],
-        Gv = Sv[13],
-        mv = Sv[14],
-        jv = Sv[15],
-        fv = ev[0],
-        Fv = ev[1],
-        Yv = ev[2],
-        nv = ev[3],
-        Ov = ev[4],
-        Dv = ev[5],
-        Kv = ev[6],
-        Vv = ev[7],
-        Uv = ev[8],
-        Rv = ev[9],
-        xv = ev[10],
-        tv = ev[11],
-        qv = ev[12],
-        Iv = ev[13],
-        Qv = ev[14],
-        Zv = ev[15];
-      Pv[hv] = gv * fv + pv * Ov + dv * Uv + Nv * qv, Pv[hv + 1] = gv * Fv + pv * Dv + dv * Rv + Nv * Iv, Pv[hv + 2] = gv * Yv + pv * Kv + dv * xv + Nv * Qv, Pv[hv + 3] = gv * nv + pv * Vv + dv * tv + Nv * Zv, Pv[hv + 4] = lv * fv + Tv * Ov + Wv * Uv + wv * qv, Pv[hv + 5] = lv * Fv + Tv * Dv + Wv * Rv + wv * Iv, Pv[hv + 6] = lv * Yv + Tv * Kv + Wv * xv + wv * Qv, Pv[hv + 7] = lv * nv + Tv * Vv + Wv * tv + wv * Zv, Pv[hv + 8] = av * fv + sv * Ov + Cv * Uv + iv * qv, Pv[hv + 9] = av * Fv + sv * Dv + Cv * Rv + iv * Iv, Pv[hv + 10] = av * Yv + sv * Kv + Cv * xv + iv * Qv, Pv[hv + 11] = av * nv + sv * Vv + Cv * tv + iv * Zv, Pv[hv + 12] = cv * fv + Gv * Ov + mv * Uv + jv * qv, Pv[hv + 13] = cv * Fv + Gv * Dv + mv * Rv + jv * Iv, Pv[hv + 14] = cv * Yv + Gv * Kv + mv * xv + jv * Qv, Pv[hv + 15] = cv * nv + Gv * Vv + mv * tv + jv * Zv
+    function KT(TT, kT, cT) {
+      let lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      const MT = TT.acT(),
+        KT = kT.acT(),
+        OT = MT[0],
+        yT = MT[1],
+        fT = MT[2],
+        xT = MT[3],
+        IT = MT[4],
+        AT = MT[5],
+        CT = MT[6],
+        jT = MT[7],
+        vT = MT[8],
+        tT = MT[9],
+        hT = MT[10],
+        NT = MT[11],
+        QT = MT[12],
+        ST = MT[13],
+        DT = MT[14],
+        aT = MT[15],
+        FT = KT[0],
+        rT = KT[1],
+        PT = KT[2],
+        wT = KT[3],
+        mT = KT[4],
+        bT = KT[5],
+        zT = KT[6],
+        JT = KT[7],
+        oT = KT[8],
+        HT = KT[9],
+        eT = KT[10],
+        GT = KT[11],
+        VT = KT[12],
+        ET = KT[13],
+        ZT = KT[14],
+        uT = KT[15];
+      cT[lT] = OT * FT + yT * mT + fT * oT + xT * VT, cT[lT + 1] = OT * rT + yT * bT + fT * HT + xT * ET, cT[lT + 2] = OT * PT + yT * zT + fT * eT + xT * ZT, cT[lT + 3] = OT * wT + yT * JT + fT * GT + xT * uT, cT[lT + 4] = IT * FT + AT * mT + CT * oT + jT * VT, cT[lT + 5] = IT * rT + AT * bT + CT * HT + jT * ET, cT[lT + 6] = IT * PT + AT * zT + CT * eT + jT * ZT, cT[lT + 7] = IT * wT + AT * JT + CT * GT + jT * uT, cT[lT + 8] = vT * FT + tT * mT + hT * oT + NT * VT, cT[lT + 9] = vT * rT + tT * bT + hT * HT + NT * ET, cT[lT + 10] = vT * PT + tT * zT + hT * eT + NT * ZT, cT[lT + 11] = vT * wT + tT * JT + hT * GT + NT * uT, cT[lT + 12] = QT * FT + ST * mT + DT * oT + aT * VT, cT[lT + 13] = QT * rT + ST * bT + DT * HT + aT * ET, cT[lT + 14] = QT * PT + ST * zT + DT * eT + aT * ZT, cT[lT + 15] = QT * wT + ST * JT + DT * GT + aT * uT
     }
 
-    function gv(vv, zv, Pv) {
-      let hv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      ev(vv, zv, Pv.pPv(), hv), Sv(Pv)
+    function OT(TT, kT, cT) {
+      let lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      KT(TT, kT, cT.acT(), lT), MT(cT)
     }
 
-    function pv(vv, zv) {
-      let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      const hv = vv.pPv();
-      zv[Pv] = hv[0], zv[Pv + 1] = hv[1], zv[Pv + 2] = hv[2], zv[Pv + 3] = hv[3], zv[Pv + 4] = hv[4], zv[Pv + 5] = hv[5], zv[Pv + 6] = hv[6], zv[Pv + 7] = hv[7], zv[Pv + 8] = hv[8], zv[Pv + 9] = hv[9], zv[Pv + 10] = hv[10], zv[Pv + 11] = hv[11], zv[Pv + 12] = hv[12], zv[Pv + 13] = hv[13], zv[Pv + 14] = hv[14], zv[Pv + 15] = hv[15]
+    function yT(TT, kT) {
+      let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const lT = TT.acT();
+      kT[cT] = lT[0], kT[cT + 1] = lT[1], kT[cT + 2] = lT[2], kT[cT + 3] = lT[3], kT[cT + 4] = lT[4], kT[cT + 5] = lT[5], kT[cT + 6] = lT[6], kT[cT + 7] = lT[7], kT[cT + 8] = lT[8], kT[cT + 9] = lT[9], kT[cT + 10] = lT[10], kT[cT + 11] = lT[11], kT[cT + 12] = lT[12], kT[cT + 13] = lT[13], kT[cT + 14] = lT[14], kT[cT + 15] = lT[15]
     }
 
-    function dv(vv, zv) {
-      const Pv = Nv(vv, zv.pPv());
-      return Pv && Sv(zv), Pv
+    function fT(TT, kT) {
+      const cT = xT(TT, kT.acT());
+      return cT && MT(kT), cT
     }
 
-    function Nv(vv, zv) {
-      const Pv = vv.pPv(),
-        hv = Pv[0],
-        Sv = Pv[1],
-        ev = Pv[2],
-        gv = Pv[3],
-        pv = Pv[4],
-        dv = Pv[5],
-        Nv = Pv[6],
-        lv = Pv[7],
-        Tv = Pv[8],
-        Wv = Pv[9],
-        wv = Pv[10],
-        av = Pv[11],
-        sv = Pv[12],
-        Cv = Pv[13],
-        iv = Pv[14],
-        cv = Pv[15],
-        Gv = wv * cv - iv * av,
-        mv = Wv * cv - Cv * av,
-        jv = Wv * iv - Cv * wv,
-        fv = Tv * cv - sv * av,
-        Fv = Tv * iv - wv * sv,
-        Yv = Tv * Cv - sv * Wv,
-        nv = +(dv * Gv - Nv * mv + lv * jv),
-        Ov = -(pv * Gv - Nv * fv + lv * Fv),
-        Dv = +(pv * mv - dv * fv + lv * Yv),
-        Kv = -(pv * jv - dv * Fv + Nv * Yv),
-        Vv = hv * nv + Sv * Ov + ev * Dv + gv * Kv;
-      if (0 === Vv) return !1;
-      const Uv = 1 / Vv,
-        Rv = Nv * cv - iv * lv,
-        xv = dv * cv - Cv * lv,
-        tv = dv * iv - Cv * Nv,
-        qv = pv * cv - sv * lv,
-        Iv = pv * iv - sv * Nv,
-        Qv = pv * Cv - sv * dv,
-        Zv = Nv * av - wv * lv,
-        Av = dv * av - Wv * lv,
-        Lv = dv * wv - Wv * Nv,
-        Hv = pv * av - Tv * lv,
-        Mv = pv * wv - Tv * Nv,
-        yv = pv * Wv - Tv * dv,
-        Bv = -(Sv * Gv - ev * mv + gv * jv),
-        Jv = +(hv * Gv - ev * fv + gv * Fv),
-        Ev = -(hv * mv - Sv * fv + gv * Yv),
-        ov = +(hv * jv - Sv * Fv + ev * Yv),
-        bv = +(Sv * Rv - ev * xv + gv * tv),
-        rv = -(hv * Rv - ev * qv + gv * Iv),
-        kv = +(hv * xv - Sv * qv + gv * Qv),
-        Xv = -(hv * tv - Sv * Iv + ev * Qv),
-        uv = -(Sv * Zv - ev * Av + gv * Lv),
-        vz = +(hv * Zv - ev * Hv + gv * Mv),
-        zz = -(hv * Av - Sv * Hv + gv * yv),
-        Pz = +(hv * Lv - Sv * Mv + ev * yv);
-      return zv[0] = nv * Uv, zv[1] = Bv * Uv, zv[2] = bv * Uv, zv[3] = uv * Uv, zv[4] = Ov * Uv, zv[5] = Jv * Uv, zv[6] = rv * Uv, zv[7] = vz * Uv, zv[8] = Dv * Uv, zv[9] = Ev * Uv, zv[10] = kv * Uv, zv[11] = zz * Uv, zv[12] = Kv * Uv, zv[13] = ov * Uv, zv[14] = Xv * Uv, zv[15] = Pz * Uv, !0
+    function xT(TT, kT) {
+      const cT = TT.acT(),
+        lT = cT[0],
+        MT = cT[1],
+        KT = cT[2],
+        OT = cT[3],
+        yT = cT[4],
+        fT = cT[5],
+        xT = cT[6],
+        IT = cT[7],
+        AT = cT[8],
+        CT = cT[9],
+        jT = cT[10],
+        vT = cT[11],
+        tT = cT[12],
+        hT = cT[13],
+        NT = cT[14],
+        QT = cT[15],
+        ST = jT * QT - NT * vT,
+        DT = CT * QT - hT * vT,
+        aT = CT * NT - hT * jT,
+        FT = AT * QT - tT * vT,
+        rT = AT * NT - jT * tT,
+        PT = AT * hT - tT * CT,
+        wT = +(fT * ST - xT * DT + IT * aT),
+        mT = -(yT * ST - xT * FT + IT * rT),
+        bT = +(yT * DT - fT * FT + IT * PT),
+        zT = -(yT * aT - fT * rT + xT * PT),
+        JT = lT * wT + MT * mT + KT * bT + OT * zT;
+      if (0 === JT) return !1;
+      const oT = 1 / JT,
+        HT = xT * QT - NT * IT,
+        eT = fT * QT - hT * IT,
+        GT = fT * NT - hT * xT,
+        VT = yT * QT - tT * IT,
+        ET = yT * NT - tT * xT,
+        ZT = yT * hT - tT * fT,
+        uT = xT * vT - jT * IT,
+        XT = fT * vT - CT * IT,
+        dT = fT * jT - CT * xT,
+        LT = yT * vT - AT * IT,
+        RT = yT * jT - AT * xT,
+        gT = yT * CT - AT * fT,
+        UT = -(MT * ST - KT * DT + OT * aT),
+        YT = +(lT * ST - KT * FT + OT * rT),
+        BT = -(lT * DT - MT * FT + OT * PT),
+        WT = +(lT * aT - MT * rT + KT * PT),
+        nT = +(MT * HT - KT * eT + OT * GT),
+        pT = -(lT * HT - KT * VT + OT * ET),
+        iT = +(lT * eT - MT * VT + OT * ZT),
+        qT = -(lT * GT - MT * ET + KT * ZT),
+        sT = -(MT * uT - KT * XT + OT * dT),
+        Tk = +(lT * uT - KT * LT + OT * RT),
+        kk = -(lT * XT - MT * LT + OT * gT),
+        ck = +(lT * dT - MT * RT + KT * gT);
+      return kT[0] = wT * oT, kT[1] = UT * oT, kT[2] = nT * oT, kT[3] = sT * oT, kT[4] = mT * oT, kT[5] = YT * oT, kT[6] = pT * oT, kT[7] = Tk * oT, kT[8] = bT * oT, kT[9] = BT * oT, kT[10] = iT * oT, kT[11] = kk * oT, kT[12] = zT * oT, kT[13] = WT * oT, kT[14] = qT * oT, kT[15] = ck * oT, !0
     }
-    hv._UpdateFlagSeed = 0
+    lT._UpdateFlagSeed = 0
   },
-  36594: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => sv,
-      d: () => av,
-      e: () => mv,
-      i: () => iv,
-      j: () => Tv,
-      l: () => Wv,
-      m: () => wv
+  36892: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => tT,
+      f: () => vT,
+      g: () => DT,
+      h: () => NT,
+      i: () => AT,
+      m: () => CT,
+      o: () => jT
     });
-    var hv = Pv(36599),
-      Sv = Pv(36602),
-      ev = Pv(36610),
-      gv = Pv(36615),
-      pv = Pv(36620),
-      dv = Pv(36627),
-      Nv = Pv(36631);
-    const lv = vv => parseInt(vv.toString().replace(/\W/g, ""));
-    class Tv {
+    var lT = cT(36901),
+      MT = cT(36910),
+      KT = cT(36918),
+      OT = cT(36925),
+      yT = cT(36937),
+      fT = cT(36942),
+      xT = cT(36949);
+    const IT = TT => parseInt(TT.toString().replace(/\W/g, ""));
+    class AT {
       constructor() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this.x = vv, this.y = zv
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this.x = TT, this.y = kT
       }
       toString() {
         return `{X: ${this.x} Y: ${this.y}}`
@@ -194,145 +194,145 @@ export const modules = {
         return "Vector2"
       }
       getHashCode() {
-        let vv = lv(this.x);
-        return vv = 397 * vv ^ lv(this.y), vv
+        let TT = IT(this.x);
+        return TT = 397 * TT ^ IT(this.y), TT
       }
-      toArray(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return vv[zv] = this.x, vv[zv + 1] = this.y, this
+      toArray(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return TT[kT] = this.x, TT[kT + 1] = this.y, this
       }
-      Evv(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return Tv.FromArrayToRef(vv, zv, this), this
+      xkT(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return AT.FromArrayToRef(TT, kT, this), this
       }
-      pPv() {
+      acT() {
         return [this.x, this.y]
       }
-      Vzv(vv) {
-        return this.x = vv.x, this.y = vv.y, this
+      UkT(TT) {
+        return this.x = TT.x, this.y = TT.y, this
       }
-      f_(vv, zv) {
-        return this.x = vv, this.y = zv, this
+      I5(TT, kT) {
+        return this.x = TT, this.y = kT, this
       }
-      set(vv, zv) {
-        return this.f_(vv, zv)
+      set(TT, kT) {
+        return this.I5(TT, kT)
       }
-      Dk(vv) {
-        return this.f_(vv, vv)
+      Xs(TT) {
+        return this.I5(TT, TT)
       }
-      add(vv) {
-        return new Tv(this.x + vv.x, this.y + vv.y)
+      add(TT) {
+        return new AT(this.x + TT.x, this.y + TT.y)
       }
-      addToRef(vv, zv) {
-        return zv.x = this.x + vv.x, zv.y = this.y + vv.y, zv
+      addToRef(TT, kT) {
+        return kT.x = this.x + TT.x, kT.y = this.y + TT.y, kT
       }
-      addInPlace(vv) {
-        return this.x += vv.x, this.y += vv.y, this
+      addInPlace(TT) {
+        return this.x += TT.x, this.y += TT.y, this
       }
-      addInPlaceFromFloats(vv, zv) {
-        return this.x += vv, this.y += zv, this
+      addInPlaceFromFloats(TT, kT) {
+        return this.x += TT, this.y += kT, this
       }
-      addVector3(vv) {
-        return new Tv(this.x + vv.x, this.y + vv.y)
+      addVector3(TT) {
+        return new AT(this.x + TT.x, this.y + TT.y)
       }
-      subtract(vv) {
-        return new Tv(this.x - vv.x, this.y - vv.y)
+      subtract(TT) {
+        return new AT(this.x - TT.x, this.y - TT.y)
       }
-      subtractToRef(vv, zv) {
-        return zv.x = this.x - vv.x, zv.y = this.y - vv.y, zv
+      subtractToRef(TT, kT) {
+        return kT.x = this.x - TT.x, kT.y = this.y - TT.y, kT
       }
-      VPv(vv) {
-        return this.x -= vv.x, this.y -= vv.y, this
+      gcT(TT) {
+        return this.x -= TT.x, this.y -= TT.y, this
       }
-      multiplyInPlace(vv) {
-        return this.x *= vv.x, this.y *= vv.y, this
+      multiplyInPlace(TT) {
+        return this.x *= TT.x, this.y *= TT.y, this
       }
-      multiply(vv) {
-        return new Tv(this.x * vv.x, this.y * vv.y)
+      multiply(TT) {
+        return new AT(this.x * TT.x, this.y * TT.y)
       }
-      multiplyToRef(vv, zv) {
-        return zv.x = this.x * vv.x, zv.y = this.y * vv.y, zv
+      multiplyToRef(TT, kT) {
+        return kT.x = this.x * TT.x, kT.y = this.y * TT.y, kT
       }
-      multiplyByFloats(vv, zv) {
-        return new Tv(this.x * vv, this.y * zv)
+      multiplyByFloats(TT, kT) {
+        return new AT(this.x * TT, this.y * kT)
       }
-      divide(vv) {
-        return new Tv(this.x / vv.x, this.y / vv.y)
+      divide(TT) {
+        return new AT(this.x / TT.x, this.y / TT.y)
       }
-      divideToRef(vv, zv) {
-        return zv.x = this.x / vv.x, zv.y = this.y / vv.y, zv
+      divideToRef(TT, kT) {
+        return kT.x = this.x / TT.x, kT.y = this.y / TT.y, kT
       }
-      divideInPlace(vv) {
-        return this.x = this.x / vv.x, this.y = this.y / vv.y, this
+      divideInPlace(TT) {
+        return this.x = this.x / TT.x, this.y = this.y / TT.y, this
       }
-      minimizeInPlace(vv) {
-        return this.minimizeInPlaceFromFloats(vv.x, vv.y)
+      minimizeInPlace(TT) {
+        return this.minimizeInPlaceFromFloats(TT.x, TT.y)
       }
-      maximizeInPlace(vv) {
-        return this.maximizeInPlaceFromFloats(vv.x, vv.y)
+      maximizeInPlace(TT) {
+        return this.maximizeInPlaceFromFloats(TT.x, TT.y)
       }
-      minimizeInPlaceFromFloats(vv, zv) {
-        return this.x = Math.min(vv, this.x), this.y = Math.min(zv, this.y), this
+      minimizeInPlaceFromFloats(TT, kT) {
+        return this.x = Math.min(TT, this.x), this.y = Math.min(kT, this.y), this
       }
-      maximizeInPlaceFromFloats(vv, zv) {
-        return this.x = Math.max(vv, this.x), this.y = Math.max(zv, this.y), this
+      maximizeInPlaceFromFloats(TT, kT) {
+        return this.x = Math.max(TT, this.x), this.y = Math.max(kT, this.y), this
       }
-      subtractFromFloats(vv, zv) {
-        return new Tv(this.x - vv, this.y - zv)
+      subtractFromFloats(TT, kT) {
+        return new AT(this.x - TT, this.y - kT)
       }
-      subtractFromFloatsToRef(vv, zv, Pv) {
-        return Pv.x = this.x - vv, Pv.y = this.y - zv, Pv
+      subtractFromFloatsToRef(TT, kT, cT) {
+        return cT.x = this.x - TT, cT.y = this.y - kT, cT
       }
-      Re() {
-        return new Tv(-this.x, -this.y)
+      rc() {
+        return new AT(-this.x, -this.y)
       }
       negateInPlace() {
         return this.x *= -1, this.y *= -1, this
       }
-      negateToRef(vv) {
-        return vv.x = -this.x, vv.y = -this.y, vv
+      negateToRef(TT) {
+        return TT.x = -this.x, TT.y = -this.y, TT
       }
-      scaleInPlace(vv) {
-        return this.x *= vv, this.y *= vv, this
+      scaleInPlace(TT) {
+        return this.x *= TT, this.y *= TT, this
       }
-      scale(vv) {
-        return new Tv(this.x * vv, this.y * vv)
+      scale(TT) {
+        return new AT(this.x * TT, this.y * TT)
       }
-      scaleToRef(vv, zv) {
-        return zv.x = this.x * vv, zv.y = this.y * vv, zv
+      scaleToRef(TT, kT) {
+        return kT.x = this.x * TT, kT.y = this.y * TT, kT
       }
-      scaleAndAddToRef(vv, zv) {
-        return zv.x += this.x * vv, zv.y += this.y * vv, zv
+      scaleAndAddToRef(TT, kT) {
+        return kT.x += this.x * TT, kT.y += this.y * TT, kT
       }
-      equals(vv) {
-        return vv && this.x === vv.x && this.y === vv.y
+      equals(TT) {
+        return TT && this.x === TT.x && this.y === TT.y
       }
-      equalsWithEpsilon(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : hv.e;
-        return vv && (0, pv.WithinEpsilon)(this.x, vv.x, zv) && (0, pv.WithinEpsilon)(this.y, vv.y, zv)
+      equalsWithEpsilon(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : lT.b;
+        return TT && (0, yT.WithinEpsilon)(this.x, TT.x, kT) && (0, yT.WithinEpsilon)(this.y, TT.y, kT)
       }
-      Mev(vv, zv) {
-        return this.x === vv && this.y === zv
+      qKT(TT, kT) {
+        return this.x === TT && this.y === kT
       }
       floor() {
-        return new Tv(Math.floor(this.x), Math.floor(this.y))
+        return new AT(Math.floor(this.x), Math.floor(this.y))
       }
-      floorToRef(vv) {
-        return vv.x = Math.floor(this.x), vv.y = Math.floor(this.y), vv
+      floorToRef(TT) {
+        return TT.x = Math.floor(this.x), TT.y = Math.floor(this.y), TT
       }
       fract() {
-        return new Tv(this.x - Math.floor(this.x), this.y - Math.floor(this.y))
+        return new AT(this.x - Math.floor(this.x), this.y - Math.floor(this.y))
       }
-      fractToRef(vv) {
-        return vv.x = this.x - Math.floor(this.x), vv.y = this.y - Math.floor(this.y), vv
+      fractToRef(TT) {
+        return TT.x = this.x - Math.floor(this.x), TT.y = this.y - Math.floor(this.y), TT
       }
-      rotate(vv) {
-        return this.rotateToRef(vv, new Tv)
+      rotate(TT) {
+        return this.rotateToRef(TT, new AT)
       }
-      rotateToRef(vv, zv) {
-        const Pv = Math.cos(vv),
-          hv = Math.sin(vv);
-        return zv.x = Pv * this.x - hv * this.y, zv.y = hv * this.x + Pv * this.y, zv
+      rotateToRef(TT, kT) {
+        const cT = Math.cos(TT),
+          lT = Math.sin(TT);
+        return kT.x = cT * this.x - lT * this.y, kT.y = lT * this.x + cT * this.y, kT
       }
       length() {
         return Math.sqrt(this.x * this.x + this.y * this.y)
@@ -343,359 +343,359 @@ export const modules = {
       normalize() {
         return this.normalizeFromLength(this.length())
       }
-      normalizeFromLength(vv) {
-        return 0 === vv || 1 === vv ? this : this.scaleInPlace(1 / vv)
+      normalizeFromLength(TT) {
+        return 0 === TT || 1 === TT ? this : this.scaleInPlace(1 / TT)
       }
       normalizeToNew() {
-        const vv = new Tv;
-        return this.normalizeToRef(vv), vv
+        const TT = new AT;
+        return this.normalizeToRef(TT), TT
       }
-      normalizeToRef(vv) {
-        const zv = this.length();
-        return 0 === zv || 1 === zv ? (vv.x = this.x, vv.y = this.y, vv) : this.scaleToRef(1 / zv, vv)
+      normalizeToRef(TT) {
+        const kT = this.length();
+        return 0 === kT || 1 === kT ? (TT.x = this.x, TT.y = this.y, TT) : this.scaleToRef(1 / kT, TT)
       }
       clone() {
-        return new Tv(this.x, this.y)
+        return new AT(this.x, this.y)
       }
-      dot(vv) {
-        return this.x * vv.x + this.y * vv.y
+      dot(TT) {
+        return this.x * TT.x + this.y * TT.y
       }
       static Zero() {
-        return new Tv(0, 0)
+        return new AT(0, 0)
       }
       static One() {
-        return new Tv(1, 1)
+        return new AT(1, 1)
       }
       static Random() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new Tv((0, pv.RandomRange)(vv, zv), (0, pv.RandomRange)(vv, zv))
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new AT((0, yT.RandomRange)(TT, kT), (0, yT.RandomRange)(TT, kT))
       }
       static RandomToRef() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return (arguments.length > 2 ? arguments[2] : void 0).f_((0, pv.RandomRange)(vv, zv), (0, pv.RandomRange)(vv, zv))
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return (arguments.length > 2 ? arguments[2] : void 0).I5((0, yT.RandomRange)(TT, kT), (0, yT.RandomRange)(TT, kT))
       }
       static get ZeroReadOnly() {
-        return Tv._ZeroReadOnly
+        return AT._ZeroReadOnly
       }
-      static FromArray(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new Tv(vv[zv], vv[zv + 1])
+      static FromArray(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new AT(TT[kT], TT[kT + 1])
       }
-      static FromArrayToRef(vv, zv, Pv) {
-        return Pv.x = vv[zv], Pv.y = vv[zv + 1], Pv
+      static FromArrayToRef(TT, kT, cT) {
+        return cT.x = TT[kT], cT.y = TT[kT + 1], cT
       }
-      static FromFloatsToRef(vv, zv, Pv) {
-        return Pv.f_(vv, zv), Pv
+      static FromFloatsToRef(TT, kT, cT) {
+        return cT.I5(TT, kT), cT
       }
-      static CatmullRom(vv, zv, Pv, hv, Sv) {
-        const ev = Sv * Sv,
-          gv = Sv * ev,
-          pv = .5 * (2 * zv.x + (-vv.x + Pv.x) * Sv + (2 * vv.x - 5 * zv.x + 4 * Pv.x - hv.x) * ev + (-vv.x + 3 * zv.x - 3 * Pv.x + hv.x) * gv),
-          dv = .5 * (2 * zv.y + (-vv.y + Pv.y) * Sv + (2 * vv.y - 5 * zv.y + 4 * Pv.y - hv.y) * ev + (-vv.y + 3 * zv.y - 3 * Pv.y + hv.y) * gv);
-        return new Tv(pv, dv)
+      static CatmullRom(TT, kT, cT, lT, MT) {
+        const KT = MT * MT,
+          OT = MT * KT,
+          yT = .5 * (2 * kT.x + (-TT.x + cT.x) * MT + (2 * TT.x - 5 * kT.x + 4 * cT.x - lT.x) * KT + (-TT.x + 3 * kT.x - 3 * cT.x + lT.x) * OT),
+          fT = .5 * (2 * kT.y + (-TT.y + cT.y) * MT + (2 * TT.y - 5 * kT.y + 4 * cT.y - lT.y) * KT + (-TT.y + 3 * kT.y - 3 * cT.y + lT.y) * OT);
+        return new AT(yT, fT)
       }
-      static ClampToRef(vv, zv, Pv, hv) {
-        return hv.x = (0, pv.Clamp)(vv.x, zv.x, Pv.x), hv.y = (0, pv.Clamp)(vv.y, zv.y, Pv.y), hv
+      static ClampToRef(TT, kT, cT, lT) {
+        return lT.x = (0, yT.Clamp)(TT.x, kT.x, cT.x), lT.y = (0, yT.Clamp)(TT.y, kT.y, cT.y), lT
       }
-      static Clamp(vv, zv, Pv) {
-        const hv = (0, pv.Clamp)(vv.x, zv.x, Pv.x),
-          Sv = (0, pv.Clamp)(vv.y, zv.y, Pv.y);
-        return new Tv(hv, Sv)
+      static Clamp(TT, kT, cT) {
+        const lT = (0, yT.Clamp)(TT.x, kT.x, cT.x),
+          MT = (0, yT.Clamp)(TT.y, kT.y, cT.y);
+        return new AT(lT, MT)
       }
-      static Hermite(vv, zv, Pv, hv, Sv) {
-        const ev = Sv * Sv,
-          gv = Sv * ev,
-          pv = 2 * gv - 3 * ev + 1,
-          dv = -2 * gv + 3 * ev,
-          Nv = gv - 2 * ev + Sv,
-          lv = gv - ev,
-          Wv = vv.x * pv + Pv.x * dv + zv.x * Nv + hv.x * lv,
-          wv = vv.y * pv + Pv.y * dv + zv.y * Nv + hv.y * lv;
-        return new Tv(Wv, wv)
+      static Hermite(TT, kT, cT, lT, MT) {
+        const KT = MT * MT,
+          OT = MT * KT,
+          yT = 2 * OT - 3 * KT + 1,
+          fT = -2 * OT + 3 * KT,
+          xT = OT - 2 * KT + MT,
+          IT = OT - KT,
+          CT = TT.x * yT + cT.x * fT + kT.x * xT + lT.x * IT,
+          jT = TT.y * yT + cT.y * fT + kT.y * xT + lT.y * IT;
+        return new AT(CT, jT)
       }
-      static Hermite1stDerivative(vv, zv, Pv, hv, Sv) {
-        return this.Hermite1stDerivativeToRef(vv, zv, Pv, hv, Sv, new Tv)
+      static Hermite1stDerivative(TT, kT, cT, lT, MT) {
+        return this.Hermite1stDerivativeToRef(TT, kT, cT, lT, MT, new AT)
       }
-      static Hermite1stDerivativeToRef(vv, zv, Pv, hv, Sv, ev) {
-        const gv = Sv * Sv;
-        return ev.x = 6 * (gv - Sv) * vv.x + (3 * gv - 4 * Sv + 1) * zv.x + 6 * (-gv + Sv) * Pv.x + (3 * gv - 2 * Sv) * hv.x, ev.y = 6 * (gv - Sv) * vv.y + (3 * gv - 4 * Sv + 1) * zv.y + 6 * (-gv + Sv) * Pv.y + (3 * gv - 2 * Sv) * hv.y, ev
+      static Hermite1stDerivativeToRef(TT, kT, cT, lT, MT, KT) {
+        const OT = MT * MT;
+        return KT.x = 6 * (OT - MT) * TT.x + (3 * OT - 4 * MT + 1) * kT.x + 6 * (-OT + MT) * cT.x + (3 * OT - 2 * MT) * lT.x, KT.y = 6 * (OT - MT) * TT.y + (3 * OT - 4 * MT + 1) * kT.y + 6 * (-OT + MT) * cT.y + (3 * OT - 2 * MT) * lT.y, KT
       }
-      static Lerp(vv, zv, Pv) {
-        return Tv.LerpToRef(vv, zv, Pv, new Tv)
+      static Lerp(TT, kT, cT) {
+        return AT.LerpToRef(TT, kT, cT, new AT)
       }
-      static LerpToRef(vv, zv, Pv, hv) {
-        return hv.x = vv.x + (zv.x - vv.x) * Pv, hv.y = vv.y + (zv.y - vv.y) * Pv, hv
+      static LerpToRef(TT, kT, cT, lT) {
+        return lT.x = TT.x + (kT.x - TT.x) * cT, lT.y = TT.y + (kT.y - TT.y) * cT, lT
       }
-      static Dot(vv, zv) {
-        return vv.x * zv.x + vv.y * zv.y
+      static Dot(TT, kT) {
+        return TT.x * kT.x + TT.y * kT.y
       }
-      static Normalize(vv) {
-        return Tv.NormalizeToRef(vv, new Tv)
+      static Normalize(TT) {
+        return AT.NormalizeToRef(TT, new AT)
       }
-      static NormalizeToRef(vv, zv) {
-        return vv.normalizeToRef(zv), zv
+      static NormalizeToRef(TT, kT) {
+        return TT.normalizeToRef(kT), kT
       }
-      static Minimize(vv, zv) {
-        const Pv = vv.x < zv.x ? vv.x : zv.x,
-          hv = vv.y < zv.y ? vv.y : zv.y;
-        return new Tv(Pv, hv)
+      static Minimize(TT, kT) {
+        const cT = TT.x < kT.x ? TT.x : kT.x,
+          lT = TT.y < kT.y ? TT.y : kT.y;
+        return new AT(cT, lT)
       }
-      static Maximize(vv, zv) {
-        const Pv = vv.x > zv.x ? vv.x : zv.x,
-          hv = vv.y > zv.y ? vv.y : zv.y;
-        return new Tv(Pv, hv)
+      static Maximize(TT, kT) {
+        const cT = TT.x > kT.x ? TT.x : kT.x,
+          lT = TT.y > kT.y ? TT.y : kT.y;
+        return new AT(cT, lT)
       }
-      static Transform(vv, zv) {
-        return Tv.TransformToRef(vv, zv, new Tv)
+      static Transform(TT, kT) {
+        return AT.TransformToRef(TT, kT, new AT)
       }
-      static TransformToRef(vv, zv, Pv) {
-        const hv = zv.m,
-          Sv = vv.x * hv[0] + vv.y * hv[4] + hv[12],
-          ev = vv.x * hv[1] + vv.y * hv[5] + hv[13];
-        return Pv.x = Sv, Pv.y = ev, Pv
+      static TransformToRef(TT, kT, cT) {
+        const lT = kT.m,
+          MT = TT.x * lT[0] + TT.y * lT[4] + lT[12],
+          KT = TT.x * lT[1] + TT.y * lT[5] + lT[13];
+        return cT.x = MT, cT.y = KT, cT
       }
-      static PointInTriangle(vv, zv, Pv, hv) {
-        const Sv = .5 * (-Pv.y * hv.x + zv.y * (-Pv.x + hv.x) + zv.x * (Pv.y - hv.y) + Pv.x * hv.y),
-          ev = Sv < 0 ? -1 : 1,
-          gv = (zv.y * hv.x - zv.x * hv.y + (hv.y - zv.y) * vv.x + (zv.x - hv.x) * vv.y) * ev,
-          pv = (zv.x * Pv.y - zv.y * Pv.x + (zv.y - Pv.y) * vv.x + (Pv.x - zv.x) * vv.y) * ev;
-        return gv > 0 && pv > 0 && gv + pv < 2 * Sv * ev
+      static PointInTriangle(TT, kT, cT, lT) {
+        const MT = .5 * (-cT.y * lT.x + kT.y * (-cT.x + lT.x) + kT.x * (cT.y - lT.y) + cT.x * lT.y),
+          KT = MT < 0 ? -1 : 1,
+          OT = (kT.y * lT.x - kT.x * lT.y + (lT.y - kT.y) * TT.x + (kT.x - lT.x) * TT.y) * KT,
+          yT = (kT.x * cT.y - kT.y * cT.x + (kT.y - cT.y) * TT.x + (cT.x - kT.x) * TT.y) * KT;
+        return OT > 0 && yT > 0 && OT + yT < 2 * MT * KT
       }
-      static Distance(vv, zv) {
-        return Math.sqrt(Tv.DistanceSquared(vv, zv))
+      static Distance(TT, kT) {
+        return Math.sqrt(AT.DistanceSquared(TT, kT))
       }
-      static DistanceSquared(vv, zv) {
-        const Pv = vv.x - zv.x,
-          hv = vv.y - zv.y;
-        return Pv * Pv + hv * hv
+      static DistanceSquared(TT, kT) {
+        const cT = TT.x - kT.x,
+          lT = TT.y - kT.y;
+        return cT * cT + lT * lT
       }
-      static Center(vv, zv) {
-        return Tv.CenterToRef(vv, zv, new Tv)
+      static Center(TT, kT) {
+        return AT.CenterToRef(TT, kT, new AT)
       }
-      static CenterToRef(vv, zv, Pv) {
-        return Pv.f_((vv.x + zv.x) / 2, (vv.y + zv.y) / 2)
+      static CenterToRef(TT, kT, cT) {
+        return cT.I5((TT.x + kT.x) / 2, (TT.y + kT.y) / 2)
       }
-      static DistanceOfPointFromSegment(vv, zv, Pv) {
-        const hv = Tv.DistanceSquared(zv, Pv);
-        if (0 === hv) return Tv.Distance(vv, zv);
-        const Sv = Pv.subtract(zv),
-          ev = Math.max(0, Math.min(1, Tv.Dot(vv.subtract(zv), Sv) / hv)),
-          gv = zv.add(Sv.multiplyByFloats(ev, ev));
-        return Tv.Distance(vv, gv)
+      static DistanceOfPointFromSegment(TT, kT, cT) {
+        const lT = AT.DistanceSquared(kT, cT);
+        if (0 === lT) return AT.Distance(TT, kT);
+        const MT = cT.subtract(kT),
+          KT = Math.max(0, Math.min(1, AT.Dot(TT.subtract(kT), MT) / lT)),
+          OT = kT.add(MT.multiplyByFloats(KT, KT));
+        return AT.Distance(TT, OT)
       }
     }
-    Tv._V8PerformanceHack = new Tv(.5, .5), Tv._ZeroReadOnly = Tv.Zero();
-    class Wv {
+    AT._V8PerformanceHack = new AT(.5, .5), AT._ZeroReadOnly = AT.Zero();
+    class CT {
       get x() {
         return this._x
       }
-      set x(vv) {
-        this._x = vv, this._isDirty = !0
+      set x(TT) {
+        this._x = TT, this._isDirty = !0
       }
       get y() {
         return this._y
       }
-      set y(vv) {
-        this._y = vv, this._isDirty = !0
+      set y(TT) {
+        this._y = TT, this._isDirty = !0
       }
       get z() {
         return this._z
       }
-      set z(vv) {
-        this._z = vv, this._isDirty = !0
+      set z(TT) {
+        this._z = TT, this._isDirty = !0
       }
       constructor() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this._isDirty = !0, this._x = vv, this._y = zv, this._z = Pv
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this._isDirty = !0, this._x = TT, this._y = kT, this._z = cT
       }
       toString() {
         return `{X: ${this._x} Y: ${this._y} Z: ${this._z}}`
       }
       getClassName() {
-        return "fa"
+        return "Fv"
       }
       getHashCode() {
-        let vv = lv(this._x);
-        return vv = 397 * vv ^ lv(this._y), vv = 397 * vv ^ lv(this._z), vv
+        let TT = IT(this._x);
+        return TT = 397 * TT ^ IT(this._y), TT = 397 * TT ^ IT(this._z), TT
       }
-      pPv() {
+      acT() {
         return [this._x, this._y, this._z]
       }
-      toArray(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return vv[zv] = this._x, vv[zv + 1] = this._y, vv[zv + 2] = this._z, this
+      toArray(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return TT[kT] = this._x, TT[kT + 1] = this._y, TT[kT + 2] = this._z, this
       }
-      Evv(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return Wv.FromArrayToRef(vv, zv, this), this
+      xkT(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return CT.FromArrayToRef(TT, kT, this), this
       }
       toQuaternion() {
-        return av.RotationYawPitchRoll(this._y, this._x, this._z)
+        return vT.RotationYawPitchRoll(this._y, this._x, this._z)
       }
-      addInPlace(vv) {
-        return this._x += vv._x, this._y += vv._y, this._z += vv._z, this._isDirty = !0, this
+      addInPlace(TT) {
+        return this._x += TT._x, this._y += TT._y, this._z += TT._z, this._isDirty = !0, this
       }
-      addInPlaceFromFloats(vv, zv, Pv) {
-        return this._x += vv, this._y += zv, this._z += Pv, this._isDirty = !0, this
+      addInPlaceFromFloats(TT, kT, cT) {
+        return this._x += TT, this._y += kT, this._z += cT, this._isDirty = !0, this
       }
-      add(vv) {
-        return new Wv(this._x + vv._x, this._y + vv._y, this._z + vv._z)
+      add(TT) {
+        return new CT(this._x + TT._x, this._y + TT._y, this._z + TT._z)
       }
-      addToRef(vv, zv) {
-        return zv._x = this._x + vv._x, zv._y = this._y + vv._y, zv._z = this._z + vv._z, zv._isDirty = !0, zv
+      addToRef(TT, kT) {
+        return kT._x = this._x + TT._x, kT._y = this._y + TT._y, kT._z = this._z + TT._z, kT._isDirty = !0, kT
       }
-      VPv(vv) {
-        return this._x -= vv._x, this._y -= vv._y, this._z -= vv._z, this._isDirty = !0, this
+      gcT(TT) {
+        return this._x -= TT._x, this._y -= TT._y, this._z -= TT._z, this._isDirty = !0, this
       }
-      subtract(vv) {
-        return new Wv(this._x - vv._x, this._y - vv._y, this._z - vv._z)
+      subtract(TT) {
+        return new CT(this._x - TT._x, this._y - TT._y, this._z - TT._z)
       }
-      subtractToRef(vv, zv) {
-        return this.subtractFromFloatsToRef(vv._x, vv._y, vv._z, zv)
+      subtractToRef(TT, kT) {
+        return this.subtractFromFloatsToRef(TT._x, TT._y, TT._z, kT)
       }
-      subtractFromFloats(vv, zv, Pv) {
-        return new Wv(this._x - vv, this._y - zv, this._z - Pv)
+      subtractFromFloats(TT, kT, cT) {
+        return new CT(this._x - TT, this._y - kT, this._z - cT)
       }
-      subtractFromFloatsToRef(vv, zv, Pv, hv) {
-        return hv._x = this._x - vv, hv._y = this._y - zv, hv._z = this._z - Pv, hv._isDirty = !0, hv
+      subtractFromFloatsToRef(TT, kT, cT, lT) {
+        return lT._x = this._x - TT, lT._y = this._y - kT, lT._z = this._z - cT, lT._isDirty = !0, lT
       }
-      Re() {
-        return new Wv(-this._x, -this._y, -this._z)
+      rc() {
+        return new CT(-this._x, -this._y, -this._z)
       }
       negateInPlace() {
         return this._x *= -1, this._y *= -1, this._z *= -1, this._isDirty = !0, this
       }
-      negateToRef(vv) {
-        return vv._x = -1 * this._x, vv._y = -1 * this._y, vv._z = -1 * this._z, vv._isDirty = !0, vv
+      negateToRef(TT) {
+        return TT._x = -1 * this._x, TT._y = -1 * this._y, TT._z = -1 * this._z, TT._isDirty = !0, TT
       }
-      scaleInPlace(vv) {
-        return this._x *= vv, this._y *= vv, this._z *= vv, this._isDirty = !0, this
+      scaleInPlace(TT) {
+        return this._x *= TT, this._y *= TT, this._z *= TT, this._isDirty = !0, this
       }
-      scale(vv) {
-        return new Wv(this._x * vv, this._y * vv, this._z * vv)
+      scale(TT) {
+        return new CT(this._x * TT, this._y * TT, this._z * TT)
       }
-      scaleToRef(vv, zv) {
-        return zv._x = this._x * vv, zv._y = this._y * vv, zv._z = this._z * vv, zv._isDirty = !0, zv
+      scaleToRef(TT, kT) {
+        return kT._x = this._x * TT, kT._y = this._y * TT, kT._z = this._z * TT, kT._isDirty = !0, kT
       }
-      getNormalToRef(vv) {
-        const zv = this.length();
-        let Pv = Math.acos(this._y / zv);
-        const hv = Math.atan2(this._z, this._x);
-        Pv > Math.PI / 2 ? Pv -= Math.PI / 2 : Pv += Math.PI / 2;
-        const Sv = zv * Math.sin(Pv) * Math.cos(hv),
-          ev = zv * Math.cos(Pv),
-          gv = zv * Math.sin(Pv) * Math.sin(hv);
-        return vv.set(Sv, ev, gv), vv
+      getNormalToRef(TT) {
+        const kT = this.length();
+        let cT = Math.acos(this._y / kT);
+        const lT = Math.atan2(this._z, this._x);
+        cT > Math.PI / 2 ? cT -= Math.PI / 2 : cT += Math.PI / 2;
+        const MT = kT * Math.sin(cT) * Math.cos(lT),
+          KT = kT * Math.cos(cT),
+          OT = kT * Math.sin(cT) * Math.sin(lT);
+        return TT.set(MT, KT, OT), TT
       }
-      applyRotationQuaternionToRef(vv, zv) {
-        const Pv = this._x,
-          hv = this._y,
-          Sv = this._z,
-          ev = vv._x,
-          gv = vv._y,
-          pv = vv._z,
-          dv = vv._w,
-          Nv = 2 * (gv * Sv - pv * hv),
-          lv = 2 * (pv * Pv - ev * Sv),
-          Tv = 2 * (ev * hv - gv * Pv);
-        return zv._x = Pv + dv * Nv + gv * Tv - pv * lv, zv._y = hv + dv * lv + pv * Nv - ev * Tv, zv._z = Sv + dv * Tv + ev * lv - gv * Nv, zv._isDirty = !0, zv
+      applyRotationQuaternionToRef(TT, kT) {
+        const cT = this._x,
+          lT = this._y,
+          MT = this._z,
+          KT = TT._x,
+          OT = TT._y,
+          yT = TT._z,
+          fT = TT._w,
+          xT = 2 * (OT * MT - yT * lT),
+          IT = 2 * (yT * cT - KT * MT),
+          AT = 2 * (KT * lT - OT * cT);
+        return kT._x = cT + fT * xT + OT * AT - yT * IT, kT._y = lT + fT * IT + yT * xT - KT * AT, kT._z = MT + fT * AT + KT * IT - OT * xT, kT._isDirty = !0, kT
       }
-      applyRotationQuaternionInPlace(vv) {
-        return this.applyRotationQuaternionToRef(vv, this)
+      applyRotationQuaternionInPlace(TT) {
+        return this.applyRotationQuaternionToRef(TT, this)
       }
-      applyRotationQuaternion(vv) {
-        return this.applyRotationQuaternionToRef(vv, new Wv)
+      applyRotationQuaternion(TT) {
+        return this.applyRotationQuaternionToRef(TT, new CT)
       }
-      scaleAndAddToRef(vv, zv) {
-        return zv._x += this._x * vv, zv._y += this._y * vv, zv._z += this._z * vv, zv._isDirty = !0, zv
+      scaleAndAddToRef(TT, kT) {
+        return kT._x += this._x * TT, kT._y += this._y * TT, kT._z += this._z * TT, kT._isDirty = !0, kT
       }
-      projectOnPlane(vv, zv) {
-        return this.projectOnPlaneToRef(vv, zv, new Wv)
+      projectOnPlane(TT, kT) {
+        return this.projectOnPlaneToRef(TT, kT, new CT)
       }
-      projectOnPlaneToRef(vv, zv, Pv) {
-        const hv = vv.normal,
-          Sv = vv.d,
-          ev = Cv.fa[0];
-        this.subtractToRef(zv, ev), ev.normalize();
-        const gv = Wv.Dot(ev, hv);
-        if (Math.abs(gv) < 1e-10) Pv.Dk(1 / 0);
+      projectOnPlaneToRef(TT, kT, cT) {
+        const lT = TT.normal,
+          MT = TT.d,
+          KT = hT.Fv[0];
+        this.subtractToRef(kT, KT), KT.normalize();
+        const OT = CT.Dot(KT, lT);
+        if (Math.abs(OT) < 1e-10) cT.Xs(1 / 0);
         else {
-          const vv = -(Wv.Dot(zv, hv) + Sv) / gv,
-            pv = ev.scaleInPlace(vv);
-          zv.addToRef(pv, Pv)
+          const TT = -(CT.Dot(kT, lT) + MT) / OT,
+            yT = KT.scaleInPlace(TT);
+          kT.addToRef(yT, cT)
         }
-        return Pv
+        return cT
       }
-      equals(vv) {
-        return vv && this._x === vv._x && this._y === vv._y && this._z === vv._z
+      equals(TT) {
+        return TT && this._x === TT._x && this._y === TT._y && this._z === TT._z
       }
-      equalsWithEpsilon(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : hv.e;
-        return vv && (0, pv.WithinEpsilon)(this._x, vv._x, zv) && (0, pv.WithinEpsilon)(this._y, vv._y, zv) && (0, pv.WithinEpsilon)(this._z, vv._z, zv)
+      equalsWithEpsilon(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : lT.b;
+        return TT && (0, yT.WithinEpsilon)(this._x, TT._x, kT) && (0, yT.WithinEpsilon)(this._y, TT._y, kT) && (0, yT.WithinEpsilon)(this._z, TT._z, kT)
       }
-      Mev(vv, zv, Pv) {
-        return this._x === vv && this._y === zv && this._z === Pv
+      qKT(TT, kT, cT) {
+        return this._x === TT && this._y === kT && this._z === cT
       }
-      multiplyInPlace(vv) {
-        return this._x *= vv._x, this._y *= vv._y, this._z *= vv._z, this._isDirty = !0, this
+      multiplyInPlace(TT) {
+        return this._x *= TT._x, this._y *= TT._y, this._z *= TT._z, this._isDirty = !0, this
       }
-      multiply(vv) {
-        return this.multiplyByFloats(vv._x, vv._y, vv._z)
+      multiply(TT) {
+        return this.multiplyByFloats(TT._x, TT._y, TT._z)
       }
-      multiplyToRef(vv, zv) {
-        return zv._x = this._x * vv._x, zv._y = this._y * vv._y, zv._z = this._z * vv._z, zv._isDirty = !0, zv
+      multiplyToRef(TT, kT) {
+        return kT._x = this._x * TT._x, kT._y = this._y * TT._y, kT._z = this._z * TT._z, kT._isDirty = !0, kT
       }
-      multiplyByFloats(vv, zv, Pv) {
-        return new Wv(this._x * vv, this._y * zv, this._z * Pv)
+      multiplyByFloats(TT, kT, cT) {
+        return new CT(this._x * TT, this._y * kT, this._z * cT)
       }
-      divide(vv) {
-        return new Wv(this._x / vv._x, this._y / vv._y, this._z / vv._z)
+      divide(TT) {
+        return new CT(this._x / TT._x, this._y / TT._y, this._z / TT._z)
       }
-      divideToRef(vv, zv) {
-        return zv._x = this._x / vv._x, zv._y = this._y / vv._y, zv._z = this._z / vv._z, zv._isDirty = !0, zv
+      divideToRef(TT, kT) {
+        return kT._x = this._x / TT._x, kT._y = this._y / TT._y, kT._z = this._z / TT._z, kT._isDirty = !0, kT
       }
-      divideInPlace(vv) {
-        return this._x = this._x / vv._x, this._y = this._y / vv._y, this._z = this._z / vv._z, this._isDirty = !0, this
+      divideInPlace(TT) {
+        return this._x = this._x / TT._x, this._y = this._y / TT._y, this._z = this._z / TT._z, this._isDirty = !0, this
       }
-      minimizeInPlace(vv) {
-        return this.minimizeInPlaceFromFloats(vv._x, vv._y, vv._z)
+      minimizeInPlace(TT) {
+        return this.minimizeInPlaceFromFloats(TT._x, TT._y, TT._z)
       }
-      maximizeInPlace(vv) {
-        return this.maximizeInPlaceFromFloats(vv._x, vv._y, vv._z)
+      maximizeInPlace(TT) {
+        return this.maximizeInPlaceFromFloats(TT._x, TT._y, TT._z)
       }
-      minimizeInPlaceFromFloats(vv, zv, Pv) {
-        return vv < this._x && (this.x = vv), zv < this._y && (this.y = zv), Pv < this._z && (this.z = Pv), this
+      minimizeInPlaceFromFloats(TT, kT, cT) {
+        return TT < this._x && (this.x = TT), kT < this._y && (this.y = kT), cT < this._z && (this.z = cT), this
       }
-      maximizeInPlaceFromFloats(vv, zv, Pv) {
-        return vv > this._x && (this.x = vv), zv > this._y && (this.y = zv), Pv > this._z && (this.z = Pv), this
+      maximizeInPlaceFromFloats(TT, kT, cT) {
+        return TT > this._x && (this.x = TT), kT > this._y && (this.y = kT), cT > this._z && (this.z = cT), this
       }
-      isNonUniformWithinEpsilon(vv) {
-        const zv = Math.abs(this._x),
-          Pv = Math.abs(this._y);
-        if (!(0, pv.WithinEpsilon)(zv, Pv, vv)) return !0;
-        const hv = Math.abs(this._z);
-        return !(0, pv.WithinEpsilon)(zv, hv, vv) || !(0, pv.WithinEpsilon)(Pv, hv, vv)
+      isNonUniformWithinEpsilon(TT) {
+        const kT = Math.abs(this._x),
+          cT = Math.abs(this._y);
+        if (!(0, yT.WithinEpsilon)(kT, cT, TT)) return !0;
+        const lT = Math.abs(this._z);
+        return !(0, yT.WithinEpsilon)(kT, lT, TT) || !(0, yT.WithinEpsilon)(cT, lT, TT)
       }
       get isNonUniform() {
-        const vv = Math.abs(this._x);
-        if (vv !== Math.abs(this._y)) return !0;
-        return vv !== Math.abs(this._z)
+        const TT = Math.abs(this._x);
+        if (TT !== Math.abs(this._y)) return !0;
+        return TT !== Math.abs(this._z)
       }
-      floorToRef(vv) {
-        return vv._x = Math.floor(this._x), vv._y = Math.floor(this._y), vv._z = Math.floor(this._z), vv._isDirty = !0, vv
+      floorToRef(TT) {
+        return TT._x = Math.floor(this._x), TT._y = Math.floor(this._y), TT._z = Math.floor(this._z), TT._isDirty = !0, TT
       }
       floor() {
-        return new Wv(Math.floor(this._x), Math.floor(this._y), Math.floor(this._z))
+        return new CT(Math.floor(this._x), Math.floor(this._y), Math.floor(this._z))
       }
-      fractToRef(vv) {
-        return vv._x = this._x - Math.floor(this._x), vv._y = this._y - Math.floor(this._y), vv._z = this._z - Math.floor(this._z), vv._isDirty = !0, vv
+      fractToRef(TT) {
+        return TT._x = this._x - Math.floor(this._x), TT._y = this._y - Math.floor(this._y), TT._z = this._z - Math.floor(this._z), TT._isDirty = !0, TT
       }
       fract() {
-        return new Wv(this._x - Math.floor(this._x), this._y - Math.floor(this._y), this._z - Math.floor(this._z))
+        return new CT(this._x - Math.floor(this._x), this._y - Math.floor(this._y), this._z - Math.floor(this._z))
       }
       length() {
         return Math.sqrt(this.lengthSquared())
@@ -709,438 +709,438 @@ export const modules = {
       normalize() {
         return this.normalizeFromLength(this.length())
       }
-      reorderInPlace(vv) {
-        if ("xyz" === (vv = vv.toLowerCase())) return this;
-        const zv = Cv.fa[0].Vzv(this);
-        return this.x = zv[vv[0]], this.y = zv[vv[1]], this.z = zv[vv[2]], this
+      reorderInPlace(TT) {
+        if ("xyz" === (TT = TT.toLowerCase())) return this;
+        const kT = hT.Fv[0].UkT(this);
+        return this.x = kT[TT[0]], this.y = kT[TT[1]], this.z = kT[TT[2]], this
       }
-      rotateByQuaternionToRef(vv, zv) {
-        return vv.toRotationMatrix(Cv.Matrix[0]), Wv.TransformCoordinatesToRef(this, Cv.Matrix[0], zv), zv
+      rotateByQuaternionToRef(TT, kT) {
+        return TT.toRotationMatrix(hT.Matrix[0]), CT.TransformCoordinatesToRef(this, hT.Matrix[0], kT), kT
       }
-      rotateByQuaternionAroundPointToRef(vv, zv, Pv) {
-        return this.subtractToRef(zv, Cv.fa[0]), Cv.fa[0].rotateByQuaternionToRef(vv, Cv.fa[0]), zv.addToRef(Cv.fa[0], Pv), Pv
+      rotateByQuaternionAroundPointToRef(TT, kT, cT) {
+        return this.subtractToRef(kT, hT.Fv[0]), hT.Fv[0].rotateByQuaternionToRef(TT, hT.Fv[0]), kT.addToRef(hT.Fv[0], cT), cT
       }
-      cross(vv) {
-        return Wv.CrossToRef(this, vv, new Wv)
+      cross(TT) {
+        return CT.CrossToRef(this, TT, new CT)
       }
-      normalizeFromLength(vv) {
-        return 0 === vv || 1 === vv ? this : this.scaleInPlace(1 / vv)
+      normalizeFromLength(TT) {
+        return 0 === TT || 1 === TT ? this : this.scaleInPlace(1 / TT)
       }
       normalizeToNew() {
-        return this.normalizeToRef(new Wv)
+        return this.normalizeToRef(new CT)
       }
-      normalizeToRef(vv) {
-        const zv = this.length();
-        return 0 === zv || 1 === zv ? (vv._x = this._x, vv._y = this._y, vv._z = this._z, vv._isDirty = !0, vv) : this.scaleToRef(1 / zv, vv)
+      normalizeToRef(TT) {
+        const kT = this.length();
+        return 0 === kT || 1 === kT ? (TT._x = this._x, TT._y = this._y, TT._z = this._z, TT._isDirty = !0, TT) : this.scaleToRef(1 / kT, TT)
       }
       clone() {
-        return new Wv(this._x, this._y, this._z)
+        return new CT(this._x, this._y, this._z)
       }
-      Vzv(vv) {
-        return this.f_(vv._x, vv._y, vv._z)
+      UkT(TT) {
+        return this.I5(TT._x, TT._y, TT._z)
       }
-      f_(vv, zv, Pv) {
-        return this._x = vv, this._y = zv, this._z = Pv, this._isDirty = !0, this
+      I5(TT, kT, cT) {
+        return this._x = TT, this._y = kT, this._z = cT, this._isDirty = !0, this
       }
-      set(vv, zv, Pv) {
-        return this.f_(vv, zv, Pv)
+      set(TT, kT, cT) {
+        return this.I5(TT, kT, cT)
       }
-      Dk(vv) {
-        return this._x = this._y = this._z = vv, this._isDirty = !0, this
+      Xs(TT) {
+        return this._x = this._y = this._z = TT, this._isDirty = !0, this
       }
-      static GetClipFactor(vv, zv, Pv, hv) {
-        const Sv = Wv.Dot(vv, Pv);
-        return (Sv - hv) / (Sv - Wv.Dot(zv, Pv))
+      static GetClipFactor(TT, kT, cT, lT) {
+        const MT = CT.Dot(TT, cT);
+        return (MT - lT) / (MT - CT.Dot(kT, cT))
       }
-      static GetAngleBetweenVectors(vv, zv, Pv) {
-        const hv = vv.normalizeToRef(Cv.fa[1]),
-          Sv = zv.normalizeToRef(Cv.fa[2]);
-        let ev = Wv.Dot(hv, Sv);
-        ev = (0, pv.Clamp)(ev, -1, 1);
-        const gv = Math.acos(ev),
-          dv = Cv.fa[3];
-        return Wv.CrossToRef(hv, Sv, dv), Wv.Dot(dv, Pv) > 0 ? isNaN(gv) ? 0 : gv : isNaN(gv) ? -Math.PI : -Math.acos(ev)
+      static GetAngleBetweenVectors(TT, kT, cT) {
+        const lT = TT.normalizeToRef(hT.Fv[1]),
+          MT = kT.normalizeToRef(hT.Fv[2]);
+        let KT = CT.Dot(lT, MT);
+        KT = (0, yT.Clamp)(KT, -1, 1);
+        const OT = Math.acos(KT),
+          fT = hT.Fv[3];
+        return CT.CrossToRef(lT, MT, fT), CT.Dot(fT, cT) > 0 ? isNaN(OT) ? 0 : OT : isNaN(OT) ? -Math.PI : -Math.acos(KT)
       }
-      static GetAngleBetweenVectorsOnPlane(vv, zv, Pv) {
-        Cv.fa[0].Vzv(vv);
-        const hv = Cv.fa[0];
-        Cv.fa[1].Vzv(zv);
-        const Sv = Cv.fa[1];
-        Cv.fa[2].Vzv(Pv);
-        const ev = Cv.fa[2],
-          gv = Cv.fa[3],
-          dv = Cv.fa[4];
-        hv.normalize(), Sv.normalize(), ev.normalize(), Wv.CrossToRef(ev, hv, gv), Wv.CrossToRef(gv, ev, dv);
-        const Nv = Math.atan2(Wv.Dot(Sv, gv), Wv.Dot(Sv, dv));
-        return (0, pv.NormalizeRadians)(Nv)
+      static GetAngleBetweenVectorsOnPlane(TT, kT, cT) {
+        hT.Fv[0].UkT(TT);
+        const lT = hT.Fv[0];
+        hT.Fv[1].UkT(kT);
+        const MT = hT.Fv[1];
+        hT.Fv[2].UkT(cT);
+        const KT = hT.Fv[2],
+          OT = hT.Fv[3],
+          fT = hT.Fv[4];
+        lT.normalize(), MT.normalize(), KT.normalize(), CT.CrossToRef(KT, lT, OT), CT.CrossToRef(OT, KT, fT);
+        const xT = Math.atan2(CT.Dot(MT, OT), CT.Dot(MT, fT));
+        return (0, yT.NormalizeRadians)(xT)
       }
-      static PitchYawRollToMoveBetweenPointsToRef(vv, zv, Pv) {
-        const hv = iv.fa[0];
-        return zv.subtractToRef(vv, hv), Pv._y = Math.atan2(hv.x, hv.z) || 0, Pv._x = Math.atan2(Math.sqrt(hv.x ** 2 + hv.z ** 2), hv.y) || 0, Pv._z = 0, Pv._isDirty = !0, Pv
+      static PitchYawRollToMoveBetweenPointsToRef(TT, kT, cT) {
+        const lT = NT.Fv[0];
+        return kT.subtractToRef(TT, lT), cT._y = Math.atan2(lT.x, lT.z) || 0, cT._x = Math.atan2(Math.sqrt(lT.x ** 2 + lT.z ** 2), lT.y) || 0, cT._z = 0, cT._isDirty = !0, cT
       }
-      static PitchYawRollToMoveBetweenPoints(vv, zv) {
-        const Pv = Wv.Zero();
-        return Wv.PitchYawRollToMoveBetweenPointsToRef(vv, zv, Pv)
+      static PitchYawRollToMoveBetweenPoints(TT, kT) {
+        const cT = CT.Zero();
+        return CT.PitchYawRollToMoveBetweenPointsToRef(TT, kT, cT)
       }
-      static SlerpToRef(vv, zv, Pv, Sv) {
-        Pv = (0, pv.Clamp)(Pv, 0, 1);
-        const ev = Cv.fa[0],
-          gv = Cv.fa[1];
-        ev.Vzv(vv);
-        const dv = ev.length();
-        ev.normalizeFromLength(dv), gv.Vzv(zv);
-        const Nv = gv.length();
-        gv.normalizeFromLength(Nv);
-        const lv = Wv.Dot(ev, gv);
-        let Tv, wv;
-        if (lv < 1 - hv.e) {
-          const vv = Math.acos(lv),
-            zv = 1 / Math.sin(vv);
-          Tv = Math.sin((1 - Pv) * vv) * zv, wv = Math.sin(Pv * vv) * zv
-        } else Tv = 1 - Pv, wv = Pv;
-        return ev.scaleInPlace(Tv), gv.scaleInPlace(wv), Sv.Vzv(ev).addInPlace(gv), Sv.scaleInPlace((0, pv.Lerp)(dv, Nv, Pv)), Sv
+      static SlerpToRef(TT, kT, cT, MT) {
+        cT = (0, yT.Clamp)(cT, 0, 1);
+        const KT = hT.Fv[0],
+          OT = hT.Fv[1];
+        KT.UkT(TT);
+        const fT = KT.length();
+        KT.normalizeFromLength(fT), OT.UkT(kT);
+        const xT = OT.length();
+        OT.normalizeFromLength(xT);
+        const IT = CT.Dot(KT, OT);
+        let AT, jT;
+        if (IT < 1 - lT.b) {
+          const TT = Math.acos(IT),
+            kT = 1 / Math.sin(TT);
+          AT = Math.sin((1 - cT) * TT) * kT, jT = Math.sin(cT * TT) * kT
+        } else AT = 1 - cT, jT = cT;
+        return KT.scaleInPlace(AT), OT.scaleInPlace(jT), MT.UkT(KT).addInPlace(OT), MT.scaleInPlace((0, yT.Lerp)(fT, xT, cT)), MT
       }
-      static SmoothToRef(vv, zv, Pv, hv, Sv) {
-        return Wv.SlerpToRef(vv, zv, 0 === hv ? 1 : Pv / hv, Sv), Sv
+      static SmoothToRef(TT, kT, cT, lT, MT) {
+        return CT.SlerpToRef(TT, kT, 0 === lT ? 1 : cT / lT, MT), MT
       }
-      static FromArray(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new Wv(vv[zv], vv[zv + 1], vv[zv + 2])
+      static FromArray(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new CT(TT[kT], TT[kT + 1], TT[kT + 2])
       }
-      static FromFloatArray(vv, zv) {
-        return Wv.FromArray(vv, zv)
+      static FromFloatArray(TT, kT) {
+        return CT.FromArray(TT, kT)
       }
-      static FromArrayToRef(vv, zv, Pv) {
-        return Pv._x = vv[zv], Pv._y = vv[zv + 1], Pv._z = vv[zv + 2], Pv._isDirty = !0, Pv
+      static FromArrayToRef(TT, kT, cT) {
+        return cT._x = TT[kT], cT._y = TT[kT + 1], cT._z = TT[kT + 2], cT._isDirty = !0, cT
       }
-      static FromFloatArrayToRef(vv, zv, Pv) {
-        return Wv.FromArrayToRef(vv, zv, Pv)
+      static FromFloatArrayToRef(TT, kT, cT) {
+        return CT.FromArrayToRef(TT, kT, cT)
       }
-      static FromFloatsToRef(vv, zv, Pv, hv) {
-        return hv.f_(vv, zv, Pv), hv
+      static FromFloatsToRef(TT, kT, cT, lT) {
+        return lT.I5(TT, kT, cT), lT
       }
       static Zero() {
-        return new Wv(0, 0, 0)
+        return new CT(0, 0, 0)
       }
       static One() {
-        return new Wv(1, 1, 1)
+        return new CT(1, 1, 1)
       }
       static Up() {
-        return new Wv(0, 1, 0)
+        return new CT(0, 1, 0)
       }
       static get UpReadOnly() {
-        return Wv._UpReadOnly
+        return CT._UpReadOnly
       }
       static get DownReadOnly() {
-        return Wv._DownReadOnly
+        return CT._DownReadOnly
       }
       static get RightReadOnly() {
-        return Wv._RightReadOnly
+        return CT._RightReadOnly
       }
       static get LeftReadOnly() {
-        return Wv._LeftReadOnly
+        return CT._LeftReadOnly
       }
       static get LeftHandedForwardReadOnly() {
-        return Wv._LeftHandedForwardReadOnly
+        return CT._LeftHandedForwardReadOnly
       }
       static get RightHandedForwardReadOnly() {
-        return Wv._RightHandedForwardReadOnly
+        return CT._RightHandedForwardReadOnly
       }
       static get LeftHandedBackwardReadOnly() {
-        return Wv._LeftHandedBackwardReadOnly
+        return CT._LeftHandedBackwardReadOnly
       }
       static get RightHandedBackwardReadOnly() {
-        return Wv._RightHandedBackwardReadOnly
+        return CT._RightHandedBackwardReadOnly
       }
       static get ZeroReadOnly() {
-        return Wv._ZeroReadOnly
+        return CT._ZeroReadOnly
       }
       static get OneReadOnly() {
-        return Wv._OneReadOnly
+        return CT._OneReadOnly
       }
       static Down() {
-        return new Wv(0, -1, 0)
+        return new CT(0, -1, 0)
       }
       static Forward() {
-        return new Wv(0, 0, arguments.length > 0 && void 0 !== arguments[0] && arguments[0] ? -1 : 1)
+        return new CT(0, 0, arguments.length > 0 && void 0 !== arguments[0] && arguments[0] ? -1 : 1)
       }
       static Backward() {
-        return new Wv(0, 0, arguments.length > 0 && void 0 !== arguments[0] && arguments[0] ? 1 : -1)
+        return new CT(0, 0, arguments.length > 0 && void 0 !== arguments[0] && arguments[0] ? 1 : -1)
       }
       static Right() {
-        return new Wv(1, 0, 0)
+        return new CT(1, 0, 0)
       }
       static Left() {
-        return new Wv(-1, 0, 0)
+        return new CT(-1, 0, 0)
       }
       static Random() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new Wv((0, pv.RandomRange)(vv, zv), (0, pv.RandomRange)(vv, zv), (0, pv.RandomRange)(vv, zv))
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new CT((0, yT.RandomRange)(TT, kT), (0, yT.RandomRange)(TT, kT), (0, yT.RandomRange)(TT, kT))
       }
       static RandomToRef() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return (arguments.length > 2 ? arguments[2] : void 0).f_((0, pv.RandomRange)(vv, zv), (0, pv.RandomRange)(vv, zv), (0, pv.RandomRange)(vv, zv))
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return (arguments.length > 2 ? arguments[2] : void 0).I5((0, yT.RandomRange)(TT, kT), (0, yT.RandomRange)(TT, kT), (0, yT.RandomRange)(TT, kT))
       }
-      static TransformCoordinates(vv, zv) {
-        const Pv = Wv.Zero();
-        return Wv.TransformCoordinatesToRef(vv, zv, Pv), Pv
+      static TransformCoordinates(TT, kT) {
+        const cT = CT.Zero();
+        return CT.TransformCoordinatesToRef(TT, kT, cT), cT
       }
-      static TransformCoordinatesToRef(vv, zv, Pv) {
-        return Wv.TransformCoordinatesFromFloatsToRef(vv._x, vv._y, vv._z, zv, Pv), Pv
+      static TransformCoordinatesToRef(TT, kT, cT) {
+        return CT.TransformCoordinatesFromFloatsToRef(TT._x, TT._y, TT._z, kT, cT), cT
       }
-      static TransformCoordinatesFromFloatsToRef(vv, zv, Pv, hv, Sv) {
-        const ev = hv.m,
-          gv = vv * ev[0] + zv * ev[4] + Pv * ev[8] + ev[12],
-          pv = vv * ev[1] + zv * ev[5] + Pv * ev[9] + ev[13],
-          dv = vv * ev[2] + zv * ev[6] + Pv * ev[10] + ev[14],
-          Nv = 1 / (vv * ev[3] + zv * ev[7] + Pv * ev[11] + ev[15]);
-        return Sv._x = gv * Nv, Sv._y = pv * Nv, Sv._z = dv * Nv, Sv._isDirty = !0, Sv
+      static TransformCoordinatesFromFloatsToRef(TT, kT, cT, lT, MT) {
+        const KT = lT.m,
+          OT = TT * KT[0] + kT * KT[4] + cT * KT[8] + KT[12],
+          yT = TT * KT[1] + kT * KT[5] + cT * KT[9] + KT[13],
+          fT = TT * KT[2] + kT * KT[6] + cT * KT[10] + KT[14],
+          xT = 1 / (TT * KT[3] + kT * KT[7] + cT * KT[11] + KT[15]);
+        return MT._x = OT * xT, MT._y = yT * xT, MT._z = fT * xT, MT._isDirty = !0, MT
       }
-      static TransformNormal(vv, zv) {
-        const Pv = Wv.Zero();
-        return Wv.TransformNormalToRef(vv, zv, Pv), Pv
+      static TransformNormal(TT, kT) {
+        const cT = CT.Zero();
+        return CT.TransformNormalToRef(TT, kT, cT), cT
       }
-      static TransformNormalToRef(vv, zv, Pv) {
-        return this.TransformNormalFromFloatsToRef(vv._x, vv._y, vv._z, zv, Pv), Pv
+      static TransformNormalToRef(TT, kT, cT) {
+        return this.TransformNormalFromFloatsToRef(TT._x, TT._y, TT._z, kT, cT), cT
       }
-      static TransformNormalFromFloatsToRef(vv, zv, Pv, hv, Sv) {
-        const ev = hv.m;
-        return Sv._x = vv * ev[0] + zv * ev[4] + Pv * ev[8], Sv._y = vv * ev[1] + zv * ev[5] + Pv * ev[9], Sv._z = vv * ev[2] + zv * ev[6] + Pv * ev[10], Sv._isDirty = !0, Sv
+      static TransformNormalFromFloatsToRef(TT, kT, cT, lT, MT) {
+        const KT = lT.m;
+        return MT._x = TT * KT[0] + kT * KT[4] + cT * KT[8], MT._y = TT * KT[1] + kT * KT[5] + cT * KT[9], MT._z = TT * KT[2] + kT * KT[6] + cT * KT[10], MT._isDirty = !0, MT
       }
-      static CatmullRom(vv, zv, Pv, hv, Sv) {
-        const ev = Sv * Sv,
-          gv = Sv * ev,
-          pv = .5 * (2 * zv._x + (-vv._x + Pv._x) * Sv + (2 * vv._x - 5 * zv._x + 4 * Pv._x - hv._x) * ev + (-vv._x + 3 * zv._x - 3 * Pv._x + hv._x) * gv),
-          dv = .5 * (2 * zv._y + (-vv._y + Pv._y) * Sv + (2 * vv._y - 5 * zv._y + 4 * Pv._y - hv._y) * ev + (-vv._y + 3 * zv._y - 3 * Pv._y + hv._y) * gv),
-          Nv = .5 * (2 * zv._z + (-vv._z + Pv._z) * Sv + (2 * vv._z - 5 * zv._z + 4 * Pv._z - hv._z) * ev + (-vv._z + 3 * zv._z - 3 * Pv._z + hv._z) * gv);
-        return new Wv(pv, dv, Nv)
+      static CatmullRom(TT, kT, cT, lT, MT) {
+        const KT = MT * MT,
+          OT = MT * KT,
+          yT = .5 * (2 * kT._x + (-TT._x + cT._x) * MT + (2 * TT._x - 5 * kT._x + 4 * cT._x - lT._x) * KT + (-TT._x + 3 * kT._x - 3 * cT._x + lT._x) * OT),
+          fT = .5 * (2 * kT._y + (-TT._y + cT._y) * MT + (2 * TT._y - 5 * kT._y + 4 * cT._y - lT._y) * KT + (-TT._y + 3 * kT._y - 3 * cT._y + lT._y) * OT),
+          xT = .5 * (2 * kT._z + (-TT._z + cT._z) * MT + (2 * TT._z - 5 * kT._z + 4 * cT._z - lT._z) * KT + (-TT._z + 3 * kT._z - 3 * cT._z + lT._z) * OT);
+        return new CT(yT, fT, xT)
       }
-      static Clamp(vv, zv, Pv) {
-        const hv = new Wv;
-        return Wv.ClampToRef(vv, zv, Pv, hv), hv
+      static Clamp(TT, kT, cT) {
+        const lT = new CT;
+        return CT.ClampToRef(TT, kT, cT, lT), lT
       }
-      static ClampToRef(vv, zv, Pv, hv) {
-        let Sv = vv._x;
-        Sv = Sv > Pv._x ? Pv._x : Sv, Sv = Sv < zv._x ? zv._x : Sv;
-        let ev = vv._y;
-        ev = ev > Pv._y ? Pv._y : ev, ev = ev < zv._y ? zv._y : ev;
-        let gv = vv._z;
-        return gv = gv > Pv._z ? Pv._z : gv, gv = gv < zv._z ? zv._z : gv, hv.f_(Sv, ev, gv), hv
+      static ClampToRef(TT, kT, cT, lT) {
+        let MT = TT._x;
+        MT = MT > cT._x ? cT._x : MT, MT = MT < kT._x ? kT._x : MT;
+        let KT = TT._y;
+        KT = KT > cT._y ? cT._y : KT, KT = KT < kT._y ? kT._y : KT;
+        let OT = TT._z;
+        return OT = OT > cT._z ? cT._z : OT, OT = OT < kT._z ? kT._z : OT, lT.I5(MT, KT, OT), lT
       }
-      static CheckExtends(vv, zv, Pv) {
-        zv.minimizeInPlace(vv), Pv.maximizeInPlace(vv)
+      static CheckExtends(TT, kT, cT) {
+        kT.minimizeInPlace(TT), cT.maximizeInPlace(TT)
       }
-      static Hermite(vv, zv, Pv, hv, Sv) {
-        const ev = Sv * Sv,
-          gv = Sv * ev,
-          pv = 2 * gv - 3 * ev + 1,
-          dv = -2 * gv + 3 * ev,
-          Nv = gv - 2 * ev + Sv,
-          lv = gv - ev,
-          Tv = vv._x * pv + Pv._x * dv + zv._x * Nv + hv._x * lv,
-          wv = vv._y * pv + Pv._y * dv + zv._y * Nv + hv._y * lv,
-          av = vv._z * pv + Pv._z * dv + zv._z * Nv + hv._z * lv;
-        return new Wv(Tv, wv, av)
+      static Hermite(TT, kT, cT, lT, MT) {
+        const KT = MT * MT,
+          OT = MT * KT,
+          yT = 2 * OT - 3 * KT + 1,
+          fT = -2 * OT + 3 * KT,
+          xT = OT - 2 * KT + MT,
+          IT = OT - KT,
+          AT = TT._x * yT + cT._x * fT + kT._x * xT + lT._x * IT,
+          jT = TT._y * yT + cT._y * fT + kT._y * xT + lT._y * IT,
+          vT = TT._z * yT + cT._z * fT + kT._z * xT + lT._z * IT;
+        return new CT(AT, jT, vT)
       }
-      static Hermite1stDerivative(vv, zv, Pv, hv, Sv) {
-        const ev = new Wv;
-        return this.Hermite1stDerivativeToRef(vv, zv, Pv, hv, Sv, ev), ev
+      static Hermite1stDerivative(TT, kT, cT, lT, MT) {
+        const KT = new CT;
+        return this.Hermite1stDerivativeToRef(TT, kT, cT, lT, MT, KT), KT
       }
-      static Hermite1stDerivativeToRef(vv, zv, Pv, hv, Sv, ev) {
-        const gv = Sv * Sv;
-        return ev._x = 6 * (gv - Sv) * vv._x + (3 * gv - 4 * Sv + 1) * zv._x + 6 * (-gv + Sv) * Pv._x + (3 * gv - 2 * Sv) * hv._x, ev._y = 6 * (gv - Sv) * vv._y + (3 * gv - 4 * Sv + 1) * zv._y + 6 * (-gv + Sv) * Pv._y + (3 * gv - 2 * Sv) * hv._y, ev._z = 6 * (gv - Sv) * vv._z + (3 * gv - 4 * Sv + 1) * zv._z + 6 * (-gv + Sv) * Pv._z + (3 * gv - 2 * Sv) * hv._z, ev._isDirty = !0, ev
+      static Hermite1stDerivativeToRef(TT, kT, cT, lT, MT, KT) {
+        const OT = MT * MT;
+        return KT._x = 6 * (OT - MT) * TT._x + (3 * OT - 4 * MT + 1) * kT._x + 6 * (-OT + MT) * cT._x + (3 * OT - 2 * MT) * lT._x, KT._y = 6 * (OT - MT) * TT._y + (3 * OT - 4 * MT + 1) * kT._y + 6 * (-OT + MT) * cT._y + (3 * OT - 2 * MT) * lT._y, KT._z = 6 * (OT - MT) * TT._z + (3 * OT - 4 * MT + 1) * kT._z + 6 * (-OT + MT) * cT._z + (3 * OT - 2 * MT) * lT._z, KT._isDirty = !0, KT
       }
-      static Lerp(vv, zv, Pv) {
-        const hv = new Wv(0, 0, 0);
-        return Wv.LerpToRef(vv, zv, Pv, hv), hv
+      static Lerp(TT, kT, cT) {
+        const lT = new CT(0, 0, 0);
+        return CT.LerpToRef(TT, kT, cT, lT), lT
       }
-      static LerpToRef(vv, zv, Pv, hv) {
-        return hv._x = vv._x + (zv._x - vv._x) * Pv, hv._y = vv._y + (zv._y - vv._y) * Pv, hv._z = vv._z + (zv._z - vv._z) * Pv, hv._isDirty = !0, hv
+      static LerpToRef(TT, kT, cT, lT) {
+        return lT._x = TT._x + (kT._x - TT._x) * cT, lT._y = TT._y + (kT._y - TT._y) * cT, lT._z = TT._z + (kT._z - TT._z) * cT, lT._isDirty = !0, lT
       }
-      static Dot(vv, zv) {
-        return vv._x * zv._x + vv._y * zv._y + vv._z * zv._z
+      static Dot(TT, kT) {
+        return TT._x * kT._x + TT._y * kT._y + TT._z * kT._z
       }
-      dot(vv) {
-        return this._x * vv._x + this._y * vv._y + this._z * vv._z
+      dot(TT) {
+        return this._x * TT._x + this._y * TT._y + this._z * TT._z
       }
-      static Cross(vv, zv) {
-        const Pv = new Wv;
-        return Wv.CrossToRef(vv, zv, Pv), Pv
+      static Cross(TT, kT) {
+        const cT = new CT;
+        return CT.CrossToRef(TT, kT, cT), cT
       }
-      static CrossToRef(vv, zv, Pv) {
-        const hv = vv._y * zv._z - vv._z * zv._y,
-          Sv = vv._z * zv._x - vv._x * zv._z,
-          ev = vv._x * zv._y - vv._y * zv._x;
-        return Pv.f_(hv, Sv, ev), Pv
+      static CrossToRef(TT, kT, cT) {
+        const lT = TT._y * kT._z - TT._z * kT._y,
+          MT = TT._z * kT._x - TT._x * kT._z,
+          KT = TT._x * kT._y - TT._y * kT._x;
+        return cT.I5(lT, MT, KT), cT
       }
-      static Normalize(vv) {
-        const zv = Wv.Zero();
-        return Wv.NormalizeToRef(vv, zv), zv
+      static Normalize(TT) {
+        const kT = CT.Zero();
+        return CT.NormalizeToRef(TT, kT), kT
       }
-      static NormalizeToRef(vv, zv) {
-        return vv.normalizeToRef(zv), zv
+      static NormalizeToRef(TT, kT) {
+        return TT.normalizeToRef(kT), kT
       }
-      static Project(vv, zv, Pv, hv) {
-        const Sv = new Wv;
-        return Wv.ProjectToRef(vv, zv, Pv, hv, Sv), Sv
+      static Project(TT, kT, cT, lT) {
+        const MT = new CT;
+        return CT.ProjectToRef(TT, kT, cT, lT, MT), MT
       }
-      static ProjectToRef(vv, zv, Pv, hv, Sv) {
-        const ev = hv.width,
-          pv = hv.height,
-          dv = hv.x,
-          Nv = hv.y,
-          lv = Cv.Matrix[1],
-          Tv = gv.e.LastCreatedEngine?.isNDCHalfZRange,
-          wv = Tv ? 1 : .5,
-          av = Tv ? 0 : .5;
-        sv.FromValuesToRef(ev / 2, 0, 0, 0, 0, -pv / 2, 0, 0, 0, 0, wv, 0, dv + ev / 2, pv / 2 + Nv, av, 1, lv);
-        const iv = Cv.Matrix[0];
-        return zv.multiplyToRef(Pv, iv), iv.multiplyToRef(lv, iv), Wv.TransformCoordinatesToRef(vv, iv, Sv), Sv
+      static ProjectToRef(TT, kT, cT, lT, MT) {
+        const KT = lT.width,
+          yT = lT.height,
+          fT = lT.x,
+          xT = lT.y,
+          IT = hT.Matrix[1],
+          AT = OT.d.LastCreatedEngine?.isNDCHalfZRange,
+          jT = AT ? 1 : .5,
+          vT = AT ? 0 : .5;
+        tT.FromValuesToRef(KT / 2, 0, 0, 0, 0, -yT / 2, 0, 0, 0, 0, jT, 0, fT + KT / 2, yT / 2 + xT, vT, 1, IT);
+        const NT = hT.Matrix[0];
+        return kT.multiplyToRef(cT, NT), NT.multiplyToRef(IT, NT), CT.TransformCoordinatesToRef(TT, NT, MT), MT
       }
-      static Reflect(vv, zv) {
-        return this.ReflectToRef(vv, zv, new Wv)
+      static Reflect(TT, kT) {
+        return this.ReflectToRef(TT, kT, new CT)
       }
-      static ReflectToRef(vv, zv, Pv) {
-        const hv = iv.fa[0];
-        return hv.Vzv(zv).scaleInPlace(2 * Wv.Dot(vv, zv)), Pv.Vzv(vv).VPv(hv)
+      static ReflectToRef(TT, kT, cT) {
+        const lT = NT.Fv[0];
+        return lT.UkT(kT).scaleInPlace(2 * CT.Dot(TT, kT)), cT.UkT(TT).gcT(lT)
       }
-      static UnprojectFromTransform(vv, zv, Pv, hv, Sv) {
-        return this.Unproject(vv, zv, Pv, hv, Sv, sv.IdentityReadOnly)
+      static UnprojectFromTransform(TT, kT, cT, lT, MT) {
+        return this.Unproject(TT, kT, cT, lT, MT, tT.IdentityReadOnly)
       }
-      static Unproject(vv, zv, Pv, hv, Sv, ev) {
-        const gv = new Wv;
-        return Wv.UnprojectToRef(vv, zv, Pv, hv, Sv, ev, gv), gv
+      static Unproject(TT, kT, cT, lT, MT, KT) {
+        const OT = new CT;
+        return CT.UnprojectToRef(TT, kT, cT, lT, MT, KT, OT), OT
       }
-      static UnprojectToRef(vv, zv, Pv, hv, Sv, ev, gv) {
-        return Wv.UnprojectFloatsToRef(vv._x, vv._y, vv._z, zv, Pv, hv, Sv, ev, gv), gv
+      static UnprojectToRef(TT, kT, cT, lT, MT, KT, OT) {
+        return CT.UnprojectFloatsToRef(TT._x, TT._y, TT._z, kT, cT, lT, MT, KT, OT), OT
       }
-      static UnprojectFloatsToRef(vv, zv, Pv, hv, Sv, ev, pv, dv, Nv) {
-        const lv = Cv.Matrix[0];
-        ev.multiplyToRef(pv, lv), lv.multiplyToRef(dv, lv), lv.invert();
-        const Tv = Cv.fa[0];
-        return Tv.x = vv / hv * 2 - 1, Tv.y = -(zv / Sv * 2 - 1), gv.e.LastCreatedEngine?.isNDCHalfZRange ? Tv.z = Pv : Tv.z = 2 * Pv - 1, Wv.TransformCoordinatesToRef(Tv, lv, Nv), Nv
+      static UnprojectFloatsToRef(TT, kT, cT, lT, MT, KT, yT, fT, xT) {
+        const IT = hT.Matrix[0];
+        KT.multiplyToRef(yT, IT), IT.multiplyToRef(fT, IT), IT.invert();
+        const AT = hT.Fv[0];
+        return AT.x = TT / lT * 2 - 1, AT.y = -(kT / MT * 2 - 1), OT.d.LastCreatedEngine?.isNDCHalfZRange ? AT.z = cT : AT.z = 2 * cT - 1, CT.TransformCoordinatesToRef(AT, IT, xT), xT
       }
-      static Minimize(vv, zv) {
-        const Pv = new Wv;
-        return Pv.Vzv(vv), Pv.minimizeInPlace(zv), Pv
+      static Minimize(TT, kT) {
+        const cT = new CT;
+        return cT.UkT(TT), cT.minimizeInPlace(kT), cT
       }
-      static Maximize(vv, zv) {
-        const Pv = new Wv;
-        return Pv.Vzv(vv), Pv.maximizeInPlace(zv), Pv
+      static Maximize(TT, kT) {
+        const cT = new CT;
+        return cT.UkT(TT), cT.maximizeInPlace(kT), cT
       }
-      static Distance(vv, zv) {
-        return Math.sqrt(Wv.DistanceSquared(vv, zv))
+      static Distance(TT, kT) {
+        return Math.sqrt(CT.DistanceSquared(TT, kT))
       }
-      static DistanceSquared(vv, zv) {
-        const Pv = vv._x - zv._x,
-          hv = vv._y - zv._y,
-          Sv = vv._z - zv._z;
-        return Pv * Pv + hv * hv + Sv * Sv
+      static DistanceSquared(TT, kT) {
+        const cT = TT._x - kT._x,
+          lT = TT._y - kT._y,
+          MT = TT._z - kT._z;
+        return cT * cT + lT * lT + MT * MT
       }
-      static ProjectOnTriangleToRef(vv, zv, Pv, Sv, ev) {
-        const gv = Cv.fa[0],
-          dv = Cv.fa[1],
-          Nv = Cv.fa[2],
-          lv = Cv.fa[3],
-          Tv = Cv.fa[4];
-        Pv.subtractToRef(zv, gv), Sv.subtractToRef(zv, dv), Sv.subtractToRef(Pv, Nv);
-        const wv = gv.length(),
-          av = dv.length(),
-          sv = Nv.length();
-        if (wv < hv.e || av < hv.e || sv < hv.e) return ev.Vzv(zv), Wv.Distance(vv, zv);
-        vv.subtractToRef(zv, Tv), Wv.CrossToRef(gv, dv, lv);
-        const iv = lv.length();
-        if (iv < hv.e) return ev.Vzv(zv), Wv.Distance(vv, zv);
-        lv.normalizeFromLength(iv);
-        let cv = Tv.length();
-        if (cv < hv.e) return ev.Vzv(zv), 0;
-        Tv.normalizeFromLength(cv);
-        const Gv = Wv.Dot(lv, Tv),
-          mv = Cv.fa[5],
-          jv = Cv.fa[6];
-        mv.Vzv(lv).scaleInPlace(-cv * Gv), jv.Vzv(vv).addInPlace(mv);
-        const fv = Cv.fa[4],
-          Fv = Cv.fa[5],
-          Yv = Cv.fa[7],
-          nv = Cv.fa[8];
-        fv.Vzv(gv).scaleInPlace(1 / wv), nv.Vzv(dv).scaleInPlace(1 / av), fv.addInPlace(nv).scaleInPlace(-1), Fv.Vzv(gv).scaleInPlace(-1 / wv), nv.Vzv(Nv).scaleInPlace(1 / sv), Fv.addInPlace(nv).scaleInPlace(-1), Yv.Vzv(Nv).scaleInPlace(-1 / sv), nv.Vzv(dv).scaleInPlace(-1 / av), Yv.addInPlace(nv).scaleInPlace(-1);
-        const Ov = Cv.fa[9];
-        let Dv;
-        Ov.Vzv(jv).VPv(zv), Wv.CrossToRef(fv, Ov, nv), Dv = Wv.Dot(nv, lv);
-        const Kv = Dv;
-        Ov.Vzv(jv).VPv(Pv), Wv.CrossToRef(Fv, Ov, nv), Dv = Wv.Dot(nv, lv);
-        const Vv = Dv;
-        Ov.Vzv(jv).VPv(Sv), Wv.CrossToRef(Yv, Ov, nv), Dv = Wv.Dot(nv, lv);
-        const Uv = Dv,
-          Rv = Cv.fa[10];
-        let xv, tv;
-        Kv > 0 && Vv < 0 ? (Rv.Vzv(gv), xv = zv, tv = Pv) : Vv > 0 && Uv < 0 ? (Rv.Vzv(Nv), xv = Pv, tv = Sv) : (Rv.Vzv(dv).scaleInPlace(-1), xv = Sv, tv = zv);
-        const qv = Cv.fa[9],
-          Iv = Cv.fa[4];
-        xv.subtractToRef(jv, nv), tv.subtractToRef(jv, qv), Wv.CrossToRef(nv, qv, Iv);
-        if (!(Wv.Dot(Iv, lv) < 0)) return ev.Vzv(jv), Math.abs(cv * Gv);
-        const Qv = Cv.fa[5];
-        Wv.CrossToRef(Rv, Iv, Qv), Qv.normalize();
-        const Zv = Cv.fa[9];
-        Zv.Vzv(xv).VPv(jv);
-        const Av = Zv.length();
-        if (Av < hv.e) return ev.Vzv(xv), Wv.Distance(vv, xv);
-        Zv.normalizeFromLength(Av);
-        const Lv = Wv.Dot(Qv, Zv),
-          Hv = Cv.fa[7];
-        Hv.Vzv(jv).addInPlace(Qv.scaleInPlace(Av * Lv)), nv.Vzv(Hv).VPv(xv), cv = Rv.length(), Rv.normalizeFromLength(cv);
-        let Mv = Wv.Dot(nv, Rv) / Math.max(cv, hv.e);
-        return Mv = (0, pv.Clamp)(Mv, 0, 1), Hv.Vzv(xv).addInPlace(Rv.scaleInPlace(Mv * cv)), ev.Vzv(Hv), Wv.Distance(vv, Hv)
+      static ProjectOnTriangleToRef(TT, kT, cT, MT, KT) {
+        const OT = hT.Fv[0],
+          fT = hT.Fv[1],
+          xT = hT.Fv[2],
+          IT = hT.Fv[3],
+          AT = hT.Fv[4];
+        cT.subtractToRef(kT, OT), MT.subtractToRef(kT, fT), MT.subtractToRef(cT, xT);
+        const jT = OT.length(),
+          vT = fT.length(),
+          tT = xT.length();
+        if (jT < lT.b || vT < lT.b || tT < lT.b) return KT.UkT(kT), CT.Distance(TT, kT);
+        TT.subtractToRef(kT, AT), CT.CrossToRef(OT, fT, IT);
+        const NT = IT.length();
+        if (NT < lT.b) return KT.UkT(kT), CT.Distance(TT, kT);
+        IT.normalizeFromLength(NT);
+        let QT = AT.length();
+        if (QT < lT.b) return KT.UkT(kT), 0;
+        AT.normalizeFromLength(QT);
+        const ST = CT.Dot(IT, AT),
+          DT = hT.Fv[5],
+          aT = hT.Fv[6];
+        DT.UkT(IT).scaleInPlace(-QT * ST), aT.UkT(TT).addInPlace(DT);
+        const FT = hT.Fv[4],
+          rT = hT.Fv[5],
+          PT = hT.Fv[7],
+          wT = hT.Fv[8];
+        FT.UkT(OT).scaleInPlace(1 / jT), wT.UkT(fT).scaleInPlace(1 / vT), FT.addInPlace(wT).scaleInPlace(-1), rT.UkT(OT).scaleInPlace(-1 / jT), wT.UkT(xT).scaleInPlace(1 / tT), rT.addInPlace(wT).scaleInPlace(-1), PT.UkT(xT).scaleInPlace(-1 / tT), wT.UkT(fT).scaleInPlace(-1 / vT), PT.addInPlace(wT).scaleInPlace(-1);
+        const mT = hT.Fv[9];
+        let bT;
+        mT.UkT(aT).gcT(kT), CT.CrossToRef(FT, mT, wT), bT = CT.Dot(wT, IT);
+        const zT = bT;
+        mT.UkT(aT).gcT(cT), CT.CrossToRef(rT, mT, wT), bT = CT.Dot(wT, IT);
+        const JT = bT;
+        mT.UkT(aT).gcT(MT), CT.CrossToRef(PT, mT, wT), bT = CT.Dot(wT, IT);
+        const oT = bT,
+          HT = hT.Fv[10];
+        let eT, GT;
+        zT > 0 && JT < 0 ? (HT.UkT(OT), eT = kT, GT = cT) : JT > 0 && oT < 0 ? (HT.UkT(xT), eT = cT, GT = MT) : (HT.UkT(fT).scaleInPlace(-1), eT = MT, GT = kT);
+        const VT = hT.Fv[9],
+          ET = hT.Fv[4];
+        eT.subtractToRef(aT, wT), GT.subtractToRef(aT, VT), CT.CrossToRef(wT, VT, ET);
+        if (!(CT.Dot(ET, IT) < 0)) return KT.UkT(aT), Math.abs(QT * ST);
+        const ZT = hT.Fv[5];
+        CT.CrossToRef(HT, ET, ZT), ZT.normalize();
+        const uT = hT.Fv[9];
+        uT.UkT(eT).gcT(aT);
+        const XT = uT.length();
+        if (XT < lT.b) return KT.UkT(eT), CT.Distance(TT, eT);
+        uT.normalizeFromLength(XT);
+        const dT = CT.Dot(ZT, uT),
+          LT = hT.Fv[7];
+        LT.UkT(aT).addInPlace(ZT.scaleInPlace(XT * dT)), wT.UkT(LT).gcT(eT), QT = HT.length(), HT.normalizeFromLength(QT);
+        let RT = CT.Dot(wT, HT) / Math.max(QT, lT.b);
+        return RT = (0, yT.Clamp)(RT, 0, 1), LT.UkT(eT).addInPlace(HT.scaleInPlace(RT * QT)), KT.UkT(LT), CT.Distance(TT, LT)
       }
-      static Center(vv, zv) {
-        return Wv.CenterToRef(vv, zv, Wv.Zero())
+      static Center(TT, kT) {
+        return CT.CenterToRef(TT, kT, CT.Zero())
       }
-      static CenterToRef(vv, zv, Pv) {
-        return Pv.f_((vv._x + zv._x) / 2, (vv._y + zv._y) / 2, (vv._z + zv._z) / 2)
+      static CenterToRef(TT, kT, cT) {
+        return cT.I5((TT._x + kT._x) / 2, (TT._y + kT._y) / 2, (TT._z + kT._z) / 2)
       }
-      static RotationFromAxis(vv, zv, Pv) {
-        const hv = new Wv;
-        return Wv.RotationFromAxisToRef(vv, zv, Pv, hv), hv
+      static RotationFromAxis(TT, kT, cT) {
+        const lT = new CT;
+        return CT.RotationFromAxisToRef(TT, kT, cT, lT), lT
       }
-      static RotationFromAxisToRef(vv, zv, Pv, hv) {
-        const Sv = Cv.Quaternion[0];
-        return av.RotationQuaternionFromAxisToRef(vv, zv, Pv, Sv), Sv.toEulerAnglesToRef(hv), hv
+      static RotationFromAxisToRef(TT, kT, cT, lT) {
+        const MT = hT.Quaternion[0];
+        return vT.RotationQuaternionFromAxisToRef(TT, kT, cT, MT), MT.toEulerAnglesToRef(lT), lT
       }
     }
-    Wv._V8PerformanceHack = new Wv(.5, .5, .5), Wv._UpReadOnly = Wv.Up(), Wv._DownReadOnly = Wv.Down(), Wv._LeftHandedForwardReadOnly = Wv.Forward(!1), Wv._RightHandedForwardReadOnly = Wv.Forward(!0), Wv._LeftHandedBackwardReadOnly = Wv.Backward(!1), Wv._RightHandedBackwardReadOnly = Wv.Backward(!0), Wv._RightReadOnly = Wv.Right(), Wv._LeftReadOnly = Wv.Left(), Wv._ZeroReadOnly = Wv.Zero(), Wv._OneReadOnly = Wv.One();
-    class wv {
+    CT._V8PerformanceHack = new CT(.5, .5, .5), CT._UpReadOnly = CT.Up(), CT._DownReadOnly = CT.Down(), CT._LeftHandedForwardReadOnly = CT.Forward(!1), CT._RightHandedForwardReadOnly = CT.Forward(!0), CT._LeftHandedBackwardReadOnly = CT.Backward(!1), CT._RightHandedBackwardReadOnly = CT.Backward(!0), CT._RightReadOnly = CT.Right(), CT._LeftReadOnly = CT.Left(), CT._ZeroReadOnly = CT.Zero(), CT._OneReadOnly = CT.One();
+    class jT {
       get x() {
         return this._x
       }
-      set x(vv) {
-        this._x = vv, this._isDirty = !0
+      set x(TT) {
+        this._x = TT, this._isDirty = !0
       }
       get y() {
         return this._y
       }
-      set y(vv) {
-        this._y = vv, this._isDirty = !0
+      set y(TT) {
+        this._y = TT, this._isDirty = !0
       }
       get z() {
         return this._z
       }
-      set z(vv) {
-        this._z = vv, this._isDirty = !0
+      set z(TT) {
+        this._z = TT, this._isDirty = !0
       }
       get w() {
         return this._w
       }
-      set w(vv) {
-        this._w = vv, this._isDirty = !0
+      set w(TT) {
+        this._w = TT, this._isDirty = !0
       }
       constructor() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          hv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this._isDirty = !0, this._x = vv, this._y = zv, this._z = Pv, this._w = hv
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this._isDirty = !0, this._x = TT, this._y = kT, this._z = cT, this._w = lT
       }
       toString() {
         return `{X: ${this._x} Y: ${this._y} Z: ${this._z} W: ${this._w}}`
@@ -1149,121 +1149,121 @@ export const modules = {
         return "Vector4"
       }
       getHashCode() {
-        let vv = lv(this._x);
-        return vv = 397 * vv ^ lv(this._y), vv = 397 * vv ^ lv(this._z), vv = 397 * vv ^ lv(this._w), vv
+        let TT = IT(this._x);
+        return TT = 397 * TT ^ IT(this._y), TT = 397 * TT ^ IT(this._z), TT = 397 * TT ^ IT(this._w), TT
       }
-      pPv() {
+      acT() {
         return [this._x, this._y, this._z, this._w]
       }
-      toArray(vv, zv) {
-        return void 0 === zv && (zv = 0), vv[zv] = this._x, vv[zv + 1] = this._y, vv[zv + 2] = this._z, vv[zv + 3] = this._w, this
+      toArray(TT, kT) {
+        return void 0 === kT && (kT = 0), TT[kT] = this._x, TT[kT + 1] = this._y, TT[kT + 2] = this._z, TT[kT + 3] = this._w, this
       }
-      Evv(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return wv.FromArrayToRef(vv, zv, this), this
+      xkT(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return jT.FromArrayToRef(TT, kT, this), this
       }
-      addInPlace(vv) {
-        return this.x += vv._x, this.y += vv._y, this.z += vv._z, this.w += vv._w, this
+      addInPlace(TT) {
+        return this.x += TT._x, this.y += TT._y, this.z += TT._z, this.w += TT._w, this
       }
-      addInPlaceFromFloats(vv, zv, Pv, hv) {
-        return this.x += vv, this.y += zv, this.z += Pv, this.w += hv, this
+      addInPlaceFromFloats(TT, kT, cT, lT) {
+        return this.x += TT, this.y += kT, this.z += cT, this.w += lT, this
       }
-      add(vv) {
-        return new wv(this._x + vv.x, this._y + vv.y, this._z + vv.z, this._w + vv.w)
+      add(TT) {
+        return new jT(this._x + TT.x, this._y + TT.y, this._z + TT.z, this._w + TT.w)
       }
-      addToRef(vv, zv) {
-        return zv.x = this._x + vv.x, zv.y = this._y + vv.y, zv.z = this._z + vv.z, zv.w = this._w + vv.w, zv
+      addToRef(TT, kT) {
+        return kT.x = this._x + TT.x, kT.y = this._y + TT.y, kT.z = this._z + TT.z, kT.w = this._w + TT.w, kT
       }
-      VPv(vv) {
-        return this.x -= vv.x, this.y -= vv.y, this.z -= vv.z, this.w -= vv.w, this
+      gcT(TT) {
+        return this.x -= TT.x, this.y -= TT.y, this.z -= TT.z, this.w -= TT.w, this
       }
-      subtract(vv) {
-        return new wv(this._x - vv.x, this._y - vv.y, this._z - vv.z, this._w - vv.w)
+      subtract(TT) {
+        return new jT(this._x - TT.x, this._y - TT.y, this._z - TT.z, this._w - TT.w)
       }
-      subtractToRef(vv, zv) {
-        return zv.x = this._x - vv.x, zv.y = this._y - vv.y, zv.z = this._z - vv.z, zv.w = this._w - vv.w, zv
+      subtractToRef(TT, kT) {
+        return kT.x = this._x - TT.x, kT.y = this._y - TT.y, kT.z = this._z - TT.z, kT.w = this._w - TT.w, kT
       }
-      subtractFromFloats(vv, zv, Pv, hv) {
-        return new wv(this._x - vv, this._y - zv, this._z - Pv, this._w - hv)
+      subtractFromFloats(TT, kT, cT, lT) {
+        return new jT(this._x - TT, this._y - kT, this._z - cT, this._w - lT)
       }
-      subtractFromFloatsToRef(vv, zv, Pv, hv, Sv) {
-        return Sv.x = this._x - vv, Sv.y = this._y - zv, Sv.z = this._z - Pv, Sv.w = this._w - hv, Sv
+      subtractFromFloatsToRef(TT, kT, cT, lT, MT) {
+        return MT.x = this._x - TT, MT.y = this._y - kT, MT.z = this._z - cT, MT.w = this._w - lT, MT
       }
-      Re() {
-        return new wv(-this._x, -this._y, -this._z, -this._w)
+      rc() {
+        return new jT(-this._x, -this._y, -this._z, -this._w)
       }
       negateInPlace() {
         return this.x *= -1, this.y *= -1, this.z *= -1, this.w *= -1, this
       }
-      negateToRef(vv) {
-        return vv.x = -this._x, vv.y = -this._y, vv.z = -this._z, vv.w = -this._w, vv
+      negateToRef(TT) {
+        return TT.x = -this._x, TT.y = -this._y, TT.z = -this._z, TT.w = -this._w, TT
       }
-      scaleInPlace(vv) {
-        return this.x *= vv, this.y *= vv, this.z *= vv, this.w *= vv, this
+      scaleInPlace(TT) {
+        return this.x *= TT, this.y *= TT, this.z *= TT, this.w *= TT, this
       }
-      scale(vv) {
-        return new wv(this._x * vv, this._y * vv, this._z * vv, this._w * vv)
+      scale(TT) {
+        return new jT(this._x * TT, this._y * TT, this._z * TT, this._w * TT)
       }
-      scaleToRef(vv, zv) {
-        return zv.x = this._x * vv, zv.y = this._y * vv, zv.z = this._z * vv, zv.w = this._w * vv, zv
+      scaleToRef(TT, kT) {
+        return kT.x = this._x * TT, kT.y = this._y * TT, kT.z = this._z * TT, kT.w = this._w * TT, kT
       }
-      scaleAndAddToRef(vv, zv) {
-        return zv.x += this._x * vv, zv.y += this._y * vv, zv.z += this._z * vv, zv.w += this._w * vv, zv
+      scaleAndAddToRef(TT, kT) {
+        return kT.x += this._x * TT, kT.y += this._y * TT, kT.z += this._z * TT, kT.w += this._w * TT, kT
       }
-      equals(vv) {
-        return vv && this._x === vv.x && this._y === vv.y && this._z === vv.z && this._w === vv.w
+      equals(TT) {
+        return TT && this._x === TT.x && this._y === TT.y && this._z === TT.z && this._w === TT.w
       }
-      equalsWithEpsilon(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : hv.e;
-        return vv && (0, pv.WithinEpsilon)(this._x, vv.x, zv) && (0, pv.WithinEpsilon)(this._y, vv.y, zv) && (0, pv.WithinEpsilon)(this._z, vv.z, zv) && (0, pv.WithinEpsilon)(this._w, vv.w, zv)
+      equalsWithEpsilon(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : lT.b;
+        return TT && (0, yT.WithinEpsilon)(this._x, TT.x, kT) && (0, yT.WithinEpsilon)(this._y, TT.y, kT) && (0, yT.WithinEpsilon)(this._z, TT.z, kT) && (0, yT.WithinEpsilon)(this._w, TT.w, kT)
       }
-      Mev(vv, zv, Pv, hv) {
-        return this._x === vv && this._y === zv && this._z === Pv && this._w === hv
+      qKT(TT, kT, cT, lT) {
+        return this._x === TT && this._y === kT && this._z === cT && this._w === lT
       }
-      multiplyInPlace(vv) {
-        return this.x *= vv.x, this.y *= vv.y, this.z *= vv.z, this.w *= vv.w, this
+      multiplyInPlace(TT) {
+        return this.x *= TT.x, this.y *= TT.y, this.z *= TT.z, this.w *= TT.w, this
       }
-      multiply(vv) {
-        return new wv(this._x * vv.x, this._y * vv.y, this._z * vv.z, this._w * vv.w)
+      multiply(TT) {
+        return new jT(this._x * TT.x, this._y * TT.y, this._z * TT.z, this._w * TT.w)
       }
-      multiplyToRef(vv, zv) {
-        return zv.x = this._x * vv.x, zv.y = this._y * vv.y, zv.z = this._z * vv.z, zv.w = this._w * vv.w, zv
+      multiplyToRef(TT, kT) {
+        return kT.x = this._x * TT.x, kT.y = this._y * TT.y, kT.z = this._z * TT.z, kT.w = this._w * TT.w, kT
       }
-      multiplyByFloats(vv, zv, Pv, hv) {
-        return new wv(this._x * vv, this._y * zv, this._z * Pv, this._w * hv)
+      multiplyByFloats(TT, kT, cT, lT) {
+        return new jT(this._x * TT, this._y * kT, this._z * cT, this._w * lT)
       }
-      divide(vv) {
-        return new wv(this._x / vv.x, this._y / vv.y, this._z / vv.z, this._w / vv.w)
+      divide(TT) {
+        return new jT(this._x / TT.x, this._y / TT.y, this._z / TT.z, this._w / TT.w)
       }
-      divideToRef(vv, zv) {
-        return zv.x = this._x / vv.x, zv.y = this._y / vv.y, zv.z = this._z / vv.z, zv.w = this._w / vv.w, zv
+      divideToRef(TT, kT) {
+        return kT.x = this._x / TT.x, kT.y = this._y / TT.y, kT.z = this._z / TT.z, kT.w = this._w / TT.w, kT
       }
-      divideInPlace(vv) {
-        return this.divideToRef(vv, this)
+      divideInPlace(TT) {
+        return this.divideToRef(TT, this)
       }
-      minimizeInPlace(vv) {
-        return vv.x < this._x && (this.x = vv.x), vv.y < this._y && (this.y = vv.y), vv.z < this._z && (this.z = vv.z), vv.w < this._w && (this.w = vv.w), this
+      minimizeInPlace(TT) {
+        return TT.x < this._x && (this.x = TT.x), TT.y < this._y && (this.y = TT.y), TT.z < this._z && (this.z = TT.z), TT.w < this._w && (this.w = TT.w), this
       }
-      maximizeInPlace(vv) {
-        return vv.x > this._x && (this.x = vv.x), vv.y > this._y && (this.y = vv.y), vv.z > this._z && (this.z = vv.z), vv.w > this._w && (this.w = vv.w), this
+      maximizeInPlace(TT) {
+        return TT.x > this._x && (this.x = TT.x), TT.y > this._y && (this.y = TT.y), TT.z > this._z && (this.z = TT.z), TT.w > this._w && (this.w = TT.w), this
       }
-      minimizeInPlaceFromFloats(vv, zv, Pv, hv) {
-        return this.x = Math.min(vv, this._x), this.y = Math.min(zv, this._y), this.z = Math.min(Pv, this._z), this.w = Math.min(hv, this._w), this
+      minimizeInPlaceFromFloats(TT, kT, cT, lT) {
+        return this.x = Math.min(TT, this._x), this.y = Math.min(kT, this._y), this.z = Math.min(cT, this._z), this.w = Math.min(lT, this._w), this
       }
-      maximizeInPlaceFromFloats(vv, zv, Pv, hv) {
-        return this.x = Math.max(vv, this._x), this.y = Math.max(zv, this._y), this.z = Math.max(Pv, this._z), this.w = Math.max(hv, this._w), this
+      maximizeInPlaceFromFloats(TT, kT, cT, lT) {
+        return this.x = Math.max(TT, this._x), this.y = Math.max(kT, this._y), this.z = Math.max(cT, this._z), this.w = Math.max(lT, this._w), this
       }
-      floorToRef(vv) {
-        return vv.x = Math.floor(this._x), vv.y = Math.floor(this._y), vv.z = Math.floor(this._z), vv.w = Math.floor(this._w), vv
+      floorToRef(TT) {
+        return TT.x = Math.floor(this._x), TT.y = Math.floor(this._y), TT.z = Math.floor(this._z), TT.w = Math.floor(this._w), TT
       }
       floor() {
-        return new wv(Math.floor(this._x), Math.floor(this._y), Math.floor(this._z), Math.floor(this._w))
+        return new jT(Math.floor(this._x), Math.floor(this._y), Math.floor(this._z), Math.floor(this._w))
       }
-      fractToRef(vv) {
-        return vv.x = this._x - Math.floor(this._x), vv.y = this._y - Math.floor(this._y), vv.z = this._z - Math.floor(this._z), vv.w = this._w - Math.floor(this._w), vv
+      fractToRef(TT) {
+        return TT.x = this._x - Math.floor(this._x), TT.y = this._y - Math.floor(this._y), TT.z = this._z - Math.floor(this._z), TT.w = this._w - Math.floor(this._w), TT
       }
       fract() {
-        return new wv(this._x - Math.floor(this._x), this._y - Math.floor(this._y), this._z - Math.floor(this._z), this._w - Math.floor(this._w))
+        return new jT(this._x - Math.floor(this._x), this._y - Math.floor(this._y), this._z - Math.floor(this._z), this._w - Math.floor(this._w))
       }
       length() {
         return Math.sqrt(this._x * this._x + this._y * this._y + this._z * this._z + this._w * this._w)
@@ -1274,176 +1274,176 @@ export const modules = {
       normalize() {
         return this.normalizeFromLength(this.length())
       }
-      normalizeFromLength(vv) {
-        return 0 === vv || 1 === vv ? this : this.scaleInPlace(1 / vv)
+      normalizeFromLength(TT) {
+        return 0 === TT || 1 === TT ? this : this.scaleInPlace(1 / TT)
       }
       normalizeToNew() {
-        return this.normalizeToRef(new wv)
+        return this.normalizeToRef(new jT)
       }
-      normalizeToRef(vv) {
-        const zv = this.length();
-        return 0 === zv || 1 === zv ? (vv.x = this._x, vv.y = this._y, vv.z = this._z, vv.w = this._w, vv) : this.scaleToRef(1 / zv, vv)
+      normalizeToRef(TT) {
+        const kT = this.length();
+        return 0 === kT || 1 === kT ? (TT.x = this._x, TT.y = this._y, TT.z = this._z, TT.w = this._w, TT) : this.scaleToRef(1 / kT, TT)
       }
       toVector3() {
-        return new Wv(this._x, this._y, this._z)
+        return new CT(this._x, this._y, this._z)
       }
       clone() {
-        return new wv(this._x, this._y, this._z, this._w)
+        return new jT(this._x, this._y, this._z, this._w)
       }
-      Vzv(vv) {
-        return this.x = vv.x, this.y = vv.y, this.z = vv.z, this.w = vv.w, this
+      UkT(TT) {
+        return this.x = TT.x, this.y = TT.y, this.z = TT.z, this.w = TT.w, this
       }
-      f_(vv, zv, Pv, hv) {
-        return this.x = vv, this.y = zv, this.z = Pv, this.w = hv, this
+      I5(TT, kT, cT, lT) {
+        return this.x = TT, this.y = kT, this.z = cT, this.w = lT, this
       }
-      set(vv, zv, Pv, hv) {
-        return this.f_(vv, zv, Pv, hv)
+      set(TT, kT, cT, lT) {
+        return this.I5(TT, kT, cT, lT)
       }
-      Dk(vv) {
-        return this.x = this.y = this.z = this.w = vv, this
+      Xs(TT) {
+        return this.x = this.y = this.z = this.w = TT, this
       }
-      dot(vv) {
-        return this._x * vv.x + this._y * vv.y + this._z * vv.z + this._w * vv.w
+      dot(TT) {
+        return this._x * TT.x + this._y * TT.y + this._z * TT.z + this._w * TT.w
       }
-      static FromArray(vv, zv) {
-        return zv || (zv = 0), new wv(vv[zv], vv[zv + 1], vv[zv + 2], vv[zv + 3])
+      static FromArray(TT, kT) {
+        return kT || (kT = 0), new jT(TT[kT], TT[kT + 1], TT[kT + 2], TT[kT + 3])
       }
-      static FromArrayToRef(vv, zv, Pv) {
-        return Pv.x = vv[zv], Pv.y = vv[zv + 1], Pv.z = vv[zv + 2], Pv.w = vv[zv + 3], Pv
+      static FromArrayToRef(TT, kT, cT) {
+        return cT.x = TT[kT], cT.y = TT[kT + 1], cT.z = TT[kT + 2], cT.w = TT[kT + 3], cT
       }
-      static FromFloatArrayToRef(vv, zv, Pv) {
-        return wv.FromArrayToRef(vv, zv, Pv), Pv
+      static FromFloatArrayToRef(TT, kT, cT) {
+        return jT.FromArrayToRef(TT, kT, cT), cT
       }
-      static FromFloatsToRef(vv, zv, Pv, hv, Sv) {
-        return Sv.x = vv, Sv.y = zv, Sv.z = Pv, Sv.w = hv, Sv
+      static FromFloatsToRef(TT, kT, cT, lT, MT) {
+        return MT.x = TT, MT.y = kT, MT.z = cT, MT.w = lT, MT
       }
       static Zero() {
-        return new wv(0, 0, 0, 0)
+        return new jT(0, 0, 0, 0)
       }
       static One() {
-        return new wv(1, 1, 1, 1)
+        return new jT(1, 1, 1, 1)
       }
       static Random() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new wv((0, pv.RandomRange)(vv, zv), (0, pv.RandomRange)(vv, zv), (0, pv.RandomRange)(vv, zv), (0, pv.RandomRange)(vv, zv))
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new jT((0, yT.RandomRange)(TT, kT), (0, yT.RandomRange)(TT, kT), (0, yT.RandomRange)(TT, kT), (0, yT.RandomRange)(TT, kT))
       }
       static RandomToRef() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          Pv = arguments.length > 2 ? arguments[2] : void 0;
-        return Pv.x = (0, pv.RandomRange)(vv, zv), Pv.y = (0, pv.RandomRange)(vv, zv), Pv.z = (0, pv.RandomRange)(vv, zv), Pv.w = (0, pv.RandomRange)(vv, zv), Pv
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          cT = arguments.length > 2 ? arguments[2] : void 0;
+        return cT.x = (0, yT.RandomRange)(TT, kT), cT.y = (0, yT.RandomRange)(TT, kT), cT.z = (0, yT.RandomRange)(TT, kT), cT.w = (0, yT.RandomRange)(TT, kT), cT
       }
-      static Clamp(vv, zv, Pv) {
-        return wv.ClampToRef(vv, zv, Pv, new wv)
+      static Clamp(TT, kT, cT) {
+        return jT.ClampToRef(TT, kT, cT, new jT)
       }
-      static ClampToRef(vv, zv, Pv, hv) {
-        return hv.x = (0, pv.Clamp)(vv.x, zv.x, Pv.x), hv.y = (0, pv.Clamp)(vv.y, zv.y, Pv.y), hv.z = (0, pv.Clamp)(vv.z, zv.z, Pv.z), hv.w = (0, pv.Clamp)(vv.w, zv.w, Pv.w), hv
+      static ClampToRef(TT, kT, cT, lT) {
+        return lT.x = (0, yT.Clamp)(TT.x, kT.x, cT.x), lT.y = (0, yT.Clamp)(TT.y, kT.y, cT.y), lT.z = (0, yT.Clamp)(TT.z, kT.z, cT.z), lT.w = (0, yT.Clamp)(TT.w, kT.w, cT.w), lT
       }
-      static CheckExtends(vv, zv, Pv) {
-        zv.minimizeInPlace(vv), Pv.maximizeInPlace(vv)
+      static CheckExtends(TT, kT, cT) {
+        kT.minimizeInPlace(TT), cT.maximizeInPlace(TT)
       }
       static get ZeroReadOnly() {
-        return wv._ZeroReadOnly
+        return jT._ZeroReadOnly
       }
-      static Normalize(vv) {
-        return wv.NormalizeToRef(vv, new wv)
+      static Normalize(TT) {
+        return jT.NormalizeToRef(TT, new jT)
       }
-      static NormalizeToRef(vv, zv) {
-        return vv.normalizeToRef(zv), zv
+      static NormalizeToRef(TT, kT) {
+        return TT.normalizeToRef(kT), kT
       }
-      static Minimize(vv, zv) {
-        const Pv = new wv;
-        return Pv.Vzv(vv), Pv.minimizeInPlace(zv), Pv
+      static Minimize(TT, kT) {
+        const cT = new jT;
+        return cT.UkT(TT), cT.minimizeInPlace(kT), cT
       }
-      static Maximize(vv, zv) {
-        const Pv = new wv;
-        return Pv.Vzv(vv), Pv.maximizeInPlace(zv), Pv
+      static Maximize(TT, kT) {
+        const cT = new jT;
+        return cT.UkT(TT), cT.maximizeInPlace(kT), cT
       }
-      static Distance(vv, zv) {
-        return Math.sqrt(wv.DistanceSquared(vv, zv))
+      static Distance(TT, kT) {
+        return Math.sqrt(jT.DistanceSquared(TT, kT))
       }
-      static DistanceSquared(vv, zv) {
-        const Pv = vv.x - zv.x,
-          hv = vv.y - zv.y,
-          Sv = vv.z - zv.z,
-          ev = vv.w - zv.w;
-        return Pv * Pv + hv * hv + Sv * Sv + ev * ev
+      static DistanceSquared(TT, kT) {
+        const cT = TT.x - kT.x,
+          lT = TT.y - kT.y,
+          MT = TT.z - kT.z,
+          KT = TT.w - kT.w;
+        return cT * cT + lT * lT + MT * MT + KT * KT
       }
-      static Center(vv, zv) {
-        return wv.CenterToRef(vv, zv, new wv)
+      static Center(TT, kT) {
+        return jT.CenterToRef(TT, kT, new jT)
       }
-      static CenterToRef(vv, zv, Pv) {
-        return Pv.x = (vv.x + zv.x) / 2, Pv.y = (vv.y + zv.y) / 2, Pv.z = (vv.z + zv.z) / 2, Pv.w = (vv.w + zv.w) / 2, Pv
+      static CenterToRef(TT, kT, cT) {
+        return cT.x = (TT.x + kT.x) / 2, cT.y = (TT.y + kT.y) / 2, cT.z = (TT.z + kT.z) / 2, cT.w = (TT.w + kT.w) / 2, cT
       }
-      static TransformCoordinates(vv, zv) {
-        return wv.TransformCoordinatesToRef(vv, zv, new wv)
+      static TransformCoordinates(TT, kT) {
+        return jT.TransformCoordinatesToRef(TT, kT, new jT)
       }
-      static TransformCoordinatesToRef(vv, zv, Pv) {
-        return wv.TransformCoordinatesFromFloatsToRef(vv._x, vv._y, vv._z, zv, Pv), Pv
+      static TransformCoordinatesToRef(TT, kT, cT) {
+        return jT.TransformCoordinatesFromFloatsToRef(TT._x, TT._y, TT._z, kT, cT), cT
       }
-      static TransformCoordinatesFromFloatsToRef(vv, zv, Pv, hv, Sv) {
-        const ev = hv.m,
-          gv = vv * ev[0] + zv * ev[4] + Pv * ev[8] + ev[12],
-          pv = vv * ev[1] + zv * ev[5] + Pv * ev[9] + ev[13],
-          dv = vv * ev[2] + zv * ev[6] + Pv * ev[10] + ev[14],
-          Nv = vv * ev[3] + zv * ev[7] + Pv * ev[11] + ev[15];
-        return Sv.x = gv, Sv.y = pv, Sv.z = dv, Sv.w = Nv, Sv
+      static TransformCoordinatesFromFloatsToRef(TT, kT, cT, lT, MT) {
+        const KT = lT.m,
+          OT = TT * KT[0] + kT * KT[4] + cT * KT[8] + KT[12],
+          yT = TT * KT[1] + kT * KT[5] + cT * KT[9] + KT[13],
+          fT = TT * KT[2] + kT * KT[6] + cT * KT[10] + KT[14],
+          xT = TT * KT[3] + kT * KT[7] + cT * KT[11] + KT[15];
+        return MT.x = OT, MT.y = yT, MT.z = fT, MT.w = xT, MT
       }
-      static TransformNormal(vv, zv) {
-        return wv.TransformNormalToRef(vv, zv, new wv)
+      static TransformNormal(TT, kT) {
+        return jT.TransformNormalToRef(TT, kT, new jT)
       }
-      static TransformNormalToRef(vv, zv, Pv) {
-        const hv = zv.m,
-          Sv = vv.x * hv[0] + vv.y * hv[4] + vv.z * hv[8],
-          ev = vv.x * hv[1] + vv.y * hv[5] + vv.z * hv[9],
-          gv = vv.x * hv[2] + vv.y * hv[6] + vv.z * hv[10];
-        return Pv.x = Sv, Pv.y = ev, Pv.z = gv, Pv.w = vv.w, Pv
+      static TransformNormalToRef(TT, kT, cT) {
+        const lT = kT.m,
+          MT = TT.x * lT[0] + TT.y * lT[4] + TT.z * lT[8],
+          KT = TT.x * lT[1] + TT.y * lT[5] + TT.z * lT[9],
+          OT = TT.x * lT[2] + TT.y * lT[6] + TT.z * lT[10];
+        return cT.x = MT, cT.y = KT, cT.z = OT, cT.w = TT.w, cT
       }
-      static TransformNormalFromFloatsToRef(vv, zv, Pv, hv, Sv, ev) {
-        const gv = Sv.m;
-        return ev.x = vv * gv[0] + zv * gv[4] + Pv * gv[8], ev.y = vv * gv[1] + zv * gv[5] + Pv * gv[9], ev.z = vv * gv[2] + zv * gv[6] + Pv * gv[10], ev.w = hv, ev
+      static TransformNormalFromFloatsToRef(TT, kT, cT, lT, MT, KT) {
+        const OT = MT.m;
+        return KT.x = TT * OT[0] + kT * OT[4] + cT * OT[8], KT.y = TT * OT[1] + kT * OT[5] + cT * OT[9], KT.z = TT * OT[2] + kT * OT[6] + cT * OT[10], KT.w = lT, KT
       }
-      static FromVector3(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new wv(vv._x, vv._y, vv._z, zv)
+      static FromVector3(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new jT(TT._x, TT._y, TT._z, kT)
       }
-      static Dot(vv, zv) {
-        return vv.x * zv.x + vv.y * zv.y + vv.z * zv.z + vv.w * zv.w
+      static Dot(TT, kT) {
+        return TT.x * kT.x + TT.y * kT.y + TT.z * kT.z + TT.w * kT.w
       }
     }
-    wv._V8PerformanceHack = new wv(.5, .5, .5, .5), wv._ZeroReadOnly = wv.Zero();
-    class av {
+    jT._V8PerformanceHack = new jT(.5, .5, .5, .5), jT._ZeroReadOnly = jT.Zero();
+    class vT {
       get x() {
         return this._x
       }
-      set x(vv) {
-        this._x = vv, this._isDirty = !0
+      set x(TT) {
+        this._x = TT, this._isDirty = !0
       }
       get y() {
         return this._y
       }
-      set y(vv) {
-        this._y = vv, this._isDirty = !0
+      set y(TT) {
+        this._y = TT, this._isDirty = !0
       }
       get z() {
         return this._z
       }
-      set z(vv) {
-        this._z = vv, this._isDirty = !0
+      set z(TT) {
+        this._z = TT, this._isDirty = !0
       }
       get w() {
         return this._w
       }
-      set w(vv) {
-        this._w = vv, this._isDirty = !0
+      set w(TT) {
+        this._w = TT, this._isDirty = !0
       }
       constructor() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          hv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
-        this._isDirty = !0, this._x = vv, this._y = zv, this._z = Pv, this._w = hv
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        this._isDirty = !0, this._x = TT, this._y = kT, this._z = cT, this._w = lT
       }
       toString() {
         return `{X: ${this._x} Y: ${this._y} Z: ${this._z} W: ${this._w}}`
@@ -1452,109 +1452,109 @@ export const modules = {
         return "Quaternion"
       }
       getHashCode() {
-        let vv = lv(this._x);
-        return vv = 397 * vv ^ lv(this._y), vv = 397 * vv ^ lv(this._z), vv = 397 * vv ^ lv(this._w), vv
+        let TT = IT(this._x);
+        return TT = 397 * TT ^ IT(this._y), TT = 397 * TT ^ IT(this._z), TT = 397 * TT ^ IT(this._w), TT
       }
-      pPv() {
+      acT() {
         return [this._x, this._y, this._z, this._w]
       }
-      toArray(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return vv[zv] = this._x, vv[zv + 1] = this._y, vv[zv + 2] = this._z, vv[zv + 3] = this._w, this
+      toArray(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return TT[kT] = this._x, TT[kT + 1] = this._y, TT[kT + 2] = this._z, TT[kT + 3] = this._w, this
       }
-      Evv(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return av.FromArrayToRef(vv, zv, this)
+      xkT(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return vT.FromArrayToRef(TT, kT, this)
       }
-      equals(vv) {
-        return vv && this._x === vv._x && this._y === vv._y && this._z === vv._z && this._w === vv._w
+      equals(TT) {
+        return TT && this._x === TT._x && this._y === TT._y && this._z === TT._z && this._w === TT._w
       }
-      equalsWithEpsilon(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : hv.e;
-        return vv && (0, pv.WithinEpsilon)(this._x, vv._x, zv) && (0, pv.WithinEpsilon)(this._y, vv._y, zv) && (0, pv.WithinEpsilon)(this._z, vv._z, zv) && (0, pv.WithinEpsilon)(this._w, vv._w, zv)
+      equalsWithEpsilon(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : lT.b;
+        return TT && (0, yT.WithinEpsilon)(this._x, TT._x, kT) && (0, yT.WithinEpsilon)(this._y, TT._y, kT) && (0, yT.WithinEpsilon)(this._z, TT._z, kT) && (0, yT.WithinEpsilon)(this._w, TT._w, kT)
       }
-      isApprox(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : hv.e;
-        return vv && ((0, pv.WithinEpsilon)(this._x, vv._x, zv) && (0, pv.WithinEpsilon)(this._y, vv._y, zv) && (0, pv.WithinEpsilon)(this._z, vv._z, zv) && (0, pv.WithinEpsilon)(this._w, vv._w, zv) || (0, pv.WithinEpsilon)(this._x, -vv._x, zv) && (0, pv.WithinEpsilon)(this._y, -vv._y, zv) && (0, pv.WithinEpsilon)(this._z, -vv._z, zv) && (0, pv.WithinEpsilon)(this._w, -vv._w, zv))
+      isApprox(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : lT.b;
+        return TT && ((0, yT.WithinEpsilon)(this._x, TT._x, kT) && (0, yT.WithinEpsilon)(this._y, TT._y, kT) && (0, yT.WithinEpsilon)(this._z, TT._z, kT) && (0, yT.WithinEpsilon)(this._w, TT._w, kT) || (0, yT.WithinEpsilon)(this._x, -TT._x, kT) && (0, yT.WithinEpsilon)(this._y, -TT._y, kT) && (0, yT.WithinEpsilon)(this._z, -TT._z, kT) && (0, yT.WithinEpsilon)(this._w, -TT._w, kT))
       }
       clone() {
-        return new av(this._x, this._y, this._z, this._w)
+        return new vT(this._x, this._y, this._z, this._w)
       }
-      Vzv(vv) {
-        return this._x = vv._x, this._y = vv._y, this._z = vv._z, this._w = vv._w, this._isDirty = !0, this
+      UkT(TT) {
+        return this._x = TT._x, this._y = TT._y, this._z = TT._z, this._w = TT._w, this._isDirty = !0, this
       }
-      f_(vv, zv, Pv, hv) {
-        return this._x = vv, this._y = zv, this._z = Pv, this._w = hv, this._isDirty = !0, this
+      I5(TT, kT, cT, lT) {
+        return this._x = TT, this._y = kT, this._z = cT, this._w = lT, this._isDirty = !0, this
       }
-      set(vv, zv, Pv, hv) {
-        return this.f_(vv, zv, Pv, hv)
+      set(TT, kT, cT, lT) {
+        return this.I5(TT, kT, cT, lT)
       }
-      Dk(vv) {
-        return this.f_(vv, vv, vv, vv)
+      Xs(TT) {
+        return this.I5(TT, TT, TT, TT)
       }
-      add(vv) {
-        return new av(this._x + vv._x, this._y + vv._y, this._z + vv._z, this._w + vv._w)
+      add(TT) {
+        return new vT(this._x + TT._x, this._y + TT._y, this._z + TT._z, this._w + TT._w)
       }
-      addInPlace(vv) {
-        return this._x += vv._x, this._y += vv._y, this._z += vv._z, this._w += vv._w, this._isDirty = !0, this
+      addInPlace(TT) {
+        return this._x += TT._x, this._y += TT._y, this._z += TT._z, this._w += TT._w, this._isDirty = !0, this
       }
-      addToRef(vv, zv) {
-        return zv._x = this._x + vv._x, zv._y = this._y + vv._y, zv._z = this._z + vv._z, zv._w = this._w + vv._w, zv._isDirty = !0, zv
+      addToRef(TT, kT) {
+        return kT._x = this._x + TT._x, kT._y = this._y + TT._y, kT._z = this._z + TT._z, kT._w = this._w + TT._w, kT._isDirty = !0, kT
       }
-      addInPlaceFromFloats(vv, zv, Pv, hv) {
-        return this._x += vv, this._y += zv, this._z += Pv, this._w += hv, this._isDirty = !0, this
+      addInPlaceFromFloats(TT, kT, cT, lT) {
+        return this._x += TT, this._y += kT, this._z += cT, this._w += lT, this._isDirty = !0, this
       }
-      subtractToRef(vv, zv) {
-        return zv._x = this._x - vv._x, zv._y = this._y - vv._y, zv._z = this._z - vv._z, zv._w = this._w - vv._w, zv._isDirty = !0, zv
+      subtractToRef(TT, kT) {
+        return kT._x = this._x - TT._x, kT._y = this._y - TT._y, kT._z = this._z - TT._z, kT._w = this._w - TT._w, kT._isDirty = !0, kT
       }
-      subtractFromFloats(vv, zv, Pv, hv) {
-        return this.subtractFromFloatsToRef(vv, zv, Pv, hv, new av)
+      subtractFromFloats(TT, kT, cT, lT) {
+        return this.subtractFromFloatsToRef(TT, kT, cT, lT, new vT)
       }
-      subtractFromFloatsToRef(vv, zv, Pv, hv, Sv) {
-        return Sv._x = this._x - vv, Sv._y = this._y - zv, Sv._z = this._z - Pv, Sv._w = this._w - hv, Sv._isDirty = !0, Sv
+      subtractFromFloatsToRef(TT, kT, cT, lT, MT) {
+        return MT._x = this._x - TT, MT._y = this._y - kT, MT._z = this._z - cT, MT._w = this._w - lT, MT._isDirty = !0, MT
       }
-      subtract(vv) {
-        return new av(this._x - vv._x, this._y - vv._y, this._z - vv._z, this._w - vv._w)
+      subtract(TT) {
+        return new vT(this._x - TT._x, this._y - TT._y, this._z - TT._z, this._w - TT._w)
       }
-      VPv(vv) {
-        return this._x -= vv._x, this._y -= vv._y, this._z -= vv._z, this._w -= vv._w, this._isDirty = !0, this
+      gcT(TT) {
+        return this._x -= TT._x, this._y -= TT._y, this._z -= TT._z, this._w -= TT._w, this._isDirty = !0, this
       }
-      scale(vv) {
-        return new av(this._x * vv, this._y * vv, this._z * vv, this._w * vv)
+      scale(TT) {
+        return new vT(this._x * TT, this._y * TT, this._z * TT, this._w * TT)
       }
-      scaleToRef(vv, zv) {
-        return zv._x = this._x * vv, zv._y = this._y * vv, zv._z = this._z * vv, zv._w = this._w * vv, zv._isDirty = !0, zv
+      scaleToRef(TT, kT) {
+        return kT._x = this._x * TT, kT._y = this._y * TT, kT._z = this._z * TT, kT._w = this._w * TT, kT._isDirty = !0, kT
       }
-      scaleInPlace(vv) {
-        return this._x *= vv, this._y *= vv, this._z *= vv, this._w *= vv, this._isDirty = !0, this
+      scaleInPlace(TT) {
+        return this._x *= TT, this._y *= TT, this._z *= TT, this._w *= TT, this._isDirty = !0, this
       }
-      scaleAndAddToRef(vv, zv) {
-        return zv._x += this._x * vv, zv._y += this._y * vv, zv._z += this._z * vv, zv._w += this._w * vv, zv._isDirty = !0, zv
+      scaleAndAddToRef(TT, kT) {
+        return kT._x += this._x * TT, kT._y += this._y * TT, kT._z += this._z * TT, kT._w += this._w * TT, kT._isDirty = !0, kT
       }
-      multiply(vv) {
-        const zv = new av(0, 0, 0, 1);
-        return this.multiplyToRef(vv, zv), zv
+      multiply(TT) {
+        const kT = new vT(0, 0, 0, 1);
+        return this.multiplyToRef(TT, kT), kT
       }
-      multiplyToRef(vv, zv) {
-        const Pv = this._x * vv._w + this._y * vv._z - this._z * vv._y + this._w * vv._x,
-          hv = -this._x * vv._z + this._y * vv._w + this._z * vv._x + this._w * vv._y,
-          Sv = this._x * vv._y - this._y * vv._x + this._z * vv._w + this._w * vv._z,
-          ev = -this._x * vv._x - this._y * vv._y - this._z * vv._z + this._w * vv._w;
-        return zv.f_(Pv, hv, Sv, ev), zv
+      multiplyToRef(TT, kT) {
+        const cT = this._x * TT._w + this._y * TT._z - this._z * TT._y + this._w * TT._x,
+          lT = -this._x * TT._z + this._y * TT._w + this._z * TT._x + this._w * TT._y,
+          MT = this._x * TT._y - this._y * TT._x + this._z * TT._w + this._w * TT._z,
+          KT = -this._x * TT._x - this._y * TT._y - this._z * TT._z + this._w * TT._w;
+        return kT.I5(cT, lT, MT, KT), kT
       }
-      multiplyInPlace(vv) {
-        return this.multiplyToRef(vv, this)
+      multiplyInPlace(TT) {
+        return this.multiplyToRef(TT, this)
       }
-      multiplyByFloats(vv, zv, Pv, hv) {
-        return this._x *= vv, this._y *= zv, this._z *= Pv, this._w *= hv, this._isDirty = !0, this
+      multiplyByFloats(TT, kT, cT, lT) {
+        return this._x *= TT, this._y *= kT, this._z *= cT, this._w *= lT, this._isDirty = !0, this
       }
-      divide(vv) {
+      divide(TT) {
         throw new ReferenceError("Can not divide a quaternion")
       }
-      divideToRef(vv, zv) {
+      divideToRef(TT, kT) {
         throw new ReferenceError("Can not divide a quaternion")
       }
-      divideInPlace(vv) {
+      divideInPlace(TT) {
         throw new ReferenceError("Can not divide a quaternion")
       }
       minimizeInPlace() {
@@ -1569,48 +1569,48 @@ export const modules = {
       maximizeInPlaceFromFloats() {
         throw new ReferenceError("Can not maximize a quaternion")
       }
-      Re() {
-        return this.negateToRef(new av)
+      rc() {
+        return this.negateToRef(new vT)
       }
       negateInPlace() {
         return this._x = -this._x, this._y = -this._y, this._z = -this._z, this._w = -this._w, this._isDirty = !0, this
       }
-      negateToRef(vv) {
-        return vv._x = -this._x, vv._y = -this._y, vv._z = -this._z, vv._w = -this._w, vv._isDirty = !0, vv
+      negateToRef(TT) {
+        return TT._x = -this._x, TT._y = -this._y, TT._z = -this._z, TT._w = -this._w, TT._isDirty = !0, TT
       }
-      Mev(vv, zv, Pv, hv) {
-        return this._x === vv && this._y === zv && this._z === Pv && this._w === hv
+      qKT(TT, kT, cT, lT) {
+        return this._x === TT && this._y === kT && this._z === cT && this._w === lT
       }
-      floorToRef(vv) {
+      floorToRef(TT) {
         throw new ReferenceError("Can not floor a quaternion")
       }
       floor() {
         throw new ReferenceError("Can not floor a quaternion")
       }
-      fractToRef(vv) {
+      fractToRef(TT) {
         throw new ReferenceError("Can not fract a quaternion")
       }
       fract() {
         throw new ReferenceError("Can not fract a quaternion")
       }
-      conjugateToRef(vv) {
-        return vv.f_(-this._x, -this._y, -this._z, this._w), vv
+      conjugateToRef(TT) {
+        return TT.I5(-this._x, -this._y, -this._z, this._w), TT
       }
       conjugateInPlace() {
         return this._x *= -1, this._y *= -1, this._z *= -1, this._isDirty = !0, this
       }
       conjugate() {
-        return new av(-this._x, -this._y, -this._z, this._w)
+        return new vT(-this._x, -this._y, -this._z, this._w)
       }
       invert() {
-        const vv = this.conjugate(),
-          zv = this.lengthSquared();
-        return 0 == zv || 1 == zv || vv.scaleInPlace(1 / zv), vv
+        const TT = this.conjugate(),
+          kT = this.lengthSquared();
+        return 0 == kT || 1 == kT || TT.scaleInPlace(1 / kT), TT
       }
       invertInPlace() {
         this.conjugateInPlace();
-        const vv = this.lengthSquared();
-        return 0 == vv || 1 == vv || this.scaleInPlace(1 / vv), this
+        const TT = this.lengthSquared();
+        return 0 == TT || 1 == TT || this.scaleInPlace(1 / TT), this
       }
       lengthSquared() {
         return this._x * this._x + this._y * this._y + this._z * this._z + this._w * this._w
@@ -1621,266 +1621,266 @@ export const modules = {
       normalize() {
         return this.normalizeFromLength(this.length())
       }
-      normalizeFromLength(vv) {
-        return 0 === vv || 1 === vv ? this : this.scaleInPlace(1 / vv)
+      normalizeFromLength(TT) {
+        return 0 === TT || 1 === TT ? this : this.scaleInPlace(1 / TT)
       }
       normalizeToNew() {
-        const vv = new av(0, 0, 0, 1);
-        return this.normalizeToRef(vv), vv
+        const TT = new vT(0, 0, 0, 1);
+        return this.normalizeToRef(TT), TT
       }
-      normalizeToRef(vv) {
-        const zv = this.length();
-        return 0 === zv || 1 === zv ? vv.f_(this._x, this._y, this._z, this._w) : this.scaleToRef(1 / zv, vv)
+      normalizeToRef(TT) {
+        const kT = this.length();
+        return 0 === kT || 1 === kT ? TT.I5(this._x, this._y, this._z, this._w) : this.scaleToRef(1 / kT, TT)
       }
       toEulerAngles() {
-        const vv = Wv.Zero();
-        return this.toEulerAnglesToRef(vv), vv
+        const TT = CT.Zero();
+        return this.toEulerAnglesToRef(TT), TT
       }
-      toEulerAnglesToRef(vv) {
-        const zv = this._z,
-          Pv = this._x,
-          hv = this._y,
-          Sv = this._w,
-          ev = hv * zv - Pv * Sv,
-          gv = .4999999;
-        if (ev < -gv) vv._y = 2 * Math.atan2(hv, Sv), vv._x = Math.PI / 2, vv._z = 0, vv._isDirty = !0;
-        else if (ev > gv) vv._y = 2 * Math.atan2(hv, Sv), vv._x = -Math.PI / 2, vv._z = 0, vv._isDirty = !0;
+      toEulerAnglesToRef(TT) {
+        const kT = this._z,
+          cT = this._x,
+          lT = this._y,
+          MT = this._w,
+          KT = lT * kT - cT * MT,
+          OT = .4999999;
+        if (KT < -OT) TT._y = 2 * Math.atan2(lT, MT), TT._x = Math.PI / 2, TT._z = 0, TT._isDirty = !0;
+        else if (KT > OT) TT._y = 2 * Math.atan2(lT, MT), TT._x = -Math.PI / 2, TT._z = 0, TT._isDirty = !0;
         else {
-          const gv = Sv * Sv,
-            pv = zv * zv,
-            dv = Pv * Pv,
-            Nv = hv * hv;
-          vv._z = Math.atan2(2 * (Pv * hv + zv * Sv), -pv - dv + Nv + gv), vv._x = Math.asin(-2 * ev), vv._y = Math.atan2(2 * (zv * Pv + hv * Sv), pv - dv - Nv + gv), vv._isDirty = !0
+          const OT = MT * MT,
+            yT = kT * kT,
+            fT = cT * cT,
+            xT = lT * lT;
+          TT._z = Math.atan2(2 * (cT * lT + kT * MT), -yT - fT + xT + OT), TT._x = Math.asin(-2 * KT), TT._y = Math.atan2(2 * (kT * cT + lT * MT), yT - fT - xT + OT), TT._isDirty = !0
         }
-        return vv
+        return TT
       }
-      toAlphaBetaGammaToRef(vv) {
-        const zv = this._z,
-          Pv = this._x,
-          hv = this._y,
-          Sv = this._w,
-          ev = Math.sqrt(Pv * Pv + hv * hv),
-          gv = Math.sqrt(zv * zv + Sv * Sv),
-          pv = 2 * Math.atan2(ev, gv),
-          dv = 2 * Math.atan2(zv, Sv),
-          Nv = 2 * Math.atan2(hv, Pv),
-          lv = (dv + Nv) / 2,
-          Tv = (dv - Nv) / 2;
-        return vv.set(Tv, pv, lv), vv
+      toAlphaBetaGammaToRef(TT) {
+        const kT = this._z,
+          cT = this._x,
+          lT = this._y,
+          MT = this._w,
+          KT = Math.sqrt(cT * cT + lT * lT),
+          OT = Math.sqrt(kT * kT + MT * MT),
+          yT = 2 * Math.atan2(KT, OT),
+          fT = 2 * Math.atan2(kT, MT),
+          xT = 2 * Math.atan2(lT, cT),
+          IT = (fT + xT) / 2,
+          AT = (fT - xT) / 2;
+        return TT.set(AT, yT, IT), TT
       }
-      toRotationMatrix(vv) {
-        return sv.FromQuaternionToRef(this, vv), vv
+      toRotationMatrix(TT) {
+        return tT.FromQuaternionToRef(this, TT), TT
       }
-      fromRotationMatrix(vv) {
-        return av.FromRotationMatrixToRef(vv, this), this
+      fromRotationMatrix(TT) {
+        return vT.FromRotationMatrixToRef(TT, this), this
       }
-      dot(vv) {
-        return this._x * vv._x + this._y * vv._y + this._z * vv._z + this._w * vv._w
+      dot(TT) {
+        return this._x * TT._x + this._y * TT._y + this._z * TT._z + this._w * TT._w
       }
       toAxisAngle() {
-        const vv = Wv.Zero();
+        const TT = CT.Zero();
         return {
-          axis: vv,
-          angle: this.toAxisAngleToRef(vv)
+          axis: TT,
+          angle: this.toAxisAngleToRef(TT)
         }
       }
-      toAxisAngleToRef(vv) {
-        let zv;
-        const Pv = Math.sqrt(this._x * this._x + this._y * this._y + this._z * this._z),
-          hv = this._w;
-        return Pv > 0 ? (zv = 2 * Math.atan2(Pv, hv), vv.set(this._x / Pv, this._y / Pv, this._z / Pv)) : (zv = 0, vv.set(1, 0, 0)), zv
+      toAxisAngleToRef(TT) {
+        let kT;
+        const cT = Math.sqrt(this._x * this._x + this._y * this._y + this._z * this._z),
+          lT = this._w;
+        return cT > 0 ? (kT = 2 * Math.atan2(cT, lT), TT.set(this._x / cT, this._y / cT, this._z / cT)) : (kT = 0, TT.set(1, 0, 0)), kT
       }
-      static FromRotationMatrix(vv) {
-        const zv = new av;
-        return av.FromRotationMatrixToRef(vv, zv), zv
+      static FromRotationMatrix(TT) {
+        const kT = new vT;
+        return vT.FromRotationMatrixToRef(TT, kT), kT
       }
-      static FromRotationMatrixToRef(vv, zv) {
-        const Pv = vv.m,
-          hv = Pv[0],
-          Sv = Pv[4],
-          ev = Pv[8],
-          gv = Pv[1],
-          pv = Pv[5],
-          dv = Pv[9],
-          Nv = Pv[2],
-          lv = Pv[6],
-          Tv = Pv[10],
-          Wv = hv + pv + Tv;
-        let wv;
-        return Wv > 0 ? (wv = .5 / Math.sqrt(Wv + 1), zv._w = .25 / wv, zv._x = (lv - dv) * wv, zv._y = (ev - Nv) * wv, zv._z = (gv - Sv) * wv, zv._isDirty = !0) : hv > pv && hv > Tv ? (wv = 2 * Math.sqrt(1 + hv - pv - Tv), zv._w = (lv - dv) / wv, zv._x = .25 * wv, zv._y = (Sv + gv) / wv, zv._z = (ev + Nv) / wv, zv._isDirty = !0) : pv > Tv ? (wv = 2 * Math.sqrt(1 + pv - hv - Tv), zv._w = (ev - Nv) / wv, zv._x = (Sv + gv) / wv, zv._y = .25 * wv, zv._z = (dv + lv) / wv, zv._isDirty = !0) : (wv = 2 * Math.sqrt(1 + Tv - hv - pv), zv._w = (gv - Sv) / wv, zv._x = (ev + Nv) / wv, zv._y = (dv + lv) / wv, zv._z = .25 * wv, zv._isDirty = !0), zv
+      static FromRotationMatrixToRef(TT, kT) {
+        const cT = TT.m,
+          lT = cT[0],
+          MT = cT[4],
+          KT = cT[8],
+          OT = cT[1],
+          yT = cT[5],
+          fT = cT[9],
+          xT = cT[2],
+          IT = cT[6],
+          AT = cT[10],
+          CT = lT + yT + AT;
+        let jT;
+        return CT > 0 ? (jT = .5 / Math.sqrt(CT + 1), kT._w = .25 / jT, kT._x = (IT - fT) * jT, kT._y = (KT - xT) * jT, kT._z = (OT - MT) * jT, kT._isDirty = !0) : lT > yT && lT > AT ? (jT = 2 * Math.sqrt(1 + lT - yT - AT), kT._w = (IT - fT) / jT, kT._x = .25 * jT, kT._y = (MT + OT) / jT, kT._z = (KT + xT) / jT, kT._isDirty = !0) : yT > AT ? (jT = 2 * Math.sqrt(1 + yT - lT - AT), kT._w = (KT - xT) / jT, kT._x = (MT + OT) / jT, kT._y = .25 * jT, kT._z = (fT + IT) / jT, kT._isDirty = !0) : (jT = 2 * Math.sqrt(1 + AT - lT - yT), kT._w = (OT - MT) / jT, kT._x = (KT + xT) / jT, kT._y = (fT + IT) / jT, kT._z = .25 * jT, kT._isDirty = !0), kT
       }
-      static Dot(vv, zv) {
-        return vv._x * zv._x + vv._y * zv._y + vv._z * zv._z + vv._w * zv._w
+      static Dot(TT, kT) {
+        return TT._x * kT._x + TT._y * kT._y + TT._z * kT._z + TT._w * kT._w
       }
-      static AreClose(vv, zv) {
-        let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .1;
-        const hv = av.Dot(vv, zv);
-        return 1 - hv * hv <= Pv
+      static AreClose(TT, kT) {
+        let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .1;
+        const lT = vT.Dot(TT, kT);
+        return 1 - lT * lT <= cT
       }
-      static SmoothToRef(vv, zv, Pv, hv, Sv) {
-        let ev = 0 === hv ? 1 : Pv / hv;
-        return ev = (0, pv.Clamp)(ev, 0, 1), av.SlerpToRef(vv, zv, ev, Sv), Sv
+      static SmoothToRef(TT, kT, cT, lT, MT) {
+        let KT = 0 === lT ? 1 : cT / lT;
+        return KT = (0, yT.Clamp)(KT, 0, 1), vT.SlerpToRef(TT, kT, KT, MT), MT
       }
       static Zero() {
-        return new av(0, 0, 0, 0)
+        return new vT(0, 0, 0, 0)
       }
-      static Inverse(vv) {
-        return new av(-vv._x, -vv._y, -vv._z, vv._w)
+      static Inverse(TT) {
+        return new vT(-TT._x, -TT._y, -TT._z, TT._w)
       }
-      static InverseToRef(vv, zv) {
-        return zv.set(-vv._x, -vv._y, -vv._z, vv._w), zv
+      static InverseToRef(TT, kT) {
+        return kT.set(-TT._x, -TT._y, -TT._z, TT._w), kT
       }
       static Identity() {
-        return new av(0, 0, 0, 1)
+        return new vT(0, 0, 0, 1)
       }
-      static IsIdentity(vv) {
-        return vv && 0 === vv._x && 0 === vv._y && 0 === vv._z && 1 === vv._w
+      static IsIdentity(TT) {
+        return TT && 0 === TT._x && 0 === TT._y && 0 === TT._z && 1 === TT._w
       }
-      static RotationAxis(vv, zv) {
-        return av.RotationAxisToRef(vv, zv, new av)
+      static RotationAxis(TT, kT) {
+        return vT.RotationAxisToRef(TT, kT, new vT)
       }
-      static RotationAxisToRef(vv, zv, Pv) {
-        Pv._w = Math.cos(zv / 2);
-        const hv = Math.sin(zv / 2) / vv.length();
-        return Pv._x = vv._x * hv, Pv._y = vv._y * hv, Pv._z = vv._z * hv, Pv._isDirty = !0, Pv
+      static RotationAxisToRef(TT, kT, cT) {
+        cT._w = Math.cos(kT / 2);
+        const lT = Math.sin(kT / 2) / TT.length();
+        return cT._x = TT._x * lT, cT._y = TT._y * lT, cT._z = TT._z * lT, cT._isDirty = !0, cT
       }
-      static FromArray(vv, zv) {
-        return zv || (zv = 0), new av(vv[zv], vv[zv + 1], vv[zv + 2], vv[zv + 3])
+      static FromArray(TT, kT) {
+        return kT || (kT = 0), new vT(TT[kT], TT[kT + 1], TT[kT + 2], TT[kT + 3])
       }
-      static FromArrayToRef(vv, zv, Pv) {
-        return Pv._x = vv[zv], Pv._y = vv[zv + 1], Pv._z = vv[zv + 2], Pv._w = vv[zv + 3], Pv._isDirty = !0, Pv
+      static FromArrayToRef(TT, kT, cT) {
+        return cT._x = TT[kT], cT._y = TT[kT + 1], cT._z = TT[kT + 2], cT._w = TT[kT + 3], cT._isDirty = !0, cT
       }
-      static FromFloatsToRef(vv, zv, Pv, hv, Sv) {
-        return Sv.f_(vv, zv, Pv, hv), Sv
+      static FromFloatsToRef(TT, kT, cT, lT, MT) {
+        return MT.I5(TT, kT, cT, lT), MT
       }
-      static FromEulerAngles(vv, zv, Pv) {
-        const hv = new av;
-        return av.RotationYawPitchRollToRef(zv, vv, Pv, hv), hv
+      static FromEulerAngles(TT, kT, cT) {
+        const lT = new vT;
+        return vT.RotationYawPitchRollToRef(kT, TT, cT, lT), lT
       }
-      static FromEulerAnglesToRef(vv, zv, Pv, hv) {
-        return av.RotationYawPitchRollToRef(zv, vv, Pv, hv), hv
+      static FromEulerAnglesToRef(TT, kT, cT, lT) {
+        return vT.RotationYawPitchRollToRef(kT, TT, cT, lT), lT
       }
-      static FromEulerVector(vv) {
-        const zv = new av;
-        return av.RotationYawPitchRollToRef(vv._y, vv._x, vv._z, zv), zv
+      static FromEulerVector(TT) {
+        const kT = new vT;
+        return vT.RotationYawPitchRollToRef(TT._y, TT._x, TT._z, kT), kT
       }
-      static FromEulerVectorToRef(vv, zv) {
-        return av.RotationYawPitchRollToRef(vv._y, vv._x, vv._z, zv), zv
+      static FromEulerVectorToRef(TT, kT) {
+        return vT.RotationYawPitchRollToRef(TT._y, TT._x, TT._z, kT), kT
       }
-      static FromUnitVectorsToRef(vv, zv, Pv) {
-        let Sv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : hv.e;
-        const ev = Wv.Dot(vv, zv) + 1;
-        return ev < Sv ? Math.abs(vv.x) > Math.abs(vv.z) ? Pv.set(-vv.y, vv.x, 0, 0) : Pv.set(0, -vv.z, vv.y, 0) : (Wv.CrossToRef(vv, zv, iv.fa[0]), Pv.set(iv.fa[0].x, iv.fa[0].y, iv.fa[0].z, ev)), Pv.normalize()
+      static FromUnitVectorsToRef(TT, kT, cT) {
+        let MT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : lT.b;
+        const KT = CT.Dot(TT, kT) + 1;
+        return KT < MT ? Math.abs(TT.x) > Math.abs(TT.z) ? cT.set(-TT.y, TT.x, 0, 0) : cT.set(0, -TT.z, TT.y, 0) : (CT.CrossToRef(TT, kT, NT.Fv[0]), cT.set(NT.Fv[0].x, NT.Fv[0].y, NT.Fv[0].z, KT)), cT.normalize()
       }
-      static RotationYawPitchRoll(vv, zv, Pv) {
-        const hv = new av;
-        return av.RotationYawPitchRollToRef(vv, zv, Pv, hv), hv
+      static RotationYawPitchRoll(TT, kT, cT) {
+        const lT = new vT;
+        return vT.RotationYawPitchRollToRef(TT, kT, cT, lT), lT
       }
-      static RotationYawPitchRollToRef(vv, zv, Pv, hv) {
-        const Sv = .5 * Pv,
-          ev = .5 * zv,
-          gv = .5 * vv,
-          pv = Math.sin(Sv),
-          dv = Math.cos(Sv),
-          Nv = Math.sin(ev),
-          lv = Math.cos(ev),
-          Tv = Math.sin(gv),
-          Wv = Math.cos(gv);
-        return hv._x = Wv * Nv * dv + Tv * lv * pv, hv._y = Tv * lv * dv - Wv * Nv * pv, hv._z = Wv * lv * pv - Tv * Nv * dv, hv._w = Wv * lv * dv + Tv * Nv * pv, hv._isDirty = !0, hv
+      static RotationYawPitchRollToRef(TT, kT, cT, lT) {
+        const MT = .5 * cT,
+          KT = .5 * kT,
+          OT = .5 * TT,
+          yT = Math.sin(MT),
+          fT = Math.cos(MT),
+          xT = Math.sin(KT),
+          IT = Math.cos(KT),
+          AT = Math.sin(OT),
+          CT = Math.cos(OT);
+        return lT._x = CT * xT * fT + AT * IT * yT, lT._y = AT * IT * fT - CT * xT * yT, lT._z = CT * IT * yT - AT * xT * fT, lT._w = CT * IT * fT + AT * xT * yT, lT._isDirty = !0, lT
       }
-      static RotationAlphaBetaGamma(vv, zv, Pv) {
-        const hv = new av;
-        return av.RotationAlphaBetaGammaToRef(vv, zv, Pv, hv), hv
+      static RotationAlphaBetaGamma(TT, kT, cT) {
+        const lT = new vT;
+        return vT.RotationAlphaBetaGammaToRef(TT, kT, cT, lT), lT
       }
-      static RotationAlphaBetaGammaToRef(vv, zv, Pv, hv) {
-        const Sv = .5 * (Pv + vv),
-          ev = .5 * (Pv - vv),
-          gv = .5 * zv;
-        return hv._x = Math.cos(ev) * Math.sin(gv), hv._y = Math.sin(ev) * Math.sin(gv), hv._z = Math.sin(Sv) * Math.cos(gv), hv._w = Math.cos(Sv) * Math.cos(gv), hv._isDirty = !0, hv
+      static RotationAlphaBetaGammaToRef(TT, kT, cT, lT) {
+        const MT = .5 * (cT + TT),
+          KT = .5 * (cT - TT),
+          OT = .5 * kT;
+        return lT._x = Math.cos(KT) * Math.sin(OT), lT._y = Math.sin(KT) * Math.sin(OT), lT._z = Math.sin(MT) * Math.cos(OT), lT._w = Math.cos(MT) * Math.cos(OT), lT._isDirty = !0, lT
       }
-      static RotationQuaternionFromAxis(vv, zv, Pv) {
-        const hv = new av(0, 0, 0, 0);
-        return av.RotationQuaternionFromAxisToRef(vv, zv, Pv, hv), hv
+      static RotationQuaternionFromAxis(TT, kT, cT) {
+        const lT = new vT(0, 0, 0, 0);
+        return vT.RotationQuaternionFromAxisToRef(TT, kT, cT, lT), lT
       }
-      static RotationQuaternionFromAxisToRef(vv, zv, Pv, hv) {
-        const Sv = Cv.Matrix[0];
-        return vv = vv.normalizeToRef(Cv.fa[0]), zv = zv.normalizeToRef(Cv.fa[1]), Pv = Pv.normalizeToRef(Cv.fa[2]), sv.FromXYZAxesToRef(vv, zv, Pv, Sv), av.FromRotationMatrixToRef(Sv, hv), hv
+      static RotationQuaternionFromAxisToRef(TT, kT, cT, lT) {
+        const MT = hT.Matrix[0];
+        return TT = TT.normalizeToRef(hT.Fv[0]), kT = kT.normalizeToRef(hT.Fv[1]), cT = cT.normalizeToRef(hT.Fv[2]), tT.FromXYZAxesToRef(TT, kT, cT, MT), vT.FromRotationMatrixToRef(MT, lT), lT
       }
-      static FromLookDirectionLH(vv, zv) {
-        const Pv = new av;
-        return av.FromLookDirectionLHToRef(vv, zv, Pv), Pv
+      static FromLookDirectionLH(TT, kT) {
+        const cT = new vT;
+        return vT.FromLookDirectionLHToRef(TT, kT, cT), cT
       }
-      static FromLookDirectionLHToRef(vv, zv, Pv) {
-        const hv = Cv.Matrix[0];
-        return sv.LookDirectionLHToRef(vv, zv, hv), av.FromRotationMatrixToRef(hv, Pv), Pv
+      static FromLookDirectionLHToRef(TT, kT, cT) {
+        const lT = hT.Matrix[0];
+        return tT.LookDirectionLHToRef(TT, kT, lT), vT.FromRotationMatrixToRef(lT, cT), cT
       }
-      static FromLookDirectionRH(vv, zv) {
-        const Pv = new av;
-        return av.FromLookDirectionRHToRef(vv, zv, Pv), Pv
+      static FromLookDirectionRH(TT, kT) {
+        const cT = new vT;
+        return vT.FromLookDirectionRHToRef(TT, kT, cT), cT
       }
-      static FromLookDirectionRHToRef(vv, zv, Pv) {
-        const hv = Cv.Matrix[0];
-        return sv.LookDirectionRHToRef(vv, zv, hv), av.FromRotationMatrixToRef(hv, Pv)
+      static FromLookDirectionRHToRef(TT, kT, cT) {
+        const lT = hT.Matrix[0];
+        return tT.LookDirectionRHToRef(TT, kT, lT), vT.FromRotationMatrixToRef(lT, cT)
       }
-      static Slerp(vv, zv, Pv) {
-        const hv = av.Identity();
-        return av.SlerpToRef(vv, zv, Pv, hv), hv
+      static Slerp(TT, kT, cT) {
+        const lT = vT.Identity();
+        return vT.SlerpToRef(TT, kT, cT, lT), lT
       }
-      static SlerpToRef(vv, zv, Pv, hv) {
-        let Sv, ev, gv = vv._x * zv._x + vv._y * zv._y + vv._z * zv._z + vv._w * zv._w,
-          pv = !1;
-        if (gv < 0 && (pv = !0, gv = -gv), gv > .999999) ev = 1 - Pv, Sv = pv ? -Pv : Pv;
+      static SlerpToRef(TT, kT, cT, lT) {
+        let MT, KT, OT = TT._x * kT._x + TT._y * kT._y + TT._z * kT._z + TT._w * kT._w,
+          yT = !1;
+        if (OT < 0 && (yT = !0, OT = -OT), OT > .999999) KT = 1 - cT, MT = yT ? -cT : cT;
         else {
-          const vv = Math.acos(gv),
-            zv = 1 / Math.sin(vv);
-          ev = Math.sin((1 - Pv) * vv) * zv, Sv = pv ? -Math.sin(Pv * vv) * zv : Math.sin(Pv * vv) * zv
+          const TT = Math.acos(OT),
+            kT = 1 / Math.sin(TT);
+          KT = Math.sin((1 - cT) * TT) * kT, MT = yT ? -Math.sin(cT * TT) * kT : Math.sin(cT * TT) * kT
         }
-        return hv._x = ev * vv._x + Sv * zv._x, hv._y = ev * vv._y + Sv * zv._y, hv._z = ev * vv._z + Sv * zv._z, hv._w = ev * vv._w + Sv * zv._w, hv._isDirty = !0, hv
+        return lT._x = KT * TT._x + MT * kT._x, lT._y = KT * TT._y + MT * kT._y, lT._z = KT * TT._z + MT * kT._z, lT._w = KT * TT._w + MT * kT._w, lT._isDirty = !0, lT
       }
-      static Hermite(vv, zv, Pv, hv, Sv) {
-        const ev = Sv * Sv,
-          gv = Sv * ev,
-          pv = 2 * gv - 3 * ev + 1,
-          dv = -2 * gv + 3 * ev,
-          Nv = gv - 2 * ev + Sv,
-          lv = gv - ev,
-          Tv = vv._x * pv + Pv._x * dv + zv._x * Nv + hv._x * lv,
-          Wv = vv._y * pv + Pv._y * dv + zv._y * Nv + hv._y * lv,
-          wv = vv._z * pv + Pv._z * dv + zv._z * Nv + hv._z * lv,
-          sv = vv._w * pv + Pv._w * dv + zv._w * Nv + hv._w * lv;
-        return new av(Tv, Wv, wv, sv)
+      static Hermite(TT, kT, cT, lT, MT) {
+        const KT = MT * MT,
+          OT = MT * KT,
+          yT = 2 * OT - 3 * KT + 1,
+          fT = -2 * OT + 3 * KT,
+          xT = OT - 2 * KT + MT,
+          IT = OT - KT,
+          AT = TT._x * yT + cT._x * fT + kT._x * xT + lT._x * IT,
+          CT = TT._y * yT + cT._y * fT + kT._y * xT + lT._y * IT,
+          jT = TT._z * yT + cT._z * fT + kT._z * xT + lT._z * IT,
+          tT = TT._w * yT + cT._w * fT + kT._w * xT + lT._w * IT;
+        return new vT(AT, CT, jT, tT)
       }
-      static Hermite1stDerivative(vv, zv, Pv, hv, Sv) {
-        const ev = new av;
-        return this.Hermite1stDerivativeToRef(vv, zv, Pv, hv, Sv, ev), ev
+      static Hermite1stDerivative(TT, kT, cT, lT, MT) {
+        const KT = new vT;
+        return this.Hermite1stDerivativeToRef(TT, kT, cT, lT, MT, KT), KT
       }
-      static Hermite1stDerivativeToRef(vv, zv, Pv, hv, Sv, ev) {
-        const gv = Sv * Sv;
-        return ev._x = 6 * (gv - Sv) * vv._x + (3 * gv - 4 * Sv + 1) * zv._x + 6 * (-gv + Sv) * Pv._x + (3 * gv - 2 * Sv) * hv._x, ev._y = 6 * (gv - Sv) * vv._y + (3 * gv - 4 * Sv + 1) * zv._y + 6 * (-gv + Sv) * Pv._y + (3 * gv - 2 * Sv) * hv._y, ev._z = 6 * (gv - Sv) * vv._z + (3 * gv - 4 * Sv + 1) * zv._z + 6 * (-gv + Sv) * Pv._z + (3 * gv - 2 * Sv) * hv._z, ev._w = 6 * (gv - Sv) * vv._w + (3 * gv - 4 * Sv + 1) * zv._w + 6 * (-gv + Sv) * Pv._w + (3 * gv - 2 * Sv) * hv._w, ev._isDirty = !0, ev
+      static Hermite1stDerivativeToRef(TT, kT, cT, lT, MT, KT) {
+        const OT = MT * MT;
+        return KT._x = 6 * (OT - MT) * TT._x + (3 * OT - 4 * MT + 1) * kT._x + 6 * (-OT + MT) * cT._x + (3 * OT - 2 * MT) * lT._x, KT._y = 6 * (OT - MT) * TT._y + (3 * OT - 4 * MT + 1) * kT._y + 6 * (-OT + MT) * cT._y + (3 * OT - 2 * MT) * lT._y, KT._z = 6 * (OT - MT) * TT._z + (3 * OT - 4 * MT + 1) * kT._z + 6 * (-OT + MT) * cT._z + (3 * OT - 2 * MT) * lT._z, KT._w = 6 * (OT - MT) * TT._w + (3 * OT - 4 * MT + 1) * kT._w + 6 * (-OT + MT) * cT._w + (3 * OT - 2 * MT) * lT._w, KT._isDirty = !0, KT
       }
-      static Normalize(vv) {
-        const zv = av.Zero();
-        return av.NormalizeToRef(vv, zv), zv
+      static Normalize(TT) {
+        const kT = vT.Zero();
+        return vT.NormalizeToRef(TT, kT), kT
       }
-      static NormalizeToRef(vv, zv) {
-        return vv.normalizeToRef(zv), zv
+      static NormalizeToRef(TT, kT) {
+        return TT.normalizeToRef(kT), kT
       }
-      static Clamp(vv, zv, Pv) {
-        const hv = new av;
-        return av.ClampToRef(vv, zv, Pv, hv), hv
+      static Clamp(TT, kT, cT) {
+        const lT = new vT;
+        return vT.ClampToRef(TT, kT, cT, lT), lT
       }
-      static ClampToRef(vv, zv, Pv, hv) {
-        return hv.f_((0, pv.Clamp)(vv.x, zv.x, Pv.x), (0, pv.Clamp)(vv.y, zv.y, Pv.y), (0, pv.Clamp)(vv.z, zv.z, Pv.z), (0, pv.Clamp)(vv.w, zv.w, Pv.w))
+      static ClampToRef(TT, kT, cT, lT) {
+        return lT.I5((0, yT.Clamp)(TT.x, kT.x, cT.x), (0, yT.Clamp)(TT.y, kT.y, cT.y), (0, yT.Clamp)(TT.z, kT.z, cT.z), (0, yT.Clamp)(TT.w, kT.w, cT.w))
       }
       static Random() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new av((0, pv.RandomRange)(vv, zv), (0, pv.RandomRange)(vv, zv), (0, pv.RandomRange)(vv, zv), (0, pv.RandomRange)(vv, zv))
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new vT((0, yT.RandomRange)(TT, kT), (0, yT.RandomRange)(TT, kT), (0, yT.RandomRange)(TT, kT), (0, yT.RandomRange)(TT, kT))
       }
       static RandomToRef() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return (arguments.length > 2 ? arguments[2] : void 0).f_((0, pv.RandomRange)(vv, zv), (0, pv.RandomRange)(vv, zv), (0, pv.RandomRange)(vv, zv), (0, pv.RandomRange)(vv, zv))
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return (arguments.length > 2 ? arguments[2] : void 0).I5((0, yT.RandomRange)(TT, kT), (0, yT.RandomRange)(TT, kT), (0, yT.RandomRange)(TT, kT), (0, yT.RandomRange)(TT, kT))
       }
       static Minimize() {
         throw new ReferenceError("Quaternion.Minimize does not make sense")
@@ -1888,48 +1888,48 @@ export const modules = {
       static Maximize() {
         throw new ReferenceError("Quaternion.Maximize does not make sense")
       }
-      static Distance(vv, zv) {
-        return Math.sqrt(av.DistanceSquared(vv, zv))
+      static Distance(TT, kT) {
+        return Math.sqrt(vT.DistanceSquared(TT, kT))
       }
-      static DistanceSquared(vv, zv) {
-        const Pv = vv.x - zv.x,
-          hv = vv.y - zv.y,
-          Sv = vv.z - zv.z,
-          ev = vv.w - zv.w;
-        return Pv * Pv + hv * hv + Sv * Sv + ev * ev
+      static DistanceSquared(TT, kT) {
+        const cT = TT.x - kT.x,
+          lT = TT.y - kT.y,
+          MT = TT.z - kT.z,
+          KT = TT.w - kT.w;
+        return cT * cT + lT * lT + MT * MT + KT * KT
       }
-      static Center(vv, zv) {
-        return av.CenterToRef(vv, zv, av.Zero())
+      static Center(TT, kT) {
+        return vT.CenterToRef(TT, kT, vT.Zero())
       }
-      static CenterToRef(vv, zv, Pv) {
-        return Pv.f_((vv.x + zv.x) / 2, (vv.y + zv.y) / 2, (vv.z + zv.z) / 2, (vv.w + zv.w) / 2)
+      static CenterToRef(TT, kT, cT) {
+        return cT.I5((TT.x + kT.x) / 2, (TT.y + kT.y) / 2, (TT.z + kT.z) / 2, (TT.w + kT.w) / 2)
       }
     }
-    av._V8PerformanceHack = new av(.5, .5, .5, .5);
-    class sv {
+    vT._V8PerformanceHack = new vT(.5, .5, .5, .5);
+    class tT {
       static get Use64Bits() {
-        return ev.b.MatrixUse64Bits
+        return KT.d.MatrixUse64Bits
       }
       get m() {
         return this._m
       }
       markAsUpdated() {
-        this.updateFlag = dv.k._UpdateFlagSeed++, this._isIdentity = !1, this._isIdentity3x2 = !1, this._isIdentityDirty = !0, this._isIdentity3x2Dirty = !0
+        this.updateFlag = fT.m._UpdateFlagSeed++, this._isIdentity = !1, this._isIdentity3x2 = !1, this._isIdentityDirty = !0, this._isIdentity3x2Dirty = !0
       }
-      _updateIdentityStatus(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          Pv = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          hv = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        this._isIdentity = vv, this._isIdentity3x2 = vv || Pv, this._isIdentityDirty = !this._isIdentity && zv, this._isIdentity3x2Dirty = !this._isIdentity3x2 && hv
+      _updateIdentityStatus(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          cT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          lT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        this._isIdentity = TT, this._isIdentity3x2 = TT || cT, this._isIdentityDirty = !this._isIdentity && kT, this._isIdentity3x2Dirty = !this._isIdentity3x2 && lT
       }
       constructor() {
-        this._isIdentity = !1, this._isIdentityDirty = !0, this._isIdentity3x2 = !0, this._isIdentity3x2Dirty = !0, this.updateFlag = -1, ev.b.MatrixTrackPrecisionChange && ev.b.MatrixTrackedMatrices.push(this), this._m = new ev.b.MatrixCurrentType(16), this.markAsUpdated()
+        this._isIdentity = !1, this._isIdentityDirty = !0, this._isIdentity3x2 = !0, this._isIdentity3x2Dirty = !0, this.updateFlag = -1, KT.d.MatrixTrackPrecisionChange && KT.d.MatrixTrackedMatrices.push(this), this._m = new KT.d.MatrixCurrentType(16), this.markAsUpdated()
       }
       isIdentity() {
         if (this._isIdentityDirty) {
           this._isIdentityDirty = !1;
-          const vv = this._m;
-          this._isIdentity = 1 === vv[0] && 0 === vv[1] && 0 === vv[2] && 0 === vv[3] && 0 === vv[4] && 1 === vv[5] && 0 === vv[6] && 0 === vv[7] && 0 === vv[8] && 0 === vv[9] && 1 === vv[10] && 0 === vv[11] && 0 === vv[12] && 0 === vv[13] && 0 === vv[14] && 1 === vv[15]
+          const TT = this._m;
+          this._isIdentity = 1 === TT[0] && 0 === TT[1] && 0 === TT[2] && 0 === TT[3] && 0 === TT[4] && 1 === TT[5] && 0 === TT[6] && 0 === TT[7] && 0 === TT[8] && 0 === TT[9] && 1 === TT[10] && 0 === TT[11] && 0 === TT[12] && 0 === TT[13] && 0 === TT[14] && 1 === TT[15]
         }
         return this._isIdentity
       }
@@ -1938,966 +1938,966 @@ export const modules = {
       }
       determinant() {
         if (!0 === this._isIdentity) return 1;
-        const vv = this._m,
-          zv = vv[0],
-          Pv = vv[1],
-          hv = vv[2],
-          Sv = vv[3],
-          ev = vv[4],
-          gv = vv[5],
-          pv = vv[6],
-          dv = vv[7],
-          Nv = vv[8],
-          lv = vv[9],
-          Tv = vv[10],
-          Wv = vv[11],
-          wv = vv[12],
-          av = vv[13],
-          sv = vv[14],
-          Cv = vv[15],
-          iv = Tv * Cv - sv * Wv,
-          cv = lv * Cv - av * Wv,
-          Gv = lv * sv - av * Tv,
-          mv = Nv * Cv - wv * Wv,
-          jv = Nv * sv - Tv * wv,
-          fv = Nv * av - wv * lv;
-        return zv * +(gv * iv - pv * cv + dv * Gv) + Pv * -(ev * iv - pv * mv + dv * jv) + hv * +(ev * cv - gv * mv + dv * fv) + Sv * -(ev * Gv - gv * jv + pv * fv)
+        const TT = this._m,
+          kT = TT[0],
+          cT = TT[1],
+          lT = TT[2],
+          MT = TT[3],
+          KT = TT[4],
+          OT = TT[5],
+          yT = TT[6],
+          fT = TT[7],
+          xT = TT[8],
+          IT = TT[9],
+          AT = TT[10],
+          CT = TT[11],
+          jT = TT[12],
+          vT = TT[13],
+          tT = TT[14],
+          hT = TT[15],
+          NT = AT * hT - tT * CT,
+          QT = IT * hT - vT * CT,
+          ST = IT * tT - vT * AT,
+          DT = xT * hT - jT * CT,
+          aT = xT * tT - AT * jT,
+          FT = xT * vT - jT * IT;
+        return kT * +(OT * NT - yT * QT + fT * ST) + cT * -(KT * NT - yT * DT + fT * aT) + lT * +(KT * QT - OT * DT + fT * FT) + MT * -(KT * ST - OT * aT + yT * FT)
       }
       toString() {
         return `{${this.m[0]}, ${this.m[1]}, ${this.m[2]}, ${this.m[3]}\n${this.m[4]}, ${this.m[5]}, ${this.m[6]}, ${this.m[7]}\n${this.m[8]}, ${this.m[9]}, ${this.m[10]}, ${this.m[11]}\n${this.m[12]}, ${this.m[13]}, ${this.m[14]}, ${this.m[15]}}`
       }
       toArray() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        if (!vv) return this._m;
-        const Pv = this._m;
-        for (let hv = 0; hv < 16; hv++) vv[zv + hv] = Pv[hv];
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        if (!TT) return this._m;
+        const cT = this._m;
+        for (let lT = 0; lT < 16; lT++) TT[kT + lT] = cT[lT];
         return this
       }
-      pPv() {
+      acT() {
         return this._m
       }
-      Evv(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return sv.FromArrayToRef(vv, zv, this)
+      xkT(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return tT.FromArrayToRef(TT, kT, this)
       }
-      f_() {
-        for (var vv = arguments.length, zv = new Array(vv), Pv = 0; Pv < vv; Pv++) zv[Pv] = arguments[Pv];
-        return sv.FromArrayToRef(zv, 0, this)
+      I5() {
+        for (var TT = arguments.length, kT = new Array(TT), cT = 0; cT < TT; cT++) kT[cT] = arguments[cT];
+        return tT.FromArrayToRef(kT, 0, this)
       }
       set() {
-        const vv = this._m;
-        for (let zv = 0; zv < 16; zv++) vv[zv] = zv < 0 || arguments.length <= zv ? void 0 : arguments[zv];
+        const TT = this._m;
+        for (let kT = 0; kT < 16; kT++) TT[kT] = kT < 0 || arguments.length <= kT ? void 0 : arguments[kT];
         return this.markAsUpdated(), this
       }
-      Dk(vv) {
-        const zv = this._m;
-        for (let Pv = 0; Pv < 16; Pv++) zv[Pv] = vv;
+      Xs(TT) {
+        const kT = this._m;
+        for (let cT = 0; cT < 16; cT++) kT[cT] = TT;
         return this.markAsUpdated(), this
       }
       invert() {
         return this.invertToRef(this), this
       }
       reset() {
-        return sv.FromValuesToRef(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, this), this._updateIdentityStatus(!1), this
+        return tT.FromValuesToRef(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, this), this._updateIdentityStatus(!1), this
       }
-      add(vv) {
-        const zv = new sv;
-        return this.addToRef(vv, zv), zv
+      add(TT) {
+        const kT = new tT;
+        return this.addToRef(TT, kT), kT
       }
-      addToRef(vv, zv) {
-        const Pv = this._m,
-          hv = zv._m,
-          Sv = vv.m;
-        for (let ev = 0; ev < 16; ev++) hv[ev] = Pv[ev] + Sv[ev];
-        return zv.markAsUpdated(), zv
+      addToRef(TT, kT) {
+        const cT = this._m,
+          lT = kT._m,
+          MT = TT.m;
+        for (let KT = 0; KT < 16; KT++) lT[KT] = cT[KT] + MT[KT];
+        return kT.markAsUpdated(), kT
       }
-      addToSelf(vv) {
-        const zv = this._m,
-          Pv = vv.m;
-        return zv[0] += Pv[0], zv[1] += Pv[1], zv[2] += Pv[2], zv[3] += Pv[3], zv[4] += Pv[4], zv[5] += Pv[5], zv[6] += Pv[6], zv[7] += Pv[7], zv[8] += Pv[8], zv[9] += Pv[9], zv[10] += Pv[10], zv[11] += Pv[11], zv[12] += Pv[12], zv[13] += Pv[13], zv[14] += Pv[14], zv[15] += Pv[15], this.markAsUpdated(), this
+      addToSelf(TT) {
+        const kT = this._m,
+          cT = TT.m;
+        return kT[0] += cT[0], kT[1] += cT[1], kT[2] += cT[2], kT[3] += cT[3], kT[4] += cT[4], kT[5] += cT[5], kT[6] += cT[6], kT[7] += cT[7], kT[8] += cT[8], kT[9] += cT[9], kT[10] += cT[10], kT[11] += cT[11], kT[12] += cT[12], kT[13] += cT[13], kT[14] += cT[14], kT[15] += cT[15], this.markAsUpdated(), this
       }
-      addInPlace(vv) {
-        const zv = this._m,
-          Pv = vv.m;
-        for (let hv = 0; hv < 16; hv++) zv[hv] += Pv[hv];
+      addInPlace(TT) {
+        const kT = this._m,
+          cT = TT.m;
+        for (let lT = 0; lT < 16; lT++) kT[lT] += cT[lT];
         return this.markAsUpdated(), this
       }
       addInPlaceFromFloats() {
-        const vv = this._m;
-        for (let zv = 0; zv < 16; zv++) vv[zv] += zv < 0 || arguments.length <= zv ? void 0 : arguments[zv];
+        const TT = this._m;
+        for (let kT = 0; kT < 16; kT++) TT[kT] += kT < 0 || arguments.length <= kT ? void 0 : arguments[kT];
         return this.markAsUpdated(), this
       }
-      subtract(vv) {
-        const zv = this._m,
-          Pv = vv.m;
-        for (let hv = 0; hv < 16; hv++) zv[hv] -= Pv[hv];
+      subtract(TT) {
+        const kT = this._m,
+          cT = TT.m;
+        for (let lT = 0; lT < 16; lT++) kT[lT] -= cT[lT];
         return this.markAsUpdated(), this
       }
-      subtractToRef(vv, zv) {
-        const Pv = this._m,
-          hv = vv.m,
-          Sv = zv._m;
-        for (let ev = 0; ev < 16; ev++) Sv[ev] = Pv[ev] - hv[ev];
-        return zv.markAsUpdated(), zv
+      subtractToRef(TT, kT) {
+        const cT = this._m,
+          lT = TT.m,
+          MT = kT._m;
+        for (let KT = 0; KT < 16; KT++) MT[KT] = cT[KT] - lT[KT];
+        return kT.markAsUpdated(), kT
       }
-      VPv(vv) {
-        const zv = this._m,
-          Pv = vv.m;
-        for (let hv = 0; hv < 16; hv++) zv[hv] -= Pv[hv];
+      gcT(TT) {
+        const kT = this._m,
+          cT = TT.m;
+        for (let lT = 0; lT < 16; lT++) kT[lT] -= cT[lT];
         return this.markAsUpdated(), this
       }
       subtractFromFloats() {
-        for (var vv = arguments.length, zv = new Array(vv), Pv = 0; Pv < vv; Pv++) zv[Pv] = arguments[Pv];
-        return this.subtractFromFloatsToRef(...zv, new sv)
+        for (var TT = arguments.length, kT = new Array(TT), cT = 0; cT < TT; cT++) kT[cT] = arguments[cT];
+        return this.subtractFromFloatsToRef(...kT, new tT)
       }
       subtractFromFloatsToRef() {
-        for (var vv = arguments.length, zv = new Array(vv), Pv = 0; Pv < vv; Pv++) zv[Pv] = arguments[Pv];
-        const hv = zv.pop(),
-          Sv = this._m,
-          ev = hv._m,
-          gv = zv;
-        for (let pv = 0; pv < 16; pv++) ev[pv] = Sv[pv] - gv[pv];
-        return hv.markAsUpdated(), hv
+        for (var TT = arguments.length, kT = new Array(TT), cT = 0; cT < TT; cT++) kT[cT] = arguments[cT];
+        const lT = kT.pop(),
+          MT = this._m,
+          KT = lT._m,
+          OT = kT;
+        for (let yT = 0; yT < 16; yT++) KT[yT] = MT[yT] - OT[yT];
+        return lT.markAsUpdated(), lT
       }
-      invertToRef(vv) {
-        return !0 === this._isIdentity ? (sv.IdentityToRef(vv), vv) : ((0, dv.h)(this, vv.pPv()) ? vv.markAsUpdated() : vv.Vzv(this), vv)
+      invertToRef(TT) {
+        return !0 === this._isIdentity ? (tT.IdentityToRef(TT), TT) : ((0, fT.h)(this, TT.acT()) ? TT.markAsUpdated() : TT.UkT(this), TT)
       }
-      addAtIndex(vv, zv) {
-        return this._m[vv] += zv, this.markAsUpdated(), this
+      addAtIndex(TT, kT) {
+        return this._m[TT] += kT, this.markAsUpdated(), this
       }
-      multiplyAtIndex(vv, zv) {
-        return this._m[vv] *= zv, this.markAsUpdated(), this
+      multiplyAtIndex(TT, kT) {
+        return this._m[TT] *= kT, this.markAsUpdated(), this
       }
-      setTranslationFromFloats(vv, zv, Pv) {
-        return this._m[12] = vv, this._m[13] = zv, this._m[14] = Pv, this.markAsUpdated(), this
+      setTranslationFromFloats(TT, kT, cT) {
+        return this._m[12] = TT, this._m[13] = kT, this._m[14] = cT, this.markAsUpdated(), this
       }
-      addTranslationFromFloats(vv, zv, Pv) {
-        return this._m[12] += vv, this._m[13] += zv, this._m[14] += Pv, this.markAsUpdated(), this
+      addTranslationFromFloats(TT, kT, cT) {
+        return this._m[12] += TT, this._m[13] += kT, this._m[14] += cT, this.markAsUpdated(), this
       }
-      setTranslation(vv) {
-        return this.setTranslationFromFloats(vv._x, vv._y, vv._z)
+      setTranslation(TT) {
+        return this.setTranslationFromFloats(TT._x, TT._y, TT._z)
       }
       getTranslation() {
-        return new Wv(this._m[12], this._m[13], this._m[14])
+        return new CT(this._m[12], this._m[13], this._m[14])
       }
-      getTranslationToRef(vv) {
-        return vv.x = this._m[12], vv.y = this._m[13], vv.z = this._m[14], vv
+      getTranslationToRef(TT) {
+        return TT.x = this._m[12], TT.y = this._m[13], TT.z = this._m[14], TT
       }
       removeRotationAndScaling() {
-        const vv = this.m;
-        return sv.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, vv[12], vv[13], vv[14], vv[15], this), this._updateIdentityStatus(0 === vv[12] && 0 === vv[13] && 0 === vv[14] && 1 === vv[15]), this
+        const TT = this.m;
+        return tT.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, TT[12], TT[13], TT[14], TT[15], this), this._updateIdentityStatus(0 === TT[12] && 0 === TT[13] && 0 === TT[14] && 1 === TT[15]), this
       }
-      Vzv(vv) {
-        vv.copyToArray(this._m);
-        const zv = vv;
-        return this.updateFlag = zv.updateFlag, this._updateIdentityStatus(zv._isIdentity, zv._isIdentityDirty, zv._isIdentity3x2, zv._isIdentity3x2Dirty), this
+      UkT(TT) {
+        TT.copyToArray(this._m);
+        const kT = TT;
+        return this.updateFlag = kT.updateFlag, this._updateIdentityStatus(kT._isIdentity, kT._isIdentityDirty, kT._isIdentity3x2, kT._isIdentity3x2Dirty), this
       }
-      copyToArray(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return (0, dv.d)(this, vv, zv), this
+      copyToArray(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return (0, fT.e)(this, TT, kT), this
       }
-      multiply(vv) {
-        const zv = new sv;
-        return this.multiplyToRef(vv, zv), zv
+      multiply(TT) {
+        const kT = new tT;
+        return this.multiplyToRef(TT, kT), kT
       }
-      multiplyInPlace(vv) {
-        const zv = this._m,
-          Pv = vv.m;
-        for (let hv = 0; hv < 16; hv++) zv[hv] *= Pv[hv];
+      multiplyInPlace(TT) {
+        const kT = this._m,
+          cT = TT.m;
+        for (let lT = 0; lT < 16; lT++) kT[lT] *= cT[lT];
         return this.markAsUpdated(), this
       }
       multiplyByFloats() {
-        const vv = this._m;
-        for (let zv = 0; zv < 16; zv++) vv[zv] *= zv < 0 || arguments.length <= zv ? void 0 : arguments[zv];
+        const TT = this._m;
+        for (let kT = 0; kT < 16; kT++) TT[kT] *= kT < 0 || arguments.length <= kT ? void 0 : arguments[kT];
         return this.markAsUpdated(), this
       }
       multiplyByFloatsToRef() {
-        for (var vv = arguments.length, zv = new Array(vv), Pv = 0; Pv < vv; Pv++) zv[Pv] = arguments[Pv];
-        const hv = zv.pop(),
-          Sv = this._m,
-          ev = hv._m,
-          gv = zv;
-        for (let pv = 0; pv < 16; pv++) ev[pv] = Sv[pv] * gv[pv];
-        return hv.markAsUpdated(), hv
+        for (var TT = arguments.length, kT = new Array(TT), cT = 0; cT < TT; cT++) kT[cT] = arguments[cT];
+        const lT = kT.pop(),
+          MT = this._m,
+          KT = lT._m,
+          OT = kT;
+        for (let yT = 0; yT < 16; yT++) KT[yT] = MT[yT] * OT[yT];
+        return lT.markAsUpdated(), lT
       }
-      multiplyToRef(vv, zv) {
-        return this._isIdentity ? (zv.Vzv(vv), zv) : vv._isIdentity ? (zv.Vzv(this), zv) : (this.multiplyToArray(vv, zv._m, 0), zv.markAsUpdated(), zv)
+      multiplyToRef(TT, kT) {
+        return this._isIdentity ? (kT.UkT(TT), kT) : TT._isIdentity ? (kT.UkT(this), kT) : (this.multiplyToArray(TT, kT._m, 0), kT.markAsUpdated(), kT)
       }
-      multiplyToArray(vv, zv, Pv) {
-        return (0, dv.o)(this, vv, zv, Pv), this
+      multiplyToArray(TT, kT, cT) {
+        return (0, fT.o)(this, TT, kT, cT), this
       }
-      divide(vv) {
-        return this.divideToRef(vv, new sv)
+      divide(TT) {
+        return this.divideToRef(TT, new tT)
       }
-      divideToRef(vv, zv) {
-        const Pv = this._m,
-          hv = vv.m,
-          Sv = zv._m;
-        for (let ev = 0; ev < 16; ev++) Sv[ev] = Pv[ev] / hv[ev];
-        return zv.markAsUpdated(), zv
+      divideToRef(TT, kT) {
+        const cT = this._m,
+          lT = TT.m,
+          MT = kT._m;
+        for (let KT = 0; KT < 16; KT++) MT[KT] = cT[KT] / lT[KT];
+        return kT.markAsUpdated(), kT
       }
-      divideInPlace(vv) {
-        const zv = this._m,
-          Pv = vv.m;
-        for (let hv = 0; hv < 16; hv++) zv[hv] /= Pv[hv];
+      divideInPlace(TT) {
+        const kT = this._m,
+          cT = TT.m;
+        for (let lT = 0; lT < 16; lT++) kT[lT] /= cT[lT];
         return this.markAsUpdated(), this
       }
-      minimizeInPlace(vv) {
-        const zv = this._m,
-          Pv = vv.m;
-        for (let hv = 0; hv < 16; hv++) zv[hv] = Math.min(zv[hv], Pv[hv]);
+      minimizeInPlace(TT) {
+        const kT = this._m,
+          cT = TT.m;
+        for (let lT = 0; lT < 16; lT++) kT[lT] = Math.min(kT[lT], cT[lT]);
         return this.markAsUpdated(), this
       }
       minimizeInPlaceFromFloats() {
-        const vv = this._m;
-        for (let zv = 0; zv < 16; zv++) vv[zv] = Math.min(vv[zv], zv < 0 || arguments.length <= zv ? void 0 : arguments[zv]);
+        const TT = this._m;
+        for (let kT = 0; kT < 16; kT++) TT[kT] = Math.min(TT[kT], kT < 0 || arguments.length <= kT ? void 0 : arguments[kT]);
         return this.markAsUpdated(), this
       }
-      maximizeInPlace(vv) {
-        const zv = this._m,
-          Pv = vv.m;
-        for (let hv = 0; hv < 16; hv++) zv[hv] = Math.max(zv[hv], Pv[hv]);
+      maximizeInPlace(TT) {
+        const kT = this._m,
+          cT = TT.m;
+        for (let lT = 0; lT < 16; lT++) kT[lT] = Math.max(kT[lT], cT[lT]);
         return this.markAsUpdated(), this
       }
       maximizeInPlaceFromFloats() {
-        const vv = this._m;
-        for (let zv = 0; zv < 16; zv++) vv[zv] = Math.max(vv[zv], zv < 0 || arguments.length <= zv ? void 0 : arguments[zv]);
+        const TT = this._m;
+        for (let kT = 0; kT < 16; kT++) TT[kT] = Math.max(TT[kT], kT < 0 || arguments.length <= kT ? void 0 : arguments[kT]);
         return this.markAsUpdated(), this
       }
-      Re() {
-        return this.negateToRef(new sv)
+      rc() {
+        return this.negateToRef(new tT)
       }
       negateInPlace() {
-        const vv = this._m;
-        for (let zv = 0; zv < 16; zv++) vv[zv] = -vv[zv];
+        const TT = this._m;
+        for (let kT = 0; kT < 16; kT++) TT[kT] = -TT[kT];
         return this.markAsUpdated(), this
       }
-      negateToRef(vv) {
-        const zv = this._m,
-          Pv = vv._m;
-        for (let hv = 0; hv < 16; hv++) Pv[hv] = -zv[hv];
-        return vv.markAsUpdated(), vv
+      negateToRef(TT) {
+        const kT = this._m,
+          cT = TT._m;
+        for (let lT = 0; lT < 16; lT++) cT[lT] = -kT[lT];
+        return TT.markAsUpdated(), TT
       }
-      equals(vv) {
-        const zv = vv;
-        if (!zv) return !1;
-        if ((this._isIdentity || zv._isIdentity) && !this._isIdentityDirty && !zv._isIdentityDirty) return this._isIdentity && zv._isIdentity;
-        const Pv = this.m,
-          hv = zv.m;
-        return Pv[0] === hv[0] && Pv[1] === hv[1] && Pv[2] === hv[2] && Pv[3] === hv[3] && Pv[4] === hv[4] && Pv[5] === hv[5] && Pv[6] === hv[6] && Pv[7] === hv[7] && Pv[8] === hv[8] && Pv[9] === hv[9] && Pv[10] === hv[10] && Pv[11] === hv[11] && Pv[12] === hv[12] && Pv[13] === hv[13] && Pv[14] === hv[14] && Pv[15] === hv[15]
+      equals(TT) {
+        const kT = TT;
+        if (!kT) return !1;
+        if ((this._isIdentity || kT._isIdentity) && !this._isIdentityDirty && !kT._isIdentityDirty) return this._isIdentity && kT._isIdentity;
+        const cT = this.m,
+          lT = kT.m;
+        return cT[0] === lT[0] && cT[1] === lT[1] && cT[2] === lT[2] && cT[3] === lT[3] && cT[4] === lT[4] && cT[5] === lT[5] && cT[6] === lT[6] && cT[7] === lT[7] && cT[8] === lT[8] && cT[9] === lT[9] && cT[10] === lT[10] && cT[11] === lT[11] && cT[12] === lT[12] && cT[13] === lT[13] && cT[14] === lT[14] && cT[15] === lT[15]
       }
-      equalsWithEpsilon(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const Pv = this._m,
-          hv = vv.m;
-        for (let Sv = 0; Sv < 16; Sv++)
-          if (!(0, pv.WithinEpsilon)(Pv[Sv], hv[Sv], zv)) return !1;
+      equalsWithEpsilon(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const cT = this._m,
+          lT = TT.m;
+        for (let MT = 0; MT < 16; MT++)
+          if (!(0, yT.WithinEpsilon)(cT[MT], lT[MT], kT)) return !1;
         return !0
       }
-      Mev() {
-        const vv = this._m;
-        for (let zv = 0; zv < 16; zv++)
-          if (vv[zv] != (zv < 0 || arguments.length <= zv ? void 0 : arguments[zv])) return !1;
+      qKT() {
+        const TT = this._m;
+        for (let kT = 0; kT < 16; kT++)
+          if (TT[kT] != (kT < 0 || arguments.length <= kT ? void 0 : arguments[kT])) return !1;
         return !0
       }
       floor() {
-        return this.floorToRef(new sv)
+        return this.floorToRef(new tT)
       }
-      floorToRef(vv) {
-        const zv = this._m,
-          Pv = vv._m;
-        for (let hv = 0; hv < 16; hv++) Pv[hv] = Math.floor(zv[hv]);
-        return vv.markAsUpdated(), vv
+      floorToRef(TT) {
+        const kT = this._m,
+          cT = TT._m;
+        for (let lT = 0; lT < 16; lT++) cT[lT] = Math.floor(kT[lT]);
+        return TT.markAsUpdated(), TT
       }
       fract() {
-        return this.fractToRef(new sv)
+        return this.fractToRef(new tT)
       }
-      fractToRef(vv) {
-        const zv = this._m,
-          Pv = vv._m;
-        for (let hv = 0; hv < 16; hv++) Pv[hv] = zv[hv] - Math.floor(zv[hv]);
-        return vv.markAsUpdated(), vv
+      fractToRef(TT) {
+        const kT = this._m,
+          cT = TT._m;
+        for (let lT = 0; lT < 16; lT++) cT[lT] = kT[lT] - Math.floor(kT[lT]);
+        return TT.markAsUpdated(), TT
       }
       clone() {
-        const vv = new sv;
-        return vv.Vzv(this), vv
+        const TT = new tT;
+        return TT.UkT(this), TT
       }
       getClassName() {
         return "Matrix"
       }
       getHashCode() {
-        let vv = lv(this._m[0]);
-        for (let zv = 1; zv < 16; zv++) vv = 397 * vv ^ lv(this._m[zv]);
-        return vv
+        let TT = IT(this._m[0]);
+        for (let kT = 1; kT < 16; kT++) TT = 397 * TT ^ IT(this._m[kT]);
+        return TT
       }
-      decomposeToTransformNode(vv) {
-        return vv.rotationQuaternion = vv.rotationQuaternion || new av, this.decompose(vv.pp, vv.rotationQuaternion, vv.position)
+      decomposeToTransformNode(TT) {
+        return TT.rotationQuaternion = TT.rotationQuaternion || new vT, this.decompose(TT.GA, TT.rotationQuaternion, TT.position)
       }
-      decompose(vv, zv, Pv, hv) {
-        let Sv = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-        if (this._isIdentity) return Pv && Pv.Dk(0), vv && vv.Dk(1), zv && zv.f_(0, 0, 0, 1), !0;
-        const ev = this._m;
-        if (Pv && Pv.f_(ev[12], ev[13], ev[14]), (vv = vv || Cv.fa[0]).x = Math.sqrt(ev[0] * ev[0] + ev[1] * ev[1] + ev[2] * ev[2]), vv.y = Math.sqrt(ev[4] * ev[4] + ev[5] * ev[5] + ev[6] * ev[6]), vv.z = Math.sqrt(ev[8] * ev[8] + ev[9] * ev[9] + ev[10] * ev[10]), hv) {
-          const zv = (Sv ? hv.absoluteScaling.x : hv.pp.x) < 0 ? -1 : 1,
-            Pv = (Sv ? hv.absoluteScaling.y : hv.pp.y) < 0 ? -1 : 1,
-            ev = (Sv ? hv.absoluteScaling.z : hv.pp.z) < 0 ? -1 : 1;
-          vv.x *= zv, vv.y *= Pv, vv.z *= ev
-        } else this.determinant() <= 0 && (vv.y *= -1);
-        if (0 === vv._x || 0 === vv._y || 0 === vv._z) return zv && zv.f_(0, 0, 0, 1), !1;
-        if (zv) {
-          const Pv = 1 / vv._x,
-            hv = 1 / vv._y,
-            Sv = 1 / vv._z;
-          sv.FromValuesToRef(ev[0] * Pv, ev[1] * Pv, ev[2] * Pv, 0, ev[4] * hv, ev[5] * hv, ev[6] * hv, 0, ev[8] * Sv, ev[9] * Sv, ev[10] * Sv, 0, 0, 0, 0, 1, Cv.Matrix[0]), av.FromRotationMatrixToRef(Cv.Matrix[0], zv)
+      decompose(TT, kT, cT, lT) {
+        let MT = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+        if (this._isIdentity) return cT && cT.Xs(0), TT && TT.Xs(1), kT && kT.I5(0, 0, 0, 1), !0;
+        const KT = this._m;
+        if (cT && cT.I5(KT[12], KT[13], KT[14]), (TT = TT || hT.Fv[0]).x = Math.sqrt(KT[0] * KT[0] + KT[1] * KT[1] + KT[2] * KT[2]), TT.y = Math.sqrt(KT[4] * KT[4] + KT[5] * KT[5] + KT[6] * KT[6]), TT.z = Math.sqrt(KT[8] * KT[8] + KT[9] * KT[9] + KT[10] * KT[10]), lT) {
+          const kT = (MT ? lT.absoluteScaling.x : lT.GA.x) < 0 ? -1 : 1,
+            cT = (MT ? lT.absoluteScaling.y : lT.GA.y) < 0 ? -1 : 1,
+            KT = (MT ? lT.absoluteScaling.z : lT.GA.z) < 0 ? -1 : 1;
+          TT.x *= kT, TT.y *= cT, TT.z *= KT
+        } else this.determinant() <= 0 && (TT.y *= -1);
+        if (0 === TT._x || 0 === TT._y || 0 === TT._z) return kT && kT.I5(0, 0, 0, 1), !1;
+        if (kT) {
+          const cT = 1 / TT._x,
+            lT = 1 / TT._y,
+            MT = 1 / TT._z;
+          tT.FromValuesToRef(KT[0] * cT, KT[1] * cT, KT[2] * cT, 0, KT[4] * lT, KT[5] * lT, KT[6] * lT, 0, KT[8] * MT, KT[9] * MT, KT[10] * MT, 0, 0, 0, 0, 1, hT.Matrix[0]), vT.FromRotationMatrixToRef(hT.Matrix[0], kT)
         }
         return !0
       }
-      getRow(vv) {
-        if (vv < 0 || vv > 3) return null;
-        const zv = 4 * vv;
-        return new wv(this._m[zv + 0], this._m[zv + 1], this._m[zv + 2], this._m[zv + 3])
+      getRow(TT) {
+        if (TT < 0 || TT > 3) return null;
+        const kT = 4 * TT;
+        return new jT(this._m[kT + 0], this._m[kT + 1], this._m[kT + 2], this._m[kT + 3])
       }
-      getRowToRef(vv, zv) {
-        if (vv >= 0 && vv <= 3) {
-          const Pv = 4 * vv;
-          zv.x = this._m[Pv + 0], zv.y = this._m[Pv + 1], zv.z = this._m[Pv + 2], zv.w = this._m[Pv + 3]
+      getRowToRef(TT, kT) {
+        if (TT >= 0 && TT <= 3) {
+          const cT = 4 * TT;
+          kT.x = this._m[cT + 0], kT.y = this._m[cT + 1], kT.z = this._m[cT + 2], kT.w = this._m[cT + 3]
         }
-        return zv
+        return kT
       }
-      setRow(vv, zv) {
-        return this.setRowFromFloats(vv, zv.x, zv.y, zv.z, zv.w)
+      setRow(TT, kT) {
+        return this.setRowFromFloats(TT, kT.x, kT.y, kT.z, kT.w)
       }
       transpose() {
-        const vv = new sv;
-        return sv.TransposeToRef(this, vv), vv
+        const TT = new tT;
+        return tT.TransposeToRef(this, TT), TT
       }
-      transposeToRef(vv) {
-        return sv.TransposeToRef(this, vv), vv
+      transposeToRef(TT) {
+        return tT.TransposeToRef(this, TT), TT
       }
-      setRowFromFloats(vv, zv, Pv, hv, Sv) {
-        if (vv < 0 || vv > 3) return this;
-        const ev = 4 * vv;
-        return this._m[ev + 0] = zv, this._m[ev + 1] = Pv, this._m[ev + 2] = hv, this._m[ev + 3] = Sv, this.markAsUpdated(), this
+      setRowFromFloats(TT, kT, cT, lT, MT) {
+        if (TT < 0 || TT > 3) return this;
+        const KT = 4 * TT;
+        return this._m[KT + 0] = kT, this._m[KT + 1] = cT, this._m[KT + 2] = lT, this._m[KT + 3] = MT, this.markAsUpdated(), this
       }
-      scale(vv) {
-        const zv = new sv;
-        return this.scaleToRef(vv, zv), zv
+      scale(TT) {
+        const kT = new tT;
+        return this.scaleToRef(TT, kT), kT
       }
-      scaleToRef(vv, zv) {
-        for (let Pv = 0; Pv < 16; Pv++) zv._m[Pv] = this._m[Pv] * vv;
-        return zv.markAsUpdated(), zv
+      scaleToRef(TT, kT) {
+        for (let cT = 0; cT < 16; cT++) kT._m[cT] = this._m[cT] * TT;
+        return kT.markAsUpdated(), kT
       }
-      scaleAndAddToRef(vv, zv) {
-        for (let Pv = 0; Pv < 16; Pv++) zv._m[Pv] += this._m[Pv] * vv;
-        return zv.markAsUpdated(), zv
+      scaleAndAddToRef(TT, kT) {
+        for (let cT = 0; cT < 16; cT++) kT._m[cT] += this._m[cT] * TT;
+        return kT.markAsUpdated(), kT
       }
-      scaleInPlace(vv) {
-        const zv = this._m;
-        for (let Pv = 0; Pv < 16; Pv++) zv[Pv] *= vv;
+      scaleInPlace(TT) {
+        const kT = this._m;
+        for (let cT = 0; cT < 16; cT++) kT[cT] *= TT;
         return this.markAsUpdated(), this
       }
-      toNormalMatrix(vv) {
-        const zv = Cv.Matrix[0];
-        this.invertToRef(zv), zv.transposeToRef(vv);
-        const Pv = vv._m;
-        return sv.FromValuesToRef(Pv[0], Pv[1], Pv[2], 0, Pv[4], Pv[5], Pv[6], 0, Pv[8], Pv[9], Pv[10], 0, 0, 0, 0, 1, vv), vv
+      toNormalMatrix(TT) {
+        const kT = hT.Matrix[0];
+        this.invertToRef(kT), kT.transposeToRef(TT);
+        const cT = TT._m;
+        return tT.FromValuesToRef(cT[0], cT[1], cT[2], 0, cT[4], cT[5], cT[6], 0, cT[8], cT[9], cT[10], 0, 0, 0, 0, 1, TT), TT
       }
       getRotationMatrix() {
-        const vv = new sv;
-        return this.getRotationMatrixToRef(vv), vv
+        const TT = new tT;
+        return this.getRotationMatrixToRef(TT), TT
       }
-      getRotationMatrixToRef(vv) {
-        const zv = Cv.fa[0];
-        if (!this.decompose(zv)) return sv.IdentityToRef(vv), vv;
-        const Pv = this._m,
-          hv = 1 / zv._x,
-          Sv = 1 / zv._y,
-          ev = 1 / zv._z;
-        return sv.FromValuesToRef(Pv[0] * hv, Pv[1] * hv, Pv[2] * hv, 0, Pv[4] * Sv, Pv[5] * Sv, Pv[6] * Sv, 0, Pv[8] * ev, Pv[9] * ev, Pv[10] * ev, 0, 0, 0, 0, 1, vv), vv
+      getRotationMatrixToRef(TT) {
+        const kT = hT.Fv[0];
+        if (!this.decompose(kT)) return tT.IdentityToRef(TT), TT;
+        const cT = this._m,
+          lT = 1 / kT._x,
+          MT = 1 / kT._y,
+          KT = 1 / kT._z;
+        return tT.FromValuesToRef(cT[0] * lT, cT[1] * lT, cT[2] * lT, 0, cT[4] * MT, cT[5] * MT, cT[6] * MT, 0, cT[8] * KT, cT[9] * KT, cT[10] * KT, 0, 0, 0, 0, 1, TT), TT
       }
       toggleModelMatrixHandInPlace() {
-        const vv = this._m;
-        return vv[2] *= -1, vv[6] *= -1, vv[8] *= -1, vv[9] *= -1, vv[14] *= -1, this.markAsUpdated(), this
+        const TT = this._m;
+        return TT[2] *= -1, TT[6] *= -1, TT[8] *= -1, TT[9] *= -1, TT[14] *= -1, this.markAsUpdated(), this
       }
       toggleProjectionMatrixHandInPlace() {
-        const vv = this._m;
-        return vv[8] *= -1, vv[9] *= -1, vv[10] *= -1, vv[11] *= -1, this.markAsUpdated(), this
+        const TT = this._m;
+        return TT[8] *= -1, TT[9] *= -1, TT[10] *= -1, TT[11] *= -1, this.markAsUpdated(), this
       }
       _convertProjectionToHalfZRangeInPlace() {
-        return this.multiplyToRef(cv, this), this
+        return this.multiplyToRef(QT, this), this
       }
-      static FromArray(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const Pv = new sv;
-        return sv.FromArrayToRef(vv, zv, Pv), Pv
+      static FromArray(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const cT = new tT;
+        return tT.FromArrayToRef(TT, kT, cT), cT
       }
-      static FromArrayToRef(vv, zv, Pv) {
-        for (let hv = 0; hv < 16; hv++) Pv._m[hv] = vv[hv + zv];
-        return Pv.markAsUpdated(), Pv
+      static FromArrayToRef(TT, kT, cT) {
+        for (let lT = 0; lT < 16; lT++) cT._m[lT] = TT[lT + kT];
+        return cT.markAsUpdated(), cT
       }
-      static FromFloat32ArrayToRefScaled(vv, zv, Pv, hv) {
-        return hv._m[0] = vv[0 + zv] * Pv, hv._m[1] = vv[1 + zv] * Pv, hv._m[2] = vv[2 + zv] * Pv, hv._m[3] = vv[3 + zv] * Pv, hv._m[4] = vv[4 + zv] * Pv, hv._m[5] = vv[5 + zv] * Pv, hv._m[6] = vv[6 + zv] * Pv, hv._m[7] = vv[7 + zv] * Pv, hv._m[8] = vv[8 + zv] * Pv, hv._m[9] = vv[9 + zv] * Pv, hv._m[10] = vv[10 + zv] * Pv, hv._m[11] = vv[11 + zv] * Pv, hv._m[12] = vv[12 + zv] * Pv, hv._m[13] = vv[13 + zv] * Pv, hv._m[14] = vv[14 + zv] * Pv, hv._m[15] = vv[15 + zv] * Pv, hv.markAsUpdated(), hv
+      static FromFloat32ArrayToRefScaled(TT, kT, cT, lT) {
+        return lT._m[0] = TT[0 + kT] * cT, lT._m[1] = TT[1 + kT] * cT, lT._m[2] = TT[2 + kT] * cT, lT._m[3] = TT[3 + kT] * cT, lT._m[4] = TT[4 + kT] * cT, lT._m[5] = TT[5 + kT] * cT, lT._m[6] = TT[6 + kT] * cT, lT._m[7] = TT[7 + kT] * cT, lT._m[8] = TT[8 + kT] * cT, lT._m[9] = TT[9 + kT] * cT, lT._m[10] = TT[10 + kT] * cT, lT._m[11] = TT[11 + kT] * cT, lT._m[12] = TT[12 + kT] * cT, lT._m[13] = TT[13 + kT] * cT, lT._m[14] = TT[14 + kT] * cT, lT._m[15] = TT[15 + kT] * cT, lT.markAsUpdated(), lT
       }
       static get IdentityReadOnly() {
-        return sv._IdentityReadOnly
+        return tT._IdentityReadOnly
       }
-      static FromValuesToRef(vv, zv, Pv, hv, Sv, ev, gv, pv, dv, Nv, lv, Tv, Wv, wv, av, sv, Cv) {
-        const iv = Cv._m;
-        iv[0] = vv, iv[1] = zv, iv[2] = Pv, iv[3] = hv, iv[4] = Sv, iv[5] = ev, iv[6] = gv, iv[7] = pv, iv[8] = dv, iv[9] = Nv, iv[10] = lv, iv[11] = Tv, iv[12] = Wv, iv[13] = wv, iv[14] = av, iv[15] = sv, Cv.markAsUpdated()
+      static FromValuesToRef(TT, kT, cT, lT, MT, KT, OT, yT, fT, xT, IT, AT, CT, jT, vT, tT, hT) {
+        const NT = hT._m;
+        NT[0] = TT, NT[1] = kT, NT[2] = cT, NT[3] = lT, NT[4] = MT, NT[5] = KT, NT[6] = OT, NT[7] = yT, NT[8] = fT, NT[9] = xT, NT[10] = IT, NT[11] = AT, NT[12] = CT, NT[13] = jT, NT[14] = vT, NT[15] = tT, hT.markAsUpdated()
       }
-      static FromValues(vv, zv, Pv, hv, Sv, ev, gv, pv, dv, Nv, lv, Tv, Wv, wv, av, Cv) {
-        const iv = new sv,
-          cv = iv._m;
-        return cv[0] = vv, cv[1] = zv, cv[2] = Pv, cv[3] = hv, cv[4] = Sv, cv[5] = ev, cv[6] = gv, cv[7] = pv, cv[8] = dv, cv[9] = Nv, cv[10] = lv, cv[11] = Tv, cv[12] = Wv, cv[13] = wv, cv[14] = av, cv[15] = Cv, iv.markAsUpdated(), iv
+      static FromValues(TT, kT, cT, lT, MT, KT, OT, yT, fT, xT, IT, AT, CT, jT, vT, hT) {
+        const NT = new tT,
+          QT = NT._m;
+        return QT[0] = TT, QT[1] = kT, QT[2] = cT, QT[3] = lT, QT[4] = MT, QT[5] = KT, QT[6] = OT, QT[7] = yT, QT[8] = fT, QT[9] = xT, QT[10] = IT, QT[11] = AT, QT[12] = CT, QT[13] = jT, QT[14] = vT, QT[15] = hT, NT.markAsUpdated(), NT
       }
-      static Compose(vv, zv, Pv) {
-        const hv = new sv;
-        return sv.ComposeToRef(vv, zv, Pv, hv), hv
+      static Compose(TT, kT, cT) {
+        const lT = new tT;
+        return tT.ComposeToRef(TT, kT, cT, lT), lT
       }
-      static ComposeToRef(vv, zv, Pv, hv) {
-        const Sv = hv._m,
-          ev = zv._x,
-          gv = zv._y,
-          pv = zv._z,
-          dv = zv._w,
-          Nv = ev + ev,
-          lv = gv + gv,
-          Tv = pv + pv,
-          Wv = ev * Nv,
-          wv = ev * lv,
-          av = ev * Tv,
-          sv = gv * lv,
-          Cv = gv * Tv,
-          iv = pv * Tv,
-          cv = dv * Nv,
-          Gv = dv * lv,
-          mv = dv * Tv,
-          jv = vv._x,
-          fv = vv._y,
-          Fv = vv._z;
-        return Sv[0] = (1 - (sv + iv)) * jv, Sv[1] = (wv + mv) * jv, Sv[2] = (av - Gv) * jv, Sv[3] = 0, Sv[4] = (wv - mv) * fv, Sv[5] = (1 - (Wv + iv)) * fv, Sv[6] = (Cv + cv) * fv, Sv[7] = 0, Sv[8] = (av + Gv) * Fv, Sv[9] = (Cv - cv) * Fv, Sv[10] = (1 - (Wv + sv)) * Fv, Sv[11] = 0, Sv[12] = Pv._x, Sv[13] = Pv._y, Sv[14] = Pv._z, Sv[15] = 1, hv.markAsUpdated(), hv
+      static ComposeToRef(TT, kT, cT, lT) {
+        const MT = lT._m,
+          KT = kT._x,
+          OT = kT._y,
+          yT = kT._z,
+          fT = kT._w,
+          xT = KT + KT,
+          IT = OT + OT,
+          AT = yT + yT,
+          CT = KT * xT,
+          jT = KT * IT,
+          vT = KT * AT,
+          tT = OT * IT,
+          hT = OT * AT,
+          NT = yT * AT,
+          QT = fT * xT,
+          ST = fT * IT,
+          DT = fT * AT,
+          aT = TT._x,
+          FT = TT._y,
+          rT = TT._z;
+        return MT[0] = (1 - (tT + NT)) * aT, MT[1] = (jT + DT) * aT, MT[2] = (vT - ST) * aT, MT[3] = 0, MT[4] = (jT - DT) * FT, MT[5] = (1 - (CT + NT)) * FT, MT[6] = (hT + QT) * FT, MT[7] = 0, MT[8] = (vT + ST) * rT, MT[9] = (hT - QT) * rT, MT[10] = (1 - (CT + tT)) * rT, MT[11] = 0, MT[12] = cT._x, MT[13] = cT._y, MT[14] = cT._z, MT[15] = 1, lT.markAsUpdated(), lT
       }
       static Identity() {
-        const vv = sv.FromValues(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-        return vv._updateIdentityStatus(!0), vv
+        const TT = tT.FromValues(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        return TT._updateIdentityStatus(!0), TT
       }
-      static IdentityToRef(vv) {
-        return sv.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, vv), vv._updateIdentityStatus(!0), vv
+      static IdentityToRef(TT) {
+        return tT.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, TT), TT._updateIdentityStatus(!0), TT
       }
       static Zero() {
-        const vv = sv.FromValues(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-        return vv._updateIdentityStatus(!1), vv
+        const TT = tT.FromValues(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+        return TT._updateIdentityStatus(!1), TT
       }
-      static RotationX(vv) {
-        const zv = new sv;
-        return sv.RotationXToRef(vv, zv), zv
+      static RotationX(TT) {
+        const kT = new tT;
+        return tT.RotationXToRef(TT, kT), kT
       }
-      static Invert(vv) {
-        const zv = new sv;
-        return vv.invertToRef(zv), zv
+      static Invert(TT) {
+        const kT = new tT;
+        return TT.invertToRef(kT), kT
       }
-      static RotationXToRef(vv, zv) {
-        const Pv = Math.sin(vv),
-          hv = Math.cos(vv);
-        return sv.FromValuesToRef(1, 0, 0, 0, 0, hv, Pv, 0, 0, -Pv, hv, 0, 0, 0, 0, 1, zv), zv._updateIdentityStatus(1 === hv && 0 === Pv), zv
+      static RotationXToRef(TT, kT) {
+        const cT = Math.sin(TT),
+          lT = Math.cos(TT);
+        return tT.FromValuesToRef(1, 0, 0, 0, 0, lT, cT, 0, 0, -cT, lT, 0, 0, 0, 0, 1, kT), kT._updateIdentityStatus(1 === lT && 0 === cT), kT
       }
-      static RotationY(vv) {
-        const zv = new sv;
-        return sv.RotationYToRef(vv, zv), zv
+      static RotationY(TT) {
+        const kT = new tT;
+        return tT.RotationYToRef(TT, kT), kT
       }
-      static RotationYToRef(vv, zv) {
-        const Pv = Math.sin(vv),
-          hv = Math.cos(vv);
-        return sv.FromValuesToRef(hv, 0, -Pv, 0, 0, 1, 0, 0, Pv, 0, hv, 0, 0, 0, 0, 1, zv), zv._updateIdentityStatus(1 === hv && 0 === Pv), zv
+      static RotationYToRef(TT, kT) {
+        const cT = Math.sin(TT),
+          lT = Math.cos(TT);
+        return tT.FromValuesToRef(lT, 0, -cT, 0, 0, 1, 0, 0, cT, 0, lT, 0, 0, 0, 0, 1, kT), kT._updateIdentityStatus(1 === lT && 0 === cT), kT
       }
-      static RotationZ(vv) {
-        const zv = new sv;
-        return sv.RotationZToRef(vv, zv), zv
+      static RotationZ(TT) {
+        const kT = new tT;
+        return tT.RotationZToRef(TT, kT), kT
       }
-      static RotationZToRef(vv, zv) {
-        const Pv = Math.sin(vv),
-          hv = Math.cos(vv);
-        return sv.FromValuesToRef(hv, Pv, 0, 0, -Pv, hv, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, zv), zv._updateIdentityStatus(1 === hv && 0 === Pv), zv
+      static RotationZToRef(TT, kT) {
+        const cT = Math.sin(TT),
+          lT = Math.cos(TT);
+        return tT.FromValuesToRef(lT, cT, 0, 0, -cT, lT, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, kT), kT._updateIdentityStatus(1 === lT && 0 === cT), kT
       }
-      static RotationAxis(vv, zv) {
-        const Pv = new sv;
-        return sv.RotationAxisToRef(vv, zv, Pv), Pv
+      static RotationAxis(TT, kT) {
+        const cT = new tT;
+        return tT.RotationAxisToRef(TT, kT, cT), cT
       }
-      static RotationAxisToRef(vv, zv, Pv) {
-        const hv = Math.sin(-zv),
-          Sv = Math.cos(-zv),
-          ev = 1 - Sv;
-        vv = vv.normalizeToRef(Cv.fa[0]);
-        const gv = Pv._m;
-        return gv[0] = vv._x * vv._x * ev + Sv, gv[1] = vv._x * vv._y * ev - vv._z * hv, gv[2] = vv._x * vv._z * ev + vv._y * hv, gv[3] = 0, gv[4] = vv._y * vv._x * ev + vv._z * hv, gv[5] = vv._y * vv._y * ev + Sv, gv[6] = vv._y * vv._z * ev - vv._x * hv, gv[7] = 0, gv[8] = vv._z * vv._x * ev - vv._y * hv, gv[9] = vv._z * vv._y * ev + vv._x * hv, gv[10] = vv._z * vv._z * ev + Sv, gv[11] = 0, gv[12] = 0, gv[13] = 0, gv[14] = 0, gv[15] = 1, Pv.markAsUpdated(), Pv
+      static RotationAxisToRef(TT, kT, cT) {
+        const lT = Math.sin(-kT),
+          MT = Math.cos(-kT),
+          KT = 1 - MT;
+        TT = TT.normalizeToRef(hT.Fv[0]);
+        const OT = cT._m;
+        return OT[0] = TT._x * TT._x * KT + MT, OT[1] = TT._x * TT._y * KT - TT._z * lT, OT[2] = TT._x * TT._z * KT + TT._y * lT, OT[3] = 0, OT[4] = TT._y * TT._x * KT + TT._z * lT, OT[5] = TT._y * TT._y * KT + MT, OT[6] = TT._y * TT._z * KT - TT._x * lT, OT[7] = 0, OT[8] = TT._z * TT._x * KT - TT._y * lT, OT[9] = TT._z * TT._y * KT + TT._x * lT, OT[10] = TT._z * TT._z * KT + MT, OT[11] = 0, OT[12] = 0, OT[13] = 0, OT[14] = 0, OT[15] = 1, cT.markAsUpdated(), cT
       }
-      static RotationAlignToRef(vv, zv, Pv) {
-        let Sv = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        const ev = Wv.Dot(zv, vv),
-          gv = Pv._m;
-        if (ev < -1 + hv.e) gv[0] = -1, gv[1] = 0, gv[2] = 0, gv[3] = 0, gv[4] = 0, gv[5] = Sv ? 1 : -1, gv[6] = 0, gv[7] = 0, gv[8] = 0, gv[9] = 0, gv[10] = Sv ? -1 : 1, gv[11] = 0;
+      static RotationAlignToRef(TT, kT, cT) {
+        let MT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        const KT = CT.Dot(kT, TT),
+          OT = cT._m;
+        if (KT < -1 + lT.b) OT[0] = -1, OT[1] = 0, OT[2] = 0, OT[3] = 0, OT[4] = 0, OT[5] = MT ? 1 : -1, OT[6] = 0, OT[7] = 0, OT[8] = 0, OT[9] = 0, OT[10] = MT ? -1 : 1, OT[11] = 0;
         else {
-          const Pv = Wv.Cross(zv, vv),
-            hv = 1 / (1 + ev);
-          gv[0] = Pv._x * Pv._x * hv + ev, gv[1] = Pv._y * Pv._x * hv - Pv._z, gv[2] = Pv._z * Pv._x * hv + Pv._y, gv[3] = 0, gv[4] = Pv._x * Pv._y * hv + Pv._z, gv[5] = Pv._y * Pv._y * hv + ev, gv[6] = Pv._z * Pv._y * hv - Pv._x, gv[7] = 0, gv[8] = Pv._x * Pv._z * hv - Pv._y, gv[9] = Pv._y * Pv._z * hv + Pv._x, gv[10] = Pv._z * Pv._z * hv + ev, gv[11] = 0
+          const cT = CT.Cross(kT, TT),
+            lT = 1 / (1 + KT);
+          OT[0] = cT._x * cT._x * lT + KT, OT[1] = cT._y * cT._x * lT - cT._z, OT[2] = cT._z * cT._x * lT + cT._y, OT[3] = 0, OT[4] = cT._x * cT._y * lT + cT._z, OT[5] = cT._y * cT._y * lT + KT, OT[6] = cT._z * cT._y * lT - cT._x, OT[7] = 0, OT[8] = cT._x * cT._z * lT - cT._y, OT[9] = cT._y * cT._z * lT + cT._x, OT[10] = cT._z * cT._z * lT + KT, OT[11] = 0
         }
-        return gv[12] = 0, gv[13] = 0, gv[14] = 0, gv[15] = 1, Pv.markAsUpdated(), Pv
+        return OT[12] = 0, OT[13] = 0, OT[14] = 0, OT[15] = 1, cT.markAsUpdated(), cT
       }
-      static RotationYawPitchRoll(vv, zv, Pv) {
-        const hv = new sv;
-        return sv.RotationYawPitchRollToRef(vv, zv, Pv, hv), hv
+      static RotationYawPitchRoll(TT, kT, cT) {
+        const lT = new tT;
+        return tT.RotationYawPitchRollToRef(TT, kT, cT, lT), lT
       }
-      static RotationYawPitchRollToRef(vv, zv, Pv, hv) {
-        return av.RotationYawPitchRollToRef(vv, zv, Pv, Cv.Quaternion[0]), Cv.Quaternion[0].toRotationMatrix(hv), hv
+      static RotationYawPitchRollToRef(TT, kT, cT, lT) {
+        return vT.RotationYawPitchRollToRef(TT, kT, cT, hT.Quaternion[0]), hT.Quaternion[0].toRotationMatrix(lT), lT
       }
-      static Scaling(vv, zv, Pv) {
-        const hv = new sv;
-        return sv.ScalingToRef(vv, zv, Pv, hv), hv
+      static Scaling(TT, kT, cT) {
+        const lT = new tT;
+        return tT.ScalingToRef(TT, kT, cT, lT), lT
       }
-      static ScalingToRef(vv, zv, Pv, hv) {
-        return sv.FromValuesToRef(vv, 0, 0, 0, 0, zv, 0, 0, 0, 0, Pv, 0, 0, 0, 0, 1, hv), hv._updateIdentityStatus(1 === vv && 1 === zv && 1 === Pv), hv
+      static ScalingToRef(TT, kT, cT, lT) {
+        return tT.FromValuesToRef(TT, 0, 0, 0, 0, kT, 0, 0, 0, 0, cT, 0, 0, 0, 0, 1, lT), lT._updateIdentityStatus(1 === TT && 1 === kT && 1 === cT), lT
       }
-      static Translation(vv, zv, Pv) {
-        const hv = new sv;
-        return sv.TranslationToRef(vv, zv, Pv, hv), hv
+      static Translation(TT, kT, cT) {
+        const lT = new tT;
+        return tT.TranslationToRef(TT, kT, cT, lT), lT
       }
-      static TranslationToRef(vv, zv, Pv, hv) {
-        return sv.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, vv, zv, Pv, 1, hv), hv._updateIdentityStatus(0 === vv && 0 === zv && 0 === Pv), hv
+      static TranslationToRef(TT, kT, cT, lT) {
+        return tT.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, TT, kT, cT, 1, lT), lT._updateIdentityStatus(0 === TT && 0 === kT && 0 === cT), lT
       }
-      static Lerp(vv, zv, Pv) {
-        const hv = new sv;
-        return sv.LerpToRef(vv, zv, Pv, hv), hv
+      static Lerp(TT, kT, cT) {
+        const lT = new tT;
+        return tT.LerpToRef(TT, kT, cT, lT), lT
       }
-      static LerpToRef(vv, zv, Pv, hv) {
-        const Sv = hv._m,
-          ev = vv.m,
-          gv = zv.m;
-        for (let pv = 0; pv < 16; pv++) Sv[pv] = ev[pv] * (1 - Pv) + gv[pv] * Pv;
-        return hv.markAsUpdated(), hv
+      static LerpToRef(TT, kT, cT, lT) {
+        const MT = lT._m,
+          KT = TT.m,
+          OT = kT.m;
+        for (let yT = 0; yT < 16; yT++) MT[yT] = KT[yT] * (1 - cT) + OT[yT] * cT;
+        return lT.markAsUpdated(), lT
       }
-      static DecomposeLerp(vv, zv, Pv) {
-        const hv = new sv;
-        return sv.DecomposeLerpToRef(vv, zv, Pv, hv), hv
+      static DecomposeLerp(TT, kT, cT) {
+        const lT = new tT;
+        return tT.DecomposeLerpToRef(TT, kT, cT, lT), lT
       }
-      static DecomposeLerpToRef(vv, zv, Pv, hv) {
-        const Sv = Cv.fa[0],
-          ev = Cv.Quaternion[0],
-          gv = Cv.fa[1];
-        vv.decompose(Sv, ev, gv);
-        const pv = Cv.fa[2],
-          dv = Cv.Quaternion[1],
-          Nv = Cv.fa[3];
-        zv.decompose(pv, dv, Nv);
-        const lv = Cv.fa[4];
-        Wv.LerpToRef(Sv, pv, Pv, lv);
-        const Tv = Cv.Quaternion[2];
-        av.SlerpToRef(ev, dv, Pv, Tv);
-        const wv = Cv.fa[5];
-        return Wv.LerpToRef(gv, Nv, Pv, wv), sv.ComposeToRef(lv, Tv, wv, hv), hv
+      static DecomposeLerpToRef(TT, kT, cT, lT) {
+        const MT = hT.Fv[0],
+          KT = hT.Quaternion[0],
+          OT = hT.Fv[1];
+        TT.decompose(MT, KT, OT);
+        const yT = hT.Fv[2],
+          fT = hT.Quaternion[1],
+          xT = hT.Fv[3];
+        kT.decompose(yT, fT, xT);
+        const IT = hT.Fv[4];
+        CT.LerpToRef(MT, yT, cT, IT);
+        const AT = hT.Quaternion[2];
+        vT.SlerpToRef(KT, fT, cT, AT);
+        const jT = hT.Fv[5];
+        return CT.LerpToRef(OT, xT, cT, jT), tT.ComposeToRef(IT, AT, jT, lT), lT
       }
-      static LookAtLH(vv, zv, Pv) {
-        const hv = new sv;
-        return sv.LookAtLHToRef(vv, zv, Pv, hv), hv
+      static LookAtLH(TT, kT, cT) {
+        const lT = new tT;
+        return tT.LookAtLHToRef(TT, kT, cT, lT), lT
       }
-      static LookAtLHToRef(vv, zv, Pv, hv) {
-        const Sv = Cv.fa[0],
-          ev = Cv.fa[1],
-          gv = Cv.fa[2];
-        zv.subtractToRef(vv, gv), gv.normalize(), Wv.CrossToRef(Pv, gv, Sv);
-        const pv = Sv.lengthSquared();
-        0 === pv ? Sv.x = 1 : Sv.normalizeFromLength(Math.sqrt(pv)), Wv.CrossToRef(gv, Sv, ev), ev.normalize();
-        const dv = -Wv.Dot(Sv, vv),
-          Nv = -Wv.Dot(ev, vv),
-          lv = -Wv.Dot(gv, vv);
-        return sv.FromValuesToRef(Sv._x, ev._x, gv._x, 0, Sv._y, ev._y, gv._y, 0, Sv._z, ev._z, gv._z, 0, dv, Nv, lv, 1, hv), hv
+      static LookAtLHToRef(TT, kT, cT, lT) {
+        const MT = hT.Fv[0],
+          KT = hT.Fv[1],
+          OT = hT.Fv[2];
+        kT.subtractToRef(TT, OT), OT.normalize(), CT.CrossToRef(cT, OT, MT);
+        const yT = MT.lengthSquared();
+        0 === yT ? MT.x = 1 : MT.normalizeFromLength(Math.sqrt(yT)), CT.CrossToRef(OT, MT, KT), KT.normalize();
+        const fT = -CT.Dot(MT, TT),
+          xT = -CT.Dot(KT, TT),
+          IT = -CT.Dot(OT, TT);
+        return tT.FromValuesToRef(MT._x, KT._x, OT._x, 0, MT._y, KT._y, OT._y, 0, MT._z, KT._z, OT._z, 0, fT, xT, IT, 1, lT), lT
       }
-      static LookAtRH(vv, zv, Pv) {
-        const hv = new sv;
-        return sv.LookAtRHToRef(vv, zv, Pv, hv), hv
+      static LookAtRH(TT, kT, cT) {
+        const lT = new tT;
+        return tT.LookAtRHToRef(TT, kT, cT, lT), lT
       }
-      static LookAtRHToRef(vv, zv, Pv, hv) {
-        const Sv = Cv.fa[0],
-          ev = Cv.fa[1],
-          gv = Cv.fa[2];
-        vv.subtractToRef(zv, gv), gv.normalize(), Wv.CrossToRef(Pv, gv, Sv);
-        const pv = Sv.lengthSquared();
-        0 === pv ? Sv.x = 1 : Sv.normalizeFromLength(Math.sqrt(pv)), Wv.CrossToRef(gv, Sv, ev), ev.normalize();
-        const dv = -Wv.Dot(Sv, vv),
-          Nv = -Wv.Dot(ev, vv),
-          lv = -Wv.Dot(gv, vv);
-        return sv.FromValuesToRef(Sv._x, ev._x, gv._x, 0, Sv._y, ev._y, gv._y, 0, Sv._z, ev._z, gv._z, 0, dv, Nv, lv, 1, hv), hv
+      static LookAtRHToRef(TT, kT, cT, lT) {
+        const MT = hT.Fv[0],
+          KT = hT.Fv[1],
+          OT = hT.Fv[2];
+        TT.subtractToRef(kT, OT), OT.normalize(), CT.CrossToRef(cT, OT, MT);
+        const yT = MT.lengthSquared();
+        0 === yT ? MT.x = 1 : MT.normalizeFromLength(Math.sqrt(yT)), CT.CrossToRef(OT, MT, KT), KT.normalize();
+        const fT = -CT.Dot(MT, TT),
+          xT = -CT.Dot(KT, TT),
+          IT = -CT.Dot(OT, TT);
+        return tT.FromValuesToRef(MT._x, KT._x, OT._x, 0, MT._y, KT._y, OT._y, 0, MT._z, KT._z, OT._z, 0, fT, xT, IT, 1, lT), lT
       }
-      static LookDirectionLH(vv, zv) {
-        const Pv = new sv;
-        return sv.LookDirectionLHToRef(vv, zv, Pv), Pv
+      static LookDirectionLH(TT, kT) {
+        const cT = new tT;
+        return tT.LookDirectionLHToRef(TT, kT, cT), cT
       }
-      static LookDirectionLHToRef(vv, zv, Pv) {
-        const hv = Cv.fa[0];
-        hv.Vzv(vv), hv.scaleInPlace(-1);
-        const Sv = Cv.fa[1];
-        return Wv.CrossToRef(zv, hv, Sv), sv.FromValuesToRef(Sv._x, Sv._y, Sv._z, 0, zv._x, zv._y, zv._z, 0, hv._x, hv._y, hv._z, 0, 0, 0, 0, 1, Pv), Pv
+      static LookDirectionLHToRef(TT, kT, cT) {
+        const lT = hT.Fv[0];
+        lT.UkT(TT), lT.scaleInPlace(-1);
+        const MT = hT.Fv[1];
+        return CT.CrossToRef(kT, lT, MT), tT.FromValuesToRef(MT._x, MT._y, MT._z, 0, kT._x, kT._y, kT._z, 0, lT._x, lT._y, lT._z, 0, 0, 0, 0, 1, cT), cT
       }
-      static LookDirectionRH(vv, zv) {
-        const Pv = new sv;
-        return sv.LookDirectionRHToRef(vv, zv, Pv), Pv
+      static LookDirectionRH(TT, kT) {
+        const cT = new tT;
+        return tT.LookDirectionRHToRef(TT, kT, cT), cT
       }
-      static LookDirectionRHToRef(vv, zv, Pv) {
-        const hv = Cv.fa[2];
-        return Wv.CrossToRef(zv, vv, hv), sv.FromValuesToRef(hv._x, hv._y, hv._z, 0, zv._x, zv._y, zv._z, 0, vv._x, vv._y, vv._z, 0, 0, 0, 0, 1, Pv), Pv
+      static LookDirectionRHToRef(TT, kT, cT) {
+        const lT = hT.Fv[2];
+        return CT.CrossToRef(kT, TT, lT), tT.FromValuesToRef(lT._x, lT._y, lT._z, 0, kT._x, kT._y, kT._z, 0, TT._x, TT._y, TT._z, 0, 0, 0, 0, 1, cT), cT
       }
-      static OrthoLH(vv, zv, Pv, hv, Sv) {
-        const ev = new sv;
-        return sv.OrthoLHToRef(vv, zv, Pv, hv, ev, Sv), ev
+      static OrthoLH(TT, kT, cT, lT, MT) {
+        const KT = new tT;
+        return tT.OrthoLHToRef(TT, kT, cT, lT, KT, MT), KT
       }
-      static OrthoLHToRef(vv, zv, Pv, hv, Sv, ev) {
-        const gv = 2 / vv,
-          pv = 2 / zv,
-          dv = 2 / (hv - Pv),
-          Nv = -(hv + Pv) / (hv - Pv);
-        return sv.FromValuesToRef(gv, 0, 0, 0, 0, pv, 0, 0, 0, 0, dv, 0, 0, 0, Nv, 1, Sv), ev && Sv.multiplyToRef(cv, Sv), Sv._updateIdentityStatus(1 === gv && 1 === pv && 1 === dv && 0 === Nv), Sv
+      static OrthoLHToRef(TT, kT, cT, lT, MT, KT) {
+        const OT = 2 / TT,
+          yT = 2 / kT,
+          fT = 2 / (lT - cT),
+          xT = -(lT + cT) / (lT - cT);
+        return tT.FromValuesToRef(OT, 0, 0, 0, 0, yT, 0, 0, 0, 0, fT, 0, 0, 0, xT, 1, MT), KT && MT.multiplyToRef(QT, MT), MT._updateIdentityStatus(1 === OT && 1 === yT && 1 === fT && 0 === xT), MT
       }
-      static OrthoOffCenterLH(vv, zv, Pv, hv, Sv, ev, gv) {
-        const pv = new sv;
-        return sv.OrthoOffCenterLHToRef(vv, zv, Pv, hv, Sv, ev, pv, gv), pv
+      static OrthoOffCenterLH(TT, kT, cT, lT, MT, KT, OT) {
+        const yT = new tT;
+        return tT.OrthoOffCenterLHToRef(TT, kT, cT, lT, MT, KT, yT, OT), yT
       }
-      static OrthoOffCenterLHToRef(vv, zv, Pv, hv, Sv, ev, gv, pv) {
-        const dv = 2 / (zv - vv),
-          Nv = 2 / (hv - Pv),
-          lv = 2 / (ev - Sv),
-          Tv = -(ev + Sv) / (ev - Sv),
-          Wv = (vv + zv) / (vv - zv),
-          wv = (hv + Pv) / (Pv - hv);
-        return sv.FromValuesToRef(dv, 0, 0, 0, 0, Nv, 0, 0, 0, 0, lv, 0, Wv, wv, Tv, 1, gv), pv && gv.multiplyToRef(cv, gv), gv.markAsUpdated(), gv
+      static OrthoOffCenterLHToRef(TT, kT, cT, lT, MT, KT, OT, yT) {
+        const fT = 2 / (kT - TT),
+          xT = 2 / (lT - cT),
+          IT = 2 / (KT - MT),
+          AT = -(KT + MT) / (KT - MT),
+          CT = (TT + kT) / (TT - kT),
+          jT = (lT + cT) / (cT - lT);
+        return tT.FromValuesToRef(fT, 0, 0, 0, 0, xT, 0, 0, 0, 0, IT, 0, CT, jT, AT, 1, OT), yT && OT.multiplyToRef(QT, OT), OT.markAsUpdated(), OT
       }
-      static ObliqueOffCenterLHToRef(vv, zv, Pv, hv, Sv, ev, gv, pv, dv, Nv, lv) {
-        const Tv = -gv * Math.cos(pv),
-          Wv = -gv * Math.sin(pv);
-        return sv.TranslationToRef(0, 0, -dv, Cv.Matrix[1]), sv.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, Tv, Wv, 1, 0, 0, 0, 0, 1, Cv.Matrix[0]), Cv.Matrix[1].multiplyToRef(Cv.Matrix[0], Cv.Matrix[0]), sv.TranslationToRef(0, 0, dv, Cv.Matrix[1]), Cv.Matrix[0].multiplyToRef(Cv.Matrix[1], Cv.Matrix[0]), sv.OrthoOffCenterLHToRef(vv, zv, Pv, hv, Sv, ev, Nv, lv), Cv.Matrix[0].multiplyToRef(Nv, Nv), Nv
+      static ObliqueOffCenterLHToRef(TT, kT, cT, lT, MT, KT, OT, yT, fT, xT, IT) {
+        const AT = -OT * Math.cos(yT),
+          CT = -OT * Math.sin(yT);
+        return tT.TranslationToRef(0, 0, -fT, hT.Matrix[1]), tT.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, AT, CT, 1, 0, 0, 0, 0, 1, hT.Matrix[0]), hT.Matrix[1].multiplyToRef(hT.Matrix[0], hT.Matrix[0]), tT.TranslationToRef(0, 0, fT, hT.Matrix[1]), hT.Matrix[0].multiplyToRef(hT.Matrix[1], hT.Matrix[0]), tT.OrthoOffCenterLHToRef(TT, kT, cT, lT, MT, KT, xT, IT), hT.Matrix[0].multiplyToRef(xT, xT), xT
       }
-      static OrthoOffCenterRH(vv, zv, Pv, hv, Sv, ev, gv) {
-        const pv = new sv;
-        return sv.OrthoOffCenterRHToRef(vv, zv, Pv, hv, Sv, ev, pv, gv), pv
+      static OrthoOffCenterRH(TT, kT, cT, lT, MT, KT, OT) {
+        const yT = new tT;
+        return tT.OrthoOffCenterRHToRef(TT, kT, cT, lT, MT, KT, yT, OT), yT
       }
-      static OrthoOffCenterRHToRef(vv, zv, Pv, hv, Sv, ev, gv, pv) {
-        return sv.OrthoOffCenterLHToRef(vv, zv, Pv, hv, Sv, ev, gv, pv), gv._m[10] *= -1, gv
+      static OrthoOffCenterRHToRef(TT, kT, cT, lT, MT, KT, OT, yT) {
+        return tT.OrthoOffCenterLHToRef(TT, kT, cT, lT, MT, KT, OT, yT), OT._m[10] *= -1, OT
       }
-      static ObliqueOffCenterRHToRef(vv, zv, Pv, hv, Sv, ev, gv, pv, dv, Nv, lv) {
-        const Tv = gv * Math.cos(pv),
-          Wv = gv * Math.sin(pv);
-        return sv.TranslationToRef(0, 0, dv, Cv.Matrix[1]), sv.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, Tv, Wv, 1, 0, 0, 0, 0, 1, Cv.Matrix[0]), Cv.Matrix[1].multiplyToRef(Cv.Matrix[0], Cv.Matrix[0]), sv.TranslationToRef(0, 0, -dv, Cv.Matrix[1]), Cv.Matrix[0].multiplyToRef(Cv.Matrix[1], Cv.Matrix[0]), sv.OrthoOffCenterRHToRef(vv, zv, Pv, hv, Sv, ev, Nv, lv), Cv.Matrix[0].multiplyToRef(Nv, Nv), Nv
+      static ObliqueOffCenterRHToRef(TT, kT, cT, lT, MT, KT, OT, yT, fT, xT, IT) {
+        const AT = OT * Math.cos(yT),
+          CT = OT * Math.sin(yT);
+        return tT.TranslationToRef(0, 0, fT, hT.Matrix[1]), tT.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, AT, CT, 1, 0, 0, 0, 0, 1, hT.Matrix[0]), hT.Matrix[1].multiplyToRef(hT.Matrix[0], hT.Matrix[0]), tT.TranslationToRef(0, 0, -fT, hT.Matrix[1]), hT.Matrix[0].multiplyToRef(hT.Matrix[1], hT.Matrix[0]), tT.OrthoOffCenterRHToRef(TT, kT, cT, lT, MT, KT, xT, IT), hT.Matrix[0].multiplyToRef(xT, xT), xT
       }
-      static PerspectiveLH(vv, zv, Pv, hv, Sv) {
-        let ev = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-        const gv = new sv,
-          pv = 2 * Pv / vv,
-          dv = 2 * Pv / zv,
-          Nv = (hv + Pv) / (hv - Pv),
-          lv = -2 * hv * Pv / (hv - Pv),
-          Tv = Math.tan(ev);
-        return sv.FromValuesToRef(pv, 0, 0, 0, 0, dv, 0, Tv, 0, 0, Nv, 1, 0, 0, lv, 0, gv), Sv && gv.multiplyToRef(cv, gv), gv._updateIdentityStatus(!1), gv
+      static PerspectiveLH(TT, kT, cT, lT, MT) {
+        let KT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        const OT = new tT,
+          yT = 2 * cT / TT,
+          fT = 2 * cT / kT,
+          xT = (lT + cT) / (lT - cT),
+          IT = -2 * lT * cT / (lT - cT),
+          AT = Math.tan(KT);
+        return tT.FromValuesToRef(yT, 0, 0, 0, 0, fT, 0, AT, 0, 0, xT, 1, 0, 0, IT, 0, OT), MT && OT.multiplyToRef(QT, OT), OT._updateIdentityStatus(!1), OT
       }
-      static PerspectiveFovLH(vv, zv, Pv, hv, Sv) {
-        let ev = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
-          gv = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-        const pv = new sv;
-        return sv.PerspectiveFovLHToRef(vv, zv, Pv, hv, pv, !0, Sv, ev, gv), pv
+      static PerspectiveFovLH(TT, kT, cT, lT, MT) {
+        let KT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+          OT = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+        const yT = new tT;
+        return tT.PerspectiveFovLHToRef(TT, kT, cT, lT, yT, !0, MT, KT, OT), yT
       }
-      static PerspectiveFovLHToRef(vv, zv, Pv, hv, Sv) {
-        let ev = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          gv = arguments.length > 6 ? arguments[6] : void 0,
-          pv = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0,
-          dv = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
-        const Nv = Pv,
-          lv = hv,
-          Tv = 1 / Math.tan(.5 * vv),
-          Wv = ev ? Tv / zv : Tv,
-          wv = ev ? Tv : Tv * zv,
-          av = dv && 0 === Nv ? -1 : 0 !== lv ? (lv + Nv) / (lv - Nv) : 1,
-          Cv = dv && 0 === Nv ? 2 * lv : 0 !== lv ? -2 * lv * Nv / (lv - Nv) : -2 * Nv,
-          iv = Math.tan(pv);
-        return sv.FromValuesToRef(Wv, 0, 0, 0, 0, wv, 0, iv, 0, 0, av, 1, 0, 0, Cv, 0, Sv), gv && Sv.multiplyToRef(cv, Sv), Sv._updateIdentityStatus(!1), Sv
+      static PerspectiveFovLHToRef(TT, kT, cT, lT, MT) {
+        let KT = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          OT = arguments.length > 6 ? arguments[6] : void 0,
+          yT = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0,
+          fT = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
+        const xT = cT,
+          IT = lT,
+          AT = 1 / Math.tan(.5 * TT),
+          CT = KT ? AT / kT : AT,
+          jT = KT ? AT : AT * kT,
+          vT = fT && 0 === xT ? -1 : 0 !== IT ? (IT + xT) / (IT - xT) : 1,
+          hT = fT && 0 === xT ? 2 * IT : 0 !== IT ? -2 * IT * xT / (IT - xT) : -2 * xT,
+          NT = Math.tan(yT);
+        return tT.FromValuesToRef(CT, 0, 0, 0, 0, jT, 0, NT, 0, 0, vT, 1, 0, 0, hT, 0, MT), OT && MT.multiplyToRef(QT, MT), MT._updateIdentityStatus(!1), MT
       }
-      static PerspectiveFovReverseLHToRef(vv, zv, Pv, hv, Sv) {
-        let ev = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          gv = arguments.length > 6 ? arguments[6] : void 0,
-          pv = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0;
-        const dv = 1 / Math.tan(.5 * vv),
-          Nv = ev ? dv / zv : dv,
-          lv = ev ? dv : dv * zv,
-          Tv = Math.tan(pv);
-        return sv.FromValuesToRef(Nv, 0, 0, 0, 0, lv, 0, Tv, 0, 0, -Pv, 1, 0, 0, 1, 0, Sv), gv && Sv.multiplyToRef(cv, Sv), Sv._updateIdentityStatus(!1), Sv
+      static PerspectiveFovReverseLHToRef(TT, kT, cT, lT, MT) {
+        let KT = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          OT = arguments.length > 6 ? arguments[6] : void 0,
+          yT = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0;
+        const fT = 1 / Math.tan(.5 * TT),
+          xT = KT ? fT / kT : fT,
+          IT = KT ? fT : fT * kT,
+          AT = Math.tan(yT);
+        return tT.FromValuesToRef(xT, 0, 0, 0, 0, IT, 0, AT, 0, 0, -cT, 1, 0, 0, 1, 0, MT), OT && MT.multiplyToRef(QT, MT), MT._updateIdentityStatus(!1), MT
       }
-      static PerspectiveFovRH(vv, zv, Pv, hv, Sv) {
-        let ev = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
-          gv = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-        const pv = new sv;
-        return sv.PerspectiveFovRHToRef(vv, zv, Pv, hv, pv, !0, Sv, ev, gv), pv
+      static PerspectiveFovRH(TT, kT, cT, lT, MT) {
+        let KT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+          OT = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+        const yT = new tT;
+        return tT.PerspectiveFovRHToRef(TT, kT, cT, lT, yT, !0, MT, KT, OT), yT
       }
-      static PerspectiveFovRHToRef(vv, zv, Pv, hv, Sv) {
-        let ev = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          gv = arguments.length > 6 ? arguments[6] : void 0,
-          pv = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0,
-          dv = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
-        const Nv = Pv,
-          lv = hv,
-          Tv = 1 / Math.tan(.5 * vv),
-          Wv = ev ? Tv / zv : Tv,
-          wv = ev ? Tv : Tv * zv,
-          av = dv && 0 === Nv ? 1 : 0 !== lv ? -(lv + Nv) / (lv - Nv) : -1,
-          Cv = dv && 0 === Nv ? 2 * lv : 0 !== lv ? -2 * lv * Nv / (lv - Nv) : -2 * Nv,
-          iv = Math.tan(pv);
-        return sv.FromValuesToRef(Wv, 0, 0, 0, 0, wv, 0, iv, 0, 0, av, -1, 0, 0, Cv, 0, Sv), gv && Sv.multiplyToRef(cv, Sv), Sv._updateIdentityStatus(!1), Sv
+      static PerspectiveFovRHToRef(TT, kT, cT, lT, MT) {
+        let KT = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          OT = arguments.length > 6 ? arguments[6] : void 0,
+          yT = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0,
+          fT = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
+        const xT = cT,
+          IT = lT,
+          AT = 1 / Math.tan(.5 * TT),
+          CT = KT ? AT / kT : AT,
+          jT = KT ? AT : AT * kT,
+          vT = fT && 0 === xT ? 1 : 0 !== IT ? -(IT + xT) / (IT - xT) : -1,
+          hT = fT && 0 === xT ? 2 * IT : 0 !== IT ? -2 * IT * xT / (IT - xT) : -2 * xT,
+          NT = Math.tan(yT);
+        return tT.FromValuesToRef(CT, 0, 0, 0, 0, jT, 0, NT, 0, 0, vT, -1, 0, 0, hT, 0, MT), OT && MT.multiplyToRef(QT, MT), MT._updateIdentityStatus(!1), MT
       }
-      static PerspectiveFovReverseRHToRef(vv, zv, Pv, hv, Sv) {
-        let ev = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          gv = arguments.length > 6 ? arguments[6] : void 0,
-          pv = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0;
-        const dv = 1 / Math.tan(.5 * vv),
-          Nv = ev ? dv / zv : dv,
-          lv = ev ? dv : dv * zv,
-          Tv = Math.tan(pv);
-        return sv.FromValuesToRef(Nv, 0, 0, 0, 0, lv, 0, Tv, 0, 0, -Pv, -1, 0, 0, -1, 0, Sv), gv && Sv.multiplyToRef(cv, Sv), Sv._updateIdentityStatus(!1), Sv
+      static PerspectiveFovReverseRHToRef(TT, kT, cT, lT, MT) {
+        let KT = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          OT = arguments.length > 6 ? arguments[6] : void 0,
+          yT = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0;
+        const fT = 1 / Math.tan(.5 * TT),
+          xT = KT ? fT / kT : fT,
+          IT = KT ? fT : fT * kT,
+          AT = Math.tan(yT);
+        return tT.FromValuesToRef(xT, 0, 0, 0, 0, IT, 0, AT, 0, 0, -cT, -1, 0, 0, -1, 0, MT), OT && MT.multiplyToRef(QT, MT), MT._updateIdentityStatus(!1), MT
       }
-      static GetFinalMatrix(vv, zv, Pv, hv, Sv, ev) {
-        const gv = vv.width,
-          pv = vv.height,
-          dv = vv.x,
-          Nv = vv.y,
-          lv = sv.FromValues(gv / 2, 0, 0, 0, 0, -pv / 2, 0, 0, 0, 0, ev - Sv, 0, dv + gv / 2, pv / 2 + Nv, Sv, 1),
-          Tv = new sv;
-        return zv.multiplyToRef(Pv, Tv), Tv.multiplyToRef(hv, Tv), Tv.multiplyToRef(lv, Tv)
+      static GetFinalMatrix(TT, kT, cT, lT, MT, KT) {
+        const OT = TT.width,
+          yT = TT.height,
+          fT = TT.x,
+          xT = TT.y,
+          IT = tT.FromValues(OT / 2, 0, 0, 0, 0, -yT / 2, 0, 0, 0, 0, KT - MT, 0, fT + OT / 2, yT / 2 + xT, MT, 1),
+          AT = new tT;
+        return kT.multiplyToRef(cT, AT), AT.multiplyToRef(lT, AT), AT.multiplyToRef(IT, AT)
       }
-      static GetAsMatrix2x2(vv) {
-        const zv = vv.m,
-          Pv = [zv[0], zv[1], zv[4], zv[5]];
-        return ev.b.MatrixUse64Bits ? Pv : new Float32Array(Pv)
+      static GetAsMatrix2x2(TT) {
+        const kT = TT.m,
+          cT = [kT[0], kT[1], kT[4], kT[5]];
+        return KT.d.MatrixUse64Bits ? cT : new Float32Array(cT)
       }
-      static GetAsMatrix3x3(vv) {
-        const zv = vv.m,
-          Pv = [zv[0], zv[1], zv[2], zv[4], zv[5], zv[6], zv[8], zv[9], zv[10]];
-        return ev.b.MatrixUse64Bits ? Pv : new Float32Array(Pv)
+      static GetAsMatrix3x3(TT) {
+        const kT = TT.m,
+          cT = [kT[0], kT[1], kT[2], kT[4], kT[5], kT[6], kT[8], kT[9], kT[10]];
+        return KT.d.MatrixUse64Bits ? cT : new Float32Array(cT)
       }
-      static Transpose(vv) {
-        const zv = new sv;
-        return sv.TransposeToRef(vv, zv), zv
+      static Transpose(TT) {
+        const kT = new tT;
+        return tT.TransposeToRef(TT, kT), kT
       }
-      static TransposeToRef(vv, zv) {
-        const Pv = vv.m,
-          hv = Pv[0],
-          Sv = Pv[4],
-          ev = Pv[8],
-          gv = Pv[12],
-          pv = Pv[1],
-          dv = Pv[5],
-          Nv = Pv[9],
-          lv = Pv[13],
-          Tv = Pv[2],
-          Wv = Pv[6],
-          wv = Pv[10],
-          av = Pv[14],
-          sv = Pv[3],
-          Cv = Pv[7],
-          iv = Pv[11],
-          cv = Pv[15],
-          Gv = zv._m;
-        return Gv[0] = hv, Gv[1] = Sv, Gv[2] = ev, Gv[3] = gv, Gv[4] = pv, Gv[5] = dv, Gv[6] = Nv, Gv[7] = lv, Gv[8] = Tv, Gv[9] = Wv, Gv[10] = wv, Gv[11] = av, Gv[12] = sv, Gv[13] = Cv, Gv[14] = iv, Gv[15] = cv, zv.markAsUpdated(), zv._updateIdentityStatus(vv._isIdentity, vv._isIdentityDirty), zv
+      static TransposeToRef(TT, kT) {
+        const cT = TT.m,
+          lT = cT[0],
+          MT = cT[4],
+          KT = cT[8],
+          OT = cT[12],
+          yT = cT[1],
+          fT = cT[5],
+          xT = cT[9],
+          IT = cT[13],
+          AT = cT[2],
+          CT = cT[6],
+          jT = cT[10],
+          vT = cT[14],
+          tT = cT[3],
+          hT = cT[7],
+          NT = cT[11],
+          QT = cT[15],
+          ST = kT._m;
+        return ST[0] = lT, ST[1] = MT, ST[2] = KT, ST[3] = OT, ST[4] = yT, ST[5] = fT, ST[6] = xT, ST[7] = IT, ST[8] = AT, ST[9] = CT, ST[10] = jT, ST[11] = vT, ST[12] = tT, ST[13] = hT, ST[14] = NT, ST[15] = QT, kT.markAsUpdated(), kT._updateIdentityStatus(TT._isIdentity, TT._isIdentityDirty), kT
       }
-      static Reflection(vv) {
-        const zv = new sv;
-        return sv.ReflectionToRef(vv, zv), zv
+      static Reflection(TT) {
+        const kT = new tT;
+        return tT.ReflectionToRef(TT, kT), kT
       }
-      static ReflectionToRef(vv, zv) {
-        vv.normalize();
-        const Pv = vv.normal.x,
-          hv = vv.normal.y,
-          Sv = vv.normal.z,
-          ev = -2 * Pv,
-          gv = -2 * hv,
-          pv = -2 * Sv;
-        return sv.FromValuesToRef(ev * Pv + 1, gv * Pv, pv * Pv, 0, ev * hv, gv * hv + 1, pv * hv, 0, ev * Sv, gv * Sv, pv * Sv + 1, 0, ev * vv.d, gv * vv.d, pv * vv.d, 1, zv), zv
+      static ReflectionToRef(TT, kT) {
+        TT.normalize();
+        const cT = TT.normal.x,
+          lT = TT.normal.y,
+          MT = TT.normal.z,
+          KT = -2 * cT,
+          OT = -2 * lT,
+          yT = -2 * MT;
+        return tT.FromValuesToRef(KT * cT + 1, OT * cT, yT * cT, 0, KT * lT, OT * lT + 1, yT * lT, 0, KT * MT, OT * MT, yT * MT + 1, 0, KT * TT.d, OT * TT.d, yT * TT.d, 1, kT), kT
       }
-      static FromXYZAxesToRef(vv, zv, Pv, hv) {
-        return sv.FromValuesToRef(vv._x, vv._y, vv._z, 0, zv._x, zv._y, zv._z, 0, Pv._x, Pv._y, Pv._z, 0, 0, 0, 0, 1, hv), hv
+      static FromXYZAxesToRef(TT, kT, cT, lT) {
+        return tT.FromValuesToRef(TT._x, TT._y, TT._z, 0, kT._x, kT._y, kT._z, 0, cT._x, cT._y, cT._z, 0, 0, 0, 0, 1, lT), lT
       }
-      static FromQuaternionToRef(vv, zv) {
-        const Pv = vv._x * vv._x,
-          hv = vv._y * vv._y,
-          Sv = vv._z * vv._z,
-          ev = vv._x * vv._y,
-          gv = vv._z * vv._w,
-          pv = vv._z * vv._x,
-          dv = vv._y * vv._w,
-          Nv = vv._y * vv._z,
-          lv = vv._x * vv._w;
-        return zv._m[0] = 1 - 2 * (hv + Sv), zv._m[1] = 2 * (ev + gv), zv._m[2] = 2 * (pv - dv), zv._m[3] = 0, zv._m[4] = 2 * (ev - gv), zv._m[5] = 1 - 2 * (Sv + Pv), zv._m[6] = 2 * (Nv + lv), zv._m[7] = 0, zv._m[8] = 2 * (pv + dv), zv._m[9] = 2 * (Nv - lv), zv._m[10] = 1 - 2 * (hv + Pv), zv._m[11] = 0, zv._m[12] = 0, zv._m[13] = 0, zv._m[14] = 0, zv._m[15] = 1, zv.markAsUpdated(), zv
+      static FromQuaternionToRef(TT, kT) {
+        const cT = TT._x * TT._x,
+          lT = TT._y * TT._y,
+          MT = TT._z * TT._z,
+          KT = TT._x * TT._y,
+          OT = TT._z * TT._w,
+          yT = TT._z * TT._x,
+          fT = TT._y * TT._w,
+          xT = TT._y * TT._z,
+          IT = TT._x * TT._w;
+        return kT._m[0] = 1 - 2 * (lT + MT), kT._m[1] = 2 * (KT + OT), kT._m[2] = 2 * (yT - fT), kT._m[3] = 0, kT._m[4] = 2 * (KT - OT), kT._m[5] = 1 - 2 * (MT + cT), kT._m[6] = 2 * (xT + IT), kT._m[7] = 0, kT._m[8] = 2 * (yT + fT), kT._m[9] = 2 * (xT - IT), kT._m[10] = 1 - 2 * (lT + cT), kT._m[11] = 0, kT._m[12] = 0, kT._m[13] = 0, kT._m[14] = 0, kT._m[15] = 1, kT.markAsUpdated(), kT
       }
     }
-    sv._IdentityReadOnly = sv.Identity();
-    class Cv {}
-    Cv.fa = (0, Sv.h)(11, Wv.Zero), Cv.Matrix = (0, Sv.h)(2, sv.Identity), Cv.Quaternion = (0, Sv.h)(3, av.Zero);
-    class iv {}
-    iv.Vector2 = (0, Sv.h)(3, Tv.Zero), iv.fa = (0, Sv.h)(13, Wv.Zero), iv.Vector4 = (0, Sv.h)(3, wv.Zero), iv.Quaternion = (0, Sv.h)(3, av.Zero), iv.Matrix = (0, Sv.h)(8, sv.Identity);
-    const cv = sv.FromValues(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, .5, 0, 0, 0, .5, 1);
-    let Gv = !1;
+    tT._IdentityReadOnly = tT.Identity();
+    class hT {}
+    hT.Fv = (0, MT.f)(11, CT.Zero), hT.Matrix = (0, MT.f)(2, tT.Identity), hT.Quaternion = (0, MT.f)(3, vT.Zero);
+    class NT {}
+    NT.Vector2 = (0, MT.f)(3, AT.Zero), NT.Fv = (0, MT.f)(13, CT.Zero), NT.Vector4 = (0, MT.f)(3, jT.Zero), NT.Quaternion = (0, MT.f)(3, vT.Zero), NT.Matrix = (0, MT.f)(8, tT.Identity);
+    const QT = tT.FromValues(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, .5, 0, 0, 0, .5, 1);
+    let ST = !1;
 
-    function mv() {
-      Gv || (Gv = !0, Object.defineProperties(Tv.prototype, {
+    function DT() {
+      ST || (ST = !0, Object.defineProperties(AT.prototype, {
         dimension: {
           value: [2]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(Wv.prototype, {
+      }), Object.defineProperties(CT.prototype, {
         dimension: {
           value: [3]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(wv.prototype, {
+      }), Object.defineProperties(jT.prototype, {
         dimension: {
           value: [4]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(av.prototype, {
+      }), Object.defineProperties(vT.prototype, {
         dimension: {
           value: [4]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(sv.prototype, {
+      }), Object.defineProperties(tT.prototype, {
         dimension: {
           value: [4, 4]
         },
         rank: {
           value: 2
         }
-      }), (0, Nv.c)("BABYLON.Vector2", Tv), (0, Nv.c)("BABYLON.Vector3", Wv), (0, Nv.c)("BABYLON.Vector4", wv), (0, Nv.c)("BABYLON.Matrix", sv))
+      }), (0, xT.g)("BABYLON.Vector2", AT), (0, xT.g)("BABYLON.Vector3", CT), (0, xT.g)("BABYLON.Vector4", jT), (0, xT.g)("BABYLON.Matrix", tT))
     }
   },
-  36618: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => gv
+  36932: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => OT
     });
-    const hv = "undefined" !== typeof WeakRef;
-    class Sv {
-      constructor(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          Pv = arguments.length > 2 ? arguments[2] : void 0,
-          hv = arguments.length > 3 ? arguments[3] : void 0;
-        this.initialize(vv, zv, Pv, hv)
+    const lT = "undefined" !== typeof WeakRef;
+    class MT {
+      constructor(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          cT = arguments.length > 2 ? arguments[2] : void 0,
+          lT = arguments.length > 3 ? arguments[3] : void 0;
+        this.initialize(TT, kT, cT, lT)
       }
-      initialize(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          Pv = arguments.length > 2 ? arguments[2] : void 0,
-          hv = arguments.length > 3 ? arguments[3] : void 0;
-        return this.mask = vv, this.skipNextObservers = zv, this.target = Pv, this.currentTarget = hv, this
+      initialize(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          cT = arguments.length > 2 ? arguments[2] : void 0,
+          lT = arguments.length > 3 ? arguments[3] : void 0;
+        return this.mask = TT, this.skipNextObservers = kT, this.target = cT, this.currentTarget = lT, this
       }
     }
-    class ev {
-      constructor(vv, zv) {
-        let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        this.callback = vv, this.mask = zv, this.scope = Pv, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
+    class KT {
+      constructor(TT, kT) {
+        let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        this.callback = TT, this.mask = kT, this.scope = cT, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
       }
       remove() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this._remove && this._remove(vv)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this._remove && this._remove(TT)
       }
     }
-    class gv {
-      static FromPromise(vv, zv) {
-        const Pv = new gv;
-        return vv.then((vv => {
-          Pv.notifyObservers(vv)
-        })).catch((vv => {
-          if (!zv) throw vv;
-          zv.notifyObservers(vv)
-        })), Pv
+    class OT {
+      static FromPromise(TT, kT) {
+        const cT = new OT;
+        return TT.then((TT => {
+          cT.notifyObservers(TT)
+        })).catch((TT => {
+          if (!kT) throw TT;
+          kT.notifyObservers(TT)
+        })), cT
       }
       get observers() {
         return this._observers
       }
-      constructor(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        this.notifyIfTriggered = zv, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new Sv(0), vv && (this._onObserverAdded = vv)
+      constructor(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this.notifyIfTriggered = kT, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new MT(0), TT && (this._onObserverAdded = TT)
       }
-      add(vv) {
-        let zv = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          Pv = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        if (!vv) return null;
-        const Sv = new ev(vv, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
-        Sv.unregisterOnNextCall = Pv, zv ? this._observers.unshift(Sv) : this._observers.push(Sv), this._onObserverAdded && this._onObserverAdded(Sv), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(Sv, this._lastNotifiedValue);
-        const gv = hv ? new WeakRef(this) : {
+      add(TT) {
+        let kT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          cT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        if (!TT) return null;
+        const MT = new KT(TT, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
+        MT.unregisterOnNextCall = cT, kT ? this._observers.unshift(MT) : this._observers.push(MT), this._onObserverAdded && this._onObserverAdded(MT), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(MT, this._lastNotifiedValue);
+        const OT = lT ? new WeakRef(this) : {
           deref: () => this
         };
-        return Sv._remove = function() {
-          let vv = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          const zv = gv.deref();
-          zv && (vv ? zv.remove(Sv) : zv._remove(Sv))
-        }, Sv
+        return MT._remove = function() {
+          let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          const kT = OT.deref();
+          kT && (TT ? kT.remove(MT) : kT._remove(MT))
+        }, MT
       }
-      addOnce(vv) {
-        return this.add(vv, void 0, void 0, void 0, !0)
+      addOnce(TT) {
+        return this.add(TT, void 0, void 0, void 0, !0)
       }
-      remove(vv) {
-        if (!vv) return !1;
-        vv._remove = null;
-        return -1 !== this._observers.indexOf(vv) && (this._deferUnregister(vv), !0)
+      remove(TT) {
+        if (!TT) return !1;
+        TT._remove = null;
+        return -1 !== this._observers.indexOf(TT) && (this._deferUnregister(TT), !0)
       }
-      removeCallback(vv, zv) {
-        for (let Pv = 0; Pv < this._observers.length; Pv++) {
-          const hv = this._observers[Pv];
-          if (!hv._willBeUnregistered && (hv.callback === vv && (!zv || zv === hv.scope))) return this._deferUnregister(hv), !0
+      removeCallback(TT, kT) {
+        for (let cT = 0; cT < this._observers.length; cT++) {
+          const lT = this._observers[cT];
+          if (!lT._willBeUnregistered && (lT.callback === TT && (!kT || kT === lT.scope))) return this._deferUnregister(lT), !0
         }
         return !1
       }
-      _deferUnregister(vv) {
-        vv._willBeUnregistered || (this._numObserversMarkedAsDeleted++, vv.unregisterOnNextCall = !1, vv._willBeUnregistered = !0, setTimeout((() => {
-          this._remove(vv)
+      _deferUnregister(TT) {
+        TT._willBeUnregistered || (this._numObserversMarkedAsDeleted++, TT.unregisterOnNextCall = !1, TT._willBeUnregistered = !0, setTimeout((() => {
+          this._remove(TT)
         }), 0))
       }
-      _remove(vv) {
-        let zv = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (!vv) return !1;
-        const Pv = this._observers.indexOf(vv);
-        return -1 !== Pv && (zv && this._numObserversMarkedAsDeleted--, this._observers.splice(Pv, 1), !0)
+      _remove(TT) {
+        let kT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!TT) return !1;
+        const cT = this._observers.indexOf(TT);
+        return -1 !== cT && (kT && this._numObserversMarkedAsDeleted--, this._observers.splice(cT, 1), !0)
       }
-      makeObserverTopPriority(vv) {
-        this._remove(vv, !1), this._observers.unshift(vv)
+      makeObserverTopPriority(TT) {
+        this._remove(TT, !1), this._observers.unshift(TT)
       }
-      makeObserverBottomPriority(vv) {
-        this._remove(vv, !1), this._observers.push(vv)
+      makeObserverBottomPriority(TT) {
+        this._remove(TT, !1), this._observers.push(TT)
       }
-      notifyObservers(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          Pv = arguments.length > 2 ? arguments[2] : void 0,
-          hv = arguments.length > 3 ? arguments[3] : void 0,
-          Sv = arguments.length > 4 ? arguments[4] : void 0;
-        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = vv), !this._observers.length) return !0;
-        const ev = this._eventState;
-        ev.mask = zv, ev.target = Pv, ev.currentTarget = hv, ev.skipNextObservers = !1, ev.lastReturnValue = vv, ev.userInfo = Sv;
-        for (const gv of this._observers)
-          if (!gv._willBeUnregistered && (gv.mask & zv && (gv.unregisterOnNextCall && this._deferUnregister(gv), gv.scope ? ev.lastReturnValue = gv.callback.apply(gv.scope, [vv, ev]) : ev.lastReturnValue = gv.callback(vv, ev)), ev.skipNextObservers)) return !1;
+      notifyObservers(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          cT = arguments.length > 2 ? arguments[2] : void 0,
+          lT = arguments.length > 3 ? arguments[3] : void 0,
+          MT = arguments.length > 4 ? arguments[4] : void 0;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = TT), !this._observers.length) return !0;
+        const KT = this._eventState;
+        KT.mask = kT, KT.target = cT, KT.currentTarget = lT, KT.skipNextObservers = !1, KT.lastReturnValue = TT, KT.userInfo = MT;
+        for (const OT of this._observers)
+          if (!OT._willBeUnregistered && (OT.mask & kT && (OT.unregisterOnNextCall && this._deferUnregister(OT), OT.scope ? KT.lastReturnValue = OT.callback.apply(OT.scope, [TT, KT]) : KT.lastReturnValue = OT.callback(TT, KT)), KT.skipNextObservers)) return !1;
         return !0
       }
-      notifyObserver(vv, zv) {
-        let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
-        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = zv), vv._willBeUnregistered) return;
-        const hv = this._eventState;
-        hv.mask = Pv, hv.skipNextObservers = !1, vv.unregisterOnNextCall && this._deferUnregister(vv), vv.callback(zv, hv)
+      notifyObserver(TT, kT) {
+        let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = kT), TT._willBeUnregistered) return;
+        const lT = this._eventState;
+        lT.mask = cT, lT.skipNextObservers = !1, TT.unregisterOnNextCall && this._deferUnregister(TT), TT.callback(kT, lT)
       }
       hasObservers() {
         return this._observers.length - this._numObserversMarkedAsDeleted > 0
       }
       clear() {
         for (; this._observers.length;) {
-          const vv = this._observers.pop();
-          vv && (vv._remove = null)
+          const TT = this._observers.pop();
+          TT && (TT._remove = null)
         }
         this._onObserverAdded = null, this._numObserversMarkedAsDeleted = 0, this.cleanLastNotifiedState()
       }
@@ -2905,17 +2905,17 @@ export const modules = {
         this._hasNotified = !1, this._lastNotifiedValue = void 0
       }
       clone() {
-        const vv = new gv;
-        return vv._observers = this._observers.slice(0), vv
+        const TT = new OT;
+        return TT._observers = this._observers.slice(0), TT
       }
       hasSpecificMask() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
-        for (const zv of this._observers)
-          if (zv.mask & vv || zv.mask === vv) return !0;
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
+        for (const kT of this._observers)
+          if (kT.mask & TT || kT.mask === TT) return !0;
         return !1
       }
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

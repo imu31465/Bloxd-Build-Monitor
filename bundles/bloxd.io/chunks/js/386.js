@@ -1,197 +1,197 @@
 export const id = 386;
 export const ids = [386];
 export const modules = {
-  61331: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      rebuildScenePbrPipelines: () => pv,
-      rebuildSceneRenderables: () => dv
+  61304: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      rebuildScenePbrPipelines: () => yT,
+      rebuildSceneRenderables: () => fT
     });
-    var hv = Pv(41035),
-      Sv = (vv, zv) => vv.order - zv.order,
-      ev = 8,
-      gv = vv => dv(vv);
-    async function pv(vv) {
-      let zv = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      await Nv(vv, "pbr", zv)
+    var lT = cT(41302),
+      MT = (TT, kT) => TT.order - kT.order,
+      KT = 8,
+      OT = TT => fT(TT);
+    async function yT(TT) {
+      let kT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      await xT(TT, "pbr", kT)
     }
-    async function dv(vv) {
-      await Nv(vv, void 0, !1)
+    async function fT(TT) {
+      await xT(TT, void 0, !1)
     }
-    async function Nv(vv, zv, pv) {
-      const dv = vv;
-      if (!dv._built && !pv) return;
-      const Nv = dv._lightListVersion ?? 0,
-        lv = dv.surface.engine,
-        Tv = vv => {
-          dv._z ? vv.forEach((vv => vv())) : (0, hv.b)(lv, (() => vv.forEach((vv => vv()))))
+    async function xT(TT, kT, yT) {
+      const fT = TT;
+      if (!fT._built && !yT) return;
+      const xT = fT._lightListVersion ?? 0,
+        IT = fT.surface.engine,
+        AT = TT => {
+          fT._z ? TT.forEach((TT => TT())) : (0, lT.b)(IT, (() => TT.forEach((TT => TT()))))
         };
-      let Wv = !1,
-        wv = !1,
-        av = !1,
-        sv = !1;
+      let CT = !1,
+        jT = !1,
+        vT = !1,
+        tT = !1;
       try {
-        for (let vv = 1;; vv++) {
-          if (void 0 !== zv) {
-            await Cv();
+        for (let TT = 1;; TT++) {
+          if (void 0 !== kT) {
+            await hT();
             break
           }
-          if (cv(dv), await Cv(), !iv(dv)) break;
-          if (vv >= ev) {
-            dv._rebuildHook = gv, sv = !0, wv = !0;
+          if (QT(fT), await hT(), !NT(fT)) break;
+          if (TT >= KT) {
+            fT._rebuildHook = OT, tT = !0, jT = !0;
             break
           }
         }
-        av = !0
+        vT = !0
       } finally {
-        if (Wv && (dv._renderables.sort(Sv), dv._renderableVersion++, dv._materialEpoch++, dv._built && dv._frameGraph.build()), void 0 === zv && av && !wv && (dv._lightListVersion ?? 0) === Nv) {
-          const vv = dv._pendingTopologyRetirements?.splice(0);
-          vv?.length && Tv(vv), sv || (dv._rebuildHook = void 0)
+        if (CT && (fT._renderables.sort(MT), fT._renderableVersion++, fT._materialEpoch++, fT._built && fT._frameGraph.build()), void 0 === kT && vT && !jT && (fT._lightListVersion ?? 0) === xT) {
+          const TT = fT._pendingTopologyRetirements?.splice(0);
+          TT?.length && AT(TT), tT || (fT._rebuildHook = void 0)
         }
       }
-      async function Cv() {
-        for (const [vv, hv] of dv._groups) {
-          if (void 0 !== zv && vv._materialFamily !== zv) continue;
-          if (0 === hv.length) {
-            (hv.o || hv.r) && (Gv(vv, hv), Wv = !0);
+      async function hT() {
+        for (const [TT, lT] of fT._groups) {
+          if (void 0 !== kT && TT._materialFamily !== kT) continue;
+          if (0 === lT.length) {
+            (lT.o || lT.r) && (ST(TT, lT), CT = !0);
             continue
           }
-          const Sv = dv._runtimeBuilds;
-          await (Sv?.wait(hv));
-          let ev = !1;
-          const pv = async () => {
-            const zv = dv._runtimeBuilds,
-              Pv = [...hv].filter((zv => dv.meshes.includes(zv) && zv.material?._buildGroup === vv));
-            if (0 === Pv.length) return void Gv(vv, hv);
-            const gv = !!hv.r,
-              pv = dv._disposables.length,
-              Nv = new Map,
-              lv = new Map(Pv.map((vv => [vv, vv.material])));
-            for (const vv of Pv) {
-              const Pv = dv._meshDisposables.get(vv);
-              Pv && (Nv.set(vv, Pv), dv._meshDisposables.delete(vv), zv?.holdPendingDisposers(vv, Pv))
+          const MT = fT._runtimeBuilds;
+          await (MT?.wait(lT));
+          let KT = !1;
+          const yT = async () => {
+            const kT = fT._runtimeBuilds,
+              cT = [...lT].filter((kT => fT.meshes.includes(kT) && kT.material?._buildGroup === TT));
+            if (0 === cT.length) return void ST(TT, lT);
+            const OT = !!lT.r,
+              yT = fT._disposables.length,
+              xT = new Map,
+              IT = new Map(cT.map((TT => [TT, TT.material])));
+            for (const TT of cT) {
+              const cT = fT._meshDisposables.get(TT);
+              cT && (xT.set(TT, cT), fT._meshDisposables.delete(TT), kT?.holdPendingDisposers(TT, cT))
             }
-            let Wv, wv;
-            dv._p = vv => (wv = vv, !0);
+            let CT, jT;
+            fT._p = TT => (jT = TT, !0);
             try {
-              Wv = await vv(dv, Pv)
-            } catch (fv) {
-              wv?.[1]();
-              for (const Sv of Pv) {
-                const Pv = Nv.get(Sv),
-                  ev = dv._meshDisposables.get(Sv);
-                if (ev && ev !== Pv)
-                  for (const vv of ev) vv();
-                const gv = dv.meshes.includes(Sv) && Sv.material === lv.get(Sv) && Sv.material?._buildGroup === vv && hv.includes(Sv);
-                Pv && gv ? dv._meshDisposables.set(Sv, Pv) : (dv._meshDisposables.delete(Sv), Pv && Tv(Pv)), Pv && zv?.releasePendingDisposers(Sv, Pv)
+              CT = await TT(fT, cT)
+            } catch (FT) {
+              jT?.[1]();
+              for (const MT of cT) {
+                const cT = xT.get(MT),
+                  KT = fT._meshDisposables.get(MT);
+                if (KT && KT !== cT)
+                  for (const TT of KT) TT();
+                const OT = fT.meshes.includes(MT) && MT.material === IT.get(MT) && MT.material?._buildGroup === TT && lT.includes(MT);
+                cT && OT ? fT._meshDisposables.set(MT, cT) : (fT._meshDisposables.delete(MT), cT && AT(cT)), cT && kT?.releasePendingDisposers(MT, cT)
               }
-              throw fv
+              throw FT
             } finally {
-              delete dv._p
+              delete fT._p
             }
-            if (dv._z || Sv?._d()) {
-              wv?.[1]();
-              for (const zv of Pv) {
-                const vv = dv._meshDisposables.get(zv),
-                  Pv = Nv.get(zv);
-                if (vv && vv !== Pv)
-                  for (const zv of vv) zv();
-                dv._meshDisposables.delete(zv)
+            if (fT._z || MT?._d()) {
+              jT?.[1]();
+              for (const kT of cT) {
+                const TT = fT._meshDisposables.get(kT),
+                  cT = xT.get(kT);
+                if (TT && TT !== cT)
+                  for (const kT of TT) kT();
+                fT._meshDisposables.delete(kT)
               }
-              for (const zv of dv._disposables.splice(0)) zv();
-              const vv = [...Nv.values()].flat();
-              Tv(vv);
-              for (const [Pv, hv] of Nv) zv?.releasePendingDisposers(Pv, hv);
+              for (const kT of fT._disposables.splice(0)) kT();
+              const TT = [...xT.values()].flat();
+              AT(TT);
+              for (const [cT, lT] of xT) kT?.releasePendingDisposers(cT, lT);
               return
             }
-            wv?.[0](), vv._rebuildSingle = Wv.rebuildSingle, hv.r = dv._runtimeBuilds?.base(vv, Wv.rebuildSingle) ?? Wv.rebuildSingle, "pbr" === vv._materialFamily && Wv._G && (hv._w = null), gv && mv(dv, pv);
-            const av = new Set(Pv.filter((zv => dv.meshes.includes(zv) && zv.material === lv.get(zv) && zv.material?._buildGroup === vv && hv.includes(zv))));
-            if (av.size !== Pv.length && Wv.renderables.some((vv => !vv.mesh))) {
-              for (const vv of Pv) {
-                const Pv = dv._meshDisposables.get(vv),
-                  hv = Nv.get(vv);
-                if (Pv && Pv !== hv)
-                  for (const vv of Pv) vv();
-                hv && dv.meshes.includes(vv) ? dv._meshDisposables.set(vv, hv) : (dv._meshDisposables.delete(vv), hv && Tv(hv)), hv && zv?.releasePendingDisposers(vv, hv)
+            jT?.[0](), TT._rebuildSingle = CT.rebuildSingle, lT.r = fT._runtimeBuilds?.base(TT, CT.rebuildSingle) ?? CT.rebuildSingle, "pbr" === TT._materialFamily && CT._G && (lT._w = null), OT && DT(fT, yT);
+            const vT = new Set(cT.filter((kT => fT.meshes.includes(kT) && kT.material === IT.get(kT) && kT.material?._buildGroup === TT && lT.includes(kT))));
+            if (vT.size !== cT.length && CT.renderables.some((TT => !TT.mesh))) {
+              for (const TT of cT) {
+                const cT = fT._meshDisposables.get(TT),
+                  lT = xT.get(TT);
+                if (cT && cT !== lT)
+                  for (const TT of cT) TT();
+                lT && fT.meshes.includes(TT) ? fT._meshDisposables.set(TT, lT) : (fT._meshDisposables.delete(TT), lT && AT(lT)), lT && kT?.releasePendingDisposers(TT, lT)
               }
-              return void(ev = !0)
+              return void(KT = !0)
             }
-            const sv = new Set;
-            for (const vv of Pv)
-              if (av.has(vv)) sv.add(vv.material), dv._runtimeBuilds?.reset(vv);
+            const tT = new Set;
+            for (const TT of cT)
+              if (vT.has(TT)) tT.add(TT.material), fT._runtimeBuilds?.reset(TT);
               else {
-                const Pv = Nv.get(vv),
-                  hv = dv._meshDisposables.get(vv);
-                if (hv && hv !== Pv)
-                  for (const vv of hv) vv();
-                Pv && dv.meshes.includes(vv) ? (dv._meshDisposables.set(vv, Pv), Nv.delete(vv), zv?.releasePendingDisposers(vv, Pv)) : dv._meshDisposables.delete(vv)
-              } for (const vv of sv) vv._csmGen = (vv._csmGen ?? 0) + 1;
-            const Cv = hv.o,
-              iv = Cv?.length ? new Set(Cv) : null;
-            for (let vv = dv._renderables.length - 1; vv >= 0; vv--) {
-              const zv = dv._renderables[vv];
-              (av.has(zv.mesh) || iv?.has(zv)) && dv._renderables.splice(vv, 1)
+                const cT = xT.get(TT),
+                  lT = fT._meshDisposables.get(TT);
+                if (lT && lT !== cT)
+                  for (const TT of lT) TT();
+                cT && fT.meshes.includes(TT) ? (fT._meshDisposables.set(TT, cT), xT.delete(TT), kT?.releasePendingDisposers(TT, cT)) : fT._meshDisposables.delete(TT)
+              } for (const TT of tT) TT._csmGen = (TT._csmGen ?? 0) + 1;
+            const hT = lT.o,
+              NT = hT?.length ? new Set(hT) : null;
+            for (let TT = fT._renderables.length - 1; TT >= 0; TT--) {
+              const kT = fT._renderables[TT];
+              (vT.has(kT.mesh) || NT?.has(kT)) && fT._renderables.splice(TT, 1)
             }
-            const cv = Wv.renderables.filter((vv => !vv.mesh || av.has(vv.mesh)));
-            dv._renderables.push(...cv), hv.o = cv;
-            const jv = [...Nv.values()].flat();
-            Tv(jv);
-            for (const [vv, hv] of Nv) zv?.releasePendingDisposers(vv, hv)
+            const QT = CT.renderables.filter((TT => !TT.mesh || vT.has(TT.mesh)));
+            fT._renderables.push(...QT), lT.o = QT;
+            const aT = [...xT.values()].flat();
+            AT(aT);
+            for (const [TT, lT] of xT) kT?.releasePendingDisposers(TT, lT)
           }, {
-            X: Nv
-          } = await Promise.resolve().then((() => Pv(60696))), lv = 3;
-          for (let zv = 1;; zv++) {
-            if (ev = !1, await Nv(dv, vv, pv), dv._z || Sv?._d()) return void(wv = !0);
-            if (!ev) break;
-            if (zv >= lv) {
-              Gv(vv, hv), dv._rebuildHook = gv, sv = !0, wv = !0;
+            X: xT
+          } = await Promise.resolve().then((() => cT(60666))), IT = 3;
+          for (let kT = 1;; kT++) {
+            if (KT = !1, await xT(fT, TT, yT), fT._z || MT?._d()) return void(jT = !0);
+            if (!KT) break;
+            if (kT >= IT) {
+              ST(TT, lT), fT._rebuildHook = OT, tT = !0, jT = !0;
               break
             }
           }
-          ev ? Wv = !0 : Wv = !0
+          KT ? CT = !0 : CT = !0
         }
       }
 
-      function iv(vv) {
-        for (const zv of vv.meshes) {
-          const Pv = zv.material?._buildGroup;
-          if (Pv && !vv._groups.get(Pv)?.includes(zv)) return !0
+      function NT(TT) {
+        for (const kT of TT.meshes) {
+          const cT = kT.material?._buildGroup;
+          if (cT && !TT._groups.get(cT)?.includes(kT)) return !0
         }
         return !1
       }
 
-      function cv(vv) {
-        const zv = new Map;
-        for (const Pv of vv.meshes) {
-          const vv = Pv.material?._buildGroup;
-          if (!vv) continue;
-          const hv = zv.get(vv);
-          hv ? hv.push(Pv) : zv.set(vv, [Pv])
+      function QT(TT) {
+        const kT = new Map;
+        for (const cT of TT.meshes) {
+          const TT = cT.material?._buildGroup;
+          if (!TT) continue;
+          const lT = kT.get(TT);
+          lT ? lT.push(cT) : kT.set(TT, [cT])
         }
-        for (const [Pv, hv] of vv._groups) {
-          const vv = zv.get(Pv) ?? [];
-          (hv.length !== vv.length || vv.some(((vv, zv) => hv[zv] !== vv))) && (hv.length = 0, hv.push(...vv)), zv.delete(Pv)
+        for (const [cT, lT] of TT._groups) {
+          const TT = kT.get(cT) ?? [];
+          (lT.length !== TT.length || TT.some(((TT, kT) => lT[kT] !== TT))) && (lT.length = 0, lT.push(...TT)), kT.delete(cT)
         }
-        for (const [Pv, hv] of zv) {
-          const zv = hv;
-          vv._groups.set(Pv, zv)
+        for (const [cT, lT] of kT) {
+          const kT = lT;
+          TT._groups.set(cT, kT)
         }
       }
 
-      function Gv(vv, zv) {
-        const Pv = zv.o;
-        if (Pv?.length) {
-          const vv = new Set(Pv);
-          for (let zv = dv._renderables.length - 1; zv >= 0; zv--) vv.has(dv._renderables[zv]) && dv._renderables.splice(zv, 1)
+      function ST(TT, kT) {
+        const cT = kT.o;
+        if (cT?.length) {
+          const TT = new Set(cT);
+          for (let kT = fT._renderables.length - 1; kT >= 0; kT--) TT.has(fT._renderables[kT]) && fT._renderables.splice(kT, 1)
         }
-        zv.o = void 0, zv.r = void 0, dv._runtimeBuilds?.dropBase(vv), dv._rebuildHook = gv, sv = !0
+        kT.o = void 0, kT.r = void 0, fT._runtimeBuilds?.dropBase(TT), fT._rebuildHook = OT, tT = !0
       }
 
-      function mv(vv, zv) {
-        const Pv = new Set(vv._disposables.slice(0, zv));
-        for (let hv = vv._disposables.length - 1; hv >= zv; hv--) Pv.has(vv._disposables[hv]) && vv._disposables.splice(hv, 1)
+      function DT(TT, kT) {
+        const cT = new Set(TT._disposables.slice(0, kT));
+        for (let lT = TT._disposables.length - 1; lT >= kT; lT--) cT.has(TT._disposables[lT]) && TT._disposables.splice(lT, 1)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

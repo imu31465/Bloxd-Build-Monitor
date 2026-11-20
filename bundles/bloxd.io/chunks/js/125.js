@@ -1,13 +1,13 @@
 export const id = 125;
 export const ids = [125, 127, 130];
 export const modules = {
-  6315: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => gv
+  6586: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => OT
     });
-    var hv = Pv(6319),
-      Sv = Pv(1082);
-    const ev = {
+    var lT = cT(6591),
+      MT = cT(1099);
+    const KT = {
       strict: "shaderPack:variantStrict",
       nonStrict: "shaderPack:variantNonStrict",
       terrain: "shaderPack:variantTerrain",
@@ -15,549 +15,549 @@ export const modules = {
       model: "shaderPack:variantModel"
     };
 
-    function gv(vv) {
+    function OT(TT) {
       let {
-        diagnostics: zv,
-        more: Pv = 0,
-        t: gv
-      } = vv;
-      return (0, Sv.jsxs)("ul", {
+        diagnostics: kT,
+        more: cT = 0,
+        t: OT
+      } = TT;
+      return (0, MT.jsxs)("ul", {
         className: "ShaderPackDiagnostics",
-        children: [zv.map(((vv, zv) => {
-          const Pv = (0, hv.g)(vv),
-            pv = function(vv, zv) {
-              const Pv = (0, hv.e)(null !== vv && void 0 !== vv ? vv : []);
-              if (0 === Pv.length) return null;
-              return Pv.map((vv => vv.map((vv => zv(ev[vv]))).join(", "))).join("; ")
-            }(vv.variants, gv);
-          return (0, Sv.jsxs)("li", {
-            children: [Pv && (0, Sv.jsx)("span", {
+        children: [kT.map(((TT, kT) => {
+          const cT = (0, lT.e)(TT),
+            yT = function(TT, kT) {
+              const cT = (0, lT.c)(null !== TT && void 0 !== TT ? TT : []);
+              if (0 === cT.length) return null;
+              return cT.map((TT => TT.map((TT => kT(KT[TT]))).join(", "))).join("; ")
+            }(TT.variants, OT);
+          return (0, MT.jsxs)("li", {
+            children: [cT && (0, MT.jsx)("span", {
               className: "ShaderPackDiagnosticLocation",
-              children: Pv
-            }), vv.message, pv && (0, Sv.jsx)("span", {
+              children: cT
+            }), TT.message, yT && (0, MT.jsx)("span", {
               className: "ShaderPackDiagnosticVariants",
-              children: gv("shaderPack:onlyIn", {
-                variants: pv
+              children: OT("shaderPack:onlyIn", {
+                variants: yT
               })
             })]
-          }, zv)
-        })), Pv > 0 && (0, Sv.jsx)("li", {
-          children: gv("shaderPack:moreErrors", {
-            count: String(Pv)
+          }, kT)
+        })), cT > 0 && (0, MT.jsx)("li", {
+          children: OT("shaderPack:moreErrors", {
+            count: String(cT)
           })
         })]
       })
     }
   },
-  6335: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => Mv,
-      f: () => yv
+  6604: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => RT,
+      f: () => gT
     });
-    var hv = Pv(52),
-      Sv = Pv(1035),
-      ev = Pv.n(Sv),
-      gv = Pv(4698),
-      pv = Pv(1327),
-      dv = Pv(1042),
-      Nv = Pv(1442),
-      lv = Pv(1175),
-      Tv = Pv(73),
-      Wv = Pv(6306),
-      wv = Pv(6328);
-    class av extends Error {
-      constructor(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        super(vv, arguments.length > 2 ? arguments[2] : void 0), this.translationKey = vv, this.params = zv
+    var lT = cT(71),
+      MT = cT(1046),
+      KT = cT.n(MT),
+      OT = cT(4909),
+      yT = cT(1348),
+      fT = cT(1061),
+      xT = cT(1470),
+      IT = cT(1195),
+      AT = cT(118),
+      CT = cT(6581),
+      jT = cT(6597);
+    class vT extends Error {
+      constructor(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        super(TT, arguments.length > 2 ? arguments[2] : void 0), this.translationKey = TT, this.params = kT
       }
     }
-    const sv = 1024,
-      Cv = 101010256,
-      iv = 33639248,
-      cv = 67324752,
-      Gv = 22,
-      mv = 46,
-      jv = 30,
-      fv = 65535,
-      Fv = 65535,
-      Yv = 4294967295,
-      nv = 0,
-      Ov = 8,
-      Dv = new TextDecoder;
+    const tT = 1024,
+      hT = 101010256,
+      NT = 33639248,
+      QT = 67324752,
+      ST = 22,
+      DT = 46,
+      aT = 30,
+      FT = 65535,
+      rT = 65535,
+      PT = 4294967295,
+      wT = 0,
+      mT = 8,
+      bT = new TextDecoder;
 
-    function Kv(vv) {
-      const zv = new DataView(vv.buffer, vv.byteOffset, vv.byteLength),
-        Pv = function(vv) {
-          const zv = vv.byteLength - Gv;
-          for (let Pv = zv; Pv >= Math.max(0, zv - fv); Pv--)
-            if (vv.getUint32(Pv, !0) === Cv && Pv + Gv + vv.getUint16(Pv + 20, !0) <= vv.byteLength) return Pv;
-          throw new av("shaderPack:loadNotZip")
-        }(zv),
-        hv = zv.getUint16(Pv + 8, !0),
-        Sv = zv.getUint16(Pv + 10, !0),
-        ev = zv.getUint32(Pv + 12, !0),
-        gv = zv.getUint32(Pv + 16, !0);
-      if (Sv === Fv || ev === Yv || gv === Yv) throw xv();
-      if (0 !== zv.getUint16(Pv + 4, !0) || 0 !== zv.getUint16(Pv + 6, !0) || hv !== Sv) throw new av("shaderPack:loadSplitZip");
-      if (Sv > sv) throw new av("shaderPack:loadTooManyZipEntries", {
-        count: String(sv)
+    function zT(TT) {
+      const kT = new DataView(TT.buffer, TT.byteOffset, TT.byteLength),
+        cT = function(TT) {
+          const kT = TT.byteLength - ST;
+          for (let cT = kT; cT >= Math.max(0, kT - FT); cT--)
+            if (TT.getUint32(cT, !0) === hT && cT + ST + TT.getUint16(cT + 20, !0) <= TT.byteLength) return cT;
+          throw new vT("shaderPack:loadNotZip")
+        }(kT),
+        lT = kT.getUint16(cT + 8, !0),
+        MT = kT.getUint16(cT + 10, !0),
+        KT = kT.getUint32(cT + 12, !0),
+        OT = kT.getUint32(cT + 16, !0);
+      if (MT === rT || KT === PT || OT === PT) throw eT();
+      if (0 !== kT.getUint16(cT + 4, !0) || 0 !== kT.getUint16(cT + 6, !0) || lT !== MT) throw new vT("shaderPack:loadSplitZip");
+      if (MT > tT) throw new vT("shaderPack:loadTooManyZipEntries", {
+        count: String(tT)
       });
-      const pv = gv + ev;
-      if (pv > Pv) throw Rv();
-      const dv = [];
-      let Nv = gv;
-      for (let lv = 0; lv < Sv; lv++) {
-        if (Nv + mv > pv || zv.getUint32(Nv, !0) !== iv) throw Rv();
-        const Pv = zv.getUint16(Nv + 8, !0),
-          hv = zv.getUint16(Nv + 10, !0),
-          Sv = zv.getUint32(Nv + 20, !0),
-          ev = zv.getUint32(Nv + 24, !0),
-          lv = zv.getUint16(Nv + 28, !0),
-          Tv = zv.getUint16(Nv + 30, !0),
-          Wv = zv.getUint16(Nv + 32, !0),
-          wv = zv.getUint32(Nv + 42, !0),
-          av = Nv + mv;
-        if (Nv = av + lv + Tv + Wv, Nv > pv) throw Rv();
-        if (Sv === Yv || ev === Yv || wv === Yv) throw xv();
-        const sv = Dv.decode(vv.subarray(av, av + lv)).replace(/\\/g, "/");
-        sv.endsWith("/") || dv.push({
-          path: sv,
-          method: hv,
-          encrypted: 0 !== (1 & Pv),
-          compressedSize: Sv,
-          dataOffset: Uv(zv, wv, Sv, gv)
+      const yT = OT + KT;
+      if (yT > cT) throw HT();
+      const fT = [];
+      let xT = OT;
+      for (let IT = 0; IT < MT; IT++) {
+        if (xT + DT > yT || kT.getUint32(xT, !0) !== NT) throw HT();
+        const cT = kT.getUint16(xT + 8, !0),
+          lT = kT.getUint16(xT + 10, !0),
+          MT = kT.getUint32(xT + 20, !0),
+          KT = kT.getUint32(xT + 24, !0),
+          IT = kT.getUint16(xT + 28, !0),
+          AT = kT.getUint16(xT + 30, !0),
+          CT = kT.getUint16(xT + 32, !0),
+          jT = kT.getUint32(xT + 42, !0),
+          vT = xT + DT;
+        if (xT = vT + IT + AT + CT, xT > yT) throw HT();
+        if (MT === PT || KT === PT || jT === PT) throw eT();
+        const tT = bT.decode(TT.subarray(vT, vT + IT)).replace(/\\/g, "/");
+        tT.endsWith("/") || fT.push({
+          path: tT,
+          method: lT,
+          encrypted: 0 !== (1 & cT),
+          compressedSize: MT,
+          dataOffset: oT(kT, jT, MT, OT)
         })
       }
-      return dv
+      return fT
     }
-    async function Vv(vv, zv, Pv) {
-      if (zv.encrypted) throw new av("shaderPack:loadEncrypted", {
-        path: zv.path
+    async function JT(TT, kT, cT) {
+      if (kT.encrypted) throw new vT("shaderPack:loadEncrypted", {
+        path: kT.path
       });
-      if (zv.method === nv) return zv.compressedSize > Pv ? null : vv.subarray(zv.dataOffset, zv.dataOffset + zv.compressedSize);
-      if (zv.method === Ov) return async function(vv, zv, Pv) {
-        const hv = new Blob([vv]).stream().pipeThrough(new DecompressionStream("deflate-raw")).getReader(),
-          Sv = [];
-        let ev = 0;
+      if (kT.method === wT) return kT.compressedSize > cT ? null : TT.subarray(kT.dataOffset, kT.dataOffset + kT.compressedSize);
+      if (kT.method === mT) return async function(TT, kT, cT) {
+        const lT = new Blob([TT]).stream().pipeThrough(new DecompressionStream("deflate-raw")).getReader(),
+          MT = [];
+        let KT = 0;
         try {
           for (;;) {
             const {
-              done: vv,
-              value: Pv
-            } = await hv.read();
-            if (vv) break;
-            if (ev += Pv.byteLength, ev > zv) return await hv.cancel(), null;
-            Sv.push(Pv)
+              done: TT,
+              value: cT
+            } = await lT.read();
+            if (TT) break;
+            if (KT += cT.byteLength, KT > kT) return await lT.cancel(), null;
+            MT.push(cT)
           }
-        } catch (dv) {
-          throw new av("shaderPack:loadDecompressFailed", {
-            path: Pv
+        } catch (fT) {
+          throw new vT("shaderPack:loadDecompressFailed", {
+            path: cT
           }, {
-            cause: dv
+            cause: fT
           })
         }
-        const gv = new Uint8Array(ev);
-        let pv = 0;
-        for (const Nv of Sv) gv.set(Nv, pv), pv += Nv.byteLength;
-        return gv
-      }(vv.slice(zv.dataOffset, zv.dataOffset + zv.compressedSize), Pv, zv.path);
-      throw new av("shaderPack:loadUnsupportedCompression", {
-        path: zv.path,
-        method: String(zv.method)
+        const OT = new Uint8Array(KT);
+        let yT = 0;
+        for (const xT of MT) OT.set(xT, yT), yT += xT.byteLength;
+        return OT
+      }(TT.slice(kT.dataOffset, kT.dataOffset + kT.compressedSize), cT, kT.path);
+      throw new vT("shaderPack:loadUnsupportedCompression", {
+        path: kT.path,
+        method: String(kT.method)
       })
     }
 
-    function Uv(vv, zv, Pv, hv) {
-      if (zv + jv > hv || vv.getUint32(zv, !0) !== cv) throw Rv();
-      const Sv = zv + jv + vv.getUint16(zv + 26, !0) + vv.getUint16(zv + 28, !0);
-      if (Sv + Pv > hv) throw Rv();
-      return Sv
+    function oT(TT, kT, cT, lT) {
+      if (kT + aT > lT || TT.getUint32(kT, !0) !== QT) throw HT();
+      const MT = kT + aT + TT.getUint16(kT + 26, !0) + TT.getUint16(kT + 28, !0);
+      if (MT + cT > lT) throw HT();
+      return MT
     }
 
-    function Rv() {
-      return new av("shaderPack:loadZipDamaged")
+    function HT() {
+      return new vT("shaderPack:loadZipDamaged")
     }
 
-    function xv() {
-      return new av("shaderPack:loadZip64")
+    function eT() {
+      return new vT("shaderPack:loadZip64")
     }
-    const tv = 33554432,
-      qv = 65536;
-    async function Iv(vv) {
-      if (1 === vv.length && vv[0].name.toLowerCase().endsWith(".zip")) {
-        const zv = vv[0];
-        if (zv.size > tv) throw new av("shaderPack:loadZipTooBig", {
-          megabytes: String(tv / 1048576)
+    const GT = 33554432,
+      VT = 65536;
+    async function ET(TT) {
+      if (1 === TT.length && TT[0].name.toLowerCase().endsWith(".zip")) {
+        const kT = TT[0];
+        if (kT.size > GT) throw new vT("shaderPack:loadZipTooBig", {
+          megabytes: String(GT / 1048576)
         });
-        return async function(vv) {
-          return Qv(Kv(vv).map((zv => ({
-            path: zv.path,
-            read: Pv => Vv(vv, zv, Pv)
+        return async function(TT) {
+          return ZT(zT(TT).map((kT => ({
+            path: kT.path,
+            read: cT => JT(TT, kT, cT)
           }))))
-        }(new Uint8Array(await zv.arrayBuffer()))
+        }(new Uint8Array(await kT.arrayBuffer()))
       }
-      return Qv(vv.map((vv => ({
-        path: Zv(vv),
-        read: zv => async function(vv, zv) {
-          return vv.size > zv ? null : new Uint8Array(await vv.arrayBuffer())
-        }(vv, zv)
+      return ZT(TT.map((TT => ({
+        path: uT(TT),
+        read: kT => async function(TT, kT) {
+          return TT.size > kT ? null : new Uint8Array(await TT.arrayBuffer())
+        }(TT, kT)
       }))))
     }
-    async function Qv(vv) {
-      const zv = function(vv) {
-          const zv = vv.length > 0 ? vv[0].path.indexOf("/") : -1;
-          if (-1 === zv) return vv;
-          const Pv = vv[0].path.slice(0, zv + 1);
-          if (!vv.every((vv => vv.path.startsWith(Pv)))) return vv;
-          return vv.map((vv => ({
-            ...vv,
-            path: vv.path.slice(Pv.length)
+    async function ZT(TT) {
+      const kT = function(TT) {
+          const kT = TT.length > 0 ? TT[0].path.indexOf("/") : -1;
+          if (-1 === kT) return TT;
+          const cT = TT[0].path.slice(0, kT + 1);
+          if (!TT.every((TT => TT.path.startsWith(cT)))) return TT;
+          return TT.map((TT => ({
+            ...TT,
+            path: TT.path.slice(cT.length)
           })))
-        }(vv.filter((vv => ! function(vv) {
-          const zv = vv.split("/"),
-            Pv = zv[zv.length - 1];
-          return zv.includes("__MACOSX") || Pv.startsWith("._") || ".DS_Store" === Pv
-        }(vv.path)))),
-        Pv = zv.filter((vv => "pack.json" === vv.path.toLowerCase()));
-      if (0 === Pv.length) throw new av("shaderPack:loadNoManifest");
-      if (Pv.length > 1) throw new av("shaderPack:loadDuplicateManifest");
-      const hv = Pv[0],
-        Sv = await hv.read(qv);
-      if (null === Sv) throw new av("shaderPack:loadManifestTooBig", {
-        kilobytes: String(qv / 1024)
+        }(TT.filter((TT => ! function(TT) {
+          const kT = TT.split("/"),
+            cT = kT[kT.length - 1];
+          return kT.includes("__MACOSX") || cT.startsWith("._") || ".DS_Store" === cT
+        }(TT.path)))),
+        cT = kT.filter((TT => "pack.json" === TT.path.toLowerCase()));
+      if (0 === cT.length) throw new vT("shaderPack:loadNoManifest");
+      if (cT.length > 1) throw new vT("shaderPack:loadDuplicateManifest");
+      const lT = cT[0],
+        MT = await lT.read(VT);
+      if (null === MT) throw new vT("shaderPack:loadManifestTooBig", {
+        kilobytes: String(VT / 1024)
       });
-      const ev = function(vv) {
-          let zv;
+      const KT = function(TT) {
+          let kT;
           try {
-            zv = JSON.parse(vv)
-          } catch (pv) {
-            throw new av("shaderPack:loadManifestNotJson", {
-              error: pv.message
+            kT = JSON.parse(TT)
+          } catch (yT) {
+            throw new vT("shaderPack:loadManifestNotJson", {
+              error: yT.message
             }, {
-              cause: pv
+              cause: yT
             })
           }
-          if ("object" !== typeof zv || null === zv || Array.isArray(zv)) throw new av("shaderPack:loadManifestNotObject");
+          if ("object" !== typeof kT || null === kT || Array.isArray(kT)) throw new vT("shaderPack:loadManifestNotObject");
           const {
-            apiVersion: Pv,
-            name: hv,
-            author: Sv,
-            description: ev,
-            keepCircleShadows: gv
-          } = zv;
-          if (void 0 === Pv) throw new av("shaderPack:loadNoApiVersion", {
-            version: String(wv.d)
+            apiVersion: cT,
+            name: lT,
+            author: MT,
+            description: KT,
+            keepCircleShadows: OT
+          } = kT;
+          if (void 0 === cT) throw new vT("shaderPack:loadNoApiVersion", {
+            version: String(jT.c)
           });
-          if (!(0, wv.i)(Pv)) throw new av("shaderPack:loadWrongApiVersion", {
-            packVersion: JSON.stringify(Pv),
-            version: String(wv.d)
+          if (!(0, jT.f)(cT)) throw new vT("shaderPack:loadWrongApiVersion", {
+            packVersion: JSON.stringify(cT),
+            version: String(jT.c)
           });
-          if ("string" !== typeof hv || "" === hv.trim()) throw new av("shaderPack:loadNoName");
-          if (void 0 !== Sv && null !== Sv && "string" !== typeof Sv) throw new av("shaderPack:loadAuthorNotString");
-          if (void 0 !== ev && null !== ev && "string" !== typeof ev) throw new av("shaderPack:loadDescriptionNotString");
-          if (void 0 !== gv && "boolean" !== typeof gv) throw new av("shaderPack:loadKeepCircleShadowsNotBoolean");
+          if ("string" !== typeof lT || "" === lT.trim()) throw new vT("shaderPack:loadNoName");
+          if (void 0 !== MT && null !== MT && "string" !== typeof MT) throw new vT("shaderPack:loadAuthorNotString");
+          if (void 0 !== KT && null !== KT && "string" !== typeof KT) throw new vT("shaderPack:loadDescriptionNotString");
+          if (void 0 !== OT && "boolean" !== typeof OT) throw new vT("shaderPack:loadKeepCircleShadowsNotBoolean");
           return {
-            apiVersion: Pv,
-            name: hv,
-            author: "string" === typeof Sv ? Sv : null,
-            description: "string" === typeof ev && "" !== ev.trim() ? ev : null,
-            keepCircleShadows: !0 === gv
+            apiVersion: cT,
+            name: lT,
+            author: "string" === typeof MT ? MT : null,
+            description: "string" === typeof KT && "" !== KT.trim() ? KT : null,
+            keepCircleShadows: !0 === OT
           }
-        }(Av(Sv, hv.path)),
-        gv = zv.filter((vv => vv.path.toLowerCase().endsWith(".wgsl"))).sort(((vv, zv) => (0, Wv.q)(vv.path, zv.path)));
-      if (0 === gv.length) throw new av("shaderPack:loadNoWgsl");
-      if (gv.length > Wv.e) throw new av("shaderPack:loadTooManyWgsl", {
-        count: String(Wv.e)
+        }(XT(MT, lT.path)),
+        OT = kT.filter((TT => TT.path.toLowerCase().endsWith(".wgsl"))).sort(((TT, kT) => (0, CT.j)(TT.path, kT.path)));
+      if (0 === OT.length) throw new vT("shaderPack:loadNoWgsl");
+      if (OT.length > CT.b) throw new vT("shaderPack:loadTooManyWgsl", {
+        count: String(CT.b)
       });
-      const pv = gv.find(((vv, zv) => zv > 0 && vv.path === gv[zv - 1].path));
-      if (pv) throw new av("shaderPack:loadDuplicatePath", {
-        path: pv.path
+      const yT = OT.find(((TT, kT) => kT > 0 && TT.path === OT[kT - 1].path));
+      if (yT) throw new vT("shaderPack:loadDuplicatePath", {
+        path: yT.path
       });
-      const dv = [];
-      let Nv = Wv.f;
-      for (const lv of gv) {
-        const vv = await lv.read(Nv);
-        if (null === vv) throw new av("shaderPack:loadSourceTooBig", {
-          kilobytes: String(Wv.f / 1024)
+      const fT = [];
+      let xT = CT.c;
+      for (const IT of OT) {
+        const TT = await IT.read(xT);
+        if (null === TT) throw new vT("shaderPack:loadSourceTooBig", {
+          kilobytes: String(CT.c / 1024)
         });
-        Nv -= vv.byteLength, dv.push({
-          path: lv.path,
-          source: Av(vv, lv.path)
+        xT -= TT.byteLength, fT.push({
+          path: IT.path,
+          source: XT(TT, IT.path)
         })
       }
       return {
-        manifest: ev,
-        files: dv
+        manifest: KT,
+        files: fT
       }
     }
 
-    function Zv(vv) {
-      return (vv.webkitRelativePath || vv.path || vv.name).replace(/^\.?\//, "")
+    function uT(TT) {
+      return (TT.webkitRelativePath || TT.path || TT.name).replace(/^\.?\//, "")
     }
 
-    function Av(vv, zv) {
+    function XT(TT, kT) {
       try {
         return new TextDecoder("utf-8", {
           fatal: !0
-        }).decode(vv)
-      } catch (Pv) {
-        throw new av("shaderPack:loadNotUtf8", {
-          path: zv
+        }).decode(TT)
+      } catch (cT) {
+        throw new vT("shaderPack:loadNotUtf8", {
+          path: kT
         }, {
-          cause: Pv
+          cause: cT
         })
       }
     }
-    var Lv = Pv(6319),
-      Hv = Pv(1082);
+    var dT = cT(6591),
+      LT = cT(1099);
 
-    function Mv(vv) {
+    function RT(TT) {
       let {
-        busy: zv,
-        disabled: Pv,
-        onFiles: Sv
-      } = vv;
+        busy: kT,
+        disabled: cT,
+        onFiles: MT
+      } = TT;
       const {
-        t: Wv
-      } = (0, lv.x)(), wv = (0, hv.useRef)(null), av = !(0, Tv.isMobile)(), {
-        getRootProps: sv,
-        getInputProps: Cv,
-        isDragActive: iv,
-        open: cv
-      } = (0, gv.d)({
-        onDrop: Sv,
+        t: CT
+      } = (0, IT.B)(), jT = (0, lT.useRef)(null), vT = !(0, AT.isMobile)(), {
+        getRootProps: tT,
+        getInputProps: hT,
+        isDragActive: NT,
+        open: QT
+      } = (0, OT.c)({
+        onDrop: MT,
         noClick: !0,
         noKeyboard: !0,
         useFsAccessApi: !1,
-        disabled: Pv
+        disabled: cT
       });
-      return (0, Hv.jsxs)("div", {
-        ...sv({
-          className: ev()("ShaderPackDropZone", {
-            ActiveDrag: iv,
-            Disabled: Pv
+      return (0, LT.jsxs)("div", {
+        ...tT({
+          className: KT()("ShaderPackDropZone", {
+            ActiveDrag: NT,
+            Disabled: cT
           })
         }),
-        children: [(0, Hv.jsx)("input", {
-          ...Cv({
+        children: [(0, LT.jsx)("input", {
+          ...hT({
             webkitdirectory: "true"
           })
-        }), (0, Hv.jsx)("input", {
-          ref: wv,
+        }), (0, LT.jsx)("input", {
+          ref: jT,
           type: "file",
           accept: ".zip,application/zip",
           hidden: !0,
-          onChange: function(vv) {
-            const zv = Array.from(vv.target.files);
-            vv.target.value = "", Sv(zv)
+          onChange: function(TT) {
+            const kT = Array.from(TT.target.files);
+            TT.target.value = "", MT(kT)
           }
-        }), zv && (0, Hv.jsx)(pv.c, {}), !zv && (0, Hv.jsxs)(Hv.Fragment, {
-          children: [(0, Hv.jsx)("div", {
+        }), kT && (0, LT.jsx)(yT.d, {}), !kT && (0, LT.jsxs)(LT.Fragment, {
+          children: [(0, LT.jsx)("div", {
             className: "ShaderPackDropZoneIcon",
-            children: (0, Hv.jsx)(dv.b, {
+            children: (0, LT.jsx)(fT.e, {
               name: "up-from-bracket"
             })
-          }), (0, Hv.jsx)("div", {
+          }), (0, LT.jsx)("div", {
             className: "ShaderPackDropZoneInstructions",
-            children: Wv(av ? "shaderPack:dropHere" : "shaderPack:chooseZipInstructions")
-          }), (0, Hv.jsxs)("div", {
+            children: CT(vT ? "shaderPack:dropHere" : "shaderPack:chooseZipInstructions")
+          }), (0, LT.jsxs)("div", {
             className: "ShaderPackDropZoneButtons",
             "data-pad-mouse-only": !0,
-            children: [av && (0, Hv.jsx)(Nv.d, {
-              disabled: Pv,
-              onClick: cv,
-              children: Wv("shaderPack:chooseFolder")
-            }), (0, Hv.jsx)(Nv.d, {
-              disabled: Pv,
+            children: [vT && (0, LT.jsx)(xT.e, {
+              disabled: cT,
+              onClick: QT,
+              children: CT("shaderPack:chooseFolder")
+            }), (0, LT.jsx)(xT.e, {
+              disabled: cT,
               onClick: () => {
-                wv.current.click()
+                jT.current.click()
               },
-              children: Wv("shaderPack:chooseZip")
+              children: CT("shaderPack:chooseZip")
             })]
           })]
         })]
       })
     }
 
-    function yv(vv) {
+    function gT(TT) {
       const {
-        t: zv
-      } = (0, lv.x)(), [Pv, Sv] = (0, hv.useState)(!1), [ev, gv] = (0, hv.useState)(null), pv = (0, hv.useRef)(!1);
+        t: kT
+      } = (0, IT.B)(), [cT, MT] = (0, lT.useState)(!1), [KT, OT] = (0, lT.useState)(null), yT = (0, lT.useRef)(!1);
       return {
-        loading: Pv,
-        error: ev,
-        setError: gv,
-        onFiles: async function(Pv) {
-          if (!pv.current) {
-            pv.current = !0, Sv(!0), gv(null);
+        loading: cT,
+        error: KT,
+        setError: OT,
+        onFiles: async function(cT) {
+          if (!yT.current) {
+            yT.current = !0, MT(!0), OT(null);
             try {
-              await vv(await Iv(Pv))
-            } catch (hv) {
-              hv instanceof av ? gv((0, Lv.i)(zv, hv.translationKey, hv.params)) : (console.error("Failed to load the shader pack", hv), gv(zv("shaderPack:unexpectedError")))
+              await TT(await ET(cT))
+            } catch (lT) {
+              lT instanceof vT ? OT((0, dT.g)(kT, lT.translationKey, lT.params)) : (console.error("Failed to load the shader pack", lT), OT(kT("shaderPack:unexpectedError")))
             } finally {
-              pv.current = !1, Sv(!1)
+              yT.current = !1, MT(!1)
             }
           }
         }
       }
     }
   },
-  6319: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => pv,
-      g: () => gv,
-      i: () => ev
+  6591: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => yT,
+      e: () => OT,
+      g: () => KT
     });
-    var hv = Pv(6328);
-    const Sv = [vv => vv.strict ? "strict" : "nonStrict", vv => vv.program];
+    var lT = cT(6597);
+    const MT = [TT => TT.strict ? "strict" : "nonStrict", TT => TT.program];
 
-    function ev(vv, zv) {
-      let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const hv = {};
-      for (const Sv in Pv) hv[Sv] = `\0${Sv}\0`;
-      return vv(zv, hv).replace(/\0(\w+)\0/g, ((vv, zv) => Pv[zv]))
+    function KT(TT, kT) {
+      let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const lT = {};
+      for (const MT in cT) lT[MT] = `\0${MT}\0`;
+      return TT(kT, lT).replace(/\0(\w+)\0/g, ((TT, kT) => cT[kT]))
     }
 
-    function gv(vv) {
-      return null === vv.file ? null : vv.line > 0 ? `${vv.file}:${vv.line}` : vv.file
+    function OT(TT) {
+      return null === TT.file ? null : TT.line > 0 ? `${TT.file}:${TT.line}` : TT.file
     }
 
-    function pv(vv) {
-      const zv = new Map(vv.map((vv => [dv(vv).join("."), vv])));
-      if (0 === zv.size) return [];
-      const Pv = lv([...zv.values()]);
-      return 0 === Pv[0].length ? [] : Pv
+    function yT(TT) {
+      const kT = new Map(TT.map((TT => [fT(TT).join("."), TT])));
+      if (0 === kT.size) return [];
+      const cT = IT([...kT.values()]);
+      return 0 === cT[0].length ? [] : cT
     }
 
-    function dv(vv) {
-      return Sv.map((zv => zv(vv)))
+    function fT(TT) {
+      return MT.map((kT => kT(TT)))
     }
-    const Nv = Sv.map((vv => new Set(hv.g.map(vv)).size));
+    const xT = MT.map((TT => new Set(lT.d.map(TT)).size));
 
-    function lv(vv) {
-      const zv = Sv.map((zv => new Set(vv.map(zv)))),
-        Pv = zv.reduce(((vv, zv) => vv * zv.size), 1),
-        hv = zv.every(((vv, zv) => 1 === vv.size || vv.size === Nv[zv]));
-      if (Pv === vv.length && hv) return [Sv.filter(((vv, Pv) => 1 === zv[Pv].size)).map((zv => zv(vv[0])))];
-      let ev = null;
-      for (let gv = 0; gv < Sv.length; gv++) {
-        if (1 === zv[gv].size) continue;
-        const Pv = Tv(vv, Sv[gv]).flatMap(lv);
-        (null === ev || Pv.length < ev.length) && (ev = Pv)
+    function IT(TT) {
+      const kT = MT.map((kT => new Set(TT.map(kT)))),
+        cT = kT.reduce(((TT, kT) => TT * kT.size), 1),
+        lT = kT.every(((TT, kT) => 1 === TT.size || TT.size === xT[kT]));
+      if (cT === TT.length && lT) return [MT.filter(((TT, cT) => 1 === kT[cT].size)).map((kT => kT(TT[0])))];
+      let KT = null;
+      for (let OT = 0; OT < MT.length; OT++) {
+        if (1 === kT[OT].size) continue;
+        const cT = AT(TT, MT[OT]).flatMap(IT);
+        (null === KT || cT.length < KT.length) && (KT = cT)
       }
-      return ev
+      return KT
     }
 
-    function Tv(vv, zv) {
-      const Pv = new Map;
-      for (const Sv of vv) {
-        var hv;
-        const vv = zv(Sv);
-        Pv.set(vv, [...null !== (hv = Pv.get(vv)) && void 0 !== hv ? hv : [], Sv])
+    function AT(TT, kT) {
+      const cT = new Map;
+      for (const MT of TT) {
+        var lT;
+        const TT = kT(MT);
+        cT.set(TT, [...null !== (lT = cT.get(TT)) && void 0 !== lT ? lT : [], MT])
       }
-      return [...Pv.values()]
+      return [...cT.values()]
     }
   },
-  6328: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => hv.j,
-      g: () => Sv,
-      i: () => hv.r
+  6597: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => lT.e,
+      d: () => MT,
+      f: () => lT.l
     });
-    var hv = Pv(6306);
-    const Sv = [!1, !0].flatMap((vv => ["terrain", "liquid", "model"].map((zv => ({
-      strict: vv,
-      program: zv
+    var lT = cT(6581);
+    const MT = [!1, !0].flatMap((TT => ["terrain", "liquid", "model"].map((kT => ({
+      strict: TT,
+      program: kT
     })))))
   },
-  6369: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      forgetShaderPackActiveHint: () => Kv,
-      isOtherApiVersion: () => Yv,
-      isShaderPackActive: () => mv,
-      isShaderPackChangePending: () => Fv,
-      markShaderPackChangePending: () => fv,
-      pageShaderPackValidationVersion: () => nv,
-      reconcileStoredShaderPackHint: () => Dv,
-      removeShaderPack: () => Gv,
-      replaceShaderPack: () => Cv,
-      saveShaderPack: () => sv,
-      shaderPackNeedsCheck: () => Ov,
-      storedPackOutcome: () => jv,
-      storedShaderPackFiles: () => Wv,
-      toStoredShaderPack: () => Tv
+  6641: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      forgetShaderPackActiveHint: () => zT,
+      isOtherApiVersion: () => PT,
+      isShaderPackActive: () => DT,
+      isShaderPackChangePending: () => rT,
+      markShaderPackChangePending: () => FT,
+      pageShaderPackValidationVersion: () => wT,
+      reconcileStoredShaderPackHint: () => bT,
+      removeShaderPack: () => ST,
+      replaceShaderPack: () => hT,
+      saveShaderPack: () => tT,
+      shaderPackNeedsCheck: () => mT,
+      storedPackOutcome: () => aT,
+      storedShaderPackFiles: () => CT,
+      toStoredShaderPack: () => AT
     });
-    var hv = Pv(6306),
-      Sv = Pv(6328),
-      ev = Pv(39),
-      gv = Pv(3201),
-      pv = Pv(6377),
-      dv = Pv(6351);
-    const Nv = "shaderPackChangePending";
-    let lv = null;
+    var lT = cT(6581),
+      MT = cT(6597),
+      KT = cT(47),
+      OT = cT(3383),
+      yT = cT(6647),
+      fT = cT(6623);
+    const xT = "shaderPackChangePending";
+    let IT = null;
 
-    function Tv(vv, zv, Pv) {
+    function AT(TT, kT, cT) {
       return {
-        manifest: vv.manifest,
-        files: (0, hv.u)(vv.files),
-        validation: zv,
-        ...Pv && {
-          listing: Pv
+        manifest: TT.manifest,
+        files: (0, lT.s)(TT.files),
+        validation: kT,
+        ...cT && {
+          listing: cT
         }
       }
     }
 
-    function Wv(vv) {
-      return Object.keys(vv.files).map((zv => ({
-        path: zv,
-        source: vv.files[zv]
+    function CT(TT) {
+      return Object.keys(TT.files).map((kT => ({
+        path: kT,
+        source: TT.files[kT]
       })))
     }
-    let wv = Promise.resolve();
+    let jT = Promise.resolve();
 
-    function av(vv) {
-      const zv = wv.then(vv);
-      return wv = zv.catch((() => {})), zv
-    }
-
-    function sv(vv, zv) {
-      return av((() => iv(vv, zv)))
+    function vT(TT) {
+      const kT = jT.then(TT);
+      return jT = kT.catch((() => {})), kT
     }
 
-    function Cv(vv, zv, Pv) {
-      return av((async () => JSON.stringify(await (0, pv.g)()) === JSON.stringify(vv) && (null === zv ? (await cv(), !0) : iv(zv, Pv))))
-    }
-    async function iv(vv, zv) {
-      const Pv = await ev.f.setItem(pv.c, vv);
-      return Pv && Vv(vv, zv), Pv
-    }
-    async function cv() {
-      await ev.f.removeItem(pv.c), ev.h.removeItem(gv.b)
+    function tT(TT, kT) {
+      return vT((() => NT(TT, kT)))
     }
 
-    function Gv() {
-      return av(cv)
+    function hT(TT, kT, cT) {
+      return vT((async () => JSON.stringify(await (0, yT.e)()) === JSON.stringify(TT) && (null === kT ? (await QT(), !0) : NT(kT, cT))))
+    }
+    async function NT(TT, kT) {
+      const cT = await KT.d.setItem(yT.b, TT);
+      return cT && JT(TT, kT), cT
+    }
+    async function QT() {
+      await KT.d.removeItem(yT.b), KT.e.removeItem(OT.d)
     }
 
-    function mv(vv, zv) {
-      return "active" === jv(vv, zv).kind
+    function ST() {
+      return vT(QT)
     }
 
-    function jv(vv, zv) {
-      var Pv;
-      return null === vv ? {
+    function DT(TT, kT) {
+      return "active" === aT(TT, kT).kind
+    }
+
+    function aT(TT, kT) {
+      var cT;
+      return null === TT ? {
         kind: "none",
         reason: "nothingStored"
-      } : Yv(vv) ? {
+      } : PT(TT) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (Pv = vv.validation) || void 0 === Pv ? void 0 : Pv.ok) || vv.validation.fromRecheck ? null === zv ? {
+      } : !1 !== (null === (cT = TT.validation) || void 0 === cT ? void 0 : cT.ok) || TT.validation.fromRecheck ? null === kT ? {
         kind: "none",
         reason: "noCompiler"
-      } : Ov(vv, zv) ? {
+      } : mT(TT, kT) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : vv.validation.ok ? {
+      } : TT.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -568,326 +568,326 @@ export const modules = {
       }
     }
 
-    function fv() {
-      ev.l.setItem(Nv, performance.timeOrigin)
+    function FT() {
+      KT.g.setItem(xT, performance.timeOrigin)
     }
 
-    function Fv() {
-      return ev.l.getItem(Nv) === performance.timeOrigin
+    function rT() {
+      return KT.g.getItem(xT) === performance.timeOrigin
     }
 
-    function Yv(vv) {
-      return !(0, Sv.i)(vv.manifest.apiVersion)
+    function PT(TT) {
+      return !(0, MT.f)(TT.manifest.apiVersion)
     }
 
-    function nv(vv) {
-      return lv ??= vv.RD((0, dv.shaderPackTextures)()), lv
+    function wT(TT) {
+      return IT ??= TT.OJ((0, fT.shaderPackTextures)()), IT
     }
 
-    function Ov(vv, zv) {
-      var Pv;
-      return (null === (Pv = vv.validation) || void 0 === Pv ? void 0 : Pv.headerVersion) !== nv(zv)
+    function mT(TT, kT) {
+      var cT;
+      return (null === (cT = TT.validation) || void 0 === cT ? void 0 : cT.headerVersion) !== wT(kT)
     }
 
-    function Dv(vv) {
-      return av((async () => {
-        Vv(await (0, pv.g)(!0), vv)
+    function bT(TT) {
+      return vT((async () => {
+        JT(await (0, yT.e)(!0), TT)
       }))
     }
 
-    function Kv() {
-      return av((async () => {
-        ev.h.removeItem(gv.b)
+    function zT() {
+      return vT((async () => {
+        KT.e.removeItem(OT.d)
       }))
     }
 
-    function Vv(vv, zv) {
-      mv(vv, zv) ? ev.h.setItem(gv.b, !0) : ev.h.removeItem(gv.b)
+    function JT(TT, kT) {
+      DT(TT, kT) ? KT.e.setItem(OT.d, !0) : KT.e.removeItem(OT.d)
     }
   },
-  6351: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      loadShaderPackTextures: () => gv,
-      shaderPackTextures: () => pv
+  6623: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      loadShaderPackTextures: () => OT,
+      shaderPackTextures: () => yT
     });
-    var hv = Pv(6306);
-    let Sv = null,
-      ev = null;
+    var lT = cT(6581);
+    let MT = null,
+      KT = null;
 
-    function gv() {
-      return ev ??= Promise.all([Pv.e(70), Pv.e(198)]).then((() => Pv(39807))).then((vv => {
+    function OT() {
+      return KT ??= Promise.all([cT.e(70), cT.e(198)]).then((() => cT(40123))).then((TT => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: zv,
-          textureNameToIndex: Pv,
-          textureAnimationData: ev
-        } = vv;
-        return Sv ??= (0, hv.n)(Pv, ev, zv), Sv
-      })), ev
+          FORMER_BLOCK_IMAGE_NAMES: kT,
+          textureNameToIndex: cT,
+          textureAnimationData: KT
+        } = TT;
+        return MT ??= (0, lT.i)(cT, KT, kT), MT
+      })), KT
     }
 
-    function pv() {
-      if (null === Sv) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return Sv
+    function yT() {
+      if (null === MT) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return MT
     }
   },
-  6367: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => dv,
-      e: () => pv
+  6636: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => fT,
+      h: () => yT
     });
-    var hv = Pv(6369),
-      Sv = Pv(6351),
-      ev = Pv(90);
-    const gv = 100;
-    async function pv(vv, zv) {
-      var Pv;
-      let hv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (Pv = navigator.gpu) && void 0 !== Pv ? Pv : null;
-      const gv = vv.L_(zv, (0, Sv.shaderPackTextures)());
-      if (gv.errors.length > 0) return Nv(vv, gv.errors, gv.offInStrict);
-      const pv = await async function(vv) {
-        if (!vv) return null;
+    var lT = cT(6641),
+      MT = cT(6623),
+      KT = cT(141);
+    const OT = 100;
+    async function yT(TT, kT) {
+      var cT;
+      let lT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (cT = navigator.gpu) && void 0 !== cT ? cT : null;
+      const OT = TT.k_(kT, (0, MT.shaderPackTextures)());
+      if (OT.errors.length > 0) return xT(TT, OT.errors, OT.offInStrict);
+      const yT = await async function(TT) {
+        if (!TT) return null;
         try {
-          const zv = await (0, ev.m)(vv);
-          return zv ? await zv.requestDevice() : null
-        } catch (zv) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", zv), null
+          const kT = await (0, KT.w)(TT);
+          return kT ? await kT.requestDevice() : null
+        } catch (kT) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", kT), null
         }
-      }(hv);
-      if (!pv) return null;
-      let dv = !1;
-      pv.lost.then((() => {
-        dv = !0
+      }(lT);
+      if (!yT) return null;
+      let fT = !1;
+      yT.lost.then((() => {
+        fT = !0
       }));
       try {
-        const zv = await Promise.all(gv.validationModules.map((zv => async function(vv, zv, Pv) {
-          zv.pushErrorScope("validation");
-          const hv = zv.createShaderModule({
-              code: Pv.code
+        const kT = await Promise.all(OT.validationModules.map((kT => async function(TT, kT, cT) {
+          kT.pushErrorScope("validation");
+          const lT = kT.createShaderModule({
+              code: cT.code
             }),
-            Sv = zv.popErrorScope(),
+            MT = kT.popErrorScope(),
             {
-              messages: ev
-            } = await hv.getCompilationInfo(),
-            gv = ev.filter((vv => "error" === vv.type)).map((zv => vv.mapValidationMessage(Pv, zv))),
-            pv = await Sv;
-          pv && 0 === gv.length && gv.push({
+              messages: KT
+            } = await lT.getCompilationInfo(),
+            OT = KT.filter((TT => "error" === TT.type)).map((kT => TT.mapValidationMessage(cT, kT))),
+            yT = await MT;
+          yT && 0 === OT.length && OT.push({
             file: null,
             line: 0,
-            message: pv.message,
-            variants: [Pv.key]
+            message: yT.message,
+            variants: [cT.key]
           });
-          return gv
-        }(vv, pv, zv))));
-        return dv ? null : Nv(vv, vv.Jzv(zv.flat()), gv.offInStrict)
-      } catch (lv) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", lv), null
+          return OT
+        }(TT, yT, kT))));
+        return fT ? null : xT(TT, TT.OcT(kT.flat()), OT.offInStrict)
+      } catch (IT) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", IT), null
       } finally {
-        pv.destroy()
+        yT.destroy()
       }
     }
-    async function dv(vv, zv) {
-      var Pv;
-      if (!(0, hv.shaderPackNeedsCheck)(vv, zv) || (0, hv.isOtherApiVersion)(vv)) return vv;
-      const Sv = await pv(zv, (0, hv.storedShaderPackFiles)(vv));
-      if (!Sv) return vv;
-      const ev = !1 === (null === (Pv = vv.validation) || void 0 === Pv ? void 0 : Pv.ok) && !vv.validation.fromRecheck,
-        gv = {
-          ...vv,
-          validation: ev ? Sv : {
-            ...Sv,
+    async function fT(TT, kT) {
+      var cT;
+      if (!(0, lT.shaderPackNeedsCheck)(TT, kT) || (0, lT.isOtherApiVersion)(TT)) return TT;
+      const MT = await yT(kT, (0, lT.storedShaderPackFiles)(TT));
+      if (!MT) return TT;
+      const KT = !1 === (null === (cT = TT.validation) || void 0 === cT ? void 0 : cT.ok) && !TT.validation.fromRecheck,
+        OT = {
+          ...TT,
+          validation: KT ? MT : {
+            ...MT,
             fromRecheck: !0
           }
         };
-      return await (0, hv.replaceShaderPack)(vv, gv, zv) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), gv
+      return await (0, lT.replaceShaderPack)(TT, OT, kT) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), OT
     }
 
-    function Nv(vv, zv, Pv) {
+    function xT(TT, kT, cT) {
       return {
-        headerVersion: (0, hv.pageShaderPackValidationVersion)(vv),
-        ok: 0 === zv.length,
-        errors: zv.slice(0, gv),
-        moreErrors: Math.max(0, zv.length - gv),
-        offInStrict: Pv
+        headerVersion: (0, lT.pageShaderPackValidationVersion)(TT),
+        ok: 0 === kT.length,
+        errors: kT.slice(0, OT),
+        moreErrors: Math.max(0, kT.length - OT),
+        offInStrict: cT
       }
     }
   },
-  6306: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => gv,
-      f: () => ev,
-      j: () => hv,
-      n: () => av,
-      q: () => lv,
-      r: () => Sv,
-      t: () => dv,
-      u: () => Nv,
-      x: () => Tv
+  6581: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => OT,
+      c: () => KT,
+      e: () => lT,
+      i: () => vT,
+      j: () => IT,
+      l: () => MT,
+      p: () => fT,
+      s: () => xT,
+      u: () => AT
     });
-    const hv = 5;
+    const lT = 5;
 
-    function Sv(vv) {
-      return vv === hv
+    function MT(TT) {
+      return TT === lT
     }
-    const ev = 262144,
-      gv = 256,
-      pv = 256;
+    const KT = 262144,
+      OT = 256,
+      yT = 256;
 
-    function dv(vv) {
-      if ("object" !== typeof vv || null === vv || Array.isArray(vv)) return "The pack has no files.";
-      const zv = [];
-      for (const [Pv, hv] of Object.entries(vv)) {
-        if ("string" !== typeof hv) return `${Pv} isn't text.`;
-        zv.push({
-          path: Pv,
-          source: hv
+    function fT(TT) {
+      if ("object" !== typeof TT || null === TT || Array.isArray(TT)) return "The pack has no files.";
+      const kT = [];
+      for (const [cT, lT] of Object.entries(TT)) {
+        if ("string" !== typeof lT) return `${cT} isn't text.`;
+        kT.push({
+          path: cT,
+          source: lT
         })
       }
-      return zv.sort(((vv, zv) => lv(vv.path, zv.path))),
-        function(vv) {
-          if (0 === vv.length) return "The pack has no .wgsl files.";
-          if (vv.length > gv) return `The pack has more than ${gv} .wgsl files.`;
-          const zv = new Set;
+      return kT.sort(((TT, kT) => IT(TT.path, kT.path))),
+        function(TT) {
+          if (0 === TT.length) return "The pack has no .wgsl files.";
+          if (TT.length > OT) return `The pack has more than ${OT} .wgsl files.`;
+          const kT = new Set;
           for (const {
-              path: Pv
+              path: cT
             }
-            of vv) {
-            const vv = Wv(Pv);
-            if (null !== vv) return vv;
-            if (zv.has(Pv)) return `The pack has two files at ${Pv}.`;
-            zv.add(Pv)
+            of TT) {
+            const TT = CT(cT);
+            if (null !== TT) return TT;
+            if (kT.has(cT)) return `The pack has two files at ${cT}.`;
+            kT.add(cT)
           }
-          return Tv(vv) > ev ? `The pack's .wgsl files are over ${ev/1024} KB in total.` : null
-        }(zv) ?? zv
+          return AT(TT) > KT ? `The pack's .wgsl files are over ${KT/1024} KB in total.` : null
+        }(kT) ?? kT
     }
 
-    function Nv(vv) {
-      const zv = {};
-      for (const Pv of vv) zv[Pv.path] = Pv.source;
-      return zv
+    function xT(TT) {
+      const kT = {};
+      for (const cT of TT) kT[cT.path] = cT.source;
+      return kT
     }
 
-    function lv(vv, zv) {
-      return vv < zv ? -1 : vv > zv ? 1 : 0
+    function IT(TT, kT) {
+      return TT < kT ? -1 : TT > kT ? 1 : 0
     }
 
-    function Tv(vv) {
-      const zv = new TextEncoder;
-      let Pv = 0;
+    function AT(TT) {
+      const kT = new TextEncoder;
+      let cT = 0;
       for (const {
-          source: hv
+          source: lT
         }
-        of vv) Pv += zv.encode(hv).byteLength;
-      return Pv
+        of TT) cT += kT.encode(lT).byteLength;
+      return cT
     }
 
-    function Wv(vv) {
-      if (!vv.toLowerCase().endsWith(".wgsl")) return `${vv} isn't a .wgsl file.`;
-      if (vv.length > pv) return `A file path is over ${pv} characters.`;
-      if (vv.includes("\\") || /[\u0000-\u001f]/.test(vv)) return `${vv} isn't a valid file path.`;
-      return vv.split("/").some((vv => "" === vv || "." === vv || ".." === vv)) ? `${vv} isn't a valid file path.` : null
+    function CT(TT) {
+      if (!TT.toLowerCase().endsWith(".wgsl")) return `${TT} isn't a .wgsl file.`;
+      if (TT.length > yT) return `A file path is over ${yT} characters.`;
+      if (TT.includes("\\") || /[\u0000-\u001f]/.test(TT)) return `${TT} isn't a valid file path.`;
+      return TT.split("/").some((TT => "" === TT || "." === TT || ".." === TT)) ? `${TT} isn't a valid file path.` : null
     }
-    const wv = /^(.*)\[rot\[([1-4])$/;
+    const jT = /^(.*)\[rot\[([1-4])$/;
 
-    function av(vv, zv) {
-      let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const hv = new Map;
-      zv.forEach(((vv, zv) => {
+    function vT(TT, kT) {
+      let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const lT = new Map;
+      kT.forEach(((TT, kT) => {
         let {
-          numAnimStates: Pv,
-          animStartIdx: Sv
-        } = vv;
-        for (let ev = 1; ev < Pv; ev++) hv.set(Sv + ev - 1, zv)
+          numAnimStates: cT,
+          animStartIdx: MT
+        } = TT;
+        for (let KT = 1; KT < cT; KT++) lT.set(MT + KT - 1, kT)
       }));
-      const Sv = Object.entries(vv),
-        ev = new Map;
-      for (const [sv, Cv] of Sv) {
-        const vv = wv.exec(sv);
-        "1" === vv?.[2] && ev.set(vv[1], Cv + 1)
+      const MT = Object.entries(TT),
+        KT = new Map;
+      for (const [tT, hT] of MT) {
+        const TT = jT.exec(tT);
+        "1" === TT?.[2] && KT.set(TT[1], hT + 1)
       }
-      const gv = vv => {
-          const zv = wv.exec(vv);
-          return zv && ev.has(zv[1]) ? {
-            root: zv[1],
-            rotation: Number(zv[2]) - 1
+      const OT = TT => {
+          const kT = jT.exec(TT);
+          return kT && KT.has(kT[1]) ? {
+            root: kT[1],
+            rotation: Number(kT[2]) - 1
           } : null
         },
-        pv = new Set(Sv.map((vv => {
-          let [zv] = vv;
-          return gv(zv)?.root ?? zv
+        yT = new Set(MT.map((TT => {
+          let [kT] = TT;
+          return OT(kT)?.root ?? kT
         }))),
-        dv = (vv, Pv) => {
-          const hv = vv.replace(/_?0$/, "");
-          return (zv[Pv]?.numAnimStates ?? 0) > 1 && !pv.has(hv) ? hv : vv
+        fT = (TT, cT) => {
+          const lT = TT.replace(/_?0$/, "");
+          return (kT[cT]?.numAnimStates ?? 0) > 1 && !yT.has(lT) ? lT : TT
         },
-        Nv = new Map;
-      for (const [wv, sv] of Sv) Nv.set(sv, dv(gv(wv)?.root ?? wv, sv));
-      const lv = Sv.reduce(((vv, zv) => {
-          let [, Pv] = zv;
-          return Math.max(vv, Pv + 1)
+        xT = new Map;
+      for (const [jT, tT] of MT) xT.set(tT, fT(OT(jT)?.root ?? jT, tT));
+      const IT = MT.reduce(((TT, kT) => {
+          let [, cT] = kT;
+          return Math.max(TT, cT + 1)
         }), 0),
-        Tv = Array.from({
-          length: lv
-        }, ((vv, zv) => ({
-          id: zv + 1,
+        AT = Array.from({
+          length: IT
+        }, ((TT, kT) => ({
+          id: kT + 1,
           rotation: 0
         }))),
-        Wv = new Map,
-        av = new Map;
-      for (const [wv, sv] of Sv) {
-        const vv = gv(wv),
-          zv = hv.get(sv);
-        if (void 0 !== zv) {
-          const Pv = Nv.get(zv);
-          av.set(wv, {
-            name: wv,
-            texture: Pv,
+        CT = new Map,
+        vT = new Map;
+      for (const [jT, tT] of MT) {
+        const TT = OT(jT),
+          kT = lT.get(tT);
+        if (void 0 !== kT) {
+          const cT = xT.get(kT);
+          vT.set(jT, {
+            name: jT,
+            texture: cT,
             kind: "frame"
-          }), vv && !av.has(vv.root) && av.set(vv.root, {
-            name: vv.root,
-            texture: Pv,
+          }), TT && !vT.has(TT.root) && vT.set(TT.root, {
+            name: TT.root,
+            texture: cT,
             kind: "frame"
           });
           continue
         }
-        const Pv = Nv.get(sv),
-          Sv = vv?.root ?? wv;
-        if (Pv !== Sv && av.set(Sv, {
-            name: Sv,
-            texture: Pv,
+        const cT = xT.get(tT),
+          MT = TT?.root ?? jT;
+        if (cT !== MT && vT.set(MT, {
+            name: MT,
+            texture: cT,
             kind: "frame"
-          }), vv) {
-          const zv = ev.get(vv.root);
-          Tv[sv] = {
-            id: zv,
-            rotation: vv.rotation
-          }, Wv.set(Pv, zv), av.set(wv, {
-            name: wv,
-            texture: Pv,
+          }), TT) {
+          const kT = KT.get(TT.root);
+          AT[tT] = {
+            id: kT,
+            rotation: TT.rotation
+          }, CT.set(cT, kT), vT.set(jT, {
+            name: jT,
+            texture: cT,
             kind: "rotation"
           })
-        } else Wv.set(Pv, sv + 1)
+        } else CT.set(cT, tT + 1)
       }
-      for (const wv of Wv.keys()) av.delete(wv);
-      for (const [wv, sv] of Pv) {
-        const vv = Wv.get(sv);
-        void 0 === vv || Wv.has(wv) || (Wv.set(wv, vv), av.delete(wv))
+      for (const jT of CT.keys()) vT.delete(jT);
+      for (const [jT, tT] of cT) {
+        const TT = CT.get(tT);
+        void 0 === TT || CT.has(jT) || (CT.set(jT, TT), vT.delete(jT))
       }
       return {
-        named: [...Wv].sort(((vv, zv) => {
-          let [Pv] = vv, [hv] = zv;
-          return Pv < hv ? -1 : Pv > hv ? 1 : 0
-        })).map((vv => {
-          let [zv, Pv] = vv;
+        named: [...CT].sort(((TT, kT) => {
+          let [cT] = TT, [lT] = kT;
+          return cT < lT ? -1 : cT > lT ? 1 : 0
+        })).map((TT => {
+          let [kT, cT] = TT;
           return {
-            name: zv,
-            id: Pv
+            name: kT,
+            id: cT
           }
         })),
-        aliases: [...av.values()],
-        layers: Tv
+        aliases: [...vT.values()],
+        layers: AT
       }
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

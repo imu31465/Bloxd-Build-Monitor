@@ -1,208 +1,208 @@
 export const id = 130;
 export const ids = [130];
 export const modules = {
-  6351: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      loadShaderPackTextures: () => gv,
-      shaderPackTextures: () => pv
+  6623: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      loadShaderPackTextures: () => OT,
+      shaderPackTextures: () => yT
     });
-    var hv = Pv(6306);
-    let Sv = null,
-      ev = null;
+    var lT = cT(6581);
+    let MT = null,
+      KT = null;
 
-    function gv() {
-      return ev ??= Promise.all([Pv.e(70), Pv.e(198)]).then((() => Pv(39807))).then((vv => {
+    function OT() {
+      return KT ??= Promise.all([cT.e(70), cT.e(198)]).then((() => cT(40123))).then((TT => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: zv,
-          textureNameToIndex: Pv,
-          textureAnimationData: ev
-        } = vv;
-        return Sv ??= (0, hv.n)(Pv, ev, zv), Sv
-      })), ev
+          FORMER_BLOCK_IMAGE_NAMES: kT,
+          textureNameToIndex: cT,
+          textureAnimationData: KT
+        } = TT;
+        return MT ??= (0, lT.i)(cT, KT, kT), MT
+      })), KT
     }
 
-    function pv() {
-      if (null === Sv) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return Sv
+    function yT() {
+      if (null === MT) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return MT
     }
   },
-  6306: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => gv,
-      f: () => ev,
-      j: () => hv,
-      n: () => av,
-      q: () => lv,
-      r: () => Sv,
-      t: () => dv,
-      u: () => Nv,
-      x: () => Tv
+  6581: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => OT,
+      c: () => KT,
+      e: () => lT,
+      i: () => vT,
+      j: () => IT,
+      l: () => MT,
+      p: () => fT,
+      s: () => xT,
+      u: () => AT
     });
-    const hv = 5;
+    const lT = 5;
 
-    function Sv(vv) {
-      return vv === hv
+    function MT(TT) {
+      return TT === lT
     }
-    const ev = 262144,
-      gv = 256,
-      pv = 256;
+    const KT = 262144,
+      OT = 256,
+      yT = 256;
 
-    function dv(vv) {
-      if ("object" !== typeof vv || null === vv || Array.isArray(vv)) return "The pack has no files.";
-      const zv = [];
-      for (const [Pv, hv] of Object.entries(vv)) {
-        if ("string" !== typeof hv) return `${Pv} isn't text.`;
-        zv.push({
-          path: Pv,
-          source: hv
+    function fT(TT) {
+      if ("object" !== typeof TT || null === TT || Array.isArray(TT)) return "The pack has no files.";
+      const kT = [];
+      for (const [cT, lT] of Object.entries(TT)) {
+        if ("string" !== typeof lT) return `${cT} isn't text.`;
+        kT.push({
+          path: cT,
+          source: lT
         })
       }
-      return zv.sort(((vv, zv) => lv(vv.path, zv.path))),
-        function(vv) {
-          if (0 === vv.length) return "The pack has no .wgsl files.";
-          if (vv.length > gv) return `The pack has more than ${gv} .wgsl files.`;
-          const zv = new Set;
+      return kT.sort(((TT, kT) => IT(TT.path, kT.path))),
+        function(TT) {
+          if (0 === TT.length) return "The pack has no .wgsl files.";
+          if (TT.length > OT) return `The pack has more than ${OT} .wgsl files.`;
+          const kT = new Set;
           for (const {
-              path: Pv
+              path: cT
             }
-            of vv) {
-            const vv = Wv(Pv);
-            if (null !== vv) return vv;
-            if (zv.has(Pv)) return `The pack has two files at ${Pv}.`;
-            zv.add(Pv)
+            of TT) {
+            const TT = CT(cT);
+            if (null !== TT) return TT;
+            if (kT.has(cT)) return `The pack has two files at ${cT}.`;
+            kT.add(cT)
           }
-          return Tv(vv) > ev ? `The pack's .wgsl files are over ${ev/1024} KB in total.` : null
-        }(zv) ?? zv
+          return AT(TT) > KT ? `The pack's .wgsl files are over ${KT/1024} KB in total.` : null
+        }(kT) ?? kT
     }
 
-    function Nv(vv) {
-      const zv = {};
-      for (const Pv of vv) zv[Pv.path] = Pv.source;
-      return zv
+    function xT(TT) {
+      const kT = {};
+      for (const cT of TT) kT[cT.path] = cT.source;
+      return kT
     }
 
-    function lv(vv, zv) {
-      return vv < zv ? -1 : vv > zv ? 1 : 0
+    function IT(TT, kT) {
+      return TT < kT ? -1 : TT > kT ? 1 : 0
     }
 
-    function Tv(vv) {
-      const zv = new TextEncoder;
-      let Pv = 0;
+    function AT(TT) {
+      const kT = new TextEncoder;
+      let cT = 0;
       for (const {
-          source: hv
+          source: lT
         }
-        of vv) Pv += zv.encode(hv).byteLength;
-      return Pv
+        of TT) cT += kT.encode(lT).byteLength;
+      return cT
     }
 
-    function Wv(vv) {
-      if (!vv.toLowerCase().endsWith(".wgsl")) return `${vv} isn't a .wgsl file.`;
-      if (vv.length > pv) return `A file path is over ${pv} characters.`;
-      if (vv.includes("\\") || /[\u0000-\u001f]/.test(vv)) return `${vv} isn't a valid file path.`;
-      return vv.split("/").some((vv => "" === vv || "." === vv || ".." === vv)) ? `${vv} isn't a valid file path.` : null
+    function CT(TT) {
+      if (!TT.toLowerCase().endsWith(".wgsl")) return `${TT} isn't a .wgsl file.`;
+      if (TT.length > yT) return `A file path is over ${yT} characters.`;
+      if (TT.includes("\\") || /[\u0000-\u001f]/.test(TT)) return `${TT} isn't a valid file path.`;
+      return TT.split("/").some((TT => "" === TT || "." === TT || ".." === TT)) ? `${TT} isn't a valid file path.` : null
     }
-    const wv = /^(.*)\[rot\[([1-4])$/;
+    const jT = /^(.*)\[rot\[([1-4])$/;
 
-    function av(vv, zv) {
-      let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const hv = new Map;
-      zv.forEach(((vv, zv) => {
+    function vT(TT, kT) {
+      let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const lT = new Map;
+      kT.forEach(((TT, kT) => {
         let {
-          numAnimStates: Pv,
-          animStartIdx: Sv
-        } = vv;
-        for (let ev = 1; ev < Pv; ev++) hv.set(Sv + ev - 1, zv)
+          numAnimStates: cT,
+          animStartIdx: MT
+        } = TT;
+        for (let KT = 1; KT < cT; KT++) lT.set(MT + KT - 1, kT)
       }));
-      const Sv = Object.entries(vv),
-        ev = new Map;
-      for (const [sv, Cv] of Sv) {
-        const vv = wv.exec(sv);
-        "1" === vv?.[2] && ev.set(vv[1], Cv + 1)
+      const MT = Object.entries(TT),
+        KT = new Map;
+      for (const [tT, hT] of MT) {
+        const TT = jT.exec(tT);
+        "1" === TT?.[2] && KT.set(TT[1], hT + 1)
       }
-      const gv = vv => {
-          const zv = wv.exec(vv);
-          return zv && ev.has(zv[1]) ? {
-            root: zv[1],
-            rotation: Number(zv[2]) - 1
+      const OT = TT => {
+          const kT = jT.exec(TT);
+          return kT && KT.has(kT[1]) ? {
+            root: kT[1],
+            rotation: Number(kT[2]) - 1
           } : null
         },
-        pv = new Set(Sv.map((vv => {
-          let [zv] = vv;
-          return gv(zv)?.root ?? zv
+        yT = new Set(MT.map((TT => {
+          let [kT] = TT;
+          return OT(kT)?.root ?? kT
         }))),
-        dv = (vv, Pv) => {
-          const hv = vv.replace(/_?0$/, "");
-          return (zv[Pv]?.numAnimStates ?? 0) > 1 && !pv.has(hv) ? hv : vv
+        fT = (TT, cT) => {
+          const lT = TT.replace(/_?0$/, "");
+          return (kT[cT]?.numAnimStates ?? 0) > 1 && !yT.has(lT) ? lT : TT
         },
-        Nv = new Map;
-      for (const [wv, sv] of Sv) Nv.set(sv, dv(gv(wv)?.root ?? wv, sv));
-      const lv = Sv.reduce(((vv, zv) => {
-          let [, Pv] = zv;
-          return Math.max(vv, Pv + 1)
+        xT = new Map;
+      for (const [jT, tT] of MT) xT.set(tT, fT(OT(jT)?.root ?? jT, tT));
+      const IT = MT.reduce(((TT, kT) => {
+          let [, cT] = kT;
+          return Math.max(TT, cT + 1)
         }), 0),
-        Tv = Array.from({
-          length: lv
-        }, ((vv, zv) => ({
-          id: zv + 1,
+        AT = Array.from({
+          length: IT
+        }, ((TT, kT) => ({
+          id: kT + 1,
           rotation: 0
         }))),
-        Wv = new Map,
-        av = new Map;
-      for (const [wv, sv] of Sv) {
-        const vv = gv(wv),
-          zv = hv.get(sv);
-        if (void 0 !== zv) {
-          const Pv = Nv.get(zv);
-          av.set(wv, {
-            name: wv,
-            texture: Pv,
+        CT = new Map,
+        vT = new Map;
+      for (const [jT, tT] of MT) {
+        const TT = OT(jT),
+          kT = lT.get(tT);
+        if (void 0 !== kT) {
+          const cT = xT.get(kT);
+          vT.set(jT, {
+            name: jT,
+            texture: cT,
             kind: "frame"
-          }), vv && !av.has(vv.root) && av.set(vv.root, {
-            name: vv.root,
-            texture: Pv,
+          }), TT && !vT.has(TT.root) && vT.set(TT.root, {
+            name: TT.root,
+            texture: cT,
             kind: "frame"
           });
           continue
         }
-        const Pv = Nv.get(sv),
-          Sv = vv?.root ?? wv;
-        if (Pv !== Sv && av.set(Sv, {
-            name: Sv,
-            texture: Pv,
+        const cT = xT.get(tT),
+          MT = TT?.root ?? jT;
+        if (cT !== MT && vT.set(MT, {
+            name: MT,
+            texture: cT,
             kind: "frame"
-          }), vv) {
-          const zv = ev.get(vv.root);
-          Tv[sv] = {
-            id: zv,
-            rotation: vv.rotation
-          }, Wv.set(Pv, zv), av.set(wv, {
-            name: wv,
-            texture: Pv,
+          }), TT) {
+          const kT = KT.get(TT.root);
+          AT[tT] = {
+            id: kT,
+            rotation: TT.rotation
+          }, CT.set(cT, kT), vT.set(jT, {
+            name: jT,
+            texture: cT,
             kind: "rotation"
           })
-        } else Wv.set(Pv, sv + 1)
+        } else CT.set(cT, tT + 1)
       }
-      for (const wv of Wv.keys()) av.delete(wv);
-      for (const [wv, sv] of Pv) {
-        const vv = Wv.get(sv);
-        void 0 === vv || Wv.has(wv) || (Wv.set(wv, vv), av.delete(wv))
+      for (const jT of CT.keys()) vT.delete(jT);
+      for (const [jT, tT] of cT) {
+        const TT = CT.get(tT);
+        void 0 === TT || CT.has(jT) || (CT.set(jT, TT), vT.delete(jT))
       }
       return {
-        named: [...Wv].sort(((vv, zv) => {
-          let [Pv] = vv, [hv] = zv;
-          return Pv < hv ? -1 : Pv > hv ? 1 : 0
-        })).map((vv => {
-          let [zv, Pv] = vv;
+        named: [...CT].sort(((TT, kT) => {
+          let [cT] = TT, [lT] = kT;
+          return cT < lT ? -1 : cT > lT ? 1 : 0
+        })).map((TT => {
+          let [kT, cT] = TT;
           return {
-            name: zv,
-            id: Pv
+            name: kT,
+            id: cT
           }
         })),
-        aliases: [...av.values()],
-        layers: Tv
+        aliases: [...vT.values()],
+        layers: AT
       }
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

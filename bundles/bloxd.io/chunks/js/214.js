@@ -1,79 +1,79 @@
 export const id = 214;
 export const ids = [214];
 export const modules = {
-  40372: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      LobbyManageView: () => mz
+  40697: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      LobbyManageView: () => Dk
     });
-    var hv = Pv(52),
-      Sv = Pv(1465),
-      ev = Pv(2324),
-      gv = Pv(2337),
-      pv = Pv(2340),
-      dv = Pv(36098);
+    var lT = cT(71),
+      MT = cT(1497),
+      KT = cT(2462),
+      OT = cT(2485),
+      yT = cT(2487),
+      fT = cT(36383);
 
-    function Nv() {
-      const [vv, zv] = (0, hv.useState)(new Map);
+    function xT() {
+      const [TT, kT] = (0, lT.useState)(new Map);
       return {
-        get: zv => vv.get(zv),
-        hold: (0, hv.useCallback)(((vv, Pv, hv) => {
-          zv((zv => new Map(zv).set(vv, Pv))), hv.then((() => {
-            zv((zv => {
-              const Pv = new Map(zv);
-              return Pv.delete(vv), Pv
+        get: kT => TT.get(kT),
+        hold: (0, lT.useCallback)(((TT, cT, lT) => {
+          kT((kT => new Map(kT).set(TT, cT))), lT.then((() => {
+            kT((kT => {
+              const cT = new Map(kT);
+              return cT.delete(TT), cT
             }))
           }))
         }), [])
       }
     }
-    var lv = Pv(1035),
-      Tv = Pv.n(lv),
-      Wv = Pv(1175),
-      wv = Pv(1042),
-      av = Pv(1327),
-      sv = Pv(2480),
-      Cv = Pv(4765),
-      iv = Pv(3329);
-    var cv = Pv(1923),
-      Gv = Pv(1442);
+    var IT = cT(1046),
+      AT = cT.n(IT),
+      CT = cT(1195),
+      jT = cT(1061),
+      vT = cT(1348),
+      tT = cT(2665),
+      hT = cT(4968),
+      NT = cT(3536);
+    var QT = cT(1996),
+      ST = cT(1470);
 
-    function mv(vv, zv, Pv) {
-      const hv = vv.filter((vv => vv.name !== zv)),
-        Sv = hv.filter((vv => "none" === vv.role)).sort(((vv, zv) => zv.at - vv.at)),
-        ev = hv.filter((vv => "none" !== vv.role)).sort(((vv, zv) => Pv.indexOf(vv.role) - Pv.indexOf(zv.role) || zv.at - vv.at));
-      return [...vv.some((vv => vv.name === zv)) && null !== zv ? [zv] : [], ...[...Sv, ...ev].map((vv => vv.name))]
+    function DT(TT, kT, cT) {
+      const lT = TT.filter((TT => TT.name !== kT)),
+        MT = lT.filter((TT => "none" === TT.role)).sort(((TT, kT) => kT.at - TT.at)),
+        KT = lT.filter((TT => "none" !== TT.role)).sort(((TT, kT) => cT.indexOf(TT.role) - cT.indexOf(kT.role) || kT.at - TT.at));
+      return [...TT.some((TT => TT.name === kT)) && null !== kT ? [kT] : [], ...[...MT, ...KT].map((TT => TT.name))]
     }
 
-    function jv(vv, zv) {
-      const Pv = vv.banned.map((vv => vv.name)),
-        hv = new Set(Pv);
+    function aT(TT, kT) {
+      const cT = TT.banned.map((TT => TT.name)),
+        lT = new Set(cT);
       return {
-        here: mv(vv.here, zv, vv.roles.map((vv => vv.role))),
-        away: vv.away.filter((vv => !hv.has(vv.name))).map((vv => vv.name)),
-        banned: Pv
+        here: DT(TT.here, kT, TT.roles.map((TT => TT.role))),
+        away: TT.away.filter((TT => !lT.has(TT.name))).map((TT => TT.name)),
+        banned: cT
       }
     }
 
-    function fv(vv, zv) {
-      const Pv = vv.here.find((vv => vv.name === zv));
-      if (Pv) return {
+    function FT(TT, kT) {
+      const cT = TT.here.find((TT => TT.name === kT));
+      if (cT) return {
         section: "here",
-        player: Pv
+        player: cT
       };
-      const hv = vv.banned.find((vv => vv.name === zv));
-      if (hv) return {
+      const lT = TT.banned.find((TT => TT.name === kT));
+      if (lT) return {
         section: "banned",
-        bannedAt: hv.at
+        bannedAt: lT.at
       };
-      const Sv = vv.away.find((vv => vv.name === zv));
-      return Sv ? {
+      const MT = TT.away.find((TT => TT.name === kT));
+      return MT ? {
         section: "away",
-        player: Sv
+        player: MT
       } : {
         section: "gone"
       }
     }
-    const Fv = {
+    const rT = {
       gamemode: !1,
       roles: [],
       fixedRole: null,
@@ -81,357 +81,357 @@ export const modules = {
       ban: !1,
       unban: !1
     };
-    var Yv = Pv(2472),
-      nv = Pv(36086),
-      Ov = Pv(36236),
-      Dv = Pv(2917),
-      Kv = Pv(312);
+    var PT = cT(2660),
+      wT = cT(36369),
+      mT = cT(36541),
+      bT = cT(3059),
+      zT = cT(339);
 
-    function Vv(vv, zv, Pv) {
-      return zv.map((zv => {
-        if ("string" === typeof zv) return zv;
-        const hv = "str" in zv ? zv.str : zv;
-        return "string" === typeof hv ? hv : "entityName" in hv ? hv.entityName : "translationKey" in hv ? vv(hv.translationKey, (0, Wv.i)(hv.params, Pv)) : ""
+    function JT(TT, kT, cT) {
+      return kT.map((kT => {
+        if ("string" === typeof kT) return kT;
+        const lT = "str" in kT ? kT.str : kT;
+        return "string" === typeof lT ? lT : "entityName" in lT ? lT.entityName : "translationKey" in lT ? TT(lT.translationKey, (0, CT.m)(lT.params, cT)) : ""
       })).join("")
     }
 
-    function Uv(vv, zv, Pv, hv, Sv) {
-      return Sv - hv < 6e4 ? vv(`${Pv}JustNow`) : vv(Pv, {
-        time: (0, Kv.gb)((0, Wv.g)(zv, Pv), hv, Sv)
+    function oT(TT, kT, cT, lT, MT) {
+      return MT - lT < 6e4 ? TT(`${cT}JustNow`) : TT(cT, {
+        time: (0, zT._)((0, CT.k)(kT, cT), lT, MT)
       })
     }
-    var Rv = Pv(1858),
-      xv = Pv(1647),
-      tv = Pv(1082);
+    var HT = cT(1921),
+      eT = cT(1692),
+      GT = cT(1099);
 
-    function qv(vv) {
+    function VT(TT) {
       let {
-        status: zv
-      } = vv;
-      return (0, tv.jsx)("span", {
-        className: Tv()("LobbyManageStatus", {
-          LobbyManageStatusRefused: !zv.ok
+        status: kT
+      } = TT;
+      return (0, GT.jsx)("span", {
+        className: AT()("LobbyManageStatus", {
+          LobbyManageStatusRefused: !kT.ok
         }),
-        children: (0, tv.jsx)(Rv.c, {
-          text: zv.text
+        children: (0, GT.jsx)(HT.b, {
+          text: kT.text
         })
       })
     }
 
-    function Iv(vv) {
+    function ET(TT) {
       let {
-        names: zv,
-        cap: Pv,
-        filterFrom: Sv,
-        moreLabel: ev,
-        reveal: gv = null,
-        renderRow: pv
-      } = vv;
+        names: kT,
+        cap: cT,
+        filterFrom: MT,
+        moreLabel: KT,
+        reveal: OT = null,
+        renderRow: yT
+      } = TT;
       const {
-        t: dv
-      } = (0, Wv.x)(), [Nv, lv] = (0, hv.useState)(!1), [Tv, av] = (0, hv.useState)(""), Cv = Nv || null !== gv && zv.indexOf(gv) >= Pv, iv = (Cv || zv.length <= Pv) && null !== Sv && zv.length > Sv, cv = Tv.trim().toLowerCase();
-      let Gv = Cv ? zv : zv.slice(0, Pv);
-      return iv && "" !== cv && (Gv = Gv.filter((vv => vv.toLowerCase().includes(cv)))), (0, tv.jsxs)(tv.Fragment, {
-        children: [iv && (0, tv.jsx)(xv.c, {
+        t: fT
+      } = (0, CT.B)(), [xT, IT] = (0, lT.useState)(!1), [AT, vT] = (0, lT.useState)(""), hT = xT || null !== OT && kT.indexOf(OT) >= cT, NT = (hT || kT.length <= cT) && null !== MT && kT.length > MT, QT = AT.trim().toLowerCase();
+      let ST = hT ? kT : kT.slice(0, cT);
+      return NT && "" !== QT && (ST = ST.filter((TT => TT.toLowerCase().includes(QT)))), (0, GT.jsxs)(GT.Fragment, {
+        children: [NT && (0, GT.jsx)(eT.b, {
           className: "LobbyManageFilter",
-          placeholderText: dv("lobbyManage:findName"),
-          ariaLabel: dv("lobbyManage:findName"),
-          onValueChange: vv => {
-            av(vv)
+          placeholderText: fT("lobbyManage:findName"),
+          ariaLabel: fT("lobbyManage:findName"),
+          onValueChange: TT => {
+            vT(TT)
           }
-        }), Gv.length > 0 && (0, tv.jsx)("div", {
+        }), ST.length > 0 && (0, GT.jsx)("div", {
           className: "PlayerRows",
-          children: Gv.map(((vv, zv) => pv(vv, Gv.length - zv)))
-        }), !Cv && zv.length > Pv && (0, tv.jsx)("div", {
+          children: ST.map(((TT, kT) => yT(TT, ST.length - kT)))
+        }), !hT && kT.length > cT && (0, GT.jsx)("div", {
           className: "LobbyManageMore",
-          children: (0, tv.jsx)(sv.b, {
-            label: (0, tv.jsxs)(tv.Fragment, {
-              children: [ev, " ", (0, tv.jsx)(wv.b, {
+          children: (0, GT.jsx)(tT.c, {
+            label: (0, GT.jsxs)(GT.Fragment, {
+              children: [KT, " ", (0, GT.jsx)(jT.e, {
                 name: "angle-down"
               })]
             }),
             onClick: () => {
-              lv(!0)
+              IT(!0)
             }
           })
         })]
       })
     }
 
-    function Qv(vv) {
+    function ZT(TT) {
       let {
-        value: zv,
-        placeholder: Pv,
-        ariaLabel: Sv,
-        maxLength: ev,
-        wide: gv = !1,
-        onSave: pv
-      } = vv;
-      const dv = (0, hv.useRef)(null),
-        [Nv, lv] = (0, hv.useState)(0),
-        Wv = (0, hv.useRef)(!0),
-        wv = (0, hv.useRef)(null),
-        av = (0, hv.useRef)({
-          value: zv,
-          onSave: pv
+        value: kT,
+        placeholder: cT,
+        ariaLabel: MT,
+        maxLength: KT,
+        wide: OT = !1,
+        onSave: yT
+      } = TT;
+      const fT = (0, lT.useRef)(null),
+        [xT, IT] = (0, lT.useState)(0),
+        CT = (0, lT.useRef)(!0),
+        jT = (0, lT.useRef)(null),
+        vT = (0, lT.useRef)({
+          value: kT,
+          onSave: yT
         });
-      av.current = {
-        value: zv,
-        onSave: pv
+      vT.current = {
+        value: kT,
+        onSave: yT
       };
-      const sv = () => {
-        const vv = wv.current;
-        wv.current = null, null !== vv && vv !== av.current.value && av.current.onSave(vv).then((() => {
-          Wv.current && lv((vv => vv + 1))
+      const tT = () => {
+        const TT = jT.current;
+        jT.current = null, null !== TT && TT !== vT.current.value && vT.current.onSave(TT).then((() => {
+          CT.current && IT((TT => TT + 1))
         }))
       };
-      return (0, hv.useEffect)((() => {
-        null === wv.current && dv.current && (dv.current.value = zv)
-      }), [zv, Nv]), (0, hv.useEffect)((() => () => {
-        Wv.current = !1, sv()
-      }), []), (0, tv.jsx)("div", {
-        className: Tv()("LobbyManageRuleInput", {
-          LobbyManageRuleInputWide: gv
+      return (0, lT.useEffect)((() => {
+        null === jT.current && fT.current && (fT.current.value = kT)
+      }), [kT, xT]), (0, lT.useEffect)((() => () => {
+        CT.current = !1, tT()
+      }), []), (0, GT.jsx)("div", {
+        className: AT()("LobbyManageRuleInput", {
+          LobbyManageRuleInputWide: OT
         }),
-        onBlur: sv,
-        children: (0, tv.jsx)(xv.c, {
-          domRef: dv,
-          defaultValue: zv,
-          placeholderText: Pv,
-          ariaLabel: Sv,
-          maxLength: ev,
-          onValueChange: vv => {
-            wv.current = vv
+        onBlur: tT,
+        children: (0, GT.jsx)(eT.b, {
+          domRef: fT,
+          defaultValue: kT,
+          placeholderText: cT,
+          ariaLabel: MT,
+          maxLength: KT,
+          onValueChange: TT => {
+            jT.current = TT
           },
-          onEnter: sv
+          onEnter: tT
         })
       })
     }
-    const Zv = ["mod", "coOwner"],
-      Av = {
+    const uT = ["mod", "coOwner"],
+      XT = {
         coOwner: "lobbyManage:roleCanCoOwner",
         mod: "lobbyManage:roleCanMod",
         coder: "lobbyManage:roleCanCoder",
         builder: "lobbyManage:roleCanBuilder"
       };
 
-    function Lv(vv) {
-      var zv, Pv, ev;
+    function dT(TT) {
+      var kT, cT, KT;
       let {
-        name: gv,
-        place: pv,
-        openedIn: dv,
-        isYou: lv,
-        manage: Tv,
-        hiddenNames: av,
-        zIndex: sv
-      } = vv;
+        name: OT,
+        place: yT,
+        openedIn: fT,
+        isYou: IT,
+        manage: AT,
+        hiddenNames: vT,
+        zIndex: tT
+      } = TT;
       const {
-        t: Cv,
-        selectedLanguage: iv
-      } = (0, Wv.x)(), [cv, mv] = (0, hv.useState)(null), {
-        state: jv
-      } = Tv, fv = `player:${gv}`, Kv = function(vv, zv) {
-        if ("banned" === vv.section) return {
-          ...Fv,
+        t: hT,
+        selectedLanguage: NT
+      } = (0, CT.B)(), [QT, DT] = (0, lT.useState)(null), {
+        state: aT
+      } = AT, FT = `player:${OT}`, zT = function(TT, kT) {
+        if ("banned" === TT.section) return {
+          ...rT,
           unban: !0
         };
-        if ("gone" === vv.section) return Fv;
+        if ("gone" === TT.section) return rT;
         const {
-          player: Pv
-        } = vv, hv = "here" === vv.section, Sv = hv || "none" !== Pv.role ? Pv.can.roles : [];
+          player: cT
+        } = TT, lT = "here" === TT.section, MT = lT || "none" !== cT.role ? cT.can.roles : [];
         return {
-          gamemode: hv && zv && null !== Pv.gamemode && Pv.can.gamemode,
-          roles: Sv,
-          fixedRole: 0 === Sv.length && "none" !== Pv.role ? Pv.role : null,
-          kick: hv && Pv.can.kick,
-          ban: Pv.can.ban,
+          gamemode: lT && kT && null !== cT.gamemode && cT.can.gamemode,
+          roles: MT,
+          fixedRole: 0 === MT.length && "none" !== cT.role ? cT.role : null,
+          kick: lT && cT.can.kick,
+          ban: cT.can.ban,
           unban: !1
         }
-      }(pv, null !== jv.gamemodes), Rv = Tv.statusOf(fv), xv = Tv.isPending(fv), Iv = Nv(), Qv = Date.now(), Lv = vv => {
-        var zv, Pv;
-        return null !== (zv = null === (Pv = (vv => jv.roles.find((zv => zv.role === vv)))(vv)) || void 0 === Pv ? void 0 : Pv.label) && void 0 !== zv ? zv : vv
-      }, Hv = vv => {
-        const zv = Av[vv];
-        return void 0 === zv ? void 0 : Cv(zv)
-      }, Mv = "here" === pv.section || "away" === pv.section ? pv.player : null, yv = "here" === pv.section ? pv.player.id : null, {
-        playerSocialPreview: Bv,
-        isFriend: Jv
-      } = null === yv ? {
-        playerSocialPreview: (0, Ov.g)(gv, null),
+      }(yT, null !== aT.gamemodes), HT = AT.statusOf(FT), eT = AT.isPending(FT), ET = xT(), ZT = Date.now(), dT = TT => {
+        var kT, cT;
+        return null !== (kT = null === (cT = (TT => aT.roles.find((kT => kT.role === TT)))(TT)) || void 0 === cT ? void 0 : cT.label) && void 0 !== kT ? kT : TT
+      }, LT = TT => {
+        const kT = XT[TT];
+        return void 0 === kT ? void 0 : hT(kT)
+      }, RT = "here" === yT.section || "away" === yT.section ? yT.player : null, gT = "here" === yT.section ? yT.player.id : null, {
+        playerSocialPreview: UT,
+        isFriend: YT
+      } = null === gT ? {
+        playerSocialPreview: (0, mT.g)(OT, null),
         isFriend: !1
-      } : (0, nv.c)(yv, gv), Ev = function() {
-        Tv.send(...arguments)
-      }, ov = (vv, zv) => {
-        Iv.hold("role", vv, Tv.send({
+      } : (0, wT.c)(gT, OT), BT = function() {
+        AT.send(...arguments)
+      }, WT = (TT, kT) => {
+        ET.hold("role", TT, AT.send({
           type: "setRole",
-          name: gv,
-          role: vv
-        }, fv, zv))
+          name: OT,
+          role: TT
+        }, FT, kT))
       };
-      let bv = null;
-      if ("ban" === (null === cv || void 0 === cv ? void 0 : cv.kind)) bv = Cv("lobbyManageEntry:banConfirm", {
-        playerName: gv
+      let nT = null;
+      if ("ban" === (null === QT || void 0 === QT ? void 0 : QT.kind)) nT = hT("lobbyManageEntry:banConfirm", {
+        playerName: OT
       });
-      else if ("role" === (null === cv || void 0 === cv ? void 0 : cv.kind)) {
-        var rv;
-        bv = `${Cv("lobbyManage:roleConfirm",{playerName:gv,role:Lv(cv.role)})} ${null!==(rv=Hv(cv.role))&&void 0!==rv?rv:""}`
-      } else if (Rv) bv = (0, tv.jsx)(qv, {
-        status: Rv
+      else if ("role" === (null === QT || void 0 === QT ? void 0 : QT.kind)) {
+        var pT;
+        nT = `${hT("lobbyManage:roleConfirm",{playerName:OT,role:dT(QT.role)})} ${null!==(pT=LT(QT.role))&&void 0!==pT?pT:""}`
+      } else if (HT) nT = (0, GT.jsx)(VT, {
+        status: HT
       });
-      else if (lv) bv = Cv("lobbyManage:you");
-      else if ("here" === pv.section) "none" === pv.player.role && Qv - pv.player.at < 6e5 && (bv = Uv(Cv, iv.code, "lobbyManage:joinedAgo", pv.player.at, Qv));
-      else if ("away" === pv.section) {
-        if (pv.player.at > 0) {
-          const vv = "kicked" === pv.player.why ? "lobbyManage:kickedAgo" : "lobbyManage:leftAgo";
-          bv = Uv(Cv, iv.code, vv, pv.player.at, Qv)
+      else if (IT) nT = hT("lobbyManage:you");
+      else if ("here" === yT.section) "none" === yT.player.role && ZT - yT.player.at < 6e5 && (nT = oT(hT, NT.code, "lobbyManage:joinedAgo", yT.player.at, ZT));
+      else if ("away" === yT.section) {
+        if (yT.player.at > 0) {
+          const TT = "kicked" === yT.player.why ? "lobbyManage:kickedAgo" : "lobbyManage:leftAgo";
+          nT = oT(hT, NT.code, TT, yT.player.at, ZT)
         }
-      } else "banned" === pv.section ? null !== pv.bannedAt && (bv = Uv(Cv, iv.code, "lobbyManage:bannedAgo", pv.bannedAt, Qv)) : "banned" === dv && (bv = Cv("lobbyManageEntry:unbanned"));
-      return (0, tv.jsx)("div", {
+      } else "banned" === yT.section ? null !== yT.bannedAt && (nT = oT(hT, NT.code, "lobbyManage:bannedAgo", yT.bannedAt, ZT)) : "banned" === fT && (nT = hT("lobbyManageEntry:unbanned"));
+      return (0, GT.jsx)("div", {
         className: "LobbyManagePlayerRow",
-        "data-lobby-manage-row": gv,
-        children: (0, tv.jsxs)(Yv.f, {
-          playerSocialPreview: Bv,
-          isFriend: Jv,
-          status: bv,
-          opensProfileCard: !lv && (0, nv.d)(!0, gv, av),
-          zIndex: sv,
-          children: [null !== cv && (0, tv.jsxs)("div", {
+        "data-lobby-manage-row": OT,
+        children: (0, GT.jsxs)(PT.h, {
+          playerSocialPreview: UT,
+          isFriend: YT,
+          status: nT,
+          opensProfileCard: !IT && (0, wT.g)(!0, OT, vT),
+          zIndex: tT,
+          children: [null !== QT && (0, GT.jsxs)("div", {
             className: "LobbyManageButtons",
-            children: ["ban" === cv.kind && (0, tv.jsxs)(Gv.A, {
+            children: ["ban" === QT.kind && (0, GT.jsxs)(ST.I, {
               className: "LobbyManageIconButton SmallTextLight",
               analyticsClick: {
                 id: "lobby_manage.ban",
                 value: "row"
               },
               onClick: () => {
-                mv(null), Ev({
+                DT(null), BT({
                   type: "ban",
-                  name: gv
-                }, fv)
+                  name: OT
+                }, FT)
               },
-              children: [(0, tv.jsx)(wv.b, {
+              children: [(0, GT.jsx)(jT.e, {
                 name: "gavel"
-              }), (0, tv.jsx)("span", {
+              }), (0, GT.jsx)("span", {
                 className: "LobbyManageButtonLabel",
-                children: Cv("lobbyManageEntry:ban")
+                children: hT("lobbyManageEntry:ban")
               })]
-            }), "role" === cv.kind && (0, tv.jsx)(Gv.d, {
+            }), "role" === QT.kind && (0, GT.jsx)(ST.e, {
               className: "LobbyManageIconButton SmallTextLight",
               analyticsClick: {
                 id: "lobby_manage.set_role",
-                value: cv.role
+                value: QT.role
               },
               onClick: () => {
-                mv(null), ov(cv.role)
+                DT(null), WT(QT.role)
               },
-              children: Cv("lobbyManage:makeRole", {
-                role: Lv(cv.role)
+              children: hT("lobbyManage:makeRole", {
+                role: dT(QT.role)
               })
-            }), (0, tv.jsx)(Gv.e, {
+            }), (0, GT.jsx)(ST.i, {
               className: "LobbyManageIconButton SmallTextLight",
               onClick: () => {
-                mv(null)
+                DT(null)
               },
-              children: Cv("general:cancel")
+              children: hT("general:cancel")
             })]
-          }), null === cv && (0, tv.jsxs)(tv.Fragment, {
-            children: [(0, tv.jsxs)("div", {
+          }), null === QT && (0, GT.jsxs)(GT.Fragment, {
+            children: [(0, GT.jsxs)("div", {
               className: "LobbyManageChoices",
-              children: [Kv.gamemode && null !== Mv && (0, tv.jsx)(Dv.e, {
-                options: (null !== (zv = jv.gamemodes) && void 0 !== zv ? zv : []).map((vv => ({
-                  value: vv.value,
-                  label: Vv(Cv, vv.label, av)
+              children: [zT.gamemode && null !== RT && (0, GT.jsx)(bT.d, {
+                options: (null !== (kT = aT.gamemodes) && void 0 !== kT ? kT : []).map((TT => ({
+                  value: TT.value,
+                  label: JT(hT, TT.label, vT)
                 }))),
-                value: null !== (Pv = Iv.get("gamemode")) && void 0 !== Pv ? Pv : Mv.gamemode,
-                disabled: xv,
-                onChange: vv => {
-                  (0, Sv.reportAnalyticsClick)({
+                value: null !== (cT = ET.get("gamemode")) && void 0 !== cT ? cT : RT.gamemode,
+                disabled: eT,
+                onChange: TT => {
+                  (0, MT.reportAnalyticsClick)({
                     id: "lobby_manage.set_gamemode",
-                    value: vv.value
-                  }), Iv.hold("gamemode", vv.value, Tv.send({
+                    value: TT.value
+                  }), ET.hold("gamemode", TT.value, AT.send({
                     type: "setGamemode",
-                    name: gv,
-                    gamemode: vv.value
-                  }, fv))
+                    name: OT,
+                    gamemode: TT.value
+                  }, FT))
                 }
-              }), Kv.roles.length > 0 && null !== Mv && (0, tv.jsx)(Dv.e, {
-                options: [...jv.roles].reverse().filter((vv => Kv.roles.includes(vv.role))).map((vv => ({
-                  value: vv.role,
-                  label: vv.label
+              }), zT.roles.length > 0 && null !== RT && (0, GT.jsx)(bT.d, {
+                options: [...aT.roles].reverse().filter((TT => zT.roles.includes(TT.role))).map((TT => ({
+                  value: TT.role,
+                  label: TT.label
                 }))),
-                value: null !== (ev = Iv.get("role")) && void 0 !== ev ? ev : Mv.role,
-                disabled: xv,
-                onChange: vv => {
-                  var zv;
-                  (zv = vv.value) !== (null === Mv || void 0 === Mv ? void 0 : Mv.role) && (Zv.includes(zv) ? mv({
+                value: null !== (KT = ET.get("role")) && void 0 !== KT ? KT : RT.role,
+                disabled: eT,
+                onChange: TT => {
+                  var kT;
+                  (kT = TT.value) !== (null === RT || void 0 === RT ? void 0 : RT.role) && (uT.includes(kT) ? DT({
                     kind: "role",
-                    role: zv
-                  }) : ((0, Sv.reportAnalyticsClick)({
+                    role: kT
+                  }) : ((0, MT.reportAnalyticsClick)({
                     id: "lobby_manage.set_role",
-                    value: zv
-                  }), ov(zv, Hv(zv))))
+                    value: kT
+                  }), WT(kT, LT(kT))))
                 }
-              }), null !== Kv.fixedRole && (0, tv.jsx)("div", {
+              }), null !== zT.fixedRole && (0, GT.jsx)("div", {
                 className: "LobbyManageChoiceFixed",
-                children: Lv(Kv.fixedRole)
+                children: dT(zT.fixedRole)
               })]
-            }), (0, tv.jsxs)("div", {
+            }), (0, GT.jsxs)("div", {
               className: "LobbyManageButtons",
-              children: [Kv.kick && (0, tv.jsxs)(Gv.e, {
+              children: [zT.kick && (0, GT.jsxs)(ST.i, {
                 className: "LobbyManageIconButton SmallTextLight",
-                ariaLabel: `${Cv("lobbyManageEntry:kick")} ${gv}`,
-                disabled: xv,
+                ariaLabel: `${hT("lobbyManageEntry:kick")} ${OT}`,
+                disabled: eT,
                 analyticsClick: {
                   id: "lobby_manage.kick",
                   value: "row"
                 },
                 onClick: () => {
-                  Ev({
+                  BT({
                     type: "kick",
-                    name: gv
-                  }, fv)
+                    name: OT
+                  }, FT)
                 },
-                children: [(0, tv.jsx)(wv.b, {
+                children: [(0, GT.jsx)(jT.e, {
                   name: "person-falling-burst"
-                }), (0, tv.jsx)("span", {
+                }), (0, GT.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: Cv("lobbyManageEntry:kick")
+                  children: hT("lobbyManageEntry:kick")
                 })]
-              }), Kv.ban && (0, tv.jsxs)(Gv.E, {
+              }), zT.ban && (0, GT.jsxs)(ST.L, {
                 className: "LobbyManageOutlineButton SmallTextLight",
-                ariaLabel: `${Cv("lobbyManageEntry:ban")} ${gv}`,
-                disabled: xv,
+                ariaLabel: `${hT("lobbyManageEntry:ban")} ${OT}`,
+                disabled: eT,
                 padDestructive: !0,
                 onClick: () => {
-                  mv({
+                  DT({
                     kind: "ban"
                   })
                 },
-                children: [(0, tv.jsx)(wv.b, {
+                children: [(0, GT.jsx)(jT.e, {
                   name: "gavel"
-                }), (0, tv.jsx)("span", {
+                }), (0, GT.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: Cv("lobbyManageEntry:ban")
+                  children: hT("lobbyManageEntry:ban")
                 })]
-              }), Kv.unban && (0, tv.jsxs)(Gv.e, {
+              }), zT.unban && (0, GT.jsxs)(ST.i, {
                 className: "LobbyManageIconButton SmallTextLight",
-                ariaLabel: `${Cv("lobbyManageEntry:unban")} ${gv}`,
-                disabled: xv,
+                ariaLabel: `${hT("lobbyManageEntry:unban")} ${OT}`,
+                disabled: eT,
                 analyticsClick: {
                   id: "lobby_manage.unban"
                 },
                 onClick: () => {
-                  Ev({
+                  BT({
                     type: "unban",
-                    name: gv
-                  }, fv)
+                    name: OT
+                  }, FT)
                 },
-                children: [(0, tv.jsx)(wv.b, {
+                children: [(0, GT.jsx)(jT.e, {
                   name: "user-unlock"
-                }), (0, tv.jsx)("span", {
+                }), (0, GT.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: Cv("lobbyManageEntry:unban")
+                  children: hT("lobbyManageEntry:unban")
                 })]
               })]
             })]
@@ -440,783 +440,783 @@ export const modules = {
       })
     }
 
-    function Hv(vv) {
-      var zv, Pv, Sv, ev;
+    function LT(TT) {
+      var kT, cT, MT, KT;
       let {
-        manage: gv,
-        focusRequest: pv,
-        onFocused: dv
-      } = vv;
+        manage: OT,
+        focusRequest: yT,
+        onFocused: fT
+      } = TT;
       const {
-        t: Nv
-      } = (0, Wv.x)(), lv = (0, cv.h)("players"), Tv = (0, cv.h)("hiddenPlayerNames"), av = (0, hv.useRef)(null), {
-        state: Cv
-      } = gv, iv = null === lv.localId ? null : null !== (zv = null === (Pv = lv.byId[lv.localId]) || void 0 === Pv ? void 0 : Pv.name) && void 0 !== zv ? zv : null, [mv] = (0, hv.useState)((() => jv(Cv, iv))), Fv = function(vv, zv, Pv) {
-        const hv = new Set([...vv.here, ...vv.away, ...vv.banned]),
-          Sv = jv(zv, Pv),
-          ev = zv => {
-            const Pv = Sv[zv].filter((vv => !hv.has(vv)));
-            for (const vv of Pv) hv.add(vv);
-            return [...vv[zv], ...Pv]
+        t: xT
+      } = (0, CT.B)(), IT = (0, QT.h)("players"), AT = (0, QT.h)("hiddenPlayerNames"), vT = (0, lT.useRef)(null), {
+        state: hT
+      } = OT, NT = null === IT.localId ? null : null !== (kT = null === (cT = IT.byId[IT.localId]) || void 0 === cT ? void 0 : cT.name) && void 0 !== kT ? kT : null, [DT] = (0, lT.useState)((() => aT(hT, NT))), rT = function(TT, kT, cT) {
+        const lT = new Set([...TT.here, ...TT.away, ...TT.banned]),
+          MT = aT(kT, cT),
+          KT = kT => {
+            const cT = MT[kT].filter((TT => !lT.has(TT)));
+            for (const TT of cT) lT.add(TT);
+            return [...TT[kT], ...cT]
           };
         return {
-          here: ev("here"),
-          away: ev("away"),
-          banned: ev("banned")
+          here: KT("here"),
+          away: KT("away"),
+          banned: KT("banned")
         }
-      }(mv, Cv, iv), [Yv, nv] = (0, hv.useState)(!1), Ov = function(vv, zv) {
-        return vv.here.filter((vv => vv.name !== zv && "none" === vv.role && vv.can.kick)).length
-      }(Cv, iv), Dv = gv.statusOf("kickAll");
-      (0, hv.useEffect)((() => {
-        var vv, zv;
-        if (null === pv) return;
-        const Pv = null === (vv = av.current) || void 0 === vv ? void 0 : vv.querySelector(`[data-lobby-manage-row="${CSS.escape(pv.name)}"]`);
-        null === Pv || void 0 === Pv || Pv.scrollIntoView({
+      }(DT, hT, NT), [PT, wT] = (0, lT.useState)(!1), mT = function(TT, kT) {
+        return TT.here.filter((TT => TT.name !== kT && "none" === TT.role && TT.can.kick)).length
+      }(hT, NT), bT = OT.statusOf("kickAll");
+      (0, lT.useEffect)((() => {
+        var TT, kT;
+        if (null === yT) return;
+        const cT = null === (TT = vT.current) || void 0 === TT ? void 0 : TT.querySelector(`[data-lobby-manage-row="${CSS.escape(yT.name)}"]`);
+        null === cT || void 0 === cT || cT.scrollIntoView({
           block: "center"
-        }), null === Pv || void 0 === Pv || null === (zv = Pv.querySelector(".ProfilePreview")) || void 0 === zv || zv.focus({
+        }), null === cT || void 0 === cT || null === (kT = cT.querySelector(".ProfilePreview")) || void 0 === kT || kT.focus({
           preventScroll: !0
-        }), dv(pv.seq)
-      }), [null === pv || void 0 === pv ? void 0 : pv.seq]);
-      const Kv = vv => (zv, Pv) => (0, tv.jsx)(Lv, {
-        name: zv,
-        place: fv(Cv, zv),
-        openedIn: vv,
-        isYou: zv === iv,
-        manage: gv,
-        hiddenNames: Tv,
-        zIndex: Pv
-      }, zv);
-      return (0, tv.jsxs)("div", {
-        ref: av,
+        }), fT(yT.seq)
+      }), [null === yT || void 0 === yT ? void 0 : yT.seq]);
+      const zT = TT => (kT, cT) => (0, GT.jsx)(dT, {
+        name: kT,
+        place: FT(hT, kT),
+        openedIn: TT,
+        isYou: kT === NT,
+        manage: OT,
+        hiddenNames: AT,
+        zIndex: cT
+      }, kT);
+      return (0, GT.jsxs)("div", {
+        ref: vT,
         className: "LobbyManagePage",
-        children: [Fv.here.length > 0 && (0, tv.jsxs)("div", {
+        children: [rT.here.length > 0 && (0, GT.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, tv.jsxs)("div", {
+          children: [(0, GT.jsxs)("div", {
             className: "LobbyManageBoxHeading",
-            children: [(0, tv.jsx)(sv.b, {
-              label: Nv("lobbyManage:here"),
-              meta: Cv.here.length
-            }), Ov >= 2 && !Yv && (0, tv.jsxs)(Gv.E, {
+            children: [(0, GT.jsx)(tT.c, {
+              label: xT("lobbyManage:here"),
+              meta: hT.here.length
+            }), mT >= 2 && !PT && (0, GT.jsxs)(ST.L, {
               className: "LobbyManageTitleAction SmallTextLight",
               padDestructive: !0,
-              disabled: gv.isPending("kickAll"),
+              disabled: OT.isPending("kickAll"),
               onClick: () => {
-                nv(!0)
+                wT(!0)
               },
-              children: [(0, tv.jsx)(wv.b, {
+              children: [(0, GT.jsx)(jT.e, {
                 name: "person-falling-burst"
-              }), " ", Nv("lobbyManage:kickAll")]
+              }), " ", xT("lobbyManage:kickAll")]
             })]
-          }), Yv && Ov >= 2 && (0, tv.jsxs)("div", {
+          }), PT && mT >= 2 && (0, GT.jsxs)("div", {
             className: "LobbyManageConfirm",
-            children: [(0, tv.jsx)("span", {
+            children: [(0, GT.jsx)("span", {
               className: "LobbyManageConfirmText",
-              children: Nv("lobbyManage:kickAllConfirm", {
-                count: Ov
+              children: xT("lobbyManage:kickAllConfirm", {
+                count: mT
               })
-            }), (0, tv.jsxs)("div", {
+            }), (0, GT.jsxs)("div", {
               className: "LobbyManageButtons",
-              children: [(0, tv.jsx)(Gv.A, {
+              children: [(0, GT.jsx)(ST.I, {
                 className: "LobbyManageIconButton SmallTextLight",
                 analyticsClick: {
                   id: "lobby_manage.kick_all"
                 },
                 onClick: () => {
-                  nv(!1), gv.send({
+                  wT(!1), OT.send({
                     type: "kickAll"
                   }, "kickAll")
                 },
-                children: Nv("lobbyManage:kickAll")
-              }), (0, tv.jsx)(Gv.e, {
+                children: xT("lobbyManage:kickAll")
+              }), (0, GT.jsx)(ST.i, {
                 className: "LobbyManageIconButton SmallTextLight",
                 onClick: () => {
-                  nv(!1)
+                  wT(!1)
                 },
-                children: Nv("general:cancel")
+                children: xT("general:cancel")
               })]
             })]
-          }), Dv && (0, tv.jsx)("div", {
+          }), bT && (0, GT.jsx)("div", {
             className: "LobbyManageBoxStatus",
-            children: (0, tv.jsx)(qv, {
-              status: Dv
+            children: (0, GT.jsx)(VT, {
+              status: bT
             })
-          }), (0, tv.jsx)(Iv, {
-            names: Fv.here,
-            cap: Fv.here.length,
+          }), (0, GT.jsx)(ET, {
+            names: rT.here,
+            cap: rT.here.length,
             filterFrom: 20,
             moreLabel: "",
-            renderRow: Kv("here")
+            renderRow: zT("here")
           })]
-        }), Fv.away.length > 0 && (0, tv.jsxs)("div", {
+        }), rT.away.length > 0 && (0, GT.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, tv.jsx)(sv.b, {
-            label: Nv("lobbyManage:notHere"),
-            meta: Fv.away.length
-          }), (0, tv.jsx)(Iv, {
-            names: Fv.away,
+          children: [(0, GT.jsx)(tT.c, {
+            label: xT("lobbyManage:notHere"),
+            meta: rT.away.length
+          }), (0, GT.jsx)(ET, {
+            names: rT.away,
             cap: 5,
             filterFrom: null,
-            moreLabel: Nv("lobbyManage:allCount", {
-              count: Fv.away.length
+            moreLabel: xT("lobbyManage:allCount", {
+              count: rT.away.length
             }),
-            reveal: null !== (Sv = null === pv || void 0 === pv ? void 0 : pv.name) && void 0 !== Sv ? Sv : null,
-            renderRow: Kv("away")
+            reveal: null !== (MT = null === yT || void 0 === yT ? void 0 : yT.name) && void 0 !== MT ? MT : null,
+            renderRow: zT("away")
           })]
-        }), Fv.banned.length > 0 && (0, tv.jsxs)("div", {
+        }), rT.banned.length > 0 && (0, GT.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, tv.jsx)(sv.b, {
-            label: Nv("lobbyManage:banned"),
-            meta: Fv.banned.length
-          }), (0, tv.jsx)(Iv, {
-            names: Fv.banned,
+          children: [(0, GT.jsx)(tT.c, {
+            label: xT("lobbyManage:banned"),
+            meta: rT.banned.length
+          }), (0, GT.jsx)(ET, {
+            names: rT.banned,
             cap: 5,
             filterFrom: 20,
-            moreLabel: Nv("lobbyManage:allCount", {
-              count: Fv.banned.length
+            moreLabel: xT("lobbyManage:allCount", {
+              count: rT.banned.length
             }),
-            reveal: null !== (ev = null === pv || void 0 === pv ? void 0 : pv.name) && void 0 !== ev ? ev : null,
-            renderRow: Kv("banned")
+            reveal: null !== (KT = null === yT || void 0 === yT ? void 0 : yT.name) && void 0 !== KT ? KT : null,
+            renderRow: zT("banned")
           })]
         })]
       })
     }
-    var Mv = Pv(4386),
-      yv = Pv(1612),
-      Bv = Pv(36213),
-      Jv = Pv(36229),
-      Ev = Pv(36221),
-      ov = Pv(36217),
-      bv = Pv(36258),
-      rv = Pv(36243),
-      kv = Pv(36252);
+    var RT = cT(4611),
+      gT = cT(1663),
+      UT = cT(36523),
+      YT = cT(36533),
+      BT = cT(36531),
+      WT = cT(36528),
+      nT = cT(36567),
+      pT = cT(36550),
+      iT = cT(36559);
 
-    function Xv(vv) {
-      const zv = new Set;
-      for (const Pv of vv) zv.add(Pv.toLowerCase());
-      return zv
+    function qT(TT) {
+      const kT = new Set;
+      for (const cT of TT) kT.add(cT.toLowerCase());
+      return kT
     }
 
-    function uv(vv) {
-      var zv, Pv;
+    function sT(TT) {
+      var kT, cT;
       let {
-        state: Sv,
-        lobbyName: ev,
-        listed: gv,
-        isListed: pv,
-        xG: dv,
-        Km: Nv,
-        statusOf: lv
-      } = vv;
+        state: MT,
+        lobbyName: KT,
+        listed: OT,
+        isListed: yT,
+        pN: fT,
+        uF: xT,
+        statusOf: IT
+      } = TT;
       const {
-        t: Tv,
-        selectedLanguage: wv
-      } = (0, Wv.x)(), av = (0, yv.l)(), Cv = (0, cv.h)("players"), iv = null === Cv.localId ? null : null !== (zv = null === (Pv = Cv.byId[Cv.localId]) || void 0 === Pv ? void 0 : Pv.name) && void 0 !== zv ? zv : null, Gv = (0, hv.useMemo)((() => (0, ov.i)(av.friends, ev, Sv.here.map((vv => vv.name)))), [av.friends, ev, Sv.here]), mv = new Map(Gv.map((vv => [vv.friend.name.toLowerCase(), vv]))), jv = function(vv) {
+        t: AT,
+        selectedLanguage: jT
+      } = (0, CT.B)(), vT = (0, gT.n)(), hT = (0, QT.h)("players"), NT = null === hT.localId ? null : null !== (kT = null === (cT = hT.byId[hT.localId]) || void 0 === cT ? void 0 : cT.name) && void 0 !== kT ? kT : null, ST = (0, lT.useMemo)((() => (0, WT.i)(vT.friends, KT, MT.here.map((TT => TT.name)))), [vT.friends, KT, MT.here]), DT = new Map(ST.map((TT => [TT.friend.name.toLowerCase(), TT]))), aT = function(TT) {
         let {
-          refused: zv,
-          listed: Pv,
-          here: hv,
-          friends: Sv,
-          excluded: ev
-        } = vv;
-        const gv = Xv(ev),
-          pv = vv => vv.filter((vv => {
-            const zv = vv.toLowerCase();
-            return !gv.has(zv) && (gv.add(zv), !0)
+          refused: kT,
+          listed: cT,
+          here: lT,
+          friends: MT,
+          excluded: KT
+        } = TT;
+        const OT = qT(KT),
+          yT = TT => TT.filter((TT => {
+            const kT = TT.toLowerCase();
+            return !OT.has(kT) && (OT.add(kT), !0)
           }));
         return {
           added: [],
-          refused: pv(zv),
-          listed: pv(Pv),
-          suggested: pv([...hv, ...Sv])
+          refused: yT(kT),
+          listed: yT(cT),
+          suggested: yT([...lT, ...MT])
         }
       }({
-        refused: Sv.refused.map((vv => vv.name)),
-        listed: gv,
-        here: Sv.here.map((vv => vv.name)),
-        friends: Gv.flatMap((vv => "here" === vv.place ? [] : [vv.friend.name])),
-        excluded: [...null === iv ? [] : [iv], ...[...Sv.here, ...Sv.away].flatMap((vv => "none" === vv.role || (0, ov.k)(gv, vv.name) ? [] : [vv.name]))]
-      }), [fv] = (0, hv.useState)(jv), [Fv, Yv] = (0, hv.useState)([]), Dv = function(vv, zv, Pv) {
-        const hv = Xv(Pv),
-          Sv = Xv([...Pv, ...vv.refused, ...vv.listed, ...vv.suggested]),
-          ev = Pv => [...vv[Pv].filter((vv => !hv.has(vv.toLowerCase()))), ...zv[Pv].filter((vv => {
-            const zv = vv.toLowerCase();
-            return !Sv.has(zv) && (Sv.add(zv), !0)
+        refused: MT.refused.map((TT => TT.name)),
+        listed: OT,
+        here: MT.here.map((TT => TT.name)),
+        friends: ST.flatMap((TT => "here" === TT.place ? [] : [TT.friend.name])),
+        excluded: [...null === NT ? [] : [NT], ...[...MT.here, ...MT.away].flatMap((TT => "none" === TT.role || (0, WT.j)(OT, TT.name) ? [] : [TT.name]))]
+      }), [FT] = (0, lT.useState)(aT), [rT, PT] = (0, lT.useState)([]), bT = function(TT, kT, cT) {
+        const lT = qT(cT),
+          MT = qT([...cT, ...TT.refused, ...TT.listed, ...TT.suggested]),
+          KT = cT => [...TT[cT].filter((TT => !lT.has(TT.toLowerCase()))), ...kT[cT].filter((TT => {
+            const kT = TT.toLowerCase();
+            return !MT.has(kT) && (MT.add(kT), !0)
           }))];
         return {
-          added: [...Pv],
-          refused: ev("refused"),
-          listed: ev("listed"),
-          suggested: ev("suggested")
+          added: [...cT],
+          refused: KT("refused"),
+          listed: KT("listed"),
+          suggested: KT("suggested")
         }
-      }(fv, jv, Fv), Kv = (vv, zv) => {
-        var Pv, hv;
-        const ev = vv.toLowerCase(),
-          gv = mv.get(ev),
-          Nv = Sv.here.find((vv => vv.name.toLowerCase() === ev)),
-          Wv = Sv.refused.find((vv => vv.name.toLowerCase() === ev)),
-          av = null !== (Pv = null === lv || void 0 === lv ? void 0 : lv(vv)) && void 0 !== Pv ? Pv : null;
-        let sv = null;
-        av ? sv = (0, tv.jsx)(qv, {
-          status: av
-        }) : Wv ? sv = Uv(Tv, wv.code, "lobbyManage:triedToJoinAgo", Wv.at, Date.now()) : gv && Nv ? sv = Tv("lobbyManage:friendHere") : gv ? sv = "online" === gv.place ? Tv("lobbyManage:friendOnline") : Tv("lobbyManage:friend") : Nv && (sv = Tv("lobbyManage:hereStatus"));
-        let Cv = null !== (hv = null === gv || void 0 === gv ? void 0 : gv.friend) && void 0 !== hv ? hv : (0, Ov.g)(vv, null);
-        return !gv && null !== Nv && void 0 !== Nv && Nv.id && (Cv = (0, nv.c)(Nv.id, Nv.name).playerSocialPreview), (0, tv.jsx)(rv.e, {
-          playerSocialPreview: Cv,
-          isFriend: void 0 !== gv,
+      }(FT, aT, rT), zT = (TT, kT) => {
+        var cT, lT;
+        const KT = TT.toLowerCase(),
+          OT = DT.get(KT),
+          xT = MT.here.find((TT => TT.name.toLowerCase() === KT)),
+          CT = MT.refused.find((TT => TT.name.toLowerCase() === KT)),
+          vT = null !== (cT = null === IT || void 0 === IT ? void 0 : IT(TT)) && void 0 !== cT ? cT : null;
+        let tT = null;
+        vT ? tT = (0, GT.jsx)(VT, {
+          status: vT
+        }) : CT ? tT = oT(AT, jT.code, "lobbyManage:triedToJoinAgo", CT.at, Date.now()) : OT && xT ? tT = AT("lobbyManage:friendHere") : OT ? tT = "online" === OT.place ? AT("lobbyManage:friendOnline") : AT("lobbyManage:friend") : xT && (tT = AT("lobbyManage:hereStatus"));
+        let hT = null !== (lT = null === OT || void 0 === OT ? void 0 : OT.friend) && void 0 !== lT ? lT : (0, mT.g)(TT, null);
+        return !OT && null !== xT && void 0 !== xT && xT.id && (hT = (0, wT.c)(xT.id, xT.name).playerSocialPreview), (0, GT.jsx)(pT.c, {
+          playerSocialPreview: hT,
+          isFriend: void 0 !== OT,
           hideFriendBadge: !0,
-          status: sv,
-          zIndex: zv,
-          MT: {
-            on: pv(vv),
-            onChange: zv => {
-              dv(vv, zv)
+          status: tT,
+          zIndex: kT,
+          UA: {
+            on: yT(TT),
+            onChange: kT => {
+              fT(TT, kT)
             }
           }
-        }, ev)
-      }, Vv = [...Dv.added, ...Dv.refused];
-      return (0, tv.jsxs)("div", {
+        }, KT)
+      }, JT = [...bT.added, ...bT.refused];
+      return (0, GT.jsxs)("div", {
         className: "LobbyManageBox",
-        children: [(0, tv.jsx)(sv.b, {
-          label: Tv("worldSocial:whitelist"),
-          meta: gv.length
-        }), (0, tv.jsx)(kv.d, {
-          label: Tv("lobbyManage:add"),
+        children: [(0, GT.jsx)(tT.c, {
+          label: AT("worldSocial:whitelist"),
+          meta: OT.length
+        }), (0, GT.jsx)(iT.d, {
+          label: AT("lobbyManage:add"),
           icon: "user-check",
-          placeholder: Tv("socialBar:enterPlayerName"),
-          onSubmit: async vv => {
-            const zv = await Nv(vv);
-            return zv.ok && Yv((zv => [vv, ...zv])), zv
+          placeholder: AT("socialBar:enterPlayerName"),
+          onSubmit: async TT => {
+            const kT = await xT(TT);
+            return kT.ok && PT((kT => [TT, ...kT])), kT
           }
-        }), Vv.length > 0 && (0, tv.jsx)("div", {
+        }), JT.length > 0 && (0, GT.jsx)("div", {
           className: "PlayerRows",
-          children: Vv.map(((vv, zv) => Kv(vv, Vv.length - zv)))
-        }), (0, tv.jsx)(Iv, {
-          names: Dv.listed,
+          children: JT.map(((TT, kT) => zT(TT, JT.length - kT)))
+        }), (0, GT.jsx)(ET, {
+          names: bT.listed,
           cap: 8,
           filterFrom: 8,
-          moreLabel: Tv("lobbyManage:allOnWhitelist", {
-            count: Dv.listed.length
+          moreLabel: AT("lobbyManage:allOnWhitelist", {
+            count: bT.listed.length
           }),
-          renderRow: Kv
-        }), (0, tv.jsx)(Iv, {
-          names: Dv.suggested,
+          renderRow: zT
+        }), (0, GT.jsx)(ET, {
+          names: bT.suggested,
           cap: 8,
           filterFrom: null,
-          moreLabel: Tv("lobbyManage:allCount", {
-            count: Dv.suggested.length
+          moreLabel: AT("lobbyManage:allCount", {
+            count: bT.suggested.length
           }),
-          renderRow: Kv
+          renderRow: zT
         })]
       })
     }
 
-    function vz(vv) {
+    function Tk(TT) {
       let {
-        manage: zv,
-        listing: Pv
-      } = vv;
+        manage: kT,
+        listing: cT
+      } = TT;
       const {
-        t: hv
-      } = (0, Wv.x)(), ev = (vv, Pv) => ((0, Sv.reportAnalyticsClick)({
+        t: lT
+      } = (0, CT.B)(), KT = (TT, cT) => ((0, MT.reportAnalyticsClick)({
         id: "lobby_manage.set_listing",
-        value: vv
-      }), zv.send({
+        value: TT
+      }), kT.send({
         type: "setListing",
-        field: vv,
-        value: Pv
-      }, `listing:${vv}`)), gv = vv => {
-        const Pv = zv.statusOf(`listing:${vv}`);
-        return Pv && !Pv.ok && (0, tv.jsx)("div", {
+        field: TT,
+        value: cT
+      }, `listing:${TT}`)), OT = TT => {
+        const cT = kT.statusOf(`listing:${TT}`);
+        return cT && !cT.ok && (0, GT.jsx)("div", {
           className: "LobbyManageFieldError",
-          children: (0, tv.jsx)(qv, {
-            status: Pv
+          children: (0, GT.jsx)(VT, {
+            status: cT
           })
         })
       };
-      return (0, tv.jsxs)("div", {
+      return (0, GT.jsxs)("div", {
         className: "LobbyManageBox LobbyManageListing",
-        children: [(0, tv.jsx)(sv.b, {
-          label: hv("lobbyManage:inWorldsList")
-        }), (0, tv.jsxs)("div", {
+        children: [(0, GT.jsx)(tT.c, {
+          label: lT("lobbyManage:inWorldsList")
+        }), (0, GT.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, tv.jsx)("div", {
+          children: [(0, GT.jsx)("div", {
             className: "SliderText",
-            children: hv("lobbyManage:description")
-          }), (0, tv.jsx)(Qv, {
-            value: Pv.description,
-            ariaLabel: hv("lobbyManage:description"),
+            children: lT("lobbyManage:description")
+          }), (0, GT.jsx)(ZT, {
+            value: cT.description,
+            ariaLabel: lT("lobbyManage:description"),
             wide: !0,
-            onSave: vv => ev("description", vv)
+            onSave: TT => KT("description", TT)
           })]
-        }), gv("description"), (0, tv.jsxs)("div", {
+        }), OT("description"), (0, GT.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, tv.jsx)("div", {
+          children: [(0, GT.jsx)("div", {
             className: "SliderText",
-            children: hv("lobbyManage:emojis")
-          }), (0, tv.jsx)(Qv, {
-            value: Pv.emojis,
-            ariaLabel: hv("lobbyManage:emojis"),
-            onSave: vv => ev("emojis", vv)
+            children: lT("lobbyManage:emojis")
+          }), (0, GT.jsx)(ZT, {
+            value: cT.emojis,
+            ariaLabel: lT("lobbyManage:emojis"),
+            onSave: TT => KT("emojis", TT)
           })]
-        }), gv("emojis"), (0, tv.jsxs)("div", {
+        }), OT("emojis"), (0, GT.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, tv.jsx)("div", {
+          children: [(0, GT.jsx)("div", {
             className: "SliderText",
-            children: hv("lobbyManage:colour")
-          }), (0, tv.jsx)(zz, {
-            value: Pv.colour,
-            ariaLabel: hv("lobbyManage:colour"),
-            onSave: vv => {
-              ev("colour", vv)
+            children: lT("lobbyManage:colour")
+          }), (0, GT.jsx)(kk, {
+            value: cT.colour,
+            ariaLabel: lT("lobbyManage:colour"),
+            onSave: TT => {
+              KT("colour", TT)
             }
           })]
-        }), gv("colour")]
+        }), OT("colour")]
       })
     }
 
-    function zz(vv) {
+    function kk(TT) {
       let {
-        value: zv,
-        ariaLabel: Pv,
-        onSave: Sv
-      } = vv;
-      const ev = (0, hv.useRef)(null),
-        gv = (0, hv.useRef)({
-          value: zv,
-          onSave: Sv
+        value: kT,
+        ariaLabel: cT,
+        onSave: MT
+      } = TT;
+      const KT = (0, lT.useRef)(null),
+        OT = (0, lT.useRef)({
+          value: kT,
+          onSave: MT
         });
-      gv.current = {
-        value: zv,
-        onSave: Sv
+      OT.current = {
+        value: kT,
+        onSave: MT
       };
-      const pv = (0, hv.useRef)(null),
-        dv = (0, hv.useRef)(!1),
-        Nv = vv => {
-          dv.current && vv.value !== gv.current.value && vv.value !== pv.current && (pv.current = vv.value, gv.current.onSave(vv.value))
+      const yT = (0, lT.useRef)(null),
+        fT = (0, lT.useRef)(!1),
+        xT = TT => {
+          fT.current && TT.value !== OT.current.value && TT.value !== yT.current && (yT.current = TT.value, OT.current.onSave(TT.value))
         };
-      return (0, hv.useEffect)((() => {
-        ev.current && document.activeElement !== ev.current && (ev.current.value = zv)
-      }), [zv]), (0, hv.useEffect)((() => {
-        const vv = ev.current,
-          zv = () => {
-            Nv(vv)
+      return (0, lT.useEffect)((() => {
+        KT.current && document.activeElement !== KT.current && (KT.current.value = kT)
+      }), [kT]), (0, lT.useEffect)((() => {
+        const TT = KT.current,
+          kT = () => {
+            xT(TT)
           };
-        return vv.addEventListener("change", zv), () => {
-          vv.removeEventListener("change", zv), Nv(vv)
+        return TT.addEventListener("change", kT), () => {
+          TT.removeEventListener("change", kT), xT(TT)
         }
-      }), []), (0, tv.jsx)("input", {
-        ref: ev,
+      }), []), (0, GT.jsx)("input", {
+        ref: KT,
         type: "color",
         className: "LobbyManageColour",
-        defaultValue: zv,
-        "aria-label": Pv,
+        defaultValue: kT,
+        "aria-label": cT,
         onInput: () => {
-          dv.current = !0
+          fT.current = !0
         },
-        onBlur: vv => {
-          Nv(vv.currentTarget)
+        onBlur: TT => {
+          xT(TT.currentTarget)
         }
       })
     }
 
-    function Pz(vv) {
+    function ck(TT) {
       let {
-        manage: zv
-      } = vv;
+        manage: kT
+      } = TT;
       const {
-        lobbyName: Pv,
-        shownLobbyName: hv
-      } = (0, cv.h)("connectedGame");
-      return zv.state.you.canSetVisibility && null !== Pv ? (0, tv.jsx)(Sz, {
-        manage: zv,
-        lobbyName: Pv,
-        worldCode: null !== hv && void 0 !== hv ? hv : Pv
-      }, Pv) : (0, tv.jsx)(ez, {
-        manage: zv,
-        lobbyName: null !== Pv && void 0 !== Pv ? Pv : ""
+        lobbyName: cT,
+        shownLobbyName: lT
+      } = (0, QT.h)("connectedGame");
+      return kT.state.you.canSetVisibility && null !== cT ? (0, GT.jsx)(Mk, {
+        manage: kT,
+        lobbyName: cT,
+        worldCode: null !== lT && void 0 !== lT ? lT : cT
+      }, cT) : (0, GT.jsx)(Kk, {
+        manage: kT,
+        lobbyName: null !== cT && void 0 !== cT ? cT : ""
       })
     }
 
-    function hz(vv) {
-      return vv.map((vv => vv.toLowerCase())).sort().join(",")
+    function lk(TT) {
+      return TT.map((TT => TT.toLowerCase())).sort().join(",")
     }
 
-    function Sz(vv) {
-      var zv;
+    function Mk(TT) {
+      var kT;
       let {
-        manage: Pv,
-        lobbyName: ev,
-        worldCode: gv
-      } = vv;
+        manage: cT,
+        lobbyName: KT,
+        worldCode: OT
+      } = TT;
       const {
-        t: pv
-      } = (0, Wv.x)(), {
-        settings: dv,
-        loading: Nv,
-        change: lv,
-        retry: Tv,
-        refresh: wv
-      } = (0, Bv.i)(ev), Cv = (0, yv.l)(), {
-        state: iv
-      } = Pv, cv = (0, hv.useRef)(dv);
-      cv.current = dv;
-      const mv = hz(null !== (zv = iv.whitelist) && void 0 !== zv ? zv : []),
-        jv = null !== iv.whitelist;
-      (0, hv.useEffect)((() => {
-        const vv = cv.current;
-        null !== vv && (vv.visibility !== iv.visibility || jv && hz(vv.whitelist) !== mv) && wv()
-      }), [iv.visibility, mv, jv, wv]);
-      const fv = async (vv, zv) => {
-        let Pv = null;
-        return await lv(vv, zv, {
+        t: yT
+      } = (0, CT.B)(), {
+        settings: fT,
+        loading: xT,
+        change: IT,
+        retry: AT,
+        refresh: jT
+      } = (0, UT.i)(KT), hT = (0, gT.n)(), {
+        state: NT
+      } = cT, QT = (0, lT.useRef)(fT);
+      QT.current = fT;
+      const DT = lk(null !== (kT = NT.whitelist) && void 0 !== kT ? kT : []),
+        aT = null !== NT.whitelist;
+      (0, lT.useEffect)((() => {
+        const TT = QT.current;
+        null !== TT && (TT.visibility !== NT.visibility || aT && lk(TT.whitelist) !== DT) && jT()
+      }), [NT.visibility, DT, aT, jT]);
+      const FT = async (TT, kT) => {
+        let cT = null;
+        return await IT(TT, kT, {
           quiet: !0,
-          onAnswer: vv => {
-            Pv = vv
+          onAnswer: TT => {
+            cT = TT
           }
-        }), Pv
-      }, Fv = (vv, zv) => {
-        null !== zv && "error" in zv && Pv.showStatus(vv, {
+        }), cT
+      }, rT = (TT, kT) => {
+        null !== kT && "error" in kT && cT.showStatus(TT, {
           ok: !1,
-          text: [pv(zv.error)]
+          text: [yT(kT.error)]
         })
-      }, Yv = async vv => {
-        if (null === dv || vv === dv.visibility) return;
-        (0, Sv.reportAnalyticsClick)({
+      }, PT = async TT => {
+        if (null === fT || TT === fT.visibility) return;
+        (0, MT.reportAnalyticsClick)({
           id: "lobby_manage.set_mode",
-          value: vv
+          value: TT
         });
-        const zv = "whitelist" === vv ? (0, ov.e)((0, ov.i)(Cv.friends, ev, iv.here.map((vv => vv.name))), (0, bv.d)(ev), dv.whitelist) : [],
-          Pv = await fv({
-            setVisibility: vv
-          }, (zv => ({
-            ...zv,
-            visibility: vv
+        const kT = "whitelist" === TT ? (0, WT.e)((0, WT.i)(hT.friends, KT, NT.here.map((TT => TT.name))), (0, nT.d)(KT), fT.whitelist) : [],
+          cT = await FT({
+            setVisibility: TT
+          }, (kT => ({
+            ...kT,
+            visibility: TT
           })));
-        Fv("mode", Pv), null === Pv || "error" in Pv || await (async vv => {
-          for (const zv of (0, ov.o)(vv, Mv.y))
-            if (!await lv({
-                whitelistAdd: zv
-              }, (vv => (0, ov.t)(vv, zv, !0)))) return !1;
+        rT("mode", cT), null === cT || "error" in cT || await (async TT => {
+          for (const kT of (0, WT.n)(TT, RT.D))
+            if (!await IT({
+                whitelistAdd: kT
+              }, (TT => (0, WT.t)(TT, kT, !0)))) return !1;
           return !0
-        })(zv)
-      }, nv = (0, hv.useMemo)((() => {
-        var vv;
-        if (null === dv) return [];
-        const zv = null !== (vv = iv.whitelist) && void 0 !== vv ? vv : [];
-        return [...zv.filter((vv => (0, ov.k)(dv.whitelist, vv))), ...dv.whitelist.filter((vv => !(0, ov.k)(zv, vv)))]
-      }), [dv, iv.whitelist]), Ov = Pv.statusOf("mode");
-      return (0, tv.jsxs)("div", {
+        })(kT)
+      }, wT = (0, lT.useMemo)((() => {
+        var TT;
+        if (null === fT) return [];
+        const kT = null !== (TT = NT.whitelist) && void 0 !== TT ? TT : [];
+        return [...kT.filter((TT => (0, WT.j)(fT.whitelist, TT))), ...fT.whitelist.filter((TT => !(0, WT.j)(kT, TT)))]
+      }), [fT, NT.whitelist]), mT = cT.statusOf("mode");
+      return (0, GT.jsxs)("div", {
         className: "LobbyManagePage",
-        children: [(0, tv.jsxs)("div", {
+        children: [(0, GT.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, tv.jsx)(sv.b, {
-            label: pv("worldSocial:whoCanJoin")
-          }), null === dv && Nv && (0, tv.jsx)("div", {
+          children: [(0, GT.jsx)(tT.c, {
+            label: yT("worldSocial:whoCanJoin")
+          }), null === fT && xT && (0, GT.jsx)("div", {
             className: "LobbyManageLoading",
-            children: (0, tv.jsx)(av.c, {})
-          }), null === dv && !Nv && (0, tv.jsx)(Gv.e, {
+            children: (0, GT.jsx)(vT.d, {})
+          }), null === fT && !xT && (0, GT.jsx)(ST.i, {
             className: "SmallTextLight",
-            onClick: Tv,
-            children: pv("worldSocial:loadFailed")
-          }), null !== dv && (0, tv.jsx)(Jv.d, {
-            visibility: dv.visibility,
-            onPick: vv => {
-              Yv(vv)
+            onClick: AT,
+            children: yT("worldSocial:loadFailed")
+          }), null !== fT && (0, GT.jsx)(YT.b, {
+            visibility: fT.visibility,
+            onPick: TT => {
+              PT(TT)
             }
-          }), Ov && (0, tv.jsx)("div", {
+          }), mT && (0, GT.jsx)("div", {
             className: "LobbyManageFieldError",
-            children: (0, tv.jsx)(qv, {
-              status: Ov
+            children: (0, GT.jsx)(VT, {
+              status: mT
             })
-          }), null !== dv && "private" !== dv.visibility && (0, tv.jsx)(Ev.d, {
-            worldCode: gv,
+          }), null !== fT && "private" !== fT.visibility && (0, GT.jsx)(BT.d, {
+            worldCode: OT,
             message: null
           })]
-        }), "whitelist" === (null === dv || void 0 === dv ? void 0 : dv.visibility) && (0, tv.jsx)(uv, {
-          state: iv,
-          lobbyName: ev,
-          listed: nv,
-          isListed: vv => (0, ov.k)(dv.whitelist, vv),
-          xG: (vv, zv) => {
-            (0, Sv.reportAnalyticsClick)(zv ? {
+        }), "whitelist" === (null === fT || void 0 === fT ? void 0 : fT.visibility) && (0, GT.jsx)(sT, {
+          state: NT,
+          lobbyName: KT,
+          listed: wT,
+          isListed: TT => (0, WT.j)(fT.whitelist, TT),
+          pN: (TT, kT) => {
+            (0, MT.reportAnalyticsClick)(kT ? {
               id: "lobby_manage.whitelist_add",
-              value: "MT"
+              value: "UA"
             } : {
               id: "lobby_manage.whitelist_remove"
-            }), fv(zv ? {
-              whitelistAdd: [vv]
+            }), FT(kT ? {
+              whitelistAdd: [TT]
             } : {
-              whitelistRemove: vv
-            }, (Pv => (0, ov.t)(Pv, [vv], zv))).then((zv => {
-              Fv(`whitelist:${vv.toLowerCase()}`, zv)
+              whitelistRemove: TT
+            }, (cT => (0, WT.t)(cT, [TT], kT))).then((kT => {
+              rT(`whitelist:${TT.toLowerCase()}`, kT)
             }))
           },
-          Km: async vv => {
-            (0, Sv.reportAnalyticsClick)({
+          uF: async TT => {
+            (0, MT.reportAnalyticsClick)({
               id: "lobby_manage.whitelist_add",
               value: "field"
             });
-            const zv = await fv({
-              whitelistAdd: [vv]
-            }, (zv => (0, ov.t)(zv, [vv], !0)));
-            return null === zv ? {
+            const kT = await FT({
+              whitelistAdd: [TT]
+            }, (kT => (0, WT.t)(kT, [TT], !0)));
+            return null === kT ? {
               ok: !1,
-              error: pv("worldSocial:changeFailed")
-            } : "error" in zv ? {
+              error: yT("worldSocial:changeFailed")
+            } : "error" in kT ? {
               ok: !1,
-              error: pv(zv.error)
-            } : (0, ov.k)(zv.notFound, vv) ? {
+              error: yT(kT.error)
+            } : (0, WT.j)(kT.notFound, TT) ? {
               ok: !1,
-              error: pv("lobbyManage:noPlayerCalled", {
-                playerName: vv
+              error: yT("lobbyManage:noPlayerCalled", {
+                playerName: TT
               })
             } : {
               ok: !0
             }
           },
-          statusOf: vv => Pv.statusOf(`whitelist:${vv.toLowerCase()}`)
-        }), "public" === (null === dv || void 0 === dv ? void 0 : dv.visibility) && null !== iv.listing && (0, tv.jsx)(vz, {
-          manage: Pv,
-          listing: iv.listing
+          statusOf: TT => cT.statusOf(`whitelist:${TT.toLowerCase()}`)
+        }), "public" === (null === fT || void 0 === fT ? void 0 : fT.visibility) && null !== NT.listing && (0, GT.jsx)(Tk, {
+          manage: cT,
+          listing: NT.listing
         })]
       })
     }
 
-    function ez(vv) {
-      var zv;
+    function Kk(TT) {
+      var kT;
       let {
-        manage: Pv,
-        lobbyName: hv
-      } = vv;
+        manage: cT,
+        lobbyName: lT
+      } = TT;
       const {
-        t: ev
-      } = (0, Wv.x)(), {
-        state: gv
-      } = Pv, pv = Nv(), dv = null !== (zv = gv.whitelist) && void 0 !== zv ? zv : [];
-      return (0, tv.jsxs)("div", {
+        t: KT
+      } = (0, CT.B)(), {
+        state: OT
+      } = cT, yT = xT(), fT = null !== (kT = OT.whitelist) && void 0 !== kT ? kT : [];
+      return (0, GT.jsxs)("div", {
         className: "LobbyManagePage",
-        children: [(0, tv.jsxs)("div", {
+        children: [(0, GT.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, tv.jsx)(sv.b, {
-            label: ev("worldSocial:whoCanJoin")
-          }), (0, tv.jsx)("div", {
+          children: [(0, GT.jsx)(tT.c, {
+            label: KT("worldSocial:whoCanJoin")
+          }), (0, GT.jsx)("div", {
             className: "LobbyManageModeText",
-            children: ev(`worldSocial:${gv.visibility}`)
+            children: KT(`worldSocial:${OT.visibility}`)
           })]
-        }), "whitelist" === gv.visibility && gv.you.canEditWhitelist && (0, tv.jsx)(uv, {
-          state: gv,
-          lobbyName: hv,
-          listed: dv,
-          isListed: vv => {
-            var zv;
-            return null !== (zv = pv.get(vv.toLowerCase())) && void 0 !== zv ? zv : (0, ov.k)(dv, vv)
+        }), "whitelist" === OT.visibility && OT.you.canEditWhitelist && (0, GT.jsx)(sT, {
+          state: OT,
+          lobbyName: lT,
+          listed: fT,
+          isListed: TT => {
+            var kT;
+            return null !== (kT = yT.get(TT.toLowerCase())) && void 0 !== kT ? kT : (0, WT.j)(fT, TT)
           },
-          xG: (vv, zv) => {
-            (0, Sv.reportAnalyticsClick)(zv ? {
+          pN: (TT, kT) => {
+            (0, MT.reportAnalyticsClick)(kT ? {
               id: "lobby_manage.whitelist_add",
-              value: "MT"
+              value: "UA"
             } : {
               id: "lobby_manage.whitelist_remove"
             });
-            const hv = vv.toLowerCase();
-            pv.hold(hv, zv, Pv.send(zv ? {
+            const lT = TT.toLowerCase();
+            yT.hold(lT, kT, cT.send(kT ? {
               type: "whitelistAdd",
-              names: [vv]
+              names: [TT]
             } : {
               type: "whitelistRemove",
-              name: vv
-            }, `whitelist:${hv}`))
+              name: TT
+            }, `whitelist:${lT}`))
           },
-          Km: async vv => {
-            (0, Sv.reportAnalyticsClick)({
+          uF: async TT => {
+            (0, MT.reportAnalyticsClick)({
               id: "lobby_manage.whitelist_add",
               value: "field"
             });
-            const zv = await Pv.send({
+            const kT = await cT.send({
               type: "whitelistAdd",
-              names: [vv]
+              names: [TT]
             }, "whitelist-field");
-            return zv.ok ? {
+            return kT.ok ? {
               ok: !0
             } : {
               ok: !1,
-              error: (0, tv.jsx)(Rv.c, {
-                text: zv.message
+              error: (0, GT.jsx)(HT.b, {
+                text: kT.message
               })
             }
           },
-          statusOf: vv => Pv.statusOf(`whitelist:${vv.toLowerCase()}`)
-        }), "public" === gv.visibility && null !== gv.listing && (0, tv.jsx)(vz, {
-          manage: Pv,
-          listing: gv.listing
+          statusOf: TT => cT.statusOf(`whitelist:${TT.toLowerCase()}`)
+        }), "public" === OT.visibility && null !== OT.listing && (0, GT.jsx)(Tk, {
+          manage: cT,
+          listing: OT.listing
         })]
       })
     }
-    var gz = Pv(4732),
-      pz = Pv(1344);
-    const dz = /[\p{Script_Extensions=Han}\p{Script_Extensions=Hiragana}\p{Script_Extensions=Katakana}\p{Script_Extensions=Hangul}\u{3000}-\u{303F}\u{FF01}-\u{FF60}\u{FFE0}-\u{FFE6}]/u;
-    const Nz = (0, hv.memo)((function(vv) {
-      var zv;
+    var Ok = cT(4945),
+      yk = cT(1379);
+    const fk = /[\p{Script_Extensions=Han}\p{Script_Extensions=Hiragana}\p{Script_Extensions=Katakana}\p{Script_Extensions=Hangul}\u{3000}-\u{303F}\u{FF01}-\u{FF60}\u{FFE0}-\u{FFE6}]/u;
+    const xk = (0, lT.memo)((function(TT) {
+      var kT;
       let {
-        rule: Pv,
-        value: hv,
-        status: Sv,
-        pending: ev,
-        hiddenNames: gv,
-        iJ: pv,
-        onAction: dv
-      } = vv;
+        rule: cT,
+        value: lT,
+        status: MT,
+        pending: KT,
+        hiddenNames: OT,
+        jW: yT,
+        onAction: fT
+      } = TT;
       const {
-        t: Nv
-      } = (0, Wv.x)(), lv = vv => pv(Pv, vv), Tv = (vv, zv) => {
-        dv(Pv, vv, zv)
-      }, wv = Vv(Nv, Pv.label, gv), av = Pv.info ? Vv(Nv, Pv.info, gv) : void 0, sv = Pv.placeholder ? Vv(Nv, Pv.placeholder, gv) : void 0, Cv = (null !== (zv = Pv.options) && void 0 !== zv ? zv : []).map((vv => ({
-        value: vv.value,
-        label: Vv(Nv, vv.label, gv)
-      }))), iv = Math.max(0, ...Cv.map((vv => function(vv) {
-        let zv = 0;
-        for (const Pv of vv) zv += dz.test(Pv) ? 2 : 1;
-        return zv
-      }(vv.label)))), cv = Sv && (0, tv.jsx)("div", {
+        t: xT
+      } = (0, CT.B)(), IT = TT => yT(cT, TT), AT = (TT, kT) => {
+        fT(cT, TT, kT)
+      }, jT = JT(xT, cT.label, OT), vT = cT.info ? JT(xT, cT.info, OT) : void 0, tT = cT.placeholder ? JT(xT, cT.placeholder, OT) : void 0, hT = (null !== (kT = cT.options) && void 0 !== kT ? kT : []).map((TT => ({
+        value: TT.value,
+        label: JT(xT, TT.label, OT)
+      }))), NT = Math.max(0, ...hT.map((TT => function(TT) {
+        let kT = 0;
+        for (const cT of TT) kT += fk.test(cT) ? 2 : 1;
+        return kT
+      }(TT.label)))), QT = MT && (0, GT.jsx)("div", {
         className: "LobbyManageRuleStatus",
-        children: (0, tv.jsx)(qv, {
-          status: Sv
+        children: (0, GT.jsx)(VT, {
+          status: MT
         })
-      }), mv = (0, tv.jsxs)("div", {
+      }), DT = (0, GT.jsxs)("div", {
         className: "SliderText",
-        children: [wv, void 0 !== av && (0, tv.jsx)(pz.d, {
+        children: [jT, void 0 !== vT && (0, GT.jsx)(yk.b, {
           className: "SettingsTextInputCircleInfo",
-          hoverInfo: av
+          hoverInfo: vT
         })]
       });
-      return "toggle" === Pv.kind ? (0, tv.jsxs)(tv.Fragment, {
-        children: [(0, tv.jsx)(gz.e, {
-          label: wv,
-          checked: !0 === hv,
-          circleInfoText: av,
-          disabled: ev,
-          onClick: lv
-        }), cv]
-      }) : "choice" === Pv.kind && Cv.length <= 3 ? (0, tv.jsxs)(tv.Fragment, {
-        children: [(0, tv.jsx)(gz.f, {
-          label: wv,
-          options: Cv,
-          value: String(hv),
-          circleInfoText: av,
-          onChange: lv
-        }), cv]
-      }) : (0, tv.jsxs)("div", {
+      return "toggle" === cT.kind ? (0, GT.jsxs)(GT.Fragment, {
+        children: [(0, GT.jsx)(Ok.e, {
+          label: jT,
+          checked: !0 === lT,
+          circleInfoText: vT,
+          disabled: KT,
+          onClick: IT
+        }), QT]
+      }) : "choice" === cT.kind && hT.length <= 3 ? (0, GT.jsxs)(GT.Fragment, {
+        children: [(0, GT.jsx)(Ok.h, {
+          label: jT,
+          options: hT,
+          value: String(lT),
+          circleInfoText: vT,
+          onChange: IT
+        }), QT]
+      }) : (0, GT.jsxs)("div", {
         className: "SettingBox LobbyManageRuleRow",
-        children: [mv, "choice" === Pv.kind && (0, tv.jsx)("span", {
+        children: [DT, "choice" === cT.kind && (0, GT.jsx)("span", {
           className: "LobbyManageRuleChoice",
           style: {
-            "--lobby-choice-chars": iv
+            "--lobby-choice-chars": NT
           },
-          children: (0, tv.jsx)(Dv.e, {
-            options: Cv,
-            value: String(hv),
-            disabled: ev,
-            onChange: vv => {
-              lv(vv.value)
+          children: (0, GT.jsx)(bT.d, {
+            options: hT,
+            value: String(lT),
+            disabled: KT,
+            onChange: TT => {
+              IT(TT.value)
             }
           })
-        }), ("number" === Pv.kind || "text" === Pv.kind) && (0, tv.jsx)(Qv, {
-          value: null === hv ? "" : String(hv),
-          placeholder: sv,
-          ariaLabel: wv,
-          onSave: vv => {
-            const zv = vv.trim(),
-              hv = Number(zv);
-            return lv("number" === Pv.kind && "" !== zv && Number.isFinite(hv) ? hv : zv)
+        }), ("number" === cT.kind || "text" === cT.kind) && (0, GT.jsx)(ZT, {
+          value: null === lT ? "" : String(lT),
+          placeholder: tT,
+          ariaLabel: jT,
+          onSave: TT => {
+            const kT = TT.trim(),
+              lT = Number(kT);
+            return IT("number" === cT.kind && "" !== kT && Number.isFinite(lT) ? lT : kT)
           }
-        }), "action" === Pv.kind && (0, tv.jsxs)("div", {
+        }), "action" === cT.kind && (0, GT.jsxs)("div", {
           className: "LobbyManageRuleInput",
-          children: [Cv.length > 3 && (0, tv.jsx)(Dv.e, {
-            options: Cv,
+          children: [hT.length > 3 && (0, GT.jsx)(bT.d, {
+            options: hT,
             value: {
               value: "",
-              label: null !== sv && void 0 !== sv ? sv : wv
+              label: null !== tT && void 0 !== tT ? tT : jT
             },
-            disabled: ev,
-            onChange: vv => {
-              Tv(vv.value)
+            disabled: KT,
+            onChange: TT => {
+              AT(TT.value)
             }
-          }), Cv.length > 0 && Cv.length <= 3 && Cv.map((vv => (0, tv.jsx)(Gv.e, {
+          }), hT.length > 0 && hT.length <= 3 && hT.map((TT => (0, GT.jsx)(ST.i, {
             className: "SmallTextLight",
-            disabled: ev,
+            disabled: KT,
             onClick: () => {
-              Tv(vv.value)
+              AT(TT.value)
             },
-            children: vv.label
-          }, vv.value))), 0 === Cv.length && (0, tv.jsx)(Gv.e, {
+            children: TT.label
+          }, TT.value))), 0 === hT.length && (0, GT.jsx)(ST.i, {
             className: "SmallTextLight",
-            disabled: ev,
+            disabled: KT,
             onClick: () => {
-              Tv()
+              AT()
             },
-            children: null !== sv && void 0 !== sv ? sv : wv
+            children: null !== tT && void 0 !== tT ? tT : jT
           })]
-        }), "names" === Pv.kind && (0, tv.jsx)(lz, {
-          names: Array.isArray(hv) ? hv : [],
-          pending: ev,
-          onAction: Tv
-        }), cv]
+        }), "names" === cT.kind && (0, GT.jsx)(Ik, {
+          names: Array.isArray(lT) ? lT : [],
+          pending: KT,
+          onAction: AT
+        }), QT]
       })
     }));
 
-    function lz(vv) {
+    function Ik(TT) {
       let {
-        names: zv,
-        pending: Pv,
-        onAction: Sv
-      } = vv;
+        names: kT,
+        pending: cT,
+        onAction: MT
+      } = TT;
       const {
-        t: ev
-      } = (0, Wv.x)(), gv = (0, hv.useRef)(null), [pv, dv] = (0, hv.useState)(""), Nv = () => {
-        const vv = pv.trim();
-        "" !== vv && (Sv(vv, "add"), gv.current && (gv.current.value = ""), dv(""))
+        t: KT
+      } = (0, CT.B)(), OT = (0, lT.useRef)(null), [yT, fT] = (0, lT.useState)(""), xT = () => {
+        const TT = yT.trim();
+        "" !== TT && (MT(TT, "add"), OT.current && (OT.current.value = ""), fT(""))
       };
-      return (0, tv.jsxs)("div", {
+      return (0, GT.jsxs)("div", {
         className: "LobbyManageNames",
-        children: [zv.map((vv => (0, tv.jsxs)("div", {
+        children: [kT.map((TT => (0, GT.jsxs)("div", {
           className: "LobbyManageName",
-          children: [(0, tv.jsx)("span", {
+          children: [(0, GT.jsx)("span", {
             className: "LobbyManageNameText",
-            children: vv
-          }), (0, tv.jsx)(Gv.e, {
+            children: TT
+          }), (0, GT.jsx)(ST.i, {
             className: "LobbyManageIconButton SmallTextLight",
-            ariaLabel: ev("lobbyManage:removeName", {
-              name: vv
+            ariaLabel: KT("lobbyManage:removeName", {
+              name: TT
             }),
-            disabled: Pv,
+            disabled: cT,
             onClick: () => {
-              Sv(vv, "remove")
+              MT(TT, "remove")
             },
-            children: (0, tv.jsx)(wv.b, {
+            children: (0, GT.jsx)(jT.e, {
               name: "xmark"
             })
           })]
-        }, vv))), (0, tv.jsxs)("div", {
+        }, TT))), (0, GT.jsxs)("div", {
           className: "LobbyManageRuleInput",
-          children: [(0, tv.jsx)(xv.c, {
-            domRef: gv,
-            placeholderText: ev("lobbyManage:namePlaceholder"),
-            ariaLabel: ev("lobbyManage:namePlaceholder"),
+          children: [(0, GT.jsx)(eT.b, {
+            domRef: OT,
+            placeholderText: KT("lobbyManage:namePlaceholder"),
+            ariaLabel: KT("lobbyManage:namePlaceholder"),
             maxLength: 32,
-            onValueChange: vv => {
-              dv(vv)
+            onValueChange: TT => {
+              fT(TT)
             },
-            onEnter: Nv
-          }), (0, tv.jsx)(Gv.e, {
+            onEnter: xT
+          }), (0, GT.jsx)(ST.i, {
             className: "SmallTextLight",
-            disabled: Pv || "" === pv.trim(),
-            onClick: Nv,
-            children: ev("lobbyManage:addHere")
+            disabled: cT || "" === yT.trim(),
+            onClick: xT,
+            children: KT("lobbyManage:addHere")
           })]
         })]
       })
     }
-    const Tz = [{
+    const Ak = [{
       group: "gameplay",
       title: "lobbyManage:gameplay"
     }, {
@@ -1224,89 +1224,89 @@ export const modules = {
       title: "lobbyManage:world"
     }];
 
-    function Wz(vv) {
-      return Tz.flatMap((zv => {
+    function Ck(TT) {
+      return Ak.flatMap((kT => {
         let {
-          group: Pv
-        } = zv;
-        return vv.filter((vv => vv.group === Pv && void 0 === vv.parent))
+          group: cT
+        } = kT;
+        return TT.filter((TT => TT.group === cT && void 0 === TT.parent))
       }))
     }
 
-    function wz(vv) {
+    function jk(TT) {
       let {
-        manage: zv,
-        rowsShown: Pv
-      } = vv;
+        manage: kT,
+        rowsShown: cT
+      } = TT;
       const {
-        t: ev
-      } = (0, Wv.x)(), gv = (0, cv.h)("hiddenPlayerNames"), {
-        rules: pv
-      } = zv.state, dv = Nv(), lv = new Set(Wz(pv).slice(0, Pv)), Tv = vv => {
-        const zv = dv.get(vv.key);
-        return void 0 === zv ? vv.value : zv
+        t: KT
+      } = (0, CT.B)(), OT = (0, QT.h)("hiddenPlayerNames"), {
+        rules: yT
+      } = kT.state, fT = xT(), IT = new Set(Ck(yT).slice(0, cT)), AT = TT => {
+        const kT = fT.get(TT.key);
+        return void 0 === kT ? TT.value : kT
       }, {
-        hold: wv
-      } = dv, av = (0, hv.useCallback)(((vv, Pv) => {
-        (0, Sv.reportAnalyticsClick)({
+        hold: jT
+      } = fT, vT = (0, lT.useCallback)(((TT, cT) => {
+        (0, MT.reportAnalyticsClick)({
           id: "lobby_manage.set_rule",
-          value: vv.key
+          value: TT.key
         });
-        const hv = zv.send({
+        const lT = kT.send({
           type: "setRule",
-          key: vv.key,
-          value: Pv
-        }, `rule:${vv.key}`);
-        return wv(vv.key, Pv, hv), hv
-      }), [zv, wv]), Cv = (0, hv.useCallback)(((vv, Pv, hv) => {
-        (0, Sv.reportAnalyticsClick)({
+          key: TT.key,
+          value: cT
+        }, `rule:${TT.key}`);
+        return jT(TT.key, cT, lT), lT
+      }), [kT, jT]), hT = (0, lT.useCallback)(((TT, cT, lT) => {
+        (0, MT.reportAnalyticsClick)({
           id: "lobby_manage.set_rule",
-          value: vv.key
-        }), zv.send({
+          value: TT.key
+        }), kT.send({
           type: "ruleAction",
-          key: vv.key,
-          ...void 0 === Pv ? {} : {
-            arg: Pv
+          key: TT.key,
+          ...void 0 === cT ? {} : {
+            arg: cT
           },
-          ...void 0 === hv ? {} : {
-            op: hv
+          ...void 0 === lT ? {} : {
+            op: lT
           }
-        }, `rule:${vv.key}`, void 0 === hv ? ev("lobbyManage:setJustNow") : void 0)
-      }), [zv, ev]), iv = vv => {
-        const Pv = `rule:${vv.key}`;
-        return (0, tv.jsx)(Nz, {
-          rule: vv,
-          value: Tv(vv),
-          status: zv.statusOf(Pv),
-          pending: zv.isPending(Pv),
-          hiddenNames: gv,
-          iJ: av,
-          onAction: Cv
-        }, vv.key)
+        }, `rule:${TT.key}`, void 0 === lT ? KT("lobbyManage:setJustNow") : void 0)
+      }), [kT, KT]), NT = TT => {
+        const cT = `rule:${TT.key}`;
+        return (0, GT.jsx)(xk, {
+          rule: TT,
+          value: AT(TT),
+          status: kT.statusOf(cT),
+          pending: kT.isPending(cT),
+          hiddenNames: OT,
+          jW: vT,
+          onAction: hT
+        }, TT.key)
       };
-      return (0, tv.jsx)("div", {
+      return (0, GT.jsx)("div", {
         className: "LobbyManagePage LobbyManageRules",
-        children: Tz.map((vv => {
+        children: Ak.map((TT => {
           let {
-            group: zv,
-            title: Pv
-          } = vv;
-          const Sv = pv.filter((vv => vv.group === zv && lv.has(vv)));
-          return 0 === Sv.length ? null : (0, tv.jsxs)(hv.Fragment, {
-            children: [(0, tv.jsx)(sv.b, {
-              label: ev(Pv)
-            }), Sv.map((vv => {
-              const zv = pv.filter((zv => zv.parent === vv.key));
-              return 0 === zv.length || !0 !== Tv(vv) ? iv(vv) : (0, tv.jsxs)("div", {
+            group: kT,
+            title: cT
+          } = TT;
+          const MT = yT.filter((TT => TT.group === kT && IT.has(TT)));
+          return 0 === MT.length ? null : (0, GT.jsxs)(lT.Fragment, {
+            children: [(0, GT.jsx)(tT.c, {
+              label: KT(cT)
+            }), MT.map((TT => {
+              const kT = yT.filter((kT => kT.parent === TT.key));
+              return 0 === kT.length || !0 !== AT(TT) ? NT(TT) : (0, GT.jsxs)("div", {
                 className: "SettingBoxGroup",
-                children: [iv(vv), zv.map(iv)]
-              }, vv.key)
+                children: [NT(TT), kT.map(NT)]
+              }, TT.key)
             }))]
-          }, zv)
+          }, kT)
         }))
       })
     }
-    const az = {
+    const vk = {
         players: {
           icon: "user-group",
           title: "lobbyManage:players"
@@ -1324,587 +1324,587 @@ export const modules = {
           title: "lobbyManage:leaderboard"
         }
       },
-      sz = 5,
-      Cz = (0, hv.memo)((function(vv) {
+      tk = 5,
+      hk = (0, lT.memo)((function(TT) {
         let {
-          page: zv,
-          manage: Pv,
-          leaderboard: Sv,
-          focusRequest: ev,
-          onFocused: gv,
-          ruleRowsShown: pv
-        } = vv;
-        return "leaderboard" === zv ? (0, tv.jsx)(hv.Suspense, {
-          fallback: (0, tv.jsx)("div", {
+          page: kT,
+          manage: cT,
+          leaderboard: MT,
+          focusRequest: KT,
+          onFocused: OT,
+          ruleRowsShown: yT
+        } = TT;
+        return "leaderboard" === kT ? (0, GT.jsx)(lT.Suspense, {
+          fallback: (0, GT.jsx)("div", {
             className: "LobbyManageLoading",
-            children: (0, tv.jsx)(av.c, {})
+            children: (0, GT.jsx)(vT.d, {})
           }),
-          children: Sv
-        }) : "joining" === zv ? (0, tv.jsx)(Pz, {
-          manage: Pv
-        }) : "rules" === zv ? (0, tv.jsx)(wz, {
-          manage: Pv,
-          rowsShown: pv
-        }) : (0, tv.jsx)(Hv, {
-          manage: Pv,
-          focusRequest: ev,
-          onFocused: gv
+          children: MT
+        }) : "joining" === kT ? (0, GT.jsx)(ck, {
+          manage: cT
+        }) : "rules" === kT ? (0, GT.jsx)(jk, {
+          manage: cT,
+          rowsShown: yT
+        }) : (0, GT.jsx)(LT, {
+          manage: cT,
+          focusRequest: KT,
+          onFocused: OT
         })
       }));
 
-    function iz(vv) {
+    function Nk(TT) {
       let {
-        page: zv
-      } = vv;
+        page: kT
+      } = TT;
       const {
-        t: Pv
-      } = (0, Wv.x)(), hv = az[zv];
-      return (0, tv.jsxs)(tv.Fragment, {
-        children: [(0, tv.jsx)(wv.b, {
-          name: hv.icon
-        }), " ", (0, tv.jsx)("span", {
+        t: cT
+      } = (0, CT.B)(), lT = vk[kT];
+      return (0, GT.jsxs)(GT.Fragment, {
+        children: [(0, GT.jsx)(jT.e, {
+          name: lT.icon
+        }), " ", (0, GT.jsx)("span", {
           className: "LobbyManagePageTitle",
-          children: Pv(hv.title)
+          children: cT(lT.title)
         })]
       })
     }
 
-    function cz(vv) {
-      var zv;
+    function Qk(TT) {
+      var kT;
       const {
-        t: Pv
-      } = (0, Wv.x)(), {
-        pages: ev,
-        landing: gv
-      } = vv, dv = (0, hv.useRef)(null), Nv = (0, hv.useRef)(null), lv = (0, hv.useRef)(null), wv = (0, hv.useRef)(new Map), [av, cv] = (0, hv.useState)(null), Gv = (0, hv.useRef)(av), mv = (0, hv.useRef)(0), [jv, fv] = (0, hv.useState)(ev[0]), Fv = null !== av && void 0 !== av ? av : ev.includes(jv) ? jv : ev[0], [Yv] = (0, hv.useState)(null !== (zv = null === gv || void 0 === gv ? void 0 : gv.page) && void 0 !== zv ? zv : null), nv = null !== Yv && ev.includes(Yv) ? [Yv, ...ev.filter((vv => vv !== Yv))] : ev, Ov = Math.max(1, Math.ceil(Wz(vv.manage.state.rules).length / sz)), Dv = nv.flatMap((vv => "rules" === vv ? Array(Ov).fill(vv) : [vv])), Kv = function(vv, zv) {
-        const [Pv, Sv] = (0, hv.useState)(vv), ev = Pv >= zv;
-        return ev && Pv !== 1 / 0 && Sv(1 / 0), (0, hv.useLayoutEffect)((() => {
-          if (ev) return;
-          let vv = !0;
-          return (0, iv.e)().then((() => {
-            vv && Sv((vv => vv + 1))
+        t: cT
+      } = (0, CT.B)(), {
+        pages: KT,
+        landing: OT
+      } = TT, fT = (0, lT.useRef)(null), xT = (0, lT.useRef)(null), IT = (0, lT.useRef)(null), jT = (0, lT.useRef)(new Map), [vT, QT] = (0, lT.useState)(null), ST = (0, lT.useRef)(vT), DT = (0, lT.useRef)(0), [aT, FT] = (0, lT.useState)(KT[0]), rT = null !== vT && void 0 !== vT ? vT : KT.includes(aT) ? aT : KT[0], [PT] = (0, lT.useState)(null !== (kT = null === OT || void 0 === OT ? void 0 : OT.page) && void 0 !== kT ? kT : null), wT = null !== PT && KT.includes(PT) ? [PT, ...KT.filter((TT => TT !== PT))] : KT, mT = Math.max(1, Math.ceil(Ck(TT.manage.state.rules).length / tk)), bT = wT.flatMap((TT => "rules" === TT ? Array(mT).fill(TT) : [TT])), zT = function(TT, kT) {
+        const [cT, MT] = (0, lT.useState)(TT), KT = cT >= kT;
+        return KT && cT !== 1 / 0 && MT(1 / 0), (0, lT.useLayoutEffect)((() => {
+          if (KT) return;
+          let TT = !0;
+          return (0, NT.e)().then((() => {
+            TT && MT((TT => TT + 1))
           })), () => {
-            vv = !1
+            TT = !1
           }
-        }), [Pv, ev]), ev ? 1 / 0 : Pv
-      }(1, Dv.length), Vv = Dv.slice(0, Kv), Uv = new Set(Vv), Rv = Kv < Dv.length, xv = Rv ? Vv.filter((vv => "rules" === vv)).length * sz : 1 / 0, qv = (0, hv.useRef)(vv.focusRequest);
-      qv.current = vv.focusRequest;
-      const Iv = vv => {
-          Gv.current = vv, cv(vv)
+        }), [cT, KT]), KT ? 1 / 0 : cT
+      }(1, bT.length), JT = bT.slice(0, zT), oT = new Set(JT), HT = zT < bT.length, eT = HT ? JT.filter((TT => "rules" === TT)).length * tk : 1 / 0, VT = (0, lT.useRef)(TT.focusRequest);
+      VT.current = TT.focusRequest;
+      const ET = TT => {
+          ST.current = TT, QT(TT)
         },
-        Qv = () => {
-          var vv, zv;
-          dv.current.style.scrollPaddingTop = `${null!==(vv=null===(zv=lv.current)||void 0===zv?void 0:zv.offsetHeight)&&void 0!==vv?vv:0}px`
+        ZT = () => {
+          var TT, kT;
+          fT.current.style.scrollPaddingTop = `${null!==(TT=null===(kT=IT.current)||void 0===kT?void 0:kT.offsetHeight)&&void 0!==TT?TT:0}px`
         },
-        Zv = vv => {
-          const zv = dv.current,
-            Pv = wv.current.get(vv);
-          if (void 0 === Pv) return;
-          const hv = document.activeElement,
-            Sv = qv.current,
-            ev = null === Sv ? null : Pv.querySelector(`[data-lobby-manage-row="${CSS.escape(Sv.name)}"]`);
-          Qv(), hv instanceof HTMLElement && null !== ev && void 0 !== ev && ev.contains(hv) ? hv.scrollIntoView({
+        uT = TT => {
+          const kT = fT.current,
+            cT = jT.current.get(TT);
+          if (void 0 === cT) return;
+          const lT = document.activeElement,
+            MT = VT.current,
+            KT = null === MT ? null : cT.querySelector(`[data-lobby-manage-row="${CSS.escape(MT.name)}"]`);
+          ZT(), lT instanceof HTMLElement && null !== KT && void 0 !== KT && KT.contains(lT) ? lT.scrollIntoView({
             block: "center"
-          }) : null === Pv.previousElementSibling ? zv.scrollTop = 0 : Pv.scrollIntoView({
+          }) : null === cT.previousElementSibling ? kT.scrollTop = 0 : cT.scrollIntoView({
             block: "start"
-          }), mv.current = zv.scrollTop
+          }), DT.current = kT.scrollTop
         },
-        Av = vv => {
-          (0, Sv.reportAnalyticsClick)({
+        XT = TT => {
+          (0, MT.reportAnalyticsClick)({
             id: "lobby_manage.page",
-            value: vv
-          }), Iv(vv), Zv(vv)
+            value: TT
+          }), ET(TT), uT(TT)
         },
-        Lv = () => {
-          var vv, zv;
-          const Pv = dv.current,
-            hv = Pv.getBoundingClientRect().top + (null !== (vv = null === (zv = lv.current) || void 0 === zv ? void 0 : zv.offsetHeight) && void 0 !== vv ? vv : 0),
-            Sv = ev.map((vv => {
-              var zv, Pv;
-              return (null !== (zv = null === (Pv = wv.current.get(vv)) || void 0 === Pv ? void 0 : Pv.getBoundingClientRect().top) && void 0 !== zv ? zv : 1 / 0) - hv
+        dT = () => {
+          var TT, kT;
+          const cT = fT.current,
+            lT = cT.getBoundingClientRect().top + (null !== (TT = null === (kT = IT.current) || void 0 === kT ? void 0 : kT.offsetHeight) && void 0 !== TT ? TT : 0),
+            MT = KT.map((TT => {
+              var kT, cT;
+              return (null !== (kT = null === (cT = jT.current.get(TT)) || void 0 === cT ? void 0 : cT.getBoundingClientRect().top) && void 0 !== kT ? kT : 1 / 0) - lT
             })),
-            gv = !Rv && Pv.scrollTop + Pv.clientHeight >= Pv.scrollHeight - 1;
-          fv(ev[(0, pv.g)(Sv, gv)])
+            OT = !HT && cT.scrollTop + cT.clientHeight >= cT.scrollHeight - 1;
+          FT(KT[(0, yT.j)(MT, OT)])
         },
-        Hv = () => {
-          null !== Gv.current && (Iv(null), Lv())
+        LT = () => {
+          null !== ST.current && (ET(null), dT())
         };
-      (0, hv.useLayoutEffect)((() => {
-        null !== gv && ev.includes(gv.page) && Av(gv.page)
-      }), [null === gv || void 0 === gv ? void 0 : gv.seq]), (0, hv.useLayoutEffect)((() => {
-        null === Gv.current || ev.includes(Gv.current) || Hv()
+      (0, lT.useLayoutEffect)((() => {
+        null !== OT && KT.includes(OT.page) && XT(OT.page)
+      }), [null === OT || void 0 === OT ? void 0 : OT.seq]), (0, lT.useLayoutEffect)((() => {
+        null === ST.current || KT.includes(ST.current) || LT()
       }));
       const {
-        onFocused: Mv
-      } = vv, yv = (0, hv.useCallback)((vv => {
-        null !== Gv.current && Zv(Gv.current), Mv(vv)
-      }), [Mv]);
-      (0, hv.useLayoutEffect)((() => {
-        const vv = Gv.current;
-        null !== vv && (!Rv || ev.indexOf(Dv[Kv - 1]) < ev.indexOf(vv)) && Zv(vv)
-      }), [Kv]), (0, hv.useEffect)((() => {
-        const vv = new ResizeObserver((() => {
-          null !== Gv.current ? Zv(Gv.current) : Qv()
+        onFocused: RT
+      } = TT, gT = (0, lT.useCallback)((TT => {
+        null !== ST.current && uT(ST.current), RT(TT)
+      }), [RT]);
+      (0, lT.useLayoutEffect)((() => {
+        const TT = ST.current;
+        null !== TT && (!HT || KT.indexOf(bT[zT - 1]) < KT.indexOf(TT)) && uT(TT)
+      }), [zT]), (0, lT.useEffect)((() => {
+        const TT = new ResizeObserver((() => {
+          null !== ST.current ? uT(ST.current) : ZT()
         }));
-        return vv.observe(dv.current), vv.observe(Nv.current), () => {
-          vv.disconnect()
+        return TT.observe(fT.current), TT.observe(xT.current), () => {
+          TT.disconnect()
         }
-      }), []), (0, hv.useLayoutEffect)((() => {
-        const vv = lv.current,
-          zv = null === vv || void 0 === vv ? void 0 : vv.querySelector(".SegmentedToggleOptionSelected");
-        zv && (vv.scrollLeft = Math.min(zv.offsetLeft, Math.max(vv.scrollLeft, zv.offsetLeft + zv.offsetWidth - vv.clientWidth)))
-      }), [Fv]);
-      return (0, tv.jsxs)("div", {
-        ref: dv,
+      }), []), (0, lT.useLayoutEffect)((() => {
+        const TT = IT.current,
+          kT = null === TT || void 0 === TT ? void 0 : TT.querySelector(".SegmentedToggleOptionSelected");
+        kT && (TT.scrollLeft = Math.min(kT.offsetLeft, Math.max(TT.scrollLeft, kT.offsetLeft + kT.offsetWidth - TT.clientWidth)))
+      }), [rT]);
+      return (0, GT.jsxs)("div", {
+        ref: fT,
         className: "MenuBody LobbyManageBody",
         onScroll: () => {
-          null === Gv.current ? Lv() : Math.abs(dv.current.scrollTop - mv.current) > 1 && Hv()
+          null === ST.current ? dT() : Math.abs(fT.current.scrollTop - DT.current) > 1 && LT()
         },
-        onClick: vv => {
-          var zv;
-          null !== (zv = lv.current) && void 0 !== zv && zv.contains(vv.target) || Hv()
+        onClick: TT => {
+          var kT;
+          null !== (kT = IT.current) && void 0 !== kT && kT.contains(TT.target) || LT()
         },
-        onFocus: vv => {
-          var zv;
-          const Pv = null === Gv.current ? null : wv.current.get(Gv.current);
-          !Pv || Pv.contains(vv.target) || null !== (zv = lv.current) && void 0 !== zv && zv.contains(vv.target) || Hv()
+        onFocus: TT => {
+          var kT;
+          const cT = null === ST.current ? null : jT.current.get(ST.current);
+          !cT || cT.contains(TT.target) || null !== (kT = IT.current) && void 0 !== kT && kT.contains(TT.target) || LT()
         },
-        children: [ev.length > 1 && (0, tv.jsx)("div", {
-          ref: lv,
+        children: [KT.length > 1 && (0, GT.jsx)("div", {
+          ref: IT,
           className: "LobbyManageChips",
-          children: (0, tv.jsx)(Cv.c, {
-            options: ev.map((vv => ({
-              value: vv,
-              label: (0, tv.jsx)(iz, {
-                page: vv
+          children: (0, GT.jsx)(hT.d, {
+            options: KT.map((TT => ({
+              value: TT,
+              label: (0, GT.jsx)(Nk, {
+                page: TT
               }),
-              ariaLabel: Pv(az[vv].title)
+              ariaLabel: cT(vk[TT].title)
             }))),
-            value: Fv,
+            value: rT,
             padTabs: "2",
-            ariaLabel: Pv("lobbyManageEntry:manageLobby"),
+            ariaLabel: cT("lobbyManageEntry:manageLobby"),
             reselectable: !0,
-            onChange: Av
+            onChange: XT
           })
-        }), (0, tv.jsx)("div", {
-          ref: Nv,
-          className: Tv()("LobbyManageInner", {
-            Staging: Rv
+        }), (0, GT.jsx)("div", {
+          ref: xT,
+          className: AT()("LobbyManageInner", {
+            Staging: HT
           }),
-          children: ev.filter((vv => Uv.has(vv))).map((zv => {
-            const Pv = zv === av;
-            return (0, tv.jsxs)("section", {
-              ref: vv => {
-                vv ? wv.current.set(zv, vv) : wv.current.delete(zv)
+          children: KT.filter((TT => oT.has(TT))).map((kT => {
+            const cT = kT === vT;
+            return (0, GT.jsxs)("section", {
+              ref: TT => {
+                TT ? jT.current.set(kT, TT) : jT.current.delete(kT)
               },
               className: "LobbyManageSection",
-              "data-pad-initial-area": Pv || void 0,
-              children: [ev.length > 1 && (0, tv.jsx)("div", {
+              "data-pad-initial-area": cT || void 0,
+              children: [KT.length > 1 && (0, GT.jsx)("div", {
                 className: "LobbyManageSectionHeading",
-                "data-pad-focusable": Pv || void 0,
-                "data-pad-unavailable": Pv || void 0,
-                children: (0, tv.jsx)(sv.b, {
-                  label: (0, tv.jsx)(iz, {
-                    page: zv
+                "data-pad-focusable": cT || void 0,
+                "data-pad-unavailable": cT || void 0,
+                children: (0, GT.jsx)(tT.c, {
+                  label: (0, GT.jsx)(Nk, {
+                    page: kT
                   })
                 })
-              }), (0, tv.jsx)(Cz, {
-                page: zv,
-                manage: vv.manage,
-                leaderboard: vv.leaderboard,
-                focusRequest: vv.focusRequest,
-                onFocused: yv,
-                ruleRowsShown: "rules" === zv ? xv : 1 / 0
+              }), (0, GT.jsx)(hk, {
+                page: kT,
+                manage: TT.manage,
+                leaderboard: TT.leaderboard,
+                focusRequest: TT.focusRequest,
+                onFocused: gT,
+                ruleRowsShown: "rules" === kT ? eT : 1 / 0
               })]
-            }, zv)
+            }, kT)
           }))
         })]
       })
     }
 
-    function Gz(vv) {
-      return void 0 === (null === vv || void 0 === vv ? void 0 : vv.page) ? null : {
-        page: vv.page,
-        seq: vv.seq
+    function Sk(TT) {
+      return void 0 === (null === TT || void 0 === TT ? void 0 : TT.page) ? null : {
+        page: TT.page,
+        seq: TT.seq
       }
     }
 
-    function mz(vv) {
+    function Dk(TT) {
       let {
-        leaderboard: zv
-      } = vv;
-      const Pv = function() {
-          const vv = (0, ev.i)("lobbyManage"),
-            [zv, Pv] = (0, hv.useReducer)((vv => vv + 1), 0),
-            [Sv] = (0, hv.useState)((() => new dv.d(Pv)));
-          return (0, hv.useEffect)((() => {
-            const vv = Sv.nextDeadline();
-            if (null === vv) return;
-            const zv = setTimeout((() => {
-              Sv.expire(Date.now()), Pv()
-            }), Math.max(0, vv - Date.now()));
+        leaderboard: kT
+      } = TT;
+      const cT = function() {
+          const TT = (0, KT.f)("lobbyManage"),
+            [kT, cT] = (0, lT.useReducer)((TT => TT + 1), 0),
+            [MT] = (0, lT.useState)((() => new fT.b(cT)));
+          return (0, lT.useEffect)((() => {
+            const TT = MT.nextDeadline();
+            if (null === TT) return;
+            const kT = setTimeout((() => {
+              MT.expire(Date.now()), cT()
+            }), Math.max(0, TT - Date.now()));
             return () => {
-              clearTimeout(zv)
+              clearTimeout(kT)
             }
-          })), (0, hv.useMemo)((() => null === vv ? null : {
-            state: vv,
-            send: (vv, zv, hv) => {
-              const ev = Sv.send(vv, zv, null !== hv && void 0 !== hv ? hv : null);
-              return Pv(), ev
+          })), (0, lT.useMemo)((() => null === TT ? null : {
+            state: TT,
+            send: (TT, kT, lT) => {
+              const KT = MT.send(TT, kT, null !== lT && void 0 !== lT ? lT : null);
+              return cT(), KT
             },
-            statusOf: vv => Sv.statusOf(vv, Date.now()),
-            showStatus: (vv, zv) => {
-              Sv.show(vv, zv)
+            statusOf: TT => MT.statusOf(TT, Date.now()),
+            showStatus: (TT, kT) => {
+              MT.show(TT, kT)
             },
-            isPending: vv => Sv.isPending(vv)
-          }), [vv, zv, Sv])
+            isPending: TT => MT.isPending(TT)
+          }), [TT, kT, MT])
         }(),
-        Nv = (0, pv.j)((0, ev.i)("lobbyLeaderboardInfo")),
-        lv = (0, gv.i)(),
-        [Tv, Wv] = (0, hv.useState)((() => Gz(lv))),
-        [wv, av] = (0, hv.useState)(null);
-      return (0, hv.useEffect)((() => {
-        null === lv && (0, Sv.reportAnalyticsClick)({
+        xT = (0, yT.m)((0, KT.f)("lobbyLeaderboardInfo")),
+        IT = (0, OT.l)(),
+        [AT, CT] = (0, lT.useState)((() => Sk(IT))),
+        [jT, vT] = (0, lT.useState)(null);
+      return (0, lT.useEffect)((() => {
+        null === IT && (0, MT.reportAnalyticsClick)({
           id: "lobby_manage.open",
           value: "menu_tab"
         })
-      }), []), (0, hv.useEffect)((() => {
-        null !== lv && (Wv((vv => (null === vv || void 0 === vv ? void 0 : vv.seq) === lv.seq ? vv : Gz(lv))), void 0 !== lv.focusName && "players" === lv.page ? av({
-          name: lv.focusName,
-          seq: lv.seq
-        }) : (0, gv.g)(lv.seq))
-      }), [null === lv || void 0 === lv ? void 0 : lv.seq]), null === Pv ? null : (0, tv.jsx)("div", {
+      }), []), (0, lT.useEffect)((() => {
+        null !== IT && (CT((TT => (null === TT || void 0 === TT ? void 0 : TT.seq) === IT.seq ? TT : Sk(IT))), void 0 !== IT.focusName && "players" === IT.page ? vT({
+          name: IT.focusName,
+          seq: IT.seq
+        }) : (0, OT.k)(IT.seq))
+      }), [null === IT || void 0 === IT ? void 0 : IT.seq]), null === cT ? null : (0, GT.jsx)("div", {
         className: "LobbyManage Menu",
-        children: (0, tv.jsx)(cz, {
-          pages: (0, pv.d)(Pv.state, Nv),
-          manage: Pv,
-          leaderboard: zv,
-          focusRequest: wv,
-          onFocused: gv.g,
-          landing: Tv
+        children: (0, GT.jsx)(Qk, {
+          pages: (0, yT.f)(cT.state, xT),
+          manage: cT,
+          leaderboard: kT,
+          focusRequest: jT,
+          onFocused: OT.k,
+          landing: AT
         })
       })
     }
   },
-  36098: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => lv,
-      h: () => dv
+  36383: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => IT,
+      e: () => fT
     });
-    var hv = Pv(1465),
-      Sv = Pv(1903),
-      ev = Pv(1876);
-    const gv = 1e4;
-    let pv = 0;
+    var lT = cT(1497),
+      MT = cT(1974),
+      KT = cT(1953);
+    const OT = 1e4;
+    let yT = 0;
 
-    function dv(vv) {
-      const zv = ++pv;
-      return new Promise((Pv => {
-        const pv = zv => {
-            dv(), clearTimeout(Nv), !1 === (null === zv || void 0 === zv ? void 0 : zv.ok) && (0, hv.reportAnalyticsClick)({
+    function fT(TT) {
+      const kT = ++yT;
+      return new Promise((cT => {
+        const yT = kT => {
+            fT(), clearTimeout(xT), !1 === (null === kT || void 0 === kT ? void 0 : kT.ok) && (0, lT.reportAnalyticsClick)({
               id: "lobby_manage.refused",
-              value: vv.type
-            }), Pv(zv)
+              value: TT.type
+            }), cT(kT)
           },
-          dv = Sv.c.subscribe("lobbyManage", (vv => {
-            const Pv = function(vv, zv) {
-              var Pv;
-              return null !== (Pv = null === vv || void 0 === vv ? void 0 : vv.results.find((vv => vv.requestId === zv))) && void 0 !== Pv ? Pv : null
-            }(vv, zv);
-            null !== Pv && pv(Pv)
+          fT = MT.b.subscribe("lobbyManage", (TT => {
+            const cT = function(TT, kT) {
+              var cT;
+              return null !== (cT = null === TT || void 0 === TT ? void 0 : TT.results.find((TT => TT.requestId === kT))) && void 0 !== cT ? cT : null
+            }(TT, kT);
+            null !== cT && yT(cT)
           })),
-          Nv = setTimeout((() => {
-            pv(null)
-          }), gv);
-        ev.gameBridge.send("lobbyManage", {
-          ...vv,
-          requestId: zv
+          xT = setTimeout((() => {
+            yT(null)
+          }), OT);
+        KT.gameBridge.send("lobbyManage", {
+          ...TT,
+          requestId: kT
         })
       }))
     }
-    const Nv = [{
+    const xT = [{
       translationKey: "lobbyManageEntry:noAnswer"
     }];
-    class lv {
-      constructor(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : dv;
-        this.onChange = vv, this.sendAction = zv, this.pending = new Map, this.statuses = new Map
+    class IT {
+      constructor(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : fT;
+        this.onChange = TT, this.sendAction = kT, this.pending = new Map, this.statuses = new Map
       }
-      send(vv, zv, Pv) {
-        var hv;
-        return this.statuses.delete(zv), this.pending.set(zv, (null !== (hv = this.pending.get(zv)) && void 0 !== hv ? hv : 0) + 1), this.sendAction(vv).then((vv => {
-          var hv;
-          const Sv = null !== vv && void 0 !== vv ? vv : {
+      send(TT, kT, cT) {
+        var lT;
+        return this.statuses.delete(kT), this.pending.set(kT, (null !== (lT = this.pending.get(kT)) && void 0 !== lT ? lT : 0) + 1), this.sendAction(TT).then((TT => {
+          var lT;
+          const MT = null !== TT && void 0 !== TT ? TT : {
               requestId: -1,
               ok: !1,
-              message: Nv
+              message: xT
             },
-            ev = (null !== (hv = this.pending.get(zv)) && void 0 !== hv ? hv : 1) - 1;
-          ev > 0 ? this.pending.set(zv, ev) : this.pending.delete(zv);
-          const gv = !Sv.ok || Sv.message.length > 0 ? Sv.message : null === Pv ? null : [Pv];
-          return null !== gv && this.statuses.set(zv, {
-            ok: Sv.ok,
-            text: gv,
+            KT = (null !== (lT = this.pending.get(kT)) && void 0 !== lT ? lT : 1) - 1;
+          KT > 0 ? this.pending.set(kT, KT) : this.pending.delete(kT);
+          const OT = !MT.ok || MT.message.length > 0 ? MT.message : null === cT ? null : [cT];
+          return null !== OT && this.statuses.set(kT, {
+            ok: MT.ok,
+            text: OT,
             until: Date.now() + 4e3
-          }), this.onChange(), Sv
+          }), this.onChange(), MT
         }))
       }
-      show(vv, zv) {
-        this.statuses.set(vv, {
-          ...zv,
+      show(TT, kT) {
+        this.statuses.set(TT, {
+          ...kT,
           until: Date.now() + 4e3
         }), this.onChange()
       }
-      expire(vv) {
-        for (const [zv, Pv] of this.statuses) Pv.until <= vv && this.statuses.delete(zv)
+      expire(TT) {
+        for (const [kT, cT] of this.statuses) cT.until <= TT && this.statuses.delete(kT)
       }
       nextDeadline() {
-        let vv = null;
-        for (const Pv of this.statuses.values()) {
-          var zv;
-          vv = Math.min(null !== (zv = vv) && void 0 !== zv ? zv : 1 / 0, Pv.until)
+        let TT = null;
+        for (const cT of this.statuses.values()) {
+          var kT;
+          TT = Math.min(null !== (kT = TT) && void 0 !== kT ? kT : 1 / 0, cT.until)
         }
-        return vv
+        return TT
       }
-      statusOf(vv, zv) {
-        const Pv = this.statuses.get(vv);
-        return !Pv || Pv.until <= zv ? null : {
-          ok: Pv.ok,
-          text: Pv.text
+      statusOf(TT, kT) {
+        const cT = this.statuses.get(TT);
+        return !cT || cT.until <= kT ? null : {
+          ok: cT.ok,
+          text: cT.text
         }
       }
-      isPending(vv) {
-        return this.pending.has(vv)
+      isPending(TT) {
+        return this.pending.has(TT)
       }
     }
   },
-  36086: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => Nv,
-      d: () => dv
+  36369: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => xT,
+      g: () => fT
     });
-    var hv = Pv(602),
-      Sv = Pv(1876),
-      ev = Pv(1612),
-      gv = Pv(73),
-      pv = Pv(1243);
+    var lT = cT(602),
+      MT = cT(1953),
+      KT = cT(1663),
+      OT = cT(118),
+      yT = cT(1274);
 
-    function dv(vv, zv, Pv) {
-      return gv.featureFlags.useSocialFeatures && vv && null === (0, pv.b)(zv, Pv)
+    function fT(TT, kT, cT) {
+      return OT.featureFlags.useSocialFeatures && TT && null === (0, yT.e)(kT, cT)
     }
 
-    function Nv(vv, zv) {
-      var Pv, gv;
-      const pv = ev.d.getSocialState().friends.find((vv => vv.name.toLowerCase() === zv.toLowerCase())),
-        dv = Sv.gameBridge.latest("players").byId[vv],
-        Nv = void 0 !== dv && dv.name === zv,
-        lv = Nv && null !== (Pv = dv.cosmetics) && void 0 !== Pv ? Pv : void 0,
-        Tv = pv && lv ? {
-          ...pv,
-          cosmetics: lv
-        } : pv;
+    function xT(TT, kT) {
+      var cT, OT;
+      const yT = KT.b.getSocialState().friends.find((TT => TT.name.toLowerCase() === kT.toLowerCase())),
+        fT = MT.gameBridge.latest("players").byId[TT],
+        xT = void 0 !== fT && fT.name === kT,
+        IT = xT && null !== (cT = fT.cosmetics) && void 0 !== cT ? cT : void 0,
+        AT = yT && IT ? {
+          ...yT,
+          cosmetics: IT
+        } : yT;
       return {
-        playerSocialPreview: null !== Tv && void 0 !== Tv ? Tv : {
+        playerSocialPreview: null !== AT && void 0 !== AT ? AT : {
           isError: !1,
-          name: zv,
-          ranks: Nv ? [...dv.ranks] : [],
-          cosmetics: null !== lv && void 0 !== lv ? lv : {},
-          nameColour: null !== (gv = null === lv || void 0 === lv ? void 0 : lv.nameColour) && void 0 !== gv ? gv : hv.d,
+          name: kT,
+          ranks: xT ? [...fT.ranks] : [],
+          cosmetics: null !== IT && void 0 !== IT ? IT : {},
+          nameColour: null !== (OT = null === IT || void 0 === IT ? void 0 : IT.nameColour) && void 0 !== OT ? OT : lT.e,
           location: {
             status: "inGame"
           }
         },
-        isFriend: void 0 !== pv
+        isFriend: void 0 !== yT
       }
     }
   },
-  36252: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => Tv
+  36559: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => AT
     });
-    var hv = Pv(52),
-      Sv = Pv(1035),
-      ev = Pv.n(Sv),
-      gv = Pv(1647),
-      pv = Pv(1442),
-      dv = Pv(1327),
-      Nv = Pv(1042),
-      lv = Pv(1082);
+    var lT = cT(71),
+      MT = cT(1046),
+      KT = cT.n(MT),
+      OT = cT(1692),
+      yT = cT(1470),
+      fT = cT(1348),
+      xT = cT(1061),
+      IT = cT(1099);
 
-    function Tv(vv) {
+    function AT(TT) {
       let {
-        label: zv,
-        icon: Pv,
-        placeholder: Sv,
-        onSubmit: Tv
-      } = vv;
-      const Wv = (0, hv.useRef)(null),
-        [wv, av] = (0, hv.useState)(""),
-        [sv, Cv] = (0, hv.useState)("Enter"),
-        [iv, cv] = (0, hv.useState)(null);
-      (0, hv.useEffect)((() => {
-        if ("Success" !== sv && "Error" !== sv) return;
-        const vv = setTimeout((() => {
-          "Success" === sv && Wv.current && (Wv.current.value = "", av("")), Cv("Enter")
-        }), "Success" === sv ? 1e3 : 4e3);
+        label: kT,
+        icon: cT,
+        placeholder: MT,
+        onSubmit: AT
+      } = TT;
+      const CT = (0, lT.useRef)(null),
+        [jT, vT] = (0, lT.useState)(""),
+        [tT, hT] = (0, lT.useState)("Enter"),
+        [NT, QT] = (0, lT.useState)(null);
+      (0, lT.useEffect)((() => {
+        if ("Success" !== tT && "Error" !== tT) return;
+        const TT = setTimeout((() => {
+          "Success" === tT && CT.current && (CT.current.value = "", vT("")), hT("Enter")
+        }), "Success" === tT ? 1e3 : 4e3);
         return () => {
-          clearTimeout(vv)
+          clearTimeout(TT)
         }
-      }), [sv]);
-      const Gv = () => {
-        const vv = wv.trim();
-        "" !== vv && "Enter" === sv && (Cv("Loading"), Tv(vv).then((vv => {
-          Wv.current && ("error" in vv ? null === vv.error ? Cv("Enter") : (cv(vv.error), Cv("Error")) : Cv("Success"))
+      }), [tT]);
+      const ST = () => {
+        const TT = jT.trim();
+        "" !== TT && "Enter" === tT && (hT("Loading"), AT(TT).then((TT => {
+          CT.current && ("error" in TT ? null === TT.error ? hT("Enter") : (QT(TT.error), hT("Error")) : hT("Success"))
         })))
       };
-      return (0, lv.jsxs)("div", {
+      return (0, IT.jsxs)("div", {
         className: "PlayerNameField",
-        onKeyDown: vv => {
-          vv.target === Wv.current && "Escape" !== vv.key && vv.stopPropagation()
+        onKeyDown: TT => {
+          TT.target === CT.current && "Escape" !== TT.key && TT.stopPropagation()
         },
-        children: [(0, lv.jsxs)("div", {
-          className: ev()("AddFriendBodyOverlay", `AddFriendBodyOverlay${sv}`),
-          children: ["Loading" === sv && (0, lv.jsx)(dv.c, {}), "Success" === sv && (0, lv.jsx)(Nv.b, {
+        children: [(0, IT.jsxs)("div", {
+          className: KT()("AddFriendBodyOverlay", `AddFriendBodyOverlay${tT}`),
+          children: ["Loading" === tT && (0, IT.jsx)(fT.d, {}), "Success" === tT && (0, IT.jsx)(xT.e, {
             name: "check"
-          }), "Error" === sv && iv]
-        }), (0, lv.jsxs)("div", {
+          }), "Error" === tT && NT]
+        }), (0, IT.jsxs)("div", {
           className: "PlayerSearch",
-          children: [(0, lv.jsx)(gv.c, {
+          children: [(0, IT.jsx)(OT.b, {
             className: "PlayerSearchInput",
-            domRef: Wv,
+            domRef: CT,
             maxLength: 32,
-            placeholderText: Sv,
-            ariaLabel: Sv,
+            placeholderText: MT,
+            ariaLabel: MT,
             stopPropagation: !1,
-            onValueChange: vv => {
-              av(vv)
+            onValueChange: TT => {
+              vT(TT)
             },
-            onEnter: Gv
-          }), (0, lv.jsxs)(pv.d, {
+            onEnter: ST
+          }), (0, IT.jsxs)(yT.e, {
             className: "PlayerSearchInputButton SmallTextLight",
-            disabled: "Enter" !== sv || "" === wv.trim(),
-            onClick: Gv,
-            children: [(0, lv.jsx)(Nv.b, {
-              name: Pv
-            }), " ", zv]
+            disabled: "Enter" !== tT || "" === jT.trim(),
+            onClick: ST,
+            children: [(0, IT.jsx)(xT.e, {
+              name: cT
+            }), " ", kT]
           })]
         })]
       })
     }
   },
-  36229: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => Tv
+  36533: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => AT
     });
-    var hv = Pv(52),
-      Sv = Pv(1035),
-      ev = Pv.n(Sv),
-      gv = Pv(1175),
-      pv = Pv(1042),
-      dv = Pv(1082);
-    const Nv = {
+    var lT = cT(71),
+      MT = cT(1046),
+      KT = cT.n(MT),
+      OT = cT(1195),
+      yT = cT(1061),
+      fT = cT(1099);
+    const xT = {
         unlisted: "link",
         public: "globe",
         whitelist: "user-check",
         private: "lock"
       },
-      lv = ["unlisted", "public", "whitelist", "private"];
+      IT = ["unlisted", "public", "whitelist", "private"];
 
-    function Tv(vv) {
+    function AT(TT) {
       let {
-        visibility: zv,
-        onPick: Pv
-      } = vv;
+        visibility: kT,
+        onPick: cT
+      } = TT;
       const {
-        t: Sv
-      } = (0, gv.x)(), Tv = (0, hv.useRef)([]);
-      return (0, dv.jsx)("div", {
+        t: MT
+      } = (0, OT.B)(), AT = (0, lT.useRef)([]);
+      return (0, fT.jsx)("div", {
         className: "WorldSocialTiles",
         role: "group",
-        "aria-label": Sv("worldSocial:whoCanJoin"),
-        children: lv.map(((vv, hv) => {
-          const gv = vv === zv;
-          return (0, dv.jsxs)("button", {
-            ref: vv => {
-              Tv.current[hv] = vv
+        "aria-label": MT("worldSocial:whoCanJoin"),
+        children: IT.map(((TT, lT) => {
+          const OT = TT === kT;
+          return (0, fT.jsxs)("button", {
+            ref: TT => {
+              AT.current[lT] = TT
             },
             type: "button",
-            className: ev()("WorldSocialTile", {
-              WorldSocialTileSelected: gv
+            className: KT()("WorldSocialTile", {
+              WorldSocialTileSelected: OT
             }),
-            "aria-pressed": gv,
-            tabIndex: gv ? 0 : -1,
-            onKeyDown: vv => {
-              ((vv, zv) => {
-                const Pv = "ArrowRight" === vv.key || "ArrowDown" === vv.key ? 1 : "ArrowLeft" === vv.key || "ArrowUp" === vv.key ? -1 : 0;
-                var hv;
-                0 !== Pv && (vv.preventDefault(), null === (hv = Tv.current[(zv + Pv + lv.length) % lv.length]) || void 0 === hv || hv.focus())
-              })(vv, hv)
+            "aria-pressed": OT,
+            tabIndex: OT ? 0 : -1,
+            onKeyDown: TT => {
+              ((TT, kT) => {
+                const cT = "ArrowRight" === TT.key || "ArrowDown" === TT.key ? 1 : "ArrowLeft" === TT.key || "ArrowUp" === TT.key ? -1 : 0;
+                var lT;
+                0 !== cT && (TT.preventDefault(), null === (lT = AT.current[(kT + cT + IT.length) % IT.length]) || void 0 === lT || lT.focus())
+              })(TT, lT)
             },
             onClick: () => {
-              Pv(vv)
+              cT(TT)
             },
-            children: [(0, dv.jsx)("span", {
+            children: [(0, fT.jsx)("span", {
               className: "WorldSocialTileIcon",
-              children: (0, dv.jsx)(pv.b, {
-                name: Nv[vv]
+              children: (0, fT.jsx)(yT.e, {
+                name: xT[TT]
               })
-            }), (0, dv.jsxs)("span", {
+            }), (0, fT.jsxs)("span", {
               className: "WorldSocialTileText",
-              children: [(0, dv.jsx)("span", {
+              children: [(0, fT.jsx)("span", {
                 className: "WorldSocialTileTitle",
-                children: Sv(`worldSocial:${vv}`)
-              }), (0, dv.jsx)("span", {
+                children: MT(`worldSocial:${TT}`)
+              }), (0, fT.jsx)("span", {
                 className: "WorldSocialTileDescription",
-                children: Sv(`worldSocial:${vv}Description`)
+                children: MT(`worldSocial:${TT}Description`)
               })]
             })]
-          }, vv)
+          }, TT)
         }))
       })
     }
   },
-  36243: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      e: () => pv
+  36550: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => yT
     });
-    var hv = Pv(1175),
-      Sv = Pv(2472),
-      ev = Pv(4129),
-      gv = Pv(1082);
+    var lT = cT(1195),
+      MT = cT(2660),
+      KT = cT(4355),
+      OT = cT(1099);
 
-    function pv(vv) {
+    function yT(TT) {
       let {
-        MT: zv,
-        children: Pv,
-        ...pv
-      } = vv;
+        UA: kT,
+        children: cT,
+        ...yT
+      } = TT;
       const {
-        t: dv
-      } = (0, hv.x)();
-      return (0, gv.jsx)("div", {
+        t: fT
+      } = (0, lT.B)();
+      return (0, OT.jsx)("div", {
         className: "WhitelistTickRow",
         onClick: () => {
-          zv.onChange(!zv.on)
+          kT.onChange(!kT.on)
         },
-        children: (0, gv.jsx)(Sv.f, {
-          ...pv,
+        children: (0, OT.jsx)(MT.h, {
+          ...yT,
           opensProfileCard: !1,
-          children: (0, gv.jsxs)("div", {
+          children: (0, OT.jsxs)("div", {
             className: "WhitelistTickRowActions",
-            onClick: vv => {
-              vv.stopPropagation()
+            onClick: TT => {
+              TT.stopPropagation()
             },
-            children: [Pv, (0, gv.jsx)("label", {
+            children: [cT, (0, OT.jsx)("label", {
               className: "WhitelistTickRowTick",
-              children: (0, gv.jsx)(ev.e, {
-                checked: zv.on,
+              children: (0, OT.jsx)(KT.d, {
+                checked: kT.on,
                 disabled: !1,
-                ariaLabel: dv("worldSocial:letJoin", {
-                  playerName: pv.playerSocialPreview.name
+                ariaLabel: fT("worldSocial:letJoin", {
+                  playerName: yT.playerSocialPreview.name
                 }),
-                onChange: vv => {
-                  zv.onChange(vv.target.checked)
+                onChange: TT => {
+                  kT.onChange(TT.target.checked)
                 }
               })
             })]
@@ -1913,372 +1913,372 @@ export const modules = {
       })
     }
   },
-  36221: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => av
+  36531: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => vT
     });
-    var hv = Pv(52),
-      Sv = Pv(1175),
-      ev = Pv(1827),
-      gv = Pv(73),
-      pv = Pv(22),
-      dv = Pv(1465),
-      Nv = Pv(2511),
-      lv = Pv(8895),
-      Tv = Pv(1442),
-      Wv = Pv(1042),
-      wv = Pv(1082);
+    var lT = cT(71),
+      MT = cT(1195),
+      KT = cT(1875),
+      OT = cT(118),
+      yT = cT(31),
+      fT = cT(1497),
+      xT = cT(2678),
+      IT = cT(9250),
+      AT = cT(1470),
+      CT = cT(1061),
+      jT = cT(1099);
 
-    function av(vv) {
+    function vT(TT) {
       let {
-        worldCode: zv,
-        message: Pv
-      } = vv;
+        worldCode: kT,
+        message: cT
+      } = TT;
       const {
-        t: av
-      } = (0, Sv.x)(), {
-        isTouchScreen: sv
-      } = (0, pv.i)(["isTouchScreen"]), Cv = gv.featureFlags.canUseInviteLinks, iv = (0, lv.k)(Cv && null === Pv), [cv, Gv] = (0, Nv.i)(), mv = (0, hv.useRef)(null);
-      if (null !== Pv) return (0, wv.jsxs)("div", {
+        t: vT
+      } = (0, MT.B)(), {
+        isTouchScreen: tT
+      } = (0, yT.n)(["isTouchScreen"]), hT = OT.featureFlags.canUseInviteLinks, NT = (0, IT.i)(hT && null === cT), [QT, ST] = (0, xT.h)(), DT = (0, lT.useRef)(null);
+      if (null !== cT) return (0, jT.jsxs)("div", {
         className: "WorldSocialLinkRow WorldSocialLinkRowMessage",
-        children: [(0, wv.jsx)(Wv.b, {
+        children: [(0, jT.jsx)(CT.e, {
           name: "lock"
-        }), (0, wv.jsx)("span", {
-          children: Pv
+        }), (0, jT.jsx)("span", {
+          children: cT
         })]
       });
-      const jv = Cv ? iv : zv,
-        fv = sv && Cv && (0, Nv.e)();
-      return (0, wv.jsxs)("div", {
+      const aT = hT ? NT : kT,
+        FT = tT && hT && (0, xT.c)();
+      return (0, jT.jsxs)("div", {
         className: "WorldSocialLinkRow",
-        children: [!Cv && (0, wv.jsx)("span", {
+        children: [!hT && (0, jT.jsx)("span", {
           className: "WorldSocialCodeLabel",
-          children: av("worldSocial:worldCode")
-        }), (0, wv.jsx)("input", {
-          ref: mv,
+          children: vT("worldSocial:worldCode")
+        }), (0, jT.jsx)("input", {
+          ref: DT,
           className: "WorldSocialLink",
           readOnly: !0,
-          value: null !== jv && void 0 !== jv ? jv : "",
-          "aria-label": av(Cv ? "worldSocial:worldLink" : "worldSocial:worldCode"),
-          onFocus: vv => {
-            vv.currentTarget.select()
+          value: null !== aT && void 0 !== aT ? aT : "",
+          "aria-label": vT(hT ? "worldSocial:worldLink" : "worldSocial:worldCode"),
+          onFocus: TT => {
+            TT.currentTarget.select()
           }
-        }), (0, wv.jsxs)(Tv.d, {
+        }), (0, jT.jsxs)(AT.e, {
           className: "WorldSocialCopy",
-          disabled: null === jv,
+          disabled: null === aT,
           onClick: () => {
-            null !== jv && (0, Nv.g)(jv, {
-              useShareSheet: fv,
-              onOutcome: vv => {
-                if ((0, dv.reportAnalyticsClick)({
+            null !== aT && (0, xT.d)(aT, {
+              useShareSheet: FT,
+              onOutcome: TT => {
+                if ((0, fT.reportAnalyticsClick)({
                     id: "world_social.copy_link",
-                    value: "copied" !== vv || Cv ? vv : "code"
-                  }), "copied" === vv) Gv();
-                else if ("failed" === vv) {
-                  var zv;
-                  null === (zv = mv.current) || void 0 === zv || zv.focus(), ev.f.showMessage({
+                    value: "copied" !== TT || hT ? TT : "code"
+                  }), "copied" === TT) ST();
+                else if ("failed" === TT) {
+                  var kT;
+                  null === (kT = DT.current) || void 0 === kT || kT.focus(), KT.g.showMessage({
                     translationKey: "partyBar:copyFailed"
                   })
                 }
               }
             })
           },
-          children: [(0, wv.jsx)(Wv.b, {
-            name: cv ? "check" : fv ? "up-from-bracket" : "copy"
-          }), " ", av(cv ? "general:copied" : fv ? "worldSocial:share" : "general:copy")]
+          children: [(0, jT.jsx)(CT.e, {
+            name: QT ? "check" : FT ? "up-from-bracket" : "copy"
+          }), " ", vT(QT ? "general:copied" : FT ? "worldSocial:share" : "general:copy")]
         })]
       })
     }
   },
-  36236: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => wv,
-      d: () => Wv,
-      g: () => Tv
+  36541: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => jT,
+      c: () => CT,
+      g: () => AT
     });
-    var hv = Pv(602),
-      Sv = Pv(1175),
-      ev = Pv(1612),
-      gv = Pv(2472),
-      pv = Pv(2432),
-      dv = Pv(1442),
-      Nv = Pv(36243),
-      lv = Pv(1082);
+    var lT = cT(602),
+      MT = cT(1195),
+      KT = cT(1663),
+      OT = cT(2660),
+      yT = cT(2600),
+      fT = cT(1470),
+      xT = cT(36550),
+      IT = cT(1099);
 
-    function Tv(vv, zv) {
-      var Pv;
+    function AT(TT, kT) {
+      var cT;
       return {
         isError: !1,
-        name: vv,
+        name: TT,
         ranks: [...arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : []],
-        cosmetics: null !== zv && void 0 !== zv ? zv : {},
-        nameColour: null !== (Pv = null === zv || void 0 === zv ? void 0 : zv.nameColour) && void 0 !== Pv ? Pv : hv.d,
+        cosmetics: null !== kT && void 0 !== kT ? kT : {},
+        nameColour: null !== (cT = null === kT || void 0 === kT ? void 0 : kT.nameColour) && void 0 !== cT ? cT : lT.e,
         location: {
           status: "offline"
         }
       }
     }
 
-    function Wv(vv) {
+    function CT(TT) {
       let {
-        player: zv,
-        isFriend: Pv = !1,
-        status: hv,
-        showLocation: dv = void 0 === hv,
-        MT: Tv,
-        onSendFriendRequest: Wv,
-        actions: wv,
-        zIndex: av
-      } = vv;
+        player: kT,
+        isFriend: cT = !1,
+        status: lT,
+        showLocation: fT = void 0 === lT,
+        UA: AT,
+        onSendFriendRequest: CT,
+        actions: jT,
+        zIndex: vT
+      } = TT;
       const {
-        t: sv
-      } = (0, Sv.x)();
-      let Cv = hv;
-      null !== Tv && void 0 !== Tv && Tv.on && (Cv = (0, lv.jsxs)(lv.Fragment, {
-        children: [null !== hv && void 0 !== hv ? hv : (0, lv.jsx)(pv.b, {
-          socialPreview: zv
-        }), (0, lv.jsxs)("span", {
+        t: tT
+      } = (0, MT.B)();
+      let hT = lT;
+      null !== AT && void 0 !== AT && AT.on && (hT = (0, IT.jsxs)(IT.Fragment, {
+        children: [null !== lT && void 0 !== lT ? lT : (0, IT.jsx)(yT.d, {
+          socialPreview: kT
+        }), (0, IT.jsxs)("span", {
           className: "WorldSocialCanJoin",
-          children: [" \xb7 ", sv("worldSocial:canJoin")]
+          children: [" \xb7 ", tT("worldSocial:canJoin")]
         })]
       }));
-      const iv = {
-        playerSocialPreview: zv,
-        isFriend: Pv,
+      const NT = {
+        playerSocialPreview: kT,
+        isFriend: cT,
         hideFriendBadge: !0,
-        onFriendRemoved: Pv ? vv => {
-          ev.d.removeFriendFromState(vv)
+        onFriendRemoved: cT ? TT => {
+          KT.b.removeFriendFromState(TT)
         } : void 0,
-        status: Cv,
-        showLocation: dv,
-        onSendFriendRequest: Wv,
-        zIndex: av
+        status: hT,
+        showLocation: fT,
+        onSendFriendRequest: CT,
+        zIndex: vT
       };
-      return Tv ? (0, lv.jsx)(Nv.e, {
-        ...iv,
-        MT: Tv,
-        children: wv
-      }) : (0, lv.jsx)(gv.f, {
-        ...iv,
+      return AT ? (0, IT.jsx)(xT.c, {
+        ...NT,
+        UA: AT,
+        children: jT
+      }) : (0, IT.jsx)(OT.h, {
+        ...NT,
         opensProfileCard: !1,
-        children: wv || void 0
+        children: jT || void 0
       })
     }
 
-    function wv(vv) {
+    function jT(TT) {
       let {
-        row: zv,
-        MT: Pv,
-        canInvite: hv,
-        invited: ev,
-        onInvite: gv,
-        zIndex: pv
-      } = vv;
+        row: kT,
+        UA: cT,
+        canInvite: lT,
+        invited: KT,
+        onInvite: OT,
+        zIndex: yT
+      } = TT;
       const {
-        t: Nv
-      } = (0, Sv.x)(), Tv = "online" === zv.place ? dv.d : dv.e;
-      return (0, lv.jsx)(Wv, {
-        player: zv.friend,
+        t: xT
+      } = (0, MT.B)(), AT = "online" === kT.place ? fT.e : fT.i;
+      return (0, IT.jsx)(CT, {
+        player: kT.friend,
         isFriend: !0,
-        status: "here" === zv.place ? Nv("worldSocial:inThisWorld") : void 0,
+        status: "here" === kT.place ? xT("worldSocial:inThisWorld") : void 0,
         showLocation: !0,
-        MT: Pv,
-        zIndex: pv,
-        actions: hv && (0, lv.jsx)(Tv, {
+        UA: cT,
+        zIndex: yT,
+        actions: lT && (0, IT.jsx)(AT, {
           className: "WorldSocialInvite SmallTextLight",
-          disabled: ev,
-          onClick: gv,
-          ariaLabel: `${Nv("worldSocial:invite")} ${zv.friend.name}`,
-          children: Nv(ev ? "worldSocial:invited" : "worldSocial:invite")
+          disabled: KT,
+          onClick: OT,
+          ariaLabel: `${xT("worldSocial:invite")} ${kT.friend.name}`,
+          children: xT(KT ? "worldSocial:invited" : "worldSocial:invite")
         })
       })
     }
   },
-  36213: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => dv,
-      e: () => gv,
-      i: () => Nv
+  36523: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => fT,
+      h: () => OT,
+      i: () => xT
     });
-    var hv = Pv(52),
-      Sv = Pv(4342),
-      ev = Pv(1827);
+    var lT = cT(71),
+      MT = cT(4566),
+      KT = cT(1875);
 
-    function gv(vv) {
-      const zv = {
-        lobbyName: vv,
+    function OT(TT) {
+      const kT = {
+        lobbyName: TT,
         answer: null,
-        response: Sv.e.getSocialSettings(vv)
+        response: MT.c.getSocialSettings(TT)
       };
-      return zv.response.then((vv => {
-        zv.answer = vv
-      })), zv
+      return kT.response.then((TT => {
+        kT.answer = TT
+      })), kT
     }
-    const pv = new Map;
+    const yT = new Map;
 
-    function dv(vv) {
-      pv.set(vv.lobbyName, vv)
+    function fT(TT) {
+      yT.set(TT.lobbyName, TT)
     }
 
-    function Nv(vv) {
-      const [zv] = (0, hv.useState)((() => function(vv) {
-        var zv;
-        const Pv = null !== (zv = pv.get(vv)) && void 0 !== zv ? zv : null;
-        return null !== Pv && void 0 !== Pv && Pv.answer && "error" in Pv.answer ? null : Pv
-      }(vv))), [Pv, gv] = (0, hv.useState)((() => null !== zv && void 0 !== zv && zv.answer && "settings" in zv.answer ? zv.answer.settings : null)), [dv, Nv] = (0, hv.useState)(!0), [lv, Tv] = (0, hv.useState)(null !== Pv), Wv = (0, hv.useRef)(Pv);
-      Wv.current = Pv;
-      const wv = (0, hv.useRef)(0),
-        av = (0, hv.useRef)(0),
-        sv = (0, hv.useRef)(!1),
-        Cv = (0, hv.useRef)(!0),
-        iv = (0, hv.useCallback)((async zv => {
-          const Pv = ++wv.current,
-            hv = await (null !== zv && void 0 !== zv ? zv : Sv.e.getSocialSettings(vv));
-          Cv.current && Pv === wv.current && (Tv(!0), Nv(!1), "error" in hv || gv(hv.settings))
-        }), [vv]),
-        cv = (0, hv.useCallback)((() => {
-          Nv(!0), iv()
-        }), [iv]),
-        Gv = (0, hv.useCallback)((() => {
-          av.current > 0 ? sv.current = !0 : iv()
-        }), [iv]);
-      (0, hv.useEffect)((() => (Cv.current = !0, pv.delete(vv), Nv(!0), iv(null === zv || void 0 === zv ? void 0 : zv.response), () => {
-        Cv.current = !1
-      })), [iv, vv, zv]);
-      const mv = vv => {
-        wv.current++, Nv(!1), Wv.current = vv, gv(vv)
+    function xT(TT) {
+      const [kT] = (0, lT.useState)((() => function(TT) {
+        var kT;
+        const cT = null !== (kT = yT.get(TT)) && void 0 !== kT ? kT : null;
+        return null !== cT && void 0 !== cT && cT.answer && "error" in cT.answer ? null : cT
+      }(TT))), [cT, OT] = (0, lT.useState)((() => null !== kT && void 0 !== kT && kT.answer && "settings" in kT.answer ? kT.answer.settings : null)), [fT, xT] = (0, lT.useState)(!0), [IT, AT] = (0, lT.useState)(null !== cT), CT = (0, lT.useRef)(cT);
+      CT.current = cT;
+      const jT = (0, lT.useRef)(0),
+        vT = (0, lT.useRef)(0),
+        tT = (0, lT.useRef)(!1),
+        hT = (0, lT.useRef)(!0),
+        NT = (0, lT.useCallback)((async kT => {
+          const cT = ++jT.current,
+            lT = await (null !== kT && void 0 !== kT ? kT : MT.c.getSocialSettings(TT));
+          hT.current && cT === jT.current && (AT(!0), xT(!1), "error" in lT || OT(lT.settings))
+        }), [TT]),
+        QT = (0, lT.useCallback)((() => {
+          xT(!0), NT()
+        }), [NT]),
+        ST = (0, lT.useCallback)((() => {
+          vT.current > 0 ? tT.current = !0 : NT()
+        }), [NT]);
+      (0, lT.useEffect)((() => (hT.current = !0, yT.delete(TT), xT(!0), NT(null === kT || void 0 === kT ? void 0 : kT.response), () => {
+        hT.current = !1
+      })), [NT, TT, kT]);
+      const DT = TT => {
+        jT.current++, xT(!1), CT.current = TT, OT(TT)
       };
       return {
-        settings: Pv,
-        loading: dv,
-        answered: lv,
-        retry: cv,
-        refresh: Gv,
-        change: async function(zv, Pv) {
+        settings: cT,
+        loading: fT,
+        answered: IT,
+        retry: QT,
+        refresh: ST,
+        change: async function(kT, cT) {
           let {
-            quiet: hv = !1,
-            onAnswer: gv
+            quiet: lT = !1,
+            onAnswer: OT
           } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-          const pv = Wv.current;
-          if (null === pv) return !1;
-          mv(Pv(pv)), av.current > 0 && (sv.current = !0), av.current++;
-          const dv = await Sv.e.setSocialSettings(vv, zv);
-          av.current--;
-          const Nv = !("error" in dv);
-          if (!Cv.current) return Nv;
-          if (null === gv || void 0 === gv || gv(dv), hv);
-          else if ("error" in dv) ev.f.showMessage({
-            translationKey: dv.error
+          const yT = CT.current;
+          if (null === yT) return !1;
+          DT(cT(yT)), vT.current > 0 && (tT.current = !0), vT.current++;
+          const fT = await MT.c.setSocialSettings(TT, kT);
+          vT.current--;
+          const xT = !("error" in fT);
+          if (!hT.current) return xT;
+          if (null === OT || void 0 === OT || OT(fT), lT);
+          else if ("error" in fT) KT.g.showMessage({
+            translationKey: fT.error
           });
           else
-            for (const vv of dv.notFound) ev.f.showMessage({
+            for (const TT of fT.notFound) KT.g.showMessage({
               translationKey: "worldSocial:notFound",
               params: {
-                playerName: vv
+                playerName: TT
               }
             });
-          if (av.current > 0) return Nv;
-          const lv = sv.current;
-          return sv.current = !1, !lv && "settings" in dv ? mv(dv.settings) : (lv || mv(pv), iv()), Nv
+          if (vT.current > 0) return xT;
+          const IT = tT.current;
+          return tT.current = !1, !IT && "settings" in fT ? DT(fT.settings) : (IT || DT(yT), NT()), xT
         }
       }
     }
   },
-  36258: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => gv,
-      e: () => ev
+  36567: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => OT,
+      f: () => KT
     });
-    var hv = Pv(144);
-    const Sv = new Map;
+    var lT = cT(184);
+    const MT = new Map;
 
-    function ev(vv, zv) {
-      var Pv;
-      const hv = null !== (Pv = Sv.get(vv)) && void 0 !== Pv ? Pv : new Map;
-      hv.set(zv, Date.now()), Sv.set(vv, hv)
+    function KT(TT, kT) {
+      var cT;
+      const lT = null !== (cT = MT.get(TT)) && void 0 !== cT ? cT : new Map;
+      lT.set(kT, Date.now()), MT.set(TT, lT)
     }
 
-    function gv(vv) {
-      const zv = Sv.get(vv);
-      if (!zv) return [];
-      const Pv = Date.now();
-      for (const [Sv, ev] of zv) Pv - ev >= hv.q && zv.delete(Sv);
-      return [...zv.keys()]
+    function OT(TT) {
+      const kT = MT.get(TT);
+      if (!kT) return [];
+      const cT = Date.now();
+      for (const [MT, KT] of kT) cT - KT >= lT.i && kT.delete(MT);
+      return [...kT.keys()]
     }
   },
-  36217: (vv, zv, Pv) => {
-    function hv(vv, zv) {
-      const Pv = zv.toLowerCase();
-      for (const hv of vv)
-        if (hv.toLowerCase() === Pv) return !0;
+  36528: (TT, kT, cT) => {
+    function lT(TT, kT) {
+      const cT = kT.toLowerCase();
+      for (const lT of TT)
+        if (lT.toLowerCase() === cT) return !0;
       return !1
     }
 
-    function Sv(vv, zv, Pv) {
-      const Sv = [],
-        ev = [],
-        gv = [];
-      for (const pv of vv) !pv.isError && pv.name && ("inGame" === pv.location.status && pv.location.inLobbyName === zv || hv(Pv, pv.name) ? ev.push({
-        friend: pv,
+    function MT(TT, kT, cT) {
+      const MT = [],
+        KT = [],
+        OT = [];
+      for (const yT of TT) !yT.isError && yT.name && ("inGame" === yT.location.status && yT.location.inLobbyName === kT || lT(cT, yT.name) ? KT.push({
+        friend: yT,
         place: "here"
-      }) : "offline" === pv.location.status ? gv.push({
-        friend: pv,
+      }) : "offline" === yT.location.status ? OT.push({
+        friend: yT,
         place: "offline"
-      }) : Sv.push({
-        friend: pv,
+      }) : MT.push({
+        friend: yT,
         place: "online"
       }));
-      return [...Sv, ...ev, ...gv]
+      return [...MT, ...KT, ...OT]
     }
 
-    function ev(vv, zv, Pv) {
-      const Sv = [],
-        ev = vv.flatMap((vv => "here" === vv.place ? [vv.friend.name] : []));
-      for (const gv of [...ev, ...zv]) hv(Sv, gv) || hv(Pv, gv) || Sv.push(gv);
-      return Sv
+    function KT(TT, kT, cT) {
+      const MT = [],
+        KT = TT.flatMap((TT => "here" === TT.place ? [TT.friend.name] : []));
+      for (const OT of [...KT, ...kT]) lT(MT, OT) || lT(cT, OT) || MT.push(OT);
+      return MT
     }
 
-    function gv(vv, zv) {
-      return null === vv || void 0 === vv || !vv.canManage || hv(vv.whitelist, zv) ? "none" : "whitelist" === vv.visibility ? "required" : "quiet"
+    function OT(TT, kT) {
+      return null === TT || void 0 === TT || !TT.canManage || lT(TT.whitelist, kT) ? "none" : "whitelist" === TT.visibility ? "required" : "quiet"
     }
 
-    function pv(vv) {
-      if (null === vv) return !0;
+    function yT(TT) {
+      if (null === TT) return !0;
       const {
-        visibility: zv
-      } = vv;
-      return "public" === zv || "unlisted" === zv || "whitelist" === zv && vv.canManage
+        visibility: kT
+      } = TT;
+      return "public" === kT || "unlisted" === kT || "whitelist" === kT && TT.canManage
     }
 
-    function dv(vv, zv, Pv) {
-      if (Pv) {
-        const Pv = zv.filter((zv => !hv(vv.whitelist, zv)));
+    function fT(TT, kT, cT) {
+      if (cT) {
+        const cT = kT.filter((kT => !lT(TT.whitelist, kT)));
         return {
-          ...vv,
-          whitelist: [...vv.whitelist, ...Pv]
+          ...TT,
+          whitelist: [...TT.whitelist, ...cT]
         }
       }
       return {
-        ...vv,
-        whitelist: vv.whitelist.filter((vv => !hv(zv, vv)))
+        ...TT,
+        whitelist: TT.whitelist.filter((TT => !lT(kT, TT)))
       }
     }
 
-    function Nv(vv, zv) {
-      const Pv = [];
-      for (let hv = 0; hv < vv.length; hv += zv) Pv.push(vv.slice(hv, hv + zv));
-      return Pv
+    function xT(TT, kT) {
+      const cT = [];
+      for (let lT = 0; lT < TT.length; lT += kT) cT.push(TT.slice(lT, lT + kT));
+      return cT
     }
-    Pv.d(zv, {
-      d: () => pv,
-      e: () => ev,
-      i: () => Sv,
-      k: () => hv,
-      o: () => Nv,
-      r: () => gv,
-      t: () => dv
+    cT.d(kT, {
+      d: () => yT,
+      e: () => KT,
+      i: () => MT,
+      j: () => lT,
+      n: () => xT,
+      q: () => OT,
+      t: () => fT
     })
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

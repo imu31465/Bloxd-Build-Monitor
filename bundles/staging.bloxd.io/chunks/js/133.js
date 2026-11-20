@@ -1,132 +1,132 @@
 export const id = 133;
 export const ids = [133];
 export const modules = {
-  6359: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => mv,
-      f: () => jv,
-      h: () => cv,
-      k: () => iv
+  6628: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => DT,
+      i: () => aT,
+      k: () => QT,
+      o: () => NT
     });
-    var hv = Pv(6363);
-    const Sv = 6,
-      ev = 3,
-      gv = 1,
-      pv = 2,
-      dv = 4,
-      Nv = 8,
-      lv = 16,
-      Tv = 32,
-      Wv = 64,
-      wv = 128,
-      av = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var lT = cT(6633);
+    const MT = 6,
+      KT = 3,
+      OT = 1,
+      yT = 2,
+      fT = 4,
+      xT = 8,
+      IT = 16,
+      AT = 32,
+      CT = 64,
+      jT = 128,
+      vT = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function sv(vv) {
-      if (!vv) return 0;
-      const zv = av.indexOf(vv);
-      if (zv <= 0) throw new Error(`"${vv}" is not a shader pack hook function`);
-      return zv
+    function tT(TT) {
+      if (!TT) return 0;
+      const kT = vT.indexOf(TT);
+      if (kT <= 0) throw new Error(`"${TT}" is not a shader pack hook function`);
+      return kT
     }
 
-    function Cv(vv) {
-      if (0 === vv) return null;
-      const zv = av[vv];
-      if (void 0 === zv) throw new Error(`${vv} is not a shader pack hook function id`);
-      return zv
+    function hT(TT) {
+      if (0 === TT) return null;
+      const kT = vT[TT];
+      if (void 0 === kT) throw new Error(`${TT} is not a shader pack hook function id`);
+      return kT
     }
 
-    function iv(vv) {
-      const zv = hv.d.length;
+    function NT(TT) {
+      const kT = lT.e.length;
       return {
-        strict: vv >= zv,
-        program: hv.d[vv % zv]
+        strict: TT >= kT,
+        program: lT.e[TT % kT]
       }
     }
 
-    function cv(vv) {
-      return Number(vv.strict) * hv.d.length + hv.d.indexOf(vv.program)
+    function QT(TT) {
+      return Number(TT.strict) * lT.e.length + lT.e.indexOf(TT.program)
     }
 
-    function Gv(vv) {
-      return "" === vv ? [] : vv.split(" ")
+    function ST(TT) {
+      return "" === TT ? [] : TT.split(" ")
     }
 
-    function mv(vv) {
-      const zv = {
-        variantFlags: new Uint8Array(Sv),
-        hooks: new Uint8Array(Sv * ev),
-        moduleCodes: Array(Sv).fill(""),
-        reads: Array(2 * Sv).fill("")
+    function DT(TT) {
+      const kT = {
+        variantFlags: new Uint8Array(MT),
+        hooks: new Uint8Array(MT * KT),
+        moduleCodes: Array(MT).fill(""),
+        reads: Array(2 * MT).fill("")
       };
-      for (const Pv of vv) {
-        const vv = cv(Pv.key),
-          hv = (vv, zv) => null === Pv.hooks.surface || Pv.reads.fragment.includes(vv) ? 0 : zv;
-        zv.variantFlags[vv] = (Pv.sceneDepth ? gv : 0) | (Pv.movesVertices ? pv : 0) | (Pv.sunShadow ? dv : 0) | (Pv.airShadow ? Nv : 0) | (Pv.discards ? lv : 0) | hv("localPosition", Tv) | hv("enchantSpeed", Wv) | hv("enchantTier", wv), zv.hooks[vv * ev] = sv(Pv.hooks.vertex), zv.hooks[vv * ev + 1] = sv(Pv.hooks.surface), zv.hooks[vv * ev + 2] = sv(Pv.hooks.light), zv.moduleCodes[vv] = Pv.moduleCode, zv.reads[2 * vv] = Pv.reads.vertex.join(" "), zv.reads[2 * vv + 1] = Pv.reads.fragment.join(" ")
+      for (const cT of TT) {
+        const TT = QT(cT.key),
+          lT = (TT, kT) => null === cT.hooks.surface || cT.reads.fragment.includes(TT) ? 0 : kT;
+        kT.variantFlags[TT] = (cT.sceneDepth ? OT : 0) | (cT.movesVertices ? yT : 0) | (cT.sunShadow ? fT : 0) | (cT.airShadow ? xT : 0) | (cT.discards ? IT : 0) | lT("localPosition", AT) | lT("enchantSpeed", CT) | lT("enchantTier", jT), kT.hooks[TT * KT] = tT(cT.hooks.vertex), kT.hooks[TT * KT + 1] = tT(cT.hooks.surface), kT.hooks[TT * KT + 2] = tT(cT.hooks.light), kT.moduleCodes[TT] = cT.moduleCode, kT.reads[2 * TT] = cT.reads.vertex.join(" "), kT.reads[2 * TT + 1] = cT.reads.fragment.join(" ")
       }
-      return zv
+      return kT
     }
 
-    function jv(vv) {
+    function aT(TT) {
       const {
-        hooks: zv,
-        moduleCodes: Pv,
-        reads: hv
-      } = vv;
-      return Array.from(vv.variantFlags, ((vv, Sv) => {
-        const Tv = Sv * ev;
+        hooks: kT,
+        moduleCodes: cT,
+        reads: lT
+      } = TT;
+      return Array.from(TT.variantFlags, ((TT, MT) => {
+        const AT = MT * KT;
         return {
-          key: iv(Sv),
+          key: NT(MT),
           hooks: {
-            vertex: Cv(zv[Tv]),
-            surface: Cv(zv[Tv + 1]),
-            light: Cv(zv[Tv + 2])
+            vertex: hT(kT[AT]),
+            surface: hT(kT[AT + 1]),
+            light: hT(kT[AT + 2])
           },
-          moduleCode: Pv[Sv],
-          sceneDepth: 0 !== (vv & gv),
-          sunShadow: 0 !== (vv & dv),
-          airShadow: 0 !== (vv & Nv),
-          movesVertices: 0 !== (vv & pv),
-          discards: 0 !== (vv & lv),
+          moduleCode: cT[MT],
+          sceneDepth: 0 !== (TT & OT),
+          sunShadow: 0 !== (TT & fT),
+          airShadow: 0 !== (TT & xT),
+          movesVertices: 0 !== (TT & yT),
+          discards: 0 !== (TT & IT),
           reads: {
-            vertex: Gv(hv[2 * Sv]),
-            fragment: Gv(hv[2 * Sv + 1])
+            vertex: ST(lT[2 * MT]),
+            fragment: ST(lT[2 * MT + 1])
           }
         }
       }))
     }
   },
-  40176: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      C: () => av,
-      b: () => Sv,
-      d: () => hv,
-      g: () => Wv,
-      j: () => lv,
-      k: () => Cv,
-      n: () => ev,
-      p: () => pv,
-      r: () => dv,
-      s: () => gv,
-      v: () => sv,
-      z: () => wv
+  40512: (TT, kT, cT) => {
+    cT.d(kT, {
+      A: () => fT,
+      D: () => OT,
+      G: () => tT,
+      K: () => jT,
+      L: () => vT,
+      e: () => MT,
+      h: () => lT,
+      l: () => CT,
+      p: () => IT,
+      r: () => hT,
+      u: () => KT,
+      x: () => yT
     });
-    const hv = 3,
-      Sv = 0,
-      ev = 1,
-      gv = 2,
-      pv = {
+    const lT = 3,
+      MT = 0,
+      KT = 1,
+      OT = 2,
+      yT = {
         uniform: 3,
-        fW: 4,
+        rC: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      dv = 10,
-      Nv = "BloxdPackInputs",
-      lv = "bloxdPackInputs",
-      Tv = [{
+      fT = 10,
+      xT = "BloxdPackInputs",
+      IT = "bloxdPackInputs",
+      AT = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -151,99 +151,99 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      Wv = 80;
+      CT = 80;
 
-    function wv() {
-      const vv = Tv.map((vv => {
+    function jT() {
+      const TT = AT.map((TT => {
         let {
-          name: zv,
-          type: Pv
-        } = vv;
-        return `    ${zv}: ${Pv},\n`
+          name: kT,
+          type: cT
+        } = TT;
+        return `    ${kT}: ${cT},\n`
       })).join("");
-      return `struct ${Nv} {\n${vv}}\n@group(${hv}) @binding(${Sv}) var<uniform> ${lv}: ${Nv};\n`
+      return `struct ${xT} {\n${TT}}\n@group(${lT}) @binding(${MT}) var<uniform> ${IT}: ${xT};\n`
     }
 
-    function av(vv, zv) {
-      const Pv = new DataView(vv, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, Wv),
-        [hv, Sv, ev, gv, pv, dv] = Tv;
-      Pv.setFloat32(hv.offset, zv.seconds, !0), Pv.setUint32(Sv.offset, zv.lit ? 1 : 0, !0);
-      for (let Nv = 0; Nv < 3; Nv++) Pv.setInt32(ev.offset + 4 * Nv, zv.renderOffset[Nv], !0), Pv.setFloat32(gv.offset + 4 * Nv, zv.y_[Nv], !0), Pv.setFloat32(pv.offset + 4 * Nv, zv.eyePosition[Nv], !0), Pv.setFloat32(dv.offset + 4 * Nv, zv.shadowDirection[Nv], !0)
+    function vT(TT, kT) {
+      const cT = new DataView(TT, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, CT),
+        [lT, MT, KT, OT, yT, fT] = AT;
+      cT.setFloat32(lT.offset, kT.seconds, !0), cT.setUint32(MT.offset, kT.lit ? 1 : 0, !0);
+      for (let xT = 0; xT < 3; xT++) cT.setInt32(KT.offset + 4 * xT, kT.renderOffset[xT], !0), cT.setFloat32(OT.offset + 4 * xT, kT.M_[xT], !0), cT.setFloat32(yT.offset + 4 * xT, kT.eyePosition[xT], !0), cT.setFloat32(fT.offset + 4 * xT, kT.shadowDirection[xT], !0)
     }
 
-    function sv(vv) {
-      const zv = new Uint32Array(Math.max(1, vv.length));
-      return vv.forEach(((vv, Pv) => {
+    function tT(TT) {
+      const kT = new Uint32Array(Math.max(1, TT.length));
+      return TT.forEach(((TT, cT) => {
         let {
-          id: hv,
-          rotation: Sv
-        } = vv;
-        zv[Pv] = 65535 & hv | (3 & Sv) << 16
-      })), zv
+          id: lT,
+          rotation: MT
+        } = TT;
+        kT[cT] = 65535 & lT | (3 & MT) << 16
+      })), kT
     }
-    const Cv = {
+    const hT = {
       off: 0,
       strict: 1,
       allow: 2
     }
   },
-  6363: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => hv,
-      h: () => gv,
-      j: () => pv,
-      k: () => Sv,
-      l: () => ev
+  6633: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => lT,
+      f: () => OT,
+      j: () => yT,
+      k: () => MT,
+      o: () => KT
     });
-    const hv = ["terrain", "liquid", "model"];
+    const lT = ["terrain", "liquid", "model"];
 
-    function Sv() {
-      const vv = [];
-      for (const zv of [!1, !0])
-        for (const Pv of hv) vv.push({
-          strict: zv,
-          program: Pv
+    function MT() {
+      const TT = [];
+      for (const kT of [!1, !0])
+        for (const cT of lT) TT.push({
+          strict: kT,
+          program: cT
         });
-      return vv
+      return TT
     }
 
-    function ev(vv) {
-      return `${vv.strict?"strict":"allow"}.${vv.program}`
+    function KT(TT) {
+      return `${TT.strict?"strict":"allow"}.${TT.program}`
     }
 
-    function gv(vv) {
-      return !vv.hooks.vertex && !vv.hooks.surface && !vv.hooks.light
+    function OT(TT) {
+      return !TT.hooks.vertex && !TT.hooks.surface && !TT.hooks.light
     }
 
-    function pv(vv, zv) {
-      return "off" !== zv && (null === vv || vv.some((vv => vv.key.strict === ("strict" === zv) && !gv(vv))))
+    function yT(TT, kT) {
+      return "off" !== kT && (null === TT || TT.some((TT => TT.key.strict === ("strict" === kT) && !OT(TT))))
     }
   },
-  40567: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      SHADER_PACK_INPUTS_BINDING: () => ev.b,
-      SHADER_PACK_INPUTS_GROUP: () => ev.d,
-      SHADER_PACK_INPUTS_SIZE: () => ev.g,
-      SHADER_PACK_INPUTS_VAR: () => ev.j,
-      SHADER_PACK_MODES: () => ev.k,
-      SHADER_PACK_PROGRAMS: () => hv.d,
-      SHADER_PACK_SCENE_DEPTH_BINDING: () => ev.n,
-      SHADER_PACK_SUN_SHADOW_BINDINGS: () => ev.p,
-      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => ev.r,
-      SHADER_PACK_TEXTURES_BINDING: () => ev.s,
-      encodeTextureLayers: () => ev.v,
-      flattenVariants: () => Sv.c,
-      isVariantOff: () => hv.h,
-      packRunsIn: () => hv.j,
-      shaderPackInputsWgsl: () => ev.z,
-      shaderPackVariantKeys: () => hv.k,
-      variantKeyId: () => hv.l,
-      writeShaderPackInputs: () => ev.C
+  40911: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      SHADER_PACK_INPUTS_BINDING: () => KT.e,
+      SHADER_PACK_INPUTS_GROUP: () => KT.h,
+      SHADER_PACK_INPUTS_SIZE: () => KT.l,
+      SHADER_PACK_INPUTS_VAR: () => KT.p,
+      SHADER_PACK_MODES: () => KT.r,
+      SHADER_PACK_PROGRAMS: () => lT.e,
+      SHADER_PACK_SCENE_DEPTH_BINDING: () => KT.u,
+      SHADER_PACK_SUN_SHADOW_BINDINGS: () => KT.x,
+      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => KT.A,
+      SHADER_PACK_TEXTURES_BINDING: () => KT.D,
+      encodeTextureLayers: () => KT.G,
+      flattenVariants: () => MT.e,
+      isVariantOff: () => lT.f,
+      packRunsIn: () => lT.j,
+      shaderPackInputsWgsl: () => KT.K,
+      shaderPackVariantKeys: () => lT.k,
+      variantKeyId: () => lT.o,
+      writeShaderPackInputs: () => KT.L
     });
-    var hv = Pv(6363),
-      Sv = Pv(6359),
-      ev = Pv(40176)
+    var lT = cT(6633),
+      MT = cT(6628),
+      KT = cT(40512)
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

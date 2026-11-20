@@ -1,146 +1,146 @@
 export const id = 149;
 export const ids = [149];
 export const modules = {
-  7839: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      NitroSdkAdaptor: () => gv
+  8172: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      NitroSdkAdaptor: () => OT
     });
-    var hv = Pv(1299),
-      Sv = Pv(1164);
-    const ev = "NitroOutstreamVideo";
-    class gv extends hv.c {
+    var lT = cT(1321),
+      MT = cT(1190);
+    const KT = "NitroOutstreamVideo";
+    class OT extends lT.b {
       constructor() {
         super(), this.name = "nitro", this.bannerAutoRefresh = "alwaysOn", this.videoInFlight = !1
       }
       static async setup() {
         return window.nitroAds = window.nitroAds || {
           createAd: function() {
-            for (var vv = arguments.length, zv = new Array(vv), Pv = 0; Pv < vv; Pv++) zv[Pv] = arguments[Pv];
-            return new Promise((vv => {
-              window.nitroAds.queue.push(["createAd", zv, vv])
+            for (var TT = arguments.length, kT = new Array(TT), cT = 0; cT < TT; cT++) kT[cT] = arguments[cT];
+            return new Promise((TT => {
+              window.nitroAds.queue.push(["createAd", kT, TT])
             }))
           },
           addUserToken: function() {
-            for (var vv = arguments.length, zv = new Array(vv), Pv = 0; Pv < vv; Pv++) zv[Pv] = arguments[Pv];
-            window.nitroAds.queue.push(["addUserToken", zv])
+            for (var TT = arguments.length, kT = new Array(TT), cT = 0; cT < TT; cT++) kT[cT] = arguments[cT];
+            window.nitroAds.queue.push(["addUserToken", kT])
           },
           queue: []
-        }, document.addEventListener("nitroAds.rendered", (vv => {
-          var zv, Pv, hv;
-          const Sv = document.getElementById(null !== (zv = null === (Pv = vv.detail) || void 0 === Pv || null === (hv = Pv.adInfo) || void 0 === hv ? void 0 : hv.adUnitCode) && void 0 !== zv ? zv : "");
-          null !== Sv && void 0 !== Sv && Sv.classList.contains("NitroBanner") && Sv.classList.toggle("NitroBannerUnfilled", "blank" === vv.detail.type)
-        })), await (0, Sv.d)("https://s.nitropay.com/ads-2842.js", {
+        }, document.addEventListener("nitroAds.rendered", (TT => {
+          var kT, cT, lT;
+          const MT = document.getElementById(null !== (kT = null === (cT = TT.detail) || void 0 === cT || null === (lT = cT.adInfo) || void 0 === lT ? void 0 : lT.adUnitCode) && void 0 !== kT ? kT : "");
+          null !== MT && void 0 !== MT && MT.classList.contains("NitroBanner") && MT.classList.toggle("NitroBannerUnfilled", "blank" === TT.detail.type)
+        })), await (0, MT.e)("https://s.nitropay.com/ads-2842.js", {
           "data-cfasync": "false"
-        }), new gv
+        }), new OT
       }
-      playVideoAd(vv, zv) {
-        this.showVideoAd(vv, vv)
+      playVideoAd(TT, kT) {
+        this.showVideoAd(TT, TT)
       }
-      playRewarded(vv, zv) {
-        this.showVideoAd(vv, zv)
+      playRewarded(TT, kT) {
+        this.showVideoAd(TT, kT)
       }
-      showVideoAd(vv, zv) {
-        if (this.videoInFlight) return console.log("AD: Nitro video already playing"), void zv();
-        const Pv = document.getElementById("GenericVideoWrapper"),
-          hv = document.getElementById("GenericVideoInner");
-        if (null === Pv || null === hv) return void zv();
+      showVideoAd(TT, kT) {
+        if (this.videoInFlight) return console.log("AD: Nitro video already playing"), void kT();
+        const cT = document.getElementById("GenericVideoWrapper"),
+          lT = document.getElementById("GenericVideoInner");
+        if (null === cT || null === lT) return void kT();
         this.videoInFlight = !0;
-        let Sv = !1;
-        const gv = document.createElement("div");
-        gv.id = ev, gv.className = "NitroVideoPlacement";
-        const pv = ev => {
-          if (!Sv) {
-            Sv = !0, clearTimeout(iv), clearInterval(Cv), document.removeEventListener("nitroAds.adResult", lv), document.removeEventListener("nitroAds.rendered", Tv), document.removeEventListener("nitroAds.complete", Wv);
+        let MT = !1;
+        const OT = document.createElement("div");
+        OT.id = KT, OT.className = "NitroVideoPlacement";
+        const yT = KT => {
+          if (!MT) {
+            MT = !0, clearTimeout(NT), clearInterval(hT), document.removeEventListener("nitroAds.adResult", IT), document.removeEventListener("nitroAds.rendered", AT), document.removeEventListener("nitroAds.complete", CT);
             try {
-              wv.remove(), gv.querySelectorAll("video").forEach((vv => {
-                vv.pause()
-              })), gv.remove(), hv.classList.remove("NitroVideo"), Pv.style.display = "none"
-            } catch (pv) {
-              console.error("AD: Error tearing down Nitro video", pv)
+              jT.remove(), OT.querySelectorAll("video").forEach((TT => {
+                TT.pause()
+              })), OT.remove(), lT.classList.remove("NitroVideo"), cT.style.display = "none"
+            } catch (yT) {
+              console.error("AD: Error tearing down Nitro video", yT)
             } finally {
-              this.videoInFlight = !1, window.adCompleteSoResume(), ev ? vv() : zv()
+              this.videoInFlight = !1, window.adCompleteSoResume(), KT ? TT() : kT()
             }
           }
         };
-        let dv = !1;
-        const Nv = (vv, zv) => {
-            if (!dv) {
-              if (!vv) return console.log(`AD: Nitro video not filled: ${zv}`), void pv(!1);
-              dv = !0, clearTimeout(iv), iv = setTimeout((() => {
-                console.log("AD: Nitro video never completed"), pv(!1)
+        let fT = !1;
+        const xT = (TT, kT) => {
+            if (!fT) {
+              if (!TT) return console.log(`AD: Nitro video not filled: ${kT}`), void yT(!1);
+              fT = !0, clearTimeout(NT), NT = setTimeout((() => {
+                console.log("AD: Nitro video never completed"), yT(!1)
               }), 12e4)
             }
           },
-          lv = vv => {
-            var zv;
-            (null === (zv = vv.detail) || void 0 === zv ? void 0 : zv.id) === ev && Nv("filled" === vv.detail.status, vv.detail.status)
+          IT = TT => {
+            var kT;
+            (null === (kT = TT.detail) || void 0 === kT ? void 0 : kT.id) === KT && xT("filled" === TT.detail.status, TT.detail.status)
           },
-          Tv = vv => {
-            var zv, Pv;
-            (null === (zv = vv.detail) || void 0 === zv || null === (Pv = zv.adInfo) || void 0 === Pv ? void 0 : Pv.adUnitCode) === ev && Nv("blank" !== vv.detail.type, vv.detail.type)
+          AT = TT => {
+            var kT, cT;
+            (null === (kT = TT.detail) || void 0 === kT || null === (cT = kT.adInfo) || void 0 === cT ? void 0 : cT.adUnitCode) === KT && xT("blank" !== TT.detail.type, TT.detail.type)
           },
-          Wv = vv => {
-            var zv;
-            (null === (zv = vv.detail) || void 0 === zv ? void 0 : zv.adUnitCode) === ev && pv(!0)
+          CT = TT => {
+            var kT;
+            (null === (kT = TT.detail) || void 0 === kT ? void 0 : kT.adUnitCode) === KT && yT(!0)
           },
-          wv = document.createElement("button");
-        wv.className = "NitroVideoSkip", wv.disabled = !0, wv.addEventListener("click", (() => {
-          console.log("AD: Nitro video skipped"), pv(!0)
+          jT = document.createElement("button");
+        jT.className = "NitroVideoSkip", jT.disabled = !0, jT.addEventListener("click", (() => {
+          console.log("AD: Nitro video skipped"), yT(!0)
         }));
-        let av = Math.ceil(15);
-        const sv = () => {
-          if (av <= 0) return clearInterval(Cv), wv.textContent = "Skip Ad", void(wv.disabled = !1);
-          wv.textContent = `Skip ad in ${av}s`, av--
+        let vT = Math.ceil(15);
+        const tT = () => {
+          if (vT <= 0) return clearInterval(hT), jT.textContent = "Skip Ad", void(jT.disabled = !1);
+          jT.textContent = `Skip ad in ${vT}s`, vT--
         };
-        sv();
-        const Cv = setInterval(sv, 1e3);
-        let iv = setTimeout((() => {
-          console.log("AD: Nitro video got no result"), pv(!1)
+        tT();
+        const hT = setInterval(tT, 1e3);
+        let NT = setTimeout((() => {
+          console.log("AD: Nitro video got no result"), yT(!1)
         }), 1e4);
-        document.addEventListener("nitroAds.adResult", lv), document.addEventListener("nitroAds.rendered", Tv), document.addEventListener("nitroAds.complete", Wv), hv.appendChild(gv), hv.classList.add("NitroVideo"), Pv.appendChild(wv), Pv.style.display = "flex", window.adStartSoPause(null, {
+        document.addEventListener("nitroAds.adResult", IT), document.addEventListener("nitroAds.rendered", AT), document.addEventListener("nitroAds.complete", CT), lT.appendChild(OT), lT.classList.add("NitroVideo"), cT.appendChild(jT), cT.style.display = "flex", window.adStartSoPause(null, {
           preventMovement: !0
-        }), Promise.resolve(window.nitroAds.createAd(ev, {
+        }), Promise.resolve(window.nitroAds.createAd(KT, {
           format: "display",
           outstream: "only",
           resultTimeout: 8e3
-        })).catch((vv => {
-          console.error("AD: Nitro failed to create video", vv), pv(!1)
+        })).catch((TT => {
+          console.error("AD: Nitro failed to create video", TT), yT(!1)
         })), console.log("AD: Requested Nitro video")
       }
-      renderBanner(vv) {
+      renderBanner(TT) {
         const {
-          divId: zv,
-          width: Pv,
-          height: hv
-        } = vv, Sv = `${zv}-nitro`;
-        let ev = document.getElementById(Sv);
-        null === ev && (ev = document.createElement("div"), ev.id = Sv, ev.className = "NitroBanner", ev.style.setProperty("--nitro-slot-width", `${Pv}px`), ev.style.setProperty("--nitro-slot-height", `${hv}px`), document.getElementById(zv).appendChild(ev));
-        const gv = [
-          [String(Pv), String(hv)]
+          divId: kT,
+          width: cT,
+          height: lT
+        } = TT, MT = `${kT}-nitro`;
+        let KT = document.getElementById(MT);
+        null === KT && (KT = document.createElement("div"), KT.id = MT, KT.className = "NitroBanner", KT.style.setProperty("--nitro-slot-width", `${cT}px`), KT.style.setProperty("--nitro-slot-height", `${lT}px`), document.getElementById(kT).appendChild(KT));
+        const OT = [
+          [String(cT), String(lT)]
         ];
-        Promise.resolve(window.nitroAds.createAd(Sv, {
-          sizes: gv
-        })).catch((vv => {
-          console.error(`AD: Nitro failed to create banner ${Sv}:`, vv)
-        })), console.log(`AD: Requested Nitro banner ${Sv}`)
+        Promise.resolve(window.nitroAds.createAd(MT, {
+          sizes: OT
+        })).catch((TT => {
+          console.error(`AD: Nitro failed to create banner ${MT}:`, TT)
+        })), console.log(`AD: Requested Nitro banner ${MT}`)
       }
       displayConsentUI() {
-        var vv, zv;
-        null === (vv = (zv = window).__cmp) || void 0 === vv || vv.call(zv, "showModal")
+        var TT, kT;
+        null === (TT = (kT = window).__cmp) || void 0 === TT || TT.call(kT, "showModal")
       }
-      addPrivacyLinks(vv) {
-        var zv, Pv, hv, Sv;
-        const ev = document.createElement("span");
-        ev.dataset.ccpaLink = "1";
-        const gv = document.createElement("div");
-        gv.id = "ncmp-consent-link", vv.replaceChildren(ev, gv), null === (zv = (Pv = window).__uspapi) || void 0 === zv || zv.call(Pv, "addLink", 1), null === (hv = (Sv = window).__cmp) || void 0 === hv || hv.call(Sv, "addConsentLink")
+      addPrivacyLinks(TT) {
+        var kT, cT, lT, MT;
+        const KT = document.createElement("span");
+        KT.dataset.ccpaLink = "1";
+        const OT = document.createElement("div");
+        OT.id = "ncmp-consent-link", TT.replaceChildren(KT, OT), null === (kT = (cT = window).__uspapi) || void 0 === kT || kT.call(cT, "addLink", 1), null === (lT = (MT = window).__cmp) || void 0 === lT || lT.call(MT, "addConsentLink")
       }
       newPageSession() {
-        var vv, zv;
-        null === (vv = (zv = window.nitroAds).navigate) || void 0 === vv || vv.call(zv)
+        var TT, kT;
+        null === (TT = (kT = window.nitroAds).navigate) || void 0 === TT || TT.call(kT)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

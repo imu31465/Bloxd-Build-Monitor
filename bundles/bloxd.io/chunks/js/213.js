@@ -1,240 +1,240 @@
-/*! For license information please see qepqb8.213.181c0c22.chunk.js.LICENSE.txt */
+/*! For license information please see bcgkc.213.de241a35.chunk.js.LICENSE.txt */
 export const id = 213;
 export const ids = [213];
 export const modules = {
-  39025: (vv, zv, Pv) => {
-    vv.exports = Sv;
-    var hv = Pv(327);
+  39339: (TT, kT, cT) => {
+    TT.exports = MT;
+    var lT = cT(350);
 
-    function Sv(vv, zv) {
-      if (!(this instanceof Sv)) return new Sv(vv, zv);
-      var Pv = hv.create();
-      hv.add(Pv, vv, zv), this.base = hv.min(hv.create(), vv, Pv), this.vec = hv.clone(zv), this.max = hv.max(hv.create(), vv, Pv), this.mag = hv.length(this.vec)
+    function MT(TT, kT) {
+      if (!(this instanceof MT)) return new MT(TT, kT);
+      var cT = lT.create();
+      lT.add(cT, TT, kT), this.base = lT.min(lT.create(), TT, cT), this.vec = lT.clone(kT), this.max = lT.max(lT.create(), TT, cT), this.mag = lT.length(this.vec)
     }
-    var ev = Sv.prototype;
-    ev.width = function() {
+    var KT = MT.prototype;
+    KT.width = function() {
       return this.vec[0]
-    }, ev.height = function() {
+    }, KT.height = function() {
       return this.vec[1]
-    }, ev.depth = function() {
+    }, KT.depth = function() {
       return this.vec[2]
-    }, ev.x0 = function() {
+    }, KT.x0 = function() {
       return this.base[0]
-    }, ev.y0 = function() {
+    }, KT.y0 = function() {
       return this.base[1]
-    }, ev.z0 = function() {
+    }, KT.z0 = function() {
       return this.base[2]
-    }, ev.x1 = function() {
+    }, KT.x1 = function() {
       return this.max[0]
-    }, ev.y1 = function() {
+    }, KT.y1 = function() {
       return this.max[1]
-    }, ev.z1 = function() {
+    }, KT.z1 = function() {
       return this.max[2]
-    }, ev.translate = function(vv) {
-      return hv.add(this.max, this.max, vv), hv.add(this.base, this.base, vv), this
-    }, ev.setPosition = function(vv) {
-      return hv.add(this.max, vv, this.vec), hv.copy(this.base, vv), this
-    }, ev.expand = function(vv) {
-      var zv = hv.create(),
-        Pv = hv.create();
-      return hv.max(zv, vv.max, this.max), hv.min(Pv, vv.base, this.base), hv.subtract(zv, zv, Pv), new Sv(Pv, zv)
-    }, ev.intersects = function(vv) {
-      return !(vv.base[0] > this.max[0]) && (!(vv.base[1] > this.max[1]) && (!(vv.base[2] > this.max[2]) && (!(vv.max[0] < this.base[0]) && (!(vv.max[1] < this.base[1]) && !(vv.max[2] < this.base[2])))))
-    }, ev.touches = function(vv) {
-      var zv = this.union(vv);
-      return null !== zv && (0 == zv.width() || 0 == zv.height() || 0 == zv.depth())
-    }, ev.union = function(vv) {
-      if (!this.intersects(vv)) return null;
-      var zv = Math.max(vv.base[0], this.base[0]),
-        Pv = Math.max(vv.base[1], this.base[1]),
-        hv = Math.max(vv.base[2], this.base[2]);
-      return new Sv([zv, Pv, hv], [Math.min(vv.max[0], this.max[0]) - zv, Math.min(vv.max[1], this.max[1]) - Pv, Math.min(vv.max[2], this.max[2]) - hv])
+    }, KT.translate = function(TT) {
+      return lT.add(this.max, this.max, TT), lT.add(this.base, this.base, TT), this
+    }, KT.setPosition = function(TT) {
+      return lT.add(this.max, TT, this.vec), lT.copy(this.base, TT), this
+    }, KT.expand = function(TT) {
+      var kT = lT.create(),
+        cT = lT.create();
+      return lT.max(kT, TT.max, this.max), lT.min(cT, TT.base, this.base), lT.subtract(kT, kT, cT), new MT(cT, kT)
+    }, KT.intersects = function(TT) {
+      return !(TT.base[0] > this.max[0]) && (!(TT.base[1] > this.max[1]) && (!(TT.base[2] > this.max[2]) && (!(TT.max[0] < this.base[0]) && (!(TT.max[1] < this.base[1]) && !(TT.max[2] < this.base[2])))))
+    }, KT.touches = function(TT) {
+      var kT = this.union(TT);
+      return null !== kT && (0 == kT.width() || 0 == kT.height() || 0 == kT.depth())
+    }, KT.union = function(TT) {
+      if (!this.intersects(TT)) return null;
+      var kT = Math.max(TT.base[0], this.base[0]),
+        cT = Math.max(TT.base[1], this.base[1]),
+        lT = Math.max(TT.base[2], this.base[2]);
+      return new MT([kT, cT, lT], [Math.min(TT.max[0], this.max[0]) - kT, Math.min(TT.max[1], this.max[1]) - cT, Math.min(TT.max[2], this.max[2]) - lT])
     }
   },
-  39022: vv => {
-    vv.exports = function(vv, zv, Pv, hv, Sv, ev) {
-      var gv = +zv[0],
-        pv = +zv[1],
-        dv = +zv[2],
-        Nv = +Pv[0],
-        lv = +Pv[1],
-        Tv = +Pv[2],
-        Wv = Math.sqrt(Nv * Nv + lv * lv + Tv * Tv);
-      if (0 === Wv) throw new Error("Can't raycast along a zero vector");
-      return function(vv, zv, Pv, hv, Sv, ev, gv, pv, dv, Nv) {
-        for (var lv = 0, Tv = Math.floor, Wv = 0 | Tv(zv), wv = 0 | Tv(Pv), av = 0 | Tv(hv), sv = Sv > 0 ? 1 : -1, Cv = ev > 0 ? 1 : -1, iv = gv > 0 ? 1 : -1, cv = Math.abs(1 / Sv), Gv = Math.abs(1 / ev), mv = Math.abs(1 / gv), jv = cv < 1 / 0 ? cv * (sv > 0 ? Wv + 1 - zv : zv - Wv) : 1 / 0, fv = Gv < 1 / 0 ? Gv * (Cv > 0 ? wv + 1 - Pv : Pv - wv) : 1 / 0, Fv = mv < 1 / 0 ? mv * (iv > 0 ? av + 1 - hv : hv - av) : 1 / 0, Yv = -1; lv <= pv;) {
-          var nv = vv(Wv, wv, av);
-          if (nv) return dv && (dv[0] = zv + lv * Sv, dv[1] = Pv + lv * ev, dv[2] = hv + lv * gv), Nv && (Nv[0] = Nv[1] = Nv[2] = 0, 0 === Yv && (Nv[0] = -sv), 1 === Yv && (Nv[1] = -Cv), 2 === Yv && (Nv[2] = -iv)), nv;
-          jv < fv ? jv < Fv ? (Wv += sv, lv = jv, jv += cv, Yv = 0) : (av += iv, lv = Fv, Fv += mv, Yv = 2) : fv < Fv ? (wv += Cv, lv = fv, fv += Gv, Yv = 1) : (av += iv, lv = Fv, Fv += mv, Yv = 2)
+  39330: TT => {
+    TT.exports = function(TT, kT, cT, lT, MT, KT) {
+      var OT = +kT[0],
+        yT = +kT[1],
+        fT = +kT[2],
+        xT = +cT[0],
+        IT = +cT[1],
+        AT = +cT[2],
+        CT = Math.sqrt(xT * xT + IT * IT + AT * AT);
+      if (0 === CT) throw new Error("Can't raycast along a zero vector");
+      return function(TT, kT, cT, lT, MT, KT, OT, yT, fT, xT) {
+        for (var IT = 0, AT = Math.floor, CT = 0 | AT(kT), jT = 0 | AT(cT), vT = 0 | AT(lT), tT = MT > 0 ? 1 : -1, hT = KT > 0 ? 1 : -1, NT = OT > 0 ? 1 : -1, QT = Math.abs(1 / MT), ST = Math.abs(1 / KT), DT = Math.abs(1 / OT), aT = QT < 1 / 0 ? QT * (tT > 0 ? CT + 1 - kT : kT - CT) : 1 / 0, FT = ST < 1 / 0 ? ST * (hT > 0 ? jT + 1 - cT : cT - jT) : 1 / 0, rT = DT < 1 / 0 ? DT * (NT > 0 ? vT + 1 - lT : lT - vT) : 1 / 0, PT = -1; IT <= yT;) {
+          var wT = TT(CT, jT, vT);
+          if (wT) return fT && (fT[0] = kT + IT * MT, fT[1] = cT + IT * KT, fT[2] = lT + IT * OT), xT && (xT[0] = xT[1] = xT[2] = 0, 0 === PT && (xT[0] = -tT), 1 === PT && (xT[1] = -hT), 2 === PT && (xT[2] = -NT)), wT;
+          aT < FT ? aT < rT ? (CT += tT, IT = aT, aT += QT, PT = 0) : (vT += NT, IT = rT, rT += DT, PT = 2) : FT < rT ? (jT += hT, IT = FT, FT += ST, PT = 1) : (vT += NT, IT = rT, rT += DT, PT = 2)
         }
-        return dv && (dv[0] = zv + lv * Sv, dv[1] = Pv + lv * ev, dv[2] = hv + lv * gv), Nv && (Nv[0] = Nv[1] = Nv[2] = 0), 0
-      }(vv, gv, pv, dv, Nv /= Wv, lv /= Wv, Tv /= Wv, hv = "undefined" === typeof hv ? 64 : +hv, Sv, ev)
+        return fT && (fT[0] = kT + IT * MT, fT[1] = cT + IT * KT, fT[2] = lT + IT * OT), xT && (xT[0] = xT[1] = xT[2] = 0), 0
+      }(TT, OT, yT, fT, xT /= CT, IT /= CT, AT /= CT, lT = "undefined" === typeof lT ? 64 : +lT, MT, KT)
     }
   },
-  38631: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => pv,
-      c: () => ev
+  38919: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => yT,
+      f: () => KT
     });
-    var hv = Pv(3856);
-    let Sv = null;
+    var lT = cT(4089);
+    let MT = null;
 
-    function ev(vv) {
-      return null !== Sv && vv === Sv
+    function KT(TT) {
+      return null !== MT && TT === MT
     }
 
-    function gv() {
-      this.yI = !1, this.stopPropagation = !1, this.JI = !1, this.disabled = !1
+    function OT() {
+      this.HZ = !1, this.stopPropagation = !1, this.eZ = !1, this.disabled = !1
     }
-    class pv {
-      constructor(vv, zv) {
+    class yT {
+      constructor(TT, kT) {
         this.version = "0.7.0";
-        var Pv = Object.assign({}, new gv, zv || {});
-        this.element = vv || document, this.yI = !!Pv.yI, this.stopPropagation = !!Pv.stopPropagation, this.JI = !!Pv.JI, this.disabled = !!Pv.disabled, this.filterEvents = (vv, zv) => !0, this.ignoreEvent = vv => !1, this.down = new hv.EventEmitter, this.up = new hv.EventEmitter, this.state = {}, this.FQ = {
+        var cT = Object.assign({}, new OT, kT || {});
+        this.element = TT || document, this.HZ = !!cT.HZ, this.stopPropagation = !!cT.stopPropagation, this.eZ = !!cT.eZ, this.disabled = !!cT.disabled, this.filterEvents = (TT, kT) => !0, this.ignoreEvent = TT => !1, this.down = new lT.EventEmitter, this.up = new lT.EventEmitter, this.state = {}, this.uZ = {
           dx: 0,
           dy: 0,
-          vvv: 0,
-          zvv: 0,
-          Pvv: 0
+          vTT: 0,
+          tTT: 0,
+          hTT: 0
         }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
           lastX: 0,
           lastY: 0,
           currID: null
-        }, "loading" !== document.readyState ? Nv(this) : document.addEventListener("DOMContentLoaded", (vv => {
-          Nv(this)
+        }, "loading" !== document.readyState ? xT(this) : document.addEventListener("DOMContentLoaded", (TT => {
+          xT(this)
         }), {
           once: !0
         })
       }
-      bind(vv) {
-        for (var zv = arguments.length, Pv = new Array(zv > 1 ? zv - 1 : 0), hv = 1; hv < zv; hv++) Pv[hv - 1] = arguments[hv];
-        Pv.forEach((zv => {
-          var Pv = this._keyBindmap[zv] || [];
-          Pv.includes(vv) || (Pv.push(vv), this._keyBindmap[zv] = Pv)
-        })), this.state[vv] = !!this.state[vv], this.pressCount[vv] = this.pressCount[vv] || 0, this.releaseCount[vv] = this.releaseCount[vv] || 0
+      bind(TT) {
+        for (var kT = arguments.length, cT = new Array(kT > 1 ? kT - 1 : 0), lT = 1; lT < kT; lT++) cT[lT - 1] = arguments[lT];
+        cT.forEach((kT => {
+          var cT = this._keyBindmap[kT] || [];
+          cT.includes(TT) || (cT.push(TT), this._keyBindmap[kT] = cT)
+        })), this.state[TT] = !!this.state[TT], this.pressCount[TT] = this.pressCount[TT] || 0, this.releaseCount[TT] = this.releaseCount[TT] || 0
       }
-      unbind(vv) {
-        for (var zv in this._keyBindmap) {
-          var Pv = this._keyBindmap[zv],
-            hv = Pv.indexOf(vv);
-          hv > -1 && Pv.splice(hv, 1)
+      unbind(TT) {
+        for (var kT in this._keyBindmap) {
+          var cT = this._keyBindmap[kT],
+            lT = cT.indexOf(TT);
+          lT > -1 && cT.splice(lT, 1)
         }
       }
       getBindings() {
-        var vv = {};
-        for (var zv in this._keyBindmap) {
-          this._keyBindmap[zv].forEach((Pv => {
-            vv[Pv] = vv[Pv] || [], vv[Pv].push(zv)
+        var TT = {};
+        for (var kT in this._keyBindmap) {
+          this._keyBindmap[kT].forEach((cT => {
+            TT[cT] = TT[cT] || [], TT[cT].push(kT)
           }))
         }
-        return vv
+        return TT
       }
-      MT() {
-        dv(this.FQ), dv(this.pressCount), dv(this.releaseCount)
+      UA() {
+        fT(this.uZ), fT(this.pressCount), fT(this.releaseCount)
       }
     }
 
-    function dv(vv) {
-      for (var zv in vv) vv[zv] = 0
+    function fT(TT) {
+      for (var kT in TT) TT[kT] = 0
     }
 
-    function Nv(vv) {
-      window.addEventListener("keydown", Cv.bind(null, vv, !0), !1), window.addEventListener("keyup", Cv.bind(null, vv, !1), !1);
-      var zv = {
+    function xT(TT) {
+      window.addEventListener("keydown", hT.bind(null, TT, !0), !1), window.addEventListener("keyup", hT.bind(null, TT, !1), !1);
+      var kT = {
         passive: !0
       };
-      vv.element.addEventListener("touchstart", wv.bind(void 0, vv), {
+      TT.element.addEventListener("touchstart", jT.bind(void 0, TT), {
         passive: !1
-      }), vv.element.addEventListener("touchend", sv.bind(void 0, vv), zv), vv.element.addEventListener("mousedown", iv.bind(null, vv, !0), zv), window.document.addEventListener("mouseup", iv.bind(null, vv, !1), zv), vv.element.addEventListener("touchmove", cv.bind(null, vv), zv), vv.element.addEventListener("mousemove", cv.bind(null, vv), zv), window.PointerEvent, vv.element.addEventListener("wheel", Gv.bind(null, vv), zv), vv.element.addEventListener("contextmenu", mv.bind(null, vv), !1), window.addEventListener("blur", Fv.bind(null, vv), !1)
+      }), TT.element.addEventListener("touchend", tT.bind(void 0, TT), kT), TT.element.addEventListener("mousedown", NT.bind(null, TT, !0), kT), window.document.addEventListener("mouseup", NT.bind(null, TT, !1), kT), TT.element.addEventListener("touchmove", QT.bind(null, TT), kT), TT.element.addEventListener("mousemove", QT.bind(null, TT), kT), window.PointerEvent, TT.element.addEventListener("wheel", ST.bind(null, TT), kT), TT.element.addEventListener("contextmenu", DT.bind(null, TT), !1), window.addEventListener("blur", rT.bind(null, TT), !1)
     }
-    var lv = 0,
-      Tv = 0,
-      Wv = null;
+    var IT = 0,
+      AT = 0,
+      CT = null;
 
-    function wv(vv, zv) {
-      zv.preventDefault(), av(zv)
+    function jT(TT, kT) {
+      kT.preventDefault(), vT(kT)
     }
 
-    function av(vv) {
-      let zv = !1;
-      for (let Pv = 0; Pv < vv.touches.length; ++Pv)
-        if (vv.touches[Pv].identifier === Wv) {
-          zv = !0;
+    function vT(TT) {
+      let kT = !1;
+      for (let cT = 0; cT < TT.touches.length; ++cT)
+        if (TT.touches[cT].identifier === CT) {
+          kT = !0;
           break
-        } if (!zv) {
-        const zv = vv.changedTouches[0];
-        lv = zv.clientX, Tv = zv.clientY, Wv = zv.identifier
+        } if (!kT) {
+        const kT = TT.changedTouches[0];
+        IT = kT.clientX, AT = kT.clientY, CT = kT.identifier
       }
     }
 
-    function sv(vv, zv) {
-      for (var Pv = zv.changedTouches, hv = 0; hv < Pv.length; ++hv) Pv[hv].identifier === Wv && (Wv = null)
+    function tT(TT, kT) {
+      for (var cT = kT.changedTouches, lT = 0; lT < cT.length; ++lT) cT[lT].identifier === CT && (CT = null)
     }
 
-    function Cv(vv, zv, Pv) {
-      if (!vv.ignoreEvent(Pv)) try {
-        Yv(vv, Pv), zv && Pv.isTrusted && !Pv.repeat && vv._keyStates[Pv.code] && nv(vv, Pv.code)
+    function hT(TT, kT, cT) {
+      if (!TT.ignoreEvent(cT)) try {
+        PT(TT, cT), kT && cT.isTrusted && !cT.repeat && TT._keyStates[cT.code] && wT(TT, cT.code)
       } finally {
-        Ov(Pv.code, zv, vv, Pv)
+        mT(cT.code, kT, TT, cT)
       }
     }
 
-    function iv(vv, zv, Pv) {
-      if (!vv.ignoreEvent(Pv)) try {
-        Yv(vv, Pv)
+    function NT(TT, kT, cT) {
+      if (!TT.ignoreEvent(cT)) try {
+        PT(TT, cT)
       } finally {
-        ! function(vv, zv, Pv) {
-          if ("pointerId" in Pv)
-            if (zv) {
-              if (null !== vv._touches.currID) return;
-              vv._touches.currID = Pv.pointerId
+        ! function(TT, kT, cT) {
+          if ("pointerId" in cT)
+            if (kT) {
+              if (null !== TT._touches.currID) return;
+              TT._touches.currID = cT.pointerId
             } else {
-              if (vv._touches.currID !== Pv.pointerId) return;
-              vv._touches.currID = null
-            } var hv = "button" in Pv ? Pv.button + 1 : 1;
-          Ov("Mouse" + hv, zv, vv, Pv)
-        }(vv, zv, Pv)
+              if (TT._touches.currID !== cT.pointerId) return;
+              TT._touches.currID = null
+            } var lT = "button" in cT ? cT.button + 1 : 1;
+          mT("Mouse" + lT, kT, TT, cT)
+        }(TT, kT, cT)
       }
     }
 
-    function cv(vv, zv) {
-      var Pv = zv.movementX || zv.mozMovementX || 0,
-        hv = zv.movementY || zv.mozMovementY || 0;
-      if (zv.touches && 0 === (Pv | hv)) {
-        var Sv = function(vv) {
-          av(vv);
-          for (let zv = 0; zv < vv.changedTouches.length; ++zv)
-            if (vv.changedTouches[zv].identifier == Wv) {
-              const Pv = vv.changedTouches[zv],
-                hv = [Pv.clientX - lv, Pv.clientY - Tv];
-              return lv = Pv.clientX, Tv = Pv.clientY, hv
-            } return console.error(`Did not find touch id ${Wv}`), [0, 0]
-        }(zv);
-        Pv = Sv[0], hv = Sv[1]
+    function QT(TT, kT) {
+      var cT = kT.movementX || kT.mozMovementX || 0,
+        lT = kT.movementY || kT.mozMovementY || 0;
+      if (kT.touches && 0 === (cT | lT)) {
+        var MT = function(TT) {
+          vT(TT);
+          for (let kT = 0; kT < TT.changedTouches.length; ++kT)
+            if (TT.changedTouches[kT].identifier == CT) {
+              const cT = TT.changedTouches[kT],
+                lT = [cT.clientX - IT, cT.clientY - AT];
+              return IT = cT.clientX, AT = cT.clientY, lT
+            } return console.error(`Did not find touch id ${CT}`), [0, 0]
+        }(kT);
+        cT = MT[0], lT = MT[1]
       }
-      vv.FQ.dx += Pv, vv.FQ.dy += hv
+      TT.uZ.dx += cT, TT.uZ.dy += lT
     }
 
-    function Gv(vv, zv) {
-      Yv(vv, zv);
-      var Pv = 1;
-      switch (zv.deltaMode) {
+    function ST(TT, kT) {
+      PT(TT, kT);
+      var cT = 1;
+      switch (kT.deltaMode) {
         case 0:
-          Pv = 1;
+          cT = 1;
           break;
         case 1:
-          Pv = 12;
+          cT = 12;
           break;
         case 2:
-          Pv = vv.element.clientHeight || window.innerHeight
+          cT = TT.element.clientHeight || window.innerHeight
       }
-      vv.FQ.vvv += (zv.deltaX || 0) * Pv, vv.FQ.zvv += (zv.deltaY || 0) * Pv, vv.FQ.Pvv += (zv.deltaZ || 0) * Pv
+      TT.uZ.vTT += (kT.deltaX || 0) * cT, TT.uZ.tTT += (kT.deltaY || 0) * cT, TT.uZ.hTT += (kT.deltaZ || 0) * cT
     }
 
-    function mv(vv, zv) {
-      if (!vv.JI) return zv.preventDefault(), !1
+    function DT(TT, kT) {
+      if (!TT.eZ) return kT.preventDefault(), !1
     }
-    var jv = {
+    var aT = {
       AltLeft: "altKey",
       AltRight: "altKey",
       ControlLeft: "ctrlKey",
@@ -245,91 +245,91 @@ export const modules = {
       MetaRight: "metaKey"
     };
 
-    function fv(vv, zv) {
-      return !!vv[jv[zv]] || ("AltRight" === zv || "ControlLeft" === zv) && "function" === typeof vv.getModifierState && !0 === vv.getModifierState("AltGraph")
+    function FT(TT, kT) {
+      return !!TT[aT[kT]] || ("AltRight" === kT || "ControlLeft" === kT) && "function" === typeof TT.getModifierState && !0 === TT.getModifierState("AltGraph")
     }
 
-    function Fv(vv, zv) {
-      for (var Pv in vv._modifiersHeldThroughBlur = {}, jv) vv._keyStates[Pv] && (vv._modifiersHeldThroughBlur[Pv] = !0);
-      zv && zv.isTrusted && function() {
+    function rT(TT, kT) {
+      for (var cT in TT._modifiersHeldThroughBlur = {}, aT) TT._keyStates[cT] && (TT._modifiersHeldThroughBlur[cT] = !0);
+      kT && kT.isTrusted && function() {
         try {
           return window.self !== window.top
-        } catch (vv) {
+        } catch (TT) {
           return !0
         }
-      }() && (clearTimeout(vv._blurRelease), vv._blurRelease = setTimeout((function() {
+      }() && (clearTimeout(TT._blurRelease), TT._blurRelease = setTimeout((function() {
         if (!document.hasFocus())
-          for (var zv in vv._modifiersHeldThroughBlur = {}, vv._keyStates) vv._keyStates[zv] && !/^Mouse\d/.test(zv) && nv(vv, zv)
+          for (var kT in TT._modifiersHeldThroughBlur = {}, TT._keyStates) TT._keyStates[kT] && !/^Mouse\d/.test(kT) && wT(TT, kT)
       }), 0))
     }
 
-    function Yv(vv, zv) {
-      var Pv = vv._modifiersHeldThroughBlur;
-      if (Pv && zv.isTrusted && document.hasFocus())
-        for (var hv in Pv) delete Pv[hv], vv._keyStates[hv] && hv !== zv.code && (fv(zv, hv) || nv(vv, hv))
+    function PT(TT, kT) {
+      var cT = TT._modifiersHeldThroughBlur;
+      if (cT && kT.isTrusted && document.hasFocus())
+        for (var lT in cT) delete cT[lT], TT._keyStates[lT] && lT !== kT.code && (FT(kT, lT) || wT(TT, lT))
     }
 
-    function nv(vv, zv) {
-      const Pv = {
-          code: zv,
+    function wT(TT, kT) {
+      const cT = {
+          code: kT,
           preventDefault: () => {},
           stopPropagation: () => {}
         },
-        hv = Sv;
-      Sv = Pv;
+        lT = MT;
+      MT = cT;
       try {
-        Ov(zv, !1, vv, Pv)
+        mT(kT, !1, TT, cT)
       } finally {
-        Sv = hv
+        MT = lT
       }
     }
 
-    function Ov(vv, zv, Pv, hv) {
-      var Sv = Pv._keyBindmap[vv];
-      Sv && (Dv(Pv._keyStates[vv], zv) && (Pv._keyStates[vv] = zv, Sv.forEach((vv => {
-        (!Pv.filterEvents || Pv.filterEvents(hv, vv)) && function(vv, zv, Pv, hv) {
-          var Sv = zv ? Pv.pressCount : Pv.releaseCount;
-          Sv[vv] = (Sv[vv] || 0) + 1;
-          var ev = Pv._bindPressCount[vv] || 0;
-          (ev += zv ? 1 : -1) < 0 && (ev = 0);
-          Pv._bindPressCount[vv] = ev;
-          var gv = Pv.state[vv];
-          if (Dv(gv, ev)) {
-            Pv.state[vv] = ev > 0;
-            var pv = zv ? Pv.down : Pv.up;
-            Pv.disabled || pv.emit(vv, hv)
+    function mT(TT, kT, cT, lT) {
+      var MT = cT._keyBindmap[TT];
+      MT && (bT(cT._keyStates[TT], kT) && (cT._keyStates[TT] = kT, MT.forEach((TT => {
+        (!cT.filterEvents || cT.filterEvents(lT, TT)) && function(TT, kT, cT, lT) {
+          var MT = kT ? cT.pressCount : cT.releaseCount;
+          MT[TT] = (MT[TT] || 0) + 1;
+          var KT = cT._bindPressCount[TT] || 0;
+          (KT += kT ? 1 : -1) < 0 && (KT = 0);
+          cT._bindPressCount[TT] = KT;
+          var OT = cT.state[TT];
+          if (bT(OT, KT)) {
+            cT.state[TT] = KT > 0;
+            var yT = kT ? cT.down : cT.up;
+            cT.disabled || yT.emit(TT, lT)
           }
-        }(vv, zv, Pv, hv)
-      }))), "button" in hv || (Pv.yI && !hv.defaultPrevented && hv.preventDefault(), Pv.stopPropagation && hv.stopPropagation()))
+        }(TT, kT, cT, lT)
+      }))), "button" in lT || (cT.HZ && !lT.defaultPrevented && lT.preventDefault(), cT.stopPropagation && lT.stopPropagation()))
     }
 
-    function Dv(vv, zv) {
-      return vv ? !zv : zv
+    function bT(TT, kT) {
+      return TT ? !kT : kT
     }
   },
-  36067: (vv, zv) => {
-    function Pv(vv) {
-      if (vv && "object" === typeof vv) {
-        var zv = vv.which || vv.keyCode || vv.charCode;
-        zv && (vv = zv)
+  36359: (TT, kT) => {
+    function cT(TT) {
+      if (TT && "object" === typeof TT) {
+        var kT = TT.which || TT.keyCode || TT.charCode;
+        kT && (TT = kT)
       }
-      if ("number" === typeof vv) return gv[vv];
-      var Pv, ev = String(vv);
-      return (Pv = hv[ev.toLowerCase()]) ? Pv : (Pv = Sv[ev.toLowerCase()]) || (1 === ev.length ? ev.charCodeAt(0) : void 0)
+      if ("number" === typeof TT) return OT[TT];
+      var cT, KT = String(TT);
+      return (cT = lT[KT.toLowerCase()]) ? cT : (cT = MT[KT.toLowerCase()]) || (1 === KT.length ? KT.charCodeAt(0) : void 0)
     }
-    Pv.isEventKey = function(vv, zv) {
-      if (vv && "object" === typeof vv) {
-        var Pv = vv.which || vv.keyCode || vv.charCode;
-        if (null === Pv || void 0 === Pv) return !1;
-        if ("string" === typeof zv) {
-          var ev;
-          if (ev = hv[zv.toLowerCase()]) return ev === Pv;
-          if (ev = Sv[zv.toLowerCase()]) return ev === Pv
-        } else if ("number" === typeof zv) return zv === Pv;
+    cT.isEventKey = function(TT, kT) {
+      if (TT && "object" === typeof TT) {
+        var cT = TT.which || TT.keyCode || TT.charCode;
+        if (null === cT || void 0 === cT) return !1;
+        if ("string" === typeof kT) {
+          var KT;
+          if (KT = lT[kT.toLowerCase()]) return KT === cT;
+          if (KT = MT[kT.toLowerCase()]) return KT === cT
+        } else if ("number" === typeof kT) return kT === cT;
         return !1
       }
     };
-    var hv = (zv = vv.exports = Pv).code = zv.codes = {
+    var lT = (kT = TT.exports = cT).code = kT.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -374,7 +374,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      Sv = zv.aliases = {
+      MT = kT.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -396,139 +396,139 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (ev = 97; ev < 123; ev++) hv[String.fromCharCode(ev)] = ev - 32;
-    for (var ev = 48; ev < 58; ev++) hv[ev - 48] = ev;
-    for (ev = 1; ev < 13; ev++) hv["f" + ev] = ev + 111;
-    for (ev = 0; ev < 10; ev++) hv["numpad " + ev] = ev + 96;
-    var gv = zv.names = zv.title = {};
-    for (ev in hv) gv[hv[ev]] = ev;
-    for (var pv in Sv) hv[pv] = Sv[pv]
+    for (KT = 97; KT < 123; KT++) lT[String.fromCharCode(KT)] = KT - 32;
+    for (var KT = 48; KT < 58; KT++) lT[KT - 48] = KT;
+    for (KT = 1; KT < 13; KT++) lT["f" + KT] = KT + 111;
+    for (KT = 0; KT < 10; KT++) lT["numpad " + KT] = KT + 96;
+    var OT = kT.names = kT.title = {};
+    for (KT in lT) OT[lT[KT]] = KT;
+    for (var yT in MT) lT[yT] = MT[yT]
   },
-  39010: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => hv
+  39320: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => lT
     });
-    class hv {
+    class lT {
       constructor() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
-        this.yV = !1, this.JV = !1, this.ZD = 30, this.xV = 0, this.oV = 100, this.DC = !1, this.fullscreen = !1, this.xG = function(vv) {}, this.bV = function(vv, zv, Pv) {}, this.vU = function() {}, this.mG = function() {}, this.rV = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(vv) {}, this._data = new Sv(zv),
-          function(vv) {
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
+        this.yG = !1, this.xG = !1, this.xJ = 30, this.nH = 0, this.vG = 100, this.Zh = !1, this.fullscreen = !1, this.pN = function(TT) {}, this.hG = function(TT, kT, cT) {}, this.rG = function() {}, this.zN = function() {}, this.QG = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(TT) {}, this._data = new MT(kT),
+          function(TT) {
             if ("loading" === document.readyState) {
-              var zv = () => {
-                document.removeEventListener("readystatechange", zv), vv()
+              var kT = () => {
+                document.removeEventListener("readystatechange", kT), TT()
               };
-              document.addEventListener("readystatechange", zv)
-            } else setTimeout(vv, 0)
+              document.addEventListener("readystatechange", kT)
+            } else setTimeout(TT, 0)
           }((() => {
-            ! function(vv) {
-              var zv = vv._data,
-                Pv = zv.nowObject.now();
-              zv.lastTickStarted = Pv, zv.lastFrameStarted = Pv, zv.lastRenderStarted = Pv, zv.frameCB = () => function(vv) {
-                var zv = vv._data;
-                requestAnimationFrame(zv.frameCB), pv(vv);
-                var Pv = zv.nowObject.now(),
-                  hv = Pv - zv.lastFrameStarted;
-                if (zv.lastFrameStarted = Pv, vv.xV > 0) {
-                  zv.renderAccum += hv;
-                  var Sv = 1e3 / vv.xV;
-                  if (zv.renderAccum < Sv) return;
-                  zv.renderAccum -= Sv, zv.renderAccum > Sv && (zv.renderAccum = Sv)
+            ! function(TT) {
+              var kT = TT._data,
+                cT = kT.nowObject.now();
+              kT.lastTickStarted = cT, kT.lastFrameStarted = cT, kT.lastRenderStarted = cT, kT.frameCB = () => function(TT) {
+                var kT = TT._data;
+                requestAnimationFrame(kT.frameCB), yT(TT);
+                var cT = kT.nowObject.now(),
+                  lT = cT - kT.lastFrameStarted;
+                if (kT.lastFrameStarted = cT, TT.nH > 0) {
+                  kT.renderAccum += lT;
+                  var MT = 1e3 / TT.nH;
+                  if (kT.renderAccum < MT) return;
+                  kT.renderAccum -= MT, kT.renderAccum > MT && (kT.renderAccum = MT)
                 }
-                var ev = Pv - zv.lastRenderStarted;
-                zv.lastRenderStarted = Pv;
-                var gv = 1e3 / vv.ZD,
-                  dv = (Pv - zv.lastTickStarted) / gv;
-                dv < 0 && (dv = 0);
-                vv.bV(ev, dv, gv), setTimeout(pv, 0, vv, !0)
-              }(vv), zv.intervalCB = () => pv(vv), requestAnimationFrame(zv.frameCB), zv.pollTime > 0 && (zv.intervalID = setInterval(zv.intervalCB, Math.max(zv.pollTime, 1e3 / vv.ZD / 2)))
+                var KT = cT - kT.lastRenderStarted;
+                kT.lastRenderStarted = cT;
+                var OT = 1e3 / TT.xJ,
+                  fT = (cT - kT.lastTickStarted) / OT;
+                fT < 0 && (fT = 0);
+                TT.hG(KT, fT, OT), setTimeout(yT, 0, TT, !0)
+              }(TT), kT.intervalCB = () => yT(TT), requestAnimationFrame(kT.frameCB), kT.pollTime > 0 && (kT.intervalID = setInterval(kT.intervalCB, Math.max(kT.pollTime, 1e3 / TT.xJ / 2)))
             }(this),
-            function(vv, zv) {
-              if (!zv) return;
-              var Pv = !1,
-                hv = !1,
-                Sv = vv => {
-                  if (!!vv !== (Pv = zv === document.pointerLockElement))
-                    if (vv) {
-                      var hv = zv.requestPointerLock();
-                      hv && hv.catch && hv.catch((vv => {}))
+            function(TT, kT) {
+              if (!kT) return;
+              var cT = !1,
+                lT = !1,
+                MT = TT => {
+                  if (!!TT !== (cT = kT === document.pointerLockElement))
+                    if (TT) {
+                      var lT = kT.requestPointerLock();
+                      lT && lT.catch && lT.catch((TT => {}))
                     } else document.exitPointerLock()
                 },
-                ev = vv => {
-                  !!vv !== (hv = zv === document.fullscreenElement) && (vv ? zv.requestFullscreen ? zv.requestFullscreen() : zv.webkitRequestFullscreen && zv.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
+                KT = TT => {
+                  !!TT !== (lT = kT === document.fullscreenElement) && (TT ? kT.requestFullscreen ? kT.requestFullscreen() : kT.webkitRequestFullscreen && kT.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
                 };
-              document.addEventListener("pointerlockchange", (hv => {
-                Pv = zv === document.pointerLockElement, vv.rV(Pv)
-              })), document.addEventListener("fullscreenchange", (Pv => {
-                hv = zv === document.fullscreenElement, vv.onFullscreenChanged(hv)
-              })), document.addEventListener("pointerlockerror", (hv => {
-                Pv = zv === document.pointerLockElement, vv.onPointerLockError(hv)
-              })), Object.defineProperty(vv, "DC", {
-                get: () => Pv,
-                set: Sv
-              }), Object.defineProperty(vv, "fullscreen", {
-                get: () => hv,
-                set: ev
-              }), zv.addEventListener("click", (zv => {
-                vv.yV && Sv(!0), vv.JV && ev(!0)
+              document.addEventListener("pointerlockchange", (lT => {
+                cT = kT === document.pointerLockElement, TT.QG(cT)
+              })), document.addEventListener("fullscreenchange", (cT => {
+                lT = kT === document.fullscreenElement, TT.onFullscreenChanged(lT)
+              })), document.addEventListener("pointerlockerror", (lT => {
+                cT = kT === document.pointerLockElement, TT.onPointerLockError(lT)
+              })), Object.defineProperty(TT, "Zh", {
+                get: () => cT,
+                set: MT
+              }), Object.defineProperty(TT, "fullscreen", {
+                get: () => lT,
+                set: KT
+              }), kT.addEventListener("click", (kT => {
+                TT.yG && MT(!0), TT.xG && KT(!0)
               }));
-              var gv = () => vv.mG();
+              var OT = () => TT.zN();
               if (window.ResizeObserver) {
-                new ResizeObserver(gv).observe(zv)
-              } else window.addEventListener("resize", gv)
-            }(this, vv), this.vU()
+                new ResizeObserver(OT).observe(kT)
+              } else window.addEventListener("resize", OT)
+            }(this, TT), this.rG()
           }))
       }
     }
 
-    function Sv() {
-      let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      this.nowObject = performance || Date, this.pollTime = vv, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
+    function MT() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      this.nowObject = performance || Date, this.pollTime = TT, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
     }
-    var ev = 3,
-      gv = 20;
+    var KT = 3,
+      OT = 20;
 
-    function pv(vv) {
-      for (var zv = vv._data, Pv = 1e3 / vv.ZD, hv = zv.nowObject.now() + gv, Sv = 0; zv.nowObject.now() >= zv.lastTickStarted + Pv && zv.nowObject.now() < hv && ++Sv <= ev;) vv.xG(Pv), zv.lastTickStarted += Pv;
-      var pv = 5 * (Pv + 5),
-        dv = zv.nowObject.now();
-      if (dv - zv.lastTickStarted > pv)
-        for (; dv >= zv.lastTickStarted + Pv;) zv.lastTickStarted += Pv
+    function yT(TT) {
+      for (var kT = TT._data, cT = 1e3 / TT.xJ, lT = kT.nowObject.now() + OT, MT = 0; kT.nowObject.now() >= kT.lastTickStarted + cT && kT.nowObject.now() < lT && ++MT <= KT;) TT.pN(cT), kT.lastTickStarted += cT;
+      var yT = 5 * (cT + 5),
+        fT = kT.nowObject.now();
+      if (fT - kT.lastTickStarted > yT)
+        for (; fT >= kT.lastTickStarted + cT;) kT.lastTickStarted += cT
     }
   },
-  36206: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => gv
+  36517: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => OT
     });
-    var hv = Pv(52);
-    const Sv = hv.useLayoutEffect;
-    const ev = function(vv) {
-      var zv = (0, hv.useRef)(vv);
-      return Sv((function() {
-        zv.current = vv
-      })), zv
+    var lT = cT(71);
+    const MT = lT.useLayoutEffect;
+    const KT = function(TT) {
+      var kT = (0, lT.useRef)(TT);
+      return MT((function() {
+        kT.current = TT
+      })), kT
     };
-    var gv = function(vv) {
-      var zv = ev(vv);
-      (0, hv.useEffect)((function() {
-        var vv = function(vv) {
-          var Pv;
-          if (null != zv.current && (Pv = zv.current(vv)), vv.defaultPrevented && (vv.returnValue = ""), "string" === typeof Pv) return vv.returnValue = Pv, Pv
+    var OT = function(TT) {
+      var kT = KT(TT);
+      (0, lT.useEffect)((function() {
+        var TT = function(TT) {
+          var cT;
+          if (null != kT.current && (cT = kT.current(TT)), TT.defaultPrevented && (TT.returnValue = ""), "string" === typeof cT) return TT.returnValue = cT, cT
         };
-        return window.addEventListener("beforeunload", vv),
+        return window.addEventListener("beforeunload", TT),
           function() {
-            window.removeEventListener("beforeunload", vv)
+            window.removeEventListener("beforeunload", TT)
           }
       }), [])
     }
   },
-  36123: vv => {
-    var zv, Pv = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      hv = /OS X/.test(Pv),
-      Sv = /Opera/.test(Pv),
-      ev = !/like Gecko/.test(Pv) && !Sv,
-      gv = vv.exports = {
-        0: hv ? "<menu>" : "<UNK>",
+  36409: TT => {
+    var kT, cT = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      lT = /OS X/.test(cT),
+      MT = /Opera/.test(cT),
+      KT = !/like Gecko/.test(cT) && !MT,
+      OT = TT.exports = {
+        0: lT ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -571,7 +571,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: hv ? "<meta>" : "<menu>",
+        93: lT ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -594,7 +594,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: hv && ev ? "-" : "<volume-mute>",
+        173: lT && KT ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -620,7 +620,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: Sv ? "`" : "<unicode>",
+        231: MT ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -631,183 +631,183 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (zv = 58; zv < 65; ++zv) gv[zv] = String.fromCharCode(zv);
-    for (zv = 48; zv < 58; ++zv) gv[zv] = zv - 48 + "";
-    for (zv = 65; zv < 91; ++zv) gv[zv] = String.fromCharCode(zv);
-    for (zv = 96; zv < 106; ++zv) gv[zv] = "<num-" + (zv - 96) + ">";
-    for (zv = 112; zv < 136; ++zv) gv[zv] = "F" + (zv - 111)
+    for (kT = 58; kT < 65; ++kT) OT[kT] = String.fromCharCode(kT);
+    for (kT = 48; kT < 58; ++kT) OT[kT] = kT - 48 + "";
+    for (kT = 65; kT < 91; ++kT) OT[kT] = String.fromCharCode(kT);
+    for (kT = 96; kT < 106; ++kT) OT[kT] = "<num-" + (kT - 96) + ">";
+    for (kT = 112; kT < 136; ++kT) OT[kT] = "F" + (kT - 111)
   },
-  38560: (vv, zv, Pv) => {
-    function hv(vv, zv, Pv, hv, Sv) {
-      var ev = {};
-      return Object.keys(hv).forEach((function(vv) {
-        ev[vv] = hv[vv]
-      })), ev.enumerable = !!ev.enumerable, ev.configurable = !!ev.configurable, ("value" in ev || ev.initializer) && (ev.writable = !0), ev = Pv.slice().reverse().reduce((function(Pv, hv) {
-        return hv(vv, zv, Pv) || Pv
-      }), ev), Sv && void 0 !== ev.initializer && (ev.value = ev.initializer ? ev.initializer.call(Sv) : void 0, ev.initializer = void 0), void 0 === ev.initializer && (Object.defineProperty(vv, zv, ev), ev = null), ev
+  38853: (TT, kT, cT) => {
+    function lT(TT, kT, cT, lT, MT) {
+      var KT = {};
+      return Object.keys(lT).forEach((function(TT) {
+        KT[TT] = lT[TT]
+      })), KT.enumerable = !!KT.enumerable, KT.configurable = !!KT.configurable, ("value" in KT || KT.initializer) && (KT.writable = !0), KT = cT.slice().reverse().reduce((function(cT, lT) {
+        return lT(TT, kT, cT) || cT
+      }), KT), MT && void 0 !== KT.initializer && (KT.value = KT.initializer ? KT.initializer.call(MT) : void 0, KT.initializer = void 0), void 0 === KT.initializer && (Object.defineProperty(TT, kT, KT), KT = null), KT
     }
-    Pv.d(zv, {
-      d: () => hv
+    cT.d(kT, {
+      b: () => lT
     })
   },
-  38555: (vv, zv, Pv) => {
-    function hv(vv, zv, Pv, hv) {
-      Pv && Object.defineProperty(vv, zv, {
-        enumerable: Pv.enumerable,
-        configurable: Pv.configurable,
-        writable: Pv.writable,
-        value: Pv.initializer ? Pv.initializer.call(hv) : void 0
+  38844: (TT, kT, cT) => {
+    function lT(TT, kT, cT, lT) {
+      cT && Object.defineProperty(TT, kT, {
+        enumerable: cT.enumerable,
+        configurable: cT.configurable,
+        writable: cT.writable,
+        value: cT.initializer ? cT.initializer.call(lT) : void 0
       })
     }
-    Pv.d(zv, {
-      b: () => hv
+    cT.d(kT, {
+      e: () => lT
     })
   },
-  38207: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => ev
+  38507: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => KT
     });
-    var hv = Pv(38209);
-    const Sv = (vv, zv, Pv) => vv ? vv.getClassName && "Mesh" === vv.getClassName() ? null : !vv.getClassName || "SubMesh" !== vv.getClassName() && "PhysicsBody" !== vv.getClassName() ? vv.clone ? vv.clone() : Array.isArray(vv) ? vv.slice() : Pv && "object" === typeof vv ? {
-      ...vv
-    } : null : vv.clone(zv) : null;
-    class ev {
-      static DeepCopy(vv, zv, Pv, ev) {
-        let gv = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const pv = function(vv) {
-          const zv = [];
+    var lT = cT(38512);
+    const MT = (TT, kT, cT) => TT ? TT.getClassName && "Mesh" === TT.getClassName() ? null : !TT.getClassName || "SubMesh" !== TT.getClassName() && "PhysicsBody" !== TT.getClassName() ? TT.clone ? TT.clone() : Array.isArray(TT) ? TT.slice() : cT && "object" === typeof TT ? {
+      ...TT
+    } : null : TT.clone(kT) : null;
+    class KT {
+      static DeepCopy(TT, kT, cT, KT) {
+        let OT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const yT = function(TT) {
+          const kT = [];
           do {
-            const Pv = Object.getOwnPropertyNames(vv);
-            for (const vv of Pv) - 1 === zv.indexOf(vv) && zv.push(vv)
-          } while (vv = Object.getPrototypeOf(vv));
-          return zv
-        }(vv);
-        for (const Nv of pv) {
-          if ("_" === Nv[0] && (!ev || -1 === ev.indexOf(Nv))) continue;
-          if (Nv.endsWith("Observable")) continue;
-          if (Pv && -1 !== Pv.indexOf(Nv)) continue;
-          const pv = vv[Nv],
-            lv = typeof pv;
-          if ("function" !== lv) try {
-            if ("object" === lv)
-              if (pv instanceof Uint8Array) zv[Nv] = Uint8Array.from(pv);
-              else if (pv instanceof Array) {
-              if (zv[Nv] = [], pv.length > 0)
-                if ("object" == typeof pv[0])
-                  for (let vv = 0; vv < pv.length; vv++) {
-                    const Pv = Sv(pv[vv], zv, gv); - 1 === zv[Nv].indexOf(Pv) && zv[Nv].push(Pv)
-                  } else zv[Nv] = pv.slice(0)
-            } else zv[Nv] = Sv(pv, zv, gv);
-            else zv[Nv] = pv
-          } catch (dv) {
-            hv.d.Warn(dv.message)
+            const cT = Object.getOwnPropertyNames(TT);
+            for (const TT of cT) - 1 === kT.indexOf(TT) && kT.push(TT)
+          } while (TT = Object.getPrototypeOf(TT));
+          return kT
+        }(TT);
+        for (const xT of yT) {
+          if ("_" === xT[0] && (!KT || -1 === KT.indexOf(xT))) continue;
+          if (xT.endsWith("Observable")) continue;
+          if (cT && -1 !== cT.indexOf(xT)) continue;
+          const yT = TT[xT],
+            IT = typeof yT;
+          if ("function" !== IT) try {
+            if ("object" === IT)
+              if (yT instanceof Uint8Array) kT[xT] = Uint8Array.from(yT);
+              else if (yT instanceof Array) {
+              if (kT[xT] = [], yT.length > 0)
+                if ("object" == typeof yT[0])
+                  for (let TT = 0; TT < yT.length; TT++) {
+                    const cT = MT(yT[TT], kT, OT); - 1 === kT[xT].indexOf(cT) && kT[xT].push(cT)
+                  } else kT[xT] = yT.slice(0)
+            } else kT[xT] = MT(yT, kT, OT);
+            else kT[xT] = yT
+          } catch (fT) {
+            lT.e.Warn(fT.message)
           }
         }
       }
     }
   },
-  38245: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => Sv,
-      f: () => ev,
-      h: () => gv,
-      i: () => pv
+  38546: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => MT,
+      i: () => KT,
+      l: () => OT,
+      p: () => yT
     });
-    var hv = Pv(36751);
-    class Sv {
-      constructor(vv, zv, Pv) {
-        this.gradient = vv, this.color1 = zv, this.color2 = Pv
+    var lT = cT(37093);
+    class MT {
+      constructor(TT, kT, cT) {
+        this.gradient = TT, this.color1 = kT, this.color2 = cT
       }
-      getColorToRef(vv) {
-        this.color2 ? hv.e.LerpToRef(this.color1, this.color2, Math.random(), vv) : vv.Vzv(this.color1)
-      }
-    }
-    class ev {
-      constructor(vv, zv) {
-        this.gradient = vv, this.color = zv
+      getColorToRef(TT) {
+        this.color2 ? lT.g.LerpToRef(this.color1, this.color2, Math.random(), TT) : TT.UkT(this.color1)
       }
     }
-    class gv {
-      constructor(vv, zv, Pv) {
-        this.gradient = vv, this.factor1 = zv, this.factor2 = Pv
+    class KT {
+      constructor(TT, kT) {
+        this.gradient = TT, this.color = kT
+      }
+    }
+    class OT {
+      constructor(TT, kT, cT) {
+        this.gradient = TT, this.factor1 = kT, this.factor2 = cT
       }
       getFactor() {
         return void 0 === this.factor2 || this.factor2 === this.factor1 ? this.factor1 : this.factor1 + (this.factor2 - this.factor1) * Math.random()
       }
     }
-    class pv {
-      static GetCurrentGradient(vv, zv, Pv) {
-        if (zv[0].gradient > vv) return void Pv(zv[0], zv[0], 1);
-        for (let Sv = 0; Sv < zv.length - 1; Sv++) {
-          const hv = zv[Sv],
-            ev = zv[Sv + 1];
-          if (vv >= hv.gradient && vv <= ev.gradient) {
-            return void Pv(hv, ev, (vv - hv.gradient) / (ev.gradient - hv.gradient))
+    class yT {
+      static GetCurrentGradient(TT, kT, cT) {
+        if (kT[0].gradient > TT) return void cT(kT[0], kT[0], 1);
+        for (let MT = 0; MT < kT.length - 1; MT++) {
+          const lT = kT[MT],
+            KT = kT[MT + 1];
+          if (TT >= lT.gradient && TT <= KT.gradient) {
+            return void cT(lT, KT, (TT - lT.gradient) / (KT.gradient - lT.gradient))
           }
         }
-        const hv = zv.length - 1;
-        Pv(zv[hv], zv[hv], 1)
+        const lT = kT.length - 1;
+        cT(kT[lT], kT[lT], 1)
       }
     }
   },
-  38209: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => hv
+  38512: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => lT
     });
-    class hv {
-      static _CheckLimit(vv, zv) {
-        let Pv = hv._LogLimitOutputs[vv];
-        return Pv ? Pv.current++ : (Pv = {
-          limit: zv,
+    class lT {
+      static _CheckLimit(TT, kT) {
+        let cT = lT._LogLimitOutputs[TT];
+        return cT ? cT.current++ : (cT = {
+          limit: kT,
           current: 1
-        }, hv._LogLimitOutputs[vv] = Pv), Pv.current <= Pv.limit
+        }, lT._LogLimitOutputs[TT] = cT), cT.current <= cT.limit
       }
-      static _GenerateLimitMessage(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const Pv = hv._LogLimitOutputs[vv];
-        if (!Pv || !hv.MessageLimitReached) return;
-        const Sv = this._Levels[zv];
-        Pv.current === Pv.limit && hv[Sv.name](hv.MessageLimitReached.replace(/%LIMIT%/g, "" + Pv.limit).replace(/%TYPE%/g, Sv.name ?? ""))
+      static _GenerateLimitMessage(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const cT = lT._LogLimitOutputs[TT];
+        if (!cT || !lT.MessageLimitReached) return;
+        const MT = this._Levels[kT];
+        cT.current === cT.limit && lT[MT.name](lT.MessageLimitReached.replace(/%LIMIT%/g, "" + cT.limit).replace(/%TYPE%/g, MT.name ?? ""))
       }
-      static _AddLogEntry(vv) {
-        hv._LogCache = vv + hv._LogCache, hv.OnNewCacheEntry && hv.OnNewCacheEntry(vv)
+      static _AddLogEntry(TT) {
+        lT._LogCache = TT + lT._LogCache, lT.OnNewCacheEntry && lT.OnNewCacheEntry(TT)
       }
-      static _FormatMessage(vv) {
-        const zv = vv => vv < 10 ? "0" + vv : "" + vv,
-          Pv = new Date;
-        return "[" + zv(Pv.getHours()) + ":" + zv(Pv.getMinutes()) + ":" + zv(Pv.getSeconds()) + "]: " + vv
+      static _FormatMessage(TT) {
+        const kT = TT => TT < 10 ? "0" + TT : "" + TT,
+          cT = new Date;
+        return "[" + kT(cT.getHours()) + ":" + kT(cT.getMinutes()) + ":" + kT(cT.getSeconds()) + "]: " + TT
       }
-      static _LogDisabled(vv, zv) {}
+      static _LogDisabled(TT, kT) {}
       static _LogEnabled() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          zv = arguments.length > 1 ? arguments[1] : void 0,
-          Pv = arguments.length > 2 ? arguments[2] : void 0;
-        const Sv = Array.isArray(zv) ? zv[0] : zv;
-        if (void 0 !== Pv && !hv._CheckLimit(Sv, Pv)) return;
-        const ev = hv._FormatMessage(Sv),
-          gv = this._Levels[vv],
-          pv = Array.isArray(zv) ? zv.slice(1) : [];
-        gv.logFunc && gv.logFunc("BJS - " + ev, ...pv);
-        const dv = `<div style='color:${gv.color}'>${ev}</div><br>`;
-        hv._AddLogEntry(dv), hv._GenerateLimitMessage(Sv, vv)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          kT = arguments.length > 1 ? arguments[1] : void 0,
+          cT = arguments.length > 2 ? arguments[2] : void 0;
+        const MT = Array.isArray(kT) ? kT[0] : kT;
+        if (void 0 !== cT && !lT._CheckLimit(MT, cT)) return;
+        const KT = lT._FormatMessage(MT),
+          OT = this._Levels[TT],
+          yT = Array.isArray(kT) ? kT.slice(1) : [];
+        OT.logFunc && OT.logFunc("BJS - " + KT, ...yT);
+        const fT = `<div style='color:${OT.color}'>${KT}</div><br>`;
+        lT._AddLogEntry(fT), lT._GenerateLimitMessage(MT, TT)
       }
       static get LogCache() {
-        return hv._LogCache
+        return lT._LogCache
       }
       static ClearLogCache() {
-        hv._LogCache = "", hv._LogLimitOutputs = {}, hv.errorsCount = 0
+        lT._LogCache = "", lT._LogLimitOutputs = {}, lT.errorsCount = 0
       }
-      static set LogLevels(vv) {
-        hv.Log = hv._LogDisabled, hv.Warn = hv._LogDisabled, hv.Error = hv._LogDisabled;
-        const zv = [hv.MessageLogLevel, hv.WarningLogLevel, hv.ErrorLogLevel];
-        for (const Pv of zv)
-          if ((vv & Pv) === Pv) {
-            const vv = this._Levels[Pv];
-            hv[vv.name] = hv._LogEnabled.bind(hv, Pv)
+      static set LogLevels(TT) {
+        lT.Log = lT._LogDisabled, lT.Warn = lT._LogDisabled, lT.Error = lT._LogDisabled;
+        const kT = [lT.MessageLogLevel, lT.WarningLogLevel, lT.ErrorLogLevel];
+        for (const cT of kT)
+          if ((TT & cT) === cT) {
+            const TT = this._Levels[cT];
+            lT[TT.name] = lT._LogEnabled.bind(lT, cT)
           }
       }
     }
-    hv.NoneLogLevel = 0, hv.MessageLogLevel = 1, hv.WarningLogLevel = 2, hv.ErrorLogLevel = 4, hv.AllLogLevel = 7, hv.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", hv._LogCache = "", hv._LogLimitOutputs = {}, hv._Levels = [{}, {
+    lT.NoneLogLevel = 0, lT.MessageLogLevel = 1, lT.WarningLogLevel = 2, lT.ErrorLogLevel = 4, lT.AllLogLevel = 7, lT.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", lT._LogCache = "", lT._LogLimitOutputs = {}, lT._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -819,42 +819,42 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], hv.errorsCount = 0, hv.Log = hv._LogEnabled.bind(hv, hv.MessageLogLevel), hv.Warn = hv._LogEnabled.bind(hv, hv.WarningLogLevel), hv.Error = hv._LogEnabled.bind(hv, hv.ErrorLogLevel)
+    }], lT.errorsCount = 0, lT.Log = lT._LogEnabled.bind(lT, lT.MessageLogLevel), lT.Warn = lT._LogEnabled.bind(lT, lT.WarningLogLevel), lT.Error = lT._LogEnabled.bind(lT, lT.ErrorLogLevel)
   },
-  38249: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      c: () => gv
+  38548: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => OT
     });
-    var hv = Pv(36594),
-      Sv = Pv(36620),
-      ev = Pv(38207);
-    class gv {
+    var lT = cT(36892),
+      MT = cT(36937),
+      KT = cT(38507);
+    class OT {
       constructor() {
-        this.direction1 = new hv.l(0, 1, 0), this.direction2 = new hv.l(0, 1, 0), this.minEmitBox = new hv.l(-.5, -.5, -.5), this.maxEmitBox = new hv.l(.5, .5, .5)
+        this.direction1 = new lT.m(0, 1, 0), this.direction2 = new lT.m(0, 1, 0), this.minEmitBox = new lT.m(-.5, -.5, -.5), this.maxEmitBox = new lT.m(.5, .5, .5)
       }
-      startDirectionFunction(vv, zv, Pv, ev) {
-        const gv = (0, Sv.RandomRange)(this.direction1.x, this.direction2.x),
-          pv = (0, Sv.RandomRange)(this.direction1.y, this.direction2.y),
-          dv = (0, Sv.RandomRange)(this.direction1.z, this.direction2.z);
-        if (ev) return zv.x = gv, zv.y = pv, void(zv.z = dv);
-        hv.l.TransformNormalFromFloatsToRef(gv, pv, dv, vv, zv)
+      startDirectionFunction(TT, kT, cT, KT) {
+        const OT = (0, MT.RandomRange)(this.direction1.x, this.direction2.x),
+          yT = (0, MT.RandomRange)(this.direction1.y, this.direction2.y),
+          fT = (0, MT.RandomRange)(this.direction1.z, this.direction2.z);
+        if (KT) return kT.x = OT, kT.y = yT, void(kT.z = fT);
+        lT.m.TransformNormalFromFloatsToRef(OT, yT, fT, TT, kT)
       }
-      startPositionFunction(vv, zv, Pv, ev) {
-        const gv = (0, Sv.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
-          pv = (0, Sv.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
-          dv = (0, Sv.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
-        if (ev) return zv.x = gv, zv.y = pv, void(zv.z = dv);
-        hv.l.TransformCoordinatesFromFloatsToRef(gv, pv, dv, vv, zv)
+      startPositionFunction(TT, kT, cT, KT) {
+        const OT = (0, MT.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
+          yT = (0, MT.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
+          fT = (0, MT.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
+        if (KT) return kT.x = OT, kT.y = yT, void(kT.z = fT);
+        lT.m.TransformCoordinatesFromFloatsToRef(OT, yT, fT, TT, kT)
       }
       clone() {
-        const vv = new gv;
-        return ev.b.DeepCopy(this, vv), vv
+        const TT = new OT;
+        return KT.d.DeepCopy(this, TT), TT
       }
-      applyToShader(vv) {
-        vv.setVector3("direction1", this.direction1), vv.setVector3("direction2", this.direction2), vv.setVector3("minEmitBox", this.minEmitBox), vv.setVector3("maxEmitBox", this.maxEmitBox)
+      applyToShader(TT) {
+        TT.setVector3("direction1", this.direction1), TT.setVector3("direction2", this.direction2), TT.setVector3("minEmitBox", this.minEmitBox), TT.setVector3("maxEmitBox", this.maxEmitBox)
       }
-      buildUniformLayout(vv) {
-        vv.addUniform("direction1", 3), vv.addUniform("direction2", 3), vv.addUniform("minEmitBox", 3), vv.addUniform("maxEmitBox", 3)
+      buildUniformLayout(TT) {
+        TT.addUniform("direction1", 3), TT.addUniform("direction2", 3), TT.addUniform("minEmitBox", 3), TT.addUniform("maxEmitBox", 3)
       }
       getEffectDefines() {
         return "#define BOXEMITTER"
@@ -863,54 +863,54 @@ export const modules = {
         return "BoxParticleEmitter"
       }
       serialize() {
-        const vv = {};
-        return vv.type = this.getClassName(), vv.direction1 = this.direction1.pPv(), vv.direction2 = this.direction2.pPv(), vv.minEmitBox = this.minEmitBox.pPv(), vv.maxEmitBox = this.maxEmitBox.pPv(), vv
+        const TT = {};
+        return TT.type = this.getClassName(), TT.direction1 = this.direction1.acT(), TT.direction2 = this.direction2.acT(), TT.minEmitBox = this.minEmitBox.acT(), TT.maxEmitBox = this.maxEmitBox.acT(), TT
       }
-      parse(vv) {
-        hv.l.FromArrayToRef(vv.direction1, 0, this.direction1), hv.l.FromArrayToRef(vv.direction2, 0, this.direction2), hv.l.FromArrayToRef(vv.minEmitBox, 0, this.minEmitBox), hv.l.FromArrayToRef(vv.maxEmitBox, 0, this.maxEmitBox)
+      parse(TT) {
+        lT.m.FromArrayToRef(TT.direction1, 0, this.direction1), lT.m.FromArrayToRef(TT.direction2, 0, this.direction2), lT.m.FromArrayToRef(TT.minEmitBox, 0, this.minEmitBox), lT.m.FromArrayToRef(TT.maxEmitBox, 0, this.maxEmitBox)
       }
     }
   },
-  38201: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => pv,
-      g: () => gv
+  38505: (TT, kT, cT) => {
+    cT.d(kT, {
+      c: () => yT,
+      d: () => OT
     });
-    var hv = Pv(36594),
-      Sv = Pv(36620),
-      ev = Pv(38207);
-    class gv {
+    var lT = cT(36892),
+      MT = cT(36937),
+      KT = cT(38507);
+    class OT {
       constructor() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          Sv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.radius = vv, this.height = zv, this.radiusRange = Pv, this.directionRandomizer = Sv, this._tempVector = hv.l.Zero()
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          MT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.radius = TT, this.height = kT, this.radiusRange = cT, this.directionRandomizer = MT, this._tempVector = lT.m.Zero()
       }
-      startDirectionFunction(vv, zv, Pv, ev, gv) {
-        Pv.position.subtractToRef(vv.getTranslation(), this._tempVector), this._tempVector.normalize(), hv.l.TransformNormalToRef(this._tempVector, gv, this._tempVector);
-        const pv = (0, Sv.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
-        let dv = Math.atan2(this._tempVector.x, this._tempVector.z);
-        dv += (0, Sv.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = pv, this._tempVector.x = Math.sin(dv), this._tempVector.z = Math.cos(dv), this._tempVector.normalize(), ev ? zv.Vzv(this._tempVector) : hv.l.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, vv, zv)
+      startDirectionFunction(TT, kT, cT, KT, OT) {
+        cT.position.subtractToRef(TT.getTranslation(), this._tempVector), this._tempVector.normalize(), lT.m.TransformNormalToRef(this._tempVector, OT, this._tempVector);
+        const yT = (0, MT.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
+        let fT = Math.atan2(this._tempVector.x, this._tempVector.z);
+        fT += (0, MT.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = yT, this._tempVector.x = Math.sin(fT), this._tempVector.z = Math.cos(fT), this._tempVector.normalize(), KT ? kT.UkT(this._tempVector) : lT.m.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, TT, kT)
       }
-      startPositionFunction(vv, zv, Pv, ev) {
-        const gv = (0, Sv.RandomRange)(-this.height / 2, this.height / 2),
-          pv = (0, Sv.RandomRange)(0, 2 * Math.PI),
-          dv = (0, Sv.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
-          Nv = Math.sqrt(dv) * this.radius,
-          lv = Nv * Math.cos(pv),
-          Tv = Nv * Math.sin(pv);
-        ev ? zv.f_(lv, gv, Tv) : hv.l.TransformCoordinatesFromFloatsToRef(lv, gv, Tv, vv, zv)
+      startPositionFunction(TT, kT, cT, KT) {
+        const OT = (0, MT.RandomRange)(-this.height / 2, this.height / 2),
+          yT = (0, MT.RandomRange)(0, 2 * Math.PI),
+          fT = (0, MT.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
+          xT = Math.sqrt(fT) * this.radius,
+          IT = xT * Math.cos(yT),
+          AT = xT * Math.sin(yT);
+        KT ? kT.I5(IT, OT, AT) : lT.m.TransformCoordinatesFromFloatsToRef(IT, OT, AT, TT, kT)
       }
       clone() {
-        const vv = new gv(this.radius, this.directionRandomizer);
-        return ev.b.DeepCopy(this, vv), vv
+        const TT = new OT(this.radius, this.directionRandomizer);
+        return KT.d.DeepCopy(this, TT), TT
       }
-      applyToShader(vv) {
-        vv.setFloat("radius", this.radius), vv.setFloat("height", this.height), vv.setFloat("radiusRange", this.radiusRange), vv.setFloat("directionRandomizer", this.directionRandomizer)
+      applyToShader(TT) {
+        TT.setFloat("radius", this.radius), TT.setFloat("height", this.height), TT.setFloat("radiusRange", this.radiusRange), TT.setFloat("directionRandomizer", this.directionRandomizer)
       }
-      buildUniformLayout(vv) {
-        vv.addUniform("radius", 1), vv.addUniform("height", 1), vv.addUniform("radiusRange", 1), vv.addUniform("directionRandomizer", 1)
+      buildUniformLayout(TT) {
+        TT.addUniform("radius", 1), TT.addUniform("height", 1), TT.addUniform("radiusRange", 1), TT.addUniform("directionRandomizer", 1)
       }
       getEffectDefines() {
         return "#define CYLINDEREMITTER"
@@ -919,37 +919,37 @@ export const modules = {
         return "CylinderParticleEmitter"
       }
       serialize() {
-        const vv = {};
-        return vv.type = this.getClassName(), vv.radius = this.radius, vv.height = this.height, vv.radiusRange = this.radiusRange, vv.directionRandomizer = this.directionRandomizer, vv
+        const TT = {};
+        return TT.type = this.getClassName(), TT.radius = this.radius, TT.height = this.height, TT.radiusRange = this.radiusRange, TT.directionRandomizer = this.directionRandomizer, TT
       }
-      parse(vv) {
-        this.radius = vv.radius, this.height = vv.height, this.radiusRange = vv.radiusRange, this.directionRandomizer = vv.directionRandomizer
+      parse(TT) {
+        this.radius = TT.radius, this.height = TT.height, this.radiusRange = TT.radiusRange, this.directionRandomizer = TT.directionRandomizer
       }
     }
-    class pv extends gv {
+    class yT extends OT {
       constructor() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          Sv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new hv.l(0, 1, 0),
-          ev = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new hv.l(0, 1, 0);
-        super(vv, zv, Pv), this.direction1 = Sv, this.direction2 = ev
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          MT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new lT.m(0, 1, 0),
+          KT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new lT.m(0, 1, 0);
+        super(TT, kT, cT), this.direction1 = MT, this.direction2 = KT
       }
-      startDirectionFunction(vv, zv, Pv, ev) {
-        const gv = (0, Sv.RandomRange)(this.direction1.x, this.direction2.x),
-          pv = (0, Sv.RandomRange)(this.direction1.y, this.direction2.y),
-          dv = (0, Sv.RandomRange)(this.direction1.z, this.direction2.z);
-        ev ? zv.f_(gv, pv, dv) : hv.l.TransformNormalFromFloatsToRef(gv, pv, dv, vv, zv)
+      startDirectionFunction(TT, kT, cT, KT) {
+        const OT = (0, MT.RandomRange)(this.direction1.x, this.direction2.x),
+          yT = (0, MT.RandomRange)(this.direction1.y, this.direction2.y),
+          fT = (0, MT.RandomRange)(this.direction1.z, this.direction2.z);
+        KT ? kT.I5(OT, yT, fT) : lT.m.TransformNormalFromFloatsToRef(OT, yT, fT, TT, kT)
       }
       clone() {
-        const vv = new pv(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
-        return ev.b.DeepCopy(this, vv), vv
+        const TT = new yT(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
+        return KT.d.DeepCopy(this, TT), TT
       }
-      applyToShader(vv) {
-        vv.setFloat("radius", this.radius), vv.setFloat("height", this.height), vv.setFloat("radiusRange", this.radiusRange), vv.setVector3("direction1", this.direction1), vv.setVector3("direction2", this.direction2)
+      applyToShader(TT) {
+        TT.setFloat("radius", this.radius), TT.setFloat("height", this.height), TT.setFloat("radiusRange", this.radiusRange), TT.setVector3("direction1", this.direction1), TT.setVector3("direction2", this.direction2)
       }
-      buildUniformLayout(vv) {
-        vv.addUniform("radius", 1), vv.addUniform("height", 1), vv.addUniform("radiusRange", 1), vv.addUniform("direction1", 3), vv.addUniform("direction2", 3)
+      buildUniformLayout(TT) {
+        TT.addUniform("radius", 1), TT.addUniform("height", 1), TT.addUniform("radiusRange", 1), TT.addUniform("direction1", 3), TT.addUniform("direction2", 3)
       }
       getEffectDefines() {
         return "#define CYLINDEREMITTER\n#define DIRECTEDCYLINDEREMITTER"
@@ -958,239 +958,239 @@ export const modules = {
         return "CylinderDirectedParticleEmitter"
       }
       serialize() {
-        const vv = super.serialize();
-        return vv.direction1 = this.direction1.pPv(), vv.direction2 = this.direction2.pPv(), vv
+        const TT = super.serialize();
+        return TT.direction1 = this.direction1.acT(), TT.direction2 = this.direction2.acT(), TT
       }
-      parse(vv) {
-        super.parse(vv), hv.l.FromArrayToRef(vv.direction1, 0, this.direction1), hv.l.FromArrayToRef(vv.direction2, 0, this.direction2)
+      parse(TT) {
+        super.parse(TT), lT.m.FromArrayToRef(TT.direction1, 0, this.direction1), lT.m.FromArrayToRef(TT.direction2, 0, this.direction2)
       }
     }
   },
-  38328: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => Tv
+  38616: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => AT
     });
-    const hv = .5 * (Math.sqrt(3) - 1),
-      Sv = (3 - Math.sqrt(3)) / 6,
-      ev = 1 / 3,
-      gv = 1 / 6,
-      pv = (Math.sqrt(5) - 1) / 4,
-      dv = (5 - Math.sqrt(5)) / 20,
-      Nv = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
-      lv = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
-    const Tv = class {
+    const lT = .5 * (Math.sqrt(3) - 1),
+      MT = (3 - Math.sqrt(3)) / 6,
+      KT = 1 / 3,
+      OT = 1 / 6,
+      yT = (Math.sqrt(5) - 1) / 4,
+      fT = (5 - Math.sqrt(5)) / 20,
+      xT = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
+      IT = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
+    const AT = class {
       constructor() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
-        const zv = "function" == typeof vv ? vv : function(vv) {
-          let zv = 0,
-            Pv = 0,
-            hv = 0,
-            Sv = 1;
-          const ev = function() {
-            let vv = 4022871197;
-            return function(zv) {
-              zv = zv.toString();
-              for (let Pv = 0; Pv < zv.length; Pv++) {
-                vv += zv.charCodeAt(Pv);
-                let hv = .02519603282416938 * vv;
-                vv = hv >>> 0, hv -= vv, hv *= vv, vv = hv >>> 0, hv -= vv, vv += 4294967296 * hv
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
+        const kT = "function" == typeof TT ? TT : function(TT) {
+          let kT = 0,
+            cT = 0,
+            lT = 0,
+            MT = 1;
+          const KT = function() {
+            let TT = 4022871197;
+            return function(kT) {
+              kT = kT.toString();
+              for (let cT = 0; cT < kT.length; cT++) {
+                TT += kT.charCodeAt(cT);
+                let lT = .02519603282416938 * TT;
+                TT = lT >>> 0, lT -= TT, lT *= TT, TT = lT >>> 0, lT -= TT, TT += 4294967296 * lT
               }
-              return 2.3283064365386963e-10 * (vv >>> 0)
+              return 2.3283064365386963e-10 * (TT >>> 0)
             }
           }();
-          zv = ev(" "), Pv = ev(" "), hv = ev(" "), zv -= ev(vv), zv < 0 && (zv += 1);
-          Pv -= ev(vv), Pv < 0 && (Pv += 1);
-          hv -= ev(vv), hv < 0 && (hv += 1);
+          kT = KT(" "), cT = KT(" "), lT = KT(" "), kT -= KT(TT), kT < 0 && (kT += 1);
+          cT -= KT(TT), cT < 0 && (cT += 1);
+          lT -= KT(TT), lT < 0 && (lT += 1);
           return function() {
-            const vv = 2091639 * zv + 2.3283064365386963e-10 * Sv;
-            return zv = Pv, Pv = hv, hv = vv - (Sv = 0 | vv)
+            const TT = 2091639 * kT + 2.3283064365386963e-10 * MT;
+            return kT = cT, cT = lT, lT = TT - (MT = 0 | TT)
           }
-        }(vv);
-        this.p = function(vv) {
-          const zv = new Uint8Array(256);
-          for (let Pv = 0; Pv < 256; Pv++) zv[Pv] = Pv;
-          for (let Pv = 0; Pv < 255; Pv++) {
-            const hv = Pv + ~~(vv() * (256 - Pv)),
-              Sv = zv[Pv];
-            zv[Pv] = zv[hv], zv[hv] = Sv
+        }(TT);
+        this.p = function(TT) {
+          const kT = new Uint8Array(256);
+          for (let cT = 0; cT < 256; cT++) kT[cT] = cT;
+          for (let cT = 0; cT < 255; cT++) {
+            const lT = cT + ~~(TT() * (256 - cT)),
+              MT = kT[cT];
+            kT[cT] = kT[lT], kT[lT] = MT
           }
-          return zv
-        }(zv), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
-        for (let Pv = 0; Pv < 512; Pv++) this.perm[Pv] = this.p[255 & Pv], this.permMod12[Pv] = this.perm[Pv] % 12
+          return kT
+        }(kT), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
+        for (let cT = 0; cT < 512; cT++) this.perm[cT] = this.p[255 & cT], this.permMod12[cT] = this.perm[cT] % 12
       }
-      noise2D(vv, zv) {
-        const Pv = this.permMod12,
-          ev = this.perm;
-        let gv = 0,
-          pv = 0,
-          dv = 0;
-        const lv = (vv + zv) * hv,
-          Tv = Math.floor(vv + lv),
-          Wv = Math.floor(zv + lv),
-          wv = (Tv + Wv) * Sv,
-          av = vv - (Tv - wv),
-          sv = zv - (Wv - wv);
-        let Cv, iv;
-        av > sv ? (Cv = 1, iv = 0) : (Cv = 0, iv = 1);
-        const cv = av - Cv + Sv,
-          Gv = sv - iv + Sv,
-          mv = av - 1 + 2 * Sv,
-          jv = sv - 1 + 2 * Sv,
-          fv = 255 & Tv,
-          Fv = 255 & Wv;
-        let Yv = .5 - av * av - sv * sv;
-        if (Yv >= 0) {
-          const vv = 3 * Pv[fv + ev[Fv]];
-          Yv *= Yv, gv = Yv * Yv * (Nv[vv] * av + Nv[vv + 1] * sv)
+      noise2D(TT, kT) {
+        const cT = this.permMod12,
+          KT = this.perm;
+        let OT = 0,
+          yT = 0,
+          fT = 0;
+        const IT = (TT + kT) * lT,
+          AT = Math.floor(TT + IT),
+          CT = Math.floor(kT + IT),
+          jT = (AT + CT) * MT,
+          vT = TT - (AT - jT),
+          tT = kT - (CT - jT);
+        let hT, NT;
+        vT > tT ? (hT = 1, NT = 0) : (hT = 0, NT = 1);
+        const QT = vT - hT + MT,
+          ST = tT - NT + MT,
+          DT = vT - 1 + 2 * MT,
+          aT = tT - 1 + 2 * MT,
+          FT = 255 & AT,
+          rT = 255 & CT;
+        let PT = .5 - vT * vT - tT * tT;
+        if (PT >= 0) {
+          const TT = 3 * cT[FT + KT[rT]];
+          PT *= PT, OT = PT * PT * (xT[TT] * vT + xT[TT + 1] * tT)
         }
-        let nv = .5 - cv * cv - Gv * Gv;
-        if (nv >= 0) {
-          const vv = 3 * Pv[fv + Cv + ev[Fv + iv]];
-          nv *= nv, pv = nv * nv * (Nv[vv] * cv + Nv[vv + 1] * Gv)
+        let wT = .5 - QT * QT - ST * ST;
+        if (wT >= 0) {
+          const TT = 3 * cT[FT + hT + KT[rT + NT]];
+          wT *= wT, yT = wT * wT * (xT[TT] * QT + xT[TT + 1] * ST)
         }
-        let Ov = .5 - mv * mv - jv * jv;
-        if (Ov >= 0) {
-          const vv = 3 * Pv[fv + 1 + ev[Fv + 1]];
-          Ov *= Ov, dv = Ov * Ov * (Nv[vv] * mv + Nv[vv + 1] * jv)
+        let mT = .5 - DT * DT - aT * aT;
+        if (mT >= 0) {
+          const TT = 3 * cT[FT + 1 + KT[rT + 1]];
+          mT *= mT, fT = mT * mT * (xT[TT] * DT + xT[TT + 1] * aT)
         }
-        return 70 * (gv + pv + dv)
+        return 70 * (OT + yT + fT)
       }
-      noise3D(vv, zv, Pv) {
-        const hv = this.permMod12,
-          Sv = this.perm;
-        let pv, dv, lv, Tv;
-        const Wv = (vv + zv + Pv) * ev,
-          wv = Math.floor(vv + Wv),
-          av = Math.floor(zv + Wv),
-          sv = Math.floor(Pv + Wv),
-          Cv = (wv + av + sv) * gv,
-          iv = vv - (wv - Cv),
-          cv = zv - (av - Cv),
-          Gv = Pv - (sv - Cv);
-        let mv, jv, fv, Fv, Yv, nv;
-        iv >= cv ? cv >= Gv ? (mv = 1, jv = 0, fv = 0, Fv = 1, Yv = 1, nv = 0) : iv >= Gv ? (mv = 1, jv = 0, fv = 0, Fv = 1, Yv = 0, nv = 1) : (mv = 0, jv = 0, fv = 1, Fv = 1, Yv = 0, nv = 1) : cv < Gv ? (mv = 0, jv = 0, fv = 1, Fv = 0, Yv = 1, nv = 1) : iv < Gv ? (mv = 0, jv = 1, fv = 0, Fv = 0, Yv = 1, nv = 1) : (mv = 0, jv = 1, fv = 0, Fv = 1, Yv = 1, nv = 0);
-        const Ov = iv - mv + gv,
-          Dv = cv - jv + gv,
-          Kv = Gv - fv + gv,
-          Vv = iv - Fv + 2 * gv,
-          Uv = cv - Yv + 2 * gv,
-          Rv = Gv - nv + 2 * gv,
-          xv = iv - 1 + .5,
-          tv = cv - 1 + .5,
-          qv = Gv - 1 + .5,
-          Iv = 255 & wv,
-          Qv = 255 & av,
-          Zv = 255 & sv;
-        let Av = .6 - iv * iv - cv * cv - Gv * Gv;
-        if (Av < 0) pv = 0;
+      noise3D(TT, kT, cT) {
+        const lT = this.permMod12,
+          MT = this.perm;
+        let yT, fT, IT, AT;
+        const CT = (TT + kT + cT) * KT,
+          jT = Math.floor(TT + CT),
+          vT = Math.floor(kT + CT),
+          tT = Math.floor(cT + CT),
+          hT = (jT + vT + tT) * OT,
+          NT = TT - (jT - hT),
+          QT = kT - (vT - hT),
+          ST = cT - (tT - hT);
+        let DT, aT, FT, rT, PT, wT;
+        NT >= QT ? QT >= ST ? (DT = 1, aT = 0, FT = 0, rT = 1, PT = 1, wT = 0) : NT >= ST ? (DT = 1, aT = 0, FT = 0, rT = 1, PT = 0, wT = 1) : (DT = 0, aT = 0, FT = 1, rT = 1, PT = 0, wT = 1) : QT < ST ? (DT = 0, aT = 0, FT = 1, rT = 0, PT = 1, wT = 1) : NT < ST ? (DT = 0, aT = 1, FT = 0, rT = 0, PT = 1, wT = 1) : (DT = 0, aT = 1, FT = 0, rT = 1, PT = 1, wT = 0);
+        const mT = NT - DT + OT,
+          bT = QT - aT + OT,
+          zT = ST - FT + OT,
+          JT = NT - rT + 2 * OT,
+          oT = QT - PT + 2 * OT,
+          HT = ST - wT + 2 * OT,
+          eT = NT - 1 + .5,
+          GT = QT - 1 + .5,
+          VT = ST - 1 + .5,
+          ET = 255 & jT,
+          ZT = 255 & vT,
+          uT = 255 & tT;
+        let XT = .6 - NT * NT - QT * QT - ST * ST;
+        if (XT < 0) yT = 0;
         else {
-          const vv = 3 * hv[Iv + Sv[Qv + Sv[Zv]]];
-          Av *= Av, pv = Av * Av * (Nv[vv] * iv + Nv[vv + 1] * cv + Nv[vv + 2] * Gv)
+          const TT = 3 * lT[ET + MT[ZT + MT[uT]]];
+          XT *= XT, yT = XT * XT * (xT[TT] * NT + xT[TT + 1] * QT + xT[TT + 2] * ST)
         }
-        let Lv = .6 - Ov * Ov - Dv * Dv - Kv * Kv;
-        if (Lv < 0) dv = 0;
+        let dT = .6 - mT * mT - bT * bT - zT * zT;
+        if (dT < 0) fT = 0;
         else {
-          const vv = 3 * hv[Iv + mv + Sv[Qv + jv + Sv[Zv + fv]]];
-          Lv *= Lv, dv = Lv * Lv * (Nv[vv] * Ov + Nv[vv + 1] * Dv + Nv[vv + 2] * Kv)
+          const TT = 3 * lT[ET + DT + MT[ZT + aT + MT[uT + FT]]];
+          dT *= dT, fT = dT * dT * (xT[TT] * mT + xT[TT + 1] * bT + xT[TT + 2] * zT)
         }
-        let Hv = .6 - Vv * Vv - Uv * Uv - Rv * Rv;
-        if (Hv < 0) lv = 0;
+        let LT = .6 - JT * JT - oT * oT - HT * HT;
+        if (LT < 0) IT = 0;
         else {
-          const vv = 3 * hv[Iv + Fv + Sv[Qv + Yv + Sv[Zv + nv]]];
-          Hv *= Hv, lv = Hv * Hv * (Nv[vv] * Vv + Nv[vv + 1] * Uv + Nv[vv + 2] * Rv)
+          const TT = 3 * lT[ET + rT + MT[ZT + PT + MT[uT + wT]]];
+          LT *= LT, IT = LT * LT * (xT[TT] * JT + xT[TT + 1] * oT + xT[TT + 2] * HT)
         }
-        let Mv = .6 - xv * xv - tv * tv - qv * qv;
-        if (Mv < 0) Tv = 0;
+        let RT = .6 - eT * eT - GT * GT - VT * VT;
+        if (RT < 0) AT = 0;
         else {
-          const vv = 3 * hv[Iv + 1 + Sv[Qv + 1 + Sv[Zv + 1]]];
-          Mv *= Mv, Tv = Mv * Mv * (Nv[vv] * xv + Nv[vv + 1] * tv + Nv[vv + 2] * qv)
+          const TT = 3 * lT[ET + 1 + MT[ZT + 1 + MT[uT + 1]]];
+          RT *= RT, AT = RT * RT * (xT[TT] * eT + xT[TT + 1] * GT + xT[TT + 2] * VT)
         }
-        return 32 * (pv + dv + lv + Tv)
+        return 32 * (yT + fT + IT + AT)
       }
-      noise4D(vv, zv, Pv, hv) {
-        const Sv = this.perm;
-        let ev, gv, Nv, Tv, Wv;
-        const wv = (vv + zv + Pv + hv) * pv,
-          av = Math.floor(vv + wv),
-          sv = Math.floor(zv + wv),
-          Cv = Math.floor(Pv + wv),
-          iv = Math.floor(hv + wv),
-          cv = (av + sv + Cv + iv) * dv,
-          Gv = vv - (av - cv),
-          mv = zv - (sv - cv),
-          jv = Pv - (Cv - cv),
-          fv = hv - (iv - cv);
-        let Fv = 0,
-          Yv = 0,
-          nv = 0,
-          Ov = 0;
-        Gv > mv ? Fv++ : Yv++, Gv > jv ? Fv++ : nv++, Gv > fv ? Fv++ : Ov++, mv > jv ? Yv++ : nv++, mv > fv ? Yv++ : Ov++, jv > fv ? nv++ : Ov++;
-        const Dv = Fv >= 3 ? 1 : 0,
-          Kv = Yv >= 3 ? 1 : 0,
-          Vv = nv >= 3 ? 1 : 0,
-          Uv = Ov >= 3 ? 1 : 0,
-          Rv = Fv >= 2 ? 1 : 0,
-          xv = Yv >= 2 ? 1 : 0,
-          tv = nv >= 2 ? 1 : 0,
-          qv = Ov >= 2 ? 1 : 0,
-          Iv = Fv >= 1 ? 1 : 0,
-          Qv = Yv >= 1 ? 1 : 0,
-          Zv = nv >= 1 ? 1 : 0,
-          Av = Ov >= 1 ? 1 : 0,
-          Lv = Gv - Dv + dv,
-          Hv = mv - Kv + dv,
-          Mv = jv - Vv + dv,
-          yv = fv - Uv + dv,
-          Bv = Gv - Rv + 2 * dv,
-          Jv = mv - xv + 2 * dv,
-          Ev = jv - tv + 2 * dv,
-          ov = fv - qv + 2 * dv,
-          bv = Gv - Iv + 3 * dv,
-          rv = mv - Qv + 3 * dv,
-          kv = jv - Zv + 3 * dv,
-          Xv = fv - Av + 3 * dv,
-          uv = Gv - 1 + 4 * dv,
-          vz = mv - 1 + 4 * dv,
-          zz = jv - 1 + 4 * dv,
-          Pz = fv - 1 + 4 * dv,
-          hz = 255 & av,
-          Sz = 255 & sv,
-          ez = 255 & Cv,
-          gz = 255 & iv;
-        let pz = .6 - Gv * Gv - mv * mv - jv * jv - fv * fv;
-        if (pz < 0) ev = 0;
+      noise4D(TT, kT, cT, lT) {
+        const MT = this.perm;
+        let KT, OT, xT, AT, CT;
+        const jT = (TT + kT + cT + lT) * yT,
+          vT = Math.floor(TT + jT),
+          tT = Math.floor(kT + jT),
+          hT = Math.floor(cT + jT),
+          NT = Math.floor(lT + jT),
+          QT = (vT + tT + hT + NT) * fT,
+          ST = TT - (vT - QT),
+          DT = kT - (tT - QT),
+          aT = cT - (hT - QT),
+          FT = lT - (NT - QT);
+        let rT = 0,
+          PT = 0,
+          wT = 0,
+          mT = 0;
+        ST > DT ? rT++ : PT++, ST > aT ? rT++ : wT++, ST > FT ? rT++ : mT++, DT > aT ? PT++ : wT++, DT > FT ? PT++ : mT++, aT > FT ? wT++ : mT++;
+        const bT = rT >= 3 ? 1 : 0,
+          zT = PT >= 3 ? 1 : 0,
+          JT = wT >= 3 ? 1 : 0,
+          oT = mT >= 3 ? 1 : 0,
+          HT = rT >= 2 ? 1 : 0,
+          eT = PT >= 2 ? 1 : 0,
+          GT = wT >= 2 ? 1 : 0,
+          VT = mT >= 2 ? 1 : 0,
+          ET = rT >= 1 ? 1 : 0,
+          ZT = PT >= 1 ? 1 : 0,
+          uT = wT >= 1 ? 1 : 0,
+          XT = mT >= 1 ? 1 : 0,
+          dT = ST - bT + fT,
+          LT = DT - zT + fT,
+          RT = aT - JT + fT,
+          gT = FT - oT + fT,
+          UT = ST - HT + 2 * fT,
+          YT = DT - eT + 2 * fT,
+          BT = aT - GT + 2 * fT,
+          WT = FT - VT + 2 * fT,
+          nT = ST - ET + 3 * fT,
+          pT = DT - ZT + 3 * fT,
+          iT = aT - uT + 3 * fT,
+          qT = FT - XT + 3 * fT,
+          sT = ST - 1 + 4 * fT,
+          Tk = DT - 1 + 4 * fT,
+          kk = aT - 1 + 4 * fT,
+          ck = FT - 1 + 4 * fT,
+          lk = 255 & vT,
+          Mk = 255 & tT,
+          Kk = 255 & hT,
+          Ok = 255 & NT;
+        let yk = .6 - ST * ST - DT * DT - aT * aT - FT * FT;
+        if (yk < 0) KT = 0;
         else {
-          const vv = Sv[hz + Sv[Sz + Sv[ez + Sv[gz]]]] % 32 * 4;
-          pz *= pz, ev = pz * pz * (lv[vv] * Gv + lv[vv + 1] * mv + lv[vv + 2] * jv + lv[vv + 3] * fv)
+          const TT = MT[lk + MT[Mk + MT[Kk + MT[Ok]]]] % 32 * 4;
+          yk *= yk, KT = yk * yk * (IT[TT] * ST + IT[TT + 1] * DT + IT[TT + 2] * aT + IT[TT + 3] * FT)
         }
-        let dz = .6 - Lv * Lv - Hv * Hv - Mv * Mv - yv * yv;
-        if (dz < 0) gv = 0;
+        let fk = .6 - dT * dT - LT * LT - RT * RT - gT * gT;
+        if (fk < 0) OT = 0;
         else {
-          const vv = Sv[hz + Dv + Sv[Sz + Kv + Sv[ez + Vv + Sv[gz + Uv]]]] % 32 * 4;
-          dz *= dz, gv = dz * dz * (lv[vv] * Lv + lv[vv + 1] * Hv + lv[vv + 2] * Mv + lv[vv + 3] * yv)
+          const TT = MT[lk + bT + MT[Mk + zT + MT[Kk + JT + MT[Ok + oT]]]] % 32 * 4;
+          fk *= fk, OT = fk * fk * (IT[TT] * dT + IT[TT + 1] * LT + IT[TT + 2] * RT + IT[TT + 3] * gT)
         }
-        let Nz = .6 - Bv * Bv - Jv * Jv - Ev * Ev - ov * ov;
-        if (Nz < 0) Nv = 0;
+        let xk = .6 - UT * UT - YT * YT - BT * BT - WT * WT;
+        if (xk < 0) xT = 0;
         else {
-          const vv = Sv[hz + Rv + Sv[Sz + xv + Sv[ez + tv + Sv[gz + qv]]]] % 32 * 4;
-          Nz *= Nz, Nv = Nz * Nz * (lv[vv] * Bv + lv[vv + 1] * Jv + lv[vv + 2] * Ev + lv[vv + 3] * ov)
+          const TT = MT[lk + HT + MT[Mk + eT + MT[Kk + GT + MT[Ok + VT]]]] % 32 * 4;
+          xk *= xk, xT = xk * xk * (IT[TT] * UT + IT[TT + 1] * YT + IT[TT + 2] * BT + IT[TT + 3] * WT)
         }
-        let lz = .6 - bv * bv - rv * rv - kv * kv - Xv * Xv;
-        if (lz < 0) Tv = 0;
+        let Ik = .6 - nT * nT - pT * pT - iT * iT - qT * qT;
+        if (Ik < 0) AT = 0;
         else {
-          const vv = Sv[hz + Iv + Sv[Sz + Qv + Sv[ez + Zv + Sv[gz + Av]]]] % 32 * 4;
-          lz *= lz, Tv = lz * lz * (lv[vv] * bv + lv[vv + 1] * rv + lv[vv + 2] * kv + lv[vv + 3] * Xv)
+          const TT = MT[lk + ET + MT[Mk + ZT + MT[Kk + uT + MT[Ok + XT]]]] % 32 * 4;
+          Ik *= Ik, AT = Ik * Ik * (IT[TT] * nT + IT[TT + 1] * pT + IT[TT + 2] * iT + IT[TT + 3] * qT)
         }
-        let Tz = .6 - uv * uv - vz * vz - zz * zz - Pz * Pz;
-        if (Tz < 0) Wv = 0;
+        let Ak = .6 - sT * sT - Tk * Tk - kk * kk - ck * ck;
+        if (Ak < 0) CT = 0;
         else {
-          const vv = Sv[hz + 1 + Sv[Sz + 1 + Sv[ez + 1 + Sv[gz + 1]]]] % 32 * 4;
-          Tz *= Tz, Wv = Tz * Tz * (lv[vv] * uv + lv[vv + 1] * vz + lv[vv + 2] * zz + lv[vv + 3] * Pz)
+          const TT = MT[lk + 1 + MT[Mk + 1 + MT[Kk + 1 + MT[Ok + 1]]]] % 32 * 4;
+          Ak *= Ak, CT = Ak * Ak * (IT[TT] * sT + IT[TT + 1] * Tk + IT[TT + 2] * kk + IT[TT + 3] * ck)
         }
-        return 27 * (ev + gv + Nv + Tv + Wv)
+        return 27 * (KT + OT + xT + AT + CT)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

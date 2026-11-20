@@ -1,758 +1,758 @@
 export const id = 282;
 export const ids = [282, 283];
 export const modules = {
-  40573: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      CharacterCustomisationUI: () => Zv
+  40917: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      CharacterCustomisationUI: () => uT
     });
-    var hv = Pv(52),
-      Sv = Pv(2775),
-      ev = Pv(1108),
-      gv = Pv(1876),
-      pv = Pv(1035),
-      dv = Pv.n(pv),
-      Nv = Pv(1226),
-      lv = Pv(602),
-      Tv = Pv(1175),
-      Wv = Pv(2160),
-      wv = Pv(1548),
-      av = Pv(8501),
-      sv = Pv(2169),
-      Cv = Pv(2879),
-      iv = Pv(1923),
-      cv = Pv(1442),
-      Gv = Pv(2200),
-      mv = Pv(22),
-      jv = Pv(1482),
-      fv = Pv(312),
-      Fv = Pv(40581),
-      Yv = Pv(1542),
-      nv = Pv(2248),
-      Ov = Pv(2769),
-      Dv = Pv(2097),
-      Kv = Pv(2432),
-      Vv = Pv(1042);
-    Pv(9044), Pv(2885);
+    var lT = cT(71),
+      MT = cT(2938),
+      KT = cT(1130),
+      OT = cT(1953),
+      yT = cT(1046),
+      fT = cT.n(yT),
+      xT = cT(1244),
+      IT = cT(602),
+      AT = cT(1195),
+      CT = cT(2260),
+      jT = cT(1578),
+      vT = cT(8855),
+      tT = cT(2268),
+      hT = cT(3022),
+      NT = cT(1996),
+      QT = cT(1470),
+      ST = cT(2305),
+      DT = cT(31),
+      aT = cT(1518),
+      FT = cT(339),
+      rT = cT(40922),
+      PT = cT(1575),
+      wT = cT(2355),
+      mT = cT(2931),
+      bT = cT(2181),
+      zT = cT(2600),
+      JT = cT(1061);
+    cT(9395), cT(3028);
     Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI;
-    var Uv = Pv(2209),
-      Rv = Pv(1344),
-      xv = Pv(1082);
+    var oT = cT(2315),
+      HT = cT(1379),
+      eT = cT(1099);
 
-    function tv(vv, zv, Pv) {
-      return (0, Wv.s)(vv, zv).purchasable && !(0, nv.s)(vv, zv, Pv)
+    function GT(TT, kT, cT) {
+      return (0, CT.m)(TT, kT).purchasable && !(0, wT.n)(TT, kT, cT)
     }
 
-    function qv(vv, zv) {
-      return Object.entries(vv).some((vv => {
-        let [Pv, hv] = vv;
-        return tv(Pv, hv, zv)
+    function VT(TT, kT) {
+      return Object.entries(TT).some((TT => {
+        let [cT, lT] = TT;
+        return GT(cT, lT, kT)
       }))
     }
 
-    function Iv(vv) {
-      var zv;
+    function ET(TT) {
+      var kT;
       let {
-        pack: Pv,
-        ownedPacks: hv,
-        showStoreLink: Sv = !1,
-        children: ev
-      } = vv;
+        pack: cT,
+        ownedPacks: lT,
+        showStoreLink: MT = !1,
+        children: KT
+      } = TT;
       const {
-        t: gv
-      } = (0, Tv.x)(), pv = Yv.b[Pv], Nv = pv.purchasable && !hv.includes(Pv) && Yv.p.includes(Pv), lv = Ov.k[Pv];
-      return (0, xv.jsxs)("div", {
-        className: dv()("CosmeticPackGroup", {
-          CosmeticPackGroupLocked: Nv
+        t: OT
+      } = (0, AT.B)(), yT = PT.c[cT], xT = yT.purchasable && !lT.includes(cT) && PT.s.includes(cT), IT = mT.p[cT];
+      return (0, eT.jsxs)("div", {
+        className: fT()("CosmeticPackGroup", {
+          CosmeticPackGroupLocked: xT
         }),
-        children: [lv && (0, xv.jsx)(lv, {}), (0, xv.jsxs)("div", {
+        children: [IT && (0, eT.jsx)(IT, {}), (0, eT.jsxs)("div", {
           className: "CosmeticPackGroupLabel",
-          children: [(0, xv.jsx)("span", {
+          children: [(0, eT.jsx)("span", {
             className: "CosmeticPackGroupLabelName",
-            children: null !== (zv = pv.displayName) && void 0 !== zv ? zv : Pv
-          }), (Nv || Sv) && (0, xv.jsxs)(cv.u, {
+            children: null !== (kT = yT.displayName) && void 0 !== kT ? kT : cT
+          }), (xT || MT) && (0, eT.jsxs)(QT.C, {
             onClick: () => {
-              Nv ? (0, Ov.j)(Pv) : (0, Gv.s)({
+              xT ? (0, mT.m)(cT) : (0, ST.p)({
                 mode: "self",
                 source: "characterCustomisation"
               })
             },
-            children: [(0, xv.jsx)(Vv.b, {
+            children: [(0, eT.jsx)(JT.e, {
               name: "store"
-            }), " ", gv("general:viewInShop")]
+            }), " ", OT("general:viewInShop")]
           })]
-        }), Nv && "bee" === Pv && (0, xv.jsx)(Ov.e, {}), ev]
+        }), xT && "bee" === cT && (0, eT.jsx)(mT.e, {}), KT]
       })
     }
 
-    function Qv(vv) {
+    function ZT(TT) {
       let {
-        equippedEmoteIds: zv,
-        ownedPacks: Pv,
-        canBuy: hv,
-        onUpdateLoadout: Sv,
-        onEmoteSelected: ev,
-        onEquipPreviewSkin: gv
-      } = vv;
+        equippedEmoteIds: kT,
+        ownedPacks: cT,
+        canBuy: lT,
+        onUpdateLoadout: MT,
+        onEmoteSelected: KT,
+        onEquipPreviewSkin: OT
+      } = TT;
       const {
-        t: pv
-      } = (0, Tv.x)(), lv = new Set(zv), wv = new Map, av = Object.keys(Wv.i.emote).sort(((vv, zv) => {
-        var Pv, hv, Sv, ev;
-        return (null !== (Pv = null === (hv = (0, Wv.o)("emote", vv)) || void 0 === hv ? void 0 : hv.clientIdx) && void 0 !== Pv ? Pv : 0) - (null !== (Sv = null === (ev = (0, Wv.o)("emote", zv)) || void 0 === ev ? void 0 : ev.clientIdx) && void 0 !== Sv ? Sv : 0)
-      })).filter((vv => {
-        const zv = (0, Wv.s)("emote", vv),
-          Sv = (0, nv.s)("emote", vv, Pv);
-        return !(zv.purchasable && !Sv && !hv) && (zv.clientSelectable || Sv)
+        t: yT
+      } = (0, AT.B)(), IT = new Set(kT), jT = new Map, vT = Object.keys(CT.e.emote).sort(((TT, kT) => {
+        var cT, lT, MT, KT;
+        return (null !== (cT = null === (lT = (0, CT.j)("emote", TT)) || void 0 === lT ? void 0 : lT.clientIdx) && void 0 !== cT ? cT : 0) - (null !== (MT = null === (KT = (0, CT.j)("emote", kT)) || void 0 === KT ? void 0 : KT.clientIdx) && void 0 !== MT ? MT : 0)
+      })).filter((TT => {
+        const kT = (0, CT.m)("emote", TT),
+          MT = (0, wT.n)("emote", TT, cT);
+        return !(kT.purchasable && !MT && !lT) && (kT.clientSelectable || MT)
       }));
-      for (const dv of av) {
-        const vv = (0, Wv.o)("emote", dv).cosmeticPack;
-        wv.has(vv) || wv.set(vv, []), wv.get(vv).push(dv)
+      for (const fT of vT) {
+        const TT = (0, CT.j)("emote", fT).cosmeticPack;
+        jT.has(TT) || jT.set(TT, []), jT.get(TT).push(fT)
       }
-      const Cv = Array.from(wv.keys());
-      return (0, xv.jsxs)("div", {
+      const hT = Array.from(jT.keys());
+      return (0, eT.jsxs)("div", {
         className: "CharCustomisPartSelectorWrapper",
-        children: [!1, (0, xv.jsxs)("div", {
+        children: [!1, (0, eT.jsxs)("div", {
           className: "EmoteLoadoutSummary",
-          children: [(0, xv.jsx)("span", {
+          children: [(0, eT.jsx)("span", {
             className: "EmoteLoadoutSummaryText SmallTextBold",
-            children: pv("emotes:equippedCount", {
-              count: zv.length,
-              max: Nv.m
+            children: yT("emotes:equippedCount", {
+              count: kT.length,
+              max: xT.n
             })
-          }), (0, xv.jsx)("span", {
+          }), (0, eT.jsx)("span", {
             className: "EmoteLoadoutSummaryHint SmallTextLight",
-            children: pv("emotes:loadoutHint")
+            children: yT("emotes:loadoutHint")
           })]
-        }), Cv.map((vv => {
-          const hv = wv.get(vv);
-          return (0, xv.jsx)(Iv, {
-            pack: vv,
-            ownedPacks: Pv,
-            children: (0, xv.jsx)("div", {
+        }), hT.map((TT => {
+          const lT = jT.get(TT);
+          return (0, eT.jsx)(ET, {
+            pack: TT,
+            ownedPacks: cT,
+            children: (0, eT.jsx)("div", {
               className: "CosmeticPackGroupItems",
-              children: hv.map((vv => {
-                var hv;
-                const gv = zv.indexOf(vv),
-                  Tv = -1 !== gv,
-                  Wv = zv.length >= Nv.m,
-                  wv = tv("emote", vv, Pv),
-                  av = wv || !Tv && Wv,
-                  Cv = (0, sv.l)(vv);
-                return (0, xv.jsxs)("div", {
-                  className: dv()("CharCustomPartWrapper", "EmoteCustomPartWrapper", {
-                    SelectedCharCustomPartWrapper: Tv
+              children: lT.map((TT => {
+                var lT;
+                const OT = kT.indexOf(TT),
+                  AT = -1 !== OT,
+                  CT = kT.length >= xT.n,
+                  jT = GT("emote", TT, cT),
+                  vT = jT || !AT && CT,
+                  hT = (0, tT.f)(TT);
+                return (0, eT.jsxs)("div", {
+                  className: fT()("CharCustomPartWrapper", "EmoteCustomPartWrapper", {
+                    SelectedCharCustomPartWrapper: AT
                   }),
                   onClick: () => {
-                    ev(vv)
+                    KT(TT)
                   },
-                  children: [(0, xv.jsxs)("div", {
+                  children: [(0, eT.jsxs)("div", {
                     className: "CharCustomPart EmoteCustomPart",
-                    children: [(0, xv.jsx)("div", {
+                    children: [(0, eT.jsx)("div", {
                       className: "EmoteCustomPartIcon",
                       style: {
-                        backgroundImage: `url(/textures/charSkins/previews/emote_${vv}_preview.png)`
+                        backgroundImage: `url(/textures/charSkins/previews/emote_${TT}_preview.png)`
                       },
                       "aria-hidden": !0
-                    }), (0, xv.jsx)("span", {
+                    }), (0, eT.jsx)("span", {
                       className: "EmoteCustomPartLabel SmallTextBold",
-                      children: null !== (hv = null === Cv || void 0 === Cv ? void 0 : Cv.displayName) && void 0 !== hv ? hv : vv
+                      children: null !== (lT = null === hT || void 0 === hT ? void 0 : hT.displayName) && void 0 !== lT ? lT : TT
                     })]
-                  }), (0, xv.jsxs)("div", {
+                  }), (0, eT.jsxs)("div", {
                     className: "EmoteCustomPartToggleContainer",
-                    children: [Tv && (0, xv.jsx)("span", {
+                    children: [AT && (0, eT.jsx)("span", {
                       className: "EmoteCustomPartSlotBadge",
-                      children: gv + 1
-                    }), wv && (0, xv.jsx)(Vv.b, {
+                      children: OT + 1
+                    }), jT && (0, eT.jsx)(JT.e, {
                       name: "lock",
                       className: "LockedCosmeticIcon"
-                    }), (0, xv.jsx)(Rv.h, {
-                      tooltipInner: (0, xv.jsx)(xv.Fragment, {
-                        children: pv(Tv ? "general:remove" : "general:add")
+                    }), (0, eT.jsx)(HT.c, {
+                      tooltipInner: (0, eT.jsx)(eT.Fragment, {
+                        children: yT(AT ? "general:remove" : "general:add")
                       }),
                       delayShow: 0,
                       delayHide: 0,
-                      children: (0, xv.jsx)("div", {
-                        className: dv()("EmoteCustomPartToggle", {
-                          EmoteCustomPartToggleDisabled: av,
-                          EmoteCustomPartToggleEquipped: Tv
+                      children: (0, eT.jsx)("div", {
+                        className: fT()("EmoteCustomPartToggle", {
+                          EmoteCustomPartToggleDisabled: vT,
+                          EmoteCustomPartToggleEquipped: AT
                         }),
-                        onClick: Pv => {
-                          Pv.stopPropagation(), av || function(vv) {
-                            lv.has(vv) ? Sv(zv.filter((zv => zv !== vv))) : zv.length >= Nv.m || Sv([...zv, vv])
-                          }(vv)
+                        onClick: cT => {
+                          cT.stopPropagation(), vT || function(TT) {
+                            IT.has(TT) ? MT(kT.filter((kT => kT !== TT))) : kT.length >= xT.n || MT([...kT, TT])
+                          }(TT)
                         },
-                        children: (0, xv.jsx)(Vv.b, {
-                          name: Tv ? "minus" : "plus",
+                        children: (0, eT.jsx)(JT.e, {
+                          name: AT ? "minus" : "plus",
                           "aria-hidden": !0
                         })
                       })
                     })]
                   })]
-                }, vv)
+                }, TT)
               }))
             })
-          }, vv)
+          }, TT)
         }))]
       })
     }
-    const Zv = (0, hv.memo)((function(vv) {
+    const uT = (0, lT.memo)((function(TT) {
       let {
-        selectedTab: zv
-      } = vv;
-      const Pv = "characters" === zv ? "skin" : zv,
+        selectedTab: kT
+      } = TT;
+      const cT = "characters" === kT ? "skin" : kT,
         {
-          t: pv
-        } = (0, Tv.x)(),
+          t: yT
+        } = (0, AT.B)(),
         {
-          userContext: sv,
-          isUserContextUpdating: Ov
-        } = (0, ev.d)(),
-        Rv = (0, Sv.d)(),
+          userContext: tT,
+          isUserContextUpdating: mT
+        } = (0, KT.b)(),
+        HT = (0, MT.b)(),
         {
-          gameState: Zv,
-          initSdkSelectorFinished: Av
-        } = (0, mv.i)(["gameState", "initSdkSelectorFinished"]),
-        [Lv, Hv] = (0, hv.useState)({}),
-        [Mv, yv] = (0, hv.useState)({}),
+          gameState: uT,
+          initSdkSelectorFinished: XT
+        } = (0, DT.n)(["gameState", "initSdkSelectorFinished"]),
+        [dT, LT] = (0, lT.useState)({}),
+        [RT, gT] = (0, lT.useState)({}),
         {
-          previewEmote: Bv,
-          triggerEmote: Jv
-        } = (0, Cv.e)(),
-        Ev = (0, hv.useRef)(Nv.u.reduce(((vv, zv) => (vv[zv] = (0, av.b)(zv), vv)), {})),
-        ov = (0, hv.useRef)(!1),
-        bv = (0, hv.useRef)(null),
-        rv = (0, hv.useRef)(null),
-        kv = (0, hv.useRef)(null);
+          previewEmote: UT,
+          triggerEmote: YT
+        } = (0, hT.c)(),
+        BT = (0, lT.useRef)(xT.u.reduce(((TT, kT) => (TT[kT] = (0, vT.e)(kT), TT)), {})),
+        WT = (0, lT.useRef)(!1),
+        nT = (0, lT.useRef)(null),
+        pT = (0, lT.useRef)(null),
+        iT = (0, lT.useRef)(null);
 
-      function Xv() {
-        null !== rv.current && (clearTimeout(rv.current), rv.current = null);
-        const vv = kv.current;
-        if (null === vv) return;
-        kv.current = null;
-        const zv = {
-          GP: "emote",
-          mP: vv
+      function qT() {
+        null !== pT.current && (clearTimeout(pT.current), pT.current = null);
+        const TT = iT.current;
+        if (null === TT) return;
+        iT.current = null;
+        const kT = {
+          Qc: "emote",
+          Sc: TT
         };
-        null !== gv.gameBridge.latest("connectedGame").websocketUrl ? gv.gameBridge.send("updateMyCosmetic", zv) : jv.e.updateCosmetics(sv, [zv]).catch((vv => {
-          console.error("Failed to update emote loadout", vv)
+        null !== OT.gameBridge.latest("connectedGame").websocketUrl ? OT.gameBridge.send("updateMyCosmetic", kT) : aT.d.updateCosmetics(tT, [kT]).catch((TT => {
+          console.error("Failed to update emote loadout", TT)
         }))
       }
 
-      function uv(vv, zv, Pv) {
-        var hv, Sv, ev;
-        if (Ev.current = {
-            ...Ev.current,
-            [vv]: zv
-          }, Rv(), Pv) {
-          const Pv = {
-            GP: vv,
-            mP: zv
+      function sT(TT, kT, cT) {
+        var lT, MT, KT;
+        if (BT.current = {
+            ...BT.current,
+            [TT]: kT
+          }, HT(), cT) {
+          const cT = {
+            Qc: TT,
+            Sc: kT
           };
-          null !== gv.gameBridge.latest("connectedGame").websocketUrl ? gv.gameBridge.send("updateMyCosmetic", Pv) : jv.e.updateCosmetics(sv, [Pv]).catch((vv => {
-            console.error("Failed to update cosmetic", vv)
-          })), sv.setPlayerCosmetics(vv, zv)
+          null !== OT.gameBridge.latest("connectedGame").websocketUrl ? OT.gameBridge.send("updateMyCosmetic", cT) : aT.d.updateCosmetics(tT, [cT]).catch((TT => {
+            console.error("Failed to update cosmetic", TT)
+          })), tT.setPlayerCosmetics(TT, kT)
         }
-        const pv = (0, Wv.o)(vv, zv);
-        if (null !== pv && void 0 !== pv && pv.colourGroup && null !== (hv = Yv.b[pv.cosmeticPack].colourGroups) && void 0 !== hv && null !== (Sv = hv[pv.colourGroup]) && void 0 !== Sv && Sv.showSwatchSelector) {
-          const Pv = (0, Wv.l)(zv);
-          Pv && yv((zv => ({
-            ...zv,
-            [`${pv.cosmeticPack}_${vv}_${pv.colourGroup}`]: parseInt(Pv[1])
+        const yT = (0, CT.j)(TT, kT);
+        if (null !== yT && void 0 !== yT && yT.colourGroup && null !== (lT = PT.c[yT.cosmeticPack].colourGroups) && void 0 !== lT && null !== (MT = lT[yT.colourGroup]) && void 0 !== MT && MT.showSwatchSelector) {
+          const cT = (0, CT.g)(kT);
+          cT && gT((kT => ({
+            ...kT,
+            [`${yT.cosmeticPack}_${TT}_${yT.colourGroup}`]: parseInt(cT[1])
           })))
         }
-        null !== (ev = bv.current) && void 0 !== ev && ev.isReady() && bv.current.updateCosmetic(vv, zv)
+        null !== (KT = nT.current) && void 0 !== KT && KT.isReady() && nT.current.updateCosmetic(TT, kT)
       }
 
-      function vz(vv) {
-        return Object.entries(vv).every((vv => {
-          let [zv, Pv] = vv;
-          return Lv[zv] === Pv
+      function Tk(TT) {
+        return Object.entries(TT).every((TT => {
+          let [kT, cT] = TT;
+          return dT[kT] === cT
         }))
-      }(0, iv.d)("cosmeticsUpdated", (vv => {
-        let zv = !1;
+      }(0, NT.b)("cosmeticsUpdated", (TT => {
+        let kT = !1;
         for (const {
-            local: Pv,
-            GP: hv,
-            mP: Sv
+            local: cT,
+            Qc: lT,
+            Sc: MT
           }
-          of vv) {
-          if (!Pv) return;
-          zv = !0, ov.current || uv(hv, Sv, !1), Rv()
+          of TT) {
+          if (!cT) return;
+          kT = !0, WT.current || sT(lT, MT, !1), HT()
         }
-        zv && (ov.current = !0)
-      })), (0, hv.useEffect)((() => {
-        if (!Ov) {
-          for (const [vv, zv] of Object.entries(sv.getPlayerCosmetics())) uv(vv, zv, !1);
-          Rv()
+        kT && (WT.current = !0)
+      })), (0, lT.useEffect)((() => {
+        if (!mT) {
+          for (const [TT, kT] of Object.entries(tT.getPlayerCosmetics())) sT(TT, kT, !1);
+          HT()
         }
-      }), [Ov]), (0, hv.useEffect)((() => () => {
-        Xv()
+      }), [mT]), (0, lT.useEffect)((() => () => {
+        qT()
       }), []);
-      const zz = sv.getOwnedCosmeticPacks(),
-        Pz = (0, Uv.purchasesAllowed)(),
-        hz = Object.keys(Wv.i[Pv]).filter((vv => {
-          const zv = (0, Wv.s)(Pv, vv),
-            hv = (0, nv.s)(Pv, vv, zz);
-          return !(zv.purchasable && !hv && !Pz) && (zv.clientSelectable || hv)
-        })).sort(((vv, zv) => {
-          var hv, Sv, ev, gv;
-          return (null !== (hv = null === (Sv = (0, Wv.o)(Pv, vv)) || void 0 === Sv ? void 0 : Sv.clientIdx) && void 0 !== hv ? hv : 0) - (null !== (ev = null === (gv = (0, Wv.o)(Pv, zv)) || void 0 === gv ? void 0 : gv.clientIdx) && void 0 !== ev ? ev : 0)
+      const kk = tT.getOwnedCosmeticPacks(),
+        ck = (0, oT.purchasesAllowed)(),
+        lk = Object.keys(CT.e[cT]).filter((TT => {
+          const kT = (0, CT.m)(cT, TT),
+            lT = (0, wT.n)(cT, TT, kk);
+          return !(kT.purchasable && !lT && !ck) && (kT.clientSelectable || lT)
+        })).sort(((TT, kT) => {
+          var lT, MT, KT, OT;
+          return (null !== (lT = null === (MT = (0, CT.j)(cT, TT)) || void 0 === MT ? void 0 : MT.clientIdx) && void 0 !== lT ? lT : 0) - (null !== (KT = null === (OT = (0, CT.j)(cT, kT)) || void 0 === OT ? void 0 : OT.clientIdx) && void 0 !== KT ? KT : 0)
         })),
-        Sz = new Map;
-      for (const hv of hz) {
-        var ez;
-        const vv = null === (ez = (0, Wv.o)(Pv, hv)) || void 0 === ez ? void 0 : ez.cosmeticPack;
-        Sz.has(vv) || Sz.set(vv, []), Sz.get(vv).push(hv)
+        Mk = new Map;
+      for (const lT of lk) {
+        var Kk;
+        const TT = null === (Kk = (0, CT.j)(cT, lT)) || void 0 === Kk ? void 0 : Kk.cosmeticPack;
+        Mk.has(TT) || Mk.set(TT, []), Mk.get(TT).push(lT)
       }
-      const gz = function(vv, zv) {
-          const Pv = new Set,
-            hv = new Set;
-          for (const [Sv, ev] of Object.entries(Wv.i[vv])) {
-            if (void 0 === ev.colourGroup) continue;
-            const gv = `${ev.cosmeticPack}_${ev.colourGroup}`;
-            (tv(vv, Sv, zv) ? hv : Pv).add(gv)
+      const Ok = function(TT, kT) {
+          const cT = new Set,
+            lT = new Set;
+          for (const [MT, KT] of Object.entries(CT.e[TT])) {
+            if (void 0 === KT.colourGroup) continue;
+            const OT = `${KT.cosmeticPack}_${KT.colourGroup}`;
+            (GT(TT, MT, kT) ? lT : cT).add(OT)
           }
-          return new Set([...Pv].filter((vv => hv.has(vv))))
-        }(Pv, zz),
-        pz = new Map;
-      for (const [hv, Sv] of Sz) {
-        const vv = [],
-          zv = new Map;
-        for (const hv of Sv) {
-          var dz, Nz;
-          const Sv = null !== (dz = null === (Nz = (0, Wv.o)(Pv, hv)) || void 0 === Nz ? void 0 : Nz.colourGroup) && void 0 !== dz ? dz : null;
-          zv.has(Sv) || (zv.set(Sv, []), vv.push(Sv)), zv.get(Sv).push(hv)
+          return new Set([...cT].filter((TT => lT.has(TT))))
+        }(cT, kk),
+        yk = new Map;
+      for (const [lT, MT] of Mk) {
+        const TT = [],
+          kT = new Map;
+        for (const lT of MT) {
+          var fk, xk;
+          const MT = null !== (fk = null === (xk = (0, CT.j)(cT, lT)) || void 0 === xk ? void 0 : xk.colourGroup) && void 0 !== fk ? fk : null;
+          kT.has(MT) || (kT.set(MT, []), TT.push(MT)), kT.get(MT).push(lT)
         }
-        const ev = vv.map((vv => {
-          var Sv;
-          const ev = zv.get(vv),
-            gv = vv ? null === (Sv = Yv.b[hv].colourGroups) || void 0 === Sv ? void 0 : Sv[vv] : void 0,
-            pv = !0 === (null === gv || void 0 === gv ? void 0 : gv.showSwatchSelector) && !gz.has(`${hv}_${vv}`);
-          if (pv && gv) {
-            var dv;
-            const zv = null !== (dv = Mv[`${hv}_${Pv}_${vv}`]) && void 0 !== dv ? dv : (0, Yv.e)(gv.colours);
+        const KT = TT.map((TT => {
+          var MT;
+          const KT = kT.get(TT),
+            OT = TT ? null === (MT = PT.c[lT].colourGroups) || void 0 === MT ? void 0 : MT[TT] : void 0,
+            yT = !0 === (null === OT || void 0 === OT ? void 0 : OT.showSwatchSelector) && !Ok.has(`${lT}_${TT}`);
+          if (yT && OT) {
+            var fT;
+            const kT = null !== (fT = RT[`${lT}_${cT}_${TT}`]) && void 0 !== fT ? fT : (0, PT.h)(OT.colours);
             return {
-              groupName: vv,
-              showSwatch: pv,
-              cosmetics: ev.filter((vv => {
-                const Pv = (0, Wv.l)(vv);
-                return !Pv || zv.toString() === Pv[1].toString()
+              groupName: TT,
+              showSwatch: yT,
+              cosmetics: KT.filter((TT => {
+                const cT = (0, CT.g)(TT);
+                return !cT || kT.toString() === cT[1].toString()
               }))
             }
           }
           return {
-            groupName: vv,
-            cosmetics: ev,
-            showSwatch: pv
+            groupName: TT,
+            cosmetics: KT,
+            showSwatch: yT
           }
         }));
-        pz.set(hv, ev)
+        yk.set(lT, KT)
       }
-      const lz = Array.from(Sz.keys()),
-        Tz = new Map;
-      for (const [hv, Sv] of Object.entries(wv.b)) {
-        const vv = Yv.b[Sv.cosmeticPack],
-          zv = !qv(Sv.cosmetics, zz),
-          Pv = Yv.m.some((vv => (0, Yv.d)(vv) === hv));
-        (vv.clientSelectable || Pv || zv) && ((!vv.purchasable || zv || Pz) && (Tz.has(Sv.cosmeticPack) || Tz.set(Sv.cosmeticPack, []), Tz.get(Sv.cosmeticPack).push([hv, Sv])))
+      const Ik = Array.from(Mk.keys()),
+        Ak = new Map;
+      for (const [lT, MT] of Object.entries(jT.c)) {
+        const TT = PT.c[MT.cosmeticPack],
+          kT = !VT(MT.cosmetics, kk),
+          cT = PT.k.some((TT => (0, PT.e)(TT) === lT));
+        (TT.clientSelectable || cT || kT) && ((!TT.purchasable || kT || ck) && (Ak.has(MT.cosmeticPack) || Ak.set(MT.cosmeticPack, []), Ak.get(MT.cosmeticPack).push([lT, MT])))
       }
-      const Wz = Array.from(Tz.keys());
-      return (0, xv.jsxs)("div", {
+      const Ck = Array.from(Ak.keys());
+      return (0, eT.jsxs)("div", {
         className: "CharCustomisationBody",
-        children: [("cape" === Pv || "nameColour" === Pv) && !sv.playerHasRank("super") && (0, xv.jsxs)("div", {
+        children: [("cape" === cT || "nameColour" === cT) && !tT.playerHasRank("super") && (0, eT.jsxs)("div", {
           className: "CharCustomisationBodyHeader",
-          children: [(0, xv.jsx)(Vv.b, {
+          children: [(0, eT.jsx)(JT.e, {
             name: "bolt"
-          }), pv("homePage:unlockWithSuperRank"), Pz && (0, xv.jsx)(cv.j, {
+          }), yT("homePage:unlockWithSuperRank"), ck && (0, eT.jsx)(QT.m, {
             onClick: () => {
-              (0, Gv.s)({
+              (0, ST.p)({
                 mode: "self",
                 source: "characterCustomisation",
                 openItem: "superRank"
               })
             },
-            children: pv("general:getItNow")
+            children: yT("general:getItNow")
           })]
-        }), (0, xv.jsxs)("div", {
+        }), (0, eT.jsxs)("div", {
           className: "CharCustomisationBodyInner",
-          children: ["characters" === zv && (0, xv.jsxs)("div", {
+          children: ["characters" === kT && (0, eT.jsxs)("div", {
             className: "CharCustomisPartSelectorWrapper",
-            children: [!1, Wz.map((vv => {
-              const zv = Tz.get(vv);
-              return (0, xv.jsx)(Iv, {
-                pack: vv,
-                ownedPacks: zz,
-                showStoreLink: !Yv.n.includes(vv) && zv.some((vv => {
+            children: [!1, Ck.map((TT => {
+              const kT = Ak.get(TT);
+              return (0, eT.jsx)(ET, {
+                pack: TT,
+                ownedPacks: kk,
+                showStoreLink: !PT.o.includes(TT) && kT.some((TT => {
                   let [, {
-                    cosmetics: zv
-                  }] = vv;
-                  return qv(zv, zz)
+                    cosmetics: kT
+                  }] = TT;
+                  return VT(kT, kk)
                 })),
-                children: (0, xv.jsx)("div", {
+                children: (0, eT.jsx)("div", {
                   className: "CharacterPresetsGrid",
-                  children: zv.map((vv => {
-                    let [zv, {
-                      cosmetics: Pv
-                    }] = vv;
-                    const hv = qv(Pv, zz),
-                      Sv = vz(Pv),
-                      ev = !Sv && Object.entries(Pv).every((vv => {
-                        let [zv, Pv] = vv;
-                        return Ev.current[zv] === Pv
+                  children: kT.map((TT => {
+                    let [kT, {
+                      cosmetics: cT
+                    }] = TT;
+                    const lT = VT(cT, kk),
+                      MT = Tk(cT),
+                      KT = !MT && Object.entries(cT).every((TT => {
+                        let [kT, cT] = TT;
+                        return BT.current[kT] === cT
                       }));
-                    return (0, xv.jsxs)("div", {
+                    return (0, eT.jsxs)("div", {
                       "data-pad-focusable": !0,
-                      className: dv()("CharacterPresetCard", {
-                        CharacterPresetCardActive: ev,
-                        CharacterPresetCardTryingOn: Sv
+                      className: fT()("CharacterPresetCard", {
+                        CharacterPresetCardActive: KT,
+                        CharacterPresetCardTryingOn: MT
                       }),
                       onClick: () => {
-                        if (hv) ! function(vv) {
-                          vz(vv) ? Hv({}) : Hv({
-                            ...vv
+                        if (lT) ! function(TT) {
+                          Tk(TT) ? LT({}) : LT({
+                            ...TT
                           })
-                        }(Pv);
+                        }(cT);
                         else {
-                          Object.keys(Lv).length > 0 && Hv({});
-                          const vv = Object.entries(Pv);
-                          for (const [zv, Pv] of vv) uv(zv, Pv, !1), sv.setPlayerCosmetics(zv, Pv);
-                          if (null !== gv.gameBridge.latest("connectedGame").websocketUrl)
-                            for (const [zv, Pv] of vv) gv.gameBridge.send("updateMyCosmetic", {
-                              GP: zv,
-                              mP: Pv
+                          Object.keys(dT).length > 0 && LT({});
+                          const TT = Object.entries(cT);
+                          for (const [kT, cT] of TT) sT(kT, cT, !1), tT.setPlayerCosmetics(kT, cT);
+                          if (null !== OT.gameBridge.latest("connectedGame").websocketUrl)
+                            for (const [kT, cT] of TT) OT.gameBridge.send("updateMyCosmetic", {
+                              Qc: kT,
+                              Sc: cT
                             });
-                          else jv.e.updateCosmetics(sv, vv.map((vv => {
-                            let [zv, Pv] = vv;
+                          else aT.d.updateCosmetics(tT, TT.map((TT => {
+                            let [kT, cT] = TT;
                             return {
-                              GP: zv,
-                              mP: Pv
+                              Qc: kT,
+                              Sc: cT
                             }
-                          }))).catch((vv => {
-                            console.error("Failed to update cosmetics", vv)
+                          }))).catch((TT => {
+                            console.error("Failed to update cosmetics", TT)
                           }))
                         }
                       },
-                      children: [(0, xv.jsx)("div", {
+                      children: [(0, eT.jsx)("div", {
                         className: "CharacterPresetCardPreview",
                         style: {
-                          backgroundImage: `url(/textures/charSkins/previews/character_${zv}_preview.png)`
+                          backgroundImage: `url(/textures/charSkins/previews/character_${kT}_preview.png)`
                         }
-                      }), hv && (0, xv.jsx)(Vv.b, {
+                      }), lT && (0, eT.jsx)(JT.e, {
                         name: "lock",
                         className: "LockedCosmeticIcon"
                       })]
-                    }, zv)
+                    }, kT)
                   }))
                 })
-              }, vv)
+              }, TT)
             }))]
-          }), "emote" === zv && (0, xv.jsx)(Qv, {
-            equippedEmoteIds: (0, av.c)(Ev.current.emote),
-            ownedPacks: zz,
-            canBuy: Pz,
-            onUpdateLoadout: vv => {
-              const zv = (0, av.f)(vv);
-              var Pv;
-              Ev.current = {
-                ...Ev.current,
-                emote: zv
-              }, sv.setPlayerCosmetics("emote", zv), Rv(), Pv = zv, kv.current = Pv, null !== rv.current && clearTimeout(rv.current), rv.current = setTimeout(Xv, 350)
+          }), "emote" === kT && (0, eT.jsx)(ZT, {
+            equippedEmoteIds: (0, vT.f)(BT.current.emote),
+            ownedPacks: kk,
+            canBuy: ck,
+            onUpdateLoadout: TT => {
+              const kT = (0, vT.i)(TT);
+              var cT;
+              BT.current = {
+                ...BT.current,
+                emote: kT
+              }, tT.setPlayerCosmetics("emote", kT), HT(), cT = kT, iT.current = cT, null !== pT.current && clearTimeout(pT.current), pT.current = setTimeout(qT, 350)
             },
-            onEmoteSelected: Jv,
+            onEmoteSelected: YT,
             onEquipPreviewSkin: () => {
-              ! function(vv, zv) {
-                for (const Pv of Nv.u) "cape" !== Pv && "nameColour" !== Pv && "emote" !== Pv && vv(Pv, "skin" === Pv ? "skin_preview" : `${Pv}_none`, !1);
-                zv()
-              }(uv, Rv)
+              ! function(TT, kT) {
+                for (const cT of xT.u) "cape" !== cT && "nameColour" !== cT && "emote" !== cT && TT(cT, "skin" === cT ? "skin_preview" : `${cT}_none`, !1);
+                kT()
+              }(sT, HT)
             }
-          }), "characters" !== zv && "emote" !== zv && (0, xv.jsxs)("div", {
+          }), "characters" !== kT && "emote" !== kT && (0, eT.jsxs)("div", {
             className: "CharCustomisPartSelectorWrapper",
-            children: [!1, lz.map((vv => {
-              const zv = pz.get(vv);
-              return (0, xv.jsx)(Iv, {
-                pack: vv,
-                ownedPacks: zz,
-                children: zv.map((zv => {
-                  var hv;
+            children: [!1, Ik.map((TT => {
+              const kT = yk.get(TT);
+              return (0, eT.jsx)(ET, {
+                pack: TT,
+                ownedPacks: kk,
+                children: kT.map((kT => {
+                  var lT;
                   let {
-                    groupName: Sv,
-                    cosmetics: ev,
-                    showSwatch: gv
-                  } = zv;
-                  const pv = Sv ? null === (hv = Yv.b[vv].colourGroups) || void 0 === hv ? void 0 : hv[Sv] : void 0,
-                    Nv = `${vv}_${Pv}_${Sv}`;
-                  return (0, xv.jsxs)("div", {
+                    groupName: MT,
+                    cosmetics: KT,
+                    showSwatch: OT
+                  } = kT;
+                  const yT = MT ? null === (lT = PT.c[TT].colourGroups) || void 0 === lT ? void 0 : lT[MT] : void 0,
+                    xT = `${TT}_${cT}_${MT}`;
+                  return (0, eT.jsxs)("div", {
                     className: "CosmeticPackGroupItems",
-                    children: [gv && pv && (0, xv.jsx)("div", {
+                    children: [OT && yT && (0, eT.jsx)("div", {
                       className: "CosmeticColorSwatchCell",
-                      children: [...pv.colours.map(((vv, zv) => ({
-                        color: vv,
-                        index: zv
-                      })))].sort(((vv, zv) => vv.color.order - zv.color.order)).map((zv => {
-                        var hv;
+                      children: [...yT.colours.map(((TT, kT) => ({
+                        color: TT,
+                        index: kT
+                      })))].sort(((TT, kT) => TT.color.order - kT.color.order)).map((kT => {
+                        var lT;
                         let {
-                          color: ev,
-                          index: gv
-                        } = zv;
-                        return (0, xv.jsx)("div", {
-                          className: dv()("CosmeticColorOption", {
-                            CosmeticColorOptionSelected: (null !== (hv = Mv[Nv]) && void 0 !== hv ? hv : (0, Yv.e)(pv.colours)) === gv
+                          color: KT,
+                          index: OT
+                        } = kT;
+                        return (0, eT.jsx)("div", {
+                          className: fT()("CosmeticColorOption", {
+                            CosmeticColorOptionSelected: (null !== (lT = RT[xT]) && void 0 !== lT ? lT : (0, PT.h)(yT.colours)) === OT
                           }),
                           style: {
-                            backgroundColor: `rgb(${ev.rbg.join(",")})`
+                            backgroundColor: `rgb(${KT.rbg.join(",")})`
                           },
                           onClick: () => {
-                            var zv;
-                            yv((vv => ({
-                              ...vv,
-                              [Nv]: gv
+                            var kT;
+                            gT((TT => ({
+                              ...TT,
+                              [xT]: OT
                             })));
-                            const hv = Lv[Pv],
-                              ev = hv ? (0, Wv.o)(Pv, hv) : null,
-                              pv = (null === ev || void 0 === ev ? void 0 : ev.cosmeticPack) === vv,
-                              dv = pv ? hv : Ev.current[Pv],
-                              lv = pv ? ev : (0, Wv.o)(Pv, dv);
-                            if ((null === lv || void 0 === lv ? void 0 : lv.cosmeticPack) !== vv) return;
-                            if ((null !== (zv = null === lv || void 0 === lv ? void 0 : lv.colourGroup) && void 0 !== zv ? zv : null) !== Sv) return;
-                            const Tv = (0, Wv.l)(dv);
-                            if (Tv) {
-                              const vv = `${Pv}_${Tv[0]}_${gv}`;
-                              pv ? Hv((zv => ({
-                                ...zv,
-                                [Pv]: vv
-                              }))) : uv(Pv, vv, !0)
+                            const lT = dT[cT],
+                              KT = lT ? (0, CT.j)(cT, lT) : null,
+                              yT = (null === KT || void 0 === KT ? void 0 : KT.cosmeticPack) === TT,
+                              fT = yT ? lT : BT.current[cT],
+                              IT = yT ? KT : (0, CT.j)(cT, fT);
+                            if ((null === IT || void 0 === IT ? void 0 : IT.cosmeticPack) !== TT) return;
+                            if ((null !== (kT = null === IT || void 0 === IT ? void 0 : IT.colourGroup) && void 0 !== kT ? kT : null) !== MT) return;
+                            const AT = (0, CT.g)(fT);
+                            if (AT) {
+                              const TT = `${cT}_${AT[0]}_${OT}`;
+                              yT ? LT((kT => ({
+                                ...kT,
+                                [cT]: TT
+                              }))) : sT(cT, TT, !0)
                             }
                           }
-                        }, ev.rbg.join())
+                        }, KT.rbg.join())
                       }))
-                    }), ev.map((vv => {
-                      const zv = vv === Ev.current[Pv],
-                        hv = Lv[Pv] === vv,
-                        Sv = tv(Pv, vv, zz);
-                      let ev = !0;
-                      return Sv || zv || ("cape" !== Pv || (0, fv.Ad)(sv.getPlayerRanks(), vv)) && ("nameColour" !== Pv || sv.playerHasRank("super")) || (ev = !1), (0, xv.jsxs)("div", {
-                        className: dv()("CharCustomPartWrapper", {
-                          SelectedCharCustomPartWrapper: zv && !hv,
-                          TryingOnCharCustomPartWrapper: hv,
-                          DisabledCharCustomPartWrapper: !ev,
-                          CharCustomPartWrapperProfileEffect: "profileEffect" === Pv
+                    }), KT.map((TT => {
+                      const kT = TT === BT.current[cT],
+                        lT = dT[cT] === TT,
+                        MT = GT(cT, TT, kk);
+                      let KT = !0;
+                      return MT || kT || ("cape" !== cT || (0, FT.Nd)(tT.getPlayerRanks(), TT)) && ("nameColour" !== cT || tT.playerHasRank("super")) || (KT = !1), (0, eT.jsxs)("div", {
+                        className: fT()("CharCustomPartWrapper", {
+                          SelectedCharCustomPartWrapper: kT && !lT,
+                          TryingOnCharCustomPartWrapper: lT,
+                          DisabledCharCustomPartWrapper: !KT,
+                          CharCustomPartWrapperProfileEffect: "profileEffect" === cT
                         }),
                         onClick: () => {
-                          if (ev)
-                            if (Sv) Hv((zv => {
-                              if (zv[Pv] === vv) {
-                                const vv = {
-                                  ...zv
+                          if (KT)
+                            if (MT) LT((kT => {
+                              if (kT[cT] === TT) {
+                                const TT = {
+                                  ...kT
                                 };
-                                return delete vv[Pv], vv
+                                return delete TT[cT], TT
                               }
                               return {
-                                ...zv,
-                                [Pv]: vv
+                                ...kT,
+                                [cT]: TT
                               }
                             }));
                             else {
-                              var zv;
-                              if (Lv[Pv] && Hv((vv => {
-                                  const zv = {
-                                    ...vv
+                              var kT;
+                              if (dT[cT] && LT((TT => {
+                                  const kT = {
+                                    ...TT
                                   };
-                                  return delete zv[Pv], zv
-                                })), vv === Ev.current[Pv]) return;
-                              null !== (zv = bv.current) && void 0 !== zv && zv.isReady() && uv(Pv, vv, !0)
+                                  return delete kT[cT], kT
+                                })), TT === BT.current[cT]) return;
+                              null !== (kT = nT.current) && void 0 !== kT && kT.isReady() && sT(cT, TT, !0)
                             }
                         },
-                        children: ["profileEffect" === Pv ? (0, xv.jsx)("div", {
+                        children: ["profileEffect" === cT ? (0, eT.jsx)("div", {
                           className: "CharCustomPart CharCustomProfileEffect",
-                          children: (0, xv.jsx)(Kv.e, {
-                            playerSocialPreview: (0, Dv.b)(vv, {
-                              name: sv.getPlayerName(),
-                              cosmetics: sv.getPlayerCosmetics()
+                          children: (0, eT.jsx)(zT.h, {
+                            playerSocialPreview: (0, bT.c)(TT, {
+                              name: tT.getPlayerName(),
+                              cosmetics: tT.getPlayerCosmetics()
                             }),
                             showLocation: !1,
                             opensProfileCard: !1
                           })
-                        }) : (0, xv.jsx)("div", {
-                          className: dv()("CharCustomPart", {
-                            PixelatedImage: "cape" === Pv
+                        }) : (0, eT.jsx)("div", {
+                          className: fT()("CharCustomPart", {
+                            PixelatedImage: "cape" === cT
                           }),
-                          style: (0, Wv.o)(Pv, vv).previewTex ? {
-                            backgroundImage: `url(/textures/charSkins/previews/${(0,Wv.o)(Pv,vv).previewTex}.png)`
+                          style: (0, CT.j)(cT, TT).previewTex ? {
+                            backgroundImage: `url(/textures/charSkins/previews/${(0,CT.j)(cT,TT).previewTex}.png)`
                           } : {
-                            backgroundColor: lv.s[vv]
+                            backgroundColor: IT.s[TT]
                           }
-                        }), Sv && (0, xv.jsx)(Vv.b, {
+                        }), MT && (0, eT.jsx)(JT.e, {
                           name: "lock",
                           className: "LockedCosmeticIcon"
                         })]
-                      }, vv)
+                      }, TT)
                     }))]
-                  }, null !== Sv && void 0 !== Sv ? Sv : "ungrouped")
+                  }, null !== MT && void 0 !== MT ? MT : "ungrouped")
                 }))
-              }, vv)
+              }, TT)
             }))]
-          }), (0, xv.jsx)(Fv.CharacterPreview, {
-            ref: bv,
-            forcedCosmetics: Lv,
-            Fp: Bv.id,
-            emotePlaySeq: Bv.seq,
+          }), (0, eT.jsx)(rT.CharacterPreview, {
+            ref: nT,
+            forcedCosmetics: dT,
+            xy: UT.id,
+            emotePlaySeq: UT.seq,
             onReady: () => {
-              for (const vv of Nv.u) uv(vv, Ev.current[vv], !1)
+              for (const TT of xT.u) sT(TT, BT.current[TT], !1)
             }
           })]
         })]
       })
     }))
   },
-  40581: (vv, zv, Pv) => {
-    Pv.r(zv), Pv.d(zv, {
-      CharacterPreview: () => Tv
+  40922: (TT, kT, cT) => {
+    cT.r(kT), cT.d(kT, {
+      CharacterPreview: () => AT
     });
-    var hv = Pv(52),
-      Sv = Pv(2584),
-      ev = Pv(1226),
-      gv = Pv(8501),
-      pv = Pv(9044),
-      dv = Pv(3392),
-      Nv = Pv(1082);
-    const lv = .6 * Math.PI,
-      Tv = (0, hv.memo)((0, hv.forwardRef)((function(vv, zv) {
+    var lT = cT(71),
+      MT = cT(2770),
+      KT = cT(1244),
+      OT = cT(8855),
+      yT = cT(9395),
+      fT = cT(3595),
+      xT = cT(1099);
+    const IT = .6 * Math.PI,
+      AT = (0, lT.memo)((0, lT.forwardRef)((function(TT, kT) {
         let {
-          onReady: Pv,
-          onDrawn: Tv,
-          owner: Wv = "other",
-          framing: wv = "player",
-          forcedCosmetics: av,
-          Fp: sv,
-          emotePlaySeq: Cv,
-          turntableFromYaw: iv = null
-        } = vv;
-        const cv = (0, hv.useRef)(null),
+          onReady: cT,
+          onDrawn: AT,
+          owner: CT = "other",
+          framing: jT = "player",
+          forcedCosmetics: vT,
+          xy: tT,
+          emotePlaySeq: hT,
+          turntableFromYaw: NT = null
+        } = TT;
+        const QT = (0, lT.useRef)(null),
           {
-            width: Gv,
-            height: mv
-          } = (0, Sv.d)(cv),
-          jv = (0, hv.useRef)(null),
-          fv = (0, hv.useRef)({}),
-          Fv = (0, hv.useRef)({}),
-          [Yv, nv] = (0, hv.useState)(!1),
-          Ov = (0, hv.useRef)(Pv);
-        Ov.current = Pv;
-        const Dv = (0, hv.useRef)(Tv);
-        Dv.current = Tv;
-        const Kv = (0, hv.useRef)(null),
-          Vv = (0, hv.useRef)(!1),
-          Uv = (0, hv.useRef)(!1),
-          Rv = (0, hv.useCallback)((() => {
-            const vv = jv.current;
-            if (!vv || !Dv.current || Vv.current || !Uv.current) return;
-            const zv = {};
-            Kv.current = zv, queueMicrotask((() => {
-              if (Kv.current !== zv) return;
-              const Pv = Promise.all(ev.u.map((zv => vv.untilDrawn(zv)))).catch((vv => {
-                  console.error("Failed to draw the character preview", vv)
+            width: ST,
+            height: DT
+          } = (0, MT.e)(QT),
+          aT = (0, lT.useRef)(null),
+          FT = (0, lT.useRef)({}),
+          rT = (0, lT.useRef)({}),
+          [PT, wT] = (0, lT.useState)(!1),
+          mT = (0, lT.useRef)(cT);
+        mT.current = cT;
+        const bT = (0, lT.useRef)(AT);
+        bT.current = AT;
+        const zT = (0, lT.useRef)(null),
+          JT = (0, lT.useRef)(!1),
+          oT = (0, lT.useRef)(!1),
+          HT = (0, lT.useCallback)((() => {
+            const TT = aT.current;
+            if (!TT || !bT.current || JT.current || !oT.current) return;
+            const kT = {};
+            zT.current = kT, queueMicrotask((() => {
+              if (zT.current !== kT) return;
+              const cT = Promise.all(KT.u.map((kT => TT.untilDrawn(kT)))).catch((TT => {
+                  console.error("Failed to draw the character preview", TT)
                 })),
-                hv = new Promise((vv => {
-                  setTimeout(vv, 1e4)
+                lT = new Promise((TT => {
+                  setTimeout(TT, 1e4)
                 }));
-              Promise.race([Pv, hv]).then((() => {
-                var Pv;
-                jv.current !== vv || Kv.current !== zv || Vv.current || (Vv.current = !0, null === (Pv = Dv.current) || void 0 === Pv || Pv.call(Dv))
+              Promise.race([cT, lT]).then((() => {
+                var cT;
+                aT.current !== TT || zT.current !== kT || JT.current || (JT.current = !0, null === (cT = bT.current) || void 0 === cT || cT.call(bT))
               }))
             }))
           }), []);
-        return (0, hv.useImperativeHandle)(zv, (() => {
-          const vv = (vv, zv) => {
-            var Pv;
-            (fv.current[vv] = zv, null !== av && void 0 !== av && av[vv]) || (null === (Pv = jv.current) || void 0 === Pv || Pv.setCosmetic(vv, zv), Rv())
+        return (0, lT.useImperativeHandle)(kT, (() => {
+          const TT = (TT, kT) => {
+            var cT;
+            (FT.current[TT] = kT, null !== vT && void 0 !== vT && vT[TT]) || (null === (cT = aT.current) || void 0 === cT || cT.setCosmetic(TT, kT), HT())
           };
           return {
-            updateCosmetic: vv,
-            setAllCosmetics(zv) {
-              for (const hv of ev.u) {
-                var Pv;
-                vv(hv, null !== (Pv = zv[hv]) && void 0 !== Pv ? Pv : (0, gv.b)(hv))
+            updateCosmetic: TT,
+            setAllCosmetics(kT) {
+              for (const lT of KT.u) {
+                var cT;
+                TT(lT, null !== (cT = kT[lT]) && void 0 !== cT ? cT : (0, OT.e)(lT))
               }
             },
             isReady() {
-              var vv, zv;
-              return null !== (vv = null === (zv = jv.current) || void 0 === zv ? void 0 : zv.isReady()) && void 0 !== vv && vv
+              var TT, kT;
+              return null !== (TT = null === (kT = aT.current) || void 0 === kT ? void 0 : kT.isReady()) && void 0 !== TT && TT
             },
             resetCamera() {
-              var vv;
-              null === (vv = jv.current) || void 0 === vv || vv.resetCamera()
+              var TT;
+              null === (TT = aT.current) || void 0 === TT || TT.resetCamera()
             },
-            setOrbit(vv) {
-              var zv;
-              null === (zv = jv.current) || void 0 === zv || zv.setOrbit(vv)
+            setOrbit(TT) {
+              var kT;
+              null === (kT = aT.current) || void 0 === kT || kT.setOrbit(TT)
             },
-            async ensureReadyForCapture(vv) {
-              var zv;
-              await (null === (zv = jv.current) || void 0 === zv ? void 0 : zv.untilDrawn(vv))
+            async ensureReadyForCapture(TT) {
+              var kT;
+              await (null === (kT = aT.current) || void 0 === kT ? void 0 : kT.untilDrawn(TT))
             },
             getDevTools() {
-              var vv;
-              return null !== (vv = jv.current) && void 0 !== vv && vv.isReady() ? jv.current.dev : null
+              var TT;
+              return null !== (TT = aT.current) && void 0 !== TT && TT.isReady() ? aT.current.dev : null
             }
           }
-        }), [av, Rv]), (0, hv.useEffect)((() => {
-          const vv = dv.c.register(Wv),
-            zv = pv.j.openCharacter(cv.current, wv);
-          jv.current = zv;
-          let Pv = !0;
-          return zv.ready.then((() => {
-            Pv && (nv(!0), Ov.current())
-          })).catch((vv => {
-            console.error("Failed to set up the character preview", vv)
+        }), [vT, HT]), (0, lT.useEffect)((() => {
+          const TT = fT.d.register(CT),
+            kT = yT.f.openCharacter(QT.current, jT);
+          aT.current = kT;
+          let cT = !0;
+          return kT.ready.then((() => {
+            cT && (wT(!0), mT.current())
+          })).catch((TT => {
+            console.error("Failed to set up the character preview", TT)
           })), () => {
-            Pv = !1, vv(), zv.resetCamera(), zv.close(), jv.current = null
+            cT = !1, TT(), kT.resetCamera(), kT.close(), aT.current = null
           }
-        }), []), (0, hv.useEffect)((() => {
-          Gv <= 0 || mv <= 0 || jv.current.resize(Gv, mv)
-        }), [Gv, mv]), (0, hv.useEffect)((() => {
-          if (!Yv) return;
-          const vv = Fv.current;
-          for (const zv of ev.u) {
-            const Pv = null === av || void 0 === av ? void 0 : av[zv],
-              hv = vv[zv];
-            Pv && Pv !== hv ? jv.current.setCosmetic(zv, Pv) : !Pv && hv && fv.current[zv] && jv.current.setCosmetic(zv, fv.current[zv])
+        }), []), (0, lT.useEffect)((() => {
+          ST <= 0 || DT <= 0 || aT.current.resize(ST, DT)
+        }), [ST, DT]), (0, lT.useEffect)((() => {
+          if (!PT) return;
+          const TT = rT.current;
+          for (const kT of KT.u) {
+            const cT = null === vT || void 0 === vT ? void 0 : vT[kT],
+              lT = TT[kT];
+            cT && cT !== lT ? aT.current.setCosmetic(kT, cT) : !cT && lT && FT.current[kT] && aT.current.setCosmetic(kT, FT.current[kT])
           }
-          Fv.current = {
-            ...av
-          }, Uv.current = !0, Rv()
-        }), [av, Yv, Rv]), (0, hv.useEffect)((() => {
-          Yv && jv.current.playEmote(null !== sv && void 0 !== sv ? sv : null)
-        }), [sv, Cv, Yv]), (0, hv.useEffect)((() => {
-          if (!Yv || null === iv) return;
-          const vv = jv.current,
+          rT.current = {
+            ...vT
+          }, oT.current = !0, HT()
+        }), [vT, PT, HT]), (0, lT.useEffect)((() => {
+          PT && aT.current.playEmote(null !== tT && void 0 !== tT ? tT : null)
+        }), [tT, hT, PT]), (0, lT.useEffect)((() => {
+          if (!PT || null === NT) return;
+          const TT = aT.current,
             {
-              pitch: zv,
-              radius: Pv
-            } = pv.e[wv];
-          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return vv.setOrbit({
-            yaw: iv + lv,
-            pitch: zv,
-            radius: Pv
+              pitch: kT,
+              radius: cT
+            } = yT.c[jT];
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return TT.setOrbit({
+            yaw: NT + IT,
+            pitch: kT,
+            radius: cT
           }), () => {
-            vv.resetCamera()
+            TT.resetCamera()
           };
-          const hv = performance.now();
-          let Sv = 0;
-          const ev = gv => {
-            vv.setOrbit({
-              yaw: iv + (gv - hv) / 6e3 * 2 * Math.PI,
-              pitch: zv,
-              radius: Pv
-            }), Sv = requestAnimationFrame(ev)
+          const lT = performance.now();
+          let MT = 0;
+          const KT = OT => {
+            TT.setOrbit({
+              yaw: NT + (OT - lT) / 6e3 * 2 * Math.PI,
+              pitch: kT,
+              radius: cT
+            }), MT = requestAnimationFrame(KT)
           };
-          return Sv = requestAnimationFrame(ev), () => {
-            cancelAnimationFrame(Sv), vv.resetCamera()
+          return MT = requestAnimationFrame(KT), () => {
+            cancelAnimationFrame(MT), TT.resetCamera()
           }
-        }), [Yv, iv]), (0, Nv.jsx)("div", {
+        }), [PT, NT]), (0, xT.jsx)("div", {
           className: "CharCustomisationPreview",
-          ref: cv
+          ref: QT
         })
       })))
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);

@@ -1,34 +1,34 @@
 export const id = 238;
 export const ids = [238];
 export const modules = {
-  40387: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => gv,
-      e: () => lv,
-      h: () => Nv
+  40706: (TT, kT, cT) => {
+    cT.d(kT, {
+      b: () => OT,
+      d: () => IT,
+      e: () => xT
     });
-    var hv, Sv = Pv(36620),
-      ev = Pv(36594);
-    ! function(vv) {
-      vv[vv.CW = 0] = "CW", vv[vv.CCW = 1] = "CCW"
-    }(hv || (hv = {}));
-    class gv {
-      static Interpolate(vv, zv, Pv, hv, Sv) {
-        if (0 === vv) return 0;
-        const ev = 1 - 3 * hv + 3 * zv,
-          gv = 3 * hv - 6 * zv,
-          pv = 3 * zv;
-        let dv = vv;
-        for (let Nv = 0; Nv < 5; Nv++) {
-          const zv = dv * dv;
-          dv -= (ev * (zv * dv) + gv * zv + pv * dv - vv) * (1 / (3 * ev * zv + 2 * gv * dv + pv)), dv = Math.min(1, Math.max(0, dv))
+    var lT, MT = cT(36937),
+      KT = cT(36892);
+    ! function(TT) {
+      TT[TT.CW = 0] = "CW", TT[TT.CCW = 1] = "CCW"
+    }(lT || (lT = {}));
+    class OT {
+      static Interpolate(TT, kT, cT, lT, MT) {
+        if (0 === TT) return 0;
+        const KT = 1 - 3 * lT + 3 * kT,
+          OT = 3 * lT - 6 * kT,
+          yT = 3 * kT;
+        let fT = TT;
+        for (let xT = 0; xT < 5; xT++) {
+          const kT = fT * fT;
+          fT -= (KT * (kT * fT) + OT * kT + yT * fT - TT) * (1 / (3 * KT * kT + 2 * OT * fT + yT)), fT = Math.min(1, Math.max(0, fT))
         }
-        return 3 * Math.pow(1 - dv, 2) * dv * Pv + 3 * (1 - dv) * Math.pow(dv, 2) * Sv + Math.pow(dv, 3)
+        return 3 * Math.pow(1 - fT, 2) * fT * cT + 3 * (1 - fT) * Math.pow(fT, 2) * MT + Math.pow(fT, 3)
       }
     }
-    class pv {
-      constructor(vv) {
-        this._radians = vv, this._radians < 0 && (this._radians += 2 * Math.PI)
+    class yT {
+      constructor(TT) {
+        this._radians = TT, this._radians < 0 && (this._radians += 2 * Math.PI)
       }
       degrees() {
         return 180 * this._radians / Math.PI
@@ -36,242 +36,242 @@ export const modules = {
       radians() {
         return this._radians
       }
-      static BetweenTwoPoints(vv, zv) {
-        const Pv = zv.subtract(vv),
-          hv = Math.atan2(Pv.y, Pv.x);
-        return new pv(hv)
+      static BetweenTwoPoints(TT, kT) {
+        const cT = kT.subtract(TT),
+          lT = Math.atan2(cT.y, cT.x);
+        return new yT(lT)
       }
-      static BetweenTwoVectors(vv, zv) {
-        let Pv = vv.lengthSquared() * zv.lengthSquared();
-        if (0 === Pv) return new pv(Math.PI / 2);
-        Pv = Math.sqrt(Pv);
-        let hv = vv.dot(zv) / Pv;
-        hv = (0, Sv.Clamp)(hv, -1, 1);
-        const ev = Math.acos(hv);
-        return new pv(ev)
+      static BetweenTwoVectors(TT, kT) {
+        let cT = TT.lengthSquared() * kT.lengthSquared();
+        if (0 === cT) return new yT(Math.PI / 2);
+        cT = Math.sqrt(cT);
+        let lT = TT.dot(kT) / cT;
+        lT = (0, MT.Clamp)(lT, -1, 1);
+        const KT = Math.acos(lT);
+        return new yT(KT)
       }
-      static FromRadians(vv) {
-        return new pv(vv)
+      static FromRadians(TT) {
+        return new yT(TT)
       }
-      static FromDegrees(vv) {
-        return new pv(vv * Math.PI / 180)
-      }
-    }
-    class dv {
-      constructor(vv, zv, Pv) {
-        this.startPoint = vv, this.midPoint = zv, this.endPoint = Pv;
-        const hv = Math.pow(zv.x, 2) + Math.pow(zv.y, 2),
-          Sv = (Math.pow(vv.x, 2) + Math.pow(vv.y, 2) - hv) / 2,
-          gv = (hv - Math.pow(Pv.x, 2) - Math.pow(Pv.y, 2)) / 2,
-          dv = (vv.x - zv.x) * (zv.y - Pv.y) - (zv.x - Pv.x) * (vv.y - zv.y);
-        this.centerPoint = new ev.j((Sv * (zv.y - Pv.y) - gv * (vv.y - zv.y)) / dv, ((vv.x - zv.x) * gv - (zv.x - Pv.x) * Sv) / dv), this.radius = this.centerPoint.subtract(this.startPoint).length(), this.startAngle = pv.BetweenTwoPoints(this.centerPoint, this.startPoint);
-        const Nv = this.startAngle.degrees();
-        let lv = pv.BetweenTwoPoints(this.centerPoint, this.midPoint).degrees(),
-          Tv = pv.BetweenTwoPoints(this.centerPoint, this.endPoint).degrees();
-        lv - Nv > 180 && (lv -= 360), lv - Nv < -180 && (lv += 360), Tv - lv > 180 && (Tv -= 360), Tv - lv < -180 && (Tv += 360), this.orientation = lv - Nv < 0 ? 0 : 1, this.angle = pv.FromDegrees(0 === this.orientation ? Nv - Tv : Tv - Nv)
+      static FromDegrees(TT) {
+        return new yT(TT * Math.PI / 180)
       }
     }
-    class Nv {
-      constructor(vv, zv) {
-        this._points = new Array, this._length = 0, this.closed = !1, this._points.push(new ev.j(vv, zv))
+    class fT {
+      constructor(TT, kT, cT) {
+        this.startPoint = TT, this.midPoint = kT, this.endPoint = cT;
+        const lT = Math.pow(kT.x, 2) + Math.pow(kT.y, 2),
+          MT = (Math.pow(TT.x, 2) + Math.pow(TT.y, 2) - lT) / 2,
+          OT = (lT - Math.pow(cT.x, 2) - Math.pow(cT.y, 2)) / 2,
+          fT = (TT.x - kT.x) * (kT.y - cT.y) - (kT.x - cT.x) * (TT.y - kT.y);
+        this.centerPoint = new KT.i((MT * (kT.y - cT.y) - OT * (TT.y - kT.y)) / fT, ((TT.x - kT.x) * OT - (kT.x - cT.x) * MT) / fT), this.radius = this.centerPoint.subtract(this.startPoint).length(), this.startAngle = yT.BetweenTwoPoints(this.centerPoint, this.startPoint);
+        const xT = this.startAngle.degrees();
+        let IT = yT.BetweenTwoPoints(this.centerPoint, this.midPoint).degrees(),
+          AT = yT.BetweenTwoPoints(this.centerPoint, this.endPoint).degrees();
+        IT - xT > 180 && (IT -= 360), IT - xT < -180 && (IT += 360), AT - IT > 180 && (AT -= 360), AT - IT < -180 && (AT += 360), this.orientation = IT - xT < 0 ? 0 : 1, this.angle = yT.FromDegrees(0 === this.orientation ? xT - AT : AT - xT)
       }
-      addLineTo(vv, zv) {
-        if (this.closed) return this;
-        const Pv = new ev.j(vv, zv),
-          hv = this._points[this._points.length - 1];
-        return this._points.push(Pv), this._length += Pv.subtract(hv).length(), this
+    }
+    class xT {
+      constructor(TT, kT) {
+        this._points = new Array, this._length = 0, this.closed = !1, this._points.push(new KT.i(TT, kT))
       }
-      addArcTo(vv, zv, Pv, hv) {
-        let Sv = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+      addLineTo(TT, kT) {
         if (this.closed) return this;
-        const gv = this._points[this._points.length - 1],
-          pv = new ev.j(vv, zv),
-          Nv = new ev.j(Pv, hv),
-          lv = new dv(gv, pv, Nv);
-        let Tv = lv.angle.radians() / Sv;
-        0 === lv.orientation && (Tv *= -1);
-        let Wv = lv.startAngle.radians() + Tv;
-        for (let ev = 0; ev < Sv; ev++) {
-          const vv = Math.cos(Wv) * lv.radius + lv.centerPoint.x,
-            zv = Math.sin(Wv) * lv.radius + lv.centerPoint.y;
-          this.addLineTo(vv, zv), Wv += Tv
+        const cT = new KT.i(TT, kT),
+          lT = this._points[this._points.length - 1];
+        return this._points.push(cT), this._length += cT.subtract(lT).length(), this
+      }
+      addArcTo(TT, kT, cT, lT) {
+        let MT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+        if (this.closed) return this;
+        const OT = this._points[this._points.length - 1],
+          yT = new KT.i(TT, kT),
+          xT = new KT.i(cT, lT),
+          IT = new fT(OT, yT, xT);
+        let AT = IT.angle.radians() / MT;
+        0 === IT.orientation && (AT *= -1);
+        let CT = IT.startAngle.radians() + AT;
+        for (let KT = 0; KT < MT; KT++) {
+          const TT = Math.cos(CT) * IT.radius + IT.centerPoint.x,
+            kT = Math.sin(CT) * IT.radius + IT.centerPoint.y;
+          this.addLineTo(TT, kT), CT += AT
         }
         return this
       }
-      addQuadraticCurveTo(vv, zv, Pv, hv) {
-        let Sv = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+      addQuadraticCurveTo(TT, kT, cT, lT) {
+        let MT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
         if (this.closed) return this;
-        const ev = (vv, zv, Pv, hv) => (1 - vv) * (1 - vv) * zv + 2 * vv * (1 - vv) * Pv + vv * vv * hv,
-          gv = this._points[this._points.length - 1];
-        for (let pv = 0; pv <= Sv; pv++) {
-          const dv = pv / Sv,
-            Nv = ev(dv, gv.x, vv, Pv),
-            lv = ev(dv, gv.y, zv, hv);
-          this.addLineTo(Nv, lv)
+        const KT = (TT, kT, cT, lT) => (1 - TT) * (1 - TT) * kT + 2 * TT * (1 - TT) * cT + TT * TT * lT,
+          OT = this._points[this._points.length - 1];
+        for (let yT = 0; yT <= MT; yT++) {
+          const fT = yT / MT,
+            xT = KT(fT, OT.x, TT, cT),
+            IT = KT(fT, OT.y, kT, lT);
+          this.addLineTo(xT, IT)
         }
         return this
       }
-      addBezierCurveTo(vv, zv, Pv, hv, Sv, ev) {
-        let gv = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 36;
+      addBezierCurveTo(TT, kT, cT, lT, MT, KT) {
+        let OT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 36;
         if (this.closed) return this;
-        const pv = (vv, zv, Pv, hv, Sv) => (1 - vv) * (1 - vv) * (1 - vv) * zv + 3 * vv * (1 - vv) * (1 - vv) * Pv + 3 * vv * vv * (1 - vv) * hv + vv * vv * vv * Sv,
-          dv = this._points[this._points.length - 1];
-        for (let Nv = 0; Nv <= gv; Nv++) {
-          const lv = Nv / gv,
-            Tv = pv(lv, dv.x, vv, Pv, Sv),
-            Wv = pv(lv, dv.y, zv, hv, ev);
-          this.addLineTo(Tv, Wv)
+        const yT = (TT, kT, cT, lT, MT) => (1 - TT) * (1 - TT) * (1 - TT) * kT + 3 * TT * (1 - TT) * (1 - TT) * cT + 3 * TT * TT * (1 - TT) * lT + TT * TT * TT * MT,
+          fT = this._points[this._points.length - 1];
+        for (let xT = 0; xT <= OT; xT++) {
+          const IT = xT / OT,
+            AT = yT(IT, fT.x, TT, cT, MT),
+            CT = yT(IT, fT.y, kT, lT, KT);
+          this.addLineTo(AT, CT)
         }
         return this
       }
-      isPointInside(vv) {
-        let zv = !1;
-        const Pv = this._points.length;
-        for (let hv = Pv - 1, Sv = 0; Sv < Pv; hv = Sv++) {
-          let Pv = this._points[hv],
-            ev = this._points[Sv],
-            gv = ev.x - Pv.x,
-            pv = ev.y - Pv.y;
-          if (Math.abs(pv) > Number.EPSILON) {
-            if (pv < 0 && (Pv = this._points[Sv], gv = -gv, ev = this._points[hv], pv = -pv), vv.y < Pv.y || vv.y > ev.y) continue;
-            if (vv.y === Pv.y && vv.x === Pv.x) return !0;
+      isPointInside(TT) {
+        let kT = !1;
+        const cT = this._points.length;
+        for (let lT = cT - 1, MT = 0; MT < cT; lT = MT++) {
+          let cT = this._points[lT],
+            KT = this._points[MT],
+            OT = KT.x - cT.x,
+            yT = KT.y - cT.y;
+          if (Math.abs(yT) > Number.EPSILON) {
+            if (yT < 0 && (cT = this._points[MT], OT = -OT, KT = this._points[lT], yT = -yT), TT.y < cT.y || TT.y > KT.y) continue;
+            if (TT.y === cT.y && TT.x === cT.x) return !0;
             {
-              const hv = pv * (vv.x - Pv.x) - gv * (vv.y - Pv.y);
-              if (0 === hv) return !0;
-              if (hv < 0) continue;
-              zv = !zv
+              const lT = yT * (TT.x - cT.x) - OT * (TT.y - cT.y);
+              if (0 === lT) return !0;
+              if (lT < 0) continue;
+              kT = !kT
             }
           } else {
-            if (vv.y !== Pv.y) continue;
-            if (ev.x <= vv.x && vv.x <= Pv.x || Pv.x <= vv.x && vv.x <= ev.x) return !0
+            if (TT.y !== cT.y) continue;
+            if (KT.x <= TT.x && TT.x <= cT.x || cT.x <= TT.x && TT.x <= KT.x) return !0
           }
         }
-        return zv
+        return kT
       }
       close() {
         return this.closed = !0, this
       }
       length() {
-        let vv = this._length;
+        let TT = this._length;
         if (this.closed) {
-          const zv = this._points[this._points.length - 1];
-          vv += this._points[0].subtract(zv).length()
+          const kT = this._points[this._points.length - 1];
+          TT += this._points[0].subtract(kT).length()
         }
-        return vv
+        return TT
       }
       area() {
-        const vv = this._points.length;
-        let zv = 0;
-        for (let Pv = vv - 1, hv = 0; hv < vv; Pv = hv++) zv += this._points[Pv].x * this._points[hv].y - this._points[hv].x * this._points[Pv].y;
-        return .5 * zv
+        const TT = this._points.length;
+        let kT = 0;
+        for (let cT = TT - 1, lT = 0; lT < TT; cT = lT++) kT += this._points[cT].x * this._points[lT].y - this._points[lT].x * this._points[cT].y;
+        return .5 * kT
       }
       getPoints() {
         return this._points
       }
-      getPointAtLengthPosition(vv) {
-        if (vv < 0 || vv > 1) return ev.j.Zero();
-        const zv = vv * this.length();
-        let Pv = 0;
-        for (let hv = 0; hv < this._points.length; hv++) {
-          const vv = (hv + 1) % this._points.length,
-            Sv = this._points[hv],
-            gv = this._points[vv].subtract(Sv),
-            pv = gv.length() + Pv;
-          if (zv >= Pv && zv <= pv) {
-            const vv = gv.normalize(),
-              hv = zv - Pv;
-            return new ev.j(Sv.x + vv.x * hv, Sv.y + vv.y * hv)
+      getPointAtLengthPosition(TT) {
+        if (TT < 0 || TT > 1) return KT.i.Zero();
+        const kT = TT * this.length();
+        let cT = 0;
+        for (let lT = 0; lT < this._points.length; lT++) {
+          const TT = (lT + 1) % this._points.length,
+            MT = this._points[lT],
+            OT = this._points[TT].subtract(MT),
+            yT = OT.length() + cT;
+          if (kT >= cT && kT <= yT) {
+            const TT = OT.normalize(),
+              lT = kT - cT;
+            return new KT.i(MT.x + TT.x * lT, MT.y + TT.y * lT)
           }
-          Pv = pv
+          cT = yT
         }
-        return ev.j.Zero()
+        return KT.i.Zero()
       }
-      static StartingAt(vv, zv) {
-        return new Nv(vv, zv)
+      static StartingAt(TT, kT) {
+        return new xT(TT, kT)
       }
     }
-    class lv {
-      static CreateQuadraticBezier(vv, zv, Pv, hv) {
-        hv = hv > 2 ? hv : 3;
-        const Sv = [],
-          gv = (vv, zv, Pv, hv) => (1 - vv) * (1 - vv) * zv + 2 * vv * (1 - vv) * Pv + vv * vv * hv;
-        for (let pv = 0; pv <= hv; pv++) Sv.push(new ev.l(gv(pv / hv, vv.x, zv.x, Pv.x), gv(pv / hv, vv.y, zv.y, Pv.y), gv(pv / hv, vv.z, zv.z, Pv.z)));
-        return new lv(Sv)
+    class IT {
+      static CreateQuadraticBezier(TT, kT, cT, lT) {
+        lT = lT > 2 ? lT : 3;
+        const MT = [],
+          OT = (TT, kT, cT, lT) => (1 - TT) * (1 - TT) * kT + 2 * TT * (1 - TT) * cT + TT * TT * lT;
+        for (let yT = 0; yT <= lT; yT++) MT.push(new KT.m(OT(yT / lT, TT.x, kT.x, cT.x), OT(yT / lT, TT.y, kT.y, cT.y), OT(yT / lT, TT.z, kT.z, cT.z)));
+        return new IT(MT)
       }
-      static CreateCubicBezier(vv, zv, Pv, hv, Sv) {
-        Sv = Sv > 3 ? Sv : 4;
-        const gv = [],
-          pv = (vv, zv, Pv, hv, Sv) => (1 - vv) * (1 - vv) * (1 - vv) * zv + 3 * vv * (1 - vv) * (1 - vv) * Pv + 3 * vv * vv * (1 - vv) * hv + vv * vv * vv * Sv;
-        for (let dv = 0; dv <= Sv; dv++) gv.push(new ev.l(pv(dv / Sv, vv.x, zv.x, Pv.x, hv.x), pv(dv / Sv, vv.y, zv.y, Pv.y, hv.y), pv(dv / Sv, vv.z, zv.z, Pv.z, hv.z)));
-        return new lv(gv)
+      static CreateCubicBezier(TT, kT, cT, lT, MT) {
+        MT = MT > 3 ? MT : 4;
+        const OT = [],
+          yT = (TT, kT, cT, lT, MT) => (1 - TT) * (1 - TT) * (1 - TT) * kT + 3 * TT * (1 - TT) * (1 - TT) * cT + 3 * TT * TT * (1 - TT) * lT + TT * TT * TT * MT;
+        for (let fT = 0; fT <= MT; fT++) OT.push(new KT.m(yT(fT / MT, TT.x, kT.x, cT.x, lT.x), yT(fT / MT, TT.y, kT.y, cT.y, lT.y), yT(fT / MT, TT.z, kT.z, cT.z, lT.z)));
+        return new IT(OT)
       }
-      static CreateHermiteSpline(vv, zv, Pv, hv, Sv) {
-        const gv = [],
-          pv = 1 / Sv;
-        for (let dv = 0; dv <= Sv; dv++) gv.push(ev.l.Hermite(vv, zv, Pv, hv, dv * pv));
-        return new lv(gv)
+      static CreateHermiteSpline(TT, kT, cT, lT, MT) {
+        const OT = [],
+          yT = 1 / MT;
+        for (let fT = 0; fT <= MT; fT++) OT.push(KT.m.Hermite(TT, kT, cT, lT, fT * yT));
+        return new IT(OT)
       }
-      static CreateCatmullRomSpline(vv, zv, Pv) {
-        const hv = [],
-          Sv = 1 / zv;
-        let gv = 0;
-        if (Pv) {
-          const Pv = vv.length;
-          for (let pv = 0; pv < Pv; pv++) {
-            gv = 0;
-            for (let dv = 0; dv < zv; dv++) hv.push(ev.l.CatmullRom(vv[pv % Pv], vv[(pv + 1) % Pv], vv[(pv + 2) % Pv], vv[(pv + 3) % Pv], gv)), gv += Sv
+      static CreateCatmullRomSpline(TT, kT, cT) {
+        const lT = [],
+          MT = 1 / kT;
+        let OT = 0;
+        if (cT) {
+          const cT = TT.length;
+          for (let yT = 0; yT < cT; yT++) {
+            OT = 0;
+            for (let fT = 0; fT < kT; fT++) lT.push(KT.m.CatmullRom(TT[yT % cT], TT[(yT + 1) % cT], TT[(yT + 2) % cT], TT[(yT + 3) % cT], OT)), OT += MT
           }
-          hv.push(hv[0])
+          lT.push(lT[0])
         } else {
-          const Pv = [];
-          Pv.push(vv[0].clone()), Pv.push(...vv), Pv.push(vv[vv.length - 1].clone());
-          let pv = 0;
-          for (; pv < Pv.length - 3; pv++) {
-            gv = 0;
-            for (let vv = 0; vv < zv; vv++) hv.push(ev.l.CatmullRom(Pv[pv], Pv[pv + 1], Pv[pv + 2], Pv[pv + 3], gv)), gv += Sv
+          const cT = [];
+          cT.push(TT[0].clone()), cT.push(...TT), cT.push(TT[TT.length - 1].clone());
+          let yT = 0;
+          for (; yT < cT.length - 3; yT++) {
+            OT = 0;
+            for (let TT = 0; TT < kT; TT++) lT.push(KT.m.CatmullRom(cT[yT], cT[yT + 1], cT[yT + 2], cT[yT + 3], OT)), OT += MT
           }
-          pv--, hv.push(ev.l.CatmullRom(Pv[pv], Pv[pv + 1], Pv[pv + 2], Pv[pv + 3], gv))
+          yT--, lT.push(KT.m.CatmullRom(cT[yT], cT[yT + 1], cT[yT + 2], cT[yT + 3], OT))
         }
-        return new lv(hv)
+        return new IT(lT)
       }
-      static ArcThru3Points(vv, zv, Pv) {
-        let hv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 32,
-          Sv = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          gv = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        const pv = [],
-          dv = zv.subtract(vv),
-          Nv = Pv.subtract(zv),
-          Tv = vv.subtract(Pv),
-          Wv = ev.l.Cross(dv, Nv),
-          wv = Wv.length();
-        if (wv < Math.pow(10, -8)) return new lv(pv);
-        const av = dv.lengthSquared(),
-          sv = Nv.lengthSquared(),
-          Cv = Tv.lengthSquared(),
-          iv = Wv.lengthSquared(),
-          cv = .5 * dv.length() * Nv.length() * Tv.length() / wv,
-          Gv = -.5 * sv * ev.l.Dot(dv, Tv) / iv,
-          mv = -.5 * Cv * ev.l.Dot(dv, Nv) / iv,
-          jv = -.5 * av * ev.l.Dot(Nv, Tv) / iv,
-          fv = vv.scale(Gv).add(zv.scale(mv)).add(Pv.scale(jv)),
-          Fv = vv.subtract(fv).normalize(),
-          Yv = ev.l.Cross(Wv, Fv).normalize();
-        if (gv) {
-          const zv = 2 * Math.PI / hv;
-          for (let vv = 0; vv <= 2 * Math.PI; vv += zv) pv.push(fv.add(Fv.scale(cv * Math.cos(vv)).add(Yv.scale(cv * Math.sin(vv)))));
-          pv.push(vv)
+      static ArcThru3Points(TT, kT, cT) {
+        let lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 32,
+          MT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+          OT = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        const yT = [],
+          fT = kT.subtract(TT),
+          xT = cT.subtract(kT),
+          AT = TT.subtract(cT),
+          CT = KT.m.Cross(fT, xT),
+          jT = CT.length();
+        if (jT < Math.pow(10, -8)) return new IT(yT);
+        const vT = fT.lengthSquared(),
+          tT = xT.lengthSquared(),
+          hT = AT.lengthSquared(),
+          NT = CT.lengthSquared(),
+          QT = .5 * fT.length() * xT.length() * AT.length() / jT,
+          ST = -.5 * tT * KT.m.Dot(fT, AT) / NT,
+          DT = -.5 * hT * KT.m.Dot(fT, xT) / NT,
+          aT = -.5 * vT * KT.m.Dot(xT, AT) / NT,
+          FT = TT.scale(ST).add(kT.scale(DT)).add(cT.scale(aT)),
+          rT = TT.subtract(FT).normalize(),
+          PT = KT.m.Cross(CT, rT).normalize();
+        if (OT) {
+          const kT = 2 * Math.PI / lT;
+          for (let TT = 0; TT <= 2 * Math.PI; TT += kT) yT.push(FT.add(rT.scale(QT * Math.cos(TT)).add(PT.scale(QT * Math.sin(TT)))));
+          yT.push(TT)
         } else {
-          const zv = 1 / hv;
-          let ev, gv = 0;
+          const kT = 1 / lT;
+          let KT, OT = 0;
           do {
-            ev = fv.add(Fv.scale(cv * Math.cos(gv)).add(Yv.scale(cv * Math.sin(gv)))), pv.push(ev), gv += zv
-          } while (!ev.equalsWithEpsilon(Pv, cv * zv * 1.1));
-          pv.push(Pv), Sv && pv.push(vv)
+            KT = FT.add(rT.scale(QT * Math.cos(OT)).add(PT.scale(QT * Math.sin(OT)))), yT.push(KT), OT += kT
+          } while (!KT.equalsWithEpsilon(cT, QT * kT * 1.1));
+          yT.push(cT), MT && yT.push(TT)
         }
-        return new lv(pv)
+        return new IT(yT)
       }
-      constructor(vv) {
-        this._length = 0, this._points = vv, this._length = this._computeLength(vv)
+      constructor(TT) {
+        this._length = 0, this._points = TT, this._length = this._computeLength(TT)
       }
       getPoints() {
         return this._points
@@ -279,121 +279,121 @@ export const modules = {
       length() {
         return this._length
       }
-      continue (vv) {
-        const zv = this._points[this._points.length - 1],
-          Pv = this._points.slice(),
-          hv = vv.getPoints();
-        for (let Sv = 1; Sv < hv.length; Sv++) Pv.push(hv[Sv].subtract(hv[0]).add(zv));
-        return new lv(Pv)
+      continue (TT) {
+        const kT = this._points[this._points.length - 1],
+          cT = this._points.slice(),
+          lT = TT.getPoints();
+        for (let MT = 1; MT < lT.length; MT++) cT.push(lT[MT].subtract(lT[0]).add(kT));
+        return new IT(cT)
       }
-      _computeLength(vv) {
-        let zv = 0;
-        for (let Pv = 1; Pv < vv.length; Pv++) zv += vv[Pv].subtract(vv[Pv - 1]).length();
-        return zv
+      _computeLength(TT) {
+        let kT = 0;
+        for (let cT = 1; cT < TT.length; cT++) kT += TT[cT].subtract(TT[cT - 1]).length();
+        return kT
       }
     }
   },
-  38207: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      b: () => ev
+  38507: (TT, kT, cT) => {
+    cT.d(kT, {
+      d: () => KT
     });
-    var hv = Pv(38209);
-    const Sv = (vv, zv, Pv) => vv ? vv.getClassName && "Mesh" === vv.getClassName() ? null : !vv.getClassName || "SubMesh" !== vv.getClassName() && "PhysicsBody" !== vv.getClassName() ? vv.clone ? vv.clone() : Array.isArray(vv) ? vv.slice() : Pv && "object" === typeof vv ? {
-      ...vv
-    } : null : vv.clone(zv) : null;
-    class ev {
-      static DeepCopy(vv, zv, Pv, ev) {
-        let gv = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const pv = function(vv) {
-          const zv = [];
+    var lT = cT(38512);
+    const MT = (TT, kT, cT) => TT ? TT.getClassName && "Mesh" === TT.getClassName() ? null : !TT.getClassName || "SubMesh" !== TT.getClassName() && "PhysicsBody" !== TT.getClassName() ? TT.clone ? TT.clone() : Array.isArray(TT) ? TT.slice() : cT && "object" === typeof TT ? {
+      ...TT
+    } : null : TT.clone(kT) : null;
+    class KT {
+      static DeepCopy(TT, kT, cT, KT) {
+        let OT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const yT = function(TT) {
+          const kT = [];
           do {
-            const Pv = Object.getOwnPropertyNames(vv);
-            for (const vv of Pv) - 1 === zv.indexOf(vv) && zv.push(vv)
-          } while (vv = Object.getPrototypeOf(vv));
-          return zv
-        }(vv);
-        for (const Nv of pv) {
-          if ("_" === Nv[0] && (!ev || -1 === ev.indexOf(Nv))) continue;
-          if (Nv.endsWith("Observable")) continue;
-          if (Pv && -1 !== Pv.indexOf(Nv)) continue;
-          const pv = vv[Nv],
-            lv = typeof pv;
-          if ("function" !== lv) try {
-            if ("object" === lv)
-              if (pv instanceof Uint8Array) zv[Nv] = Uint8Array.from(pv);
-              else if (pv instanceof Array) {
-              if (zv[Nv] = [], pv.length > 0)
-                if ("object" == typeof pv[0])
-                  for (let vv = 0; vv < pv.length; vv++) {
-                    const Pv = Sv(pv[vv], zv, gv); - 1 === zv[Nv].indexOf(Pv) && zv[Nv].push(Pv)
-                  } else zv[Nv] = pv.slice(0)
-            } else zv[Nv] = Sv(pv, zv, gv);
-            else zv[Nv] = pv
-          } catch (dv) {
-            hv.d.Warn(dv.message)
+            const cT = Object.getOwnPropertyNames(TT);
+            for (const TT of cT) - 1 === kT.indexOf(TT) && kT.push(TT)
+          } while (TT = Object.getPrototypeOf(TT));
+          return kT
+        }(TT);
+        for (const xT of yT) {
+          if ("_" === xT[0] && (!KT || -1 === KT.indexOf(xT))) continue;
+          if (xT.endsWith("Observable")) continue;
+          if (cT && -1 !== cT.indexOf(xT)) continue;
+          const yT = TT[xT],
+            IT = typeof yT;
+          if ("function" !== IT) try {
+            if ("object" === IT)
+              if (yT instanceof Uint8Array) kT[xT] = Uint8Array.from(yT);
+              else if (yT instanceof Array) {
+              if (kT[xT] = [], yT.length > 0)
+                if ("object" == typeof yT[0])
+                  for (let TT = 0; TT < yT.length; TT++) {
+                    const cT = MT(yT[TT], kT, OT); - 1 === kT[xT].indexOf(cT) && kT[xT].push(cT)
+                  } else kT[xT] = yT.slice(0)
+            } else kT[xT] = MT(yT, kT, OT);
+            else kT[xT] = yT
+          } catch (fT) {
+            lT.e.Warn(fT.message)
           }
         }
       }
     }
   },
-  38209: (vv, zv, Pv) => {
-    Pv.d(zv, {
-      d: () => hv
+  38512: (TT, kT, cT) => {
+    cT.d(kT, {
+      e: () => lT
     });
-    class hv {
-      static _CheckLimit(vv, zv) {
-        let Pv = hv._LogLimitOutputs[vv];
-        return Pv ? Pv.current++ : (Pv = {
-          limit: zv,
+    class lT {
+      static _CheckLimit(TT, kT) {
+        let cT = lT._LogLimitOutputs[TT];
+        return cT ? cT.current++ : (cT = {
+          limit: kT,
           current: 1
-        }, hv._LogLimitOutputs[vv] = Pv), Pv.current <= Pv.limit
+        }, lT._LogLimitOutputs[TT] = cT), cT.current <= cT.limit
       }
-      static _GenerateLimitMessage(vv) {
-        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const Pv = hv._LogLimitOutputs[vv];
-        if (!Pv || !hv.MessageLimitReached) return;
-        const Sv = this._Levels[zv];
-        Pv.current === Pv.limit && hv[Sv.name](hv.MessageLimitReached.replace(/%LIMIT%/g, "" + Pv.limit).replace(/%TYPE%/g, Sv.name ?? ""))
+      static _GenerateLimitMessage(TT) {
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const cT = lT._LogLimitOutputs[TT];
+        if (!cT || !lT.MessageLimitReached) return;
+        const MT = this._Levels[kT];
+        cT.current === cT.limit && lT[MT.name](lT.MessageLimitReached.replace(/%LIMIT%/g, "" + cT.limit).replace(/%TYPE%/g, MT.name ?? ""))
       }
-      static _AddLogEntry(vv) {
-        hv._LogCache = vv + hv._LogCache, hv.OnNewCacheEntry && hv.OnNewCacheEntry(vv)
+      static _AddLogEntry(TT) {
+        lT._LogCache = TT + lT._LogCache, lT.OnNewCacheEntry && lT.OnNewCacheEntry(TT)
       }
-      static _FormatMessage(vv) {
-        const zv = vv => vv < 10 ? "0" + vv : "" + vv,
-          Pv = new Date;
-        return "[" + zv(Pv.getHours()) + ":" + zv(Pv.getMinutes()) + ":" + zv(Pv.getSeconds()) + "]: " + vv
+      static _FormatMessage(TT) {
+        const kT = TT => TT < 10 ? "0" + TT : "" + TT,
+          cT = new Date;
+        return "[" + kT(cT.getHours()) + ":" + kT(cT.getMinutes()) + ":" + kT(cT.getSeconds()) + "]: " + TT
       }
-      static _LogDisabled(vv, zv) {}
+      static _LogDisabled(TT, kT) {}
       static _LogEnabled() {
-        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          zv = arguments.length > 1 ? arguments[1] : void 0,
-          Pv = arguments.length > 2 ? arguments[2] : void 0;
-        const Sv = Array.isArray(zv) ? zv[0] : zv;
-        if (void 0 !== Pv && !hv._CheckLimit(Sv, Pv)) return;
-        const ev = hv._FormatMessage(Sv),
-          gv = this._Levels[vv],
-          pv = Array.isArray(zv) ? zv.slice(1) : [];
-        gv.logFunc && gv.logFunc("BJS - " + ev, ...pv);
-        const dv = `<div style='color:${gv.color}'>${ev}</div><br>`;
-        hv._AddLogEntry(dv), hv._GenerateLimitMessage(Sv, vv)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          kT = arguments.length > 1 ? arguments[1] : void 0,
+          cT = arguments.length > 2 ? arguments[2] : void 0;
+        const MT = Array.isArray(kT) ? kT[0] : kT;
+        if (void 0 !== cT && !lT._CheckLimit(MT, cT)) return;
+        const KT = lT._FormatMessage(MT),
+          OT = this._Levels[TT],
+          yT = Array.isArray(kT) ? kT.slice(1) : [];
+        OT.logFunc && OT.logFunc("BJS - " + KT, ...yT);
+        const fT = `<div style='color:${OT.color}'>${KT}</div><br>`;
+        lT._AddLogEntry(fT), lT._GenerateLimitMessage(MT, TT)
       }
       static get LogCache() {
-        return hv._LogCache
+        return lT._LogCache
       }
       static ClearLogCache() {
-        hv._LogCache = "", hv._LogLimitOutputs = {}, hv.errorsCount = 0
+        lT._LogCache = "", lT._LogLimitOutputs = {}, lT.errorsCount = 0
       }
-      static set LogLevels(vv) {
-        hv.Log = hv._LogDisabled, hv.Warn = hv._LogDisabled, hv.Error = hv._LogDisabled;
-        const zv = [hv.MessageLogLevel, hv.WarningLogLevel, hv.ErrorLogLevel];
-        for (const Pv of zv)
-          if ((vv & Pv) === Pv) {
-            const vv = this._Levels[Pv];
-            hv[vv.name] = hv._LogEnabled.bind(hv, Pv)
+      static set LogLevels(TT) {
+        lT.Log = lT._LogDisabled, lT.Warn = lT._LogDisabled, lT.Error = lT._LogDisabled;
+        const kT = [lT.MessageLogLevel, lT.WarningLogLevel, lT.ErrorLogLevel];
+        for (const cT of kT)
+          if ((TT & cT) === cT) {
+            const TT = this._Levels[cT];
+            lT[TT.name] = lT._LogEnabled.bind(lT, cT)
           }
       }
     }
-    hv.NoneLogLevel = 0, hv.MessageLogLevel = 1, hv.WarningLogLevel = 2, hv.ErrorLogLevel = 4, hv.AllLogLevel = 7, hv.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", hv._LogCache = "", hv._LogLimitOutputs = {}, hv._Levels = [{}, {
+    lT.NoneLogLevel = 0, lT.MessageLogLevel = 1, lT.WarningLogLevel = 2, lT.ErrorLogLevel = 4, lT.AllLogLevel = 7, lT.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", lT._LogCache = "", lT._LogLimitOutputs = {}, lT._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -405,8 +405,8 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], hv.errorsCount = 0, hv.Log = hv._LogEnabled.bind(hv, hv.MessageLogLevel), hv.Warn = hv._LogEnabled.bind(hv, hv.WarningLogLevel), hv.Error = hv._LogEnabled.bind(hv, hv.ErrorLogLevel)
+    }], lT.errorsCount = 0, lT.Log = lT._LogEnabled.bind(lT, lT.MessageLogLevel), lT.Warn = lT._LogEnabled.bind(lT, lT.WarningLogLevel), lT.Error = lT._LogEnabled.bind(lT, lT.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const vv in modules) Object.freeze(modules[vv]);
+for (const TT in modules) Object.freeze(modules[TT]);
