@@ -1,9 +1,10 @@
 import hashlib
 import importlib.util
 import json
+import subprocess
+import sys
 import tempfile
 import unittest
-import subprocess
 from pathlib import Path
 from unittest import mock
 
@@ -11,6 +12,7 @@ SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "monitor.py"
 SPEC = importlib.util.spec_from_file_location("monitor", SCRIPT)
 monitor = importlib.util.module_from_spec(SPEC)
 assert SPEC.loader is not None
+sys.modules["monitor"] = monitor
 SPEC.loader.exec_module(monitor)
 
 RUNTIME_SNIPPET = (
@@ -47,11 +49,32 @@ class FakeResponse:
 
 class MonitorTests(unittest.TestCase):
     def patch_paths(self, root: Path) -> None:
-        original_root, original_bundles = monitor.ROOT, monitor.BUNDLES_DIR
+        original_root = monitor.ROOT
+        original_bundles = monitor.BUNDLES_DIR
+        original_changes_dir = monitor.CHANGES_DIR
+        original_added = monitor.ADDED_REPORT_PATH
+        original_removed = monitor.REMOVED_REPORT_PATH
+        original_changed = monitor.CHANGED_REPORT_PATH
+        original_changes = monitor.CHANGES_PATH
+        original_history = monitor.HISTORY_PATH
+
         monitor.ROOT = root
         monitor.BUNDLES_DIR = root / "bundles"
+        monitor.CHANGES_DIR = root / "changes"
+        monitor.ADDED_REPORT_PATH = monitor.CHANGES_DIR / "added.md"
+        monitor.REMOVED_REPORT_PATH = monitor.CHANGES_DIR / "removed.md"
+        monitor.CHANGED_REPORT_PATH = monitor.CHANGES_DIR / "changed.md"
+        monitor.CHANGES_PATH = root / "CHANGES.md"
+        monitor.HISTORY_PATH = root / "HISTORY.md"
+
         self.addCleanup(setattr, monitor, "ROOT", original_root)
         self.addCleanup(setattr, monitor, "BUNDLES_DIR", original_bundles)
+        self.addCleanup(setattr, monitor, "CHANGES_DIR", original_changes_dir)
+        self.addCleanup(setattr, monitor, "ADDED_REPORT_PATH", original_added)
+        self.addCleanup(setattr, monitor, "REMOVED_REPORT_PATH", original_removed)
+        self.addCleanup(setattr, monitor, "CHANGED_REPORT_PATH", original_changed)
+        self.addCleanup(setattr, monitor, "CHANGES_PATH", original_changes)
+        self.addCleanup(setattr, monitor, "HISTORY_PATH", original_history)
 
     def patch_workers(self, count: int) -> None:
         original = monitor.WORKERS
@@ -446,6 +469,8 @@ class MonitorTests(unittest.TestCase):
             stored = json.loads(state_path.read_text(encoding="utf-8"))
             self.assertEqual(stored["bloxd.io"]["checked_at"], "2026-11-14T06:00:00+09:00")
             self.assertEqual(readme_path.read_text(encoding="utf-8"), "original readme")
+            self.assertFalse(monitor.ADDED_REPORT_PATH.exists())
+            self.assertFalse(monitor.HISTORY_PATH.exists())
 
     def test_readme_lists_main_bundle_and_archived_summary(self):
         state = {
@@ -480,6 +505,10 @@ class MonitorTests(unittest.TestCase):
         self.assertIn("https://preprod.bloxd.io/static/js/build123.main.deadbeef.js", rendered)
         self.assertIn("a" * 64, rendered)
         self.assertIn("archived build files: 2", rendered)
+        self.assertIn("changes/added.md", rendered)
+        self.assertIn("changes/removed.md", rendered)
+        self.assertIn("changes/changed.md", rendered)
+        self.assertIn("HISTORY.md", rendered)
         self.assertNotIn("alphaChunk", rendered)
 
     # --- bundle naming ---
@@ -582,12 +611,12 @@ class MonitorTests(unittest.TestCase):
             current_state,
             ["bloxd.io"],
             "2026-11-18T15:00 JST",
-            "diffs/202611181500-newbuild-bbbbbbbb.md",
+            "changes/changed.md",
         )
         self.assertIn("```diff", rendered)
         self.assertIn("- Total size: 100 B", rendered)
         self.assertIn("+ Total size: 125 B (+25 B)", rendered)
-        self.assertIn("[diffs/202611181500-newbuild-bbbbbbbb.md]", rendered)
+        self.assertIn("[changes/changed.md]", rendered)
 
     def test_readable_diff_report_includes_all_files_and_splits_hunks(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -831,6 +860,396 @@ class MonitorTests(unittest.TestCase):
         }
         rendered = monitor.render_changes({}, current_state, ["bloxd.io"], "2026-11-14T15:00 JST")
         self.assertIn("Baseline: 1 files", rendered)
+
+    # =========================================================================
+    # New specification tests (Section 10 requirements)
+    # =========================================================================
+
+    def test_classify_two_char_identifier_only_change_is_excluded(self):
+        old_js = b"function AA(BB, CC) {\n  const DD = BB + CC;\n  return DD;\n}\n"
+        new_js = b"function XX(YY, ZZ) {\n  const WW = YY + ZZ;\n  return WW;\n}\n"
+        res = monitor.classify_bundle_file_diff(
+            "bundles/bloxd.io/chunks/js/10.js", old_js, new_js
+        )
+        self.assertEqual(res["status"], "filtered")
+        self.assertTrue(res["identifier_only"])
+        self.assertEqual(res["added"], [])
+        self.assertEqual(res["removed"], [])
+        self.assertEqual(res["changed"], [])
+
+    def test_classify_three_or_more_char_identifier_change_is_changed(self):
+        old_js = b"function computeVelocity(playerSpeed) {\n  return playerSpeed * 2;\n}\n"
+        new_js = b"function computeMomentum(targetSpeed) {\n  return targetSpeed * 2;\n}\n"
+        res = monitor.classify_bundle_file_diff(
+            "bundles/bloxd.io/chunks/js/10.js", old_js, new_js
+        )
+        self.assertEqual(res["status"], "modified")
+        self.assertEqual(len(res["changed"]), 1)
+        self.assertEqual(res["added"], [])
+        self.assertEqual(res["removed"], [])
+        self.assertIn("computeVelocity", "\n".join(res["changed"][0]["old_lines"]))
+        self.assertIn("computeMomentum", "\n".join(res["changed"][0]["new_lines"]))
+
+    def test_classify_numeric_change_is_changed(self):
+        old_js = b"const speed = 10;\n"
+        new_js = b"const speed = 15;\n"
+        res = monitor.classify_bundle_file_diff(
+            "bundles/bloxd.io/main.js", old_js, new_js
+        )
+        self.assertEqual(res["status"], "modified")
+        self.assertEqual(len(res["changed"]), 1)
+        self.assertEqual(res["changed"][0]["old_lines"], ["const speed = 10;"])
+        self.assertEqual(res["changed"][0]["new_lines"], ["const speed = 15;"])
+
+    def test_classify_string_literal_change_including_two_char_string_is_changed(self):
+        old_js = b'const label = "hp";\nconst title = "Play Now";\n'
+        new_js = b'const label = "mp";\nconst title = "Join Match";\n'
+        res = monitor.classify_bundle_file_diff(
+            "bundles/bloxd.io/main.js", old_js, new_js
+        )
+        self.assertEqual(res["status"], "modified")
+        self.assertEqual(len(res["changed"]), 1)
+        self.assertIn('"hp"', "\n".join(res["changed"][0]["old_lines"]))
+        self.assertIn('"mp"', "\n".join(res["changed"][0]["new_lines"]))
+
+    def test_classify_url_change_is_changed(self):
+        old_js = b'const endpoint = "https://bloxd.io/api/v1/rooms";\n'
+        new_js = b'const endpoint = "https://bloxd.io/api/v2/rooms";\n'
+        res = monitor.classify_bundle_file_diff(
+            "bundles/bloxd.io/main.js", old_js, new_js
+        )
+        self.assertEqual(len(res["changed"]), 1)
+        self.assertIn("/api/v1/rooms", res["changed"][0]["old_lines"][0])
+        self.assertIn("/api/v2/rooms", res["changed"][0]["new_lines"][0])
+
+    def test_classify_condition_and_operator_change_is_changed(self):
+        old_js = b"if (health > 0 && stamina >= 10) {\n  allowSprint = true;\n}\n"
+        new_js = b"if (health >= 1 || stamina > 20) {\n  allowSprint = true;\n}\n"
+        res = monitor.classify_bundle_file_diff(
+            "bundles/bloxd.io/chunks/js/25.js", old_js, new_js
+        )
+        self.assertEqual(len(res["changed"]), 1)
+        self.assertEqual(res["changed"][0]["old_range"], (1, 1))
+        self.assertEqual(res["changed"][0]["new_range"], (1, 1))
+
+    def test_classify_function_body_change_is_changed(self):
+        old_js = b"function calcDamage(base) {\n  const bonus = 2;\n  return base + bonus;\n}\n"
+        new_js = b"function calcDamage(base) {\n  const bonus = 5;\n  return (base + bonus) * 1.5;\n}\n"
+        res = monitor.classify_bundle_file_diff(
+            "bundles/bloxd.io/chunks/js/25.js", old_js, new_js
+        )
+        self.assertEqual(len(res["changed"]), 1)
+        self.assertEqual(res["changed"][0]["old_range"], (2, 3))
+        self.assertEqual(res["changed"][0]["new_range"], (2, 3))
+
+    def test_classify_new_and_deleted_bundle_files(self):
+        added_res = monitor.classify_bundle_file_diff(
+            "bundles/bloxd.io/chunks/js/newFeature.js",
+            None,
+            b"export const feature = true;\n",
+        )
+        self.assertEqual(added_res["status"], "added")
+        self.assertEqual(len(added_res["added"]), 1)
+        self.assertEqual(added_res["added"][0]["kind"], "added_file")
+        self.assertEqual(added_res["removed"], [])
+        self.assertEqual(added_res["changed"], [])
+
+        removed_res = monitor.classify_bundle_file_diff(
+            "bundles/bloxd.io/chunks/js/oldFeature.js",
+            b"export const legacy = false;\n",
+            None,
+        )
+        self.assertEqual(removed_res["status"], "removed")
+        self.assertEqual(len(removed_res["removed"]), 1)
+        self.assertEqual(removed_res["removed"][0]["kind"], "removed_file")
+        self.assertEqual(removed_res["added"], [])
+        self.assertEqual(removed_res["changed"], [])
+
+    def test_classify_pure_addition_pure_deletion_and_multiple_changes_in_same_file(self):
+        old_js = (
+            "const speed = 10;\n"
+            "const keepA = 1;\n"
+            "const keepB = 2;\n"
+            "const removeMe = 'obsolete';\n"
+            "const keepC = 3;\n"
+            "const gravity = 9.8;\n"
+        ).encode("utf-8")
+        new_js = (
+            "const speed = 15;\n"
+            "const keepA = 1;\n"
+            "const addedFlag = true;\n"
+            "const keepB = 2;\n"
+            "const keepC = 3;\n"
+            "const gravity = 12.0;\n"
+        ).encode("utf-8")
+
+        res = monitor.classify_bundle_file_diff(
+            "bundles/bloxd.io/chunks/js/physics.js", old_js, new_js
+        )
+        self.assertEqual(res["status"], "modified")
+        # 2 independent Changed items (speed and gravity)
+        self.assertEqual(len(res["changed"]), 2)
+        self.assertEqual(res["changed"][0]["old_lines"], ["const speed = 10;"])
+        self.assertEqual(res["changed"][0]["new_lines"], ["const speed = 15;"])
+        self.assertEqual(res["changed"][1]["old_lines"], ["const gravity = 9.8;"])
+        self.assertEqual(res["changed"][1]["new_lines"], ["const gravity = 12.0;"])
+        # 1 pure Added item (addedFlag)
+        self.assertEqual(len(res["added"]), 1)
+        self.assertEqual(res["added"][0]["new_lines"], ["const addedFlag = true;"])
+        # 1 pure Removed item (removeMe)
+        self.assertEqual(len(res["removed"]), 1)
+        self.assertEqual(res["removed"][0]["old_lines"], ["const removeMe = 'obsolete';"])
+
+    def test_classify_css_changes(self):
+        old_css = (
+            ".hud {\n  color: red;\n}\n"
+            ".keep {\n  margin: 0;\n}\n"
+            ".old-banner {\n  display: block;\n}\n"
+        ).encode("utf-8")
+        new_css = (
+            ".hud {\n  color: green;\n}\n"
+            ".keep {\n  margin: 0;\n}\n"
+            ".new-modal {\n  opacity: 0.9;\n}\n"
+        ).encode("utf-8")
+
+        res = monitor.classify_bundle_file_diff(
+            "bundles/bloxd.io/main.css", old_css, new_css
+        )
+        self.assertEqual(res["status"], "modified")
+        self.assertGreaterEqual(len(res["changed"]), 1)
+        combined_old = "\n".join(l for item in res["changed"] for l in item["old_lines"])
+        combined_new = "\n".join(l for item in res["changed"] for l in item["new_lines"])
+        self.assertIn("color: red;", combined_old)
+        self.assertIn("color: green;", combined_new)
+
+    def test_non_bundle_files_excluded_from_diff_reports(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.patch_paths(root)
+
+            def git(*args):
+                subprocess.run(
+                    ["git", *args],
+                    cwd=root,
+                    check=True,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                )
+
+            git("init", "-q")
+            git("config", "user.name", "Test")
+            git("config", "user.email", "test@example.invalid")
+
+            non_bundle_files = {
+                "README.md": "initial readme\n",
+                "CHANGES.md": "initial changes\n",
+                "HISTORY.md": "initial history\n",
+                ".monitor-state.json": "{}\n",
+                "scripts/monitor.py": "# v1\n",
+                "tests/test_monitor.py": "# test v1\n",
+                ".github/workflows/monitor.yml": "name: test\n",
+                "cloudflare/wrangler.jsonc": "{}\n",
+                "bundles/bloxd.io/main.js": "const version = 1;\n",
+            }
+            for rel, content in non_bundle_files.items():
+                p = root / rel
+                p.parent.mkdir(parents=True, exist_ok=True)
+                p.write_text(content, encoding="utf-8")
+            git("add", "-A")
+            git("commit", "-qm", "baseline")
+
+            # Modify ONLY non-bundle files (README.md, CHANGES.md, monitor.py, etc.)
+            for rel in non_bundle_files:
+                if not rel.startswith("bundles/"):
+                    (root / rel).write_text(f"modified {rel}\n", encoding="utf-8")
+
+            collected = monitor.collect_bundle_diffs(root, base_ref="HEAD")
+            self.assertEqual(collected["total_added"], 0)
+            self.assertEqual(collected["total_removed"], 0)
+            self.assertEqual(collected["total_changed"], 0)
+
+    def test_github_diff_links_contain_valid_anchors_and_line_ranges(self):
+        path = "bundles/bloxd.io/chunks/js/100.js"
+        base_sha = "91993ebac13990ae01347fbe6affe057e07bbaa0"
+        head_sha = "fa7e92f7f9f947a63acfec6ab5e7beb7604fb42e"
+        links = monitor.build_github_links(
+            path,
+            base_sha,
+            head_sha,
+            old_range=(10, 16),
+            new_range=(12, 18),
+        )
+        expected_hash = hashlib.sha256(path.encode("utf-8")).hexdigest()
+        self.assertEqual(
+            links["file_diff_url"],
+            f"{monitor.REPO_URL}/compare/{base_sha}...{head_sha}#diff-{expected_hash}",
+        )
+        self.assertEqual(
+            links["hunk_url"],
+            f"{monitor.REPO_URL}/compare/{base_sha}...{head_sha}#diff-{expected_hash}R12",
+        )
+        self.assertEqual(
+            links["after_url"],
+            f"{monitor.REPO_URL}/blob/{head_sha}/{path}#L12-L18",
+        )
+        self.assertEqual(
+            links["before_url"],
+            f"{monitor.REPO_URL}/blob/{base_sha}/{path}#L10-L16",
+        )
+
+    def test_multi_environment_simultaneous_update_writes_fixed_reports_and_appends_history(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.patch_paths(root)
+
+            def git(*args):
+                subprocess.run(
+                    ["git", *args],
+                    cwd=root,
+                    check=True,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                )
+
+            git("init", "-q")
+            git("config", "user.name", "Test")
+            git("config", "user.email", "test@example.invalid")
+
+            # Initial snapshot for bloxd.io and staging.bloxd.io
+            for env in ("bloxd.io", "staging.bloxd.io"):
+                main_js = root / "bundles" / env / "main.js"
+                main_js.parent.mkdir(parents=True, exist_ok=True)
+                main_js.write_text("const speed = 10;\nconst keep = true;\n", encoding="utf-8")
+                old_chunk = root / "bundles" / env / "chunks" / "js" / "old.js"
+                old_chunk.parent.mkdir(parents=True, exist_ok=True)
+                old_chunk.write_text("export const obsolete = 1;\n", encoding="utf-8")
+
+            git("add", "-A")
+            git("commit", "-qm", "initial snapshot")
+            base_sha = subprocess.check_output(
+                ["git", "rev-parse", "HEAD"], cwd=root, text=True
+            ).strip()
+
+            # Update both environments and add a pre-existing history row
+            monitor.HISTORY_PATH.write_text(
+                monitor.HISTORY_HEADER
+                + "| 2026-11-20 12:00 | bloxd.io | `init.00000000` | `baseline` | 1 | 0 | 0 | +1.00 KB | [`0000000`](https://example.invalid) | [Compare](https://example.invalid) |\n",
+                encoding="utf-8",
+            )
+
+            for env, new_speed in (("bloxd.io", 15), ("staging.bloxd.io", 20)):
+                main_js = root / "bundles" / env / "main.js"
+                main_js.write_text(
+                    f"const speed = {new_speed};\nconst keep = true;\nconst added = 'yes';\n",
+                    encoding="utf-8",
+                )
+                old_chunk = root / "bundles" / env / "chunks" / "js" / "old.js"
+                old_chunk.unlink()
+                new_chunk = root / "bundles" / env / "chunks" / "js" / "new.js"
+                new_chunk.write_text("export const fresh = 42;\n", encoding="utf-8")
+
+            prev_state = {
+                "bloxd.io": {
+                    "build": "old.11111111",
+                    "files": [
+                        {"path": "bundles/bloxd.io/main.js", "identity": "js:main", "cdn_hash": "11111111", "size": 36},
+                        {"path": "bundles/bloxd.io/chunks/js/old.js", "identity": "chunk.js:old", "cdn_hash": "22222222", "size": 26},
+                    ],
+                },
+                "staging.bloxd.io": {
+                    "build": "old.11111111",
+                    "files": [
+                        {"path": "bundles/staging.bloxd.io/main.js", "identity": "js:main", "cdn_hash": "11111111", "size": 36},
+                        {"path": "bundles/staging.bloxd.io/chunks/js/old.js", "identity": "chunk.js:old", "cdn_hash": "22222222", "size": 26},
+                    ],
+                },
+            }
+            curr_state = {
+                "bloxd.io": {
+                    "build": "newA.aaaaaaaa",
+                    "files": [
+                        {"path": "bundles/bloxd.io/main.js", "identity": "js:main", "cdn_hash": "aaaaaaaa", "size": 56},
+                        {"path": "bundles/bloxd.io/chunks/js/new.js", "identity": "chunk.js:new", "cdn_hash": "bbbbbbbb", "size": 24},
+                    ],
+                },
+                "staging.bloxd.io": {
+                    "build": "newB.cccccccc",
+                    "files": [
+                        {"path": "bundles/staging.bloxd.io/main.js", "identity": "js:main", "cdn_hash": "cccccccc", "size": 56},
+                        {"path": "bundles/staging.bloxd.io/chunks/js/new.js", "identity": "chunk.js:new", "cdn_hash": "dddddddd", "size": 24},
+                    ],
+                },
+            }
+            updated = ["bloxd.io", "staging.bloxd.io"]
+            now_text = "2026-11-20T20:00 JST"
+
+            collected = monitor.write_fixed_change_reports(
+                root,
+                previous_state=prev_state,
+                current_state=curr_state,
+                updated_envs=updated,
+                now_text=now_text,
+                base_commit=base_sha,
+            )
+            monitor.CHANGES_PATH.write_text(
+                monitor.render_changes(
+                    prev_state,
+                    curr_state,
+                    updated,
+                    now_text,
+                    monitor.readable_diff_report_path(now_text, curr_state, updated),
+                    collected_diffs=collected,
+                    base_commit=base_sha,
+                ),
+                encoding="utf-8",
+            )
+            monitor.update_history_file(
+                monitor.HISTORY_PATH,
+                previous_state=prev_state,
+                current_state=curr_state,
+                updated_envs=updated,
+                now_text=now_text,
+                collected_diffs=collected,
+                base_commit=base_sha,
+            )
+
+            # Verify no per-build diffs/ directory was created
+            self.assertFalse((root / "diffs").exists())
+            self.assertTrue(monitor.ADDED_REPORT_PATH.is_file())
+            self.assertTrue(monitor.REMOVED_REPORT_PATH.is_file())
+            self.assertTrue(monitor.CHANGED_REPORT_PATH.is_file())
+
+            added_md = monitor.ADDED_REPORT_PATH.read_text(encoding="utf-8")
+            removed_md = monitor.REMOVED_REPORT_PATH.read_text(encoding="utf-8")
+            changed_md = monitor.CHANGED_REPORT_PATH.read_text(encoding="utf-8")
+            history_md = monitor.HISTORY_PATH.read_text(encoding="utf-8")
+
+            self.assertIn("bundles/bloxd.io/chunks/js/new.js", added_md)
+            self.assertIn("+ const added = 'yes';", added_md)
+            self.assertIn("bundles/bloxd.io/chunks/js/old.js", removed_md)
+            self.assertIn("- const speed = 10;", changed_md)
+            self.assertIn("+ const speed = 15;", changed_md)
+            self.assertIn("+ const speed = 20;", changed_md)
+
+            # History preserves earlier row and records both environments separately
+            self.assertIn("`init.00000000`", history_md)
+            self.assertIn("| 2026-11-20 20:00 | bloxd.io | `newA.aaaaaaaa` | `old.11111111` |", history_md)
+            self.assertIn("| 2026-11-20 20:00 | staging.bloxd.io | `newB.cccccccc` | `old.11111111` |", history_md)
+
+            # Verify snapshot commit & Git history restoration
+            git("add", "-A")
+            git("commit", "-qm", "second snapshot")
+            second_sha = subprocess.check_output(
+                ["git", "rev-parse", "HEAD"], cwd=root, text=True
+            ).strip()
+            restored_old = subprocess.check_output(
+                ["git", "show", f"{base_sha}:bundles/bloxd.io/main.js"], cwd=root, text=True
+            )
+            restored_new = subprocess.check_output(
+                ["git", "show", f"{second_sha}:bundles/bloxd.io/main.js"], cwd=root, text=True
+            )
+            self.assertIn("const speed = 10;", restored_old)
+            self.assertIn("const speed = 15;", restored_new)
 
 
 if __name__ == "__main__":

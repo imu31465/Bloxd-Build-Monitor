@@ -21,6 +21,7 @@ import re
 import shutil
 import subprocess
 import sys
+import tempfile
 import time
 import urllib.error
 import urllib.request
@@ -46,7 +47,13 @@ ROOT = Path(__file__).resolve().parents[1]
 STATE_PATH = ROOT / ".monitor-state.json"
 README_PATH = ROOT / "README.md"
 CHANGES_PATH = ROOT / "CHANGES.md"
+HISTORY_PATH = ROOT / "HISTORY.md"
+CHANGES_DIR = ROOT / "changes"
+ADDED_REPORT_PATH = CHANGES_DIR / "added.md"
+REMOVED_REPORT_PATH = CHANGES_DIR / "removed.md"
+CHANGED_REPORT_PATH = CHANGES_DIR / "changed.md"
 BUNDLES_DIR = ROOT / "bundles"
+REPO_URL = "https://github.com/imu31465/Bloxd-Build-Monitor"
 STORAGE_VERSION = 2
 SITES = {
     "bloxd.io": "https://bloxd.io/",
@@ -84,7 +91,18 @@ FILENAME_RE = re.compile(
     r"^(?P<build>[a-zA-Z0-9_-]+)\.(?P<name>[a-zA-Z0-9_-]+)\.(?P<hash>[a-fA-F0-9]{8,64})"
     r"\.(?P<kind>chunk\.(?:js|css)|js|css)$"
 )
+HUNK_HEADER_RE = re.compile(
+    r"^@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@(?:\s*(.*))?$"
+)
 JST = ZoneInfo("Asia/Tokyo")
+
+MAX_DIFF_REPORT_PART_BYTES = 8 * 1024 * 1024
+MAX_SINGLE_DIFF_HUNK_BYTES = 80 * 1024 * 1024
+MAX_INLINE_CHANGED_HUNKS_PER_FILE = 8
+MAX_INLINE_ADDED_REMOVED_HUNKS_PER_FILE = 30
+MAX_REMAINING_LINKS_PER_FILE = 15
+MAX_SNIPPET_LINES_PER_HUNK = 16
+MAX_SNIPPET_LINE_CHARS = 280
 
 
 def request(url: str, method: str = "GET", accept: str = "text/html,*/*;q=0.8"):
@@ -96,8 +114,8 @@ def request(url: str, method: str = "GET", accept: str = "text/html,*/*;q=0.8"):
     return urllib.request.urlopen(req, timeout=30)
 
 
-def find_main_bundle(html: str, host: str) -> tuple[str, str, str]:
-    for match in BUNDLE_RE.finditer(html):
+def find_main_bundle(html_text: str, host: str) -> tuple[str, str, str]:
+    for match in BUNDLE_RE.finditer(html_text):
         matched_host = match.group("host")
         if matched_host and matched_host != host:
             continue
@@ -108,9 +126,9 @@ def find_main_bundle(html: str, host: str) -> tuple[str, str, str]:
     raise RuntimeError(f"Could not find {host} main bundle reference in homepage HTML")
 
 
-def find_main_css(html: str, host: str) -> str | None:
+def find_main_css(html_text: str, host: str) -> str | None:
     """Return the homepage main CSS path relative to the site root, if present."""
-    for match in MAIN_CSS_RE.finditer(html):
+    for match in MAIN_CSS_RE.finditer(html_text):
         if match.group("host") and match.group("host") != host:
             continue
         if match.group("absolute"):
@@ -326,9 +344,9 @@ def probe(
     with request(site_url) as response:
         if response.status != 200:
             raise RuntimeError(f"{environment} homepage returned HTTP {response.status}")
-        html = response.read(2_000_000).decode("utf-8", "replace")
+        html_text = response.read(2_000_000).decode("utf-8", "replace")
 
-    url, build_name, asset_hash = find_main_bundle(html, environment)
+    url, build_name, asset_hash = find_main_bundle(html_text, environment)
     record = {
         "build": f"{build_name}.{asset_hash}",
         "build_name": build_name,
@@ -406,7 +424,7 @@ def probe(
     main_text = main_dest.read_text(encoding="utf-8", errors="replace")
     assets = set(parse_runtime_assets(main_text))
     assets.add(f"static/js/{main_name}")
-    css_rel = find_main_css(html, environment)
+    css_rel = find_main_css(html_text, environment)
     if css_rel:
         assets.add(css_rel)
     planned = sorted(assets)
@@ -589,79 +607,72 @@ def is_named_chunk(identity: str) -> bool:
     return name != "main" and not name.isdigit()
 
 
-def render_changes(previous_state: dict, current_state: dict, updated_envs: list, now_text: str, diff_report_path: str | None = None) -> str:
-    """Render a compact summary with green/red diff highlighting."""
-    subject = (
-        f"Bloxd build update — {now_text} ("
-        + ", ".join(f"{env}={current_state[env]['build']}" for env in updated_envs)
-        + ")"
-    )
-    lines = [
-        subject,
-        "",
-        "Bundle files use stable Webpack paths; original CDN names and hashes remain in .monitor-state.json.",
-    ]
-    if diff_report_path:
-        lines.extend(["", f"Readable per-file diff: [{diff_report_path}]({diff_report_path})"])
-
-    for environment in updated_envs:
-        record = current_state[environment]
-        previous = previous_state.get(environment) or {}
-        previous_files = previous.get("files") or []
-        current_files = record.get("files") or []
-        old_build = previous.get("build", "baseline")
-        lines.extend(["", f"## {environment} — {old_build} → {record['build']}", "", "```diff"])
-        if not previous_files:
-            total = sum(entry.get("size") or 0 for entry in current_files)
-            lines.append(f"+ Baseline: {len(current_files)} files ({human_size(total)})")
-            lines.extend(["```", ""])
-            continue
-
-        diff = diff_manifests(previous_files, current_files)
-        total = sum(entry.get("size") or 0 for entry in current_files)
-        previous_total = total - diff["size_delta"]
-        lines.extend([
-            f"- Files: {diff['previous_count']} files",
-            f"+ Files: {diff['current_count']} files "
-            f"(changed {len(diff['changed'])}, added {len(diff['added'])}, "
-            f"removed {len(diff['removed'])}, unchanged {diff['unchanged_count']})",
-            f"- Total size: {human_size(previous_total)}",
-            f"+ Total size: {human_size(total)} ({human_delta(diff['size_delta'])})",
-        ])
-        notable = sorted(
-            diff["changed"],
-            key=lambda entry: abs(entry[4] - entry[3]),
-            reverse=True,
-        )[:10]
-        if notable:
-            lines.append("+ Largest changes:")
-            for identity, old_hash, new_hash, old_size, new_size in notable:
-                delta = new_size - old_size
-                marker = "+" if delta >= 0 else "-"
-                direction = "increased" if delta >= 0 else "decreased"
-                lines.append(
-                    f"{marker} {stable_storage_path(identity)} {direction} "
-                    f"{human_size(abs(delta))} ({old_hash} → {new_hash})"
-                )
-        if diff["added"]:
-            names = ", ".join(stable_storage_path(identity) for identity, _, _ in diff["added"][:8])
-            suffix = f" (+{len(diff['added']) - 8} more)" if len(diff["added"]) > 8 else ""
-            lines.append(f"+ Added files: {names}{suffix}")
-        if diff["removed"]:
-            names = ", ".join(stable_storage_path(identity) for identity, _, _ in diff["removed"][:8])
-            suffix = f" (+{len(diff['removed']) - 8} more)" if len(diff["removed"]) > 8 else ""
-            lines.append(f"- Removed files: {names}{suffix}")
-        lines.extend(["```", ""])
-    return "\n".join(lines).rstrip() + "\n"
+def is_bundle_path(relative_path: str) -> bool:
+    """Return True if and only if relative_path is a bundle file under bundles/<env>/."""
+    normalized = relative_path.replace("\\", "/").lstrip("/")
+    if not normalized.startswith("bundles/"):
+        return False
+    parts = normalized.split("/")
+    if len(parts) < 3:
+        return False
+    env = parts[1]
+    if env not in SITES:
+        return False
+    return normalized.endswith((".js", ".css", ".mjs", ".cjs", ".wasm"))
 
 
-def readable_diff_report_path(now_text: str, state: dict, updated_envs: list) -> str:
-    timestamp = re.sub(r"\D", "", now_text)[:12] or "latest"
-    build_slug = "-".join(
-        re.sub(r"[^A-Za-z0-9_-]+", "-", str(state[env].get("build", env))).strip("-")
-        for env in updated_envs
-    )
-    return f"diffs/{timestamp}-{build_slug}/index.md"
+def build_tag_name(environment: str, build_id: str) -> str:
+    """Return the deterministic Git tag name for an environment build snapshot."""
+    safe_env = re.sub(r"[^A-Za-z0-9._-]+", "-", environment)
+    safe_build = re.sub(r"[^A-Za-z0-9._-]+", "-", build_id)
+    return f"build/{safe_env}/{safe_build}"
+
+
+def github_diff_anchor(path: str) -> str:
+    """Return GitHub's SHA-256 diff anchor for a repository-relative path."""
+    normalized = path.replace("\\", "/").lstrip("/")
+    return "diff-" + hashlib.sha256(normalized.encode("utf-8")).hexdigest()
+
+
+def build_github_links(
+    path: str,
+    base_ref: str,
+    head_ref: str,
+    old_range: tuple[int, int] | None = None,
+    new_range: tuple[int, int] | None = None,
+    repo_url: str = REPO_URL,
+) -> dict[str, str]:
+    """Construct verified GitHub Compare, hunk anchor, and before/after blob line URLs."""
+    normalized = path.replace("\\", "/").lstrip("/")
+    anchor = github_diff_anchor(normalized)
+    compare_base = f"{repo_url}/compare/{base_ref}...{head_ref}"
+    file_diff_url = f"{compare_base}#{anchor}"
+
+    hunk_url = file_diff_url
+    if new_range and new_range[0] > 0:
+        hunk_url = f"{compare_base}#{anchor}R{new_range[0]}"
+    elif old_range and old_range[0] > 0:
+        hunk_url = f"{compare_base}#{anchor}L{old_range[0]}"
+
+    after_url = ""
+    if new_range and new_range[0] > 0:
+        start, end = new_range
+        line_frag = f"L{start}" if start == end else f"L{start}-L{end}"
+        after_url = f"{repo_url}/blob/{head_ref}/{normalized}#{line_frag}"
+
+    before_url = ""
+    if old_range and old_range[0] > 0:
+        start, end = old_range
+        line_frag = f"L{start}" if start == end else f"L{start}-L{end}"
+        before_url = f"{repo_url}/blob/{base_ref}/{normalized}#{line_frag}"
+
+    return {
+        "compare_url": compare_base,
+        "file_diff_url": file_diff_url,
+        "hunk_url": hunk_url,
+        "after_url": after_url,
+        "before_url": before_url,
+    }
 
 
 def normalize_minified_js_identifiers(source: str) -> str:
@@ -859,6 +870,7 @@ def normalize_minified_js_identifiers(source: str) -> str:
 
     return "".join(output)
 
+
 def split_unified_hunks(diff_lines: list[str]) -> list[list[str]]:
     """Split a unified diff into independent @@ hunks."""
     hunks = []
@@ -875,12 +887,1016 @@ def split_unified_hunks(diff_lines: list[str]) -> list[list[str]]:
     return hunks
 
 
+def _zero_context_unified_hunks(compare_old: str, compare_new: str) -> list[list[str]]:
+    """Compute independent zero-context (n=0) diff hunks rapidly using git diff or difflib."""
+    total_len = len(compare_old) + len(compare_new)
+    if total_len > 64_000:
+        try:
+            with (
+                tempfile.NamedTemporaryFile("w", encoding="utf-8", suffix=".old") as f_old,
+                tempfile.NamedTemporaryFile("w", encoding="utf-8", suffix=".new") as f_new,
+            ):
+                f_old.write(compare_old)
+                if compare_old and not compare_old.endswith("\n"):
+                    f_old.write("\n")
+                f_old.flush()
+                f_new.write(compare_new)
+                if compare_new and not compare_new.endswith("\n"):
+                    f_new.write("\n")
+                f_new.flush()
+                res = subprocess.run(
+                    ["git", "diff", "--no-index", "-U0", f_old.name, f_new.name],
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                    text=True,
+                    encoding="utf-8",
+                    errors="replace",
+                    check=False,
+                )
+                if res.returncode in (0, 1):
+                    return split_unified_hunks(res.stdout.splitlines())
+        except OSError:
+            pass
+
+    diff_lines = list(
+        difflib.unified_diff(
+            compare_old.splitlines(),
+            compare_new.splitlines(),
+            fromfile="a/file",
+            tofile="b/file",
+            lineterm="",
+            n=0,
+        )
+    )
+    return split_unified_hunks(diff_lines)
+
+
+def classify_bundle_file_diff(
+    path: str,
+    old_bytes: bytes | None,
+    new_bytes: bytes | None,
+) -> dict:
+    """Classify a single bundle file's changes into Added, Removed, and Changed items.
+
+    - Only files under `bundles/<env>/` are eligible.
+    - For JavaScript files, 2-character identifiers are normalized via
+      `normalize_minified_js_identifiers()` before comparison.
+    - Pure file additions or pure code insertions -> `added`
+    - Pure file deletions or pure code deletions -> `removed`
+    - Replacements of existing code -> `changed` (each independent hunk is a separate item)
+    """
+    normalized_path = path.replace("\\", "/").lstrip("/")
+    if not is_bundle_path(normalized_path):
+        return {
+            "path": normalized_path,
+            "status": "ignored",
+            "added": [],
+            "removed": [],
+            "changed": [],
+            "identifier_only": False,
+            "binary": False,
+        }
+
+    old_exists = old_bytes is not None
+    new_exists = new_bytes is not None
+    old_raw = old_bytes or b""
+    new_raw = new_bytes or b""
+
+    # Handle binary files if any
+    is_binary = b"\0" in old_raw or b"\0" in new_raw
+    if not is_binary:
+        try:
+            old_text = old_raw.decode("utf-8") if old_exists else ""
+            new_text = new_raw.decode("utf-8") if new_exists else ""
+        except UnicodeDecodeError:
+            is_binary = True
+            old_text = ""
+            new_text = ""
+    else:
+        old_text = ""
+        new_text = ""
+
+    if is_binary:
+        old_sha = hashlib.sha256(old_raw).hexdigest()[:16] if old_exists else None
+        new_sha = hashlib.sha256(new_raw).hexdigest()[:16] if new_exists else None
+        if not old_exists and new_exists:
+            return {
+                "path": normalized_path,
+                "status": "added",
+                "added": [{
+                    "path": normalized_path,
+                    "kind": "added_file",
+                    "old_range": None,
+                    "new_range": (1, 1),
+                    "old_lines": [],
+                    "new_lines": [f"Binary file added ({len(new_raw):,} bytes, sha256 {new_sha})"],
+                    "context": "binary file",
+                }],
+                "removed": [],
+                "changed": [],
+                "identifier_only": False,
+                "binary": True,
+            }
+        if old_exists and not new_exists:
+            return {
+                "path": normalized_path,
+                "status": "removed",
+                "added": [],
+                "removed": [{
+                    "path": normalized_path,
+                    "kind": "removed_file",
+                    "old_range": (1, 1),
+                    "new_range": None,
+                    "old_lines": [f"Binary file removed ({len(old_raw):,} bytes, sha256 {old_sha})"],
+                    "new_lines": [],
+                    "context": "binary file",
+                }],
+                "changed": [],
+                "identifier_only": False,
+                "binary": True,
+            }
+        if old_raw != new_raw:
+            return {
+                "path": normalized_path,
+                "status": "modified",
+                "added": [],
+                "removed": [],
+                "changed": [{
+                    "path": normalized_path,
+                    "kind": "changed_binary",
+                    "old_range": (1, 1),
+                    "new_range": (1, 1),
+                    "old_lines": [f"Binary ({len(old_raw):,} bytes, sha256 {old_sha})"],
+                    "new_lines": [f"Binary ({len(new_raw):,} bytes, sha256 {new_sha})"],
+                    "context": "binary file",
+                }],
+                "identifier_only": False,
+                "binary": True,
+            }
+        return {
+            "path": normalized_path,
+            "status": "unchanged",
+            "added": [],
+            "removed": [],
+            "changed": [],
+            "identifier_only": False,
+            "binary": True,
+        }
+
+    if not old_exists and new_exists:
+        new_lines = new_text.splitlines()
+        line_count = max(1, len(new_lines))
+        return {
+            "path": normalized_path,
+            "status": "added",
+            "added": [{
+                "path": normalized_path,
+                "kind": "added_file",
+                "old_range": None,
+                "new_range": (1, line_count),
+                "old_lines": [],
+                "new_lines": new_lines,
+                "context": f"New bundle file ({len(new_lines)} lines, {len(new_raw):,} bytes)",
+            }],
+            "removed": [],
+            "changed": [],
+            "identifier_only": False,
+            "binary": False,
+        }
+
+    if old_exists and not new_exists:
+        old_lines = old_text.splitlines()
+        line_count = max(1, len(old_lines))
+        return {
+            "path": normalized_path,
+            "status": "removed",
+            "added": [],
+            "removed": [{
+                "path": normalized_path,
+                "kind": "removed_file",
+                "old_range": (1, line_count),
+                "new_range": None,
+                "old_lines": old_lines,
+                "new_lines": [],
+                "context": f"Removed bundle file ({len(old_lines)} lines, {len(old_raw):,} bytes)",
+            }],
+            "changed": [],
+            "identifier_only": False,
+            "binary": False,
+        }
+
+    if old_text == new_text:
+        return {
+            "path": normalized_path,
+            "status": "unchanged",
+            "added": [],
+            "removed": [],
+            "changed": [],
+            "identifier_only": False,
+            "binary": False,
+        }
+
+    is_js = Path(normalized_path).suffix.lower() in {".js", ".mjs", ".cjs"}
+    compare_old = normalize_minified_js_identifiers(old_text) if is_js else old_text
+    compare_new = normalize_minified_js_identifiers(new_text) if is_js else new_text
+
+    if compare_old == compare_new:
+        return {
+            "path": normalized_path,
+            "status": "filtered",
+            "added": [],
+            "removed": [],
+            "changed": [],
+            "identifier_only": True,
+            "binary": False,
+        }
+
+    orig_old_lines = old_text.splitlines()
+    orig_new_lines = new_text.splitlines()
+    hunks = _zero_context_unified_hunks(compare_old, compare_new)
+
+    added_items = []
+    removed_items = []
+    changed_items = []
+
+    for hunk in hunks:
+        header = hunk[0]
+        match = HUNK_HEADER_RE.match(header)
+        if not match:
+            continue
+        old_start = int(match.group(1))
+        old_count = int(match.group(2)) if match.group(2) is not None else 1
+        new_start = int(match.group(3))
+        new_count = int(match.group(4)) if match.group(4) is not None else 1
+        context = (match.group(5) or "").strip()
+
+        old_slice = (
+            orig_old_lines[old_start - 1 : old_start - 1 + old_count]
+            if old_count > 0
+            else []
+        )
+        new_slice = (
+            orig_new_lines[new_start - 1 : new_start - 1 + new_count]
+            if new_count > 0
+            else []
+        )
+
+        old_range = (old_start, old_start + old_count - 1) if old_count > 0 else None
+        new_range = (new_start, new_start + new_count - 1) if new_count > 0 else None
+
+        if old_count > 0 and new_count > 0:
+            changed_items.append({
+                "path": normalized_path,
+                "kind": "changed_code",
+                "old_range": old_range,
+                "new_range": new_range,
+                "old_lines": old_slice,
+                "new_lines": new_slice,
+                "context": context,
+            })
+        elif new_count > 0:
+            added_items.append({
+                "path": normalized_path,
+                "kind": "added_code",
+                "old_range": (old_start, old_start) if old_start > 0 else None,
+                "new_range": new_range,
+                "old_lines": [],
+                "new_lines": new_slice,
+                "context": context,
+            })
+        elif old_count > 0:
+            removed_items.append({
+                "path": normalized_path,
+                "kind": "removed_code",
+                "old_range": old_range,
+                "new_range": (new_start, new_start) if new_start > 0 else None,
+                "old_lines": old_slice,
+                "new_lines": [],
+                "context": context,
+            })
+
+    return {
+        "path": normalized_path,
+        "status": "modified",
+        "added": added_items,
+        "removed": removed_items,
+        "changed": changed_items,
+        "identifier_only": False,
+        "binary": False,
+    }
+
+
+def _classify_git_entry_worker(args: tuple[str, str, str | None, str, str]) -> dict:
+    root_str, base_ref, head_ref, status, relative_path = args
+    root = Path(root_str)
+
+    if status == "A":
+        old_bytes = None
+    else:
+        old_res = subprocess.run(
+            ["git", "show", f"{base_ref}:{relative_path}"],
+            cwd=root,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            check=False,
+        )
+        old_bytes = old_res.stdout if old_res.returncode == 0 else None
+
+    if status == "D":
+        new_bytes = None
+    elif head_ref:
+        new_res = subprocess.run(
+            ["git", "show", f"{head_ref}:{relative_path}"],
+            cwd=root,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            check=False,
+        )
+        new_bytes = new_res.stdout if new_res.returncode == 0 else None
+    else:
+        target = root / relative_path
+        new_bytes = target.read_bytes() if target.is_file() else None
+
+    return classify_bundle_file_diff(relative_path, old_bytes, new_bytes)
+
+
+def collect_bundle_diffs(
+    root: Path,
+    base_ref: str = "HEAD",
+    head_ref: str | None = None,
+    environments: list[str] | None = None,
+) -> dict:
+    """Collect and classify all bundle changes between `base_ref` and `head_ref` (or worktree).
+
+    Non-bundle files (README.md, CHANGES.md, HISTORY.md, .monitor-state.json, scripts, tests, etc.)
+    are strictly excluded.
+    """
+    def git_out(*args: str) -> str:
+        res = subprocess.run(
+            ["git", *args],
+            cwd=root,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            check=False,
+        )
+        if res.returncode != 0:
+            raise RuntimeError(f"git {' '.join(args)} failed: {res.stderr.strip()}")
+        return res.stdout
+
+    env_list = list(environments) if environments else list(SITES.keys())
+    path_specs = [f"bundles/{env}" for env in env_list]
+
+    entries_by_path: dict[str, str] = {}
+    if head_ref:
+        raw = git_out("diff", "--no-renames", "--name-status", "-z", base_ref, head_ref, "--", *path_specs)
+        tokens = [tok for tok in raw.split("\0") if tok]
+        for idx in range(0, len(tokens) - 1, 2):
+            status = tokens[idx][0]
+            rel_path = tokens[idx + 1]
+            if is_bundle_path(rel_path):
+                entries_by_path[rel_path] = status
+    else:
+        raw = git_out("diff", "--no-renames", "--name-status", "-z", base_ref, "--", *path_specs)
+        tokens = [tok for tok in raw.split("\0") if tok]
+        for idx in range(0, len(tokens) - 1, 2):
+            status = tokens[idx][0]
+            rel_path = tokens[idx + 1]
+            if is_bundle_path(rel_path):
+                entries_by_path[rel_path] = status
+        untracked = git_out("ls-files", "--others", "--exclude-standard", "-z", "--", *path_specs).split("\0")
+        for rel_path in untracked:
+            if rel_path and is_bundle_path(rel_path):
+                entries_by_path.setdefault(rel_path, "A")
+
+    sorted_items = sorted(entries_by_path.items(), key=lambda item: item[0])
+    worker_args = [
+        (str(root), base_ref, head_ref, status, rel_path)
+        for rel_path, status in sorted_items
+    ]
+
+    if not worker_args:
+        file_results = []
+    elif len(worker_args) <= 4:
+        file_results = [_classify_git_entry_worker(arg) for arg in worker_args]
+    else:
+        workers = max(1, min(os.cpu_count() or 2, 8))
+        with concurrent.futures.ProcessPoolExecutor(max_workers=workers) as pool:
+            file_results = list(pool.map(_classify_git_entry_worker, worker_args))
+
+    by_env: dict[str, dict] = {
+        env: {
+            "files": [],
+            "added": [],
+            "removed": [],
+            "changed": [],
+            "added_files_count": 0,
+            "removed_files_count": 0,
+            "changed_files_count": 0,
+            "filtered_files_count": 0,
+        }
+        for env in env_list
+    }
+
+    for res in file_results:
+        rel_path = res["path"]
+        parts = rel_path.split("/")
+        if len(parts) < 3:
+            continue
+        env = parts[1]
+        if env not in by_env:
+            continue
+        env_bucket = by_env[env]
+        env_bucket["files"].append(res)
+        env_bucket["added"].extend(res["added"])
+        env_bucket["removed"].extend(res["removed"])
+        env_bucket["changed"].extend(res["changed"])
+        if res["status"] == "added":
+            env_bucket["added_files_count"] += 1
+        elif res["status"] == "removed":
+            env_bucket["removed_files_count"] += 1
+        elif res["status"] == "filtered":
+            env_bucket["filtered_files_count"] += 1
+        elif res["added"] or res["removed"] or res["changed"]:
+            env_bucket["changed_files_count"] += 1
+
+    return {
+        "base_ref": base_ref,
+        "head_ref": head_ref,
+        "environments": by_env,
+        "total_added": sum(len(b["added"]) for b in by_env.values()),
+        "total_removed": sum(len(b["removed"]) for b in by_env.values()),
+        "total_changed": sum(len(b["changed"]) for b in by_env.values()),
+    }
+
+
+def _truncate_line(line: str, max_chars: int = MAX_SNIPPET_LINE_CHARS) -> str:
+    if len(line) <= max_chars:
+        return line
+    return line[:max_chars] + " … [truncated]"
+
+
+def _format_range_label(rng: tuple[int, int] | None, prefix: str = "L") -> str:
+    if not rng or rng[0] <= 0:
+        return "—"
+    start, end = rng
+    return f"{prefix}{start}" if start == end else f"{prefix}{start}-{prefix}{end}"
+
+
+def _resolve_env_refs(
+    environment: str,
+    previous_state: dict,
+    current_state: dict,
+    base_commit: str,
+    head_commit: str | None = None,
+) -> tuple[str, str]:
+    """Return `(base_ref, head_ref)` suitable for GitHub URLs for `environment`.
+
+    When `head_commit` is omitted (i.e. while generating reports inside a build
+    update before the snapshot commit is created), `main` is used so every
+    Compare (`<base_commit>...main`) and Blob (`/blob/main/...`) link resolves
+    immediately on GitHub once pushed.
+    """
+    head_ref = head_commit or "main"
+    return base_commit, head_ref
+
+
+def render_category_report(
+    category: str,
+    collected: dict,
+    previous_state: dict,
+    current_state: dict,
+    updated_envs: list[str],
+    now_text: str,
+    base_commit: str,
+    head_commit: str | None = None,
+    repo_url: str = REPO_URL,
+    max_hunks_per_file: int | None = None,
+) -> str:
+    """Render `changes/added.md`, `changes/removed.md`, or `changes/changed.md`."""
+    assert category in ("added", "removed", "changed")
+    titles = {
+        "added": "Added — Bundle Additions Report",
+        "removed": "Removed — Bundle Deletions Report",
+        "changed": "Changed — Bundle Modifications Report",
+    }
+    descriptions = {
+        "added": (
+            "Records newly added bundle files and pure code insertions inside `bundles/` "
+            "(after masking 2-character minified JS identifiers)."
+        ),
+        "removed": (
+            "Records removed bundle files and pure code deletions inside `bundles/` "
+            "(after masking 2-character minified JS identifiers)."
+        ),
+        "changed": (
+            "Records fine-grained code replacements inside `bundles/` "
+            "(after masking 2-character minified JS identifiers). "
+            "Each independent modification hunk is listed separately with before/after code and direct GitHub diff links."
+        ),
+    }
+    if max_hunks_per_file is None:
+        max_hunks_per_file = (
+            MAX_INLINE_CHANGED_HUNKS_PER_FILE
+            if category == "changed"
+            else MAX_INLINE_ADDED_REMOVED_HUNKS_PER_FILE
+        )
+
+    fence = chr(96) * 3
+    total_count = collected[f"total_{category}"]
+    lines = [
+        f"# {titles[category]}",
+        "",
+        f"- **Updated at**: `{now_text}`",
+        f"- **Environments updated**: {', '.join(f'`{env}`' for env in updated_envs) if updated_envs else 'none'}",
+        f"- **Total {category.capitalize()} items**: **{total_count}**",
+        "- **Navigation**: [Summary (`CHANGES.md`)](../CHANGES.md) · [Build History (`HISTORY.md`)](../HISTORY.md) · [Added (`changes/added.md`)](added.md) · [Removed (`changes/removed.md`)](removed.md) · [Changed (`changes/changed.md`)](changed.md)",
+        "",
+        descriptions[category],
+        "",
+    ]
+
+    if not updated_envs or total_count == 0:
+        lines.append(f"No {category} bundle items were detected in this build update.")
+        return "\n".join(lines).rstrip() + "\n"
+
+    # Detect if staging.bloxd.io has identical build transition as bloxd.io
+    for env in updated_envs:
+        env_data = collected["environments"].get(env) or {
+            "files": [],
+            "added": [],
+            "removed": [],
+            "changed": [],
+        }
+        old_build = (previous_state.get(env) or {}).get("build", "baseline")
+        new_build = (current_state.get(env) or {}).get("build", "unknown")
+        base_ref, head_ref = _resolve_env_refs(
+            env, previous_state, current_state, base_commit, head_commit
+        )
+        compare_url = f"{repo_url}/compare/{base_ref}...{head_ref}"
+        items = env_data[category]
+
+        lines.extend([
+            f"## `{env}` — `{old_build}` → `{new_build}`",
+            "",
+            f"- **{category.capitalize()} count**: **{len(items)}**",
+            f"- **GitHub Compare**: [`{base_ref[:12]}...{head_ref}`]({compare_url})",
+            "",
+        ])
+
+        if not items:
+            lines.extend([f"No {category} items in `{env}`.", ""])
+            continue
+
+        # Check if this environment is an exact mirror of an earlier updated environment in the same run
+        mirror_of = None
+        for earlier_env in updated_envs:
+            if earlier_env == env:
+                break
+            earlier_old = (previous_state.get(earlier_env) or {}).get("build")
+            earlier_new = (current_state.get(earlier_env) or {}).get("build")
+            if (
+                earlier_old == old_build
+                and earlier_new == new_build
+                and len(items) > 100
+                and len(collected["environments"].get(earlier_env, {}).get(category, [])) == len(items)
+            ):
+                mirror_of = earlier_env
+                break
+
+        files_with_items = [
+            f_res for f_res in env_data["files"] if f_res[category]
+        ]
+
+        if mirror_of:
+            lines.extend([
+                f"> `{env}` deployed the identical build transition (`{old_build}` → `{new_build}`) as `{mirror_of}` (**{len(items)}** {category} items across **{len(files_with_items)}** files). File-level GitHub diff links for `{env}` are listed below; see the `{mirror_of}` section above for inline code blocks.",
+                "",
+            ])
+            for f_res in files_with_items:
+                f_path = f_res["path"]
+                f_items = f_res[category]
+                first_item = f_items[0]
+                links = build_github_links(
+                    f_path,
+                    base_ref,
+                    head_ref,
+                    old_range=first_item["old_range"],
+                    new_range=first_item["new_range"],
+                    repo_url=repo_url,
+                )
+                lines.append(
+                    f"- `{f_path}` — **{len(f_items)}** {category} item(s) · "
+                    f"[GitHub File Diff]({links['file_diff_url']}) · "
+                    f"[First Hunk]({links['hunk_url']})"
+                )
+            lines.append("")
+            continue
+
+        for f_res in files_with_items:
+            f_path = f_res["path"]
+            f_items = f_res[category]
+            first_links = build_github_links(
+                f_path,
+                base_ref,
+                head_ref,
+                old_range=f_items[0]["old_range"],
+                new_range=f_items[0]["new_range"],
+                repo_url=repo_url,
+            )
+            lines.extend([
+                "<details>",
+                f"<summary><code>{html.escape(f_path)}</code> · <strong>{len(f_items)}</strong> {category} item(s)</summary>",
+                "",
+                f"- **File**: `{f_path}`",
+                f"- **GitHub File Diff**: [View file diff on GitHub]({first_links['file_diff_url']})",
+                "",
+            ])
+
+            displayed_items = f_items[:max_hunks_per_file]
+            for idx, item in enumerate(displayed_items, start=1):
+                old_rng = item["old_range"]
+                new_rng = item["new_range"]
+                old_pos = _format_range_label(old_rng, "L")
+                new_pos = _format_range_label(new_rng, "L")
+                links = build_github_links(
+                    f_path,
+                    base_ref,
+                    head_ref,
+                    old_range=old_rng,
+                    new_range=new_rng,
+                    repo_url=repo_url,
+                )
+
+                link_parts = [
+                    f"[Diff Hunk]({links['hunk_url']})",
+                    f"[File Diff]({links['file_diff_url']})",
+                ]
+                if links["after_url"]:
+                    link_parts.append(f"[After ({new_pos})]({links['after_url']})")
+                if links["before_url"]:
+                    link_parts.append(f"[Before ({old_pos})]({links['before_url']})")
+
+                kind_label = item["kind"].replace("_", " ").capitalize()
+                lines.extend([
+                    f"#### {idx}. `{f_path}` ({kind_label} · before: `{old_pos}` → after: `{new_pos}`)",
+                    "",
+                    f"- **Links**: {' · '.join(link_parts)}",
+                    "",
+                    fence + "diff",
+                ])
+
+                old_lines = item["old_lines"]
+                new_lines = item["new_lines"]
+                for ol in old_lines[:MAX_SNIPPET_LINES_PER_HUNK]:
+                    lines.append("- " + _truncate_line(ol))
+                if len(old_lines) > MAX_SNIPPET_LINES_PER_HUNK:
+                    lines.append(
+                        f"- ... ({len(old_lines) - MAX_SNIPPET_LINES_PER_HUNK} more removed lines; see GitHub link above)"
+                    )
+                for nl in new_lines[:MAX_SNIPPET_LINES_PER_HUNK]:
+                    lines.append("+ " + _truncate_line(nl))
+                if len(new_lines) > MAX_SNIPPET_LINES_PER_HUNK:
+                    lines.append(
+                        f"+ ... ({len(new_lines) - MAX_SNIPPET_LINES_PER_HUNK} more added lines; see GitHub link above)"
+                    )
+                lines.extend([fence, ""])
+
+            if len(f_items) > max_hunks_per_file:
+                remaining = f_items[max_hunks_per_file:]
+                lines.extend([
+                    "<details>",
+                    f"<summary>Remaining {len(remaining)} {category} item(s) in <code>{html.escape(f_path)}</code> (direct GitHub links)</summary>",
+                    "",
+                ])
+                for offset, item in enumerate(
+                    remaining[:MAX_REMAINING_LINKS_PER_FILE],
+                    start=max_hunks_per_file + 1,
+                ):
+                    old_rng = item["old_range"]
+                    new_rng = item["new_range"]
+                    old_pos = _format_range_label(old_rng, "L")
+                    new_pos = _format_range_label(new_rng, "L")
+                    links = build_github_links(
+                        f_path,
+                        base_ref,
+                        head_ref,
+                        old_range=old_rng,
+                        new_range=new_rng,
+                        repo_url=repo_url,
+                    )
+                    lines.append(
+                        f"- Item {offset}: before `{old_pos}` → after `{new_pos}` · "
+                        f"[Diff Hunk]({links['hunk_url']}) · "
+                        f"[After]({links['after_url']}) · "
+                        f"[Before]({links['before_url']})"
+                    )
+                if len(remaining) > MAX_REMAINING_LINKS_PER_FILE:
+                    lines.append(
+                        f"- ... and {len(remaining) - MAX_REMAINING_LINKS_PER_FILE} more items in [GitHub File Diff]({first_links['file_diff_url']})"
+                    )
+                lines.extend(["", "</details>", ""])
+
+            lines.extend(["</details>", ""])
+
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def write_fixed_change_reports(
+    root: Path,
+    previous_state: dict,
+    current_state: dict,
+    updated_envs: list[str],
+    now_text: str,
+    base_commit: str | None = None,
+    head_commit: str | None = None,
+    repo_url: str = REPO_URL,
+) -> dict:
+    """Compute bundle diffs and overwrite `changes/added.md`, `changes/removed.md`, and `changes/changed.md`."""
+    if base_commit is None:
+        res = subprocess.run(
+            ["git", "rev-parse", "HEAD"],
+            cwd=root,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            check=False,
+        )
+        base_commit = res.stdout.strip() if res.returncode == 0 else "HEAD"
+
+    collected = collect_bundle_diffs(
+        root,
+        base_ref=base_commit,
+        head_ref=head_commit,
+        environments=updated_envs,
+    )
+
+    changes_dir = root / "changes"
+    changes_dir.mkdir(parents=True, exist_ok=True)
+
+    for category, filename in (
+        ("added", "added.md"),
+        ("removed", "removed.md"),
+        ("changed", "changed.md"),
+    ):
+        content = render_category_report(
+            category=category,
+            collected=collected,
+            previous_state=previous_state,
+            current_state=current_state,
+            updated_envs=updated_envs,
+            now_text=now_text,
+            base_commit=base_commit,
+            head_commit=head_commit,
+            repo_url=repo_url,
+        )
+        (changes_dir / filename).write_text(content, encoding="utf-8")
+
+    return collected
+
+
+def render_changes(
+    previous_state: dict,
+    current_state: dict,
+    updated_envs: list,
+    now_text: str,
+    diff_report_path: str | None = None,
+    collected_diffs: dict | None = None,
+    base_commit: str | None = None,
+    head_commit: str | None = None,
+    repo_url: str = REPO_URL,
+) -> str:
+    """Render `CHANGES.md` as the entry point for the latest build update."""
+    subject = (
+        f"Bloxd build update — {now_text} ("
+        + ", ".join(f"{env}={current_state[env]['build']}" for env in updated_envs)
+        + ")"
+    )
+    lines = [
+        subject,
+        "",
+        "Bundle files use stable Webpack paths; original CDN names and hashes remain in .monitor-state.json.",
+        "Fixed reports: [Added](changes/added.md) · [Removed](changes/removed.md) · [Changed](changes/changed.md) · [Build History](HISTORY.md)",
+    ]
+    if diff_report_path:
+        lines.extend(["", f"Readable per-file diff: [{diff_report_path}]({diff_report_path})"])
+
+    resolved_base = base_commit or "HEAD"
+    if collected_diffs is not None:
+        lines.extend([
+            "",
+            "| Environment | Previous Build | Current Build | Added | Removed | Changed | Size Delta | GitHub Diff |",
+            "|---|---|---|---:|---:|---:|---:|---|",
+        ])
+        for environment in updated_envs:
+            record = current_state[environment]
+            previous = previous_state.get(environment) or {}
+            old_build = previous.get("build", "baseline")
+            new_build = record.get("build", "unknown")
+            manifest_diff = diff_manifests(previous.get("files") or [], record.get("files") or [])
+            env_diff = collected_diffs.get("environments", {}).get(environment)
+            if env_diff is not None:
+                added_cnt = len(env_diff["added"])
+                removed_cnt = len(env_diff["removed"])
+                changed_cnt = len(env_diff["changed"])
+            else:
+                added_cnt = len(manifest_diff["added"])
+                removed_cnt = len(manifest_diff["removed"])
+                changed_cnt = len(manifest_diff["changed"])
+            base_ref, head_ref = _resolve_env_refs(
+                environment, previous_state, current_state, resolved_base, head_commit
+            )
+            compare_url = f"{repo_url}/compare/{base_ref}...{head_ref}"
+            snapshot_url = f"{repo_url}/tree/{head_ref}"
+            lines.append(
+                f"| {environment} | `{old_build}` | `{new_build}` | "
+                f"[{added_cnt}](changes/added.md) | [{removed_cnt}](changes/removed.md) | "
+                f"[{changed_cnt}](changes/changed.md) | {human_delta(manifest_diff['size_delta'])} | "
+                f"[Compare]({compare_url}) · [Tree]({snapshot_url}) |"
+            )
+
+    for environment in updated_envs:
+        record = current_state[environment]
+        previous = previous_state.get(environment) or {}
+        previous_files = previous.get("files") or []
+        current_files = record.get("files") or []
+        old_build = previous.get("build", "baseline")
+        lines.extend(["", f"## {environment} — {old_build} → {record['build']}", "", "```diff"])
+        if not previous_files:
+            total = sum(entry.get("size") or 0 for entry in current_files)
+            lines.append(f"+ Baseline: {len(current_files)} files ({human_size(total)})")
+            lines.extend(["```", ""])
+            continue
+
+        diff = diff_manifests(previous_files, current_files)
+        env_diff = (collected_diffs or {}).get("environments", {}).get(environment)
+        total = sum(entry.get("size") or 0 for entry in current_files)
+        previous_total = total - diff["size_delta"]
+        lines.extend([
+            f"- Files: {diff['previous_count']} files",
+            f"+ Files: {diff['current_count']} files "
+            f"(changed {len(diff['changed'])}, added {len(diff['added'])}, "
+            f"removed {len(diff['removed'])}, unchanged {diff['unchanged_count']})",
+            f"- Total size: {human_size(previous_total)}",
+            f"+ Total size: {human_size(total)} ({human_delta(diff['size_delta'])})",
+        ])
+        if env_diff is not None:
+            lines.append(
+                f"+ Diff items (2-char JS identifiers filtered): "
+                f"Added {len(env_diff['added'])}, Removed {len(env_diff['removed'])}, Changed {len(env_diff['changed'])}"
+            )
+        notable = sorted(
+            diff["changed"],
+            key=lambda entry: abs(entry[4] - entry[3]),
+            reverse=True,
+        )[:10]
+        if notable:
+            lines.append("+ Largest changes:")
+            for identity, old_hash, new_hash, old_size, new_size in notable:
+                delta = new_size - old_size
+                marker = "+" if delta >= 0 else "-"
+                direction = "increased" if delta >= 0 else "decreased"
+                lines.append(
+                    f"{marker} {stable_storage_path(identity)} {direction} "
+                    f"{human_size(abs(delta))} ({old_hash} → {new_hash})"
+                )
+        if diff["added"]:
+            names = ", ".join(stable_storage_path(identity) for identity, _, _ in diff["added"][:8])
+            suffix = f" (+{len(diff['added']) - 8} more)" if len(diff["added"]) > 8 else ""
+            lines.append(f"+ Added files: {names}{suffix}")
+        if diff["removed"]:
+            names = ", ".join(stable_storage_path(identity) for identity, _, _ in diff["removed"][:8])
+            suffix = f" (+{len(diff['removed']) - 8} more)" if len(diff["removed"]) > 8 else ""
+            lines.append(f"- Removed files: {names}{suffix}")
+        lines.extend(["```", ""])
+    return "\n".join(lines).rstrip() + "\n"
+
+
+HISTORY_HEADER = """# Bloxd Build History
+
+All detected Bloxd build updates across `bloxd.io`, `preprod.bloxd.io`, and `staging.bloxd.io`.
+New build entries are appended automatically on every detected build update; historical entries are never overwritten or deleted.
+
+Each build snapshot is preserved in Git commit history and tagged as `build/<environment>/<build_id>`, allowing direct navigation to any historical snapshot, its reports (`CHANGES.md`, `changes/added.md`, `changes/removed.md`, `changes/changed.md`), and the exact GitHub Compare diff.
+
+| 日時 (JST) | Environment | Build ID | Previous Build ID | Added | Removed | Changed | Size Delta | Snapshot / Commit | Diff / Reports |
+|---|---|---|---|---:|---:|---:|---:|---|---|
+"""
+
+
+def format_history_row(
+    timestamp_text: str,
+    environment: str,
+    build_id: str,
+    previous_build_id: str,
+    added_count: int,
+    removed_count: int,
+    changed_count: int,
+    size_delta: int,
+    base_ref: str,
+    head_ref: str | None = None,
+    repo_url: str = REPO_URL,
+) -> str:
+    """Format a single markdown table row for `HISTORY.md`."""
+    clean_time = timestamp_text.replace(" JST", "").replace("T", " ").strip()
+    is_commit_sha = bool(head_ref and re.fullmatch(r"[0-9a-f]{40}", head_ref))
+    tag_or_ref = head_ref if is_commit_sha else (head_ref or "main")
+    short_label = head_ref[:7] if is_commit_sha else f"{build_id} (base {base_ref[:7]})"
+    snapshot_url = (
+        f"{repo_url}/commit/{head_ref}"
+        if is_commit_sha
+        else f"{repo_url}/commits/main"
+    )
+    compare_url = (
+        f"{repo_url}/compare/{base_ref}...{head_ref}"
+        if is_commit_sha
+        else f"{repo_url}/compare/{base_ref}...main"
+    )
+    changes_at_ref = (
+        f"{repo_url}/blob/{head_ref}/CHANGES.md"
+        if is_commit_sha
+        else f"{repo_url}/blob/main/CHANGES.md"
+    )
+    return (
+        f"| {clean_time} | {environment} | `{build_id}` | `{previous_build_id}` | "
+        f"{added_count} | {removed_count} | {changed_count} | {human_delta(size_delta)} | "
+        f"[`{short_label}`]({snapshot_url}) | [Compare]({compare_url}) · [Report]({changes_at_ref}) |"
+    )
+
+
+def update_history_file(
+    history_path: Path,
+    previous_state: dict,
+    current_state: dict,
+    updated_envs: list[str],
+    now_text: str,
+    collected_diffs: dict | None,
+    base_commit: str,
+    head_commit: str | None = None,
+    repo_url: str = REPO_URL,
+) -> None:
+    """Append new build history rows to `HISTORY.md` without modifying or deleting past rows."""
+    if history_path.is_file():
+        existing = history_path.read_text(encoding="utf-8")
+    else:
+        existing = ""
+
+    if not existing.strip():
+        lines = HISTORY_HEADER.rstrip().splitlines()
+    else:
+        lines = existing.rstrip().splitlines()
+
+    for env in updated_envs:
+        record = current_state[env]
+        prev = previous_state.get(env) or {}
+        old_build = prev.get("build", "baseline")
+        new_build = record.get("build", "unknown")
+        manifest_diff = diff_manifests(prev.get("files") or [], record.get("files") or [])
+        env_diff = (collected_diffs or {}).get("environments", {}).get(env)
+        if env_diff is not None:
+            added_cnt = len(env_diff["added"])
+            removed_cnt = len(env_diff["removed"])
+            changed_cnt = len(env_diff["changed"])
+        else:
+            added_cnt = len(manifest_diff["added"])
+            removed_cnt = len(manifest_diff["removed"])
+            changed_cnt = len(manifest_diff["changed"])
+
+        _, head_ref = _resolve_env_refs(
+            env, previous_state, current_state, base_commit, head_commit
+        )
+        row = format_history_row(
+            timestamp_text=now_text,
+            environment=env,
+            build_id=new_build,
+            previous_build_id=old_build,
+            added_count=added_cnt,
+            removed_count=removed_cnt,
+            changed_count=changed_cnt,
+            size_delta=manifest_diff["size_delta"],
+            base_ref=base_commit,
+            head_ref=head_ref,
+            repo_url=repo_url,
+        )
+        lines.append(row)
+
+    history_path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+
+
+def readable_diff_report_path(now_text: str, state: dict, updated_envs: list) -> str:
+    """Return the fixed entry report path under `changes/`."""
+    return "changes/changed.md"
+
+
 def render_readable_diff_report(
     root: Path,
     title: str,
     base_ref: str = "HEAD",
     exclude_paths: set[str] | None = None,
     head_ref: str | None = None,
+    only_bundles: bool = False,
 ) -> str:
     """Render every changed file, with a separate collapsible box for every diff hunk."""
     def git_output(*args: str) -> str:
@@ -912,7 +1928,9 @@ def render_readable_diff_report(
 
     for relative in paths:
         # Per-build reports are generated from bundle changes, never diffed recursively.
-        if relative in excluded or relative.startswith("diffs/"):
+        if relative in excluded or relative.startswith(("diffs/", "changes/")):
+            continue
+        if only_bundles and not is_bundle_path(relative):
             continue
 
         old_result = subprocess.run(
@@ -1054,9 +2072,6 @@ def render_readable_diff_report(
     lines.extend(sections or ["No changed files were found."])
     return "\n".join(lines).rstrip() + "\n"
 
-MAX_DIFF_REPORT_PART_BYTES = 8 * 1024 * 1024
-MAX_SINGLE_DIFF_HUNK_BYTES = 80 * 1024 * 1024
-
 
 def split_top_level_file_sections(report: str) -> tuple[list[str], list[list[str]]]:
     """Split the report header from balanced top-level per-file <details> blocks."""
@@ -1165,8 +2180,8 @@ def write_paginated_readable_diff_report(
     if max_part_bytes < 1024:
         raise ValueError("max_part_bytes must be at least 1024 bytes")
     index_path = Path(index_relative_path)
-    if index_path.is_absolute() or ".." in index_path.parts or not str(index_path).startswith("diffs/"):
-        raise ValueError("The report index must be inside diffs/")
+    if index_path.is_absolute() or ".." in index_path.parts or not str(index_path).startswith(("diffs/", "changes/")):
+        raise ValueError("The report index must be inside diffs/ or changes/")
 
     report = render_readable_diff_report(root, title, base_ref=base_ref, head_ref=head_ref)
     prefix, file_blocks = split_top_level_file_sections(report)
@@ -1256,8 +2271,16 @@ def render_readme(state: dict) -> str:
         " GitHub shows a normal file modification instead of delete/add."
         " Every build update is a new commit; previous build snapshots remain"
         " accessible in Git history and are never squashed or force-pushed.",
-        "`CHANGES.md` uses green/red diff highlighting and links to a per-build readable report.",
-        "Per-build reports under `diffs/` are paginated to stay below GitHub file-size limits. Every changed file and independent diff hunk remains separately collapsible; JavaScript comparison masks only two-character identifiers.",
+        "`CHANGES.md` summarizes the latest update and links to fixed diff reports (`changes/added.md`, `changes/removed.md`, `changes/changed.md`) and the cumulative build log (`HISTORY.md`).",
+        "Each report is updated in place on every build and links directly to GitHub file diffs, hunk anchors, and before/after source lines; JavaScript comparison masks only two-character identifiers.",
+        "",
+        "## Reports & History",
+        "",
+        "- [`CHANGES.md`](CHANGES.md) — Latest build update summary",
+        "- [`changes/added.md`](changes/added.md) — Newly added bundle files and code insertions",
+        "- [`changes/removed.md`](changes/removed.md) — Removed bundle files and code deletions",
+        "- [`changes/changed.md`](changes/changed.md) — Fine-grained code modifications with before/after diffs and GitHub links",
+        "- [`HISTORY.md`](HISTORY.md) — Cumulative history of all detected builds across environments",
         "",
         "| Environment | Checked at (JST) | Build | Main bundle |",
         "|---|---|---|---|",
@@ -1317,14 +2340,46 @@ def main() -> int:
         )
         README_PATH.write_text(render_readme(persistent), encoding="utf-8")
         now_text = datetime.now(JST).strftime("%Y-%m-%dT%H:%M JST")
+
+        head_res = subprocess.run(
+            ["git", "rev-parse", "HEAD"],
+            cwd=ROOT,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            check=False,
+        )
+        base_commit = head_res.stdout.strip() if head_res.returncode == 0 else "HEAD"
+
+        collected = write_fixed_change_reports(
+            ROOT,
+            previous_state=previous,
+            current_state=persistent,
+            updated_envs=updated,
+            now_text=now_text,
+            base_commit=base_commit,
+        )
         report_path = readable_diff_report_path(now_text, persistent, updated)
         CHANGES_PATH.write_text(
-            render_changes(previous, persistent, updated, now_text, report_path), encoding="utf-8"
+            render_changes(
+                previous,
+                persistent,
+                updated,
+                now_text,
+                report_path,
+                collected_diffs=collected,
+                base_commit=base_commit,
+            ),
+            encoding="utf-8",
         )
-        write_paginated_readable_diff_report(
-            ROOT,
-            f"{now_text} — " + ", ".join(persistent[env]["build"] for env in updated),
-            report_path,
+        update_history_file(
+            HISTORY_PATH,
+            previous_state=previous,
+            current_state=persistent,
+            updated_envs=updated,
+            now_text=now_text,
+            collected_diffs=collected,
+            base_commit=base_commit,
         )
 
     for environment, record in persistent.items():
