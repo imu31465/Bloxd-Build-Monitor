@@ -7,8 +7,8 @@ Readable per-file diff: [changes/changed.md](changes/changed.md)
 
 | Environment | Previous Build | Current Build | Added | Removed | Changed | Size Delta | GitHub Diff |
 |---|---|---|---:|---:|---:|---:|---|
-| bloxd.io | `7rj44.0704ff61` | `qepqb8.0352199c` | [606](changes/added.md) | [532](changes/removed.md) | [26011](changes/changed.md) | +91.40 KB | [Compare](https://github.com/imu31465/Bloxd-Build-Monitor/compare/86ff6116b389b372cf752211852bc587fb44c855...main) · [Tree](https://github.com/imu31465/Bloxd-Build-Monitor/tree/main) |
-| staging.bloxd.io | `7rj44.0704ff61` | `qepqb8.0352199c` | [606](changes/added.md) | [532](changes/removed.md) | [26011](changes/changed.md) | +91.40 KB | [Compare](https://github.com/imu31465/Bloxd-Build-Monitor/compare/86ff6116b389b372cf752211852bc587fb44c855...main) · [Tree](https://github.com/imu31465/Bloxd-Build-Monitor/tree/main) |
+| bloxd.io | `7rj44.0704ff61` | `qepqb8.0352199c` | [606](changes/added.md) | [532](changes/removed.md) | [26011](changes/changed.md) | +91.40 KB | [Compare](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3220023aa696762b979a751ccfe8cd9783511981...d79e7a2661218b0ab4730d2223cf98546ac10a83) · [Snapshot](https://github.com/imu31465/Bloxd-Build-Monitor/commit/d79e7a2661218b0ab4730d2223cf98546ac10a83) |
+| staging.bloxd.io | `7rj44.0704ff61` | `qepqb8.0352199c` | [606](changes/added.md) | [532](changes/removed.md) | [26011](changes/changed.md) | +91.40 KB | [Compare](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3220023aa696762b979a751ccfe8cd9783511981...d79e7a2661218b0ab4730d2223cf98546ac10a83) · [Snapshot](https://github.com/imu31465/Bloxd-Build-Monitor/commit/d79e7a2661218b0ab4730d2223cf98546ac10a83) |
 
 ## bloxd.io — 7rj44.0704ff61 → qepqb8.0352199c
 

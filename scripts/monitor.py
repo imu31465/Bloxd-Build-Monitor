@@ -52,6 +52,7 @@ CHANGES_DIR = ROOT / "changes"
 ADDED_REPORT_PATH = CHANGES_DIR / "added.md"
 REMOVED_REPORT_PATH = CHANGES_DIR / "removed.md"
 CHANGED_REPORT_PATH = CHANGES_DIR / "changed.md"
+CHANGED_PARTS_DIR = CHANGES_DIR / "changed"
 BUNDLES_DIR = ROOT / "bundles"
 REPO_URL = "https://github.com/imu31465/Bloxd-Build-Monitor"
 STORAGE_VERSION = 2
@@ -98,9 +99,7 @@ JST = ZoneInfo("Asia/Tokyo")
 
 MAX_DIFF_REPORT_PART_BYTES = 8 * 1024 * 1024
 MAX_SINGLE_DIFF_HUNK_BYTES = 80 * 1024 * 1024
-MAX_INLINE_CHANGED_HUNKS_PER_FILE = 8
-MAX_INLINE_ADDED_REMOVED_HUNKS_PER_FILE = 30
-MAX_REMAINING_LINKS_PER_FILE = 15
+MAX_CHANGED_PART_BYTES = 450 * 1024  # Target safely <= 500 KB per page
 MAX_SNIPPET_LINES_PER_HUNK = 16
 MAX_SNIPPET_LINE_CHARS = 280
 
@@ -628,6 +627,101 @@ def build_tag_name(environment: str, build_id: str) -> str:
     return f"build/{safe_env}/{safe_build}"
 
 
+def ensure_build_tag(
+    root: Path,
+    environment: str,
+    build_id: str,
+    target_commit: str = "HEAD",
+    push: bool = False,
+) -> str:
+    """Create or verify a deterministic `build/<environment>/<build_id>` Git tag.
+
+    - Resolves `target_commit` to its 40-char commit SHA.
+    - If the tag already exists:
+      - If it points to the same commit SHA, treats it as an idempotent re-run.
+      - If it points to a different commit SHA, raises RuntimeError without overwriting.
+    - If the tag does not exist, creates it without `--force`.
+    - When `push=True`, pushes the tag to `origin` without `--force`.
+    """
+    tag = build_tag_name(environment, build_id)
+    target_res = subprocess.run(
+        ["git", "rev-parse", f"{target_commit}^{{commit}}"],
+        cwd=root,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+        check=False,
+    )
+    if target_res.returncode != 0:
+        raise RuntimeError(
+            f"Cannot resolve target commit {target_commit!r}: {target_res.stderr.strip()}"
+        )
+    target_sha = target_res.stdout.strip()
+
+    existing_res = subprocess.run(
+        ["git", "rev-parse", "-q", "--verify", f"refs/tags/{tag}^{{commit}}"],
+        cwd=root,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+        check=False,
+    )
+    if existing_res.returncode == 0:
+        existing_sha = existing_res.stdout.strip()
+        if existing_sha != target_sha:
+            raise RuntimeError(
+                f"Tag {tag!r} already exists on commit {existing_sha[:12]}, "
+                f"refusing to overwrite with {target_sha[:12]}"
+            )
+    else:
+        create_res = subprocess.run(
+            ["git", "tag", tag, target_sha],
+            cwd=root,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            check=False,
+        )
+        if create_res.returncode != 0:
+            raise RuntimeError(f"git tag {tag} failed: {create_res.stderr.strip()}")
+
+    if push:
+        push_res = subprocess.run(
+            ["git", "push", "origin", f"refs/tags/{tag}"],
+            cwd=root,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            check=False,
+        )
+        if push_res.returncode != 0:
+            raise RuntimeError(f"git push origin refs/tags/{tag} failed: {push_res.stderr.strip()}")
+
+    return tag
+
+
+def ensure_build_tags_for_state(
+    root: Path,
+    state: dict,
+    environments: list[str] | None = None,
+    target_commit: str = "HEAD",
+    push: bool = False,
+) -> list[str]:
+    """Ensure deterministic build tags for each specified environment in `state`."""
+    envs = list(environments) if environments is not None else list(state.keys())
+    created_or_verified: list[str] = []
+    for env in envs:
+        record = state.get(env) or {}
+        build_id = record.get("build")
+        if not build_id:
+            continue
+        tag = ensure_build_tag(
+            root, env, str(build_id), target_commit=target_commit, push=push
+        )
+        created_or_verified.append(tag)
+    return created_or_verified
+
+
 def github_diff_anchor(path: str) -> str:
     """Return GitHub's SHA-256 diff anchor for a repository-relative path."""
     normalized = path.replace("\\", "/").lstrip("/")
@@ -642,7 +736,14 @@ def build_github_links(
     new_range: tuple[int, int] | None = None,
     repo_url: str = REPO_URL,
 ) -> dict[str, str]:
-    """Construct verified GitHub Compare, hunk anchor, and before/after blob line URLs."""
+    """Construct verified GitHub Compare, hunk anchor, and before/after blob line URLs.
+
+    - Never falls back to mutable `main`.
+    - For `new_range` (Added / Changed): uses `#diff-<sha256>R<new_start>` and `after_url`.
+    - For `old_range` only (Removed): uses `#diff-<sha256>L<old_start>` and `before_url`.
+    """
+    if not base_ref or not head_ref:
+        raise ValueError("base_ref and head_ref must be non-empty immutable refs or tags")
     normalized = path.replace("\\", "/").lstrip("/")
     anchor = github_diff_anchor(normalized)
     compare_base = f"{repo_url}/compare/{base_ref}...{head_ref}"
@@ -1169,7 +1270,7 @@ def classify_bundle_file_diff(
                 "path": normalized_path,
                 "kind": "removed_code",
                 "old_range": old_range,
-                "new_range": (new_start, new_start) if new_start > 0 else None,
+                "new_range": None,
                 "old_lines": old_slice,
                 "new_lines": [],
                 "context": context,
@@ -1349,18 +1450,141 @@ def _resolve_env_refs(
     environment: str,
     previous_state: dict,
     current_state: dict,
-    base_commit: str,
+    base_commit: str | None = None,
     head_commit: str | None = None,
 ) -> tuple[str, str]:
-    """Return `(base_ref, head_ref)` suitable for GitHub URLs for `environment`.
+    """Return immutable `(base_ref, head_ref)` for GitHub URLs for `environment`.
 
-    When `head_commit` is omitted (i.e. while generating reports inside a build
-    update before the snapshot commit is created), `main` is used so every
-    Compare (`<base_commit>...main`) and Blob (`/blob/main/...`) link resolves
-    immediately on GitHub once pushed.
+    - Never falls back to mutable `main`.
+    - When `head_commit` is provided (e.g. a 40-char commit SHA), uses it; otherwise
+      uses the deterministic build tag `build/<environment>/<new_build_id>`.
+    - When `base_commit` is provided and is not the symbolic `'HEAD'`, uses it;
+      otherwise uses `build/<environment>/<old_build_id>` if available.
     """
-    head_ref = head_commit or "main"
-    return base_commit, head_ref
+    prev_record = previous_state.get(environment) or {}
+    cur_record = current_state.get(environment) or {}
+    old_build = prev_record.get("build")
+    new_build = cur_record.get("build")
+
+    if base_commit and base_commit != "HEAD":
+        resolved_base = base_commit
+    elif old_build:
+        resolved_base = build_tag_name(environment, str(old_build))
+    else:
+        resolved_base = base_commit or build_tag_name(environment, "baseline")
+
+    if head_commit and head_commit != "HEAD":
+        resolved_head = head_commit
+    elif new_build:
+        resolved_head = build_tag_name(environment, str(new_build))
+    else:
+        raise ValueError(
+            f"Cannot determine immutable head ref for {environment}: neither head_commit nor build ID was provided"
+        )
+
+    return resolved_base, resolved_head
+
+
+def _strip_env_prefix(path: str, environment: str) -> str:
+    prefix = f"bundles/{environment}/"
+    if path.startswith(prefix):
+        return path[len(prefix):]
+    return path
+
+
+def _env_category_signature(env: str, env_data: dict, category: str) -> list[tuple]:
+    """Build a canonical content signature for all items in `category` for `env`.
+
+    Two environments have identical category diffs if and only if every relative
+    bundle path, kind, old/new line range, and exact old/new source lines match.
+    """
+    signature: list[tuple] = []
+    for item in env_data.get(category) or []:
+        rel_subpath = _strip_env_prefix(item["path"], env)
+        signature.append((
+            rel_subpath,
+            item["kind"],
+            item["old_range"],
+            item["new_range"],
+            tuple(item["old_lines"]),
+            tuple(item["new_lines"]),
+        ))
+    return signature
+
+
+def environments_have_identical_category_diff(
+    collected: dict, env_a: str, env_b: str, category: str
+) -> bool:
+    """Return True if and only if `env_a` and `env_b` have identical actual diff content for `category`."""
+    data_a = collected.get("environments", {}).get(env_a)
+    data_b = collected.get("environments", {}).get(env_b)
+    if not data_a or not data_b:
+        return False
+    items_a = data_a.get(category) or []
+    items_b = data_b.get(category) or []
+    if len(items_a) != len(items_b):
+        return False
+    return _env_category_signature(env_a, data_a, category) == _env_category_signature(
+        env_b, data_b, category
+    )
+
+
+def _render_single_diff_item_lines(
+    idx: int,
+    item: dict,
+    base_ref: str,
+    head_ref: str,
+    repo_url: str = REPO_URL,
+) -> list[str]:
+    """Render a single Added, Removed, or Changed item with before/after code and GitHub links."""
+    fence = chr(96) * 3
+    f_path = item["path"]
+    old_rng = item["old_range"]
+    new_rng = item["new_range"]
+    old_pos = _format_range_label(old_rng, "L")
+    new_pos = _format_range_label(new_rng, "L")
+    links = build_github_links(
+        f_path,
+        base_ref,
+        head_ref,
+        old_range=old_rng,
+        new_range=new_rng,
+        repo_url=repo_url,
+    )
+
+    link_parts = [
+        f"[Diff Hunk]({links['hunk_url']})",
+        f"[File Diff]({links['file_diff_url']})",
+    ]
+    if links["after_url"]:
+        link_parts.append(f"[After ({new_pos})]({links['after_url']})")
+    if links["before_url"]:
+        link_parts.append(f"[Before ({old_pos})]({links['before_url']})")
+
+    kind_label = item["kind"].replace("_", " ").capitalize()
+    block = [
+        f"#### {idx}. `{f_path}` ({kind_label} · before: `{old_pos}` → after: `{new_pos}`)",
+        "",
+        f"- **Links**: {' · '.join(link_parts)}",
+        "",
+        fence + "diff",
+    ]
+    old_lines = item["old_lines"]
+    new_lines = item["new_lines"]
+    for ol in old_lines[:MAX_SNIPPET_LINES_PER_HUNK]:
+        block.append("- " + _truncate_line(ol))
+    if len(old_lines) > MAX_SNIPPET_LINES_PER_HUNK:
+        block.append(
+            f"- ... ({len(old_lines) - MAX_SNIPPET_LINES_PER_HUNK} more removed lines; see GitHub link above)"
+        )
+    for nl in new_lines[:MAX_SNIPPET_LINES_PER_HUNK]:
+        block.append("+ " + _truncate_line(nl))
+    if len(new_lines) > MAX_SNIPPET_LINES_PER_HUNK:
+        block.append(
+            f"+ ... ({len(new_lines) - MAX_SNIPPET_LINES_PER_HUNK} more added lines; see GitHub link above)"
+        )
+    block.extend([fence, ""])
+    return block
 
 
 def render_category_report(
@@ -1370,17 +1594,15 @@ def render_category_report(
     current_state: dict,
     updated_envs: list[str],
     now_text: str,
-    base_commit: str,
+    base_commit: str | None = None,
     head_commit: str | None = None,
     repo_url: str = REPO_URL,
-    max_hunks_per_file: int | None = None,
 ) -> str:
-    """Render `changes/added.md`, `changes/removed.md`, or `changes/changed.md`."""
-    assert category in ("added", "removed", "changed")
+    """Render `changes/added.md` or `changes/removed.md` without omitting any items."""
+    assert category in ("added", "removed")
     titles = {
         "added": "Added — Bundle Additions Report",
         "removed": "Removed — Bundle Deletions Report",
-        "changed": "Changed — Bundle Modifications Report",
     }
     descriptions = {
         "added": (
@@ -1391,20 +1613,8 @@ def render_category_report(
             "Records removed bundle files and pure code deletions inside `bundles/` "
             "(after masking 2-character minified JS identifiers)."
         ),
-        "changed": (
-            "Records fine-grained code replacements inside `bundles/` "
-            "(after masking 2-character minified JS identifiers). "
-            "Each independent modification hunk is listed separately with before/after code and direct GitHub diff links."
-        ),
     }
-    if max_hunks_per_file is None:
-        max_hunks_per_file = (
-            MAX_INLINE_CHANGED_HUNKS_PER_FILE
-            if category == "changed"
-            else MAX_INLINE_ADDED_REMOVED_HUNKS_PER_FILE
-        )
 
-    fence = chr(96) * 3
     total_count = collected[f"total_{category}"]
     lines = [
         f"# {titles[category]}",
@@ -1422,7 +1632,6 @@ def render_category_report(
         lines.append(f"No {category} bundle items were detected in this build update.")
         return "\n".join(lines).rstrip() + "\n"
 
-    # Detect if staging.bloxd.io has identical build transition as bloxd.io
     for env in updated_envs:
         env_data = collected["environments"].get(env) or {
             "files": [],
@@ -1442,7 +1651,7 @@ def render_category_report(
             f"## `{env}` — `{old_build}` → `{new_build}`",
             "",
             f"- **{category.capitalize()} count**: **{len(items)}**",
-            f"- **GitHub Compare**: [`{base_ref[:12]}...{head_ref}`]({compare_url})",
+            f"- **GitHub Compare**: [`{base_ref}...{head_ref}`]({compare_url})",
             "",
         ])
 
@@ -1450,18 +1659,14 @@ def render_category_report(
             lines.extend([f"No {category} items in `{env}`.", ""])
             continue
 
-        # Check if this environment is an exact mirror of an earlier updated environment in the same run
+        # Only share inline details if an earlier environment in the same run has 100% identical actual diff content
         mirror_of = None
         for earlier_env in updated_envs:
             if earlier_env == env:
                 break
-            earlier_old = (previous_state.get(earlier_env) or {}).get("build")
-            earlier_new = (current_state.get(earlier_env) or {}).get("build")
             if (
-                earlier_old == old_build
-                and earlier_new == new_build
-                and len(items) > 100
-                and len(collected["environments"].get(earlier_env, {}).get(category, [])) == len(items)
+                len(items) > 100
+                and environments_have_identical_category_diff(collected, earlier_env, env, category)
             ):
                 mirror_of = earlier_env
                 break
@@ -1472,7 +1677,7 @@ def render_category_report(
 
         if mirror_of:
             lines.extend([
-                f"> `{env}` deployed the identical build transition (`{old_build}` → `{new_build}`) as `{mirror_of}` (**{len(items)}** {category} items across **{len(files_with_items)}** files). File-level GitHub diff links for `{env}` are listed below; see the `{mirror_of}` section above for inline code blocks.",
+                f"> `{env}` has identical `{category}` bundle diff content as `{mirror_of}` (**{len(items)}** {category} items across **{len(files_with_items)}** files). File-level GitHub diff links for `{env}` are listed below; see `{mirror_of}` above for the identical inline code blocks.",
                 "",
             ])
             for f_res in files_with_items:
@@ -1514,94 +1719,327 @@ def render_category_report(
                 f"- **GitHub File Diff**: [View file diff on GitHub]({first_links['file_diff_url']})",
                 "",
             ])
-
-            displayed_items = f_items[:max_hunks_per_file]
-            for idx, item in enumerate(displayed_items, start=1):
-                old_rng = item["old_range"]
-                new_rng = item["new_range"]
-                old_pos = _format_range_label(old_rng, "L")
-                new_pos = _format_range_label(new_rng, "L")
-                links = build_github_links(
-                    f_path,
-                    base_ref,
-                    head_ref,
-                    old_range=old_rng,
-                    new_range=new_rng,
-                    repo_url=repo_url,
+            for idx, item in enumerate(f_items, start=1):
+                lines.extend(
+                    _render_single_diff_item_lines(idx, item, base_ref, head_ref, repo_url)
                 )
+            lines.extend(["</details>", ""])
 
-                link_parts = [
-                    f"[Diff Hunk]({links['hunk_url']})",
-                    f"[File Diff]({links['file_diff_url']})",
-                ]
-                if links["after_url"]:
-                    link_parts.append(f"[After ({new_pos})]({links['after_url']})")
-                if links["before_url"]:
-                    link_parts.append(f"[Before ({old_pos})]({links['before_url']})")
+    return "\n".join(lines).rstrip() + "\n"
 
-                kind_label = item["kind"].replace("_", " ").capitalize()
-                lines.extend([
-                    f"#### {idx}. `{f_path}` ({kind_label} · before: `{old_pos}` → after: `{new_pos}`)",
+
+def write_paginated_changed_reports(
+    root: Path,
+    collected: dict,
+    previous_state: dict,
+    current_state: dict,
+    updated_envs: list[str],
+    now_text: str,
+    base_commit: str | None = None,
+    head_commit: str | None = None,
+    repo_url: str = REPO_URL,
+    max_part_bytes: int = MAX_CHANGED_PART_BYTES,
+) -> dict:
+    """Write `changes/changed.md` (index) and fixed-name `changes/changed/part-NNN.md` pages.
+
+    - Every single Changed item is rendered individually across `changes/changed/part-NNN.md`
+      with file name, before/after line numbers, before/after code, and GitHub diff links.
+    - No Changed item is ever omitted.
+    - Each part file is kept within `max_part_bytes` (default 450 KB, safely <= 500 KB).
+    """
+    if max_part_bytes < 4096:
+        raise ValueError("max_part_bytes must be at least 4096 bytes")
+
+    changes_dir = root / "changes"
+    parts_dir = changes_dir / "changed"
+    parts_dir.mkdir(parents=True, exist_ok=True)
+    for stale in parts_dir.glob("part-*.md"):
+        stale.unlink()
+
+    total_changed = collected["total_changed"]
+
+    # Build atomic item chunks to pack into pages <= max_part_bytes
+    # Track per-environment and per-file metadata so the index can link to the exact part file.
+    pages: list[dict] = []
+    current_lines: list[str] = []
+    current_bytes = 0
+    current_item_count = 0
+    current_files_set: list[str] = []
+    header_reserve_bytes = 512
+    budget = max_part_bytes - header_reserve_bytes
+
+    file_to_parts: dict[str, list[int]] = {}
+    env_to_parts: dict[str, list[int]] = {env: [] for env in updated_envs}
+    mirrored_envs: dict[str, str] = {}
+    total_rendered_items = 0
+
+    def flush_current_page() -> None:
+        nonlocal current_lines, current_bytes, current_item_count, current_files_set
+        if not current_lines:
+            return
+        part_num = len(pages) + 1
+        pages.append({
+            "part_number": part_num,
+            "filename": f"part-{part_num:03d}.md",
+            "body_lines": current_lines,
+            "item_count": current_item_count,
+            "files": list(current_files_set),
+        })
+        current_lines = []
+        current_bytes = 0
+        current_item_count = 0
+        current_files_set = []
+
+    for env in updated_envs:
+        env_data = collected["environments"].get(env) or {
+            "files": [],
+            "added": [],
+            "removed": [],
+            "changed": [],
+        }
+        items = env_data["changed"]
+        if not items:
+            continue
+
+        # Check if an earlier environment has 100% identical actual Changed content
+        mirror_of = None
+        for earlier_env in updated_envs:
+            if earlier_env == env:
+                break
+            if (
+                len(items) > 100
+                and environments_have_identical_category_diff(
+                    collected, earlier_env, env, "changed"
+                )
+            ):
+                mirror_of = earlier_env
+                break
+
+        if mirror_of:
+            mirrored_envs[env] = mirror_of
+            total_rendered_items += len(items)
+            continue
+
+        old_build = (previous_state.get(env) or {}).get("build", "baseline")
+        new_build = (current_state.get(env) or {}).get("build", "unknown")
+        base_ref, head_ref = _resolve_env_refs(
+            env, previous_state, current_state, base_commit, head_commit
+        )
+
+        files_with_changed = [f_res for f_res in env_data["files"] if f_res["changed"]]
+        for f_res in files_with_changed:
+            f_path = f_res["path"]
+            f_items = f_res["changed"]
+            first_links = build_github_links(
+                f_path,
+                base_ref,
+                head_ref,
+                old_range=f_items[0]["old_range"],
+                new_range=f_items[0]["new_range"],
+                repo_url=repo_url,
+            )
+
+            for idx, item in enumerate(f_items, start=1):
+                item_lines = _render_single_diff_item_lines(
+                    idx, item, base_ref, head_ref, repo_url
+                )
+                if idx == 1 or not current_lines or f_path not in current_files_set:
+                    section_header = [
+                        f"## `{env}` · `{f_path}` ({old_build} → {new_build})",
+                        "",
+                        f"- **File**: `{f_path}` ({len(f_items)} changed item(s) total)",
+                        f"- **GitHub File Diff**: [View file diff on GitHub]({first_links['file_diff_url']})",
+                        "",
+                    ]
+                else:
+                    section_header = []
+
+                candidate_lines = section_header + item_lines
+                candidate_bytes = len(("\n".join(candidate_lines) + "\n").encode("utf-8"))
+
+                if current_lines and current_bytes + candidate_bytes > budget:
+                    flush_current_page()
+                    # Recompute section_header since this item now starts a fresh page
+                    section_header = [
+                        f"## `{env}` · `{f_path}` ({old_build} → {new_build} · continued)",
+                        "",
+                        f"- **File**: `{f_path}` ({len(f_items)} changed item(s) total)",
+                        f"- **GitHub File Diff**: [View file diff on GitHub]({first_links['file_diff_url']})",
+                        "",
+                    ]
+                    candidate_lines = section_header + item_lines
+                    candidate_bytes = len(("\n".join(candidate_lines) + "\n").encode("utf-8"))
+
+                part_num = len(pages) + 1
+                if f_path not in current_files_set:
+                    current_files_set.append(f_path)
+                file_parts = file_to_parts.setdefault(f_path, [])
+                if part_num not in file_parts:
+                    file_parts.append(part_num)
+                env_parts = env_to_parts.setdefault(env, [])
+                if part_num not in env_parts:
+                    env_parts.append(part_num)
+
+                current_lines.extend(candidate_lines)
+                current_bytes += candidate_bytes
+                current_item_count += 1
+                total_rendered_items += 1
+
+    flush_current_page()
+
+    written_sizes: list[int] = []
+    total_pages = len(pages)
+    for page in pages:
+        part_num = page["part_number"]
+        filename = page["filename"]
+        nav_parts = ["[Index (`changes/changed.md`)](../changed.md)"]
+        if part_num > 1:
+            nav_parts.append(f"[← Part {part_num - 1:03d}](part-{part_num - 1:03d}.md)")
+        if part_num < total_pages:
+            nav_parts.append(f"[Part {part_num + 1:03d} →](part-{part_num + 1:03d}.md)")
+
+        header_lines = [
+            f"# Changed — Bundle Modifications Report (Part {part_num:03d} / {total_pages:03d})",
+            "",
+            f"- **Updated at**: `{now_text}`",
+            f"- **Part**: `{part_num} / {total_pages}` (**{page['item_count']}** changed item(s) on this page)",
+            f"- **Navigation**: {' · '.join(nav_parts)}",
+            "",
+        ]
+        full_text = "\n".join(header_lines + page["body_lines"]).rstrip() + "\n"
+        part_path = parts_dir / filename
+        part_path.write_text(full_text, encoding="utf-8")
+        size = part_path.stat().st_size
+        written_sizes.append(size)
+
+    # Render `changes/changed.md` as the navigable index & overview entry point
+    index_lines = [
+        "# Changed — Bundle Modifications Report",
+        "",
+        f"- **Updated at**: `{now_text}`",
+        f"- **Environments updated**: {', '.join(f'`{env}`' for env in updated_envs) if updated_envs else 'none'}",
+        f"- **Total Changed items**: **{total_changed}**",
+        f"- **Report pages**: **{total_pages}** (`changes/changed/part-001.md` … `part-{total_pages:03d}.md`)" if total_pages else "- **Report pages**: **0**",
+        f"- **Largest page**: `{max(written_sizes, default=0):,}` bytes",
+        "- **Navigation**: [Summary (`CHANGES.md`)](../CHANGES.md) · [Build History (`HISTORY.md`)](../HISTORY.md) · [Added (`changes/added.md`)](added.md) · [Removed (`changes/removed.md`)](removed.md) · [Changed (`changes/changed.md`)](changed.md)",
+        "",
+        "Records fine-grained code replacements inside `bundles/` (after masking 2-character minified JS identifiers). "
+        "Every independent modification hunk is listed across the fixed-name pages in `changes/changed/part-NNN.md` with before/after code and direct GitHub diff links.",
+        "",
+    ]
+
+    if not updated_envs or total_changed == 0:
+        index_lines.append("No changed bundle items were detected in this build update.")
+    else:
+        index_lines.extend([
+            "## Changed Pages (`changes/changed/`)",
+            "",
+        ])
+        for page, size in zip(pages, written_sizes):
+            part_num = page["part_number"]
+            filename = page["filename"]
+            sample_files = ", ".join(f"`{p}`" for p in page["files"][:4])
+            if len(page["files"]) > 4:
+                sample_files += f", +{len(page['files']) - 4} more"
+            index_lines.append(
+                f"- [**Part {part_num:03d}** (`changed/{filename}`)](changed/{filename}) — "
+                f"**{page['item_count']}** changed item(s) · {size:,} bytes · Files: {sample_files}"
+            )
+        index_lines.append("")
+
+        for env in updated_envs:
+            env_data = collected["environments"].get(env) or {
+                "files": [],
+                "added": [],
+                "removed": [],
+                "changed": [],
+            }
+            old_build = (previous_state.get(env) or {}).get("build", "baseline")
+            new_build = (current_state.get(env) or {}).get("build", "unknown")
+            base_ref, head_ref = _resolve_env_refs(
+                env, previous_state, current_state, base_commit, head_commit
+            )
+            compare_url = f"{repo_url}/compare/{base_ref}...{head_ref}"
+            items = env_data["changed"]
+            files_with_changed = [f_res for f_res in env_data["files"] if f_res["changed"]]
+
+            index_lines.extend([
+                f"## `{env}` — `{old_build}` → `{new_build}`",
+                "",
+                f"- **Changed count**: **{len(items)}** across **{len(files_with_changed)}** file(s)",
+                f"- **GitHub Compare**: [`{base_ref}...{head_ref}`]({compare_url})",
+                "",
+            ])
+
+            if not items:
+                index_lines.extend([f"No changed items in `{env}`.", ""])
+                continue
+
+            if env in mirrored_envs:
+                mirror_of = mirrored_envs[env]
+                index_lines.extend([
+                    f"> `{env}` has identical `changed` bundle diff content as `{mirror_of}` (**{len(items)}** changed items across **{len(files_with_changed)}** files). Each file's direct GitHub diff links for `{env}` and the corresponding detail page in `changes/changed/` are listed below.",
                     "",
-                    f"- **Links**: {' · '.join(link_parts)}",
-                    "",
-                    fence + "diff",
                 ])
-
-                old_lines = item["old_lines"]
-                new_lines = item["new_lines"]
-                for ol in old_lines[:MAX_SNIPPET_LINES_PER_HUNK]:
-                    lines.append("- " + _truncate_line(ol))
-                if len(old_lines) > MAX_SNIPPET_LINES_PER_HUNK:
-                    lines.append(
-                        f"- ... ({len(old_lines) - MAX_SNIPPET_LINES_PER_HUNK} more removed lines; see GitHub link above)"
+                for f_res in files_with_changed:
+                    f_path = f_res["path"]
+                    f_items = f_res["changed"]
+                    mirror_path = f"bundles/{mirror_of}/{_strip_env_prefix(f_path, env)}"
+                    part_nums = file_to_parts.get(mirror_path, [])
+                    part_links_str = ", ".join(
+                        f"[Part {pn:03d}](changed/part-{pn:03d}.md)" for pn in part_nums
                     )
-                for nl in new_lines[:MAX_SNIPPET_LINES_PER_HUNK]:
-                    lines.append("+ " + _truncate_line(nl))
-                if len(new_lines) > MAX_SNIPPET_LINES_PER_HUNK:
-                    lines.append(
-                        f"+ ... ({len(new_lines) - MAX_SNIPPET_LINES_PER_HUNK} more added lines; see GitHub link above)"
-                    )
-                lines.extend([fence, ""])
-
-            if len(f_items) > max_hunks_per_file:
-                remaining = f_items[max_hunks_per_file:]
-                lines.extend([
-                    "<details>",
-                    f"<summary>Remaining {len(remaining)} {category} item(s) in <code>{html.escape(f_path)}</code> (direct GitHub links)</summary>",
-                    "",
-                ])
-                for offset, item in enumerate(
-                    remaining[:MAX_REMAINING_LINKS_PER_FILE],
-                    start=max_hunks_per_file + 1,
-                ):
-                    old_rng = item["old_range"]
-                    new_rng = item["new_range"]
-                    old_pos = _format_range_label(old_rng, "L")
-                    new_pos = _format_range_label(new_rng, "L")
                     links = build_github_links(
                         f_path,
                         base_ref,
                         head_ref,
-                        old_range=old_rng,
-                        new_range=new_rng,
+                        old_range=f_items[0]["old_range"],
+                        new_range=f_items[0]["new_range"],
                         repo_url=repo_url,
                     )
-                    lines.append(
-                        f"- Item {offset}: before `{old_pos}` → after `{new_pos}` · "
-                        f"[Diff Hunk]({links['hunk_url']}) · "
-                        f"[After]({links['after_url']}) · "
-                        f"[Before]({links['before_url']})"
+                    index_lines.append(
+                        f"- `{f_path}` — **{len(f_items)}** changed item(s) · "
+                        f"{part_links_str} · "
+                        f"[GitHub File Diff]({links['file_diff_url']}) · "
+                        f"[First Hunk]({links['hunk_url']})"
                     )
-                if len(remaining) > MAX_REMAINING_LINKS_PER_FILE:
-                    lines.append(
-                        f"- ... and {len(remaining) - MAX_REMAINING_LINKS_PER_FILE} more items in [GitHub File Diff]({first_links['file_diff_url']})"
-                    )
-                lines.extend(["", "</details>", ""])
+                index_lines.append("")
+                continue
 
-            lines.extend(["</details>", ""])
+            for f_res in files_with_changed:
+                f_path = f_res["path"]
+                f_items = f_res["changed"]
+                part_nums = file_to_parts.get(f_path, [])
+                part_links_str = ", ".join(
+                    f"[Part {pn:03d}](changed/part-{pn:03d}.md)" for pn in part_nums
+                )
+                links = build_github_links(
+                    f_path,
+                    base_ref,
+                    head_ref,
+                    old_range=f_items[0]["old_range"],
+                    new_range=f_items[0]["new_range"],
+                    repo_url=repo_url,
+                )
+                index_lines.append(
+                    f"- `{f_path}` — **{len(f_items)}** changed item(s) · "
+                    f"{part_links_str} · "
+                    f"[GitHub File Diff]({links['file_diff_url']}) · "
+                    f"[First Hunk]({links['hunk_url']})"
+                )
+            index_lines.append("")
 
-    return "\n".join(lines).rstrip() + "\n"
+    (changes_dir / "changed.md").write_text(
+        "\n".join(index_lines).rstrip() + "\n", encoding="utf-8"
+    )
+
+    return {
+        "total_changed": total_changed,
+        "total_rendered_items": total_rendered_items,
+        "pages": total_pages,
+        "largest_page_bytes": max(written_sizes, default=0),
+        "page_sizes": written_sizes,
+    }
 
 
 def write_fixed_change_reports(
@@ -1613,8 +2051,9 @@ def write_fixed_change_reports(
     base_commit: str | None = None,
     head_commit: str | None = None,
     repo_url: str = REPO_URL,
+    max_changed_part_bytes: int = MAX_CHANGED_PART_BYTES,
 ) -> dict:
-    """Compute bundle diffs and overwrite `changes/added.md`, `changes/removed.md`, and `changes/changed.md`."""
+    """Compute bundle diffs and overwrite `changes/added.md`, `changes/removed.md`, `changes/changed.md`, and `changes/changed/part-NNN.md`."""
     if base_commit is None:
         res = subprocess.run(
             ["git", "rev-parse", "HEAD"],
@@ -1639,7 +2078,6 @@ def write_fixed_change_reports(
     for category, filename in (
         ("added", "added.md"),
         ("removed", "removed.md"),
-        ("changed", "changed.md"),
     ):
         content = render_category_report(
             category=category,
@@ -1654,6 +2092,19 @@ def write_fixed_change_reports(
         )
         (changes_dir / filename).write_text(content, encoding="utf-8")
 
+    changed_pagination = write_paginated_changed_reports(
+        root=root,
+        collected=collected,
+        previous_state=previous_state,
+        current_state=current_state,
+        updated_envs=updated_envs,
+        now_text=now_text,
+        base_commit=base_commit,
+        head_commit=head_commit,
+        repo_url=repo_url,
+        max_part_bytes=max_changed_part_bytes,
+    )
+    collected["changed_pagination"] = changed_pagination
     return collected
 
 
@@ -1683,7 +2134,6 @@ def render_changes(
     if diff_report_path:
         lines.extend(["", f"Readable per-file diff: [{diff_report_path}]({diff_report_path})"])
 
-    resolved_base = base_commit or "HEAD"
     if collected_diffs is not None:
         lines.extend([
             "",
@@ -1706,15 +2156,19 @@ def render_changes(
                 removed_cnt = len(manifest_diff["removed"])
                 changed_cnt = len(manifest_diff["changed"])
             base_ref, head_ref = _resolve_env_refs(
-                environment, previous_state, current_state, resolved_base, head_commit
+                environment, previous_state, current_state, base_commit, head_commit
             )
             compare_url = f"{repo_url}/compare/{base_ref}...{head_ref}"
-            snapshot_url = f"{repo_url}/tree/{head_ref}"
+            snapshot_url = (
+                f"{repo_url}/commit/{head_ref}"
+                if re.fullmatch(r"[0-9a-f]{40}", head_ref)
+                else f"{repo_url}/tree/{head_ref}"
+            )
             lines.append(
                 f"| {environment} | `{old_build}` | `{new_build}` | "
                 f"[{added_cnt}](changes/added.md) | [{removed_cnt}](changes/removed.md) | "
                 f"[{changed_cnt}](changes/changed.md) | {human_delta(manifest_diff['size_delta'])} | "
-                f"[Compare]({compare_url}) · [Tree]({snapshot_url}) |"
+                f"[Compare]({compare_url}) · [Snapshot]({snapshot_url}) |"
             )
 
     for environment in updated_envs:
@@ -1795,30 +2249,34 @@ def format_history_row(
     removed_count: int,
     changed_count: int,
     size_delta: int,
-    base_ref: str,
+    base_ref: str | None = None,
     head_ref: str | None = None,
     repo_url: str = REPO_URL,
 ) -> str:
-    """Format a single markdown table row for `HISTORY.md`."""
+    """Format a single markdown table row for `HISTORY.md` using immutable tags or commit SHAs.
+
+    Never generates `/blob/main/`, `/compare/...main`, or `/commits/main`.
+    """
     clean_time = timestamp_text.replace(" JST", "").replace("T", " ").strip()
-    is_commit_sha = bool(head_ref and re.fullmatch(r"[0-9a-f]{40}", head_ref))
-    tag_or_ref = head_ref if is_commit_sha else (head_ref or "main")
-    short_label = head_ref[:7] if is_commit_sha else f"{build_id} (base {base_ref[:7]})"
+    if not base_ref or base_ref == "HEAD":
+        resolved_base = build_tag_name(environment, previous_build_id)
+    else:
+        resolved_base = base_ref
+
+    if not head_ref or head_ref == "HEAD":
+        resolved_head = build_tag_name(environment, build_id)
+    else:
+        resolved_head = head_ref
+
+    is_commit_sha = bool(re.fullmatch(r"[0-9a-f]{40}", resolved_head))
+    short_label = resolved_head[:7] if is_commit_sha else resolved_head
     snapshot_url = (
-        f"{repo_url}/commit/{head_ref}"
+        f"{repo_url}/commit/{resolved_head}"
         if is_commit_sha
-        else f"{repo_url}/commits/main"
+        else f"{repo_url}/tree/{resolved_head}"
     )
-    compare_url = (
-        f"{repo_url}/compare/{base_ref}...{head_ref}"
-        if is_commit_sha
-        else f"{repo_url}/compare/{base_ref}...main"
-    )
-    changes_at_ref = (
-        f"{repo_url}/blob/{head_ref}/CHANGES.md"
-        if is_commit_sha
-        else f"{repo_url}/blob/main/CHANGES.md"
-    )
+    compare_url = f"{repo_url}/compare/{resolved_base}...{resolved_head}"
+    changes_at_ref = f"{repo_url}/blob/{resolved_head}/CHANGES.md"
     return (
         f"| {clean_time} | {environment} | `{build_id}` | `{previous_build_id}` | "
         f"{added_count} | {removed_count} | {changed_count} | {human_delta(size_delta)} | "
@@ -1833,7 +2291,7 @@ def update_history_file(
     updated_envs: list[str],
     now_text: str,
     collected_diffs: dict | None,
-    base_commit: str,
+    base_commit: str | None = None,
     head_commit: str | None = None,
     repo_url: str = REPO_URL,
 ) -> None:
@@ -1864,7 +2322,7 @@ def update_history_file(
             removed_cnt = len(manifest_diff["removed"])
             changed_cnt = len(manifest_diff["changed"])
 
-        _, head_ref = _resolve_env_refs(
+        base_ref, head_ref = _resolve_env_refs(
             env, previous_state, current_state, base_commit, head_commit
         )
         row = format_history_row(
@@ -1876,7 +2334,7 @@ def update_history_file(
             removed_count=removed_cnt,
             changed_count=changed_cnt,
             size_delta=manifest_diff["size_delta"],
-            base_ref=base_commit,
+            base_ref=base_ref,
             head_ref=head_ref,
             repo_url=repo_url,
         )
@@ -2271,15 +2729,15 @@ def render_readme(state: dict) -> str:
         " GitHub shows a normal file modification instead of delete/add."
         " Every build update is a new commit; previous build snapshots remain"
         " accessible in Git history and are never squashed or force-pushed.",
-        "`CHANGES.md` summarizes the latest update and links to fixed diff reports (`changes/added.md`, `changes/removed.md`, `changes/changed.md`) and the cumulative build log (`HISTORY.md`).",
-        "Each report is updated in place on every build and links directly to GitHub file diffs, hunk anchors, and before/after source lines; JavaScript comparison masks only two-character identifiers.",
+        "`CHANGES.md` summarizes the latest update and links to fixed diff reports (`changes/added.md`, `changes/removed.md`, `changes/changed.md` + `changes/changed/part-NNN.md`) and the cumulative build log (`HISTORY.md`).",
+        "Each report is updated in place on every build and links directly to immutable GitHub file diffs, hunk anchors, and before/after source lines; JavaScript comparison masks only two-character identifiers.",
         "",
         "## Reports & History",
         "",
         "- [`CHANGES.md`](CHANGES.md) — Latest build update summary",
         "- [`changes/added.md`](changes/added.md) — Newly added bundle files and code insertions",
         "- [`changes/removed.md`](changes/removed.md) — Removed bundle files and code deletions",
-        "- [`changes/changed.md`](changes/changed.md) — Fine-grained code modifications with before/after diffs and GitHub links",
+        "- [`changes/changed.md`](changes/changed.md) — Paginated index of all fine-grained code modifications (`changes/changed/part-NNN.md`)",
         "- [`HISTORY.md`](HISTORY.md) — Cumulative history of all detected builds across environments",
         "",
         "| Environment | Checked at (JST) | Build | Main bundle |",
@@ -2314,7 +2772,61 @@ def render_readme(state: dict) -> str:
     return "\n".join(lines) + "\n"
 
 
+def _install_post_commit_tag_hook(root: Path) -> None:
+    """Install a Git post-commit hook that tags new build commits and pushes the tags."""
+    git_dir = root / ".git"
+    if not git_dir.is_dir():
+        return
+    hooks_dir = git_dir / "hooks"
+    hooks_dir.mkdir(parents=True, exist_ok=True)
+    hook_path = hooks_dir / "post-commit"
+    hook_script = """#!/usr/bin/env bash
+set -euo pipefail
+ROOT="$(git rev-parse --show-toplevel)"
+cd "$ROOT"
+python3 - << 'PY'
+import json, subprocess, sys
+from pathlib import Path
+sys.path.insert(0, "scripts")
+import monitor
+
+state_path = Path(".monitor-state.json")
+if not state_path.is_file():
+    raise SystemExit(0)
+state = json.loads(state_path.read_text(encoding="utf-8"))
+remote_res = subprocess.run(["git", "remote"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=False)
+has_origin = "origin" in remote_res.stdout.splitlines()
+
+for env, rec in state.items():
+    build_id = rec.get("build")
+    if not build_id:
+        continue
+    tag = monitor.build_tag_name(env, str(build_id))
+    existing = subprocess.run(
+        ["git", "rev-parse", "-q", "--verify", f"refs/tags/{tag}^{{commit}}"],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+        check=False,
+    )
+    if existing.returncode != 0:
+        monitor.ensure_build_tag(Path("."), env, str(build_id), target_commit="HEAD", push=has_origin)
+PY
+"""
+    hook_path.write_text(hook_script, encoding="utf-8")
+    hook_path.chmod(0o755)
+
+
 def main() -> int:
+    if len(sys.argv) > 1 and sys.argv[1] == "--tag-current-builds":
+        push_flag = "--push" in sys.argv[2:]
+        state = load_state()
+        tags = ensure_build_tags_for_state(
+            ROOT, state, target_commit="HEAD", push=push_flag
+        )
+        print("Ensured build tags: " + ", ".join(tags))
+        return 0
+
     previous = load_state()
     current = {}
     for environment, site_url in SITES.items():
@@ -2334,13 +2846,6 @@ def main() -> int:
     }
 
     if updated:
-        STATE_PATH.write_text(
-            json.dumps(persistent, ensure_ascii=False, indent=2) + "\n",
-            encoding="utf-8",
-        )
-        README_PATH.write_text(render_readme(persistent), encoding="utf-8")
-        now_text = datetime.now(JST).strftime("%Y-%m-%dT%H:%M JST")
-
         head_res = subprocess.run(
             ["git", "rev-parse", "HEAD"],
             cwd=ROOT,
@@ -2350,6 +2855,32 @@ def main() -> int:
             check=False,
         )
         base_commit = head_res.stdout.strip() if head_res.returncode == 0 else "HEAD"
+
+        # Ensure previous build tags exist on base_commit if they haven't been created yet
+        if base_commit != "HEAD":
+            for env in updated:
+                prev_build = (previous.get(env) or {}).get("build")
+                if prev_build:
+                    tag = build_tag_name(env, str(prev_build))
+                    exists_res = subprocess.run(
+                        ["git", "rev-parse", "-q", "--verify", f"refs/tags/{tag}^{{commit}}"],
+                        cwd=ROOT,
+                        stdout=subprocess.PIPE,
+                        stderr=subprocess.PIPE,
+                        text=True,
+                        check=False,
+                    )
+                    if exists_res.returncode != 0:
+                        ensure_build_tag(ROOT, env, str(prev_build), target_commit=base_commit, push=False)
+
+        _install_post_commit_tag_hook(ROOT)
+
+        STATE_PATH.write_text(
+            json.dumps(persistent, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        README_PATH.write_text(render_readme(persistent), encoding="utf-8")
+        now_text = datetime.now(JST).strftime("%Y-%m-%dT%H:%M JST")
 
         collected = write_fixed_change_reports(
             ROOT,

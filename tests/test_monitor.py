@@ -64,6 +64,7 @@ class MonitorTests(unittest.TestCase):
         monitor.ADDED_REPORT_PATH = monitor.CHANGES_DIR / "added.md"
         monitor.REMOVED_REPORT_PATH = monitor.CHANGES_DIR / "removed.md"
         monitor.CHANGED_REPORT_PATH = monitor.CHANGES_DIR / "changed.md"
+        monitor.CHANGED_PARTS_DIR = monitor.CHANGES_DIR / "changed"
         monitor.CHANGES_PATH = root / "CHANGES.md"
         monitor.HISTORY_PATH = root / "HISTORY.md"
 
@@ -73,6 +74,7 @@ class MonitorTests(unittest.TestCase):
         self.addCleanup(setattr, monitor, "ADDED_REPORT_PATH", original_added)
         self.addCleanup(setattr, monitor, "REMOVED_REPORT_PATH", original_removed)
         self.addCleanup(setattr, monitor, "CHANGED_REPORT_PATH", original_changed)
+        self.addCleanup(setattr, monitor, "CHANGED_PARTS_DIR", original_changed.parent / "changed")
         self.addCleanup(setattr, monitor, "CHANGES_PATH", original_changes)
         self.addCleanup(setattr, monitor, "HISTORY_PATH", original_history)
 
@@ -1222,14 +1224,18 @@ class MonitorTests(unittest.TestCase):
             added_md = monitor.ADDED_REPORT_PATH.read_text(encoding="utf-8")
             removed_md = monitor.REMOVED_REPORT_PATH.read_text(encoding="utf-8")
             changed_md = monitor.CHANGED_REPORT_PATH.read_text(encoding="utf-8")
+            changed_parts = sorted(monitor.CHANGED_PARTS_DIR.glob("part-*.md"))
+            self.assertGreaterEqual(len(changed_parts), 1)
+            changed_parts_text = "\n".join(p.read_text(encoding="utf-8") for p in changed_parts)
             history_md = monitor.HISTORY_PATH.read_text(encoding="utf-8")
 
             self.assertIn("bundles/bloxd.io/chunks/js/new.js", added_md)
             self.assertIn("+ const added = 'yes';", added_md)
             self.assertIn("bundles/bloxd.io/chunks/js/old.js", removed_md)
-            self.assertIn("- const speed = 10;", changed_md)
-            self.assertIn("+ const speed = 15;", changed_md)
-            self.assertIn("+ const speed = 20;", changed_md)
+            self.assertIn("changed/part-001.md", changed_md)
+            self.assertIn("- const speed = 10;", changed_parts_text)
+            self.assertIn("+ const speed = 15;", changed_parts_text)
+            self.assertIn("+ const speed = 20;", changed_parts_text)
 
             # History preserves earlier row and records both environments separately
             self.assertIn("`init.00000000`", history_md)
@@ -1250,6 +1256,340 @@ class MonitorTests(unittest.TestCase):
             )
             self.assertIn("const speed = 10;", restored_old)
             self.assertIn("const speed = 15;", restored_new)
+
+    # =========================================================================
+    # REVISE-1 .. REVISE-6 verification tests
+    # =========================================================================
+
+    def test_revise_1_2_3_over_100_changed_items_all_published_and_paginated_within_budget(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.patch_paths(root)
+
+            def git(*args):
+                subprocess.run(
+                    ["git", *args],
+                    cwd=root,
+                    check=True,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                )
+
+            git("init", "-q")
+            git("config", "user.name", "Test")
+            git("config", "user.email", "test@example.invalid")
+
+            # Build a JS file with 135 independent Changed hunks separated by unchanged context lines
+            old_lines = []
+            new_lines = []
+            num_hunks = 135
+            for idx in range(num_hunks):
+                old_lines.append(f"const metricValue_{idx} = {idx * 10};")
+                new_lines.append(f"const metricValue_{idx} = {idx * 10 + 5};")
+                old_lines.append(f"const unchangedGuard_{idx} = true;")
+                new_lines.append(f"const unchangedGuard_{idx} = true;")
+
+            bundle_file = root / "bundles" / "bloxd.io" / "chunks" / "js" / "heavy.js"
+            bundle_file.parent.mkdir(parents=True, exist_ok=True)
+            bundle_file.write_text("\n".join(old_lines) + "\n", encoding="utf-8")
+            git("add", "-A")
+            git("commit", "-qm", "baseline")
+            base_sha = subprocess.check_output(
+                ["git", "rev-parse", "HEAD"], cwd=root, text=True
+            ).strip()
+
+            bundle_file.write_text("\n".join(new_lines) + "\n", encoding="utf-8")
+
+            prev_state = {
+                "bloxd.io": {
+                    "build": "old.11111111",
+                    "files": [{"path": "bundles/bloxd.io/chunks/js/heavy.js", "identity": "chunk.js:heavy", "cdn_hash": "11111111", "size": 1000}],
+                }
+            }
+            curr_state = {
+                "bloxd.io": {
+                    "build": "new.22222222",
+                    "files": [{"path": "bundles/bloxd.io/chunks/js/heavy.js", "identity": "chunk.js:heavy", "cdn_hash": "22222222", "size": 1050}],
+                }
+            }
+
+            page_budget = 12_000  # small budget to force multiple pages
+            collected = monitor.write_fixed_change_reports(
+                root,
+                previous_state=prev_state,
+                current_state=curr_state,
+                updated_envs=["bloxd.io"],
+                now_text="2026-11-20T22:00 JST",
+                base_commit=base_sha,
+                max_changed_part_bytes=page_budget,
+            )
+
+            pagination = collected["changed_pagination"]
+            self.assertEqual(collected["total_changed"], num_hunks)
+            self.assertEqual(pagination["total_changed"], num_hunks)
+            self.assertEqual(pagination["total_rendered_items"], num_hunks)
+            self.assertGreater(pagination["pages"], 1)
+
+            part_files = sorted(monitor.CHANGED_PARTS_DIR.glob("part-*.md"))
+            self.assertEqual(len(part_files), pagination["pages"])
+
+            # Verify every part file is within max_part_bytes
+            for pf in part_files:
+                self.assertLessEqual(pf.stat().st_size, page_budget)
+
+            # Verify all 135 items appear individually with before/after code and GitHub links
+            combined_parts = "\n".join(pf.read_text(encoding="utf-8") for pf in part_files)
+            rendered_heading_count = sum(
+                1 for line in combined_parts.splitlines() if line.startswith("#### ")
+            )
+            self.assertEqual(rendered_heading_count, num_hunks)
+            for idx in range(num_hunks):
+                self.assertIn(f"- const metricValue_{idx} = {idx * 10};", combined_parts)
+                self.assertIn(f"+ const metricValue_{idx} = {idx * 10 + 5};", combined_parts)
+
+            # Verify index links to every part file
+            index_md = monitor.CHANGED_REPORT_PATH.read_text(encoding="utf-8")
+            self.assertIn(f"**Total Changed items**: **{num_hunks}**", index_md)
+            for part_num in range(1, pagination["pages"] + 1):
+                self.assertIn(f"changed/part-{part_num:03d}.md", index_md)
+
+    def test_revise_7_same_build_id_with_different_diff_content_is_not_omitted(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.patch_paths(root)
+
+            def git(*args):
+                subprocess.run(
+                    ["git", *args],
+                    cwd=root,
+                    check=True,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                )
+
+            git("init", "-q")
+            git("config", "user.name", "Test")
+            git("config", "user.email", "test@example.invalid")
+
+            # Both environments have 110 changed hunks and identical Build IDs,
+            # but staging has different actual code in hunk 0!
+            for env in ("bloxd.io", "staging.bloxd.io"):
+                lines = []
+                for idx in range(110):
+                    lines.append(f"const val_{idx} = {idx};")
+                    lines.append(f"const keep_{idx} = true;")
+                p = root / "bundles" / env / "main.js"
+                p.parent.mkdir(parents=True, exist_ok=True)
+                p.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+            git("add", "-A")
+            git("commit", "-qm", "baseline")
+            base_sha = subprocess.check_output(
+                ["git", "rev-parse", "HEAD"], cwd=root, text=True
+            ).strip()
+
+            for env, special in (("bloxd.io", "PROD_ONLY_VALUE"), ("staging.bloxd.io", "STAGING_ONLY_VALUE")):
+                lines = []
+                for idx in range(110):
+                    val = f'"{special}"' if idx == 0 else str(idx + 100)
+                    lines.append(f"const val_{idx} = {val};")
+                    lines.append(f"const keep_{idx} = true;")
+                p = root / "bundles" / env / "main.js"
+                p.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+            # Identical build IDs on both environments
+            prev_state = {
+                env: {"build": "sameOld.11111111", "files": []}
+                for env in ("bloxd.io", "staging.bloxd.io")
+            }
+            curr_state = {
+                env: {"build": "sameNew.22222222", "files": []}
+                for env in ("bloxd.io", "staging.bloxd.io")
+            }
+
+            collected = monitor.write_fixed_change_reports(
+                root,
+                previous_state=prev_state,
+                current_state=curr_state,
+                updated_envs=["bloxd.io", "staging.bloxd.io"],
+                now_text="2026-11-20T22:10 JST",
+                base_commit=base_sha,
+            )
+
+            self.assertFalse(
+                monitor.environments_have_identical_category_diff(
+                    collected, "bloxd.io", "staging.bloxd.io", "changed"
+                )
+            )
+            combined_parts = "\n".join(
+                pf.read_text(encoding="utf-8")
+                for pf in sorted(monitor.CHANGED_PARTS_DIR.glob("part-*.md"))
+            )
+            self.assertIn("PROD_ONLY_VALUE", combined_parts)
+            self.assertIn("STAGING_ONLY_VALUE", combined_parts)
+
+    def test_revise_8_9_changed_and_removed_links_point_to_exact_old_and_new_positions(self):
+        old_js = (
+            "const line1 = 1;\n"
+            "const line2 = 2;\n"
+            "const removedLine3 = 'deleted';\n"
+            "const removedLine4 = 'also_deleted';\n"
+            "const line5 = 5;\n"
+            "const line6 = 6;\n"
+            "const changedLine7 = 'before';\n"
+        ).encode("utf-8")
+        new_js = (
+            "const line1 = 1;\n"
+            "const line2 = 2;\n"
+            "const line5 = 5;\n"
+            "const line6 = 6;\n"
+            "const changedLine7 = 'after';\n"
+        ).encode("utf-8")
+
+        path = "bundles/bloxd.io/main.js"
+        res = monitor.classify_bundle_file_diff(path, old_js, new_js)
+        self.assertEqual(len(res["removed"]), 1)
+        self.assertEqual(len(res["changed"]), 1)
+
+        removed_item = res["removed"][0]
+        # Removed lines were at old lines 3..4, and new_range is None
+        self.assertEqual(removed_item["old_range"], (3, 4))
+        self.assertIsNone(removed_item["new_range"])
+
+        base_ref = "build/bloxd.io/old.11111111"
+        head_ref = "build/bloxd.io/new.22222222"
+        expected_anchor = monitor.github_diff_anchor(path)
+
+        rem_links = monitor.build_github_links(
+            path,
+            base_ref,
+            head_ref,
+            old_range=removed_item["old_range"],
+            new_range=removed_item["new_range"],
+        )
+        # Removed hunk link MUST use L3 (old side line 3), NOT R, and before_url must point to base_ref #L3-L4
+        self.assertTrue(rem_links["hunk_url"].endswith(f"#{expected_anchor}L3"))
+        self.assertEqual(
+            rem_links["before_url"],
+            f"{monitor.REPO_URL}/blob/{base_ref}/{path}#L3-L4",
+        )
+        self.assertEqual(rem_links["after_url"], "")
+
+        changed_item = res["changed"][0]
+        # Changed line was at old line 7 and is now at new line 5
+        self.assertEqual(changed_item["old_range"], (7, 7))
+        self.assertEqual(changed_item["new_range"], (5, 5))
+        chg_links = monitor.build_github_links(
+            path,
+            base_ref,
+            head_ref,
+            old_range=changed_item["old_range"],
+            new_range=changed_item["new_range"],
+        )
+        self.assertTrue(chg_links["hunk_url"].endswith(f"#{expected_anchor}R5"))
+        self.assertEqual(
+            chg_links["after_url"],
+            f"{monitor.REPO_URL}/blob/{head_ref}/{path}#L5",
+        )
+        self.assertEqual(
+            chg_links["before_url"],
+            f"{monitor.REPO_URL}/blob/{base_ref}/{path}#L7",
+        )
+
+    def test_revise_10_11_immutable_build_tags_and_history_links_never_use_main_or_overwrite_different_commit(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.patch_paths(root)
+
+            def git(*args):
+                subprocess.run(
+                    ["git", *args],
+                    cwd=root,
+                    check=True,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                )
+
+            git("init", "-q")
+            git("config", "user.name", "Test")
+            git("config", "user.email", "test@example.invalid")
+
+            p = root / "bundles" / "bloxd.io" / "main.js"
+            p.parent.mkdir(parents=True, exist_ok=True)
+            p.write_text("const build = 1;\n", encoding="utf-8")
+            git("add", "-A")
+            git("commit", "-qm", "commit 1")
+            sha1 = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True).strip()
+
+            # Create build tag for build 1
+            tag1 = monitor.ensure_build_tag(root, "bloxd.io", "b1.aaaa1111", target_commit=sha1)
+            self.assertEqual(tag1, "build/bloxd.io/b1.aaaa1111")
+            # Re-running ensure_build_tag on the same commit is idempotent
+            self.assertEqual(
+                monitor.ensure_build_tag(root, "bloxd.io", "b1.aaaa1111", target_commit=sha1),
+                tag1,
+            )
+
+            # Create a second build commit
+            p.write_text("const build = 2;\n", encoding="utf-8")
+            git("add", "-A")
+            git("commit", "-qm", "commit 2")
+            sha2 = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True).strip()
+
+            # Attempting to point existing tag1 at sha2 must raise RuntimeError without overwriting tag1
+            with self.assertRaises(RuntimeError):
+                monitor.ensure_build_tag(root, "bloxd.io", "b1.aaaa1111", target_commit=sha2)
+            tag1_target = subprocess.check_output(
+                ["git", "rev-parse", f"refs/tags/{tag1}^{{commit}}"], cwd=root, text=True
+            ).strip()
+            self.assertEqual(tag1_target, sha1)
+
+            # Verify links generated without explicit head_commit use immutable build tags, never `main`
+            prev_state = {"bloxd.io": {"build": "b1.aaaa1111", "files": []}}
+            curr_state = {"bloxd.io": {"build": "b2.bbbb2222", "files": []}}
+            collected = monitor.write_fixed_change_reports(
+                root,
+                previous_state=prev_state,
+                current_state=curr_state,
+                updated_envs=["bloxd.io"],
+                now_text="2026-11-20T22:30 JST",
+                base_commit=sha1,
+                head_commit=None,
+            )
+            monitor.update_history_file(
+                monitor.HISTORY_PATH,
+                previous_state=prev_state,
+                current_state=curr_state,
+                updated_envs=["bloxd.io"],
+                now_text="2026-11-20T22:30 JST",
+                collected_diffs=collected,
+                base_commit=sha1,
+                head_commit=None,
+            )
+            history_after_b2 = monitor.HISTORY_PATH.read_text(encoding="utf-8")
+            self.assertNotIn("/blob/main/", history_after_b2)
+            self.assertNotIn("...main)", history_after_b2)
+            self.assertNotIn("/commits/main", history_after_b2)
+            self.assertIn("build/bloxd.io/b2.bbbb2222", history_after_b2)
+
+            # Append a third build and confirm the row for b2 is completely unchanged
+            prev_state_3 = {"bloxd.io": {"build": "b2.bbbb2222", "files": []}}
+            curr_state_3 = {"bloxd.io": {"build": "b3.cccc3333", "files": []}}
+            monitor.update_history_file(
+                monitor.HISTORY_PATH,
+                previous_state=prev_state_3,
+                current_state=curr_state_3,
+                updated_envs=["bloxd.io"],
+                now_text="2026-11-20T23:00 JST",
+                collected_diffs=collected,
+                base_commit=sha2,
+                head_commit=None,
+            )
+            history_after_b3 = monitor.HISTORY_PATH.read_text(encoding="utf-8")
+            b2_lines_before = [l for l in history_after_b2.splitlines() if "| bloxd.io | `b2.bbbb2222` |" in l]
+            b2_lines_after = [l for l in history_after_b3.splitlines() if "| bloxd.io | `b2.bbbb2222` |" in l]
+            self.assertEqual(len(b2_lines_before), 1)
+            self.assertEqual(b2_lines_before, b2_lines_after)
 
 
 if __name__ == "__main__":

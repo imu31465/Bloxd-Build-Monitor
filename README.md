@@ -3,15 +3,15 @@
 Latest Bloxd build per environment, detected by the external Cloudflare Worker in `cloudflare/` (one poll per minute). GitHub Actions is dispatched only when a bundle changes; its built-in schedule is a six-hour fallback.
 Every bundle is beautified and archived under stable logical paths: main.js, main.css, chunks/js/<chunk-id-or-name>.js, and matching CSS paths. Original CDN file names, URLs, and hashes are retained in .monitor-state.json.
 This keeps each Webpack chunk on the same Git path across builds, so GitHub shows a normal file modification instead of delete/add. Every build update is a new commit; previous build snapshots remain accessible in Git history and are never squashed or force-pushed.
-`CHANGES.md` summarizes the latest update and links to fixed diff reports (`changes/added.md`, `changes/removed.md`, `changes/changed.md`) and the cumulative build log (`HISTORY.md`).
-Each report is updated in place on every build and links directly to GitHub file diffs, hunk anchors, and before/after source lines; JavaScript comparison masks only two-character identifiers.
+`CHANGES.md` summarizes the latest update and links to fixed diff reports (`changes/added.md`, `changes/removed.md`, `changes/changed.md` + `changes/changed/part-NNN.md`) and the cumulative build log (`HISTORY.md`).
+Each report is updated in place on every build and links directly to immutable GitHub file diffs, hunk anchors, and before/after source lines; JavaScript comparison masks only two-character identifiers.
 
 ## Reports & History
 
 - [`CHANGES.md`](CHANGES.md) — Latest build update summary
 - [`changes/added.md`](changes/added.md) — Newly added bundle files and code insertions
 - [`changes/removed.md`](changes/removed.md) — Removed bundle files and code deletions
-- [`changes/changed.md`](changes/changed.md) — Fine-grained code modifications with before/after diffs and GitHub links
+- [`changes/changed.md`](changes/changed.md) — Paginated index of all fine-grained code modifications (`changes/changed/part-NNN.md`)
 - [`HISTORY.md`](HISTORY.md) — Cumulative history of all detected builds across environments
 
 | Environment | Checked at (JST) | Build | Main bundle |
