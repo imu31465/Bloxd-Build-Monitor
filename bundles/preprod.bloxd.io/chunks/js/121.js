@@ -1,437 +1,432 @@
 export const id = 121;
 export const ids = [121];
 export const modules = {
-  6286: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Mz
+  6414: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      default: () => Sq
     });
-    var Ez = bz(1038),
-      nz = bz.n(Ez),
-      iz = bz(1181),
-      lz = bz(1089);
+    var Yq = gq(57),
+      lq = gq(1512),
+      Oq = gq(1018),
+      mq = gq.n(Oq),
+      xq = gq(296),
+      Aq = gq(6424),
+      cq = gq(1025),
+      uq = gq(1498),
+      Bq = gq(4387),
+      Wq = gq(1422),
+      Nq = gq(3040),
+      aq = gq(4393),
+      Vq = gq(1659),
+      dq = gq(4379),
+      jq = gq(1101),
+      Hq = gq(24),
+      oq = gq(1477),
+      Pq = gq(1195),
+      Qq = gq(96),
+      yq = gq(1183),
+      tq = gq(1326),
+      rq = gq(1214),
+      vq = gq(6422),
+      hq = gq(6428),
+      nq = gq(1070);
 
-    function Mz(zz) {
+    function bq(qq) {
       let {
-        item: uz,
-        className: bz
-      } = zz;
+        pack: Eq,
+        view: gq,
+        favourite: Yq,
+        notice: lq
+      } = qq;
       const {
-        t: Ez
-      } = (0, iz.F)();
-      return null === uz.renderId || uz.previewsOutdated ? (0, lz.jsx)("div", {
-        className: nz()("ShaderPackPreviewsNotice", bz),
-        children: (0, lz.jsx)("span", {
-          children: Ez(null === uz.renderId ? "shaderPackListing:screenshotsNotGenerated" : "shaderPackListing:screenshotsNotRegenerated")
-        })
-      }) : null
-    }
-  },
-  6296: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => Hz
-    });
-    var Ez = bz(1038),
-      nz = bz.n(Ez),
-      iz = bz(6283),
-      lz = bz(1181),
-      Mz = bz(6274),
-      tz = bz(1089);
-
-    function Hz(zz) {
-      let {
-        selected: uz,
-        onSelect: bz,
-        imageUrl: Ez
-      } = zz;
-      const {
-        t: Hz
-      } = (0, lz.F)();
-      return (0, tz.jsx)("div", {
-        className: "ShaderPackViewPicker",
-        children: iz.B.map((zz => {
-          const iz = Ez(zz);
-          return (0, tz.jsxs)("button", {
-            type: "button",
-            "aria-pressed": zz === uz,
-            className: nz()("ShaderPackViewOption", {
-              Selected: zz === uz
-            }),
-            onClick: () => {
-              bz(zz)
-            },
-            children: [null !== iz && (0, tz.jsx)("img", {
-              src: iz,
-              alt: "",
+        width: Oq,
+        height: xq
+      } = Aq.p.thumb, {
+        live: Bq
+      } = Eq;
+      return (0, nq.jsx)("div", {
+        className: "ShaderPackCard",
+        children: (0, nq.jsxs)("div", {
+          className: "ShaderPackCardTile",
+          children: [(0, nq.jsxs)(uq.LinkPreserveSearch, {
+            to: (0, vq.$)(Eq.packId),
+            className: "ShaderPackCardLink",
+            children: [Bq && (0, nq.jsx)("img", {
+              className: "ShaderPackCardImage",
+              src: (0, Aq.r)(Pq.clientSideServerUrls.s3Url, Bq, gq, "thumb"),
+              width: Oq,
+              height: xq,
               loading: "lazy",
+              alt: "",
               draggable: !1
-            }), (0, tz.jsx)("span", {
-              className: "SmallTextBold",
-              children: Hz(Mz.db[zz])
+            }), Bq && (0, nq.jsx)(hq.e, {
+              item: Bq
+            }), !Bq && (0, nq.jsx)("div", {
+              className: "ShaderPackCardImage ShaderPackCardImagePending",
+              children: (0, nq.jsx)(cq.d, {
+                name: "hourglass"
+              })
+            }), (0, nq.jsxs)("div", {
+              className: "ShaderPackCardText",
+              children: [lq && (0, nq.jsx)("div", {
+                className: mq()("ShaderPackCardNotice", {
+                  Warning: "warning" === lq.tone
+                }),
+                children: lq.text
+              }), (0, nq.jsx)("div", {
+                className: "ShaderPackCardName SmallTextBold",
+                children: Eq.name
+              })]
             })]
-          }, zz)
-        }))
+          }), Bq && (0, nq.jsxs)("div", {
+            className: "ShaderPackCardStats",
+            children: [(0, nq.jsxs)("div", {
+              className: "ShaderPackCardUses SmallTextBold",
+              children: [(0, nq.jsx)(cq.d, {
+                name: "download"
+              }), (0, rq.S)(Bq.downloads)]
+            }), Yq && (0, nq.jsx)(Wq.x, {
+              onClick: Yq.onToggle,
+              isLiked: !0 === Yq.isFavourite,
+              isLoading: null === Yq.isFavourite
+            })]
+          })]
+        })
       })
     }
-  },
-  6289: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => dz,
-      g: () => Fz,
-      k: () => pz,
-      m: () => Zz
-    });
-    var Ez = bz(56),
-      nz = bz(6283),
-      iz = bz(1473),
-      lz = bz(6274),
-      Mz = bz(6291),
-      tz = bz(1114);
-    const Hz = "shaderPackListingView",
-      Oz = "shaderPackListingFilterOpen";
+    var iq = gq(6431);
 
-    function pz() {
-      var zz;
-      const [uz, bz] = (0, Mz.d)(Hz, nz.B[0]);
-      return [null !== (zz = nz.B.find((zz => zz === uz))) && void 0 !== zz ? zz : nz.B[0], bz]
-    }
-
-    function dz() {
-      (0, Ez.useEffect)((() => () => {
-        window.location.pathname.startsWith(lz.P) || (0, lz.j)()
-      }), [])
-    }
-
-    function Fz() {
-      return (0, Mz.d)(Oz, !1)
-    }
-
-    function Zz() {
+    function Zq(qq) {
+      let {
+        results: Eq,
+        loading: gq,
+        failed: Yq,
+        onRetry: lq,
+        view: Oq,
+        previewView: xq
+      } = qq;
       const {
-        userContext: zz,
-        isUserContextUpdating: uz
-      } = (0, tz.c)(), [bz, nz] = (0, Ez.useState)(null), lz = (0, Ez.useRef)(new Set);
+        t: Aq
+      } = (0, yq.v)(), cq = (0, iq.m)(), uq = Date.now(), Bq = null === Eq ? 0 : "owned" === Eq.kind ? Eq.packs.length : Eq.page.results.length;
+      return (0, nq.jsxs)("div", {
+        className: mq()("ShaderPackBrowseResults", {
+          Loading: gq && null !== Eq
+        }),
+        children: [gq && null === Eq && (0, nq.jsx)("div", {
+          className: "ShaderPackBrowseMessage",
+          children: (0, nq.jsx)(tq.e, {})
+        }), Yq && (0, nq.jsxs)("div", {
+          className: "ShaderPackBrowseMessage",
+          children: [Aq("shaderPackListing:loadFailed"), (0, nq.jsx)(Wq.g, {
+            onClick: lq,
+            children: Aq("general:tryAgain")
+          })]
+        }), "listing" === (null === Eq || void 0 === Eq ? void 0 : Eq.kind) && Bq > 0 && (0, nq.jsx)("div", {
+          className: "ShaderPackBrowseGrid",
+          children: Eq.page.results.map((qq => (0, nq.jsx)(bq, {
+            pack: {
+              packId: qq.packId,
+              name: qq.name,
+              live: qq
+            },
+            view: xq,
+            favourite: {
+              isFavourite: cq.isFavourite(qq.packId),
+              onToggle: () => {
+                cq.toggle(qq.packId)
+              }
+            }
+          }, qq.packId)))
+        }), "owned" === (null === Eq || void 0 === Eq ? void 0 : Eq.kind) && Bq > 0 && (0, nq.jsx)("div", {
+          className: "ShaderPackBrowseGrid",
+          children: Eq.packs.map((qq => {
+            var Eq;
+            return (0, nq.jsx)(bq, {
+              pack: qq,
+              view: xq,
+              notice: qq.owner ? (0, vq.X)(qq.owner, !(null === (Eq = qq.live) || void 0 === Eq || !Eq.renderId), uq, Aq)[0] : void 0
+            }, qq.packId)
+          }))
+        }), null !== Eq && 0 === Bq && (0, nq.jsx)("div", {
+          className: "ShaderPackBrowseMessage",
+          children: Aq(fq(Oq))
+        })]
+      })
+    }
 
-      function Mz(zz, uz) {
-        nz((bz => {
-          const Ez = new Set(bz);
-          return uz ? Ez.add(zz) : Ez.delete(zz), Ez
+    function fq(qq) {
+      return "mine" === qq.section ? "shaderPackListing:noOwnPacks" : (0, vq.r)(qq) ? "general:noResults" : "favourites" === qq.section ? "shaderPackListing:noFavourites" : "general:noResults"
+    }
+    var Mq = gq(6443);
+    const Tq = 24,
+      zq = {
+        favourites: "general:favourites",
+        mine: "shaderPackListing:mine"
+      };
+
+    function Sq() {
+      var qq, Eq, gq, Oq;
+      const {
+        t: tq
+      } = (0, yq.v)(), rq = (0, uq.useNavigatePreserveSearch)(), hq = (0, lq.q)(), {
+        userContext: bq,
+        isUserContextUpdating: fq
+      } = (0, jq.c)(), [Sq, pq] = (0, iq.l)(), [Gq, Lq] = (0, iq.h)(), Jq = (0, Yq.useRef)(!1), [kq, Rq] = (0, Bq.k)(), Uq = (0, vq.B)(kq), [Fq, sq] = (0, Yq.useState)(null !== (qq = Uq.searchQuery) && void 0 !== qq ? qq : ""), Xq = (0, Yq.useRef)(null), {
+        searchQuery: wq
+      } = Uq;
+      (0, Yq.useEffect)((() => {
+        sq(null !== wq && void 0 !== wq ? wq : ""), Xq.current && (Xq.current.value = null !== wq && void 0 !== wq ? wq : "")
+      }), [wq]);
+      const [Kq, Cq] = (0, Yq.useState)(null), [Iq, eq] = (0, Yq.useState)(!1), [Dq, qE] = (0, Yq.useState)(!1), [EE, gE] = (0, Yq.useState)(0), YE = (0, Yq.useRef)(0), lE = JSON.stringify(Uq), OE = (0, vq.j)();
+
+      function mE() {
+        null !== OE ? (rq(OE), Hq.b.set({
+          openEverythingMenuName: xq.p.SETTINGS,
+          openSettingsCategory: "pN"
+        })) : rq("/")
+      }
+
+      function xE(qq) {
+        Rq((Eq => {
+          (0, vq.ib)(Eq, {
+            ...Uq,
+            pageNumber: 1,
+            ...qq
+          })
         }))
       }
-      return (0, Ez.useEffect)((() => {
-        if (uz) return;
-        let bz = !1;
-        return iz.c.getFavouriteShaderPacks(zz).then((zz => {
-          bz || nz(new Set(zz))
-        })).catch((zz => {
-          console.error("Failed to get favourite shader packs", zz), bz || nz(new Set)
-        })), () => {
-          bz = !0
-        }
-      }), [zz, uz]), {
-        isFavourite: zz => null === bz ? null : bz.has(zz),
-        toggle: function(uz) {
-          if (null === bz || lz.current.has(uz)) return;
-          lz.current.add(uz);
-          const Ez = !bz.has(uz);
-          Mz(uz, Ez), (Ez ? iz.c.favouriteShaderPack(zz, uz) : iz.c.unfavouriteShaderPack(zz, uz)).catch((zz => {
-            console.error("Failed to change a favourite shader pack", zz), Mz(uz, !Ez)
-          })).finally((() => {
-            lz.current.delete(uz)
-          }))
-        }
-      }
-    }
-  },
-  6274: (zz, uz, bz) => {
-    bz.d(uz, {
-      D: () => wz,
-      F: () => Az,
-      G: () => Oz,
-      J: () => Lz,
-      M: () => Rz,
-      N: () => Uz,
-      O: () => qz,
-      P: () => lz,
-      T: () => hz,
-      W: () => tz,
-      _: () => Mz,
-      bb: () => Vz,
-      db: () => mz,
-      e: () => Xz,
-      eb: () => fz,
-      f: () => xz,
-      gb: () => Tz,
-      h: () => Kz,
-      j: () => dz,
-      m: () => pz,
-      p: () => Pz,
-      q: () => Fz,
-      u: () => Gz,
-      v: () => cz,
-      z: () => Zz
-    });
-    var Ez = bz(6283),
-      nz = bz(158),
-      iz = bz(4313);
-    const lz = "/shader-packs",
-      Mz = `${lz}/publish`;
 
-    function tz(zz) {
-      return `${lz}/${encodeURIComponent(zz)}`
-    }
-    let Hz = null;
-
-    function Oz(zz) {
-      Hz = zz
-    }
-
-    function pz() {
-      return Hz
-    }
-
-    function dz() {
-      Hz = null
-    }
-
-    function Fz(zz) {
-      return zz.playerHasRank("developer") || zz.playerHasRank("admin")
-    }
-    const Zz = ["terrain", "water", "models", "sunShadows", "strict"],
-      Rz = {
-        terrain: "shaderPackListing:filterTerrain",
-        water: "shaderPackListing:filterWater",
-        models: "shaderPackListing:filterModels",
-        sunShadows: "shaderPackListing:filterShadows",
-        strict: "shaderPackListing:filterAllGames"
-      };
-
-    function Kz(zz, uz) {
-      return zz.withFeatures.includes(uz) ? "with" : zz.withoutFeatures.includes(uz) ? "without" : null
-    }
-
-    function wz(zz) {
-      return null === zz ? "with" : "with" === zz ? "without" : null
-    }
-
-    function Xz(zz) {
-      return "with" === zz ? "only" : null === zz ? "include" : void 0
-    }
-
-    function fz(zz, uz) {
-      const bz = Kz(zz, uz),
-        Ez = zz => zz.filter((zz => zz !== uz));
-      return {
-        withFeatures: null === bz ? [...zz.withFeatures, uz] : Ez(zz.withFeatures),
-        withoutFeatures: "with" === bz ? [...zz.withoutFeatures, uz] : Ez(zz.withoutFeatures)
-      }
-    }
-    const sz = "section",
-      rz = "sort",
-      oz = "filters",
-      Nz = "q",
-      vz = "banned",
-      xz = "popular",
-      Jz = "strict";
-
-    function Az(zz) {
-      var uz, bz, nz;
-      const lz = zz.get(sz),
-        Mz = (null !== (uz = zz.get(oz)) && void 0 !== uz ? uz : Jz).split(","),
-        tz = zz.get(vz);
-      return {
-        section: "favourites" === lz || "mine" === lz ? lz : "explore",
-        sort: null !== (bz = Ez.u.find((uz => uz === zz.get(rz)))) && void 0 !== bz ? bz : xz,
-        withFeatures: Zz.filter((zz => Mz.includes(zz) && !Mz.includes(`-${zz}`))),
-        withoutFeatures: Zz.filter((zz => Mz.includes(`-${zz}`))),
-        searchQuery: (null === (nz = zz.get(Nz)) || void 0 === nz ? void 0 : nz.slice(0, Ez.G)) || null,
-        pageNumber: (0, iz.h)(zz.get(iz.e)),
-        banned: "only" === tz ? "with" : "include" === tz ? null : "without"
-      }
-    }
-
-    function Tz(zz, uz) {
-      var bz;
-      const Ez = az(uz);
-      (0, iz.k)(zz, sz, "explore" === uz.section ? null : uz.section), (0, iz.k)(zz, rz, uz.sort === xz ? null : uz.sort), (0, iz.k)(zz, oz, Ez === Jz ? null : Ez), (0, iz.k)(zz, Nz, uz.searchQuery), (0, iz.k)(zz, vz, null !== (bz = Xz(uz.banned)) && void 0 !== bz ? bz : null), (0, iz.m)(zz, uz.pageNumber)
-    }
-
-    function Lz(zz) {
-      const uz = new URLSearchParams;
-      return Tz(uz, {
-        section: "explore",
-        sort: xz,
-        withFeatures: "strict" === zz ? [zz] : [zz, "strict"],
-        withoutFeatures: [],
-        searchQuery: null,
-        pageNumber: 1,
-        banned: "without"
-      }), `${lz}?${uz.toString()}`
-    }
-
-    function Pz(zz) {
-      return az(zz) === Jz
-    }
-
-    function Gz(zz) {
-      return null !== zz.searchQuery || "with" === zz.banned || az(zz) !== Jz
-    }
-
-    function az(zz) {
-      return Zz.flatMap((uz => {
-        const bz = Kz(zz, uz);
-        return "with" === bz ? [uz] : "without" === bz ? [`-${uz}`] : []
-      })).join(",")
-    }
-    const Vz = {
-        popular: "shaderPackListing:sortPopular",
-        updated: "shaderPackListing:sortUpdated",
-        newest: "shaderPackListing:sortNewest"
-      },
-      mz = {
-        forest: "shaderPackListing:viewForest",
-        desert: "shaderPackListing:viewDesert",
-        water: "shaderPackListing:viewWater",
-        night: "shaderPackListing:viewNight",
-        cave: "shaderPackListing:viewCave"
-      };
-
-    function qz(zz) {
-      return Math.round(100 * Math.max(0, 1 - 1 / zz))
-    }
-
-    function hz(zz, uz, bz, nz) {
-      const iz = [];
-      zz.isBanned && iz.push({
-        tone: "warning",
-        text: nz("shaderPackListing:ownerBanned"),
-        detail: null
-      });
-      const {
-        pending: lz
-      } = zz;
-      if (null === zz.brokenError || lz && !lz.error || iz.push({
-          tone: "warning",
-          text: nz("shaderPackListing:ownerBroken"),
-          detail: zz.brokenError
-        }), null !== lz && void 0 !== lz && lz.error) iz.push({
-        tone: "warning",
-        text: nz(uz ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, Ez.g)(lz.error) ? null : lz.error
-      });
-      else if (lz) {
-        const zz = null === lz.renderNotBefore ? 0 : lz.renderNotBefore - bz,
-          Ez = String(Math.ceil(zz / 6e4)),
-          Mz = nz(uz ? zz > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : zz > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: Ez
-          });
-        iz.push({
-          tone: "info",
-          text: Mz,
-          detail: null
+      function AE() {
+        const qq = Fq.trim() || null;
+        xE({
+          searchQuery: qq,
+          ...null !== qq && !Jq.current && (0, vq.m)(Uq) && {
+            withFeatures: [],
+            withoutFeatures: []
+          }
         })
-      }
-      return zz.listed || iz.push({
-        tone: "info",
-        text: nz("shaderPackListing:ownerUnlisted"),
-        detail: null
-      }), iz
-    }
-
-    function Uz(zz) {
-      return Math.max(1, Math.round(zz / 1024))
-    }
-
-    function cz(zz, uz, bz) {
-      return zz instanceof nz.c && zz.errorMessageForUser ? zz.errorMessageForUser : uz(bz)
-    }
-  },
-  6291: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => iz
-    });
-    var Ez = bz(56),
-      nz = bz(33);
-
-    function iz(zz, uz) {
-      var bz;
-      const [iz, lz] = (0, Ez.useState)(null !== (bz = nz.g.getItem(zz)) && void 0 !== bz ? bz : uz);
-      return [iz, uz => {
-        nz.g.setItem(zz, uz), lz(uz)
-      }]
-    }
-  },
-  6283: (zz, uz, bz) => {
-    bz.d(uz, {
-      B: () => Ez,
-      D: () => dz,
-      G: () => Oz,
-      K: () => fz,
-      M: () => pz,
-      O: () => Hz,
-      b: () => Fz,
-      e: () => Rz,
-      f: () => Zz,
-      g: () => Xz,
-      i: () => rz,
-      l: () => tz,
-      m: () => nz,
-      q: () => sz,
-      u: () => iz,
-      y: () => Mz,
-      z: () => lz
-    });
-    const Ez = ["forest", "desert", "water", "night", "cave"];
-    const nz = {
-        full: {
-          width: 3840,
-          height: 2160
-        },
-        large: {
-          width: 1920,
-          height: 1080
-        },
-        thumb: {
-          width: 640,
-          height: 360
-        }
-      },
-      iz = ["popular", "updated", "newest"],
-      lz = 3,
-      Mz = 32,
-      tz = 300;
-
-    function Hz(zz, uz) {
-      return zz.slice(0, uz).replace(/[\uD800-\uDBFF]$/, "")
-    }
-    const Oz = 64,
-      pz = 512,
-      dz = 18e5;
-    const Fz = "Bloxdhub",
-      Zz = "https://bloxdhub.com/shaders";
-
-    function Rz(zz) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(zz)}`
-    }
-    const Kz = "Screenshot generation failed.",
-      wz = "Its screenshots couldn't be generated:";
-
-    function Xz(zz) {
-      var uz;
-      return zz === Kz || null !== (uz = null === zz || void 0 === zz ? void 0 : zz.startsWith(wz)) && void 0 !== uz && uz
-    }
-
-    function fz(zz, uz) {
-      return `shaderPacks/${zz}/${uz}.json`
-    }
-
-    function sz(zz, uz, bz, Ez) {
-      return null === uz.renderId ? rz(zz, uz.baselineVersion, bz, Ez) : `${zz}/${function(zz,uz,bz,Ez){return`shaderPacks/${zz}/${uz}/${bz}-${Ez}.webp`}(uz.packId,uz.renderId,bz,Ez)}`
-    }
-
-    function rz(zz, uz, bz, Ez) {
-      return `${zz}/${function(zz,uz,bz){return`shaderPacks/baseline/${zz}/${uz}-${bz}.webp`}(uz,bz,Ez)}`
+      }(0, dq.b)(mE), (0, iq.e)(), (0, Yq.useEffect)((() => {
+        if (fq) return;
+        const qq = ++YE.current,
+          Eq = JSON.parse(lE);
+        eq(!0), qE(!1), async function(qq) {
+          if ("mine" === qq.section) return {
+            kind: "owned",
+            packs: await oq.e.getOwnedShaderPacks(bq)
+          };
+          const Eq = "favourites" === qq.section,
+            gq = Eq && (0, vq.m)(qq),
+            Yq = await oq.e.getShaderPacks(bq, {
+              sort: Eq ? vq.c : qq.sort,
+              features: gq ? [] : qq.withFeatures,
+              withoutFeatures: gq ? [] : qq.withoutFeatures,
+              searchQuery: qq.searchQuery,
+              pageNumber: qq.pageNumber,
+              pageSize: Tq,
+              onlyFavourites: Eq,
+              banned: (0, vq.p)(bq) ? (0, vq.b)(qq.banned) : void 0
+            });
+          return {
+            kind: "listing",
+            page: Yq
+          }
+        }(Eq).then((Eq => {
+          YE.current === qq && Cq(Eq)
+        })).catch((Eq => {
+          YE.current === qq && (console.error("Failed to get shader packs", Eq), Cq(null), qE(!0))
+        })).finally((() => {
+          YE.current === qq && eq(!1)
+        }))
+      }), [lE, bq, fq, EE]);
+      const [cE, uE] = (0, Yq.useState)(null), BE = null !== (gq = null === (Oq = ("listing" === (null === Kq || void 0 === Kq ? void 0 : Kq.kind) ? Kq.page.results : (null !== (Eq = null === Kq || void 0 === Kq ? void 0 : Kq.packs) && void 0 !== Eq ? Eq : []).flatMap((qq => qq.live ? [qq.live] : [])))[0]) || void 0 === Oq ? void 0 : Oq.baselineVersion) && void 0 !== gq ? gq : null;
+      (0, Yq.useEffect)((() => {
+        null !== BE && uE(BE)
+      }), [BE]);
+      const WE = "mine" === Uq.section,
+        NE = (0, vq.p)(bq),
+        aE = qq => {
+          "explore" !== Uq.section && (qq.stopPropagation(), qq.preventDefault(), xE({
+            section: "explore"
+          }))
+        };
+      return (0, nq.jsxs)("div", {
+        className: "ShaderPackBrowse AnimFadeIn",
+        children: [(0, nq.jsx)(Wq.d, {
+          onClick: mE,
+          children: tq(null === OE ? "homePage:backToGames" : "shaderPackListing:backToSettings")
+        }), (0, nq.jsxs)("div", {
+          className: "ShaderPackBrowseHeader",
+          children: [(0, nq.jsxs)("div", {
+            className: "ShaderPackBrowseHeaderRow",
+            children: [(0, nq.jsx)("h1", {
+              className: "VisuallyHidden",
+              children: tq("shaderPackListing:title")
+            }), (0, nq.jsxs)("div", {
+              className: "ShaderPackBrowseTabs",
+              children: [(0, nq.jsx)("div", {
+                className: mq()("ShaderPackBrowseSort", {
+                  Active: "explore" === Uq.section
+                }),
+                onMouseDownCapture: aE,
+                onTouchEndCapture: aE,
+                children: (0, nq.jsx)(Nq.d, {
+                  options: Aq.v.map((qq => ({
+                    value: qq,
+                    label: tq(vq.db[qq])
+                  }))),
+                  value: Uq.sort,
+                  onChange: qq => {
+                    xE({
+                      section: "explore",
+                      sort: qq.value
+                    })
+                  }
+                })
+              }), Object.keys(zq).map((qq => (0, nq.jsx)(Wq.Q, {
+                active: Uq.section === qq,
+                onClick: () => {
+                  xE({
+                    section: qq
+                  })
+                },
+                children: tq(zq[qq])
+              }, qq)))]
+            }), !WE && (0, nq.jsx)("div", {
+              className: "ShaderPackBrowseDivider"
+            }), !WE && (0, nq.jsxs)("div", {
+              className: "ShaderPackBrowseSearch",
+              children: [(0, nq.jsx)("div", {
+                className: "ShaderPackBrowseSearchIcon",
+                children: (0, nq.jsx)(cq.d, {
+                  name: "magnifying-glass"
+                })
+              }), (0, nq.jsx)(Vq.b, {
+                className: "ShaderPackBrowseSearchInput",
+                placeholderText: tq("shaderPackListing:searchPlaceholder"),
+                maxLength: Aq.I,
+                defaultValue: Fq,
+                domRef: Xq,
+                onValueChange: sq,
+                onEnter: AE
+              }), (0, nq.jsx)(Wq.g, {
+                onClick: AE,
+                children: tq("general:search")
+              })]
+            }), !WE && (0, nq.jsxs)(Wq.Q, {
+              className: mq()("ShaderPackBrowseFilterToggle", {
+                Open: Gq
+              }),
+              pressed: Gq,
+              onClick: () => {
+                Lq(!Gq)
+              },
+              children: [tq("shaderPackListing:filter"), " ", (0, nq.jsx)(cq.d, {
+                name: Gq ? "angle-up" : "angle-down"
+              })]
+            }), (0, nq.jsx)("div", {
+              className: "ShaderPackBrowseSpace"
+            }), Qq.featureFlags.settings.canUseShaderPacks && (0, nq.jsxs)(Wq.p, {
+              onClick: () => {
+                rq(vq.ab)
+              },
+              children: [(0, nq.jsx)(cq.d, {
+                name: "upload"
+              }), " ", tq("shaderPackListing:publish")]
+            })]
+          }), !WE && Gq && (0, nq.jsxs)("div", {
+            className: "ShaderPackBrowseFeatures",
+            children: [vq.w.map((qq => {
+              const Eq = (0, vq.f)(Uq, qq),
+                gq = tq(vq.K[qq]);
+              return (0, nq.jsx)(Wq.Q, {
+                className: mq()("ShaderPackBrowseFeature", {
+                  Without: "without" === Eq
+                }),
+                active: "with" === Eq,
+                pressed: null !== Eq,
+                onClick: () => {
+                  Jq.current = !0, xE((0, vq.hb)(Uq, qq))
+                },
+                children: (0, nq.jsxs)("span", {
+                  className: "ShaderPackBrowseFeatureLabel",
+                  children: [(0, nq.jsxs)("span", {
+                    className: "ShaderPackBrowseFeatureReserve",
+                    children: [(0, nq.jsx)(cq.d, {
+                      name: "check"
+                    }), " ", gq]
+                  }), (0, nq.jsxs)("span", {
+                    children: [null !== Eq && (0, nq.jsx)(cq.d, {
+                      name: "with" === Eq ? "check" : "xmark"
+                    }), " ", gq]
+                  })]
+                })
+              }, qq)
+            })), NE && (0, nq.jsx)(Wq.Q, {
+              className: mq()("ShaderPackBrowseFeature", {
+                Without: "without" === Uq.banned
+              }),
+              active: "with" === Uq.banned,
+              pressed: null !== Uq.banned,
+              onClick: () => {
+                const qq = "without" === Uq.banned && !Jq.current && (0, vq.m)(Uq);
+                xE({
+                  banned: (0, vq.z)(Uq.banned),
+                  ...qq && {
+                    withFeatures: [],
+                    withoutFeatures: []
+                  }
+                })
+              },
+              children: (0, nq.jsxs)("span", {
+                className: "ShaderPackBrowseFeatureLabel",
+                children: [(0, nq.jsxs)("span", {
+                  className: "ShaderPackBrowseFeatureReserve",
+                  children: [(0, nq.jsx)(cq.d, {
+                    name: "check"
+                  }), " BANNED"]
+                }), (0, nq.jsxs)("span", {
+                  children: [null !== Uq.banned && (0, nq.jsx)(cq.d, {
+                    name: "with" === Uq.banned ? "check" : "xmark"
+                  }), " BANNED"]
+                })]
+              })
+            })]
+          })]
+        }), (!WE || null !== cE) && (0, nq.jsx)("div", {
+          className: "ShaderPackBrowseScenes",
+          children: (0, nq.jsx)(Mq.c, {
+            selected: Sq,
+            onSelect: pq,
+            imageUrl: qq => null === cE ? null : (0, Aq.m)(Pq.clientSideServerUrls.s3Url, cE, qq, "thumb")
+          })
+        }), (0, nq.jsx)(Zq, {
+          results: Kq,
+          loading: Iq,
+          failed: Dq,
+          onRetry: () => {
+            gE((qq => qq + 1))
+          },
+          view: Uq,
+          previewView: Sq
+        }), "listing" === (null === Kq || void 0 === Kq ? void 0 : Kq.kind) && (0, nq.jsx)(aq.d, {
+          className: "ShaderPackBrowsePagination",
+          page: Kq.page.pageNumber,
+          totalPages: Kq.page.totalPages,
+          onSetPage: qq => {
+            Rq((Eq => {
+              (0, Bq.g)(Eq, qq)
+            }))
+          },
+          getPageHref: function(qq) {
+            const Eq = new URLSearchParams(kq);
+            (0, Bq.g)(Eq, qq);
+            const gq = Eq.toString();
+            return gq ? `${hq.pathname}?${gq}` : hq.pathname
+          }
+        })]
+      })
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const qq in modules) Object.freeze(modules[qq]);

@@ -1,597 +1,597 @@
 export const id = 25;
 export const ids = [25];
 export const modules = {
-  36066: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Fz,
-      d: () => Zz,
-      g: () => dz,
-      h: () => pz
+  36648: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Nq,
+      g: () => aq,
+      h: () => Wq,
+      j: () => Bq
     });
-    var Ez = bz(8982),
-      nz = bz(36071),
-      iz = bz(36080),
-      lz = bz(8378),
-      Mz = bz(1417),
-      tz = bz(56),
-      Hz = bz(79),
-      Oz = bz(1089);
+    var Yq = gq(9277),
+      lq = gq(36657),
+      Oq = gq(36662),
+      mq = gq(8669),
+      xq = gq(1416),
+      Aq = gq(57),
+      cq = gq(71),
+      uq = gq(1070);
 
-    function pz() {
-      var zz;
-      return (0, Mz.h)(nz.e, (0, nz.o)()), (0, Oz.jsx)(Oz.Fragment, {
-        children: null === (zz = (0, nz.o)()) || void 0 === zz ? void 0 : zz.content
+    function Bq() {
+      var qq;
+      return (0, xq.h)(lq.c, (0, lq.l)()), (0, uq.jsx)(uq.Fragment, {
+        children: null === (qq = (0, lq.l)()) || void 0 === qq ? void 0 : qq.content
       })
     }
 
-    function dz(zz) {
-      var uz;
+    function Wq(qq) {
+      var Eq;
       let {
-        show: bz
-      } = zz;
-      (0, Mz.h)(nz.e, (0, nz.o)());
-      const Hz = null === (uz = (0, nz.o)()) || void 0 === uz ? void 0 : uz.menu;
-      return (0, tz.useEffect)((() => {
-        var zz;
-        bz || (null === Hz || void 0 === Hz || null === (zz = Hz.onClose) || void 0 === zz || zz.call(Hz), (0, iz.j)())
-      }), [bz, Hz]), (0, tz.useEffect)((() => bz ? (0, lz.e)(iz.u, iz.d) : void 0), [bz]), (0, Oz.jsx)(Ez.d, {
-        showing: bz,
+        show: gq
+      } = qq;
+      (0, xq.h)(lq.c, (0, lq.l)());
+      const cq = null === (Eq = (0, lq.l)()) || void 0 === Eq ? void 0 : Eq.menu;
+      return (0, Aq.useEffect)((() => {
+        var qq;
+        gq || (null === cq || void 0 === cq || null === (qq = cq.onClose) || void 0 === qq || qq.call(cq), (0, Oq.m)())
+      }), [gq, cq]), (0, Aq.useEffect)((() => gq ? (0, mq.i)(Oq.r, Oq.d) : void 0), [gq]), (0, uq.jsx)(Yq.b, {
+        showing: gq,
         globallyUniqueKey: "clientGameMenu",
-        children: null === Hz || void 0 === Hz ? void 0 : Hz.content
+        children: null === cq || void 0 === cq ? void 0 : cq.content
       })
     }
 
-    function Fz(zz) {
+    function Nq(qq) {
       let {
-        placement: uz = "bottom"
-      } = zz;
-      return (0, Oz.jsx)("div", {
-        id: `clientGameHud-${uz}`,
+        placement: Eq = "bottom"
+      } = qq;
+      return (0, uq.jsx)("div", {
+        id: `clientGameHud-${Eq}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function Zz(zz) {
+    function aq(qq) {
       let {
-        children: uz,
-        placement: bz = "bottom"
-      } = zz;
-      const [Ez, nz] = (0, tz.useState)(null);
-      return (0, tz.useEffect)((() => {
-        nz(document.getElementById(`clientGameHud-${bz}`))
-      }), [bz]), Ez ? (0, Hz.createPortal)(uz, Ez) : null
+        children: Eq,
+        placement: gq = "bottom"
+      } = qq;
+      const [Yq, lq] = (0, Aq.useState)(null);
+      return (0, Aq.useEffect)((() => {
+        lq(document.getElementById(`clientGameHud-${gq}`))
+      }), [gq]), Yq ? (0, cq.createPortal)(Eq, Yq) : null
     }
   },
-  4590: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Kz,
-      f: () => wz
+  4648: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => dq,
+      g: () => jq
     });
-    var Ez = bz(1038),
-      nz = bz.n(Ez),
-      iz = bz(56),
-      lz = bz(1181),
-      Mz = bz(4598),
-      tz = bz(1846),
-      Hz = bz(2313),
-      Oz = bz(4601),
-      pz = bz(1089);
-    const dz = new WeakMap;
-    let Fz = 0;
+    var Yq = gq(1018),
+      lq = gq.n(Yq),
+      Oq = gq(57),
+      mq = gq(1183),
+      xq = gq(4656),
+      Aq = gq(1876),
+      cq = gq(2383),
+      uq = gq(4662),
+      Bq = gq(1070);
+    const Wq = new WeakMap;
+    let Nq = 0;
 
-    function Zz(zz) {
-      let uz = dz.get(zz);
-      return void 0 === uz && (uz = Fz++, dz.set(zz, uz)), uz
+    function aq(qq) {
+      let Eq = Wq.get(qq);
+      return void 0 === Eq && (Eq = Nq++, Wq.set(qq, Eq)), Eq
     }
 
-    function Rz(zz) {
+    function Vq(qq) {
       let {
-        piece: uz
-      } = zz;
-      return "space" === uz.kind ? (0, pz.jsx)(pz.Fragment, {
-        children: uz.text
-      }) : (0, pz.jsx)("span", {
+        piece: Eq
+      } = qq;
+      return "space" === Eq.kind ? (0, Bq.jsx)(Bq.Fragment, {
+        children: Eq.text
+      }) : (0, Bq.jsx)("span", {
         className: "DialogueWord",
         style: {
-          "--word-delay": `${uz.delayMs}ms`
+          "--word-delay": `${Eq.delayMs}ms`
         },
-        children: (0, pz.jsx)(Mz.b, {
-          text: "icon" === uz.kind ? `[[${uz.icon}]]` : uz.text
+        children: (0, Bq.jsx)(xq.e, {
+          text: "icon" === Eq.kind ? `[[${Eq.icon}]]` : Eq.text
         })
       })
     }
 
-    function Kz(zz) {
+    function dq(qq) {
       let {
-        display: uz
-      } = zz;
+        display: Eq
+      } = qq;
       const {
-        selectedLanguage: bz
-      } = (0, lz.F)(), Ez = (0, iz.useMemo)((() => (0, Oz.e)((0, Oz.g)(uz).plan.pieces)), [uz, bz.code]);
-      return (0, pz.jsxs)("div", {
-        className: nz()("Dialogue", {
-          DialogueAnimateIn: !1 !== uz.animateIn
+        selectedLanguage: gq
+      } = (0, mq.v)(), Yq = (0, Oq.useMemo)((() => (0, uq.b)((0, uq.f)(Eq).plan.pieces)), [Eq, gq.code]);
+      return (0, Bq.jsxs)("div", {
+        className: lq()("Dialogue", {
+          DialogueAnimateIn: !1 !== Eq.animateIn
         }),
-        children: [uz.speakerName && (0, pz.jsx)(tz.b, {
-          text: uz.speakerName,
+        children: [Eq.speakerName && (0, Bq.jsx)(Aq.c, {
+          text: Eq.speakerName,
           className: "DialogueSpeaker"
-        }), (0, pz.jsx)("p", {
+        }), (0, Bq.jsx)("p", {
           className: "DialogueLine",
-          children: Ez.map(((zz, uz) => 1 === zz.length && "space" === zz[0].kind ? zz[0].text : (0, pz.jsx)("span", {
+          children: Yq.map(((qq, Eq) => 1 === qq.length && "space" === qq[0].kind ? qq[0].text : (0, Bq.jsx)("span", {
             className: "DialogueGlue",
-            children: zz.map(((zz, uz) => (0, pz.jsx)(Rz, {
-              piece: zz
-            }, uz)))
-          }, uz)))
+            children: qq.map(((qq, Eq) => (0, Bq.jsx)(Vq, {
+              piece: qq
+            }, Eq)))
+          }, Eq)))
         })]
       })
     }
-    const wz = (0, iz.memo)((function() {
-      const zz = (0, Hz.g)("dialogue");
-      return (0, pz.jsx)("div", {
+    const jq = (0, Oq.memo)((function() {
+      const qq = (0, cq.h)("dialogue");
+      return (0, Bq.jsx)("div", {
         className: "DialogueAnchor",
         "data-camera-keeper": "",
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: zz && (0, pz.jsx)(Kz, {
-          display: zz
-        }, Zz(zz))
+        children: qq && (0, Bq.jsx)(dq, {
+          display: qq
+        }, aq(qq))
       })
     }))
   },
-  4598: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Mz
+  4656: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => xq
     });
-    var Ez = bz(56),
-      nz = bz(316),
-      iz = bz(1856),
-      lz = bz(1089);
+    var Yq = gq(57),
+      lq = gq(296),
+      Oq = gq(1895),
+      mq = gq(1070);
 
-    function Mz(zz) {
+    function xq(qq) {
       let {
-        text: uz
-      } = zz;
-      const bz = [];
-      let Mz = "";
-      return (0, nz.uc)(uz).forEach(((zz, uz) => {
-        if ("string" === typeof zz || !(0, iz.d)(zz.icon)) return void(Mz += "string" === typeof zz ? zz : zz.icon);
-        const nz = Math.max(0, Mz.trimEnd().search(/\S{1,12}$/));
-        bz.push((0, lz.jsxs)(Ez.Fragment, {
-          children: [Mz.slice(0, nz), (0, lz.jsxs)("span", {
+        text: Eq
+      } = qq;
+      const gq = [];
+      let xq = "";
+      return (0, lq.Zb)(Eq).forEach(((qq, Eq) => {
+        if ("string" === typeof qq || !(0, Oq.i)(qq.icon)) return void(xq += "string" === typeof qq ? qq : qq.icon);
+        const lq = Math.max(0, xq.trimEnd().search(/\S{1,12}$/));
+        gq.push((0, mq.jsxs)(Yq.Fragment, {
+          children: [xq.slice(0, lq), (0, mq.jsxs)("span", {
             className: "InlineIconTextGlue",
-            children: [Mz.slice(nz), (0, lz.jsx)("span", {
+            children: [xq.slice(lq), (0, mq.jsx)("span", {
               className: "InlineIconTextIcon",
               role: "img",
-              "aria-label": zz.icon,
-              children: (0, lz.jsx)(iz.c, {
-                itemName: zz.icon,
+              "aria-label": qq.icon,
+              children: (0, mq.jsx)(Oq.e, {
+                itemName: qq.icon,
                 amount: 0
               })
             })]
           })]
-        }, uz)), Mz = ""
-      })), bz.push(Mz), (0, lz.jsx)(lz.Fragment, {
-        children: bz
+        }, Eq)), xq = ""
+      })), gq.push(xq), (0, mq.jsx)(mq.Fragment, {
+        children: gq
       })
     }
   },
-  8982: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => iz
+  9277: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Oq
     });
-    var Ez = bz(4298),
-      nz = bz(4300);
+    var Yq = gq(4364),
+      lq = gq(4367);
 
-    function iz(zz) {
+    function Oq(qq) {
       let {
-        children: uz,
-        showing: bz,
-        globallyUniqueKey: iz,
-        alwaysMountChildren: lz = !1,
-        doGameplayStartStopOnShow: Mz = !0,
-        keepsMovement: tz = !1
-      } = zz;
-      return (0, nz.e)(!0, bz, iz, tz), (0, Ez.d)(Mz, bz), bz || lz ? uz : null
+        children: Eq,
+        showing: gq,
+        globallyUniqueKey: Oq,
+        alwaysMountChildren: mq = !1,
+        doGameplayStartStopOnShow: xq = !0,
+        keepsMovement: Aq = !1
+      } = qq;
+      return (0, lq.e)(!0, gq, Oq, Aq), (0, Yq.d)(xq, gq), gq || mq ? Eq : null
     }
   },
-  4601: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Vz,
-      g: () => az
+  4662: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Tq,
+      f: () => Mq
     });
-    var Ez = bz(4605),
-      nz = bz(316);
-    const iz = 120,
-      lz = 260,
-      Mz = 1.15,
-      tz = 1.2,
-      Hz = 2,
-      Oz = 1.08,
-      pz = .8,
-      dz = .95,
-      Fz = 8,
-      Zz = "[\"')\\]\u300d\u300f\uff09]*",
-      Rz = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Zz}$`),
-      Kz = new RegExp(`[?\uff1f]${Zz}$`),
-      wz = new RegExp(`[!\uff01]${Zz}$`),
-      Xz = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      fz = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      sz = new RegExp(`[${fz}]`),
-      rz = new RegExp(`[${fz}]|[^${fz}]+`, "g"),
-      oz = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var Yq = gq(4671),
+      lq = gq(296);
+    const Oq = 120,
+      mq = 260,
+      xq = 1.15,
+      Aq = 1.2,
+      cq = 2,
+      uq = 1.08,
+      Bq = .8,
+      Wq = .95,
+      Nq = 8,
+      aq = "[\"')\\]\u300d\u300f\uff09]*",
+      Vq = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${aq}$`),
+      dq = new RegExp(`[?\uff1f]${aq}$`),
+      jq = new RegExp(`[!\uff01]${aq}$`),
+      Hq = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      oq = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      Pq = new RegExp(`[${oq}]`),
+      Qq = new RegExp(`[${oq}]|[^${oq}]+`, "g"),
+      yq = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function Nz(zz) {
-      let uz = 2166136261;
-      for (let bz = 0; bz < zz.length; bz++) uz ^= zz.charCodeAt(bz), uz = Math.imul(uz, 16777619);
-      return (uz >>> 0) / 4294967295 * 2 - 1
+    function tq(qq) {
+      let Eq = 2166136261;
+      for (let gq = 0; gq < qq.length; gq++) Eq ^= qq.charCodeAt(gq), Eq = Math.imul(Eq, 16777619);
+      return (Eq >>> 0) / 4294967295 * 2 - 1
     }
 
-    function vz(zz) {
-      var uz;
-      if (sz.test(zz)) return 1;
-      const bz = zz.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        Ez = bz.replace(/[^0-9]/g, "");
-      if (Ez.length > 0 && !/\p{L}/u.test(bz)) return Math.min(Ez.length, 4);
-      const nz = null !== (uz = bz.match(oz)) && void 0 !== uz ? uz : [];
-      if (0 === nz.length) {
-        var iz, lz;
-        const zz = null !== (iz = null === (lz = bz.match(/\p{L}/gu)) || void 0 === lz ? void 0 : lz.length) && void 0 !== iz ? iz : 0;
-        return 0 === zz ? 0 : Math.min(Math.max(1, Math.round(zz / 2.5)), Fz)
+    function rq(qq) {
+      var Eq;
+      if (Pq.test(qq)) return 1;
+      const gq = qq.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        Yq = gq.replace(/[^0-9]/g, "");
+      if (Yq.length > 0 && !/\p{L}/u.test(gq)) return Math.min(Yq.length, 4);
+      const lq = null !== (Eq = gq.match(yq)) && void 0 !== Eq ? Eq : [];
+      if (0 === lq.length) {
+        var Oq, mq;
+        const qq = null !== (Oq = null === (mq = gq.match(/\p{L}/gu)) || void 0 === mq ? void 0 : mq.length) && void 0 !== Oq ? Oq : 0;
+        return 0 === qq ? 0 : Math.min(Math.max(1, Math.round(qq / 2.5)), Nq)
       }
-      const Mz = bz.replace(/[^\p{L}]/gu, ""),
-        tz = nz.length > 1 && "e" === nz.at(-1) && Mz.endsWith("e") && !Mz.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(zz.replace(/[^\p{L}]/gu, ""));
-      return Math.min(nz.length - (tz ? 1 : 0), Fz)
+      const xq = gq.replace(/[^\p{L}]/gu, ""),
+        Aq = lq.length > 1 && "e" === lq.at(-1) && xq.endsWith("e") && !xq.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(qq.replace(/[^\p{L}]/gu, ""));
+      return Math.min(lq.length - (Aq ? 1 : 0), Nq)
     }
 
-    function xz(zz) {
-      return zz.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function vq(qq) {
+      return qq.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function Jz(zz) {
-      const uz = zz.replace(/[^\p{L}]/gu, "");
-      return uz.length >= 2 && uz === uz.toUpperCase() && uz !== uz.toLowerCase()
+    function hq(qq) {
+      const Eq = qq.replace(/[^\p{L}]/gu, "");
+      return Eq.length >= 2 && Eq === Eq.toUpperCase() && Eq !== Eq.toLowerCase()
     }
 
-    function Az(zz, uz) {
-      var bz;
-      const Fz = uz && (0, Ez.k)(uz),
-        Zz = null !== (bz = null === Fz || void 0 === Fz ? void 0 : Fz.syllableMs) && void 0 !== bz ? bz : Ez.e,
-        fz = function(zz) {
-          const uz = [];
-          for (const Ez of (0, nz.uc)(zz))
-            if ("string" === typeof Ez)
-              for (const zz of Ez.split(/(\s+)/)) {
-                if ("" === zz) continue;
-                if (/^\s+$/.test(zz)) {
-                  uz.push({
+    function nq(qq, Eq) {
+      var gq;
+      const Nq = Eq && (0, Yq.i)(Eq),
+        aq = null !== (gq = null === Nq || void 0 === Nq ? void 0 : Nq.syllableMs) && void 0 !== gq ? gq : Yq.b,
+        oq = function(qq) {
+          const Eq = [];
+          for (const Yq of (0, lq.Zb)(qq))
+            if ("string" === typeof Yq)
+              for (const qq of Yq.split(/(\s+)/)) {
+                if ("" === qq) continue;
+                if (/^\s+$/.test(qq)) {
+                  Eq.push({
                     kind: "space",
-                    text: zz
+                    text: qq
                   });
                   continue
                 }
-                if (!sz.test(zz)) {
-                  uz.push({
+                if (!Pq.test(qq)) {
+                  Eq.push({
                     kind: "word",
-                    text: zz,
+                    text: qq,
                     delayMs: 0
                   });
                   continue
                 }
-                let Ez = !0;
-                for (const nz of null !== (bz = zz.match(rz)) && void 0 !== bz ? bz : []) {
-                  var bz;
-                  const zz = uz.at(-1);
-                  Ez || "word" !== (null === zz || void 0 === zz ? void 0 : zz.kind) || sz.test(nz) || /[\p{L}\p{N}]/u.test(nz) ? (Ez || uz.push({
+                let Yq = !0;
+                for (const lq of null !== (gq = qq.match(Qq)) && void 0 !== gq ? gq : []) {
+                  var gq;
+                  const qq = Eq.at(-1);
+                  Yq || "word" !== (null === qq || void 0 === qq ? void 0 : qq.kind) || Pq.test(lq) || /[\p{L}\p{N}]/u.test(lq) ? (Yq || Eq.push({
                     kind: "space",
                     text: "\u200b"
-                  }), uz.push({
+                  }), Eq.push({
                     kind: "word",
-                    text: nz,
+                    text: lq,
                     delayMs: 0
-                  }), Ez = !1) : zz.text += nz
+                  }), Yq = !1) : qq.text += lq
                 }
-              } else uz.push({
+              } else Eq.push({
                 kind: "icon",
-                text: Ez.icon,
+                text: Yq.icon,
                 delayMs: 0
               });
-          return uz
-        }(zz),
-        oz = [];
-      let Az = [];
-      for (const Ez of fz) "space" !== Ez.kind && (Az.push(Ez), Rz.test(Ez.text) && (oz.push(Az), Az = []));
-      oz.push(Az);
-      const Tz = [];
-      let Lz = 0;
-      for (const Ez of oz) {
-        var Pz, Gz;
-        const zz = null !== (Pz = null === (Gz = Ez.at(-1)) || void 0 === Gz ? void 0 : Gz.text) && void 0 !== Pz ? Pz : "",
-          uz = Kz.test(zz),
-          bz = wz.test(zz),
-          nz = Ez.map((zz => "word" === zz.kind ? vz(zz.text) : 1)),
-          fz = nz.findLastIndex((zz => zz > 0));
-        for (const [Kz, wz] of Ez.entries()) {
-          const zz = "word" === wz.kind,
-            Ez = nz[Kz];
-          wz.delayMs = Lz;
-          for (let nz = 0; Fz && nz < Ez; nz++) {
+          return Eq
+        }(qq),
+        yq = [];
+      let nq = [];
+      for (const Yq of oq) "space" !== Yq.kind && (nq.push(Yq), Vq.test(Yq.text) && (yq.push(nq), nq = []));
+      yq.push(nq);
+      const bq = [];
+      let iq = 0;
+      for (const Yq of yq) {
+        var Zq, fq;
+        const qq = null !== (Zq = null === (fq = Yq.at(-1)) || void 0 === fq ? void 0 : fq.text) && void 0 !== Zq ? Zq : "",
+          Eq = dq.test(qq),
+          gq = jq.test(qq),
+          lq = Yq.map((qq => "word" === qq.kind ? rq(qq.text) : 1)),
+          oq = lq.findLastIndex((qq => qq > 0));
+        for (const [dq, jq] of Yq.entries()) {
+          const qq = "word" === jq.kind,
+            Yq = lq[dq];
+          jq.delayMs = iq;
+          for (let lq = 0; Nq && lq < Yq; lq++) {
             const {
-              intonation: iz
-            } = Fz;
-            let lz = fz > 0 ? -iz.declineSemitones * (Kz / fz) : 0;
-            lz += Nz(`${xz(wz.text)}|${nz}`) * iz.variationSemitones;
-            const Rz = Math.min(1, iz.variationSemitones);
-            let Xz = Fz.glideSemitones,
-              sz = 1;
-            bz && (lz += iz.exclaimLiftSemitones, sz *= Mz), uz && Kz === fz && (lz += iz.questionRiseSemitones * (Ez > 1 ? .5 + .5 * nz / (Ez - 1) : 1), nz === Ez - 1 && (Xz = Math.abs(Xz) + iz.questionRiseSemitones / 2)), zz && Jz(wz.text) && (lz += Hz * Rz, sz *= tz), Ez > 1 && 0 === nz && (lz += pz * Rz, sz *= Oz), Tz.push({
-              atMs: Lz + nz * Zz,
-              semitones: lz,
-              glideSemitones: Xz,
-              durationMs: nz < Ez - 1 ? Math.min(Fz.durationMs, Zz * dz) : Fz.durationMs,
-              level: sz
+              intonation: Oq
+            } = Nq;
+            let mq = oq > 0 ? -Oq.declineSemitones * (dq / oq) : 0;
+            mq += tq(`${vq(jq.text)}|${lq}`) * Oq.variationSemitones;
+            const Vq = Math.min(1, Oq.variationSemitones);
+            let Hq = Nq.glideSemitones,
+              Pq = 1;
+            gq && (mq += Oq.exclaimLiftSemitones, Pq *= xq), Eq && dq === oq && (mq += Oq.questionRiseSemitones * (Yq > 1 ? .5 + .5 * lq / (Yq - 1) : 1), lq === Yq - 1 && (Hq = Math.abs(Hq) + Oq.questionRiseSemitones / 2)), qq && hq(jq.text) && (mq += cq * Vq, Pq *= Aq), Yq > 1 && 0 === lq && (mq += Bq * Vq, Pq *= uq), bq.push({
+              atMs: iq + lq * aq,
+              semitones: mq,
+              glideSemitones: Hq,
+              durationMs: lq < Yq - 1 ? Math.min(Nq.durationMs, aq * Wq) : Nq.durationMs,
+              level: Pq
             })
           }
-          Lz += Ez * Zz + (Rz.test(wz.text) ? lz : Xz.test(wz.text) ? iz : 0)
+          iq += Yq * aq + (Vq.test(jq.text) ? mq : Hq.test(jq.text) ? Oq : 0)
         }
       }
       return {
-        pieces: fz.map((zz => "space" === zz.kind ? zz : "icon" === zz.kind ? {
+        pieces: oq.map((qq => "space" === qq.kind ? qq : "icon" === qq.kind ? {
           kind: "icon",
-          icon: zz.text,
-          delayMs: zz.delayMs
+          icon: qq.text,
+          delayMs: qq.delayMs
         } : {
           kind: "word",
-          text: zz.text,
-          delayMs: zz.delayMs
+          text: qq.text,
+          delayMs: qq.delayMs
         })),
-        blips: Tz
+        blips: bq
       }
     }
-    var Tz = bz(1181),
-      Lz = bz(1241),
-      Pz = bz(1873);
+    var bq = gq(1183),
+      iq = gq(1241),
+      Zq = gq(1906);
 
-    function Gz(zz) {
-      if ("string" === typeof zz) return zz;
-      const uz = Lz.h.get().getCurrentLanguageCode();
-      return (0, Tz.s)(uz, zz.translationKey, (0, Tz.q)(zz.params, Pz.b.shown))
+    function fq(qq) {
+      if ("string" === typeof qq) return qq;
+      const Eq = iq.h.get().getCurrentLanguageCode();
+      return (0, bq.n)(Eq, qq.translationKey, (0, bq.j)(qq.params, Zq.d.shown))
     }
 
-    function az(zz) {
-      const uz = void 0 === zz.voice ? null : (0, Ez.n)(zz.voice),
-        bz = uz && (0, Ez.k)(uz);
+    function Mq(qq) {
+      const Eq = void 0 === qq.voice ? null : (0, Yq.m)(qq.voice),
+        gq = Eq && (0, Yq.i)(Eq);
       return {
-        plan: Az(Gz(zz.line), bz),
-        synth: bz
+        plan: nq(fq(qq.line), gq),
+        synth: gq
       }
     }
 
-    function Vz(zz) {
-      const uz = [];
-      let bz = [];
-      for (const [nz, iz] of zz.entries()) {
-        var Ez;
-        "space" === iz.kind && (" " !== iz.text || "icon" !== (null === (Ez = zz[nz + 1]) || void 0 === Ez ? void 0 : Ez.kind)) ? (bz.length > 0 && uz.push(bz), uz.push([iz]), bz = []) : bz.push(iz)
+    function Tq(qq) {
+      const Eq = [];
+      let gq = [];
+      for (const [lq, Oq] of qq.entries()) {
+        var Yq;
+        "space" === Oq.kind && (" " !== Oq.text || "icon" !== (null === (Yq = qq[lq + 1]) || void 0 === Yq ? void 0 : Yq.kind)) ? (gq.length > 0 && Eq.push(gq), Eq.push([Oq]), gq = []) : gq.push(Oq)
       }
-      return bz.length > 0 && uz.push(bz), uz
+      return gq.length > 0 && Eq.push(gq), Eq
     }
   },
-  8378: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => iz,
-      e: () => nz
+  8669: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => Oq,
+      i: () => lq
     });
-    let Ez = null;
-    const nz = function(zz) {
-        const uz = {
-          cycle: zz,
+    let Yq = null;
+    const lq = function(qq) {
+        const Eq = {
+          cycle: qq,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Ez = uz, () => {
-          Ez === uz && (Ez = null)
+        return Yq = Eq, () => {
+          Yq === Eq && (Yq = null)
         }
       },
-      iz = () => {
-        var zz;
-        return null !== (zz = Ez) && void 0 !== zz && zz.canCycle() ? Ez.cycle : null
+      Oq = () => {
+        var qq;
+        return null !== (qq = Yq) && void 0 !== qq && qq.canCycle() ? Yq.cycle : null
       }
   },
-  36080: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => iz,
-      d: () => Rz,
-      g: () => Kz,
-      h: () => Mz,
-      i: () => dz,
-      j: () => wz,
-      n: () => pz,
-      q: () => fz,
-      u: () => Zz,
-      x: () => Xz
+  36662: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Oq,
+      d: () => Vq,
+      g: () => dq,
+      h: () => xq,
+      l: () => Wq,
+      m: () => jq,
+      o: () => Bq,
+      p: () => oq,
+      r: () => aq,
+      v: () => Hq
     });
-    var Ez = bz(20),
-      nz = bz(22);
-    const iz = "clientGameInventoryButtonsChanged",
-      lz = new Map;
+    var Yq = gq(24),
+      lq = gq(31);
+    const Oq = "clientGameInventoryButtonsChanged",
+      mq = new Map;
 
-    function Mz() {
-      return [...lz.values()].sort(((zz, uz) => {
-        var bz, Ez;
-        return (null !== (bz = zz.order) && void 0 !== bz ? bz : 0) - (null !== (Ez = uz.order) && void 0 !== Ez ? Ez : 0)
+    function xq() {
+      return [...mq.values()].sort(((qq, Eq) => {
+        var gq, Yq;
+        return (null !== (gq = qq.order) && void 0 !== gq ? gq : 0) - (null !== (Yq = Eq.order) && void 0 !== Yq ? Yq : 0)
       }))
     }
-    let tz = null;
+    let Aq = null;
 
-    function Hz(zz) {
-      tz = zz
+    function cq(qq) {
+      Aq = qq
     }
-    let Oz = !1;
+    let uq = !1;
 
-    function pz(zz) {
-      Oz = !0;
+    function Bq(qq) {
+      uq = !0;
       try {
-        zz.onClick()
+        qq.onClick()
       } finally {
-        Oz = !1
+        uq = !1
       }
-      zz.panel && "clientGame" === Ez.e.get("openInGameMenuName") && Hz(zz.id)
+      qq.panel && "clientGame" === Yq.b.get("openInGameMenuName") && cq(qq.id)
     }
 
-    function dz() {
-      return Oz
+    function Wq() {
+      return uq
     }
 
-    function Fz() {
-      return Mz().filter((zz => zz.panel && !zz.disabled))
+    function Nq() {
+      return xq().filter((qq => qq.panel && !qq.disabled))
     }
 
-    function Zz(zz) {
-      const uz = Fz(),
-        bz = uz.findIndex((zz => zz.id === tz));
-      return !(bz < 0 || uz.length < 2) && (pz(uz[(bz + zz + uz.length) % uz.length]), !0)
+    function aq(qq) {
+      const Eq = Nq(),
+        gq = Eq.findIndex((qq => qq.id === Aq));
+      return !(gq < 0 || Eq.length < 2) && (Bq(Eq[(gq + qq + Eq.length) % Eq.length]), !0)
     }
 
-    function Rz() {
-      return null !== tz && Fz().length > 1
+    function Vq() {
+      return null !== Aq && Nq().length > 1
     }
 
-    function Kz() {
-      Hz(null)
+    function dq() {
+      cq(null)
     }
 
-    function wz() {
-      "inventory" !== Ez.e.get("openInGameMenuName") && Hz(null)
+    function jq() {
+      "inventory" !== Yq.b.get("openInGameMenuName") && cq(null)
     }
 
-    function Xz() {
-      const zz = tz;
-      return Hz(null), zz
+    function Hq() {
+      const qq = Aq;
+      return cq(null), qq
     }
 
-    function fz(zz) {
-      return lz.set(zz.id, zz), nz.k.sK(iz, Mz(), !0), () => {
-        lz.get(zz.id) === zz && (lz.delete(zz.id), nz.k.sK(iz, Mz()))
+    function oq(qq) {
+      return mq.set(qq.id, qq), lq.i.TV(Oq, xq(), !0), () => {
+        mq.get(qq.id) === qq && (mq.delete(qq.id), lq.i.TV(Oq, xq()))
       }
     }
   },
-  36071: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Mz,
-      i: () => Kz,
-      l: () => wz,
-      n: () => dz,
-      o: () => Hz,
-      p: () => Rz,
-      t: () => Fz,
-      x: () => Oz
+  36657: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => xq,
+      e: () => dq,
+      h: () => jq,
+      j: () => Wq,
+      l: () => cq,
+      m: () => Vq,
+      n: () => Nq,
+      r: () => uq
     });
-    var Ez = bz(20),
-      nz = bz(22),
-      iz = bz(1269),
-      lz = bz(36080);
-    const Mz = "clientGameUiChanged";
-    let tz = null;
+    var Yq = gq(24),
+      lq = gq(31),
+      Oq = gq(1274),
+      mq = gq(36662);
+    const xq = "clientGameUiChanged";
+    let Aq = null;
 
-    function Hz() {
-      return tz
+    function cq() {
+      return Aq
     }
 
-    function Oz(zz, uz) {
-      const bz = {
-        content: zz,
-        menu: uz
+    function uq(qq, Eq) {
+      const gq = {
+        content: qq,
+        menu: Eq
       };
-      return tz = bz, nz.k.sK(Mz, tz, !0), () => {
-        tz === bz && (tz = null, Zz = !1, Kz(), nz.k.sK(Mz, null))
+      return Aq = gq, lq.i.TV(xq, Aq, !0), () => {
+        Aq === gq && (Aq = null, aq = !1, dq(), lq.i.TV(xq, null))
       }
     }
-    let pz = null;
+    let Bq = null;
 
-    function dz() {
-      return pz
+    function Wq() {
+      return Bq
     }
 
-    function Fz(zz) {
-      return pz = zz, () => {
-        pz === zz && (pz = null)
+    function Nq(qq) {
+      return Bq = qq, () => {
+        Bq === qq && (Bq = null)
       }
     }
-    let Zz = !1;
+    let aq = !1;
 
-    function Rz() {
-      const zz = Ez.e.get("openInGameMenuName");
-      "clientGame" !== zz && (Zz = "inventory" === zz), (0, lz.i)() || (0, lz.g)(), (0, iz.m)(iz.b), Ez.e.set({
+    function Vq() {
+      const qq = Yq.b.get("openInGameMenuName");
+      "clientGame" !== qq && (aq = "inventory" === qq), (0, mq.l)() || (0, mq.g)(), (0, Oq.m)(Oq.d), Yq.b.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function Kz() {
-      Xz(!1)
+    function dq() {
+      Hq(!1)
     }
 
-    function wz() {
-      Xz(Zz)
+    function jq() {
+      Hq(aq)
     }
 
-    function Xz(zz) {
-      "clientGame" === Ez.e.get("openInGameMenuName") && Ez.e.set({
-        openInGameMenuName: zz ? "inventory" : null
-      }), zz || (0, lz.g)(), Zz = !1
+    function Hq(qq) {
+      "clientGame" === Yq.b.get("openInGameMenuName") && Yq.b.set({
+        openInGameMenuName: qq ? "inventory" : null
+      }), qq || (0, mq.g)(), aq = !1
     }
   },
-  37896: (zz, uz, bz) => {
-    function Ez(zz, uz, bz) {
-      const Ez = new Set,
-        nz = new ResizeObserver(bz),
-        iz = () => {
-          const uz = new Set(document.querySelectorAll(zz));
-          let iz = !1;
-          for (const zz of Ez) uz.has(zz) || (nz.unobserve(zz), Ez.delete(zz), iz = !0);
-          for (const zz of uz) Ez.has(zz) || (nz.observe(zz), lz.observe(zz, {
+  38479: (qq, Eq, gq) => {
+    function Yq(qq, Eq, gq) {
+      const Yq = new Set,
+        lq = new ResizeObserver(gq),
+        Oq = () => {
+          const Eq = new Set(document.querySelectorAll(qq));
+          let Oq = !1;
+          for (const qq of Yq) Eq.has(qq) || (lq.unobserve(qq), Yq.delete(qq), Oq = !0);
+          for (const qq of Eq) Yq.has(qq) || (lq.observe(qq), mq.observe(qq, {
             attributes: !0,
             attributeFilter: ["class", "style"]
-          }), Ez.add(zz));
-          iz && bz()
+          }), Yq.add(qq));
+          Oq && gq()
         },
-        lz = new MutationObserver((uz => {
-          uz.some((zz => "attributes" === zz.type)) && bz(), uz.some((uz => function(zz, uz, bz) {
-            if ("childList" !== zz.type) return !1;
-            for (const Ez of zz.addedNodes)
-              if (Ez instanceof Element && (Ez.matches(uz) || Ez.querySelector(uz))) return !0;
-            for (const Ez of zz.removedNodes)
-              if (Ez instanceof Element)
-                for (const zz of bz)
-                  if (Ez.contains(zz)) return !0;
+        mq = new MutationObserver((Eq => {
+          Eq.some((qq => "attributes" === qq.type)) && gq(), Eq.some((Eq => function(qq, Eq, gq) {
+            if ("childList" !== qq.type) return !1;
+            for (const Yq of qq.addedNodes)
+              if (Yq instanceof Element && (Yq.matches(Eq) || Yq.querySelector(Eq))) return !0;
+            for (const Yq of qq.removedNodes)
+              if (Yq instanceof Element)
+                for (const qq of gq)
+                  if (Yq.contains(qq)) return !0;
             return !1
-          }(uz, zz, Ez))) && iz()
+          }(Eq, qq, Yq))) && Oq()
         }));
-      lz.observe(document.body, {
+      mq.observe(document.body, {
         childList: !0,
         subtree: !0
       });
-      for (const Mz of uz) nz.observe(Mz);
-      return window.addEventListener("resize", bz), iz(), bz(), () => {
-        nz.disconnect(), lz.disconnect(), window.removeEventListener("resize", bz)
+      for (const xq of Eq) lq.observe(xq);
+      return window.addEventListener("resize", gq), Oq(), gq(), () => {
+        lq.disconnect(), mq.disconnect(), window.removeEventListener("resize", gq)
       }
     }
-    bz.d(uz, {
-      e: () => Ez
+    gq.d(Eq, {
+      b: () => Yq
     })
   },
-  8554: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => Mz,
-      e: () => tz
+  8846: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => xq,
+      e: () => Aq
     });
-    var Ez = bz(20),
-      nz = bz(1296),
-      iz = bz(96);
-    const lz = {
+    var Yq = gq(24),
+      lq = gq(1308),
+      Oq = gq(96);
+    const mq = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -634,350 +634,350 @@ export const modules = {
       }
     };
 
-    function Mz() {
-      return (0, iz.isMobile)() && "function" === typeof navigator.vibrate
+    function xq() {
+      return (0, Oq.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const tz = new class {
-      constructor(zz) {
-        this.deps = zz, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const Aq = new class {
+      constructor(qq) {
+        this.deps = qq, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(zz, uz) {
-        var bz;
+      play(qq, Eq) {
+        var gq;
         if (!this.deps.enabled()) return;
-        const Ez = lz[zz],
-          nz = null !== uz && void 0 !== uz ? uz : Ez.pattern;
-        if (null === nz) return void console.warn("No vibration pattern for", zz);
-        const iz = this.deps.now();
-        iz - this.lastAnyAt < 40 && Ez.priority < this.playingPriority || iz - (null !== (bz = this.lastAt.get(zz)) && void 0 !== bz ? bz : -1 / 0) < Ez.minGapMs || iz < this.playingUntil && Ez.priority < this.playingPriority || (this.lastAt.set(zz, iz), this.lastAnyAt = iz, this.playingUntil = iz + nz.reduce(((zz, uz) => zz + uz), 0), this.playingPriority = Ez.priority, this.deps.vibrate(nz))
+        const Yq = mq[qq],
+          lq = null !== Eq && void 0 !== Eq ? Eq : Yq.pattern;
+        if (null === lq) return void console.warn("No vibration pattern for", qq);
+        const Oq = this.deps.now();
+        Oq - this.lastAnyAt < 40 && Yq.priority < this.playingPriority || Oq - (null !== (gq = this.lastAt.get(qq)) && void 0 !== gq ? gq : -1 / 0) < Yq.minGapMs || Oq < this.playingUntil && Yq.priority < this.playingPriority || (this.lastAt.set(qq, Oq), this.lastAnyAt = Oq, this.playingUntil = Oq + lq.reduce(((qq, Eq) => qq + Eq), 0), this.playingPriority = Yq.priority, this.deps.vibrate(lq))
       }
     }({
-      vibrate: zz => {
-        navigator.vibrate([...zz])
+      vibrate: qq => {
+        navigator.vibrate([...qq])
       },
       now: () => performance.now(),
-      enabled: () => Mz() && Ez.e.get("isTouchScreen") && Ez.e.get("clientEscMenuOptions").vibration && !(0, nz.d)()
+      enabled: () => xq() && Yq.b.get("isTouchScreen") && Yq.b.get("clientEscMenuOptions").vibration && !(0, lq.i)()
     })
   },
-  36588: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Mz,
-      f: () => lz
+  37195: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => xq,
+      g: () => mq
     });
-    var Ez = bz(36577),
-      nz = bz(328),
-      iz = bz(1840);
+    var Yq = gq(37183),
+      lq = gq(307),
+      Oq = gq(1870);
 
-    function lz(zz) {
-      if ("Ui" in zz) return oz.createAnimationScript(zz);
-      return new Hz(zz).createAnimationScript()
+    function mq(qq) {
+      if ("aq" in qq) return yq.createAnimationScript(qq);
+      return new cq(qq).createAnimationScript()
     }
 
-    function Mz(zz, uz, bz, nz) {
-      const iz = zz.Ui <= 0 ? 1 : uz + bz * Math.max(0, nz) / zz.Ui;
-      return zz.gi === Ez.m.LoopOnLastFrame ? iz % 1 : zz.gi === Ez.m.NoLoop && iz >= 1 ? null : Math.min(1, iz)
+    function xq(qq, Eq, gq, lq) {
+      const Oq = qq.aq <= 0 ? 1 : Eq + gq * Math.max(0, lq) / qq.aq;
+      return qq.Vq === Yq.l.LoopOnLastFrame ? Oq % 1 : qq.Vq === Yq.l.NoLoop && Oq >= 1 ? null : Math.min(1, Oq)
     }
-    class tz {
-      createAnimationScript(zz) {
+    class Aq {
+      createAnimationScript(qq) {
         const {
-          Ui: uz,
-          loop: bz,
-          Si: Ez
-        } = zz;
+          aq: Eq,
+          loop: gq,
+          dq: Yq
+        } = qq;
         return {
-          Ui: Math.round(uz),
-          gi: this.createLoopMode(null !== bz && void 0 !== bz && bz),
-          Si: this.createNodeSkeletonAnimationScript(null !== Ez && void 0 !== Ez ? Ez : null)
+          aq: Math.round(Eq),
+          Vq: this.createLoopMode(null !== gq && void 0 !== gq && gq),
+          dq: this.createNodeSkeletonAnimationScript(null !== Yq && void 0 !== Yq ? Yq : null)
         }
       }
-      createLoopMode(zz) {
-        switch (zz) {
+      createLoopMode(qq) {
+        switch (qq) {
           case !1:
-            return Ez.m.NoLoop;
+            return Yq.l.NoLoop;
           case !0:
-            return Ez.m.LoopOnLastFrame;
+            return Yq.l.LoopOnLastFrame;
           case "hold-on-last-frame":
-            return Ez.m.HoldOnLastFrame
+            return Yq.l.HoldOnLastFrame
         }
-        throw new Error(`Invalid loop mode schema: ${zz}`)
+        throw new Error(`Invalid loop mode schema: ${qq}`)
       }
-      createNodeSkeletonAnimationScript(zz) {
-        if (null === zz) return null;
-        const uz = {};
-        for (const bz in zz) {
-          const Ez = zz[bz];
-          uz[bz] = this.createNodeAnimationScript(Ez)
+      createNodeSkeletonAnimationScript(qq) {
+        if (null === qq) return null;
+        const Eq = {};
+        for (const gq in qq) {
+          const Yq = qq[gq];
+          Eq[gq] = this.createNodeAnimationScript(Yq)
         }
-        return uz
+        return Eq
       }
-      createNodeAnimationScript(zz) {
+      createNodeAnimationScript(qq) {
         const {
-          timeline: uz
-        } = zz, bz = uz.filter((zz => Number.isFinite(zz.timeFraction)));
-        return bz.sort(((zz, uz) => zz.timeFraction - uz.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(bz, "rotation", dz),
-          position: this.createTimelineFromKeyframes(bz, "position", Zz)
+          timeline: Eq
+        } = qq, gq = Eq.filter((qq => Number.isFinite(qq.timeFraction)));
+        return gq.sort(((qq, Eq) => qq.timeFraction - Eq.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(gq, "rotation", Wq),
+          position: this.createTimelineFromKeyframes(gq, "position", aq)
         }
       }
-      createTimelineFromKeyframes(zz, uz, bz) {
-        const Ez = [];
-        for (const tz of zz) {
-          const zz = tz[uz];
-          if (zz) {
-            const uz = this.createAnimationFrameWithoutPrecomputes(tz.timeFraction, zz);
-            Oz(uz) && Ez.push(uz)
+      createTimelineFromKeyframes(qq, Eq, gq) {
+        const Yq = [];
+        for (const Aq of qq) {
+          const qq = Aq[Eq];
+          if (qq) {
+            const Eq = this.createAnimationFrameWithoutPrecomputes(Aq.timeFraction, qq);
+            uq(Eq) && Yq.push(Eq)
           }
         }
-        const nz = [];
-        for (let tz = 0; tz < Ez.length; tz++) {
-          var iz, lz, Mz;
-          const zz = Ez[tz],
-            uz = null !== (iz = Ez[tz - 1]) && void 0 !== iz ? iz : zz,
-            Hz = null !== (lz = Ez[tz + 1]) && void 0 !== lz ? lz : zz,
-            Oz = null !== (Mz = Ez[tz + 2]) && void 0 !== Mz ? Mz : Hz;
-          nz.push({
-            ...zz,
-            ...bz(uz.post, uz.timeFraction, zz.post, zz.timeFraction, Hz.pre, Hz.timeFraction, Oz.pre, Oz.timeFraction)
+        const lq = [];
+        for (let Aq = 0; Aq < Yq.length; Aq++) {
+          var Oq, mq, xq;
+          const qq = Yq[Aq],
+            Eq = null !== (Oq = Yq[Aq - 1]) && void 0 !== Oq ? Oq : qq,
+            cq = null !== (mq = Yq[Aq + 1]) && void 0 !== mq ? mq : qq,
+            uq = null !== (xq = Yq[Aq + 2]) && void 0 !== xq ? xq : cq;
+          lq.push({
+            ...qq,
+            ...gq(Eq.post, Eq.timeFraction, qq.post, qq.timeFraction, cq.pre, cq.timeFraction, uq.pre, uq.timeFraction)
           })
         }
-        return nz
+        return lq
       }
-      createAnimationFrameWithoutPrecomputes(zz, uz) {
-        let bz, Ez, nz = null;
-        var iz;
-        if ("object" === typeof uz && "point" in uz) nz = null !== (iz = uz.Qi) && void 0 !== iz ? iz : null, bz = uz.point, Ez = uz.point;
-        else if ("object" === typeof uz && "pre" in uz) {
-          var lz;
-          nz = null !== (lz = uz.Qi) && void 0 !== lz ? lz : null, bz = uz.pre, Ez = uz.post
-        } else bz = uz, Ez = uz;
+      createAnimationFrameWithoutPrecomputes(qq, Eq) {
+        let gq, Yq, lq = null;
+        var Oq;
+        if ("object" === typeof Eq && "point" in Eq) lq = null !== (Oq = Eq.oq) && void 0 !== Oq ? Oq : null, gq = Eq.point, Yq = Eq.point;
+        else if ("object" === typeof Eq && "pre" in Eq) {
+          var mq;
+          lq = null !== (mq = Eq.oq) && void 0 !== mq ? mq : null, gq = Eq.pre, Yq = Eq.post
+        } else gq = Eq, Yq = Eq;
         return {
-          timeFraction: zz,
-          Qi: this.createLerpMode(nz),
-          pre: bz,
-          post: Ez
+          timeFraction: qq,
+          oq: this.createLerpMode(lq),
+          pre: gq,
+          post: Yq
         }
       }
-      createLerpMode(zz) {
-        return null === zz ? Ez.j.Linear : tz.LERP_MODE_SCHEMA_MAPPING[zz]
+      createLerpMode(qq) {
+        return null === qq ? Yq.k.Linear : Aq.LERP_MODE_SCHEMA_MAPPING[qq]
       }
     }
-    tz.LERP_MODE_SCHEMA_MAPPING = {
-      linear: Ez.j.Linear,
-      "catmull-rom-spline": Ez.j.CatmullRomSpline
+    Aq.LERP_MODE_SCHEMA_MAPPING = {
+      linear: Yq.k.Linear,
+      "catmull-rom-spline": Yq.k.CatmullRomSpline
     };
-    class Hz {
-      constructor(zz) {
-        this.animationSchema = zz
+    class cq {
+      constructor(qq) {
+        this.animationSchema = qq
       }
       createAnimationScript() {
         const {
-          animation_length: zz,
-          loop: uz,
-          bones: bz
+          animation_length: qq,
+          loop: Eq,
+          bones: gq
         } = this.animationSchema;
         return {
-          Ui: Math.round(1e3 * zz),
-          gi: this.createLoopMode(null !== uz && void 0 !== uz && uz),
-          Si: this.createNodeSkeletonAnimationScript(null !== bz && void 0 !== bz ? bz : null)
+          aq: Math.round(1e3 * qq),
+          Vq: this.createLoopMode(null !== Eq && void 0 !== Eq && Eq),
+          dq: this.createNodeSkeletonAnimationScript(null !== gq && void 0 !== gq ? gq : null)
         }
       }
-      createLoopMode(zz) {
-        switch (zz) {
+      createLoopMode(qq) {
+        switch (qq) {
           case !1:
-            return Ez.m.NoLoop;
+            return Yq.l.NoLoop;
           case !0:
-            return Ez.m.LoopOnLastFrame;
+            return Yq.l.LoopOnLastFrame;
           case "hold_on_last_frame":
-            return Ez.m.HoldOnLastFrame
+            return Yq.l.HoldOnLastFrame
         }
-        throw new Error(`Invalid Blockbench loop mode schema: ${zz}`)
+        throw new Error(`Invalid Blockbench loop mode schema: ${qq}`)
       }
-      createNodeSkeletonAnimationScript(zz) {
-        if (null === zz) return null;
-        const uz = {};
-        for (const bz in zz) {
-          const Ez = zz[bz];
-          uz[bz] = this.createNodeAnimationScript(Ez)
+      createNodeSkeletonAnimationScript(qq) {
+        if (null === qq) return null;
+        const Eq = {};
+        for (const gq in qq) {
+          const Yq = qq[gq];
+          Eq[gq] = this.createNodeAnimationScript(Yq)
         }
-        return uz
+        return Eq
       }
-      createNodeAnimationScript(zz) {
+      createNodeAnimationScript(qq) {
         const {
-          rotation: uz,
-          position: bz
-        } = zz;
+          rotation: Eq,
+          position: gq
+        } = qq;
         return {
-          rotation: this.createAnimationTimeline(null !== uz && void 0 !== uz ? uz : null, Kz, dz, !0),
-          position: this.createAnimationTimeline(null !== bz && void 0 !== bz ? bz : null, Xz, Zz, !1)
+          rotation: this.createAnimationTimeline(null !== Eq && void 0 !== Eq ? Eq : null, dq, Wq, !0),
+          position: this.createAnimationTimeline(null !== gq && void 0 !== gq ? gq : null, Hq, aq, !1)
         }
       }
-      createAnimationTimeline(zz, uz, bz, Ez) {
-        if (null === zz) return [];
-        if (Array.isArray(zz)) {
-          zz = {
-            "0.0": zz
+      createAnimationTimeline(qq, Eq, gq, Yq) {
+        if (null === qq) return [];
+        if (Array.isArray(qq)) {
+          qq = {
+            "0.0": qq
           }
         }
-        const nz = Object.entries(zz).map((zz => {
-          let [bz, Ez] = zz;
-          const nz = Number(bz) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(nz, Ez, uz)
-        })).filter(Oz);
-        nz.sort(((zz, uz) => zz.timeFraction - uz.timeFraction)), Ez && function(zz) {
-          for (let uz = 1; uz < zz.length; uz++) {
-            const bz = zz[uz - 1].post,
-              Ez = zz[uz],
-              nz = fz(Ez.pre),
-              iz = fz(Ez.post),
-              lz = rz(bz, Ez.pre);
-            rz(bz, nz) < lz && (zz[uz] = {
-              ...Ez,
-              pre: nz,
-              post: iz
+        const lq = Object.entries(qq).map((qq => {
+          let [gq, Yq] = qq;
+          const lq = Number(gq) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(lq, Yq, Eq)
+        })).filter(uq);
+        lq.sort(((qq, Eq) => qq.timeFraction - Eq.timeFraction)), Yq && function(qq) {
+          for (let Eq = 1; Eq < qq.length; Eq++) {
+            const gq = qq[Eq - 1].post,
+              Yq = qq[Eq],
+              lq = oq(Yq.pre),
+              Oq = oq(Yq.post),
+              mq = Qq(gq, Yq.pre);
+            Qq(gq, lq) < mq && (qq[Eq] = {
+              ...Yq,
+              pre: lq,
+              post: Oq
             })
           }
-        }(nz);
-        const iz = [];
-        for (let Hz = 0; Hz < nz.length; Hz++) {
-          var lz, Mz, tz;
-          const zz = nz[Hz],
-            uz = null !== (lz = nz[Hz - 1]) && void 0 !== lz ? lz : zz,
-            Ez = null !== (Mz = nz[Hz + 1]) && void 0 !== Mz ? Mz : zz,
-            Oz = null !== (tz = nz[Hz + 2]) && void 0 !== tz ? tz : Ez;
-          iz.push({
-            ...zz,
-            ...bz(uz.post, uz.timeFraction, zz.post, zz.timeFraction, Ez.pre, Ez.timeFraction, Oz.pre, Oz.timeFraction)
+        }(lq);
+        const Oq = [];
+        for (let cq = 0; cq < lq.length; cq++) {
+          var mq, xq, Aq;
+          const qq = lq[cq],
+            Eq = null !== (mq = lq[cq - 1]) && void 0 !== mq ? mq : qq,
+            Yq = null !== (xq = lq[cq + 1]) && void 0 !== xq ? xq : qq,
+            uq = null !== (Aq = lq[cq + 2]) && void 0 !== Aq ? Aq : Yq;
+          Oq.push({
+            ...qq,
+            ...gq(Eq.post, Eq.timeFraction, qq.post, qq.timeFraction, Yq.pre, Yq.timeFraction, uq.pre, uq.timeFraction)
           })
         }
-        return iz
+        return Oq
       }
-      createAnimationFrameWithoutPrecomputes(zz, uz, bz) {
-        let Ez, nz, iz = null;
-        if ("object" === typeof uz && "post" in uz) {
-          var lz;
-          iz = null !== (lz = uz.lerp_mode) && void 0 !== lz ? lz : null, nz = Rz(uz.post, bz), Ez = uz.pre ? Rz(uz.pre, bz) : nz
+      createAnimationFrameWithoutPrecomputes(qq, Eq, gq) {
+        let Yq, lq, Oq = null;
+        if ("object" === typeof Eq && "post" in Eq) {
+          var mq;
+          Oq = null !== (mq = Eq.lerp_mode) && void 0 !== mq ? mq : null, lq = Vq(Eq.post, gq), Yq = Eq.pre ? Vq(Eq.pre, gq) : lq
         } else {
-          const zz = Rz(uz, bz);
-          nz = zz, Ez = zz
+          const qq = Vq(Eq, gq);
+          lq = qq, Yq = qq
         }
         return {
-          timeFraction: zz,
-          Qi: this.createLerpMode(iz),
-          pre: Ez,
-          post: nz
+          timeFraction: qq,
+          oq: this.createLerpMode(Oq),
+          pre: Yq,
+          post: lq
         }
       }
-      createLerpMode(zz) {
-        return null === zz ? Ez.j.Linear : Hz.LERP_MODE_SCHEMA_MAPPING[zz]
+      createLerpMode(qq) {
+        return null === qq ? Yq.k.Linear : cq.LERP_MODE_SCHEMA_MAPPING[qq]
       }
     }
 
-    function Oz(zz) {
-      return Number.isFinite(zz.timeFraction) && pz(zz.pre) && pz(zz.post)
+    function uq(qq) {
+      return Number.isFinite(qq.timeFraction) && Bq(qq.pre) && Bq(qq.post)
     }
 
-    function pz(zz) {
-      return Number.isFinite(zz[0]) && Number.isFinite(zz[1]) && Number.isFinite(zz[2])
+    function Bq(qq) {
+      return Number.isFinite(qq[0]) && Number.isFinite(qq[1]) && Number.isFinite(qq[2])
     }
 
-    function dz(zz, uz, bz, Ez, nz, iz, lz, Mz) {
-      const tz = iz - uz,
-        Hz = iz - Ez,
-        Oz = Mz - Ez,
-        pz = [null, null, null];
-      for (let dz = 0; dz < pz.length; dz++) pz[dz] = Fz(zz[dz], bz[dz], nz[dz], lz[dz], tz, Oz);
+    function Wq(qq, Eq, gq, Yq, lq, Oq, mq, xq) {
+      const Aq = Oq - Eq,
+        cq = Oq - Yq,
+        uq = xq - Yq,
+        Bq = [null, null, null];
+      for (let Wq = 0; Wq < Bq.length; Wq++) Bq[Wq] = Nq(qq[Wq], gq[Wq], lq[Wq], mq[Wq], Aq, uq);
       return {
-        Wi: Hz,
-        ji: pz
+        Pq: cq,
+        Qq: Bq
       }
     }
 
-    function Fz(zz, uz, bz, Ez, iz, lz) {
+    function Nq(qq, Eq, gq, Yq, Oq, mq) {
       return {
-        Bi: nz.d.computeShortestRotation(zz, bz) / iz,
-        Ci: nz.d.computeShortestRotation(uz, Ez) / lz,
-        delta: nz.d.computeShortestRotation(uz, bz)
+        tq: lq.c.computeShortestRotation(qq, gq) / Oq,
+        rq: lq.c.computeShortestRotation(Eq, Yq) / mq,
+        delta: lq.c.computeShortestRotation(Eq, gq)
       }
     }
 
-    function Zz(zz, uz, bz, Ez, nz, iz, lz, Mz) {
-      const tz = iz - uz,
-        Hz = iz - Ez,
-        Oz = Mz - Ez,
-        pz = [null, null, null];
-      for (let dz = 0; dz < pz.length; dz++) pz[dz] = {
-        Bi: (nz[dz] - zz[dz]) / tz,
-        Ci: (lz[dz] - bz[dz]) / Oz,
-        delta: nz[dz] - bz[dz]
+    function aq(qq, Eq, gq, Yq, lq, Oq, mq, xq) {
+      const Aq = Oq - Eq,
+        cq = Oq - Yq,
+        uq = xq - Yq,
+        Bq = [null, null, null];
+      for (let Wq = 0; Wq < Bq.length; Wq++) Bq[Wq] = {
+        tq: (lq[Wq] - qq[Wq]) / Aq,
+        rq: (mq[Wq] - gq[Wq]) / uq,
+        delta: lq[Wq] - gq[Wq]
       };
       return {
-        Wi: Hz,
-        ji: pz
+        Pq: cq,
+        Qq: Bq
       }
     }
 
-    function Rz(zz, uz) {
-      return null === uz ? zz : uz(zz)
+    function Vq(qq, Eq) {
+      return null === Eq ? qq : Eq(qq)
     }
 
-    function Kz(zz) {
-      const [uz, bz, Ez] = zz, lz = -(0, iz.j)(uz), Mz = -(0, iz.j)(bz), tz = (0, iz.j)(Ez), Hz = nz.d.quaternionFromEulerZYX(lz, Mz, tz);
-      return nz.d.eulerYXZFromQuaternion(Hz)
+    function dq(qq) {
+      const [Eq, gq, Yq] = qq, mq = -(0, Oq.j)(Eq), xq = -(0, Oq.j)(gq), Aq = (0, Oq.j)(Yq), cq = lq.c.quaternionFromEulerZYX(mq, xq, Aq);
+      return lq.c.eulerYXZFromQuaternion(cq)
     }
-    Hz.LERP_MODE_SCHEMA_MAPPING = {
-      linear: Ez.j.Linear,
-      catmullrom: Ez.j.CatmullRomSpline
+    cq.LERP_MODE_SCHEMA_MAPPING = {
+      linear: Yq.k.Linear,
+      catmullrom: Yq.k.CatmullRomSpline
     };
-    const wz = 1 / 16;
+    const jq = 1 / 16;
 
-    function Xz(zz) {
-      return [-zz[0] * wz, zz[1] * wz, zz[2] * wz]
+    function Hq(qq) {
+      return [-qq[0] * jq, qq[1] * jq, qq[2] * jq]
     }
 
-    function fz(zz) {
-      const [uz, bz, Ez] = zz;
-      return [uz >= 0 ? Math.PI - uz : -Math.PI - uz, sz(bz + Math.PI), sz(Ez + Math.PI)]
+    function oq(qq) {
+      const [Eq, gq, Yq] = qq;
+      return [Eq >= 0 ? Math.PI - Eq : -Math.PI - Eq, Pq(gq + Math.PI), Pq(Yq + Math.PI)]
     }
 
-    function sz(zz) {
-      return nz.d.mod(zz + Math.PI, 2 * Math.PI) - Math.PI
+    function Pq(qq) {
+      return lq.c.mod(qq + Math.PI, 2 * Math.PI) - Math.PI
     }
 
-    function rz(zz, uz) {
-      return Math.abs(nz.d.computeShortestRotation(zz[0], uz[0])) + Math.abs(nz.d.computeShortestRotation(zz[1], uz[1])) + Math.abs(nz.d.computeShortestRotation(zz[2], uz[2]))
+    function Qq(qq, Eq) {
+      return Math.abs(lq.c.computeShortestRotation(qq[0], Eq[0])) + Math.abs(lq.c.computeShortestRotation(qq[1], Eq[1])) + Math.abs(lq.c.computeShortestRotation(qq[2], Eq[2]))
     }
-    const oz = new tz
+    const yq = new Aq
   },
-  36577: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => lz,
-      g: () => iz,
-      j: () => Ez,
-      m: () => nz
+  37183: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => mq,
+      g: () => Oq,
+      k: () => Yq,
+      l: () => lq
     });
-    let Ez = function(zz) {
-        return zz[zz.Linear = 0] = "Linear", zz[zz.CatmullRomSpline = 1] = "CatmullRomSpline", zz
+    let Yq = function(qq) {
+        return qq[qq.Linear = 0] = "Linear", qq[qq.CatmullRomSpline = 1] = "CatmullRomSpline", qq
       }({}),
-      nz = function(zz) {
-        return zz[zz.NoLoop = 0] = "NoLoop", zz[zz.LoopOnLastFrame = 1] = "LoopOnLastFrame", zz[zz.HoldOnLastFrame = 2] = "HoldOnLastFrame", zz
+      lq = function(qq) {
+        return qq[qq.NoLoop = 0] = "NoLoop", qq[qq.LoopOnLastFrame = 1] = "LoopOnLastFrame", qq[qq.HoldOnLastFrame = 2] = "HoldOnLastFrame", qq
       }({}),
-      iz = function(zz) {
-        return zz[zz.Movement = 0] = "Movement", zz[zz.Action = 1] = "Action", zz[zz.Emote = 2] = "Emote", zz[zz.Custom = 3] = "Custom", zz
+      Oq = function(qq) {
+        return qq[qq.Movement = 0] = "Movement", qq[qq.Action = 1] = "Action", qq[qq.Emote = 2] = "Emote", qq[qq.Custom = 3] = "Custom", qq
       }({}),
-      lz = function(zz) {
-        return zz[zz.Start = 0] = "Start", zz[zz.Stop = 1] = "Stop", zz
+      mq = function(qq) {
+        return qq[qq.Start = 0] = "Start", qq[qq.Stop = 1] = "Stop", qq
       }({})
   },
-  4605: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => nz,
-      h: () => Ez,
-      i: () => iz,
-      k: () => tz,
-      n: () => lz
+  4671: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => lq,
+      d: () => Yq,
+      f: () => Oq,
+      i: () => Aq,
+      m: () => mq
     });
-    const Ez = ["sine", "triangle", "square", "sawtooth"],
-      nz = 55,
-      iz = {
+    const Yq = ["sine", "triangle", "square", "sawtooth"],
+      lq = 55,
+      Oq = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -1116,39 +1116,39 @@ export const modules = {
         }
       };
 
-    function lz(zz) {
-      return "string" !== typeof zz ? zz : Object.hasOwn(iz, zz) ? iz[zz] : null
+    function mq(qq) {
+      return "string" !== typeof qq ? qq : Object.hasOwn(Oq, qq) ? Oq[qq] : null
     }
 
-    function Mz(zz, uz, bz) {
-      return Math.min(bz, Math.max(uz, zz))
+    function xq(qq, Eq, gq) {
+      return Math.min(gq, Math.max(Eq, qq))
     }
 
-    function tz(zz) {
-      const uz = Mz(zz.durationMs, 10, 500),
-        bz = Mz(zz.attackMs, 0, uz),
+    function Aq(qq) {
+      const Eq = xq(qq.durationMs, 10, 500),
+        gq = xq(qq.attackMs, 0, Eq),
         {
-          intonation: nz
-        } = zz;
+          intonation: lq
+        } = qq;
       return {
-        waveform: Ez.includes(zz.waveform) ? zz.waveform : "sine",
-        pitchHz: Mz(zz.pitchHz, 20, 4e3),
-        glideSemitones: Mz(zz.glideSemitones, -24, 24),
-        durationMs: uz,
-        attackMs: bz,
-        releaseMs: Mz(zz.releaseMs, 0, uz - bz),
-        lowpassHz: null === zz.lowpassHz ? null : Mz(zz.lowpassHz, 20, 2e4),
-        volume: Mz(zz.volume, 0, 2),
+        waveform: Yq.includes(qq.waveform) ? qq.waveform : "sine",
+        pitchHz: xq(qq.pitchHz, 20, 4e3),
+        glideSemitones: xq(qq.glideSemitones, -24, 24),
+        durationMs: Eq,
+        attackMs: gq,
+        releaseMs: xq(qq.releaseMs, 0, Eq - gq),
+        lowpassHz: null === qq.lowpassHz ? null : xq(qq.lowpassHz, 20, 2e4),
+        volume: xq(qq.volume, 0, 2),
         intonation: {
-          variationSemitones: Mz(nz.variationSemitones, 0, 6),
-          declineSemitones: Mz(nz.declineSemitones, 0, 12),
-          questionRiseSemitones: Mz(nz.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: Mz(nz.exclaimLiftSemitones, 0, 12)
+          variationSemitones: xq(lq.variationSemitones, 0, 6),
+          declineSemitones: xq(lq.declineSemitones, 0, 12),
+          questionRiseSemitones: xq(lq.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: xq(lq.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: Mz(zz.syllableMs, 25, 200)
+        syllableMs: xq(qq.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const qq in modules) Object.freeze(modules[qq]);

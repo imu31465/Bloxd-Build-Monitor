@@ -1,113 +1,2284 @@
 export const id = 215;
 export const ids = [215];
 export const modules = {
-  36191: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => Pz,
-      e: () => Vz,
-      f: () => Gz,
-      i: () => az
+  40821: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      LobbyManageView: () => PE
     });
-    const Ez = JSON.parse('{"src":["/sounds/generatedSprites/gunSemiAutomatic.aef27960ef.ogg","/sounds/generatedSprites/gunSemiAutomatic.e56594fab5.m4a","/sounds/generatedSprites/gunSemiAutomatic.d3e434f4d0.mp3","/sounds/generatedSprites/gunSemiAutomatic.97d6a47358.ac3"],"sprite":{"semiAuto_cock_01":[0,500],"semiAuto_cock_02":[600,548.5714285714286],"semiAuto_cock_03":[1250,500],"semiAuto_cock_04":[1850,522.4489795918367],"semiAuto_cock_05":[2473.333333333333,500],"semiAuto_first_shot_01":[3073.333333333333,500],"semiAuto_magazine_load_01":[3673.3333333333335,548.5714285714286],"semiAuto_magazine_load_02":[4323.333333333333,500],"semiAuto_magazine_load_03":[4923.333333333333,548.5714285714286],"semiAuto_magazine_load_04":[5573.333333333333,500],"semiAuto_magazine_load_05":[6173.333333333333,500],"semiAuto_magazine_unload_01":[6773.333333333333,500],"semiAuto_magazine_unload_02":[7373.333333333333,500],"semiAuto_magazine_unload_03":[7973.333333333334,500],"semiAuto_magazine_unload_04":[8573.333333333334,500],"semiAuto_shot_01":[9173.333333333334,500],"semiAuto_shot_02":[9773.333333333334,500],"semiAuto_shot_03":[10373.333333333334,500],"semiAuto_shot_04":[10973.333333333332,500],"semiAuto_shot_05":[11573.333333333334,500],"semiAuto_shot_06":[12173.333333333334,500],"semiAuto_shot_07":[12773.333333333334,500],"semiAuto_shot_08":[13373.333333333334,500],"semiAuto_tail_only_shot_01":[13973.333333333332,2455.5102040816328]}}'),
-      nz = JSON.parse('{"src":["/sounds/generatedSprites/gunSubmachineGun.9d869e4ca3.ogg","/sounds/generatedSprites/gunSubmachineGun.8736ce9068.m4a","/sounds/generatedSprites/gunSubmachineGun.0a429c7e98.mp3","/sounds/generatedSprites/gunSubmachineGun.1db2897c09.ac3"],"sprite":{"submachine_cock_01":[0,500],"submachine_cock_02":[600,500],"submachine_cock_03":[1200,500],"submachine_cock_04":[1800,500],"submachine_first_shot_01":[2400,500],"submachine_magazine_load_01":[3000,500],"submachine_magazine_load_02":[3600,500],"submachine_magazine_load_03":[4200,500],"submachine_magazine_load_04":[4800,500],"submachine_magazine_unload_01":[5400,500],"submachine_magazine_unload_02":[6000,500],"submachine_magazine_unload_03":[6600,500],"submachine_shot_01":[7200,500],"submachine_shot_02":[7800,500],"submachine_shot_03":[8400,500],"submachine_shot_04":[9000,500],"submachine_shot_05":[9600,500],"submachine_shot_06":[10200,500],"submachine_shot_07":[10800,500],"submachine_shot_08":[11400,500],"submachine_shot_09":[12000,500],"submachine_tail_only_shot_01":[12600,1858.8208616780046]}}'),
-      iz = JSON.parse('{"src":["/sounds/generatedSprites/gunPistol.7432a47272.ogg","/sounds/generatedSprites/gunPistol.adec2d9f75.m4a","/sounds/generatedSprites/gunPistol.a9f647182b.mp3","/sounds/generatedSprites/gunPistol.f363b9fa6d.ac3"],"sprite":{"pistol_cock_01":[0,510],"pistol_cock_02":[610,500],"pistol_cock_03":[1210,500],"pistol_cock_06":[1810,500],"pistol_magazine_load_01":[2410,500],"pistol_magazine_load_02":[3010,500],"pistol_magazine_load_03":[3610,500],"pistol_magazine_unload_01":[4210,500],"pistol_magazine_unload_02":[4810,500],"pistol_magazine_unload_03":[5410,500],"pistol_shot_01":[6010,1500],"pistol_shot_02":[7610,1569.591836734694],"pistol_shot_03":[9280,1735.8956916099773],"pistol_shot_04":[11116.666666666668,1526.7120181405896],"pistol_shot_05":[12746.666666666666,1442.2222222222224]}}'),
-      lz = JSON.parse('{"src":["/sounds/generatedSprites/gunRifle.ca54b877ed.ogg","/sounds/generatedSprites/gunRifle.94dfb28886.m4a","/sounds/generatedSprites/gunRifle.f2eb64407a.mp3","/sounds/generatedSprites/gunRifle.d268c1da8d.ac3"],"sprite":{"rifle_cock_01":[0,705.3061224489796],"rifle_cock_02":[806.6666666666666,1149.3877551020407],"rifle_magazine_load_01":[2056.6666666666665,500],"rifle_magazine_load_02":[2656.6666666666665,500],"rifle_magazine_load_03":[3256.666666666667,500],"rifle_magazine_unload_01":[3856.6666666666665,500],"rifle_magazine_unload_02":[4456.666666666667,500],"rifle_magazine_unload_04":[5056.666666666667,500],"rifle_shot_01":[5656.666666666666,2115.918367346939],"rifle_shot_02":[7873.333333333333,2429.3877551020405],"rifle_shot_03":[10403.333333333334,2298.7755102040815],"rifle_shot_04":[12803.333333333332,2481.6326530612246]}}'),
-      Mz = JSON.parse('{"src":["/sounds/generatedSprites/gunMisc.35b4609d1c.ogg","/sounds/generatedSprites/gunMisc.acc63e7fe9.m4a","/sounds/generatedSprites/gunMisc.4403caaad2.mp3","/sounds/generatedSprites/gunMisc.97552f11dc.ac3"],"sprite":{"bullet_shell_bounce_general_07":[0,823.0612244897959],"bullet_shell_bounce_general_08":[923.3333333333334,907.0294784580499],"headshot_04":[1933.3333333333333,500],"headshot_06":[2533.333333333333,500],"headshot_08":[3133.3333333333335,500],"headshot_11":[3733.3333333333335,500]}}'),
-      tz = JSON.parse('{"src":["/sounds/generatedSprites/gunShotgun.4e0220339e.ogg","/sounds/generatedSprites/gunShotgun.137d0e6b6f.m4a","/sounds/generatedSprites/gunShotgun.8b1144b235.mp3","/sounds/generatedSprites/gunShotgun.0b25a6370a.ac3"],"sprite":{"shotgun_cock_01":[0,914.2857142857142],"shotgun_cock_02":[1016.6666666666666,500],"shotgun_cock_03":[1616.6666666666667,679.1836734693878],"shotgun_cock_04":[2396.6666666666665,548.5714285714286],"shotgun_cock_05":[3046.666666666667,548.5714285714286],"shotgun_load_bullet_01":[3696.666666666667,548.5714285714286],"shotgun_load_bullet_02":[4346.666666666667,522.4489795918367],"shotgun_load_bullet_03":[4970,500],"shotgun_load_bullet_04":[5570,500],"shotgun_load_bullet_05":[6170,500],"shotgun_load_bullet_06":[6770,679.1836734693878],"shotgun_load_bullet_07":[7550,548.5714285714286],"shotgun_load_bullet_08":[8200,500],"shotgun_shot_01":[8800,2612.2448979591836],"shotgun_shot_02":[11513.333333333334,2507.7551020408164],"shotgun_shot_03":[14123.333333333334,2638.3673469387754],"shotgun_shot_04":[16863.333333333332,2037.5510204081634]}}'),
-      Hz = JSON.parse('{"src":["/sounds/generatedSprites/dig.affb4a6f05.ogg","/sounds/generatedSprites/dig.082c5b232c.m4a","/sounds/generatedSprites/dig.71feb10d5c.mp3","/sounds/generatedSprites/dig.4913c53dc2.ac3"],"sprite":{"cloth1":[0,1671.8367346938776],"cloth2":[1773.3333333333335,1671.8367346938776],"cloth3":[3546.666666666667,1671.8367346938776],"cloth4":[5320,1668.9342403628118],"glass1":[7090,1671.8367346938776],"glass2":[8863.333333333334,1671.8367346938776],"glass3":[10636.666666666666,1671.8367346938776],"grass1":[12410,500],"grass2":[13010,500],"grass3":[13610,835.9183673469388],"grass4":[14546.666666666666,835.9183673469388],"gravel1":[15483.333333333332,500],"gravel2":[16083.333333333332,500],"gravel3":[16683.333333333332,500],"gravel4":[17283.333333333336,500],"pickUp":[17883.333333333332,500],"sand1":[18483.333333333336,500],"sand2":[19083.333333333332,500],"sand3":[19683.333333333332,500],"sand4":[20283.333333333336,500],"snow1":[20883.333333333332,500],"snow2":[21483.333333333336,500],"snow3":[22083.333333333332,650.1587301587301],"snow4":[22836.666666666664,650.1587301587301],"stone1":[23590,500],"stone2":[24190,500],"stone3":[24790,500],"stone4":[25390,500],"wood1":[25990,928.7981859410431],"wood2":[27020,928.7981859410431],"wood3":[28050,928.7981859410431],"wood4":[29080,928.7981859410431]}}'),
-      Oz = JSON.parse('{"src":["/sounds/generatedSprites/step.52076ddc3a.ogg","/sounds/generatedSprites/step.d6260ef2cc.m4a","/sounds/generatedSprites/step.6e5286b3a8.mp3","/sounds/generatedSprites/step.cfb5f3dd8f.ac3"],"sprite":{"hit1":[0,557.2789115646258],"hit2":[660,650.1587301587301],"hit3":[1413.3333333333333,650.1587301587301],"step_cloth1":[2166.6666666666665,1671.8367346938776],"step_cloth2":[3940,1671.8367346938776],"step_cloth3":[5713.333333333333,1671.8367346938776],"step_cloth4":[7486.666666666666,1671.8367346938776],"step_grass1":[9260,500],"step_grass2":[9860,500],"step_grass3":[10460,500],"step_grass4":[11060,500],"step_grass5":[11660,1483.1746031746031],"step_gravel1":[13243.333333333334,1486.077097505669],"step_gravel2":[14830,1483.1746031746031],"step_gravel3":[16413.333333333336,1486.077097505669],"step_gravel4":[18000,1486.077097505669],"step_sand2":[19586.666666666664,1486.077097505669],"step_sand3":[21173.333333333332,1486.077097505669],"step_sand4":[22760,1486.077097505669],"step_sand5":[24346.666666666668,1486.077097505669],"step_snow1":[25933.333333333332,500],"step_snow2":[26533.333333333336,500],"step_snow3":[27133.333333333332,500],"step_snow4":[27733.333333333336,500],"step_stone1":[28333.333333333332,1486.077097505669],"step_stone2":[29920,1486.077097505669],"step_stone3":[31506.666666666668,1486.077097505669],"step_stone4":[33093.333333333336,1486.077097505669],"step_stone5":[34680,1486.077097505669],"step_stone6":[36266.666666666664,1486.077097505669],"step_wood1":[37853.33333333333,743.0385487528345],"step_wood2":[38696.666666666664,743.0385487528345],"step_wood3":[39540,743.0385487528345],"step_wood4":[40383.333333333336,743.0385487528345],"step_wood5":[41226.666666666664,743.0385487528345],"step_wood6":[42070,743.0385487528345],"sweep6":[42913.333333333336,1114.5578231292516]}}'),
-      pz = JSON.parse('{"src":["/sounds/generatedSprites/random.865e6504e8.ogg","/sounds/generatedSprites/random.30bfb92551.m4a","/sounds/generatedSprites/random.baec75fd79.mp3","/sounds/generatedSprites/random.80db3a1c09.ac3"],"sprite":{"beep":[0,2455.5102040816328],"bow":[2556.6666666666665,500],"bucketEmpty1":[3156.6666666666665,1114.5578231292516],"bucketEmpty2":[4373.333333333333,1114.5578231292516],"bucketEmpty3":[5590,1114.5578231292516],"bucketFill1":[6806.666666666667,1021.6780045351475],"bucketFill2":[7930,1021.6780045351475],"bucketFill3":[9053.333333333332,1021.6780045351475],"burp":[10176.666666666666,500],"cannonFire1":[10776.666666666668,4880.748299319728],"cannonFire2":[15760,4880.748299319728],"cannonFire3":[20743.333333333332,4880.748299319728],"cashRegister":[25726.666666666668,3819.6825396825398],"chestClose":[29646.666666666668,557.2789115646258],"chestOpen":[30306.666666666668,743.0385487528345],"doorClose":[31150,835.9183673469388],"doorClose2":[32086.666666666664,835.9183673469388],"doorOpen-bloxd1":[33023.333333333336,743.0385487528345],"doorOpen-bloxd2":[33866.666666666664,835.9183673469388],"drink":[34803.333333333336,500],"eat1":[35403.333333333336,500],"equip_leather1":[36003.33333333333,928.7981859410431],"exp_collect":[37033.33333333333,1009.2063492063493],"exp_levelup":[38143.33333333333,1469.863945578231],"fallsmall":[39713.33333333333,1764.716553287982],"fireBurn":[41580,2827.3922902494332],"firecracker1":[44510,5302.857142857142],"firecracker2":[49913.333333333336,5250.6122448979595],"firecracker3":[55266.666666666664,5198.367346938776],"firecracker4":[60566.66666666667,5877.551020408164],"hoeTill1":[66546.66666666667,1114.5578231292516],"hoeTill2":[67763.33333333333,557.2789115646258],"hoeTill3":[68423.33333333333,928.7981859410431],"hoeTill4":[69453.33333333333,928.7981859410431],"laugh1":[70483.33333333333,898.3219954648525],"laugh2":[71483.33333333333,1919.092970521542],"laugh3":[73503.33333333333,1668.2766439909299],"magicAccent1":[75273.33333333333,5250.6122448979595],"magicAccent2":[80626.66666666667,5041.632653061224],"magicAccent3":[85770,4963.265306122449],"magicAccent4":[90833.33333333333,4728.163265306122],"splash1":[95663.33333333333,1114.5578231292516],"successfulBowHit":[96880,500],"trapdoorOpen":[97480,835.9183673469388]}}'),
-      dz = JSON.parse('{"src":["/sounds/generatedSprites/mob.c1d17fb6a5.ogg","/sounds/generatedSprites/mob.91d06491e6.m4a","/sounds/generatedSprites/mob.9077a319db.mp3","/sounds/generatedSprites/mob.c45a2fe399.ac3"],"sprite":{"bearRoar1":[0,1011.1791383219954],"bearRoar2":[1113.3333333333333,793.6507936507936],"bearRoar3":[2009.9999999999998,764.2630385487529],"bearRoar4":[2876.6666666666665,781.9047619047619],"bearRoar5":[3760,646.6666666666666],"catHiss1":[4506.666666666667,1252.0861678004535],"catHiss2":[5860,1064.2403628117913],"catHiss3":[7026.666666666666,1082.6530612244899],"catHiss4":[8210,978.8662131519275],"catHurt1":[9290,809.795918367347],"catHurt2":[10200,779.4104308390023],"catHurt3":[11080,626.9387755102041],"catMeow1":[11810,1306.1224489795918],"catMeow2":[13216.666666666666,1384.4897959183672],"catMeow3":[14703.333333333334,1280],"catMeow4":[16083.333333333332,1567.3469387755101],"catMeow5":[17753.333333333332,1802.4489795918369],"cowHurt1":[19656.666666666668,522.6530612244899],"cowMoo1":[20280,1574.331065759637],"cowMoo2":[21956.666666666668,1947.4149659863947],"cowMoo3":[24006.666666666668,2099.342403628118],"croneAttack1":[26206.666666666668,500],"croneHurt1":[26806.666666666668,751.6780045351475],"croneIdle1":[27660,6756.8707482993195],"deerGrunt1":[34520,976.7346938775511],"deerHurt1":[35600,500],"dogBark1":[36200,500],"dogBark2":[36800,500],"dogBark3":[37400,500],"dogGrowl1":[38000,634.8979591836734],"dogGrowl2":[38736.666666666664,543.3560090702948],"dogGrowl3":[39383.333333333336,1361.360544217687],"dogHurt1":[40846.666666666664,500],"dogHurt2":[41446.666666666664,500],"fennecYip1":[42046.666666666664,500],"fennecYip2":[42646.66666666667,500],"fennecYip3":[43246.66666666667,500],"golemGrunt1":[43846.666666666664,6687.34693877551],"golemGrunt2":[50636.666666666664,4911.0204081632655],"gorillaIdle1":[55650,898.140589569161],"gorillaIdle2":[56650,825.3061224489796],"gorillaIdle3":[57576.66666666667,1357.233560090703],"gorillaIdle4":[59036.66666666667,1061.2698412698414],"gorillaRoar1":[60200,1002.6757369614512],"horseHurt1":[61303.333333333336,1044.8979591836735],"horseHurt2":[62450,1332.2448979591836],"horseIdle1":[63883.333333333336,1410.6122448979593],"horseIdle2":[65396.666666666664,634.3310657596371],"horseIdle3":[66133.33333333334,853.469387755102],"knightGrunt1":[67090,2026.6666666666667],"knightGrunt2":[69216.66666666667,2154.671201814059],"knightGrunt3":[71473.33333333333,1674.671201814059],"pigHurt1":[73250,705.6009070294784],"pigHurt2":[74056.66666666667,667.4603174603175],"pigHurt3":[74826.66666666667,500],"pigOink1":[75426.66666666666,976.7573696145124],"pigOink2":[76506.66666666666,1015.578231292517],"pigOink3":[77623.33333333333,500],"pigOink4":[78223.33333333333,500],"pigOink5":[78823.33333333334,519.4557823129252],"reaverAttack1":[79443.33333333333,4031.1111111111113],"reaverAttack2":[83576.66666666667,1552.0181405895692],"reaverAttack3":[85230,1857.5510204081634],"reaverGrunt1":[87190,5073.5600907029475],"reaverGrunt2":[92366.66666666666,2950.090702947846],"reaverGrunt3":[95420,6640.907029478458],"sheepBaa1":[102163.33333333333,1039.3877551020407],"sheepBaa2":[103303.33333333333,1243.968253968254],"sheepBaa3":[104650,827.7551020408164],"sheepBaa4":[105580,1048.1179138321997],"sheepHurt1":[106730,700.2721088435375],"skeletonRattle1":[107533.33333333333,1088.0045351473923],"skeletonRattle2":[108723.33333333333,1499.9773242630386],"skeletonRattle3":[110323.33333333334,750],"skeletonRattle4":[111173.33333333333,650.6575963718822],"stagGrunt1":[111926.66666666666,976.7346938775511],"stagHurt1":[113006.66666666666,500],"stalkerAttack1":[113606.66666666667,963.6281179138322],"stalkerIdle1":[114673.33333333333,2051.065759637188],"warperGrunt1":[116826.66666666667,2883.605442176871],"warperGrunt2":[119813.33333333333,6405.351473922902],"warperGrunt3":[126320,4806.530612244898],"warperGrunt4":[131226.66666666666,5781.768707482994],"warperGrunt5":[137110,4284.081632653061],"warperPhase1":[141496.66666666666,5867.256235827665],"warperPhase2":[147466.66666666666,5866.916099773242],"wraithGrunt1":[153436.66666666666,4111.995464852607],"wraithGrunt2":[157650,5173.333333333333],"wraithHurt":[162923.33333333334,4277.324263038548],"ZombieGrunt1":[167303.33333333334,2089.795918367347],"ZombieGrunt2":[169493.33333333334,2351.0204081632655],"ZombieGrunt3":[171946.66666666666,1750.204081632653],"ZombieHurt1":[173800,1593.4693877551022],"ZombieHurt2":[175496.66666666666,1906.938775510204],"ZombieHurt3":[177506.66666666666,1018.7755102040817],"ZombieHurt4":[178626.66666666666,1358.3673469387757]}}'),
-      Fz = JSON.parse('{"src":["/sounds/generatedSprites/note.55b41d5148.ogg","/sounds/generatedSprites/note.9d434eddc4.m4a","/sounds/generatedSprites/note.96cf50a66e.mp3","/sounds/generatedSprites/note.85cfed63f9.ac3"],"sprite":{"bass":[0,500],"bassattack":[600,500],"bd":[1200,500],"bigDrumSwish1":[1800,3892.2448979591836],"bigDrumSwish2":[5793.333333333333,3056.326530612245],"bigDrumSwish3":[8950,3578.7755102040815],"drumSwish1":[12630,4127.34693877551],"drumSwish2":[16860,4127.34693877551],"harp_pling":[21090,835.9183673469388],"hat":[22026.666666666668,500],"levelup":[22626.666666666664,4458.231292517006],"lowDrum1":[27186.666666666668,3683.265306122449],"lowDrum2":[30970,3840],"lowDrum3":[34910,4205.714285714285],"snare":[39216.66666666667,500],"sonarBeep":[39816.66666666667,4127.34693877551],"trumpetFlare":[44046.666666666664,1683.4467120181407],"trumpetNote1":[45833.333333333336,779.8412698412699],"trumpetNote2":[46713.33333333333,845.6916099773243],"trumpetNote3":[47660,1090.7256235827665]}}'),
-      Zz = JSON.parse('{"src":["/sounds/generatedSprites/fishing.ff9694e93b.ogg","/sounds/generatedSprites/fishing.20b18e3c80.m4a","/sounds/generatedSprites/fishing.4388bd71de.mp3","/sounds/generatedSprites/fishing.09b8e92f3c.ac3"],"sprite":{"caughtFish":[0,1976.7573696145125],"reel":[2080,531.9501133786848]}}'),
-      Rz = JSON.parse('{"src":["/sounds/generatedSprites/gameStart.dcb4ad7e5f.ogg","/sounds/generatedSprites/gameStart.04192cc8d1.m4a","/sounds/generatedSprites/gameStart.203520cd23.mp3","/sounds/generatedSprites/gameStart.95d1462a45.ac3"],"sprite":{"game_start_countdown_01":[0,1000.7709750566893],"game_start_countdown_02":[1103.3333333333333,994.9206349206348],"game_start_countdown_03":[2200,1000.7709750566893],"game_start_countdown_final":[3303.333333333333,1583.1065759637188]}}'),
-      Kz = JSON.parse('{"src":["/sounds/generatedSprites/customGame_horror.89bd01b3f6.ogg","/sounds/generatedSprites/customGame_horror.58571ce79e.m4a","/sounds/generatedSprites/customGame_horror.809f261ceb.mp3","/sounds/generatedSprites/customGame_horror.0a4350133e.ac3"],"sprite":{"cryptWhoosh":[0,1700],"doorKnock":[1800,1173.3333333333333],"futureStrangePulse":[3073.333333333333,2874.6938775510203],"hauntedHorrorImpact":[6050,1072.857142857143],"horrorAccent1":[7223.333333333334,1919.5238095238096],"horrorFright":[9243.333333333334,1630.952380952381],"horrorMaleDrone":[10976.666666666666,7933.492063492064],"intensiveRainLoop":[19013.333333333332,13037.687074829933],"metalDoorKnock":[32153.333333333336,4219.410430839002],"ominousBellHit":[36473.333333333336,8756.621315192744],"pulseFromTheDark":[45330,7653.582766439909],"suspenseRiser":[53086.666666666664,6825.396825396825],"thunderRain":[60013.333333333336,12085.986394557824],"zapAccent1":[72200,500],"zapAccent2":[72800,500]}}'),
-      wz = JSON.parse('{"src":["/sounds/generatedSprites/crowd.842a12bd70.ogg","/sounds/generatedSprites/crowd.eb817b0986.m4a","/sounds/generatedSprites/crowd.718908450e.mp3","/sounds/generatedSprites/crowd.b61523a08f.ac3"],"sprite":{"crowdAmbience":[0,54935.51020408163],"crowdCheer":[55036.66666666667,6269.3877551020405],"refereeWhistle":[61406.666666666664,2089.795918367347]}}'),
-      Xz = JSON.parse('{"src":["/sounds/generatedSprites/survivalFactory.83edaf137d.ogg","/sounds/generatedSprites/survivalFactory.39e38bf296.m4a","/sounds/generatedSprites/survivalFactory.e3538de2e7.mp3","/sounds/generatedSprites/survivalFactory.a8fc293f73.ac3"],"sprite":{"rocketEngineLoop":[0,13167.369614512472]}}'),
-      fz = JSON.parse('{"src":["/sounds/generatedSprites/rpg.a91934b789.ogg","/sounds/generatedSprites/rpg.48d078dd6a.m4a","/sounds/generatedSprites/rpg.0279bc17b2.mp3","/sounds/generatedSprites/rpg.833aede675.ac3"],"sprite":{"rpgBeltCloth1":[0,722.5396825396826],"rpgBeltCloth2":[823.3333333333334,753.3106575963718],"rpgBeltHandle1":[1676.6666666666667,500],"rpgBeltHandle2":[2276.666666666667,500],"rpgBookClose":[2876.6666666666665,500],"rpgBookFlip1":[3476.6666666666665,768.6621315192745],"rpgBookFlip2":[4346.666666666667,500],"rpgBookFlip3":[4946.666666666666,500],"rpgBookOpen":[5546.666666666667,500],"rpgBookPlace1":[6146.666666666666,500],"rpgBookPlace2":[6746.666666666667,500],"rpgBookPlace3":[7346.666666666667,500],"rpgChop":[7946.666666666666,500],"rpgCloth1":[8546.666666666666,661.0430839002267],"rpgCloth2":[9310,500],"rpgCloth3":[9910,500],"rpgCloth4":[10510,500],"rpgCreak1":[11110,661.0430839002267],"rpgCreak2":[11873.333333333334,830.1587301587302],"rpgCreak3":[12806.666666666666,500],"rpgDoorClose1":[13406.666666666666,675.0566893424036],"rpgDoorClose2":[14183.333333333334,612.4943310657596],"rpgDoorClose3":[14896.666666666666,713.9455782312925],"rpgDoorClose4":[15713.333333333332,603.3786848072561],"rpgDoorOpen1":[16420,918.9795918367347],"rpgDoorOpen2":[17440,1413.3333333333333],"rpgDrawKnife1":[18953.333333333332,500],"rpgDrawKnife2":[19553.333333333336,500],"rpgDrawKnife3":[20153.333333333332,500],"rpgDropLeather":[20753.333333333332,500],"rpgFootstep00":[21353.333333333332,500],"rpgFootstep01":[21953.333333333332,500],"rpgFootstep02":[22553.333333333336,500],"rpgFootstep03":[23153.333333333332,500],"rpgFootstep04":[23753.333333333332,500],"rpgFootstep05":[24353.333333333332,500],"rpgFootstep06":[24953.333333333332,500],"rpgFootstep07":[25553.333333333336,500],"rpgFootstep08":[26153.333333333332,500],"rpgFootstep09":[26753.333333333332,500],"rpgHandleCoins1":[27353.333333333332,845.5328798185941],"rpgHandleCoins2":[28300,500],"rpgHandleSmallLeather1":[28900,500],"rpgHandleSmallLeather2":[29500,500],"rpgKnifeSlice1":[30100,599.546485260771],"rpgKnifeSlice2":[30800,568.798185941043],"rpgMetalClick":[31470,500],"rpgMetalLatch":[32070,500],"rpgMetalPot1":[32670,1460.4761904761906],"rpgMetalPot2":[34233.333333333336,937.7777777777778],"rpgMetalPot3":[35273.333333333336,907.0068027210884]}}'),
-      sz = JSON.parse('{"src":["/sounds/generatedSprites/ambient.3b059790c7.ogg","/sounds/generatedSprites/ambient.6309e24e3b.m4a","/sounds/generatedSprites/ambient.9483cf5093.mp3","/sounds/generatedSprites/ambient.c053085ec4.ac3"],"sprite":{"lavaFlow":[0,34000]}}'),
-      rz = JSON.parse('{"src":["/sounds/generatedSprites/police.d9c6fc70bc.ogg","/sounds/generatedSprites/police.4fb44943a7.m4a","/sounds/generatedSprites/police.2a300c9c5e.mp3","/sounds/generatedSprites/police.4140927019.ac3"],"sprite":{"handcuffsLock":[0,626.9387755102041],"radioBeep":[730,650],"radioChatter":[1480,3372.9931972789113],"runningSteps":[4953.333333333333,3305.555555555555],"sirenChirp":[8360,924.1723356009071],"sirenWail":[9386.666666666666,5195.056689342404],"sirenYelp":[14683.333333333334,5239.3650793650795],"stunZap":[20023.333333333332,750],"whistle":[20873.333333333336,535.9183673469388]}}'),
-      oz = JSON.parse('{"src":["/sounds/generatedSprites/cars.0704d524d1.ogg","/sounds/generatedSprites/cars.ff965de8bb.m4a","/sounds/generatedSprites/cars.ce24c14295.mp3","/sounds/generatedSprites/cars.844fc9209b.ac3"],"sprite":{"carCrash":[0,539.7732426303855],"carDoorClose":[640,570.7029478458049],"carDoorOpen":[1313.3333333333333,720.5895691609977],"carDriveLoop":[2136.6666666666665,29642.721088435374],"carEngineStart":[31880,2800],"carHorn":[34780,500],"carIdleLoop":[35380,27663.94557823129],"carLockChirp":[63146.66666666667,600],"indicatorTick":[63846.666666666664,5266.303854875283],"reverseBeep":[69213.33333333334,5254.512471655329],"seatbeltClick":[74570,500],"tyreScreech":[75170,2000],"vanIdleLoop":[77270,17625.011337868484]}}'),
-      Nz = JSON.parse('{"src":["/sounds/generatedSprites/fire.e86d968fb5.ogg","/sounds/generatedSprites/fire.79adfd2c5a.m4a","/sounds/generatedSprites/fire.c1e463a3cd.mp3","/sounds/generatedSprites/fire.6d0bbbc2ca.ac3"],"sprite":{"extinguisherSpray":[0,2598.7301587301586],"fireAlarmBell":[2700,7848.730158730158],"fireCrackle":[10650,17343.94557823129],"fireTruckHorn":[28096.666666666668,3546.485260770975]}}'),
-      vz = JSON.parse('{"src":["/sounds/generatedSprites/phoneAndMoney.4739a7944b.ogg","/sounds/generatedSprites/phoneAndMoney.73a9e2118e.m4a","/sounds/generatedSprites/phoneAndMoney.a2500ea194.mp3","/sounds/generatedSprites/phoneAndMoney.841f719ee3.ac3"],"sprite":{"cameraShutter":[0,553.764172335601],"coinsDrop":[656.6666666666666,2106.190476190476],"jobComplete":[2863.3333333333335,2330.090702947846],"messageReceive":[5296.666666666667,600.204081632653],"phoneNotify":[6000,500],"phoneTap":[6600,500],"phoneVibrate":[7200,1062.7437641723357],"tillPurchase":[8363.333333333334,2754.4897959183672]}}'),
-      xz = JSON.parse('{"src":["/sounds/generatedSprites/town.422dd11fe2.ogg","/sounds/generatedSprites/town.7ae83b6b59.m4a","/sounds/generatedSprites/town.b6767431c7.mp3","/sounds/generatedSprites/town.a55c8585bb.ac3"],"sprite":{"crowdMurmur":[0,15708.140589569162],"doorbell":[15810,3017.4603174603176],"gateCreak":[18930,3720.9977324263036],"keysJingle":[22753.333333333332,2400],"kidsPlaying":[25253.333333333332,16534.67120181406],"parkBirds":[41890,13663.106575963719],"shopDoorbell":[55653.333333333336,925.0566893424036]}}');
-    var Jz = bz(1195);
-    const Az = {
-        gunSemiAutomatic: Ez,
-        gunSubmachineGun: nz,
-        gunShotgun: tz,
-        gunRifle: lz,
-        gunPistol: iz,
-        gunMisc: Mz,
-        dig: Hz,
-        step: Oz,
-        random: pz,
-        mob: dz,
-        note: Fz,
-        fishing: Zz,
-        gameStart: Rz,
-        customGame_horror: Kz,
-        crowd: wz,
-        survivalFactory: Xz,
-        rpg: fz,
-        ambient: sz,
-        police: rz,
-        cars: oz,
-        fire: Nz,
-        phoneAndMoney: vz,
-        town: xz
-      },
-      Tz = {};
-    for (const qz in Az) {
-      const zz = Az[qz];
-      for (const uz in zz.sprite) {
-        if (Tz[uz]) throw new Error(`duplicate sound name ${uz} in ${Tz[uz]} and ${qz}`);
-        Tz[uz] = qz
+    var Yq = gq(57),
+      lq = gq(1448),
+      Oq = gq(2383),
+      mq = gq(2402),
+      xq = gq(2411),
+      Aq = gq(36612);
+
+    function cq() {
+      const [qq, Eq] = (0, Yq.useState)(new Map);
+      return {
+        get: Eq => qq.get(Eq),
+        hold: (0, Yq.useCallback)(((qq, gq, Yq) => {
+          Eq((Eq => new Map(Eq).set(qq, gq))), Yq.then((() => {
+            Eq((Eq => {
+              const gq = new Map(Eq);
+              return gq.delete(qq), gq
+            }))
+          }))
+        }), [])
       }
     }
-    for (const qz in Az) {
-      const zz = Az[qz];
-      for (let uz = 0; uz < zz.src.length; uz++) zz.src[uz] = Jz.clientSideServerUrls.staticUrl + zz.src[uz]
-    }
-    const Lz = {};
+    var uq = gq(1018),
+      Bq = gq.n(uq),
+      Wq = gq(1183),
+      Nq = gq(1025),
+      aq = gq(1326),
+      Vq = gq(2569),
+      dq = gq(4858),
+      jq = gq(3455);
+    var Hq = gq(1942),
+      oq = gq(1422);
 
-    function Pz(zz) {
-      if (Lz[zz]) return mz(Lz[zz]);
-      {
-        const uz = [];
-        let bz = null;
-        for (const Ez in Az) {
-          const nz = Az[Ez];
-          for (const iz in nz.sprite)
-            if (iz.startsWith(zz)) {
-              if (uz.push(iz), bz && bz !== Ez) throw new Error(`Sound prefix ${zz} is in multiple sprite sheets: ${bz} and ${Ez}`);
-              bz = Ez
+    function Pq(qq, Eq, gq) {
+      const Yq = qq.filter((qq => qq.name !== Eq)),
+        lq = Yq.filter((qq => "none" === qq.role)).sort(((qq, Eq) => Eq.at - qq.at)),
+        Oq = Yq.filter((qq => "none" !== qq.role)).sort(((qq, Eq) => gq.indexOf(qq.role) - gq.indexOf(Eq.role) || Eq.at - qq.at));
+      return [...qq.some((qq => qq.name === Eq)) && null !== Eq ? [Eq] : [], ...[...lq, ...Oq].map((qq => qq.name))]
+    }
+
+    function Qq(qq, Eq) {
+      const gq = qq.banned.map((qq => qq.name)),
+        Yq = new Set(gq);
+      return {
+        here: Pq(qq.here, Eq, qq.roles.map((qq => qq.role))),
+        away: qq.away.filter((qq => !Yq.has(qq.name))).map((qq => qq.name)),
+        banned: gq
+      }
+    }
+
+    function yq(qq, Eq) {
+      const gq = qq.here.find((qq => qq.name === Eq));
+      if (gq) return {
+        section: "here",
+        player: gq
+      };
+      const Yq = qq.banned.find((qq => qq.name === Eq));
+      if (Yq) return {
+        section: "banned",
+        bannedAt: Yq.at
+      };
+      const lq = qq.away.find((qq => qq.name === Eq));
+      return lq ? {
+        section: "away",
+        player: lq
+      } : {
+        section: "gone"
+      }
+    }
+    const tq = {
+      gamemode: !1,
+      roles: [],
+      fixedRole: null,
+      kick: !1,
+      ban: !1,
+      unban: !1
+    };
+    var rq = gq(2563),
+      vq = gq(36599),
+      hq = gq(36759),
+      nq = gq(3040),
+      bq = gq(307);
+
+    function iq(qq, Eq, gq) {
+      return Eq.map((Eq => {
+        if ("string" === typeof Eq) return Eq;
+        const Yq = "str" in Eq ? Eq.str : Eq;
+        return "string" === typeof Yq ? Yq : "entityName" in Yq ? Yq.entityName : "translationKey" in Yq ? qq(Yq.translationKey, (0, Wq.j)(Yq.params, gq)) : ""
+      })).join("")
+    }
+
+    function Zq(qq, Eq, gq, Yq, lq) {
+      return lq - Yq < 6e4 ? qq(`${gq}JustNow`) : qq(gq, {
+        time: (0, bq.lb)((0, Wq.h)(Eq, gq), Yq, lq)
+      })
+    }
+    var fq = gq(1876),
+      Mq = gq(1659),
+      Tq = gq(1070);
+
+    function zq(qq) {
+      let {
+        status: Eq
+      } = qq;
+      return (0, Tq.jsx)("span", {
+        className: Bq()("LobbyManageStatus", {
+          LobbyManageStatusRefused: !Eq.ok
+        }),
+        children: (0, Tq.jsx)(fq.c, {
+          text: Eq.text
+        })
+      })
+    }
+
+    function Sq(qq) {
+      let {
+        names: Eq,
+        cap: gq,
+        filterFrom: lq,
+        moreLabel: Oq,
+        reveal: mq = null,
+        renderRow: xq
+      } = qq;
+      const {
+        t: Aq
+      } = (0, Wq.v)(), [cq, uq] = (0, Yq.useState)(!1), [Bq, aq] = (0, Yq.useState)(""), dq = cq || null !== mq && Eq.indexOf(mq) >= gq, jq = (dq || Eq.length <= gq) && null !== lq && Eq.length > lq, Hq = Bq.trim().toLowerCase();
+      let oq = dq ? Eq : Eq.slice(0, gq);
+      return jq && "" !== Hq && (oq = oq.filter((qq => qq.toLowerCase().includes(Hq)))), (0, Tq.jsxs)(Tq.Fragment, {
+        children: [jq && (0, Tq.jsx)(Mq.b, {
+          className: "LobbyManageFilter",
+          placeholderText: Aq("lobbyManage:findName"),
+          ariaLabel: Aq("lobbyManage:findName"),
+          onValueChange: qq => {
+            aq(qq)
+          }
+        }), oq.length > 0 && (0, Tq.jsx)("div", {
+          className: "PlayerRows",
+          children: oq.map(((qq, Eq) => xq(qq, oq.length - Eq)))
+        }), !dq && Eq.length > gq && (0, Tq.jsx)("div", {
+          className: "LobbyManageMore",
+          children: (0, Tq.jsx)(Vq.c, {
+            label: (0, Tq.jsxs)(Tq.Fragment, {
+              children: [Oq, " ", (0, Tq.jsx)(Nq.d, {
+                name: "angle-down"
+              })]
+            }),
+            onClick: () => {
+              uq(!0)
             }
+          })
+        })]
+      })
+    }
+
+    function pq(qq) {
+      let {
+        value: Eq,
+        placeholder: gq,
+        ariaLabel: lq,
+        maxLength: Oq,
+        wide: mq = !1,
+        onSave: xq
+      } = qq;
+      const Aq = (0, Yq.useRef)(null),
+        [cq, uq] = (0, Yq.useState)(0),
+        Wq = (0, Yq.useRef)(!0),
+        Nq = (0, Yq.useRef)(null),
+        aq = (0, Yq.useRef)({
+          value: Eq,
+          onSave: xq
+        });
+      aq.current = {
+        value: Eq,
+        onSave: xq
+      };
+      const Vq = () => {
+        const qq = Nq.current;
+        Nq.current = null, null !== qq && qq !== aq.current.value && aq.current.onSave(qq).then((() => {
+          Wq.current && uq((qq => qq + 1))
+        }))
+      };
+      return (0, Yq.useEffect)((() => {
+        null === Nq.current && Aq.current && (Aq.current.value = Eq)
+      }), [Eq, cq]), (0, Yq.useEffect)((() => () => {
+        Wq.current = !1, Vq()
+      }), []), (0, Tq.jsx)("div", {
+        className: Bq()("LobbyManageRuleInput", {
+          LobbyManageRuleInputWide: mq
+        }),
+        onBlur: Vq,
+        children: (0, Tq.jsx)(Mq.b, {
+          domRef: Aq,
+          defaultValue: Eq,
+          placeholderText: gq,
+          ariaLabel: lq,
+          maxLength: Oq,
+          onValueChange: qq => {
+            Nq.current = qq
+          },
+          onEnter: Vq
+        })
+      })
+    }
+    const Gq = ["mod", "coOwner"],
+      Lq = {
+        coOwner: "lobbyManage:roleCanCoOwner",
+        mod: "lobbyManage:roleCanMod",
+        coder: "lobbyManage:roleCanCoder",
+        builder: "lobbyManage:roleCanBuilder"
+      };
+
+    function Jq(qq) {
+      var Eq, gq, Oq;
+      let {
+        name: mq,
+        place: xq,
+        openedIn: Aq,
+        isYou: uq,
+        manage: Bq,
+        hiddenNames: aq,
+        zIndex: Vq
+      } = qq;
+      const {
+        t: dq,
+        selectedLanguage: jq
+      } = (0, Wq.v)(), [Hq, Pq] = (0, Yq.useState)(null), {
+        state: Qq
+      } = Bq, yq = `player:${mq}`, bq = function(qq, Eq) {
+        if ("banned" === qq.section) return {
+          ...tq,
+          unban: !0
+        };
+        if ("gone" === qq.section) return tq;
+        const {
+          player: gq
+        } = qq, Yq = "here" === qq.section, lq = Yq || "none" !== gq.role ? gq.can.roles : [];
+        return {
+          gamemode: Yq && Eq && null !== gq.gamemode && gq.can.gamemode,
+          roles: lq,
+          fixedRole: 0 === lq.length && "none" !== gq.role ? gq.role : null,
+          kick: Yq && gq.can.kick,
+          ban: gq.can.ban,
+          unban: !1
         }
-        return Lz[zz] = uz, mz(uz)
+      }(xq, null !== Qq.gamemodes), fq = Bq.statusOf(yq), Mq = Bq.isPending(yq), Sq = cq(), pq = Date.now(), Jq = qq => {
+        var Eq, gq;
+        return null !== (Eq = null === (gq = (qq => Qq.roles.find((Eq => Eq.role === qq)))(qq)) || void 0 === gq ? void 0 : gq.label) && void 0 !== Eq ? Eq : qq
+      }, kq = qq => {
+        const Eq = Lq[qq];
+        return void 0 === Eq ? void 0 : dq(Eq)
+      }, Rq = "here" === xq.section || "away" === xq.section ? xq.player : null, Uq = "here" === xq.section ? xq.player.id : null, {
+        playerSocialPreview: Fq,
+        isFriend: sq
+      } = null === Uq ? {
+        playerSocialPreview: (0, hq.l)(mq, null),
+        isFriend: !1
+      } : (0, vq.d)(Uq, mq), Xq = function() {
+        Bq.send(...arguments)
+      }, wq = (qq, Eq) => {
+        Sq.hold("role", qq, Bq.send({
+          type: "setRole",
+          name: mq,
+          role: qq
+        }, yq, Eq))
+      };
+      let Kq = null;
+      if ("ban" === (null === Hq || void 0 === Hq ? void 0 : Hq.kind)) Kq = dq("lobbyManageEntry:banConfirm", {
+        playerName: mq
+      });
+      else if ("role" === (null === Hq || void 0 === Hq ? void 0 : Hq.kind)) {
+        var Cq;
+        Kq = `${dq("lobbyManage:roleConfirm",{playerName:mq,role:Jq(Hq.role)})} ${null!==(Cq=kq(Hq.role))&&void 0!==Cq?Cq:""}`
+      } else if (fq) Kq = (0, Tq.jsx)(zq, {
+        status: fq
+      });
+      else if (uq) Kq = dq("lobbyManage:you");
+      else if ("here" === xq.section) "none" === xq.player.role && pq - xq.player.at < 6e5 && (Kq = Zq(dq, jq.code, "lobbyManage:joinedAgo", xq.player.at, pq));
+      else if ("away" === xq.section) {
+        if (xq.player.at > 0) {
+          const qq = "kicked" === xq.player.why ? "lobbyManage:kickedAgo" : "lobbyManage:leftAgo";
+          Kq = Zq(dq, jq.code, qq, xq.player.at, pq)
+        }
+      } else "banned" === xq.section ? null !== xq.bannedAt && (Kq = Zq(dq, jq.code, "lobbyManage:bannedAgo", xq.bannedAt, pq)) : "banned" === Aq && (Kq = dq("lobbyManageEntry:unbanned"));
+      return (0, Tq.jsx)("div", {
+        className: "LobbyManagePlayerRow",
+        "data-lobby-manage-row": mq,
+        children: (0, Tq.jsxs)(rq.i, {
+          playerSocialPreview: Fq,
+          isFriend: sq,
+          status: Kq,
+          opensProfileCard: !uq && (0, vq.f)(!0, mq, aq),
+          zIndex: Vq,
+          children: [null !== Hq && (0, Tq.jsxs)("div", {
+            className: "LobbyManageButtons",
+            children: ["ban" === Hq.kind && (0, Tq.jsxs)(oq.K, {
+              className: "LobbyManageIconButton SmallTextLight",
+              analyticsClick: {
+                id: "lobby_manage.ban",
+                value: "row"
+              },
+              onClick: () => {
+                Pq(null), Xq({
+                  type: "ban",
+                  name: mq
+                }, yq)
+              },
+              children: [(0, Tq.jsx)(Nq.d, {
+                name: "gavel"
+              }), (0, Tq.jsx)("span", {
+                className: "LobbyManageButtonLabel",
+                children: dq("lobbyManageEntry:ban")
+              })]
+            }), "role" === Hq.kind && (0, Tq.jsx)(oq.g, {
+              className: "LobbyManageIconButton SmallTextLight",
+              analyticsClick: {
+                id: "lobby_manage.set_role",
+                value: Hq.role
+              },
+              onClick: () => {
+                Pq(null), wq(Hq.role)
+              },
+              children: dq("lobbyManage:makeRole", {
+                role: Jq(Hq.role)
+              })
+            }), (0, Tq.jsx)(oq.i, {
+              className: "LobbyManageIconButton SmallTextLight",
+              onClick: () => {
+                Pq(null)
+              },
+              children: dq("general:cancel")
+            })]
+          }), null === Hq && (0, Tq.jsxs)(Tq.Fragment, {
+            children: [(0, Tq.jsxs)("div", {
+              className: "LobbyManageChoices",
+              children: [bq.gamemode && null !== Rq && (0, Tq.jsx)(nq.d, {
+                options: (null !== (Eq = Qq.gamemodes) && void 0 !== Eq ? Eq : []).map((qq => ({
+                  value: qq.value,
+                  label: iq(dq, qq.label, aq)
+                }))),
+                value: null !== (gq = Sq.get("gamemode")) && void 0 !== gq ? gq : Rq.gamemode,
+                disabled: Mq,
+                onChange: qq => {
+                  (0, lq.reportAnalyticsClick)({
+                    id: "lobby_manage.set_gamemode",
+                    value: qq.value
+                  }), Sq.hold("gamemode", qq.value, Bq.send({
+                    type: "setGamemode",
+                    name: mq,
+                    gamemode: qq.value
+                  }, yq))
+                }
+              }), bq.roles.length > 0 && null !== Rq && (0, Tq.jsx)(nq.d, {
+                options: [...Qq.roles].reverse().filter((qq => bq.roles.includes(qq.role))).map((qq => ({
+                  value: qq.role,
+                  label: qq.label
+                }))),
+                value: null !== (Oq = Sq.get("role")) && void 0 !== Oq ? Oq : Rq.role,
+                disabled: Mq,
+                onChange: qq => {
+                  var Eq;
+                  (Eq = qq.value) !== (null === Rq || void 0 === Rq ? void 0 : Rq.role) && (Gq.includes(Eq) ? Pq({
+                    kind: "role",
+                    role: Eq
+                  }) : ((0, lq.reportAnalyticsClick)({
+                    id: "lobby_manage.set_role",
+                    value: Eq
+                  }), wq(Eq, kq(Eq))))
+                }
+              }), null !== bq.fixedRole && (0, Tq.jsx)("div", {
+                className: "LobbyManageChoiceFixed",
+                children: Jq(bq.fixedRole)
+              })]
+            }), (0, Tq.jsxs)("div", {
+              className: "LobbyManageButtons",
+              children: [bq.kick && (0, Tq.jsxs)(oq.i, {
+                className: "LobbyManageIconButton SmallTextLight",
+                ariaLabel: `${dq("lobbyManageEntry:kick")} ${mq}`,
+                disabled: Mq,
+                analyticsClick: {
+                  id: "lobby_manage.kick",
+                  value: "row"
+                },
+                onClick: () => {
+                  Xq({
+                    type: "kick",
+                    name: mq
+                  }, yq)
+                },
+                children: [(0, Tq.jsx)(Nq.d, {
+                  name: "person-falling-burst"
+                }), (0, Tq.jsx)("span", {
+                  className: "LobbyManageButtonLabel",
+                  children: dq("lobbyManageEntry:kick")
+                })]
+              }), bq.ban && (0, Tq.jsxs)(oq.L, {
+                className: "LobbyManageOutlineButton SmallTextLight",
+                ariaLabel: `${dq("lobbyManageEntry:ban")} ${mq}`,
+                disabled: Mq,
+                padDestructive: !0,
+                onClick: () => {
+                  Pq({
+                    kind: "ban"
+                  })
+                },
+                children: [(0, Tq.jsx)(Nq.d, {
+                  name: "gavel"
+                }), (0, Tq.jsx)("span", {
+                  className: "LobbyManageButtonLabel",
+                  children: dq("lobbyManageEntry:ban")
+                })]
+              }), bq.unban && (0, Tq.jsxs)(oq.i, {
+                className: "LobbyManageIconButton SmallTextLight",
+                ariaLabel: `${dq("lobbyManageEntry:unban")} ${mq}`,
+                disabled: Mq,
+                analyticsClick: {
+                  id: "lobby_manage.unban"
+                },
+                onClick: () => {
+                  Xq({
+                    type: "unban",
+                    name: mq
+                  }, yq)
+                },
+                children: [(0, Tq.jsx)(Nq.d, {
+                  name: "user-unlock"
+                }), (0, Tq.jsx)("span", {
+                  className: "LobbyManageButtonLabel",
+                  children: dq("lobbyManageEntry:unban")
+                })]
+              })]
+            })]
+          })]
+        })
+      })
+    }
+
+    function kq(qq) {
+      var Eq, gq, lq, Oq;
+      let {
+        manage: mq,
+        focusRequest: xq,
+        onFocused: Aq
+      } = qq;
+      const {
+        t: cq
+      } = (0, Wq.v)(), uq = (0, Hq.g)("players"), Bq = (0, Hq.g)("hiddenPlayerNames"), aq = (0, Yq.useRef)(null), {
+        state: dq
+      } = mq, jq = null === uq.localId ? null : null !== (Eq = null === (gq = uq.byId[uq.localId]) || void 0 === gq ? void 0 : gq.name) && void 0 !== Eq ? Eq : null, [Pq] = (0, Yq.useState)((() => Qq(dq, jq))), tq = function(qq, Eq, gq) {
+        const Yq = new Set([...qq.here, ...qq.away, ...qq.banned]),
+          lq = Qq(Eq, gq),
+          Oq = Eq => {
+            const gq = lq[Eq].filter((qq => !Yq.has(qq)));
+            for (const qq of gq) Yq.add(qq);
+            return [...qq[Eq], ...gq]
+          };
+        return {
+          here: Oq("here"),
+          away: Oq("away"),
+          banned: Oq("banned")
+        }
+      }(Pq, dq, jq), [rq, vq] = (0, Yq.useState)(!1), hq = function(qq, Eq) {
+        return qq.here.filter((qq => qq.name !== Eq && "none" === qq.role && qq.can.kick)).length
+      }(dq, jq), nq = mq.statusOf("kickAll");
+      (0, Yq.useEffect)((() => {
+        var qq, Eq;
+        if (null === xq) return;
+        const gq = null === (qq = aq.current) || void 0 === qq ? void 0 : qq.querySelector(`[data-lobby-manage-row="${CSS.escape(xq.name)}"]`);
+        null === gq || void 0 === gq || gq.scrollIntoView({
+          block: "center"
+        }), null === gq || void 0 === gq || null === (Eq = gq.querySelector(".ProfilePreview")) || void 0 === Eq || Eq.focus({
+          preventScroll: !0
+        }), Aq(xq.seq)
+      }), [null === xq || void 0 === xq ? void 0 : xq.seq]);
+      const bq = qq => (Eq, gq) => (0, Tq.jsx)(Jq, {
+        name: Eq,
+        place: yq(dq, Eq),
+        openedIn: qq,
+        isYou: Eq === jq,
+        manage: mq,
+        hiddenNames: Bq,
+        zIndex: gq
+      }, Eq);
+      return (0, Tq.jsxs)("div", {
+        ref: aq,
+        className: "LobbyManagePage",
+        children: [tq.here.length > 0 && (0, Tq.jsxs)("div", {
+          className: "LobbyManageBox",
+          children: [(0, Tq.jsxs)("div", {
+            className: "LobbyManageBoxHeading",
+            children: [(0, Tq.jsx)(Vq.c, {
+              label: cq("lobbyManage:here"),
+              meta: dq.here.length
+            }), hq >= 2 && !rq && (0, Tq.jsxs)(oq.L, {
+              className: "LobbyManageTitleAction SmallTextLight",
+              padDestructive: !0,
+              disabled: mq.isPending("kickAll"),
+              onClick: () => {
+                vq(!0)
+              },
+              children: [(0, Tq.jsx)(Nq.d, {
+                name: "person-falling-burst"
+              }), " ", cq("lobbyManage:kickAll")]
+            })]
+          }), rq && hq >= 2 && (0, Tq.jsxs)("div", {
+            className: "LobbyManageConfirm",
+            children: [(0, Tq.jsx)("span", {
+              className: "LobbyManageConfirmText",
+              children: cq("lobbyManage:kickAllConfirm", {
+                count: hq
+              })
+            }), (0, Tq.jsxs)("div", {
+              className: "LobbyManageButtons",
+              children: [(0, Tq.jsx)(oq.K, {
+                className: "LobbyManageIconButton SmallTextLight",
+                analyticsClick: {
+                  id: "lobby_manage.kick_all"
+                },
+                onClick: () => {
+                  vq(!1), mq.send({
+                    type: "kickAll"
+                  }, "kickAll")
+                },
+                children: cq("lobbyManage:kickAll")
+              }), (0, Tq.jsx)(oq.i, {
+                className: "LobbyManageIconButton SmallTextLight",
+                onClick: () => {
+                  vq(!1)
+                },
+                children: cq("general:cancel")
+              })]
+            })]
+          }), nq && (0, Tq.jsx)("div", {
+            className: "LobbyManageBoxStatus",
+            children: (0, Tq.jsx)(zq, {
+              status: nq
+            })
+          }), (0, Tq.jsx)(Sq, {
+            names: tq.here,
+            cap: tq.here.length,
+            filterFrom: 20,
+            moreLabel: "",
+            renderRow: bq("here")
+          })]
+        }), tq.away.length > 0 && (0, Tq.jsxs)("div", {
+          className: "LobbyManageBox",
+          children: [(0, Tq.jsx)(Vq.c, {
+            label: cq("lobbyManage:notHere"),
+            meta: tq.away.length
+          }), (0, Tq.jsx)(Sq, {
+            names: tq.away,
+            cap: 5,
+            filterFrom: null,
+            moreLabel: cq("lobbyManage:allCount", {
+              count: tq.away.length
+            }),
+            reveal: null !== (lq = null === xq || void 0 === xq ? void 0 : xq.name) && void 0 !== lq ? lq : null,
+            renderRow: bq("away")
+          })]
+        }), tq.banned.length > 0 && (0, Tq.jsxs)("div", {
+          className: "LobbyManageBox",
+          children: [(0, Tq.jsx)(Vq.c, {
+            label: cq("lobbyManage:banned"),
+            meta: tq.banned.length
+          }), (0, Tq.jsx)(Sq, {
+            names: tq.banned,
+            cap: 5,
+            filterFrom: 20,
+            moreLabel: cq("lobbyManage:allCount", {
+              count: tq.banned.length
+            }),
+            reveal: null !== (Oq = null === xq || void 0 === xq ? void 0 : xq.name) && void 0 !== Oq ? Oq : null,
+            renderRow: bq("banned")
+          })]
+        })]
+      })
+    }
+    var Rq = gq(4456),
+      Uq = gq(1628),
+      Fq = gq(36748),
+      sq = gq(36757),
+      Xq = gq(36755),
+      wq = gq(36753),
+      Kq = gq(36775),
+      Cq = gq(36764),
+      Iq = gq(36768);
+
+    function eq(qq) {
+      const Eq = new Set;
+      for (const gq of qq) Eq.add(gq.toLowerCase());
+      return Eq
+    }
+
+    function Dq(qq) {
+      var Eq, gq;
+      let {
+        state: lq,
+        lobbyName: Oq,
+        listed: mq,
+        isListed: xq,
+        Wy: Aq,
+        Fy: cq,
+        statusOf: uq
+      } = qq;
+      const {
+        t: Bq,
+        selectedLanguage: Nq
+      } = (0, Wq.v)(), aq = (0, Uq.g)(), dq = (0, Hq.g)("players"), jq = null === dq.localId ? null : null !== (Eq = null === (gq = dq.byId[dq.localId]) || void 0 === gq ? void 0 : gq.name) && void 0 !== Eq ? Eq : null, oq = (0, Yq.useMemo)((() => (0, wq.h)(aq.friends, Oq, lq.here.map((qq => qq.name)))), [aq.friends, Oq, lq.here]), Pq = new Map(oq.map((qq => [qq.friend.name.toLowerCase(), qq]))), Qq = function(qq) {
+        let {
+          refused: Eq,
+          listed: gq,
+          here: Yq,
+          friends: lq,
+          excluded: Oq
+        } = qq;
+        const mq = eq(Oq),
+          xq = qq => qq.filter((qq => {
+            const Eq = qq.toLowerCase();
+            return !mq.has(Eq) && (mq.add(Eq), !0)
+          }));
+        return {
+          added: [],
+          refused: xq(Eq),
+          listed: xq(gq),
+          suggested: xq([...Yq, ...lq])
+        }
+      }({
+        refused: lq.refused.map((qq => qq.name)),
+        listed: mq,
+        here: lq.here.map((qq => qq.name)),
+        friends: oq.flatMap((qq => "here" === qq.place ? [] : [qq.friend.name])),
+        excluded: [...null === jq ? [] : [jq], ...[...lq.here, ...lq.away].flatMap((qq => "none" === qq.role || (0, wq.k)(mq, qq.name) ? [] : [qq.name]))]
+      }), [yq] = (0, Yq.useState)(Qq), [tq, rq] = (0, Yq.useState)([]), nq = function(qq, Eq, gq) {
+        const Yq = eq(gq),
+          lq = eq([...gq, ...qq.refused, ...qq.listed, ...qq.suggested]),
+          Oq = gq => [...qq[gq].filter((qq => !Yq.has(qq.toLowerCase()))), ...Eq[gq].filter((qq => {
+            const Eq = qq.toLowerCase();
+            return !lq.has(Eq) && (lq.add(Eq), !0)
+          }))];
+        return {
+          added: [...gq],
+          refused: Oq("refused"),
+          listed: Oq("listed"),
+          suggested: Oq("suggested")
+        }
+      }(yq, Qq, tq), bq = (qq, Eq) => {
+        var gq, Yq;
+        const Oq = qq.toLowerCase(),
+          mq = Pq.get(Oq),
+          cq = lq.here.find((qq => qq.name.toLowerCase() === Oq)),
+          Wq = lq.refused.find((qq => qq.name.toLowerCase() === Oq)),
+          aq = null !== (gq = null === uq || void 0 === uq ? void 0 : uq(qq)) && void 0 !== gq ? gq : null;
+        let Vq = null;
+        aq ? Vq = (0, Tq.jsx)(zq, {
+          status: aq
+        }) : Wq ? Vq = Zq(Bq, Nq.code, "lobbyManage:triedToJoinAgo", Wq.at, Date.now()) : mq && cq ? Vq = Bq("lobbyManage:friendHere") : mq ? Vq = "online" === mq.place ? Bq("lobbyManage:friendOnline") : Bq("lobbyManage:friend") : cq && (Vq = Bq("lobbyManage:hereStatus"));
+        let dq = null !== (Yq = null === mq || void 0 === mq ? void 0 : mq.friend) && void 0 !== Yq ? Yq : (0, hq.l)(qq, null);
+        return !mq && null !== cq && void 0 !== cq && cq.id && (dq = (0, vq.d)(cq.id, cq.name).playerSocialPreview), (0, Tq.jsx)(Cq.d, {
+          playerSocialPreview: dq,
+          isFriend: void 0 !== mq,
+          hideFriendBadge: !0,
+          status: Vq,
+          zIndex: Eq,
+          SB: {
+            on: xq(qq),
+            onChange: Eq => {
+              Aq(qq, Eq)
+            }
+          }
+        }, Oq)
+      }, iq = [...nq.added, ...nq.refused];
+      return (0, Tq.jsxs)("div", {
+        className: "LobbyManageBox",
+        children: [(0, Tq.jsx)(Vq.c, {
+          label: Bq("worldSocial:whitelist"),
+          meta: mq.length
+        }), (0, Tq.jsx)(Iq.c, {
+          label: Bq("lobbyManage:add"),
+          icon: "user-check",
+          placeholder: Bq("socialBar:enterPlayerName"),
+          onSubmit: async qq => {
+            const Eq = await cq(qq);
+            return Eq.ok && rq((Eq => [qq, ...Eq])), Eq
+          }
+        }), iq.length > 0 && (0, Tq.jsx)("div", {
+          className: "PlayerRows",
+          children: iq.map(((qq, Eq) => bq(qq, iq.length - Eq)))
+        }), (0, Tq.jsx)(Sq, {
+          names: nq.listed,
+          cap: 8,
+          filterFrom: 8,
+          moreLabel: Bq("lobbyManage:allOnWhitelist", {
+            count: nq.listed.length
+          }),
+          renderRow: bq
+        }), (0, Tq.jsx)(Sq, {
+          names: nq.suggested,
+          cap: 8,
+          filterFrom: null,
+          moreLabel: Bq("lobbyManage:allCount", {
+            count: nq.suggested.length
+          }),
+          renderRow: bq
+        })]
+      })
+    }
+
+    function qE(qq) {
+      let {
+        manage: Eq,
+        listing: gq
+      } = qq;
+      const {
+        t: Yq
+      } = (0, Wq.v)(), Oq = (qq, gq) => ((0, lq.reportAnalyticsClick)({
+        id: "lobby_manage.set_listing",
+        value: qq
+      }), Eq.send({
+        type: "setListing",
+        field: qq,
+        value: gq
+      }, `listing:${qq}`)), mq = qq => {
+        const gq = Eq.statusOf(`listing:${qq}`);
+        return gq && !gq.ok && (0, Tq.jsx)("div", {
+          className: "LobbyManageFieldError",
+          children: (0, Tq.jsx)(zq, {
+            status: gq
+          })
+        })
+      };
+      return (0, Tq.jsxs)("div", {
+        className: "LobbyManageBox LobbyManageListing",
+        children: [(0, Tq.jsx)(Vq.c, {
+          label: Yq("lobbyManage:inWorldsList")
+        }), (0, Tq.jsxs)("div", {
+          className: "LobbyManageRuleRow",
+          children: [(0, Tq.jsx)("div", {
+            className: "SliderText",
+            children: Yq("lobbyManage:description")
+          }), (0, Tq.jsx)(pq, {
+            value: gq.description,
+            ariaLabel: Yq("lobbyManage:description"),
+            wide: !0,
+            onSave: qq => Oq("description", qq)
+          })]
+        }), mq("description"), (0, Tq.jsxs)("div", {
+          className: "LobbyManageRuleRow",
+          children: [(0, Tq.jsx)("div", {
+            className: "SliderText",
+            children: Yq("lobbyManage:emojis")
+          }), (0, Tq.jsx)(pq, {
+            value: gq.emojis,
+            ariaLabel: Yq("lobbyManage:emojis"),
+            onSave: qq => Oq("emojis", qq)
+          })]
+        }), mq("emojis"), (0, Tq.jsxs)("div", {
+          className: "LobbyManageRuleRow",
+          children: [(0, Tq.jsx)("div", {
+            className: "SliderText",
+            children: Yq("lobbyManage:colour")
+          }), (0, Tq.jsx)(EE, {
+            value: gq.colour,
+            ariaLabel: Yq("lobbyManage:colour"),
+            onSave: qq => {
+              Oq("colour", qq)
+            }
+          })]
+        }), mq("colour")]
+      })
+    }
+
+    function EE(qq) {
+      let {
+        value: Eq,
+        ariaLabel: gq,
+        onSave: lq
+      } = qq;
+      const Oq = (0, Yq.useRef)(null),
+        mq = (0, Yq.useRef)({
+          value: Eq,
+          onSave: lq
+        });
+      mq.current = {
+        value: Eq,
+        onSave: lq
+      };
+      const xq = (0, Yq.useRef)(null),
+        Aq = (0, Yq.useRef)(!1),
+        cq = qq => {
+          Aq.current && qq.value !== mq.current.value && qq.value !== xq.current && (xq.current = qq.value, mq.current.onSave(qq.value))
+        };
+      return (0, Yq.useEffect)((() => {
+        Oq.current && document.activeElement !== Oq.current && (Oq.current.value = Eq)
+      }), [Eq]), (0, Yq.useEffect)((() => {
+        const qq = Oq.current,
+          Eq = () => {
+            cq(qq)
+          };
+        return qq.addEventListener("change", Eq), () => {
+          qq.removeEventListener("change", Eq), cq(qq)
+        }
+      }), []), (0, Tq.jsx)("input", {
+        ref: Oq,
+        type: "color",
+        className: "LobbyManageColour",
+        defaultValue: Eq,
+        "aria-label": gq,
+        onInput: () => {
+          Aq.current = !0
+        },
+        onBlur: qq => {
+          cq(qq.currentTarget)
+        }
+      })
+    }
+
+    function gE(qq) {
+      let {
+        manage: Eq
+      } = qq;
+      const {
+        lobbyName: gq,
+        shownLobbyName: Yq
+      } = (0, Hq.g)("connectedGame");
+      return Eq.state.you.canSetVisibility && null !== gq ? (0, Tq.jsx)(lE, {
+        manage: Eq,
+        lobbyName: gq,
+        worldCode: null !== Yq && void 0 !== Yq ? Yq : gq
+      }, gq) : (0, Tq.jsx)(OE, {
+        manage: Eq,
+        lobbyName: null !== gq && void 0 !== gq ? gq : ""
+      })
+    }
+
+    function YE(qq) {
+      return qq.map((qq => qq.toLowerCase())).sort().join(",")
+    }
+
+    function lE(qq) {
+      var Eq;
+      let {
+        manage: gq,
+        lobbyName: Oq,
+        worldCode: mq
+      } = qq;
+      const {
+        t: xq
+      } = (0, Wq.v)(), {
+        settings: Aq,
+        loading: cq,
+        change: uq,
+        retry: Bq,
+        refresh: Nq
+      } = (0, Fq.j)(Oq), dq = (0, Uq.g)(), {
+        state: jq
+      } = gq, Hq = (0, Yq.useRef)(Aq);
+      Hq.current = Aq;
+      const Pq = YE(null !== (Eq = jq.whitelist) && void 0 !== Eq ? Eq : []),
+        Qq = null !== jq.whitelist;
+      (0, Yq.useEffect)((() => {
+        const qq = Hq.current;
+        null !== qq && (qq.visibility !== jq.visibility || Qq && YE(qq.whitelist) !== Pq) && Nq()
+      }), [jq.visibility, Pq, Qq, Nq]);
+      const yq = async (qq, Eq) => {
+        let gq = null;
+        return await uq(qq, Eq, {
+          quiet: !0,
+          onAnswer: qq => {
+            gq = qq
+          }
+        }), gq
+      }, tq = (qq, Eq) => {
+        null !== Eq && "error" in Eq && gq.showStatus(qq, {
+          ok: !1,
+          text: [xq(Eq.error)]
+        })
+      }, rq = async qq => {
+        if (null === Aq || qq === Aq.visibility) return;
+        (0, lq.reportAnalyticsClick)({
+          id: "lobby_manage.set_mode",
+          value: qq
+        });
+        const Eq = "whitelist" === qq ? (0, wq.d)((0, wq.h)(dq.friends, Oq, jq.here.map((qq => qq.name))), (0, Kq.b)(Oq), Aq.whitelist) : [],
+          gq = await yq({
+            setVisibility: qq
+          }, (Eq => ({
+            ...Eq,
+            visibility: qq
+          })));
+        tq("mode", gq), null === gq || "error" in gq || await (async qq => {
+          for (const Eq of (0, wq.l)(qq, Rq.z))
+            if (!await uq({
+                whitelistAdd: Eq
+              }, (qq => (0, wq.s)(qq, Eq, !0)))) return !1;
+          return !0
+        })(Eq)
+      }, vq = (0, Yq.useMemo)((() => {
+        var qq;
+        if (null === Aq) return [];
+        const Eq = null !== (qq = jq.whitelist) && void 0 !== qq ? qq : [];
+        return [...Eq.filter((qq => (0, wq.k)(Aq.whitelist, qq))), ...Aq.whitelist.filter((qq => !(0, wq.k)(Eq, qq)))]
+      }), [Aq, jq.whitelist]), hq = gq.statusOf("mode");
+      return (0, Tq.jsxs)("div", {
+        className: "LobbyManagePage",
+        children: [(0, Tq.jsxs)("div", {
+          className: "LobbyManageBox",
+          children: [(0, Tq.jsx)(Vq.c, {
+            label: xq("worldSocial:whoCanJoin")
+          }), null === Aq && cq && (0, Tq.jsx)("div", {
+            className: "LobbyManageLoading",
+            children: (0, Tq.jsx)(aq.e, {})
+          }), null === Aq && !cq && (0, Tq.jsx)(oq.i, {
+            className: "SmallTextLight",
+            onClick: Bq,
+            children: xq("worldSocial:loadFailed")
+          }), null !== Aq && (0, Tq.jsx)(sq.d, {
+            visibility: Aq.visibility,
+            onPick: qq => {
+              rq(qq)
+            }
+          }), hq && (0, Tq.jsx)("div", {
+            className: "LobbyManageFieldError",
+            children: (0, Tq.jsx)(zq, {
+              status: hq
+            })
+          }), null !== Aq && "private" !== Aq.visibility && (0, Tq.jsx)(Xq.c, {
+            worldCode: mq,
+            message: null
+          })]
+        }), "whitelist" === (null === Aq || void 0 === Aq ? void 0 : Aq.visibility) && (0, Tq.jsx)(Dq, {
+          state: jq,
+          lobbyName: Oq,
+          listed: vq,
+          isListed: qq => (0, wq.k)(Aq.whitelist, qq),
+          Wy: (qq, Eq) => {
+            (0, lq.reportAnalyticsClick)(Eq ? {
+              id: "lobby_manage.whitelist_add",
+              value: "SB"
+            } : {
+              id: "lobby_manage.whitelist_remove"
+            }), yq(Eq ? {
+              whitelistAdd: [qq]
+            } : {
+              whitelistRemove: qq
+            }, (gq => (0, wq.s)(gq, [qq], Eq))).then((Eq => {
+              tq(`whitelist:${qq.toLowerCase()}`, Eq)
+            }))
+          },
+          Fy: async qq => {
+            (0, lq.reportAnalyticsClick)({
+              id: "lobby_manage.whitelist_add",
+              value: "field"
+            });
+            const Eq = await yq({
+              whitelistAdd: [qq]
+            }, (Eq => (0, wq.s)(Eq, [qq], !0)));
+            return null === Eq ? {
+              ok: !1,
+              error: xq("worldSocial:changeFailed")
+            } : "error" in Eq ? {
+              ok: !1,
+              error: xq(Eq.error)
+            } : (0, wq.k)(Eq.notFound, qq) ? {
+              ok: !1,
+              error: xq("lobbyManage:noPlayerCalled", {
+                playerName: qq
+              })
+            } : {
+              ok: !0
+            }
+          },
+          statusOf: qq => gq.statusOf(`whitelist:${qq.toLowerCase()}`)
+        }), "public" === (null === Aq || void 0 === Aq ? void 0 : Aq.visibility) && null !== jq.listing && (0, Tq.jsx)(qE, {
+          manage: gq,
+          listing: jq.listing
+        })]
+      })
+    }
+
+    function OE(qq) {
+      var Eq;
+      let {
+        manage: gq,
+        lobbyName: Yq
+      } = qq;
+      const {
+        t: Oq
+      } = (0, Wq.v)(), {
+        state: mq
+      } = gq, xq = cq(), Aq = null !== (Eq = mq.whitelist) && void 0 !== Eq ? Eq : [];
+      return (0, Tq.jsxs)("div", {
+        className: "LobbyManagePage",
+        children: [(0, Tq.jsxs)("div", {
+          className: "LobbyManageBox",
+          children: [(0, Tq.jsx)(Vq.c, {
+            label: Oq("worldSocial:whoCanJoin")
+          }), (0, Tq.jsx)("div", {
+            className: "LobbyManageModeText",
+            children: Oq(`worldSocial:${mq.visibility}`)
+          })]
+        }), "whitelist" === mq.visibility && mq.you.canEditWhitelist && (0, Tq.jsx)(Dq, {
+          state: mq,
+          lobbyName: Yq,
+          listed: Aq,
+          isListed: qq => {
+            var Eq;
+            return null !== (Eq = xq.get(qq.toLowerCase())) && void 0 !== Eq ? Eq : (0, wq.k)(Aq, qq)
+          },
+          Wy: (qq, Eq) => {
+            (0, lq.reportAnalyticsClick)(Eq ? {
+              id: "lobby_manage.whitelist_add",
+              value: "SB"
+            } : {
+              id: "lobby_manage.whitelist_remove"
+            });
+            const Yq = qq.toLowerCase();
+            xq.hold(Yq, Eq, gq.send(Eq ? {
+              type: "whitelistAdd",
+              names: [qq]
+            } : {
+              type: "whitelistRemove",
+              name: qq
+            }, `whitelist:${Yq}`))
+          },
+          Fy: async qq => {
+            (0, lq.reportAnalyticsClick)({
+              id: "lobby_manage.whitelist_add",
+              value: "field"
+            });
+            const Eq = await gq.send({
+              type: "whitelistAdd",
+              names: [qq]
+            }, "whitelist-field");
+            return Eq.ok ? {
+              ok: !0
+            } : {
+              ok: !1,
+              error: (0, Tq.jsx)(fq.c, {
+                text: Eq.message
+              })
+            }
+          },
+          statusOf: qq => gq.statusOf(`whitelist:${qq.toLowerCase()}`)
+        }), "public" === mq.visibility && null !== mq.listing && (0, Tq.jsx)(qE, {
+          manage: gq,
+          listing: mq.listing
+        })]
+      })
+    }
+    var mE = gq(4828),
+      xE = gq(1341);
+    const AE = /[\p{Script_Extensions=Han}\p{Script_Extensions=Hiragana}\p{Script_Extensions=Katakana}\p{Script_Extensions=Hangul}\u{3000}-\u{303F}\u{FF01}-\u{FF60}\u{FFE0}-\u{FFE6}]/u;
+    const cE = (0, Yq.memo)((function(qq) {
+      var Eq;
+      let {
+        rule: gq,
+        value: Yq,
+        status: lq,
+        pending: Oq,
+        hiddenNames: mq,
+        eT: xq,
+        onAction: Aq
+      } = qq;
+      const {
+        t: cq
+      } = (0, Wq.v)(), uq = qq => xq(gq, qq), Bq = (qq, Eq) => {
+        Aq(gq, qq, Eq)
+      }, Nq = iq(cq, gq.label, mq), aq = gq.info ? iq(cq, gq.info, mq) : void 0, Vq = gq.placeholder ? iq(cq, gq.placeholder, mq) : void 0, dq = (null !== (Eq = gq.options) && void 0 !== Eq ? Eq : []).map((qq => ({
+        value: qq.value,
+        label: iq(cq, qq.label, mq)
+      }))), jq = Math.max(0, ...dq.map((qq => function(qq) {
+        let Eq = 0;
+        for (const gq of qq) Eq += AE.test(gq) ? 2 : 1;
+        return Eq
+      }(qq.label)))), Hq = lq && (0, Tq.jsx)("div", {
+        className: "LobbyManageRuleStatus",
+        children: (0, Tq.jsx)(zq, {
+          status: lq
+        })
+      }), Pq = (0, Tq.jsxs)("div", {
+        className: "SliderText",
+        children: [Nq, void 0 !== aq && (0, Tq.jsx)(xE.c, {
+          className: "SettingsTextInputCircleInfo",
+          hoverInfo: aq
+        })]
+      });
+      return "toggle" === gq.kind ? (0, Tq.jsxs)(Tq.Fragment, {
+        children: [(0, Tq.jsx)(mE.d, {
+          label: Nq,
+          checked: !0 === Yq,
+          circleInfoText: aq,
+          disabled: Oq,
+          onClick: uq
+        }), Hq]
+      }) : "choice" === gq.kind && dq.length <= 3 ? (0, Tq.jsxs)(Tq.Fragment, {
+        children: [(0, Tq.jsx)(mE.f, {
+          label: Nq,
+          options: dq,
+          value: String(Yq),
+          circleInfoText: aq,
+          onChange: uq
+        }), Hq]
+      }) : (0, Tq.jsxs)("div", {
+        className: "SettingBox LobbyManageRuleRow",
+        children: [Pq, "choice" === gq.kind && (0, Tq.jsx)("span", {
+          className: "LobbyManageRuleChoice",
+          style: {
+            "--lobby-choice-chars": jq
+          },
+          children: (0, Tq.jsx)(nq.d, {
+            options: dq,
+            value: String(Yq),
+            disabled: Oq,
+            onChange: qq => {
+              uq(qq.value)
+            }
+          })
+        }), ("number" === gq.kind || "text" === gq.kind) && (0, Tq.jsx)(pq, {
+          value: null === Yq ? "" : String(Yq),
+          placeholder: Vq,
+          ariaLabel: Nq,
+          onSave: qq => {
+            const Eq = qq.trim(),
+              Yq = Number(Eq);
+            return uq("number" === gq.kind && "" !== Eq && Number.isFinite(Yq) ? Yq : Eq)
+          }
+        }), "action" === gq.kind && (0, Tq.jsxs)("div", {
+          className: "LobbyManageRuleInput",
+          children: [dq.length > 3 && (0, Tq.jsx)(nq.d, {
+            options: dq,
+            value: {
+              value: "",
+              label: null !== Vq && void 0 !== Vq ? Vq : Nq
+            },
+            disabled: Oq,
+            onChange: qq => {
+              Bq(qq.value)
+            }
+          }), dq.length > 0 && dq.length <= 3 && dq.map((qq => (0, Tq.jsx)(oq.i, {
+            className: "SmallTextLight",
+            disabled: Oq,
+            onClick: () => {
+              Bq(qq.value)
+            },
+            children: qq.label
+          }, qq.value))), 0 === dq.length && (0, Tq.jsx)(oq.i, {
+            className: "SmallTextLight",
+            disabled: Oq,
+            onClick: () => {
+              Bq()
+            },
+            children: null !== Vq && void 0 !== Vq ? Vq : Nq
+          })]
+        }), "names" === gq.kind && (0, Tq.jsx)(uE, {
+          names: Array.isArray(Yq) ? Yq : [],
+          pending: Oq,
+          onAction: Bq
+        }), Hq]
+      })
+    }));
+
+    function uE(qq) {
+      let {
+        names: Eq,
+        pending: gq,
+        onAction: lq
+      } = qq;
+      const {
+        t: Oq
+      } = (0, Wq.v)(), mq = (0, Yq.useRef)(null), [xq, Aq] = (0, Yq.useState)(""), cq = () => {
+        const qq = xq.trim();
+        "" !== qq && (lq(qq, "add"), mq.current && (mq.current.value = ""), Aq(""))
+      };
+      return (0, Tq.jsxs)("div", {
+        className: "LobbyManageNames",
+        children: [Eq.map((qq => (0, Tq.jsxs)("div", {
+          className: "LobbyManageName",
+          children: [(0, Tq.jsx)("span", {
+            className: "LobbyManageNameText",
+            children: qq
+          }), (0, Tq.jsx)(oq.i, {
+            className: "LobbyManageIconButton SmallTextLight",
+            ariaLabel: Oq("lobbyManage:removeName", {
+              name: qq
+            }),
+            disabled: gq,
+            onClick: () => {
+              lq(qq, "remove")
+            },
+            children: (0, Tq.jsx)(Nq.d, {
+              name: "xmark"
+            })
+          })]
+        }, qq))), (0, Tq.jsxs)("div", {
+          className: "LobbyManageRuleInput",
+          children: [(0, Tq.jsx)(Mq.b, {
+            domRef: mq,
+            placeholderText: Oq("lobbyManage:namePlaceholder"),
+            ariaLabel: Oq("lobbyManage:namePlaceholder"),
+            maxLength: 32,
+            onValueChange: qq => {
+              Aq(qq)
+            },
+            onEnter: cq
+          }), (0, Tq.jsx)(oq.i, {
+            className: "SmallTextLight",
+            disabled: gq || "" === xq.trim(),
+            onClick: cq,
+            children: Oq("lobbyManage:addHere")
+          })]
+        })]
+      })
+    }
+    const BE = [{
+      group: "gameplay",
+      title: "lobbyManage:gameplay"
+    }, {
+      group: "world",
+      title: "lobbyManage:world"
+    }];
+
+    function WE(qq) {
+      return BE.flatMap((Eq => {
+        let {
+          group: gq
+        } = Eq;
+        return qq.filter((qq => qq.group === gq && void 0 === qq.parent))
+      }))
+    }
+
+    function NE(qq) {
+      let {
+        manage: Eq,
+        rowsShown: gq
+      } = qq;
+      const {
+        t: Oq
+      } = (0, Wq.v)(), mq = (0, Hq.g)("hiddenPlayerNames"), {
+        rules: xq
+      } = Eq.state, Aq = cq(), uq = new Set(WE(xq).slice(0, gq)), Bq = qq => {
+        const Eq = Aq.get(qq.key);
+        return void 0 === Eq ? qq.value : Eq
+      }, {
+        hold: Nq
+      } = Aq, aq = (0, Yq.useCallback)(((qq, gq) => {
+        (0, lq.reportAnalyticsClick)({
+          id: "lobby_manage.set_rule",
+          value: qq.key
+        });
+        const Yq = Eq.send({
+          type: "setRule",
+          key: qq.key,
+          value: gq
+        }, `rule:${qq.key}`);
+        return Nq(qq.key, gq, Yq), Yq
+      }), [Eq, Nq]), dq = (0, Yq.useCallback)(((qq, gq, Yq) => {
+        (0, lq.reportAnalyticsClick)({
+          id: "lobby_manage.set_rule",
+          value: qq.key
+        }), Eq.send({
+          type: "ruleAction",
+          key: qq.key,
+          ...void 0 === gq ? {} : {
+            arg: gq
+          },
+          ...void 0 === Yq ? {} : {
+            op: Yq
+          }
+        }, `rule:${qq.key}`, void 0 === Yq ? Oq("lobbyManage:setJustNow") : void 0)
+      }), [Eq, Oq]), jq = qq => {
+        const gq = `rule:${qq.key}`;
+        return (0, Tq.jsx)(cE, {
+          rule: qq,
+          value: Bq(qq),
+          status: Eq.statusOf(gq),
+          pending: Eq.isPending(gq),
+          hiddenNames: mq,
+          eT: aq,
+          onAction: dq
+        }, qq.key)
+      };
+      return (0, Tq.jsx)("div", {
+        className: "LobbyManagePage LobbyManageRules",
+        children: BE.map((qq => {
+          let {
+            group: Eq,
+            title: gq
+          } = qq;
+          const lq = xq.filter((qq => qq.group === Eq && uq.has(qq)));
+          return 0 === lq.length ? null : (0, Tq.jsxs)(Yq.Fragment, {
+            children: [(0, Tq.jsx)(Vq.c, {
+              label: Oq(gq)
+            }), lq.map((qq => {
+              const Eq = xq.filter((Eq => Eq.parent === qq.key));
+              return 0 === Eq.length || !0 !== Bq(qq) ? jq(qq) : (0, Tq.jsxs)("div", {
+                className: "SettingBoxGroup",
+                children: [jq(qq), Eq.map(jq)]
+              }, qq.key)
+            }))]
+          }, Eq)
+        }))
+      })
+    }
+    const aE = {
+        players: {
+          icon: "user-group",
+          title: "lobbyManage:players"
+        },
+        joining: {
+          icon: "door-open",
+          title: "lobbyManage:joining"
+        },
+        rules: {
+          icon: "list",
+          title: "lobbyManage:rules"
+        },
+        leaderboard: {
+          icon: "trophy",
+          title: "lobbyManage:leaderboard"
+        }
+      },
+      VE = 5,
+      dE = (0, Yq.memo)((function(qq) {
+        let {
+          page: Eq,
+          manage: gq,
+          leaderboard: lq,
+          focusRequest: Oq,
+          onFocused: mq,
+          ruleRowsShown: xq
+        } = qq;
+        return "leaderboard" === Eq ? (0, Tq.jsx)(Yq.Suspense, {
+          fallback: (0, Tq.jsx)("div", {
+            className: "LobbyManageLoading",
+            children: (0, Tq.jsx)(aq.e, {})
+          }),
+          children: lq
+        }) : "joining" === Eq ? (0, Tq.jsx)(gE, {
+          manage: gq
+        }) : "rules" === Eq ? (0, Tq.jsx)(NE, {
+          manage: gq,
+          rowsShown: xq
+        }) : (0, Tq.jsx)(kq, {
+          manage: gq,
+          focusRequest: Oq,
+          onFocused: mq
+        })
+      }));
+
+    function jE(qq) {
+      let {
+        page: Eq
+      } = qq;
+      const {
+        t: gq
+      } = (0, Wq.v)(), Yq = aE[Eq];
+      return (0, Tq.jsxs)(Tq.Fragment, {
+        children: [(0, Tq.jsx)(Nq.d, {
+          name: Yq.icon
+        }), " ", (0, Tq.jsx)("span", {
+          className: "LobbyManagePageTitle",
+          children: gq(Yq.title)
+        })]
+      })
+    }
+
+    function HE(qq) {
+      var Eq;
+      const {
+        t: gq
+      } = (0, Wq.v)(), {
+        pages: Oq,
+        landing: mq
+      } = qq, Aq = (0, Yq.useRef)(null), cq = (0, Yq.useRef)(null), uq = (0, Yq.useRef)(null), Nq = (0, Yq.useRef)(new Map), [aq, Hq] = (0, Yq.useState)(null), oq = (0, Yq.useRef)(aq), Pq = (0, Yq.useRef)(0), [Qq, yq] = (0, Yq.useState)(Oq[0]), tq = null !== aq && void 0 !== aq ? aq : Oq.includes(Qq) ? Qq : Oq[0], [rq] = (0, Yq.useState)(null !== (Eq = null === mq || void 0 === mq ? void 0 : mq.page) && void 0 !== Eq ? Eq : null), vq = null !== rq && Oq.includes(rq) ? [rq, ...Oq.filter((qq => qq !== rq))] : Oq, hq = Math.max(1, Math.ceil(WE(qq.manage.state.rules).length / VE)), nq = vq.flatMap((qq => "rules" === qq ? Array(hq).fill(qq) : [qq])), bq = function(qq, Eq) {
+        const [gq, lq] = (0, Yq.useState)(qq), Oq = gq >= Eq;
+        return Oq && gq !== 1 / 0 && lq(1 / 0), (0, Yq.useLayoutEffect)((() => {
+          if (Oq) return;
+          let qq = !0;
+          return (0, jq.b)().then((() => {
+            qq && lq((qq => qq + 1))
+          })), () => {
+            qq = !1
+          }
+        }), [gq, Oq]), Oq ? 1 / 0 : gq
+      }(1, nq.length), iq = nq.slice(0, bq), Zq = new Set(iq), fq = bq < nq.length, Mq = fq ? iq.filter((qq => "rules" === qq)).length * VE : 1 / 0, zq = (0, Yq.useRef)(qq.focusRequest);
+      zq.current = qq.focusRequest;
+      const Sq = qq => {
+          oq.current = qq, Hq(qq)
+        },
+        pq = () => {
+          var qq, Eq;
+          Aq.current.style.scrollPaddingTop = `${null!==(qq=null===(Eq=uq.current)||void 0===Eq?void 0:Eq.offsetHeight)&&void 0!==qq?qq:0}px`
+        },
+        Gq = qq => {
+          const Eq = Aq.current,
+            gq = Nq.current.get(qq);
+          if (void 0 === gq) return;
+          const Yq = document.activeElement,
+            lq = zq.current,
+            Oq = null === lq ? null : gq.querySelector(`[data-lobby-manage-row="${CSS.escape(lq.name)}"]`);
+          pq(), Yq instanceof HTMLElement && null !== Oq && void 0 !== Oq && Oq.contains(Yq) ? Yq.scrollIntoView({
+            block: "center"
+          }) : null === gq.previousElementSibling ? Eq.scrollTop = 0 : gq.scrollIntoView({
+            block: "start"
+          }), Pq.current = Eq.scrollTop
+        },
+        Lq = qq => {
+          (0, lq.reportAnalyticsClick)({
+            id: "lobby_manage.page",
+            value: qq
+          }), Sq(qq), Gq(qq)
+        },
+        Jq = () => {
+          var qq, Eq;
+          const gq = Aq.current,
+            Yq = gq.getBoundingClientRect().top + (null !== (qq = null === (Eq = uq.current) || void 0 === Eq ? void 0 : Eq.offsetHeight) && void 0 !== qq ? qq : 0),
+            lq = Oq.map((qq => {
+              var Eq, gq;
+              return (null !== (Eq = null === (gq = Nq.current.get(qq)) || void 0 === gq ? void 0 : gq.getBoundingClientRect().top) && void 0 !== Eq ? Eq : 1 / 0) - Yq
+            })),
+            mq = !fq && gq.scrollTop + gq.clientHeight >= gq.scrollHeight - 1;
+          yq(Oq[(0, xq.g)(lq, mq)])
+        },
+        kq = () => {
+          null !== oq.current && (Sq(null), Jq())
+        };
+      (0, Yq.useLayoutEffect)((() => {
+        null !== mq && Oq.includes(mq.page) && Lq(mq.page)
+      }), [null === mq || void 0 === mq ? void 0 : mq.seq]), (0, Yq.useLayoutEffect)((() => {
+        null === oq.current || Oq.includes(oq.current) || kq()
+      }));
+      const {
+        onFocused: Rq
+      } = qq, Uq = (0, Yq.useCallback)((qq => {
+        null !== oq.current && Gq(oq.current), Rq(qq)
+      }), [Rq]);
+      (0, Yq.useLayoutEffect)((() => {
+        const qq = oq.current;
+        null !== qq && (!fq || Oq.indexOf(nq[bq - 1]) < Oq.indexOf(qq)) && Gq(qq)
+      }), [bq]), (0, Yq.useEffect)((() => {
+        const qq = new ResizeObserver((() => {
+          null !== oq.current ? Gq(oq.current) : pq()
+        }));
+        return qq.observe(Aq.current), qq.observe(cq.current), () => {
+          qq.disconnect()
+        }
+      }), []), (0, Yq.useLayoutEffect)((() => {
+        const qq = uq.current,
+          Eq = null === qq || void 0 === qq ? void 0 : qq.querySelector(".SegmentedToggleOptionSelected");
+        Eq && (qq.scrollLeft = Math.min(Eq.offsetLeft, Math.max(qq.scrollLeft, Eq.offsetLeft + Eq.offsetWidth - qq.clientWidth)))
+      }), [tq]);
+      return (0, Tq.jsxs)("div", {
+        ref: Aq,
+        className: "MenuBody LobbyManageBody",
+        onScroll: () => {
+          null === oq.current ? Jq() : Math.abs(Aq.current.scrollTop - Pq.current) > 1 && kq()
+        },
+        onClick: qq => {
+          var Eq;
+          null !== (Eq = uq.current) && void 0 !== Eq && Eq.contains(qq.target) || kq()
+        },
+        onFocus: qq => {
+          var Eq;
+          const gq = null === oq.current ? null : Nq.current.get(oq.current);
+          !gq || gq.contains(qq.target) || null !== (Eq = uq.current) && void 0 !== Eq && Eq.contains(qq.target) || kq()
+        },
+        children: [Oq.length > 1 && (0, Tq.jsx)("div", {
+          ref: uq,
+          className: "LobbyManageChips",
+          children: (0, Tq.jsx)(dq.c, {
+            options: Oq.map((qq => ({
+              value: qq,
+              label: (0, Tq.jsx)(jE, {
+                page: qq
+              }),
+              ariaLabel: gq(aE[qq].title)
+            }))),
+            value: tq,
+            padTabs: "2",
+            ariaLabel: gq("lobbyManageEntry:manageLobby"),
+            reselectable: !0,
+            onChange: Lq
+          })
+        }), (0, Tq.jsx)("div", {
+          ref: cq,
+          className: Bq()("LobbyManageInner", {
+            Staging: fq
+          }),
+          children: Oq.filter((qq => Zq.has(qq))).map((Eq => {
+            const gq = Eq === aq;
+            return (0, Tq.jsxs)("section", {
+              ref: qq => {
+                qq ? Nq.current.set(Eq, qq) : Nq.current.delete(Eq)
+              },
+              className: "LobbyManageSection",
+              "data-pad-initial-area": gq || void 0,
+              children: [Oq.length > 1 && (0, Tq.jsx)("div", {
+                className: "LobbyManageSectionHeading",
+                "data-pad-focusable": gq || void 0,
+                "data-pad-unavailable": gq || void 0,
+                children: (0, Tq.jsx)(Vq.c, {
+                  label: (0, Tq.jsx)(jE, {
+                    page: Eq
+                  })
+                })
+              }), (0, Tq.jsx)(dE, {
+                page: Eq,
+                manage: qq.manage,
+                leaderboard: qq.leaderboard,
+                focusRequest: qq.focusRequest,
+                onFocused: Uq,
+                ruleRowsShown: "rules" === Eq ? Mq : 1 / 0
+              })]
+            }, Eq)
+          }))
+        })]
+      })
+    }
+
+    function oE(qq) {
+      return void 0 === (null === qq || void 0 === qq ? void 0 : qq.page) ? null : {
+        page: qq.page,
+        seq: qq.seq
       }
     }
 
-    function Gz(zz) {
-      const uz = Tz[zz];
-      if (void 0 === uz) throw new Error(`Invalid sound name ${zz} (not in any sprite sheet)`);
-      return uz
+    function PE(qq) {
+      let {
+        leaderboard: Eq
+      } = qq;
+      const gq = function() {
+          const qq = (0, Oq.h)("lobbyManage"),
+            [Eq, gq] = (0, Yq.useReducer)((qq => qq + 1), 0),
+            [lq] = (0, Yq.useState)((() => new Aq.e(gq)));
+          return (0, Yq.useEffect)((() => {
+            const qq = lq.nextDeadline();
+            if (null === qq) return;
+            const Eq = setTimeout((() => {
+              lq.expire(Date.now()), gq()
+            }), Math.max(0, qq - Date.now()));
+            return () => {
+              clearTimeout(Eq)
+            }
+          })), (0, Yq.useMemo)((() => null === qq ? null : {
+            state: qq,
+            send: (qq, Eq, Yq) => {
+              const Oq = lq.send(qq, Eq, null !== Yq && void 0 !== Yq ? Yq : null);
+              return gq(), Oq
+            },
+            statusOf: qq => lq.statusOf(qq, Date.now()),
+            showStatus: (qq, Eq) => {
+              lq.show(qq, Eq)
+            },
+            isPending: qq => lq.isPending(qq)
+          }), [qq, Eq, lq])
+        }(),
+        cq = (0, xq.k)((0, Oq.h)("lobbyLeaderboardInfo")),
+        uq = (0, mq.i)(),
+        [Bq, Wq] = (0, Yq.useState)((() => oE(uq))),
+        [Nq, aq] = (0, Yq.useState)(null);
+      return (0, Yq.useEffect)((() => {
+        null === uq && (0, lq.reportAnalyticsClick)({
+          id: "lobby_manage.open",
+          value: "menu_tab"
+        })
+      }), []), (0, Yq.useEffect)((() => {
+        null !== uq && (Wq((qq => (null === qq || void 0 === qq ? void 0 : qq.seq) === uq.seq ? qq : oE(uq))), void 0 !== uq.focusName && "players" === uq.page ? aq({
+          name: uq.focusName,
+          seq: uq.seq
+        }) : (0, mq.g)(uq.seq))
+      }), [null === uq || void 0 === uq ? void 0 : uq.seq]), null === gq ? null : (0, Tq.jsx)("div", {
+        className: "LobbyManage Menu",
+        children: (0, Tq.jsx)(HE, {
+          pages: (0, xq.d)(gq.state, cq),
+          manage: gq,
+          leaderboard: Eq,
+          focusRequest: Nq,
+          onFocused: mq.g,
+          landing: Bq
+        })
+      })
+    }
+  },
+  36612: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => uq,
+      g: () => Aq
+    });
+    var Yq = gq(1448),
+      lq = gq(1926),
+      Oq = gq(1904);
+    const mq = 1e4;
+    let xq = 0;
+
+    function Aq(qq) {
+      const Eq = ++xq;
+      return new Promise((gq => {
+        const xq = Eq => {
+            Aq(), clearTimeout(cq), !1 === (null === Eq || void 0 === Eq ? void 0 : Eq.ok) && (0, Yq.reportAnalyticsClick)({
+              id: "lobby_manage.refused",
+              value: qq.type
+            }), gq(Eq)
+          },
+          Aq = lq.c.subscribe("lobbyManage", (qq => {
+            const gq = function(qq, Eq) {
+              var gq;
+              return null !== (gq = null === qq || void 0 === qq ? void 0 : qq.results.find((qq => qq.requestId === Eq))) && void 0 !== gq ? gq : null
+            }(qq, Eq);
+            null !== gq && xq(gq)
+          })),
+          cq = setTimeout((() => {
+            xq(null)
+          }), mq);
+        Oq.gameBridge.send("lobbyManage", {
+          ...qq,
+          requestId: Eq
+        })
+      }))
+    }
+    const cq = [{
+      translationKey: "lobbyManageEntry:noAnswer"
+    }];
+    class uq {
+      constructor(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Aq;
+        this.onChange = qq, this.sendAction = Eq, this.pending = new Map, this.statuses = new Map
+      }
+      send(qq, Eq, gq) {
+        var Yq;
+        return this.statuses.delete(Eq), this.pending.set(Eq, (null !== (Yq = this.pending.get(Eq)) && void 0 !== Yq ? Yq : 0) + 1), this.sendAction(qq).then((qq => {
+          var Yq;
+          const lq = null !== qq && void 0 !== qq ? qq : {
+              requestId: -1,
+              ok: !1,
+              message: cq
+            },
+            Oq = (null !== (Yq = this.pending.get(Eq)) && void 0 !== Yq ? Yq : 1) - 1;
+          Oq > 0 ? this.pending.set(Eq, Oq) : this.pending.delete(Eq);
+          const mq = !lq.ok || lq.message.length > 0 ? lq.message : null === gq ? null : [gq];
+          return null !== mq && this.statuses.set(Eq, {
+            ok: lq.ok,
+            text: mq,
+            until: Date.now() + 4e3
+          }), this.onChange(), lq
+        }))
+      }
+      show(qq, Eq) {
+        this.statuses.set(qq, {
+          ...Eq,
+          until: Date.now() + 4e3
+        }), this.onChange()
+      }
+      expire(qq) {
+        for (const [Eq, gq] of this.statuses) gq.until <= qq && this.statuses.delete(Eq)
+      }
+      nextDeadline() {
+        let qq = null;
+        for (const gq of this.statuses.values()) {
+          var Eq;
+          qq = Math.min(null !== (Eq = qq) && void 0 !== Eq ? Eq : 1 / 0, gq.until)
+        }
+        return qq
+      }
+      statusOf(qq, Eq) {
+        const gq = this.statuses.get(qq);
+        return !gq || gq.until <= Eq ? null : {
+          ok: gq.ok,
+          text: gq.text
+        }
+      }
+      isPending(qq) {
+        return this.pending.has(qq)
+      }
+    }
+  },
+  36599: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => cq,
+      f: () => Aq
+    });
+    var Yq = gq(576),
+      lq = gq(1904),
+      Oq = gq(1628),
+      mq = gq(96),
+      xq = gq(1252);
+
+    function Aq(qq, Eq, gq) {
+      return mq.featureFlags.useSocialFeatures && qq && null === (0, xq.d)(Eq, gq)
     }
 
-    function az(zz, uz) {
-      if (!(zz in Az)) throw new Error("Invalid spriteTrack name");
-      return uz in Az[zz].sprite
+    function cq(qq, Eq) {
+      var gq, mq;
+      const xq = Oq.c.getSocialState().friends.find((qq => qq.name.toLowerCase() === Eq.toLowerCase())),
+        Aq = lq.gameBridge.latest("players").byId[qq],
+        cq = void 0 !== Aq && Aq.name === Eq,
+        uq = cq && null !== (gq = Aq.cosmetics) && void 0 !== gq ? gq : void 0,
+        Bq = xq && uq ? {
+          ...xq,
+          cosmetics: uq
+        } : xq;
+      return {
+        playerSocialPreview: null !== Bq && void 0 !== Bq ? Bq : {
+          isError: !1,
+          name: Eq,
+          ranks: cq ? [...Aq.ranks] : [],
+          cosmetics: null !== uq && void 0 !== uq ? uq : {},
+          nameColour: null !== (mq = null === uq || void 0 === uq ? void 0 : uq.nameColour) && void 0 !== mq ? mq : Yq.e,
+          location: {
+            status: "inGame"
+          }
+        },
+        isFriend: void 0 !== xq
+      }
+    }
+  },
+  36768: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Bq
+    });
+    var Yq = gq(57),
+      lq = gq(1018),
+      Oq = gq.n(lq),
+      mq = gq(1659),
+      xq = gq(1422),
+      Aq = gq(1326),
+      cq = gq(1025),
+      uq = gq(1070);
+
+    function Bq(qq) {
+      let {
+        label: Eq,
+        icon: gq,
+        placeholder: lq,
+        onSubmit: Bq
+      } = qq;
+      const Wq = (0, Yq.useRef)(null),
+        [Nq, aq] = (0, Yq.useState)(""),
+        [Vq, dq] = (0, Yq.useState)("Enter"),
+        [jq, Hq] = (0, Yq.useState)(null);
+      (0, Yq.useEffect)((() => {
+        if ("Success" !== Vq && "Error" !== Vq) return;
+        const qq = setTimeout((() => {
+          "Success" === Vq && Wq.current && (Wq.current.value = "", aq("")), dq("Enter")
+        }), "Success" === Vq ? 1e3 : 4e3);
+        return () => {
+          clearTimeout(qq)
+        }
+      }), [Vq]);
+      const oq = () => {
+        const qq = Nq.trim();
+        "" !== qq && "Enter" === Vq && (dq("Loading"), Bq(qq).then((qq => {
+          Wq.current && ("error" in qq ? null === qq.error ? dq("Enter") : (Hq(qq.error), dq("Error")) : dq("Success"))
+        })))
+      };
+      return (0, uq.jsxs)("div", {
+        className: "PlayerNameField",
+        onKeyDown: qq => {
+          qq.target === Wq.current && "Escape" !== qq.key && qq.stopPropagation()
+        },
+        children: [(0, uq.jsxs)("div", {
+          className: Oq()("AddFriendBodyOverlay", `AddFriendBodyOverlay${Vq}`),
+          children: ["Loading" === Vq && (0, uq.jsx)(Aq.e, {}), "Success" === Vq && (0, uq.jsx)(cq.d, {
+            name: "check"
+          }), "Error" === Vq && jq]
+        }), (0, uq.jsxs)("div", {
+          className: "PlayerSearch",
+          children: [(0, uq.jsx)(mq.b, {
+            className: "PlayerSearchInput",
+            domRef: Wq,
+            maxLength: 32,
+            placeholderText: lq,
+            ariaLabel: lq,
+            stopPropagation: !1,
+            onValueChange: qq => {
+              aq(qq)
+            },
+            onEnter: oq
+          }), (0, uq.jsxs)(xq.g, {
+            className: "PlayerSearchInputButton SmallTextLight",
+            disabled: "Enter" !== Vq || "" === Nq.trim(),
+            onClick: oq,
+            children: [(0, uq.jsx)(cq.d, {
+              name: gq
+            }), " ", Eq]
+          })]
+        })]
+      })
+    }
+  },
+  36757: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Bq
+    });
+    var Yq = gq(57),
+      lq = gq(1018),
+      Oq = gq.n(lq),
+      mq = gq(1183),
+      xq = gq(1025),
+      Aq = gq(1070);
+    const cq = {
+        unlisted: "link",
+        public: "globe",
+        whitelist: "user-check",
+        private: "lock"
+      },
+      uq = ["unlisted", "public", "whitelist", "private"];
+
+    function Bq(qq) {
+      let {
+        visibility: Eq,
+        onPick: gq
+      } = qq;
+      const {
+        t: lq
+      } = (0, mq.v)(), Bq = (0, Yq.useRef)([]);
+      return (0, Aq.jsx)("div", {
+        className: "WorldSocialTiles",
+        role: "group",
+        "aria-label": lq("worldSocial:whoCanJoin"),
+        children: uq.map(((qq, Yq) => {
+          const mq = qq === Eq;
+          return (0, Aq.jsxs)("button", {
+            ref: qq => {
+              Bq.current[Yq] = qq
+            },
+            type: "button",
+            className: Oq()("WorldSocialTile", {
+              WorldSocialTileSelected: mq
+            }),
+            "aria-pressed": mq,
+            tabIndex: mq ? 0 : -1,
+            onKeyDown: qq => {
+              ((qq, Eq) => {
+                const gq = "ArrowRight" === qq.key || "ArrowDown" === qq.key ? 1 : "ArrowLeft" === qq.key || "ArrowUp" === qq.key ? -1 : 0;
+                var Yq;
+                0 !== gq && (qq.preventDefault(), null === (Yq = Bq.current[(Eq + gq + uq.length) % uq.length]) || void 0 === Yq || Yq.focus())
+              })(qq, Yq)
+            },
+            onClick: () => {
+              gq(qq)
+            },
+            children: [(0, Aq.jsx)("span", {
+              className: "WorldSocialTileIcon",
+              children: (0, Aq.jsx)(xq.d, {
+                name: cq[qq]
+              })
+            }), (0, Aq.jsxs)("span", {
+              className: "WorldSocialTileText",
+              children: [(0, Aq.jsx)("span", {
+                className: "WorldSocialTileTitle",
+                children: lq(`worldSocial:${qq}`)
+              }), (0, Aq.jsx)("span", {
+                className: "WorldSocialTileDescription",
+                children: lq(`worldSocial:${qq}Description`)
+              })]
+            })]
+          }, qq)
+        }))
+      })
+    }
+  },
+  36764: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => xq
+    });
+    var Yq = gq(1183),
+      lq = gq(2563),
+      Oq = gq(4195),
+      mq = gq(1070);
+
+    function xq(qq) {
+      let {
+        SB: Eq,
+        children: gq,
+        ...xq
+      } = qq;
+      const {
+        t: Aq
+      } = (0, Yq.v)();
+      return (0, mq.jsx)("div", {
+        className: "WhitelistTickRow",
+        onClick: () => {
+          Eq.onChange(!Eq.on)
+        },
+        children: (0, mq.jsx)(lq.i, {
+          ...xq,
+          opensProfileCard: !1,
+          children: (0, mq.jsxs)("div", {
+            className: "WhitelistTickRowActions",
+            onClick: qq => {
+              qq.stopPropagation()
+            },
+            children: [gq, (0, mq.jsx)("label", {
+              className: "WhitelistTickRowTick",
+              children: (0, mq.jsx)(Oq.b, {
+                checked: Eq.on,
+                disabled: !1,
+                ariaLabel: Aq("worldSocial:letJoin", {
+                  playerName: xq.playerSocialPreview.name
+                }),
+                onChange: qq => {
+                  Eq.onChange(qq.target.checked)
+                }
+              })
+            })]
+          })
+        })
+      })
+    }
+  },
+  36755: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => aq
+    });
+    var Yq = gq(57),
+      lq = gq(1183),
+      Oq = gq(1824),
+      mq = gq(96),
+      xq = gq(24),
+      Aq = gq(1448),
+      cq = gq(2595),
+      uq = gq(9176),
+      Bq = gq(1422),
+      Wq = gq(1025),
+      Nq = gq(1070);
+
+    function aq(qq) {
+      let {
+        worldCode: Eq,
+        message: gq
+      } = qq;
+      const {
+        t: aq
+      } = (0, lq.v)(), {
+        isTouchScreen: Vq
+      } = (0, xq.j)(["isTouchScreen"]), dq = mq.featureFlags.canUseInviteLinks, jq = (0, uq.g)(dq && null === gq), [Hq, oq] = (0, cq.i)(), Pq = (0, Yq.useRef)(null);
+      if (null !== gq) return (0, Nq.jsxs)("div", {
+        className: "WorldSocialLinkRow WorldSocialLinkRowMessage",
+        children: [(0, Nq.jsx)(Wq.d, {
+          name: "lock"
+        }), (0, Nq.jsx)("span", {
+          children: gq
+        })]
+      });
+      const Qq = dq ? jq : Eq,
+        yq = Vq && dq && (0, cq.b)();
+      return (0, Nq.jsxs)("div", {
+        className: "WorldSocialLinkRow",
+        children: [!dq && (0, Nq.jsx)("span", {
+          className: "WorldSocialCodeLabel",
+          children: aq("worldSocial:worldCode")
+        }), (0, Nq.jsx)("input", {
+          ref: Pq,
+          className: "WorldSocialLink",
+          readOnly: !0,
+          value: null !== Qq && void 0 !== Qq ? Qq : "",
+          "aria-label": aq(dq ? "worldSocial:worldLink" : "worldSocial:worldCode"),
+          onFocus: qq => {
+            qq.currentTarget.select()
+          }
+        }), (0, Nq.jsxs)(Bq.g, {
+          className: "WorldSocialCopy",
+          disabled: null === Qq,
+          onClick: () => {
+            null !== Qq && (0, cq.f)(Qq, {
+              useShareSheet: yq,
+              onOutcome: qq => {
+                if ((0, Aq.reportAnalyticsClick)({
+                    id: "world_social.copy_link",
+                    value: "copied" !== qq || dq ? qq : "code"
+                  }), "copied" === qq) oq();
+                else if ("failed" === qq) {
+                  var Eq;
+                  null === (Eq = Pq.current) || void 0 === Eq || Eq.focus(), Oq.g.showMessage({
+                    translationKey: "partyBar:copyFailed"
+                  })
+                }
+              }
+            })
+          },
+          children: [(0, Nq.jsx)(Wq.d, {
+            name: Hq ? "check" : yq ? "up-from-bracket" : "copy"
+          }), " ", aq(Hq ? "general:copied" : yq ? "worldSocial:share" : "general:copy")]
+        })]
+      })
+    }
+  },
+  36759: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Nq,
+      h: () => Wq,
+      l: () => Bq
+    });
+    var Yq = gq(576),
+      lq = gq(1183),
+      Oq = gq(1628),
+      mq = gq(2563),
+      xq = gq(2517),
+      Aq = gq(1422),
+      cq = gq(36764),
+      uq = gq(1070);
+
+    function Bq(qq, Eq) {
+      var gq;
+      return {
+        isError: !1,
+        name: qq,
+        ranks: [...arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : []],
+        cosmetics: null !== Eq && void 0 !== Eq ? Eq : {},
+        nameColour: null !== (gq = null === Eq || void 0 === Eq ? void 0 : Eq.nameColour) && void 0 !== gq ? gq : Yq.e,
+        location: {
+          status: "offline"
+        }
+      }
     }
 
-    function Vz(zz) {
-      if (!(zz in Az)) throw new Error("Invalid spritesheet name");
-      return Az[zz]
+    function Wq(qq) {
+      let {
+        player: Eq,
+        isFriend: gq = !1,
+        status: Yq,
+        showLocation: Aq = void 0 === Yq,
+        SB: Bq,
+        onSendFriendRequest: Wq,
+        actions: Nq,
+        zIndex: aq
+      } = qq;
+      const {
+        t: Vq
+      } = (0, lq.v)();
+      let dq = Yq;
+      null !== Bq && void 0 !== Bq && Bq.on && (dq = (0, uq.jsxs)(uq.Fragment, {
+        children: [null !== Yq && void 0 !== Yq ? Yq : (0, uq.jsx)(xq.e, {
+          socialPreview: Eq
+        }), (0, uq.jsxs)("span", {
+          className: "WorldSocialCanJoin",
+          children: [" \xb7 ", Vq("worldSocial:canJoin")]
+        })]
+      }));
+      const jq = {
+        playerSocialPreview: Eq,
+        isFriend: gq,
+        hideFriendBadge: !0,
+        onFriendRemoved: gq ? qq => {
+          Oq.c.removeFriendFromState(qq)
+        } : void 0,
+        status: dq,
+        showLocation: Aq,
+        onSendFriendRequest: Wq,
+        zIndex: aq
+      };
+      return Bq ? (0, uq.jsx)(cq.d, {
+        ...jq,
+        SB: Bq,
+        children: Nq
+      }) : (0, uq.jsx)(mq.i, {
+        ...jq,
+        opensProfileCard: !1,
+        children: Nq || void 0
+      })
     }
 
-    function mz(zz) {
-      return zz[Math.floor(Math.random() * zz.length)]
+    function Nq(qq) {
+      let {
+        row: Eq,
+        SB: gq,
+        canInvite: Yq,
+        invited: Oq,
+        onInvite: mq,
+        zIndex: xq
+      } = qq;
+      const {
+        t: cq
+      } = (0, lq.v)(), Bq = "online" === Eq.place ? Aq.g : Aq.i;
+      return (0, uq.jsx)(Wq, {
+        player: Eq.friend,
+        isFriend: !0,
+        status: "here" === Eq.place ? cq("worldSocial:inThisWorld") : void 0,
+        showLocation: !0,
+        SB: gq,
+        zIndex: xq,
+        actions: Yq && (0, uq.jsx)(Bq, {
+          className: "WorldSocialInvite SmallTextLight",
+          disabled: Oq,
+          onClick: mq,
+          ariaLabel: `${cq("worldSocial:invite")} ${Eq.friend.name}`,
+          children: cq(Oq ? "worldSocial:invited" : "worldSocial:invite")
+        })
+      })
     }
+  },
+  36748: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Aq,
+      h: () => mq,
+      j: () => cq
+    });
+    var Yq = gq(57),
+      lq = gq(4413),
+      Oq = gq(1824);
+
+    function mq(qq) {
+      const Eq = {
+        lobbyName: qq,
+        answer: null,
+        response: lq.d.getSocialSettings(qq)
+      };
+      return Eq.response.then((qq => {
+        Eq.answer = qq
+      })), Eq
+    }
+    const xq = new Map;
+
+    function Aq(qq) {
+      xq.set(qq.lobbyName, qq)
+    }
+
+    function cq(qq) {
+      const [Eq] = (0, Yq.useState)((() => function(qq) {
+        var Eq;
+        const gq = null !== (Eq = xq.get(qq)) && void 0 !== Eq ? Eq : null;
+        return null !== gq && void 0 !== gq && gq.answer && "error" in gq.answer ? null : gq
+      }(qq))), [gq, mq] = (0, Yq.useState)((() => null !== Eq && void 0 !== Eq && Eq.answer && "settings" in Eq.answer ? Eq.answer.settings : null)), [Aq, cq] = (0, Yq.useState)(!0), [uq, Bq] = (0, Yq.useState)(null !== gq), Wq = (0, Yq.useRef)(gq);
+      Wq.current = gq;
+      const Nq = (0, Yq.useRef)(0),
+        aq = (0, Yq.useRef)(0),
+        Vq = (0, Yq.useRef)(!1),
+        dq = (0, Yq.useRef)(!0),
+        jq = (0, Yq.useCallback)((async Eq => {
+          const gq = ++Nq.current,
+            Yq = await (null !== Eq && void 0 !== Eq ? Eq : lq.d.getSocialSettings(qq));
+          dq.current && gq === Nq.current && (Bq(!0), cq(!1), "error" in Yq || mq(Yq.settings))
+        }), [qq]),
+        Hq = (0, Yq.useCallback)((() => {
+          cq(!0), jq()
+        }), [jq]),
+        oq = (0, Yq.useCallback)((() => {
+          aq.current > 0 ? Vq.current = !0 : jq()
+        }), [jq]);
+      (0, Yq.useEffect)((() => (dq.current = !0, xq.delete(qq), cq(!0), jq(null === Eq || void 0 === Eq ? void 0 : Eq.response), () => {
+        dq.current = !1
+      })), [jq, qq, Eq]);
+      const Pq = qq => {
+        Nq.current++, cq(!1), Wq.current = qq, mq(qq)
+      };
+      return {
+        settings: gq,
+        loading: Aq,
+        answered: uq,
+        retry: Hq,
+        refresh: oq,
+        change: async function(Eq, gq) {
+          let {
+            quiet: Yq = !1,
+            onAnswer: mq
+          } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+          const xq = Wq.current;
+          if (null === xq) return !1;
+          Pq(gq(xq)), aq.current > 0 && (Vq.current = !0), aq.current++;
+          const Aq = await lq.d.setSocialSettings(qq, Eq);
+          aq.current--;
+          const cq = !("error" in Aq);
+          if (!dq.current) return cq;
+          if (null === mq || void 0 === mq || mq(Aq), Yq);
+          else if ("error" in Aq) Oq.g.showMessage({
+            translationKey: Aq.error
+          });
+          else
+            for (const qq of Aq.notFound) Oq.g.showMessage({
+              translationKey: "worldSocial:notFound",
+              params: {
+                playerName: qq
+              }
+            });
+          if (aq.current > 0) return cq;
+          const uq = Vq.current;
+          return Vq.current = !1, !uq && "settings" in Aq ? Pq(Aq.settings) : (uq || Pq(xq), jq()), cq
+        }
+      }
+    }
+  },
+  36775: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => mq,
+      e: () => Oq
+    });
+    var Yq = gq(163);
+    const lq = new Map;
+
+    function Oq(qq, Eq) {
+      var gq;
+      const Yq = null !== (gq = lq.get(qq)) && void 0 !== gq ? gq : new Map;
+      Yq.set(Eq, Date.now()), lq.set(qq, Yq)
+    }
+
+    function mq(qq) {
+      const Eq = lq.get(qq);
+      if (!Eq) return [];
+      const gq = Date.now();
+      for (const [lq, Oq] of Eq) gq - Oq >= Yq.j && Eq.delete(lq);
+      return [...Eq.keys()]
+    }
+  },
+  36753: (qq, Eq, gq) => {
+    function Yq(qq, Eq) {
+      const gq = Eq.toLowerCase();
+      for (const Yq of qq)
+        if (Yq.toLowerCase() === gq) return !0;
+      return !1
+    }
+
+    function lq(qq, Eq, gq) {
+      const lq = [],
+        Oq = [],
+        mq = [];
+      for (const xq of qq) !xq.isError && xq.name && ("inGame" === xq.location.status && xq.location.inLobbyName === Eq || Yq(gq, xq.name) ? Oq.push({
+        friend: xq,
+        place: "here"
+      }) : "offline" === xq.location.status ? mq.push({
+        friend: xq,
+        place: "offline"
+      }) : lq.push({
+        friend: xq,
+        place: "online"
+      }));
+      return [...lq, ...Oq, ...mq]
+    }
+
+    function Oq(qq, Eq, gq) {
+      const lq = [],
+        Oq = qq.flatMap((qq => "here" === qq.place ? [qq.friend.name] : []));
+      for (const mq of [...Oq, ...Eq]) Yq(lq, mq) || Yq(gq, mq) || lq.push(mq);
+      return lq
+    }
+
+    function mq(qq, Eq) {
+      return null === qq || void 0 === qq || !qq.canManage || Yq(qq.whitelist, Eq) ? "none" : "whitelist" === qq.visibility ? "required" : "quiet"
+    }
+
+    function xq(qq) {
+      if (null === qq) return !0;
+      const {
+        visibility: Eq
+      } = qq;
+      return "public" === Eq || "unlisted" === Eq || "whitelist" === Eq && qq.canManage
+    }
+
+    function Aq(qq, Eq, gq) {
+      if (gq) {
+        const gq = Eq.filter((Eq => !Yq(qq.whitelist, Eq)));
+        return {
+          ...qq,
+          whitelist: [...qq.whitelist, ...gq]
+        }
+      }
+      return {
+        ...qq,
+        whitelist: qq.whitelist.filter((qq => !Yq(Eq, qq)))
+      }
+    }
+
+    function cq(qq, Eq) {
+      const gq = [];
+      for (let Yq = 0; Yq < qq.length; Yq += Eq) gq.push(qq.slice(Yq, Yq + Eq));
+      return gq
+    }
+    gq.d(Eq, {
+      c: () => xq,
+      d: () => Oq,
+      h: () => lq,
+      k: () => Yq,
+      l: () => cq,
+      o: () => mq,
+      s: () => Aq
+    })
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const qq in modules) Object.freeze(modules[qq]);

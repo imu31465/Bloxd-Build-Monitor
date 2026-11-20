@@ -1,40 +1,43 @@
 export const id = 159;
 export const ids = [159];
 export const modules = {
-  8604: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      pageBody: () => Ez
+  8888: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      pageBody: () => Yq
     });
-    const Ez = {
-      whatIs: ["Your gear is completely random, and only one player makes it out of the madness. Bloxd Lucky Towers is a last-player-standing PvP mode where everyone spawns on their own pillar. Rounds are quick, chaotic and pretty unpredictable. There are no Lucky Blocks to open here, which is the big difference from Lucky Blocks Battlegrounds. Your items just turn up every 3 seconds."],
-      howToPlay: ["Up to 15 players spawn on pillars spaced out across the map. You start in a glass cage for 3 seconds. After that, everyone gets a random item every 3 seconds. It could be blocks, food, a weapon, armour, a potion or something that explodes. Build bridges over to your rivals, knock them off their pillars and be the last one alive.", "Keep an eye on the announcements, because random events can flip a whole fight. A chest might drop with a guaranteed weapon and armour inside. Jump Boost lets everyone jump higher for a bit, and Double Speed makes items spawn twice as fast. During Lava Rise the ground starts creeping up beneath you. If a Bombardment is announced, get under cover fast. Holding a Respawn Totem saves you from a fall into the void. Knocked out? You can still spectate the rest of the match."],
-      features: ["Up to 15 Players per Match", "A Random Item Every 3 Seconds", "Weapons, Armour, Potions, Arrows and Explosives", "Special Items Like Updraft, SnowDash, Steal Ball, Bouncy Bomb and Chaos Potion", "Respawn Totems for an Extra Life", "Five Random Events, From Chest Drops to Bombardment", "Craft Sticks, Reinforced Pebbles, Floor Creators and More", "Maps: The OG, Desert, Icy, Space and Forest, Plus Seasonal Spooky and Holiday Maps"],
-      tips: ["Use your first few blocks to wall up your pillar", "Hang on to explosives for breaking your rivals' bridges", "If a chest drops, race for it. There's a guaranteed weapon and two pieces of armour inside", "When the ground starts rising, build upwards", "Get under cover the moment a Bombardment is announced", "Hold a Respawn Totem whenever you might fall, because it puts you back on your pillar", "The pillars on the Icy map are further apart, since jumps on ice go further"],
-      similarGames: ["skywars", "luckyBedwars", "luckyBattlegrounds", "bedwars"],
+    const Yq = {
+      whatIs: ["In Bloxd Skywars, everyone starts on their own island in the sky. Only one player is still there at the end. Loot your chests for weapons, armour and blocks, bridge over to your rivals and knock them into the void. It's free-for-all PvP for up to 12 players, and the last one standing takes the win."],
+      howToPlay: ["Each match starts with you in a glass cage on your own island. The cage opens after about 3 seconds, and you can't use items while you're stuck inside. Once you're out, loot your island's chests quickly, because your gear is split between them. Then build a bridge and go after everyone else.", "Chests refill every 2.5 minutes. When \"Chests replenished.\" pops up in chat, it's worth heading back for more loot. After 7 minutes, or as soon as only two players are left, everyone still alive gets a compass pointing at the nearest player. There's nowhere left to hide at that point. Fall into the void and you're out.", "You get Gold for every kill and 20 Gold for a win. Spend Gold and Gems in the shop on new Skywars kits and perks."],
+      features: ["Free-for-All Matches for Up to 12 Players", "Around 30 Kits, from Archer and Builder to Ghost, Sniper, Catapult and Salmon", "Killstreak Perks You Can Buy and Upgrade, like Bridger, Leech and Inferno", "Chests That Refill Every 2.5 Minutes", "A Compass That Tracks the Nearest Player After 7 Minutes or When Two Remain", "Match Modifiers like Lucky Mode, Lifesteal, Explosives Frenzy and Knockback Knockout", "10 Maps: Jungle, Castle, Ice, Bricks, Street, Chess, Food, Aqueduct, Mushroom Land and Warehouse", "Leaderboards"],
+      tips: ["Open every chest on your island before you leave, since your gear is spread across them", "Take your time bridging. One wrong step and you're in the void", "When the chests refill, try to get back to them before your rivals do", "Fight near the edges and use knockback to push enemies off the map", "More kills means more Gold, so you'll unlock new kits faster", "Try kits that suit how you play: Builder for bridging, Archer for range or Tank for armour", "Choose perks to match your style too, like Rusher for speed at the start or Leech for health after kills"],
+      similarGames: ["bedwars", "luckyTowers", "skyIslands"],
       faq: [{
-        question: "What is Lucky Towers?",
-        answer: "A fast PvP mode for up to 15 players. Everyone starts on their own pillar, gets a random item every 3 seconds and fights to be the last one standing."
+        question: "What is Bloxd Skywars?",
+        answer: "It's a PvP mode on Bloxd.io where every player starts on a floating island. You loot chests, bridge across to your rivals and try to be the last one standing."
       }, {
-        question: "How do you win in Bloxd Lucky Towers?",
-        answer: "Be the last player alive. Use whatever random items you get to knock rivals off their pillars or take them out. If you're eliminated, you can spectate untill the match ends."
+        question: "How do you win in Skywars?",
+        answer: "Be the last player alive. Knock everyone else out, or push them off their islands into the void. Winning gets you 20 Gold."
       }, {
-        question: "How often do you get items in Lucky Towers?",
-        answer: "Every 3 seconds. During the Double Speed event they spawn twice as fast for a short while."
+        question: "Can I play Skywars in my browser?",
+        answer: "Yep. Bloxd.io Skywars runs right in your browser, so you can jump into a match without installing anything."
       }, {
-        question: "What items can you get in Lucky Towers?",
-        answer: "Blocks, seedlings, beds, food, potions, weapons, arrows, armour and explosives. There are special items too, like the Bouncy Bomb, Respawn Totem, Floor Creator, SnowDash, Updraft, Steal Ball, Chaos Potion and Moonstone Remote Explosive."
+        question: "What are the best Skywars kits?",
+        answer: "Honestly, it depends how you like to play. Sniper has a one-shot crossbow and Catapult can knock enemies off the map. Ghost can turn invisible, and Builder starts with extra blocks for bridging. You unlock more kits with Gold and Gems."
       }, {
-        question: "Which random events can happen in Lucky Towers?",
-        answer: "Chest Drop, Jump Boost, Double Speed, Lava Rise and Bombardment. You'll get an announcement when each one starts."
+        question: "What do perks do in Bloxd Skywars?",
+        answer: "Perks give you bonuses while you play. Maniac gives you more damage after kills, Bridger gives you a chance to get placed blocks back and Leech heals you after kills. You can upgrade them to make them stronger."
       }, {
-        question: "Which maps are in Lucky Towers?",
-        answer: "The OG, Desert, Icy, Space and Forest. There's also a Spooky map in October and a Holiday map in December and January."
+        question: "How do I get Gold in Skywars?",
+        answer: "Every kill earns Gold, and you get an extra 20 Gold for winning a match."
       }, {
-        question: "How is Lucky Towers different from Lucky Blocks Battlegrounds?",
-        answer: "Lucky Towers is last player standing. Items arrive on their own, and once you're knocked out you spectate. Lucky Blocks Battlegrounds is a kills race in a shared arena where you open Lucky Blocks, and the top player wins when it resets."
+        question: "How many players fit in one Skywars match?",
+        answer: "Up to 12 players fight it out in each free-for-all match."
+      }, {
+        question: "What does the compass do in Skywars?",
+        answer: "After 7 minutes, or once only two players are left, everyone still alive gets a compass that points to the nearest player."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const qq in modules) Object.freeze(modules[qq]);

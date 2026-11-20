@@ -1,467 +1,472 @@
 export const id = 298;
-export const ids = [298];
+export const ids = [297, 298];
 export const modules = {
-  40996: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      _ENVTextureLoader: () => xz
+  41533: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      _DDSTextureLoader: () => Oq
     });
-    var Ez = bz(39118),
-      nz = bz(36519),
-      iz = bz(36553),
-      lz = bz(39164),
-      Mz = bz(39011),
-      tz = bz(39167),
-      Hz = (bz(39253), bz(41e3)),
-      Oz = bz(38060),
-      pz = (bz(41012), bz(41031), bz(39226));
-    const dz = "image/png",
-      Fz = [134, 22, 135, 150, 246, 214, 150, 54];
-
-    function Zz(zz) {
-      const uz = new DataView(zz.buffer, zz.byteOffset, zz.byteLength);
-      let bz = 0;
-      for (let lz = 0; lz < Fz.length; lz++)
-        if (uz.getUint8(bz++) !== Fz[lz]) return Oz.e.Error("Not a babylon environment map"), null;
-      let Ez, nz = "";
-      for (; Ez = uz.getUint8(bz++);) nz += String.fromCharCode(Ez);
-      let iz = JSON.parse(nz);
-      return iz = Rz(iz), iz.binaryDataPosition = bz, iz.specular && (iz.specular.lodGenerationScale = iz.specular.lodGenerationScale || .8), iz
-    }
-
-    function Rz(zz) {
-      if (zz.version > 2) throw new Error(`Unsupported babylon environment map version "${zz.version}". Latest supported version is "2".`);
-      return 2 === zz.version ? zz : zz = {
-        ...zz,
-        version: 2,
-        imageType: dz
-      }
-    }
-
-    function Kz(zz, uz) {
-      const bz = (uz = Rz(uz)).specular;
-      let Ez = Math.log2(uz.width);
-      if (Ez = Math.round(Ez) + 1, bz.mipmaps.length !== 6 * Ez) throw new Error(`Unsupported specular mipmaps number "${bz.mipmaps.length}"`);
-      const nz = new Array(Ez);
-      for (let iz = 0; iz < Ez; iz++) {
-        nz[iz] = new Array(6);
-        for (let Ez = 0; Ez < 6; Ez++) {
-          const lz = bz.mipmaps[6 * iz + Ez];
-          nz[iz][Ez] = new Uint8Array(zz.buffer, zz.byteOffset + uz.binaryDataPosition + lz.position, lz.length)
-        }
-      }
-      return nz
-    }
-
-    function wz(zz, uz) {
-      uz = Rz(uz);
-      const bz = new Array(6),
-        Ez = uz.irradiance?.irradianceTexture;
-      if (Ez) {
-        if (6 !== Ez.faces.length) throw new Error(`Incorrect irradiance texture faces number "${Ez.faces.length}"`);
-        for (let nz = 0; nz < 6; nz++) {
-          const iz = Ez.faces[nz];
-          bz[nz] = new Uint8Array(zz.buffer, zz.byteOffset + uz.binaryDataPosition + iz.position, iz.length)
-        }
-      }
-      return bz
-    }
-
-    function Xz(zz, uz, bz) {
-      const Ez = (bz = Rz(bz)).specular;
-      if (!Ez) return Promise.resolve([]);
-      zz._lodGenerationScale = Ez.lodGenerationScale;
-      const iz = [],
-        lz = Kz(uz, bz);
-      iz.push(sz(zz, lz, bz.imageType));
-      const Mz = bz.irradiance?.irradianceTexture;
-      if (Mz) {
-        const Ez = wz(uz, bz);
-        let lz = null;
-        bz.irradiance?.irradianceTexture?.dominantDirection && (lz = nz.n.FromArray(bz.irradiance.irradianceTexture.dominantDirection)), iz.push(rz(zz, Ez, Mz.size, bz.imageType, lz))
-      }
-      return Promise.all(iz)
-    }
-    async function fz(zz, uz, bz, Ez, nz, iz, lz, Mz, tz, Hz, Oz) {
-      return await new Promise(((pz, dz) => {
-        if (bz) {
-          const bz = uz.createTexture(null, !0, !0, null, 1, null, (zz => {
-            dz(zz)
-          }), zz);
-          Ez?.onEffectCreatedObservable.addOnce((Mz => {
-            Mz.executeWhenCompiled((() => {
-              Ez.externalTextureSamplerBinding = !0, Ez.onApply = Ez => {
-                Ez._bindTexture("textureSampler", bz), Ez.setFloat2("scale", 1, uz._features.needsInvertingBitmap && zz instanceof ImageBitmap ? -1 : 1)
-              }, uz.scenes.length && (uz.scenes[0].postProcessManager.directRender([Ez], Hz, !0, iz, lz), uz.restoreDefaultFramebuffer(), bz.dispose(), URL.revokeObjectURL(nz), pz())
-            }))
-          }))
-        } else {
-          if (uz._uploadImageToTexture(Oz, zz, iz, lz), Mz) {
-            const bz = tz[lz];
-            bz && uz._uploadImageToTexture(bz._texture, zz, iz, 0)
-          }
-          pz()
-        }
-      }))
-    }
-    async function sz(zz, uz) {
-      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : dz;
-      const Ez = zz.uR();
-      zz.format = 5, zz.type = 0, zz.generateMipMaps = !0, zz._cachedAnisotropicFilteringLevel = null, Ez.updateTextureSamplingMode(3, zz), await oz(zz, uz, !0, bz), zz.isReady = !0
-    }
-    async function rz(zz, uz, bz) {
-      let Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : dz,
-        nz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-      const iz = zz.uR(),
-        lz = new Mz.c(iz, 5),
-        Hz = new tz.b(iz, lz);
-      zz._irradianceTexture = Hz, Hz._dominantDirection = nz, lz.isCube = !0, lz.format = 5, lz.type = 0, lz.generateMipMaps = !0, lz._cachedAnisotropicFilteringLevel = null, lz.generateMipMaps = !0, lz.width = bz, lz.height = bz, iz.updateTextureSamplingMode(3, lz), await oz(lz, [uz], !1, Ez), iz.generateMipMapsForCubemap(lz), lz.isReady = !0
-    }
-    async function oz(zz, uz, nz) {
-      let lz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : dz;
-      if (!(0, Ez.i)(zz.width)) throw new Error("Texture size must be a power of two");
-      const Oz = (0, iz.ILog2)(zz.width) + 1,
-        Fz = zz.uR();
-      let Zz = !1,
-        Rz = !1,
-        Kz = null,
-        wz = null,
-        Xz = null;
-      const sz = Fz.getCaps();
-      sz.textureLOD ? Fz._features.supportRenderAndCopyToLodForFloatTextures ? sz.textureHalfFloatRender && sz.textureHalfFloatLinearFiltering ? (Zz = !0, zz.type = 2) : sz.textureFloatRender && sz.textureFloatLinearFiltering && (Zz = !0, zz.type = 1) : Zz = !1 : (Zz = !1, Rz = nz);
-      let rz = 0;
-      if (Zz) Fz.isWebGPU ? (rz = 1, await bz.e(332).then((() => bz(60527)))) : await bz.e(314).then((() => bz(60534))), Kz = new Hz.d("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, Fz, !1, void 0, zz.type, void 0, null, !1, void 0, rz), zz._isRGBD = !1, zz.invertY = !1, wz = Fz.createRenderTargetCubeTexture(zz.width, {
-        generateDepthBuffer: !1,
-        generateMipMaps: !0,
-        generateStencilBuffer: !1,
-        samplingMode: 3,
-        type: zz.type,
-        format: 5
-      });
-      else if (zz._isRGBD = !0, zz.invertY = !0, Rz) {
-        const uz = 3;
-        Xz = {};
-        const bz = zz._lodGenerationScale,
-          Ez = zz._lodGenerationOffset;
-        for (let nz = 0; nz < uz; nz++) {
-          const iz = (Oz - 1) * bz + Ez,
-            lz = Ez + (iz - Ez) * (1 - nz / (uz - 1)),
-            Hz = Math.round(Math.min(Math.max(lz, 0), iz)),
-            pz = new Mz.c(Fz, 2);
-          pz.isCube = !0, pz.invertY = !0, pz.generateMipMaps = !1, Fz.updateTextureSamplingMode(2, pz);
-          const dz = new tz.b(null);
-          switch (dz._isCube = !0, dz._texture = pz, Xz[Hz] = dz, nz) {
-            case 0:
-              zz._lodTextureLow = dz;
-              break;
-            case 1:
-              zz._lodTextureMid = dz;
-              break;
-            case 2:
-              zz._lodTextureHigh = dz
-          }
-        }
-      }
-      const oz = [];
-      for (let bz = 0; bz < uz.length; bz++)
-        for (let Ez = 0; Ez < 6; Ez++) {
-          const nz = uz[bz][Ez],
-            iz = (0, pz.o)(nz),
-            Mz = new Blob([iz], {
-              type: lz
-            }),
-            tz = URL.createObjectURL(Mz);
-          let Hz;
-          if (Fz._features.forceBitmapOverHTMLImageElement) Hz = Fz.createImageBitmap(Mz, {
-            premultiplyAlpha: "none",
-            colorSpaceConversion: "none"
-          }).then((async uz => await fz(uz, Fz, Zz, Kz, tz, Ez, bz, Rz, Xz, wz, zz)));
-          else {
-            const uz = new Image;
-            uz.src = tz, Hz = new Promise(((nz, iz) => {
-              uz.onload = () => {
-                fz(uz, Fz, Zz, Kz, tz, Ez, bz, Rz, Xz, wz, zz).then((() => nz())).catch((zz => {
-                  iz(zz)
-                }))
-              }, uz.onerror = zz => {
-                iz(zz)
-              }
-            }))
-          }
-          oz.push(Hz)
-        }
-      if (await Promise.all(oz), uz.length < Oz) {
-        let bz;
-        const Ez = Math.pow(2, Oz - 1 - uz.length),
-          nz = Ez * Ez * 4;
-        switch (zz.type) {
-          case 0:
-            bz = new Uint8Array(nz);
-            break;
-          case 2:
-            bz = new Uint16Array(nz);
-            break;
-          case 1:
-            bz = new Float32Array(nz)
-        }
-        for (let iz = uz.length; iz < Oz; iz++)
-          for (let uz = 0; uz < 6; uz++) Fz._uploadArrayBufferViewToTexture(wz?.texture || zz, bz, uz, iz)
-      }
-      if (wz) {
-        const uz = zz._irradianceTexture;
-        zz._irradianceTexture = null, Fz._releaseTexture(zz), wz._swapAndDie(zz), zz._irradianceTexture = uz
-      }
-      Kz && Kz.dispose(), Rz && (zz._lodTextureHigh && zz._lodTextureHigh._texture && (zz._lodTextureHigh._texture.isReady = !0), zz._lodTextureMid && zz._lodTextureMid._texture && (zz._lodTextureMid._texture.isReady = !0), zz._lodTextureLow && zz._lodTextureLow._texture && (zz._lodTextureLow._texture.isReady = !0))
-    }
-
-    function Nz(zz, uz) {
-      const bz = (uz = Rz(uz)).irradiance;
-      if (!bz) return;
-      const Ez = new lz.g;
-      nz.n.FromArrayToRef(bz.x, 0, Ez.x), nz.n.FromArrayToRef(bz.y, 0, Ez.y), nz.n.FromArrayToRef(bz.z, 0, Ez.z), nz.n.FromArrayToRef(bz.xx, 0, Ez.xx), nz.n.FromArrayToRef(bz.yy, 0, Ez.yy), nz.n.FromArrayToRef(bz.zz, 0, Ez.zz), nz.n.FromArrayToRef(bz.yz, 0, Ez.yz), nz.n.FromArrayToRef(bz.zx, 0, Ez.zx), nz.n.FromArrayToRef(bz.xy, 0, Ez.xy), zz._sphericalPolynomial = Ez
-    }
-    var vz = bz(41037);
-    class xz {
+    var Yq = gq(39741),
+      lq = gq(41515);
+    class Oq {
       constructor() {
-        this.supportCascades = !1
+        this.supportCascades = !0
       }
-      loadCubeData(zz, uz, bz, Ez, nz) {
-        if (Array.isArray(zz)) return;
-        const iz = Zz(zz);
-        if (iz) {
-          uz.width = iz.width, uz.height = iz.width;
-          try {
-            (0, vz.b)(), Nz(uz, iz), Xz(uz, zz, iz).then((() => {
-              uz.isReady = !0, uz.onLoadedObservable.notifyObservers(uz), uz.onLoadedObservable.clear(), Ez && Ez()
-            }), (zz => {
-              nz?.("Can not upload environment levels", zz)
-            }))
-          } catch (lz) {
-            nz?.("Can not upload environment file", lz)
+      loadCubeData(qq, Eq, gq, Oq) {
+        const mq = Eq.Ba();
+        let xq, Aq = !1,
+          cq = 1e3;
+        if (Array.isArray(qq))
+          for (let Yq = 0; Yq < qq.length; Yq++) {
+            const gq = qq[Yq];
+            xq = lq.DDSTools.GetDDSInfo(gq), Eq.width = xq.width, Eq.height = xq.height, Aq = (xq.isRGB || xq.isLuminance || xq.mipmapCount > 1) && Eq.generateMipMaps, mq._unpackFlipY(xq.isCompressed), lq.DDSTools.UploadDDSLevels(mq, Eq, gq, xq, Aq, 6, -1, Yq), xq.isFourCC || 1 !== xq.mipmapCount ? cq = xq.mipmapCount - 1 : mq.generateMipMapsForCubemap(Eq)
+          } else {
+            const Oq = qq;
+            xq = lq.DDSTools.GetDDSInfo(Oq), Eq.width = xq.width, Eq.height = xq.height, gq && (xq.sphericalPolynomial = new Yq.d), Aq = (xq.isRGB || xq.isLuminance || xq.mipmapCount > 1) && Eq.generateMipMaps, mq._unpackFlipY(xq.isCompressed), lq.DDSTools.UploadDDSLevels(mq, Eq, Oq, xq, Aq, 6), xq.isFourCC || 1 !== xq.mipmapCount ? cq = xq.mipmapCount - 1 : mq.generateMipMapsForCubemap(Eq, !1)
           }
-        } else nz && nz("Can not parse the environment file", null)
+        mq._setCubeMapTextureParams(Eq, Aq, cq), Eq.isReady = !0, Eq.onLoadedObservable.notifyObservers(Eq), Eq.onLoadedObservable.clear(), Oq && Oq({
+          isDDS: !0,
+          width: Eq.width,
+          info: xq,
+          data: qq,
+          texture: Eq
+        })
       }
-      loadData() {
-        throw ".env not supported in 2d."
+      loadData(qq, Eq, gq) {
+        const Yq = lq.DDSTools.GetDDSInfo(qq),
+          Oq = (Yq.isRGB || Yq.isLuminance || Yq.mipmapCount > 1) && Eq.generateMipMaps && Math.max(Yq.width, Yq.height) >> Yq.mipmapCount - 1 === 1;
+        gq(Yq.width, Yq.height, Oq, Yq.isFourCC, (() => {
+          lq.DDSTools.UploadDDSLevels(Eq.Ba(), Eq, qq, Yq, Oq, 1)
+        }))
       }
     }
   },
-  41037: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => lz
+  41519: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => cq
     });
-    var Ez = bz(40972),
-      nz = bz(39167);
-    let iz = !1;
-
-    function lz() {
-      iz || (iz = !0, nz.b.prototype._sphericalPolynomialTargetSize = 0, nz.b.prototype.forceSphericalPolynomialsRecompute = function() {
-        this._texture && (this._texture._sphericalPolynomial = null, this._texture._sphericalPolynomialPromise = null, this._texture._sphericalPolynomialComputed = !1)
-      }, Object.defineProperty(nz.b.prototype, "sphericalPolynomial", {
-        get: function() {
-          if (this._texture) {
-            if (this._texture._sphericalPolynomial || this._texture._sphericalPolynomialComputed) return this._texture._sphericalPolynomial;
-            if (this._texture.isReady) return this._texture._sphericalPolynomialPromise || (this._texture._sphericalPolynomialPromise = Ez.d.ConvertCubeMapTextureToSphericalPolynomial(this), null === this._texture._sphericalPolynomialPromise ? this._texture._sphericalPolynomialComputed = !0 : this._texture._sphericalPolynomialPromise.then((zz => {
-              this._texture._sphericalPolynomial = zz, this._texture._sphericalPolynomialComputed = !0
-            }))), null
-          }
-          return null
-        },
-        set: function(zz) {
-          this._texture && (this._texture._sphericalPolynomial = zz)
-        },
-        enumerable: !0,
-        configurable: !0
-      }))
-    }
-  },
-  40972: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => Hz
-    });
-    var Ez = bz(36519),
-      nz = bz(36553),
-      iz = bz(39164),
-      lz = bz(36526),
-      Mz = bz(36715);
-    class tz {
-      constructor(zz, uz, bz, Ez) {
-        this.name = zz, this.worldAxisForNormal = uz, this.worldAxisForFileX = bz, this.worldAxisForFileY = Ez
+    var Yq = gq(37139),
+      lq = gq(37158),
+      Oq = gq(39741),
+      mq = gq(37145),
+      xq = gq(37289);
+    class Aq {
+      constructor(qq, Eq, gq, Yq) {
+        this.name = qq, this.worldAxisForNormal = Eq, this.worldAxisForFileX = gq, this.worldAxisForFileY = Yq
       }
     }
-    class Hz {
-      static _NearestPow2Floor(zz) {
-        return zz <= 1 ? 1 : 1 << Math.floor(Math.log2(zz))
+    class cq {
+      static _NearestPow2Floor(qq) {
+        return qq <= 1 ? 1 : 1 << Math.floor(Math.log2(qq))
       }
-      static ConvertCubeMapTextureToSphericalPolynomial(zz) {
-        if (!zz.isCube) return null;
-        zz.XT()?.uR().flushFramebuffer();
-        const uz = zz.getSize().width,
-          bz = zz._sphericalPolynomialTargetSize,
-          Ez = bz > 0 ? this._NearestPow2Floor(bz) : 0,
-          nz = !zz.noMipmap && !0 === zz._texture?.generateMipMaps,
-          iz = Ez > 0 && Ez < uz && nz,
-          lz = iz ? Math.max(0, Math.round(Math.log2(uz / Ez))) : 0,
-          Mz = iz ? Math.max(1, Math.floor(uz / Math.pow(2, lz))) : uz,
-          tz = zz.readPixels(0, lz, void 0, !1),
-          Hz = zz.readPixels(1, lz, void 0, !1);
-        let Oz, pz;
-        zz.isRenderTarget ? (Oz = zz.readPixels(3, lz, void 0, !1), pz = zz.readPixels(2, lz, void 0, !1)) : (Oz = zz.readPixels(2, lz, void 0, !1), pz = zz.readPixels(3, lz, void 0, !1));
-        const dz = zz.readPixels(4, lz, void 0, !1),
-          Fz = zz.readPixels(5, lz, void 0, !1),
-          Zz = zz.gammaSpace,
-          Rz = Ez > 0 && Ez < uz && !iz;
-        return new Promise((zz => {
-          Promise.all([Hz, tz, Oz, pz, dz, Fz]).then((bz => {
-            let [nz, iz, lz, tz, Hz, Oz] = bz, pz = Mz;
-            if (Rz) {
-              const zz = 4;
-              nz = this._DownsampleFace(nz, uz, Ez, zz), iz = this._DownsampleFace(iz, uz, Ez, zz), lz = this._DownsampleFace(lz, uz, Ez, zz), tz = this._DownsampleFace(tz, uz, Ez, zz), Hz = this._DownsampleFace(Hz, uz, Ez, zz), Oz = this._DownsampleFace(Oz, uz, Ez, zz), pz = Ez
+      static ConvertCubeMapTextureToSphericalPolynomial(qq) {
+        if (!qq.isCube) return null;
+        qq.ZJ()?.Ba().flushFramebuffer();
+        const Eq = qq.getSize().width,
+          gq = qq._sphericalPolynomialTargetSize,
+          Yq = gq > 0 ? this._NearestPow2Floor(gq) : 0,
+          lq = !qq.noMipmap && !0 === qq._texture?.generateMipMaps,
+          Oq = Yq > 0 && Yq < Eq && lq,
+          mq = Oq ? Math.max(0, Math.round(Math.log2(Eq / Yq))) : 0,
+          xq = Oq ? Math.max(1, Math.floor(Eq / Math.pow(2, mq))) : Eq,
+          Aq = qq.readPixels(0, mq, void 0, !1),
+          cq = qq.readPixels(1, mq, void 0, !1);
+        let uq, Bq;
+        qq.isRenderTarget ? (uq = qq.readPixels(3, mq, void 0, !1), Bq = qq.readPixels(2, mq, void 0, !1)) : (uq = qq.readPixels(2, mq, void 0, !1), Bq = qq.readPixels(3, mq, void 0, !1));
+        const Wq = qq.readPixels(4, mq, void 0, !1),
+          Nq = qq.readPixels(5, mq, void 0, !1),
+          aq = qq.gammaSpace,
+          Vq = Yq > 0 && Yq < Eq && !Oq;
+        return new Promise((qq => {
+          Promise.all([cq, Aq, uq, Bq, Wq, Nq]).then((gq => {
+            let [lq, Oq, mq, Aq, cq, uq] = gq, Bq = xq;
+            if (Vq) {
+              const qq = 4;
+              lq = this._DownsampleFace(lq, Eq, Yq, qq), Oq = this._DownsampleFace(Oq, Eq, Yq, qq), mq = this._DownsampleFace(mq, Eq, Yq, qq), Aq = this._DownsampleFace(Aq, Eq, Yq, qq), cq = this._DownsampleFace(cq, Eq, Yq, qq), uq = this._DownsampleFace(uq, Eq, Yq, qq), Bq = Yq
             }
-            const dz = {
-              size: pz,
-              right: iz,
-              left: nz,
-              up: lz,
-              down: tz,
-              front: Hz,
-              back: Oz,
+            const Wq = {
+              size: Bq,
+              right: Oq,
+              left: lq,
+              up: mq,
+              down: Aq,
+              front: cq,
+              back: uq,
               format: 5,
-              type: nz instanceof Float32Array ? 1 : 0,
-              gammaSpace: Zz
+              type: lq instanceof Float32Array ? 1 : 0,
+              gammaSpace: aq
             };
-            zz(this.ConvertCubeMapToSphericalPolynomial(dz))
+            qq(this.ConvertCubeMapToSphericalPolynomial(Wq))
           }))
         }))
       }
-      static _AreaElement(zz, uz) {
-        return Math.atan2(zz * uz, Math.sqrt(zz * zz + uz * uz + 1))
+      static _AreaElement(qq, Eq) {
+        return Math.atan2(qq * Eq, Math.sqrt(qq * qq + Eq * Eq + 1))
       }
-      static _DownsampleFace(zz, uz, bz, Ez) {
-        const nz = zz instanceof Float32Array ? zz : Float32Array.from(zz),
-          iz = bz * bz * Ez,
-          lz = new Float32Array(iz),
-          Mz = uz / bz,
-          tz = 1 / (Mz * Mz);
-        for (let Oz = 0; Oz < bz; Oz++) {
-          const zz = Math.floor(Oz * Mz),
-            iz = Math.floor((Oz + 1) * Mz);
-          for (let Hz = 0; Hz < bz; Hz++) {
-            const pz = Math.floor(Hz * Mz),
-              dz = Math.floor((Hz + 1) * Mz),
-              Fz = (Oz * bz + Hz) * Ez;
-            for (let bz = 0; bz < Ez; bz++) {
-              let Mz = 0;
-              for (let lz = zz; lz < iz; lz++)
-                for (let zz = pz; zz < dz; zz++) Mz += nz[(lz * uz + zz) * Ez + bz];
-              lz[Fz + bz] = Mz * tz
+      static _DownsampleFace(qq, Eq, gq, Yq) {
+        const lq = qq instanceof Float32Array ? qq : Float32Array.from(qq),
+          Oq = gq * gq * Yq,
+          mq = new Float32Array(Oq),
+          xq = Eq / gq,
+          Aq = 1 / (xq * xq);
+        for (let uq = 0; uq < gq; uq++) {
+          const qq = Math.floor(uq * xq),
+            Oq = Math.floor((uq + 1) * xq);
+          for (let cq = 0; cq < gq; cq++) {
+            const Bq = Math.floor(cq * xq),
+              Wq = Math.floor((cq + 1) * xq),
+              Nq = (uq * gq + cq) * Yq;
+            for (let gq = 0; gq < Yq; gq++) {
+              let xq = 0;
+              for (let mq = qq; mq < Oq; mq++)
+                for (let qq = Bq; qq < Wq; qq++) xq += lq[(mq * Eq + qq) * Yq + gq];
+              mq[Nq + gq] = xq * Aq
             }
           }
         }
-        if (zz instanceof Float32Array) return lz;
-        const Hz = new(0, zz.constructor)(iz);
-        for (let Oz = 0; Oz < iz; Oz++) Hz[Oz] = lz[Oz] + .5 | 0;
-        return Hz
+        if (qq instanceof Float32Array) return mq;
+        const cq = new(0, qq.constructor)(Oq);
+        for (let uq = 0; uq < Oq; uq++) cq[uq] = mq[uq] + .5 | 0;
+        return cq
       }
-      static ConvertCubeMapToSphericalPolynomial(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const bz = uz > 0 ? this._NearestPow2Floor(uz) : 0;
-        if (bz > 0 && zz.size > bz) {
-          const uz = 5 === zz.format ? 4 : 3,
-            Ez = ["right", "left", "up", "down", "front", "back"],
-            nz = {};
-          for (const iz of Ez) nz[iz] = this._DownsampleFace(zz[iz], zz.size, bz, uz);
-          zz = {
-            ...zz,
-            ...nz,
-            size: bz
+      static ConvertCubeMapToSphericalPolynomial(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const gq = Eq > 0 ? this._NearestPow2Floor(Eq) : 0;
+        if (gq > 0 && qq.size > gq) {
+          const Eq = 5 === qq.format ? 4 : 3,
+            Yq = ["right", "left", "up", "down", "front", "back"],
+            lq = {};
+          for (const Oq of Yq) lq[Oq] = this._DownsampleFace(qq[Oq], qq.size, gq, Eq);
+          qq = {
+            ...qq,
+            ...lq,
+            size: gq
           }
         }
-        const Ez = new iz.c;
-        let tz = 0;
-        const Hz = 2 / zz.size,
-          Oz = Hz,
-          pz = .5 * Hz,
-          dz = pz - 1;
-        for (let iz = 0; iz < 6; iz++) {
-          const uz = this._FileFaces[iz],
-            bz = zz[uz.name];
-          let Fz = dz;
-          const Zz = 5 === zz.format ? 4 : 3;
-          for (let iz = 0; iz < zz.size; iz++) {
-            let Rz = dz;
-            for (let Oz = 0; Oz < zz.size; Oz++) {
-              const dz = uz.worldAxisForFileX.scale(Rz).add(uz.worldAxisForFileY.scale(Fz)).add(uz.worldAxisForNormal);
-              dz.normalize();
-              const Kz = this._AreaElement(Rz - pz, Fz - pz) - this._AreaElement(Rz - pz, Fz + pz) - this._AreaElement(Rz + pz, Fz - pz) + this._AreaElement(Rz + pz, Fz + pz);
-              let wz = bz[iz * zz.size * Zz + Oz * Zz + 0],
-                Xz = bz[iz * zz.size * Zz + Oz * Zz + 1],
-                fz = bz[iz * zz.size * Zz + Oz * Zz + 2];
-              isNaN(wz) && (wz = 0), isNaN(Xz) && (Xz = 0), isNaN(fz) && (fz = 0), 0 === zz.type && (wz /= 255, Xz /= 255, fz /= 255), zz.gammaSpace && (wz = Math.pow((0, nz.Clamp)(wz), lz.i), Xz = Math.pow((0, nz.Clamp)(Xz), lz.i), fz = Math.pow((0, nz.Clamp)(fz), lz.i));
-              const sz = this.MAX_HDRI_VALUE;
+        const Yq = new Oq.c;
+        let Aq = 0;
+        const cq = 2 / qq.size,
+          uq = cq,
+          Bq = .5 * cq,
+          Wq = Bq - 1;
+        for (let Oq = 0; Oq < 6; Oq++) {
+          const Eq = this._FileFaces[Oq],
+            gq = qq[Eq.name];
+          let Nq = Wq;
+          const aq = 5 === qq.format ? 4 : 3;
+          for (let Oq = 0; Oq < qq.size; Oq++) {
+            let Vq = Wq;
+            for (let uq = 0; uq < qq.size; uq++) {
+              const Wq = Eq.worldAxisForFileX.scale(Vq).add(Eq.worldAxisForFileY.scale(Nq)).add(Eq.worldAxisForNormal);
+              Wq.normalize();
+              const dq = this._AreaElement(Vq - Bq, Nq - Bq) - this._AreaElement(Vq - Bq, Nq + Bq) - this._AreaElement(Vq + Bq, Nq - Bq) + this._AreaElement(Vq + Bq, Nq + Bq);
+              let jq = gq[Oq * qq.size * aq + uq * aq + 0],
+                Hq = gq[Oq * qq.size * aq + uq * aq + 1],
+                oq = gq[Oq * qq.size * aq + uq * aq + 2];
+              isNaN(jq) && (jq = 0), isNaN(Hq) && (Hq = 0), isNaN(oq) && (oq = 0), 0 === qq.type && (jq /= 255, Hq /= 255, oq /= 255), qq.gammaSpace && (jq = Math.pow((0, lq.Clamp)(jq), mq.h), Hq = Math.pow((0, lq.Clamp)(Hq), mq.h), oq = Math.pow((0, lq.Clamp)(oq), mq.h));
+              const Pq = this.MAX_HDRI_VALUE;
               if (this.PRESERVE_CLAMPED_COLORS) {
-                const zz = Math.max(wz, Xz, fz);
-                if (zz > sz) {
-                  const uz = sz / zz;
-                  wz *= uz, Xz *= uz, fz *= uz
+                const qq = Math.max(jq, Hq, oq);
+                if (qq > Pq) {
+                  const Eq = Pq / qq;
+                  jq *= Eq, Hq *= Eq, oq *= Eq
                 }
-              } else wz = (0, nz.Clamp)(wz, 0, sz), Xz = (0, nz.Clamp)(Xz, 0, sz), fz = (0, nz.Clamp)(fz, 0, sz);
-              const rz = new Mz.c(wz, Xz, fz);
-              Ez.addLight(dz, rz, Kz), tz += Kz, Rz += Hz
+              } else jq = (0, lq.Clamp)(jq, 0, Pq), Hq = (0, lq.Clamp)(Hq, 0, Pq), oq = (0, lq.Clamp)(oq, 0, Pq);
+              const Qq = new xq.d(jq, Hq, oq);
+              Yq.addLight(Wq, Qq, dq), Aq += dq, Vq += cq
             }
-            Fz += Oz
+            Nq += uq
           }
         }
-        const Fz = 6 * (4 * Math.PI) / 6 / tz;
-        return Ez.scaleInPlace(Fz), Ez.convertIncidentRadianceToIrradiance(), Ez.convertIrradianceToLambertianRadiance(), iz.g.FromHarmonics(Ez)
+        const Nq = 6 * (4 * Math.PI) / 6 / Aq;
+        return Yq.scaleInPlace(Nq), Yq.convertIncidentRadianceToIrradiance(), Yq.convertIrradianceToLambertianRadiance(), Oq.d.FromHarmonics(Yq)
       }
     }
-    Hz._FileFaces = [new tz("right", new Ez.n(1, 0, 0), new Ez.n(0, 0, -1), new Ez.n(0, -1, 0)), new tz("left", new Ez.n(-1, 0, 0), new Ez.n(0, 0, 1), new Ez.n(0, -1, 0)), new tz("up", new Ez.n(0, 1, 0), new Ez.n(1, 0, 0), new Ez.n(0, 0, 1)), new tz("down", new Ez.n(0, -1, 0), new Ez.n(1, 0, 0), new Ez.n(0, 0, -1)), new tz("front", new Ez.n(0, 0, 1), new Ez.n(1, 0, 0), new Ez.n(0, -1, 0)), new tz("back", new Ez.n(0, 0, -1), new Ez.n(-1, 0, 0), new Ez.n(0, -1, 0))], Hz.MAX_HDRI_VALUE = 4096, Hz.PRESERVE_CLAMPED_COLORS = !1
+    cq._FileFaces = [new Aq("right", new Yq.q(1, 0, 0), new Yq.q(0, 0, -1), new Yq.q(0, -1, 0)), new Aq("left", new Yq.q(-1, 0, 0), new Yq.q(0, 0, 1), new Yq.q(0, -1, 0)), new Aq("up", new Yq.q(0, 1, 0), new Yq.q(1, 0, 0), new Yq.q(0, 0, 1)), new Aq("down", new Yq.q(0, -1, 0), new Yq.q(1, 0, 0), new Yq.q(0, 0, -1)), new Aq("front", new Yq.q(0, 0, 1), new Yq.q(1, 0, 0), new Yq.q(0, -1, 0)), new Aq("back", new Yq.q(0, 0, -1), new Yq.q(-1, 0, 0), new Yq.q(0, -1, 0))], cq.MAX_HDRI_VALUE = 4096, cq.PRESERVE_CLAMPED_COLORS = !1
   },
-  41012: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => iz
+  41515: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      DDSTools: () => aq
     });
-    var Ez = bz(41e3),
-      nz = bz(41014);
-    class iz {
-      static ExpandRGBDTexture(zz) {
-        const uz = zz._texture;
-        if (!uz || !zz.isRGBD) return;
-        const nz = uz.uR(),
-          iz = nz.getCaps(),
-          lz = uz.isReady;
-        let Mz = !1;
-        iz.textureHalfFloatRender && iz.textureHalfFloatLinearFiltering ? (Mz = !0, uz.type = 2) : iz.textureFloatRender && iz.textureFloatLinearFiltering && (Mz = !0, uz.type = 1), Mz && (uz.isReady = !1, uz._isRGBD = !1, uz.invertY = !1);
-        const tz = async () => {
-          const iz = nz.isWebGPU,
-            lz = iz ? 1 : 0;
-          uz.isReady = !1, iz ? await bz.e(332).then((() => bz(60527))) : await bz.e(314).then((() => bz(60534)));
-          const Mz = new Ez.d("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, nz, !1, void 0, uz.type, void 0, null, !1, void 0, lz);
-          Mz.externalTextureSamplerBinding = !0;
-          const tz = nz.createRenderTargetTexture(uz.width, {
-            generateDepthBuffer: !1,
-            generateMipMaps: !1,
-            generateStencilBuffer: !1,
-            samplingMode: uz.samplingMode,
-            type: uz.type,
-            format: 5
-          });
-          Mz.onEffectCreatedObservable.addOnce((bz => {
-            bz.executeWhenCompiled((() => {
-              Mz.onApply = zz => {
-                zz._bindTexture("textureSampler", uz), zz.setFloat2("scale", 1, 1)
-              }, zz.XT()?.postProcessManager.directRender([Mz], tz, !0), nz.restoreDefaultFramebuffer(), nz._releaseTexture(uz), Mz && Mz.dispose(), tz._swapAndDie(uz), uz.isReady = !0
-            }))
-          }))
-        };
-        Mz && (lz ? tz() : zz.onLoadObservable.addOnce(tz))
+    var Yq = gq(37158),
+      lq = gq(38653),
+      Oq = gq(41519),
+      mq = gq(39819);
+    const xq = 131072,
+      Aq = 131072;
+
+    function cq(qq) {
+      return qq.charCodeAt(0) + (qq.charCodeAt(1) << 8) + (qq.charCodeAt(2) << 16) + (qq.charCodeAt(3) << 24)
+    }
+    const uq = cq("DXT1"),
+      Bq = cq("DXT3"),
+      Wq = cq("DXT5"),
+      Nq = cq("DX10");
+    class aq {
+      static GetDDSInfo(qq) {
+        const Eq = new Int32Array(qq.buffer, qq.byteOffset, 31),
+          gq = new Int32Array(qq.buffer, qq.byteOffset, 35);
+        let Yq = 1;
+        Eq[2] & xq && (Yq = Math.max(1, Eq[7]));
+        const lq = Eq[21],
+          Oq = lq === Nq ? gq[32] : 0;
+        let mq = 0;
+        switch (lq) {
+          case 113:
+            mq = 2;
+            break;
+          case 116:
+            mq = 1;
+            break;
+          case Nq:
+            if (10 === Oq) {
+              mq = 2;
+              break
+            }
+            if (2 === Oq) {
+              mq = 1;
+              break
+            }
+        }
+        return {
+          width: Eq[4],
+          height: Eq[3],
+          mipmapCount: Yq,
+          isFourCC: 4 === (4 & Eq[20]),
+          isRGB: 64 === (64 & Eq[20]),
+          isLuminance: (Eq[20] & Aq) === Aq,
+          isCube: 512 === (512 & Eq[28]),
+          isCompressed: lq === uq || lq === Bq || lq === Wq,
+          dxgiFormat: Oq,
+          textureType: mq
+        }
       }
-      static async EncodeTextureToRGBD(zz, uz) {
-        let Ez = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        return uz.uR().isWebGPU ? await bz.e(333).then((() => bz(60551))) : await bz.e(315).then((() => bz(60546))), await (0, nz.c)("rgbdEncode", zz, uz, Ez, 1, 5)
+      static _GetHalfFloatAsFloatRGBAArrayBuffer(qq, Eq, gq, Yq, lq, Oq) {
+        const xq = new Float32Array(Yq),
+          Aq = new Uint16Array(lq, gq);
+        let cq = 0;
+        for (let uq = 0; uq < Eq; uq++)
+          for (let Eq = 0; Eq < qq; Eq++) {
+            const gq = 4 * (Eq + uq * qq);
+            xq[cq] = (0, mq.e)(Aq[gq]), xq[cq + 1] = (0, mq.e)(Aq[gq + 1]), xq[cq + 2] = (0, mq.e)(Aq[gq + 2]), aq.StoreLODInAlphaChannel ? xq[cq + 3] = Oq : xq[cq + 3] = (0, mq.e)(Aq[gq + 3]), cq += 4
+          }
+        return xq
+      }
+      static _GetHalfFloatRGBAArrayBuffer(qq, Eq, gq, Yq, lq, Oq) {
+        if (aq.StoreLODInAlphaChannel) {
+          const xq = new Uint16Array(Yq),
+            Aq = new Uint16Array(lq, gq);
+          let cq = 0;
+          for (let gq = 0; gq < Eq; gq++)
+            for (let Eq = 0; Eq < qq; Eq++) {
+              const Yq = 4 * (Eq + gq * qq);
+              xq[cq] = Aq[Yq], xq[cq + 1] = Aq[Yq + 1], xq[cq + 2] = Aq[Yq + 2], xq[cq + 3] = (0, mq.j)(Oq), cq += 4
+            }
+          return xq
+        }
+        return new Uint16Array(lq, gq, Yq)
+      }
+      static _GetFloatRGBAArrayBuffer(qq, Eq, gq, Yq, lq, Oq) {
+        if (aq.StoreLODInAlphaChannel) {
+          const mq = new Float32Array(Yq),
+            xq = new Float32Array(lq, gq);
+          let Aq = 0;
+          for (let gq = 0; gq < Eq; gq++)
+            for (let Eq = 0; Eq < qq; Eq++) {
+              const Yq = 4 * (Eq + gq * qq);
+              mq[Aq] = xq[Yq], mq[Aq + 1] = xq[Yq + 1], mq[Aq + 2] = xq[Yq + 2], mq[Aq + 3] = Oq, Aq += 4
+            }
+          return mq
+        }
+        return new Float32Array(lq, gq, Yq)
+      }
+      static _GetFloatAsHalfFloatRGBAArrayBuffer(qq, Eq, gq, Yq, lq, Oq) {
+        const xq = new Uint16Array(Yq),
+          Aq = new Float32Array(lq, gq);
+        let cq = 0;
+        for (let uq = 0; uq < Eq; uq++)
+          for (let Eq = 0; Eq < qq; Eq++) xq[cq] = (0, mq.j)(Aq[cq]), xq[cq + 1] = (0, mq.j)(Aq[cq + 1]), xq[cq + 2] = (0, mq.j)(Aq[cq + 2]), aq.StoreLODInAlphaChannel ? xq[cq + 3] = (0, mq.j)(Oq) : xq[cq + 3] = (0, mq.j)(Aq[cq + 3]), cq += 4;
+        return xq
+      }
+      static _GetFloatAsUIntRGBAArrayBuffer(qq, Eq, gq, lq, Oq, mq) {
+        const xq = new Uint8Array(lq),
+          Aq = new Float32Array(Oq, gq);
+        let cq = 0;
+        for (let uq = 0; uq < Eq; uq++)
+          for (let Eq = 0; Eq < qq; Eq++) {
+            const gq = 4 * (Eq + uq * qq);
+            xq[cq] = 255 * (0, Yq.Clamp)(Aq[gq]), xq[cq + 1] = 255 * (0, Yq.Clamp)(Aq[gq + 1]), xq[cq + 2] = 255 * (0, Yq.Clamp)(Aq[gq + 2]), aq.StoreLODInAlphaChannel ? xq[cq + 3] = mq : xq[cq + 3] = 255 * (0, Yq.Clamp)(Aq[gq + 3]), cq += 4
+          }
+        return xq
+      }
+      static _GetHalfFloatAsUIntRGBAArrayBuffer(qq, Eq, gq, lq, Oq, xq) {
+        const Aq = new Uint8Array(lq),
+          cq = new Uint16Array(Oq, gq);
+        let uq = 0;
+        for (let Bq = 0; Bq < Eq; Bq++)
+          for (let Eq = 0; Eq < qq; Eq++) {
+            const gq = 4 * (Eq + Bq * qq);
+            Aq[uq] = 255 * (0, Yq.Clamp)((0, mq.e)(cq[gq])), Aq[uq + 1] = 255 * (0, Yq.Clamp)((0, mq.e)(cq[gq + 1])), Aq[uq + 2] = 255 * (0, Yq.Clamp)((0, mq.e)(cq[gq + 2])), aq.StoreLODInAlphaChannel ? Aq[uq + 3] = xq : Aq[uq + 3] = 255 * (0, Yq.Clamp)((0, mq.e)(cq[gq + 3])), uq += 4
+          }
+        return Aq
+      }
+      static _GetRGBAArrayBuffer(qq, Eq, gq, Yq, lq, Oq, mq, xq, Aq) {
+        const cq = new Uint8Array(Yq),
+          uq = new Uint8Array(lq, gq);
+        let Bq = 0;
+        for (let Wq = 0; Wq < Eq; Wq++)
+          for (let Eq = 0; Eq < qq; Eq++) {
+            const gq = 4 * (Eq + Wq * qq);
+            cq[Bq] = uq[gq + Oq], cq[Bq + 1] = uq[gq + mq], cq[Bq + 2] = uq[gq + xq], cq[Bq + 3] = uq[gq + Aq], Bq += 4
+          }
+        return cq
+      }
+      static _ExtractLongWordOrder(qq) {
+        return 0 === qq || 255 === qq || -16777216 === qq ? 0 : 1 + aq._ExtractLongWordOrder(qq >> 8)
+      }
+      static _GetRGBArrayBuffer(qq, Eq, gq, Yq, lq, Oq, mq, xq) {
+        const Aq = new Uint8Array(Yq),
+          cq = new Uint8Array(lq, gq);
+        let uq = 0;
+        for (let Bq = 0; Bq < Eq; Bq++)
+          for (let Eq = 0; Eq < qq; Eq++) {
+            const gq = 3 * (Eq + Bq * qq);
+            Aq[uq] = cq[gq + Oq], Aq[uq + 1] = cq[gq + mq], Aq[uq + 2] = cq[gq + xq], uq += 3
+          }
+        return Aq
+      }
+      static _GetLuminanceArrayBuffer(qq, Eq, gq, Yq, lq) {
+        const Oq = new Uint8Array(Yq),
+          mq = new Uint8Array(lq, gq);
+        let xq = 0;
+        for (let Aq = 0; Aq < Eq; Aq++)
+          for (let Eq = 0; Eq < qq; Eq++) {
+            const gq = Eq + Aq * qq;
+            Oq[xq] = mq[gq], xq++
+          }
+        return Oq
+      }
+      static UploadDDSLevels(qq, Eq, gq, Yq, mq, Aq) {
+        let cq = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : -1,
+          Vq = arguments.length > 7 ? arguments[7] : void 0,
+          dq = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
+          jq = null;
+        Yq.sphericalPolynomial && (jq = []);
+        const Hq = !!qq.getCaps().s3tc;
+        Eq.generateMipMaps = mq;
+        const oq = new Int32Array(gq.buffer, gq.byteOffset, 31);
+        let Pq, Qq, yq, tq, rq, vq, hq, nq = 0,
+          bq = 0,
+          iq = 1;
+        if (542327876 !== oq[0]) return void lq.b.Error("Invalid magic number in DDS header");
+        if (!Yq.isFourCC && !Yq.isRGB && !Yq.isLuminance) return void lq.b.Error("Unsupported format, must contain a FourCC, RGB or LUMINANCE code");
+        if (Yq.isCompressed && !Hq) return void lq.b.Error("Compressed textures are not supported on this platform.");
+        let Zq = oq[22];
+        tq = oq[1] + 4;
+        let fq = !1;
+        if (Yq.isFourCC) switch (Pq = oq[21], Pq) {
+          case uq:
+            iq = 8, bq = 33777;
+            break;
+          case Bq:
+            iq = 16, bq = 33778;
+            break;
+          case Wq:
+            iq = 16, bq = 33779;
+            break;
+          case 113:
+            fq = !0, Zq = 64;
+            break;
+          case 116:
+            fq = !0, Zq = 128;
+            break;
+          case Nq: {
+            tq += 20;
+            let qq = !1;
+            switch (Yq.dxgiFormat) {
+              case 10:
+                fq = !0, Zq = 64, qq = !0;
+                break;
+              case 2:
+                fq = !0, Zq = 128, qq = !0;
+                break;
+              case 88:
+                Yq.isRGB = !0, Yq.isFourCC = !1, Zq = 32, qq = !0
+            }
+            if (qq) break
+          }
+          default:
+            return void lq.b.Error(["Unsupported FourCC code:", (Mq = Pq, String.fromCharCode(255 & Mq, Mq >> 8 & 255, Mq >> 16 & 255, Mq >> 24 & 255))])
+        }
+        var Mq;
+        const Tq = aq._ExtractLongWordOrder(oq[23]),
+          zq = aq._ExtractLongWordOrder(oq[24]),
+          Sq = aq._ExtractLongWordOrder(oq[25]),
+          pq = aq._ExtractLongWordOrder(oq[26]);
+        fq && (bq = qq._getRGBABufferInternalSizedFormat(Yq.textureType)), vq = 1, oq[2] & xq && !1 !== mq && (vq = Math.max(1, oq[7]));
+        const Gq = Vq || 0,
+          Lq = qq.getCaps();
+        for (let lq = Gq; lq < Aq; lq++) {
+          for (Qq = oq[4], yq = oq[3], hq = 0; hq < vq; ++hq) {
+            if (-1 === cq || cq === hq) {
+              const Oq = -1 === cq ? hq : 0;
+              if (!Yq.isCompressed && Yq.isFourCC) {
+                Eq.format = 5, nq = Qq * yq * 4;
+                let Yq = null;
+                if (qq._badOS || qq._badDesktopOS || !Lq.textureHalfFloat && !Lq.textureFloat) 128 === Zq ? (Yq = aq._GetFloatAsUIntRGBAArrayBuffer(Qq, yq, gq.byteOffset + tq, nq, gq.buffer, Oq), jq && 0 == Oq && jq.push(aq._GetFloatRGBAArrayBuffer(Qq, yq, gq.byteOffset + tq, nq, gq.buffer, Oq))) : 64 === Zq && (Yq = aq._GetHalfFloatAsUIntRGBAArrayBuffer(Qq, yq, gq.byteOffset + tq, nq, gq.buffer, Oq), jq && 0 == Oq && jq.push(aq._GetHalfFloatAsFloatRGBAArrayBuffer(Qq, yq, gq.byteOffset + tq, nq, gq.buffer, Oq))), Eq.type = 0;
+                else {
+                  const qq = Lq.textureFloat && (dq && Lq.textureFloatLinearFiltering || !dq),
+                    lq = Lq.textureHalfFloat && (dq && Lq.textureHalfFloatLinearFiltering || !dq),
+                    mq = (128 === Zq || 64 === Zq && !lq) && qq ? 1 : (64 === Zq || 128 === Zq && !qq) && lq ? 2 : 0;
+                  let xq, Aq = null;
+                  if (128 === Zq) switch (mq) {
+                    case 1:
+                      xq = aq._GetFloatRGBAArrayBuffer, Aq = null;
+                      break;
+                    case 2:
+                      xq = aq._GetFloatAsHalfFloatRGBAArrayBuffer, Aq = aq._GetFloatRGBAArrayBuffer;
+                      break;
+                    case 0:
+                      xq = aq._GetFloatAsUIntRGBAArrayBuffer, Aq = aq._GetFloatRGBAArrayBuffer
+                  } else switch (mq) {
+                    case 1:
+                      xq = aq._GetHalfFloatAsFloatRGBAArrayBuffer, Aq = null;
+                      break;
+                    case 2:
+                      xq = aq._GetHalfFloatRGBAArrayBuffer, Aq = aq._GetHalfFloatAsFloatRGBAArrayBuffer;
+                      break;
+                    case 0:
+                      xq = aq._GetHalfFloatAsUIntRGBAArrayBuffer, Aq = aq._GetHalfFloatAsFloatRGBAArrayBuffer
+                  }
+                  Eq.type = mq, Yq = xq(Qq, yq, gq.byteOffset + tq, nq, gq.buffer, Oq), jq && 0 == Oq && jq.push(Aq ? Aq(Qq, yq, gq.byteOffset + tq, nq, gq.buffer, Oq) : Yq)
+                }
+                Yq && qq._uploadDataToTextureDirectly(Eq, Yq, lq, Oq)
+              } else if (Yq.isRGB) Eq.type = 0, 24 === Zq ? (Eq.format = 4, nq = Qq * yq * 3, rq = aq._GetRGBArrayBuffer(Qq, yq, gq.byteOffset + tq, nq, gq.buffer, Tq, zq, Sq), qq._uploadDataToTextureDirectly(Eq, rq, lq, Oq)) : (Eq.format = 5, nq = Qq * yq * 4, rq = aq._GetRGBAArrayBuffer(Qq, yq, gq.byteOffset + tq, nq, gq.buffer, Tq, zq, Sq, pq), qq._uploadDataToTextureDirectly(Eq, rq, lq, Oq));
+              else if (Yq.isLuminance) {
+                const Yq = qq._getUnpackAlignement(),
+                  mq = Qq;
+                nq = Math.floor((Qq + Yq - 1) / Yq) * Yq * (yq - 1) + mq, rq = aq._GetLuminanceArrayBuffer(Qq, yq, gq.byteOffset + tq, nq, gq.buffer), Eq.format = 1, Eq.type = 0, qq._uploadDataToTextureDirectly(Eq, rq, lq, Oq)
+              } else nq = Math.max(4, Qq) / 4 * Math.max(4, yq) / 4 * iq, rq = new Uint8Array(gq.buffer, gq.byteOffset + tq, nq), Eq.type = 0, qq._uploadCompressedDataToTextureDirectly(Eq, bq, Qq, yq, rq, lq, Oq)
+            }
+            tq += Zq ? Qq * yq * (Zq / 8) : nq, Qq *= .5, yq *= .5, Qq = Math.max(1, Qq), yq = Math.max(1, yq)
+          }
+          if (void 0 !== Vq) break
+        }
+        jq && jq.length > 0 ? Yq.sphericalPolynomial = Oq.b.ConvertCubeMapToSphericalPolynomial({
+          size: oq[4],
+          right: jq[0],
+          left: jq[1],
+          up: jq[2],
+          down: jq[3],
+          front: jq[4],
+          back: jq[5],
+          format: 5,
+          type: 1,
+          gammaSpace: !1
+        }) : Yq.sphericalPolynomial = void 0
       }
     }
+    aq.StoreLODInAlphaChannel = !1
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const qq in modules) Object.freeze(modules[qq]);

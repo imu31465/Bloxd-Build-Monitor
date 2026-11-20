@@ -1,691 +1,803 @@
 export const id = 107;
-export const ids = [107, 124];
+export const ids = [107];
 export const modules = {
-  4722: (zz, uz, bz) => {
-    var Ez = bz(4726);
-
-    function nz() {}
-
-    function iz() {}
-    iz.resetWarningCache = nz, zz.exports = function() {
-      function zz(zz, uz, bz, nz, iz, lz) {
-        if (lz !== Ez) {
-          var Mz = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-          throw Mz.name = "Invariant Violation", Mz
-        }
-      }
-
-      function uz() {
-        return zz
-      }
-      zz.isRequired = zz;
-      var bz = {
-        array: zz,
-        bigint: zz,
-        bool: zz,
-        func: zz,
-        number: zz,
-        object: zz,
-        string: zz,
-        symbol: zz,
-        any: zz,
-        arrayOf: uz,
-        element: zz,
-        elementType: zz,
-        instanceOf: uz,
-        node: zz,
-        objectOf: uz,
-        oneOf: uz,
-        oneOfType: uz,
-        shape: uz,
-        exact: uz,
-        checkPropTypes: iz,
-        resetWarningCache: nz
-      };
-      return bz.PropTypes = bz, bz
+  4845: (qq, Eq, gq) => {
+    function Yq(qq) {
+      return Yq = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(qq) {
+        return typeof qq
+      } : function(qq) {
+        return qq && "function" == typeof Symbol && qq.constructor === Symbol && qq !== Symbol.prototype ? "symbol" : typeof qq
+      }, Yq(qq)
     }
-  },
-  4714: (zz, uz, bz) => {
-    zz.exports = bz(4722)()
-  },
-  4726: zz => {
-    zz.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
-  },
-  6301: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      ShaderPackPublishForm: () => fz
-    });
-    var Ez = bz(56),
-      nz = bz(6283),
-      iz = bz(199),
-      lz = bz(6307),
-      Mz = bz(1047),
-      tz = bz(1419),
-      Hz = bz(1628),
-      Oz = bz(1114),
-      pz = bz(6316),
-      dz = bz(6337),
-      Fz = bz(1473),
-      Zz = bz(1181),
-      Rz = bz(6340),
-      Kz = bz(6371),
-      wz = bz(6274),
-      Xz = bz(1089);
+    Object.defineProperty(Eq, "__esModule", {
+      value: !0
+    }), Eq.default = void 0;
+    var lq = Bq(gq(1018)),
+      Oq = function(qq, Eq) {
+        if (!Eq && qq && qq.__esModule) return qq;
+        if (null === qq || "object" !== Yq(qq) && "function" !== typeof qq) return {
+          default: qq
+        };
+        var gq = uq(Eq);
+        if (gq && gq.has(qq)) return gq.get(qq);
+        var lq = {},
+          Oq = Object.defineProperty && Object.getOwnPropertyDescriptor;
+        for (var mq in qq)
+          if ("default" !== mq && Object.prototype.hasOwnProperty.call(qq, mq)) {
+            var xq = Oq ? Object.getOwnPropertyDescriptor(qq, mq) : null;
+            xq && (xq.get || xq.set) ? Object.defineProperty(lq, mq, xq) : lq[mq] = qq[mq]
+          } lq.default = qq, gq && gq.set(qq, lq);
+        return lq
+      }(gq(57)),
+      mq = Bq(gq(4800)),
+      xq = Bq(gq(4853)),
+      Aq = gq(4856),
+      cq = gq(1070);
 
-    function fz(zz) {
-      var uz, bz, pz;
-      let {
-        existing: fz,
-        onPublished: rz
-      } = zz;
-      const {
-        t: Nz
-      } = (0, Zz.F)(), {
-        userContext: vz,
-        isUserContextUpdating: xz
-      } = (0, Oz.c)(), [Jz, Az] = (0, Ez.useState)(null), [Tz, Lz] = (0, Ez.useState)(0), [Pz, Gz] = (0, Ez.useState)(null !== (uz = null === fz || void 0 === fz ? void 0 : fz.name) && void 0 !== uz ? uz : ""), az = (0, Ez.useRef)(Pz), Vz = (0, Ez.useRef)(""), mz = zz => {
-        az.current = zz, Gz(zz)
-      }, [qz, hz] = (0, Ez.useState)(null !== (bz = null === fz || void 0 === fz ? void 0 : fz.description) && void 0 !== bz ? bz : ""), Uz = (0, Ez.useRef)(qz), cz = (0, Ez.useRef)(""), gz = zz => {
-        Uz.current = zz, hz(zz)
-      }, [Sz, yz] = (0, Ez.useState)(!1), {
-        loading: Dz,
-        error: Qz,
-        setError: Wz,
-        onFiles: ez
-      } = (0, dz.e)((async zz => {
-        const uz = await (0, Rz.loadPageShaderPackCompiler)();
-        if (!uz) return void Wz(Nz("shaderPack:compilerUnavailable"));
-        const bz = await (0, Kz.g)(uz, zz.files);
-        if (Az({
-            pack: zz,
-            validation: bz,
-            sourceBytes: (0, lz.u)(zz.files)
-          }), !fz) {
-          var Ez;
-          if ("" !== az.current.trim() && az.current !== Vz.current || (Vz.current = (0, nz.O)(zz.manifest.name.trim(), nz.y), mz(Vz.current)), "" === Uz.current.trim() || Uz.current === cz.current) cz.current = (0, nz.O)((null !== (Ez = zz.manifest.description) && void 0 !== Ez ? Ez : "").trim(), nz.l), gz(cz.current);
-          Lz((zz => zz + 1))
-        }
-      })), jz = !xz && !vz.isLoggedIn() && !iz.e.offlineMode, Iz = Pz.trim(), Bz = Iz.length < nz.z, Cz = null !== Jz && !1 !== (null === (pz = Jz.validation) || void 0 === pz ? void 0 : pz.ok) && !Dz && !Bz && !jz && !xz;
-      return (0, Xz.jsxs)("div", {
-        className: "ShaderPackPublishForm",
-        children: [(0, Xz.jsx)("p", {
-          className: "ShaderPackPublishIntro",
-          children: fz ? Nz("shaderPackListing:uploadIntro", {
-            minutes: String(nz.D / 6e4)
-          }) : Nz("shaderPackListing:publishIntro")
-        }), (0, Xz.jsx)(oz, {}), jz && (0, Xz.jsx)("div", {
-          className: "ShaderPackPublishNote Warning",
-          children: Nz("shaderPackListing:publishNeedsLogin")
-        }), (0, Xz.jsx)(dz.c, {
-          busy: Dz,
-          disabled: Dz || Sz,
-          onFiles: zz => {
-            Az(null), ez(zz)
-          }
-        }), Jz && (0, Xz.jsxs)("div", {
-          className: "ShaderPackPublishSummary",
-          children: [(0, Xz.jsx)("div", {
-            className: "ShaderPackPublishPackName",
-            children: Jz.pack.manifest.name
-          }), (0, Xz.jsxs)("div", {
-            className: "ShaderPackPublishPackSize",
-            children: [Nz("shaderPackListing:sizeValue", {
-              kilobytes: String((0, wz.N)(Jz.sourceBytes))
-            }), " \xb7", " ", Nz("shaderPackListing:filesValue", {
-              files: String(Jz.pack.files.length)
-            })]
-          }), (0, Xz.jsx)(sz, {
-            picked: Jz
-          })]
-        }), !fz && (0, Xz.jsxs)(Xz.Fragment, {
-          children: [(0, Xz.jsxs)("label", {
-            className: "ShaderPackPublishField",
-            children: [(0, Xz.jsx)("span", {
-              children: Nz("general:name")
-            }), (0, Xz.jsx)(Hz.d, {
-              className: "ShaderPackPublishInput",
-              defaultValue: Pz,
-              maxLength: nz.y,
-              onValueChange: mz
-            }, Tz), Jz && Bz && (0, Xz.jsx)("span", {
-              className: "ShaderPackPublishHint",
-              children: Nz("shaderPackListing:nameTooShort", {
-                min: String(nz.z)
-              })
-            })]
-          }), (0, Xz.jsxs)("label", {
-            className: "ShaderPackPublishField",
-            children: [(0, Xz.jsx)("span", {
-              children: Nz("general:description")
-            }), (0, Xz.jsx)(Hz.d, {
-              className: "ShaderPackPublishInput ShaderPackPublishDescription",
-              defaultValue: qz,
-              maxLength: nz.l,
-              onValueChange: gz,
-              useTextarea: !0
-            }, Tz)]
-          })]
-        }), Qz && (0, Xz.jsx)("div", {
-          className: "ShaderPackPublishNote Error",
-          children: Qz
-        }), (0, Xz.jsxs)(tz.q, {
-          className: "ShaderPackPublishButton",
-          disabled: !Cz,
-          loading: Sz,
-          onClick: () => {
-            !async function() {
-              var zz;
-              if (!Jz) return;
-              const {
-                name: uz,
-                description: bz
-              } = null !== fz && void 0 !== fz ? fz : {
-                name: Iz,
-                description: qz.trim()
-              }, Ez = {
-                packId: null !== (zz = null === fz || void 0 === fz ? void 0 : fz.packId) && void 0 !== zz ? zz : null,
-                name: uz,
-                description: bz,
-                apiVersion: Jz.pack.manifest.apiVersion,
-                files: (0, lz.s)(Jz.pack.files),
-                keepCircleShadows: !0 === Jz.pack.manifest.keepCircleShadows
-              };
-              if ((new TextEncoder).encode(JSON.stringify(Ez)).byteLength > 1024 * nz.M) Wz(Nz("shaderPackListing:publishTooBig", {
-                kilobytes: String(nz.M)
-              }));
-              else {
-                yz(!0), Wz(null);
-                try {
-                  rz(await Fz.c.publishShaderPack(vz, Ez))
-                } catch (iz) {
-                  console.error("Failed to publish the shader pack", iz), Wz((0, wz.v)(iz, Nz, "shaderPackListing:publishFailed"))
-                } finally {
-                  yz(!1)
-                }
+    function uq(qq) {
+      if ("function" !== typeof WeakMap) return null;
+      var Eq = new WeakMap,
+        gq = new WeakMap;
+      return (uq = function(qq) {
+        return qq ? gq : Eq
+      })(qq)
+    }
+
+    function Bq(qq) {
+      return qq && qq.__esModule ? qq : {
+        default: qq
+      }
+    }
+
+    function Wq(qq, Eq) {
+      var gq = "undefined" !== typeof Symbol && qq[Symbol.iterator] || qq["@@iterator"];
+      if (!gq) {
+        if (Array.isArray(qq) || (gq = function(qq, Eq) {
+            if (!qq) return;
+            if ("string" === typeof qq) return Nq(qq, Eq);
+            var gq = Object.prototype.toString.call(qq).slice(8, -1);
+            "Object" === gq && qq.constructor && (gq = qq.constructor.name);
+            if ("Map" === gq || "Set" === gq) return Array.from(qq);
+            if ("Arguments" === gq || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(gq)) return Nq(qq, Eq)
+          }(qq)) || Eq && qq && "number" === typeof qq.length) {
+          gq && (qq = gq);
+          var Yq = 0,
+            lq = function() {};
+          return {
+            s: lq,
+            n: function() {
+              return Yq >= qq.length ? {
+                done: !0
+              } : {
+                done: !1,
+                value: qq[Yq++]
               }
-            }()
-          },
-          children: [(0, Xz.jsx)(Mz.c, {
-            name: "upload"
-          }), " ", Nz(fz ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
-        })]
-      })
-    }
-
-    function sz(zz) {
-      let {
-        picked: uz
-      } = zz;
-      const {
-        t: bz
-      } = (0, Zz.F)(), {
-        validation: Ez
-      } = uz;
-      return null === Ez ? (0, Xz.jsx)("div", {
-        className: "ShaderPackPublishNote",
-        children: bz("shaderPackListing:publishUnchecked")
-      }) : Ez.ok ? (0, Xz.jsxs)(Xz.Fragment, {
-        children: [(0, Xz.jsxs)("div", {
-          className: "ShaderPackPublishNote Ready",
-          children: [(0, Xz.jsx)(Mz.c, {
-            name: "circle-check"
-          }), " ", bz("shaderPackListing:publishReady")]
-        }), Ez.offInStrict.length > 0 && (0, Xz.jsxs)(Xz.Fragment, {
-          children: [(0, Xz.jsxs)("div", {
-            className: "ShaderPackPublishNote Warning",
-            children: [(0, Xz.jsx)(Mz.c, {
-              name: "triangle-exclamation"
-            }), " ", bz("shaderPack:offInStrict")]
-          }), (0, Xz.jsx)(pz.b, {
-            diagnostics: Ez.offInStrict,
-            t: bz
-          })]
-        })]
-      }) : (0, Xz.jsxs)(Xz.Fragment, {
-        children: [(0, Xz.jsxs)("div", {
-          className: "ShaderPackPublishNote Error",
-          children: [(0, Xz.jsx)(Mz.c, {
-            name: "triangle-exclamation"
-          }), " ", bz("shaderPackListing:publishHasErrors")]
-        }), (0, Xz.jsx)(pz.b, {
-          diagnostics: Ez.errors,
-          more: Ez.moreErrors,
-          t: bz
-        })]
-      })
-    }
-    const rz = "\0";
-
-    function oz() {
-      const {
-        t: zz
-      } = (0, Zz.F)(), [uz, bz] = zz("shaderPackListing:bloxdhubHelp", {
-        site: rz
-      }).split(rz);
-      return (0, Xz.jsxs)("p", {
-        className: "ShaderPackPublishIntro",
-        children: [uz, (0, Xz.jsx)("a", {
-          className: "ShaderPackPublishLink",
-          href: nz.f,
-          target: "_blank",
-          rel: "noopener noreferrer",
-          children: nz.b
-        }), bz]
-      })
-    }
-  },
-  6299: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      default: () => Oz
-    });
-    var Ez = bz(1482),
-      nz = bz(1419),
-      iz = bz(1181),
-      lz = bz(6301),
-      Mz = bz(6289),
-      tz = bz(6274),
-      Hz = bz(1089);
-
-    function Oz() {
-      const {
-        t: zz
-      } = (0, iz.F)(), uz = (0, Ez.useNavigatePreserveSearch)();
-      return (0, Mz.e)(), (0, Hz.jsxs)("div", {
-        className: "ShaderPackPublishPage AnimFadeIn",
-        children: [(0, Hz.jsx)("div", {
-          className: "ShaderPackPublishBack",
-          children: (0, Hz.jsx)(nz.d, {
-            onClick: () => {
-              uz(tz.P)
             },
-            children: zz("shaderPackListing:backToPacks")
-          })
-        }), (0, Hz.jsx)("h1", {
-          className: "ShaderPackPublishTitle",
-          children: zz("shaderPackListing:publishTitle")
-        }), (0, Hz.jsx)(lz.ShaderPackPublishForm, {
-          existing: null,
-          onPublished: zz => {
-            uz((0, tz.W)(zz.packId), {
-              replace: !0
+            e: function(qq) {
+              throw qq
+            },
+            f: lq
+          }
+        }
+        throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
+      }
+      var Oq, mq = !0,
+        xq = !1;
+      return {
+        s: function() {
+          gq = gq.call(qq)
+        },
+        n: function() {
+          var qq = gq.next();
+          return mq = qq.done, qq
+        },
+        e: function(qq) {
+          xq = !0, Oq = qq
+        },
+        f: function() {
+          try {
+            mq || null == gq.return || gq.return()
+          } finally {
+            if (xq) throw Oq
+          }
+        }
+      }
+    }
+
+    function Nq(qq, Eq) {
+      (null == Eq || Eq > qq.length) && (Eq = qq.length);
+      for (var gq = 0, Yq = new Array(Eq); gq < Eq; gq++) Yq[gq] = qq[gq];
+      return Yq
+    }
+
+    function aq(qq, Eq) {
+      for (var gq = 0; gq < Eq.length; gq++) {
+        var Yq = Eq[gq];
+        Yq.enumerable = Yq.enumerable || !1, Yq.configurable = !0, "value" in Yq && (Yq.writable = !0), Object.defineProperty(qq, Yq.key, Yq)
+      }
+    }
+
+    function Vq(qq, Eq) {
+      return Vq = Object.setPrototypeOf || function(qq, Eq) {
+        return qq.__proto__ = Eq, qq
+      }, Vq(qq, Eq)
+    }
+
+    function dq(qq) {
+      var Eq = function() {
+        if ("undefined" === typeof Reflect || !Reflect.construct) return !1;
+        if (Reflect.construct.sham) return !1;
+        if ("function" === typeof Proxy) return !0;
+        try {
+          return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], (function() {}))), !0
+        } catch (qq) {
+          return !1
+        }
+      }();
+      return function() {
+        var gq, lq = Hq(qq);
+        if (Eq) {
+          var Oq = Hq(this).constructor;
+          gq = Reflect.construct(lq, arguments, Oq)
+        } else gq = lq.apply(this, arguments);
+        return function(qq, Eq) {
+          if (Eq && ("object" === Yq(Eq) || "function" === typeof Eq)) return Eq;
+          if (void 0 !== Eq) throw new TypeError("Derived constructors may only return object or undefined");
+          return jq(qq)
+        }(this, gq)
+      }
+    }
+
+    function jq(qq) {
+      if (void 0 === qq) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+      return qq
+    }
+
+    function Hq(qq) {
+      return Hq = Object.setPrototypeOf ? Object.getPrototypeOf : function(qq) {
+        return qq.__proto__ || Object.getPrototypeOf(qq)
+      }, Hq(qq)
+    }
+
+    function oq(qq, Eq, gq) {
+      return Eq in qq ? Object.defineProperty(qq, Eq, {
+        value: gq,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+      }) : qq[Eq] = gq, qq
+    }
+    var Pq = {
+        orientation: {
+          horizontal: {
+            dimension: "width",
+            direction: "left",
+            reverseDirection: "right",
+            coordinate: "x"
+          },
+          vertical: {
+            dimension: "height",
+            direction: "top",
+            reverseDirection: "bottom",
+            coordinate: "y"
+          }
+        }
+      },
+      Qq = function(qq) {
+        ! function(qq, Eq) {
+          if ("function" !== typeof Eq && null !== Eq) throw new TypeError("Super expression must either be null or a function");
+          Object.defineProperty(qq, "prototype", {
+            value: Object.create(Eq && Eq.prototype, {
+              constructor: {
+                value: qq,
+                writable: !0,
+                configurable: !0
+              }
+            }),
+            writable: !1
+          }), Eq && Vq(qq, Eq)
+        }(mq, qq);
+        var Eq, gq, Yq, Oq = dq(mq);
+
+        function mq(qq, Eq) {
+          var gq;
+          return function(qq, Eq) {
+            if (!(qq instanceof Eq)) throw new TypeError("Cannot call a class as a function")
+          }(this, mq), oq(jq(gq = Oq.call(this, qq, Eq)), "handleFormat", (function(qq) {
+            var Eq = gq.props.format;
+            return Eq ? Eq(qq) : qq
+          })), oq(jq(gq), "handleUpdate", (function() {
+            if (gq.slider) {
+              var qq = gq.props.orientation,
+                Eq = (0, Aq.capitalize)(Pq.orientation[qq].dimension),
+                Yq = gq.slider["offset".concat(Eq)],
+                lq = gq.handle["offset".concat(Eq)];
+              gq.setState({
+                limit: Yq - lq,
+                grab: lq / 2
+              })
+            }
+          })), oq(jq(gq), "handleStart", (function(qq) {
+            var Eq = gq.props.onChangeStart;
+            document.addEventListener("mousemove", gq.handleDrag), document.addEventListener("mouseup", gq.handleEnd), gq.setState({
+              active: !0
+            }, (function() {
+              Eq && Eq(qq)
+            }))
+          })), oq(jq(gq), "handleDrag", (function(qq) {
+            qq.stopPropagation();
+            var Eq = gq.props.onChange,
+              Yq = qq.target,
+              lq = Yq.className,
+              Oq = Yq.classList,
+              mq = Yq.dataset;
+            if (Eq && "rangeslider__labels" !== lq) {
+              var xq = gq.position(qq);
+              Oq && Oq.contains("rangeslider__label-item") && mq.value && (xq = parseFloat(mq.value)), Eq && Eq(xq, qq)
+            }
+          })), oq(jq(gq), "handleEnd", (function(qq) {
+            var Eq = gq.props.onChangeComplete;
+            gq.setState({
+              active: !1
+            }, (function() {
+              Eq && Eq(qq)
+            })), document.removeEventListener("mousemove", gq.handleDrag), document.removeEventListener("mouseup", gq.handleEnd)
+          })), oq(jq(gq), "handleKeyDown", (function(qq) {
+            qq.preventDefault();
+            var Eq, Yq = qq.keyCode,
+              lq = gq.props,
+              Oq = lq.value,
+              mq = lq.min,
+              xq = lq.max,
+              Aq = lq.step,
+              cq = lq.onChange;
+            switch (Yq) {
+              case 38:
+              case 39:
+                Eq = Oq + Aq > xq ? xq : Oq + Aq, cq && cq(Eq, qq);
+                break;
+              case 37:
+              case 40:
+                Eq = Oq - Aq < mq ? mq : Oq - Aq, cq && cq(Eq, qq)
+            }
+          })), oq(jq(gq), "getPositionFromValue", (function(qq) {
+            var Eq = gq.state.limit,
+              Yq = gq.props,
+              lq = Yq.min,
+              Oq = (qq - lq) / (Yq.max - lq);
+            return Math.round(Oq * Eq)
+          })), oq(jq(gq), "getValueFromPosition", (function(qq) {
+            var Eq = gq.state.limit,
+              Yq = gq.props,
+              lq = Yq.orientation,
+              Oq = Yq.min,
+              mq = Yq.max,
+              xq = Yq.step,
+              cq = (0, Aq.clamp)(qq, 0, Eq) / (Eq || 1),
+              uq = xq * Math.round(cq * (mq - Oq) / xq),
+              Bq = "horizontal" === lq ? uq + Oq : mq - uq;
+            return (0, Aq.clamp)(Bq, Oq, mq)
+          })), oq(jq(gq), "position", (function(qq) {
+            var Eq = gq.state.grab,
+              Yq = gq.props,
+              lq = Yq.orientation,
+              Oq = Yq.reverse,
+              mq = gq.slider,
+              xq = Pq.orientation[lq].coordinate,
+              cq = Oq ? Pq.orientation[lq].reverseDirection : Pq.orientation[lq].direction,
+              uq = "client".concat((0, Aq.capitalize)(xq)),
+              Bq = qq.touches ? qq.touches[0][uq] : qq[uq],
+              Wq = mq.getBoundingClientRect()[cq],
+              Nq = Oq ? Wq - Bq - Eq : Bq - Wq - Eq;
+            return gq.getValueFromPosition(Nq)
+          })), oq(jq(gq), "coordinates", (function(qq) {
+            var Eq = gq.state,
+              Yq = Eq.limit,
+              lq = Eq.grab,
+              Oq = gq.props.orientation,
+              mq = gq.getValueFromPosition(qq),
+              xq = gq.getPositionFromValue(mq),
+              Aq = "horizontal" === Oq ? xq + lq : xq;
+            return {
+              fill: "horizontal" === Oq ? Aq : Yq - Aq,
+              handle: Aq,
+              label: Aq
+            }
+          })), oq(jq(gq), "renderLabels", (function(qq) {
+            return (0, cq.jsx)("ul", {
+              ref: function(qq) {
+                gq.labels = qq
+              },
+              className: (0, lq.default)("rangeslider__labels"),
+              children: qq
+            })
+          })), gq.state = {
+            active: !1,
+            limit: 0,
+            grab: 0
+          }, gq
+        }
+        return Eq = mq, (gq = [{
+          key: "componentDidMount",
+          value: function() {
+            this.handleUpdate(), new xq.default(this.handleUpdate).observe(this.slider)
+          }
+        }, {
+          key: "render",
+          value: function() {
+            var qq = this,
+              Eq = this.props,
+              gq = Eq.value,
+              Yq = Eq.orientation,
+              Oq = Eq.className,
+              mq = Eq.tooltip,
+              xq = Eq.reverse,
+              Aq = Eq.labels,
+              uq = Eq.min,
+              Bq = Eq.max,
+              Nq = Eq.handleLabel,
+              aq = this.state.active,
+              Vq = Pq.orientation[Yq].dimension,
+              dq = xq ? Pq.orientation[Yq].reverseDirection : Pq.orientation[Yq].direction,
+              jq = this.getPositionFromValue(gq),
+              Hq = this.coordinates(jq),
+              Qq = oq({}, Vq, "".concat(Hq.fill, "px")),
+              yq = oq({}, dq, "".concat(Hq.handle, "px")),
+              tq = mq && aq,
+              rq = [],
+              vq = Object.keys(Aq);
+            if (vq.length > 0) {
+              var hq, nq = Wq(vq = vq.sort((function(qq, Eq) {
+                return xq ? qq - Eq : Eq - qq
+              })));
+              try {
+                for (nq.s(); !(hq = nq.n()).done;) {
+                  var bq = hq.value,
+                    iq = this.getPositionFromValue(bq),
+                    Zq = this.coordinates(iq),
+                    fq = oq({}, dq, "".concat(Zq.label, "px"));
+                  rq.push((0, cq.jsx)("li", {
+                    className: (0, lq.default)("rangeslider__label-item"),
+                    "data-value": bq,
+                    onMouseDown: this.handleDrag,
+                    onTouchStart: this.handleStart,
+                    onTouchEnd: this.handleEnd,
+                    style: fq,
+                    children: this.props.labels[bq]
+                  }, bq))
+                }
+              } catch (Mq) {
+                nq.e(Mq)
+              } finally {
+                nq.f()
+              }
+            }
+            return (0, cq.jsxs)("div", {
+              ref: function(Eq) {
+                qq.slider = Eq
+              },
+              className: (0, lq.default)("rangeslider", "rangeslider-".concat(Yq), {
+                "rangeslider-reverse": xq
+              }, Oq),
+              onMouseDown: this.handleDrag,
+              onMouseUp: this.handleEnd,
+              onTouchStart: this.handleStart,
+              onTouchEnd: this.handleEnd,
+              "aria-valuemin": uq,
+              "aria-valuemax": Bq,
+              "aria-valuenow": gq,
+              "aria-orientation": Yq,
+              children: [(0, cq.jsx)("div", {
+                className: "rangeslider__fill",
+                style: Qq
+              }), (0, cq.jsxs)("div", {
+                ref: function(Eq) {
+                  qq.handle = Eq
+                },
+                className: "rangeslider__handle",
+                onMouseDown: this.handleStart,
+                onTouchMove: this.handleDrag,
+                onTouchEnd: this.handleEnd,
+                onKeyDown: this.handleKeyDown,
+                style: yq,
+                tabIndex: 0,
+                children: [tq && (0, cq.jsx)("div", {
+                  ref: function(Eq) {
+                    qq.tooltip = Eq
+                  },
+                  className: "rangeslider__handle-tooltip",
+                  children: (0, cq.jsx)("span", {
+                    children: this.handleFormat(gq)
+                  })
+                }), (0, cq.jsx)("div", {
+                  className: "rangeslider__handle-label",
+                  children: Nq
+                })]
+              }), Aq && this.renderLabels(rq)]
             })
           }
-        })]
-      })
+        }]) && aq(Eq.prototype, gq), Yq && aq(Eq, Yq), Object.defineProperty(Eq, "prototype", {
+          writable: !1
+        }), mq
+      }(Oq.Component);
+    oq(Qq, "propTypes", {
+      min: mq.default.number,
+      max: mq.default.number,
+      step: mq.default.number,
+      value: mq.default.number,
+      orientation: mq.default.string,
+      tooltip: mq.default.bool,
+      reverse: mq.default.bool,
+      labels: mq.default.object,
+      handleLabel: mq.default.string,
+      format: mq.default.func,
+      onChangeStart: mq.default.func,
+      onChange: mq.default.func,
+      onChangeComplete: mq.default.func
+    }), oq(Qq, "defaultProps", {
+      min: 0,
+      max: 100,
+      step: 1,
+      value: 0,
+      orientation: "horizontal",
+      tooltip: !0,
+      reverse: !1,
+      labels: {},
+      handleLabel: ""
+    });
+    var yq = Qq;
+    Eq.default = yq
+  },
+  4837: (qq, Eq, gq) => {
+    var Yq;
+    Eq.d = void 0;
+    var lq = ((Yq = gq(4845)) && Yq.__esModule ? Yq : {
+      default: Yq
+    }).default;
+    Eq.d = lq
+  },
+  4856: (qq, Eq) => {
+    Object.defineProperty(Eq, "__esModule", {
+      value: !0
+    }), Eq.capitalize = function(qq) {
+      return qq.charAt(0).toUpperCase() + qq.substr(1)
+    }, Eq.clamp = function(qq, Eq, gq) {
+      return Math.min(Math.max(qq, Eq), gq)
     }
   },
-  6289: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => dz,
-      g: () => Fz,
-      k: () => pz,
-      m: () => Zz
-    });
-    var Ez = bz(56),
-      nz = bz(6283),
-      iz = bz(1473),
-      lz = bz(6274),
-      Mz = bz(6291),
-      tz = bz(1114);
-    const Hz = "shaderPackListingView",
-      Oz = "shaderPackListingFilterOpen";
+  4807: (qq, Eq, gq) => {
+    var Yq = gq(4811);
 
-    function pz() {
-      var zz;
-      const [uz, bz] = (0, Mz.d)(Hz, nz.B[0]);
-      return [null !== (zz = nz.B.find((zz => zz === uz))) && void 0 !== zz ? zz : nz.B[0], bz]
-    }
+    function lq() {}
 
-    function dz() {
-      (0, Ez.useEffect)((() => () => {
-        window.location.pathname.startsWith(lz.P) || (0, lz.j)()
-      }), [])
-    }
-
-    function Fz() {
-      return (0, Mz.d)(Oz, !1)
-    }
-
-    function Zz() {
-      const {
-        userContext: zz,
-        isUserContextUpdating: uz
-      } = (0, tz.c)(), [bz, nz] = (0, Ez.useState)(null), lz = (0, Ez.useRef)(new Set);
-
-      function Mz(zz, uz) {
-        nz((bz => {
-          const Ez = new Set(bz);
-          return uz ? Ez.add(zz) : Ez.delete(zz), Ez
-        }))
-      }
-      return (0, Ez.useEffect)((() => {
-        if (uz) return;
-        let bz = !1;
-        return iz.c.getFavouriteShaderPacks(zz).then((zz => {
-          bz || nz(new Set(zz))
-        })).catch((zz => {
-          console.error("Failed to get favourite shader packs", zz), bz || nz(new Set)
-        })), () => {
-          bz = !0
-        }
-      }), [zz, uz]), {
-        isFavourite: zz => null === bz ? null : bz.has(zz),
-        toggle: function(uz) {
-          if (null === bz || lz.current.has(uz)) return;
-          lz.current.add(uz);
-          const Ez = !bz.has(uz);
-          Mz(uz, Ez), (Ez ? iz.c.favouriteShaderPack(zz, uz) : iz.c.unfavouriteShaderPack(zz, uz)).catch((zz => {
-            console.error("Failed to change a favourite shader pack", zz), Mz(uz, !Ez)
-          })).finally((() => {
-            lz.current.delete(uz)
-          }))
+    function Oq() {}
+    Oq.resetWarningCache = lq, qq.exports = function() {
+      function qq(qq, Eq, gq, lq, Oq, mq) {
+        if (mq !== Yq) {
+          var xq = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw xq.name = "Invariant Violation", xq
         }
       }
-    }
-  },
-  6274: (zz, uz, bz) => {
-    bz.d(uz, {
-      D: () => wz,
-      F: () => Az,
-      G: () => Oz,
-      J: () => Lz,
-      M: () => Rz,
-      N: () => Uz,
-      O: () => qz,
-      P: () => lz,
-      T: () => hz,
-      W: () => tz,
-      _: () => Mz,
-      bb: () => Vz,
-      db: () => mz,
-      e: () => Xz,
-      eb: () => fz,
-      f: () => xz,
-      gb: () => Tz,
-      h: () => Kz,
-      j: () => dz,
-      m: () => pz,
-      p: () => Pz,
-      q: () => Fz,
-      u: () => Gz,
-      v: () => cz,
-      z: () => Zz
-    });
-    var Ez = bz(6283),
-      nz = bz(158),
-      iz = bz(4313);
-    const lz = "/shader-packs",
-      Mz = `${lz}/publish`;
 
-    function tz(zz) {
-      return `${lz}/${encodeURIComponent(zz)}`
-    }
-    let Hz = null;
-
-    function Oz(zz) {
-      Hz = zz
-    }
-
-    function pz() {
-      return Hz
-    }
-
-    function dz() {
-      Hz = null
-    }
-
-    function Fz(zz) {
-      return zz.playerHasRank("developer") || zz.playerHasRank("admin")
-    }
-    const Zz = ["terrain", "water", "models", "sunShadows", "strict"],
-      Rz = {
-        terrain: "shaderPackListing:filterTerrain",
-        water: "shaderPackListing:filterWater",
-        models: "shaderPackListing:filterModels",
-        sunShadows: "shaderPackListing:filterShadows",
-        strict: "shaderPackListing:filterAllGames"
+      function Eq() {
+        return qq
+      }
+      qq.isRequired = qq;
+      var gq = {
+        array: qq,
+        bigint: qq,
+        bool: qq,
+        func: qq,
+        number: qq,
+        object: qq,
+        string: qq,
+        symbol: qq,
+        any: qq,
+        arrayOf: Eq,
+        element: qq,
+        elementType: qq,
+        instanceOf: Eq,
+        node: qq,
+        objectOf: Eq,
+        oneOf: Eq,
+        oneOfType: Eq,
+        shape: Eq,
+        exact: Eq,
+        checkPropTypes: Oq,
+        resetWarningCache: lq
       };
-
-    function Kz(zz, uz) {
-      return zz.withFeatures.includes(uz) ? "with" : zz.withoutFeatures.includes(uz) ? "without" : null
+      return gq.PropTypes = gq, gq
     }
+  },
+  4800: (qq, Eq, gq) => {
+    qq.exports = gq(4807)()
+  },
+  4811: qq => {
+    qq.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+  },
+  4853: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      default: () => rq
+    });
+    var Yq = function() {
+        if ("undefined" !== typeof Map) return Map;
 
-    function wz(zz) {
-      return null === zz ? "with" : "with" === zz ? "without" : null
-    }
+        function qq(qq, Eq) {
+          var gq = -1;
+          return qq.some((function(qq, Yq) {
+            return qq[0] === Eq && (gq = Yq, !0)
+          })), gq
+        }
+        return function() {
+          function Eq() {
+            this.__entries__ = []
+          }
+          return Object.defineProperty(Eq.prototype, "size", {
+            get: function() {
+              return this.__entries__.length
+            },
+            enumerable: !0,
+            configurable: !0
+          }), Eq.prototype.get = function(Eq) {
+            var gq = qq(this.__entries__, Eq),
+              Yq = this.__entries__[gq];
+            return Yq && Yq[1]
+          }, Eq.prototype.set = function(Eq, gq) {
+            var Yq = qq(this.__entries__, Eq);
+            ~Yq ? this.__entries__[Yq][1] = gq : this.__entries__.push([Eq, gq])
+          }, Eq.prototype.delete = function(Eq) {
+            var gq = this.__entries__,
+              Yq = qq(gq, Eq);
+            ~Yq && gq.splice(Yq, 1)
+          }, Eq.prototype.has = function(Eq) {
+            return !!~qq(this.__entries__, Eq)
+          }, Eq.prototype.clear = function() {
+            this.__entries__.splice(0)
+          }, Eq.prototype.forEach = function(qq, Eq) {
+            void 0 === Eq && (Eq = null);
+            for (var gq = 0, Yq = this.__entries__; gq < Yq.length; gq++) {
+              var lq = Yq[gq];
+              qq.call(Eq, lq[1], lq[0])
+            }
+          }, Eq
+        }()
+      }(),
+      lq = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
+      Oq = "undefined" !== typeof gq.g && gq.g.Math === Math ? gq.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
+      mq = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(Oq) : function(qq) {
+        return setTimeout((function() {
+          return qq(Date.now())
+        }), 1e3 / 60)
+      };
+    var xq = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
+      Aq = "undefined" !== typeof MutationObserver,
+      cq = function() {
+        function qq() {
+          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(qq, Eq) {
+            var gq = !1,
+              Yq = !1,
+              lq = 0;
 
-    function Xz(zz) {
-      return "with" === zz ? "only" : null === zz ? "include" : void 0
-    }
+            function Oq() {
+              gq && (gq = !1, qq()), Yq && Aq()
+            }
 
-    function fz(zz, uz) {
-      const bz = Kz(zz, uz),
-        Ez = zz => zz.filter((zz => zz !== uz));
-      return {
-        withFeatures: null === bz ? [...zz.withFeatures, uz] : Ez(zz.withFeatures),
-        withoutFeatures: "with" === bz ? [...zz.withoutFeatures, uz] : Ez(zz.withoutFeatures)
-      }
-    }
-    const sz = "section",
-      rz = "sort",
-      oz = "filters",
-      Nz = "q",
-      vz = "banned",
-      xz = "popular",
-      Jz = "strict";
+            function xq() {
+              mq(Oq)
+            }
 
-    function Az(zz) {
-      var uz, bz, nz;
-      const lz = zz.get(sz),
-        Mz = (null !== (uz = zz.get(oz)) && void 0 !== uz ? uz : Jz).split(","),
-        tz = zz.get(vz);
-      return {
-        section: "favourites" === lz || "mine" === lz ? lz : "explore",
-        sort: null !== (bz = Ez.u.find((uz => uz === zz.get(rz)))) && void 0 !== bz ? bz : xz,
-        withFeatures: Zz.filter((zz => Mz.includes(zz) && !Mz.includes(`-${zz}`))),
-        withoutFeatures: Zz.filter((zz => Mz.includes(`-${zz}`))),
-        searchQuery: (null === (nz = zz.get(Nz)) || void 0 === nz ? void 0 : nz.slice(0, Ez.G)) || null,
-        pageNumber: (0, iz.h)(zz.get(iz.e)),
-        banned: "only" === tz ? "with" : "include" === tz ? null : "without"
-      }
-    }
-
-    function Tz(zz, uz) {
-      var bz;
-      const Ez = az(uz);
-      (0, iz.k)(zz, sz, "explore" === uz.section ? null : uz.section), (0, iz.k)(zz, rz, uz.sort === xz ? null : uz.sort), (0, iz.k)(zz, oz, Ez === Jz ? null : Ez), (0, iz.k)(zz, Nz, uz.searchQuery), (0, iz.k)(zz, vz, null !== (bz = Xz(uz.banned)) && void 0 !== bz ? bz : null), (0, iz.m)(zz, uz.pageNumber)
-    }
-
-    function Lz(zz) {
-      const uz = new URLSearchParams;
-      return Tz(uz, {
-        section: "explore",
-        sort: xz,
-        withFeatures: "strict" === zz ? [zz] : [zz, "strict"],
-        withoutFeatures: [],
-        searchQuery: null,
-        pageNumber: 1,
-        banned: "without"
-      }), `${lz}?${uz.toString()}`
-    }
-
-    function Pz(zz) {
-      return az(zz) === Jz
-    }
-
-    function Gz(zz) {
-      return null !== zz.searchQuery || "with" === zz.banned || az(zz) !== Jz
-    }
-
-    function az(zz) {
-      return Zz.flatMap((uz => {
-        const bz = Kz(zz, uz);
-        return "with" === bz ? [uz] : "without" === bz ? [`-${uz}`] : []
-      })).join(",")
-    }
-    const Vz = {
-        popular: "shaderPackListing:sortPopular",
-        updated: "shaderPackListing:sortUpdated",
-        newest: "shaderPackListing:sortNewest"
+            function Aq() {
+              var qq = Date.now();
+              if (gq) {
+                if (qq - lq < 2) return;
+                Yq = !0
+              } else gq = !0, Yq = !1, setTimeout(xq, Eq);
+              lq = qq
+            }
+            return Aq
+          }(this.refresh.bind(this), 20)
+        }
+        return qq.prototype.addObserver = function(qq) {
+          ~this.observers_.indexOf(qq) || this.observers_.push(qq), this.connected_ || this.connect_()
+        }, qq.prototype.removeObserver = function(qq) {
+          var Eq = this.observers_,
+            gq = Eq.indexOf(qq);
+          ~gq && Eq.splice(gq, 1), !Eq.length && this.connected_ && this.disconnect_()
+        }, qq.prototype.refresh = function() {
+          this.updateObservers_() && this.refresh()
+        }, qq.prototype.updateObservers_ = function() {
+          var qq = this.observers_.filter((function(qq) {
+            return qq.gatherActive(), qq.hasActive()
+          }));
+          return qq.forEach((function(qq) {
+            return qq.broadcastActive()
+          })), qq.length > 0
+        }, qq.prototype.connect_ = function() {
+          lq && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), Aq ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
+            attributes: !0,
+            childList: !0,
+            characterData: !0,
+            subtree: !0
+          })) : (document.addEventListener("DOMSubtreeModified", this.refresh), this.mutationEventsAdded_ = !0), this.connected_ = !0)
+        }, qq.prototype.disconnect_ = function() {
+          lq && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
+        }, qq.prototype.onTransitionEnd_ = function(qq) {
+          var Eq = qq.propertyName,
+            gq = void 0 === Eq ? "" : Eq;
+          xq.some((function(qq) {
+            return !!~gq.indexOf(qq)
+          })) && this.refresh()
+        }, qq.getInstance = function() {
+          return this.instance_ || (this.instance_ = new qq), this.instance_
+        }, qq.instance_ = null, qq
+      }(),
+      uq = function(qq, Eq) {
+        for (var gq = 0, Yq = Object.keys(Eq); gq < Yq.length; gq++) {
+          var lq = Yq[gq];
+          Object.defineProperty(qq, lq, {
+            value: Eq[lq],
+            enumerable: !1,
+            writable: !1,
+            configurable: !0
+          })
+        }
+        return qq
       },
-      mz = {
-        forest: "shaderPackListing:viewForest",
-        desert: "shaderPackListing:viewDesert",
-        water: "shaderPackListing:viewWater",
-        night: "shaderPackListing:viewNight",
-        cave: "shaderPackListing:viewCave"
-      };
+      Bq = function(qq) {
+        return qq && qq.ownerDocument && qq.ownerDocument.defaultView || Oq
+      },
+      Wq = Hq(0, 0, 0, 0);
 
-    function qz(zz) {
-      return Math.round(100 * Math.max(0, 1 - 1 / zz))
+    function Nq(qq) {
+      return parseFloat(qq) || 0
     }
 
-    function hz(zz, uz, bz, nz) {
-      const iz = [];
-      zz.isBanned && iz.push({
-        tone: "warning",
-        text: nz("shaderPackListing:ownerBanned"),
-        detail: null
-      });
-      const {
-        pending: lz
-      } = zz;
-      if (null === zz.brokenError || lz && !lz.error || iz.push({
-          tone: "warning",
-          text: nz("shaderPackListing:ownerBroken"),
-          detail: zz.brokenError
-        }), null !== lz && void 0 !== lz && lz.error) iz.push({
-        tone: "warning",
-        text: nz(uz ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, Ez.g)(lz.error) ? null : lz.error
-      });
-      else if (lz) {
-        const zz = null === lz.renderNotBefore ? 0 : lz.renderNotBefore - bz,
-          Ez = String(Math.ceil(zz / 6e4)),
-          Mz = nz(uz ? zz > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : zz > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: Ez
-          });
-        iz.push({
-          tone: "info",
-          text: Mz,
-          detail: null
+    function aq(qq) {
+      for (var Eq = [], gq = 1; gq < arguments.length; gq++) Eq[gq - 1] = arguments[gq];
+      return Eq.reduce((function(Eq, gq) {
+        return Eq + Nq(qq["border-" + gq + "-width"])
+      }), 0)
+    }
+
+    function Vq(qq) {
+      var Eq = qq.clientWidth,
+        gq = qq.clientHeight;
+      if (!Eq && !gq) return Wq;
+      var Yq = Bq(qq).getComputedStyle(qq),
+        lq = function(qq) {
+          for (var Eq = {}, gq = 0, Yq = ["top", "right", "bottom", "left"]; gq < Yq.length; gq++) {
+            var lq = Yq[gq],
+              Oq = qq["padding-" + lq];
+            Eq[lq] = Nq(Oq)
+          }
+          return Eq
+        }(Yq),
+        Oq = lq.left + lq.right,
+        mq = lq.top + lq.bottom,
+        xq = Nq(Yq.width),
+        Aq = Nq(Yq.height);
+      if ("border-box" === Yq.boxSizing && (Math.round(xq + Oq) !== Eq && (xq -= aq(Yq, "left", "right") + Oq), Math.round(Aq + mq) !== gq && (Aq -= aq(Yq, "top", "bottom") + mq)), ! function(qq) {
+          return qq === Bq(qq).document.documentElement
+        }(qq)) {
+        var cq = Math.round(xq + Oq) - Eq,
+          uq = Math.round(Aq + mq) - gq;
+        1 !== Math.abs(cq) && (xq -= cq), 1 !== Math.abs(uq) && (Aq -= uq)
+      }
+      return Hq(lq.left, lq.top, xq, Aq)
+    }
+    var dq = "undefined" !== typeof SVGGraphicsElement ? function(qq) {
+      return qq instanceof Bq(qq).SVGGraphicsElement
+    } : function(qq) {
+      return qq instanceof Bq(qq).SVGElement && "function" === typeof qq.getBBox
+    };
+
+    function jq(qq) {
+      return lq ? dq(qq) ? function(qq) {
+        var Eq = qq.getBBox();
+        return Hq(0, 0, Eq.width, Eq.height)
+      }(qq) : Vq(qq) : Wq
+    }
+
+    function Hq(qq, Eq, gq, Yq) {
+      return {
+        x: qq,
+        y: Eq,
+        width: gq,
+        height: Yq
+      }
+    }
+    var oq = function() {
+        function qq(qq) {
+          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = Hq(0, 0, 0, 0), this.target = qq
+        }
+        return qq.prototype.isActive = function() {
+          var qq = jq(this.target);
+          return this.contentRect_ = qq, qq.width !== this.broadcastWidth || qq.height !== this.broadcastHeight
+        }, qq.prototype.broadcastRect = function() {
+          var qq = this.contentRect_;
+          return this.broadcastWidth = qq.width, this.broadcastHeight = qq.height, qq
+        }, qq
+      }(),
+      Pq = function(qq, Eq) {
+        var gq = function(qq) {
+          var Eq = qq.x,
+            gq = qq.y,
+            Yq = qq.width,
+            lq = qq.height,
+            Oq = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
+            mq = Object.create(Oq.prototype);
+          return uq(mq, {
+            x: Eq,
+            y: gq,
+            width: Yq,
+            height: lq,
+            top: gq,
+            right: Eq + Yq,
+            bottom: lq + gq,
+            left: Eq
+          }), mq
+        }(Eq);
+        uq(this, {
+          target: qq,
+          contentRect: gq
         })
-      }
-      return zz.listed || iz.push({
-        tone: "info",
-        text: nz("shaderPackListing:ownerUnlisted"),
-        detail: null
-      }), iz
-    }
-
-    function Uz(zz) {
-      return Math.max(1, Math.round(zz / 1024))
-    }
-
-    function cz(zz, uz, bz) {
-      return zz instanceof nz.c && zz.errorMessageForUser ? zz.errorMessageForUser : uz(bz)
-    }
-  },
-  6291: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => iz
-    });
-    var Ez = bz(56),
-      nz = bz(33);
-
-    function iz(zz, uz) {
-      var bz;
-      const [iz, lz] = (0, Ez.useState)(null !== (bz = nz.g.getItem(zz)) && void 0 !== bz ? bz : uz);
-      return [iz, uz => {
-        nz.g.setItem(zz, uz), lz(uz)
-      }]
-    }
-  },
-  6382: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => nz,
-      e: () => iz
-    });
-    var Ez = bz(33);
-    const nz = "shaderPack";
-    async function iz() {
-      var zz;
-      let uz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (zz = await Ez.d.getItem(nz, uz)) && void 0 !== zz ? zz : null
-    }
-  },
-  6283: (zz, uz, bz) => {
-    bz.d(uz, {
-      B: () => Ez,
-      D: () => dz,
-      G: () => Oz,
-      K: () => fz,
-      M: () => pz,
-      O: () => Hz,
-      b: () => Fz,
-      e: () => Rz,
-      f: () => Zz,
-      g: () => Xz,
-      i: () => rz,
-      l: () => tz,
-      m: () => nz,
-      q: () => sz,
-      u: () => iz,
-      y: () => Mz,
-      z: () => lz
-    });
-    const Ez = ["forest", "desert", "water", "night", "cave"];
-    const nz = {
-        full: {
-          width: 3840,
-          height: 2160
-        },
-        large: {
-          width: 1920,
-          height: 1080
-        },
-        thumb: {
-          width: 640,
-          height: 360
-        }
       },
-      iz = ["popular", "updated", "newest"],
-      lz = 3,
-      Mz = 32,
-      tz = 300;
-
-    function Hz(zz, uz) {
-      return zz.slice(0, uz).replace(/[\uD800-\uDBFF]$/, "")
-    }
-    const Oz = 64,
-      pz = 512,
-      dz = 18e5;
-    const Fz = "Bloxdhub",
-      Zz = "https://bloxdhub.com/shaders";
-
-    function Rz(zz) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(zz)}`
-    }
-    const Kz = "Screenshot generation failed.",
-      wz = "Its screenshots couldn't be generated:";
-
-    function Xz(zz) {
-      var uz;
-      return zz === Kz || null !== (uz = null === zz || void 0 === zz ? void 0 : zz.startsWith(wz)) && void 0 !== uz && uz
-    }
-
-    function fz(zz, uz) {
-      return `shaderPacks/${zz}/${uz}.json`
-    }
-
-    function sz(zz, uz, bz, Ez) {
-      return null === uz.renderId ? rz(zz, uz.baselineVersion, bz, Ez) : `${zz}/${function(zz,uz,bz,Ez){return`shaderPacks/${zz}/${uz}/${bz}-${Ez}.webp`}(uz.packId,uz.renderId,bz,Ez)}`
-    }
-
-    function rz(zz, uz, bz, Ez) {
-      return `${zz}/${function(zz,uz,bz){return`shaderPacks/baseline/${zz}/${uz}-${bz}.webp`}(uz,bz,Ez)}`
-    }
+      Qq = function() {
+        function qq(qq, Eq, gq) {
+          if (this.activeObservations_ = [], this.observations_ = new Yq, "function" !== typeof qq) throw new TypeError("The callback provided as parameter 1 is not a function.");
+          this.callback_ = qq, this.controller_ = Eq, this.callbackCtx_ = gq
+        }
+        return qq.prototype.observe = function(qq) {
+          if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
+          if ("undefined" !== typeof Element && Element instanceof Object) {
+            if (!(qq instanceof Bq(qq).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var Eq = this.observations_;
+            Eq.has(qq) || (Eq.set(qq, new oq(qq)), this.controller_.addObserver(this), this.controller_.refresh())
+          }
+        }, qq.prototype.unobserve = function(qq) {
+          if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
+          if ("undefined" !== typeof Element && Element instanceof Object) {
+            if (!(qq instanceof Bq(qq).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var Eq = this.observations_;
+            Eq.has(qq) && (Eq.delete(qq), Eq.size || this.controller_.removeObserver(this))
+          }
+        }, qq.prototype.disconnect = function() {
+          this.clearActive(), this.observations_.clear(), this.controller_.removeObserver(this)
+        }, qq.prototype.gatherActive = function() {
+          var qq = this;
+          this.clearActive(), this.observations_.forEach((function(Eq) {
+            Eq.isActive() && qq.activeObservations_.push(Eq)
+          }))
+        }, qq.prototype.broadcastActive = function() {
+          if (this.hasActive()) {
+            var qq = this.callbackCtx_,
+              Eq = this.activeObservations_.map((function(qq) {
+                return new Pq(qq.target, qq.broadcastRect())
+              }));
+            this.callback_.call(qq, Eq, qq), this.clearActive()
+          }
+        }, qq.prototype.clearActive = function() {
+          this.activeObservations_.splice(0)
+        }, qq.prototype.hasActive = function() {
+          return this.activeObservations_.length > 0
+        }, qq
+      }(),
+      yq = "undefined" !== typeof WeakMap ? new WeakMap : new Yq,
+      tq = function qq(Eq) {
+        if (!(this instanceof qq)) throw new TypeError("Cannot call a class as a function.");
+        if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
+        var gq = cq.getInstance(),
+          Yq = new Qq(Eq, gq, this);
+        yq.set(this, Yq)
+      };
+    ["observe", "unobserve", "disconnect"].forEach((function(qq) {
+      tq.prototype[qq] = function() {
+        var Eq;
+        return (Eq = yq.get(this))[qq].apply(Eq, arguments)
+      }
+    }));
+    const rq = "undefined" !== typeof Oq.ResizeObserver ? Oq.ResizeObserver : tq
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const qq in modules) Object.freeze(modules[qq]);

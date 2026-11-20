@@ -1,88 +1,27 @@
 export const id = 352;
 export const ids = [352];
 export const modules = {
-  60416: (zz, uz, bz) => {
-    function Ez(zz) {
-      return zz.features.has("timestamp-query")
+  61212: (qq, Eq, gq) => {
+    function Yq(qq, Eq, gq, Yq, lq, Oq, mq) {
+      const xq = Eq,
+        Aq = Yq,
+        cq = gq;
+      qq[cq + 0] = xq[Aq + 0], qq[cq + 1] = xq[Aq + 1], qq[cq + 2] = xq[Aq + 2], qq[cq + 3] = xq[Aq + 3], qq[cq + 4] = xq[Aq + 4], qq[cq + 5] = xq[Aq + 5], qq[cq + 6] = xq[Aq + 6], qq[cq + 7] = xq[Aq + 7], qq[cq + 8] = xq[Aq + 8], qq[cq + 9] = xq[Aq + 9], qq[cq + 10] = xq[Aq + 10], qq[cq + 11] = xq[Aq + 11], qq[cq + 12] = xq[Aq + 12] - lq, qq[cq + 13] = xq[Aq + 13] - Oq, qq[cq + 14] = xq[Aq + 14] - mq, qq[cq + 15] = xq[Aq + 15]
     }
 
-    function nz(zz) {
-      return Ez(zz) ? {
-        device: zz,
-        markerPipeline: zz.createComputePipeline({
-          layout: "auto",
-          compute: {
-            module: zz.createShaderModule({
-              code: "@compute @workgroup_size(1) fn main() {}"
-            }),
-            entryPoint: "main"
-          }
-        }),
-        querySet: zz.createQuerySet({
-          type: "timestamp",
-          count: 2
-        }),
-        resolveBuf: zz.createBuffer({
-          size: 16,
-          usage: GPUBufferUsage.QUERY_RESOLVE | GPUBufferUsage.COPY_SRC
-        }),
-        pool: [],
-        lastMs: 0,
-        inFlight: 0
-      } : null
+    function lq(qq) {
+      return (Eq, gq, lq, Oq) => {
+        const mq = qq.camera;
+        if (!mq) return void Yq(Eq, gq, lq, Oq, 0, 0, 0);
+        const xq = mq.worldMatrix;
+        Yq(Eq, gq, lq, Oq, xq[12], xq[13], xq[14])
+      }
     }
-
-    function iz(zz, uz) {
-      const bz = uz.beginComputePass({
-        timestampWrites: {
-          querySet: zz.querySet,
-          beginningOfPassWriteIndex: 0
-        }
-      });
-      bz.setPipeline(zz.markerPipeline), bz.dispatchWorkgroups(1), bz.end()
-    }
-
-    function lz(zz, uz) {
-      const bz = uz.beginComputePass({
-        timestampWrites: {
-          querySet: zz.querySet,
-          endOfPassWriteIndex: 1
-        }
-      });
-      bz.setPipeline(zz.markerPipeline), bz.dispatchWorkgroups(1), bz.end()
-    }
-
-    function Mz(zz) {
-      if (zz.inFlight > 3) return;
-      const uz = zz.device,
-        bz = zz.pool.pop() ?? uz.createBuffer({
-          size: 16,
-          usage: GPUBufferUsage.COPY_DST | GPUBufferUsage.MAP_READ
-        }),
-        Ez = uz.createCommandEncoder();
-      Ez.resolveQuerySet(zz.querySet, 0, 2, zz.resolveBuf, 0), Ez.copyBufferToBuffer(zz.resolveBuf, 0, bz, 0, 16), uz.queue.submit([Ez.finish()]), zz.inFlight++, bz.mapAsync(GPUMapMode.READ).then((() => {
-        const uz = new BigInt64Array(bz.getMappedRange()),
-          Ez = Number(uz[1] - uz[0]) / 1e6;
-        Ez >= 0 && Ez < 5e3 && (zz.lastMs = zz.lastMs > 0 ? .8 * zz.lastMs + .2 * Ez : Ez), bz.unmap(), zz.pool.push(bz), zz.inFlight--
-      }), (() => {
-        zz.inFlight--
-      }))
-    }
-
-    function tz(zz) {
-      zz.querySet.destroy(), zz.resolveBuf.destroy();
-      for (const uz of zz.pool) uz.destroy();
-      zz.pool.length = 0
-    }
-    bz.r(uz), bz.d(uz, {
-      createGpuFrameTimer: () => nz,
-      destroyGpuFrameTimer: () => tz,
-      gpuFrameTimerBegin: () => iz,
-      gpuFrameTimerEnd: () => lz,
-      gpuFrameTimerResolve: () => Mz,
-      gpuTimingSupportedFor: () => Ez
+    gq.r(Eq), gq.d(Eq, {
+      makePackMeshWorld: () => lq,
+      packMat4IntoF32WithOffset: () => Yq
     })
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const qq in modules) Object.freeze(modules[qq]);

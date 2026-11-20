@@ -1,387 +1,387 @@
 export const id = 22;
 export const ids = [22];
 export const modules = {
-  36066: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Fz,
-      d: () => Zz,
-      g: () => dz,
-      h: () => pz
+  36648: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Nq,
+      g: () => aq,
+      h: () => Wq,
+      j: () => Bq
     });
-    var Ez = bz(8982),
-      nz = bz(36071),
-      iz = bz(36080),
-      lz = bz(8378),
-      Mz = bz(1417),
-      tz = bz(56),
-      Hz = bz(79),
-      Oz = bz(1089);
+    var Yq = gq(9277),
+      lq = gq(36657),
+      Oq = gq(36662),
+      mq = gq(8669),
+      xq = gq(1416),
+      Aq = gq(57),
+      cq = gq(71),
+      uq = gq(1070);
 
-    function pz() {
-      var zz;
-      return (0, Mz.h)(nz.e, (0, nz.o)()), (0, Oz.jsx)(Oz.Fragment, {
-        children: null === (zz = (0, nz.o)()) || void 0 === zz ? void 0 : zz.content
+    function Bq() {
+      var qq;
+      return (0, xq.h)(lq.c, (0, lq.l)()), (0, uq.jsx)(uq.Fragment, {
+        children: null === (qq = (0, lq.l)()) || void 0 === qq ? void 0 : qq.content
       })
     }
 
-    function dz(zz) {
-      var uz;
+    function Wq(qq) {
+      var Eq;
       let {
-        show: bz
-      } = zz;
-      (0, Mz.h)(nz.e, (0, nz.o)());
-      const Hz = null === (uz = (0, nz.o)()) || void 0 === uz ? void 0 : uz.menu;
-      return (0, tz.useEffect)((() => {
-        var zz;
-        bz || (null === Hz || void 0 === Hz || null === (zz = Hz.onClose) || void 0 === zz || zz.call(Hz), (0, iz.j)())
-      }), [bz, Hz]), (0, tz.useEffect)((() => bz ? (0, lz.e)(iz.u, iz.d) : void 0), [bz]), (0, Oz.jsx)(Ez.d, {
-        showing: bz,
+        show: gq
+      } = qq;
+      (0, xq.h)(lq.c, (0, lq.l)());
+      const cq = null === (Eq = (0, lq.l)()) || void 0 === Eq ? void 0 : Eq.menu;
+      return (0, Aq.useEffect)((() => {
+        var qq;
+        gq || (null === cq || void 0 === cq || null === (qq = cq.onClose) || void 0 === qq || qq.call(cq), (0, Oq.m)())
+      }), [gq, cq]), (0, Aq.useEffect)((() => gq ? (0, mq.i)(Oq.r, Oq.d) : void 0), [gq]), (0, uq.jsx)(Yq.b, {
+        showing: gq,
         globallyUniqueKey: "clientGameMenu",
-        children: null === Hz || void 0 === Hz ? void 0 : Hz.content
+        children: null === cq || void 0 === cq ? void 0 : cq.content
       })
     }
 
-    function Fz(zz) {
+    function Nq(qq) {
       let {
-        placement: uz = "bottom"
-      } = zz;
-      return (0, Oz.jsx)("div", {
-        id: `clientGameHud-${uz}`,
+        placement: Eq = "bottom"
+      } = qq;
+      return (0, uq.jsx)("div", {
+        id: `clientGameHud-${Eq}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function Zz(zz) {
+    function aq(qq) {
       let {
-        children: uz,
-        placement: bz = "bottom"
-      } = zz;
-      const [Ez, nz] = (0, tz.useState)(null);
-      return (0, tz.useEffect)((() => {
-        nz(document.getElementById(`clientGameHud-${bz}`))
-      }), [bz]), Ez ? (0, Hz.createPortal)(uz, Ez) : null
+        children: Eq,
+        placement: gq = "bottom"
+      } = qq;
+      const [Yq, lq] = (0, Aq.useState)(null);
+      return (0, Aq.useEffect)((() => {
+        lq(document.getElementById(`clientGameHud-${gq}`))
+      }), [gq]), Yq ? (0, cq.createPortal)(Eq, Yq) : null
     }
   },
-  8982: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => iz
+  9277: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Oq
     });
-    var Ez = bz(4298),
-      nz = bz(4300);
+    var Yq = gq(4364),
+      lq = gq(4367);
 
-    function iz(zz) {
+    function Oq(qq) {
       let {
-        children: uz,
-        showing: bz,
-        globallyUniqueKey: iz,
-        alwaysMountChildren: lz = !1,
-        doGameplayStartStopOnShow: Mz = !0,
-        keepsMovement: tz = !1
-      } = zz;
-      return (0, nz.e)(!0, bz, iz, tz), (0, Ez.d)(Mz, bz), bz || lz ? uz : null
+        children: Eq,
+        showing: gq,
+        globallyUniqueKey: Oq,
+        alwaysMountChildren: mq = !1,
+        doGameplayStartStopOnShow: xq = !0,
+        keepsMovement: Aq = !1
+      } = qq;
+      return (0, lq.e)(!0, gq, Oq, Aq), (0, Yq.d)(xq, gq), gq || mq ? Eq : null
     }
   },
-  36162: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => iz,
-      d: () => lz,
-      g: () => Mz,
-      j: () => tz
+  36740: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Oq,
+      e: () => mq,
+      i: () => xq,
+      j: () => Aq
     });
-    var Ez = bz(56),
-      nz = bz(1108);
-    const iz = 8,
-      lz = "InGameHeaderContainer",
-      Mz = "TopRightElements";
+    var Yq = gq(57),
+      lq = gq(3018);
+    const Oq = 8,
+      mq = "InGameHeaderContainer",
+      xq = "TopRightElements";
 
-    function tz(zz) {
-      const [uz] = (0, nz.b)(), [bz, tz] = (0, Ez.useState)(!1);
-      return (0, Ez.useLayoutEffect)((() => {
-        if (!zz) return;
-        const uz = document.querySelector(`.${lz}`),
-          bz = document.querySelector(`.${Mz}`),
-          Ez = () => {
-            const Ez = zz.getBoundingClientRect(),
-              nz = uz ? uz.getBoundingClientRect().right : 0,
-              lz = bz ? bz.getBoundingClientRect().left : window.innerWidth,
-              Mz = Ez.left < nz + iz,
-              Hz = Ez.right > lz - iz;
-            tz(Mz || Hz)
+    function Aq(qq) {
+      const [Eq] = (0, lq.b)(), [gq, Aq] = (0, Yq.useState)(!1);
+      return (0, Yq.useLayoutEffect)((() => {
+        if (!qq) return;
+        const Eq = document.querySelector(`.${mq}`),
+          gq = document.querySelector(`.${xq}`),
+          Yq = () => {
+            const Yq = qq.getBoundingClientRect(),
+              lq = Eq ? Eq.getBoundingClientRect().right : 0,
+              mq = gq ? gq.getBoundingClientRect().left : window.innerWidth,
+              xq = Yq.left < lq + Oq,
+              cq = Yq.right > mq - Oq;
+            Aq(xq || cq)
           };
-        Ez();
-        const nz = new ResizeObserver(Ez);
-        return nz.observe(zz), uz && nz.observe(uz), bz && nz.observe(bz), () => {
-          nz.disconnect()
+        Yq();
+        const lq = new ResizeObserver(Yq);
+        return lq.observe(qq), Eq && lq.observe(Eq), gq && lq.observe(gq), () => {
+          lq.disconnect()
         }
-      }), [zz, uz]), bz
+      }), [qq, Eq]), gq
     }
   },
-  8378: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => iz,
-      e: () => nz
+  8669: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => Oq,
+      i: () => lq
     });
-    let Ez = null;
-    const nz = function(zz) {
-        const uz = {
-          cycle: zz,
+    let Yq = null;
+    const lq = function(qq) {
+        const Eq = {
+          cycle: qq,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Ez = uz, () => {
-          Ez === uz && (Ez = null)
+        return Yq = Eq, () => {
+          Yq === Eq && (Yq = null)
         }
       },
-      iz = () => {
-        var zz;
-        return null !== (zz = Ez) && void 0 !== zz && zz.canCycle() ? Ez.cycle : null
+      Oq = () => {
+        var qq;
+        return null !== (qq = Yq) && void 0 !== qq && qq.canCycle() ? Yq.cycle : null
       }
   },
-  36080: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => iz,
-      d: () => Rz,
-      g: () => Kz,
-      h: () => Mz,
-      i: () => dz,
-      j: () => wz,
-      n: () => pz,
-      q: () => fz,
-      u: () => Zz,
-      x: () => Xz
+  36662: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Oq,
+      d: () => Vq,
+      g: () => dq,
+      h: () => xq,
+      l: () => Wq,
+      m: () => jq,
+      o: () => Bq,
+      p: () => oq,
+      r: () => aq,
+      v: () => Hq
     });
-    var Ez = bz(20),
-      nz = bz(22);
-    const iz = "clientGameInventoryButtonsChanged",
-      lz = new Map;
+    var Yq = gq(24),
+      lq = gq(31);
+    const Oq = "clientGameInventoryButtonsChanged",
+      mq = new Map;
 
-    function Mz() {
-      return [...lz.values()].sort(((zz, uz) => {
-        var bz, Ez;
-        return (null !== (bz = zz.order) && void 0 !== bz ? bz : 0) - (null !== (Ez = uz.order) && void 0 !== Ez ? Ez : 0)
+    function xq() {
+      return [...mq.values()].sort(((qq, Eq) => {
+        var gq, Yq;
+        return (null !== (gq = qq.order) && void 0 !== gq ? gq : 0) - (null !== (Yq = Eq.order) && void 0 !== Yq ? Yq : 0)
       }))
     }
-    let tz = null;
+    let Aq = null;
 
-    function Hz(zz) {
-      tz = zz
+    function cq(qq) {
+      Aq = qq
     }
-    let Oz = !1;
+    let uq = !1;
 
-    function pz(zz) {
-      Oz = !0;
+    function Bq(qq) {
+      uq = !0;
       try {
-        zz.onClick()
+        qq.onClick()
       } finally {
-        Oz = !1
+        uq = !1
       }
-      zz.panel && "clientGame" === Ez.e.get("openInGameMenuName") && Hz(zz.id)
+      qq.panel && "clientGame" === Yq.b.get("openInGameMenuName") && cq(qq.id)
     }
 
-    function dz() {
-      return Oz
+    function Wq() {
+      return uq
     }
 
-    function Fz() {
-      return Mz().filter((zz => zz.panel && !zz.disabled))
+    function Nq() {
+      return xq().filter((qq => qq.panel && !qq.disabled))
     }
 
-    function Zz(zz) {
-      const uz = Fz(),
-        bz = uz.findIndex((zz => zz.id === tz));
-      return !(bz < 0 || uz.length < 2) && (pz(uz[(bz + zz + uz.length) % uz.length]), !0)
+    function aq(qq) {
+      const Eq = Nq(),
+        gq = Eq.findIndex((qq => qq.id === Aq));
+      return !(gq < 0 || Eq.length < 2) && (Bq(Eq[(gq + qq + Eq.length) % Eq.length]), !0)
     }
 
-    function Rz() {
-      return null !== tz && Fz().length > 1
+    function Vq() {
+      return null !== Aq && Nq().length > 1
     }
 
-    function Kz() {
-      Hz(null)
+    function dq() {
+      cq(null)
     }
 
-    function wz() {
-      "inventory" !== Ez.e.get("openInGameMenuName") && Hz(null)
+    function jq() {
+      "inventory" !== Yq.b.get("openInGameMenuName") && cq(null)
     }
 
-    function Xz() {
-      const zz = tz;
-      return Hz(null), zz
+    function Hq() {
+      const qq = Aq;
+      return cq(null), qq
     }
 
-    function fz(zz) {
-      return lz.set(zz.id, zz), nz.k.sK(iz, Mz(), !0), () => {
-        lz.get(zz.id) === zz && (lz.delete(zz.id), nz.k.sK(iz, Mz()))
+    function oq(qq) {
+      return mq.set(qq.id, qq), lq.i.TV(Oq, xq(), !0), () => {
+        mq.get(qq.id) === qq && (mq.delete(qq.id), lq.i.TV(Oq, xq()))
       }
     }
   },
-  36071: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Mz,
-      i: () => Kz,
-      l: () => wz,
-      n: () => dz,
-      o: () => Hz,
-      p: () => Rz,
-      t: () => Fz,
-      x: () => Oz
+  36657: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => xq,
+      e: () => dq,
+      h: () => jq,
+      j: () => Wq,
+      l: () => cq,
+      m: () => Vq,
+      n: () => Nq,
+      r: () => uq
     });
-    var Ez = bz(20),
-      nz = bz(22),
-      iz = bz(1269),
-      lz = bz(36080);
-    const Mz = "clientGameUiChanged";
-    let tz = null;
+    var Yq = gq(24),
+      lq = gq(31),
+      Oq = gq(1274),
+      mq = gq(36662);
+    const xq = "clientGameUiChanged";
+    let Aq = null;
 
-    function Hz() {
-      return tz
+    function cq() {
+      return Aq
     }
 
-    function Oz(zz, uz) {
-      const bz = {
-        content: zz,
-        menu: uz
+    function uq(qq, Eq) {
+      const gq = {
+        content: qq,
+        menu: Eq
       };
-      return tz = bz, nz.k.sK(Mz, tz, !0), () => {
-        tz === bz && (tz = null, Zz = !1, Kz(), nz.k.sK(Mz, null))
+      return Aq = gq, lq.i.TV(xq, Aq, !0), () => {
+        Aq === gq && (Aq = null, aq = !1, dq(), lq.i.TV(xq, null))
       }
     }
-    let pz = null;
+    let Bq = null;
 
-    function dz() {
-      return pz
+    function Wq() {
+      return Bq
     }
 
-    function Fz(zz) {
-      return pz = zz, () => {
-        pz === zz && (pz = null)
+    function Nq(qq) {
+      return Bq = qq, () => {
+        Bq === qq && (Bq = null)
       }
     }
-    let Zz = !1;
+    let aq = !1;
 
-    function Rz() {
-      const zz = Ez.e.get("openInGameMenuName");
-      "clientGame" !== zz && (Zz = "inventory" === zz), (0, lz.i)() || (0, lz.g)(), (0, iz.m)(iz.b), Ez.e.set({
+    function Vq() {
+      const qq = Yq.b.get("openInGameMenuName");
+      "clientGame" !== qq && (aq = "inventory" === qq), (0, mq.l)() || (0, mq.g)(), (0, Oq.m)(Oq.d), Yq.b.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function Kz() {
-      Xz(!1)
+    function dq() {
+      Hq(!1)
     }
 
-    function wz() {
-      Xz(Zz)
+    function jq() {
+      Hq(aq)
     }
 
-    function Xz(zz) {
-      "clientGame" === Ez.e.get("openInGameMenuName") && Ez.e.set({
-        openInGameMenuName: zz ? "inventory" : null
-      }), zz || (0, lz.g)(), Zz = !1
+    function Hq(qq) {
+      "clientGame" === Yq.b.get("openInGameMenuName") && Yq.b.set({
+        openInGameMenuName: qq ? "inventory" : null
+      }), qq || (0, mq.g)(), aq = !1
     }
   },
-  37901: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => lz,
-      e: () => Mz,
-      h: () => tz
+  38486: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => mq,
+      g: () => xq,
+      i: () => Aq
     });
-    const Ez = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
-      nz = [0, 1, 2, 0, 2, 3],
-      iz = [4, 5];
+    const Yq = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
+      lq = [0, 1, 2, 0, 2, 3],
+      Oq = [4, 5];
 
-    function lz(zz, uz, bz, Ez, nz) {
-      for (let lz = 0; lz < 6; lz++) iz.includes(lz) === nz && Hz(zz, uz, bz, Ez, lz)
+    function mq(qq, Eq, gq, Yq, lq) {
+      for (let mq = 0; mq < 6; mq++) Oq.includes(mq) === lq && cq(qq, Eq, gq, Yq, mq)
     }
 
-    function Mz(zz, uz, bz, Ez) {
-      for (let nz = 0; nz < 6; nz++) Hz(zz, uz, bz, Ez, nz)
+    function xq(qq, Eq, gq, Yq) {
+      for (let lq = 0; lq < 6; lq++) cq(qq, Eq, gq, Yq, lq)
     }
 
-    function tz(zz, uz, bz, iz, lz) {
-      for (let Mz = 0; Mz < 6; Mz++)
-        for (const tz of [0, 1]) {
-          const [Hz, Oz, pz] = [tz + 2, tz + 1, (tz + 3) % 4], dz = zz.length / 3;
-          for (const [uz, nz] of [
-              [tz, Oz],
-              [Hz, Oz],
-              [Hz, pz],
-              [tz, pz]
+    function Aq(qq, Eq, gq, Oq, mq) {
+      for (let xq = 0; xq < 6; xq++)
+        for (const Aq of [0, 1]) {
+          const [cq, uq, Bq] = [Aq + 2, Aq + 1, (Aq + 3) % 4], Wq = qq.length / 3;
+          for (const [Eq, lq] of [
+              [Aq, uq],
+              [cq, uq],
+              [cq, Bq],
+              [Aq, Bq]
             ])
-            for (let tz = 0; tz < 3; tz++) {
-              const Hz = Ez[3 * (4 * Mz + uz) + tz],
-                Oz = Ez[3 * (4 * Mz + nz) + tz];
-              zz.push((Hz + (Oz - Hz) * lz) * iz / 2 + bz[tz])
+            for (let Aq = 0; Aq < 3; Aq++) {
+              const cq = Yq[3 * (4 * xq + Eq) + Aq],
+                uq = Yq[3 * (4 * xq + lq) + Aq];
+              qq.push((cq + (uq - cq) * mq) * Oq / 2 + gq[Aq])
             }
-          for (const zz of nz) uz.push(dz + zz)
+          for (const qq of lq) Eq.push(Wq + qq)
         }
     }
 
-    function Hz(zz, uz, bz, iz, lz) {
-      let [Mz, tz, Hz] = bz, [Oz, pz, dz] = iz;
-      const Fz = zz.length / 3;
-      for (let nz = 4 * lz; nz < 4 * lz + 4; nz++) zz.push(Ez[3 * nz] * Oz / 2 + Mz, Ez[3 * nz + 1] * pz / 2 + tz, Ez[3 * nz + 2] * dz / 2 + Hz);
-      for (const Ez of nz) uz.push(Fz + Ez)
+    function cq(qq, Eq, gq, Oq, mq) {
+      let [xq, Aq, cq] = gq, [uq, Bq, Wq] = Oq;
+      const Nq = qq.length / 3;
+      for (let lq = 4 * mq; lq < 4 * mq + 4; lq++) qq.push(Yq[3 * lq] * uq / 2 + xq, Yq[3 * lq + 1] * Bq / 2 + Aq, Yq[3 * lq + 2] * Wq / 2 + cq);
+      for (const Yq of lq) Eq.push(Nq + Yq)
     }
   },
-  36328: (zz, uz, bz) => {
-    function Ez(zz, uz) {
-      return null === zz || null === uz ? zz === uz : zz[0] === uz[0] && zz[1] === uz[1] && zz[2] === uz[2]
+  36949: (qq, Eq, gq) => {
+    function Yq(qq, Eq) {
+      return null === qq || null === Eq ? qq === Eq : qq[0] === Eq[0] && qq[1] === Eq[1] && qq[2] === Eq[2]
     }
 
-    function nz(zz) {
-      return [zz[0] + .5, zz[1] + .5, zz[2] + .5]
+    function lq(qq) {
+      return [qq[0] + .5, qq[1] + .5, qq[2] + .5]
     }
-    bz.d(uz, {
-      d: () => nz,
-      e: () => Ez
+    gq.d(Eq, {
+      e: () => lq,
+      f: () => Yq
     })
   },
-  36365: (zz, uz, bz) => {
-    function Ez(zz) {
-      return zz.includes("Leaf Bed")
+  36985: (qq, Eq, gq) => {
+    function Yq(qq) {
+      return qq.includes("Leaf Bed")
     }
 
-    function nz(zz) {
-      return / Bed(?: Head)?(?:\||$)/.test(zz) && !Ez(zz)
+    function lq(qq) {
+      return / Bed(?: Head)?(?:\||$)/.test(qq) && !Yq(qq)
     }
 
-    function iz(zz) {
-      return zz.includes(" Strongbed")
+    function Oq(qq) {
+      return qq.includes(" Strongbed")
     }
 
-    function lz(zz) {
-      return Ez(zz) || nz(zz) || iz(zz)
+    function mq(qq) {
+      return Yq(qq) || lq(qq) || Oq(qq)
     }
-    bz.d(uz, {
-      e: () => lz,
-      g: () => Ez,
-      j: () => iz,
-      k: () => nz
+    gq.d(Eq, {
+      b: () => mq,
+      c: () => Yq,
+      d: () => Oq,
+      f: () => lq
     })
   },
-  36363: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Hz
+  36979: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => cq
     });
-    var Ez = bz(36365),
-      nz = bz(9078);
-    const iz = [],
-      lz = [],
-      Mz = [],
-      tz = [];
-    for (const Oz of Object.keys(nz.p))(0, Ez.g)(Oz) ? iz.push(Oz) : (0, Ez.k)(Oz) && lz.push(Oz), (0, Ez.j)(Oz) && Mz.push(Oz), (Oz.includes(" Bed Head") || Oz.includes(" Strongbed Head")) && tz.push(Oz);
-    const Hz = {
-      leafBeds: iz,
-      woolBeds: lz,
-      strongBeds: Mz,
-      beds: [...iz, ...lz, ...Mz],
-      bedHeads: tz,
+    var Yq = gq(36985),
+      lq = gq(9379);
+    const Oq = [],
+      mq = [],
+      xq = [],
+      Aq = [];
+    for (const uq of Object.keys(lq.o))(0, Yq.c)(uq) ? Oq.push(uq) : (0, Yq.f)(uq) && mq.push(uq), (0, Yq.d)(uq) && xq.push(uq), (uq.includes(" Bed Head") || uq.includes(" Strongbed Head")) && Aq.push(uq);
+    const cq = {
+      leafBeds: Oq,
+      woolBeds: mq,
+      strongBeds: xq,
+      beds: [...Oq, ...mq, ...xq],
+      bedHeads: Aq,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const qq in modules) Object.freeze(modules[qq]);

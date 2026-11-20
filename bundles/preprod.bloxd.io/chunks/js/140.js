@@ -1,254 +1,163 @@
 export const id = 140;
 export const ids = [140];
 export const modules = {
-  7781: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      BloxdDiscordActivitySdk: () => Xz
+  7990: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      BloxdFirebaseSdk: () => uq
     });
-    var Ez = bz(7787),
-      nz = bz(1219),
-      iz = bz(1181),
-      lz = bz(588),
-      Mz = bz(1241),
-      tz = bz(1673),
-      Hz = bz(1296),
-      Oz = bz(738),
-      pz = bz(20),
-      dz = bz(1197),
-      Fz = function(zz) {
-        return zz.APPLICATION_COMMANDS = "applications.commands", zz.IDENTIFY = "identify", zz.EMAIL = "email", zz.GUILDS = "guilds", zz.READ_DM_CHANNELS = "dm_channels.read", zz.WRITE_ACTIVITIES = "rpc.activities.write", zz
-      }(Fz || {}),
-      Zz = function(zz) {
-        return zz[zz.CLOSE_NORMAL = 1e3] = "CLOSE_NORMAL", zz[zz.CLOSE_UNSUPPORTED = 1003] = "CLOSE_UNSUPPORTED", zz[zz.CLOSE_ABNORMAL = 1006] = "CLOSE_ABNORMAL", zz[zz.INVALID_CLIENTID = 4e3] = "INVALID_CLIENTID", zz[zz.INVALID_ORIGIN = 4001] = "INVALID_ORIGIN", zz[zz.RATELIMITED = 4002] = "RATELIMITED", zz[zz.TOKEN_REVOKED = 4003] = "TOKEN_REVOKED", zz[zz.INVALID_VERSION = 4004] = "INVALID_VERSION", zz[zz.INVALID_ENCODING = 4005] = "INVALID_ENCODING", zz
-      }(Zz || {}),
-      Rz = function(zz) {
-        return zz[zz.PLAYING = 0] = "PLAYING", zz[zz.STREAMING = 1] = "STREAMING", zz[zz.LISTENING = 2] = "LISTENING", zz[zz.WATCHING = 3] = "WATCHING", zz[zz.CUSTOM = 4] = "CUSTOM", zz[zz.COMPETING = 5] = "COMPETING", zz
-      }(Rz || {});
-    const Kz = {
-        Minigames: "Playing",
-        Puzzle: "Solving",
-        Escape: "Escaping",
-        Parkour: "Parkouring",
-        "Cool Parkour": "Parkouring",
-        "Two Player Parkour": "Parkouring",
-        "Clutch Parkour": "Parkouring",
-        "Challenging Parkour": "Parkouring",
-        "Progressive Parkour": "Parkouring",
-        "Themed Parkour": "Parkouring",
-        Obby: "Parkouring",
-        Tower: "Climbing",
-        Roleplay: "Roleplaying",
-        Arena: "Battling",
-        Duels: "Duelling",
-        Shooting: "Shooting",
-        Survival: "Surviving",
-        Simulator: "Grinding",
-        Tycoon: "Building",
-        Clicker: "Clicking",
-        PvE: "Battling",
-        Building: "Building",
-        Horror: "Surviving",
-        "Lucky Block": "Battling",
-        Racing: "Racing",
-        Driving: "Driving",
-        "Cool Build": "Building",
-        Adventure: "Adventuring",
-        Other: "Being mischievous"
-      },
-      wz = {
-        goalRush: "Playing",
-        heroesvbrainrots: "Battling",
-        hideseek: "Playing",
-        bingo: "Playing"
-      };
-    class Xz {
-      constructor(zz) {
-        this.discordSdk = zz, this.guildNameCache = {}, this.startTime = Date.now(), this.cachedAccessToken = null
-      }
+    var Yq = gq(1812),
+      lq = gq(2834),
+      Oq = gq(106),
+      mq = gq(96),
+      xq = gq(1677),
+      Aq = gq(2029);
+    const cq = {
+      apiKey: "AIzaSyCJ-G6m_NyA3P021v-ugDmMmkcKysUebSE",
+      authDomain: "bloxd-ee1aa.firebaseapp.com",
+      projectId: "bloxd-ee1aa",
+      storageBucket: "bloxd-ee1aa.appspot.com",
+      messagingSenderId: "758847442742",
+      appId: "1:758847442742:web:7bb74eb261641e30f02d97"
+    };
+    class uq {
+      constructor() {}
       static async setup() {
-        console.log("Setting up Discord SDK with client id", dz.c.discordClientID);
-        const zz = new Ez.c(dz.c.discordClientID);
-        let uz = !1;
-        setTimeout((() => {
-          uz || (console.warn("Discord SDK took too long to initialize"), (0, tz.reloadBloxd)())
-        }), 15e3), await zz.ready(), uz = !0;
         try {
-          const {
-            enabled: uz
-          } = await zz.commands.encourageHardwareAcceleration();
-          uz || console.warn("Hardware acceleration not enabled in the Discord client")
-        } catch (nz) {
-          console.error("Failed to encourage hardware acceleration in the Discord client", nz)
+          return await uq.setupInternal()
+        } catch (qq) {
+          return console.error("Failed to setup Firebase SDK:", qq), null
         }
-        const bz = new Xz(zz);
-        return bz.isMobilePlatform() && (bz.applyDiscordSafeAreaNotch(), window.addEventListener("resize", (() => {
-          bz.applyDiscordSafeAreaNotch()
-        }))), bz
       }
-      async updateActivityDescription(zz) {
-        let uz, bz;
-        switch (zz) {
-          case "homePage":
-            uz = "Chilling in the Main Menu";
-            break;
-          case "inGame": {
-            const zz = await this.getInGameDescriptions();
-            uz = zz.primary, bz = zz.secondary;
-            break
+      static async setupInternal() {
+        const qq = await Promise.all([gq.e(258), gq.e(257)]).then((() => gq(40252))),
+          Eq = await Promise.all([gq.e(258), gq.e(259)]).then((() => gq(40278))),
+          Bq = await Promise.all([gq.e(258), gq.e(260)]).then((() => gq(40280))),
+          Wq = qq.initializeApp({
+            ...cq,
+            measurementId: lq.b
+          });
+        (0, lq.I)(), window.gtag("config", lq.b), (0, lq.G)(), window.gtag("config", "AW-16469618203");
+        const Nq = Eq.getAnalytics(Wq),
+          aq = {
+            portal: Oq.currentUrl.getSearchParam("portal") || "root",
+            loggedIn: !1
+          };
+        Eq.setUserProperties(Nq, aq);
+        const Vq = Bq.initializeAuth(Wq, {
+          persistence: [Bq.indexedDBLocalPersistence, Bq.browserLocalPersistence, Bq.browserSessionPersistence],
+          popupRedirectResolver: (0, mq.isMobileApp)() ? void 0 : Bq.browserPopupRedirectResolver
+        });
+        Bq.useDeviceLanguage(Vq);
+        const dq = new Bq.GoogleAuthProvider;
+        dq.setCustomParameters({
+          prompt: "select_account"
+        });
+        const jq = new Bq.OAuthProvider(Yq.k[Yq.d.APPLE]),
+          Hq = new Bq.OAuthProvider(Yq.k[Yq.d.MICROSOFT]);
+        Hq.setCustomParameters({
+          prompt: "select_account",
+          tenant: "consumers"
+        });
+        const oq = {
+          [Yq.d.GOOGLE]: dq,
+          [Yq.d.APPLE]: jq,
+          [Yq.d.MICROSOFT]: Hq
+        };
+        window.gtag("set", {
+          cookie_flags: "SameSite=None;Secure"
+        }), await new Promise((qq => {
+          const Eq = Bq.onIdTokenChanged(Vq, (gq => {
+            Eq(), qq()
+          }))
+        }));
+        class Pq extends uq {
+          setUserProperties(qq) {
+            Eq.setUserProperties(Nq, qq)
+          }
+          onIdTokenChanged(qq) {
+            Bq.onIdTokenChanged(Vq, qq)
+          }
+          canSignIn() {
+            return !0
+          }
+          async signInWithPopup(qq) {
+            var Eq;
+            const gq = await Bq.signInWithPopup(Vq, oq[qq]);
+            return null !== (Eq = null === gq || void 0 === gq ? void 0 : gq.user) && void 0 !== Eq ? Eq : null
+          }
+          async getCurrentUser(qq) {
+            const Eq = Vq.currentUser;
+            if (!Eq) return null;
+            const {
+              signInProvider: gq
+            } = await Eq.getIdTokenResult(!1);
+            return gq === Yq.k[qq] ? Eq : null
+          }
+          async signOut(qq) {
+            null !== await this.getCurrentUser(qq) && await Bq.signOut(Vq)
           }
         }
-        await this.discordSdk.commands.setActivity({
-          activity: {
-            type: Rz.PLAYING,
-            details: uz,
-            state: bz,
-            assets: {
-              large_image: "icon",
-              large_text: uz
-            },
-            timestamps: {
-              start: this.startTime
+        async function Qq(qq, Eq) {
+          const gq = await xq.c.request(`${qq}.${Eq}`, {});
+          if (null === gq) return null;
+          const Yq = "google" === qq ? Bq.GoogleAuthProvider.credential(gq.idToken) : jq.credential({
+            idToken: gq.idToken
+          });
+          return (await Bq.signInWithCredential(Vq, Yq)).user
+        }
+        class yq extends uq {
+          setUserProperties(qq) {
+            Eq.setUserProperties(Nq, qq)
+          }
+          onIdTokenChanged(qq) {
+            Bq.onIdTokenChanged(Vq, qq)
+          }
+          canSignIn(qq) {
+            return null !== (0, Aq.e)(qq)
+          }
+          async signInWithPopup(qq) {
+            const Eq = (0, Aq.e)(qq);
+            if (null === Eq) return console.warn(`The app can't sign in with ${qq}; check canSignIn first`), null;
+            try {
+              return await Qq(Eq, "signIn")
+            } catch (gq) {
+              return console.error(`Failed to sign in with ${qq} in the app:`, gq), null
             }
           }
-        }).catch((zz => {
-          console.error(`Failed to update Discord activity rich presence with description="${uz}":`, zz)
-        }))
-      }
-      async getInGameDescriptions() {
-        var zz;
-        const {
-          requestedGameNameWithVariation: uz
-        } = (0, Hz.b)(), bz = (0, Oz.i)(uz), Ez = null !== (zz = wz[uz]) && void 0 !== zz ? zz : Kz[bz.type], nz = await (0, iz.B)(Mz.d.ENGLISH, bz.title), tz = (0, Hz.b)();
-        if ((0, Hz.g)(tz)) return {
-          primary: `${Ez} in a Discord World`
-        };
-        const pz = `${Ez} in ${nz}`;
-        return (0, lz.F)(tz.lobbyName) ? {
-          primary: pz
-        } : {
-          primary: pz,
-          secondary: `Lobby ${tz.lobbyName}`
-        }
-      }
-      getCurrentChannelType() {
-        const {
-          channelId: zz,
-          guildId: uz
-        } = this.getCurrentChannelAndGuild();
-        return null !== uz ? nz.d.GUILD : null !== zz ? nz.d.DM : null
-      }
-      getRequiredScopeForCurrentChannel() {
-        const zz = this.getCurrentChannelType(),
-          uz = [Fz.APPLICATION_COMMANDS, Fz.IDENTIFY, Fz.EMAIL, Fz.GUILDS, Fz.WRITE_ACTIVITIES];
-        switch (zz) {
-          case nz.d.DM:
-          case nz.d.GUILD:
-            return [...uz];
-          default:
-            throw new Error(`Unknown Discord channel type: ${zz}`)
-        }
-      }
-      getCurrentChannelAndGuild() {
-        const {
-          channelId: zz,
-          guildId: uz
-        } = this.discordSdk;
-        return {
-          channelId: null !== zz && void 0 !== zz ? zz : null,
-          guildId: null !== uz && void 0 !== uz ? uz : null
-        }
-      }
-      getInstanceId() {
-        return this.discordSdk.instanceId
-      }
-      async askDiscordUserForAuthorization() {
-        const zz = this.getRequiredScopeForCurrentChannel(),
-          {
-            code: uz
-          } = await this.discordSdk.commands.authorize({
-            client_id: dz.c.discordClientID,
-            response_type: "code",
-            state: "",
-            prompt: "none",
-            scope: zz
-          });
-        return uz
-      }
-      getCachedAccessToken() {
-        return this.cachedAccessToken
-      }
-      setCachedAccessToken(zz) {
-        this.cachedAccessToken = zz
-      }
-      registerGuild(zz, uz) {
-        this.guildNameCache[zz] = uz
-      }
-      async authenticate(zz) {
-        return this.discordSdk.commands.authenticate({
-          access_token: zz
-        }).then((zz => null !== zz))
-      }
-      async getUserLocale() {
-        try {
-          const {
-            locale: zz
-          } = await this.discordSdk.commands.userSettingsGetLocale();
-          return zz
-        } catch (zz) {
-          return console.error("Failed to get user locale from Discord:", zz.stack), null
-        }
-      }
-      async getChannelName(zz) {
-        return this.discordSdk.commands.getChannel({
-          channel_id: zz
-        }).then((zz => zz.name)).catch((zz => "Your Current Discord Chat"))
-      }
-      async getDiscordContextFromChannelId(zz) {
-        const uz = await this.getChannelName(zz);
-        return nz.i.from({
-          type: nz.d.DM,
-          channelId: zz,
-          channelName: uz
-        })
-      }
-      getDiscordContextFromGuildId(zz) {
-        const uz = this.guildNameCache[zz];
-        return (0, lz.F)(uz) ? null : nz.h.from({
-          type: nz.d.GUILD,
-          guildId: zz,
-          guildName: uz
-        })
-      }
-      async getCurrentDiscordContext() {
-        const {
-          channelId: zz,
-          guildId: uz
-        } = this.getCurrentChannelAndGuild();
-        return null !== uz ? this.getDiscordContextFromGuildId(uz) : null !== zz ? this.getDiscordContextFromChannelId(zz) : null
-      }
-      exit(zz) {
-        console.log("Exiting Discord Activity:", zz), this.discordSdk.close(Zz.CLOSE_NORMAL, zz)
-      }
-      isMobilePlatform() {
-        return this.discordSdk.platform === Ez.d.MOBILE
-      }
-      applyDiscordSafeAreaNotch() {
-        const zz = getComputedStyle(document.documentElement),
-          uz = (uz, bz) => {
-            const Ez = parseFloat(zz.getPropertyValue(`--discord-safe-area-inset-${uz}`));
-            return isNaN(Ez) || 0 === bz ? 0 : Ez / bz * 100
-          };
-        pz.e.set({
-          notchSize: {
-            top: uz("top", window.innerHeight),
-            right: Math.max(uz("right", window.innerWidth), 7),
-            bottom: 0,
-            left: uz("left", window.innerWidth)
+          async getCurrentUser(qq) {
+            const Eq = Vq.currentUser;
+            if (Eq) {
+              const {
+                signInProvider: gq
+              } = await Eq.getIdTokenResult(!1);
+              if (gq === Yq.k[qq]) return Eq
+            }
+            const gq = (0, Aq.e)(qq);
+            if (null === gq) return null;
+            try {
+              return await Qq(gq, "getCurrentUser")
+            } catch (lq) {
+              return console.error(`Failed to get the current ${qq} user from the app:`, lq), null
+            }
           }
-        })
+          async signOut(qq) {
+            const Eq = (0, Aq.e)(qq);
+            null !== Eq && xq.c.request(`${Eq}.signOut`, {}).catch((Eq => {
+              console.error(`Failed to sign out of ${qq} in the app:`, Eq)
+            }));
+            const gq = Vq.currentUser;
+            if (gq) {
+              const {
+                signInProvider: Eq
+              } = await gq.getIdTokenResult(!1);
+              Eq === Yq.k[qq] && await Bq.signOut(Vq)
+            }
+          }
+        }
+        return (0, mq.isMobileApp)() ? (await xq.c.ready, new yq) : new Pq
       }
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const qq in modules) Object.freeze(modules[qq]);

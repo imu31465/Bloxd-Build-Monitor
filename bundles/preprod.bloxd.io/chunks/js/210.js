@@ -1,547 +1,708 @@
 export const id = 210;
 export const ids = [210];
 export const modules = {
-  35840: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Oz,
-      d: () => dz
+  36397: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      CreateCustomLobby: () => iq
     });
-    var Ez = bz(56),
-      nz = bz(1322),
-      iz = bz(1181),
-      lz = bz(1305),
-      Mz = bz(3230),
-      tz = bz(4690),
-      Hz = bz(1089);
+    gq(36406);
+    var Yq = gq(4456),
+      lq = gq(57),
+      Oq = gq(1659),
+      mq = gq(1018),
+      xq = gq.n(mq),
+      Aq = gq(3040),
+      cq = gq(1109),
+      uq = gq(1195),
+      Bq = gq(4413),
+      Wq = gq(1422),
+      Nq = gq(36415),
+      aq = gq(1183),
+      Vq = gq(1313),
+      dq = gq(1498),
+      jq = gq(24),
+      Hq = gq(1431),
+      oq = gq(598),
+      Pq = gq(4773),
+      Qq = gq(729),
+      yq = gq(1226),
+      tq = gq(1214),
+      rq = gq(4786),
+      vq = gq(1025),
+      hq = gq(36424),
+      nq = gq(36428),
+      bq = gq(1070);
 
-    function Oz(zz) {
+    function iq(qq) {
+      var Eq, gq, mq, iq;
       let {
-        loading: uz,
-        schematics: bz,
-        onSchematicPicked: Ez,
-        selectedSchematicIdList: nz = [],
-        disableAutoExport: tz
-      } = zz;
+        gameNameWithVariation: Zq,
+        close: fq,
+        initialDefaultGamemode: Mq
+      } = qq;
       const {
-        t: Oz
-      } = (0, iz.F)();
-      return (0, Hz.jsxs)("div", {
+        t: Tq
+      } = (0, aq.v)(), zq = (0, dq.useNavigatePreserveSearch)(), [Sq, pq] = (0, lq.useState)("Enter"), [Gq, Lq] = (0, lq.useState)(""), Jq = lq.useRef(null), kq = null === (Eq = Qq.c[Zq]) || void 0 === Eq ? void 0 : Eq.showWorldsInsteadOfCustomLobbies, Rq = kq ? 1 : null === (gq = Qq.c[Zq]) || void 0 === gq ? void 0 : gq.customLobbyCustomSchematicLimit, [Uq, Fq] = (0, lq.useState)(!kq);
+      Mq || (Mq = "classic_creative" === Zq || "classic_creativeFlat" === Zq ? "creative" : "classic" === Zq ? "peaceful" : "survival");
+      const sq = {
+        baseOptions: {
+          gameNameWithVariation: kq ? "classic" : Zq,
+          name: "",
+          visibility: "unlisted"
+        },
+        listedOptions: {
+          description: "",
+          color: "",
+          emojis: ""
+        },
+        mapOptions: {
+          mapType: "classic_creativeFlat" === Zq ? "flat" : "default",
+          schematicIdList: []
+        },
+        worldOptions: null
+      };
+      kq && (sq.worldOptions = {
+        defaultGamemode: Mq,
+        disableProtectors: !1,
+        spawnProtection: !0,
+        disableTpRequests: !1,
+        disableTribeCreation: !1,
+        disableLobbySpawn: !1,
+        voidDeathHeight: -1e4,
+        worldBorder: null,
+        disableFallDamage: !0,
+        disableMobs: !1,
+        worldGenSeed: "",
+        enableSmpMarketplace: !1,
+        enableSurvivalGuns: !1,
+        enableSpawnReset: !1,
+        enableDayNight: !0
+      });
+      const [Xq, wq] = (0, lq.useState)(sq), [Kq, Cq] = (0, lq.useState)(null);
+
+      function Iq(qq, Eq) {
+        wq({
+          ...Xq,
+          baseOptions: {
+            ...Xq.baseOptions,
+            [qq]: Eq
+          }
+        })
+      }
+
+      function eq(qq, Eq) {
+        wq({
+          ...Xq,
+          listedOptions: {
+            ...Xq.listedOptions,
+            [qq]: Eq
+          }
+        })
+      }
+
+      function Dq(qq, Eq) {
+        wq({
+          ...Xq,
+          worldOptions: {
+            ...Xq.worldOptions,
+            [qq]: Eq
+          }
+        })
+      }
+
+      function qE(qq) {
+        wq({
+          ...Xq,
+          mapOptions: {
+            ...Xq.mapOptions,
+            ...qq
+          }
+        })
+      }(0, lq.useEffect)((() => {
+        Bq.d.getNewStarterName().then((qq => {
+          wq((Eq => "" !== Eq.baseOptions.name ? Eq : {
+            ...Eq,
+            baseOptions: {
+              ...Eq.baseOptions,
+              name: qq
+            }
+          }))
+        })).catch((qq => {
+          console.error("Error getting new starter name:", qq)
+        }))
+      }), []), (0, lq.useEffect)((() => {
+        "customSchematic" === Xq.mapOptions.mapType && null === Kq && (0, cq.postJsonWithMetricsCookiesAndJsonResponse)(`${uq.clientSideServerUrls.indexUrl}/index/schematic/get-owned-schematics`, {}, {
+          retries: 0,
+          minTimeout: 3e3
+        }).then((qq => {
+          Cq(qq)
+        }))
+      }), [Xq.mapOptions.mapType, Kq]);
+      const EE = {
+          tpRequests: {
+            isEnabled: () => !Xq.worldOptions.disableTpRequests,
+            hG: qq => {
+              Dq("disableTpRequests", !qq)
+            }
+          },
+          spawnProtection: {
+            isEnabled: () => Xq.worldOptions.spawnProtection,
+            hG: qq => {
+              Dq("spawnProtection", qq)
+            }
+          },
+          spawnReset: {
+            isEnabled: () => Xq.worldOptions.enableSpawnReset,
+            hG: qq => {
+              Dq("enableSpawnReset", qq)
+            }
+          },
+          smpMarketplace: {
+            isEnabled: () => Xq.worldOptions.enableSmpMarketplace,
+            hG: qq => {
+              Dq("enableSmpMarketplace", qq)
+            }
+          },
+          survivalGuns: {
+            isEnabled: () => Xq.worldOptions.enableSurvivalGuns,
+            hG: qq => {
+              Dq("enableSurvivalGuns", qq)
+            }
+          },
+          fallDamage: {
+            isEnabled: () => !Xq.worldOptions.disableFallDamage,
+            hG: qq => {
+              Dq("disableFallDamage", !qq)
+            }
+          },
+          dayNight: {
+            isEnabled: () => Xq.worldOptions.enableDayNight,
+            hG: qq => {
+              Dq("enableDayNight", qq)
+            }
+          }
+        },
+        gE = "Enter" !== Sq,
+        YE = (0, bq.jsx)(Pq.c, {
+          className: "NameInput",
+          label: "general:name",
+          disabled: "Enter" !== Sq,
+          children: (0, bq.jsx)(Oq.b, {
+            domRef: Jq,
+            onValueChange: (qq, Eq) => {
+              const gq = (0, tq.Bb)(qq);
+              Iq("name", gq), Jq.current.value = gq
+            },
+            maxLength: tq.R,
+            defaultValue: Xq.baseOptions.name
+          })
+        });
+      return (0, bq.jsxs)("div", {
+        className: xq()("CreateCustomLobby", {
+          CreateCustomLobbySuccess: "Success" === Sq,
+          AdvancedMode: Uq
+        }),
+        children: ["Success" === Sq && (0, bq.jsxs)("div", {
+          className: "CreateCustomLobbySuccessOverlay",
+          children: [(0, bq.jsxs)("div", {
+            className: "CreateCustomLobbySuccessTitle FullyFancyText AnimFadeInScaleUp",
+            children: [(0, bq.jsx)(vq.d, {
+              name: "check"
+            }), (0, bq.jsx)(Hq.b, {})]
+          }), (0, bq.jsx)("div", {
+            className: "CreateCustomLobbySuccessButtons AnimFadeInScaleUp",
+            children: (0, bq.jsx)(Wq.p, {
+              padDefaultFocus: !0,
+              onClick: () => {
+                (0, jq.f)("worldCreation"), zq((0, Vq.e)(Zq, Xq.baseOptions.name))
+              },
+              children: Tq("homePage:joinLobbyName", {
+                lobbyName: Xq.baseOptions.name
+              })
+            })
+          })]
+        }), (0, bq.jsx)("div", {
+          className: "CreateCustomLobbyTitleContainer",
+          children: (0, bq.jsx)("div", {
+            className: "CreateCustomLobbyTitle",
+            children: Tq(kq ? "homePage:createWorld" : "homePage:createCustomLobby")
+          })
+        }), (0, bq.jsx)(nq.c, {
+          locked: gE,
+          children: (0, bq.jsxs)("div", {
+            className: "CreateCustomLobbyFields",
+            children: [!Uq && YE, Uq && (0, bq.jsxs)("div", {
+              className: "BloxdForm",
+              children: [(0, bq.jsx)("div", {
+                className: "SectionTitle",
+                children: Tq("customLobby:generalOptions")
+              }), (0, bq.jsxs)("div", {
+                className: "SectionBody",
+                children: [YE, (0, bq.jsx)(Pq.c, {
+                  label: "customLobby:visibility",
+                  circleInfoText: Tq("customLobby:visibilityDescription"),
+                  disabled: "Enter" !== Sq,
+                  children: (0, bq.jsx)(Aq.d, {
+                    options: Yq.r.map((qq => ({
+                      value: qq,
+                      label: Yq.g[qq]
+                    }))),
+                    value: Xq.baseOptions.visibility,
+                    onChange: qq => {
+                      Iq("visibility", qq.value)
+                    }
+                  })
+                })]
+              })]
+            }), kq && (0, bq.jsx)(hq.e, {
+              value: Xq.worldOptions.defaultGamemode,
+              onChange: qq => {
+                Dq("defaultGamemode", qq)
+              },
+              showAll: Uq,
+              disabled: gE
+            }), (kq || !(0, oq.H)(Rq) && Rq > 0) && (0, bq.jsx)(hq.i, {
+              mapTypes: kq ? Yq.C : Yq.n,
+              value: Xq.mapOptions.mapType,
+              onChange: qq => {
+                const Eq = {
+                  mapType: qq
+                };
+                "customSchematic" !== qq && (Eq.schematicIdList = []), qE(Eq)
+              },
+              showAll: Uq,
+              disabled: gE,
+              children: "customSchematic" === Xq.mapOptions.mapType && (0, bq.jsxs)(bq.Fragment, {
+                children: [(0, bq.jsxs)("div", {
+                  className: "SchematicListTitle AnimFadeIn",
+                  children: [kq && Tq("customLobby:selectWorldSchematic"), !kq && Tq("customLobby:selectCustomLobbySchematics", {
+                    schematicLimit: Rq
+                  })]
+                }), (0, bq.jsx)("div", {
+                  className: xq()("SchematicListContainer AnimFadeIn", {
+                    SchematicListContainerDisabled: "Enter" !== Sq
+                  }),
+                  children: (0, bq.jsx)(Nq.d, {
+                    loading: null === Kq,
+                    schematics: null !== Kq && void 0 !== Kq ? Kq : [],
+                    onSchematicPicked: function(qq) {
+                      const Eq = Xq.mapOptions.schematicIdList;
+                      if (Eq.includes(qq.schematicId)) qE({
+                        schematicIdList: Eq.filter((Eq => Eq !== qq.schematicId))
+                      });
+                      else {
+                        if (Rq && Xq.mapOptions.schematicIdList.length >= Rq) return;
+                        qE({
+                          schematicIdList: [...Xq.mapOptions.schematicIdList, qq.schematicId]
+                        })
+                      }
+                    },
+                    selectedSchematicIdList: Xq.mapOptions.schematicIdList,
+                    disableAutoExport: !0
+                  })
+                })]
+              })
+            }), Uq && (0, bq.jsxs)("div", {
+              className: "BloxdForm",
+              children: [(0, bq.jsx)("div", {
+                className: "SectionTitle",
+                children: Tq("customLobby:listedOptions")
+              }), (0, bq.jsxs)("div", {
+                className: "SectionBody",
+                children: [(0, bq.jsx)(Pq.c, {
+                  label: "general:description",
+                  className: "CustomLobbyDescription",
+                  disabled: "Enter" !== Sq,
+                  children: (0, bq.jsx)(Oq.b, {
+                    onValueChange: (qq, Eq) => {
+                      eq("description", qq)
+                    },
+                    maxLength: 100,
+                    defaultValue: Xq.listedOptions.description
+                  })
+                }), (0, bq.jsx)(Pq.c, {
+                  label: "general:color",
+                  circleInfoText: "customLobby:lobbyColorDescription",
+                  disabled: "Enter" !== Sq,
+                  children: (0, bq.jsx)("div", {
+                    className: "OtherInput",
+                    children: (0, bq.jsx)("input", {
+                      type: "color",
+                      value: Xq.listedOptions.color,
+                      onChange: qq => {
+                        eq("color", qq.target.value)
+                      }
+                    })
+                  })
+                }), (0, bq.jsx)(Pq.c, {
+                  label: "general:emojis",
+                  circleInfoText: "customLobby:lobbyEmojisDescription",
+                  disabled: "Enter" !== Sq,
+                  children: (0, bq.jsx)(Oq.b, {
+                    onValueChange: (qq, Eq) => {
+                      eq("emojis", qq)
+                    },
+                    maxLength: 6,
+                    defaultValue: Xq.listedOptions.emojis
+                  })
+                })]
+              })]
+            }), Uq && kq && (0, bq.jsxs)("div", {
+              className: "BloxdForm",
+              children: [(0, bq.jsx)("div", {
+                className: "SectionTitle",
+                children: Tq("customLobby:advancedOptions")
+              }), (0, bq.jsxs)("div", {
+                className: "SectionBody",
+                children: [(0, bq.jsx)(Pq.c, {
+                  label: "classic:worldGenSeed",
+                  disabled: "Enter" !== Sq,
+                  children: (0, bq.jsx)(Oq.b, {
+                    onValueChange: (qq, Eq) => {
+                      Dq("worldGenSeed", qq)
+                    },
+                    maxLength: tq.R
+                  })
+                }), (0, bq.jsx)(Pq.c, {
+                  label: "classic:disableProtectors",
+                  disabled: "Enter" !== Sq,
+                  children: (0, bq.jsx)(Pq.b, {
+                    checked: Xq.worldOptions.disableProtectors,
+                    setChecked: qq => {
+                      Dq("disableProtectors", qq)
+                    }
+                  })
+                }), (0, bq.jsx)(Pq.c, {
+                  label: "classic:disableTribeCreation",
+                  disabled: "Enter" !== Sq,
+                  children: (0, bq.jsx)(Pq.b, {
+                    checked: Xq.worldOptions.disableTribeCreation,
+                    setChecked: qq => {
+                      Dq("disableTribeCreation", qq)
+                    }
+                  })
+                }), (0, bq.jsx)(Pq.c, {
+                  label: "classic:voidDeathHeight",
+                  circleInfoText: "classic:voidDeathHeightDescription",
+                  disabled: "Enter" !== Sq,
+                  children: (0, bq.jsx)("input", {
+                    type: "number",
+                    max: yq.I,
+                    value: null !== (mq = Xq.worldOptions.voidDeathHeight) && void 0 !== mq ? mq : "",
+                    onChange: qq => {
+                      const Eq = parseInt(qq.target.value);
+                      Dq("voidDeathHeight", isNaN(Eq) ? null : Eq)
+                    }
+                  })
+                }), (0, bq.jsx)(Pq.c, {
+                  label: "classic:disableLobbySpawn",
+                  disabled: "Enter" !== Sq,
+                  children: (0, bq.jsx)(Pq.b, {
+                    checked: Xq.worldOptions.disableLobbySpawn,
+                    setChecked: qq => {
+                      Dq("disableLobbySpawn", qq)
+                    }
+                  })
+                }), (0, bq.jsx)(Pq.c, {
+                  label: "classic:worldBorder",
+                  circleInfoText: "classic:worldBorderDescription",
+                  disabled: "Enter" !== Sq,
+                  children: (0, bq.jsx)("input", {
+                    type: "number",
+                    min: yq.O,
+                    max: yq.K,
+                    value: null !== (iq = Xq.worldOptions.worldBorder) && void 0 !== iq ? iq : "",
+                    onChange: qq => {
+                      const Eq = parseInt(qq.target.value);
+                      Dq("worldBorder", isNaN(Eq) ? null : Eq)
+                    }
+                  })
+                }), (0, bq.jsx)(Pq.c, {
+                  label: "classic:disableMobs",
+                  disabled: "Enter" !== Sq,
+                  children: (0, bq.jsx)(Pq.b, {
+                    checked: Xq.worldOptions.disableMobs,
+                    setChecked: qq => {
+                      Dq("disableMobs", qq)
+                    }
+                  })
+                })]
+              })]
+            }), kq && (0, bq.jsx)(rq.e, {
+              callbacks: EE,
+              disabled: "Enter" !== Sq,
+              advancedMode: Uq
+            })]
+          })
+        }), (0, bq.jsxs)("div", {
+          className: "CreateCustomLobbyFooter",
+          children: [(0, bq.jsx)(Wq.p, {
+            className: "CreateCustomLobbyButton",
+            padDefaultFocus: !0,
+            loading: "Enter" !== Sq,
+            onClick: () => {
+              !async function() {
+                if ("Enter" === Sq) {
+                  pq("Loading"), Lq("");
+                  try {
+                    await Bq.d.createCustomLobby(Xq), pq("Success")
+                  } catch (qq) {
+                    Lq(qq.message), console.error(qq.message), pq("Enter")
+                  }
+                }
+              }()
+            },
+            children: Tq("general:create")
+          }), kq && (0, bq.jsx)("div", {
+            className: "CreateCustomLobbyAdvancedToggle",
+            "data-pad-ignore": gE || void 0,
+            children: (0, bq.jsx)(Pq.c, {
+              label: "customLobby:showAdvancedOptions",
+              disabled: gE,
+              onLabelClick: () => {
+                Fq(!Uq)
+              },
+              children: (0, bq.jsx)(Pq.b, {
+                checked: Uq,
+                setChecked: Fq
+              })
+            })
+          }), Gq && (0, bq.jsx)("div", {
+            className: "CreateCustomLobbyError AnimFadeInScaleUp",
+            children: Gq
+          })]
+        })]
+      })
+    }
+  },
+  36428: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Aq
+    });
+    var Yq = gq(1018),
+      lq = gq.n(Yq),
+      Oq = gq(57),
+      mq = gq(4405),
+      xq = gq(1070);
+
+    function Aq(qq) {
+      let {
+        locked: Eq,
+        children: gq
+      } = qq;
+      const Yq = (0, Oq.useRef)(null),
+        Aq = (0, mq.c)(Yq, "y");
+      return (0, xq.jsx)("div", {
+        ref: Yq,
+        className: lq()("CreateCustomLobbyBody", {
+          CreateCustomLobbyBodyMoreAbove: Aq.before,
+          CreateCustomLobbyBodyMoreBelow: Aq.after
+        }),
+        "data-pad-ignore": Eq || void 0,
+        children: gq
+      })
+    }
+  },
+  36415: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => uq,
+      g: () => Wq
+    });
+    var Yq = gq(57),
+      lq = gq(1336),
+      Oq = gq(1183),
+      mq = gq(1326),
+      xq = gq(3358),
+      Aq = gq(4764),
+      cq = gq(1070);
+
+    function uq(qq) {
+      let {
+        loading: Eq,
+        schematics: gq,
+        onSchematicPicked: Yq,
+        selectedSchematicIdList: lq = [],
+        disableAutoExport: Aq
+      } = qq;
+      const {
+        t: uq
+      } = (0, Oq.v)();
+      return (0, cq.jsxs)("div", {
         className: "SchematicList",
-        children: [uz && (0, Hz.jsx)(lz.c, {}), !uz && 0 === bz.length && (0, Hz.jsx)("div", {
+        children: [Eq && (0, cq.jsx)(mq.e, {}), !Eq && 0 === gq.length && (0, cq.jsx)("div", {
           className: "NoSchematicsText",
-          children: Oz("worldBuilder:noSavedSchematic")
-        }), !uz && bz.map((zz => (0, Hz.jsx)(Mz.i, {
+          children: uq("worldBuilder:noSavedSchematic")
+        }), !Eq && gq.map((qq => (0, cq.jsx)(xq.e, {
           source: {
             type: "schematic",
-            schematic: zz
+            schematic: qq
           },
           gameWidth: "25%",
           useLongRatio: !0,
           onClick: () => {
-            Ez(zz)
+            Yq(qq)
           },
-          isSelected: nz.includes(zz.schematicId),
+          isSelected: lq.includes(qq.schematicId),
           hideCcu: !0,
           hideFavourites: !0,
           showPublishedChip: !0,
           hideUnpublishedChip: !0,
-          disabled: zz.isAutoExported && tz,
+          disabled: qq.isAutoExported && Aq,
           disabledReason: "worldBuilder:autoExportDisabled"
-        }, zz.schematicId)))]
+        }, qq.schematicId)))]
       })
     }
 
-    function pz(zz) {
+    function Bq(qq) {
       let {
-        ownedSchematics: uz,
-        currentWorldSchematicId: bz,
-        onClose: nz
-      } = zz;
+        ownedSchematics: Eq,
+        currentWorldSchematicId: gq,
+        onClose: lq
+      } = qq;
       const {
-        t: lz
-      } = (0, iz.F)(), [Mz, pz] = (0, Ez.useState)(null);
-      return (0, Hz.jsxs)("div", {
+        t: mq
+      } = (0, Oq.v)(), [xq, Bq] = (0, Yq.useState)(null);
+      return (0, cq.jsxs)("div", {
         className: "SchematicListWindow",
-        children: [null === Mz && (0, Hz.jsxs)(Hz.Fragment, {
-          children: [(0, Hz.jsx)("h1", {
+        children: [null === xq && (0, cq.jsxs)(cq.Fragment, {
+          children: [(0, cq.jsx)("h1", {
             className: "SchematicPopupTitle",
-            children: lz("worldBuilder:schematicList")
-          }), (0, Hz.jsx)("h2", {
+            children: mq("worldBuilder:schematicList")
+          }), (0, cq.jsx)("h2", {
             className: "SchematicPopupSubtitle",
-            children: lz("worldBuilder:clickSchematicForOptions")
-          }), (0, Hz.jsx)("div", {
+            children: mq("worldBuilder:clickSchematicForOptions")
+          }), (0, cq.jsx)("div", {
             className: "SchematicPopupSchematicListContainer",
-            children: (0, Hz.jsx)(Oz, {
+            children: (0, cq.jsx)(uq, {
               loading: !1,
-              schematics: uz,
-              onSchematicPicked: zz => {
-                pz(zz)
+              schematics: Eq,
+              onSchematicPicked: qq => {
+                Bq(qq)
               },
               disableAutoExport: !1
             })
           })]
-        }), null !== Mz && (0, Hz.jsx)(tz.i, {
-          schematic: Mz,
-          inSourceWorld: Mz.schematicId === bz,
-          onSchematicUpdate: zz => {
-            pz(zz)
+        }), null !== xq && (0, cq.jsx)(Aq.i, {
+          schematic: xq,
+          inSourceWorld: xq.schematicId === gq,
+          onSchematicUpdate: qq => {
+            Bq(qq)
           },
           onClose: () => {
-            pz(null), nz()
+            Bq(null), lq()
           }
         })]
       })
     }
 
-    function dz(zz) {
+    function Wq(qq) {
       let {
-        ownedSchematics: uz,
-        currentWorldSchematicId: bz,
-        onClose: Ez
-      } = zz;
-      nz.NotificationProvider.showCustomPopup({
-        body: zz => (0, Hz.jsx)(pz, {
-          ownedSchematics: uz,
-          currentWorldSchematicId: bz,
-          onClose: zz
+        ownedSchematics: Eq,
+        currentWorldSchematicId: gq,
+        onClose: Yq
+      } = qq;
+      lq.NotificationProvider.showCustomPopup({
+        body: qq => (0, cq.jsx)(Bq, {
+          ownedSchematics: Eq,
+          currentWorldSchematicId: gq,
+          onClose: qq
         }),
         middleScreenPopupClassName: "SchematicPopup",
-        onClose: Ez,
+        onClose: Yq,
         unlockPointerKey: "schematicListPopup"
       })
     }
   },
-  40949: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      runClientGameMessage: () => Tz
+  36424: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => cq,
+      i: () => uq
     });
-    var Ez = bz(3509),
-      nz = bz(3521),
-      iz = bz(1296),
-      lz = bz(35840),
-      Mz = bz(4706),
-      tz = bz(1038),
-      Hz = bz.n(tz),
-      Oz = bz(56),
-      pz = bz(1322),
-      dz = bz(1419),
-      Fz = bz(328),
-      Zz = bz(1181),
-      Rz = bz(1047),
-      Kz = bz(1089);
+    gq(57);
+    var Yq = gq(1018),
+      lq = gq.n(Yq),
+      Oq = gq(4456),
+      mq = gq(296),
+      xq = gq(1183),
+      Aq = gq(1070);
 
-    function wz(zz) {
+    function cq(qq) {
       let {
-        onFilePicked: uz
-      } = zz;
+        value: Eq,
+        onChange: gq,
+        showAll: Yq,
+        disabled: cq = !1
+      } = qq;
       const {
-        t: bz
-      } = (0, Zz.F)(), [Ez, nz] = (0, Oz.useState)(null), {
-        getRootProps: iz,
-        getInputProps: lz,
-        isDragActive: tz
-      } = (0, Mz.b)({
-        onDrop: zz => {
-          zz.length > 0 && nz(zz[0])
-        },
-        useFsAccessApi: !1
-      }), pz = Ez && Ez.size > 1024 * Fz.id;
-      return (0, Kz.jsxs)("div", {
-        className: "SchematicUploadContainer",
-        children: [(0, Kz.jsxs)("div", {
-          ...iz({
-            className: Hz()("SchematicUpload", {
-              ActiveDrag: tz
-            })
-          }),
-          children: [(0, Kz.jsx)("input", {
-            ...lz({
-              accept: ".bloxdschem"
-            })
-          }), !tz && Ez ? (0, Kz.jsxs)(Kz.Fragment, {
-            children: [(0, Kz.jsx)("div", {
-              className: Hz()("SchematicUploadIcon", "Active", {
-                TooBig: pz
-              }),
-              children: (0, Kz.jsx)(Rz.c, {
-                name: "file-lines"
-              })
-            }), (0, Kz.jsx)("div", {
-              className: "SchematicUploadInstructions Active",
-              children: Ez.name
-            })]
-          }) : (0, Kz.jsxs)(Kz.Fragment, {
-            children: [(0, Kz.jsx)("div", {
-              className: "SchematicUploadIcon",
-              children: (0, Kz.jsx)(Rz.c, {
-                name: "up-from-bracket"
-              })
-            }), (0, Kz.jsx)("div", {
-              className: "SchematicUploadInstructions",
-              children: bz("worldBuilder:dragAFileHere")
-            })]
-          })]
-        }), (0, Kz.jsx)(dz.q, {
-          disabled: pz || !Ez,
-          className: "SchematicUploadButton",
-          onClick: () => {
-            !pz && Ez && uz(Ez)
-          },
-          children: pz ? bz("worldBuilder:fileTooBig", {
-            maxSizeKb: Fz.id
-          }) : bz("worldBuilder:upload")
-        })]
-      })
-    }
-
-    function Xz(zz) {
-      let {
-        ownedSchematics: uz,
-        onClose: bz,
-        onChosenPreset: Ez,
-        onChosenFile: nz
-      } = zz;
-      const {
-        t: iz
-      } = (0, Zz.F)();
-      return (0, Kz.jsxs)(Kz.Fragment, {
-        children: [(0, Kz.jsx)("h1", {
-          className: "SchematicPopupTitle",
-          children: iz("worldBuilder:loadSchematic")
-        }), (0, Kz.jsx)("h2", {
-          className: "SchematicPopupSubtitle",
-          children: iz("worldBuilder:chooseOneOfYourSchematics")
-        }), (0, Kz.jsx)("div", {
-          className: "SchematicPopupSchematicListContainer",
-          children: (0, Kz.jsx)(lz.b, {
-            schematics: uz,
-            onSchematicPicked: zz => {
-              Ez(zz.schematicId), bz()
-            },
-            loading: !1,
-            disableAutoExport: !0
-          })
-        }), (0, Kz.jsx)("h2", {
-          className: "SchematicPopupSubtitle",
-          children: iz("worldBuilder:uploadNewSchematic")
-        }), (0, Kz.jsx)(wz, {
-          onFilePicked: async zz => {
-            try {
-              await nz(zz)
-            } catch (uz) {
-              console.warn("Schematic upload failed", uz)
-            } finally {
-              bz()
-            }
-          }
-        })]
-      })
-    }
-    var fz = bz(4690),
-      sz = bz(1628),
-      rz = bz(4144),
-      oz = bz(1212);
-
-    function Nz(zz) {
-      var uz;
-      let {
-        ownedSchematics: bz,
-        onClose: Ez,
-        onChosenEdit: nz,
-        onChosenNew: iz,
-        onChosenDownload: Mz
-      } = zz;
-      const {
-        t: tz
-      } = (0, Zz.F)(), [Hz, pz] = (0, Oz.useState)("choose"), [Fz, Rz] = (0, Oz.useState)(null), [wz, Xz] = (0, Oz.useState)(null);
-      return (0, Kz.jsxs)(Kz.Fragment, {
-        children: [(0, Kz.jsx)("h1", {
-          className: "SchematicPopupTitle",
-          children: tz("worldBuilder:saveSchematic")
-        }), "choose" === Hz && (0, Kz.jsxs)(Kz.Fragment, {
-          children: [(0, Kz.jsx)("h2", {
-            className: "SchematicPopupSubtitle",
-            children: tz("worldBuilder:overwriteOneOfYourSchematics")
-          }), (0, Kz.jsx)("div", {
-            className: "SchematicPopupSchematicListContainer",
-            children: (0, Kz.jsx)(lz.b, {
-              schematics: bz,
-              onSchematicPicked: zz => {
-                Rz(zz.schematicId), Xz("existing"), pz("save")
-              },
-              loading: !1,
-              disableAutoExport: !1
-            })
-          }), (0, Kz.jsx)("h2", {
-            className: "SchematicPopupSubtitle",
-            children: tz("general:otherOptions")
-          }), (0, Kz.jsxs)("div", {
-            className: "OtherOptions",
-            children: [(0, Kz.jsx)(dz.q, {
-              className: "ChooseUploadSchematicButton",
-              onClick: () => {
-                Xz("new"), pz("save")
-              },
-              children: tz("worldBuilder:saveAsNewSchematic")
-            }), (0, Kz.jsx)(dz.f, {
-              className: "ChooseUploadSchematicButton",
-              onClick: () => {
-                Xz("file"), pz("save")
-              },
-              children: tz("worldBuilder:downloadSchematic")
-            })]
-          })]
-        }), "choose" !== Hz && (0, Kz.jsx)(vz, {
-          type: wz,
-          ownedSchematics: bz,
-          onSubmit: (zz, uz, bz) => {
-            "file" === wz ? Mz(uz, zz) : "new" === wz ? iz(uz, bz, zz) : nz(Fz, uz, bz, zz), Ez()
-          },
-          onBack: () => {
-            pz("choose")
-          },
-          prepopName: "existing" === wz ? null === (uz = bz.find((zz => zz.schematicId === Fz))) || void 0 === uz ? void 0 : uz.name : null
-        })]
-      })
-    }
-
-    function vz(zz) {
-      let {
-        type: uz,
-        prepopName: bz,
-        ownedSchematics: Ez,
-        onSubmit: nz,
-        onBack: iz
-      } = zz;
-      const {
-        t: lz
-      } = (0, Zz.F)(), [Mz, tz] = (0, Oz.useState)(""), [pz, Fz] = (0, Oz.useState)(""), [Rz, wz] = (0, Oz.useState)(null), [Xz, fz] = (0, Oz.useState)(!0), Nz = zz => {
-        var bz;
-        zz = null !== (bz = zz) && void 0 !== bz ? bz : Mz;
-        const nz = "new" === uz ? (0, oz.A)(zz) : null,
-          iz = [...(0, oz.Db)(zz), ...nz ? [nz] : []];
-        return iz.length > 0 ? (wz(iz.join(", ")), !1) : "new" === uz && Ez.find((uz => uz.name === zz)) ? (wz(lz("worldBuilder:schematicAlreadyExists")), !1) : (wz(null), !0)
-      };
-      return (0, Kz.jsxs)("div", {
-        className: "SaveSchematicWindow",
-        children: [(0, Kz.jsx)("h2", {
-          className: "SchematicPopupSubtitle",
-          children: lz("general:name")
-        }), (0, Kz.jsx)(sz.d, {
-          className: Hz()("SaveSchematicName", {
-            Error: Rz
-          }),
-          forcedText: bz,
-          onValueChange: zz => {
-            tz(zz), Nz(zz)
-          },
-          placeholderText: lz("worldBuilder:schematicNamePlaceholder"),
-          maxLength: oz.xb
-        }), (0, Kz.jsx)("h2", {
-          className: Hz()("SaveSchematicError", {
-            Hidden: !Rz
-          }),
-          children: Rz
-        }), (0, Kz.jsx)("h2", {
-          className: Hz()("SchematicPopupSubtitle", {
-            Hidden: "file" === uz
-          }),
-          children: lz("general:description")
-        }), (0, Kz.jsx)(sz.d, {
-          className: Hz()("SaveSchematicDescription", {
-            Hidden: "file" === uz
-          }),
-          onValueChange: Fz,
-          placeholderText: lz("worldBuilder:schematicDescriptionPlaceholder"),
-          maxLength: oz.ub,
-          useTextarea: !0
-        }), (0, Kz.jsxs)("div", {
-          className: Hz()("SaveSchematicCheckboxContainer", {
-            WarningBorder: "existing" === uz
-          }),
-          children: [(0, Kz.jsx)(rz.b, {
-            checked: Xz,
-            onChange: zz => {
-              fz(zz.target.checked)
-            },
-            disabled: !1,
-            className: "SaveSchematicCheckbox"
-          }), (0, Kz.jsx)("h1", {
-            className: "SchematicPopupSubtitle",
-            children: lz("existing" === uz ? "worldBuilder:overwriteLobbyCode" : "worldBuilder:includeLobbyCode")
-          })]
-        }), "existing" === uz && (0, Kz.jsx)("div", {
-          className: "SaveSchematicLobbyCodeWarning",
-          children: lz("worldBuilder:lobbyCodeWarning")
-        }), (0, Kz.jsxs)("div", {
-          className: "SaveSchematicButtons",
-          children: [(0, Kz.jsx)(dz.q, {
-            className: "SaveSchematicButton",
+        t: uq
+      } = (0, xq.v)();
+      return (0, Aq.jsxs)("div", {
+        className: lq()("BloxdForm GamemodeForm", {
+          BasicOptions: !Yq
+        }),
+        children: [(0, Aq.jsx)("div", {
+          className: "SectionTitle",
+          children: uq("classic:defaultGamemode")
+        }), (0, Aq.jsx)("div", {
+          className: "SectionBody",
+          children: Oq.A.map((qq => Yq || (0, Oq.w)(qq) ? (0, Aq.jsx)("button", {
+            type: "button",
+            className: lq()("WorldGamemode", {
+              Selected: Eq === qq
+            }),
+            disabled: cq,
             onClick: () => {
-              Nz() && nz(Xz, Mz, pz)
+              gq(qq)
             },
-            children: lz("file" === uz ? "general:download" : "general:save")
-          }), (0, Kz.jsx)(dz.K, {
-            className: "SaveSchematicButton",
-            onClick: iz,
-            children: lz("general:cancel")
-          })]
+            style: {
+              "--background-image": `url(${mq.v[qq]})`
+            },
+            children: mq.r[qq]
+          }, qq) : null))
         })]
       })
     }
-    var xz = bz(1195),
-      Jz = bz(1673),
-      Az = bz(1118);
 
-    function Tz(zz, uz) {
-      if ("devDownloadJson" !== zz) ! function(zz, uz) {
-        const bz = xz.clientSideServerUrls.getHttpUrlFromWebSocketUrl((0, iz.b)().websocketUrl);
-        let Mz = !1;
-        const tz = async (zz, uz) => {
-          if (Mz) return;
-          Mz = !0;
-          const {
-            gameNameWithVariation: Ez,
-            lobbyName: lz
-          } = (0, iz.b)(), tz = {
-            gameNameWithVariation: Ez,
-            lobbyName: lz
-          };
-          return await (0, Az.postJsonWithMetricsCookiesAndJsonResponse)(`${bz}/schematic/${zz}`, nz.z[zz].toBuffer({
-            ...tz,
-            ...uz
-          }), {
-            retries: 1
-          })
-        };
-        if ("Plugin|WorldBuilder|SaveSchematic" === zz) ! function(zz) {
-          let {
-            ownedSchematics: uz,
-            onChosenDownload: bz,
-            onChosenEdit: Ez,
-            onChosenNew: nz,
-            onClose: iz
-          } = zz;
-          pz.NotificationProvider.showCustomPopup({
-            body: zz => (0, Kz.jsx)(Nz, {
-              ownedSchematics: uz,
-              onChosenDownload: bz,
-              onChosenEdit: Ez,
-              onChosenNew: nz,
-              onClose: zz
+    function uq(qq) {
+      let {
+        mapTypes: Eq,
+        value: gq,
+        onChange: Yq,
+        showAll: cq,
+        disabled: uq = !1,
+        children: Bq
+      } = qq;
+      const {
+        t: Wq
+      } = (0, xq.v)();
+      return (0, Aq.jsxs)("div", {
+        className: lq()("BloxdForm MapTypeForm", {
+          BasicOptions: !cq
+        }),
+        children: [(0, Aq.jsx)("div", {
+          className: "SectionTitle",
+          children: Wq("customLobby:mapType")
+        }), (0, Aq.jsx)("div", {
+          className: "SectionBody",
+          children: Eq.map((qq => cq || (0, Oq.x)(qq) ? (0, Aq.jsx)("button", {
+            type: "button",
+            className: lq()("MapType", {
+              Selected: gq === qq
             }),
-            middleScreenPopupClassName: "SchematicPopup",
-            onClose: iz,
-            unlockPointerKey: "schematicSaverPopup"
-          })
-        }({
-          ownedSchematics: uz,
-          onChosenDownload: (zz, uz) => {
-            tz("download-schematic", {
-              name: zz,
-              includeLobbyCode: uz
-            }).then((uz => {
-              let {
-                buffer: {
-                  data: bz
-                }
-              } = uz;
-              const nz = Ez.gZ.from(bz);
-              (0, Jz.downloadBlob)(new Blob([nz], {
-                type: "application/octet-stream"
-              }), `${zz}.bloxdschem`)
-            }))
-          },
-          onClose: () => {
-            tz("cancel", {})
-          },
-          onChosenEdit: (zz, uz, bz, Ez) => {
-            tz("save-to-profile", {
-              schematicId: zz,
-              name: uz,
-              description: bz,
-              includeLobbyCode: Ez
-            })
-          },
-          onChosenNew: (zz, uz, bz) => {
-            tz("save-to-profile", {
-              schematicId: null,
-              name: zz,
-              description: uz,
-              includeLobbyCode: bz
-            })
-          }
-        });
-        else if ("Plugin|WorldBuilder|LoadSchematic" === zz) ! function(zz) {
-          let {
-            ownedSchematics: uz,
-            onChosenFile: bz,
-            onChosenPreset: Ez,
-            onClose: nz
-          } = zz;
-          pz.NotificationProvider.showCustomPopup({
-            body: zz => (0, Kz.jsx)(Xz, {
-              ownedSchematics: uz,
-              onChosenFile: bz,
-              onChosenPreset: Ez,
-              onClose: zz
-            }),
-            middleScreenPopupClassName: "SchematicPopup",
-            onClose: nz,
-            unlockPointerKey: "schematicLoaderPopup"
-          })
-        }({
-          ownedSchematics: uz,
-          onChosenFile: async zz => {
-            const uz = Ez.gZ.from(await zz.arrayBuffer()),
-              {
-                gameNameWithVariation: lz,
-                lobbyName: Mz
-              } = (0, iz.b)();
-            await (0, Az.postBinaryWithMetricsCookiesAndCustomResponse)(`${bz}/schematic/upload-schematic`, nz.z["upload-schematic"].toBuffer({
-              gameNameWithVariation: lz,
-              lobbyName: Mz,
-              schematic: uz
-            }), {
-              retries: 1
-            }, Az.HttpPayloadType.json)
-          },
-          onChosenPreset: zz => {
-            tz("load-from-profile", {
-              schematicId: zz
-            })
-          },
-          onClose: () => {
-            tz("cancel", {})
-          }
-        });
-        else if ("Plugin|WorldBuilder|ListSchematics" === zz)(0, lz.d)({
-          ownedSchematics: Array.isArray(uz) ? uz : uz.schematics,
-          currentWorldSchematicId: Array.isArray(uz) ? null : uz.currentWorldSchematicId,
-          onClose: () => {
-            tz("cancel", {})
-          }
-        });
-        else if ("Plugin|WorldBuilder|ExportWorld" === zz) {
-          var Hz;
-          const zz = null !== (Hz = uz.schematic) && void 0 !== Hz ? Hz : uz;
-          (0, fz.k)({
-            schematic: zz,
-            inSourceWorld: zz.schematicId === uz.currentWorldSchematicId,
-            onClose: () => {
-              tz("cancel", {})
-            }
-          })
-        } else console.error(`Unknown plugin message type ${zz}`)
-      }(zz, uz);
-      else {
-        const zz = JSON.stringify(uz.data, null, 2);
-        (0, Jz.downloadBlob)(new Blob([zz], {
-          type: "application/json"
-        }), uz.filename)
-      }
+            disabled: uq,
+            onClick: () => {
+              Yq(qq)
+            },
+            style: {
+              "--background-image": `url(${mq.o[qq]})`
+            },
+            children: mq.k[qq]
+          }, qq) : null))
+        }), Bq]
+      })
     }
-  }
+  },
+  36406: () => {}
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const qq in modules) Object.freeze(modules[qq]);

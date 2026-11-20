@@ -1,509 +1,365 @@
 export const id = 74;
 export const ids = [74];
 export const modules = {
-  4448: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Su,
-      f: () => pb,
-      h: () => Cu,
-      l: () => ub,
-      p: () => ju,
-      s: () => Yu,
-      t: () => hu,
-      u: () => Qu,
-      y: () => Tu,
-      C: () => Ob,
-      D: () => Hb,
-      E: () => Wu,
-      G: () => qu
+  4516: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => uq
     });
-    var Ez = bz(3468);
-    const nz = Function.prototype.toString,
-      iz = RegExp.prototype.exec,
-      lz = Reflect.apply,
-      Mz = Function.prototype.call,
-      tz = Function.prototype.apply,
-      Hz = Function.prototype.bind,
-      Oz = Object.defineProperty,
-      pz = Uint8Array;
-    let dz, Fz;
-    try {
-      dz = globalThis.crypto, Fz = void 0 === dz || null === dz ? void 0 : dz.getRandomValues
-    } catch {}
-    const Zz = "bloxdBindApply";
-    let Rz;
-    try {
-      const zz = Mz;
-      Oz(zz, Zz, {
-        __proto__: null,
-        value: Hz,
-        configurable: !0
-      });
-      try {
-        Rz = zz[Zz](tz)
-      } finally {
-        delete zz[Zz]
+    var Yq = gq(24),
+      lq = gq(31),
+      Oq = gq(1274),
+      mq = gq(2733);
+    const xq = 3e4,
+      Aq = 1e3;
+
+    function cq() {
+      return "visible" === document.visibilityState && "inGame" === Yq.b.get("gameState") && (0, Oq.p)()
+    }
+
+    function uq(qq, Eq) {
+      (0, mq.v)() || function(qq, Eq, gq) {
+        let Yq = 0;
+        const lq = setInterval((() => {
+          Eq() && (Yq += Aq, Yq >= qq && (clearInterval(lq), gq()))
+        }), Aq)
+      }(xq, cq, (() => {
+        Eq().then((() => {
+          qq(`saved for the player after ${xq/1e3} s of play`), (0, mq.C)(), lq.i.TV("chat", {
+            content: [{
+              str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
+              style: {
+                color: "#ffd84a"
+              }
+            }]
+          })
+        }))
+      }))
+    }
+  },
+  9145: (qq, Eq, gq) => {
+    function Yq(qq, Eq) {
+      return 0 === qq.length ? 0 : qq[Math.min(qq.length - 1, Math.floor(Eq * qq.length))]
+    }
+
+    function lq(qq) {
+      return qq.toFixed(1)
+    }
+    gq.d(Eq, {
+      b: () => lq,
+      e: () => Yq
+    })
+  },
+  37910: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => cq,
+      f: () => uq,
+      h: () => Pq,
+      i: () => oq,
+      m: () => Hq
+    });
+    var Yq = gq(4516),
+      lq = gq(9145),
+      Oq = gq(2733);
+    const mq = 20,
+      xq = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "WB", "jobMs"];
+
+    function Aq(qq) {
+      return [...qq].sort(((qq, Eq) => qq - Eq))
+    }
+    const cq = [];
+
+    function uq(qq, Eq, gq) {
+      return `${qq},${Eq},${gq}`
+    }
+    class Bq {
+      constructor() {
+        this.pending = new Map, this.jobs = new Map, this.edits = [], this.nextEdit = 0, this.reported = 0, this.windowStart = performance.now(), this.frames = 0, this.lastFrameAt = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
-    } catch {}
-    const Kz = 16,
-      wz = 256,
-      Xz = 0,
-      fz = 1,
-      sz = 2,
-      rz = 3;
-    let oz, Nz = Xz,
-      vz = lz,
-      xz = 0;
-
-    function Jz(zz, uz) {
-      return zz === `function ${uz}() { [native code] }` || zz === `function ${uz}() {\n    [native code]\n}`
-    }
-    const Az = 0,
-      Tz = 1,
-      Lz = 2;
-    let Pz = Az;
-
-    function Gz(zz, uz, bz) {
-      if (Pz === Lz && Nz === fz && ! function() {
-          const zz = oz;
-          return xz >= wz && (vz(Fz, dz, [zz]), xz = 0), zz[xz++] < 256 / Kz
-        }()) return function(zz, uz, bz) {
-        return vz(zz, uz, bz ?? 0)
-      }(...arguments);
-      if (Pz === Az || Nz === sz) return lz(zz, uz, bz);
-      let Ez;
-      Pz = Az;
-      try {
-        Nz === Xz && (Nz = rz, Nz = function() {
-          const zz = lz(nz, lz, []);
-          if (Jz(zz, "apply")) return sz;
-          if (null === lz(iz, /\(\.\.\.arguments\)/, [zz]) && null === lz(iz, /^function\s*\(\.\.\.[\w$]+\)/, [zz])) return sz;
-          if ("function" !== typeof Rz || "function" !== typeof Mz || "function" !== typeof tz || "function" !== typeof Hz || "function" !== typeof Oz || "function" !== typeof Fz || "function" !== typeof pz || !Jz(lz(nz, Mz, []), "call") || !Jz(lz(nz, tz, []), "apply") || !Jz(lz(nz, Hz, []), "bind") || !Jz(lz(nz, Oz, []), "defineProperty") || !Jz(lz(nz, Fz, []), "getRandomValues") || !Jz(lz(nz, pz, []), "Uint8Array")) return sz;
-          const uz = Rz,
-            bz = {},
-            Ez = function(zz) {
-              return this === bz && zz === bz
-            };
-          try {
-            if (!0 !== uz(Ez, bz, [bz])) return sz;
-            const zz = new pz(wz);
-            uz(Fz, dz, [zz]), oz = zz
-          } catch {
-            return sz
-          }
-          return vz = uz, fz
-        }()), Ez = lz(zz, uz, bz)
-      } catch (Zz) {
-        throw Nz = sz, Zz
+      edit(qq, Eq) {
+        var gq;
+        const Yq = null !== (gq = this.pending.get(qq)) && void 0 !== gq ? gq : [];
+        Yq.push({
+          editAt: Eq,
+          meshJobId: 0
+        }), this.pending.set(qq, Yq)
       }
-      return Pz = Lz, Ez
-    }
-    let az = lz;
-
-    function Vz() {
-      return (az === lz ? 0 : 3) + Pz
-    }
-
-    function mz() {
-      const zz = Vz();
-      return az = lz, zz
-    }
-
-    function qz(zz) {
-      az = zz >= 3 ? Gz : lz, Pz = zz % 3
-    }
-    const hz = Function.prototype.toString,
-      Uz = Object.getOwnPropertyDescriptor,
-      cz = Object.prototype.hasOwnProperty,
-      gz = RegExp.prototype.exec,
-      Sz = TextEncoder.prototype.encodeInto,
-      yz = String.prototype.startsWith,
-      Dz = Number.prototype.toString,
-      Qz = WeakMap.prototype.get,
-      Wz = WeakMap.prototype.set,
-      ez = /^function ([\w$ ]*)\(\) \{\s*\[native code\]\s*\}$/,
-      jz = new TextEncoder,
-      Iz = new Uint8Array(1024),
-      Bz = 9999999,
-      Cz = /^(wh:[^#]+)#[abnps]\d{1,7}\.[0-9a-z]{1,7}$/,
-      Yz = new WeakMap;
-
-    function kz(zz) {
-      if ("function" !== typeof zz) return "#a0.0";
-      const uz = az(Qz, Yz, [zz]);
-      if (void 0 !== uz) return uz;
-      const bz = az(hz, zz, []),
-        Ez = bz.length > Bz ? Bz : bz.length,
-        nz = `#${function(zz,uz){const bz=az(gz,ez,[uz]);if(null===bz)return"s";const Ez=bz[1];if("ProxyObject"===Ez)return"p";if(""!==Ez)return az(yz,Ez,["bound "])?"b":"n";try{const uz=Uz(zz,"name"),bz=void 0!==uz&&az(cz,uz,["value"])?uz.value:void 0;return"string"===typeof bz&&az(yz,bz,["bound "])?"b":"p"}catch{return"p"}}(zz,bz)}${Ez}.${function(zz){const{written:uz}=az(Sz,jz,[zz,Iz]);let bz=2166136261;for(let Ez=0;Ez<uz;Ez++)bz=(bz^Iz[Ez])>>>0,bz=bz+(bz<<1)+(bz<<4)+(bz<<7)+(bz<<8)+(bz<<24)>>>0;return az(Dz,bz,[36])}(bz)}`;
-      return az(Wz, Yz, [zz, nz]), nz
-    }
-
-    function zu(zz) {
-      const uz = az(gz, Cz, [zz]);
-      return null === uz ? zz : uz[1]
-    }
-    var uu = bz(3477);
-    const bu = Function.prototype.toString,
-      Eu = Object.getOwnPropertyDescriptor,
-      nu = RegExp.prototype.exec,
-      iu = Object.prototype.hasOwnProperty,
-      lu = Set.prototype.has,
-      Mu = WeakMap.prototype.get,
-      tu = WeakMap.prototype.set,
-      Hu = Reflect.get,
-      Ou = Object.getPrototypeOf,
-      pu = "undefined" === typeof WebAssembly ? void 0 : WebAssembly;
-
-    function du(zz, uz, bz) {
-      return {
-        code: zz,
-        holder: uz,
-        key: bz,
-        ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        native: new RegExp(`^function (get )?${bz}\\(\\) \\{\\s*\\[native code\\]\\s*\\}$`)
+      frame(qq) {
+        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, qq - this.lastFrameAt)), this.lastFrameAt = qq, this.frames++, qq - this.windowStart >= 1e3 && this.summarise(qq)
       }
-    }
-
-    function Fu() {
-      return pu
-    }
-    const Zu = pu?.Instance.prototype,
-      Ru = pu?.Memory.prototype;
-
-    function Ku() {
-      return Ru
-    }
-    let wu, Xu;
-    try {
-      const zz = globalThis.crypto,
-        uz = zz?.subtle;
-      wu = zz ? Ou(zz) : void 0, Xu = uz ? Ou(uz) : void 0
-    } catch {}
-
-    function fu(zz, uz) {
-      for (let bz = zz; void 0 !== bz && null !== bz; bz = Ou(bz)) {
-        const zz = Eu(bz, uz);
-        if (zz) return zz
-      }
-    }
-    const su = [du("in", Fu, "instantiate", {
-      tier: "weighted",
-      onNamespace: !0
-    }), du("is", Fu, "instantiateStreaming", {
-      tier: "weighted",
-      onNamespace: !0
-    }), du("co", Fu, "compile", {
-      tier: "weighted",
-      onNamespace: !0
-    }), du("cs", Fu, "compileStreaming", {
-      tier: "weighted",
-      onNamespace: !0
-    }), du("mo", Fu, "Module", {
-      isConstructor: !0,
-      tier: "punished",
-      onNamespace: !0
-    }), du("it", Fu, "Instance", {
-      isConstructor: !0,
-      tier: "punished",
-      onNamespace: !0
-    }), du("me", Fu, "Memory", {
-      isConstructor: !0,
-      tier: "punished",
-      onNamespace: !0
-    }), du("ex", (function() {
-      return Zu
-    }), "exports", {
-      isGetter: !0,
-      tier: "punished"
-    }), du("bu", Ku, "buffer", {
-      isGetter: !0,
-      tier: "punished"
-    }), du("gr", Ku, "grow", {
-      tier: "punished"
-    }), du("rc", (function() {
-      return "undefined" === typeof Response ? void 0 : Response.prototype
-    }), "clone"), du("cr", (function() {
-      return globalThis
-    }), "crypto", {
-      isGetter: !0,
-      tier: "punished",
-      inSecureContext: !0
-    }), du("su", (function() {
-      return wu
-    }), "subtle", {
-      isGetter: !0,
-      tier: "punished",
-      inSecureContext: !0
-    }), du("dg", (function() {
-      return Xu
-    }), "digest", {
-      tier: "punished",
-      inSecureContext: !0
-    })];
-
-    function ru(zz) {
-      let uz;
-      try {
-        const bz = Hu(globalThis, zz);
-        uz = "function" === typeof bz ? bz.prototype : void 0
-      } catch {}
-      return () => uz
-    }
-
-    function ou(zz, uz, bz) {
-      return bz.map((bz => du(zz, uz, bz)))
-    }
-    const Nu = du("rx", ru("HTMLCanvasElement"), "getContext"),
-      vu = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
-      xu = {
-        webgpu: [...ou("gd", ru("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...ou("gq", ru("GPUQueue"), ["submit", "writeBuffer"]), ...ou("ge", ru("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...ou("gp", ru("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), Nu],
-        webgl: [...ou("g2", ru("WebGL2RenderingContext"), [...vu, "drawArraysInstanced", "drawElementsInstanced"]), Nu],
-        webgl1: [...ou("g1", ru("WebGLRenderingContext"), vu), Nu]
-      };
-    let Ju = [];
-    const Au = new WeakMap;
-
-    function Tu(zz, uz) {
-      const bz = mz();
-      try {
-        az(tu, Au, [zz, uz])
-      } finally {
-        qz(bz)
-      }
-    }
-
-    function Lu(zz) {
-      try {
-        const uz = Mb(zz),
-          bz = az(Mu, Au, [uz]);
-        return zb(bz, zz) ? Pu(zz, !0) : `${Pu(zz,!1)}${kz(bz??uz)}`
-      } catch {
-        return `${Pu(zz,!1)}${kz(void 0)}`
-      }
-    }
-
-    function Pu(zz, uz) {
-      let {
-        code: bz,
-        key: Ez
-      } = zz;
-      return `wh:${bz}${uz?"-dbg":""}:${Ez}`
-    }
-
-    function Gu(zz) {
-      return Object.values(xu).flatMap((uz => uz.map((uz => Pu(uz, zz)))))
-    }
-    const au = new Set(Gu(!0)),
-      Vu = new Set([...Gu(!1), ...au]),
-      mu = Pu(Nu, !1);
-
-    function qu(zz) {
-      Ju = xu[zz]
-    }
-
-    function hu(zz) {
-      const uz = mz();
-      try {
-        return Uu(zz) || Uu(zu(zz))
-      } finally {
-        qz(uz)
-      }
-    }
-
-    function Uu(zz) {
-      return az(lu, Vu, [zz])
-    }
-
-    function cu(zz) {
-      return new Set(su.filter((uz => uz.tier === zz)).map((zz => `wh:${zz.code}`)))
-    }
-    const gu = cu("punished"),
-      Su = !1,
-      yu = new Set(uu.b),
-      Du = cu("weighted");
-
-    function Qu(zz) {
-      const uz = mz();
-      try {
-        return eu(zu(zz))
-      } finally {
-        qz(uz)
-      }
-    }
-
-    function Wu(zz) {
-      const uz = mz();
-      try {
-        return zu(zz)
-      } finally {
-        qz(uz)
-      }
-    }
-
-    function eu(zz) {
-      return az(lu, Du, [zz])
-    }
-
-    function ju(zz) {
-      const uz = mz();
-      try {
-        return Iu(zz)
-      } finally {
-        qz(uz)
-      }
-    }
-
-    function Iu(zz) {
-      return az(lu, yu, [zz])
-    }
-
-    function Bu(zz) {
-      return "wb" === zz || az(lu, gu, [zz])
-    }
-
-    function Cu(zz) {
-      const uz = mz();
-      try {
-        return Bu(zz) || Iu(zz)
-      } finally {
-        qz(uz)
-      }
-    }
-
-    function Yu(zz) {
-      const uz = mz();
-      try {
-        return "wb" === zz || Su && Bu(zz)
-      } finally {
-        qz(uz)
-      }
-    }
-
-    function ku(zz, uz) {
-      let {
-        isGetter: bz
-      } = uz;
-      const Ez = Eu(zz, bz ? "get" : "value");
-      return void 0 === Ez ? void 0 : Ez.value
-    }
-
-    function zb(zz, uz) {
-      let {
-        isConstructor: bz,
-        native: Ez
-      } = uz;
-      return "function" === typeof zz && (!(!bz && az(iu, zz, ["prototype"])) && null !== az(nu, Ez, [az(bu, zz, [])]))
-    }
-
-    function ub(zz, uz) {
-      return zb(zz, du("", (() => {}), uz, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? {
-        isConstructor: !0
-      } : {}))
-    }
-    let bb = null,
-      Eb = !1;
-
-    function nb() {
-      try {
-        return globalThis.WebAssembly === pu
-      } catch {
-        return !1
-      }
-    }
-
-    function ib(zz) {
-      try {
-        return function(zz) {
-          const {
-            holder: uz,
-            key: bz,
-            onNamespace: Ez,
-            inSecureContext: nz
-          } = zz, iz = uz(), lz = fu(iz, bz);
-          if (!lz) return !(nz && !0 === globalThis.isSecureContext);
-          const Mz = ku(lz, zz);
-          if (!zb(Mz, zz)) return !1;
-          if (Ez) {
-            const uz = globalThis.WebAssembly;
-            if (uz !== iz && null !== uz && ("object" === typeof uz || "function" === typeof uz)) {
-              const Ez = Hu(uz, bz);
-              return Ez === Mz || void 0 === Ez || zb(Ez, zz)
-            }
-          }
-          return !0
-        }(zz)
-      } catch {
-        return !1
-      }
-    }
-
-    function lb(zz) {
-      const uz = `wh:${zz.code}`;
-      if ("punished" === zz.tier) return uz;
-      try {
-        return `${uz}${kz(Mb(zz))}`
-      } catch {
-        return `${uz}${kz(void 0)}`
-      }
-    }
-
-    function Mb(zz) {
-      const uz = fu(zz.holder(), zz.key),
-        bz = void 0 === uz ? void 0 : ku(uz, zz);
-      return zz.onNamespace && !nb() && zb(bz, zz) ? Hu(globalThis.WebAssembly, zz.key) : bz
-    }
-
-    function tb(zz) {
-      if (Bu(zz)) return 5;
-      const uz = zu(zz);
-      return eu(uz) ? 4 : Iu(zz) ? 3 : Uu(uz) ? function(zz) {
-        return az(lu, au, [zz])
-      }(uz) ? -1 : uz === mu ? 0 : 1 : 2
-    }
-
-    function Hb() {
-      const zz = function() {
-        const zz = Vz();
-        return Nz === Xz || Nz === fz ? (az = Gz, Pz = Tz) : az = lz, zz
-      }();
-      try {
-        if (null === bb || !Bu(bb)) {
-          const zz = function() {
-            if (void 0 === pu) return null;
-            let zz = nb() ? null : "wh:wa";
-            const uz = uz => {
-              null !== uz && (null === zz || tb(uz) > tb(zz)) && (zz = uz)
-            };
-            for (let bz = 0; bz < su.length; bz++) {
-              const zz = su[bz];
-              void 0 === zz || ib(zz) || uz(lb(zz))
-            }
-            uz((0, uu.l)());
-            for (let bz = 0; bz < Ju.length; bz++) {
-              const zz = Ju[bz];
-              void 0 === zz || ib(zz) || uz(Lu(zz))
-            }
-            return zz
-          }();
-          (null === bb || null !== zz && tb(zz) > tb(bb)) && (bb = zz)
+      sent(qq, Eq, gq, Yq, lq, Oq, mq) {
+        this.jobs.set(Eq, {
+          sentAt: mq,
+          receivedAt: 0,
+          ahead: gq,
+          inFlight: Yq,
+          WB: lq,
+          jobMs: 0
+        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, gq), this.maxCapacity = Math.max(this.maxCapacity, lq);
+        for (const Aq of null !== (xq = this.pending.get(qq)) && void 0 !== xq ? xq : []) {
+          var xq;
+          Oq.includes(Aq.meshJobId) || (Aq.meshJobId = Eq)
         }
-      } finally {
-        qz(zz)
+      }
+      received(qq, Eq, gq) {
+        const Yq = this.jobs.get(qq);
+        void 0 !== Yq && (this.roundTrips.push(gq - Yq.sentAt), Yq.receivedAt = gq, Yq.jobMs = Eq)
+      }
+      failed(qq) {
+        this.jobs.delete(qq)
+      }
+      reassign(qq, Eq, gq) {
+        this.jobs.delete(Eq);
+        for (const lq of null !== (Yq = this.pending.get(qq)) && void 0 !== Yq ? Yq : []) {
+          var Yq;
+          lq.meshJobId === Eq && (lq.meshJobId = gq)
+        }
+      }
+      applied(qq, Eq, gq) {
+        const Yq = this.jobs.get(Eq);
+        this.jobs.delete(Eq), void 0 !== Yq && this.show(qq, Yq, gq, (qq => qq.meshJobId === Eq))
+      }
+      emptied(qq, Eq) {
+        const gq = {
+          sentAt: Eq,
+          receivedAt: Eq,
+          ahead: 0,
+          inFlight: 0,
+          WB: 0,
+          jobMs: 0
+        };
+        this.show(qq, gq, Eq, (() => !0))
+      }
+      show(qq, Eq, gq, Yq) {
+        const lq = this.pending.get(qq);
+        if (!lq) return;
+        const Oq = lq.filter((lq => !Yq(lq) || (this.record(qq, lq.editAt, Eq, gq), !1)));
+        Oq.length > 0 ? this.pending.set(qq, Oq) : this.pending.delete(qq)
+      }
+      SN(qq) {
+        this.reported += qq, this === Nq && this.reported >= mq && null !== aq && (aq(), aq = null)
+      }
+      record(qq, Eq, gq, Yq) {
+        const lq = {
+          totalMs: Yq - Eq,
+          slotMs: gq.sentAt - Eq,
+          workerMs: gq.receivedAt - gq.sentAt,
+          applyMs: Yq - gq.receivedAt,
+          ahead: gq.ahead,
+          inFlight: gq.inFlight,
+          WB: gq.WB,
+          jobMs: gq.jobMs
+        };
+        if (this.edits[this.nextEdit] = lq, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(lq.totalMs), this.SN(1), lq.totalMs < 100 || ++this.outliers > 5) return;
+        const mq = qq => Math.round(qq);
+        (0, Oq.m)("remesh", `slow edit (${qq}) shown in ${mq(lq.totalMs)} ms: slot ${mq(lq.slotMs)}, worker ${mq(lq.workerMs)} (${lq.ahead} ahead, ${lq.inFlight}/${lq.WB} in flight; job ${mq(lq.jobMs)}), apply ${mq(lq.applyMs)}`)
+      }
+      summarise(qq) {
+        const Eq = (qq - this.windowStart) / 1e3;
+        for (const [gq, Yq] of this.pending) {
+          const Eq = Yq.filter((Eq => qq - Eq.editAt <= 1e4));
+          this.gaveUp += Yq.length - Eq.length, this.SN(Yq.length - Eq.length), Eq.length > 0 ? this.pending.set(gq, Eq) : this.pending.delete(gq)
+        }
+        for (const [gq, Yq] of this.jobs) qq - Yq.sentAt > (Yq.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(gq);
+        if (this.jobsSent > 0 || this.roundTrips.length > 0 || this.windowEdits.length > 0 || this.gaveUp > 0) {
+          const qq = Aq(this.roundTrips),
+            gq = Aq(this.windowEdits),
+            Yq = Math.max(0, this.outliers - 5);
+          (0, Oq.m)("remesh", `${Math.round(this.frames/Eq)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,lq.e)(qq,.5))} max ${Math.round((0,lq.e)(qq,1))} ms | ${gq.length} edits shown, p50 ${Math.round((0,lq.e)(gq,.5))} max ${Math.round((0,lq.e)(gq,1))} ms${Yq>0?`, ${Yq} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
+        }
+        this.windowStart = qq, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
+      }
+      stats() {
+        const qq = xq.map((qq => {
+          const Eq = Aq(this.edits.map((Eq => Eq[qq])));
+          return `${qq}: p50 ${Math.round((0,lq.e)(Eq,.5))} p90 ${Math.round((0,lq.e)(Eq,.9))} max ${Math.round((0,lq.e)(Eq,1))}`
+        }));
+        return [`${this.edits.length} edits`, ...qq].join("\n")
+      }
+      dump() {
+        const qq = this.edits.map((qq => xq.map((Eq => Math.round(10 * qq[Eq]) / 10)).join(",")));
+        return [this.stats(), xq.join(","), ...qq].join("\n")
       }
     }
+    class Wq {
+      constructor(qq, Eq) {
+        this.log = qq, this.wB = Eq
+      }
+      edit(qq, Eq, gq) {
+        const [Yq, lq, Oq] = this.wB.kB.ylq(qq, Eq, gq), mq = this.wB.kB.qV.EV(Yq, lq, Oq);
+        mq && mq.ea && this.log.edit(uq(Yq, lq, Oq), performance.now())
+      }
+      sent(qq, Eq, gq, Yq, lq) {
+        this.log.sent(uq(qq.i, qq.j, qq.k), Eq, gq, Yq, lq, cq, performance.now())
+      }
+      received(qq) {
+        this.log.received(qq.meshJobId, qq.jobMs, performance.now())
+      }
+      failed(qq) {
+        this.log.failed(qq)
+      }
+      applied(qq, Eq) {
+        this.log.applied(uq(qq.i, qq.j, qq.k), Eq, performance.now())
+      }
+    }
+    let Nq = null,
+      aq = null,
+      Vq = !1,
+      dq = null;
 
-    function Ob() {
-      Eb = !0
+    function jq() {
+      return new Promise((qq => {
+        null !== Nq && Nq.reported >= mq ? qq() : aq = qq
+      }))
     }
 
-    function pb() {
-      if (Eb) return "wb";
-      if ((!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) && Hb(), null !== bb) return bb;
-      if (void 0 === pu) return "wn:unsupported";
-      const zz = (0, Ez.s)();
-      return null === zz ? null : `wn:${zz}`
+    function Hq() {
+      const qq = new Bq;
+      return Nq = qq, (0, Oq.j)("remesh", (() => qq.dump())), (0, Oq.c)("remeshStats", (() => {
+        console.log(qq.stats())
+      })), Vq || (Vq = !0, (0, Yq.d)((qq => {
+        (0, Oq.m)("remesh", qq)
+      }), jq)), qq
     }
+
+    function oq(qq) {
+      const Eq = Hq();
+      dq = new Wq(Eq, qq), qq.Qv.meshProbe = dq, qq.on("beforeRender", (() => {
+        Eq.frame(performance.now())
+      }))
+    }
+
+    function Pq(qq, Eq, gq) {
+      var Yq;
+      null === (Yq = dq) || void 0 === Yq || Yq.edit(qq, Eq, gq)
+    }
+  },
+  37742: (qq, Eq, gq) => {
+    function Yq(qq) {
+      return "string" !== typeof qq || 2 !== qq.length && ":" !== qq[2] ? null : qq[0] + qq[1]
+    }
+    gq.d(Eq, {
+      b: () => dq,
+      f: () => Pq,
+      j: () => Qq,
+      k: () => xq,
+      l: () => mq,
+      p: () => Oq,
+      r: () => Aq,
+      t: () => jq,
+      x: () => Vq
+    });
+    const lq = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
+
+    function Oq(qq) {
+      if (function(qq) {
+          for (let Eq = 0; Eq < lq.length; Eq++)
+            if (qq === lq[Eq]) return !0;
+          return !1
+        }(qq)) return !1;
+      const Eq = Yq(qq);
+      return "op" === Eq || "ep" === Eq || "wi" === Eq || "pp" === Eq || "fp:call" === qq || "fp:t" === qq
+    }
+
+    function mq(qq) {
+      return "fp" === Yq(qq) && !Oq(qq)
+    }
+
+    function xq(qq) {
+      if ("string" !== typeof qq) return !1;
+      return "o" === qq[0] && "p" === qq[1] && (2 === qq.length || ":" === qq[2]) || "fp:call" === qq || "2" === qq || "t" === qq || "a" === qq
+    }
+
+    function Aq(qq, Eq) {
+      return `~${function(qq){return qq.length<2?qq:":"===qq[1]?qq[0]:qq[0]+qq[1]}(Eq)}~${qq}`
+    }
+    const cq = 200;
+
+    function uq(qq) {
+      let Eq = qq.length - 1;
+      for (let gq = 0; gq < 2; gq++) {
+        const gq = Eq;
+        for (; Eq >= 0 && qq[Eq] >= "0" && qq[Eq] <= "9";) Eq--;
+        if (Eq < 0 || Eq === gq || ":" !== qq[Eq]) return -1;
+        Eq--
+      }
+      return Eq + 1
+    }
+
+    function Bq(qq) {
+      return "unknown" === qq || uq(qq) >= 0
+    }
+
+    function Wq(qq, Eq) {
+      return qq[Eq] >= "\ud800" && qq[Eq] <= "\udbff" && Eq + 1 < qq.length && qq[Eq + 1] >= "\udc00" && qq[Eq + 1] <= "\udfff" ? 2 : 1
+    }
+
+    function Nq(qq, Eq, gq) {
+      return 2 === gq ? 4 : qq[Eq] <= "\x7f" ? 1 : qq[Eq] <= "\u07ff" ? 2 : 3
+    }
+
+    function aq(qq, Eq, gq) {
+      let Yq = 0;
+      for (; Yq < Eq;) {
+        const Eq = Wq(qq, Yq),
+          lq = Nq(qq, Yq, Eq);
+        if (lq > gq) break;
+        gq -= lq, Yq += Eq
+      }
+      return Yq
+    }
+
+    function Vq(qq) {
+      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
+      if ("string" !== typeof qq || qq.length > cq || !Bq(qq)) return "t";
+      let gq = 2;
+      for (let xq = 0; xq < qq.length;) {
+        const Eq = Wq(qq, xq);
+        gq += Nq(qq, xq, Eq), xq += Eq
+      }
+      if (gq <= Eq) return `t ${qq}`;
+      const Yq = uq(qq),
+        lq = Eq - 2 - (qq.length - Yq);
+      if (lq < 0) return "t";
+      const Oq = aq(qq, Yq, lq);
+      let mq = "t ";
+      for (let xq = 0; xq < Oq; xq++) mq += qq[xq];
+      for (let xq = Yq; xq < qq.length; xq++) mq += qq[xq];
+      return mq
+    }
+    const dq = 62;
+
+    function jq(qq) {
+      let Eq = "so:";
+      const gq = aq(qq, qq.length, dq - Eq.length);
+      for (let Yq = 0; Yq < gq; Yq++) Eq += qq[Yq];
+      return Eq
+    }
+    const Hq = "BABYLON ",
+      oq = "DECODE ";
+
+    function Pq(qq) {
+      return jq(Hq + qq)
+    }
+
+    function Qq(qq) {
+      return jq(oq + qq)
+    }
+  },
+  37942: qq => {
+    qq.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v+LFy8yvH//noGXl/ccuq8A/vQKd00yOdIAAAAASUVORK5CYII="
+  },
+  37927: qq => {
+    qq.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMnBzczN8/PjxHLLPAORwCnfkvOdNAAAAAElFTkSuQmCC"
+  },
+  37950: qq => {
+    qq.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
+  },
+  37925: qq => {
+    qq.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANUlEQVQYGWM8CwQMeAATHjmw1JBQAHLp/wMHDvy/ePHi/4CAgP937tz5Ly6u+5/P3uw/KAgAgjwWhHm22JoAAAAASUVORK5CYII="
+  },
+  37934: qq => {
+    qq.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const qq in modules) Object.freeze(modules[qq]);

@@ -1,146 +1,84 @@
 export const id = 149;
 export const ids = [149];
 export const modules = {
-  7825: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      NitroSdkAdaptor: () => lz
+  8038: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      AditudeSdkAdaptor: () => mq
     });
-    var Ez = bz(1288),
-      nz = bz(1171);
-    const iz = "NitroOutstreamVideo";
-    class lz extends Ez.b {
+    var Yq = gq(1304),
+      lq = gq(1171);
+    const Oq = {
+      video: "pb-slot-interstitial-video",
+      rewarded: "pb-slot-rewarded-video"
+    };
+    class mq extends Yq.e {
       constructor() {
-        super(), this.name = "nitro", this.bannerAutoRefresh = "alwaysOn", this.videoInFlight = !1
+        super(), this.name = "aditude"
       }
       static async setup() {
-        return window.nitroAds = window.nitroAds || {
-          createAd: function() {
-            for (var zz = arguments.length, uz = new Array(zz), bz = 0; bz < zz; bz++) uz[bz] = arguments[bz];
-            return new Promise((zz => {
-              window.nitroAds.queue.push(["createAd", uz, zz])
+        return window.tude = window.tude || {
+          cmd: []
+        }, await (0, lq.b)("https://edge.aditude.io/site/bloxd-Jf9xJheMSn/bloxd-longform/bloxd.io/prod/load.js"), new mq
+      }
+      playVideoAd(qq, Eq) {
+        this.playVideoOrRewarded("video", qq, qq)
+      }
+      playRewarded(qq, Eq) {
+        this.playVideoOrRewarded("rewarded", qq, Eq)
+      }
+      renderBanner(qq) {
+        const Eq = this.getBaseDivId(qq.adId, qq.width, qq.height);
+        window.tude.cmd.push((function() {
+          window.tude.refreshAdsViaDivMappings([{
+            divId: qq.divId,
+            baseDivId: Eq
+          }])
+        }))
+      }
+      getBaseDivId(qq, Eq, gq) {
+        return `pb-slot-bloxdio-${Eq}-${gq}${qq>1?`-${qq}`:""}`
+      }
+      playVideoOrRewarded(qq, Eq, gq) {
+        var Yq;
+        let lq = !1;
+        const mq = () => {
+            document.getElementById("GenericVideoWrapper").style.display = "none", lq = !0
+          },
+          xq = (qq, Eq) => {
+            console.error(`AD: Error while playing Aditude video ad: ${qq}:`, Eq), mq(), gq()
+          };
+        if (console.log(`AD: Requesting Aditude ${qq} ad`), void 0 === (null === (Yq = window.tude) || void 0 === Yq ? void 0 : Yq.requestInstreamPlayer)) return console.log(`AD: Aditude ad lib not loaded, no ${qq} ad playing`), void xq("Aditude ad lib not loaded", null);
+        document.getElementById("GenericVideoWrapper").style.display = "flex", document.getElementById("GenericVideoInner").classList.add("AditudeVideo"), window.tude.cmd.push((function() {
+          console.log("AD: Inside Aditude window.tude.cmd.push");
+          try {
+            window.tude.requestInstreamPlayer({
+              code: Oq[qq],
+              divId: "GenericVideoInner",
+              mode: "adOnly"
+            }).then((gq => {
+              console.log("AD: Inside Aditude window.tude.requestInstreamPlayer.then"), gq.on("playerClose", ((gq, Yq) => {
+                console.log("AD: Inside Aditude player.on playerClose"), console.log(`AD: Successfully finished Aditude ${qq} ad`), mq(), Eq()
+              })).on("adPrefetchError", ((qq, Eq) => {
+                console.log("AD: Inside Aditude player.on adPrefetchError"), xq("Prefetch error", Eq)
+              })).on("adError", ((qq, Eq) => {
+                console.log("AD: Inside Aditude player.on adError"), xq("Generic error", Eq)
+              }));
+              const Yq = qq => {
+                setTimeout((() => {
+                  lq || gq.setVideoVolume(.5)
+                }), qq)
+              };
+              Yq(500), Yq(1e3), Yq(1500), Yq(2e3)
+            })).catch((qq => {
+              xq("Error occurred while requesting instream player", qq)
             }))
-          },
-          addUserToken: function() {
-            for (var zz = arguments.length, uz = new Array(zz), bz = 0; bz < zz; bz++) uz[bz] = arguments[bz];
-            window.nitroAds.queue.push(["addUserToken", uz])
-          },
-          queue: []
-        }, document.addEventListener("nitroAds.rendered", (zz => {
-          var uz, bz, Ez;
-          const nz = document.getElementById(null !== (uz = null === (bz = zz.detail) || void 0 === bz || null === (Ez = bz.adInfo) || void 0 === Ez ? void 0 : Ez.adUnitCode) && void 0 !== uz ? uz : "");
-          null !== nz && void 0 !== nz && nz.classList.contains("NitroBanner") && nz.classList.toggle("NitroBannerUnfilled", "blank" === zz.detail.type)
-        })), await (0, nz.e)("https://s.nitropay.com/ads-2842.js", {
-          "data-cfasync": "false"
-        }), new lz
-      }
-      playVideoAd(zz, uz) {
-        this.showVideoAd(zz, zz)
-      }
-      playRewarded(zz, uz) {
-        this.showVideoAd(zz, uz)
-      }
-      showVideoAd(zz, uz) {
-        if (this.videoInFlight) return console.log("AD: Nitro video already playing"), void uz();
-        const bz = document.getElementById("GenericVideoWrapper"),
-          Ez = document.getElementById("GenericVideoInner");
-        if (null === bz || null === Ez) return void uz();
-        this.videoInFlight = !0;
-        let nz = !1;
-        const lz = document.createElement("div");
-        lz.id = iz, lz.className = "NitroVideoPlacement";
-        const Mz = iz => {
-          if (!nz) {
-            nz = !0, clearTimeout(wz), clearInterval(Kz), document.removeEventListener("nitroAds.adResult", Oz), document.removeEventListener("nitroAds.rendered", pz), document.removeEventListener("nitroAds.complete", dz);
-            try {
-              Fz.remove(), lz.querySelectorAll("video").forEach((zz => {
-                zz.pause()
-              })), lz.remove(), Ez.classList.remove("NitroVideo"), bz.style.display = "none"
-            } catch (Mz) {
-              console.error("AD: Error tearing down Nitro video", Mz)
-            } finally {
-              this.videoInFlight = !1, window.adCompleteSoResume(), iz ? zz() : uz()
-            }
+          } catch (gq) {
+            xq("Failed to request instream player", gq)
           }
-        };
-        let tz = !1;
-        const Hz = (zz, uz) => {
-            if (!tz) {
-              if (!zz) return console.log(`AD: Nitro video not filled: ${uz}`), void Mz(!1);
-              tz = !0, clearTimeout(wz), wz = setTimeout((() => {
-                console.log("AD: Nitro video never completed"), Mz(!1)
-              }), 12e4)
-            }
-          },
-          Oz = zz => {
-            var uz;
-            (null === (uz = zz.detail) || void 0 === uz ? void 0 : uz.id) === iz && Hz("filled" === zz.detail.status, zz.detail.status)
-          },
-          pz = zz => {
-            var uz, bz;
-            (null === (uz = zz.detail) || void 0 === uz || null === (bz = uz.adInfo) || void 0 === bz ? void 0 : bz.adUnitCode) === iz && Hz("blank" !== zz.detail.type, zz.detail.type)
-          },
-          dz = zz => {
-            var uz;
-            (null === (uz = zz.detail) || void 0 === uz ? void 0 : uz.adUnitCode) === iz && Mz(!0)
-          },
-          Fz = document.createElement("button");
-        Fz.className = "NitroVideoSkip", Fz.disabled = !0, Fz.addEventListener("click", (() => {
-          console.log("AD: Nitro video skipped"), Mz(!0)
-        }));
-        let Zz = Math.ceil(15);
-        const Rz = () => {
-          if (Zz <= 0) return clearInterval(Kz), Fz.textContent = "Skip Ad", void(Fz.disabled = !1);
-          Fz.textContent = `Skip ad in ${Zz}s`, Zz--
-        };
-        Rz();
-        const Kz = setInterval(Rz, 1e3);
-        let wz = setTimeout((() => {
-          console.log("AD: Nitro video got no result"), Mz(!1)
-        }), 1e4);
-        document.addEventListener("nitroAds.adResult", Oz), document.addEventListener("nitroAds.rendered", pz), document.addEventListener("nitroAds.complete", dz), Ez.appendChild(lz), Ez.classList.add("NitroVideo"), bz.appendChild(Fz), bz.style.display = "flex", window.adStartSoPause(null, {
-          preventMovement: !0
-        }), Promise.resolve(window.nitroAds.createAd(iz, {
-          format: "display",
-          outstream: "only",
-          resultTimeout: 8e3
-        })).catch((zz => {
-          console.error("AD: Nitro failed to create video", zz), Mz(!1)
-        })), console.log("AD: Requested Nitro video")
-      }
-      renderBanner(zz) {
-        const {
-          divId: uz,
-          width: bz,
-          height: Ez
-        } = zz, nz = `${uz}-nitro`;
-        let iz = document.getElementById(nz);
-        null === iz && (iz = document.createElement("div"), iz.id = nz, iz.className = "NitroBanner", iz.style.setProperty("--nitro-slot-width", `${bz}px`), iz.style.setProperty("--nitro-slot-height", `${Ez}px`), document.getElementById(uz).appendChild(iz));
-        const lz = [
-          [String(bz), String(Ez)]
-        ];
-        Promise.resolve(window.nitroAds.createAd(nz, {
-          sizes: lz
-        })).catch((zz => {
-          console.error(`AD: Nitro failed to create banner ${nz}:`, zz)
-        })), console.log(`AD: Requested Nitro banner ${nz}`)
-      }
-      displayConsentUI() {
-        var zz, uz;
-        null === (zz = (uz = window).__cmp) || void 0 === zz || zz.call(uz, "showModal")
-      }
-      addPrivacyLinks(zz) {
-        var uz, bz, Ez, nz;
-        const iz = document.createElement("span");
-        iz.dataset.ccpaLink = "1";
-        const lz = document.createElement("div");
-        lz.id = "ncmp-consent-link", zz.replaceChildren(iz, lz), null === (uz = (bz = window).__uspapi) || void 0 === uz || uz.call(bz, "addLink", 1), null === (Ez = (nz = window).__cmp) || void 0 === Ez || Ez.call(nz, "addConsentLink")
-      }
-      newPageSession() {
-        var zz, uz;
-        null === (zz = (uz = window.nitroAds).navigate) || void 0 === zz || zz.call(uz)
+        }))
       }
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const qq in modules) Object.freeze(modules[qq]);

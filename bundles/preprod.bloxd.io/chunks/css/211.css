@@ -1,3 +1,25 @@
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicListWindow {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  min-height: 0
+}
+
+.SchematicList {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  row-gap: .5rem;
+  width: 100%
+}
+
+.SchematicList .NoSchematicsText {
+  color: #cfcfcf;
+  font-size: 1rem;
+  margin: 2rem
+}
+
 @keyframes rainbowShimmer {
   0% {
     transform: translateX(0)
@@ -97,159 +119,196 @@
   }
 }
 
-.CustomGamePlaceContainer {
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer .SchematicUpload {
+  align-items: center;
+  border: 3px solid #303a59;
+  border-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: .5rem;
-  padding-bottom: 1rem;
-  width: 100%;
-  z-index: 1
+  gap: 1rem;
+  height: 10rem;
+  justify-content: center;
+  padding: 2rem 1rem
 }
 
-.CustomGamePlaceContainer .BackgroundImage {
-  -ms-interpolation-mode: nearest-neighbor;
-  background-position: 50%;
-  background-repeat: repeat;
-  background-size: 128rem;
-  filter: brightness(.32);
-  image-rendering: optimizeSpeed;
-  image-rendering: -o-crisp-edges;
-  image-rendering: pixelated;
-  image-rendering: optimize-contrast;
-  inset: 0;
-  pointer-events: none;
-  position: absolute;
-  z-index: -1
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer .SchematicUpload .SchematicUploadIcon {
+  font-size: 3rem;
+  opacity: .4;
+  text-shadow: 0 0 0 #000;
+  transition: color .2s, opacity .3s
 }
 
-.CustomGamePlaceContainer .CustomGamePlaceHeaderContainer {
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer .SchematicUpload .SchematicUploadIcon.Active {
+  color: #4f94f1;
+  opacity: 1
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer .SchematicUpload .SchematicUploadIcon.Active.TooBig {
+  color: #ff8a80
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer .SchematicUpload .SchematicUploadIcon.Complete {
+  color: #1dd06d;
+  opacity: 1
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer .SchematicUpload .SchematicUploadInstructions {
+  font-size: 1.2rem;
+  opacity: .4;
+  text-shadow: 0 0 0 #000;
+  transition: opacity .2s, color .3s
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer .SchematicUpload .SchematicUploadInstructions.Active {
+  opacity: 1
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer .SchematicUpload .SchematicUploadInstructions.Complete {
+  color: #1dd06d;
+  opacity: 1
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer .SchematicUpload.ActiveDrag .SchematicUploadIcon,
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer .SchematicUpload.ActiveDrag .SchematicUploadInstructions {
+  opacity: 1
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer .SchematicUploadButton {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  box-sizing: border-box
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SchematicUploadContainer .SchematicUploadButton .ButtonBody {
+  padding: 1rem
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .OtherOptions {
   align-items: center;
   display: flex;
-  padding: .6rem .75rem
-}
-
-.CustomGamePlaceContainer .CustomGamePlaceHeaderContainer .BackButton {
-  font-size: 1.5rem;
-  padding-left: .3rem;
-  position: relative
-}
-
-@media(pointer:coarse) {
-  .CustomGamePlaceContainer .CustomGamePlaceHeaderContainer .BackButton:before {
-    content: "";
-    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
-    position: absolute
-  }
-}
-
-.CustomGamePlaceContainer .CustomGamePlaceMosaic {
-  --custom-game-place-inner-gap: 0.5rem;
-  --custom-game-place-panel-gap: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: var(--custom-game-place-panel-gap);
-  margin-inline: auto;
+  gap: 1rem;
+  justify-content: space-between;
   width: 100%
 }
 
-.CustomGamePlaceContainer .CustomGamePlaceMosaic .CustomGamePlacePanel {
-  align-self: start;
-  background-color: color-mix(in srgb, var(--custom-game-place-tint) 52%, #22283b);
-  border-radius: 0;
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .OtherOptions .NewButton {
+  align-items: center;
   display: flex;
-  flex-direction: column;
-  gap: .5rem;
-  min-width: 0;
-  outline: 1px solid color-mix(in srgb, var(--custom-game-place-tint) 85%, transparent);
+  flex-grow: 1;
+  font-size: 1.5rem;
+  justify-content: center
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .OtherOptions .NewButton .ButtonBody {
+  padding: .8rem
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow {
+  width: 100%
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow .SaveSchematicName {
+  box-shadow: none;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  height: 3rem;
+  margin-top: .5rem;
+  padding: .5rem;
+  text-align: left;
+  width: 100%
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow .SaveSchematicName.Error {
+  border: 2px solid #e34f4f
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow .SaveSchematicDescription {
+  box-shadow: none;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  height: 7rem;
+  margin-top: .5rem;
+  padding: .5rem;
+  resize: none;
+  text-align: left;
+  width: 100%
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow .SaveSchematicDescription.Hidden {
+  display: none
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow .SaveSchematicError {
+  color: #ff8a80;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 1rem;
+  margin-top: .1rem;
+  text-shadow: none
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow .SaveSchematicCheckboxContainer {
+  align-items: center;
+  display: flex;
+  margin-left: 1px;
+  margin-top: 1.5rem
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow .SaveSchematicCheckboxContainer .SchematicPopupSubtitle {
+  font-size: 1.35rem;
+  margin-left: 1rem;
+  margin-top: 0
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow .SaveSchematicCheckboxContainer.WarningBorder {
+  border: 1px solid #ffb914;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-left: -5px;
+  margin-right: -5px;
   padding: .5rem
 }
 
-.CustomGamePlaceContainer .CustomGamePlaceMosaic .CustomGamePlacePanel .CustomGamePlacePanelHeading {
-  font-size: inherit;
-  margin: 0
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow .SaveSchematicLobbyCodeWarning {
+  background-color: #ffb914;
+  border: 1px solid #ffb914;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  color: #000;
+  font-size: .75rem;
+  font-weight: 700;
+  margin-left: -5px;
+  margin-right: -5px;
+  padding: .5rem 0 .5rem .5rem;
+  text-shadow: none
 }
 
-.CustomGamePlaceContainer .CustomGamePlaceMosaic .CustomGamePlacePanel .CustomGamePlacePanelTitle {
-  cursor: pointer;
-  gap: .25rem;
-  transition: gap .2s
-}
-
-.CustomGamePlaceContainer .CustomGamePlaceMosaic .CustomGamePlacePanel .CustomGamePlacePanelTitle .svg-inline--fa {
-  color: #ffb914;
-  flex-shrink: 0;
-  transform: rotate(90deg)
-}
-
-@media(hover:hover) {
-  .CustomGamePlaceContainer .CustomGamePlaceMosaic .CustomGamePlacePanel .CustomGamePlacePanelTitle:hover {
-    gap: .5rem
-  }
-}
-
-.CustomGamePlaceContainer .CustomGamePlaceMosaic .CustomGamePlacePanel .CustomGamePlacePanelTitle.pad-focused {
-  gap: .5rem
-}
-
-@media(hover:none) {
-  .CustomGamePlaceContainer .CustomGamePlaceMosaic .CustomGamePlacePanel .CustomGamePlacePanelTitle:active {
-    gap: .5rem
-  }
-}
-
-.CustomGamePlaceContainer .CustomGamePlaceMosaic .CustomGamePlacePanel .CustomGamePlacePanelTitle {
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow .SaveSchematicButtons {
   align-items: center;
   display: flex;
-  font-size: 1.1rem;
-  justify-content: center;
-  line-height: 1.2;
-  min-height: 2rem;
-  text-align: center
-}
-
-.CustomGamePlaceContainer .CustomGamePlaceMosaic .CustomGamePlacePanel .CustomGamePlacePanelGames {
-  grid-gap: var(--custom-game-place-inner-gap);
-  align-content: start;
-  display: grid;
-  gap: var(--custom-game-place-inner-gap)
-}
-
-.CustomGamePlaceContainer .CustomGamePlaceMosaic .CustomGamePlacePanel .CustomGamePlacePanelGames .GameCardContainer,
-.CustomGamePlaceContainer .CustomGamePlaceMosaic .CustomGamePlacePanel .CustomGamePlacePanelGames .GameThumbnailPlaceholderContainer {
-  padding: 0
-}
-
-.CustomGamePlaceContainer .CustomGamePlaceMosaic.CustomGamePlaceMosaicLandscape {
-  container-type: inline-size;
-  --custom-game-place-tile-width: calc(100cqw/7 - 1rem);
-  width: min(100%, (100dvh - 24.25rem)*2.1 + 7rem)
-}
-
-.CustomGamePlaceContainer .CustomGamePlaceMosaic.CustomGamePlaceMosaicLandscape .CustomGamePlaceRow,
-.CustomGamePlaceContainer .CustomGamePlaceMosaic.CustomGamePlaceMosaicLandscape .CustomGamePlaceUpper {
-  align-items: flex-start;
-  display: flex;
-  gap: var(--custom-game-place-panel-gap)
-}
-
-.CustomGamePlaceContainer .CustomGamePlaceMosaic.CustomGamePlaceMosaicLandscape .CustomGamePlaceMain {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  gap: var(--custom-game-place-panel-gap)
-}
-
-.CustomGamePlaceContainer .CustomGamePlaceMosaic.CustomGamePlaceMosaicLandscape .CustomGamePlacePanel {
-  flex-shrink: 0
-}
-
-.CustomGamePlaceContainer .CustomGamePlaceMosaic.CustomGamePlaceMosaicLandscape .CustomGamePlacePanel .CustomGamePlacePanelTitle {
-  height: 2rem;
-  max-width: 100%;
-  overflow: hidden;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 3rem;
   width: 100%
 }
 
-.CustomGamePlaceContainer .CustomGamePlaceMosaic.CustomGamePlaceMosaicPortrait .CustomGamePlacePanel {
-  align-self: stretch
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow .SaveSchematicButtons .NewButton {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  font-size: 1.5rem;
+  justify-content: center
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup .SaveSchematicWindow .SaveSchematicButtons .NewButton .ButtonBody {
+  padding: .8rem
 }

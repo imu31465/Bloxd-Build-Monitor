@@ -1,19 +1,19 @@
 export const id = 382;
 export const ids = [382];
 export const modules = {
-  61031: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      proceduralVertexShader: () => lz
+  61820: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      proceduralVertexShaderWGSL: () => mq
     });
-    var Ez = bz(39033);
-    const nz = "proceduralVertexShader",
-      iz = "attribute vec2 position;varying vec2 vPosition;varying vec2 vUV;const vec2 madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvPosition=position;vUV=position*madd+madd;gl_Position=vec4(position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}";
-    Ez.e.ShadersStore[nz] || (Ez.e.ShadersStore[nz] = iz);
-    const lz = {
-      name: nz,
-      shader: iz
+    var Yq = gq(39617);
+    const lq = "proceduralVertexShader",
+      Oq = "attribute position: vec2f;varying vPosition: vec2f;varying vUV: vec2f;const madd: vec2f= vec2f(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvertexOutputs.vPosition=vertexInputs.position;vertexOutputs.vUV=vertexInputs.position*madd+madd;vertexOutputs.position= vec4f(vertexInputs.position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}";
+    Yq.d.ShadersStoreWGSL[lq] || (Yq.d.ShadersStoreWGSL[lq] = Oq);
+    const mq = {
+      name: lq,
+      shader: Oq
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const qq in modules) Object.freeze(modules[qq]);

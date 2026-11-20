@@ -54,13 +54,17 @@
   text-shadow: -1px -1px 0 #0f0f0f, -1px 0 0 #0f0f0f, -1px 1px 0 #0f0f0f, 0 -1px 0 #0f0f0f, 0 0 0 #0f0f0f, 0 1px 0 #0f0f0f, 1px -1px 0 #0f0f0f, 1px 0 0 #0f0f0f, 1px 1px 0 #0f0f0f
 }
 
+.FrontlinePointMarkers .FrontlinePointMarker .FrontlinePointMarkerTile .FrontlinePointLetter .svg-inline--fa,
+.FrontlinePointMarkers .FrontlinePointMarker .FrontlinePointMarkerTile .FrontlinePointLetter.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .FrontlinePointMarkers .FrontlinePointMarker .FrontlinePointMarkerTile .FrontlinePointLetter .svg-inline--fa path:only-of-type,
 .FrontlinePointMarkers .FrontlinePointMarker .FrontlinePointMarkerTile .FrontlinePointLetter.svg-inline--fa path:only-of-type {
   stroke: #0f0f0f;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .FrontlinePointMarkers .FrontlinePointMarker .FrontlinePointMarkerTile .FrontlinePointFill {
@@ -409,13 +413,17 @@ body.FrontlineCustomCrosshair .GunCrosshairWrapper {
   text-transform: uppercase
 }
 
+.FrontlinePlate .FrontlinePlateStatus .svg-inline--fa,
+.FrontlinePlate .FrontlinePlateStatus.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .FrontlinePlate .FrontlinePlateStatus .svg-inline--fa path:only-of-type,
 .FrontlinePlate .FrontlinePlateStatus.svg-inline--fa path:only-of-type {
   stroke: #0f0f0f;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .FrontlinePlate.FrontlineAlert {
@@ -556,13 +564,17 @@ body.FrontlineCustomCrosshair .GunCrosshairWrapper {
   text-shadow: -1px -1px 0 #0f0f0f, -1px 0 0 #0f0f0f, -1px 1px 0 #0f0f0f, 0 -1px 0 #0f0f0f, 0 0 0 #0f0f0f, 0 1px 0 #0f0f0f, 1px -1px 0 #0f0f0f, 1px 0 0 #0f0f0f, 1px 1px 0 #0f0f0f
 }
 
+.FrontlineScoreboardContainer .FrontlineScoreboard .FrontlineTeamScore .FrontlineTickets .svg-inline--fa,
+.FrontlineScoreboardContainer .FrontlineScoreboard .FrontlineTeamScore .FrontlineTickets.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .FrontlineScoreboardContainer .FrontlineScoreboard .FrontlineTeamScore .FrontlineTickets .svg-inline--fa path:only-of-type,
 .FrontlineScoreboardContainer .FrontlineScoreboard .FrontlineTeamScore .FrontlineTickets.svg-inline--fa path:only-of-type {
   stroke: #0f0f0f;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .FrontlineScoreboardContainer .FrontlineScoreboard .FrontlineTeamScore .FrontlineTickets .Lead {
@@ -630,13 +642,17 @@ body.FrontlineCustomCrosshair .GunCrosshairWrapper {
   text-shadow: -1px -1px 0 #0f0f0f, -1px 0 0 #0f0f0f, -1px 1px 0 #0f0f0f, 0 -1px 0 #0f0f0f, 0 0 0 #0f0f0f, 0 1px 0 #0f0f0f, 1px -1px 0 #0f0f0f, 1px 0 0 #0f0f0f, 1px 1px 0 #0f0f0f
 }
 
+.FrontlineScoreboardContainer .FrontlineScoreboard .FrontlinePoint .FrontlinePointLetter .svg-inline--fa,
+.FrontlineScoreboardContainer .FrontlineScoreboard .FrontlinePoint .FrontlinePointLetter.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .FrontlineScoreboardContainer .FrontlineScoreboard .FrontlinePoint .FrontlinePointLetter .svg-inline--fa path:only-of-type,
 .FrontlineScoreboardContainer .FrontlineScoreboard .FrontlinePoint .FrontlinePointLetter.svg-inline--fa path:only-of-type {
   stroke: #0f0f0f;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .FrontlineScoreboardContainer .FrontlineScoreboard .FrontlinePoint .FrontlinePointFill {
@@ -677,13 +693,17 @@ body.FrontlineCustomCrosshair .GunCrosshairWrapper {
   text-shadow: -1px -1px 0 #0f0f0f, -1px 0 0 #0f0f0f, -1px 1px 0 #0f0f0f, 0 -1px 0 #0f0f0f, 0 0 0 #0f0f0f, 0 1px 0 #0f0f0f, 1px -1px 0 #0f0f0f, 1px 0 0 #0f0f0f, 1px 1px 0 #0f0f0f
 }
 
+.FrontlineScoreboardContainer .FrontlineClockTab .FrontlineClock .svg-inline--fa,
+.FrontlineScoreboardContainer .FrontlineClockTab .FrontlineClock.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .FrontlineScoreboardContainer .FrontlineClockTab .FrontlineClock .svg-inline--fa path:only-of-type,
 .FrontlineScoreboardContainer .FrontlineClockTab .FrontlineClock.svg-inline--fa path:only-of-type {
   stroke: #0f0f0f;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .FrontlineScoreboardContainer .FrontlineClockTab .FrontlineClock.Urgent {
@@ -886,13 +906,17 @@ body.FrontlineCustomCrosshair .GunCrosshairWrapper {
   text-transform: uppercase
 }
 
+.FrontlineRoundEnd .FrontlineRoundEndResult .svg-inline--fa,
+.FrontlineRoundEnd .FrontlineRoundEndResult.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .FrontlineRoundEnd .FrontlineRoundEndResult .svg-inline--fa path:only-of-type,
 .FrontlineRoundEnd .FrontlineRoundEndResult.svg-inline--fa path:only-of-type {
   stroke: #0f0f0f;
   vector-effect: non-scaling-stroke;
   stroke-width: 4px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .FrontlineRoundEnd .FrontlineRoundEndResult .FrontlineBracket {
@@ -950,13 +974,17 @@ body.FrontlineCustomCrosshair .GunCrosshairWrapper {
   text-shadow: -1px -1px 0 #0f0f0f, -1px 0 0 #0f0f0f, -1px 1px 0 #0f0f0f, 0 -1px 0 #0f0f0f, 0 0 0 #0f0f0f, 0 1px 0 #0f0f0f, 1px -1px 0 #0f0f0f, 1px 0 0 #0f0f0f, 1px 1px 0 #0f0f0f
 }
 
+.FrontlineRoundEnd .FrontlineRoundEndScore .FrontlineRoundEndTickets .svg-inline--fa,
+.FrontlineRoundEnd .FrontlineRoundEndScore .FrontlineRoundEndTickets.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .FrontlineRoundEnd .FrontlineRoundEndScore .FrontlineRoundEndTickets .svg-inline--fa path:only-of-type,
 .FrontlineRoundEnd .FrontlineRoundEndScore .FrontlineRoundEndTickets.svg-inline--fa path:only-of-type {
   stroke: #0f0f0f;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .FrontlineRoundEnd .FrontlineRoundEndScore .FrontlineRoundEndTickets .Friendly {

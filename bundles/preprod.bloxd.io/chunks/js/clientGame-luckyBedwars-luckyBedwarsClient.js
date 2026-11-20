@@ -1,257 +1,257 @@
 export const id = 19;
 export const ids = [19];
 export const modules = {
-  36066: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Fz,
-      d: () => Zz,
-      g: () => dz,
-      h: () => pz
+  36648: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Nq,
+      g: () => aq,
+      h: () => Wq,
+      j: () => Bq
     });
-    var Ez = bz(8982),
-      nz = bz(36071),
-      iz = bz(36080),
-      lz = bz(8378),
-      Mz = bz(1417),
-      tz = bz(56),
-      Hz = bz(79),
-      Oz = bz(1089);
+    var Yq = gq(9277),
+      lq = gq(36657),
+      Oq = gq(36662),
+      mq = gq(8669),
+      xq = gq(1416),
+      Aq = gq(57),
+      cq = gq(71),
+      uq = gq(1070);
 
-    function pz() {
-      var zz;
-      return (0, Mz.h)(nz.e, (0, nz.o)()), (0, Oz.jsx)(Oz.Fragment, {
-        children: null === (zz = (0, nz.o)()) || void 0 === zz ? void 0 : zz.content
+    function Bq() {
+      var qq;
+      return (0, xq.h)(lq.c, (0, lq.l)()), (0, uq.jsx)(uq.Fragment, {
+        children: null === (qq = (0, lq.l)()) || void 0 === qq ? void 0 : qq.content
       })
     }
 
-    function dz(zz) {
-      var uz;
+    function Wq(qq) {
+      var Eq;
       let {
-        show: bz
-      } = zz;
-      (0, Mz.h)(nz.e, (0, nz.o)());
-      const Hz = null === (uz = (0, nz.o)()) || void 0 === uz ? void 0 : uz.menu;
-      return (0, tz.useEffect)((() => {
-        var zz;
-        bz || (null === Hz || void 0 === Hz || null === (zz = Hz.onClose) || void 0 === zz || zz.call(Hz), (0, iz.j)())
-      }), [bz, Hz]), (0, tz.useEffect)((() => bz ? (0, lz.e)(iz.u, iz.d) : void 0), [bz]), (0, Oz.jsx)(Ez.d, {
-        showing: bz,
+        show: gq
+      } = qq;
+      (0, xq.h)(lq.c, (0, lq.l)());
+      const cq = null === (Eq = (0, lq.l)()) || void 0 === Eq ? void 0 : Eq.menu;
+      return (0, Aq.useEffect)((() => {
+        var qq;
+        gq || (null === cq || void 0 === cq || null === (qq = cq.onClose) || void 0 === qq || qq.call(cq), (0, Oq.m)())
+      }), [gq, cq]), (0, Aq.useEffect)((() => gq ? (0, mq.i)(Oq.r, Oq.d) : void 0), [gq]), (0, uq.jsx)(Yq.b, {
+        showing: gq,
         globallyUniqueKey: "clientGameMenu",
-        children: null === Hz || void 0 === Hz ? void 0 : Hz.content
+        children: null === cq || void 0 === cq ? void 0 : cq.content
       })
     }
 
-    function Fz(zz) {
+    function Nq(qq) {
       let {
-        placement: uz = "bottom"
-      } = zz;
-      return (0, Oz.jsx)("div", {
-        id: `clientGameHud-${uz}`,
+        placement: Eq = "bottom"
+      } = qq;
+      return (0, uq.jsx)("div", {
+        id: `clientGameHud-${Eq}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function Zz(zz) {
+    function aq(qq) {
       let {
-        children: uz,
-        placement: bz = "bottom"
-      } = zz;
-      const [Ez, nz] = (0, tz.useState)(null);
-      return (0, tz.useEffect)((() => {
-        nz(document.getElementById(`clientGameHud-${bz}`))
-      }), [bz]), Ez ? (0, Hz.createPortal)(uz, Ez) : null
+        children: Eq,
+        placement: gq = "bottom"
+      } = qq;
+      const [Yq, lq] = (0, Aq.useState)(null);
+      return (0, Aq.useEffect)((() => {
+        lq(document.getElementById(`clientGameHud-${gq}`))
+      }), [gq]), Yq ? (0, cq.createPortal)(Eq, Yq) : null
     }
   },
-  8982: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => iz
+  9277: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Oq
     });
-    var Ez = bz(4298),
-      nz = bz(4300);
+    var Yq = gq(4364),
+      lq = gq(4367);
 
-    function iz(zz) {
+    function Oq(qq) {
       let {
-        children: uz,
-        showing: bz,
-        globallyUniqueKey: iz,
-        alwaysMountChildren: lz = !1,
-        doGameplayStartStopOnShow: Mz = !0,
-        keepsMovement: tz = !1
-      } = zz;
-      return (0, nz.e)(!0, bz, iz, tz), (0, Ez.d)(Mz, bz), bz || lz ? uz : null
+        children: Eq,
+        showing: gq,
+        globallyUniqueKey: Oq,
+        alwaysMountChildren: mq = !1,
+        doGameplayStartStopOnShow: xq = !0,
+        keepsMovement: Aq = !1
+      } = qq;
+      return (0, lq.e)(!0, gq, Oq, Aq), (0, Yq.d)(xq, gq), gq || mq ? Eq : null
     }
   },
-  8378: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => iz,
-      e: () => nz
+  8669: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => Oq,
+      i: () => lq
     });
-    let Ez = null;
-    const nz = function(zz) {
-        const uz = {
-          cycle: zz,
+    let Yq = null;
+    const lq = function(qq) {
+        const Eq = {
+          cycle: qq,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Ez = uz, () => {
-          Ez === uz && (Ez = null)
+        return Yq = Eq, () => {
+          Yq === Eq && (Yq = null)
         }
       },
-      iz = () => {
-        var zz;
-        return null !== (zz = Ez) && void 0 !== zz && zz.canCycle() ? Ez.cycle : null
+      Oq = () => {
+        var qq;
+        return null !== (qq = Yq) && void 0 !== qq && qq.canCycle() ? Yq.cycle : null
       }
   },
-  36080: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => iz,
-      d: () => Rz,
-      g: () => Kz,
-      h: () => Mz,
-      i: () => dz,
-      j: () => wz,
-      n: () => pz,
-      q: () => fz,
-      u: () => Zz,
-      x: () => Xz
+  36662: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Oq,
+      d: () => Vq,
+      g: () => dq,
+      h: () => xq,
+      l: () => Wq,
+      m: () => jq,
+      o: () => Bq,
+      p: () => oq,
+      r: () => aq,
+      v: () => Hq
     });
-    var Ez = bz(20),
-      nz = bz(22);
-    const iz = "clientGameInventoryButtonsChanged",
-      lz = new Map;
+    var Yq = gq(24),
+      lq = gq(31);
+    const Oq = "clientGameInventoryButtonsChanged",
+      mq = new Map;
 
-    function Mz() {
-      return [...lz.values()].sort(((zz, uz) => {
-        var bz, Ez;
-        return (null !== (bz = zz.order) && void 0 !== bz ? bz : 0) - (null !== (Ez = uz.order) && void 0 !== Ez ? Ez : 0)
+    function xq() {
+      return [...mq.values()].sort(((qq, Eq) => {
+        var gq, Yq;
+        return (null !== (gq = qq.order) && void 0 !== gq ? gq : 0) - (null !== (Yq = Eq.order) && void 0 !== Yq ? Yq : 0)
       }))
     }
-    let tz = null;
+    let Aq = null;
 
-    function Hz(zz) {
-      tz = zz
+    function cq(qq) {
+      Aq = qq
     }
-    let Oz = !1;
+    let uq = !1;
 
-    function pz(zz) {
-      Oz = !0;
+    function Bq(qq) {
+      uq = !0;
       try {
-        zz.onClick()
+        qq.onClick()
       } finally {
-        Oz = !1
+        uq = !1
       }
-      zz.panel && "clientGame" === Ez.e.get("openInGameMenuName") && Hz(zz.id)
+      qq.panel && "clientGame" === Yq.b.get("openInGameMenuName") && cq(qq.id)
     }
 
-    function dz() {
-      return Oz
+    function Wq() {
+      return uq
     }
 
-    function Fz() {
-      return Mz().filter((zz => zz.panel && !zz.disabled))
+    function Nq() {
+      return xq().filter((qq => qq.panel && !qq.disabled))
     }
 
-    function Zz(zz) {
-      const uz = Fz(),
-        bz = uz.findIndex((zz => zz.id === tz));
-      return !(bz < 0 || uz.length < 2) && (pz(uz[(bz + zz + uz.length) % uz.length]), !0)
+    function aq(qq) {
+      const Eq = Nq(),
+        gq = Eq.findIndex((qq => qq.id === Aq));
+      return !(gq < 0 || Eq.length < 2) && (Bq(Eq[(gq + qq + Eq.length) % Eq.length]), !0)
     }
 
-    function Rz() {
-      return null !== tz && Fz().length > 1
+    function Vq() {
+      return null !== Aq && Nq().length > 1
     }
 
-    function Kz() {
-      Hz(null)
+    function dq() {
+      cq(null)
     }
 
-    function wz() {
-      "inventory" !== Ez.e.get("openInGameMenuName") && Hz(null)
+    function jq() {
+      "inventory" !== Yq.b.get("openInGameMenuName") && cq(null)
     }
 
-    function Xz() {
-      const zz = tz;
-      return Hz(null), zz
+    function Hq() {
+      const qq = Aq;
+      return cq(null), qq
     }
 
-    function fz(zz) {
-      return lz.set(zz.id, zz), nz.k.sK(iz, Mz(), !0), () => {
-        lz.get(zz.id) === zz && (lz.delete(zz.id), nz.k.sK(iz, Mz()))
+    function oq(qq) {
+      return mq.set(qq.id, qq), lq.i.TV(Oq, xq(), !0), () => {
+        mq.get(qq.id) === qq && (mq.delete(qq.id), lq.i.TV(Oq, xq()))
       }
     }
   },
-  36071: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Mz,
-      i: () => Kz,
-      l: () => wz,
-      n: () => dz,
-      o: () => Hz,
-      p: () => Rz,
-      t: () => Fz,
-      x: () => Oz
+  36657: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => xq,
+      e: () => dq,
+      h: () => jq,
+      j: () => Wq,
+      l: () => cq,
+      m: () => Vq,
+      n: () => Nq,
+      r: () => uq
     });
-    var Ez = bz(20),
-      nz = bz(22),
-      iz = bz(1269),
-      lz = bz(36080);
-    const Mz = "clientGameUiChanged";
-    let tz = null;
+    var Yq = gq(24),
+      lq = gq(31),
+      Oq = gq(1274),
+      mq = gq(36662);
+    const xq = "clientGameUiChanged";
+    let Aq = null;
 
-    function Hz() {
-      return tz
+    function cq() {
+      return Aq
     }
 
-    function Oz(zz, uz) {
-      const bz = {
-        content: zz,
-        menu: uz
+    function uq(qq, Eq) {
+      const gq = {
+        content: qq,
+        menu: Eq
       };
-      return tz = bz, nz.k.sK(Mz, tz, !0), () => {
-        tz === bz && (tz = null, Zz = !1, Kz(), nz.k.sK(Mz, null))
+      return Aq = gq, lq.i.TV(xq, Aq, !0), () => {
+        Aq === gq && (Aq = null, aq = !1, dq(), lq.i.TV(xq, null))
       }
     }
-    let pz = null;
+    let Bq = null;
 
-    function dz() {
-      return pz
+    function Wq() {
+      return Bq
     }
 
-    function Fz(zz) {
-      return pz = zz, () => {
-        pz === zz && (pz = null)
+    function Nq(qq) {
+      return Bq = qq, () => {
+        Bq === qq && (Bq = null)
       }
     }
-    let Zz = !1;
+    let aq = !1;
 
-    function Rz() {
-      const zz = Ez.e.get("openInGameMenuName");
-      "clientGame" !== zz && (Zz = "inventory" === zz), (0, lz.i)() || (0, lz.g)(), (0, iz.m)(iz.b), Ez.e.set({
+    function Vq() {
+      const qq = Yq.b.get("openInGameMenuName");
+      "clientGame" !== qq && (aq = "inventory" === qq), (0, mq.l)() || (0, mq.g)(), (0, Oq.m)(Oq.d), Yq.b.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function Kz() {
-      Xz(!1)
+    function dq() {
+      Hq(!1)
     }
 
-    function wz() {
-      Xz(Zz)
+    function jq() {
+      Hq(aq)
     }
 
-    function Xz(zz) {
-      "clientGame" === Ez.e.get("openInGameMenuName") && Ez.e.set({
-        openInGameMenuName: zz ? "inventory" : null
-      }), zz || (0, lz.g)(), Zz = !1
+    function Hq(qq) {
+      "clientGame" === Yq.b.get("openInGameMenuName") && Yq.b.set({
+        openInGameMenuName: qq ? "inventory" : null
+      }), qq || (0, mq.g)(), aq = !1
     }
   },
-  38803: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      default: () => kz
+  39359: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      default: () => Dq
     });
-    const Ez = {
+    const Yq = {
       trader: {
         name: "Lucky Trader",
         shopTab: "Basic Blocks"
@@ -261,270 +261,270 @@ export const modules = {
         shopTab: "Team Upgrades"
       }
     };
-    var nz = bz(56),
-      iz = bz(37452),
-      lz = bz(328);
-    const Mz = ["Basic", "Rare", "Super"];
+    var lq = gq(57),
+      Oq = gq(38011),
+      mq = gq(307);
+    const xq = ["Basic", "Rare", "Super"];
 
-    function tz(zz, uz) {
-      return `${"Basic"===uz?"":`${uz} `}${"Simple"===zz?"":`${zz} `}Lucky Block`
+    function Aq(qq, Eq) {
+      return `${"Basic"===Eq?"":`${Eq} `}${"Simple"===qq?"":`${qq} `}Lucky Block`
     }
-    const Hz = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((zz => Mz.map((uz => [tz(zz, uz), {
-      category: zz,
-      rarity: uz
+    const cq = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((qq => xq.map((Eq => [Aq(qq, Eq), {
+      category: qq,
+      rarity: Eq
     }])))));
-    Hz.keys();
+    cq.keys();
 
-    function Oz(zz) {
-      return Hz.get(zz)
+    function uq(qq) {
+      return cq.get(qq)
     }
-    const pz = "Obsidian",
-      dz = ["Cobweb"],
-      Fz = [...["Red", "Blue", "Green", "Yellow"].map((zz => `${(0,lz.bb)(zz)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", pz, ...dz];
+    const Bq = "Obsidian",
+      Wq = ["Cobweb"],
+      Nq = [...["Red", "Blue", "Green", "Yellow"].map((qq => `${(0,mq.eb)(qq)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", Bq, ...Wq];
 
-    function Zz(zz) {
-      return Fz.includes(zz)
+    function aq(qq) {
+      return Nq.includes(qq)
     }
-    var Rz = bz(588);
+    var Vq = gq(598);
 
-    function Kz(zz, uz) {
-      const bz = Oz(zz);
-      if (bz) {
-        const zz = Oz(uz);
-        if (!zz) return;
-        const Ez = Mz.length - 1 - Mz.indexOf(zz.rarity);
-        return (zz.category === bz.category ? 0 : 1) * Mz.length + Ez
+    function dq(qq, Eq) {
+      const gq = uq(qq);
+      if (gq) {
+        const qq = uq(Eq);
+        if (!qq) return;
+        const Yq = xq.length - 1 - xq.indexOf(qq.rarity);
+        return (qq.category === gq.category ? 0 : 1) * xq.length + Yq
       }
-      if (!Zz(zz)) return;
-      if (uz === zz) return 0;
-      const Ez = zz => Zz(zz) && !dz.includes(zz) && zz !== pz;
-      return Ez(zz) && Ez(uz) ? 1 : void 0
+      if (!aq(qq)) return;
+      if (Eq === qq) return 0;
+      const Yq = qq => aq(qq) && !Wq.includes(qq) && qq !== Bq;
+      return Yq(qq) && Yq(Eq) ? 1 : void 0
     }
-    const wz = [...Array.from({
-      length: Rz.n - Rz.l
-    }, ((zz, uz) => Rz.l + uz)), ...Array.from({
-      length: Rz.l
-    }, ((zz, uz) => uz))];
-    class Xz {
-      constructor(zz) {
-        this.inventory = zz, this.pending = new Map
+    const jq = [...Array.from({
+      length: Vq.s - Vq.o
+    }, ((qq, Eq) => Vq.o + Eq)), ...Array.from({
+      length: Vq.o
+    }, ((qq, Eq) => Eq))];
+    class Hq {
+      constructor(qq) {
+        this.inventory = qq, this.pending = new Map
       }
-      onPlace(zz) {
-        var uz;
-        const bz = this.inventory.selectedSlot(),
-          Ez = this.inventory.itemAt(bz);
-        (null === Ez || void 0 === Ez ? void 0 : Ez.name) === zz && (null !== (uz = Ez.amount) && void 0 !== uz ? uz : 1) <= 1 && fz(zz) && this.pending.set(bz, zz)
+      onPlace(qq) {
+        var Eq;
+        const gq = this.inventory.selectedSlot(),
+          Yq = this.inventory.itemAt(gq);
+        (null === Yq || void 0 === Yq ? void 0 : Yq.name) === qq && (null !== (Eq = Yq.amount) && void 0 !== Eq ? Eq : 1) <= 1 && oq(qq) && this.pending.set(gq, qq)
       }
-      onDrop(zz, uz) {
-        uz < Rz.l && null === this.inventory.itemAt(uz) && fz(zz) && this.refill(uz, zz)
+      onDrop(qq, Eq) {
+        Eq < Vq.o && null === this.inventory.itemAt(Eq) && oq(qq) && this.refill(Eq, qq)
       }
-      sd() {
-        const zz = [...this.pending];
+      SB() {
+        const qq = [...this.pending];
         this.pending.clear();
-        for (const [uz, bz] of zz) null === this.inventory.itemAt(uz) && this.refill(uz, bz)
+        for (const [Eq, gq] of qq) null === this.inventory.itemAt(Eq) && this.refill(Eq, gq)
       }
-      refill(zz, uz) {
-        const bz = function(zz, uz, bz, Ez) {
-          let nz, iz = 1 / 0;
-          for (const lz of wz) {
-            if (lz === uz) continue;
-            const Mz = Ez(lz);
-            if (!Mz || lz < Rz.l && uz !== bz) continue;
-            const tz = Kz(zz, Mz.name);
-            void 0 !== tz && tz < iz && (nz = lz, iz = tz)
+      refill(qq, Eq) {
+        const gq = function(qq, Eq, gq, Yq) {
+          let lq, Oq = 1 / 0;
+          for (const mq of jq) {
+            if (mq === Eq) continue;
+            const xq = Yq(mq);
+            if (!xq || mq < Vq.o && Eq !== gq) continue;
+            const Aq = dq(qq, xq.name);
+            void 0 !== Aq && Aq < Oq && (lq = mq, Oq = Aq)
           }
-          return nz
-        }(uz, zz, this.inventory.selectedSlot(), this.inventory.itemAt);
-        void 0 !== bz && this.inventory.swap(zz, bz)
+          return lq
+        }(Eq, qq, this.inventory.selectedSlot(), this.inventory.itemAt);
+        void 0 !== gq && this.inventory.swap(qq, gq)
       }
     }
 
-    function fz(zz) {
-      return !!Oz(zz) || Zz(zz)
+    function oq(qq) {
+      return !!uq(qq) || aq(qq)
     }
-    var sz = bz(36071),
-      rz = bz(79),
-      oz = bz(1038),
-      Nz = bz.n(oz);
-    const vz = "Lucky Clover",
-      xz = {
+    var Pq = gq(36657),
+      Qq = gq(71),
+      yq = gq(1018),
+      tq = gq.n(yq);
+    const rq = "Lucky Clover",
+      vq = {
         Basic: [35, 45],
         Rare: [100, 130],
         Super: [250, 330]
       };
 
-    function Jz(zz) {
-      return xz[zz][0]
+    function hq(qq) {
+      return vq[qq][0]
     }
 
-    function Az(zz) {
-      return Mz.filter((uz => zz >= Jz(uz)))
+    function nq(qq) {
+      return xq.filter((Eq => qq >= hq(Eq)))
     }
-    var Tz = bz(316),
-      Lz = bz(2313),
-      Pz = bz(20),
-      Gz = bz(2433),
-      az = bz(1856),
-      Vz = bz(36066),
-      mz = bz(1047);
-    var qz = bz(1089);
-    const hz = {
-      Basic: lz.N.whiteUiText,
-      Rare: lz.N.goldUiText,
-      Super: lz.N.cyanUiText
+    var bq = gq(296),
+      iq = gq(2383),
+      Zq = gq(24),
+      fq = gq(2501),
+      Mq = gq(1895),
+      Tq = gq(36648),
+      zq = gq(1025);
+    var Sq = gq(1070);
+    const pq = {
+      Basic: mq.M.whiteUiText,
+      Rare: mq.M.goldUiText,
+      Super: mq.M.cyanUiText
     };
-    let Uz = 1;
+    let Gq = 1;
 
-    function cz() {
-      const zz = (0, Lz.g)("currencyAmounts"),
-        uz = null === zz || void 0 === zz ? void 0 : zz.Clovers;
-      return !uz || uz.hidden ? null : (0, qz.jsx)(Vz.d, {
-        children: (0, qz.jsx)(gz, {
-          amount: uz.amount
+    function Lq() {
+      const qq = (0, iq.h)("currencyAmounts"),
+        Eq = null === qq || void 0 === qq ? void 0 : qq.Clovers;
+      return !Eq || Eq.hidden ? null : (0, Sq.jsx)(Tq.g, {
+        children: (0, Sq.jsx)(Jq, {
+          amount: Eq.amount
         })
       })
     }
 
-    function gz(zz) {
-      var uz, bz, Ez;
+    function Jq(qq) {
+      var Eq, gq, Yq;
       let {
-        amount: iz
-      } = zz;
+        amount: Oq
+      } = qq;
       const {
-        openEverythingMenuName: tz
-      } = (0, Pz.m)(["openEverythingMenuName"]), Hz = (0, Gz.c)(), [Oz, pz] = (0, nz.useState)(iz), [dz, Fz] = (0, nz.useState)(null), [Zz, Rz] = (0, nz.useState)(0), [Kz, wz] = (0, nz.useState)([]), Xz = (0, nz.useRef)(iz), fz = (0, nz.useRef)(!1), sz = (0, nz.useRef)(null), oz = tz === Tz.r.SHOP;
-      (0, nz.useEffect)((() => {
-        const zz = Xz.current;
-        if (Xz.current = iz, iz <= zz || oz) return void pz(iz);
-        const uz = Hz || Kz.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (bz = iz - zz, Ez = !fz.current, bz <= 0 || !Ez && bz < 40 ? 0 : Math.min(4, Math.ceil(bz / 30)));
-        var bz, Ez;
-        if (fz.current = !0, Az(iz).length > Az(zz).length && Rz(Uz++), uz > 0) {
-          const zz = [];
-          for (let bz = 0; bz < uz; bz++) zz.push({
-            id: Uz++,
+        openEverythingMenuName: Aq
+      } = (0, Zq.j)(["openEverythingMenuName"]), cq = (0, fq.d)(), [uq, Bq] = (0, lq.useState)(Oq), [Wq, Nq] = (0, lq.useState)(null), [aq, Vq] = (0, lq.useState)(0), [dq, jq] = (0, lq.useState)([]), Hq = (0, lq.useRef)(Oq), oq = (0, lq.useRef)(!1), Pq = (0, lq.useRef)(null), yq = Aq === bq.p.SHOP;
+      (0, lq.useEffect)((() => {
+        const qq = Hq.current;
+        if (Hq.current = Oq, Oq <= qq || yq) return void Bq(Oq);
+        const Eq = cq || dq.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (gq = Oq - qq, Yq = !oq.current, gq <= 0 || !Yq && gq < 40 ? 0 : Math.min(4, Math.ceil(gq / 30)));
+        var gq, Yq;
+        if (oq.current = !0, nq(Oq).length > nq(qq).length && Vq(Gq++), Eq > 0) {
+          const qq = [];
+          for (let gq = 0; gq < Eq; gq++) qq.push({
+            id: Gq++,
             x: window.innerWidth / 2 + 60 * (Math.random() - .5),
             y: .58 * window.innerHeight + 30 * (Math.random() - .5),
-            delayMs: 70 * bz
+            delayMs: 70 * gq
           });
-          wz((uz => [...uz, ...zz]))
+          jq((Eq => [...Eq, ...qq]))
         }
-        const nz = uz > 0 ? 600 : 0;
-        Fz({
-          id: Uz++,
-          delayMs: nz
+        const lq = Eq > 0 ? 600 : 0;
+        Nq({
+          id: Gq++,
+          delayMs: lq
         });
-        const Mz = performance.now() + nz;
-        let tz = 0;
-        const Oz = uz => {
-          const bz = lz.d.clamp((uz - Mz) / 600, 0, 1);
-          pz(Math.round(zz + (iz - zz) * bz)), bz < 1 && (tz = requestAnimationFrame(Oz))
+        const xq = performance.now() + lq;
+        let Aq = 0;
+        const uq = Eq => {
+          const gq = mq.c.clamp((Eq - xq) / 600, 0, 1);
+          Bq(Math.round(qq + (Oq - qq) * gq)), gq < 1 && (Aq = requestAnimationFrame(uq))
         };
-        return tz = requestAnimationFrame(Oz), () => {
-          cancelAnimationFrame(tz)
+        return Aq = requestAnimationFrame(uq), () => {
+          cancelAnimationFrame(Aq)
         }
-      }), [iz, oz]);
-      const xz = function(zz) {
-          var uz;
-          const bz = null !== (uz = Mz.find((uz => zz < Jz(uz)))) && void 0 !== uz ? uz : "Super";
+      }), [Oq, yq]);
+      const vq = function(qq) {
+          var Eq;
+          const gq = null !== (Eq = xq.find((Eq => qq < hq(Eq)))) && void 0 !== Eq ? Eq : "Super";
           return {
-            rarity: bz,
-            progress: lz.d.clamp(zz / Jz(bz), 0, 1)
+            rarity: gq,
+            progress: mq.c.clamp(qq / hq(gq), 0, 1)
           }
-        }(Oz),
-        Lz = Az(Oz).at(-1);
-      return (0, qz.jsxs)(qz.Fragment, {
-        children: [(0, qz.jsx)("div", {
+        }(uq),
+        iq = nq(uq).at(-1);
+      return (0, Sq.jsxs)(Sq.Fragment, {
+        children: [(0, Sq.jsx)("div", {
           className: "LuckyCloverWalletAnchor",
-          children: (0, qz.jsxs)("div", {
-            className: Nz()("LuckyCloverWallet", {
-              Capped: Lz && "Basic" !== Lz
+          children: (0, Sq.jsxs)("div", {
+            className: tq()("LuckyCloverWallet", {
+              Capped: iq && "Basic" !== iq
             }),
-            style: Lz && {
-              "--luckyTierColour": hz[Lz]
+            style: iq && {
+              "--luckyTierColour": pq[iq]
             },
-            children: [(0, qz.jsx)("div", {
+            children: [(0, Sq.jsx)("div", {
               className: "LuckyCloverWalletFill",
               style: {
-                transform: `scaleX(${xz.progress})`
+                transform: `scaleX(${vq.progress})`
               }
-            }), Zz > 0 && (0, qz.jsx)("div", {
+            }), aq > 0 && (0, Sq.jsx)("div", {
               className: "LuckyCloverWalletReached",
               style: {
-                animationDelay: `${null!==(uz=null===dz||void 0===dz?void 0:dz.delayMs)&&void 0!==uz?uz:0}ms`
+                animationDelay: `${null!==(Eq=null===Wq||void 0===Wq?void 0:Wq.delayMs)&&void 0!==Eq?Eq:0}ms`
               }
-            }, Zz), (0, qz.jsx)("div", {
-              ref: sz,
-              className: Nz()("LuckyCloverWalletIcon", dz && "Bounce"),
+            }, aq), (0, Sq.jsx)("div", {
+              ref: Pq,
+              className: tq()("LuckyCloverWalletIcon", Wq && "Bounce"),
               style: {
-                animationDelay: `${null!==(Ez=null===dz||void 0===dz?void 0:dz.delayMs)&&void 0!==Ez?Ez:0}ms`
+                animationDelay: `${null!==(Yq=null===Wq||void 0===Wq?void 0:Wq.delayMs)&&void 0!==Yq?Yq:0}ms`
               },
-              children: (0, qz.jsx)(az.c, {
-                itemName: vz,
+              children: (0, Sq.jsx)(Mq.e, {
+                itemName: rq,
                 amount: 0
               })
-            }, null !== (bz = null === dz || void 0 === dz ? void 0 : dz.id) && void 0 !== bz ? bz : 0), (0, qz.jsx)("span", {
+            }, null !== (gq = null === Wq || void 0 === Wq ? void 0 : Wq.id) && void 0 !== gq ? gq : 0), (0, Sq.jsx)("span", {
               className: "LuckyCloverWalletAmount SmallTextBold",
-              children: Oz
-            }), Lz && (0, qz.jsx)(mz.c, {
+              children: uq
+            }), iq && (0, Sq.jsx)(zq.d, {
               className: "LuckyCloverWalletShop",
               name: "cart-shopping"
             })]
           })
-        }), (0, rz.createPortal)(Kz.map((zz => (0, qz.jsx)(Sz, {
-          flyer: zz,
-          target: sz,
+        }), (0, Qq.createPortal)(dq.map((qq => (0, Sq.jsx)(kq, {
+          flyer: qq,
+          target: Pq,
           onDone: () => {
-            wz((uz => uz.filter((uz => uz.id !== zz.id))))
+            jq((Eq => Eq.filter((Eq => Eq.id !== qq.id))))
           }
-        }, zz.id))), document.body)]
+        }, qq.id))), document.body)]
       })
     }
 
-    function Sz(zz) {
+    function kq(qq) {
       let {
-        flyer: uz,
-        target: bz,
-        onDone: Ez
-      } = zz;
-      const iz = (0, nz.useRef)(null);
-      return (0, nz.useEffect)((() => {
-        var zz;
-        const nz = null === (zz = bz.current) || void 0 === zz ? void 0 : zz.getBoundingClientRect();
-        if (!iz.current || !nz) return void Ez();
+        flyer: Eq,
+        target: gq,
+        onDone: Yq
+      } = qq;
+      const Oq = (0, lq.useRef)(null);
+      return (0, lq.useEffect)((() => {
+        var qq;
+        const lq = null === (qq = gq.current) || void 0 === qq ? void 0 : qq.getBoundingClientRect();
+        if (!Oq.current || !lq) return void Yq();
         const {
-          x: lz,
-          y: Mz
-        } = uz, tz = lz + 140 * (Math.random() - .5), Hz = Mz - 30 - 40 * Math.random(), Oz = iz.current.animate([{
-          transform: `translate(${lz}px, ${Mz}px) scale(0.3)`,
+          x: mq,
+          y: xq
+        } = Eq, Aq = mq + 140 * (Math.random() - .5), cq = xq - 30 - 40 * Math.random(), uq = Oq.current.animate([{
+          transform: `translate(${mq}px, ${xq}px) scale(0.3)`,
           opacity: 0
         }, {
-          transform: `translate(${tz}px, ${Hz}px) scale(1.3)`,
+          transform: `translate(${Aq}px, ${cq}px) scale(1.3)`,
           opacity: 1,
           offset: .3
         }, {
-          transform: `translate(${nz.left}px, ${nz.top}px) scale(0.8)`,
+          transform: `translate(${lq.left}px, ${lq.top}px) scale(0.8)`,
           opacity: .9
         }], {
           duration: 750,
           easing: "ease-in",
-          delay: uz.delayMs,
+          delay: Eq.delayMs,
           fill: "backwards"
         });
-        return Oz.onfinish = Ez, () => {
-          Oz.cancel()
+        return uq.onfinish = Yq, () => {
+          uq.cancel()
         }
-      }), []), (0, qz.jsx)("div", {
-        ref: iz,
+      }), []), (0, Sq.jsx)("div", {
+        ref: Oq,
         className: "LuckyCloverFlying",
-        children: (0, qz.jsx)(az.c, {
-          itemName: vz,
+        children: (0, Sq.jsx)(Mq.e, {
+          itemName: rq,
           amount: 0
         })
       })
     }
-    var yz = bz(22);
-    const Dz = "luckyGearUpgradeView",
-      Qz = {
+    var Rq = gq(31);
+    const Uq = "luckyGearUpgradeView",
+      Fq = {
         Wood: "#c8964f",
         Stone: "#b4b4b4",
         Iron: "#f2f2f2",
@@ -532,13 +532,13 @@ export const modules = {
         Diamond: "#5cf2ea"
       };
 
-    function Wz(zz) {
-      var uz;
-      return null !== (uz = Qz[zz.split(" ")[0]]) && void 0 !== uz ? uz : "#e07bff"
+    function sq(qq) {
+      var Eq;
+      return null !== (Eq = Fq[qq.split(" ")[0]]) && void 0 !== Eq ? Eq : "#e07bff"
     }
-    class ez {
-      constructor(zz, uz) {
-        this.selectedSlot = zz, this.itemAt = uz, this.rings = [], this.unseen = new Map, this.view = {
+    class Xq {
+      constructor(qq, Eq) {
+        this.selectedSlot = qq, this.itemAt = Eq, this.rings = [], this.unseen = new Map, this.view = {
           rings: [],
           unseenSlots: []
         }, this.nextId = 0
@@ -546,200 +546,200 @@ export const modules = {
       getView() {
         return this.view
       }
-      WZ(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
-        for (const [bz, Ez, nz] of zz) this.rings.push({
+      ga(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
+        for (const [gq, Yq, lq] of qq) this.rings.push({
           id: this.nextId++,
-          slot: bz,
-          colour: Wz(nz),
-          until: uz + 1200
-        }), bz !== this.selectedSlot() && this.unseen.set(bz, {
-          from: Ez,
-          to: nz
+          slot: gq,
+          colour: sq(lq),
+          until: Eq + 1200
+        }), gq !== this.selectedSlot() && this.unseen.set(gq, {
+          from: Yq,
+          to: lq
         });
-        this.sK()
+        this.TV()
       }
-      sd() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
+      SB() {
+        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
         if (!this.rings.length && !this.unseen.size) return;
-        const uz = this.rings.filter((uz => uz.until > zz));
-        let bz = uz.length !== this.rings.length;
-        this.rings = uz;
-        for (const [Ez, {
-            from: nz,
-            to: iz
+        const Eq = this.rings.filter((Eq => Eq.until > qq));
+        let gq = Eq.length !== this.rings.length;
+        this.rings = Eq;
+        for (const [Yq, {
+            from: lq,
+            to: Oq
           }] of this.unseen) {
-          const zz = this.itemAt(Ez);
-          (Ez === this.selectedSlot() || zz !== iz && zz !== nz) && (this.unseen.delete(Ez), bz = !0)
+          const qq = this.itemAt(Yq);
+          (Yq === this.selectedSlot() || qq !== Oq && qq !== lq) && (this.unseen.delete(Yq), gq = !0)
         }
-        bz && this.sK()
+        gq && this.TV()
       }
-      sK() {
+      TV() {
         this.view = {
           rings: [...this.rings],
           unseenSlots: [...this.unseen.keys()]
-        }, yz.k.sK(Dz, this.view)
+        }, Rq.i.TV(Uq, this.view)
       }
     }
-    var jz = bz(1417);
+    var wq = gq(1416);
 
-    function Iz(zz) {
-      return document.querySelector(`.HotBar [data-inven-idx="${zz}"]`)
+    function Kq(qq) {
+      return document.querySelector(`.HotBar [data-inven-idx="${qq}"]`)
     }
 
-    function Bz(zz) {
+    function Cq(qq) {
       let {
-        ring: uz
-      } = zz;
-      const [bz, Ez] = (0, nz.useState)(null);
-      return (0, nz.useLayoutEffect)((() => {
-        var zz, bz;
-        Ez(null !== (zz = null === (bz = Iz(uz.slot)) || void 0 === bz ? void 0 : bz.getBoundingClientRect()) && void 0 !== zz ? zz : null)
-      }), [uz]), bz ? (0, qz.jsx)("div", {
+        ring: Eq
+      } = qq;
+      const [gq, Yq] = (0, lq.useState)(null);
+      return (0, lq.useLayoutEffect)((() => {
+        var qq, gq;
+        Yq(null !== (qq = null === (gq = Kq(Eq.slot)) || void 0 === gq ? void 0 : gq.getBoundingClientRect()) && void 0 !== qq ? qq : null)
+      }), [Eq]), gq ? (0, Sq.jsx)("div", {
         className: "LuckyGearRing",
         style: {
-          left: bz.left,
-          top: bz.top,
-          width: bz.width,
-          height: bz.height,
-          "--ringColour": uz.colour,
+          left: gq.left,
+          top: gq.top,
+          width: gq.width,
+          height: gq.height,
+          "--ringColour": Eq.colour,
           "--ringMs": "1200ms"
         }
       }) : null
     }
 
-    function Cz(zz) {
+    function Iq(qq) {
       let {
-        slot: uz
-      } = zz;
-      const [bz, Ez] = (0, nz.useState)(null);
-      return (0, nz.useLayoutEffect)((() => {
-        const zz = () => {
-          Ez(Iz(uz))
+        slot: Eq
+      } = qq;
+      const [gq, Yq] = (0, lq.useState)(null);
+      return (0, lq.useLayoutEffect)((() => {
+        const qq = () => {
+          Yq(Kq(Eq))
         };
-        zz();
-        const bz = new MutationObserver(zz),
-          nz = document.querySelector(".BottomMiddleElements");
-        return nz && bz.observe(nz, {
+        qq();
+        const gq = new MutationObserver(qq),
+          lq = document.querySelector(".BottomMiddleElements");
+        return lq && gq.observe(lq, {
           childList: !0,
           subtree: !0
         }), () => {
-          bz.disconnect()
+          gq.disconnect()
         }
-      }), [uz]), bz ? (0, rz.createPortal)((0, qz.jsx)("div", {
+      }), [Eq]), gq ? (0, Qq.createPortal)((0, Sq.jsx)("div", {
         className: "LuckyGearUnseen"
-      }), bz) : null
+      }), gq) : null
     }
 
-    function Yz(zz) {
+    function eq(qq) {
       let {
-        controller: uz
-      } = zz;
-      const bz = (0, jz.h)(Dz, uz.getView());
-      return (0, qz.jsxs)(qz.Fragment, {
-        children: [bz.rings.map((zz => (0, qz.jsx)(Bz, {
-          ring: zz
-        }, zz.id))), bz.unseenSlots.map((zz => (0, qz.jsx)(Cz, {
-          slot: zz
-        }, zz)))]
+        controller: Eq
+      } = qq;
+      const gq = (0, wq.h)(Uq, Eq.getView());
+      return (0, Sq.jsxs)(Sq.Fragment, {
+        children: [gq.rings.map((qq => (0, Sq.jsx)(Cq, {
+          ring: qq
+        }, qq.id))), gq.unseenSlots.map((qq => (0, Sq.jsx)(Iq, {
+          slot: qq
+        }, qq)))]
       })
     }
-    const kz = function(zz, uz, bz, lz) {
-      let Mz, {
-          localPlayerId: tz
-        } = lz,
-        Hz = null;
-      const Oz = new Xz({
-          itemAt: zz => Mz.getItemSlot(tz, zz),
-          selectedSlot: () => Mz.getSelectedInventorySlotI(tz),
-          swap: (zz, uz) => {
-            Mz.swapInventorySlots(zz, uz)
+    const Dq = function(qq, Eq, gq, mq) {
+      let xq, {
+          localPlayerId: Aq
+        } = mq,
+        cq = null;
+      const uq = new Hq({
+          itemAt: qq => xq.getItemSlot(Aq, qq),
+          selectedSlot: () => xq.getSelectedInventorySlotI(Aq),
+          swap: (qq, Eq) => {
+            xq.swapInventorySlots(qq, Eq)
           }
         }),
-        pz = new ez((() => Mz.getSelectedInventorySlotI(tz)), (zz => {
-          var uz;
-          return null === (uz = Mz.getItemSlot(tz, zz)) || void 0 === uz ? void 0 : uz.name
+        Bq = new Xq((() => xq.getSelectedInventorySlotI(Aq)), (qq => {
+          var Eq;
+          return null === (Eq = xq.getItemSlot(Aq, qq)) || void 0 === Eq ? void 0 : Eq.name
         }));
       return {
         plugins: {
-          placeAgainstBeds: (0, iz.c)()
+          placeAgainstBeds: (0, Oq.b)()
         },
-        onCreate: zz => {
-          Mz = zz, Hz = (0, sz.x)((0, nz.createElement)(nz.Fragment, null, (0, nz.createElement)(cz), (0, nz.createElement)(Yz, {
-            controller: pz
+        onCreate: qq => {
+          xq = qq, cq = (0, Pq.r)((0, lq.createElement)(lq.Fragment, null, (0, lq.createElement)(Lq), (0, lq.createElement)(eq, {
+            controller: Bq
           })))
         },
         onClose: () => {
-          var zz;
-          null === (zz = Hz) || void 0 === zz || zz()
+          var qq;
+          null === (qq = cq) || void 0 === qq || qq()
         },
-        sd: () => {
-          Oz.sd(), pz.sd()
+        SB: () => {
+          uq.SB(), Bq.SB()
         },
-        onReceivedMessageFromServer: (zz, uz) => {
-          "luckyGearUpgrade" === zz && pz.WZ(uz)
+        onReceivedMessageFromServer: (qq, Eq) => {
+          "luckyGearUpgrade" === qq && Bq.ga(Eq)
         },
-        onPlayerChangeBlock: (zz, uz, bz, Ez, nz, iz) => {
-          "Air" !== iz && Oz.onPlace(iz)
+        onPlayerChangeBlock: (qq, Eq, gq, Yq, lq, Oq) => {
+          "Air" !== Oq && uq.onPlace(Oq)
         },
-        onPlayerDropItem: (zz, uz, bz, Ez) => {
-          Oz.onDrop(uz, Ez)
+        onPlayerDropItem: (qq, Eq, gq, Yq) => {
+          uq.onDrop(Eq, Yq)
         },
-        onPlayerAltAction: (zz, uz, bz, nz, iz, lz) => {
-          if (!lz || "Mesh" !== Mz.getEntityType(lz)) return;
-          const tz = Mz.getEntityName(lz),
-            Hz = Object.values(Ez).find((zz => zz.name === tz));
-          Hz && Mz.openShop(zz, !1, Hz.shopTab)
+        onPlayerAltAction: (qq, Eq, gq, lq, Oq, mq) => {
+          if (!mq || "Mesh" !== xq.getEntityType(mq)) return;
+          const Aq = xq.getEntityName(mq),
+            cq = Object.values(Yq).find((qq => qq.name === Aq));
+          cq && xq.openShop(qq, !1, cq.shopTab)
         }
       }
     }
   },
-  37452: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Mz
+  38011: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => xq
     });
-    var Ez = bz(328),
-      nz = bz(36365),
-      iz = bz(4251);
-    const lz = ["Leaf Bed", "_Leaf Bed Head", ...Ez.Jc.flatMap((zz => [`${zz} Bed`, `_${zz} Bed Head`, `${zz} Strongbed`, `_${zz} Strongbed Head`]))];
+    var Yq = gq(307),
+      lq = gq(36985),
+      Oq = gq(4299);
+    const mq = ["Leaf Bed", "_Leaf Bed Head", ...Yq.Tc.flatMap((qq => [`${qq} Bed`, `_${qq} Bed Head`, `${qq} Strongbed`, `_${qq} Strongbed Head`]))];
 
-    function Mz() {
-      let zz;
+    function xq() {
+      let qq;
       return {
-        onCreate(uz) {
-          zz = uz
+        onCreate(Eq) {
+          qq = Eq
         },
-        altVetoBlocks: lz,
-        onPlayerAttemptAltAction(uz, bz, Ez, lz, Mz, tz) {
-          var Hz;
-          if ((0, nz.e)(zz.getMetaInfo(Mz).rootName) && !zz.isEntityInteractable(tz) && (0, iz.c)(null === (Hz = zz.luz(uz)) || void 0 === Hz ? void 0 : Hz.typeObj.type)) return "preventAction"
+        altVetoBlocks: mq,
+        onPlayerAttemptAltAction(Eq, gq, Yq, mq, xq, Aq) {
+          var cq;
+          if ((0, lq.b)(qq.getMetaInfo(xq).rootName) && !qq.isEntityInteractable(Aq) && (0, Oq.g)(null === (cq = qq.Ngq(Eq)) || void 0 === cq ? void 0 : cq.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  36365: (zz, uz, bz) => {
-    function Ez(zz) {
-      return zz.includes("Leaf Bed")
+  36985: (qq, Eq, gq) => {
+    function Yq(qq) {
+      return qq.includes("Leaf Bed")
     }
 
-    function nz(zz) {
-      return / Bed(?: Head)?(?:\||$)/.test(zz) && !Ez(zz)
+    function lq(qq) {
+      return / Bed(?: Head)?(?:\||$)/.test(qq) && !Yq(qq)
     }
 
-    function iz(zz) {
-      return zz.includes(" Strongbed")
+    function Oq(qq) {
+      return qq.includes(" Strongbed")
     }
 
-    function lz(zz) {
-      return Ez(zz) || nz(zz) || iz(zz)
+    function mq(qq) {
+      return Yq(qq) || lq(qq) || Oq(qq)
     }
-    bz.d(uz, {
-      e: () => lz,
-      g: () => Ez,
-      j: () => iz,
-      k: () => nz
+    gq.d(Eq, {
+      b: () => mq,
+      c: () => Yq,
+      d: () => Oq,
+      f: () => lq
     })
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const qq in modules) Object.freeze(modules[qq]);

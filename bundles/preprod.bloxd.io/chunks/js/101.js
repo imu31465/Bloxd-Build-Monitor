@@ -1,669 +1,489 @@
 export const id = 101;
 export const ids = [101];
 export const modules = {
-  4670: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => dz
+  4739: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Wq
     });
-    var Ez = bz(1038),
-      nz = bz.n(Ez),
-      iz = bz(1047),
-      lz = bz(1305),
-      Mz = bz(3248),
-      tz = bz(128),
-      Hz = bz(3298),
-      Oz = bz(3286),
-      pz = bz(1089);
+    var Yq = gq(1018),
+      lq = gq.n(Yq),
+      Oq = gq(1025),
+      mq = gq(1326),
+      xq = gq(3383),
+      Aq = gq(136),
+      cq = gq(3428),
+      uq = gq(3416),
+      Bq = gq(1070);
 
-    function dz(zz) {
+    function Wq(qq) {
       let {
-        game: uz
-      } = zz;
-      const bz = (0, tz.o)() ? "large" : "small",
-        Ez = (0, Hz.e)(uz, bz),
-        dz = (0, Mz.f)(Ez),
-        Fz = void 0 !== dz.blurhash;
-      return (0, pz.jsxs)("div", {
+        game: Eq
+      } = qq;
+      const gq = (0, Aq.i)() ? "large" : "small",
+        Yq = (0, cq.e)(Eq, gq),
+        Wq = (0, xq.e)(Yq),
+        Nq = void 0 !== Wq.blurhash;
+      return (0, Bq.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [dz.isLoading && !Fz && (0, pz.jsx)(lz.c, {
+        children: [Wq.isLoading && !Nq && (0, Bq.jsx)(mq.e, {
           loaderType: "Secondary"
-        }), !dz.failed && (null !== dz.src || Fz) && (0, pz.jsx)("div", {
-          className: nz()("SchematicImage", Oz.i, {
-            SchematicImageFadeIn: dz.fadeIn && !Fz
+        }), !Wq.failed && (null !== Wq.src || Nq) && (0, Bq.jsx)("div", {
+          className: lq()("SchematicImage", uq.i, {
+            SchematicImageFadeIn: Wq.fadeIn && !Nq
           }),
-          style: (0, Oz.f)(dz),
-          children: (0, pz.jsx)(Oz.d, {
-            image: dz
+          style: (0, uq.e)(Wq),
+          children: (0, Bq.jsx)(uq.d, {
+            image: Wq
           })
-        }), dz.failed && (0, pz.jsx)("div", {
+        }), Wq.failed && (0, Bq.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, pz.jsx)(iz.c, {
+          children: (0, Bq.jsx)(Oq.d, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  4780: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Fz
+  6381: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      default: () => Gq
     });
-    var Ez = bz(56),
-      nz = bz(1038),
-      iz = bz.n(nz),
-      lz = bz(4706),
-      Mz = bz(1305),
-      tz = bz(1181),
-      Hz = bz(2907),
-      Oz = bz(3059),
-      pz = bz(1047),
-      dz = bz(1089);
+    gq(4735);
+    var Yq = gq(57),
+      lq = gq(1018),
+      Oq = gq.n(lq),
+      mq = gq(296),
+      xq = gq(997),
+      Aq = gq(1214),
+      cq = gq(985),
+      uq = gq(1183),
+      Bq = gq(1477),
+      Wq = gq(3438),
+      Nq = gq(1101),
+      aq = gq(4739),
+      Vq = gq(2517),
+      dq = gq(1422),
+      jq = gq(4393),
+      Hq = gq(4748),
+      oq = gq(1326),
+      Pq = gq(1498),
+      Qq = gq(4387),
+      yq = gq(2470),
+      tq = gq(4753),
+      rq = gq(6291),
+      vq = gq(1529),
+      hq = gq(1070);
+    const nq = [{
+        scope: "customGames",
+        title: "studio:leaderboardCustomGames"
+      }, {
+        scope: "allGames",
+        title: "studio:leaderboardAllGames"
+      }, {
+        scope: "dormantGames",
+        title: "studio:leaderboardDormantGames"
+      }],
+      bq = 25,
+      iq = "scope",
+      Zq = "category",
+      fq = "customGames";
+    const Mq = 7,
+      Tq = {
+        playsPerDay: null,
+        avgPlaytimeMinutes: null,
+        retention: null
+      };
 
-    function Fz(zz) {
+    function zq(qq) {
       let {
-        folderName: uz,
-        onTexturePackUpdated: nz,
-        disabled: Fz = !1,
-        maxFileSizeMb: Zz,
-        packOwner: Rz
-      } = zz;
+        position: Eq
+      } = qq;
+      const gq = rq.d[Eq];
+      return (0, hq.jsxs)("td", {
+        className: Oq()("StudioLeaderboardPosition", {
+          StudioLeaderboardTopPosition: void 0 !== gq,
+          [`StudioLeaderboardTopPosition${Eq}`]: void 0 !== gq
+        }),
+        children: [void 0 !== gq && (0, hq.jsx)("img", {
+          className: "StudioLeaderboardPositionItem",
+          src: gq,
+          alt: ""
+        }), Eq]
+      })
+    }
+
+    function Sq(qq) {
+      let {
+        discoverability: Eq
+      } = qq;
       const {
-        t: Kz
-      } = (0, tz.F)(), [wz, Xz] = (0, Ez.useState)(!1), [fz, sz] = (0, Ez.useState)(null), [rz, oz] = (0, Ez.useState)(null), Nz = (0, Ez.useRef)(null);
+        playsPerDay: gq,
+        avgPlaytimeMinutes: lq,
+        retention: Oq
+      } = null === Eq ? Tq : (0, Wq.j)(Eq);
+      return (0, hq.jsxs)(Yq.Fragment, {
+        children: [(0, hq.jsx)("td", {
+          children: null !== gq ? (0, Wq.e)(gq) : "-"
+        }), (0, hq.jsx)("td", {
+          children: null !== lq ? (0, Wq.f)(lq) : "-"
+        }), (0, hq.jsx)("td", {
+          children: null !== Oq ? (0, Wq.i)(Oq) : "-"
+        })]
+      })
+    }
+
+    function pq(qq) {
+      let {
+        discoverability: Eq
+      } = qq;
+      return (0, hq.jsx)("td", {
+        className: "StudioLeaderboardEngagementScore",
+        children: void 0 !== (null === Eq || void 0 === Eq ? void 0 : Eq.engagementScore) ? (0, Aq.S)(Math.round(Eq.engagementScore)) : "-"
+      })
+    }
+
+    function Gq() {
+      var qq, Eq;
       const {
-        getRootProps: vz,
-        getInputProps: xz,
-        isDragActive: Jz
-      } = (0, lz.b)({
-        onDrop: async function(zz) {
-          Xz(!0);
-          try {
-            const uz = await (0, Hz.u)(zz);
-            if ("customGame" === Rz && (0, Oz.p)(uz)) return void sz(Kz(Oz.e));
-            if (void 0 !== Zz) {
-              const zz = JSON.stringify(uz).length / 1048576;
-              if (zz > Zz) return void sz(`File size is too large. Max size is ${Zz}MB. Current size is ${zz}MB.`)
+        t: gq
+      } = (0, uq.v)(), lq = (0, Pq.useNavigatePreserveSearch)(), {
+        userContext: Oq,
+        isUserContextUpdating: rq
+      } = (0, Nq.c)(), Tq = (0, yq.j)(), [Gq, Lq] = (0, Qq.k)(), Jq = (kq = Gq.get(iq), nq.some((qq => qq.scope === kq)) ? kq : fq);
+      var kq;
+      const Rq = function(qq) {
+          return mq.T.includes(qq) ? qq : null
+        }(Gq.get(Zq)),
+        Uq = (0, Qq.e)(Gq.get(Qq.d)),
+        [Fq, sq] = (0, Yq.useState)(null),
+        [Xq, wq] = (0, Yq.useState)(!1);
+
+      function Kq(qq) {
+        Lq((Eq => {
+          (0, Qq.f)(Eq, iq, qq.scope === fq ? null : qq.scope), (0, Qq.f)(Eq, Zq, qq.category), (0, Qq.g)(Eq, qq.page)
+        }))
+      }
+      const Cq = !rq && Oq.playerHasRank("developer"),
+        Iq = Cq && "allGames" === Jq,
+        eq = Cq && "dormantGames" === Jq;
+      (0, Yq.useEffect)((() => {
+        if (rq) return;
+        let qq = !1;
+        return sq(null), wq(!1), Bq.e.getPublishedGamePreviews(Oq, {
+          searchQuery: null,
+          pageNumber: Uq,
+          pageSize: bq,
+          onlyFavouriteGames: !1,
+          onlyOwnedGames: !1,
+          onlyApprovedGames: !1,
+          schematicIdsToExclude: [],
+          gameCategories: null !== Rq ? [Rq] : [],
+          upAndComing: !1,
+          dormantGames: eq,
+          sortByEngagementScore: !0,
+          firstPartyGameNames: Iq ? cq.d : void 0,
+          includeOwners: !0
+        }).then((Eq => {
+          qq || sq(Eq)
+        })).catch((Eq => {
+          console.error("Failed to load the studio leaderboard", Eq), qq || wq(!0)
+        })), () => {
+          qq = !0
+        }
+      }), [rq, Iq, eq, Rq, Uq, Oq]);
+      const Dq = null !== (qq = null === Fq || void 0 === Fq ? void 0 : Fq.results) && void 0 !== qq ? qq : null,
+        qE = function(qq, Eq, gq) {
+          const [lq, Oq] = (0, Yq.useState)({}), mq = gq ? (null !== qq && void 0 !== qq ? qq : []).flatMap((qq => "firstPartyGame" === qq.type ? [(0, xq.d)(qq.gameNameWithVariation, !0)] : [])).join(",") : "", Aq = (0, Yq.useMemo)((() => "" === mq ? [] : mq.split(",")), [mq]);
+          return (0, Yq.useEffect)((() => {
+            if (0 === Aq.length) return void Oq({});
+            let qq = !1;
+            return Bq.e.getGamesByAnalyticsIds(Eq, Aq).then((Eq => {
+              qq || Oq(Eq)
+            })).catch((qq => {
+              console.error("Failed to load first party discoverability for the studio leaderboard", qq)
+            })), () => {
+              qq = !0
             }
-            sz(null), oz(null), nz(uz), Nz.current = uz,
-              function(zz, uz) {
-                const Ez = zz.modelOverrides;
-                Ez && Promise.all([bz.e(195), bz.e(194)]).then((() => bz(9052))).then((bz => {
-                  let {
-                    packDisplayName: nz,
-                    refusedPackModels: iz,
-                    packModelSummary: lz
-                  } = bz;
-                  const Mz = nz(zz.metaData);
-                  uz(lz(Mz, iz(Mz, Ez, !1)))
-                })).catch((zz => {
-                  console.error("Checking the texture pack's models failed:", zz)
-                }))
-              }(uz, (zz => {
-                Nz.current === uz && oz(zz)
-              }))
-          } catch {
-            sz("Invalid Texture Pack Folder")
-          } finally {
-            Xz(!1)
-          }
-        },
-        useFsAccessApi: !1,
-        disabled: Fz
-      });
-      return (0, dz.jsxs)("div", {
-        className: "CustomTexturePackContainer",
-        children: [(0, dz.jsxs)("div", {
-          className: "CustomTextureWarning",
-          children: [Kz("settingsMenu:customTextureWarning"), ".", (0, dz.jsx)("br", {}), Kz("settingsMenu:viewDocumentation"), ":", " ", (0, dz.jsx)("a", {
-            href: "https://github.com/Bloxdy/texturePacks",
-            target: "_blank",
-            rel: "noreferrer",
-            children: "github.com/Bloxdy/texturePacks"
-          })]
-        }), fz && (0, dz.jsxs)("div", {
-          className: "CustomTextureError",
-          children: [Kz("general:error"), ": ", fz]
-        }), rz && (0, dz.jsx)("div", {
-          className: "CustomTextureError",
-          children: rz
-        }), (0, dz.jsxs)("div", {
-          ...vz({
-            className: iz()("CustomTextureFolderUpload", {
-              ActiveDrag: Jz,
-              Disabled: Fz
-            })
-          }),
-          children: [(0, dz.jsx)("input", {
-            ...xz({
-              webkitdirectory: "true"
-            })
-          }), wz && (0, dz.jsx)("div", {
-            className: "CustomTextureFolderUploadLoading",
-            children: (0, dz.jsx)(Mz.c, {})
-          }), !wz && !Jz && uz && (0, dz.jsxs)(dz.Fragment, {
-            children: [(0, dz.jsx)("div", {
-              className: "CustomTextureFolderUploadIcon Active",
-              children: (0, dz.jsx)(pz.c, {
-                name: "folder-image"
-              })
-            }), (0, dz.jsx)("div", {
-              className: "CustomTextureFolderUploadInstructions Active",
-              children: uz
-            })]
-          }), !wz && (Jz || !uz) && (0, dz.jsxs)(dz.Fragment, {
-            children: [(0, dz.jsx)("div", {
-              className: "CustomTextureFolderUploadIcon",
-              children: (0, dz.jsx)(pz.c, {
-                name: "up-from-bracket"
-              })
-            }), (0, dz.jsx)("div", {
-              className: "CustomTextureFolderUploadInstructions",
-              children: "Drag and drop a Texture Pack folder here"
-            })]
-          })]
-        })]
-      })
-    }
-  },
-  4746: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Zz,
-      e: () => fz,
-      f: () => Rz,
-      j: () => Xz
-    });
-    var Ez = bz(56),
-      nz = bz(4753),
-      iz = bz(4144),
-      lz = bz(1332),
-      Mz = bz(4770),
-      tz = bz(1038),
-      Hz = bz.n(tz),
-      Oz = bz(1322),
-      pz = bz(1673),
-      dz = bz(4776),
-      Fz = bz(1089);
-
-    function Zz(zz) {
-      let {
-        label: uz,
-        onClick: bz,
-        checked: Ez,
-        circleInfoText: nz,
-        className: Mz,
-        disabled: tz,
-        note: Oz
-      } = zz;
-      return (0, Fz.jsxs)("div", {
-        "aria-disabled": tz || void 0,
-        "data-pad-focusable": !0,
-        className: Hz()("SettingBox CheckboxContainer", {
-          [Mz]: Mz,
-          SettingBoxDisabled: tz
-        }),
-        onClick: () => {
-          tz || bz(!Ez)
-        },
-        children: [(0, Fz.jsxs)("div", {
-          className: "CheckboxInputAndText",
-          children: [(0, Fz.jsx)("label", {
-            className: "CheckboxClickableLabel",
-            children: (0, Fz.jsx)(iz.b, {
-              className: "SettingsCheckbox",
-              checked: Ez,
-              disabled: tz,
-              onChange: () => {}
-            })
-          }), (0, Fz.jsxs)("div", {
-            className: "CheckboxText",
-            children: [uz, nz && (0, Fz.jsx)("span", {
-              onClick: zz => zz.stopPropagation(),
-              children: (0, Fz.jsx)(lz.b, {
-                className: "SettingsTextInputCircleInfo",
-                hoverInfo: nz
-              })
-            })]
-          })]
-        }), Oz && (0, Fz.jsx)("div", {
-          className: "SettingNote",
-          children: Oz
-        })]
-      })
-    }
-
-    function Rz(zz) {
-      let {
-        name: uz,
-        onChange: bz,
-        min: nz,
-        max: iz,
-        step: Mz,
-        initValue: tz,
-        circleInfoText: Oz,
-        format: pz,
-        className: dz,
-        padStep: Zz,
-        disabled: Rz = !1,
-        selectableMax: Kz,
-        cappedNote: Xz,
-        onChangeComplete: fz
-      } = zz;
-      const [sz, rz] = (0, Ez.useState)(tz), oz = (0, Ez.useRef)(tz);
-      (0, Ez.useEffect)((() => {
-        oz.current = tz, rz(tz)
-      }), [tz]);
-      const Nz = void 0 !== Kz && Kz < iz,
-        vz = Nz ? {
-          "--slider-selectable": (Kz - nz) / (iz - nz)
-        } : void 0;
-      return (0, Fz.jsxs)("div", {
-        className: Hz()("SettingBox SettingsSliderDiv", {
-          [dz]: dz,
-          SettingBoxDisabled: Rz,
-          SliderCapped: Nz
-        }),
-        style: vz,
-        children: [(0, Fz.jsxs)("div", {
-          className: "SliderText",
-          children: [`${uz}: ${pz?pz(sz):sz}`, Oz && (0, Fz.jsx)(lz.b, {
-            className: "SettingsTextInputCircleInfo",
-            hoverInfo: Oz
-          })]
-        }), (0, Fz.jsx)("div", {
-          className: "SliderDiv",
-          children: (0, Fz.jsx)(wz, {
-            value: sz,
-            min: nz,
-            max: iz,
-            step: Mz,
-            onChange: zz => {
-              if (Nz && zz >= Kz && sz === Kz) return;
-              const uz = Nz ? Math.min(zz, Kz) : zz;
-              oz.current = uz, rz(uz), bz(uz)
-            },
-            onChangeComplete: fz && (() => {
-              fz(oz.current)
-            }),
-            format: pz,
-            padStep: Zz,
-            disabled: Rz
-          })
-        }), Nz && Xz && (0, Fz.jsx)("div", {
-          className: "SettingNote",
-          children: Xz
-        })]
-      })
-    }
-    const Kz = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
-
-    function wz(zz) {
-      var uz;
-      let {
-        value: bz,
-        min: iz,
-        max: lz,
-        step: Mz,
-        onChange: tz,
-        orientation: Hz,
-        reverse: Oz,
-        setIsChanging: pz,
-        tooltip: Zz,
-        labels: Rz,
-        handleLabel: wz,
-        format: Xz,
-        onChangeStart: fz,
-        onChangeComplete: sz,
-        padStep: rz,
-        disabled: oz = !1
-      } = zz;
-      const Nz = (0, Ez.useRef)(null),
-        vz = (0, Ez.useRef)(null);
-      (0, Ez.useLayoutEffect)((() => {
-        var zz, uz, bz;
-        const Ez = null !== (zz = null === (uz = Nz.current) || void 0 === uz ? void 0 : uz.querySelector(".rangeslider")) && void 0 !== zz ? zz : null;
-        null === Ez || void 0 === Ez || Ez.setAttribute("data-pad-slider", ""), null === Ez || void 0 === Ez || Ez.setAttribute("data-pad-focusable", ""), null === Ez || void 0 === Ez || null === (bz = Ez.querySelector(".rangeslider__handle")) || void 0 === bz || bz.setAttribute("data-pad-slider-handle", ""), vz.current = Ez
-      }), []), (0, Ez.useLayoutEffect)((() => {
-        var zz, uz;
-        oz ? null === (zz = vz.current) || void 0 === zz || zz.setAttribute("aria-disabled", "true") : null === (uz = vz.current) || void 0 === uz || uz.removeAttribute("aria-disabled")
-      }), [oz]);
-      const xz = (null !== (uz = String(Mz).split(".")[1]) && void 0 !== uz ? uz : "").length,
-        Jz = zz => {
-          const uz = Number((Math.round((zz - iz) / Mz) * Mz + iz).toFixed(xz));
-          return Math.min(lz, Math.max(iz, uz))
-        },
-        Az = (0, Ez.useRef)(sz);
-      Az.current = sz, (0, Ez.useEffect)((() => {
-        const zz = Nz.current;
-        if (!zz) return;
-        const uz = zz => {
-          var uz;
-          Kz.has(zz.key) && (null === (uz = Az.current) || void 0 === uz || uz.call(Az))
-        };
-        return zz.addEventListener("keyup", uz), () => {
-          zz.removeEventListener("keyup", uz)
-        }
-      }), []);
-      const Tz = (0, Ez.useRef)(!1);
-      return (0, dz.f)(vz, {
-        adjust: zz => {
-          if (oz) return;
-          const uz = null !== rz && void 0 !== rz ? rz : Math.max(Mz, Math.round((lz - iz) / 20 / Mz) * Mz),
-            Ez = Jz(bz + zz * uz * (Oz ? -1 : 1));
-          Ez !== bz && (null === fz || void 0 === fz || fz(), tz(Ez), null === sz || void 0 === sz || sz())
-        },
-        setFraction: zz => {
-          if (oz) return;
-          const uz = Jz(iz + (Oz ? 1 - zz : zz) * (lz - iz));
-          uz !== bz && (Tz.current || (Tz.current = !0, null === fz || void 0 === fz || fz()), tz(uz))
-        },
-        endDrag: () => {
-          Tz.current && (Tz.current = !1, null === sz || void 0 === sz || sz())
-        }
-      }), (0, Fz.jsx)("div", {
-        ref: Nz,
-        style: {
-          display: "contents"
-        },
-        children: (0, Fz.jsx)(nz.c, {
-          value: bz,
-          min: iz,
-          max: lz,
-          step: Mz,
-          onChange: tz,
-          orientation: Hz,
-          reverse: Oz,
-          tooltip: Zz,
-          labels: Rz,
-          handleLabel: wz,
-          format: Xz,
-          onChangeStart: () => {
-            null === fz || void 0 === fz || fz(), null === pz || void 0 === pz || pz(!0)
-          },
-          onChangeComplete: () => {
-            null === pz || void 0 === pz || pz(!1), null === sz || void 0 === sz || sz()
-          }
-        })
-      })
-    }
-    async function Xz() {
-      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-      const uz = Oz.NotificationProvider.showPromptPopup({
-        title: "settingsMenu:reloadPagePopupTitle",
-        subtitle: "settingsMenu:reloadPagePopupSubtitle",
-        confirmText: "settingsMenu:reloadPagePopupConfirm",
-        confirmTooltip: "",
-        cancelText: "general:cancel",
-        cancelTooltip: "",
-        unlockPointerKey: zz
-      });
-      !0 === await uz.getResult() && (0, pz.reloadBloxd)()
-    }
-
-    function fz(zz) {
-      let {
-        label: uz,
-        options: bz,
-        value: Ez,
-        onChange: nz,
-        circleInfoText: iz
-      } = zz;
-      return (0, Fz.jsxs)("div", {
-        className: "SettingBox SegmentedSettingRow",
-        children: [(0, Fz.jsxs)("div", {
-          className: "SliderText",
-          children: [uz, iz && (0, Fz.jsx)(lz.b, {
-            className: "SettingsTextInputCircleInfo",
-            hoverInfo: iz
-          })]
-        }), (0, Fz.jsx)(Mz.d, {
-          ariaLabel: uz,
-          options: bz,
-          value: Ez,
-          onChange: nz
-        })]
-      })
-    }
-  },
-  4744: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => wz,
-      e: () => Xz
-    });
-    var Ez = bz(2907),
-      nz = bz(2916),
-      iz = bz(56),
-      lz = bz(1038),
-      Mz = bz.n(lz),
-      tz = bz(1305),
-      Hz = bz(2899),
-      Oz = bz(1322),
-      pz = bz(4746),
-      dz = bz(4780),
-      Fz = bz(606),
-      Zz = bz(4783),
-      Rz = bz(1089);
-
-    function Kz() {
-      (0, pz.j)("texturePackPickReload")
-    }
-
-    function wz(zz) {
-      var uz;
-      let {
-        setApplySettingsCallback: bz
-      } = zz;
-      const [, lz] = (0, iz.useReducer)((zz => zz + 1), 0), Mz = (0, iz.useRef)(!1), tz = (0, iz.useRef)(null);
-
-      function wz(zz, uz) {
-        Hz.e.setFromJson(zz, "player");
-        const Ez = Hz.e.saveTexturePack();
-        if (Fz.x) {
-          const zz = Hz.e.toJson();
-          Ez.then((uz => {
-            uz && (0, Zz.i)(zz, Kz)
+          }), [Aq, Eq]), lq
+        }(Dq, Oq, Cq),
+        EE = null !== Dq ? function(qq, Eq, gq, Yq, lq) {
+          return qq.map(((qq, Oq) => {
+            var mq;
+            const Aq = Yq + Oq + 1;
+            if ("customGame" === qq.type) {
+              const Eq = qq.preview;
+              return {
+                key: Eq.schematicId,
+                position: Aq,
+                thumbnail: (0, hq.jsx)(aq.d, {
+                  game: Eq
+                }),
+                name: Eq.name,
+                owner: qq.owner,
+                category: Eq.gameCategory,
+                ccu: Eq.ccu,
+                favourites: Eq.favourites,
+                discoverability: (0, Wq.k)(Eq) ? Eq : null,
+                url: (0, vq.n)((0, xq.b)(Eq.schematicId))
+              }
+            }
+            const cq = qq.gameNameWithVariation,
+              uq = (0, xq.d)(cq, !0);
+            return {
+              key: cq,
+              position: Aq,
+              thumbnail: (0, hq.jsx)(tq.c, {
+                game: cq
+              }),
+              name: (0, vq.j)(cq, lq),
+              owner: null,
+              category: (0, vq.b)(cq),
+              ccu: (0, yq.c)(cq, Eq),
+              favourites: null,
+              discoverability: null !== (mq = gq[uq]) && void 0 !== mq ? mq : null,
+              url: (0, vq.n)(uq)
+            }
           }))
-        } else Mz.current ||= uz, tz.current !== Hz.e.getId() || Hz.e.getId() === nz.r.CUSTOM && Mz.current ? bz((() => pz.j)) : bz(null);
-        lz()
-      }
-      async function fz(zz) {
-        if (Hz.e.getId() !== zz.metaData.id) {
-          if (Hz.e.getId() === nz.r.CUSTOM && Hz.e.getFromFolderName()) {
-            const zz = Oz.NotificationProvider.showPromptPopup({
-              title: "settingsMenu:loseChangesTitle",
-              subtitle: "settingsMenu:loseChangesSubtitle",
-              confirmText: "general:continue",
-              destructive: !0,
-              confirmTooltip: "",
-              cancelText: "general:cancel",
-              cancelTooltip: ""
-            });
-            if (!0 !== await zz.getResult()) return
-          }
-          wz(zz, !1)
-        }
-      }(0, iz.useEffect)((() => {
-        tz.current = Hz.e.getId()
-      }), []);
-      const sz = Ez.e,
-        rz = [sz, ...Object.values(nz.r).filter((zz => zz !== sz))];
-      return (0, Rz.jsx)(Rz.Fragment, {
-        children: (0, Rz.jsxs)("div", {
-          className: "TexturePackCategory SettingsMenuRightInner",
-          children: [(0, Rz.jsx)("div", {
-            className: "TexturePackList",
-            children: rz.map((zz => (0, Rz.jsx)(Xz, {
-              id: zz,
-              isSelected: zz === Hz.e.getId(),
-              setSelected: fz
-            }, zz)))
-          }), Hz.e.getId() === nz.r.CUSTOM && (0, Rz.jsx)(dz.c, {
-            folderName: null !== (uz = Hz.e.getFromFolderName()) && void 0 !== uz ? uz : null,
-            onTexturePackUpdated: function(zz) {
-              wz(zz, !0)
-            },
-            packOwner: "player"
+        }(Dq, Tq, qE, (Uq - 1) * bq, gq) : [],
+        gE = !Xq && null === Fq,
+        YE = !gE && !Xq && 0 === EE.length,
+        lE = null !== (Eq = null === Fq || void 0 === Fq ? void 0 : Fq.totalPages) && void 0 !== Eq ? Eq : 1;
+      return (0, hq.jsxs)("div", {
+        className: "StudioPage StudioLeaderboard",
+        children: [(0, hq.jsx)("div", {
+          className: "StudioPageHeader",
+          children: (0, hq.jsx)("h1", {
+            className: "StudioPageTitle",
+            children: gq("studio:leaderboard")
+          })
+        }), (0, hq.jsxs)("div", {
+          className: "StudioLeaderboardBanner",
+          children: [!eq && (0, hq.jsx)("div", {
+            children: gq("studio:leaderboardBanner")
+          }), eq && (0, hq.jsx)("div", {
+            children: gq("studio:leaderboardDormantBanner")
+          }), (0, hq.jsx)("div", {
+            children: gq("studio:leaderboardMetricsBanner", {
+              days: Mq
+            })
           })]
-        })
-      })
-    }
-
-    function Xz(zz) {
-      let {
-        id: uz,
-        isSelected: bz,
-        setSelected: lz,
-        disabled: Hz = !1
-      } = zz;
-      const [Oz, pz] = (0, iz.useState)(!0), [dz, Fz] = (0, iz.useState)(""), [Zz, Kz] = (0, iz.useState)(""), [wz, Xz] = (0, iz.useState)(""), fz = (0, iz.useRef)({});
-      return (0, iz.useEffect)((() => {
-        (0, Ez.s)(uz).then((zz => {
-          var uz;
-          zz && (fz.current = zz, pz(!1), Fz(fz.current.metaData.name), Kz(fz.current.metaData.author), Xz(null !== (uz = fz.current.metaData.previewImage) && void 0 !== uz ? uz : ""))
-        })).catch((zz => {
-          console.warn(`Failed to fetch texture pack ${uz}`, zz)
-        }))
-      }), [uz]), (0, Rz.jsxs)("div", {
-        "data-pad-focusable": !0,
-        "aria-disabled": Hz || void 0,
-        className: Mz()("TexturePack", {
-          Selected: bz,
-          Custom: uz === nz.r.CUSTOM,
-          Disabled: Hz
-        }),
-        onClick: () => {
-          Oz || Hz || lz(fz.current)
-        },
-        children: [(0, Rz.jsx)("div", {
-          className: "TexturePackBg",
-          style: {
-            backgroundImage: wz ? `url(${wz})` : void 0
+        }), Cq && (0, hq.jsx)("div", {
+          className: "StudioLeaderboardScopes",
+          children: nq.map((qq => (0, hq.jsx)(dq.Q, {
+            active: Jq === qq.scope,
+            onClick: () => {
+              Kq({
+                scope: qq.scope,
+                category: Rq,
+                page: 1
+              })
+            },
+            children: gq(qq.title)
+          }, qq.scope)))
+        }), (0, hq.jsxs)("div", {
+          className: "StudioLeaderboardCategories",
+          children: [(0, hq.jsx)(dq.Q, {
+            active: null === Rq,
+            onClick: () => {
+              Kq({
+                scope: Jq,
+                category: null,
+                page: 1
+              })
+            },
+            children: gq("studio:leaderboardAllCategories")
+          }), mq.T.map((qq => (0, hq.jsx)(dq.Q, {
+            active: Rq === qq,
+            onClick: () => {
+              Kq({
+                scope: Jq,
+                category: qq,
+                page: 1
+              })
+            },
+            children: (0, mq.eb)(qq)
+          }, qq)))]
+        }), gE && (0, hq.jsx)("div", {
+          className: "StudioPageLoader AnimFadeIn",
+          children: (0, hq.jsx)(oq.e, {})
+        }), Xq && (0, hq.jsx)("div", {
+          className: "StudioPageMessage AnimFadeIn",
+          children: gq("studio:failedToLoadLeaderboard")
+        }), YE && (0, hq.jsx)("div", {
+          className: "StudioPageMessage AnimFadeIn",
+          children: gq("studio:leaderboardEmpty")
+        }), !gE && !Xq && !YE && (0, hq.jsx)("div", {
+          className: "StudioLeaderboardTableScroll AnimFadeIn",
+          children: (0, hq.jsx)(Hq.c, {
+            className: "StudioTable",
+            columns: [{
+              key: "position",
+              header: "#"
+            }, {
+              key: "game",
+              header: gq("general:game")
+            }, {
+              key: "owner",
+              header: gq("general:owner")
+            }, ...null === Rq ? [{
+              key: "category",
+              header: gq("general:category")
+            }] : [], ...Cq ? [{
+              key: "engagementScore",
+              header: "engagementScore"
+            }] : [], {
+              key: "playsPerDay",
+              header: gq("studio:leaderboardPlaysPerDay")
+            }, {
+              key: "sessionLength",
+              header: gq("studio:leaderboardSessionLength")
+            }, {
+              key: "retention",
+              header: gq("studio:leaderboardSessionsPerPlayer")
+            }, ...eq ? [] : [{
+              key: "ccu",
+              header: gq("studio:metricCcu")
+            }], {
+              key: "favourites",
+              header: gq("general:favourites")
+            }],
+            rows: EE,
+            getRowKey: qq => qq.key,
+            renderRow: qq => (0, hq.jsxs)("tr", {
+              onClick: () => {
+                lq(qq.url)
+              },
+              children: [(0, hq.jsx)(zq, {
+                position: qq.position
+              }), (0, hq.jsx)("td", {
+                children: (0, hq.jsx)(tq.d, {
+                  thumbnail: qq.thumbnail,
+                  name: qq.name
+                })
+              }), (0, hq.jsxs)("td", {
+                className: "StudioLeaderboardOwner",
+                children: [null === qq.owner && "-", null !== qq.owner && (0, hq.jsx)(Vq.h, {
+                  playerSocialPreview: qq.owner,
+                  showLocation: !1,
+                  opensProfileCard: !1
+                })]
+              }), null === Rq && (0, hq.jsx)("td", {
+                children: (0, mq.eb)(qq.category)
+              }), Cq && (0, hq.jsx)(pq, {
+                discoverability: qq.discoverability
+              }), (0, hq.jsx)(Sq, {
+                discoverability: qq.discoverability
+              }), !eq && (0, hq.jsx)("td", {
+                children: null !== qq.ccu ? (0, Aq.S)(qq.ccu) : "-"
+              }), (0, hq.jsx)("td", {
+                children: null !== qq.favourites ? (0, Aq.S)(qq.favourites) : "-"
+              })]
+            })
+          })
+        }), !Xq && (0, hq.jsx)(jq.d, {
+          className: "AnimFadeIn",
+          page: Uq,
+          totalPages: lE,
+          onSetPage: qq => {
+            Kq({
+              scope: Jq,
+              category: Rq,
+              page: qq
+            })
           }
-        }), Oz && (0, Rz.jsx)("div", {
-          className: "TexturePackName",
-          children: (0, Rz.jsx)(tz.c, {})
-        }), !Oz && dz && (0, Rz.jsx)("div", {
-          className: "TexturePackName",
-          children: dz
-        }), !Oz && Zz && (0, Rz.jsx)("div", {
-          className: "TexturePackAuthor",
-          children: Zz
         })]
       })
     }
   },
-  4770: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => lz
+  4753: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => mq,
+      d: () => Oq
     });
-    var Ez = bz(1038),
-      nz = bz.n(Ez),
-      iz = bz(1089);
+    var Yq = gq(1529),
+      lq = gq(1070);
 
-    function lz(zz) {
+    function Oq(qq) {
       let {
-        options: uz,
-        value: bz,
-        onChange: Ez,
-        ariaLabel: lz,
-        className: Mz,
-        reselectable: tz = !1,
-        keepsFocus: Hz = !1
-      } = zz;
-      return (0, iz.jsx)("div", {
-        className: nz()("SegmentedToggle", Mz),
-        role: "group",
-        "aria-label": lz,
-        children: uz.map((zz => {
-          const uz = zz.value === bz;
-          return (0, iz.jsx)("button", {
-            type: "button",
-            "aria-pressed": uz,
-            "aria-label": zz.ariaLabel,
-            title: zz.ariaLabel,
-            className: nz()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: uz
-            }),
-            onMouseDown: Hz ? zz => {
-              zz.preventDefault()
-            } : void 0,
-            onClick: () => {
-              uz && !tz || Ez(zz.value)
-            },
-            children: zz.label
-          }, zz.value)
-        }))
+        thumbnail: Eq,
+        name: gq
+      } = qq;
+      return (0, lq.jsxs)("div", {
+        className: "StudioTableGameCell",
+        children: [(0, lq.jsx)("div", {
+          className: "StudioTableThumbnail",
+          children: Eq
+        }), (0, lq.jsx)("span", {
+          className: "StudioTableGameName",
+          children: gq
+        })]
+      })
+    }
+
+    function mq(qq) {
+      let {
+        game: Eq
+      } = qq;
+      return (0, lq.jsx)("img", {
+        className: "StudioTableThumbnailImage",
+        src: (0, Yq.g)(Eq),
+        alt: ""
       })
     }
   },
-  4776: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => iz,
-      f: () => lz
+  6291: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Yq
     });
-    var Ez = bz(56);
-    const nz = new WeakMap,
-      iz = zz => {
-        var uz;
-        const bz = zz.closest("[data-pad-slider]");
-        return bz && null !== (uz = nz.get(bz)) && void 0 !== uz ? uz : null
-      },
-      lz = (zz, uz) => {
-        const bz = (0, Ez.useRef)(uz);
-        bz.current = uz, (0, Ez.useEffect)((() => {
-          if (zz.current) return ((zz, uz) => (nz.set(zz, uz), () => {
-            nz.get(zz) === uz && nz.delete(zz)
-          }))(zz.current, {
-            adjust: zz => {
-              bz.current.adjust(zz)
-            },
-            setFraction: zz => {
-              bz.current.setFraction(zz)
-            },
-            endDrag: () => {
-              bz.current.endDrag()
-            }
+    const Yq = {
+      1: gq(6295),
+      2: gq(6297),
+      3: gq(6299)
+    }
+  },
+  4748: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => xq
+    });
+    var Yq = gq(57),
+      lq = gq(1018),
+      Oq = gq.n(lq),
+      mq = gq(1070);
+
+    function xq(qq) {
+      let {
+        columns: Eq,
+        rows: gq,
+        getRowKey: lq,
+        renderRow: xq,
+        className: Aq
+      } = qq;
+      return (0, mq.jsxs)("table", {
+        className: Oq()("Table", Aq),
+        children: [(0, mq.jsx)("thead", {
+          children: (0, mq.jsx)("tr", {
+            children: Eq.map((qq => (0, mq.jsx)("th", {
+              children: qq.header
+            }, qq.key)))
           })
-        }), [zz])
-      }
-  },
-  4783: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Mz,
-      i: () => lz
-    });
-    var Ez = bz(2916),
-      nz = bz(4789);
-    let iz = null;
-
-    function lz(zz, uz) {
-      iz = {
-        pack: zz.metaData.id === Ez.c ? null : zz,
-        prompt: uz
-      }
-    }
-
-    function Mz(zz, uz) {
-      const bz = iz;
-      null !== bz && (0, nz.c)(bz.pack, zz) && (iz = null, uz && bz.prompt())
+        }), (0, mq.jsx)("tbody", {
+          children: gq.map((qq => (0, mq.jsx)(Yq.Fragment, {
+            children: xq(qq)
+          }, lq(qq))))
+        })]
+      })
     }
   },
-  4789: (zz, uz, bz) => {
-    function Ez(zz, uz) {
-      return nz(zz, uz)
-    }
-
-    function nz(zz, uz) {
-      if (zz === uz) return !0;
-      if ("object" !== typeof zz || "object" !== typeof uz || null === zz || null === uz || Array.isArray(zz) !== Array.isArray(uz)) return !1;
-      const bz = zz,
-        Ez = uz,
-        iz = Object.keys(bz);
-      return iz.length === Object.keys(Ez).length && iz.every((zz => Object.prototype.hasOwnProperty.call(Ez, zz) && nz(bz[zz], Ez[zz])))
-    }
-    bz.d(uz, {
-      c: () => Ez
-    })
+  4735: () => {},
+  6295: qq => {
+    qq.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGVJREFUGJVjYKAZ4LF0YGBgYPiPhrErsn9/8v/Tv5//P/37+b/9+5NYFaMowqaYCaby2Z4fDAwMDAwO684xOKw7hyLGwMDAwIhmKlxSyoWD4aCgOVwNskK4YgYGBhRFuAB2HxMLAPX+QYFf3uJZAAAAAElFTkSuQmCC"
+  },
+  6297: qq => {
+    qq.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAKhJREFUOI1jYBhxgJGQAntrHgYGBgaGg0e//EcWDw0NZWRgYGBYvXo1inom6rkNAjBciMtFv18bQhhCEBexMqtgdSlNXYjXRbgAzKUws6juQhZ0AUIu+7HWA6+BtA9DuAthLtr/GatG3rA7WM2iXRiG+AkwMjAwMLCKnsfqUnQX2WhxMjIwMDAcufYdRZz2OSXET4CBgYGBYc2mDyjpEpeL0AHVXTgCAQAJXjDPnoKDuAAAAABJRU5ErkJggg=="
+  },
+  6299: qq => {
+    qq.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAK9JREFUOI3l0zEKwjAYhuE3QY+hWEWQ4lwovYE4WY+pDg7iBURwlrYgWtGD1EGCtk3aJZn6jV9+fh5CAp2LaBuY+zMArklW/PfreCUANttdaV7as31TE5pEyf0BwNQbAdCXUit1KmwUmaKkapd1Ya9atMn2h2PjQvdClVv+BCBNM+15vFxoe3fCKAwEgD8ZF/C7S5PIGw4EQP56uxXWfkoUBgCczpfSuzSJqrEu7GA+v28v0x7vVwcAAAAASUVORK5CYII="
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const qq in modules) Object.freeze(modules[qq]);

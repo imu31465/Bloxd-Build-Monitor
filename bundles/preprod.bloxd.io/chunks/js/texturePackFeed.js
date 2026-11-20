@@ -1,30 +1,30 @@
-export const id = 51;
-export const ids = [51];
+export const id = 52;
+export const ids = [52];
 export const modules = {
-  42628: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      startPageTexturePackFeed: () => lz
+  43103: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      startPageTexturePackFeed: () => mq
     });
-    var Ez = bz(1195),
-      nz = bz(33),
-      iz = bz(42615);
+    var Yq = gq(1195),
+      lq = gq(38),
+      Oq = gq(43092);
 
-    function lz(zz, uz) {
-      const bz = new iz.b({
-        store: nz.d,
-        warn: zz,
-        oneShot: uz,
-        fetchLatest: async zz => {
-          const uz = await fetch(`${Ez.clientSideServerUrls.texturePackUrl}/${zz}.json`, {
+    function mq(qq, Eq) {
+      const gq = new Oq.c({
+        store: lq.f,
+        warn: qq,
+        oneShot: Eq,
+        fetchLatest: async qq => {
+          const Eq = await fetch(`${Yq.clientSideServerUrls.texturePackUrl}/${qq}.json`, {
             cache: "reload"
           });
-          if (!uz.ok) throw new Error(`fetching texture pack ${zz} answered HTTP ${uz.status}`);
-          return await uz.json()
+          if (!Eq.ok) throw new Error(`fetching texture pack ${qq} answered HTTP ${Eq.status}`);
+          return await Eq.json()
         }
       });
-      return (0, iz.c)(bz), bz
+      return (0, Oq.f)(gq), gq
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const qq in modules) Object.freeze(modules[qq]);

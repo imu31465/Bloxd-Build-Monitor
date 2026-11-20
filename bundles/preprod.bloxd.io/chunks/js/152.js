@@ -1,937 +1,1113 @@
 export const id = 152;
 export const ids = [152];
 export const modules = {
-  38171: (zz, uz, bz) => {
-    var Ez = {
-      "./cape_cow_cream.png": 27647,
-      "./cape_cow_normal.png": 27653,
-      "./cape_creator_level1.png": 27662,
-      "./cape_creator_level2.png": 27665,
-      "./cape_creator_level3.png": 27672,
-      "./cape_none.png": 27676,
-      "./cape_pig.png": 27685,
-      "./cape_sheep.png": 27694,
-      "./cape_super.png": 27699,
-      "./cape_super_inverted.png": 27703,
-      "./cape_youtuber.png": 27711
-    };
-
-    function nz(zz) {
-      var uz = iz(zz);
-      return bz(uz)
-    }
-
-    function iz(zz) {
-      if (!bz.o(Ez, zz)) {
-        var uz = new Error("Cannot find module '" + zz + "'");
-        throw uz.code = "MODULE_NOT_FOUND", uz
-      }
-      return Ez[zz]
-    }
-    nz.keys = function() {
-      return Object.keys(Ez)
-    }, nz.resolve = iz, zz.exports = nz, nz.id = 38171
-  },
-  40383: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      openCharacterPreview: () => ez
+  8750: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Zq,
+      e: () => hq,
+      i: () => nq
     });
-    var Ez = bz(37522),
-      nz = bz(2623),
-      iz = bz(577),
-      lz = bz(36588),
-      Mz = bz(2136),
-      tz = bz(36577),
-      Hz = bz(38998),
-      Oz = bz(39250),
-      pz = bz(40281),
-      dz = bz(36514),
-      Fz = bz(39406),
-      Zz = bz(36709),
-      Rz = bz(39425),
-      Kz = bz(40341),
-      wz = bz(36506),
-      Xz = bz(1212),
-      fz = bz(2132),
-      sz = bz(36668),
-      rz = bz(36762);
-    class oz {
-      constructor(zz, uz) {
-        this.pose = zz, this.nodes = void 0, this.nodes = zz.boneNames.map((zz => uz.get(zz)))
-      }
-      write(zz) {
-        this.pose.pose(zz);
-        const {
-          rotations: uz
-        } = this.pose;
-        for (let bz = 0; bz < this.nodes.length; bz++) {
-          const zz = 4 * bz;
-          this.nodes[bz].rotationQuaternion.set(uz[zz], uz[zz + 1], uz[zz + 2], uz[zz + 3])
-        }
-      }
+    var Yq = gq(57),
+      lq = gq(4367),
+      Oq = gq(1101),
+      mq = gq(1416),
+      xq = gq(31),
+      Aq = gq(3294),
+      cq = gq(2189),
+      uq = gq(1226),
+      Bq = gq(8794),
+      Wq = gq(1904),
+      Nq = gq(1942),
+      aq = gq(1183),
+      Vq = gq(24),
+      dq = gq(1622),
+      jq = gq(1018),
+      Hq = gq.n(jq),
+      oq = gq(8755),
+      Pq = gq(8764),
+      Qq = gq(8773),
+      yq = gq(8662),
+      tq = gq(8780),
+      rq = (gq(8787), gq(1070));
+    let vq = null;
+
+    function hq() {
+      return null !== vq
     }
 
-    function Nz(zz) {
-      zz.unfreezeWorldMatrix();
-      for (const uz of zz.getChildren()) Nz(uz)
+    function nq() {
+      return "pad" === vq
     }
 
-    function vz(zz, uz) {
-      zz.isVisible = uz;
-      for (const bz of zz.getChildMeshes()) bz.isVisible = uz
-    }
-    class xz {
-      constructor(zz, uz, bz) {
-        this.tK = zz, this.thinInstMgr = uz, this.eT = bz, this.modelCache = {}, this.attachmentsByType = {}, this.shownBones = [], this.cosmeticNames = {}
-      }
-      loadModel(zz, uz, bz) {
-        const Ez = (0, sz.g)(zz, uz);
-        return Ez in this.modelCache || (this.modelCache[Ez] = (async () => {
-          try {
-            const Ez = await (0, sz.j)(zz, this.tK),
-              nz = new Map;
-            for (const zz of Ez.getNodes()) nz.set(zz.name, zz);
-            const iz = (0, sz.d)(null !== uz && void 0 !== uz ? uz : zz, this.tK);
-            (0, sz.n)(Ez, iz, {
-              keepTransforms: void 0 !== bz,
-              onProcessedMesh: zz => {
-                (0, sz.p)(zz), this.tK.vbz(zz, !1), zz.isVisible = !1
-              }
-            });
-            for (const zz of Ez.rootNodes) Nz(zz);
-            const lz = void 0 === bz ? null : (0, rz.f)(bz, (zz => {
-              var uz, bz;
-              return null !== (uz = null === (bz = nz.get(zz)) || void 0 === bz ? void 0 : bz.rotationQuaternion) && void 0 !== uz ? uz : null
-            }));
-            return {
-              nodesByName: nz,
-              bones: null === lz ? null : new oz(lz, nz)
-            }
-          } catch (nz) {
-            throw delete this.modelCache[Ez], console.error(`Failed to load preview attachment ${Ez}:`, nz), nz
-          }
-        })()), this.modelCache[Ez]
-      }
-      async update(zz, uz) {
-        var bz;
-        const {
-          thinInstMgr: Ez,
-          eT: nz
-        } = this;
-        this.cosmeticNames[zz] = uz;
-        const iz = this.attachmentsByType[zz];
-        if (iz)
-          for (const {
-              mesh: Mz,
-              destNode: tz,
-              bones: Hz
-            }
-            of iz) {
-            null !== Hz && (0, Xz.sb)(this.shownBones, Hz), vz(Mz, !1);
-            const zz = Ez.getNamedNode(nz, tz);
-            Ez.detachTransformNodeIfFound(Mz, nz, zz)
-          }
-        this.attachmentsByType[zz] = [];
-        const lz = (0, fz.m)(zz, uz);
-        if (null !== lz && void 0 !== lz && null !== (bz = lz.attachments) && void 0 !== bz && bz.length)
-          for (const Mz of lz.attachments) {
-            let bz;
-            try {
-              bz = await this.loadModel(Mz.modelGlb, Mz.texture, Mz.animation)
-            } catch {
-              continue
-            }
-            if (this.cosmeticNames[zz] !== uz) return;
-            const iz = bz.nodesByName.get(Mz.modelNode);
-            if (!iz) {
-              console.error(`Preview attachment node ${Mz.modelNode} not found in ${Mz.modelGlb}`);
-              continue
-            }
-            vz(iz, !0), (0, sz.v)(iz, Mz.overlayColour);
-            const lz = Ez.getNamedNode(nz, Mz.destNode);
-            Ez.attachTransformNode(iz, nz, lz), this.attachmentsByType[zz].push({
-              mesh: iz,
-              destNode: Mz.destNode,
-              bones: bz.bones
-            }), null !== bz.bones && this.shownBones.push(bz.bones)
-          }
-      }
-      writePoses(zz) {
-        for (const uz of this.shownBones) uz.write(zz)
-      }
-    }
-    var Jz = bz(36597),
-      Az = (bz(40310), bz(39642), bz(40318), bz(9028));
-    let Tz, Lz, Pz, Gz, az, Vz, mz, qz, hz, Uz;
-    const cz = document.createElement("canvas");
-    async function gz() {
-      await new Promise((zz => {
-        setTimeout((() => {
-          zz()
-        }), 100)
-      }))
-    }
-    cz.classList.add("CharCustomisationPreviewCanvas");
-    const Sz = {};
-
-    function yz(zz, uz) {
-      cz.width = zz, cz.height = uz, Tz.resize()
-    }
-    let Dz = 0;
-    class Qz {
-      constructor(zz, uz) {
-        this.framing = uz, this.ready = Uz, this.dev = {
-          canvas: () => cz,
-          isolateHead(zz) {
-            const uz = Vz.getNodeNames(mz);
-            for (let bz = 0; bz < uz.length; bz++) "HeadMesh" !== uz[bz] && "__root__" !== uz[bz] && "TorsoNode" !== uz[bz] && Vz.setNodeEnabled(mz, bz, !1);
-            if (zz) {
-              const zz = Vz.getNamedNode(mz, "HeadMesh");
-              Vz.setNodeDisableColorWrite(mz, zz, !0, (zz => {
-                const uz = new Rz.StandardMaterial(`${zz.name}_depthOnly`, zz.XT());
-                return uz.disableColorWrite = !0, uz
-              }))
-            }
-            Vz.setPosition(mz, 0, -12, 0)
-          }
-        }, this.closed = !1, this.resetCamera();
-        const bz = zz.getBoundingClientRect();
-        yz(bz.width, bz.height), Dz++, Tz.stopRenderLoop(), Tz.runRenderLoop((() => {
-          var zz, uz;
-          null === (zz = qz) || void 0 === zz || zz.render(Tz.getDeltaTime()), null === (uz = hz) || void 0 === uz || uz.writePoses(performance.now() / 1e3), Pz.render()
-        }))
-      }
-      isReady() {
-        return !!Gz
-      }
-      setCosmetic(zz, uz) {
-        ! function(zz, uz) {
-          if (!Gz) return;
-          const lz = (0, nz.g)();
-          lz.ZJ(!1), Ez.e.Player.meshApi.updatePlayerCosmetic(lz.iG, mz, zz, uz, !0), "cape" === zz && (uz === iz.d ? az.Zx(!1) : (az.Zx(!0), az.material.diffuseTexture = new Kz.e(bz(38171)(`./cape_${uz}.png`), az.XT(), {
-            invertY: !1,
-            samplingMode: Kz.e.NEAREST_NEAREST_MIPLINEAR
-          })));
-          Sz[zz] = hz.update(zz, uz)
-        }(zz, uz)
-      }
-      playEmote(zz) {
-        if (!qz) return;
-        if (!zz) return void qz.stopAnimation(tz.g.Emote);
-        const uz = (0, lz.f)((0, Mz.j)(zz).animation);
-        qz.startAnimation(uz, tz.g.Emote, 0, Mz.d)
-      }
-      async untilDrawn(zz) {
-        if (await gz(), "cape" === zz && az) {
-          const zz = az.material,
-            uz = null === zz || void 0 === zz ? void 0 : zz.diffuseTexture;
-          uz && !uz.isReady() && (await new Promise((zz => {
-            uz.onLoadObservable.addOnce((() => {
-              zz()
-            }))
-          })), await gz())
-        }
-        Sz[zz] && (await Sz[zz], await gz()), await Pz.whenReadyAsync(), await new Promise((zz => {
-          Pz.onAfterRenderObservable.addOnce((() => {
-            zz()
-          }))
-        }))
-      }
-      setOrbit(zz) {
-        Wz(zz)
-      }
-      resetCamera() {
-        Lz.inertialAlphaOffset = 0, Lz.inertialBetaOffset = 0, Lz.inertialRadiusOffset = 0, Wz(Az.b[this.framing])
-      }
-      resize(zz, uz) {
-        yz(zz, uz)
-      }
-      close() {
-        this.closed || (this.closed = !0, Dz--, 0 === Dz && Tz.stopRenderLoop())
-      }
+    function bq() {
+      return "inGame" === Vq.b.get("gameState") && !(0, dq.p)()
     }
 
-    function Wz(zz) {
-      let {
-        yaw: uz,
-        pitch: bz,
-        radius: Ez,
-        target: nz
-      } = zz;
-      Lz.alpha = uz, Lz.beta = bz, Ez && (Lz.radius = Ez), nz && Lz.target.set(nz[0], nz[1], nz[2])
+    function iq(qq) {
+      return (0, Pq.s)(qq, uq.o, Pq.d, Pq.g, Pq.j)
     }
-
-    function ez(zz, uz) {
-      return zz.appendChild(cz), Tz || function() {
-        Tz = new Hz.c(cz, !0, {
-          preserveDrawingBuffer: !0
-        });
-        const zz = (0, nz.g)();
-        Tz.fbz = zz.oR.engine.fbz, Pz = new Oz.e(Tz), Pz.clearColor = new Zz.d(0, 0, 0, 0), Pz.ambientColor = new Zz.Color3(1, 1, 1), Lz = new pz.e("JK", 0, 0, 1, dz.ER.Zero(), Pz), Lz.attachControl(cz, !0), Lz.panningSensibility = 0, Uz = (0, Ez.u)("Player", Pz, !0).then((uz => {
-          Gz = uz.meshApi, az = uz.capeMesh, Vz = zz.oR.hT;
-          const bz = 8.33;
-          mz = (0, Ez.i)("Player", bz, !0, !0), Vz.setPosition(mz, 0, -8.33, 0);
-          const nz = Vz.getNamedNode(mz, "BodyMesh");
-          Vz.attachTransformNode(az, mz, nz), Vz.set(mz, "aOpacity", 1), Vz.pG(mz, "aOpacity", 1), hz = new xz(Pz, Vz, mz), qz = new wz.AnimatorState, qz.Gd = zz, qz.thinInstMgr = Vz, qz.eT = mz, qz.Quz = Vz.sbz(mz, 0), qz.modelLifeformType = "Player", qz.nodeNameAliases = (0, Jz.c)("Player").nodeNameAliases;
-          const iz = az.lG().boundingBox;
-          az.position.y = ((24 - iz.maximum.y + iz.minimum.y) / 2 - 1 / 32) / bz, az.position.z = -1 / bz, az.rotationQuaternion = null;
-          const lz = Math.PI / 18,
-            Mz = iz.maximum.y / bz;
-          az.rotation.x = lz;
-          const tz = Math.cos(lz),
-            Hz = Math.sin(lz);
-          az.position.y += Mz * (1 - tz) + 0 * Hz, az.position.z -= Mz * Hz + 0 * (1 - tz);
-          const Oz = new Rz.StandardMaterial("capeMaterial", az.XT());
-          az.material = Oz;
-          const pz = new Zz.Color3(1, 1, 1);
-          Oz.diffuseColor = new Zz.Color3, Oz.specularColor = new Zz.Color3, Oz.emissiveColor = new Zz.Color3, Oz.ambientColor = new Zz.Color3, pz.scaleToRef(.43, Oz.diffuseColor), pz.scaleToRef(1.75, Oz.ambientColor), Oz.freeze();
-          const Kz = new Fz.c("light", new dz.ER(-.1, 1, -.3), Pz);
-          Kz.diffuse = new Zz.Color3(1, 1, 1), Kz.specular = new Zz.Color3(1, 1, 1), Kz.groundColor = new Zz.Color3(.5, .5, .5)
-        }))
-      }(), new Qz(zz, uz)
-    }
-  },
-  38162: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => dz
-    });
-    var Ez = bz(36611),
-      nz = bz(36627),
-      iz = bz(36894),
-      lz = bz(36633),
-      Mz = bz(36619);
-
-    function tz(zz) {
-      return `\n\t\t\t\t${(0,Mz.t)(zz,"mat2","rotate",[{name:"ang",type:"float"}],`\
-      n\ t\ t\ t\ t\ t$ {
-        (0, Mz.y)(zz, "float", "s", "sin(ang)")
-      }\
-      n\ t\ t\ t\ t\ t$ {
-        (0, Mz.y)(zz, "float", "c", "cos(ang)")
-      }\
-      n\ t\ t\ t\ t\ treturn $ {
-        (0, Mz.l)(zz, "mat2", "c", "s", "-s", "c")
-      };\
-      n\ t\ t\ t\ t`)}\n\t\t\t`
-    }
-
-    function Hz(zz, uz) {
-      let bz = (0, Mz.vb)(zz, "skele" + (uz - 1));
-      for (let nz = uz - 2; nz >= 0; nz--) bz = (0, Mz.mb)(zz, `boneIdx == ${nz}`, (0, Mz.vb)(zz, `skele${nz}`), bz);
-      const Ez = "bone.yz + rotate(bone.x) * pivot - pivot";
-      return `\n\t\t\t\t${(0,Mz.y)(zz,"int","boneIdx",(0,Mz.pb)(zz,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,Mz.y)(zz,"vec3","bone",bz)}\n\t\t\t\t${(0,Mz.y)(zz,"vec2","pivot",(0,Mz.l)(zz,"vec2","0.0",`${(0,Mz.Fb)(zz,"position")}.z`))}\n\t\t\t\t${(0,Mz.R)(zz)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${Ez}));`:`positionUpdated.yz += ${Ez};`}\n\t\t`
-    }
-
-    function Oz(zz) {
-      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,Mz.l)(zz,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
-    }
-    const pz = {
+    const Zq = (0, Yq.memo)((function() {
+      const {
+        t: qq
+      } = (0, aq.v)(), {
+        userContext: Eq
+      } = (0, Oq.c)(), [gq, Vq] = (0, Yq.useState)(null), [jq, hq] = (0, Yq.useState)(null), nq = (0, Yq.useRef)(null), Zq = (0, Yq.useCallback)((qq => {
+        nq.current = qq, hq(qq)
+      }), []), fq = (0, Yq.useRef)(0), Mq = (0, Yq.useRef)(null), Tq = (0, Yq.useRef)({
         x: 0,
-        y: 0,
-        z: 0,
-        Fuz(zz, uz) {
-          return this.x = zz[uz], this.y = zz[uz + 1], this.z = zz[uz + 2], this
+        y: 0
+      }), [zq, Sq] = (0, Yq.useState)(0), pq = (0, Yq.useMemo)((() => function(qq) {
+        const Eq = [];
+        for (let Yq = 0; Yq < uq.o; Yq++) {
+          var gq;
+          Eq.push(null !== (gq = qq[Yq]) && void 0 !== gq ? gq : null)
         }
-      },
-      dz = {
-        name: "Cape",
-        className: "CapeMaterialPlugin",
-        priority: 200,
-        defines: (zz, uz) => ({
-          ...(0, Ez.b)("CAPE"),
-          BLOXD_CAPE_BONES: `${zz}`,
-          BLOXD_CAPE_MAX_Y: (0, nz.pb)(uz)
+        return Eq
+      }((0, Bq.g)(Eq.getPlayerCosmetics().emote))), [Eq, zq]);
+      (0, Nq.d)("cosmeticsUpdated", (qq => {
+        qq.some((qq => qq.local && "emote" === qq.tY)) && Sq((qq => qq + 1))
+      }));
+      const Gq = (0, Yq.useRef)(!1),
+        Lq = (0, Yq.useCallback)((function(qq) {
+          let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          "pad" === qq && (0, Qq.g)(), Gq.current = Eq, Tq.current = {
+            x: 0,
+            y: 0
+          }, Zq(null), Vq(qq)
+        }), [Zq]),
+        Jq = (0, Yq.useCallback)((() => {
+          Vq(null), Zq(null), Tq.current = {
+            x: 0,
+            y: 0
+          }
+        }), [Zq]),
+        kq = (0, Yq.useCallback)((qq => {
+          if (Date.now() < fq.current) return;
+          const Eq = (0, cq.i)(qq),
+            gq = !!Eq.holdUntilMove,
+            Yq = gq ? 600 : Math.ceil(1e3 * Eq.animation.animation_length / cq.e) + 200;
+          fq.current = Date.now() + Yq, Mq.current = qq, Wq.gameBridge.send("playEmote", qq), Wq.gameBridge.send("applyTemporaryThirdPerson", gq ? {} : {
+            durationMs: Yq
+          })
+        }), []);
+      (0, mq.f)("requestToggleEmoteWheel", (() => {
+        null === gq ? bq() && Lq("click") : Jq()
+      })), (0, mq.f)("requestEmoteWheelHoldOpen", (() => {
+        null === gq && bq() && Lq((0, oq.e)() ? "hold" : "click")
+      })), (0, mq.f)("requestEmoteWheelPadOpen", (qq => {
+        null !== gq || !bq() || (0, yq.d)() || (0, tq.r)() || Lq("pad", qq)
+      })), (0, mq.f)("requestEmoteRepeatLast", (() => {
+        if (null !== gq || !bq() || (0, yq.d)() || (0, tq.r)()) return;
+        const qq = Mq.current;
+        null !== qq && pq.includes(qq) ? kq(qq) : Lq("pad", !0)
+      }));
+      const Rq = () => {
+        const qq = nq.current,
+          Eq = null !== qq ? pq[qq] : null;
+        null !== Eq && "pad" === gq && Date.now() < fq.current || (Jq(), null !== Eq && kq(Eq))
+      };
+      (0, mq.f)("emoteWheelPadAim", (qq => {
+        if ("pad" !== gq) return;
+        const Eq = (0, Pq.C)(qq, uq.o, nq.current);
+        Zq(null !== Eq && null !== pq[Eq] ? Eq : null)
+      })), (0, mq.f)("requestEmoteWheelPadCommit", (qq => {
+        "pad" !== gq || qq && Gq.current || Rq()
+      })), (0, mq.f)("appManagerUpdated|activeInputDevice", (qq => {
+        null !== gq && "pad" === gq !== ("gamepad" === qq) && Jq()
+      })), (0, Yq.useLayoutEffect)((() => (vq = gq, (0, Aq.s)("emoteWheel", "pad" === gq), xq.i.TV(Aq.j), () => {
+        vq = null, (0, Aq.s)("emoteWheel", !1), xq.i.TV(Aq.j)
+      })), [gq]), (0, mq.f)("requestEmoteWheelHoldRelease", (() => {
+        "hold" === gq && Rq()
+      })), (0, mq.f)("requestEmoteWheelClose", (() => {
+        null !== gq && Jq()
+      })), (0, mq.f)("appManagerUpdated|gameState", (qq => {
+        "inGame" !== qq && Jq()
+      }));
+      const Uq = () => {
+        (0, dq.p)() && Jq()
+      };
+      if ((0, mq.f)("appManagerUpdated|openEverythingMenuName", Uq), (0, mq.f)("appManagerUpdated|openInGameMenuName", Uq), (0, mq.f)("pointerLockUpdate", (qq => {
+          qq || "hold" !== gq || Jq()
+        })), (0, Yq.useEffect)((() => {
+          if (null === gq) return;
+          const qq = qq => {
+            "Escape" === qq.key && (qq.stopImmediatePropagation(), qq.preventDefault(), Jq())
+          };
+          return document.addEventListener("keydown", qq, !0), () => {
+            document.removeEventListener("keydown", qq, !0)
+          }
+        }), [gq, Jq]), (0, lq.e)(!0, "click" === gq, "EmoteWheelOverlay"), (0, Yq.useEffect)((() => {
+          if ("hold" === gq) return Wq.gameBridge.send("holdEmoteWheel", !0), () => {
+            Wq.gameBridge.send("holdEmoteWheel", !1)
+          }
+        }), [gq]), (0, Yq.useEffect)((() => {
+          if ("hold" !== gq) return;
+          const qq = parseFloat(window.getComputedStyle(document.documentElement).fontSize),
+            Eq = Pq.r * qq,
+            Yq = Pq.o * qq,
+            lq = qq => {
+              let gq = Tq.current.x + qq.movementX,
+                lq = Tq.current.y + qq.movementY;
+              const Oq = Math.hypot(gq, lq);
+              if (Oq > Eq) {
+                const qq = Eq / Oq;
+                gq *= qq, lq *= qq
+              }
+              Tq.current = {
+                x: gq,
+                y: lq
+              }, Zq(function(qq, Eq, gq, Yq) {
+                if (Math.hypot(qq, Eq) < gq) return null;
+                const lq = (0, Pq.t)(qq, Eq, uq.o);
+                return null === Yq[lq] ? null : lq
+              }(gq, lq, Yq, pq))
+            };
+          return document.addEventListener("mousemove", lq), () => {
+            document.removeEventListener("mousemove", lq)
+          }
+        }), [gq, pq, Zq]), null === gq) return null;
+      const Fq = "hold" === gq || "pad" === gq,
+        sq = null !== jq ? pq[jq] : null,
+        Xq = null !== sq ? (0, cq.i)(sq).displayName : qq("emotes:pickEmote");
+      return (0, rq.jsx)("div", {
+        className: Hq()("EmoteWheelOverlay", {
+          EmoteWheelOverlayPad: "pad" === gq
         }),
-        getUniforms(zz) {
-          return (0, iz.c)(function(zz) {
-            const uz = [];
-            for (let bz = 0; bz < zz; bz++) uz.push({
-              name: `skele${bz}`,
-              type: "highp vec3"
-            });
-            return uz
-          }(this.skeleLen), "vertex", zz)
+        onMouseDown: qq => {
+          qq.target === qq.currentTarget && Jq()
         },
-        bind(zz) {
-          for (let uz = 0; uz < this.skeleLen; uz++) zz.updateVector3(`skele${uz}`, pz.Fuz(this.skele, 3 * uz))
-        },
-        uniformsVersion() {
-          return this.bonesVersion
-        },
-        getCustomCode(zz, uz) {
-          return "vertex" !== zz ? null : {
-            CUSTOM_VERTEX_DEFINITIONS: tz(uz),
-            CUSTOM_VERTEX_UPDATE_POSITION: Hz(uz, this.skeleLen),
-            CUSTOM_VERTEX_UPDATE_NORMAL: Oz(uz)
-          }
-        }
-      };
-    (0, lz.q)(dz)
-  },
-  38075: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => Oz,
-      e: () => pz
-    });
-    var Ez = bz(36611),
-      nz = bz(36894),
-      iz = bz(36619),
-      lz = bz(36633);
-    const Mz = "bloxdTextLodBias",
-      tz = [{
-        name: Mz,
-        type: "float"
-      }],
-      Hz = "bloxdTextSample",
-      Oz = {
-        planes: -.5,
-        boards: -.5
-      },
-      pz = {
-        name: "TextSampler",
-        className: "TextSamplerMaterialPlugin",
-        priority: 60,
-        defines: () => (0, Ez.b)("TEXT_SAMPLER"),
-        getUniforms: zz => (0, nz.c)(tz, "fragment", zz),
-        bind(zz) {
-          zz.updateFloat(Mz, this.lodBias)
-        },
-        uniformsVersion: () => 0,
-        getCustomCode(zz, uz) {
-          if ("fragment" !== zz) return null;
-          const bz = (0, iz.G)(uz, `vec4 ${Hz}(sampler2D s, vec2 uv, float bias)`, `fn ${Hz}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
-            Ez = (0, iz.G)(uz, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
-            nz = `${(0,iz.M)(uz,"vDiffuseUV")} + uvOffset`,
-            lz = (0, iz.G)(uz, `${Hz}(diffuseSampler, ${nz}, ${(0,iz.vb)(uz,Mz)})`, `${Hz}(diffuseSampler, diffuseSamplerSampler, ${nz}, ${(0,iz.vb)(uz,Mz)})`);
-          return {
-            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${bz} {\n\t\t\t\t\t${(0,iz.y)(uz,"vec4","texel",Ez)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,iz.l)(uz,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,iz.l)(uz,"vec3","0.0")}, ${(0,iz.l)(uz,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
-            [(0, iz.B)(uz)]: `baseColor = ${lz};`
-          }
-        }
-      };
-    (0, lz.q)(pz)
-  },
-  40318: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      CapeMaterialPlugin: () => sz,
-      HueTintMaterialPlugin: () => rz,
-      LifeformMaterialPlugin: () => oz,
-      OverlayMaterialPlugin: () => Nz
-    });
-    var Ez = bz(40326),
-      nz = bz(37435);
-    class iz extends((0, Ez.f)(nz.c)) {}(0, Ez.i)(nz.c, iz);
-    var lz = bz(36604);
-    class Mz extends((0, Ez.f)(lz.e)) {}(0, Ez.i)(lz.e, Mz);
-    var tz = bz(37295);
-    class Hz extends((0, Ez.f)(tz.e)) {}(0, Ez.i)(tz.e, Hz);
-    var Oz = bz(36878),
-      pz = bz(39425),
-      dz = bz(36870);
-    class Fz extends((0, Ez.f)(dz.e)) {
-      constructor(zz, uz, bz) {
-        super(zz, uz, bz), (0, Oz.k)(zz)
-      }
-      dispose(zz) {
-        (0, Oz.n)(this._material), super.dispose(zz)
-      }
-    }(0, Ez.i)(dz.e, Fz), (0, dz.i)({
-      disableUnusedSpecularTerm: Ez.d,
-      isLightingDisabled: zz => zz instanceof pz.StandardMaterial && zz.disableLighting
-    });
-    var Zz = bz(38075);
-    class Rz extends((0, Ez.f)(Zz.e)) {}(0, Ez.i)(Zz.e, Rz);
-    var Kz = bz(38162),
-      wz = bz(36724),
-      Xz = bz(37548),
-      fz = bz(36661);
-    class sz extends((0, Ez.f)(Kz.c)) {}(0, Ez.i)(Kz.c, sz);
-    class rz extends((0, Ez.f)(wz.d)) {}(0, Ez.i)(wz.d, rz);
-    class oz extends((0, Ez.f)(Xz.p)) {}(0, Ez.i)(Xz.p, oz);
-    class Nz extends((0, Ez.f)(fz.e)) {}(0, Ez.i)(fz.e, Nz)
-  },
-  40326: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => gz,
-      f: () => Xz,
-      i: () => ez
-    });
-    var Ez = bz(39425),
-      nz = bz(40334),
-      iz = bz(40379),
-      lz = bz(40341),
-      Mz = bz(37276),
-      tz = bz(37282),
-      Hz = bz(37287),
-      Oz = bz(37290),
-      pz = bz(36648),
-      dz = bz(36654),
-      Fz = bz(40350),
-      Zz = bz(36633),
-      Rz = bz(36636),
-      Kz = bz(36619);
-
-    function wz(zz, uz) {
-      return Object.assign((function(zz, bz, Ez, nz) {
-        return uz(this.featureState, zz, bz, Ez, nz)
-      }), {
-        TZ: zz
+        children: (0, rq.jsxs)("div", {
+          className: "EmoteWheel",
+          style: {
+            width: 2 * Pq.r + "rem",
+            height: 2 * Pq.r + "rem"
+          },
+          children: [(0, rq.jsxs)("svg", {
+            className: "EmoteWheelSvg",
+            viewBox: `0 0 ${Pq.l} ${Pq.l}`,
+            children: [pq.map(((Eq, gq) => {
+              const Yq = null !== Eq,
+                lq = Fq && gq === jq;
+              return (0, rq.jsx)("path", {
+                d: iq(gq),
+                className: Hq()("EmoteWheelWedge", {
+                  EmoteWheelWedgeHighlighted: lq,
+                  EmoteWheelWedgeDisabled: !Yq
+                }),
+                onClick: qq => {
+                  qq.stopPropagation(), null !== Eq && (qq => {
+                    Jq(), kq(qq)
+                  })(Eq)
+                },
+                "aria-label": null !== Eq ? (0, cq.i)(Eq).displayName : qq("emotes:emptySlot")
+              }, gq)
+            })), (0, rq.jsx)("circle", {
+              className: "EmoteWheelOuterRing",
+              cx: Pq.d,
+              cy: Pq.d,
+              r: Pq.j
+            }), (0, rq.jsx)("circle", {
+              className: "EmoteWheelInnerRing",
+              cx: Pq.d,
+              cy: Pq.d,
+              r: Pq.g
+            }), Fq && null !== jq && (0, rq.jsx)("path", {
+              className: "EmoteWheelWedgeOutline",
+              d: iq(jq)
+            })]
+          }), pq.map(((qq, Eq) => {
+            const gq = null !== qq,
+              Yq = Fq && Eq === jq,
+              lq = (0, Pq.w)(Eq, uq.o),
+              Oq = Pq.c * Math.cos(lq),
+              mq = Pq.c * Math.sin(lq);
+            return (0, rq.jsx)("div", {
+              className: Hq()("EmoteWheelSlotIcon", {
+                EmoteWheelSlotIconHighlighted: Yq,
+                EmoteWheelSlotIconDisabled: !gq
+              }),
+              style: {
+                left: `calc(50% + ${Oq}rem)`,
+                top: `calc(50% + ${mq}rem)`,
+                backgroundImage: gq ? `url(/textures/charSkins/previews/emote_${qq}_preview.png)` : void 0
+              },
+              "aria-hidden": !0
+            }, Eq)
+          })), (0, rq.jsx)("div", {
+            className: "EmoteWheelHint SmallTextBold",
+            children: Xq
+          })]
+        })
       })
-    }
-
-    function Xz(zz) {
-      const uz = class extends Fz.d {
-          constructor(uz, bz) {
-            const Ez = (0, Rz.W)(uz),
-              nz = Ez && (0, Rz.u)(Ez, zz.name);
-            for (var iz = arguments.length, lz = new Array(iz > 2 ? iz - 2 : 0), Mz = 2; Mz < iz; Mz++) lz[Mz - 2] = arguments[Mz];
-            super(uz, zz.name, zz.priority, nz ? nz.defines : zz.defines(...lz), !1), this.featureState = void 0, this.featureState = bz, this._pluginManager._addPlugin(this), this._enable(!0), (0, Rz.v)(this._material, zz, this.featureState, this._pluginDefineNames)
+    }))
+  },
+  8734: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Bq,
+      f: () => aq,
+      g: () => Vq,
+      i: () => Nq,
+      j: () => Wq
+    });
+    var Yq = gq(57),
+      lq = gq(8742),
+      Oq = gq(31),
+      mq = gq(1904),
+      xq = gq(38),
+      Aq = gq(1252),
+      cq = gq(1926);
+    const uq = 50;
+    const Bq = new class {
+      constructor() {
+        this.state = {
+          messages: [],
+          reportedPlayers: [],
+          channel: null
+        }, this.listeners = new Set, this.stopListening = [], this.nextClientChatMsgId = 0, this.subscribe = qq => {
+          if (0 === this.listeners.size) {
+            var Eq, gq;
+            this.state = {
+              ...this.state,
+              channel: null !== (Eq = null === (gq = cq.c.get("chatChannels")) || void 0 === gq ? void 0 : gq[0]) && void 0 !== Eq ? Eq : null
+            };
+            const qq = Oq.i.subscribe("reportPlayer", (qq => {
+              let {
+                playerEId: Eq
+              } = qq;
+              this.setState({
+                ...this.state,
+                reportedPlayers: [...this.state.reportedPlayers, Eq]
+              })
+            }));
+            this.stopListening = [mq.gameBridge.subscribe("chatReceived", (qq => {
+              let {
+                serverChatMsgId: Eq,
+                content: gq,
+                author: Yq
+              } = qq;
+              this.addMessage(Eq, gq, Yq)
+            })), () => {
+              Oq.i.unsubscribe(qq)
+            }, cq.c.subscribe("chatChannels", (qq => {
+              var Eq;
+              this.setState({
+                ...this.state,
+                channel: null !== (Eq = null === qq || void 0 === qq ? void 0 : qq[0]) && void 0 !== Eq ? Eq : null
+              })
+            }))]
           }
-          getClassName() {
-            return zz.className
+          return this.listeners.add(qq), () => {
+            if (this.listeners.delete(qq), 0 === this.listeners.size) {
+              for (const qq of this.stopListening) qq();
+              this.stopListening = [], this.state = {
+                messages: [],
+                reportedPlayers: [],
+                channel: null
+              }
+            }
           }
-          isCompatible(zz) {
-            return zz === Kz.c.GLSL || zz === Kz.c.WGSL
-          }
-        },
-        bz = (0, Zz.j)(zz);
-      for (const [Ez, nz] of Object.entries(Zz.e)) {
-        const iz = zz[Ez];
-        if (iz) {
-          const zz = bz[Ez];
-          Object.defineProperty(uz.prototype, nz, {
-            value: wz(iz, zz),
-            writable: !0,
-            configurable: !0
+        }, this.getState = () => this.state
+      }
+      addMessage(qq, Eq) {
+        let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        const Yq = {
+          serverChatMsgId: qq,
+          content: Eq,
+          clientChatMsgId: this.nextClientChatMsgId++,
+          author: gq
+        };
+        this.setState({
+          ...this.state,
+          messages: [Yq, ...this.state.messages].slice(0, lq.e)
+        })
+      }
+      selectNextChannel() {
+        const qq = cq.c.get("chatChannels");
+        if (qq) {
+          const Eq = qq.findIndex((qq => {
+            var Eq;
+            return qq.channelName === (null === (Eq = this.state.channel) || void 0 === Eq ? void 0 : Eq.channelName)
+          }));
+          this.setState({
+            ...this.state,
+            channel: qq[(Eq + 1) % qq.length]
           })
         }
       }
-      return uz
-    }
-    class fz extends(Xz(Mz.d)) {}
-    var sz = bz(38998),
-      rz = bz(40354);
-    const oz = new WeakMap;
-
-    function Nz(zz, uz, bz) {
-      let Ez = oz.get(bz);
-      Ez || (Ez = new Map, oz.set(bz, Ez));
-      const {
-        url: nz
-      } = zz;
-      let iz = Ez.get(nz);
-      return iz || (iz = async function(zz, uz, bz) {
-        const {
-          width: Ez,
-          height: nz
-        } = zz.getSize(), iz = Math.round(nz / Ez), Mz = uz && uz.byteLength === Ez * Ez * iz * 4 ? uz : zz._readPixelsSync();
-        return new rz.c(Mz, Ez, Ez, iz, sz.c.TEXTUREFORMAT_RGBA, bz, !0, !1, lz.e.NEAREST_NEAREST_MIPLINEAR)
-      }(zz, uz, bz), Ez.set(nz, iz), iz.catch((() => {
-        Ez.delete(nz)
-      }))), iz
-    }
-    var vz = bz(37292);
-    class xz extends(Xz(tz.j)) {
-      constructor(zz, uz) {
-        super(zz, uz), uz.textures.forEach(((zz, uz) => {
-          zz.mirror.onLoadObservable.add((zz => {
-            this.setTextureArrayData(zz, uz).catch((zz => {
-              console.error(`Failed to build texture array for atlas ${uz}`, zz)
-            }))
-          }))
-        })), (0, vz.i)(uz, zz.shaderLanguage)
+      setState(qq) {
+        this.state = qq;
+        for (const Eq of this.listeners) Eq()
       }
-      async setTextureArrayData(zz, uz) {
-        var bz, Ez;
-        const nz = this.featureState,
-          {
-            width: iz,
-            height: lz
-          } = zz.getSize(),
-          Mz = nz.useWebGL2 ? await Nz(zz, null !== (bz = null === (Ez = nz.sources.pixels) || void 0 === Ez ? void 0 : Ez[uz]) && void 0 !== bz ? bz : null, this._material.XT()) : null;
-        (0, vz.b)(this._material, nz, uz, Mz, iz, Math.round(lz / iz), this._material.shaderLanguage)
-      }
-    }
-    var Jz = bz(40360),
-      Az = bz(39474),
-      Tz = bz(36514),
-      Lz = bz(40369),
-      Pz = bz(39596),
-      Gz = bz(39459),
-      az = bz(40308),
-      Vz = bz(37046),
-      mz = bz(40373);
-    class qz extends Jz.c {
-      getData() {
-        return null
-      }
-      _rebuild() {}
-      restore() {
-        super._rebuild()
-      }
-    }
-    const hz = {
-      Mesh: Lz.d,
-      TransformNode: az.e,
-      gZ: Jz.c,
-      VertexBuffer: Jz.d,
-      BoundingInfo: Az.e,
-      ER: Tz.ER,
-      ArenaBuffer: qz,
-      SubMesh: Gz.e,
-      VertexData: Pz.b,
-      MirroredGeometry: mz.d,
-      meshFromArrays: mz.e,
-      plainMeshFromArrays: mz.i
     };
-    (0, Vz.f)(hz);
-    var Uz = bz(36878);
-    class cz extends(Xz(Oz.i)) {
-      constructor(zz, uz) {
-        if (super(zz, uz), zz instanceof Ez.StandardMaterial && uz.dirLightCount > 0) {
-          const uz = zz,
-            bz = uz._blockDirtyMechanism;
-          uz._blockDirtyMechanism = !0, zz.disableLighting = !0, uz._blockDirtyMechanism = bz;
-          const Ez = (0, Rz.W)(zz);
-          Ez && (Ez.disableLighting = !0, (0, Rz.U)(Ez))
-        }(0, Uz.k)(zz)
-      }
-      dispose(zz) {
-        (0, Uz.n)(this._material), super.dispose(zz)
-      }
+
+    function Wq() {
+      const [qq, Eq] = (0, Yq.useState)(Bq.getState);
+      return (0, Yq.useEffect)((() => {
+        const qq = Bq.subscribe((() => {
+          Eq(Bq.getState())
+        }));
+        return Eq(Bq.getState()), qq
+      }), []), qq
     }
 
-    function gz(zz, uz) {
-      if (!(uz instanceof Ez.StandardMaterial) || uz.specularTexture) return;
-      const {
-        r: bz,
-        g: nz,
-        b: iz
-      } = uz.specularColor;
-      0 === bz && 0 === nz && 0 === iz && (zz.SPECULARTERM = !1)
-    }(0, Oz.g)({
-      disableUnusedSpecularTerm: gz
+    function Nq(qq) {
+      var Eq, gq;
+      if (qq.startsWith("/report")) {
+        var Yq;
+        const Eq = null !== (Yq = qq.replace("/report", "").trim().split(" ")[0]) && void 0 !== Yq ? Yq : "";
+        if ("" === Eq) return void Bq.addMessage(null, [{
+          str: "You must type a player's name when reporting them.\nExample:\n/report Bob"
+        }]);
+        const gq = mq.gameBridge.latest("players"),
+          lq = mq.gameBridge.latest("hiddenPlayerNames"),
+          xq = qq => {
+            var Yq, Oq;
+            const mq = null !== (Yq = null === (Oq = gq.byId[qq]) || void 0 === Oq ? void 0 : Oq.name) && void 0 !== Yq ? Yq : null;
+            return null !== mq && (mq === Eq || (0, Aq.d)(mq, lq) === Eq)
+          };
+        if (null !== gq.localId && xq(gq.localId)) return void Bq.addMessage(null, [{
+          str: "You cannot report yourself."
+        }]);
+        for (const qq of gq.ids)
+          if (xq(qq)) return Oq.i.TV("OpenReportMenu", {
+            playerEId: qq,
+            playerName: gq.byId[qq].name,
+            Hc: null,
+            serverChatMsgId: null
+          }), void console.log("Opening report menu...");
+        Bq.addMessage(null, [{
+          str: "Player not found in lobby."
+        }])
+      }
+      mq.gameBridge.send("sendChatMessage", {
+          Hc: qq,
+          channelName: null !== (Eq = null === (gq = Bq.getState().channel) || void 0 === gq ? void 0 : gq.channelName) && void 0 !== Eq ? Eq : null
+        }),
+        function(qq) {
+          var Eq;
+          const gq = null !== (Eq = xq.i.getItem("recentlySentChatMsgs")) && void 0 !== Eq ? Eq : [];
+          gq.push(qq), gq.length > uq && gq.shift();
+          xq.i.setItem("recentlySentChatMsgs", gq)
+        }(qq)
+    }
+
+    function aq() {
+      var qq;
+      return null !== (qq = xq.i.getItem("recentlySentChatMsgs")) && void 0 !== qq ? qq : []
+    }
+
+    function Vq(qq) {
+      var Eq;
+      let gq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      const Yq = null !== (Eq = xq.i.getItem("recentlySentChatMsgs")) && void 0 !== Eq ? Eq : [],
+        lq = Yq.length + 1,
+        Oq = gq ? (qq % lq + lq) % lq : Math.min(Yq.length, Math.max(0, qq));
+      return {
+        stepsBack: Oq,
+        text: 0 === Oq ? "" : Yq[Yq.length - Oq]
+      }
+    }
+  },
+  8699: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => mq,
+      f: () => Oq
     });
-    var Sz = bz(36743),
-      yz = bz(37058);
-    const Dz = new RegExp(`^#define ${Hz.c}\\s*$`, "m");
-    class Qz extends(Xz(Hz.i)) {
-      constructor(zz, uz) {
-        super(zz, uz), this.SZ = !1, uz.ditherOnlyWhileFading && (yz.f.add(zz), this.prewarmDitherTwins(zz))
-      }
-      prewarmDitherTwins(zz) {
-        const uz = new WeakSet;
-        zz.onEffectCreatedObservable.add((bz => {
-          let {
-            effect: Ez,
-            subMesh: nz
-          } = bz;
-          if (this.featureState.prewarmingDither || uz.has(Ez)) return;
-          uz.add(Ez);
-          const iz = null === nz || void 0 === nz ? void 0 : nz.getMesh();
-          iz && !Dz.test(Ez.defines) && zz.XT().onAfterRenderObservable.addOnce((() => {
-            this.prewarmDither(iz) || uz.delete(Ez)
-          }))
-        }))
-      }
-      prewarmDither(zz) {
-        if (this.SZ || zz.Uuz()) return !1;
-        const uz = new Gz.e(0, 0, 0, 0, 0, zz, void 0, !1, !1);
-        this.featureState.prewarmingDither = !0;
-        try {
-          this._material.isReadyForSubMesh(zz, uz)
-        } finally {
-          this.featureState.prewarmingDither = !1
-        }
-        return null !== uz.effect
-      }
-      dispose(zz) {
-        this.SZ = !0, super.dispose(zz)
-      }
-    }
-    const Wz = new Map;
+    var Yq = gq(1968);
+    const lq = /^(?:Key[A-Z]|Digit[0-9]|Arrow(?:Up|Down|Left|Right)|Space)$/,
+      Oq = qq => "string" === typeof qq.icon && "" !== qq.icon && "string" === typeof qq.keycode && lq.test(qq.keycode),
+      mq = qq => "Space" === qq ? "_" : Yq.h[qq]
+  },
+  8755: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => lq
+    });
+    var Yq = gq(24);
 
-    function ez(zz, uz) {
-      Wz.set(zz, uz)
+    function lq() {
+      return !Yq.b.get("isTouchScreen") && null !== document.pointerLockElement
     }
-    ez(Mz.d, fz), ez(tz.j, xz), ez(Hz.i, Qz), ez(Oz.i, cz), (0, pz.c)({
-      create: (zz, uz) => {
-        const bz = new Ez.StandardMaterial(zz.name, uz);
-        return (0, Sz.r)(zz, bz), bz.detailMap._pluginDefineNames
-      },
-      write: (zz, uz, bz) => {
-        (0, Sz.X)(zz.mirror, uz, bz)
-      },
-      addFeature: (zz, uz, bz) => {
-        const Ez = Wz.get(uz.feature);
-        if (!Ez) throw new Error(`${uz.feature.name} has no plugin class (registerPluginClass)`);
-        new Ez(zz.mirror, uz.state, ...bz)
-      },
-      texture: (zz, uz, bz) => {
-        let {
-          url: Ez,
-          noMipmap: nz,
-          invertY: iz,
-          samplingMode: Mz,
-          data: tz,
-          sets: Hz
-        } = bz;
-        if (!tz) {
-          const bz = new lz.e(Ez, uz, nz, iz, Mz);
-          return Object.assign(bz, Hz), void(0, dz.H)(zz, bz)
-        }
-        const Oz = {},
-          pz = new Promise(((zz, uz) => {
-            Oz.onLoad = zz, Oz.onError = (zz, bz) => {
-              uz(new Error(`${tz.context}: ${(null===bz||void 0===bz?void 0:bz.message)||zz||"Failed to load texture"}`))
-            }
-          })),
-          {
-            mimeType: Fz,
-            bytes: Zz,
-            label: Rz
-          } = tz,
-          Kz = {
-            noMipmap: nz,
-            invertY: !1,
-            samplingMode: Mz,
-            ...Oz,
-            mimeType: Fz,
-            loaderOptions: void 0,
-            useSRGBBuffer: !1
-          },
-          wz = new lz.e(null, uz, Kz);
-        Sz.s.set(wz, pz), Object.assign(wz, Hz), wz.updateURL(Ez, Zz);
-        const Xz = wz.getInternalTexture();
-        Xz && (Xz.label = Rz), zz.uvSet = wz.coordinatesIndex, zz.matrix.set((0, Sz.N)(wz)), (0, dz.H)(zz, wz)
-      },
-      cube: (zz, uz, bz) => {
-        let {
-          rootUrl: Ez,
-          files: iz,
-          noMipmap: Mz,
-          luminance: tz
-        } = bz;
-        const {
-          samplingMode: Hz
-        } = zz.sampler, Oz = Hz === (0, dz.w)(Mz) ? null : () => {
-          (0, Sz.M)(pz, Hz)
-        }, pz = new nz.e(Ez, uz, null, Mz, iz, Oz, null, (0, dz.t)(tz));
-        pz.coordinatesMode = lz.e.SKYBOX_MODE, (0, dz.H)(zz, pz)
-      },
-      canvas: (zz, uz, bz) => {
-        let {
-          width: Ez,
-          height: nz,
-          mipmaps: Mz,
-          samplingMode: tz,
-          hasAlpha: Hz = !1,
-          wrap: Oz = lz.e.CLAMP_ADDRESSMODE
-        } = bz;
-        const pz = new iz.b(uz, {
-          width: Ez,
-          height: nz
-        }, zz, Mz, tz);
-        pz.hasAlpha = Hz, pz.wrapU = Oz, pz.wrapV = Oz;
-        const dz = (0, Sz.z)(pz);
-        return (0, Sz.D)(dz, pz), dz
+  },
+  8850: (qq, Eq, gq) => {
+    function Yq(qq) {
+      return {
+        x: (qq.left + qq.right) / 2,
+        y: (qq.top + qq.bottom) / 2
       }
+    }
+
+    function lq(qq) {
+      return 0 === qq.length ? null : qq.reduce(((qq, Eq) => ({
+        left: Math.min(qq.left, Eq.left),
+        top: Math.min(qq.top, Eq.top),
+        right: Math.max(qq.right, Eq.right),
+        bottom: Math.max(qq.bottom, Eq.bottom)
+      })))
+    }
+
+    function Oq(qq, Eq) {
+      const gq = Math.max(0, (Eq - (qq.right - qq.left)) / 2),
+        Yq = Math.max(0, (Eq - (qq.bottom - qq.top)) / 2);
+      return {
+        left: qq.left - gq,
+        top: qq.top - Yq,
+        right: qq.right + gq,
+        bottom: qq.bottom + Yq
+      }
+    }
+
+    function mq(qq, Eq) {
+      return Eq.x >= qq.left && Eq.x <= qq.right && Eq.y >= qq.top && Eq.y <= qq.bottom
+    }
+
+    function xq(qq, Eq, gq) {
+      let lq = null,
+        xq = 1 / 0;
+      for (const {
+          id: Yq,
+          box: Oq
+        }
+        of Eq) {
+        const Eq = (Oq.right - Oq.left) * (Oq.bottom - Oq.top);
+        mq(Oq, qq) && Eq < xq && (xq = Eq, lq = Yq)
+      }
+      if (null !== lq) return lq;
+      let Aq = 1 / 0;
+      for (const {
+          id: cq,
+          box: uq
+        }
+        of Eq) {
+        if (!mq(Oq(uq, gq), qq)) continue;
+        const Eq = Yq(uq),
+          xq = Math.hypot(qq.x - Eq.x, qq.y - Eq.y);
+        xq < Aq && (Aq = xq, lq = cq)
+      }
+      return lq
+    }
+
+    function Aq(qq, Eq, gq) {
+      return {
+        left: gq.left,
+        top: gq.top,
+        right: qq - gq.right,
+        bottom: Eq - gq.bottom
+      }
+    }
+
+    function cq(qq, Eq, gq, Yq) {
+      const lq = (qq, Eq, gq) => Math.max(Math.min(Eq, 0), Math.min(Math.max(gq, 0), qq));
+      return {
+        x: lq(Eq, Yq.left - qq.left, Yq.right - qq.right),
+        y: lq(gq, Yq.top - qq.top, Yq.bottom - qq.bottom)
+      }
+    }
+
+    function uq(qq, Eq, gq, Yq, lq) {
+      const Oq = qq.dx * Yq + Eq,
+        mq = qq.dy * lq + gq,
+        xq = qq => Math.max(-1, Math.min(1, qq));
+      return {
+        dx: xq(Oq / Yq),
+        dy: xq(mq / lq)
+      }
+    }
+
+    function Bq(qq, Eq, gq, Yq) {
+      return Eq <= 0 || gq <= 0 ? 1 : Math.max(.05, Math.min(1, qq / Eq, Yq / gq))
+    }
+
+    function Wq(qq, Eq, gq) {
+      return Math.min(qq.right, Eq.right) - Math.max(qq.left, Eq.left) > gq && Math.min(qq.bottom, Eq.bottom) - Math.max(qq.top, Eq.top) > gq
+    }
+
+    function Nq(qq, Eq) {
+      const gq = (qq, Eq, gq, Yq) => Eq - qq > Yq - gq ? gq - qq > Eq - Yq ? Yq - Eq : gq - qq : qq < gq ? gq - qq : Eq > Yq ? Yq - Eq : 0;
+      return {
+        x: gq(qq.left, qq.right, Eq.left, Eq.right),
+        y: gq(qq.top, qq.bottom, Eq.top, Eq.bottom)
+      }
+    }
+
+    function aq(qq, Eq) {
+      let {
+        avoid: gq = null,
+        bounds: Yq = null
+      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, lq = 0, Oq = 1 / 0;
+      return qq.forEach(((qq, mq) => {
+        const xq = Eq.filter((Eq => Wq(qq, Eq, 0))).length,
+          Aq = null !== Yq && (qq.left < Yq.left || qq.top < Yq.top || qq.right > Yq.right || qq.bottom > Yq.bottom),
+          cq = xq + (gq && Wq(qq, gq, 0) ? 1e3 : 0) + (Aq ? 1e6 : 0);
+        cq < Oq && (lq = mq, Oq = cq)
+      })), lq
+    }
+    gq.d(Eq, {
+      A: () => Nq,
+      D: () => lq,
+      b: () => Yq,
+      d: () => mq,
+      e: () => Wq,
+      i: () => cq,
+      m: () => Oq,
+      n: () => aq,
+      q: () => uq,
+      t: () => xq,
+      v: () => Bq,
+      x: () => Aq
     })
   },
-  40373: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => Oz,
-      e: () => pz,
-      i: () => dz
+  8764: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      C: () => Nq,
+      c: () => Oq,
+      d: () => xq,
+      g: () => cq,
+      j: () => Aq,
+      l: () => mq,
+      o: () => lq,
+      r: () => Yq,
+      s: () => aq,
+      t: () => Bq,
+      w: () => uq,
+      y: () => Wq
     });
-    var Ez = bz(40360),
-      nz = bz(39226),
-      iz = bz(39474),
-      lz = bz(39605),
-      Mz = bz(40369),
-      tz = bz(39596),
-      Hz = bz(36930);
-    class Oz extends lz.b {
-      constructor() {
-        super(...arguments), this.model = null, this.onGeometryUpdated = (zz, uz) => {
-          this.releaseUnlessInstanced(uz)
-        }, this.onLinked = null
+    const Yq = 14,
+      lq = 6,
+      Oq = (Yq + lq) / 2,
+      mq = 200,
+      xq = mq / 2,
+      Aq = mq / 2 - 1,
+      cq = lq / Yq * (mq / 2),
+      uq = (qq, Eq) => -Math.PI / 2 + 2 * qq * Math.PI / Eq,
+      Bq = (qq, Eq, gq) => {
+        const Yq = 2 * Math.PI / gq;
+        return (Math.round((Math.atan2(Eq, qq) + Math.PI / 2) / Yq) % gq + gq) % gq
+      },
+      Wq = .5,
+      Nq = (qq, Eq, gq) => Math.hypot(qq.x, qq.y) < Wq ? gq : Bq(qq.x, qq.y, Eq),
+      aq = (qq, Eq, gq, Yq, lq) => {
+        const Oq = Math.PI / Eq,
+          mq = uq(qq, Eq),
+          xq = mq - Oq,
+          Aq = mq + Oq,
+          cq = (qq, Eq) => `${gq+qq*Math.cos(Eq)} ${gq+qq*Math.sin(Eq)}`;
+        return [`M ${cq(Yq,xq)}`, `L ${cq(lq,xq)}`, `A ${lq} ${lq} 0 0 1 ${cq(lq,Aq)}`, `L ${cq(Yq,Aq)}`, `A ${Yq} ${Yq} 0 0 0 ${cq(Yq,xq)}`, "Z"].join(" ")
       }
-      link(zz) {
-        var uz;
-        (0, Hz.n)(zz), this.model = zz, null === (uz = this.onLinked) || void 0 === uz || uz.call(this, zz)
-      }
-      relink() {
-        this.release();
-        const zz = [];
-        for (const nz of Object.values(this._vertexBuffers))
-          if (!nz.getIsInstanced()) {
-            const {
-              byteOffset: uz,
-              byteStride: bz,
-              type: Ez,
-              normalized: iz
-            } = nz;
-            zz.push({
-              kind: nz.getKind(),
-              data: nz.getData(),
-              offset: uz,
-              stride: bz,
-              components: nz.getSize(),
-              glType: Ez,
-              isNormalized: iz
-            })
-          } const uz = this._indices.length ? this._indices : null,
-          {
-            minimum: bz,
-            maximum: Ez
-          } = this.extend;
-        this.link(new Hz.d(zz, uz, this.getTotalVertices(), new Float64Array(bz.obz()), new Float64Array(Ez.obz())))
-      }
-      copy(zz) {
-        if (!this.model) return super.copy(zz);
-        const uz = new Oz(zz, this.XT()),
-          bz = this.Nbz(void 0, !0);
-        bz && uz.setIndices(bz);
-        let lz = !1;
-        for (const iz in this._vertexBuffers) {
-          const zz = this._vertexBuffers[iz],
-            bz = zz.getData();
-          if (!bz) continue;
-          const Mz = zz.getSize(),
-            {
-              type: tz,
-              byteOffset: Hz,
-              byteStride: Oz,
-              normalized: pz
-            } = zz;
-          lz ||= zz.isUpdatable();
-          const dz = zz.getIsInstanced() ? (bz instanceof Array ? 4 * bz.length : bz.byteLength) / Oz : this.getTotalVertices(),
-            Fz = (0, nz.u)(bz, Mz, tz, Hz, Oz, dz, !0),
-            Zz = {
-              updatable: zz.isUpdatable(),
-              stride: Mz,
-              type: tz,
-              normalized: pz,
-              takeBufferOwnership: !0,
-              instanced: zz.getIsInstanced()
-            };
-          uz.setVerticesBuffer(new Ez.d(this.uR(), Fz, iz, Zz), dz)
-        }
-        return uz._updatable = lz, uz._boundingInfo = new iz.e(this.extend.minimum, this.extend.maximum), uz.relink(), uz
-      }
-      static mergeMeshes(zz, uz, bz, Ez, nz, iz) {
-        const tz = zz[0].XT(),
-          Hz = new Mz.d(zz[0].name + "_merged", tz),
-          pz = new Oz(lz.b.RandomId(), tz, void 0, !1, Hz);
-        try {
-          if (!Mz.d.MergeMeshes(zz, uz, bz, Hz, nz, iz)) return Hz.dispose(), null
-        } catch (dz) {
-          throw Hz.dispose(), dz
-        }
-        return pz.relink(), Hz
-      }
-      removeVerticesData(zz) {
-        this.releaseUnlessInstanced(zz), super.removeVerticesData(zz)
-      }
-      dispose() {
-        this.release(), super.dispose()
-      }
-      releaseUnlessInstanced(zz) {
-        var uz;
-        zz && null !== (uz = this.getVertexBuffer(zz)) && void 0 !== uz && uz.getIsInstanced() || this.release()
-      }
-      release() {
-        this.model && ((0, Hz.s)(this.model), this.model = null)
-      }
-    }
+  },
+  8812: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => mq
+    });
+    var Yq = gq(57),
+      lq = gq(8723),
+      Oq = gq(2383);
 
-    function pz(zz, uz, bz) {
-      let Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Mz.d(zz, bz);
-      const nz = (0, Hz.j)(uz),
-        {
-          positions: iz,
-          normals: pz,
-          uvs: dz,
-          indices: Fz,
-          named: Zz = {}
-        } = uz,
-        Rz = new tz.b;
-      Rz.positions = iz, Rz.normals = null !== pz && void 0 !== pz ? pz : null, Rz.uvs = null !== dz && void 0 !== dz ? dz : null, Rz.indices = Fz;
-      const Kz = new Oz(lz.b.RandomId(), bz, Rz, !1, Ez);
-      for (const {
-          kind: lz,
-          components: Mz
-        }
-        of nz.vertexAttributes) lz in Zz && Ez.setVerticesData(lz, Zz[lz], !1, Mz);
-      return Kz.link(nz), Ez
-    }
-
-    function dz(zz, uz, bz) {
-      let Ez = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const nz = new Mz.d(zz, bz),
-        {
-          positions: iz,
-          normals: lz,
-          uvs: Hz,
-          indices: Oz
-        } = uz;
-      return Object.assign(new tz.b, {
-        positions: iz,
-        normals: lz,
-        uvs: Hz,
-        indices: Oz
-      }).applyToMesh(nz, Ez), nz
+    function mq() {
+      const qq = (0, Oq.h)("shopInfo"),
+        [, Eq] = (0, Yq.useReducer)((qq => qq + 1), 0);
+      return (0, Oq.g)("shopInfo", Eq), !(0, lq.d)(qq)
     }
   },
-  8494: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Oz,
-      e: () => Mz,
-      g: () => tz
+  8695: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Oq,
+      g: () => mq,
+      k: () => xq,
+      m: () => lq
     });
-    var Ez = bz(2132),
-      nz = bz(1226),
-      iz = bz(2136);
-    const lz = ",";
-
-    function Mz(zz) {
-      if (!zz) return [];
-      const uz = new Set,
-        bz = [];
-      for (const Ez of zz.split(lz)) {
-        const zz = Ez.trim();
-        if ((0, iz.l)(zz) && !uz.has(zz) && (uz.add(zz), bz.push(zz), bz.length >= nz.o)) break
-      }
-      return bz
-    }
-
-    function tz(zz) {
-      const uz = new Set,
-        bz = [];
-      for (const Ez of zz)
-        if ((0, iz.l)(Ez) && !uz.has(Ez) && (uz.add(Ez), bz.push(Ez), bz.length >= nz.o)) break;
-      return bz.join(lz)
-    }
-
-    function Hz() {
-      return tz(iz.g)
-    }
-
-    function Oz(zz) {
-      var uz;
-      return "emote" === zz ? Hz() : null !== (uz = pz[zz][0]) && void 0 !== uz ? uz : dz[zz]
-    }
-    const pz = nz.u.reduce(((zz, uz) => {
-        const bz = [];
-        for (const iz in Ez.h[uz]) {
-          var nz;
-          "default" === (null === (nz = (0, Ez.m)(uz, iz)) || void 0 === nz ? void 0 : nz.cosmeticPack) && bz.push(iz)
+    var Yq = gq(8699);
+    const lq = qq => {
+        const Eq = [];
+        qq.holdingGun && Eq.push({
+          kind: "reload"
+        }), qq.touchscreenActionButton && Eq.push({
+          kind: "touchButton",
+          label: qq.touchscreenActionButton
+        });
+        for (const Oq of null !== (gq = null === (lq = qq.customButtons) || void 0 === lq ? void 0 : lq.filter(Yq.f)) && void 0 !== gq ? gq : []) {
+          var gq, lq;
+          Eq.push({
+            kind: "customButton",
+            id: Oq.id,
+            icon: Oq.icon,
+            description: Oq.description
+          })
         }
-        return zz[uz] = bz, zz
+        return Eq
+      },
+      Oq = qq => qq.length >= 2,
+      mq = qq => "specialAction" !== qq.kind,
+      xq = (qq, Eq) => {
+        if (null === qq || null === Eq) return qq === Eq;
+        if (qq.kind !== Eq.kind) return !1;
+        switch (qq.kind) {
+          case "reload":
+            return !0;
+          case "specialAction":
+            return qq.action === Eq.action;
+          case "customButton":
+            return qq.id === Eq.id && qq.icon === Eq.icon;
+          case "touchButton":
+            return qq.label === Eq.label
+        }
+      }
+  },
+  8686: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => uq,
+      e: () => Nq,
+      h: () => Bq,
+      i: () => aq
+    });
+    var Yq = gq(57),
+      lq = gq(31),
+      Oq = gq(1416),
+      mq = gq(8695),
+      xq = gq(8704);
+    let Aq = null;
+    const cq = () => Aq,
+      uq = qq => {
+        (0, mq.k)(Aq, qq) || (Aq = qq, lq.i.TV(xq.c, Aq))
+      },
+      Bq = () => {
+        const [qq, Eq] = (0, Yq.useState)(cq);
+        return (0, Oq.f)(xq.c, Eq), qq
+      };
+    let Wq = !1;
+    const Nq = qq => {
+        qq !== Wq && (Wq = qq, lq.i.TV(xq.g, qq))
+      },
+      aq = () => {
+        const [qq, Eq] = (0, Yq.useState)(Wq);
+        return (0, Oq.f)(xq.g, Eq), qq
+      }
+  },
+  8704: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Oq,
+      c: () => Yq,
+      g: () => lq,
+      i: () => xq,
+      j: () => Aq,
+      n: () => cq,
+      o: () => mq
+    });
+    const Yq = "controllerActionHintChanged",
+      lq = "controllerActionWheelHintChanged",
+      Oq = "controllerOpenChat",
+      mq = "controllerSneakToggledChanged",
+      xq = "controllerAttackLatchedChanged",
+      Aq = "controllerDropStackHoldChanged",
+      cq = "controllerPickBlockHintChanged"
+  },
+  8629: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => mq,
+      e: () => Oq,
+      f: () => Aq,
+      j: () => xq
+    });
+    var Yq = gq(1416),
+      lq = gq(1380);
+    const Oq = "controllerInventoryCursorChanged",
+      mq = {
+        showing: !1,
+        kind: null,
+        holding: !1,
+        slotHasItem: !1,
+        pressHints: null,
+        hasCategories: !1,
+        hasList: !1,
+        openButtonCloses: !1,
+        steppingSlots: !1,
+        quickMoveToHotbar: !1,
+        dropStackHold: null,
+        hotbarPicking: !1
+      },
+      xq = () => {
+        var qq, Eq;
+        return (0, Yq.h)(Oq, null !== (qq = null === (Eq = (0, lq.g)()) || void 0 === Eq ? void 0 : Eq.getInventoryCursorState()) && void 0 !== qq ? qq : mq)
+      },
+      Aq = () => {
+        var qq, Eq;
+        return null !== (qq = null === (Eq = (0, lq.g)()) || void 0 === Eq ? void 0 : Eq.isPadSteppingSlots()) && void 0 !== qq && qq
+      }
+  },
+  8624: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Wq,
+      d: () => xq,
+      e: () => Aq,
+      g: () => mq,
+      h: () => Oq,
+      j: () => uq,
+      l: () => Bq
+    });
+    let Yq = null;
+    const lq = new Set,
+      Oq = qq => (Yq = qq, () => {
+        if (Yq === qq) {
+          Yq = null;
+          for (const qq of lq) qq()
+        }
+      }),
+      mq = qq => (lq.add(qq), () => {
+        lq.delete(qq)
+      }),
+      xq = () => Yq,
+      Aq = () => null !== Yq;
+    let cq = null;
+    const uq = qq => {
+        cq = qq
+      },
+      Bq = () => {
+        const qq = cq;
+        return cq = null, qq
+      },
+      Wq = (qq, Eq) => {
+        var gq, Yq;
+        return null !== (gq = null !== (Yq = qq.find((qq => qq.element === Eq))) && void 0 !== Yq ? Yq : qq.find((qq => qq.element.contains(Eq)))) && void 0 !== gq ? gq : null
+      }
+  },
+  8638: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Oq,
+      e: () => mq
+    });
+    var Yq = gq(57);
+    const lq = new WeakMap,
+      Oq = qq => {
+        var Eq, gq;
+        return null !== (Eq = null === (gq = lq.get(qq)) || void 0 === gq ? void 0 : gq.current) && void 0 !== Eq ? Eq : null
+      },
+      mq = (qq, Eq) => {
+        const gq = (0, Yq.useRef)(Eq);
+        gq.current = Eq;
+        const Oq = (0, Yq.useRef)(null);
+        (0, Yq.useEffect)((() => {
+          const Eq = qq.current,
+            Yq = Oq.current;
+          Eq !== Yq && (Yq && lq.get(Yq) === gq && lq.delete(Yq), Oq.current = Eq, Eq && lq.set(Eq, gq))
+        })), (0, Yq.useEffect)((() => () => {
+          const qq = Oq.current;
+          qq && lq.get(qq) === gq && lq.delete(qq), Oq.current = null
+        }), [])
+      }
+  },
+  8800: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => xq,
+      f: () => cq,
+      g: () => Bq,
+      j: () => uq,
+      n: () => Aq,
+      q: () => Nq
+    });
+    var Yq = gq(31),
+      lq = gq(1985),
+      Oq = gq(1380),
+      mq = gq(1367);
+    const xq = qq => {
+        var Eq, gq;
+        return (0, mq.c)() && null !== (Eq = null === (gq = (0, Oq.g)()) || void 0 === gq ? void 0 : gq.getGlyphForNoaAction(qq)) && void 0 !== Eq ? Eq : null
+      },
+      Aq = "controllerGlyph:",
+      cq = qq => {
+        var Eq, gq;
+        return null !== (Eq = null === (gq = (0, Oq.g)()) || void 0 === gq ? void 0 : gq.getPadGlyphIconName(qq)) && void 0 !== Eq ? Eq : `${Aq}xbox/${qq}`
+      },
+      uq = qq => qq.startsWith(Aq),
+      Bq = qq => {
+        var Eq, gq;
+        return uq(qq) && null !== (Eq = null === (gq = (0, Oq.g)()) || void 0 === gq ? void 0 : gq.getPadGlyphIconUrl(qq)) && void 0 !== Eq ? Eq : null
+      },
+      Wq = ["customBindingsChanged", "appManagerUpdated|isTouchScreen", mq.b, lq.c, lq.b],
+      Nq = qq => {
+        const Eq = Wq.map((Eq => Yq.i.subscribe(Eq, qq)));
+        return () => {
+          for (const qq of Eq) Yq.i.unsubscribe(qq)
+        }
+      }
+  },
+  8604: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => lq,
+      e: () => Yq
+    });
+    const Yq = "controllerOpenKeyboard",
+      lq = "controllerKeyboardVisible"
+  },
+  8669: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => Oq,
+      i: () => lq
+    });
+    let Yq = null;
+    const lq = function(qq) {
+        const Eq = {
+          cycle: qq,
+          canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
+        };
+        return Yq = Eq, () => {
+          Yq === Eq && (Yq = null)
+        }
+      },
+      Oq = () => {
+        var qq;
+        return null !== (qq = Yq) && void 0 !== qq && qq.canCycle() ? Yq.cycle : null
+      }
+  },
+  8780: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => lq,
+      g: () => mq,
+      i: () => Oq,
+      m: () => Yq,
+      p: () => xq,
+      r: () => cq,
+      u: () => uq
+    });
+    const Yq = "controllerActionWheelOpen",
+      lq = "controllerActionWheelAim",
+      Oq = "controllerActionWheelCommit",
+      mq = "controllerActionWheelClose",
+      xq = "controllerActionWheelPick";
+    let Aq = !1;
+    const cq = () => Aq,
+      uq = qq => {
+        Aq = qq
+      }
+  },
+  8773: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => Oq,
+      g: () => lq
+    });
+    let Yq = 0;
+    const lq = () => {
+        Yq++
+      },
+      Oq = () => Yq
+  },
+  8662: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Aq,
+      g: () => lq,
+      h: () => mq,
+      i: () => Oq,
+      k: () => Yq,
+      m: () => cq
+    });
+    const Yq = "controllerQuickChatWheelOpen",
+      lq = "controllerQuickChatWheelAim",
+      Oq = "controllerQuickChatWheelCommit",
+      mq = "controllerQuickChatWheelClose";
+    let xq = !1;
+    const Aq = () => xq,
+      cq = qq => {
+        xq = qq
+      }
+  },
+  8846: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => xq,
+      e: () => Aq
+    });
+    var Yq = gq(24),
+      lq = gq(1308),
+      Oq = gq(96);
+    const mq = {
+      blockMined: {
+        pattern: [18],
+        priority: 1,
+        minGapMs: 120
+      },
+      hitLanded: {
+        pattern: [20],
+        priority: 2,
+        minGapMs: 80
+      },
+      damageTaken: {
+        pattern: [45],
+        priority: 3,
+        minGapMs: 250
+      },
+      fishBite: {
+        pattern: null,
+        priority: 3,
+        minGapMs: 0
+      },
+      death: {
+        pattern: [60, 70, 120],
+        priority: 4,
+        minGapMs: 0
+      },
+      lockReady: {
+        pattern: [8],
+        priority: 2,
+        minGapMs: 0
+      },
+      lockLocked: {
+        pattern: [15, 50, 15],
+        priority: 2,
+        minGapMs: 0
+      },
+      autorunLedgeStop: {
+        pattern: [40],
+        priority: 3,
+        minGapMs: 0
+      }
+    };
+
+    function xq() {
+      return (0, Oq.isMobile)() && "function" === typeof navigator.vibrate
+    }
+    const Aq = new class {
+      constructor(qq) {
+        this.deps = qq, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+      }
+      play(qq, Eq) {
+        var gq;
+        if (!this.deps.enabled()) return;
+        const Yq = mq[qq],
+          lq = null !== Eq && void 0 !== Eq ? Eq : Yq.pattern;
+        if (null === lq) return void console.warn("No vibration pattern for", qq);
+        const Oq = this.deps.now();
+        Oq - this.lastAnyAt < 40 && Yq.priority < this.playingPriority || Oq - (null !== (gq = this.lastAt.get(qq)) && void 0 !== gq ? gq : -1 / 0) < Yq.minGapMs || Oq < this.playingUntil && Yq.priority < this.playingPriority || (this.lastAt.set(qq, Oq), this.lastAnyAt = Oq, this.playingUntil = Oq + lq.reduce(((qq, Eq) => qq + Eq), 0), this.playingPriority = Yq.priority, this.deps.vibrate(lq))
+      }
+    }({
+      vibrate: qq => {
+        navigator.vibrate([...qq])
+      },
+      now: () => performance.now(),
+      enabled: () => xq() && Yq.b.get("isTouchScreen") && Yq.b.get("clientEscMenuOptions").vibration && !(0, lq.i)()
+    })
+  },
+  8723: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => mq
+    });
+    var Yq = gq(8729),
+      lq = gq(598),
+      Oq = gq(136);
+
+    function mq(qq) {
+      var Eq, gq;
+      if ((0, lq.H)(qq)) return !0;
+      const mq = null !== (Eq = null === (gq = Oq.k[Oq.n]) || void 0 === gq ? void 0 : gq.adConfig.showRewardedAds) && void 0 !== Eq && Eq;
+      for (const lq in qq) {
+        const Eq = qq[lq];
+        if (null !== Eq && void 0 !== Eq && Eq.items)
+          for (const qq in Eq.items)
+            if ((0, Yq.h)(Eq.items[qq], mq)) return !1
+      }
+      return !0
+    }
+  },
+  8742: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => lq,
+      e: () => Yq
+    });
+    const Yq = 100;
+
+    function lq(qq) {
+      let {
+        translationKeys: Eq = !1
+      } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      return qq.map((qq => {
+        var gq;
+        return null !== (gq = function(qq, Eq) {
+          if ("string" === typeof qq) return qq;
+          const gq = "str" in qq ? qq.str : qq;
+          if ("string" === typeof gq) return gq;
+          if ("entityName" in gq) return gq.entityName;
+          if (Eq && "translationKey" in gq) return `{${gq.translationKey}${void 0===gq.params?"":` ${JSON.stringify(gq.params)}`}}`;
+          return null
+        }(qq, Eq)) && void 0 !== gq ? gq : " "
+      })).join("")
+    }
+  },
+  8794: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => uq,
+      g: () => xq,
+      j: () => Aq
+    });
+    var Yq = gq(2182),
+      lq = gq(1226),
+      Oq = gq(2189);
+    const mq = ",";
+
+    function xq(qq) {
+      if (!qq) return [];
+      const Eq = new Set,
+        gq = [];
+      for (const Yq of qq.split(mq)) {
+        const qq = Yq.trim();
+        if ((0, Oq.k)(qq) && !Eq.has(qq) && (Eq.add(qq), gq.push(qq), gq.length >= lq.o)) break
+      }
+      return gq
+    }
+
+    function Aq(qq) {
+      const Eq = new Set,
+        gq = [];
+      for (const Yq of qq)
+        if ((0, Oq.k)(Yq) && !Eq.has(Yq) && (Eq.add(Yq), gq.push(Yq), gq.length >= lq.o)) break;
+      return gq.join(mq)
+    }
+
+    function cq() {
+      return Aq(Oq.f)
+    }
+
+    function uq(qq) {
+      var Eq;
+      return "emote" === qq ? cq() : null !== (Eq = Bq[qq][0]) && void 0 !== Eq ? Eq : Wq[qq]
+    }
+    const Bq = lq.w.reduce(((qq, Eq) => {
+        const gq = [];
+        for (const Oq in Yq.f[Eq]) {
+          var lq;
+          "default" === (null === (lq = (0, Yq.l)(Eq, Oq)) || void 0 === lq ? void 0 : lq.cosmeticPack) && gq.push(Oq)
+        }
+        return qq[Eq] = gq, qq
       }), {}),
-      dz = nz.u.reduce(((zz, uz) => (zz[uz] = Object.keys(Ez.h[uz])[0], zz)), {})
-  }
+      Wq = lq.w.reduce(((qq, Eq) => (qq[Eq] = Object.keys(Yq.f[Eq])[0], qq)), {})
+  },
+  8729: (qq, Eq, gq) => {
+    function Yq(qq, Eq) {
+      return !qq.hidden && (Eq || !qq.isRewardedAd)
+    }
+
+    function lq(qq) {
+      return "object" === typeof qq ? qq.option : qq
+    }
+
+    function Oq(qq, Eq) {
+      var gq;
+      if ("dropdown" === (null === (gq = qq.userInput) || void 0 === gq ? void 0 : gq.type) && "object" === typeof qq.userInput.dropdownOptions[0]) {
+        for (const gq of qq.userInput.dropdownOptions)
+          if (lq(gq) === Eq) return "object" === typeof gq ? gq.cost : qq.cost;
+        console.error("Didn't find matching option for dropdown item. Item:", qq, "input:", Eq)
+      }
+      return qq.cost
+    }
+
+    function mq(qq, Eq, gq) {
+      var Yq;
+      const lq = null !== (Yq = gq.excludedPlayers) && void 0 !== Yq ? Yq : [Eq];
+      return qq.filter((qq => !lq.includes(qq)))
+    }
+    gq.d(Eq, {
+      d: () => Oq,
+      f: () => lq,
+      g: () => mq,
+      h: () => Yq
+    })
+  },
+  8787: () => {}
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const qq in modules) Object.freeze(modules[qq]);

@@ -1,260 +1,248 @@
 export const id = 233;
-export const ids = [232, 233];
+export const ids = [233];
 export const modules = {
-  60322: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      RegisterShaderMaterial: () => Ez.b,
-      ShaderMaterial: () => Ez.p,
-      ShaderMaterialCreateFromSnippetAsync: () => Ez.f,
-      ShaderMaterialParse: () => Ez.l,
-      ShaderMaterialParseFromFileAsync: () => Ez.i,
-      ShaderMaterialParseFromSnippetAsync: () => Ez.k
+  37758: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => lq
     });
-    var Ez = bz(39634);
-    (0, Ez.b)()
-  },
-  37235: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => nz
-    });
-    var Ez = bz(37239);
-    class nz {
-      static GetPlanes(zz) {
-        const uz = [];
-        for (let bz = 0; bz < 6; bz++) uz.push(new Ez.b(0, 0, 0, 0));
-        return nz.GetPlanesToRef(zz, uz), uz
+    var Yq = gq(37767);
+    class lq {
+      static GetPlanes(qq) {
+        const Eq = [];
+        for (let gq = 0; gq < 6; gq++) Eq.push(new Yq.d(0, 0, 0, 0));
+        return lq.GetPlanesToRef(qq, Eq), Eq
       }
-      static GetNearPlaneToRef(zz, uz) {
-        const bz = zz.m;
-        uz.normal.x = bz[3] + bz[2], uz.normal.y = bz[7] + bz[6], uz.normal.z = bz[11] + bz[10], uz.d = bz[15] + bz[14], uz.normalize()
+      static GetNearPlaneToRef(qq, Eq) {
+        const gq = qq.m;
+        Eq.normal.x = gq[3] + gq[2], Eq.normal.y = gq[7] + gq[6], Eq.normal.z = gq[11] + gq[10], Eq.d = gq[15] + gq[14], Eq.normalize()
       }
-      static GetFarPlaneToRef(zz, uz) {
-        const bz = zz.m;
-        uz.normal.x = bz[3] - bz[2], uz.normal.y = bz[7] - bz[6], uz.normal.z = bz[11] - bz[10], uz.d = bz[15] - bz[14], uz.normalize()
+      static GetFarPlaneToRef(qq, Eq) {
+        const gq = qq.m;
+        Eq.normal.x = gq[3] - gq[2], Eq.normal.y = gq[7] - gq[6], Eq.normal.z = gq[11] - gq[10], Eq.d = gq[15] - gq[14], Eq.normalize()
       }
-      static GetLeftPlaneToRef(zz, uz) {
-        const bz = zz.m;
-        uz.normal.x = bz[3] + bz[0], uz.normal.y = bz[7] + bz[4], uz.normal.z = bz[11] + bz[8], uz.d = bz[15] + bz[12], uz.normalize()
+      static GetLeftPlaneToRef(qq, Eq) {
+        const gq = qq.m;
+        Eq.normal.x = gq[3] + gq[0], Eq.normal.y = gq[7] + gq[4], Eq.normal.z = gq[11] + gq[8], Eq.d = gq[15] + gq[12], Eq.normalize()
       }
-      static GetRightPlaneToRef(zz, uz) {
-        const bz = zz.m;
-        uz.normal.x = bz[3] - bz[0], uz.normal.y = bz[7] - bz[4], uz.normal.z = bz[11] - bz[8], uz.d = bz[15] - bz[12], uz.normalize()
+      static GetRightPlaneToRef(qq, Eq) {
+        const gq = qq.m;
+        Eq.normal.x = gq[3] - gq[0], Eq.normal.y = gq[7] - gq[4], Eq.normal.z = gq[11] - gq[8], Eq.d = gq[15] - gq[12], Eq.normalize()
       }
-      static GetTopPlaneToRef(zz, uz) {
-        const bz = zz.m;
-        uz.normal.x = bz[3] - bz[1], uz.normal.y = bz[7] - bz[5], uz.normal.z = bz[11] - bz[9], uz.d = bz[15] - bz[13], uz.normalize()
+      static GetTopPlaneToRef(qq, Eq) {
+        const gq = qq.m;
+        Eq.normal.x = gq[3] - gq[1], Eq.normal.y = gq[7] - gq[5], Eq.normal.z = gq[11] - gq[9], Eq.d = gq[15] - gq[13], Eq.normalize()
       }
-      static GetBottomPlaneToRef(zz, uz) {
-        const bz = zz.m;
-        uz.normal.x = bz[3] + bz[1], uz.normal.y = bz[7] + bz[5], uz.normal.z = bz[11] + bz[9], uz.d = bz[15] + bz[13], uz.normalize()
+      static GetBottomPlaneToRef(qq, Eq) {
+        const gq = qq.m;
+        Eq.normal.x = gq[3] + gq[1], Eq.normal.y = gq[7] + gq[5], Eq.normal.z = gq[11] + gq[9], Eq.d = gq[15] + gq[13], Eq.normalize()
       }
-      static GetPlanesToRef(zz, uz) {
-        nz.GetNearPlaneToRef(zz, uz[0]), nz.GetFarPlaneToRef(zz, uz[1]), nz.GetLeftPlaneToRef(zz, uz[2]), nz.GetRightPlaneToRef(zz, uz[3]), nz.GetTopPlaneToRef(zz, uz[4]), nz.GetBottomPlaneToRef(zz, uz[5])
+      static GetPlanesToRef(qq, Eq) {
+        lq.GetNearPlaneToRef(qq, Eq[0]), lq.GetFarPlaneToRef(qq, Eq[1]), lq.GetLeftPlaneToRef(qq, Eq[2]), lq.GetRightPlaneToRef(qq, Eq[3]), lq.GetTopPlaneToRef(qq, Eq[4]), lq.GetBottomPlaneToRef(qq, Eq[5])
       }
-      static IsPointInFrustum(zz, uz) {
-        for (let bz = 0; bz < 6; bz++)
-          if (uz[bz].dotCoordinate(zz) < 0) return !1;
+      static IsPointInFrustum(qq, Eq) {
+        for (let gq = 0; gq < 6; gq++)
+          if (Eq[gq].dotCoordinate(qq) < 0) return !1;
         return !0
       }
     }
   },
-  37239: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => nz
+  37767: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => lq
     });
-    var Ez = bz(36519);
-    class nz {
-      constructor(zz, uz, bz, nz) {
-        this.normal = new Ez.n(zz, uz, bz), this.d = nz
+    var Yq = gq(37139);
+    class lq {
+      constructor(qq, Eq, gq, lq) {
+        this.normal = new Yq.q(qq, Eq, gq), this.d = lq
       }
-      obz() {
+      bYq() {
         return [this.normal.x, this.normal.y, this.normal.z, this.d]
       }
       clone() {
-        return new nz(this.normal.x, this.normal.y, this.normal.z, this.d)
+        return new lq(this.normal.x, this.normal.y, this.normal.z, this.d)
       }
       getClassName() {
         return "Plane"
       }
       getHashCode() {
-        let zz = this.normal.getHashCode();
-        return zz = 397 * zz ^ this.d, zz
+        let qq = this.normal.getHashCode();
+        return qq = 397 * qq ^ this.d, qq
       }
       normalize() {
-        const zz = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let uz = 0;
-        return 0 !== zz && (uz = 1 / zz), this.normal.x *= uz, this.normal.y *= uz, this.normal.z *= uz, this.d *= uz, this
+        const qq = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let Eq = 0;
+        return 0 !== qq && (Eq = 1 / qq), this.normal.x *= Eq, this.normal.y *= Eq, this.normal.z *= Eq, this.d *= Eq, this
       }
-      transform(zz) {
-        const uz = nz._TmpMatrix;
-        zz.invertToRef(uz);
-        const bz = uz.m,
-          Ez = this.normal.x,
-          iz = this.normal.y,
-          lz = this.normal.z,
-          Mz = this.d,
-          tz = Ez * bz[0] + iz * bz[1] + lz * bz[2] + Mz * bz[3],
-          Hz = Ez * bz[4] + iz * bz[5] + lz * bz[6] + Mz * bz[7],
-          Oz = Ez * bz[8] + iz * bz[9] + lz * bz[10] + Mz * bz[11],
-          pz = Ez * bz[12] + iz * bz[13] + lz * bz[14] + Mz * bz[15];
-        return new nz(tz, Hz, Oz, pz)
+      transform(qq) {
+        const Eq = lq._TmpMatrix;
+        qq.invertToRef(Eq);
+        const gq = Eq.m,
+          Yq = this.normal.x,
+          Oq = this.normal.y,
+          mq = this.normal.z,
+          xq = this.d,
+          Aq = Yq * gq[0] + Oq * gq[1] + mq * gq[2] + xq * gq[3],
+          cq = Yq * gq[4] + Oq * gq[5] + mq * gq[6] + xq * gq[7],
+          uq = Yq * gq[8] + Oq * gq[9] + mq * gq[10] + xq * gq[11],
+          Bq = Yq * gq[12] + Oq * gq[13] + mq * gq[14] + xq * gq[15];
+        return new lq(Aq, cq, uq, Bq)
       }
-      dotCoordinate(zz) {
-        return this.normal.x * zz.x + this.normal.y * zz.y + this.normal.z * zz.z + this.d
+      dotCoordinate(qq) {
+        return this.normal.x * qq.x + this.normal.y * qq.y + this.normal.z * qq.z + this.d
       }
-      copyFromPoints(zz, uz, bz) {
-        const Ez = uz.x - zz.x,
-          nz = uz.y - zz.y,
-          iz = uz.z - zz.z,
-          lz = bz.x - zz.x,
-          Mz = bz.y - zz.y,
-          tz = bz.z - zz.z,
-          Hz = nz * tz - iz * Mz,
-          Oz = iz * lz - Ez * tz,
-          pz = Ez * Mz - nz * lz,
-          dz = Math.sqrt(Hz * Hz + Oz * Oz + pz * pz);
-        let Fz;
-        return Fz = 0 !== dz ? 1 / dz : 0, this.normal.x = Hz * Fz, this.normal.y = Oz * Fz, this.normal.z = pz * Fz, this.d = -(this.normal.x * zz.x + this.normal.y * zz.y + this.normal.z * zz.z), this
+      copyFromPoints(qq, Eq, gq) {
+        const Yq = Eq.x - qq.x,
+          lq = Eq.y - qq.y,
+          Oq = Eq.z - qq.z,
+          mq = gq.x - qq.x,
+          xq = gq.y - qq.y,
+          Aq = gq.z - qq.z,
+          cq = lq * Aq - Oq * xq,
+          uq = Oq * mq - Yq * Aq,
+          Bq = Yq * xq - lq * mq,
+          Wq = Math.sqrt(cq * cq + uq * uq + Bq * Bq);
+        let Nq;
+        return Nq = 0 !== Wq ? 1 / Wq : 0, this.normal.x = cq * Nq, this.normal.y = uq * Nq, this.normal.z = Bq * Nq, this.d = -(this.normal.x * qq.x + this.normal.y * qq.y + this.normal.z * qq.z), this
       }
-      isFrontFacingTo(zz, uz) {
-        return Ez.n.Dot(this.normal, zz) <= uz
+      isFrontFacingTo(qq, Eq) {
+        return Yq.q.Dot(this.normal, qq) <= Eq
       }
-      signedDistanceTo(zz) {
-        return Ez.n.Dot(zz, this.normal) + this.d
+      signedDistanceTo(qq) {
+        return Yq.q.Dot(qq, this.normal) + this.d
       }
-      static FromArray(zz) {
-        return new nz(zz[0], zz[1], zz[2], zz[3])
+      static FromArray(qq) {
+        return new lq(qq[0], qq[1], qq[2], qq[3])
       }
-      static FromPoints(zz, uz, bz) {
-        const Ez = new nz(0, 0, 0, 0);
-        return Ez.copyFromPoints(zz, uz, bz), Ez
+      static FromPoints(qq, Eq, gq) {
+        const Yq = new lq(0, 0, 0, 0);
+        return Yq.copyFromPoints(qq, Eq, gq), Yq
       }
-      static FromPositionAndNormal(zz, uz) {
-        const bz = new nz(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(zz, uz, bz)
+      static FromPositionAndNormal(qq, Eq) {
+        const gq = new lq(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(qq, Eq, gq)
       }
-      static FromPositionAndNormalToRef(zz, uz, bz) {
-        return bz.normal.euz(uz), bz.normal.normalize(), bz.d = -zz.dot(bz.normal), bz
+      static FromPositionAndNormalToRef(qq, Eq, gq) {
+        return gq.normal.WG(Eq), gq.normal.normalize(), gq.d = -qq.dot(gq.normal), gq
       }
-      static SignedDistanceToPlaneFromPositionAndNormal(zz, uz, bz) {
-        const nz = -(uz.x * zz.x + uz.y * zz.y + uz.z * zz.z);
-        return Ez.n.Dot(bz, uz) + nz
+      static SignedDistanceToPlaneFromPositionAndNormal(qq, Eq, gq) {
+        const lq = -(Eq.x * qq.x + Eq.y * qq.y + Eq.z * qq.z);
+        return Yq.q.Dot(gq, Eq) + lq
       }
     }
-    nz._TmpMatrix = Ez.d.Identity()
+    lq._TmpMatrix = Yq.e.Identity()
   },
-  38054: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => iz
+  38649: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Oq
     });
-    var Ez = bz(38060);
-    const nz = (zz, uz, bz) => zz ? zz.getClassName && "Mesh" === zz.getClassName() ? null : !zz.getClassName || "SubMesh" !== zz.getClassName() && "PhysicsBody" !== zz.getClassName() ? zz.clone ? zz.clone() : Array.isArray(zz) ? zz.slice() : bz && "object" === typeof zz ? {
-      ...zz
-    } : null : zz.clone(uz) : null;
-    class iz {
-      static DeepCopy(zz, uz, bz, iz) {
-        let lz = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const Mz = function(zz) {
-          const uz = [];
+    var Yq = gq(38653);
+    const lq = (qq, Eq, gq) => qq ? qq.getClassName && "Mesh" === qq.getClassName() ? null : !qq.getClassName || "SubMesh" !== qq.getClassName() && "PhysicsBody" !== qq.getClassName() ? qq.clone ? qq.clone() : Array.isArray(qq) ? qq.slice() : gq && "object" === typeof qq ? {
+      ...qq
+    } : null : qq.clone(Eq) : null;
+    class Oq {
+      static DeepCopy(qq, Eq, gq, Oq) {
+        let mq = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const xq = function(qq) {
+          const Eq = [];
           do {
-            const bz = Object.getOwnPropertyNames(zz);
-            for (const zz of bz) - 1 === uz.indexOf(zz) && uz.push(zz)
-          } while (zz = Object.getPrototypeOf(zz));
-          return uz
-        }(zz);
-        for (const Hz of Mz) {
-          if ("_" === Hz[0] && (!iz || -1 === iz.indexOf(Hz))) continue;
-          if (Hz.endsWith("Observable")) continue;
-          if (bz && -1 !== bz.indexOf(Hz)) continue;
-          const Mz = zz[Hz],
-            Oz = typeof Mz;
-          if ("function" !== Oz) try {
-            if ("object" === Oz)
-              if (Mz instanceof Uint8Array) uz[Hz] = Uint8Array.from(Mz);
-              else if (Mz instanceof Array) {
-              if (uz[Hz] = [], Mz.length > 0)
-                if ("object" == typeof Mz[0])
-                  for (let zz = 0; zz < Mz.length; zz++) {
-                    const bz = nz(Mz[zz], uz, lz); - 1 === uz[Hz].indexOf(bz) && uz[Hz].push(bz)
-                  } else uz[Hz] = Mz.slice(0)
-            } else uz[Hz] = nz(Mz, uz, lz);
-            else uz[Hz] = Mz
-          } catch (tz) {
-            Ez.e.Warn(tz.message)
+            const gq = Object.getOwnPropertyNames(qq);
+            for (const qq of gq) - 1 === Eq.indexOf(qq) && Eq.push(qq)
+          } while (qq = Object.getPrototypeOf(qq));
+          return Eq
+        }(qq);
+        for (const cq of xq) {
+          if ("_" === cq[0] && (!Oq || -1 === Oq.indexOf(cq))) continue;
+          if (cq.endsWith("Observable")) continue;
+          if (gq && -1 !== gq.indexOf(cq)) continue;
+          const xq = qq[cq],
+            uq = typeof xq;
+          if ("function" !== uq) try {
+            if ("object" === uq)
+              if (xq instanceof Uint8Array) Eq[cq] = Uint8Array.from(xq);
+              else if (xq instanceof Array) {
+              if (Eq[cq] = [], xq.length > 0)
+                if ("object" == typeof xq[0])
+                  for (let qq = 0; qq < xq.length; qq++) {
+                    const gq = lq(xq[qq], Eq, mq); - 1 === Eq[cq].indexOf(gq) && Eq[cq].push(gq)
+                  } else Eq[cq] = xq.slice(0)
+            } else Eq[cq] = lq(xq, Eq, mq);
+            else Eq[cq] = xq
+          } catch (Aq) {
+            Yq.b.Warn(Aq.message)
           }
         }
       }
     }
   },
-  37335: (zz, uz, bz) => {
-    function Ez() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (zz => {
-        const uz = 16 * Math.random() | 0;
-        return ("x" === zz ? uz : 3 & uz | 8).toString(16)
+  37872: (qq, Eq, gq) => {
+    function Yq() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (qq => {
+        const Eq = 16 * Math.random() | 0;
+        return ("x" === qq ? Eq : 3 & Eq | 8).toString(16)
       }))
     }
-    bz.d(uz, {
-      c: () => Ez
+    gq.d(Eq, {
+      d: () => Yq
     })
   },
-  38060: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Ez
+  38653: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Yq
     });
-    class Ez {
-      static _CheckLimit(zz, uz) {
-        let bz = Ez._LogLimitOutputs[zz];
-        return bz ? bz.current++ : (bz = {
-          limit: uz,
+    class Yq {
+      static _CheckLimit(qq, Eq) {
+        let gq = Yq._LogLimitOutputs[qq];
+        return gq ? gq.current++ : (gq = {
+          limit: Eq,
           current: 1
-        }, Ez._LogLimitOutputs[zz] = bz), bz.current <= bz.limit
+        }, Yq._LogLimitOutputs[qq] = gq), gq.current <= gq.limit
       }
-      static _GenerateLimitMessage(zz) {
-        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const bz = Ez._LogLimitOutputs[zz];
-        if (!bz || !Ez.MessageLimitReached) return;
-        const nz = this._Levels[uz];
-        bz.current === bz.limit && Ez[nz.name](Ez.MessageLimitReached.replace(/%LIMIT%/g, "" + bz.limit).replace(/%TYPE%/g, nz.name ?? ""))
+      static _GenerateLimitMessage(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const gq = Yq._LogLimitOutputs[qq];
+        if (!gq || !Yq.MessageLimitReached) return;
+        const lq = this._Levels[Eq];
+        gq.current === gq.limit && Yq[lq.name](Yq.MessageLimitReached.replace(/%LIMIT%/g, "" + gq.limit).replace(/%TYPE%/g, lq.name ?? ""))
       }
-      static _AddLogEntry(zz) {
-        Ez._LogCache = zz + Ez._LogCache, Ez.OnNewCacheEntry && Ez.OnNewCacheEntry(zz)
+      static _AddLogEntry(qq) {
+        Yq._LogCache = qq + Yq._LogCache, Yq.OnNewCacheEntry && Yq.OnNewCacheEntry(qq)
       }
-      static _FormatMessage(zz) {
-        const uz = zz => zz < 10 ? "0" + zz : "" + zz,
-          bz = new Date;
-        return "[" + uz(bz.getHours()) + ":" + uz(bz.getMinutes()) + ":" + uz(bz.getSeconds()) + "]: " + zz
+      static _FormatMessage(qq) {
+        const Eq = qq => qq < 10 ? "0" + qq : "" + qq,
+          gq = new Date;
+        return "[" + Eq(gq.getHours()) + ":" + Eq(gq.getMinutes()) + ":" + Eq(gq.getSeconds()) + "]: " + qq
       }
-      static _LogDisabled(zz, uz) {}
+      static _LogDisabled(qq, Eq) {}
       static _LogEnabled() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          uz = arguments.length > 1 ? arguments[1] : void 0,
-          bz = arguments.length > 2 ? arguments[2] : void 0;
-        const nz = Array.isArray(uz) ? uz[0] : uz;
-        if (void 0 !== bz && !Ez._CheckLimit(nz, bz)) return;
-        const iz = Ez._FormatMessage(nz),
-          lz = this._Levels[zz],
-          Mz = Array.isArray(uz) ? uz.slice(1) : [];
-        lz.logFunc && lz.logFunc("BJS - " + iz, ...Mz);
-        const tz = `<div style='color:${lz.color}'>${iz}</div><br>`;
-        Ez._AddLogEntry(tz), Ez._GenerateLimitMessage(nz, zz)
+        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Eq = arguments.length > 1 ? arguments[1] : void 0,
+          gq = arguments.length > 2 ? arguments[2] : void 0;
+        const lq = Array.isArray(Eq) ? Eq[0] : Eq;
+        if (void 0 !== gq && !Yq._CheckLimit(lq, gq)) return;
+        const Oq = Yq._FormatMessage(lq),
+          mq = this._Levels[qq],
+          xq = Array.isArray(Eq) ? Eq.slice(1) : [];
+        mq.logFunc && mq.logFunc("BJS - " + Oq, ...xq);
+        const Aq = `<div style='color:${mq.color}'>${Oq}</div><br>`;
+        Yq._AddLogEntry(Aq), Yq._GenerateLimitMessage(lq, qq)
       }
       static get LogCache() {
-        return Ez._LogCache
+        return Yq._LogCache
       }
       static ClearLogCache() {
-        Ez._LogCache = "", Ez._LogLimitOutputs = {}, Ez.errorsCount = 0
+        Yq._LogCache = "", Yq._LogLimitOutputs = {}, Yq.errorsCount = 0
       }
-      static set LogLevels(zz) {
-        Ez.Log = Ez._LogDisabled, Ez.Warn = Ez._LogDisabled, Ez.Error = Ez._LogDisabled;
-        const uz = [Ez.MessageLogLevel, Ez.WarningLogLevel, Ez.ErrorLogLevel];
-        for (const bz of uz)
-          if ((zz & bz) === bz) {
-            const zz = this._Levels[bz];
-            Ez[zz.name] = Ez._LogEnabled.bind(Ez, bz)
+      static set LogLevels(qq) {
+        Yq.Log = Yq._LogDisabled, Yq.Warn = Yq._LogDisabled, Yq.Error = Yq._LogDisabled;
+        const Eq = [Yq.MessageLogLevel, Yq.WarningLogLevel, Yq.ErrorLogLevel];
+        for (const gq of Eq)
+          if ((qq & gq) === gq) {
+            const qq = this._Levels[gq];
+            Yq[qq.name] = Yq._LogEnabled.bind(Yq, gq)
           }
       }
     }
-    Ez.NoneLogLevel = 0, Ez.MessageLogLevel = 1, Ez.WarningLogLevel = 2, Ez.ErrorLogLevel = 4, Ez.AllLogLevel = 7, Ez.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Ez._LogCache = "", Ez._LogLimitOutputs = {}, Ez._Levels = [{}, {
+    Yq.NoneLogLevel = 0, Yq.MessageLogLevel = 1, Yq.WarningLogLevel = 2, Yq.ErrorLogLevel = 4, Yq.AllLogLevel = 7, Yq.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Yq._LogCache = "", Yq._LogLimitOutputs = {}, Yq._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -266,8 +254,8 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], Ez.errorsCount = 0, Ez.Log = Ez._LogEnabled.bind(Ez, Ez.MessageLogLevel), Ez.Warn = Ez._LogEnabled.bind(Ez, Ez.WarningLogLevel), Ez.Error = Ez._LogEnabled.bind(Ez, Ez.ErrorLogLevel)
+    }], Yq.errorsCount = 0, Yq.Log = Yq._LogEnabled.bind(Yq, Yq.MessageLogLevel), Yq.Warn = Yq._LogEnabled.bind(Yq, Yq.WarningLogLevel), Yq.Error = Yq._LogEnabled.bind(Yq, Yq.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const qq in modules) Object.freeze(modules[qq]);

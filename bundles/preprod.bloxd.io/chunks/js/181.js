@@ -1,37 +1,37 @@
 export const id = 181;
 export const ids = [181];
 export const modules = {
-  8729: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      pageBody: () => Ez
+  9010: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      pageBody: () => Yq
     });
-    const Ez = {
-      whatIs: ["You might not be the only one checking in. Bloxd Horror Hotel sends you down an infinite hallway of hotel rooms, collecting items so you can level up and decorate a room of your own. Anyone can play for free, straight from a browser tab. Just be careful what's waiting behind the doors..."],
-      howToPlay: ["Your stay starts in a tiny room, so first things first: go and complain to the manager. The first upgrade is free. After that, upgrades cost items, beginning with a red bed you'll have to \"borrow\" from someone else's room. Head down the corridor to find what you need. Some doors open into bedrooms with strange guests. Others lead to forests, mines, mazes and buried treasure.", "Got the items? Use the home button on the left to fast travel back. You can keep upgrading all the way to level 22, change your room colours and invite friends round. You also get to decide whether PvP, visitors and editors are allowed in your room. Play nicely, though. Take down too many players in a row and the Angry Hotel Manager steps in, and you won't like what happens next. Oh, and if you hear a sudden spooky sound, there might be a skinwalker close by."],
-      features: ["An Infinite Hallway of Hotel Rooms to Explore", "Forest, Mining, Maze and Buried Treasure Rooms", "Quirky Guests Who Need Your Help", "Upgrade Your Room All the Way to Level 22", "Pick from a Range of Room Colours", "Invite Friends and Control PvP, Visitors and Editors", "A Creepy Skinwalker and a Secret Room to Find"],
-      tips: ["Talk to the manager first and grab your free room upgrade", "Check what your next upgrade costs, then go looking for those items in other rooms", "Help guests with their requests, like the thirsty guest in the desert room", "Use the home button on the left to fast travel back to your room", "Friends need a high enough room level before you can invite them", "Don't go on a streak of attacking other players, or the Angry Hotel Manager will definately step in", "Keep exploring. There's always another room further down the hall"],
-      similarGames: ["ninetyNineNights", "containmentBreach", "backrooms", "murderMystery"],
+    const Yq = {
+      whatIs: ["Something's broken loose in an abandoned research lab, and your squad has been sent in to deal with it. Bloxd Containment Breach is a co-op PvE survival horror shooter. You fight through the infested halls, contain the anomaly before the breach spreads, and then try to get out alive. Grab some friends and see if you can make it."],
+      howToPlay: ["Get your squad together in the lobby and visit the Loadout NPC. That's where you choose a primary gun, a secondary, throwables, healing items, armour and a perk. Then step onto a queue pad: Normal takes up to 6 players and Hard takes up to 4. You need at least 2 to start. Every run builds a fresh chain of lab rooms full of infected scientists and failed experiments. Sealed doors open as you push on, and an objective arrow shows you the way.", "Clear each room, open the loot chests and track down the anomaly. Each anomaly is a different boss.", "Go down and you turn into a ghost. Mobs ignore ghosts and ghosts can't shoot, but you can still help out with ghost actions like Open Path. A teammate can revive you with a splash healing potion, and you'll get your inventory back. If the whole squad ends up as ghosts, the run's over. Contain the anomaly and you earn a boss part, which you can spend along with the gold from your kills on better gear."],
+      features: ["Normal (Up to 6 Players) and Hard (Up to 4 Players) Difficulties", "A New Chain of Lab Rooms Every Run", "9 Anomaly Bosses to Find and Contain", "Encounters That Adapt as You Play", "Loadouts with Guns, Throwables, Healing, Armour and Perks", "Upgrade Your Gear with Gold and Boss Parts", "Ghost Mode and Team Revives", "Locators to Choose Which Anomaly You Face", "A Codex to Track Every Anomaly You've Met and Contained"],
+      tips: ["Stick with your squad. Being alone in the dark is how you go down", "Carry splash healing potions so you can revive teammates", "Open every loot chest you come across", "Turned into a ghost? Use Open Path to help your team", "Contain anomalies to earn boss parts for higher-tier gear", "Arm a Locator before deploying if you need parts from a particular anomaly", "Try Normal before you take on Hard"],
+      similarGames: ["ninetyNineNights", "horrorHotel", "infection", "backrooms"],
       faq: [{
-        question: "What is Bloxd Horror Hotel?",
-        answer: "A spooky exploration game. You wander an endless hotel, collect items from other rooms and use them to upgrade and decorate your own."
+        question: "What is Bloxd Containment Breach?",
+        answer: "A co-op PvE horror shooter. Your squad fights through an abandoned research lab to find and contain a dangerous anomaly."
       }, {
-        question: "Does Horror Hotel really have infinite rooms?",
-        answer: "It does. The hallway just keeps going, with bedrooms, forests, mines, mazes and buried treasure rooms to find. There's even a secret room hidden somewhere."
+        question: "How many players can play Containment Breach?",
+        answer: "Up to 6 on Normal, or up to 4 on Hard."
       }, {
-        question: "How do I upgrade my room in Horror Hotel?",
-        answer: "Talk to the manager. The first upgrade's free, then each level costs items you find around the hotel, starting with a red bed."
+        question: "Can I play Containment Breach solo?",
+        answer: "Not on your own, sorry. A run needs at least 2 players, so bring a friend or team up with someone in the lobby."
       }, {
-        question: "What is the max room level in Horror Hotel?",
-        answer: "Level 22. Once you hit it, your room is maxed out."
+        question: "What happens when you go down in Containment Breach?",
+        answer: "You become a ghost until a teammate revives you with a splash healing potion. If everyone ends up as a ghost, the run is lost."
       }, {
-        question: "Can friends visit my hotel room?",
-        answer: "Yes, as long as their room level is high enough. You can also choose whether to allow visitors, editors and PvP."
+        question: "How do I upgrade guns in Containment Breach?",
+        answer: "Go to the Loadout NPC and spend gold and boss parts there. Gold comes from kills, and your squad gets a boss part every time it contains an anomaly."
       }, {
-        question: "Is Horror Hotel scary?",
-        answer: "A bit! It's spooky, with odd guests, eerie sounds and a skinwalker lurking about. It's creepy rather than gory, and you can explore at your own pace."
+        question: "Can I choose which anomaly I fight?",
+        answer: "Yes. Buy a Locator from the Locator NPC and arm it before you deploy. It shatters after one use."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const qq in modules) Object.freeze(modules[qq]);

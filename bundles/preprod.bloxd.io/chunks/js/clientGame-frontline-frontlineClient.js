@@ -1,128 +1,128 @@
 export const id = 17;
 export const ids = [17];
 export const modules = {
-  36066: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => Fz,
-      d: () => Zz,
-      g: () => dz,
-      h: () => pz
+  36648: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Nq,
+      g: () => aq,
+      h: () => Wq,
+      j: () => Bq
     });
-    var Ez = bz(8982),
-      nz = bz(36071),
-      iz = bz(36080),
-      lz = bz(8378),
-      Mz = bz(1417),
-      tz = bz(56),
-      Hz = bz(79),
-      Oz = bz(1089);
+    var Yq = gq(9277),
+      lq = gq(36657),
+      Oq = gq(36662),
+      mq = gq(8669),
+      xq = gq(1416),
+      Aq = gq(57),
+      cq = gq(71),
+      uq = gq(1070);
 
-    function pz() {
-      var zz;
-      return (0, Mz.h)(nz.e, (0, nz.o)()), (0, Oz.jsx)(Oz.Fragment, {
-        children: null === (zz = (0, nz.o)()) || void 0 === zz ? void 0 : zz.content
+    function Bq() {
+      var qq;
+      return (0, xq.h)(lq.c, (0, lq.l)()), (0, uq.jsx)(uq.Fragment, {
+        children: null === (qq = (0, lq.l)()) || void 0 === qq ? void 0 : qq.content
       })
     }
 
-    function dz(zz) {
-      var uz;
+    function Wq(qq) {
+      var Eq;
       let {
-        show: bz
-      } = zz;
-      (0, Mz.h)(nz.e, (0, nz.o)());
-      const Hz = null === (uz = (0, nz.o)()) || void 0 === uz ? void 0 : uz.menu;
-      return (0, tz.useEffect)((() => {
-        var zz;
-        bz || (null === Hz || void 0 === Hz || null === (zz = Hz.onClose) || void 0 === zz || zz.call(Hz), (0, iz.j)())
-      }), [bz, Hz]), (0, tz.useEffect)((() => bz ? (0, lz.e)(iz.u, iz.d) : void 0), [bz]), (0, Oz.jsx)(Ez.d, {
-        showing: bz,
+        show: gq
+      } = qq;
+      (0, xq.h)(lq.c, (0, lq.l)());
+      const cq = null === (Eq = (0, lq.l)()) || void 0 === Eq ? void 0 : Eq.menu;
+      return (0, Aq.useEffect)((() => {
+        var qq;
+        gq || (null === cq || void 0 === cq || null === (qq = cq.onClose) || void 0 === qq || qq.call(cq), (0, Oq.m)())
+      }), [gq, cq]), (0, Aq.useEffect)((() => gq ? (0, mq.i)(Oq.r, Oq.d) : void 0), [gq]), (0, uq.jsx)(Yq.b, {
+        showing: gq,
         globallyUniqueKey: "clientGameMenu",
-        children: null === Hz || void 0 === Hz ? void 0 : Hz.content
+        children: null === cq || void 0 === cq ? void 0 : cq.content
       })
     }
 
-    function Fz(zz) {
+    function Nq(qq) {
       let {
-        placement: uz = "bottom"
-      } = zz;
-      return (0, Oz.jsx)("div", {
-        id: `clientGameHud-${uz}`,
+        placement: Eq = "bottom"
+      } = qq;
+      return (0, uq.jsx)("div", {
+        id: `clientGameHud-${Eq}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function Zz(zz) {
+    function aq(qq) {
       let {
-        children: uz,
-        placement: bz = "bottom"
-      } = zz;
-      const [Ez, nz] = (0, tz.useState)(null);
-      return (0, tz.useEffect)((() => {
-        nz(document.getElementById(`clientGameHud-${bz}`))
-      }), [bz]), Ez ? (0, Hz.createPortal)(uz, Ez) : null
+        children: Eq,
+        placement: gq = "bottom"
+      } = qq;
+      const [Yq, lq] = (0, Aq.useState)(null);
+      return (0, Aq.useEffect)((() => {
+        lq(document.getElementById(`clientGameHud-${gq}`))
+      }), [gq]), Yq ? (0, cq.createPortal)(Eq, Yq) : null
     }
   },
-  8982: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => iz
+  9277: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Oq
     });
-    var Ez = bz(4298),
-      nz = bz(4300);
+    var Yq = gq(4364),
+      lq = gq(4367);
 
-    function iz(zz) {
+    function Oq(qq) {
       let {
-        children: uz,
-        showing: bz,
-        globallyUniqueKey: iz,
-        alwaysMountChildren: lz = !1,
-        doGameplayStartStopOnShow: Mz = !0,
-        keepsMovement: tz = !1
-      } = zz;
-      return (0, nz.e)(!0, bz, iz, tz), (0, Ez.d)(Mz, bz), bz || lz ? uz : null
+        children: Eq,
+        showing: gq,
+        globallyUniqueKey: Oq,
+        alwaysMountChildren: mq = !1,
+        doGameplayStartStopOnShow: xq = !0,
+        keepsMovement: Aq = !1
+      } = qq;
+      return (0, lq.e)(!0, gq, Oq, Aq), (0, Yq.d)(xq, gq), gq || mq ? Eq : null
     }
   },
-  36162: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => iz,
-      d: () => lz,
-      g: () => Mz,
-      j: () => tz
+  36740: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Oq,
+      e: () => mq,
+      i: () => xq,
+      j: () => Aq
     });
-    var Ez = bz(56),
-      nz = bz(1108);
-    const iz = 8,
-      lz = "InGameHeaderContainer",
-      Mz = "TopRightElements";
+    var Yq = gq(57),
+      lq = gq(3018);
+    const Oq = 8,
+      mq = "InGameHeaderContainer",
+      xq = "TopRightElements";
 
-    function tz(zz) {
-      const [uz] = (0, nz.b)(), [bz, tz] = (0, Ez.useState)(!1);
-      return (0, Ez.useLayoutEffect)((() => {
-        if (!zz) return;
-        const uz = document.querySelector(`.${lz}`),
-          bz = document.querySelector(`.${Mz}`),
-          Ez = () => {
-            const Ez = zz.getBoundingClientRect(),
-              nz = uz ? uz.getBoundingClientRect().right : 0,
-              lz = bz ? bz.getBoundingClientRect().left : window.innerWidth,
-              Mz = Ez.left < nz + iz,
-              Hz = Ez.right > lz - iz;
-            tz(Mz || Hz)
+    function Aq(qq) {
+      const [Eq] = (0, lq.b)(), [gq, Aq] = (0, Yq.useState)(!1);
+      return (0, Yq.useLayoutEffect)((() => {
+        if (!qq) return;
+        const Eq = document.querySelector(`.${mq}`),
+          gq = document.querySelector(`.${xq}`),
+          Yq = () => {
+            const Yq = qq.getBoundingClientRect(),
+              lq = Eq ? Eq.getBoundingClientRect().right : 0,
+              mq = gq ? gq.getBoundingClientRect().left : window.innerWidth,
+              xq = Yq.left < lq + Oq,
+              cq = Yq.right > mq - Oq;
+            Aq(xq || cq)
           };
-        Ez();
-        const nz = new ResizeObserver(Ez);
-        return nz.observe(zz), uz && nz.observe(uz), bz && nz.observe(bz), () => {
-          nz.disconnect()
+        Yq();
+        const lq = new ResizeObserver(Yq);
+        return lq.observe(qq), Eq && lq.observe(Eq), gq && lq.observe(gq), () => {
+          lq.disconnect()
         }
-      }), [zz, uz]), bz
+      }), [qq, Eq]), gq
     }
   },
-  36158: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => nz
+  36736: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => lq
     });
-    const Ez = [{
+    const Yq = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -139,214 +139,214 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function nz(zz, uz, bz) {
-      const nz = Math.abs(zz - uz),
-        iz = Date.now() - bz;
-      for (const lz of Ez)
-        if (zz < lz.maxDist) return nz >= lz.hardUpdateDist || iz > lz.timeBetweenSoftChecks && nz >= lz.softUpdateDist;
+    function lq(qq, Eq, gq) {
+      const lq = Math.abs(qq - Eq),
+        Oq = Date.now() - gq;
+      for (const mq of Yq)
+        if (qq < mq.maxDist) return lq >= mq.hardUpdateDist || Oq > mq.timeBetweenSoftChecks && lq >= mq.softUpdateDist;
       return !1
     }
   },
-  8378: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => iz,
-      e: () => nz
+  8669: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => Oq,
+      i: () => lq
     });
-    let Ez = null;
-    const nz = function(zz) {
-        const uz = {
-          cycle: zz,
+    let Yq = null;
+    const lq = function(qq) {
+        const Eq = {
+          cycle: qq,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Ez = uz, () => {
-          Ez === uz && (Ez = null)
+        return Yq = Eq, () => {
+          Yq === Eq && (Yq = null)
         }
       },
-      iz = () => {
-        var zz;
-        return null !== (zz = Ez) && void 0 !== zz && zz.canCycle() ? Ez.cycle : null
+      Oq = () => {
+        var qq;
+        return null !== (qq = Yq) && void 0 !== qq && qq.canCycle() ? Yq.cycle : null
       }
   },
-  37920: (zz, uz, bz) => {
-    function Ez(zz, uz, bz) {
-      var Ez;
+  38505: (qq, Eq, gq) => {
+    function Yq(qq, Eq, gq) {
+      var Yq;
       const {
-        width: nz,
-        height: iz
-      } = bz, lz = null !== (Ez = zz.text) && void 0 !== Ez ? Ez : zz, Mz = (lz.x / 100 - .5) * nz, tz = (lz.y / 100 - .5) * iz, Hz = nz / 2 - uz.x;
-      if (null !== zz.text && Math.abs(Mz) <= Hz && tz >= uz.top - iz / 2 && tz <= iz / 2 - uz.bottom) return {
-        x: lz.x,
-        y: lz.y
+        width: lq,
+        height: Oq
+      } = gq, mq = null !== (Yq = qq.text) && void 0 !== Yq ? Yq : qq, xq = (mq.x / 100 - .5) * lq, Aq = (mq.y / 100 - .5) * Oq, cq = lq / 2 - Eq.x;
+      if (null !== qq.text && Math.abs(xq) <= cq && Aq >= Eq.top - Oq / 2 && Aq <= Oq / 2 - Eq.bottom) return {
+        x: mq.x,
+        y: mq.y
       };
-      const Oz = Math.min(0 === Mz ? 1 / 0 : Hz / Math.abs(Mz), tz > 0 ? (iz / 2 - uz.bottom) / tz : tz < 0 ? (uz.top - iz / 2) / tz : 1 / 0);
-      return !Number.isFinite(Oz) || Oz < 0 ? {
+      const uq = Math.min(0 === xq ? 1 / 0 : cq / Math.abs(xq), Aq > 0 ? (Oq / 2 - Eq.bottom) / Aq : Aq < 0 ? (Eq.top - Oq / 2) / Aq : 1 / 0);
+      return !Number.isFinite(uq) || uq < 0 ? {
         x: 50,
         y: 50
       } : {
-        x: 50 + Mz * Oz / nz * 100,
-        y: 50 + tz * Oz / iz * 100
+        x: 50 + xq * uq / lq * 100,
+        y: 50 + Aq * uq / Oq * 100
       }
     }
-    bz.d(uz, {
-      d: () => Ez
+    gq.d(Eq, {
+      c: () => Yq
     })
   },
-  36080: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => iz,
-      d: () => Rz,
-      g: () => Kz,
-      h: () => Mz,
-      i: () => dz,
-      j: () => wz,
-      n: () => pz,
-      q: () => fz,
-      u: () => Zz,
-      x: () => Xz
+  36662: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Oq,
+      d: () => Vq,
+      g: () => dq,
+      h: () => xq,
+      l: () => Wq,
+      m: () => jq,
+      o: () => Bq,
+      p: () => oq,
+      r: () => aq,
+      v: () => Hq
     });
-    var Ez = bz(20),
-      nz = bz(22);
-    const iz = "clientGameInventoryButtonsChanged",
-      lz = new Map;
+    var Yq = gq(24),
+      lq = gq(31);
+    const Oq = "clientGameInventoryButtonsChanged",
+      mq = new Map;
 
-    function Mz() {
-      return [...lz.values()].sort(((zz, uz) => {
-        var bz, Ez;
-        return (null !== (bz = zz.order) && void 0 !== bz ? bz : 0) - (null !== (Ez = uz.order) && void 0 !== Ez ? Ez : 0)
+    function xq() {
+      return [...mq.values()].sort(((qq, Eq) => {
+        var gq, Yq;
+        return (null !== (gq = qq.order) && void 0 !== gq ? gq : 0) - (null !== (Yq = Eq.order) && void 0 !== Yq ? Yq : 0)
       }))
     }
-    let tz = null;
+    let Aq = null;
 
-    function Hz(zz) {
-      tz = zz
+    function cq(qq) {
+      Aq = qq
     }
-    let Oz = !1;
+    let uq = !1;
 
-    function pz(zz) {
-      Oz = !0;
+    function Bq(qq) {
+      uq = !0;
       try {
-        zz.onClick()
+        qq.onClick()
       } finally {
-        Oz = !1
+        uq = !1
       }
-      zz.panel && "clientGame" === Ez.e.get("openInGameMenuName") && Hz(zz.id)
+      qq.panel && "clientGame" === Yq.b.get("openInGameMenuName") && cq(qq.id)
     }
 
-    function dz() {
-      return Oz
+    function Wq() {
+      return uq
     }
 
-    function Fz() {
-      return Mz().filter((zz => zz.panel && !zz.disabled))
+    function Nq() {
+      return xq().filter((qq => qq.panel && !qq.disabled))
     }
 
-    function Zz(zz) {
-      const uz = Fz(),
-        bz = uz.findIndex((zz => zz.id === tz));
-      return !(bz < 0 || uz.length < 2) && (pz(uz[(bz + zz + uz.length) % uz.length]), !0)
+    function aq(qq) {
+      const Eq = Nq(),
+        gq = Eq.findIndex((qq => qq.id === Aq));
+      return !(gq < 0 || Eq.length < 2) && (Bq(Eq[(gq + qq + Eq.length) % Eq.length]), !0)
     }
 
-    function Rz() {
-      return null !== tz && Fz().length > 1
+    function Vq() {
+      return null !== Aq && Nq().length > 1
     }
 
-    function Kz() {
-      Hz(null)
+    function dq() {
+      cq(null)
     }
 
-    function wz() {
-      "inventory" !== Ez.e.get("openInGameMenuName") && Hz(null)
+    function jq() {
+      "inventory" !== Yq.b.get("openInGameMenuName") && cq(null)
     }
 
-    function Xz() {
-      const zz = tz;
-      return Hz(null), zz
+    function Hq() {
+      const qq = Aq;
+      return cq(null), qq
     }
 
-    function fz(zz) {
-      return lz.set(zz.id, zz), nz.k.sK(iz, Mz(), !0), () => {
-        lz.get(zz.id) === zz && (lz.delete(zz.id), nz.k.sK(iz, Mz()))
+    function oq(qq) {
+      return mq.set(qq.id, qq), lq.i.TV(Oq, xq(), !0), () => {
+        mq.get(qq.id) === qq && (mq.delete(qq.id), lq.i.TV(Oq, xq()))
       }
     }
   },
-  36071: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Mz,
-      i: () => Kz,
-      l: () => wz,
-      n: () => dz,
-      o: () => Hz,
-      p: () => Rz,
-      t: () => Fz,
-      x: () => Oz
+  36657: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => xq,
+      e: () => dq,
+      h: () => jq,
+      j: () => Wq,
+      l: () => cq,
+      m: () => Vq,
+      n: () => Nq,
+      r: () => uq
     });
-    var Ez = bz(20),
-      nz = bz(22),
-      iz = bz(1269),
-      lz = bz(36080);
-    const Mz = "clientGameUiChanged";
-    let tz = null;
+    var Yq = gq(24),
+      lq = gq(31),
+      Oq = gq(1274),
+      mq = gq(36662);
+    const xq = "clientGameUiChanged";
+    let Aq = null;
 
-    function Hz() {
-      return tz
+    function cq() {
+      return Aq
     }
 
-    function Oz(zz, uz) {
-      const bz = {
-        content: zz,
-        menu: uz
+    function uq(qq, Eq) {
+      const gq = {
+        content: qq,
+        menu: Eq
       };
-      return tz = bz, nz.k.sK(Mz, tz, !0), () => {
-        tz === bz && (tz = null, Zz = !1, Kz(), nz.k.sK(Mz, null))
+      return Aq = gq, lq.i.TV(xq, Aq, !0), () => {
+        Aq === gq && (Aq = null, aq = !1, dq(), lq.i.TV(xq, null))
       }
     }
-    let pz = null;
+    let Bq = null;
 
-    function dz() {
-      return pz
+    function Wq() {
+      return Bq
     }
 
-    function Fz(zz) {
-      return pz = zz, () => {
-        pz === zz && (pz = null)
+    function Nq(qq) {
+      return Bq = qq, () => {
+        Bq === qq && (Bq = null)
       }
     }
-    let Zz = !1;
+    let aq = !1;
 
-    function Rz() {
-      const zz = Ez.e.get("openInGameMenuName");
-      "clientGame" !== zz && (Zz = "inventory" === zz), (0, lz.i)() || (0, lz.g)(), (0, iz.m)(iz.b), Ez.e.set({
+    function Vq() {
+      const qq = Yq.b.get("openInGameMenuName");
+      "clientGame" !== qq && (aq = "inventory" === qq), (0, mq.l)() || (0, mq.g)(), (0, Oq.m)(Oq.d), Yq.b.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function Kz() {
-      Xz(!1)
+    function dq() {
+      Hq(!1)
     }
 
-    function wz() {
-      Xz(Zz)
+    function jq() {
+      Hq(aq)
     }
 
-    function Xz(zz) {
-      "clientGame" === Ez.e.get("openInGameMenuName") && Ez.e.set({
-        openInGameMenuName: zz ? "inventory" : null
-      }), zz || (0, lz.g)(), Zz = !1
+    function Hq(qq) {
+      "clientGame" === Yq.b.get("openInGameMenuName") && Yq.b.set({
+        openInGameMenuName: qq ? "inventory" : null
+      }), qq || (0, mq.g)(), aq = !1
     }
   },
-  38791: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      default: () => Ku
+  39349: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      default: () => dE
     });
-    const Ez = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
-    var nz = bz(56),
-      iz = bz(36071),
-      lz = bz(36465),
-      Mz = bz(36096),
-      tz = bz(1673),
-      Hz = bz(22);
-    const Oz = {
+    const Yq = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
+    var lq = gq(57),
+      Oq = gq(36657),
+      mq = gq(37086),
+      xq = gq(36674),
+      Aq = gq(1710),
+      cq = gq(31);
+    const uq = {
       M1911: "pistol",
       Deagle: "pistol",
       "Block-19": "pistol",
@@ -372,284 +372,284 @@ export const modules = {
       "Splash Instant Healing Potion": "throwable",
       Snowdash: "throwable"
     };
-    const pz = 32;
+    const Bq = 32;
 
-    function dz(zz, uz, bz, Ez) {
+    function Wq(qq, Eq, gq, Yq) {
       return {
         tag: "line",
         attrs: {
-          x1: zz,
-          y1: uz,
-          x2: bz,
-          y2: Ez,
+          x1: qq,
+          y1: Eq,
+          x2: gq,
+          y2: Yq,
           "stroke-width": arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 2
         }
       }
     }
 
-    function Fz(zz) {
+    function Nq(qq) {
       return {
         tag: "circle",
         attrs: {
-          cx: pz,
-          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pz,
-          r: zz,
+          cx: Bq,
+          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Bq,
+          r: qq,
           class: "Fill"
         }
       }
     }
 
-    function Zz(zz, uz) {
+    function aq(qq, Eq) {
       return {
         tag: "path",
         attrs: {
-          d: zz,
-          "stroke-width": uz
+          d: qq,
+          "stroke-width": Eq
         }
       }
     }
 
-    function Rz(zz, uz, bz) {
+    function Vq(qq, Eq, gq) {
       return {
         tag: "circle",
         attrs: {
-          cx: pz,
-          cy: pz,
-          r: zz,
-          "stroke-width": uz,
-          class: bz
+          cx: Bq,
+          cy: Bq,
+          r: qq,
+          "stroke-width": Eq,
+          class: gq
         }
       }
     }
 
-    function Kz(zz, uz, bz) {
+    function dq(qq, Eq, gq) {
       return {
         tag: "text",
         attrs: {
-          x: zz,
-          y: uz,
+          x: qq,
+          y: Eq,
           class: "Fill Label"
         },
-        text: bz
+        text: gq
       }
     }
-    const wz = {
-      pistol: zz => [dz(pz, pz - zz - 5, pz, pz - zz), dz(pz - zz - 5, pz, pz - zz, pz), dz(pz + zz, pz, pz + zz + 5, pz), Fz(1.4)],
-      rifle: zz => [dz(pz, pz - zz - 8, pz, pz - zz), dz(pz, pz + zz, pz, pz + zz + 8), dz(pz - zz - 8, pz, pz - zz, pz), dz(pz + zz, pz, pz + zz + 8, pz), Fz(1)],
-      smg: zz => {
-        const uz = Math.PI / 2,
-          bz = [];
-        for (let lz = 0; lz < 4; lz++) bz.push((nz = lz * uz + .35, iz = (lz + 1) * uz - .35, Zz(`M${pz+(Ez=6+zz)*Math.cos(nz)} ${pz+Ez*Math.sin(nz)} A${Ez} ${Ez} 0 0 1 ${pz+Ez*Math.cos(iz)} ${pz+Ez*Math.sin(iz)}`, 2)));
-        var Ez, nz, iz;
-        return [...bz, Fz(1.4)]
+    const jq = {
+      pistol: qq => [Wq(Bq, Bq - qq - 5, Bq, Bq - qq), Wq(Bq - qq - 5, Bq, Bq - qq, Bq), Wq(Bq + qq, Bq, Bq + qq + 5, Bq), Nq(1.4)],
+      rifle: qq => [Wq(Bq, Bq - qq - 8, Bq, Bq - qq), Wq(Bq, Bq + qq, Bq, Bq + qq + 8), Wq(Bq - qq - 8, Bq, Bq - qq, Bq), Wq(Bq + qq, Bq, Bq + qq + 8, Bq), Nq(1)],
+      smg: qq => {
+        const Eq = Math.PI / 2,
+          gq = [];
+        for (let mq = 0; mq < 4; mq++) gq.push((lq = mq * Eq + .35, Oq = (mq + 1) * Eq - .35, aq(`M${Bq+(Yq=6+qq)*Math.cos(lq)} ${Bq+Yq*Math.sin(lq)} A${Yq} ${Yq} 0 0 1 ${Bq+Yq*Math.cos(Oq)} ${Bq+Yq*Math.sin(Oq)}`, 2)));
+        var Yq, lq, Oq;
+        return [...gq, Nq(1.4)]
       },
-      shotgun: zz => [Rz(zz, 3, "Ring Outline"), Rz(zz, 1.5, "Ring")],
-      marksman: zz => [Zz(`M${26-zz/2} ${39+zz/2} L32 33 L${38+zz/2} ${39+zz/2}`, 2), dz(14 - zz, pz, 24 - zz, pz, 1.5), dz(40 + zz, pz, 50 + zz, pz, 1.5), dz(14 - zz, 30, 14 - zz, 34, 1.5), dz(50 + zz, 30, 50 + zz, 34, 1.5)],
-      machineGun: zz => {
-        const uz = 10 + zz,
-          bz = [];
-        for (const [Ez, nz] of [
+      shotgun: qq => [Vq(qq, 3, "Ring Outline"), Vq(qq, 1.5, "Ring")],
+      marksman: qq => [aq(`M${26-qq/2} ${39+qq/2} L32 33 L${38+qq/2} ${39+qq/2}`, 2), Wq(14 - qq, Bq, 24 - qq, Bq, 1.5), Wq(40 + qq, Bq, 50 + qq, Bq, 1.5), Wq(14 - qq, 30, 14 - qq, 34, 1.5), Wq(50 + qq, 30, 50 + qq, 34, 1.5)],
+      machineGun: qq => {
+        const Eq = 10 + qq,
+          gq = [];
+        for (const [Yq, lq] of [
             [-1, -1],
             [1, -1],
             [-1, 1],
             [1, 1]
-          ]) bz.push(Zz(`M${pz+Ez*uz} ${pz+nz*(uz-5)} L${pz+Ez*uz} ${pz+nz*uz} L${pz+Ez*(uz-5)} ${pz+nz*uz}`, 2));
-        return [...bz, dz(pz, 28, pz, 36, 1.5), dz(28, pz, 36, pz, 1.5)]
+          ]) gq.push(aq(`M${Bq+Yq*Eq} ${Bq+lq*(Eq-5)} L${Bq+Yq*Eq} ${Bq+lq*Eq} L${Bq+Yq*(Eq-5)} ${Bq+lq*Eq}`, 2));
+        return [...gq, Wq(Bq, 28, Bq, 36, 1.5), Wq(28, Bq, 36, Bq, 1.5)]
       },
-      launcher: () => [dz(14, 30, 50, 30, 1.5), dz(pz, 24, pz, 52, 1.5), dz(28, 38, 36, 38, 1.5), dz(29, 44, 35, 44, 1.5), dz(30, 50, 34, 50, 1.5), Kz(38, 40, "100"), Kz(37, 46, "200"), Fz(1.4, 30)],
-      melee: () => [Zz("M32 26 L38 32 L32 38 L26 32 Z", 1.5), Fz(1.2)],
-      throwable: () => [Fz(1.6)]
+      launcher: () => [Wq(14, 30, 50, 30, 1.5), Wq(Bq, 24, Bq, 52, 1.5), Wq(28, 38, 36, 38, 1.5), Wq(29, 44, 35, 44, 1.5), Wq(30, 50, 34, 50, 1.5), dq(38, 40, "100"), dq(37, 46, "200"), Nq(1.4, 30)],
+      melee: () => [aq("M32 26 L38 32 L32 38 L26 32 Z", 1.5), Nq(1.2)],
+      throwable: () => [Nq(1.6)]
     };
 
-    function Xz(zz) {
+    function Hq(qq) {
       let {
-        tag: uz,
-        attrs: bz,
-        text: Ez
-      } = zz, nz = `<${uz}`;
-      for (const [iz, lz] of Object.entries(bz)) nz += ` ${iz}="${lz}"`;
-      return void 0 === Ez ? `${nz}/>` : `${nz}>${Ez}</${uz}>`
+        tag: Eq,
+        attrs: gq,
+        text: Yq
+      } = qq, lq = `<${Eq}`;
+      for (const [Oq, mq] of Object.entries(gq)) lq += ` ${Oq}="${mq}"`;
+      return void 0 === Yq ? `${lq}/>` : `${lq}>${Yq}</${Eq}>`
     }
-    class fz {
-      constructor(zz, uz) {
-        this.api = zz, this.localPlayerId = uz, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = zz => {
-          this.element = zz, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, zz && !this.enabled && (zz.style.display = "none")
+    class oq {
+      constructor(qq, Eq) {
+        this.api = qq, this.localPlayerId = Eq, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = qq => {
+          this.element = qq, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, qq && !this.enabled && (qq.style.display = "none")
         }, this.measure = () => {
-          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, tz.getRemInPx)()))
-        }, this.tokens = [Hz.k.subscribe("aimingOverlay", (zz => {
-          this.sniperOverlay = "sniper" === zz
-        })), Hz.k.subscribe("mouseState", (zz => {
+          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, Aq.getRemInPx)()))
+        }, this.tokens = [cq.i.subscribe("aimingOverlay", (qq => {
+          this.sniperOverlay = "sniper" === qq
+        })), cq.i.subscribe("mouseState", (qq => {
           let {
-            isDown: uz
-          } = zz;
-          this.mouseDown = uz
+            isDown: Eq
+          } = qq;
+          this.mouseDown = Eq
         }))], window.addEventListener("resize", this.measure), this.measure()
       }
-      Zx(zz) {
-        zz !== this.enabled && (this.enabled = zz, this.drawnVisible = null, zz || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
+      hG(qq) {
+        qq !== this.enabled && (this.enabled = qq, this.drawnVisible = null, qq || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
       }
-      frame(zz, uz) {
-        var bz, Ez;
+      frame(qq, Eq) {
+        var gq, Yq;
         if (!this.enabled) return;
         const {
-          api: nz
-        } = this, iz = nz.isAlive(this.localPlayerId) && null !== (bz = null === (Ez = nz.luz(this.localPlayerId)) || void 0 === Ez ? void 0 : Ez.name) && void 0 !== bz ? bz : null, lz = (Mz = iz) && Oz[Mz] || null;
-        var Mz;
-        if (this.setOwnsCrosshair(null !== lz), !this.element) return;
-        const tz = nz.getHeldGunInaccuracy(),
-          Hz = null !== tz,
-          pz = null !== lz && !this.sniperOverlay && nz.isCrosshairShown();
-        if (pz !== this.drawnVisible && (this.drawnVisible = pz, this.element.style.display = pz ? "block" : "none"), !pz) return;
-        const dz = Hz ? function(zz) {
-            return "launcher" === zz || "melee" === zz || "throwable" === zz ? "none" : "shotgun" === zz ? "cone" : "offset"
-          }(lz) : "none",
-          Fz = null !== tz && void 0 !== tz ? tz : 0;
-        "cone" === dz ? this.drawCone(lz, this.coneRadiusVh(Fz, uz) * this.gapPerVh, zz) : (this.coneDrawn = !1, this.draw(lz, "none" === dz ? 2 : this.offsetGap(Fz)));
-        const Zz = !Hz && this.mouseDown;
-        Zz !== this.drawnPressed && (this.drawnPressed = Zz, this.element.classList.toggle("Pressed", Zz))
+          api: lq
+        } = this, Oq = lq.isAlive(this.localPlayerId) && null !== (gq = null === (Yq = lq.Ngq(this.localPlayerId)) || void 0 === Yq ? void 0 : Yq.name) && void 0 !== gq ? gq : null, mq = (xq = Oq) && uq[xq] || null;
+        var xq;
+        if (this.setOwnsCrosshair(null !== mq), !this.element) return;
+        const Aq = lq.getHeldGunInaccuracy(),
+          cq = null !== Aq,
+          Bq = null !== mq && !this.sniperOverlay && lq.isCrosshairShown();
+        if (Bq !== this.drawnVisible && (this.drawnVisible = Bq, this.element.style.display = Bq ? "block" : "none"), !Bq) return;
+        const Wq = cq ? function(qq) {
+            return "launcher" === qq || "melee" === qq || "throwable" === qq ? "none" : "shotgun" === qq ? "cone" : "offset"
+          }(mq) : "none",
+          Nq = null !== Aq && void 0 !== Aq ? Aq : 0;
+        "cone" === Wq ? this.drawCone(mq, this.coneRadiusVh(Nq, Eq) * this.gapPerVh, qq) : (this.coneDrawn = !1, this.draw(mq, "none" === Wq ? 2 : this.offsetGap(Nq)));
+        const aq = !cq && this.mouseDown;
+        aq !== this.drawnPressed && (this.drawnPressed = aq, this.element.classList.toggle("Pressed", aq))
       }
       dispose() {
-        for (const zz of this.tokens) Hz.k.unsubscribe(zz);
+        for (const qq of this.tokens) cq.i.unsubscribe(qq);
         window.removeEventListener("resize", this.measure), this.setOwnsCrosshair(!1)
       }
-      draw(zz, uz) {
-        var bz, Ez;
-        zz !== this.drawnFamily ? (this.drawnFamily = zz, this.drawnGap = uz, this.element.innerHTML = function(zz, uz) {
-          return `<svg viewBox="0 0 64 64">${wz[zz](uz).map(Xz).join("")}</svg>`
-        }(zz, uz), this.shapes = Array.from(null !== (bz = null === (Ez = this.element.firstElementChild) || void 0 === Ez ? void 0 : Ez.children) && void 0 !== bz ? bz : [])) : uz !== this.drawnGap && (this.drawnGap = uz, function(zz, uz, bz) {
-          const Ez = wz[uz](bz);
-          for (let nz = 0; nz < Ez.length; nz++)
-            for (const [uz, bz] of Object.entries(Ez[nz].attrs)) {
-              const Ez = String(bz);
-              zz[nz].getAttribute(uz) !== Ez && zz[nz].setAttribute(uz, Ez)
+      draw(qq, Eq) {
+        var gq, Yq;
+        qq !== this.drawnFamily ? (this.drawnFamily = qq, this.drawnGap = Eq, this.element.innerHTML = function(qq, Eq) {
+          return `<svg viewBox="0 0 64 64">${jq[qq](Eq).map(Hq).join("")}</svg>`
+        }(qq, Eq), this.shapes = Array.from(null !== (gq = null === (Yq = this.element.firstElementChild) || void 0 === Yq ? void 0 : Yq.children) && void 0 !== gq ? gq : [])) : Eq !== this.drawnGap && (this.drawnGap = Eq, function(qq, Eq, gq) {
+          const Yq = jq[Eq](gq);
+          for (let lq = 0; lq < Yq.length; lq++)
+            for (const [Eq, gq] of Object.entries(Yq[lq].attrs)) {
+              const Yq = String(gq);
+              qq[lq].getAttribute(Eq) !== Yq && qq[lq].setAttribute(Eq, Yq)
             }
-        }(this.shapes, zz, uz))
+        }(this.shapes, qq, Eq))
       }
-      drawCone(zz, uz, bz) {
-        zz === this.drawnFamily && this.coneDrawn ? this.shownRadius += (uz - this.shownRadius) * (1 - Math.exp(-bz / 80)) : this.shownRadius = uz, this.coneDrawn = !0, this.draw(zz, Math.round(4 * this.shownRadius) / 4)
+      drawCone(qq, Eq, gq) {
+        qq === this.drawnFamily && this.coneDrawn ? this.shownRadius += (Eq - this.shownRadius) * (1 - Math.exp(-gq / 80)) : this.shownRadius = Eq, this.coneDrawn = !0, this.draw(qq, Math.round(4 * this.shownRadius) / 4)
       }
-      coneRadiusVh(zz, uz) {
-        if (!(uz > 0)) return 1;
-        const bz = zz * lz.g / 2;
-        return Math.max(50 * Math.tan(bz) / uz, 1)
+      coneRadiusVh(qq, Eq) {
+        if (!(Eq > 0)) return 1;
+        const gq = qq * mq.i / 2;
+        return Math.max(50 * Math.tan(gq) / Eq, 1)
       }
-      offsetGap(zz) {
-        const uz = 2 + ((0, Mz.e)(zz) - 1) * this.gapPerVh;
-        return Math.min(24, Math.round(2 * uz) / 2)
+      offsetGap(qq) {
+        const Eq = 2 + ((0, xq.f)(qq) - 1) * this.gapPerVh;
+        return Math.min(24, Math.round(2 * Eq) / 2)
       }
-      setOwnsCrosshair(zz) {
-        zz !== this.ownsCrosshair && (this.ownsCrosshair = zz, document.body.classList.toggle("FrontlineCustomCrosshair", zz))
+      setOwnsCrosshair(qq) {
+        qq !== this.ownsCrosshair && (this.ownsCrosshair = qq, document.body.classList.toggle("FrontlineCustomCrosshair", qq))
       }
     }
-    const sz = "FrontlineCustomDamage",
-      rz = .45,
-      oz = .2;
-    class Nz {
-      constructor(zz, uz) {
-        this.api = zz, this.localPlayerId = uz, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
+    const Pq = "FrontlineCustomDamage",
+      Qq = .45,
+      yq = .2;
+    class tq {
+      constructor(qq, Eq) {
+        this.api = qq, this.localPlayerId = Eq, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, this.maxHealth = null, this.hn = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = zz => {
-          var uz, bz;
-          this.clearHits(), this.root = zz, this.lowLayer = null !== (uz = null === zz || void 0 === zz ? void 0 : zz.querySelector(".FrontlineDamageLow")) && void 0 !== uz ? uz : null, this.arcLayer = null !== (bz = null === zz || void 0 === zz ? void 0 : zz.querySelector(".FrontlineDamageArcs")) && void 0 !== bz ? bz : null, this.showRoot(), this.drawLow()
-        }, this.token = Hz.k.subscribe("damagedByOtherPlayer", (zz => {
+        }, this.maxHealth = null, this.zq = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = qq => {
+          var Eq, gq;
+          this.clearHits(), this.root = qq, this.lowLayer = null !== (Eq = null === qq || void 0 === qq ? void 0 : qq.querySelector(".FrontlineDamageLow")) && void 0 !== Eq ? Eq : null, this.arcLayer = null !== (gq = null === qq || void 0 === qq ? void 0 : qq.querySelector(".FrontlineDamageArcs")) && void 0 !== gq ? gq : null, this.showRoot(), this.drawLow()
+        }, this.token = cq.i.subscribe("damagedByOtherPlayer", (qq => {
           let {
-            direction: uz,
-            mn: bz
-          } = zz;
-          this.onHurt(uz, bz)
-        })), this.syncHealth(), document.body.classList.add(sz)
+            direction: Eq,
+            Mq: gq
+          } = qq;
+          this.onHurt(Eq, gq)
+        })), this.syncHealth(), document.body.classList.add(Pq)
       }
-      Zx(zz) {
-        zz !== this.enabled && (this.enabled = zz, document.body.classList.toggle(sz, zz), zz || this.clearHits(), this.showRoot())
+      hG(qq) {
+        qq !== this.enabled && (this.enabled = qq, document.body.classList.toggle(Pq, qq), qq || this.clearHits(), this.showRoot())
       }
-      frame(zz) {
-        this.syncHealth(), this.cameraHeading = zz;
-        for (const uz of this.arcs) this.drawArcAngle(uz)
+      frame(qq) {
+        this.syncHealth(), this.cameraHeading = qq;
+        for (const Eq of this.arcs) this.drawArcAngle(Eq)
       }
       dispose() {
-        Hz.k.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(sz)
+        cq.i.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(Pq)
       }
       showRoot() {
         this.root && (this.root.style.display = this.enabled ? "" : "none")
       }
       syncHealth() {
-        const zz = this.api.getClientOption(this.localPlayerId, "_health"),
-          uz = this.api.getClientOption(this.localPlayerId, "_shield"),
-          bz = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
-        if (Object.is(zz, this.readHealth) && Object.is(uz, this.readShield) && Object.is(bz, this.readMaxHealth)) return;
-        if (this.readHealth = zz, this.readShield = uz, this.readMaxHealth = bz, null === zz || void 0 === zz || !bz) return this.lastHealthPool = null, this.maxHealth = null, this.hn = 1, this.dead = !1, void this.drawLow();
-        const Ez = zz + (null !== uz && void 0 !== uz ? uz : 0);
-        if (null !== this.lastHealthPool && Ez < this.lastHealthPool) {
-          const zz = performance.now(),
-            uz = (this.lastHealthPool - Ez) / bz;
-          this.lastDrop = zz - this.lastDrop.at < 300 ? {
-            frac: this.lastDrop.frac + uz,
+        const qq = this.api.getClientOption(this.localPlayerId, "_health"),
+          Eq = this.api.getClientOption(this.localPlayerId, "_shield"),
+          gq = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
+        if (Object.is(qq, this.readHealth) && Object.is(Eq, this.readShield) && Object.is(gq, this.readMaxHealth)) return;
+        if (this.readHealth = qq, this.readShield = Eq, this.readMaxHealth = gq, null === qq || void 0 === qq || !gq) return this.lastHealthPool = null, this.maxHealth = null, this.zq = 1, this.dead = !1, void this.drawLow();
+        const Yq = qq + (null !== Eq && void 0 !== Eq ? Eq : 0);
+        if (null !== this.lastHealthPool && Yq < this.lastHealthPool) {
+          const qq = performance.now(),
+            Eq = (this.lastHealthPool - Yq) / gq;
+          this.lastDrop = qq - this.lastDrop.at < 300 ? {
+            frac: this.lastDrop.frac + Eq,
             at: this.lastDrop.at
           } : {
-            frac: uz,
-            at: zz
+            frac: Eq,
+            at: qq
           }
         }
-        this.dead = zz <= 0, this.dead && this.clearHits(), this.lastHealthPool = Ez, this.maxHealth = bz, this.hn = zz > 0 ? zz / bz : 1, this.drawLow()
+        this.dead = qq <= 0, this.dead && this.clearHits(), this.lastHealthPool = Yq, this.maxHealth = gq, this.zq = qq > 0 ? qq / gq : 1, this.drawLow()
       }
-      onHurt(zz, uz) {
+      onHurt(qq, Eq) {
         if (this.syncHealth(), this.dead || !this.enabled) return;
-        const bz = Math.min(1, this.takeDamageFrac(uz) / .3);
-        null !== zz && this.showArc(zz, bz), this.flashEdge(null === zz ? null : zz - this.cameraHeading, .4 + .6 * bz)
+        const gq = Math.min(1, this.takeDamageFrac(Eq) / .3);
+        null !== qq && this.showArc(qq, gq), this.flashEdge(null === qq ? null : qq - this.cameraHeading, .4 + .6 * gq)
       }
-      takeDamageFrac(zz) {
-        if (void 0 !== zz && this.maxHealth) return zz / this.maxHealth;
+      takeDamageFrac(qq) {
+        if (void 0 !== qq && this.maxHealth) return qq / this.maxHealth;
         if (performance.now() - this.lastDrop.at >= 300) return .12;
         const {
-          frac: uz
+          frac: Eq
         } = this.lastDrop;
         return this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, uz
+        }, Eq
       }
       drawLow() {
         if (!this.lowLayer) return;
-        const zz = xz((rz - this.hn) / .25),
-          uz = xz((oz - this.hn) / .15000000000000002),
-          bz = this.hn < rz;
-        this.lowLayer.classList.toggle("Active", bz), this.lowLayer.classList.toggle("Critical", this.hn < oz), this.lowLayer.style.opacity = String(bz ? .55 + .3 * zz + .15 * uz : 0)
+        const qq = vq((Qq - this.zq) / .25),
+          Eq = vq((yq - this.zq) / .15000000000000002),
+          gq = this.zq < Qq;
+        this.lowLayer.classList.toggle("Active", gq), this.lowLayer.classList.toggle("Critical", this.zq < yq), this.lowLayer.style.opacity = String(gq ? .55 + .3 * qq + .15 * Eq : 0)
       }
-      showArc(zz, uz) {
-        var bz, Ez;
+      showArc(qq, Eq) {
+        var gq, Yq;
         if (!this.arcLayer) return;
-        let nz = this.arcs.find((uz => vz(uz.direction, zz) < .6));
-        if (!nz) {
-          const uz = document.createElement("div");
-          uz.className = "FrontlineDamageArc", uz.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(uz), nz = {
-            element: uz,
-            direction: zz,
+        let lq = this.arcs.find((Eq => rq(Eq.direction, qq) < .6));
+        if (!lq) {
+          const Eq = document.createElement("div");
+          Eq.className = "FrontlineDamageArc", Eq.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(Eq), lq = {
+            element: Eq,
+            direction: qq,
             drawnAngle: null,
             fade: null,
             pop: null
-          }, this.arcs.push(nz)
+          }, this.arcs.push(lq)
         }
-        nz.direction = zz, this.drawArcAngle(nz);
-        const iz = nz.fade ? Number(getComputedStyle(nz.element).opacity) : 0;
-        null === (bz = nz.fade) || void 0 === bz || bz.cancel(), null === (Ez = nz.pop) || void 0 === Ez || Ez.cancel(), nz.element.style.opacity = "1";
-        const lz = nz.element.animate([{
-          opacity: iz
+        lq.direction = qq, this.drawArcAngle(lq);
+        const Oq = lq.fade ? Number(getComputedStyle(lq.element).opacity) : 0;
+        null === (gq = lq.fade) || void 0 === gq || gq.cancel(), null === (Yq = lq.pop) || void 0 === Yq || Yq.cancel(), lq.element.style.opacity = "1";
+        const mq = lq.element.animate([{
+          opacity: Oq
         }, {
           opacity: 1
         }], 144);
-        nz.fade = lz, nz.pop = nz.element.animate([{
-          scale: 1.1 + (1.16 - 1.1) * uz
+        lq.fade = mq, lq.pop = lq.element.animate([{
+          scale: 1.1 + (1.16 - 1.1) * Eq
         }, {
           scale: 1
         }], {
           duration: 160,
           easing: "cubic-bezier(0.2, 0.7, 0.3, 1)"
         });
-        const Mz = nz;
-        lz.onfinish = () => {
-          if (Mz.fade !== lz) return;
-          const zz = Mz.element.animate([{
+        const xq = lq;
+        mq.onfinish = () => {
+          if (xq.fade !== mq) return;
+          const qq = xq.element.animate([{
             opacity: 1
           }, {
             opacity: 0
@@ -659,128 +659,128 @@ export const modules = {
             easing: "cubic-bezier(0.4, 0, 0.7, 1)",
             fill: "forwards"
           });
-          zz.startTime = lz.startTime, Mz.fade = zz, zz.onfinish = () => {
-            Mz.fade === zz && (Mz.element.remove(), Jz(this.arcs, Mz))
+          qq.startTime = mq.startTime, xq.fade = qq, qq.onfinish = () => {
+            xq.fade === qq && (xq.element.remove(), hq(this.arcs, xq))
           }
         }
       }
-      drawArcAngle(zz) {
-        const uz = zz.direction - this.cameraHeading;
-        (null === zz.drawnAngle || Math.abs(uz - zz.drawnAngle) > .005) && (zz.drawnAngle = uz, zz.element.style.rotate = `${uz}rad`)
+      drawArcAngle(qq) {
+        const Eq = qq.direction - this.cameraHeading;
+        (null === qq.drawnAngle || Math.abs(Eq - qq.drawnAngle) > .005) && (qq.drawnAngle = Eq, qq.element.style.rotate = `${Eq}rad`)
       }
-      flashEdge(zz, uz) {
-        var bz, Ez, nz;
+      flashEdge(qq, Eq) {
+        var gq, Yq, lq;
         if (!this.root) return;
-        let iz = this.flashes.find((uz => null === uz.angle || null === zz ? uz.angle === zz : vz(uz.angle, zz) < .5));
-        if (!iz) {
-          const uz = document.createElement("div");
-          uz.className = "FrontlineDamageFlash";
-          const bz = uz.appendChild(document.createElement("div"));
-          bz.className = "FrontlineDamageFlashGlow", this.root.insertBefore(uz, this.arcLayer), iz = {
-            element: uz,
-            glow: bz,
-            angle: zz,
+        let Oq = this.flashes.find((Eq => null === Eq.angle || null === qq ? Eq.angle === qq : rq(Eq.angle, qq) < .5));
+        if (!Oq) {
+          const Eq = document.createElement("div");
+          Eq.className = "FrontlineDamageFlash";
+          const gq = Eq.appendChild(document.createElement("div"));
+          gq.className = "FrontlineDamageFlashGlow", this.root.insertBefore(Eq, this.arcLayer), Oq = {
+            element: Eq,
+            glow: gq,
+            angle: qq,
             level: 0,
             animation: null
-          }, this.flashes.push(iz)
+          }, this.flashes.push(Oq)
         }
-        const lz = null === (bz = iz.animation) || void 0 === bz || null === (Ez = bz.effect) || void 0 === Ez ? void 0 : Ez.getComputedTiming().progress,
-          Mz = null === lz || void 0 === lz ? 0 : iz.level * (1 - lz);
-        iz.level = Math.min(1, Math.max(uz, Mz + .6 * uz)), iz.angle = zz;
+        const mq = null === (gq = Oq.animation) || void 0 === gq || null === (Yq = gq.effect) || void 0 === Yq ? void 0 : Yq.getComputedTiming().progress,
+          xq = null === mq || void 0 === mq ? 0 : Oq.level * (1 - mq);
+        Oq.level = Math.min(1, Math.max(Eq, xq + .6 * Eq)), Oq.angle = qq;
         const {
-          x: tz,
-          y: Hz,
-          rx: Oz,
-          ry: pz
-        } = function(zz, uz) {
-          const bz = window.innerWidth,
-            Ez = window.innerHeight;
-          if (null === zz) return {
-            x: bz / 2,
-            y: Ez / 2,
+          x: Aq,
+          y: cq,
+          rx: uq,
+          ry: Bq
+        } = function(qq, Eq) {
+          const gq = window.innerWidth,
+            Yq = window.innerHeight;
+          if (null === qq) return {
+            x: gq / 2,
+            y: Yq / 2,
             rx: 0,
             ry: 0
           };
-          const nz = Math.sin(zz),
-            iz = -Math.cos(zz),
-            lz = bz / 2 / Math.max(1e-6, Math.abs(nz)),
-            Mz = Ez / 2 / Math.max(1e-6, Math.abs(iz)),
-            tz = Math.min(lz, Mz),
-            Hz = Math.round(bz / 2 + nz * tz),
-            Oz = Math.round(Ez / 2 + iz * tz),
-            pz = Ez / 100 * (.85 + .25 * uz),
-            dz = lz <= Mz,
-            Fz = Math.round((dz ? 30 : 74) * pz),
-            Zz = Math.round((dz ? 58 : 26) * pz);
+          const lq = Math.sin(qq),
+            Oq = -Math.cos(qq),
+            mq = gq / 2 / Math.max(1e-6, Math.abs(lq)),
+            xq = Yq / 2 / Math.max(1e-6, Math.abs(Oq)),
+            Aq = Math.min(mq, xq),
+            cq = Math.round(gq / 2 + lq * Aq),
+            uq = Math.round(Yq / 2 + Oq * Aq),
+            Bq = Yq / 100 * (.85 + .25 * Eq),
+            Wq = mq <= xq,
+            Nq = Math.round((Wq ? 30 : 74) * Bq),
+            aq = Math.round((Wq ? 58 : 26) * Bq);
           return {
-            x: Hz,
-            y: Oz,
-            rx: Fz,
-            ry: Zz
+            x: cq,
+            y: uq,
+            rx: Nq,
+            ry: aq
           }
-        }(zz, iz.level), {
-          style: dz
-        } = iz.glow;
-        iz.glow.classList.toggle("Everywhere", null === zz), dz.setProperty("--glowX", `${tz}px`), dz.setProperty("--glowY", `${Hz}px`), dz.setProperty("--glowRx", `${Oz}px`), dz.setProperty("--glowRy", `${pz}px`), iz.element.style.transformOrigin = `${tz}px ${Hz}px`, null === (nz = iz.animation) || void 0 === nz || nz.cancel();
-        const Fz = iz.element.animate([{
+        }(qq, Oq.level), {
+          style: Wq
+        } = Oq.glow;
+        Oq.glow.classList.toggle("Everywhere", null === qq), Wq.setProperty("--glowX", `${Aq}px`), Wq.setProperty("--glowY", `${cq}px`), Wq.setProperty("--glowRx", `${uq}px`), Wq.setProperty("--glowRy", `${Bq}px`), Oq.element.style.transformOrigin = `${Aq}px ${cq}px`, null === (lq = Oq.animation) || void 0 === lq || lq.cancel();
+        const Nq = Oq.element.animate([{
           opacity: 0,
           scale: .82,
           easing: "cubic-bezier(0.2, 0.8, 0.3, 1)"
         }, {
-          opacity: iz.level,
+          opacity: Oq.level,
           scale: 1,
           offset: .12,
           easing: "linear"
         }, {
-          opacity: .8 * iz.level,
+          opacity: .8 * Oq.level,
           offset: .38,
           easing: "cubic-bezier(0.4, 0, 0.7, 1)"
         }, {
           opacity: 0,
           scale: .92
         }], {
-          duration: 520 + 180 * iz.level
+          duration: 520 + 180 * Oq.level
         });
-        iz.animation = Fz;
-        const Zz = iz;
-        Fz.onfinish = () => {
-          Zz.animation === Fz && (Zz.element.remove(), Jz(this.flashes, Zz))
+        Oq.animation = Nq;
+        const aq = Oq;
+        Nq.onfinish = () => {
+          aq.animation === Nq && (aq.element.remove(), hq(this.flashes, aq))
         }
       }
       clearHits() {
-        for (const Ez of this.arcs) {
-          var zz, uz;
-          null === (zz = Ez.fade) || void 0 === zz || zz.cancel(), Ez.fade = null, null === (uz = Ez.pop) || void 0 === uz || uz.cancel(), Ez.element.remove()
+        for (const Yq of this.arcs) {
+          var qq, Eq;
+          null === (qq = Yq.fade) || void 0 === qq || qq.cancel(), Yq.fade = null, null === (Eq = Yq.pop) || void 0 === Eq || Eq.cancel(), Yq.element.remove()
         }
         this.arcs.length = 0;
-        for (const Ez of this.flashes) {
-          var bz;
-          null === (bz = Ez.animation) || void 0 === bz || bz.cancel(), Ez.element.remove()
+        for (const Yq of this.flashes) {
+          var gq;
+          null === (gq = Yq.animation) || void 0 === gq || gq.cancel(), Yq.element.remove()
         }
         this.flashes.length = 0
       }
     }
 
-    function vz(zz, uz) {
-      return Math.abs(Math.atan2(Math.sin(zz - uz), Math.cos(zz - uz)))
+    function rq(qq, Eq) {
+      return Math.abs(Math.atan2(Math.sin(qq - Eq), Math.cos(qq - Eq)))
     }
 
-    function xz(zz) {
-      return Math.max(0, Math.min(1, zz))
+    function vq(qq) {
+      return Math.max(0, Math.min(1, qq))
     }
 
-    function Jz(zz, uz) {
-      const bz = zz.indexOf(uz); - 1 !== bz && zz.splice(bz, 1)
+    function hq(qq, Eq) {
+      const gq = qq.indexOf(Eq); - 1 !== gq && qq.splice(gq, 1)
     }
-    var Az = bz(1038),
-      Tz = bz.n(Az),
-      Lz = bz(36066),
-      Pz = bz(36162),
-      Gz = bz(1181),
-      az = bz(1417);
-    const Vz = "frontlineHudChanged",
-      mz = "frontlineScoreboardChanged";
-    class qz {
+    var nq = gq(1018),
+      bq = gq.n(nq),
+      iq = gq(36648),
+      Zq = gq(36740),
+      fq = gq(1183),
+      Mq = gq(1416);
+    const Tq = "frontlineHudChanged",
+      zq = "frontlineScoreboardChanged";
+    class Sq {
       constructor() {
         this.wire = ["none"], this.scoreboard = {
           wire: ["none"],
@@ -793,101 +793,101 @@ export const modules = {
       getScoreboard() {
         return this.scoreboard
       }
-      WZ(zz) {
-        this.wire = zz, Hz.k.sK(Vz, zz, !0)
+      ga(qq) {
+        this.wire = qq, cq.i.TV(Tq, qq, !0)
       }
-      receiveScoreboard(zz) {
-        let uz = "scoreboard" === zz[0] ? performance.now() + zz[5] : 0;
-        const bz = this.scoreboard.endsAt;
-        0 !== uz && 0 !== bz && Math.abs(uz - bz) < 1e3 && (uz = bz), this.scoreboard = {
-          wire: zz,
-          endsAt: uz
-        }, Hz.k.sK(mz, this.scoreboard, !0)
+      receiveScoreboard(qq) {
+        let Eq = "scoreboard" === qq[0] ? performance.now() + qq[5] : 0;
+        const gq = this.scoreboard.endsAt;
+        0 !== Eq && 0 !== gq && Math.abs(Eq - gq) < 1e3 && (Eq = gq), this.scoreboard = {
+          wire: qq,
+          endsAt: Eq
+        }, cq.i.TV(zq, this.scoreboard, !0)
       }
     }
-    var hz = bz(1089);
-    const Uz = {
+    var pq = gq(1070);
+    const Gq = {
       Red: "frontlineHud:teamRed",
       Blue: "frontlineHud:teamBlue"
     };
 
-    function cz(zz) {
-      const [uz, bz] = (0, nz.useState)((() => (zz - performance.now()) / 1e3));
-      return (0, nz.useEffect)((() => {
-        if (0 === zz) return;
-        const uz = () => {
-          bz((zz - performance.now()) / 1e3)
+    function Lq(qq) {
+      const [Eq, gq] = (0, lq.useState)((() => (qq - performance.now()) / 1e3));
+      return (0, lq.useEffect)((() => {
+        if (0 === qq) return;
+        const Eq = () => {
+          gq((qq - performance.now()) / 1e3)
         };
-        uz();
-        const Ez = window.setInterval(uz, 250);
+        Eq();
+        const Yq = window.setInterval(Eq, 250);
         return () => {
-          window.clearInterval(Ez)
+          window.clearInterval(Yq)
         }
-      }), [zz]), uz
+      }), [qq]), Eq
     }
 
-    function gz(zz) {
+    function Jq(qq) {
       let {
-        className: uz,
-        point: bz
-      } = zz;
-      const [Ez, nz, iz, lz, Mz, tz] = bz;
-      return (0, hz.jsxs)("div", {
-        className: Tz()(uz, `Owner-${nz||"None"}`, `Leader-${lz||"None"}`, {
-          Contested: Mz,
-          Here: tz
+        className: Eq,
+        point: gq
+      } = qq;
+      const [Yq, lq, Oq, mq, xq, Aq] = gq;
+      return (0, pq.jsxs)("div", {
+        className: bq()(Eq, `Owner-${lq||"None"}`, `Leader-${mq||"None"}`, {
+          Contested: xq,
+          Here: Aq
         }),
-        children: [(0, hz.jsx)("span", {
+        children: [(0, pq.jsx)("span", {
           className: "FrontlinePointLetter",
-          children: Ez
-        }), (0, hz.jsx)("i", {
+          children: Yq
+        }), (0, pq.jsx)("i", {
           className: "FrontlinePointFill",
           style: {
-            width: `${iz}%`
+            width: `${Oq}%`
           }
         })]
       })
     }
-    const Sz = (0, nz.memo)((function(zz) {
+    const kq = (0, lq.memo)((function(qq) {
         let {
-          points: uz,
-          markers: bz
-        } = zz;
+          points: Eq,
+          markers: gq
+        } = qq;
         const {
-          t: Ez
-        } = (0, Gz.F)();
-        return uz ? (0, hz.jsx)("div", {
+          t: Yq
+        } = (0, fq.v)();
+        return Eq ? (0, pq.jsx)("div", {
           className: "FrontlinePointMarkers",
-          children: uz.map((zz => {
-            const [uz, , , , , , , nz] = zz;
-            return (0, hz.jsxs)("div", {
-              ref: bz.bindMarker(uz),
+          children: Eq.map((qq => {
+            const [Eq, , , , , , , lq] = qq;
+            return (0, pq.jsxs)("div", {
+              ref: gq.bindMarker(Eq),
               className: "FrontlinePointMarker",
-              children: [(0, hz.jsx)(gz, {
+              children: [(0, pq.jsx)(Jq, {
                 className: "FrontlinePointMarkerTile",
-                point: zz
-              }), (0, hz.jsxs)("div", {
+                point: qq
+              }), (0, pq.jsxs)("div", {
                 className: "FrontlinePointMarkerLabels",
-                children: [nz && (0, hz.jsx)("span", {
-                  className: Tz()("FrontlinePointMarkerHomeTurf", `Team-${nz}`),
-                  children: Ez("frontlineHud:homeTurf", {
-                    team: Ez(Uz[nz])
+                children: [lq && (0, pq.jsx)("span", {
+                  className: bq()("FrontlinePointMarkerHomeTurf", `Team-${lq}`),
+                  children: Yq("frontlineHud:homeTurf", {
+                    team: Yq(Gq[lq])
                   })
-                }), (0, hz.jsx)("span", {
+                }), (0, pq.jsx)("span", {
                   className: "FrontlinePointMarkerDistance"
                 })]
               })]
-            }, uz)
+            }, Eq)
           }))
         }) : null
       })),
-      yz = {
+      Rq = {
         capturing: "frontlineHud:capturing",
         contesting: "frontlineHud:contesting",
         defending: "frontlineHud:defending",
         captured: "frontlineHud:captured"
       },
-      Dz = {
+      Uq = {
         captured: "frontlineHud:capturedTag",
         lost: "frontlineHud:lostTag",
         milestone: "frontlineHud:milestoneTag",
@@ -895,321 +895,321 @@ export const modules = {
         reinforcements: "frontlineHud:reinforcementsTag"
       };
 
-    function Qz(zz) {
+    function Fq(qq) {
       let {
-        hud: uz,
-        crosshair: bz,
-        damage: Ez,
-        markers: nz
-      } = zz;
-      const iz = (0, az.h)(Vz, uz.getWire()),
-        lz = (0, az.h)(mz, uz.getScoreboard());
-      return (0, hz.jsxs)(hz.Fragment, {
-        children: [(0, hz.jsx)(Wz, {
-          damage: Ez
-        }), (0, hz.jsx)(Sz, {
-          points: "scoreboard" === lz.wire[0] ? lz.wire[6] : null,
-          markers: nz
-        }), (0, hz.jsx)(jz, {
-          view: lz
-        }), (0, hz.jsx)("div", {
+        hud: Eq,
+        crosshair: gq,
+        damage: Yq,
+        markers: lq
+      } = qq;
+      const Oq = (0, Mq.h)(Tq, Eq.getWire()),
+        mq = (0, Mq.h)(zq, Eq.getScoreboard());
+      return (0, pq.jsxs)(pq.Fragment, {
+        children: [(0, pq.jsx)(sq, {
+          damage: Yq
+        }), (0, pq.jsx)(kq, {
+          points: "scoreboard" === mq.wire[0] ? mq.wire[6] : null,
+          markers: lq
+        }), (0, pq.jsx)(wq, {
+          view: mq
+        }), (0, pq.jsx)("div", {
           className: "FrontlineReticle",
-          ref: bz.bindElement
-        }), (0, hz.jsx)(Lz.d, {
-          children: (0, hz.jsx)(ez, {
-            wire: iz
+          ref: gq.bindElement
+        }), (0, pq.jsx)(iq.g, {
+          children: (0, pq.jsx)(Xq, {
+            wire: Oq
           })
         })]
       })
     }
-    const Wz = (0, nz.memo)((function(zz) {
+    const sq = (0, lq.memo)((function(qq) {
         let {
-          damage: uz
-        } = zz;
-        return (0, hz.jsxs)("div", {
+          damage: Eq
+        } = qq;
+        return (0, pq.jsxs)("div", {
           className: "FrontlineDamage",
-          ref: uz.bindElement,
-          children: [(0, hz.jsx)("div", {
+          ref: Eq.bindElement,
+          children: [(0, pq.jsx)("div", {
             className: "FrontlineDamageLow",
-            children: (0, hz.jsx)("div", {
+            children: (0, pq.jsx)("div", {
               className: "FrontlineDamageShade"
             })
-          }), (0, hz.jsx)("div", {
+          }), (0, pq.jsx)("div", {
             className: "FrontlineDamageArcs"
           })]
         })
       })),
-      ez = (0, nz.memo)((function(zz) {
+      Xq = (0, lq.memo)((function(qq) {
         let {
-          wire: uz
-        } = zz;
+          wire: Eq
+        } = qq;
         const {
-          t: bz
-        } = (0, Gz.F)();
-        if ("capture" === uz[0]) {
-          const [, zz, Ez, nz, iz, lz, Mz] = uz, tz = Math.round(nz / 100 * 24);
-          return (0, hz.jsxs)("div", {
-            className: Tz()("FrontlinePlate", `Status-${Ez}`, `Leader-${iz||"None"}`),
-            children: [(0, hz.jsx)(Yz, {}), (0, hz.jsxs)("div", {
+          t: gq
+        } = (0, fq.v)();
+        if ("capture" === Eq[0]) {
+          const [, qq, Yq, lq, Oq, mq, xq] = Eq, Aq = Math.round(lq / 100 * 24);
+          return (0, pq.jsxs)("div", {
+            className: bq()("FrontlinePlate", `Status-${Yq}`, `Leader-${Oq||"None"}`),
+            children: [(0, pq.jsx)(eq, {}), (0, pq.jsxs)("div", {
               className: "FrontlinePlateRow",
-              children: [(0, hz.jsx)("span", {
+              children: [(0, pq.jsx)("span", {
                 className: "FrontlineObjective",
-                children: zz
-              }), (0, hz.jsxs)("div", {
+                children: qq
+              }), (0, pq.jsxs)("div", {
                 className: "FrontlinePlateMiddle",
-                children: [(0, hz.jsx)("div", {
+                children: [(0, pq.jsx)("div", {
                   className: "FrontlinePlateMeta",
-                  children: bz("frontlineHud:objective", {
-                    point: zz,
-                    friendly: lz,
-                    enemy: Mz
+                  children: gq("frontlineHud:objective", {
+                    point: qq,
+                    friendly: mq,
+                    enemy: xq
                   })
-                }), (0, hz.jsx)("div", {
+                }), (0, pq.jsx)("div", {
                   className: "FrontlinePlateStatus",
-                  children: bz(yz[Ez])
+                  children: gq(Rq[Yq])
                 })]
-              }), (0, hz.jsxs)("span", {
+              }), (0, pq.jsxs)("span", {
                 className: "FrontlinePercent",
-                children: [String(nz).padStart(3, "0"), (0, hz.jsx)("small", {
+                children: [String(lq).padStart(3, "0"), (0, pq.jsx)("small", {
                   children: "%"
                 })]
               })]
-            }), (0, hz.jsx)(Bz, {
+            }), (0, pq.jsx)(Cq, {
               segments: 24,
-              lit: tz
+              lit: Aq
             })]
           })
         }
-        if ("alert" === uz[0]) {
-          const [, zz, Ez, nz] = uz;
-          return (0, hz.jsxs)("div", {
-            className: Tz()("FrontlinePlate", "FrontlineAlert", `Tone-${nz}`),
-            children: [(0, hz.jsx)(Yz, {}), (0, hz.jsx)("div", {
+        if ("alert" === Eq[0]) {
+          const [, qq, Yq, lq] = Eq;
+          return (0, pq.jsxs)("div", {
+            className: bq()("FrontlinePlate", "FrontlineAlert", `Tone-${lq}`),
+            children: [(0, pq.jsx)(eq, {}), (0, pq.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: bz(Dz[zz])
-            }), (0, hz.jsx)("div", {
+              children: gq(Uq[qq])
+            }), (0, pq.jsx)("div", {
               className: "FrontlinePlateStatus",
-              children: Ez
+              children: Yq
             })]
           })
         }
         return null
       })),
-      jz = (0, nz.memo)((function(zz) {
+      wq = (0, lq.memo)((function(qq) {
         let {
-          view: uz
-        } = zz;
+          view: Eq
+        } = qq;
         const {
-          t: bz
-        } = (0, Gz.F)(), Ez = (0, nz.useRef)(null), iz = function(zz, uz) {
-          const [bz, Ez] = (0, nz.useState)(!1);
-          return (0, nz.useLayoutEffect)((() => {
-            const uz = zz.current;
-            if (!uz) return;
-            const bz = document.querySelector(`.${Pz.d}`),
-              nz = document.querySelector(`.${Pz.g}`),
-              iz = () => {
-                var zz;
-                const iz = uz.querySelector(".FrontlineTeamTrack"),
-                  lz = (0, tz.getRemInPx)(),
-                  Mz = uz.getBoundingClientRect().width - 2 * (null !== (zz = null === iz || void 0 === iz ? void 0 : iz.getBoundingClientRect().width) && void 0 !== zz ? zz : 0),
-                  Hz = window.innerWidth / 2,
-                  Oz = bz ? bz.getBoundingClientRect().right : 0,
-                  pz = nz ? nz.getBoundingClientRect().left : window.innerWidth,
-                  dz = Math.min(Hz - Oz, pz - Hz) - Pz.b - Mz / 2,
-                  Fz = dz < 6 * lz,
-                  Zz = Fz ? (window.innerWidth - Mz) / 2 - Pz.b : dz;
-                uz.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(Zz,14*lz)))}px`), Ez(Fz)
+          t: gq
+        } = (0, fq.v)(), Yq = (0, lq.useRef)(null), Oq = function(qq, Eq) {
+          const [gq, Yq] = (0, lq.useState)(!1);
+          return (0, lq.useLayoutEffect)((() => {
+            const Eq = qq.current;
+            if (!Eq) return;
+            const gq = document.querySelector(`.${Zq.e}`),
+              lq = document.querySelector(`.${Zq.i}`),
+              Oq = () => {
+                var qq;
+                const Oq = Eq.querySelector(".FrontlineTeamTrack"),
+                  mq = (0, Aq.getRemInPx)(),
+                  xq = Eq.getBoundingClientRect().width - 2 * (null !== (qq = null === Oq || void 0 === Oq ? void 0 : Oq.getBoundingClientRect().width) && void 0 !== qq ? qq : 0),
+                  cq = window.innerWidth / 2,
+                  uq = gq ? gq.getBoundingClientRect().right : 0,
+                  Bq = lq ? lq.getBoundingClientRect().left : window.innerWidth,
+                  Wq = Math.min(cq - uq, Bq - cq) - Zq.d - xq / 2,
+                  Nq = Wq < 6 * mq,
+                  aq = Nq ? (window.innerWidth - xq) / 2 - Zq.d : Wq;
+                Eq.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(aq,14*mq)))}px`), Yq(Nq)
               };
-            iz();
-            const lz = new ResizeObserver(iz);
-            for (const zz of [uz, bz, nz]) zz && lz.observe(zz);
-            return window.addEventListener("resize", iz), () => {
-              lz.disconnect(), window.removeEventListener("resize", iz)
+            Oq();
+            const mq = new ResizeObserver(Oq);
+            for (const qq of [Eq, gq, lq]) qq && mq.observe(qq);
+            return window.addEventListener("resize", Oq), () => {
+              mq.disconnect(), window.removeEventListener("resize", Oq)
             }
-          }), [zz, uz]), bz
-        }(Ez, "scoreboard" === uz.wire[0]);
-        if ("scoreboard" !== uz.wire[0]) return null;
-        const [, lz, Mz, Hz, Oz, , pz] = uz.wire, dz = "Red" === lz ? "Blue" : "Red";
-        return (0, hz.jsxs)("div", {
-          className: Tz()("FrontlineScoreboardContainer", {
-            Below: iz
+          }), [qq, Eq]), gq
+        }(Yq, "scoreboard" === Eq.wire[0]);
+        if ("scoreboard" !== Eq.wire[0]) return null;
+        const [, mq, xq, cq, uq, , Bq] = Eq.wire, Wq = "Red" === mq ? "Blue" : "Red";
+        return (0, pq.jsxs)("div", {
+          className: bq()("FrontlineScoreboardContainer", {
+            Below: Oq
           }),
-          children: [(0, hz.jsxs)("div", {
-            ref: Ez,
+          children: [(0, pq.jsxs)("div", {
+            ref: Yq,
             className: "FrontlineScoreboard",
-            children: [(0, hz.jsx)(Yz, {}), (0, hz.jsx)(Iz, {
-              team: lz,
-              tickets: Mz,
-              goal: Oz,
+            children: [(0, pq.jsx)(eq, {}), (0, pq.jsx)(Kq, {
+              team: mq,
+              tickets: xq,
+              goal: uq,
               side: "Friendly"
-            }), (0, hz.jsx)("div", {
+            }), (0, pq.jsx)("div", {
               className: "FrontlinePoints",
-              children: pz.map((zz => (0, hz.jsx)(gz, {
+              children: Bq.map((qq => (0, pq.jsx)(Jq, {
                 className: "FrontlinePoint",
-                point: zz
-              }, zz[0])))
-            }), (0, hz.jsx)(Iz, {
-              team: dz,
-              tickets: Hz,
-              goal: Oz,
+                point: qq
+              }, qq[0])))
+            }), (0, pq.jsx)(Kq, {
+              team: Wq,
+              tickets: cq,
+              goal: uq,
               side: "Enemy"
             })]
-          }), (0, hz.jsxs)("div", {
+          }), (0, pq.jsxs)("div", {
             className: "FrontlineClockTab",
-            children: [(0, hz.jsx)(Cz, {
-              endsAt: uz.endsAt
-            }), (0, hz.jsx)("div", {
+            children: [(0, pq.jsx)(Iq, {
+              endsAt: Eq.endsAt
+            }), (0, pq.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: bz("frontlineHud:ticketGoal", {
-                goal: Oz
+              children: gq("frontlineHud:ticketGoal", {
+                goal: uq
               })
             })]
           })]
         })
       }));
 
-    function Iz(zz) {
+    function Kq(qq) {
       let {
-        team: uz,
-        tickets: bz,
-        goal: Ez,
-        side: nz
-      } = zz;
+        team: Eq,
+        tickets: gq,
+        goal: Yq,
+        side: lq
+      } = qq;
       const {
-        t: iz
-      } = (0, Gz.F)(), lz = String(bz).padStart(3, "0"), Mz = lz.search(/[1-9]/), tz = -1 === Mz ? lz : lz.slice(0, Mz), Hz = Math.min(20, Math.floor(bz / Ez * 20));
-      return (0, hz.jsxs)("div", {
-        className: Tz()("FrontlineTeamScore", nz, `Team-${uz}`),
-        children: [(0, hz.jsxs)("div", {
+        t: Oq
+      } = (0, fq.v)(), mq = String(gq).padStart(3, "0"), xq = mq.search(/[1-9]/), Aq = -1 === xq ? mq : mq.slice(0, xq), cq = Math.min(20, Math.floor(gq / Yq * 20));
+      return (0, pq.jsxs)("div", {
+        className: bq()("FrontlineTeamScore", lq, `Team-${Eq}`),
+        children: [(0, pq.jsxs)("div", {
           className: "FrontlineTickets",
-          children: [(0, hz.jsx)("span", {
+          children: [(0, pq.jsx)("span", {
             className: "Lead",
-            children: tz
-          }), -1 !== Mz && lz.slice(Mz)]
-        }), (0, hz.jsxs)("div", {
+            children: Aq
+          }), -1 !== xq && mq.slice(xq)]
+        }), (0, pq.jsxs)("div", {
           className: "FrontlineTeamTrack",
-          children: [(0, hz.jsx)("div", {
+          children: [(0, pq.jsx)("div", {
             className: "FrontlinePlateMeta",
-            children: iz(Uz[uz])
-          }), (0, hz.jsx)(Bz, {
+            children: Oq(Gq[Eq])
+          }), (0, pq.jsx)(Cq, {
             segments: 20,
-            lit: Hz
+            lit: cq
           })]
         })]
       })
     }
 
-    function Bz(zz) {
+    function Cq(qq) {
       let {
-        segments: uz,
-        lit: bz
-      } = zz;
-      return (0, hz.jsx)("div", {
+        segments: Eq,
+        lit: gq
+      } = qq;
+      return (0, pq.jsx)("div", {
         className: "FrontlineBar",
         children: Array.from({
-          length: uz
-        }, ((zz, uz) => (0, hz.jsx)("i", {
-          className: Tz()({
-            Lit: uz < bz
+          length: Eq
+        }, ((qq, Eq) => (0, pq.jsx)("i", {
+          className: bq()({
+            Lit: Eq < gq
           })
-        }, uz)))
+        }, Eq)))
       })
     }
 
-    function Cz(zz) {
+    function Iq(qq) {
       let {
-        endsAt: uz
-      } = zz;
-      const bz = Math.max(0, Math.ceil(cz(uz)));
-      return (0, hz.jsxs)("div", {
-        className: Tz()("FrontlineClock", {
-          Urgent: bz <= 60
+        endsAt: Eq
+      } = qq;
+      const gq = Math.max(0, Math.ceil(Lq(Eq)));
+      return (0, pq.jsxs)("div", {
+        className: bq()("FrontlineClock", {
+          Urgent: gq <= 60
         }),
-        children: [Math.floor(bz / 60), ":", String(bz % 60).padStart(2, "0")]
+        children: [Math.floor(gq / 60), ":", String(gq % 60).padStart(2, "0")]
       })
     }
 
-    function Yz() {
-      return (0, hz.jsxs)(hz.Fragment, {
-        children: [(0, hz.jsx)("i", {
+    function eq() {
+      return (0, pq.jsxs)(pq.Fragment, {
+        children: [(0, pq.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, hz.jsx)("i", {
+        }), (0, pq.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
         })]
       })
     }
-    var kz = bz(36158),
-      zu = bz(1241),
-      uu = bz(37876),
-      bu = bz(37920);
-    class Eu {
-      constructor(zz) {
-        var uz;
-        this.hud = zz, this.markers = new Map, this.refs = new Map, this.viewport = {
+    var Dq = gq(36736),
+      qE = gq(1241),
+      EE = gq(38471),
+      gE = gq(38505);
+    class YE {
+      constructor(qq) {
+        var Eq;
+        this.hud = qq, this.markers = new Map, this.refs = new Map, this.viewport = {
           width: window.innerWidth,
           height: window.innerHeight
-        }, this.render = null, this.SZ = !1, this.Fs = () => {
+        }, this.render = null, this.eN = !1, this.EQ = () => {
           this.viewport = {
             width: window.innerWidth,
             height: window.innerHeight
           }
-        }, window.addEventListener("resize", this.Fs), null === (uz = window.visualViewport) || void 0 === uz || uz.addEventListener("resize", this.Fs)
+        }, window.addEventListener("resize", this.EQ), null === (Eq = window.visualViewport) || void 0 === Eq || Eq.addEventListener("resize", this.EQ)
       }
-      bindMarker(zz) {
-        let uz = this.refs.get(zz);
-        return uz || (uz = uz => {
-          var bz;
-          null === (bz = this.markers.get(zz)) || void 0 === bz || bz.stopObserving(), this.markers.delete(zz), uz && !this.SZ && this.markers.set(zz, this.mount(uz))
-        }, this.refs.set(zz, uz)), uz
+      bindMarker(qq) {
+        let Eq = this.refs.get(qq);
+        return Eq || (Eq = Eq => {
+          var gq;
+          null === (gq = this.markers.get(qq)) || void 0 === gq || gq.stopObserving(), this.markers.delete(qq), Eq && !this.eN && this.markers.set(qq, this.mount(Eq))
+        }, this.refs.set(qq, Eq)), Eq
       }
-      frame(zz, uz) {
-        this.render = zz;
-        const bz = this.hud.getScoreboard().wire;
-        if ("scoreboard" === bz[0] && 0 !== this.markers.size)
-          for (const [Ez, , , , , , nz] of bz[6]) {
-            const zz = this.markers.get(Ez);
-            zz && nz && (zz.target ??= [0, 0, 0], zz.target[0] = nz[0], zz.target[1] = nz[1] + 2.5, zz.target[2] = nz[2], this.place(zz), this.Ki(zz, uz && Math.hypot(nz[0] - uz[0], nz[1] - uz[1], nz[2] - uz[2])))
+      frame(qq, Eq) {
+        this.render = qq;
+        const gq = this.hud.getScoreboard().wire;
+        if ("scoreboard" === gq[0] && 0 !== this.markers.size)
+          for (const [Yq, , , , , , lq] of gq[6]) {
+            const qq = this.markers.get(Yq);
+            qq && lq && (qq.target ??= [0, 0, 0], qq.target[0] = lq[0], qq.target[1] = lq[1] + 2.5, qq.target[2] = lq[2], this.place(qq), this.AY(qq, Eq && Math.hypot(lq[0] - Eq[0], lq[1] - Eq[1], lq[2] - Eq[2])))
           }
       }
       dispose() {
-        var zz;
-        this.SZ = !0, window.removeEventListener("resize", this.Fs), null === (zz = window.visualViewport) || void 0 === zz || zz.removeEventListener("resize", this.Fs);
-        for (const uz of this.markers.values()) uz.stopObserving();
+        var qq;
+        this.eN = !0, window.removeEventListener("resize", this.EQ), null === (qq = window.visualViewport) || void 0 === qq || qq.removeEventListener("resize", this.EQ);
+        for (const Eq of this.markers.values()) Eq.stopObserving();
         this.markers.clear(), this.refs.clear(), this.render = null
       }
-      place(zz) {
+      place(qq) {
         const {
-          render: uz,
-          viewport: bz
+          render: Eq,
+          viewport: gq
         } = this;
-        if (!uz || !zz.target) return;
-        const Ez = (50 - uz.screenBandPct.y) / 100 * bz.height,
-          nz = {
-            x: zz.halfSize.width + 8,
-            top: zz.halfSize.height + 8,
-            bottom: zz.halfSize.height + zz.labelsBelow + Ez
+        if (!Eq || !qq.target) return;
+        const Yq = (50 - Eq.screenBandPct.y) / 100 * gq.height,
+          lq = {
+            x: qq.halfSize.width + 8,
+            top: qq.halfSize.height + 8,
+            bottom: qq.halfSize.height + qq.labelsBelow + Yq
           },
-          iz = uz.projectWorldPosToViewport(zz.target),
-          lz = null !== iz && void 0 !== iz ? iz : uz.projectWorldPosToScreenPos(zz.target),
-          Mz = (0, bu.d)({
-            x: lz.x,
-            y: lz.y,
-            text: iz
-          }, nz, bz);
-        (0, uu.d)(zz.root, Math.round(100 * Mz.x) / 100, Math.round(100 * Mz.y) / 100)
+          Oq = Eq.projectWorldPosToViewport(qq.target),
+          mq = null !== Oq && void 0 !== Oq ? Oq : Eq.projectWorldPosToScreenPos(qq.target),
+          xq = (0, gE.c)({
+            x: mq.x,
+            y: mq.y,
+            text: Oq
+          }, lq, gq);
+        (0, EE.d)(qq.root, Math.round(100 * xq.x) / 100, Math.round(100 * xq.y) / 100)
       }
-      Ki(zz, uz) {
-        if (null === uz) return void(null !== zz.metres && (zz.metres = null, zz.distance.textContent = ""));
-        const bz = Date.now();
-        (null === zz.metres || (0, kz.d)(uz, zz.metres, zz.metresShownAt)) && (zz.metres = Math.round(uz), zz.metresShownAt = bz, zz.distance.textContent = (0, Gz.x)(zu.h.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
-          distance: String(zz.metres)
+      AY(qq, Eq) {
+        if (null === Eq) return void(null !== qq.metres && (qq.metres = null, qq.distance.textContent = ""));
+        const gq = Date.now();
+        (null === qq.metres || (0, Dq.b)(Eq, qq.metres, qq.metresShownAt)) && (qq.metres = Math.round(Eq), qq.metresShownAt = gq, qq.distance.textContent = (0, fq.s)(qE.h.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
+          distance: String(qq.metres)
         }))
       }
-      mount(zz) {
-        const uz = {
-            root: zz,
-            distance: zz.querySelector(".FrontlinePointMarkerDistance"),
+      mount(qq) {
+        const Eq = {
+            root: qq,
+            distance: qq.querySelector(".FrontlinePointMarkerDistance"),
             halfSize: {
               width: 0,
               height: 0
@@ -1220,26 +1220,26 @@ export const modules = {
             metresShownAt: 0,
             stopObserving: () => {}
           },
-          bz = zz.querySelector(".FrontlinePointMarkerLabels"),
-          Ez = new ResizeObserver((() => {
-            uz.halfSize = {
-              width: Math.max(zz.offsetWidth, bz.offsetWidth) / 2,
-              height: zz.offsetHeight / 2
-            }, uz.labelsBelow = bz.offsetTop + bz.offsetHeight - zz.offsetHeight, this.place(uz)
+          gq = qq.querySelector(".FrontlinePointMarkerLabels"),
+          Yq = new ResizeObserver((() => {
+            Eq.halfSize = {
+              width: Math.max(qq.offsetWidth, gq.offsetWidth) / 2,
+              height: qq.offsetHeight / 2
+            }, Eq.labelsBelow = gq.offsetTop + gq.offsetHeight - qq.offsetHeight, this.place(Eq)
           }));
-        return Ez.observe(zz, {
+        return Yq.observe(qq, {
           box: "border-box"
-        }), Ez.observe(bz, {
+        }), Yq.observe(gq, {
           box: "border-box"
-        }), uz.stopObserving = () => {
-          Ez.disconnect()
-        }, uz
+        }), Eq.stopObserving = () => {
+          Yq.disconnect()
+        }, Eq
       }
     }
-    var nu = bz(6174),
-      iu = bz(2471);
-    const lu = "frontlineRoundEndChanged";
-    class Mu {
+    var lE = gq(6310),
+      OE = gq(2538);
+    const mE = "frontlineRoundEndChanged";
+    class xE {
       constructor() {
         this.view = {
           wire: ["none"],
@@ -1250,245 +1250,245 @@ export const modules = {
       getView() {
         return this.view
       }
-      WZ(zz) {
-        const uz = "roundEnd" === zz[0] ? performance.now() + zz[5] : 0;
+      ga(qq) {
+        const Eq = "roundEnd" === qq[0] ? performance.now() + qq[5] : 0;
         this.view = {
-          wire: zz,
+          wire: qq,
           key: this.view.key + 1,
-          endsAt: uz
-        }, Hz.k.sK(lu, this.view, !0)
+          endsAt: Eq
+        }, cq.i.TV(mE, this.view, !0)
       }
     }
-    const tu = (0, nz.lazy)((() => (0, iu.d)(bz.e(191).then((() => bz(40963))), (zz => zz.FrontlineMvpLineup)))),
-      Hu = [4800, 4e3, 3200],
-      Ou = [1, 0, 2],
-      pu = {
+    const AE = (0, lq.lazy)((() => (0, OE.b)(gq.e(192).then((() => gq(41509))), (qq => qq.FrontlineMvpLineup)))),
+      cE = [4800, 4e3, 3200],
+      uE = [1, 0, 2],
+      BE = {
         victory: "frontlineRoundEnd:victory",
         defeat: "frontlineRoundEnd:defeat",
         draw: "frontlineRoundEnd:draw"
       },
-      du = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
+      WE = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
 
-    function Fu(zz) {
+    function NE(qq) {
       let {
-        controller: uz
-      } = zz;
-      const bz = (0, az.h)(lu, uz.getView()),
-        Ez = cz(bz.endsAt);
-      return "roundEnd" !== bz.wire[0] || 1e3 * Ez < -2e3 ? null : (0, hz.jsx)(Zu, {
-        wire: bz.wire,
-        secondsLeft: Math.max(0, Math.ceil(Ez))
-      }, bz.key)
+        controller: Eq
+      } = qq;
+      const gq = (0, Mq.h)(mE, Eq.getView()),
+        Yq = Lq(gq.endsAt);
+      return "roundEnd" !== gq.wire[0] || 1e3 * Yq < -2e3 ? null : (0, pq.jsx)(aE, {
+        wire: gq.wire,
+        secondsLeft: Math.max(0, Math.ceil(Yq))
+      }, gq.key)
     }
-    const Zu = (0, nz.memo)((function(zz) {
+    const aE = (0, lq.memo)((function(qq) {
       let {
-        wire: uz,
-        secondsLeft: bz
-      } = zz;
+        wire: Eq,
+        secondsLeft: gq
+      } = qq;
       const {
-        t: iz
-      } = (0, Gz.F)(), [, lz, Mz, tz, Hz, , Oz, pz] = uz, dz = (0, nz.useMemo)((() => Ou.filter((zz => zz < pz.length))), [pz]), Fz = (0, nz.useMemo)((() => dz.map((zz => {
-        const [, , , , , uz, bz] = pz[zz];
+        t: Oq
+      } = (0, fq.v)(), [, mq, xq, Aq, cq, , uq, Bq] = Eq, Wq = (0, lq.useMemo)((() => uE.filter((qq => qq < Bq.length))), [Bq]), Nq = (0, lq.useMemo)((() => Wq.map((qq => {
+        const [, , , , , Eq, gq] = Bq[qq];
         return {
-          cosmetics: Ez.map(((zz, bz) => [zz, uz[bz]])),
-          size: 0 === zz ? 1.15 : .85,
+          cosmetics: Yq.map(((qq, gq) => [qq, Eq[gq]])),
+          size: 0 === qq ? 1.15 : .85,
           heldGun: {
-            name: bz,
-            aimed: 0 === zz
+            name: gq,
+            aimed: 0 === qq
           },
-          showAfterMs: Hu[zz]
+          showAfterMs: cE[qq]
         }
-      }))), [pz, dz]);
-      return (0, hz.jsxs)("div", {
-        className: Tz()("FrontlineRoundEnd", `Result-${lz}`),
+      }))), [Bq, Wq]);
+      return (0, pq.jsxs)("div", {
+        className: bq()("FrontlineRoundEnd", `Result-${mq}`),
         style: {
           "--titleRiseMs": "2600ms"
         },
-        children: [(0, hz.jsx)("div", {
+        children: [(0, pq.jsx)("div", {
           className: "FrontlineRoundEndVeil"
-        }), (0, hz.jsxs)("div", {
+        }), (0, pq.jsxs)("div", {
           className: "FrontlineRoundEndTitle",
-          children: [(0, hz.jsxs)("div", {
+          children: [(0, pq.jsxs)("div", {
             className: "FrontlineRoundEndResult",
-            children: [(0, hz.jsx)("i", {
+            children: [(0, pq.jsx)("i", {
               className: "FrontlineBracket TopLeft"
-            }), (0, hz.jsx)("i", {
+            }), (0, pq.jsx)("i", {
               className: "FrontlineBracket BottomRight"
-            }), (Zz = iz(pu[lz]), /\p{Script=Arabic}/u.test(Zz) ? [Zz] : (0, nu.c)(Zz)).map(((zz, uz) => (0, hz.jsx)("span", {
+            }), (aq = Oq(BE[mq]), /\p{Script=Arabic}/u.test(aq) ? [aq] : (0, lE.b)(aq)).map(((qq, Eq) => (0, pq.jsx)("span", {
               style: {
-                "--letter": uz
+                "--letter": Eq
               },
-              children: zz
-            }, uz)))]
-          }), (0, hz.jsxs)("div", {
+              children: qq
+            }, Eq)))]
+          }), (0, pq.jsxs)("div", {
             className: "FrontlineRoundEndScore",
-            children: [Mz && "victory" === lz && (0, hz.jsx)("span", {
+            children: [xq && "victory" === mq && (0, pq.jsx)("span", {
               className: "FrontlineRoundEndComeback",
-              children: iz("frontlineRoundEnd:comeback")
-            }), (0, hz.jsxs)("span", {
+              children: Oq("frontlineRoundEnd:comeback")
+            }), (0, pq.jsxs)("span", {
               className: "FrontlineRoundEndTickets",
-              children: [(0, hz.jsx)("b", {
+              children: [(0, pq.jsx)("b", {
                 className: "Friendly",
-                children: tz
-              }), " \u2013 ", (0, hz.jsx)("b", {
+                children: Aq
+              }), " \u2013 ", (0, pq.jsx)("b", {
                 className: "Enemy",
-                children: Hz
+                children: cq
               })]
             })]
           })]
-        }), dz.length > 0 && (0, hz.jsxs)("div", {
+        }), Wq.length > 0 && (0, pq.jsxs)("div", {
           className: "FrontlineRoundEndMvps",
           style: {
-            "--columns": dz.length
+            "--columns": Wq.length
           },
-          children: [(0, hz.jsx)(nz.Suspense, {
+          children: [(0, pq.jsx)(lq.Suspense, {
             fallback: null,
-            children: (0, hz.jsx)(tu, {
+            children: (0, pq.jsx)(AE, {
               className: "FrontlineRoundEndLineup",
-              players: Fz
+              players: Nq
             })
-          }), dz.map((zz => (0, hz.jsx)(Ru, {
-            mvp: pz[zz],
-            place: zz
-          }, zz)))]
-        }), (0, hz.jsx)("div", {
+          }), Wq.map((qq => (0, pq.jsx)(VE, {
+            mvp: Bq[qq],
+            place: qq
+          }, qq)))]
+        }), (0, pq.jsx)("div", {
           className: "FrontlineRoundEndNext",
-          children: iz("frontlineRoundEnd:nextFront", {
-            map: Oz,
-            seconds: String(bz)
+          children: Oq("frontlineRoundEnd:nextFront", {
+            map: uq,
+            seconds: String(gq)
           })
         })]
       });
-      var Zz
+      var aq
     }));
 
-    function Ru(zz) {
+    function VE(qq) {
       let {
-        mvp: uz,
-        place: bz
-      } = zz;
+        mvp: Eq,
+        place: gq
+      } = qq;
       const {
-        t: Ez
-      } = (0, Gz.F)(), [nz, iz, lz, Mz, tz] = uz, [Hz, Oz] = Ez(function(zz, uz) {
-        return 1 === uz && "damage" !== zz ? `frontlineRoundEnd:${zz}One` : `frontlineRoundEnd:${zz}`
-      }(lz, Mz), {
+        t: Yq
+      } = (0, fq.v)(), [lq, Oq, mq, xq, Aq] = Eq, [cq, uq] = Yq(function(qq, Eq) {
+        return 1 === Eq && "damage" !== qq ? `frontlineRoundEnd:${qq}One` : `frontlineRoundEnd:${qq}`
+      }(mq, xq), {
         name: "\0",
-        count: Mz.toLocaleString()
+        count: xq.toLocaleString()
       }).split("\0");
-      return (0, hz.jsxs)("div", {
-        className: Tz()("FrontlineMvpCard", `Place-${bz+1}`, `Team-${iz}`),
+      return (0, pq.jsxs)("div", {
+        className: bq()("FrontlineMvpCard", `Place-${gq+1}`, `Team-${Oq}`),
         style: {
-          "--revealMs": `${Hu[bz]}ms`
+          "--revealMs": `${cE[gq]}ms`
         },
-        children: [(0, hz.jsx)("i", {
+        children: [(0, pq.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, hz.jsx)("i", {
+        }), (0, pq.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
-        }), (0, hz.jsx)("div", {
+        }), (0, pq.jsx)("div", {
           className: "FrontlineMvpPlace",
-          children: Ez(du[bz])
-        }), (0, hz.jsxs)("div", {
+          children: Yq(WE[gq])
+        }), (0, pq.jsxs)("div", {
           className: "FrontlineMvpLine",
-          children: [Hz, (0, hz.jsx)("span", {
+          children: [cq, (0, pq.jsx)("span", {
             className: "FrontlineMvpName",
-            children: nz
-          }), Oz]
-        }), (0, hz.jsx)("div", {
+            children: lq
+          }), uq]
+        }), (0, pq.jsx)("div", {
           className: "FrontlineMvpKit",
-          children: tz
+          children: Aq
         })]
       })
     }
-    const Ku = function(zz, uz, bz, Ez) {
+    const dE = function(qq, Eq, gq, Yq) {
       let {
-        localPlayerId: lz
-      } = Ez;
-      const Mz = new qz,
-        tz = new Mu;
-      let Hz = null,
-        Oz = null,
-        pz = null,
-        dz = null,
-        Fz = null,
-        Zz = [!1, !1];
-      const Rz = () => {
-        var zz, uz;
-        const [bz, Ez] = Zz;
-        null === (zz = Oz) || void 0 === zz || zz.Zx(!bz), null === (uz = pz) || void 0 === uz || uz.Zx(!Ez)
+        localPlayerId: mq
+      } = Yq;
+      const xq = new Sq,
+        Aq = new xE;
+      let cq = null,
+        uq = null,
+        Bq = null,
+        Wq = null,
+        Nq = null,
+        aq = [!1, !1];
+      const Vq = () => {
+        var qq, Eq;
+        const [gq, Yq] = aq;
+        null === (qq = uq) || void 0 === qq || qq.hG(!gq), null === (Eq = Bq) || void 0 === Eq || Eq.hG(!Yq)
       };
       return {
-        onCreate: zz => {
-          Hz = zz, Oz = new fz(zz, lz), pz = new Nz(zz, lz), dz = new Eu(Mz), Rz(), Fz = (0, iz.x)((0, nz.createElement)(nz.Fragment, null, (0, nz.createElement)(Qz, {
-            hud: Mz,
-            crosshair: Oz,
-            damage: pz,
-            markers: dz
-          }), (0, nz.createElement)(Fu, {
-            controller: tz
+        onCreate: qq => {
+          cq = qq, uq = new oq(qq, mq), Bq = new tq(qq, mq), Wq = new YE(xq), Vq(), Nq = (0, Oq.r)((0, lq.createElement)(lq.Fragment, null, (0, lq.createElement)(Fq, {
+            hud: xq,
+            crosshair: uq,
+            damage: Bq,
+            markers: Wq
+          }), (0, lq.createElement)(NE, {
+            controller: Aq
           })))
         },
         onClose: () => {
-          var zz, uz, bz, Ez;
-          null === (zz = Fz) || void 0 === zz || zz(), null === (uz = Oz) || void 0 === uz || uz.dispose(), Oz = null, null === (bz = pz) || void 0 === bz || bz.dispose(), pz = null, null === (Ez = dz) || void 0 === Ez || Ez.dispose(), dz = null, Hz = null
+          var qq, Eq, gq, Yq;
+          null === (qq = Nq) || void 0 === qq || qq(), null === (Eq = uq) || void 0 === Eq || Eq.dispose(), uq = null, null === (gq = Bq) || void 0 === gq || gq.dispose(), Bq = null, null === (Yq = Wq) || void 0 === Yq || Yq.dispose(), Wq = null, cq = null
         },
-        onAfterRender: (zz, uz) => {
-          var bz, Ez, nz, iz;
-          null === (bz = Oz) || void 0 === bz || bz.frame(zz, uz.tanHalfFovY), null === (Ez = pz) || void 0 === Ez || Ez.frame(uz.cameraHeading), null === (nz = dz) || void 0 === nz || nz.frame(uz, null !== (iz = Hz) && void 0 !== iz && iz.checkValid(lz) ? Hz.Gs(lz) : null)
+        onAfterRender: (qq, Eq) => {
+          var gq, Yq, lq, Oq;
+          null === (gq = uq) || void 0 === gq || gq.frame(qq, Eq.tanHalfFovY), null === (Yq = Bq) || void 0 === Yq || Yq.frame(Eq.cameraHeading), null === (lq = Wq) || void 0 === lq || lq.frame(Eq, null !== (Oq = cq) && void 0 !== Oq && Oq.checkValid(mq) ? cq.Py(mq) : null)
         },
-        onReceivedMessageFromServer: (zz, uz) => {
-          "frontlineHud" === zz ? Mz.WZ(uz) : "frontlineScoreboard" === zz ? Mz.receiveScoreboard(uz) : "frontlineRoundEnd" === zz ? tz.WZ(uz) : "frontlinePrefs" === zz && (Zz = uz, Rz())
+        onReceivedMessageFromServer: (qq, Eq) => {
+          "frontlineHud" === qq ? xq.ga(Eq) : "frontlineScoreboard" === qq ? xq.receiveScoreboard(Eq) : "frontlineRoundEnd" === qq ? Aq.ga(Eq) : "frontlinePrefs" === qq && (aq = Eq, Vq())
         }
       }
     }
   },
-  6174: (zz, uz, bz) => {
-    bz.d(uz, {
-      c: () => nz
+  6310: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => lq
     });
-    const Ez = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
+    const Yq = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
       granularity: "grapheme"
     }) : null;
 
-    function nz(zz) {
-      return null === Ez ? Array.from(zz) : Array.from(Ez.segment(zz), (zz => {
+    function lq(qq) {
+      return null === Yq ? Array.from(qq) : Array.from(Yq.segment(qq), (qq => {
         let {
-          segment: uz
-        } = zz;
-        return uz
+          segment: Eq
+        } = qq;
+        return Eq
       }))
     }
   },
-  37876: (zz, uz, bz) => {
-    bz.d(uz, {
-      d: () => lz,
-      f: () => iz
+  38471: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => mq,
+      e: () => Oq
     });
-    const Ez = new WeakMap;
+    const Yq = new WeakMap;
 
-    function nz(zz) {
-      let uz = Ez.get(zz);
-      return uz || (uz = {
-        hidden: zz.hidden,
+    function lq(qq) {
+      let Eq = Yq.get(qq);
+      return Eq || (Eq = {
+        hidden: qq.hidden,
         x: NaN,
         y: NaN
-      }, Ez.set(zz, uz)), uz
+      }, Yq.set(qq, Eq)), Eq
     }
 
-    function iz(zz, uz) {
-      const bz = nz(zz);
-      bz.hidden !== uz && (bz.hidden = uz, zz.hidden = uz)
+    function Oq(qq, Eq) {
+      const gq = lq(qq);
+      gq.hidden !== Eq && (gq.hidden = Eq, qq.hidden = Eq)
     }
 
-    function lz(zz, uz, bz) {
-      const Ez = nz(zz);
-      Ez.x === uz && Ez.y === bz || (Ez.x = uz, Ez.y = bz, zz.style.translate = `${uz}vw ${bz}vh`)
+    function mq(qq, Eq, gq) {
+      const Yq = lq(qq);
+      Yq.x === Eq && Yq.y === gq || (Yq.x = Eq, Yq.y = gq, qq.style.translate = `${Eq}vw ${gq}vh`)
     }
   },
-  36491: (zz, uz, bz) => {
-    bz.d(uz, {
-      b: () => Ez
+  37111: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Yq
     });
-    const Ez = {
+    const Yq = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -1650,4 +1650,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const qq in modules) Object.freeze(modules[qq]);

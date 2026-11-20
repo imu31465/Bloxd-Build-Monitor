@@ -1,284 +1,307 @@
 export const id = 228;
 export const ids = [228];
 export const modules = {
-  60339: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      DEVTOOLS_SHADERS: () => iz,
-      registerDevtoolsShader: () => lz
+  37153: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => lq
     });
-    var Ez = bz(39033),
-      nz = bz(36619);
-    const iz = {
-      devtoolsNormal: function(zz) {
-        return {
-          vertex: `\n\t\t\t${(0,nz.g)(zz,"position","vec3")}\n\t\t\t${(0,nz.g)(zz,"normal","vec3")}\n\t\t\t${(0,nz.rb)(zz,"worldViewProjection","mat4")}\n\t\t\t${(0,nz.rb)(zz,"world","mat4")}\n\t\t\t${(0,nz.zb)(zz,"vNormal","vec3","mediump")}\n\n\t\t\t${(0,nz.Db)(zz,`\n\t\t\t\t${(0,nz.k)(zz)} = ${(0,nz.vb)(zz,"worldViewProjection")} * ${(0,nz.l)(zz,"vec4",(0,nz.Fb)(zz,"position"),"1.0")};\n\t\t\t\t${(0,nz.Ib)(zz,"vNormal")} = normalize((${(0,nz.vb)(zz,"world")} * ${(0,nz.l)(zz,"vec4",(0,nz.Fb)(zz,"normal"),"0.0")}).xyz);\n\t\t\t`)}\n\t\t`,
-          fragment: `\n\t\t\t${(0,nz.zb)(zz,"vNormal","vec3","mediump")}\n\n\t\t\t${(0,nz.L)(zz,`\n\t\t\t\t\n\t\t\t\t${(0,nz.y)(zz,"vec3","normalColor",`abs(${(0,nz.M)(zz,"vNormal")})`)}\n\t\t\t\t${(0,nz.J)(zz)} = ${(0,nz.l)(zz,"vec4","normalColor","1.0")};\n\t\t\t`)}\n\t\t`
-        }
-      },
-      devtoolsWhite: function(zz) {
-        return {
-          vertex: `\n\t\t\t${(0,nz.g)(zz,"position","vec3")}\n\t\t\t${(0,nz.rb)(zz,"worldViewProjection","mat4")}\n\n\t\t\t${(0,nz.Db)(zz,`\n\t\t\t\t${(0,nz.k)(zz)} = ${(0,nz.vb)(zz,"worldViewProjection")} * ${(0,nz.l)(zz,"vec4",(0,nz.Fb)(zz,"position"),"1.0")};\n\t\t\t`)}\n\t\t`,
-          fragment: `\n\t\t\t${(0,nz.L)(zz,`\n\t\t\t\t${(0,nz.J)(zz)} = ${(0,nz.l)(zz,"vec4","1.0","1.0","1.0","1.0")};\n\t\t\t`)}\n\t\t`
-        }
-      },
-      devtoolsDepth: function(zz) {
-        return {
-          vertex: `\n\t\t\t${(0,nz.g)(zz,"position","vec3")}\n\t\t\t${(0,nz.rb)(zz,"worldViewProjection","mat4")}\n\t\t\t${(0,nz.rb)(zz,"world","mat4")}\n\t\t\t${(0,nz.rb)(zz,"cameraPosition","vec3")}\n\t\t\t${(0,nz.zb)(zz,"vDepth","float","mediump")}\n\n\t\t\t${(0,nz.Db)(zz,`\n\t\t\t\t${(0,nz.k)(zz)} = ${(0,nz.vb)(zz,"worldViewProjection")} * ${(0,nz.l)(zz,"vec4",(0,nz.Fb)(zz,"position"),"1.0")};\n\t\t\t\t${(0,nz.y)(zz,"vec3","worldPosition",`(${(0,nz.vb)(zz,"world")} * ${(0,nz.l)(zz,"vec4",(0,nz.Fb)(zz,"position"),"1.0")}).xyz`)}\n\t\t\t\t${(0,nz.Ib)(zz,"vDepth")} = distance(worldPosition, ${(0,nz.vb)(zz,"cameraPosition")});\n\t\t\t`)}\n\t\t`,
-          fragment: `\n\t\t\t${(0,nz.zb)(zz,"vDepth","float","mediump")}\n\t\t\t${(0,nz.rb)(zz,"maxDepth","float")}\n\t\t\t${(0,nz.rb)(zz,"minDepth","float")}\n\n\t\t\t${(0,nz.L)(zz,`\n\t\t\t\t\n\t\t\t\t${(0,nz.y)(zz,"float","normalizedDepth",`clamp((${(0,nz.M)(zz,"vDepth")} - ${(0,nz.vb)(zz,"minDepth")}) / (${(0,nz.vb)(zz,"maxDepth")} - ${(0,nz.vb)(zz,"minDepth")}), 0.0, 1.0)`)}\n\t\t\t\t${(0,nz.y)(zz,"float","gray","1.0 - normalizedDepth")}\n\t\t\t\t${(0,nz.J)(zz)} = ${(0,nz.l)(zz,"vec4","gray","gray","gray","1.0")};\n\t\t\t`)}\n\t\t`
+    var Yq = gq(37156);
+    class lq {
+      static get LastCreatedEngine() {
+        return 0 === this.Instances.length ? null : this.Instances[this.Instances.length - 1]
+      }
+      static get LastCreatedScene() {
+        return this._LastCreatedScene
+      }
+    }
+    lq.Instances = [], lq.OnEnginesDisposedObservable = new Yq.d, lq._LastCreatedScene = null, lq.UseFallbackTexture = !0, lq.FallbackTexture = ""
+  },
+  38649: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Oq
+    });
+    var Yq = gq(38653);
+    const lq = (qq, Eq, gq) => qq ? qq.getClassName && "Mesh" === qq.getClassName() ? null : !qq.getClassName || "SubMesh" !== qq.getClassName() && "PhysicsBody" !== qq.getClassName() ? qq.clone ? qq.clone() : Array.isArray(qq) ? qq.slice() : gq && "object" === typeof qq ? {
+      ...qq
+    } : null : qq.clone(Eq) : null;
+    class Oq {
+      static DeepCopy(qq, Eq, gq, Oq) {
+        let mq = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const xq = function(qq) {
+          const Eq = [];
+          do {
+            const gq = Object.getOwnPropertyNames(qq);
+            for (const qq of gq) - 1 === Eq.indexOf(qq) && Eq.push(qq)
+          } while (qq = Object.getPrototypeOf(qq));
+          return Eq
+        }(qq);
+        for (const cq of xq) {
+          if ("_" === cq[0] && (!Oq || -1 === Oq.indexOf(cq))) continue;
+          if (cq.endsWith("Observable")) continue;
+          if (gq && -1 !== gq.indexOf(cq)) continue;
+          const xq = qq[cq],
+            uq = typeof xq;
+          if ("function" !== uq) try {
+            if ("object" === uq)
+              if (xq instanceof Uint8Array) Eq[cq] = Uint8Array.from(xq);
+              else if (xq instanceof Array) {
+              if (Eq[cq] = [], xq.length > 0)
+                if ("object" == typeof xq[0])
+                  for (let qq = 0; qq < xq.length; qq++) {
+                    const gq = lq(xq[qq], Eq, mq); - 1 === Eq[cq].indexOf(gq) && Eq[cq].push(gq)
+                  } else Eq[cq] = xq.slice(0)
+            } else Eq[cq] = lq(xq, Eq, mq);
+            else Eq[cq] = xq
+          } catch (Aq) {
+            Yq.b.Warn(Aq.message)
+          }
         }
       }
-    };
-
-    function lz(zz, uz) {
-      const {
-        vertex: bz,
-        fragment: nz
-      } = iz[zz](uz), lz = Ez.e.GetShadersStore(uz);
-      lz[`${zz}VertexShader`] = bz, lz[`${zz}FragmentShader`] = nz
     }
   },
-  36619: (zz, uz, bz) => {
-    bz.d(uz, {
-      B: () => vz,
-      D: () => Gz,
-      Db: () => fz,
-      Fb: () => Jz,
-      G: () => iz,
-      Ib: () => Az,
-      J: () => mz,
-      K: () => Vz,
-      L: () => sz,
-      M: () => Tz,
-      N: () => Pz,
-      P: () => Uz,
-      R: () => nz,
-      S: () => az,
-      U: () => gz,
-      Y: () => yz,
-      ab: () => Nz,
-      c: () => Ez,
-      eb: () => oz,
-      g: () => Rz,
-      hb: () => Sz,
-      i: () => xz,
-      ib: () => Dz,
-      k: () => Xz,
-      l: () => tz,
-      m: () => qz,
-      mb: () => cz,
-      n: () => hz,
-      ob: () => rz,
-      pb: () => Hz,
-      r: () => dz,
-      rb: () => wz,
-      t: () => Fz,
-      u: () => pz,
-      vb: () => Lz,
-      y: () => Oz,
-      zb: () => Kz
+  37872: (qq, Eq, gq) => {
+    function Yq() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (qq => {
+        const Eq = 16 * Math.random() | 0;
+        return ("x" === qq ? Eq : 3 & Eq | 8).toString(16)
+      }))
+    }
+    gq.d(Eq, {
+      d: () => Yq
+    })
+  },
+  38653: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Yq
     });
-    const Ez = {
-      GLSL: 0,
-      WGSL: 1
-    };
-
-    function nz(zz) {
-      return zz === Ez.WGSL
-    }
-
-    function iz(zz, uz, bz) {
-      return nz(zz) ? bz : uz
-    }
-    const lz = new Map([
-      ["int", "i32"],
-      ["float", "f32"],
-      ["vec2", "vec2f"],
-      ["vec3", "vec3f"],
-      ["vec4", "vec4f"],
-      ["mat2", "mat2x2f"],
-      ["mat3", "mat3x3f"],
-      ["mat4", "mat4x4f"]
-    ]);
-
-    function Mz(zz, uz) {
-      if (!nz(zz)) return uz;
-      const bz = lz.get(uz);
-      if (!bz) throw new Error(`No WGSL name for shader type "${uz}"`);
-      return bz
-    }
-
-    function tz(zz, uz) {
-      for (var bz = arguments.length, Ez = new Array(bz > 2 ? bz - 2 : 0), nz = 2; nz < bz; nz++) Ez[nz - 2] = arguments[nz];
-      return `${Mz(zz,uz)}(${Ez.join(", ")})`
-    }
-
-    function Hz(zz, uz) {
-      return tz(zz, "int", uz)
-    }
-
-    function Oz(zz, uz, bz, Ez, iz) {
-      return nz(zz) ? `var ${bz}: ${Mz(zz,uz)} = ${Ez};` : `${Zz(zz,iz)}${uz} ${bz} = ${Ez};`
-    }
-
-    function pz(zz, uz, bz) {
-      return nz(zz) ? `var ${bz}: ${Mz(zz,uz)};` : `${uz} ${bz};`
-    }
-
-    function dz(zz, uz, bz, Ez) {
-      return nz(zz) ? `const ${bz}: ${Mz(zz,uz)} = ${Ez};` : `const ${uz} ${bz} = ${Ez};`
-    }
-
-    function Fz(zz, uz, bz, Ez, iz) {
-      if (nz(zz)) {
-        return `fn ${bz}(${Ez.map((uz=>`${uz.name}: ${Mz(zz,uz.type)}`)).join(", ")}) -> ${Mz(zz,uz)} {${iz}}`
+    class Yq {
+      static _CheckLimit(qq, Eq) {
+        let gq = Yq._LogLimitOutputs[qq];
+        return gq ? gq.current++ : (gq = {
+          limit: Eq,
+          current: 1
+        }, Yq._LogLimitOutputs[qq] = gq), gq.current <= gq.limit
       }
-      return `${uz} ${bz}(${Ez.map((zz=>`${zz.type} ${zz.name}`)).join(", ")}) {${iz}}`
-    }
-
-    function Zz(zz, uz) {
-      return !uz || nz(zz) ? "" : `${uz} `
-    }
-
-    function Rz(zz, uz, bz, Ez) {
-      return nz(zz) ? `attribute ${uz}: ${Mz(zz,bz)};` : `attribute ${Zz(zz,Ez)}${bz} ${uz};`
-    }
-
-    function Kz(zz, uz, bz, Ez) {
-      return nz(zz) ? `varying ${uz}: ${Mz(zz,bz)};` : `varying ${Zz(zz,Ez)}${bz} ${uz};`
-    }
-
-    function wz(zz, uz, bz) {
-      return nz(zz) ? `uniform ${uz}: ${Mz(zz,bz)};` : `uniform ${bz} ${uz};`
-    }
-
-    function Xz(zz) {
-      return nz(zz) ? "vertexOutputs.position" : "gl_Position"
-    }
-
-    function fz(zz, uz) {
-      return nz(zz) ? `@vertex\nfn main(input: VertexInputs) -> FragmentInputs {${uz}}` : `void main() {${uz}}`
-    }
-
-    function sz(zz, uz) {
-      return nz(zz) ? `@fragment\nfn main(input: FragmentInputs) -> FragmentOutputs {${uz}}` : `void main() {${uz}}`
-    }
-
-    function rz(zz, uz, bz) {
-      if (nz(zz)) {
-        return [`var ${uz}Sampler: sampler;`, `var ${uz}: ${"2dArray"===bz?"texture_2d_array<f32>":"texture_2d<f32>"};`].join("\n")
+      static _GenerateLimitMessage(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const gq = Yq._LogLimitOutputs[qq];
+        if (!gq || !Yq.MessageLimitReached) return;
+        const lq = this._Levels[Eq];
+        gq.current === gq.limit && Yq[lq.name](Yq.MessageLimitReached.replace(/%LIMIT%/g, "" + gq.limit).replace(/%TYPE%/g, lq.name ?? ""))
       }
-      return `uniform highp ${"2dArray"===bz?"sampler2DArray":"sampler2D"} ${uz};`
-    }
-
-    function oz(zz, uz, bz) {
-      return nz(zz) ? `textureSample(${uz}, ${uz}Sampler, ${bz})` : `texture2D(${uz}, ${bz})`
-    }
-
-    function Nz(zz, uz, bz, Ez, iz) {
-      if (nz(zz)) {
-        return `${iz?"textureSampleLevel":"textureSample"}(${uz}, ${uz}Sampler, ${bz}, ${Hz(zz,`round(${Ez})`)}${iz?`, ${iz}`:""})`
+      static _AddLogEntry(qq) {
+        Yq._LogCache = qq + Yq._LogCache, Yq.OnNewCacheEntry && Yq.OnNewCacheEntry(qq)
       }
-      const lz = tz(zz, "vec3", bz, Ez);
-      return iz ? `textureLod(${uz}, ${lz}, ${iz})` : `texture(${uz}, ${lz})`
-    }
-
-    function vz(zz) {
-      return nz(zz) ? "!baseColor\\=\\w+\\(diffuseSampler,diffuseSamplerSampler,fragmentInputs\\.vDiffuseUV\\+uvOffset\\);" : "!baseColor\\=\\w+\\(diffuseSampler,vDiffuseUV\\+uvOffset\\);"
-    }
-
-    function xz(zz) {
-      return nz(zz) ? {
-        "!varying vMainUV1: vec2f;": "centroid varying vMainUV1: vec2f;"
-      } : {
-        "!varying vec2 vMainUV1;": "#ifdef WEBGL2\ncentroid varying vec2 vMainUV1;\n#else\nvarying vec2 vMainUV1;\n#endif"
+      static _FormatMessage(qq) {
+        const Eq = qq => qq < 10 ? "0" + qq : "" + qq,
+          gq = new Date;
+        return "[" + Eq(gq.getHours()) + ":" + Eq(gq.getMinutes()) + ":" + Eq(gq.getSeconds()) + "]: " + qq
+      }
+      static _LogDisabled(qq, Eq) {}
+      static _LogEnabled() {
+        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Eq = arguments.length > 1 ? arguments[1] : void 0,
+          gq = arguments.length > 2 ? arguments[2] : void 0;
+        const lq = Array.isArray(Eq) ? Eq[0] : Eq;
+        if (void 0 !== gq && !Yq._CheckLimit(lq, gq)) return;
+        const Oq = Yq._FormatMessage(lq),
+          mq = this._Levels[qq],
+          xq = Array.isArray(Eq) ? Eq.slice(1) : [];
+        mq.logFunc && mq.logFunc("BJS - " + Oq, ...xq);
+        const Aq = `<div style='color:${mq.color}'>${Oq}</div><br>`;
+        Yq._AddLogEntry(Aq), Yq._GenerateLimitMessage(lq, qq)
+      }
+      static get LogCache() {
+        return Yq._LogCache
+      }
+      static ClearLogCache() {
+        Yq._LogCache = "", Yq._LogLimitOutputs = {}, Yq.errorsCount = 0
+      }
+      static set LogLevels(qq) {
+        Yq.Log = Yq._LogDisabled, Yq.Warn = Yq._LogDisabled, Yq.Error = Yq._LogDisabled;
+        const Eq = [Yq.MessageLogLevel, Yq.WarningLogLevel, Yq.ErrorLogLevel];
+        for (const gq of Eq)
+          if ((qq & gq) === gq) {
+            const qq = this._Levels[gq];
+            Yq[qq.name] = Yq._LogEnabled.bind(Yq, gq)
+          }
       }
     }
-
-    function Jz(zz, uz) {
-      return nz(zz) ? `vertexInputs.${uz}` : uz
+    Yq.NoneLogLevel = 0, Yq.MessageLogLevel = 1, Yq.WarningLogLevel = 2, Yq.ErrorLogLevel = 4, Yq.AllLogLevel = 7, Yq.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Yq._LogCache = "", Yq._LogLimitOutputs = {}, Yq._Levels = [{}, {
+      color: "white",
+      logFunc: console.log,
+      name: "Log"
+    }, {
+      color: "orange",
+      logFunc: console.warn,
+      name: "Warn"
+    }, {}, {
+      color: "red",
+      logFunc: console.error,
+      name: "Error"
+    }], Yq.errorsCount = 0, Yq.Log = Yq._LogEnabled.bind(Yq, Yq.MessageLogLevel), Yq.Warn = Yq._LogEnabled.bind(Yq, Yq.WarningLogLevel), Yq.Error = Yq._LogEnabled.bind(Yq, Yq.ErrorLogLevel)
+  },
+  37156: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => mq
+    });
+    const Yq = "undefined" !== typeof WeakRef;
+    class lq {
+      constructor(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          gq = arguments.length > 2 ? arguments[2] : void 0,
+          Yq = arguments.length > 3 ? arguments[3] : void 0;
+        this.initialize(qq, Eq, gq, Yq)
+      }
+      initialize(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          gq = arguments.length > 2 ? arguments[2] : void 0,
+          Yq = arguments.length > 3 ? arguments[3] : void 0;
+        return this.mask = qq, this.skipNextObservers = Eq, this.target = gq, this.currentTarget = Yq, this
+      }
     }
-
-    function Az(zz, uz) {
-      return nz(zz) ? `vertexOutputs.${uz}` : uz
+    class Oq {
+      constructor(qq, Eq) {
+        let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        this.callback = qq, this.mask = Eq, this.scope = gq, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
+      }
+      remove() {
+        let qq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this._remove && this._remove(qq)
+      }
     }
-
-    function Tz(zz, uz) {
-      return nz(zz) ? `fragmentInputs.${uz}` : uz
-    }
-
-    function Lz(zz, uz) {
-      return nz(zz) ? `uniforms.${uz}` : uz
-    }
-
-    function Pz(zz, uz, bz) {
-      return nz(zz) ? `frame.${uz}` : bz
-    }
-
-    function Gz(zz) {
-      return nz(zz) ? "scene.vEyePosition" : "vEyePosition"
-    }
-
-    function az(zz) {
-      return nz(zz) ? "mesh.visibility" : "visibility"
-    }
-
-    function Vz(zz) {
-      return nz(zz) ? "fragmentInputs.position" : "gl_FragCoord"
-    }
-
-    function mz(zz) {
-      return nz(zz) ? "fragmentOutputs.color" : "gl_FragColor"
-    }
-
-    function qz(zz, uz) {
-      return nz(zz) ? `dpdx(${uz})` : `dFdx(${uz})`
-    }
-
-    function hz(zz, uz) {
-      return nz(zz) ? `dpdy(${uz})` : `dFdy(${uz})`
-    }
-
-    function Uz(zz, uz) {
-      return nz(zz) ? `inverseSqrt(${uz})` : `inversesqrt(${uz})`
-    }
-
-    function cz(zz, uz, bz, Ez) {
-      return nz(zz) ? `select(${Ez}, ${bz}, ${uz})` : `((${uz}) ? (${bz}) : (${Ez}))`
-    }
-
-    function gz(zz, uz, bz) {
-      return nz(zz) ? `((${uz}) - (${bz}) * floor((${uz}) / (${bz})))` : `mod(${uz}, ${bz})`
-    }
-
-    function Sz(zz, uz, bz) {
-      return nz(zz) ? `${uz} = vec4f(${bz}, ${uz}.a);` : `${uz}.rgb = ${bz};`
-    }
-
-    function yz(zz, uz, bz) {
-      return nz(zz) ? `${uz} = vec4f(${uz}.rgb * (${bz}), ${uz}.a);` : `${uz}.rgb *= ${bz};`
-    }
-
-    function Dz(zz, uz, bz) {
-      return nz(zz) ? `${uz} = vec4f(${bz}, ${uz}.w);` : `${uz}.xyz = ${bz};`
+    class mq {
+      static FromPromise(qq, Eq) {
+        const gq = new mq;
+        return qq.then((qq => {
+          gq.notifyObservers(qq)
+        })).catch((qq => {
+          if (!Eq) throw qq;
+          Eq.notifyObservers(qq)
+        })), gq
+      }
+      get observers() {
+        return this._observers
+      }
+      constructor(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this.notifyIfTriggered = Eq, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new lq(0), qq && (this._onObserverAdded = qq)
+      }
+      add(qq) {
+        let Eq = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          gq = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        if (!qq) return null;
+        const lq = new Oq(qq, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
+        lq.unregisterOnNextCall = gq, Eq ? this._observers.unshift(lq) : this._observers.push(lq), this._onObserverAdded && this._onObserverAdded(lq), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(lq, this._lastNotifiedValue);
+        const mq = Yq ? new WeakRef(this) : {
+          deref: () => this
+        };
+        return lq._remove = function() {
+          let qq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          const Eq = mq.deref();
+          Eq && (qq ? Eq.remove(lq) : Eq._remove(lq))
+        }, lq
+      }
+      addOnce(qq) {
+        return this.add(qq, void 0, void 0, void 0, !0)
+      }
+      remove(qq) {
+        if (!qq) return !1;
+        qq._remove = null;
+        return -1 !== this._observers.indexOf(qq) && (this._deferUnregister(qq), !0)
+      }
+      removeCallback(qq, Eq) {
+        for (let gq = 0; gq < this._observers.length; gq++) {
+          const Yq = this._observers[gq];
+          if (!Yq._willBeUnregistered && (Yq.callback === qq && (!Eq || Eq === Yq.scope))) return this._deferUnregister(Yq), !0
+        }
+        return !1
+      }
+      _deferUnregister(qq) {
+        qq._willBeUnregistered || (this._numObserversMarkedAsDeleted++, qq.unregisterOnNextCall = !1, qq._willBeUnregistered = !0, setTimeout((() => {
+          this._remove(qq)
+        }), 0))
+      }
+      _remove(qq) {
+        let Eq = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!qq) return !1;
+        const gq = this._observers.indexOf(qq);
+        return -1 !== gq && (Eq && this._numObserversMarkedAsDeleted--, this._observers.splice(gq, 1), !0)
+      }
+      makeObserverTopPriority(qq) {
+        this._remove(qq, !1), this._observers.unshift(qq)
+      }
+      makeObserverBottomPriority(qq) {
+        this._remove(qq, !1), this._observers.push(qq)
+      }
+      notifyObservers(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          gq = arguments.length > 2 ? arguments[2] : void 0,
+          Yq = arguments.length > 3 ? arguments[3] : void 0,
+          lq = arguments.length > 4 ? arguments[4] : void 0;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = qq), !this._observers.length) return !0;
+        const Oq = this._eventState;
+        Oq.mask = Eq, Oq.target = gq, Oq.currentTarget = Yq, Oq.skipNextObservers = !1, Oq.lastReturnValue = qq, Oq.userInfo = lq;
+        for (const mq of this._observers)
+          if (!mq._willBeUnregistered && (mq.mask & Eq && (mq.unregisterOnNextCall && this._deferUnregister(mq), mq.scope ? Oq.lastReturnValue = mq.callback.apply(mq.scope, [qq, Oq]) : Oq.lastReturnValue = mq.callback(qq, Oq)), Oq.skipNextObservers)) return !1;
+        return !0
+      }
+      notifyObserver(qq, Eq) {
+        let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = Eq), qq._willBeUnregistered) return;
+        const Yq = this._eventState;
+        Yq.mask = gq, Yq.skipNextObservers = !1, qq.unregisterOnNextCall && this._deferUnregister(qq), qq.callback(Eq, Yq)
+      }
+      hasObservers() {
+        return this._observers.length - this._numObserversMarkedAsDeleted > 0
+      }
+      clear() {
+        for (; this._observers.length;) {
+          const qq = this._observers.pop();
+          qq && (qq._remove = null)
+        }
+        this._onObserverAdded = null, this._numObserversMarkedAsDeleted = 0, this.cleanLastNotifiedState()
+      }
+      cleanLastNotifiedState() {
+        this._hasNotified = !1, this._lastNotifiedValue = void 0
+      }
+      clone() {
+        const qq = new mq;
+        return qq._observers = this._observers.slice(0), qq
+      }
+      hasSpecificMask() {
+        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
+        for (const Eq of this._observers)
+          if (Eq.mask & qq || Eq.mask === qq) return !0;
+        return !1
+      }
     }
   },
-  39033: (zz, uz, bz) => {
-    bz.d(uz, {
-      e: () => Ez
+  61112: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      AsyncLoop: () => Yq.b,
+      RegisterTools: () => Yq.e,
+      Tools: () => Yq.f,
+      className: () => Yq.h
     });
-    class Ez {
-      static GetShadersRepository() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Ez.ShadersRepository : Ez.ShadersRepositoryWGSL
-      }
-      static GetShadersStore() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Ez.ShadersStore : Ez.ShadersStoreWGSL
-      }
-      static GetIncludesShadersStore() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Ez.IncludesShadersStore : Ez.IncludesShadersStoreWGSL
-      }
+    var Yq = gq(39845);
+    (0, Yq.e)()
+  },
+  37171: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => Oq,
+      g: () => lq
+    });
+    const Yq = {};
+
+    function lq(qq, Eq) {
+      Yq[qq] = Eq
     }
-    Ez.ShadersRepository = "src/Shaders/", Ez.ShadersStore = {}, Ez.IncludesShadersStore = {}, Ez.ShadersRepositoryWGSL = "src/ShadersWGSL/", Ez.ShadersStoreWGSL = {}, Ez.IncludesShadersStoreWGSL = {}
+
+    function Oq(qq) {
+      return Yq[qq]
+    }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const qq in modules) Object.freeze(modules[qq]);

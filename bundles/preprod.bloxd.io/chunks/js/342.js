@@ -1,97 +1,68 @@
 export const id = 342;
-export const ids = [342, 343];
+export const ids = [342];
 export const modules = {
-  42594: (zz, uz, bz) => {
-    bz.d(uz, {
-      gamePackSource: () => iz
+  42308: (qq, Eq, gq) => {
+    function Yq(qq) {
+      return Math.floor(qq / 8)
+    }
+
+    function lq(qq) {
+      return 1 << qq % 8
+    }
+    gq.d(Eq, {
+      OptimizeIndices: () => mq
     });
-    var Ez = bz(4737),
-      nz = bz(1473);
-
-    function iz(zz) {
-      return {
-        packKey: async uz => (await nz.c.getGame(zz, uz, !0)).customTexturePackKey,
-        fetchPack: Ez.c
+    class Oq {
+      constructor(qq) {
+        this.size = qq, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
+      }
+      get(qq) {
+        if (qq >= this.size) throw new RangeError("Bit index out of range");
+        const Eq = Yq(qq),
+          gq = lq(qq);
+        return 0 !== (this._byteArray[Eq] & gq)
+      }
+      set(qq, Eq) {
+        if (qq >= this.size) throw new RangeError("Bit index out of range");
+        const gq = Yq(qq),
+          Oq = lq(qq);
+        Eq ? this._byteArray[gq] |= Oq : this._byteArray[gq] &= ~Oq
       }
     }
-  },
-  42586: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      fetchGuestContext: () => dz,
-      guestJoinTarget: () => fz,
-      guestJoinWithPack: () => Zz,
-      guestPackForGame: () => Fz,
-      invalidateGuestTrafficCode: () => Xz
-    });
-    var Ez = bz(1195),
-      nz = bz(1473),
-      iz = bz(96),
-      lz = bz(35945),
-      Mz = bz(1118),
-      tz = bz(40140),
-      Hz = bz(42594),
-      Oz = bz(40077);
 
-    function pz() {
-      if (iz.featureFlags.useTurnstile) throw new tz.TurnstilePageError
-    }
-
-    function dz() {
-      return (0, Mz.fetchAnonymousUserContext)().catch((zz => (console.warn("the guest context didn't load", zz), null)))
-    }
-    async function Fz(zz, uz, bz, Ez) {
-      try {
-        const nz = await bz;
-        if (null === nz) return void console.warn(`the texture pack step for ${zz} has no guest context: the pack in play stays`);
-        await uz.packForGame(zz, (0, Hz.gamePackSource)(nz), Ez)
-      } catch (nz) {
-        console.warn(`the texture pack step for ${zz} failed: the pack in play stays`, nz)
+    function mq(qq) {
+      const Eq = [],
+        gq = qq.length / 3;
+      for (let Oq = 0; Oq < gq; Oq++) Eq.push([qq[3 * Oq], qq[3 * Oq + 1], qq[3 * Oq + 2]]);
+      const Yq = new Map;
+      for (let Oq = 0; Oq < Eq.length; Oq++) {
+        const qq = Eq[Oq];
+        for (const Eq of qq) {
+          let qq = Yq.get(Eq);
+          qq || Yq.set(Eq, qq = []), qq.push(Oq)
+        }
       }
-    }
-    async function Zz(zz, uz, bz, Ez) {
-      pz();
-      const nz = dz();
-      return await bz(((uz, bz) => Fz(zz, uz, nz, bz))), fz(zz, uz, Ez(), await nz)
-    }
-    let Rz = null,
-      Kz = null;
-    async function wz() {
-      if ((null === Rz || Rz.hasExpired()) && (Kz ??= (0, Mz.fetchAnonymousUserContext)().then((zz => {
-          Rz = zz
-        })).finally((() => {
-          Kz = null
-        })), await Kz), null === Rz) throw new Error("no guest context to post as");
-      return Rz.getMetricsCookies()
-    }
-    async function Xz() {
-      var zz;
-      await (null === (zz = Rz) || void 0 === zz ? void 0 : zz.invalidateTrafficCode())
-    }
-    async function fz(zz, uz, bz) {
-      let iz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-      pz();
-      const tz = null !== iz && void 0 !== iz ? iz : await (0, Mz.fetchAnonymousUserContext)();
-      if (Rz = tz, tz.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
-      const Hz = await nz.c.matchmakePlayer(tz, uz, zz, (0, lz.b)()),
-        dz = performance.now();
-      if (!("gameServerHost" in Hz)) throw new Error(`matchmaking refused: ${Hz.failReason}`);
-      const Fz = Ez.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(Hz.gameServerHost);
-      if (Fz.isError()) throw new Error(`no socket URL for ${Hz.gameServerHost}: ${Fz.asError().message}`);
-      const Zz = {
-        endpoint: Fz.getValue(),
-        gameNameWithVariation: Hz.gameNameWithVariation,
-        lobbyName: Hz.lobbyName
-      };
-      return {
-        target: {
-          ...await (0, Oz.i)(tz, Zz, bz, !1),
-          postCookies: wz
-        },
-        matchedAt: dz,
-        freshMs: Oz.e
-      }
+      const lq = new Oq(gq),
+        mq = [],
+        xq = qq => {
+          const gq = [qq];
+          for (; gq.length > 0;) {
+            const qq = gq.pop();
+            if (!lq.get(qq)) {
+              lq.set(qq, !0), mq.push(Eq[qq]);
+              for (const Oq of Eq[qq]) {
+                const qq = Yq.get(Oq);
+                if (!qq) return;
+                for (const Eq of qq) lq.get(Eq) || gq.push(Eq)
+              }
+            }
+          }
+        };
+      for (let Oq = 0; Oq < gq; Oq++) lq.get(Oq) || xq(Oq);
+      let Aq = 0;
+      for (const Oq of mq) qq[Aq++] = Oq[0], qq[Aq++] = Oq[1], qq[Aq++] = Oq[2]
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const qq in modules) Object.freeze(modules[qq]);

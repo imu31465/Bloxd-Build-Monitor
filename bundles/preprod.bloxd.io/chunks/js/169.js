@@ -1,37 +1,40 @@
 export const id = 169;
 export const ids = [169];
 export const modules = {
-  8652: (zz, uz, bz) => {
-    bz.r(uz), bz.d(uz, {
-      pageBody: () => Ez
+  8938: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      pageBody: () => Yq
     });
-    const Ez = {
-      whatIs: ["Claim an island, grab the loot and fight for every diamond you can get. Bloxd Sky Islands is a scored PvP match across floating islands, where you explore, mine resources and battle for diamonds and glory. Each phase brings better loot, and whoever has the highest score at the end wins. Don't let the name fool you, it isn't an island-growing game like Skyblock or One Block. There is a PvE mode, though, if you'd rather fight mobs."],
-      howToPlay: ["Place your Protector on an island to claim it. Other players can't change blocks or open chests there, and you'll always respawn on it. You only get one island at a time, but you can release it and claim another later. Then off you go to explore, mine and grab loot as it spawns on the islands.", "Every match has 4 phases. It starts with Gather, when resources and tools spawn. Arms Race comes next with bows and armour. Then Escalation adds explosives and diamond gear, and finally Chaos turns up with guns and rockets. Your score is your kills plus the diamonds you're holding (diamond blocks count as several diamonds). Get knocked out and you'll drop some of your diamonds and items, though you do get a short bit of spawn protection when you come back."],
-      features: ["Solo, Teams, Blitz and PvE Modes", "Claim Your Own Island with a Protector", "4 Phases: Gather, Arms Race, Escalation and Chaos", "Bows, Explosives, Guns, Rockets and Diamond Gear", "Loot Drops, Diamond Surges and Diamond Bounties", "Quests, Perks and Buried Treasure", "Gold, Iron and Wood Helmets for the Top 3 Next Round"],
-      tips: ["Claim an island early so you've got a safe base to respawn on", "Grab tools and resources during Gather, before the big fights kick off", "Hang on to your diamonds. They count towards your score", "Watch the loot timer and get to new drops first", "Don't camp on the diamond island while you're in the lead, or you'll get a bounty and hunters will be able to see you", "Stay for the next round and you get to pick a bonus to start with", "Stuck? Use the shop to teleport to a random island"],
-      similarGames: ["skywars", "bedwars", "skyblock", "oneBlock"],
+    const Yq = {
+      whatIs: ["One block, floating in the sky, with a nametag that says \"I'm your One Block, break me!\" That's how every Bloxd One Block island starts. Break it and it comes straight back as something new, so you keep getting blocks, items and chests. Survive up there, unlock new phases, and slowly turn your tiny island into an empire."],
+      howToPlay: ["Break your One Block. Then break it again. And again. The more blocks you mine, the more phases you unlock, from the Forest and Plains right up to the Volcano and the Moon. Each phase changes what your block turns into, so there's always something new popping up. Once every phase is unlocked, you can switch between them whenever you like.", "To get going, collect 3 Gold Coins from chests. Then bridge over to the portal island nearby and walk into your portal. It takes you to One Village, the Hub. There you can spend coins in the shops, leave them with Bling Bling the banker, do daily and weekly quests and upgrade the guilds. When you're done, type /home or use a portal to head back to your island."],
+      features: ["17 Phases to Unlock, from Forest to the Moon", "Super Mining, Super Digging and Mega Chop Skills", "One Village Hub with Shops, a Bank and Treasure Chests", "Daily and Weekly Quests", "Painter's, Monster Hunter's and Farmer's Guilds", "Chat Events like Trivia, Unscramble and Type the Fastest", "Crops, a Rotating Trader and Double Drop Chance", "Gold Portal Skins for Saving Coins", "Visit Friends' Islands and Keep Multiple Island Saves"],
+      tips: ["Open every chest you find. That's where your Gold Coins come from.", "Put your coins in the bank, where your balance stays safe forever.", "Save 1,000, 50,000 or 1,000,000 coins in the bank to unlock gold portal skins.", "Level up your skills, then right click to use them. They've got a cooldown, so pick your moment.", "Use Mega Chop on trees to find way more chests.", "Only switch on Allow Edit for people you trust. Anyone with it can take your blocks.", "Lost? Type /home and you'll be straight back on your island."],
+      similarGames: ["skyblock", "skyIslands", "classic_survival"],
       faq: [{
-        question: "What is Bloxd Sky Islands?",
-        answer: "A round-based PvP mode. You claim a floating island, gear up through four phases and battle other players for the top score."
+        question: "What is Bloxd One Block?",
+        answer: "A sky challenge where you start on a single floating block. Break it to get new blocks, items and chests, unlock phases and grow your island into an empire."
       }, {
-        question: "How is the winner decided in Bloxd Sky Islands?",
-        answer: "Whoever has the highest score when time runs out. Score is your kills plus the diamonds you're holding, and in Teams the highest-scoring team takes it."
+        question: "Is Bloxd One Block a skyblock game?",
+        answer: "Sort of. You start with one block in the sky and build everything from there. Bloxd Skyblock is a different mode, though: that one's an RPG with skills, quests and dungeons, while One Block is all about breaking your block to unlock 17 phases."
       }, {
-        question: "How do I claim an island in Sky Islands?",
-        answer: "Put your Protector down on an island. Nobody else can change its blocks or open its chests, and you'll always respawn there."
+        question: "How many phases are in Bloxd One Block?",
+        answer: "17, from Forest and Plains through Ocean, Desert and Dungeon to the Volcano and the Moon. Mine enough blocks to unlock each one. When you've got them all, you can change phase."
       }, {
-        question: "Which modes does Sky Islands have?",
-        answer: "Solo, Teams, Blitz (a faster match) and PvE. In PvE your score comes from mob kills instead of player kills, so you claim an island and go after mobs."
+        question: "How do I get to the Hub in One Block?",
+        answer: "Grab 3 Gold Coins from chests, bridge over to the portal island nearby and walk into your portal. Type /home to come back."
       }, {
-        question: "Where do you find diamonds in Sky Islands?",
-        answer: "Mine them, grab them from loot drops and Diamond Surges, or win fights for them. Players drop some of their diamonds when they're knocked out."
+        question: "Where do One Block coins come from?",
+        answer: "Chests from your One Block and the Hub treasure chests, daily and weekly quests, or watching an ad for coins."
       }, {
-        question: "What is a diamond bounty?",
-        answer: "If you're one of the top three scorers and you stay on the diamond island too long, you get a bounty and hunters can see you. Move to another island to get rid of it."
+        question: "How do I open my portal in One Block?",
+        answer: "Type /open in chat. You can also add visitors in your island access settings, even if your portal is closed."
+      }, {
+        question: "Can I have more than one island?",
+        answer: "Yes. The Island Manager lets you create new islands, rename them, load another save or delete one, up to a maximum number of islands."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const qq in modules) Object.freeze(modules[qq]);
